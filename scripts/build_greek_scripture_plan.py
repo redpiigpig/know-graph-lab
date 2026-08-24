@@ -218,7 +218,11 @@ CHAPTERS: list[dict] = [
      "goals": ["熟悉七十士譯本耶利米書的篇章重排", "核對希伯來書 8 的引用"]},
     {"corpus": "deuterocanonical", "osisBook": "2Macc", "chapter": 7, "difficulty": 4,
      "titleZh": "瑪加伯下 7：七兄弟與母親的殉道", "titleGrc": "Μακκαβαίων Βʹ 7",
-     "genre": "narrative", "goals": ["辨認殉道敘事的重複結構", "追蹤此章明言死人復活的措辭"]},
+     "genre": "narrative", "goals": ["辨認殉道敘事的重複結構", "追蹤此章明言死人復活的措辭"],
+     "chineseSource": "self-translated",
+     "chineseNote": "本讀本次經中文所依的 1933 年聖公會譯本不收瑪加伯，"
+                    "信望愛所存各中譯本亦查無此卷可供逐節對照，"
+                    "故此章比照偽經自譯，並於頁面標明譯文來源。"},
 ]
 
 CORPUS_LABELS = {
@@ -307,7 +311,11 @@ def build_chapter(spec: dict, ordinal: int) -> dict:
         "difficulty": spec["difficulty"],
         "difficultyRank": ordinal,
         "learningGoals": spec["goals"],
-        "translationPlan": TRANSLATION_POLICY[spec["corpus"]],
+        # A chapter may need a different Chinese route from the rest of its
+        # corpus - the chosen deuterocanonical edition simply does not contain
+        # every deuterocanonical book - and saying so per chapter beats silently
+        # promising a translation that will not arrive.
+        "translationPlan": spec.get("chineseSource", TRANSLATION_POLICY[spec["corpus"]]),
         "verseCount": len(verse_rows),
         "wordCount": source_words,
         "absentVerses": absent_verses,
@@ -317,6 +325,8 @@ def build_chapter(spec: dict, ordinal: int) -> dict:
         "verses": verse_rows,
         **metadata,
     }
+    if "chineseNote" in spec:
+        chapter["translationNote"] = spec["chineseNote"]
     if "mtChapter" in spec:
         chapter["mtChapter"] = spec["mtChapter"]
         chapter["numberingNote"] = (

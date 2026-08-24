@@ -16,9 +16,11 @@
             "septuagint": 2650,
             "patristic": 33
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "以色列",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2474",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰησοῦς",
@@ -29,9 +31,11 @@
             "septuagint": 261,
             "patristic": 272
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶穌",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2424",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Χριστοῦ",
@@ -43,8 +47,10 @@
             "patristic": 472
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "基督",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5547",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰούδα",
@@ -55,9 +61,11 @@
             "septuagint": 902,
             "patristic": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "猶大",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2455",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰερουσαλήμ",
@@ -68,9 +76,11 @@
             "septuagint": 741,
             "patristic": 18
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "耶路撒冷",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2419",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μωυσῆς",
@@ -80,9 +90,11 @@
             "septuagint": 745,
             "patristic": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "摩西",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3475",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Αἰγύπτου",
@@ -93,9 +105,11 @@
             "septuagint": 616,
             "patristic": 19
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "埃及",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G125",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰακὼβ",
@@ -106,9 +120,11 @@
             "septuagint": 392,
             "patristic": 28
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "雅各",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2384",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαοὺλ",
@@ -119,9 +135,11 @@
             "septuagint": 379,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "掃羅",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4549",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰουδαίων",
@@ -132,9 +150,11 @@
             "septuagint": 123,
             "patristic": 66
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "猶太",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2453",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀαρὼν",
@@ -145,9 +165,11 @@
             "septuagint": 362,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞倫",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαλωμὼν",
@@ -156,9 +178,23 @@
           "byCorpus": {
             "septuagint": 322
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "所羅門",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.5.14",
+            "2Sam.8.8",
+            "2Sam.12.24",
+            "2Sam.14.27",
+            "2Sam.24.25",
+            "1Kgs.1.10",
+            "1Kgs.1.11",
+            "1Kgs.1.12",
+            "1Kgs.1.13",
+            "1Kgs.1.17"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Φαραὼ",
@@ -170,8 +206,10 @@
             "patristic": 3
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "法老",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5328",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀβραὰμ",
@@ -182,9 +220,11 @@
             "septuagint": 191,
             "patristic": 26
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞伯拉罕",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G11",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωσὴφ",
@@ -195,9 +235,12 @@
             "septuagint": 223,
             "patristic": 6
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約瑟",
+          "zhSource": "biblical_people",
+          "strong": "G2501",
+          "zhRoute": "英文名",
+          "zhEnglish": "Joseph"
         },
         {
           "headword": "Βαβυλῶνος",
@@ -208,9 +251,11 @@
             "septuagint": 244,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "巴比倫",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G897",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰορδάνου",
@@ -221,9 +266,11 @@
             "septuagint": 199,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "約但",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2446",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωναθὰν",
@@ -232,9 +279,11 @@
           "byCorpus": {
             "septuagint": 208
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約拿單",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἐφράιμ",
@@ -245,9 +294,11 @@
             "septuagint": 199,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以法蓮",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2187",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Παῦλος",
@@ -259,7 +310,9 @@
           },
           "kind": "person",
           "zh": "保羅",
-          "zhSource": "theologians"
+          "zhSource": "theologians",
+          "strong": "G3972",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Πέτρος",
@@ -270,9 +323,11 @@
             "septuagint": 13,
             "patristic": 7
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "彼得",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4074",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μωὰβ",
@@ -282,9 +337,11 @@
             "septuagint": 168,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "摩押",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Μανασσὴ",
@@ -295,9 +352,11 @@
             "septuagint": 155,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "瑪拿西",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3128",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωάννης",
@@ -308,9 +367,11 @@
             "septuagint": 15,
             "patristic": 9
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約翰",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2491",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰσαὰκ",
@@ -321,9 +382,11 @@
             "septuagint": 121,
             "patristic": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以撒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2464",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σίμων",
@@ -334,9 +397,11 @@
             "septuagint": 75,
             "patristic": 4
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西門",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4613",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μωϋσῆς",
@@ -346,9 +411,11 @@
             "newTestament": 79,
             "patristic": 74
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "摩西",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3475",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωὰβ",
@@ -357,9 +424,11 @@
           "byCorpus": {
             "septuagint": 153
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約押",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Αἰγυπτίων",
@@ -370,9 +439,11 @@
             "septuagint": 133,
             "patristic": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "埃及",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G124",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰουδαίας",
@@ -385,7 +456,9 @@
           },
           "kind": "place",
           "zh": "猶太",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G2449",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Σαμουὴλ",
@@ -396,9 +469,11 @@
             "septuagint": 145,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒母耳",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4545",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Συρίας",
@@ -409,9 +484,11 @@
             "septuagint": 122,
             "patristic": 18
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "敘利亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4947",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀσσυρίων",
@@ -421,9 +498,23 @@
             "septuagint": 137,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞述",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.2.14",
+            "2Kgs.15.19",
+            "2Kgs.15.20",
+            "2Kgs.15.29",
+            "2Kgs.16.7",
+            "2Kgs.16.9",
+            "2Kgs.16.10",
+            "2Kgs.16.18",
+            "2Kgs.17.3",
+            "2Kgs.17.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἑζεκίας",
@@ -434,9 +525,11 @@
             "septuagint": 133,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "希西家",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1478",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γαλαάδ",
@@ -445,9 +538,23 @@
           "byCorpus": {
             "septuagint": 135
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "基列",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.31.21",
+            "Gen.31.23",
+            "Gen.31.25",
+            "Gen.37.25",
+            "Gen.46.20",
+            "Num.26.33",
+            "Num.26.34",
+            "Num.27.1",
+            "Num.32.1",
+            "Num.32.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σαμαρείας",
@@ -460,7 +567,9 @@
           },
           "kind": "place",
           "zh": "撒馬利亞",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G4540",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἰερεμίας",
@@ -471,9 +580,11 @@
             "septuagint": 113,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶利米",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2408",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἠσαὺ",
@@ -484,9 +595,11 @@
             "septuagint": 108,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以掃",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2269",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰεροβοὰμ",
@@ -495,9 +608,11 @@
           "byCorpus": {
             "septuagint": 111
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶羅波安",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἀβεσσαλὼμ",
@@ -506,9 +621,23 @@
           "byCorpus": {
             "septuagint": 111
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "押沙龍",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.3.3",
+            "2Sam.13.1",
+            "2Sam.13.4",
+            "2Sam.13.20",
+            "2Sam.13.22",
+            "2Sam.13.23",
+            "2Sam.13.24",
+            "2Sam.13.25",
+            "2Sam.13.26",
+            "2Sam.13.27"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀμμὼν",
@@ -517,9 +646,11 @@
           "byCorpus": {
             "septuagint": 110
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞們",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Χανάαν",
@@ -529,9 +660,11 @@
             "newTestament": 2,
             "septuagint": 101
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "迦南",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5477",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φαρισαῖοι",
@@ -543,7 +676,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G5330",
+          "zhEnglish": "Pharisee"
         },
         {
           "headword": "Ἱεροσόλυμα",
@@ -554,9 +689,11 @@
             "septuagint": 30,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "耶路撒冷",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2414",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀμορραίων",
@@ -566,9 +703,23 @@
             "septuagint": 92,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "亞摩利人",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.15.16",
+            "Gen.48.22",
+            "Exod.3.8",
+            "Exod.3.17",
+            "Exod.13.5",
+            "Num.21.13",
+            "Num.21.21",
+            "Num.21.25",
+            "Num.21.26",
+            "Num.21.29"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀχαὰβ",
@@ -577,9 +728,11 @@
           "byCorpus": {
             "septuagint": 93
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞哈",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Χαλδαίων",
@@ -590,9 +743,11 @@
             "septuagint": 87,
             "patristic": 4
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "迦勒底人",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5466",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Δανιὴλ",
@@ -603,9 +758,11 @@
             "septuagint": 84,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "但以理",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1158",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ῥουβὴν",
@@ -615,9 +772,11 @@
             "newTestament": 1,
             "septuagint": 87
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "流便",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4502",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναβουχοδονοσὸρ",
@@ -627,8 +786,22 @@
             "septuagint": 88
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "尼布甲尼撒",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.24.1",
+            "2Kgs.24.10",
+            "2Kgs.24.11",
+            "2Kgs.25.1",
+            "2Kgs.25.8",
+            "2Kgs.25.22",
+            "1Chr.6.15",
+            "2Chr.36.5",
+            "2Chr.36.6",
+            "2Chr.36.10"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γὰδ",
@@ -639,9 +812,11 @@
             "septuagint": 78,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "迦得",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1045",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Δὰν",
@@ -650,9 +825,11 @@
           "byCorpus": {
             "septuagint": 79
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "但",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἐλεαζὰρ",
@@ -662,9 +839,11 @@
             "newTestament": 2,
             "septuagint": 76
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以利亞撒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1648",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἠσαίας",
@@ -675,9 +854,11 @@
             "septuagint": 33,
             "patristic": 23
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以賽亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2268",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Χεβρὼν",
@@ -687,8 +868,10 @@
             "septuagint": 76
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "更糟",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5501",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γαλιλαίας",
@@ -700,7 +883,9 @@
           },
           "kind": "place",
           "zh": "加利利",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G1056",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἑλλήνων",
@@ -711,9 +896,11 @@
             "septuagint": 13,
             "patristic": 33
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "希臘",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1672",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωὰς",
@@ -724,8 +911,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "帶子",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2438",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Χαναναίων",
@@ -735,9 +924,23 @@
             "newTestament": 1,
             "septuagint": 68
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "迦南",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.10.18",
+            "Gen.10.19",
+            "Gen.24.3",
+            "Gen.24.37",
+            "Gen.36.2",
+            "Exod.3.8",
+            "Exod.3.17",
+            "Exod.6.4",
+            "Exod.13.5",
+            "Exod.13.11"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἰὼβ",
@@ -748,9 +951,11 @@
             "septuagint": 63,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約伯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2492",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βάαλ",
@@ -760,9 +965,11 @@
             "newTestament": 1,
             "septuagint": 66
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴力",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G896",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λευεὶ",
@@ -771,9 +978,23 @@
           "byCorpus": {
             "septuagint": 67
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "利未",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.35.23",
+            "Exod.1.2",
+            "Exod.2.1",
+            "Exod.4.14",
+            "Exod.6.16",
+            "Exod.6.19",
+            "Exod.6.25",
+            "Exod.32.26",
+            "Exod.32.28",
+            "Exod.37.19"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Πιλᾶτος",
@@ -783,9 +1004,11 @@
             "newTestament": 55,
             "patristic": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "彼拉多",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4091",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαλαὰμ",
@@ -795,9 +1018,11 @@
             "newTestament": 3,
             "septuagint": 63
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "舊約的一個先知",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G903",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀβρὰμ",
@@ -807,8 +1032,22 @@
             "septuagint": 66
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞伯蘭",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.11.26",
+            "Gen.11.27",
+            "Gen.11.29",
+            "Gen.11.31",
+            "Gen.12.1",
+            "Gen.12.4",
+            "Gen.12.5",
+            "Gen.12.6",
+            "Gen.12.7",
+            "Gen.12.9"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Δαυὶδ",
@@ -818,9 +1057,11 @@
             "newTestament": 59,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "大衛",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1138",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωσαφὰτ",
@@ -830,9 +1071,11 @@
             "newTestament": 2,
             "septuagint": 62
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約沙法",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2498",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Νῶε",
@@ -843,9 +1086,11 @@
             "septuagint": 49,
             "patristic": 6
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "挪亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3575",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Δαμασκοῦ",
@@ -856,9 +1101,11 @@
             "septuagint": 47,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "大馬色",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1154",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαιθήλ",
@@ -868,8 +1115,22 @@
             "septuagint": 63
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "伯特利",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.12.8",
+            "Gen.13.3",
+            "Gen.35.1",
+            "Gen.35.3",
+            "Gen.35.6",
+            "Gen.35.7",
+            "Gen.35.8",
+            "Gen.35.15",
+            "Gen.35.16",
+            "Josh.6.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Συμεὼν",
@@ -880,9 +1141,11 @@
             "septuagint": 54,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "雅各和利亞所生",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4826",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ῥοβοὰμ",
@@ -892,9 +1155,25 @@
             "newTestament": 2,
             "septuagint": 58
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "羅波安",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "strong": "G4497",
+          "zhEnglish": "Roboam",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.14.27",
+            "1Kgs.11.43",
+            "1Kgs.12.1",
+            "1Kgs.12.3",
+            "1Kgs.12.12",
+            "1Kgs.12.13",
+            "1Kgs.12.18",
+            "1Kgs.12.20",
+            "1Kgs.12.21",
+            "1Kgs.12.23"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀβεννὴρ",
@@ -904,8 +1183,22 @@
             "septuagint": 60
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "押尼珥",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.5.1",
+            "1Sam.14.50",
+            "1Sam.14.51",
+            "1Sam.20.25",
+            "1Sam.26.5",
+            "1Sam.26.7",
+            "1Sam.26.14",
+            "1Sam.26.15",
+            "2Sam.2.8",
+            "2Sam.2.14"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ζαχαρίας",
@@ -916,9 +1209,11 @@
             "septuagint": 47,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒迦利亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2197",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σάρρα",
@@ -928,9 +1223,11 @@
             "newTestament": 4,
             "septuagint": 55
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4564",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λαβὰν",
@@ -940,9 +1237,11 @@
             "septuagint": 57,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉班",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἀζαρίας",
@@ -952,9 +1251,23 @@
             "septuagint": 56,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞撒利雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.14.21",
+            "2Kgs.14.29",
+            "2Kgs.15.1",
+            "2Kgs.15.7",
+            "2Kgs.15.8",
+            "2Kgs.15.13",
+            "2Kgs.15.17",
+            "1Chr.2.38",
+            "1Chr.2.39",
+            "1Chr.3.12"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἰδουμαίας",
@@ -964,9 +1277,11 @@
             "newTestament": 1,
             "septuagint": 56
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "以土買",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2401",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μαδιάμ",
@@ -976,9 +1291,11 @@
             "newTestament": 1,
             "septuagint": 56
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "米甸",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3099",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀσσοὺρ",
@@ -987,9 +1304,23 @@
           "byCorpus": {
             "septuagint": 56
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞述",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.10.11",
+            "Gen.10.22",
+            "Num.24.24",
+            "1Sam.15.7",
+            "1Kgs.2.35",
+            "1Kgs.10.23",
+            "1Chr.1.17",
+            "1Chr.5.6",
+            "1Chr.5.26",
+            "2Chr.28.16"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σιών",
@@ -1000,9 +1331,11 @@
             "septuagint": 41,
             "patristic": 7
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "錫安",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4622",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαλὰκ",
@@ -1012,9 +1345,11 @@
             "newTestament": 1,
             "septuagint": 53
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴勒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G904",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωρὰμ",
@@ -1024,9 +1359,11 @@
             "newTestament": 2,
             "septuagint": 51
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約蘭",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2496",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀσὰ",
@@ -1035,9 +1372,11 @@
           "byCorpus": {
             "septuagint": 53
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞撒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G760",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀντίοχος",
@@ -1059,9 +1398,12 @@
             "septuagint": 50,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉結",
+          "zhSource": "biblical_people",
+          "strong": "G4478",
+          "zhRoute": "英文名",
+          "zhEnglish": "Rachel"
         },
         {
           "headword": "Τύρου",
@@ -1071,9 +1413,23 @@
             "newTestament": 11,
             "septuagint": 41
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "strong": "G5184",
+          "zhEnglish": "Tyre",
+          "zh": "推羅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.19.35",
+            "2Sam.5.11",
+            "2Sam.24.7",
+            "1Kgs.5.1",
+            "1Kgs.7.1",
+            "1Kgs.9.11",
+            "1Kgs.9.12",
+            "1Chr.14.1"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἐδώμ",
@@ -1094,9 +1450,11 @@
             "newTestament": 43,
             "patristic": 8
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "希律",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2264",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σοδόμων",
@@ -1107,9 +1465,11 @@
             "septuagint": 39,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "所多瑪",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4670",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναθὰν",
@@ -1119,9 +1479,11 @@
             "septuagint": 50,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿單",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3481",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωδᾶε",
@@ -1143,9 +1505,11 @@
             "septuagint": 38,
             "patristic": 7
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶西",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2421",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀμαλὴκ",
@@ -1155,9 +1519,11 @@
             "septuagint": 48,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞瑪力",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ζαβουλὼν",
@@ -1167,9 +1533,11 @@
             "newTestament": 3,
             "septuagint": 46
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西布倫",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2194",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φίλιππος",
@@ -1180,9 +1548,11 @@
             "septuagint": 11,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "腓力",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5376",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Δημήτριος",
@@ -1192,9 +1562,11 @@
             "newTestament": 3,
             "septuagint": 46
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "底米丟",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1216",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σεδεκίας",
@@ -1203,9 +1575,23 @@
           "byCorpus": {
             "septuagint": 49
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西底家",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Kgs.22.11",
+            "2Kgs.24.17",
+            "2Kgs.24.18",
+            "2Kgs.24.20",
+            "1Chr.3.15",
+            "1Chr.3.16",
+            "2Chr.18.10",
+            "2Chr.18.23",
+            "2Chr.36.10",
+            "2Chr.36.11"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀδὰμ",
@@ -1216,9 +1602,11 @@
             "septuagint": 32,
             "patristic": 6
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞當",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G76",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἁνανίας",
@@ -1229,9 +1617,11 @@
             "septuagint": 34,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞拿尼亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G367",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γεδεὼν",
@@ -1241,9 +1631,11 @@
             "newTestament": 1,
             "septuagint": 46
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "基甸",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1066",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Καὰθ",
@@ -1252,9 +1644,11 @@
           "byCorpus": {
             "septuagint": 47
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "瑪押",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3092",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μαρίας",
@@ -1267,7 +1661,9 @@
           },
           "kind": "person",
           "zh": "馬利亞",
-          "zhSource": "theologians"
+          "zhSource": "theologians",
+          "strong": "G3137",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Σαμψών",
@@ -1277,9 +1673,11 @@
             "newTestament": 1,
             "septuagint": 44
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "參孫",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4546",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ὀλοφέρνου",
@@ -1301,9 +1699,11 @@
             "newTestament": 2,
             "septuagint": 42
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "示劍",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4966",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Πτολεμαῖος",
@@ -1316,7 +1716,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G4424",
+          "zhEnglish": "Ptolemais"
         },
         {
           "headword": "Ἀσὰφ",
@@ -1328,8 +1730,22 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞薩",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Chr.6.39",
+            "1Chr.9.15",
+            "1Chr.15.17",
+            "1Chr.15.19",
+            "1Chr.16.5",
+            "1Chr.16.7",
+            "1Chr.16.37",
+            "1Chr.25.1",
+            "1Chr.25.2",
+            "1Chr.25.6"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀσὴρ",
@@ -1339,9 +1755,11 @@
             "newTestament": 2,
             "septuagint": 41
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞設",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G768",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λὼτ",
@@ -1352,9 +1770,11 @@
             "septuagint": 37,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "羅得",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3091",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Νικάνωρ",
@@ -1364,9 +1784,11 @@
             "newTestament": 1,
             "septuagint": 42
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "尼迦挪",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3527",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Χριστιανοὶ",
@@ -1376,9 +1798,11 @@
             "newTestament": 3,
             "patristic": 40
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "基督徒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5546",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαδὼκ",
@@ -1388,9 +1812,11 @@
             "newTestament": 2,
             "septuagint": 40
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒督",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4524",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰάκωβον",
@@ -1399,9 +1825,11 @@
           "byCorpus": {
             "newTestament": 42
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "雅各",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2385",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μαριὰμ",
@@ -1412,9 +1840,23 @@
             "septuagint": 15,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "米利暗",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.6.20",
+            "Exod.15.20",
+            "Exod.15.21",
+            "Num.12.1",
+            "Num.12.4",
+            "Num.12.5",
+            "Num.12.10",
+            "Num.12.15",
+            "Num.20.1",
+            "Num.26.59"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Καίσαρος",
@@ -1426,7 +1868,8 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G2541"
         },
         {
           "headword": "Τιμόθεος",
@@ -1436,9 +1879,11 @@
             "newTestament": 24,
             "septuagint": 18
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "提摩太",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5095",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κόρε",
@@ -1448,9 +1893,11 @@
             "newTestament": 1,
             "septuagint": 41
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "可拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2879",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰσμαὴλ",
@@ -1459,9 +1906,11 @@
           "byCorpus": {
             "septuagint": 42
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "以色列",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2474",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰσσαχὰρ",
@@ -1471,9 +1920,11 @@
             "newTestament": 1,
             "septuagint": 40
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以薩迦",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Καδὴς",
@@ -1483,8 +1934,21 @@
             "septuagint": 41
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "加低斯",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.14.7",
+            "Gen.20.1",
+            "Num.13.27",
+            "Num.20.1",
+            "Num.20.14",
+            "Num.20.16",
+            "Num.20.22",
+            "Num.27.14",
+            "Num.32.8"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Χαλὲβ",
@@ -1504,9 +1968,22 @@
           "byCorpus": {
             "septuagint": 40
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "赫人",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.10.15",
+            "Gen.15.20",
+            "Gen.25.9",
+            "Gen.26.34",
+            "Gen.36.2",
+            "Gen.49.29",
+            "Gen.49.30",
+            "Gen.50.13",
+            "Exod.23.23"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Οὐρείας",
@@ -1515,9 +1992,23 @@
           "byCorpus": {
             "septuagint": 40
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "烏利亞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.11.6",
+            "2Sam.11.7",
+            "2Sam.11.8",
+            "2Sam.11.9",
+            "2Sam.11.10",
+            "2Sam.11.11",
+            "2Sam.11.12",
+            "2Sam.11.15",
+            "2Sam.11.16",
+            "2Sam.11.17"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γαβαὼν",
@@ -1527,8 +2018,21 @@
             "septuagint": 40
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "基遍",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.9.9",
+            "Josh.9.23",
+            "Josh.10.1",
+            "Josh.10.2",
+            "Josh.10.4",
+            "Josh.10.5",
+            "Josh.10.6",
+            "Josh.10.10",
+            "Josh.10.12"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀμὼς",
@@ -1539,9 +2043,11 @@
             "septuagint": 33,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞摩斯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G301",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἠλίας",
@@ -1552,9 +2058,11 @@
             "septuagint": 4,
             "patristic": 6
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以利亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2243",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ῥεβέκκα",
@@ -1565,9 +2073,13 @@
             "septuagint": 34,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "利百加",
+          "zhSource": "biblical_people",
+          "strong": "G4479",
+          "zhEnglish": "Rebecca",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἁλληλουιά",
@@ -1579,8 +2091,10 @@
             "patristic": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "你們要讚美神",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G239",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ῥαγουὴλ",
@@ -1601,8 +2115,10 @@
             "septuagint": 38
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "沒有",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G817",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωνᾶς",
@@ -1613,9 +2129,11 @@
             "septuagint": 27,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約拿",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2495",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σύρος",
@@ -1626,9 +2144,11 @@
             "septuagint": 33,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "敘利亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4948",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐβραίων",
@@ -1640,8 +2160,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "希伯來民族",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1445",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Νινευή",
@@ -1650,9 +2172,11 @@
           "byCorpus": {
             "septuagint": 37
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "尼尼微",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3535",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰεβουσαῖον",
@@ -1673,8 +2197,22 @@
             "septuagint": 37
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "巴珊",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.21.33",
+            "Num.32.33",
+            "Deut.1.4",
+            "Deut.3.1",
+            "Deut.3.3",
+            "Deut.3.4",
+            "Deut.3.10",
+            "Deut.3.11",
+            "Deut.3.13",
+            "Deut.4.43"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Περσῶν",
@@ -1684,9 +2222,11 @@
             "septuagint": 36,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "彼息氏",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4069",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σηὼν",
@@ -1695,9 +2235,11 @@
           "byCorpus": {
             "septuagint": 35
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "錫安",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4622",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἑσεβὼν",
@@ -1707,8 +2249,22 @@
             "septuagint": 35
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "希實本",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.21.25",
+            "Num.21.26",
+            "Num.21.27",
+            "Num.21.28",
+            "Num.21.30",
+            "Num.21.34",
+            "Num.32.3",
+            "Num.32.37",
+            "Deut.1.4",
+            "Deut.2.24"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γαί",
@@ -1730,8 +2286,10 @@
             "patristic": 4
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "大型船隻",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3491",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βηρσάβεε",
@@ -1752,9 +2310,11 @@
             "newTestament": 6,
             "septuagint": 27
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞力山大",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G223",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γέθ",
@@ -1775,9 +2335,11 @@
             "newTestament": 1,
             "septuagint": 31
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞比亞他",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G8",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γάζης",
@@ -1789,7 +2351,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G1047",
+          "zhEnglish": "Gaza"
         },
         {
           "headword": "Ῥώμην",
@@ -1800,9 +2364,11 @@
             "septuagint": 14,
             "patristic": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "羅馬",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4516",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀσίας",
@@ -1813,9 +2379,11 @@
             "septuagint": 8,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "亞細亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G773",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Αἰθιόπων",
@@ -1827,8 +2395,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "埃提阿伯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G128",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γαβαά",
@@ -1838,8 +2408,22 @@
             "septuagint": 31
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "基比亞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.15.57",
+            "Josh.18.24",
+            "Josh.24.33",
+            "Judg.7.1",
+            "Judg.19.12",
+            "Judg.19.13",
+            "Judg.19.14",
+            "Judg.19.15",
+            "Judg.19.16",
+            "Judg.20.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀμνὼν",
@@ -1848,9 +2432,11 @@
           "byCorpus": {
             "septuagint": 31
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "哀嫩",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G137",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαναίας",
@@ -1860,8 +2446,21 @@
             "septuagint": 31
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "比拿雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.33.31",
+            "Num.33.32",
+            "2Sam.23.20",
+            "2Sam.23.22",
+            "1Kgs.1.8",
+            "1Kgs.1.10",
+            "1Kgs.1.26",
+            "1Kgs.1.32",
+            "1Kgs.1.36"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μακκαβαῖος",
@@ -1883,9 +2482,11 @@
             "septuagint": 13,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "羅馬",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4514",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰεφθάε",
@@ -1895,9 +2496,11 @@
             "newTestament": 1,
             "septuagint": 29
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶弗他",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2422",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Θαιμάν",
@@ -1918,8 +2521,22 @@
             "septuagint": 30
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "吉甲",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.5.9",
+            "Josh.9.12",
+            "Josh.10.6",
+            "Josh.22.10",
+            "1Sam.7.16",
+            "1Sam.11.14",
+            "1Sam.11.15",
+            "1Sam.13.8",
+            "1Sam.13.12",
+            "1Sam.15.12"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βόος",
@@ -1929,9 +2546,23 @@
             "newTestament": 1,
             "septuagint": 28
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "波阿斯",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.20.17",
+            "Deut.5.21",
+            "Ruth.2.1",
+            "Ruth.2.3",
+            "Ruth.2.4",
+            "Ruth.2.5",
+            "Ruth.2.8",
+            "Ruth.2.11",
+            "Ruth.2.14",
+            "Ruth.2.15"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαρναβᾶς",
@@ -1941,9 +2572,11 @@
             "newTestament": 28,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴拿巴",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G921",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σικίμων",
@@ -1952,9 +2585,23 @@
           "byCorpus": {
             "septuagint": 29
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "示劍",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.33.18",
+            "Gen.35.5",
+            "Judg.9.6",
+            "Judg.9.7",
+            "Judg.9.18",
+            "Judg.9.20",
+            "Judg.9.23",
+            "Judg.9.24",
+            "Judg.9.25",
+            "Judg.9.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μεμφιβόσθε",
@@ -1976,7 +2623,8 @@
           },
           "kind": "person",
           "zh": "士每拿的坡旅甲",
-          "zhSource": "theologians"
+          "zhSource": "theologians",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἀχὰζ",
@@ -1987,9 +2635,11 @@
             "septuagint": 25,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞哈斯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G881",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἄζωτον",
@@ -1999,9 +2649,11 @@
             "newTestament": 1,
             "septuagint": 27
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "非利士人的五個重",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G108",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Εὑαῖον",
@@ -2011,8 +2663,10 @@
             "septuagint": 28
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "橄欖油",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1637",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γεδσὼν",
@@ -2021,9 +2675,11 @@
           "byCorpus": {
             "septuagint": 28
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "基甸",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1066",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀβιὰ",
@@ -2033,9 +2689,11 @@
             "newTestament": 3,
             "septuagint": 24
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞比雅",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G7",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Εὐφράτην",
@@ -2045,9 +2703,11 @@
             "newTestament": 2,
             "septuagint": 25
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "幼發拉底河",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2166",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐλιὰβ",
@@ -2056,9 +2716,11 @@
           "byCorpus": {
             "septuagint": 27
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以利押",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Γοδολίαν",
@@ -2068,8 +2730,17 @@
             "septuagint": 27
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "基大利",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.21.19",
+            "2Kgs.25.22",
+            "2Kgs.25.23",
+            "2Kgs.25.24",
+            "2Kgs.25.25"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Δαρείου",
@@ -2079,8 +2750,22 @@
             "septuagint": 27
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "大流士",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Ezra.4.5",
+            "Ezra.4.24",
+            "Ezra.6.1",
+            "Ezra.6.12",
+            "Ezra.6.13",
+            "Ezra.6.14",
+            "Ezra.6.15",
+            "Neh.12.22",
+            "Zech.1.1",
+            "Zech.1.7"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γόμορρα",
@@ -2091,9 +2776,11 @@
             "septuagint": 20,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "蛾摩拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1116",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἑνὼχ",
@@ -2104,9 +2791,11 @@
             "septuagint": 19,
             "patristic": 4
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以諾",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1802",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωὴλ",
@@ -2116,9 +2805,11 @@
             "newTestament": 1,
             "septuagint": 25
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約珥",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2493",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φερεζαῖον",
@@ -2127,9 +2818,22 @@
           "byCorpus": {
             "septuagint": 26
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "比利洗人",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.13.7",
+            "Gen.15.20",
+            "Gen.34.30",
+            "Exod.23.23",
+            "Exod.33.2",
+            "Exod.34.11",
+            "Deut.7.1",
+            "Josh.3.10",
+            "Josh.9.1"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀβιμέλεχ",
@@ -2138,9 +2842,11 @@
           "byCorpus": {
             "septuagint": 26
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞比米勒",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Λεία",
@@ -2149,9 +2855,23 @@
           "byCorpus": {
             "septuagint": 26
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "利亞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.29.16",
+            "Gen.29.17",
+            "Gen.29.23",
+            "Gen.29.24",
+            "Gen.29.25",
+            "Gen.29.30",
+            "Gen.29.31",
+            "Gen.29.32",
+            "Gen.29.33",
+            "Gen.30.9"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀρνών",
@@ -2161,8 +2881,20 @@
             "septuagint": 26
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞嫩",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.12.5",
+            "Num.21.13",
+            "Num.21.14",
+            "Num.21.24",
+            "Num.21.26",
+            "Num.21.28",
+            "Deut.2.24",
+            "Deut.2.36"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαροὺχ",
@@ -2171,9 +2903,11 @@
           "byCorpus": {
             "septuagint": 26
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西鹿",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4562",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰόππην",
@@ -2183,9 +2917,11 @@
             "newTestament": 10,
             "septuagint": 15
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "約帕",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2445",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λυσίας",
@@ -2195,9 +2931,11 @@
             "newTestament": 2,
             "septuagint": 23
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "呂西亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3079",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κάιν",
@@ -2208,9 +2946,12 @@
             "septuagint": 16,
             "patristic": 6
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "該隱",
+          "zhSource": "biblical_people",
+          "strong": "G2535",
+          "zhRoute": "英文名",
+          "zhEnglish": "Cain"
         },
         {
           "headword": "Βαασὰ",
@@ -2219,9 +2960,23 @@
           "byCorpus": {
             "septuagint": 25
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴沙",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Kgs.15.16",
+            "1Kgs.15.17",
+            "1Kgs.15.19",
+            "1Kgs.15.21",
+            "1Kgs.15.22",
+            "1Kgs.15.27",
+            "1Kgs.15.28",
+            "1Kgs.15.33",
+            "1Kgs.16.1",
+            "1Kgs.16.3"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ζοροβαβὲλ",
@@ -2231,9 +2986,11 @@
             "newTestament": 3,
             "septuagint": 21
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "所羅巴伯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2216",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωανὰν",
@@ -2243,9 +3000,23 @@
             "newTestament": 1,
             "septuagint": 23
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約哈難",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Chr.3.15",
+            "1Chr.3.24",
+            "1Chr.6.9",
+            "1Chr.6.10",
+            "1Chr.12.4",
+            "2Chr.17.15",
+            "2Chr.23.1",
+            "Ezra.10.6",
+            "Ezra.10.28",
+            "Neh.12.13"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀντιόχειαν",
@@ -2258,7 +3029,9 @@
           },
           "kind": "place",
           "zh": "安提阿",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G490",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ναβὰτ",
@@ -2267,9 +3040,22 @@
           "byCorpus": {
             "septuagint": 24
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "羅波安",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Kgs.11.43",
+            "1Kgs.12.15",
+            "1Kgs.15.31",
+            "1Kgs.16.19",
+            "1Kgs.16.26",
+            "1Kgs.16.31",
+            "1Kgs.22.53",
+            "2Kgs.9.9",
+            "2Kgs.10.29"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁζαὴλ",
@@ -2279,8 +3065,22 @@
             "septuagint": 24
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "哈薛",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Kgs.19.15",
+            "1Kgs.19.17",
+            "2Kgs.8.8",
+            "2Kgs.8.9",
+            "2Kgs.8.12",
+            "2Kgs.8.13",
+            "2Kgs.8.15",
+            "2Kgs.8.28",
+            "2Kgs.8.29",
+            "2Kgs.9.14"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Κύρου",
@@ -2291,8 +3091,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "使生效",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2964",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φάρες",
@@ -2302,9 +3104,11 @@
             "newTestament": 3,
             "septuagint": 20
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "法勒斯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5329",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μεσοποταμίαν",
@@ -2316,7 +3120,9 @@
           },
           "kind": "place",
           "zh": "美索不達米亞",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G3318",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Καρμήλῳ",
@@ -2338,9 +3144,11 @@
             "septuagint": 13,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "伯利恆",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G965",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἅβελ",
@@ -2351,9 +3159,11 @@
             "septuagint": 13,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞伯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G6",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μακεδονίαν",
@@ -2364,7 +3174,9 @@
           },
           "kind": "place",
           "zh": "馬其頓",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G3109",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἰεζάβελ",
@@ -2374,9 +3186,11 @@
             "newTestament": 1,
             "septuagint": 21
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶洗別",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2403",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰθαμάρ",
@@ -2385,9 +3199,23 @@
           "byCorpus": {
             "septuagint": 22
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞倫",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.6.23",
+            "Exod.28.1",
+            "Exod.37.19",
+            "Lev.10.6",
+            "Lev.10.12",
+            "Lev.10.16",
+            "Num.3.2",
+            "Num.3.4",
+            "Num.4.28",
+            "Num.4.33"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ναβὰλ",
@@ -2397,8 +3225,22 @@
             "septuagint": 22
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "拿八",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.10.5",
+            "1Sam.25.3",
+            "1Sam.25.4",
+            "1Sam.25.5",
+            "1Sam.25.9",
+            "1Sam.25.10",
+            "1Sam.25.14",
+            "1Sam.25.22",
+            "1Sam.25.25",
+            "1Sam.25.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ὀρνὰ",
@@ -2408,8 +3250,22 @@
             "septuagint": 22
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞勞拿",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.24.16",
+            "2Sam.24.18",
+            "2Sam.24.20",
+            "2Sam.24.21",
+            "2Sam.24.22",
+            "2Sam.24.23",
+            "2Sam.24.24",
+            "1Chr.2.18",
+            "1Chr.3.21",
+            "1Chr.21.15"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Τρύφων",
@@ -2421,7 +3277,9 @@
           },
           "kind": "person",
           "zh": "特里弗",
-          "zhSource": "theologians"
+          "zhSource": "theologians",
+          "strong": "G5167",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ῥαμὰ",
@@ -2431,9 +3289,12 @@
             "newTestament": 1,
             "septuagint": 20
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉瑪",
+          "zhSource": "biblical_people",
+          "strong": "G4471",
+          "zhRoute": "英文名",
+          "zhEnglish": "Rama"
         },
         {
           "headword": "Ματταθίας",
@@ -2443,9 +3304,11 @@
             "newTestament": 2,
             "septuagint": 19
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "瑪他提亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3161",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναδὰβ",
@@ -2455,9 +3318,11 @@
             "septuagint": 20,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿答",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ὣρ",
@@ -2466,9 +3331,7 @@
           "byCorpus": {
             "septuagint": 21
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": ""
         },
         {
           "headword": "Ἀσκάλωνα",
@@ -2478,8 +3341,16 @@
             "septuagint": 21
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "革倫",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.1.18",
+            "Judg.14.19",
+            "1Sam.5.10",
+            "1Sam.6.16"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀγχοὺς",
@@ -2489,8 +3360,22 @@
             "septuagint": 21
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞吉",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.21.10",
+            "1Sam.21.11",
+            "1Sam.21.12",
+            "1Sam.21.14",
+            "1Sam.27.2",
+            "1Sam.27.3",
+            "1Sam.27.5",
+            "1Sam.27.9",
+            "1Sam.27.10",
+            "1Sam.27.12"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁδραάζαρ",
@@ -2500,8 +3385,22 @@
             "septuagint": 21
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "哈大底謝",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.8.3",
+            "2Sam.8.5",
+            "2Sam.8.7",
+            "2Sam.8.8",
+            "2Sam.8.9",
+            "2Sam.8.10",
+            "2Sam.8.12",
+            "2Sam.10.16",
+            "2Sam.10.19",
+            "1Kgs.14.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ῥοὺθ",
@@ -2511,9 +3410,11 @@
             "newTestament": 1,
             "septuagint": 19
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "路得",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4503",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σιδῶνος",
@@ -2523,9 +3424,11 @@
             "newTestament": 9,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "西頓",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4605",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναχὼρ",
@@ -2535,9 +3438,11 @@
             "newTestament": 1,
             "septuagint": 19
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿鶴",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3493",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ὢγ",
@@ -2547,8 +3452,22 @@
             "septuagint": 20
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "巴珊王噩",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.21.33",
+            "Num.24.23",
+            "Num.32.33",
+            "Deut.1.4",
+            "Deut.3.3",
+            "Deut.3.4",
+            "Deut.3.10",
+            "Deut.3.11",
+            "Deut.29.7",
+            "Deut.31.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μασσηφά",
@@ -2558,8 +3477,22 @@
             "septuagint": 20
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "米斯巴",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.13.26",
+            "Judg.11.11",
+            "Judg.11.34",
+            "Judg.20.1",
+            "Judg.20.3",
+            "Judg.21.1",
+            "Judg.21.5",
+            "Judg.21.8",
+            "1Sam.7.5",
+            "1Sam.7.6"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σαφὰν",
@@ -2568,9 +3501,11 @@
           "byCorpus": {
             "septuagint": 20
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "字意",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4566",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαιθλέεμ",
@@ -2579,9 +3514,23 @@
           "byCorpus": {
             "septuagint": 20
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "伯利恆",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.15.59",
+            "Judg.12.8",
+            "Judg.12.10",
+            "Judg.17.9",
+            "Ruth.1.1",
+            "Ruth.1.2",
+            "Ruth.1.19",
+            "Ruth.1.22",
+            "Ruth.2.4",
+            "Ruth.4.11"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαιθσάμυς",
@@ -2591,8 +3540,22 @@
             "septuagint": 20
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "示麥",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.18.17",
+            "Josh.19.12",
+            "Josh.19.22",
+            "Josh.21.16",
+            "Judg.1.33",
+            "1Sam.6.9",
+            "1Sam.6.12",
+            "1Sam.6.13",
+            "1Sam.6.14",
+            "1Sam.6.15"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βακχίδης",
@@ -2613,9 +3576,11 @@
             "newTestament": 5,
             "septuagint": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶孫",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2394",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀκκαρὼν",
@@ -2625,8 +3590,22 @@
             "septuagint": 19
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "革倫",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.13.3",
+            "Josh.15.11",
+            "Josh.15.45",
+            "Josh.15.46",
+            "Josh.19.43",
+            "Judg.1.18",
+            "1Sam.6.17",
+            "1Sam.17.52",
+            "2Kgs.1.2",
+            "2Kgs.1.3"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μανῶε",
@@ -2636,9 +3615,23 @@
             "septuagint": 18,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "瑪挪亞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.13.2",
+            "Judg.13.8",
+            "Judg.13.9",
+            "Judg.13.11",
+            "Judg.13.12",
+            "Judg.13.13",
+            "Judg.13.15",
+            "Judg.13.16",
+            "Judg.13.17",
+            "Judg.13.19"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μελχὸλ",
@@ -2647,9 +3640,23 @@
           "byCorpus": {
             "septuagint": 19
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "米甲",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.14.49",
+            "1Sam.18.20",
+            "1Sam.18.27",
+            "1Sam.19.11",
+            "1Sam.19.12",
+            "1Sam.19.13",
+            "1Sam.19.17",
+            "1Sam.25.44",
+            "2Sam.3.13",
+            "2Sam.3.14"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σαμαίας",
@@ -2670,9 +3677,11 @@
             "newTestament": 2,
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約坦",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2488",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰεχονίας",
@@ -2682,9 +3691,11 @@
             "newTestament": 2,
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "耶哥尼雅",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2423",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σήμ",
@@ -2694,9 +3705,11 @@
             "newTestament": 1,
             "septuagint": 17
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "閃的意思是",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4590",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναθαναὴλ",
@@ -2706,9 +3719,11 @@
             "newTestament": 6,
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿但業",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3482",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γὼγ",
@@ -2718,9 +3733,11 @@
             "newTestament": 1,
             "septuagint": 17
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "歌革",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1136",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σάρα",
@@ -2729,9 +3746,11 @@
           "byCorpus": {
             "septuagint": 18
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒拉",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Χωρήβ",
@@ -2741,8 +3760,22 @@
             "septuagint": 18
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "何烈山",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.3.1",
+            "Exod.17.6",
+            "Exod.33.6",
+            "Deut.1.2",
+            "Deut.1.6",
+            "Deut.1.19",
+            "Deut.4.10",
+            "Deut.4.15",
+            "Deut.5.2",
+            "Deut.9.8"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σαρουίας",
@@ -2751,9 +3784,23 @@
           "byCorpus": {
             "septuagint": 18
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "洗魯雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.26.6",
+            "2Sam.2.13",
+            "2Sam.2.18",
+            "2Sam.3.39",
+            "2Sam.8.16",
+            "2Sam.14.1",
+            "2Sam.16.9",
+            "2Sam.16.10",
+            "2Sam.17.25",
+            "2Sam.18.2"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ναβουθαὶ",
@@ -2775,9 +3822,11 @@
             "septuagint": 1,
             "patristic": 4
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "所羅門",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4672",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀβιοὺδ",
@@ -2788,9 +3837,11 @@
             "septuagint": 14,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞比玉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G10",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Καισάρειαν",
@@ -2801,7 +3852,9 @@
           },
           "kind": "place",
           "zh": "凱撒利亞",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G2542",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ναιμὰν",
@@ -2813,8 +3866,22 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "乃縵",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.5.1",
+            "2Kgs.5.2",
+            "2Kgs.5.5",
+            "2Kgs.5.6",
+            "2Kgs.5.8",
+            "2Kgs.5.9",
+            "2Kgs.5.11",
+            "2Kgs.5.14",
+            "2Kgs.5.17",
+            "2Kgs.5.19"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἄραβες",
@@ -2826,8 +3893,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞拉伯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G690",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἔφεσον",
@@ -2839,7 +3908,9 @@
           },
           "kind": "place",
           "zh": "以弗所",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G2181",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἀραβίας",
@@ -2852,7 +3923,9 @@
           },
           "kind": "place",
           "zh": "阿拉伯",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G688",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Σαβὰ",
@@ -2861,9 +3934,11 @@
           "byCorpus": {
             "septuagint": 17
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "沙拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4527",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σηλώμ",
@@ -2884,9 +3959,11 @@
             "septuagint": 16,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以利加拿",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἰεφοννὴ",
@@ -2907,8 +3984,10 @@
             "septuagint": 17
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "腐爛",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4595",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Δαγὼν",
@@ -2918,8 +3997,20 @@
             "septuagint": 17
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "大袞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.16.23",
+            "1Sam.5.2",
+            "1Sam.5.3",
+            "1Sam.5.4",
+            "1Sam.5.5",
+            "1Sam.5.7",
+            "1Chr.10.10",
+            "Ezek.20.46"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Θημὰρ",
@@ -2929,8 +4020,10 @@
             "septuagint": 17
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "他瑪",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2283",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰωαχὰς",
@@ -2939,9 +4032,23 @@
           "byCorpus": {
             "septuagint": 17
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約哈斯",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.10.35",
+            "2Kgs.13.1",
+            "2Kgs.13.4",
+            "2Kgs.13.7",
+            "2Kgs.13.8",
+            "2Kgs.13.9",
+            "2Kgs.13.10",
+            "2Kgs.13.22",
+            "2Kgs.13.25",
+            "2Kgs.14.1"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Καφαρναοὺμ",
@@ -2952,7 +4059,8 @@
           },
           "kind": "place",
           "zh": "迦百農",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἁγὰρ",
@@ -2962,9 +4070,11 @@
             "newTestament": 2,
             "septuagint": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "夏甲",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G28",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ῥαὰβ",
@@ -2975,9 +4085,12 @@
             "septuagint": 12,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "喇合",
+          "zhSource": "biblical_people",
+          "strong": "G4460",
+          "zhRoute": "英文名",
+          "zhEnglish": "Rahab"
         },
         {
           "headword": "Χάμ",
@@ -2986,9 +4099,11 @@
           "byCorpus": {
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "含",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἐφρὼν",
@@ -2998,8 +4113,10 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "愚昧",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G878",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐφράθα",
@@ -3009,8 +4126,10 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "打開吧",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2188",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰοθὸρ",
@@ -3019,9 +4138,23 @@
           "byCorpus": {
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "葉特羅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.2.16",
+            "Exod.3.1",
+            "Exod.4.18",
+            "Exod.18.1",
+            "Exod.18.2",
+            "Exod.18.5",
+            "Exod.18.6",
+            "Exod.18.9",
+            "Exod.18.10",
+            "Exod.18.12"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἑρμᾶ",
@@ -3032,8 +4165,10 @@
             "patristic": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "旅行用馬車",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G716",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Νὴρ",
@@ -3043,8 +4178,10 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "空氣",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G109",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀσαὴλ",
@@ -3053,9 +4190,23 @@
           "byCorpus": {
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞撒黑",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.2.18",
+            "2Sam.2.19",
+            "2Sam.2.20",
+            "2Sam.2.21",
+            "2Sam.2.22",
+            "2Sam.2.23",
+            "2Sam.2.31",
+            "2Sam.2.32",
+            "2Sam.3.27",
+            "2Sam.3.30"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁγγαίου",
@@ -3066,8 +4217,22 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "哈該",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Ezra.5.1",
+            "Ezra.6.14",
+            "Hag.1.1",
+            "Hag.1.3",
+            "Hag.1.12",
+            "Hag.1.13",
+            "Hag.2.1",
+            "Hag.2.10",
+            "Hag.2.13",
+            "Hag.2.14"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ὀνίαν",
@@ -3076,9 +4241,11 @@
           "byCorpus": {
             "septuagint": 16
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "烏西亞",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3604",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἄλκιμος",
@@ -3112,7 +4279,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G4461",
+          "zhEnglish": "Master"
         },
         {
           "headword": "Λάζαρος",
@@ -3121,9 +4290,11 @@
           "byCorpus": {
             "newTestament": 15
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉撒路",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2976",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κεδρών",
@@ -3133,9 +4304,11 @@
             "newTestament": 1,
             "septuagint": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "汲淪",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2748",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μήδων",
@@ -3145,9 +4318,11 @@
             "newTestament": 1,
             "septuagint": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "米底亞人",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3370",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κιλικίας",
@@ -3160,7 +4335,9 @@
           },
           "kind": "place",
           "zh": "基利家",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G2791",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Χαρράν",
@@ -3170,9 +4347,11 @@
             "newTestament": 2,
             "septuagint": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "哈蘭",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5488",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σινᾶ",
@@ -3183,9 +4362,11 @@
             "septuagint": 8,
             "patristic": 3
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "西乃",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4614",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαῦλος",
@@ -3194,9 +4375,11 @@
           "byCorpus": {
             "newTestament": 15
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "掃羅",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4569",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ὡσῆε",
@@ -3207,9 +4390,11 @@
             "septuagint": 13,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "何西阿",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5617",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Τίτου",
@@ -3220,9 +4405,11 @@
             "septuagint": 1,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "提多",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5103",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαρὰκ",
@@ -3232,9 +4419,11 @@
             "newTestament": 1,
             "septuagint": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G913",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γεργεσαῖον",
@@ -3266,8 +4455,22 @@
             "septuagint": 15
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "疏割",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Exod.12.37",
+            "Exod.13.20",
+            "Num.33.5",
+            "Num.33.6",
+            "Josh.13.27",
+            "Josh.15.11",
+            "Judg.8.5",
+            "Judg.8.6",
+            "Judg.8.8",
+            "Judg.8.14"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Θερσά",
@@ -3276,9 +4479,23 @@
           "byCorpus": {
             "septuagint": 15
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "得撒",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.26.37",
+            "Num.27.1",
+            "Num.36.11",
+            "Josh.17.3",
+            "1Kgs.15.21",
+            "1Kgs.15.33",
+            "1Kgs.16.6",
+            "1Kgs.16.8",
+            "1Kgs.16.9",
+            "1Kgs.16.15"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γοθολία",
@@ -3288,8 +4505,22 @@
             "septuagint": 15
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞她利雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.8.26",
+            "2Kgs.11.1",
+            "2Kgs.11.2",
+            "2Kgs.11.3",
+            "2Kgs.11.13",
+            "2Kgs.11.14",
+            "2Kgs.11.20",
+            "2Chr.22.2",
+            "2Chr.22.10",
+            "2Chr.22.11"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ῥαφαὴλ",
@@ -3332,9 +4563,11 @@
           "byCorpus": {
             "septuagint": 15
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "米甸",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3099",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ζάρα",
@@ -3344,9 +4577,11 @@
             "newTestament": 1,
             "septuagint": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "謝拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2196",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαλαθιὴλ",
@@ -3356,9 +4591,11 @@
             "newTestament": 3,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒拉鐵",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4528",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαδδουκαίων",
@@ -3367,9 +4604,11 @@
           "byCorpus": {
             "newTestament": 14
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "撒都該人",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4523",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λευὶ",
@@ -3379,9 +4618,11 @@
             "newTestament": 7,
             "septuagint": 7
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "利未",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3017",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σιδωνίων",
@@ -3391,9 +4632,11 @@
             "newTestament": 2,
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西頓",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4606",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐμμὼρ",
@@ -3403,9 +4646,11 @@
             "newTestament": 1,
             "septuagint": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "哈抹",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1697",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φοινίκης",
@@ -3417,7 +4662,9 @@
           },
           "kind": "place",
           "zh": "腓尼基",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G5403",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἀὼδ",
@@ -3438,8 +4685,22 @@
             "septuagint": 14
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞羅珥",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.21.26",
+            "Num.32.34",
+            "Deut.2.29",
+            "Deut.2.36",
+            "Deut.3.12",
+            "Deut.4.48",
+            "Josh.13.9",
+            "Josh.13.16",
+            "Judg.11.26",
+            "Judg.11.33"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαναιὰ",
@@ -3449,8 +4710,21 @@
             "septuagint": 14
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "比拿雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.33.31",
+            "Num.33.32",
+            "2Sam.23.20",
+            "2Sam.23.22",
+            "1Kgs.1.8",
+            "1Kgs.1.10",
+            "1Kgs.1.26",
+            "1Kgs.1.32",
+            "1Kgs.1.36"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ὀζά",
@@ -3460,8 +4734,22 @@
             "septuagint": 14
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "烏撒",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.34.26",
+            "Josh.6.26",
+            "2Sam.6.3",
+            "2Sam.6.6",
+            "2Sam.6.7",
+            "2Sam.6.8",
+            "2Kgs.21.18",
+            "2Kgs.21.26",
+            "1Chr.2.33",
+            "1Chr.6.29"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀχιὼρ",
@@ -3482,8 +4770,22 @@
             "septuagint": 14
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞拉巴",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Deut.1.7",
+            "Deut.2.8",
+            "Deut.3.17",
+            "Deut.4.49",
+            "Josh.3.16",
+            "Josh.12.1",
+            "Josh.12.3",
+            "Josh.12.8",
+            "Josh.13.25",
+            "2Kgs.14.25"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἰωναδὰβ",
@@ -3526,8 +4828,22 @@
             "septuagint": 14
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "多比雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Neh.2.19",
+            "Neh.4.3",
+            "Neh.4.7",
+            "Neh.6.1",
+            "Neh.6.12",
+            "Neh.6.14",
+            "Neh.6.17",
+            "Neh.6.19",
+            "Neh.7.62",
+            "Neh.13.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀπολλώνιος",
@@ -3549,9 +4865,11 @@
             "newTestament": 2,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞蘭",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G689",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναζωραῖος",
@@ -3560,9 +4878,11 @@
           "byCorpus": {
             "newTestament": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿撒勒人",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3480",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀνδρέας",
@@ -3571,9 +4891,11 @@
           "byCorpus": {
             "newTestament": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "安得烈",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G406",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰεριχὼ",
@@ -3584,9 +4906,11 @@
             "septuagint": 4,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "耶利哥",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2410",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἅννα",
@@ -3596,9 +4920,11 @@
             "newTestament": 2,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞拿",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G451",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ποντίου",
@@ -3608,9 +4934,11 @@
             "newTestament": 3,
             "patristic": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "將耶穌釘死十字架",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4194",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἢρ",
@@ -3620,9 +4948,11 @@
             "newTestament": 1,
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "珥",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2262",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Θάρα",
@@ -3632,9 +4962,11 @@
             "newTestament": 1,
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "他拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2291",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀρφαξὰδ",
@@ -3644,9 +4976,11 @@
             "newTestament": 1,
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞法撒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G742",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Λάμεχ",
@@ -3657,9 +4991,11 @@
             "septuagint": 11,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉麥",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2984",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μάρθα",
@@ -3668,9 +5004,11 @@
           "byCorpus": {
             "newTestament": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "馬大",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3136",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φῆστος",
@@ -3679,9 +5017,11 @@
           "byCorpus": {
             "newTestament": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "接續腓力斯的猶大",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5347",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Περσίδα",
@@ -3692,9 +5032,11 @@
             "septuagint": 11,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "彼息氏",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4069",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἁρρὰν",
@@ -3704,8 +5046,10 @@
             "septuagint": 13
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "男的",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G730",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κενέζ",
@@ -3725,9 +5069,18 @@
           "byCorpus": {
             "septuagint": 13
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "東人",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.8.14",
+            "1Kgs.11.17",
+            "2Kgs.16.6",
+            "1Chr.18.13",
+            "2Chr.28.17"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γάζερ",
@@ -3759,8 +5112,21 @@
             "septuagint": 13
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞拿突",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.21.18",
+            "1Kgs.2.26",
+            "1Chr.7.8",
+            "1Chr.11.28",
+            "1Chr.12.3",
+            "1Chr.27.12",
+            "Ezra.2.23",
+            "Neh.10.19",
+            "Isa.10.30"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Νεχαὼ",
@@ -3770,8 +5136,20 @@
             "septuagint": 13
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "尼哥",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.23.29",
+            "2Kgs.23.33",
+            "2Kgs.23.34",
+            "2Kgs.23.35",
+            "2Chr.35.20",
+            "2Chr.35.22",
+            "2Chr.36.2",
+            "2Chr.36.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁνὰν",
@@ -3781,8 +5159,18 @@
             "septuagint": 13
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "哈拿尼",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Kgs.16.1",
+            "1Kgs.16.7",
+            "1Chr.3.19",
+            "1Chr.3.21",
+            "1Chr.8.23",
+            "1Chr.8.24"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαλτασὰρ",
@@ -3814,9 +5202,11 @@
             "newTestament": 3,
             "septuagint": 9
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拿順",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3476",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ζεβεδαίου",
@@ -3825,9 +5215,11 @@
           "byCorpus": {
             "newTestament": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西庇太",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2199",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βηθανίαν",
@@ -3836,9 +5228,11 @@
           "byCorpus": {
             "newTestament": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "伯大尼",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G963",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μαγδαληνὴ",
@@ -3847,9 +5241,11 @@
           "byCorpus": {
             "newTestament": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "抹大拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3094",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐλιέζερ",
@@ -3859,9 +5255,11 @@
             "newTestament": 1,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "以利以謝",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1663",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σιλᾶν",
@@ -3870,9 +5268,11 @@
           "byCorpus": {
             "newTestament": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "西拉",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G4609",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βοσόρ",
@@ -3882,9 +5282,11 @@
             "newTestament": 1,
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "比珥",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1007",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Αἰθιοπίας",
@@ -3893,9 +5295,22 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "古實",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.2.13",
+            "Job.28.19",
+            "Isa.11.11",
+            "Isa.18.1",
+            "Isa.43.3",
+            "Ezek.30.4",
+            "Ezek.30.9",
+            "Nah.3.9",
+            "Zeph.3.10"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἀδὰ",
@@ -3904,9 +5319,11 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞大",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἰάφεθ",
@@ -3915,9 +5332,11 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "雅弗",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Μελχὰ",
@@ -3926,9 +5345,11 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "麥基",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3197",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Κηδάρ",
@@ -3937,9 +5358,11 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "基達",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Δεββωρὰ",
@@ -3948,9 +5371,11 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "底波拉",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Ἰαζὴρ",
@@ -3960,8 +5385,22 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "雅謝",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.21.24",
+            "Num.21.32",
+            "Num.32.1",
+            "Num.32.3",
+            "Num.32.35",
+            "Josh.13.25",
+            "Josh.21.36",
+            "Josh.21.39",
+            "Isa.16.8",
+            "Isa.16.9"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁερμών",
@@ -3971,8 +5410,22 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "黑門山",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Deut.3.8",
+            "Deut.3.9",
+            "Deut.4.48",
+            "Josh.11.17",
+            "Josh.12.1",
+            "Josh.12.5",
+            "Josh.13.5",
+            "Josh.13.11",
+            "Judg.3.3",
+            "1Chr.5.23"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ὀδολλάμ",
@@ -3993,8 +5446,22 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "夏瑣",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.11.1",
+            "Josh.11.10",
+            "Josh.11.11",
+            "Josh.11.13",
+            "Josh.15.3",
+            "Josh.15.21",
+            "Josh.15.25",
+            "Josh.19.36",
+            "Judg.4.2",
+            "Judg.4.17"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ῥηχὰβ",
@@ -4005,7 +5472,8 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G4477"
         },
         {
           "headword": "Ζέβεε",
@@ -4015,8 +5483,20 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "西巴和撒慕拿",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.8.5",
+            "Judg.8.6",
+            "Judg.8.7",
+            "Judg.8.10",
+            "Judg.8.12",
+            "Judg.8.15",
+            "Judg.8.18",
+            "Judg.8.21"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἁρμαθάιμ",
@@ -4025,9 +5505,23 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "拉瑪",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.1.1",
+            "1Sam.1.3",
+            "1Sam.1.19",
+            "1Sam.2.11",
+            "1Sam.7.17",
+            "1Sam.8.4",
+            "1Sam.15.34",
+            "1Sam.16.13",
+            "1Sam.19.18",
+            "1Sam.19.22"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σουβὰ",
@@ -4048,8 +5542,22 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "利瑪利的兒子",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.15.25",
+            "2Kgs.15.27",
+            "2Kgs.15.30",
+            "2Kgs.15.32",
+            "2Kgs.15.37",
+            "2Kgs.16.1",
+            "2Kgs.16.5",
+            "Isa.7.5",
+            "Isa.7.9",
+            "Isa.8.6"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἰωσεδὲκ",
@@ -4058,9 +5566,23 @@
           "byCorpus": {
             "septuagint": 12
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "書亞",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Ezra.3.2",
+            "Ezra.3.8",
+            "Ezra.5.2",
+            "Ezra.10.18",
+            "Hag.1.1",
+            "Hag.1.12",
+            "Hag.1.14",
+            "Hag.2.2",
+            "Hag.2.4",
+            "Zech.6.11"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μισάχ",
@@ -4126,8 +5648,10 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "他瑪",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2283",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Θωμᾶς",
@@ -4136,9 +5660,11 @@
           "byCorpus": {
             "newTestament": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "多馬",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2381",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γαλιλαῖοι",
@@ -4147,9 +5673,11 @@
           "byCorpus": {
             "newTestament": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "加利利",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1057",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαραββᾶν",
@@ -4158,9 +5686,11 @@
           "byCorpus": {
             "newTestament": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "巴拉巴",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G912",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σὴθ",
@@ -4172,7 +5702,9 @@
           },
           "kind": "deity",
           "zh": "塞特",
-          "zhSource": "deities"
+          "zhSource": "deities",
+          "strong": "G4589",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἰσραηλῖται",
@@ -4183,9 +5715,11 @@
             "septuagint": 1,
             "patristic": 1
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "以色列",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2475",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀχαΐας",
@@ -4197,7 +5731,9 @@
           },
           "kind": "place",
           "zh": "亞該亞",
-          "zhSource": "place_names"
+          "zhSource": "place_names",
+          "strong": "G882",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ἀπολλῶς",
@@ -4208,8 +5744,10 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "亞波羅",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G625",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἐφεσίων",
@@ -4220,8 +5758,10 @@
             "patristic": 6
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "以弗所出生的或居",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2180",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Φῆλιξ",
@@ -4231,9 +5771,11 @@
             "newTestament": 9,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "腓力斯",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5344",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἀγρίππα",
@@ -4242,9 +5784,11 @@
           "byCorpus": {
             "newTestament": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞基帕",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G67",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γεράρων",
@@ -4276,8 +5820,10 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "法老",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5328",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Βαθουὴλ",
@@ -4286,9 +5832,23 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "彼土利",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.22.22",
+            "Gen.22.23",
+            "Gen.24.15",
+            "Gen.24.24",
+            "Gen.24.47",
+            "Gen.24.50",
+            "Gen.25.20",
+            "Gen.28.2",
+            "Gen.28.5",
+            "Gen.29.1"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Χέτ",
@@ -4297,9 +5857,11 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "赫",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Βεὼρ",
@@ -4308,9 +5870,11 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "比珥",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Φογώρ",
@@ -4320,8 +5884,21 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "毗珥",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.36.39",
+            "Num.23.28",
+            "Num.25.18",
+            "Num.31.16",
+            "Deut.3.29",
+            "Deut.4.46",
+            "Deut.34.6",
+            "Josh.22.17",
+            "1Chr.1.50"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαρνή",
@@ -4342,8 +5919,22 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "臨門",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Num.33.19",
+            "Josh.19.13",
+            "Judg.20.45",
+            "Judg.20.47",
+            "Judg.21.13",
+            "2Sam.4.2",
+            "2Sam.4.5",
+            "2Sam.4.9",
+            "2Kgs.8.28",
+            "2Kgs.8.29"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γεθθαίου",
@@ -4352,9 +5943,23 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "people",
+          "zh": "迦特人",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.5.8",
+            "1Sam.5.9",
+            "2Sam.6.10",
+            "2Sam.6.11",
+            "2Sam.15.18",
+            "2Sam.15.19",
+            "2Sam.15.22",
+            "2Sam.18.2",
+            "1Chr.13.13",
+            "1Chr.20.5"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σελμανά",
@@ -4364,8 +5969,20 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "西巴和撒慕拿",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.8.5",
+            "Judg.8.6",
+            "Judg.8.7",
+            "Judg.8.10",
+            "Judg.8.12",
+            "Judg.8.15",
+            "Judg.8.18",
+            "Judg.8.21"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ὠβήδ",
@@ -4374,9 +5991,11 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "俄備得",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G5601",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ναὰς",
@@ -4396,9 +6015,11 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "希伯來文",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2241",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαρουιὰ",
@@ -4407,9 +6028,23 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "洗魯雅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "1Sam.26.6",
+            "2Sam.2.13",
+            "2Sam.2.18",
+            "2Sam.3.39",
+            "2Sam.8.16",
+            "2Sam.14.1",
+            "2Sam.16.9",
+            "2Sam.16.10",
+            "2Sam.17.25",
+            "2Sam.18.2"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἡμὰθ",
@@ -4419,8 +6054,10 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "我們",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2248",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Σαδδοὺκ",
@@ -4429,9 +6066,22 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "撒督",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Sam.8.17",
+            "Ezra.7.2",
+            "Neh.3.29",
+            "Neh.10.21",
+            "Neh.11.11",
+            "Neh.13.13",
+            "Ezek.40.46",
+            "Ezek.42.13",
+            "Ezek.43.19"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Φάκεε",
@@ -4440,9 +6090,23 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "比加",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.15.25",
+            "2Kgs.15.27",
+            "2Kgs.15.29",
+            "2Kgs.15.30",
+            "2Kgs.15.31",
+            "2Kgs.15.32",
+            "2Kgs.15.37",
+            "2Kgs.16.1",
+            "2Kgs.16.5",
+            "2Chr.28.6"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σόρ",
@@ -4451,9 +6115,23 @@
           "byCorpus": {
             "septuagint": 11
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "推羅",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.50.26",
+            "1Chr.7.30",
+            "Ezek.26.2",
+            "Ezek.26.3",
+            "Ezek.26.4",
+            "Ezek.26.7",
+            "Ezek.26.15",
+            "Ezek.27.2",
+            "Ezek.27.3",
+            "Ezek.27.8"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γοργίας",
@@ -4476,7 +6154,9 @@
           },
           "kind": "person",
           "zh": "磯法",
-          "zhSource": "theologians"
+          "zhSource": "theologians",
+          "strong": "G2786",
+          "zhRoute": "詞庫"
         },
         {
           "headword": "Ὀζεὶ",
@@ -4487,8 +6167,10 @@
             "septuagint": 9
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "驅除味道",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3605",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μακεδών",
@@ -4500,7 +6182,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G3110",
+          "zhEnglish": "Macedonia"
         },
         {
           "headword": "Γάϊος",
@@ -4510,9 +6194,11 @@
             "newTestament": 5,
             "patristic": 5
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "該猶",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G1050",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Ἰουδαισμοῦ",
@@ -4524,8 +6210,10 @@
             "patristic": 4
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "猶太教",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G2454",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Μελχισέδεκ",
@@ -4535,9 +6223,11 @@
             "newTestament": 8,
             "septuagint": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "麥基洗德",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3198",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Καινὰν",
@@ -4548,7 +6238,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "strong": "G2536",
+          "zhEnglish": "Cainan"
         },
         {
           "headword": "Ἰωβάβ",
@@ -4557,9 +6249,11 @@
           "byCorpus": {
             "septuagint": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "約巴",
+          "zhSource": "biblical_people",
+          "zhRoute": "音譯",
+          "zhReview": "音譯比對所得，須複核"
         },
         {
           "headword": "Βάλλα",
@@ -4569,8 +6263,10 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "投擲",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G906",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Αὐνάν",
@@ -4590,9 +6286,11 @@
           "byCorpus": {
             "septuagint": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "place",
+          "zh": "哀嫩",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G137",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Γέσεμ",
@@ -4602,8 +6300,21 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "歌珊",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.45.10",
+            "Gen.46.34",
+            "Gen.47.1",
+            "Gen.47.4",
+            "Gen.47.5",
+            "Gen.47.27",
+            "Gen.50.8",
+            "Exod.8.22",
+            "Exod.9.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Γηρὰ",
@@ -4624,8 +6335,22 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "斯哈",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Gen.46.24",
+            "Exod.6.21",
+            "Num.3.19",
+            "Num.16.1",
+            "1Chr.6.2",
+            "1Chr.6.18",
+            "1Chr.6.38",
+            "1Chr.23.12",
+            "1Chr.23.18",
+            "1Chr.26.23"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σαλπαὰδ",
@@ -4668,8 +6393,22 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "基列的拉末",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Deut.4.43",
+            "Josh.21.38",
+            "2Chr.18.2",
+            "2Chr.18.3",
+            "2Chr.18.5",
+            "2Chr.18.11",
+            "2Chr.18.14",
+            "2Chr.18.19",
+            "2Chr.18.28",
+            "Neh.3.4"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Σεκελὰκ",
@@ -4679,8 +6418,20 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "洗革拉",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Josh.15.31",
+            "1Sam.27.6",
+            "1Sam.30.1",
+            "1Sam.30.14",
+            "1Sam.30.26",
+            "1Sam.31.13",
+            "2Sam.1.1",
+            "2Sam.4.10"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Βαμὰ",
@@ -4690,8 +6441,22 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "丘壇",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.4.5",
+            "1Sam.9.12",
+            "1Sam.9.13",
+            "1Sam.9.14",
+            "1Sam.9.19",
+            "1Sam.9.25",
+            "1Sam.10.5",
+            "1Sam.11.8",
+            "1Sam.22.6",
+            "1Chr.16.39"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ἰεροβάαλ",
@@ -4701,8 +6466,21 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "zh": "耶路巴力",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Judg.8.35",
+            "Judg.9.1",
+            "Judg.9.2",
+            "Judg.9.5",
+            "Judg.9.16",
+            "Judg.9.19",
+            "Judg.9.24",
+            "Judg.9.28",
+            "Judg.9.57"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Ῥαψάκης",
@@ -4711,9 +6489,20 @@
           "byCorpus": {
             "septuagint": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "亞述",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "2Kgs.18.17",
+            "2Kgs.18.19",
+            "2Kgs.18.26",
+            "2Kgs.18.27",
+            "2Kgs.18.28",
+            "2Kgs.19.8",
+            "Isa.36.13"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Νεεμίας",
@@ -4722,9 +6511,20 @@
           "byCorpus": {
             "septuagint": 10
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "尼希米",
+          "zhSource": "和合本修訂版（RCUV2）",
+          "zhRoute": "中文聖經對位",
+          "zhEvidence": [
+            "Neh.1.1",
+            "Neh.3.16",
+            "Neh.7.7",
+            "Neh.7.70",
+            "Neh.8.9",
+            "Neh.10.1",
+            "Neh.12.26"
+          ],
+          "zhReview": "由經節對位取得，建議複核"
         },
         {
           "headword": "Μισαήλ",
@@ -4734,9 +6534,11 @@
             "septuagint": 8,
             "patristic": 2
           },
-          "kind": "",
-          "zh": "",
-          "zhSource": ""
+          "kind": "person",
+          "zh": "米迦勒",
+          "zhSource": "信望愛 Strong 中文字典",
+          "strong": "G3413",
+          "zhRoute": "信望愛"
         },
         {
           "headword": "Εἰρηναίου",
@@ -4749,7 +6551,8 @@
           "zh": "",
           "zhSource": ""
         }
-      ]
+      ],
+      "namingPolicy": "中文一律取自既有名冊，不自行擬名。優先序：站上「翻譯定名」詞庫（教父與古典名，以希臘原文為鍵）→ 信望愛中文 Strong 字典（新約所見人名地名國族，並據其詞性行判定人名或地名）→ 由 Strong 英文名接 biblical_people → 希臘拼寫轉寫後比對。zhRoute 記錄該筆循哪條路徑定名；「音譯」者須複核。同一英文名對到多個中文名時不擇一，寧留空。"
     },
     {
       "key": "numerals",

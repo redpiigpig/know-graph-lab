@@ -101,11 +101,14 @@ def occurrences(targets: list[dict]) -> dict[str, list[tuple[str, int, int]]]:
         except (KeyError, FileNotFoundError):
             continue
         for verse in verses:
-            text = fold(verse.text)
+            words = fold(verse.text).split()
             for headword, stem in stems.items():
-                if len(found[headword]) >= SAMPLE_PER_NAME * 3:
+                if not stem or len(found[headword]) >= SAMPLE_PER_NAME * 3:
                     continue
-                if stem and stem in text:
+                # The stem has to begin a word.  Matching it anywhere in the
+                # verse found Τύρος inside μαρτύρομαι and aligned Tyre with
+                # 「見證」, which is the verb's meaning and not a city.
+                if any(word.startswith(stem) for word in words):
                     found[headword].append((book, verse.chapter, verse.verse))
     return found
 
@@ -211,7 +214,8 @@ def align(name: str, places: list, chinese: dict, background: Counter, total: in
     # 迦南 is only the part of it the shorter window happened to catch.
     longer = [
         item for item in scored
-        if best[2] in item[2] and len(item[2]) > len(best[2]) and item[0] >= best[0] - 0.15
+        if best[2] in item[2] and len(item[2]) > len(best[2])
+        and item[0] >= best[0] - (0.3 if item[2] == best[2] + "人" else 0.15)
     ]
     if longer:
         best = max(longer, key=lambda item: (len(item[2]), item[0]))
@@ -238,6 +242,68 @@ def align(name: str, places: list, chinese: dict, background: Counter, total: in
         "coverage": round(best[0], 3),
         "evidence": [ref for ref, _ in verses],
     }
+
+
+def classify(entries: list[dict]) -> None:
+    """Say whether each name belongs to a person, a place or a people.
+
+    信望愛 states it outright for the names Strong's covers, but the ones read out
+    of the Chinese Bible arrive with no such label.  Two registers settle most of
+    them - a Chinese name that ``biblical_people`` holds is a person's, one that
+    ``place_names`` holds is a place's - and Greek morphology settles a third
+    group: a gentilic in -αῖος rendered into Chinese ending in 人 names a people.
+    Anything still unsettled keeps an empty label rather than a guessed one.
+    """
+    import os
+
+    import requests
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env")
+    url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not (url and key):
+        print("  （未設定 Supabase 憑證，略過分類）")
+        return
+    headers = {"apikey": key, "Authorization": f"Bearer {key}"}
+
+    people, offset = set(), 0
+    while True:
+        rows = requests.get(
+            f"{url}/rest/v1/biblical_people",
+            params={"select": "name_zh", "limit": "500", "offset": str(offset)},
+            headers=headers, timeout=60,
+        ).json()
+        for row in rows:
+            name = re.sub(r"（.*?）", "", row.get("name_zh") or "").strip()
+            if name:
+                people.add(name)
+        if len(rows) < 500:
+            break
+        offset += 500
+    places = {
+        (row.get("name_recommended") or "").strip()
+        for row in requests.get(
+            f"{url}/rest/v1/place_names",
+            params={"select": "name_recommended", "limit": "5000"},
+            headers=headers, timeout=60,
+        ).json()
+    }
+
+    counts: Counter = Counter()
+    for entry in entries:
+        if entry.get("kind"):
+            counts[entry["kind"]] += 1
+            continue
+        chinese = entry.get("zh", "")
+        gentilic = entry["lemma"].endswith(("αῖος", "ιος", "ίτης"))
+        if chinese and chinese.endswith("人") and gentilic:
+            entry["kind"] = "people"
+        elif chinese and chinese in people:
+            entry["kind"] = "person"
+        elif chinese and chinese in places:
+            entry["kind"] = "place"
+        counts[entry.get("kind") or "未分類"] += 1
+    print("  分類：" + "、".join(f"{k} {v}" for k, v in counts.most_common()))
 
 
 def main() -> None:
@@ -281,6 +347,8 @@ def main() -> None:
                 zhReview="由經節對位取得，建議複核",
             )
             named += 1
+
+    classify(payload["appendices"][0]["entries"])
 
     print(f"  對出中文 {named} 個；仍未定名 {len(targets) - named}")
     sample = [e for e in targets if e.get("zhRoute") == "中文聖經對位"][:20]
