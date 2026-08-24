@@ -749,26 +749,26 @@
       "glossZh": "審判者；士師"
     },
     "H589|אֲנִי": {
-      "hexcode": "1FAF5",
-      "file": "1FAF5.png",
+      "hexcode": "1F64B",
+      "file": "1F64B.png",
       "source": "override",
       "glossZh": "我（第一人稱單數）"
     },
     "H595|אָנֹכִי": {
-      "hexcode": "1FAF5",
-      "file": "1FAF5.png",
+      "hexcode": "1F64B",
+      "file": "1F64B.png",
       "source": "override",
       "glossZh": "我（第一人稱單數）"
     },
     "H859|אַתָּה": {
-      "hexcode": "1F449",
-      "file": "1F449.png",
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
       "source": "override",
       "glossZh": "你（第二人稱陽性單數）"
     },
     "H859|אַתְּ": {
-      "hexcode": "1F449",
-      "file": "1F449.png",
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
       "source": "override",
       "glossZh": "你（第二人稱陰性單數）"
     },
@@ -791,14 +791,14 @@
       "glossZh": "我們（第一人稱複數）"
     },
     "H859|אַתֶּם": {
-      "hexcode": "1F449",
-      "file": "1F449.png",
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
       "source": "override",
       "glossZh": "你們（第二人稱陽性複數）"
     },
     "H859|אַתֵּ֫נָה": {
-      "hexcode": "1F449",
-      "file": "1F449.png",
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
       "source": "override",
       "glossZh": "你們（第二人稱陰性複數）"
     },

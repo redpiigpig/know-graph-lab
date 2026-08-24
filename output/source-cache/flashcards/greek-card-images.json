@@ -1,0 +1,2906 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "OpenMoji 17.0.0",
+  "licence": "CC BY-SA 4.0 — https://openmoji.org",
+  "note": "每張卡最多一張圖，取該詞最常見的義項；挑不到就留空。zh_transfer 表示沿用中文詞義相同的希伯來卡用圖。",
+  "images": {
+    "ἄγγελος": {
+      "hexcode": "1F4E9",
+      "file": "1F4E9.png",
+      "source": "override",
+      "glossZh": "天使；使者",
+      "volume": 1
+    },
+    "ἀμήν": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "override",
+      "glossZh": "阿們；誠然；願如此成就",
+      "volume": 1
+    },
+    "ἄνθρωπος": {
+      "hexcode": "1F9D1",
+      "file": "1F9D1.png",
+      "source": "override",
+      "glossZh": "人；人類",
+      "volume": 1
+    },
+    "ἀπόστολος": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "glossZh": "使徒；受差遣者",
+      "volume": 1
+    },
+    "γραφή": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "glossZh": "文字；經文；聖經",
+      "volume": 1
+    },
+    "δόξα": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "glossZh": "榮耀；尊榮；光輝",
+      "volume": 1
+    },
+    "ἐγώ": {
+      "hexcode": "1F64B",
+      "file": "1F64B.png",
+      "source": "override",
+      "glossZh": "我",
+      "volume": 1
+    },
+    "ζωή": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "glossZh": "生命",
+      "volume": 1
+    },
+    "θεός": {
+      "hexcode": "1F932",
+      "file": "1F932.png",
+      "source": "override",
+      "glossZh": "神；上帝；神靈",
+      "volume": 1
+    },
+    "καί": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "glossZh": "並且；和；也；即",
+      "volume": 1
+    },
+    "καρδία": {
+      "hexcode": "2764",
+      "file": "2764.png",
+      "source": "override",
+      "glossZh": "心；內心；意念",
+      "volume": 1
+    },
+    "λόγος": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "glossZh": "言語；道；話；神的言論",
+      "volume": 1
+    },
+    "πνεῦμα": {
+      "hexcode": "1F32C",
+      "file": "1F32C.png",
+      "source": "override",
+      "glossZh": "風；氣息；靈",
+      "volume": 1
+    },
+    "προφήτης": {
+      "hexcode": "1F4E2",
+      "file": "1F4E2.png",
+      "source": "override",
+      "glossZh": "先知",
+      "volume": 1
+    },
+    "σάββατον": {
+      "hexcode": "1F6CB",
+      "file": "1F6CB.png",
+      "source": "zh_transfer",
+      "glossZh": "安息日；一週",
+      "volume": 1
+    },
+    "φωνή": {
+      "hexcode": "1F50A",
+      "file": "1F50A.png",
+      "source": "override",
+      "glossZh": "聲音；聲響；呼聲",
+      "volume": 1
+    },
+    "ἀγάπη": {
+      "hexcode": "1F495",
+      "file": "1F495.png",
+      "source": "override",
+      "glossZh": "愛；愛心",
+      "volume": 1
+    },
+    "ἄλλος": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "zh_transfer",
+      "glossZh": "另一個；其他的；不同的",
+      "volume": 1
+    },
+    "αὐτός": {
+      "hexcode": "1F449",
+      "file": "1F449.png",
+      "source": "zh_transfer",
+      "glossZh": "他；她；它；他們；同樣的",
+      "volume": 1
+    },
+    "βασιλεία": {
+      "hexcode": "1F3F0",
+      "file": "1F3F0.png",
+      "source": "override",
+      "glossZh": "國度；王權；統治",
+      "volume": 1
+    },
+    "ἐν": {
+      "hexcode": "1F524",
+      "file": "1F524.png",
+      "source": "override",
+      "glossZh": "（配所有格）在…裡；在…上；在…中間",
+      "volume": 1
+    },
+    "ἔργον": {
+      "hexcode": "1F4BC",
+      "file": "1F4BC.png",
+      "source": "zh_transfer",
+      "glossZh": "工作；勞動；行為；事蹟",
+      "volume": 1
+    },
+    "νῦν": {
+      "hexcode": "23F0",
+      "file": "23F0.png",
+      "source": "override",
+      "glossZh": "現在；已經；此時",
+      "volume": 1
+    },
+    "ὅτι": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "override",
+      "glossZh": "因為；既然；引出直接引語",
+      "volume": 1
+    },
+    "οὐ (οὐκ": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "glossZh": "不；沒有",
+      "volume": 1
+    },
+    "ὥρα": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "override",
+      "glossZh": "時辰；時候；季節",
+      "volume": 1
+    },
+    "ἁμαρτία": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "override",
+      "glossZh": "罪",
+      "volume": 1
+    },
+    "γάρ": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "override",
+      "glossZh": "因為",
+      "volume": 1
+    },
+    "εἰς": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "glossZh": "（配賓格）到、進入、在…之中",
+      "volume": 1
+    },
+    "ἐξουσία": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "glossZh": "權柄、權能、權力",
+      "volume": 1
+    },
+    "εὐαγγέλιον": {
+      "hexcode": "1F4E3",
+      "file": "1F4E3.png",
+      "source": "override",
+      "glossZh": "福音、好消息",
+      "volume": 1
+    },
+    "κύριος": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "glossZh": "主；主人、先生",
+      "volume": 1
+    },
+    "μή": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "glossZh": "不要；免得、恐怕",
+      "volume": 1
+    },
+    "οὐρανός": {
+      "hexcode": "2601",
+      "file": "2601.png",
+      "source": "override",
+      "glossZh": "天、天空、天堂",
+      "volume": 1
+    },
+    "οὗτος": {
+      "hexcode": "1F447",
+      "file": "1F447.png",
+      "source": "override",
+      "glossZh": "這個、這；他、她、它",
+      "volume": 1
+    },
+    "σύ": {
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
+      "source": "override",
+      "glossZh": "你",
+      "volume": 1
+    },
+    "υἱός": {
+      "hexcode": "1F466",
+      "file": "1F466.png",
+      "source": "override",
+      "glossZh": "兒子、後裔",
+      "volume": 1
+    },
+    "ὥστε": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "glossZh": "以至於、所以、因此",
+      "volume": 1
+    },
+    "ἀλλά": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "override",
+      "glossZh": "但是；除了",
+      "volume": 1
+    },
+    "διά": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "override",
+      "glossZh": "（配屬格）通過…；因為…；藉著…",
+      "volume": 1
+    },
+    "εἰμί": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "zh_transfer",
+      "glossZh": "是；存在",
+      "volume": 1
+    },
+    "ἐκ (ἐξ)": {
+      "hexcode": "2B05",
+      "file": "2B05.png",
+      "source": "override",
+      "glossZh": "（配屬格）從…出來；從…當中",
+      "volume": 1
+    },
+    "ἡμέρα": {
+      "hexcode": "2600",
+      "file": "2600.png",
+      "source": "override",
+      "glossZh": "日子；天",
+      "volume": 1
+    },
+    "θάλασσα": {
+      "hexcode": "1F30A",
+      "file": "1F30A.png",
+      "source": "override",
+      "glossZh": "海；湖",
+      "volume": 1
+    },
+    "θάνατος": {
+      "hexcode": "1F480",
+      "file": "1F480.png",
+      "source": "override",
+      "glossZh": "死；死亡",
+      "volume": 1
+    },
+    "ἵνα": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "glossZh": "為要…；使得…",
+      "volume": 1
+    },
+    "λέγω": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "glossZh": "說；講話",
+      "volume": 1
+    },
+    "μετά": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "glossZh": "（配屬格）與…同；（配賓格）在…之後",
+      "volume": 1
+    },
+    "οἰκία": {
+      "hexcode": "1F3E0",
+      "file": "1F3E0.png",
+      "source": "override",
+      "glossZh": "房子；家；家人",
+      "volume": 1
+    },
+    "οἶκος": {
+      "hexcode": "1F3E0",
+      "file": "1F3E0.png",
+      "source": "override",
+      "glossZh": "房子；家；家人",
+      "volume": 1
+    },
+    "ὄχλος": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "glossZh": "群眾；民眾；人群",
+      "volume": 1
+    },
+    "ὑπό": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "glossZh": "（配屬格）被…；（配賓格）在…之下；大約",
+      "volume": 1
+    },
+    "ἀγαθός": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "override",
+      "glossZh": "良善的；美好的",
+      "volume": 1
+    },
+    "ἅγιος": {
+      "hexcode": "2728",
+      "file": "2728.png",
+      "source": "override",
+      "glossZh": "聖潔的；分別為聖的",
+      "volume": 1
+    },
+    "ἀπεκρίθη": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "回答；應答",
+      "volume": 1
+    },
+    "δοῦλος": {
+      "hexcode": "1F477",
+      "file": "1F477.png",
+      "source": "override",
+      "glossZh": "奴僕；奴隸",
+      "volume": 1
+    },
+    "ἐάν": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "glossZh": "如果；若；倘若",
+      "volume": 1
+    },
+    "ἐντολή": {
+      "hexcode": "1F5D2",
+      "file": "1F5D2.png",
+      "source": "zh_transfer",
+      "glossZh": "誡命；吩咐；命令",
+      "volume": 1
+    },
+    "κακός": {
+      "hexcode": "1F620",
+      "file": "1F620.png",
+      "source": "override",
+      "glossZh": "邪惡的；有害的；壞的",
+      "volume": 1
+    },
+    "πονηρός": {
+      "hexcode": "1F608",
+      "file": "1F608.png",
+      "source": "override",
+      "glossZh": "邪惡的；不義的；有害的",
+      "volume": 1
+    },
+    "πρῶτος": {
+      "hexcode": "1F947",
+      "file": "1F947.png",
+      "source": "override",
+      "glossZh": "首先的；第一的",
+      "volume": 1
+    },
+    "τρίτος": {
+      "hexcode": "1F949",
+      "file": "1F949.png",
+      "source": "override",
+      "glossZh": "第三的",
+      "volume": 1
+    },
+    "εἰ": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "glossZh": "如果；若",
+      "volume": 1
+    },
+    "εἷς": {
+      "hexcode": "0031-FE0F-20E3",
+      "file": "0031-FE0F-20E3.png",
+      "source": "override",
+      "glossZh": "一；某一",
+      "volume": 1
+    },
+    "ἤδη": {
+      "hexcode": "1F501",
+      "file": "1F501.png",
+      "source": "override",
+      "glossZh": "已經；現在",
+      "volume": 1
+    },
+    "ὄνομα": {
+      "hexcode": "1F4DB",
+      "file": "1F4DB.png",
+      "source": "override",
+      "glossZh": "名字；名稱；品格；名聲",
+      "volume": 1
+    },
+    "οὐδείς": {
+      "hexcode": "1F573",
+      "file": "1F573.png",
+      "source": "override",
+      "glossZh": "沒有人；沒有任何人；沒有什麼",
+      "volume": 1
+    },
+    "πᾶς": {
+      "hexcode": "1F4CA",
+      "file": "1F4CA.png",
+      "source": "override",
+      "glossZh": "所有的；全部的；每一種",
+      "volume": 1
+    },
+    "σάρξ": {
+      "hexcode": "1F969",
+      "file": "1F969.png",
+      "source": "override",
+      "glossZh": "肉體；身體；血肉",
+      "volume": 1
+    },
+    "σύν": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "glossZh": "（配屬格）與…一起；同…",
+      "volume": 1
+    },
+    "σῶμα": {
+      "hexcode": "1F9CD",
+      "file": "1F9CD.png",
+      "source": "override",
+      "glossZh": "身體；軀體",
+      "volume": 1
+    },
+    "τέκνον": {
+      "hexcode": "1F9D2",
+      "file": "1F9D2.png",
+      "source": "override",
+      "glossZh": "孩子；兒女；子孫；居民",
+      "volume": 1
+    },
+    "τίς": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "override",
+      "glossZh": "誰；哪個；什麼（疑問詞）",
+      "volume": 1
+    },
+    "ἀδελφός": {
+      "hexcode": "1F46C",
+      "file": "1F46C.png",
+      "source": "override",
+      "glossZh": "兄弟",
+      "volume": 1
+    },
+    "ἀνήρ": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "glossZh": "男人；男性",
+      "volume": 1
+    },
+    "ἐκκλησία": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "glossZh": "教會；集會；聚集",
+      "volume": 1
+    },
+    "ἐλπίς": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "glossZh": "盼望；期待",
+      "volume": 1
+    },
+    "ἔξω": {
+      "hexcode": "1F6E4",
+      "file": "1F6E4.png",
+      "source": "zh_transfer",
+      "glossZh": "外面；在…外",
+      "volume": 1
+    },
+    "ἐπί": {
+      "hexcode": "2B06",
+      "file": "2B06.png",
+      "source": "override",
+      "glossZh": "（配所有格、賓格或處格）在…上；向…；針對…；基於…",
+      "volume": 1
+    },
+    "ἡμεῖς": {
+      "hexcode": "1F9D1-200D-1F91D-200D-1F9D1",
+      "file": "1F9D1-200D-1F91D-200D-1F9D1.png",
+      "source": "override",
+      "glossZh": "我們（強調用法）",
+      "volume": 1
+    },
+    "ἴδε": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "glossZh": "看哪；看；看啊",
+      "volume": 1
+    },
+    "ἰδού": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "glossZh": "看哪；看；看啊",
+      "volume": 1
+    },
+    "καλός": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "override",
+      "glossZh": "美好的；善的；優美的",
+      "volume": 1
+    },
+    "μήτηρ": {
+      "hexcode": "1F469",
+      "file": "1F469.png",
+      "source": "override",
+      "glossZh": "母親",
+      "volume": 1
+    },
+    "πατήρ": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "glossZh": "父親；天父",
+      "volume": 1
+    },
+    "πίστις": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "glossZh": "信心；信仰；相信",
+      "volume": 1
+    },
+    "ὕδωρ": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "glossZh": "水",
+      "volume": 1
+    },
+    "ὑμεῖς": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "glossZh": "你們",
+      "volume": 1
+    },
+    "φῶς": {
+      "hexcode": "1F4A1",
+      "file": "1F4A1.png",
+      "source": "override",
+      "glossZh": "光；光源",
+      "volume": 1
+    },
+    "χάρις": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "override",
+      "glossZh": "恩典；恩惠；憐憫",
+      "volume": 1
+    },
+    "ὧδε": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "glossZh": "在這裡；到這裡",
+      "volume": 1
+    },
+    "ἕως": {
+      "hexcode": "1F6D1",
+      "file": "1F6D1.png",
+      "source": "zh_transfer",
+      "glossZh": "直到；到…為止",
+      "volume": 1
+    },
+    "μαθητής": {
+      "hexcode": "1F393",
+      "file": "1F393.png",
+      "source": "override",
+      "glossZh": "門徒；學生",
+      "volume": 1
+    },
+    "οὖν": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "glossZh": "所以；那麼",
+      "volume": 1
+    },
+    "ὀφθαλμός": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "glossZh": "眼睛",
+      "volume": 1
+    },
+    "πούς": {
+      "hexcode": "1F9B6",
+      "file": "1F9B6.png",
+      "source": "override",
+      "glossZh": "腳",
+      "volume": 1
+    },
+    "γυνή": {
+      "hexcode": "1F469",
+      "file": "1F469.png",
+      "source": "override",
+      "glossZh": "婦女；妻子",
+      "volume": 1
+    },
+    "δικαιοσύνη": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "glossZh": "公義；正義",
+      "volume": 1
+    },
+    "ἐκεῖνος": {
+      "hexcode": "1F449",
+      "file": "1F449.png",
+      "source": "override",
+      "glossZh": "那；那個；那邊的",
+      "volume": 1
+    },
+    "μέγας": {
+      "hexcode": "1F3D4",
+      "file": "1F3D4.png",
+      "source": "override",
+      "glossZh": "大的；偉大的",
+      "volume": 1
+    },
+    "πόλις": {
+      "hexcode": "1F3D9",
+      "file": "1F3D9.png",
+      "source": "override",
+      "glossZh": "城市；城邑",
+      "volume": 1
+    },
+    "πολύς": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "glossZh": "多的；許多的；常常",
+      "volume": 1
+    },
+    "ἀλήθεια": {
+      "hexcode": "1F4AF",
+      "file": "1F4AF.png",
+      "source": "override",
+      "glossZh": "真理；誠實",
+      "volume": 1
+    },
+    "εἰρήνη": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "glossZh": "平安；心裡的平靜",
+      "volume": 1
+    },
+    "ἑπτά": {
+      "hexcode": "0037-FE0F-20E3",
+      "file": "0037-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "七",
+      "volume": 1
+    },
+    "θρόνος": {
+      "hexcode": "1FA91",
+      "file": "1FA91.png",
+      "source": "override",
+      "glossZh": "寶座；座位",
+      "volume": 1
+    },
+    "κεφαλή": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "glossZh": "頭",
+      "volume": 1
+    },
+    "ὁδός": {
+      "hexcode": "1F6E3",
+      "file": "1F6E3.png",
+      "source": "override",
+      "glossZh": "道路；路；行程",
+      "volume": 1
+    },
+    "οὕτως": {
+      "hexcode": "1F447",
+      "file": "1F447.png",
+      "source": "zh_transfer",
+      "glossZh": "如此；這樣；以這種方式",
+      "volume": 1
+    },
+    "ῥῆμα": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "glossZh": "話語；言語；說過的事",
+      "volume": 1
+    },
+    "τέ": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "zh_transfer",
+      "glossZh": "和；既…又…",
+      "volume": 1
+    },
+    "χείρ": {
+      "hexcode": "1F590",
+      "file": "1F590.png",
+      "source": "override",
+      "glossZh": "手",
+      "volume": 1
+    },
+    "ψυχή": {
+      "hexcode": "1FAC1",
+      "file": "1FAC1.png",
+      "source": "override",
+      "glossZh": "靈魂；生命；自己",
+      "volume": 1
+    },
+    "ἀκούω": {
+      "hexcode": "1F442",
+      "file": "1F442.png",
+      "source": "override",
+      "glossZh": "聽見；聽",
+      "volume": 1
+    },
+    "βλέπω": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "glossZh": "看；看見",
+      "volume": 1
+    },
+    "ἔχω": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "zh_transfer",
+      "glossZh": "有；持有；擁有",
+      "volume": 1
+    },
+    "νόμος": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "glossZh": "律法；摩西律法",
+      "volume": 1
+    },
+    "πιστεύω": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "glossZh": "相信；信靠",
+      "volume": 1
+    },
+    "πρόσωπον": {
+      "hexcode": "1F9D1",
+      "file": "1F9D1.png",
+      "source": "annotation",
+      "glossZh": "臉面；容貌；表面",
+      "volume": 1
+    },
+    "τότε": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "zh_transfer",
+      "glossZh": "那時；於是",
+      "volume": 1
+    },
+    "χαρά": {
+      "hexcode": "1F973",
+      "file": "1F973.png",
+      "source": "override",
+      "glossZh": "喜樂；歡樂",
+      "volume": 1
+    },
+    "ἀγαπάω": {
+      "hexcode": "1F495",
+      "file": "1F495.png",
+      "source": "override",
+      "glossZh": "愛",
+      "volume": 1
+    },
+    "ζητέω": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "glossZh": "尋求；追求；渴望",
+      "volume": 1
+    },
+    "λαλέω": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "override",
+      "glossZh": "說話；發言",
+      "volume": 1
+    },
+    "οἶδα": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "glossZh": "知道；認識；記得",
+      "volume": 1
+    },
+    "πληρόω": {
+      "hexcode": "1FAA3",
+      "file": "1FAA3.png",
+      "source": "zh_transfer",
+      "glossZh": "充滿；成就；完成",
+      "volume": 1
+    },
+    "ποιέω": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "glossZh": "作；製造；行",
+      "volume": 1
+    },
+    "τηρέω": {
+      "hexcode": "1F482",
+      "file": "1F482.png",
+      "source": "annotation",
+      "glossZh": "保守；守護；遵守",
+      "volume": 1
+    },
+    "ἀποκρίνομαι": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "回答；答覆",
+      "volume": 1
+    },
+    "δύναμαι": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "zh_transfer",
+      "glossZh": "能夠；有力量",
+      "volume": 1
+    },
+    "ἔρχομαι": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "override",
+      "glossZh": "來；去",
+      "volume": 1
+    },
+    "νύξ": {
+      "hexcode": "1F303",
+      "file": "1F303.png",
+      "source": "override",
+      "glossZh": "夜；夜間",
+      "volume": 1
+    },
+    "πορεύομαι": {
+      "hexcode": "1F6B6",
+      "file": "1F6B6.png",
+      "source": "override",
+      "glossZh": "旅行；行走；去",
+      "volume": 1
+    },
+    "τόπος": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "zh_transfer",
+      "glossZh": "地方；處所",
+      "volume": 1
+    },
+    "βασιλεύς": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "glossZh": "王；統治者、皇帝",
+      "volume": 1
+    },
+    "γεννάω": {
+      "hexcode": "1F476",
+      "file": "1F476.png",
+      "source": "override",
+      "glossZh": "生育、生出、誕生",
+      "volume": 1
+    },
+    "ζάω": {
+      "hexcode": "1F493",
+      "file": "1F493.png",
+      "source": "override",
+      "glossZh": "活著、生活",
+      "volume": 1
+    },
+    "καρπός": {
+      "hexcode": "1F34E",
+      "file": "1F34E.png",
+      "source": "override",
+      "glossZh": "果子、果實；成果、果效",
+      "volume": 1
+    },
+    "αἴρω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；提起；奪取",
+      "volume": 1
+    },
+    "ἀποστέλλω": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "glossZh": "差遣；打發；送出",
+      "volume": 1
+    },
+    "γινώσκω": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "glossZh": "認識；知道；了解",
+      "volume": 1
+    },
+    "γλῶσσα": {
+      "hexcode": "1F445",
+      "file": "1F445.png",
+      "source": "zh_transfer",
+      "glossZh": "舌頭；方言；民族",
+      "volume": 1
+    },
+    "ἐκεῖ": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "glossZh": "那裡；那邊",
+      "volume": 1
+    },
+    "κρίνω": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "glossZh": "判斷；審判；評定",
+      "volume": 1
+    },
+    "λαός": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "glossZh": "人民；眾人；群眾",
+      "volume": 1
+    },
+    "ὁράω": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "glossZh": "看見；觀看；經歷",
+      "volume": 1
+    },
+    "σοφία": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "glossZh": "智慧",
+      "volume": 1
+    },
+    "στόμα": {
+      "hexcode": "1F444",
+      "file": "1F444.png",
+      "source": "override",
+      "glossZh": "口；言語",
+      "volume": 1
+    },
+    "σῴζω": {
+      "hexcode": "1F6DF",
+      "file": "1F6DF.png",
+      "source": "override",
+      "glossZh": "拯救；拯救靈魂；醫治",
+      "volume": 1
+    },
+    "ἐπερωτάω": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "zh_transfer",
+      "glossZh": "詢問；質問；要求",
+      "volume": 1
+    },
+    "θέλω": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "glossZh": "願意；想要；希望",
+      "volume": 1
+    },
+    "περιπατέω": {
+      "hexcode": "1F6B6",
+      "file": "1F6B6.png",
+      "source": "override",
+      "glossZh": "行走；生活方式；行事為人",
+      "volume": 1
+    },
+    "συναγωγή": {
+      "hexcode": "1F54D",
+      "file": "1F54D.png",
+      "source": "annotation",
+      "glossZh": "聚集；會堂；猶太會堂",
+      "volume": 1
+    },
+    "χρόνος": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "override",
+      "glossZh": "時間；時期；季節",
+      "volume": 1
+    },
+    "ἀποθνῄσκω": {
+      "hexcode": "1F480",
+      "file": "1F480.png",
+      "source": "override",
+      "glossZh": "死亡；將要死去",
+      "volume": 1
+    },
+    "ἄρτος": {
+      "hexcode": "1F35E",
+      "file": "1F35E.png",
+      "source": "override",
+      "glossZh": "麵包；食物",
+      "volume": 1
+    },
+    "βάλλω": {
+      "hexcode": "26BE",
+      "file": "26BE.png",
+      "source": "zh_transfer",
+      "glossZh": "投擲；拋；放；放置",
+      "volume": 1
+    },
+    "γῆ": {
+      "hexcode": "1F30D",
+      "file": "1F30D.png",
+      "source": "override",
+      "glossZh": "地；土地；世界",
+      "volume": 1
+    },
+    "ἐξέρχομαι": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "zh_transfer",
+      "glossZh": "出去；出來",
+      "volume": 1
+    },
+    "εὑρίσκω": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "glossZh": "尋找；發現",
+      "volume": 1
+    },
+    "λαμβάνω": {
+      "hexcode": "270A",
+      "file": "270A.png",
+      "source": "override",
+      "glossZh": "接收；取；領受",
+      "volume": 1
+    },
+    "προσεύχομαι": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "glossZh": "禱告；為…禱告",
+      "volume": 1
+    },
+    "πῦρ": {
+      "hexcode": "1F525",
+      "file": "1F525.png",
+      "source": "override",
+      "glossZh": "火；試煉",
+      "volume": 1
+    },
+    "ἀπέρχομαι": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "zh_transfer",
+      "glossZh": "離開；出發；回來",
+      "volume": 1
+    },
+    "γράφω": {
+      "hexcode": "270D",
+      "file": "270D.png",
+      "source": "override",
+      "glossZh": "寫；著文",
+      "volume": 1
+    },
+    "διό": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "因此；所以",
+      "volume": 1
+    },
+    "δοξάζω": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "zh_transfer",
+      "glossZh": "榮耀；尊榮；稱讚",
+      "volume": 1
+    },
+    "δύναμις": {
+      "hexcode": "1F4AA",
+      "file": "1F4AA.png",
+      "source": "override",
+      "glossZh": "能力；權能；奇蹟",
+      "volume": 1
+    },
+    "πίνω": {
+      "hexcode": "1F964",
+      "file": "1F964.png",
+      "source": "override",
+      "glossZh": "喝；飲",
+      "volume": 1
+    },
+    "αἷμα": {
+      "hexcode": "1FA78",
+      "file": "1FA78.png",
+      "source": "override",
+      "glossZh": "血",
+      "volume": 1
+    },
+    "ἱμάτιον": {
+      "hexcode": "1F455",
+      "file": "1F455.png",
+      "source": "override",
+      "glossZh": "外衣；袍子",
+      "volume": 1
+    },
+    "ὄρος": {
+      "hexcode": "26F0",
+      "file": "26F0.png",
+      "source": "override",
+      "glossZh": "山",
+      "volume": 1
+    },
+    "ὑπάγω": {
+      "hexcode": "1F463",
+      "file": "1F463.png",
+      "source": "zh_transfer",
+      "glossZh": "去；離開",
+      "volume": 1
+    },
+    "φοβέομαι": {
+      "hexcode": "1F628",
+      "file": "1F628.png",
+      "source": "override",
+      "glossZh": "懼怕；害怕",
+      "volume": 1
+    },
+    "χαίρω": {
+      "hexcode": "1F973",
+      "file": "1F973.png",
+      "source": "override",
+      "glossZh": "喜樂；歡喜",
+      "volume": 1
+    },
+    "ἀναβαίνω": {
+      "hexcode": "2B06",
+      "file": "2B06.png",
+      "source": "zh_transfer",
+      "glossZh": "上去；登上；升起",
+      "volume": 1
+    },
+    "δύο": {
+      "hexcode": "0032-FE0F-20E3",
+      "file": "0032-FE0F-20E3.png",
+      "source": "override",
+      "glossZh": "二；兩個",
+      "volume": 1
+    },
+    "ἕτερος": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "zh_transfer",
+      "glossZh": "另一個；不同的",
+      "volume": 1
+    },
+    "κάθημαι": {
+      "hexcode": "1FA91",
+      "file": "1FA91.png",
+      "source": "override",
+      "glossZh": "坐著；就坐",
+      "volume": 1
+    },
+    "καταβαίνω": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "zh_transfer",
+      "glossZh": "下去；下來",
+      "volume": 1
+    },
+    "οὗ": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "zh_transfer",
+      "glossZh": "那裡；到那裡；當時",
+      "volume": 1
+    },
+    "τρεῖς": {
+      "hexcode": "0033-FE0F-20E3",
+      "file": "0033-FE0F-20E3.png",
+      "source": "override",
+      "glossZh": "三；三個",
+      "volume": 1
+    },
+    "ἔφη": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "說",
+      "volume": 1
+    },
+    "ἱερόν": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "override",
+      "glossZh": "聖殿",
+      "volume": 1
+    },
+    "παιδίον": {
+      "hexcode": "1F9D2",
+      "file": "1F9D2.png",
+      "source": "override",
+      "glossZh": "小孩；嬰孩",
+      "volume": 1
+    },
+    "ἐσθίω": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "override",
+      "glossZh": "吃",
+      "volume": 1
+    },
+    "πέμπω": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "zh_transfer",
+      "glossZh": "差遣；派遣",
+      "volume": 1
+    },
+    "λίθος": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "glossZh": "石頭；寶石",
+      "volume": 1
+    },
+    "τοιοῦτος": {
+      "hexcode": "E265",
+      "file": "E265.png",
+      "source": "annotation",
+      "glossZh": "這樣的；如此的；這種",
+      "volume": 1
+    },
+    "δίκαιος": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "glossZh": "公義的；正直的；公正的",
+      "volume": 1
+    },
+    "δίδωμι": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "override",
+      "glossZh": "給予；奉獻",
+      "volume": 1
+    },
+    "ἔθνος": {
+      "hexcode": "1F310",
+      "file": "1F310.png",
+      "source": "zh_transfer",
+      "glossZh": "民族；異邦人",
+      "volume": 1
+    },
+    "πίπτω": {
+      "hexcode": "1F9CE",
+      "file": "1F9CE.png",
+      "source": "zh_transfer",
+      "glossZh": "跌倒；陷入",
+      "volume": 1
+    },
+    "ἁμαρτάνω": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "override",
+      "glossZh": "犯罪；作惡",
+      "volume": 1
+    },
+    "διακονέω": {
+      "hexcode": "1F9D1-200D-1F3EB",
+      "file": "1F9D1-200D-1F3EB.png",
+      "source": "annotation",
+      "glossZh": "服侍；服事；侍候",
+      "volume": 1
+    },
+    "σωτηρία": {
+      "hexcode": "1F6DF",
+      "file": "1F6DF.png",
+      "source": "override",
+      "glossZh": "救恩；拯救；得救",
+      "volume": 1
+    },
+    "ἵστημι": {
+      "hexcode": "1F9CD",
+      "file": "1F9CD.png",
+      "source": "override",
+      "glossZh": "我使站立，站立",
+      "volume": 1
+    },
+    "ἄχρι": {
+      "hexcode": "1F6D1",
+      "file": "1F6D1.png",
+      "source": "zh_transfer",
+      "glossZh": "直到；達到",
+      "volume": 1
+    },
+    "ἔτος": {
+      "hexcode": "1F5D3",
+      "file": "1F5D3.png",
+      "source": "override",
+      "glossZh": "年",
+      "volume": 1
+    },
+    "ἔρημος": {
+      "hexcode": "1F3DC",
+      "file": "1F3DC.png",
+      "source": "override",
+      "glossZh": "荒涼的；曠野",
+      "volume": 1
+    },
+    "κρίσις": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "glossZh": "審判；判決",
+      "volume": 1
+    },
+    "φυλακή": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "zh_transfer",
+      "glossZh": "看守；監禁；監獄",
+      "volume": 1
+    },
+    "μικρός": {
+      "hexcode": "1F41C",
+      "file": "1F41C.png",
+      "source": "override",
+      "glossZh": "小的；微小",
+      "volume": 1
+    },
+    "ναός": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "override",
+      "glossZh": "聖殿；神廟",
+      "volume": 1
+    },
+    "γενεά": {
+      "hexcode": "1F46A",
+      "file": "1F46A.png",
+      "source": "zh_transfer",
+      "glossZh": "世代；一代人",
+      "volume": 1
+    },
+    "δεύτερος": {
+      "hexcode": "1F948",
+      "file": "1F948.png",
+      "source": "override",
+      "glossZh": "第二的；其次",
+      "volume": 1
+    },
+    "σπέρμα": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "glossZh": "種子；後裔",
+      "volume": 1
+    },
+    "ἐγγίζω": {
+      "hexcode": "E0A7",
+      "file": "E0A7.png",
+      "source": "zh_transfer",
+      "glossZh": "接近；來臨",
+      "volume": 1
+    },
+    "μέρος": {
+      "hexcode": "E253",
+      "file": "E253.png",
+      "source": "annotation",
+      "glossZh": "部分；份額",
+      "volume": 1
+    },
+    "ἐργάζομαι": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "glossZh": "做工；經營；行動",
+      "volume": 1
+    },
+    "εὐλογέω": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "祝福",
+      "volume": 1
+    },
+    "τέσσαρες": {
+      "hexcode": "0034-FE0F-20E3",
+      "file": "0034-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "四",
+      "volume": 1
+    },
+    "κλαίω": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "glossZh": "哭；哭泣；哀傷",
+      "volume": 1
+    },
+    "μισέω": {
+      "hexcode": "1F620",
+      "file": "1F620.png",
+      "source": "override",
+      "glossZh": "恨；厭惡",
+      "volume": 1
+    },
+    "οἰκοδομέω": {
+      "hexcode": "1F3D7",
+      "file": "1F3D7.png",
+      "source": "override",
+      "glossZh": "建造；建立；勸勉",
+      "volume": 1
+    },
+    "ἅπτω": {
+      "hexcode": "1F525",
+      "file": "1F525.png",
+      "source": "annotation",
+      "glossZh": "點燃；照亮",
+      "volume": 1
+    },
+    "θύρα": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "override",
+      "glossZh": "門；機會",
+      "volume": 1
+    },
+    "πρόβατον": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "override",
+      "glossZh": "羊",
+      "volume": 1
+    },
+    "εὐχαριστέω": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "glossZh": "感謝；稱謝",
+      "volume": 1
+    },
+    "πέντε": {
+      "hexcode": "0035-FE0F-20E3",
+      "file": "0035-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "五",
+      "volume": 1
+    },
+    "διάβολος": {
+      "hexcode": "1F608",
+      "file": "1F608.png",
+      "source": "override",
+      "glossZh": "誹謗的；魔鬼；撒但",
+      "volume": 1
+    },
+    "ἀγρός": {
+      "hexcode": "1F33E",
+      "file": "1F33E.png",
+      "source": "override",
+      "glossZh": "田地；鄉村",
+      "volume": 1
+    },
+    "ἄρτι": {
+      "hexcode": "23F0",
+      "file": "23F0.png",
+      "source": "zh_transfer",
+      "glossZh": "現在；此刻；剛才",
+      "volume": 1
+    },
+    "ἐπιστρέφω": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "zh_transfer",
+      "glossZh": "轉回；歸回；悔改",
+      "volume": 1
+    },
+    "οὖς": {
+      "hexcode": "1F442",
+      "file": "1F442.png",
+      "source": "override",
+      "glossZh": "耳朵",
+      "volume": 1
+    },
+    "προσευχή": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "禱告；祈禱；禱告所",
+      "volume": 1
+    },
+    "ὑποστρέφω": {
+      "hexcode": "E24D",
+      "file": "E24D.png",
+      "source": "annotation",
+      "glossZh": "轉身回去；返回",
+      "volume": 1
+    },
+    "βιβλίον": {
+      "hexcode": "1F4D6",
+      "file": "1F4D6.png",
+      "source": "override",
+      "glossZh": "書卷；書",
+      "volume": 1
+    },
+    "οἶνος": {
+      "hexcode": "1F377",
+      "file": "1F377.png",
+      "source": "override",
+      "glossZh": "葡萄酒",
+      "volume": 1
+    },
+    "διαθήκη": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "glossZh": "約；遺囑",
+      "volume": 1
+    },
+    "ἐκπορεύομαι": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "zh_transfer",
+      "glossZh": "出去；發出",
+      "volume": 1
+    },
+    "ἥλιος": {
+      "hexcode": "2600",
+      "file": "2600.png",
+      "source": "override",
+      "glossZh": "太陽",
+      "volume": 1
+    },
+    "παραγγέλλω": {
+      "hexcode": "1F4E3",
+      "file": "1F4E3.png",
+      "source": "zh_transfer",
+      "glossZh": "吩咐；命令",
+      "volume": 1
+    },
+    "ἱερεύς": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "glossZh": "祭司",
+      "volume": 1
+    },
+    "πλῆθος": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "zh_transfer",
+      "glossZh": "眾多；群眾",
+      "volume": 1
+    },
+    "ποτήριον": {
+      "hexcode": "1F964",
+      "file": "1F964.png",
+      "source": "override",
+      "glossZh": "杯；酒杯",
+      "volume": 1
+    },
+    "σκότος": {
+      "hexcode": "1F311",
+      "file": "1F311.png",
+      "source": "zh_transfer",
+      "glossZh": "黑暗；幽暗",
+      "volume": 1
+    },
+    "φυλάσσω": {
+      "hexcode": "1F482",
+      "file": "1F482.png",
+      "source": "annotation",
+      "glossZh": "保守；看守；遵守；謹慎",
+      "volume": 1
+    },
+    "ἀρνίον": {
+      "hexcode": "1F40F",
+      "file": "1F40F.png",
+      "source": "zh_transfer",
+      "glossZh": "羊羔",
+      "volume": 1
+    },
+    "μάχαιρα": {
+      "hexcode": "1F5E1",
+      "file": "1F5E1.png",
+      "source": "override",
+      "glossZh": "刀；劍",
+      "volume": 1
+    },
+    "θυγάτηρ": {
+      "hexcode": "1F467",
+      "file": "1F467.png",
+      "source": "override",
+      "glossZh": "女兒",
+      "volume": 1
+    },
+    "τελέω": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；結束；償付",
+      "volume": 1
+    },
+    "κρίμα": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "zh_transfer",
+      "glossZh": "判決；定罪；訴訟",
+      "volume": 1
+    },
+    "σταυρός": {
+      "hexcode": "271D",
+      "file": "271D.png",
+      "source": "override",
+      "glossZh": "十字架",
+      "volume": 1
+    },
+    "ἀδελφή": {
+      "hexcode": "1F46D",
+      "file": "1F46D.png",
+      "source": "override",
+      "glossZh": "姐妹",
+      "volume": 1
+    },
+    "θυσιαστήριον": {
+      "hexcode": "1F5FF",
+      "file": "1F5FF.png",
+      "source": "zh_transfer",
+      "glossZh": "祭壇",
+      "volume": 1
+    },
+    "πατάσσω": {
+      "hexcode": "1F44A",
+      "file": "1F44A.png",
+      "source": "zh_transfer",
+      "glossZh": "擊打；擊殺；擊潰",
+      "volume": 1
+    },
+    "ἀργύριον": {
+      "hexcode": "1FA99",
+      "file": "1FA99.png",
+      "source": "override",
+      "glossZh": "銀子；銀錢；金錢",
+      "volume": 1
+    },
+    "πόλεμος": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "override",
+      "glossZh": "戰爭；爭戰；紛爭",
+      "volume": 1
+    },
+    "φάγω": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "zh_transfer",
+      "glossZh": "吃；吞吃；食用",
+      "volume": 1
+    },
+    "χιλιάς": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "zh_transfer",
+      "glossZh": "千；成千上萬",
+      "volume": 1
+    },
+    "ἰσχύς": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "zh_transfer",
+      "glossZh": "力量；能力；勢力",
+      "volume": 1
+    },
+    "μήν": {
+      "hexcode": "1F311",
+      "file": "1F311.png",
+      "source": "zh_transfer",
+      "glossZh": "月份",
+      "volume": 1
+    },
+    "σκεῦος": {
+      "hexcode": "1F3FA",
+      "file": "1F3FA.png",
+      "source": "zh_transfer",
+      "glossZh": "器皿；用具；家具",
+      "volume": 1
+    },
+    "δέκα": {
+      "hexcode": "1F51F",
+      "file": "1F51F.png",
+      "source": "zh_transfer",
+      "glossZh": "十",
+      "volume": 1
+    },
+    "κτῆνος": {
+      "hexcode": "1F403",
+      "file": "1F403.png",
+      "source": "zh_transfer",
+      "glossZh": "牲畜；牛群",
+      "volume": 1
+    },
+    "εἴκοσι": {
+      "hexcode": "1F522",
+      "file": "1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "二十",
+      "volume": 1
+    },
+    "πῆχυς": {
+      "hexcode": "1F4D0",
+      "file": "1F4D0.png",
+      "source": "zh_transfer",
+      "glossZh": "肘；肘長（古代長度單位）",
+      "volume": 1
+    },
+    "ποταμός": {
+      "hexcode": "1F3DE",
+      "file": "1F3DE.png",
+      "source": "zh_transfer",
+      "glossZh": "河流；急流",
+      "volume": 1
+    },
+    "κιβωτός": {
+      "hexcode": "26B0",
+      "file": "26B0.png",
+      "source": "zh_transfer",
+      "glossZh": "約櫃；木箱",
+      "volume": 1
+    },
+    "ἑκατόν": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "zh_transfer",
+      "glossZh": "一百",
+      "volume": 1
+    },
+    "ἐξαίρω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；救出",
+      "volume": 1
+    },
+    "κληρονομία": {
+      "hexcode": "1F3E1",
+      "file": "1F3E1.png",
+      "source": "zh_transfer",
+      "glossZh": "產業；遺產；所得",
+      "volume": 1
+    },
+    "πληθύνω": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "zh_transfer",
+      "glossZh": "增加；倍增",
+      "volume": 1
+    },
+    "ἵππος": {
+      "hexcode": "1F40E",
+      "file": "1F40E.png",
+      "source": "zh_transfer",
+      "glossZh": "馬",
+      "volume": 1
+    },
+    "πολεμέω": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "zh_transfer",
+      "glossZh": "爭戰；打仗",
+      "volume": 1
+    },
+    "ὑψόω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；高舉；尊高",
+      "volume": 1
+    },
+    "συντελέω": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；成就",
+      "volume": 1
+    },
+    "βοῦς": {
+      "hexcode": "1F402",
+      "file": "1F402.png",
+      "source": "zh_transfer",
+      "glossZh": "牛",
+      "volume": 1
+    },
+    "ἀνατολή": {
+      "hexcode": "1F305",
+      "file": "1F305.png",
+      "source": "zh_transfer",
+      "glossZh": "東方；日出；升起",
+      "volume": 1
+    },
+    "ὀμνύω": {
+      "hexcode": "1F64B",
+      "file": "1F64B.png",
+      "source": "zh_transfer",
+      "glossZh": "起誓；發誓",
+      "volume": 1
+    },
+    "δῶρον": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "zh_transfer",
+      "glossZh": "禮物；恩賜",
+      "volume": 1
+    },
+    "ἅρμα": {
+      "hexcode": "1F3CE",
+      "file": "1F3CE.png",
+      "source": "zh_transfer",
+      "glossZh": "戰車；馬車",
+      "volume": 1
+    },
+    "κληρονομέω": {
+      "hexcode": "1F511",
+      "file": "1F511.png",
+      "source": "zh_transfer",
+      "glossZh": "承受產業；獲得",
+      "volume": 1
+    },
+    "αὐλή": {
+      "hexcode": "1F3D8",
+      "file": "1F3D8.png",
+      "source": "zh_transfer",
+      "glossZh": "院子；庭院；宮殿",
+      "volume": 1
+    },
+    "τριάκοντα": {
+      "hexcode": "1F522",
+      "file": "1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "三十",
+      "volume": 1
+    },
+    "βορρᾶς": {
+      "hexcode": "E0A0",
+      "file": "E0A0.png",
+      "source": "zh_transfer",
+      "glossZh": "北方；北風",
+      "volume": 1
+    },
+    "θάπτω": {
+      "hexcode": "26B0",
+      "file": "26B0.png",
+      "source": "zh_transfer",
+      "glossZh": "埋葬；安葬",
+      "volume": 1
+    },
+    "ἐνιαυτός": {
+      "hexcode": "1F5D3",
+      "file": "1F5D3.png",
+      "source": "zh_transfer",
+      "glossZh": "年",
+      "volume": 1
+    },
+    "στῦλος": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "zh_transfer",
+      "glossZh": "柱子；支柱",
+      "volume": 1
+    },
+    "πεντήκοντα": {
+      "hexcode": "1F522",
+      "file": "1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "五十",
+      "volume": 1
+    },
+    "ἐμπίπλημι": {
+      "hexcode": "1FAA3",
+      "file": "1FAA3.png",
+      "source": "zh_transfer",
+      "glossZh": "充滿；填滿",
+      "volume": 1
+    },
+    "αἰνέω": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "讚美；稱讚",
+      "volume": 1
+    },
+    "λέων": {
+      "hexcode": "1F981",
+      "file": "1F981.png",
+      "source": "zh_transfer",
+      "glossZh": "獅子",
+      "volume": 1
+    },
+    "τεσσεράκοντα": {
+      "hexcode": "1F522",
+      "file": "1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "四十",
+      "volume": 1
+    },
+    "πρωτότοκος": {
+      "hexcode": "0031-FE0F-20E3",
+      "file": "0031-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "長子；首生的",
+      "volume": 1
+    },
+    "ἥμισυς": {
+      "hexcode": "1F317",
+      "file": "1F317.png",
+      "source": "zh_transfer",
+      "glossZh": "一半；半數",
+      "volume": 1
+    },
+    "ἐκζητέω": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "zh_transfer",
+      "glossZh": "尋求；追求",
+      "volume": 1
+    },
+    "ἀπαίρω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；移去；啟程",
+      "volume": 1
+    },
+    "ὄνος": {
+      "hexcode": "1F434",
+      "file": "1F434.png",
+      "source": "zh_transfer",
+      "glossZh": "驢；公驢",
+      "volume": 1
+    },
+    "βδέλυγμα": {
+      "hexcode": "1F922",
+      "file": "1F922.png",
+      "source": "zh_transfer",
+      "glossZh": "可憎之物；厭惡的東西",
+      "volume": 1
+    },
+    "ῥάβδος": {
+      "hexcode": "1FA93",
+      "file": "1FA93.png",
+      "source": "zh_transfer",
+      "glossZh": "杖；棍；鞭子",
+      "volume": 1
+    },
+    "πλήθω": {
+      "hexcode": "1FAA3",
+      "file": "1FAA3.png",
+      "source": "zh_transfer",
+      "glossZh": "充滿；裝滿",
+      "volume": 1
+    },
+    "ὅρασις": {
+      "hexcode": "1F52E",
+      "file": "1F52E.png",
+      "source": "zh_transfer",
+      "glossZh": "異象；景象；視力",
+      "volume": 1
+    },
+    "ἀμνός": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "override",
+      "glossZh": "羔羊；小羊",
+      "volume": 1
+    },
+    "κοιλία": {
+      "hexcode": "E313",
+      "file": "E313.png",
+      "source": "zh_transfer",
+      "glossZh": "腹部；子宮；內心",
+      "volume": 1
+    },
+    "ἀπέναντι": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "zh_transfer",
+      "glossZh": "對面；相對；（配屬格）與…相反",
+      "volume": 1
+    },
+    "εὐλογία": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "祝福；讚美；恭維",
+      "volume": 1
+    },
+    "βουνός": {
+      "hexcode": "26F0",
+      "file": "26F0.png",
+      "source": "zh_transfer",
+      "glossZh": "山；山丘",
+      "volume": 1
+    },
+    "καλύπτω": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "遮蓋；隱瞞",
+      "volume": 1
+    },
+    "ἀναλαμβάνω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；承接；接納",
+      "volume": 1
+    },
+    "σφάζω": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "zh_transfer",
+      "glossZh": "宰殺；屠殺",
+      "volume": 1
+    },
+    "ὁλοκαύτωσις": {
+      "hexcode": "1F525",
+      "file": "1F525.png",
+      "source": "zh_transfer",
+      "glossZh": "全燔祭；燔祭",
+      "volume": 1
+    },
+    "καταδιώκω": {
+      "hexcode": "1F463",
+      "file": "1F463.png",
+      "source": "zh_transfer",
+      "glossZh": "追趕；驅逐",
+      "volume": 1
+    },
+    "θνήσκω": {
+      "hexcode": "1F480",
+      "file": "1F480.png",
+      "source": "zh_transfer",
+      "glossZh": "死；去世",
+      "volume": 1
+    },
+    "ποιμήν": {
+      "hexcode": "1F415",
+      "file": "1F415.png",
+      "source": "override",
+      "glossZh": "牧羊人；牧者",
+      "volume": 1
+    },
+    "εὐχή": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "禱告；願望；誓願",
+      "volume": 1
+    },
+    "συντέλεια": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；終結；終末",
+      "volume": 1
+    },
+    "ὑετός": {
+      "hexcode": "1F327",
+      "file": "1F327.png",
+      "source": "zh_transfer",
+      "glossZh": "雨；雨水",
+      "volume": 1
+    },
+    "αἴξ": {
+      "hexcode": "1F410",
+      "file": "1F410.png",
+      "source": "zh_transfer",
+      "glossZh": "山羊",
+      "volume": 1
+    },
+    "τράπεζα": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "override",
+      "glossZh": "桌子；筵席",
+      "volume": 1
+    },
+    "τοῖχος": {
+      "hexcode": "1F9F1",
+      "file": "1F9F1.png",
+      "source": "zh_transfer",
+      "glossZh": "牆；牆壁",
+      "volume": 1
+    },
+    "ὀκτώ": {
+      "hexcode": "0038-FE0F-20E3",
+      "file": "0038-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "八",
+      "volume": 1
+    },
+    "πτέρυξ": {
+      "hexcode": "1FABD",
+      "file": "1FABD.png",
+      "source": "zh_transfer",
+      "glossZh": "翅膀；翼；邊角",
+      "volume": 1
+    },
+    "ἐπαίρω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；抬起；揚起",
+      "volume": 1
+    },
+    "ποίμνιον": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "zh_transfer",
+      "glossZh": "羊群",
+      "volume": 1
+    },
+    "εὔχομαι": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "禱告；祈禱；祝願",
+      "volume": 1
+    },
+    "ἀναιρέω": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "舉起；廢除；殺害",
+      "volume": 1
+    },
+    "ἁφή": {
+      "hexcode": "261D",
+      "file": "261D.png",
+      "source": "zh_transfer",
+      "glossZh": "接觸；接點；結合",
+      "volume": 1
+    },
+    "χήρα": {
+      "hexcode": "1F9D3",
+      "file": "1F9D3.png",
+      "source": "zh_transfer",
+      "glossZh": "寡婦",
+      "volume": 1
+    },
+    "σίδηρος": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "zh_transfer",
+      "glossZh": "鐵",
+      "volume": 1
+    },
+    "λάκκος": {
+      "hexcode": "1F573",
+      "file": "1F573.png",
+      "source": "zh_transfer",
+      "glossZh": "坑；陷阱",
+      "volume": 1
+    },
+    "ὀχύρωμα": {
+      "hexcode": "1F3F0",
+      "file": "1F3F0.png",
+      "source": "zh_transfer",
+      "glossZh": "堡壘；防禦工事",
+      "volume": 1
+    },
+    "ἄμπελος": {
+      "hexcode": "1F347",
+      "file": "1F347.png",
+      "source": "override",
+      "glossZh": "葡萄樹",
+      "volume": 1
+    },
+    "τρέχω": {
+      "hexcode": "1F3C3",
+      "file": "1F3C3.png",
+      "source": "override",
+      "glossZh": "奔跑；競賽；操練",
+      "volume": 1
+    },
+    "βαδίζω": {
+      "hexcode": "1F6B6",
+      "file": "1F6B6.png",
+      "source": "zh_transfer",
+      "glossZh": "行走；行進",
+      "volume": 1
+    },
+    "ἐπίσταμαι": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "zh_transfer",
+      "glossZh": "知道；明白",
+      "volume": 1
+    },
+    "διαφθείρω": {
+      "hexcode": "1F4A3",
+      "file": "1F4A3.png",
+      "source": "zh_transfer",
+      "glossZh": "敗壞；毀壞；腐蝕",
+      "volume": 1
+    },
+    "γαστήρ": {
+      "hexcode": "E313",
+      "file": "E313.png",
+      "source": "zh_transfer",
+      "glossZh": "腹部；肚子；胃",
+      "volume": 1
+    },
+    "παροικέω": {
+      "hexcode": "1F47D",
+      "file": "1F47D.png",
+      "source": "zh_transfer",
+      "glossZh": "寄居；作客旅",
+      "volume": 1
+    },
+    "κάμηλος": {
+      "hexcode": "1F42A",
+      "file": "1F42A.png",
+      "source": "zh_transfer",
+      "glossZh": "駱駝",
+      "volume": 1
+    },
+    "φρέαρ": {
+      "hexcode": "1F573",
+      "file": "1F573.png",
+      "source": "zh_transfer",
+      "glossZh": "井；水井",
+      "volume": 1
+    },
+    "λόγιον": {
+      "hexcode": "1F5EF",
+      "file": "1F5EF.png",
+      "source": "zh_transfer",
+      "glossZh": "言語；聖言",
+      "volume": 1
+    },
+    "κλίνω": {
+      "hexcode": "1F3D5",
+      "file": "1F3D5.png",
+      "source": "zh_transfer",
+      "glossZh": "傾斜；躺下；屈膝",
+      "volume": 1
+    },
+    "αἴνεσις": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "讚美；頌讚",
+      "volume": 1
+    },
+    "διαστέλλω": {
+      "hexcode": "2797",
+      "file": "2797.png",
+      "source": "zh_transfer",
+      "glossZh": "分開；吩咐；警告",
+      "volume": 1
+    },
+    "ὀδούς": {
+      "hexcode": "1F9B7",
+      "file": "1F9B7.png",
+      "source": "zh_transfer",
+      "glossZh": "牙齒",
+      "volume": 1
+    },
+    "ὅσιος": {
+      "hexcode": "2728",
+      "file": "2728.png",
+      "source": "zh_transfer",
+      "glossZh": "聖潔的；敬虔的；聖善的",
+      "volume": 1
+    },
+    "δεσπότης": {
+      "hexcode": "1F454",
+      "file": "1F454.png",
+      "source": "zh_transfer",
+      "glossZh": "主人；統治者",
+      "volume": 2
+    },
+    "οἰκοδομή": {
+      "hexcode": "1F3D7",
+      "file": "1F3D7.png",
+      "source": "zh_transfer",
+      "glossZh": "建造；建築物；造就",
+      "volume": 2
+    },
+    "νοέω": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "zh_transfer",
+      "glossZh": "明白；領會；思考",
+      "volume": 2
+    },
+    "ἀεί": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "zh_transfer",
+      "glossZh": "永遠；常常",
+      "volume": 2
+    },
+    "φθορά": {
+      "hexcode": "1F4A3",
+      "file": "1F4A3.png",
+      "source": "zh_transfer",
+      "glossZh": "敗壞；朽壞",
+      "volume": 2
+    },
+    "κελεύω": {
+      "hexcode": "1F4E3",
+      "file": "1F4E3.png",
+      "source": "zh_transfer",
+      "glossZh": "吩咐；命令",
+      "volume": 2
+    },
+    "εἰκών": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "zh_transfer",
+      "glossZh": "像；肖像；形象",
+      "volume": 2
+    },
+    "δένδρον": {
+      "hexcode": "1F333",
+      "file": "1F333.png",
+      "source": "override",
+      "glossZh": "樹",
+      "volume": 2
+    },
+    "βίος": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "zh_transfer",
+      "glossZh": "生命；生活方式；生計",
+      "volume": 2
+    },
+    "ἐνεργέω": {
+      "hexcode": "1F4BC",
+      "file": "1F4BC.png",
+      "source": "zh_transfer",
+      "glossZh": "工作；運行；發揮作用",
+      "volume": 2
+    },
+    "μήποτε": {
+      "hexcode": "26A0",
+      "file": "26A0.png",
+      "source": "zh_transfer",
+      "glossZh": "免得；恐怕",
+      "volume": 2
+    },
+    "φθείρω": {
+      "hexcode": "1F4A3",
+      "file": "1F4A3.png",
+      "source": "zh_transfer",
+      "glossZh": "敗壞；毀壞；腐蝕",
+      "volume": 2
+    },
+    "ζῷον": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "zh_transfer",
+      "glossZh": "動物",
+      "volume": 2
+    },
+    "ἐπιτελέω": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；實現；執行",
+      "volume": 2
+    },
+    "ἁμάρτημα": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "zh_transfer",
+      "glossZh": "罪；過犯",
+      "volume": 2
+    },
+    "ἀστήρ": {
+      "hexcode": "2B50",
+      "file": "2B50.png",
+      "source": "override",
+      "glossZh": "星",
+      "volume": 2
+    },
+    "τελειόω": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；成全；使完美",
+      "volume": 2
+    },
+    "ἐπιστολή": {
+      "hexcode": "1F4E9",
+      "file": "1F4E9.png",
+      "source": "override",
+      "glossZh": "信件；書信",
+      "volume": 2
+    },
+    "λείπω": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "zh_transfer",
+      "glossZh": "離開；遺漏；缺少",
+      "volume": 2
+    },
+    "καθέδρα": {
+      "hexcode": "1F4BA",
+      "file": "1F4BA.png",
+      "source": "zh_transfer",
+      "glossZh": "座位；座椅；教座",
+      "volume": 2
+    },
+    "παράβασις": {
+      "hexcode": "1F309",
+      "file": "1F309.png",
+      "source": "zh_transfer",
+      "glossZh": "越過；違背；過犯",
+      "volume": 2
+    },
+    "αἱρέω": {
+      "hexcode": "1F5F3",
+      "file": "1F5F3.png",
+      "source": "zh_transfer",
+      "glossZh": "選擇；拿取；採取",
+      "volume": 2
+    },
+    "στάσις": {
+      "hexcode": "1F9CD",
+      "file": "1F9CD.png",
+      "source": "zh_transfer",
+      "glossZh": "站立；分裂；騷亂",
+      "volume": 2
+    },
+    "ἀγαθότης": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "zh_transfer",
+      "glossZh": "良善；恩慈；美德",
+      "volume": 2
+    },
+    "εὐχαριστία": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "感謝；謝恩",
+      "volume": 2
+    },
+    "παράπτωμα": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "zh_transfer",
+      "glossZh": "過犯；罪愆",
+      "volume": 2
+    },
+    "ἑρῶ": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "說；講述",
+      "volume": 2
+    },
+    "ἄστρον": {
+      "hexcode": "2B50",
+      "file": "2B50.png",
+      "source": "zh_transfer",
+      "glossZh": "星；星辰",
+      "volume": 2
+    },
+    "ἐξετάζω": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "zh_transfer",
+      "glossZh": "詢問；查驗；審查",
+      "volume": 2
+    },
+    "χρηστότης": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "zh_transfer",
+      "glossZh": "良善；恩慈",
+      "volume": 2
+    },
+    "ὀρθός": {
+      "hexcode": "1F4CF",
+      "file": "1F4CF.png",
+      "source": "zh_transfer",
+      "glossZh": "正直的；正確的",
+      "volume": 2
+    },
+    "πάνυ": {
+      "hexcode": "1F4A5",
+      "file": "1F4A5.png",
+      "source": "zh_transfer",
+      "glossZh": "非常；極其；完全",
+      "volume": 2
+    },
+    "ἐπιτάσσω": {
+      "hexcode": "1F4E3",
+      "file": "1F4E3.png",
+      "source": "zh_transfer",
+      "glossZh": "吩咐；命令",
+      "volume": 2
+    },
+    "θεάομαι": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "zh_transfer",
+      "glossZh": "看見；觀看；注視",
+      "volume": 2
+    },
+    "ἀγωνίζομαι": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "zh_transfer",
+      "glossZh": "爭戰；竭力；努力",
+      "volume": 2
+    },
+    "κατάρα": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "zh_transfer",
+      "glossZh": "咒詛；詛咒",
+      "volume": 2
+    },
+    "στρέφω": {
+      "hexcode": "1F503",
+      "file": "1F503.png",
+      "source": "zh_transfer",
+      "glossZh": "轉向；改變方向；悔改",
+      "volume": 2
+    },
+    "γονεύς": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "zh_transfer",
+      "glossZh": "父親；母親；雙親",
+      "volume": 2
+    },
+    "ἐκφεύγω": {
+      "hexcode": "E247",
+      "file": "E247.png",
+      "source": "zh_transfer",
+      "glossZh": "逃脫；逃避",
+      "volume": 2
+    },
+    "ἔνδυμα": {
+      "hexcode": "1F455",
+      "file": "1F455.png",
+      "source": "zh_transfer",
+      "glossZh": "衣服；衣裳",
+      "volume": 2
+    },
+    "ἐπιζητέω": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "zh_transfer",
+      "glossZh": "尋求；渴望；追求",
+      "volume": 2
+    },
+    "ταφή": {
+      "hexcode": "26B0",
+      "file": "26B0.png",
+      "source": "zh_transfer",
+      "glossZh": "埋葬；安葬",
+      "volume": 2
+    },
+    "μερίζω": {
+      "hexcode": "2797",
+      "file": "2797.png",
+      "source": "zh_transfer",
+      "glossZh": "分開；分派；分享",
+      "volume": 2
+    },
+    "ψεῦδος": {
+      "hexcode": "1F925",
+      "file": "1F925.png",
+      "source": "zh_transfer",
+      "glossZh": "謊言；虛假",
+      "volume": 2
+    },
+    "καθέζομαι": {
+      "hexcode": "1FA91",
+      "file": "1FA91.png",
+      "source": "zh_transfer",
+      "glossZh": "坐下；就坐",
+      "volume": 2
+    },
+    "προαίρεσις": {
+      "hexcode": "1F5F3",
+      "file": "1F5F3.png",
+      "source": "zh_transfer",
+      "glossZh": "選擇；意志；決定",
+      "volume": 2
+    },
+    "διαιρέω": {
+      "hexcode": "2797",
+      "file": "2797.png",
+      "source": "zh_transfer",
+      "glossZh": "分開；分裂",
+      "volume": 2
+    },
+    "σφαγή": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "zh_transfer",
+      "glossZh": "宰殺；屠殺",
+      "volume": 2
+    },
+    "κλείω": {
+      "hexcode": "1F512",
+      "file": "1F512.png",
+      "source": "zh_transfer",
+      "glossZh": "關閉；上鎖",
+      "volume": 2
+    },
+    "ὁδεύω": {
+      "hexcode": "1F6B6",
+      "file": "1F6B6.png",
+      "source": "zh_transfer",
+      "glossZh": "行走；旅行",
+      "volume": 2
+    },
+    "καταφθείρω": {
+      "hexcode": "1F4A3",
+      "file": "1F4A3.png",
+      "source": "zh_transfer",
+      "glossZh": "敗壞；毀滅；腐蝕",
+      "volume": 2
+    },
+    "ἀποχωρέω": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "zh_transfer",
+      "glossZh": "離開；分開",
+      "volume": 2
+    },
+    "τροπέω": {
+      "hexcode": "1F503",
+      "file": "1F503.png",
+      "source": "zh_transfer",
+      "glossZh": "轉向；改變",
+      "volume": 2
+    },
+    "εἴσοδος": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "zh_transfer",
+      "glossZh": "進入；入口；通道",
+      "volume": 2
+    },
+    "κατασκευάζω": {
+      "hexcode": "1F3D7",
+      "file": "1F3D7.png",
+      "source": "zh_transfer",
+      "glossZh": "建造；製造；預備",
+      "volume": 2
+    },
+    "στέργω": {
+      "hexcode": "1F495",
+      "file": "1F495.png",
+      "source": "zh_transfer",
+      "glossZh": "愛；親愛",
+      "volume": 2
+    },
+    "ἐπεῖδον": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "zh_transfer",
+      "glossZh": "看見；注視；顧念",
+      "volume": 2
+    },
+    "ἐνθύμησις": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "zh_transfer",
+      "glossZh": "思想；默念；懷念",
+      "volume": 2
+    },
+    "ἱδρύω": {
+      "hexcode": "2693",
+      "file": "2693.png",
+      "source": "zh_transfer",
+      "glossZh": "建立；安置；設立",
+      "volume": 2
+    },
+    "στρατία": {
+      "hexcode": "1FA96",
+      "file": "1FA96.png",
+      "source": "zh_transfer",
+      "glossZh": "軍隊；軍營",
+      "volume": 2
+    },
+    "τρέπω": {
+      "hexcode": "1F503",
+      "file": "1F503.png",
+      "source": "zh_transfer",
+      "glossZh": "轉向；改變方向；使轉身",
+      "volume": 2
+    },
+    "καταφθορά": {
+      "hexcode": "1F4A3",
+      "file": "1F4A3.png",
+      "source": "zh_transfer",
+      "glossZh": "敗壞；腐爛；毀滅",
+      "volume": 2
+    },
+    "ἰχθύς": {
+      "hexcode": "1F41F",
+      "file": "1F41F.png",
+      "source": "override",
+      "glossZh": "魚",
+      "volume": 2
+    },
+    "μάχη": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "zh_transfer",
+      "glossZh": "爭戰；爭執",
+      "volume": 2
+    },
+    "πλημμέλημα": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "zh_transfer",
+      "glossZh": "過犯；偏差",
+      "volume": 2
+    },
+    "τεσσαράκοντα": {
+      "hexcode": "1F522",
+      "file": "1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "四十",
+      "volume": 2
+    },
+    "σκεπάζω": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "遮蓋；隱蔽",
+      "volume": 2
+    },
+    "αἶνος": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "讚美；頌讚",
+      "volume": 2
+    },
+    "καταμανθάνω": {
+      "hexcode": "1F4CB",
+      "file": "1F4CB.png",
+      "source": "zh_transfer",
+      "glossZh": "留意；觀察；學會",
+      "volume": 2
+    },
+    "διαφεύγω": {
+      "hexcode": "E247",
+      "file": "E247.png",
+      "source": "zh_transfer",
+      "glossZh": "逃脫；躲避",
+      "volume": 2
+    },
+    "σύνοιδα": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "zh_transfer",
+      "glossZh": "知道；察知",
+      "volume": 2
+    },
+    "φιλέω": {
+      "hexcode": "1F495",
+      "file": "1F495.png",
+      "source": "override",
+      "glossZh": "愛；親吻",
+      "volume": 2
+    },
+    "μάχομαι": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "zh_transfer",
+      "glossZh": "爭戰；爭論",
+      "volume": 2
+    },
+    "τρώγω": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "zh_transfer",
+      "glossZh": "吃；咀嚼",
+      "volume": 2
+    },
+    "πυνθάνομαι": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "zh_transfer",
+      "glossZh": "詢問；打聽",
+      "volume": 2
+    },
+    "κόρη": {
+      "hexcode": "1F467",
+      "file": "1F467.png",
+      "source": "zh_transfer",
+      "glossZh": "女孩；少女",
+      "volume": 2
+    }
+  }
+}
