@@ -155,11 +155,32 @@ def jonah_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int |
 
 
 def proverbs_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int | None, str]:
-    """七十士箴言自 24:23 起整段重排，章號不再與馬所拉本相當。"""
-    if lxx_chapter <= 24:
+    """七十士箴言自 24:23 起整段重排，之後的章節號不再與馬所拉本相當。
+
+    分界不在章的邊界上：第 24 章的前二十二節仍與馬所拉本同號，自第 23 節起七十士
+    把馬所拉本第 30 章的材料接進來，該章因此長到七十幾節，中文本的箴言 24 根本沒有
+    那些節號。只擋整章是不夠的——箴言 24:45 就是這樣配到空的中文的。
+    """
+    if lxx_chapter < 24:
+        return lxx_chapter, lxx_verse, "同號"
+    if lxx_chapter == 24 and (lxx_verse is None or lxx_verse <= 22):
         return lxx_chapter, lxx_verse, "同號"
     raise LookupError(
-        f"七十士箴言第 {lxx_chapter} 章在馬所拉本的次序不同，不能按章號取中文"
+        f"七十士箴言 {lxx_chapter}:{lxx_verse} 在 24:23 之後的重排段落內，不能按節號取中文"
+    )
+
+
+def exodus_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int | None, str]:
+    """出埃及記自第 25 章起，七十士與馬所拉本是兩個不同的傳本。
+
+    帳幕那一大段（25–40 章）七十士本較短且次序不同，35–40 章尤其整段重編，
+    節號因此指不到同一段文字：七十士的 25:7 是「你要為我造聖所」，中文本的
+    25:7 卻在講以弗得上的寶石。這一段一律拒絕，不按節號硬配。
+    """
+    if lxx_chapter < 25:
+        return lxx_chapter, lxx_verse, "同號"
+    raise LookupError(
+        f"七十士出埃及記第 {lxx_chapter} 章屬帳幕段落，兩傳本次序不同，不能按節號取中文"
     )
 
 
@@ -172,6 +193,8 @@ def target_reference(book: str, chapter: int, verse: int | None) -> tuple[int, i
         return jonah_crosswalk(chapter, verse)
     if book == "Prov":
         return proverbs_crosswalk(chapter, verse)
+    if book == "Exod":
+        return exodus_crosswalk(chapter, verse)
     return chapter, verse, "同號"
 
 

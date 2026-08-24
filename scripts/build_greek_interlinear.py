@@ -172,16 +172,44 @@ def units() -> list[dict]:
             }
         )
 
-    # The same verse can be both a chapter verse and a memory verse; gloss once.
+    return rows
+
+
+def deduplicated(rows: list[dict]) -> list[dict]:
+    """The units actually worth paying for: one per distinct printed text.
+
+    The same verse can be both a chapter verse and a memory verse, and a hymn
+    repeats whole lines, so the model is asked once per text.  Every id still
+    gets an entry — see ``expand_duplicates`` — because the master looks units up
+    by id, and a segment whose text happened to repeat used to find nothing.
+    """
     seen: set[str] = set()
     unique = []
     for row in rows:
-        key = row["text"]
-        if key in seen:
+        if row["text"] in seen:
             continue
-        seen.add(key)
+        seen.add(row["text"])
         unique.append(row)
     return unique
+
+
+def expand_duplicates(cache: dict[str, dict], rows: list[dict]) -> int:
+    """Give every id an entry, copying from the one that shares its text."""
+    by_text = {}
+    for row in rows:
+        record = cache.get(row["id"])
+        if record:
+            by_text.setdefault(row["text"], record)
+    added = 0
+    for row in rows:
+        if row["id"] in cache:
+            continue
+        source = by_text.get(row["text"])
+        if source is None:
+            continue
+        cache[row["id"]] = {**source, "ref": row["ref"], "group": row["group"]}
+        added += 1
+    return added
 
 
 def load_cache() -> dict[str, dict]:
@@ -301,11 +329,38 @@ def main() -> None:
     # the engine chain rotates seven Gemini keys plus the NVIDIA tier, so a
     # handful of threads costs nothing extra and finishes overnight.
     parser.add_argument("--workers", type=int, default=6, help="同時處理幾個單元")
+    parser.add_argument(
+        "--prune",
+        action="store_true",
+        help="收工後刪掉已不屬於任何單元的舊紀錄（讀文重新編號後會留下一批）",
+    )
     args = parser.parse_args()
 
     llm.select_chain(args.model)
     cache = load_cache()
-    all_units = units()
+    all_rows = units()
+    all_units = deduplicated(all_rows)
+
+    # A cached record is only good while the text under it is unchanged.  Cutting
+    # the Pedalion commentary out of the canons left every affected id pointing
+    # at a gloss row for the *old*, longer text, and nothing complained: the id
+    # was still present, so the run reported no work to do.
+    stale = 0
+    for unit in all_units:
+        record = cache.get(unit["id"])
+        if record is None:
+            continue
+        cached_text = "".join(
+            token["word"] + token["trailing"] for token in record["tokens"]
+        )
+        current = "".join(
+            token["word"] + token["trailing"] for token in tokenise(unit["text"])
+        )
+        if cached_text != current:
+            del cache[unit["id"]]
+            stale += 1
+    if stale:
+        print(f"原文已改，作廢舊對譯 {stale} 個單元", flush=True)
 
     # Renumbering 下冊's readings changed every patristic id, but not one word
     # of their Greek.  A unit whose exact text is already glossed under another
@@ -387,7 +442,27 @@ def main() -> None:
 
     if pending:
         print(f"停在剩 {len(pending)} 個單元：額度連續 {UNPRODUCTIVE_PASS_LIMIT} 輪沒放行，改天續傳")
-    print(f"結束：完成 {done}，失敗 {failed}，累計 {len(cache)}／{len(all_units)}")
+
+    if not pending:
+        added = expand_duplicates(cache, all_rows)
+        if added:
+            save_cache(cache)
+            print(f"把字面相同的對譯補給另外 {added} 個編號", flush=True)
+
+    if args.prune and not pending:
+        # Only after a clean finish, and only ever by hand: the stale entries are
+        # what the by-text recovery above lives on, so throwing them away while
+        # the plan is still moving would mean paying for those glosses again.
+        live = {row["id"] for row in all_rows}
+        dropped = [key for key in cache if key not in live]
+        for key in dropped:
+            del cache[key]
+        if dropped:
+            save_cache(cache)
+            print(f"清掉已不屬於任何單元的舊紀錄 {len(dropped)} 筆")
+
+    print(f"結束：完成 {done}，失敗 {failed}，累計 {len(cache)}／{len(all_rows)} 個編號"
+          f"（不同字面 {len(all_units)} 個）")
 
 
 if __name__ == "__main__":

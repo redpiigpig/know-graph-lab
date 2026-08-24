@@ -44,7 +44,13 @@ clear.
    volume (`--volume 1` / `--volume 2`, both by default). Nothing has been
    rendered or page-inspected since the redesign; the old 763-page single-volume
    render is dead and must not be used as evidence.
-4. **64 appendix names with no Chinese.** Mostly deuterocanonical (Ὀλοφέρνης,
+4. **`data/originalReaders/greek.ts` still describes the old plan.** That file is
+   the three-volume planning manifest behind `/original-readers`, not the built
+   reader, and it still says a thousand words in groups of fifty.
+   `tests/original-readers.test.ts` asserts that shape, so it was left alone
+   rather than half-changed. Deciding what the manifest is now for — a plan, or a
+   summary of what was built — is the owner's call.
+5. **64 appendix names with no Chinese.** Mostly deuterocanonical (Ὀλοφέρνης,
    Μακκαβαῖος, Ἀντίοχος); 信望愛 holds no Chinese Maccabees. Empty is the
    correct state — never invent one.
 

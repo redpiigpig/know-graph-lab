@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "_comment_dev": "Node 預設 4GB 堆積跑不動這個專案（compile 到一半 OOM，exit 134）。旗標直接交給 node 而非用 NODE_OPTIONS，因為 Windows 的 npm script 走 cmd.exe，`NODE_OPTIONS=x cmd` 那種前綴寫法不生效。",
+    "_comment_dev": "Node 預設 4GB 堆積跑不動這個專案（compile 到一半 OOM，exit 134）。build 同樣要加，希臘文讀本的逐詞對譯層長到 15 MB 之後 nitro 打包就撞上限。旗標直接交給 node 而非用 NODE_OPTIONS，因為 Windows 的 npm script 走 cmd.exe，`NODE_OPTIONS=x cmd` 那種前綴寫法不生效。",
     "dev": "node --max-old-space-size=8192 node_modules/nuxt/bin/nuxt.mjs dev",
-    "build": "nuxt build",
+    "build": "node --max-old-space-size=8192 node_modules/nuxt/bin/nuxt.mjs build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "test": "vitest",

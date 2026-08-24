@@ -62,7 +62,11 @@ MAX_WORDS = 15
 # verse never sends the learner to an edition the reader does not carry.
 NT_BOOKS = list(gs.SBLGNT_BOOKS)
 LXX_BOOKS = ["Gen", "Exod", "Deut", "Ruth", "1Kgs", "Ps", "Prov", "Isa", "Jer", "Ezek", "Jonah"]
-DEUTERO_BOOKS = ["TobS", "Jdt", "Wis", "Sir", "2Macc"]
+# 2 Maccabees is deliberately absent: the 1933 Anglican canon does not contain
+# it and 信望愛 holds no Chinese Maccabees at all, so a memory verse drawn from it
+# could never be printed with its Chinese.  The reader still *reads* 2 Maccabees 7
+# as a chapter, where the whole-chapter self-translation carries it.
+DEUTERO_BOOKS = ["TobS", "Jdt", "Wis", "Sir"]
 PSEUDEPIGRAPHA_BOOKS = ["1En", "PssSol"]
 
 CORPUS_OF = {}
@@ -181,9 +185,95 @@ def pairable(book: str, chapter: int) -> bool:
     return True
 
 
+# A verse that does not close on a sentence mark runs on into the next one, and
+# printing it as a memory unit prints half a sentence: 2 Corinthians 8:3 ends on
+# "αὐθαίρετοι" and its thought finishes in verse 4.
+SENTENCE_END_RE = re.compile(r"[.·;;!]$")
+
+_MERGED_RANGES: set[tuple[str, int, int]] | None = None
+
+
+def merged_chinese_ranges() -> set[tuple[str, int, int]]:
+    """Verses the Chinese Bible prints inside a combined range.
+
+    和合本修訂版 sets Galatians 1:1–2 as one block of text, so a memory verse
+    drawn from 1:2 would be printed beside the Chinese for both verses — more
+    text than the Greek it is supposed to pair with.  Read off whichever RCUV
+    snapshot exists; a chapter the snapshot has not fetched yet simply is not
+    filtered, and the next export brings it into range.
+    """
+    global _MERGED_RANGES
+    if _MERGED_RANGES is None:
+        _MERGED_RANGES = set()
+        path = CACHE / "RCUV2010.json"
+        if path.exists():
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            for book in payload["books"]:
+                for chapter in book["chapters"]:
+                    for verse in chapter["verses"]:
+                        if verse["verseEnd"] > verse["verse"]:
+                            for number in range(verse["verse"], verse["verseEnd"] + 1):
+                                _MERGED_RANGES.add((book["code"], chapter["chapter"], number))
+    return _MERGED_RANGES
+
+
+def chinese_is_one_verse(book: str, chapter: int, verse: int) -> bool:
+    from export_reader_rcuv2010_greek import target_reference
+
+    try:
+        target_chapter, target_verse, _ = target_reference(book, chapter, verse)
+    except LookupError:
+        return False
+    if target_verse is None:
+        return True
+    return (book, target_chapter, target_verse) not in merged_chinese_ranges()
+
+
+def verse_pairable(book: str, chapter: int, verse: int) -> bool:
+    """Whether this exact verse has a Chinese counterpart to pair with.
+
+    Chapter-level is not fine enough: Septuagint Proverbs 24 runs with the
+    Hebrew for twenty-two verses and then splices in another chapter's material,
+    so 24:4 pairs and 24:45 does not exist in the Chinese at all.
+    """
+    from export_reader_rcuv2010_greek import target_reference
+
+    try:
+        target_reference(book, chapter, verse)
+    except LookupError:
+        return False
+    return True
+
+
 OPENING_FORMULA_RE = re.compile(
     unicodedata.normalize("NFC", r"^(καὶ\s+)?(\S+\s+){0,2}(εἶπεν|ἐγένετο|ἀπεκρίθη|ἔφη|λέγει|ἐλάλησεν)\b")
 )
+
+# A psalm's heading is a verse of its own in the Septuagint, and it is not a
+# sentence at all: "Εἰς τὸ τέλος· ψαλμὸς τῷ Δαυείδ, ᾠδή" is a performance
+# rubric.  An earlier pass chose one as a memory verse, which is how this rule
+# came to exist.
+SUPERSCRIPTION_RE = re.compile(
+    unicodedata.normalize(
+        "NFC",
+        r"(Εἰς τὸ τέλος|ψαλμὸς τῷ|ᾨδὴ τῶν ἀναβαθμῶν|Συνέσεως τῷ|Ἀλληλούια"
+        r"|ψαλμὸς ᾠδῆς|ᾠδὴ ψαλμοῦ|Στηλογραφία|Προσευχὴ τοῦ)",
+    )
+)
+
+
+def is_frame(text: str, book: str) -> str:
+    """Why this verse cannot stand as a memory unit, or an empty string.
+
+    Both of these were caught only after they had been chosen: a psalm heading
+    is not a sentence, and a verse that opens with the narrative formula is the
+    middle of a story rather than something worth carrying.
+    """
+    if book == "Ps" and SUPERSCRIPTION_RE.search(text):
+        return "psalm_superscription"
+    if OPENING_FORMULA_RE.match(text):
+        return "opens_with_narrative_formula"
+    return ""
 
 
 def load_vocabulary() -> dict[int, list[dict]]:
@@ -230,6 +320,12 @@ def verse_pool() -> list[dict]:
         for verse in verses:
             if not pairable(book, verse.chapter):
                 continue
+            if not verse_pairable(book, verse.chapter, verse.verse):
+                continue
+            if corpus in {"new-testament", "septuagint"} and not chinese_is_one_verse(
+                book, verse.chapter, verse.verse
+            ):
+                continue
             if corpus == "deuterocanonical" and not counts_agree(
                 book, verse.chapter, chapter_lengths[verse.chapter]
             ):
@@ -240,7 +336,11 @@ def verse_pool() -> list[dict]:
             text = " ".join(token.text for token in tokens)
             if BRACKET_RE.search(text) or NUMERAL_RE.search(text):
                 continue
+            if not SENTENCE_END_RE.search(text.rstrip()):
+                continue
             if any(marker in text for marker in LIST_MARKERS):
+                continue
+            if is_frame(unicodedata.normalize("NFC", verse.text), book):
                 continue
             if gs.is_new_testament(book):
                 keys = {fold(token.lemma) for token in tokens if token.lemma}

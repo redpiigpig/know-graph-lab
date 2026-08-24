@@ -165,6 +165,14 @@ def _read(stem: str) -> str:
 
 _HEADING_RE = re.compile(r"^==+\s*(?:Κανὼν|Κανών|Κανόνας)\s+([^=]+?)\s*==+\s*$", re.M)
 
+# Several of these pages print the Pedalion's commentary under each canon, and
+# it is Nicodemus writing in Katharevousa — "Ὄχι μόνον…", "νά μὴ γίνωνται…" —
+# not the ancient canon.  Taken as canon text it put modern Greek into a Koine
+# reader.  The heading is set letter-spaced, so the pattern allows the spaces.
+_COMMENTARY_RE = re.compile(
+    r"^\s*[ἘΕE]\s*ρ\s*μ\s*η\s*ν\s*ε\s*ί\s*α\s*[.·:]?\s*$", re.M
+)
+
 
 def load_canons(stem: str, first: int = 0, last: int = 0) -> list[Segment]:
     """One segment per canon, numbered as the collection numbers it."""
@@ -173,12 +181,18 @@ def load_canons(stem: str, first: int = 0, last: int = 0) -> list[Segment]:
     if not matches:
         raise LookupError(f"{stem}：找不到任何條號標題")
     segments: list[Segment] = []
+    commented = 0
     for index, match in enumerate(matches):
         number = greek_numeral(match.group(1))
         start = match.end()
         end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        block = body[start:end]
+        commentary = _COMMENTARY_RE.search(block)
+        if commentary:
+            block = block[: commentary.start()]
+            commented += 1
         text = " ".join(
-            part for part in (_clean_line(line) for line in body[start:end].splitlines()) if part
+            part for part in (_clean_line(line) for line in block.splitlines()) if part
         )
         text = re.sub(r"\s+", " ", text).strip()
         if not text or not GREEK_RE.search(text):
@@ -191,7 +205,14 @@ def load_canons(stem: str, first: int = 0, last: int = 0) -> list[Segment]:
     numbers = [int(segment.ref) for segment in segments]
     if numbers != sorted(numbers):
         raise ValueError(f"{stem}：條號不是遞增的，來源可能被改動過")
+    LAST_COMMENTARY_COUNT[stem] = commented
     return segments
+
+
+# How many canons of the last-loaded collection carried a commentary block that
+# was cut away.  Recorded so the reading can say so rather than the removal
+# being invisible.
+LAST_COMMENTARY_COUNT: dict[str, int] = {}
 
 
 def canon_count(stem: str) -> int:

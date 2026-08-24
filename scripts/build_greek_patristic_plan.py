@@ -452,6 +452,13 @@ def load(spec: dict) -> tuple[list[src.Segment], dict]:
         }
         if first:
             meta["canonTotal"] = church.canon_count(stem)
+        commented = church.LAST_COMMENTARY_COUNT.get(stem, 0)
+        if commented:
+            meta["excludedCommentary"] = commented
+            meta["exclusionReason"] = (
+                f"本卷有 {commented} 條在條文後附《舵手》(Πηδάλιον) 的 Ἑρμηνεία 註解，"
+                "那是尼哥底母以近代希臘文所寫的解說，不是古代條文，已一併切除。"
+            )
         return [src.Segment(s.ref, s.text) for s in segments], meta
     if kind == "hymn":
         stem = args[0]

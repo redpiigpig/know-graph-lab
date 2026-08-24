@@ -49,10 +49,18 @@ MAX_WORDS = 20
 GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
 NUMERAL_RE = re.compile(r"\d")
 BRACKET_RE = re.compile(r"[\[\]]")
-# Greek sentence punctuation: the full stop, the raised dot that does duty for
-# both colon and semicolon, and the semicolon that is the question mark.
-SENTENCE_SPLIT_RE = re.compile(r"(?<=[.·;;!])\s+")
+# Greek sentence punctuation is the full stop, the semicolon that is the
+# question mark, and the exclamation.  The raised dot is **not** one of them:
+# ἄνω τελεία does the work of a colon or semicolon, and splitting on it cut the
+# canons into clauses — "πλὴν νέων χίδρων, ἢ σταφυλῆς, τῷ καιρῷ τῷ δέοντι" is
+# the exception clause of a sentence, not a sentence.
+SENTENCE_SPLIT_RE = re.compile(r"(?<=[.;;!])\s+")
 TRAILING_RE = re.compile(r"^[\s·,;:—–\-]+|[\s]+$")
+# Hymnody is printed one metrical line per row, and a line is not a sentence:
+# the Christmas canon supplied "Ἰὸν καθᾶραι τῆς δρακοντείας κάρας," — an
+# infinitive clause ending in a comma — until this rule was added.  A candidate
+# must close on a sentence-final mark.
+SENTENCE_END_RE = re.compile(r"[.;;!]$")
 
 PATRISTIC_CATEGORIES = {"apostolic-father", "greek-father"}
 
@@ -71,6 +79,14 @@ DIVINE_FOLDED = {
 # A sentence that opens with a connective alone, or that is only a rubric or a
 # reference formula, is not memorable however well it scores.
 RUBRIC_MARKERS = ("ΤΟ ΑΚΟΥΤΕ", "Ἦχος", "ᾨδὴ", "Καταβασία", "Ὁ Χορὸς", "Ὁ Ἱερεὺς")
+
+# A subordinate clause that happens to close on a full stop is still a
+# subordinate clause: the Christmas canon's "Ἵνα πρὸς αὐτὸν ἑλκύσῃ
+# πρωτόκτιστον." is the purpose half of a sentence whose main verb is on the
+# line above.
+SUBORDINATOR_OPENERS = {
+    "ινα", "οπως", "ωστε", "επειδη", "καθως", "οταν", "εαν", "ειπερ", "εφοσον",
+}
 
 
 def load_vocabulary() -> dict[int, list[dict]]:
@@ -156,6 +172,10 @@ def sentence_pool() -> list[dict]:
                     continue
                 if any(marker in sentence for marker in RUBRIC_MARKERS):
                     continue
+                if not SENTENCE_END_RE.search(sentence):
+                    continue
+                if fold(words[0].strip(".,·;:!?—–()«»’")) in SUBORDINATOR_OPENERS:
+                    continue
                 keys: set[str] = set()
                 for word in words:
                     keys |= word_keys(word)
@@ -233,17 +253,27 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
         known_keys |= lesson_key_sets[lesson]
         lesson_keys = lesson_key_sets[lesson]
         half = lesson_half(lesson)
-        scored = []
-        for candidate in pool:
-            if candidate["ref"] in used_refs or candidate["text"] in used_texts:
-                continue
-            if candidate["half"] != half:
-                continue
-            if not candidate["keys"] & lesson_keys:
-                continue
-            candidate["_lesson"] = lesson
-            scored.append((score(candidate, lesson_keys, known_keys), candidate))
-        scored.sort(key=lambda pair: pair[0]["score"], reverse=True)
+
+        def collect(restrict_to_half: bool) -> list[tuple[dict, dict]]:
+            rows = []
+            for candidate in pool:
+                if candidate["ref"] in used_refs or candidate["text"] in used_texts:
+                    continue
+                if restrict_to_half and candidate["half"] != half:
+                    continue
+                if not candidate["keys"] & lesson_keys:
+                    continue
+                candidate["_lesson"] = lesson
+                rows.append((score(candidate, lesson_keys, known_keys), candidate))
+            rows.sort(key=lambda pair: pair[0]["score"], reverse=True)
+            return rows
+
+        scored = collect(True)
+        # A lesson whose own half cannot supply two sentences takes the second
+        # from the whole volume rather than going short, and says so.  Lesson 41
+        # is the case: its twenty words are γάλα, ἰχθύς, χοῖρος and the like,
+        # which the canons and hymns simply never use.
+        widened = collect(False) if len(scored) < PER_LESSON else []
         review_rows.append(
             {
                 "lesson": lesson,
@@ -256,11 +286,12 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
         )
 
         taken = 0
-        for sentence_score, candidate in scored:
+        for sentence_score, candidate in scored + widened:
             if taken >= PER_LESSON:
                 break
             if candidate["text"] in used_texts:
                 continue
+            off_half = candidate["half"] != half
             used_refs.add(candidate["ref"])
             used_texts.add(candidate["text"])
             taken += 1
@@ -280,6 +311,13 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
                     "text": candidate["text"],
                     "translationZh": "",
                     "reviewStatus": "pending_human_review",
+                    "halfException": off_half,
+                    "halfExceptionNote": (
+                        f"本課所屬的{half}語料湊不出第二句（本課生詞在該語料未出現），"
+                        "改自全冊取用並標明。"
+                        if off_half
+                        else ""
+                    ),
                     **sentence_score,
                 }
             )
@@ -300,6 +338,7 @@ def main() -> None:
     short = [lesson for lesson in range(1, LESSON_COUNT + 1) if per_lesson[lesson] < PER_LESSON]
     category_counts = Counter(item["category"] for item in chosen)
     same_lesson = sum(1 for item in chosen if item["readingLesson"] == item["lesson"])
+    half_exceptions = [item["lesson"] for item in chosen if item.get("halfException")]
 
     for item in chosen[:6]:
         print(
@@ -309,6 +348,8 @@ def main() -> None:
     print(f"  ...共 {len(chosen)} 句")
     print(f"  分類分佈 {dict(category_counts)}")
     print(f"  取自本課讀文者 {same_lesson} 句")
+    if half_exceptions:
+        print(f"  跨半冊取用（已標明）：第 {half_exceptions} 課")
     if short:
         print(f"  ⚠ 湊不滿兩句的課次：{short}")
 
@@ -334,6 +375,7 @@ def main() -> None:
         "matchMethod": "koine-lemma：字形先查通用希臘文詞位表還原詞位，查不到才用折疊字形",
         "categoryCounts": dict(category_counts),
         "fromOwnReading": same_lesson,
+        "halfExceptions": half_exceptions,
         "lessonsShort": short,
         "reviewNote": "全部標 pending_human_review；依約定須人工複核可記憶性後才可定案。",
         "sentences": chosen,

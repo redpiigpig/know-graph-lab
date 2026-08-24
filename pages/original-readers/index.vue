@@ -50,7 +50,7 @@
             to="/original-readers/grc-lessons"
             class="mt-5 flex items-center justify-between rounded-2xl border border-sky-300 bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-950 transition hover:border-sky-500 hover:bg-sky-100"
           >
-            <span>開啟50課完整私人讀本</span>
+            <span>開啟上下兩冊一百課完整私人讀本</span>
             <span aria-hidden="true">→</span>
           </NuxtLink>
 
