@@ -55,6 +55,17 @@ def main():
                 continue
             vol_name = NAME.get(book, book)
             src_vol = f"ACCS（{vol_name}）"
+            # ingest_accs_genesis.py 在整卷目標頁都進 checkpoint 後會寫 .done，本意就是
+            # 「讓每日排程不再重跑」，但這支 runner 從來沒讀它：58 卷全數 OCR 完之後，
+            # keeper 每 30 分鐘仍把每一卷重跑一遍——不呼叫 Gemini，卻照樣把全部
+            # ~29,000 列重新 upsert 進 Supabase（2026-08-25 查出）。已完成就跳過；
+            # 要重做某卷，刪掉它的 .raw.done 即可。
+            done_marker = (Path("c:/tmp" if sys.platform == "win32" else "/tmp")
+                           / f"accs_{book}_{Path(vol['pdf']).stem}.raw.done")
+            if done_marker.exists():
+                print(f"  [skip] {book} 全卷已完成 → 跳過"
+                      f"（要重做請刪 {done_marker.name}）", flush=True)
+                continue
             print(f"\n=== {book}  {rng['pages']}  {os.path.basename(vol['pdf'])} ===", flush=True)
             # 來源在 Google Drive 虛擬磁碟（G:）上，Drive 崩潰／重連時整個磁碟會消失。
             # 沒這道預檢，PyMuPDF 會對每一頁噴 "page not in document"，一卷燒掉幾百頁

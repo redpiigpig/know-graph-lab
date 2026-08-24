@@ -159,5 +159,9 @@ Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py'
 # Dadaodao is a separate research-materials project, outside this collected-works restart.
 # Sacred Books of the East: its five driver volumes are done locally; keep it off
 # Gemini (ACCS owns that pool) and keep output local.
-Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','nvidia','--no-upload')
+# 2026-08-25: the lane had been dead since it was set to '--backend nvidia',
+# which sbe_translate.py does not accept (choices: cloud/gemini-first/haiku) -
+# every keeper tick relaunched it and it exited on the argparse error. 'cloud'
+# is the right free-first policy: Haiku on Max with a fast 20s fail, then Sonnet.
+Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','cloud','--no-upload')
 Note "keeper tick done"

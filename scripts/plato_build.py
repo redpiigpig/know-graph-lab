@@ -61,18 +61,26 @@ _TABLE = [
 ]
 
 
+# Perseus 兩邊的錨點單位不一定同名。《歐德謨倫理學》希臘文用 unit="page"（Bekker），
+# 英譯同一批 76 個錨點卻標成 unit="section"，n 值完全一致（1214a…）。原本兩邊都找
+# page，英譯抓到 0 筆 → build_units 全落空 → 整部無限期跳過（2026-08-25 查出）。
+_ENG_ANCHOR = {"eudemian-ethics": "section"}
+
+
 def _mk(row) -> dict:
     slug, author, tlg, n, tz, to, anchor, grc = row[:8]
     note = row[8] if len(row) > 8 else None
     return {"slug": slug, "author": author, "author_en": "Plato" if author == _P else "Aristotle",
             "tlg": tlg, "ebook_id": f"70000000-0000-4000-8000-{n:012d}",
             "title_zh": tz, "title_orig": to, "anchor": anchor, "grc_kind": grc,
+            "eng_anchor": _ENG_ANCHOR.get(slug, anchor),
             "unit_label": _UNIT_LABEL[anchor], "parent_volume": _PARENT[author],
             "category": "世界宗教", "subcategory": "古希臘哲學",
             "file_path": f"PERSEUS/greek-{slug}-trilingual", "eng_note": note}
 
 
 WORKS = {r[0]: _mk(r) for r in _TABLE}
+
 
 _MS_RE = re.compile(r'<milestone\b([^>]*?)/?>')
 _BOOK_RE = re.compile(r'<div\b[^>]*subtype="book"[^>]*?\bn="([^"]+)"')
@@ -256,7 +264,7 @@ def ensure_ebook_row(slug: str) -> None:
 def run(slug: str, *, engine="haiku", limit=None, upload=False) -> list[dict]:
     d = WORKS[slug]
     grc_xml, eng_xml = fetch(slug)
-    grc, eng = parse_units(grc_xml, d["anchor"]), parse_units(eng_xml, d["anchor"])
+    grc, eng = parse_units(grc_xml, d["anchor"]), parse_units(eng_xml, d["eng_anchor"])
     units = build_units(slug, grc, eng)
     if not units:
         raise RuntimeError(
