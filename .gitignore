@@ -143,3 +143,11 @@ The Collected Works of C. G. Jung*.epub
 影片/**/*.mp3
 影片/**/*.wav
 影片/**/*.webm
+
+# Greek reader keeper pass logs (regenerated every run)
+output/source-cache/original-readers/greek-full/*.log
+
+# OpenMoji artwork for the flashcard decks: a 44 MB third-party asset that
+# scripts/match_flashcard_images.py re-downloads on demand.
+output/source-cache/flashcards/openmoji-618/
+output/source-cache/flashcards/openmoji.json
