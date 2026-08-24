@@ -1,0 +1,8134 @@
+{
+ "-que": {
+  "zh": "和、以及",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ā": {
+  "zh": "從、離開；由",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "aqua": {
+  "zh": "水",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "cēna": {
+  "zh": "晚餐、宴席",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "cōram": {
+  "zh": "在……面前",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "culpa": {
+  "zh": "過錯、責任",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "cum": {
+  "zh": "與、同",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "dē": {
+  "zh": "從、關於",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "doctrīna": {
+  "zh": "教導、教義",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ē": {
+  "zh": "從、出",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ecclēsia": {
+  "zh": "教會、會眾",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "et": {
+  "zh": "和、也",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "familia": {
+  "zh": "家庭、家屬",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "flectō": {
+  "zh": "彎曲、屈膝",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "glōria": {
+  "zh": "光榮、榮耀",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "grātia": {
+  "zh": "恩寵、感謝",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "hōra": {
+  "zh": "時辰、時間",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "in": {
+  "zh": "進入、在內；由",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "liber": {
+  "zh": "書、卷",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "missa": {
+  "zh": "彌撒、聖祭",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "nātūra": {
+  "zh": "性質、自然",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "pāpa": {
+  "zh": "教皇",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "prō": {
+  "zh": "為了、代表；代替",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "satis": {
+  "zh": "足夠",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "sine": {
+  "zh": "沒有、缺乏",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "super": {
+  "zh": "在上、關於；超過",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "terra": {
+  "zh": "地、土地",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "vīta": {
+  "zh": "生命",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ager": {
+  "zh": "田地、鄉村",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "agnus": {
+  "zh": "羊羔",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ancilla": {
+  "zh": "婢女、女僕",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "angelus": {
+  "zh": "天使、使者",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "apostolus": {
+  "zh": "使徒",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "archangelus": {
+  "zh": "大天使",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Chrīstus": {
+  "zh": "基督",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Deus": {
+  "zh": "上帝",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "discipulus": {
+  "zh": "門徒、學生",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "dominus": {
+  "zh": "主宰、主人",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "episcopus": {
+  "zh": "主教、監督",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "filius": {
+  "zh": "子、兒子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hodiē": {
+  "zh": "今日、今天",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jūstitia": {
+  "zh": "正義、公義",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "minister": {
+  "zh": "侍者、僕人、部長",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nam": {
+  "zh": "因為、蓋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nōn": {
+  "zh": "不、非",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "populus": {
+  "zh": "人民、民眾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potentia": {
+  "zh": "力量、權勢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "psalmus": {
+  "zh": "聖詠、詩篇",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "puer": {
+  "zh": "孩童、男孩、僮僕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "servus": {
+  "zh": "奴隸、奴僕；僕人、侍從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sum": {
+  "zh": "是、存在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "trāns": {
+  "zh": "越、橫過",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "caelum": {
+  "zh": "天、天堂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "canticum": {
+  "zh": "聖歌、讚美詩",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "chorus": {
+  "zh": "聖詠團、唱詩班",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dōnum": {
+  "zh": "禮物、恩賜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Evangelium": {
+  "zh": "福音、喜訊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "festum": {
+  "zh": "慶節、盛宴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gaudium": {
+  "zh": "喜樂、歡欣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hymnus": {
+  "zh": "聖歌、讚美詩",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ibi": {
+  "zh": "在那裡、其時",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "in saecula (saeculōrum)": {
+  "zh": "永遠、世世無窮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mystērium": {
+  "zh": "奧祕、神聖奧祕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ōdium": {
+  "zh": "憎恨、仇恨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "peccātum": {
+  "zh": "罪、過犯",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "peccō": {
+  "zh": "犯罪、違過",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeceptum": {
+  "zh": "誡命、教訓",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praemium": {
+  "zh": "賞賜、獎勵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rēgnum": {
+  "zh": "王國、天國",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sabbatum": {
+  "zh": "安息日、聖安息日",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacrificium": {
+  "zh": "祭獻、聖祭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "saeculum": {
+  "zh": "世代、世界",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "testāmentum": {
+  "zh": "盟約、聖約",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūniversum": {
+  "zh": "宇宙、萬物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verbum": {
+  "zh": "言語、諺語、欺騙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vīnum": {
+  "zh": "葡萄酒、酒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vir": {
+  "zh": "人、男人、丈夫、英雄",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vitium": {
+  "zh": "過失、缺點、惡行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aeternus": {
+  "zh": "永恆的、永遠的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "antīquus": {
+  "zh": "古老的、古代的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aurum": {
+  "zh": "黃金、金",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "beātus": {
+  "zh": "蒙福的、幸福的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "bonus": {
+  "zh": "善的、好的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cēnāculum": {
+  "zh": "餐室、樓上房間",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clārus": {
+  "zh": "明亮的、光明的；著名的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gladius": {
+  "zh": "劍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impius": {
+  "zh": "不虔誠的、邪惡的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "in aeternum": {
+  "zh": "永遠地、至永遠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magister": {
+  "zh": "教師、師傅、拉比",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magnus": {
+  "zh": "大的、偉大的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "malus": {
+  "zh": "惡的、邪惡的、壞的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "meus": {
+  "zh": "我的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "modus": {
+  "zh": "方式、樣式、方法",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mortuus": {
+  "zh": "死的、已死亡的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "multus": {
+  "zh": "多的、許多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mundus": {
+  "zh": "世界、宇宙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "noster": {
+  "zh": "我們的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "novus": {
+  "zh": "新的、近來的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "numerus": {
+  "zh": "數、數目、眾多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pius": {
+  "zh": "虔敬的、仁慈的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacer": {
+  "zh": "聖的、神聖的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacrāmentum": {
+  "zh": "聖事、聖禮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tuus": {
+  "zh": "你的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vērus": {
+  "zh": "真實的、真的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vivus": {
+  "zh": "活的、生活的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adōrō": {
+  "zh": "崇拜、朝拜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ambulō": {
+  "zh": "行走、生活",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "benedictus": {
+  "zh": "蒙福的、被祝聖的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cantō": {
+  "zh": "唱、詠唱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "collaudō": {
+  "zh": "極力讚美、共同讚美",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsecrō": {
+  "zh": "祝聖、奉獻為聖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conservō": {
+  "zh": "保持、保存",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīvīnus": {
+  "zh": "神聖的、天主的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dō": {
+  "zh": "給、賜予",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "documentum": {
+  "zh": "例證、文件",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dōnō": {
+  "zh": "給予、赦免",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "enim": {
+  "zh": "因為、誠然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēvocō": {
+  "zh": "喚起、召出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exemplum": {
+  "zh": "例子、範例",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exōrō": {
+  "zh": "懇求、哀求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "famulus": {
+  "zh": "僕人、侍者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "invocō": {
+  "zh": "祈求、呼求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jūstus": {
+  "zh": "正義的、公正的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "laudō": {
+  "zh": "讚美、稱讚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "liberō": {
+  "zh": "解放、釋放",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "meritō": {
+  "zh": "當之無愧地、應得地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necnōn": {
+  "zh": "並且、亦復",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "numquam": {
+  "zh": "從不、決不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nunc": {
+  "zh": "現在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "observō": {
+  "zh": "觀察、遵守",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "operō": {
+  "zh": "工作、效勞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ōrō": {
+  "zh": "祈禱、懇求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prīncipium": {
+  "zh": "開始、起源",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quoque": {
+  "zh": "也、亦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rēgnō": {
+  "zh": "統治、君臨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacrō": {
+  "zh": "祝聖、使神聖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sānctus": {
+  "zh": "聖的、神聖的；聖人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "semper": {
+  "zh": "常、總是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "servō": {
+  "zh": "保守、保護、遵守",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "stella": {
+  "zh": "星、恆星",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "via": {
+  "zh": "路、道路、街道",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vocō": {
+  "zh": "呼喚、邀請",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "-ne": {
+  "zh": "用於疑問句末尾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accipiō": {
+  "zh": "取、領受、接納",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adhūc": {
+  "zh": "迄今、至今、仍然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adveniō": {
+  "zh": "來臨、到達",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "afficiō": {
+  "zh": "影響、施加、使具有",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "agō": {
+  "zh": "行為、行動、進行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "audiō": {
+  "zh": "聽、聆聽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aut": {
+  "zh": "或、抑或",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aut . . aut": {
+  "zh": "或……或、要麼……要麼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "bibō": {
+  "zh": "飲、飲用",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "capiō": {
+  "zh": "取、得著、領悟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Chrīstiānus": {
+  "zh": "基督徒的、基督教的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conjūngo": {
+  "zh": "連結、結合、統一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conveniō": {
+  "zh": "聚集、相聚；適合、相稱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "crēdō": {
+  "zh": "相信、信任",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēficiō": {
+  "zh": "衰退、虛弱、消失",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "deleō": {
+  "zh": "摧毀、抹除、消滅",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "domus": {
+  "zh": "家、家宅、住所",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dūcō": {
+  "zh": "引導、率領、指揮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēdūcō": {
+  "zh": "引出、培養、教育",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "efficiō": {
+  "zh": "製成、實現、造成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēlēctus": {
+  "zh": "蒙選的、被揀選的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exaudiō": {
+  "zh": "俯聽、垂聽、應允",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "faciō": {
+  "zh": "做、製作、創造",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fugō": {
+  "zh": "驅逐、趕走、放逐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "grātiās agere": {
+  "zh": "感謝、道謝",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "habeō": {
+  "zh": "有、持有；認為、視為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indūcō": {
+  "zh": "引入、導入、納入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inveniō": {
+  "zh": "發現、尋得、找到",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jungo": {
+  "zh": "連結、合併；扣合、相握；聯繫、軛駕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "misceo": {
+  "zh": "混合、攙混、融合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "moneō": {
+  "zh": "告誡、勸告；教導",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nātus": {
+  "zh": "兒子、孩子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perdūcō": {
+  "zh": "引導至、導致",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quāré": {
+  "zh": "何故、為何",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "recipiō": {
+  "zh": "收回、接納",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reddō": {
+  "zh": "歸還、呈現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēdūcō": {
+  "zh": "誘惑、欺騙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "templum": {
+  "zh": "聖殿、教堂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "trādō": {
+  "zh": "交付、背棄",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "veniō": {
+  "zh": "來、到達",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "affirmō": {
+  "zh": "申明、主張",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "anima": {
+  "zh": "靈魂、生命",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "bene": {
+  "zh": "好地、善",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "benedīcō": {
+  "zh": "祝福、頌讚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cārus": {
+  "zh": "親愛的、珍貴的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "celebrō": {
+  "zh": "慶祝、舉行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concelebrō": {
+  "zh": "共同慶祝、同祭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfirmō": {
+  "zh": "堅固、確認",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diaconus": {
+  "zh": "執事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dicō": {
+  "zh": "說、告訴；被稱為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dignus": {
+  "zh": "值得、配得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "firmō": {
+  "zh": "堅固、使穩固",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "firmus": {
+  "zh": "堅定、穩固",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "in prīmīs": {
+  "zh": "首先、第一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indīgnus": {
+  "zh": "不配、不值得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infirmus": {
+  "zh": "虛弱、病弱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "laetitia": {
+  "zh": "喜樂、歡樂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "liturgia": {
+  "zh": "禮儀、神聖祭儀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "maestus": {
+  "zh": "憂傷、悲哀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "male": {
+  "zh": "惡劣地、不善地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "male habeō": {
+  "zh": "患病、病患",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "maledīcō": {
+  "zh": "咒罵、說壞話",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "misericordia": {
+  "zh": "憐憫、仁慈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plēnus": {
+  "zh": "充滿、滿盈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prīmus": {
+  "zh": "第一、最先",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "propter": {
+  "zh": "因為、由於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "respōnsum": {
+  "zh": "答覆、回應",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sānō": {
+  "zh": "治癒、使康健",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "turba": {
+  "zh": "人群、群眾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūnā": {
+  "zh": "一同、共同",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūniversus": {
+  "zh": "全部的、整體的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūnus": {
+  "zh": "一、單一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "victōria": {
+  "zh": "勝利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vōtum": {
+  "zh": "誓願、祈禱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "-pleō": {
+  "zh": "充滿、完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adimpleō": {
+  "zh": "成全、履行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "angelicus": {
+  "zh": "天使的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "compleō": {
+  "zh": "成全、完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contrītus": {
+  "zh": "悔悟的、懺悔的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corrigō": {
+  "zh": "改正、糾正",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cūnctus": {
+  "zh": "全部的、所有的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēsiderō": {
+  "zh": "渴望、期望",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ērigō": {
+  "zh": "豎立、高舉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "etiam": {
+  "zh": "也、甚至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "glōriōsus": {
+  "zh": "光榮的、榮耀的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "grātus": {
+  "zh": "令人悅納的、可喜的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impleō": {
+  "zh": "充滿、成全",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incēnsum": {
+  "zh": "香、香料",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "iterum": {
+  "zh": "再、又",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jam": {
+  "zh": "已經、現在；況且；[不復……；久已……]",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "meritum": {
+  "zh": "功績、善行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mīrus": {
+  "zh": "奇妙的、驚異的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "per": {
+  "zh": "經由、通過",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "post": {
+  "zh": "在……之後、於……後方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quandō": {
+  "zh": "何時；當……時",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quia": {
+  "zh": "因為、那是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quod": {
+  "zh": "因為、那是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quoniam": {
+  "zh": "因為、那是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "regō": {
+  "zh": "統治、引導、管理",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "repleō": {
+  "zh": "充滿、完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacrosānctus": {
+  "zh": "至聖的、莊嚴的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salūtifer": {
+  "zh": "救恩的、拯救的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sed": {
+  "zh": "但是、然而",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "silentium": {
+  "zh": "寂靜、沉默",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supernus": {
+  "zh": "天上的、天堂的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "terrenus": {
+  "zh": "塵世的、地上的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tunc": {
+  "zh": "那時、當時",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "altus": {
+  "zh": "高、深",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "apostolicus": {
+  "zh": "宗徒的、使徒的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "autem": {
+  "zh": "但是、然而；並且",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "catholicus": {
+  "zh": "普遍的、公教的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "causa": {
+  "zh": "原因、理由、目的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "causā": {
+  "zh": "為了……的緣故",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cēreus": {
+  "zh": "蠟燭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "certē": {
+  "zh": "確實、必然；至少",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "deinde": {
+  "zh": "然後、其次、隨後",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīligenter": {
+  "zh": "勤勉地、謹慎地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "formō": {
+  "zh": "訓練、指引；塑造、形成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inter": {
+  "zh": "在……之間、在……之中",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intro": {
+  "zh": "進入、進去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mandātum": {
+  "zh": "教會語域：誡命、吩咐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perhibeō": {
+  "zh": "呈現、提供、施予",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "saepe": {
+  "zh": "經常、時常",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "satiō": {
+  "zh": "養育、飽足、滿足",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sciō": {
+  "zh": "知道、認識",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēparō": {
+  "zh": "分離、區分、隔開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "socius": {
+  "zh": "同伴、盟友",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "statim": {
+  "zh": "立即、當下",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sub": {
+  "zh": "在……下面；至……下方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tēctum": {
+  "zh": "屋頂、房舍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "testimōnium": {
+  "zh": "見證、證言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verē": {
+  "zh": "真實地、確實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vester": {
+  "zh": "你們的、貴方的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vestīgium": {
+  "zh": "足跡、蹤跡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "videō": {
+  "zh": "看、視；明白",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "absolvō": {
+  "zh": "赦免、解除；完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "allēlūjā": {
+  "zh": "阿肋路亞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "annus": {
+  "zh": "年",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ante": {
+  "zh": "在……之前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clērus": {
+  "zh": "聖職者、教士",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "debitum": {
+  "zh": "債務、義務",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dētrīmentum": {
+  "zh": "損失、損傷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ecce": {
+  "zh": "看、請看",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eléison": {
+  "zh": "求垂憐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "excelsus": {
+  "zh": "崇高的、至尊的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "extollō": {
+  "zh": "舉揚、讚頌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fīniō": {
+  "zh": "結束、完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hōsānnā": {
+  "zh": "和散那（讚美之聲）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "imperium": {
+  "zh": "統治權、帝國、命令",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Kyrie": {
+  "zh": "主啊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ministerium": {
+  "zh": "侍奉、服事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perenniter": {
+  "zh": "恆久地、常年地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perpetuus": {
+  "zh": "永恆的、永久的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "posteā": {
+  "zh": "其後、後來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "secundum": {
+  "zh": "依照、按照",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "secundus": {
+  "zh": "次的、第二的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solvō": {
+  "zh": "解放、解除、償還",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spatium": {
+  "zh": "空間、距離",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subitō": {
+  "zh": "突然、倏然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tollō": {
+  "zh": "移除、舉起、拿起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūnigenitus": {
+  "zh": "獨生的、唯一的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vinculum": {
+  "zh": "束縛、鎖鏈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vulnerō": {
+  "zh": "傷害、創傷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "-clīnō": {
+  "zh": "彎曲、傾斜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aggregō": {
+  "zh": "加入、聯合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aperiō": {
+  "zh": "打開、闡釋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "apud": {
+  "zh": "在……處、在……之中；靠近",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aula": {
+  "zh": "禮堂、殿堂；教堂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cibus": {
+  "zh": "食物、糧食",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "columna": {
+  "zh": "柱子、圓柱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conglōrificō": {
+  "zh": "極其光榮、極為讚美",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "congregō": {
+  "zh": "聚集、集合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "creātūra": {
+  "zh": "受造物、被造者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dolōrōsus": {
+  "zh": "哀傷的、痛苦的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exsultō": {
+  "zh": "歡欣、喜躍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "flamma": {
+  "zh": "火焰、烈火",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "glōrificō": {
+  "zh": "讚美、光榮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gregō": {
+  "zh": "聚集、會合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hinc": {
+  "zh": "由此、從此處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hostia": {
+  "zh": "祭獻、聖體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inclīnō": {
+  "zh": "躬身、屈服、傾斜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "innocentia": {
+  "zh": "純潔、無辜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "laetus": {
+  "zh": "歡樂的、喜悅的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ob": {
+  "zh": "因為、由於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parō": {
+  "zh": "備辦、預備、提供",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parvulus": {
+  "zh": "幼小的、細微的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parvus": {
+  "zh": "小的、微小的、廉價的；不重要的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Pascha": {
+  "zh": "逾越節、復活節",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeparō": {
+  "zh": "預備、準備",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prophēta": {
+  "zh": "先知",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reclīnō": {
+  "zh": "靠後、斜倚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "resultō": {
+  "zh": "回響、反彈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sanctificō": {
+  "zh": "聖化、使成聖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scriptūra": {
+  "zh": "聖經、經文",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēgregō": {
+  "zh": "分離、隔開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tertius": {
+  "zh": "第三",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "acclāmō": {
+  "zh": "歡呼、呼喊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "āmēn": {
+  "zh": "阿們、實在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "atque": {
+  "zh": "與、並且、並且甚至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "certus": {
+  "zh": "確定、確實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clāmō": {
+  "zh": "呼喊、大聲喊叫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "collēcta": {
+  "zh": "集禱文、集合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concipiō": {
+  "zh": "懷孕、構思",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "debeō": {
+  "zh": "欠、應該",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēsinō": {
+  "zh": "停止、終止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dimittō": {
+  "zh": "遣送、赦免",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "excipiō": {
+  "zh": "接待、迎接",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exclāmō": {
+  "zh": "大聲喊叫、呼喊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gubernō": {
+  "zh": "統治、管理",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "igitur": {
+  "zh": "因此、那麼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incipiō": {
+  "zh": "開始",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insurgō": {
+  "zh": "起身、起義",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "maximus": {
+  "zh": "最大的、很大的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mēnsa": {
+  "zh": "餐桌、宴饗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mittō": {
+  "zh": "派遣、投擲、放置",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nimis": {
+  "zh": "過度、太",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "optimus": {
+  "zh": "最好的、很好的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "permittō": {
+  "zh": "允許、容許",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "possum": {
+  "zh": "能、可以",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postquam": {
+  "zh": "在……之後、自從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quidam": {
+  "zh": "某個、某物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "relinquō": {
+  "zh": "留下、拋棄",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "resurgō": {
+  "zh": "重新起身、復興",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "submittō": {
+  "zh": "降低、收買",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "surgō": {
+  "zh": "起身、上升",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tamen": {
+  "zh": "然而、但是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūtilitās": {
+  "zh": "利益、效用、好處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "valeō": {
+  "zh": "安康、強壯；能夠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "videor": {
+  "zh": "被看見；似乎、顯得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vivō": {
+  "zh": "活著、生活",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "-dō": {
+  "zh": "放、置",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "addō": {
+  "zh": "給予、增加",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aspiciō": {
+  "zh": "看、注視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "astō": {
+  "zh": "站在……旁、站立",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "baptista": {
+  "zh": "施洗者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "brāchium": {
+  "zh": "臂膀、手臂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cēnō": {
+  "zh": "進晚餐、用晚餐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "circumstō": {
+  "zh": "站在……周圍、圍繞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "condō": {
+  "zh": "創建、建立；隱藏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "creō": {
+  "zh": "創造、製造",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēsertum": {
+  "zh": "沙漠、荒野",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "despiciō": {
+  "zh": "輕視、蔑視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dextera": {
+  "zh": "右手",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "digitus": {
+  "zh": "手指、腳趾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dōnec": {
+  "zh": "當……時間、只要；直到、迄至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dum": {
+  "zh": "當……時；只要、趁著；直到、迨至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "etsī": {
+  "zh": "雖然、即使",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "immūtō": {
+  "zh": "改變、變更、轉變",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incarno": {
+  "zh": "成肉身、使具肉身",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "instō": {
+  "zh": "督促、威脅、迫在眼前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mūtō": {
+  "zh": "改變、交換、轉移",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nisi": {
+  "zh": "除非、若非；除了、但",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oculus": {
+  "zh": "眼睛、眼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pariō": {
+  "zh": "生產、產生、生育",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pellō": {
+  "zh": "驅逐、趕出、逐離",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perdō": {
+  "zh": "喪失、毀滅、破壞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praestō": {
+  "zh": "施與、完成、提供",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prīmum": {
+  "zh": "首先、起初",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "respiciō": {
+  "zh": "看待、注視、顧慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "restō": {
+  "zh": "殘留、留下、尚存",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sī": {
+  "zh": "若、如果；是否",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "speciō": {
+  "zh": "注視、察看",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "stō": {
+  "zh": "站立、停留",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subdō": {
+  "zh": "置於下、使屈服、服從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tuba": {
+  "zh": "號筒、喇叭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ubī": {
+  "zh": "何處、何時、在……地方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ubique": {
+  "zh": "到處、處處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ut": {
+  "zh": "為使、以至於、使得；當……時、為了",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "baptisma": {
+  "zh": "洗禮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "colligo": {
+  "zh": "聚集、收集、採集",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corpus": {
+  "zh": "身體、屍體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēprecātiō": {
+  "zh": "懇求、祈禱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēscrībō": {
+  "zh": "描述、記載、登記",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dētergeō": {
+  "zh": "擦去、抹除、消除",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diligo": {
+  "zh": "愛、珍視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eligō": {
+  "zh": "選擇、選舉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ergō": {
+  "zh": "因此、所以",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genus": {
+  "zh": "類、種族、民族",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "homō": {
+  "zh": "人、人類",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ideō": {
+  "zh": "因此、為此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infero": {
+  "zh": "依附、緊貼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "juxta": {
+  "zh": "靠近、緊鄰、相當於；如同",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "legō": {
+  "zh": "選擇、讀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lūmen": {
+  "zh": "光",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "māter": {
+  "zh": "母親",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mūnus": {
+  "zh": "禮物、祭品；任務、職責",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nōmen": {
+  "zh": "名字",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ōrātiō": {
+  "zh": "祈禱、演說",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pater": {
+  "zh": "父親",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pāx": {
+  "zh": "和平、安寧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prīnceps": {
+  "zh": "首領、君主",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rēx": {
+  "zh": "國王",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ruber": {
+  "zh": "紅色的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacerdōs": {
+  "zh": "祭司",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scrībō": {
+  "zh": "書寫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "siccus": {
+  "zh": "乾燥的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suscipiō": {
+  "zh": "拿起、接受",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "virgō": {
+  "zh": "處女",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aptus": {
+  "zh": "恰當的、適合的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cālīgō": {
+  "zh": "霧靄、昏暗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cantor": {
+  "zh": "歌者、聖詠班領唱者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cor": {
+  "zh": "心臟、心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cruor": {
+  "zh": "血液、創傷之血",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hūmānus": {
+  "zh": "人的、人類的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inīquitas": {
+  "zh": "邪惡、不義",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insonō": {
+  "zh": "迴響、鳴徹",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "largitās": {
+  "zh": "豐厚、慷慨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lectiō": {
+  "zh": "誦讀、經課",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lector": {
+  "zh": "誦讀者、讀經員",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mandō": {
+  "zh": "咀嚼、進食",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mare": {
+  "zh": "海、大海",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mēns": {
+  "zh": "心智、意念",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mors": {
+  "zh": "死亡、死",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pānis": {
+  "zh": "麵包、聖體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pars": {
+  "zh": "部分、某些",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "persōnō": {
+  "zh": "宣告、迴響",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postis": {
+  "zh": "門柱、門框",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prae": {
+  "zh": "在……前；優於、因為、由於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeter": {
+  "zh": "除……外；超越、過去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proximus": {
+  "zh": "最近的、鄰近的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "resurrectiō": {
+  "zh": "復活、再起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salūs": {
+  "zh": "拯救、安全、健康",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salvus": {
+  "zh": "得救的、安全的、完好的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sanguis": {
+  "zh": "血、血液",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sonō": {
+  "zh": "發聲、鳴響",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ācer": {
+  "zh": "尖銳的、猛烈的、激烈的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ascendō": {
+  "zh": "上升、攀登",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "calix": {
+  "zh": "杯子、聖爵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cāritās": {
+  "zh": "愛德、仁愛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfringō": {
+  "zh": "打碎、折斷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfundō": {
+  "zh": "混淆、使困惑、羞辱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cornū": {
+  "zh": "角、山峰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "crucifīgō": {
+  "zh": "釘十字架、釘死",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "crux": {
+  "zh": "十字架",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēscendō": {
+  "zh": "下降、下來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dissimilis": {
+  "zh": "不相似的、異於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "effundō": {
+  "zh": "傾倒、流出、灑出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fēlix": {
+  "zh": "幸福的、蒙福的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fīgō": {
+  "zh": "刺穿、固定、釘牢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "frangō": {
+  "zh": "破裂、摧毀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genū": {
+  "zh": "膝蓋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genuflectō": {
+  "zh": "跪下、屈膝",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infundō": {
+  "zh": "倒入、注入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intrā": {
+  "zh": "在……裡面、在……中間",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "manus": {
+  "zh": "手",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "memor": {
+  "zh": "銘記、懷念",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "omnipotēns": {
+  "zh": "全能的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "omnis": {
+  "zh": "一切、所有",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paschālis": {
+  "zh": "逾越節的、復活節的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "passiō": {
+  "zh": "主受難、苦難",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pōtus": {
+  "zh": "飲料",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quāpropter": {
+  "zh": "因此、所以",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "refundō": {
+  "zh": "回倒、退還、償還",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ritus": {
+  "zh": "禮儀、儀式",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salūtāris": {
+  "zh": "救恩的、拯救的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scandō": {
+  "zh": "攀登、上升",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "similis": {
+  "zh": "相似的、如同",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spiritus": {
+  "zh": "聖神、精神、氣息",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suāvitās": {
+  "zh": "甘美、芬芳",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vultus": {
+  "zh": "面容、臉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "abeō": {
+  "zh": "離去、遠離",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "acceptābilis": {
+  "zh": "可接納的、蒙悅納的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adeō": {
+  "zh": "前往、接近",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "admittō": {
+  "zh": "准許、允許；接納",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adsum": {
+  "zh": "在場、臨在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adventus": {
+  "zh": "降臨、來臨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amittō": {
+  "zh": "失去、喪失",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "annūntiō": {
+  "zh": "宣告、報告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "circumeō": {
+  "zh": "繞行、巡行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clēmēns": {
+  "zh": "仁慈的、溫和的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dilectio": {
+  "zh": "愛、摯愛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēmittō": {
+  "zh": "發出、派遣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "emō": {
+  "zh": "購買、買",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eō": {
+  "zh": "行、往",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "episcopālis": {
+  "zh": "主教的、聖階的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exeō": {
+  "zh": "出去、離開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fructus": {
+  "zh": "果實、果子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ineō": {
+  "zh": "進入、開始",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intereō": {
+  "zh": "喪亡、死亡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "introeō": {
+  "zh": "進入、入內",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "invīsibilis": {
+  "zh": "無形的、看不見的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "laus": {
+  "zh": "讚美、歌頌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "locus": {
+  "zh": "地方、處所",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nūntiō": {
+  "zh": "宣告、報告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pereō": {
+  "zh": "滅亡、喪失",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pertrānseō": {
+  "zh": "穿過、貫穿",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pietās": {
+  "zh": "虔誠、孝心、憐憫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "placo": {
+  "zh": "撫慰、和解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeeō": {
+  "zh": "走在前、引領",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōdeō": {
+  "zh": "走出、進前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōsum": {
+  "zh": "有益、利於、幫助",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pūrgō": {
+  "zh": "淨化、潔淨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "redeō": {
+  "zh": "回來、歸返",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "remissiō": {
+  "zh": "赦免、寬恕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "remittō": {
+  "zh": "遣回、寬赦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salvātor": {
+  "zh": "救主、救者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subeō": {
+  "zh": "承受、屈服、攀登",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supplex": {
+  "zh": "懇求者、祈求者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tellus": {
+  "zh": "大地、土地、地球",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "trānseō": {
+  "zh": "越過、穿過；消逝",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "usque": {
+  "zh": "直到、一直",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūsque": {
+  "zh": "直到、一直",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vetus": {
+  "zh": "古老的、往昔的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vīsibilis": {
+  "zh": "可見的、有形的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vivificō": {
+  "zh": "使生活、賦予生命",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "volō": {
+  "zh": "願意、欲求、有意",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "altāre": {
+  "zh": "祭壇",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ars": {
+  "zh": "技藝、學問、技能",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ascēnsiō": {
+  "zh": "上升、升天",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "baptizō": {
+  "zh": "浸禮、施洗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "benignus": {
+  "zh": "仁慈的、善良的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cēdō": {
+  "zh": "行去、退讓、屈服",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "circum": {
+  "zh": "在……周圍、環繞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "claudō": {
+  "zh": "關閉、閉合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clēmentia": {
+  "zh": "寬恕、仁慈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concēdō": {
+  "zh": "退讓、准許、賜予",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pāstor": {
+  "zh": "牧人、牧者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perficiō": {
+  "zh": "完成、成就、做好",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pervenio": {
+  "zh": "到達、抵達、來臨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praecēdō": {
+  "zh": "在前、領先、先行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōcēdō": {
+  "zh": "前進、進行、出發",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "recēdō": {
+  "zh": "退回、離開、後退",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sapientia": {
+  "zh": "智慧、聰慧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subveniō": {
+  "zh": "援助、幫助、救濟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sufficiō": {
+  "zh": "足夠、充分、能勝任",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supervenio": {
+  "zh": "突至、臨到、驚至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tenebrāe": {
+  "zh": "黑暗、幽暗、陰影",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "alō": {
+  "zh": "養育、撫養、滋養",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "appāreō": {
+  "zh": "顯現、出現、呈現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "auris": {
+  "zh": "耳朵、聽覺",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cadō": {
+  "zh": "跌落、下落、陷落",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "caput": {
+  "zh": "頭顱、首級、頭部",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "carō": {
+  "zh": "肉體、血肉、肌肉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cūrō": {
+  "zh": "醫治、治療、照顧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diēs": {
+  "zh": "白晝、日子、天數",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīlēctus": {
+  "zh": "心愛的、蒙愛的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "doceō": {
+  "zh": "教導、傳授",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dulcis": {
+  "zh": "甘美的、溫和的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ego": {
+  "zh": "我",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fidēlis": {
+  "zh": "忠信的、有信德的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fidēs": {
+  "zh": "信德、忠信",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "frāter": {
+  "zh": "兄弟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incidō": {
+  "zh": "陷入、發生",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "latus": {
+  "zh": "側面、肋旁",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mulier": {
+  "zh": "婦女、妻子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ōs": {
+  "zh": "口、嘴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pēs": {
+  "zh": "足、腳",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prex": {
+  "zh": "祈禱、哀求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rēs": {
+  "zh": "事物、物質",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spēs": {
+  "zh": "望德、希望",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supersubstantiālis": {
+  "zh": "超越本質的、生活必需的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tū": {
+  "zh": "你",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "arbor": {
+  "zh": "樹",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "audeō": {
+  "zh": "敢、勇於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "benedictiō": {
+  "zh": "祝福、降福",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfīdō": {
+  "zh": "信賴、寄望",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsubstantiālis": {
+  "zh": "同一本質的、共體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēprecor": {
+  "zh": "懇求、哀求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēsidērium": {
+  "zh": "渴望、思念",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gaudeō": {
+  "zh": "喜樂、欣悅",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ignis": {
+  "zh": "火、火焰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "innocens": {
+  "zh": "清白的、無辜的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lacrima": {
+  "zh": "淚、淚水",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "memoria": {
+  "zh": "記憶、追思",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mīror": {
+  "zh": "驚異、讚歎",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "miser": {
+  "zh": "悲慘的、可憐的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "misereor": {
+  "zh": "憐憫、垂憐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "morior": {
+  "zh": "死去、逝世",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nāscor": {
+  "zh": "生出、出生",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nihil": {
+  "zh": "無、毫無",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nox": {
+  "zh": "夜、黑暗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opus": {
+  "zh": "工作、功業",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "orior": {
+  "zh": "升起、發生",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paternus": {
+  "zh": "父親的、父系的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patior": {
+  "zh": "忍受、允許",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "peccātor": {
+  "zh": "罪人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potēns": {
+  "zh": "有力的、掌權的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potestās": {
+  "zh": "權力、權威",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "precor": {
+  "zh": "祈禱、懇求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scelus": {
+  "zh": "罪行、惡行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "utique": {
+  "zh": "當然、無論如何",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "valdē": {
+  "zh": "極其、非常",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verō": {
+  "zh": "實在、但實在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "affectus": {
+  "zh": "虔誠、感情；感受",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aggredior": {
+  "zh": "接近、前往",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "agnōscō": {
+  "zh": "認識、承認",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amplector": {
+  "zh": "擁抱、懷抱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "assiduus": {
+  "zh": "不斷的、恆常的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "caelicola": {
+  "zh": "天人、天居者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cognōscō": {
+  "zh": "認識、知道",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "collaetor": {
+  "zh": "同樂、共享歡樂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnor": {
+  "zh": "嘗試、努力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsolō": {
+  "zh": "安慰、慰勉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnspectus": {
+  "zh": "視野、眼前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corōna": {
+  "zh": "花冠、王冠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēgredior": {
+  "zh": "出去、離開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exspectō": {
+  "zh": "等待、期待",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fletus": {
+  "zh": "哭泣、眼淚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fungor": {
+  "zh": "執行、履行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gradior": {
+  "zh": "行走、步行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ingredior": {
+  "zh": "進入、踏入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lacrimor": {
+  "zh": "流淚、哭泣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "laetor": {
+  "zh": "歡喜、欣樂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "miseror": {
+  "zh": "哀憐、同情",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "neque": {
+  "zh": "既不……亦不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nōscō": {
+  "zh": "認識、了解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ovis": {
+  "zh": "羊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praenōscō": {
+  "zh": "預知、先知",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quattuor": {
+  "zh": "四",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "regredior": {
+  "zh": "返回、退回",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēmita": {
+  "zh": "小徑、路徑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "senex": {
+  "zh": "年老；老人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sepeliō": {
+  "zh": "埋葬、安葬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "septem": {
+  "zh": "七",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solor": {
+  "zh": "安慰、寬解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "substantia": {
+  "zh": "本質、實體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tangō": {
+  "zh": "觸及、接觸",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vestiō": {
+  "zh": "衣著、穿衣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "antistes": {
+  "zh": "主教",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "assequor": {
+  "zh": "追隨、達成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cantus": {
+  "zh": "聖詠、聖樂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cīvitās": {
+  "zh": "城市、邦國",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clāritās": {
+  "zh": "光輝、榮耀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commūnis": {
+  "zh": "公共的、普遍的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfiteor": {
+  "zh": "認罪、告明、讚頌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsequor": {
+  "zh": "追隨、獲得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cūra": {
+  "zh": "關切、照料",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēdignor": {
+  "zh": "輕蔑、不屑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dignor": {
+  "zh": "認為適宜、屈尊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dijūdicō": {
+  "zh": "分辨、區別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fateor": {
+  "zh": "承認、告明、讚頌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intercessio": {
+  "zh": "代禱、轉求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interrogō": {
+  "zh": "詢問、提問",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "introitus": {
+  "zh": "進入、聖祭開始式",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jubeō": {
+  "zh": "命令、吩咐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jūdicō": {
+  "zh": "判斷、裁決",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "loquor": {
+  "zh": "說話、講述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "major": {
+  "zh": "較大的、較年長的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "memoror": {
+  "zh": "記得、銘記",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "persequor": {
+  "zh": "追趕、迫害",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "petō": {
+  "zh": "請求、懇求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plānctus": {
+  "zh": "哀慟、悲哭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postulō": {
+  "zh": "請求、祈求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praedicō": {
+  "zh": "宣講、宣揚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "profiteor": {
+  "zh": "宣認、明認",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōsequor": {
+  "zh": "進行、貫徹",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "respondēō": {
+  "zh": "回答、應答",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rogō": {
+  "zh": "請求、祈禱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sequor": {
+  "zh": "跟隨、追隨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "serenus": {
+  "zh": "明朗的、晴朗的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spīna": {
+  "zh": "棘刺、荊棘",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūtor": {
+  "zh": "使用、享受",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amō": {
+  "zh": "愛、喜愛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōgitātiō": {
+  "zh": "思想、思考、想法",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commemorātiō": {
+  "zh": "紀念、追憶",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cooperor": {
+  "zh": "協作、共事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēlicia": {
+  "zh": "歡樂、喜悅",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēsertus": {
+  "zh": "被棄的、荒涼的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "factor": {
+  "zh": "製造者、行為者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hic": {
+  "zh": "這、此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ille": {
+  "zh": "那、彼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illūmino": {
+  "zh": "照亮、啟蒙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "is": {
+  "zh": "此、彼；代稱人或物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "iste": {
+  "zh": "這、那（你的）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ita": {
+  "zh": "如此、這樣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "labor": {
+  "zh": "滑落、跌倒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "largior": {
+  "zh": "賜予、慷慨給予",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "operor": {
+  "zh": "工作、執行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ōrdō": {
+  "zh": "等級、秩序",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quālis": {
+  "zh": "何種、什麼樣的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quantus": {
+  "zh": "多少、多大",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēdeō": {
+  "zh": "坐、就座",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēnsus": {
+  "zh": "感覺、知覺、理解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sextus": {
+  "zh": "第六",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sic": {
+  "zh": "如此、這樣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sicut": {
+  "zh": "如、像；正如",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sicut .. et": {
+  "zh": "正如……同樣也",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tālis": {
+  "zh": "這樣的、如此的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tam": {
+  "zh": "那麼、如此地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tantus": {
+  "zh": "如此大、如此多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tueor": {
+  "zh": "守護、保護、維護",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vītis": {
+  "zh": "葡萄樹、葡萄藤",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accendō": {
+  "zh": "點燃、引火",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "caelestis": {
+  "zh": "天上的、神聖的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "canō": {
+  "zh": "唱歌、預言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commixtiō": {
+  "zh": "混合、混雜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concinō": {
+  "zh": "唱歌、和唱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfestim": {
+  "zh": "立即、馬上",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsors": {
+  "zh": "共享者、同伴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "creātor": {
+  "zh": "造物主、創造者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "crīmen": {
+  "zh": "罪、罪過",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēpōnō": {
+  "zh": "放下、卸去、除去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dexter": {
+  "zh": "右、右邊的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illūstro": {
+  "zh": "照亮、啟蒙、闡明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impōnō": {
+  "zh": "置於、加諸",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ipse": {
+  "zh": "自己、親自",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lux": {
+  "zh": "光、光明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "miles": {
+  "zh": "士兵、軍人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mitis": {
+  "zh": "溫和、柔順",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mōns": {
+  "zh": "山、高地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "octō": {
+  "zh": "八",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "octōgintā": {
+  "zh": "八十",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "particeps": {
+  "zh": "參與者、共享者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paucī": {
+  "zh": "少數、幾個",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plango": {
+  "zh": "哀悼、悲嘆",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pōnō": {
+  "zh": "放置、設置",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "portō": {
+  "zh": "運載、攜帶",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praecipiō": {
+  "zh": "命令、教導",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōpōnō": {
+  "zh": "提出、建議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quidem": {
+  "zh": "確實、固然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quinque": {
+  "zh": "五",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "repōnō": {
+  "zh": "放回、埋葬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "simul": {
+  "zh": "同時、一起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necessārius": {
+  "zh": "必要的、緊迫的；所需的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oblātiō": {
+  "zh": "奉獻、供物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patria": {
+  "zh": "祖國、故鄉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pauper": {
+  "zh": "貧窮的、窮困的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perpetuō": {
+  "zh": "持續地、永遠地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "poscō": {
+  "zh": "求、懇求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praedīcō": {
+  "zh": "預言、預告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salvē": {
+  "zh": "敬禮、再見、問候",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sīve": {
+  "zh": "或者、或若",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solēmnis": {
+  "zh": "莊嚴的、隆重的、慣常的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "succurrō": {
+  "zh": "援助、救濟、幫助",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "timeō": {
+  "zh": "害怕、畏懼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ūnitās": {
+  "zh": "合一、統一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "venia": {
+  "zh": "恩寵、寬恕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "acquīsītiō": {
+  "zh": "取得、獲得、收購",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "an": {
+  "zh": "或；豈……乎",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnsuētūdō": {
+  "zh": "習慣、風俗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "debitor": {
+  "zh": "債務人、欠債者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "doctor": {
+  "zh": "教師、博士",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dogma": {
+  "zh": "教義、決定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exspīrō": {
+  "zh": "呼出、死亡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fortis": {
+  "zh": "強壯的、勇敢的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indulgentia": {
+  "zh": "寬恕、赦免、特許",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "iter": {
+  "zh": "旅程、道路",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "labōrō": {
+  "zh": "勞動、工作",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lūcifer": {
+  "zh": "晨星、金星",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "martyr": {
+  "zh": "殉道者、見證人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nesciō": {
+  "zh": "不知、無知",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patrōnus": {
+  "zh": "保護者、辯護人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "peregrīnantis": {
+  "zh": "旅行者、朝聖者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praestōlor": {
+  "zh": "等待、期待",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quid": {
+  "zh": "為什麼、何故",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quis": {
+  "zh": "誰、什麼；某人、某物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quómodo": {
+  "zh": "如何、以何方式",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spirituālis": {
+  "zh": "精神的、靈性的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spirō": {
+  "zh": "呼吸、吐氣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "triumphus": {
+  "zh": "凱旋、勝利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ut quid": {
+  "zh": "為了什麼、何故",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adjuvō": {
+  "zh": "幫助、輔助",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ait": {
+  "zh": "說（他說；他們說）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "circumfulgeō": {
+  "zh": "周圍閃耀、環照",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnstituō": {
+  "zh": "規定、設立、任命",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "faciēs": {
+  "zh": "面容、容貌、外表",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fulgeō": {
+  "zh": "閃耀、發光",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genitus": {
+  "zh": "所生的、被生的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gens": {
+  "zh": "民族、國家；異邦人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ira": {
+  "zh": "憤怒、忿怒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lavō": {
+  "zh": "洗、沐浴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magis": {
+  "zh": "更、更加",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mereō": {
+  "zh": "值得、應得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nōndum": {
+  "zh": "尚未、還未",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "odor": {
+  "zh": "香氣、芬芳",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pascō": {
+  "zh": "飼養、餵食",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pretium": {
+  "zh": "代價、贖價",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quō": {
+  "zh": "往何處；為了",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "redimō": {
+  "zh": "贖回、救贖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "refugeō": {
+  "zh": "照耀、閃爍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "salutāre": {
+  "zh": "救恩、拯救",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "signum": {
+  "zh": "記號、奇蹟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "statuō": {
+  "zh": "建立、任命、決定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suāvis": {
+  "zh": "甘美、芬芳",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "synagōga": {
+  "zh": "會堂、猶太教堂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tantum": {
+  "zh": "僅、只",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tempus": {
+  "zh": "時間、時期",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "unde": {
+  "zh": "從何處、由此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "virtūs": {
+  "zh": "德行、力量、奇蹟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vōx": {
+  "zh": "聲音、聲調",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "alius": {
+  "zh": "他人、另一個",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "alter": {
+  "zh": "另一者、其二",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amplius": {
+  "zh": "更多、更進一步",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amplus": {
+  "zh": "充足、廣大",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ardeō": {
+  "zh": "燃燒、熾熱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "condoleō": {
+  "zh": "同情、共感痛楚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contrā": {
+  "zh": "反對、對著",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "curvō": {
+  "zh": "彎曲、謙卑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "doleō": {
+  "zh": "悲傷、受苦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fundō": {
+  "zh": "建立、創立",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gravis": {
+  "zh": "沉重、嚴肅",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "īnficiō": {
+  "zh": "感染、污染",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "invicem": {
+  "zh": "輪流、互相",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lingua": {
+  "zh": "舌頭、語言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magnificō": {
+  "zh": "讚美、頌揚、光榮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "moveō": {
+  "zh": "移動、感動",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nūllus": {
+  "zh": "無、沒有",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perfectus": {
+  "zh": "完美、完成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praefātiō": {
+  "zh": "序文、前言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōficiō": {
+  "zh": "獲益、成功",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōtēctiō": {
+  "zh": "保護",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quiēs": {
+  "zh": "安寧、休息、寂靜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reficiō": {
+  "zh": "恢復、修復、重整",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sōlum": {
+  "zh": "僅、只",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sōlus": {
+  "zh": "獨自、唯一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sui": {
+  "zh": "自己、其自身",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suus": {
+  "zh": "其、己之",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tentātiō": {
+  "zh": "試探、誘惑、考驗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "testis": {
+  "zh": "證人、見證",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tōtus": {
+  "zh": "全部、整個",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tristis": {
+  "zh": "悲傷、憂鬱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "umbra": {
+  "zh": "影子、陰影",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "venerō": {
+  "zh": "敬拜、崇敬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aliquī": {
+  "zh": "某些、某",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aliquis": {
+  "zh": "某人、某物；任何人、任何物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "assūmō": {
+  "zh": "取起、承擔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cautiō": {
+  "zh": "保狀、保證",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conclūsiō": {
+  "zh": "結論、終結",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corōnō": {
+  "zh": "加冕、戴冠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "crēscō": {
+  "zh": "生長、增加",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cūria": {
+  "zh": "議院、法院",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēmonstrō": {
+  "zh": "指示、揭示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēstruō": {
+  "zh": "毀壞、推毀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "figūra": {
+  "zh": "形像、形態",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gerō": {
+  "zh": "持、經營、進行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hospes": {
+  "zh": "主人、客人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "humilis": {
+  "zh": "卑微、謙遜",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "instruō": {
+  "zh": "教導、裝備",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jūdicium": {
+  "zh": "判決、審判",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lampas": {
+  "zh": "燈、火焰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mōnstrō": {
+  "zh": "指示、示現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "omissiō": {
+  "zh": "遺漏、省略",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pretiōsus": {
+  "zh": "寶貴、珍貴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "priusquam": {
+  "zh": "在……之前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "psalmista": {
+  "zh": "聖詠作者、詩人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "resuscitō": {
+  "zh": "使甦醒、復活",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sanctificātiō": {
+  "zh": "聖化、成聖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "struō": {
+  "zh": "建築、構築",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sūmō": {
+  "zh": "取、領取、拿",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supplicō": {
+  "zh": "懇求、祈禱",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suscitō": {
+  "zh": "喚起、興起、復活",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "timor": {
+  "zh": "畏懼、敬畏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "timōrātus": {
+  "zh": "敬畏天主的、虔誠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vespertīnus": {
+  "zh": "晚間的、傍晚的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amīcus": {
+  "zh": "友人、朋友",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōgitō": {
+  "zh": "思考、籌謀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commendō": {
+  "zh": "託付、委託",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēputō": {
+  "zh": "指派、計為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "detrahō": {
+  "zh": "抽取、奪去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "difficilis": {
+  "zh": "困難的、艱難的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīvidō": {
+  "zh": "分開、分割、分配",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīvīnitās": {
+  "zh": "神性、神聖性",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "domina": {
+  "zh": "女主人、夫人、貴婦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exīstimō": {
+  "zh": "認為、判斷、評估",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exprimō": {
+  "zh": "表達、表現、描繪",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "facilis": {
+  "zh": "容易、易為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hostis": {
+  "zh": "敵人、仇敵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illūcēsco": {
+  "zh": "照亮、發光、破曉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inaestimābilis": {
+  "zh": "無價、珍貴、不可估量",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ineffābilis": {
+  "zh": "不可言喻、無法表達、玄妙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inimīcus": {
+  "zh": "敵人、仇敵、不友善",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lignum": {
+  "zh": "木、樹木、木料",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "liquō": {
+  "zh": "熔化、溶解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "monumentum": {
+  "zh": "紀念碑、墳墓、遺跡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "negō": {
+  "zh": "否認、拒絕、否定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nēmō": {
+  "zh": "沒有人、無人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nōlī/nōlite": {
+  "zh": "不願、勿、不要",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parēns": {
+  "zh": "父母、親生者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perseverō": {
+  "zh": "堅持、持續、恆久",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "premō": {
+  "zh": "壓、按壓；壓迫、苦難",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "putō": {
+  "zh": "認為、計算、考慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quisquam": {
+  "zh": "任何人、任何事物（用於否定或隱含否定句）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sēdēs": {
+  "zh": "座位、地點、住所",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sociō": {
+  "zh": "使參與、聯合、結盟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "somnus": {
+  "zh": "睡眠、睡眠神",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "trahō": {
+  "zh": "拖拽、引導、吸引",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vel": {
+  "zh": "或；要麼…要麼…",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vetō": {
+  "zh": "禁止、阻止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vīcīnus": {
+  "zh": "相鄰的、附近的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vicīnus": {
+  "zh": "鄰居",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "appropinquō": {
+  "zh": "接近、逼近",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "at": {
+  "zh": "但是、然而",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "compār": {
+  "zh": "同等的、相似的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "convertō": {
+  "zh": "轉變、改變、皈依",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "daemōnium": {
+  "zh": "惡靈、魔鬼",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infernus": {
+  "zh": "地獄的、冥府的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inferus": {
+  "zh": "地下的、下方的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intellegō": {
+  "zh": "理解、認知、領會",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "itaque": {
+  "zh": "因此、所以",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magus": {
+  "zh": "智者、術士、占星家",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "majestās": {
+  "zh": "威嚴、尊嚴、陛下",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "maneō": {
+  "zh": "留、停留、等待",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "narrō": {
+  "zh": "述說、敍述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "octāvus": {
+  "zh": "第八",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paeniteor": {
+  "zh": "悔改、悔恨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pār": {
+  "zh": "相等、相同、與……相等",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pariter": {
+  "zh": "平等地、一起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "permaneō": {
+  "zh": "持續、留存、不變",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plōrō": {
+  "zh": "哭泣、哀慟、悲慟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeses": {
+  "zh": "主持人、總督、州長",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pūrus": {
+  "zh": "潔淨、純潔、清淨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quaerō": {
+  "zh": "尋求、請求、詢問",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quaesō/quaesumus": {
+  "zh": "懇求、哀求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "redemptiō": {
+  "zh": "救贖、解救",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "remaneō": {
+  "zh": "遺留、殘留、保存",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "requīrō": {
+  "zh": "尋求、要求、需要",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "revertō": {
+  "zh": "返回、回返、轉身",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sentiō": {
+  "zh": "感受、知覺、體驗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sepulcrum": {
+  "zh": "墳墓、陵寢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sermō": {
+  "zh": "言談、言論、演說",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "taceō": {
+  "zh": "沉默、緘默",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "urbs": {
+  "zh": "城市、都城",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vestis": {
+  "zh": "衣服、衣著",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "victor": {
+  "zh": "勝利者、征服者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "antequam": {
+  "zh": "在……之前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "apis": {
+  "zh": "蜜蜂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cēra": {
+  "zh": "蠟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "coadūnō": {
+  "zh": "聯合、結合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "continueō": {
+  "zh": "包含、保持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēvincō": {
+  "zh": "徹底戰勝、完全征服",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eucharisticus": {
+  "zh": "感恩祭的、聖體的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exsistō": {
+  "zh": "出現、產生、存在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "flōs": {
+  "zh": "花、花朵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fōns": {
+  "zh": "泉源、水泉、根源",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fore": {
+  "zh": "將是、即將",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "īdem": {
+  "zh": "同一的、相同的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illūminātio": {
+  "zh": "光照、照明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jūdex": {
+  "zh": "法官、裁決者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occīdō": {
+  "zh": "殺死、殺害",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "orbis": {
+  "zh": "球體、圓盤、世界",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "palam": {
+  "zh": "公開地、明白地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "palma": {
+  "zh": "手掌、勝利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pendeō": {
+  "zh": "懸掛、依附",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "piāculum": {
+  "zh": "罪愆、罪惡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quisquis": {
+  "zh": "凡是……的人、無論誰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ratiō": {
+  "zh": "理性、理由、方式、計算",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "regiō": {
+  "zh": "地區、領地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "requiēs": {
+  "zh": "休息、安息",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sidus": {
+  "zh": "星辰、星座",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sistō": {
+  "zh": "立起、站立、存在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "speciēs": {
+  "zh": "容貌、種類、美貌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spērō": {
+  "zh": "希望、期待、信賴",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sustineō": {
+  "zh": "支撐、維持、承受",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "teneō": {
+  "zh": "握持、保有、扣留",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "thronus": {
+  "zh": "王座、寶座",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verberō": {
+  "zh": "鞭打、殴打",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vincō": {
+  "zh": "戰勝、征服",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aspergō": {
+  "zh": "灑、噴灑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "auferō": {
+  "zh": "奪取、帶走",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "castus": {
+  "zh": "貞潔的、純淨的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōgō": {
+  "zh": "聚集、強迫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commūnicātiō": {
+  "zh": "相通、交通、共融",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnferō": {
+  "zh": "陪伴、賦予；前往",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "damnum": {
+  "zh": "損害、喪失、懲罰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēferō": {
+  "zh": "呈獻、帶來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "defunctus": {
+  "zh": "已亡的、死亡的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dispergō": {
+  "zh": "散開、四散",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dītō": {
+  "zh": "豐富、充實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "efferō": {
+  "zh": "舉出、擡起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "expellō": {
+  "zh": "逐出、驅逐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fallō": {
+  "zh": "欺騙、迷惑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "falsus": {
+  "zh": "虛假的、欺詐的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ferō": {
+  "zh": "帶、持、運",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "flagellum": {
+  "zh": "鞭、鞭子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fulgor": {
+  "zh": "光輝、閃耀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "īnferō": {
+  "zh": "帶入、引入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inquam": {
+  "zh": "我說",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jucundus": {
+  "zh": "令人愉悅的、可喜的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "medium": {
+  "zh": "中間、中部、中央",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mūtuor": {
+  "zh": "借用、借入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nātiō": {
+  "zh": "民族、國族；異邦人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nātīvitās": {
+  "zh": "誕生、出生",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "offerō": {
+  "zh": "奉獻、呈獻、獻上",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pangō": {
+  "zh": "制定、作成、譜寫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perennis": {
+  "zh": "永恆的、永遠的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perferō": {
+  "zh": "忍受、承受、傳達",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "poena": {
+  "zh": "懲罰、刑罰、苦難",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praecōnium": {
+  "zh": "讚揚、頌言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōferō": {
+  "zh": "提出、陳述、發言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reconciliātiō": {
+  "zh": "和解、復和",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "referō": {
+  "zh": "回報、呈獻、述說",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "repellō": {
+  "zh": "驅逐、擊退、排斥",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "significō": {
+  "zh": "表示、意謂、象徵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sodālis": {
+  "zh": "同伴、夥伴、同僚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spargō": {
+  "zh": "撒、灑、散佈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tranquillus": {
+  "zh": "安寧的、寧靜的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "velut": {
+  "zh": "如、猶如、就像",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "venter": {
+  "zh": "腹部、子宮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verber": {
+  "zh": "鞭子、鞭打",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vinciō": {
+  "zh": "綁、束縛、拘禁",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commūniō": {
+  "zh": "聖體聖血、領聖體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "complaceo": {
+  "zh": "使悅納、蒙悅納",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concordia": {
+  "zh": "和諧、和平、一致",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēnītor": {
+  "zh": "產生、生育",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "errō": {
+  "zh": "漂泊、迷途、犯錯",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "factum est": {
+  "zh": "事就這樣成了、遂成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fiō": {
+  "zh": "被造成、生成、成為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genetrix": {
+  "zh": "母親、生母",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "humilitās": {
+  "zh": "謙卑、卑微",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "institutio": {
+  "zh": "教導、訓導",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lacrimōsus": {
+  "zh": "淚滿的、涕淚的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "licet": {
+  "zh": "許可、得以",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "luminābē": {
+  "zh": "燈火、光體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necesse est": {
+  "zh": "必須、有必要",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "noceō": {
+  "zh": "傷害、損害",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oboedientia": {
+  "zh": "順服、服從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oboeidiō": {
+  "zh": "聽從、服從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occāsus": {
+  "zh": "日落、西方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occidō": {
+  "zh": "下沉、西沉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oportet": {
+  "zh": "應該、必須",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parcō": {
+  "zh": "饒恕、寬容",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pectus": {
+  "zh": "胸、胸膛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "penetrō": {
+  "zh": "穿透、深入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "placeo": {
+  "zh": "討好、令人滿意",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "placet": {
+  "zh": "令人滿意、贊成",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōcidō": {
+  "zh": "前撲、跌倒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "radius": {
+  "zh": "光線、射線",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rutilō": {
+  "zh": "閃耀、發光",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sānctitās": {
+  "zh": "聖德、聖潔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "serviō": {
+  "zh": "事奉、服侍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sincērus": {
+  "zh": "真摯、純正",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sōl": {
+  "zh": "太陽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accommodō": {
+  "zh": "配合、調和；賦予",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adōrnō": {
+  "zh": "裝飾、妝點",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "baptismus": {
+  "zh": "聖洗、洗禮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cernō": {
+  "zh": "看、識別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "coepī": {
+  "zh": "開始、著手",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōnfortō": {
+  "zh": "堅強、使強硬；變強",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dignitās": {
+  "zh": "尊嚴、榮譽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "discō": {
+  "zh": "學習、習得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ējiciō": {
+  "zh": "拋出、逐出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ēsuriō": {
+  "zh": "飢餓、欲求食物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exspoliō": {
+  "zh": "掠奪、剝奪",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hērēditās": {
+  "zh": "遺產、世代",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "immolātio": {
+  "zh": "祭獻、奉獻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "irradio": {
+  "zh": "照耀、照亮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jaceō": {
+  "zh": "躺臥、位於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jaciō": {
+  "zh": "投擲、拋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mātūtinus": {
+  "zh": "朝晨的、清晨的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mirabilis": {
+  "zh": "奇異的、令人驚嘆的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "multitūdō": {
+  "zh": "大量、眾多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ops": {
+  "zh": "幫助、援助",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ornō": {
+  "zh": "裝飾、修飾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pacificō": {
+  "zh": "使和平、賜和平",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paenitentia": {
+  "zh": "悔改、懺悔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prōjiciō": {
+  "zh": "投出、拋下",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "propitius": {
+  "zh": "仁慈的、恩寵的、吉祥的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "revelō": {
+  "zh": "揭示、啟示、披露",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ruīna": {
+  "zh": "毀滅、衰頹、崩壞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "splendor": {
+  "zh": "光耀、壯麗、輝煌",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tremō": {
+  "zh": "顫動、戰慄、發抖",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ab": {
+  "zh": "由（施事者）；從（出發、原因）；自（遠時間或起源）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quasi": {
+  "zh": "彷彿、似乎、好像；所謂的；約",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ceterus": {
+  "zh": "其他的、其餘的、剩下的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "divinus": {
+  "zh": "神聖的、神的、天國的；有先見之明的；天賦的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jus": {
+  "zh": "法律、法典、權利、職責、正義、審判",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sententia": {
+  "zh": "意見、見解、思想；意義、判詞、目的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proprius": {
+  "zh": "自己的、特有的、固有的、獨特的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "persona": {
+  "zh": "假面、角色、人格、身份",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "officium": {
+  "zh": "職責、義務、恩惠、職務",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "judicium": {
+  "zh": "審判、法律訴訟、法庭、司法程序",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "auctoritas": {
+  "zh": "權力、權威、命令、認可權",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clericus": {
+  "zh": "教士、神父、僧侶；學者、文書、秘書",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "modo": {
+  "zh": "只是、僅僅；剛才、近日；現在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "concilium": {
+  "zh": "大會、集會、議會、教區會議、討論",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "judex": {
+  "zh": "法官、陪審員",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "monasterium": {
+  "zh": "修道院",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "parum": {
+  "zh": "太少、不足、很少",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "forma": {
+  "zh": "形狀、外貌、美麗；模式、範型",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "seu": {
+  "zh": "或者、如果；無論……或",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mos": {
+  "zh": "習俗、習慣；品德、舉止、風尚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "abbas": {
+  "zh": "修道院院長、教會團體首長",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "beneficium": {
+  "zh": "恩惠、好處、幫助；特權、權利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "finis": {
+  "zh": "界限、終點、目標；（複數）領地、地域",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "video": {
+  "zh": "看、觀看；認為；顯現、看起來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "justus": {
+  "zh": "正義的、公平的；合法的、恰當的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "justitia": {
+  "zh": "正義、公正；公平",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scilicet": {
+  "zh": "當然、確實、即",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesens": {
+  "zh": "現在的、在場的；迅速的、有利的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "volo": {
+  "zh": "願意、想要；決心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "probo": {
+  "zh": "贊同、讚許；認可、核准",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potius": {
+  "zh": "寧可、更寧願、較為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vero": {
+  "zh": "確實、的確；然而、但是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contineo": {
+  "zh": "保持、維持、保護；控制、約束、固定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "singulus": {
+  "zh": "各個、單個、個別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "presbyter": {
+  "zh": "長老、司鐸；古典：長者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consilium": {
+  "zh": "議論、勸告、謀議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tamquam": {
+  "zh": "如同、彷彿、好像",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "forte": {
+  "zh": "或許、偶然、碰巧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quatenus": {
+  "zh": "在…範圍內、就…而言、既然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nolo": {
+  "zh": "不願、拒絕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aio": {
+  "zh": "言說、聲稱、肯定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consto": {
+  "zh": "相符、依據、存在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "electio": {
+  "zh": "選擇、揀選；教會：救恩的揀選",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prius": {
+  "zh": "早先、在前、首先",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "publicus": {
+  "zh": "公眾的、公共的、官方的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infra": {
+  "zh": "下方、以下、南方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "appello": {
+  "zh": "呼喚、稱呼、上訴、指控",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "summus": {
+  "zh": "最高的、頂端、最大的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "que": {
+  "zh": "及、和；並列連接詞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "littera": {
+  "zh": "字母、書信、著述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quantum": {
+  "zh": "多少、到什麼程度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pertineo": {
+  "zh": "延伸、涉及、關乎",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prior": {
+  "zh": "在前的、先前的；基本的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "videlicet": {
+  "zh": "顯然、明白地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "judico": {
+  "zh": "判斷、宣判；評定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "synodus": {
+  "zh": "教區會議、主教會議；教令集",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ordino": {
+  "zh": "安排、整理；任命、設立",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amor": {
+  "zh": "愛、情愛；情人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "religio": {
+  "zh": "宗教、信仰；禮儀、聖潔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "materia": {
+  "zh": "木材、木料；樹枝",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "item": {
+  "zh": "同樣地、並且",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "capitulum": {
+  "zh": "章節、條目；聖堂參議會、會議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necessitas": {
+  "zh": "需要、必然；困窘、貧困；義務",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "committo": {
+  "zh": "結合、連接；製造；託付",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "medius": {
+  "zh": "中間的、中部的；平凡的、普通的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pontifex": {
+  "zh": "大祭司、宗教領袖；主教、教宗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "omnino": {
+  "zh": "完全地、總共；絲毫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "invenio": {
+  "zh": "發現、找到；發明、想出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "venio": {
+  "zh": "來、到達",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supra": {
+  "zh": "在……之上、超過；統治",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nec": {
+  "zh": "也不、而且不；既不……亦不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "provincia": {
+  "zh": "行省、職責、管轄區",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "negotium": {
+  "zh": "事務、工作、麻煩",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "error": {
+  "zh": "流浪、錯誤、迷宮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "disciplina": {
+  "zh": "教導、訓練、紀律、學問",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "studium": {
+  "zh": "熱忱、專心、追求、研習",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "alienus": {
+  "zh": "外來的、他人的、相反的、敵對的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "possessio": {
+  "zh": "佔有、財產",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vita": {
+  "zh": "生命、生活方式、生計",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diversus": {
+  "zh": "相反的、分開的、不同的、敵對的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quaestio": {
+  "zh": "詢問、調查、研究",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contingo": {
+  "zh": "接觸、及於、影響、掌握",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesentia": {
+  "zh": "現時、臨在、在場",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contrarius": {
+  "zh": "對立的、相反的、敵對的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "regula": {
+  "zh": "規則、原則、標準",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "auctor": {
+  "zh": "創始人、作者、權威、倡議者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cur": {
+  "zh": "何故、為何、因此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "instituo": {
+  "zh": "建立、創設、奠基、決定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "denique": {
+  "zh": "最後、總之、終於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aetas": {
+  "zh": "壽命、年代、時期、世代",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesum": {
+  "zh": "統領、主持、帶頭、出席",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "membrum": {
+  "zh": "肢體、器官、房間",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "futurus": {
+  "zh": "將來的、未來的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "soleo": {
+  "zh": "習慣於、慣常",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "epistola": {
+  "zh": "書信、公文、書簡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jubeo": {
+  "zh": "命令、下令、吩咐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ample": {
+  "zh": "寬宏地、恢宏地、華麗地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quippe": {
+  "zh": "誠然、自然、當然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quanto": {
+  "zh": "相差多少、相隔多遠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "matrimonium": {
+  "zh": "婚姻、夫妻關係",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ullus": {
+  "zh": "任何、任一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praemitto": {
+  "zh": "先遣、提前送出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necesse": {
+  "zh": "必要的、不可避免的、必然的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "scientia": {
+  "zh": "知識、學問、技能",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ecclesiasticus": {
+  "zh": "教會的、聖職的；世俗的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "habitus": {
+  "zh": "狀態、衣著、舉止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quamvis": {
+  "zh": "儘管、雖然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "usus": {
+  "zh": "使用、經驗、習慣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "venerabilis": {
+  "zh": "值得尊敬的、崇高的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "utrum": {
+  "zh": "是否、抑或",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "periculum": {
+  "zh": "危險、風險、責任",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conscientia": {
+  "zh": "良心、罪咎感、共謀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tum": {
+  "zh": "那時、其次；不僅……而且",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "imago": {
+  "zh": "形象、肖像、幻影",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rursus": {
+  "zh": "相反地、反過來、再次",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praefero": {
+  "zh": "更喜好、偏好、展示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "bellum": {
+  "zh": "戰爭、戰鬥、軍事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "haereticus": {
+  "zh": "異端的、異教的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aliter": {
+  "zh": "否則、另外、不同地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "legatus": {
+  "zh": "使節、軍團長官、代理人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "veritas": {
+  "zh": "真理、真實、誠實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pecunia": {
+  "zh": "金錢、財產",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "status": {
+  "zh": "地位、狀況、身分",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "immo": {
+  "zh": "不然、反而、更是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cesso": {
+  "zh": "停止、終止、懈怠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "siquidem": {
+  "zh": "如果、既然、據此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gradus": {
+  "zh": "階級、等級、步",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "titulus": {
+  "zh": "題目、標題、托辭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nomino": {
+  "zh": "命名、稱呼、提名",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "actus": {
+  "zh": "行為、行動、表演；進程、序列",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "penitus": {
+  "zh": "內部、深處；徹底地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "semen": {
+  "zh": "種子、籽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occasio": {
+  "zh": "機會、時機；藉口、事件",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postmodum": {
+  "zh": "其後、稍後、隨後；後來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "longe": {
+  "zh": "遠、遙遠；遠遠地；長期地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "generalis": {
+  "zh": "普通的、一般的；共有的、通常的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "assero": {
+  "zh": "抓住、把握；主張、聲稱；解放、維護",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verus": {
+  "zh": "真實、正確；真正的、本來的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "obtineo": {
+  "zh": "獲得、維持；佔據、掌控",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "canonicus": {
+  "zh": "符合聖律的、合法的；教士的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "longus": {
+  "zh": "長、高；冗長、費時；遠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "initium": {
+  "zh": "開始、起始；入口、進入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "injuria": {
+  "zh": "傷害、不公正；侮辱、冒犯；性暴力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vivo": {
+  "zh": "活、生活；居住、存活",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intellectus": {
+  "zh": "理解、領悟；知識、智力；意義",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mox": {
+  "zh": "不久、旋即；接著",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consensus": {
+  "zh": "同意、共識；協調、一致；陰謀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exhibeo": {
+  "zh": "呈現、提供、展示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paucus": {
+  "zh": "少量的、稀少的、少數",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aer": {
+  "zh": "空氣、大氣、天空、雲霧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "color": {
+  "zh": "色彩、顏料、膚色、外表",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "idoneus": {
+  "zh": "適當的、勝任的、具備所需條件",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "animal": {
+  "zh": "動物、生物、野獸",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "casus": {
+  "zh": "跌落、偶然、不幸、命運",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "virtus": {
+  "zh": "力量、勇氣、德行、卓越",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nihilominus": {
+  "zh": "然而、儘管如此、同樣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ultra": {
+  "zh": "超越、在另一邊、更加",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "olim": {
+  "zh": "曾經、往昔、將來",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "decerno": {
+  "zh": "決定、頒布、裁決、表決",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "delictum": {
+  "zh": "過犯、罪行、罪、缺陷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sane": {
+  "zh": "合理地、確實、然而",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "licentia": {
+  "zh": "自由、許可、放縱、坦白言論",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diu": {
+  "zh": "長久地、很久",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "saecularis": {
+  "zh": "世俗的、非教會的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "temporalis": {
+  "zh": "時間的、暫時的、屬世的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "similitudo": {
+  "zh": "相似、相似性、比喻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "manifestus": {
+  "zh": "明白的、顯著的、確定的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "considero": {
+  "zh": "察看、深思、審視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "absque": {
+  "zh": "無、除……外；除非",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nobilis": {
+  "zh": "貴族的、高貴的、傑出的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "appellatio": {
+  "zh": "上訴、名稱、名詞、稱號",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tot": {
+  "zh": "那麼多次、那樣的次數",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vocabulum": {
+  "zh": "名詞、詞彙、術語",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesumo": {
+  "zh": "預先使用、預期、假定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "confessio": {
+  "zh": "認信、信德告明；教難致命",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "taliter": {
+  "zh": "如此方式、這樣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "simplex": {
+  "zh": "單一的、簡樸的、平易的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "haeresis": {
+  "zh": "異端、邪說、異端派",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lapis": {
+  "zh": "石、寶石、里程碑",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dominicus": {
+  "zh": "主的、主人的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praebeo": {
+  "zh": "呈現、提供、展示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "libertas": {
+  "zh": "自由、坦率、言論自由",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "facultas": {
+  "zh": "能力、機會、資源",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "juramentum": {
+  "zh": "誓言、誓約",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "episcopatus": {
+  "zh": "主教聖秩、主教職位",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "terminus": {
+  "zh": "界限、終點、邊界",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insula": {
+  "zh": "島嶼、公寓樓",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illic": {
+  "zh": "在那裡、彼處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subicio": {
+  "zh": "置於下、使屈從、暴露",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prohibeo": {
+  "zh": "阻止、禁止、妨礙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aliquando": {
+  "zh": "某時、曾經、終於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quemadmodum": {
+  "zh": "如何；如同、正如；到……程度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "notus": {
+  "zh": "著名、為人所知、聲名狼籍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reliquus": {
+  "zh": "餘下的、剩餘的、未來的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vis": {
+  "zh": "力量、力氣；威力、暴力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ignoro": {
+  "zh": "不知、不知悉、忽視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "femina": {
+  "zh": "女人、女性",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contraho": {
+  "zh": "締結、訂立、從事、交戰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sapiens": {
+  "zh": "聰慧、理性、明智、謹慎",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mortalis": {
+  "zh": "會死的、短暫的、人類的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "superus": {
+  "zh": "上面的、高的；上級的、在世的；最高的、終極的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conditio": {
+  "zh": "協議、契約；條款、提議；狀況、處境",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeterea": {
+  "zh": "此外、況且；其後、隨後",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "restituo": {
+  "zh": "恢復、復原；復甦、使回復；彌補、補償",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dux": {
+  "zh": "領導者、引導者；統帥、將軍；公爵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "discretio": {
+  "zh": "區分、分離；識別力、判斷力、辨別智慧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intentio": {
+  "zh": "延伸、擴張；痙攣、抽搐；緊張、集中；意圖、目的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "origo": {
+  "zh": "起源、來源；出身、血統；種族、家系",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "propositum": {
+  "zh": "意圖、目的、目標；決心、計劃、方案",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "philosophus": {
+  "zh": "哲學家",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "qualitas": {
+  "zh": "性質、本質；特性、特徵、品質",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "removeo": {
+  "zh": "移開、推開；除去、移除；撤回、消除",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exinde": {
+  "zh": "由此、自彼；其後、隨後；進而、因此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "actio": {
+  "zh": "行動、動作、行為；事件、情節；訴訟、訴狀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dispono": {
+  "zh": "配置、分佈；排列、布置；管理、治理、安排",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reperio": {
+  "zh": "發現、察覺；找到、獲得；得知、認識；創造",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corporalis": {
+  "zh": "身體的、軀體的；物質的、有形的、實體的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proinde": {
+  "zh": "因此、所以；依照、按……的方式或程度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "edo": {
+  "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "similiter": {
+  "zh": "同樣地、類似地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gigno": {
+  "zh": "生育、產生、誕生",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pateo": {
+  "zh": "張開、延伸、眾所周知",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opinio": {
+  "zh": "意見、信念、傳聞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "spiritalis": {
+  "zh": "靈性的、屬靈的；古典：呼吸的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mensis": {
+  "zh": "月份、月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "possideo": {
+  "zh": "佔有、擁有、統治",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "leo": {
+  "zh": "獅子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mille": {
+  "zh": "千、一千",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "absum": {
+  "zh": "缺席、離開、缺乏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infirmitas": {
+  "zh": "虛弱、病弱、疾病",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consentio": {
+  "zh": "同意、和諧、心意相通",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "transfero": {
+  "zh": "運送、轉移、傳遞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sollicitudo": {
+  "zh": "憂慮、關切、焦慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ibidem": {
+  "zh": "在同一地點、在同一時刻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intersum": {
+  "zh": "介於其間、在場、參與、有差異",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tandem": {
+  "zh": "最終、終於、最後",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nuntius": {
+  "zh": "使者、信使、訊息、報告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "auxilium": {
+  "zh": "幫助、援助、救援、輔軍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "recte": {
+  "zh": "正確地、恰當地；直立地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "revertor": {
+  "zh": "折返、回歸、復現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "naturalis": {
+  "zh": "自然的、本質的、天生的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cito": {
+  "zh": "迅速地、急速地、容易地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "idcirco": {
+  "zh": "因此、為此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "defungor": {
+  "zh": "完成、卸除、履行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quondam": {
+  "zh": "昔日、曾經、從前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exigo": {
+  "zh": "驅逐、完成、審視、衡量",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "expedio": {
+  "zh": "解放、便利、備辦、調度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "integer": {
+  "zh": "完整的、未損傷的、堅強的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "universalis": {
+  "zh": "普遍的、廣泛適用的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prout": {
+  "zh": "如同、正如、恰好如",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "careo": {
+  "zh": "缺乏、沒有、喪失",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "specialiter": {
+  "zh": "專門地、個別地、特別地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "desum": {
+  "zh": "不足、失職、缺席、背棄",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "promitto": {
+  "zh": "承諾、誓言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "expono": {
+  "zh": "陳述、闡明、棄置、登陸",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ingenium": {
+  "zh": "天性、稟賦、資質、才智",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "provideo": {
+  "zh": "預見、準備、供給",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "secundo": {
+  "zh": "順利、幫助、成功",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "utilis": {
+  "zh": "有用、有益；實用、有利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reus": {
+  "zh": "訴訟當事人、被告；犯人、罪人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quin": {
+  "zh": "使不、沒有；以至不；反而；而且",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impedio": {
+  "zh": "阻礙、妨礙；阻止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nullatenus": {
+  "zh": "決不、毫不；無論如何不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interdum": {
+  "zh": "有時、間或",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "luna": {
+  "zh": "月亮；月份",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "memoro": {
+  "zh": "記得、想起；提及、述說、提醒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "posterus": {
+  "zh": "後來的、隨後的；次序在後的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "modicus": {
+  "zh": "適度的、節制的；小的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paene": {
+  "zh": "幾乎、差不多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fama": {
+  "zh": "謠言、傳聞；名聲、名譽；輿論",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "basilica": {
+  "zh": "長方形會堂、法庭；教堂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "retineo": {
+  "zh": "保留、扣留；堅守、維持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adhibeo": {
+  "zh": "徵召、邀請；應用、採用、發動",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "legitimus": {
+  "zh": "合法的、正當的；真正的、適當的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dubius": {
+  "zh": "可疑的、不確定的；危險的、令人費解的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "libere": {
+  "zh": "自由地、坦率地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "colo": {
+  "zh": "居住、住；耕作、培育；維護、保持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "observo": {
+  "zh": "觀察、注視；留意、遵守",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "frequenter": {
+  "zh": "經常、頻繁；大量地、成群地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interpretor": {
+  "zh": "解釋、說明；詮釋、預言；理解、領會",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "punio": {
+  "zh": "懲罰、罰；報復、討償",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "summa": {
+  "zh": "總和、總數；摘要、要點；本質、主旨",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "propterea": {
+  "zh": "因此、故；由於、因為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "alibi": {
+  "zh": "他處、別地；別的方面、其他情況",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cupio": {
+  "zh": "渴望、熱望；欲得、貪求；贊許、祝福",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proprie": {
+  "zh": "特別地、尤其；恰當地、正確地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "damno": {
+  "zh": "判罪、定罪；譴責、宣判；傷害、危及",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consisto": {
+  "zh": "停止、駐足；立定、佇立；維持、保持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conjungo": {
+  "zh": "連接、結合；聯姻、配對；銜接、複合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "equus": {
+  "zh": "馬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consuesco": {
+  "zh": "習慣、適應；慣常、為所習",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patientia": {
+  "zh": "忍耐、堅忍；容忍、承受；苦難、磨難",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "servo": {
+  "zh": "監護、守護；保存、貯藏；維護、保全",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "privo": {
+  "zh": "剝奪、奪取；使不得、解除",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesertim": {
+  "zh": "尤其、特別是",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proprietas": {
+  "zh": "特性、所有權",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "soror": {
+  "zh": "姐妹",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "specialis": {
+  "zh": "特殊的、具體的、個別的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dispositio": {
+  "zh": "安排、佈局、秩序",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fraus": {
+  "zh": "欺詐、詭計、欺騙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "iniquus": {
+  "zh": "不公正的、不利的、不善的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ministro": {
+  "zh": "侍奉、供給、提供",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "moveo": {
+  "zh": "移動、感動、激起、擾亂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exerceo": {
+  "zh": "訓練、實行、施展、修習",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Trinitas": {
+  "zh": "聖三一、三位一體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "majestas": {
+  "zh": "威嚴、尊榮、君權",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "metus": {
+  "zh": "恐懼、敬畏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "navis": {
+  "zh": "船舶",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "decretum": {
+  "zh": "教令、法令、決議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tribuo": {
+  "zh": "分配、賦予、歸屬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "genero": {
+  "zh": "生育、產生、生出",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "honestus": {
+  "zh": "高尚的、光榮的、誠實的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "remedium": {
+  "zh": "補救、治療、藥物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "en": {
+  "zh": "看！瞧！",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "habito": {
+  "zh": "居住、住在、停留",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adversus": {
+  "zh": "對著、相對、反對、面對",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "societas": {
+  "zh": "社團、同盟、夥伴關係、共融",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "condicio": {
+  "zh": "協議、條款、情況、提議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "moralis": {
+  "zh": "道德的、倫理的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cultus": {
+  "zh": "耕耘的、雅緻的、彬彬有禮的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "veluti": {
+  "zh": "恰如、彷彿",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "haud": {
+  "zh": "不、毫不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "socialis": {
+  "zh": "同盟的、社交的、親密的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opera": {
+  "zh": "勞動、幫助、盡力、努力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nempe": {
+  "zh": "確實、當然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "profecto": {
+  "zh": "必然、確然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "civilis": {
+  "zh": "市民的、民事的、公眾的、有禮的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "varius": {
+  "zh": "不同的、多樣的",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "communitas": {
+  "zh": "共同參與、共融、社群",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prorsus": {
+  "zh": "完全地、絕對地、實則",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "historia": {
+  "zh": "歷史、敘述、故事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ejusmodi": {
+  "zh": "此類的、如此般的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potis": {
+  "zh": "能夠、可能",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "politicus": {
+  "zh": "政治的、國家的、政治性的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "instrumentum": {
+  "zh": "工具、器具、裝備、手段、文書",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "specto": {
+  "zh": "觀看、注視、審視、考慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fundamentum": {
+  "zh": "基礎、根基、起源",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eucharistia": {
+  "zh": "感恩祭、聖體聖事、祝聖禮品",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plane": {
+  "zh": "明白地、清楚地、完全地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "civis": {
+  "zh": "公民、同胞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "etenim": {
+  "zh": "因為、實際上、確實；表原因或強調",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "singularis": {
+  "zh": "獨特的、唯一的、逐一的、非凡的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "affero": {
+  "zh": "帶來、運送、呈現、提出、引起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "traditio": {
+  "zh": "交付、移交、傳統、記述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cultura": {
+  "zh": "農業、耕種、田地、培養、照料",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praecipuus": {
+  "zh": "特別的、主要的、顯著的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "philosophia": {
+  "zh": "哲學、愛智慧",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "va": {
+  "zh": "哎呀、噢、啊；表痛楚、輕蔑或驚喜的感嘆詞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cognitio": {
+  "zh": "審查、調查、認識、識別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "progredior": {
+  "zh": "前進、行進、發展、有進展",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contendo": {
+  "zh": "拉緊、繃張、張弦、伸展",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "religiosus": {
+  "zh": "虔誠的、敬畏的、神聖的、謹慎的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "attineo": {
+  "zh": "握住、扣留、拘禁、延遲、關連",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perfectio": {
+  "zh": "完成、完美",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "augeo": {
+  "zh": "增加、提高",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "cursus": {
+  "zh": "奔跑、前進",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "dumtaxat": {
+  "zh": "至此、只限於",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "nonnullus": {
+  "zh": "一些、若干",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "copia": {
+  "zh": "豐富、充足",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "pondus": {
+  "zh": "重量、負擔",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "fere": {
+  "zh": "幾乎、差不多",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "experientia": {
+  "zh": "試驗、經驗",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "complector": {
+  "zh": "擁抱、包含",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "nequeo": {
+  "zh": "不能、無能",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "industria": {
+  "zh": "勤奮、努力",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "regimen": {
+  "zh": "控制、指導",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "revera": {
+  "zh": "事實上、實際上",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "sacerdotium": {
+  "zh": "司鐸職、聖職",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "personalis": {
+  "zh": "個人的、關於個人的",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "quam": {
+  "zh": "如何、多少",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "praecipue": {
+  "zh": "尤其、特別",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "imprimis": {
+  "zh": "首先、尤其",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "studeo": {
+  "zh": "渴望、熱衷於；致力於；努力",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "indigeo": {
+  "zh": "需要、缺乏、需求",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "elementum": {
+  "zh": "元素、起源；基本原理",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "progressus": {
+  "zh": "進展、進步",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "progressio": {
+  "zh": "進展、發展；前進、提升；修辭手法",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "attingo": {
+  "zh": "觸摸、接觸；到達、實現；提及",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "nimirum": {
+  "zh": "毫無疑問、顯然",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "multiplex": {
+  "zh": "多層次、複雜；多重、深奧",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "demum": {
+  "zh": "終於、最後；最終、遲遲",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "fiducia": {
+  "zh": "信任、信心；信念、依靠",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "tantummodo": {
+  "zh": "只、僅",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "contentio": {
+  "zh": "拉伸、緊張；努力、比較",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "solummodo": {
+  "zh": "只、僅、唯一",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "quodammodo": {
+  "zh": "某種程度、某種方式",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "dubium": {
+  "zh": "疑問、懷疑",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "experior": {
+  "zh": "測試、嘗試；發現、證明",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "fruor": {
+  "zh": "享受、受益；欣賞",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "manifesto": {
+  "zh": "顯示、闡明；揭示、澄清",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "redemptor": {
+  "zh": "贖回者、救贖者；承包人、供應商",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "excito": {
+  "zh": "喚醒、激起；引起；豎立；煽動",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "participatio": {
+  "zh": "參與、分享；分詞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exitus": {
+  "zh": "出口、離去；終結、死亡；河口",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "notio": {
+  "zh": "司法審問、調查",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vicarius": {
+  "zh": "代理人、副手；奴僕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "deduco": {
+  "zh": "引下、帶走；牽出；驅逐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "antea": {
+  "zh": "以前、從前；過去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adjuvo": {
+  "zh": "幫助、扶持；有益、有利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aestimo": {
+  "zh": "估價、評估；判斷、認為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accido": {
+  "zh": "墜下、降臨；發生、降臨於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "testor": {
+  "zh": "作證、見證；立遺囑；宣誓",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "baptismum": {
+  "zh": "聖洗、聖洗禮；洗禮、灑聖水",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praedicatio": {
+  "zh": "宣講、公開宣告；讚揚、稱讚",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "infinitus": {
+  "zh": "無限的、無邊的；無窮的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "libenter": {
+  "zh": "欣然、樂意；甘心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "queo": {
+  "zh": "能、能夠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interior": {
+  "zh": "內部的、內層的；幽深的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "bonitas": {
+  "zh": "善良、美德；仁慈、溫柔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perspicio": {
+  "zh": "看透、察明；觀察、檢視",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "particularis": {
+  "zh": "特殊的、個別的、片段的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sanus": {
+  "zh": "健全的、健康的、理智的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "efficaciter": {
+  "zh": "有效地、確實地、產生法律效力地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pactum": {
+  "zh": "協議、契約、約定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "etiamsi": {
+  "zh": "縱然、即使、儘管",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "juvenis": {
+  "zh": "年輕的、青年的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "innitor": {
+  "zh": "依靠、憑藉、扶持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "servitus": {
+  "zh": "奴役、奴隸身分、束縛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fideliter": {
+  "zh": "忠誠地、殷切地、可靠地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commodum": {
+  "zh": "便利、利益、好處、報酬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sacerdotalis": {
+  "zh": "司祭的、祭司的、聖職的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tracto": {
+  "zh": "拖曳、牽引、處理、論述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "integritas": {
+  "zh": "完整、貞潔、正直",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inquisitio": {
+  "zh": "搜尋、查究、調查、偵查",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proficiscor": {
+  "zh": "出發、啟程、前進",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quamquam": {
+  "zh": "雖然、儘管、然而",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dubito": {
+  "zh": "懷疑、猶豫、躊躇",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praeclarus": {
+  "zh": "光明的、燦爛的、卓越的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "institutum": {
+  "zh": "制度、習俗、原則、安排、計畫",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "radix": {
+  "zh": "根；根基；平方根",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "professio": {
+  "zh": "聲明、宣誓；職業、行業",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quotquot": {
+  "zh": "凡若干、若干個",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "late": {
+  "zh": "廣泛地、遠近聞名",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "administratio": {
+  "zh": "行政、管理；執行、運作",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sempiternus": {
+  "zh": "永恆的、永遠的、永久的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nominatim": {
+  "zh": "按名、點名",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sedulo": {
+  "zh": "殷切地、勤勉地、用心地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "distinguo": {
+  "zh": "區分、分開、劃分；裝飾、修飾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "clare": {
+  "zh": "大聲地、響亮地；清晰地、明亮地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "obsequium": {
+  "zh": "順從、服從；尊重、關懷；服侍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "continenter": {
+  "zh": "不間斷地、連續不斷地；反覆地、相繼地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dominium": {
+  "zh": "統治、主權；所有權、所有物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sors": {
+  "zh": "籤、命運；神諭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "neglego": {
+  "zh": "忽視、漠視、輕視；不理會、放任",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hortor": {
+  "zh": "勸勉、鼓勵、激勵；敦促、勸說",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "secus": {
+  "zh": "在……旁邊、靠近；依照、按照",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "animadverto": {
+  "zh": "注意、察覺、觀察；評判、懲罰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quominus": {
+  "zh": "使不……、妨礙……",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "limes": {
+  "zh": "小徑、界限、邊界標記的未開墾地帶",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "apte": {
+  "zh": "緊密地、恰當地、適宜地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conversio": {
+  "zh": "旋轉、迴圈、周期",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "evangelicus": {
+  "zh": "福音的、屬於福音",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "servitium": {
+  "zh": "奴隸制、奴役、奴隸階級",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insero": {
+  "zh": "播種、嫁接、插入",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "comprehendo": {
+  "zh": "緊握、捕捉、逮捕、點燃、懷孕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "generatio": {
+  "zh": "生殖、生成、代",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aeque": {
+  "zh": "平等地、同樣地、亦然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dominor": {
+  "zh": "統治、支配、行使主權",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "persuadeo": {
+  "zh": "勸服、說服",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "creatio": {
+  "zh": "創造、由無中生有",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mutatio": {
+  "zh": "變化、更替、交換",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "campus": {
+  "zh": "平原、場地、戰場、海、範圍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "familiaris": {
+  "zh": "家庭的、親密的、家產的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "censeo": {
+  "zh": "認為、判斷、建議、評估、計算",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fortasse": {
+  "zh": "或許、可能",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gravitas": {
+  "zh": "重量、莊嚴、重要性、沉重",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "objectum": {
+  "zh": "指控、控罪；對象、感官所呈現的事物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "structura": {
+  "zh": "建築、構造；結構、砌體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nonne": {
+  "zh": "難道不是嗎？（疑問詞，預期肯定回答）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indico": {
+  "zh": "指示、表明；揭露、背叛；告發、控告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "perago": {
+  "zh": "擾亂；完成、終結；殺害",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consideratio": {
+  "zh": "凝視、審視；沉思、觀想、思考",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plebs": {
+  "zh": "平民、普通民眾；下層民眾、烏合之眾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "merces": {
+  "zh": "報酬、薪資、獎賞；租金、價格；賄賂",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "motus": {
+  "zh": "運動、移動；暴亂、騷擾；姿態；情緒",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paupertas": {
+  "zh": "貧窮、缺乏；卑微的境況",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supernaturalis": {
+  "zh": "超自然的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eventus": {
+  "zh": "結果、成果；事件、發生；機遇、命運",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "acquiro": {
+  "zh": "獲得、取得、贏得；增加、累積",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nimius": {
+  "zh": "過度的、過分的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "denuo": {
+  "zh": "重新、再一次；轉而",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "evenio": {
+  "zh": "發生、出現、結果如何",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "visibilis": {
+  "zh": "可見的；能看的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "congruus": {
+  "zh": "相符的、協調的；適合、恰當",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necessitudo": {
+  "zh": "義務、約束；關係、親緣；迫切、貧窮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inanis": {
+  "zh": "空的、虛空；徒然、愚蠢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "constanter": {
+  "zh": "堅定不移地、恆常地、堅決地、忠誠地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "efficax": {
+  "zh": "有效的、能勝任的；具法律效力的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "convictus": {
+  "zh": "親密相處、結社；密友、筵席",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "supero": {
+  "zh": "克服、征服；超越、勝過",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consulo": {
+  "zh": "請教、諮詢；思考、商議；建議",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "operarius": {
+  "zh": "勞工、工匠、傭工",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verumtamen": {
+  "zh": "然而、然則、依然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mutuo": {
+  "zh": "出借；交換",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interea": {
+  "zh": "同時、其間",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "raro": {
+  "zh": "罕見地、難得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incarnatio": {
+  "zh": "道成肉身、聖子降生；神人合一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "privilegium": {
+  "zh": "特權、特免、特殊權利",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aedifico": {
+  "zh": "建造、築造；確立、改善、啟蒙",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solidus": {
+  "zh": "金幣、固定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aspectus": {
+  "zh": "外觀、容貌；視線、眼光；景象",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aestimatio": {
+  "zh": "估價、評估；價值、價格",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impello": {
+  "zh": "推動、督促；衝擊、打擊；推翻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conficio": {
+  "zh": "製造、構築；準備、完成；實行、徹底進行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "admodum": {
+  "zh": "非常、極其、相當；實在、確實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sollicitus": {
+  "zh": "關切、憂慮；不安、焦慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "materialis": {
+  "zh": "物質的、物質性的；與質料相關的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prope": {
+  "zh": "靠近、接近；幾乎、差不多",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quocumque": {
+  "zh": "無論何處、到任何地方；任何地方",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nequaquam": {
+  "zh": "絕非、決不",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "domesticus": {
+  "zh": "家庭的、家內的；本地的、本國的；私人的、民間的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commodo": {
+  "zh": "出借、租賃；給予、供應；適配、調和",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "principatus": {
+  "zh": "最高地位、首位；統治、領導權",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "benevolentia": {
+  "zh": "善意、仁慈、好感；偏愛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cupiditas": {
+  "zh": "熱情、渴望；欲望、貪心；野心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aedificatio": {
+  "zh": "建築物、建物；建築、營造",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "orientalis": {
+  "zh": "東方的、東部的；東方人的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postremo": {
+  "zh": "最後、終於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "universitas": {
+  "zh": "全體、整體；宇宙、萬物；共同體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adiumentum": {
+  "zh": "幫助、援助、支持",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conscius": {
+  "zh": "知曉、察覺；共知、知情；內疚、有罪",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "funditus": {
+  "zh": "徹底地、完全地；根本上、從底部",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opto": {
+  "zh": "選擇、揀選；希望、願望",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magnopere": {
+  "zh": "非常、極其；費力地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impero": {
+  "zh": "命令、下令；統治",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "miseria": {
+  "zh": "苦難、悲慘、痛苦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accessus": {
+  "zh": "接近、來臨；進入、謁見；攻擊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "justificatio": {
+  "zh": "成義、稱義；正直、公正",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "congregatio": {
+  "zh": "聚集、集合；團體、教眾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jurisdictio": {
+  "zh": "司法權、統轄權；司法行為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "felicitas": {
+  "zh": "幸運、幸福、好運",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "primas": {
+  "zh": "貴族、第一人；最高級的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "arbitror": {
+  "zh": "見聞、作證；判決、認為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consecratio": {
+  "zh": "祝聖、獻奉；成聖、神聖化",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exemplar": {
+  "zh": "範本、模式、典範；抄本",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "graviter": {
+  "zh": "猛烈地、深深地；嚴厲地、勉強地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conventus": {
+  "zh": "約定、協議；聚集、集會",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consortium": {
+  "zh": "共有、合夥、交誼；伴侶",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subsum": {
+  "zh": "處於下位、潛伏；備用",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "imus": {
+  "zh": "最深、最下、最末的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amicitia": {
+  "zh": "友誼、友邦、友好關係",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "proles": {
+  "zh": "子嗣、後裔、世代",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "magnitudo": {
+  "zh": "大小、偉大、重要性",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "evado": {
+  "zh": "逃脫、躲避、免於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fortitudo": {
+  "zh": "力量、勇氣、堅毅",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "securitas": {
+  "zh": "無憂、安全、放心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "novissimus": {
+  "zh": "最後的、最近的、極度的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "respectus": {
+  "zh": "回顧、庇護、考慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "deinceps": {
+  "zh": "依序、相繼、逐一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aditus": {
+  "zh": "接近、進入、機會",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occursus": {
+  "zh": "相遇、對面",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "confirmatio": {
+  "zh": "堅定、鼓勵、安慰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insignis": {
+  "zh": "顯著的、傑出的、著名的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vigeo": {
+  "zh": "強盛、興盛、活躍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nexus": {
+  "zh": "債奴、從人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lucrum": {
+  "zh": "利益、利潤、貪心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cottidianus": {
+  "zh": "每日的、日常的、普通的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opportunus": {
+  "zh": "適當的、有利的、適合的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "calamitas": {
+  "zh": "損害、災難、敗績",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "visio": {
+  "zh": "視象、幻象、景象",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "excludo": {
+  "zh": "排除、驅逐、阻止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "continuo": {
+  "zh": "立即、隨即、連續不斷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conservo": {
+  "zh": "保持、保護、保存",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pulchritudo": {
+  "zh": "美、美德、卓越",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sancio": {
+  "zh": "確認、制定、履行、奉獻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "juvo": {
+  "zh": "幫助、協助、助益",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "accurate": {
+  "zh": "謹慎、精確、細心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reverentia": {
+  "zh": "敬畏、尊敬、虔誠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "violentia": {
+  "zh": "暴力、猛烈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verso": {
+  "zh": "旋轉、翻動、混合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vix": {
+  "zh": "幾乎不、勉強、不情願地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "passim": {
+  "zh": "到處、散見各處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diffundo": {
+  "zh": "散布、傾注、揮霍",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "artifex": {
+  "zh": "工匠、藝人、創作者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plene": {
+  "zh": "充分、豐富、完全",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diligentia": {
+  "zh": "勤勉、留心、節儉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "neve": {
+  "zh": "勿、不；勿……勿（皆勿）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "extremum": {
+  "zh": "邊界、終極、末端",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aequitas": {
+  "zh": "公正、公平、衡平",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "congruenter": {
+  "zh": "恰當地、相稱地、適切地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "juventus": {
+  "zh": "青年、青年時期、年輕人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consolatio": {
+  "zh": "安慰、寬解、撫慰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "satisfacio": {
+  "zh": "滿足、賠償、道歉、足夠",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "repugno": {
+  "zh": "反抗、對抗、不相容、矛盾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tantopere": {
+  "zh": "如此、這般、甚為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inopia": {
+  "zh": "缺乏、貧困、匱乏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "arguo": {
+  "zh": "證明、指控、譴責、駁斥",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nonnumquam": {
+  "zh": "有時、偶爾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "validus": {
+  "zh": "強大、有力、有效",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rector": {
+  "zh": "領導者、統治者、舵手、驾手",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indicium": {
+  "zh": "證據、示證、證明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "recens": {
+  "zh": "新近的、新鮮的、休息過的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "minuo": {
+  "zh": "減少、減弱、減損、縮小",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fortuna": {
+  "zh": "命運、幸運、財富、境遇",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tuto": {
+  "zh": "保護、防衛、防止",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "feliciter": {
+  "zh": "幸福地、幸運地、順利地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vigor": {
+  "zh": "活力、精力、氣勢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "caveo": {
+  "zh": "謹慎、避免；設保、規定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "reduco": {
+  "zh": "帶回、恢復；減少",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "obnoxius": {
+  "zh": "應負責的、有罪的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Pentecoste": {
+  "zh": "聖靈降臨節",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suffragium": {
+  "zh": "投票、判斷；喝彩",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consummatio": {
+  "zh": "總和、完成；最高點",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cumque": {
+  "zh": "無論何時；任意、某某",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "urgeo": {
+  "zh": "按壓、推動；不斷踐踏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patrimonium": {
+  "zh": "遺產、世襲產業",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "postulatum": {
+  "zh": "要求、請求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "induo": {
+  "zh": "穿上、披上；著衣",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paulatim": {
+  "zh": "逐漸地、一點一點地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "revoco": {
+  "zh": "召回、恢復；重振",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "arcanus": {
+  "zh": "秘密的、隱密的；神秘的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "brevis": {
+  "zh": "短的、簡潔的；狹窄的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mensura": {
+  "zh": "量度、尺度；容量",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "immortalis": {
+  "zh": "不朽的、永恆的；不壞的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "duplex": {
+  "zh": "雙重的、分裂的；虛偽的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "promissio": {
+  "zh": "承諾、保證",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "privatus": {
+  "zh": "私人的、個人的；平民的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "stabilis": {
+  "zh": "穩定的、堅定的；不變的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commemoro": {
+  "zh": "回憶、銘記；提及、記述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fraternitas": {
+  "zh": "兄弟情誼、手足之愛；兄弟般的關係",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praescribo": {
+  "zh": "命令、指示；規定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incommodus": {
+  "zh": "不便的、令人厭煩的；不利的、不適當的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "honestas": {
+  "zh": "榮譽、廉正、誠實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "equidem": {
+  "zh": "確實、誠然；就我而言",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "liqueo": {
+  "zh": "呈液態、熔化；明白、顯然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adhaereo": {
+  "zh": "粘著、依附；堅守、專注",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solacium": {
+  "zh": "安慰、撫慰；憂苦中的寬解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hierarchia": {
+  "zh": "聖品階級、聖等制度；教會統治體系",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dioecesis": {
+  "zh": "教區、主教管轄區；羅馬行省",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contemplatio": {
+  "zh": "觀察、凝視；冥想、沉思、思慮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contextus": {
+  "zh": "編織、結合；脈絡、連貫性",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dummodo": {
+  "zh": "只要、倘若（引導條件子句）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "instar": {
+  "zh": "肖像、類似物；與……相等",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interpretatio": {
+  "zh": "解釋、闡釋；意義",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mentio": {
+  "zh": "提及、言及；呼名、記述",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "revelatio": {
+  "zh": "啟示、揭示；聖若望默示錄",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "constantia": {
+  "zh": "堅定、恆心、堅貞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "resisto": {
+  "zh": "抵抗、反對、對抗；駐足",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "essentialis": {
+  "zh": "本質的、本有的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "constans": {
+  "zh": "恆定的、堅貞的、穩固的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fel": {
+  "zh": "膽汁、毒液、苦味",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "firmitas": {
+  "zh": "堅固、牢固、強度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "certamen": {
+  "zh": "競賽、戰鬥、爭執",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sustento": {
+  "zh": "堅持、忍耐、支撐",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "differo": {
+  "zh": "延遲、推遲；不同、有別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diuturnus": {
+  "zh": "長久的、持久的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "custos": {
+  "zh": "衛兵、守衛、守護者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vulnus": {
+  "zh": "創傷、傷害、心靈創痛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "privatim": {
+  "zh": "私下地、以私人身份",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jugiter": {
+  "zh": "不斷地、持續地、頻繁地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sinus": {
+  "zh": "酒碗、盛酒器皿",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inquiro": {
+  "zh": "調查、追查、探尋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impetus": {
+  "zh": "衝擊、攻勢、衝動",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "absolvo": {
+  "zh": "解放、赦免、結束",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vito": {
+  "zh": "迴避、躲避、規避",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "zelus": {
+  "zh": "熱誠、妒忌、競爭心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "imitor": {
+  "zh": "模仿、效法、相似",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "undique": {
+  "zh": "四面八方、各方面",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "corrumpo": {
+  "zh": "腐爛、毀壞、污染、摧毀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "partim": {
+  "zh": "部分地、一部分……另一部分",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "amanter": {
+  "zh": "親切地、充滿愛意地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "acriter": {
+  "zh": "敏銳地、猛烈地、堅定地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "essentia": {
+  "zh": "本質、實體、存在",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "angustia": {
+  "zh": "狹隘、困難、海峽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "varietas": {
+  "zh": "多樣、差異、斑駁",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "comperio": {
+  "zh": "發現、確認、查明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "controversia": {
+  "zh": "爭論、辯論、論題",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diversitas": {
+  "zh": "差異、不同",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exercitatio": {
+  "zh": "練習、訓練、修習",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "donatio": {
+  "zh": "捐贈、贈禮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tertio": {
+  "zh": "第三、第三地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "commode": {
+  "zh": "合宜地、恰當地、雅致地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ordinarius": {
+  "zh": "常規的、普通的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "centrum": {
+  "zh": "中心、軸心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mano": {
+  "zh": "流動、涌出、濕潤",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "unctio": {
+  "zh": "傅油、傅抹；塗膏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "justifico": {
+  "zh": "使成義、稱義；寬恕、赦免",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "excedo": {
+  "zh": "超越、逾越；離去、過世",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interim": {
+  "zh": "同時、其間；然而、然則",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dubitatio": {
+  "zh": "疑惑、躊躇；猶豫、不決",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "morbus": {
+  "zh": "疾病、病患；症疾、缺陷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patrocinium": {
+  "zh": "庇護、捍衛；代訟、法律扶助",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "designo": {
+  "zh": "標記、描劃；指示、表明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "eximius": {
+  "zh": "特選的、非凡的；卓越的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hactenus": {
+  "zh": "迄今、至此；在此限度內",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ardor": {
+  "zh": "火焰、熱烈；情熱、熾愛",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fas": {
+  "zh": "天法、神旨；合法的、應當的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mercor": {
+  "zh": "貿易、經商；購買",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "utinam": {
+  "zh": "願、若得",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mendacium": {
+  "zh": "謊言、虛偽；詐欺、贗造",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adversor": {
+  "zh": "反對、敵對；抵抗",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consentaneus": {
+  "zh": "相宜的、相符的；一致的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "occupo": {
+  "zh": "佔領、奪取；攻擊、襲擊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impulsus": {
+  "zh": "衝擊、震盪；激勵、驅使",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "uber": {
+  "zh": "乳房、乳頭；乳汁；肥沃之土；豐饒、充足",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "repeto": {
+  "zh": "返回、回到；取回、收回；重複、重申；索討",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "consummo": {
+  "zh": "合計、算總；完成、終結；達成、實現",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "egeo": {
+  "zh": "需要、缺乏；要求、必須",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "suadeo": {
+  "zh": "勸促、建議；誘導；勸服、勸告",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sapienter": {
+  "zh": "智慧地、明智地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "solutio": {
+  "zh": "鬆弛、緩解；支付、償還",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intueor": {
+  "zh": "注視、觀看；考量、視為；欣賞",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nedum": {
+  "zh": "更不用說、況乎；遑論",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "promoveo": {
+  "zh": "推進、前移；晉升、提升",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prospectus": {
+  "zh": "景象、展望；視野",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "notitia": {
+  "zh": "認識、知曉；熟悉、相識",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "redigo": {
+  "zh": "趕回、驅退；轉變、化為",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lateo": {
+  "zh": "潛伏、隱沒；隱居、逃避",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "beatitudo": {
+  "zh": "至福、真福；幸福之境",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "egregius": {
+  "zh": "非凡、卓異；傑出、優秀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "peritus": {
+  "zh": "熟練、精通；經驗豐富、專精",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "victus": {
+  "zh": "生活、生活方式；食物、養分；飲食",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "popularis": {
+  "zh": "人民的、平民的；通俗的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "admiratio": {
+  "zh": "驚異、驚歎；敬慕、尊敬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Aegyptius": {
+  "zh": "埃及的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Nazarēnus": {
+  "zh": "拿撒勒的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Galileaeus": {
+  "zh": "加利利的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Jūdaeus": {
+  "zh": "猶太的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Rōmānus": {
+  "zh": "羅馬的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conclūdō": {
+  "zh": "關閉、封閉；結論、推斷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōtīdiānus": {
+  "zh": "每日的、日常的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cōtīdiē": {
+  "zh": "每日、日常地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "custōdiō": {
+  "zh": "守衛、看守、保護",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēvōtus": {
+  "zh": "虔誠的、奉獻的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "discēdō": {
+  "zh": "離開、出發",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "evangelizō": {
+  "zh": "宣講福音",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "extendō": {
+  "zh": "伸展、延伸",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fēstus": {
+  "zh": "節慶的、祭日的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "grex": {
+  "zh": "羊群、牧群",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hūmānitās": {
+  "zh": "人性、人文、仁慈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incēdō": {
+  "zh": "行走、前進",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "inde": {
+  "zh": "自彼處、自那時起",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "indeficiēns": {
+  "zh": "不衰退的、恆久的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intentus": {
+  "zh": "伸展的、緊張的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "interficiō": {
+  "zh": "殺害、除去",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lex": {
+  "zh": "法律、律法",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ostendō": {
+  "zh": "展示、說明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tendō": {
+  "zh": "伸展、張開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "simulac": {
+  "zh": "一旦、伊始",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vādō": {
+  "zh": "行走、匆促",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "verītās": {
+  "zh": "真理、真實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "addīcō": {
+  "zh": "判決、定罪",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "avē!": {
+  "zh": "問安、告別",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "circā": {
+  "zh": "環繞、大約",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contrādicō": {
+  "zh": "爭辯、反駁",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "currō": {
+  "zh": "奔馳、急行",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "defendō": {
+  "zh": "保衛、防禦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dēposcō": {
+  "zh": "懇求、要求",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dīves": {
+  "zh": "富有、富裕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dolor": {
+  "zh": "悲哀、痛苦",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "effūsiō": {
+  "zh": "傾注、流溢",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "extrā": {
+  "zh": "超越、外面",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fleō": {
+  "zh": "哭泣、哀傷",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fugiō": {
+  "zh": "逃離、躲避",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "honor": {
+  "zh": "榮譽、尊敬",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "imperātor": {
+  "zh": "將軍、皇帝",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nē": {
+  "zh": "以免、使不；使；恐怕",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "āvertō": {
+  "zh": "轉身、移開",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "dispār": {
+  "zh": "不同、有異",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vertō": {
+  "zh": "轉、旋轉",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "uxor": {
+  "zh": "妻子",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "porro": {
+  "zh": "往外、更遠；從前、今後；再者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "archidiaconus": {
+  "zh": "副主教",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "diverto": {
+  "zh": "分開、轉離；背棄婚約",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "comes": {
+  "zh": "同伴、夥伴、從者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prudentia": {
+  "zh": "謹慎、智慧、遠見",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "anathema": {
+  "zh": "咒詛、絕罰",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sapio": {
+  "zh": "嚐、有味；領悟、明智",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "idolum": {
+  "zh": "幻影、影像；偶像",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "libido": {
+  "zh": "欲望、情慾、意願",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "principalis": {
+  "zh": "主要的、首要的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "qualiter": {
+  "zh": "如何、用何方式；就像",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "jejunium": {
+  "zh": "禁食、齋戒；饑餓",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insuper": {
+  "zh": "此外、另外；在上面",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aureus": {
+  "zh": "金製的、黃金色的；光輝的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "superbia": {
+  "zh": "傲慢、驕傲",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "publice": {
+  "zh": "公開地、以公費",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adjungo": {
+  "zh": "加入、附加、連結、馬套",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "significatio": {
+  "zh": "信號、標誌；意義、暗示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conjunctio": {
+  "zh": "結合、聯合；相互愛好",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "declaro": {
+  "zh": "宣布、公告；表明、證實；表示",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "plenitudo": {
+  "zh": "圓滿、豐富；充實、厚度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "difficultas": {
+  "zh": "困難、麻煩；艱苦、貧困",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vehementer": {
+  "zh": "猛烈地、有力地；極其、非常",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "unio": {
+  "zh": "合一、統一",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mutuus": {
+  "zh": "相互的、互相的；借貸的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nitor": {
+  "zh": "依靠、倚託；奮力、努力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adduco": {
+  "zh": "引領、帶往；勸誘、說服；收縮",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "apostolatus": {
+  "zh": "宗徒位份、宗徒職分",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "argumentum": {
+  "zh": "論據、論証、理由；情節",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "unicus": {
+  "zh": "唯一的、獨有的、無與倫比的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "patriarcha": {
+  "zh": "宗族長、族長；主教長",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "utpote": {
+  "zh": "作為、既然、即",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "discrimen": {
+  "zh": "分界、區別、差異；關鍵時刻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "incrementum": {
+  "zh": "增長、發展、進步；萌芽",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "constitutio": {
+  "zh": "構成、結構、體質；規定、制度",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "percipio": {
+  "zh": "獲得、領受；感知、察覺、瞭解",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "saltem": {
+  "zh": "至少、至多、即便、甚至",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "missio": {
+  "zh": "遣遣、派遣；遣散、解職；赦免",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ambitus": {
+  "zh": "周圍、邊界、範圍；軌跡、迴圈",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "effectus": {
+  "zh": "執行、實行、效果、結果",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "theologia": {
+  "zh": "神學、關於天主事物的學問",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "cottidie": {
+  "zh": "每天、日日、通常、尋常",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "momentum": {
+  "zh": "時刻、重要性、影響力；動作、推動",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quoad": {
+  "zh": "至於、就……而言；直到、只要",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "communico": {
+  "zh": "共有、分享；交通、聯誼、領受",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rectus": {
+  "zh": "正直、正當；筆直；誠實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "umquam": {
+  "zh": "曾經、任何時候",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "participo": {
+  "zh": "分享、分與；參與、分擔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "coetus": {
+  "zh": "集會、聚集；團體、幫派、群眾",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "educatio": {
+  "zh": "培養、教養、養育",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "December": {
+  "zh": "十二月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "necessario": {
+  "zh": "必然地、不得已地、必定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rite": {
+  "zh": "按禮儀地、莊嚴地；適當地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "quodsi": {
+  "zh": "但若、若且、設若（引導條件句）",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vocatio": {
+  "zh": "召喚、聖召、職業",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aequus": {
+  "zh": "平坦、相等；公正、寬容、泰然",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "divinitus": {
+  "zh": "由天而降、出於神聖；神妙地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "probe": {
+  "zh": "恰當地、正確地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "thesaurus": {
+  "zh": "寶庫、庫藏；財寶、珍品",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intimus": {
+  "zh": "最內部的、最密切、至親",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "compono": {
+  "zh": "並排比較、組合；平定、緩和",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subsidium": {
+  "zh": "援助、救濟；增援、後備兵力",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praetereo": {
+  "zh": "經過、超越；忽視、漏掉、遺漏",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "congruo": {
+  "zh": "相合、協調、相符；適應",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "aperte": {
+  "zh": "公開地、明白地、坦率地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "mysticus": {
+  "zh": "神祕的、屬於聖禮的；秘密的、神聖奧祕的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "praesidium": {
+  "zh": "保護、防衛；守衛隊、駐防部隊",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sino": {
+  "zh": "允許、容許",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "hodiernus": {
+  "zh": "今日的、當代的；現存的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "explico": {
+  "zh": "展開、伸展；闡述、說明、解釋",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "onus": {
+  "zh": "負擔、重擔；貨物",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "epistula": {
+  "zh": "書信、文件；皇帝詔令；書簡",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "processus": {
+  "zh": "前進、進展；發展過程",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "exercitium": {
+  "zh": "習練、訓練；熟能、技能",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "comparo": {
+  "zh": "籌備、預備；蒐集、徵集；聯合",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "procul": {
+  "zh": "遠處、遠方；隔離地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "definio": {
+  "zh": "界定、規定；限制、確定；制定",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "impedimentum": {
+  "zh": "妨礙、阻礙；（軍隊）輜重",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "pastoralis": {
+  "zh": "牧者的、牧養的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "providentia": {
+  "zh": "先見、遠慮；天意、攝理",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oeconomicus": {
+  "zh": "家政的、經濟的；井然有序的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "adipiscor": {
+  "zh": "獲得、贏得；達到、趕上",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "insum": {
+  "zh": "存在於、包含於；屬於",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "successor": {
+  "zh": "後繼者、接班人",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "absolutus": {
+  "zh": "完美的、完整的；純淨的、絕對的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "regularis": {
+  "zh": "成條狀的、可錘成條狀的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Martius": {
+  "zh": "三月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "robur": {
+  "zh": "橡樹、堅固、決心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Augustus": {
+  "zh": "奧古斯都",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Januarius": {
+  "zh": "一月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Israel": {
+  "zh": "以色列民族、天主的民族",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "huc": {
+  "zh": "到此地、至此",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Dec": {
+  "zh": "十二月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Quintus": {
+  "zh": "昆圖斯",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Julius": {
+  "zh": "七月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "illuc": {
+  "zh": "到那裡、至彼處",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "Februarius": {
+  "zh": "二月",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "factum": {
+  "zh": "事實、行為、業績",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "simpliciter": {
+  "zh": "簡單地、純粹地、坦率地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opifex": {
+  "zh": "工匠、勞動者",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "localis": {
+  "zh": "地方的、與地點相關的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "gradatim": {
+  "zh": "逐步地、漸進地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "opportunitas": {
+  "zh": "便利、適當時機、機會",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "abstineo": {
+  "zh": "節制、禁絕、遠離",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "collegium": {
+  "zh": "學院、公會、同業組織",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "sexus": {
+  "zh": "性別、性徵",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "directe": {
+  "zh": "直接地、逐次地、筆直",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "obsecro": {
+  "zh": "懇求、哀禱、拜託",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "misere": {
+  "zh": "悲慘地、絕望地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "ethica": {
+  "zh": "倫理學、道德哲學",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "tutus": {
+  "zh": "安全的、謹慎的、受保護的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "produco": {
+  "zh": "引出、展示、延長",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rationalis": {
+  "zh": "理性的、推論的、有理由的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "certitudo": {
+  "zh": "確實性、堅固確信；真理",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "attendo": {
+  "zh": "注意、傾聽、專心",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "potior": {
+  "zh": "更好的、更優越的、更重要的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "custodia": {
+  "zh": "保護、監禁、看守",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "subditus": {
+  "zh": "服從的、臣民的、被統治的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "vindico": {
+  "zh": "聲張、懲罰、復仇",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "studiose": {
+  "zh": "熱切地、勤勉地、認真地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "conceptio": {
+  "zh": "懷孕、構想、觀念",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "convenienter": {
+  "zh": "適切地、相符地、協調地",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "atqui": {
+  "zh": "然而、但是、卻",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "primarius": {
+  "zh": "第一位的、傑出的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "intellegentia": {
+  "zh": "智慧、理智、領悟",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "prudens": {
+  "zh": "謹慎的、聰慧的、有遠見的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "profectus": {
+  "zh": "進步、成功",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "visus": {
+  "zh": "視覺、景象、外表",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "manifestatio": {
+  "zh": "啟示、彰顯、顯明",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "fames": {
+  "zh": "飢餓、饑荒、渴望",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "foveo": {
+  "zh": "溫暖、偏愛、培育",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "defensio": {
+  "zh": "防衛、辯護、申辭",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "rēgīna": {
+  "zh": "女王",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Sabaōth": {
+  "zh": "軍隊、天軍",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "dirigō": {
+  "zh": "指導、引導",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "circumspiciō": {
+  "zh": "環顧、周圍觀察",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "titive gen.": {
+  "zh": "足夠、充分",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "obeō": {
+  "zh": "迎接；死亡",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "accēdō": {
+  "zh": "前往、接近",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "intendō": {
+  "zh": "瞄準、注視",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Lēvīta": {
+  "zh": "執事、利未人",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "alloquor": {
+  "zh": "對話、呼喚",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "diabolus": {
+  "zh": "魔鬼",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "filia": {
+  "zh": "女兒",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "occurrō": {
+  "zh": "趨近、迎接",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "attrahō": {
+  "zh": "拉近、吸引",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Moyses": {
+  "zh": "摩西",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "erga": {
+  "zh": "對於、面對",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Augustinus": {
+  "zh": "奧斯定",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "spons": {
+  "zh": "自願",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "relatio": {
+  "zh": "報告、轉介",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Jēsus": {
+  "zh": "耶穌",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "interdico": {
+  "zh": "禁止、阻止；拒絕",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "numquid": {
+  "zh": "難道、莫非",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "sex": {
+  "zh": "六",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "juste": {
+  "zh": "公正地、正當地；合理地",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "flumen": {
+  "zh": "河流、溪流；流動的液體",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "carnalis": {
+  "zh": "肉體的、世俗的；屬肉體的",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "exercitus": {
+  "zh": "軍隊、部隊；大群",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "quoties": {
+  "zh": "多少次；每次",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "competo": {
+  "zh": "相遇；同時發生；符合；競爭",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "fidelitas": {
+  "zh": "忠誠、信實",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "admirabilis": {
+  "zh": "令人驚嘆的、奇妙的、不可思議的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "excello": {
+  "zh": "傑出、卓越、超越",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "narratio": {
+  "zh": "敍述、故事",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "castitas": {
+  "zh": "貞潔、純潔、廉潔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "nuper": {
+  "zh": "近來、最近、不久前",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "assigno": {
+  "zh": "分配、指派、授予、歸咎",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "boundary": {
+  "zh": "領土、區域",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "ad": {
+  "zh": "向、趨向；為了；在",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "animus": {
+  "zh": "心、意志、精神",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "qui": {
+  "zh": "誰、什麼；哪個、那個",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "voluntās": {
+  "zh": "意志、心願",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "sursum": {
+  "zh": "向上、在上",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "arbitrium": {
+  "zh": "判斷、決定；意志、權柄",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Decimus": {
+  "zh": "第十、戴克姆",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Junius": {
+  "zh": "六月",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Aprilis": {
+  "zh": "四月",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ }
+}

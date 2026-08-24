@@ -57,7 +57,22 @@ Type persons, places, peoples/nations, and divine names/titles. Mixed-sense lemm
 
 ### Curriculum and lexical data
 
-- Freeze a textbook or explicitly approved frequency corpus before assigning 1,000 words. Do not convert a placeholder plan into a completed vocabulary list.
+- Frozen 2026-08-25 at two volumes of 50 lessons x 20 words. The upper volume is
+  Collins, *A Primer of Ecclesiastical Latin* (CUA 1985) in the textbook's own
+  order; the lower volume is corpus frequency over the patristic/medieval and
+  then the modern curial corpora. See `latin-reader-contract.md`.
+- Recover Collins's order from the back `Latin-English Vocabulary`, where every
+  entry carries the unit that introduced it, rather than from the thirty-five
+  scattered unit lists. Entries marked `(E<n>)` are exercise glosses, not lessons.
+- The scanned primer's PDF text layer destroys every macron. Use it to check
+  which entries exist; re-read the pages as images for the forms.
+- Do not re-sort the textbook order into frequency order.
+- Lemmatise through three registers in this precedence and no other: Vulgate
+  (PROIEL's Jerome sentences), church (Index Thomisticus, Late Latin Charters,
+  Dante), classic (Caesar/Cicero/Perseus). A Vulgate-only inventory strands the
+  lower volume; a Classical-first one repeats the Greek reader's Attic mistake.
+- Take dictionary forms from Whitaker's WORDS, whose spelling also settles the
+  u/v split between treebank and textbook.
 - Store dictionary principal parts and the selected inflected display form.
 - Preserve source `u/v`, `i/j`, capitalization, punctuation, and ligatures. Put search normalization in a separate field.
 - If macrons or stress marks are editorial, retain the unmodified source form and label the added layer.
@@ -66,7 +81,11 @@ Type persons, places, peoples/nations, and divine names/titles. Mixed-sense lemm
 ### Texts and appendices
 
 - Distinguish Clementine Vulgate, Stuttgart Vulgate, and Nova Vulgata. Freeze one exact edition per reading.
-- Route Vulgate/Psalm numbering differences through a tested crosswalk to RCUV2010.
+- Traditional-Chinese parallel is 思高譯本, not RCUV2010. The owner chose it on
+  2026-08-25 for structural reasons: the Vulgate numbers its psalms the Greek
+  way, carries the deuterocanonical books, and names people the Catholic way.
+  Route the Vulgate/Hebrew psalm differences through a crosswalk that is
+  verified against the text of each psalm, not asserted.
 - Latin Fathers must use exact original Latin source locations; do not substitute Schaff English or an unlabelled modern translation.
 - Record whether the Ordo or prayer source is historical/public-domain, modern-edition authorized, or an excerpt.
 

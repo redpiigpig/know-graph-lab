@@ -151,3 +151,15 @@ output/source-cache/original-readers/greek-full/*.log
 # scripts/match_flashcard_images.py re-downloads on demand.
 output/source-cache/flashcards/openmoji-618/
 output/source-cache/flashcards/openmoji.json
+
+# Ecclesiastical Latin reader — downloaded build inputs, all reproducible.
+# The curated outputs (plans, Chinese, glosses) are tracked; these are not.
+output/source-cache/original-readers/latin-full/latVUC*
+output/source-cache/original-readers/latin-full/UD_Latin-*
+output/source-cache/original-readers/latin-full/ud-*.zip
+output/source-cache/original-readers/latin-full/whitakers*
+output/source-cache/original-readers/latin-full/latin-church/
+output/source-cache/original-readers/latin-full/collins-pages/
+output/source-cache/original-readers/latin-full/latin-lexicon.json
+output/source-cache/original-readers/latin-full/vulgate-lexicon.json
+output/source-cache/original-readers/latin-full/sigao-cache.json

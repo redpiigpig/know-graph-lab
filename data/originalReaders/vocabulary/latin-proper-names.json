@@ -1,0 +1,152 @@
+[
+ {
+  "headword": "Jūdaea",
+  "forms": "Jūdaea, Jūdaeae",
+  "gram": "f.",
+  "glossEn": "Judea",
+  "unit": 2,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Maria",
+  "forms": "Maria, Mariae, f.",
+  "gram": "",
+  "glossEn": "Mary",
+  "unit": 2,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Petrus",
+  "forms": "Petrus, Petrī, m.",
+  "gram": "",
+  "glossEn": "Peter",
+  "unit": 2,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Hebraeus",
+  "forms": "Hebraeus, Hebraeī, m.",
+  "gram": "",
+  "glossEn": "Hebrew",
+  "unit": 6,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Galilaea",
+  "forms": "Galilaea, Galilaeae, f.",
+  "gram": "",
+  "glossEn": "Galilee",
+  "unit": 10,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Adam",
+  "forms": "Adam, Adae, m.",
+  "gram": "",
+  "glossEn": "Adam",
+  "unit": 11,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Paulus",
+  "forms": "Paulus, Paulī, m.",
+  "gram": "",
+  "glossEn": "Paul",
+  "unit": 11,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Ēva",
+  "forms": "Ēva, Ēvae",
+  "gram": "f.",
+  "glossEn": "Eve",
+  "unit": 12,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Joannes",
+  "forms": "Joannes, Joannis",
+  "gram": "m.",
+  "glossEn": "John",
+  "unit": 14,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Jērūsālem",
+  "forms": "Jērūsālem",
+  "gram": "Hebrew: indecl. n.; also, Hierosolyma, Hierosolymae, f., & Hierosolyma, Hierosolymōrum, n.",
+  "glossEn": "Jerusalem",
+  "unit": 17,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Rōma",
+  "forms": "Rōma, Rōmae, f.",
+  "gram": "",
+  "glossEn": "Rome",
+  "unit": 17,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Lūcās",
+  "forms": "Lūcās, Lūcae, m.",
+  "gram": "",
+  "glossEn": "Luke",
+  "unit": 18,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Olivētum",
+  "forms": "Olivētum, Olivētī, n.",
+  "gram": "",
+  "glossEn": "Olivet [a hill east of Jerusalem]",
+  "unit": 24,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Pontius Pilatus",
+  "forms": "Pontius Pilatus, Pontii Pilāti, m.",
+  "gram": "",
+  "glossEn": "Pontius Pilatus, Pilate",
+  "unit": 27,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ },
+ {
+  "headword": "Magdalēna",
+  "forms": "Magdalēna, Magdalēnae, f.",
+  "gram": "",
+  "glossEn": "Magdalen",
+  "unit": 29,
+  "exerciseOnly": false,
+  "under": "",
+  "attested": true
+ }
+]
