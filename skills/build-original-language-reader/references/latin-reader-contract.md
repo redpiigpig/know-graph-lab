@@ -187,6 +187,27 @@ remaining 23 are the Latin Library patristic texts, which have none and must be
 self-translated and labelled `自譯`. That is the largest outstanding gap in the
 lower volume and it is not to be described as anything smaller.
 
+## Memory units
+
+Two per lesson, a hundred per volume, built by
+`scripts/build_latin_memory_units.py --write`. Each unit is assigned to the
+earliest lesson whose **cumulative** vocabulary can nearly read it — at most one
+word in seven left to look up, because demanding total coverage against a
+two-thousand-word reader in an eight-thousand-lemma Bible clears almost nothing.
+
+Readability runs one way: a unit readable at lesson three is still readable at
+lesson thirty. So each lesson draws from every pool up to its own, taking the
+most demanding candidates it can now handle. Filling each lesson only from its
+own pool front-loads the entire book.
+
+下冊's running vocabulary **starts from all thousand of 上冊's words.** A reader
+opening the second volume has finished the first.
+
+Rejected outright: census and genealogy lines, anything that does not open with
+a capital and close on a stop, near-duplicates of an already-chosen unit, and
+anything the lemmatiser cannot read four words in five — that last one is what
+keeps citation apparatus out.
+
 ## Appendices
 
 Ten tables, outside the twenty-per-lesson count, built by

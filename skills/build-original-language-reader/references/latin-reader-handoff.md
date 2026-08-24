@@ -14,7 +14,8 @@ relying on any of it.
 | 上冊 reading plan | `output/source-cache/original-readers/latin-full/scripture-plan.json` | 50 chapters, 1,514 verses, 24,288 words |
 | 上冊 Chinese | `.../sigao-zh.json` | all 50 chapters, 思高譯本 |
 | 下冊 reading plan | `.../church-plan.json` | 50 readings, 15 complete / 35 excerpt |
-| Chinese glosses | `.../gloss-zh.json` | see below |
+| Chinese glosses | `.../gloss-zh.json` | 1,999 of 2,000 |
+| Memory units | `.../memory-units.json`, `memory-selection-review.md` | 上冊 79/100, 下冊 100/100, unreviewed |
 | Contract | `references/latin-reader-contract.md` | frozen |
 | Gate | `scripts/verify_latin_reader.py` | hard checks pass |
 
@@ -29,6 +30,7 @@ python -X utf8 scripts/export_reader_sigao.py --write
 python -X utf8 scripts/build_latin_church_plan.py --write
 python -X utf8 scripts/build_latin_appendices.py --write
 python -X utf8 scripts/gloss_latin_vocabulary_zh.py --write
+python -X utf8 scripts/build_latin_memory_units.py --write
 python -X utf8 scripts/verify_latin_reader.py
 ```
 
@@ -39,9 +41,15 @@ checksums.
 
 ## What does not exist yet, stated plainly
 
-1. **The 100 memory units per volume are not built.** The release contract calls
-   for two per lesson; none are selected. This is the largest missing piece of
-   the curriculum proper.
+1. **Memory units: 下冊 is complete at 100/100, 上冊 stands at 79/100.**
+   Built by `scripts/build_latin_memory_units.py`, reviewable in
+   `memory-selection-review.md`; none of them has been read by a human yet.
+   The upper volume's gap is concentrated in lessons 1–12, and it is a real
+   constraint rather than a bug: a lesson that has taught twenty words cannot
+   read a complete Vulgate verse. The obvious filler is the short liturgical
+   formulas — Kyrie, Amen, Deo gratias, the petitions of the Pater noster — but
+   the Greek release's owner explicitly barred liturgy from 上冊, so whether
+   that bar applies here is the owner's call and was left alone.
 2. **The word-by-word gloss layer over the readings is not built.** 24,288 words
    in 上冊 alone. Nothing has been tokenised or glossed at token level.
 3. **23 of the 50 lower-volume readings have no Chinese.** They are the Latin
@@ -50,8 +58,8 @@ checksums.
 4. **The Ordo Missae is `source_pending`.** The current Missale Romanum is under
    the Holy See's copyright and no authorized edition has been recorded. Do not
    substitute a transcription found online.
-5. **Proper-name Chinese reaches 55 of the 117 names the fifty chapters actually
-   print** (47%), and 0 of the 468 names elsewhere in the Vulgate. The alignment
+5. **Proper-name Chinese reaches 53 of the 117 names the fifty chapters actually
+   print** (45%), and none of the 468 names elsewhere in the Vulgate. The alignment
    register only covers what is printed; extending it means printing more
    chapters, not loosening the guard.
 6. **No DOCX, PDF, web reader, or audio.** Nothing has been laid out.
@@ -85,6 +93,13 @@ checksums.
 - **A two-strike quota rule must count full key sweeps, not individual keys.**
   Aborting on the second key's 429 stops a run that had a live lane two keys
   further down; on a busy night the seventh key is the one that works.
+- **The second volume starts from the first volume's thousand words**, not from
+  zero. Accumulating only 下冊's own vocabulary counted `et`, `sum` and `qui` as
+  unknown in patristic prose and cut its memory units from a hundred to two.
+- **The repository's curial documents keep their footnote citations inline.**
+  Split into sentences, they yield "Dei genetricis, Hom." and "Quam Apostoli
+  sententiam S." — references that parse as sentences. Memory-unit selection
+  draws only from the Latin Library texts until that apparatus is stripped.
 - **Do not re-scan a corpus per lookup.** Asking for one name's commonest
   spelling by scanning three million words, five hundred times, is why the first
   appendix build never finished.

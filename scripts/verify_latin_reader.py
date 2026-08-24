@@ -26,6 +26,7 @@ APPENDICES = ROOT / "data" / "originalReaders" / "vocabulary" / "latin-appendice
 SCRIPTURE = CACHE / "scripture-plan.json"
 CHURCH = CACHE / "church-plan.json"
 SIGAO = CACHE / "sigao-zh.json"
+MEMORY = CACHE / "memory-units.json"
 
 LESSONS = 50
 PER_LESSON = 20
@@ -145,6 +146,21 @@ def main() -> int:
         if church["terminalSection"]["status"] != "ready":
             warnings.append(f"終卷《{church['terminalSection']['title']}》"
                             f"狀態 {church['terminalSection']['status']}")
+
+    memory = load(MEMORY)
+    if memory is None:
+        warnings.append("記憶單元尚未產生")
+    else:
+        for volume in ("上冊", "下冊"):
+            rows = memory[volume]
+            sizes = Counter(r["lesson"] for r in rows)
+            short = [l for l in range(1, LESSONS + 1) if sizes.get(l, 0) < memory["perLesson"]]
+            if short:
+                warnings.append(f"{volume} 記憶單元 {len(rows)}/{LESSONS * memory['perLesson']}；"
+                                f"不足的課 {short[:10]}")
+            over = [l for l, n in sizes.items() if n > memory["perLesson"]]
+            if over:
+                failures.append(f"{volume} 有課超過每課 {memory['perLesson']} 句：{over[:5]}")
 
     for note in warnings:
         print(f"[注意] {note}")
