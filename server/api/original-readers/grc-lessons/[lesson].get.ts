@@ -1,4 +1,4 @@
-import { getGreekLesson } from "~/data/originalReaders/greek-full-reader";
+import { getGreekLesson, parseGreekLessonKey } from "~/data/originalReaders/greek-full-reader";
 
 export default defineEventHandler(async (event) => {
   setHeader(event, "X-Robots-Tag", "noindex, nofollow, noarchive");
@@ -6,13 +6,16 @@ export default defineEventHandler(async (event) => {
   setHeader(event, "Vary", "Authorization");
   await requireAuth(event);
 
-  const rawLesson = getRouterParam(event, "lesson") || "";
-  if (!/^\d{1,2}$/u.test(rawLesson)) {
+  // The reader is two volumes, so the key carries both numbers ("v2-37").  A
+  // bare number still works and means the first volume, which is what every
+  // link written before the second volume existed meant.
+  const parsed = parseGreekLessonKey(getRouterParam(event, "lesson") || "");
+  if (!parsed) {
     throw createError({ statusCode: 404, message: "找不到這一課" });
   }
-  const lesson = getGreekLesson(Number(rawLesson));
+  const lesson = getGreekLesson(parsed.volume, parsed.lesson);
   if (!lesson) {
-    throw createError({ statusCode: 404, message: "課次必須介於 1–50" });
+    throw createError({ statusCode: 404, message: "課次必須是第 1–2 冊的第 1–50 課" });
   }
   return lesson;
 });

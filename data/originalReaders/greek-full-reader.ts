@@ -1,4 +1,4 @@
-import masterJson from "../../output/source-cache/original-readers/greek-full/greek-reader-50-lessons.json";
+import masterJson from "../../output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json";
 import liturgyJson from "../../output/source-cache/original-readers/greek-full/liturgy-chrysostom.json";
 import interlinearJson from "../../output/source-cache/original-readers/greek-full/interlinear.json";
 
@@ -6,10 +6,17 @@ import interlinearJson from "../../output/source-cache/original-readers/greek-fu
 // every surface reads that one file, so this module only types and slices it.
 // It deliberately does not re-derive anything: if a count looks wrong here, the
 // master is wrong, and fixing it here would hide that.
+//
+// The reader is two volumes of fifty lessons, so a lesson is identified by both
+// numbers.  The route key is "v1-12"; a bare number still resolves, to the first
+// volume, because that is what every link written before the second volume
+// existed means.
 
 export interface GreekVocabularyEntry {
   id: string;
+  volume: number;
   ordinal: number;
+  corpus: string;
   lesson: number;
   lessonSlot: number;
   printedEntry: string;
@@ -17,22 +24,30 @@ export interface GreekVocabularyEntry {
   lemma: string;
   transliteration: string;
   textbookTransliteration: string;
+  transliterationSystem: string;
+  transliterationStatus: string;
   glossEn: string;
   glossZh: string;
   strong: string;
+  frequency: number;
+  withinKoine: boolean;
   isProperName: boolean;
   properNameTypes: string[];
   verification: string;
 }
 
-export interface GreekMemoryVerse {
+export interface GreekMemoryUnit {
+  kind: "verse" | "sentence";
   lesson: number;
   slot: number;
   ref: string;
-  book: string;
-  chapter: number;
-  verse: number;
-  corpus: string;
+  corpus?: string;
+  category?: string;
+  book?: string;
+  chapter?: number;
+  verse?: number;
+  readingTitleZh?: string;
+  segmentRef?: string;
   matchMethod: string;
   wordCount: number;
   text: string;
@@ -74,6 +89,7 @@ export interface GreekLessonReading {
   wordCount: number;
   source: string;
   sourceUrl?: string;
+  license?: string;
   corpusLabel?: string;
   categoryLabel?: string;
   author?: string;
@@ -87,26 +103,32 @@ export interface GreekLessonReading {
   absentVerses?: { verse: number; ref: string; note: string }[];
   numberingNote?: string;
   verseNumberingNote?: string;
+  canonNumbers?: string[];
+  canonTotal?: number;
 }
 
 export interface GreekLesson {
+  volume: number;
   lesson: number;
   id: string;
   title: string;
   vocabularySource: string;
   vocabularyCount: number;
   vocabulary: GreekVocabularyEntry[];
-  memoryVerses: GreekMemoryVerse[];
+  memoryUnits: GreekMemoryUnit[];
   reading: GreekLessonReading;
 }
 
 export interface GreekLessonSummary {
+  volume: number;
   lesson: number;
+  key: string;
   id: string;
   title: string;
   vocabularySource: string;
   vocabularyCount: number;
-  memoryVerseCount: number;
+  memoryUnitCount: number;
+  memoryUnitKind: string;
   glossedCount: number;
   reading: {
     kind: GreekLessonReading["kind"];
@@ -120,6 +142,26 @@ export interface GreekLessonSummary {
   href: string;
 }
 
+interface GreekVolume {
+  volume: number;
+  slug: string;
+  title: string;
+  subtitle: string;
+  memoryUnitKind: "verse" | "sentence";
+  corpusByHalf: Record<string, string>;
+  counts: Record<string, number>;
+  lessons: GreekLesson[];
+  appendices: {
+    kind: string;
+    key: string;
+    title: string;
+    titleGrc?: string;
+    stepCount?: number;
+    sectionCount?: number;
+    placement?: string;
+  }[];
+}
+
 const master = masterJson as unknown as {
   title: string;
   subtitle: string;
@@ -131,7 +173,15 @@ const master = masterJson as unknown as {
   printProfile: Record<string, unknown>;
   sources: Record<string, unknown>;
   audio: { status: string; profile: string; policy: string };
-  lessons: GreekLesson[];
+  volumes: GreekVolume[];
+  appendices: {
+    kind: string;
+    key: string;
+    title: string;
+    note: string;
+    entryCount: number;
+    entries: Record<string, unknown>[];
+  }[];
   openProblems: string[];
 };
 
@@ -175,6 +225,22 @@ function readingLabel(reading: GreekLessonReading): string {
   return reading.corpusLabel || reading.categoryLabel || "";
 }
 
+export function greekLessonKey(volume: number, lesson: number): string {
+  return `v${volume}-${lesson}`;
+}
+
+/** Parse "v2-37", or a bare "37" written before the second volume existed. */
+export function parseGreekLessonKey(raw: string): { volume: number; lesson: number } | null {
+  const compound = /^v(\d)-(\d{1,2})$/u.exec(raw);
+  if (compound) {
+    return { volume: Number(compound[1]), lesson: Number(compound[2]) };
+  }
+  if (/^\d{1,2}$/u.test(raw)) {
+    return { volume: 1, lesson: Number(raw) };
+  }
+  return null;
+}
+
 // The word-by-word layer is keyed the same way scripts/build_greek_interlinear.py
 // keys it, so a segment finds its glosses by the id the builder used and nothing
 // has to be re-tokenised here.  A segment with no entry simply shows no gloss
@@ -195,6 +261,10 @@ function attachTokens(unitId: string, segment: GreekReadingSegment): GreekReadin
   };
 }
 
+function memoryUnitId(unit: GreekMemoryUnit): string {
+  return unit.kind === "sentence" ? `sentence:${unit.ref}` : `memory:${unit.ref}`;
+}
+
 function withInterlinear(lesson: GreekLesson): GreekLesson {
   const reading = lesson.reading;
   const isScripture = reading.kind === "scripture_chapter";
@@ -209,9 +279,10 @@ function withInterlinear(lesson: GreekLesson): GreekLesson {
   );
   return {
     ...lesson,
-    memoryVerses: lesson.memoryVerses.map((verse) => ({
-      ...verse,
-      tokens: interlinear[`memory:${verse.ref}`]?.tokens || [],
+    memoryUnits: lesson.memoryUnits.map((unit) => ({
+      ...unit,
+      tokens: interlinear[memoryUnitId(unit)]?.tokens || [],
+      translationZh: unit.translationZh || interlinear[memoryUnitId(unit)]?.translationZh || "",
     })),
     reading: isScripture
       ? { ...reading, verses: glossed }
@@ -219,20 +290,31 @@ function withInterlinear(lesson: GreekLesson): GreekLesson {
   };
 }
 
-export function getGreekLesson(lesson: number): GreekLesson | null {
-  if (!Number.isInteger(lesson) || lesson < 1 || lesson > master.lessons.length) return null;
-  const found = master.lessons.find((item) => item.lesson === lesson);
-  return found ? withInterlinear(found) : null;
+export function listGreekVolumes() {
+  return master.volumes.map((volume) => ({
+    volume: volume.volume,
+    slug: volume.slug,
+    title: volume.title,
+    subtitle: volume.subtitle,
+    memoryUnitKind: volume.memoryUnitKind,
+    corpusByHalf: volume.corpusByHalf,
+    counts: volume.counts,
+    appendices: volume.appendices,
+    lessons: summarise(volume),
+  }));
 }
 
-export function listGreekLessons(): GreekLessonSummary[] {
-  return master.lessons.map((lesson) => ({
+function summarise(volume: GreekVolume): GreekLessonSummary[] {
+  return volume.lessons.map((lesson) => ({
+    volume: volume.volume,
     lesson: lesson.lesson,
+    key: greekLessonKey(volume.volume, lesson.lesson),
     id: lesson.id,
     title: lesson.title,
     vocabularySource: lesson.vocabularySource,
     vocabularyCount: lesson.vocabularyCount,
-    memoryVerseCount: lesson.memoryVerses.length,
+    memoryUnitCount: lesson.memoryUnits.length,
+    memoryUnitKind: volume.memoryUnitKind,
     glossedCount: lesson.vocabulary.filter((word) => word.glossZh.trim()).length,
     reading: {
       kind: lesson.reading.kind,
@@ -243,12 +325,24 @@ export function listGreekLessons(): GreekLessonSummary[] {
       completeness: lesson.reading.completeness || "complete",
       wordCount: lesson.reading.wordCount,
     },
-    href: `/original-readers/grc-lessons/${lesson.lesson}`,
+    href: `/original-readers/grc-lessons/${greekLessonKey(volume.volume, lesson.lesson)}`,
   }));
 }
 
+export function getGreekLesson(volume: number, lesson: number): GreekLesson | null {
+  const found = master.volumes.find((item) => item.volume === volume);
+  if (!found) return null;
+  const match = found.lessons.find((item) => item.lesson === lesson);
+  return match ? withInterlinear(match) : null;
+}
+
+export function listGreekLessons(): GreekLessonSummary[] {
+  return master.volumes.flatMap((volume) => summarise(volume));
+}
+
 export function getGreekReaderOverview() {
-  const lessons = listGreekLessons();
+  const volumes = listGreekVolumes();
+  const lessons = volumes.flatMap((volume) => volume.lessons);
   const glossed = lessons.reduce((total, lesson) => total + lesson.glossedCount, 0);
   return {
     title: master.title,
@@ -267,6 +361,12 @@ export function getGreekReaderOverview() {
       complete: glossed >= master.counts.vocabulary,
     },
     openProblems: master.openProblems,
+    appendices: master.appendices.map((table) => ({
+      key: table.key,
+      title: table.title,
+      note: table.note,
+      entryCount: table.entryCount,
+    })),
     liturgy: {
       title: liturgy.title,
       titleGrc: liturgy.titleGrc,
@@ -274,8 +374,13 @@ export function getGreekReaderOverview() {
       sectionCount: liturgy.summary.sectionCount,
       href: "/original-readers/grc-lessons/liturgy",
     },
+    volumes,
     lessons,
   };
+}
+
+export function getGreekAppendix(key: string) {
+  return master.appendices.find((table) => table.key === key) || null;
 }
 
 export function getGreekLiturgy() {

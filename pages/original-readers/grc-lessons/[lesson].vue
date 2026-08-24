@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
     <AppHeader
-      :title="lesson ? `第 ${lesson.lesson} 課` : '新約希臘文讀本'"
+      :title="lesson ? `${volumeLabel}第 ${lesson.lesson} 課` : '通用希臘文讀本'"
       :back="{ to: '/original-readers/grc-lessons', label: '50 課總覽' }"
       container-class="max-w-5xl"
     />
@@ -13,7 +13,7 @@
       <template v-else-if="lesson">
         <header class="rounded-[2rem] border border-stone-300 bg-[#1b2430] px-6 py-8 text-[#f4efe2] shadow-xl sm:px-9">
           <div class="flex flex-wrap items-center gap-3">
-            <span class="rounded-full bg-white/10 px-3 py-1 text-[11px] tracking-wider">第 {{ lesson.lesson }} 課</span>
+            <span class="rounded-full bg-white/10 px-3 py-1 text-[11px] tracking-wider">{{ volumeLabel }}第 {{ lesson.lesson }} 課</span>
             <span class="rounded-full bg-white/10 px-3 py-1 text-[11px]">{{ readingLabel }}</span>
             <span v-if="lesson.reading.completeness === 'excerpt'" class="rounded-full bg-amber-300/20 px-3 py-1 text-[11px] text-amber-200">
               節錄・{{ lesson.reading.extent }}
@@ -66,14 +66,15 @@
         </section>
 
         <section class="mt-8">
-          <h2 class="font-serif text-xl font-semibold">背誦（2 節）</h2>
+          <h2 class="font-serif text-xl font-semibold">背誦（{{ lesson.volume === 2 ? "2 句" : "2 節" }}）</h2>
           <ul class="mt-3 space-y-3">
-            <li v-for="verse in lesson.memoryVerses" :key="verse.ref" class="rounded-2xl border border-stone-300 bg-white p-4">
+            <li v-for="verse in lesson.memoryUnits" :key="verse.ref" class="rounded-2xl border border-stone-300 bg-white p-4">
               <div class="flex flex-wrap items-center gap-2 text-[11px] text-stone-500">
                 <span class="rounded-full bg-stone-100 px-2 py-0.5 font-semibold">{{ verse.ref }}</span>
-                <span>{{ corpusLabel(verse.corpus) }}</span>
+                <span>{{ corpusLabel(verse) }}</span>
                 <span>命中 {{ verse.matchCount }} 個本課生詞</span>
-                <span>比對方式：{{ verse.matchMethod === "lemma" ? "詞位" : "字形" }}</span>
+                <span>比對方式：{{ verse.matchMethod === "surface" ? "字形" : "詞位" }}</span>
+                <span v-if="verse.readingTitleZh" class="truncate">出自〈{{ verse.readingTitleZh }}〉</span>
                 <span v-if="verse.reviewStatus !== 'reviewed'" class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">待人工複核</span>
                 <button
                   v-if="audio.deviceSupported.value"
@@ -132,9 +133,9 @@
         </section>
 
         <nav class="mt-10 flex items-center justify-between gap-4 text-sm">
-          <NuxtLink v-if="lesson.lesson > 1" :to="`/original-readers/grc-lessons/${lesson.lesson - 1}`" class="rounded-full border border-stone-300 px-4 py-2 hover:border-stone-500">← 第 {{ lesson.lesson - 1 }} 課</NuxtLink>
+          <NuxtLink v-if="lesson.lesson > 1" :to="lessonKey(-1)" class="rounded-full border border-stone-300 px-4 py-2 hover:border-stone-500">← 第 {{ lesson.lesson - 1 }} 課</NuxtLink>
           <span v-else />
-          <NuxtLink v-if="lesson.lesson < 50" :to="`/original-readers/grc-lessons/${lesson.lesson + 1}`" class="rounded-full border border-stone-300 px-4 py-2 hover:border-stone-500">第 {{ lesson.lesson + 1 }} 課 →</NuxtLink>
+          <NuxtLink v-if="lesson.lesson < 50" :to="lessonKey(1)" class="rounded-full border border-stone-300 px-4 py-2 hover:border-stone-500">第 {{ lesson.lesson + 1 }} 課 →</NuxtLink>
         </nav>
       </template>
     </main>
@@ -147,7 +148,8 @@ interface VocabularyEntry {
   glossZh: string; glossEn: string; strong: string; isProperName: boolean; properNameTypes: string[];
 }
 interface MemoryVerse {
-  ref: string; corpus: string; matchMethod: string; matchCount: number;
+  ref: string; corpus?: string; category?: string; readingTitleZh?: string;
+  matchMethod: string; matchCount: number;
   text: string; translationZh: string; reviewStatus: string; tokens?: Token[];
 }
 interface Token { word: string; trailing: string; glossZh: string }
@@ -165,7 +167,8 @@ interface Reading {
 }
 interface Lesson {
   lesson: number; id: string; vocabularySource: string; vocabularyCount: number;
-  vocabulary: VocabularyEntry[]; memoryVerses: MemoryVerse[]; reading: Reading;
+  volume: number;
+  vocabulary: VocabularyEntry[]; memoryUnits: MemoryVerse[]; reading: Reading;
 }
 
 const route = useRoute();
@@ -183,6 +186,9 @@ function speakReading() {
   speak(readingSegments.value.map((segment) => ({ id: segment.key, sourceText: segment.greek })));
 }
 const lesson = ref<Lesson | null>(null);
+const volumeLabel = computed(() => (lesson.value?.volume === 2 ? "下冊" : "上冊"));
+const lessonKey = (offset: number) =>
+  `/original-readers/grc-lessons/v${lesson.value?.volume ?? 1}-${(lesson.value?.lesson ?? 1) + offset}`;
 const pending = ref(true);
 const error = ref("");
 
@@ -195,9 +201,17 @@ const CORPUS_LABELS: Record<string, string> = {
   septuagint: "七十士譯本",
   deuterocanonical: "次經",
   pseudepigrapha: "偽經",
+  "apostolic-father": "使徒教父",
+  "greek-father": "希臘教父",
+  "creed-or-decree": "信經與信仰定義",
+  "canon-collection": "教規彙編",
+  "liturgical-hymn": "禮儀文本與頌歌",
 };
-function corpusLabel(corpus: string) {
-  return CORPUS_LABELS[corpus] || corpus;
+// 上冊's memory units are verses and carry a corpus; 下冊's are sentences taken
+// from a reading and carry that reading's category instead.
+function corpusLabel(unit: { corpus?: string; category?: string }) {
+  const key = unit.corpus || unit.category || "";
+  return CORPUS_LABELS[key] || key;
 }
 
 const PROPER_NAME_LABELS: Record<string, string> = {
@@ -231,11 +245,11 @@ async function load() {
   try {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) return;
-    const number = String(route.params.lesson);
-    lesson.value = await $fetch<Lesson>(`/api/original-readers/grc-lessons/${number}`, {
+    const key = String(route.params.lesson);
+    lesson.value = await $fetch<Lesson>(`/api/original-readers/grc-lessons/${key}`, {
       headers: { Authorization: `Bearer ${session.access_token}` },
     });
-    useHead({ title: `第${lesson.value.lesson}課・${lesson.value.reading.titleZh} — 希臘文讀本` });
+    useHead({ title: `${volumeLabel.value}第${lesson.value.lesson}課・${lesson.value.reading.titleZh} — 希臘文讀本` });
   } catch (cause: any) {
     error.value = cause?.data?.message || cause?.message || String(cause);
   } finally {

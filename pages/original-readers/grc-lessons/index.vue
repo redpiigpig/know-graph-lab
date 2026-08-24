@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
-    <AppHeader title="新約希臘文50課讀本" :back="{ to: '/original-readers', label: '三冊總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="通用希臘文讀本（上下兩冊）" :back="{ to: '/original-readers', label: '三冊總覽' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
-      <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入 50 課完整主資料…</div>
+      <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入兩冊一百課完整主資料…</div>
       <div v-else-if="error" class="rounded-2xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">{{ error }}</div>
 
       <template v-else-if="reader">
         <header class="overflow-hidden rounded-[2rem] border border-stone-300 bg-[#1b2430] px-6 py-9 text-[#f4efe2] shadow-xl sm:px-10">
-          <p class="text-xs font-semibold tracking-[0.26em] text-sky-300">PRIVATE · NEW TESTAMENT GREEK · 50 LESSONS</p>
+          <p class="text-xs font-semibold tracking-[0.26em] text-sky-300">PRIVATE · KOINE GREEK · 2 VOLUMES · 100 LESSONS</p>
           <h1 class="mt-3 max-w-4xl font-serif text-3xl font-semibold leading-tight sm:text-5xl">{{ reader.title }}</h1>
           <p class="mt-4 max-w-3xl text-sm leading-7 text-stone-300">{{ reader.subtitle }}</p>
           <p class="mt-2 text-xs text-stone-400">課程依 {{ reader.textbook }}</p>
@@ -46,14 +46,13 @@
           </NuxtLink>
         </section>
 
-        <section class="mt-8">
-          <h2 class="font-serif text-2xl font-semibold">五十課</h2>
-          <p class="mt-1 text-sm text-stone-600">
-            第 1–30 課是 Mounce BBG 第 4–36 章本身的詞量，長短不齊；第 31–50 課平均攤完頻率延伸。
-            第 1–25 課配完整經文一章，第 26–50 課配教父、信經與教令。
+        <section v-for="volume in reader.volumes" :key="volume.slug" class="mt-8">
+          <h2 class="font-serif text-2xl font-semibold break-words">{{ volume.title }}</h2>
+          <p class="mt-1 text-sm text-stone-600 break-words">
+            {{ volume.subtitle }}；第 1–25 課{{ volume.corpusByHalf["1-25"] }}，第 26–50 課{{ volume.corpusByHalf["26-50"] }}。
           </p>
           <ul class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <li v-for="lesson in reader.lessons" :key="lesson.id">
+            <li v-for="lesson in volume.lessons" :key="lesson.id">
               <NuxtLink :to="lesson.href" class="flex h-full flex-col rounded-2xl border border-stone-300 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md">
                 <div class="flex items-center justify-between gap-3">
                   <span class="text-xs font-bold tracking-wider text-stone-400">第 {{ lesson.lesson }} 課</span>
@@ -63,7 +62,7 @@
                 <p class="greek mt-1 truncate text-xs text-stone-500">{{ lesson.reading.titleGrc }}</p>
                 <dl class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-stone-500">
                   <div><dt class="inline">生詞 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.vocabularyCount }}</dd></div>
-                  <div><dt class="inline">背誦 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.memoryVerseCount }}</dd></div>
+                  <div><dt class="inline">背誦 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.memoryUnitCount }}</dd></div>
                   <div><dt class="inline">讀文 </dt><dd class="inline font-semibold text-stone-700">{{ lesson.reading.wordCount }} 詞</dd></div>
                   <div v-if="lesson.reading.completeness === 'excerpt'"><dd class="inline text-amber-700">節錄</dd></div>
                 </dl>
@@ -79,15 +78,28 @@
 
 <script setup lang="ts">
 interface LessonSummary {
+  volume: number;
   lesson: number;
+  key: string;
   id: string;
   title: string;
   vocabularySource: string;
   vocabularyCount: number;
-  memoryVerseCount: number;
+  memoryUnitCount: number;
+  memoryUnitKind: string;
   glossedCount: number;
   reading: { kind: string; titleZh: string; titleGrc: string; difficulty: number; label: string; completeness: string; wordCount: number };
   href: string;
+}
+interface VolumeSummary {
+  volume: number;
+  slug: string;
+  title: string;
+  subtitle: string;
+  memoryUnitKind: string;
+  corpusByHalf: Record<string, string>;
+  counts: Record<string, number>;
+  lessons: LessonSummary[];
 }
 interface Overview {
   title: string;
@@ -99,6 +111,8 @@ interface Overview {
   glossProgress: { glossed: number; target: number; complete: boolean };
   openProblems: string[];
   liturgy: { title: string; titleGrc: string; stepCount: number; sectionCount: number; href: string };
+  appendices: { key: string; title: string; note: string; entryCount: number }[];
+  volumes: VolumeSummary[];
   lessons: LessonSummary[];
 }
 
@@ -111,6 +125,7 @@ const STATUS_LABELS: Record<string, string> = {
   planned: "規劃中",
   source_frozen: "來源已凍結，詞義層尚未補完",
   vocabulary_complete: "詞彙完成",
+  content_complete_translation_pending: "內容完成，逐段中譯待補",
   content_complete_layout_pending: "內容完成，待排版",
   content_complete_audio_pending: "內容完成，待錄音",
   print_qa_passed_audio_pending: "印刷 QA 通過，待錄音",
@@ -127,10 +142,10 @@ const stats = computed(() => {
   return [
     { label: "課次", value: counts.lessons ?? 0 },
     { label: "詞彙", value: counts.vocabulary ?? 0 },
-    { label: "背誦節", value: counts.memoryVerses ?? 0 },
+    { label: "背誦單元", value: counts.memoryUnits ?? 0 },
     { label: "經文章", value: counts.scriptureChapters ?? 0 },
-    { label: "教父讀文", value: counts.patristicReadings ?? 0 },
-    { label: "禮儀段", value: counts.liturgySteps ?? 0 },
+    { label: "教會讀文", value: counts.patristicReadings ?? 0 },
+    { label: "附錄條目", value: counts.appendixEntries ?? 0 },
   ];
 });
 

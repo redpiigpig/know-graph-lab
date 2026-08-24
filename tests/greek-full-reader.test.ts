@@ -5,54 +5,74 @@ import {
   getGreekLiturgy,
   getGreekReaderOverview,
   listGreekLessons,
+  listGreekVolumes,
+  parseGreekLessonKey,
 } from "../data/originalReaders/greek-full-reader";
 
-describe("complete 50-lesson New Testament Greek private reader", () => {
+describe("complete two-volume Koine Greek private reader", () => {
   const overview = getGreekReaderOverview();
+  const volumes = listGreekVolumes();
+  const volumeOne = volumes.find((volume) => volume.volume === 1)!;
+  const volumeTwo = volumes.find((volume) => volume.volume === 2)!;
 
   it("carries the frozen release counts", () => {
-    expect(overview.counts.lessons).toBe(50);
-    expect(overview.counts.vocabulary).toBe(1000);
-    expect(overview.counts.memoryVerses).toBe(100);
-    expect(overview.counts.scriptureChapters).toBe(25);
-    expect(overview.counts.patristicReadings).toBe(25);
+    expect(overview.counts.volumes).toBe(2);
+    expect(overview.counts.lessons).toBe(100);
+    expect(overview.counts.vocabulary).toBe(2000);
+    expect(overview.counts.memoryUnits).toBe(200);
+    expect(overview.counts.scriptureChapters).toBe(50);
+    expect(overview.counts.patristicReadings).toBe(50);
   });
 
-  it("keeps the lesson sizes uneven while the textbook lasts", () => {
-    const lessons = listGreekLessons();
-    expect(lessons).toHaveLength(50);
-    const textbookLessons = lessons.slice(0, 30);
-    const sizes = new Set(textbookLessons.map((lesson) => lesson.vocabularyCount));
-    // A single size across the textbook lessons would mean the curriculum had
-    // been re-sliced into equal quotas, which is exactly what must not happen.
-    expect(sizes.size).toBeGreaterThan(1);
-    expect(textbookLessons.every((lesson) => lesson.vocabularySource.startsWith("BBG"))).toBe(true);
-
-    const extensionLessons = lessons.slice(30);
-    expect(extensionLessons).toHaveLength(20);
-    expect(
-      extensionLessons.every((lesson) => lesson.vocabularySource === "Mounce 頻率延伸"),
-    ).toBe(true);
+  it("cuts both volumes into fifty lessons of exactly twenty words", () => {
+    for (const volume of volumes) {
+      expect(volume.lessons, `volume ${volume.volume}`).toHaveLength(50);
+      expect(volume.counts.vocabulary).toBe(1000);
+      for (const lesson of volume.lessons) {
+        expect(
+          lesson.vocabularyCount,
+          `volume ${volume.volume} lesson ${lesson.lesson}`,
+        ).toBe(20);
+      }
+    }
   });
 
-  it("puts a complete chapter in lessons 1-25 and a patristic reading in 26-50", () => {
-    const lessons = listGreekLessons();
-    expect(lessons.slice(0, 25).every((lesson) => lesson.reading.kind === "scripture_chapter")).toBe(true);
-    expect(lessons.slice(25).every((lesson) => lesson.reading.kind === "patristic_reading")).toBe(true);
+  it("gives 上冊 a chapter and 下冊 a reading in every lesson", () => {
+    expect(volumeOne.lessons.every((lesson) => lesson.reading.kind === "scripture_chapter")).toBe(true);
+    expect(volumeTwo.lessons.every((lesson) => lesson.reading.kind === "patristic_reading")).toBe(true);
   });
 
-  it("gives every lesson exactly two memory verses", () => {
-    for (const summary of listGreekLessons()) {
-      const lesson = getGreekLesson(summary.lesson);
-      expect(lesson, `lesson ${summary.lesson} missing`).toBeTruthy();
-      expect(lesson!.memoryVerses).toHaveLength(2);
-      expect(new Set(lesson!.memoryVerses.map((verse) => verse.ref)).size).toBe(2);
+  it("keeps each volume's halves on their own corpus", () => {
+    const first = volumeOne.lessons.slice(0, 25).map((lesson) => lesson.reading.label);
+    expect(new Set(first)).toEqual(new Set(["新約"]));
+    const second = new Set(volumeOne.lessons.slice(25).map((lesson) => lesson.reading.label));
+    expect(second).toContain("七十士譯本（正典）");
+    expect(second).toContain("次經");
+    expect(second).toContain("偽經");
+    expect(second).not.toContain("新約");
+
+    const patristic = new Set(volumeTwo.lessons.slice(0, 25).map((lesson) => lesson.reading.label));
+    expect(patristic).toEqual(new Set(["使徒教父", "希臘教父"]));
+    const documents = new Set(volumeTwo.lessons.slice(25).map((lesson) => lesson.reading.label));
+    expect(documents).toContain("教規彙編");
+    expect(documents).toContain("禮儀文本與頌歌");
+  });
+
+  it("gives every lesson exactly two memory units of its volume's kind", () => {
+    for (const volume of volumes) {
+      for (const summary of volume.lessons) {
+        const lesson = getGreekLesson(volume.volume, summary.lesson);
+        expect(lesson, `volume ${volume.volume} lesson ${summary.lesson} missing`).toBeTruthy();
+        expect(lesson!.memoryUnits).toHaveLength(2);
+        expect(new Set(lesson!.memoryUnits.map((unit) => unit.ref)).size).toBe(2);
+        expect(lesson!.memoryUnits.every((unit) => unit.kind === volume.memoryUnitKind)).toBe(true);
+      }
     }
   });
 
   it("never labels an excerpt as a complete work", () => {
     for (const summary of listGreekLessons()) {
-      const reading = getGreekLesson(summary.lesson)!.reading;
+      const reading = getGreekLesson(summary.volume, summary.lesson)!.reading;
       if (reading.completeness === "excerpt") {
         expect(reading.extent, `${reading.titleZh} excerpt without extent`).toBeTruthy();
         expect(reading.extent).not.toBe("全篇");
@@ -60,21 +80,9 @@ describe("complete 50-lesson New Testament Greek private reader", () => {
     }
   });
 
-  it("reads every corpus the contract promised", () => {
-    const corpora = new Set(
-      listGreekLessons()
-        .slice(0, 25)
-        .map((lesson) => lesson.reading.label),
-    );
-    expect(corpora).toContain("新約");
-    expect(corpora).toContain("七十士譯本（正典）");
-    expect(corpora).toContain("次經");
-    expect(corpora).toContain("偽經");
-  });
-
   it("ships no empty reading segment", () => {
     for (const summary of listGreekLessons()) {
-      const reading = getGreekLesson(summary.lesson)!.reading;
+      const reading = getGreekLesson(summary.volume, summary.lesson)!.reading;
       const segments = reading.verses || reading.segments || [];
       expect(segments.length, `${reading.titleZh} has no segments`).toBeGreaterThan(0);
       for (const segment of segments) {
@@ -85,8 +93,8 @@ describe("complete 50-lesson New Testament Greek private reader", () => {
   });
 
   it("pairs Chinese with every Scripture verse that has a Chinese counterpart", () => {
-    for (const summary of listGreekLessons().slice(0, 25)) {
-      const reading = getGreekLesson(summary.lesson)!.reading;
+    for (const summary of volumeOne.lessons) {
+      const reading = getGreekLesson(1, summary.lesson)!.reading;
       if (reading.corpusLabel === "偽經") continue;
       for (const verse of reading.verses || []) {
         if (verse.translationNote) continue;
@@ -98,7 +106,7 @@ describe("complete 50-lesson New Testament Greek private reader", () => {
     }
   });
 
-  it("states the release status honestly while the gloss layer is incomplete", () => {
+  it("states the release status honestly while a layer is incomplete", () => {
     if (overview.glossProgress.complete) {
       expect(overview.releaseStatus).not.toBe("source_frozen");
     } else {
@@ -112,7 +120,16 @@ describe("complete 50-lesson New Testament Greek private reader", () => {
     expect(overview.audioStatus.recordedTrackCount).toBe(0);
   });
 
-  it("carries the whole liturgy in celebration order", () => {
+  it("carries the five appendix tables outside the lesson count", () => {
+    expect(overview.appendices).toHaveLength(5);
+    expect(overview.appendices.map((table) => table.title)).toContain("人名、地名與國族");
+    expect(overview.counts.appendixEntries).toBeGreaterThan(600);
+  });
+
+  it("carries the whole liturgy in celebration order, in 下冊 only", () => {
+    expect(volumeOne.appendices).toHaveLength(0);
+    expect(volumeTwo.appendices.map((item) => item.key)).toContain("divine-liturgy-chrysostom");
+
     const liturgy = getGreekLiturgy();
     expect(liturgy.summary.stepCount).toBeGreaterThan(300);
     expect(liturgy.sections.length).toBeGreaterThanOrEqual(20);
@@ -130,9 +147,16 @@ describe("complete 50-lesson New Testament Greek private reader", () => {
     expect(liturgy.steps.every((step) => step.displayText.trim())).toBe(true);
   });
 
-  it("rejects a lesson number outside 1-50", () => {
-    expect(getGreekLesson(0)).toBeNull();
-    expect(getGreekLesson(51)).toBeNull();
-    expect(getGreekLesson(1.5)).toBeNull();
+  it("resolves a lesson key from either form and rejects anything else", () => {
+    expect(parseGreekLessonKey("v2-37")).toEqual({ volume: 2, lesson: 37 });
+    // A bare number is what links written before the second volume existed say.
+    expect(parseGreekLessonKey("12")).toEqual({ volume: 1, lesson: 12 });
+    expect(parseGreekLessonKey("v3-1")).toEqual({ volume: 3, lesson: 1 });
+    expect(parseGreekLessonKey("liturgy")).toBeNull();
+    expect(parseGreekLessonKey("v2-")).toBeNull();
+
+    expect(getGreekLesson(1, 0)).toBeNull();
+    expect(getGreekLesson(1, 51)).toBeNull();
+    expect(getGreekLesson(3, 1)).toBeNull();
   });
 });
