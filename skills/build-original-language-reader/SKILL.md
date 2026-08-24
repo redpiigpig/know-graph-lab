@@ -18,11 +18,26 @@ Read these files for every production run:
 
 Read the selected language section in `references/language-profiles.md`.
 
-For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the frozen Mounce lesson shape, source freeze, 25-chapter allocation and release-specific stop conditions.
+For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the two-volume lesson shape (50 lessons of 20 words per volume), the three-layer Koine lemma resolver, the source freeze, the 50-chapter allocation for 上冊, the appendices, and release-specific stop conditions. Then read `references/greek-reader-handoff.md` for where that release actually stands, which commit is unpushed, and the traps that have already produced confident wrong answers.
 
 Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio.
 
 When working in `know-graph-lab`, read `references/know-graph-lab-baseline.md`. Treat all paths and counts there as checkout-specific facts that must be verified live.
+
+### Naming and lemmatising are register questions, not lookups
+
+Two failures recur across languages and are worth carrying into any new reader:
+
+- **A general-purpose analyser answers in the wrong register.** Morpheus covers all
+  of Ancient Greek and is Attic-first, so a Koine reader built on it teaches
+  Classical headwords under a Koine title. Prefer a lemma source tagged on the
+  corpora being taught, and demote the general analyser to a last resort that is
+  allowed to say nothing.
+- **Chinese names come from a register, never from the model.** Route each name to
+  whichever register covers it, record which route named it, and leave the cell
+  empty when none does. Where no register exists, the translation itself can be
+  the register: a name's Chinese can be read out of the aligned Chinese text by
+  counting, which is evidence rather than recall.
 
 ## Run the workflow in order
 

@@ -4,17 +4,124 @@ Frozen 2026-08-18 for `know-graph-lab`. Verify every path live before use.
 
 ## Curriculum
 
+Re-frozen 2026-08-24 by the owner. The reader is **two volumes of fifty lessons,
+twenty words each** — two thousand words in all. This supersedes the earlier
+single-volume plan whose lesson sizes came from BBG's own chapters; that plan and
+`scripts/assign_greek_lessons.py` are superseded, not merely adjusted.
+
 | Item | Frozen value |
 |---|---|
-| Textbook | William D. Mounce, *Basics of Biblical Greek Grammar* (BBG), official 1,000-word list |
-| Lessons | 50 |
-| Vocabulary | 1,000 unique entries |
-| Lessons 1–30 | BBG chapters 4–36 exactly as the textbook has them — 340 words, 2 to 26 per lesson, uneven by design (chapters 1–3, 5, 15, 26 carry no vocabulary) |
-| Lessons 31–50 | Mounce frequency extension, 660 words, 33 per lesson, published order preserved |
-| Assigner | `scripts/assign_greek_lessons.py --write` |
-| Transliteration | Mounce standard Erasmian; Byzantine/reconstructed-Koine are separately named tracks, never merged |
+| Volumes | 2. 上冊《新約與七十士譯本》, 下冊《教父文獻與希臘教會文獻》 |
+| Lessons | 50 per volume, **exactly 20 words each** |
+| Vocabulary | 2,000 entries, the three lists disjoint |
+| 上冊 1–25 | New Testament: 500 words from Mounce's own list in Mounce's order, plus 2 memory verses and 1 complete chapter per lesson |
+| 上冊 26–50 | Greek Old Testament: 500 words by Septuagint frequency, plus 2 memory verses and 1 complete chapter per lesson |
+| 下冊 1–25 | Patristic: 20 words, 2 sentences, 1 article passage per lesson |
+| 下冊 26–50 | Greek church documents and liturgical texts: 20 words, 2 sentences, 1 prayer/creed/document per lesson |
+| Ends with | the complete ordinary-time Chrysostom liturgy, in 下冊 only |
+| No liturgy in 上冊 | owner's instruction; do not reintroduce it there |
+| Builder | `scripts/build_greek_vocabulary_2000.py --write` → `data/originalReaders/vocabulary/greek-2000.json` |
 
-Never restate this as "20 words per lesson". Lesson size comes from BBG.
+### The language is Koine, and staying there takes work
+
+The reader teaches 通用希臘文, not Classical Greek, and the lemmatiser is where
+that guarantee gets quietly broken. Morpheus covers all of Ancient Greek and is
+Attic-first: asked for σου it answers with the Homeric possessive σός, and for
+ἐγένετο with Attic γίγνομαι. Built on Morpheus alone, the Septuagint frequency
+list came out headed by σός, εἶπον, ὑμός, γίγνομαι and χρύσεος — every one of
+them a Classical headword for a word Mounce had already taught.
+
+Three layers, in this order, never rearranged:
+
+1. **Koine lexicon** — `scripts/build_greek_koine_lexicon.py --write` merges
+   MorphGNT's 137,554 tagged New Testament words with CATSS/OSSP's 623,685 tagged
+   Septuagint words into `koine-lexicon.json`. Where both tag the same form, the
+   **New Testament headword wins**: the Septuagint analysis keeps older lexicon
+   conventions (εἶπεν under ἔπω, σου under σοῦ, χρυσοῦν under χρύσεος) and the
+   textbook uses λέγω, σύ, χρυσοῦς.
+2. **Attic→Koine bridge** (`to_koine`) — γιγν→γιν, ττ→σσ, ρρ→ρσ, -εος→-οῦς, plus
+   a table of suppletives and variants. Every rewrite is checked against the Koine
+   inventory before it is applied, so the bridge cannot invent a word. **Compare
+   on folded spellings**: written out, "γιγν" does not occur in "γίγνομαι" at all,
+   and that trap has been fallen into once already.
+3. **Morpheus** — consulted only for forms the two Koine corpora never attest, and
+   when its Classical readings are ambiguous with no Koine candidate, the token is
+   left uncounted rather than guessed. Guessing produced ὁλάω and πτελέα for what
+   were really ὅλος and a proper name.
+
+Result to beat: Septuagint 97% resolved by the Koine lexicon with **zero**
+Classical headwords; patristic 88% + 6% Morpheus, 25 of 1,000 outside the tagged
+Koine inventory and all of them verified as genuine later church Greek
+(ἀσώματος, ἄτρεπτος, σύγγραμμα, ἀθεότης), marked `withinKoine: false`.
+
+Accent-blind folding conflates minimal pairs whose breathing is the whole word —
+ἕξ "six" with ἐξ "out of", εἷς "one" with εἰς "into" — and the commoner word takes
+every occurrence, so the numeral disappears from the counts. The Koine lexicon
+therefore also carries 2,511 accent-sensitive forms (`exactForms`), consulted
+before the folded index.
+
+### Proper names are not lesson words
+
+Owner's instruction, 2026-08-24: names go in the appendix, the lesson slots are
+backfilled, and the two never overlap. Mounce's first five hundred contain 28
+proper names; skipping them carries the New Testament list to Mounce's 528th
+entry. Verified separation: lessons ∩ appendix names = 0.
+
+The Septuagint and patristic lists exclude names structurally — a raw Septuagint
+frequency list is otherwise headed by Ἰσραήλ, Μωϋσῆς and Ἱερουσαλήμ, which crowds
+out vocabulary. Names are detected from the corpora themselves: a lemma written
+with a capital in ≥80% of its appearances is a name. Morpheus lower-cases its
+headwords, so Πολύκαρπος and Εἰρηναῖος arrive looking like adjectives; only the
+corpus's own capitalisation catches them.
+
+## Appendices
+
+Five, outside the twenty-per-lesson count, built by
+`scripts/build_greek_appendices.py --write` →
+`data/originalReaders/vocabulary/greek-appendices.json`:
+
+| Appendix | Entries | Source |
+|---|---|---|
+| 人名、地名與國族 | 405 | harvested, ≥10 occurrences |
+| 數字與度量衡 | 73 | curated, verified against the corpora |
+| 親屬稱謂 | 37 | curated |
+| 曆法與節期 | 46 | curated |
+| 教會職分與禮儀用語 | 64 | curated |
+
+The four curated appendices **do** overlap the lessons on purpose: they are a
+cross-index, not a second vocabulary list. Someone looking up "the numerals" wants
+εἷς there even though lesson one taught it. Only the names are kept disjoint.
+
+Curated entries carry `attested` and the real corpus frequency, so a list that
+drifts into words the reader never meets is visible. Entries still unattested are
+Byzantine liturgical terms (τροπάριον, κοντάκιον, συναπτή) and later feasts that
+should appear once 下冊 26–50 adds its remaining Greek church documents.
+
+### Naming the appendix, in priority order
+
+Chinese is never invented here. `scripts/fill_greek_appendix_names.py --write`
+then `scripts/align_greek_names_chinese.py --write`:
+
+1. **翻譯定名 glossary** — keyed on the Greek itself, so a hit is exact and
+   authoritative (`name_recommended` outranks everything).
+2. **信望愛 Chinese Strong's** (`bible.fhl.net/json/sd.php`) — covers the New
+   Testament's names *including places and peoples*, which `biblical_people`
+   cannot, and its part-of-speech line states person or place outright. Cached in
+   `fhl-strongs-zh.json`. Strong's indexes the Textus Receptus, so its spellings
+   differ (Δαβίδ, Σολομών, Μωσεύς); a one-letter unique-match bridge plus an
+   explicit alias table crosses that gap.
+3. **Strong's English → `biblical_people`** — dropped, never guessed, when one
+   English name has several Chinese ones.
+4. **Chinese-Bible verse alignment** — for the Septuagint's own names, which no
+   register holds. A Greek name's verses are fetched in 和合本修訂版 and the
+   character run that appears in most of them and is rare in a 9,336-verse
+   background is its Chinese name. **Match the Greek stem at a word boundary**:
+   plain substring matching put τυρ inside μαρτύρομαι and confidently aligned
+   Tyre with 「見證」.
+5. **Transliteration** — Ἰω-→Jo-, χ→h, -ίας→-iah; marked for review.
+
+Reached 341/405. The remaining 64 are mostly deuterocanonical (Ὀλοφέρνης,
+Μακκαβαῖος, Ἀντίοχος); 信望愛 holds no Chinese edition of Maccabees.
 
 ## Source freeze
 
@@ -31,47 +138,100 @@ Never restate this as "20 words per lesson". Lesson size comes from BBG.
 
 Rahlfs–Hanhart 1935 is *not* the frozen LXX base. The accessible digital Rahlfs is CCAT-derived and requires a signed CCAT user declaration, and Rahlfs carries no Greek 1 Enoch. Swete covers LXX, all deuterocanonical books, Psalms of Solomon and the Greek 1 Enoch in one public-domain edition. Rahlfs may be cited as a collation reference only.
 
-## 25 complete Scripture chapters
+## 上冊：50 complete Scripture chapters
 
-Approved split: **New Testament 13 / LXX canonical 6 / deuterocanonical 4 / pseudepigraphal 2**.
+Lessons 1–25 read the New Testament, lessons 26–50 the Greek Old Testament, each
+half ordered by difficulty on its own. A reader is not asked to take the
+Septuagint's Hebraic syntax in lesson three just because that chapter is easy.
 
-| # | Corpus | Reading | Base |
-|---:|---|---|---|
-| 1 | NT | 約翰一書 1 | SBLGNT |
-| 2 | NT | 馬可福音 1 | SBLGNT |
-| 3 | NT | 馬可福音 4 | SBLGNT |
-| 4 | NT | 約翰福音 1 | SBLGNT |
-| 5 | NT | 馬太福音 5 | SBLGNT |
-| 6 | NT | 馬太福音 6 | SBLGNT |
-| 7 | NT | 哥林多前書 13 | SBLGNT |
-| 8 | NT | 使徒行傳 2 | SBLGNT |
-| 9 | NT | 雅各書 1 | SBLGNT |
-| 10 | NT | 腓立比書 2 | SBLGNT |
-| 11 | NT | 羅馬書 8 | SBLGNT |
-| 12 | NT | 希伯來書 1 | SBLGNT |
-| 13 | NT | 啟示錄 21 | SBLGNT |
-| 14 | LXX | 創世記 1 | Swete `Gen` |
-| 15 | LXX | 創世記 22 | Swete `Gen` |
-| 16 | LXX | 出埃及記 3 | Swete `Exo` |
-| 17 | LXX | 詩篇 22（MT 23） | Swete `Psa` |
-| 18 | LXX | 詩篇 50（MT 51） | Swete `Psa` |
-| 19 | LXX | 以賽亞書 6 | Swete `Isa` |
-| 20 | 次經 | 多俾亞傳 1（Sinaiticus GII） | Swete `Tbs` |
-| 21 | 次經 | 友弟德傳 13 | Swete `Jdt` |
-| 22 | 次經 | 智慧篇 7 | Swete `Wis` |
-| 23 | 次經 | 德訓篇 24 | Swete `Sir` |
-| 24 | 偽經 | 以諾一書 1（希臘文，猶大書 14–15 所引） | Swete `1En` |
-| 25 | 偽經 | 所羅門詩篇 17 | Swete `Pss` |
+Approved split: **New Testament 25 / Septuagint canonical 18 / deuterocanonical 5
+/ pseudepigraphal 2**. Built by `scripts/build_greek_scripture_plan.py --write`;
+1,413 verses, 26,115 words.
 
-LXX/MT numbering differences (Psalms above all) route through one shared crosswalk, exactly as the Hebrew reader does.
+| # | Corpus | Reading | Size | Note |
+|---:|---|---|---|---|
+| 1 | 新約 | 約翰一書 1 | 10 節 207 詞 |  |
+| 2 | 新約 | 馬可福音 1 | 45 節 701 詞 |  |
+| 3 | 新約 | 馬可福音 4 | 41 節 683 詞 |  |
+| 4 | 新約 | 馬太福音 6 | 34 節 648 詞 |  |
+| 5 | 新約 | 馬太福音 5 | 48 節 821 詞 |  |
+| 6 | 新約 | 約翰福音 1 | 51 節 826 詞 |  |
+| 7 | 新約 | 哥林多前書 13 | 13 節 197 詞 |  |
+| 8 | 新約 | 路加福音 2 | 52 節 849 詞 |  |
+| 9 | 新約 | 路加福音 15 | 32 節 564 詞 |  |
+| 10 | 新約 | 約翰福音 15 | 27 節 500 詞 |  |
+| 11 | 新約 | 腓立比書 2 | 30 節 431 詞 |  |
+| 12 | 新約 | 使徒行傳 2 | 47 節 835 詞 |  |
+| 13 | 新約 | 雅各書 1 | 27 節 406 詞 |  |
+| 14 | 新約 | 啟示錄 21 | 27 節 603 詞 |  |
+| 15 | 新約 | 羅馬書 12 | 21 節 304 詞 |  |
+| 16 | 新約 | 加拉太書 5 | 26 節 313 詞 |  |
+| 17 | 新約 | 彼得前書 2 | 25 節 392 詞 |  |
+| 18 | 新約 | 以弗所書 2 | 22 節 362 詞 |  |
+| 19 | 新約 | 路加福音 24 | 53 節 809 詞 |  |
+| 20 | 新約 | 羅馬書 8 | 39 節 652 詞 |  |
+| 21 | 新約 | 希伯來書 1 | 14 節 257 詞 |  |
+| 22 | 新約 | 約翰福音 17 | 26 節 498 詞 |  |
+| 23 | 新約 | 使徒行傳 17 | 34 節 675 詞 |  |
+| 24 | 新約 | 哥林多前書 15 | 58 節 843 詞 |  |
+| 25 | 新約 | 啟示錄 1 | 20 節 469 詞 |  |
+| 26 | 七十士譯本（正典） | 創世記 1 LXX | 31 節 751 詞 |  |
+| 27 | 七十士譯本（正典） | 創世記 22 LXX | 24 節 540 詞 |  |
+| 28 | 七十士譯本（正典） | 出埃及記 3 LXX | 22 節 596 詞 |  |
+| 29 | 七十士譯本（正典） | 詩篇 22 LXX（MT 23） | 6 節 104 詞 | MT 23 |
+| 30 | 七十士譯本（正典） | 創世記 3 LXX | 24 節 597 詞 |  |
+| 31 | 七十士譯本（正典） | 出埃及記 20 LXX | 26 節 506 詞 |  |
+| 32 | 七十士譯本（正典） | 申命記 6 LXX | 25 節 538 詞 |  |
+| 33 | 七十士譯本（正典） | 約拿書 2 LXX | 11 節 184 詞 |  |
+| 34 | 七十士譯本（正典） | 詩篇 129 LXX（MT 130） | 8 節 84 詞 | MT 130 |
+| 35 | 七十士譯本（正典） | 詩篇 50 LXX（MT 51） | 21 節 284 詞 | MT 51 |
+| 36 | 七十士譯本（正典） | 以賽亞書 6 LXX | 13 節 307 詞 |  |
+| 37 | 次經 | 多俾亞傳 1（西奈抄本 GII） | 22 節 729 詞 |  |
+| 38 | 次經 | 友弟德傳 13 | 20 節 602 詞 |  |
+| 39 | 七十士譯本（正典） | 路得記 1 LXX | 22 節 515 詞 |  |
+| 40 | 七十士譯本（正典） | 詩篇 90 LXX（MT 91） | 16 節 202 詞 | MT 91 |
+| 41 | 七十士譯本（正典） | 列王紀上 19 LXX（七十士作《王國記三》） | 21 節 568 詞 |  |
+| 42 | 七十士譯本（正典） | 以西結書 37 LXX | 28 節 686 詞 |  |
+| 43 | 次經 | 德訓篇 24 | 32 節 421 詞 |  |
+| 44 | 七十士譯本（正典） | 以賽亞書 53 LXX | 12 節 286 詞 |  |
+| 45 | 七十士譯本（正典） | 箴言 8 LXX | 35 節 417 詞 |  |
+| 46 | 七十士譯本（正典） | 耶利米書 38 LXX（MT 31） | 40 節 864 詞 | MT 31 |
+| 47 | 次經 | 瑪加伯下 7 | 42 節 876 詞 | 中文自譯 |
+| 48 | 次經 | 智慧篇 7 | 30 節 437 詞 |  |
+| 49 | 偽經 | 所羅門詩篇 17 | 51 節 877 詞 | 中文自譯 |
+| 50 | 偽經 | 以諾一書 1（希臘文） | 9 節 299 詞 | 中文自譯 |
 
-## 25 patristic / creed / decree readings
+Swete marks the material the Septuagint adds to a verse with a bracketed digit in
+the running text — Proverbs 8:21a — and his database indexes that marker as a word
+of its own, so the word-count gate fails on it. **Brackets holding only digits are
+editorial numbering**: excluded from the count, kept in the display layer,
+recorded as `editorialVerseMarkers`. **Brackets holding Greek are restored text**
+and stay, counted, as before.
 
-Declared as complete short works or explicitly labelled authorized excerpts; never mixed silently. See `greek-patristic-plan.md` for the frozen list.
+2 Maccabees 7 is the one chapter whose Chinese does not come from the frozen
+deuterocanonical edition: the 1933 Anglican canon does not contain Maccabees, and
+信望愛 holds no Chinese Maccabees at all. It is self-translated, and says so in
+`translationNote`. Susanna and Baruch were examined as replacements and rejected —
+Swete prints the Old Greek Susanna (60 verses) against a Theodotion-based Chinese
+(64), and Baruch 3 differs by one verse. Neither can be aligned verse by verse.
+A chapter is not dropped because its source is inconvenient, and a translation
+that will not arrive is not silently promised.
 
-## Appendix
+## 下冊：50 readings
 
-Complete ordinary-time (non-festal Sunday) Divine Liturgy of St John Chrysostom, Greek with Traditional-Chinese parallel, kept separate from the 25 patristic readings — the structural counterpart of the Hebrew fifteen-step Haggadah.
+Lessons 1–25 are patristic; lessons 26–50 are Greek church documents and
+liturgical texts. Each lesson carries 20 words, 2 sentences, and one passage.
+Declared as complete short works or explicitly labelled authorized excerpts;
+never mixed silently. See `greek-patristic-plan.md` for the frozen list.
+
+**Not yet built.** 25 readings exist (18 patristic, 7 church documents); 下冊
+needs 7 more patristic readings and 18 more Greek church documents. The two
+sentences per lesson are not selected yet.
+
+The volume ends with the complete ordinary-time (non-festal Sunday) Divine
+Liturgy of St John Chrysostom, Greek with Traditional-Chinese parallel, kept
+separate from the 25 readings — the structural counterpart of the Hebrew
+fifteen-step Haggadah. It belongs to 下冊 only; the owner removed it from 上冊.
 
 ## Stop conditions specific to this release
 
@@ -79,3 +239,13 @@ Complete ordinary-time (non-festal Sunday) Divine Liturgy of St John Chrysostom,
 - `creeds-greek.json` marks three segments `needs_review_*`. Schaff prints variant readings and a Greek term index inside the same cells as the creed; those segments must be reviewed before they reach a reading, and never shipped as creed text unexamined.
 - Greek 1 Enoch and Psalms of Solomon carry editorial brackets in Swete. Keep the bracketed source form immutable and flag any display-layer removal.
 - No modern-Greek TTS may stand in for the Mounce Erasmian audio track.
+- Never restate the curriculum as "lesson size comes from BBG". That was the
+  earlier design and the owner replaced it on 2026-08-24 with a flat twenty words
+  per lesson across two volumes. `scripts/assign_greek_lessons.py` is superseded.
+- Never let a Classical headword into a vocabulary list. If σός, εἶπον, γίγνομαι,
+  χρύσεος or ὑμός appears at the top of a frequency list, the Koine lexicon is not
+  being consulted first — that is the symptom, every time.
+- Never invent a Chinese name. Every appendix name records `zhRoute`; entries no
+  register covers stay empty. 64 currently do, and that is the correct state.
+- A proper name never occupies a lesson slot, and the appendix never repeats a
+  lesson word. Assert `lessons ∩ appendix names == 0` after any rebuild.
