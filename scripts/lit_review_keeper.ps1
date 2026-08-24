@@ -1,4 +1,4 @@
-# 研究回顧全文翻譯看門狗的「自我修復」keeper（仿 KGL_Fleet_Keeper）
+﻿# 研究回顧全文翻譯看門狗的「自我修復」keeper（仿 KGL_Fleet_Keeper）
 # 排程每 30 分跑一次：若看門狗沒在跑就重啟它（Start-Process 分離會在 session teardown 死掉，
 # 只有排程能撐過整夜／session 重啟）。引擎讀 state 檔（預設 haiku），切引擎＝改該檔即可、免重註冊。
 # 純 ASCII，避免 PS5.1 中文解析崩（見 [[project_fleet_keeper]]）。
