@@ -89,9 +89,21 @@ def parse(text: str) -> list[dict]:
 # Converting and comparing is exact.
 _S2T = opencc.OpenCC('s2t')
 
+# Characters whose s2t rewrite is not evidence of simplified text.  OpenCC maps
+# 台 to 臺, but 台 is standard in Taiwan and is what this project writes; a gate
+# that calls it simplified rejects perfectly good Traditional Chinese and then
+# retries forever.  讀經台 was refused eleven times for exactly this.
+BOTH_TRADITIONAL = {"台": "臺", "床": "牀", "群": "羣", "峰": "峯", "line": ""}
+
 
 def has_simplified(text: str) -> bool:
-    return _S2T.convert(text) != text
+    converted = _S2T.convert(text)
+    if converted == text:
+        return False
+    if len(converted) != len(text):
+        return True
+    return any(before != after and BOTH_TRADITIONAL.get(before) != after
+               for before, after in zip(text, converted))
 
 
 LATIN_LEAK = re.compile(r"[A-Za-z]{3,}")
@@ -141,8 +153,18 @@ def main() -> None:
         # its macrons often enough that an exact-string match loses a tenth of
         # every batch -- and loses it silently, since the entry simply stays
         # unglossed and gets retried forever.
-        by_head = {L.fold(row.get("headword", "")): (row.get("zh") or "").strip()
-                   for row in answer}
+        # Index both what was asked and what the model tends to echo.  Asked
+        # about ambō it answers with the whole dictionary line, "ambō, ambōnis,
+        # m.", and a lookup on the bare headword alone then finds nothing and
+        # retries the same word for ever.
+        by_head: dict[str, str] = {}
+        for row in answer:
+            echoed = (row.get("headword") or "").strip()
+            zh = (row.get("zh") or "").strip()
+            for variant in (echoed, echoed.split(",")[0]):
+                folded = L.fold(variant.strip())
+                if folded:
+                    by_head.setdefault(folded, zh)
         engine = llm.current_model()
         for entry in chunk:
             zh = by_head.get(L.fold(entry["headword"]), "")

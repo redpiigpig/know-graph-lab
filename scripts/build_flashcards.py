@@ -39,6 +39,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from flashcard_pos import greek_part_of_speech  # noqa: E402
 
+# The Latin deck reads the identity and the part of speech the reader's own
+# builders already worked out, rather than deriving either a second time here.
+import latin_source_texts as _latin_text  # noqa: E402
+from build_latin_full_reader import short_pos as latin_pos  # noqa: E402
+
+
+def latin_key(entry: dict) -> str:
+    return _latin_text.fold(entry.get("forms") or entry["headword"])
+
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache"
 IMAGE_DIR = CACHE / "flashcards/openmoji-618"
@@ -86,6 +95,13 @@ POS_ZH = {
     "conjunction_phrase": "連接詞片語",
 }
 
+# The Latin master already labels its own parts of speech, one character each;
+# the card prints the two-character form the other decks use.
+POS_LATIN = {
+    "名": "名詞", "動": "動詞", "形": "形容詞", "副": "副詞", "介": "介系詞",
+    "連": "連接詞", "代": "代名詞", "數": "數詞", "嘆": "感嘆詞", "不變": "不變詞",
+}
+
 DECKS: dict[str, dict] = {
     "hbo": {
         "title": "聖經希伯來文單字卡",
@@ -130,6 +146,36 @@ DECKS: dict[str, dict] = {
         "sources": [
             "詞表：教父希臘文語料頻率延伸，與上冊不重複。",
             "正面為字典引用形，附詞尾與冠詞。",
+        ],
+    },
+    "lat1": {
+        "title": "教會拉丁文單字卡・上冊",
+        "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
+        "images": CACHE / "flashcards/latin-card-images.json",
+        "output": "latin-flashcards-volume-1.docx",
+        "font": "Noto Serif",
+        "rtl": False,
+        "headword_pt": 30,
+        "volumeName": "上冊",
+        "sources": [
+            "詞表：Collins《A Primer of Ecclesiastical Latin》原書詞序。",
+            "正面為字典引用形，動詞列四個主要部分，名詞列主格、屬格與性。",
+            "長音符號依原書標示；發音為羅馬式教會發音。",
+        ],
+    },
+    "lat2": {
+        "title": "教會拉丁文單字卡・下冊",
+        "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
+        "images": CACHE / "flashcards/latin-card-images.json",
+        "output": "latin-flashcards-volume-2.docx",
+        "font": "Noto Serif",
+        "rtl": False,
+        "headword_pt": 30,
+        "volumeName": "下冊",
+        "sources": [
+            "詞表：教父、中世紀與近現代教廷語料詞頻，與上冊不重複。",
+            "詞形主要部分取自 Whitaker's WORDS。",
+            "正面為字典引用形；發音為羅馬式教會發音。",
         ],
     },
 }
@@ -228,6 +274,13 @@ def headword_size(deck: dict, text: str) -> float:
     """Greek citation forms are long (ἄγγελος, -ου, ὁ); shrink so they fit."""
 
     base = deck["headword_pt"]
+    # Latin citation forms are longer than any other deck's -- four principal
+    # parts run past forty characters -- so they get their own ladder and are
+    # allowed to wrap rather than being shrunk to illegibility.
+    if deck.get("volumeName"):
+        for limit, factor in ((12, 1.0), (20, 0.80), (28, 0.66), (38, 0.55), (99, 0.46)):
+            if len(text) <= limit:
+                return base * factor
     if len(text) <= 8:
         return base
     if len(text) <= 14:
@@ -336,9 +389,27 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
 
 def load_cards(deck: dict) -> list[dict]:
     entries = json.loads(deck["vocab"].read_text(encoding="utf-8"))
-    gloss_payload = json.loads(deck["glosses"].read_text(encoding="utf-8"))
+    gloss_payload = (json.loads(deck["glosses"].read_text(encoding="utf-8"))
+                     if "glosses" in deck else {})
     images = json.loads(deck["images"].read_text(encoding="utf-8"))["images"]
     cards: list[dict] = []
+
+    if "volumeName" in deck:  # Latin
+        rows = [item for item in entries["entries"] if item["volume"] == deck["volumeName"]]
+        for entry in sorted(rows, key=lambda item: item["ordinal"]):
+            gloss = (entry.get("glossZh") or "").strip()
+            if not gloss:
+                raise SystemExit(f"{entry['headword']} 缺繁中詞義")
+            printed = (entry.get("forms") or entry["headword"]).strip()
+            record = images.get(latin_key(entry))
+            cards.append({
+                "headword": printed,
+                "glossZh": gloss,
+                "pos": POS_LATIN.get(latin_pos(entry), ""),
+                "lesson": entry["lesson"],
+                "picture": IMAGE_DIR / record["file"] if record else None,
+            })
+        return cards
 
     if "volume" in deck:  # Greek
         entries = [item for item in entries["entries"] if item["volume"] == deck["volume"]]

@@ -46,6 +46,23 @@ OUTPUT = CACHE / "readings-zh.json"
 
 _S2T = opencc.OpenCC("s2t")
 
+# Characters whose s2t rewrite is not evidence of simplified text.  OpenCC maps
+# 台 to 臺, but 台 is standard in Taiwan and is what this project writes; a gate
+# that calls it simplified rejects perfectly good Traditional Chinese and then
+# retries forever.  讀經台 was refused eleven times for exactly this.
+BOTH_TRADITIONAL = {"台": "臺", "床": "牀", "群": "羣", "峰": "峯", "line": ""}
+
+
+def has_simplified(text: str) -> bool:
+    converted = _S2T.convert(text)
+    if converted == text:
+        return False
+    if len(converted) != len(text):
+        return True
+    return any(before != after and BOTH_TRADITIONAL.get(before) != after
+               for before, after in zip(text, converted))
+
+
 # Roughly a page of Latin at a time: long enough for the model to see the
 # argument, short enough that a failure costs one segment.
 SEGMENT_WORDS = 110
@@ -180,7 +197,7 @@ def flaws(latin: list[str], chinese: list[str]) -> str:
     for row in chinese:
         if not row.strip():
             return "有空白段"
-        if _S2T.convert(row) != row:
+        if has_simplified(row):
             return "含簡體字"
         if LATIN_LEAK.search(row.replace("V.", "").replace("R.", "")):
             return "殘留拉丁文"

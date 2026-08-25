@@ -1,7 +1,8 @@
 # Printable flashcard decks
 
 The reader's vocabulary masters also drive printed decks: Hebrew 1,000 cards,
-Greek volume 1 and volume 2 at 1,000 each. They follow the household's existing
+Greek volume 1 and volume 2 at 1,000 each, Latin volume 1 and volume 2 at 1,000
+each. They follow the household's existing
 English tutoring deck (`家教單字卡.pdf` on the desktop) so the same guillotine
 and the same printer settings work for all of them.
 
@@ -12,8 +13,10 @@ and the same printer settings work for all of them.
 | 聖經希伯來文 | 1,000 | 252 | **1,000 (100%)** | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
 | 通用希臘文・上冊 | 1,000 | 252 | 627 (63%) | 276 | `output/flashcards/greek-flashcards-volume-1.pdf` |
 | 通用希臘文・下冊 | 1,000 | 252 | 293 (29%) | 447 | `output/flashcards/greek-flashcards-volume-2.pdf` |
+| 教會拉丁文・上冊 | 1,000 | 252 | 457 (46%) | 40 | `output/flashcards/latin-flashcards-volume-1.pdf` |
+| 教會拉丁文・下冊 | 1,000 | 252 | 345 (35%) | 9 | `output/flashcards/latin-flashcards-volume-2.pdf` |
 
-All three are built, rendered, verified and pushed. DOCX sits beside each PDF.
+All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 
 **The Greek decks are another session's work from 2026-08-25 onward.** The owner
 reassigned them. Do not regenerate `greek-card-images.json`, the Greek deck files
@@ -84,7 +87,15 @@ meaning line is sized from its own length — the glosses run from two character
 to twenty-seven — rather than set once and allowed to overflow. Greek citation
 forms are long (`ἄνθρωπος, -ου, ὁ`), so the headword shrinks by length too.
 
-Hebrew reads its part of speech from the vocabulary master. Greek has none, so
+Latin prints the full citation form on the front — four principal parts for a
+verb, nominative-genitive-gender for a noun — because that is what has to be
+known, and it gets its own size ladder: the longest run past forty characters,
+where the Greek ladder would shrink them to nothing. They are allowed to wrap.
+
+Hebrew and Latin read their part of speech from the vocabulary master; Latin's
+comes from the reader's own `short_pos`, which reads the gender abbreviation and
+the principal parts rather than an explicit field, because Collins labels
+neither. Greek has none, so
 `scripts/flashcard_pos.py` works it out from the citation form (an article makes
 a noun, three terminations an adjective, a first-person form a verb) and from the
 Chinese gloss where the form is silent (`（配屬格）` marks a preposition, a gloss
@@ -101,13 +112,19 @@ Strictest-first, and it refuses to guess:
    vocabulary lives, and where function words get their symbol —
    לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕. 1,383 entries so far
    (Hebrew 806 by Strong number plus 4 by pointed form, Greek 573).
-2. **Chinese-meaning transfer**, both ways and transitive. The three decks share
+2. **Chinese-meaning transfer**, both ways and transitive. All five decks share
    one Traditional-Chinese gloss vocabulary, so a word whose meaning another deck
    has already pictured takes that picture: πῦρ and אֵשׁ are both 「火」 and both
    want the flame. Greek reads the Hebrew map, Hebrew reads the Greek map, and
    the Greek matcher runs a second pass over its own results so volume 2 inherits
-   volume 1. Run the matchers alternately until the counts stop moving — two
-   rounds is enough.
+   volume 1. Latin came third and reads both earlier maps, which is where 444
+   of its 802 pictures came from — more than its 279 hand-picked overrides. Run
+   the matchers alternately until the counts stop moving — two rounds is enough.
+
+   A borrowed picture can still be wrong for the borrower. `itaque` 「因此、所以」
+   arrived carrying 🔚 from whichever card shares that gloss; a conclusion is an
+   arrow forward, not a stop. Overrides run first precisely so a deck can correct
+   an inheritance without touching the deck it inherited from.
 
    Keep the loop variable out of the way here. Naming it `key` shadows the
    card's own `strong|pointed` and silently writes entries under their Chinese
@@ -160,7 +177,8 @@ different job from matching, and it has its own failure modes:
 ```
 python scripts/match_flashcard_images.py --write        # Hebrew picture map
 python scripts/match_greek_card_images.py --write       # Greek — another session owns this
-python scripts/build_flashcards.py --deck hbo           # or grc1, grc2
+python scripts/match_latin_card_images.py --write       # Latin picture map
+python scripts/build_flashcards.py --deck hbo           # or grc1, grc2, lat1, lat2
 python scripts/build_flashcards.py --deck hbo --limit 16   # proof sheet
 ```
 
@@ -199,6 +217,18 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 2. **A paid Gemini key** would let image generation fill the rest with a style
    matched to the deck rather than to the emoji set. Check quota before promising
    anything; the free tier gave nothing.
-3. **Latin.** `project_latin_original_reader` finished its data layer on
-   2026-08-25, so a third language could take the same treatment. Nobody has
-   asked yet.
+3. **Latin coverage.** Both Latin decks are built. What they still lack is
+   pictures: 46% and 35%. The uncovered head of the list is almost entirely
+   abstract adverbs and particles — quasi, modo, scilicet, potius, ceterus,
+   prius — which have no picture that is theirs rather than an illustration of
+   some sentence they might appear in. Adding overrides for those would break
+   the rule the decks are built on. The concrete nouns and verbs among the
+   blanks are the ones worth a second pass.
+
+### A gate that rejected good Chinese
+
+The gloss checker called any text simplified if OpenCC's `s2t` changed it. It
+changes 台 to 臺, so 「讀經台」 was refused eleven times running and `ambō` sat
+unglossed while the deck refused to build. Differences that are only
+Taiwan-standard variants are now allowed through. Watch for this anywhere else
+a Traditional-Chinese gate is written as a round-trip comparison.
