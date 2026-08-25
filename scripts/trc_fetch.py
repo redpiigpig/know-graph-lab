@@ -44,12 +44,49 @@ CHUNK = 1 << 20
 BAD_FS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
 
 
+RETRIES = 4           # 暫時性網路錯誤重試次數
+BACKOFF = 15.0        # 首次重試前等待秒數，逐次加倍
+
+
+def keep_awake(on: bool = True) -> None:
+    """下載期間告訴 Windows「系統忙碌中」，擋掉閒置待機。
+
+    只用 ES_SYSTEM_REQUIRED、不用 ES_DISPLAY_REQUIRED——螢幕照常關。
+    **蓋上蓋子仍照常睡**（lid action 永遠優先於這個旗標），正是要的行為：
+    機器閒著別自己睡，但闔上就該睡。
+    """
+    if sys.platform != "win32":
+        return
+    import ctypes
+    ES_CONTINUOUS, ES_SYSTEM_REQUIRED = 0x80000000, 0x00000001
+    ctypes.windll.kernel32.SetThreadExecutionState(
+        (ES_CONTINUOUS | ES_SYSTEM_REQUIRED) if on else ES_CONTINUOUS)
+
+
+def with_retry(fn, what: str):
+    """暫時性網路錯誤重試。
+
+    從待機恢復的頭幾秒網路還沒起來，`getaddrinfo failed` 與
+    `RemoteDisconnected` 都會冒出來——這類該重試，不該計為失敗。
+    """
+    delay = BACKOFF
+    for i in range(RETRIES):
+        try:
+            return fn()
+        except (requests.ConnectionError, requests.Timeout) as e:
+            if i == RETRIES - 1:
+                raise
+            print(f"    ⟳ {what}：{type(e).__name__}，{delay:.0f} 秒後重試")
+            time.sleep(delay)
+            delay *= 2
+
+
 def raw_url(path: str) -> tuple[str, int]:
-    r = requests.post(
+    r = with_retry(lambda: requests.post(
         f"{BASE}/api/fs/get",
         headers={"Content-Type": "application/json", "User-Agent": UA},
         json={"path": path, "password": ""}, timeout=60,
-    )
+    ), "取得連結")
     r.raise_for_status()
     d = r.json()
     if d.get("code") != 200:
@@ -78,13 +115,18 @@ def fetch_one(path: str, dest_dir: Path, author: str = "", dry: bool = False) ->
     if dry:
         return None
     tmp = out.with_suffix(out.suffix + ".part")
-    got = 0
-    with requests.get(url, headers={"User-Agent": UA}, stream=True, timeout=TIMEOUT) as r:
-        r.raise_for_status()
-        with tmp.open("wb") as fh:
-            for blk in r.iter_content(CHUNK):
-                fh.write(blk)
-                got += len(blk)
+
+    def _pull() -> int:
+        n = 0
+        with requests.get(url, headers={"User-Agent": UA}, stream=True, timeout=TIMEOUT) as r:
+            r.raise_for_status()
+            with tmp.open("wb") as fh:
+                for blk in r.iter_content(CHUNK):
+                    fh.write(blk)
+                    n += len(blk)
+        return n
+
+    got = with_retry(_pull, out.name[:40])
     if size and got != size:
         tmp.unlink(missing_ok=True)
         raise RuntimeError(f"體積不符：拿到 {got} 應為 {size}")
@@ -118,6 +160,7 @@ def main() -> int:
     if a.limit:
         todo = todo[:a.limit]
 
+    keep_awake(True)
     ok = fail = 0
     for i, it in enumerate(todo, 1):
         print(f"[{i}/{len(todo)}] {it['path']}")
@@ -129,6 +172,7 @@ def main() -> int:
             fail += 1
         if i < len(todo) and not a.dry_run:
             time.sleep(a.delay)     # 一次一個檔、留間隔——不要拿掉
+    keep_awake(False)
     print(f"\n成功 {ok}，失敗 {fail}")
     return 0
 
