@@ -263,6 +263,25 @@ def blank_line_between_sections(body):
     return n
 
 
+def strip_lead_space(body):
+    """段首手打的空白（半形／全形／tab）清掉。表格內的段落不動。"""
+    n = 0
+    for p in body.findall(Q("p")):
+        hit = False
+        for t in p.iter(Q("t")):
+            s = t.text or ""
+            if not s.strip():          # 整段都是空白的 run，清掉再看下一個
+                if s:
+                    t.text, hit = "", True
+                continue
+            new = s.lstrip(" \u3000\t")
+            if new != s:
+                t.text, hit = new, True
+            break
+        n += 1 if hit else 0
+    return n
+
+
 def set_keep_next(p):
     """讓這一段與下一段黏在同一頁。"""
     pPr = p.find(Q("pPr"))
@@ -410,6 +429,7 @@ def process(pp, idx):
 
     if pp.get("squeeze"):
         print("      清掉空段落 %d 段" % drop_blank_paras(plan))
+    strip_lead_space(body)
     keep_tables_whole(body)
     refs_on_new_page(body)
     blank_line_between_sections(body)
