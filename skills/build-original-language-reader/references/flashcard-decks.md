@@ -5,11 +5,11 @@ Greek volume 1 and volume 2 at 1,000 each. They follow the household's existing
 English tutoring deck (`家教單字卡.pdf` on the desktop) so the same guillotine
 and the same printer settings work for all of them.
 
-## State, 2026-08-25
+## State, 2026-08-26
 
 | Deck | Cards | Pages | With picture | Part of speech blank | File |
 |---|---:|---:|---:|---:|---|
-| 聖經希伯來文 | 1,000 | 252 | 581 (58%) | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
+| 聖經希伯來文 | 1,000 | 252 | **1,000 (100%)** | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
 | 通用希臘文・上冊 | 1,000 | 252 | 627 (63%) | 276 | `output/flashcards/greek-flashcards-volume-1.pdf` |
 | 通用希臘文・下冊 | 1,000 | 252 | 293 (29%) | 447 | `output/flashcards/greek-flashcards-volume-2.pdf` |
 
@@ -24,9 +24,10 @@ for meaning transfer.
 ### What the owner has decided
 
 - **Every card should carry a picture.** Their reasoning: a physical deck only
-  earns its keep if the picture aids memory, otherwise study online. Coverage is
-  therefore a live target, not a finished number. Raising it means adding
-  overrides by hand.
+  earns its keep if the picture aids memory, otherwise study online. The Hebrew
+  deck reached that on 2026-08-26: the remaining 419 blanks were picked by hand,
+  one word at a time, so `OVERRIDES` now carries 854 Hebrew entries. Greek is
+  still short of it and belongs to another session.
 - **Cartoon style**, one consistent look.
 - **No cutting lines.** A hairline printed a millimetre off leaves every card
   with a crooked edge.
@@ -98,7 +99,8 @@ Strictest-first, and it refuses to guess:
 1. **Hand-picked overrides**, named by the emoji's own name rather than a
    hexcode so a bad entry fails loudly. This is where the frequent core
    vocabulary lives, and where function words get their symbol —
-   לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕. 1,003 entries so far.
+   לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕. 1,383 entries so far
+   (Hebrew 806 by Strong number plus 4 by pointed form, Greek 573).
 2. **Chinese-meaning transfer**, both ways and transitive. The three decks share
    one Traditional-Chinese gloss vocabulary, so a word whose meaning another deck
    has already pictured takes that picture: πῦρ and אֵשׁ are both 「火」 and both
@@ -122,6 +124,36 @@ animal — because Strong's glosses are English and English is full of them.
 
 A wrong picture on a printed card teaches a sense the word does not carry, and
 the learner cannot undo it. Blank beats wrong, every time.
+
+### Filling the last 419 by hand, and what that taught
+
+Picking a picture for every remaining word — including the abstract ones — is a
+different job from matching, and it has its own failure modes:
+
+- **Look at the artwork before trusting the name.** OpenMoji's `tap` is a finger
+  tapping a screen, not a water tap; `wedding` is a church with a cross, which
+  is a Christian building on a Hebrew Bible card; `assembly group` is an adult
+  with a child. Render a contact sheet of every new pick (`PIL`, 110 px cells)
+  and look at it before rebuilding the deck. Four wrong pictures were caught
+  that way and none of them were catchable from the name.
+- **Repeats are fine within a root, fatal across an opposition.** The deck has
+  always let synonyms share a picture (門/出去/入口 all take the door), and a
+  verb and its noun sharing one is a feature — רָעֵב and רָעָב both take 🤤,
+  שָׁבָה and שְׁבִי both take the padlock. But 饑荒 must never take the same
+  🍴 as 吃, and 管教 must never take the same ☝️ as 你: the card then teaches the
+  opposite or an unrelated word. After each round, group the map by picture and
+  read the glosses that share one.
+- **Anachronism is a content error, not a style one.** Same rule as the Divine
+  Name: no church for 新婦, no synagogue for 聖所 (`place of worship` 🛐 is the
+  neutral one), but מְנוֹרָה does take the menorah — there it is the object
+  itself, not a later symbol read back.
+- **Function words take a symbol, not a scene.** 疑問助詞 ❓, כְּ ＝, לְ →,
+  בְּ 🚩, מְעַט 🤏, עַד ♾️, בְּלִי 🪹.
+- **Four prefixes have no Strong number.** בְּ / כְּ / לְ / הֲ are keyed by their
+  pointed form in `OVERRIDES_BY_FORM`, which the matcher consults when
+  `entry["strong"]` is empty. Copy the form out of the vocabulary master rather
+  than typing it: בְּ and כְּ carry a dagesh after the shva, and a hand-typed
+  key silently matches nothing.
 
 ## Commands
 
@@ -149,12 +181,21 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
   Tahoma or Calibri. `pdfplumber` reports the font per character.
 - The back sheet's leftmost card matches the front sheet's rightmost.
 - Every key in the picture map resolves against the vocabulary master.
+- Every back page carries exactly eight images once the deck is at full
+  coverage: `len(page.images)` over the odd pages should be 8 for all 125 of
+  them. A page with seven means one card lost its picture in the rebuild.
+- Two Hebrew cards report Tahoma and that is expected, not a regression: the
+  gloss lines 「弟兄；兄弟（אָח 的複數）」 and 「誡命（מִצְוָה 的不規則複數）」
+  embed Hebrew inside the Chinese meaning run, which is set in the UI face.
+  Headwords themselves never fall back.
 
 ## Next, if the owner asks for more
 
-1. **More overrides.** The remaining blanks, by deck and by frequency, come from
-   the matcher's own report — it prints the highest-frequency uncovered words on
-   every run. Hebrew is the one this session owns.
+1. **Hebrew is at 100% and needs no more overrides** — the matcher's uncovered
+   report now prints empty. What is left there is refinement: a picture that is
+   merely adjacent to its word (肩膀 takes the prosthetic arm, 掠奪 the boxing
+   glove, 細麵 the pancakes) could be improved if a better emoji is found, but
+   none of them is wrong. Greek still has blanks and belongs to another session.
 2. **A paid Gemini key** would let image generation fill the rest with a style
    matched to the deck rather than to the emoji set. Check quota before promising
    anything; the free tier gave nothing.
