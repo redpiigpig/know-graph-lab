@@ -62,11 +62,17 @@ def set_footer(sec, kind, numbered):
     rng.ParagraphFormat.Alignment = wdAlignParagraphCenter
     rng.ParagraphFormat.SpaceBefore = 0
     rng.ParagraphFormat.SpaceAfter = 0
-    rng.Font.Name = "Times New Roman"
-    rng.Font.Size = 10
     fld = rng.Fields.Add(Range=rng, Type=wdFieldPage)
     fld.ShowCodes = False
     hf.Range.Fields.Update()
+    # 字型一定要等功能變數插完再設，否則頁碼會套回樣式字型（實測變 Calibri）。
+    # 含功能變數的 Range 設 NameFarEast 會炸 OLE 0x800a16d4，只設 Name 並個別 try。
+    for rr in (fld.Result, hf.Range):
+        try:
+            rr.Font.Name = "Times New Roman"
+            rr.Font.Size = 10
+        except Exception as e:
+            print("  頁尾字型：%s" % e)
 
 
 def build(pages=None):

@@ -175,7 +175,9 @@ def add_bio_footnote(fn_root, author_p, bio):
 
 
 def title_block(pp, fn_root):
-    out = [mk_para("conf", CONF)]
+    # 會議名不在這裡印：合本後書眉已單雙輪流（單數頁篇名／雙數頁會議名），
+    # 篇首頁再印一行就變成兩個頁首
+    out = []
     if pp["sub"]:
         out.append(mk_para("title", "", runs=[(pp["title"] + "\n" + pp["sub"], False)]))
     else:
