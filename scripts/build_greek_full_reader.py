@@ -344,6 +344,22 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
             add_plain_greek(document, step["displayText"])
 
 
+CJK_RE = re.compile(r"([　-〿㐀-䶿一-鿿＀-￯]+)")
+
+
+def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None:
+    """Set the Latin in a Latin face and the Chinese in a Chinese one.
+
+    One run in "Noto Serif" carrying both leaves LibreOffice to find the Chinese
+    somewhere, and it picks a font it does not then embed — the title page's
+    「（上冊新約部分）」 came out in an unembedded NotoSansJP-Thin, which fails the
+    PDF gate even though it looks fine on screen.
+    """
+    for chunk in filter(None, CJK_RE.split(text)):
+        font = FONT_ZH if CJK_RE.fullmatch(chunk) else "Noto Serif"
+        set_run_font(paragraph.add_run(chunk), font, size, color=color)
+
+
 def add_front_matter(document: Document, master: dict, volume: dict) -> None:
     title = document.add_paragraph()
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -360,7 +376,7 @@ def add_front_matter(document: Document, master: dict, volume: dict) -> None:
     add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, TRANSLATION_PT, color=MUTED)
     textbook = document.add_paragraph()
     textbook.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(textbook.add_run(master["textbook"]), "Noto Serif", CAPTION_PT, color=MUTED)
+    add_latin_and_cjk(textbook, master["textbook"], CAPTION_PT)
 
     page_break(document)
     add_label(document, "體例與來源")

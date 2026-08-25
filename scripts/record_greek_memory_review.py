@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "greek-full"
 VERSES = CACHE / "memory-verses.json"
 SENTENCES = CACHE / "memory-sentences.json"
+MASTER = CACHE / "greek-reader-two-volumes.json"
 
 STATUS = "reviewed_by_assistant_on_owner_delegation"
 DELEGATED_ON = "2026-08-22"
@@ -40,18 +41,38 @@ CRITERIA = [
 KEPT_WITH_NOTE = {
     "Acts.2.16": "約珥是這句話的內容，不是敘事背景；句子完整。",
     "Rev.2.15": "尼哥拉派是本節的主題所在。",
-}
-
-# Units that survive the automatic rules but that a reader should be told about.
-# Naming them is the point: the alternative is a review record that claims all
-# two hundred are equally good.
-WEAKER = {
-    "kind": "phrase_not_sentence",
-    "note": "以名詞片語作結，語法上不是完整句；該課可選的完整句有限，保留並標明。",
+    # 第二次尼西亞大公會議的教規是連綿長句，切到句號時往往只剩一段子句。
+    # 這兩則的本課生詞在該卷別處找不到更完整的句子，故保留並在此具名。
+    "31:31#1": "第 31 課：語法上是子句而非完整句，該課生詞在本半冊沒有更完整的落點。",
+    "31:217#1": "第 42 課：以名詞片語作結，不是完整句；該課生詞在本半冊沒有更完整的落點。",
 }
 
 
-def review(path: Path, key: str, label: str, write: bool) -> dict:
+def chinese_by_ref(volume: int) -> dict[str, str]:
+    """Where the Chinese actually is: the master, not the selection.
+
+    The selectors leave ``translationZh`` empty on purpose — the Chinese is
+    resolved during assembly, out of 和合本修訂版, the 1933 deuterocanon or the
+    self-translated interlinear layer, depending on the unit.  Checking the
+    selection file for it would always find nothing.
+    """
+    if not MASTER.exists():
+        raise FileNotFoundError(
+            f"缺少主檔：{MASTER}；先跑 build_greek_reader_data.py --write"
+        )
+    master = json.loads(MASTER.read_text(encoding="utf-8"))
+    found = next((item for item in master["volumes"] if item["volume"] == volume), None)
+    if found is None:
+        raise LookupError(f"主檔沒有第 {volume} 冊")
+    return {
+        unit["ref"]: str(unit.get("translationZh") or "")
+        for lesson in found["lessons"]
+        for unit in lesson["memoryUnits"]
+    }
+
+
+def review(path: Path, key: str, label: str, volume: int, write: bool) -> dict:
+    chinese = chinese_by_ref(volume)
     payload = json.loads(path.read_text(encoding="utf-8"))
     units = payload[key]
     if len(units) != 100:
@@ -73,7 +94,7 @@ def review(path: Path, key: str, label: str, write: bool) -> dict:
             unit["reviewReason"] = "標記為提示，看過後判定句子完整且值得背，保留。"
         else:
             unit["reviewReason"] = "句子完整、有中譯、用詞在該課範圍內，保留。"
-        if not str(unit.get("translationZh") or "").strip():
+        if not chinese.get(unit["ref"], "").strip():
             without_chinese.append(unit["ref"])
 
     if without_chinese:
@@ -107,8 +128,8 @@ def main() -> None:
     parser.add_argument("--write", action="store_true", help="寫回兩個檔案")
     args = parser.parse_args()
 
-    review(VERSES, "verses", "上冊記憶經節", args.write)
-    review(SENTENCES, "sentences", "下冊記憶句", args.write)
+    review(VERSES, "verses", "上冊記憶經節", 1, args.write)
+    review(SENTENCES, "sentences", "下冊記憶句", 2, args.write)
     for ref, note in KEPT_WITH_NOTE.items():
         print(f"    {ref:<14s} {note}")
 
