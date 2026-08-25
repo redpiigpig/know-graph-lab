@@ -190,6 +190,57 @@ def title_block(pp, fn_root):
     return out
 
 
+def set_keep_next(p):
+    """讓這一段與下一段黏在同一頁。"""
+    pPr = p.find(Q("pPr"))
+    if pPr is None:
+        pPr = etree.Element(Q("pPr"))
+        p.insert(0, pPr)
+    if pPr.find(Q("keepNext")) is None:
+        pPr.insert(0, etree.Element(Q("keepNext")))
+
+
+def keep_tables_whole(body):
+    """表格整塊不跨頁：每列不可分頁，末列以外都黏住下一段，
+    表格正上方的小標（如「甘丹寺」）也一併黏住，免得標題與表身被拆到兩頁。"""
+    for tbl in body.iter(Q("tbl")):
+        rows = tbl.findall(Q("tr"))
+        if not rows:
+            continue
+        for r in rows:
+            trPr = r.find(Q("trPr"))
+            if trPr is None:
+                trPr = etree.Element(Q("trPr"))
+                r.insert(0, trPr)
+            if trPr.find(Q("cantSplit")) is None:
+                trPr.insert(0, etree.Element(Q("cantSplit")))
+        for r in rows[:-1]:
+            for p in r.iter(Q("p")):
+                set_keep_next(p)
+        prev = tbl.getprevious()
+        if prev is not None and prev.tag == Q("p"):
+            set_keep_next(prev)
+
+
+def drop_blank_paras(plan):
+    """原稿拿空段落當行距用；版式已有固定行高，空段落一律拿掉。
+    表格內的空儲存格段落要留，兩個表格之間的空段也要留（否則 Word 會把表格併成一個）。"""
+    n = 0
+    for p, role, txt in plan:
+        if txt.strip():
+            continue
+        par = p.getparent()
+        if par is None or any(a.tag == Q("tc") for a in p.iterancestors()):
+            continue
+        i = list(par).index(p)
+        if 0 < i < len(par) - 1 and par[i - 1].tag == Q("tbl") \
+           and par[i + 1].tag == Q("tbl"):
+            continue
+        par.remove(p)
+        n += 1
+    return n
+
+
 def process(pp, idx):
     dst = os.path.join(BUILD, "%02d_%s.docx" % (idx, pp["num"].replace(".", "-")))
     src = os.path.join(SRC, pp["src"]) if pp["src"] else BLANK
@@ -284,6 +335,10 @@ def process(pp, idx):
         restyle_para(p, role, keep_bold=use_bold)
         stats[role] = stats.get(role, 0) + 1
 
+    if pp.get("squeeze"):
+        print("      清掉空段落 %d 段" % drop_blank_paras(plan))
+    keep_tables_whole(body)
+
     # 3) 加上新的標題區
     for i, p in enumerate(title_block(pp, fn_root)):
         body.insert(i, p)
@@ -317,10 +372,14 @@ def process(pp, idx):
 if __name__ == "__main__":
     os.makedirs(BUILD, exist_ok=True)
     # 只清本腳本產生的論文檔；前置頁由 front.py 管，別誤刪
-    for f in os.listdir(BUILD):
-        if re.match(r"^\d{2}_", f):
-            os.remove(os.path.join(BUILD, f))
+    if not sys.argv[1:]:
+        for f in os.listdir(BUILD):
+            if re.match(r"^\d{2}_", f):
+                os.remove(os.path.join(BUILD, f))
+    only = sys.argv[1:]          # 給編號就只重排那幾篇，其餘沿用既有 build/
     for i, pp in enumerate(PAPERS, 1):
+        if only and pp["num"] not in only:
+            continue
         if pp["src"] is None:
             print("%2d  %-6s ⚠ 稿件未到，產生佔位頁：%s" % (i, pp["num"], pp["title"]))
         dst, n, stats = process(pp, i)

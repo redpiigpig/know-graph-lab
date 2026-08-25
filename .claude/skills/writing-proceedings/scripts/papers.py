@@ -62,7 +62,7 @@ PAPERS = [
     dict(num="3.3", ses="3", src="3.3. 覺察與演算_澤仁扎西堪布.docx", start=r"^摘\s*要",
          title="覺察與演算：AI 時代佛法的當代價值與傳播策略",
          sub="——兼論藏傳佛教現代化之轉型路徑",
-         author="澤仁扎西 堪布",
+         author="堪布澤仁扎西",
          bio="現任：澳洲慧輪藏傳佛教協會知道上師；喜馬拉雅慧輪文化基金會創始者；"
              "榮松佛教頻道創始人。曾任：台灣國際藏傳佛教研究會主席。",
          agenda="覺察與演算：AI 時代佛法的當代價值與傳播策略"),
@@ -93,6 +93,7 @@ PAPERS = [
 
     # 2026-08-22 作者送來修訂版（術語更正＋新增格魯大考沿革），取代舊稿
     dict(num="4.2.3", ses="4.2", src="geshe_v3.docx", start=r"^摘\s*要",
+         squeeze=True,
          title="藏傳佛教南印度格魯派三大寺格西學制研究",
          sub="", author="哈欣仁波切", bio="拉然巴格西。",
          agenda="藏傳佛教教育體制從傳統到現代化的變遷——以格魯派教育體制為例"),
@@ -109,7 +110,7 @@ PAPERS = [
          author="盧佳慧", bio="臺北醫學大學醫學人文研究所。",
          agenda="教育與照護之間：拉達克 Ani 的藏醫實作"),
 
-    dict(num="A1", ses="A", src="3.2. WeBuddhist_TTBF_Paper_EN_0811.docx", start=r"^Abstract",
+    dict(num="A1", toc_num="附1", ses="A", src="3.2. WeBuddhist_TTBF_Paper_EN_0811.docx", start=r"^Abstract",
          title="Reliable and Relatable",
          sub="A Two-Track Strategy for Modernizing Buddhism in the WeBuddhist "
              "App through “Railroads” and Creator Partnerships",

@@ -169,14 +169,18 @@ def short_session(ses):
 
 
 def monastic_name(name, rank):
-    """名錄一律作「某某法師」：去掉「釋」字，法師身分則在名後綴「法師」。
-    姓名已含法師時，職銜欄裡重複的「法師」一併去掉。"""
+    """名錄的僧職稱謂併入姓名欄：法師綴於名後、堪布冠於名前，「釋」字去掉；
+    姓名已含該稱謂時，職銜欄裡重複的一份去掉。"""
     name = name.lstrip("釋").strip()
     ranks = [r.strip() for r in str(rank or "").split("；") if r.strip()]
     if "法師" in ranks and not name.endswith(TITLES):
         name += "法師"
-    if name.endswith("法師"):
-        ranks = [r for r in ranks if r != "法師"]
+    if "堪布" in ranks and not name.startswith("堪布") \
+       and not name.endswith(TITLES):
+        name = "堪布" + name          # 議程與論文署名都作「堪布某某」
+    for t in ("法師", "堪布"):
+        if name.endswith(t) or name.startswith(t):
+            ranks = [r for r in ranks if r != t]
     return name, "；".join(ranks)
 
 
@@ -222,6 +226,13 @@ def scholars():
     return write_doc(ps, os.path.join(BUILD, "00d_scholars.docx"))
 
 
+# 大會 2026-08-25 最新版名單的更動（僧職寫法依大會原檔，不套名錄體例）
+STAFF_FIX = {
+    "議 程 組：釋融德（組長）、釋圓濠、鄭凱榕（司儀）":
+        "議 程 組：釋融德（組長）、釋圓濠、張辰瑋、鄭凱榕（司儀）",
+}
+
+
 def staffpage():
     """把大會提供的「頁尾_工作人員清單」套上論文集版式。"""
     dst = os.path.join(BUILD, "99_staff.docx")
@@ -233,8 +244,8 @@ def staffpage():
     body = root.find(Q("body"))
     for p in body.iter(Q("p")):
         txt = para_text(p)
-        new = re.sub(r"釋([一-鿿]{2})(?!法師)", r"\1法師", txt)
-        if new != txt:                       # 名單一律作「某某法師」
+        new = STAFF_FIX.get(txt.strip(), txt)
+        if new != txt:                       # 大會最新版名單的更動
             for r in p.findall(Q("r")):
                 p.remove(r)
             r = etree.SubElement(p, Q("r"))
@@ -259,7 +270,7 @@ def staffpage():
 def agenda():
     """把大會議程 docx 套上論文集版式。"""
     dst = os.path.join(BUILD, "00c_agenda.docx")
-    shutil.copyfile(os.path.join(SRC, "agenda_0820.docx"), dst)
+    shutil.copyfile(os.path.join(SRC, "agenda_0825.docx"), dst)
     z = zipfile.ZipFile(dst)
     parts = {n: z.read(n) for n in z.namelist()}
     z.close()
@@ -344,7 +355,7 @@ def toc_doc(pages):
             ps.append(mk_para("h1", SESSIONS[pp["ses"]]))
             last_ses = pp["ses"]
         pg = "（稿件未到）" if pp["src"] is None else pages.get(pp["num"], "")
-        ps.append(toc_line(pp["num"], pp["title"], pp["author"], pg))
+        ps.append(toc_line(pp.get("toc_num", pp["num"]), pp["title"], pp["author"], pg))
     return write_doc(ps, os.path.join(BUILD, "00b_toc.docx"))
 
 
