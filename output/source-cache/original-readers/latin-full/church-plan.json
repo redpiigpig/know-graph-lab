@@ -11,8 +11,8 @@
  "terminalSection": {
   "title": "常年期主日彌撒經文",
   "latinTitle": "Ordo Missae, tempus per annum",
-  "status": "source_pending",
-  "note": "現行《羅馬彌撒經書》第三版屬聖座著作權，須先確認授權底本；在授權底本到位前不得以任何轉錄替代。此節獨立於五十篇讀本之外。"
+  "status": "latin_frozen_chinese_self_translated",
+  "note": "拉丁文取自 Collins《A Primer of Ecclesiastical Latin》讀本部分所印之現行彌撒常規；本私人版之製作已獲口頭同意。中文為自譯研讀本，非教會核准之禮儀譯本——中文彌撒另有《感恩祭典》，本書不取代之。此節獨立於五十篇讀本之外。"
  },
  "readings": [
   {

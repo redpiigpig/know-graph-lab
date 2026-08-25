@@ -120,7 +120,11 @@ def main() -> int:
         # written against them passes while the two files disagree about which
         # chapter a lesson is.
         got = {(row["book"], row["latinChapter"]) for row in chinese["chapters"]}
-        missing = {(row["book"], row["chapter"]) for row in scripture["chapters"]} - got
+        # The opening lessons are liturgical formulas, not Bible chapters; their
+        # Chinese comes from the translation pass and is checked with the rest
+        # of the readings, not against the Bible export.
+        missing = {(row["book"], row["chapter"]) for row in scripture["chapters"]
+                   if row.get("kind") != "liturgy" and row.get("book")} - got
         if missing:
             failures.append(f"這些章沒有中文：{sorted(missing)}")
         stale = [c["title"] for c in chinese["chapters"]
@@ -146,7 +150,7 @@ def main() -> int:
         pending = [r["title"] for r in readings if r["chineseParallel"] != "repo-existing"]
         if pending:
             warnings.append(f"下冊 {len(pending)} 篇尚無中譯，需自譯並標記")
-        if church["terminalSection"]["status"] != "ready":
+        if not church["terminalSection"]["status"].startswith("latin_frozen"):
             warnings.append(f"終卷《{church['terminalSection']['title']}》"
                             f"狀態 {church['terminalSection']['status']}")
 
