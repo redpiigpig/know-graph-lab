@@ -32,6 +32,15 @@ DEFAULT_LEDGER = CATALOG_DIR / "classified-records.jsonl"
 DEFAULT_HEARTBEAT = CATALOG_DIR / "catalog-loop-heartbeat.json"
 DEFAULT_LOG = CATALOG_DIR / "catalog-loop.log"
 
+# 引擎順序。預設維持「本機優先」不動既有流程；量大時用環境變數改成雲端優先：
+#   DAZANGJING_ENGINE_ORDER=gemini,nvidia,ollama
+# 本機 qwen2.5:7b 每筆約 3.75 分鐘（且成功後還要再跑一次雲端複審），
+# 上千筆的批次跑不完，那種場合一律走 Gemini 優先（[[feedback_engine_nvidia_no_haiku]]）。
+ENGINE_ORDER = tuple(
+    e.strip() for e in os.environ.get("DAZANGJING_ENGINE_ORDER", "ollama,gemini,nvidia").split(",")
+    if e.strip() in {"ollama", "gemini", "nvidia"}
+) or ("ollama", "gemini", "nvidia")
+
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
 OLLAMA_MODEL = os.environ.get("DAZANGJING_OLLAMA_MODEL", "qwen2.5:7b")
 GEMINI_MODEL = os.environ.get("DAZANGJING_GEMINI_MODEL", "gemini-2.5-flash")
@@ -353,7 +362,7 @@ def classify_record(record: dict[str, Any], gemini_keys: list[str], nvidia_keys:
     prompt = prompt_for(record)
     errors: list[str] = []
     local_candidate: dict[str, Any] | None = None
-    for engine in ("ollama", "gemini", "nvidia"):
+    for engine in ENGINE_ORDER:
         try:
             if engine == "ollama":
                 text, model = call_ollama(prompt)
