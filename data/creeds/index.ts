@@ -132,12 +132,25 @@ import { augsburgConfession } from './protestant-confessions/02-augsburg-confess
 import { anglicanArticles } from './protestant-confessions/03-anglican-articles'
 import { reformedBelgic } from './protestant-confessions/04-reformed-belgic'
 import { limaBem } from './protestant-confessions/05-lima-bem'
+// 以下四筆不在 Denzinger 附錄五之列，中譯取自 TRC 改革宗資源站藏本。
+import { heidelbergCatechism } from './protestant-confessions/06-heidelberg-catechism'
+import { canonsOfDort } from './protestant-confessions/07-canons-of-dort'
+import { westminsterConfession } from './protestant-confessions/08-westminster-confession'
+import {
+  westminsterShorterCatechism,
+  westminsterLargerCatechism,
+} from './protestant-confessions/09-westminster-catechisms'
 
 export const PROTESTANT_CONFESSIONS: Creed[] = [
   lutherSmallCatechism,   // DH 5500-5502  (1529)
   augsburgConfession,     // DH 5503-5523  (1530)
   anglicanArticles,       // DH 5524-5562  (1571)
   reformedBelgic,         // DH 5575-5590  (1561)
+  heidelbergCatechism,    //               (1563)  合一信經三聯之二
+  canonsOfDort,           //               (1619)  合一信經三聯之三
+  westminsterConfession,  //               (1646)  西敏準則
+  westminsterLargerCatechism,   //         (1647)  西敏準則
+  westminsterShorterCatechism,  //         (1647)  西敏準則
 ]
 
 // ── orthodox-confessions ─────────────────────────────────────

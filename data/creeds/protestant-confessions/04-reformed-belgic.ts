@@ -48,10 +48,19 @@ export const reformedBelgic: Creed = {
     },
     {
       lang: 'zh-Hant-Reformed',
-      label: '改革宗中譯本（待補）',
+      label: '趙中輝譯本（1618-19 多特總會修訂版）',
       text: '',
-      placeholder: true,
-      source: '改革宗出版有限公司／台灣改革宗神學院 譯本。',
+      textKey: 'reformed-belgic-reformed-zh',
+      source: '基督教改革宗翻譯社（rtf-usa.com）刊本，含引言與 37 條全文及經文出處。',
+      translator: '趙中輝',
+    },
+    {
+      lang: 'zh-Hant-Reformed',
+      label: '王一 中文修訂版',
+      text: '',
+      textKey: 'reformed-belgic-wangyi-zh',
+      source: 'URCNA 北美聯合改革宗教會流通之中文修訂版，用語較趙譯現代。',
+      translator: '王一',
     },
   ],
   summaryZh: `1561 年由 Guido de Brès 起草，以法文書寫，用作向西班牙國王腓力二世 (Philip II) 為尼德蘭歸正派信徒護教的信仰宣言。1567 年 de Brès 因信仰殉道於瓦朗謝訥 (Valenciennes)。
