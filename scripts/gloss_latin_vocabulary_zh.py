@@ -89,11 +89,14 @@ def parse(text: str) -> list[dict]:
 # Converting and comparing is exact.
 _S2T = opencc.OpenCC('s2t')
 
-# Characters whose s2t rewrite is not evidence of simplified text.  OpenCC maps
-# 台 to 臺, but 台 is standard in Taiwan and is what this project writes; a gate
-# that calls it simplified rejects perfectly good Traditional Chinese and then
-# retries forever.  讀經台 was refused eleven times for exactly this.
-BOTH_TRADITIONAL = {"台": "臺", "床": "牀", "群": "羣", "峰": "峯", "line": ""}
+# Characters whose s2t rewrite is a Taiwan-standard variant, not evidence of
+# simplified text.  The one that matters most here is 祢: OpenCC rewrites it to
+# 禰, but 祢 is the Catholic second-person honorific for God and appears in
+# almost every prayer this project translates -- 「願祢受讚頌」 is the title of one
+# of its readings.  Rejecting it as simplified threw away good translations and
+# retried them for ever.  台 is the same kind of case, and 号 deliberately is not:
+# that one really is simplified.
+TAIWAN_VARIANTS = {"台", "床", "群", "峰", "祢", "里", "后", "余", "咸"}
 
 
 def has_simplified(text: str) -> bool:
@@ -102,7 +105,9 @@ def has_simplified(text: str) -> bool:
         return False
     if len(converted) != len(text):
         return True
-    return any(before != after and BOTH_TRADITIONAL.get(before) != after
+    # A variant character passes only while the rest of the line is clean; a line
+    # that also contains a real simplified form is still rejected.
+    return any(before != after and before not in TAIWAN_VARIANTS
                for before, after in zip(text, converted))
 
 
