@@ -228,7 +228,9 @@ def scheme_of(text):
 
 def is_ref_heading(text):
     p = re.sub(r"[\s：:]", "", text.strip())
-    return bool(re.fullmatch(
+    if len(p) > 20:
+        return False
+    return bool(re.match(
         r"(參考文獻|參考書目|徵引文獻|引用文獻|References?|Bibliography|參考資料)",
         p, re.I))
 

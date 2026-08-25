@@ -192,6 +192,77 @@ def title_block(pp, fn_root):
     return out
 
 
+# w:pPr 的子元素有固定順序，插錯位置 Word 會當成壞檔
+PPR_ORDER = ["pStyle", "keepNext", "keepLines", "pageBreakBefore", "framePr",
+             "widowControl", "numPr", "suppressLineNumbers", "pBdr", "shd",
+             "tabs", "suppressAutoHyphens", "kinsoku", "wordWrap",
+             "overflowPunct", "topLinePunct", "autoSpaceDE", "autoSpaceDN",
+             "bidi", "adjustRightInd", "snapToGrid", "spacing", "ind"]
+
+
+def pPr_of(p):
+    pPr = p.find(Q("pPr"))
+    if pPr is None:
+        pPr = etree.Element(Q("pPr"))
+        p.insert(0, pPr)
+    return pPr
+
+
+def ensure_flag(p, name):
+    """在 pPr 裡補一個旗標元素，並放到 schema 規定的位置。"""
+    pPr = pPr_of(p)
+    if pPr.find(Q(name)) is not None:
+        return
+    rank = PPR_ORDER.index(name)
+    at = len(pPr)
+    for i, el in enumerate(pPr):
+        tag = etree.QName(el).localname
+        if tag not in PPR_ORDER or PPR_ORDER.index(tag) > rank:
+            at = i
+            break
+    pPr.insert(at, etree.Element(Q(name)))
+
+
+def is_h1_para(p):
+    """判斷是不是節標題：本 pipeline 產出的 h1 版式＝全真粗圓體 14pt。"""
+    rPr = p.find(Q("pPr") + "/" + Q("rPr"))
+    if rPr is None:
+        return False
+    rf, sz = rPr.find(Q("rFonts")), rPr.find(Q("sz"))
+    return (rf is not None and sz is not None
+            and rf.get(Q("eastAsia")) == ttbf.F_HEAD and sz.get(Q("val")) == "28")
+
+
+def refs_on_new_page(body):
+    """參考文獻／References 一律另起一頁。"""
+    n = 0
+    for p in body.findall(Q("p")):
+        if is_ref_heading(para_text(p).strip()):
+            ensure_flag(p, "pageBreakBefore")
+            n += 1
+    return n
+
+
+def blank_line_between_sections(body):
+    """節與節之間空一行：節標題前面若不是空段落就補一個（已有的不重複補）。"""
+    n = 0
+    for p in list(body.findall(Q("p"))):
+        if not is_h1_para(p) or p.getprevious() is None:
+            continue
+        # 摘要／Abstract 緊接在署名之下，不是「節」，前面不補空行
+        if re.fullmatch(r"(摘\s*要|Abstract)[：:]?", para_text(p).strip(), re.I):
+            continue
+        prev = p.getprevious()
+        if prev.tag == Q("p") and not para_text(prev).strip():
+            continue
+        if prev.tag != Q("p") and prev.tag != Q("tbl"):
+            continue
+        gap = mk_para("body", "")
+        p.addprevious(gap)
+        n += 1
+    return n
+
+
 def set_keep_next(p):
     """讓這一段與下一段黏在同一頁。"""
     pPr = p.find(Q("pPr"))
@@ -340,6 +411,8 @@ def process(pp, idx):
     if pp.get("squeeze"):
         print("      清掉空段落 %d 段" % drop_blank_paras(plan))
     keep_tables_whole(body)
+    refs_on_new_page(body)
+    blank_line_between_sections(body)
 
     # 3) 加上新的標題區
     for i, p in enumerate(title_block(pp, fn_root)):
