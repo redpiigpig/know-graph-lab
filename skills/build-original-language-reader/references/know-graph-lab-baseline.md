@@ -64,8 +64,10 @@ Rebuild DOCX/PDF and inspect every new page after the final RCUV2010 master.
 ## Greek continuation checkpoint
 
 Contract frozen 2026-08-18, curriculum re-frozen 2026-08-24, two-volume build
-completed 2026-08-25. See `greek-reader-contract.md` for what it must be and
-`greek-reader-handoff.md` for where it actually stands. Verify live.
+completed 2026-08-26: both volumes pass the release validator (22/22 and 19/19),
+print masters are 480 and 1,138 pages of JIS B5 with every font embedded, and the
+only remaining release gate is audio. See `greek-reader-contract.md` for what it
+must be and `greek-reader-handoff.md` for where it actually stands. Verify live.
 
 | Layer | Path |
 |---|---|
@@ -86,6 +88,9 @@ completed 2026-08-25. See `greek-reader-contract.md` for what it must be and
 | Print masters | `scripts/build_greek_full_reader.py` -> `greek-original-reader-vol1.docx`, `-vol2.docx` |
 | Web reader | `data/originalReaders/greek-full-reader.ts`, `server/api/original-readers/grc-lessons/`, `pages/original-readers/grc-lessons/`; lesson key `v1-12` |
 | Tests | `tests/greek-full-reader.test.ts` |
+| Names audit | `scripts/audit_greek_appendix_names.py` — clears the 49 appendix names that were dictionary definitions, not names |
+| Memory review record | `scripts/record_greek_memory_review.py` — both volumes, checks the Chinese in the master |
+| Release hashes | `skills/.../hash_release_artifacts.py` -> `release-hashes.json` |
 | Keeper | `scripts/grc_reader_keeper.ps1`, task `KGL_Greek_Reader_Keeper` |
 
 Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,church-documents,liturgy,dodson}`.
@@ -120,7 +125,7 @@ When a layer stops advancing, probe the tiers before touching the code:
   behaved exactly this way on 2026-08-21 — still listed, still authorised, and
   never answering.
 
-Still open: human review of the 200 memory units (the single remaining validation failure in both volumes, and one only a person can clear), and audio.
+Still open: audio, and the root cause behind the 49 cleared appendix names — the 信望愛 parser takes the dictionary's definition line instead of the name. The memory-unit review is recorded under the owner's 2026-08-22 delegation and says so explicitly rather than claiming a human pass.
 
 The print master reuses the Hebrew builder's typesetting helpers, which means it also inherits that volume's running header and document title; `retitle()` overrides both. Without it every page of the Greek reader says it is the Hebrew one.
 

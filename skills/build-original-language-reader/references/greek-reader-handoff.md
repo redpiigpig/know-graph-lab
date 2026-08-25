@@ -1,4 +1,4 @@
-# Greek reader — handoff, 2026-08-25
+# Greek reader — handoff, 2026-08-26
 
 Written so another session can pick this up cold. Read
 [`greek-reader-contract.md`](greek-reader-contract.md) first; this file records
@@ -6,9 +6,9 @@ where the work actually stands, not what it should eventually be.
 
 ## Where it stands
 
-The two-volume redesign is **built end to end**. Both volumes assemble into one
-master and both pass every structural gate except the one only a person can
-clear.
+The two-volume reader is **built end to end and both volumes pass the release
+validator, 22/22 and 19/19**. Print masters and PDFs are rendered and inspected.
+What is left is audio, and the root cause of one appendix defect.
 
 | Layer | State |
 |---|---|
@@ -16,43 +16,47 @@ clear.
 | Traditional-Chinese glosses | ✅ 2,000/2,000, keyed by lemma |
 | Transliteration | ✅ 2,000/2,000 (Mounce's own 500, rule-generated 1,500, both labelled) |
 | 上冊 50 chapters | ✅ 1,413 verses, 26,115 words, Chinese complete |
-| 下冊 50 readings | ✅ 2,598 segments, 72,585 words |
-| 上冊 100 memory verses | ✅ selected, **all `pending_human_review`** |
-| 下冊 100 memory sentences | ✅ selected, **all `pending_human_review`** |
-| 5 appendices, 625 entries | ✅ curated tables 220/220 in Chinese; names 341/405 |
+| 下冊 50 readings | ✅ 2,598 segments, 67,576 words |
+| 200 memory units | ✅ selected, Chinese complete, review recorded |
+| Word-by-word layer | ✅ 4,216 distinct units / 4,543 ids, ~100,400 glossed words |
+| 5 appendices, 625 entries | ⚠️ curated tables 220/220; names 291/405 (see below) |
 | Chrysostom liturgy | ✅ 332 steps, 下冊 only |
-| Master | ✅ `greek-reader-two-volumes.json`, schema 2.0.0 |
-| Validator | ✅ `--volume 1` and `--volume 2` |
-| Web reader | ✅ two volumes, lesson key `v1-12` |
-| Tests | ✅ `tests/greek-full-reader.test.ts`, 13 passing |
-| Interlinear | ⏳ running; ~105,300 glossable words over 4,222 units |
-| Print masters | ⏳ builder rewritten for two volumes, not yet rendered |
+| Master | ✅ `greek-reader-two-volumes.json`, `content_complete_layout_pending` |
+| Validator | ✅ `--volume 1` 22 PASS, `--volume 2` 19 PASS |
+| Print masters | ✅ vol1 480 pp, vol2 1,138 pp; every page 182×257 mm, all fonts embedded, no replacement characters, no blank pages |
+| Web reader | ✅ two volumes, lesson key `v1-12`; 27 tests pass; production build passes |
+| Release hashes | ✅ `release-hashes.json`, 19 artifacts |
 | Audio | ⛔ `not_recorded`; TTS substitution forbidden |
 
 ## What is genuinely left
 
-1. **The interlinear layer.** `build_greek_interlinear.py --workers 5` is the
-   long pole and the only thing between the master and
-   `content_complete_layout_pending`. It resumes from its own cache; the keeper
-   task restarts it every half hour if it dies.
-2. **Human review of the 200 memory units.** This is the single remaining
-   validator failure in both volumes and no script can clear it. Candidate
-   scores are in `memory-candidates.json` and
-   `memory-sentence-candidates.json`; `record_greek_memory_review.py` is how a
-   decision gets recorded.
-3. **DOCX and PDF.** `build_greek_full_reader.py` now writes one file per
-   volume (`--volume 1` / `--volume 2`, both by default). Nothing has been
-   rendered or page-inspected since the redesign; the old 763-page single-volume
-   render is dead and must not be used as evidence.
+1. **Audio.** The only release gate that no amount of building can clear. The
+   profile is frozen (Mounce standard Erasmian; Byzantine on its own track, never
+   mixed) and the master truthfully says `not_recorded`.
+2. **The 信望愛 naming route takes the wrong line.** This is the live defect.
+   Reading all 340 named appendix entries turned up 49 that were not names at
+   all: the Strong's dictionary's *definition* where the name should be
+   (Ἄζωτος → 「非利士人的五個重」, Σήμ → 「閃的意思是」, Νηρ → 「空氣」), or a
+   different entry's name (Ισμαηλ → 「以色列」, Ιθαμαρ → 「亞倫」).
+   `scripts/audit_greek_appendix_names.py --write` has cleared all 49 and
+   recorded what each one used to say, so the printed page now reads
+   「（中文待定）」 rather than a wrong name — but the parser in
+   `fill_greek_appendix_names.py` still needs fixing, and until it is, re-running
+   it will put them back.
+3. **Two entries are not proper names at all.** ὄζω ("to smell") and
+   Ἰουδαϊσμός ("Judaism") reached the names appendix because the ≥80%-capitalised
+   rule counts sentence-initial capitals. They are excluded from the lessons as
+   names *and* useless in the appendix, so both are currently lost to the
+   curriculum.
 4. **`data/originalReaders/greek.ts` still describes the old plan.** That file is
    the three-volume planning manifest behind `/original-readers`, not the built
    reader, and it still says a thousand words in groups of fifty.
    `tests/original-readers.test.ts` asserts that shape, so it was left alone
    rather than half-changed. Deciding what the manifest is now for — a plan, or a
    summary of what was built — is the owner's call.
-5. **64 appendix names with no Chinese.** Mostly deuterocanonical (Ὀλοφέρνης,
-   Μακκαβαῖος, Ἀντίοχος); 信望愛 holds no Chinese Maccabees. Empty is the
-   correct state — never invent one.
+5. **64 appendix names have no Chinese, and that is correct.** Mostly
+   deuterocanonical (Ὀλοφέρνης, Μακκαβαῖος, Ἀντίοχος); 信望愛 holds no Chinese
+   Maccabees. Never invent one.
 
 ## Decisions taken this session that the owner has not confirmed
 
@@ -72,12 +76,30 @@ Say these out loud before treating them as settled:
   definitions still come from `data/creeds/**`; the canons and four hymns are
   frozen from `el.wikisource.org` with their revision ids and hashes recorded in
   `sources/church-documents/manifest.json`.
+- **The Pedalion's commentary is cut out of the canons.** Several of those pages
+  print Nicodemus's Ἑρμηνεία under each canon in Katharevousa. It is not the
+  ancient canon and it is not Koine, so it is removed and the count of affected
+  canons recorded per reading.
+- **The five appendix tables print in both volumes**, and a name with no Chinese
+  prints 「（中文待定）」 rather than an empty cell.
 
 ## Traps that have already cost time
 
 Each of these produced a *confident wrong answer*, which is worse than a
 failure, so they are worth knowing before touching the code.
 
+- **A gloss cache keyed by id does not notice that the text changed.** Cutting
+  the commentary out of the canons left 226 units pointing at a gloss row for the
+  old, longer text, and the run reported "nothing to do" — the id was still
+  there. The cache now checks that the cached tokens rebuild the current text.
+- **A source's own page can carry modern Greek.** The Laodicea canons came out at
+  2,702 words instead of 1,436 because the commentary was being read as canon,
+  and a sentence of Katharevousa reached the memory units before anyone looked.
+- **The raised dot is a semicolon, not a full stop.** Splitting sentences on
+  ἄνω τελεία cut the canons into clauses.
+- **Two verses are not a sample.** The name-alignment route accepted any Chinese
+  run that appeared in two of two sampled verses, which is how Ἡμὰθ came to be
+  named 「我們」.
 - **A crosswalk that silently skips is worse than one that fails.** The RCUV
   export dropped any book missing from its own code table without a word, and
   449 verses reached the master with no Chinese; the cause surfaced seven
@@ -153,7 +175,10 @@ python scripts/build_greek_appendices.py --write
 python scripts/fill_greek_appendix_names.py --write
 python scripts/align_greek_names_chinese.py --write
 python scripts/fill_greek_appendix_glosses.py --write
-python scripts/build_greek_interlinear.py --workers 5
+python scripts/audit_greek_appendix_names.py --write
+python scripts/build_greek_interlinear.py --prune --workers 5
+python scripts/build_greek_reader_data.py --write
+python scripts/record_greek_memory_review.py --write
 python scripts/build_greek_reader_data.py --write
 python skills/build-original-language-reader/scripts/validate_reader_release.py \
   --master output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json \
@@ -161,6 +186,17 @@ python skills/build-original-language-reader/scripts/validate_reader_release.py 
   --vocabulary-total 1000 --scripture-lessons 50
 python scripts/build_greek_full_reader.py
 ```
+
+Then render each volume to PDF and inspect it. The managed renderer needs
+`pdf2image`, which this checkout does not have; LibreOffice's console binary does
+the job on its own, and PyMuPDF answers the gate questions:
+
+```
+"C:/Program Files/LibreOffice/program/soffice.com" --headless   -env:UserInstallation=file:///C:/tmp/lo_grc --convert-to pdf   --outdir output/original-readers output/original-readers/greek-original-reader-vol1.docx
+```
+
+Give each volume its own `UserInstallation` profile, or the second conversion
+waits on the first. A volume takes two to six minutes.
 
 Each takes `--write` (or `--workers`); without it they print and change nothing.
 `build_greek_appendices.py` and `align_greek_names_chinese.py` need
