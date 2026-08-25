@@ -60,8 +60,9 @@ AMBIGUOUS_EN = {
 # Hand-picked pictures, keyed by Strong number.  The comment is the Chinese
 # sense the picture carries — always the word's commonest one.
 #
-# יְהוָה is deliberately absent: putting a picture on the Divine Name is the
-# reader's decision, not this script's.
+# The Divine Name takes the same picture as אֱלֹהִים at the reader's instruction:
+# one concept, one picture.  A star of David or a menorah would be a symbol of
+# later Judaism read back onto the Hebrew Bible, which is a different claim.
 OVERRIDES: dict[str, str] = {
     # 人與親屬
     "H120": "person",
@@ -442,6 +443,8 @@ OVERRIDES: dict[str, str] = {
     "H5221": "oncoming fist",
     "H3318": "door",
     "H6440": "slightly smiling face",
+    "H3068": "palms up together",   # יְהוָה 耶和華
+    "H3069": "palms up together",   # יְהֹוִה 耶和華
     "H430": "palms up together",
     "H410": "palms up together",
     "H136": "palms up together",

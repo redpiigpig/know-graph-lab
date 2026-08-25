@@ -58,6 +58,12 @@
       "source": "override",
       "glossZh": "日"
     },
+    "H3068|יְהוָה": {
+      "hexcode": "1F932",
+      "file": "1F932.png",
+      "source": "override",
+      "glossZh": "耶和華；主"
+    },
     "H4428|מֶ֫לֶךְ": {
       "hexcode": "1F451",
       "file": "1F451.png",
@@ -2817,6 +2823,12 @@
       "file": "1F522.png",
       "source": "override",
       "glossZh": "二十；第二十"
+    },
+    "H3069|יְהֹוִה": {
+      "hexcode": "1F932",
+      "file": "1F932.png",
+      "source": "override",
+      "glossZh": "耶和華"
     },
     "H8337|שֵׁשׁ": {
       "hexcode": "0036-FE0F-20E3",
