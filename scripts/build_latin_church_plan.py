@@ -100,13 +100,9 @@ MODERN = [
     ("方濟各：願祢受讚頌", "Laudato Si'", "repo", "laudato-si-2015", "excerpt", "2015", "現行教廷拉丁文的當代樣貌"),
 ]
 
-# An excerpt has to have edges.  Calling a reading "excerpt" without saying
-# which part of it is printed is the same as not having chosen: the translator
-# then renders ten thousand words of Vincent of Lérins because nothing told it
-# to stop.  Each excerpt is the opening of its work, up to this many Latin
-# words, cut at a paragraph boundary.
-EXCERPT_WORDS = 900
-
+# Every reading is a complete chapter or a complete piece.  Where a work is too
+# long to print entire, what is printed is a whole number of its own divisions --
+# chapters, numbered sections, canons -- never a slice measured in words.
 PER_HALF = 25
 assert len(PATRISTIC) == PER_HALF, len(PATRISTIC)
 assert len(MODERN) == PER_HALF, len(MODERN)
@@ -157,20 +153,103 @@ def section(text: str, anchors: tuple[str, str]) -> str:
     return chr(10).join(lines[begin:end]).strip()
 
 
-def excerpt(text: str, limit: int = EXCERPT_WORDS) -> tuple[str, int, int]:
-    """The opening of a work, cut at a paragraph boundary."""
-    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
-    if len(paragraphs) <= 1:
-        # A file with no blank lines is one paragraph; fall back to sentences.
-        paragraphs = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+DIVISION_RULES = [
+    ("章", r"^(?:CAPUT|Caput|CAP\.|Cap\.)\s+[IVXLC\d]+"),
+    ("節", r"^[IVXLC]{1,6}\.\s"),
+    ("號", r"^\d{1,3}\.\s"),
+]
+
+UNIT_BUDGET = 1400
+WHOLE_WORK_LIMIT = 6000
+
+
+CENTURY = re.compile(r"(\d{1,2})\s*[–—/／]?\s*(\d{1,2})?\s*世紀")
+YEAR = re.compile(r"\b(\d{3,4})\b")
+
+
+def year_of(dated: str) -> int:
+    """Sort key for a date written the way a bibliography writes it.
+
+    The lower volume is ordered by when a text was written, not by how hard it
+    is.  The owner's point on 2026-08-26 is that a reading need not match the
+    vocabulary already taught, and once that constraint is gone a difficulty
+    sort has nothing to recommend it -- while chronology is the whole argument
+    of the volume: fifteen centuries of church Latin, in order.
+    """
+    year = YEAR.search(dated)
+    if year:
+        return int(year.group(1))
+    century = CENTURY.search(dated)
+    if century:
+        first = int(century.group(1))
+        last = int(century.group(2) or first)
+        return (first + last - 1) * 50
+    return 9999
+
+
+def divisions(text: str) -> tuple[str, list[str]]:
+    """Split a work at its own strongest structural marker.
+
+    Priority matters.  A conciliar constitution numbers its paragraphs *and*
+    divides into chapters, and cutting it at paragraph 1 when it has chapters
+    would print a fragment of a chapter rather than a chapter.
+    """
+    lines = text.splitlines()
+    for label, pattern in DIVISION_RULES:
+        marker = re.compile(pattern)
+        starts = [i for i, line in enumerate(lines) if marker.match(line.strip())]
+        if len(starts) < 2:
+            continue
+        blocks = []
+        for index, begin in enumerate(starts):
+            end = starts[index + 1] if index + 1 < len(starts) else len(lines)
+            block = chr(10).join(lines[begin:end]).strip()
+            if block:
+                blocks.append(block)
+        if len(blocks) >= 2:
+            return label, blocks
+    return "", []
+
+
+def complete_unit(text: str, budget: int = UNIT_BUDGET) -> tuple[str, int, str]:
+    """Print whole divisions, never part of one.
+
+    The owner's rule on 2026-08-26: a lesson reads a complete chapter or a
+    complete piece.  A word-count excerpt breaks that -- it stops wherever nine
+    hundred words happen to land, mid-argument -- so the cut is made at the
+    work's own boundaries and the budget only decides how many of them fit.
+    A single division larger than the budget is still printed whole, because a
+    half chapter is not a chapter.
+    """
+    label, blocks = divisions(text)
+    if not blocks:
+        total = len(L.words(text))
+        if total <= WHOLE_WORK_LIMIT:
+            return text.strip(), total, "全文"
+        # No divisions and too long to print entire.  Complete paragraphs are
+        # the largest honest unit available; say so rather than implying a
+        # chapter was chosen.
+        paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+        kept, count = [], 0
+        for paragraph in paragraphs:
+            words = len(L.words(paragraph))
+            if kept and count + words > budget:
+                break
+            kept.append(paragraph)
+            count += words
+        return ((chr(10) * 2).join(kept), count,
+                f"原文無分章標記；取前 {len(kept)} 個完整段落，非全文")
+
     kept, count = [], 0
-    for paragraph in paragraphs:
-        words = len(L.words(paragraph))
-        if kept and count + words > limit:
+    for block in blocks:
+        words = len(L.words(block))
+        if kept and count + words > budget:
             break
-        kept.append(paragraph)
+        kept.append(block)
         count += words
-    return (chr(10) * 2).join(kept), count, len(kept)
+    span = f"第 1–{len(kept)} {label}" if len(kept) > 1 else f"第 1 {label}"
+    note = f"{span}（完整，共 {len(blocks)} {label}）"
+    return (chr(10) * 2).join(kept), count, note
 
 
 def measure(text: str, lm: Lemmatiser, taught: set[str]) -> dict:
@@ -217,21 +296,20 @@ def main() -> None:
             text, path, has_zh = load_text(kind, ref, repo_index)
             if anchors:
                 text = section(text, anchors)
-            printed, printed_words, printed_paras = (
-                excerpt(text) if extent == "excerpt" else (text, 0, 0))
+            printed, printed_words, rule = (
+                complete_unit(text) if extent == "excerpt"
+                else (text, len(L.words(text)), "全文"))
             out.append({
                 "title": title, "latinTitle": latin_title, "era": era,
                 "sourceKind": kind, "sourceRef": ref, "sourcePath": path,
                 "section": list(anchors) if anchors else None,
-                "extent": extent, "date": dated, "note": note,
-                "printedWords": printed_words or len(L.words(text)),
-                "printedParagraphs": printed_paras,
-                "excerptRule": (f"取全文開頭 {printed_paras} 段，約 {printed_words} 詞"
-                                if extent == "excerpt" else "全文"),
+                "extent": extent, "date": dated, "year": year_of(dated), "note": note,
+                "printedWords": printed_words,
+                "excerptRule": rule,
                 "chineseParallel": "repo-existing" if has_zh else "pending",
                 **measure(printed, lm, taught),
             })
-        out.sort(key=lambda r: r["difficulty"])
+        out.sort(key=lambda r: (r["year"], r["title"]))
         return out
 
     plan = build(PATRISTIC, "教父與中世紀") + build(MODERN, "特倫多以降")
@@ -257,13 +335,13 @@ def main() -> None:
         },
         "readings": plan,
     }
-    print(f"下冊 {len(plan)} 篇：完整 {complete}、節錄 {len(plan) - complete}；"
-          f"已有中譯 {with_zh}")
+    print(f"下冊 {len(plan)} 篇（按年代排序）：完整全文 {complete}、"
+          f"取完整章節 {len(plan) - complete}；已有中譯 {with_zh}")
     for row in plan:
-        mark = "全" if row["extent"] == "complete" else "節"
+        mark = "全" if row["extent"] == "complete" else "章"
         zh = "中" if row["chineseParallel"] == "repo-existing" else "－"
-        print(f"{row['lesson']:>3} {mark}{zh} {row['title']:<24s} {row['words']:>6}詞 "
-              f"覆蓋 {row['coverage']*100:>5.1f}%  難度 {row['difficulty']:>6.2f}")
+        print(f"{row['lesson']:>3} {mark}{zh} {row['date']:>8s} {row['title']:<24s} "
+              f"{row['words']:>5}詞  {row['excerptRule']}")
     if args.write:
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
         print("->", OUTPUT.relative_to(ROOT))

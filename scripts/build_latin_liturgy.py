@@ -62,8 +62,12 @@ FORMULAS = [
      r"In nomine Patris", r"^R\. Amen\.$"),
     ("salutatio", "彌撒致候與對答", "Salutatio et responsa",
      r"Gratia Domini nostri", r"Et cum spiritu tuo"),
-    ("kyrie", "求主垂憐", "Kyrie eleison",
-     r"Kyrie eleison", r"R\. Kyrie eleison\.$"),
+    # Not the Kyrie.  It is Greek, kept in Greek by the Latin rite, and the
+    # owner keeps a separate Greek reader; a Latin volume that opens on a Greek
+    # formula teaches the wrong book's alphabet.  The preface dialogue takes its
+    # place: as short, as familiar, and Latin throughout.
+    ("sursum-corda", "感恩經前對答", "Sursum corda",
+     r"^V\. Sursum corda", r"Dignum et justum est"),
     ("sanctus", "歡呼歌", "Sanctus",
      r"^Sanctus, Sanctus", r"Hosanna in excelsis\.$"),
     ("agnus-dei", "羔羊頌", "Agnus Dei",

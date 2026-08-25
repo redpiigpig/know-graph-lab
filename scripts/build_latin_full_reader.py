@@ -285,17 +285,16 @@ def lower_readings() -> dict[int, dict]:
                      for segment in unit["segments"]]
             note = f"{row['excerptRule']}；{unit['translationNote']}"
         else:
-            # Cut with the same rule the plan measured, not by re-splitting on
-            # blank lines.  Several Latin Library files have none, so a naive
-            # split makes the whole work one paragraph and the excerpt rule
-            # never applies: Vincent of Lerins printed sixteen thousand words
-            # into a book that had budgeted nine hundred.
+            # Cut with the same rule the plan measured: whole divisions of the
+            # work, never part of one.  Re-splitting on blank lines here instead
+            # would print sixteen thousand words of Vincent of Lerins, because
+            # several Latin Library files contain no blank line at all.
             import build_latin_church_plan as plan_module
             latin_text = (ROOT / row["sourcePath"]).read_text(encoding="utf-8", errors="replace")
             if row.get("section"):
                 latin_text = plan_module.section(latin_text, tuple(row["section"]))
             if row["extent"] == "excerpt":
-                latin_text, _, _ = plan_module.excerpt(latin_text)
+                latin_text, _, _ = plan_module.complete_unit(latin_text)
             paragraphs = [re.sub(r"\s+", " ", part).strip()
                           for part in latin_text.split(chr(10) * 2) if part.strip()]
             chinese = repo_chinese(row["sourcePath"])

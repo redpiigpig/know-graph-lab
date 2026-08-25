@@ -24,6 +24,7 @@ carries it twice.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -222,10 +223,13 @@ def pending_readings() -> list[dict]:
         # Strip the masthead first, then take the excerpt, so the nine hundred
         # words the reader prints are nine hundred words of the work.
         text = strip_header(path.read_text(encoding="utf-8", errors="replace"))
-        if reading["extent"] == "excerpt" and reading.get("printedParagraphs"):
-            # Translate what the reader prints, not the whole work.
-            import build_latin_church_plan as plan_module
-            text, _, _ = plan_module.excerpt(text)
+        # Translate what the reader prints: the same complete divisions the
+        # plan measured, cut the same way.
+        import build_latin_church_plan as plan_module
+        if reading.get("section"):
+            text = plan_module.section(text, tuple(reading["section"]))
+        if reading["extent"] == "excerpt":
+            text, _, _ = plan_module.complete_unit(text)
         rows.append({
             "key": f"reading:{reading['sourceRef']}",
             "title": reading["title"], "latinTitle": reading["latinTitle"],
@@ -272,7 +276,18 @@ def main() -> None:
         if args.max_units and done >= args.max_units:
             break
         batches = segments(unit["text"])
+        # Fingerprint the Latin.  When the excerpt rule changed from "the first
+        # nine hundred words" to "whole chapters", every reading's text moved,
+        # and a cache keyed only on the unit name would have gone on printing
+        # the old translation beside the new original.
+        fingerprint = hashlib.sha256(unit["text"].encode("utf-8")).hexdigest()[:16]
+        existing = store["units"].get(unit["key"])
+        if existing and existing.get("sourceFingerprint") != fingerprint:
+            print(f"  {unit['title']}：原文已變更，作廢舊譯 {len(existing['segments'])} 段",
+                  flush=True)
+            store["units"].pop(unit["key"])
         record = store["units"].setdefault(unit["key"], {
+            "sourceFingerprint": fingerprint,
             "title": unit["title"], "latinTitle": unit["latinTitle"],
             "extent": unit["extent"], "excerptRule": unit.get("excerptRule", ""),
             "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",

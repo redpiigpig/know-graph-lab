@@ -1057,7 +1057,878 @@
      "engine": "claude-haiku-4-5-20251001"
     }
    ]
+  },
+  "reading:liturgy/hymni.html.txt": {
+   "title": "天鄉之歌",
+   "latinTitle": "O quanta, qualia",
+   "extent": "complete",
+   "excerptRule": "全文",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Veni, Veni, Emmanuel Puer nobis nascitur Corde natus ex parentis Quem pastores laudavere Angelus ad virginem Personent hodie Dormi, Jesu! Qui creavit coelum Adeste, fideles Gloria, laus et honor Stabat mater dolorosa Chorus novae Ierusalem O quanta, qualia Dies irae Veni, veni, Emmanuel 12th century 1. veni, veni, Emmanuel; captivum solve Israel qui gemit in exilio privatus Dei Filio. gaude, gaude; Emmanuel nascetur pro te, Israel. 2. veni, O Jesse Virgula, ex hostis tuos ungula, de specu tuos tartari educ et antro barathri. gaude, gaude; Emmanuel nascetur pro te, Israel. 3. veni, veni, O Oriens; solare nos adveniens; noctis depelle nebulas dirasque noctis tenebras. gaude, gaude; Emmanuel nascetur pro te, Israel. 4."
+     ],
+     "zh": [
+      "來吧，來吧，天主的先知；拯救被擄的以色列，誰在流亡中為天主之子而歎息。歡欣，歡欣；天主的先知為你而降生，以色列。來吧，耶瑟的枝條；從仇敵的爪牙中救出你的僕人，從陰府的深坑中領出他們。歡欣，歡欣；天主的先知為你而降生，以色列。來吧，來吧，東方之光；你來臨時要光照我們，驅散黑夜的可怕陰雲和黑夜的嚴重黑暗。歡欣，歡欣；天主的先知為你而降生，以色列。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    },
+    {
+     "latin": [
+      "veni, Clavis Davidica; regna reclude caelica; fac iter tutum superum, et claude vias inferum. gaude, gaude, Emmanuel nascetur pro te, Israel. 5. veni, veni, Adonai, qui populo in Sinai legem dedisti vertice in maiestate gloriae. gaude, gaude, Emmanuel nascetur pro te, Israel. Puer nobis nascitur Trier, 15th century 1. puer nobis nascitur rector angelorum; in hoc mundo pascitur Dominus dominorum. 2. in praesepe ponitur sub foeno asinorum. cognoverunt Dominum Christum regem coelorum. 3. hinc Herodes timuit - magna cum dolore, et pueros occidit, infantes cum livore. 4. qui natus de virgine - die hodierna ducat nos cum gratia ad gaudia superna. 5."
+     ],
+     "zh": [
+      "來臨吧，達味之鑰；開啟天上的王國；使往上的路途安全，封閉往下的路途。歡樂吧，歡樂吧，厄瑪努耳將為你而誕生，以色列。5. 來臨吧，來臨吧，阿多乃，你在西乃山頂以光榮的威嚴將法律賜予了你的百姓。歡樂吧，歡樂吧，厄瑪努耳將為你而誕生，以色列。嬰孩為我們誕生於特里爾，十五世紀 1. 嬰孩為我們誕生，天使之君；在此世界中，諸主之主得著糧食。2. 他被放在馬槽裡，在驢的乾草下面。眾人認識了主基督，天上的君王。3. 因此黑落德感到恐懼，心中大痛苦，殺害了男孩，嬰孩遍體青腫。4. 他由童貞女誕生，今天願他以恩寵引領我們進入天上的歡樂。5."
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "O et A et A et O cum cantibus in choro, cum canticis et organo, benedicamus Domino. Corde natus ex parentis Aurelius Clemens Prudentius, 4th century 1. corde natus ex parentis ante mundi exordium A et O cognominatus, ipse fons et clausula omnium quae sunt, fuerunt, quaeque post futura sunt. 2. ipse iussit et creata, dixit ipse et facta sunt, terra, caelum, fossa ponti, trina rerum machina, quaeque in his vigent sub alto solis et lunae globo. 3. corporis formam caduci, membra morti obnoxia induit, ne gens periret primoplasti ex germine, merserat quem lex profundo noxialis tartaro. 4."
+     ],
+     "zh": [
+      "啊，聖言自父親心中生出，在世界肇始之前；人稱祂為阿爾法和歐美茄，祂本身是一切存在的、曾存在的，以及將來存在的事物的根源和終極。祂下令而萬物被造；祂一言而事成；大地、天空、深淵海洋、三層世界的機構，以及在日月高懸球體之下生存的一切。祂取了易朽壞的身體之形，取了屬於死亡的肢體，使得首祖後裔的人類不至滅亡，世人因罪惡之法而陷入下地獄的深淵。啊，聖言、聖言、聖言，偕同聖詠在聖堂中、偕同聖歌與風琴，我們讚美天主。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "O beatus ortus ille, virgo cum puerpera edidit nostram salutem, feta Sancto Spiritu, et puer redemptor orbis os sacratum protulit. 5. psallat altitudo caeli, psallite omnes angeli, quidquid est virtutis usquam psallat in laudem Dei, nulla linguarum silescat, vox et omnis consonet. 6. ecce, quem vates vetustis concinebant saeculis, quem prophetarum fideles paginae spoponderant, emicat promissus olim; cuncta conlaudent eum. 7. macte iudex mortuorum, macte rex viventium, dexter in Parentis arce qui cluis virtutibus, omnium venturus inde iustus ultor criminum. 8. te senes et te iuventus, parvulorum te chorus, turba matrum, virginumque, simplices puellulae, voce concordes pudicis perstrepant concentibus. 9."
+     ],
+     "zh": [
+      "祝福彼那美好的誕生！童貞瑪利亞既為產婦，生育了我們的救恩，充滿聖神，而救贖人類的聖子發出了聖聖的言語。願天界之崇高者歌詠，眾天使啊，請歌詠，凡有德能之處，一切都為讚美天主而歌詠，沒有任何語言當沉默，聲音與一切都應和諧共鳴。看哪，古時的先知所吟詠者，忠信的先知之書所許諾者，昔日所應許者如今煜然而出；萬物都將讚美他。祝賀死者的判官，祝賀生者的君王，居於天父寶座之右者，以德能而聞名，將從彼處如公正的報仇者而來，為眾人伸冤。老者歌頌你，青年歌頌你，孩童的行列歌頌你，眾母親們、眾童貞，天真的少女，聲音和諧一致，以貞潔的和音響徹雲霄。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "tibi, Christe, sit cum Patre hagioque Pneumate hymnus, decus, laus perennis, gratiarum actio, honor, virtus, victoria, regnum aeternaliter. Quem pastores laudavere 14th century 1. Quem pastores laudavere, quibus angeli dixere, absit vobis iam timere, natus est rex gloriae. 2. ad quem magi ambulabant, aurum, thus, myrrham portabant, immolabant haec sincere nato regi gloriae. 3. Christo regi, Deo nato, per Mariam nobis dato, merito resonet vere laus, honor et gloria. Angelus ad virginem in the Dublin Troper ca. 1360; mentioned by Chaucer in the Milleres Tale 1. Angelus ad virginem subintrans in conclave, virginis formidinem demulcens, inquit, 'Ave! Ave, regina virginum; coeli terraeque Dominum concipies et paries intacta salutem hominem; tu porta coeli facta, medula criminum.' 2."
+     ],
+     "zh": [
+      "基督，願光榮、讚美及永恆的讚頌，感恩之獻、尊榮、德能、勝利、永恆的王國與聖父及聖神同歸於你。牧人曾稱頌他，天使對他們說，不要害怕，榮耀之王已經誕生。賢士曾來朝謁他，獻上黃金、乳香、沒藥，誠懇地將這些禮物獻給榮耀之王。獻禮與基督之王、天主之子、因瑪利亞賜予我們者，讚美、尊榮及光榮應當真實地響起。天使進入童貞女的內室，安撫童貞女的驚恐，說道：「萬福！聖德之後，天地之主，你將懷孕並生育，貞潔不毀，救恩之人；你成為天堂之門，罪過之醫治。」"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/perp.html.txt": {
+   "title": "斐理伯與佩爾佩圖亞殉道錄",
+   "latinTitle": "Passio Perpetuae et Felicitatis",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 70 段，約 893 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "[1] Si uetera fidei exempla et Dei gratiam testificantia et aedificationem hominis operantia propterea in litteris sunt digesta ut lectione eorum quasi repraesentatione rerum et Deus honoretur et homo confortetur, cur non et noua documenta aeque utrique causae conuenientia et digerantur?"
+     ],
+     "zh": [
+      "倘若往日信德的楷模及見證天主恩寵、發揮人靈建設作用的事蹟，之所以被記載在文獻中，乃是為使藉著閱讀它們如同事蹟的再現一般，天主獲得尊榮，人獲得堅強，那麼，為何新近的教訓，同樣適於這兩種目的者，也不應加以記載並保存呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "2."
+     ],
+     "zh": [
+      "我需要您提供具體的拉丁文原文文段才能進行翻譯。請提供標有編號的拉丁文段落（例如 [1] [2] [3] 等），我將按照您的要求逐段翻譯成繁體中文。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "uel quia proinde et haec uetera futura quandoque sunt et necessaria posteris, si in praesenti suo tempore minori deputantur auctoritati propter praesumptam uenerationem antiquitatis."
+     ],
+     "zh": [
+      "或是因為這些古老的事物將來某時也會成為未來的事，如果它們在現在的時代因為對古代的推崇敬重而被認為權威性較低，它們對後人也是必要的。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/egeria2.html.txt": {
+   "title": "厄革里雅朝聖記",
+   "latinTitle": "Itinerarium Egeriae",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 55 段，約 874 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "reading:medieval/benedict.html.txt": {
+   "title": "聖本篤會規",
+   "latinTitle": "Regula Benedicti",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 34 段，約 885 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Incipit prologus Obsculta, o fili, præcepta magistri, et inclina aurem cordis tui et admonitionem pii patris libenter excipe et efficaciter conple, ut ad eum per oboedientiæ laborem redeas, a quo per inoboedientiæ desidiam recesseras."
+     ],
+     "zh": [
+      "《聖本篤會規》序言開始：聽啊，我的孩子，要聽師傅的誡命，側耳傾聽你心靈的耳朵，欣然接納虔敬的父親的勸告，並切實遵行，如此你才能藉順命的努力回到你因悖命的怠惰而遠離的那一位跟前。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ad te ergo nunc mihi sermo dirigitur, quisquis abrenuntians propriis voluntatibus, Domino Christo vero Regi militaturus oboedientiæ fortissima atque præclara arma sumis."
+     ],
+     "zh": [
+      "所以現在我的言語乃是轉向你，即凡人棄絕己志，準備為基督主君這位真正的君王作戰，拿起服從這最堅強而最光榮的武器的人。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "In primis, ut quidquid agendum inchoas bonum, ab eo perfici instantissima oratione deposcas, ut qui nos iam in filiorum dignatus est numero conputare, non debet aliquando de malis actibus nostris contristari."
+     ],
+     "zh": [
+      "首先，凡你著手行任何善事，要以最懇切的祈禱懇求天主使之完成，俾天主既已恩准將我們列入其子女之數，則不應因我們的惡行而在任何時刻感到悲傷。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ita enim ei omni tempore de bonis suis in nobis parendum est ut non solum iratus pater suos non aliquando filios exheredet, sed nec ut metuendus dominus inritatus a malis nostris, ut nequissimos servos perpetuam tradat ad poenam qui eum sequi noluerint ad gloriam."
+     ],
+     "zh": [
+      "因此我們應當在各方面時時都服從他，用他的恩惠顧念我們，使得不僅憤怒的父親不會於某時將其子女除名，而且令人敬畏的主人也不會因我們的罪惡而被激怒，反而不會將那些最邪惡、不願為光榮而跟隨他的僕人交付於永恆的刑罰。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Exurgamus ergo tandem aliquando excitante nos Scriptura ac dicente: Hora est iam nos de somno surgere , et apertis oculis nostris ad deificum lumen adtonitis auribus audiamus divina cotidie clamans quid nos admonet vox dicens: Hodie si vocem eius audieritis, nolite obdurare corda vestra ."
+     ],
+     "zh": [
+      "因此讓我們終於奮起，由聖經喚醒我們而言說：『現在已是我們從睡眠中甦醒的時候了』，張開我們的眼睛仰視天主之光，側耳傾聽天主每日向我們呼號的聖言。讓我們聆聽那聲音每日對我們勸勉說：『如果你們今天聽到他的聲音，就不要硬化你們的心』。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et iterum: Qui habet aures audiendi audiat, quid Spiritus dicat ecclesiis ."
+     ],
+     "zh": [
+      "又說：有耳可聽的，應當聽聖神向眾教會所說的話。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et quid dicit?"
+     ],
+     "zh": [
+      "且他說了什麼呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Venite, filii, audite me; timorem Dei docebo vos."
+     ],
+     "zh": [
+      "來吧，孩子們，聽我說；我要教導你們敬畏天主。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Currite dum lumen vitæ habetis, ne tenebræ mortis vos conprehendant ."
+     ],
+     "zh": [
+      "你們應當奔跑，趁著你們還有生命之光，免得死亡的黑暗抓住你們。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et quærens Dominus in multitudine populi cui hæc clamat operarium suum iterum dicit: Quis est homo qui vult vitam et cupit videre dies bonos?"
+     ],
+     "zh": [
+      "上主在人民眾多中尋求，向誰喊出這些話，再次訓誨祂的工人說：誰是願意生命、渴望見到美好日子的人呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:medieval/greg.html.txt": {
+   "title": "大額我略",
+   "latinTitle": "Gregorius Magnus",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 27 段，約 768 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Serenitas vestrae pietatis, religionis studio et sanctitatis amore conspicua, propter eam quae in honorern sancti Pauli apostoli in palatio aedificatur ecclesiam, caput eiusdem sancti Pauli, aut aliud quid de corpore ipsius, suis ad se iussionibus a me praecepit debere transmitti."
+     ],
+     "zh": [
+      "尊下以虔誠、宗教的熱忱和聖德的愛心著稱，因著在宮殿中為紀念聖宗徒保祿而興建的教會，下令要我將聖保祿本人的頭顱或其遺體的其他部分，按照尊下的吩咐轉送至尊下。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et dum illa mihi desiderarem imperari, de quibus facillimam oboedientiam exhibens vestram erga me amplius potuissem gratiam provocare, maior me moestitia tenuit, quod illa praecipitis quae facere nec possum, nec audeo."
+     ],
+     "zh": [
+      "當我渴望被吩咐那些我能極其容易地服從的事時，藉此我本能更多地激發你們對我的恩寵，反而更大的悲痛佔據了我，因為你們所吩咐的乃是我既不能做、也不敢做的事。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Nam corpora sanctorum Petri et Pauli apostolorum tantis in Ecclesiis suis coruscant miraculis atque terroribus, ut neque ad orandum sine magno illuc timore possit accedi."
+     ],
+     "zh": [
+      "因為宗徒伯多祿和保祿的聖髑在他們各自的教會中閃耀著如此眾多的奇蹟和恐怖景象，以至於人們不能沒有極大的敬畏而前往那裡祈禱。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Denique dum beatae recordationis decessor meus, quia argentum, quod supra sacratissimum corpus beati Petri apostoli erat, longe tamen ab eodem corpore fere quindecim pedibus mutare voluit, signum ei non parvi terroris apparuit."
+     ],
+     "zh": [
+      "最後，我已故的前任教宗因為想要挪動放在真福伯多祿宗徒至聖遺體上方的銀器，距離該遺體約有十五呎之遠，於是出現了一個不容小視的恐怖徵兆。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed et ego aliquid similiter ad sacratissimum corpus sancti Pauli apostoli meliorare volui; et quia necesse erat ut iuxta sepulcrum eius effodi altius debuisset, praepositus loci ipsius ossa aliqua non quidem eidem sepulcro coniuncta reperit."
+     ],
+     "zh": [
+      "然而我也願意同樣地對聖保祿宗徒至聖的遺體加以改善；因為有必要在他的墳墓旁邊掘得更深，該處的主持人發現了一些骨骼，實非與同一墳墓相連。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quae quoniam levare praesumpsit, atque in alium locum transponere, apparentibus quibusdam tristibus signis, subita morte defunctus est."
+     ],
+     "zh": [
+      "既然他敢於舉起這些物件，並將之移往他處，便有了某些令人悲傷的跡象顯現，他因而突然死亡。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Praeter haec autem sanctae memoriae decessor meus, itidem ad corpus sancti Laurentii martyris quaedam meliorare desiderans, dum nescitur ubi venerabile corpus esset collocatum, effoditur exquirendo, et subito sepulcrum ipsius ignoranter apertum est; et ii qui praesentes erant atque laborabant, monachi et mansionarii, qui corpus eiusdem martyris viderunt, quod quidem minime tangere praesumpserunt, omnes intra decem dies defuncti sunt, ita ut nullus vitae superesse potuisset, qui sanctum iusti corpus illius viderat."
+     ],
+     "zh": [
+      "除此之外，我那聖德昭著的前任教宗，同樣希望改善聖殉道者勞倫的遺骨所在之處。由於不知道那尊貴的遺骨安置在何處，人們便挖掘尋找，忽然間無意中打開了他的墳墓。那些在場並參與此事的人，即隱修士和管理人員，他們看見了那位殉道者的遺骨，雖然絕不敢觸摸，但他們竟在十日之內全都去世了，以至於沒有一個人能活下來，即那些看到這位聖義者遺骨的人都活不了。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Cognoscat autem tranquillissima domina quia Romanis consuetudo non est, quando sanctorum reliquias dant, ut quidquam tangere praesumant de corpore, sed tantummodo in pyxide brandeum mittitur, atque ad sacratissima corpora sanctorum ponitur."
+     ],
+     "zh": [
+      "惟願至尊至寧的夫人知曉，羅馬人的習慣並非如此：當他們施予聖人的遺骨時，並不敢輒然觸及遺體任何部分，唯獨將亞麻布放入聖盒內，並置於至聖的聖人遺體之上。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quod levatum in ecclesia quae est dedicanda debita cum veneratione reconditur, et tantae per hoc ibidem virtutes fiunt, ac si illuc specialiter eorum corpora deferantur."
+     ],
+     "zh": [
+      "那在即將奉獻的教會內舉升的聖髑，應以相應的敬禮而藏置；藉此在該處產生如此大的聖德，彷彿他們的遺體本身特別被移置於彼。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Unde contigit ut beatae recordationis Leonis papae temporibus, sicut a maioribus traditur, dum quidam Graeci de talibus reliquiis dubitarent, praedictus pontifex hoc ipsum brandeum allatis forficibus inciderit, et ex ipsa incisione sanguis effluxerit."
+     ],
+     "zh": [
+      "由此可知，在被冊封為真福的良教宗的時代，如傳自前人者，當某些希臘人對於此類聖物表示懷疑時，上述教宗用帶來的剪刀割開了這件聖衣，血液便從割口流出。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "In Romanis namque vel totius Occidentis partibus omnino intolerabile est sacrilegium, si sanctorum corpora tangere quisquam fortasse voluerit."
+     ],
+     "zh": [
+      "確實，在羅馬以及整個西方地區，若有人膽敢觸及聖人的遺骨，這乃是完全不可容忍的瀆聖之舉。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quod si praesumpserit, certum est quia haec temeritas impunita nullo modo remanebit."
+     ],
+     "zh": [
+      "倘若他敢這樣做，確實可知這種魯莽行為決不會不受懲罰地逃脫。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Pro qua re de Graecorum consuetudine, qui ossa levare sanctorum se asserunt, vehementer miramur, et vix credimus."
+     ],
+     "zh": [
+      "為此事，我們對於希臘人的習俗甚為驚異，他們聲稱自己要遷移聖人的遺骨，我們幾乎不能相信。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Nam quidam monachi Graeci, huc ante biennium venientes nocturno silentio iuxta ecclesiam sancti Pauli, corpora mortuorum in campo iacentia effodiebant, atque eorum ossa recondebant, servantes sibi, dum recederent."
+     ],
+     "zh": [
+      "因為某些希臘隱修士，兩年前來到此地，在夜間寂靜中於聖保祿教會附近，掘出躺在田野中的死人屍體，將其骨骼收藏起來，在他們離去時帶走保存。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Qui cum tenti et cur hoc facerent diligenter fuissent discussi, confessi sunt quod illa ossa ad Graeciam essent tanquam sanctorum reliquias portaturi."
+     ],
+     "zh": [
+      "當他們被仔細詰問何以如此行動時，他們認了他們要把那些骨頭當作聖人的遺骨運往希臘。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ex quorum exemplo, sicut praedictum est, maior nobis dubietas nata est, utrum verum sit quod levare veraciter ossa sanctorum dicuntur."
+     ],
+     "zh": [
+      "由他們的例子，如上所述，我們產生了更大的懷疑，即那些被說是真正舉起聖人遺骨的事，是否確實為真。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "De corporibus vero beatorum apostolorum quid ego dicturus sum, dum constet quia eo tempore quo passi sunt ex Oriente fideles venerunt, qui eorum corpora sicut civium suorum repeterent?"
+     ],
+     "zh": [
+      "至於至福的宗徒們的遺體，我又能說什麼呢？既然確知在他們蒙難的時代，信徒們自東方前來，要求領回他們的遺體，就如同領回自己同胞的遺體一樣？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quae ducta usque ad secundum urbis milliarium in loco qui dicitur Catacumbas collocata sunt."
+     ],
+     "zh": [
+      "那些被運送到城市第二里程碑處，即稱為加大貢巴斯的地方安置的。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed dum ea exinde levare omnis eorum multitudo conveniens niteretur, ita eos vis tonitrui atque fulguris nimio metu terruit atque dispersit, ut talia denuo nullatenus attentare praesumerent."
+     ],
+     "zh": [
+      "然而，當他們的全體人馬聚集起來，竭力要把它們搬離那裡時，雷鳴閃電的威力以極大的恐懼嚇阻並驅散了他們，以至於他們絲毫不敢再嘗試進行這樣的事。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Tunc autem exeuntes Romani eorum corpora, qui hoc ex Domini pietate meruerunt, levaverunt, et in locis quibus nunc sunt condita posuerunt."
+     ],
+     "zh": [
+      "那時羅馬人出去，抬起他們的遺體——那些蒙主仁慈而配得此恩的人——並將他們安置在他們現今所安葬的地方。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quis ergo, serenissima domina, tam temerarius possit existere, ut haec sciens, eorum corpora non dico tangere, sed vel aliquatenus praesumat inspicere?"
+     ],
+     "zh": [
+      "那麼，最寧靜的夫人啊，誰竟是如此魯莽，明知此事，不僅不敢觸及他們的肉身，甚至不敢妄想以任何方式觀看呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Dum igitur talia mihi a vobis praecepta sunt, de quibus parere nullatenus potuissem, quantum invenio, non vestrum est; sed quidam homines contra me pietatem vestram excitare voluerunt, ut mihi, quod absit, voluntatis vestrae gratiam subtraherent, et propterea quaesiverunt capitulum de quo vobis quasi inobediens invenirer."
+     ],
+     "zh": [
+      "因此，既然你們對我下達了這樣的命令，就我所見，我根本無法遵從，這並非出於你們；而是某些人想激起你們對我的怨恨，以致他們想要奪去我對你們旨意的恩寵——願這絕不發生——為此他們才尋找某個條文，藉以在你們面前控告我不服從。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed in omnipotente Domino confido quia nullo modo benignissimae voluntati subripitur, et sanctorum apostolorum virtutem, quos toto corde et mente diligitis, non ex corporali praesentia, sed ex protectione semper habebitis."
+     ],
+     "zh": [
+      "然而我信靠全能的主，因為絕無任何事物能逃脫祂至仁慈的旨意；你們對聖宗徒們的聖德，即使不是由於肉身的臨在，也必將因著他們的護佑而永遠擁有。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sudarium vero, quod similiter transmitti iussistis, cum corpore eius est, quod ita tangi non potest, sicut nec ad corpus illius accedi."
+     ],
+     "zh": [
+      "至於你們同樣命令轉交的裹頭巾，它與他的遺體在一起，遺體既不能如此被觸摸，就如同也不能親近他的遺體一樣。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed quia serenissimae dominae tam religiosum desiderium esse vacuum non debet, de catenis quas ipse sanctus Paulus apostolus in collo et in manibus gestavit, ex quibus multa miracula in populo demonstrantur, partem aliquam vobis transmittere festinabo, si tamen hanc tollere limando praevaluero; quia dum frequenter ex catenis eisdem multi venientes benedictionem petunt, ut parvum quid ex limatura accipiant, assistit sacerdos cum lima, et aliquibus petentibus ita concite aliquid de catenis ipsis excutitur ut mora nulla sit."
+     ],
+     "zh": [
+      "但因為至尊貴的夫人如此虔誠的願望不應當落空，我將急速地把聖保祿宗徒本人在頸項和雙手上所戴過的鐵鏈的一部分轉送給你們，這些鐵鏈曾在人民中彰顯了許多奇蹟；如果我能用銼刀磨削這些鐵鏈而取得一些碎屑的話。因為經常有許多人前來從那些鐵鏈中領取祝福，願意得到一點銼屑，司祭就站在旁邊拿著銼刀，對那些請求的人，從鐵鏈本身上磨削下來的東西就這樣迅速地掉落，以至於毫無延遲。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quibusdam vero petentibus, diu per catenas ipsas ducitur lima, et tamen ut aliquid exinde exeat, non obtinetur."
+     ],
+     "zh": [
+      "有些人懇求，雖然長時間用銼刀穿過鎖鏈本身引導，然而為了使某物從中流出，仍未獲得。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Mense Iunio, indictione XII."
+     ],
+     "zh": [
+      "六月，十二循環年。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:medieval/bonaventura.itinerarium.html.txt": {
+   "title": "聖文德：心靈邁向天主的旅程",
+   "latinTitle": "Itinerarium mentis in Deum",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 35 段，約 874 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "(1221 - 1274) ITINERARIUM MENTIS IN DEUM PROLOGUS IN ITINERARIUM MENTIS IN DEUM 1."
+     ],
+     "zh": [
+      "（1221 - 1274）《心靈邁向天主的旅程》 《心靈邁向天主的旅程》序言 1。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "In principio Primum principium, a quo cunctae illuminationes descendunt tanquam a Patre luminum , a quo est omne datum optimum et omne donum perfectum , Patrem scilicet aeternum, invoco per Filium eius, Dominum nostrum Iesum Christum, ut intercessione sanctissimae Virginis Mariae, genitricis eiusdem Dei et Domini nostri Iesu Christi, et beati Francisci, ducis et patris nostri, det illuminatos oculos mentis nostrae ad dirigendos pedes nostros in viam pacis illius, quae exuperat omnem sensum ; quam pacem evangelizavit et dedit Dominus noster Iesus Christus; cuius praedicationis repetitor fuit pater noster Franciscus, in omni sua praedicatione pacem in principio et in fine annuntians, in omni salutatione pacem optans, in omni contemplatione ad exstaticam pacem suspirans, tanquam civis illius Ierusalem, de qua dicit vir ille pacis, qui cum his qui oderunt pacem, erat pacificus: Rogate quae ad pacem sunt in Ierusalem ."
+     ],
+     "zh": [
+      "在開始時，我祈求萬有的根源、一切光照猶如從光之父降下的首要根源，即一切美好之物與圓滿恩賜之源的永恆聖父，藉著他的聖子、我們的主耶穌基督，並藉著至聖貞女瑪利亞（即天主及我們的主耶穌基督之母）的轉禱，以及我們的領導者與聖父聖方濟的轉禱，賜予我們靈魂之眼以光照，好使我們能引導自己的腳步踏上那超越諸般感覺的和平之道；我們的主耶穌基督福音化並賜予了這和平；我們的聖父方濟是這福音宣講的重複者，他在自己的一切宣講中，於開始和結束時宣告和平，在每一個問安中渴望和平，在每一次靜觀中渴慕著那超越的和平，有如那耶路撒冷的居民，那位愛好和平的人曾論及這耶路撒冷，他對於那些憎恨和平的人也是和平的：你們要祈求耶路撒冷的安寧。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sciebat enim, quod thronus Salomonis non erat nisi in pace, cum scriptum sit: In pace factus est locus eius, et habitatio eius in Sion."
+     ],
+     "zh": [
+      "蓋他知道撒羅滿的寶座唯在和平中建立，如經上所載：他的居所在和平中完成，他的住處在熙雍。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:medieval/anselmproslogion.html.txt": {
+   "title": "聖安瑟莫：證道書",
+   "latinTitle": "Proslogion",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 65 段，約 897 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Prooemium Postquam opusculum quoddam velut exemplum meditandi de ratione fidei cogentibus me precibus quorundam fratrum, in persona alicuius tacite secum ratiocinando quae nesciat investigantis edidi: considerans illud esse multorum concatenatione contextum argumentorum, coepi mecum quaerere, si forte posset inveniri unum argumentum, quod nullo alio ad se probandum quam se solo indigeret, et solum ad astruendum quia Deus vere est, et quia est summum bonum nullo alio indigens, et quo omnia indigent ut sint et ut bene sint, et quaecumque de divina credimus substantia, sufficeret."
+     ],
+     "zh": [
+      "序言　我曾應某些兄弟們的懇切祈求，編著了一部小冊子，如同一個冥想信仰之理由的範例，其中以某人的身分，默默地自問自答，探究他所不知的事理。既然考慮到那部著作是由許多相互連結的論證所構成，我便開始自問，是否能發現一個論證，它為了證明自己除了自身之外，不需要任何其他論證，而且僅憑此論證就足以說明天主確實存在，以及天主是至高的善，不需要任何其他善而自足，但萬物都需要天主而得以存在和完善；並且足以說明我們信仰天主的一切性體之事。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ad quod cum saepe studioseque cogitationem converterem, atque aliquando mihi videretur iam posse capi quod quaerebam, aliquando mentis aciem omnino fugeret: tandem desperans volui cessare velut ab inquisitione rei, quam inveniri esset impossibile."
+     ],
+     "zh": [
+      "當我屢次並勤切地將思想轉向這事時，有時似乎我已能把握我所尋求的，有時則完全逃脫了心靈的視野；最後我絕望了，想要停止追尋，彷彿那是不可能被發現的事。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed cum illam cogitationem, ne mentem meam frustra occupando ab aliis, in quibus proficere possem, impediret, penitus a me vellem excludere: tunc magis ac magis nolenti et defendenti se coepit cum importunitate quadem ingerere."
+     ],
+     "zh": [
+      "但我想把這個想法從我心中完全排除，免得它佔據我的心思而徒勞無功，妨礙我在其他能有所進益的事上用功；於是它便開始越來越強烈地、帶著某種莫可奈何的執著向我不願接納且防禦的心靈強行推進。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Cum igitur quadam die vehementer eius importunitati resistendo fatigarer, in ipso cogitationum conflictu sic se obtulit quod desperaveram, ut studiose cogitationem amplecterer, quam sollicitus repellebam."
+     ],
+     "zh": [
+      "所以在某一天，我因為力圖抵抗他的執著追問而感到疲憊，就在思想的交戰之中，我曾經絕望地拋棄的東西竟然呈現出來，使我熱切地去擁抱那個我之前小心翼翼地推開的思想。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Aestimans igitur quod me gaudebam invenisse, si scriptum esset, alicui legenti placiturum, de hoc ipso et de quibusdam aliis sub persona conantis erigere mentem suam ad contemplandum Deum et quaerentis intelligere quod credit, subditum scripsi opusculum."
+     ],
+     "zh": [
+      "我既然認為自己所樂於尋獲的，若錄成文字，必將悅樂讀者，遂以一個努力提舉自己的心靈以默觀天主，並尋求領悟其所信仰之事的人的身分，就此事及其他若干事項，撰寫了一篇簡短的著作。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et quoniam nec istud nec illud, cuius supra memini, dignum libri nomine aut cui auctoris praeponeretur nomen iudicabam, nec tamen eadem sine aliquo titulo, quo aliquem, in cuius manus veniret, quodam modo ad se legendum invitarent, dimittenda putabam: unicuique suum dedi titulum, ut prius Exemplum meditandi de ratione fidei, et sequens Fides quaerens intellectum diceretur."
+     ],
+     "zh": [
+      "既然我既不認為這部著作，也不認為我上面所提到的那部著作，值得冠以書名或在其前冠以著者名字，但另一方面，我又認為這兩部著作不應當沒有某個標題就發表，因為標題能以某種方式向得到它們的人發出邀請，促使他們閱讀；所以我給每部著作都取了各自的標題，使前一部被稱為《信仰理性的默觀範例》，後一部被稱為《尋求理解的信德》。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sed cum iam a pluribus cum his titulis utrumque transcriptum esset, coegerunt me plures, et maxime reverendus archiepiscopus Lugdunensis, Hugo nomine, fungens in Gallia legatione Apostolica qui mihi hoc ex Apostolica praecepit auctoritate, ut nomen meum illis praescriberem."
+     ],
+     "zh": [
+      "然而當已有眾多人以這些篇名將兩者都謄抄下來之後，許多人強迫我，特別是極受敬重的里昂總主教，名叫雨果，他在高盧代行宗座使命，他以宗座的權威命令我在它們前面標上我的名字。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Quod ut aptius fieret, illud quidem Monologion, id est soliloquium, istud vero Proslogion, id est alloquium, nominavi."
+     ],
+     "zh": [
+      "為使這件事更為恰當，我把前一部著作命名為《獨白》（即自言自語），這部著作則命名為《證道書》（即向他人說話）。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1 Excitatio mentis ad contemplandum Deum Eia, nunc homuncio, fuge paululum occupationes tuas, absconde te modicum a tumultuosis cogitationibus tuis Abice nunc onerosas curas, et postpone laboriosas distentiones tuas."
+     ],
+     "zh": [
+      "心靈對天主之觀想的激發　來吧，現在，小小的人啊，暫且逃離你的事務，稍微隱退於你紛亂的思想之外。現在拋棄沉重的憂慮，擱置你勞頓的牽掛。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Vaca aliquantulum Deo, et requiesce aliquantulum in eo."
+     ],
+     "zh": [
+      "你且向天主小住片刻，並在祂內小作安息。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "\"Intra in cubiculum\" [Mt 6,6] mentis tuae, exclude omnia praeter Deum et quae te iuvent ad quaerendum eum, et \"clauso ostio\" [Mt 6,6] quaere eum."
+     ],
+     "zh": [
+      "「進入你的內室」〔瑪6,6〕，進入你的思想深處，排除除了天主和有助於你尋求他的一切事物，以及「關上門」〔瑪6,6〕後尋求他。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/vicentius.html.txt": {
+   "title": "肋令的味增爵：備忘錄",
+   "latinTitle": "Commonitorium",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 32 段，約 840 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "I."
+     ],
+     "zh": [
+      "我打算簡述一些事項，乃為了幫助那些記憶力薄弱的人，以及那些由於心靈的遲鈍而難以領悟聖教的人。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Dicente Scriptura et monente, Interroga patres tuos, et dicent tibi; seniores tuos, et adnuntiabunt tibi , et item, Verbis sapientium adcommoda aurem tuam , et item, Fili mi, hos sermones ne obliviscaris, mea autem verba custodiat cor tuum , videtur mihi minimo omnium servorum Dei Peregrino quod res non minimae utilitatis, Domino adjuvante, futura sit, si ea quae fideliter a sanctis patribus accepi litteris comprehendam, infirmitati certe propriae pernecessaria, quippe cum adsit in promptu unde imbecillitas memoriae meae adsidua lectione reparetur."
+     ],
+     "zh": [
+      "聖經既言而警誨說：「問你的祖先，他們必告訴你；問你的長者，他們必向你說明」，又說「要側耳聽智慧人的言語」，又說「我兒，不要忘記這些教訓，但要謹守我的言語在你心中」，是以，在天主的扶助下，我這至微小的天主僕人肋令的味增爵，以為若將我誠心從聖德的祖先所領受的事以書簡記載下來，此事必非無益，實乃對我自身的軟弱極為必需的，蓋若有常時閱讀的來源，則吾記性之衰弱可由此得補救。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ad quod me negotium non solum fructus operis, sed etiam consideratio temporis et opportunitas loci adhortatur."
+     ],
+     "zh": [
+      "這件事不僅工作的效果，而且時間的考量和地點的機緣都促使我去做。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Tempus: propterea quod cum ab eo omnia humana rapiantur, et nos ex eo aliquid invicem rapere debemus quod in vitam proficiat aeternam; praesertim cum et appropinquantis divini Judicii terribilis quaedam exspectatio augeri efflagitet studia Religionis, et novorum Haereticorum fraudulentia multum curae et attentionis indicat."
+     ],
+     "zh": [
+      "時間：因為既然人間的一切都被它奪去，我們也應該彼此奪取某些東西，以便有益於永恆的生命；尤其是當臨近的天主審判的恐怖期待要求增進宗教的努力，而新異端者的欺詐也表明需要更多的警惕和關注。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/augustine__conf8.shtml.txt": {
+   "title": "聖奧思定懺悔錄 卷八",
+   "latinTitle": "Confessiones VIII",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 28 段，約 899 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "8.1.1 deus meus, recorder in gratiarum actione tibi et confitear misericordias tuas super me."
+     ],
+     "zh": [
+      "我的天主，我在感恩祈禱中記念你，並向你承認你對我所施的仁慈。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "perfundantur ossa mea dilectione tua et dicant: 'domine, quis similis tibi?' dirupisti vincula mea: sacrificem tibi sacrificium laudis."
+     ],
+     "zh": [
+      "願我的骨髓充滿對你的愛德，且說：「主啊，誰與你相似？」你已折斷了我的鎖鏈；我要向你奉獻讚美的祭品。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quomodo dirupisti ea narrabo, et dicent omnes qui adorant te, cum audiunt haec, 'benedictus dominus in caelo et in terra; magnum et mirabile nomen eius.' inhaeserant praecordiis meis verba tua, et undique circumvallabar abs te."
+     ],
+     "zh": [
+      "我要敍述你如何打破它們，凡敬拜你的人聽到這些事時，都必說：'天主在天地間受讚頌；他的聖名偉大而奇妙。'你的話已深深入於我的心肺，我從四面八方被你所圍困。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "de vita tua aeterna certus eram, quamvis eam in aenigmate et quasi per speculum videram; dubitatio tamen omnis de incorruptibili substantia, quod ab illa esset omnis substantia, ablata mihi erat, nec certior de te sed stabilior in te esse cupiebam."
+     ],
+     "zh": [
+      "我對於你的永恆生命是確信無疑的，雖然我見到它如同在謎語中，宛如通過鏡子看見；然而關於不朽的實體，即一切實體都由它而來的這一點，我心中所有的懷疑都已消除，而我不是渴望對你更加確信，而是渴望在你內更加堅定。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "de mea vero temporali vita nutabant omnia et mundandum erat cor a fermento veteri."
+     ],
+     "zh": [
+      "論及我現世的生活，一切都在動搖，我的心需要潔淨，除去舊時的酵母。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et placebat via ipse salvator, et ire per eius angustias adhuc pigebat."
+     ],
+     "zh": [
+      "那救主自己的道路使我喜悅，然而沿著祂的窄路而行仍然令我厭煩。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et immisisti in mentem meam visumque est bonum in conspectu meo pergere ad Simplicianum, qui mihi bonus apparebat servus tuus et lucebat in eo gratia tua."
+     ],
+     "zh": [
+      "你把一個想法投入我的心中，這想法在我眼中看似美好，即前去見辛普利西亞努，他在我看來彷彿是你良善的僕人，你的恩寵在他身上照耀。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "audieram etiam quod a iuventute sua devotissime tibi viveret; iam vero tunc senuerat et longa aetate in tam bono studio sectandae vitae tuae multa expertus, multa edoctus mihi videbatur: et vere sic erat."
+     ],
+     "zh": [
+      "我曾聽說他從年輕時就以最虔誠的心為你而生活；但那時他已年邁，在長久的歲月中追求你的生活而獲得許多經驗、學得許多教訓，在我看來是這樣的：實際上也確實如此。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "unde mihi ut proferret volebam conferenti secum aestus meos quis esset aptus modus sic affecto ut ego eram ad ambulandum in via tua."
+     ],
+     "zh": [
+      "我因而想向他傾訴，想找到恰當的方式，向一位與我商議之人吐露我心中的熾熱，使他能如我一樣適於在你的道路上行走。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "8.1.2 videbam enim plenam ecclesiam, et alius sic ibat, alius autem sic, mihi autem displicebat quod agebam in saeculo et oneri mihi erat valde, non iam inflammantibus cupiditatibus, ut solebant, spe honoris et pecuniae ad tolerandam illam servitutem tam gravem."
+     ],
+     "zh": [
+      "我看見教會充滿了人，有人走這條路，有人走那條路，但我對自己在世俗中所為感到不悅，而且感到非常沉重，因為激起我的貪欲的那些火焰已不如往日那般熾烈，榮譽和金錢的希望也不足以使我忍耐這般沉重的奴役。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "iam enim me illa non delectabant prae dulcedine tua et decore domus tuae, quam dilexi, sed adhuc tenaciter conligabar ex femina, nec me prohibebat apostolus coniugari, quamvis exhortaretur ad melius, maxime volens omnes homines sic esse ut ipse erat."
+     ],
+     "zh": [
+      "因為妳的甘飴和妳居所的美麗已經勝過那些事物對我的吸引，我愛慕妳的居所，但我仍然被女人的關係牢牢束縛著；宗徒並未禁止我結婚，雖然他勸勉我追求更好的事，特別是他願意所有的人都像他一樣。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "sed ego infirmior eligebam molliorem locum et propter hoc unum volvebar, in ceteris languidus et tabescens curis marcidis, quod et in aliis rebus quas nolebam pati congruere cogebar vitae coniugali, cui deditus obstringebar."
+     ],
+     "zh": [
+      "然而我因軟弱而選擇了較為柔和的方式，並因此單獨一事而翻騰不寧，在其他事上則因著這些令人沮喪的憂慮而無力且日漸消瘦，我被迫使之與我在別的事上所不願忍受的相符，而受束縛於我所投身的婚姻生活中。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "audieram ex ore veritatis esse spadones qui se ipsos absciderunt propter regnum caelorum, sed 'qui potest,' inquit, 'capere, capiat.' vani sunt certe omnes homines quibus non inest dei scientia, nec de his quae videntur bona potuerunt invenire eum qui est."
+     ],
+     "zh": [
+      "我從真理的口中聽聞有人為了天國而自我閹割，但祂說：『能領悟的，就領悟吧。』凡不具有天主知識的人確實都是虛空的，他們也未能從可見之物中發現祂，即那位真實的存在者。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "at ego iam non eram in illa vanitate."
+     ],
+     "zh": [
+      "但我已不在那虛偽之中。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "transcenderam eam et contestante universa creatura inveneram te creatorem nostrum et verbum tuum apud te deum tecumque unum deum, per quod creasti omnia."
+     ],
+     "zh": [
+      "我超越了理性之光，在整個受造物的見證下，我找到了你，我們的創造者，以及你的聖言在你那裡作為天主，與你一同為一天主，藉著他你創造了萬有。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et est aliud genus impiorum, qui cognoscentes deum non sicut deum glorificaverunt aut gratias egerunt."
+     ],
+     "zh": [
+      "又有另一等不敬虔的人，他們認識天主，卻不如對待天主那樣尊崇祂，也不感謝祂。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "in hoc quoque incideram, et dextera tua suscepit me et inde ablatum posuisti ubi convalescerem, quia dixisti homini, 'ecce pietas est sapientia,' et, 'noli velle videri sapiens, quoniam dicentes se esse sapientes stulti facti sunt.' et inveneram iam bonam margaritam, et venditis omnibus quae haberem emenda erat, et dubitabam."
+     ],
+     "zh": [
+      "我也陷入了這種情況，但你的右手扶持了我，把我從那裡取出來，安置在我得以恢復的地方。因為你對人說過：'看，虔敬就是智慧'，又說：'不要想顯得聰慧，因為那些自稱聰慧的人已經變成了愚蠢的人。'我已經找到了一顆好珍珠，應當賣掉我所有的一切來購買它，但我還在遲疑。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "8.2.3 perrexi ergo ad Simplicianum, patrem in accipienda gratia tunc episcopi Ambrosii et quem vere ut patrem diligebat."
+     ],
+     "zh": [
+      "我於是去見西孟利亞努，他是當時主教安博若的父親，在領受恩寵的事上確實如此，而他真誠地愛他如父親。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "narravi ei circuitus erroris mei."
+     ],
+     "zh": [
+      "我向他敍述了我迷誤的周折。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "ubi autem commemoravi legisse me quosdam libros platonicorum, quos Victorinus, quondam rhetor urbis Romae, quem christianum defunctum esse audieram, in latinam linguam transtulisset, gratulatus est mihi quod non in aliorum philosophorum scripta incidissem plena fallaciarum et deceptionum secundum elementa huius mundi, in istis autem omnibus modis insinuari deum et eius verbum."
+     ],
+     "zh": [
+      "但當我向他述說我曾讀過一些柏拉圖派的著作，那是曾任羅馬城雄辯家的維多利努斯翻譯成拉丁文的，我聽說他已去世於基督信仰中，他就為我慶幸，說我沒有陷入其他哲學家的著作，那些著作充滿了謬誤和欺騙，乃是按照這世界的要素；但在這些著作的各個方面，都暗示著天主及其聖言。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "deinde, ut me exhortaretur ad humilitatem Christi sapientibus absconditam et revelatam parvulis, Victorinum ipsum recordatus est, quem Romae cum esset familiarissime noverat, deque illo mihi narravit quod non silebo."
+     ],
+     "zh": [
+      "其後，為勸我效法基督的謙卑——此謙卑隱於智者，顯於小子——他想起了維多里努斯，此人在羅馬時他曾極其親密地認識，並將關於他的事蹟講述於我，我不當隱而不言。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "habet enim magnam laudem gratiae tuae confitendam tibi, quemadmodum ille doctissimus senex et omnium liberalium doctrinarum peritissimus quique philosophorum tam multa legerat et diiudicaverat, doctor tot nobilium senatorum, qui etiam ob insigne praeclari magisterii, quod cives huius mundi eximium putant, statuam Romano foro meruerat et acceperat, usque ad illam aetatem venerator idolorum sacrorumque sacrilegorum particeps, quibus tunc tota fere Romana nobilitas inflata spirabat, +popiliosiam+ et omnigenum deum monstra et Anubem latratorem, quae aliquando contra Neptunum et Venerem contraque Minervam tela tenuerant et a se victis iam Roma supplicabat, quae iste senex Victorinus tot annos ore terricrepo defensitaverat, non erubuerit esse puer Christi tui et infans fontis tui, subiecto collo ad humilitatis iugum et edomita fronte ad crucis opprobrium."
+     ],
+     "zh": [
+      "你的恩寵實在有大功德應該為你承認，就如那位最博學的老者，精通所有自由學問者，讀過並鑑別了眾多哲學家的著作，許多貴族參議員的導師，他因傑出教學的卓著功績——世人之子視為優異——而在羅馬廣場上獲得並接受了雕像，直到那個年紀還是偶像崇拜者，參與神聖的褻瀆之事——當時幾乎整個羅馬貴族都因之而狂妄自大——崇祀眾般的怪誕諸神及吠叫的阿努比斯神，這些神祇曾經對海神和維納斯神以及米涅瓦神舉起武器，羅馬已從他們手中勝利而向他們祈禱，這位老者維多里努斯用沙啞的嗓音為其辯護許多年，他並不以成為你的基督的小孩和你泉源的嬰兒為恥，低眉順眼地屈從於謙遜的軛，額頭被制伏於十字架的恥辱。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:liturgy/diesirae.html.txt": {
+   "title": "末日經",
+   "latinTitle": "Dies irae",
+   "extent": "complete",
+   "excerptRule": "全文",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "reading:medieval/aquinas__corpuschristi.shtml.txt": {
+   "title": "聖體聖詩集",
+   "latinTitle": "Hymni de Corpore Christi",
+   "extent": "complete",
+   "excerptRule": "全文",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "CORPUS CHRISTI Verbum supernum prodiens, Nec Patris linquens dexteram, Ad opus suum exiens, Venit advitae vesperam. In mortem a discipulo Suis tradendus aemulis, Prius in vitae ferculo Se tradidit discipulis. Quibus sub bina specie Carnem dedit et sanguinem: Ut duplicis substantiae Totum cibaret hominem. Se nascens dedit socium, Convescens in edulium, Se moriens in pretium, Se regnans dat in praemium. O Salutaris Hostia, Quae caeli pandis ostium: Bella premunt hostilia, Da robur, fer auxilium. Uni trinoque Domino Sit sempiterna gloria, Qui vitam sine termino Nobis donet in patria. Amen. St. Thomas Aquinas"
+     ],
+     "zh": [
+      "基督聖體\n聖言自上而出，\n不離天父之右，\n出而行其工程，\n臨於生命之夕。\n由門徒而被交，\n付於敵人之手，\n先於生命之筵，\n自獻與門徒。\n以二種形態，\n賜以肉身與血，\n使雙重實體，\n全養人類之身。\n自生而為伴侶，\n共食而為美饌，\n自死而為代價，\n為君而賜賞報。\n救恩之祭品，\n開啟天國之門：\n敵軍之戰役，\n賜力與援助。\n於獨一三一主，\n願得永恆光榮，\n其生命無終期，\n賜我等於聖鄉。\n阿們。\n聖多瑪斯‧亞奎那"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
   }
  },
- "generatedOn": "2026-08-25"
+ "generatedOn": "2026-08-26"
 }

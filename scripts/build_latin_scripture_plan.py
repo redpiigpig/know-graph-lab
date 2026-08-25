@@ -100,6 +100,23 @@ OLD_TESTAMENT = [
 
 PER_HALF = 20
 LITURGY_LESSONS = 10
+
+# Canonical order, the Vulgate's own.  Until 2026-08-26 the chapters were sorted
+# by how much of their vocabulary the reader had already been taught; the owner
+# removed that constraint -- a reading need not match the words already learned,
+# it needs its Chinese annotated properly -- and once the constraint is gone a
+# coverage sort has nothing to recommend it over the order the Bible is in.
+CANON = [
+    "GEN", "EXO", "LEV", "NUM", "DEU", "JOS", "JDG", "RUT", "1SA", "2SA",
+    "1KI", "2KI", "1CH", "2CH", "EZR", "NEH", "TOB", "JDT", "EST", "JOB",
+    "PSA", "PRO", "ECC", "SNG", "WIS", "SIR", "ISA", "JER", "LAM", "BAR",
+    "EZK", "DAN", "HOS", "JOL", "AMO", "OBA", "JON", "MIC", "NAM", "HAB",
+    "ZEP", "HAG", "ZEC", "MAL", "1MA", "2MA",
+    "MAT", "MRK", "LUK", "JHN", "ACT", "ROM", "1CO", "2CO", "GAL", "EPH",
+    "PHP", "COL", "1TH", "2TH", "1TI", "2TI", "TIT", "PHM", "HEB", "JAS",
+    "1PE", "2PE", "1JN", "2JN", "3JN", "JUD", "REV",
+]
+CANON_INDEX = {book: index for index, book in enumerate(CANON)}
 assert len(NEW_TESTAMENT) == PER_HALF, len(NEW_TESTAMENT)
 assert len(OLD_TESTAMENT) == PER_HALF, len(OLD_TESTAMENT)
 
@@ -171,7 +188,7 @@ def main() -> None:
                 "zhBook": zh_book, "title": title, "note": note,
                 **score(book, chapter, chapters, lm, taught),
             })
-        out.sort(key=lambda r: r["difficulty"])
+        out.sort(key=lambda r: (CANON_INDEX.get(r["book"], 99), r["chapter"]))
         return out
 
     def liturgy_row(row: dict) -> dict:
@@ -199,8 +216,11 @@ def main() -> None:
     # The ten formulas are graded like everything else rather than printed in
     # the order of the Mass: six words of Kyrie before a hundred and seventy of
     # the Creed.  The Creed still lands last, because it is the hardest.
+    # The formulas keep a length gradient -- nine words before a hundred and
+    # seventy -- because that is about the text itself, not about which words a
+    # previous lesson happened to teach.
     opening = sorted((liturgy_row(row) for row in liturgy[:LITURGY_LESSONS]),
-                     key=lambda r: r["difficulty"])
+                     key=lambda r: r["words"])
 
     nt = build(NEW_TESTAMENT, "新約")
     ot = build(OLD_TESTAMENT, "舊約與第二正典")
@@ -231,7 +251,7 @@ def main() -> None:
     for row in plan:
         flag = {"新約": "新", "舊約與第二正典": "舊"}.get(row["corpus"], "禮")
         print(f"{row['lesson']:>3} {flag} {row['title']:<16s} {row['verses']:>3}節 "
-              f"{row['words']:>5}詞  覆蓋 {row['coverage']*100:>5.1f}%  難度 {row['difficulty']:>6.2f}"
+              f"{row['words']:>5}詞  已學詞覆蓋 {row['coverage']*100:>5.1f}%"
               f"  {row['note']}")
     if args.write:
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -153,10 +153,10 @@
   - 思高：納塔乃耳給他說：「你從那裏認識我呢？」耶穌回答說：「斐理伯叫你以前，當你還在無花果樹下時，我就看見了你。」
 - **第 49 課** `ROM 8:15` — Non enim accepistis spiritum servitutis iterum in timore, sed accepistis spiritum adoptionis filiorum, in quo clamamus: Abba (Pater).
   - 思高：其實你們所領受的聖神，並非使你們作奴隸，以致仍舊恐懼；而是使你們作義子。因此，我們呼號：「阿爸，父呀！」
-- **第 50 課** `JER 31:26` — Ideo quasi de somno suscitatus sum: et vidi, et somnus meus dulcis mihi.
-  - 思高：至此，我醒來了，我看見了，我的睡眠為我實在甘甜。
 - **第 50 課** `TOB 1:22` — At ubi nuntiatum est regi, jussit eum occidi, et tulit omnem substantiam ejus.
   - 思高：那時阿希加為我求情，我纔得以回到尼尼微，因為阿希加曾在亞述王散乃黑黎布執政時，作過酒正，又掌過指璽，當過家宰和財政等職，而厄撒哈冬又重用他；他是我的侄子，又是我的血親。
+- **第 50 課** `JER 31:26` — Ideo quasi de somno suscitatus sum: et vidi, et somnus meus dulcis mihi.
+  - 思高：至此，我醒來了，我看見了，我的睡眠為我實在甘甜。
 
 ## 下冊
 
@@ -198,8 +198,8 @@
 - **第 18 課** `De oratione` — Petimus ergo substantiam et facultatem uoluntatis suae subministret nobis, ut salui simus et in caelis et in terris, quia summa est uoluntatis eius salus eorum quos adoptauit.
 - **第 19 課** `Gregorius Magnus` — Sed et ego aliquid similiter ad sacratissimum corpus sancti Pauli apostoli meliorare volui; et quia necesse erat ut iuxta sepulcrum eius effodi altius debuisset, praepositus loci ipsius ossa aliqua non quidem eidem sepulcro coniuncta reperit.
 - **第 19 課** `Itinerarium Egeriae` — Item alia die, id est secunda feria, aguntur, quae consuetudinis sunt de pullo primo agi usque ad mane ad Anastase, similiter et ad tertia et ad sexta aguntur ea, quae totis quadragesimis.
-- **第 20 課** `Itinerarium mentis in Deum` — Deo autem gratias per Iesum Christum, Dominum nostrum , qui nos de tenebris transtulit in admirabile lumen suum , dum per haec lumina exterius data ad speculum mentis nostrae in quo relucent divina, disponimus ad reintrandum.
 - **第 20 課** `Commonitorium` — Multum interest inter pueritiae florem et senectutis maturitatem; sed iidem tamen ipsi fiunt senes qui fuerant adolescentes; ut quamvis unius ejusdemque hominis status habitusque mutetur, una tamen nihilominus eademque natura, una eademque persona sit.
+- **第 20 課** `Itinerarium mentis in Deum` — Deo autem gratias per Iesum Christum, Dominum nostrum , qui nos de tenebris transtulit in admirabile lumen suum , dum per haec lumina exterius data ad speculum mentis nostrae in quo relucent divina, disponimus ad reintrandum.
 - **第 21 課** `Itinerarium Egeriae` — Et tunc omnis ipsa lectio perlegitur; postmodum fit oratio; benedictis cathecuminis quam fidelibus iuxta consuetudinem reuertuntur unusquisque ad domum suam similiter ut die dominica paschae hora noctis secunda.
 - **第 21 課** `Regula Benedicti` — Et ne causetur de minori forte substantia , meminerit scriptum: Primum quærite regnum Dei et iustitiam eius, et hæc omnia adicientur vobis , et iterum: Nihil deest timentibus eum .
 - **第 22 課** `Itinerarium Egeriae` — Haec ergo dum aguntur, facit se hora quin ta; lucernare hoc idem hora sua fit sicut semper ad Anastasem et ad Crucem, sicut et singulis locis sanctis fit: dominica enim die nona fit.

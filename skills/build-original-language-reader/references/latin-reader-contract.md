@@ -13,9 +13,9 @@ same shape the Greek reader was re-frozen to on 2026-08-24.
 | Lessons | 50 per volume, **exactly 20 words each** |
 | Vocabulary | 2,000 entries, the three sources disjoint |
 | 上冊 | 1,000 words in **Collins's own order**, units 1–35, proper names lifted out and the slots backfilled |
-| 上冊 readings | **10 short liturgical formulas, then 40 complete Vulgate chapters** (20 New Testament, 20 Old Testament and deuterocanon). Re-shaped by the owner on 2026-08-25 |
-| 下冊 1–25 | Collins's overflow, then patristic and medieval corpus frequency; one patristic or medieval reading per lesson |
-| 下冊 26–50 | modern curial and liturgical corpus frequency; one Trent-or-later reading per lesson |
+| 上冊 readings | **10 short liturgical formulas, then 40 complete Vulgate chapters** (20 New Testament, 20 Old Testament and deuterocanon), the chapters in canonical order |
+| 下冊 1–25 | Collins's overflow, then patristic and medieval corpus frequency; one patristic or medieval reading per lesson, **in chronological order** |
+| 下冊 26–50 | modern curial and liturgical corpus frequency; one Trent-or-later reading per lesson, **in chronological order** |
 | Ends with | the complete ordinary-time Ordo Missae, in 下冊 only, outside the fifty readings |
 | Authorization | the owner attests verbal permission for this private-use edition (2026-08-25); recorded as an attestation, not a written licence |
 | Builders | `scripts/build_latin_vocabulary_2000.py`, `build_latin_scripture_plan.py`, `build_latin_church_plan.py`, `build_latin_appendices.py` |
@@ -135,11 +135,14 @@ Patris, et Filii, et Spiritus Sancti* — a sentence a reader of church Latin wi
 say more often than any verse in the Bible. Complete chapters begin at lesson
 eleven.
 
-The formulas are graded like everything else rather than printed in the order of
-the Mass, so the Kyrie's four words come before the Creed's hundred and seventy.
-The Kyrie is Greek, kept in Greek by the Latin rite: its words are neither taught
-nor untaught Latin, and counting them as unknown made the shortest text in the
-book score as its hardest reading.
+The formulas run short to long -- nine words of the sign of the cross before a
+hundred and seventy of the Creed -- because that gradient is about the texts
+themselves.
+
+**No Kyrie.** It is Greek, kept in Greek by the Latin rite, and the owner keeps a
+separate Greek reader; a Latin volume that opens on a Greek formula teaches the
+wrong book's alphabet. The preface dialogue (*Sursum corda*) takes its place: as
+short, as familiar, Latin throughout.
 
 The forty chapters were cut from fifty on a stated principle — first a second
 chapter from a book already represented (Mark 4, Luke 24, Acts 17, 1 Cor 15,
@@ -147,6 +150,20 @@ Rev 21, Genesis 3, Exodus 20, Psalm 129), then the two whose Chinese cannot sit
 beside the Latin verse for verse: Job 38, whose verses this edition transposes,
 and Judith 13, where Jerome's recension runs to thirty-one verses against the
 Greek tradition's twenty.
+
+### Readings are not chosen to match the vocabulary
+
+Owner's instruction, 2026-08-26: a chapter need not use the words the earlier
+lessons taught — what it needs is its Chinese annotated properly. Until then both
+volumes were sorted by how much of each reading the reader had already been
+taught, and that sort was doing real damage: it scattered the lower volume's
+fifteen centuries into a difficulty ladder that put Trent after Vatican II.
+
+So the order is now fixed and meaningful. The upper volume's chapters run in the
+Vulgate's own canonical order; the lower volume runs chronologically, from the
+Apostles' Creed to *Laudato Si'*, which is the argument the volume was for.
+Coverage is still measured and still printed — it tells a reader what to expect
+— but it no longer decides anything.
 
 ## 上冊: the chapters themselves
 
@@ -198,11 +215,22 @@ its third verse.
 Twenty-five patristic and medieval, then twenty-five from Trent onwards; ordered
 by difficulty within each half.
 
-A creed, a hymn, a bull or a conciliar canon is printed **entire** and marked
-`complete`; a constitution or an encyclical is printed from a stated paragraph
-range and marked `excerpt`. Lumen Gentium is 21,874 words and Gaudium et Spes
-26,709: no reading is called complete because nobody checked. Currently 15
-complete and 35 excerpts.
+**Every reading is a complete chapter or a complete piece.** Owner's rule,
+2026-08-26. A creed, a hymn, a bull or a short council session is printed
+entire. A work too long to print whole — Lumen Gentium at 21,874 words, Gaudium
+et Spes at 26,709 — is cut at **its own divisions**: whole chapters, whole
+numbered sections, whole canons, as many as fit the lesson, never part of one.
+`scripts/build_latin_church_plan.py:complete_unit` picks the strongest marker the
+work itself uses (CAPUT before roman numerals before numbered paragraphs) and
+each reading records what it printed: 「第 1–4 節（完整，共 33 節）」.
+
+This replaced a word-count rule that took the first nine hundred words of each
+work. That rule stopped wherever nine hundred words happened to land, mid-
+argument, and it is not what a reading is.
+
+Seven works carry no divisions the parser can see and are longer than the whole-
+work limit; they print complete paragraphs and say so — 「原文無分章標記；取前 N
+個完整段落，非全文」 — rather than implying a chapter was chosen.
 
 **27 of the 50 already have a Chinese parallel in this repository.** The
 remaining 23 are the Latin Library patristic texts, which have none and must be
