@@ -28,6 +28,7 @@ import argparse
 import json
 import re
 import statistics
+from collections import Counter
 import sys
 from datetime import date
 from pathlib import Path
@@ -106,6 +107,41 @@ MODERN = [
 PER_HALF = 25
 assert len(PATRISTIC) == PER_HALF, len(PATRISTIC)
 assert len(MODERN) == PER_HALF, len(MODERN)
+
+
+SECTION_NUMBER = re.compile(r"^\s*(\d{1,3})[.、]", re.M)
+PLACEHOLDER = ("待補", "⏳")
+EXCERPT_MARKS = ("教義選集", "Denzinger", "中譯條目")
+
+
+def chinese_kind(latin_path: Path) -> tuple[str, int]:
+    """What kind of Chinese sits beside this Latin, if any.
+
+    A -chinese.txt file existing is not the same as a parallel translation
+    existing, and treating the two as equal was wrong in three different ways at
+    once.  Some of these files are a placeholder that says 中譯待補.  Fifteen are
+    selections from the Denzinger anthology -- the Sacrosanctum Concilium file
+    holds one entry out of a constitution of a hundred and thirty paragraphs and
+    says so in its own header.  Only nine are translations of the document, and
+    only five of those number their sections so that the two sides can be
+    matched.
+
+    Pairing the other twenty-two by paragraph index would print Latin beside
+    Chinese from a different part of the text, and it would look perfectly fine
+    on the page.
+    """
+    chinese = latin_path.with_name(latin_path.name.replace("-latin.txt", "-chinese.txt"))
+    if not chinese.exists():
+        return "none", 0
+    raw = chinese.read_text(encoding="utf-8", errors="replace")
+    body = re.sub(r"^#.*$", "", raw, flags=re.M).strip()
+    if len(body) < 200 or any(mark in raw for mark in PLACEHOLDER):
+        return "placeholder", 0
+    if any(mark in raw for mark in EXCERPT_MARKS):
+        return "denzinger-excerpts", 0
+    numbers = len(set(SECTION_NUMBER.findall(body)))
+    return ("full-translation-numbered" if numbers >= 5 else
+            "full-translation-unnumbered"), numbers
 
 
 def load_text(kind: str, ref: str, repo_index: dict) -> tuple[str, str, bool]:
@@ -297,7 +333,9 @@ def main() -> None:
         for spec in rows:
             title, latin_title, kind, ref, extent, dated, note = spec[:7]
             anchors = spec[7] if len(spec) > 7 else None
-            text, path, has_zh = load_text(kind, ref, repo_index)
+            text, path, _ = load_text(kind, ref, repo_index)
+            zh_kind, zh_sections = (chinese_kind(ROOT / path) if kind == "repo"
+                                    else ("none", 0))
             if anchors:
                 text = section(text, anchors)
             printed, printed_words, rule = (
@@ -310,7 +348,14 @@ def main() -> None:
                 "extent": extent, "date": dated, "year": year_of(dated), "note": note,
                 "printedWords": printed_words,
                 "excerptRule": rule,
-                "chineseParallel": "repo-existing" if has_zh else "pending",
+                "chineseSource": zh_kind,
+                "chineseSections": zh_sections,
+                # Only a numbered full translation can be set beside the Latin
+                # automatically.  Everything else goes to the self-translation
+                # queue, with what exists recorded so a human can align it later.
+                "chineseParallel": ("repo-aligned-by-number"
+                                    if zh_kind == "full-translation-numbered"
+                                    else "pending"),
                 **measure(printed, lm, taught),
             })
         out.sort(key=lambda r: (r["year"], r["title"]))
@@ -321,7 +366,7 @@ def main() -> None:
         row["lesson"] = index
 
     complete = sum(1 for r in plan if r["extent"] == "complete")
-    with_zh = sum(1 for r in plan if r["chineseParallel"] == "repo-existing")
+    with_zh = sum(1 for r in plan if r["chineseParallel"] != "pending")
     payload = {
         "schemaVersion": "1.0.0",
         "generatedOn": date.today().isoformat(),
@@ -340,10 +385,12 @@ def main() -> None:
         "readings": plan,
     }
     print(f"下冊 {len(plan)} 篇（按年代排序）：完整全文 {complete}、"
-          f"取完整章節 {len(plan) - complete}；已有中譯 {with_zh}")
+          f"取完整章節 {len(plan) - complete}；可直接對照的既有中譯 {with_zh}")
+    kinds = Counter(r["chineseSource"] for r in plan)
+    print("　既有中文檔分類：", dict(kinds))
     for row in plan:
         mark = "全" if row["extent"] == "complete" else "章"
-        zh = "中" if row["chineseParallel"] == "repo-existing" else "－"
+        zh = "中" if row["chineseParallel"] != "pending" else "－"
         print(f"{row['lesson']:>3} {mark}{zh} {row['date']:>8s} {row['title']:<24s} "
               f"{row['words']:>5}詞  {row['excerptRule']}")
     if args.write:

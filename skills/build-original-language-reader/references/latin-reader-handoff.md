@@ -57,8 +57,16 @@ checksums.
    that bar applies here is the owner's call and was left alone.
 2. **The word-by-word gloss layer over the readings is not built.** 24,288 words
    in 上冊 alone. Nothing has been tokenised or glossed at token level.
-3. **The Chinese for the 23 patristic readings and the Ordo Missae is being
-   produced and is not finished.** `translate_latin_readings_zh.py` is
+3. **Forty-five of the fifty lower-volume readings need a Chinese translation,
+   not twenty-three.** The earlier count trusted that a `-chinese.txt` file
+   beside the Latin meant a parallel translation existed. It does not. Of the
+   twenty-seven files that exist: three are the placeholder 「⏳ 中譯待補」,
+   fifteen are selections from the Denzinger anthology (the Sacrosanctum
+   Concilium file holds *one* entry out of a hundred-and-thirty-paragraph
+   constitution and says so in its own header), four are real translations that
+   number nothing, and five are real translations that number their sections.
+   Only those five can be set beside the Latin, matched on the section number.
+   The Chinese for the rest is being produced and is not finished. `translate_latin_readings_zh.py` is
    resumable; re-run it until every unit reports all its segments. It runs at
    roughly two minutes a segment while the Gemini pool is rate-limited, so it is
    an overnight job, not a coffee-break one. Everything it produces is labelled
@@ -123,6 +131,11 @@ checksums.
 - **Collins does not label his nouns and verbs.** The gender abbreviation and the
   four principal parts *are* the labels; reading only an explicit field left the
   part-of-speech column empty for most of the book.
+- **A `-chinese.txt` file existing does not mean a translation exists.** Three
+  different things were sitting under that name, and pairing any of them to the
+  Latin by paragraph index printed unrelated text side by side — Sacrosanctum
+  Concilium has 362 Latin paragraphs against 11 Chinese ones. Classify the file;
+  join on section numbers where both sides carry them; self-translate otherwise.
 - **Do not re-scan a corpus per lookup.** Asking for one name's commonest
   spelling by scanning three million words, five hundred times, is why the first
   appendix build never finished.

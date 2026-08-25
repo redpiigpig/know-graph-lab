@@ -1744,6 +1744,159 @@
      "engine": "claude-haiku-4-5-20251001"
     }
    ]
+  },
+  "reading:fathers/augustine__conf8.shtml.txt": {
+   "title": "聖奧思定懺悔錄 卷八",
+   "latinTitle": "Confessiones VIII",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 28 段，約 899 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "8.1.1 deus meus, recorder in gratiarum actione tibi et confitear misericordias tuas super me."
+     ],
+     "zh": [
+      "我的天主，我在感恩祈禱中想起你，向你認罪並讚美你對我所施的仁慈。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "perfundantur ossa mea dilectione tua et dicant: 'domine, quis similis tibi?' dirupisti vincula mea: sacrificem tibi sacrificium laudis."
+     ],
+     "zh": [
+      "願我的骨髓充滿對你的愛德，而發出呼聲：『主啊，誰可與你相比？』你斷裂了我的鎖鏈。我要向你獻上讚美的祭品。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quomodo dirupisti ea narrabo, et dicent omnes qui adorant te, cum audiunt haec, 'benedictus dominus in caelo et in terra; magnum et mirabile nomen eius.' inhaeserant praecordiis meis verba tua, et undique circumvallabar abs te."
+     ],
+     "zh": [
+      "我將述說你如何撕裂它們，凡敬拜你的人聽到這些事時都會說：『願主在天地受讚美；他的名字偉大而奇妙。』你的言語已深深銘刻在我心中，我到處都被你圍繞。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "de vita tua aeterna certus eram, quamvis eam in aenigmate et quasi per speculum videram; dubitatio tamen omnis de incorruptibili substantia, quod ab illa esset omnis substantia, ablata mihi erat, nec certior de te sed stabilior in te esse cupiebam."
+     ],
+     "zh": [
+      "論到你永恆的生命，我是確信的，縱然我是在謎語中看見它，彷彿藉著鏡子看見；然而對於不朽的本體，以及萬有的本體都出自於它的這一切疑惑，已為我所除去。我不是渴望對你有更大的確信，而是渴望在你內更加穩固。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "de mea vero temporali vita nutabant omnia et mundandum erat cor a fermento veteri."
+     ],
+     "zh": [
+      "至於我的塵世生命，一切都在動搖不定，我的心需要潔淨舊酵母。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et placebat via ipse salvator, et ire per eius angustias adhuc pigebat."
+     ],
+     "zh": [
+      "並且救主本身的道路使我喜悅，但走過他的狹窄之處仍然令我厭煩。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et immisisti in mentem meam visumque est bonum in conspectu meo pergere ad Simplicianum, qui mihi bonus apparebat servus tuus et lucebat in eo gratia tua."
+     ],
+     "zh": [
+      "你就把這個念頭放在我心裡，我在自己看來進去見西默利齊亞努斯是好的，他在我眼中顯為你的良善僕人，而你的恩寵在他身上照耀。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "audieram etiam quod a iuventute sua devotissime tibi viveret; iam vero tunc senuerat et longa aetate in tam bono studio sectandae vitae tuae multa expertus, multa edoctus mihi videbatur: et vere sic erat."
+     ],
+     "zh": [
+      "我也聽說他從年輕時就以極虔誠的心為你而生活；但那時他已年邁，在如此美善的追隨你的生命之道的事業上，經歷了悠久的人生歲月，學到了許多，領受了教導，在我看來似乎是這樣；實在也確是如此。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "unde mihi ut proferret volebam conferenti secum aestus meos quis esset aptus modus sic affecto ut ego eram ad ambulandum in via tua."
+     ],
+     "zh": [
+      "我渴望他能說出我之心所思，故欲與其談論，不知何種方式最適宜於我這樣的人去行走在你的道路上。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "8.1.2 videbam enim plenam ecclesiam, et alius sic ibat, alius autem sic, mihi autem displicebat quod agebam in saeculo et oneri mihi erat valde, non iam inflammantibus cupiditatibus, ut solebant, spe honoris et pecuniae ad tolerandam illam servitutem tam gravem."
+     ],
+     "zh": [
+      "我看到教會充滿了人，有人走這條路，有人走那條路，但我對自己在世俗中所行的事感到厭煩，那種沉重的負擔對我來說極其難堪。慾望不再如往昔那樣炙熱地燃燒著我，渴望榮譽和金錢來忍受那麼沉重的奴役。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "iam enim me illa non delectabant prae dulcedine tua et decore domus tuae, quam dilexi, sed adhuc tenaciter conligabar ex femina, nec me prohibebat apostolus coniugari, quamvis exhortaretur ad melius, maxime volens omnes homines sic esse ut ipse erat."
+     ],
+     "zh": [
+      "我不再為那些事物所悅樂，反為你的甘飴和你聖殿的美麗所吸引，我愛慕聖殿；但我仍然被女人的關係所束縛，宗徒並未禁止我成婚，儘管他勸勉我走更好的道路，他尤其盼望所有的人都像他一樣。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "sed ego infirmior eligebam molliorem locum et propter hoc unum volvebar, in ceteris languidus et tabescens curis marcidis, quod et in aliis rebus quas nolebam pati congruere cogebar vitae coniugali, cui deditus obstringebar."
+     ],
+     "zh": [
+      "但我因為較為軟弱，選擇較為柔和的地方，為了這唯一的理由而翻滾，在其他方面卻因著令人消沉的憂慮而無力和衰弱；這種情形也與我在其他事上所不願忍受的相符，我被迫使之與婚姻生活相和諧，而我為此所束縛。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "audieram ex ore veritatis esse spadones qui se ipsos absciderunt propter regnum caelorum, sed 'qui potest,' inquit, 'capere, capiat.' vani sunt certe omnes homines quibus non inest dei scientia, nec de his quae videntur bona potuerunt invenire eum qui est."
+     ],
+     "zh": [
+      "我曾從真理之口聽聞，有人為了天國而自閹其身，但祂說：『能領悟的，就領悟吧。』那些心中沒有天主的知識的人確實都是虛妄的，他們也無法從看得見的美善之物中找到那位真實者。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "at ego iam non eram in illa vanitate."
+     ],
+     "zh": [
+      "而我已經不在那虛榮中了。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "transcenderam eam et contestante universa creatura inveneram te creatorem nostrum et verbum tuum apud te deum tecumque unum deum, per quod creasti omnia."
+     ],
+     "zh": [
+      "我超越了它，而藉著整個受造物的作證，我找到了你，我們的創造者，以及你身邊的你的聖言，他與你同是一個天主，藉著他你創造了萬物。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et est aliud genus impiorum, qui cognoscentes deum non sicut deum glorificaverunt aut gratias egerunt."
+     ],
+     "zh": [
+      "又有另一等不虔誠的人，他們認識天主，卻沒有像對待天主那樣光榮祂，也沒有感謝祂。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
   }
  },
  "generatedOn": "2026-08-26"

@@ -147,9 +147,14 @@ def main() -> int:
         unlabelled = [r["title"] for r in readings if r["extent"] not in {"complete", "excerpt"}]
         if unlabelled:
             failures.append(f"未標完整／節錄：{unlabelled[:5]}")
-        pending = [r["title"] for r in readings if r["chineseParallel"] != "repo-existing"]
+        pending = [r for r in readings if r["chineseParallel"] == "pending"]
         if pending:
-            warnings.append(f"下冊 {len(pending)} 篇尚無中譯，需自譯並標記")
+            kinds = Counter(r.get("chineseSource", "none") for r in pending)
+            warnings.append(f"下冊 {len(pending)} 篇需自譯（既有中文檔："
+                            f"{'、'.join(f'{k} {n}' for k, n in kinds.items())}）")
+        aligned = len(readings) - len(pending)
+        if aligned:
+            warnings.append(f"下冊 {aligned} 篇以節號對齊既有中譯")
         if not church["terminalSection"]["status"].startswith("latin_frozen"):
             warnings.append(f"終卷《{church['terminalSection']['title']}》"
                             f"狀態 {church['terminalSection']['status']}")

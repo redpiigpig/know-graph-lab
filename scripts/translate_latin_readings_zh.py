@@ -215,7 +215,11 @@ def pending_readings() -> list[dict]:
     plan = json.loads(CHURCH_PLAN.read_text(encoding="utf-8"))
     rows = []
     for reading in plan["readings"]:
-        if reading["chineseParallel"] == "repo-existing":
+        # Only a numbered full translation can be set beside the Latin as it
+        # stands.  Everything else -- the Denzinger selections, the
+        # placeholders, the unnumbered translations whose paragraphs do not
+        # correspond -- is translated here instead.
+        if reading["chineseParallel"] == "repo-aligned-by-number":
             continue
         path = ROOT / reading["sourcePath"]
         if not path.exists():

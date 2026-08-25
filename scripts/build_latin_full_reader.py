@@ -268,14 +268,32 @@ def upper_readings() -> dict[int, dict]:
     return out
 
 
-def repo_chinese(path: str) -> list[str]:
+SECTION_NUMBER = re.compile(r"^\s*(\d{1,3})[.、]")
+
+
+def chinese_by_section(path: str) -> dict[int, str]:
+    """Index a published translation by the section numbers it prints.
+
+    Pairing the two sides by paragraph index is what this replaced, and it was
+    wrong every time: Sacrosanctum Concilium has 362 Latin paragraphs against
+    11 Chinese ones, so paragraph five of each is five different places in the
+    document.  Where both sides number their sections, the number is the join.
+    """
     latin = ROOT / path
     chinese = latin.with_name(latin.name.replace("-latin.txt", "-chinese.txt"))
     if not chinese.exists():
-        return []
-    return [re.sub(r"\s+", " ", p).strip()
-            for p in re.split(r"\n\s*\n", chinese.read_text(encoding="utf-8", errors="replace"))
-            if p.strip()]
+        return {}
+    raw = chinese.read_text(encoding="utf-8", errors="replace")
+    body = re.sub(r"^#.*$", "", raw, flags=re.M)
+    sections: dict[int, list[str]] = {}
+    current = 0
+    for line in body.splitlines():
+        match = SECTION_NUMBER.match(line)
+        if match:
+            current = int(match.group(1))
+        if current and line.strip():
+            sections.setdefault(current, []).append(line.strip())
+    return {number: " ".join(rows) for number, rows in sections.items()}
 
 
 def lower_readings() -> dict[int, dict]:
@@ -302,10 +320,18 @@ def lower_readings() -> dict[int, dict]:
                 latin_text, _, _ = plan_module.complete_unit(latin_text)
             paragraphs = [re.sub(r"\s+", " ", part).strip()
                           for part in latin_text.split(chr(10) * 2) if part.strip()]
-            chinese = repo_chinese(row["sourcePath"])
-            pairs = [(paragraphs[i], chinese[i] if i < len(chinese) else "")
-                     for i in range(len(paragraphs))]
+            chinese = (chinese_by_section(row["sourcePath"])
+                       if row["chineseParallel"] == "repo-aligned-by-number" else {})
+            pairs = []
+            for paragraph in paragraphs:
+                match = SECTION_NUMBER.match(paragraph)
+                zh = chinese.get(int(match.group(1)), "") if match else ""
+                pairs.append((paragraph, zh))
             note = row["excerptRule"]
+            if row["chineseSource"] in {"denzinger-excerpts", "placeholder",
+                                        "full-translation-unnumbered"}:
+                note += f"；既有中文檔為 {row['chineseSource']}，無法逐段並排，中譯另行自譯"
+
         out[row["lesson"]] = {
             "title": f"{row['title']}　{row['latinTitle']}", "pairs": pairs, "note": note,
         }
