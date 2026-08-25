@@ -163,3 +163,8 @@ output/source-cache/original-readers/latin-full/collins-pages/
 output/source-cache/original-readers/latin-full/latin-lexicon.json
 output/source-cache/original-readers/latin-full/vulgate-lexicon.json
 output/source-cache/original-readers/latin-full/sigao-cache.json
+
+# Latin reader draft audio: synthetic, to be replaced by real recordings.
+# The manifest is tracked so the clip list and checksums stay reviewable.
+output/original-readers/audio/latin/*.mp3
+output/original-readers/audio/latin/*.wav

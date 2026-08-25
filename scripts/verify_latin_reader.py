@@ -104,9 +104,12 @@ def main() -> int:
     else:
         if len(scripture["chapters"]) != LESSONS:
             failures.append(f"上冊讀本 {len(scripture['chapters'])} 章，應為 {LESSONS}")
+        # Since 2026-08-25 the volume opens with ten liturgical formulas and
+        # then reads forty chapters, twenty from each Testament.
         halves = Counter(row["corpus"] for row in scripture["chapters"])
-        if set(halves.values()) != {25}:
-            failures.append(f"上冊兩半不是各 25 章：{dict(halves)}")
+        expected = {"禮儀短經": 10, "新約": 20, "舊約與第二正典": 20}
+        if dict(halves) != expected:
+            failures.append(f"上冊組成不符（應為 {expected}）：{dict(halves)}")
 
     chinese = load(SIGAO)
     if chinese is None:

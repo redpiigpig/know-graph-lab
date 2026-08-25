@@ -150,6 +150,10 @@ def main() -> None:
 
     chapters = []
     for row in plan["chapters"]:
+        # The first lessons are liturgical formulas, not Bible chapters; their
+        # Chinese comes from the translation pass, not from this edition.
+        if row.get("kind") == "liturgy" or not row.get("book"):
+            continue
         book, latin_chapter = row["book"], row["chapter"]
         chinese_chapter = (PSALM_CROSSWALK.get(latin_chapter, latin_chapter)
                            if book == "PSA" else latin_chapter)

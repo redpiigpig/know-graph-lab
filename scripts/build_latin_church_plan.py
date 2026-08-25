@@ -45,16 +45,16 @@ OUTPUT = CACHE / "church-plan.json"
 # kind: repo = a -latin.txt in data/, file = a fetched Latin Library text
 # extent: complete | excerpt
 PATRISTIC = [
-    ("使徒信經", "Symbolum Apostolorum", "file", "liturgy/creeds.html.txt", "complete", "2 世紀起", "節錄自信經合輯，僅取使徒信經"),
-    ("亞他納修信經", "Symbolum Quicumque", "file", "liturgy/creeds.html.txt", "complete", "5–6 世紀", "三位一體與基督二性的命題鏈"),
+    ("使徒信經", "Symbolum Apostolorum", "file", "liturgy/creeds.html.txt", "complete", "2 世紀起", "", ("^Symbolum Apostolorum$", "^Quicumque")),
+    ("亞他納修信經", "Symbolum Quicumque", "file", "liturgy/creeds.html.txt", "complete", "5–6 世紀", "三位一體與基督二性的命題鏈", ("^Quicumque", "^Symbolum Nicaenum Pristinum$")),
     ("聖安博晨禱聖詩", "Hymni Ambrosiani", "file", "fathers/ambrose__hymns.html.txt", "complete", "4 世紀", "含 Aeterne rerum conditor"),
-    ("將臨期詠：懇求厄瑪奴耳", "Veni, veni, Emmanuel", "file", "liturgy/hymni.html.txt", "complete", "12 世紀", ""),
-    ("聖誕詠：普世歡騰之外的古調", "Puer nobis nascitur / Adeste fideles", "file", "liturgy/hymni.html.txt", "complete", "15／18 世紀", ""),
-    ("聖枝主日詠", "Gloria, laus et honor", "file", "liturgy/hymni.html.txt", "complete", "9 世紀", "德奧道夫作"),
-    ("聖母痛苦詠", "Stabat mater dolorosa", "file", "liturgy/hymni.html.txt", "complete", "13 世紀", ""),
+    ("將臨期詠：懇求厄瑪奴耳", "Veni, veni, Emmanuel", "file", "liturgy/hymni.html.txt", "complete", "12 世紀", "", ("^Veni, veni, Emmanuel", "^Puer nobis nascitur")),
+    ("聖誕詠", "Adeste, fideles", "file", "liturgy/hymni.html.txt", "complete", "18 世紀", "", ("^Adeste, fideles", "^Gloria, laus et honor")),
+    ("聖枝主日詠", "Gloria, laus et honor", "file", "liturgy/hymni.html.txt", "complete", "9 世紀", "德奧道夫作", ("^Gloria, laus et honor", "^Stabat mater dolorosa")),
+    ("聖母痛苦詠", "Stabat mater dolorosa", "file", "liturgy/hymni.html.txt", "complete", "13 世紀", "", ("^Stabat mater dolorosa", "^Chorus novae Ierusalem")),
     ("末日經", "Dies irae", "file", "liturgy/diesirae.html.txt", "complete", "13 世紀", "追思彌撒繼抒詠"),
-    ("復活詠", "Chorus novae Ierusalem", "file", "liturgy/hymni.html.txt", "complete", "11 世紀", "傅爾伯作"),
-    ("天鄉之歌", "O quanta, qualia", "file", "liturgy/hymni.html.txt", "complete", "12 世紀", "阿伯拉作"),
+    ("復活詠", "Chorus novae Ierusalem", "file", "liturgy/hymni.html.txt", "complete", "11 世紀", "傅爾伯作", ("^Chorus novae Ierusalem", "^O quanta, qualia")),
+    ("天鄉之歌", "O quanta, qualia", "file", "liturgy/hymni.html.txt", "complete", "12 世紀", "阿伯拉作", ("^O quanta, qualia", "^Dies irae")),
     ("聖體聖詩集", "Hymni de Corpore Christi", "file", "medieval/aquinas__corpuschristi.shtml.txt", "complete", "1264", "含 Pange lingua、Lauda Sion、Verbum supernum、Adoro te"),
     ("斐理伯與佩爾佩圖亞殉道錄", "Passio Perpetuae et Felicitatis", "file", "fathers/perp.html.txt", "excerpt", "203", "取殉道日敘事段"),
     ("厄革里雅朝聖記", "Itinerarium Egeriae", "file", "fathers/egeria2.html.txt", "excerpt", "4 世紀末", "耶路撒冷聖週禮儀實錄"),
@@ -100,6 +100,13 @@ MODERN = [
     ("方濟各：願祢受讚頌", "Laudato Si'", "repo", "laudato-si-2015", "excerpt", "2015", "現行教廷拉丁文的當代樣貌"),
 ]
 
+# An excerpt has to have edges.  Calling a reading "excerpt" without saying
+# which part of it is printed is the same as not having chosen: the translator
+# then renders ten thousand words of Vincent of Lérins because nothing told it
+# to stop.  Each excerpt is the opening of its work, up to this many Latin
+# words, cut at a paragraph boundary.
+EXCERPT_WORDS = 900
+
 PER_HALF = 25
 assert len(PATRISTIC) == PER_HALF, len(PATRISTIC)
 assert len(MODERN) == PER_HALF, len(MODERN)
@@ -117,6 +124,53 @@ def load_text(kind: str, ref: str, repo_index: dict) -> tuple[str, str, bool]:
         raise SystemExit(f"語料缺檔 {ref}")
     return (path.read_text(encoding="utf-8", errors="replace"),
             str(path.relative_to(ROOT)).replace("\\", "/"), False)
+
+
+def section(text: str, anchors: tuple[str, str]) -> str:
+    """Cut one hymn or creed out of the anthology that holds it.
+
+    Six hymns and two creeds live inside two files, and pointing eight readings
+    at the whole file makes eight readings that print the same sixteen hundred
+    words.  The anchors are matched on the *last* occurrence of the opening
+    line, because these files repeat every title in a table of contents at the
+    top and matching the first occurrence cuts the contents list instead of the
+    hymn.
+    """
+    lines = text.splitlines()
+    start_re, end_re = re.compile(anchors[0]), re.compile(anchors[1])
+    starts = [i for i, line in enumerate(lines) if start_re.search(line.strip())]
+    if not starts:
+        raise SystemExit(f"找不到起點 {anchors[0]}")
+
+    def span(begin: int) -> tuple[int, int]:
+        for index in range(begin + 1, len(lines)):
+            if end_re.search(lines[index].strip()):
+                return begin, index
+        return begin, len(lines)
+
+    # Of the places the title appears, take the one that yields the longest
+    # section.  The contents list at the top of these files repeats every title
+    # in order, so a title there is immediately followed by the next title and
+    # its "section" is one line long; the real one is hundreds.  Choosing by
+    # length needs no knowledge of how long the contents list happens to be.
+    begin, end = max((span(i) for i in starts), key=lambda pair: pair[1] - pair[0])
+    return chr(10).join(lines[begin:end]).strip()
+
+
+def excerpt(text: str, limit: int = EXCERPT_WORDS) -> tuple[str, int, int]:
+    """The opening of a work, cut at a paragraph boundary."""
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+    if len(paragraphs) <= 1:
+        # A file with no blank lines is one paragraph; fall back to sentences.
+        paragraphs = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    kept, count = [], 0
+    for paragraph in paragraphs:
+        words = len(L.words(paragraph))
+        if kept and count + words > limit:
+            break
+        kept.append(paragraph)
+        count += words
+    return (chr(10) * 2).join(kept), count, len(kept)
 
 
 def measure(text: str, lm: Lemmatiser, taught: set[str]) -> dict:
@@ -157,14 +211,25 @@ def main() -> None:
 
     def build(rows, era):
         out = []
-        for title, latin_title, kind, ref, extent, dated, note in rows:
+        for spec in rows:
+            title, latin_title, kind, ref, extent, dated, note = spec[:7]
+            anchors = spec[7] if len(spec) > 7 else None
             text, path, has_zh = load_text(kind, ref, repo_index)
+            if anchors:
+                text = section(text, anchors)
+            printed, printed_words, printed_paras = (
+                excerpt(text) if extent == "excerpt" else (text, 0, 0))
             out.append({
                 "title": title, "latinTitle": latin_title, "era": era,
                 "sourceKind": kind, "sourceRef": ref, "sourcePath": path,
+                "section": list(anchors) if anchors else None,
                 "extent": extent, "date": dated, "note": note,
+                "printedWords": printed_words or len(L.words(text)),
+                "printedParagraphs": printed_paras,
+                "excerptRule": (f"取全文開頭 {printed_paras} 段，約 {printed_words} 詞"
+                                if extent == "excerpt" else "全文"),
                 "chineseParallel": "repo-existing" if has_zh else "pending",
-                **measure(text, lm, taught),
+                **measure(printed, lm, taught),
             })
         out.sort(key=lambda r: r["difficulty"])
         return out

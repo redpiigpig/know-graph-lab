@@ -214,8 +214,29 @@ def scripture_candidates() -> list[dict]:
         for verse in chapter["verses"]:
             zh_by_ref[(chapter["book"], chapter["latinChapter"], verse["verse"])] = verse["text"]
     chapters = L.vulgate_chapters()
+    liturgy_path = CACHE / "liturgy.json"
+    liturgy = {row["id"]: row for row in
+               (json.loads(liturgy_path.read_text(encoding="utf-8"))["formulas"]
+                if liturgy_path.exists() else [])}
+    translated = (json.loads((CACHE / "readings-zh.json").read_text(encoding="utf-8"))["units"]
+                  if (CACHE / "readings-zh.json").exists() else {})
     rows = []
     for row in plan["chapters"]:
+        # The ten opening formulas are the best memory material in the volume --
+        # they are short, complete, and a reader says them weekly -- so they are
+        # candidates too, not just readings.
+        if row.get("kind") == "liturgy":
+            source = liturgy.get(row.get("id"), {})
+            unit = translated.get(f"formula:{row.get('id')}", {})
+            zh_lines = [z for segment in unit.get("segments", []) for z in segment["zh"]]
+            for index, line in enumerate(source.get("lines", [])):
+                rows.append({
+                    "ref": f"{row['latinTitle']} {index + 1}",
+                    "title": row["title"], "text": line,
+                    "zh": zh_lines[index] if index < len(zh_lines) else "",
+                    "fromLesson": row["lesson"],
+                })
+            continue
         verses = chapters[(row["book"], row["chapter"])]
         for number, text in verses.items():
             rows.append({

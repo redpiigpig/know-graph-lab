@@ -16,7 +16,7 @@
  },
  "chapters": [
   {
-   "lesson": 1,
+   "lesson": 11,
    "book": "JHN",
    "latinChapter": 17,
    "chineseChapter": 17,
@@ -198,7 +198,7 @@
    ]
   },
   {
-   "lesson": 2,
+   "lesson": 12,
    "book": "JHN",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -620,7 +620,7 @@
    ]
   },
   {
-   "lesson": 3,
+   "lesson": 13,
    "book": "LUK",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -1022,835 +1022,7 @@
    ]
   },
   {
-   "lesson": 4,
-   "book": "LUK",
-   "latinChapter": 24,
-   "chineseChapter": 24,
-   "title": "路加福音 24",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/56/24.html",
-   "sectionHeadings": [
-    "光榮復活",
-    "路加福音 第二十四章",
-    "耶穌復活",
-    "耶穌顯現給二徒",
-    "耶穌顯現給宗徒",
-    "最後的顯現",
-    "耶穌升天"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 53,
-   "latinVerseCount": 51,
-   "alignmentNote": "拉丁 51 節，中文 53 節，需逐節核對",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "一週的第一天，天還很早，婦女們便攜帶預備下的香料，來到墳墓那裏，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 2,
-     "text": "見石頭已由墓穴滾開了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 3,
-     "text": "她們進去，不見了主耶穌的遺體。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 4,
-     "text": "她們正為此事疑慮的時候，忽然有兩人，穿着耀目的衣服，站在她們身邊。",
-     "properNames": [],
-     "crossReference": "9:29宗 1:10-11"
-    },
-    {
-     "verse": 5,
-     "text": "她們都害怕，遂把臉垂向地上，那兩個人對她們說：「你們為什麼在死人中找活人呢？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 6,
-     "text": "他不在這裏了，他已復活了。你們應當記得：他還在加里肋亞時，怎樣告訴過你們，",
-     "properNames": [
-      "加里肋亞"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 7,
-     "text": "說：人子必須被交付於罪人之手，被釘在十字架上，並在第三日復活。」",
-     "properNames": [],
-     "crossReference": "9:22"
-    },
-    {
-     "verse": 8,
-     "text": "她們遂想起了他的話，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 9,
-     "text": "從墳墓那裏回去，把這一切事報告給那十一門徒及其餘的眾人，",
-     "properNames": [],
-     "crossReference": "//瑪 28:10, 17//谷 16:10, 11, 14//若 20:1-8, 25, 29"
-    },
-    {
-     "verse": 10,
-     "text": "她們是瑪利亞瑪達肋納及約安納和雅各伯的母親瑪利亞；其餘同她們一起的婦女，也把這些事報告給宗徒。",
-     "properNames": [
-      "瑪利亞瑪達肋納",
-      "約安納",
-      "雅各伯",
-      "瑪利亞"
-     ],
-     "crossReference": "8:2-3"
-    },
-    {
-     "verse": 11,
-     "text": "但婦女們的這些話，在他們看來，好像是無稽之談，不敢相信。",
-     "properNames": [],
-     "crossReference": "瑪 8:10"
-    },
-    {
-     "verse": 12,
-     "text": "伯多祿卻起來跑到墳墓那裏，屈身向裏窺看，只見有殮布，就走了，心裏驚異所發生的事。",
-     "properNames": [
-      "伯多祿"
-     ],
-     "crossReference": "//若 20:3-10"
-    },
-    {
-     "verse": 13,
-     "text": "就在那一天，他們中，有兩個人往一個村莊去，村名厄瑪烏，離耶路撒冷約六十『斯塔狄』。",
-     "properNames": [
-      "厄瑪烏",
-      "耶路撒冷"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 14,
-     "text": "他們彼此談論所發生的一切事。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 15,
-     "text": "談話討論的時候，耶穌親自走近他們，與他們同行。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 16,
-     "text": "他們的眼睛卻被阻止住了，以致認不出他來。",
-     "properNames": [],
-     "crossReference": "24:31若 20:14-20; 21:424:37"
-    },
-    {
-     "verse": 17,
-     "text": "耶穌對他們說：「你們走路，彼此談論的是些什麼事？」他們就站住，面帶愁容。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 18,
-     "text": "一個名叫克羅帕的，回答他說：「獨有你在耶路撒冷作客，不知道在那裏這幾天所發生的事嗎？」",
-     "properNames": [
-      "克羅帕",
-      "耶路撒冷"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "耶穌問他們說：「什麼事？」他們回答說：「就是有關納匝肋人耶穌的事。他本是一位先知，在天主及眾百姓前，行事說話都有權力。",
-     "properNames": [
-      "耶穌",
-      "納匝肋",
-      "耶穌"
-     ],
-     "crossReference": "瑪 2:23瑪 16:14宗 2:22; 7:22"
-    },
-    {
-     "verse": 20,
-     "text": "我們的司祭長及首領竟解送了他，判了他死罪，釘他在十字架上。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 21,
-     "text": "我們原指望他就是那要拯救以色列的。可是──此外還有：這些事發生到今天，已是第三天了。",
-     "properNames": [
-      "以色列"
-     ],
-     "crossReference": "1:54, 68; 2:38"
-    },
-    {
-     "verse": 22,
-     "text": "我們中有幾個婦女驚嚇了我們；她們清早到了墳墓那裏，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 23,
-     "text": "沒有看見他的遺體，回來說她們見了天使顯現，天使說他復活了。",
-     "properNames": [],
-     "crossReference": "24:9"
-    },
-    {
-     "verse": 24,
-     "text": "我們中也有幾個到過墳墓那裏，所遇見的事，如同婦女們所說的一樣，但是沒有看見他。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 25,
-     "text": "耶穌於是對他們說：「唉！無知的人哪！為信先知們所說的一切話，你們的心竟是這般遲鈍！",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 26,
-     "text": "默西亞不是必須受這些苦難，纔進入他的光榮嗎？",
-     "properNames": [
-      "默西亞"
-     ],
-     "crossReference": "9:22; 18:31宗 3:24伯前 1:11"
-    },
-    {
-     "verse": 27,
-     "text": "他於是從梅瑟及眾先知開始，把全部經書論及他的話，都給他們解釋了。",
-     "properNames": [
-      "梅瑟"
-     ],
-     "crossReference": "16:29, 31"
-    },
-    {
-     "verse": 28,
-     "text": "當他們臨近了他們要去的村莊時，耶穌裝作還要前行。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 29,
-     "text": "他們強留他說：「請同我們一起住下罷！因為快到晚上，天已垂暮了。」耶穌就進去，同他們住下。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 30,
-     "text": "當耶穌與他們坐下吃飯的時候，就拿起餅來，祝福了，擘開，遞給他們。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 31,
-     "text": "他們的眼睛開了，這纔認出耶穌來；但他卻由他們眼前隱沒了。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "宗 8:39"
-    },
-    {
-     "verse": 32,
-     "text": "他們就彼此說：「當他在路上與我們談話，給我們講解聖經的時候，我們的心不是火熱的嗎？」",
-     "properNames": [
-      "聖經"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 33,
-     "text": "他們遂即動身，返回耶路撒冷，遇見那十一門徒及他們一起的人，正聚在一起，",
-     "properNames": [
-      "耶路撒冷"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 34,
-     "text": "彼此談論說：「主真復活了，並顯現給西滿了！」",
-     "properNames": [
-      "西滿"
-     ],
-     "crossReference": "格前 15:5"
-    },
-    {
-     "verse": 35,
-     "text": "二人就把在路上的事，及在分餅時，他們怎樣認出了耶穌，述說了一遍。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 36,
-     "text": "他們正談論這些事的時候，耶穌立在他們中間，向他們說：「願你們平安！」",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 37,
-     "text": "眾人害怕起來，想是見了鬼神。",
-     "properNames": [],
-     "crossReference": "1:12; 24:16"
-    },
-    {
-     "verse": 38,
-     "text": "耶穌向他們說：「你們為什麼恐惶？為什麼心裏起了疑慮？",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 39,
-     "text": "你們看看我的手，我的腳，分明是我自己。你們摸摸我，應該知道：鬼神是沒有肉軀和骨頭的，如同你們看我，卻是有的。」",
-     "properNames": [],
-     "crossReference": "若一 1:1"
-    },
-    {
-     "verse": 40,
-     "text": "說了這話，就把手和腳伸給他們看。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 41,
-     "text": "他們由於歡喜，還是不敢信，只是驚訝；耶穌向他們說：「你們這裏有什麼吃的沒有？」",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 42,
-     "text": "他們便給了他一片烤魚。",
-     "properNames": [],
-     "crossReference": "多 12:19若 21:5若 21:9-10, 13"
-    },
-    {
-     "verse": 43,
-     "text": "他就接過來，當他們面前吃了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 44,
-     "text": "耶穌對他們說：「我以前還同你們在一起的時候，就對你們說過這話：諸凡梅瑟法律、先知並聖詠上指着我所記載的話，都必須應驗。」",
-     "properNames": [
-      "耶穌",
-      "梅瑟法律",
-      "先知",
-      "聖詠"
-     ],
-     "crossReference": "9:2224:25-27"
-    },
-    {
-     "verse": 45,
-     "text": "耶穌遂開啟他們的明悟，叫他們理解經書；",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "谷 4:13"
-    },
-    {
-     "verse": 46,
-     "text": "又向他們說：「經上曾這樣記載：默西亞必須受苦，第三天要從死者中復活；",
-     "properNames": [
-      "默西亞"
-     ],
-     "crossReference": "宗 10:40"
-    },
-    {
-     "verse": 47,
-     "text": "並且必須從耶路撒冷開始，因他的名向萬邦宣講悔改，以得罪之赦。",
-     "properNames": [
-      "耶路撒冷"
-     ],
-     "crossReference": "瑪 3:2; 28:19-20谷 16:15-16//宗 1:8"
-    },
-    {
-     "verse": 48,
-     "text": "你們就是這些事的見證人。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 49,
-     "text": "看，我要把我父所恩許的，遣發到你們身上；至於你們，你們應當留在這城中，直到佩戴上自高天而來的能力。」",
-     "properNames": [],
-     "crossReference": "//宗 1:4"
-    },
-    {
-     "verse": 50,
-     "text": "耶穌領他們出去，直到伯達尼附近，就舉手降福了他們。",
-     "properNames": [
-      "耶穌",
-      "伯達尼"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 51,
-     "text": "正降福他們的時候，就離開他們，被提升天去了。",
-     "properNames": [],
-     "crossReference": "9:51"
-    },
-    {
-     "verse": 52,
-     "text": "他們叩拜了他，皆大喜歡地返回了耶路撒冷，",
-     "properNames": [
-      "耶路撒冷"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 53,
-     "text": "常在聖殿裏稱謝天主。",
-     "properNames": [],
-     "crossReference": ""
-    }
-   ]
-  },
-  {
-   "lesson": 5,
-   "book": "1CO",
-   "latinChapter": 15,
-   "chineseChapter": 15,
-   "title": "格林多前書 15",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/61/15.html",
-   "sectionHeadings": [
-    "格林多前書 第十五章",
-    "基督復活是信仰的根基",
-    "基督復活與信友的關係",
-    "否認復活的後果",
-    "復活後的身體",
-    "基督戰勝了死亡"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 58,
-   "latinVerseCount": 58,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "弟兄們！我願意你們認清，我們先前給你們所傳報的福音，這福音你們已接受了，且在其上站穩了；",
-     "properNames": [],
-     "crossReference": "得前 2:13; 4:14"
-    },
-    {
-     "verse": 2,
-     "text": "假使你們照我給你們所傳報的話持守了福音，就必因這福音得救，否則，你們就白白地信了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 3,
-     "text": "我當日把我所領受而又傳授給你們的，其中首要的是：基督照經上記載的，為我們的罪死了，",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "11:2, 23路 1:1-3宗 2:23"
-    },
-    {
-     "verse": 4,
-     "text": "被埋葬了，且照經上記載的，第三天復活了，",
-     "properNames": [],
-     "crossReference": "瑪 28:10"
-    },
-    {
-     "verse": 5,
-     "text": "並且顯現給刻法，以後顯現給那十二位；",
-     "properNames": [
-      "刻法"
-     ],
-     "crossReference": "路 24:34"
-    },
-    {
-     "verse": 6,
-     "text": "此後，又一同顯現給五百多弟兄，其中多半到現在還活着，有些已經死了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 7,
-     "text": "隨後，顯現給雅各伯，以後，顯現給眾宗徒；",
-     "properNames": [
-      "雅各伯"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 8,
-     "text": "最後，也顯現了給我這個像流產兒的人。",
-     "properNames": [],
-     "crossReference": "宗 12:179:1羅 1:1"
-    },
-    {
-     "verse": 9,
-     "text": "我原是宗徒中最小的一個，不配稱為宗徒，因為我迫害過天主的教會。",
-     "properNames": [],
-     "crossReference": "弗 3:8弟前 1:15-16宗 8:3迦 1:13-14"
-    },
-    {
-     "verse": 10,
-     "text": "然而，因天主的恩寵，我成為今日的我；天主賜給我的恩寵沒有落空，我比他們眾人更勞碌；其實不是我，而是天主的恩寵偕同我。",
-     "properNames": [],
-     "crossReference": "格後 11:23f弟前 1:14"
-    },
-    {
-     "verse": 11,
-     "text": "總之，不拘是我，或是他們，我們都這樣傳了，你們也都這樣信了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 12,
-     "text": "我們既然傳報了基督已由死者中復活了，怎麼你們中還有人說：死人復活是沒有的事呢？",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "6:14"
-    },
-    {
-     "verse": 13,
-     "text": "假如死人復活是沒有的事，基督也就沒有復活；",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 14,
-     "text": "假如基督沒有復活，那麼，我們的宣講便是空的，你們的信仰也是空的。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "宗 25:19"
-    },
-    {
-     "verse": 15,
-     "text": "此外，如果死人真不復活，我們還被視為天主的假證人，因為我們相反天主作證，說天主使基督復活了，其實並沒有使他復活，",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "宗 1:8; 26:16"
-    },
-    {
-     "verse": 16,
-     "text": "因為如果死人不復活，基督也就沒有復活；",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "如果基督沒有復活，你們的信仰便是假的，你們還是在罪惡中。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "羅 4:24-25; 10:9"
-    },
-    {
-     "verse": 18,
-     "text": "那麼，那些在基督內死了的人，就喪亡了。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "如果我們只在今生寄望於基督，我們就是眾人中最可憐的了。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 20,
-     "text": "但是，基督從死者中實在復活了，做了死者的初果。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "羅 8:11哥 1:18得前 4:14"
-    },
-    {
-     "verse": 21,
-     "text": "因為死亡既因一人而來，死者的復活也因一人而來；",
-     "properNames": [],
-     "crossReference": "羅 5:12-21"
-    },
-    {
-     "verse": 22,
-     "text": "就如在亞當內，眾人都死了，照樣，在基督內，眾人都要復活；",
-     "properNames": [
-      "亞當",
-      "基督"
-     ],
-     "crossReference": "15:45-49德 25:33"
-    },
-    {
-     "verse": 23,
-     "text": "不過各人要依照自己的次第：首先是為初果的基督，然後是在基督再來時屬於基督的人，",
-     "properNames": [
-      "基督",
-      "基督",
-      "基督"
-     ],
-     "crossReference": "得前 4:16"
-    },
-    {
-     "verse": 24,
-     "text": "再後纔是結局；那時，基督將消滅一切率領者、一切掌權者和大能者，把自己的王權交於天主父。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "弗 1:22"
-    },
-    {
-     "verse": 25,
-     "text": "因為基督必須為王，直到把一切仇敵屈伏在他的腳下。",
-     "properNames": [
-      "基督"
-     ],
-     "crossReference": "詠 110:1"
-    },
-    {
-     "verse": 26,
-     "text": "最後被毀滅的仇敵便是死亡；",
-     "properNames": [],
-     "crossReference": "默 20:14; 21:4羅 6:9"
-    },
-    {
-     "verse": 27,
-     "text": "因為天主使萬物都屈伏在他的腳下。既然說萬物都已屈伏了，顯然那使萬物屈伏於他的不在其內。",
-     "properNames": [],
-     "crossReference": "詠 8:6斐 3:21"
-    },
-    {
-     "verse": 28,
-     "text": "萬物都屈伏於他以後，子自己也要屈伏於那使萬物屈服於自己的父，好叫天主成為萬物之中的萬有。",
-     "properNames": [],
-     "crossReference": "羅 9:5弗 4:6哥 3:11"
-    },
-    {
-     "verse": 29,
-     "text": "不然，那些代死人受洗的是作什麼呢？如果死人總不復活，為什麼還代他們受洗呢？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 30,
-     "text": "我們又為什麼時時冒險呢？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 31,
-     "text": "弟兄們，我指着我在我們的主基督耶穌內，對你們所有的榮耀，起誓說：我是天天冒死的。",
-     "properNames": [
-      "基督耶穌"
-     ],
-     "crossReference": "格後 4:10-12斐 1:26"
-    },
-    {
-     "verse": 32,
-     "text": "我若只憑人的動機，當日在厄弗所與野獸搏鬥，為我有什麼益處？如果死人不復活，「我們吃喝罷！明天就要死了。」",
-     "properNames": [
-      "厄弗所"
-     ],
-     "crossReference": "智 2:6格後 1:8依 22:13"
-    },
-    {
-     "verse": 33,
-     "text": "你們不可為人所誤：「交結惡友必敗壞善行。」你們當徹底醒悟，別再犯罪了。",
-     "properNames": [],
-     "crossReference": "路 12:19"
-    },
-    {
-     "verse": 34,
-     "text": "你們中有些人實在不認識天主了：我說這話是為叫你們羞愧。",
-     "properNames": [],
-     "crossReference": "14:38"
-    },
-    {
-     "verse": 35,
-     "text": "可是有人要說：死人將怎樣復活呢？他們將帶着什麼樣的身體回來呢？",
-     "properNames": [],
-     "crossReference": "迦 6:8"
-    },
-    {
-     "verse": 36,
-     "text": "糊塗人哪！你所播的種子若不先死了，決不得生出來；",
-     "properNames": [],
-     "crossReference": "若 12:24"
-    },
-    {
-     "verse": 37,
-     "text": "並且你所播種的，並不是那將要生出的形體，而是一顆赤裸的籽粒，譬如一顆麥粒，或者別的種粒；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 38,
-     "text": "但天主隨自己的心意給它一個形體，使每個種子各有各的本體。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 39,
-     "text": "不是所有的肉體都是同樣的肉體：人體是一樣，獸體又是一樣，鳥體另是一樣，魚體卻又另是一樣。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 40,
-     "text": "還有天上的物體和地上的物體：天上物體的華麗是一樣，地上物體的華麗又是一樣；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 41,
-     "text": "太陽的光輝是一樣，月亮的光輝又是一樣，星辰的光輝另是一樣；而且星辰與星辰的光輝又有分別。",
-     "properNames": [],
-     "crossReference": "達 12:3"
-    },
-    {
-     "verse": 42,
-     "text": "死人的復活也是這樣：播種的是可朽壞的，復活起來的是不可朽壞的；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 43,
-     "text": "播種的是可羞辱的，復活起來的是光榮的；播種的是軟弱的，復活起來的是強健的；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 44,
-     "text": "播種的是屬生靈的身體，復活起來的是屬神的身體；既有屬生靈的身體，也就有屬神的身體。",
-     "properNames": [],
-     "crossReference": "2:14-15格後 5:1"
-    },
-    {
-     "verse": 45,
-     "text": "經上也這樣記載說：『第一個人亞當成了生靈，』最後的亞當成了使人生活的神。",
-     "properNames": [
-      "亞當",
-      "亞當"
-     ],
-     "crossReference": "創 2:7"
-    },
-    {
-     "verse": 46,
-     "text": "但屬神的不是在先，而是屬生靈的，然後纔是屬神的。",
-     "properNames": [],
-     "crossReference": "15:20-28"
-    },
-    {
-     "verse": 47,
-     "text": "第一個人出於地屬於土，第二個人出於天。",
-     "properNames": [],
-     "crossReference": "達 7:13"
-    },
-    {
-     "verse": 48,
-     "text": "那屬於土的怎樣，凡屬於土的也怎樣；那屬於天上的怎樣，凡屬於天上的也怎樣。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 49,
-     "text": "我們怎樣帶了那屬於土的肖像，也要怎樣帶那屬於天上的肖像。",
-     "properNames": [],
-     "crossReference": "羅 8:29斐 3:21"
-    },
-    {
-     "verse": 50,
-     "text": "弟兄們，我告訴你們：肉和血不能承受天主的國，可朽壞的也不能承受不可朽壞的。",
-     "properNames": [],
-     "crossReference": "若 3:5-66:10"
-    },
-    {
-     "verse": 51,
-     "text": "看，我告訴你們一件奧秘的事：我們眾人不全死亡，但我們眾人卻全要改變，",
-     "properNames": [],
-     "crossReference": "得前 4:15-17"
-    },
-    {
-     "verse": 52,
-     "text": "這是在頃刻眨眼之間，在末次吹號筒時發生的。的確，號筒一響，死人必要復活，成為不朽的，我們也必要改變，",
-     "properNames": [],
-     "crossReference": "戶 10:3岳 2:1瑪 24:31"
-    },
-    {
-     "verse": 53,
-     "text": "因為這可朽壞的，必須穿上不可朽壞的；這可死的，必須穿上不可死的。",
-     "properNames": [],
-     "crossReference": "格後 5:1-5"
-    },
-    {
-     "verse": 54,
-     "text": "幾時這可朽壞的，穿上了不可朽壞的；這可死的，穿上了不可死的，那時就要應驗經上所記載的這句話：『在勝利中，死亡被吞滅了。』",
-     "properNames": [],
-     "crossReference": "依 25:8默 20:14"
-    },
-    {
-     "verse": 55,
-     "text": "『死亡！你的勝利在那裏？死亡！你的刺在那裏？』",
-     "properNames": [],
-     "crossReference": "歐 13:14"
-    },
-    {
-     "verse": 56,
-     "text": "死亡的刺就是罪過，罪過的權勢就是法律。",
-     "properNames": [],
-     "crossReference": "羅 7:8"
-    },
-    {
-     "verse": 57,
-     "text": "感謝天主賜給了我們因我們的主耶穌基督所獲得的勝利。",
-     "properNames": [
-      "耶穌基督"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 58,
-     "text": "所以，我親愛的弟兄，你們要堅定不移，在主的工程上該時常發憤勉力，因為你們知道，你們的勤勞在主內決不會落空。",
-     "properNames": [],
-     "crossReference": "若 16:33"
-    }
-   ]
-  },
-  {
-   "lesson": 6,
+   "lesson": 14,
    "book": "ROM",
    "latinChapter": 8,
    "chineseChapter": 8,
@@ -2127,7 +1299,7 @@
    ]
   },
   {
-   "lesson": 7,
+   "lesson": 15,
    "book": "JHN",
    "latinChapter": 15,
    "chineseChapter": 15,
@@ -2310,7 +1482,7 @@
    ]
   },
   {
-   "lesson": 8,
+   "lesson": 16,
    "book": "1CO",
    "latinChapter": 13,
    "chineseChapter": 13,
@@ -2409,7 +1581,7 @@
    ]
   },
   {
-   "lesson": 9,
+   "lesson": 17,
    "book": "MRK",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -2784,7 +1956,7 @@
    ]
   },
   {
-   "lesson": 10,
+   "lesson": 18,
    "book": "REV",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -2951,7 +2123,7 @@
    ]
   },
   {
-   "lesson": 11,
+   "lesson": 19,
    "book": "HEB",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -3056,7 +2228,7 @@
    ]
   },
   {
-   "lesson": 12,
+   "lesson": 20,
    "book": "1JN",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -3141,314 +2313,7 @@
    ]
   },
   {
-   "lesson": 13,
-   "book": "ACT",
-   "latinChapter": 17,
-   "chineseChapter": 17,
-   "title": "宗徒大事錄 17",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/58/17.html",
-   "sectionHeadings": [
-    "宗徒大事錄 第十七章",
-    "在得撒洛尼傳教",
-    "至貝洛雅",
-    "來到雅典",
-    "在阿勒約帕哥講道"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 34,
-   "latinVerseCount": 34,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "保祿和息拉經過安非頗里和阿頗羅尼雅，來到得撒洛尼，在那裏有猶太人的會堂。",
-     "properNames": [
-      "保祿",
-      "息拉",
-      "安非頗里",
-      "阿頗羅尼雅",
-      "得撒洛尼",
-      "猶太"
-     ],
-     "crossReference": "斐 4:16"
-    },
-    {
-     "verse": 2,
-     "text": "保祿照常例，到他們那裏，一連三個安息日，根據聖經和他們辯論，",
-     "properNames": [
-      "保祿"
-     ],
-     "crossReference": "13:5"
-    },
-    {
-     "verse": 3,
-     "text": "闡明指出默西亞必須受難，並從死者中復活；且說：「我向你們所傳報的耶穌，就是默西亞。」",
-     "properNames": [
-      "默西亞",
-      "耶穌",
-      "默西亞"
-     ],
-     "crossReference": "2:23; 18:5路 24:25-27, 46-47"
-    },
-    {
-     "verse": 4,
-     "text": "他們中有些人信服了，便與保祿和息拉聯合，還有許多敬畏天主的人和希臘人，以及不少的顯貴婦女。",
-     "properNames": [
-      "保祿",
-      "息拉",
-      "希臘"
-     ],
-     "crossReference": "10:2; 13:43"
-    },
-    {
-     "verse": 5,
-     "text": "但是，猶太人卻起了嫉妒的心，聚集了一些市井敗類，結夥成群，擾亂城市；又闖進雅松家裏，搜尋保祿和息拉，要拉他們到民眾那裏。",
-     "properNames": [
-      "猶太",
-      "雅松",
-      "保祿",
-      "息拉"
-     ],
-     "crossReference": "13:45羅 16:21得前 2:14"
-    },
-    {
-     "verse": 6,
-     "text": "但沒有搜到，就把雅松和幾個弟兄，拉到本城官長前，吶喊說：「這些擾亂天下的人，也到這裏來了，",
-     "properNames": [
-      "雅松"
-     ],
-     "crossReference": "24:5"
-    },
-    {
-     "verse": 7,
-     "text": "雅松竟收留了他們；這些人都背叛凱撒諭令行事，說另有一位國王，就是耶穌。」",
-     "properNames": [
-      "雅松",
-      "凱撒",
-      "耶穌"
-     ],
-     "crossReference": "路 23:2若 19:12-15"
-    },
-    {
-     "verse": 8,
-     "text": "他們使群眾和本城官長們聽了這事，都惶惶不安。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 9,
-     "text": "本城官長便由雅松及其餘的人取了保狀，便將他們釋放了。",
-     "properNames": [
-      "雅松"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "弟兄們便立即在夜間打發保祿和息拉去貝洛雅；他們到了那裏，就進了猶太人的會堂。",
-     "properNames": [
-      "保祿",
-      "息拉",
-      "貝洛雅",
-      "猶太"
-     ],
-     "crossReference": "13:5"
-    },
-    {
-     "verse": 11,
-     "text": "這裏的人比得撒洛尼人開明，接受這道，極其熱切，天天考究聖經，看這些事是否是真的。",
-     "properNames": [
-      "得撒洛尼"
-     ],
-     "crossReference": "若 5:39"
-    },
-    {
-     "verse": 12,
-     "text": "所以他們中有許多人信從了，還有許多希臘尊貴婦女，男子也不少。",
-     "properNames": [
-      "希臘"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 13,
-     "text": "可是，得撒洛尼的猶太人，一知道保祿在貝洛雅也傳開了天主的聖道，就到那裏煽動擾亂群眾。",
-     "properNames": [
-      "得撒洛尼",
-      "猶太",
-      "保祿",
-      "貝洛雅"
-     ],
-     "crossReference": "14:2得前 3:2"
-    },
-    {
-     "verse": 14,
-     "text": "弟兄們遂立即打發保祿往海邊去；息拉和弟茂德仍留在貝洛雅。",
-     "properNames": [
-      "保祿",
-      "息拉",
-      "弟茂德",
-      "貝洛雅"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 15,
-     "text": "送保祿的人領他一直到了雅典；他們領了保祿的命令，叫息拉和弟茂德趕快來到他那裏，以後就走了。",
-     "properNames": [
-      "保祿",
-      "雅典",
-      "保祿",
-      "息拉",
-      "弟茂德"
-     ],
-     "crossReference": "18:5"
-    },
-    {
-     "verse": 16,
-     "text": "保祿在雅典等候他們時，見城裏滿是偶像，心神很是悲憤。",
-     "properNames": [
-      "保祿",
-      "雅典"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "所以他就在會堂裏，同猶太人和敬畏天主的人辯論，每天也在街市上，同所遇到的人辯論。",
-     "properNames": [
-      "猶太"
-     ],
-     "crossReference": "10:2; 13:5"
-    },
-    {
-     "verse": 18,
-     "text": "有幾個伊壁鴆魯派和斯多噶派的哲士同他爭論，有的說：「這個饒舌多言的人想說甚麼？」有的說：「看來他是個外國鬼神的宣傳者」──因為保祿宣講耶穌及復活的福音。",
-     "properNames": [
-      "伊壁鴆魯派",
-      "斯多噶派",
-      "保祿",
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "他們遂帶保祿，領他到了阿勒約帕哥，說：「我們可以知道你所講的這新道理是甚麼嗎？",
-     "properNames": [
-      "保祿",
-      "阿勒約帕哥"
-     ],
-     "crossReference": "格前 1:22"
-    },
-    {
-     "verse": 20,
-     "text": "我們聽見你說了一些新奇的事，所以我們想知道這到底有甚麼意思。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 21,
-     "text": "原來所有的雅典人和僑居在那裏的外國人，不管其他的事，只是論談或探聽一些新奇的事。",
-     "properNames": [
-      "雅典"
-     ],
-     "crossReference": "弟後 3:7"
-    },
-    {
-     "verse": 22,
-     "text": "保祿遂即站在阿勒約帕哥當中說：「眾位雅典人，我看你們在各方面都更敬畏神明，",
-     "properNames": [
-      "保祿",
-      "阿勒約帕哥",
-      "雅典"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 23,
-     "text": "因為我行經各處，細看你們所敬之物，也見到一座祭壇，上面寫着「給未識之神。」現在，我就將你們所敬拜而不認識的這位，傳告給你們。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 24,
-     "text": "創造宇宙及其中萬物的天主，既是天地的主宰，就不住人手所建的殿宇，",
-     "properNames": [],
-     "crossReference": "14:15列上 8:27依 42:5"
-    },
-    {
-     "verse": 25,
-     "text": "也不受人手的侍候，好像需要甚麼似的，而是他將生命、呼吸和一切賞給了眾人。",
-     "properNames": [],
-     "crossReference": "7:48-50加下 7:23; 14:35詠 50:12"
-    },
-    {
-     "verse": 26,
-     "text": "他由一個人造了全人類，使他們住在全地面上，給他們立定了年限，和他們所居處的疆界；",
-     "properNames": [],
-     "crossReference": "創 10申 32:8"
-    },
-    {
-     "verse": 27,
-     "text": "如他們尋求天主，或者可以摸索而找到他；其實，他離我們每人並不遠，",
-     "properNames": [],
-     "crossReference": "申 4:29詠 145:18智 13:6依 55:6羅 1:19"
-    },
-    {
-     "verse": 28,
-     "text": "因為我們生活、行動、存在，都在他內，正如你們的某些詩人說的：「原來我們也是他的子孫。」",
-     "properNames": [],
-     "crossReference": "詠 104伯後 1:4"
-    },
-    {
-     "verse": 29,
-     "text": "我們既是天主的子孫，就不該想：神就像由人的藝術及思想所製的金銀石刻的東西一樣。",
-     "properNames": [],
-     "crossReference": "19:26依 40:18羅 1:22-23"
-    },
-    {
-     "verse": 30,
-     "text": "天主對那愚昧無知的時代，原不深究；如今卻傳諭各處的人都要悔改，",
-     "properNames": [],
-     "crossReference": "2:38路 24:47羅 3:25-26"
-    },
-    {
-     "verse": 31,
-     "text": "因為他已定了一個日期，要由他所立定的人，按正義審判天下，他為給眾人一個可信的憑據，就叫這人從死者中復活了。」",
-     "properNames": [],
-     "crossReference": "10:42"
-    },
-    {
-     "verse": 32,
-     "text": "他們一聽見死人復活，有的譏笑，有的卻說：「關於這事，我們後來再聽你罷！」",
-     "properNames": [],
-     "crossReference": "24:25"
-    },
-    {
-     "verse": 33,
-     "text": "這樣，保祿便從他們當中出去了。",
-     "properNames": [
-      "保祿"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 34,
-     "text": "可是，也有幾個人依附保祿而信從了，其中有阿勒約帕哥的官員狄約尼削，和一個名叫達瑪黎的婦人；同他們一起信從的，還有其他一些人。",
-     "properNames": [
-      "保祿",
-      "阿勒約帕哥",
-      "狄約尼削",
-      "達瑪黎"
-     ],
-     "crossReference": ""
-    }
-   ]
-  },
-  {
-   "lesson": 14,
+   "lesson": 21,
    "book": "MAT",
    "latinChapter": 5,
    "chineseChapter": 5,
@@ -3764,7 +2629,7 @@
    ]
   },
   {
-   "lesson": 15,
+   "lesson": 22,
    "book": "EPH",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -3933,7 +2798,7 @@
    ]
   },
   {
-   "lesson": 16,
+   "lesson": 23,
    "book": "ACT",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -4292,7 +3157,7 @@
    ]
   },
   {
-   "lesson": 17,
+   "lesson": 24,
    "book": "LUK",
    "latinChapter": 15,
    "chineseChapter": 15,
@@ -4514,299 +3379,7 @@
    ]
   },
   {
-   "lesson": 18,
-   "book": "MRK",
-   "latinChapter": 4,
-   "chineseChapter": 4,
-   "title": "馬爾谷福音 4",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/55/4.html",
-   "sectionHeadings": [
-    "天國的比喻",
-    "馬爾谷福音 第四章",
-    "撒種的比喻",
-    "門徒的責任",
-    "種子自長的比喻",
-    "芥子的比喻",
-    "平息風浪"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 41,
-   "latinVerseCount": 40,
-   "alignmentNote": "拉丁 40 節，中文 41 節，需逐節核對",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "耶穌又在海邊上開始施教，有大夥群眾聚集在他跟前，他祇得上了一隻船，在海上坐着，所有的群眾都在海邊地上。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "2:13路 5:1, 3"
-    },
-    {
-     "verse": 2,
-     "text": "他用比喻教訓他們許多事，在施教時，他向他們說：",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 3,
-     "text": "「你們聽：有個撒種的出去撒種。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 4,
-     "text": "他撒種的時候，有的落在路旁，飛鳥來把它吃了；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 5,
-     "text": "有的落在石頭地裏，那裏沒有多少土壤，即刻發了芽，因為所有的土壤不深，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 6,
-     "text": "太陽一出來，被曬焦了；又因為沒有根，就乾枯了；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 7,
-     "text": "有的落在荊棘中，荊棘長起來，把它窒息了，就沒有結實；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 8,
-     "text": "有的落在好地裏，就長大成熟，結了果實，有的結三十倍，有的六十倍，有的一百倍。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 9,
-     "text": "他又說：「有耳聽的，聽罷！」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "當耶穌獨自一人的時候，那些跟從他的人和十二門徒便問他這些比喻的意義。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "7:17"
-    },
-    {
-     "verse": 11,
-     "text": "耶穌對他們說：「天主國的奧義祇賞給了你們，但對那些外人，一切都用比喻，",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "羅 16:25哥 4:3, 5"
-    },
-    {
-     "verse": 12,
-     "text": "使他們看是看，卻看不見；聽是聽，卻聽不明白，免得他們回頭，而得赦免。」",
-     "properNames": [],
-     "crossReference": "依 6:9-10"
-    },
-    {
-     "verse": 13,
-     "text": "耶穌對他們說：「你們不明白這個比喻，又怎能明白其他的一切比喻呢？",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "若 12:16"
-    },
-    {
-     "verse": 14,
-     "text": "那撒種的人撒的，是所講的「話」。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 15,
-     "text": "那撒在路旁的「話」是指人聽了後，撒殫立時來，把撒在他們心裏的「話」奪了去。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 16,
-     "text": "同樣，那撒在石頭地裏的，是指人聽了這「話」後，立刻欣然接受；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "但他們心裏沒有根，不能持久，及至為了這「話」發生艱難或迫害，立刻就跌倒了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 18,
-     "text": "還有那撒在荊棘中的，是指人聽了這「話」後，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "世俗的焦慮，財富的迷惑，以及其他的貪慾進來，把「話」蒙住了，結不出果實。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 20,
-     "text": "那撒在好地裏的，是指人聽了這「話」，就接受了，並結了果實，有的三十倍，有的六十倍，有的一百倍。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 21,
-     "text": "耶穌又向他們說：「人拿燈來，豈是為放在斗底或床下嗎？不是為放在燈台上嗎？",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "//瑪 5:15//路 11:33"
-    },
-    {
-     "verse": 22,
-     "text": "因為沒有什麼隱藏的事，不是為顯露出來的；也沒有隱密的事，不是為彰明出來的。",
-     "properNames": [],
-     "crossReference": "//瑪 10:26//路 12:2"
-    },
-    {
-     "verse": 23,
-     "text": "誰若有耳聽，聽罷！」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 24,
-     "text": "耶穌又向他們說：「要留心你們所聽的：你們用什麼尺度量給人，也要用什麼尺度量給你們，且要多加給你們，",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "//路 6:38//瑪 7:2"
-    },
-    {
-     "verse": 25,
-     "text": "因為凡有的，還要給他；凡沒有的，連他所有的，也要從他奪去。」",
-     "properNames": [],
-     "crossReference": "//瑪 13:12//路 8:18; 19:26"
-    },
-    {
-     "verse": 26,
-     "text": "他又說：「天主的國好比一個人把種子撒在地裏，",
-     "properNames": [],
-     "crossReference": "雅5:7"
-    },
-    {
-     "verse": 27,
-     "text": "他黑夜白天，或睡或起，那種子發芽生長，至於怎樣，他卻不知道，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 28,
-     "text": "因為土地自然生長果實：先發苗，後吐穗，最後穗上滿了麥粒。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 29,
-     "text": "當果實成熟的時候，便立刻派人以鎌刀收割，因為到了收穫的時期。」",
-     "properNames": [],
-     "crossReference": "岳 4:13默 14:15-16"
-    },
-    {
-     "verse": 30,
-     "text": "他又說：「我們以什麼比擬天主的國呢？或用什麼比喻來形容它呢？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 31,
-     "text": "它好像一粒芥子，種在地裏的時候，比地上一切的種子都小；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 32,
-     "text": "當下種之後，生長起來，比一切蔬菜都大；並且長出大枝，以致天上的飛鳥能棲息在它的蔭下。",
-     "properNames": [],
-     "crossReference": "達 4:9, 18"
-    },
-    {
-     "verse": 33,
-     "text": "耶穌用許多這樣的比喻，按照他們所能聽懂的，給他們講道。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "//瑪 13:34-35"
-    },
-    {
-     "verse": 34,
-     "text": "若不用比喻，他就不給他們講什麼，但私下裏卻給自己的門徒解釋一切。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 35,
-     "text": "在當天晚上，耶穌對門徒說：「我們渡海到對岸去罷！」",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 36,
-     "text": "他們遂離開群眾，就照他在船上的原狀，帶他走了；與他一起的還有別的小船。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 37,
-     "text": "忽然，狂風大作，波浪打進船內，以致小船已滿了水。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 38,
-     "text": "耶穌卻在船尾依枕而睡。他們叫醒他，給他說：「師傅！我們要喪亡了，你不管嗎？」",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 39,
-     "text": "耶穌醒來，叱責了風，並向海說：「不要作聲，平定了罷！」風就停止了，遂大為平靜。",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 40,
-     "text": "耶穌對他們說：「為什麼你們這樣膽怯？你們怎麼還沒有信德呢？」",
-     "properNames": [
-      "耶穌"
-     ],
-     "crossReference": "瑪 8:10"
-    },
-    {
-     "verse": 41,
-     "text": "他們非常驚懼，彼此說：「這人到底是誰？連風和海也聽從他！」",
-     "properNames": [],
-     "crossReference": "1:27"
-    }
-   ]
-  },
-  {
-   "lesson": 19,
+   "lesson": 25,
    "book": "PHP",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -5026,7 +3599,7 @@
    ]
   },
   {
-   "lesson": 20,
+   "lesson": 26,
    "book": "MAT",
    "latinChapter": 6,
    "chineseChapter": 6,
@@ -5253,7 +3826,7 @@
    ]
   },
   {
-   "lesson": 21,
+   "lesson": 27,
    "book": "ROM",
    "latinChapter": 12,
    "chineseChapter": 12,
@@ -5403,7 +3976,7 @@
    ]
   },
   {
-   "lesson": 22,
+   "lesson": 28,
    "book": "JAS",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -5594,7 +4167,7 @@
    ]
   },
   {
-   "lesson": 23,
+   "lesson": 29,
    "book": "1PE",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -5771,7 +4344,7 @@
    ]
   },
   {
-   "lesson": 24,
+   "lesson": 30,
    "book": "GAL",
    "latinChapter": 5,
    "chineseChapter": 5,
@@ -5959,195 +4532,7 @@
    ]
   },
   {
-   "lesson": 25,
-   "book": "REV",
-   "latinChapter": 21,
-   "chineseChapter": 21,
-   "title": "默示錄 21",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/82/21.html",
-   "sectionHeadings": [
-    "若望默示錄 第二十一章",
-    "新天新地",
-    "新耶路撒冷"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 27,
-   "latinVerseCount": 27,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "隨後，我看見了一個新天新地，因為先前的天與先前的地已不見了，海也沒有了。",
-     "properNames": [],
-     "crossReference": "依 65:17伯後 3:13約 7:12羅 8:19-23"
-    },
-    {
-     "verse": 2,
-     "text": "我看見那新耶路撒冷聖城，從天上由天主那裏降下，就如一位裝飾好迎接自己丈夫的新娘。",
-     "properNames": [
-      "耶路撒冷"
-     ],
-     "crossReference": "19:7-8"
-    },
-    {
-     "verse": 3,
-     "text": "我聽見由寶座那裏有一巨大聲音說：「這就是天主與人同在的帳幕，他要同他們住在一起；他們要作他的人民，他親自要『與他們同在』，作他們的天主；」",
-     "properNames": [],
-     "crossReference": "7:15-17則 37:27依 8:8"
-    },
-    {
-     "verse": 4,
-     "text": "他要拭去他們眼上的一切淚痕；以後再也沒有死亡，再也沒有悲傷，沒有哀號，沒有苦楚，因為先前的都已過去了。」",
-     "properNames": [],
-     "crossReference": "依 25:8; 35:10"
-    },
-    {
-     "verse": 5,
-     "text": "那位坐在寶座上的說：「看，我已更新了一切。」又說：「你寫下來！因為這些話都是可信而真實的。」",
-     "properNames": [],
-     "crossReference": "格後 5:17達 8:26"
-    },
-    {
-     "verse": 6,
-     "text": "他又給我說：「已完成了！我是『阿耳法』和『敖默加』，元始和終末。我要把生命的水白白地賜給口渴的人喝。",
-     "properNames": [],
-     "crossReference": "1:8; 22:17依 55:1"
-    },
-    {
-     "verse": 7,
-     "text": "勝利者必要承受這些福分；我要作他的天主，他要作我的兒子。",
-     "properNames": [],
-     "crossReference": "撒下 7:14"
-    },
-    {
-     "verse": 8,
-     "text": "可是，為那些怯懦的、失信的、可恥的、殺人的、姦淫的、行邪術的、拜偶像的，以及一切撒謊的人，他們的地方是在烈火與硫磺燃燒着的坑中：這就是若望默示錄 第二次死亡。」",
-     "properNames": [],
-     "crossReference": "22:15羅 1:29"
-    },
-    {
-     "verse": 9,
-     "text": "那拿着七個滿盛最後七種災禍盂的七位天使，其中有一位來告訴我說：「你來！我要把羔羊的淨配新娘指給你看。」",
-     "properNames": [],
-     "crossReference": "格後 11:2"
-    },
-    {
-     "verse": 10,
-     "text": "天使就使我神魂超拔，把我帶到一座又大又高的山上，將那從天上，由天主那裏降下的聖城耶路撒冷，指給我看。",
-     "properNames": [
-      "耶路撒冷"
-     ],
-     "crossReference": "則 40:221:2希 11:10"
-    },
-    {
-     "verse": 11,
-     "text": "這聖城具有天主的光榮；城的光輝，好似極貴重的寶石，像水晶那麼明亮的蒼玉；",
-     "properNames": [],
-     "crossReference": "依 60:1-2"
-    },
-    {
-     "verse": 12,
-     "text": "城牆高而且大，有十二座門，守門的有十二位天使，門上寫着以色列子民十二支派的名字。",
-     "properNames": [
-      "以色列"
-     ],
-     "crossReference": "7:1-8則 48:31-35"
-    },
-    {
-     "verse": 13,
-     "text": "東面三門，北面三門，南面三門，西面三門。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 14,
-     "text": "城牆有十二座基石，上面刻着羔羊的十二位宗徒的十二個名字。",
-     "properNames": [],
-     "crossReference": "弗 2:20"
-    },
-    {
-     "verse": 15,
-     "text": "同我談話的那位天使拿着金蘆葦測量尺，要測量那城、城門和城牆。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 16,
-     "text": "城是四方形的，長寬相同。天使用蘆葦測量尺測量了那城，共計一萬二千『斯塔狄』，長、寬、高都相等；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "又測量了城牆，有一百四十四肘；天使用的，是人的尺寸。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 18,
-     "text": "城牆是用水蒼玉建造的，城是純金的，好像明淨的玻璃。",
-     "properNames": [],
-     "crossReference": "依 54:11-12"
-    },
-    {
-     "verse": 19,
-     "text": "城牆的基石，是用各種寶石裝飾的：第一座基石是水蒼玉，第二座是藍玉，第三座是玉髓，第四座是翡翠，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 20,
-     "text": "第五座是赤瑪瑙，第六座是斑瑪瑙，第七座是橄欖石，第八座是綠柱石，第九座是黃玉，第十座是綠玉，第十一座是紫玉，第十二座是紫晶。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 21,
-     "text": "十二座門是十二種珍珠，每一座門是由一種珍珠造的；城中的街道是純金的，好似透明的玻璃。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 22,
-     "text": "在城內我沒有看見聖殿，因為上主全能的天主和羔羊就是她的聖殿。",
-     "properNames": [],
-     "crossReference": "若 2:19-21"
-    },
-    {
-     "verse": 23,
-     "text": "那城也不需要太陽和月亮光照，因為有天主的光榮照耀她；羔羊就是她的明燈。",
-     "properNames": [],
-     "crossReference": "依 60:1-2, 19-20格後 3:18"
-    },
-    {
-     "verse": 24,
-     "text": "萬民都要藉着她的光行走，世上的君王也要把自己的光榮帶到她內。",
-     "properNames": [],
-     "crossReference": "依 60:3"
-    },
-    {
-     "verse": 25,
-     "text": "她的門白日總不關閉，因為那裏已沒有黑夜。",
-     "properNames": [],
-     "crossReference": "依 60:11"
-    },
-    {
-     "verse": 26,
-     "text": "萬民都要把自己的光榮和財富運到她內。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 27,
-     "text": "凡不潔淨、行可恥的事及撒謊的，絕對不得進入她內；只有那些記載在羔羊生命冊上的，纔將得進入。",
-     "properNames": [],
-     "crossReference": "依 35:8; 52:1匝 13:1-2伯後 3:13"
-    }
-   ]
-  },
-  {
-   "lesson": 26,
+   "lesson": 31,
    "book": "PSA",
    "latinChapter": 50,
    "chineseChapter": 51,
@@ -6300,7 +4685,7 @@
    ]
   },
   {
-   "lesson": 27,
+   "lesson": 32,
    "book": "EZK",
    "latinChapter": 37,
    "chineseChapter": 37,
@@ -6515,7 +4900,7 @@
    ]
   },
   {
-   "lesson": 28,
+   "lesson": 33,
    "book": "DEU",
    "latinChapter": 6,
    "chineseChapter": 6,
@@ -6699,7 +5084,7 @@
    ]
   },
   {
-   "lesson": 29,
+   "lesson": 34,
    "book": "PSA",
    "latinChapter": 22,
    "chineseChapter": 23,
@@ -6756,194 +5141,7 @@
    ]
   },
   {
-   "lesson": 30,
-   "book": "EXO",
-   "latinChapter": 20,
-   "chineseChapter": 20,
-   "title": "出谷紀 20",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/4/20.html",
-   "sectionHeadings": [
-    "出谷紀 第二十章",
-    "頒布十誡",
-    "指示修建祭壇"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 26,
-   "latinVerseCount": 26,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "天主訓示以下這一切話說：",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 2,
-     "text": "「我是上主你的天主，是我領你出了埃及地、奴隸之所。",
-     "properNames": [
-      "埃及"
-     ],
-     "crossReference": "格前 8:6"
-    },
-    {
-     "verse": 3,
-     "text": "除我之外，你不可有別的神。",
-     "properNames": [],
-     "crossReference": "申 4:35; 6:4"
-    },
-    {
-     "verse": 4,
-     "text": "不可為你製造任何彷彿天上、或地上、或地下水中之物的雕像。",
-     "properNames": [],
-     "crossReference": "肋 19:4歐 8:6"
-    },
-    {
-     "verse": 5,
-     "text": "不可叩拜這些像，也不可敬奉，因為我，上主，你的天主是忌邪的天主；凡惱恨我的，我要追討他們的罪，從父親直到兒子，甚至三代四代的子孫。",
-     "properNames": [],
-     "crossReference": "23:24; 34:7申 4:24鴻 1:2"
-    },
-    {
-     "verse": 6,
-     "text": "愛慕我和遵守我誡命的，我要對他們施仁慈，直到他們的千代子孫。",
-     "properNames": [],
-     "crossReference": "詠 103:17; 109:14"
-    },
-    {
-     "verse": 7,
-     "text": "凡不可妄呼上主你天主的名；因為凡妄呼他名的人，上主決不讓他們免受懲罰。",
-     "properNames": [],
-     "crossReference": "肋 19:12匝 5:3瑪 5:33"
-    },
-    {
-     "verse": 8,
-     "text": "應記住安息日，守為聖日。",
-     "properNames": [],
-     "crossReference": "23:12; 31:12-17; 34:21; 35:1-3肋 19:3; 23:3戶 15:32-36"
-    },
-    {
-     "verse": 9,
-     "text": "六天應該勞作，作你一切的事；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "但第七天是為恭敬上主你的天主當守的安息日；你自己、連你的兒女、你的僕婢、你的牲口，以及在你中間居住的外方人，都不可作任何工作。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 11,
-     "text": "因為上主在六天內造了天地、海洋和其中一切，但第七天休息了，因此上主祝福了安息日，也定為聖日。",
-     "properNames": [],
-     "crossReference": "創 2:2默 10:6"
-    },
-    {
-     "verse": 12,
-     "text": "應孝敬你的父親和你的母親，好使你在上主你的天主賜給你的地方，延年益壽。",
-     "properNames": [],
-     "crossReference": "肋 19:3 弗 6:2-3 箴 19:26; 20:20"
-    },
-    {
-     "verse": 13,
-     "text": "不可殺人。",
-     "properNames": [],
-     "crossReference": "羅 13:9 雅 2:11"
-    },
-    {
-     "verse": 14,
-     "text": "不可姦淫。",
-     "properNames": [],
-     "crossReference": "瑪 5:27"
-    },
-    {
-     "verse": 15,
-     "text": "不可偷盜。",
-     "properNames": [],
-     "crossReference": "肋 19:11"
-    },
-    {
-     "verse": 16,
-     "text": "不可作假見證，害你的近人。",
-     "properNames": [],
-     "crossReference": "肋 19:12"
-    },
-    {
-     "verse": 17,
-     "text": "不可貪你近人的房舍。不可貪戀你近人的妻子、僕人、婢女、牛驢及你近人的一切。",
-     "properNames": [],
-     "crossReference": "約 31:1 米 2:2"
-    },
-    {
-     "verse": 18,
-     "text": "眾百姓看見打雷、打閃、吹角、冒煙的山，都戰兢害怕，遠遠站着，",
-     "properNames": [],
-     "crossReference": "申 5:23-31"
-    },
-    {
-     "verse": 19,
-     "text": "對梅瑟說：「你同我們說話罷！我們定要聽從，不要天主同我們說話，免得我們死亡。」",
-     "properNames": [
-      "梅瑟"
-     ],
-     "crossReference": "希 12:19"
-    },
-    {
-     "verse": 20,
-     "text": "梅瑟回答百姓說：「不要害怕！因為天主降臨是為試探你們，使你們在他面前常懷敬畏之情，不致犯罪。」",
-     "properNames": [
-      "梅瑟"
-     ],
-     "crossReference": "申 8:2"
-    },
-    {
-     "verse": 21,
-     "text": "百姓遠遠站着，梅瑟卻走近天主所在的濃雲中。",
-     "properNames": [
-      "梅瑟"
-     ],
-     "crossReference": "德 45:5"
-    },
-    {
-     "verse": 22,
-     "text": "上主向梅瑟說：「你這樣訓示以色列子民說：你們親自見過我從天上同你們說了話。",
-     "properNames": [
-      "梅瑟",
-      "以色列"
-     ],
-     "crossReference": "德 45:6"
-    },
-    {
-     "verse": 23,
-     "text": "為此，你們決不可製造金銀神像，同我放在一起；你們萬不可做。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 24,
-     "text": "你應用土為我築一祭壇，在上面祭獻你的全燔祭與和平祭，以及你的牛羊；凡在我叫你稱頌我名的地方，我必到你那裏祝福你。",
-     "properNames": [],
-     "crossReference": "肋 3:1; 17:1-9"
-    },
-    {
-     "verse": 25,
-     "text": "你若用石頭為我築一祭壇，不可用打成方塊的石頭建築，因為在石頭上動用了你的刀鑿，就把石頭褻瀆了。",
-     "properNames": [],
-     "crossReference": "申 27:5-6蘇 8:31加上 4:47"
-    },
-    {
-     "verse": 26,
-     "text": "你不可沿着台階登我的祭壇，免得暴露你的裸體。",
-     "properNames": [],
-     "crossReference": "28:42"
-    }
-   ]
-  },
-  {
-   "lesson": 31,
+   "lesson": 35,
    "book": "GEN",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -7148,78 +5346,7 @@
    ]
   },
   {
-   "lesson": 32,
-   "book": "PSA",
-   "latinChapter": 129,
-   "chineseChapter": 130,
-   "title": "聖詠 129",
-   "note": "希伯來編號 130",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/26/130.html",
-   "sectionHeadings": [
-    "聖詠集 第一三O篇（129）",
-    "由深淵呼主吟"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 8,
-   "latinVerseCount": 8,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "登聖殿歌。上主，我由深淵向你呼號，",
-     "properNames": [],
-     "crossReference": "5:2-3; 18:5; 55:2-3; 69納 2:3"
-    },
-    {
-     "verse": 2,
-     "text": "我主，求你俯聽我的呼號，求你側耳俯聽我的哀禱！",
-     "properNames": [],
-     "crossReference": "哀 3:55-56編下 6:40; 7:15厄下 1:6"
-    },
-    {
-     "verse": 3,
-     "text": "上主，你若細察我的罪辜，我主，有誰還能站立得住？",
-     "properNames": [],
-     "crossReference": "約 9:2鴻 1:6"
-    },
-    {
-     "verse": 4,
-     "text": "可是，你以寬恕為懷，令人對你起敬起愛。",
-     "properNames": [],
-     "crossReference": "出 34:7列上 8:39-40米 7:18"
-    },
-    {
-     "verse": 5,
-     "text": "我仰賴上主，我靈期待他的聖言；",
-     "properNames": [],
-     "crossReference": "56:5; 119:81"
-    },
-    {
-     "verse": 6,
-     "text": "我靈等候我主，切於更夫的待旦。",
-     "properNames": [],
-     "crossReference": "依 21:11; 26:9"
-    },
-    {
-     "verse": 7,
-     "text": "請以色列仰賴上主，應切於更夫待旦，因為上主富於仁慈，他必定慷慨救援。",
-     "properNames": [
-      "以色列"
-     ],
-     "crossReference": "68:21; 86:15; 100:5依 30:18"
-    },
-    {
-     "verse": 8,
-     "text": "他必要拯救以色列人，脫離一切所有的罪根。",
-     "properNames": [
-      "以色列"
-     ],
-     "crossReference": "25:22瑪 1:21"
-    }
-   ]
-  },
-  {
-   "lesson": 33,
+   "lesson": 36,
    "book": "ISA",
    "latinChapter": 6,
    "chineseChapter": 6,
@@ -7318,7 +5445,7 @@
    ]
   },
   {
-   "lesson": 34,
+   "lesson": 37,
    "book": "GEN",
    "latinChapter": 22,
    "chineseChapter": 22,
@@ -7547,7 +5674,7 @@
    ]
   },
   {
-   "lesson": 35,
+   "lesson": 38,
    "book": "ISA",
    "latinChapter": 53,
    "chineseChapter": 53,
@@ -7637,175 +5764,7 @@
    ]
   },
   {
-   "lesson": 36,
-   "book": "JDT",
-   "latinChapter": 13,
-   "chineseChapter": 13,
-   "title": "友弟德傳 13",
-   "note": "次經／第二正典",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/20/13.html",
-   "sectionHeadings": [
-    "友弟德傳 第十三章",
-    "敖羅斐乃頭斷醉鄉",
-    "友弟德凱旋回城"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 20,
-   "latinVerseCount": 31,
-   "alignmentNote": "拉丁 31 節，中文 20 節，需逐節核對",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "夜已深了，他的僕役都迅速離去，巴哥阿從外面把帳幕關好，又示意叫侍從離開主人面前；由於宴飲時間過長，人都感到疲乏，就各自上床睡了。",
-     "properNames": [
-      "巴哥阿"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 2,
-     "text": "此時，在帳幕內只有友弟德，和泥醉橫臥在床上的敖羅斐乃。",
-     "properNames": [
-      "友弟德",
-      "敖羅斐乃"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 3,
-     "text": "友弟德遂吩咐自己的婢女，要她像平日一樣，在寢室外等候她出來，因為她說自己要出去祈禱；且也對巴哥阿這樣說了。",
-     "properNames": [
-      "友弟德",
-      "巴哥阿"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 4,
-     "text": "此時，所有的人都走了，不論大小，沒有一個留在寢室內。友弟德就站在他的床邊，心裏說：「上主，全能的天主！求你在此時，眷顧我手要行的工作，為顯揚耶路撒冷！",
-     "properNames": [
-      "友弟德",
-      "耶路撒冷"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 5,
-     "text": "因為如今正是救助你家業的時候，請玉成我的計劃，消滅那起來攻擊我們的敵人！」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 6,
-     "text": "她走到靠敖羅斐乃頭部的床柱前，由上面取下了他的短劍，",
-     "properNames": [
-      "敖羅斐乃"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 7,
-     "text": "再走近床前，抓住他的頭髮說：「上主，以色列的天主，求你今天賜我力量！」",
-     "properNames": [
-      "以色列"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 8,
-     "text": "遂用盡氣力，在他頸上砍了兩下，割下他的頭顱，",
-     "properNames": [],
-     "crossReference": "民 4:21"
-    },
-    {
-     "verse": 9,
-     "text": "把他的屍首從床上滾下，由柱上卸下帳幔，即刻走出，將敖羅斐乃的頭，交給自己的使女；",
-     "properNames": [
-      "敖羅斐乃"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "使女把頭放進食袋裏。然後二人一起，照習慣出外祈禱去了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 11,
-     "text": "友弟德從遠處向守門的人說：「開門！開門啊！天主，我們的天主，與我們同在，他今日所作的，再次證明他在以色列中的能力，和處置敵人的威力。」",
-     "properNames": [
-      "友弟德",
-      "以色列"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 12,
-     "text": "城裏的人，一聽見她的聲音，就趕快下來，到城門口，召集了城中的長老。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 13,
-     "text": "於是老幼大小一齊都跑來，由於她回來實在出乎他們意料之外。遂開門迎接她們，點起明亮的火把，將二人圍起來。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 14,
-     "text": "友弟德大聲對他們說：「讚美天主！讚美，讚美天主！他不但沒有從以色列家收回他的仁慈，今夜反藉着我的手，粉碎了我們的敵人。」",
-     "properNames": [
-      "友弟德",
-      "以色列"
-     ],
-     "crossReference": "出 15:1-2詠 48:7-11; 68; 98:1-3"
-    },
-    {
-     "verse": 15,
-     "text": "遂由袋裏取出一個人頭來，指着對他們說：「看，這就是亞述軍隊的總司令敖羅斐乃的頭。看！這就是他醉後睡的帳幔！上主藉着一個婦人的手，擊殺了他。",
-     "properNames": [
-      "亞述",
-      "敖羅斐乃"
-     ],
-     "crossReference": "14:18"
-    },
-    {
-     "verse": 16,
-     "text": "上主永在！他在我行的路上保護了我，因為我的容貌迷惑了他，叫他趨於喪亡；他未曾與我犯罪，玷污羞辱我。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "民眾聽了，不勝驚奇，都俯伏在地，朝拜天主，同聲說道：「今日使你民族的敵人化為烏有的，我們的天主啊！你是應受讚美的！」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 18,
-     "text": "敖齊雅對她說：「我女！全世界婦女中，你分外應受至高者天主的祝福！創造天地的上主，領你割取我們的敵人統帥頭顱的天主，應受讚美！",
-     "properNames": [
-      "敖齊雅"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "在永遠記得天主能力的人心中，不會忘記你的信心。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 20,
-     "text": "你不忍見我們民族所受的屈辱，竟不顧惜你的性命，出去挽救我們的危亡，在我們的天主面前，履行正道；希望天主永遠使你獲得光榮，賜與你幸福！」民眾答說：「但願如此！但願如此！」",
-     "properNames": [],
-     "crossReference": ""
-    }
-   ]
-  },
-  {
-   "lesson": 37,
+   "lesson": 39,
    "book": "EXO",
    "latinChapter": 3,
    "chineseChapter": 3,
@@ -8032,190 +5991,7 @@
    ]
   },
   {
-   "lesson": 38,
-   "book": "GEN",
-   "latinChapter": 3,
-   "chineseChapter": 3,
-   "title": "創世紀 3",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/3/3.html",
-   "sectionHeadings": [
-    "創世紀 第三章",
-    "原祖違命",
-    "處罰與預許",
-    "被逐出樂園"
-   ],
-   "verseOrderNote": "",
-   "verseCount": 24,
-   "latinVerseCount": 24,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "在上主天主所造的一切野獸中，蛇是最狡猾的。蛇對女人說：「天主真說了，你們不可吃樂園中任何樹上的果子嗎？」",
-     "properNames": [],
-     "crossReference": "智 2:24德 25:33若 8:44羅 5:12-21格後 11:3默 12:9; 20:2"
-    },
-    {
-     "verse": 2,
-     "text": "女人對蛇說：「樂園中樹上的果子，我們都可吃；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 3,
-     "text": "只有樂園中央那棵樹上的果子，天主說過，你們不可以吃，也不可摸，免得死亡。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 4,
-     "text": "蛇對女人說：「你們決不會死！",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 5,
-     "text": "因為天主知道，你們那天吃了這果子，你們的眼就會開了，將如同天主一樣知道善惡。」",
-     "properNames": [],
-     "crossReference": "2:17; 3:22依 14:14"
-    },
-    {
-     "verse": 6,
-     "text": "女人看那棵果樹實在好吃好看，令人羨慕，且能增加智慧，遂摘下一個果子吃了，又給了她的男人一個，他也吃了。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 7,
-     "text": "於是二人的眼立即開了，發覺自己赤身露體，遂用無花果樹葉，編了個裙子圍身。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 8,
-     "text": "當亞當和他的妻子聽見了上主天主趁晚涼在樂園中散步的聲音，就躲藏在樂園的樹林中，怕見上主天主的面。",
-     "properNames": [
-      "亞當"
-     ],
-     "crossReference": "撒下 5:24列上 19:13約 13:16"
-    },
-    {
-     "verse": 9,
-     "text": "上主天主呼喚亞當對他說：「你在那裏？」",
-     "properNames": [
-      "亞當"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "他答說：「我在樂園中聽到了你的聲音，就害怕起來，因為我赤身露體，遂躲藏了。」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 11,
-     "text": "天主說：「誰告訴了你，赤身露體？莫非你吃了我禁止你吃的果子？」",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 12,
-     "text": "亞當說：「是你給我作伴的那個女人給了我那樹上的果子，我才吃了。」",
-     "properNames": [
-      "亞當"
-     ],
-     "crossReference": "列上 21:25弟前 2:14"
-    },
-    {
-     "verse": 13,
-     "text": "上主天主遂對女人說：「你為什麼作了這事？」女人答說：「是蛇哄騙了我，我才吃了。」",
-     "properNames": [],
-     "crossReference": "羅 7:11格後 11:3"
-    },
-    {
-     "verse": 14,
-     "text": "上主天主對蛇說：「因你做了這事，你在一切畜牲和野獸中，是可咒罵的；你要用肚子爬行，畢生日日吃土。",
-     "properNames": [],
-     "crossReference": "依 65:25"
-    },
-    {
-     "verse": 15,
-     "text": "我要把仇恨放在你和女人，你的後裔和她的後裔之間，她的後裔要踏碎你的頭顱，你要傷害他的腳跟。」",
-     "properNames": [],
-     "crossReference": "依 9:5羅 16:20若一 3:8默 12:17"
-    },
-    {
-     "verse": 16,
-     "text": "後對女人說：「我要增加你懷孕的苦楚，在痛苦中生子；你要依戀你的丈夫，也要受他的管轄。」",
-     "properNames": [],
-     "crossReference": "弟前 2:11-12"
-    },
-    {
-     "verse": 17,
-     "text": "後對亞當說：「因為你聽了你妻子的話，吃了我禁止你吃的果子，為了你的緣故，地成了可咒罵的；你一生日日勞苦才能得到吃食。",
-     "properNames": [
-      "亞當"
-     ],
-     "crossReference": "約 5:7詠 104:14訓 1:13羅 5:12; 8:20希 6:8"
-    },
-    {
-     "verse": 18,
-     "text": "地要給你生出荊棘和蒺藜，你要吃田間的蔬菜；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "你必須汗流滿面，才有飯吃，直到你歸於土中，因為你是由土來的；你既是灰土，你還要歸於灰土。」",
-     "properNames": [],
-     "crossReference": "2:7約 1:21; 34:15詠 90:3; 104:29訓 3:20; 12:7智 15:8德 16:31得後 3:12"
-    },
-    {
-     "verse": 20,
-     "text": "亞當給自己的妻子起名叫厄娃，因為她是眾生的母親。",
-     "properNames": [
-      "亞當",
-      "厄娃"
-     ],
-     "crossReference": "羅 5:12"
-    },
-    {
-     "verse": 21,
-     "text": "上主天主為亞當和他的妻子做了件皮衣，給他們穿上；",
-     "properNames": [
-      "亞當"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 22,
-     "text": "然後上主天主說：「看，人已相似我們中的一個，知道了善惡；如今不要讓他伸手再摘取生命樹上的果子，吃了活到永遠。」",
-     "properNames": [],
-     "crossReference": "2:17; 11:6箴 3:18德 37:3"
-    },
-    {
-     "verse": 23,
-     "text": "上主天主遂把他趕出伊甸樂園，叫他耕種他所由出的土地。",
-     "properNames": [
-      "伊甸"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 24,
-     "text": "天主將亞當逐出了以後，就在伊甸樂園的東面，派了「革魯賓」和刀光四射的火劍，防守到生命樹去的路。",
-     "properNames": [
-      "亞當",
-      "伊甸"
-     ],
-     "crossReference": "約 40:19則 28:14默 22:1-2, 14"
-    }
-   ]
-  },
-  {
-   "lesson": 39,
+   "lesson": 40,
    "book": "DAN",
    "latinChapter": 3,
    "chineseChapter": 3,
@@ -8942,7 +6718,7 @@
    ]
   },
   {
-   "lesson": 40,
+   "lesson": 41,
    "book": "JON",
    "latinChapter": 2,
    "chineseChapter": 2,
@@ -9036,7 +6812,7 @@
    ]
   },
   {
-   "lesson": 41,
+   "lesson": 42,
    "book": "JER",
    "latinChapter": 31,
    "chineseChapter": 31,
@@ -9353,7 +7129,7 @@
    ]
   },
   {
-   "lesson": 42,
+   "lesson": 43,
    "book": "PSA",
    "latinChapter": 90,
    "chineseChapter": 91,
@@ -9468,7 +7244,7 @@
    ]
   },
   {
-   "lesson": 43,
+   "lesson": 44,
    "book": "WIS",
    "latinChapter": 7,
    "chineseChapter": 7,
@@ -9670,7 +7446,7 @@
    ]
   },
   {
-   "lesson": 44,
+   "lesson": 45,
    "book": "2MA",
    "latinChapter": 7,
    "chineseChapter": 7,
@@ -9949,7 +7725,7 @@
    ]
   },
   {
-   "lesson": 45,
+   "lesson": 46,
    "book": "SIR",
    "latinChapter": 24,
    "chineseChapter": 24,
@@ -10256,7 +8032,7 @@
    ]
   },
   {
-   "lesson": 46,
+   "lesson": 47,
    "book": "PRO",
    "latinChapter": 8,
    "chineseChapter": 8,
@@ -10494,7 +8270,7 @@
    ]
   },
   {
-   "lesson": 47,
+   "lesson": 48,
    "book": "1KI",
    "latinChapter": 19,
    "chineseChapter": 19,
@@ -10699,7 +8475,7 @@
    ]
   },
   {
-   "lesson": 48,
+   "lesson": 49,
    "book": "TOB",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -10949,7 +8725,7 @@
    ]
   },
   {
-   "lesson": 49,
+   "lesson": 50,
    "book": "RUT",
    "latinChapter": 1,
    "chineseChapter": 1,
@@ -11151,276 +8927,6 @@
       "白冷"
      ],
      "crossReference": ""
-    }
-   ]
-  },
-  {
-   "lesson": 50,
-   "book": "JOB",
-   "latinChapter": 38,
-   "chineseChapter": 38,
-   "title": "約伯傳 38",
-   "note": "",
-   "sourceUrl": "https://sbbible.dsbiblecentre.org/part_1/25/38.html",
-   "sectionHeadings": [
-    "約伯傳 第三十八章",
-    "上主發言",
-    "受造物顯天主的智慧",
-    "自然現象顯天主的智慧",
-    "禽獸顯天主的智慧"
-   ],
-   "verseOrderNote": "此版本調換節序，逐節對照時以節號為準",
-   "verseCount": 41,
-   "latinVerseCount": 41,
-   "alignmentNote": "",
-   "verses": [
-    {
-     "verse": 1,
-     "text": "上主由旋風中向約伯發言說：",
-     "properNames": [
-      "約伯"
-     ],
-     "crossReference": ""
-    },
-    {
-     "verse": 2,
-     "text": "用無知的話，使我的計劃模糊不明的是誰？",
-     "properNames": [],
-     "crossReference": "42:3友 8:12依 40:13"
-    },
-    {
-     "verse": 3,
-     "text": "你要像勇士束好你的腰，我要問你，請指教我！",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 4,
-     "text": "我奠定大地的基礎時，你在那裏？你若聰明，儘管說罷！",
-     "properNames": [],
-     "crossReference": "依 40:12"
-    },
-    {
-     "verse": 5,
-     "text": "你知道是誰制定了地的度量，是誰在地上拉了準繩？",
-     "properNames": [],
-     "crossReference": "匝 1:16"
-    },
-    {
-     "verse": 6,
-     "text": "地的基礎置在何處，是誰立了地的角石？",
-     "properNames": [],
-     "crossReference": "26:7詠 65:7; 118:22"
-    },
-    {
-     "verse": 7,
-     "text": "當時星辰一起歌詠，天主的眾子同聲歡呼！",
-     "properNames": [],
-     "crossReference": "厄上 3:10詠 19:2-3; 148:2-3巴 3:34"
-    },
-    {
-     "verse": 8,
-     "text": "海水洶湧如出母胎時，是誰用門將海關閉？",
-     "properNames": [],
-     "crossReference": "詠 33:7"
-    },
-    {
-     "verse": 9,
-     "text": "是我用雲彩作海的衣裳，用濃霧作海的襁褓。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 10,
-     "text": "是我給海劃定了界限，設立了門和閂，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 11,
-     "text": "並下令說：「你到此為止，不得越過；你的狂潮到此為止。」",
-     "properNames": [],
-     "crossReference": "詠 65:8; 104:6-9箴 8:29"
-    },
-    {
-     "verse": 12,
-     "text": "你有生之日，何嘗給晨光出過命令，又何嘗使曙光知道它之所生？",
-     "properNames": [],
-     "crossReference": "詠 57:9"
-    },
-    {
-     "verse": 13,
-     "text": "何嘗使光握緊大地四角，將惡人從那裏抖出去？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 14,
-     "text": "曙光改變大地，如在膠泥上蓋印；使萬物出現，如着錦衣；",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 15,
-     "text": "撤去惡人的光明，折斷高舉的手。",
-     "properNames": [],
-     "crossReference": "24:13-17"
-    },
-    {
-     "verse": 16,
-     "text": "你曾否到過海的源流，走過深淵的底處？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 17,
-     "text": "死亡的門給你開啟過嗎？你見過死影之門嗎？",
-     "properNames": [],
-     "crossReference": "10:21-22"
-    },
-    {
-     "verse": 18,
-     "text": "你知道大地的廣闊嗎？你若知道，請你說罷！",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 19,
-     "text": "赴光明之所的路是那一條，黑暗的住處在那裏？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 20,
-     "text": "你知道如何引導黑暗到自己的境地，領黑暗回到自己居所的道路上嗎？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 21,
-     "text": "你總該知道，因為你那時已誕生了，而你的年歲已很高。",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 22,
-     "text": "你到過雪庫，見過雹倉嗎？",
-     "properNames": [],
-     "crossReference": "詠 147:17德 43:14"
-    },
-    {
-     "verse": 23,
-     "text": "那是我為降災之時，為戰爭之日所存放的。",
-     "properNames": [],
-     "crossReference": "出 9:18-26蘇 10:11依 28:17; 30:30"
-    },
-    {
-     "verse": 24,
-     "text": "雲霧由那條路散開，東風由那條路吹往大地？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 25,
-     "text": "誰為暴雨啟開閘門，誰為雷電指示道路，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 26,
-     "text": "好使雨落在無人之境，降在無人的荒野，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 27,
-     "text": "為潤澤荒野乾旱之地，好使原野中的綠草生長？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 28,
-     "text": "雨有父親嗎？誰生了露珠？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 29,
-     "text": "冰出自誰的胎？天上的霜是誰生的？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 30,
-     "text": "水怎樣凝結如石？深淵的表面怎樣固結？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 31,
-     "text": "你豈能拴住昴宿的紐結，解開參星的繩索？",
-     "properNames": [],
-     "crossReference": "詠 19:2-3亞 5:8"
-    },
-    {
-     "verse": 32,
-     "text": "你豈能使晨星按時升出，引導北斗和它的星群？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 33,
-     "text": "你豈知道天體的定律，立定天律以管治大地？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 34,
-     "text": "你豈能使你的聲音上達雲霄，使雨水沛然降在你處？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 35,
-     "text": "你能否一發令，閃電就發出，且向你說：「我們在這裏！」",
-     "properNames": [],
-     "crossReference": "友 9:6巴 3:35"
-    },
-    {
-     "verse": 36,
-     "text": "誰將聰明給與鸛鳥，將智慧賦與雄雞？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 38,
-     "text": "當土壤堅固，泥塊凝結之時，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 37,
-     "text": "誰能憑智力數清雲彩，能傾倒天上的水囊？",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 40,
-     "text": "當獅子伏於洞穴，臥於叢林埋伏的時候，",
-     "properNames": [],
-     "crossReference": ""
-    },
-    {
-     "verse": 39,
-     "text": "你是否能為牝獅獵取食物，滿足幼獅的食慾？",
-     "properNames": [],
-     "crossReference": "詠 104:20-22"
-    },
-    {
-     "verse": 41,
-     "text": "當雛鴉無食，往還飛翔，向天主哀鳴的時候，誰能為烏鴉備食？",
-     "properNames": [],
-     "crossReference": "詠 147:9"
     }
    ]
   }

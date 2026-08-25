@@ -1,0 +1,1063 @@
+{
+ "units": {
+  "formula:signum-crucis": {
+   "title": "十字聖號",
+   "latinTitle": "Signum Crucis",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "V. In nomine Patris, et Filii, et Spiritus Sancti."
+     ],
+     "zh": [
+      "V. 奉父及子及聖神之名。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    },
+    {
+     "latin": [
+      "R. Amen."
+     ],
+     "zh": [
+      "R. 阿們。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    }
+   ]
+  },
+  "formula:salutatio": {
+   "title": "彌撒致候與對答",
+   "latinTitle": "Salutatio et responsa",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis."
+     ],
+     "zh": [
+      "V. 我們的主耶穌基督的恩寵、天主的愛德、聖神的交融，與你們眾人同在。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    },
+    {
+     "latin": [
+      "R. Et cum spiritu tuo."
+     ],
+     "zh": [
+      "R. 並與你的靈魂同在。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    }
+   ]
+  },
+  "formula:kyrie": {
+   "title": "求主垂憐",
+   "latinTitle": "Kyrie eleison",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "V. Kyrie eleison."
+     ],
+     "zh": [
+      "V. 主垂憐。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    },
+    {
+     "latin": [
+      "R. Kyrie eleison."
+     ],
+     "zh": [
+      "R. 主垂憐。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    }
+   ]
+  },
+  "formula:sanctus": {
+   "title": "歡呼歌",
+   "latinTitle": "Sanctus",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Sanctus, Sanctus, Sanctus Dominus Deus Sabaoth. Pleni sunt caeli et terra gloria tua. Hosanna in excelsis. Benedictus qui venit in nomine Domini. Hosanna in excelsis."
+     ],
+     "zh": [
+      "聖、聖、聖，主天主萬軍之天主。天地盈滿您的光榮。高天上，讚美主。奉主名來者，是應受讚美的。高天上，讚美主。奉主名來者，是應受讚美的。高天上，讚美主。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    }
+   ]
+  },
+  "formula:agnus-dei": {
+   "title": "羔羊頌",
+   "latinTitle": "Agnus Dei",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "formula:confiteor": {
+   "title": "懺悔詞",
+   "latinTitle": "Confiteor",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Confiteor Deo omnipotenti, et vobis, fratres, quia peccavi nimis cogitatione, verbo, opere, et omissione: mea culpa, mea culpa, mea maxima culpa. Ideo precor beatam Mariam semper Virginem, omnes Angelos, et Sanctos, et vos, fratres, orare pro me ad Dominum Deum nostrum."
+     ],
+     "zh": [
+      "我向全能的天主，和你們兄弟們，承認我的罪過，因為我在思想、言語、行動和疏忽上都犯了罪：這完全是我的錯，完全是我的錯，這是我的大錯。因此，我祈求聖母瑪利亞、所有天使和聖人，以及你們兄弟們，為我向天主祈禱。"
+     ],
+     "engine": "nvidia:meta/llama-3.1-70b-instruct"
+    }
+   ]
+  },
+  "formula:gloria": {
+   "title": "光榮頌",
+   "latinTitle": "Gloria in excelsis Deo",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "formula:pater-noster": {
+   "title": "天主經",
+   "latinTitle": "Pater noster",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "formula:credo": {
+   "title": "尼西亞信經",
+   "latinTitle": "Symbolum Nicaenum-Constantinopolitanum",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Credo in unum Deum Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Jesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, lumen de lumine, Deum verum de Deo vero, genitum, non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram sa-"
+     ],
+     "zh": [
+      "我信唯一的天主，全能的聖父，天地萬物，有形無形之物的創造者。我信唯一的主耶穌基督，天主的獨生子，在萬世之前由聖父所生。他是天主出於天主，光出於光，真天主出於真天主，是生而非造，與聖父同體；萬物都是藉著他而造成的。他為了我們人類，為了我們的救恩"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "formula:ite-missa-est": {
+   "title": "遣散禮",
+   "latinTitle": "Ritus conclusionis",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus."
+     ],
+     "zh": [
+      "V. 願全能的天主，聖父、聖子及聖神祝福你們。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "R. Amen."
+     ],
+     "zh": [
+      "答：亞孟。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "V. Ite, missa est."
+     ],
+     "zh": [
+      "V. 你們去吧，彌撒禮成。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "R. Deo gratias."
+     ],
+     "zh": [
+      "答：感謝天主。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "ordo:missa": {
+   "title": "常年期主日彌撒經文",
+   "latinTitle": "Ordo Missae, tempus per annum",
+   "extent": "complete",
+   "excerptRule": "",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": []
+  },
+  "reading:liturgy/creeds.html.txt": {
+   "title": "使徒信經",
+   "latinTitle": "Symbolum Apostolorum",
+   "extent": "complete",
+   "excerptRule": "全文",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "Symbolum Apostolorum Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen. Quicumque . . . Quicumque vult salvus esse, ante omnia opus est, ut teneat catholicam fidem: Quam nisi quisque integram inviolatamque servaverit, absque dubio in aeternam peribit."
+     ],
+     "zh": [
+      "我信全能天主父，天地的創造者。我信天主的獨生子，我們的主耶穌基督，他由聖神降孕，生於瑪利亞童貞女，在本‧比拉多手下蒙難，被釘在十字架上，死而安葬，降在陰府，第三日從死者中復活，升在天上，坐在全能天主父的右邊，將來必要從那裡降來，審判生者死者。我信聖神，信聖而公教的教會，信聖人相通，信罪過的赦免，信肉身的復活，信永遠的生命。亞孟。凡願獲得救恩者，首先應當保持公教信德：除非人完整無缺地遵守此信德，疑無可疑者，必然陷入永遠的沉淪。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Fides autem catholica haec est: ut unum Deum in Trinitate, et Trinitatem in unitate veneremur. Neque confundentes personas, neque substantiam seperantes. Alia est enim persona Patris alia Filii, alia Spiritus Sancti: Sed Patris, et Fili, et Spiritus Sancti una est divinitas, aequalis gloria, coeterna maiestas. Qualis Pater, talis Filius, talis Spiritus Sanctus. Increatus Pater, increatus Filius, increatus Spiritus Sanctus. Immensus Pater, immensus Filius, immensus Spiritus Sanctus. Aeternus Pater, aeternus Filius, aeternus Spiritus Sanctus. Et tamen non tres aeterni, sed unus aeternus. Sicut non tres increati, nec tres immensi, sed unus increatus, et unus immensus. Similiter omnipotens Pater, omnipotens Filius, omnipotens Spiritus Sanctus. Et tamen non tres omnipotentes, sed unus omnipotens."
+     ],
+     "zh": [
+      "真正的公教信德是這樣的：我們敬禮在三位一體內的唯一天主，也敬禮在統一內的三位一體。既不混亂諸聖人，也不分離聖體。蓋聖父有其位格，聖子有其位格，聖神有其位格。然而聖父、聖子及聖神具有唯一的天主性，相等的光榮，同永恆的威能。聖父如何，聖子亦如何，聖神亦如何。聖父非受造，聖子亦非受造，聖神亦非非受造。聖父無所不在，聖子亦無所不在，聖神亦無所不在。聖父永恆，聖子亦永恆，聖神亦永恆。然而並非三個永恆者，乃是一個永恆者。如同並非三個非受造者，亦非三個無所不在者，乃是一個非受造者及一個無所不在者。同樣地，聖父全能，聖子亦全能，聖神亦全能。然而並非三個全能者，乃是一個全能者。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ita Deus Pater, Deus Filius, Deus Spiritus Sanctus. Et tamen non tres dii, sed unus est Deus. Ita Dominus Pater, Dominus Filius, Dominus Spiritus Sanctus. Et tamen non tres Domini, sed unus est Dominus. Quia, sicut singillatim unamquamque personam Deum ac Dominum confiteri christiana veritate compelimur: ita tres Deos aut Dominos dicere catholica religione prohibemur. Pater a nullo est factus: nec creatus, nec genitus. Filius a Patre solo est: non factus, nec creatus, sed genitus. Spiritus Sanctus a Patre et Filio: non factus, nec creatus, nec genitus, sed procedens. Unus ergo Pater, non tres Patres: unus Filius, non tres Filii: unus Spiritus Sanctus, non tres Spiritus Sancti."
+     ],
+     "zh": [
+      "天主聖父，天主聖子，天主聖神。然而並非三位天主，而是一位天主。主聖父，主聖子，主聖神。然而並非三位主，而是一位主。因為，如同我們按基督信德的真理被迫逐一認信每一位人格為天主及為主：同樣按公教信德我們被禁止說有三位天主或三位主。聖父由誰都未受造：既非被創造，亦非被生。聖子僅由聖父而來：非被造作，亦非被創造，而是被生。聖神由聖父及聖子而來：非被造作，亦非被創造，亦非被生，而是由二者發出。故此，唯一聖父，非三聖父：唯一聖子，非三聖子：唯一聖神，非三聖神。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et in hac Trinitate nihil prius aut posterius, nihil maius aut minus: sed totae tres personae coaeternae sibi sunt et coaequales. Ita ut per omnia, sicut iam supra dictum est, et unitas in Trinitate, et Trinitas in unitate veneranda sit. Qui vult ergo salvus esse, ita de Trinitate sentiat. Sed necessarium est ad aeternam salutem, ut incarnationem quoque Domini nostri Iesu Christi fideliter credat. Est ergo fides recta ut credamus et confiteamur, quia Dominus noster Iesus Christus, Dei Filius, Deus et homo est. Deus est ex substantia Patris ante saecula genitus: et homo est ex substantia matris in saeculo natus."
+     ],
+     "zh": [
+      "而在此聖三中，沒有先後，也沒有大小：乃是三位聖人全然彼此同永恆，且彼此同等。因此，正如已上所述，聖三中的統一，與統一中的聖三，都應受尊崇。因此，凡願得救的人，應當如此認識聖三。但為獲得永恆的救恩，必須忠心地相信吾主耶穌基督的降生成人。因此正信就是我們應當相信並認信，吾主耶穌基督，聖父之子，既是天主，亦是人。祂是天主，由聖父的本質在萬世之前所生；祂是人，由母親的本質在時世中所生。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Perfectus Deus, perfectus homo: ex anima rationali et humana carne subsistens. Aequalis Patri secundum divinitatem: minor Patre secundum humanitatem. Qui licet Deus sit et homo, non duo tamen, sed unus est Christus. Unus autem non conversione divinitatis in carnem, sed assumptione humanitatis in Deum. Unus omnino, non confusione substantiae, sed unitate personae. Nam sicut anima rationalis et caro unus est homo: ita Deus et homo unus est Christus. Qui passus est pro salute nostra: descendit ad inferos: tertia die resurrexit a mortuis. Ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis: inde venturus est iudicare vivos et mortuos."
+     ],
+     "zh": [
+      "基督是完全的天主，完全的人：由理性的靈魂及人的肉身構成。按照天主性，與天父相等；按照人性，次於天父。祂雖然既是天主又是人，然而不是二者，而是一位基督。此一性卻不是天主性變成了肉身，而是人性被取於天主內。完全是一位，不是實體的混合，而是位格的統一。正如理性的靈魂與肉身構成一個人，同樣天主與人構成一位基督。祂為了我們的救恩而受難：降下陰府：第三日從死者中復活。升上天國，坐於全能天主聖父的右邊：將從那裡降來審判生者死者。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ad cuius adventum omnes homines resurgere habent cum corporibus suis: et reddituri sunt de factis propriis rationem. Et qui bona egerunt, ibunt in vitam aeternam: qui vero mala, in ignem aeternum. Haec est fides catholica, quam nisi quisque fideliter firmiterque crediderit, salvus esse non poterit. Amen. Symbolum Nicaenum Pristinum Credo in unum Deum, Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Iesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, Lumen de Lumine, Deum verum de Deo vero, genitum non factum, consubstantialem Patri, per quem omnia facta sunt."
+     ],
+     "zh": [
+      "在祂的來臨時，眾人都要帶著自己的肉身復活，並要為自己所行的事接受審判。行善者將進入永遠的生命，行惡者將進入永遠的火獄。這是公教信德，除非人人忠心堅定地相信，否則不能得救。亞孟。尼西亞信經 古本 我信唯一的天主，全能的聖父，天地和宇宙萬物，無論看得見或看不見的，都是由祂所創造的。我也信唯一的主耶穌基督，天主的獨生子，由聖父所生於萬世之前。祂是天主之光，生於真天主之光，真天主生於真天主，是生而非造，與聖父同體，萬物是藉著祂而造成的。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Qui propter nos homines et propter nostram salutem descendit de caelis. Et incarnatus est de Spiritu Sancto ex Maria Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio Pilato, passus et sepultus est, et resurrexit tertia die, secundum Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum venturus est cum gloria, iudicare vivos et mortuos, cuius regni non erit finis. Et in Spiritum Sanctum, Dominum et vivificantem, qui ex Patre procedit. Qui cum Patre et Filio simul adoratur et conglorificatur, qui locutus est per prophetas. Et unam, sanctam, catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in remissionem peccatorum. Et expecto resurrectionem mortuorum, et vitam venturi saeculi."
+     ],
+     "zh": [
+      "他為了我們人類，並為了我們的救恩，從天上降下來。並由聖神因聖童貞瑪利亞而成了肉身，成為人。他也曾在般雀‧比拉多手下被釘在十字架上，受難而被埋葬；第三日按照聖經復活了，升了天，坐在聖父的右邊。他還要光榮地降來，審判生者死者；他的神國沒有終結。我信聖神，主及賦予生命者，他由聖父聖子而發出。他與聖父聖子應受同樣的朝拜和光榮，他曾藉先知們發言。我信唯一、至聖、至公、至聖而宗徒的教會。我認許唯一的聖洗，以消除罪過。我期待死人的復活，及來世的生命。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Amen. Symbolum Nicaenum Credo in unum Deum, Patrem omnipotentem, factorem caeli et terrae,visibilium omnium et invisibilium. Et in unum Dominum Iesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, Lumen de Lumine, Deum verum de Deo vero, genitum non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram salutem descendit de caelis. Et incarnatus est de Spiritu Sancto ex Maria Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio Pilato, passus et sepultus est, et resurrexit tertia die, secundum Scripturas, et ascendit in caelum, sedet ad dexteram Patris."
+     ],
+     "zh": [
+      "亞孟。尼西亞信經 我信唯一天主，全能聖父，天地萬物，有形無形之創造者。我信唯一的主耶穌基督，天主獨生子，在諸世紀之前，由聖父所生。他是出自天主的光，由真天主所生的真天主，受生而非被造，與聖父一體；萬物都是藉著他而造成的。他為了我們人類，並為了我們的救恩，從天降下。他因聖神由童貞瑪利亞成了肉身，而成為人。他在般雀‧比拉多執政時，為我們被釘在十字架上，受難並被埋葬，且按照聖經，第三日復活了，並升了天，坐在聖父的右邊。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et iterum venturus est cum gloria, iudicare vivos et mortuos, cuius regni non erit finis. Et in Spiritum Sanctum, Dominum et vivificantem, qui ex Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et conglorificatur: qui locutus est per prophetas. Et unam, sanctam, catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in remissionem peccatorum. Et expecto resurrectionem mortuorum, et vitam venturi saeculi."
+     ],
+     "zh": [
+      "又將光榮降臨，審判生者死者，其國無窮無盡。我信聖神，主及賦予生命者，由聖父及聖子所發出。與聖父及聖子同受欽崇，同享光榮，曾藉先知們發言。我信唯一、至聖、至公、至聖而公教的教會。我承認為赦免罪過，唯一的聖洗。我期待死者的復活，及來世生命的實現。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/augustine__conf1.shtml.txt": {
+   "title": "聖奧思定懺悔錄 卷一",
+   "latinTitle": "Confessiones I",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 72 段，約 895 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "1.1.1 magnus es, domine, et laudabilis valde."
+     ],
+     "zh": [
+      "偉大的是你，主，極其應受讚美。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "magna virtus tua et sapientiae tuae non est numerus."
+     ],
+     "zh": [
+      "你的大能是偉大的，你的智慧無可計量。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et laudare te vult homo, aliqua portio creaturae tuae, et homo circumferens mortalitatem suam, circumferens testimonium peccati sui et testimonium quia superbis resistis; et tamen laudare te vult homo, aliqua portio creaturae tuae."
+     ],
+     "zh": [
+      "人想讚美你，你的受造物的某一部分人想讚美你；人背負著他的死亡性，背負著他罪過的見證，以及你阻抗驕傲者的見證；然而人想讚美你，你的受造物的某一部分人想讚美你。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "tu excitas ut laudare te delectet, quia fecisti nos ad te et inquietum est cor nostrum donec requiescat in te."
+     ],
+     "zh": [
+      "你激勵我們，使讚美你成為我們的喜樂，因為你造了我們是為了你，而我們的心若不安息於你，便不能安定。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "da mihi, domine, scire et intellegere utrum sit prius invocare te an laudare te, et scire te prius sit an invocare te."
+     ],
+     "zh": [
+      "求您賜我，主啊，得以認識並領悟：是先呼求您為先，抑或先讚美您為先；以及認識您是先，抑或呼求您是先。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "sed quis te invocat nesciens te?"
+     ],
+     "zh": [
+      "但誰能祈求他而不認識他呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aliud enim pro alio potest invocare nesciens."
+     ],
+     "zh": [
+      "誠然，人若不認識，就會為一個而祈求另一個。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an potius invocaris ut sciaris?"
+     ],
+     "zh": [
+      "抑或是先被呼求，然後才被認識呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quomodo autem invocabunt, in quem non crediderunt?"
+     ],
+     "zh": [
+      "然而，他們怎樣能呼求他們所未曾信服的呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aut quomodo credent sine praedicante?"
+     ],
+     "zh": [
+      "或者，沒有宣講者，他們怎樣能夠相信呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et laudabunt dominum qui requirunt eum: quaerentes enim inveniunt eum et invenientes laudabunt eum."
+     ],
+     "zh": [
+      "他們必讚美尋求他的主：誠然，尋求者必找到他，找到他的人必讚美他。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quaeram te, domine, invocans te et invocem te credens in te: praedicatus enim es nobis."
+     ],
+     "zh": [
+      "我尋求你，主，呼求你；而我也呼求你，相信你：因為你曾被傳報給我們。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "invocat te, domine, fides mea, quam dedisti mihi, quam inspirasti mihi per humanitatem filii tui, per ministerium praedicatoris tui."
+     ],
+     "zh": [
+      "我的信德呼求你，主啊，這信德是你所賜予我的，是你藉著你聖子的人性，藉著你傳教者的職務而灌注於我內的。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.2.2 et quomodo invocabo deum meum, deum et dominum meum, quoniam utique in me ipsum eum vocabo, cum invocabo eum?"
+     ],
+     "zh": [
+      "我怎樣才能呼求我的天主，我的天主和我的主宰呢？因為當我呼求他時，我確實就是在呼求他進入我自己裡面。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et quis locus est in me quo veniat in me deus meus, quo deus veniat in me, deus qui fecit caelum et terram?"
+     ],
+     "zh": [
+      "那麼，天主在我內有什麼地方進入我呢？造成天地的天主如何進入我內呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "itane, domine deus meus?"
+     ],
+     "zh": [
+      "真的是這樣嗎，我的天主？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "est quicquam in me quod capiat te?"
+     ],
+     "zh": [
+      "我裡面有什麼能容納你嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an vero caelum et terra, quae fecisti et in quibus me fecisti, capiunt te?"
+     ],
+     "zh": [
+      "還是說，你所造的天地，以及你在其中所造的我，能夠容納你呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an quia sine te non esset quidquid est, fit ut quidquid est capiat te?"
+     ],
+     "zh": [
+      "因為若沒有你，就沒有任何存在的東西，所以任何存在的東西都領受你嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quoniam itaque et ego sum, quid peto ut venias in me, qui non essem nisi esses in me?"
+     ],
+     "zh": [
+      "因此，既然我也存在，我向你祈求什麼，要你來到我內呢？假若你不在我內，我就不會存在。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "non enim ego iam inferi, et tamen etiam ibi es, nam etsi descendero in infernum, ades."
+     ],
+     "zh": [
+      "我不再處於陰間，而你仍然也在那裡，因為即使我下到陰間，你也臨在。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "non ergo essem, deus meus, non omnino essem, nisi esses in me."
+     ],
+     "zh": [
+      "我的天主，若你不在我內，我就不存在，完全不存在。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an potius non essem nisi essem in te, ex quo omnia, per quem omnia, in quo omnia?"
+     ],
+     "zh": [
+      "我不是寧可不存在，除非我是在你內，一切事物由你而出，藉由你而成，在你內而存？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "etiam sic, domine, etiam sic."
+     ],
+     "zh": [
+      "是的，主啊，確實如此。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quo te invoco, cum in te sim?"
+     ],
+     "zh": [
+      "我在你內時，我怎樣呼求你呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aut unde venias in me?"
+     ],
+     "zh": [
+      "或者你是從何處來到我內的？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quo enim recedam extra caelum et terram, ut inde in me veniat deus meus, qui dixit, 'caelum et terram ego impleo'?"
+     ],
+     "zh": [
+      "我當如何走出天地之外，使我的天主能從那裡來到我身上呢？祂說過：『我充滿天地。』"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.3.3 capiunt ergone te caelum et terra, quoniam tu imples ea?"
+     ],
+     "zh": [
+      "天地豈能容納你？因為你充滿了天地？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an imples et restat, quoniam non te capiunt?"
+     ],
+     "zh": [
+      "你充滿萬有，還有餘剩嗎？因為你無所不在？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et quo refundis quidquid impleto caelo et terra restat ex te?"
+     ],
+     "zh": [
+      "而你將充滿天地之後所餘餘的你自己注入到哪裡去呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an non opus habes ut quoquam continearis, qui contines omnia, quoniam quae imples continendo imples?"
+     ],
+     "zh": [
+      "難道你不需要任何事物來維持你，你反而維持萬物，因為你藉著維持而充滿的事物就是你所充滿的嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "non enim vasa quae te plena sunt stabilem te faciunt, quia etsi frangantur non effunderis."
+     ],
+     "zh": [
+      "因為盛滿你的器皿並不能使你穩定，因為即使器皿破碎，你也不會傾出。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et cum effunderis super nos, non tu iaces sed erigis nos, nec tu dissiparis sed conligis nos."
+     ],
+     "zh": [
+      "當你向我們傾注時，你並非躺臥，而是高舉我們；你並非散開，而是聚合我們。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "sed quae imples omnia, te toto imples omnia."
+     ],
+     "zh": [
+      "但你充滿萬物，你以你的整體充滿萬物。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an quia non possunt te totum capere omnia, partem tui capiunt et eandem partem simul omnia capiunt?"
+     ],
+     "zh": [
+      "因為萬物不能完全容納你，是以各取你的一部分，而同時萬物都取得同一部分嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an singulas singula et maiores maiora, minores minora capiunt?"
+     ],
+     "zh": [
+      "是個別的人領受個別的恩寵，較大的領受較大的恩寵，較小的領受較小的恩寵嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "ergo est aliqua pars tua maior, aliqua minor?"
+     ],
+     "zh": [
+      "那麼你有某個部分較大，某個部分較小嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "an ubique totus es et res nulla te totum capit?"
+     ],
+     "zh": [
+      "你是無處不在的全體，還是沒有一個事物能完全容納你呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.4.4 quid es ergo, deus meus?"
+     ],
+     "zh": [
+      "那麼，我的天主，你是什麼呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quid, rogo, nisi dominus deus?"
+     ],
+     "zh": [
+      "我求問，除了主天主之外，還有什麼呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quis enim dominus praeter dominum?"
+     ],
+     "zh": [
+      "誰是主人呢，除了主以外？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aut quis deus praeter deum nostrum?"
+     ],
+     "zh": [
+      "或者誰是天主，除了我們的天主以外？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "summe, optime, potentissime, omnipotentissime, misericordissime et iustissime, secretissime et praesentissime, pulcherrime et fortissime, stabilis et incomprehensibilis, immutabilis mutans omnia, numquam novus numquam vetus, innovans omnia et in vetustatem perducens superbos et nesciunt."
+     ],
+     "zh": [
+      "至高者，至善者，至能者，全能者，最仁慈者及最公義者，最隱密者及最臨在者，最美麗者及最堅強者，常住不變且不可測度者，不變者卻變化萬物，永不新生永不衰老者，革新萬物，卻使驕傲者陷入衰朽之中，而彼等不自知。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "semper agens semper quietus, conligens et non egens, portans et implens et protegens, creans et nutriens et perficiens, quaerens cum nihil desit tibi."
+     ],
+     "zh": [
+      "常在作為常在安寧，聚合萬物而本身無所需，承載萬物、充滿萬物並保護萬物，創造、養育並完善萬物，尋求而本身一無所缺。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "amas nec aestuas, zelas et securus es, paenitet te et non doles, irasceris et tranquillus es, opera mutas nec mutas consilium, recipis quod invenis et numquam amisisti."
+     ],
+     "zh": [
+      "你愛卻不焦灼，你嫉妒卻安泰，你後悔卻不哀傷，你憤怒卻平靜，你改變工作卻不改變計畫，你領受所發現的卻從未失去。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "numquam inops et gaudes lucris, numquam avarus et usuras exigis, supererogatur tibi ut debeas: et quis habet quicquam non tuum?"
+     ],
+     "zh": [
+      "你從不缺乏，且喜悅利益；你從不貪婪，卻收取利息；向你還債者有餘，而你誰欠你什麼呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "reddis debita nulli debens, donas debita nihil perdens."
+     ],
+     "zh": [
+      "你償還債務而自身無債，你寬免債務而自身無損。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et quid diximus, deus meus, vita mea, dulcedo mea sancta, aut quid dicit aliquis cum de te dicit?"
+     ],
+     "zh": [
+      "我親愛的天主，我的生命，我的聖善的甘飴，我們說了什麼呢？或者當人談及你時，誰說得出什麼呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et vae tacentibus de te, quoniam loquaces muti sunt."
+     ],
+     "zh": [
+      "且禍哉乎默而不言於你者，因為多言者反成了啞巴。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.5.5 quis mihi dabit adquiescere in te?"
+     ],
+     "zh": [
+      "誰會賜予我在你內獲得安息？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quis dabit mihi ut venias in cor meum et inebries illud, ut obliviscar mala mea et unum bonum meum amplectar, te?"
+     ],
+     "zh": [
+      "誰能賜我，使你進入我的心中並使之醉於你，好讓我忘卻我的惡行，並擁抱你這唯一的良善呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quid mihi es?"
+     ],
+     "zh": [
+      "你對我是什麼？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "miserere ut loquar."
+     ],
+     "zh": [
+      "求爾憐憫我，使我能言。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quid tibi sum ipse, ut amari te iubeas a me et, nisi faciam, irascaris mihi et mineris ingentes miserias?"
+     ],
+     "zh": [
+      "我對你而言是什麼，以至於你命令我愛你，而且若我不如此做，你就對我發怒並威脅我以巨大的苦難？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "parvane ipsa est si non amem te?"
+     ],
+     "zh": [
+      "倘若我不愛你，我豈不就太渺小了嗎？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "ei mihi!"
+     ],
+     "zh": [
+      "哎呀！"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "dic mihi per miserationes tuas, domine deus meus, quid sis mihi."
+     ],
+     "zh": [
+      "求你以你的憫憐告訴我，我的主、我的天主，你對我是什麼。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "dic animae meae, 'salus tua ego sum': sic dic ut audiam."
+     ],
+     "zh": [
+      "向我的靈魂說：'我是你的救恩'：這樣說，使我能聽見。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "ecce aures cordis mei ante te, domine."
+     ],
+     "zh": [
+      "看，我心靈的耳朵在你面前，主啊。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aperi eas et dic animae meae, 'salus tua ego sum.' curram post vocem hanc et apprehendam te."
+     ],
+     "zh": [
+      "打開這些書，對我的靈魂說：『我是你的救恩。』我將追隨這聲音，並抓住你。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "noli abscondere a me faciem tuam: moriar, ne moriar, ut eam videam."
+     ],
+     "zh": [
+      "求你不要向我隱藏你的面容：我寧願死，也不願死去，好能看見她。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.5.6 angusta est domus animae meae quo venias ad eam: dilatetur abs te."
+     ],
+     "zh": [
+      "我的靈魂之家太狹窄了，願你進入其中；求你將它擴大。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "ruinosa est: refice eam."
+     ],
+     "zh": [
+      "它是毀壞的：請你修復它。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "habet quae offendant oculos tuos: fateor et scio."
+     ],
+     "zh": [
+      "它具有冒犯你眼目的事物；我承認且明白。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "sed quis mundabit eam?"
+     ],
+     "zh": [
+      "然而誰能潔淨她呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "aut cui alteri praeter te clamabo, 'ab occultis meis munda me, domine, et ab alienis parce servo tuo?' credo, propter quod et loquor, domine: tu scis."
+     ],
+     "zh": [
+      "或者除了你以外，我向誰呼求說：'主，求你淨我於隱密之罪，寬赦你僕人的陌生之過'？我信，正因此而言，主：你是洞悉一切。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "nonne tibi prolocutus sum adversum me delicta mea, deus meus, et tu dimisisti impietatem cordis mei?"
+     ],
+     "zh": [
+      "我豈不是將我的罪過對你傾訴過嗎，我的天主？而你赦免了我心中的不敬？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "non iudicio contendo tecum, qui veritas es, et ego nolo fallere me ipsum, ne mentiatur iniquitas mea sibi."
+     ],
+     "zh": [
+      "我不以審判之心與汝爭辯，汝乃真理也，而我不願欺騙自己，免得我的不義向自身說謊。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "non ergo iudicio contendo tecum, quia, si iniquitates observaveris, domine, domine, quis sustinebit?"
+     ],
+     "zh": [
+      "因此我不是用判斷與你相爭，因為，主啊，主啊，若你注意不義，誰還能站得住呢？"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "1.6.7 sed tamen sine me loqui apud misericordiam tuam, me terram et cinerem sine tamen loqui."
+     ],
+     "zh": [
+      "然而請容我在你的仁慈前說話，我這塵埃和灰燼，然而請容我說話。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "quoniam ecce misericordia tua est, non homo, inrisor meus, cui loquor."
+     ],
+     "zh": [
+      "因為看，你的慈悲是，而不是人，是嘲笑我的人，我對他說話。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "et tu fortasse inrides me, sed conversus misereberis mei."
+     ],
+     "zh": [
+      "而你或許嘲笑我，但悔改之後，你將憐憫我。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  },
+  "reading:fathers/tertullian__tertullian.oratione.shtml.txt": {
+   "title": "戴都良論祈禱",
+   "latinTitle": "De oratione",
+   "extent": "excerpt",
+   "excerptRule": "取全文開頭 51 段，約 888 詞",
+   "translationNote": "自譯（研讀用，非教會核准禮儀譯本）",
+   "segments": [
+    {
+     "latin": [
+      "I."
+     ],
+     "zh": [
+      "我們既然蒙召進入天主的光榮，應當以極大的敬畏和虔誠來學習祈禱。因為祈禱不僅是基督徒的職責，更是通往救恩的道路。凡願意得著天主恩寵的人，必須恆心祈禱，依靠聖神的助佑。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "[1] Dei spiritus et Dei sermo et Dei ratio, sermo rationis et ratio sermonis et spiritus utriusque, Iesus Christus Dominus noster, nouis discipulis noui testamenti nouam orationis formam determinauit."
+     ],
+     "zh": [
+      "天主的聖神、天主的聖言、天主的理性，聖言的理性與理性的聖言，以及二者的聖神——我們的主耶穌基督——為新約的新弟子們規定了祈禱的新形式。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Oportebat enim in hac quoque specie nouum uinum nouis utribus recondi et nouam plagulam nouo adsui uestimento."
+     ],
+     "zh": [
+      "確實應當在這個方面也將新酒盛在新皮囊裡，並將新布縫在新衣裳上。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ceterum quicquid retro fuerat, aut demutatum est ut circumcisio aut suppletum ut reliqua lex aut impletum ut prophetia aut perfectum ut fides ipsa."
+     ],
+     "zh": [
+      "然而凡是從前存在的，要麼如割禮般被更改，要麼如其他法律般被補全，要麼如先知預言般被成就，要麼如信德本身般被圓滿。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "[2] Omnia de carnalibus in spiritualia renouauit noua Dei gratia, superducto euangelio, expunctore totius retro uetustatis, in quo et Dei spiritus et Dei sermo et Dei ratio approbatus est Dominus noster Iesus Christus, spiritus quo ualuit, sermo quo docuit, ratio qua uenit."
+     ],
+     "zh": [
+      "天主新的恩寵把一切從肉身的事物更新為精神的事物，藉著福音的傳布而改變了整個過往的舊時代。在福音中，我們的主耶穌基督被認可為天主的聖神、天主的聖言、天主的理性──他以聖神而有力量，以聖言而施教導，以理性而來臨。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Sic igitur &lt;oratio&gt; a Christo constituta ex tribus constituta est: ex spiritu, quo tantum potest, ex sermone quo enuntiatur, &lt;ex ratione quo+&gt;."
+     ],
+     "zh": [
+      "如此，由基督所立定的祈禱由三部分組成：由聖神所構成，它能發揮最大的力量；由言辭所構成，藉以表達；由理性所構成。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "[3] Docuerat et Ioannes discipulos suos adorare, sed omnia Ioannis Christo praestruebantur, donec ipso aucto &#151; sicut idem Ioannes praenuntiabat illum augeri oportere, se uero deminui &#151; totum praeministri opus cum ipso spiritu transiret ad Dominum."
+     ],
+     "zh": [
+      "若望也曾教導他的門徒們敬拜，但若望的一切都為基督預備好了，直到他本人增長——如同若望自己預言說他必須增長，而他自己則必須減少——他所有的先驅工作連同他的聖神一起轉移到了主那裡。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Ideo nec exstat in quae uerba docuerit Ioannes adorare, quod terrena caelestibus cesserint."
+     ],
+     "zh": [
+      "因此若望也沒有留下用什麼言詞教導人們去朝拜的記載，因為塵世的事物已讓位於天上的事物。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Qui de terra est, inquit, terrena fatur et Qui de caelis adest, quae uidit, ea loquitur."
+     ],
+     "zh": [
+      "那出於地的，言語就屬乎地；那從天而來的，將所見所聞的述說出來。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    },
+    {
+     "latin": [
+      "Et quid non caeleste quod Domini Christi est, ut haec quoque orandi disciplina?"
+     ],
+     "zh": [
+      "那麼，既然是主基督的，何不是天上的呢？這祈禱的訓導也是如此。"
+     ],
+     "engine": "claude-haiku-4-5-20251001"
+    }
+   ]
+  }
+ },
+ "generatedOn": "2026-08-25"
+}

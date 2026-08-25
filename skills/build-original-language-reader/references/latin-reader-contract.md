@@ -13,10 +13,11 @@ same shape the Greek reader was re-frozen to on 2026-08-24.
 | Lessons | 50 per volume, **exactly 20 words each** |
 | Vocabulary | 2,000 entries, the three sources disjoint |
 | 上冊 | 1,000 words in **Collins's own order**, units 1–35, proper names lifted out and the slots backfilled |
-| 上冊 readings | 50 complete Vulgate chapters: 1–25 New Testament, 26–50 Old Testament and deuterocanon |
+| 上冊 readings | **10 short liturgical formulas, then 40 complete Vulgate chapters** (20 New Testament, 20 Old Testament and deuterocanon). Re-shaped by the owner on 2026-08-25 |
 | 下冊 1–25 | Collins's overflow, then patristic and medieval corpus frequency; one patristic or medieval reading per lesson |
 | 下冊 26–50 | modern curial and liturgical corpus frequency; one Trent-or-later reading per lesson |
 | Ends with | the complete ordinary-time Ordo Missae, in 下冊 only, outside the fifty readings |
+| Authorization | the owner attests verbal permission for this private-use edition (2026-08-25); recorded as an attestation, not a written licence |
 | Builders | `scripts/build_latin_vocabulary_2000.py`, `build_latin_scripture_plan.py`, `build_latin_church_plan.py`, `build_latin_appendices.py` |
 
 ### The textbook is Collins, and its order is not a frequency ranking
@@ -126,7 +127,28 @@ with status `success` and no error of any kind. `engs=Gen` returns Romans 1.
 that checks the field it was asked about passes. **Guard on `engs`, the book code
 the response carries, never on the field you supplied.**
 
-## 上冊: 50 complete Vulgate chapters
+## 上冊: ten formulas, then forty chapters
+
+The volume opens with the ten short liturgical texts, because a lesson that has
+taught twenty words cannot read a Vulgate chapter but can read *In nomine
+Patris, et Filii, et Spiritus Sancti* — a sentence a reader of church Latin will
+say more often than any verse in the Bible. Complete chapters begin at lesson
+eleven.
+
+The formulas are graded like everything else rather than printed in the order of
+the Mass, so the Kyrie's four words come before the Creed's hundred and seventy.
+The Kyrie is Greek, kept in Greek by the Latin rite: its words are neither taught
+nor untaught Latin, and counting them as unknown made the shortest text in the
+book score as its hardest reading.
+
+The forty chapters were cut from fifty on a stated principle — first a second
+chapter from a book already represented (Mark 4, Luke 24, Acts 17, 1 Cor 15,
+Rev 21, Genesis 3, Exodus 20, Psalm 129), then the two whose Chinese cannot sit
+beside the Latin verse for verse: Job 38, whose verses this edition transposes,
+and Judith 13, where Jerome's recension runs to thirty-one verses against the
+Greek tradition's twenty.
+
+## 上冊: the chapters themselves
 
 Twenty-five New Testament, then twenty-five Old Testament and deuterocanonical,
 each half ordered by difficulty on its own — a reader is not asked to take the
@@ -248,6 +270,36 @@ follow that name through at least 60% of its verses, and it must not be a name
 that follows everything. Names outside the fifty printed chapters keep an empty
 cell. Every filled cell records `zhRoute` and the verse evidence.
 
+## Translation, layout, web and audio
+
+**Chinese for what had none** — `scripts/translate_latin_readings_zh.py`. The
+terminology is fixed in the prompt rather than left to the model, because a
+general-purpose Chinese Bible vocabulary is Protestant and would print 上帝
+beside a 思高 page that says 天主. Every unit is labelled 自譯（研讀用，非教會核准
+禮儀譯本）: the Chinese-speaking Church has its own approved liturgical
+translation of the Mass, 《感恩祭典》, and this is not it.
+
+One paragraph per request. Told four times, in numbered form, to return four
+paragraphs for four, this tier returned two; a request holding one paragraph
+cannot come back misaligned.
+
+**Print** — `scripts/build_latin_full_reader.py` writes two JIS-B5 DOCX from the
+same master, reusing the Hebrew reader's geometry and type ladder so the three
+readers shelve as one set. Rendered with LibreOffice: 上冊 267 pages, 下冊 577.
+
+**Web** — `scripts/build_latin_reader_data.py` assembles one master JSON;
+`data/originalReaders/latin-full-reader.ts` slices it; the API under
+`server/api/original-readers/lat-lessons/` is `requireAuth` + noindex, and the
+pages live at `/original-readers/lat-lessons`. The overview prints what is *not*
+finished, because a page that shows only its finished parts invites a draft to
+be mistaken for a release.
+
+**Audio** — `scripts/build_latin_reader_audio.py` renders the ten formulas and
+every memory unit with an Italian system voice, at the Roman pronunciation's
+nearest available approximation, and stamps the manifest `draft`. **This does not
+satisfy the audio gate.** A release track records reader, rate, cues, checksum
+and rights, and is a human voice.
+
 ## Stop conditions specific to this release
 
 - Never restate the upper volume's order as a frequency ranking. It is Collins's
@@ -260,7 +312,10 @@ cell. Every filled cell records `zhRoute` and the verse evidence.
 - Never describe a lower-volume reading as complete without checking its length
   against the source; and never mix a complete text and an excerpt without
   labelling both.
-- The Ordo Missae stays `source_pending` until an authorized edition is
-  recorded. A transcription found online is not that.
-- The 23 patristic readings have no Chinese. Do not report the lower volume as
-  translation-ready.
+- The Ordo Missae's Latin is Collins's Further Readings 1, which prints the
+  post-conciliar ordinary; the owner's verbal permission covers this private
+  edition. Its Chinese is 自譯 and must never be presented as 《感恩祭典》.
+- Never call the synthetic audio a release track, and never let a page offer a
+  play control for a clip that does not exist.
+- Never let the imported Hebrew layout keep its running header. Every page of
+  the first Latin print run said 聖經希伯來文原文讀本.

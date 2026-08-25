@@ -3,7 +3,7 @@
  "generatedOn": "2026-08-25",
  "perLesson": 2,
  "counts": {
-  "上冊": 79,
+  "上冊": 76,
   "下冊": 100
  },
  "上冊": [
@@ -12,17 +12,27 @@
    "title": "若望福音 17",
    "text": "De mundo non sunt, sicut et ego non sum de mundo.",
    "zh": "他們不屬於世界，就如我不屬於世界一樣。",
-   "fromLesson": 1,
+   "fromLesson": 11,
    "lesson": 5,
    "coverage": 1.0,
    "readableFrom": 5
+  },
+  {
+   "ref": "Salutatio et responsa 2",
+   "title": "彌撒致候與對答",
+   "text": "R. Et cum spiritu tuo.",
+   "zh": "R. 並與你的靈魂同在。",
+   "fromLesson": 6,
+   "lesson": 6,
+   "coverage": 1.0,
+   "readableFrom": 6
   },
   {
    "ref": "GEN 1:1",
    "title": "創世紀 1",
    "text": "In principio creavit Deus cælum et terram.",
    "zh": "在起初天主創造了天地。",
-   "fromLesson": 31,
+   "fromLesson": 35,
    "lesson": 7,
    "coverage": 1.0,
    "readableFrom": 7
@@ -32,7 +42,7 @@
    "title": "若望福音 1",
    "text": "Hoc erat in principio apud Deum.",
    "zh": "聖言在起初就與天主同在。",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 7,
    "coverage": 1.0,
    "readableFrom": 7
@@ -42,7 +52,7 @@
    "title": "達尼爾 3",
    "text": "Benedictus es in templo sancto gloriæ tuæ: et superlaudabilis, et supergloriosus in sæcula.",
    "zh": "在你光榮的聖殿中，你是可讚美的，應極受歌頌，極受光榮，直到永遠！",
-   "fromLesson": 39,
+   "fromLesson": 40,
    "lesson": 10,
    "coverage": 0.846,
    "readableFrom": 10
@@ -52,7 +62,7 @@
    "title": "馬爾谷福音 1",
    "text": "Initium Evangelii Jesu Christi, Filii Dei.",
    "zh": "天主子耶穌基督福音的開始，",
-   "fromLesson": 9,
+   "fromLesson": 17,
    "lesson": 11,
    "coverage": 0.8,
    "readableFrom": 11
@@ -62,7 +72,7 @@
    "title": "達尼爾 3",
    "text": "Benedictus es in firmamento cæli: et laudabilis et gloriosus in sæcula.",
    "zh": "你在天空穹蒼之上，是可讚美的，應受歌頌，應備受光榮，直到永遠！",
-   "fromLesson": 39,
+   "fromLesson": 40,
    "lesson": 12,
    "coverage": 0.818,
    "readableFrom": 12
@@ -72,7 +82,7 @@
    "title": "路加福音 15",
    "text": "Dixitque ei filius: Pater, peccavi in cælum, et coram te: jam non sum dignus vocari filius tuus.",
    "zh": "兒子向他說：父親，我得罪了天，也得罪了你，我不配再稱作你的兒子了！",
-   "fromLesson": 17,
+   "fromLesson": 24,
    "lesson": 13,
    "coverage": 1.0,
    "readableFrom": 13
@@ -82,47 +92,37 @@
    "title": "瑪竇福音 5",
    "text": "Audistis quia dictum est antiquis: Non mœchaberis.",
    "zh": "你們一向聽說過：『不可姦淫！』",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 13,
    "coverage": 0.857,
    "readableFrom": 13
-  },
-  {
-   "ref": "1CO 15:57",
-   "title": "格林多前書 15",
-   "text": "Deo autem gratias, qui dedit nobis victoriam per Dominum nostrum Jesum Christum.",
-   "zh": "感謝天主賜給了我們因我們的主耶穌基督所獲得的勝利。",
-   "fromLesson": 5,
-   "lesson": 14,
-   "coverage": 0.9,
-   "readableFrom": 14
   },
   {
    "ref": "MAT 5:9",
    "title": "瑪竇福音 5",
    "text": "Beati pacifici: quoniam filii Dei vocabuntur.",
    "zh": "締造和平的人是有福的，因為他們要稱為天主的子女。",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 14,
    "coverage": 0.8,
    "readableFrom": 13
-  },
-  {
-   "ref": "REV 21:1",
-   "title": "默示錄 21",
-   "text": "Et vidi cælum novum et terram novam. Primum enim cælum, et prima terra abiit, et mare jam non est.",
-   "zh": "隨後，我看見了一個新天新地，因為先前的天與先前的地已不見了，海也沒有了。",
-   "fromLesson": 25,
-   "lesson": 15,
-   "coverage": 1.0,
-   "readableFrom": 15
   },
   {
    "ref": "JHN 1:34",
    "title": "若望福音 1",
    "text": "Et ego vidi: et testimonium perhibui quia hic est Filius Dei.",
    "zh": "我看見了，我便作證：他就是天主子。」",
-   "fromLesson": 2,
+   "fromLesson": 12,
+   "lesson": 15,
+   "coverage": 1.0,
+   "readableFrom": 15
+  },
+  {
+   "ref": "JHN 1:36",
+   "title": "若望福音 1",
+   "text": "Et respiciens Jesum ambulantem, dicit: Ecce agnus Dei.",
+   "zh": "若翰看見耶穌走過，便注視着他說：「看，天主的羔羊！」",
+   "fromLesson": 12,
    "lesson": 15,
    "coverage": 1.0,
    "readableFrom": 15
@@ -132,7 +132,7 @@
    "title": "瑪竇福音 5",
    "text": "Sit autem sermo vester, est, est: non, non: quod autem his abundantius est, a malo est.",
    "zh": "你們的話該當是：是就說是，非就說非；其他多餘的，便是出於邪惡。",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 16,
    "coverage": 0.867,
    "readableFrom": 16
@@ -142,7 +142,7 @@
    "title": "路加福音 2",
    "text": "Videntes autem cognoverunt de verbo, quod dictum erat illis de puero hoc.",
    "zh": "他們看見以後，就把天使對他們論這小孩所說的事，傳揚開了，",
-   "fromLesson": 3,
+   "fromLesson": 13,
    "lesson": 16,
    "coverage": 1.0,
    "readableFrom": 16
@@ -152,67 +152,37 @@
    "title": "達尼爾 3",
    "text": "Et ambulabant in medio flammæ, laudantes Deum, et benedicentes Domino.",
    "zh": "他們在火焰中來回走動，歌頌天主，讚美上主。",
-   "fromLesson": 39,
+   "fromLesson": 40,
    "lesson": 17,
    "coverage": 0.875,
    "readableFrom": 17
-  },
-  {
-   "ref": "MRK 4:9",
-   "title": "馬爾谷福音 4",
-   "text": "Et dicebat: Qui habet aures audiendi, audiat.",
-   "zh": "他又說：「有耳聽的，聽罷！」",
-   "fromLesson": 18,
-   "lesson": 17,
-   "coverage": 1.0,
-   "readableFrom": 16
-  },
-  {
-   "ref": "1CO 15:9",
-   "title": "格林多前書 15",
-   "text": "Ego enim sum minimus Apostolorum, qui non sum dignus vocari Apostolus, quoniam persecutus sum ecclesiam Dei.",
-   "zh": "我原是宗徒中最小的一個，不配稱為宗徒，因為我迫害過天主的教會。",
-   "fromLesson": 5,
-   "lesson": 18,
-   "coverage": 1.0,
-   "readableFrom": 18
-  },
-  {
-   "ref": "JHN 1:36",
-   "title": "若望福音 1",
-   "text": "Et respiciens Jesum ambulantem, dicit: Ecce agnus Dei.",
-   "zh": "若翰看見耶穌走過，便注視着他說：「看，天主的羔羊！」",
-   "fromLesson": 2,
-   "lesson": 18,
-   "coverage": 1.0,
-   "readableFrom": 15
   },
   {
    "ref": "2MA 7:42",
    "title": "瑪加伯下 7",
    "text": "Igitur de sacrificiis et de nimiis crudelitatibus satis dictum est.",
    "zh": "以上所述，足以叫人明瞭當時關於吃祭品和因此而掀起的慘酷的刑罰。",
-   "fromLesson": 44,
+   "fromLesson": 45,
    "lesson": 19,
    "coverage": 0.8,
    "readableFrom": 19
   },
   {
-   "ref": "1CO 15:17",
-   "title": "格林多前書 15",
-   "text": "Quod si Christus non resurrexit, vana est fides vestra: adhuc enim estis in peccatis vestris.",
-   "zh": "如果基督沒有復活，你們的信仰便是假的，你們還是在罪惡中。",
-   "fromLesson": 5,
-   "lesson": 21,
-   "coverage": 0.933,
-   "readableFrom": 21
+   "ref": "Ritus conclusionis 3",
+   "title": "遣散禮",
+   "text": "V. Ite, missa est.",
+   "zh": "V. 你們去吧，彌撒禮成。",
+   "fromLesson": 3,
+   "lesson": 19,
+   "coverage": 1.0,
+   "readableFrom": 19
   },
   {
    "ref": "MAT 5:38",
    "title": "瑪竇福音 5",
    "text": "Audistis quia dictum est: Oculum pro oculo, et dentem pro dente.",
    "zh": "你們一向聽說過：『以眼還眼，以牙還牙。』",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 21,
    "coverage": 0.818,
    "readableFrom": 21
@@ -222,7 +192,7 @@
    "title": "若望福音 17",
    "text": "Nunc autem ad te venio: et hæc loquor in mundo, ut habeant gaudium meum impletum in semetipsis.",
    "zh": "但如今我到你那裏去，我在世上講這話，是為叫他們的心充滿我的喜樂。",
-   "fromLesson": 1,
+   "fromLesson": 11,
    "lesson": 22,
    "coverage": 0.941,
    "readableFrom": 22
@@ -232,7 +202,7 @@
    "title": "瑪竇福音 5",
    "text": "Audistis quia dictum est: Diliges proximum tuum, et odio habebis inimicum tuum.",
    "zh": "你們一向聽說過：『你應愛你的近人，恨你的仇人！』",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 22,
    "coverage": 0.917,
    "readableFrom": 22
@@ -242,7 +212,7 @@
    "title": "若望福音 1",
    "text": "Hic venit in testimonium ut testimonium perhiberet de lumine, ut omnes crederent per illum.",
    "zh": "這人來，是為作證，為給光作證，為使眾人藉他而信。",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 23,
    "coverage": 1.0,
    "readableFrom": 23
@@ -252,89 +222,89 @@
    "title": "默示錄 1",
    "text": "Scribe ergo quæ vidisti, et quæ sunt, et quæ oportet fieri post hæc.",
    "zh": "所以你應把你看見的事，現今的，以及這些事以後要發生的事，都寫下來。",
-   "fromLesson": 10,
+   "fromLesson": 18,
    "lesson": 23,
    "coverage": 0.846,
    "readableFrom": 23
-  },
-  {
-   "ref": "1CO 15:55",
-   "title": "格林多前書 15",
-   "text": "Ubi est mors victoria tua? ubi est mors stimulus tuus?",
-   "zh": "『死亡！你的勝利在那裏？死亡！你的刺在那裏？』",
-   "fromLesson": 5,
-   "lesson": 24,
-   "coverage": 0.9,
-   "readableFrom": 24
   },
   {
    "ref": "MAT 5:8",
    "title": "瑪竇福音 5",
    "text": "Beati mundo corde: quoniam ipsi Deum videbunt.",
    "zh": "心裏潔淨的人是有福的，因為他們要看見天主。",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 24,
    "coverage": 1.0,
    "readableFrom": 24
+  },
+  {
+   "ref": "PSA 50:7",
+   "title": "聖詠 50",
+   "text": "Ecce enim in iniquitatibus conceptus sum, et in peccatis concepit me mater mea.",
+   "zh": "是的，我自出世便染上了罪惡，我的母親在罪惡中懷孕了我。",
+   "fromLesson": 31,
+   "lesson": 24,
+   "coverage": 1.0,
+   "readableFrom": 23
   },
   {
    "ref": "JHN 1:51",
    "title": "若望福音 1",
    "text": "Et dicit ei: Amen, amen dico vobis, videbitis cælum apertum, et angelos Dei ascendentes, et descendentes supra Filium hominis.",
    "zh": "又向他說：「我實實在在告訴你們：你們要看見天開，天主的天使在人子身上，上去下來。」",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 25,
    "coverage": 0.889,
    "readableFrom": 25
   },
   {
-   "ref": "1CO 15:12",
-   "title": "格林多前書 15",
-   "text": "Si autem Christus prædicatur quod resurrexit a mortuis, quomodo quidam dicunt in vobis, quoniam resurrectio mortuorum non est?",
-   "zh": "我們既然傳報了基督已由死者中復活了，怎麼你們中還有人說：死人復活是沒有的事呢？",
-   "fromLesson": 5,
+   "ref": "MAT 6:10",
+   "title": "瑪竇福音 6",
+   "text": "Adveniat regnum tuum; fiat voluntas tua, sicut in cælo et in terra.",
+   "zh": "願你的國來臨，願你的旨意承行於地，如在天上一樣！",
+   "fromLesson": 26,
    "lesson": 25,
-   "coverage": 0.941,
-   "readableFrom": 25
+   "coverage": 0.917,
+   "readableFrom": 23
   },
   {
    "ref": "ACT 2:36",
    "title": "宗徒大事錄 2",
    "text": "Certissime sciat ergo omnis domus Israël, quia et Dominum eum et Christum fecit Deus hunc Jesum, quem vos crucifixistis.",
    "zh": "所以，以色列全家應確切知道：天主已把你們所釘死的這位耶穌，立為主，立為默西亞了。」",
-   "fromLesson": 16,
+   "fromLesson": 23,
    "lesson": 26,
    "coverage": 0.882,
    "readableFrom": 26
   },
   {
-   "ref": "REV 21:22",
-   "title": "默示錄 21",
-   "text": "Et templum non vidi in ea: Dominus enim Deus omnipotens templum illius est, et Agnus.",
-   "zh": "在城內我沒有看見聖殿，因為上主全能的天主和羔羊就是她的聖殿。",
-   "fromLesson": 25,
+   "ref": "DAN 3:60",
+   "title": "達尼爾 3",
+   "text": "Benedicite, aquæ omnes, quæ super cælos sunt, Domino: laudate et superexaltate eum in sæcula.",
+   "zh": "天上的水，請讚美上主，歌頌稱揚他，直到永遠！",
+   "fromLesson": 40,
    "lesson": 26,
-   "coverage": 1.0,
+   "coverage": 0.923,
    "readableFrom": 26
+  },
+  {
+   "ref": "Salutatio et responsa 1",
+   "title": "彌撒致候與對答",
+   "text": "V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis.",
+   "zh": "V. 我們的主耶穌基督的恩寵、天主的愛德、聖神的交融，與你們眾人同在。",
+   "fromLesson": 6,
+   "lesson": 27,
+   "coverage": 0.857,
+   "readableFrom": 27
   },
   {
    "ref": "LUK 2:26",
    "title": "路加福音 2",
    "text": "Et responsum acceperat a Spiritu Sancto, non visurum se mortem, nisi prius videret Christum Domini.",
    "zh": "他曾蒙聖神啟示：自己在未看見上主的受傅者以前，決見不到死亡。",
-   "fromLesson": 3,
+   "fromLesson": 13,
    "lesson": 27,
    "coverage": 0.846,
-   "readableFrom": 27
-  },
-  {
-   "ref": "DAN 3:86",
-   "title": "達尼爾 3",
-   "text": "Benedicite, spiritus et animæ justorum, Domino: laudate et superexaltate eum in sæcula.",
-   "zh": "義人的心靈，請讚美上主，歌頌稱揚他，直到永遠！",
-   "fromLesson": 39,
-   "lesson": 27,
-   "coverage": 0.909,
    "readableFrom": 27
   },
   {
@@ -342,59 +312,59 @@
    "title": "若望福音 15",
    "text": "In hoc clarificatus est Pater meus, ut fructum plurimum afferatis, et efficiamini mei discipuli.",
    "zh": "我父受光榮，即在於你們多結果實，如此你們就成為我的門徒。",
-   "fromLesson": 7,
+   "fromLesson": 15,
    "lesson": 28,
    "coverage": 0.857,
    "readableFrom": 28
-  },
-  {
-   "ref": "1CO 15:18",
-   "title": "格林多前書 15",
-   "text": "Ergo et qui dormierunt in Christo, perierunt.",
-   "zh": "那麼，那些在基督內死了的人，就喪亡了。",
-   "fromLesson": 5,
-   "lesson": 28,
-   "coverage": 0.857,
-   "readableFrom": 28
-  },
-  {
-   "ref": "EXO 20:21",
-   "title": "出谷紀 20",
-   "text": "Stetitque populus de longe. Moyses autem accessit ad caliginem in qua erat Deus.",
-   "zh": "百姓遠遠站着，梅瑟卻走近天主所在的濃雲中。",
-   "fromLesson": 30,
-   "lesson": 29,
-   "coverage": 0.833,
-   "readableFrom": 29
-  },
-  {
-   "ref": "ROM 8:22",
-   "title": "羅馬書 8",
-   "text": "Scimus enim quod omnis creatura ingemiscit, et parturit usque adhuc.",
-   "zh": "因為我們知道，直到如今，一切受造之物都一同歎息，同受產 痛；",
-   "fromLesson": 6,
-   "lesson": 29,
-   "coverage": 0.8,
-   "readableFrom": 29
   },
   {
    "ref": "ROM 8:16",
    "title": "羅馬書 8",
    "text": "Ipse enim Spiritus testimonium reddit spiritui nostro quod sumus filii Dei.",
    "zh": "聖神親自和我們的心神一同作證：我們是天主的子女。",
-   "fromLesson": 6,
-   "lesson": 30,
+   "fromLesson": 14,
+   "lesson": 28,
    "coverage": 1.0,
    "readableFrom": 27
+  },
+  {
+   "ref": "ROM 8:22",
+   "title": "羅馬書 8",
+   "text": "Scimus enim quod omnis creatura ingemiscit, et parturit usque adhuc.",
+   "zh": "因為我們知道，直到如今，一切受造之物都一同歎息，同受產 痛；",
+   "fromLesson": 14,
+   "lesson": 29,
+   "coverage": 0.8,
+   "readableFrom": 29
   },
   {
    "ref": "EPH 2:18",
    "title": "厄弗所書 2",
    "text": "Quoniam per ipsum habemus accessum ambo in uno Spiritu ad Patrem.",
    "zh": "因為藉着他，我們雙方在一個聖神內，纔得以進到父面前。",
-   "fromLesson": 15,
-   "lesson": 30,
+   "fromLesson": 22,
+   "lesson": 29,
    "coverage": 0.909,
+   "readableFrom": 27
+  },
+  {
+   "ref": "Ritus conclusionis 1",
+   "title": "遣散禮",
+   "text": "V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus.",
+   "zh": "V. 願全能的天主，聖父、聖子及聖神祝福你們。",
+   "fromLesson": 3,
+   "lesson": 30,
+   "coverage": 0.889,
+   "readableFrom": 27
+  },
+  {
+   "ref": "WIS 7:6",
+   "title": "智慧篇 7",
+   "text": "Unus ergo introitus est omnibus ad vitam, et similis exitus.",
+   "zh": "因為，人人進入生命的路，只有一條，去世亦然。",
+   "fromLesson": 44,
+   "lesson": 30,
+   "coverage": 0.9,
    "readableFrom": 27
   },
   {
@@ -402,7 +372,7 @@
    "title": "路加福音 2",
    "text": "Et reversi sunt pastores glorificantes et laudantes Deum in omnibus quæ audierant et viderant, sicut dictum est ad illos.",
    "zh": "牧人們為了他們所聽見和看見的一切，正如天使向他們說的一樣，就光榮讚美天主回去了。",
-   "fromLesson": 3,
+   "fromLesson": 13,
    "lesson": 31,
    "coverage": 0.944,
    "readableFrom": 31
@@ -412,7 +382,7 @@
    "title": "創世紀 1",
    "text": "Dixit vero Deus: Congregentur aquæ, quæ sub cælo sunt, in locum unum: et appareat arida. Et factum est ita.",
    "zh": "天主說：「天下的水應聚在一處，使旱地出現！」事就這樣成了。",
-   "fromLesson": 31,
+   "fromLesson": 35,
    "lesson": 31,
    "coverage": 0.944,
    "readableFrom": 31
@@ -422,7 +392,7 @@
    "title": "若望福音 1",
    "text": "Joannes testimonium perhibet de ipso, et clamat dicens: Hic erat quem dixi: Qui post me venturus est, ante me factus est: quia prior me erat.",
    "zh": "若翰為他作證呼喊說：「這就是我所說的：那在我以後來的，成了在我以前的，因他原先我而有。」",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 32,
    "coverage": 0.92,
    "readableFrom": 32
@@ -432,7 +402,7 @@
    "title": "厄則克耳 37",
    "text": "Et dixit ad me: Fili hominis, ossa hæc universa, domus Israël est. Ipsi dicunt: Aruerunt ossa nostra, et periit spes nostra, et abscissi sumus.",
    "zh": "上主對我說：「人子，這些骨頭就是以色列家族。他們常說：我們的骨頭乾枯了，絕望了，我們都完了！",
-   "fromLesson": 27,
+   "fromLesson": 32,
    "lesson": 32,
    "coverage": 0.875,
    "readableFrom": 32
@@ -442,7 +412,7 @@
    "title": "若望福音 15",
    "text": "Si opera non fecissem in eis quæ nemo alius fecit, peccatum non haberent: nunc autem et viderunt, et oderunt et me, et Patrem meum.",
    "zh": "假使我在他們中，沒有做過其他任何人從未做過的事業，他們便沒有罪；然而，現在他們看見了，卻仍恨了我和我父。",
-   "fromLesson": 7,
+   "fromLesson": 15,
    "lesson": 33,
    "coverage": 0.958,
    "readableFrom": 33
@@ -452,7 +422,7 @@
    "title": "瑪竇福音 5",
    "text": "Sic luceat lux vestra coram hominibus: ut videant opera vestra bona, et glorificent Patrem vestrum, qui in cælis est.",
    "zh": "照樣，你們的光也當在人前照耀，好使他們看見你們的善行，光榮你們在天之父。」",
-   "fromLesson": 14,
+   "fromLesson": 21,
    "lesson": 33,
    "coverage": 0.947,
    "readableFrom": 33
@@ -462,7 +432,7 @@
    "title": "若望福音 17",
    "text": "Ego in eis, et tu in me: ut sint consummati in unum: et cognoscat mundus quia tu me misisti, et dilexisti eos, sicut et me dilexisti.",
    "zh": "我在他們內，你在我內，使他們完全合而為一，為叫世界知道是你派遣了我，並且你愛了他們，如愛了我一樣。",
-   "fromLesson": 1,
+   "fromLesson": 11,
    "lesson": 34,
    "coverage": 0.962,
    "readableFrom": 34
@@ -472,7 +442,7 @@
    "title": "瑪加伯下 7",
    "text": "In me vero et in fratribus meis desinet Omnipotentis ira, quæ super omne genus nostrum juste superducta est.",
    "zh": "願全能者向我們全族所發的義怒，在我和我哥哥們身上，就此止息。」",
-   "fromLesson": 44,
+   "fromLesson": 45,
    "lesson": 34,
    "coverage": 0.889,
    "readableFrom": 34
@@ -482,7 +452,7 @@
    "title": "厄則克耳 37",
    "text": "Et dixit ad me: Fili hominis, putasne vivent ossa ista? Et dixi: Domine Deus, tu nosti.",
    "zh": "他問我說：「人子，這些骨頭可以復生嗎？」我答說：「吾主上主！你知道。」",
-   "fromLesson": 27,
+   "fromLesson": 32,
    "lesson": 35,
    "coverage": 1.0,
    "readableFrom": 35
@@ -492,7 +462,7 @@
    "title": "耶肋米亞 31",
    "text": "Longe Dominus apparuit mihi. Et in caritate perpetua dilexi te: ideo attraxi te, miserans.",
    "zh": "上主自遠處顯現給她說：我愛你，我永遠愛你，因此我給你保留了我的仁慈；",
-   "fromLesson": 41,
+   "fromLesson": 42,
    "lesson": 35,
    "coverage": 0.846,
    "readableFrom": 35
@@ -502,7 +472,7 @@
    "title": "默示錄 1",
    "text": "Sacramentum septem stellarum, quas vidisti in dextera mea, et septem candelabra aurea: septem stellæ, angeli sunt septem ecclesiarum: et candelabra septem, septem ecclesiæ sunt.",
    "zh": "至於你看見在我右手中的七顆星，和七盞金燈臺的奧義，就是：七顆星是指七個教會的天使，七盞燈臺是指七個教會。」",
-   "fromLesson": 10,
+   "fromLesson": 18,
    "lesson": 36,
    "coverage": 0.833,
    "readableFrom": 36
@@ -512,7 +482,7 @@
    "title": "伯多祿前書 2",
    "text": "Qui aliquando non populus, nunc autem populus Dei: qui non consecuti misericordiam, nunc autem misericordiam consecuti.",
    "zh": "你們從前不是天主的人民，如今卻是天主的人民；從前沒有蒙受愛憐，如今卻蒙受了愛憐。",
-   "fromLesson": 23,
+   "fromLesson": 29,
    "lesson": 36,
    "coverage": 0.933,
    "readableFrom": 36
@@ -522,7 +492,7 @@
    "title": "格林多前書 13",
    "text": "Cum essem parvulus, loquebar ut parvulus, sapiebam ut parvulus, cogitabam ut parvulus. Quando autem factus sum vir, evacuavi quæ erant parvuli.",
    "zh": "當我是孩子的時候，說話像孩子，看事像孩子，思想像孩子；幾時我一成了人，就把孩子的事丟棄了。",
-   "fromLesson": 8,
+   "fromLesson": 16,
    "lesson": 37,
    "coverage": 0.905,
    "readableFrom": 37
@@ -532,7 +502,7 @@
    "title": "若望福音 1",
    "text": "Et interrogaverunt eum: Quid ergo? Elias es tu? Et dixit: Non sum. Propheta es tu? Et respondit: Non.",
    "zh": "他們又問他說：「那麼你是誰？你是厄里亞嗎？」他說：「我不是。」「你是那位先知嗎？」他回答說：「不是。」",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 37,
    "coverage": 0.944,
    "readableFrom": 37
@@ -542,7 +512,7 @@
    "title": "格林多前書 13",
    "text": "Et si habuero prophetiam, et noverim mysteria omnia, et omnem scientiam: et si habuero omnem fidem ita ut montes transferam, caritatem autem non habuero, nihil sum.",
    "zh": "我若有先知之恩，又明白一切奧秘和各種知識；我若有全備的信心，甚至能移山；但我若沒有愛，我什麼也不算。",
-   "fromLesson": 8,
+   "fromLesson": 16,
    "lesson": 38,
    "coverage": 0.885,
    "readableFrom": 38
@@ -552,7 +522,7 @@
    "title": "希伯來書 1",
    "text": "Cui enim dixit aliquando angelorum: Filius meus es tu, ego hodie genui te? Et rursum: Ego ero illi in patrem, et ipse erit mihi in filium?",
    "zh": "天主曾向那一位天使說過：『你是我的兒子，我今日生了你？』或說過：『我要作他的父親，他要作我的兒子？』",
-   "fromLesson": 11,
+   "fromLesson": 19,
    "lesson": 38,
    "coverage": 0.885,
    "readableFrom": 38
@@ -562,19 +532,19 @@
    "title": "瑪竇福音 6",
    "text": "Si autem oculus tuus fuerit nequam, totum corpus tuum tenebrosum erit. Si ergo lumen, quod in te est, tenebræ sunt: ipsæ tenebræ quantæ erunt?",
    "zh": "但是，如果你的眼睛有了病，你的全身就都黑暗。那麼，你身上的光明如果成了黑暗，那該是多麼黑暗！」",
-   "fromLesson": 20,
+   "fromLesson": 26,
    "lesson": 39,
    "coverage": 0.917,
    "readableFrom": 39
   },
   {
-   "ref": "LUK 24:24",
-   "title": "路加福音 24",
-   "text": "Et abierunt quidam ex nostris ad monumentum: et ita invenerunt sicut mulieres dixerunt, ipsum vero non invenerunt.",
-   "zh": "我們中也有幾個到過墳墓那裏，所遇見的事，如同婦女們所說的一樣，但是沒有看見他。」",
-   "fromLesson": 4,
+   "ref": "GEN 1:31",
+   "title": "創世紀 1",
+   "text": "Viditque Deus cuncta quæ fecerat, et erant valde bona. Et factum est vespere et mane, dies sextus.",
+   "zh": "天主看了他造的一切，認為樣樣都很好。過了晚上，過了早晨，這是第六天。",
+   "fromLesson": 35,
    "lesson": 39,
-   "coverage": 0.941,
+   "coverage": 0.875,
    "readableFrom": 39
   },
   {
@@ -582,39 +552,39 @@
    "title": "若望福音 17",
    "text": "Et notum feci eis nomen tuum, et notum faciam: ut dilectio, qua dilexisti me, in ipsis sit, et ego in ipsis.",
    "zh": "我已經將你的名宣示給他們了，我還要宣示，好使你愛我的愛，在他們內，我也在他們內。」",
-   "fromLesson": 1,
+   "fromLesson": 11,
    "lesson": 40,
    "coverage": 0.905,
    "readableFrom": 40
   },
   {
-   "ref": "ACT 17:28",
-   "title": "宗徒大事錄 17",
-   "text": "In ipso enim vivimus, et movemur, et sumus: sicut et quidam vestrorum poëtarum dixerunt: Ipsius enim et genus sumus.",
-   "zh": "因為我們生活、行動、存在，都在他內，正如你們的某些詩人說的：「原來我們也是他的子孫。」",
-   "fromLesson": 13,
+   "ref": "MRK 1:10",
+   "title": "馬爾谷福音 1",
+   "text": "Et statim ascendens de aqua, vidit cælos apertos, et Spiritum tamquam columbam descendentem, et manentem in ipso.",
+   "zh": "他剛從水裏上來，就看見天裂開了，聖神有如鴿子降在他上面；",
+   "fromLesson": 17,
    "lesson": 40,
-   "coverage": 0.947,
+   "coverage": 0.824,
    "readableFrom": 40
   },
   {
-   "ref": "MRK 4:15",
-   "title": "馬爾谷福音 4",
-   "text": "Hi autem sunt, qui circa viam, ubi seminatur verbum, et cum audierint, confestim venit Satanas, et aufert verbum, quod seminatum est in cordibus eorum.",
-   "zh": "那撒在路旁的「話」是指人聽了後，撒殫立時來，把撒在他們心裏的「話」奪了去。",
-   "fromLesson": 18,
+   "ref": "JHN 1:14",
+   "title": "若望福音 1",
+   "text": "Et Verbum caro factum est, et habitavit in nobis: et vidimus gloriam ejus, gloriam quasi unigeniti a Patre plenum gratiæ et veritatis.",
+   "zh": "於是，聖言成了血肉，寄居在我們中間；我們見了他的光榮，正如父獨生者的光榮，滿溢恩寵和真理。",
+   "fromLesson": 12,
    "lesson": 41,
-   "coverage": 0.833,
+   "coverage": 0.857,
    "readableFrom": 41
   },
   {
-   "ref": "GEN 3:16",
-   "title": "創世紀 3",
-   "text": "Mulieri quoque dixit: Multiplicabo ærumnas tuas, et conceptus tuos: in dolore paries filios, et sub viri potestate eris, et ipse dominabitur tui.",
-   "zh": "後對女人說：「我要增加你懷孕的苦楚，在痛苦中生子；你要依戀你的丈夫，也要受他的管轄。」",
+   "ref": "ISA 53:9",
+   "title": "依撒意亞 53",
+   "text": "Et dabit impios pro sepultura, et divitem pro morte sua, eo quod iniquitatem non fecerit, neque dolus fuerit in ore ejus.",
+   "zh": "雖然他從未行過強暴，他口中也從未出過謊言，人們仍把他與歹徒同埋，使他同作惡的人同葬。",
    "fromLesson": 38,
    "lesson": 41,
-   "coverage": 0.864,
+   "coverage": 0.905,
    "readableFrom": 41
   },
   {
@@ -622,19 +592,19 @@
    "title": "斐理伯書 2",
    "text": "Nam et infirmatus est usque ad mortem: sed Deus misertus est ejus: non solum autem ejus, verum etiam et mei, ne tristitiam super tristitiam haberem.",
    "zh": "實在，他曾病得幾乎要死；但天主可憐了他，不但他，而且也可憐了我，免得我愁上加愁。",
-   "fromLesson": 19,
+   "fromLesson": 25,
    "lesson": 42,
    "coverage": 0.875,
    "readableFrom": 42
   },
   {
-   "ref": "LUK 24:36",
-   "title": "路加福音 24",
-   "text": "Dum autem hæc loquuntur, stetit Jesus in medio eorum, et dicit eis: Pax vobis: ego sum, nolite timere.",
-   "zh": "他們正談論這些事的時候，耶穌立在他們中間，向他們說：「願你們平安！」",
-   "fromLesson": 4,
+   "ref": "LUK 2:9",
+   "title": "路加福音 2",
+   "text": "Et ecce angelus Domini stetit juxta illos, et claritas Dei circumfulsit illos, et timuerunt timore magno.",
+   "zh": "有上主的一個天使站在他們身邊，上主的光耀環照着他們，他們便非常害怕。",
+   "fromLesson": 13,
    "lesson": 42,
-   "coverage": 0.833,
+   "coverage": 1.0,
    "readableFrom": 42
   },
   {
@@ -642,39 +612,39 @@
    "title": "路加福音 2",
    "text": "Et ait ad illos: Quid est quod me quærebatis? nesciebatis quia in his quæ Patris mei sunt, oportet me esse?",
    "zh": "耶穌對他們說：「你們為什麼尋找我？你們不知道我必須在我父親那裏嗎？」",
-   "fromLesson": 3,
+   "fromLesson": 13,
    "lesson": 43,
    "coverage": 0.85,
    "readableFrom": 43
   },
   {
-   "ref": "1CO 15:29",
-   "title": "格林多前書 15",
-   "text": "Alioquin quid facient qui baptizantur pro mortuis, si omnino mortui non resurgunt? ut quid et baptizantur pro illis?",
-   "zh": "不然，那些代死人受洗的是作什麼呢？如果死人總不復活，為什麼還代他們受洗呢？",
-   "fromLesson": 5,
+   "ref": "ACT 2:37",
+   "title": "宗徒大事錄 2",
+   "text": "His autem auditis, compuncti sunt corde, et dixerunt ad Petrum et ad reliquos Apostolos: Quid faciemus, viri fratres?",
+   "zh": "他們一聽見這些話，就心中刺痛，遂向伯多祿和其他宗徒說：「諸位仁人弟兄！我們該作甚麼？」",
+   "fromLesson": 23,
    "lesson": 43,
-   "coverage": 0.889,
+   "coverage": 0.833,
    "readableFrom": 43
-  },
-  {
-   "ref": "EXO 20:4",
-   "title": "出谷紀 20",
-   "text": "Non facies tibi sculptile, neque omnem similitudinem quæ est in cælo desuper, et quæ in terra deorsum, nec eorum quæ sunt in aquis sub terra.",
-   "zh": "不可為你製造任何彷彿天上、或地上、或地下水中之物的雕像。",
-   "fromLesson": 30,
-   "lesson": 44,
-   "coverage": 0.84,
-   "readableFrom": 44
   },
   {
    "ref": "1CO 13:12",
    "title": "格林多前書 13",
    "text": "Videmus nunc per speculum in ænigmate: tunc autem facie ad faciem. Nunc cognosco ex parte: tunc autem cognoscam sicut et cognitus sum.",
    "zh": "我們現在是藉着鏡子觀看，模糊不清，到那時，就要面對面的觀看了。我現在所認識的，只是局部的，那時我就要全認清了，如同我全被認清一樣。",
-   "fromLesson": 8,
+   "fromLesson": 16,
    "lesson": 44,
    "coverage": 0.864,
+   "readableFrom": 44
+  },
+  {
+   "ref": "JER 31:36",
+   "title": "耶肋米亞 31",
+   "text": "Si defecerint leges istæ coram me, dicit Dominus, tunc et semen Israël deficiet, ut non sit gens coram me cunctis diebus.",
+   "zh": "假若這些規定已由我面前消失──上主的斷語──以色列種族在我面前也就永不再是一個民族。",
+   "fromLesson": 42,
+   "lesson": 44,
+   "coverage": 0.85,
    "readableFrom": 44
   },
   {
@@ -682,7 +652,7 @@
    "title": "若望福音 1",
    "text": "Altera die vidit Joannes Jesum venientem ad se, et ait: Ecce agnus Dei, ecce qui tollit peccatum mundi.",
    "zh": "第二天，若翰見耶穌向他走來，便說：「看，天主的羔羊，除免世罪者！",
-   "fromLesson": 2,
+   "fromLesson": 12,
    "lesson": 45,
    "coverage": 0.824,
    "readableFrom": 45
@@ -692,7 +662,7 @@
    "title": "厄則克耳 37",
    "text": "Et adjunge illa unum ad alterum tibi in lignum unum: et erunt in unionem in manu tua.",
    "zh": "以後，你把兩塊木頭連成一塊，在你手中成為一塊。",
-   "fromLesson": 27,
+   "fromLesson": 32,
    "lesson": 45,
    "coverage": 0.882,
    "readableFrom": 45
@@ -702,7 +672,7 @@
    "title": "若望一書 1",
    "text": "Si autem in luce ambulamus sicut et ipse est in luce, societatem habemus ad invicem, et sanguis Jesu Christi, Filii ejus, emundat nos ab omni peccato.",
    "zh": "但如果我們在光中行走，如同他在光中一樣，我們就彼此相通，他聖子耶穌的血就會洗淨我們的各種罪過。",
-   "fromLesson": 12,
+   "fromLesson": 20,
    "lesson": 46,
    "coverage": 0.846,
    "readableFrom": 46
@@ -712,37 +682,37 @@
    "title": "若望福音 15",
    "text": "Si de mundo fuissetis, mundus quod suum erat diligeret: quia vero de mundo non estis, sed ego elegi vos de mundo, propterea odit vos mundus.",
    "zh": "若是你們屬於世界，世界必喜愛你們，有如屬於自己的人；但因你們不屬於世界，而是我從世界中揀選了你們，為此，世界纔恨你們。",
-   "fromLesson": 7,
+   "fromLesson": 15,
    "lesson": 46,
    "coverage": 0.84,
    "readableFrom": 46
   },
   {
-   "ref": "REV 21:27",
-   "title": "默示錄 21",
-   "text": "Non intrabit in eam aliquod coinquinatum, aut abominationem faciens et mendacium, nisi qui scripti sunt in libro vitæ Agni.",
-   "zh": "凡不潔淨、行可恥的事及撒謊的，絕對不得進入她內；只有那些記載在羔羊生命冊上的，纔將得進入。",
-   "fromLesson": 25,
+   "ref": "GAL 5:6",
+   "title": "迦拉達書 5",
+   "text": "Nam in Christo Jesu neque circumcisio aliquid valet, neque præputium: sed fides, quæ per caritatem operatur.",
+   "zh": "因為在基督耶穌內，割損或不割損都算不得什麼，唯有以愛德行事的信德，纔算什麼。",
+   "fromLesson": 30,
    "lesson": 47,
-   "coverage": 0.842,
+   "coverage": 0.875,
    "readableFrom": 47
   },
   {
-   "ref": "ACT 17:21",
-   "title": "宗徒大事錄 17",
-   "text": "(Athenienses autem omnes, et advenæ hospites, ad nihil aliud vacabant nisi aut dicere aut audire aliquid novi.)",
-   "zh": "原來所有的雅典人和僑居在那裏的外國人，不管其他的事，只是論談或探聽一些新奇的事。",
+   "ref": "LUK 2:48",
+   "title": "路加福音 2",
+   "text": "Et videntes admirati sunt. Et dixit mater ejus ad illum: Fili, quid fecisti nobis sic? ecce pater tuus et ego dolentes quærebamus te.",
+   "zh": "他們一看見他，便大為驚異，他的母親就向他說：「孩子，為什麼你這樣對待我們？看，你的父親和我，一直痛苦的找你。」",
    "fromLesson": 13,
    "lesson": 47,
-   "coverage": 0.824,
-   "readableFrom": 47
+   "coverage": 0.87,
+   "readableFrom": 46
   },
   {
    "ref": "JHN 15:15",
    "title": "若望福音 15",
    "text": "Jam non dicam vos servos: quia servus nescit quid faciat dominus ejus. Vos autem dixi amicos: quia omnia quæcumque audivi a Patre meo, nota feci vobis.",
    "zh": "我不再稱你們為僕人，因為僕人不知道他主人所做的事。我稱你們為朋友，因為凡由我父聽來的一切，我都顯示給你們了。",
-   "fromLesson": 7,
+   "fromLesson": 15,
    "lesson": 48,
    "coverage": 0.833,
    "readableFrom": 48
@@ -752,37 +722,37 @@
    "title": "路加福音 2",
    "text": "Et ecce homo erat in Jerusalem, cui nomen Simeon, et homo iste justus, et timoratus, exspectans consolationem Israël: et Spiritus Sanctus erat in eo.",
    "zh": "那時，在耶路撒冷有一個人，名叫西默盎。這人正義虔誠，期待着以色列的安慰，而且聖神也在他身上。",
-   "fromLesson": 3,
+   "fromLesson": 13,
    "lesson": 48,
    "coverage": 0.833,
    "readableFrom": 48
   },
   {
-   "ref": "LUK 24:12",
-   "title": "路加福音 24",
-   "text": "Petrus autem surgens cucurrit ad monumentum: et procumbens vidit linteamina sola posita, et abiit secum mirans quod factum fuerat.",
-   "zh": "伯多祿卻起來跑到墳墓那裏，屈身向裏窺看，只見有殮布，就走了，心裏驚異所發生的事。",
-   "fromLesson": 4,
+   "ref": "JHN 1:48",
+   "title": "若望福音 1",
+   "text": "Dicit ei Nathanaël: Unde me nosti? Respondit Jesus, et dixit ei: Priusquam te Philippus vocavit, cum esses sub ficu, vidi te.",
+   "zh": "納塔乃耳給他說：「你從那裏認識我呢？」耶穌回答說：「斐理伯叫你以前，當你還在無花果樹下時，我就看見了你。」",
+   "fromLesson": 12,
    "lesson": 49,
-   "coverage": 0.842,
-   "readableFrom": 49
+   "coverage": 0.857,
+   "readableFrom": 48
   },
   {
-   "ref": "LUK 24:9",
-   "title": "路加福音 24",
-   "text": "Et regressæ a monumento nuntiaverunt hæc omnia illis undecim, et ceteris omnibus.",
-   "zh": "從墳墓那裏回去，把這一切事報告給那十一門徒及其餘的眾人，",
-   "fromLesson": 4,
+   "ref": "ROM 8:15",
+   "title": "羅馬書 8",
+   "text": "Non enim accepistis spiritum servitutis iterum in timore, sed accepistis spiritum adoptionis filiorum, in quo clamamus: Abba (Pater).",
+   "zh": "其實你們所領受的聖神，並非使你們作奴隸，以致仍舊恐懼；而是使你們作義子。因此，我們呼號：「阿爸，父呀！」",
+   "fromLesson": 14,
    "lesson": 49,
-   "coverage": 0.818,
-   "readableFrom": 49
+   "coverage": 0.833,
+   "readableFrom": 48
   },
   {
    "ref": "JER 31:26",
    "title": "耶肋米亞 31",
    "text": "Ideo quasi de somno suscitatus sum: et vidi, et somnus meus dulcis mihi.",
    "zh": "至此，我醒來了，我看見了，我的睡眠為我實在甘甜。",
-   "fromLesson": 41,
+   "fromLesson": 42,
    "lesson": 50,
    "coverage": 0.923,
    "readableFrom": 50
@@ -792,7 +762,7 @@
    "title": "多俾亞傳 1",
    "text": "At ubi nuntiatum est regi, jussit eum occidi, et tulit omnem substantiam ejus.",
    "zh": "那時阿希加為我求情，我纔得以回到尼尼微，因為阿希加曾在亞述王散乃黑黎布執政時，作過酒正，又掌過指璽，當過家宰和財政等職，而厄撒哈冬又重用他；他是我的侄子，又是我的血親。",
-   "fromLesson": 48,
+   "fromLesson": 49,
    "lesson": 50,
    "coverage": 0.846,
    "readableFrom": 50
@@ -805,20 +775,20 @@
    "text": "Nam sicut poterit Deus quod volet, per seipsum, ita poterunt illi quod volent, per illum; quia sicut illi non aliud volent quam quod ille, ita ille volet quidquid illi volent; et quod ille volet, non poterit non esse.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 1,
    "coverage": 0.973,
    "readableFrom": 1
   },
   {
-   "ref": "Itinerarium mentis in Deum",
-   "title": "聖文德：心靈邁向天主的旅程",
-   "text": "Vide igitur ipsum purissimum esse , si potes, et occurrit tibi, quod ipsum non potest cogitari ut ab alio acceptum; ac per hoc necessario cogitatur ut omnimode primum, quod nec de nihilo nec de aliquo potest esse.",
+   "ref": "Passio Perpetuae et Felicitatis",
+   "title": "斐理伯與佩爾佩圖亞殉道錄",
+   "text": "In nouissimis enim diebus, dicit dominus, effundam de Spiritu meo super omnem carnem, et prophetabunt filii filiaeque eorum; et super seruos et ancillas meas de meo Spiritu effundam; et iuuenes uisiones uidebunt, et senes somnia somniabunt .",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 7,
    "lesson": 1,
-   "coverage": 0.917,
+   "coverage": 0.914,
    "readableFrom": 1
   },
   {
@@ -827,7 +797,7 @@
    "text": "(Ego sum, inquit, panis uitae et paulo supra: Panis est sermo Dei uiui, qui descendit de caelis), tunc quod et corpus eius in pane censetur (Hoc est corpus meum).",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 8,
+   "fromLesson": 5,
    "lesson": 2,
    "coverage": 0.964,
    "readableFrom": 2
@@ -849,7 +819,7 @@
    "text": "Ac sic est, ut in hisdem locis omnes fideles sequanltur scripturas, quando leguntur in ecclesia, quia omnes docentur per illos dies quadraginta, id est ab hora prima usque ad horam tertiam, quoniam per tres horas fit cathecisin.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 3,
    "coverage": 0.892,
    "readableFrom": 3
@@ -860,7 +830,7 @@
    "text": "Et ideo propter hoc ita ordinatum est, ut quando primum sanctae ecclesiae suprascriptae consecrabantur, ea dies esset, qua crux Domini fuerat inuenta, ut simul omni laetitia eadem die celebrarentur.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 3,
    "coverage": 0.893,
    "readableFrom": 3
@@ -871,7 +841,7 @@
    "text": "Tuba mirum spargens sonum per sepulcra regionum, coget omnes ante thronum.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 15,
+   "fromLesson": 18,
    "lesson": 4,
    "coverage": 0.818,
    "readableFrom": 4
@@ -904,7 +874,7 @@
    "text": "Passi, inquit, eramus, et exiuimus de carne, et coepimus ferri a quattuor angelis in orientem, quorum manus nos non tangebant.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 13,
+   "fromLesson": 7,
    "lesson": 5,
    "coverage": 0.842,
    "readableFrom": 5
@@ -915,7 +885,7 @@
    "text": "Cum ergo celebrata fuerint omnia iuxta consuetudinem in ecclesia maiore, et antequam fiat missa, mittet uocem archidiaconus et dicit primum: 'Ista septimana omne, id est die crastino, hora nona omnes ad Martyrium conueniamus, id est in ecclesia maiore'.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 6,
    "coverage": 0.868,
    "readableFrom": 6
@@ -959,7 +929,7 @@
    "text": "Et iam cum coeperit esse hora undecima, legitur ille locus de euangelio, ubi infantes cum ramis uel palmis occurrerunt Domino dicentes: Benedictus, qui uenit in nomine Domini.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 8,
    "coverage": 0.84,
    "readableFrom": 8
@@ -970,7 +940,7 @@
    "text": "Nam ut semper populus discat legem, et episcopus et presbyter prae- dicant assidue.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 8,
    "coverage": 0.923,
    "readableFrom": 8
@@ -981,7 +951,7 @@
    "text": "Vicit enim adversarium, ut audistis, testimoniis legis, non potestate virtutis; ut hoc ipso et hominem plus honoraret, et adversarium plus puniret, cum hostis generis humani non quasi a Deo jam, sed quasi ab homine vinceretur.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 18,
+   "fromLesson": 21,
    "lesson": 9,
    "coverage": 0.848,
    "readableFrom": 9
@@ -1014,7 +984,7 @@
    "text": "Deus autem scit, dominae sorores, quoniam maiores uoces sunt fidelium, qui ad audiendum intrant in cathecisen, ad ea, quae dicuntur uel exponuntur per episcopum, quam quando sedet et praedicat in ecclesia ad singula, quae taliter exponuntur.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 10,
    "coverage": 0.912,
    "readableFrom": 10
@@ -1036,7 +1006,7 @@
    "text": "Ac sic ergo cum ceperit esse pullorum cantus, descenditur de Imbomon cum ymnis et acceditur eodem loco, ubi orauit Dominus, sicut scriptum est in euangelio: Et accessit quantum iactum lapidis et orauit et cetera.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 11,
    "coverage": 0.879,
    "readableFrom": 11
@@ -1058,7 +1028,7 @@
    "text": "His ergo diebus enceniarum ipse ornatus omnium ecclesiarum est, qui et per pascha uel per epiphania, et ita per singulos dies diuersis locis sanctis proceditur ut per pascha uel epiphania.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 12,
    "coverage": 0.867,
    "readableFrom": 12
@@ -1075,14 +1045,14 @@
    "readableFrom": 13
   },
   {
-   "ref": "Proslogion",
-   "title": "聖安瑟莫：證道書",
-   "text": "Sed si utcumque capi potest, cur malos potes velle salvare: illud certe nulla ratione comprehendi potest, cur de similibus malis hos magis salves quam illos per summam bonitatem, et illos magis damnes quam istos per summam iustitiam.",
+   "ref": "Regula Benedicti",
+   "title": "聖本篤會規",
+   "text": "Omnia vero quæ discipulis docuerit esse contraria, in suis factis indicet non agenda, ne aliis prædicans ipse reprobus inveniatur , ne quando illi dicat Deus precanti: quare tu enarras iustitias meas et adsumis testamentum meum per os tuum?",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 9,
    "lesson": 13,
-   "coverage": 0.892,
+   "coverage": 0.917,
    "readableFrom": 13
   },
   {
@@ -1091,7 +1061,7 @@
    "text": "Et sic per operationes memoriae apparet, quod ipsa anima est imago Dei et similitudo adeo sibi praesens et eum habens praesentem, quod eum actu capit et per potentiam \"capax eius est et particeps esse potest\".",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 14,
    "coverage": 0.912,
    "readableFrom": 14
@@ -1102,7 +1072,7 @@
    "text": "Et quoniam pro monazontes, qui pedibus uadent, necesse est lenius iri: ac sic peruenitur in Ierusolima ea hora, qua incipit homo hominem posse cognoscere, id est prope luce, ante tamen quam lux fiat.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 14,
    "coverage": 0.879,
    "readableFrom": 14
@@ -1124,7 +1094,7 @@
    "text": "Postmodum autem alloquitur episcopus populum confortans eos, quoniam et tota nocte laborauerint et adhuc laboraturi sint ipsa die, ut non lassentur, sed habeant spem in Deo, qui eis pro eo labore maiorem mercedem redditurus sit.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 15,
    "coverage": 0.882,
    "readableFrom": 15
@@ -1135,7 +1105,7 @@
    "text": "Sed si sentire non nisi cognoscere aut non nisi ad cognoscendum est qui enim sentit cognoscit secundum sensuum proprietatem, ut per visum colores, per gustum sapores : non inconvenienter dicitur aliquo modo, sentire quidquid aliquo modo cognoscit.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 16,
    "coverage": 0.917,
    "readableFrom": 16
@@ -1157,7 +1127,7 @@
    "text": "Antea autem quam fiat missa, mittet uocem archidiaconus et dicet: 'Hora prima noctis omnes in ecclesia, quae est in Eleona, conueniamus, quoniam maximus labor nobis instat hodie nocte ista'.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 17,
    "coverage": 0.897,
    "readableFrom": 17
@@ -1168,7 +1138,7 @@
    "text": "Postmodum mane sicut et semper dominica die proceditur et aguntur, quae dominicis diebus consuetudo est agi, in ecclesia maiore, quae appellatur Martyrio, quae est in Golgotha post Crucem.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 17,
    "coverage": 0.857,
    "readableFrom": 17
@@ -1179,7 +1149,7 @@
    "text": "Intellectum vero illationis tunc veraciter percipit noster intellectus, quando videt, quod conclusio necessario sequitur ex praemissis; quod non solum videt in terminis necessariis, verum etiam in contingentibus, ut: si homo currit, homo movetur.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 18,
    "coverage": 0.909,
    "readableFrom": 18
@@ -1190,7 +1160,7 @@
    "text": "Petimus ergo substantiam et facultatem uoluntatis suae subministret nobis, ut salui simus et in caelis et in terris, quia summa est uoluntatis eius salus eorum quos adoptauit.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 8,
+   "fromLesson": 5,
    "lesson": 18,
    "coverage": 0.889,
    "readableFrom": 18
@@ -1212,7 +1182,7 @@
    "text": "Item alia die, id est secunda feria, aguntur, quae consuetudinis sunt de pullo primo agi usque ad mane ad Anastase, similiter et ad tertia et ad sexta aguntur ea, quae totis quadragesimis.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 19,
    "coverage": 0.844,
    "readableFrom": 19
@@ -1223,7 +1193,7 @@
    "text": "Deo autem gratias per Iesum Christum, Dominum nostrum , qui nos de tenebris transtulit in admirabile lumen suum , dum per haec lumina exterius data ad speculum mentis nostrae in quo relucent divina, disponimus ad reintrandum.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 20,
    "coverage": 0.844,
    "readableFrom": 20
@@ -1245,7 +1215,7 @@
    "text": "Et tunc omnis ipsa lectio perlegitur; postmodum fit oratio; benedictis cathecuminis quam fidelibus iuxta consuetudinem reuertuntur unusquisque ad domum suam similiter ut die dominica paschae hora noctis secunda.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 21,
    "coverage": 0.857,
    "readableFrom": 21
@@ -1267,7 +1237,7 @@
    "text": "Haec ergo dum aguntur, facit se hora quin ta; lucernare hoc idem hora sua fit sicut semper ad Anastasem et ad Crucem, sicut et singulis locis sanctis fit: dominica enim die nona fit.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 22,
    "coverage": 0.848,
    "readableFrom": 22
@@ -1289,7 +1259,7 @@
    "text": "Quam partem petitionum ita Dominus speciali insinuatione commendat, quasi totius orationis effectus in hac conditione consistat: Si enim, inquit, dimiseritis hominibus peccata eorum, dimittet et Pater vester vobis, qui in coelis est.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 18,
+   "fromLesson": 21,
    "lesson": 23,
    "coverage": 0.871,
    "readableFrom": 23
@@ -1355,7 +1325,7 @@
    "text": "Primum spectat potissime ad vetus testamentum, quod maxime praedicat divinae essentiae unitatem; unde dictum est Moysi: Ego sum qui sum; secundum ad novum, quod determinat personarum pluralitatem, baptizando in nomine Patris et Filii et Spiritus sancti .",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 26,
    "coverage": 0.889,
    "readableFrom": 26
@@ -1410,7 +1380,7 @@
    "text": "Qui quidem ignis Deus est, et huius caminus est in Ierusalem , et Christus hunc accendit in fervore, suae ardentissimae passionis, quam solus ille vere percipit, qui dicit: Suspendium elegit anima mea, et mortem ossa mea .",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 28,
    "coverage": 0.853,
    "readableFrom": 28
@@ -1421,7 +1391,7 @@
    "text": "Plenitudo autem rerum, secundum quod materia est plena formis secundum rationes seminales; forma est plena virtute secundum activam potentiam; virtus est plena effectibus secundum efficientiam, id ipsum maniteste declarat.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 29,
    "coverage": 0.862,
    "readableFrom": 29
@@ -1432,7 +1402,7 @@
    "text": "Quod autem dixi, propter illos fit missa mane, non quod illi soli communicent, sed omnes communicant, qui uolunt eadem die in Anastase communicare.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 29,
    "coverage": 0.913,
    "readableFrom": 29
@@ -1443,7 +1413,7 @@
    "text": "Neque enim propria tantum orationis officia complexa est, uel uenerationem Dei, aut hominis petitionem, sed omnem paene sermonem Domini, omnem commemorationem disciplinae, ut reuera in oratione breuiarium totius euangelii comprehendatur.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 8,
+   "fromLesson": 5,
    "lesson": 30,
    "coverage": 0.893,
    "readableFrom": 30
@@ -1509,7 +1479,7 @@
    "text": "Operatio multiplex, secundum quod est naturalis, secundum quod est artificialis, secundum quod est moralis, sua multiplicissima varietate ostendit immensitatem illius virtutis, artis et bonitatis, quae quidem est omnibus \"causa essendi, ratio intelligendi et ordo vivendi\".",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 33,
    "coverage": 0.886,
    "readableFrom": 33
@@ -1520,7 +1490,7 @@
    "text": "Nam etsi difficile sit intelligere, quomodo misericordia tua non absit a tua iustitia, necessarium tamen est credere, quia nequamquam adversatur quod exundat ex bonitate, quae nulla est sine iustitia, immo vere concordat iustitiae.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 33,
    "coverage": 0.875,
    "readableFrom": 33
@@ -1542,7 +1512,7 @@
    "text": "Ad quod cum saepe studioseque cogitationem converterem, atque aliquando mihi videretur iam posse capi quod quaerebam, aliquando mentis aciem omnino fugeret: tandem desperans volui cessare velut ab inquisitione rei, quam inveniri esset impossibile.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 34,
    "coverage": 0.879,
    "readableFrom": 34
@@ -1575,7 +1545,7 @@
    "text": "Propterea autem ea die hoc agitur, quoniam, sicut in euangelio scriptum est, ante sex dies paschae factum hoc fuisset in Bethania; de sabbato enim usque in quinta feria, qua post cena noctu comprehenditur Dominus, sex dies sunt.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 36,
    "coverage": 0.889,
    "readableFrom": 36
@@ -1608,7 +1578,7 @@
    "text": "Ubi cum uentum fuerit, similiter dicuntur ymni apti loco et diei, legitur denuo et ille locus de euangelio, ubi octauis paschae ingressus est Dominus, ubi erant discipuli, et arguet Thomam, quare incredulus fuisset.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 37,
    "coverage": 0.871,
    "readableFrom": 37
@@ -1630,7 +1600,7 @@
    "text": "Primus modus primo et principaliter defigit aspectum in ipsum esse, dicens, quod qui est primum nomen Dei.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 38,
    "coverage": 0.875,
    "readableFrom": 38
@@ -1674,7 +1644,7 @@
    "text": "Huc enim spectat exemplum parabolae totius.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 8,
+   "fromLesson": 5,
    "lesson": 40,
    "coverage": 0.833,
    "readableFrom": 40
@@ -1707,7 +1677,7 @@
    "text": "Si ergo cor hominis de tanto suo bono vix capiet gaudium suum: quomodo capax erit tot et tantorum gaudiorum?",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 42,
    "coverage": 0.842,
    "readableFrom": 42
@@ -1729,7 +1699,7 @@
    "text": "A pascha autem usque ad quinquagesima, id est pentecosten, hic penitus nemo ieiunat, nec ipsi aputactitae qui sunt.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 43,
    "coverage": 0.824,
    "readableFrom": 43
@@ -1751,7 +1721,7 @@
    "text": "Alia die autem, id est quinta feria quadragesimarum, celebratur missa ordine suo, ita ut et presbyteri et episcopus praedicent dicentes apte diei et loco; et postmodum sera reuertuntur unusquisque in Ierusolima.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 44,
    "coverage": 0.839,
    "readableFrom": 44
@@ -1762,7 +1732,7 @@
    "text": "Ecce et supervenit episcopus cum clero et statim ingreditur intro spelunca et de intro cancellos primum dicet orationem pro omnibus: commemorat etiam ipse nomina, quorum vult, sic benedicet cathecuminos.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 5,
+   "fromLesson": 8,
    "lesson": 44,
    "coverage": 0.862,
    "readableFrom": 44
@@ -1773,7 +1743,7 @@
    "text": "Si enim singula bona delectabilia sunt, cogita intente quam delectabile sit illud bonum, quod continet iucunditatem omnium bonorum; et non qualem in rebus creatis sumus experti, sed tanto differentem, quanto differt creator a creatura.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 45,
    "coverage": 0.879,
    "readableFrom": 45
@@ -1784,21 +1754,10 @@
    "text": "Sed quoniam non solum per nos transeundo, verum etiam in nobis contingit contemplari primum principium; et hoc maius est quam praecedens: ideo hic modus considerandi quartum obtinet contemplationis gradum.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 45,
    "coverage": 0.862,
    "readableFrom": 45
-  },
-  {
-   "ref": "Itinerarium mentis in Deum",
-   "title": "聖文德：心靈邁向天主的旅程",
-   "text": "Rogo igitur, quod magis pensetur intentio scribentis, quam opus, magis dictorum sensus quam sermo incultus, magis veritas quam venustas, magis exercitatio affectus quam eruditio intellectus.",
-   "zh": "",
-   "chineseParallel": "pending",
-   "fromLesson": 6,
-   "lesson": 46,
-   "coverage": 0.84,
-   "readableFrom": 46
   },
   {
    "ref": "Regula Benedicti",
@@ -1809,6 +1768,17 @@
    "fromLesson": 9,
    "lesson": 46,
    "coverage": 0.87,
+   "readableFrom": 46
+  },
+  {
+   "ref": "Itinerarium mentis in Deum",
+   "title": "聖文德：心靈邁向天主的旅程",
+   "text": "Rogo igitur, quod magis pensetur intentio scribentis, quam opus, magis dictorum sensus quam sermo incultus, magis veritas quam venustas, magis exercitatio affectus quam eruditio intellectus.",
+   "zh": "",
+   "chineseParallel": "pending",
+   "fromLesson": 11,
+   "lesson": 46,
+   "coverage": 0.84,
    "readableFrom": 46
   },
   {
@@ -1850,7 +1820,7 @@
    "text": "Quod si nefas est dicere, fas est credere te iuste misereri malis.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 3,
+   "fromLesson": 12,
    "lesson": 48,
    "coverage": 0.833,
    "readableFrom": 47
@@ -1861,7 +1831,7 @@
    "text": "Dum ergo haec per se singillatim consideras, habes unde veritatem contempleris; dum haec ad invicem confers, habes unde in admirationem altissimam suspendaris: et ideo, ut mens tua per admirationem in admirabilem ascendat contemplationem, haec simul sunt consideranda.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 49,
    "coverage": 0.838,
    "readableFrom": 49
@@ -1872,7 +1842,7 @@
    "text": "Si igitur Deus perfectus est spiritus, habet memoriam, intelligentiam et voluntatem, habet et Verbum genitum et Amorem spiratum, qui necessario distinguuntur, cum unus ab altero producatur, non essentialiter, non accidentaliter, ergo personaliter.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 49,
    "coverage": 0.871,
    "readableFrom": 49
@@ -1883,7 +1853,7 @@
    "text": "Nam ex memoria oritur intelligentia ut ipsius proles, quia tunc intelligimus, cum similituto, quae est in memoria, resultat in acie intellectus, quae nihil aliud est quam verbum; ex memoria et intelligentia spiratur amor tanquam nexus amborum.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 50,
    "coverage": 0.861,
    "readableFrom": 50
@@ -1894,7 +1864,7 @@
    "text": "Regentia haec et illa sunt substantiae spirituales sive omnino coniunctae, ut sunt animae brutales, sive coniunctae separabiliter, ut sunt spiritus rationales, sive coniunctae separabiliter, ut sunt spiritus caelestes, quos philosophi Intelligentias, nos Angelos appellamus.",
    "zh": "",
    "chineseParallel": "pending",
-   "fromLesson": 6,
+   "fromLesson": 11,
    "lesson": 50,
    "coverage": 0.853,
    "readableFrom": 50

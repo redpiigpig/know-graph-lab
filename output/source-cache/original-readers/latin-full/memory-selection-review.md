@@ -7,6 +7,8 @@
 
 - **第 5 課** `JHN 17:16` — De mundo non sunt, sicut et ego non sum de mundo.
   - 思高：他們不屬於世界，就如我不屬於世界一樣。
+- **第 6 課** `Salutatio et responsa 2` — R. Et cum spiritu tuo.
+  - 思高：R. 並與你的靈魂同在。
 - **第 7 課** `GEN 1:1` — In principio creavit Deus cælum et terram.
   - 思高：在起初天主創造了天地。
 - **第 7 課** `JHN 1:2` — Hoc erat in principio apud Deum.
@@ -21,30 +23,22 @@
   - 思高：兒子向他說：父親，我得罪了天，也得罪了你，我不配再稱作你的兒子了！
 - **第 13 課** `MAT 5:27` — Audistis quia dictum est antiquis: Non mœchaberis.
   - 思高：你們一向聽說過：『不可姦淫！』
-- **第 14 課** `1CO 15:57` — Deo autem gratias, qui dedit nobis victoriam per Dominum nostrum Jesum Christum.
-  - 思高：感謝天主賜給了我們因我們的主耶穌基督所獲得的勝利。
 - **第 14 課** `MAT 5:9` — Beati pacifici: quoniam filii Dei vocabuntur.
   - 思高：締造和平的人是有福的，因為他們要稱為天主的子女。
-- **第 15 課** `REV 21:1` — Et vidi cælum novum et terram novam. Primum enim cælum, et prima terra abiit, et mare jam non est.
-  - 思高：隨後，我看見了一個新天新地，因為先前的天與先前的地已不見了，海也沒有了。
 - **第 15 課** `JHN 1:34` — Et ego vidi: et testimonium perhibui quia hic est Filius Dei.
   - 思高：我看見了，我便作證：他就是天主子。」
+- **第 15 課** `JHN 1:36` — Et respiciens Jesum ambulantem, dicit: Ecce agnus Dei.
+  - 思高：若翰看見耶穌走過，便注視着他說：「看，天主的羔羊！」
 - **第 16 課** `MAT 5:37` — Sit autem sermo vester, est, est: non, non: quod autem his abundantius est, a malo est.
   - 思高：你們的話該當是：是就說是，非就說非；其他多餘的，便是出於邪惡。
 - **第 16 課** `LUK 2:17` — Videntes autem cognoverunt de verbo, quod dictum erat illis de puero hoc.
   - 思高：他們看見以後，就把天使對他們論這小孩所說的事，傳揚開了，
 - **第 17 課** `DAN 3:24` — Et ambulabant in medio flammæ, laudantes Deum, et benedicentes Domino.
   - 思高：他們在火焰中來回走動，歌頌天主，讚美上主。
-- **第 17 課** `MRK 4:9` — Et dicebat: Qui habet aures audiendi, audiat.
-  - 思高：他又說：「有耳聽的，聽罷！」
-- **第 18 課** `1CO 15:9` — Ego enim sum minimus Apostolorum, qui non sum dignus vocari Apostolus, quoniam persecutus sum ecclesiam Dei.
-  - 思高：我原是宗徒中最小的一個，不配稱為宗徒，因為我迫害過天主的教會。
-- **第 18 課** `JHN 1:36` — Et respiciens Jesum ambulantem, dicit: Ecce agnus Dei.
-  - 思高：若翰看見耶穌走過，便注視着他說：「看，天主的羔羊！」
 - **第 19 課** `2MA 7:42` — Igitur de sacrificiis et de nimiis crudelitatibus satis dictum est.
   - 思高：以上所述，足以叫人明瞭當時關於吃祭品和因此而掀起的慘酷的刑罰。
-- **第 21 課** `1CO 15:17` — Quod si Christus non resurrexit, vana est fides vestra: adhuc enim estis in peccatis vestris.
-  - 思高：如果基督沒有復活，你們的信仰便是假的，你們還是在罪惡中。
+- **第 19 課** `Ritus conclusionis 3` — V. Ite, missa est.
+  - 思高：V. 你們去吧，彌撒禮成。
 - **第 21 課** `MAT 5:38` — Audistis quia dictum est: Oculum pro oculo, et dentem pro dente.
   - 思高：你們一向聽說過：『以眼還眼，以牙還牙。』
 - **第 22 課** `JHN 17:13` — Nunc autem ad te venio: et hæc loquor in mundo, ut habeant gaudium meum impletum in semetipsis.
@@ -55,34 +49,34 @@
   - 思高：這人來，是為作證，為給光作證，為使眾人藉他而信。
 - **第 23 課** `REV 1:19` — Scribe ergo quæ vidisti, et quæ sunt, et quæ oportet fieri post hæc.
   - 思高：所以你應把你看見的事，現今的，以及這些事以後要發生的事，都寫下來。
-- **第 24 課** `1CO 15:55` — Ubi est mors victoria tua? ubi est mors stimulus tuus?
-  - 思高：『死亡！你的勝利在那裏？死亡！你的刺在那裏？』
 - **第 24 課** `MAT 5:8` — Beati mundo corde: quoniam ipsi Deum videbunt.
   - 思高：心裏潔淨的人是有福的，因為他們要看見天主。
+- **第 24 課** `PSA 50:7` — Ecce enim in iniquitatibus conceptus sum, et in peccatis concepit me mater mea.
+  - 思高：是的，我自出世便染上了罪惡，我的母親在罪惡中懷孕了我。
 - **第 25 課** `JHN 1:51` — Et dicit ei: Amen, amen dico vobis, videbitis cælum apertum, et angelos Dei ascendentes, et descendentes supra Filium hominis.
   - 思高：又向他說：「我實實在在告訴你們：你們要看見天開，天主的天使在人子身上，上去下來。」
-- **第 25 課** `1CO 15:12` — Si autem Christus prædicatur quod resurrexit a mortuis, quomodo quidam dicunt in vobis, quoniam resurrectio mortuorum non est?
-  - 思高：我們既然傳報了基督已由死者中復活了，怎麼你們中還有人說：死人復活是沒有的事呢？
+- **第 25 課** `MAT 6:10` — Adveniat regnum tuum; fiat voluntas tua, sicut in cælo et in terra.
+  - 思高：願你的國來臨，願你的旨意承行於地，如在天上一樣！
 - **第 26 課** `ACT 2:36` — Certissime sciat ergo omnis domus Israël, quia et Dominum eum et Christum fecit Deus hunc Jesum, quem vos crucifixistis.
   - 思高：所以，以色列全家應確切知道：天主已把你們所釘死的這位耶穌，立為主，立為默西亞了。」
-- **第 26 課** `REV 21:22` — Et templum non vidi in ea: Dominus enim Deus omnipotens templum illius est, et Agnus.
-  - 思高：在城內我沒有看見聖殿，因為上主全能的天主和羔羊就是她的聖殿。
+- **第 26 課** `DAN 3:60` — Benedicite, aquæ omnes, quæ super cælos sunt, Domino: laudate et superexaltate eum in sæcula.
+  - 思高：天上的水，請讚美上主，歌頌稱揚他，直到永遠！
+- **第 27 課** `Salutatio et responsa 1` — V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis.
+  - 思高：V. 我們的主耶穌基督的恩寵、天主的愛德、聖神的交融，與你們眾人同在。
 - **第 27 課** `LUK 2:26` — Et responsum acceperat a Spiritu Sancto, non visurum se mortem, nisi prius videret Christum Domini.
   - 思高：他曾蒙聖神啟示：自己在未看見上主的受傅者以前，決見不到死亡。
-- **第 27 課** `DAN 3:86` — Benedicite, spiritus et animæ justorum, Domino: laudate et superexaltate eum in sæcula.
-  - 思高：義人的心靈，請讚美上主，歌頌稱揚他，直到永遠！
 - **第 28 課** `JHN 15:8` — In hoc clarificatus est Pater meus, ut fructum plurimum afferatis, et efficiamini mei discipuli.
   - 思高：我父受光榮，即在於你們多結果實，如此你們就成為我的門徒。
-- **第 28 課** `1CO 15:18` — Ergo et qui dormierunt in Christo, perierunt.
-  - 思高：那麼，那些在基督內死了的人，就喪亡了。
-- **第 29 課** `EXO 20:21` — Stetitque populus de longe. Moyses autem accessit ad caliginem in qua erat Deus.
-  - 思高：百姓遠遠站着，梅瑟卻走近天主所在的濃雲中。
+- **第 28 課** `ROM 8:16` — Ipse enim Spiritus testimonium reddit spiritui nostro quod sumus filii Dei.
+  - 思高：聖神親自和我們的心神一同作證：我們是天主的子女。
 - **第 29 課** `ROM 8:22` — Scimus enim quod omnis creatura ingemiscit, et parturit usque adhuc.
   - 思高：因為我們知道，直到如今，一切受造之物都一同歎息，同受產 痛；
-- **第 30 課** `ROM 8:16` — Ipse enim Spiritus testimonium reddit spiritui nostro quod sumus filii Dei.
-  - 思高：聖神親自和我們的心神一同作證：我們是天主的子女。
-- **第 30 課** `EPH 2:18` — Quoniam per ipsum habemus accessum ambo in uno Spiritu ad Patrem.
+- **第 29 課** `EPH 2:18` — Quoniam per ipsum habemus accessum ambo in uno Spiritu ad Patrem.
   - 思高：因為藉着他，我們雙方在一個聖神內，纔得以進到父面前。
+- **第 30 課** `Ritus conclusionis 1` — V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus.
+  - 思高：V. 願全能的天主，聖父、聖子及聖神祝福你們。
+- **第 30 課** `WIS 7:6` — Unus ergo introitus est omnibus ad vitam, et similis exitus.
+  - 思高：因為，人人進入生命的路，只有一條，去世亦然。
 - **第 31 課** `LUK 2:20` — Et reversi sunt pastores glorificantes et laudantes Deum in omnibus quæ audierant et viderant, sicut dictum est ad illos.
   - 思高：牧人們為了他們所聽見和看見的一切，正如天使向他們說的一樣，就光榮讚美天主回去了。
 - **第 31 課** `GEN 1:9` — Dixit vero Deus: Congregentur aquæ, quæ sub cælo sunt, in locum unum: et appareat arida. Et factum est ita.
@@ -117,28 +111,28 @@
   - 思高：天主曾向那一位天使說過：『你是我的兒子，我今日生了你？』或說過：『我要作他的父親，他要作我的兒子？』
 - **第 39 課** `MAT 6:23` — Si autem oculus tuus fuerit nequam, totum corpus tuum tenebrosum erit. Si ergo lumen, quod in te est, tenebræ sunt: ipsæ tenebræ quantæ erunt?
   - 思高：但是，如果你的眼睛有了病，你的全身就都黑暗。那麼，你身上的光明如果成了黑暗，那該是多麼黑暗！」
-- **第 39 課** `LUK 24:24` — Et abierunt quidam ex nostris ad monumentum: et ita invenerunt sicut mulieres dixerunt, ipsum vero non invenerunt.
-  - 思高：我們中也有幾個到過墳墓那裏，所遇見的事，如同婦女們所說的一樣，但是沒有看見他。」
+- **第 39 課** `GEN 1:31` — Viditque Deus cuncta quæ fecerat, et erant valde bona. Et factum est vespere et mane, dies sextus.
+  - 思高：天主看了他造的一切，認為樣樣都很好。過了晚上，過了早晨，這是第六天。
 - **第 40 課** `JHN 17:26` — Et notum feci eis nomen tuum, et notum faciam: ut dilectio, qua dilexisti me, in ipsis sit, et ego in ipsis.
   - 思高：我已經將你的名宣示給他們了，我還要宣示，好使你愛我的愛，在他們內，我也在他們內。」
-- **第 40 課** `ACT 17:28` — In ipso enim vivimus, et movemur, et sumus: sicut et quidam vestrorum poëtarum dixerunt: Ipsius enim et genus sumus.
-  - 思高：因為我們生活、行動、存在，都在他內，正如你們的某些詩人說的：「原來我們也是他的子孫。」
-- **第 41 課** `MRK 4:15` — Hi autem sunt, qui circa viam, ubi seminatur verbum, et cum audierint, confestim venit Satanas, et aufert verbum, quod seminatum est in cordibus eorum.
-  - 思高：那撒在路旁的「話」是指人聽了後，撒殫立時來，把撒在他們心裏的「話」奪了去。
-- **第 41 課** `GEN 3:16` — Mulieri quoque dixit: Multiplicabo ærumnas tuas, et conceptus tuos: in dolore paries filios, et sub viri potestate eris, et ipse dominabitur tui.
-  - 思高：後對女人說：「我要增加你懷孕的苦楚，在痛苦中生子；你要依戀你的丈夫，也要受他的管轄。」
+- **第 40 課** `MRK 1:10` — Et statim ascendens de aqua, vidit cælos apertos, et Spiritum tamquam columbam descendentem, et manentem in ipso.
+  - 思高：他剛從水裏上來，就看見天裂開了，聖神有如鴿子降在他上面；
+- **第 41 課** `JHN 1:14` — Et Verbum caro factum est, et habitavit in nobis: et vidimus gloriam ejus, gloriam quasi unigeniti a Patre plenum gratiæ et veritatis.
+  - 思高：於是，聖言成了血肉，寄居在我們中間；我們見了他的光榮，正如父獨生者的光榮，滿溢恩寵和真理。
+- **第 41 課** `ISA 53:9` — Et dabit impios pro sepultura, et divitem pro morte sua, eo quod iniquitatem non fecerit, neque dolus fuerit in ore ejus.
+  - 思高：雖然他從未行過強暴，他口中也從未出過謊言，人們仍把他與歹徒同埋，使他同作惡的人同葬。
 - **第 42 課** `PHP 2:27` — Nam et infirmatus est usque ad mortem: sed Deus misertus est ejus: non solum autem ejus, verum etiam et mei, ne tristitiam super tristitiam haberem.
   - 思高：實在，他曾病得幾乎要死；但天主可憐了他，不但他，而且也可憐了我，免得我愁上加愁。
-- **第 42 課** `LUK 24:36` — Dum autem hæc loquuntur, stetit Jesus in medio eorum, et dicit eis: Pax vobis: ego sum, nolite timere.
-  - 思高：他們正談論這些事的時候，耶穌立在他們中間，向他們說：「願你們平安！」
+- **第 42 課** `LUK 2:9` — Et ecce angelus Domini stetit juxta illos, et claritas Dei circumfulsit illos, et timuerunt timore magno.
+  - 思高：有上主的一個天使站在他們身邊，上主的光耀環照着他們，他們便非常害怕。
 - **第 43 課** `LUK 2:49` — Et ait ad illos: Quid est quod me quærebatis? nesciebatis quia in his quæ Patris mei sunt, oportet me esse?
   - 思高：耶穌對他們說：「你們為什麼尋找我？你們不知道我必須在我父親那裏嗎？」
-- **第 43 課** `1CO 15:29` — Alioquin quid facient qui baptizantur pro mortuis, si omnino mortui non resurgunt? ut quid et baptizantur pro illis?
-  - 思高：不然，那些代死人受洗的是作什麼呢？如果死人總不復活，為什麼還代他們受洗呢？
-- **第 44 課** `EXO 20:4` — Non facies tibi sculptile, neque omnem similitudinem quæ est in cælo desuper, et quæ in terra deorsum, nec eorum quæ sunt in aquis sub terra.
-  - 思高：不可為你製造任何彷彿天上、或地上、或地下水中之物的雕像。
+- **第 43 課** `ACT 2:37` — His autem auditis, compuncti sunt corde, et dixerunt ad Petrum et ad reliquos Apostolos: Quid faciemus, viri fratres?
+  - 思高：他們一聽見這些話，就心中刺痛，遂向伯多祿和其他宗徒說：「諸位仁人弟兄！我們該作甚麼？」
 - **第 44 課** `1CO 13:12` — Videmus nunc per speculum in ænigmate: tunc autem facie ad faciem. Nunc cognosco ex parte: tunc autem cognoscam sicut et cognitus sum.
   - 思高：我們現在是藉着鏡子觀看，模糊不清，到那時，就要面對面的觀看了。我現在所認識的，只是局部的，那時我就要全認清了，如同我全被認清一樣。
+- **第 44 課** `JER 31:36` — Si defecerint leges istæ coram me, dicit Dominus, tunc et semen Israël deficiet, ut non sit gens coram me cunctis diebus.
+  - 思高：假若這些規定已由我面前消失──上主的斷語──以色列種族在我面前也就永不再是一個民族。
 - **第 45 課** `JHN 1:29` — Altera die vidit Joannes Jesum venientem ad se, et ait: Ecce agnus Dei, ecce qui tollit peccatum mundi.
   - 思高：第二天，若翰見耶穌向他走來，便說：「看，天主的羔羊，除免世罪者！
 - **第 45 課** `EZK 37:17` — Et adjunge illa unum ad alterum tibi in lignum unum: et erunt in unionem in manu tua.
@@ -147,18 +141,18 @@
   - 思高：但如果我們在光中行走，如同他在光中一樣，我們就彼此相通，他聖子耶穌的血就會洗淨我們的各種罪過。
 - **第 46 課** `JHN 15:19` — Si de mundo fuissetis, mundus quod suum erat diligeret: quia vero de mundo non estis, sed ego elegi vos de mundo, propterea odit vos mundus.
   - 思高：若是你們屬於世界，世界必喜愛你們，有如屬於自己的人；但因你們不屬於世界，而是我從世界中揀選了你們，為此，世界纔恨你們。
-- **第 47 課** `REV 21:27` — Non intrabit in eam aliquod coinquinatum, aut abominationem faciens et mendacium, nisi qui scripti sunt in libro vitæ Agni.
-  - 思高：凡不潔淨、行可恥的事及撒謊的，絕對不得進入她內；只有那些記載在羔羊生命冊上的，纔將得進入。
-- **第 47 課** `ACT 17:21` — (Athenienses autem omnes, et advenæ hospites, ad nihil aliud vacabant nisi aut dicere aut audire aliquid novi.)
-  - 思高：原來所有的雅典人和僑居在那裏的外國人，不管其他的事，只是論談或探聽一些新奇的事。
+- **第 47 課** `GAL 5:6` — Nam in Christo Jesu neque circumcisio aliquid valet, neque præputium: sed fides, quæ per caritatem operatur.
+  - 思高：因為在基督耶穌內，割損或不割損都算不得什麼，唯有以愛德行事的信德，纔算什麼。
+- **第 47 課** `LUK 2:48` — Et videntes admirati sunt. Et dixit mater ejus ad illum: Fili, quid fecisti nobis sic? ecce pater tuus et ego dolentes quærebamus te.
+  - 思高：他們一看見他，便大為驚異，他的母親就向他說：「孩子，為什麼你這樣對待我們？看，你的父親和我，一直痛苦的找你。」
 - **第 48 課** `JHN 15:15` — Jam non dicam vos servos: quia servus nescit quid faciat dominus ejus. Vos autem dixi amicos: quia omnia quæcumque audivi a Patre meo, nota feci vobis.
   - 思高：我不再稱你們為僕人，因為僕人不知道他主人所做的事。我稱你們為朋友，因為凡由我父聽來的一切，我都顯示給你們了。
 - **第 48 課** `LUK 2:25` — Et ecce homo erat in Jerusalem, cui nomen Simeon, et homo iste justus, et timoratus, exspectans consolationem Israël: et Spiritus Sanctus erat in eo.
   - 思高：那時，在耶路撒冷有一個人，名叫西默盎。這人正義虔誠，期待着以色列的安慰，而且聖神也在他身上。
-- **第 49 課** `LUK 24:12` — Petrus autem surgens cucurrit ad monumentum: et procumbens vidit linteamina sola posita, et abiit secum mirans quod factum fuerat.
-  - 思高：伯多祿卻起來跑到墳墓那裏，屈身向裏窺看，只見有殮布，就走了，心裏驚異所發生的事。
-- **第 49 課** `LUK 24:9` — Et regressæ a monumento nuntiaverunt hæc omnia illis undecim, et ceteris omnibus.
-  - 思高：從墳墓那裏回去，把這一切事報告給那十一門徒及其餘的眾人，
+- **第 49 課** `JHN 1:48` — Dicit ei Nathanaël: Unde me nosti? Respondit Jesus, et dixit ei: Priusquam te Philippus vocavit, cum esses sub ficu, vidi te.
+  - 思高：納塔乃耳給他說：「你從那裏認識我呢？」耶穌回答說：「斐理伯叫你以前，當你還在無花果樹下時，我就看見了你。」
+- **第 49 課** `ROM 8:15` — Non enim accepistis spiritum servitutis iterum in timore, sed accepistis spiritum adoptionis filiorum, in quo clamamus: Abba (Pater).
+  - 思高：其實你們所領受的聖神，並非使你們作奴隸，以致仍舊恐懼；而是使你們作義子。因此，我們呼號：「阿爸，父呀！」
 - **第 50 課** `JER 31:26` — Ideo quasi de somno suscitatus sum: et vidi, et somnus meus dulcis mihi.
   - 思高：至此，我醒來了，我看見了，我的睡眠為我實在甘甜。
 - **第 50 課** `TOB 1:22` — At ubi nuntiatum est regi, jussit eum occidi, et tulit omnem substantiam ejus.
@@ -167,7 +161,7 @@
 ## 下冊
 
 - **第 1 課** `Proslogion` — Nam sicut poterit Deus quod volet, per seipsum, ita poterunt illi quod volent, per illum; quia sicut illi non aliud volent quam quod ille, ita ille volet quidquid illi volent; et quod ille volet, non poterit non esse.
-- **第 1 課** `Itinerarium mentis in Deum` — Vide igitur ipsum purissimum esse , si potes, et occurrit tibi, quod ipsum non potest cogitari ut ab alio acceptum; ac per hoc necessario cogitatur ut omnimode primum, quod nec de nihilo nec de aliquo potest esse.
+- **第 1 課** `Passio Perpetuae et Felicitatis` — In nouissimis enim diebus, dicit dominus, effundam de Spiritu meo super omnem carnem, et prophetabunt filii filiaeque eorum; et super seruos et ancillas meas de meo Spiritu effundam; et iuuenes uisiones uidebunt, et senes somnia somniabunt .
 - **第 2 課** `De oratione` — (Ego sum, inquit, panis uitae et paulo supra: Panis est sermo Dei uiui, qui descendit de caelis), tunc quod et corpus eius in pane censetur (Hoc est corpus meum).
 - **第 2 課** `Regula Benedicti` — Et cum hæc feceritis, oculi mei super vos et aures meas ad preces vestras, et antequam me invocetis, dicam vobis: Ecce adsum.
 - **第 3 課** `Itinerarium Egeriae` — Ac sic est, ut in hisdem locis omnes fideles sequanltur scripturas, quando leguntur in ecclesia, quia omnes docentur per illos dies quadraginta, id est ab hora prima usque ad horam tertiam, quoniam per tres horas fit cathecisin.
@@ -191,7 +185,7 @@
 - **第 12 課** `Regula Benedicti` — Abbas autem, quia vices Christi creditur agere, dominus et abbas vocetur, non sua adsumptione sed honore et amore Christi; ipse autem cogitet et sic se exhibeat ut dignus sit tali honore.
 - **第 12 課** `Itinerarium Egeriae` — His ergo diebus enceniarum ipse ornatus omnium ecclesiarum est, qui et per pascha uel per epiphania, et ita per singulos dies diuersis locis sanctis proceditur ut per pascha uel epiphania.
 - **第 13 課** `Regula Benedicti` — Demonstrans nobis hoc Propheta, cum in cogitationibus nostris ita Deum semper præsentem ostendit dicens: Scrutans corda et renes Deus ; et item: Dominus novit cogitationes hominum ; et item dicit: Intellexisti cogitationes meas a longe ; et: Quia cogitatio hominis confitebitur tibi .
-- **第 13 課** `Proslogion` — Sed si utcumque capi potest, cur malos potes velle salvare: illud certe nulla ratione comprehendi potest, cur de similibus malis hos magis salves quam illos per summam bonitatem, et illos magis damnes quam istos per summam iustitiam.
+- **第 13 課** `Regula Benedicti` — Omnia vero quæ discipulis docuerit esse contraria, in suis factis indicet non agenda, ne aliis prædicans ipse reprobus inveniatur , ne quando illi dicat Deus precanti: quare tu enarras iustitias meas et adsumis testamentum meum per os tuum?
 - **第 14 課** `Itinerarium mentis in Deum` — Et sic per operationes memoriae apparet, quod ipsa anima est imago Dei et similitudo adeo sibi praesens et eum habens praesentem, quod eum actu capit et per potentiam "capax eius est et particeps esse potest".
 - **第 14 課** `Itinerarium Egeriae` — Et quoniam pro monazontes, qui pedibus uadent, necesse est lenius iri: ac sic peruenitur in Ierusolima ea hora, qua incipit homo hominem posse cognoscere, id est prope luce, ante tamen quam lux fiat.
 - **第 15 課** `Commonitorium` — Crescat igitur oportet et multum vehementerque proficiat tam singulorum quam omnium, tam unius hominis quam totius Ecclesiae, aetatum ac seculorum gradibus, intelligentia, scientia, sapientia, sed in suo duntaxa: genere, in eodem scilicet dogmate, eodem sensu, eademque sententia.
@@ -256,8 +250,8 @@
 - **第 44 課** `Itinerarium Egeriae` — Ecce et supervenit episcopus cum clero et statim ingreditur intro spelunca et de intro cancellos primum dicet orationem pro omnibus: commemorat etiam ipse nomina, quorum vult, sic benedicet cathecuminos.
 - **第 45 課** `Proslogion` — Si enim singula bona delectabilia sunt, cogita intente quam delectabile sit illud bonum, quod continet iucunditatem omnium bonorum; et non qualem in rebus creatis sumus experti, sed tanto differentem, quanto differt creator a creatura.
 - **第 45 課** `Itinerarium mentis in Deum` — Sed quoniam non solum per nos transeundo, verum etiam in nobis contingit contemplari primum principium; et hoc maius est quam praecedens: ideo hic modus considerandi quartum obtinet contemplationis gradum.
-- **第 46 課** `Itinerarium mentis in Deum` — Rogo igitur, quod magis pensetur intentio scribentis, quam opus, magis dictorum sensus quam sermo incultus, magis veritas quam venustas, magis exercitatio affectus quam eruditio intellectus.
 - **第 46 課** `Regula Benedicti` — Tertius humilitatis gradus est, ut quis pro Dei amore omni oboedientia se subdat maiori, imitans Dominum, de quo dicit Apostolus: Factus oboediens usque ad mortem .
+- **第 46 課** `Itinerarium mentis in Deum` — Rogo igitur, quod magis pensetur intentio scribentis, quam opus, magis dictorum sensus quam sermo incultus, magis veritas quam venustas, magis exercitatio affectus quam eruditio intellectus.
 - **第 47 課** `Gregorius Magnus` — Quod levatum in ecclesia quae est dedicanda debita cum veneratione reconditur, et tantae per hoc ibidem virtutes fiunt, ac si illuc specialiter eorum corpora deferantur.
 - **第 47 課** `Commonitorium` — Quod quo commodius fiat, hic sit jam hujus Commonitorii modus; ut caetera quae sequuntur, ab alio sumamus exordio.
 - **第 48 課** `Regula Benedicti` — In cujus regni tabernaculo si volumus habitare, nisi illuc bonis actibus curritur, minime pervenitur.

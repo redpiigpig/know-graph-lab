@@ -8,10 +8,200 @@
  },
  "counts": {
   "chapters": 50,
-  "verses": 1514,
-  "words": 24288
+  "verses": 1206,
+  "words": 19560
  },
  "chapters": [
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "kyrie",
+   "note": "全篇保留希臘文，拉丁禮沿用未譯",
+   "title": "求主垂憐",
+   "latinTitle": "Kyrie eleison",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 2,
+   "words": 4,
+   "coverage": 1.0,
+   "nameShare": 0.0,
+   "meanVerseWords": 2.0,
+   "difficulty": 0.5,
+   "extent": "complete",
+   "lesson": 1
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "signum-crucis",
+   "note": "",
+   "title": "十字聖號",
+   "latinTitle": "Signum Crucis",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 2,
+   "words": 9,
+   "coverage": 1.0,
+   "nameShare": 0.0,
+   "meanVerseWords": 4.5,
+   "difficulty": 1.12,
+   "extent": "complete",
+   "lesson": 2
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "ite-missa-est",
+   "note": "",
+   "title": "遣散禮",
+   "latinTitle": "Ritus conclusionis",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 4,
+   "words": 16,
+   "coverage": 0.9375,
+   "nameShare": 0.0,
+   "meanVerseWords": 4.0,
+   "difficulty": 7.25,
+   "extent": "complete",
+   "lesson": 3
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "credo",
+   "note": "",
+   "title": "尼西亞信經",
+   "latinTitle": "Symbolum Nicaenum-Constantinopolitanum",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 13,
+   "words": 174,
+   "coverage": 0.9226,
+   "nameShare": 0.0,
+   "meanVerseWords": 13.4,
+   "difficulty": 11.08,
+   "extent": "complete",
+   "lesson": 4
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "gloria",
+   "note": "",
+   "title": "光榮頌",
+   "latinTitle": "Gloria in excelsis Deo",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 3,
+   "words": 84,
+   "coverage": 0.9506,
+   "nameShare": 0.0,
+   "meanVerseWords": 28.0,
+   "difficulty": 11.94,
+   "extent": "complete",
+   "lesson": 5
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "salutatio",
+   "note": "",
+   "title": "彌撒致候與對答",
+   "latinTitle": "Salutatio et responsa",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 2,
+   "words": 20,
+   "coverage": 0.9,
+   "nameShare": 0.0,
+   "meanVerseWords": 10.0,
+   "difficulty": 12.5,
+   "extent": "complete",
+   "lesson": 6
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "agnus-dei",
+   "note": "",
+   "title": "羔羊頌",
+   "latinTitle": "Agnus Dei",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 3,
+   "words": 25,
+   "coverage": 0.88,
+   "nameShare": 0.0,
+   "meanVerseWords": 8.3,
+   "difficulty": 14.08,
+   "extent": "complete",
+   "lesson": 7
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "confiteor",
+   "note": "",
+   "title": "懺悔詞",
+   "latinTitle": "Confiteor",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 1,
+   "words": 41,
+   "coverage": 0.925,
+   "nameShare": 0.0,
+   "meanVerseWords": 41.0,
+   "difficulty": 17.75,
+   "extent": "complete",
+   "lesson": 8
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "sanctus",
+   "note": "",
+   "title": "歡呼歌",
+   "latinTitle": "Sanctus",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 1,
+   "words": 25,
+   "coverage": 0.84,
+   "nameShare": 0.0,
+   "meanVerseWords": 25.0,
+   "difficulty": 22.25,
+   "extent": "complete",
+   "lesson": 9
+  },
+  {
+   "kind": "liturgy",
+   "corpus": "禮儀短經",
+   "id": "pater-noster",
+   "note": "",
+   "title": "天主經",
+   "latinTitle": "Pater noster",
+   "book": "",
+   "chapter": 0,
+   "zhBook": "",
+   "verses": 1,
+   "words": 48,
+   "coverage": 0.8511,
+   "nameShare": 0.0,
+   "meanVerseWords": 48.0,
+   "difficulty": 26.89,
+   "extent": "complete",
+   "lesson": 10
+  },
   {
    "book": "JHN",
    "chapter": 17,
@@ -25,7 +215,9 @@
    "nameShare": 0.0091,
    "meanVerseWords": 17.6,
    "difficulty": 9.86,
-   "lesson": 1
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 11
   },
   {
    "book": "JHN",
@@ -40,7 +232,9 @@
    "nameShare": 0.0706,
    "meanVerseWords": 15,
    "difficulty": 15.12,
-   "lesson": 2
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 12
   },
   {
    "book": "LUK",
@@ -55,37 +249,9 @@
    "nameShare": 0.0578,
    "meanVerseWords": 15.0,
    "difficulty": 17.99,
-   "lesson": 3
-  },
-  {
-   "book": "LUK",
-   "chapter": 24,
-   "corpus": "新約",
-   "zhBook": "路",
-   "title": "路加福音 24",
-   "note": "",
-   "verses": 51,
-   "words": 729,
-   "coverage": 0.8464,
-   "nameShare": 0.0261,
-   "meanVerseWords": 14.3,
-   "difficulty": 18.94,
-   "lesson": 4
-  },
-  {
-   "book": "1CO",
-   "chapter": 15,
-   "corpus": "新約",
-   "zhBook": "格前",
-   "title": "格林多前書 15",
-   "note": "",
-   "verses": 58,
-   "words": 772,
-   "coverage": 0.8212,
-   "nameShare": 0.0492,
-   "meanVerseWords": 13.3,
-   "difficulty": 21.2,
-   "lesson": 5
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 13
   },
   {
    "book": "ROM",
@@ -100,7 +266,9 @@
    "nameShare": 0.0588,
    "meanVerseWords": 15.7,
    "difficulty": 21.24,
-   "lesson": 6
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 14
   },
   {
    "book": "JHN",
@@ -115,7 +283,9 @@
    "nameShare": 0.0045,
    "meanVerseWords": 16.5,
    "difficulty": 21.62,
-   "lesson": 7
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 15
   },
   {
    "book": "1CO",
@@ -130,7 +300,9 @@
    "nameShare": 0.0,
    "meanVerseWords": 15.1,
    "difficulty": 22.14,
-   "lesson": 8
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 16
   },
   {
    "book": "MRK",
@@ -145,7 +317,9 @@
    "nameShare": 0.0579,
    "meanVerseWords": 14.2,
    "difficulty": 22.33,
-   "lesson": 9
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 17
   },
   {
    "book": "REV",
@@ -160,7 +334,9 @@
    "nameShare": 0.0511,
    "meanVerseWords": 20.6,
    "difficulty": 23.63,
-   "lesson": 10
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 18
   },
   {
    "book": "HEB",
@@ -175,7 +351,9 @@
    "nameShare": 0.0279,
    "meanVerseWords": 15.4,
    "difficulty": 23.84,
-   "lesson": 11
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 19
   },
   {
    "book": "1JN",
@@ -190,22 +368,9 @@
    "nameShare": 0.0267,
    "meanVerseWords": 18.7,
    "difficulty": 23.93,
-   "lesson": 12
-  },
-  {
-   "book": "ACT",
-   "chapter": 17,
-   "corpus": "新約",
-   "zhBook": "宗",
-   "title": "宗徒大事錄 17",
-   "note": "",
-   "verses": 34,
-   "words": 597,
-   "coverage": 0.8023,
-   "nameShare": 0.0754,
-   "meanVerseWords": 17.6,
-   "difficulty": 24.16,
-   "lesson": 13
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 20
   },
   {
    "book": "MAT",
@@ -220,7 +385,9 @@
    "nameShare": 0.0082,
    "meanVerseWords": 15.3,
    "difficulty": 24.28,
-   "lesson": 14
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 21
   },
   {
    "book": "EPH",
@@ -235,7 +402,9 @@
    "nameShare": 0.0646,
    "meanVerseWords": 14.8,
    "difficulty": 24.92,
-   "lesson": 15
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 22
   },
   {
    "book": "ACT",
@@ -250,7 +419,9 @@
    "nameShare": 0.0608,
    "meanVerseWords": 15.7,
    "difficulty": 25.21,
-   "lesson": 16
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 23
   },
   {
    "book": "LUK",
@@ -265,22 +436,9 @@
    "nameShare": 0.0038,
    "meanVerseWords": 16.3,
    "difficulty": 25.73,
-   "lesson": 17
-  },
-  {
-   "book": "MRK",
-   "chapter": 4,
-   "corpus": "新約",
-   "zhBook": "谷",
-   "title": "馬爾谷福音 4",
-   "note": "",
-   "verses": 40,
-   "words": 617,
-   "coverage": 0.7715,
-   "nameShare": 0.0065,
-   "meanVerseWords": 15.4,
-   "difficulty": 26.71,
-   "lesson": 18
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 24
   },
   {
    "book": "PHP",
@@ -295,7 +453,9 @@
    "nameShare": 0.0522,
    "meanVerseWords": 14.7,
    "difficulty": 27.26,
-   "lesson": 19
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 25
   },
   {
    "book": "MAT",
@@ -310,7 +470,9 @@
    "nameShare": 0.0088,
    "meanVerseWords": 16.7,
    "difficulty": 28.12,
-   "lesson": 20
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 26
   },
   {
    "book": "ROM",
@@ -325,7 +487,9 @@
    "nameShare": 0.0294,
    "meanVerseWords": 13.0,
    "difficulty": 31.55,
-   "lesson": 21
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 27
   },
   {
    "book": "JAS",
@@ -340,7 +504,9 @@
    "nameShare": 0.0313,
    "meanVerseWords": 14.2,
    "difficulty": 31.74,
-   "lesson": 22
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 28
   },
   {
    "book": "1PE",
@@ -355,7 +521,9 @@
    "nameShare": 0.0416,
    "meanVerseWords": 15.4,
    "difficulty": 32.68,
-   "lesson": 23
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 29
   },
   {
    "book": "GAL",
@@ -370,22 +538,9 @@
    "nameShare": 0.027,
    "meanVerseWords": 11.4,
    "difficulty": 33.59,
-   "lesson": 24
-  },
-  {
-   "book": "REV",
-   "chapter": 21,
-   "corpus": "新約",
-   "zhBook": "默",
-   "title": "默示錄 21",
-   "note": "",
-   "verses": 27,
-   "words": 517,
-   "coverage": 0.7002,
-   "nameShare": 0.0251,
-   "meanVerseWords": 19.1,
-   "difficulty": 34.77,
-   "lesson": 25
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 30
   },
   {
    "book": "PSA",
@@ -400,7 +555,9 @@
    "nameShare": 0.0422,
    "meanVerseWords": 11.3,
    "difficulty": 23.5,
-   "lesson": 26
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 31
   },
   {
    "book": "EZK",
@@ -415,7 +572,9 @@
    "nameShare": 0.0478,
    "meanVerseWords": 23.3,
    "difficulty": 23.65,
-   "lesson": 27
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 32
   },
   {
    "book": "DEU",
@@ -430,7 +589,9 @@
    "nameShare": 0.1023,
    "meanVerseWords": 17.6,
    "difficulty": 23.95,
-   "lesson": 28
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 33
   },
   {
    "book": "PSA",
@@ -445,22 +606,9 @@
    "nameShare": 0.0426,
    "meanVerseWords": 15.7,
    "difficulty": 25.19,
-   "lesson": 29
-  },
-  {
-   "book": "EXO",
-   "chapter": 20,
-   "corpus": "舊約與第二正典",
-   "zhBook": "出",
-   "title": "出谷紀 20",
-   "note": "",
-   "verses": 26,
-   "words": 398,
-   "coverage": 0.7839,
-   "nameShare": 0.0603,
-   "meanVerseWords": 15.3,
-   "difficulty": 25.43,
-   "lesson": 30
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 34
   },
   {
    "book": "GEN",
@@ -475,22 +623,9 @@
    "nameShare": 0.0484,
    "meanVerseWords": 17.3,
    "difficulty": 26.12,
-   "lesson": 31
-  },
-  {
-   "book": "PSA",
-   "chapter": 129,
-   "corpus": "舊約與第二正典",
-   "zhBook": "詠",
-   "title": "聖詠 129",
-   "note": "希伯來編號 130",
-   "verses": 8,
-   "words": 76,
-   "coverage": 0.75,
-   "nameShare": 0.1053,
-   "meanVerseWords": 9.5,
-   "difficulty": 27.38,
-   "lesson": 32
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 35
   },
   {
    "book": "ISA",
@@ -505,7 +640,9 @@
    "nameShare": 0.0263,
    "meanVerseWords": 20.5,
    "difficulty": 28.42,
-   "lesson": 33
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 36
   },
   {
    "book": "GEN",
@@ -520,7 +657,9 @@
    "nameShare": 0.0712,
    "meanVerseWords": 16.4,
    "difficulty": 29.03,
-   "lesson": 34
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 37
   },
   {
    "book": "ISA",
@@ -535,22 +674,9 @@
    "nameShare": 0.0188,
    "meanVerseWords": 22.2,
    "difficulty": 29.6,
-   "lesson": 35
-  },
-  {
-   "book": "JDT",
-   "chapter": 13,
-   "corpus": "舊約與第二正典",
-   "zhBook": "友",
-   "title": "友弟德傳 13",
-   "note": "次經／第二正典",
-   "verses": 31,
-   "words": 592,
-   "coverage": 0.75,
-   "nameShare": 0.0405,
-   "meanVerseWords": 19.1,
-   "difficulty": 29.77,
-   "lesson": 36
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 38
   },
   {
    "book": "EXO",
@@ -565,22 +691,9 @@
    "nameShare": 0.1021,
    "meanVerseWords": 22.4,
    "difficulty": 30.49,
-   "lesson": 37
-  },
-  {
-   "book": "GEN",
-   "chapter": 3,
-   "corpus": "舊約與第二正典",
-   "zhBook": "創",
-   "title": "創世紀 3",
-   "note": "",
-   "verses": 24,
-   "words": 456,
-   "coverage": 0.7412,
-   "nameShare": 0.0614,
-   "meanVerseWords": 19,
-   "difficulty": 30.63,
-   "lesson": 38
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 39
   },
   {
    "book": "DAN",
@@ -595,7 +708,9 @@
    "nameShare": 0.0475,
    "meanVerseWords": 17.0,
    "difficulty": 30.68,
-   "lesson": 39
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 40
   },
   {
    "book": "JON",
@@ -610,7 +725,9 @@
    "nameShare": 0.0675,
    "meanVerseWords": 14.8,
    "difficulty": 31.93,
-   "lesson": 40
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 41
   },
   {
    "book": "JER",
@@ -625,7 +742,9 @@
    "nameShare": 0.0586,
    "meanVerseWords": 20.9,
    "difficulty": 33.1,
-   "lesson": 41
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 42
   },
   {
    "book": "PSA",
@@ -640,7 +759,9 @@
    "nameShare": 0.0273,
    "meanVerseWords": 11.4,
    "difficulty": 33.46,
-   "lesson": 42
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 43
   },
   {
    "book": "WIS",
@@ -655,7 +776,9 @@
    "nameShare": 0.0175,
    "meanVerseWords": 15.3,
    "difficulty": 33.51,
-   "lesson": 43
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 44
   },
   {
    "book": "2MA",
@@ -670,7 +793,9 @@
    "nameShare": 0.023,
    "meanVerseWords": 19.6,
    "difficulty": 33.88,
-   "lesson": 44
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 45
   },
   {
    "book": "SIR",
@@ -685,7 +810,9 @@
    "nameShare": 0.0168,
    "meanVerseWords": 12.6,
    "difficulty": 33.97,
-   "lesson": 45
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 46
   },
   {
    "book": "PRO",
@@ -700,7 +827,9 @@
    "nameShare": 0.0081,
    "meanVerseWords": 10.6,
    "difficulty": 34.11,
-   "lesson": 46
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 47
   },
   {
    "book": "1KI",
@@ -715,7 +844,9 @@
    "nameShare": 0.0394,
    "meanVerseWords": 24.1,
    "difficulty": 35.42,
-   "lesson": 47
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 48
   },
   {
    "book": "TOB",
@@ -730,7 +861,9 @@
    "nameShare": 0.0267,
    "meanVerseWords": 15.6,
    "difficulty": 35.71,
-   "lesson": 48
+   "kind": "chapter",
+   "extent": "complete",
+   "lesson": 49
   },
   {
    "book": "RUT",
@@ -745,21 +878,8 @@
    "nameShare": 0.0267,
    "meanVerseWords": 20.4,
    "difficulty": 37.4,
-   "lesson": 49
-  },
-  {
-   "book": "JOB",
-   "chapter": 38,
-   "corpus": "舊約與第二正典",
-   "zhBook": "約",
-   "title": "約伯傳 38",
-   "note": "",
-   "verses": 41,
-   "words": 420,
-   "coverage": 0.5976,
-   "nameShare": 0.0071,
-   "meanVerseWords": 10.2,
-   "difficulty": 42.8,
+   "kind": "chapter",
+   "extent": "complete",
    "lesson": 50
   }
  ]

@@ -37,13 +37,21 @@ CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 VOCABULARY = ROOT / "data" / "originalReaders" / "vocabulary" / "latin-2000.json"
 OUTPUT = CACHE / "scripture-plan.json"
 
+# The owner re-shaped this volume on 2026-08-25: the first ten lessons read
+# short liturgical formulas, and complete chapters begin at lesson eleven.  So
+# forty chapters, not fifty.  What was cut is principled rather than arbitrary --
+# first a second chapter from a book already represented (Mark 4, Luke 24,
+# Acts 17, 1 Cor 15, Rev 21, Genesis 3, Exodus 20, Psalm 129), then the two whose
+# Chinese cannot be set beside the Latin verse for verse: Job 38, whose verses
+# this edition transposes, and Judith 13, where Jerome's recension runs to
+# thirty-one verses against the Greek tradition's twenty.
+#
 # (Vulgate book, Vulgate chapter, 思高 book name, Chinese title, note)
 # The Chinese book names are the Studium Biblicum ones, because that is the
 # edition printed alongside; Protestant names are not mixed in.
 NEW_TESTAMENT = [
     ("1JN", 1, "若一", "若望一書 1"),
     ("MRK", 1, "谷", "馬爾谷福音 1"),
-    ("MRK", 4, "谷", "馬爾谷福音 4"),
     ("MAT", 6, "瑪", "瑪竇福音 6"),
     ("MAT", 5, "瑪", "瑪竇福音 5"),
     ("JHN", 1, "若", "若望福音 1"),
@@ -54,17 +62,13 @@ NEW_TESTAMENT = [
     ("PHP", 2, "斐", "斐理伯書 2"),
     ("ACT", 2, "宗", "宗徒大事錄 2"),
     ("JAS", 1, "雅", "雅各伯書 1"),
-    ("REV", 21, "默", "默示錄 21"),
     ("ROM", 12, "羅", "羅馬書 12"),
     ("GAL", 5, "迦", "迦拉達書 5"),
     ("1PE", 2, "伯前", "伯多祿前書 2"),
     ("EPH", 2, "弗", "厄弗所書 2"),
-    ("LUK", 24, "路", "路加福音 24"),
     ("ROM", 8, "羅", "羅馬書 8"),
     ("HEB", 1, "希", "希伯來書 1"),
     ("JHN", 17, "若", "若望福音 17"),
-    ("ACT", 17, "宗", "宗徒大事錄 17"),
-    ("1CO", 15, "格前", "格林多前書 15"),
     ("REV", 1, "默", "默示錄 1"),
 ]
 
@@ -72,19 +76,15 @@ NEW_TESTAMENT = [
 # prints; the Hebrew number follows for anyone holding a Protestant Bible.
 OLD_TESTAMENT = [
     ("GEN", 1, "創", "創世紀 1", ""),
-    ("GEN", 3, "創", "創世紀 3", ""),
     ("GEN", 22, "創", "創世紀 22", ""),
     ("EXO", 3, "出", "出谷紀 3", ""),
-    ("EXO", 20, "出", "出谷紀 20", ""),
     ("DEU", 6, "申", "申命紀 6", ""),
     ("RUT", 1, "盧", "盧德傳 1", ""),
     ("1KI", 19, "列上", "列王紀上 19", ""),
     ("PSA", 22, "詠", "聖詠 22", "希伯來編號 23"),
     ("PSA", 50, "詠", "聖詠 50", "希伯來編號 51"),
     ("PSA", 90, "詠", "聖詠 90", "希伯來編號 91"),
-    ("PSA", 129, "詠", "聖詠 129", "希伯來編號 130"),
     ("PRO", 8, "箴", "箴言 8", ""),
-    ("JOB", 38, "約", "約伯傳 38", ""),
     ("ISA", 6, "依", "依撒意亞 6", ""),
     ("ISA", 53, "依", "依撒意亞 53", ""),
     ("JER", 31, "耶", "耶肋米亞 31", ""),
@@ -92,14 +92,14 @@ OLD_TESTAMENT = [
     ("DAN", 3, "達", "達尼爾 3", "含次經增補的三青年讚歌"),
     ("JON", 2, "約納", "約納 2", ""),
     ("TOB", 1, "多", "多俾亞傳 1", "次經／第二正典"),
-    ("JDT", 13, "友", "友弟德傳 13", "次經／第二正典"),
     ("WIS", 7, "智", "智慧篇 7", "次經／第二正典"),
     ("SIR", 24, "德", "德訓篇 24", "次經／第二正典"),
     ("2MA", 7, "加下", "瑪加伯下 7", "次經／第二正典"),
 ]
 
 
-PER_HALF = 25
+PER_HALF = 20
+LITURGY_LESSONS = 10
 assert len(NEW_TESTAMENT) == PER_HALF, len(NEW_TESTAMENT)
 assert len(OLD_TESTAMENT) == PER_HALF, len(OLD_TESTAMENT)
 
@@ -155,6 +155,11 @@ def main() -> None:
         print("[!] 尚無上冊詞表，難度只反映句長")
 
     chapters = L.vulgate_chapters()
+    liturgy_path = CACHE / "liturgy.json"
+    liturgy = (json.loads(liturgy_path.read_text(encoding="utf-8"))["formulas"]
+               if liturgy_path.exists() else [])
+    if len(liturgy) < LITURGY_LESSONS:
+        print(f"[!] 只有 {len(liturgy)} 篇禮儀短經，前 {LITURGY_LESSONS} 課不足")
 
     def build(rows, corpus):
         out = []
@@ -169,9 +174,40 @@ def main() -> None:
         out.sort(key=lambda r: r["difficulty"])
         return out
 
+    def liturgy_row(row: dict) -> dict:
+        tokens = [w for line in row["lines"] for w in L.words(line) if lm.is_word(w)]
+        # Kyrie eleison is Greek, kept in Greek by the Latin rite.  Its words
+        # are neither taught nor untaught Latin, and counting them as unknown
+        # makes the shortest formula in the book the hardest reading in it.
+        latin_tokens = [w for w in tokens if lm.lemma(w)]
+        known = sum(1 for w in latin_tokens if L.fold(lm.lemma(w)) in taught)
+        coverage = known / len(latin_tokens) if latin_tokens else 1.0
+        mean_line = len(tokens) / max(len(row["lines"]), 1)
+        greek = len(tokens) - len(latin_tokens)
+        return {
+            "kind": "liturgy", "corpus": "禮儀短經", "id": row["id"],
+            "note": "全篇保留希臘文，拉丁禮沿用未譯" if greek == len(tokens) else "",
+            "title": row["title"], "latinTitle": row["latinTitle"],
+            "book": "", "chapter": 0, "zhBook": "",
+            "verses": len(row["lines"]), "words": len(tokens),
+            "coverage": round(coverage, 4), "nameShare": 0.0,
+            "meanVerseWords": round(mean_line, 1),
+            "difficulty": round((1 - coverage) * 100 + mean_line / 4, 2),
+            "extent": row["extent"],
+        }
+
+    # The ten formulas are graded like everything else rather than printed in
+    # the order of the Mass: six words of Kyrie before a hundred and seventy of
+    # the Creed.  The Creed still lands last, because it is the hardest.
+    opening = sorted((liturgy_row(row) for row in liturgy[:LITURGY_LESSONS]),
+                     key=lambda r: r["difficulty"])
+
     nt = build(NEW_TESTAMENT, "新約")
     ot = build(OLD_TESTAMENT, "舊約與第二正典")
-    plan = nt + ot
+    for row in nt + ot:
+        row["kind"] = "chapter"
+        row["extent"] = "complete"
+    plan = opening + nt + ot
     for index, row in enumerate(plan, start=1):
         row["lesson"] = index
 
@@ -193,7 +229,7 @@ def main() -> None:
     print(f"上冊 {len(plan)} 章；{payload['counts']['verses']:,} 節；"
           f"{payload['counts']['words']:,} 詞")
     for row in plan:
-        flag = "新" if row["corpus"] == "新約" else "舊"
+        flag = {"新約": "新", "舊約與第二正典": "舊"}.get(row["corpus"], "禮")
         print(f"{row['lesson']:>3} {flag} {row['title']:<16s} {row['verses']:>3}節 "
               f"{row['words']:>5}詞  覆蓋 {row['coverage']*100:>5.1f}%  難度 {row['difficulty']:>6.2f}"
               f"  {row['note']}")
