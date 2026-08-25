@@ -155,6 +155,10 @@ def section(text: str, anchors: tuple[str, str]) -> str:
 
 DIVISION_RULES = [
     ("章", r"^(?:CAPUT|Caput|CAP\.|Cap\.)\s+[IVXLC\d]+"),
+    # The Latin Library numbers several works in brackets -- the Passio
+    # Perpetuae runs [1] to [21] -- and those are the edition's own
+    # divisions, so they outrank a bare "4." that may just be a list item.
+    ("節", r"^\[\d{1,3}\]"),
     ("節", r"^[IVXLC]{1,6}\.\s"),
     ("號", r"^\d{1,3}\.\s"),
 ]

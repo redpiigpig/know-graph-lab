@@ -152,7 +152,12 @@ def vocabulary_table(document, rows: list[dict]):
                                 color=H.ACCENT_DARK)
     H.set_repeat_header(header)
     for entry in rows:
-        cells = table.add_row().cells
+        row = table.add_row()
+        # Keep a vocabulary row whole.  A row that splits across a page break
+        # leaves what looks like an empty first row at the top of the next page,
+        # which reads as a missing word rather than as a continuation.
+        H.prevent_row_split(row)
+        cells = row.cells
         H.set_cell_margins(cells[0])
         H.add_mixed_script_text(cells[0].paragraphs[0], entry.get("forms") or entry["headword"],
                                 FONT_LA, H.TABLE_SIZE_PT)
