@@ -74,6 +74,8 @@ OUTPUT_DIR = ROOT / "output" / "original-readers"
 OUTPUT_STEM = "greek-original-reader-vol"
 
 FONT_GREEK = "Palatino Linotype"
+# Chinese characters and CJK punctuation, which the Greek face cannot set.
+CJK_RE = re.compile(r"([\u3000-\u303F\u3400-\u4DBF\u4E00-\u9FFF\uFF00-\uFFEF]+)")
 GREEK_METRICS = Path(r"C:\Windows\Fonts\pala.ttf")
 
 INTERLINEAR_GREEK_PT = 13.5
@@ -171,12 +173,7 @@ def add_interlinear(
             if token_index >= len(line):
                 continue
             token = line[token_index]
-            set_run_font(
-                top.add_run(token["word"] + token.get("trailing", "")),
-                FONT_GREEK,
-                greek_pt,
-                color=INK,
-            )
+            add_greek_run(top, token["word"] + token.get("trailing", ""), greek_pt)
             set_run_font(
                 bottom.add_run(token.get("glossZh", "")),
                 FONT_ZH,
@@ -197,11 +194,24 @@ def add_interlinear(
         set_keep(p, together=True)
 
 
+def add_greek_run(paragraph, text: str, size: float, *, color=None) -> None:
+    """Set Greek in the Greek face, and any CJK-range mark in the Chinese one.
+
+    The Wikisource canons print editorial supplements in CJK angle brackets —
+    「〈πρὸ〉」 — and Palatino Linotype has no glyph for those, so LibreOffice
+    quietly borrowed an unembedded NotoSansJP for two characters and the PDF's
+    font-embedding gate failed on a book that otherwise had none.
+    """
+    for chunk in filter(None, CJK_RE.split(text)):
+        font = FONT_ZH if CJK_RE.fullmatch(chunk) else FONT_GREEK
+        set_run_font(paragraph.add_run(chunk), font, size, color=color if color is not None else INK)
+
+
 def add_plain_greek(document: Document, text: str, size: float = INTERLINEAR_GREEK_PT) -> None:
     p = document.add_paragraph()
     p.paragraph_format.space_after = Pt(4)
     p.paragraph_format.line_spacing = 1.5
-    set_run_font(p.add_run(text), FONT_GREEK, size, color=INK)
+    add_greek_run(p, text, size)
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
@@ -230,13 +240,33 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
             if index == 0:
                 set_run_font(paragraph.add_run(str(entry["ordinal"])), FONT_UI, CAPTION_PT, color=MUTED)
             elif index == 1:
-                set_run_font(paragraph.add_run(entry["printedEntry"]), FONT_GREEK, TABLE_SIZE_PT + 1.6, color=INK)
+                add_greek_run(paragraph, entry["printedEntry"], TABLE_SIZE_PT + 1.6)
                 if entry.get("isProperName"):
                     set_run_font(paragraph.add_run("　專名"), FONT_UI, LABEL_PT, color=ACCENT)
             elif index == 2:
                 set_run_font(paragraph.add_run(entry["textbookTransliteration"]), "Noto Serif", TABLE_SIZE_PT, color=MUTED)
             else:
                 add_mixed_script_text(paragraph, entry["glossZh"] or "—", FONT_ZH, TABLE_SIZE_PT, color=INK)
+
+
+CORPUS_LABELS = {
+    "new-testament": "新約",
+    "septuagint": "七十士譯本",
+    "deuterocanonical": "次經",
+    "pseudepigrapha": "偽經",
+}
+
+
+def memory_source_label(unit: dict) -> str:
+    """Where a memory unit came from, in Chinese.
+
+    上冊's units carry a corpus code; 下冊's carry the reading they were cut
+    from.  Printing the raw code put "new-testament" on the page.
+    """
+    corpus = unit.get("corpus")
+    if corpus:
+        return CORPUS_LABELS.get(corpus, corpus)
+    return unit.get("readingTitleZh") or ""
 
 
 def add_memory(document: Document, lesson: dict) -> None:
@@ -249,8 +279,7 @@ def add_memory(document: Document, lesson: dict) -> None:
         set_run_font(caption.add_run(verse["ref"]), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         set_run_font(
             caption.add_run(
-                f"　{verse.get('corpus') or verse.get('readingTitleZh') or ''}"
-                f"　命中本課生詞 {verse['matchCount']}"
+                f"　{memory_source_label(verse)}　命中本課生詞 {verse['matchCount']}"
             ),
             FONT_UI, LABEL_PT, color=MUTED,
         )
@@ -306,7 +335,7 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict) -> None:
     add_mixed_script_text(title, lesson["reading"]["titleZh"], FONT_ZH, H2_SIZE_PT, bold=True)
     greek_title = document.add_paragraph()
     greek_title.paragraph_format.space_after = Pt(6)
-    set_run_font(greek_title.add_run(lesson["reading"]["titleGrc"]), FONT_GREEK, TRANSLATION_PT, color=MUTED)
+    add_greek_run(greek_title, lesson["reading"]["titleGrc"], TRANSLATION_PT, color=MUTED)
     paragraph_rule(greek_title)
     add_vocabulary(document, lesson)
     add_memory(document, lesson)
@@ -320,7 +349,7 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
     add_mixed_script_text(title, liturgy["title"], FONT_ZH, H1_SIZE_PT, bold=True)
     subtitle = document.add_paragraph()
     subtitle.paragraph_format.space_after = Pt(8)
-    set_run_font(subtitle.add_run(liturgy["titleGrc"]), FONT_GREEK, TRANSLATION_PT, color=MUTED)
+    add_greek_run(subtitle, liturgy["titleGrc"], TRANSLATION_PT, color=MUTED)
     add_body(document, liturgy["placement"], size=CAPTION_PT, color=MUTED)
     add_body(document, liturgy["roleDerivationNote"], size=CAPTION_PT, color=MUTED)
 
@@ -344,7 +373,6 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
             add_plain_greek(document, step["displayText"])
 
 
-CJK_RE = re.compile(r"([　-〿㐀-䶿一-鿿＀-￯]+)")
 
 
 def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None:
@@ -419,10 +447,7 @@ def add_appendix_tables(document: Document, master: dict) -> None:
             row = document.add_paragraph()
             row.paragraph_format.space_after = Pt(0)
             row.paragraph_format.line_spacing = 1.25
-            set_run_font(
-                row.add_run(entry.get("headword") or entry["lemma"]),
-                FONT_GREEK, TABLE_SIZE_PT + 1.2, color=INK,
-            )
+            add_greek_run(row, entry.get("headword") or entry["lemma"], TABLE_SIZE_PT + 1.2)
             chinese = (entry.get("zh") or "").strip()
             if chinese:
                 add_mixed_script_text(row, f"　{chinese}", FONT_ZH, TABLE_SIZE_PT, color=INK)

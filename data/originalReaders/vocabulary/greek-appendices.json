@@ -182,6 +182,7 @@
           "zh": "所羅門",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.5.14",
             "2Sam.8.8",
@@ -193,8 +194,7 @@
             "1Kgs.1.12",
             "1Kgs.1.13",
             "1Kgs.1.17"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Φαραὼ",
@@ -502,6 +502,7 @@
           "zh": "亞述",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.2.14",
             "2Kgs.15.19",
@@ -513,8 +514,7 @@
             "2Kgs.16.18",
             "2Kgs.17.3",
             "2Kgs.17.4"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἑζεκίας",
@@ -542,6 +542,7 @@
           "zh": "基列",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.31.21",
             "Gen.31.23",
@@ -553,8 +554,7 @@
             "Num.27.1",
             "Num.32.1",
             "Num.32.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σαμαρείας",
@@ -625,6 +625,7 @@
           "zh": "押沙龍",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.3.3",
             "2Sam.13.1",
@@ -636,8 +637,7 @@
             "2Sam.13.25",
             "2Sam.13.26",
             "2Sam.13.27"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀμμὼν",
@@ -707,6 +707,7 @@
           "zh": "亞摩利人",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.15.16",
             "Gen.48.22",
@@ -718,8 +719,7 @@
             "Num.21.25",
             "Num.21.26",
             "Num.21.29"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀχαὰβ",
@@ -789,6 +789,7 @@
           "zh": "尼布甲尼撒",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.24.1",
             "2Kgs.24.10",
@@ -800,8 +801,7 @@
             "2Chr.36.5",
             "2Chr.36.6",
             "2Chr.36.10"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γὰδ",
@@ -868,10 +868,13 @@
             "septuagint": 76
           },
           "kind": "",
-          "zh": "更糟",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G5501",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "更糟",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Γαλιλαίας",
@@ -911,10 +914,13 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "帶子",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2438",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "帶子",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Χαναναίων",
@@ -928,6 +934,7 @@
           "zh": "迦南",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.10.18",
             "Gen.10.19",
@@ -939,8 +946,7 @@
             "Exod.6.4",
             "Exod.13.5",
             "Exod.13.11"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἰὼβ",
@@ -982,6 +988,7 @@
           "zh": "利未",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.35.23",
             "Exod.1.2",
@@ -993,8 +1000,7 @@
             "Exod.32.26",
             "Exod.32.28",
             "Exod.37.19"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Πιλᾶτος",
@@ -1019,10 +1025,13 @@
             "septuagint": 63
           },
           "kind": "person",
-          "zh": "舊約的一個先知",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G903",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "舊約的一個先知",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἀβρὰμ",
@@ -1035,6 +1044,7 @@
           "zh": "亞伯蘭",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.11.26",
             "Gen.11.27",
@@ -1046,8 +1056,7 @@
             "Gen.12.6",
             "Gen.12.7",
             "Gen.12.9"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Δαυὶδ",
@@ -1118,6 +1127,7 @@
           "zh": "伯特利",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.12.8",
             "Gen.13.3",
@@ -1129,8 +1139,7 @@
             "Gen.35.15",
             "Gen.35.16",
             "Josh.6.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Συμεὼν",
@@ -1142,10 +1151,13 @@
             "patristic": 1
           },
           "kind": "person",
-          "zh": "雅各和利亞所生",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4826",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "雅各和利亞所生",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ῥοβοὰμ",
@@ -1161,6 +1173,7 @@
           "strong": "G4497",
           "zhEnglish": "Roboam",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.14.27",
             "1Kgs.11.43",
@@ -1172,8 +1185,7 @@
             "1Kgs.12.20",
             "1Kgs.12.21",
             "1Kgs.12.23"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀβεννὴρ",
@@ -1186,6 +1198,7 @@
           "zh": "押尼珥",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.5.1",
             "1Sam.14.50",
@@ -1197,8 +1210,7 @@
             "1Sam.26.15",
             "2Sam.2.8",
             "2Sam.2.14"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ζαχαρίας",
@@ -1255,6 +1267,7 @@
           "zh": "亞撒利雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.14.21",
             "2Kgs.14.29",
@@ -1266,8 +1279,7 @@
             "1Chr.2.38",
             "1Chr.2.39",
             "1Chr.3.12"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἰδουμαίας",
@@ -1308,6 +1320,7 @@
           "zh": "亞述",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.10.11",
             "Gen.10.22",
@@ -1319,8 +1332,7 @@
             "1Chr.5.6",
             "1Chr.5.26",
             "2Chr.28.16"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σιών",
@@ -1419,6 +1431,7 @@
           "zh": "推羅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.19.35",
             "2Sam.5.11",
@@ -1428,8 +1441,7 @@
             "1Kgs.9.11",
             "1Kgs.9.12",
             "1Chr.14.1"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἐδώμ",
@@ -1579,6 +1591,7 @@
           "zh": "西底家",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Kgs.22.11",
             "2Kgs.24.17",
@@ -1590,8 +1603,7 @@
             "2Chr.18.23",
             "2Chr.36.10",
             "2Chr.36.11"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀδὰμ",
@@ -1645,10 +1657,13 @@
             "septuagint": 47
           },
           "kind": "person",
-          "zh": "瑪押",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3092",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "瑪押",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Μαρίας",
@@ -1733,6 +1748,7 @@
           "zh": "亞薩",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Chr.6.39",
             "1Chr.9.15",
@@ -1744,8 +1760,7 @@
             "1Chr.25.1",
             "1Chr.25.2",
             "1Chr.25.6"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀσὴρ",
@@ -1844,6 +1859,7 @@
           "zh": "米利暗",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.6.20",
             "Exod.15.20",
@@ -1855,8 +1871,7 @@
             "Num.12.15",
             "Num.20.1",
             "Num.26.59"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Καίσαρος",
@@ -1907,10 +1922,13 @@
             "septuagint": 42
           },
           "kind": "place",
-          "zh": "以色列",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2474",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "以色列",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰσσαχὰρ",
@@ -1937,6 +1955,7 @@
           "zh": "加低斯",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.14.7",
             "Gen.20.1",
@@ -1947,8 +1966,7 @@
             "Num.20.22",
             "Num.27.14",
             "Num.32.8"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Χαλὲβ",
@@ -1972,6 +1990,7 @@
           "zh": "赫人",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.10.15",
             "Gen.15.20",
@@ -1982,8 +2001,7 @@
             "Gen.49.30",
             "Gen.50.13",
             "Exod.23.23"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Οὐρείας",
@@ -1993,9 +2011,10 @@
             "septuagint": 40
           },
           "kind": "person",
-          "zh": "烏利亞",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.11.6",
             "2Sam.11.7",
@@ -2008,7 +2027,9 @@
             "2Sam.11.16",
             "2Sam.11.17"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "烏利亞",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Γαβαὼν",
@@ -2021,6 +2042,7 @@
           "zh": "基遍",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.9.9",
             "Josh.9.23",
@@ -2031,8 +2053,7 @@
             "Josh.10.6",
             "Josh.10.10",
             "Josh.10.12"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀμὼς",
@@ -2091,10 +2112,13 @@
             "patristic": 12
           },
           "kind": "",
-          "zh": "你們要讚美神",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G239",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "你們要讚美神",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ῥαγουὴλ",
@@ -2115,10 +2139,13 @@
             "septuagint": 38
           },
           "kind": "",
-          "zh": "沒有",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G817",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "沒有",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰωνᾶς",
@@ -2200,6 +2227,7 @@
           "zh": "巴珊",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.21.33",
             "Num.32.33",
@@ -2211,8 +2239,7 @@
             "Deut.3.11",
             "Deut.3.13",
             "Deut.4.43"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Περσῶν",
@@ -2236,10 +2263,13 @@
             "septuagint": 35
           },
           "kind": "place",
-          "zh": "錫安",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4622",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "錫安",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἑσεβὼν",
@@ -2252,6 +2282,7 @@
           "zh": "希實本",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.21.25",
             "Num.21.26",
@@ -2263,8 +2294,7 @@
             "Num.32.37",
             "Deut.1.4",
             "Deut.2.24"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γαί",
@@ -2286,10 +2316,13 @@
             "patristic": 4
           },
           "kind": "",
-          "zh": "大型船隻",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3491",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "大型船隻",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Βηρσάβεε",
@@ -2411,6 +2444,7 @@
           "zh": "基比亞",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.15.57",
             "Josh.18.24",
@@ -2422,8 +2456,7 @@
             "Judg.19.15",
             "Judg.19.16",
             "Judg.20.4"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀμνὼν",
@@ -2449,6 +2482,7 @@
           "zh": "比拿雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.33.31",
             "Num.33.32",
@@ -2459,8 +2493,7 @@
             "1Kgs.1.26",
             "1Kgs.1.32",
             "1Kgs.1.36"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Μακκαβαῖος",
@@ -2524,6 +2557,7 @@
           "zh": "吉甲",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.5.9",
             "Josh.9.12",
@@ -2535,8 +2569,7 @@
             "1Sam.13.8",
             "1Sam.13.12",
             "1Sam.15.12"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βόος",
@@ -2550,6 +2583,7 @@
           "zh": "波阿斯",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.20.17",
             "Deut.5.21",
@@ -2561,8 +2595,7 @@
             "Ruth.2.11",
             "Ruth.2.14",
             "Ruth.2.15"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαρναβᾶς",
@@ -2589,6 +2622,7 @@
           "zh": "示劍",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.33.18",
             "Gen.35.5",
@@ -2600,8 +2634,7 @@
             "Judg.9.24",
             "Judg.9.25",
             "Judg.9.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Μεμφιβόσθε",
@@ -2650,10 +2683,13 @@
             "septuagint": 27
           },
           "kind": "place",
-          "zh": "非利士人的五個重",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G108",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "非利士人的五個重",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Εὑαῖον",
@@ -2663,10 +2699,13 @@
             "septuagint": 28
           },
           "kind": "",
-          "zh": "橄欖油",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G1637",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "橄欖油",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Γεδσὼν",
@@ -2676,10 +2715,13 @@
             "septuagint": 28
           },
           "kind": "person",
-          "zh": "基甸",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G1066",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "基甸",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἀβιὰ",
@@ -2733,14 +2775,14 @@
           "zh": "基大利",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.21.19",
             "2Kgs.25.22",
             "2Kgs.25.23",
             "2Kgs.25.24",
             "2Kgs.25.25"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Δαρείου",
@@ -2753,6 +2795,7 @@
           "zh": "大流士",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Ezra.4.5",
             "Ezra.4.24",
@@ -2764,8 +2807,7 @@
             "Neh.12.22",
             "Zech.1.1",
             "Zech.1.7"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γόμορρα",
@@ -2822,6 +2864,7 @@
           "zh": "比利洗人",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.13.7",
             "Gen.15.20",
@@ -2832,8 +2875,7 @@
             "Deut.7.1",
             "Josh.3.10",
             "Josh.9.1"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀβιμέλεχ",
@@ -2859,6 +2901,7 @@
           "zh": "利亞",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.29.16",
             "Gen.29.17",
@@ -2870,8 +2913,7 @@
             "Gen.29.32",
             "Gen.29.33",
             "Gen.30.9"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀρνών",
@@ -2884,6 +2926,7 @@
           "zh": "亞嫩",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.12.5",
             "Num.21.13",
@@ -2893,8 +2936,7 @@
             "Num.21.28",
             "Deut.2.24",
             "Deut.2.36"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαροὺχ",
@@ -2904,10 +2946,13 @@
             "septuagint": 26
           },
           "kind": "person",
-          "zh": "西鹿",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4562",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "西鹿",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰόππην",
@@ -2964,6 +3009,7 @@
           "zh": "巴沙",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Kgs.15.16",
             "1Kgs.15.17",
@@ -2975,8 +3021,7 @@
             "1Kgs.15.33",
             "1Kgs.16.1",
             "1Kgs.16.3"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ζοροβαβὲλ",
@@ -3004,6 +3049,7 @@
           "zh": "約哈難",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Chr.3.15",
             "1Chr.3.24",
@@ -3015,8 +3061,7 @@
             "Ezra.10.6",
             "Ezra.10.28",
             "Neh.12.13"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀντιόχειαν",
@@ -3041,9 +3086,10 @@
             "septuagint": 24
           },
           "kind": "person",
-          "zh": "羅波安",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Kgs.11.43",
             "1Kgs.12.15",
@@ -3055,7 +3101,9 @@
             "2Kgs.9.9",
             "2Kgs.10.29"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "羅波安",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἁζαὴλ",
@@ -3068,6 +3116,7 @@
           "zh": "哈薛",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Kgs.19.15",
             "1Kgs.19.17",
@@ -3079,8 +3128,7 @@
             "2Kgs.8.28",
             "2Kgs.8.29",
             "2Kgs.9.14"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Κύρου",
@@ -3091,10 +3139,13 @@
             "patristic": 1
           },
           "kind": "",
-          "zh": "使生效",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2964",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "使生效",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Φάρες",
@@ -3200,9 +3251,10 @@
             "septuagint": 22
           },
           "kind": "person",
-          "zh": "亞倫",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.6.23",
             "Exod.28.1",
@@ -3215,7 +3267,9 @@
             "Num.4.28",
             "Num.4.33"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "亞倫",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ναβὰλ",
@@ -3228,6 +3282,7 @@
           "zh": "拿八",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.10.5",
             "1Sam.25.3",
@@ -3239,8 +3294,7 @@
             "1Sam.25.22",
             "1Sam.25.25",
             "1Sam.25.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ὀρνὰ",
@@ -3253,6 +3307,7 @@
           "zh": "亞勞拿",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.24.16",
             "2Sam.24.18",
@@ -3264,8 +3319,7 @@
             "1Chr.2.18",
             "1Chr.3.21",
             "1Chr.21.15"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Τρύφων",
@@ -3341,15 +3395,9 @@
             "septuagint": 21
           },
           "kind": "",
-          "zh": "革倫",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
-          "zhEvidence": [
-            "Judg.1.18",
-            "Judg.14.19",
-            "1Sam.5.10",
-            "1Sam.6.16"
-          ],
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
           "zhReview": "由經節對位取得，建議複核"
         },
         {
@@ -3363,6 +3411,7 @@
           "zh": "亞吉",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.21.10",
             "1Sam.21.11",
@@ -3374,8 +3423,7 @@
             "1Sam.27.9",
             "1Sam.27.10",
             "1Sam.27.12"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἁδραάζαρ",
@@ -3388,6 +3436,7 @@
           "zh": "哈大底謝",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.8.3",
             "2Sam.8.5",
@@ -3399,8 +3448,7 @@
             "2Sam.10.16",
             "2Sam.10.19",
             "1Kgs.14.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ῥοὺθ",
@@ -3452,9 +3500,10 @@
             "septuagint": 20
           },
           "kind": "",
-          "zh": "巴珊王噩",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.21.33",
             "Num.24.23",
@@ -3467,7 +3516,9 @@
             "Deut.29.7",
             "Deut.31.4"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "巴珊王噩",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Μασσηφά",
@@ -3480,6 +3531,7 @@
           "zh": "米斯巴",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.13.26",
             "Judg.11.11",
@@ -3491,8 +3543,7 @@
             "Judg.21.8",
             "1Sam.7.5",
             "1Sam.7.6"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σαφὰν",
@@ -3502,10 +3553,13 @@
             "septuagint": 20
           },
           "kind": "person",
-          "zh": "字意",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4566",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "字意",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Βαιθλέεμ",
@@ -3518,6 +3572,7 @@
           "zh": "伯利恆",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.15.59",
             "Judg.12.8",
@@ -3529,8 +3584,7 @@
             "Ruth.1.22",
             "Ruth.2.4",
             "Ruth.4.11"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαιθσάμυς",
@@ -3543,6 +3597,7 @@
           "zh": "示麥",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.18.17",
             "Josh.19.12",
@@ -3554,8 +3609,7 @@
             "1Sam.6.13",
             "1Sam.6.14",
             "1Sam.6.15"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βακχίδης",
@@ -3593,6 +3647,7 @@
           "zh": "革倫",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.13.3",
             "Josh.15.11",
@@ -3604,8 +3659,7 @@
             "1Sam.17.52",
             "2Kgs.1.2",
             "2Kgs.1.3"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Μανῶε",
@@ -3619,6 +3673,7 @@
           "zh": "瑪挪亞",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.13.2",
             "Judg.13.8",
@@ -3630,8 +3685,7 @@
             "Judg.13.16",
             "Judg.13.17",
             "Judg.13.19"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Μελχὸλ",
@@ -3644,6 +3698,7 @@
           "zh": "米甲",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.14.49",
             "1Sam.18.20",
@@ -3655,8 +3710,7 @@
             "1Sam.25.44",
             "2Sam.3.13",
             "2Sam.3.14"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σαμαίας",
@@ -3706,10 +3760,13 @@
             "septuagint": 17
           },
           "kind": "person",
-          "zh": "閃的意思是",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4590",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "閃的意思是",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ναθαναὴλ",
@@ -3763,6 +3820,7 @@
           "zh": "何烈山",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.3.1",
             "Exod.17.6",
@@ -3774,8 +3832,7 @@
             "Deut.4.15",
             "Deut.5.2",
             "Deut.9.8"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σαρουίας",
@@ -3788,6 +3845,7 @@
           "zh": "洗魯雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.26.6",
             "2Sam.2.13",
@@ -3799,8 +3857,7 @@
             "2Sam.16.10",
             "2Sam.17.25",
             "2Sam.18.2"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ναβουθαὶ",
@@ -3869,6 +3926,7 @@
           "zh": "乃縵",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.5.1",
             "2Kgs.5.2",
@@ -3880,8 +3938,7 @@
             "2Kgs.5.14",
             "2Kgs.5.17",
             "2Kgs.5.19"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἄραβες",
@@ -3935,10 +3992,13 @@
             "septuagint": 17
           },
           "kind": "person",
-          "zh": "沙拉",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4527",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "沙拉",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Σηλώμ",
@@ -3984,10 +4044,13 @@
             "septuagint": 17
           },
           "kind": "",
-          "zh": "腐爛",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4595",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "腐爛",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Δαγὼν",
@@ -4000,6 +4063,7 @@
           "zh": "大袞",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.16.23",
             "1Sam.5.2",
@@ -4009,8 +4073,7 @@
             "1Sam.5.7",
             "1Chr.10.10",
             "Ezek.20.46"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Θημὰρ",
@@ -4036,6 +4099,7 @@
           "zh": "約哈斯",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.10.35",
             "2Kgs.13.1",
@@ -4047,8 +4111,7 @@
             "2Kgs.13.22",
             "2Kgs.13.25",
             "2Kgs.14.1"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Καφαρναοὺμ",
@@ -4113,10 +4176,13 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "愚昧",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G878",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "愚昧",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἐφράθα",
@@ -4126,10 +4192,13 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "打開吧",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2188",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "打開吧",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰοθὸρ",
@@ -4142,6 +4211,7 @@
           "zh": "葉特羅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.2.16",
             "Exod.3.1",
@@ -4153,8 +4223,7 @@
             "Exod.18.9",
             "Exod.18.10",
             "Exod.18.12"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἑρμᾶ",
@@ -4165,10 +4234,13 @@
             "patristic": 12
           },
           "kind": "",
-          "zh": "旅行用馬車",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G716",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "旅行用馬車",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Νὴρ",
@@ -4178,10 +4250,13 @@
             "septuagint": 16
           },
           "kind": "",
-          "zh": "空氣",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G109",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "空氣",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἀσαὴλ",
@@ -4194,6 +4269,7 @@
           "zh": "亞撒黑",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.2.18",
             "2Sam.2.19",
@@ -4205,8 +4281,7 @@
             "2Sam.2.32",
             "2Sam.3.27",
             "2Sam.3.30"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἁγγαίου",
@@ -4220,6 +4295,7 @@
           "zh": "哈該",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Ezra.5.1",
             "Ezra.6.14",
@@ -4231,8 +4307,7 @@
             "Hag.2.10",
             "Hag.2.13",
             "Hag.2.14"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ὀνίαν",
@@ -4242,10 +4317,13 @@
             "septuagint": 16
           },
           "kind": "person",
-          "zh": "烏西亞",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3604",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "烏西亞",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἄλκιμος",
@@ -4458,6 +4536,7 @@
           "zh": "疏割",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Exod.12.37",
             "Exod.13.20",
@@ -4469,8 +4548,7 @@
             "Judg.8.6",
             "Judg.8.8",
             "Judg.8.14"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Θερσά",
@@ -4483,6 +4561,7 @@
           "zh": "得撒",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.26.37",
             "Num.27.1",
@@ -4494,8 +4573,7 @@
             "1Kgs.16.8",
             "1Kgs.16.9",
             "1Kgs.16.15"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γοθολία",
@@ -4508,6 +4586,7 @@
           "zh": "亞她利雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.8.26",
             "2Kgs.11.1",
@@ -4519,8 +4598,7 @@
             "2Chr.22.2",
             "2Chr.22.10",
             "2Chr.22.11"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ῥαφαὴλ",
@@ -4564,10 +4642,13 @@
             "septuagint": 15
           },
           "kind": "place",
-          "zh": "米甸",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3099",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "米甸",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ζάρα",
@@ -4688,6 +4769,7 @@
           "zh": "亞羅珥",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.21.26",
             "Num.32.34",
@@ -4699,8 +4781,7 @@
             "Josh.13.16",
             "Judg.11.26",
             "Judg.11.33"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαναιὰ",
@@ -4713,6 +4794,7 @@
           "zh": "比拿雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.33.31",
             "Num.33.32",
@@ -4723,8 +4805,7 @@
             "1Kgs.1.26",
             "1Kgs.1.32",
             "1Kgs.1.36"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ὀζά",
@@ -4737,6 +4818,7 @@
           "zh": "烏撒",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.34.26",
             "Josh.6.26",
@@ -4748,8 +4830,7 @@
             "2Kgs.21.26",
             "1Chr.2.33",
             "1Chr.6.29"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀχιὼρ",
@@ -4773,6 +4854,7 @@
           "zh": "亞拉巴",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Deut.1.7",
             "Deut.2.8",
@@ -4784,8 +4866,7 @@
             "Josh.12.8",
             "Josh.13.25",
             "2Kgs.14.25"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἰωναδὰβ",
@@ -4831,6 +4912,7 @@
           "zh": "多比雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Neh.2.19",
             "Neh.4.3",
@@ -4842,8 +4924,7 @@
             "Neh.6.19",
             "Neh.7.62",
             "Neh.13.4"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀπολλώνιος",
@@ -4935,10 +5016,13 @@
             "patristic": 10
           },
           "kind": "person",
-          "zh": "將耶穌釘死十字架",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G4194",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "將耶穌釘死十字架",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἢρ",
@@ -5018,10 +5102,13 @@
             "newTestament": 13
           },
           "kind": "person",
-          "zh": "接續腓力斯的猶大",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G5347",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "接續腓力斯的猶大",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Περσίδα",
@@ -5046,10 +5133,13 @@
             "septuagint": 13
           },
           "kind": "",
-          "zh": "男的",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G730",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "男的",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Κενέζ",
@@ -5070,9 +5160,10 @@
             "septuagint": 13
           },
           "kind": "people",
-          "zh": "東人",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.8.14",
             "1Kgs.11.17",
@@ -5080,7 +5171,9 @@
             "1Chr.18.13",
             "2Chr.28.17"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "東人",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Γάζερ",
@@ -5115,6 +5208,7 @@
           "zh": "亞拿突",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.21.18",
             "1Kgs.2.26",
@@ -5125,8 +5219,7 @@
             "Ezra.2.23",
             "Neh.10.19",
             "Isa.10.30"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Νεχαὼ",
@@ -5139,6 +5232,7 @@
           "zh": "尼哥",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.23.29",
             "2Kgs.23.33",
@@ -5148,8 +5242,7 @@
             "2Chr.35.22",
             "2Chr.36.2",
             "2Chr.36.4"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἁνὰν",
@@ -5162,6 +5255,7 @@
           "zh": "哈拿尼",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Kgs.16.1",
             "1Kgs.16.7",
@@ -5169,8 +5263,7 @@
             "1Chr.3.21",
             "1Chr.8.23",
             "1Chr.8.24"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαλτασὰρ",
@@ -5299,6 +5392,7 @@
           "zh": "古實",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.2.13",
             "Job.28.19",
@@ -5309,8 +5403,7 @@
             "Ezek.30.9",
             "Nah.3.9",
             "Zeph.3.10"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἀδὰ",
@@ -5346,10 +5439,13 @@
             "septuagint": 12
           },
           "kind": "person",
-          "zh": "麥基",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3197",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "麥基",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Κηδάρ",
@@ -5388,6 +5484,7 @@
           "zh": "雅謝",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.21.24",
             "Num.21.32",
@@ -5399,8 +5496,7 @@
             "Josh.21.39",
             "Isa.16.8",
             "Isa.16.9"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἁερμών",
@@ -5413,6 +5509,7 @@
           "zh": "黑門山",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Deut.3.8",
             "Deut.3.9",
@@ -5424,8 +5521,7 @@
             "Josh.13.11",
             "Judg.3.3",
             "1Chr.5.23"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ὀδολλάμ",
@@ -5449,6 +5545,7 @@
           "zh": "夏瑣",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.11.1",
             "Josh.11.10",
@@ -5460,8 +5557,7 @@
             "Josh.19.36",
             "Judg.4.2",
             "Judg.4.17"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ῥηχὰβ",
@@ -5483,9 +5579,10 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "西巴和撒慕拿",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.8.5",
             "Judg.8.6",
@@ -5496,7 +5593,9 @@
             "Judg.8.18",
             "Judg.8.21"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "西巴和撒慕拿",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἁρμαθάιμ",
@@ -5509,6 +5608,7 @@
           "zh": "拉瑪",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.1.1",
             "1Sam.1.3",
@@ -5520,8 +5620,7 @@
             "1Sam.16.13",
             "1Sam.19.18",
             "1Sam.19.22"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σουβὰ",
@@ -5542,9 +5641,10 @@
             "septuagint": 12
           },
           "kind": "",
-          "zh": "利瑪利的兒子",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.15.25",
             "2Kgs.15.27",
@@ -5557,7 +5657,9 @@
             "Isa.7.9",
             "Isa.8.6"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "利瑪利的兒子",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰωσεδὲκ",
@@ -5567,9 +5669,10 @@
             "septuagint": 12
           },
           "kind": "person",
-          "zh": "書亞",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Ezra.3.2",
             "Ezra.3.8",
@@ -5582,7 +5685,9 @@
             "Hag.2.4",
             "Zech.6.11"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "書亞",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Μισάχ",
@@ -5758,10 +5863,13 @@
             "patristic": 6
           },
           "kind": "",
-          "zh": "以弗所出生的或居",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2180",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "以弗所出生的或居",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Φῆλιξ",
@@ -5820,10 +5928,13 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "法老",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G5328",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "法老",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Βαθουὴλ",
@@ -5836,6 +5947,7 @@
           "zh": "彼土利",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.22.22",
             "Gen.22.23",
@@ -5847,8 +5959,7 @@
             "Gen.28.2",
             "Gen.28.5",
             "Gen.29.1"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Χέτ",
@@ -5887,6 +5998,7 @@
           "zh": "毗珥",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.36.39",
             "Num.23.28",
@@ -5897,8 +6009,7 @@
             "Deut.34.6",
             "Josh.22.17",
             "1Chr.1.50"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαρνή",
@@ -5922,6 +6033,7 @@
           "zh": "臨門",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Num.33.19",
             "Josh.19.13",
@@ -5933,8 +6045,7 @@
             "2Sam.4.9",
             "2Kgs.8.28",
             "2Kgs.8.29"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γεθθαίου",
@@ -5947,6 +6058,7 @@
           "zh": "迦特人",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.5.8",
             "1Sam.5.9",
@@ -5958,8 +6070,7 @@
             "2Sam.18.2",
             "1Chr.13.13",
             "1Chr.20.5"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σελμανά",
@@ -5969,9 +6080,10 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "西巴和撒慕拿",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.8.5",
             "Judg.8.6",
@@ -5982,7 +6094,9 @@
             "Judg.8.18",
             "Judg.8.21"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "西巴和撒慕拿",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ὠβήδ",
@@ -6016,10 +6130,13 @@
             "septuagint": 11
           },
           "kind": "person",
-          "zh": "希伯來文",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2241",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "希伯來文",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Σαρουιὰ",
@@ -6032,6 +6149,7 @@
           "zh": "洗魯雅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "1Sam.26.6",
             "2Sam.2.13",
@@ -6043,8 +6161,7 @@
             "2Sam.16.10",
             "2Sam.17.25",
             "2Sam.18.2"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ἡμὰθ",
@@ -6054,10 +6171,13 @@
             "septuagint": 11
           },
           "kind": "",
-          "zh": "我們",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2248",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "我們",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Σαδδοὺκ",
@@ -6070,6 +6190,7 @@
           "zh": "撒督",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Sam.8.17",
             "Ezra.7.2",
@@ -6080,8 +6201,7 @@
             "Ezek.40.46",
             "Ezek.42.13",
             "Ezek.43.19"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Φάκεε",
@@ -6094,6 +6214,7 @@
           "zh": "比加",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.15.25",
             "2Kgs.15.27",
@@ -6105,8 +6226,7 @@
             "2Kgs.16.1",
             "2Kgs.16.5",
             "2Chr.28.6"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σόρ",
@@ -6119,6 +6239,7 @@
           "zh": "推羅",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.50.26",
             "1Chr.7.30",
@@ -6130,8 +6251,7 @@
             "Ezek.27.2",
             "Ezek.27.3",
             "Ezek.27.8"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γοργίας",
@@ -6167,10 +6287,13 @@
             "septuagint": 9
           },
           "kind": "",
-          "zh": "驅除味道",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3605",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "驅除味道",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Μακεδών",
@@ -6210,10 +6333,13 @@
             "patristic": 4
           },
           "kind": "",
-          "zh": "猶太教",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G2454",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "猶太教",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Μελχισέδεκ",
@@ -6263,10 +6389,13 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "投擲",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G906",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "投擲",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Αὐνάν",
@@ -6303,6 +6432,7 @@
           "zh": "歌珊",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.45.10",
             "Gen.46.34",
@@ -6313,8 +6443,7 @@
             "Gen.50.8",
             "Exod.8.22",
             "Exod.9.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Γηρὰ",
@@ -6335,9 +6464,10 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "斯哈",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Gen.46.24",
             "Exod.6.21",
@@ -6350,7 +6480,9 @@
             "1Chr.23.18",
             "1Chr.26.23"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "斯哈",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Σαλπαὰδ",
@@ -6396,6 +6528,7 @@
           "zh": "基列的拉末",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Deut.4.43",
             "Josh.21.38",
@@ -6407,8 +6540,7 @@
             "2Chr.18.19",
             "2Chr.18.28",
             "Neh.3.4"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Σεκελὰκ",
@@ -6421,6 +6553,7 @@
           "zh": "洗革拉",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Josh.15.31",
             "1Sam.27.6",
@@ -6430,8 +6563,7 @@
             "1Sam.31.13",
             "2Sam.1.1",
             "2Sam.4.10"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Βαμὰ",
@@ -6441,9 +6573,10 @@
             "septuagint": 10
           },
           "kind": "",
-          "zh": "丘壇",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.4.5",
             "1Sam.9.12",
@@ -6456,7 +6589,9 @@
             "1Sam.22.6",
             "1Chr.16.39"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "丘壇",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Ἰεροβάαλ",
@@ -6469,6 +6604,7 @@
           "zh": "耶路巴力",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Judg.8.35",
             "Judg.9.1",
@@ -6479,8 +6615,7 @@
             "Judg.9.24",
             "Judg.9.28",
             "Judg.9.57"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Ῥαψάκης",
@@ -6490,9 +6625,10 @@
             "septuagint": 10
           },
           "kind": "person",
-          "zh": "亞述",
-          "zhSource": "和合本修訂版（RCUV2）",
-          "zhRoute": "中文聖經對位",
+          "zh": "",
+          "zhSource": "",
+          "zhRoute": "",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "2Kgs.18.17",
             "2Kgs.18.19",
@@ -6502,7 +6638,9 @@
             "2Kgs.19.8",
             "Isa.36.13"
           ],
-          "zhReview": "由經節對位取得，建議複核"
+          "zhRejected": "亞述",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Νεεμίας",
@@ -6515,6 +6653,7 @@
           "zh": "尼希米",
           "zhSource": "和合本修訂版（RCUV2）",
           "zhRoute": "中文聖經對位",
+          "zhReview": "由經節對位取得，建議複核",
           "zhEvidence": [
             "Neh.1.1",
             "Neh.3.16",
@@ -6523,8 +6662,7 @@
             "Neh.8.9",
             "Neh.10.1",
             "Neh.12.26"
-          ],
-          "zhReview": "由經節對位取得，建議複核"
+          ]
         },
         {
           "headword": "Μισαήλ",
@@ -6535,10 +6673,13 @@
             "patristic": 2
           },
           "kind": "person",
-          "zh": "米迦勒",
-          "zhSource": "信望愛 Strong 中文字典",
+          "zh": "",
+          "zhSource": "",
           "strong": "G3413",
-          "zhRoute": "信望愛"
+          "zhRoute": "",
+          "zhRejected": "米迦勒",
+          "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
+          "zhRejectedOn": "2026-08-25"
         },
         {
           "headword": "Εἰρηναίου",

@@ -62,6 +62,14 @@ SAMPLE_PER_NAME = 10
 MIN_COVERAGE = 0.7          # the name must be in most of the sampled verses
 MAX_BACKGROUND = 0.12       # and rare in the chapters around them
 MIN_LENGTH, MAX_LENGTH = 2, 6
+# Two verses were enough to "agree" on anything: a ratio over so small a sample
+# is noise, and the printed appendix carried 「我們」 for Ἡμὰθ, 「投擲」 for
+# Βάλλα and 「希伯來文」 for Ἡλὰ.  A name now needs real evidence — several
+# verses, and the run has to be in most of them in absolute terms, not just
+# proportionally.  Names that cannot meet it stay empty, which is the correct
+# state for a name no register covers.
+MIN_VERSES = 5
+MIN_HITS = 4
 
 # Characters that begin or end a Chinese name in these translations far too often
 # to be part of one; a candidate that starts with 「和」 has swallowed a conjunction.
@@ -187,7 +195,7 @@ def align(name: str, places: list, chinese: dict, background: Counter, total: in
         text = chinese.get(f"{book}.{chapter}", {}).get(verse, "")
         if text:
             verses.append((f"{book}.{chapter}.{verse}", text))
-    if len(verses) < 2:
+    if len(verses) < MIN_VERSES:
         return {}
 
     tally: Counter = Counter()
@@ -198,7 +206,7 @@ def align(name: str, places: list, chinese: dict, background: Counter, total: in
     scored = []
     for piece, hits in tally.items():
         coverage = hits / len(verses)
-        if coverage < MIN_COVERAGE:
+        if coverage < MIN_COVERAGE or hits < MIN_HITS:
             continue
         noise = background[piece] / max(total, 1)
         if noise > MAX_BACKGROUND:
