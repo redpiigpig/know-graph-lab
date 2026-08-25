@@ -18,6 +18,11 @@ relying on any of it.
 | Memory units | `.../memory-units.json`, `memory-selection-review.md` | 上冊 79/100, 下冊 100/100, unreviewed |
 | Contract | `references/latin-reader-contract.md` | frozen |
 | Gate | `scripts/verify_latin_reader.py` | hard checks pass |
+| Liturgy | `.../liturgy.json` | 10 formulas + the whole Ordo Missae, 1,722 words |
+| Readings' Chinese | `.../readings-zh.json` | in progress; see below |
+| Print | `output/original-readers/latin-original-reader-vol{1,2}.{docx,pdf}` | 上冊 267 頁, 下冊 577 頁 |
+| Web | `/original-readers/lat-lessons`, API under `server/api/original-readers/lat-lessons/` | requireAuth + noindex |
+| Audio | `output/original-readers/audio/latin/manifest.json` | 189 draft clips, gitignored |
 
 Run order from a clean checkout:
 
@@ -52,17 +57,23 @@ checksums.
    that bar applies here is the owner's call and was left alone.
 2. **The word-by-word gloss layer over the readings is not built.** 24,288 words
    in 上冊 alone. Nothing has been tokenised or glossed at token level.
-3. **23 of the 50 lower-volume readings have no Chinese.** They are the Latin
-   Library patristic texts; the 27 that do have Chinese are the repository's own
-   papal and conciliar documents. Self-translation must be labelled `自譯`.
-4. **The Ordo Missae is `source_pending`.** The current Missale Romanum is under
-   the Holy See's copyright and no authorized edition has been recorded. Do not
-   substitute a transcription found online.
-5. **Proper-name Chinese reaches 53 of the 117 names the fifty chapters actually
-   print** (45%), and none of the 468 names elsewhere in the Vulgate. The alignment
+3. **The Chinese for the 23 patristic readings and the Ordo Missae is being
+   produced and is not finished.** `translate_latin_readings_zh.py` is
+   resumable; re-run it until every unit reports all its segments. It runs at
+   roughly two minutes a segment while the Gemini pool is rate-limited, so it is
+   an overnight job, not a coffee-break one. Everything it produces is labelled
+   自譯 and is **not** 《感恩祭典》.
+4. **The Ordo Missae's Latin is settled**: Collins's Further Readings 1, which
+   prints the post-conciliar ordinary, under the owner's verbal permission for
+   this private edition. Its Chinese is part of item 3.
+5. **Proper-name Chinese reaches about half the names the printed chapters
+   contain**, and none of the rest of the Vulgate's. The alignment
    register only covers what is printed; extending it means printing more
    chapters, not loosening the guard.
-6. **No DOCX, PDF, web reader, or audio.** Nothing has been laid out.
+6. **Print, web and audio exist as first cuts and none has been proofread.**
+   The DOCX/PDF render and the pages load, but nobody has read a page of either.
+   The audio is an Italian system voice and the manifest says `draft`: a release
+   track is a human voice with reader, rate, cues, checksum and rights recorded.
 7. **Glosses were produced by NVIDIA llama-3.1-70b**, not reviewed by a human.
    The contract requires every Traditional-Chinese gloss to be reviewed before
    release; that review has not happened.
@@ -100,6 +111,18 @@ checksums.
   Split into sentences, they yield "Dei genetricis, Hom." and "Quam Apostoli
   sententiam S." — references that parse as sentences. Memory-unit selection
   draws only from the Latin Library texts until that apparatus is stripped.
+- **"Excerpt" without edges is not a decision.** Marking a reading `excerpt`
+  and saying no more let the translator render sixteen thousand words of Vincent
+  of Lérins into a book that had budgeted nine hundred.
+- **Two readings must not point at the same anthology file.** Six hymns and two
+  creeds each pointed at the whole collection, so six readings printed the same
+  sixteen hundred words. Cut by anchors, and pick the longest span the anchors
+  yield — these files repeat every title in a contents list at the top.
+- **The imported layout brings the imported running header.** Every page of the
+  first Latin print run said 聖經希伯來文原文讀本.
+- **Collins does not label his nouns and verbs.** The gender abbreviation and the
+  four principal parts *are* the labels; reading only an explicit field left the
+  part-of-speech column empty for most of the book.
 - **Do not re-scan a corpus per lookup.** Asking for one name's commonest
   spelling by scanning three million words, five hundred times, is why the first
   appendix build never finished.
