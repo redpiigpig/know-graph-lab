@@ -149,6 +149,11 @@ def command_for(lane: dict, project: str) -> list[str]:
     ]
 
 
+# 回傳 pid（找到）／0（確定沒有）／-1（查不出來，例如逾時）。-1 絕不可當成 0：
+# 那等於「查不到就再開一個」，而 Get-CimInstance Win32_Process 全表掃描在機器忙的時候
+# 很容易超過逾時（2026-08-26 實測 shard 0 與 shard 1 各長出兩個 worker：我手動掛的
+# Haiku 一個、supervisor 沒認出來又開的 Gemini 一個，兩個同時翻同一批段落）。
+# 順手把 WMI 查詢用 Name 收窄到 python*，讓它在 WMI 端就過濾掉幾百個無關程序。
 def find_existing_lane(lane: dict, project: str) -> int:
     if sys.platform != "win32":
         return 0
@@ -160,7 +165,7 @@ def find_existing_lane(lane: dict, project: str) -> int:
             f"$_.CommandLine -match '--shard-index {lane['shard']}' -and "
             f"$_.CommandLine -match '--shard-count {SHARD_COUNT}'")
     script = (
-        "Get-CimInstance Win32_Process | Where-Object {"
+        "Get-CimInstance Win32_Process -Filter \"Name LIKE '%python%'\" | Where-Object {"
         "$_.ProcessId -ne $PID -and "
         f"$_.CommandLine -match '--project {project}' -and "
         f"{matcher}"
@@ -170,11 +175,13 @@ def find_existing_lane(lane: dict, project: str) -> int:
     try:
         cp = subprocess.run(
             ["powershell.exe", "-NoProfile", "-Command", script],
-            capture_output=True, text=True, timeout=8, creationflags=flags,
+            capture_output=True, text=True, timeout=45, creationflags=flags,
             check=False)
+        if cp.returncode != 0:
+            return -1
         return next((int(x) for x in cp.stdout.split() if x.isdigit()), 0)
     except (OSError, subprocess.TimeoutExpired):
-        return 0
+        return -1
 
 
 def write_state(status: str, lane_states: dict[str, dict], **extra) -> None:
@@ -307,6 +314,11 @@ def main() -> None:
                     state["state"] = "cooldown"
                     continue
                 existing = find_existing_lane(lane, args.project)
+                if existing < 0:
+                    # 查不出來就這輪不開，等下一輪再查——寧可少跑一輪，也不要開出
+                    # 第二個寫同一 shard 的 worker。
+                    state["state"] = "probe-failed"
+                    continue
                 if existing:
                     state.update({"pid": existing, "state": "running-existing"})
                     continue
