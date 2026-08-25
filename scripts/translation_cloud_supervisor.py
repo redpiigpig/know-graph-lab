@@ -102,6 +102,38 @@ def lanes() -> list[dict]:
     return result
 
 
+GEMINI_PROBE = ROOT / "scripts" / "gemini_probe.py"
+# 免費 Gemini 乾掉時，lane 原本就只是空轉：起來、四把 key 全 429、退出、冷卻 30 分，
+# 整夜什麼都沒翻（2026-08-24 實測一晚只推進 203 段）。Sonnet 也不是答案——Max 上的
+# Sonnet 額度撐不住長跑，掛整晚照樣被 429 打死；同一個帳號的 Haiku 卻能連續工作一整天
+# （2026-08-25 實測 16 小時 +3,694 段）。所以 Gemini 乾掉就改用 Haiku（user 2026-08-26）。
+# 探測結果快取 15 分鐘，免得每次 spawn 都多打一次 API。
+_gemini_probe_cache = {"at": 0.0, "alive": True}
+
+
+def gemini_alive(ttl: float = 900.0) -> bool:
+    now = time.time()
+    if now - _gemini_probe_cache["at"] < ttl:
+        return _gemini_probe_cache["alive"]
+    try:
+        rc = subprocess.run(
+            [sys.executable, "-X", "utf8", str(GEMINI_PROBE)],
+            cwd=ROOT, capture_output=True, timeout=180).returncode
+        alive = rc == 0
+    except Exception:  # noqa: BLE001  探測本身失敗不該讓 lane 停擺
+        alive = False
+    _gemini_probe_cache.update(at=now, alive=alive)
+    return alive
+
+
+def engine_for(lane: dict) -> str:
+    """Gemini 初譯 lane 在額度乾掉時降級到 Haiku。審查 lane 與 NVIDIA lane 不動。"""
+    if (lane["kind"] == "translate" and lane["provider"] == "gemini"
+            and not gemini_alive()):
+        return "haiku"
+    return lane["engine"]
+
+
 def command_for(lane: dict, project: str) -> list[str]:
     if lane["kind"] == "review":
         return [
@@ -112,7 +144,7 @@ def command_for(lane: dict, project: str) -> list[str]:
     return [
         sys.executable, "-X", "utf8", str(ROOT / "scripts" / "ingest_lit_review.py"),
         "--fetch-fulltext", "--project", project, "--resume",
-        "--engine", lane["engine"], "--pace", "1",
+        "--engine", engine_for(lane), "--pace", "1",
         "--shard-index", str(lane["shard"]), "--shard-count", str(SHARD_COUNT),
     ]
 
@@ -285,8 +317,9 @@ def main() -> None:
                     env["KGL_NVIDIA_SLOT"] = str(lane["slot"])
                 log_path = LOG_DIR / f"{args.project}_{lane_id}.log"
                 handle = log_path.open("a", encoding="utf-8")
+                used_engine = engine_for(lane)
                 handle.write(f"\n===== {now_iso()} START kind={lane['kind']} "
-                             f"shard={lane['shard']} =====\n")
+                             f"shard={lane['shard']} engine={used_engine} =====\n")
                 handle.flush()
                 flags = (getattr(subprocess, "CREATE_NO_WINDOW", 0)
                          | getattr(subprocess, "BELOW_NORMAL_PRIORITY_CLASS", 0))
@@ -298,6 +331,7 @@ def main() -> None:
                 state.update({
                     "pid": child.pid, "state": "running",
                     "started_at": now_iso(), "log": str(log_path),
+                    "engine_in_use": used_engine,
                 })
             running = sum(s.get("state", "").startswith("running")
                           for s in lane_states.values())
