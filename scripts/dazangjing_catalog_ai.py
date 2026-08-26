@@ -233,10 +233,28 @@ def prompt_for(record: dict[str, Any]) -> str:
         "it — condemned heresies, other religions, anti-Christian polemic. A modern Christian author "
         "is NOT wai merely because the fourth-century church never saw the book. Chesterton's "
         "Orthodoxy and Erasmus's Moriae Encomium are zheng.\n"
-        "Do not classify a record as zheng merely because it is famous. For post-Reformation "
-        "denominational confessions (Westminster, Heidelberg, Dort, Augsburg…) the zheng/wai boundary "
-        "is an unsettled editorial question for this project: set canon=unknown and "
-        "decision=needs_manual_review rather than guessing.\n"
+        "Do not classify a record as zheng merely because it is famous. "
+        # 2026-08-27 使用者定調：宗派信條算近代基督教的正藏。
+        "Post-Reformation denominational confessions and catechisms (Westminster Confession and "
+        "Catechisms, Heidelberg, Belgic, Dort, Augsburg, Savoy, Scots, Gallic, Second Helvetic, "
+        "Thirty-Nine Articles…) ARE zheng for their own era — they are the confessional documents of "
+        "recognised Christian traditions, not outside witnesses. Classify them "
+        "canon=zheng, decision=keep_primary_work.\n"
+        # canon 與 decision 是兩條獨立的軸。只寫「信條是正藏」時，模型會把它擴張
+        # 到「信條的現代註釋」，drop_secondary_study 從 39 筆塌到 4 筆。
+        "IMPORTANT — canon and decision are INDEPENDENT axes. canon says which side of the "
+        "zheng/wai divide a work sits on; decision says whether this catalogue collects it. "
+        "A modern exposition, commentary, study guide or children's adaptation OF a confession is "
+        "still canon=zheng (it comes from inside the tradition) but decision=drop_secondary_study, "
+        "because the catalogue collects primary works only. Keep the confession text itself; "
+        "drop the twentieth-century commentary on it.\n"
+        # 「註釋 → 次級研究」若不限時代，會把烏爾西努 1584 年的《海德堡要理問答註釋》
+        # 也剔掉——他正是該要理問答本身的主要執筆者。
+        "But 'commentary' alone is not grounds to drop: a commentary written in the same era by the "
+        "confession's own author or a contemporary is itself a primary work of that era — keep it. "
+        "Ursinus's Commentary on the Heidelberg Catechism (he drafted the Catechism) is "
+        "keep_primary_work, not secondary scholarship. Drop only LATER scholarship about an earlier "
+        "work, judged by the gap between the work's era and the commentator's.\n"
         "If the record is only a printed edition, translation, manuscript witness, shelf/classification schedule, "
         "or mixed catalogue, preserve it as evidence only and set decision to drop_catalog_or_edition or needs_manual_review.\n"
         "collectionKey 'jing' (經藏) is ONLY for biblical scripture / canonical Bible texts and versions. "
@@ -275,7 +293,7 @@ def review_prompt(record: dict[str, Any], local_classification: dict[str, Any]) 
         "drop modern secondary scholarship; keep manuscript/edition records only as witnesses to a primary work. "
         "canon zheng/wai is about reception by the Nicene catholic tradition, NOT about the biblical canon: "
         "orthodox patristic works are zheng; only pseudepigrapha/heresy/Jewish/pagan outside-witnesses are wai. "
-        "For post-Reformation denominational confessions set canon=unknown and decision=needs_manual_review.\n\n"
+        "Post-Reformation denominational confessions and catechisms are zheng for their own era.\n\n"
         f"source_record={json.dumps(record, ensure_ascii=False)}\n"
         f"local_classification={json.dumps(local_classification, ensure_ascii=False)}"
     )

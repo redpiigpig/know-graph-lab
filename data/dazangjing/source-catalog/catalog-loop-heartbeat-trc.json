@@ -1,9 +1,12 @@
 {
-  "status": "idle",
-  "updated_at": "2026-08-26T12:46:16+00:00",
-  "pid": 28332,
-  "processed_this_run": 16,
-  "skipped_this_run": 3,
-  "total_done": 130,
-  "ledger": "data\\dazangjing\\source-catalog\\classified-records-trc.jsonl"
+  "status": "running",
+  "updated_at": "2026-08-26T16:39:29+00:00",
+  "pid": 26436,
+  "input": "c:\\tmp\\trc_recls5.json",
+  "ledger": "data\\dazangjing\\source-catalog\\classified-records-trc.jsonl",
+  "processed_this_run": 37,
+  "skipped_this_run": 0,
+  "total_done": 59,
+  "last_engine": "nvidia",
+  "last_title": "The Soliloquies of Augustine"
 }
