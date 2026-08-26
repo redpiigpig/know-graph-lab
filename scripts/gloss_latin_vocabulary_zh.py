@@ -96,7 +96,12 @@ _S2T = opencc.OpenCC('s2t')
 # of its readings.  Rejecting it as simplified threw away good translations and
 # retried them for ever.  台 is the same kind of case, and 号 deliberately is not:
 # that one really is simplified.
-TAIWAN_VARIANTS = {"台", "床", "群", "峰", "祢", "里", "后", "余", "咸"}
+# Derived from the translations that passed, not guessed: these are the
+# characters s2t rewrites inside text a reviewer accepted as Traditional.
+# 祢 leads by a wide margin -- it is the honorific for God -- then 群, 里,
+# 台, 峰, 凶, 床, 升.
+TAIWAN_VARIANTS = {"台", "床", "群", "峰", "祢", "里", "后", "余", "咸",
+                   "凶", "升", "布", "冢", "臺"}
 
 
 def has_simplified(text: str) -> bool:

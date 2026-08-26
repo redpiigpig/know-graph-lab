@@ -1,0 +1,2301 @@
+{
+ "lines": {
+  "v1:l1:0": {
+   "zh": "V. 因父、及子、及聖神之名。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. In nomine Patris, et Filii, et Spiritus Sancti."
+  },
+  "v1:l1:1": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "v1:l2:0": {
+   "zh": "V. 請舉心向上。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Sursum corda."
+  },
+  "v1:l2:1": {
+   "zh": "R. 我們全心歸向上主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Habemus ad Dominum."
+  },
+  "v1:l2:2": {
+   "zh": "V. 我們要感謝上主、我們的天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Gratias agamus Domino Deo nostro."
+  },
+  "v1:l2:3": {
+   "zh": "R. 這是理所當然的。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Dignum et justum est."
+  },
+  "v1:l3:0": {
+   "zh": "V. 願全能的天主，聖父、聖子、聖神降福你們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus."
+  },
+  "v1:l3:1": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "v1:l3:2": {
+   "zh": "V. 彌撒禮成。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Ite, missa est."
+  },
+  "v1:l3:3": {
+   "zh": "R. 感謝天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Deo gratias."
+  },
+  "v1:l4:0": {
+   "zh": "V. 恩寵我們的主耶穌基督，以及天主的愛德，以及聖神的共融，願與你們眾人同在。",
+   "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis."
+  },
+  "v1:l4:1": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "v1:l6:0": {
+   "zh": "除免世罪的天主羔羊，求祢垂憐我們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: miserere nobis."
+  },
+  "v1:l6:1": {
+   "zh": "除免世罪的天主羔羊，求祢垂憐我們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: miserere nobis."
+  },
+  "v1:l6:2": {
+   "zh": "除免世罪的天主羔羊，求賜我們平安。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: dona nobis pacem."
+  },
+  "v1:l9:1": {
+   "zh": "唯一聖神，你唯一主，你唯一至高，耶穌基督,",
+   "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "solus Sanctus, tu solus Dominus, tu solus Altissimus, Jesu Christe,"
+  },
+  "v1:l10:1": {
+   "zh": "光榮從天降下。[至下列言詞，至於成就時",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "lutem descendit de caelis. [Ad verba quae sequuntur, usque ad factus"
+  },
+  "v1:l10:2": {
+   "zh": "[都跪下。]並由聖神降孕，出自瑪利亞",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "est, omnes se inclinant.] Et incarnatus est de Spiritu Sancto ex Maria"
+  },
+  "v1:l10:3": {
+   "zh": "童貞瑪利亞，而成了人。祂也為我們被釘在十字架上，受難於本提",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio"
+  },
+  "v1:l10:4": {
+   "zh": "本篤於彼拉多；受難且被埋葬，第三天復活了，依照",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Pilato; passus et sepultus est, et resurrexit tertia die, secundum"
+  },
+  "v1:l10:6": {
+   "zh": "他將帶著光榮降來，審判生者死者，他的國度",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "venturus est cum gloria judicare vivos et mortuos, cujus regni non"
+  },
+  "v1:l10:7": {
+   "zh": "將是終結。且信聖神，為主，賦予生命者；其由",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "erit finis. Et in Spiritum Sanctum, Dominum et vivificantem; qui ex"
+  },
+  "v1:l10:8": {
+   "zh": "與聖子同發。與聖父及聖子同受欽崇及",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et"
+  },
+  "v1:l10:9": {
+   "zh": "同受光榮；他曾藉先知們發言。我們信唯一、至聖、",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "conglorificatur; qui locutus est per prophetas. Et unam sanctam,"
+  },
+  "v1:l10:10": {
+   "zh": "公教聖而宗徒之教會。我信唯一聖洗以",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in"
+  },
+  "v1:l10:11": {
+   "zh": "罪過的赦免。我期待死者的復活，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "remissionem peccatorum. Et exspecto resurrectionem mortuorum,"
+  },
+  "v1:l10:12": {
+   "zh": "及來世之生命。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "et vitam venturi saeculi."
+  },
+  "v1:l37:21": {
+   "zh": "23　多比亞同他的兒子和妻子逃亡，赤身潛伏，因為許多人愛他。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "23　Tobias vero cum filio suo et cum uxore suo fugiens, nudus latuit, quia multi diligebant eum."
+  },
+  "v1:l37:22": {
+   "zh": "24　四十五天之後，他的兒子們殺死了那位國王，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "24　Post dies vero quadraginta quinque occiderunt regem filii ipsius,"
+  },
+  "v1:l37:23": {
+   "zh": "25　多比亞遂回到自己的家，他的一切家產都歸還給了他。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "25　et reversus est Tobias in domum suam, omnisque facultas ejus restituta est ei."
+  },
+  "v2:l41:0": {
+   "zh": "第一章",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "CAPUT I"
+  },
+  "v2:l41:1": {
+   "zh": "論公教普世運動之原則",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "De catholicis oecumenismi principiis"
+  },
+  "v2:l41:3": {
+   "zh": "耶穌主宰被舉揚於十字架上並蒙受光榮後，傾注了所許諾的聖神，藉著聖神，祂召集並聚合了新約的子民——教會——於信德、望德及愛德的共融中，如宗徒所教導的：「一個身體，一個聖神，如同你們蒙召所承受的一個希望。一個主宰，一個信德，一個聖洗」（弗四，四－五）。誠然「你們凡是受洗歸於基督的人，就已穿上了基督……你們眾人都在基督耶穌內成為一體了」（迦三，二七－二八）。聖神住在信者的心中，充滿並治理整個教會，造成信徒們奇妙的共融，並如此親密地在基督內將眾人結合在一起，以至聖神成為教會合一的根源。聖神施展恩寵及職務的多種分配，以各種不同的恩惠充實耶穌基督的教會，「為使聖者成全，為從事服務的工作，為建立基督的身體」（弗四，一二）。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Exaltatus autem in cruce et glorificatus Dominus Iesus Spiritum promissum effudit, per quem Novi Foederis populum, qui est Ecclesia, in unitatem fidei, spei et caritatis vocavit et congregavit, sicut docet Apostolus: «Unum corpus et unus Spiritus sicut vocati estis in una spe vocationis vestrae. Unus Dominus, una fides, unum baptisma» ( Eph . 4, 4-5). Etenim «quicumque in Christo baptizati estis, Christum induistis... Omnes enim vos unus estis in Christo Iesu» ( Gal . 3, 27-28 gr.). Spiritus Sanctus, qui credentes inhabitat totamque replet atque regit Ecclesiam, miram illam communionem fidelium efficit et tam intime omnes in Christo coniungit, ut Ecclesiae unitatis sit Principium. Ille divisiones gratiarum et ministrationum operatur, [^[5]] variis muneribus Ecclesiam Iesu Christi ditans «ad consummationem sanctorum in opus ministerii, in aedificationem corporis Christi» ( Eph . 4, 12)."
+  },
+  "v2:l41:4": {
+   "zh": "基督為了建立祂這聖潔的教會，遍佈世界，直到世界終結，將教導、治理及聖化的職務委託給十二宗徒議會。祂在他們中選擇了伯多祿，在他信德的明認後，決定在他身上建立祂的教會；將天國的鑰匙許給他，又在他表示愛德後，委託他使眾羊堅定信德、在完美的合一中牧養，耶穌基督本身永遠存留為最高的基石與我們靈魂的牧者。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ad hanc autem sanctam suam Ecclesiam ubique terrarum usque ad consummationem saeculi stabiliendam, Christus munus docendi, regendi et sanctificandi Collegio Duodecim concredidit. [^[6]] Inter eos Petrum elegit, super quem post fidei confessionem Ecclesiam suam aedificare decrevit; cui claves regni caelorum promisit [^[7]] atque, post suae dilectionis professionem, universas oves in fide confirmandas [^[8]] et in perfecta unitate pascendas commisit, [^[9]] Ipso Christo Iesu summo angulari lapide [^[10]] et pastore animarum nostrarum [^[11]] in aeternum manente."
+  },
+  "v2:l41:5": {
+   "zh": "耶穌基督藉著宗徒及其繼承人，即以伯多祿的繼承人為首的主教們，藉著對福音的忠實宣講和聖事的施行，並藉著在愛德中的治理，在聖神的推動下，願使祂的子民增長，並在一致中完成其共融：在唯一信德的認信中，在神聖敬禮的共同慶祝中，以及在天主家庭的手足和睦中。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Iesus Christus per Apostolorum eorumque successorum, nempe episcoporum cum Petri successore capite, fidelem Evangelii praedicationem sacramentorumque administrationem, et per gubernationem in dilectione, Spiritu Sancto operante, populum suum crescere vult eiusque communionem perficit in unitate: in confessione unius fidei, in divini cultus communi celebratione, necnon in familiae Dei fraterna concordia."
+  },
+  "v2:l41:6": {
+   "zh": "因此教會，天主唯一的羊群，如同為萬民樹立的標誌，向全人類傳導和平的福音，懷著望德朝向天上家鄉的目標而旅程。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ita Ecclesia, unicus Dei grex, tamquam signum levatum in nationes, [^[12]] Evangelium pacis ministrans toti generi humano, [^[13]] peregrinatur in spe ad patriae supernae metam. [^[14]]"
+  },
+  "v2:l41:7": {
+   "zh": "這是教會合一的神聖奧跡，在基督內並藉著基督，由聖神運作恩寵的多樣性而成。此奧跡的最高典範與根本原則存在於聖三位一體中，即唯一天主聖父、聖子在聖神內的共融。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Hoc est unitatis Ecclesiae sacrum mysterium, in Christo et per Christum, Spiritu Sancto munerum varietatem operante. Huius mysterii supremum exemplar et principium est in Trinitate Personarum unitas unius Dei Patris et Filii in Spiritu Sancto."
+  },
+  "v2:l41:9": {
+   "zh": "此外，構成教會本身並使其生活的種種要素或善物中，實有許多卓越的善物能存在於公教教會可見的範圍之外：天主的聖言著作、恩寵的生活、信德、望德和愛德，以及聖神其他內在的恩賜和可見的要素。這一切都源自基督且導向基督，按理都屬於基督唯一的教會。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Insuper ex elementis seu bonis, quibus simul sumptis ipsa Ecclesia aedificatur et vivificatur, quaedam immo plurima et eximia exstare possunt extra visibilia Ecclesiae catholicae saepta: verbum Dei scriptum, vita gratiae, fides, spes et caritas, aliaque interiora Spiritus Sancti dona ac visibilia elementa: haec omnia, quae a Christo proveniunt et ad Ipsum conducunt, ad unicam Christi Ecclesiam iure pertinent."
+  },
+  "v2:l41:10": {
+   "zh": "不少基督教信仰的聖聖事行為也在與我們分離的弟兄們中進行，這些行為按照各個教會或信仰團體的不同情況，以各種方式無疑能真實地產生恩寵的生命，且應當稱為適合開啟進入救恩共融的行為。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Non paucae etiam christianae religionis actiones sacrae apud fratres a nobis seiunctos peraguntur, quae variis modis secundum diversam condicionem uniuscuiusque Ecclesiae vel Communitatis procul dubio vitam gratiae reapse generare possunt atque aptae dicendae sunt quae ingressum in salutis communionem pandant."
+  },
+  "v2:l41:11": {
+   "zh": "因此，那些分離的教會與教團，儘管我們相信缺陷存在於它們，卻決非被剝奪了在救恩奧蹟中的意義和分量。蓋基督聖神不拒絕將它們作為救恩的工具而運用，其效力乃源自已交託於公教教會的恩寵與真理的圓滿本身。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Proinde ipsae Ecclesiae [^[19]] et Communitates seiunctae, etsi defectus illas pati credimus, nequaquam in mysterio salutis significatione et pondere exutae sunt. Iis enim Spiritus Christi uti non renuit tamquam salutis mediis, quorum virtus derivatur ab ipsa plenitudine gratiae et veritatis quae Ecclesiae catholicae concredita est."
+  },
+  "v2:l41:12": {
+   "zh": "然而，與我們分離的弟兄們，無論是個人，或是他們的團體和教會，都不享有耶穌基督所願意賜予所有蒙祂於一身內重生並賦予新生命的人的那種合一。聖經和受尊敬的教會傳統所明認的正是這種合一。蓋唯有聖化的基督的教會，即普遍救恩的助力，才能達到救恩所有方法的圓滿。我們深信主把新約中所有的美善都託付於伯多祿所領導的唯一宗徒團體，以便在地上建立基督唯一的身體。凡已以任何方式屬於天主子民的，都應該完全納入這個身體。這個子民雖在地上作客旅期間，其成員中仍難免受罪過的拘束，但在基督內增長，並按照天主的幽隱計畫而溫和地被引導，直到於永遠光榮的全面圓滿中於天上的耶路撒冷歡樂地達到終點。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Attamen fratres a nobis seiuncti, sive singuli sive Communitates et Ecclesiae eorum, unitate illa non fruuntur, quam Iesus Christus iis omnibus dilargiri voluit quos in unum corpus et in novitatem vitae regeneravit et convivificavit, quamque Sacrae Scripturae et veneranda Ecclesiae Traditio profitentur. Per solam enim catholicam Christi Ecclesiam, quae generale auxilium salutis est, omnis salutarium mediorum plenitudo attingi potest. Uni nempe Collegio apostolico cui Petrus praeest credimus Dominum commisisse omnia bona Foederis Novi, ad constituendum unum Christi corpus in terris, cui plene incorporentur oportet omnes, qui ad populum Dei iam aliquo modo pertinent. Qui populus, durante sua terrestri peregrinatione, quamvis in membris suis peccato obnoxius remaneat, in Christo crescit et a Deo, secundum Eius arcana consilia, suaviter ducitur, usquedum ad totam aeternae gloriae plenitudinem in caelesti Ierusalem laetus perveniat."
+  },
+  "v2:l41:14": {
+   "zh": "「普世合一運動」係指為應對教會各種需要與時代機遇而激發並安排的各項活動與舉措，旨在促進基督徒的共融，其中包括：首先，一切努力都應消除那些言辭、判斷與行為，這些按公正與真理而言，不符合分裂弟兄們的處境，因此使彼此間的關係更加困難；其次，在由不同教會或信理團體的基督徒參加、在宗教精神中安排的集會中，由適當受過訓練的專家進行「對話」，在對話中每一方都更深入地闡明自己信理團體的教義，並清晰地呈現其特點。蓋因著此對話，眾人都獲得了對雙方信理團體教義與生活的更真實認識和更公正的評估；其後，這些信理團體也實現了更廣泛的合作，在一切為全體基督徒良心所要求的共同福祉事務上合作，並在可能的範圍內，在一致的祈禱中聚集。最後，眾人應考驗自己對基督關乎教會旨意的忠信，並據此奮力推進革新工作以及應有的改革。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Per «motum oecumenicum» intelliguntur activitates et incepta, quae pro variis Ecclesiae necessitatibus et opportunitatibus temporum ad Christianorum unitatem fovendam suscitantur et ordinantur, ut sunt: primum, omnes conatus ad eliminanda verba, iudicia et opera, quae fratrum seiunctorum condicioni secundum aequitatem et veritatem non respondeant, ideoque mutuas cum ipsis rationes difficiliores reddant; dein, in conventibus Christianorum ex diversis Ecclesiis vel Communitatibus in spiritu religioso ordinatis, «dialogus» inter peritos apte instructos initus, in quo unusquisque suae Communionis doctrinam profundius explicat eiusque characteres perspicue praesentat. Per hunc enim dialogum veriorem utriusque Communionis doctrinae vitaeque cognitionem et magis aequam aestimationem omnes acquirunt; tum etiam illae Communiones eam consequuntur ampliorem collaborationem in quibusvis officiis ad bonum commune ab omni conscientia christiana postulatis, et in oratione unanimi, sicubi licet, conveniunt. Denique omnes suam fidelitatem voluntati Christi circa Ecclesiam examinant atque, ut oportet, opus renovationis nec non reformationis strenue aggrediuntur."
+  },
+  "v2:l41:15": {
+   "zh": "凡此種種，既由公教會的信友們在司牧人員的警惕下謹慎而耐心地實踐，便有益於公正與真理、協和與合作、兄弟之情與共融；如此，逐漸排除阻礙圓滿教會共融的障礙，使全體基督信徒得以在聖體的唯一慶典中聚集於基督自建立教會之初所賦予的唯一教會的合一內；我們相信這一合一在公教會內不可喪失地永存，並期待它直到世界末日不斷增長。誠然，渴望完全公教共融的個人們的準備與和解工作，在本質上有別於大公運動；然而並無相反之處，因為二者俱源自天主的妙旨。公教信友在大公運動中必須當然關心於分離的兄弟們，為他們祈禱，與他們分享教會的事務，主動向他們邁出第一步。尤其是，他們應當以誠摯而專注的心查究公教家庭本身所需更新和完善的事項，俾其生活更忠實而清晰地為基督藉宗徒們所傳遞的教義與制度作證。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Quae omnia, cum a fidelibus Ecclesiae catholicae sub pastorum vigilantia prudenter et patienter perficiuntur, ad bonum aequitatis et veritatis, concordiae et collaborationis, fraterni animi et unionis conferunt; ut hac via paulatim, superatis obstaculis perfectam communionem ecclesiasticam impedientibus, omnes Christiani, in una Eucharistiae celebratione, in unius unicaeque Ecclesiae unitatem congregentur quam Christus ab initio Ecclesiae suae largitus est, quamque inamissibilem in Ecclesia catholica subsistere credimus et usque ad consummationem saeculi in dies crescere speramus. Patet autem opus praeparationis ac reconciliationis eorum singulorum, qui plenam communionem catholicam desiderant, ab oecumenico incepto natura sua distingui; nulla tamen adest oppositio, cum utrumque ex Dei mirabili dispositione procedat. Fideles catholici in actione oecumenica sine dubio de fratribus seiunctis solliciti sint oportet, pro illis orando, de rebus Ecclesiae cum illis communicando, primos gressus ad illos movendo. In primis vero ipsimet sincero attentoque animo ea perpendere debent, quae in ipsa Familia catholica renovanda et efficienda sunt, ut eius vita fidelius et clarius testimonium reddat de doctrina institutisque a Christo per Apostolos traditis."
+  },
+  "v2:l41:16": {
+   "zh": "雖然天主教會確實由天主賦予了一切已啟示的真理，並配備了一切恩寵的方法，然而其成員卻不能按應有的熱誠程度從中生活，以至於教會的面容對於與我們分離的弟兄們及整個世界照耀得較少，且天國的增長受到了阻延。因此，所有天主教信徒應當傾向於基督徒的完美，且各人按照自己的身份，應當努力使教會在身體上承行耶穌的謙卑與克己，日見潔淨與更新，直到基督把教會呈獻給自己，光榮燦爛，無瑕無皺。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Quamvis enim Ecclesia catholica omni a Deo revelata veritate et omnibus mediis gratiae ditata sit, tamen membra eius non omni quo par est fervore inde vivunt, ita ut vultus Ecclesiae fratribus a nobis seiunctis et universo mundo minus affulgeat atque regni Dei incrementum retardetur. Quapropter Catholici omnes ad perfectionem christianam tendere debent [^[20]] atque, pro sua quisque condicione, eniti ut Ecclesia, humilitatem et mortificationem Iesu in corpore suo portans, [^[21]] de die in diem mundetur et renovetur, donec Christus eam sibi exhibeat gloriosam, non habentem maculam aut rugam. [^[22]]"
+  },
+  "v2:l41:17": {
+   "zh": "在必要之事上保持合一，教會中的眾人，按照各自所蒙受的使命，無論在各種靈修生活和紀律的形式上，抑或在禮儀聖儀的多樣性上，乃至在對所啟示真理的神學闡釋上，都應保持應有的自由；然而在一切事上應培養愛德。蓋以此行動方式，他們必能日漸更充分地彰顯教會真正的普遍性與宗徒性。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "In necessariis unitatem custodientes, omnes in Ecclesia, secundum munus unicuique datum, cum in variis formis vitae spiritualis et disciplinae, tum in diversitate liturgicorum rituum, immo et in theologica veritatis revelatae elaboratione, debitam libertatem servent; in omnibus vero caritatem colant. Hac enim agendi ratione ipsi veri nominis catholicitatem simul et apostolicitatem Ecclesiae in dies plenius manifestabunt."
+  },
+  "v2:l41:18": {
+   "zh": "另一方面，天主教徒必須欣然認識並重視真正的基督信仰善業，這些善業源於共同的遺產，存在於與我們分離的弟兄們當中。認識基督的豐富和他人生命中的德行工作，這些人為基督作證，有時甚至至於流血犧牲，這是公正且有益救恩的：因為天主在祂的一切工作中始終是奇妙的、值得讚歎的。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ex altera parte necessarium est Catholicos cum gaudio agnoscere et aestimare bona vere christiana, a communi patrimonio promanantia, quae apud fratres a nobis seiunctos inveniuntur. Divitias Christi et virtutum opera agnoscere in vita aliorum, qui pro Christo testimonium ferunt, quandoque usque ad sanguinis effusionem, aequum et salutare est: Deus enim semper mirabilis est et mirandus in operibus suis."
+  },
+  "v2:l41:19": {
+   "zh": "凡是聖神的恩寵在分離的弟兄們身上所實現的一切，也都能對我們的建設有所貢獻，這一點不應該忽略。凡是真正基督教的東西，絕不與信德的真正財富相衝突，相反地，它常能使我們更圓滿地達到基督與教會奧蹟的認識。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Neque est praetereundum, quaecumque Spiritus Sancti gratia in fratribus seiunctis efficiuntur, eadem ad nostram quoque aedificationem conferre posse. Quodcumque vere christianum est, numquam germanis fidei bonis adversatur, immo semper efficere potest ut perfectius ipsum mysterium Christi et Ecclesiae attingatur."
+  },
+  "v2:l41:20": {
+   "zh": "然而，基督徒的分裂對教會是一種阻礙，使她不能在那些雖由聖洗而屬於她，卻與她的圓滿共融相隔絕的子女們身上，發揮她本身所應有的公教性的圓滿。甚至對教會本身而言，在生活的每一方面都更難以表達其公教性的圓滿。本聖善大公會議欣然注意到天主教信友在大公運動中的參與日益增進，並向普天之下的主教們推薦此事，使同一工作得以勤勉而謹慎地由他們予以推進和指導。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Attamen divisiones Christianorum impedimento Ecclesiae sunt, quominus ipsa ad effectum deducat plenitudinem catholicitatis sibi propriam in iis filiis, qui sibi quidem baptismate appositi, sed a sua plena communione seiuncti sunt. Immo et pro ipsa Ecclesia difficilius fit plenitudinem catholicitatis sub omni respectu in ipsa vitae realitate exprimere. Haec Sacra Synodus cum gaudio advertit participationem fidelium catholicorum in actione oecumenica in dies augeri, eamque episcopis ubique terrarum commendat, ut eadem promoveatur sollerter, et prudenter ab ipsis dirigatur."
+  },
+  "v2:l41:21": {
+   "zh": "論普世主義的實踐",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "De oecumenismi exercitio"
+  },
+  "v2:l41:24": {
+   "zh": "這項革新具有卓越的普世教會意義。然而，教會生活的那些不同方式，藉此這項革新已經實現——如聖經運動和禮儀運動、天主之言的宣講及教理講授、平信徒的宗徒工作、宗教生活的新形式、婚姻的靈性、教會在社會事務中的教導和活動——應視為某種保證和預兆，預示普世教會運動未來的進展。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Haec igitur renovatio insigne obtinet momentum oecumenicum. Varii autem illi modi vitae Ecclesiae, per quos haec renovatio iam efficitur -ut sunt motus biblicus et liturgicus, praedicatio verbi Dei atque catechesis, laicorum apostolatus, vitae religiosae novae formae, matrimonii spiritualitas, doctrina et activitas Ecclesiae in re sociali- tamquam pignora et auspicia quaedam sunt habenda, quae futuros oecumenismi progressus fauste portendunt."
+  },
+  "v2:l41:26": {
+   "zh": "關於對於合一的過犯，聖若望的見證也是有效的：「若我們說自己沒有犯過罪，就是叫他成為撒謊者，他的聖言也不在我們內」（若一1,10）。因此，我們以謙卑的祈禱向天主及與我們分離的弟兄們懇求寬恕，就如我們也寬恕了我們的債主。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "De culpis etiam adversus unitatem valet testimonium S. Ioannis: «Si dixerimus quoniam non peccavimus, mendacem facimus eum, et verbum eius non est in nobis» ( I Io . 1, 10). Humili igitur prece veniam petimus a Deo et a fratribus seiunctis, sicut et nos dimittimus debitoribus nostris."
+  },
+  "v2:l41:27": {
+   "zh": "所有基督信徒應當銘記，當他們依照福音更純潔地追求生活時，他們越能促進並實踐基督徒的共融。蓋他們與聖父、聖言及聖神結合得越密切，就越能深切而便利地增進彼此的手足之誼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Meminerint omnes christifideles se Christianorum unionem eo melius promovere, immo exercere, quo puriorem secundum Evangelium vitam degere studeant. Quo enim arctiore communione cum Patre, Verbo et Spiritu unientur, eo intimius atque facilius mutuam fraternitatem augere valebunt."
+  },
+  "v2:l41:29": {
+   "zh": "誠然，天主教徒經常聚集進行那祈禱是莊嚴的事，為了教會的合一，即救主自己在臨終前夜迫切地向聖父懇求的：「願眾人都合而為一」（若‧17，21）。在某些特殊的事況中，例如那些標明為「為合一」的祈禱，以及在普世合一的集會中，天主教徒與分離的弟兄們在祈禱中相聯合是許可的，甚而是可羨慕的。這樣的共同祈禱實在是獲得合一恩寵的有效工具，也是真正表明天主教徒與分離的弟兄們仍然相結合的聯繫的象徵：「因為無論在哪裡，有兩個或三個人因我的名聚集在一起，我就在他們中間」（瑪‧18，20）。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Sollemne enim est Catholicis frequenter ad illam orationem convenire pro Ecclesiae unitate, quam Salvator Ipse in pervigilio mortis a Patre flagranter precatus est: «ut omnes unum sint» ( Io . 17, 21). In quibusdam peculiaribus rerum adiunctis, cuiusmodi sunt precationes quae «pro unitate» indicuntur, atque in oecumenicis conventibus licitum est immo et optandum, ut Catholici cum fratribus seiunctis in oratione consocientur. Communes eiusmodi preces perefficax sane medium sunt gratiae unitatis impetrandae et genuina significatio vinculorum, quibus Catholici cum fratribus seiunctis adhuc coniunguntur: «Ubi enim sunt duo vel tres congregati in nomine meo, ibi sum in medio eorum» ( Mt . 18, 20)."
+  },
+  "v2:l41:30": {
+   "zh": "然而不能將聖事共融視為一種不加區別使用的手段，用以重建基督信徒的合一。聖事共融主要取決於兩項原則：表明教會的合一，以及分享恩寵的途徑。合一的表明多數情況下禁止聖事共融。恩寵的施予有時則建議聖事共融。關於具體的行動方式，應考慮到時代、地點和人員的一切情況，由地方主教當局明智地判決，除非主教團依照本身規章另有規定，或聖座另有規定。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Attamen communicationem in sacris considerare non licet velut medium indiscretim adhibendum ad Christianorum unitatem restaurandam. Quae communicatio a duobus principiis praecipue pendet: ab unitate Ecclesiae significanda, et a participatione in mediis gratiae. Significatio unitatis plerumque vetat communicationem. Gratia procuranda quandoque illam commendat. De modo concreto agendi, attentis omnibus circumstantiis temporum, locorum et personarum, prudenter decernat auctoritas episcopalis localis, nisi aliud a conferentia episcopali, ad normam propriorum statutorum, vel a Sancta Sede statuatur."
+  },
+  "v2:l41:32": {
+   "zh": "為達到此目的，雙方召開會議大有助益，尤其是為討論神學問題，俾各人得與其同儕交談，但參加者應在主教們的督導下確為真正專家。由此對話，教會公教的真實處境將更明白顯露。藉此途徑，亦將更深入認識分離兄弟們的思想，並得更恰當地向他們闡述我們的信德。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ad id assequendum multum iuvant ex utraque parte conventus ad theologicas praesertim quaestiones tractandas, ubi unusquisque par cum pari agat, dummodo qui in illis partem habent sub praesulum vigilantia vere periti sint. Ex tali dialogo etiam clarius innotescet, quae sit revera Ecclesiae catholicae condicio. Hac via et seiunctorum fratrum mens melius cognoscetur eisque fides nostra aptius exponetur."
+  },
+  "v2:l41:34": {
+   "zh": "蓋事關重大，未來的主教和司祭應當精通按此種方式精心彫琢的神學，而非論戰式的神學，尤其在涉及與公教會分離的弟兄們對公教會的關係的事項上。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Multum enim interest futuros pastores et sacerdotes pollere theologia hoc modo adamussim elaborata, non polemice, in iis imprimis, quae fratrum seiunctorum erga Ecclesiam catholicam relationes spectant."
+  },
+  "v2:l41:35": {
+   "zh": "蓋司祭之培育對於信友及修士修女之必要的精神教育與培育，有極大的影響。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "A sacerdotum enim formatione necessaria institutio ac formatio spiritualis fidelium et religiosorum quam maxime pendet."
+  },
+  "v2:l41:36": {
+   "zh": "甚至今日從事傳教工作的天主教徒，在與其他基督徒相同的土地上進行使命工作時，尤其應該認識從普世基督教精神在他們的宗徒工作中所產生的問題與成果。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Etiam Catholici in missionalia opera in iisdem terris ac alii Christiani incumbentes hodie praesertim cognoscant oportet quaestiones et fructus, quae ex oecumenismo in eorum apostolatu oriuntur."
+  },
+  "v2:l41:38": {
+   "zh": "同時，公教信德應該更深入、更正確地加以闡明，用一種連與我們分離的弟兄們也能夠真正理解的方式和言辭。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Simul fides catholica et profundius et rectius explicanda est, modo et sermone qui etiam a fratribus seiunctis possit vere comprehendi."
+  },
+  "v2:l41:39": {
+   "zh": "此外，在普世合一的對話中，天主教神學家應當堅持教會的教導，與分離的弟兄們一起進行對天主奧蹟的研究，以真理的愛、愛德和謙遜而前進。在比較教義時，應當記得天主教信德教義中存有一種秩序或「真理的品級」，因為它們與基督信德的基礎有不同的關聯。如此便開闢了道路，使得通過這種兄弟間的切磋，眾人都被激勵去達到對基督不可盡之財富的更深刻的認識和更清晰的彰顯。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Insuper in dialogo oecumenico theologi catholici, doctrinae Ecclesiae inhaerentes, una cum fratribus seiunctis investigationem peragentes de divinis mysteriis, cum veritatis amore, caritate et humilitate progredi debent. In comparandis doctrinis meminerint existere ordinem seu «hierarchiam» veritatum doctrinae catholicae, cum diversus sit earum nexus cum fundamento fidei christianae. Sic via sternetur qua per fraternam hanc aemulationem omnes incitentur ad profundiorem cognitionem et clariorem manifestationem investigabilium divitiarum Christi. [^[25]]"
+  },
+  "v2:l43:0": {
+   "zh": "一、宗教自由的總體原則",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "I. Libertatis religiosae ratio generalis"
+  },
+  "v2:l43:2": {
+   "zh": "按照各人的尊嚴，所有人類既是人，即具有理性及自由意志，因而承擔個人責任，由其本性受驅策，亦道德上負有尋求真理之責任，尤其是關乎宗教之真理。他們亦當服膺已知之真理，並按真理之要求規整其整個生活。然而人類若欲以符合自身本性之方式履行此責任，必須同時享有心理上之自由，及免於外來強制之不受侵犯。故宗教自由之權利不在於個人之主觀意願，乃在於其本身之本性。因此，即令人不能履行尋求真理及服膺真理之責任，此項不受侵犯之權利仍然常存；但凡正當之公共秩序得以維護，其行使便不能遭受阻礙。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Secundum dignitatem suam homines cuncti, quia personae sunt, ratione scilicet et libera voluntate praediti ideoque personali responsabilitate aucti, sua ipsorum natura impelluntur necnon morali tenentur obligatione ad veritatem quaerendam, illam imprimis quae religionem spectat. Tenentur quoque veritati cognitae adhaerere atque totam vitam suam iuxta exigentias veritatis ordinare. Huic autem obligationi satisfacere homines, modo suae propriae naturae consentaneo, non possunt nisi libertate psychologica simul atque immunitate a coercitione externa fruantur. Non ergo in subiectiva personae dispositione, sed in ipsa eius natura ius ad libertatem religiosam fundatur. Quamobrem ius ad hanc immunitatem perseverat etiam in iis qui obligationi quaerendi veritatem eique adhaerendi non satisfaciunt; eiusque exercitium impediri nequit dummodo iustus ordo publicus servetur."
+  },
+  "v2:l43:4": {
+   "zh": "然而，應當以適合人之尊嚴及其社會性本質之方式來探求真理，即以自由之探究、藉著訓導或教育、溝通及對話而為之，在此過程中，人人相互闡述其所發現或自以為發現之真理，藉以彼此協助探求真理；而對於已認識之真理，應當以個人之同意而堅決執著。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Veritas autem inquirenda est modo dignitati humanae personae eiusque naturae sociali proprio, libera scilicet inquisitione, ope magisterii seu institutionis, communicationis atque dialogi, quibus alii aliis exponunt veritatem quam invenerunt vel invenisse putant, ut sese invicem in veritate inquirenda adiuvent; veritati autem cognitae firmiter adhaerendum est assensu personali."
+  },
+  "v2:l43:5": {
+   "zh": "人藉著自己的良心，確實能夠認知並領悟天主法律的教訓；人有義務在自己的一切行為中忠實地遵循良心，以便達到自己的終向天主。因此，不應強迫任何人違反自己的良心而行動。然而，也不應阻止任何人按照自己的良心行事，尤其在宗教事務上。蓋宗教的實踐，由其本質而言，首先是由人意志的內在自由行為所組成，藉此人將自己直接導向天主：這樣的行為既不能由純為人的權力加以命令，也不能加以禁止。然而，人的社會本性要求人將宗教的內在行為向外表現出來，與他人在宗教事務上相通，以團體的方式承認自己的宗教信仰。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Dictamina vero legis divinae homo percipit et agnoscit mediante conscientia sua; quam tenetur fideliter sequi in universa sua activitate, ut ad Deum, finem suum, perveniat. Non est ergo cogendus, ut contra suam conscientiam agat. Sed neque impediendus est, quominus iuxta suam conscientiam operetur, praesertim in re religiosa. Exercitium namque religionis, ex ipsa eius indole, consistit imprimis in actibus internis voluntariis et liberis, quibus homo sese ad Deum directe ordinat: huiusmodi actus a potestate mere humana nec imperari nec prohiberi possunt (4). Ipsa autem socialis hominis natura exigit, ut homo internos religionis actus externe exprimat, cum aliis in re religiosa communicet, suam religionem modo communitario profiteatur."
+  },
+  "v2:l43:6": {
+   "zh": "如果在保持正當公共秩序的前提下，人被剝奪在社會中自由行使宗教信仰的權利，這就是對人的尊嚴的侵害，也是對天主為人類所規定的秩序本身的侵害。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Iniuria ergo humanae personae et ipsi ordini hominibus a Deo statuto fit, si homini denegetur liberum in societate religionis exercitium, iusto ordine publico servato."
+  },
+  "v2:l43:7": {
+   "zh": "此外，宗教行為乃人民私下及公開地按其內心之意願而向天主自我調整者，其本質超越塵世及暫時事物之秩序。故此，公權力之目的既為照顧暫時的公共善，對公民之宗教生活自應認可並予以贊成；然若企圖指導或阻礙宗教行為，則應謂之已逾越其範圍矣。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Praeterea actus religiosi, quibus homines privatim et publice sese ad Deum ex animi sententia ordinant, natura sua terrestrem et temporalem rerum ordinem transcendunt. Potestas igitur civilis, cuius finis proprius est bonum commune temporale curare, religiosam quidem civium vitam agnoscere eique favere debet, sed limites suos excedere dicenda est, si actus religiosos dirigere vel impedire praesumat."
+  },
+  "v2:l43:9": {
+   "zh": "因此，只要不違反公共秩序的正當要求，這些團體應當享有豁免權，得以按照自己的規範進行管理，以公開敬禮尊榮至高的天主，協助並扶養其成員在宗教生活中的踐行，並應促進那些機構的發展，藉以使成員能夠按照自己的宗教原則來安排自己的生活。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "His igitur communitatibus, dummodo iustae exigentiae ordinis publici non violentur, iure debetur immunitas, ut secundum proprias normas sese regant, Numen supremum cultu publico honorent, membra sua in vita religiosa exercenda adiuvent et doctrina sustentent atque eas institutiones promoveant, in quibus membra cooperentur ad vitam propriam secundum sua principia religiosa ordinandam."
+  },
+  "v2:l43:10": {
+   "zh": "宗教團體同樣應享有權利，不受民事司法手段或民事公權力之行政行為阻礙，得以自行選任、培育、委任及調遷其固有之服務人員，得與駐在世界其他地區之宗教當局及宗教團體相通往來，得興建宗教建築物，並得取得及使用相適宜之財產。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Communitatibus religiosis pariter competit ius, ne mediis legalibus vel actione administrativa potestatis civilis impediantur in suis propriis ministris seligendis, educandis, nominandis atque transferendis, in communicando cum auctoritatibus et communitatibus religiosis, quae in aliis orbis terrarum partibus degunt, in aedificiis religiosis erigendis, necnon in bonis congruis acquirendis et fruendis."
+  },
+  "v2:l43:11": {
+   "zh": "宗教團體亦有權利，不受阻礙而以言論及著述公開教導及見證其信仰。然而在傳播宗教信仰及引入宗教習慣時，應始終避免任何似乎帶有強制或不正當或欠妥當勸導之舉動，尤其當涉及較為無知或貧困之人士時。此等行為方式應視為濫用自身權利及侵害他人權利。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Communitates religiosae ius etiam habent, ne impediantur in sua fide ore et scripto publice docenda atque testanda. In fide autem religiosa disseminanda et in usibus inducendis abstinendum semper est ab omni actionis genere, quod coercitionem vel suasionem inhonestam aut minus rectam sapere videatur, praesertim quando de rudioribus vel de egenis agitur. Talis modus agendi ut abusus iuris proprii et laesio iuris aliorum considerari debet."
+  },
+  "v2:l43:12": {
+   "zh": "此外，宗教自由涉及宗教團體不被禁止在組織社會及賦予整個人類活動生命力方面，自由地彰顯其獨特教義的德行。最後，人的社會性質及宗教本身的性質中奠基了一項權利，藉此人類受自身宗教感情的驅使，能自由地聚集，或建立教育、文化、慈善、社會的聯誼及協會。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Praeterea ad libertatem religiosam spectat, quod communitates religiosae non prohibeantur libere ostendere singularem suae doctrinae virtutem in ordinanda societate ac tota vivificanda activitate humana. Tandem in sociali hominis natura atque in ipsa indole religionis fundatur ius quo homines, suo ipsorum sensu religioso moti, libere possunt conventus habere vel associationes educativas, culturales, caritativas, sociales constituere."
+  },
+  "v2:l43:15": {
+   "zh": "保護並促進人類不可侵犯的權利，本質上屬於任何民事權力的職責(6)。因此，民事權力應當藉著公正的法律及其他適當的手段，有效地維護全體公民的宗教自由，並提供有利的條件以促進宗教生活，使公民確實能夠行使宗教的權利並履行其義務，且使社會本身享受由人類對天主及其聖善旨意的忠誠所產生的正義與和平的恩惠(7)。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Inviolabilia hominis iura tueri ac promovere ad cuiusvis potestatis civilis officium essentialiter pertinet (6). Debet igitur potestas civilis per iustas leges et per alia media apta efficaciter suscipere tutelam libertatis religiosae omnium civium, ac propitias suppeditare condiciones ad vitam religiosam fovendam, ut cives revera religionis iura exercere eiusdemque officia adimplere valeant et ipsa societas fruatur bonis iustitiae et pacis, quae proveniunt ex fidelitate hominum erga Deum Eiusque sanctam voluntatem (7)."
+  },
+  "v2:l43:16": {
+   "zh": "若在民事法律體制中因應人民特殊的具體環境而賦予某一宗教團體特殊的民事認可，則必須同時對所有公民及宗教團體承認並遵守其在宗教事務上的自由權利。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Si attentis populorum circumstantiis peculiaribus uni communitati religiosae specialis civilis agnitio in iuridica civitatis ordinatione tribuitur, necesse est ut simul omnibus civibus et communitatibus religiosis ius ad libertatem in re religiosa agnoscatur et observetur."
+  },
+  "v2:l43:17": {
+   "zh": "總之，應由民事權力提防，勿使公民法律上的平等（此平等本身屬於社會共同善）因宗教理由而遭受損害，無論明顯或隱諱；亦勿在他們之間製造歧視。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Denique a potestate civili providendum est, ne civium aequalitas iuridica, quae ipsa ad commune societatis bonum pertinet, unquam sive aperte sive occulte laedatur propter rationes religiosas, neve inter eos discriminatio fiat."
+  },
+  "v2:l43:18": {
+   "zh": "由此可見，公共權力以暴力或恐懼或其他手段強迫公民信奉或拒絕任何宗教，或阻止任何人進入或脫離宗教信仰團體，都是違法的。尤其是當以任何方式施加暴力來消滅或壓制宗教——無論針對全人類，或針對某個地區，或針對某一特定團體——時，更是違反天主的旨意，違反人及家庭民族的神聖權利。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Hinc sequitur nefas esse potestati publicae, per vim vel metum aut alia media civibus imponere professionem aut reiectionem cuiusvis religionis, vel impedire quominus quisquam communitatem religiosam aut ingrediatur aut relinquat. Eo magis contra voluntatem Dei et contra sacra personae et familiae gentium iura agitur, quando vis quocumque modo adhibeatur ad religionem delendam vel cohibendam sive in toto genere humano sive in aliqua regione sive in determinato coetu."
+  },
+  "v2:l43:20": {
+   "zh": "在行使所有自由時，應遵守個人和社會責任的道德原則：在行使自己的權利時，每個人和社會團體受道德律的約束，應當顧及他人的權利以及自己對他人的義務，並顧及全體公益。應當以正義和人道精神對待每一個人。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "In usu omnium libertatum observandum est principium morale responsabilitatis personalis et socialis: in iuribus suis exercendis singuli homines coetusque sociales lege morali obligantur rationem habere et iurium aliorum et suorum erga alios officiorum et boni omnium communis. Cum omnibus secundum iustitiam et humanitatem agendum est."
+  },
+  "v2:l43:21": {
+   "zh": "此外，民事社會既有權保護自身免受假借宗教自由之名可能發生的濫用，尤其保護之責在於民權當局；然而此項保護之施行，不應任意為之或偏袒一方，而應依照法律規範進行，此等規範應符合客觀的道德秩序，並為有效保護全體公民之權利、促進公民間之和平解決所要求，且為充分照顧此種端正之公共和平（即以真正正義所組織的共同生活）所要求，並為應有的公共道德維護所要求。凡此種種構成共同善之基本部分，而屬公共秩序之範疇。此外，應當維護自由在社會中的完整習慣，依此習慣，自由應儘可能為人所認可，且只有在必要時及必要之限度內方可加以限制。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Praeterea cum societas civilis ius habet sese protegendi contra abusus qui haberi possint sub praetextu libertatis religiosae, praecipue ad potestatem civilem pertinet huiusmodi protectionem praestare; quod tamen fieri debet non modo arbitrario aut uni parti inique favendo, sed secundum normas iuridicas, ordini morali obiectivo conformes, quae postulantur ab efficaci iurium tutela pro omnibus civibus eorumque pacifica compositione, et a sufficienti cura istius honestae pacis publicae quae est ordinata conviventia in vera iustitia, et a debita custodia publicae moralitatis. Haec omnia partem boni communis fundamentalem constituunt et sub ratione ordinis publici veniunt. Ceterum servanda est integrae libertatis consuetudo in societate, secundum quam libertas debet quam maxime homini agnosci, nec restringenda est nisi quando et prout est necessarium."
+  },
+  "v2:l43:23": {
+   "zh": "為此，梵蒂岡大公會議勸勉眾人，尤其是那些負責教育他人者，應當致力於培養人才，使他們順從道德秩序，服從合法的權力，且成為真正自由的愛好者；即培養這樣的人：他們以自己的判斷在真理的光照下評審事物，以責任感安排自己的行動，並努力追求凡是真實和正義的事物，樂意將自己的工作與他人合作。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Quapropter haec Vaticana Synodus omnes hortatur, praesertim vero eos qui curam habent alios educandi, ut homines formare satagant, qui ordini morali obsequentes legitimae auctoritati oboediant et genuinae libertatis amatores sint; homines nempe, qui proprio consilio res in luce veritatis diiudicent, activitates suas cum sensu responsabilitatis disponant, et quaecumque sunt vera atque iusta prosequi nitantur, operam suam libenter cum ceteris consociando."
+  },
+  "v2:l43:24": {
+   "zh": "宗教自由既然如此，也應該用以服事並指向此一目標，即使人們在社會生活中履行自己本身的職責時，能夠以更大的責任感行動。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Religiosa igitur libertas etiam ad hoc inservire et ordinari debet, ut homines in suis ipsorum officiis adimplendis in vita sociali maiore cum responsabilitate agant."
+  },
+  "v2:l45:0": {
+   "zh": "保祿主教，天主僕人的僕人，與至聖公會議的主教們，為永久紀念此事。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "PAULUS EPISCOPUS SERVUS SERVORUM DEI UNA CUM SACROSANCTI CONCILII PATRIBUS AD PERPETUAM REI MEMORIAM"
+  },
+  "v2:l45:1": {
+   "zh": "我們時代教會對非基督宗教的態度宣言",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "DECLARATIO DE ECCLESIAE HABITUDINE AD RELIGIONES NON-CHRISTIANAS NOSTRA AETATE"
+  },
+  "v2:l45:3": {
+   "zh": "一切民族實為一個共同體，有同一的起源，因為天主使全人類居住在地球的整個表面上(1)；也有同一的最終目的，即天主，天主的眷顧與聖善的證言及救恩的計劃對一切人都有效(2)；直到蒙選者在聖城內聯合起來，天主的光榮必要照耀那城，萬民都要在祂的光中往來(3)。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Una enim communitas sunt omnes gentes, unam habent originem, cum Deus omne genus hominum inhabitare fecerit super universam faciem terrae (1), unum etiam habent finem ultimum, Deum, cuius providentia ac bonitatis testimonium et consilia salutis ad omnes se extendunt (2), donec uniantur electi in Civitate Sancta, quam claritas Dei illuminabit, ubi gentes ambulabunt in lumine eius (3)."
+  },
+  "v2:l45:6": {
+   "zh": "公教會不排斥這些宗教中凡真實而聖潔的事物。她以誠摯的尊重，審視那些行動與生活的方式、那些誡命與教義；雖然這些在許多方面與她自身所信守並所宣揚的不同，然而往往卻反映出照亮眾人的那個真理的光芒。但是，公教會既宣佈而且必須不斷宣佈基督，祂是「道路、真理、生命」（若14,6），在祂身上人類找到宗教生活的圓滿，在祂身上天主使一切與自己和好（4）。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ecclesia catholica nihil eorum, quae in his religionibus vera et sancta sunt, reicit. Sincera cum observantia considerat illos modos agendi et vivendi, illa praecepta et doctrinas, quae, quamvis ab iis quae ipsa tenet et proponit in multis discrepent, haud raro referunt tamen radium illius Veritatis, quae illuminat omnes homines. Annuntiat vero et annuntiare tenetur indesinenter Christum, qui est \"via et veritas et vita\" ( Io 14,6), in quo homines plenitudinem vitae religiosae inveniunt, in quo Deus omnia Sibi reconciliavit (4)."
+  },
+  "v2:l45:7": {
+   "zh": "因此祂勸勉祂的子女，藉著與其他宗教追隨者的對話與合作，以明智與愛德見證信德與基督徒生活，應當承認、尊重並促進那些在他們當中所發現的精神與道德財富，以及那些社會文化價值。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Filios suos igitur hortatur, ut cum prudentia et caritate per colloquia et collaborationem cum asseclis aliarum religionum, fidem et vitam christianam testantes, illa bona spiritualia et moralia necnon illos valores socio-culturales, quae apud eos inveniuntur, agnoscant, servent et promoveant."
+  },
+  "v2:l45:9": {
+   "zh": "若在歷代的歲月中，基督信徒與穆斯林之間曾經出現不少的異議與敵對，則本大公會議勸勉眾人，應當忘卻往事，真誠地致力於相互的理解，並為全人類共同維護與推進社會正義、道德福祉以及和平與自由。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Quodsi in decursu saeculorum inter Christianos et Muslimos non paucae dissensiones et inimicitiae exortae sint, Sacrosancta Synodus omnes exhortatur, ut, praeterita obliviscentes, se ad comprehensionem mutuam sincere exerceant et pro omnibus hominibus iustitiam socialem, bona moralia necnon pacem et libertatem communiter tueantur et promoveant."
+  },
+  "v2:l45:11": {
+   "zh": "基督的教會確認其信德和選民身份的起源已在列祖、梅瑟及先知身上發現，按照天主拯救的奧蹟。教會承認所有基督信徒，亞巴郎按信德的子孫，都包含在同一位列祖的召叫中，且教會的救恩在蒙選的人民脫離奴役之地的出谷事蹟上神祕地預示。因此教會不能忘卻，它是透過那個民族得到舊約的啟示，並受其滋養——那民族與天主以不可言喻的慈悲立了古約，而教會是被嫁接於良善橄欖樹上的野橄欖枝，用以蒙受邦族的恩寵。教會深信基督我們的和平，由於十字聖架，已使猶太人和邦族彼此和好，並在他自身內使二者合而為一。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ecclesia enim Christi agnoscit fidei et electionis suae initia iam apud Patriarchas, Moysen et Prophetas, iuxta salutare Dei mysterium, inveniri. Confitetur omnes Christifideles, Abrahae filios secundum fidem (6), in eiusdem Patriarchae vocatione includi et salutem Ecclesiae in populi electi exitu de terra servitutis mystice praesignari. Quare nequit Ecclesia oblivisci se per populum illum, quocum Deus ex ineffabili misericordia sua Antiquum Foedus inire dignatus est, Revelationem Veteris Testamenti accepisse et nutriri radice bonae olivae, in quam inserti sunt rami oleastri Genti (7). Credit enim Ecclesia Christum, Pacem nostram, per crucem Iudaeos et Gentes reconciliasse et utraque in Semetipso fecisse unum (8)."
+  },
+  "v2:l45:12": {
+   "zh": "教會常懷念保祿宗徒論及其同族人所說的話：「他們得了義子的名分，光榮、盟約、法律、禮儀和許諾都是他們的，聖祖也是他們的；按肉身說，基督也是出於他們」（羅9,4-5），即聖童貞瑪利亞之子。教會也記得宗徒們生於猶太民族，他們是教會的基礎和柱石，還有許多最初的門徒，他們向世界宣傳了基督的福音。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Semper quoque prae oculis habet Ecclesia verba Apostoli Pauli de cognatis eius, \"quorum adoptio est filiorum et gloria et testamentum et legislatio et obsequium et promissa, quorum patres et ex quibus est Christus secundum carnem\" ( Rom 9,4-5), filius Mariae Virginis. Recordatur etiam ex populo iudaico natos esse Apostolos, Ecclesiae fundamenta et columnas, atque plurimos illos primos discipulos, qui Evangelium Christi mundo annuntiaverunt."
+  },
+  "v2:l45:13": {
+   "zh": "聖經為證，耶路撒冷不認識她蒙眷顧的時刻（9），猶太人大多沒有接受福音，甚至有不少人反對福音的傳播（10）。儘管如此，按照宗徒的說法，猶太人因著祖先的緣故，在天主眼中仍然是至親至愛的，而天主的恩賜和召喚是沒有悔改的（11）。教會與先知及該宗徒一起，期待著唯獨天主知道的那一天，屆時萬民將齊聲呼求上主，並且「齊心侍奉他」（岑 3,9）（12）。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Teste Sacra Scriptura, Ierusalem tempus visitationis suae non cognovit (9), atque Iudaei magna parte Evangelium non acceperunt, immo non pauci diffusioni eius se opposuerunt (10). Nihilominus, secundum Apostolum, Iudaei Deo, cuius dona et vocatio sine paenitentia sunt, adhuc carissimi manent propter Patres (11). Una cum Prophetis eodemque Apostolo Ecclesia diem Deo soli notum expectat, quo populi omnes una voce Dominum invocabunt et \"servient ei umero uno\" ( Soph 3,9) (12)."
+  },
+  "v2:l45:14": {
+   "zh": "既然基督徒與猶太人所共有的精神財產如此豐富，聖‧大公會議願意促進並推薦雙方的相互認識與尊重，這特別是通過聖經與神學研究，以及兄弟式的對談而獲得的。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Cum igitur adeo magnum sit patrimonium spirituale Christianis et Iudaeis commune, Sacra haec Synodus mutuam utriusque cognitionem et aestimationem, quae praesertim studiis biblicis et theologicis atque fraternis colloquiis obtinetur, fovere vult et commendare."
+  },
+  "v2:l45:15": {
+   "zh": "雖然猶太人的權貴及其黨羽催促基督之死(13)，然而在祂的苦難中所施行的事，既不能歸咎於當時所有不分的猶太人，亦不能歸咎於今日的猶太人。然而，雖然教會是天主的新民族，猶太人卻不應被展示為為天主所棄絕者，亦不應被展示為為所詛咒者，彷彿這是由聖經所推導出來的。因此，眾人應當注意勿在要理講授及天主聖言的宣講中教授任何與福音的真理及基督的精神不相符的事。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Etsi auctoritates Iudaeorum cum suis asseclis mortem Christi urserunt (13), tamen ea quae in passione Eius perpetrata sunt nec omnibus indistincte Iudaeis tunc viventibus, nec Iudaeis hodiernis imputari possunt. Licet autem Ecclesia sit novus populus Dei, Iudaei tamen neque ut a Deo reprobati neque ut maledicti exhibeantur, quasi hoc ex Sacris Litteris sequatur. Ideo curent omnes ne in catechesi et in verbi Dei praedicatione habenda quidquam doceant, quod cum veritate evangelica et spiritu Christi non congruat."
+  },
+  "v2:l45:16": {
+   "zh": "此外，教會譴責對任何人所施加的一切迫害，因念及與猶太人共同的傳統遺產，並非出於政治考量，而是受聖福音的宗教愛德所推動，遺憾地看待任何時代、來自任何人對猶太人所懷抱的仇恨、迫害與反猶太主義的表現。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Praeterea, Ecclesia, quae omnes persecutiones in quosvis homines reprobat, memor communis cum Iudaeis patrimonii, nec rationibus politicis sed religiosa caritate evangelica impulsa, odia, persecutiones, antisemitismi manifestationes, quovis tempore et a quibusvis in Iudaeos habita, deplorat."
+  },
+  "v2:l45:19": {
+   "zh": "因此，凡在人與人之間、民族與民族之間引入人性尊嚴及其所衍生之權利的區別的任何理論或實踐，其基礎便被推翻。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Fundamentum ergo tollitur omni theoriae vel praxi quae inter hominem et hominem, inter gentem et gentem, discrimen quoad humanam dignitatem et iura exinde dimanantia inducit."
+  },
+  "v2:l45:20": {
+   "zh": "教會因此譴責任何因人類區別、人種或膚色、身份或宗教而引起的騷擾或迫害，視之為悖離基督的思想。所以，基督信徒聖公會，踐行聖宗徒伯多祿和保祿的足跡，懇切祈求能夠「在異邦人中保有良好的品行」（伯前二，十二），如果可能的話，以他們所能做到的與全人類保持和平（14），俾使他們真誠地成為在天上的父的子女（15）。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ecclesia igitur quamvis hominum discriminationem aut vexationem stirpis vel coloris, condicionis vel religionis causa factam tamquam a Christi mente alienam, reprobat. Proinde, Christifideles Sacra Synodus, vestigia Sanctorum Apostolorum Petri et Pauli premens, ardenter obsecrat ut \"conversationem... inter gentes habentes bonam\" ( 1 Pt 2,12), si fieri potest, quod in eis est cum omnibus hominibus pacem habeant (14), ita ut vere sint filii Patris qui in caelis est (15)."
+  },
+  "v2:l45:21": {
+   "zh": "本《宣言》中所頒布的一切事項，無論總體或個別，均蒙大公會議諸聖父所贊同。我們以基督交付給我們的宗座權力，與這些尊敬的聖父在聖神內批准、頒定並確立這些事項，並命令以此方式由公會議所確立之事為天主的光榮而予以頒佈。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Haec omnia et singula quae in hac Declaratione edicta sunt, placuerunt Sacrosancti Concilii Patribus. Et Nos, Apostolica a Christo Nobis tradita potestate, illa, una cum Venerabilibus Patribus, in Spiritu Sancto approbamus, decernimus ac statuimus et quae ita synodaliter statuta sunt ad Dei gloriam promulgari iubemus."
+  },
+  "v2:l45:22": {
+   "zh": "羅馬，聖伯多祿聖殿，西元一千九百六十五年十月二十八日。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Romae, apud S. Petrum die XXVIII mensis octobris anno MCMLXV."
+  },
+  "v2:l45:23": {
+   "zh": "我保祿，天主教會的主教",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego PAULUS Catholicae Ecclesiae Episcopus"
+  },
+  "v2:l45:24": {
+   "zh": "隨後為聖父們的簽署。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Sequuntur Patrum subsignationes ."
+  },
+  "v2:l45:25": {
+   "zh": "法律的寬限期",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "VACATIO LEGIS"
+  },
+  "v2:l45:26": {
+   "zh": "關於在第七次會議中頒布的法令",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "PRO DECRETIS PROMULGATIS IN SESSIONE VII"
+  },
+  "v2:l45:27": {
+   "zh": "至聖聖父為了新法律，即在最近頒佈的法令中所包含的法律，規定寬限期至公元一千九百六十六年六月二十九日，亦即至次年聖伯多祿及聖保祿宗徒瞻禮日為止。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Beatissimus Pater pro novis legibus, quae in modo promulgatis decretis continentur, statuit vacationem usque ad diem vigesimam nonam mensis iunii anni MCMLXVI, nempe usque ad festum Ss. Apostolorum Petri et Pauli proximi anni."
+  },
+  "v2:l45:28": {
+   "zh": "其間最高司祭應頒布規則以執行上述法律。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Interea Summus Pontifex normas edet ad praedictas leges exsequendas."
+  },
+  "v2:l45:29": {
+   "zh": "† 伯里克利斯·費利奇",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† PERICLES FELICI"
+  },
+  "v2:l45:30": {
+   "zh": "撒莫撒大名義總主教聖事會祕書長",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Archiepiscopus tit. Samosatensis Ss. Concilii Secretarius Generalis"
+  },
+  "v2:l45:31": {
+   "zh": "教父們的簽署",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Patrum subsignationes"
+  },
+  "v2:l45:32": {
+   "zh": "我保祿，公教會的主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego PAULUS Catholicae Ecclesiae Episcopus"
+  },
+  "v2:l45:33": {
+   "zh": "† 我尤金尼烏斯，奧斯提亞及波爾圖恩西斯主教、聖盧菲納樞機蒂瑟朗，聖樞機團團長。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego EUGENIUS Episcopus Ostiensis ac Portuensis et S. Rufinae Cardinalis TISSERANT, Sacri Collegii Decanus."
+  },
+  "v2:l45:34": {
+   "zh": "† 我若瑟‧阿爾巴尼恩西斯主教樞機皮扎爾多。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS Episcopus Albanensis Cardinalis PIZZARDO."
+  },
+  "v2:l45:35": {
+   "zh": "† 我本篤，普雷內斯蒂主教樞機阿洛伊西‧瑪塞拉。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego BENEDICTUS Episcopus Praenestinus Cardinalis Aloisi MASELLA."
+  },
+  "v2:l45:36": {
+   "zh": "† 我斐迪南，名義主教威萊特里主教樞機參多。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego FERDINANDUS Episcopus tit. Veliternus Cardinalis CENTO."
+  },
+  "v2:l45:37": {
+   "zh": "我是若望‧哈姆雷圖斯‧奇科尼尼樞機，都斯庫蘭名義主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego HAMLETUS IOANNES Episcopus tit. Tusculanus Cardinalis CICOGNANI."
+  },
+  "v2:l45:38": {
+   "zh": "† 我若瑟‧費雷多樞機主教，領銜薩比納與曼德萊城。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS Episcopus tit. Sabinensis et Mandelensis Cardinalis FERRETTO."
+  },
+  "v2:l45:39": {
+   "zh": "† 我，伊格納蒂烏斯‧加俾額爾樞機主教塔普尼，敘利亞人安提約基亞宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IGNATIUS GABRIEL Cardinalis TAPPOUNI, Patriarcha Antiochenus Syrorum."
+  },
+  "v2:l45:40": {
+   "zh": "† 我馬克西穆斯第四樞機薩依赫，美基特禮安提約基亞宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego MAXIMUS IV Cardinalis SAIGH, Patriarcha Antiochenus Melkitarum."
+  },
+  "v2:l45:41": {
+   "zh": "† 我保祿‧伯多祿樞機美烏基，馬龍禮東方宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego PAULUS PETRUS Cardinalis MEOUCHI, Patriarcha Antiochenus Maronitarum."
+  },
+  "v2:l45:42": {
+   "zh": "†我司德芳一世樞機西達盧斯，埃及亞歷山大城科普特宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego STEPHANUS I Cardinalis SIDAROUSS, Patriarcha Alexandrinus Coptorum."
+  },
+  "v2:l45:43": {
+   "zh": "† 我艾瑪紐爾，聖瑪爾切利努和聖伯多祿司鐸樞機，若昂‧塞雷謝拉，里斯本宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego EMMANUEL titulo Ss. Marcellini et Petri Presbyter Cardinalis GONÇALVES CEREJEIRA, Patriarcha Lisbonensis."
+  },
+  "v2:l45:44": {
+   "zh": "† 我亞基里斯，聖西斯篤司鐸樞機里埃納爾，因蘇萊西主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ACHILLES titulo S. Sixti Presbyter Cardinalis LIÉNART, Episcopus Insulensis."
+  },
+  "v2:l45:45": {
+   "zh": "我雅各伯‧路易斯樞機，聖‧勞倫佐‧達瑪索堂的司鐸樞機，聖羅馬教會的總務。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego IACOBUS ALOISIUS titulo S. Laurentii in Damaso Presbyter Cardinalis COPELLO, S. R. E. Cancellarius."
+  },
+  "v2:l45:46": {
+   "zh": "我葛列高里‧伯多祿‧聖巴爾多祿茂在島嶼司鐸樞機阿加基亞尼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego GREGORIUS PETRUS titulo S. Bartholomaei in Insula Presbyter Cardinalis AGAGIANIAN."
+  },
+  "v2:l45:48": {
+   "zh": "† 我方濟各，聖若望及聖保祿司鐸樞機，紐約總主教史培爾曼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego FRANCISCUS titulo Ss. Ioannis et Pauli Presbyter Cardinalis SPELLMAN, Archiepiscopus Neo-Eboracensis."
+  },
+  "v2:l45:49": {
+   "zh": "† 我雅各伯，聖博尼法爵及聖亞歷西聖堂司鐸樞機德‧巴羅斯‧卡馬拉，聖塞巴斯提昂若阿內若城總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IACOBUS titulo Ss. Bonifacii et Alexii Presbyter Cardinalis DE BARROS CÂMARA, Archiepiscopus S. Sebastiani Fluminis Ianuarii."
+  },
+  "v2:l45:50": {
+   "zh": "† 我若瑟，聖若望拉丁門司鐸樞機，科隆總主教，以此銜署名。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS titulo S. Ioannis ante Portam Latinam Presbyter Cardinalis FRINGS, Archiepiscopus Coloniensis."
+  },
+  "v2:l45:51": {
+   "zh": "† 我厄尼斯都，聖薩比納聖殿司鐸樞機，巴勒莫總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ERNESTUS titulo S. Sabinae Presbyter Cardinalis RUFFINI, Archiepiscopus Panormitanus."
+  },
+  "v2:l45:52": {
+   "zh": "† 我，儒略‧德普夫納樞機，聖瑪利亞階梯聖堂司鐸樞機，慕尼黑及弗賴辛總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IULIUS titulo S. Mariae Scalaris Presbyter Cardinalis DÖPFNER, Archiepiscopus Monacensis et Frisingensis."
+  },
+  "v2:l45:53": {
+   "zh": "我保祿，聖安德肋宗徒花園堂司鐸樞密主教瑪瑞拉。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego PAULUS titulo S. Andreae Apostoli de Hortis Presbyter Cardinalis MARELLA."
+  },
+  "v2:l45:54": {
+   "zh": "我葛斯塔烏斯，聖熱羅尼莫‧伊利里庫斯聖堂司鐸樞機，簽名為特斯塔。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego GUSTAVUS titulo S. Hieronymi Illyricorum Presbyter Cardinalis TESTA."
+  },
+  "v2:l45:55": {
+   "zh": "我‧亞洛伊削，以聖安德肋德谷司鐸樞機為名號的特辣利亞。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego ALOISIUS titulo S. Andreae de Valle Presbyter Cardinalis TRAGLIA."
+  },
+  "v2:l45:56": {
+   "zh": "† 我伯多祿龍太郎，聖方濟各‧帕多瓦司鐸樞機，聖座駐日使節，東京總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego PETRUS TATSUO titulo S. Antonii Patavini de Urbe Presbyter Cardinalis DOI, Archiepiscopus Tokiensis."
+  },
+  "v2:l45:57": {
+   "zh": "† 我若瑟，聖若望‧德‧佛羅倫斯司鐸樞機，比圖里城總主教勒費弗爾。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS titulo S. Ioannis Baptistae Florentinorum Presbyter Cardinalis LEFEBVRE, Archiepiscopus Bituricensis."
+  },
+  "v2:l45:58": {
+   "zh": "† 我伯納德‧阿爾夫林樞機，聖若亞敬司鐸樞機銜，烏特勒支總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego BERNARDUS titulo S. Ioachimi Presbyter Cardinalis ALFRINK, Archiepiscopus Ultraiectensis."
+  },
+  "v2:l45:59": {
+   "zh": "† 我盧非努斯一世，聖瑪利亞亞德蒙特司鐸樞機聖人，馬尼拉總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego RUFINUS I. titulo S. Mariae ad Montes Presbyter Cardinalis SANTOS, Archiepiscopus Manilensis."
+  },
+  "v2:l45:60": {
+   "zh": "† 我勞雷亞努斯，聖方濟亞西西於大河濱堂司鐸樞機，布科巴主教盧剛巴瓦。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego LAUREANUS titulo S. Francisci Assisiensis ad Ripam Maiorem Presbyter Cardinalis RUGAMBWA, Episcopus Bukobaënsis."
+  },
+  "v2:l45:61": {
+   "zh": "†我約瑟夫，聖救主及聖亞豐索在厄斯奎利聖殿之司鐸樞機里特爾，聖路易斯總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS tituli Ssmi Redemptoris et S. Alfonsi in Exquiliis Presbyter Cardinalis RITTER, Archiepiscopus S. Ludovici."
+  },
+  "v2:l45:62": {
+   "zh": "† 我若瑟‧烏姆貝爾圖樞機，聖安德肋及聖額我略‧斯卡烏魯聖堂司鐸區樞機，加拉加斯總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS HUMBERTUS titulo Ss. Andreae et Gregorii ad Clivum Scauri Presbyter Cardinalis QUINTERO, Archiepiscopus Caracensis."
+  },
+  "v2:l45:63": {
+   "zh": "我若瑟‧達‧科斯塔‧努內斯，聖普里西拉聖堂司鐸樞機。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego IOSEPHUS titulo S. Priscae Presbyter Cardinalis DA COSTA NUNES."
+  },
+  "v2:l45:64": {
+   "zh": "我希爾德布蘭度，聖‧塞巴斯蒂安卡塔孔巴斯司鐸樞機，安東尼烏蒂。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego HILDEBRANDUS titulo S. Sebastiani ad Catacumbas Presbyter Cardinalis ANTONIUTTI."
+  },
+  "v2:l45:65": {
+   "zh": "我厄弗冷，聖十字在耶路撒冷司鐸樞機福尼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego EPHRAEM titulo S. Crucis in Hierusalem Presbyter Cardinalis FORNI."
+  },
+  "v2:l45:67": {
+   "zh": "† 我，聖伯納德溫泉司鐸樞機拉度爾夫‧席爾瓦‧恩里克斯，智利聖雅各伯總主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego RADULFUS titulo S. Bernardi ad Thermas Presbyter Cardinalis SILVA HENRIQUEZ, Archiepiscopus S. Iacobi in Chile."
+  },
+  "v2:l45:68": {
+   "zh": "† 我里奧‧若瑟夫，聖伯多祿鎖鏈堂司鐸樞機，美西林—布魯塞爾總主教蘇埃寧斯。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego LEO IOSEPHUS titulo S. Petri ad Vincula Presbyter Cardinalis SUENENS, Archiepiscopus Mechliniensis-Bruxellensis."
+  },
+  "v2:l45:69": {
+   "zh": "† 我是聖心天使，以至聖童貞瑪利亞聖心之名義，向歐幾里得廣場的司鐸樞機赫雷拉，馬拉加主教致辭。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ANGELUS titulo Sacri Cordis Beatae Mariae Virginis ad forum Euclidis Presbyter Cardinalis HERRERA, Episcopus Malacitanus."
+  },
+  "v2:l45:70": {
+   "zh": "我 阿拉夫里都斯 聖母在主日執事樞機 奧塔維亞尼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego ALAPHRIDUS S. Mariae in Domnica Protodiaconus Cardinalis OTTAVIANI."
+  },
+  "v2:l45:71": {
+   "zh": "我方濟各聖瑪利亞在柯斯梅丁執事樞機若伯特。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego FRANCISCUS S. Mariae in Cosmedin Diaconus Cardinalis ROBERTI."
+  },
+  "v2:l45:72": {
+   "zh": "我 阿爾卡迪烏斯，聖‧布剌西和聖‧嘉祿在加蒂納里聖殿執事樞機拉羅納。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego ARCADIUS SS. Blasii et Caroli ad Catinarios Diaconus Cardinalis LARRAONA."
+  },
+  "v2:l45:73": {
+   "zh": "我方濟各聖高斯默及聖達彌安執事樞機莫拉諾",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego FRANCISCUS SS. Cosmae et Damiani Diaconus Cardinalis MORANO"
+  },
+  "v2:l45:74": {
+   "zh": "我 威廉‧狄奧多若 聖狄奧多若殿堂執事樞機 赫爾德。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego GUILLELMUS THEODORUS S. Theodori in Palatio Diaconus Cardinalis HEARD."
+  },
+  "v2:l45:75": {
+   "zh": "我‧奧古斯丁‧聖撒巴執事樞機‧貝亞。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego AUGUSTINUS S. Sabae Diaconus Cardinalis BEA."
+  },
+  "v2:l45:76": {
+   "zh": "我 弟兄 米開朗基羅‧聖‧保祿宗徒在阿雷努拉執事樞機 布朗。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego FRATER MICHAEL S. Pauli Apostoli in Arenula Diaconus Cardinalis BROWNE."
+  },
+  "v2:l45:77": {
+   "zh": "我若亞敬‧安瑟莫，聖亞波里納里執事樞機阿爾巴雷達。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego IOACHIM ANSELMUS S. Apollinaris Diaconus Cardinalis ALBAREDA."
+  },
+  "v2:l45:78": {
+   "zh": "我‧斐德理克‧聖若望‧鮑思高在圖斯庫拉納街執事樞機卡洛里‧迪‧維尼亞萊。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego FRIDERICUS S. Ioannis Bosco in via Tusculana Diaconus Cardinalis CALLORI DI VIGNALE."
+  },
+  "v2:l45:79": {
+   "zh": "我約瑟夫‧卡爾定樞機，聖彌額爾總領天使執事卡爾定。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego IOSEPHUS S. Michaëlis Archangeli Diaconus Cardinalis CARDIJN."
+  },
+  "v2:l45:80": {
+   "zh": "我 卡洛魯斯 聖瑪利亞在柱廊執事樞機 若爾內。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ego CAROLUS S. Mariae in Porticu Diaconus Cardinalis JOURNET."
+  },
+  "v2:l45:81": {
+   "zh": "† 我艾爾貝爾圖斯‧哥里，拉丁禮耶路撒冷宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ALBERTUS GORI, Patriarcha Hierosolymitanus Latinorum."
+  },
+  "v2:l45:82": {
+   "zh": "† 我依納爵‧伯多祿第十六世‧巴塔尼亞，亞美尼亞基利基亞宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IGNATIUS PETRUS XVI BATANIAN, Patriarcha Ciliciae Armenorum."
+  },
+  "v2:l45:83": {
+   "zh": "† 我約瑟夫‧維埃拉‧阿爾維納茲，東印度宗主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOSEPHUS VIEIRA ALVERNAZ, Patriarcha Indiarum Orientalium."
+  },
+  "v2:l45:84": {
+   "zh": "† 我若望‧卡洛路斯‧麥誇德，都柏林總主教，愛爾蘭首席主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOANNES CAROLUS MCQUAID, Archiepiscopus Dublinensis, Primas Hiberniae."
+  },
+  "v2:l45:85": {
+   "zh": "† 我安德肋亞斯‧羅爾巴赫，薩爾茲堡總主教，日耳曼首席主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ANDREAS ROHRACHER, Archiepiscopus Salisburgensis, Primas Germaniae."
+  },
+  "v2:l45:87": {
+   "zh": "† 我歐果‧卡莫左，比薩總主教及撒丁尼亞與科西嘉首席主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego HUGO CAMOZZO, Archiepiscopus Pisanus et Primas Sardiniae et Corsicae."
+  },
+  "v2:l45:89": {
+   "zh": "(1) 參閱 宗徒行傳 17, 26。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(1) Cfr. Act . 17, 26."
+  },
+  "v2:l45:91": {
+   "zh": "(3) 參閱《默示錄》二十一，二十三至二十四。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(3) Cfr. Apoc . 21,23-24."
+  },
+  "v2:l45:92": {
+   "zh": "(4) 參閱《格林多後書》第五章第18-19節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(4) Cfr. 2 Cor . 5,18-19."
+  },
+  "v2:l45:93": {
+   "zh": "(5) 參閱聖額我略七世，第三卷第二十一封信，寄予阿納齊爾（阿爾─納席爾），毛利塔尼亞國王，E‧卡斯帕編，載於《中世紀手稿集》第二輯（一九二○年）第一冊第二八八頁第十一至十五行；《教父著作集》第一四八卷第四五一欄A。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(5) Cfr. S. Gregorios VII., Epist. III , 21 ad Anazir (Al-Nãşir), regem Mauritaniae, ed. E. Caspar in MGH, Ep. Sel. II (1920) I, p. 288, 11-15; PL 148, 451 A."
+  },
+  "v2:l45:94": {
+   "zh": "(6) 參閱《迦拉達書》3,7。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(6) Cfr. Gal . 3,7."
+  },
+  "v2:l45:95": {
+   "zh": "(7) 參閱《羅馬書》11,17-24。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(7) Cfr. Rom . 11,17-24."
+  },
+  "v2:l45:96": {
+   "zh": "(8) 參見《厄弗所書》二章十四至十六節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(8) Cfr. Eph . 2,14-16."
+  },
+  "v2:l45:97": {
+   "zh": "(9) 參閱路加福音十九章四十四節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(9) Cfr. Lc . 19,44."
+  },
+  "v2:l45:98": {
+   "zh": "（10）參見《羅馬書》十一章二十八節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(10) Cfr. Rom 11,28."
+  },
+  "v2:l45:99": {
+   "zh": "(11) 參閱《羅馬書》11,28-29；梵蒂岡第二屆公會議，教會教義憲章《萬民之光》：《宗座公報》第57卷（1965年）第20頁。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(11) Cfr. Rom . 11,28-29; Conc. Vat. II, Const. dogm. de Ecclesia, Lumen Gentium : A.A.S. 57 (1965) p. 20."
+  },
+  "v2:l45:101": {
+   "zh": "（13）參見若望福音第十九章第六節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(13) Cfr. Io . 19,6."
+  },
+  "v2:l45:102": {
+   "zh": "(14) 參閱《羅馬人書》第十二章第十八節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(14) Cf. Rom 12,18."
+  },
+  "v2:l45:103": {
+   "zh": "參閱瑪竇福音第五章第四十五節。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(15) Cf. Mt 5,45."
+  },
+  "v2:l49:1": {
+   "zh": "我們相信天主的愛德——基督徒可以這樣宣示他生命中的首要抉擇。起初，當某人成為基督徒時，並無倫理的意願，也無什麼偉大的看法，但卻獲得了與某一事件的相遇，與那賦予生命新的終向並同時指示某一確定進展的聖人相遇。若望在他的福音中已經注意到了這一事件，用這些話語表達：「天主竟這樣愛了世界，甚至賜下了他的獨生子，為使凡信他的人，都獲得永遠的生命」（3, 16）。基督宗教信德在愛德的中心點上接納了曾是以色列信德的核心，並同時對這同一核心賦予了新的深度和廣度。蓋信仰的以色列人每日都誦唸申命紀的聲音，他知道那聲音包含了他生命的核心：「以色列，你要聽：上主，我們的天主；上主是唯一的。你應全心、全靈、全力愛你的天主」（6, 4-5）。耶穌在唯一的某一規誡中將愛慕天主的誡命與愛慕近人的規誡結合起來，這規誡載於肋未紀中：「你應愛你的近人，如愛你自己一樣」（19, 18；參閱谷12, 29-31）。既然天主先愛了我們（參閱若一4, 10），現在愛德已不僅是「誡命」，而是對愛德的禮物的回應，藉此天主來遇見我們。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Nos Dei caritati credidimus — sic praecipuam vitae suae electionem declarare potest christianus. Ad initium, cum quis christianus fit, nulla est ethica voluntas neque magna quaedam opinio, verumtamen congressio datur cum eventu quodam, cum Persona quae novum vitae finem imponit eodemque tempore certam progressionem. Suo in Evangelio iam notaverat Ioannes hunc eventum hisce verbis: « Sic enim dilexit Deus mundum, ut Filium suum unigenitum daret, ut omnis, qui credit in eum... habeat vitam aeternam » (3, 16). Cum medio puncto amoris suscepit christiana fides id quod fidei Israel fuerat nucleus simulque eidem nucleo novam addidit altitudinem atque amplitudinem. Credens enim Israelita cotidie vocibus precatur Libri Deuteronomii , ubi includi is novit suae vitae nucleum: « Audi, Israel: Dominus Deus noster, Deus unus est. Diliges Dominum Deum tuum ex toto corde tuo, ex tota anima tua, et ex tota fortitudine tua » (6, 4-5). In unicum aliquod praescriptum coniunxit Iesus amoris Dei mandatum cum amoris proximi praecepto, quod quidem continetur in Libro Levitico : « Diliges proximum tuum sicut te ipsum » (19, 18; cfr Mc 12, 29-31). Quoniam prior nos Deus dilexit (cfr 1 Io 4, 10), nunc non est iam tantum « praeceptum » amor, verum est responsio erga amoris donum, quo Deus nobis occurrit."
+  },
+  "v2:l49:2": {
+   "zh": "在這個世界上，天主的名字有時竟與復仇、甚至與仇恨和暴力的職責相聯繫，這則訊息在現今具有重大的分量和某種確定的意義。為此之故，我們在這些初次的通諭中願意談論天主以何種愛德充滿我們，而這愛德應由我們與他人分享。如此，這些通諭的兩個主要部分便顯示出來，它們彼此緊密相連。其第一部分更多帶有思辨的性質，因為在其中——在我們教宗任期的初始——我們願意闡揚某些關於天主愛德的重要事項，即他以奧祕而無償的方式所賦予人類的愛德，連同該愛德與人類愛德本性之間的內在聯繫。第二部分具有更確實的樣貌，因為它論述愛近人誡命的教會性實踐。所展示的論題極其廣泛；然而更為詳盡的論述超出了這些通諭的範圍。我們的意願是堅持於某些主要的要素，如此在世界上激發某種更新的工作力量，作為對天主愛德的人性回應。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "In orbe, ubi cum Dei nomine nonnumquam etiam vindicta quin immo officium odii et violentiae coniunguntur, hic nuntius magnum habet in praesentia pondus atque certam quandam significationem. Hac de causa in his Nostris primis Encyclicis Litteris de amore cupimus loqui quo Deus nos replet quique a nobis cum aliis communicari debet. Sic harum Encyclicarum Litterarum duae magnae demonstrantur partes, quae inter se arte nectuntur. Earum prima pars prae se magis indolem speculativam fert, quandoquidem in ea — Nostri Pontificatus initio — quaedam de Dei amore praecipua extollere volumus, quem ipse arcana gratuitaque ratione homini praebet, una cum intrinseco vinculo illius Amoris cum humani amoris natura. Altera pars certiorem habet speciem, quoniam amoris in proximum mandati ecclesiale exercitium tractat. Argumentum peramplum exhibetur; attamen longior quaedam tractatio propositum excedit harum Litterarum Encyclicarum. Nostra est voluntas in quibusdam praecipuis elementis perstare, sic ut in mundo renovata quaedam operositatis vis excitetur uti amori Dei humanum responsum."
+  },
+  "v2:l49:3": {
+   "zh": "第一部分",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "PARS PRIMA"
+  },
+  "v2:l49:4": {
+   "zh": "愛德的合一在受造物與救恩歷史中",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "AMORIS UNITAS IN CREATIONE ET SALUTIS HISTORIA"
+  },
+  "v2:l49:5": {
+   "zh": "言語的問題",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Loquelae quaestio"
+  },
+  "v2:l49:7": {
+   "zh": "首先，我們想起自己佔據著極其寬廣的詞彙領域，即「愛」這個詞所涵蓋的範圍：涉及對祖國的愛，如同對自己人生使命的愛，朋友之間的愛，對自己工作的愛，父母與子女之間的愛，兄弟姐妹與家人之間的愛，對近人的愛以及對天主的愛。儘管在這許多含義中，男女之間的愛卻突出其外，在那裡身體與靈魂不可分地相結合，而且對人類開啟了一種幸福的許諾，這似乎不能被拒絕，彷彿是愛本身的完美形象，一切其他所有愛的形式在初次觀看時都相形見絀。由此產生了一個問題：這些愛的所有形式最終是否相互關聯，而那種愛，甚至在其各種表現形式的多樣性中，終究是唯一的、單一的，還是恰恰相反，我們用同一個詞彙來指稱完全不同的事物？",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "In primis meminimus Nos latissimae verborum provinciae quam occupat vox « amoris »: de amore patriae agitur, sicut et de amore in proprium vitae munus, de amore inter amicos, de amore erga proprium opus, de amore inter parentes filiosque, inter fratres ac familiares, de amore in proximum deque amore in Deum. Hac profecto in significationum multitudine tamen excellit amor inter virum ac mulierem, ubi corpus animaque inseparabiles concurrunt et ubi etiam promissio felicitatis hominibus recluditur quae recusari videtur non posse, perinde ac amoris per excellentiam imago perfecta, ad quam primo intuitu cetera universa amoris genera deflorescunt. Hinc oritur quaesitum: omnesne amoris hae formae tandem consociantur et amor ille, etiam ipsa in varietate propriarum demonstrationum, denique unicus et solus est, an contra eodem uno vocabulo utimur ad res prorsus diversas significandas?"
+  },
+  "v2:l49:8": {
+   "zh": "「厄洛斯」與「愛德」——差異與統一",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "« Eros » et « agape » – diversitas et unitas"
+  },
+  "v2:l49:11": {
+   "zh": "對於這種宗教形式——它如同一種最強有力的邀請，與對唯一天主的信德相悖——舊約聖經極為堅決地予以反對，如同反對宗教的歪曲而加以攻擊。由此可見，它絕非完全排斥愛德本身，反倒如同對其破壞性的摧毀宣戰，因為在此發生的愛德的虛妄神聖化使它喪失尊嚴，奪去它的人性。蓋在廟宇中，那些應該獲得神聖陶醉的妓女，不是被當作人和人格而對待，反倒只是當作激發「神聖狂亂」的工具而存在：她們實非女神，而是被他人濫用的人類人格。正因為此，醉醺醺且無度的愛德並非向上升越、對立於神聖本性的「超越狀態」，而是人的衰落及其尊嚴的減損。由此得明，愛德需要紀律和淨化，使之於人不是給予某種短暫的快樂，而是生命至高境界的某種預嚐，即我們全部本性所渴望的那種真福。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Huic religionis formae, quae uti validissima invitatio dissidet a fide in unicum Deum, Vetus Testamentum firmissime est adversatum, quam tamquam religionis perversitatem oppugnavit. Hinc vero minime eros repudiavit in se, sed quasi bellum indixit eius eversioni deletoriae, quoniam falsa divinizatio eros , quae hic contingit, destituit eum dignitate, eripit ei humanitatem. Nam in templo meretrices, quae ebrietatem Divini concedere debent, non tractantur uti homines ac personae, sed adsunt tantummodo uti instrumenta ad « furorem divinum » excitandum: non sunt ipsae revera deae, verum humanae personae, quibus alii abutuntur. Hanc ob rem eros ebrius et immoderatus non est ascensio, « exstasis » adversus naturam Divinam, sed prolapsus hominisque dignitatis imminutio. Sic manifestum evadit eros indigere disciplina et purificatione ut homini concedat non alicuius momenti voluptatem, sed quandam culminis vitae praegustationem, illius nempe beatitudinis quam tota nostra natura appetit."
+  },
+  "v2:l50:0": {
+   "zh": "I. 污染與氣候變化",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "I. CONTAMINATIO ET CLIMATIS MUTATIO"
+  },
+  "v2:l50:1": {
+   "zh": "污穢、排泄物與詆毀的崇拜",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Contaminatio, eiectamenta et detractionis cultus"
+  },
+  "v2:l50:5": {
+   "zh": "氣候彷彿是共同的善",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Clima veluti commune bonum"
+  },
+  "terminal:0": {
+   "zh": "V. 因父、及子、及聖神之名。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. In nomine Patris, et Filii, et Spiritus Sancti."
+  },
+  "terminal:1": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:2": {
+   "zh": "V. 願我們的主耶穌基督的恩寵，天主的愛德，及聖神的相通，與你們眾人同在。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis."
+  },
+  "terminal:3": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "terminal:4": {
+   "zh": "V. 弟兄們，讓我們認清自己的罪過，好能適當地舉行這些聖事的奧蹟。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Fratres, agnoscamus peccata nostra, ut apti simus ad sacra mysteria celebranda."
+  },
+  "terminal:5": {
+   "zh": "我向全能天主，並向你們諸位兄弟姐妹認罪，因為我在思想、言語、行為和疏忽上犯了重罪：這是我的罪過，這是我的罪過，這是我的重大罪過。因此我懇求有福的瑪利亞永貞聖母、諸位天使和眾聖人，並懇求你們諸位兄弟姐妹，為我代禱於我們的主天主。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Confiteor Deo omnipotenti, et vobis, fratres, quia peccavi nimis cogitatione, verbo, opere, et omissione: mea culpa, mea culpa, mea maxima culpa. Ideo precor beatam Mariam semper Virginem, omnes Angelos, et Sanctos, et vos, fratres, orare pro me ad Dominum Deum nostrum."
+  },
+  "terminal:6": {
+   "zh": "V. 願全能的天主垂憐我們，赦免我們的罪過，引我們進入永恆的生命。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Miseretur nostri omnipotens Deus, et, dimissis peccatis nostris, perducat nos ad vitam aeternam."
+  },
+  "terminal:7": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:8": {
+   "zh": "V. 上主，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Kyrie eleison."
+  },
+  "terminal:9": {
+   "zh": "R. 上主，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Kyrie eleison."
+  },
+  "terminal:10": {
+   "zh": "V. 基督，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Christe eleison."
+  },
+  "terminal:11": {
+   "zh": "R. 基督，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Christe eleison."
+  },
+  "terminal:12": {
+   "zh": "V. 上主，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Kyrie eleison."
+  },
+  "terminal:13": {
+   "zh": "R. 上主，求祢垂憐。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Kyrie eleison."
+  },
+  "terminal:14": {
+   "zh": "天主在天高受光榮，主愛的人在地上享平安。我們讚美你、祝福你、朝拜你、光榮你，感謝你的大光榮，主天主、天上之王、全能天主聖父。主、獨生子耶穌基督，主天主、天主羔羊、聖父之子，除免世罪者，垂憐我們；除免世罪者，納受我們的祈禱。坐在聖父右邊者，垂憐我們。因為只有你",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Gloria in excelsis Deo et in terra pax hominibus bonae voluntatis. Laudamus te, benedicimus te, adoramus te, glorificamus te, gratias agimus tibi propter magnam gloriam tuam, Domine Deus, Rex caelistis, Deus Pater omnipotens. Domine Fili unigenite, Iesu Christe, Domine Deus, Agnus Dei, Filius Patris, qui tollis peccata mundi, miserere nobis; qui tollis peccata mundi, suscipe deprecationem nostram. Qui sedes ad dexteram Patris, miserere nobis. Quoniam tu"
+  },
+  "terminal:15": {
+   "zh": "唯獨你是聖者，唯獨你是上主，唯獨你是至高者，耶穌基督，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "solus Sanctus, tu solus Dominus, tu solus Altissimus, Jesu Christe,"
+  },
+  "terminal:17": {
+   "zh": "請大家祈禱。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Oremus."
+  },
+  "terminal:18": {
+   "zh": "[以及眾人與司祭一起在某段時間默默祈禱。然後司祭，雙手伸開，說祈禱；祈禱結束後，眾人呼喊：]",
+   "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Et omnes una cum sacerdote per aliquod temporis spatium in silentio orant. Tunc sacerdos, manibus extensis, dicit orationem; qua finita, populus acclamat:]"
+  },
+  "terminal:19": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:20": {
+   "zh": "聖言禮儀",
+   "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "LITURGIA VERBI"
+  },
+  "terminal:21": {
+   "zh": "[讀經員走向讀經台誦讀第一篇讀經。為表示讀經結束，讀經員加誦：]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Lector ad ambonem legit primam lectionem. Ad finem lectionis significandam, lector subdit:]"
+  },
+  "terminal:22": {
+   "zh": "上主的話。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Verbum Domini."
+  },
+  "terminal:23": {
+   "zh": "R. 感謝天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Deo gratias."
+  },
+  "terminal:25": {
+   "zh": "上主的話。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Verbum Domini."
+  },
+  "terminal:26": {
+   "zh": "R. 感謝天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Deo gratias."
+  },
+  "terminal:27": {
+   "zh": "[隨後聖詠「亞肋路亞」，或其他聖詠。]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Sequitur Alleluja, vel alter cantus.]"
+  },
+  "terminal:28": {
+   "zh": "V. 願主與你們同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Dominus vobiscum."
+  },
+  "terminal:29": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "terminal:30": {
+   "zh": "V. 恭讀聖 N 所載主耶穌基督的福音。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Lectio sancti Evangelii secundum N."
+  },
+  "terminal:31": {
+   "zh": "R. 主，願光榮歸於祢。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Gloria tibi, Domine."
+  },
+  "terminal:33": {
+   "zh": "上主的話。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Verbum Domini."
+  },
+  "terminal:34": {
+   "zh": "R. 基督，願讚美歸於祢。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Laus tibi, Christe."
+  },
+  "terminal:35": {
+   "zh": "我信唯一的天主，全能的聖父，天地萬物，無論有形無形，都是祂所創造的。我信唯一的主，天主的獨生子耶穌基督。祂在萬世之前，由聖父所生。祂是天主的天主，光的光，真天主的真天主。祂是聖父所生，而非聖父所創造的，與聖父同體。萬物都是藉著祂而造成的。祂為了我們人類，為了我們的救恩—",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Credo in unum Deum Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Jesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, lumen de lumine, Deum verum de Deo vero, genitum, non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram sa-"
+  },
+  "terminal:36": {
+   "zh": "光榮降於天地。[至於以下的言詞，直到成了",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "lutem descendit de caelis. [Ad verba quae sequuntur, usque ad factus"
+  },
+  "terminal:37": {
+   "zh": "[都躬身。]並由聖神因瑪利亞而成了肉身",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "est, omnes se inclinant.] Et incarnatus est de Spiritu Sancto ex Maria"
+  },
+  "terminal:38": {
+   "zh": "童貞瑪利亞，而成為人。祂也為我們被釘在十字架上，於本篤",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio"
+  },
+  "terminal:39": {
+   "zh": "本篤於彼拉多；受難且被埋葬，第三日復活，依照",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Pilato; passus et sepultus est, et resurrexit tertia die, secundum"
+  },
+  "terminal:40": {
+   "zh": "聖經，升了天，坐在聖父的右邊。他將再來，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum"
+  },
+  "terminal:41": {
+   "zh": "他將帶著光榮再來，審判生者死者，他的國度",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "venturus est cum gloria judicare vivos et mortuos, cujus regni non"
+  },
+  "terminal:42": {
+   "zh": "將成終結。及信聖神，主及生命的施予者；其由",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "erit finis. Et in Spiritum Sanctum, Dominum et vivificantem; qui ex"
+  },
+  "terminal:43": {
+   "zh": "與聖父及聖子同被光榮讚頌。祂與聖父及聖子同受欽崇，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et"
+  },
+  "terminal:44": {
+   "zh": "與聖父同享光榮；他曾藉先知們發言。我們相信唯一、至聖、",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "conglorificatur; qui locutus est per prophetas. Et unam sanctam,"
+  },
+  "terminal:45": {
+   "zh": "普世、宗徒的教會。我信唯一的聖洗在",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in"
+  },
+  "terminal:46": {
+   "zh": "罪過之赦。我期待死者之復活，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "remissionem peccatorum. Et exspecto resurrectionem mortuorum,"
+  },
+  "terminal:47": {
+   "zh": "及來世之生命。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "et vitam venturi saeculi."
+  },
+  "terminal:48": {
+   "zh": "聖體禮儀",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "LITURGIA EUCHARISTICA"
+  },
+  "terminal:49": {
+   "zh": "V. 主，宇宙的天主，你是可讚美的，因為出於你的慷慨",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Benedictus es, Domine, Deus universi, quia de tua largitate"
+  },
+  "terminal:50": {
+   "zh": "我們接受了這麵包，我們奉獻給你，地上的出產和人工的成果",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "accepimus panem, quem tibi offerimus, fructum terrae et operis"
+  },
+  "terminal:51": {
+   "zh": "人手中，由此為我們成為生命之糧。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "manuum hominum, ex quo nobis fiet panis vitae."
+  },
+  "terminal:52": {
+   "zh": "R. 天主應受讚美於無窮之世。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "R. Benedictus Deus in saecula."
+  },
+  "terminal:53": {
+   "zh": "V. 藉著這水與酒的奧蹟，願我們分享祂的天主性。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Per hujus aquae et vini mysterium ejus efficiamur divinitatis"
+  },
+  "terminal:54": {
+   "zh": "同伴們，祂屈尊成為我們人性的分享者。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "consortes, qui humanitatis nostrae fieri dignatus est particeps."
+  },
+  "terminal:55": {
+   "zh": "上主，我們的天主，普世的天主，你是應受讚美的，因為這一切都來自你的慷慨。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Benedictus es, Domine, Deus universi, quia de tua largitate"
+  },
+  "terminal:56": {
+   "zh": "我們領受了葡萄酒，即葡萄的果實和人工的成果，現在奉獻給你。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "accepimus vinum, quod tibi offerimus, fructum vitis et operis"
+  },
+  "terminal:57": {
+   "zh": "人手之工，由此對我們成為神聖的飲品。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "manuum hominum, ex quo nobis fiet potus spiritualis."
+  },
+  "terminal:58": {
+   "zh": "R. 天主永遠應受讚頌。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "R. Benedictus Deus in saecula."
+  },
+  "terminal:59": {
+   "zh": "願我們以謙卑之心，以悔悟之情，蒙你收納，天主。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "In spiritu humilitatis et in animo contrito suscipiamur a te, Do-"
+  },
+  "terminal:60": {
+   "zh": "現在；願我們今日所奉獻的祭品在你眼前成聖，",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "mine; et sic fiat sacrificium nostrum in conspectu tuo hodie, ut"
+  },
+  "terminal:61": {
+   "zh": "願這在你眼前蒙悅納，主天主。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "placeat tibi, Domine Deus."
+  },
+  "terminal:62": {
+   "zh": "主啊，求祢從我的不義中洗淨我，從我的罪過中潔淨我。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Lava me, Domine, ab iniquitate mea, et a peccato meo munda me."
+  },
+  "terminal:63": {
+   "zh": "V. 請各位祈禱：願我與你們的祭品蒙天主悅納。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Orate, fratres: ut meum ac vestrum sacrificium acceptabile fiat"
+  },
+  "terminal:64": {
+   "zh": "在全能天主聖父跟前。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "apud Deum Patrem omnipotentem."
+  },
+  "terminal:65": {
+   "zh": "R. 願主從你的手中領納此祭品，以讚美和",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "R. Suscipiat Dominus sacrificium de manibus tuis ad laudem et"
+  },
+  "terminal:66": {
+   "zh": "光榮其聖名，並為吾等及整個世界之裨益。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "gloriam nominis sui, ad utilitatem quoque nostram totiusque"
+  },
+  "terminal:67": {
+   "zh": "祂的聖教會。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Ecclesiae suae sanctae."
+  },
+  "terminal:69": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:70": {
+   "zh": "V. 願主與你們同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Dominus vobiscum."
+  },
+  "terminal:71": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "terminal:72": {
+   "zh": "V. 請舉心向上。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Sursum corda."
+  },
+  "terminal:73": {
+   "zh": "R. 我們全心歸向上主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Habemus ad Dominum."
+  },
+  "terminal:74": {
+   "zh": "V. 我們要感謝上主、我們的天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Gratias agamus Domino Deo nostro."
+  },
+  "v1:l5:0": {
+   "zh": "聖、聖、聖，上主、萬有的天主。祢的光榮充滿天地。歡呼之聲，響徹雲霄。奉上主名而來的，當受讚美。歡呼之聲，響徹雲霄。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Sanctus, Sanctus, Sanctus Dominus Deus Sabaoth. Pleni sunt caeli et terra gloria tua. Hosanna in excelsis. Benedictus qui venit in nomine Domini. Hosanna in excelsis."
+  },
+  "v1:l7:0": {
+   "zh": "我向全能的天主及諸位仁弟認罪，因為我在思想、言語、行為及疏忽上犯了重罪：我的過失，我的過失，我的極重過失。為此，我懇求至聖常貞瑪利亞、眾天使及諸聖人，並懇求諸位仁弟為我祈禱，祈求我們的天主寬恕我。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Confiteor Deo omnipotenti, et vobis, fratres, quia peccavi nimis cogitatione, verbo, opere, et omissione: mea culpa, mea culpa, mea maxima culpa. Ideo precor beatam Mariam semper Virginem, omnes Angelos, et Sanctos, et vos, fratres, orare pro me ad Dominum Deum nostrum."
+  },
+  "v1:l8:0": {
+   "zh": "我們的天父，願祢的名受顯揚；願祢的國來臨；願祢的旨意奉行在人間，如同在天上。求祢今天賞給我們日用的食糧；求祢寬恕我們的罪過，如同我們寬恕別人一樣；不要讓我們陷於誘惑；但救我們免於凶惡。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Pater noster, qui es in caelis, sanctificetur nomen tuum; adveniat regnum tuum; fiat voluntas tua, sicut in caelo et in terra. Panem nostrum cotidianum da nobis hodie; et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris; et ne nos indicas in tentationem; sed libera nos a malo."
+  },
+  "v1:l9:0": {
+   "zh": "至高天主，光榮歸於天主，主也歸於地上，平安於善心的人。我們讚美你，我們祝聖你，我們朝拜你，我們光榮你，我們為你的大光榮感謝你，主、天主、天國之王、全能天父天主。主、獨生子、耶穌基督、主、天主、天主聖羔，聖父之子，除免世罪者，憐憫我們；除免世罪者，俯納我們的祈禱。坐在聖父右邊者，憐憫我們。因為唯有你",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Gloria in excelsis Deo et in terra pax hominibus bonae voluntatis. Laudamus te, benedicimus te, adoramus te, glorificamus te, gratias agimus tibi propter magnam gloriam tuam, Domine Deus, Rex caelistis, Deus Pater omnipotens. Domine Fili unigenite, Iesu Christe, Domine Deus, Agnus Dei, Filius Patris, qui tollis peccata mundi, miserere nobis; qui tollis peccata mundi, suscipe deprecationem nostram. Qui sedes ad dexteram Patris, miserere nobis. Quoniam tu"
+  },
+  "v1:l9:2": {
+   "zh": "與聖神偕同：在天主聖父的光榮中。亞孟。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "cum Sancto Spiritu: in gloria Dei Patris. Amen."
+  },
+  "v1:l10:0": {
+   "zh": "我信唯一的天主，全能的聖父，天地萬物，無論可見的、不可見的，都是他所創造的。我信唯一的主耶穌基督，天主的獨生子，他在萬世之前，由聖父所生。他是天主之光，生於天主之光，是真天主，生於真天主，與聖父同體，萬物都是藉著他而造成的。他為了我們人類，為了我們的救",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Credo in unum Deum Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Jesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, lumen de lumine, Deum verum de Deo vero, genitum, non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram sa-"
+  },
+  "v1:l10:5": {
+   "zh": "聖經，升了天，坐在聖父的右邊。祂又將",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum"
+  },
+  "v2:l45:4": {
+   "zh": "人們從各種宗教期待得到對隱祕的人類處境之謎的答覆，這些謎團如同往昔今日一樣深深地觸動人心：人是什麼，我們生命的意義和目的是什麼，什麼是善什麼是罪過，痛苦源於何處又終於何處，通往獲得真正幸福的道路是什麼，死亡、審判和死後的報應是什麼，最後那籠罩著我們存在的終極而不可言喻的奧祕是什麼，我們由之而生、向之而趨的那個奧祕是什麼。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Homines a variis religionibus responsum exspectant de reconditis condicionis humanae aenigmatibus, quae sicut olim et hodie corda hominum intime commovent: quid sit homo, quis sensus et finis vitae nostrae, quid bonum et quid peccatum, quem ortum habeant dolores et quem finem, quae sit via ad veram felicitatem obtinendam, quid mors, iudicium et retributio post mortem, quid demum illud ultimum et ineffabile mysterium quod nostram existentiam amplectitur, ex quo ortum sumimus et quo tendimus."
+  },
+  "v2:l45:17": {
+   "zh": "基督如同教會自古至今所信奉的，以無限的愛德，為了全人類的罪過，自願承受苦難與死亡，使眾人獲得救恩。因此宣講的教會的職責是宣揚基督的十字架，作為天主普遍愛德的標記，並作為一切恩寵的泉源。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "Ceterum Christus, uti semper tenuit et tenet Ecclesia, propter peccata omnium hominum voluntarie passionem suam et mortem immensa caritate obiit, ut omnes salutem consequantur. Ecclesiae praedicantis ergo est annuntiare crucem Christi tamquam signum universalis Dei amoris et fontem omnis gratiae."
+  },
+  "v2:l45:47": {
+   "zh": "† 我諾曼努斯‧湯瑪斯，聖四聖冠殉難者殿司鐸樞機，雪梨總主教基洛。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego NORMANNUS THOMAS titulo Ss. Quattuor Coronatorum Presbyter Cardinalis GILROY, Archiepiscopus Sydneyensis."
+  },
+  "v2:l45:66": {
+   "zh": "† 我若望‧蘭達祖里‧里凱茨，聖母阿拉科埃利聖殿司鐸樞機，利馬總主教，祕魯首席主教。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego IOANNES titulo S. Mariae de Aracoeli Presbyter Cardinalis LANDAZURI RICKETTS, Archiepiscopus Limanus, Primas Peruviae."
+  },
+  "v2:l45:100": {
+   "zh": "(12) 參閱依撒意亞先知書66,23；聖詠65,4；羅馬人書11,11-32。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(12) Cfr. Is . 66,23; Ps . 65,4; Rom . 11,11-32."
+  },
+  "terminal:16": {
+   "zh": "偕聖神，在天主聖父的光榮中。亞孟。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "cum Sancto Spiritu: in gloria Dei Patris. Amen."
+  },
+  "terminal:24": {
+   "zh": "[詠唱者或歌詠團唱聖詠，會眾唱應答詞。其後，如有第二篇讀經，則宣讀之。讀經終了，讀經員加誦:]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Psalmista seu cantor psalmum dicit, populo responsum proferente. Postea, si habenda sit, legitur secunda lectio. Ad finem lectionis significandam, lector subdit:]"
+  },
+  "terminal:32": {
+   "zh": "[福音宣讀完畢後，執事或司祭說：]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Finito Evangelio, diaconus vel sacerdos dicit:]"
+  },
+  "terminal:68": {
+   "zh": "[在奉獻經之末，會眾歡呼：]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[In fine orationis super oblata, populus acclamat:]"
+  },
+  "terminal:75": {
+   "zh": "R. 這是理所當然的。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Dignum et justum est."
+  },
+  "terminal:76": {
+   "zh": "[司祭繼續誦唸聖德頌。聖德頌末尾時，同全體會眾，以歌聲或高聲結束聖德頌：]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Sacerdos prosequitur praefationem. In fine praefationis, una cum populo, ipsam praefationem concludit, cantans vel clara voce dicens:]"
+  },
+  "terminal:77": {
+   "zh": "聖、聖、聖，上主、萬有的天主。祢的光榮充滿天地。歡呼之聲，響徹雲霄。奉上主名而來的，當受讚美。歡呼之聲，響徹雲霄。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Sanctus, Sanctus, Sanctus Dominus Deus Sabaoth. Pleni sunt caeli et terra gloria tua. Hosanna in excelsis. Benedictus qui venit in nomine Domini. Hosanna in excelsis."
+  },
+  "terminal:78": {
+   "zh": "感恩經第三式",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Prex Eucharistica III"
+  },
+  "terminal:79": {
+   "zh": "誠然，主啊，你是聖的，你所造的一切受造物都理當讚美你，因為藉著你的子、我們的主耶穌基督，聖神德能的運行，你賦予萬物生命並聖化萬物，你不斷召集人民歸向你，使從日出之地到日落之地，潔淨的祭品得以為你的聖名而奉獻。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Vere Sanctus es, Domine, et merito te laudat omnis a te condita creatura, quia per Filium tuum, Dominum nostrum Iesum Christum, Spiritus Sancti operante virtute, vivificas et sanctificas universa, et populum tibi congregare non desinis, ut a solis ortu usque ad occasum oblatio munda mundi offeratur nomini tuo."
+  },
+  "terminal:80": {
+   "zh": "因此，主啊，我們懇求你，求你藉聖神聖化我們奉獻給你的這些祭品，使其成為你聖子、我們的主耶穌基督的聖體和聖血；我們正是按照他的命令而舉行這些奧蹟。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Supplices ergo te, Domine, deprecamur, ut haec munera, quae tibi sacranda detulimus, eodem Spiritu sanctificate digneris, ut Corpus et Sanguis fiant Filii tui Domini nostri Iesu Christi, cuius mandato haec mysteria celebramus."
+  },
+  "terminal:81": {
+   "zh": "他在被交付的那一夜，接過餅來，向你感謝並祝聖了，擘開，遞給他的門徒們，說：你們都應當領受、進食；這就是我的身體，為你們而奉獻。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Ipse enim in qua nocte tradebatur accepta panem et tibi gratias agens benedixit, fregit, deditque discipulis suis, dicens: Accipite et manducate ex hoc omnes; hoc est enim Corpus meum, quod pro vobis defertur."
+  },
+  "terminal:82": {
+   "zh": "同樣地，飯後，他拿起杯爵，感謝了你，祝聖了，遞給他的門徒們說：你們都拿去喝，因為這是我血的杯爵，新而永久的盟約之血，為你們和許多人傾流，以赦免罪過。你們應如此行，以紀念我。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Simili modo, postquam cenatum est, accipiens calicem, et tibi gratias agens benedixit, deditque discipulis suis, dicens: Accipite et bibite ex eo omnes; hic est enim calix Sanguinis mei novi et aeterni testamenti qui pro vobis et pro multis effundetur in remissionem peccatorum. Hoc facite in meam commemorationem."
+  },
+  "terminal:83": {
+   "zh": "信德的奧蹟：",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Mysterium fidei:"
+  },
+  "terminal:84": {
+   "zh": "R. 我們傳報你的死亡，主，並承認你的復活，直到你再來。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "R. Mortem tuam annuntiamus, Domine, et tuam resurrectionem confitemur, donec venias."
+  },
+  "terminal:86": {
+   "zh": "我們懇求祢，垂顧祢教會的祭獻，並認可",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Respice, quaesumus, in oblationem Ecclesiae tuae et, agrioscens"
+  },
+  "terminal:87": {
+   "zh": "求你恩准我們獻上這祭品，願你因其犧牲而獲得喜悅，使我們因你聖子的聖體聖血而獲得滋養，充滿他的聖神，在基督內成為一個身體、一個神魂。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Hostiam, cujus voluisti immolatione placari, concede, ut, qui Corpore et Sanguine Filii tui reficimur, Spiritu ejus Sancto repleti, unum corpus et unus spiritus inveniamur in Christo."
+  },
+  "terminal:88": {
+   "zh": "願他使我們在你面前成全永遠的禮儀，好使我們能與你所揀選的人分享產業，首先與至聖童貞天主之母瑪利亞、與你的真福宗徒和光榮烈士[同聖人N.：聖人或主保]以及眾聖人相偕，我們常懷信心依靠他們的轉禱而蒙你的扶助。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Ipse nos tibi perficiat munus aeternum, ut cum electis tuis hereditatem consequi valeamus, in primis cum beatissima Virgine, Dei Genetrice, Maria, cum beatis Apostolis tuis et gloriosus Martyribus [cum Sancto N.: Sancto diei vel patrono] et omnibus Sanctis, quorum intercessione perpetuo apud te confidimus adjuvari."
+  },
+  "terminal:90": {
+   "zh": "仁慈地收納我們已故的弟兄以及一切蒙你悅納、從此世進入你的天國的人，我們期望在那裡與你同享你的光榮直到永遠，此乃藉我們的主基督，藉他你將世間一切恩惠傾注於世人。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Fratres nostros defunctos et omnes qui, tibi placentes, ex hoc saeculo transierunt in regnum tuum benignus admitte, ubi fore speramus, ut simul gloria tua perennitier satiemur, per Christum Dominum nostrum, per quem mundo bona cuncta largiris."
+  },
+  "terminal:91": {
+   "zh": "藉著他、偕同他、在他內，一切尊威和光榮，都是藉著他，歸於你，全能天主聖父，在聖神的共融中，於無窮世世。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Per ipsum, et cum ipso, et in ipso, est tibi Deo Patri omnipotenti, in unitate Spiritus Sancti, omnis honor et gloria per omnia saecula saeculorum."
+  },
+  "terminal:92": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:93": {
+   "zh": "聖體禮儀",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "RITUS COMMUNIONIS"
+  },
+  "terminal:94": {
+   "zh": "V. 蒙救恩的誡命所訓誨，並受天主聖訓所陶成，我們敢於說：",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Praeceptis salutaribus moniti, et divina institutione formati, audemus dicere:"
+  },
+  "terminal:95": {
+   "zh": "我們的天父，願祢的名受顯揚；願祢的國來臨；願祢的旨意奉行在人間，如同在天上。求祢今天賞給我們日用的食糧；求祢寬恕我們的罪過，如同我們寬恕別人一樣；不要讓我們陷於誘惑；但救我們免於凶惡。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Pater noster, qui es in caelis, sanctificetur nomen tuum; adveniat regnum tuum; fiat voluntas tua, sicut in caelo et in terra. Panem nostrum cotidianum da nobis hodie; et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris; et ne nos indicas in tentationem; sed libera nos a malo."
+  },
+  "terminal:96": {
+   "zh": "V. 求你解救我們，主啊，脫離一切的惡，並在我們的日子裡仁慈地賜予平安，使我們藉著你的仁慈的幫助，常是免於罪過，安全於一切困擾：期待我們救主耶穌基督的幸福的希望與降臨。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Libera nos, quaesumus, Domine, ab omnibus malis, da propitius pacem in diebus nostris, ut, ope misericordiae tuae adjuti, et a peccato simus semper liberi et ab omni perturbatione securi: expectantes beatam spem et adventum Salvatoris nostri Jesu Christi."
+  },
+  "terminal:97": {
+   "zh": "R. 因為光榮、權能和國度都是祢的，直到永遠。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "R. Quia tuum est regnum, et potestas, et gloria in saecula."
+  },
+  "terminal:98": {
+   "zh": "V. 主，耶穌基督，祢曾對祢的宗徒們說：我留給你們平安",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "V. Domine, Jesu Christe, qui dixisti Apostolis tuis: Pacem relinquo"
+  },
+  "terminal:99": {
+   "zh": "給你們，我把我的平安留給你們：不要看我們的罪過，但",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "vobis, pacem meam do vobis: ne respicias peccata nostra, sed"
+  },
+  "terminal:100": {
+   "zh": "你聖教會的信德；並按照你的旨意",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "fidem Ecclesiae tuae; eamque secundum voluntatem tuam"
+  },
+  "terminal:101": {
+   "zh": "求祢使其獲得和平並相聚一堂。祢生活並統治於無窮世紀",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "pacificare et coadunare digneris. Qui vivis et regnas in saecula"
+  },
+  "terminal:102": {
+   "zh": "世世無窮。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "saeculorum."
+  },
+  "terminal:103": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:104": {
+   "zh": "V. 願主的平安常與你們同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Pax Domini sit semper vobiscum."
+  },
+  "terminal:105": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "terminal:106": {
+   "zh": "V. 請大家互祝平安。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Offerte vobis pacem."
+  },
+  "terminal:107": {
+   "zh": "此乃吾主耶穌基督聖身聖血之混合",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Haec commixtio Corporis et Sanguinis Domini nostri Jesu Christi"
+  },
+  "terminal:108": {
+   "zh": "願我們領受之後，獲得永生。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "fiat accipientibus nobis in vitam aeternam."
+  },
+  "terminal:109": {
+   "zh": "除免世罪的天主羔羊，求祢垂憐我們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: miserere nobis."
+  },
+  "terminal:110": {
+   "zh": "除免世罪的天主羔羊，求祢垂憐我們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: miserere nobis."
+  },
+  "terminal:111": {
+   "zh": "除免世罪的天主羔羊，求賜我們平安。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Agnus Dei, qui tollis peccata mundi: dona nobis pacem."
+  },
+  "terminal:112": {
+   "zh": "主耶穌基督，永生天主之子，祢依照聖父的旨意，藉聖神的助佑，以祢的死亡賦予世界生命：求祢藉著這至聖的聖體和聖血，救我脫離我的一切不義和一切邪惡，使我常能遵守祢的誡命，永遠不讓我與祢分離。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Domine Jesu Christe, Fili Dei vivi, qui ex voluntate Patris, cooperante Spiritu Sancto, per mortem tuam mundum vivificasti: libera me per hoc sacrosanctum Corpus et Sanguinem tuum ab omnibus iniquitatibus meis et universis malis: et fac me tuis semper inhaerere mandatis, et a te numquam separari permitas."
+  },
+  "terminal:113": {
+   "zh": "看哪，天主的羔羊，看哪，除免世人罪過者。有福的是被邀赴婚宴的人",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Ecce Agnus Dei, ecce qui tollit peccata mundi. Beati qui ad cenam"
+  },
+  "terminal:114": {
+   "zh": "被召喚的羔羊。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Agni vocati sunt."
+  },
+  "terminal:115": {
+   "zh": "主啊，我不堪當，你進到我的屋頂下，但只要",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Domine, non sum dignus, ut intres sub tectum meum, sed tantum"
+  },
+  "terminal:116": {
+   "zh": "祢只須一言，我的靈魂就必獲救。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "dic verbo, et sanabitur anima mea."
+  },
+  "terminal:117": {
+   "zh": "基督的聖體保護我進入永恆的生命。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Corpus Christi custodiat me in vitam aeternam."
+  },
+  "terminal:118": {
+   "zh": "基督的聖血護守我，使我獲得永生。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Sanguis Christi custodiat me in vitam aeternam."
+  },
+  "terminal:119": {
+   "zh": "V. 基督聖體。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Corpus Christi."
+  },
+  "terminal:120": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:121": {
+   "zh": "主啊，我們用口所領受的，願以清淨的心靈領納，並由此聖事的恩賜",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Quod ore sumpsimus, Domine, pura mente capiamus, et de munere"
+  },
+  "terminal:122": {
+   "zh": "願此暫時的幫助，為我們成為永遠的救恩。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "temporali fiat nobis remedium sempiternum."
+  },
+  "terminal:123": {
+   "zh": "請大家祈禱。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "Oremus."
+  },
+  "terminal:124": {
+   "zh": "[且眾人與主持人一同默禱片刻，除非已有默禱。其後，主持人展開雙手，誦領聖體後經。會眾在末尾歡呼：]",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "[Et omnes una cum Praeside per aliquod temporis spatium in silentio orant, nisi silentium jam praecesserit. Deinde Praeses, manibus extensis, dicit orationem post Communionem. Populus in fine acclamat:]"
+  },
+  "terminal:125": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:126": {
+   "zh": "結束禮儀",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "RITUS CONCLUSIONIS"
+  },
+  "terminal:127": {
+   "zh": "V. 願主與你們同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Dominus vobiscum."
+  },
+  "terminal:128": {
+   "zh": "R. 也與你的心靈同在。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Et cum spiritu tuo."
+  },
+  "terminal:129": {
+   "zh": "V. 願全能的天主，聖父、聖子、聖神降福你們。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus."
+  },
+  "terminal:130": {
+   "zh": "R. 亞孟。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Amen."
+  },
+  "terminal:131": {
+   "zh": "V. 彌撒禮成。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "V. Ite, missa est."
+  },
+  "terminal:132": {
+   "zh": "R. 感謝天主。",
+   "engine": "received-wording",
+   "note": "教會通行本文（付印前請對照《感恩祭典》）",
+   "liturgical": true,
+   "latin": "R. Deo gratias."
+  },
+  "v2:l45:88": {
+   "zh": "† 我亞歷山德爾‧託基，安提巴爾總主教、塞爾維亞首席主教",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego ALEXANDER TOKI , Archiepiscopus Antibarensis, Primas Serbiae"
+  },
+  "terminal:89": {
+   "zh": "願這祭品成為我們和好的憑藉，求主使之有益於整個世界的和平與救恩。求你賜予恩寵，堅強你在世上旅行的教會，使之在信德和愛德中堅定不移，並與你的僕人我們的教宗某某及我們的主教某某，與主教階層及全體司鐸和你所贖的全體人民同在一起。求你恩准俯聽這個你願意侍立在你前的家族的祈禱。仁慈的天父，求你憐憫你在各處分散的眾子女，將他們聚合在你的面前。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Haec Hostia nostrae reconciliationis proficiat, quaesumus, Domine, ad totius mundi pacem atque salutem. Ecclesiam tuam, peregrinantem in terra, in fide et caritate firmare digneris cum famulo tuo Papa nostro N. et Episcopo nostro N., cum episcopali ordine et universo clero et omni populo acquisitionis tuae. Votis hujus familiae, quam tibi astare voluisti, adesto propitius. Omnes filios tuos ubique dispersos tibi, clemens Pater, miseratus conjunge."
+  },
+  "v2:l45:86": {
+   "zh": "我德默特里烏斯‧莫斯卡多，主天主教教宗駐地撒萊諾總主教及阿切爾諾永久宗座署理。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "† Ego DEMETRIUS MOSCATO, Archiepiscopus Primas Salernitanus et Administrator Perpetuus Acernensis."
+  },
+  "v2:l45:90": {
+   "zh": "(2) 參考《智慧篇》8,1；《宗徒大事錄》14,17；《羅馬人書》2,6-7；《弟茂德前書》2,4。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": false,
+   "latin": "(2) Cfr. Sap . 8,1; Act . 14,17; Rom . 2,6-7; 1 Tim . 2, 4."
+  },
+  "terminal:85": {
+   "zh": "我們既然追念了，吾主，爾之聖子救世之苦難、奇妙之復活及升天，並恭候其另一次降臨，遂向爾奉獻此生活且聖潔之祭品，並奉獻感謝。",
+   "engine": "claude-haiku-4-5-20251001",
+   "note": "自譯（研讀用，非教會核准禮儀譯本）",
+   "liturgical": true,
+   "latin": "Memores igitur, Domine, eiusdem Filii tui salutifere passionis necnon mirabilis resurrectionis et ascensionis in caelum, sed et praestolantes alterum eius adventum, offerimus tibi, gratias referentes, hoc sacrificium vivum et sanctum."
+  }
+ },
+ "generatedOn": "2026-08-27"
+}

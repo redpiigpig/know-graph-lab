@@ -46,8 +46,9 @@ CHURCH = CACHE / "church-plan.json"
 LITURGY = CACHE / "liturgy.json"
 READINGS_ZH = CACHE / "readings-zh.json"
 MEMORY = CACHE / "memory-units.json"
+GAP_ZH = CACHE / "reading-gap-zh.json"
 
-LITURGY_NOTE = "禮儀經文不作機器翻譯；中譯應採用教會通行本文，付印前由人補上"
+LITURGY_NOTE = "禮儀經文的固定對答採教會通行本文，其餘為自譯；付印前請對照《感恩祭典》核對"
 
 FONT_LA = "Noto Serif"
 LATIN_PT = 11.0
@@ -81,6 +82,31 @@ COLOPHON = [
     ("授權", "本書為私人研讀用途，非賣品。製作已取得口頭同意；"
              "所引各版本之著作權仍屬原權利人，不得再散布。"),
 ]
+
+
+def gap_fill() -> dict[str, str]:
+    """The self-translated lines that fill what no register could supply.
+
+    Keyed volume:lesson:index, the position of the line inside its lesson, which
+    is stable because it is the position in the printed reading itself -- not a
+    lesson number that a sort can move.
+    """
+    if not GAP_ZH.exists():
+        return {}
+    store = json.loads(GAP_ZH.read_text(encoding="utf-8"))
+    return {key: row["zh"] for key, row in store["lines"].items() if row.get("zh")}
+
+
+def apply_gaps(rows: dict[int, dict], volume: int) -> dict[int, dict]:
+    filled = gap_fill()
+    if not filled:
+        return rows
+    for lesson, row in rows.items():
+        row["pairs"] = [
+            (latin, zh or filled.get(f"v{volume}:l{lesson}:{index}", ""))
+            for index, (latin, zh) in enumerate(row["pairs"])
+        ]
+    return rows
 
 
 def load(path: Path, default=None):
@@ -270,7 +296,7 @@ def upper_readings() -> dict[int, dict]:
         if chapter_zh and chapter_zh.get("alignmentNote"):
             note = (note + "　" if note else "") + chapter_zh["alignmentNote"]
         out[row["lesson"]] = {"title": row["title"], "pairs": pairs, "note": note}
-    return out
+    return apply_gaps(out, 1)
 
 
 SECTION_NUMBER = re.compile(r"^\s*(\d{1,3})\s*[.、]")
@@ -344,7 +370,7 @@ def lower_readings() -> dict[int, dict]:
         out[row["lesson"]] = {
             "title": f"{row['title']}　{row['latinTitle']}", "pairs": pairs, "note": note,
         }
-    return out
+    return apply_gaps(out, 2)
 
 
 def appendix_section(document, tables: dict):

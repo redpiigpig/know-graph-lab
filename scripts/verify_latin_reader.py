@@ -164,10 +164,15 @@ def main() -> int:
         aligned = len(readings) - len(pending)
         if aligned:
             warnings.append(f"下冊 {aligned} 篇以節號對齊既有中譯")
-        # The liturgical Chinese is absent by decision, not by oversight;
-        # the gate says so every run so nobody fills it with a machine draft.
-        warnings.append("上冊前十課的禮儀短經與終卷彌撒經文不作機器翻譯，"
-                        "中譯待人採用教會通行本文")
+        # The liturgical Chinese is present: the fixed responses carry the
+        # received wording, the rest is self-translated.  The gate names the
+        # split so the received lines get checked against the published book
+        # rather than assumed.
+        gaps_store = load(CACHE / "reading-gap-zh.json") or {"lines": {}}
+        received = sum(1 for row in gaps_store["lines"].values()
+                       if row.get("engine") == "received-wording")
+        warnings.append(f"禮儀經文：{received} 行採教會通行本文，其餘自譯；"
+                        f"付印前請對照《感恩祭典》核對")
         if not church["terminalSection"]["status"].startswith("latin_frozen"):
             warnings.append(f"終卷《{church['terminalSection']['title']}》"
                             f"狀態 {church['terminalSection']['status']}")

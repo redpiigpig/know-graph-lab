@@ -74,15 +74,38 @@ checksums.
    Chinese for §12 sits beside the Latin paragraph that opens §12, and the
    continuation paragraphs of that section carry none. Nostra Aetate therefore
    shows Chinese on 5 of its 104 paragraphs, which is right — it has five
-   sections — but it reads unevenly, and a future pass could set the Chinese
-   against the whole section rather than its first paragraph. `translate_latin_readings_zh.py` is
+   sections. The continuation paragraphs are no longer blank: they carry a
+   self-translation, so the page shows the published wording where a section
+   opens and 自譯 for the rest. `translate_latin_readings_zh.py` is
    resumable; re-run it until every unit reports all its segments. It runs at
    roughly two minutes a segment while the Gemini pool is rate-limited, so it is
    an overnight job, not a coffee-break one. Everything it produces is labelled
    自譯 and is **not** 《感恩祭典》.
 4. **The Ordo Missae's Latin is settled**: Collins's Further Readings 1, which
    prints the post-conciliar ordinary, under the owner's verbal permission for
-   this private edition. Its Chinese is part of item 3.
+   this private edition.
+5. **The liturgical Chinese is filled, and its fixed responses carry the
+   received wording.** The owner asked on 2026-08-27 for every 〔中譯待補〕 to be
+   translated; all 328 were, and the book now prints no gap. How they were
+   filled is the part to check:
+
+   - **66 lines are the received wording**, supplied from a table in
+     `scripts/fill_latin_reading_gaps.py` and marked `received-wording` —
+     「因父、及子、及聖神之名」, 「請舉心向上」, 「我們全心歸向上主」, the Pater
+     noster, the Sanctus. A machine renders these unevenly: the same
+     `Sursum corda` came back as 「舉心向上」 once and 「心向上」 the next time,
+     `Habemus ad Dominum` became 「我們有向主」 which is not Chinese, and
+     `Lectio sancti Evangelii secundum N.` was expanded into 「聖若望福音」,
+     inventing an evangelist where the Latin prints a placeholder.
+   - The rest is self-translated behind a gate that rejects invention: a
+     versicle must return the same single V./R. marker, must not name a minister
+     the Latin does not name, and must not become several sentences where the
+     Latin is one line. The gate applies to versicles only — a rubric's whole
+     job is to say who does what, and holding it to the same rule rejected every
+     rubric in the Mass.
+
+   **Outstanding:** the 66 received lines are written out here rather than
+   copied from 《感恩祭典》. Check them against the book before printing.
 6. **Proper-name Chinese reaches about half the names the printed chapters
    contain**, and none of the rest of the Vulgate's. The alignment
    register only covers what is printed; extending it means printing more
