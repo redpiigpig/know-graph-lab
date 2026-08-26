@@ -224,6 +224,15 @@ def prompt_for(record: dict[str, Any]) -> str:
         "  wai (外藏) = works the Nicene church did NOT receive — pseudepigrapha, heretical writings "
         "(gnostic, Marcionite, Manichaean, Arian…), Jewish and pagan texts kept as outside witnesses.\n"
         "So Basil's De Spiritu Sancto and Augustine's Enchiridion are zheng, not wai.\n"
+        # 第一版只寫「尼西亞教會接受」，模型把它套到現代作品上，於是切斯特頓
+        # 《回到正統》(1908)、伊拉斯謨《愚人頌》都因「未被尼西亞教會歷史性接納」
+        # 被判外藏。那條測試只對古代文獻有意義。
+        "The Nicene-reception test applies to ANCIENT literature. For medieval, early-modern and "
+        "modern works the axis reads differently: zheng = written from within a recognised Christian "
+        "tradition (Catholic, Orthodox, Protestant, Anglican…); wai = written from outside or against "
+        "it — condemned heresies, other religions, anti-Christian polemic. A modern Christian author "
+        "is NOT wai merely because the fourth-century church never saw the book. Chesterton's "
+        "Orthodoxy and Erasmus's Moriae Encomium are zheng.\n"
         "Do not classify a record as zheng merely because it is famous. For post-Reformation "
         "denominational confessions (Westminster, Heidelberg, Dort, Augsburg…) the zheng/wai boundary "
         "is an unsettled editorial question for this project: set canon=unknown and "
@@ -335,7 +344,10 @@ def call_nvidia(prompt: str, keys: list[str], cursor: int) -> tuple[str, str, in
                 {
                     "model": NVIDIA_MODEL,
                     "temperature": 0.1,
-                    "max_tokens": 1200,
+                    # nemotron-3 會先跑一段內部推理才輸出。1200 時實測
+                    # finish_reason=length：1200 token 用光而可見 JSON 只有 371 字，
+                    # 被腰斬成 Unterminated string。4000 下實際只耗 966 token。
+                    "max_tokens": 4000,
                     "response_format": {"type": "json_object"},
                     "messages": [
                         {"role": "system", "content": "You are a strict bibliographic classifier. Return valid JSON only."},
