@@ -11,26 +11,25 @@ and the same printer settings work for all of them.
 | Deck | Cards | Pages | With picture | Part of speech blank | File |
 |---|---:|---:|---:|---:|---|
 | 聖經希伯來文 | 1,000 | 252 | **1,000 (100%)** | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
-| 通用希臘文・上冊 | 1,000 | 252 | 627 (63%) | 276 | `output/flashcards/greek-flashcards-volume-1.pdf` |
-| 通用希臘文・下冊 | 1,000 | 252 | 293 (29%) | 447 | `output/flashcards/greek-flashcards-volume-2.pdf` |
+| 通用希臘文・上冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-1.pdf` |
+| 通用希臘文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-2.pdf` |
 | 教會拉丁文・上冊 | 1,000 | 252 | 457 (46%) | 40 | `output/flashcards/latin-flashcards-volume-1.pdf` |
 | 教會拉丁文・下冊 | 1,000 | 252 | 345 (35%) | 9 | `output/flashcards/latin-flashcards-volume-2.pdf` |
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 
-**The Greek decks are another session's work from 2026-08-25 onward.** The owner
-reassigned them. Do not regenerate `greek-card-images.json`, the Greek deck files
-or `match_greek_card_images.py` unless the owner says the assignment has changed.
-Reading the Greek picture map is fine and expected — the Hebrew matcher does it
-for meaning transfer.
+**The Latin decks would gain from a re-run.** Their pictures were matched when
+Greek stood at 50% coverage; Greek is now complete, and the Chinese-meaning
+transfer reads the Greek map. Running `match_latin_card_images.py` again should
+raise both Latin decks without a single new hand pick.
 
 ### What the owner has decided
 
 - **Every card should carry a picture.** Their reasoning: a physical deck only
-  earns its keep if the picture aids memory, otherwise study online. The Hebrew
-  deck reached that on 2026-08-26: the remaining 419 blanks were picked by hand,
-  one word at a time, so `OVERRIDES` now carries 854 Hebrew entries. Greek is
-  still short of it and belongs to another session.
+  earns its keep if the picture aids memory, otherwise study online. Hebrew
+  reached that on 2026-08-26 (419 blanks picked by hand), and Greek on the same
+  day: 925 hand picks in four passes took the two volumes from 50% to 100%, so
+  the Greek `OVERRIDES` now carries 1,493 entries. Latin is the one still short.
 - **Cartoon style**, one consistent look.
 - **No cutting lines.** A hairline printed a millimetre off leaves every card
   with a crooked edge.
@@ -96,12 +95,27 @@ Hebrew and Latin read their part of speech from the vocabulary master; Latin's
 comes from the reader's own `short_pos`, which reads the gender abbreviation and
 the principal parts rather than an explicit field, because Collins labels
 neither. Greek has none, so
-`scripts/flashcard_pos.py` works it out from the citation form (an article makes
-a noun, three terminations an adjective, a first-person form a verb) and from the
-Chinese gloss where the form is silent (`（配屬格）` marks a preposition, a gloss
-whose senses all end in 「的」 an adjective), with hand lists for the function
-words and the irregular verbs. It settles about 64% and prints nothing for the
-rest. **A blank line costs nothing; a wrong label is learned as fact.**
+`scripts/flashcard_pos.py` works it out, strongest evidence first:
+
+1. hand lists for the function words and the irregular verbs;
+2. the citation form — an article makes a noun, three terminations an adjective,
+   a first-person form a verb;
+3. **the SBLGNT's own tags.** MorphGNT labels every New Testament word, so for
+   anything the New Testament uses the part of speech is a recorded fact rather
+   than an inference. This alone settled 603 of the 723 Greek cards that the
+   first two rules left blank;
+4. the Chinese gloss where the form is silent — `（配屬格）` marks a preposition,
+   a gloss whose senses all end in 「的」 an adjective;
+5. `EXTRA_LEXICON`, 116 Septuagint and patristic words read one at a time. Nouns
+   dominate it because a bare Septuagint headword carries no article, which is
+   exactly the cue rule 2 needs.
+
+Together they settle all 2,000. **A blank line costs nothing; a wrong label is
+learned as fact** — the list in rule 5 was written by reading the words, not by
+guessing from endings, precisely because -ος is a noun and an adjective alike.
+
+The adverb pattern must allow accents: `καλῶς` carries a circumflex, and a
+pattern written `ως` silently never matches it.
 
 ## Picture matching
 
@@ -110,8 +124,8 @@ Strictest-first, and it refuses to guess:
 1. **Hand-picked overrides**, named by the emoji's own name rather than a
    hexcode so a bad entry fails loudly. This is where the frequent core
    vocabulary lives, and where function words get their symbol —
-   לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕. 1,383 entries so far
-   (Hebrew 806 by Strong number plus 4 by pointed form, Greek 573).
+   לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕. 2,303 entries so far
+   (Hebrew 806 by Strong number plus 4 by pointed form, Greek 1,493).
 2. **Chinese-meaning transfer**, both ways and transitive. All five decks share
    one Traditional-Chinese gloss vocabulary, so a word whose meaning another deck
    has already pictured takes that picture: πῦρ and אֵשׁ are both 「火」 and both
@@ -166,6 +180,16 @@ different job from matching, and it has its own failure modes:
   itself, not a later symbol read back.
 - **Function words take a symbol, not a scene.** 疑問助詞 ❓, כְּ ＝, לְ →,
   בְּ 🚩, מְעַט 🤏, עַד ♾️, בְּלִי 🪹.
+- **Some OpenMoji names have no artwork.** `white square` (U+25A1) ships as a
+  pink box with a cross through it — the set's own missing-glyph placeholder —
+  and it printed on the 四方形的 card until the contact sheet caught it. Hash the
+  file against that placeholder before trusting a name; `white large square` is
+  the real square.
+- **A picture can be wrong in the other direction.** `emergency exit door` shows
+  a figure running *out*, so on 「領進」 it teaches the opposite; `ogre` is a
+  Japanese oni and has no business illustrating 「蠻族人」; `passport control` is
+  an officer checking papers, not a 「皈依者」; `bellhop bell` is room service,
+  not 「關切」. All four were caught by looking, none by reading the name.
 - **Four prefixes have no Strong number.** בְּ / כְּ / לְ / הֲ are keyed by their
   pointed form in `OVERRIDES_BY_FORM`, which the matcher consults when
   `entry["strong"]` is empty. Copy the form out of the vocabulary master rather
@@ -176,7 +200,8 @@ different job from matching, and it has its own failure modes:
 
 ```
 python scripts/match_flashcard_images.py --write        # Hebrew picture map
-python scripts/match_greek_card_images.py --write       # Greek — another session owns this
+python scripts/match_greek_card_images.py --write       # Greek picture map
+python scripts/match_greek_card_images.py --uncovered 50  # what is still blank
 python scripts/match_latin_card_images.py --write       # Latin picture map
 python scripts/build_flashcards.py --deck hbo           # or grc1, grc2, lat1, lat2
 python scripts/build_flashcards.py --deck hbo --limit 16   # proof sheet
@@ -209,11 +234,11 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 
 ## Next, if the owner asks for more
 
-1. **Hebrew is at 100% and needs no more overrides** — the matcher's uncovered
-   report now prints empty. What is left there is refinement: a picture that is
-   merely adjacent to its word (肩膀 takes the prosthetic arm, 掠奪 the boxing
-   glove, 細麵 the pancakes) could be improved if a better emoji is found, but
-   none of them is wrong. Greek still has blanks and belongs to another session.
+1. **Hebrew and Greek are both at 100%** and need no more overrides — the
+   matchers' uncovered reports print empty. What is left in both is refinement:
+   a picture that is merely adjacent to its word (肩膀 takes the prosthetic arm,
+   下冊's abstract 樣式／形狀／組成 all take the puzzle piece) could be improved,
+   but none of them is wrong.
 2. **A paid Gemini key** would let image generation fill the rest with a style
    matched to the deck rather than to the emoji set. Check quota before promising
    anything; the free tier gave nothing.
