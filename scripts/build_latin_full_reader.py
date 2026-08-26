@@ -273,7 +273,10 @@ def upper_readings() -> dict[int, dict]:
     return out
 
 
-SECTION_NUMBER = re.compile(r"^\s*(\d{1,3})[.、]")
+SECTION_NUMBER = re.compile(r"^\s*(\d{1,3})\s*[.、]")
+# The number is not always tight against its point: Dignitatis Humanae
+# prints "2 . Haec Vaticana Synodus declarat", and a pattern that demands
+# the two be adjacent finds no sections at all and silently pairs nothing.
 
 
 def chinese_by_section(path: str) -> dict[int, str]:

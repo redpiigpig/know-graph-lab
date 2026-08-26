@@ -66,7 +66,14 @@ checksums.
    constitution and says so in its own header), four are real translations that
    number nothing, and five are real translations that number their sections.
    Only those five can be set beside the Latin, matched on the section number.
-   The Chinese for the rest is being produced and is not finished. `translate_latin_readings_zh.py` is
+   The Chinese for the rest is being produced and is not finished.
+
+   Where the five are aligned, the join is section to section: the published
+   Chinese for §12 sits beside the Latin paragraph that opens §12, and the
+   continuation paragraphs of that section carry none. Nostra Aetate therefore
+   shows Chinese on 5 of its 104 paragraphs, which is right — it has five
+   sections — but it reads unevenly, and a future pass could set the Chinese
+   against the whole section rather than its first paragraph. `translate_latin_readings_zh.py` is
    resumable; re-run it until every unit reports all its segments. It runs at
    roughly two minutes a segment while the Gemini pool is rate-limited, so it is
    an overnight job, not a coffee-break one. Everything it produces is labelled
@@ -141,6 +148,11 @@ checksums.
   they were liturgical Latin, and the numbered title of the *next* reading is
   where the current one ends: the Ordo Missae was carrying twenty-five lines of
   the Exsultet on its tail before anyone noticed.
+- **A section number is not always tight against its point.** Dignitatis
+  Humanae prints 「2 . Haec Vaticana Synodus declarat」, and a pattern demanding
+  the digit and the period be adjacent matched nothing and paired no Chinese at
+  all — silently, because a reading with no Chinese looks the same as one whose
+  translation has not arrived.
 - **OpenCC `s2t` is not a test for simplified Chinese.** It rewrites 祢 to 禰,
   and 祢 is the Catholic honorific this reader's translations are full of; it
   also rewrites 台, 床, 群, 峰. A gate that treats "the converter changed
