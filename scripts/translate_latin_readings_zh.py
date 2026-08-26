@@ -183,14 +183,53 @@ def segments(text: str, size: int = SEGMENT_WORDS) -> list[list[str]]:
 
 
 def parse(text: str) -> list[str]:
+    """Get the array out of the reply, whatever the reply wrapped it in.
+
+    Four readings failed every attempt on the parse alone -- "Extra data: line 4"
+    where the model added a sentence after the array, "Expecting value: line 1"
+    where it opened with one. The content was fine each time. So the first
+    balanced array in the reply is taken and the rest discarded, and a reply that
+    is plainly one paragraph of Chinese with no array at all is accepted as that
+    one paragraph.
+    """
     text = text.strip()
     fence = chr(96) * 3
-    if text.startswith(fence):
-        text = text.split(chr(10), 1)[-1]
-    if text.endswith(fence):
-        text = text.rsplit(chr(10), 1)[0]
-    rows = json.loads(text.strip())
-    return [str(r).strip() for r in rows]
+    if fence in text:
+        chunks = text.split(fence)
+        text = max(chunks, key=len).strip()
+        if text.startswith(("json", "JSON")):
+            text = text[4:].strip()
+
+    start = text.find("[")
+    if start >= 0:
+        depth = 0
+        in_string = False
+        escape = False
+        for index in range(start, len(text)):
+            char = text[index]
+            if in_string:
+                if escape:
+                    escape = False
+                elif char == chr(92):
+                    escape = True
+                elif char == '"':
+                    in_string = False
+                continue
+            if char == '"':
+                in_string = True
+            elif char == "[":
+                depth += 1
+            elif char == "]":
+                depth -= 1
+                if depth == 0:
+                    rows = json.loads(text[start:index + 1])
+                    return [str(row).strip() for row in rows]
+
+    # No array anywhere.  If what came back is Chinese prose, it is the answer.
+    stripped = re.sub(r"^[^一-鿿]+", "", text).strip()
+    if stripped:
+        return [stripped]
+    raise ValueError("回覆裡找不到譯文")
 
 
 LATIN_LEAK = re.compile(r"[A-Za-z]{4,}")
