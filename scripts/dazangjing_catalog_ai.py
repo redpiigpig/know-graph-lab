@@ -44,7 +44,10 @@ ENGINE_ORDER = tuple(
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
 OLLAMA_MODEL = os.environ.get("DAZANGJING_OLLAMA_MODEL", "qwen2.5:7b")
 GEMINI_MODEL = os.environ.get("DAZANGJING_GEMINI_MODEL", "gemini-2.5-flash")
-NVIDIA_MODEL = os.environ.get("DAZANGJING_NVIDIA_MODEL", "deepseek-ai/deepseek-v4-flash-0731")
+# 2026-08-26：deepseek-v4-flash-0731 對本專案全部 7 把 key 一律回 HTTP 404
+# 「Specified function in account ... not found」——已停止服務（/v1/models 還列著
+# 是陳舊清單）。nemotron-3-super-120b-a12b 實測可用、吐乾淨 JSON、0.8 秒。
+NVIDIA_MODEL = os.environ.get("DAZANGJING_NVIDIA_MODEL", "nvidia/nemotron-3-super-120b-a12b")
 NVIDIA_URL = os.environ.get("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1/chat/completions")
 
 
