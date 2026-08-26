@@ -83,8 +83,24 @@ two competing rules in the XML and produces the same symptom.
 Front carries the headword and the lesson. Back carries the picture (when there
 is one), the Traditional-Chinese meaning, the part of speech and the lesson. The
 meaning line is sized from its own length — the glosses run from two characters
-to twenty-seven — rather than set once and allowed to overflow. Greek citation
-forms are long (`ἄνθρωπος, -ου, ὁ`), so the headword shrinks by length too.
+to twenty-seven — rather than set once and allowed to overflow.
+
+**The Greek cards print a citation form only when it cannot be worked out.** The
+reader prints the full dictionary form; the card does not need to, because for a
+first- or second-declension noun the genitive follows from the ending plus the
+gender — `θεός` is a masculine `-ος`, so the genitive can only be `θεοῦ`, and
+printing it spends space that the headword's own size ladder would otherwise use.
+What is kept is what cannot be derived: a third-declension stem
+(`σῶμα, ατος, τό`), a gender that contradicts the ending (`ὁδός, οῦ, ἡ`;
+`προφήτης, ου, ὁ`), or an impure alpha (`δόξα, ης, ἡ`). The decisive case is
+`γένος, ους, τό` — its nominative is indistinguishable from `λόγος` and its
+genitive is nothing like it.
+
+259 of the 729 noun cards keep the form and 470 print the headword alone
+(volume 1: 128/231, volume 2: 131/239). `scripts/greek_citation_form.py` decides;
+the genitive and article come from the vocabulary's own `printedEntry` where
+Mounce supplies one and from Dodson otherwise. The 80 nouns neither source
+covers print the headword alone — **never a derived genitive**.
 
 Latin prints the full citation form on the front — four principal parts for a
 verb, nominative-genitive-gender for a noun — because that is what has to be

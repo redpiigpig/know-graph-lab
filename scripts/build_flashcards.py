@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from functools import lru_cache
 import sys
 from pathlib import Path
 
@@ -37,7 +38,8 @@ from docx.shared import Mm, Pt, RGBColor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from flashcard_pos import greek_part_of_speech  # noqa: E402
+from flashcard_pos import greek_part_of_speech
+from greek_citation_form import card_headword  # noqa: E402
 
 # The Latin deck reads the identity and the part of speech the reader's own
 # builders already worked out, rather than deriving either a second time here.
@@ -73,6 +75,9 @@ MUTED = "8A8A8A"
 POS_PT = 12
 LESSON_PT = 10
 IMAGE_MM = 32
+# 卡寬 74.25 mm 扣掉兩側格線邊距，再留一點安全量；超過這個寬度 LibreOffice 會把
+# 字頭的最後一個字母折到第二行，把下面的課次擠掉。
+HEADWORD_MAX_MM = 54
 
 # The glosses run from two characters to twenty-seven, so the meaning line is
 # sized to fit the card rather than set at one size and allowed to overflow.
@@ -102,14 +107,34 @@ POS_LATIN = {
     "連": "連接詞", "代": "代名詞", "數": "數詞", "嘆": "感嘆詞", "不變": "不變詞",
 }
 
+def hebrew_part_of_speech(entry: dict, grammar: dict) -> str:
+    """名詞印到性別，重複的字形再印數與狀態：名詞‧陰性‧複數。
+
+    性別、數與狀態都讀 OSHB 標註（`scripts/hebrew_card_grammar.py` 產的檔），查
+    無標註就只印詞性 —— 希伯來文的性別看不出字尾：אֶ֫רֶץ、עִיר、יָד 沒有陰性
+    字尾卻是陰性，דֶּ֫רֶךְ、רוּחַ 兩性都用。標錯會被當事實背起來。
+    """
+
+    label = POS_ZH.get(entry["partOfSpeech"], entry["partOfSpeech"])
+    parts = [label]
+    if entry["partOfSpeech"] == "noun" and grammar.get("gender"):
+        parts.append(grammar["gender"])
+    for field in ("number", "state"):
+        if grammar.get(field):
+            parts.append(grammar[field])
+    return "‧".join(parts)
+
+
 DECKS: dict[str, dict] = {
     "hbo": {
         "title": "聖經希伯來文單字卡",
         "vocab": ROOT / "data/originalReaders/vocabulary/hebrew-1000.json",
         "glosses": CACHE / "original-readers/hebrew-full/hebrew-gloss-zh-reviewed-by-lemma.json",
         "images": CACHE / "flashcards/hebrew-card-images.json",
+        "grammar": CACHE / "flashcards/hebrew-card-grammar.json",
         "output": "hebrew-flashcards-1000.docx",
         "font": "Noto Serif Hebrew",
+        "fontFile": "C:/Windows/Fonts/NotoSerifHebrew-Regular.ttf",
         "rtl": True,
         "headword_pt": 54,
         "sources": [
@@ -203,6 +228,16 @@ def write(paragraph, text: str, font: str, size: float, *, color: str = INK,
     run.font.bold = bold
     run.font.color.rgb = RGBColor.from_string(color)
     set_rfonts(run, font)
+    # python-docx 只寫 w:sz，那管的是拉丁字。希伯來是複合語系，排版程式看的是
+    # w:szCs；不一起設，整副卡的字頭都會用樣式預設的 11 pt 印出來 —— 宣告 54 pt
+    # 也一樣，而且不會有任何錯誤訊息。
+    size_cs = OxmlElement("w:szCs")
+    size_cs.set(qn("w:val"), str(int(round(size * 2))))
+    run._element.get_or_add_rPr().append(size_cs)
+    if bold:
+        bold_cs = OxmlElement("w:bCs")
+        bold_cs.set(qn("w:val"), "1")
+        run._element.get_or_add_rPr().append(bold_cs)
     if rtl:
         r_pr = run._element.get_or_add_rPr()
         mark = OxmlElement("w:rtl")
@@ -270,10 +305,41 @@ def zh_size(gloss: str) -> float:
     return ZH_STEPS[-1][1]
 
 
+def consonants(text: str) -> int:
+    """希伯來字頭有幾個字母。母音點、達格什、重音各自都是一個碼點，數不得。"""
+
+    return sum(1 for ch in text if "א" <= ch <= "ת")
+
+
+@lru_cache(maxsize=None)
+def face(font_file: str):
+    """量字寬用的字型；量不到就回 None，改走子音數階梯。"""
+
+    try:
+        from PIL import ImageFont  # 只有希伯來牌組要量字寬，其餘四副不必為它裝 Pillow
+
+        return ImageFont.truetype(font_file, 100)
+    except Exception:
+        return None
+
+
 def headword_size(deck: dict, text: str) -> float:
     """Greek citation forms are long (ἄγγελος, -ου, ὁ); shrink so they fit."""
 
     base = deck["headword_pt"]
+    if deck.get("rtl"):
+        # 希伯來字頭的寬度跟字母數不成比例：מִשְׁפָּחָה 五個字母比 מַלְכוּת 寬得多。
+        # 所以直接量字寬，取「塞得進卡片」的字級 —— 量出來的值與 LibreOffice 排出
+        # 來的差 0.1 mm 以內。量不到字型檔才退回字母數階梯。
+        measured = face(deck.get("fontFile", ""))
+        if measured is not None:
+            em = measured.getlength(text) / 100
+            if em > 0:
+                fits = HEADWORD_MAX_MM / 25.4 * 72 / em
+                return min(base, round(fits * 2) / 2)
+        for limit, factor in ((5, 1.0), (7, 0.86), (9, 0.72), (11, 0.60), (99, 0.50)):
+            if consonants(text) <= limit:
+                return base * factor
     # Latin citation forms are longer than any other deck's -- four principal
     # parts run past forty characters -- so they get their own ladder and are
     # allowed to wrap rather than being shrunk to illegibility.
@@ -419,10 +485,12 @@ def load_cards(deck: dict) -> list[dict]:
             if not gloss:
                 raise SystemExit(f"{entry['lemma']} 缺繁中詞義")
             record = images.get(entry["lemma"])
+            part_of_speech = greek_part_of_speech(entry, gloss)
             cards.append({
-                "headword": entry.get("printedEntry") or entry["lemma"],
+                # 讀本印完整詞典形；卡片只在推不出來時才印，其餘只印詞頭。
+                "headword": card_headword(entry, part_of_speech),
                 "glossZh": gloss,
-                "pos": greek_part_of_speech(entry, gloss),
+                "pos": part_of_speech,
                 "lesson": entry["lesson"],
                 "picture": IMAGE_DIR / record["file"] if record else None,
             })
@@ -432,15 +500,18 @@ def load_cards(deck: dict) -> list[dict]:
         (item["strong"], item["pointed"]): item["glossZh"]
         for item in gloss_payload["items"]
     }
+    grammar = (json.loads(deck["grammar"].read_text(encoding="utf-8"))["cards"]
+               if "grammar" in deck else {})
     for entry in sorted(entries, key=lambda item: item["ordinal"]):
         key = (entry["strong"], entry["pointed"])
         if key not in glosses:
             raise SystemExit(f"{entry['pointed']} 缺繁中詞義")
-        record = images.get(f"{entry['strong']}|{entry['pointed']}")
+        card_key = f"{entry['strong']}|{entry['pointed']}"
+        record = images.get(card_key)
         cards.append({
             "headword": entry["pointed"],
             "glossZh": glosses[key],
-            "pos": POS_ZH.get(entry["partOfSpeech"], entry["partOfSpeech"]),
+            "pos": hebrew_part_of_speech(entry, grammar.get(card_key, {})),
             "lesson": entry["lesson"],
             "picture": IMAGE_DIR / record["file"] if record else None,
         })
