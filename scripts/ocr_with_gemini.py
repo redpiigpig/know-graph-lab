@@ -1136,12 +1136,30 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
             failed.append((b["title"], "empty file"))
             continue
 
-        # Pre-flight: PDFs > 50 MB always 400 INVALID_ARGUMENT from Gemini Files API.
-        # Skip Gemini entirely and route to Haiku image-batch path (no file-size cap).
-        GEMINI_MAX_BYTES = 50 * 1024 * 1024
-        if fsize > GEMINI_MAX_BYTES and _HAS_ANTHROPIC and _HAS_FITZ:
+        # 2026-08-27：原本的閘門是「PDF > 50 MB 一律被 Gemini Files API 回 400」，
+        # 實測不成立——254 MB／638 頁的《舊約神學辭典》上傳後 state=ACTIVE，
+        # generate_content 正確讀出封面與第 100 頁的希伯來字詞條目。當初那個
+        # 400 多半是把「中文檔名造成 UnicodeEncodeError」誤診成體積問題
+        # （此函式後段已改為先複製到 ASCII 暫存檔再上傳，該症狀不會再出現）。
+        #
+        # 真正的硬限制是**頁數**：Gemini 的 PDF 文件上限是 1000 頁。超過才轉 Haiku。
+        # 體積門檻放寬到 1 GB（Files API 規格為 2 GB，留餘裕）。
+        GEMINI_MAX_BYTES = 1024 * 1024 * 1024
+        GEMINI_MAX_PAGES = 1000
+        pages = -1
+        if _HAS_FITZ and src.suffix.lower() == ".pdf":
+            try:
+                import fitz as _fitz
+                with _fitz.open(src) as _d:
+                    pages = _d.page_count
+            except Exception:
+                pages = -1
+        too_big = fsize > GEMINI_MAX_BYTES or (pages > GEMINI_MAX_PAGES)
+        if too_big and _HAS_ANTHROPIC and _HAS_FITZ:
             title_short = (b["title"] or src.stem)[:40]
-            print(f"  [{i:3d}/{len(targets)}] OCR  {title_short}  ({fsize/1024/1024:.1f} MB > 50, → Haiku)…",
+            why = f"{pages} 頁 > {GEMINI_MAX_PAGES}" if pages > GEMINI_MAX_PAGES \
+                else f"{fsize/1024/1024:.0f} MB > {GEMINI_MAX_BYTES//1024//1024}"
+            print(f"  [{i:3d}/{len(targets)}] OCR  {title_short}  ({why}, → Haiku)…",
                   end="", flush=True)
             try:
                 if _haiku_lazy_client is None:
