@@ -149,9 +149,18 @@ def main() -> int:
             failures.append(f"未標完整／節錄：{unlabelled[:5]}")
         pending = [r for r in readings if r["chineseParallel"] == "pending"]
         if pending:
+            # Report what has actually been produced, not merely what the plan
+            # classified: "45 篇需自譯" stayed on the screen long after all
+            # forty-five had been translated.
+            store = load(CACHE / "readings-zh.json") or {"units": {}}
+            done = sum(1 for unit in store["units"].values() if unit.get("segments"))
             kinds = Counter(r.get("chineseSource", "none") for r in pending)
-            warnings.append(f"下冊 {len(pending)} 篇需自譯（既有中文檔："
-                            f"{'、'.join(f'{k} {n}' for k, n in kinds.items())}）")
+            warnings.append(
+                f"下冊 {len(pending)} 篇自譯：已完成 {done}，"
+                f"共 {sum(len(u['segments']) for u in store['units'].values())} 段"
+                f"（既有中文檔：{'、'.join(f'{k} {n}' for k, n in kinds.items())}）")
+            if done < len(pending):
+                warnings.append(f"　尚有 {len(pending) - done} 篇未譯完")
         aligned = len(readings) - len(pending)
         if aligned:
             warnings.append(f"下冊 {aligned} 篇以節號對齊既有中譯")

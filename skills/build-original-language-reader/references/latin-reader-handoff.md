@@ -14,7 +14,8 @@ relying on any of it.
 | 上冊 reading plan | `output/source-cache/original-readers/latin-full/scripture-plan.json` | 50 chapters, 1,514 verses, 24,288 words |
 | 上冊 Chinese | `.../sigao-zh.json` | all 50 chapters, 思高譯本 |
 | 下冊 reading plan | `.../church-plan.json` | 50 readings, 15 complete / 35 excerpt |
-| Chinese glosses | `.../gloss-zh.json` | 1,999 of 2,000 |
+| Chinese glosses | `.../gloss-zh.json` | 2,000 of 2,000 |
+| 下冊 Chinese | `.../readings-zh.json` | 45 of 45 readings, 792 segments, 自譯 |
 | Memory units | `.../memory-units.json`, `memory-selection-review.md` | 上冊 79/100, 下冊 100/100, unreviewed |
 | Contract | `references/latin-reader-contract.md` | frozen |
 | Gate | `scripts/verify_latin_reader.py` | hard checks pass |
@@ -66,7 +67,8 @@ checksums.
    constitution and says so in its own header), four are real translations that
    number nothing, and five are real translations that number their sections.
    Only those five can be set beside the Latin, matched on the section number.
-   The Chinese for the rest is being produced and is not finished.
+   All forty-five have now been translated — 792 segments — and every one is
+   labelled 自譯.
 
    Where the five are aligned, the join is section to section: the published
    Chinese for §12 sits beside the Latin paragraph that opens §12, and the
