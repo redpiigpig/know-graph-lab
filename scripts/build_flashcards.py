@@ -75,6 +75,18 @@ MUTED = "8A8A8A"
 POS_PT = 12
 LESSON_PT = 10
 IMAGE_MM = 32
+# 卡框：比照使用者桌面那副《家教單字卡.pdf》—— 量出來線寬 2.12 mm、緋紅
+# #ED0A3F、正反面都有框。框往內縮 FRAME_INSET_MM，裁歪一兩毫米只會讓白邊不
+# 等寬，不會把框裁掉；框畫在裁切線上就會缺一邊、還帶進隔壁卡的框。
+FRAME_COLOR = "ED0A3F"
+FRAME_INSET_MM = 3.0
+FRAME_EIGHTHS = 48          # w:sz 以八分之一點計，48 ＝ 6 pt ＝ 2.1 mm
+# 框線是往外畫的：宣告的寬高是框內緣，成品外緣還要加上兩條框線。
+FRAME_LINE_MM = FRAME_EIGHTHS / 8 / 72 * 25.4
+# 卡框連同格線邊距要留得比卡片矮一點：擠滿的話 EXACTLY 的列高會被撐開，
+# 第二排整排往下移，框就壓過裁切線。留 2 mm 也讓垂直置中重新生效。
+FRAME_SLACK_MM = 2.0
+FRAME_PAD_DXA = 110         # 框內再留 2 mm，字不要貼著框
 # 卡寬 74.25 mm 扣掉兩側格線邊距，再留一點安全量；超過這個寬度 LibreOffice 會把
 # 字頭的最後一個字母折到第二行，把下面的課次擠掉。
 HEADWORD_MAX_MM = 54
@@ -274,6 +286,17 @@ def new_grid(document: Document):
     table = document.add_table(rows=ROWS, cols=COLS)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
+    # 外層格線也要鎖死寬度。裡面放了巢狀表格（卡框）之後，沒鎖的欄寬會被重算，
+    # 八張卡整排縮成 61 mm 一張並往右擠出頁面。
+    layout = OxmlElement("w:tblLayout")
+    layout.set(qn("w:type"), "fixed")
+    table._tbl.tblPr.append(layout)
+    table_width = OxmlElement("w:tblW")
+    table_width.set(qn("w:w"), str(int(Mm(CARD_W_MM * COLS).twips)))
+    table_width.set(qn("w:type"), "dxa")
+    table._tbl.tblPr.append(table_width)
+    for grid_col in table._tbl.findall(qn("w:tblGrid") + "/" + qn("w:gridCol")):
+        grid_col.set(qn("w:w"), str(int(Mm(CARD_W_MM).twips)))
     strip_borders(table)
     for row in table.rows:
         # One height declaration only.  Setting row.height and then appending a
@@ -283,8 +306,10 @@ def new_grid(document: Document):
         for cell in row.cells:
             cell.width = Mm(CARD_W_MM)
             cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+            # 外層格子不留邊距：內縮由卡框自己的尺寸決定，框才置得中；靠邊距擠
+            # 會把列撐高，第二排整排下移、框壓過裁切線。
             margins = OxmlElement("w:tcMar")
-            for edge, value in (("top", 170), ("start", 140), ("bottom", 170), ("end", 140)):
+            for edge, value in (("top", 0), ("start", 0), ("bottom", 0), ("end", 0)):
                 node = OxmlElement(f"w:{edge}")
                 node.set(qn("w:w"), str(value))
                 node.set(qn("w:type"), "dxa")
@@ -296,6 +321,63 @@ def new_grid(document: Document):
 def clear(cell) -> None:
     first = cell.paragraphs[0]._p
     first.getparent().remove(first)
+
+
+def framed(cell):
+    """在卡片格內再放一張單格表當卡框，回傳要填內容的那一格。
+
+    表格框線畫在格子邊上，所以框要用「內縮一圈的巢狀表格」做，不能直接給外層
+    格子加邊框 —— 那條線正好落在裁切線上。
+    """
+
+    clear(cell)
+    inner = cell.add_table(rows=1, cols=1)
+    inner.autofit = False
+    inner.alignment = WD_TABLE_ALIGNMENT.CENTER
+    width_dxa = str(int(Mm(CARD_W_MM - 2 * (FRAME_INSET_MM + FRAME_LINE_MM)).twips))
+    # 巢狀表格不給明確寬度就會照內容撐開，把框撐出格子外、還把整個版面推歪。
+    layout = OxmlElement("w:tblLayout")
+    layout.set(qn("w:type"), "fixed")
+    inner._tbl.tblPr.append(layout)
+    table_width = OxmlElement("w:tblW")
+    table_width.set(qn("w:w"), width_dxa)
+    table_width.set(qn("w:type"), "dxa")
+    inner._tbl.tblPr.append(table_width)
+    for grid_col in inner._tbl.findall(qn("w:tblGrid") + "/" + qn("w:gridCol")):
+        grid_col.set(qn("w:w"), width_dxa)
+    borders = OxmlElement("w:tblBorders")
+    for edge in ("top", "left", "bottom", "right"):
+        node = OxmlElement(f"w:{edge}")
+        node.set(qn("w:val"), "single")
+        node.set(qn("w:sz"), str(FRAME_EIGHTHS))
+        node.set(qn("w:space"), "0")
+        node.set(qn("w:color"), FRAME_COLOR)
+        borders.append(node)
+    inner._tbl.tblPr.append(borders)
+
+    row = inner.rows[0]
+    row.height = Mm(CARD_H_MM - 2 * (FRAME_INSET_MM + FRAME_LINE_MM) - FRAME_SLACK_MM)
+    row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
+    target = inner.cell(0, 0)
+    target.width = Mm(CARD_W_MM - 2 * (FRAME_INSET_MM + FRAME_LINE_MM))
+    target.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+    margins = OxmlElement("w:tcMar")
+    for edge in ("top", "start", "bottom", "end"):
+        node = OxmlElement(f"w:{edge}")
+        node.set(qn("w:w"), str(FRAME_PAD_DXA))
+        node.set(qn("w:type"), "dxa")
+        margins.append(node)
+    target._tc.get_or_add_tcPr().append(margins)
+
+    # Word 規定表格後面一定要有段落，那個段落會佔高度並把框頂出格子；壓到 1 pt。
+    tail = cell.paragraphs[-1]
+    tail.paragraph_format.space_before = Pt(0)
+    tail.paragraph_format.space_after = Pt(0)
+    tail.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
+    tail.paragraph_format.line_spacing = Pt(1)
+    tail.add_run().font.size = Pt(1)
+    clear(target)
+    return target
 
 
 def zh_size(gloss: str) -> float:
@@ -357,7 +439,7 @@ def headword_size(deck: dict, text: str) -> float:
 
 
 def fill_front(cell, card: dict, deck: dict) -> None:
-    clear(cell)
+    cell = framed(cell)
     paragraph = cell.add_paragraph()
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph.paragraph_format.space_after = Pt(0)
@@ -371,7 +453,7 @@ def fill_front(cell, card: dict, deck: dict) -> None:
 
 
 def fill_back(cell, card: dict, picture: Path | None) -> None:
-    clear(cell)
+    cell = framed(cell)
     if picture:
         paragraph = cell.add_paragraph()
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -434,7 +516,8 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
         (f"{total} 張・{sheets} 組雙面・每頁 8 張", 13, MUTED, 22),
         ("列印：A4 橫式，雙面列印選「沿長邊翻頁」，縮放設為 100%（不要選「符合頁面大小」）。", 11, INK, 6),
         (f"裁切：不印裁切線。自紙張上緣量，橫向切在 {cuts_h} mm；自左緣量，縱向切在 {cuts_v} mm。"
-         f"成品每張 {CARD_W_MM:.2f}×{CARD_H_MM:.0f} mm。", 11, INK, 6),
+         f"成品每張 {CARD_W_MM:.2f}×{CARD_H_MM:.0f} mm。"
+         f"卡框比裁切線內縮 {FRAME_INSET_MM:.0f} mm，裁歪一兩毫米只會讓白邊不等寬，不會切到框。", 11, INK, 6),
         ("正面：原文與課次。背面：繁體中文詞義、詞性與課次。", 11, INK, 6),
         (f"插圖：{with_picture} 張有圖，其餘留白。多義詞取最常見的義項；找不到誠實對應的圖就不放，"
          "不以近似圖充數。", 11, INK, 22),
