@@ -690,7 +690,7 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
 - 預設 **Gemini → NVIDIA → Haiku**（user 2026-06-04 統一政策「gemini 優先，然後 nvidia，最後 haiku」；見本檔頂 line 6 引擎政策 header）。
   - **Gemini**（主）4 keys，**每日太平洋午夜重置 ≈ 台灣 15:00**；撞牆退 NVIDIA。
   - **NVIDIA**（2nd）deepseek-v4-flash，**4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**。
-    `NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash-0731"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
+    `NVIDIA_MODELS=["nvidia/nemotron-3-super-120b-a12b"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
     qwen3-next 雖快但壓段落、毀 marker，**勿用**）。⚠️ **單帳號免費為「一次性/月 credit」非每日**，4 帳號約
     40 分鐘全耗盡，過夜不一定回血。
   - **Haiku**（3rd 救急）走 Claude Max OAuth，**前兩池都乾才動**；batch 久了 Anthropic 帳號也會 429

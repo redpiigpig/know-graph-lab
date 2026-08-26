@@ -98,7 +98,7 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine auto --resume
 
 ## 引擎選擇
 
-**預設一律 `--engine auto`** = 統一三層 fallback：**Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋節流）→ Haiku 救急**。其餘 `--engine` 選項只在特殊狀況才手動指定：
+**預設一律 `--engine auto`** = 統一三層 fallback：**Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `nvidia/nemotron-3-super-120b-a12b`，4 把 key 輪流＋節流）→ Haiku 救急**。其餘 `--engine` 選項只在特殊狀況才手動指定：
 
 | 引擎 | 何時用 | 注意 |
 |---|---|---|

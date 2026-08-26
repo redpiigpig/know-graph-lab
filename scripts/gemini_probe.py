@@ -42,6 +42,21 @@ def main() -> int:
     if not keys:
         print("no gemini key", file=sys.stderr)
         return 1
+    # --slot N：只探第 N 把 key（1-based，對齊 KGL_GEMINI_SLOT）。
+    # 免費層日配額是「每 key 每模型」各自獨立，所以「某把 key 還有額度」不等於
+    # 「我這條 lane 綁的那把還有額度」。掃全部 key 的預設行為留給 fleet_keeper
+    # （它只想知道「還有沒有任何一把能跑 OCR」），逐 lane 的判斷必須指定 slot。
+    slot = 0
+    if "--slot" in sys.argv:
+        try:
+            slot = int(sys.argv[sys.argv.index("--slot") + 1])
+        except (IndexError, ValueError):
+            slot = 0
+    if slot > 0:
+        if slot > len(keys):
+            print(f"slot {slot} out of range (have {len(keys)} keys)", file=sys.stderr)
+            return 1
+        keys = [keys[slot - 1]]
     seen = set()
     for model in MODELS:
         if model in seen:

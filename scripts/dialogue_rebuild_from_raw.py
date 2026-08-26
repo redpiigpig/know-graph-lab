@@ -49,7 +49,7 @@ def gemini_keys():
                     if p and p not in seen: seen.add(p); out.append(p)
     return out
 GKEYS = gemini_keys(); NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
-GMODEL = 'gemini-2.5-flash'; NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'deepseek-ai/deepseek-v4-flash-0731'
+GMODEL = 'gemini-2.5-flash'; NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'nvidia/nemotron-3-super-120b-a12b'
 HAIKU = '--haiku' in sys.argv; DRY = '--dry' in sys.argv
 DAY_ARGS = [a for a in sys.argv[1:] if re.match(r'\d{4}-\d{2}-\d{2}$', a)]
 print(f'gemini {len(GKEYS)} | nvidia {len(NKEYS)} | haiku {"ON" if HAIKU else "off"}', flush=True)

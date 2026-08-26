@@ -66,7 +66,7 @@ GKEYS = _gemini_keys()
 GMODEL = 'gemini-2.5-flash'
 NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY') and E[k]]
 NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'
-NMODELS = ['qwen/qwen3-next-80b-a3b-instruct', 'deepseek-ai/deepseek-v4-flash-0731']
+NMODELS = ['qwen/qwen3-next-80b-a3b-instruct', 'nvidia/nemotron-3-super-120b-a12b']
 ENGINE = os.environ.get('APOC_ENGINE', 'nvidia').lower()   # nvidia | gemini | haiku
 PREFER_NVIDIA = ENGINE != 'gemini'
 _lock = threading.Lock()

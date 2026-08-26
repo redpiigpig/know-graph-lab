@@ -5,7 +5,7 @@ description: 希臘羅馬大藏經（/hellenika）的體例與結構維護 — �
 
 > 🏛️ **本 skill 與《基督教大藏經》無關。** `/dazangjing` 走 [[scripture-canon]]，體例是「時代 × 十藏 × 正藏／外藏」，其神學根據是「隱密的上帝」與社會學邊界。本藏經體例是「兩藏 × 部 × 卷」，其編纂立場見下 §1，**兩者互不從屬、互不套用**。唯一的交接點是重疊條目的互見標記（§6）。
 
-> ⚙️ **引擎政策**：LLM 工作一律 Gemini（主，4 keys 輪流）→ NVIDIA（`deepseek-ai/deepseek-v4-flash-0731`）→ Haiku（救急）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策**：LLM 工作一律 Gemini（主，4 keys 輪流）→ NVIDIA（`nvidia/nemotron-3-super-120b-a12b`）→ Haiku（救急）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 截圖任一邊 >2000px 會炸 session。
 

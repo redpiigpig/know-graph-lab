@@ -53,7 +53,7 @@ def gemini_keys():
 GKEYS = gemini_keys()
 NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
 GMODEL = 'gemini-2.5-flash'
-NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'deepseek-ai/deepseek-v4-flash-0731'
+NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'nvidia/nemotron-3-super-120b-a12b'
 
 DRY = '--dry' in sys.argv
 HAIKU = '--haiku' in sys.argv

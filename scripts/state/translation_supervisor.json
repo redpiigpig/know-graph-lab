@@ -1,21 +1,24 @@
 {
   "version": 1,
   "pid": 9504,
-  "status": "running-online-review",
-  "updated_at": "2026-08-26T07:45:24+08:00",
+  "status": "batch-complete",
+  "updated_at": "2026-08-26T23:58:50+08:00",
   "policy": "deterministic-supervisor + bounded Ollama drafts + online review gate",
-  "batch_paragraphs": 20,
-  "mode": "review",
-  "idle_seconds": 4,
-  "idle_required": 0,
-  "on_ac_power": true,
-  "ollama_ready": false,
-  "review_engine_up": true,
+  "return_code": 0,
+  "translated": 0,
+  "duration": "31.8s",
+  "completed_job": "sbe",
+  "next_job_index": 1,
   "local_drafts_waiting_review": 1,
   "drafts_by_job": {
     "panikkar": 0,
     "sbe": 1
   },
-  "selected_job": "sbe",
-  "next_job_index": 0
+  "mode": "review",
+  "idle_seconds": 0,
+  "idle_required": 0,
+  "on_ac_power": true,
+  "ollama_ready": true,
+  "review_engine_up": true,
+  "selected_job": "sbe"
 }

@@ -32,7 +32,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE_DIR = ROOT / "scripts" / "state" / "dadaodao_translate"
 TEXT_PREFIX = "dadaodao-fulltext/"
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash-0731"
+NVIDIA_MODEL = "nvidia/nemotron-3-super-120b-a12b"
 GEMINI_MODEL = "gemini-2.5-flash"
 SONNET_MODEL = "claude-sonnet-4-6"
 

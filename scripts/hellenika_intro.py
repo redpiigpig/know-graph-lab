@@ -69,7 +69,7 @@ NVIDIA_KEYS = [v for k, v in sorted(os.environ.items())
 GEMINI_MODEL = os.environ.get('GEMINI_MODEL', 'gemini-flash-latest')
 NVIDIA_URL = os.environ.get('NVIDIA_URL', 'https://integrate.api.nvidia.com/v1')
 # 2026-08-19：舊名 deepseek-ai/deepseek-v4-flash（無 -0731）已下架回 HTTP 410
-NVIDIA_MODEL = os.environ.get('NVIDIA_MODEL', 'deepseek-ai/deepseek-v4-flash-0731')
+NVIDIA_MODEL = os.environ.get('NVIDIA_MODEL', 'nvidia/nemotron-3-super-120b-a12b')
 
 _gi = 0
 _ni = 0

@@ -108,28 +108,33 @@ GEMINI_PROBE = ROOT / "scripts" / "gemini_probe.py"
 # Sonnet 額度撐不住長跑，掛整晚照樣被 429 打死；同一個帳號的 Haiku 卻能連續工作一整天
 # （2026-08-25 實測 16 小時 +3,694 段）。所以 Gemini 乾掉就改用 Haiku（user 2026-08-26）。
 # 探測結果快取 15 分鐘，免得每次 spawn 都多打一次 API。
-_gemini_probe_cache = {"at": 0.0, "alive": True}
+# 逐 slot 快取：免費層日配額是「每 key 每模型」各自獨立，所以要問的是「我這條 lane
+# 綁的那把 key 還有沒有額度」，不是「有沒有任何一把還活著」。2026-08-26 就是栽在這裡：
+# 探針說 ALIVE（別把 key 有額度），gemini-1 卻在自己那把上一路 429、翻不動也不降級。
+_gemini_probe_cache: dict[int, dict] = {}
 
 
-def gemini_alive(ttl: float = 900.0) -> bool:
+def gemini_alive(slot: int, ttl: float = 900.0) -> bool:
     now = time.time()
-    if now - _gemini_probe_cache["at"] < ttl:
-        return _gemini_probe_cache["alive"]
+    hit = _gemini_probe_cache.get(slot)
+    if hit and now - hit["at"] < ttl:
+        return hit["alive"]
     try:
         rc = subprocess.run(
-            [sys.executable, "-X", "utf8", str(GEMINI_PROBE)],
+            [sys.executable, "-X", "utf8", str(GEMINI_PROBE), "--slot", str(slot)],
             cwd=ROOT, capture_output=True, timeout=180).returncode
         alive = rc == 0
     except Exception:  # noqa: BLE001  探測本身失敗不該讓 lane 停擺
         alive = False
-    _gemini_probe_cache.update(at=now, alive=alive)
+    _gemini_probe_cache[slot] = {"at": now, "alive": alive}
     return alive
 
 
 def engine_for(lane: dict) -> str:
-    """Gemini 初譯 lane 在額度乾掉時降級到 Haiku。審查 lane 與 NVIDIA lane 不動。"""
+    """Gemini 初譯 lane 在自己那把 key 額度乾掉時降級到 Haiku。
+    審查 lane 與 NVIDIA lane 不動。"""
     if (lane["kind"] == "translate" and lane["provider"] == "gemini"
-            and not gemini_alive()):
+            and not gemini_alive(lane["slot"])):
         return "haiku"
     return lane["engine"]
 

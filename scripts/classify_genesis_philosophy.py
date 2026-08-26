@@ -192,7 +192,7 @@ _g_idx = 0
 _n_idx = 0
 
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash-0731"
+NVIDIA_MODEL = "nvidia/nemotron-3-super-120b-a12b"
 
 SYSTEM = (
     "你是一位嚴謹的哲學文獻分類助理。使用者（一位哲學創始者）長期與 AI 對話，"

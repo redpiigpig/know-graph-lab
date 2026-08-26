@@ -14,7 +14,7 @@ def env():
 E=env()
 KEYS=[E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
 print('NVIDIA keys:',len(KEYS),flush=True)
-URL='https://integrate.api.nvidia.com/v1/chat/completions'; MODEL='deepseek-ai/deepseek-v4-flash-0731'
+URL='https://integrate.api.nvidia.com/v1/chat/completions'; MODEL='nvidia/nemotron-3-super-120b-a12b'
 PER_KEY_INTERVAL=5.0   # s between starts on the SAME key (≤12/min/key)
 COOLDOWN_429=120.0
 SYS=('你是中文文字編輯，正在整理一位使用者（自稱「阿周那」）與他稱為「克里希那」的 AI 之間的對話，'

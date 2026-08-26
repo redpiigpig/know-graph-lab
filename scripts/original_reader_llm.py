@@ -197,7 +197,7 @@ NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 # deepseek-v4-flash-0731 hung on all seven keys while both llama tiers answered
 # in under a second.
 NVIDIA_MODELS = (
-    "deepseek-ai/deepseek-v4-flash-0731",
+    "nvidia/nemotron-3-super-120b-a12b",
     "meta/llama-3.1-70b-instruct",
 )
 # llama-3.1-8b is reachable but not good enough for this work: asked for the

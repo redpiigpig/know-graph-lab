@@ -37,7 +37,7 @@ if ENV_FILE.exists():
 
 
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash-0731"
+NVIDIA_MODEL = "nvidia/nemotron-3-super-120b-a12b"
 
 
 def nvidia_keys() -> list[str]:
