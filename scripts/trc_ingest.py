@@ -216,9 +216,10 @@ def register(paths: list[Path], category: str, subcategory: str | None) -> int:
     url, key = os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"]
     h = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json",
          "Prefer": "return=representation,resolution=ignore-duplicates"}
-    # ebooks_file_type_check 只收這幾種；doc/docx/chm 目前 parse pipeline 也不支援，
-    # 檔案照樣留在 Drive（正本），但先不建 ebooks 列，免得躺著永遠不被解析。
-    SUPPORTED = {"pdf", "epub", "mobi", "azw3", "azw"}
+    # 2026-08-26 放寬 ebooks_file_type_check 後 Office 格式也能登錄。
+    # parse_worker 對非 pdf/epub 是優雅跳過（skip: {file_type}），不會弄壞排程；
+    # 內文改由 trc_parse_office.py 另外解析。
+    SUPPORTED = {"pdf", "epub", "mobi", "azw3", "azw", "docx", "doc", "txt", "rtf", "chm"}
     payload, skipped = [], []
     for p in paths:
         if not p.exists():
