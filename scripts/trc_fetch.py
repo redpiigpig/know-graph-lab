@@ -105,11 +105,39 @@ def safe_name(path: str, author: str = "") -> str:
     return name[:180] + ext if len(name) > 190 else name
 
 
-def fetch_one(path: str, dest_dir: Path, author: str = "", dry: bool = False) -> Path | None:
+LEDGER = Path("c:/tmp/trc_downloaded.json")
+
+
+def load_ledger() -> dict:
+    """已下載帳本：TRC 路徑 → {name, size}。
+
+    只看目的資料夾判斷「已下載」是不夠的——檔案一旦入庫搬進 Drive 就從
+    dest 消失，整批會被重抓，白白耗掉站方頻寬。帳本以站內路徑為鍵，
+    檔案搬到哪都不影響判定。
+    """
+    if LEDGER.exists():
+        try:
+            return json.loads(LEDGER.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001 — 帳本壞掉不該擋下載，重建即可
+            return {}
+    return {}
+
+
+def save_ledger(led: dict) -> None:
+    LEDGER.write_text(json.dumps(led, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def fetch_one(path: str, dest_dir: Path, author: str = "", dry: bool = False,
+              led: dict | None = None) -> Path | None:
+    if led is not None and path in led:
+        print(f"  ✓ 帳本已記錄，跳過：{led[path]['name'][:56]}")
+        return None
     url, size = raw_url(path)
     out = dest_dir / safe_name(path, author)
     if out.exists() and out.stat().st_size == size and size:
         print(f"  ✓ 已存在，跳過：{out.name}")
+        if led is not None:
+            led[path] = {"name": out.name, "size": size}
         return out
     print(f"  ↓ {out.name}  ({size / 1024 / 1024:.1f} MB)")
     if dry:
@@ -131,6 +159,8 @@ def fetch_one(path: str, dest_dir: Path, author: str = "", dry: bool = False) ->
         tmp.unlink(missing_ok=True)
         raise RuntimeError(f"體積不符：拿到 {got} 應為 {size}")
     tmp.replace(out)
+    if led is not None:
+        led[path] = {"name": out.name, "size": got}
     print(f"    完成 {got / 1024 / 1024:.1f} MB → {out}")
     return out
 
@@ -161,19 +191,30 @@ def main() -> int:
         todo = todo[:a.limit]
 
     keep_awake(True)
+    led = load_ledger()
+    todo = [it for it in todo if it["path"] not in led]
+    print(f"帳本已有 {len(led)} 筆，本輪待抓 {len(todo)} 檔\n")
+
     ok = fail = 0
-    for i, it in enumerate(todo, 1):
-        print(f"[{i}/{len(todo)}] {it['path']}")
-        try:
-            fetch_one(it["path"], dest, it.get("author", ""), a.dry_run)
-            ok += 1
-        except Exception as e:  # noqa: BLE001 — 單檔失敗不中斷整批
-            print(f"  ⚠ 失敗：{e}")
-            fail += 1
-        if i < len(todo) and not a.dry_run:
-            time.sleep(a.delay)     # 一次一個檔、留間隔——不要拿掉
-    keep_awake(False)
-    print(f"\n成功 {ok}，失敗 {fail}")
+    try:
+        for i, it in enumerate(todo, 1):
+            print(f"[{i}/{len(todo)}] {it['path']}")
+            try:
+                fetch_one(it["path"], dest, it.get("author", ""), a.dry_run, led)
+                ok += 1
+                if i % 10 == 0:
+                    save_ledger(led)      # 中途被砍也不會整批重抓
+            except Exception as e:  # noqa: BLE001 — 單檔失敗不中斷整批
+                print(f"  ⚠ 失敗：{e}")
+                fail += 1
+            if i < len(todo) and not a.dry_run:
+                time.sleep(a.delay)   # 一次一個檔、留間隔——不要拿掉
+    finally:
+        # 被外力終止時（先前整夜那輪就這樣沒了）帳本一樣要落盤
+        if not a.dry_run:
+            save_ledger(led)
+        keep_awake(False)
+    print(f"\n成功 {ok}，失敗 {fail}（帳本共 {len(led)} 筆）")
     return 0
 
 
