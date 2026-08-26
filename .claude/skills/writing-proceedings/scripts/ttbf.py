@@ -129,7 +129,9 @@ ROLE = {
     "sign": lambda: (make_pPr(jc="right", line=380, left=440, hangChars=200,
                               hang=440, rPr=make_rPr(F_BODY, 22)),
                      make_rPr(F_BODY, 22)),
-    "figure": lambda: (make_pPr(jc="center", line=360, afterL=30, after=108,
+    # 行高一定要 auto：exact 會把行內圖片裁成一條（第三屆 29 張圖全中招）
+    "figure": lambda: (make_pPr(jc="center", line=240, rule="auto",
+                                afterL=30, after=108,
                                 rPr=make_rPr(F_BODY, 20)),
                        make_rPr(F_BODY, 20)),
     "cell": lambda: (make_pPr(line=300, rPr=make_rPr(F_BODY, 20)),
@@ -171,10 +173,10 @@ def classify(text, prev_role, in_refs, has_drawing, in_table):
     t = text.strip()
     if in_table:
         return "cell"
+    if has_drawing and len(t) < 60:   # 要在 not t 之前判：純圖段落沒有文字
+        return "figure"
     if not t:
         return "body"
-    if has_drawing and len(t) < 60:
-        return "figure"
     plain = re.sub(r"[\s：:]", "", t)
     if re.fullmatch(FRONT + r"[：:]?", plain, re.I):
         return "abshead" if re.match(r"^(摘要|Abstract)$", plain, re.I) else "keyword"

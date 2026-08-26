@@ -432,6 +432,7 @@ def process(pp, idx):
     strip_lead_space(body)
     keep_tables_whole(body)
     refs_on_new_page(body)
+    # 圖與標題不分家、摘要之後換頁，見 tblcap.py／figfix.py 的同名函式
     blank_line_between_sections(body)
 
     # 3) 加上新的標題區
