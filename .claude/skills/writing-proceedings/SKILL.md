@@ -37,7 +37,7 @@ description: 研討會／論壇「會議論文集」排版成書的完整 pipeli
 
 ---
 
-## §C 二十九條血淚教訓（每一條都真的踩過）
+## §C 三十三條血淚教訓（每一條都真的踩過）
 
 ### 1. 議程是唯一權威；Drive 檔名經常是舊的
 第三屆的例子：議程場次四之二是「寧瑪 → 薩迦 → 格魯」，但 Drive 上薩迦仍叫 `4.2.1`、
@@ -236,7 +236,29 @@ Word 讀檔時彈修復對話框，即使 `DisplayAlerts=0` 也會讓 COM 呼叫
 → 交件前用 `refaudit`／`reffix.py` 逐篇比對書目區的字級、字型、粗體、行距，
    一律 `restyle_para(p, "ref", keep_bold=False)` 重套。
 
-### 29. Google Docs 匯出的三種殘留
+### 29. 文繞圖會把圖說切成左右兩半
+第三屆 2.1 有三張圖是 `wp:anchor` ＋ `wrapSquare`，正文繞著圖排，
+「註：資料來源…」被拆成圖左圖右兩段，讀起來像亂碼。
+→ 一律轉成隨文 `wp:inline`：把 anchor 的 extent／effectExtent／docPr／
+   cNvGraphicFramePr／graphic 搬進新的 inline，丟掉 positionH／positionV／wrap*。
+→ 轉完版面就回到「圖說在上、圖置中、資料來源在下」。
+
+### 30. 圖比版心寬要等比例縮，兩處尺寸都得改
+第三屆有 21 張圖宣告 17.4 cm，版心只有 14.2 cm，右邊直接跑出去。
+→ `wp:extent` 與 `pic` 裡的 `a:ext` **兩處都要縮**，`effectExtent` 也跟著縮，
+   否則 Word 仍會用舊尺寸留白。往左移救不了（左邊已貼齊版心）。
+
+### 31. 「補了 N 個空白背頁」不等於「有 N 張空白頁」
+`force_recto()` 每輪只補一頁再重算，補一頁會把後面整個推移，
+先前補的可能因此被吸收——第三屆 18 次插入最後只留下 9 張空白背頁。
+→ 交件前跑 `rectoaudit.py`：逐篇列出起始頁的奇偶、前一頁是不是空白、
+   以及那張空白**是否必要**（前一篇是否真的收在奇數頁）。看它，不要看插入次數。
+
+### 32. 中英雙摘要：英文那份也要自己一頁
+2.1 的英文摘要前面還有英文題名／署名／職稱三行，換頁要下在**那三行之前**，
+不是下在 `Abstract` 上。全英文的篇（附1）Abstract 就在篇首，加了會多一張空白頁。
+
+### 33. Google Docs 匯出的三種殘留
 - **`w:sdt` 包住 run**：python-docx 的 `.text` 讀不到 → 一律用 lxml 走原生 XML。
 - **頁碼變成內文段落**（「第 N 頁」×32）→ 用 `strip` regex 濾掉；**濾掉後要把被它切斷的句子接回**。
 - **中文字之間的斷行空格**（「梳 理其教育體制」×300 餘處）→ `despace()`。
@@ -296,6 +318,10 @@ Word 讀檔時彈修復對話框，即使 `DisplayAlerts=0` 也會讓 COM 呼叫
 | `reffix.py` | 參考文獻區一律重套 ref 版式，不留粗體 |
 | `absaudit.py` / `absfix.py` | 查／清摘要正文的粗體（標題與關鍵詞那行不動） |
 | `overflow.py` | 掃 PDF 找超出版心的內容（門檻設 0.5 cm，以下是標點懸掛的正常值） |
+| `unwrap.py` | 文繞圖（wp:anchor + wrap*）一律轉成隨文 wp:inline |
+| `imgfit.py` | 比版心寬的圖等比例縮（wp:extent 與 a:ext 兩處） |
+| `enabs.py` | 中英雙摘要時，英文摘要另起一頁 |
+| `rectoaudit.py` | **交件前必跑**：逐篇驗奇數頁起排，以及每張空白背頁是否必要 |
 
 執行順序（**front 一定要在 build 之後、assemble 之前**）：
 

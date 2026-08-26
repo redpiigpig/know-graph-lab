@@ -299,8 +299,7 @@ def agenda():
         else:
             role = "h2" if len(txt) <= 30 and txt else "body"
         restyle_para(p, role)
-    for t in body.iter(Q("tbl")):        # 大會原檔的議程表比版心寬，縮到版心
-        build.fit_table_width(t)
+    # 議程表維持大會原檔的欄寬，不縮到版心（大會決定）
     for s in body.findall(Q("sectPr")):
         body.remove(s)
     # 原議程表格首列已有「議 程 表」，不再另加標題以免重複

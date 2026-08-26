@@ -98,7 +98,9 @@ def force_recto(doc, seq, sec_of, limit=40):
                 bad = idx
                 break
         if bad is None:
-            print("   奇數頁起排：補了 %d 個空白背頁" % added)
+            # added 是「插入次數」，不等於最後留下的空白頁數：補一頁會把後面
+            # 整個推移，先前補的可能因此被吸收。實際空白頁數以 rectoaudit 為準。
+            print("   奇數頁起排：調整 %d 次，全部落在奇數頁" % added)
             return added
         prev = doc.Sections(bad - 1).Range
         pos = prev.End - 1
