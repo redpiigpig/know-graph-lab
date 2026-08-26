@@ -1,12 +1,9 @@
 {
-  "status": "running",
-  "updated_at": "2026-08-25T23:57:30+00:00",
-  "pid": 22216,
-  "input": "c:\\tmp\\trc_records_fathers.json",
-  "ledger": "data\\dazangjing\\source-catalog\\classified-records-trc.jsonl",
-  "processed_this_run": 4,
-  "skipped_this_run": 0,
-  "total_done": 47,
-  "last_engine": "gemini",
-  "last_title": "Clement of Alexandria"
+  "status": "idle",
+  "updated_at": "2026-08-26T12:46:16+00:00",
+  "pid": 28332,
+  "processed_this_run": 16,
+  "skipped_this_run": 3,
+  "total_done": 130,
+  "ledger": "data\\dazangjing\\source-catalog\\classified-records-trc.jsonl"
 }
