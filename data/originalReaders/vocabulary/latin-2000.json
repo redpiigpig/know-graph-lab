@@ -6898,8 +6898,8 @@
    "volume": "上冊",
    "lesson": 23,
    "ordinal": 459,
-   "glossZh": "講經台、聖壇前誦讀台",
-   "glossEngine": "claude-haiku-4-5-20251001"
+   "glossZh": "講道壇、聖經台",
+   "glossEngine": "nvidia:meta/llama-3.1-70b-instruct"
   },
   {
    "headword": "aptus",

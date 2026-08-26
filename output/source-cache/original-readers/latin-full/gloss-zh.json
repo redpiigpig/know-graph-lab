@@ -8132,7 +8132,7 @@
   "engine": "nvidia:meta/llama-3.1-70b-instruct"
  },
  "ambō": {
-  "zh": "講經台、聖壇前誦讀台",
-  "engine": "claude-haiku-4-5-20251001"
+  "zh": "講道壇、聖經台",
+  "engine": "nvidia:meta/llama-3.1-70b-instruct"
  }
 }
