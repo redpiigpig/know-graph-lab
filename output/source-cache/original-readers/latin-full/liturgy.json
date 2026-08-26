@@ -134,8 +134,6 @@
  ],
  "ordoMissae": {
   "lines": [
-   "Further Readings",
-   "1. The Ordinary of the Mass",
    "V. In nomine Patris, et Filii, et Spiritus Sancti.",
    "R. Amen.",
    "V. Gratia Domini nostri Iesu Christi, et caritas Dei, et communicatio Sancti Spiritus sit cum omnibus vobis.",
@@ -268,35 +266,10 @@
    "V. Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus.",
    "R. Amen.",
    "V. Ite, missa est.",
-   "R. Deo gratias.",
-   "2. The Exsultet (Ambrose, d. 397)",
-   "Sabbato Sancto: Praeconiumn Paschale",
-   "Exsultet jam angelica turba caelorum: exsultent divina mysteria:",
-   "et pro tanti Regis victoria tuba insonet salutaris. Gaudeat et tellus",
-   "tantis irradiata fulgoribus: et aeterni Regis splendore illustrata, totius",
-   "orbis se sentiat amississe caliginern. Laetetur et mater Ecclesia, tanti",
-   "luminis adornata fulgoribus: et magnis populorum vocibus haec",
-   "aula resultet. Quapropter astantes vos, fratres carissimi, ad tam",
-   "miram hujus sancti luminis claritatem, una mecum, quaeso, Dei",
-   "omnipotentis misericordiam invocate. Ut, qui me non meis meritis",
-   "intra Levitarum numerum dignatus est aggregare: luminis sui clari-",
-   "tatem infundens, cerci hujus laudem implere perficiat.",
-   "V. Dominus vobiscum.",
-   "R. Et cum spiritu tuo.",
-   "V. Sursum corda.",
-   "R. Habemus ad Dominum.",
-   "V. Gratias agamus Domino Deo nostro.",
-   "R. Dignum et justum est.",
-   "Vere dignum et justum est, invisibilem Deum Patrem omnipo-",
-   "tentem Filiurnque ejus unigenitum, Dominum nostrum Jesum",
-   "Christum, toto cordis ac mentis affectu et vocis ministerio personare. Qui pro nobis aeterno Patri Adae debitum solvit: et veteris",
-   "piaculi cautionem pio cruore detersit. Haec sunt enim festa paschalia, in quibus versus ille Agnus occiditur, cujus sanguine nostres",
-   "fidelium consecrantur. Haec nox est, in qua primum patres nostros,",
-   "filios Israel eductos de Aegypto, Marc Rubrum sicco vestigio transire",
-   "fecisti. Haec igitur nox est, quae peccatorum tenebras columnae"
+   "R. Deo gratias."
   ],
   "extent": "complete",
-  "words": 1722
+  "words": 1508
  },
  "readingDisagreements": []
 }

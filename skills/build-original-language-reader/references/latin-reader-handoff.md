@@ -74,7 +74,7 @@ checksums.
 4. **The Ordo Missae's Latin is settled**: Collins's Further Readings 1, which
    prints the post-conciliar ordinary, under the owner's verbal permission for
    this private edition. Its Chinese is part of item 3.
-5. **Proper-name Chinese reaches about half the names the printed chapters
+6. **Proper-name Chinese reaches about half the names the printed chapters
    contain**, and none of the rest of the Vulgate's. The alignment
    register only covers what is printed; extending it means printing more
    chapters, not loosening the guard.
@@ -82,7 +82,7 @@ checksums.
    The DOCX/PDF render and the pages load, but nobody has read a page of either.
    The audio is an Italian system voice and the manifest says `draft`: a release
    track is a human voice with reader, rate, cues, checksum and rights recorded.
-7. **Glosses were produced by NVIDIA llama-3.1-70b**, not reviewed by a human.
+8. **Glosses were produced by NVIDIA llama-3.1-70b**, not reviewed by a human.
    The contract requires every Traditional-Chinese gloss to be reviewed before
    release; that review has not happened.
 
@@ -136,6 +136,11 @@ checksums.
   Latin by paragraph index printed unrelated text side by side — Sacrosanctum
   Concilium has 362 Latin paragraphs against 11 Chinese ones. Classify the file;
   join on section numbers where both sides carry them; self-translate otherwise.
+- **Collins's own English headings sit inside the OCR of his readings.**
+  "Further Readings" and "1. The Ordinary of the Mass" were translated as if
+  they were liturgical Latin, and the numbered title of the *next* reading is
+  where the current one ends: the Ordo Missae was carrying twenty-five lines of
+  the Exsultet on its tail before anyone noticed.
 - **OpenCC `s2t` is not a test for simplified Chinese.** It rewrites 祢 to 禰,
   and 祢 is the Catholic honorific this reader's translations are full of; it
   also rewrites 台, 床, 群, 峰. A gate that treats "the converter changed

@@ -85,6 +85,32 @@ FORMULAS = [
 ]
 
 
+# Collins numbers his Further Readings in English -- "1. The Ordinary of the
+# Mass", "2. The Exsultet (Ambrose, d. 397)" -- and those lines are his, not the
+# Missal's.  The first two were being translated as if they were liturgical
+# text, and everything from the second title onwards is the *next* reading: the
+# Ordo was carrying twenty-five lines of the Exsultet on its tail.
+READING_TITLE = re.compile(r"^\d{1,2}\.\s+[A-Z]")
+ENGLISH_HEADING = re.compile(r"^(Further Readings|Readings)$")
+
+
+def ordo_lines(lines: list[str]) -> list[str]:
+    body: list[str] = []
+    started = False
+    for line in lines:
+        stripped = line.strip()
+        if ENGLISH_HEADING.match(stripped):
+            continue
+        if READING_TITLE.match(stripped):
+            if started:
+                break          # the next reading begins here
+            started = True     # this is the Ordo's own title
+            continue
+        started = True
+        body.append(line)
+    return body
+
+
 def vision_lines() -> list[str]:
     lines: list[str] = []
     for path in sorted(READINGS.glob("page-*.json")):
@@ -160,6 +186,9 @@ def main() -> None:
             print(f"  影像「{row['vision']}」／文字層「{row['textLayer']}」"
                   f"  …{row['context'][:60]}…")
 
+    ordo = ordo_lines(lines)
+    print(f"彌撒經文本文 {len(ordo)} 行（原 OCR {len(lines)} 行，已去掉英文標題與其後的逾越頌）")
+
     formulas = []
     for key, zh, la, start, end in FORMULAS:
         body = cut(lines, start, end)
@@ -178,8 +207,8 @@ def main() -> None:
         "generatedOn": date.today().isoformat(),
         "source": SOURCE,
         "formulas": formulas,
-        "ordoMissae": {"lines": lines, "extent": "complete",
-                       "words": sum(len(L.words(l)) for l in lines)},
+        "ordoMissae": {"lines": ordo, "extent": "complete",
+                       "words": sum(len(L.words(l)) for l in ordo)},
         "readingDisagreements": conflicts,
     }
     print(f"共 {len(formulas)}/{len(FORMULAS)} 篇短經；Ordo 全文 {payload['ordoMissae']['words']} 詞")
