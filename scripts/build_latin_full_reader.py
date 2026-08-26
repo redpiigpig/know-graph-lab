@@ -309,7 +309,8 @@ def lower_readings() -> dict[int, dict]:
     translated = load(READINGS_ZH, {"units": {}})
     out: dict[int, dict] = {}
     for row in plan["readings"]:
-        key = f"reading:{row['sourceRef']}"
+        import translate_latin_readings_zh as translator
+        key = translator.reading_key(row)
         unit = translated["units"].get(key)
         if unit:
             pairs = [(segment["latin"][0], segment["zh"][0])

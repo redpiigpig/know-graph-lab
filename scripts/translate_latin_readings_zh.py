@@ -272,6 +272,20 @@ def translate(latin: list[str], prompt: str) -> tuple[list[str], str]:
     raise ValueError("譯文未通過檢查")
 
 
+def reading_key(reading: dict) -> str:
+    """Identify a reading, not merely the file it came from.
+
+    Six hymns are cut out of one anthology and two creeds out of another, so a
+    key made of the source path alone collides eight ways: the six hymns would
+    take turns overwriting one another's translation, and the page would print
+    whichever landed last beside whichever hymn it was showing. The section
+    anchor is what makes them different readings, so it belongs in the key.
+    """
+    section = reading.get("section")
+    suffix = "#" + section[0] if section else ""
+    return f"reading:{reading['sourceRef']}{suffix}"
+
+
 def pending_readings() -> list[dict]:
     plan = json.loads(CHURCH_PLAN.read_text(encoding="utf-8"))
     rows = []
@@ -296,7 +310,7 @@ def pending_readings() -> list[dict]:
         if reading["extent"] == "excerpt":
             text, _, _ = plan_module.complete_unit(text)
         rows.append({
-            "key": f"reading:{reading['sourceRef']}",
+            "key": reading_key(reading),
             "title": reading["title"], "latinTitle": reading["latinTitle"],
             "lesson": reading["lesson"], "extent": reading["extent"],
             "excerptRule": reading.get("excerptRule", ""),

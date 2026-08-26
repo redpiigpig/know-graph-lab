@@ -148,6 +148,11 @@ checksums.
   they were liturgical Latin, and the numbered title of the *next* reading is
   where the current one ends: the Ordo Missae was carrying twenty-five lines of
   the Exsultet on its tail before anyone noticed.
+- **Eight readings share two source files.** Six hymns are cut out of one
+  anthology and two creeds out of another, so a translation cache keyed on the
+  source path alone collides eight ways: the six hymns take turns overwriting
+  one another and the page prints whichever landed last. What makes them
+  different readings is the section anchor, so the anchor belongs in the key.
 - **A section number is not always tight against its point.** Dignitatis
   Humanae prints 「2 . Haec Vaticana Synodus declarat」, and a pattern demanding
   the digit and the period be adjacent matched nothing and paired no Chinese at
