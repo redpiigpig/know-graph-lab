@@ -35,7 +35,9 @@ already produced silently wrong data.
 
 For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the two-volume lesson shape (50 lessons of 20 words per volume), the three-layer Koine lemma resolver, the source freeze, the 50-chapter allocation for 上冊, the 50 readings and 100 sentences of 下冊, the one numbering crosswalk that refuses rather than approximates, the appendices, and release-specific stop conditions. Then read `references/greek-reader-handoff.md` for where that release actually stands, which decisions this build took without the owner, and the traps that have already produced confident wrong answers.
 
-Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio.
+Read `references/silent-failures.md` before wiring a new language, and before believing any count computed only once: every defect in it shipped a page that looked finished.
+
+Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio. Printed flashcard decks are their own skill, `original-reader-flashcards`; `references/flashcard-decks.md` holds their per-deck state.
 
 Read `references/flashcard-decks.md` before building or changing a printed flashcard deck.
 

@@ -4,9 +4,10 @@ Every bug in this list shipped a page that looked finished. None threw, none
 logged, none left a blank. They were found by counting the same thing two ways
 and noticing the numbers disagreed, or by rendering a page and reading it.
 
-They came out of the Ecclesiastical Latin build (2026-08-25/26), but not one of
-them is about Latin. Read this before wiring any new language, and before
-believing a count you have only computed once.
+They came out of the Ecclesiastical Latin build (2026-08-25/26) and the Koine
+Greek one (2026-08-25/26), but not one of them is about Latin or Greek. Read this
+before wiring any new language, and before believing a count you have only
+computed once.
 
 ## 1. A key must be an identity, not a position
 
@@ -119,6 +120,70 @@ The gate read the plan's classification and printed 「45 篇需自譯」 long a
 forty-five had been translated. A status line that describes intent rather than
 output will be believed and will be wrong.
 
+## 8. A stable key does not mean stable content
+
+The word-by-word gloss cache is keyed by unit id. Cutting the Pedalion's
+commentary out of the canons left 226 units whose id was unchanged and whose
+Greek was now a third shorter. The next run reported **nothing to do** — every id
+it wanted was present — and the master happily printed gloss rows for text that
+was no longer on the page.
+
+*A cache entry has to prove it still describes its input. The check is one line:
+rebuild the source text out of the cached tokens and compare.*
+
+## 9. A lookup that skips is worse than one that fails
+
+The Chinese-Bible export mapped OSIS book codes to the publisher's own codes, and
+a book missing from that table was skipped **without a word**. Seven books were
+missing, 449 verses reached the master with no Chinese, and the failure surfaced
+seven chapters downstream in a completely different script, where the cause was
+no longer visible.
+
+*Where a table cannot answer, raise. Silence at the lookup buys nothing and costs
+the debugging session.*
+
+The same crosswalk had to learn to refuse rather than approximate. Septuagint
+Jeremiah is a different book from chapter 26 on (LXX 38 is MT 31); five of its
+chapters split across two Hebrew ones, Proverbs is reordered from 24:23, Exodus
+25–40 is another recension, and the Chinese Bible numbers Jonah the English way
+so LXX 2:1 is 1:17. Every one of those pairs a verse with text that is not it,
+and every one of them looks like an ordinary page.
+
+*Refusing is a result. Pair on the shared numbering or withhold and say why.*
+
+## 10. A source can carry a second language, and the parser will not notice
+
+The Greek Wikisource canon pages print Nicodemus's Ἑρμηνεία under each canon —
+commentary, in Katharevousa, not the ancient canon. The parser read it as canon
+text. Laodicea came out at 2,702 words instead of 1,436, and a sentence of modern
+Greek reached the memory units of a reader whose whole contract is that it
+teaches Koine.
+
+*What caught it was reading the selected sentences, not the word count. A corpus
+whose size is only ever compared against itself will never look wrong.*
+
+## 11. A register can answer with the wrong kind of thing
+
+The name appendix asks a Chinese Strong's dictionary for a name and prints what
+comes back. For 49 of 340 entries what came back was the dictionary's
+**definition** — Σήμ as 「閃的意思是」, Νηρ as 「空氣」, Ἄζωτος as
+「非利士人的五個重」 — or a different entry's name (Ισμαηλ as 「以色列」). Each one
+printed in the name column, looking exactly like a name.
+
+Two of the entries were not proper names at all: ὄζω "to smell" and Ἰουδαϊσμός
+"Judaism" reached a names appendix because the harvester counts a lemma a name
+when it is capitalised in ≥80% of its appearances, and sentence-initial capitals
+are capitals.
+
+*A register's answer has a shape. A name is not a sentence, and「…的意思是」is not
+a name. Check the shape before storing, and read the whole column once before it
+is printed.*
+
+**Two verses are not a sample.** The fallback route names a Septuagint place by
+finding the character run common to its verses; it accepted any run that appeared
+in two of two sampled verses. Coverage as a ratio over a tiny sample is noise,
+which is how Ἡμὰθ came to be called 「我們」.
+
 ## The audits that actually found these
 
 - **Count the same set twice, by different routes, and compare.** Plan versus
@@ -133,3 +198,10 @@ output will be believed and will be wrong.
 - **Diff two independent readings of the same source.** The vision OCR and the
   PDF text layer disagreed on 76 words of the Mass; the disagreements are where
   the errors are, in whichever layer.
+- **Read the output as a reader would, once, all of it.** The 49 wrong names, the
+  modern-Greek sentence and the four memory verses that were fragments were all
+  found by printing the column and reading it. No count would have moved.
+- **Group by the shared value and read what shares it.** Grouping the flashcard
+  pictures by file found 公義 and 不義 on the same scales; grouping glosses by
+  source found the commentary. Anything that legitimately repeats is worth
+  listing once by what it repeats.
