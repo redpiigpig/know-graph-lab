@@ -197,6 +197,13 @@ DIVISION_RULES = [
     ("節", r"^\[\d{1,3}\]"),
     ("節", r"^[IVXLC]{1,6}\.\s"),
     ("號", r"^\d{1,3}\.\s"),
+    # A chapter heading is not always punctuated.  The Proslogion writes
+    # "1 Excitatio mentis ad contemplandum Deum" -- a number, a space, a
+    # capitalised title -- and without this rule the whole work counts as one
+    # division and six thousand words go into a lesson that budgeted fourteen
+    # hundred.  Last in priority, so a work that punctuates its numbers is
+    # still cut on those.
+    ("章", r"^\d{1,3}\s+[A-Z][a-z]"),
 ]
 
 UNIT_BUDGET = 1400
