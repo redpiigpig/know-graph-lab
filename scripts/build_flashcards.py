@@ -32,7 +32,7 @@ from docx import Document
 from docx.enum.section import WD_ORIENT
 from docx.enum.table import WD_ALIGN_VERTICAL, WD_ROW_HEIGHT_RULE, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_LINE_SPACING
-from docx.oxml import OxmlElement
+from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import qn
 from docx.shared import Mm, Pt, RGBColor
 
@@ -78,7 +78,21 @@ IMAGE_MM = 32
 # 卡框：比照使用者桌面那副《家教單字卡.pdf》—— 量出來線寬 2.12 mm、緋紅
 # #ED0A3F、正反面都有框。框往內縮 FRAME_INSET_MM，裁歪一兩毫米只會讓白邊不
 # 等寬，不會把框裁掉；框畫在裁切線上就會缺一邊、還帶進隔壁卡的框。
-FRAME_COLOR = "ED0A3F"
+# 課次配色十色輪：第 11 課回到第 1 課的紅。使用者指定的順序是
+# 紅橙黃綠藍紫棕粉深灰深綠，色值挑印得出來、彼此分得開的濃度。
+FRAME_COLORS = (
+    "ED0A3F",  # 紅
+    "F07C1E",  # 橙
+    "E8B10A",  # 黃
+    "3AA655",  # 綠
+    "1E6FD9",  # 藍
+    "7B3FA0",  # 紫
+    "8B5A2B",  # 棕
+    "F080B4",  # 粉
+    "4A4A4A",  # 深灰
+    "1F6B4A",  # 深綠
+)
+FRAME_RADIUS_MM = 3.75      # 圓角半徑，量參考卡量出來的
 FRAME_INSET_MM = 3.0
 FRAME_EIGHTHS = 48          # w:sz 以八分之一點計，48 ＝ 6 pt ＝ 2.1 mm
 # 框線是往外畫的：宣告的寬高是框內緣，成品外緣還要加上兩條框線。
@@ -323,14 +337,86 @@ def clear(cell) -> None:
     first.getparent().remove(first)
 
 
-def framed(cell):
+DRAWING_NS = {
+    "wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+    "a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+    "wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+}
+EMU_PER_MM = 36000
+
+
+def frame_shape(cell, color: str, left_mm: float, top_mm: float, shape_id: int) -> None:
+    """在卡片格裡放一個圓角矩形當卡框，位置寫死在頁面座標上。
+
+    表格框線沒有圓角，所以框得用圖形做。圖形錨在**頁面**而不是段落或格子：
+    格內錨點的 y 會跟著內容高度浮動（內容是垂直置中的），八張卡的框就會各自
+    高低不一。版面是固定格線，每張卡在頁面上的座標算得出來，直接寫死最穩。
+    `layoutInCell="0"` 一定要有，否則位置又會被格子夾回去。
+    """
+
+    width = CARD_W_MM - 2 * FRAME_INSET_MM
+    height = CARD_H_MM - 2 * FRAME_INSET_MM
+    adjust = int(FRAME_RADIUS_MM / width * 100000)
+    xml = f"""<w:r {" ".join(f'xmlns:{k}="{v}"' for k, v in DRAWING_NS.items())}
+                   xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+      <w:drawing>
+        <wp:anchor distT="0" distB="0" distL="0" distR="0" simplePos="0"
+                   relativeHeight="{shape_id}" behindDoc="1" locked="0"
+                   layoutInCell="0" allowOverlap="1">
+          <wp:simplePos x="0" y="0"/>
+          <wp:positionH relativeFrom="page">
+            <wp:posOffset>{int(left_mm * EMU_PER_MM)}</wp:posOffset>
+          </wp:positionH>
+          <wp:positionV relativeFrom="page">
+            <wp:posOffset>{int(top_mm * EMU_PER_MM)}</wp:posOffset>
+          </wp:positionV>
+          <wp:extent cx="{int(width * EMU_PER_MM)}" cy="{int(height * EMU_PER_MM)}"/>
+          <wp:effectExtent l="0" t="0" r="0" b="0"/>
+          <wp:wrapNone/>
+          <wp:docPr id="{shape_id}" name="card-frame-{shape_id}"/>
+          <wp:cNvGraphicFramePr/>
+          <a:graphic>
+            <a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+              <wps:wsp>
+                <wps:cNvSpPr/>
+                <wps:spPr>
+                  <a:xfrm>
+                    <a:off x="0" y="0"/>
+                    <a:ext cx="{int(width * EMU_PER_MM)}" cy="{int(height * EMU_PER_MM)}"/>
+                  </a:xfrm>
+                  <a:prstGeom prst="roundRect">
+                    <a:avLst><a:gd name="adj" fmla="val {adjust}"/></a:avLst>
+                  </a:prstGeom>
+                  <a:noFill/>
+                  <a:ln w="{int(FRAME_LINE_MM * EMU_PER_MM)}">
+                    <a:solidFill><a:srgbClr val="{color}"/></a:solidFill>
+                  </a:ln>
+                </wps:spPr>
+                <wps:bodyPr/>
+              </wps:wsp>
+            </a:graphicData>
+          </a:graphic>
+        </wp:anchor>
+      </w:drawing>
+    </w:r>"""
+    cell.paragraphs[0]._p.append(parse_xml(xml))
+
+
+def framed(cell, lesson: int, place: tuple[int, int, int]):
     """在卡片格內再放一張單格表當卡框，回傳要填內容的那一格。
 
     表格框線畫在格子邊上，所以框要用「內縮一圈的巢狀表格」做，不能直接給外層
     格子加邊框 —— 那條線正好落在裁切線上。
     """
 
-    clear(cell)
+    column, row, shape_id = place
+    frame_shape(
+        cell,
+        FRAME_COLORS[(lesson - 1) % len(FRAME_COLORS)],
+        column * CARD_W_MM + FRAME_INSET_MM,
+        MARGIN_V_MM + row * CARD_H_MM + FRAME_INSET_MM,
+        shape_id,
+    )
     inner = cell.add_table(rows=1, cols=1)
     inner.autofit = False
     inner.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -345,15 +431,7 @@ def framed(cell):
     inner._tbl.tblPr.append(table_width)
     for grid_col in inner._tbl.findall(qn("w:tblGrid") + "/" + qn("w:gridCol")):
         grid_col.set(qn("w:w"), width_dxa)
-    borders = OxmlElement("w:tblBorders")
-    for edge in ("top", "left", "bottom", "right"):
-        node = OxmlElement(f"w:{edge}")
-        node.set(qn("w:val"), "single")
-        node.set(qn("w:sz"), str(FRAME_EIGHTHS))
-        node.set(qn("w:space"), "0")
-        node.set(qn("w:color"), FRAME_COLOR)
-        borders.append(node)
-    inner._tbl.tblPr.append(borders)
+    strip_borders(inner)
 
     row = inner.rows[0]
     row.height = Mm(CARD_H_MM - 2 * (FRAME_INSET_MM + FRAME_LINE_MM) - FRAME_SLACK_MM)
@@ -438,8 +516,8 @@ def headword_size(deck: dict, text: str) -> float:
     return base * 0.52
 
 
-def fill_front(cell, card: dict, deck: dict) -> None:
-    cell = framed(cell)
+def fill_front(cell, card: dict, deck: dict, place: tuple[int, int, int]) -> None:
+    cell = framed(cell, card["lesson"], place)
     paragraph = cell.add_paragraph()
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph.paragraph_format.space_after = Pt(0)
@@ -452,8 +530,8 @@ def fill_front(cell, card: dict, deck: dict) -> None:
     write(footer, f"第 {card['lesson']} 課", FONT_UI, LESSON_PT, color=MUTED)
 
 
-def fill_back(cell, card: dict, picture: Path | None) -> None:
-    cell = framed(cell)
+def fill_back(cell, card: dict, picture: Path | None, place: tuple[int, int, int]) -> None:
+    cell = framed(cell, card["lesson"], place)
     if picture:
         paragraph = cell.add_paragraph()
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -518,6 +596,8 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
         (f"裁切：不印裁切線。自紙張上緣量，橫向切在 {cuts_h} mm；自左緣量，縱向切在 {cuts_v} mm。"
          f"成品每張 {CARD_W_MM:.2f}×{CARD_H_MM:.0f} mm。"
          f"卡框比裁切線內縮 {FRAME_INSET_MM:.0f} mm，裁歪一兩毫米只會讓白邊不等寬，不會切到框。", 11, INK, 6),
+        ("框色按課次十色輪替：紅橙黃綠藍紫棕粉深灰深綠，第十一課回到紅色。同一課的卡同色，方便整理與抽考。",
+         11, INK, 6),
         ("正面：原文與課次。背面：繁體中文詞義、詞性與課次。", 11, INK, 6),
         (f"插圖：{with_picture} 張有圖，其餘留白。多義詞取最常見的義項；找不到誠實對應的圖就不放，"
          "不以近似圖充數。", 11, INK, 22),
@@ -617,10 +697,13 @@ def build(deck: dict, cards: list[dict]) -> Path:
                 row, column = divmod(index, COLS)
                 # Duplex alignment: the back sheet runs right to left.
                 target = table.cell(row, column if side == "front" else COLS - 1 - column)
+                target_column = column if side == "front" else COLS - 1 - column
+                # 圖形 id 在整份文件裡必須唯一，否則 Word 只認第一個。
+                place = (target_column, row, 1000 + start * 2 + index * 2 + (side == "back"))
                 if side == "front":
-                    fill_front(target, card, deck)
+                    fill_front(target, card, deck, place)
                 else:
-                    fill_back(target, card, card["picture"])
+                    fill_back(target, card, card["picture"], place)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUTPUT_DIR / deck["output"]
