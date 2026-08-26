@@ -71,8 +71,21 @@ description: 研討會／論壇「會議論文集」排版成書的完整 pipeli
 這樣目錄裡的頁碼不受前置頁長度影響，於是可以：
 第一趟組裝拿頁碼 → 生成真目錄 → 第二趟組裝。目錄頁數變化不會使頁碼失準。
 
-### 7. 每篇一節、奇數頁起排
-`wdSectionBreakOddPage`。每篇獨立一節才能各自掛自己的書眉。會產生空白背頁，那是正常的。
+### 7. 每篇一節、奇數頁起排 —— 但**不要**用 `wdSectionBreakOddPage`
+每篇獨立一節才能各自掛自己的書眉。奇數頁起排會產生空白背頁，那是正常的；
+但 `wdSectionBreakOddPage` 生出來的空白頁是 **Word 的隱含頁**，
+不吃任何頁首頁尾，印出來整頁全空、**連頁碼都沒有**。
+→ 一律用 `wdSectionBreakNextPage`，全部插完後再跑 `force_recto()`：
+   重新分頁 → 找第一個起始落在偶數頁的篇 → 在**前一節末尾**補一個 `wdPageBreak`
+   → 重跑，直到全部落在奇數頁。補出來的空白頁屬於前一節，書眉與頁碼照常顯示。
+→ **不要邊插邊算奇偶**：插入途中 Word 回報的頁次會偏一頁，第三屆這樣做有 7 篇落到背面。
+→ 收斂要記次數並印出來（第三屆補了 18 個空白背頁），沒收斂要出聲。
+
+### 7b. 前置頁用小寫羅馬數字，本文另起阿拉伯數字
+書名頁不編碼；目錄／議程表／與會學者名錄編 i、ii、iii…；本文自 1 起編。
+→ 兩段各自 `PageNumbers.RestartNumberingAtSection = True; StartingNumber = 1`，
+   前置頁那段再設 `NumberStyle = 2`（`wdPageNumberStyleLowercaseRoman`）。
+→ 因為本文頁碼獨立起編，前置頁增減不會動到目錄裡的頁碼（見第 6 條）。
 
 ### 8. 直接格式覆寫，不要動 styles.xml
 逐篇重排的做法是**在來稿上就地覆寫 pPr/rPr**（直接格式勝過樣式），
@@ -291,6 +304,7 @@ PYTHONUTF8=1 python topdf.py     # 出 PDF
       中文華康中黑體、英文與數字 Times New Roman
       （COM 要分開設 NameFarEast 與 NameAscii／NameOther；只設 Font.Name 會讓英數也套中文字型）
 頁尾  頁碼置中，Times New Roman 10pt
+      前置頁（自目錄起）小寫羅馬數字，本文自 1 起阿拉伯數字，書名頁不編
 ```
 
 ---

@@ -293,6 +293,8 @@ def agenda():
             role = "ctib"            # 純藏文行置中
         elif txt.startswith("◆") or txt.startswith("■"):
             role = "cell"
+            if txt.startswith("■"):        # 分區標題前空一行
+                p.addprevious(mk_para("cell", ""))
         else:
             role = "h2" if len(txt) <= 30 and txt else "body"
         restyle_para(p, role)
