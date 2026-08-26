@@ -230,9 +230,17 @@ def prompt_for(record: dict[str, Any]) -> str:
         "The Nicene-reception test applies to ANCIENT literature. For medieval, early-modern and "
         "modern works the axis reads differently: zheng = written from within a recognised Christian "
         "tradition (Catholic, Orthodox, Protestant, Anglican…); wai = written from outside or against "
-        "it — condemned heresies, other religions, anti-Christian polemic. A modern Christian author "
-        "is NOT wai merely because the fourth-century church never saw the book. Chesterton's "
-        "Orthodoxy and Erasmus's Moriae Encomium are zheng.\n"
+        "it. A modern Christian author is NOT wai merely because the fourth-century church never saw "
+        "the book. Chesterton's Orthodoxy and Erasmus's Moriae Encomium are zheng.\n"
+        # 使用者定調 2026-08-27：wai 是「整個異端運動或非基督宗教」的層級，
+        # 不是個別被查禁的作品。寂靜主義是天主教內部爭議，蓋恩夫人始終是天主教徒。
+        "wai is decided at the level of a WHOLE MOVEMENT OR RELIGION, never at the level of one "
+        "censured book. wai covers: entire heretical systems outside the church (Gnosticism, "
+        "Marcionism, Manichaeism, Mandaeism, Arianism as a movement), other religions (Judaism, "
+        "Islam, paganism) kept as outside witnesses, and anti-Christian polemic. It does NOT cover a "
+        "book by a Christian author that was condemned, censured, or placed on the Index while the "
+        "author remained inside the church: Madame Guyon's Moyen court (Quietism was an intra-Catholic "
+        "controversy and she stayed Catholic) is zheng, not wai.\n"
         "Do not classify a record as zheng merely because it is famous. "
         # 2026-08-27 使用者定調：宗派信條算近代基督教的正藏。
         "Post-Reformation denominational confessions and catechisms (Westminster Confession and "

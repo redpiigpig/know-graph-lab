@@ -1,8 +1,8 @@
 {
   "status": "idle",
-  "updated_at": "2026-08-26T16:54:32+00:00",
-  "pid": 9332,
-  "processed_this_run": 4,
+  "updated_at": "2026-08-26T23:13:37+00:00",
+  "pid": 20632,
+  "processed_this_run": 11,
   "skipped_this_run": 0,
   "total_done": 130,
   "ledger": "data\\dazangjing\\source-catalog\\classified-records-trc.jsonl"
