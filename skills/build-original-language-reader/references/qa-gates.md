@@ -73,3 +73,24 @@ Run every applicable gate against the final artifacts. A prior render or prior r
 - Store file bytes, SHA-256, and generation time.
 - Confirm the QA report references the same master/DOCX/PDF hashes.
 - Keep status partial until all required gates pass.
+
+## Audits that find what the gates miss
+
+The deterministic gates below all passed while the Latin build was pairing
+Exodus 3 with John 17 and printing one hymn's Chinese beside another. Four
+cheap habits found those, and none of them is a test:
+
+- **Count the same set twice by different routes and compare.** The plan said 45
+  readings needed translation; the translation queue produced 39 keys. That gap
+  was eight readings sharing two source files.
+- **Render a page and read it.** The empty first table row, a running header
+  still naming the wrong language, an untranslated English masthead, a picture
+  that contradicts its word — none of these appear in any count.
+- **Probe the live endpoint.** All three reader APIs answering 401 proved the new
+  data module imports and the auth guard holds. A 500 looks the same from the
+  outside as a route that was never wired.
+- **Diff two independent readings of one source.** Vision OCR and the PDF text
+  layer disagreed on 76 words of the Mass ordinary; the disagreements are where
+  the errors are, in one layer or the other.
+
+See `silent-failures.md` for the incidents these come from.

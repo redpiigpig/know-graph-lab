@@ -80,6 +80,15 @@ Type persons, places, peoples/nations, and divine names/titles. Mixed-sense lemm
 
 ### Texts and appendices
 
+- Frozen shape: 上冊 opens with ten short liturgical formulas and then reads
+  forty complete Vulgate chapters in canonical order; 下冊 reads fifty church
+  documents in chronological order and closes on the complete Ordo Missae.
+- No Kyrie in the Latin volumes: it is Greek, and the owner keeps a separate
+  Greek reader.
+- Every reading is a complete chapter or a complete piece; cut long works at
+  their own divisions, never at a word count.
+- The ten formulas and the Ordo are **not** machine-translated. Their Chinese is
+  the received liturgical wording and must be pasted in by a human.
 - Distinguish Clementine Vulgate, Stuttgart Vulgate, and Nova Vulgata. Freeze one exact edition per reading.
 - Traditional-Chinese parallel is 思高譯本, not RCUV2010. The owner chose it on
   2026-08-25 for structural reasons: the Vulgate numbers its psalms the Greek

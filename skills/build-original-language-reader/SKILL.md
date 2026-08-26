@@ -15,6 +15,11 @@ Read these files for every production run:
 - `references/data-model.md`
 - `references/rights-and-source-freeze.md`
 - `references/qa-gates.md`
+- `references/silent-failures.md` — the bugs in this series that shipped a page
+  looking finished: keys that were positions, files whose existence stood in for
+  their content, alignment by index between texts that do not correspond, gates
+  that threw away good data, excerpts measured in words instead of the work's own
+  divisions, and the one register that must not be machine-translated at all.
 
 Read the selected language section in `references/language-profiles.md`.
 
@@ -73,14 +78,19 @@ Two failures recur across languages and are worth carrying into any new reader:
    - Reject lists, fragments, near-duplicates, census material, and misleading verse-number joins.
    - Require exactly two unique, reviewed units per lesson.
    - Save candidate scores and the human-review decision record.
-8. Build full readings, not summaries disguised as readings. Preserve the approved difficulty order. The default release contract is 25 complete Scripture chapters plus 25 complete prayers or articles; appendices do not silently replace those 50 readings.
+8. Build full readings, not summaries disguised as readings. Preserve the approved order. The default release contract is 25 complete Scripture chapters plus 25 complete prayers or articles; appendices do not silently replace those 50 readings.
+   - **Every reading is a complete chapter or a complete piece.** Where a work is too long to print entire, cut at *its own* divisions — whole chapters, numbered sections, canons — and let the budget decide how many fit, never how much of one. A word-count excerpt stops mid-argument. Record what was printed: 「第 1–4 節（完整，共 33 節）」.
+   - Divisions are not always punctuated (`1 Excitatio mentis…`), section numbers are not always tight against their point (`2 . Haec…`), and the edition's own headings sit inside the OCR — including the title of the *next* reading, which is where this one ends.
+   - Ordering is a frozen decision, not automatically difficulty. Once the owner says a reading need not match the vocabulary already taught, a coverage sort has nothing to recommend it: use the canon's order, or chronology, and keep coverage as a reported statistic.
 9. Build the word-by-word layer over every running-text unit before layout:
    - Tokenise the printed text, gloss each token with its contextual Traditional-Chinese meaning, and give every unit without a published translation a whole-unit rendering as well.
    - Gate on gloss-count equals token-count, on blank glosses, and on source-script or Latin leaking into a gloss.
    - Cache per unit so a partial run resumes instead of restarting, and re-run rounds until nothing is missing.
    - Never ship a reading whose Chinese is only one whole-verse translation line.
+   - **Do not machine-translate a text that has a received wording.** A liturgical formula the congregation knows by heart is not a rough draft to be improved: asked for `R. Et cum spiritu tuo.` a model returned a versicle that is not in the Latin. Leave the gap, print why, and make the gate repeat it every run so nobody fills it with a draft.
+   - A `-chinese.txt` beside the Latin is not a parallel translation. Classify it — placeholder, anthology excerpt, unnumbered translation, numbered translation — and join only on numbers both sides carry.
 10. Add each language-specific terminal section. For Hebrew, keep the complete fifteen-step Haggadah separate from the 25 prayer/article readings.
-11. Assemble one master JSON. Fail on incomplete counts, IDs, ordering, translations, diacritics, transliteration, proper names, sources, rights metadata, or placeholder text.
+11. Assemble one master JSON. Fail on incomplete counts, IDs, ordering, translations, diacritics, transliteration, proper names, sources, rights metadata, or placeholder text. Key every cross-file reference on an identity, never on a position a builder computed: lesson numbers move when the sort changes, and one source file can hold several readings.
 12. Run `scripts/validate_reader_release.py` against the master before layout.
 13. Generate JIS B5 DOCX and PDF from that exact master. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
 14. Build the authenticated online counterpart from the same master. Keep authorized JSON and audio out of public static directories.
