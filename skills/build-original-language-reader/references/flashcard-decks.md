@@ -227,8 +227,15 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 
 ### A gate that rejected good Chinese
 
-The gloss checker called any text simplified if OpenCC's `s2t` changed it. It
-changes 台 to 臺, so 「讀經台」 was refused eleven times running and `ambō` sat
-unglossed while the deck refused to build. Differences that are only
-Taiwan-standard variants are now allowed through. Watch for this anywhere else
-a Traditional-Chinese gate is written as a round-trip comparison.
+The gloss checker called any text simplified if OpenCC's `s2t` changed it, and
+`s2t` rewrites several characters that are already Traditional. 台 becomes 臺, so
+「讀經台」 was refused eleven times running and `ambō` sat unglossed while the deck
+refused to build. Worse, **祢 becomes 禰** — and 祢 is the Catholic second-person
+honorific for God, which appears in nearly every prayer this project translates;
+one of the readings is titled 《願祢受讚頌》. Every translation using it was being
+thrown away and retried for ever.
+
+Variants now pass individually while the line is otherwise clean, so 皇后 and
+公里 are accepted and 以后我们 is still refused. 号 is deliberately not on the
+list: that one really is simplified. Watch for this anywhere a
+Traditional-Chinese gate is written as a round-trip comparison.

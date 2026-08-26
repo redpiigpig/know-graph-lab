@@ -136,6 +136,10 @@ checksums.
   Latin by paragraph index printed unrelated text side by side — Sacrosanctum
   Concilium has 362 Latin paragraphs against 11 Chinese ones. Classify the file;
   join on section numbers where both sides carry them; self-translate otherwise.
+- **OpenCC `s2t` is not a test for simplified Chinese.** It rewrites 祢 to 禰,
+  and 祢 is the Catholic honorific this reader's translations are full of; it
+  also rewrites 台, 床, 群, 峰. A gate that treats "the converter changed
+  something" as proof of simplified text rejects the project's own vocabulary.
 - **Do not re-scan a corpus per lookup.** Asking for one name's commonest
   spelling by scanning three million words, five hundred times, is why the first
   appendix build never finished.
