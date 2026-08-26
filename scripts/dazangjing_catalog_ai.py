@@ -255,6 +255,14 @@ def prompt_for(record: dict[str, Any]) -> str:
         "Ursinus's Commentary on the Heidelberg Catechism (he drafted the Catechism) is "
         "keep_primary_work, not secondary scholarship. Drop only LATER scholarship about an earlier "
         "work, judged by the gap between the work's era and the commentator's.\n"
+        # TRC 把托爾金、切斯特頓歸在「羅馬公教」下（因為作者是天主教徒），
+        # 於是《精靈寶鑽》《魔戒》《布朗神父》都被當成宗教原典收進來。
+        "Imaginative literature — novels, fantasy, detective fiction, poetry collections written as "
+        "art rather than as religious instruction — is NOT a primary source for this canon, even when "
+        "the author is a devout Christian and even when the source library filed it under a "
+        "denomination. Tolkien's Silmarillion and Lord of the Rings, and Chesterton's Father Brown "
+        "stories, are decision=drop_secondary_study here (they belong in a literature collection). "
+        "Chesterton's Orthodoxy and The Everlasting Man, being apologetic works, are kept.\n"
         "If the record is only a printed edition, translation, manuscript witness, shelf/classification schedule, "
         "or mixed catalogue, preserve it as evidence only and set decision to drop_catalog_or_edition or needs_manual_review.\n"
         "collectionKey 'jing' (經藏) is ONLY for biblical scripture / canonical Bible texts and versions. "
