@@ -287,7 +287,9 @@ PYTHONUTF8=1 python topdf.py     # 出 PDF
 引文  標楷體 11pt，左縮 3 字
 參考文獻 行高 380，懸掛縮排 2 字
 註腳  10pt
-頁首  單數頁＝篇名（右）／雙數頁＝會議名（左），華康中黑體 9pt
+頁首  單數頁＝篇名（右）／雙數頁＝會議名（左），9pt
+      中文華康中黑體、英文與數字 Times New Roman
+      （COM 要分開設 NameFarEast 與 NameAscii／NameOther；只設 Font.Name 會讓英數也套中文字型）
 頁尾  頁碼置中，Times New Roman 10pt
 ```
 

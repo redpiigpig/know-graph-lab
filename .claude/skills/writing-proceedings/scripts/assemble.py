@@ -45,8 +45,10 @@ def set_header(sec, kind, text, align, first_body_sec):
     rng.Text = text
     rng.ParagraphFormat.Alignment = align
     rng.ParagraphFormat.SpaceAfter = 0
-    rng.Font.Name = "華康中黑體"
+    # 中文用華康中黑體，英文與數字用 Times New Roman
     rng.Font.NameFarEast = "華康中黑體"
+    rng.Font.NameAscii = "Times New Roman"
+    rng.Font.NameOther = "Times New Roman"
     rng.Font.Size = 9
     rng.Font.Color = 0x333333
 
