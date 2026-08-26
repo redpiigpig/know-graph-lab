@@ -5,6 +5,7 @@ from lxml import etree
 import ttbf
 from ttbf import Q, CONF, ROLE, make_pPr, make_rPr, para_text, restyle_para, \
     classify, is_ref_heading
+import build
 from build import new_sectPr, mk_para
 from papers import PAPERS, SESSIONS
 
@@ -298,6 +299,8 @@ def agenda():
         else:
             role = "h2" if len(txt) <= 30 and txt else "body"
         restyle_para(p, role)
+    for t in body.iter(Q("tbl")):        # 大會原檔的議程表比版心寬，縮到版心
+        build.fit_table_width(t)
     for s in body.findall(Q("sectPr")):
         body.remove(s)
     # 原議程表格首列已有「議 程 表」，不再另加標題以免重複

@@ -282,6 +282,63 @@ def strip_lead_space(body):
     return n
 
 
+TEXT_WIDTH = 10886 - 1418 * 2      # 版心寬 twips
+
+
+def fit_table_width(tbl):
+    """表格比版心寬時，欄寬按比例縮到剛好一個版心寬；縮排歸零、版面鎖固定。"""
+    pr, grid = tbl.find(Q("tblPr")), tbl.find(Q("tblGrid"))
+    if pr is None or grid is None:
+        return 0
+    cols = grid.findall(Q("gridCol"))
+    widths = [int(c.get(Q("w")) or 0) for c in cols]
+    total = sum(widths)
+    ind = pr.find(Q("tblInd"))
+    indw = int(ind.get(Q("w")) or 0) if ind is not None else 0
+    if total <= 0 or total + indw <= TEXT_WIDTH + 20:
+        return 0
+    f = TEXT_WIDTH / total
+    new = [max(200, int(round(w * f))) for w in widths]
+    new[-1] += TEXT_WIDTH - sum(new)
+    for c, w in zip(cols, new):
+        c.set(Q("w"), str(w))
+    for tc in tbl.iter(Q("tc")):
+        tcPr = tc.find(Q("tcPr"))
+        tcW = tcPr.find(Q("tcW")) if tcPr is not None else None
+        if tcW is None or tcW.get(Q("type")) not in (None, "dxa"):
+            continue
+        w = int(tcW.get(Q("w")) or 0)
+        if w:
+            tcW.set(Q("w"), str(max(200, int(round(w * f)))))
+    _set_tblPr(pr, "tblW", {"w": TEXT_WIDTH, "type": "dxa"})
+    _set_tblPr(pr, "tblInd", {"w": 0, "type": "dxa"})
+    _set_tblPr(pr, "tblLayout", {"type": "fixed"})
+    return 1
+
+
+_TBLPR_ORDER = ["tblStyle", "tblpPr", "tblOverlap", "bidiVisual",
+                "tblStyleRowBandSize", "tblStyleColBandSize", "tblW", "jc",
+                "tblCellSpacing", "tblInd", "tblBorders", "shd", "tblLayout",
+                "tblCellMar", "tblLook", "tblCaption", "tblDescription",
+                "tblPrChange"]
+
+
+def _set_tblPr(pr, name, attrs):
+    el = pr.find(Q(name))
+    if el is None:
+        el = etree.Element(Q(name))
+        rank = _TBLPR_ORDER.index(name)
+        at = len(pr)
+        for i, x in enumerate(pr):
+            t = etree.QName(x).localname
+            if t not in _TBLPR_ORDER or _TBLPR_ORDER.index(t) > rank:
+                at = i
+                break
+        pr.insert(at, el)
+    for k, v in attrs.items():
+        el.set(Q(k), str(v))
+
+
 def set_keep_next(p):
     """讓這一段與下一段黏在同一頁。"""
     pPr = p.find(Q("pPr"))
