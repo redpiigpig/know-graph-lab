@@ -266,7 +266,25 @@ def pending_readings() -> list[dict]:
     return rows
 
 
+# The ten formulas and the Ordo are deliberately not machine-translated.
+#
+# Every Chinese-speaking Catholic says 「因父、及子、及聖神之名」 for the sign of
+# the cross; the machine produced 「天主，聖父、聖子、聖神的名義內」.  That is
+# merely not the received wording.  What forced the rule is worse: asked for
+# 「R. Et cum spiritu tuo.」 it returned 「執事：願天主與你們同在。R. 及與你的聖神
+# 同在。」 -- a versicle that is not in the Latin at all.  An invented response
+# printed inside a Mass text is the worst thing this book could do, and the
+# reader's own doctrine already answers it: a visible gap beats a wrong line.
+#
+# These carry `chineseStatus: needs-received-text`, and the page prints the gap.
+LITURGY_NOTE = "禮儀經文不作機器翻譯；應由人採用教會通行中文本文"
+
+
 def liturgy_units() -> list[dict]:
+    return []
+
+
+def _liturgy_units_unused() -> list[dict]:
     if not LITURGY.exists():
         return []
     data = json.loads(LITURGY.read_text(encoding="utf-8"))

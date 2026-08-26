@@ -155,6 +155,10 @@ def main() -> int:
         aligned = len(readings) - len(pending)
         if aligned:
             warnings.append(f"下冊 {aligned} 篇以節號對齊既有中譯")
+        # The liturgical Chinese is absent by decision, not by oversight;
+        # the gate says so every run so nobody fills it with a machine draft.
+        warnings.append("上冊前十課的禮儀短經與終卷彌撒經文不作機器翻譯，"
+                        "中譯待人採用教會通行本文")
         if not church["terminalSection"]["status"].startswith("latin_frozen"):
             warnings.append(f"終卷《{church['terminalSection']['title']}》"
                             f"狀態 {church['terminalSection']['status']}")

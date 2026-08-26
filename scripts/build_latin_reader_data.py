@@ -27,6 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 OUTPUT = CACHE / "latin-reader-two-volumes.json"
 
+LITURGY_NOTE = "禮儀經文不作機器翻譯；中譯應採用教會通行本文，付印前由人補上"
+
 VOLUME_META = [
     {"volume": 1, "slug": "vol1", "name": "上冊", "title": "武加大譯本",
      "blurb": "十篇禮儀短經，四十章完整武加大經文，中文並列思高譯本。"},
@@ -102,7 +104,8 @@ def main() -> None:
             "latinTitle": "Ordo Missae, tempus per annum",
             "belongsTo": 2,
             "extent": liturgy.get("ordoMissae", {}).get("extent", ""),
-            "translationNote": ordo.get("translationNote", ""),
+            "translationNote": ordo.get("translationNote", "") or LITURGY_NOTE,
+            "chineseStatus": "needs-received-text" if not ordo else "self-translated",
             "segments": [{"latin": s["latin"][0], "zh": s["zh"][0]}
                          for s in ordo.get("segments", [])] or
                         [{"latin": line, "zh": ""}

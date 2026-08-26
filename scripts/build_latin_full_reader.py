@@ -47,6 +47,8 @@ LITURGY = CACHE / "liturgy.json"
 READINGS_ZH = CACHE / "readings-zh.json"
 MEMORY = CACHE / "memory-units.json"
 
+LITURGY_NOTE = "禮儀經文不作機器翻譯；中譯應採用教會通行本文，付印前由人補上"
+
 FONT_LA = "Noto Serif"
 LATIN_PT = 11.0
 GLOSS_PT = 9.6
@@ -253,7 +255,10 @@ def upper_readings() -> dict[int, dict]:
             unit = translated["units"].get(f"formula:{row['id']}", {})
             zh_lines = [z for segment in unit.get("segments", []) for z in segment["zh"]]
             pairs = list(zip(source.get("lines", []), zh_lines + [""] * len(source.get("lines", []))))
-            note = row.get("note") or (unit.get("translationNote", "") if unit else "")
+            # The liturgical Chinese is deliberately absent, not merely late:
+            # a machine rendering of a formula the congregation knows by heart
+            # is an error the label 自譯 does not cover.
+            note = "　".join(x for x in (row.get("note"), LITURGY_NOTE) if x)
             out[row["lesson"]] = {"title": f"{row['title']}　{row['latinTitle']}",
                                   "pairs": pairs, "note": note}
             continue
