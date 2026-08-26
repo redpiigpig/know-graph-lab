@@ -20,7 +20,9 @@
           "zh": "以色列",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2474",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰησοῦς",
@@ -35,7 +37,9 @@
           "zh": "耶穌",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2424",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Χριστοῦ",
@@ -50,7 +54,9 @@
           "zh": "基督",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5547",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰούδα",
@@ -65,7 +71,9 @@
           "zh": "猶大",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2455",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰερουσαλήμ",
@@ -80,7 +88,9 @@
           "zh": "耶路撒冷",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2419",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Μωυσῆς",
@@ -94,7 +104,9 @@
           "zh": "摩西",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3475",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Αἰγύπτου",
@@ -109,7 +121,9 @@
           "zh": "埃及",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G125",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰακὼβ",
@@ -124,7 +138,9 @@
           "zh": "雅各",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2384",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαοὺλ",
@@ -139,7 +155,9 @@
           "zh": "掃羅",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4549",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Ἰουδαίων",
@@ -154,7 +172,9 @@
           "zh": "猶太",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2453",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀαρὼν",
@@ -169,7 +189,9 @@
           "zh": "亞倫",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σαλωμὼν",
@@ -194,7 +216,9 @@
             "1Kgs.1.12",
             "1Kgs.1.13",
             "1Kgs.1.17"
-          ]
+          ],
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Φαραὼ",
@@ -209,7 +233,9 @@
           "zh": "法老",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5328",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀβραὰμ",
@@ -224,7 +250,9 @@
           "zh": "亞伯拉罕",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G11",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἰωσὴφ",
@@ -240,7 +268,9 @@
           "zhSource": "biblical_people",
           "strong": "G2501",
           "zhRoute": "英文名",
-          "zhEnglish": "Joseph"
+          "zhEnglish": "Joseph",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Βαβυλῶνος",
@@ -255,7 +285,9 @@
           "zh": "巴比倫",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G897",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰορδάνου",
@@ -270,7 +302,9 @@
           "zh": "約但",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2446",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἰωναθὰν",
@@ -283,7 +317,9 @@
           "zh": "約拿單",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἐφράιμ",
@@ -298,7 +334,9 @@
           "zh": "以法蓮",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2187",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Παῦλος",
@@ -312,7 +350,9 @@
           "zh": "保羅",
           "zhSource": "theologians",
           "strong": "G3972",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Πέτρος",
@@ -327,7 +367,9 @@
           "zh": "彼得",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4074",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Μωὰβ",
@@ -341,7 +383,9 @@
           "zh": "摩押",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μανασσὴ",
@@ -356,7 +400,9 @@
           "zh": "瑪拿西",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3128",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰωάννης",
@@ -371,7 +417,9 @@
           "zh": "約翰",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2491",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Ἰσαὰκ",
@@ -386,7 +434,9 @@
           "zh": "以撒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2464",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σίμων",
@@ -401,7 +451,9 @@
           "zh": "西門",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4613",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μωϋσῆς",
@@ -415,7 +467,9 @@
           "zh": "摩西",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3475",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἰωὰβ",
@@ -428,7 +482,9 @@
           "zh": "約押",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Αἰγυπτίων",
@@ -443,7 +499,9 @@
           "zh": "埃及",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G124",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰουδαίας",
@@ -458,7 +516,9 @@
           "zh": "猶太",
           "zhSource": "place_names",
           "strong": "G2449",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Σαμουὴλ",
@@ -473,7 +533,9 @@
           "zh": "撒母耳",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4545",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Συρίας",
@@ -488,7 +550,9 @@
           "zh": "敘利亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4947",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀσσυρίων",
@@ -514,7 +578,9 @@
             "2Kgs.16.18",
             "2Kgs.17.3",
             "2Kgs.17.4"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἑζεκίας",
@@ -529,7 +595,9 @@
           "zh": "希西家",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1478",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Γαλαάδ",
@@ -554,7 +622,9 @@
             "Num.27.1",
             "Num.32.1",
             "Num.32.26"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαμαρείας",
@@ -569,7 +639,9 @@
           "zh": "撒馬利亞",
           "zhSource": "place_names",
           "strong": "G4540",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰερεμίας",
@@ -584,7 +656,9 @@
           "zh": "耶利米",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2408",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἠσαὺ",
@@ -599,7 +673,9 @@
           "zh": "以掃",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2269",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἰεροβοὰμ",
@@ -612,7 +688,9 @@
           "zh": "耶羅波安",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀβεσσαλὼμ",
@@ -637,7 +715,9 @@
             "2Sam.13.25",
             "2Sam.13.26",
             "2Sam.13.27"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀμμὼν",
@@ -650,7 +730,9 @@
           "zh": "亞們",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Χανάαν",
@@ -664,7 +746,9 @@
           "zh": "迦南",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5477",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Φαρισαῖοι",
@@ -678,7 +762,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G5330",
-          "zhEnglish": "Pharisee"
+          "zhEnglish": "Pharisee",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἱεροσόλυμα",
@@ -693,7 +779,9 @@
           "zh": "耶路撒冷",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2414",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀμορραίων",
@@ -719,7 +807,9 @@
             "Num.21.25",
             "Num.21.26",
             "Num.21.29"
-          ]
+          ],
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀχαὰβ",
@@ -732,7 +822,9 @@
           "zh": "亞哈",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Χαλδαίων",
@@ -747,7 +839,9 @@
           "zh": "迦勒底人",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5466",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Δανιὴλ",
@@ -762,7 +856,9 @@
           "zh": "但以理",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1158",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ῥουβὴν",
@@ -776,7 +872,9 @@
           "zh": "流便",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4502",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ναβουχοδονοσὸρ",
@@ -801,7 +899,9 @@
             "2Chr.36.5",
             "2Chr.36.6",
             "2Chr.36.10"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γὰδ",
@@ -816,7 +916,9 @@
           "zh": "迦得",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1045",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Δὰν",
@@ -829,7 +931,9 @@
           "zh": "但",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἐλεαζὰρ",
@@ -843,7 +947,9 @@
           "zh": "以利亞撒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1648",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἠσαίας",
@@ -858,7 +964,9 @@
           "zh": "以賽亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2268",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Χεβρὼν",
@@ -874,7 +982,9 @@
           "zhRoute": "",
           "zhRejected": "更糟",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γαλιλαίας",
@@ -888,7 +998,9 @@
           "zh": "加利利",
           "zhSource": "place_names",
           "strong": "G1056",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἑλλήνων",
@@ -903,7 +1015,9 @@
           "zh": "希臘",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1672",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰωὰς",
@@ -920,7 +1034,9 @@
           "zhRoute": "",
           "zhRejected": "帶子",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Χαναναίων",
@@ -946,7 +1062,9 @@
             "Exod.6.4",
             "Exod.13.5",
             "Exod.13.11"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰὼβ",
@@ -961,7 +1079,9 @@
           "zh": "約伯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2492",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Βάαλ",
@@ -975,7 +1095,9 @@
           "zh": "巴力",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G896",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "神名與稱號",
+          "categoryRoute": "deities"
         },
         {
           "headword": "Λευεὶ",
@@ -1000,7 +1122,9 @@
             "Exod.32.26",
             "Exod.32.28",
             "Exod.37.19"
-          ]
+          ],
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Πιλᾶτος",
@@ -1014,7 +1138,9 @@
           "zh": "彼拉多",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4091",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαλαὰμ",
@@ -1031,7 +1157,9 @@
           "zhRoute": "",
           "zhRejected": "舊約的一個先知",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀβρὰμ",
@@ -1056,7 +1184,9 @@
             "Gen.12.6",
             "Gen.12.7",
             "Gen.12.9"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Δαυὶδ",
@@ -1070,7 +1200,9 @@
           "zh": "大衛",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1138",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Ἰωσαφὰτ",
@@ -1084,7 +1216,9 @@
           "zh": "約沙法",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2498",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Νῶε",
@@ -1099,7 +1233,9 @@
           "zh": "挪亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3575",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Δαμασκοῦ",
@@ -1114,7 +1250,9 @@
           "zh": "大馬色",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1154",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαιθήλ",
@@ -1139,7 +1277,9 @@
             "Gen.35.15",
             "Gen.35.16",
             "Josh.6.26"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Συμεὼν",
@@ -1157,7 +1297,9 @@
           "zhRoute": "",
           "zhRejected": "雅各和利亞所生",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ῥοβοὰμ",
@@ -1185,7 +1327,9 @@
             "1Kgs.12.20",
             "1Kgs.12.21",
             "1Kgs.12.23"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀβεννὴρ",
@@ -1210,7 +1354,9 @@
             "1Sam.26.15",
             "2Sam.2.8",
             "2Sam.2.14"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ζαχαρίας",
@@ -1225,7 +1371,9 @@
           "zh": "撒迦利亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2197",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σάρρα",
@@ -1239,7 +1387,9 @@
           "zh": "撒拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4564",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Λαβὰν",
@@ -1253,7 +1403,9 @@
           "zh": "拉班",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀζαρίας",
@@ -1279,7 +1431,9 @@
             "1Chr.2.38",
             "1Chr.2.39",
             "1Chr.3.12"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰδουμαίας",
@@ -1293,7 +1447,9 @@
           "zh": "以土買",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2401",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Μαδιάμ",
@@ -1307,7 +1463,9 @@
           "zh": "米甸",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3099",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀσσοὺρ",
@@ -1332,7 +1490,9 @@
             "1Chr.5.6",
             "1Chr.5.26",
             "2Chr.28.16"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σιών",
@@ -1347,7 +1507,9 @@
           "zh": "錫安",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4622",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαλὰκ",
@@ -1361,7 +1523,9 @@
           "zh": "巴勒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G904",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἰωρὰμ",
@@ -1375,7 +1539,9 @@
           "zh": "約蘭",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2496",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀσὰ",
@@ -1388,7 +1554,9 @@
           "zh": "亞撒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G760",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀντίοχος",
@@ -1399,7 +1567,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Ῥαχὴλ",
@@ -1415,7 +1585,9 @@
           "zhSource": "biblical_people",
           "strong": "G4478",
           "zhRoute": "英文名",
-          "zhEnglish": "Rachel"
+          "zhEnglish": "Rachel",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Τύρου",
@@ -1441,7 +1613,9 @@
             "1Kgs.9.11",
             "1Kgs.9.12",
             "1Chr.14.1"
-          ]
+          ],
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἐδώμ",
@@ -1452,7 +1626,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἡρῴδης",
@@ -1466,7 +1642,9 @@
           "zh": "希律",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2264",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Σοδόμων",
@@ -1481,7 +1659,9 @@
           "zh": "所多瑪",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4670",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ναθὰν",
@@ -1495,7 +1675,9 @@
           "zh": "拿單",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3481",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἰωδᾶε",
@@ -1506,7 +1688,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰεσσαὶ",
@@ -1521,7 +1705,9 @@
           "zh": "耶西",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2421",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀμαλὴκ",
@@ -1535,7 +1721,9 @@
           "zh": "亞瑪力",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ζαβουλὼν",
@@ -1549,7 +1737,9 @@
           "zh": "西布倫",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2194",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Φίλιππος",
@@ -1564,7 +1754,9 @@
           "zh": "腓力",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5376",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Δημήτριος",
@@ -1578,7 +1770,9 @@
           "zh": "底米丟",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1216",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σεδεκίας",
@@ -1603,7 +1797,9 @@
             "2Chr.18.23",
             "2Chr.36.10",
             "2Chr.36.11"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀδὰμ",
@@ -1618,7 +1814,9 @@
           "zh": "亞當",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G76",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ἁνανίας",
@@ -1633,7 +1831,9 @@
           "zh": "亞拿尼亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G367",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γεδεὼν",
@@ -1647,7 +1847,9 @@
           "zh": "基甸",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1066",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Καὰθ",
@@ -1663,7 +1865,9 @@
           "zhRoute": "",
           "zhRejected": "瑪押",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Μαρίας",
@@ -1678,7 +1882,9 @@
           "zh": "馬利亞",
           "zhSource": "theologians",
           "strong": "G3137",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαμψών",
@@ -1692,7 +1898,9 @@
           "zh": "參孫",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4546",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ὀλοφέρνου",
@@ -1704,7 +1912,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Συχὲμ",
@@ -1718,7 +1928,9 @@
           "zh": "示劍",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4966",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Πτολεμαῖος",
@@ -1733,7 +1945,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G4424",
-          "zhEnglish": "Ptolemais"
+          "zhEnglish": "Ptolemais",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Ἀσὰφ",
@@ -1760,7 +1974,9 @@
             "1Chr.25.1",
             "1Chr.25.2",
             "1Chr.25.6"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀσὴρ",
@@ -1774,7 +1990,9 @@
           "zh": "亞設",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G768",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Λὼτ",
@@ -1789,7 +2007,9 @@
           "zh": "羅得",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3091",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Νικάνωρ",
@@ -1803,7 +2023,9 @@
           "zh": "尼迦挪",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3527",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Χριστιανοὶ",
@@ -1817,7 +2039,9 @@
           "zh": "基督徒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5546",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σαδὼκ",
@@ -1831,7 +2055,9 @@
           "zh": "撒督",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4524",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰάκωβον",
@@ -1844,7 +2070,9 @@
           "zh": "雅各",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2385",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μαριὰμ",
@@ -1871,7 +2099,9 @@
             "Num.12.15",
             "Num.20.1",
             "Num.26.59"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Καίσαρος",
@@ -1884,7 +2114,9 @@
           "kind": "",
           "zh": "",
           "zhSource": "",
-          "strong": "G2541"
+          "strong": "G2541",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Τιμόθεος",
@@ -1898,7 +2130,9 @@
           "zh": "提摩太",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5095",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Κόρε",
@@ -1912,7 +2146,9 @@
           "zh": "可拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2879",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰσμαὴλ",
@@ -1928,7 +2164,9 @@
           "zhRoute": "",
           "zhRejected": "以色列",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἰσσαχὰρ",
@@ -1942,7 +2180,9 @@
           "zh": "以薩迦",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Καδὴς",
@@ -1966,7 +2206,9 @@
             "Num.20.22",
             "Num.27.14",
             "Num.32.8"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Χαλὲβ",
@@ -1977,7 +2219,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Χετταῖον",
@@ -2001,7 +2245,9 @@
             "Gen.49.30",
             "Gen.50.13",
             "Exod.23.23"
-          ]
+          ],
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Οὐρείας",
@@ -2029,7 +2275,9 @@
           ],
           "zhRejected": "烏利亞",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γαβαὼν",
@@ -2053,7 +2301,9 @@
             "Josh.10.6",
             "Josh.10.10",
             "Josh.10.12"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀμὼς",
@@ -2068,7 +2318,9 @@
           "zh": "亞摩斯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G301",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἠλίας",
@@ -2083,7 +2335,9 @@
           "zh": "以利亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2243",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ῥεβέκκα",
@@ -2100,7 +2354,9 @@
           "strong": "G4479",
           "zhEnglish": "Rebecca",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἁλληλουιά",
@@ -2118,7 +2374,9 @@
           "zhRoute": "",
           "zhRejected": "你們要讚美神",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥαγουὴλ",
@@ -2129,7 +2387,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁδὲρ",
@@ -2145,7 +2405,9 @@
           "zhRoute": "",
           "zhRejected": "沒有",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωνᾶς",
@@ -2160,7 +2422,9 @@
           "zh": "約拿",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2495",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σύρος",
@@ -2175,7 +2439,9 @@
           "zh": "敘利亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4948",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἐβραίων",
@@ -2190,7 +2456,9 @@
           "zh": "希伯來民族",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1445",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Νινευή",
@@ -2203,7 +2471,9 @@
           "zh": "尼尼微",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3535",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰεβουσαῖον",
@@ -2214,7 +2484,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βασὰν",
@@ -2239,7 +2511,9 @@
             "Deut.3.11",
             "Deut.3.13",
             "Deut.4.43"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Περσῶν",
@@ -2253,7 +2527,9 @@
           "zh": "彼息氏",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4069",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σηὼν",
@@ -2269,7 +2545,9 @@
           "zhRoute": "",
           "zhRejected": "錫安",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἑσεβὼν",
@@ -2294,7 +2572,9 @@
             "Num.32.37",
             "Deut.1.4",
             "Deut.2.24"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γαί",
@@ -2305,7 +2585,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ναυὴ",
@@ -2322,7 +2604,9 @@
           "zhRoute": "",
           "zhRejected": "大型船隻",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βηρσάβεε",
@@ -2333,7 +2617,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀλέξανδρος",
@@ -2347,7 +2633,9 @@
           "zh": "亞力山大",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G223",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Γέθ",
@@ -2358,7 +2646,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀβιαθὰρ",
@@ -2372,7 +2662,9 @@
           "zh": "亞比亞他",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G8",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γάζης",
@@ -2386,7 +2678,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G1047",
-          "zhEnglish": "Gaza"
+          "zhEnglish": "Gaza",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥώμην",
@@ -2401,7 +2695,9 @@
           "zh": "羅馬",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4516",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀσίας",
@@ -2416,7 +2712,9 @@
           "zh": "亞細亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G773",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Αἰθιόπων",
@@ -2431,7 +2729,9 @@
           "zh": "埃提阿伯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G128",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γαβαά",
@@ -2456,7 +2756,9 @@
             "Judg.19.15",
             "Judg.19.16",
             "Judg.20.4"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀμνὼν",
@@ -2469,7 +2771,9 @@
           "zh": "哀嫩",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G137",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαναίας",
@@ -2493,7 +2797,9 @@
             "1Kgs.1.26",
             "1Kgs.1.32",
             "1Kgs.1.36"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μακκαβαῖος",
@@ -2504,7 +2810,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥωμαίων",
@@ -2519,7 +2827,9 @@
           "zh": "羅馬",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4514",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰεφθάε",
@@ -2533,7 +2843,9 @@
           "zh": "耶弗他",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2422",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Θαιμάν",
@@ -2544,7 +2856,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γάλγαλα",
@@ -2569,7 +2883,9 @@
             "1Sam.13.8",
             "1Sam.13.12",
             "1Sam.15.12"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βόος",
@@ -2595,7 +2911,9 @@
             "Ruth.2.11",
             "Ruth.2.14",
             "Ruth.2.15"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Βαρναβᾶς",
@@ -2609,7 +2927,9 @@
           "zh": "巴拿巴",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G921",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Σικίμων",
@@ -2634,7 +2954,9 @@
             "Judg.9.24",
             "Judg.9.25",
             "Judg.9.26"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μεμφιβόσθε",
@@ -2645,7 +2967,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Πολύκαρπος",
@@ -2657,7 +2981,9 @@
           "kind": "person",
           "zh": "士每拿的坡旅甲",
           "zhSource": "theologians",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "教父與聖人",
+          "categoryRoute": "theologians"
         },
         {
           "headword": "Ἀχὰζ",
@@ -2672,7 +2998,9 @@
           "zh": "亞哈斯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G881",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἄζωτον",
@@ -2689,7 +3017,9 @@
           "zhRoute": "",
           "zhRejected": "非利士人的五個重",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Εὑαῖον",
@@ -2705,7 +3035,9 @@
           "zhRoute": "",
           "zhRejected": "橄欖油",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γεδσὼν",
@@ -2721,7 +3053,9 @@
           "zhRoute": "",
           "zhRejected": "基甸",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀβιὰ",
@@ -2735,7 +3069,9 @@
           "zh": "亞比雅",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G7",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Εὐφράτην",
@@ -2749,7 +3085,9 @@
           "zh": "幼發拉底河",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2166",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἐλιὰβ",
@@ -2762,7 +3100,9 @@
           "zh": "以利押",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Γοδολίαν",
@@ -2782,7 +3122,9 @@
             "2Kgs.25.23",
             "2Kgs.25.24",
             "2Kgs.25.25"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Δαρείου",
@@ -2807,7 +3149,9 @@
             "Neh.12.22",
             "Zech.1.1",
             "Zech.1.7"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γόμορρα",
@@ -2822,7 +3166,9 @@
           "zh": "蛾摩拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1116",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἑνὼχ",
@@ -2837,7 +3183,9 @@
           "zh": "以諾",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1802",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰωὴλ",
@@ -2851,7 +3199,9 @@
           "zh": "約珥",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2493",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Φερεζαῖον",
@@ -2875,7 +3225,9 @@
             "Deut.7.1",
             "Josh.3.10",
             "Josh.9.1"
-          ]
+          ],
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀβιμέλεχ",
@@ -2888,7 +3240,9 @@
           "zh": "亞比米勒",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Λεία",
@@ -2913,7 +3267,9 @@
             "Gen.29.32",
             "Gen.29.33",
             "Gen.30.9"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀρνών",
@@ -2936,7 +3292,9 @@
             "Num.21.28",
             "Deut.2.24",
             "Deut.2.36"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαροὺχ",
@@ -2952,7 +3310,9 @@
           "zhRoute": "",
           "zhRejected": "西鹿",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἰόππην",
@@ -2966,7 +3326,9 @@
           "zh": "約帕",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2445",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Λυσίας",
@@ -2980,7 +3342,9 @@
           "zh": "呂西亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3079",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Κάιν",
@@ -2996,7 +3360,9 @@
           "zhSource": "biblical_people",
           "strong": "G2535",
           "zhRoute": "英文名",
-          "zhEnglish": "Cain"
+          "zhEnglish": "Cain",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Βαασὰ",
@@ -3021,7 +3387,9 @@
             "1Kgs.15.33",
             "1Kgs.16.1",
             "1Kgs.16.3"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ζοροβαβὲλ",
@@ -3035,7 +3403,9 @@
           "zh": "所羅巴伯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2216",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰωανὰν",
@@ -3061,7 +3431,9 @@
             "Ezra.10.6",
             "Ezra.10.28",
             "Neh.12.13"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀντιόχειαν",
@@ -3076,7 +3448,9 @@
           "zh": "安提阿",
           "zhSource": "place_names",
           "strong": "G490",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ναβὰτ",
@@ -3103,7 +3477,9 @@
           ],
           "zhRejected": "羅波安",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἁζαὴλ",
@@ -3128,7 +3504,9 @@
             "2Kgs.8.28",
             "2Kgs.8.29",
             "2Kgs.9.14"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Κύρου",
@@ -3145,7 +3523,9 @@
           "zhRoute": "",
           "zhRejected": "使生效",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Φάρες",
@@ -3159,7 +3539,9 @@
           "zh": "法勒斯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5329",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μεσοποταμίαν",
@@ -3173,7 +3555,9 @@
           "zh": "美索不達米亞",
           "zhSource": "place_names",
           "strong": "G3318",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Καρμήλῳ",
@@ -3184,7 +3568,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βηθλέεμ",
@@ -3199,7 +3585,9 @@
           "zh": "伯利恆",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G965",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἅβελ",
@@ -3214,7 +3602,9 @@
           "zh": "亞伯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G6",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μακεδονίαν",
@@ -3227,7 +3617,9 @@
           "zh": "馬其頓",
           "zhSource": "place_names",
           "strong": "G3109",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἰεζάβελ",
@@ -3241,7 +3633,9 @@
           "zh": "耶洗別",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2403",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰθαμάρ",
@@ -3269,7 +3663,9 @@
           ],
           "zhRejected": "亞倫",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ναβὰλ",
@@ -3294,7 +3690,9 @@
             "1Sam.25.22",
             "1Sam.25.25",
             "1Sam.25.26"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ὀρνὰ",
@@ -3319,7 +3717,9 @@
             "1Chr.2.18",
             "1Chr.3.21",
             "1Chr.21.15"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Τρύφων",
@@ -3333,7 +3733,9 @@
           "zh": "特里弗",
           "zhSource": "theologians",
           "strong": "G5167",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ῥαμὰ",
@@ -3348,7 +3750,9 @@
           "zhSource": "biblical_people",
           "strong": "G4471",
           "zhRoute": "英文名",
-          "zhEnglish": "Rama"
+          "zhEnglish": "Rama",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ματταθίας",
@@ -3362,7 +3766,9 @@
           "zh": "瑪他提亞",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3161",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ναδὰβ",
@@ -3376,7 +3782,9 @@
           "zh": "拿答",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ὣρ",
@@ -3385,7 +3793,9 @@
           "byCorpus": {
             "septuagint": 21
           },
-          "kind": ""
+          "kind": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀσκάλωνα",
@@ -3398,7 +3808,9 @@
           "zh": "",
           "zhSource": "",
           "zhRoute": "",
-          "zhReview": "由經節對位取得，建議複核"
+          "zhReview": "由經節對位取得，建議複核",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀγχοὺς",
@@ -3423,7 +3835,9 @@
             "1Sam.27.9",
             "1Sam.27.10",
             "1Sam.27.12"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁδραάζαρ",
@@ -3448,7 +3862,9 @@
             "2Sam.10.16",
             "2Sam.10.19",
             "1Kgs.14.26"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥοὺθ",
@@ -3462,7 +3878,9 @@
           "zh": "路得",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4503",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σιδῶνος",
@@ -3476,7 +3894,9 @@
           "zh": "西頓",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4605",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ναχὼρ",
@@ -3490,7 +3910,9 @@
           "zh": "拿鶴",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3493",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ὢγ",
@@ -3518,7 +3940,9 @@
           ],
           "zhRejected": "巴珊王噩",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μασσηφά",
@@ -3543,7 +3967,9 @@
             "Judg.21.8",
             "1Sam.7.5",
             "1Sam.7.6"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαφὰν",
@@ -3559,7 +3985,9 @@
           "zhRoute": "",
           "zhRejected": "字意",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαιθλέεμ",
@@ -3584,7 +4012,9 @@
             "Ruth.1.22",
             "Ruth.2.4",
             "Ruth.4.11"
-          ]
+          ],
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Βαιθσάμυς",
@@ -3609,7 +4039,9 @@
             "1Sam.6.13",
             "1Sam.6.14",
             "1Sam.6.15"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βακχίδης",
@@ -3620,7 +4052,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰάσων",
@@ -3634,7 +4068,9 @@
           "zh": "耶孫",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2394",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀκκαρὼν",
@@ -3659,7 +4095,9 @@
             "1Sam.17.52",
             "2Kgs.1.2",
             "2Kgs.1.3"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μανῶε",
@@ -3685,7 +4123,9 @@
             "Judg.13.16",
             "Judg.13.17",
             "Judg.13.19"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μελχὸλ",
@@ -3710,7 +4150,9 @@
             "1Sam.25.44",
             "2Sam.3.13",
             "2Sam.3.14"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαμαίας",
@@ -3721,7 +4163,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωαθὰμ",
@@ -3735,7 +4179,9 @@
           "zh": "約坦",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2488",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰεχονίας",
@@ -3749,7 +4195,9 @@
           "zh": "耶哥尼雅",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2423",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σήμ",
@@ -3766,7 +4214,9 @@
           "zhRoute": "",
           "zhRejected": "閃的意思是",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ναθαναὴλ",
@@ -3780,7 +4230,9 @@
           "zh": "拿但業",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3482",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γὼγ",
@@ -3794,7 +4246,9 @@
           "zh": "歌革",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1136",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σάρα",
@@ -3807,7 +4261,9 @@
           "zh": "撒拉",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Χωρήβ",
@@ -3832,7 +4288,9 @@
             "Deut.4.15",
             "Deut.5.2",
             "Deut.9.8"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαρουίας",
@@ -3857,7 +4315,9 @@
             "2Sam.16.10",
             "2Sam.17.25",
             "2Sam.18.2"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ναβουθαὶ",
@@ -3868,7 +4328,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σολομὼν",
@@ -3883,7 +4345,9 @@
           "zh": "所羅門",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4672",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "君王",
+          "categoryRoute": "historical_rulers"
         },
         {
           "headword": "Ἀβιοὺδ",
@@ -3898,7 +4362,9 @@
           "zh": "亞比玉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G10",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Καισάρειαν",
@@ -3911,7 +4377,9 @@
           "zh": "凱撒利亞",
           "zhSource": "place_names",
           "strong": "G2542",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ναιμὰν",
@@ -3938,7 +4406,9 @@
             "2Kgs.5.14",
             "2Kgs.5.17",
             "2Kgs.5.19"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἄραβες",
@@ -3953,7 +4423,9 @@
           "zh": "亞拉伯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G690",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἔφεσον",
@@ -3967,7 +4439,9 @@
           "zh": "以弗所",
           "zhSource": "place_names",
           "strong": "G2181",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀραβίας",
@@ -3982,7 +4456,9 @@
           "zh": "阿拉伯",
           "zhSource": "place_names",
           "strong": "G688",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Σαβὰ",
@@ -3998,7 +4474,9 @@
           "zhRoute": "",
           "zhRejected": "沙拉",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σηλώμ",
@@ -4009,7 +4487,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἐλκανὰ",
@@ -4023,7 +4503,9 @@
           "zh": "以利加拿",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰεφοννὴ",
@@ -4034,7 +4516,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σηλὼ",
@@ -4050,7 +4534,9 @@
           "zhRoute": "",
           "zhRejected": "腐爛",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Δαγὼν",
@@ -4073,7 +4559,9 @@
             "1Sam.5.7",
             "1Chr.10.10",
             "Ezek.20.46"
-          ]
+          ],
+          "category": "神名與稱號",
+          "categoryRoute": "deities"
         },
         {
           "headword": "Θημὰρ",
@@ -4086,7 +4574,9 @@
           "zh": "他瑪",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2283",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωαχὰς",
@@ -4111,7 +4601,9 @@
             "2Kgs.13.22",
             "2Kgs.13.25",
             "2Kgs.14.1"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Καφαρναοὺμ",
@@ -4123,7 +4615,9 @@
           "kind": "place",
           "zh": "迦百農",
           "zhSource": "place_names",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἁγὰρ",
@@ -4137,7 +4631,9 @@
           "zh": "夏甲",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G28",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ῥαὰβ",
@@ -4153,7 +4649,9 @@
           "zhSource": "biblical_people",
           "strong": "G4460",
           "zhRoute": "英文名",
-          "zhEnglish": "Rahab"
+          "zhEnglish": "Rahab",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Χάμ",
@@ -4166,7 +4664,9 @@
           "zh": "含",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἐφρὼν",
@@ -4182,7 +4682,9 @@
           "zhRoute": "",
           "zhRejected": "愚昧",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἐφράθα",
@@ -4198,7 +4700,9 @@
           "zhRoute": "",
           "zhRejected": "打開吧",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰοθὸρ",
@@ -4223,7 +4727,9 @@
             "Exod.18.9",
             "Exod.18.10",
             "Exod.18.12"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἑρμᾶ",
@@ -4240,7 +4746,9 @@
           "zhRoute": "",
           "zhRejected": "旅行用馬車",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Νὴρ",
@@ -4256,7 +4764,9 @@
           "zhRoute": "",
           "zhRejected": "空氣",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀσαὴλ",
@@ -4281,7 +4791,9 @@
             "2Sam.2.32",
             "2Sam.3.27",
             "2Sam.3.30"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἁγγαίου",
@@ -4307,7 +4819,9 @@
             "Hag.2.10",
             "Hag.2.13",
             "Hag.2.14"
-          ]
+          ],
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Ὀνίαν",
@@ -4323,7 +4837,9 @@
           "zhRoute": "",
           "zhRejected": "烏西亞",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἄλκιμος",
@@ -4335,7 +4851,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μενέλαος",
@@ -4346,7 +4864,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥαββί",
@@ -4359,7 +4879,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G4461",
-          "zhEnglish": "Master"
+          "zhEnglish": "Master",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Λάζαρος",
@@ -4372,7 +4894,9 @@
           "zh": "拉撒路",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2976",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Κεδρών",
@@ -4386,7 +4910,9 @@
           "zh": "汲淪",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2748",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Μήδων",
@@ -4400,7 +4926,9 @@
           "zh": "米底亞人",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3370",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Κιλικίας",
@@ -4415,7 +4943,9 @@
           "zh": "基利家",
           "zhSource": "place_names",
           "strong": "G2791",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Χαρράν",
@@ -4429,7 +4959,9 @@
           "zh": "哈蘭",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5488",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σινᾶ",
@@ -4444,7 +4976,9 @@
           "zh": "西乃",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4614",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σαῦλος",
@@ -4457,7 +4991,9 @@
           "zh": "掃羅",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4569",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Ὡσῆε",
@@ -4472,7 +5008,9 @@
           "zh": "何西阿",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5617",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Τίτου",
@@ -4487,7 +5025,9 @@
           "zh": "提多",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5103",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βαρὰκ",
@@ -4501,7 +5041,9 @@
           "zh": "巴拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G913",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Γεργεσαῖον",
@@ -4512,7 +5054,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Αἱμὰν",
@@ -4523,7 +5067,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σοκχὼθ",
@@ -4548,7 +5094,9 @@
             "Judg.8.6",
             "Judg.8.8",
             "Judg.8.14"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Θερσά",
@@ -4573,7 +5121,9 @@
             "1Kgs.16.8",
             "1Kgs.16.9",
             "1Kgs.16.15"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Γοθολία",
@@ -4598,7 +5148,9 @@
             "2Chr.22.2",
             "2Chr.22.10",
             "2Chr.22.11"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥαφαὴλ",
@@ -4609,7 +5161,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαβυλωνίας",
@@ -4621,7 +5175,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαιτυλουὰ",
@@ -4632,7 +5188,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μηδίαν",
@@ -4648,7 +5206,9 @@
           "zhRoute": "",
           "zhRejected": "米甸",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ζάρα",
@@ -4662,7 +5222,9 @@
           "zh": "謝拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2196",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαλαθιὴλ",
@@ -4676,7 +5238,9 @@
           "zh": "撒拉鐵",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4528",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σαδδουκαίων",
@@ -4689,7 +5253,9 @@
           "zh": "撒都該人",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4523",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Λευὶ",
@@ -4703,7 +5269,9 @@
           "zh": "利未",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3017",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "族長與先知",
+          "categoryRoute": "手列族長先知"
         },
         {
           "headword": "Σιδωνίων",
@@ -4717,7 +5285,9 @@
           "zh": "西頓",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4606",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἐμμὼρ",
@@ -4731,7 +5301,9 @@
           "zh": "哈抹",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1697",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Φοινίκης",
@@ -4745,7 +5317,9 @@
           "zh": "腓尼基",
           "zhSource": "place_names",
           "strong": "G5403",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀὼδ",
@@ -4756,7 +5330,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀροὴρ",
@@ -4781,7 +5357,9 @@
             "Josh.13.16",
             "Judg.11.26",
             "Judg.11.33"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαναιὰ",
@@ -4805,7 +5383,9 @@
             "1Kgs.1.26",
             "1Kgs.1.32",
             "1Kgs.1.36"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ὀζά",
@@ -4830,7 +5410,9 @@
             "2Kgs.21.26",
             "1Chr.2.33",
             "1Chr.6.29"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀχιὼρ",
@@ -4841,7 +5423,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀραβά",
@@ -4866,7 +5450,9 @@
             "Josh.12.8",
             "Josh.13.25",
             "2Kgs.14.25"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωναδὰβ",
@@ -4877,7 +5463,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαμαιὰ",
@@ -4888,7 +5476,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαραιὰ",
@@ -4899,7 +5489,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Τωβιὰ",
@@ -4924,7 +5516,9 @@
             "Neh.6.19",
             "Neh.7.62",
             "Neh.13.4"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀπολλώνιος",
@@ -4936,7 +5530,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀρὰμ",
@@ -4950,7 +5546,9 @@
           "zh": "亞蘭",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G689",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ναζωραῖος",
@@ -4963,7 +5561,9 @@
           "zh": "拿撒勒人",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3480",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἀνδρέας",
@@ -4976,7 +5576,9 @@
           "zh": "安得烈",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G406",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Ἰεριχὼ",
@@ -4991,7 +5593,9 @@
           "zh": "耶利哥",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2410",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἅννα",
@@ -5005,7 +5609,9 @@
           "zh": "亞拿",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G451",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ποντίου",
@@ -5022,7 +5628,9 @@
           "zhRoute": "",
           "zhRejected": "將耶穌釘死十字架",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἢρ",
@@ -5036,7 +5644,9 @@
           "zh": "珥",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2262",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Θάρα",
@@ -5050,7 +5660,9 @@
           "zh": "他拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2291",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀρφαξὰδ",
@@ -5064,7 +5676,9 @@
           "zh": "亞法撒",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G742",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Λάμεχ",
@@ -5079,7 +5693,9 @@
           "zh": "拉麥",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2984",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μάρθα",
@@ -5092,7 +5708,9 @@
           "zh": "馬大",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3136",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Φῆστος",
@@ -5108,7 +5726,9 @@
           "zhRoute": "",
           "zhRejected": "接續腓力斯的猶大",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Περσίδα",
@@ -5123,7 +5743,9 @@
           "zh": "彼息氏",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4069",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἁρρὰν",
@@ -5139,7 +5761,9 @@
           "zhRoute": "",
           "zhRejected": "男的",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Κενέζ",
@@ -5150,7 +5774,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰδουμαῖοι",
@@ -5173,7 +5799,9 @@
           ],
           "zhRejected": "東人",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γάζερ",
@@ -5184,7 +5812,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαιθωρὼν",
@@ -5195,7 +5825,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀναθὼθ",
@@ -5219,7 +5851,9 @@
             "Ezra.2.23",
             "Neh.10.19",
             "Isa.10.30"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Νεχαὼ",
@@ -5242,7 +5876,9 @@
             "2Chr.35.22",
             "2Chr.36.2",
             "2Chr.36.4"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁνὰν",
@@ -5263,7 +5899,9 @@
             "1Chr.3.21",
             "1Chr.8.23",
             "1Chr.8.24"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαλτασὰρ",
@@ -5274,7 +5912,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σεδράχ",
@@ -5285,7 +5925,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ναασσὼν",
@@ -5299,7 +5941,9 @@
           "zh": "拿順",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3476",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ζεβεδαίου",
@@ -5312,7 +5956,9 @@
           "zh": "西庇太",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2199",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Βηθανίαν",
@@ -5325,7 +5971,9 @@
           "zh": "伯大尼",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G963",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Μαγδαληνὴ",
@@ -5338,7 +5986,9 @@
           "zh": "抹大拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3094",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἐλιέζερ",
@@ -5352,7 +6002,9 @@
           "zh": "以利以謝",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1663",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σιλᾶν",
@@ -5365,7 +6017,9 @@
           "zh": "西拉",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G4609",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Βοσόρ",
@@ -5379,7 +6033,9 @@
           "zh": "比珥",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1007",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Αἰθιοπίας",
@@ -5403,7 +6059,9 @@
             "Ezek.30.9",
             "Nah.3.9",
             "Zeph.3.10"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἀδὰ",
@@ -5416,7 +6074,9 @@
           "zh": "亞大",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰάφεθ",
@@ -5429,7 +6089,9 @@
           "zh": "雅弗",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μελχὰ",
@@ -5445,7 +6107,9 @@
           "zhRoute": "",
           "zhRejected": "麥基",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Κηδάρ",
@@ -5458,7 +6122,9 @@
           "zh": "基達",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Δεββωρὰ",
@@ -5471,7 +6137,9 @@
           "zh": "底波拉",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰαζὴρ",
@@ -5496,7 +6164,9 @@
             "Josh.21.39",
             "Isa.16.8",
             "Isa.16.9"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁερμών",
@@ -5521,7 +6191,9 @@
             "Josh.13.11",
             "Judg.3.3",
             "1Chr.5.23"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ὀδολλάμ",
@@ -5532,7 +6204,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁσὼρ",
@@ -5557,7 +6231,9 @@
             "Josh.19.36",
             "Judg.4.2",
             "Judg.4.17"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥηχὰβ",
@@ -5569,7 +6245,9 @@
           "kind": "",
           "zh": "",
           "zhSource": "",
-          "strong": "G4477"
+          "strong": "G4477",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ζέβεε",
@@ -5595,7 +6273,9 @@
           ],
           "zhRejected": "西巴和撒慕拿",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἁρμαθάιμ",
@@ -5620,7 +6300,9 @@
             "1Sam.16.13",
             "1Sam.19.18",
             "1Sam.19.22"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σουβὰ",
@@ -5631,7 +6313,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥομελίου",
@@ -5659,7 +6343,9 @@
           ],
           "zhRejected": "利瑪利的兒子",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωσεδὲκ",
@@ -5687,7 +6373,9 @@
           ],
           "zhRejected": "書亞",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Μισάχ",
@@ -5698,7 +6386,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀβδεναγώ",
@@ -5709,7 +6399,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἐκβατάνοις",
@@ -5720,7 +6412,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἡλιόδωρον",
@@ -5731,7 +6425,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Θεοτόκου",
@@ -5742,7 +6438,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Θαμὰρ",
@@ -5756,7 +6454,9 @@
           "zh": "他瑪",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2283",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Θωμᾶς",
@@ -5769,7 +6469,9 @@
           "zh": "多馬",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2381",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Γαλιλαῖοι",
@@ -5782,7 +6484,9 @@
           "zh": "加利利",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1057",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Βαραββᾶν",
@@ -5795,7 +6499,9 @@
           "zh": "巴拉巴",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G912",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σὴθ",
@@ -5809,7 +6515,9 @@
           "zh": "塞特",
           "zhSource": "deities",
           "strong": "G4589",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἰσραηλῖται",
@@ -5824,7 +6532,9 @@
           "zh": "以色列",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G2475",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "民族與國名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀχαΐας",
@@ -5838,7 +6548,9 @@
           "zh": "亞該亞",
           "zhSource": "place_names",
           "strong": "G882",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Ἀπολλῶς",
@@ -5852,7 +6564,9 @@
           "zh": "亞波羅",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G625",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Ἐφεσίων",
@@ -5869,7 +6583,9 @@
           "zhRoute": "",
           "zhRejected": "以弗所出生的或居",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Φῆλιξ",
@@ -5883,7 +6599,9 @@
           "zh": "腓力斯",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5344",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "教宗與主教",
+          "categoryRoute": "episcopal_succession"
         },
         {
           "headword": "Ἀγρίππα",
@@ -5896,7 +6614,9 @@
           "zh": "亞基帕",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G67",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γεράρων",
@@ -5907,7 +6627,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἀσταρὼθ",
@@ -5918,7 +6640,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Φαράν",
@@ -5934,7 +6658,9 @@
           "zhRoute": "",
           "zhRejected": "法老",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαθουὴλ",
@@ -5959,7 +6685,9 @@
             "Gen.28.2",
             "Gen.28.5",
             "Gen.29.1"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Χέτ",
@@ -5972,7 +6700,9 @@
           "zh": "赫",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Βεὼρ",
@@ -5985,7 +6715,9 @@
           "zh": "比珥",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Φογώρ",
@@ -6009,7 +6741,9 @@
             "Deut.34.6",
             "Josh.22.17",
             "1Chr.1.50"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαρνή",
@@ -6020,7 +6754,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥεμμὼν",
@@ -6045,7 +6781,9 @@
             "2Sam.4.9",
             "2Kgs.8.28",
             "2Kgs.8.29"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γεθθαίου",
@@ -6070,7 +6808,9 @@
             "2Sam.18.2",
             "1Chr.13.13",
             "1Chr.20.5"
-          ]
+          ],
+          "category": "民族與國名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σελμανά",
@@ -6096,7 +6836,9 @@
           ],
           "zhRejected": "西巴和撒慕拿",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ὠβήδ",
@@ -6109,7 +6851,9 @@
           "zh": "俄備得",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G5601",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ναὰς",
@@ -6120,7 +6864,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἠλὰ",
@@ -6136,7 +6882,9 @@
           "zhRoute": "",
           "zhRejected": "希伯來文",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Σαρουιὰ",
@@ -6161,7 +6909,9 @@
             "2Sam.16.10",
             "2Sam.17.25",
             "2Sam.18.2"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Ἡμὰθ",
@@ -6177,7 +6927,9 @@
           "zhRoute": "",
           "zhRejected": "我們",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαδδοὺκ",
@@ -6201,7 +6953,9 @@
             "Ezek.40.46",
             "Ezek.42.13",
             "Ezek.43.19"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Φάκεε",
@@ -6226,7 +6980,9 @@
             "2Kgs.16.1",
             "2Kgs.16.5",
             "2Chr.28.6"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Σόρ",
@@ -6251,7 +7007,9 @@
             "Ezek.27.2",
             "Ezek.27.3",
             "Ezek.27.8"
-          ]
+          ],
+          "category": "地名",
+          "categoryRoute": "place_names"
         },
         {
           "headword": "Γοργίας",
@@ -6262,7 +7020,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Κηφᾶς",
@@ -6276,7 +7036,9 @@
           "zh": "磯法",
           "zhSource": "theologians",
           "strong": "G2786",
-          "zhRoute": "詞庫"
+          "zhRoute": "詞庫",
+          "category": "使徒與門徒",
+          "categoryRoute": "手列使徒門徒（原文字形）"
         },
         {
           "headword": "Ὀζεὶ",
@@ -6293,7 +7055,9 @@
           "zhRoute": "",
           "zhRejected": "驅除味道",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μακεδών",
@@ -6307,7 +7071,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G3110",
-          "zhEnglish": "Macedonia"
+          "zhEnglish": "Macedonia",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γάϊος",
@@ -6321,7 +7087,9 @@
           "zh": "該猶",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G1050",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Ἰουδαισμοῦ",
@@ -6339,7 +7107,9 @@
           "zhRoute": "",
           "zhRejected": "猶太教",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Μελχισέδεκ",
@@ -6353,7 +7123,9 @@
           "zh": "麥基洗德",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G3198",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Καινὰν",
@@ -6366,7 +7138,9 @@
           "zh": "",
           "zhSource": "",
           "strong": "G2536",
-          "zhEnglish": "Cainan"
+          "zhEnglish": "Cainan",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰωβάβ",
@@ -6379,7 +7153,9 @@
           "zh": "約巴",
           "zhSource": "biblical_people",
           "zhRoute": "音譯",
-          "zhReview": "音譯比對所得，須複核"
+          "zhReview": "音譯比對所得，須複核",
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Βάλλα",
@@ -6395,7 +7171,9 @@
           "zhRoute": "",
           "zhRejected": "投擲",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Αὐνάν",
@@ -6406,7 +7184,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Αἰνάν",
@@ -6419,7 +7199,9 @@
           "zh": "哀嫩",
           "zhSource": "信望愛 Strong 中文字典",
           "strong": "G137",
-          "zhRoute": "信望愛"
+          "zhRoute": "信望愛",
+          "category": "地名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Γέσεμ",
@@ -6443,7 +7225,9 @@
             "Gen.50.8",
             "Exod.8.22",
             "Exod.9.26"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γηρὰ",
@@ -6454,7 +7238,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰσσαάρ",
@@ -6482,7 +7268,9 @@
           ],
           "zhRejected": "斯哈",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σαλπαὰδ",
@@ -6493,7 +7281,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ναβαὺ",
@@ -6504,7 +7294,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Γάβερ",
@@ -6515,7 +7307,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥαμὼθ",
@@ -6540,7 +7334,9 @@
             "2Chr.18.19",
             "2Chr.18.28",
             "Neh.3.4"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Σεκελὰκ",
@@ -6563,7 +7359,9 @@
             "1Sam.31.13",
             "2Sam.1.1",
             "2Sam.4.10"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Βαμὰ",
@@ -6591,7 +7389,9 @@
           ],
           "zhRejected": "丘壇",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ἰεροβάαλ",
@@ -6615,7 +7415,9 @@
             "Judg.9.24",
             "Judg.9.28",
             "Judg.9.57"
-          ]
+          ],
+          "category": "待歸類",
+          "categoryRoute": ""
         },
         {
           "headword": "Ῥαψάκης",
@@ -6640,7 +7442,9 @@
           ],
           "zhRejected": "亞述",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Νεεμίας",
@@ -6662,7 +7466,9 @@
             "Neh.8.9",
             "Neh.10.1",
             "Neh.12.26"
-          ]
+          ],
+          "category": "其他人名",
+          "categoryRoute": "biblical_people"
         },
         {
           "headword": "Μισαήλ",
@@ -6679,7 +7485,9 @@
           "zhRoute": "",
           "zhRejected": "米迦勒",
           "zhRejectedNote": "逐筆複核後判定不是這個名字的中文（取到字典釋義、對到別的條目，或根本不是專名），已清空待取名管線修好後重填。",
-          "zhRejectedOn": "2026-08-25"
+          "zhRejectedOn": "2026-08-25",
+          "category": "其他人名",
+          "categoryRoute": "既有 kind 欄"
         },
         {
           "headword": "Εἰρηναίου",
@@ -6690,7 +7498,9 @@
           },
           "kind": "",
           "zh": "",
-          "zhSource": ""
+          "zhSource": "",
+          "category": "待歸類",
+          "categoryRoute": ""
         }
       ],
       "namingPolicy": "中文一律取自既有名冊，不自行擬名。優先序：站上「翻譯定名」詞庫（教父與古典名，以希臘原文為鍵）→ 信望愛中文 Strong 字典（新約所見人名地名國族，並據其詞性行判定人名或地名）→ 由 Strong 英文名接 biblical_people → 希臘拼寫轉寫後比對。zhRoute 記錄該筆循哪條路徑定名；「音譯」者須複核。同一英文名對到多個中文名時不擇一，寧留空。"

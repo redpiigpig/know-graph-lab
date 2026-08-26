@@ -37,7 +37,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
     },
     {
       "ordinal": 11,
@@ -73,7 +75,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "ordinal": 12,
@@ -109,7 +113,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "ordinal": 14,
@@ -145,7 +151,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "ordinal": 15,
@@ -181,7 +189,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "ordinal": 19,
@@ -217,7 +227,9 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "דָּוִד",
@@ -251,7 +263,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 553,
       "lesson": 28,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "יְהוּדָה",
@@ -287,7 +301,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 555,
       "lesson": 28,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
     },
     {
       "pointed": "שָׁאוּל",
@@ -321,7 +337,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 559,
       "lesson": 28,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "יַעֲקֹב",
@@ -355,7 +373,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 561,
       "lesson": 29,
-      "lessonSlot": 1
+      "lessonSlot": 1,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "אַהֲרוֹן",
@@ -389,7 +409,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 562,
       "lesson": 29,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "שְׁלֹמֹה",
@@ -423,7 +445,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 568,
       "lesson": 29,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "פְּלִשְׁתִּי",
@@ -457,7 +481,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 569,
       "lesson": 29,
-      "lessonSlot": 9
+      "lessonSlot": 9,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "לֵוִיִּי",
@@ -491,7 +517,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 570,
       "lesson": 29,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "בָּבֶל",
@@ -525,7 +553,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 571,
       "lesson": 29,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְהוֹשׁוּעַ",
@@ -559,7 +589,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 572,
       "lesson": 29,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "יוֹסֵף",
@@ -593,7 +625,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 574,
       "lesson": 29,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "יַרְדֵּן",
@@ -627,7 +661,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 575,
       "lesson": 29,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "מוֹאָב",
@@ -663,7 +699,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 577,
       "lesson": 29,
-      "lessonSlot": 17
+      "lessonSlot": 17,
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
     },
     {
       "pointed": "אֶפְרַיִם",
@@ -699,7 +737,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 578,
       "lesson": 29,
-      "lessonSlot": 18
+      "lessonSlot": 18,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אַבְרָהָם",
@@ -733,7 +773,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 579,
       "lesson": 29,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "בִּנְיָמִין",
@@ -769,7 +811,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 582,
       "lesson": 30,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "צִיּוֹן",
@@ -803,7 +847,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 585,
       "lesson": 30,
-      "lessonSlot": 5
+      "lessonSlot": 5,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "אַשּׁוּר",
@@ -839,7 +885,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 586,
       "lesson": 30,
-      "lessonSlot": 6
+      "lessonSlot": 6,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יִרְמְיָה",
@@ -873,7 +921,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 587,
       "lesson": 30,
-      "lessonSlot": 7
+      "lessonSlot": 7,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "מְנַשֶּׁה",
@@ -909,7 +959,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 588,
       "lesson": 30,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יוֹאָב",
@@ -943,7 +995,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 589,
       "lesson": 30,
-      "lessonSlot": 9
+      "lessonSlot": 9,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "בֵּית־אֵל",
@@ -977,7 +1031,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 590,
       "lesson": 30,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "שְׁמוּאֵל",
@@ -1011,7 +1067,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 592,
       "lesson": 30,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "גִּלְעָד",
@@ -1046,7 +1104,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 594,
       "lesson": 30,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אֲרָם",
@@ -1082,7 +1142,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 595,
       "lesson": 30,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "חִזְקִיָּה",
@@ -1116,7 +1178,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 596,
       "lesson": 30,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "אֲבִישָׁלוֹם",
@@ -1150,7 +1214,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 597,
       "lesson": 30,
-      "lessonSlot": 17
+      "lessonSlot": 17,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "שֹׁמְרוֹן",
@@ -1184,7 +1250,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 599,
       "lesson": 30,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יִצְחָק",
@@ -1218,7 +1286,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 600,
       "lesson": 30,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "עַמּוֹן",
@@ -1254,7 +1324,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 602,
       "lesson": 31,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
     },
     {
       "pointed": "יָרׇבְעָם",
@@ -1288,7 +1360,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 603,
       "lesson": 31,
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "אֱדֹם",
@@ -1323,7 +1397,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 605,
       "lesson": 31,
-      "lessonSlot": 5
+      "lessonSlot": 5,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "עֵשָׂו",
@@ -1358,7 +1434,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 608,
       "lesson": 31,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "כְּנַעַן",
@@ -1393,7 +1471,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 610,
       "lesson": 31,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "地名",
+      "categoryRoute": "place_names"
     },
     {
       "pointed": "אַחְאָב",
@@ -1427,7 +1507,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 611,
       "lesson": 31,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
     },
     {
       "pointed": "אֱמֹרִי",
@@ -1461,7 +1543,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 615,
       "lesson": 31,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְהוֹשָׁפָט",
@@ -1496,7 +1580,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 619,
       "lesson": 31,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בֵּית לֶחֶם",
@@ -1530,7 +1616,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 620,
       "lesson": 31,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "כַּשְׂדִּי",
@@ -1564,7 +1652,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 621,
       "lesson": 32,
-      "lessonSlot": 1
+      "lessonSlot": 1,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְהוּדִי",
@@ -1598,7 +1688,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 623,
       "lesson": 32,
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְהוֹנָתָן",
@@ -1632,7 +1724,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 625,
       "lesson": 32,
-      "lessonSlot": 5
+      "lessonSlot": 5,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "מִצְרִי",
@@ -1666,7 +1760,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 627,
       "lesson": 32,
-      "lessonSlot": 7
+      "lessonSlot": 7,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "כְּנַעַנִי",
@@ -1700,7 +1796,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 633,
       "lesson": 32,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "רְאוּבֵן",
@@ -1734,7 +1832,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 635,
       "lesson": 32,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "גָּד",
@@ -1770,7 +1870,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 636,
       "lesson": 32,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אֶלְעָזָר",
@@ -1804,7 +1906,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 637,
       "lesson": 32,
-      "lessonSlot": 17
+      "lessonSlot": 17,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "חֶבְרוֹן",
@@ -1839,7 +1943,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 640,
       "lesson": 32,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אֵלִיָּה",
@@ -1873,7 +1979,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 641,
       "lesson": 33,
-      "lessonSlot": 1
+      "lessonSlot": 1,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "לְבָנוֹן",
@@ -1907,7 +2015,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 642,
       "lesson": 33,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "דָּן",
@@ -1943,7 +2053,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 644,
       "lesson": 33,
-      "lessonSlot": 4
+      "lessonSlot": 4,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בְּאֵר שֶׁבַע",
@@ -1977,7 +2089,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 652,
       "lesson": 33,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "אֲבִימֶלֶךְ",
@@ -2011,7 +2125,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 657,
       "lesson": 33,
-      "lessonSlot": 17
+      "lessonSlot": 17,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "לֵוִי",
@@ -2045,7 +2161,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 676,
       "lesson": 34,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "צִדְקִיָּה",
@@ -2079,7 +2197,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 679,
       "lesson": 34,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "שְׁכֶם",
@@ -2113,7 +2233,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 682,
       "lesson": 35,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "אַבְנֵר",
@@ -2147,7 +2269,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 683,
       "lesson": 35,
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אַבְרָם",
@@ -2181,7 +2305,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 692,
       "lesson": 35,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בִּלְעָם",
@@ -2216,7 +2342,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 693,
       "lesson": 35,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בָּשָׁן",
@@ -2250,7 +2378,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 701,
       "lesson": 36,
-      "lessonSlot": 1
+      "lessonSlot": 1,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "נְבוּכַדְנֶאצַּר",
@@ -2284,7 +2414,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 702,
       "lesson": 36,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "מׇרְדְּכַי",
@@ -2318,7 +2450,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 707,
       "lesson": 36,
-      "lessonSlot": 7
+      "lessonSlot": 7,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "מִדְיָן",
@@ -2354,7 +2488,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 709,
       "lesson": 36,
-      "lessonSlot": 9
+      "lessonSlot": 9,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יֵהוּא",
@@ -2388,7 +2524,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 720,
       "lesson": 36,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "אָסָא",
@@ -2422,7 +2560,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 722,
       "lesson": 37,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
     },
     {
       "pointed": "אֱלִישָׁע",
@@ -2456,7 +2596,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 725,
       "lesson": 37,
-      "lessonSlot": 5
+      "lessonSlot": 5,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "אִיּוֹב",
@@ -2490,7 +2632,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 730,
       "lesson": 37,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
     },
     {
       "pointed": "יְרִיחוֹ",
@@ -2524,7 +2668,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 732,
       "lesson": 37,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "לָבָן",
@@ -2559,7 +2705,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 751,
       "lesson": 38,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אֶסְתֵּר",
@@ -2593,7 +2741,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 753,
       "lesson": 38,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "הָמָן",
@@ -2627,7 +2777,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 766,
       "lesson": 39,
-      "lessonSlot": 6
+      "lessonSlot": 6,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יֹאשִׁיָּה",
@@ -2661,7 +2813,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 767,
       "lesson": 39,
-      "lessonSlot": 7
+      "lessonSlot": 7,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "צָדוֹק",
@@ -2695,7 +2849,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 768,
       "lesson": 39,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "נַפְתָּלִי",
@@ -2731,7 +2887,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 780,
       "lesson": 39,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יְהוֹיָדָע",
@@ -2765,7 +2923,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 783,
       "lesson": 40,
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "רְחַבְעָם",
@@ -2799,7 +2959,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 795,
       "lesson": 40,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בֶּן־הֲדַד",
@@ -2833,7 +2995,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 802,
       "lesson": 41,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יִשְׁמָעֵאל",
@@ -2867,7 +3031,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 823,
       "lesson": 42,
-      "lessonSlot": 3
+      "lessonSlot": 3,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "עֲזַרְיָה",
@@ -2901,7 +3067,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 824,
       "lesson": 42,
-      "lessonSlot": 4
+      "lessonSlot": 4,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "חִתִּי",
@@ -2935,7 +3103,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 828,
       "lesson": 42,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יוֹאָשׁ",
@@ -2969,7 +3139,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 838,
       "lesson": 42,
-      "lessonSlot": 18
+      "lessonSlot": 18,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "רָחֵל",
@@ -3003,7 +3175,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 846,
       "lesson": 43,
-      "lessonSlot": 6
+      "lessonSlot": 6,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "נֹחַ",
@@ -3037,7 +3211,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 849,
       "lesson": 43,
-      "lessonSlot": 9
+      "lessonSlot": 9,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אָסָף",
@@ -3072,7 +3248,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 850,
       "lesson": 43,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "זְבוּלוּן",
@@ -3108,7 +3286,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 862,
       "lesson": 44,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "דַּמֶּשֶׂק",
@@ -3142,7 +3322,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 866,
       "lesson": 44,
-      "lessonSlot": 6
+      "lessonSlot": 6,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "שִׁמְעוֹן",
@@ -3177,7 +3359,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 871,
       "lesson": 44,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יוֹנָתָן",
@@ -3211,7 +3395,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 872,
       "lesson": 44,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "שִׁמְעִי",
@@ -3245,7 +3431,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 873,
       "lesson": 44,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אָשֵׁר",
@@ -3281,7 +3469,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 888,
       "lesson": 45,
-      "lessonSlot": 8
+      "lessonSlot": 8,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "גִּבְעָה",
@@ -3315,7 +3505,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 892,
       "lesson": 45,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "בָּלָק",
@@ -3349,7 +3541,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 911,
       "lesson": 46,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "יִשַׁי",
@@ -3383,7 +3577,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 912,
       "lesson": 46,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "נָתָן",
@@ -3417,7 +3613,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 913,
       "lesson": 46,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בְּנָיָה",
@@ -3451,7 +3649,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 914,
       "lesson": 46,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "בֵּית שֶׁמֶשׁ",
@@ -3485,7 +3685,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 916,
       "lesson": 46,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "צֹר",
@@ -3519,7 +3721,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 920,
       "lesson": 46,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְבוּסִי",
@@ -3553,7 +3757,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 939,
       "lesson": 47,
-      "lessonSlot": 19
+      "lessonSlot": 19,
+      "category": "民族與國名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "אָחָז",
@@ -3587,7 +3793,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 940,
       "lesson": 47,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "שְׁמַעְיָה",
@@ -3621,7 +3829,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 941,
       "lesson": 48,
-      "lessonSlot": 1
+      "lessonSlot": 1,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "זְכַרְיָה",
@@ -3655,7 +3865,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 942,
       "lesson": 48,
-      "lessonSlot": 2
+      "lessonSlot": 2,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "גִּלְגָּל",
@@ -3689,7 +3901,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 951,
       "lesson": 48,
-      "lessonSlot": 11
+      "lessonSlot": 11,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "אֲמַצְיָה",
@@ -3723,7 +3937,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 958,
       "lesson": 48,
-      "lessonSlot": 18
+      "lessonSlot": 18,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "עֹבֵד אֱדוֹם",
@@ -3757,7 +3973,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 960,
       "lesson": 48,
-      "lessonSlot": 20
+      "lessonSlot": 20,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "עַי",
@@ -3791,7 +4009,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 970,
       "lesson": 49,
-      "lessonSlot": 10
+      "lessonSlot": 10,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "עֲמָלֵק",
@@ -3827,7 +4047,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 972,
       "lesson": 49,
-      "lessonSlot": 12
+      "lessonSlot": 12,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "שֵׂעִיר",
@@ -3862,7 +4084,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 973,
       "lesson": 49,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "קִרְיַת יְעָרִים",
@@ -3896,7 +4120,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 974,
       "lesson": 49,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "יְשַׁעְיָה",
@@ -3930,7 +4156,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 975,
       "lesson": 49,
-      "lessonSlot": 15
+      "lessonSlot": 15,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "מְרָרִי",
@@ -3964,7 +4192,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 976,
       "lesson": 49,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "אוּרִיָּה",
@@ -3998,7 +4228,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 978,
       "lesson": 49,
-      "lessonSlot": 18
+      "lessonSlot": 18,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "סְדֹם",
@@ -4032,7 +4264,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 993,
       "lesson": 50,
-      "lessonSlot": 13
+      "lessonSlot": 13,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     },
     {
       "pointed": "גִּדְעוֹן",
@@ -4066,7 +4300,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 994,
       "lesson": 50,
-      "lessonSlot": 14
+      "lessonSlot": 14,
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
     },
     {
       "pointed": "חֶשְׁבּוֹן",
@@ -4100,7 +4336,9 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 996,
       "lesson": 50,
-      "lessonSlot": 16
+      "lessonSlot": 16,
+      "category": "地名",
+      "categoryRoute": "既有 properNameTypes"
     }
   ]
 }
