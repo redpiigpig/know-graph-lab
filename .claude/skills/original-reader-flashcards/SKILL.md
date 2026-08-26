@@ -11,6 +11,7 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 > 產卡：[scripts/build_flashcards.py](../../../scripts/build_flashcards.py)
 > 配圖：[scripts/match_flashcard_images.py](../../../scripts/match_flashcard_images.py)（希伯來）／[match_greek_card_images.py](../../../scripts/match_greek_card_images.py)／[match_latin_card_images.py](../../../scripts/match_latin_card_images.py)
 > 詞性推定（希臘）：[scripts/flashcard_pos.py](../../../scripts/flashcard_pos.py)
+> 性數狀態（希伯來）：[scripts/hebrew_card_grammar.py](../../../scripts/hebrew_card_grammar.py)
 > 看圖：[scripts/flashcard_contact_sheet.py](../../../scripts/flashcard_contact_sheet.py)
 > 逐副現況與歷史：[skills/build-original-language-reader/references/flashcard-decks.md](../../../skills/build-original-language-reader/references/flashcard-decks.md)
 > 2026-08-26：希伯來與希臘三副已 **100% 有圖、0 張缺詞性**；拉丁兩副配圖 46%／35%，是下一個目標。
@@ -42,9 +43,11 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 
 🚨 **不印裁切線**（使用者指定）：線印歪一毫米，每張卡的邊都是斜的。裁切位置印在封面。
 
+🚨 **希伯來這類複合語系要設 `w:szCs`。** python-docx 的 `run.font.size` 只寫 `w:sz`，那管的是拉丁字；RTL run 的字級，排版程式看的是 `w:szCs`。沒設就用樣式預設的 11 pt 印出來 —— **宣告 54 pt 也一樣，而且不會有任何錯誤訊息**，DOCX 裡看起來正常，要到 PDF 逐字量字級才會發現字頭跟旁邊的課次一樣小。粗體同理補 `w:bCs`。
+
 ## 卡面
 
-- **正面**：字頭 ＋ 課次。字級按長度自己縮，拉丁另有一組更寬的字級梯（最長超過四十字元，用希臘那組會縮成看不見），允許折行。
+- **正面**：字頭 ＋ 課次。希伯來**不按字數縮、按量到的字寬縮**：母音點、達格什、重音各自都是一個碼點，אָדָם 三個字母卻是七個碼點，按碼點數階梯短詞會被一路縮到比中文還小；字母數也不準，מִשְׁפָּחָה 五個字母比 מַלְכוּת 寬得多。改用 PIL 量 Noto Serif Hebrew 的實際字寬（與 LibreOffice 排出來的差 0.1 mm 以內），取塞得下的字級；上限 `HEADWORD_MAX_MM = 54` 是試出來的，量到 60 mm 的字（可用寬度有 69 mm）LibreOffice 仍會把最後一個字母折到第二行、把課次擠掉。其餘各副字級按長度自己縮，拉丁另有一組更寬的字級梯（最長超過四十字元，用希臘那組會縮成看不見），允許折行。
 - **正面印多少詞典形**：**讀本印完整的，卡片只在推不出來時才印**（使用者 2026-08-27 定調：
   「除非是不規則的，不然我都知道冠詞和所有格是什麼」）。希臘名詞由
   `scripts/greek_citation_form.py` 判定，第一、二變格的屬格從詞尾加性別就推得出來，
@@ -66,6 +69,9 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
   看起來完全正常、學的人無從察覺的那種錯。
   副作用是好的：詞頭短了，字級梯就把字放大，`οἰκοδομή` 現在比原本大一號。
 - **背面**：配圖 ＋ 繁中詞義 ＋ 詞性 ＋ 課次。詞義行按自身長度定字級（兩字到二十七字都有），不是設一次就任它溢出。
+- **希伯來的詞性連著文法一起印**：名詞一律標到性別（`名詞‧陽性`／`陰性`／`陰陽性`），字形是複數、雙數、或只當附屬形用的再往後接（`名詞‧陰陽性‧複數‧附屬形`）。同一個 Strong 號有兩三張卡時（אָב／אָבוֹת／אֲבִי、עַ֫יִן／עֵינַ֫יִם），這一行是分辨它們的唯一線索。
+  🚨 **性別不能看字尾推**：אֶ֫רֶץ、עִיר、יָד、נֶ֫פֶשׁ 沒有陰性字尾卻是陰性，דֶּ֫רֶךְ、רוּחַ 兩性都用。一律讀 OSHB（morphhb）逐詞標註 —— 跟希臘卡用 SBLGNT 同一個路數，標註是事實，字尾是猜的。查無標註的（目前 3 個）就只印「名詞」。
+  🚨 **附屬形只印在「同一 Strong 有多張卡」的卡上**：絕大多數單數名詞的絕對形與附屬形同形（אֶ֫רֶץ、יוֹם、מֶ֫לֶךְ），按出現次數多數決會把它們全標成附屬形，而卡上印的其實是絕對形。
 - **詞性**：希伯來、拉丁讀詞表既有欄位；希臘詞表沒有，靠 `flashcard_pos.py` 推定，**強證據優先**：
 
   1. 手列的虛詞與不規則動詞
@@ -138,6 +144,7 @@ matcher 由嚴到寬四段，配不到就留白：
 ## 出片
 
 ```
+python scripts/hebrew_card_grammar.py --write           # 希伯來的性、數、狀態（改詞表才要重跑）
 python scripts/match_flashcard_images.py --write        # 希伯來配圖表
 python scripts/build_flashcards.py --deck hbo           # 或 grc1 / grc2 / lat1 / lat2
 python scripts/build_flashcards.py --deck hbo --limit 16   # 打樣 16 張
@@ -157,6 +164,8 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 - 頁數等於 `2 + 2 × ceil(張數 / 8)`。多出來就是排高踩到上面那個坑。
 - **每張背面剛好 8 張圖**（配圖 100% 的牌組）：`len(page.images)` 對所有奇數頁都該是 8。出現 7 就是有卡在重建時掉了圖。
 - 背面最左的卡＝正面最右的卡（鏡像對了才裁得成一副）。
+- **字頭字級要是宣告的那個**：`pdfplumber` 逐字看 `size`，希伯來該是 54 pt（量寬後縮的最小 48 pt），不是 11 pt —— 這條就是為了擋 `w:szCs` 那個坑。
+- 字頭沒有折行：用 PyMuPDF 取每格 `size>20` 的 span，同格內 y 差一整行（約 64 pt）就是折了；差 20 pt 上下是字母上方的重音符號，不算。
 - 字頭沒有字體回退：`pdfplumber` 逐字看 fontname，不該出現 Tahoma／Calibri。**例外**：希伯來有兩張卡的繁中詞義行內嵌希伯來文（「弟兄；兄弟（אָח 的複數）」「誡命（מִצְוָה 的不規則複數）」），那一段走 UI 字型、會回退到 Tahoma，是既有現象不是壞掉。
 - 配圖表每一把鍵都對得回詞表（matcher 內建 assert）。
 
