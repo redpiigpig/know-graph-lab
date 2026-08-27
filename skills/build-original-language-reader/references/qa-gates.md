@@ -39,6 +39,18 @@ Run every applicable gate against the final artifacts. A prior render or prior r
 - Forbidden fallback fonts are absent.
 - Searchable source-language and Chinese text are present.
 - No clipping, footer collision, missing glyph, or stale translation/source label appears.
+- No page prints in a language other than the reader's own. A gloss column that
+  fell back to English renders perfectly and passes every other gate.
+- `scripts/render_and_check_reader_pdfs.py` does the geometry, embedded-font,
+  U+FFFD and blank-page half of this list in one command, for the readers and
+  the flashcard decks alike. It gives each file its own LibreOffice
+  `UserInstallation` profile — LibreOffice allows one at a time, and a second
+  conversion otherwise waits or silently takes the first one's settings.
+  `□ U+25A1` is a real glyph in the Hebrew reader's 「完成本課」 checklist, not a
+  missing one.
+- **Open the pages that carry the change you just made and read them.** The
+  appendix that was still one undivided list, and the cover that was new above an
+  appendix that was old, both passed every automated gate above.
 
 ## 5. Raster gates
 

@@ -11,6 +11,7 @@ Keep one master JSON as the authority for print and web outputs. Source snapshot
 - Interlinear layer
 - Lesson
 - Audio manifest
+- Appendix table
 - Build provenance
 
 ## Release master
@@ -174,6 +175,42 @@ When audio is not recorded, use the release-level state below and omit track pat
   "policy": "No play control until a reviewed track exists."
 }
 ```
+
+## Appendix table
+
+An appendix table is a titled list of rows that never enter the fifty lessons:
+proper names, numerals and measures, kinship terms, the calendar and its feasts,
+church offices. Rows carry, at minimum:
+
+- `headword` — the printed citation form, in the reader's own script;
+- `zh` — Traditional Chinese. **Never a foreign-language fallback**: an absent
+  rendering prints as `（中文待補）`, so a gap stays visible as a gap.
+- `frequency` — corpus occurrences, when the table has an attested corpus;
+- one grouping field, which is what the printed sections and the flashcard
+  colours are keyed on:
+  - `category` for proper names — one of the nine in
+    `scripts/proper_name_categories.py` (民族與國名, 地名, 神名與稱號, 族長與先知,
+    君王, 使徒與門徒, 教宗與主教, 教父與聖人, 其他人名), plus 節期與聖日 where the
+    language has it, and 待歸類 for anything no register settles;
+  - `group` for every other table — the table's own divisions (基數／序數,
+    直系血親／姻親, 月名／節期…).
+- `categoryRoute` / `zhRoute` — which register or alignment produced the answer.
+  A row whose Chinese came from a model and a row whose Chinese came from an
+  aligned published translation are not the same kind of fact.
+
+`category` is single-valued. A name that is both a person and a place appears
+once, under whichever sense its source states first; the printed appendix
+therefore has fewer rows than a cross-listed one and no duplicates.
+
+Print order is `PRINT_ORDER` in `scripts/proper_name_categories.py`: geography,
+then divine names, then people from specific to general, with 待歸類 last. The
+printed book, the web tables and the flashcard decks all read that one order, so
+whatever section a reader finds a name in on paper is the section it is in
+online.
+
+Keep the classification in a ledger (`proper-name-categories.json`) as well as in
+the appendix file, because appendix files get regenerated wholesale by other
+jobs and added fields vanish without an error.
 
 ## Build provenance
 

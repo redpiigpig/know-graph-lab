@@ -103,18 +103,25 @@ Two failures recur across languages and are worth carrying into any new reader:
    - **Do not machine-translate a text that has a received wording.** A liturgical formula the congregation knows by heart is not a rough draft to be improved: asked for `R. Et cum spiritu tuo.` a model returned a versicle that is not in the Latin. Leave the gap, print why, and make the gate repeat it every run so nobody fills it with a draft.
    - A `-chinese.txt` beside the Latin is not a parallel translation. Classify it — placeholder, anthology excerpt, unnumbered translation, numbered translation — and join only on numbers both sides carry.
 10. Add each language-specific terminal section. For Hebrew, keep the complete fifteen-step Haggadah separate from the 25 prayer/article readings.
-11. Assemble one master JSON. Fail on incomplete counts, IDs, ordering, translations, diacritics, transliteration, proper names, sources, rights metadata, or placeholder text. Key every cross-file reference on an identity, never on a position a builder computed: lesson numbers move when the sort changes, and one source file can hold several readings.
-12. Run `scripts/validate_reader_release.py` against the master before layout.
-13. Generate JIS B5 DOCX and PDF from that exact master. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
-14. Build the authenticated online counterpart from the same master. Keep authorized JSON and audio out of public static directories.
-15. Add real pronunciation recordings and segment cues only under the frozen historical/textbook profile. Do not expose a play control for a missing track. TTS or an external reference does not satisfy the audio release gate.
-16. Run the deterministic, package, raster, full-resolution visual, API, UI, type, build, and audio gates in `references/qa-gates.md`.
-17. Run `scripts/hash_release_artifacts.py` after all artifacts pass. Store the resulting hash manifest beside the QA report.
-18. Report exact paths, counts, versions, hashes, QA results, and audio status. Do not deploy, publish, or call the release complete without explicit authority and every required gate passing.
+11. Build the appendices as a first-class layer, not an afterthought:
+    - **Every appendix row needs Traditional Chinese of its own.** Reuse the reviewed lesson gloss wherever the word already appeared — the same word must read the same way in the lesson and in the appendix — and only then ask a model, giving it the existing English definition to render rather than a headword to recall. Latin's numerals, kinship and calendar tables shipped printing Whitaker's English because the printer read `zh or glossZh or glossEn`; **never fall back to another language**, print the empty state (`（中文待補）`) so the hole stays visible.
+    - **Classify proper names into the nine categories** (`scripts/proper_name_categories.py`) and print each table sectioned, in `PRINT_ORDER`. One undivided list of four hundred names is not something anyone looks a name up in. Whatever cannot be settled stays in 待歸類.
+    - **Keep a ledger of the classification** (`proper-name-categories.json`) and re-apply it with `classify_proper_names.py --reapply` whenever an upstream job regenerates the appendix file. Fields you add to a file somebody else rebuilds wholesale disappear without an error.
+    - **No print caps.** Latin truncated each appendix group at 200 rows to hold the page count down and silently withheld 385 of 585 proper names.
+12. Assemble one master JSON. Fail on incomplete counts, IDs, ordering, translations, diacritics, transliteration, proper names, sources, rights metadata, or placeholder text. Key every cross-file reference on an identity, never on a position a builder computed: lesson numbers move when the sort changes, and one source file can hold several readings.
+13. Run `scripts/validate_reader_release.py` against the master before layout. Its defaults assume the Hebrew shape, where every lesson reads a Bible chapter; a volume that reads none needs `--scripture-lessons 0`, and two of its checks fail on a correct book without it. That is a flag, not a defect to fix in the master.
+14. Generate JIS B5 DOCX and PDF from that exact master, matching the shared layout in `references/layout-web-audio.md` — banner cover, real Heading styles, no heading smaller than the body, each lesson's reading on its own page. `scripts/render_and_check_reader_pdfs.py` drives LibreOffice (one `UserInstallation` profile per file) and then checks page geometry, embedded fonts, U+FFFD and blank pages. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
+15. Build the authenticated online counterpart from the same master. Keep authorized JSON and audio out of public static directories.
+16. Add real pronunciation recordings and segment cues only under the frozen historical/textbook profile. Do not expose a play control for a missing track. TTS or an external reference does not satisfy the audio release gate.
+17. Run the deterministic, package, raster, full-resolution visual, API, UI, type, build, and audio gates in `references/qa-gates.md`.
+18. Run `scripts/hash_release_artifacts.py` after all artifacts pass. Store the resulting hash manifest beside the QA report.
+19. Report exact paths, counts, versions, hashes, QA results, and audio status. Do not deploy, publish, or call the release complete without explicit authority and every required gate passing.
 
 ## Invalidate downstream work
 
-Any change to vocabulary, glosses, source text, translation, crosswalk, readings, styles, fonts, or audio invalidates all downstream artifacts and their prior QA. Rebuild and re-inspect; never reuse an old PDF or page-QA result after an upstream change.
+Any change to vocabulary, glosses, source text, translation, crosswalk, readings, appendix data, name categories, styles, fonts, or audio invalidates all downstream artifacts and their prior QA. Rebuild and re-inspect; never reuse an old PDF or page-QA result after an upstream change.
+
+The chain is longer than it looks, and skipping a link produces a PDF that renders cleanly and is simply out of date. Appendix data feeds the master, the master feeds the DOCX, the DOCX feeds the PDF, and the same appendix data separately feeds the flashcard decks and the web tables. A patch to the print builder applied *while* a build was running produced a book whose cover was new and whose appendix was old; it looked finished and passed every gate. **Rebuild from the data layer down, in one run, and check the rendered page for the change you just made** — not for errors, for the change.
 
 ## Stop conditions
 
@@ -126,6 +133,7 @@ Stop the release and report the exact gap when:
 - a Bible translation or variant is not explicit;
 - required pointing, accents, breathings, or transliteration fields are incomplete;
 - real reviewed audio is required but only TTS or links exist;
-- a final artifact hash differs from its QA report or master.
+- a final artifact hash differs from its QA report or master;
+- an appendix row would print in a language other than the reader's own.
 
 Use precise states such as `content_complete_audio_pending`; never shorten a partial state to `complete`.
