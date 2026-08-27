@@ -130,7 +130,7 @@
     "ranges": [
       {
         "book": "rom",
-        "pages": "1-627"
+        "pages": "1-578"
       }
     ],
     "status": "ready"
@@ -147,7 +147,7 @@
     "ranges": [
       {
         "book": "heb",
-        "pages": "1-478"
+        "pages": "1-450"
       }
     ],
     "status": "ready"
@@ -164,7 +164,7 @@
     "ranges": [
       {
         "book": "rev",
-        "pages": "1-748"
+        "pages": "1-690"
       }
     ],
     "status": "ready"
@@ -375,7 +375,7 @@
     "ranges": [
       {
         "book": "isa",
-        "pages": "1-534"
+        "pages": "1-490"
       }
     ],
     "status": "ready"
