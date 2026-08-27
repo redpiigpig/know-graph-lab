@@ -16,7 +16,7 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > - **未滿章的 10 卷**：結 23/48、歌 2/8、利 11/27、代上 19/29、士 16/21、代下 32/36、詩 127/150、撒下 22/24、申 32/34、創 49/50。
 >   ⚠️ ACCS 是**選錄**體例，缺章不一定等於漏抓（例：申 2–3 章、創 36 章原書就沒收）。判斷「該不該補」要翻該卷紙本目錄比對，別直接當成缺漏重跑。
 > - **缺 24-25 耶利米／哀歌**（未購得），故 `jer`/`lam` 永遠不會有資料。
-> - 掃描來源：`G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`
+> - 掃描來源：`G:\我的雲端硬碟\資料\知識圖工作室\經典對照與註釋\基督教 - IVP - 古代基督信仰聖經註釋叢書\`
 > - **原始 OCR（canonical）在 `c:/tmp/accs_*.raw.jsonl`，別刪**——parser 一改就能用 `accs_rebuild_rows.py` 零成本重建全庫，不必重跑一頁 OCR。DB 只是它的衍生物。
 > - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：量太大「一晚跑不完」是常態，逐日推進。**🚨 2026-08-17 起 ACCS 是 keeper 的第一條 lane 且獨佔 Gemini**（panikkar／sbe 已改 NVIDIA，它們原本掛 Gemini、45 分鐘就把 7 把 key 抽乾害 ACCS 起不來）。**引擎鏈＝Gemini（探到有額度的模型）→ 乾了自動改 Sonnet**（user 定調）：Google 免費層已砍到「每 key／每模型／每天 20 次」，但配額按模型獨立，故 `gemini_probe.py` 會輪 6 個 vision 模型找還有額度的、寫進 `state/gemini_live_model.txt`；全部乾掉才落到 `--engine sonnet`（Max OAuth，不另付費，且掃描中文品質本來就最好）。
 > - **🚨 書末附錄會污染正文表（2026-08-19 羅馬書）**：ACCS 每卷末尾有「教父人物小傳」「主題索引」「引用經文索引」。OCR 照樣吐 entry：小傳與主題索引因 `ref` 空或非數字會被 `build_rows_auto` 濾掉（正確），但**引用經文索引的行長得就像經文引用**（`19:18`、`28:6`，body 其實是頁碼 `285-86`），會直接混進表。羅馬書因此多了 12 筆 ch19–28 的假資料（該書只有 16 章）。已加 `CHAPTER_COUNTS` 章數閘（超出實際章數一律不進表）＋回歸測試；全 19 卷複查只有羅馬書中招，已清乾淨。**新書卷入庫後養成習慣：`select book_code, max(chapter) from accs_commentary group by 1` 對一次實際章數。**
@@ -79,7 +79,7 @@ body_zh, source_vol`。一列 = 一個總論或一則教父引文。RLS 公共�
 # 0. 在 G: 找到該卷校園版 PDF（27 冊 folder 內），先人工翻 PDF 找該章對應「實體頁碼」範圍
 # 1. 結構化 OCR 入庫（一次一章，跑完 spot-check 再下一章）
 python scripts/ingest_accs_genesis.py \
-   --pdf "G:/我的雲端硬碟/資料/知識圖工作室/教父著作/基督教 - IVP - 古代基督信仰聖經註釋叢書/古代基督信仰聖經註釋叢書1 創1-11.pdf" \
+   --pdf "G:/我的雲端硬碟/資料/知識圖工作室/經典對照與註釋/基督教 - IVP - 古代基督信仰聖經註釋叢書/古代基督信仰聖經註釋叢書1 創1-11.pdf" \
    --book gen --chapter 1 --pages 46-58 \
    --source-vol "ACCS OT I（創 1–11）" --dry-run   # 先 --dry-run 看切段對不對
 # 去掉 --dry-run 正式入庫（冪等 upsert）
