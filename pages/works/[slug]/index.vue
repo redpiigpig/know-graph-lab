@@ -159,7 +159,7 @@
         </div>
       </div>
 
-      <div v-else-if="project?.kind !== 'paper' && !hasDialogueDays && !materialsAvailable" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
+      <div v-else-if="project?.kind !== 'paper' && !hasDialogueDays && !materialsAvailable && !proposalAvailable" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
         登入後可看到「書摘與構思」筆記分頁
       </div>
 
@@ -177,6 +177,21 @@
         </div>
 
         <div class="max-w-5xl mx-auto px-6 py-8">
+          <!-- ── 研究計畫書（學位論文計畫）── -->
+          <div v-show="bookTab === 'proposal'">
+            <div class="mb-4 flex items-start justify-between gap-3 flex-wrap">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">研究計畫書</h2>
+                <p class="text-xs text-gray-500 mt-0.5 max-w-2xl leading-relaxed">學位論文計畫書全文（含章節架構、參考書目與指導目標）</p>
+              </div>
+              <a :href="`/content/works/${slug}-proposal.docx`" download
+                class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-300 text-rose-700 hover:bg-rose-50 no-underline flex-shrink-0">⬇ 下載 Word</a>
+            </div>
+            <div v-if="proposalLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="proposalHtml" class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-10" v-html="proposalHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">計畫書載入失敗。</div>
+          </div>
+
           <!-- ── 研究資料 ── -->
           <div v-show="bookTab === 'materials'">
             <div class="mb-4">
@@ -887,6 +902,23 @@ function renderThesisText(txt: string): string {
   return out.join('\n')
 }
 
+// ── 學位論文計畫書：/content/works/{slug}-proposal.md（有檔才長出分頁）──
+const proposalAvailable = ref(false)
+const proposalHtml = ref('')
+const proposalLoading = ref(false)
+async function loadProposal() {
+  proposalLoading.value = true
+  try {
+    const md = await $fetch<string>(`/content/works/${slug.value}-proposal.md`, { responseType: 'text' })
+    // 靜態站找不到檔案時可能回退成 index.html——只認真正的 markdown
+    if (md && !md.trimStart().startsWith('<')) {
+      proposalHtml.value = renderBookMd(md)
+      proposalAvailable.value = true
+    } else { proposalAvailable.value = false }
+  } catch { proposalAvailable.value = false } finally { proposalLoading.value = false }
+}
+watch(() => project.value?.slug, (v) => { if (v) loadProposal() })
+
 // ── 研究回顧（文獻綜述）資料 ──────────────────────────────────────────
 // 專書初稿 manifest 設定：必須宣告在 bookTabs 之前（bookTabs 的 watch 會立即求值）
 const bookDraftConf = computed(() => materials.value?.bookDraft ?? null)
@@ -917,13 +949,14 @@ const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
 
 // 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
-type BookTab = 'materials' | 'draft' | 'thesis' | 'interviews' | 'review' | 'notes'
+type BookTab = 'proposal' | 'materials' | 'draft' | 'thesis' | 'interviews' | 'review' | 'notes'
 const bookTab = ref<BookTab>('materials')
-const useBookTabs = computed(() => project.value?.kind !== 'paper' && !dialogueDays.value.length && materialsAvailable.value)
+const useBookTabs = computed(() =>
+  project.value?.kind !== 'paper' && !dialogueDays.value.length && (materialsAvailable.value || proposalAvailable.value))
 const bookTabs = computed(() => {
-  const tabs: { key: BookTab; label: string; badge?: string }[] = [
-    { key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined },
-  ]
+  const tabs: { key: BookTab; label: string; badge?: string }[] = []
+  if (proposalAvailable.value) tabs.push({ key: 'proposal', label: '研究計畫書' })
+  if (materialsAvailable.value) tabs.push({ key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined })
   if (bookDraftVersions.value.length) tabs.push({ key: 'draft', label: '專書版本' })
   if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
@@ -931,7 +964,7 @@ const bookTabs = computed(() => {
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
 })
-watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = 'materials' })
+watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = tabs[0]?.key ?? 'materials' }, { immediate: true })
 watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoading.value) loadThesisChapter(activeThesisChapter.value) })
 
 // ── 專書初稿（報導文學改寫）：md 渲染（含尾註上標／標楷體引文） ──────────

@@ -61,6 +61,7 @@
                       <option value="book">書籍寫作</option>
                       <option value="lecture">講義寫作</option>
                       <option value="paper">論文寫作</option>
+                    <option value="thesis">學位論文寫作</option>
                     </select>
                     <select v-model="editForm.color" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
                       <option v-for="c in COLORS" :key="c" :value="c">{{ c }}</option>
@@ -102,6 +103,7 @@
                     <option value="book">書籍寫作</option>
                     <option value="lecture">講義寫作</option>
                     <option value="paper">論文寫作</option>
+                    <option value="thesis">學位論文寫作</option>
                   </select>
                   <select v-model="editForm.color" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
                     <option v-for="c in COLORS" :key="c" :value="c">{{ c }}</option>
@@ -137,6 +139,8 @@ const editMode = useEditMode()
 
 const COLORS = ['amber','blue','rose','emerald','violet','sky','indigo','cyan','orange','stone','purple','teal']
 
+type ProjectKind = 'book' | 'paper' | 'lecture' | 'thesis'
+
 interface Project {
   id: string
   slug: string
@@ -147,7 +151,7 @@ interface Project {
   color: string
   status: string | null
   sort_order: number
-  kind: 'book' | 'paper' | 'lecture'
+  kind: 'book' | 'paper' | 'lecture' | 'thesis'
   paper_ref: string | null
 }
 
@@ -155,13 +159,14 @@ const projects = ref<Project[]>([])
 const loading = ref(true)
 const saving = ref(false)
 const editingSlug = ref<string | null>(null)
-const editForm = reactive({ slug: '', title: '', subtitle: '', description: '', emoji: '📝', color: 'amber', status: '', kind: 'book' as 'book' | 'paper' | 'lecture', paper_ref: '' })
+const editForm = reactive({ slug: '', title: '', subtitle: '', description: '', emoji: '📝', color: 'amber', status: '', kind: 'book' as ProjectKind, paper_ref: '' })
 
-// 書籍寫作 → 講義寫作 → 論文寫作 — each preserving sort_order
+// 書籍寫作 → 講義寫作 → 論文寫作 → 學位論文寫作 — each preserving sort_order
 const groups = computed(() => [
-  { kind: 'book' as const, label: '書籍寫作', emoji: '📚', items: projects.value.filter(p => p.kind !== 'paper' && p.kind !== 'lecture') },
+  { kind: 'book' as const, label: '書籍寫作', emoji: '📚', items: projects.value.filter(p => p.kind !== 'paper' && p.kind !== 'lecture' && p.kind !== 'thesis') },
   { kind: 'lecture' as const, label: '講義寫作', emoji: '📖', items: projects.value.filter(p => p.kind === 'lecture') },
   { kind: 'paper' as const, label: '論文寫作', emoji: '📄', items: projects.value.filter(p => p.kind === 'paper') },
+  { kind: 'thesis' as const, label: '學位論文寫作', emoji: '🎓', items: projects.value.filter(p => p.kind === 'thesis') },
 ])
 
 async function load() {
@@ -175,10 +180,11 @@ async function load() {
 }
 onMounted(load)
 
-function startCreate(kind: 'book' | 'paper' | 'lecture' = 'book') {
+function startCreate(kind: ProjectKind = 'book') {
   editingSlug.value = '__new__'
-  const emoji = kind === 'paper' ? '📄' : kind === 'lecture' ? '📖' : '📝'
-  Object.assign(editForm, { slug: '', title: '', subtitle: '', description: '', emoji, color: kind === 'paper' ? 'teal' : 'amber', status: '構思中', kind, paper_ref: '' })
+  const emoji = kind === 'paper' ? '📄' : kind === 'lecture' ? '📖' : kind === 'thesis' ? '🎓' : '📝'
+  const color = kind === 'paper' ? 'teal' : kind === 'thesis' ? 'indigo' : 'amber'
+  Object.assign(editForm, { slug: '', title: '', subtitle: '', description: '', emoji, color, status: '構思中', kind, paper_ref: '' })
 }
 
 function startEdit(p: Project) {
