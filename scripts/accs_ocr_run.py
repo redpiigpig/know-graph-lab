@@ -43,6 +43,29 @@ def _range_pages(spec: str) -> int:
     return n
 
 
+def _effective_pages(spec: str, pdf: str) -> int:
+    """頁範圍與 PDF 實際頁數的交集頁數。開不了檔就退回純範圍頁數。"""
+    want = _range_pages(spec)
+    try:
+        import fitz
+        with fitz.open(pdf) as doc:
+            total = doc.page_count
+    except Exception:  # noqa: BLE001  Drive 斷線／PyMuPDF 缺席都不該擋住流程
+        return want
+    n = 0
+    for part in spec.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        if "-" in part:
+            a, b = part.split("-", 1)
+            a, b = int(a), min(int(b), total)
+            n += max(0, b - a + 1)
+        elif int(part) <= total:
+            n += 1
+    return n
+
+
 def _marker_pages(marker: Path) -> int | None:
     """.done 的內容是 "N pages"；讀不出數字就回 None（當成無法判斷，照舊跳過）。"""
     try:
@@ -92,8 +115,12 @@ def main():
                 # 永遠跳過。2026-08-27 雅歌就是這樣：設定 120 頁、標記只記 36 頁，
                 # 卻照樣被當成完成，DB 只有 2/8 章。所以要對頁數。
                 recorded = _marker_pages(done_marker)
-                want = _range_pages(rng["pages"])
-                if recorded is not None and recorded < want:
+                # 設定的頁範圍可能超出 PDF 結尾（雅歌設 437-556、檔案只有 472 頁），
+                # 這時標記記的頁數本來就會比設定少。拿沒被掃進來的頁去比，會判成
+                # 過期→刪標記→重跑→再寫回同樣的頁數，每 30 分鐘空轉一次。
+                # 所以要跟「範圍與 PDF 實際頁數的交集」比，不是跟設定比。
+                want = _effective_pages(rng["pages"], vol["pdf"])
+                if recorded is not None and want and recorded < want:
                     print(f"  [stale] {book} 標記只記 {recorded} 頁、設定要 {want} 頁"
                           f" → 標記過期，重跑補齊", flush=True)
                     done_marker.unlink()

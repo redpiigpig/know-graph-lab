@@ -33,6 +33,14 @@ release-specific stop conditions. Then read `references/latin-reader-handoff.md`
 for what that release actually has, what it does not, and the traps that have
 already produced silently wrong data.
 
+For a Japanese release in `know-graph-lab`, read
+`references/japanese-reader-contract.md`; it carries the two-volume shape the
+owner froze on 2026-08-27 (稱第一冊／第二冊，不用上下冊), the《大家的日本語》
+lesson order and the third-party page it was reconstructed from, why this reader
+keeps a pitch-accent column where Greek dropped its transliteration one, the
+pre-war religious-studies corpus, the 文語訳 Bible and the Buddhist formulae the
+owner requires, and its own stop conditions.
+
 For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the two-volume lesson shape (50 lessons of 20 words per volume), the three-layer Koine lemma resolver, the source freeze, the 50-chapter allocation for 上冊, the 50 readings and 100 sentences of 下冊, the one numbering crosswalk that refuses rather than approximates, the appendices, and release-specific stop conditions. Then read `references/greek-reader-handoff.md` for where that release actually stands, which decisions this build took without the owner, and the traps that have already produced confident wrong answers.
 
 Read `references/silent-failures.md` before wiring a new language, and before believing any count computed only once: every defect in it shipped a page that looked finished.
