@@ -85,6 +85,9 @@ CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 DEFAULT_RPM = 4  # under 10 RPM limit on flash, gentler on the service
+# 每次 Gemini 呼叫最多送幾頁。整本一次送會撞輸出 token 上限而靜默截斷。
+GEMINI_PAGES_PER_CALL = int(os.environ.get("GEMINI_PAGES_PER_CALL", "60"))
+
 STAGING = False  # --staging：只寫 {id}.jsonl.new，不動 DB/R2/parsed_at（requeue_reocr gate 用）
 
 def _find_gemini_keys() -> list[str]:
@@ -836,32 +839,81 @@ def process_one(client, book, src_path, model, max_retries=3):
             ) as tmp:
                 tmp_path = Path(tmp.name)
             shutil.copyfile(src_path, tmp_path)
-            try:
-                uploaded = client.files.upload(
-                    file=tmp_path,
+
+            # 整本一次送，長書必定撞輸出 token 上限而截斷（Haiku 那條路早就
+            # 10 頁一批，Gemini 這條卻沒有）。超過 GEMINI_PAGES_PER_CALL 就
+            # 切成子 PDF 逐段 OCR 再合併。
+            n_pages = -1
+            if _HAS_FITZ and src_path.suffix.lower() == ".pdf":
+                try:
+                    import fitz as _fitz
+                    with _fitz.open(tmp_path) as _d:
+                        n_pages = _d.page_count
+                except Exception:
+                    n_pages = -1
+
+            def _ocr_pdf(path: Path) -> dict:
+                up = client.files.upload(
+                    file=path,
                     config=types.UploadFileConfig(
                         display_name=f"ebook_{book['id']}.pdf",
                         mime_type="application/pdf",
                     ),
                 )
-            finally:
-                try: tmp_path.unlink()
-                except Exception: pass
+                try:
+                    r = client.models.generate_content(
+                        model=model,
+                        contents=[up, PROMPT],
+                        config=types.GenerateContentConfig(
+                            response_mime_type="application/json",
+                            response_schema=PAGES_SCHEMA,
+                        ),
+                    )
+                finally:
+                    try: client.files.delete(name=up.name)
+                    except Exception: pass
+                return r
 
-            resp = client.models.generate_content(
-                model=model,
-                contents=[uploaded, PROMPT],
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=PAGES_SCHEMA,
-                ),
-            )
-
-            try: client.files.delete(name=uploaded.name)
-            except Exception: pass
+            if n_pages > GEMINI_PAGES_PER_CALL and _HAS_FITZ:
+                import fitz as _fitz
+                merged, nb = [], (n_pages + GEMINI_PAGES_PER_CALL - 1) // GEMINI_PAGES_PER_CALL
+                print(f"\n    [gemini] {n_pages} 頁，分 {nb} 批（每批 {GEMINI_PAGES_PER_CALL} 頁）",
+                      flush=True)
+                try:
+                    for bi in range(nb):
+                        lo = bi * GEMINI_PAGES_PER_CALL
+                        hi = min(lo + GEMINI_PAGES_PER_CALL, n_pages) - 1
+                        part = tmp_path.with_name(f"{tmp_path.stem}_p{lo}.pdf")
+                        with _fitz.open(tmp_path) as _srcd, _fitz.open() as _out:
+                            _out.insert_pdf(_srcd, from_page=lo, to_page=hi)
+                            _out.save(part)
+                        try:
+                            rr = _ocr_pdf(part)
+                            pj = json.loads(rr.text) if rr.text else {}
+                            got = pj.get("pages", []) or []
+                            for off, pg in enumerate(got):
+                                if isinstance(pg, dict):
+                                    pg["page"] = lo + off + 1     # 還原成全書頁碼
+                            merged += got
+                            print(f"    [gemini] batch {bi+1}/{nb} pp{lo+1}-{hi+1} → {len(got)} 頁",
+                                  flush=True)
+                        finally:
+                            part.unlink(missing_ok=True)
+                finally:
+                    tmp_path.unlink(missing_ok=True)
+                data = {"pages": merged}
+                resp = None
+            else:
+                try:
+                    resp = _ocr_pdf(tmp_path)
+                finally:
+                    tmp_path.unlink(missing_ok=True)
 
             try:
-                data = json.loads(resp.text)
+                if resp is None:
+                    pass                      # 分批路徑已組好 data
+                else:
+                    data = json.loads(resp.text)
             except json.JSONDecodeError as json_err:
                 # Gemini truncated the JSON (hit output token limit). Try to salvage
                 # whatever complete page objects were emitted before the cut-off.
@@ -884,6 +936,25 @@ def process_one(client, book, src_path, model, max_retries=3):
             if not non_empty:
                 # If model returned no usable text, this is permanent (OCR genuinely failed)
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
+
+            # 🚨 截斷不得當成成功。整本一次送 Gemini 時，長書必定撞輸出 token 上限，
+            # json_repair 只搶救得到前面幾十頁——舊行為是照樣寫入並標記 parsed_at，
+            # 於是《舊約神學辭典》638 頁只存了 47 頁（7%）卻顯示解析完成。
+            real_pages = -1
+            if _HAS_FITZ and src_path.suffix.lower() == ".pdf":
+                try:
+                    import fitz as _fitz
+                    with _fitz.open(src_path) as _d:
+                        real_pages = _d.page_count
+                except Exception:
+                    real_pages = -1
+            if real_pages > 0 and len(non_empty) < real_pages * 0.9:
+                return {
+                    "status": "fail",
+                    "error": (f"truncated: got {len(non_empty)} of {real_pages} pages "
+                              f"({len(non_empty) / real_pages:.0%}) — 輸出被截斷，需分批重跑"),
+                    "transient": True,   # 分批後可重試，不是永久失敗
+                }
 
             total_chars = sum(len(p["text"]) for p in non_empty)
             if STAGING:
