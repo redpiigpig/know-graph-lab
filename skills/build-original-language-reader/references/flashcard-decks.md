@@ -6,15 +6,15 @@ each. They follow the household's existing
 English tutoring deck (`家教單字卡.pdf` on the desktop) so the same guillotine
 and the same printer settings work for all of them.
 
-## State, 2026-08-26
+## State, 2026-08-27
 
 | Deck | Cards | Pages | With picture | Part of speech blank | File |
 |---|---:|---:|---:|---:|---|
 | 聖經希伯來文 | 1,000 | 252 | **1,000 (100%)** | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
 | 通用希臘文・上冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-1.pdf` |
 | 通用希臘文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-2.pdf` |
-| 教會拉丁文・上冊 | 1,000 | 252 | 457 (46%) | 40 | `output/flashcards/latin-flashcards-volume-1.pdf` |
-| 教會拉丁文・下冊 | 1,000 | 252 | 345 (35%) | 9 | `output/flashcards/latin-flashcards-volume-2.pdf` |
+| 教會拉丁文・上冊 | 1,000 | 252 | 705 (71%) | 39 | `output/flashcards/latin-flashcards-volume-1.pdf` |
+| 教會拉丁文・下冊 | 1,000 | 252 | 656 (66%) | 9 | `output/flashcards/latin-flashcards-volume-2.pdf` |
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 
@@ -64,7 +64,7 @@ one card.
   earns its keep if the picture aids memory, otherwise study online. Hebrew
   reached that on 2026-08-26 (419 blanks picked by hand), and Greek on the same
   day: 925 hand picks in four passes took the two volumes from 50% to 100%, so
-  the Greek `OVERRIDES` now carries 1,493 entries. Latin is the one still short.
+  the Greek `OVERRIDES` now carries 1,493 entries. Latin went 802 → 1,361 on 2026-08-27 without a single hand pick, by fixing two things in the borrowing rule rather than by picking pictures — see 「借圖只看第一個義項」 below. The remaining 639 are genuine hand picks.
 - **Cartoon style**, one consistent look.
 - **No cutting lines.** A hairline printed a millimetre off leaves every card
   with a crooked edge.
@@ -167,6 +167,23 @@ guessing from endings, precisely because -ος is a noun and an adjective alike.
 
 The adverb pattern must allow accents: `καλῶς` carries a circumflex, and a
 pattern written `ως` silently never matches it.
+
+### 借圖只看第一個義項，是 2026-08-27 才發現的漏
+
+拉丁那副卡停在 40% 不是因為 OpenMoji 沒圖，是因為借圖只拿整串詞義、第一個
+「；」段、第一個「、」段去對。拉丁詞義多半是三四個義項並列，於是
+`libero`「解放、釋放」借不到已經有圖的「釋放」，`canticum`「聖歌、讚美詩」借不到
+「讚美詩」。改成**逐義項依序比對**（第一義仍有優先權），一次撿回 333 張。
+
+同時發現第二層：拉丁那本的中文用思高本，希伯來與希臘那兩本用《和合本修訂版》，
+所以同一個概念兩邊寫法不同，圖借不過來——宗徒／使徒、聖神／聖靈、盟約／約。
+`CATHOLIC_TO_PROTESTANT` 這張小表只放兩邊確實同指一物的對子。
+
+代價要照規矩付：借來的圖記下 `borrowedVia`（循哪一個義項借的），非首義借來的
+354 張逐張看過，錯配八張已覆蓋——「釋放」借到揮手（那是道別）、「歸還」借到站著
+的人、「創建」借到錨（那是望德）、`ut` 借到 🔚（跟當初 `itaque` 一樣，目的的箭頭
+不是終點，改成與希臘 ἵνα 同一個 🎯）、「洗禮」借到浴缸（同冊 `baptismus` 早就是
+💧）。
 
 ## Picture matching
 
