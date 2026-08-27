@@ -30,6 +30,7 @@ V = ROOT / "data" / "originalReaders" / "vocabulary"
 GREEK = V / "greek-appendices.json"
 LATIN = V / "latin-appendices.json"
 HEBREW_NAMES = V / "hebrew-proper-names.json"
+HEBREW_VOCAB = V / "hebrew-1000.json"
 BRIDGE = V / "biblical-name-variants.json"
 
 # 希伯來既有的五類對到九類裡的哪一類；只有 person 需要再往下切。
@@ -127,10 +128,9 @@ def do_latin(classifier: Classifier, write: bool) -> None:
         print(f"      已寫回 {LATIN.name}")
 
 
-def do_hebrew(classifier: Classifier, write: bool) -> None:
-    payload = json.loads(HEBREW_NAMES.read_text(encoding="utf-8"))
+def classify_hebrew_items(items: list[dict], classifier: Classifier) -> collections.Counter:
     tally: collections.Counter = collections.Counter()
-    for item in payload["items"]:
+    for item in items:
         types = item.get("properNameTypes") or []
         # 五類裡非人名的直接對過去，人名才往下切。
         mapped = next((HEBREW_TYPE_MAP[t] for t in types if t in HEBREW_TYPE_MAP), "")
@@ -146,10 +146,25 @@ def do_hebrew(classifier: Classifier, write: bool) -> None:
             item["category"] = category or UNSORTED
             item["categoryRoute"] = route
         tally[item["category"]] += 1
-    report("希伯來 專名", tally)
+    return tally
+
+
+def do_hebrew(classifier: Classifier, write: bool) -> None:
+    payload = json.loads(HEBREW_NAMES.read_text(encoding="utf-8"))
+    report("希伯來 移出的專名", classify_hebrew_items(payload["items"], classifier))
     if write:
         HEBREW_NAMES.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"      已寫回 {HEBREW_NAMES.name}")
+
+    # 課內留著的專名走同一套分類。附錄的分類表兩批一起收，只分一批的話同一節裡
+    # 會一半有細類、一半沒有。
+    vocab = json.loads(HEBREW_VOCAB.read_text(encoding="utf-8"))
+    entries = vocab["entries"] if isinstance(vocab, dict) else vocab
+    inline = [e for e in entries if e.get("isProperName")]
+    report("希伯來 課內專名", classify_hebrew_items(inline, classifier))
+    if write:
+        HEBREW_VOCAB.write_text(json.dumps(vocab, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"      已寫回 {HEBREW_VOCAB.name}")
 
 
 def main() -> None:

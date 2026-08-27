@@ -32,7 +32,8 @@ from docx.shared import Mm, Pt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import latin_source_texts as L  # noqa: E402
-import build_hebrew_full_reader as H  # noqa: E402
+import build_hebrew_full_reader as H
+from proper_name_categories import PRINT_ORDER  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
@@ -119,9 +120,18 @@ def load(path: Path, default=None):
 # page furniture
 # --------------------------------------------------------------------------
 
+# 字級 -> Word 大綱層級。走 Heading 樣式而非自畫的粗體段落，PDF 才有目錄書籤，
+# 字級也只在 build_hebrew_full_reader 定義一次，三本書不會各飄各的。
+HEADING_LEVEL = {H.TITLE_SIZE_PT: 0, H.H1_SIZE_PT: 1, H.H2_SIZE_PT: 2, H.H3_SIZE_PT: 3}
+
+
 def heading(document, text: str, size: float, *, color=None, space_before=10,
             space_after=6, align=WD_ALIGN_PARAGRAPH.LEFT):
-    paragraph = document.add_paragraph()
+    level = HEADING_LEVEL.get(size)
+    if level is None:
+        paragraph = document.add_paragraph()
+    else:
+        paragraph = document.add_heading("", level=level)
     paragraph.alignment = align
     paragraph.paragraph_format.space_before = Pt(space_before)
     paragraph.paragraph_format.space_after = Pt(space_after)
@@ -145,15 +155,45 @@ def page_break(document):
     document.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 
 
+# 封面上的拉丁題辭，一冊一句。
+COVER_LATIN = {"上冊": "VULGATA ET LITURGIA", "下冊": "PATRES ET DOCTORES"}
+
+
 def title_page(document, volume: str, spec: dict, counts: str):
-    for _ in range(4):
-        document.add_paragraph()
-    heading(document, "教會拉丁文原文讀本", H.TITLE_SIZE_PT,
-            align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    heading(document, f"{volume}　{spec['subtitle']}", H.H1_SIZE_PT,
-            align=WD_ALIGN_PARAGRAPH.CENTER, color=H.ACCENT, space_after=18)
-    para = body(document, spec["blurb"], H.BODY_SIZE_PT, color=H.MUTED)
+    """深色橫幅封面，與希伯來、希臘那兩本同一個版式。"""
+    table = document.add_table(rows=1, cols=1)
+    H.set_table_geometry(table, [H.USABLE_WIDTH_MM])
+    H.set_borders(table, outside=False, inside=False)
+    cell = table.cell(0, 0)
+    H.set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
+    H.shade(cell, H.ACCENT_DARK)
+
+    eyebrow = cell.paragraphs[0]
+    eyebrow.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), H.FONT_UI, 8,
+                   color=H.GOLD, bold=True)
+    name = cell.add_paragraph()
+    name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.add_mixed_script_text(name, "教會拉丁文原文讀本", H.FONT_ZH, 25, bold=True,
+                            color="FFF8ED")
+    motto = cell.add_paragraph()
+    motto.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.set_run_font(motto.add_run(COVER_LATIN[volume]), FONT_LA, 18, color="FFF8ED")
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
+    line = document.add_paragraph()
+    line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.add_mixed_script_text(line, f"{volume}　{spec['subtitle']}", H.FONT_ZH, 12,
+                            bold=True, color=H.INK)
+    para = body(document, spec["blurb"], 10.5, color=H.ACCENT)
     para.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
+    spec_line = document.add_paragraph()
+    spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.paragraph_rule(spec_line, color=H.GOLD, size="24")
+    H.set_run_font(spec_line.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), H.FONT_UI,
+                   8.5, color=H.MUTED)
     para = body(document, counts, H.CAPTION_PT, color=H.MUTED)
     para.alignment = WD_ALIGN_PARAGRAPH.CENTER
     page_break(document)
@@ -166,7 +206,7 @@ def title_page(document, volume: str, spec: dict, counts: str):
 
 
 def vocabulary_table(document, rows: list[dict]):
-    heading(document, "本課詞彙", H.H3_SIZE_PT, space_before=6, space_after=4)
+    heading(document, "本課詞彙", H.H2_SIZE_PT, space_before=6, space_after=4)
     table = document.add_table(rows=1, cols=3)
     widths = [H.USABLE_WIDTH_MM * 0.46, H.USABLE_WIDTH_MM * 0.14, H.USABLE_WIDTH_MM * 0.40]
     H.set_table_geometry(table, widths)
@@ -241,7 +281,7 @@ def short_pos(entry: dict) -> str:
 def memory_block(document, units: list[dict]):
     if not units:
         return
-    heading(document, "記憶單元", H.H3_SIZE_PT, space_before=6, space_after=3)
+    heading(document, "記憶單元", H.H2_SIZE_PT, space_before=6, space_after=3)
     for unit in units:
         body(document, unit["text"], LATIN_PT, font=FONT_LA, space_after=1, indent_mm=4)
         zh = unit.get("zh") or ""
@@ -253,7 +293,9 @@ def memory_block(document, units: list[dict]):
 
 
 def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str = ""):
-    heading(document, f"讀本　{title}", H.H3_SIZE_PT, space_before=8, space_after=3)
+    # 每一課的讀物另起一頁：詞表與記憶單元是準備，讀物是這一課的正事。
+    page_break(document)
+    heading(document, f"讀本　{title}", H.H2_SIZE_PT, space_before=0, space_after=3)
     if note:
         body(document, note, H.CAPTION_PT, color=H.MUTED, space_after=4)
     for latin, chinese in pairs:
@@ -373,20 +415,38 @@ def lower_readings() -> dict[int, dict]:
     return apply_gaps(out, 2)
 
 
+def appendix_groups(table: dict) -> list[tuple[str, list[dict]]]:
+    """把一張附錄表切成印得出來的小節。
+
+    專名表用 `category`（九類，見 scripts/proper_name_categories.py），其餘的表用
+    資料裡本來就有的 `group`；沒有分組欄位的整張當一節。次序照 PRINT_ORDER。
+    """
+    field = "category" if any(e.get("category") for e in table["entries"]) else "group"
+    buckets: dict[str, list[dict]] = {}
+    for entry in table["entries"]:
+        buckets.setdefault((entry.get(field) or "").strip(), []).append(entry)
+    if len(buckets) <= 1:
+        return [("", table["entries"])]
+    known = [n for n in PRINT_ORDER if n in buckets]
+    return [(n, buckets[n]) for n in known + [n for n in buckets if n not in known]]
+
+
 def appendix_section(document, tables: dict):
     page_break(document)
-    heading(document, "附錄", H.H1_SIZE_PT)
+    H.add_label(document, "Appendix  ·  reference tables")
+    top = heading(document, "附錄", H.H1_SIZE_PT)
+    H.paragraph_rule(top, color=H.GOLD, size="14")
     for table in tables.values():
         entries = table["entries"]
         heading(document, f"{table['title']}（{len(entries)} 條）", H.H2_SIZE_PT,
                 space_before=10, space_after=4)
-        grouped: dict[str, list[dict]] = {}
-        for entry in entries:
-            grouped.setdefault(entry.get("group", ""), []).append(entry)
-        for group, rows in grouped.items():
+        for group, rows in appendix_groups(table):
             if group:
-                heading(document, group, H.H3_SIZE_PT, space_before=6, space_after=2)
-            for row in rows[:200]:
+                heading(document, f"{group}　{len(rows)} 條", H.H3_SIZE_PT,
+                        space_before=6, space_after=2)
+            # 全印。先前截在 200 條是為了控頁數，但一本查不到東西的附錄不值那些紙：
+            # 上冊專名表 585 條裡有 385 條就是這樣沒印出來的。
+            for row in rows:
                 latin = row.get("forms") or row.get("headword", "")
                 zh = row.get("zh") or row.get("glossZh") or row.get("glossEn") or ""
                 paragraph = document.add_paragraph()
@@ -394,9 +454,6 @@ def appendix_section(document, tables: dict):
                 H.add_mixed_script_text(paragraph, latin + "　", FONT_LA, H.TABLE_SIZE_PT)
                 H.add_mixed_script_text(paragraph, zh, H.FONT_ZH, H.TABLE_SIZE_PT,
                                         color=H.MUTED)
-            if len(rows) > 200:
-                body(document, f"（本組尚有 {len(rows) - 200} 條，見資料檔）",
-                     H.CAPTION_PT, color=H.MUTED)
 
 
 def relabel(document, volume: str, spec: dict) -> None:
@@ -442,13 +499,20 @@ def build(volume: str) -> Path:
 
     for lesson in range(1, 51):
         reading = readings.get(lesson, {"title": "", "pairs": [], "note": ""})
-        heading(document, f"第 {lesson} 課　　{reading['title']}", H.H1_SIZE_PT,
-                space_before=0, space_after=6)
+        # 眉標 → 課次 → 課題 → 金線，與希伯來那本逐項對齊。
+        H.add_label(document, f"Lesson {lesson:02d}  ·  {spec['subtitle']}",
+                    page_break_before=lesson > 1)
+        number = document.add_paragraph()
+        number.paragraph_format.space_after = Pt(1)
+        H.set_run_font(number.add_run(f"第 {lesson:02d} 課"), H.FONT_UI, 11,
+                       bold=True, color=H.ACCENT)
+        opener = heading(document, reading["title"] or "　", H.H1_SIZE_PT,
+                         space_before=0, space_after=6)
+        H.paragraph_rule(opener, color=H.GOLD, size="14")
         vocabulary_table(document, per_lesson.get(lesson, []))
         memory_block(document, memory_by_lesson.get(lesson, []))
         if reading["pairs"]:
             reading_block(document, reading["title"], reading["pairs"], reading["note"])
-        page_break(document)
 
     appendix_section(document, appendices.get(spec["appendix"], {}))
 

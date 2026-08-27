@@ -42,13 +42,9 @@ NAMES = ROOT / "data/originalReaders/vocabulary/hebrew-proper-names.json"
 GLOSSES = ROOT / "output/source-cache/original-readers/hebrew-full/hebrew-gloss-zh-reviewed-by-lemma.json"
 OUTPUT = ROOT / "output/source-cache/original-readers/hebrew-full/appendix-tables.json"
 
-NAME_TYPE_SECTIONS = [
-    ("person", "人名"),
-    ("place", "地名"),
-    ("people_or_nation", "民族與國名"),
-    ("divine_name_or_title", "神名與稱號"),
-    ("festival_or_sacred_time", "節期與聖日"),
-]
+# 分節依 `category`（九類，見 scripts/proper_name_categories.py）。原本只分五類，
+# 「人名」一節就吃掉大半張表——查「保羅」與查「大衛」翻的是同一堆。
+from proper_name_categories import PRINT_ORDER  # noqa: E402
 
 
 class Failure(Exception):
@@ -220,16 +216,20 @@ def build_name_table(lesson_by_lemma: dict[tuple[str, str], int]) -> dict:
             pool.append({**item, "glossZh": gloss, "inLesson": item["lesson"]})
 
     groups = []
-    for type_key, title in NAME_TYPE_SECTIONS:
+    by_category: dict[str, list[dict]] = {}
+    for item in pool:
+        by_category.setdefault(item.get("category") or "待歸類", []).append(item)
+    ordered = [name for name in PRINT_ORDER if name in by_category]
+    ordered += [name for name in by_category if name not in ordered]
+    for title in ordered:
         rows = []
-        for item in pool:
-            if type_key not in (item.get("properNameTypes") or []):
-                continue
+        for item in by_category[title]:
             row = {
                 "pointed": item["pointed"],
                 "transliteration": item["textbookTransliteration"],
                 "glossZh": item["glossZh"],
-                "types": item["properNameTypes"],
+                "types": item.get("properNameTypes") or [],
+                "category": item.get("category") or "待歸類",
                 "strong": item["strong"],
                 "frequency": counts.get(item["strong"], item.get("frequency") or 0),
                 "firstOccurrence": reference_zh(first.get(item["strong"])),
@@ -240,7 +240,7 @@ def build_name_table(lesson_by_lemma: dict[tuple[str, str], int]) -> dict:
         rows.sort(key=lambda row: (-row["frequency"], row["pointed"]))
         if not rows:
             raise Failure(f"專名分類「{title}」是空的")
-        groups.append({"id": type_key, "titleZh": title, "shape": "name", "entries": rows})
+        groups.append({"id": title, "titleZh": title, "shape": "name", "entries": rows})
 
     return {
         "id": "hbo-appendix-proper-names",

@@ -1410,1600 +1410,7 @@
       "intro": "人名、地名與民族國名已自五十課詞表移出，全部收在本表，按類分節、依出現次數排序，因此課文詞表與本表不重複。神名、稱號與安息日仍留在課內學習，本表一併收錄並標出所在課次。",
       "groups": [
         {
-          "id": "person",
-          "titleZh": "人名",
-          "shape": "name",
-          "entries": [
-            {
-              "pointed": "יִשְׂרָאֵל",
-              "transliteration": "yiśrāʾēl",
-              "glossZh": "以色列人；以色列",
-              "types": [
-                "person",
-                "people_or_nation"
-              ],
-              "strong": "H3478",
-              "frequency": 2506,
-              "firstOccurrence": "創世記 32:29"
-            },
-            {
-              "pointed": "דָּוִד",
-              "transliteration": "dāwiḏ",
-              "glossZh": "大衛；耶西的幼子",
-              "types": [
-                "person"
-              ],
-              "strong": "H1732",
-              "frequency": 1075,
-              "firstOccurrence": "撒母耳記上 16:13"
-            },
-            {
-              "pointed": "יְהוּדָה",
-              "transliteration": "yəhûḏâ",
-              "glossZh": "猶大；猶大支派；猶大地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H3063",
-              "frequency": 819,
-              "firstOccurrence": "創世記 29:35"
-            },
-            {
-              "pointed": "מֹשֶׁה",
-              "transliteration": "mōšê",
-              "glossZh": "摩西",
-              "types": [
-                "person"
-              ],
-              "strong": "H4872",
-              "frequency": 766,
-              "firstOccurrence": "出埃及記 2:10"
-            },
-            {
-              "pointed": "אָדָם",
-              "transliteration": "ʾāḏām",
-              "glossZh": "人；人類；亞當",
-              "types": [
-                "person"
-              ],
-              "strong": "H120",
-              "frequency": 552,
-              "firstOccurrence": "創世記 1:26",
-              "lesson": 1
-            },
-            {
-              "pointed": "שָׁאוּל",
-              "transliteration": "šāʾûl",
-              "glossZh": "掃羅",
-              "types": [
-                "person"
-              ],
-              "strong": "H7586",
-              "frequency": 406,
-              "firstOccurrence": "創世記 36:37"
-            },
-            {
-              "pointed": "יַעֲקֹב",
-              "transliteration": "yaʿăqōḇ",
-              "glossZh": "雅各",
-              "types": [
-                "person"
-              ],
-              "strong": "H3290",
-              "frequency": 349,
-              "firstOccurrence": "創世記 25:26"
-            },
-            {
-              "pointed": "אַהֲרוֹן",
-              "transliteration": "ʾahărôn",
-              "glossZh": "亞倫；摩西的兄弟",
-              "types": [
-                "person"
-              ],
-              "strong": "H175",
-              "frequency": 347,
-              "firstOccurrence": "出埃及記 4:14"
-            },
-            {
-              "pointed": "שְׁלֹמֹה",
-              "transliteration": "šəlōmô",
-              "glossZh": "所羅門；大衛的繼承者",
-              "types": [
-                "person"
-              ],
-              "strong": "H8010",
-              "frequency": 293,
-              "firstOccurrence": "撒母耳記下 5:14"
-            },
-            {
-              "pointed": "פַּרְעֹה",
-              "transliteration": "parʿô",
-              "glossZh": "法老",
-              "types": [
-                "person"
-              ],
-              "strong": "H6547",
-              "frequency": 268,
-              "firstOccurrence": "創世記 12:15"
-            },
-            {
-              "pointed": "יְהוֹשׁוּעַ",
-              "transliteration": "yəhôšûaʿ",
-              "glossZh": "約書亞",
-              "types": [
-                "person"
-              ],
-              "strong": "H3091",
-              "frequency": 218,
-              "firstOccurrence": "出埃及記 17:9"
-            },
-            {
-              "pointed": "יוֹסֵף",
-              "transliteration": "yôsēp̄",
-              "glossZh": "約瑟",
-              "types": [
-                "person"
-              ],
-              "strong": "H3130",
-              "frequency": 213,
-              "firstOccurrence": "創世記 30:24"
-            },
-            {
-              "pointed": "מוֹאָב",
-              "transliteration": "môʾāḇ",
-              "glossZh": "摩押；摩押地；摩押人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4124",
-              "frequency": 181,
-              "firstOccurrence": "創世記 19:37"
-            },
-            {
-              "pointed": "אֶפְרַיִם",
-              "transliteration": "ʾep̄rayim",
-              "glossZh": "以法蓮；以法蓮支派；以法蓮地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H669",
-              "frequency": 180,
-              "firstOccurrence": "創世記 41:52"
-            },
-            {
-              "pointed": "אַבְרָהָם",
-              "transliteration": "ʾaḇrāhām",
-              "glossZh": "亞伯拉罕",
-              "types": [
-                "person"
-              ],
-              "strong": "H85",
-              "frequency": 175,
-              "firstOccurrence": "創世記 17:5"
-            },
-            {
-              "pointed": "בִּנְיָמִין",
-              "transliteration": "binyāmîn",
-              "glossZh": "便雅憫；便雅憫支派；便雅憫地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H1144",
-              "frequency": 166,
-              "firstOccurrence": "創世記 35:18"
-            },
-            {
-              "pointed": "אַשּׁוּר",
-              "transliteration": "ʾaššûr",
-              "glossZh": "亞述；亞述人；亞述國",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H804",
-              "frequency": 151,
-              "firstOccurrence": "創世記 2:14"
-            },
-            {
-              "pointed": "יִרְמְיָה",
-              "transliteration": "yirməyâ",
-              "glossZh": "耶利米",
-              "types": [
-                "person"
-              ],
-              "strong": "H3414",
-              "frequency": 147,
-              "firstOccurrence": "列王紀下 23:31"
-            },
-            {
-              "pointed": "מְנַשֶּׁה",
-              "transliteration": "mənaššê",
-              "glossZh": "瑪拿西；瑪拿西支派；瑪拿西地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4519",
-              "frequency": 146,
-              "firstOccurrence": "創世記 41:51"
-            },
-            {
-              "pointed": "יוֹאָב",
-              "transliteration": "yôʾāḇ",
-              "glossZh": "約押",
-              "types": [
-                "person"
-              ],
-              "strong": "H3097",
-              "frequency": 145,
-              "firstOccurrence": "撒母耳記上 26:6"
-            },
-            {
-              "pointed": "שְׁמוּאֵל",
-              "transliteration": "šəmûʾēl",
-              "glossZh": "撒母耳",
-              "types": [
-                "person"
-              ],
-              "strong": "H8050",
-              "frequency": 140,
-              "firstOccurrence": "民數記 34:20"
-            },
-            {
-              "pointed": "גִּלְעָד",
-              "transliteration": "gilʿāḏ",
-              "glossZh": "基列；基列地",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H1568",
-              "frequency": 134,
-              "firstOccurrence": "創世記 31:21"
-            },
-            {
-              "pointed": "אֲרָם",
-              "transliteration": "ʾărām",
-              "glossZh": "亞蘭；亞蘭地；亞蘭人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H758",
-              "frequency": 133,
-              "firstOccurrence": "創世記 10:22"
-            },
-            {
-              "pointed": "חִזְקִיָּה",
-              "transliteration": "ḥizqiyyâ",
-              "glossZh": "希西家",
-              "types": [
-                "person"
-              ],
-              "strong": "H2396",
-              "frequency": 130,
-              "firstOccurrence": "列王紀下 16:20"
-            },
-            {
-              "pointed": "אֲבִישָׁלוֹם",
-              "transliteration": "ʾăḇîšālôm",
-              "glossZh": "押沙龍；大衛的兒子",
-              "types": [
-                "person"
-              ],
-              "strong": "H53",
-              "frequency": 111,
-              "firstOccurrence": "撒母耳記下 3:3"
-            },
-            {
-              "pointed": "יִצְחָק",
-              "transliteration": "yiṣḥāq",
-              "glossZh": "以撒；亞伯拉罕的兒子",
-              "types": [
-                "person"
-              ],
-              "strong": "H3327",
-              "frequency": 108,
-              "firstOccurrence": "創世記 17:19"
-            },
-            {
-              "pointed": "עַמּוֹן",
-              "transliteration": "ʿammôn",
-              "glossZh": "亞捫；亞捫地；亞捫人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H5983",
-              "frequency": 106,
-              "firstOccurrence": "創世記 19:38"
-            },
-            {
-              "pointed": "יָרׇבְעָם",
-              "transliteration": "yāroḇʿām",
-              "glossZh": "耶羅波安",
-              "types": [
-                "person"
-              ],
-              "strong": "H3379",
-              "frequency": 104,
-              "firstOccurrence": "列王紀上 11:26"
-            },
-            {
-              "pointed": "אֱדֹם",
-              "transliteration": "ʾĕḏōm",
-              "glossZh": "以東；以東地；以東人",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H123",
-              "frequency": 100,
-              "firstOccurrence": "創世記 25:30"
-            },
-            {
-              "pointed": "עֵשָׂו",
-              "transliteration": "ʿēśāw",
-              "glossZh": "以掃；以掃的後裔",
-              "types": [
-                "person",
-                "people_or_nation"
-              ],
-              "strong": "H6215",
-              "frequency": 97,
-              "firstOccurrence": "創世記 25:25"
-            },
-            {
-              "pointed": "כְּנַעַן",
-              "transliteration": "kənaʿan",
-              "glossZh": "迦南；迦南地",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H3667",
-              "frequency": 94,
-              "firstOccurrence": "創世記 9:18"
-            },
-            {
-              "pointed": "אַחְאָב",
-              "transliteration": "ʾaḥʾāḇ",
-              "glossZh": "亞哈",
-              "types": [
-                "person"
-              ],
-              "strong": "H256",
-              "frequency": 93,
-              "firstOccurrence": "列王紀上 16:28"
-            },
-            {
-              "pointed": "יְהוֹשָׁפָט",
-              "transliteration": "yəhôšāp̄āṭ",
-              "glossZh": "約沙法；約沙法谷",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H3092",
-              "frequency": 84,
-              "firstOccurrence": "撒母耳記下 8:16"
-            },
-            {
-              "pointed": "יְהוֹנָתָן",
-              "transliteration": "yəhônāṯān",
-              "glossZh": "約拿單",
-              "types": [
-                "person"
-              ],
-              "strong": "H3083",
-              "frequency": 80,
-              "firstOccurrence": "撒母耳記上 14:6"
-            },
-            {
-              "pointed": "אֶלְעָזָר",
-              "transliteration": "ʾelʿāzār",
-              "glossZh": "以利亞撒",
-              "types": [
-                "person"
-              ],
-              "strong": "H499",
-              "frequency": 72,
-              "firstOccurrence": "出埃及記 6:23"
-            },
-            {
-              "pointed": "גָּד",
-              "transliteration": "gāḏ",
-              "glossZh": "迦得；迦得支派；迦得地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H1410",
-              "frequency": 72,
-              "firstOccurrence": "創世記 30:11"
-            },
-            {
-              "pointed": "רְאוּבֵן",
-              "transliteration": "rəʾûḇēn",
-              "glossZh": "呂便；雅各的兒子",
-              "types": [
-                "person"
-              ],
-              "strong": "H7205",
-              "frequency": 72,
-              "firstOccurrence": "創世記 29:32"
-            },
-            {
-              "pointed": "אֵלִיָּה",
-              "transliteration": "ʾēliyyâ",
-              "glossZh": "以利亞",
-              "types": [
-                "person"
-              ],
-              "strong": "H452",
-              "frequency": 71,
-              "firstOccurrence": "列王紀上 17:1"
-            },
-            {
-              "pointed": "חֶבְרוֹן",
-              "transliteration": "ḥeḇrôn",
-              "glossZh": "希伯崙",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H2275",
-              "frequency": 71,
-              "firstOccurrence": "創世記 13:18"
-            },
-            {
-              "pointed": "דָּן",
-              "transliteration": "dān",
-              "glossZh": "但；但支派；但地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H1835",
-              "frequency": 70,
-              "firstOccurrence": "創世記 14:14"
-            },
-            {
-              "pointed": "אֲבִימֶלֶךְ",
-              "transliteration": "ʾăḇîmeleḵ",
-              "glossZh": "亞比米勒",
-              "types": [
-                "person"
-              ],
-              "strong": "H40",
-              "frequency": 67,
-              "firstOccurrence": "創世記 20:2"
-            },
-            {
-              "pointed": "לֵוִי",
-              "transliteration": "lēwî",
-              "glossZh": "利未",
-              "types": [
-                "person"
-              ],
-              "strong": "H3878",
-              "frequency": 64,
-              "firstOccurrence": "創世記 29:34"
-            },
-            {
-              "pointed": "אַבְנֵר",
-              "transliteration": "ʾaḇnēr",
-              "glossZh": "押尼珥",
-              "types": [
-                "person"
-              ],
-              "strong": "H74",
-              "frequency": 63,
-              "firstOccurrence": "撒母耳記上 14:50"
-            },
-            {
-              "pointed": "צִדְקִיָּה",
-              "transliteration": "ṣiḏqiyyâ",
-              "glossZh": "西底家",
-              "types": [
-                "person"
-              ],
-              "strong": "H6667",
-              "frequency": 63,
-              "firstOccurrence": "列王紀上 22:11"
-            },
-            {
-              "pointed": "אַבְרָם",
-              "transliteration": "ʾaḇrām",
-              "glossZh": "亞伯蘭",
-              "types": [
-                "person"
-              ],
-              "strong": "H87",
-              "frequency": 61,
-              "firstOccurrence": "創世記 11:26"
-            },
-            {
-              "pointed": "בִּלְעָם",
-              "transliteration": "bilʿām",
-              "glossZh": "巴蘭",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H1109",
-              "frequency": 61,
-              "firstOccurrence": "民數記 22:5"
-            },
-            {
-              "pointed": "מׇרְדְּכַי",
-              "transliteration": "mordəḵay",
-              "glossZh": "末底改",
-              "types": [
-                "person"
-              ],
-              "strong": "H4782",
-              "frequency": 60,
-              "firstOccurrence": "以斯帖記 2:5"
-            },
-            {
-              "pointed": "מִדְיָן",
-              "transliteration": "miḏyān",
-              "glossZh": "米甸；米甸地；米甸人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4080",
-              "frequency": 59,
-              "firstOccurrence": "創世記 25:2"
-            },
-            {
-              "pointed": "נְבוּכַדְנֶאצַּר",
-              "transliteration": "nəḇûḵaḏneʾṣṣar",
-              "glossZh": "尼布甲尼撒；巴比倫王",
-              "types": [
-                "person"
-              ],
-              "strong": "H5019",
-              "frequency": 59,
-              "firstOccurrence": "列王紀下 24:1"
-            },
-            {
-              "pointed": "אֱלִישָׁע",
-              "transliteration": "ʾĕlîšāʿ",
-              "glossZh": "以利沙",
-              "types": [
-                "person"
-              ],
-              "strong": "H477",
-              "frequency": 58,
-              "firstOccurrence": "列王紀上 19:16"
-            },
-            {
-              "pointed": "אִיּוֹב",
-              "transliteration": "ʾîôḇ",
-              "glossZh": "約伯",
-              "types": [
-                "person"
-              ],
-              "strong": "H347",
-              "frequency": 58,
-              "firstOccurrence": "以西結書 14:14"
-            },
-            {
-              "pointed": "אָסָא",
-              "transliteration": "ʾāsāʾ",
-              "glossZh": "亞撒",
-              "types": [
-                "person"
-              ],
-              "strong": "H609",
-              "frequency": 58,
-              "firstOccurrence": "列王紀上 15:8"
-            },
-            {
-              "pointed": "יֵהוּא",
-              "transliteration": "yēhûʾ",
-              "glossZh": "耶戶",
-              "types": [
-                "person"
-              ],
-              "strong": "H3058",
-              "frequency": 58,
-              "firstOccurrence": "列王紀上 16:1"
-            },
-            {
-              "pointed": "אֶסְתֵּר",
-              "transliteration": "ʾestēr",
-              "glossZh": "以斯帖；猶太女英雄",
-              "types": [
-                "person"
-              ],
-              "strong": "H635",
-              "frequency": 55,
-              "firstOccurrence": "以斯帖記 2:7"
-            },
-            {
-              "pointed": "לָבָן",
-              "transliteration": "lāḇān",
-              "glossZh": "拉班；米所波大米人；亦為曠野一處地名",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H3837",
-              "frequency": 55,
-              "firstOccurrence": "創世記 24:29"
-            },
-            {
-              "pointed": "הָמָן",
-              "transliteration": "hāmān",
-              "glossZh": "哈曼；波斯宰相",
-              "types": [
-                "person"
-              ],
-              "strong": "H2001",
-              "frequency": 54,
-              "firstOccurrence": "以斯帖記 3:1"
-            },
-            {
-              "pointed": "יֹאשִׁיָּה",
-              "transliteration": "yōʾšiyyâ",
-              "glossZh": "約西亞；兩名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H2977",
-              "frequency": 53,
-              "firstOccurrence": "列王紀上 13:2"
-            },
-            {
-              "pointed": "צָדוֹק",
-              "transliteration": "ṣāḏôq",
-              "glossZh": "撒督；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H6659",
-              "frequency": 53,
-              "firstOccurrence": "撒母耳記下 8:17"
-            },
-            {
-              "pointed": "יְהוֹיָדָע",
-              "transliteration": "yəhôyāḏāʿ",
-              "glossZh": "耶何耶大；三名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H3077",
-              "frequency": 51,
-              "firstOccurrence": "撒母耳記下 8:18"
-            },
-            {
-              "pointed": "נַפְתָּלִי",
-              "transliteration": "nap̄tālî",
-              "glossZh": "拿弗他利；雅各的兒子、其支派及地業",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H5321",
-              "frequency": 51,
-              "firstOccurrence": "創世記 30:8"
-            },
-            {
-              "pointed": "בֶּן־הֲדַד",
-              "transliteration": "ben-hăḏaḏ",
-              "glossZh": "便哈達；多名亞蘭王的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H1130",
-              "frequency": 50,
-              "firstOccurrence": "列王紀上 15:18"
-            },
-            {
-              "pointed": "רְחַבְעָם",
-              "transliteration": "rəḥaḇʿām",
-              "glossZh": "羅波安；以色列王",
-              "types": [
-                "person"
-              ],
-              "strong": "H7346",
-              "frequency": 50,
-              "firstOccurrence": "列王紀上 11:43"
-            },
-            {
-              "pointed": "יִשְׁמָעֵאל",
-              "transliteration": "yišmāʿēʾl",
-              "glossZh": "以實瑪利；亞伯拉罕長子及五名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H3458",
-              "frequency": 48,
-              "firstOccurrence": "創世記 16:11"
-            },
-            {
-              "pointed": "עֲזַרְיָה",
-              "transliteration": "ʿăzaryâ",
-              "glossZh": "亞撒利雅；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H5838",
-              "frequency": 48,
-              "firstOccurrence": "列王紀上 4:2"
-            },
-            {
-              "pointed": "יוֹאָשׁ",
-              "transliteration": "yôʾāš",
-              "glossZh": "約阿施；六名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H3101",
-              "frequency": 47,
-              "firstOccurrence": "士師記 6:11"
-            },
-            {
-              "pointed": "רָחֵל",
-              "transliteration": "rāḥēl",
-              "glossZh": "拉結；雅各的妻子",
-              "types": [
-                "person"
-              ],
-              "strong": "H7354",
-              "frequency": 47,
-              "firstOccurrence": "創世記 29:6"
-            },
-            {
-              "pointed": "אָסָף",
-              "transliteration": "ʾāsāp̄",
-              "glossZh": "亞薩；三名以色列人的名字及其家族",
-              "types": [
-                "person",
-                "people_or_nation"
-              ],
-              "strong": "H623",
-              "frequency": 46,
-              "firstOccurrence": "列王紀下 18:18"
-            },
-            {
-              "pointed": "נֹחַ",
-              "transliteration": "nōaḥ",
-              "glossZh": "挪亞；洪水時代的先祖",
-              "types": [
-                "person"
-              ],
-              "strong": "H5146",
-              "frequency": 46,
-              "firstOccurrence": "創世記 5:29"
-            },
-            {
-              "pointed": "זְבוּלוּן",
-              "transliteration": "zəḇûlûn",
-              "glossZh": "西布倫；雅各的兒子、其地業及支派",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H2074",
-              "frequency": 45,
-              "firstOccurrence": "創世記 30:20"
-            },
-            {
-              "pointed": "יוֹנָתָן",
-              "transliteration": "yônāṯān",
-              "glossZh": "約拿單；十名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H3129",
-              "frequency": 44,
-              "firstOccurrence": "士師記 18:30"
-            },
-            {
-              "pointed": "שִׁמְעִי",
-              "transliteration": "šimʿî",
-              "glossZh": "示每；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H8096",
-              "frequency": 44,
-              "firstOccurrence": "出埃及記 6:17"
-            },
-            {
-              "pointed": "שִׁמְעוֹן",
-              "transliteration": "šimʿôn",
-              "glossZh": "西緬；雅各的兒子及其支派",
-              "types": [
-                "person",
-                "people_or_nation"
-              ],
-              "strong": "H8095",
-              "frequency": 44,
-              "firstOccurrence": "創世記 29:33"
-            },
-            {
-              "pointed": "אָשֵׁר",
-              "transliteration": "ʾāšēr",
-              "glossZh": "有福的；亞設；雅各的兒子、其支派、地業及一處地名",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H836",
-              "frequency": 43,
-              "firstOccurrence": "創世記 30:13"
-            },
-            {
-              "pointed": "בָּלָק",
-              "transliteration": "bālāq",
-              "glossZh": "巴勒；摩押王",
-              "types": [
-                "person"
-              ],
-              "strong": "H1111",
-              "frequency": 43,
-              "firstOccurrence": "民數記 22:2"
-            },
-            {
-              "pointed": "זְכַרְיָה",
-              "transliteration": "zəḵaryâ",
-              "glossZh": "撒迦利亞；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H2148",
-              "frequency": 43,
-              "firstOccurrence": "列王紀下 14:29"
-            },
-            {
-              "pointed": "בְּנָיָה",
-              "transliteration": "bənāyâ",
-              "glossZh": "比拿雅；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H1141",
-              "frequency": 42,
-              "firstOccurrence": "撒母耳記下 8:18"
-            },
-            {
-              "pointed": "יִשַׁי",
-              "transliteration": "yišay",
-              "glossZh": "耶西；大衛的父親",
-              "types": [
-                "person"
-              ],
-              "strong": "H3448",
-              "frequency": 42,
-              "firstOccurrence": "撒母耳記上 16:1"
-            },
-            {
-              "pointed": "נָתָן",
-              "transliteration": "nāṯān",
-              "glossZh": "拿單；五名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H5416",
-              "frequency": 42,
-              "firstOccurrence": "撒母耳記下 5:14"
-            },
-            {
-              "pointed": "אָחָז",
-              "transliteration": "ʾāḥāz",
-              "glossZh": "亞哈斯；一名猶大王及一名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H271",
-              "frequency": 41,
-              "firstOccurrence": "列王紀下 15:38"
-            },
-            {
-              "pointed": "שְׁמַעְיָה",
-              "transliteration": "šəmaʿyâ",
-              "glossZh": "示瑪雅；多名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H8098",
-              "frequency": 41,
-              "firstOccurrence": "列王紀上 12:22"
-            },
-            {
-              "pointed": "אֲמַצְיָה",
-              "transliteration": "ʾămaṣyâ",
-              "glossZh": "亞瑪謝；四名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H558",
-              "frequency": 40,
-              "firstOccurrence": "列王紀下 12:22"
-            },
-            {
-              "pointed": "עֹבֵד אֱדוֹם",
-              "transliteration": "ʿōḇēḏ ʾĕḏôm",
-              "glossZh": "俄別以東；五名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H5654",
-              "frequency": 40,
-              "firstOccurrence": "撒母耳記下 6:10"
-            },
-            {
-              "pointed": "אוּרִיָּה",
-              "transliteration": "ʾûriyyâ",
-              "glossZh": "烏利亞；一名赫人及五名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H223",
-              "frequency": 39,
-              "firstOccurrence": "撒母耳記下 11:3"
-            },
-            {
-              "pointed": "גִּדְעוֹן",
-              "transliteration": "giḏʿôn",
-              "glossZh": "基甸；以色列人",
-              "types": [
-                "person"
-              ],
-              "strong": "H1439",
-              "frequency": 39,
-              "firstOccurrence": "士師記 6:11"
-            },
-            {
-              "pointed": "יְשַׁעְיָה",
-              "transliteration": "yəšaʿyâ",
-              "glossZh": "以賽亞；七名以色列人的名字",
-              "types": [
-                "person"
-              ],
-              "strong": "H3470",
-              "frequency": 39,
-              "firstOccurrence": "列王紀下 19:2"
-            },
-            {
-              "pointed": "מְרָרִי",
-              "transliteration": "mərārî",
-              "glossZh": "米拉利；以色列人",
-              "types": [
-                "person"
-              ],
-              "strong": "H4847",
-              "frequency": 39,
-              "firstOccurrence": "創世記 46:11"
-            },
-            {
-              "pointed": "עֲמָלֵק",
-              "transliteration": "ʿămālēq",
-              "glossZh": "亞瑪力；以掃的後裔、其族及其地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H6002",
-              "frequency": 39,
-              "firstOccurrence": "創世記 36:12"
-            }
-          ]
-        },
-        {
-          "id": "place",
-          "titleZh": "地名",
-          "shape": "name",
-          "entries": [
-            {
-              "pointed": "יְהוּדָה",
-              "transliteration": "yəhûḏâ",
-              "glossZh": "猶大；猶大支派；猶大地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H3063",
-              "frequency": 819,
-              "firstOccurrence": "創世記 29:35"
-            },
-            {
-              "pointed": "יְרוּשָׁלַ֫יִם",
-              "transliteration": "yərûšālayim",
-              "glossZh": "耶路撒冷",
-              "types": [
-                "place"
-              ],
-              "strong": "H3389",
-              "frequency": 643,
-              "firstOccurrence": "約書亞記 10:1"
-            },
-            {
-              "pointed": "יְרוּשָׁלַ֫םִ",
-              "transliteration": "yərûšālayim",
-              "glossZh": "耶路撒冷",
-              "types": [
-                "place"
-              ],
-              "strong": "H3389",
-              "frequency": 643,
-              "firstOccurrence": "約書亞記 10:1"
-            },
-            {
-              "pointed": "מִצְרַ֫יִם",
-              "transliteration": "miṣrayim",
-              "glossZh": "埃及",
-              "types": [
-                "place"
-              ],
-              "strong": "H4714",
-              "frequency": 635,
-              "firstOccurrence": "創世記 10:6"
-            },
-            {
-              "pointed": "בָּבֶל",
-              "transliteration": "bāḇel",
-              "glossZh": "巴別；巴比倫；巴比倫帝國",
-              "types": [
-                "place"
-              ],
-              "strong": "H894",
-              "frequency": 262,
-              "firstOccurrence": "創世記 10:10"
-            },
-            {
-              "pointed": "יַרְדֵּן",
-              "transliteration": "yardēn",
-              "glossZh": "約旦河",
-              "types": [
-                "place"
-              ],
-              "strong": "H3383",
-              "frequency": 182,
-              "firstOccurrence": "創世記 13:10"
-            },
-            {
-              "pointed": "מוֹאָב",
-              "transliteration": "môʾāḇ",
-              "glossZh": "摩押；摩押地；摩押人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4124",
-              "frequency": 181,
-              "firstOccurrence": "創世記 19:37"
-            },
-            {
-              "pointed": "אֶפְרַיִם",
-              "transliteration": "ʾep̄rayim",
-              "glossZh": "以法蓮；以法蓮支派；以法蓮地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H669",
-              "frequency": 180,
-              "firstOccurrence": "創世記 41:52"
-            },
-            {
-              "pointed": "בִּנְיָמִין",
-              "transliteration": "binyāmîn",
-              "glossZh": "便雅憫；便雅憫支派；便雅憫地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H1144",
-              "frequency": 166,
-              "firstOccurrence": "創世記 35:18"
-            },
-            {
-              "pointed": "צִיּוֹן",
-              "transliteration": "ṣîôn",
-              "glossZh": "錫安；耶路撒冷的山",
-              "types": [
-                "place"
-              ],
-              "strong": "H6726",
-              "frequency": 153,
-              "firstOccurrence": "撒母耳記下 5:7"
-            },
-            {
-              "pointed": "אַשּׁוּר",
-              "transliteration": "ʾaššûr",
-              "glossZh": "亞述；亞述人；亞述國",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H804",
-              "frequency": 151,
-              "firstOccurrence": "創世記 2:14"
-            },
-            {
-              "pointed": "מְנַשֶּׁה",
-              "transliteration": "mənaššê",
-              "glossZh": "瑪拿西；瑪拿西支派；瑪拿西地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4519",
-              "frequency": 146,
-              "firstOccurrence": "創世記 41:51"
-            },
-            {
-              "pointed": "בֵּית־אֵל",
-              "transliteration": "bêṯ-ʾēl",
-              "glossZh": "伯特利",
-              "types": [
-                "place"
-              ],
-              "strong": "H1008",
-              "frequency": 144,
-              "firstOccurrence": "創世記 12:8"
-            },
-            {
-              "pointed": "גִּלְעָד",
-              "transliteration": "gilʿāḏ",
-              "glossZh": "基列；基列地",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H1568",
-              "frequency": 134,
-              "firstOccurrence": "創世記 31:21"
-            },
-            {
-              "pointed": "אֲרָם",
-              "transliteration": "ʾărām",
-              "glossZh": "亞蘭；亞蘭地；亞蘭人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H758",
-              "frequency": 133,
-              "firstOccurrence": "創世記 10:22"
-            },
-            {
-              "pointed": "נֶ֫גֶב",
-              "transliteration": "neg̅eḇ",
-              "glossZh": "南方；尼革夫",
-              "types": [
-                "place"
-              ],
-              "strong": "H5045",
-              "frequency": 111,
-              "firstOccurrence": "創世記 12:9",
-              "lesson": 25
-            },
-            {
-              "pointed": "שֹׁמְרוֹן",
-              "transliteration": "šōmərôn",
-              "glossZh": "撒馬利亞",
-              "types": [
-                "place"
-              ],
-              "strong": "H8111",
-              "frequency": 109,
-              "firstOccurrence": "列王紀上 13:32"
-            },
-            {
-              "pointed": "עַמּוֹן",
-              "transliteration": "ʿammôn",
-              "glossZh": "亞捫；亞捫地；亞捫人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H5983",
-              "frequency": 106,
-              "firstOccurrence": "創世記 19:38"
-            },
-            {
-              "pointed": "אֱדֹם",
-              "transliteration": "ʾĕḏōm",
-              "glossZh": "以東；以東地；以東人",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H123",
-              "frequency": 100,
-              "firstOccurrence": "創世記 25:30"
-            },
-            {
-              "pointed": "כְּנַעַן",
-              "transliteration": "kənaʿan",
-              "glossZh": "迦南；迦南地",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H3667",
-              "frequency": 94,
-              "firstOccurrence": "創世記 9:18"
-            },
-            {
-              "pointed": "יְהוֹשָׁפָט",
-              "transliteration": "yəhôšāp̄āṭ",
-              "glossZh": "約沙法；約沙法谷",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H3092",
-              "frequency": 84,
-              "firstOccurrence": "撒母耳記下 8:16"
-            },
-            {
-              "pointed": "בֵּית לֶחֶם",
-              "transliteration": "bêṯ leḥem",
-              "glossZh": "伯利恆",
-              "types": [
-                "place"
-              ],
-              "strong": "H1035",
-              "frequency": 82,
-              "firstOccurrence": "創世記 35:19"
-            },
-            {
-              "pointed": "גָּד",
-              "transliteration": "gāḏ",
-              "glossZh": "迦得；迦得支派；迦得地",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H1410",
-              "frequency": 72,
-              "firstOccurrence": "創世記 30:11"
-            },
-            {
-              "pointed": "חֶבְרוֹן",
-              "transliteration": "ḥeḇrôn",
-              "glossZh": "希伯崙",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H2275",
-              "frequency": 71,
-              "firstOccurrence": "創世記 13:18"
-            },
-            {
-              "pointed": "לְבָנוֹן",
-              "transliteration": "ləḇānôn",
-              "glossZh": "黎巴嫩",
-              "types": [
-                "place"
-              ],
-              "strong": "H3844",
-              "frequency": 71,
-              "firstOccurrence": "申命記 1:7"
-            },
-            {
-              "pointed": "דָּן",
-              "transliteration": "dān",
-              "glossZh": "但；但支派；但地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H1835",
-              "frequency": 70,
-              "firstOccurrence": "創世記 14:14"
-            },
-            {
-              "pointed": "בְּאֵר שֶׁבַע",
-              "transliteration": "bəʾēr šeḇaʿ",
-              "glossZh": "別是巴",
-              "types": [
-                "place"
-              ],
-              "strong": "H884",
-              "frequency": 68,
-              "firstOccurrence": "創世記 21:14"
-            },
-            {
-              "pointed": "שְׁאוֹל",
-              "transliteration": "šəʾôl",
-              "glossZh": "陰間；死人之地",
-              "types": [
-                "place"
-              ],
-              "strong": "H7585",
-              "frequency": 66,
-              "firstOccurrence": "創世記 37:35",
-              "lesson": 31
-            },
-            {
-              "pointed": "יְאֹר",
-              "transliteration": "yəʾōr",
-              "glossZh": "河渠；尼羅河；底格里斯河",
-              "types": [
-                "place"
-              ],
-              "strong": "H2975",
-              "frequency": 65,
-              "firstOccurrence": "創世記 41:1",
-              "lesson": 31
-            },
-            {
-              "pointed": "שְׁכֶם",
-              "transliteration": "šəḵem",
-              "glossZh": "示劍",
-              "types": [
-                "place"
-              ],
-              "strong": "H7927",
-              "frequency": 63,
-              "firstOccurrence": "創世記 12:6"
-            },
-            {
-              "pointed": "בִּלְעָם",
-              "transliteration": "bilʿām",
-              "glossZh": "巴蘭",
-              "types": [
-                "place",
-                "person"
-              ],
-              "strong": "H1109",
-              "frequency": 61,
-              "firstOccurrence": "民數記 22:5"
-            },
-            {
-              "pointed": "בָּשָׁן",
-              "transliteration": "bāšān",
-              "glossZh": "巴珊",
-              "types": [
-                "place"
-              ],
-              "strong": "H1316",
-              "frequency": 60,
-              "firstOccurrence": "民數記 21:33"
-            },
-            {
-              "pointed": "מִדְיָן",
-              "transliteration": "miḏyān",
-              "glossZh": "米甸；米甸地；米甸人",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H4080",
-              "frequency": 59,
-              "firstOccurrence": "創世記 25:2"
-            },
-            {
-              "pointed": "יְרִיחוֹ",
-              "transliteration": "yərîḥô",
-              "glossZh": "耶利哥",
-              "types": [
-                "place"
-              ],
-              "strong": "H3405",
-              "frequency": 57,
-              "firstOccurrence": "民數記 22:1"
-            },
-            {
-              "pointed": "לָבָן",
-              "transliteration": "lāḇān",
-              "glossZh": "拉班；米所波大米人；亦為曠野一處地名",
-              "types": [
-                "person",
-                "place"
-              ],
-              "strong": "H3837",
-              "frequency": 55,
-              "firstOccurrence": "創世記 24:29"
-            },
-            {
-              "pointed": "נַפְתָּלִי",
-              "transliteration": "nap̄tālî",
-              "glossZh": "拿弗他利；雅各的兒子、其支派及地業",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H5321",
-              "frequency": 51,
-              "firstOccurrence": "創世記 30:8"
-            },
-            {
-              "pointed": "דַּמֶּשֶׂק",
-              "transliteration": "dammeśeq",
-              "glossZh": "大馬士革；亞蘭的一座城",
-              "types": [
-                "place"
-              ],
-              "strong": "H1834",
-              "frequency": 45,
-              "firstOccurrence": "創世記 14:15"
-            },
-            {
-              "pointed": "זְבוּלוּן",
-              "transliteration": "zəḇûlûn",
-              "glossZh": "西布倫；雅各的兒子、其地業及支派",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H2074",
-              "frequency": 45,
-              "firstOccurrence": "創世記 30:20"
-            },
-            {
-              "pointed": "אָשֵׁר",
-              "transliteration": "ʾāšēr",
-              "glossZh": "有福的；亞設；雅各的兒子、其支派、地業及一處地名",
-              "types": [
-                "place",
-                "people_or_nation",
-                "person"
-              ],
-              "strong": "H836",
-              "frequency": 43,
-              "firstOccurrence": "創世記 30:13"
-            },
-            {
-              "pointed": "גִּבְעָה",
-              "transliteration": "giḇʿâ",
-              "glossZh": "基比亞；三處地名",
-              "types": [
-                "place"
-              ],
-              "strong": "H1390",
-              "frequency": 43,
-              "firstOccurrence": "約書亞記 15:57"
-            },
-            {
-              "pointed": "בֵּית שֶׁמֶשׁ",
-              "transliteration": "bêṯ šemeš",
-              "glossZh": "伯示麥",
-              "types": [
-                "place"
-              ],
-              "strong": "H1053",
-              "frequency": 42,
-              "firstOccurrence": "約書亞記 15:10"
-            },
-            {
-              "pointed": "צֹר",
-              "transliteration": "ṣōr",
-              "glossZh": "推羅",
-              "types": [
-                "place"
-              ],
-              "strong": "H6865",
-              "frequency": 42,
-              "firstOccurrence": "約書亞記 19:29"
-            },
-            {
-              "pointed": "גִּלְגָּל",
-              "transliteration": "gilgāl",
-              "glossZh": "吉甲；三處地名",
-              "types": [
-                "place"
-              ],
-              "strong": "H1537",
-              "frequency": 41,
-              "firstOccurrence": "申命記 11:30"
-            },
-            {
-              "pointed": "סְדֹם",
-              "transliteration": "səḏōm",
-              "glossZh": "所多瑪；死海附近的城",
-              "types": [
-                "place"
-              ],
-              "strong": "H5467",
-              "frequency": 39,
-              "firstOccurrence": "創世記 10:19"
-            },
-            {
-              "pointed": "עֲמָלֵק",
-              "transliteration": "ʿămālēq",
-              "glossZh": "亞瑪力；以掃的後裔、其族及其地",
-              "types": [
-                "person",
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H6002",
-              "frequency": 39,
-              "firstOccurrence": "創世記 36:12"
-            },
-            {
-              "pointed": "עַי",
-              "transliteration": "ʿay",
-              "glossZh": "艾城",
-              "types": [
-                "place"
-              ],
-              "strong": "H5857",
-              "frequency": 39,
-              "firstOccurrence": "創世記 12:8"
-            },
-            {
-              "pointed": "קִרְיַת יְעָרִים",
-              "transliteration": "qiryaṯ yəʿārîm",
-              "glossZh": "基列耶琳",
-              "types": [
-                "place"
-              ],
-              "strong": "H7157",
-              "frequency": 39,
-              "firstOccurrence": "約書亞記 9:17"
-            },
-            {
-              "pointed": "שֵׂעִיר",
-              "transliteration": "śēʿîr",
-              "glossZh": "西珥；以東的山及其居民",
-              "types": [
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H8165",
-              "frequency": 39,
-              "firstOccurrence": "創世記 14:6"
-            },
-            {
-              "pointed": "חֶשְׁבּוֹן",
-              "transliteration": "ḥešbôn",
-              "glossZh": "希實本；約旦河東的城",
-              "types": [
-                "place"
-              ],
-              "strong": "H2809",
-              "frequency": 38,
-              "firstOccurrence": "民數記 21:25"
-            }
-          ]
-        },
-        {
-          "id": "people_or_nation",
+          "id": "民族與國名",
           "titleZh": "民族與國名",
           "shape": "name",
           "entries": [
@@ -3015,6 +1422,7 @@
                 "person",
                 "people_or_nation"
               ],
+              "category": "民族與國名",
               "strong": "H3478",
               "frequency": 2506,
               "firstOccurrence": "創世記 32:29"
@@ -3028,6 +1436,7 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "民族與國名",
               "strong": "H3063",
               "frequency": 819,
               "firstOccurrence": "創世記 29:35"
@@ -3039,6 +1448,7 @@
               "types": [
                 "people_or_nation"
               ],
+              "category": "民族與國名",
               "strong": "H6430",
               "frequency": 288,
               "firstOccurrence": "創世記 10:14"
@@ -3050,6 +1460,7 @@
               "types": [
                 "people_or_nation"
               ],
+              "category": "民族與國名",
               "strong": "H3881",
               "frequency": 286,
               "firstOccurrence": "出埃及記 4:14"
@@ -3063,9 +1474,868 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "民族與國名",
               "strong": "H4124",
               "frequency": 181,
               "firstOccurrence": "創世記 19:37"
+            },
+            {
+              "pointed": "עַמּוֹן",
+              "transliteration": "ʿammôn",
+              "glossZh": "亞捫；亞捫地；亞捫人",
+              "types": [
+                "person",
+                "place",
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H5983",
+              "frequency": 106,
+              "firstOccurrence": "創世記 19:38"
+            },
+            {
+              "pointed": "אֱמֹרִי",
+              "transliteration": "ʾĕmōrî",
+              "glossZh": "亞摩利人",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H567",
+              "frequency": 87,
+              "firstOccurrence": "創世記 10:16"
+            },
+            {
+              "pointed": "כַּשְׂדִּי",
+              "transliteration": "kaśdî",
+              "glossZh": "迦勒底人；占星家",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H3778",
+              "frequency": 80,
+              "firstOccurrence": "創世記 11:28"
+            },
+            {
+              "pointed": "מִצְרִי",
+              "transliteration": "miṣrî",
+              "glossZh": "埃及人",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H4713",
+              "frequency": 76,
+              "firstOccurrence": "創世記 12:12"
+            },
+            {
+              "pointed": "יְהוּדִי",
+              "transliteration": "yəhûḏî",
+              "glossZh": "猶太人",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H3064",
+              "frequency": 75,
+              "firstOccurrence": "列王紀下 16:6"
+            },
+            {
+              "pointed": "כְּנַעַנִי",
+              "transliteration": "kənaʿanî",
+              "glossZh": "迦南人；商人",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H3669",
+              "frequency": 73,
+              "firstOccurrence": "創世記 10:18"
+            },
+            {
+              "pointed": "חִתִּי",
+              "transliteration": "ḥittî",
+              "glossZh": "赫人；赫的後裔",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H2850",
+              "frequency": 48,
+              "firstOccurrence": "創世記 15:20"
+            },
+            {
+              "pointed": "יְבוּסִי",
+              "transliteration": "yəḇûsî",
+              "glossZh": "耶布斯人",
+              "types": [
+                "people_or_nation"
+              ],
+              "category": "民族與國名",
+              "strong": "H2983",
+              "frequency": 41,
+              "firstOccurrence": "創世記 10:16"
+            }
+          ]
+        },
+        {
+          "id": "地名",
+          "titleZh": "地名",
+          "shape": "name",
+          "entries": [
+            {
+              "pointed": "יְרוּשָׁלַ֫יִם",
+              "transliteration": "yərûšālayim",
+              "glossZh": "耶路撒冷",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H3389",
+              "frequency": 643,
+              "firstOccurrence": "約書亞記 10:1"
+            },
+            {
+              "pointed": "יְרוּשָׁלַ֫םִ",
+              "transliteration": "yərûšālayim",
+              "glossZh": "耶路撒冷",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H3389",
+              "frequency": 643,
+              "firstOccurrence": "約書亞記 10:1"
+            },
+            {
+              "pointed": "מִצְרַ֫יִם",
+              "transliteration": "miṣrayim",
+              "glossZh": "埃及",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H4714",
+              "frequency": 635,
+              "firstOccurrence": "創世記 10:6"
+            },
+            {
+              "pointed": "בָּבֶל",
+              "transliteration": "bāḇel",
+              "glossZh": "巴別；巴比倫；巴比倫帝國",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H894",
+              "frequency": 262,
+              "firstOccurrence": "創世記 10:10"
+            },
+            {
+              "pointed": "יַרְדֵּן",
+              "transliteration": "yardēn",
+              "glossZh": "約旦河",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H3383",
+              "frequency": 182,
+              "firstOccurrence": "創世記 13:10"
+            },
+            {
+              "pointed": "צִיּוֹן",
+              "transliteration": "ṣîôn",
+              "glossZh": "錫安；耶路撒冷的山",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H6726",
+              "frequency": 153,
+              "firstOccurrence": "撒母耳記下 5:7"
+            },
+            {
+              "pointed": "בֵּית־אֵל",
+              "transliteration": "bêṯ-ʾēl",
+              "glossZh": "伯特利",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1008",
+              "frequency": 144,
+              "firstOccurrence": "創世記 12:8"
+            },
+            {
+              "pointed": "נֶ֫גֶב",
+              "transliteration": "neg̅eḇ",
+              "glossZh": "南方；尼革夫",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H5045",
+              "frequency": 111,
+              "firstOccurrence": "創世記 12:9",
+              "lesson": 25
+            },
+            {
+              "pointed": "שֹׁמְרוֹן",
+              "transliteration": "šōmərôn",
+              "glossZh": "撒馬利亞",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H8111",
+              "frequency": 109,
+              "firstOccurrence": "列王紀上 13:32"
+            },
+            {
+              "pointed": "כְּנַעַן",
+              "transliteration": "kənaʿan",
+              "glossZh": "迦南；迦南地",
+              "types": [
+                "place",
+                "person"
+              ],
+              "category": "地名",
+              "strong": "H3667",
+              "frequency": 94,
+              "firstOccurrence": "創世記 9:18"
+            },
+            {
+              "pointed": "בֵּית לֶחֶם",
+              "transliteration": "bêṯ leḥem",
+              "glossZh": "伯利恆",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1035",
+              "frequency": 82,
+              "firstOccurrence": "創世記 35:19"
+            },
+            {
+              "pointed": "לְבָנוֹן",
+              "transliteration": "ləḇānôn",
+              "glossZh": "黎巴嫩",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H3844",
+              "frequency": 71,
+              "firstOccurrence": "申命記 1:7"
+            },
+            {
+              "pointed": "בְּאֵר שֶׁבַע",
+              "transliteration": "bəʾēr šeḇaʿ",
+              "glossZh": "別是巴",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H884",
+              "frequency": 68,
+              "firstOccurrence": "創世記 21:14"
+            },
+            {
+              "pointed": "שְׁאוֹל",
+              "transliteration": "šəʾôl",
+              "glossZh": "陰間；死人之地",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H7585",
+              "frequency": 66,
+              "firstOccurrence": "創世記 37:35",
+              "lesson": 31
+            },
+            {
+              "pointed": "יְאֹר",
+              "transliteration": "yəʾōr",
+              "glossZh": "河渠；尼羅河；底格里斯河",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H2975",
+              "frequency": 65,
+              "firstOccurrence": "創世記 41:1",
+              "lesson": 31
+            },
+            {
+              "pointed": "שְׁכֶם",
+              "transliteration": "šəḵem",
+              "glossZh": "示劍",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H7927",
+              "frequency": 63,
+              "firstOccurrence": "創世記 12:6"
+            },
+            {
+              "pointed": "בָּשָׁן",
+              "transliteration": "bāšān",
+              "glossZh": "巴珊",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1316",
+              "frequency": 60,
+              "firstOccurrence": "民數記 21:33"
+            },
+            {
+              "pointed": "יְרִיחוֹ",
+              "transliteration": "yərîḥô",
+              "glossZh": "耶利哥",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H3405",
+              "frequency": 57,
+              "firstOccurrence": "民數記 22:1"
+            },
+            {
+              "pointed": "דַּמֶּשֶׂק",
+              "transliteration": "dammeśeq",
+              "glossZh": "大馬士革；亞蘭的一座城",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1834",
+              "frequency": 45,
+              "firstOccurrence": "創世記 14:15"
+            },
+            {
+              "pointed": "גִּבְעָה",
+              "transliteration": "giḇʿâ",
+              "glossZh": "基比亞；三處地名",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1390",
+              "frequency": 43,
+              "firstOccurrence": "約書亞記 15:57"
+            },
+            {
+              "pointed": "בֵּית שֶׁמֶשׁ",
+              "transliteration": "bêṯ šemeš",
+              "glossZh": "伯示麥",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1053",
+              "frequency": 42,
+              "firstOccurrence": "約書亞記 15:10"
+            },
+            {
+              "pointed": "צֹר",
+              "transliteration": "ṣōr",
+              "glossZh": "推羅",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H6865",
+              "frequency": 42,
+              "firstOccurrence": "約書亞記 19:29"
+            },
+            {
+              "pointed": "גִּלְגָּל",
+              "transliteration": "gilgāl",
+              "glossZh": "吉甲；三處地名",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H1537",
+              "frequency": 41,
+              "firstOccurrence": "申命記 11:30"
+            },
+            {
+              "pointed": "סְדֹם",
+              "transliteration": "səḏōm",
+              "glossZh": "所多瑪；死海附近的城",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H5467",
+              "frequency": 39,
+              "firstOccurrence": "創世記 10:19"
+            },
+            {
+              "pointed": "עַי",
+              "transliteration": "ʿay",
+              "glossZh": "艾城",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H5857",
+              "frequency": 39,
+              "firstOccurrence": "創世記 12:8"
+            },
+            {
+              "pointed": "קִרְיַת יְעָרִים",
+              "transliteration": "qiryaṯ yəʿārîm",
+              "glossZh": "基列耶琳",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H7157",
+              "frequency": 39,
+              "firstOccurrence": "約書亞記 9:17"
+            },
+            {
+              "pointed": "שֵׂעִיר",
+              "transliteration": "śēʿîr",
+              "glossZh": "西珥；以東的山及其居民",
+              "types": [
+                "place",
+                "people_or_nation"
+              ],
+              "category": "地名",
+              "strong": "H8165",
+              "frequency": 39,
+              "firstOccurrence": "創世記 14:6"
+            },
+            {
+              "pointed": "חֶשְׁבּוֹן",
+              "transliteration": "ḥešbôn",
+              "glossZh": "希實本；約旦河東的城",
+              "types": [
+                "place"
+              ],
+              "category": "地名",
+              "strong": "H2809",
+              "frequency": 38,
+              "firstOccurrence": "民數記 21:25"
+            }
+          ]
+        },
+        {
+          "id": "神名與稱號",
+          "titleZh": "神名與稱號",
+          "shape": "name",
+          "entries": [
+            {
+              "pointed": "יְהוָה",
+              "transliteration": "yhwh",
+              "glossZh": "耶和華；主",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H3068",
+              "frequency": 6521,
+              "firstOccurrence": "創世記 2:4",
+              "lesson": 1
+            },
+            {
+              "pointed": "אֱלֹהִים",
+              "transliteration": "ʾĕlōhîm",
+              "glossZh": "神；上帝；神明",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H430",
+              "frequency": 2598,
+              "firstOccurrence": "創世記 1:1",
+              "lesson": 1
+            },
+            {
+              "pointed": "אֲדֹנָי",
+              "transliteration": "ʾăḏōnāy",
+              "glossZh": "主；我的主",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H136",
+              "frequency": 445,
+              "firstOccurrence": "創世記 15:2",
+              "lesson": 1
+            },
+            {
+              "pointed": "יְהֹוִה",
+              "transliteration": "yhwh",
+              "glossZh": "耶和華",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H3069",
+              "frequency": 306,
+              "firstOccurrence": "創世記 15:2",
+              "lesson": 28
+            },
+            {
+              "pointed": "אֵל",
+              "transliteration": "ʾēl",
+              "glossZh": "神；神明",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H410",
+              "frequency": 245,
+              "firstOccurrence": "創世記 14:18",
+              "lesson": 1
+            },
+            {
+              "pointed": "בַּ֫עַל",
+              "transliteration": "baʿal",
+              "glossZh": "所有者；主人；丈夫；巴力",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H1167",
+              "frequency": 83,
+              "firstOccurrence": "創世記 14:13",
+              "lesson": 17
+            },
+            {
+              "pointed": "בַּעַל",
+              "transliteration": "baʿal",
+              "glossZh": "巴力；腓尼基神祇",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H1168",
+              "frequency": 80,
+              "firstOccurrence": "士師記 2:11",
+              "lesson": 29
+            },
+            {
+              "pointed": "יָהּ",
+              "transliteration": "yāh",
+              "glossZh": "耶和華的聖名「耶」",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H3050",
+              "frequency": 50,
+              "firstOccurrence": "出埃及記 15:2",
+              "lesson": 37
+            },
+            {
+              "pointed": "שַׁדַּי",
+              "transliteration": "šadday",
+              "glossZh": "全能者",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H7706",
+              "frequency": 48,
+              "firstOccurrence": "創世記 17:1",
+              "lesson": 38
+            },
+            {
+              "pointed": "אֲשֵׁרָה",
+              "transliteration": "ʾăšērâ",
+              "glossZh": "亞舍拉；腓尼基女神及其偶像",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H842",
+              "frequency": 40,
+              "firstOccurrence": "出埃及記 34:13",
+              "lesson": 43
+            },
+            {
+              "pointed": "מָשִׁיחַ",
+              "transliteration": "māšîaḥ",
+              "glossZh": "受膏者；彌賽亞",
+              "types": [
+                "divine_name_or_title"
+              ],
+              "category": "神名與稱號",
+              "strong": "H4899",
+              "frequency": 39,
+              "firstOccurrence": "利未記 4:3",
+              "lesson": 25
+            }
+          ]
+        },
+        {
+          "id": "族長與先知",
+          "titleZh": "族長與先知",
+          "shape": "name",
+          "entries": [
+            {
+              "pointed": "מֹשֶׁה",
+              "transliteration": "mōšê",
+              "glossZh": "摩西",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H4872",
+              "frequency": 766,
+              "firstOccurrence": "出埃及記 2:10"
+            },
+            {
+              "pointed": "יְהוֹשׁוּעַ",
+              "transliteration": "yəhôšûaʿ",
+              "glossZh": "約書亞",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H3091",
+              "frequency": 218,
+              "firstOccurrence": "出埃及記 17:9"
+            },
+            {
+              "pointed": "יוֹסֵף",
+              "transliteration": "yôsēp̄",
+              "glossZh": "約瑟",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H3130",
+              "frequency": 213,
+              "firstOccurrence": "創世記 30:24"
+            },
+            {
+              "pointed": "אַבְרָהָם",
+              "transliteration": "ʾaḇrāhām",
+              "glossZh": "亞伯拉罕",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H85",
+              "frequency": 175,
+              "firstOccurrence": "創世記 17:5"
+            },
+            {
+              "pointed": "יִרְמְיָה",
+              "transliteration": "yirməyâ",
+              "glossZh": "耶利米",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H3414",
+              "frequency": 147,
+              "firstOccurrence": "列王紀下 23:31"
+            },
+            {
+              "pointed": "שְׁמוּאֵל",
+              "transliteration": "šəmûʾēl",
+              "glossZh": "撒母耳",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H8050",
+              "frequency": 140,
+              "firstOccurrence": "民數記 34:20"
+            },
+            {
+              "pointed": "אֵלִיָּה",
+              "transliteration": "ʾēliyyâ",
+              "glossZh": "以利亞",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H452",
+              "frequency": 71,
+              "firstOccurrence": "列王紀上 17:1"
+            },
+            {
+              "pointed": "לֵוִי",
+              "transliteration": "lēwî",
+              "glossZh": "利未",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H3878",
+              "frequency": 64,
+              "firstOccurrence": "創世記 29:34"
+            },
+            {
+              "pointed": "אֱלִישָׁע",
+              "transliteration": "ʾĕlîšāʿ",
+              "glossZh": "以利沙",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H477",
+              "frequency": 58,
+              "firstOccurrence": "列王紀上 19:16"
+            },
+            {
+              "pointed": "אִיּוֹב",
+              "transliteration": "ʾîôḇ",
+              "glossZh": "約伯",
+              "types": [
+                "person"
+              ],
+              "category": "族長與先知",
+              "strong": "H347",
+              "frequency": 58,
+              "firstOccurrence": "以西結書 14:14"
+            }
+          ]
+        },
+        {
+          "id": "君王",
+          "titleZh": "君王",
+          "shape": "name",
+          "entries": [
+            {
+              "pointed": "דָּוִד",
+              "transliteration": "dāwiḏ",
+              "glossZh": "大衛；耶西的幼子",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H1732",
+              "frequency": 1075,
+              "firstOccurrence": "撒母耳記上 16:13"
+            },
+            {
+              "pointed": "שָׁאוּל",
+              "transliteration": "šāʾûl",
+              "glossZh": "掃羅",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H7586",
+              "frequency": 406,
+              "firstOccurrence": "創世記 36:37"
+            },
+            {
+              "pointed": "שְׁלֹמֹה",
+              "transliteration": "šəlōmô",
+              "glossZh": "所羅門；大衛的繼承者",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H8010",
+              "frequency": 293,
+              "firstOccurrence": "撒母耳記下 5:14"
+            },
+            {
+              "pointed": "חִזְקִיָּה",
+              "transliteration": "ḥizqiyyâ",
+              "glossZh": "希西家",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H2396",
+              "frequency": 130,
+              "firstOccurrence": "列王紀下 16:20"
+            },
+            {
+              "pointed": "יָרׇבְעָם",
+              "transliteration": "yāroḇʿām",
+              "glossZh": "耶羅波安",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H3379",
+              "frequency": 104,
+              "firstOccurrence": "列王紀上 11:26"
+            },
+            {
+              "pointed": "אַחְאָב",
+              "transliteration": "ʾaḥʾāḇ",
+              "glossZh": "亞哈",
+              "types": [
+                "person"
+              ],
+              "category": "君王",
+              "strong": "H256",
+              "frequency": 93,
+              "firstOccurrence": "列王紀上 16:28"
+            }
+          ]
+        },
+        {
+          "id": "其他人名",
+          "titleZh": "其他人名",
+          "shape": "name",
+          "entries": [
+            {
+              "pointed": "אָדָם",
+              "transliteration": "ʾāḏām",
+              "glossZh": "人；人類；亞當",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H120",
+              "frequency": 552,
+              "firstOccurrence": "創世記 1:26",
+              "lesson": 1
+            },
+            {
+              "pointed": "יַעֲקֹב",
+              "transliteration": "yaʿăqōḇ",
+              "glossZh": "雅各",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3290",
+              "frequency": 349,
+              "firstOccurrence": "創世記 25:26"
+            },
+            {
+              "pointed": "אַהֲרוֹן",
+              "transliteration": "ʾahărôn",
+              "glossZh": "亞倫；摩西的兄弟",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H175",
+              "frequency": 347,
+              "firstOccurrence": "出埃及記 4:14"
+            },
+            {
+              "pointed": "פַּרְעֹה",
+              "transliteration": "parʿô",
+              "glossZh": "法老",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H6547",
+              "frequency": 268,
+              "firstOccurrence": "創世記 12:15"
             },
             {
               "pointed": "אֶפְרַיִם",
@@ -3076,6 +2346,7 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H669",
               "frequency": 180,
               "firstOccurrence": "創世記 41:52"
@@ -3089,6 +2360,7 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H1144",
               "frequency": 166,
               "firstOccurrence": "創世記 35:18"
@@ -3102,6 +2374,7 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H804",
               "frequency": 151,
               "firstOccurrence": "創世記 2:14"
@@ -3115,9 +2388,35 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H4519",
               "frequency": 146,
               "firstOccurrence": "創世記 41:51"
+            },
+            {
+              "pointed": "יוֹאָב",
+              "transliteration": "yôʾāḇ",
+              "glossZh": "約押",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3097",
+              "frequency": 145,
+              "firstOccurrence": "撒母耳記上 26:6"
+            },
+            {
+              "pointed": "גִּלְעָד",
+              "transliteration": "gilʿāḏ",
+              "glossZh": "基列；基列地",
+              "types": [
+                "person",
+                "place"
+              ],
+              "category": "其他人名",
+              "strong": "H1568",
+              "frequency": 134,
+              "firstOccurrence": "創世記 31:21"
             },
             {
               "pointed": "אֲרָם",
@@ -3128,22 +2427,47 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H758",
               "frequency": 133,
               "firstOccurrence": "創世記 10:22"
             },
             {
-              "pointed": "עַמּוֹן",
-              "transliteration": "ʿammôn",
-              "glossZh": "亞捫；亞捫地；亞捫人",
+              "pointed": "אֲבִישָׁלוֹם",
+              "transliteration": "ʾăḇîšālôm",
+              "glossZh": "押沙龍；大衛的兒子",
               "types": [
-                "person",
-                "place",
-                "people_or_nation"
+                "person"
               ],
-              "strong": "H5983",
-              "frequency": 106,
-              "firstOccurrence": "創世記 19:38"
+              "category": "其他人名",
+              "strong": "H53",
+              "frequency": 111,
+              "firstOccurrence": "撒母耳記下 3:3"
+            },
+            {
+              "pointed": "יִצְחָק",
+              "transliteration": "yiṣḥāq",
+              "glossZh": "以撒；亞伯拉罕的兒子",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3327",
+              "frequency": 108,
+              "firstOccurrence": "創世記 17:19"
+            },
+            {
+              "pointed": "אֱדֹם",
+              "transliteration": "ʾĕḏōm",
+              "glossZh": "以東；以東地；以東人",
+              "types": [
+                "place",
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H123",
+              "frequency": 100,
+              "firstOccurrence": "創世記 25:30"
             },
             {
               "pointed": "עֵשָׂו",
@@ -3153,64 +2477,47 @@
                 "person",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H6215",
               "frequency": 97,
               "firstOccurrence": "創世記 25:25"
             },
             {
-              "pointed": "אֱמֹרִי",
-              "transliteration": "ʾĕmōrî",
-              "glossZh": "亞摩利人",
+              "pointed": "יְהוֹשָׁפָט",
+              "transliteration": "yəhôšāp̄āṭ",
+              "glossZh": "約沙法；約沙法谷",
               "types": [
-                "people_or_nation"
+                "person",
+                "place"
               ],
-              "strong": "H567",
-              "frequency": 87,
-              "firstOccurrence": "創世記 10:16"
+              "category": "其他人名",
+              "strong": "H3092",
+              "frequency": 84,
+              "firstOccurrence": "撒母耳記下 8:16"
             },
             {
-              "pointed": "כַּשְׂדִּי",
-              "transliteration": "kaśdî",
-              "glossZh": "迦勒底人；占星家",
+              "pointed": "יְהוֹנָתָן",
+              "transliteration": "yəhônāṯān",
+              "glossZh": "約拿單",
               "types": [
-                "people_or_nation"
+                "person"
               ],
-              "strong": "H3778",
+              "category": "其他人名",
+              "strong": "H3083",
               "frequency": 80,
-              "firstOccurrence": "創世記 11:28"
+              "firstOccurrence": "撒母耳記上 14:6"
             },
             {
-              "pointed": "מִצְרִי",
-              "transliteration": "miṣrî",
-              "glossZh": "埃及人",
+              "pointed": "אֶלְעָזָר",
+              "transliteration": "ʾelʿāzār",
+              "glossZh": "以利亞撒",
               "types": [
-                "people_or_nation"
+                "person"
               ],
-              "strong": "H4713",
-              "frequency": 76,
-              "firstOccurrence": "創世記 12:12"
-            },
-            {
-              "pointed": "יְהוּדִי",
-              "transliteration": "yəhûḏî",
-              "glossZh": "猶太人",
-              "types": [
-                "people_or_nation"
-              ],
-              "strong": "H3064",
-              "frequency": 75,
-              "firstOccurrence": "列王紀下 16:6"
-            },
-            {
-              "pointed": "כְּנַעַנִי",
-              "transliteration": "kənaʿanî",
-              "glossZh": "迦南人；商人",
-              "types": [
-                "people_or_nation"
-              ],
-              "strong": "H3669",
-              "frequency": 73,
-              "firstOccurrence": "創世記 10:18"
+              "category": "其他人名",
+              "strong": "H499",
+              "frequency": 72,
+              "firstOccurrence": "出埃及記 6:23"
             },
             {
               "pointed": "גָּד",
@@ -3221,9 +2528,35 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H1410",
               "frequency": 72,
               "firstOccurrence": "創世記 30:11"
+            },
+            {
+              "pointed": "רְאוּבֵן",
+              "transliteration": "rəʾûḇēn",
+              "glossZh": "呂便；雅各的兒子",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H7205",
+              "frequency": 72,
+              "firstOccurrence": "創世記 29:32"
+            },
+            {
+              "pointed": "חֶבְרוֹן",
+              "transliteration": "ḥeḇrôn",
+              "glossZh": "希伯崙",
+              "types": [
+                "person",
+                "place"
+              ],
+              "category": "其他人名",
+              "strong": "H2275",
+              "frequency": 71,
+              "firstOccurrence": "創世記 13:18"
             },
             {
               "pointed": "דָּן",
@@ -3234,9 +2567,83 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H1835",
               "frequency": 70,
               "firstOccurrence": "創世記 14:14"
+            },
+            {
+              "pointed": "אֲבִימֶלֶךְ",
+              "transliteration": "ʾăḇîmeleḵ",
+              "glossZh": "亞比米勒",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H40",
+              "frequency": 67,
+              "firstOccurrence": "創世記 20:2"
+            },
+            {
+              "pointed": "אַבְנֵר",
+              "transliteration": "ʾaḇnēr",
+              "glossZh": "押尼珥",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H74",
+              "frequency": 63,
+              "firstOccurrence": "撒母耳記上 14:50"
+            },
+            {
+              "pointed": "צִדְקִיָּה",
+              "transliteration": "ṣiḏqiyyâ",
+              "glossZh": "西底家",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H6667",
+              "frequency": 63,
+              "firstOccurrence": "列王紀上 22:11"
+            },
+            {
+              "pointed": "אַבְרָם",
+              "transliteration": "ʾaḇrām",
+              "glossZh": "亞伯蘭",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H87",
+              "frequency": 61,
+              "firstOccurrence": "創世記 11:26"
+            },
+            {
+              "pointed": "בִּלְעָם",
+              "transliteration": "bilʿām",
+              "glossZh": "巴蘭",
+              "types": [
+                "place",
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H1109",
+              "frequency": 61,
+              "firstOccurrence": "民數記 22:5"
+            },
+            {
+              "pointed": "מׇרְדְּכַי",
+              "transliteration": "mordəḵay",
+              "glossZh": "末底改",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H4782",
+              "frequency": 60,
+              "firstOccurrence": "以斯帖記 2:5"
             },
             {
               "pointed": "מִדְיָן",
@@ -3247,9 +2654,119 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H4080",
               "frequency": 59,
               "firstOccurrence": "創世記 25:2"
+            },
+            {
+              "pointed": "נְבוּכַדְנֶאצַּר",
+              "transliteration": "nəḇûḵaḏneʾṣṣar",
+              "glossZh": "尼布甲尼撒；巴比倫王",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H5019",
+              "frequency": 59,
+              "firstOccurrence": "列王紀下 24:1"
+            },
+            {
+              "pointed": "אָסָא",
+              "transliteration": "ʾāsāʾ",
+              "glossZh": "亞撒",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H609",
+              "frequency": 58,
+              "firstOccurrence": "列王紀上 15:8"
+            },
+            {
+              "pointed": "יֵהוּא",
+              "transliteration": "yēhûʾ",
+              "glossZh": "耶戶",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3058",
+              "frequency": 58,
+              "firstOccurrence": "列王紀上 16:1"
+            },
+            {
+              "pointed": "אֶסְתֵּר",
+              "transliteration": "ʾestēr",
+              "glossZh": "以斯帖；猶太女英雄",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H635",
+              "frequency": 55,
+              "firstOccurrence": "以斯帖記 2:7"
+            },
+            {
+              "pointed": "לָבָן",
+              "transliteration": "lāḇān",
+              "glossZh": "拉班；米所波大米人；亦為曠野一處地名",
+              "types": [
+                "person",
+                "place"
+              ],
+              "category": "其他人名",
+              "strong": "H3837",
+              "frequency": 55,
+              "firstOccurrence": "創世記 24:29"
+            },
+            {
+              "pointed": "הָמָן",
+              "transliteration": "hāmān",
+              "glossZh": "哈曼；波斯宰相",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H2001",
+              "frequency": 54,
+              "firstOccurrence": "以斯帖記 3:1"
+            },
+            {
+              "pointed": "יֹאשִׁיָּה",
+              "transliteration": "yōʾšiyyâ",
+              "glossZh": "約西亞；兩名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H2977",
+              "frequency": 53,
+              "firstOccurrence": "列王紀上 13:2"
+            },
+            {
+              "pointed": "צָדוֹק",
+              "transliteration": "ṣāḏôq",
+              "glossZh": "撒督；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H6659",
+              "frequency": 53,
+              "firstOccurrence": "撒母耳記下 8:17"
+            },
+            {
+              "pointed": "יְהוֹיָדָע",
+              "transliteration": "yəhôyāḏāʿ",
+              "glossZh": "耶何耶大；三名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3077",
+              "frequency": 51,
+              "firstOccurrence": "撒母耳記下 8:18"
             },
             {
               "pointed": "נַפְתָּלִי",
@@ -3260,20 +2777,82 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H5321",
               "frequency": 51,
               "firstOccurrence": "創世記 30:8"
             },
             {
-              "pointed": "חִתִּי",
-              "transliteration": "ḥittî",
-              "glossZh": "赫人；赫的後裔",
+              "pointed": "בֶּן־הֲדַד",
+              "transliteration": "ben-hăḏaḏ",
+              "glossZh": "便哈達；多名亞蘭王的名字",
               "types": [
-                "people_or_nation"
+                "person"
               ],
-              "strong": "H2850",
+              "category": "其他人名",
+              "strong": "H1130",
+              "frequency": 50,
+              "firstOccurrence": "列王紀上 15:18"
+            },
+            {
+              "pointed": "רְחַבְעָם",
+              "transliteration": "rəḥaḇʿām",
+              "glossZh": "羅波安；以色列王",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H7346",
+              "frequency": 50,
+              "firstOccurrence": "列王紀上 11:43"
+            },
+            {
+              "pointed": "יִשְׁמָעֵאל",
+              "transliteration": "yišmāʿēʾl",
+              "glossZh": "以實瑪利；亞伯拉罕長子及五名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3458",
               "frequency": 48,
-              "firstOccurrence": "創世記 15:20"
+              "firstOccurrence": "創世記 16:11"
+            },
+            {
+              "pointed": "עֲזַרְיָה",
+              "transliteration": "ʿăzaryâ",
+              "glossZh": "亞撒利雅；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H5838",
+              "frequency": 48,
+              "firstOccurrence": "列王紀上 4:2"
+            },
+            {
+              "pointed": "יוֹאָשׁ",
+              "transliteration": "yôʾāš",
+              "glossZh": "約阿施；六名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3101",
+              "frequency": 47,
+              "firstOccurrence": "士師記 6:11"
+            },
+            {
+              "pointed": "רָחֵל",
+              "transliteration": "rāḥēl",
+              "glossZh": "拉結；雅各的妻子",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H7354",
+              "frequency": 47,
+              "firstOccurrence": "創世記 29:6"
             },
             {
               "pointed": "אָסָף",
@@ -3283,9 +2862,22 @@
                 "person",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H623",
               "frequency": 46,
               "firstOccurrence": "列王紀下 18:18"
+            },
+            {
+              "pointed": "נֹחַ",
+              "transliteration": "nōaḥ",
+              "glossZh": "挪亞；洪水時代的先祖",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H5146",
+              "frequency": 46,
+              "firstOccurrence": "創世記 5:29"
             },
             {
               "pointed": "זְבוּלוּן",
@@ -3296,9 +2888,34 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H2074",
               "frequency": 45,
               "firstOccurrence": "創世記 30:20"
+            },
+            {
+              "pointed": "יוֹנָתָן",
+              "transliteration": "yônāṯān",
+              "glossZh": "約拿單；十名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3129",
+              "frequency": 44,
+              "firstOccurrence": "士師記 18:30"
+            },
+            {
+              "pointed": "שִׁמְעִי",
+              "transliteration": "šimʿî",
+              "glossZh": "示每；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H8096",
+              "frequency": 44,
+              "firstOccurrence": "出埃及記 6:17"
             },
             {
               "pointed": "שִׁמְעוֹן",
@@ -3308,6 +2925,7 @@
                 "person",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H8095",
               "frequency": 44,
               "firstOccurrence": "創世記 29:33"
@@ -3321,20 +2939,166 @@
                 "people_or_nation",
                 "person"
               ],
+              "category": "其他人名",
               "strong": "H836",
               "frequency": 43,
               "firstOccurrence": "創世記 30:13"
             },
             {
-              "pointed": "יְבוּסִי",
-              "transliteration": "yəḇûsî",
-              "glossZh": "耶布斯人",
+              "pointed": "בָּלָק",
+              "transliteration": "bālāq",
+              "glossZh": "巴勒；摩押王",
               "types": [
-                "people_or_nation"
+                "person"
               ],
-              "strong": "H2983",
+              "category": "其他人名",
+              "strong": "H1111",
+              "frequency": 43,
+              "firstOccurrence": "民數記 22:2"
+            },
+            {
+              "pointed": "זְכַרְיָה",
+              "transliteration": "zəḵaryâ",
+              "glossZh": "撒迦利亞；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H2148",
+              "frequency": 43,
+              "firstOccurrence": "列王紀下 14:29"
+            },
+            {
+              "pointed": "בְּנָיָה",
+              "transliteration": "bənāyâ",
+              "glossZh": "比拿雅；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H1141",
+              "frequency": 42,
+              "firstOccurrence": "撒母耳記下 8:18"
+            },
+            {
+              "pointed": "יִשַׁי",
+              "transliteration": "yišay",
+              "glossZh": "耶西；大衛的父親",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3448",
+              "frequency": 42,
+              "firstOccurrence": "撒母耳記上 16:1"
+            },
+            {
+              "pointed": "נָתָן",
+              "transliteration": "nāṯān",
+              "glossZh": "拿單；五名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H5416",
+              "frequency": 42,
+              "firstOccurrence": "撒母耳記下 5:14"
+            },
+            {
+              "pointed": "אָחָז",
+              "transliteration": "ʾāḥāz",
+              "glossZh": "亞哈斯；一名猶大王及一名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H271",
               "frequency": 41,
-              "firstOccurrence": "創世記 10:16"
+              "firstOccurrence": "列王紀下 15:38"
+            },
+            {
+              "pointed": "שְׁמַעְיָה",
+              "transliteration": "šəmaʿyâ",
+              "glossZh": "示瑪雅；多名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H8098",
+              "frequency": 41,
+              "firstOccurrence": "列王紀上 12:22"
+            },
+            {
+              "pointed": "אֲמַצְיָה",
+              "transliteration": "ʾămaṣyâ",
+              "glossZh": "亞瑪謝；四名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H558",
+              "frequency": 40,
+              "firstOccurrence": "列王紀下 12:22"
+            },
+            {
+              "pointed": "עֹבֵד אֱדוֹם",
+              "transliteration": "ʿōḇēḏ ʾĕḏôm",
+              "glossZh": "俄別以東；五名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H5654",
+              "frequency": 40,
+              "firstOccurrence": "撒母耳記下 6:10"
+            },
+            {
+              "pointed": "אוּרִיָּה",
+              "transliteration": "ʾûriyyâ",
+              "glossZh": "烏利亞；一名赫人及五名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H223",
+              "frequency": 39,
+              "firstOccurrence": "撒母耳記下 11:3"
+            },
+            {
+              "pointed": "גִּדְעוֹן",
+              "transliteration": "giḏʿôn",
+              "glossZh": "基甸；以色列人",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H1439",
+              "frequency": 39,
+              "firstOccurrence": "士師記 6:11"
+            },
+            {
+              "pointed": "יְשַׁעְיָה",
+              "transliteration": "yəšaʿyâ",
+              "glossZh": "以賽亞；七名以色列人的名字",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H3470",
+              "frequency": 39,
+              "firstOccurrence": "列王紀下 19:2"
+            },
+            {
+              "pointed": "מְרָרִי",
+              "transliteration": "mərārî",
+              "glossZh": "米拉利；以色列人",
+              "types": [
+                "person"
+              ],
+              "category": "其他人名",
+              "strong": "H4847",
+              "frequency": 39,
+              "firstOccurrence": "創世記 46:11"
             },
             {
               "pointed": "עֲמָלֵק",
@@ -3345,165 +3109,15 @@
                 "place",
                 "people_or_nation"
               ],
+              "category": "其他人名",
               "strong": "H6002",
               "frequency": 39,
               "firstOccurrence": "創世記 36:12"
-            },
-            {
-              "pointed": "שֵׂעִיר",
-              "transliteration": "śēʿîr",
-              "glossZh": "西珥；以東的山及其居民",
-              "types": [
-                "place",
-                "people_or_nation"
-              ],
-              "strong": "H8165",
-              "frequency": 39,
-              "firstOccurrence": "創世記 14:6"
             }
           ]
         },
         {
-          "id": "divine_name_or_title",
-          "titleZh": "神名與稱號",
-          "shape": "name",
-          "entries": [
-            {
-              "pointed": "יְהוָה",
-              "transliteration": "yhwh",
-              "glossZh": "耶和華；主",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H3068",
-              "frequency": 6521,
-              "firstOccurrence": "創世記 2:4",
-              "lesson": 1
-            },
-            {
-              "pointed": "אֱלֹהִים",
-              "transliteration": "ʾĕlōhîm",
-              "glossZh": "神；上帝；神明",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H430",
-              "frequency": 2598,
-              "firstOccurrence": "創世記 1:1",
-              "lesson": 1
-            },
-            {
-              "pointed": "אֲדֹנָי",
-              "transliteration": "ʾăḏōnāy",
-              "glossZh": "主；我的主",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H136",
-              "frequency": 445,
-              "firstOccurrence": "創世記 15:2",
-              "lesson": 1
-            },
-            {
-              "pointed": "יְהֹוִה",
-              "transliteration": "yhwh",
-              "glossZh": "耶和華",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H3069",
-              "frequency": 306,
-              "firstOccurrence": "創世記 15:2",
-              "lesson": 28
-            },
-            {
-              "pointed": "אֵל",
-              "transliteration": "ʾēl",
-              "glossZh": "神；神明",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H410",
-              "frequency": 245,
-              "firstOccurrence": "創世記 14:18",
-              "lesson": 1
-            },
-            {
-              "pointed": "בַּ֫עַל",
-              "transliteration": "baʿal",
-              "glossZh": "所有者；主人；丈夫；巴力",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H1167",
-              "frequency": 83,
-              "firstOccurrence": "創世記 14:13",
-              "lesson": 17
-            },
-            {
-              "pointed": "בַּעַל",
-              "transliteration": "baʿal",
-              "glossZh": "巴力；腓尼基神祇",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H1168",
-              "frequency": 80,
-              "firstOccurrence": "士師記 2:11",
-              "lesson": 29
-            },
-            {
-              "pointed": "יָהּ",
-              "transliteration": "yāh",
-              "glossZh": "耶和華的聖名「耶」",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H3050",
-              "frequency": 50,
-              "firstOccurrence": "出埃及記 15:2",
-              "lesson": 37
-            },
-            {
-              "pointed": "שַׁדַּי",
-              "transliteration": "šadday",
-              "glossZh": "全能者",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H7706",
-              "frequency": 48,
-              "firstOccurrence": "創世記 17:1",
-              "lesson": 38
-            },
-            {
-              "pointed": "אֲשֵׁרָה",
-              "transliteration": "ʾăšērâ",
-              "glossZh": "亞舍拉；腓尼基女神及其偶像",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H842",
-              "frequency": 40,
-              "firstOccurrence": "出埃及記 34:13",
-              "lesson": 43
-            },
-            {
-              "pointed": "מָשִׁיחַ",
-              "transliteration": "māšîaḥ",
-              "glossZh": "受膏者；彌賽亞",
-              "types": [
-                "divine_name_or_title"
-              ],
-              "strong": "H4899",
-              "frequency": 39,
-              "firstOccurrence": "利未記 4:3",
-              "lesson": 25
-            }
-          ]
-        },
-        {
-          "id": "festival_or_sacred_time",
+          "id": "節期與聖日",
           "titleZh": "節期與聖日",
           "shape": "name",
           "entries": [
@@ -3514,6 +3128,7 @@
               "types": [
                 "festival_or_sacred_time"
               ],
+              "category": "節期與聖日",
               "strong": "H7676",
               "frequency": 111,
               "firstOccurrence": "出埃及記 16:23",
@@ -3522,7 +3137,7 @@
           ]
         }
       ],
-      "entryCount": 177
+      "entryCount": 135
     }
   ]
 }

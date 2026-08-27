@@ -38,6 +38,7 @@ from docx.shared import Mm, Pt, RGBColor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from proper_name_categories import PRINT_ORDER
 from flashcard_pos import greek_part_of_speech
 from greek_citation_form import card_headword  # noqa: E402
 
@@ -238,6 +239,102 @@ DECKS: dict[str, dict] = {
         ],
     },
 }
+
+# 專名卡：讀本附錄那幾百個人名、地名、族名與國名，本來不在五十課的詞表裡。
+# 使用者要的是「卡片後面也要多做」——正課的卡念完，後面接一疊按類分色的專名卡。
+NAME_DECK_NOTE = (
+    "框色按類別輪替，同一類的卡同色：民族與國名、地名、神名與稱號、族長與先知、"
+    "君王、使徒與門徒、教宗與主教、教父與聖人、其他人名、待歸類。"
+)
+NAME_SIDE_NOTE = "正面：原文專名。背面：繁體中文譯名與類別。專名不配圖。"
+
+NAME_DECKS: dict[str, dict] = {
+    "hbo-names": {
+        "title": "聖經希伯來文專名卡",
+        "source": ROOT / "data/originalReaders/vocabulary/hebrew-proper-names.json",
+        "shape": "hebrew",
+        "output": "hebrew-flashcards-proper-names.docx",
+        "font": "Noto Serif Hebrew",
+        "fontFile": "C:/Windows/Fonts/NotoSerifHebrew-Regular.ttf",
+        "rtl": True,
+        "headword_pt": 46,
+        "sources": [
+            "名單：讀本的分類專名表，字形取自 Westminster Leningrad Codex。",
+            "中文：和合本修訂版。",
+        ],
+    },
+    "grc-names": {
+        "title": "通用希臘文專名卡",
+        "source": ROOT / "data/originalReaders/vocabulary/greek-appendices.json",
+        "shape": "greek",
+        "output": "greek-flashcards-proper-names.docx",
+        "font": "Palatino Linotype",
+        "rtl": False,
+        "headword_pt": 30,
+        "sources": [
+            "名單：讀本附錄〈人名、地名與國族〉，字形取自新約與七十士譯本。",
+            "中文：和合本修訂版。",
+        ],
+    },
+    "lat-names": {
+        "title": "教會拉丁文專名卡",
+        "source": ROOT / "data/originalReaders/vocabulary/latin-appendices.json",
+        "shape": "latin",
+        "output": "latin-flashcards-proper-names.docx",
+        "font": "Noto Serif",
+        "rtl": False,
+        "headword_pt": 28,
+        "sources": [
+            "名單：讀本上冊附錄〈人名、地名、民族與國名（武加大）〉。",
+            "中文：思高本。與希臘、希伯來兩副卡的和合本譯名不同，是既定的命名政策。",
+            "下冊〈近現代教廷拉丁〉那張表全數尚無中文，未收入本副卡。",
+        ],
+    },
+}
+
+for _deck in NAME_DECKS.values():
+    _deck["colorNote"] = NAME_DECK_NOTE
+    _deck["sideNote"] = NAME_SIDE_NOTE
+DECKS.update(NAME_DECKS)
+
+
+def load_name_cards(deck: dict) -> list[dict]:
+    """把附錄的專名讀成卡片，按類別排序，同類同色。"""
+    payload = json.loads(deck["source"].read_text(encoding="utf-8"))
+    rows: list[tuple[str, str, str]] = []          # (原文, 繁中, 類別)
+    if deck["shape"] == "hebrew":
+        for item in payload["items"]:
+            rows.append((item["pointed"], (item.get("glossZh") or "").strip(),
+                         item.get("category") or "待歸類"))
+    elif deck["shape"] == "greek":
+        for entry in payload["appendices"][0]["entries"]:
+            rows.append((entry.get("headword") or entry["lemma"],
+                         (entry.get("zh") or "").strip(),
+                         entry.get("category") or "待歸類"))
+    else:
+        for entry in payload["upper"]["names"]["entries"]:
+            rows.append((entry.get("forms") or entry["headword"],
+                         (entry.get("zh") or "").strip(),
+                         entry.get("category") or "待歸類"))
+
+    # 沒有中文的卡等於背面空白，背不了；不印，並在下面報數字。
+    usable = [row for row in rows if row[1]]
+    order = {name: index for index, name in enumerate(PRINT_ORDER)}
+    usable.sort(key=lambda row: (order.get(row[2], len(order)), row[0]))
+    print(f"  {deck['title']}：{len(usable)} 張"
+          f"（{len(rows) - len(usable)} 條無中文，未收）")
+    return [
+        {
+            "headword": headword,
+            "glossZh": zh,
+            "pos": category,
+            "lesson": 0,
+            "footer": category,
+            "colorKey": order.get(category, len(order)) + 1,
+            "picture": None,
+        }
+        for headword, zh, category in usable
+    ]
 
 
 def set_rfonts(run, font: str) -> None:
@@ -524,8 +621,13 @@ def headword_size(deck: dict, text: str) -> float:
     return base * 0.52
 
 
+def card_footer(card: dict) -> str:
+    """卡片下緣那一行。詞卡印課次，專名卡印類別——專名沒有課次可印。"""
+    return card.get("footer") or f"第 {card['lesson']} 課"
+
+
 def fill_front(cell, card: dict, deck: dict, place: tuple[int, int, int]) -> None:
-    cell = framed(cell, card["lesson"], place)
+    cell = framed(cell, card.get("colorKey", card["lesson"]), place)
     paragraph = cell.add_paragraph()
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph.paragraph_format.space_after = Pt(0)
@@ -535,11 +637,11 @@ def fill_front(cell, card: dict, deck: dict, place: tuple[int, int, int]) -> Non
     footer = cell.add_paragraph()
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
     footer.paragraph_format.space_after = Pt(0)
-    write(footer, f"第 {card['lesson']} 課", FONT_UI, LESSON_PT, color=MUTED)
+    write(footer, card_footer(card), FONT_UI, LESSON_PT, color=MUTED)
 
 
 def fill_back(cell, card: dict, picture: Path | None, place: tuple[int, int, int]) -> None:
-    cell = framed(cell, card["lesson"], place)
+    cell = framed(cell, card.get("colorKey", card["lesson"]), place)
     if picture:
         paragraph = cell.add_paragraph()
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -560,7 +662,7 @@ def fill_back(cell, card: dict, picture: Path | None, place: tuple[int, int, int
     footer = cell.add_paragraph()
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
     footer.paragraph_format.space_after = Pt(0)
-    write(footer, f"第 {card['lesson']} 課", FONT_UI, LESSON_PT, color=MUTED)
+    write(footer, card_footer(card), FONT_UI, LESSON_PT, color=MUTED)
 
 
 def configure(document: Document) -> None:
@@ -604,9 +706,10 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
         (f"裁切：不印裁切線。自紙張上緣量，橫向切在 {cuts_h} mm；自左緣量，縱向切在 {cuts_v} mm。"
          f"成品每張 {CARD_W_MM:.2f}×{CARD_H_MM:.0f} mm。"
          f"卡框比裁切線內縮 {FRAME_INSET_MM:.0f} mm，裁歪一兩毫米只會讓白邊不等寬，不會切到框。", 11, INK, 6),
-        ("框色按課次十色輪替：紅橙黃綠藍紫棕粉深灰深綠，第十一課回到紅色。同一課的卡同色，方便整理與抽考。",
-         11, INK, 6),
-        ("正面：原文與課次。背面：繁體中文詞義、詞性與課次。", 11, INK, 6),
+        (deck.get("colorNote",
+                  "框色按課次十色輪替：紅橙黃綠藍紫棕粉深灰深綠，第十一課回到紅色。"
+                  "同一課的卡同色，方便整理與抽考。"), 11, INK, 6),
+        (deck.get("sideNote", "正面：原文與課次。背面：繁體中文詞義、詞性與課次。"), 11, INK, 6),
         (f"插圖：{with_picture} 張有圖，其餘留白。多義詞取最常見的義項；找不到誠實對應的圖就不放，"
          "不以近似圖充數。", 11, INK, 22),
         ("圖片來源：OpenMoji 17.0.0（openmoji.org），CC BY-SA 4.0。", 9.5, MUTED, 4),
@@ -627,6 +730,8 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
 
 
 def load_cards(deck: dict) -> list[dict]:
+    if "source" in deck:
+        return load_name_cards(deck)
     entries = json.loads(deck["vocab"].read_text(encoding="utf-8"))
     gloss_payload = (json.loads(deck["glosses"].read_text(encoding="utf-8"))
                      if "glosses" in deck else {})

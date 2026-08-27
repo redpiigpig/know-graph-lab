@@ -34,7 +34,9 @@
     "languageVariety": "biblical_hebrew",
     "lesson": 1,
     "lessonSlot": 1,
-    "keptInLessons": "אָדָם 人／人類（552 次，主要為普通名詞）"
+    "keptInLessons": "אָדָם 人／人類（552 次，主要為普通名詞）",
+    "category": "其他人名",
+    "categoryRoute": "既有 kind 欄"
   },
   {
     "ordinal": 2,
@@ -104,7 +106,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 1,
-    "lessonSlot": 3
+    "lessonSlot": 3,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 4,
@@ -174,7 +178,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 1,
-    "lessonSlot": 5
+    "lessonSlot": 5,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 6,
@@ -346,7 +352,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 1,
-    "lessonSlot": 10
+    "lessonSlot": 10,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 11,
@@ -552,7 +560,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 1,
-    "lessonSlot": 16
+    "lessonSlot": 16,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 17,
@@ -8269,7 +8279,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 13,
-    "lessonSlot": 3
+    "lessonSlot": 3,
+    "category": "節期與聖日",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 244,
@@ -11263,7 +11275,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 17,
-    "lessonSlot": 11
+    "lessonSlot": 11,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 332,
@@ -16434,7 +16448,9 @@
     "languageVariety": "biblical_hebrew",
     "lesson": 25,
     "lessonSlot": 3,
-    "keptInLessons": "נֶגֶב 南方／尼革夫（方位詞）"
+    "keptInLessons": "נֶגֶב 南方／尼革夫（方位詞）",
+    "category": "地名",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 484,
@@ -16606,7 +16622,9 @@
     "verification": "source_and_lexicon_matched",
     "languageVariety": "biblical_hebrew",
     "lesson": 25,
-    "lessonSlot": 8
+    "lessonSlot": 8,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "ordinal": 489,
@@ -18900,7 +18918,9 @@
     "languageVariety": "biblical_hebrew",
     "ordinal": 556,
     "lesson": 28,
-    "lessonSlot": 16
+    "lessonSlot": 16,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "שֵׁשׁ",
@@ -19606,7 +19626,9 @@
     "languageVariety": "biblical_hebrew",
     "ordinal": 578,
     "lesson": 29,
-    "lessonSlot": 18
+    "lessonSlot": 18,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "זוּר",
@@ -20505,7 +20527,9 @@
     "ordinal": 606,
     "lesson": 31,
     "lessonSlot": 6,
-    "keptInLessons": "שְׁאוֹל 陰間（普通名詞，非地名）"
+    "keptInLessons": "שְׁאוֹל 陰間（普通名詞，非地名）",
+    "category": "地名",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "בָּרַח",
@@ -20860,7 +20884,9 @@
     "ordinal": 617,
     "lesson": 31,
     "lessonSlot": 17,
-    "keptInLessons": "יְאֹר 河渠／尼羅河（普通名詞）"
+    "keptInLessons": "יְאֹר 河渠／尼羅河（普通名詞）",
+    "category": "地名",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "נֶסֶךְ",
@@ -24318,7 +24344,9 @@
     "languageVariety": "biblical_hebrew",
     "ordinal": 725,
     "lesson": 37,
-    "lessonSlot": 5
+    "lessonSlot": 5,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "אֱמוּנָה",
@@ -25184,7 +25212,9 @@
     "languageVariety": "biblical_hebrew",
     "ordinal": 752,
     "lesson": 38,
-    "lessonSlot": 12
+    "lessonSlot": 12,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "שָׁבָה",
@@ -28482,7 +28512,9 @@
     "languageVariety": "biblical_hebrew",
     "ordinal": 855,
     "lesson": 43,
-    "lessonSlot": 15
+    "lessonSlot": 15,
+    "category": "神名與稱號",
+    "categoryRoute": "既有 properNameTypes"
   },
   {
     "pointed": "אֵיפָה",

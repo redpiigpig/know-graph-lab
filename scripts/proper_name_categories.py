@@ -37,6 +37,8 @@ import os
 import re
 import unicodedata
 from collections import defaultdict
+
+import strongs_name_kinds
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -259,7 +261,12 @@ class Classifier:
             # 沒有登錄說話時，退回原本那一欄粗的分類
             fallback = {"place": PLACE, "people": NATION, "deity": DEITY,
                         "person": PERSON}.get(existing_kind, "")
-            return (fallback, "既有 kind 欄") if fallback else (UNSORTED, "")
+            if fallback:
+                return fallback, "既有 kind 欄"
+            # 登錄收的是通論性的地名人名，聖經地理幾乎不在裡面。Strong 詞典的釋義
+            # 句（「a place in Palestine」「a son of Joseph」）是這一段的憑據。
+            kind, evidence = strongs_name_kinds.lookup(form, english)
+            return (kind, evidence) if kind else (UNSORTED, "")
 
         for category in ORDER:
             if category in candidates:
@@ -276,4 +283,5 @@ class Classifier:
                 if len(person_hits) > 1:
                     return PERSON, "同名不同人，退回其他人名"
                 return category, route
-        return UNSORTED, ""
+        kind, evidence = strongs_name_kinds.lookup(form, english)
+        return (kind, evidence) if kind else (UNSORTED, "")

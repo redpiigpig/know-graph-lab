@@ -823,7 +823,8 @@ def add_memory(document: Document, lesson: dict) -> None:
 
 
 def add_bible_reading(document: Document, reading: dict) -> None:
-    add_label(document, reading["ref"])
+    # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事。
+    add_label(document, reading["ref"], page_break_before=True)
     document.add_heading("完整主讀文", level=1)
     add_hebrew(document, reading["titleHe"], size=17, color=ACCENT, bold=True)
     add_body(
@@ -862,7 +863,8 @@ def clean_title_from_text(text: str, title_he: str) -> str:
 
 
 def add_prayer_reading(document: Document, reading: dict) -> None:
-    add_label(document, reading["ref"])
+    # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事。
+    add_label(document, reading["ref"], page_break_before=True)
     document.add_heading("完整主讀文", level=1)
     add_hebrew(document, reading["title_he"], size=17, color=ACCENT, bold=True)
     add_body(document, reading["summaryZh"], size=CAPTION_PT + 0.6, color=MUTED)

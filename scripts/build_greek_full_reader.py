@@ -32,8 +32,11 @@ from docx.shared import Mm, Pt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from proper_name_categories import PRINT_ORDER  # noqa: E402
 from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machinery
     ACCENT,
+    ACCENT_DARK,
+    GOLD,
     CAPTION_PT,
     FONT_UI,
     FONT_ZH,
@@ -215,7 +218,8 @@ def add_plain_greek(document: Document, text: str, size: float = INTERLINEAR_GRE
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
-    add_label(document, f"生詞　{lesson['vocabularyCount']} 個　{lesson['vocabularySource']}")
+    document.add_heading(
+        f"生詞　{lesson['vocabularyCount']} 個　{lesson['vocabularySource']}", level=2)
     rows = lesson["vocabulary"]
     table = document.add_table(rows=1, cols=4)
     widths = [8.0, 46.0, 24.0, USABLE_WIDTH_MM - 78.0]
@@ -271,7 +275,7 @@ def memory_source_label(unit: dict) -> str:
 
 def add_memory(document: Document, lesson: dict) -> None:
     kind = lesson["memoryUnits"][0].get("kind") if lesson["memoryUnits"] else "verse"
-    add_label(document, "背誦　兩句" if kind == "sentence" else "背誦　兩節")
+    document.add_heading("背誦　兩句" if kind == "sentence" else "背誦　兩節", level=2)
     for verse in lesson["memoryUnits"]:
         caption = document.add_paragraph()
         caption.paragraph_format.space_before = Pt(5)
@@ -299,7 +303,10 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
     label = "讀文　" + (reading.get("corpusLabel") or reading.get("categoryLabel") or "")
     if reading.get("completeness") == "excerpt":
         label += f"　節錄・{reading.get('extent', '')}"
-    add_label(document, label)
+    # 每一課的讀物另起一頁：詞表與背誦是準備，讀物是這一課的正事，
+    # 讓它從頁首開始，翻到就是整篇。
+    page_break(document)
+    document.add_heading(label, level=2)
     add_body(document, reading["source"], size=CAPTION_PT, color=MUTED)
     if reading.get("numberingNote"):
         add_body(document, reading["numberingNote"], size=CAPTION_PT, color=MUTED)
@@ -326,17 +333,17 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
 
 
 def add_lesson(document: Document, lesson: dict, interlinear: dict) -> None:
-    page_break(document)
-    heading = document.add_paragraph()
-    heading.paragraph_format.space_after = Pt(2)
-    set_run_font(heading.add_run(f"第 {lesson['lesson']} 課"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
-    title = document.add_paragraph()
-    title.paragraph_format.space_after = Pt(1)
-    add_mixed_script_text(title, lesson["reading"]["titleZh"], FONT_ZH, H2_SIZE_PT, bold=True)
+    # 版式比照希伯來那本：眉標（另起一頁）→ 課次 → Heading 1 課題 → 金線。
+    kind = "scripture chapter" if lesson["reading"]["kind"] == "scripture_chapter" else "church reading"
+    add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {kind}", page_break_before=True)
+    number = document.add_paragraph()
+    number.paragraph_format.space_after = Pt(1)
+    set_run_font(number.add_run(f"第 {lesson['lesson']:02d} 課"), FONT_UI, 11, bold=True, color=ACCENT)
+    heading = document.add_heading(lesson["reading"]["titleZh"], level=1)
+    paragraph_rule(heading, color=GOLD, size="14")
     greek_title = document.add_paragraph()
     greek_title.paragraph_format.space_after = Pt(6)
     add_greek_run(greek_title, lesson["reading"]["titleGrc"], TRANSLATION_PT, color=MUTED)
-    paragraph_rule(greek_title)
     add_vocabulary(document, lesson)
     add_memory(document, lesson)
     add_reading(document, lesson, interlinear)
@@ -344,9 +351,9 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict) -> None:
 
 def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
     page_break(document)
-    title = document.add_paragraph()
-    title.paragraph_format.space_after = Pt(2)
-    add_mixed_script_text(title, liturgy["title"], FONT_ZH, H1_SIZE_PT, bold=True)
+    add_label(document, "Appendix  ·  divine liturgy")
+    heading = document.add_heading(liturgy["title"], level=1)
+    paragraph_rule(heading, color=GOLD, size="14")
     subtitle = document.add_paragraph()
     subtitle.paragraph_format.space_after = Pt(8)
     add_greek_run(subtitle, liturgy["titleGrc"], TRANSLATION_PT, color=MUTED)
@@ -357,7 +364,7 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
     for step in liturgy["steps"]:
         if step["section"] != current:
             current = step["section"]
-            add_label(document, step["sectionLabel"])
+            document.add_heading(step["sectionLabel"], level=3)
         record = interlinear.get(f"liturgy:{step['ordinal']}") or {}
         caption = document.add_paragraph()
         caption.paragraph_format.space_before = Pt(4)
@@ -388,26 +395,58 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
         set_run_font(paragraph.add_run(chunk), font, size, color=color)
 
 
-def add_front_matter(document: Document, master: dict, volume: dict) -> None:
-    title = document.add_paragraph()
-    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    title.paragraph_format.space_before = Pt(90)
-    title.paragraph_format.space_after = Pt(6)
-    add_mixed_script_text(title, master["title"], FONT_ZH, TITLE_SIZE_PT, bold=True)
+# 封面上的希臘文題辭，一冊一句：上冊出自福音書，下冊出自尼西亞信經。
+COVER_GREEK = {
+    1: "Ἡ ΚΑΙΝΗ ΔΙΑΘΗΚΗ",
+    2: "ΤΩΝ ΠΑΤΕΡΩΝ ΤΑ ΚΕΙΜΕΝΑ",
+}
+
+
+def add_cover(document: Document, master: dict, volume: dict) -> None:
+    """深色橫幅封面，版式與希伯來、拉丁那兩本相同。
+
+    三本並排時封面要看得出是同一套書：同一條深色橫幅、同一行金色眉標、
+    同一條金線與規格行，換的只有書名與原文題辭。
+    """
+    table = document.add_table(rows=1, cols=1)
+    set_table_geometry(table, [USABLE_WIDTH_MM])
+    set_borders(table, outside=False, inside=False)
+    cell = table.cell(0, 0)
+    set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
+    shade(cell, ACCENT_DARK)
+
+    eyebrow = cell.paragraphs[0]
+    eyebrow.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), FONT_UI, 8, color=GOLD, bold=True)
+    name = cell.add_paragraph()
+    name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    add_mixed_script_text(name, master["title"], FONT_ZH, 25, bold=True, color="FFF8ED")
+    motto = cell.add_paragraph()
+    motto.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    add_greek_run(motto, COVER_GREEK[volume["volume"]], 18, color="FFF8ED")
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
     volume_line = document.add_paragraph()
     volume_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    volume_line.paragraph_format.space_after = Pt(6)
-    add_mixed_script_text(volume_line, volume["title"], FONT_ZH, H1_SIZE_PT, bold=True, color=ACCENT)
+    add_mixed_script_text(volume_line, volume["title"], FONT_ZH, 12, bold=True, color=INK)
     subtitle = document.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    subtitle.paragraph_format.space_after = Pt(24)
-    add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, TRANSLATION_PT, color=MUTED)
+    add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, 10.5, color=ACCENT)
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
+    spec = document.add_paragraph()
+    spec.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    paragraph_rule(spec, color=GOLD, size="24")
+    set_run_font(spec.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
     textbook = document.add_paragraph()
     textbook.alignment = WD_ALIGN_PARAGRAPH.CENTER
     add_latin_and_cjk(textbook, master["textbook"], CAPTION_PT)
 
+
+def add_front_matter(document: Document, master: dict, volume: dict) -> None:
+    add_cover(document, master, volume)
     page_break(document)
-    add_label(document, "體例與來源")
+    document.add_heading("體例與來源", level=1)
     for key, value in master["textPolicy"].items():
         add_body(document, f"{key}：{value}", size=CAPTION_PT, color=INK)
     counts = volume["counts"]
@@ -426,37 +465,62 @@ def add_front_matter(document: Document, master: dict, volume: dict) -> None:
     add_body(document, f"音訊：{master['audio']['status']}　{master['audio']['policy']}", size=CAPTION_PT, color=MUTED)
 
 
+def appendix_groups(table: dict) -> list[tuple[str, list[dict]]]:
+    """把一張附錄表切成印得出來的小節。
+
+    專名表用 `category`（九類，見 scripts/proper_name_categories.py），其餘四張表
+    用資料裡本來就有的 `group`。兩者都照 PRINT_ORDER／首次出現排序，沒有分組欄位
+    的表就整張當一節。
+    """
+    field = "category" if any(e.get("category") for e in table["entries"]) else "group"
+    buckets: dict[str, list[dict]] = {}
+    for entry in table["entries"]:
+        buckets.setdefault((entry.get(field) or "").strip(), []).append(entry)
+    if len(buckets) <= 1:
+        return [("", table["entries"])]
+    known = [n for n in PRINT_ORDER if n in buckets]
+    rest = [n for n in buckets if n not in known]
+    return [(name, buckets[name]) for name in known + rest]
+
+
+def add_appendix_entry(document: Document, entry: dict) -> None:
+    row = document.add_paragraph()
+    row.paragraph_format.space_after = Pt(0)
+    row.paragraph_format.line_spacing = 1.25
+    add_greek_run(row, entry.get("headword") or entry["lemma"], TABLE_SIZE_PT + 1.2)
+    chinese = (entry.get("zh") or "").strip()
+    if chinese:
+        add_mixed_script_text(row, f"　{chinese}", FONT_ZH, TABLE_SIZE_PT, color=INK)
+    else:
+        # An empty cell is the honest state for a name no register
+        # covers; it is marked rather than filled with a guess.
+        set_run_font(row.add_run("　（中文待定）"), FONT_UI, CAPTION_PT, color=MUTED)
+    if entry.get("frequency"):
+        set_run_font(row.add_run(f"　{entry['frequency']}"), FONT_UI, CAPTION_PT, color=MUTED)
+
+
 def add_appendix_tables(document: Document, master: dict) -> None:
     """The five reference tables, printed at the back of both volumes.
 
     They index the whole work rather than one volume, and a volume being read on
     its own still needs the numerals and the kinship terms, so they are repeated
     rather than split between the two books.
+
+    專名表按九類分節印：查「彼得是誰」時翻到〈使徒與門徒〉一節就找得到，而不是在
+    四百條按字母排的名字裡一條條看過去。
     """
     for table in master["appendices"]:
         page_break(document)
-        heading = document.add_paragraph()
-        heading.paragraph_format.space_after = Pt(2)
-        set_run_font(heading.add_run("附錄"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
-        name = document.add_paragraph()
-        name.paragraph_format.space_after = Pt(6)
-        add_mixed_script_text(name, table["title"], FONT_ZH, H2_SIZE_PT, bold=True)
+        add_label(document, "Appendix  ·  reference table")
+        heading = document.add_heading(table["title"], level=1)
+        paragraph_rule(heading, color=GOLD, size="14")
         if table.get("note"):
             add_body(document, table["note"], size=CAPTION_PT, color=MUTED)
-        for entry in table["entries"]:
-            row = document.add_paragraph()
-            row.paragraph_format.space_after = Pt(0)
-            row.paragraph_format.line_spacing = 1.25
-            add_greek_run(row, entry.get("headword") or entry["lemma"], TABLE_SIZE_PT + 1.2)
-            chinese = (entry.get("zh") or "").strip()
-            if chinese:
-                add_mixed_script_text(row, f"　{chinese}", FONT_ZH, TABLE_SIZE_PT, color=INK)
-            else:
-                # An empty cell is the honest state for a name no register
-                # covers; it is marked rather than filled with a guess.
-                set_run_font(row.add_run("　（中文待定）"), FONT_UI, CAPTION_PT, color=MUTED)
-            if entry.get("frequency"):
-                set_run_font(row.add_run(f"　{entry['frequency']}"), FONT_UI, CAPTION_PT, color=MUTED)
+        for group_name, entries in appendix_groups(table):
+            if group_name:
+                document.add_heading(f"{group_name}　{len(entries)} 條", level=2)
+            for entry in entries:
+                add_appendix_entry(document, entry)
 
 
 def retitle(document: Document, master: dict, volume: dict) -> None:
