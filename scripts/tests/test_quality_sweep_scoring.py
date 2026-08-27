@@ -144,3 +144,51 @@ def test_fair_band():
     score, _, tier = score_book_quality(sig(no_toc_rate=0.5, tiny_rate=0.5, giant_n=1))
     assert 60 <= score < 80
     assert tier == TIER_FAIR
+
+
+# ── 覆蓋率（TRUNCATED）────────────────────────────────────────────
+# 盲區來源：blank_rate 只看 chunk 是不是空的，抓得到「內容爛」，抓不到
+# 「內容漂亮卻只有前面幾十頁」。《舊約神學辭典》638 頁只 OCR 出 47 頁，
+# 那 47 頁品質極好（希伯來原文＋轉寫＋經文出處俱全），blank_rate≈0、
+# 分數接近滿分，卻缺了 92% 的書。
+
+def test_full_coverage_stays_good():
+    score, flags, tier = score_book_quality(sig(page_coverage=1.0))
+    assert score == 100
+    assert "TRUNCATED" not in flags
+    assert tier == TIER_GOOD
+
+
+def test_unknown_coverage_is_not_penalised():
+    # 拿不到來源頁數（EPUB／檔案讀不到）時不能亂扣分。
+    score, flags, tier = score_book_quality(sig(page_coverage=None))
+    assert score == 100
+    assert "TRUNCATED" not in flags
+
+
+def test_slight_shortfall_tolerated():
+    # 尾頁空白、封底未收錄等正常落差，不該判截斷。
+    score, flags, tier = score_book_quality(sig(page_coverage=0.93))
+    assert "TRUNCATED" not in flags
+    assert tier == TIER_GOOD
+
+
+def test_truncated_book_flagged_and_reocr():
+    # 47/638 頁 = 7%：內容乾淨但殘缺，必須落 REOCR。
+    score, flags, tier = score_book_quality(sig(page_coverage=0.074))
+    assert "TRUNCATED" in flags
+    assert tier == TIER_REOCR
+    assert score < 60
+
+
+def test_truncation_penalty_scales_with_shortfall():
+    mild = score_book_quality(sig(page_coverage=0.75))[0]
+    severe = score_book_quality(sig(page_coverage=0.10))[0]
+    assert severe < mild < 100
+
+
+def test_truncated_beats_fix_toc_priority():
+    # 同時缺目錄又殘缺時，先補內容而不是先補目錄。
+    _, flags, tier = score_book_quality(sig(page_coverage=0.2, no_toc_rate=1.0))
+    assert "TRUNCATED" in flags
+    assert tier == TIER_REOCR

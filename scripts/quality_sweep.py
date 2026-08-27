@@ -53,6 +53,8 @@ if sys.platform == "win32":
     sys.stderr.reconfigure(encoding="utf-8")
 
 BLANK = 100          # char_count 低於此 = 空白 chunk（re-ocr-worklist 同義）
+# 覆蓋率低於此即視為截斷。留 8% 餘裕給尾頁空白、封底未收錄等正常落差。
+COVERAGE_OK = 0.92
 GIANT = 80_000
 OCR_FAILED_MARKERS = ("OCR:", "Haiku-OCR:")   # 永久失敗也算 REOCR 候選
 
@@ -77,6 +79,9 @@ class BookSignals:
     needs_ocr: bool        # 待 OCR / OCR 永久失敗
     path_broken: bool      # Drive 檔案開不了
     standardized: bool
+    # chunk 的最大 page_number ÷ 來源 PDF 實際頁數。None = 拿不到來源頁數
+    # （EPUB、檔案讀不到）→ 不計分，絕不因為「不知道」而扣分。
+    page_coverage: float | None = None
 
 
 def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
@@ -97,6 +102,14 @@ def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
     score -= blank_penalty
     if s.blank_rate > 0.2:
         flags.append("BLANK_BODY")
+
+    # 覆蓋率：blank_rate 抓「內容爛」，這條抓「內容好但不完整」。
+    # 舊 OCR 路徑把整本一次送 Gemini，撞輸出上限後只存下前面幾十頁，
+    # 那幾十頁品質極好 → blank_rate≈0、分數接近滿分，書卻缺了九成。
+    truncated = s.page_coverage is not None and s.page_coverage < COVERAGE_OK
+    if truncated:
+        score -= min(50, round((COVERAGE_OK - s.page_coverage) * 60))
+        flags.append("TRUNCATED")
 
     if s.per_page_only:
         flags.append("PER_PAGE_ONLY")   # 逐頁書：目錄/碎裂豁免，只記 flag
@@ -123,7 +136,7 @@ def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
     score = max(0, min(100, score))
 
     # tier（順序即優先序）
-    if s.blank_rate > 0.5 and not s.path_broken:
+    if (s.blank_rate > 0.5 or truncated) and not s.path_broken:
         tier = TIER_REOCR
     elif "NO_TOC" in flags and not any(
         f in flags for f in ("BLANK_BODY", "OVER_FRAGMENTED", "UNDER_SEGMENTED", "STRUCTURE_MESS")
@@ -193,7 +206,39 @@ def harvest_signals(meta: dict, chunks: list[dict]) -> BookSignals:
 
     return BookSignals(n, blank_rate, no_toc_rate, tiny_rate, giant_n, mess_wo_toc,
                        per_page_only, needs_ocr, path_broken,
-                       bool(meta.get("standardized_at")))
+                       bool(meta.get("standardized_at")),
+                       page_coverage(meta, chunks, blank_rate))
+
+
+def source_page_count(path: str) -> int | None:
+    """來源 PDF 的實際頁數。只讀頁數索引，不解全文。"""
+    if not path or not path.lower().endswith(".pdf"):
+        return None
+    try:
+        import fitz
+        with fitz.open(path) as d:
+            return d.page_count or None
+    except Exception:
+        return None
+
+
+def page_coverage(meta: dict, chunks: list[dict], blank_rate: float) -> float | None:
+    """chunk 的最大 page_number ÷ 來源 PDF 實際頁數。拿不到就回 None。
+
+    只對「看起來還不錯」的書做這個檢查——盲區就在那裡。已經 blank 過半的書
+    本來就會落 REOCR，沒必要為它們去開 Drive 上的 PDF（那是網路掛載，
+    1000 本要跑兩小時）。
+    """
+    if meta.get("file_type") != "pdf" or blank_rate > 0.5:
+        return None
+    pages = [c.get("page_number") for c in chunks]
+    pages = [p for p in pages if isinstance(p, int) and p > 0]
+    if not pages:
+        return None                       # 章節型切塊沒有頁碼，本判準不適用
+    real = source_page_count(meta.get("file_path") or "")
+    if not real:
+        return None
+    return min(1.0, max(pages) / real)
 
 
 def fetch_books(env: dict, ids: list[str] | None, recent_days: int | None,
