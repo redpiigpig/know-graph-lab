@@ -22,6 +22,22 @@
         </NuxtLink>
 
         <!-- 印順學派與弘誓研究資料 -->
+        <NuxtLink to="/research-data/mukyokai" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
+          <div class="tool-icon bg-emerald-50 text-emerald-600">📄</div>
+          <div class="flex-1">
+            <h2 class="tool-title">日本無教會主義研究資料</h2>
+            <p class="tool-desc">內村鑑三、矢內原忠雄一系的研究文獻與史料；日治時期台灣教會經驗與無教會在台活動</p>
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/corpus" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">📈</div>
+          <div class="flex-1">
+            <h2 class="tool-title">語料層：關鍵詞年表</h2>
+            <p class="tool-desc">跨佛教／基督教刊物比對同一個詞的出現年代與消長，附脈絡取樣；概念史那一章的證據來源</p>
+          </div>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/pct" class="tool-card group border-blue-100 hover:border-blue-300 hover:shadow-blue-100">
           <div class="tool-icon bg-blue-50 text-blue-600">⛪</div>
           <div class="flex-1">
