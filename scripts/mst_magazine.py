@@ -77,8 +77,16 @@ def get(url: str) -> bytes:
 
 # ── 純函式：從 URL 猜期數與篇名（檔名形如 214-法句經講記（九十三）.htm）────────
 ISSUE_RE = re.compile(r"/(\d{1,3})[-\uff0d]([^/]+)\.html?$", re.I)
-# \u5c08\u6b04\u9801\u7684\u9023\u7d50\u6587\u5b57\u662f\u671f\u5225\u6a19\u7c64\uff1a\u300c214\u671f115.7.1\u300d\u300c\u7b2c214\u671f115.07.01\u300d\u3002
-LABEL_RE = re.compile(r"^\u7b2c?\s*(\d{1,3})\s*\u671f")
+# \u5c08\u6b04\u9801\u7684\u9023\u7d50\u6587\u5b57\u662f\u671f\u5225\u6a19\u7c64\uff1a\u300c214\u671f115.7.1\u300d\u300c\u7b2c214\u671f115.07.01\u300d\uff0c
+# \u5f8c\u534a\u662f\u6c11\u570b\u5e74\u6708\u65e5\u2014\u2014\u671f\u5225\u7684\u51fa\u7248\u65e5\u671f\u53ea\u5728\u9019\u88e1\u51fa\u73fe\uff0c\u8a9e\u6599\u5e74\u8868\u8981\u7528\u3002
+LABEL_RE = re.compile(r"^\u7b2c?\s*(\d{1,3})\s*\u671f\s*(?:(\d{2,3})[.\-/](\d{1,2})[.\-/](\d{1,2}))?")
+
+
+def label_date(m) -> str:
+    """LABEL_RE \u7684\u6bd4\u5c0d\u7d50\u679c \u2192 \u897f\u5143 YYYY-MM-DD\uff1b\u6a19\u7c64\u6c92\u5e36\u65e5\u671f\u5c31\u56de\u7a7a\u5b57\u4e32\u3002"""
+    if not m or not m.group(2):
+        return ""
+    return f"{int(m.group(2)) + 1911:04d}-{int(m.group(3)):02d}-{int(m.group(4)):02d}"
 
 
 def parse_article_url(url: str):
@@ -145,19 +153,32 @@ def harvest():
             # 專欄頁的連結文字是期別標籤（「210期114.11.1」）而非篇名——那種情況
             # 標題要回頭取檔名，期數則由標籤補上（舊檔名沒有 NNN- 前綴）。
             m = LABEL_RE.match(text)
+            date = ""
             if m:
                 issue = issue or int(m.group(1))
+                date = label_date(m)
             elif text:
                 title = clean(text)
+            prev = articles.get(url) or {}
             articles[url] = {
                 "url": url,
                 "issue": issue,
+                "date": date or prev.get("date", ""),
                 "title": title,
                 "column": label if "index" not in page.rsplit("/", 1)[-1] else "",
             }
         if i % 20 == 0:
             print(f"  …{i}/{len(pages)} 頁，累計 {len(articles)} 篇")
         time.sleep(0.25)
+
+    # 出版日期只出現在專欄頁的期別標籤上，同一期的其他篇目沿用之
+    by_issue = {}
+    for r in articles.values():
+        if r["issue"] and r.get("date"):
+            by_issue.setdefault(r["issue"], r["date"])
+    for r in articles.values():
+        if not r.get("date"):
+            r["date"] = by_issue.get(r["issue"], "")
 
     rows = sorted(articles.values(), key=lambda r: (-(r["issue"] or 0), r["title"]))
     HARVEST.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -248,6 +269,7 @@ def publish():
         by_issue.setdefault(issue, []).append({
             "title": row["title"],
             "column": row.get("column") or "",
+            "date": row.get("date", ""),
             "srcKey": f"yinshun-hongshi/妙心雜誌/{slug}",
             "source": row.get("fetched") or row["url"],
         })

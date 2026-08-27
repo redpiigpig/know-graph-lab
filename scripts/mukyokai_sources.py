@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""日本無教會主義研究資料的收錄 pipeline。
+"""無教會主義研究資料的收錄 pipeline。
 
 進 /research-data 第四個 collection。與另外三個 collection 以「機構」為單位不同，
 這一個以「運動」為單位——無教會主義按其主張本來就沒有教會組織，沒有機構可掛。
@@ -12,7 +12,7 @@
 給 PDF 路徑與書目欄位，抽全文、落 Drive、上 R2、寫進 index。
 
 R2：mukyokai/<stem>.pdf、mukyokai-fulltext/<stem>.txt
-Drive canonical：G:\\…\\研究資料\\日本無教會主義\\
+Drive canonical：G:\\…\\研究資料\\無教會主義\\
 index：public/content/research-data/mukyokai/index.json
 
   python -X utf8 scripts/mukyokai_sources.py --add "C:/path/x.pdf" \\
@@ -32,7 +32,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import hongshi as h              # noqa: E402  pure: pdf_text_sufficient
 import dadaodao_fulltext as df   # noqa: E402  .env / s3 / OCR
 
-DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\日本無教會主義")
+DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\無教會主義")
 R2_PDF = "mukyokai"
 R2_TXT = "mukyokai-fulltext"
 INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/mukyokai/index.json"

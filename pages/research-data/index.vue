@@ -25,7 +25,7 @@
         <NuxtLink to="/research-data/mukyokai" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
           <div class="tool-icon bg-emerald-50 text-emerald-600">📄</div>
           <div class="flex-1">
-            <h2 class="tool-title">日本無教會主義研究資料</h2>
+            <h2 class="tool-title">無教會主義研究資料</h2>
             <p class="tool-desc">內村鑑三、矢內原忠雄一系的研究文獻與史料；日治時期台灣教會經驗與無教會在台活動</p>
           </div>
         </NuxtLink>

@@ -1,6 +1,6 @@
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 
-// 「日本無教會主義研究資料」的全文（逐件一個 .txt，key 由 index.json 提供）。
+// 「無教會主義研究資料」的全文（逐件一個 .txt，key 由 index.json 提供）。
 const PREFIX = 'mukyokai-fulltext/'
 
 export default defineEventHandler(async (event) => {

@@ -1,8 +1,8 @@
 # 從彼岸向此岸的轉向
 
-## 近代東亞宗教變革與戰後台灣佛教、基督教公共性之宗教史比較研究
+## 台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）
 
-*The Turn from the Other Shore to This World: Modern East Asian Religious Transformation and the Public Character of Buddhism and Christianity in Postwar Taiwan — A Comparative Study in Religious History*
+*The Turn from the Other Shore to This World: A Comparative Study in Religious History of the Public Character of Buddhism and Christianity in Taiwan, 1920s–2020s*
 
 玄奘大學社會科學院宗教與文化學系博士班　研究計畫書
 
@@ -143,7 +143,9 @@
 
 ### （五）研究範圍與斷限
 
-**時間**：核心斷限在戰後台灣至今。東亞部分（第二章）自一次大戰後民族自決思潮與社會思想傳入東亞、各地宗教改革運動同時啟動之際寫起，止於二次大戰結束，作為前史處理——目的在說明戰後台灣兩條線索的思想與制度資源從何而來，而非另立一段長時段通史；此一部分因此以既有研究的綜合為主，不作獨立的史料考證。
+**時間**：一九二〇年代至二〇二〇年代，整整一百年。上限取一次大戰後民族自決思潮與社會思想傳入東亞、各地宗教改革運動同時啟動之際；下限取當前跨宗教議題結盟的最新發展，二〇二〇年代的部分從簡，只交代趨勢而不作完整處理——距離太近的事件尚不足以作史。
+
+其中東亞部分（第二章）止於二次大戰結束，**作為前史處理**：目的在說明戰後台灣兩條線索的思想與制度資源從何而來，而非另立一段東亞通史。此一部分因此以既有研究的綜合為主，不作獨立的史料考證；題目不列「東亞」，正是為了不對這一章作出它不打算履行的承諾。
 
 **空間**：以台灣為核心個案，以日本、中國、朝鮮為比較背景。第一章之外，其餘各章均以台灣為主。
 
@@ -617,7 +619,7 @@ Xing, J. (1996). *Baptized in the fire of revolution: The American social gospel
 
 **研究生**：張辰瑋　　**系所**：宗教與文化學系博士班　　**指導教授**：釋昭慧
 
-**論文題目**：從彼岸向此岸的轉向——近代東亞宗教變革與戰後台灣佛教、基督教公共性之宗教史比較研究
+**論文題目**：從彼岸向此岸的轉向——台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）
 
 ### 一、指導原則
 

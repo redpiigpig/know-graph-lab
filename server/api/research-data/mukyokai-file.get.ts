@@ -4,7 +4,7 @@ import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { resolveResearchFile } from '~/server/utils/research-files'
 
-// 「日本無教會主義研究資料」的原檔（學位論文、專書掃描，皆為 PDF）。
+// 「無教會主義研究資料」的原檔（學位論文、專書掃描，皆為 PDF）。
 //
 // 取檔順序：**Drive 正本 → R2 後備**。本機跑站時 G: 槽掛著 Drive，直接串流檔案；
 // 雲端部署沒有 Drive，才退回 R2 簽名網址。這批是零星取得的論文 PDF、單件多在

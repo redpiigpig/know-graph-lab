@@ -15,7 +15,7 @@ import path from "node:path";
 const PREFIX_TO_SUBDIR: Record<string, string> = {
   "dadaodao-materials/": path.join("大愛道革命", "論文資料"),
   "yinshun-hongshi/": "印順學派與弘誓",
-  "mukyokai/": "日本無教會主義",
+  "mukyokai/": "無教會主義",
 };
 
 export const RESEARCH_PREFIXES = Object.keys(PREFIX_TO_SUBDIR);

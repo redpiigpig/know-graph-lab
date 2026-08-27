@@ -1,11 +1,11 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <AppHeader title="日本無教會主義研究資料" :back="{ to: '/research-data', label: '論文資料整理' }" container-class="max-w-5xl" />
+    <AppHeader title="無教會主義研究資料" :back="{ to: '/research-data', label: '論文資料整理' }" container-class="max-w-5xl" />
 
     <div class="max-w-5xl mx-auto px-6 py-10">
       <div class="mb-8">
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">日本無教會主義研究資料</h1>
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">無教會主義研究資料</h1>
         <p class="text-gray-500 text-sm leading-relaxed">
           內村鑑三所開創、經矢內原忠雄一代傳衍的無教會主義，其研究文獻與史料。
           博士論文第二章「東亞近代宗教變革」的日本線，與台灣日治時期教會經驗都用得上。
@@ -59,7 +59,7 @@
 import { ref, reactive, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
-useHead({ title: '日本無教會主義研究資料 — 論文資料整理' });
+useHead({ title: '無教會主義研究資料 — 論文資料整理' });
 
 interface Row {
   stem: string; title: string; author: string; year: string;

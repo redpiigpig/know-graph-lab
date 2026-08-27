@@ -82,7 +82,13 @@
                   class="mr-1 align-middle text-sm text-stone-400 transition hover:text-stone-800"
                   aria-label="朗讀這一句"
                   @click="audio.speakOne('la', unit.text)"
-                >🔊</button>{{ unit.text }}</p>
+                >🔊</button><template v-if="!unit.tokens?.length">{{ unit.text }}</template></p>
+              <p v-if="unit.tokens?.length" class="flex flex-wrap items-end gap-x-3 gap-y-2">
+                <span v-for="(token, position) in unit.tokens" :key="position" class="inline-flex flex-col items-center">
+                  <span class="font-serif text-[17px] leading-8">{{ token.word }}{{ token.trailing }}</span>
+                  <span class="text-[11px] leading-4 text-stone-500">{{ token.glossZh }}</span>
+                </span>
+              </p>
               <p v-if="unit.zh" class="mt-1 text-sm leading-7 text-stone-600 break-words">{{ unit.zh }}</p>
               <p class="mt-2 text-[11px] text-stone-400">{{ unit.ref }}</p>
             </li>
@@ -134,7 +140,13 @@
                   class="mr-1 align-middle text-sm text-stone-400 transition hover:text-stone-800"
                   aria-label="朗讀這一行"
                   @click="audio.speakOne('la', row.latin)"
-                >🔊</button>{{ row.latin }}</p>
+                >🔊</button><template v-if="!row.tokens?.length">{{ row.latin }}</template></p>
+              <p v-if="row.tokens?.length" class="flex flex-wrap items-end gap-x-3 gap-y-2">
+                <span v-for="(token, position) in row.tokens" :key="position" class="inline-flex flex-col items-center">
+                  <span class="font-serif text-[17px] leading-8">{{ token.word }}{{ token.trailing }}</span>
+                  <span class="text-[11px] leading-4 text-stone-500">{{ token.glossZh }}</span>
+                </span>
+              </p>
               <p class="mt-1 text-sm leading-7 text-stone-600 break-words">{{ row.zh || "〔中譯待補〕" }}</p>
             </li>
           </ol>
