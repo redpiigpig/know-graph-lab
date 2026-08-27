@@ -53,6 +53,9 @@ def latin_key(entry: dict) -> str:
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache"
 IMAGE_DIR = CACHE / "flashcards/openmoji-618"
+# 第二層圖庫（game-icons／Phosphor／MDI／Tabler，見 iconify_card_images.py）：
+# 只給「跟不相干的詞共用同一張 emoji」的卡用，補 OpenMoji 沒有的概念。
+ICON_DIR = CACHE / "flashcards/iconify"
 OUTPUT_DIR = ROOT / "output/flashcards"
 
 PAGE_W_MM = 297.0
@@ -157,6 +160,7 @@ DECKS: dict[str, dict] = {
         "vocab": ROOT / "data/originalReaders/vocabulary/hebrew-1000.json",
         "glosses": CACHE / "original-readers/hebrew-full/hebrew-gloss-zh-reviewed-by-lemma.json",
         "images": CACHE / "flashcards/hebrew-card-images.json",
+        "icons": CACHE / "flashcards/hebrew-card-icons.json",
         "grammar": CACHE / "flashcards/hebrew-card-grammar.json",
         "output": "hebrew-flashcards-1000.docx",
         "font": "Noto Serif Hebrew",
@@ -174,6 +178,7 @@ DECKS: dict[str, dict] = {
         "vocab": ROOT / "data/originalReaders/vocabulary/greek-2000.json",
         "glosses": CACHE / "original-readers/greek-full/greek-2000-gloss-zh-by-lemma.json",
         "images": CACHE / "flashcards/greek-card-images.json",
+        "icons": CACHE / "flashcards/greek-card-icons.json",
         "output": "greek-flashcards-volume-1.docx",
         "font": "Palatino Linotype",
         "rtl": False,
@@ -189,6 +194,7 @@ DECKS: dict[str, dict] = {
         "vocab": ROOT / "data/originalReaders/vocabulary/greek-2000.json",
         "glosses": CACHE / "original-readers/greek-full/greek-2000-gloss-zh-by-lemma.json",
         "images": CACHE / "flashcards/greek-card-images.json",
+        "icons": CACHE / "flashcards/greek-card-icons.json",
         "output": "greek-flashcards-volume-2.docx",
         "font": "Palatino Linotype",
         "rtl": False,
@@ -203,6 +209,7 @@ DECKS: dict[str, dict] = {
         "title": "教會拉丁文單字卡・上冊",
         "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
         "images": CACHE / "flashcards/latin-card-images.json",
+        "icons": CACHE / "flashcards/latin-card-icons.json",
         "output": "latin-flashcards-volume-1.docx",
         "font": "Noto Serif",
         "rtl": False,
@@ -218,6 +225,7 @@ DECKS: dict[str, dict] = {
         "title": "教會拉丁文單字卡・下冊",
         "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
         "images": CACHE / "flashcards/latin-card-images.json",
+        "icons": CACHE / "flashcards/latin-card-icons.json",
         "output": "latin-flashcards-volume-2.docx",
         "font": "Noto Serif",
         "rtl": False,
@@ -602,6 +610,8 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
         (f"插圖：{with_picture} 張有圖，其餘留白。多義詞取最常見的義項；找不到誠實對應的圖就不放，"
          "不以近似圖充數。", 11, INK, 22),
         ("圖片來源：OpenMoji 17.0.0（openmoji.org），CC BY-SA 4.0。", 9.5, MUTED, 4),
+        ("OpenMoji 沒有的概念另取自 game-icons.net（CC BY 3.0）、Phosphor Icons（MIT）、"
+         "Material Design Icons（Apache 2.0）與 Tabler Icons（MIT）。", 9.5, MUTED, 4),
     ]
     lines.extend((text, 9.5, MUTED, 4) for text in deck["sources"])
     for text, size, color, after in lines:
@@ -621,7 +631,16 @@ def load_cards(deck: dict) -> list[dict]:
     gloss_payload = (json.loads(deck["glosses"].read_text(encoding="utf-8"))
                      if "glosses" in deck else {})
     images = json.loads(deck["images"].read_text(encoding="utf-8"))["images"]
+    icons = (json.loads(deck["icons"].read_text(encoding="utf-8"))["cards"]
+             if "icons" in deck and deck["icons"].exists() else {})
     cards: list[dict] = []
+
+    def picture(key: str) -> Path | None:
+        record = icons.get(key)
+        if record:
+            return ICON_DIR / record["file"]
+        record = images.get(key)
+        return IMAGE_DIR / record["file"] if record else None
 
     if "volumeName" in deck:  # Latin
         rows = [item for item in entries["entries"] if item["volume"] == deck["volumeName"]]
@@ -630,13 +649,12 @@ def load_cards(deck: dict) -> list[dict]:
             if not gloss:
                 raise SystemExit(f"{entry['headword']} 缺繁中詞義")
             printed = (entry.get("forms") or entry["headword"]).strip()
-            record = images.get(latin_key(entry))
             cards.append({
                 "headword": printed,
                 "glossZh": gloss,
                 "pos": POS_LATIN.get(latin_pos(entry), ""),
                 "lesson": entry["lesson"],
-                "picture": IMAGE_DIR / record["file"] if record else None,
+                "picture": picture(latin_key(entry)),
             })
         return cards
 
@@ -647,7 +665,6 @@ def load_cards(deck: dict) -> list[dict]:
             gloss = glosses.get(entry["lemma"], "").strip()
             if not gloss:
                 raise SystemExit(f"{entry['lemma']} 缺繁中詞義")
-            record = images.get(entry["lemma"])
             part_of_speech = greek_part_of_speech(entry, gloss)
             cards.append({
                 # 讀本印完整詞典形；卡片只在推不出來時才印，其餘只印詞頭。
@@ -655,7 +672,7 @@ def load_cards(deck: dict) -> list[dict]:
                 "glossZh": gloss,
                 "pos": part_of_speech,
                 "lesson": entry["lesson"],
-                "picture": IMAGE_DIR / record["file"] if record else None,
+                "picture": picture(entry["lemma"]),
             })
         return cards
 
@@ -670,13 +687,12 @@ def load_cards(deck: dict) -> list[dict]:
         if key not in glosses:
             raise SystemExit(f"{entry['pointed']} 缺繁中詞義")
         card_key = f"{entry['strong']}|{entry['pointed']}"
-        record = images.get(card_key)
         cards.append({
             "headword": entry["pointed"],
             "glossZh": glosses[key],
             "pos": hebrew_part_of_speech(entry, grammar.get(card_key, {})),
             "lesson": entry["lesson"],
-            "picture": IMAGE_DIR / record["file"] if record else None,
+            "picture": picture(card_key),
         })
     return cards
 

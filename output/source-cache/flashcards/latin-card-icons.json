@@ -1,0 +1,558 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": {
+    "game-icons": "CC BY 3.0 — game-icons.net",
+    "ph": "MIT — Phosphor Icons",
+    "mdi": "Apache 2.0 — Material Design Icons",
+    "tabler": "MIT — Tabler Icons"
+  },
+  "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。",
+  "cards": {
+    "creatio, creationis": {
+      "icon": "mdi:creation",
+      "file": "mdi-creation.png",
+      "source": "mdi",
+      "glossEn": "creation"
+    },
+    "arbitrium, arbitri(i)": {
+      "icon": "game-icons:choice",
+      "file": "game-icons-choice.png",
+      "source": "game-icons",
+      "glossEn": "choice"
+    },
+    "pondus, ponderis": {
+      "icon": "game-icons:weight",
+      "file": "game-icons-weight.png",
+      "source": "game-icons",
+      "glossEn": "weight"
+    },
+    "concilium, concili(i)": {
+      "icon": "game-icons:discussion",
+      "file": "game-icons-discussion.png",
+      "source": "game-icons",
+      "glossEn": "discussion"
+    },
+    "synodus, synodi": {
+      "icon": "ph:book",
+      "file": "ph-book.png",
+      "source": "ph",
+      "glossEn": "book"
+    },
+    "congregatio, congregationis": {
+      "icon": "mdi:group",
+      "file": "mdi-group.png",
+      "source": "mdi",
+      "glossEn": "group"
+    },
+    "aestimatio, aestimationis": {
+      "icon": "ph:money",
+      "file": "ph-money.png",
+      "source": "ph",
+      "glossEn": "money"
+    },
+    "ecclesia, ecclesiae, f.": {
+      "icon": "game-icons:church",
+      "file": "game-icons-church.png",
+      "source": "game-icons",
+      "glossEn": "church"
+    },
+    "et": {
+      "icon": "mdi:et",
+      "file": "mdi-et.png",
+      "source": "mdi",
+      "glossEn": "et"
+    },
+    "oro, orare, oraui, oratus": {
+      "icon": "tabler:pray",
+      "file": "tabler-pray.png",
+      "source": "tabler",
+      "glossEn": "pray"
+    },
+    "oratio, orationis, f.": {
+      "icon": "game-icons:prayer",
+      "file": "game-icons-prayer.png",
+      "source": "game-icons",
+      "glossEn": "prayer"
+    },
+    "cogito, cogitare, cogitaui, cogitatus": {
+      "icon": "game-icons:think",
+      "file": "game-icons-think.png",
+      "source": "game-icons",
+      "glossEn": "think"
+    },
+    "concordia, concordiae, f.": {
+      "icon": "ph:peace",
+      "file": "ph-peace.png",
+      "source": "ph",
+      "glossEn": "peace"
+    },
+    "generalis, generalis, generale": {
+      "icon": "mdi:nature",
+      "file": "mdi-nature.png",
+      "source": "mdi",
+      "glossEn": "nature"
+    },
+    "saecularis, saecularis, saeculare": {
+      "icon": "game-icons:world",
+      "file": "game-icons-world.png",
+      "source": "game-icons",
+      "glossEn": "world"
+    },
+    "basilica, basilicae": {
+      "icon": "tabler:exchange",
+      "file": "tabler-exchange.png",
+      "source": "tabler",
+      "glossEn": "exchange"
+    },
+    "participo, participare, participaui, participatus": {
+      "icon": "game-icons:share",
+      "file": "game-icons-share.png",
+      "source": "game-icons",
+      "glossEn": "share"
+    },
+    "censeo, censere, censui, census": {
+      "icon": "game-icons:vote",
+      "file": "game-icons-vote.png",
+      "source": "game-icons",
+      "glossEn": "vote"
+    },
+    "hierarchia, hierarchiae": {
+      "icon": "tabler:hierarchy",
+      "file": "tabler-hierarchy.png",
+      "source": "tabler",
+      "glossEn": "hierarchy"
+    },
+    "euangelium, euangelii": {
+      "icon": "tabler:news",
+      "file": "tabler-news.png",
+      "source": "tabler",
+      "glossEn": "news"
+    },
+    "domus, domi, f.": {
+      "icon": "mdi:home",
+      "file": "mdi-home.png",
+      "source": "mdi",
+      "glossEn": "home"
+    },
+    "incensum, incensi, n.": {
+      "icon": "game-icons:incense",
+      "file": "game-icons-incense.png",
+      "source": "game-icons",
+      "glossEn": "incense"
+    },
+    "tectum, tecti, n.": {
+      "icon": "game-icons:house",
+      "file": "game-icons-house.png",
+      "source": "game-icons",
+      "glossEn": "house"
+    },
+    "rex, regis, m.": {
+      "icon": "game-icons:king",
+      "file": "game-icons-king.png",
+      "source": "game-icons",
+      "glossEn": "king"
+    },
+    "ignis, ignis, ignium, m.": {
+      "icon": "game-icons:fire",
+      "file": "game-icons-fire.png",
+      "source": "game-icons",
+      "glossEn": "fire"
+    },
+    "corona, coronae, f.": {
+      "icon": "game-icons:crown",
+      "file": "game-icons-crown.png",
+      "source": "game-icons",
+      "glossEn": "crown"
+    },
+    "accendo, accendere, accendi, accensus": {
+      "icon": "game-icons:kindle",
+      "file": "game-icons-kindle.png",
+      "source": "game-icons",
+      "glossEn": "kindle"
+    },
+    "sermo, sermonis, m.": {
+      "icon": "game-icons:talk",
+      "file": "game-icons-talk.png",
+      "source": "game-icons",
+      "glossEn": "talk"
+    },
+    "capitulum, capituli": {
+      "icon": "ph:article",
+      "file": "ph-article.png",
+      "source": "ph",
+      "glossEn": "article"
+    },
+    "praemitto, praemittere, praemisi, praemissus": {
+      "icon": "mdi:send",
+      "file": "mdi-send.png",
+      "source": "mdi",
+      "glossEn": "send"
+    },
+    "insula, insulae": {
+      "icon": "game-icons:island",
+      "file": "game-icons-island.png",
+      "source": "game-icons",
+      "glossEn": "island"
+    },
+    "comprehendo, comprehendere, comprehendi, comprehensus": {
+      "icon": "game-icons:catch",
+      "file": "game-icons-catch.png",
+      "source": "game-icons",
+      "glossEn": "catch"
+    },
+    "persuadeo, persuadere, persuasi, persuasus": {
+      "icon": "game-icons:convince",
+      "file": "game-icons-convince.png",
+      "source": "game-icons",
+      "glossEn": "convince"
+    },
+    "aedificatio, aedificationis": {
+      "icon": "ph:building",
+      "file": "ph-building.png",
+      "source": "ph",
+      "glossEn": "building"
+    },
+    "ardor, ardoris": {
+      "icon": "game-icons:flame",
+      "file": "game-icons-flame.png",
+      "source": "game-icons",
+      "glossEn": "flame"
+    },
+    "promoueo, promouere, promoui, promotus": {
+      "icon": "game-icons:move",
+      "file": "game-icons-move.png",
+      "source": "game-icons",
+      "glossEn": "move"
+    },
+    "donum, doni, n.": {
+      "icon": "ph:gift",
+      "file": "ph-gift.png",
+      "source": "ph",
+      "glossEn": "gift"
+    },
+    "aspicio, aspicere, aspexi, aspectus": {
+      "icon": "game-icons:look-at",
+      "file": "game-icons-look-at.png",
+      "source": "game-icons",
+      "glossEn": "look-at"
+    },
+    "mulier, mulieris, f.": {
+      "icon": "tabler:woman",
+      "file": "tabler-woman.png",
+      "source": "tabler",
+      "glossEn": "woman"
+    },
+    "orbis, orbis, orbium, m.": {
+      "icon": "ph:sphere",
+      "file": "ph-sphere.png",
+      "source": "ph",
+      "glossEn": "sphere"
+    },
+    "femina, feminae": {
+      "icon": "game-icons:female",
+      "file": "game-icons-female.png",
+      "source": "game-icons",
+      "glossEn": "female"
+    },
+    "potentia, potentiae, f.": {
+      "icon": "ph:power",
+      "file": "ph-power.png",
+      "source": "ph",
+      "glossEn": "power"
+    },
+    "homo, hominis, m.": {
+      "icon": "mdi:human",
+      "file": "mdi-human.png",
+      "source": "mdi",
+      "glossEn": "human"
+    },
+    "obtineo, obtinere, obtinui, obtentus": {
+      "icon": "game-icons:occupy",
+      "file": "game-icons-occupy.png",
+      "source": "game-icons",
+      "glossEn": "occupy"
+    },
+    "origo, originis": {
+      "icon": "mdi:origin",
+      "file": "mdi-origin.png",
+      "source": "mdi",
+      "glossEn": "origin"
+    },
+    "opinio, opinionis": {
+      "icon": "game-icons:idea",
+      "file": "game-icons-idea.png",
+      "source": "game-icons",
+      "glossEn": "idea"
+    },
+    "arguo, arguere, argui, argutus": {
+      "icon": "game-icons:convict",
+      "file": "game-icons-convict.png",
+      "source": "game-icons",
+      "glossEn": "convict"
+    },
+    "canto, cantare, cantaui, cantatus": {
+      "icon": "game-icons:sing",
+      "file": "game-icons-sing.png",
+      "source": "game-icons",
+      "glossEn": "sing"
+    },
+    "anima, animae, f.": {
+      "icon": "game-icons:soul",
+      "file": "game-icons-soul.png",
+      "source": "game-icons",
+      "glossEn": "soul"
+    },
+    "ouis, ouis, ouium, f.": {
+      "icon": "game-icons:sheep",
+      "file": "game-icons-sheep.png",
+      "source": "game-icons",
+      "glossEn": "sheep"
+    },
+    "diuido, diuidere, diuisi, diuisus": {
+      "icon": "ph:divide",
+      "file": "ph-divide.png",
+      "source": "ph",
+      "glossEn": "divide"
+    },
+    "titulus, tituli": {
+      "icon": "mdi:label",
+      "file": "mdi-label.png",
+      "source": "mdi",
+      "glossEn": "label"
+    },
+    "praebeo, praebere, praebui, praebitus": {
+      "icon": "mdi:offer",
+      "file": "mdi-offer.png",
+      "source": "mdi",
+      "glossEn": "offer"
+    },
+    "diuerto, diuertere, diuerti, diuersus": {
+      "icon": "game-icons:divert",
+      "file": "game-icons-divert.png",
+      "source": "game-icons",
+      "glossEn": "divert"
+    },
+    "uigeo, uigere": {
+      "icon": "game-icons:strong",
+      "file": "game-icons-strong.png",
+      "source": "game-icons",
+      "glossEn": "strong"
+    },
+    "animus, animi, m.": {
+      "icon": "ph:heart",
+      "file": "ph-heart.png",
+      "source": "ph",
+      "glossEn": "heart"
+    },
+    "aqua, aquae, f.": {
+      "icon": "mdi:water",
+      "file": "mdi-water.png",
+      "source": "mdi",
+      "glossEn": "water"
+    },
+    "discipulus, discipuli, m.": {
+      "icon": "ph:student",
+      "file": "ph-student.png",
+      "source": "ph",
+      "glossEn": "student"
+    },
+    "columna, columnae, f.": {
+      "icon": "mdi:pillar",
+      "file": "mdi-pillar.png",
+      "source": "mdi",
+      "glossEn": "pillar"
+    },
+    "lego, legere, legi, lectus": {
+      "icon": "game-icons:select",
+      "file": "game-icons-select.png",
+      "source": "game-icons",
+      "glossEn": "select"
+    },
+    "panis, panis, panium, m.": {
+      "icon": "game-icons:bread",
+      "file": "game-icons-bread.png",
+      "source": "game-icons",
+      "glossEn": "bread"
+    },
+    "caritas, caritatis, f.": {
+      "icon": "mdi:charity",
+      "file": "mdi-charity.png",
+      "source": "mdi",
+      "glossEn": "charity"
+    },
+    "effundo, effundere, effudi, effusus": {
+      "icon": "game-icons:spill",
+      "file": "game-icons-spill.png",
+      "source": "game-icons",
+      "glossEn": "spill"
+    },
+    "senex (gen., senis)": {
+      "icon": "tabler:old",
+      "file": "tabler-old.png",
+      "source": "tabler",
+      "glossEn": "old"
+    },
+    "magis": {
+      "icon": "mdi:more",
+      "file": "mdi-more.png",
+      "source": "mdi",
+      "glossEn": "more"
+    },
+    "tentatio, tentationis, f.": {
+      "icon": "game-icons:temptation",
+      "file": "game-icons-temptation.png",
+      "source": "game-icons",
+      "glossEn": "temptation"
+    },
+    "occasus, occasus, m.": {
+      "icon": "game-icons:sun",
+      "file": "game-icons-sun.png",
+      "source": "game-icons",
+      "glossEn": "sun"
+    },
+    "littera, litterae": {
+      "icon": "ph:books",
+      "file": "ph-books.png",
+      "source": "ph",
+      "glossEn": "books"
+    },
+    "habitus, habitus": {
+      "icon": "game-icons:dress",
+      "file": "game-icons-dress.png",
+      "source": "game-icons",
+      "glossEn": "dress"
+    },
+    "semen, seminis": {
+      "icon": "mdi:seed",
+      "file": "mdi-seed.png",
+      "source": "mdi",
+      "glossEn": "seed"
+    },
+    "animal, animalis": {
+      "icon": "game-icons:brute",
+      "file": "game-icons-brute.png",
+      "source": "game-icons",
+      "glossEn": "brute"
+    },
+    "consisto, consistere, constiti, constitus": {
+      "icon": "ph:stop",
+      "file": "ph-stop.png",
+      "source": "ph",
+      "glossEn": "stop"
+    },
+    "metus, metus": {
+      "icon": "game-icons:dread",
+      "file": "game-icons-dread.png",
+      "source": "game-icons",
+      "glossEn": "dread"
+    },
+    "comparo, comparare, comparaui, comparatus": {
+      "icon": "ph:unite",
+      "file": "ph-unite.png",
+      "source": "ph",
+      "glossEn": "unite"
+    },
+    "uinum, uini, n.": {
+      "icon": "ph:wine",
+      "file": "ph-wine.png",
+      "source": "ph",
+      "glossEn": "wine"
+    },
+    "aurum, auri, n.": {
+      "icon": "mdi:gold",
+      "file": "mdi-gold.png",
+      "source": "mdi",
+      "glossEn": "gold"
+    },
+    "gladius, gladii, m.": {
+      "icon": "ph:sword",
+      "file": "ph-sword.png",
+      "source": "ph",
+      "glossEn": "sword"
+    },
+    "scriptura, scripturae, f.": {
+      "icon": "tabler:writing",
+      "file": "tabler-writing.png",
+      "source": "tabler",
+      "glossEn": "writing"
+    },
+    "desertum, deserti, n.": {
+      "icon": "game-icons:desert",
+      "file": "game-icons-desert.png",
+      "source": "game-icons",
+      "glossEn": "desert"
+    },
+    "calix, calicis, m.": {
+      "icon": "mdi:cup",
+      "file": "mdi-cup.png",
+      "source": "mdi",
+      "glossEn": "cup"
+    },
+    "auris, auris, aurium, f.": {
+      "icon": "ph:ear",
+      "file": "ph-ear.png",
+      "source": "ph",
+      "glossEn": "ear"
+    },
+    "ciuitas, ciuitatis, f.": {
+      "icon": "ph:city",
+      "file": "ph-city.png",
+      "source": "ph",
+      "glossEn": "city"
+    },
+    "aue!": {
+      "icon": "mdi:hail",
+      "file": "mdi-hail.png",
+      "source": "mdi",
+      "glossEn": "hail"
+    },
+    "curro, currere, cucurri, cursus": {
+      "icon": "game-icons:run",
+      "file": "game-icons-run.png",
+      "source": "game-icons",
+      "glossEn": "run"
+    },
+    "lignum, ligni, n.": {
+      "icon": "tabler:wood",
+      "file": "tabler-wood.png",
+      "source": "tabler",
+      "glossEn": "wood"
+    },
+    "materia, materiae": {
+      "icon": "game-icons:growth",
+      "file": "game-icons-growth.png",
+      "source": "game-icons",
+      "glossEn": "growth"
+    },
+    "communico, communicare, communicaui, communicatus": {
+      "icon": "game-icons:join",
+      "file": "game-icons-join.png",
+      "source": "game-icons",
+      "glossEn": "join"
+    },
+    "uerso, uersare, uersaui, uersatus": {
+      "icon": "tabler:whirl",
+      "file": "tabler-whirl.png",
+      "source": "tabler",
+      "glossEn": "whirl"
+    },
+    "conuersio, conuersionis": {
+      "icon": "game-icons:circle",
+      "file": "game-icons-circle.png",
+      "source": "game-icons",
+      "glossEn": "circle"
+    },
+    "solidus, solidi": {
+      "icon": "ph:coin",
+      "file": "ph-coin.png",
+      "source": "ph",
+      "glossEn": "coin"
+    },
+    "securitas, securitatis": {
+      "icon": "mdi:security",
+      "file": "mdi-security.png",
+      "source": "mdi",
+      "glossEn": "security"
+    }
+  }
+}

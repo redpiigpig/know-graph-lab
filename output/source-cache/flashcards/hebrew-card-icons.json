@@ -1,0 +1,636 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": {
+    "game-icons": "CC BY 3.0 — game-icons.net",
+    "ph": "MIT — Phosphor Icons",
+    "mdi": "Apache 2.0 — Material Design Icons",
+    "tabler": "MIT — Tabler Icons"
+  },
+  "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。",
+  "cards": {
+    "H1254|בָּרָא": {
+      "icon": "tabler:cut",
+      "file": "tabler-cut.png",
+      "source": "tabler",
+      "glossEn": "cut"
+    },
+    "H8179|שַׁ֫עַר": {
+      "icon": "game-icons:gate",
+      "file": "game-icons-gate.png",
+      "source": "game-icons",
+      "glossEn": "gate"
+    },
+    "H6607|פֶּ֫תַח": {
+      "icon": "game-icons:doorway",
+      "file": "game-icons-doorway.png",
+      "source": "game-icons",
+      "glossEn": "doorway"
+    },
+    "H6951|קָהָל": {
+      "icon": "mdi:crowd",
+      "file": "mdi-crowd.png",
+      "source": "mdi",
+      "glossEn": "crowd"
+    },
+    "H1817|דֶּ֫לֶת": {
+      "icon": "game-icons:door",
+      "file": "game-icons-door.png",
+      "source": "game-icons",
+      "glossEn": "door"
+    },
+    "H3957|לִשְׁכָּה": {
+      "icon": "ph:building",
+      "file": "ph-building.png",
+      "source": "ph",
+      "glossEn": "building"
+    },
+    "H4256|מַחֲלֹקֶת": {
+      "icon": "tabler:section",
+      "file": "tabler-section.png",
+      "source": "tabler",
+      "glossEn": "section"
+    },
+    "H1293|בְּרָכָה": {
+      "icon": "ph:gift",
+      "file": "ph-gift.png",
+      "source": "ph",
+      "glossEn": "gift"
+    },
+    "H2005|הֵן": {
+      "icon": "game-icons:behold",
+      "file": "game-icons-behold.png",
+      "source": "game-icons",
+      "glossEn": "behold"
+    },
+    "H559|אָמַר": {
+      "icon": "game-icons:think",
+      "file": "game-icons-think.png",
+      "source": "game-icons",
+      "glossEn": "think"
+    },
+    "H6030|עָנָה": {
+      "icon": "mdi:reply",
+      "file": "mdi-reply.png",
+      "source": "mdi",
+      "glossEn": "reply"
+    },
+    "H1984|הָלַל": {
+      "icon": "game-icons:sing",
+      "file": "game-icons-sing.png",
+      "source": "game-icons",
+      "glossEn": "sing"
+    },
+    "H5027|נָבַט": {
+      "icon": "game-icons:gaze",
+      "file": "game-icons-gaze.png",
+      "source": "game-icons",
+      "glossEn": "gaze"
+    },
+    "H4948|מִשְׁקָל": {
+      "icon": "game-icons:weight",
+      "file": "game-icons-weight.png",
+      "source": "game-icons",
+      "glossEn": "weight"
+    },
+    "H784|אֵשׁ": {
+      "icon": "game-icons:fire",
+      "file": "game-icons-fire.png",
+      "source": "game-icons",
+      "glossEn": "fire"
+    },
+    "H2451|חָכְמָה": {
+      "icon": "game-icons:wisdom",
+      "file": "game-icons-wisdom.png",
+      "source": "game-icons",
+      "glossEn": "wisdom"
+    },
+    "H6629|צֹאן": {
+      "icon": "game-icons:sheep",
+      "file": "game-icons-sheep.png",
+      "source": "game-icons",
+      "glossEn": "sheep"
+    },
+    "H2233|זֶ֫רַע": {
+      "icon": "mdi:seed",
+      "file": "mdi-seed.png",
+      "source": "mdi",
+      "glossEn": "seed"
+    },
+    "H1431|גָּדַל": {
+      "icon": "game-icons:strong",
+      "file": "game-icons-strong.png",
+      "source": "game-icons",
+      "glossEn": "strong"
+    },
+    "H6999|קָטַר": {
+      "icon": "mdi:smoke",
+      "file": "mdi-smoke.png",
+      "source": "mdi",
+      "glossEn": "smoke"
+    },
+    "H4217|מִזְרָח": {
+      "icon": "game-icons:sunrise",
+      "file": "game-icons-sunrise.png",
+      "source": "game-icons",
+      "glossEn": "sunrise"
+    },
+    "H6419|פָּלַל": {
+      "icon": "tabler:pray",
+      "file": "tabler-pray.png",
+      "source": "tabler",
+      "glossEn": "pray"
+    },
+    "H8605|תְּפִלָּה": {
+      "icon": "game-icons:prayer",
+      "file": "game-icons-prayer.png",
+      "source": "game-icons",
+      "glossEn": "prayer"
+    },
+    "H953|בּוֹר": {
+      "icon": "game-icons:hole",
+      "file": "game-icons-hole.png",
+      "source": "game-icons",
+      "glossEn": "hole"
+    },
+    "H4725|מָקוֹם": {
+      "icon": "tabler:location",
+      "file": "tabler-location.png",
+      "source": "tabler",
+      "glossEn": "location"
+    },
+    "H7704|שָׂדֶה": {
+      "icon": "game-icons:field",
+      "file": "game-icons-field.png",
+      "source": "game-icons",
+      "glossEn": "field"
+    },
+    "H4057|מִדְבָּר": {
+      "icon": "game-icons:desert",
+      "file": "game-icons-desert.png",
+      "source": "game-icons",
+      "glossEn": "desert"
+    },
+    "H727|אֲרוֹן": {
+      "icon": "game-icons:chest",
+      "file": "game-icons-chest.png",
+      "source": "game-icons",
+      "glossEn": "chest"
+    },
+    "H6499|פַּר": {
+      "icon": "game-icons:bull",
+      "file": "game-icons-bull.png",
+      "source": "game-icons",
+      "glossEn": "bull"
+    },
+    "H3920|לָכַד": {
+      "icon": "game-icons:catch",
+      "file": "game-icons-catch.png",
+      "source": "game-icons",
+      "glossEn": "catch"
+    },
+    "H3581|כֹּחַ": {
+      "icon": "ph:power",
+      "file": "ph-power.png",
+      "source": "ph",
+      "glossEn": "power"
+    },
+    "H2220|זְרוֹעַ": {
+      "icon": "game-icons:forearm",
+      "file": "game-icons-forearm.png",
+      "source": "game-icons",
+      "glossEn": "forearm"
+    },
+    "H5795|עֵז": {
+      "icon": "game-icons:goat",
+      "file": "game-icons-goat.png",
+      "source": "game-icons",
+      "glossEn": "goat"
+    },
+    "H7794|שׁוֹר": {
+      "icon": "game-icons:cow",
+      "file": "game-icons-cow.png",
+      "source": "game-icons",
+      "glossEn": "cow"
+    },
+    "H4043|מָגֵן": {
+      "icon": "game-icons:shield",
+      "file": "game-icons-shield.png",
+      "source": "game-icons",
+      "glossEn": "shield"
+    },
+    "H6160|עֲרָבָה": {
+      "icon": "game-icons:valley",
+      "file": "game-icons-valley.png",
+      "source": "game-icons",
+      "glossEn": "valley"
+    },
+    "H1612|גֶּפֶן": {
+      "icon": "tabler:grape",
+      "file": "tabler-grape.png",
+      "source": "tabler",
+      "glossEn": "grape"
+    },
+    "H5703|עַד": {
+      "icon": "game-icons:duration",
+      "file": "game-icons-duration.png",
+      "source": "game-icons",
+      "glossEn": "duration"
+    },
+    "H5038|נְבֵלָה": {
+      "icon": "game-icons:carrion",
+      "file": "game-icons-carrion.png",
+      "source": "game-icons",
+      "glossEn": "carrion"
+    },
+    "H553|אָמַץ": {
+      "icon": "mdi:alert",
+      "file": "mdi-alert.png",
+      "source": "mdi",
+      "glossEn": "alert"
+    },
+    "H1219|בָּצַר": {
+      "icon": "game-icons:grapes",
+      "file": "game-icons-grapes.png",
+      "source": "game-icons",
+      "glossEn": "grapes"
+    },
+    "H8492|תִּירוֹשׁ": {
+      "icon": "ph:wine",
+      "file": "ph-wine.png",
+      "source": "ph",
+      "glossEn": "wine"
+    },
+    "H8398|תֵּבֵל": {
+      "icon": "mdi:earth",
+      "file": "mdi-earth.png",
+      "source": "mdi",
+      "glossEn": "earth"
+    },
+    "H8184|שְׂעֹרָה": {
+      "icon": "mdi:barley",
+      "file": "mdi-barley.png",
+      "source": "mdi",
+      "glossEn": "barley"
+    },
+    "H1530|גַּל": {
+      "icon": "mdi:water",
+      "file": "mdi-water.png",
+      "source": "mdi",
+      "glossEn": "water"
+    },
+    "H802|אִשָּׁה": {
+      "icon": "tabler:woman",
+      "file": "tabler-woman.png",
+      "source": "tabler",
+      "glossEn": "woman"
+    },
+    "H2091|זָהָב": {
+      "icon": "mdi:gold",
+      "file": "mdi-gold.png",
+      "source": "mdi",
+      "glossEn": "gold"
+    },
+    "H6086|עֵץ": {
+      "icon": "ph:tree",
+      "file": "ph-tree.png",
+      "source": "ph",
+      "glossEn": "tree"
+    },
+    "H7965|שָׁלוֹם": {
+      "icon": "ph:peace",
+      "file": "ph-peace.png",
+      "source": "ph",
+      "glossEn": "peace"
+    },
+    "H5375|נָשָׂא": {
+      "icon": "game-icons:lift",
+      "file": "game-icons-lift.png",
+      "source": "game-icons",
+      "glossEn": "lift"
+    },
+    "H7121|קָרָא": {
+      "icon": "game-icons:read",
+      "file": "game-icons-read.png",
+      "source": "game-icons",
+      "glossEn": "read"
+    },
+    "H241|אֹ֫זֶן": {
+      "icon": "ph:ear",
+      "file": "ph-ear.png",
+      "source": "ph",
+      "glossEn": "ear"
+    },
+    "H7665|שָׁבַר": {
+      "icon": "game-icons:shatter",
+      "file": "game-icons-shatter.png",
+      "source": "game-icons",
+      "glossEn": "shatter"
+    },
+    "H2346|חוֹמָה": {
+      "icon": "ph:wall",
+      "file": "ph-wall.png",
+      "source": "ph",
+      "glossEn": "wall"
+    },
+    "H7323|רוּץ": {
+      "icon": "game-icons:run",
+      "file": "game-icons-run.png",
+      "source": "game-icons",
+      "glossEn": "run"
+    },
+    "H2145|זָכָר": {
+      "icon": "game-icons:male",
+      "file": "game-icons-male.png",
+      "source": "game-icons",
+      "glossEn": "male"
+    },
+    "H5104|נָהָר": {
+      "icon": "game-icons:river",
+      "file": "game-icons-river.png",
+      "source": "game-icons",
+      "glossEn": "river"
+    },
+    "H1245|בָּקַשׁ": {
+      "icon": "tabler:search",
+      "file": "tabler-search.png",
+      "source": "tabler",
+      "glossEn": "search"
+    },
+    "H5982|עַמּוּד": {
+      "icon": "mdi:pillar",
+      "file": "mdi-pillar.png",
+      "source": "mdi",
+      "glossEn": "pillar"
+    },
+    "H5046|נָגַד": {
+      "icon": "tabler:report",
+      "file": "tabler-report.png",
+      "source": "tabler",
+      "glossEn": "report"
+    },
+    "H2975|יְאֹר": {
+      "icon": "game-icons:egypt",
+      "file": "game-icons-egypt.png",
+      "source": "game-icons",
+      "glossEn": "egypt"
+    },
+    "H1869|דָּרַךְ": {
+      "icon": "game-icons:tread",
+      "file": "game-icons-tread.png",
+      "source": "game-icons",
+      "glossEn": "tread"
+    },
+    "H7070|קָנֶה": {
+      "icon": "game-icons:reed",
+      "file": "game-icons-reed.png",
+      "source": "game-icons",
+      "glossEn": "reed"
+    },
+    "H3293|יַעַר": {
+      "icon": "game-icons:forest",
+      "file": "game-icons-forest.png",
+      "source": "game-icons",
+      "glossEn": "forest"
+    },
+    "H1330|בְּתוּלָה": {
+      "icon": "ph:city",
+      "file": "ph-city.png",
+      "source": "ph",
+      "glossEn": "city"
+    },
+    "H4904|מִשְׁכָּב": {
+      "icon": "game-icons:bed",
+      "file": "game-icons-bed.png",
+      "source": "game-icons",
+      "glossEn": "bed"
+    },
+    "H5749|עוּד": {
+      "icon": "ph:repeat",
+      "file": "ph-repeat.png",
+      "source": "ph",
+      "glossEn": "repeat"
+    },
+    "H657|אֶפֶס": {
+      "icon": "game-icons:leg",
+      "file": "game-icons-leg.png",
+      "source": "game-icons",
+      "glossEn": "leg"
+    },
+    "H914|בָּדַל": {
+      "icon": "ph:divide",
+      "file": "ph-divide.png",
+      "source": "ph",
+      "glossEn": "divide"
+    },
+    "H4013|מִבְצָר": {
+      "icon": "game-icons:castle",
+      "file": "game-icons-castle.png",
+      "source": "game-icons",
+      "glossEn": "castle"
+    },
+    "H8643|תְּרוּעָה": {
+      "icon": "game-icons:trumpet",
+      "file": "game-icons-trumpet.png",
+      "source": "game-icons",
+      "glossEn": "trumpet"
+    },
+    "H1653|גֶּשֶׁם": {
+      "icon": "game-icons:shower",
+      "file": "game-icons-shower.png",
+      "source": "game-icons",
+      "glossEn": "shower"
+    },
+    "H3563|כּוֹס": {
+      "icon": "mdi:cup",
+      "file": "mdi-cup.png",
+      "source": "mdi",
+      "glossEn": "cup"
+    },
+    "H3123|יוֹנָה": {
+      "icon": "game-icons:dove",
+      "file": "game-icons-dove.png",
+      "source": "game-icons",
+      "glossEn": "dove"
+    },
+    "H4428|מֶ֫לֶךְ": {
+      "icon": "game-icons:king",
+      "file": "game-icons-king.png",
+      "source": "game-icons",
+      "glossEn": "king"
+    },
+    "H1870|דֶּ֫רֶךְ": {
+      "icon": "game-icons:road",
+      "file": "game-icons-road.png",
+      "source": "game-icons",
+      "glossEn": "road"
+    },
+    "H2022|הַר": {
+      "icon": "tabler:mountain",
+      "file": "tabler-mountain.png",
+      "source": "tabler",
+      "glossEn": "mountain"
+    },
+    "H2022|הָרִים": {
+      "icon": "game-icons:mountains",
+      "file": "game-icons-mountains.png",
+      "source": "game-icons",
+      "glossEn": "mountains"
+    },
+    "H5612|סֵ֫פֶר": {
+      "icon": "ph:book",
+      "file": "ph-book.png",
+      "source": "ph",
+      "glossEn": "book"
+    },
+    "H3701|כֶּ֫סֶף": {
+      "icon": "ph:money",
+      "file": "ph-money.png",
+      "source": "ph",
+      "glossEn": "money"
+    },
+    "H2205|זָקֵן": {
+      "icon": "tabler:old",
+      "file": "tabler-old.png",
+      "source": "tabler",
+      "glossEn": "old"
+    },
+    "H168|אֹ֫הֶל": {
+      "icon": "ph:tent",
+      "file": "ph-tent.png",
+      "source": "ph",
+      "glossEn": "tent"
+    },
+    "H2320|חֹ֫דֶשׁ": {
+      "icon": "game-icons:moon",
+      "file": "game-icons-moon.png",
+      "source": "game-icons",
+      "glossEn": "moon"
+    },
+    "H7673|שָׁבַת": {
+      "icon": "ph:stop",
+      "file": "ph-stop.png",
+      "source": "ph",
+      "glossEn": "stop"
+    },
+    "H352|אַ֫יִל": {
+      "icon": "game-icons:ram",
+      "file": "game-icons-ram.png",
+      "source": "game-icons",
+      "glossEn": "ram"
+    },
+    "H6|אָבַד": {
+      "icon": "mdi:vanish",
+      "file": "mdi-vanish.png",
+      "source": "mdi",
+      "glossEn": "vanish"
+    },
+    "H3678|כִּסֵּא": {
+      "icon": "ph:seat",
+      "file": "ph-seat.png",
+      "source": "ph",
+      "glossEn": "seat"
+    },
+    "H8121|שֶׁ֫מֶשׁ": {
+      "icon": "game-icons:sun",
+      "file": "game-icons-sun.png",
+      "source": "game-icons",
+      "glossEn": "sun"
+    },
+    "H3335|יָצַר": {
+      "icon": "mdi:shape",
+      "file": "mdi-shape.png",
+      "source": "mdi",
+      "glossEn": "shape"
+    },
+    "H5265|נָסַע": {
+      "icon": "game-icons:pull",
+      "file": "game-icons-pull.png",
+      "source": "game-icons",
+      "glossEn": "pull"
+    },
+    "H8210|שָׁפַךְ": {
+      "icon": "game-icons:spill",
+      "file": "game-icons-spill.png",
+      "source": "game-icons",
+      "glossEn": "spill"
+    },
+    "H7393|רֶ֫כֶב": {
+      "icon": "game-icons:chariot",
+      "file": "game-icons-chariot.png",
+      "source": "game-icons",
+      "glossEn": "chariot"
+    },
+    "H5775|עוֹף": {
+      "icon": "ph:bird",
+      "file": "ph-bird.png",
+      "source": "ph",
+      "glossEn": "bird"
+    },
+    "H6285|פֵּאָה": {
+      "icon": "tabler:direction",
+      "file": "tabler-direction.png",
+      "source": "tabler",
+      "glossEn": "direction"
+    },
+    "H8628|תָּקַע": {
+      "icon": "game-icons:slap",
+      "file": "game-icons-slap.png",
+      "source": "game-icons",
+      "glossEn": "slap"
+    },
+    "H6743|צָלַח": {
+      "icon": "game-icons:push",
+      "file": "game-icons-push.png",
+      "source": "game-icons",
+      "glossEn": "push"
+    },
+    "H734|אֹרַח": {
+      "icon": "game-icons:caravan",
+      "file": "game-icons-caravan.png",
+      "source": "game-icons",
+      "glossEn": "caravan"
+    },
+    "H5157|נָחַל": {
+      "icon": "game-icons:occupy",
+      "file": "game-icons-occupy.png",
+      "source": "game-icons",
+      "glossEn": "occupy"
+    },
+    "H8597|תִּפְאָרָה": {
+      "icon": "mdi:ornament",
+      "file": "mdi-ornament.png",
+      "source": "mdi",
+      "glossEn": "ornament"
+    },
+    "H530|אֱמוּנָה": {
+      "icon": "mdi:security",
+      "file": "mdi-security.png",
+      "source": "mdi",
+      "glossEn": "security"
+    },
+    "H2167|זָמַר": {
+      "icon": "mdi:music",
+      "file": "mdi-music.png",
+      "source": "mdi",
+      "glossEn": "music"
+    },
+    "H3658|כִּנּוֹר": {
+      "icon": "game-icons:harp",
+      "file": "game-icons-harp.png",
+      "source": "game-icons",
+      "glossEn": "harp"
+    },
+    "H5518|סִיר": {
+      "icon": "mdi:pot",
+      "file": "mdi-pot.png",
+      "source": "mdi",
+      "glossEn": "pot"
+    },
+    "H2474|חַלּוֹן": {
+      "icon": "game-icons:window",
+      "file": "game-icons-window.png",
+      "source": "game-icons",
+      "glossEn": "window"
+    }
+  }
+}

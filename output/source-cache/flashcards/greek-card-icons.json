@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": {
+    "game-icons": "CC BY 3.0 — game-icons.net",
+    "ph": "MIT — Phosphor Icons",
+    "mdi": "Apache 2.0 — Material Design Icons",
+    "tabler": "MIT — Tabler Icons"
+  },
+  "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。",
+  "cards": {
+    "βλέπω": {
+      "icon": "game-icons:look-at",
+      "file": "game-icons-look-at.png",
+      "source": "game-icons",
+      "glossEn": "look-at"
+    },
+    "προσεύχομαι": {
+      "icon": "tabler:pray",
+      "file": "tabler-pray.png",
+      "source": "tabler",
+      "glossEn": "pray"
+    },
+    "προσευχή": {
+      "icon": "game-icons:prayer",
+      "file": "game-icons-prayer.png",
+      "source": "game-icons",
+      "glossEn": "prayer"
+    },
+    "πλείων": {
+      "icon": "mdi:more",
+      "file": "mdi-more.png",
+      "source": "mdi",
+      "glossEn": "more"
+    },
+    "σοφία": {
+      "icon": "game-icons:wisdom",
+      "file": "game-icons-wisdom.png",
+      "source": "game-icons",
+      "glossEn": "wisdom"
+    },
+    "θέλημα": {
+      "icon": "game-icons:choice",
+      "file": "game-icons-choice.png",
+      "source": "game-icons",
+      "glossEn": "choice"
+    },
+    "δώδεκα": {
+      "icon": "game-icons:dozen",
+      "file": "game-icons-dozen.png",
+      "source": "game-icons",
+      "glossEn": "dozen"
+    },
+    "δοκέω": {
+      "icon": "mdi:compare",
+      "file": "mdi-compare.png",
+      "source": "mdi",
+      "glossEn": "compare"
+    },
+    "εὐαγγέλιον": {
+      "icon": "mdi:message",
+      "file": "mdi-message.png",
+      "source": "mdi",
+      "glossEn": "message"
+    },
+    "ἐάν": {
+      "icon": "game-icons:uncertainty",
+      "file": "game-icons-uncertainty.png",
+      "source": "game-icons",
+      "glossEn": "uncertainty"
+    },
+    "εὐαγγελίζω": {
+      "icon": "tabler:news",
+      "file": "tabler-news.png",
+      "source": "tabler",
+      "glossEn": "news"
+    },
+    "ἀπεκρίθη": {
+      "icon": "mdi:reply",
+      "file": "mdi-reply.png",
+      "source": "mdi",
+      "glossEn": "reply"
+    },
+    "δύναμις": {
+      "icon": "ph:power",
+      "file": "ph-power.png",
+      "source": "ph",
+      "glossEn": "power"
+    },
+    "μετανοέω": {
+      "icon": "game-icons:think",
+      "file": "game-icons-think.png",
+      "source": "game-icons",
+      "glossEn": "think"
+    },
+    "προφήτης": {
+      "icon": "game-icons:speaker",
+      "file": "game-icons-speaker.png",
+      "source": "game-icons",
+      "glossEn": "speaker"
+    },
+    "αἰών": {
+      "icon": "game-icons:world",
+      "file": "game-icons-world.png",
+      "source": "game-icons",
+      "glossEn": "world"
+    },
+    "εἰρήνη": {
+      "icon": "ph:peace",
+      "file": "ph-peace.png",
+      "source": "ph",
+      "glossEn": "peace"
+    },
+    "πῦρ": {
+      "icon": "game-icons:fire",
+      "file": "game-icons-fire.png",
+      "source": "game-icons",
+      "glossEn": "fire"
+    },
+    "σπέρμα": {
+      "icon": "mdi:seed",
+      "file": "mdi-seed.png",
+      "source": "mdi",
+      "glossEn": "seed"
+    },
+    "προφητεύω": {
+      "icon": "game-icons:inspiration",
+      "file": "game-icons-inspiration.png",
+      "source": "game-icons",
+      "glossEn": "inspiration"
+    },
+    "ἐπί": {
+      "icon": "tabler:direction",
+      "file": "tabler-direction.png",
+      "source": "tabler",
+      "glossEn": "direction"
+    },
+    "λαλέω": {
+      "icon": "game-icons:talk",
+      "file": "game-icons-talk.png",
+      "source": "game-icons",
+      "glossEn": "talk"
+    },
+    "τόπος": {
+      "icon": "tabler:location",
+      "file": "tabler-location.png",
+      "source": "tabler",
+      "glossEn": "location"
+    },
+    "πείθω": {
+      "icon": "game-icons:convince",
+      "file": "game-icons-convince.png",
+      "source": "game-icons",
+      "glossEn": "convince"
+    },
+    "ἐκεῖνος": {
+      "icon": "ph:article",
+      "file": "ph-article.png",
+      "source": "ph",
+      "glossEn": "article"
+    },
+    "αἴρω": {
+      "icon": "game-icons:lift",
+      "file": "game-icons-lift.png",
+      "source": "game-icons",
+      "glossEn": "lift"
+    },
+    "περιπατέω": {
+      "icon": "game-icons:tread",
+      "file": "game-icons-tread.png",
+      "source": "game-icons",
+      "glossEn": "tread"
+    },
+    "τιμή": {
+      "icon": "ph:money",
+      "file": "ph-money.png",
+      "source": "ph",
+      "glossEn": "money"
+    },
+    "φεύγω": {
+      "icon": "game-icons:run",
+      "file": "game-icons-run.png",
+      "source": "game-icons",
+      "glossEn": "run"
+    },
+    "πνεῦμα": {
+      "icon": "game-icons:soul",
+      "file": "game-icons-soul.png",
+      "source": "game-icons",
+      "glossEn": "soul"
+    },
+    "ἀποστέλλω": {
+      "icon": "mdi:send",
+      "file": "mdi-send.png",
+      "source": "mdi",
+      "glossEn": "send"
+    },
+    "ἐκβάλλω": {
+      "icon": "ph:eject",
+      "file": "ph-eject.png",
+      "source": "ph",
+      "glossEn": "eject"
+    },
+    "πέμπω": {
+      "icon": "mdi:motion",
+      "file": "mdi-motion.png",
+      "source": "mdi",
+      "glossEn": "motion"
+    },
+    "κατοικέω": {
+      "icon": "game-icons:house",
+      "file": "game-icons-house.png",
+      "source": "game-icons",
+      "glossEn": "house"
+    },
+    "πρόβατον": {
+      "icon": "game-icons:sheep",
+      "file": "game-icons-sheep.png",
+      "source": "game-icons",
+      "glossEn": "sheep"
+    },
+    "ἐπιτιμάω": {
+      "icon": "tabler:forbid",
+      "file": "tabler-forbid.png",
+      "source": "tabler",
+      "glossEn": "forbid"
+    },
+    "μάχαιρα": {
+      "icon": "ph:knife",
+      "file": "ph-knife.png",
+      "source": "ph",
+      "glossEn": "knife"
+    },
+    "θρόνος": {
+      "icon": "ph:seat",
+      "file": "ph-seat.png",
+      "source": "ph",
+      "glossEn": "seat"
+    },
+    "ἱμάτιον": {
+      "icon": "game-icons:dress",
+      "file": "game-icons-dress.png",
+      "source": "game-icons",
+      "glossEn": "dress"
+    },
+    "ἀγρός": {
+      "icon": "game-icons:field",
+      "file": "game-icons-field.png",
+      "source": "game-icons",
+      "glossEn": "field"
+    },
+    "ἄνθρωπος": {
+      "icon": "mdi:human",
+      "file": "mdi-human.png",
+      "source": "mdi",
+      "glossEn": "human"
+    },
+    "σάρξ": {
+      "icon": "game-icons:meat",
+      "file": "game-icons-meat.png",
+      "source": "game-icons",
+      "glossEn": "meat"
+    },
+    "ὕδωρ": {
+      "icon": "mdi:water",
+      "file": "mdi-water.png",
+      "source": "mdi",
+      "glossEn": "water"
+    },
+    "γυνή": {
+      "icon": "tabler:woman",
+      "file": "tabler-woman.png",
+      "source": "tabler",
+      "glossEn": "woman"
+    },
+    "ὄρος": {
+      "icon": "tabler:mountain",
+      "file": "tabler-mountain.png",
+      "source": "tabler",
+      "glossEn": "mountain"
+    },
+    "ἔρημος": {
+      "icon": "game-icons:desert",
+      "file": "game-icons-desert.png",
+      "source": "game-icons",
+      "glossEn": "desert"
+    },
+    "οὖς": {
+      "icon": "ph:ear",
+      "file": "ph-ear.png",
+      "source": "ph",
+      "glossEn": "ear"
+    },
+    "ἀναγινώσκω": {
+      "icon": "game-icons:read",
+      "file": "game-icons-read.png",
+      "source": "game-icons",
+      "glossEn": "read"
+    },
+    "θυγάτηρ": {
+      "icon": "game-icons:female",
+      "file": "game-icons-female.png",
+      "source": "game-icons",
+      "glossEn": "female"
+    },
+    "γλῶσσα": {
+      "icon": "game-icons:tongue",
+      "file": "game-icons-tongue.png",
+      "source": "game-icons",
+      "glossEn": "tongue"
+    },
+    "γῆ": {
+      "icon": "game-icons:globe",
+      "file": "game-icons-globe.png",
+      "source": "game-icons",
+      "glossEn": "globe"
+    },
+    "ἥλιος": {
+      "icon": "game-icons:sun",
+      "file": "game-icons-sun.png",
+      "source": "game-icons",
+      "glossEn": "sun"
+    }
+  }
+}
