@@ -207,8 +207,14 @@
                 <div v-for="(e, ei) in commentsOf(seg)" :key="'c' + ei">
                   <p v-if="e.heading" class="text-sm font-semibold text-stone-600 mb-0.5">{{ e.heading }}</p>
                   <p class="text-[15px] leading-loose text-stone-800">{{ e.body_zh }}</p>
-                  <p class="text-xs text-amber-800 mt-1 text-right">
-                    — <span class="font-medium">{{ e.father_name }}</span>{{ e.work_title ? ` 《${e.work_title}》` : '' }}
+                  <!-- 跨段續行的引文常常沒抓到教父名（全庫 8.3% 的 comment 是這樣）。
+                       照舊寫死破折號會渲染成「— 《創世記註解》」，破折號後空一塊，看起來像壞掉。
+                       沒有教父名就不掛署名行；只有作品名時單獨顯示作品名。 -->
+                  <p v-if="e.father_name || e.work_title" class="text-xs text-amber-800 mt-1 text-right">
+                    <template v-if="e.father_name">
+                      — <span class="font-medium">{{ e.father_name }}</span>{{ e.work_title ? ` 《${e.work_title}》` : '' }}
+                    </template>
+                    <template v-else>《{{ e.work_title }}》</template>
                   </p>
                 </div>
               </div>
