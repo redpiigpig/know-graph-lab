@@ -54,6 +54,10 @@ z-library_獵表*.txt
 /scripts/state/*.pid
 /scripts/state/*.lock
 /scripts/state/*.pause.*
+# supervisor 進度與冷卻旗標同理：程序每分鐘覆寫，續傳只在本機有意義。
+/scripts/state/translation_supervisor.json
+/scripts/state/translation_cloud_supervisor.json
+/scripts/state/ocr_gemini_cooldown.json
 
 # Nuxt
 .nuxt
