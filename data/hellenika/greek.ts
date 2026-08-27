@@ -309,7 +309,7 @@ export const GREEK_CANON: HellenCanon = {
     {
       key: 'I', sigil: 'Ι', name: '遠征記', name_en: 'The Expeditions',
       parallel: '約書亞記', clock: 'mythic', span: '前 3 世紀 – 公元 5 世紀',
-      summary: '泛希臘的聯合行動：取金羊毛、獵卡呂冬野豬。特洛伊之戰的預演。',
+      summary: '泛希臘的聯合行動：取金羊毛、獵卡呂冬野豬——特洛伊之戰的預演。末附亞歷山大遠征：同一套遠征敘事在歷史中重演一次，而主帥於途中被神諭認作神子。',
       divisions: [
         {
           key: 'i-argo', label: '阿爾戈遠征', label_en: 'The Argonauts',
@@ -328,6 +328,23 @@ export const GREEK_CANON: HellenCanon = {
           key: 'i-hunt', label: '卡呂冬狩獵', label_en: 'The Calydonian Hunt',
           works: [
             { title_zh: '卡呂冬野豬諸傳', title_orig: 'The Calydonian Boar', author: '綴輯（《伊利亞特》九卷、巴克基利得斯、阿波羅多洛斯）', language: '古希臘文', status: 'fragment', note: '因忘記獻祭阿爾忒彌斯而招來巨豬——漏祭必受罰的教訓文本。' },
+          ],
+        },
+        {
+          key: 'i-alexander', label: '亞歷山大遠征', label_en: 'The Expedition of Alexander',
+          desc: '本卷唯一的歷史性遠征，收於神話兩役之後。收錄理由不在軍事而在宗教：出征前於特洛伊祭阿基里斯、於錫瓦被阿蒙神諭認作神子、要求臣下行跪拜禮、生前即獲希臘城邦議決神榮——「人成為神」這條線由此開始，續見 Ν 卷王國與王朝崇拜部。',
+          works: [
+            {
+              title_zh: '亞歷山大遠征記', title_orig: 'Ἀλεξάνδρου Ἀνάβασις / Anabasis Alexandri', author: '尼科米底亞的阿里安',
+              era: '約公元 2 世紀中葉', language: '古希臘文', extent: '全 7 卷', status: 'whole',
+              note: '現存最可靠的亞歷山大史，據托勒密與阿里斯托布洛斯的從軍紀錄寫成。',
+              intro: '阿里安自比修昔底德，取兩位隨軍者的第一手紀錄為本，敘亞歷山大自渡海至病歿的十二年。宗教上它幾乎是一部逐日的祭儀簿：每渡一河、每破一城都記獻祭與占卜，並完整保存三件關鍵事——錫瓦阿蒙神諭認子（三‧3–4）、跪拜禮之爭與卡利斯提尼之死（四‧10–12）、巴比倫臨終前的異兆與神諭諮詢（七‧24–27）。希臘人如何把一個活人推上神位，這部書是最冷靜的紀錄者。',
+            },
+            { title_zh: '亞歷山大傳', title_orig: 'Ἀλέξανδρος', author: '普魯塔克', era: '公元 2 世紀初', language: '古希臘文', status: 'whole', note: '重神跡與性格而不重戰事：母親奧林匹婭斯與蛇、出生夜阿爾忒彌斯神廟焚毀、埃及祭司的稱呼、臨終前的巴比倫異兆。神化敘事的主要來源。' },
+            { title_zh: '錫瓦的阿蒙神諭', title_orig: 'The oracle of Ammon at Siwa', author: '綴輯（阿里安三‧3–4、斯特拉波十七‧1.43、普魯塔克《亞歷山大傳》二十七、庫爾提烏斯四‧7）', era: '前 331 年（記事）', place: '埃及‧錫瓦綠洲', language: '古希臘文／拉丁文', status: 'fragment', note: '祭司以「宙斯之子」稱之。此後亞歷山大的錢幣加上阿蒙的公羊角，繼業者諸王的神號亦自此有例可循。各家記述互有出入，並收。' },
+            { title_zh: '跪拜禮之爭', title_orig: 'The proskynesis affair', author: '綴輯（阿里安四‧10–12、庫爾提烏斯八‧5、普魯塔克《亞歷山大傳》五十四）', era: '前 327 年（記事）', place: '巴克特里亞', language: '古希臘文／拉丁文', status: 'fragment', note: '要求希臘人行波斯式跪拜——在波斯只是禮節，在希臘只對神為之。卡利斯提尼當眾拒絕並因此喪命。希臘宗教中人神界線最清楚的一次現形。' },
+            { title_zh: '希臘城邦議決神榮（前 324）', title_orig: 'The divine honours decreed by the Greek cities', author: '綴輯（希佩里德斯《葬禮演說》、狄納庫斯《駁德摩斯提尼》、埃利安《雜史》二‧19、狄奧多羅斯十八‧8）', era: '前 324 年', language: '古希臘文', status: 'fragment', note: '斯巴達人的議決傳為：「既然亞歷山大想當神，就讓他當神吧。」現存最早由城邦正式表決賦予活人神格的紀錄。' },
+            { title_zh: '亞歷山大傳奇', title_orig: 'Βίος Ἀλεξάνδρου / Alexander Romance', author: '託名卡利斯提尼', era: '約公元 3 世紀（材料可早至前 3 世紀）', place: '亞歷山卓', language: '古希臘文', status: 'whole', note: '亞歷山大實為埃及末王兼術士納克塔內波假神之形所生。史實幾乎全失，卻是流傳最廣的一部——中世紀三十餘種語言的譯本皆出於此。' },
           ],
         },
       ],
@@ -442,8 +459,8 @@ export const GREEK_CANON: HellenCanon = {
     // ──────────────────────────── Ν 城邦紀年 ────────────────────────────
     {
       key: 'N', sigil: 'Ν', name: '城邦紀年', name_en: 'Chronicles of the Cities',
-      parallel: '歷代志', clock: 'historical', span: '前 7 – 前 3 世紀',
-      summary: '立法者向神請法、城邦以神諭建制、波斯戰爭被讀成神意。歷史時間在此正式開始。',
+      parallel: '歷代志', clock: 'historical', span: '前 7 – 前 1 世紀',
+      summary: '立法者向神請法、城邦以神諭建制、波斯戰爭被讀成神意。歷史時間在此正式開始，末以希臘化王朝的統治者崇拜收束——城邦不再是祭祀的主體，王室取而代之。',
       divisions: [
         {
           key: 'n-lawgivers', label: '立法者與神諭', label_en: 'Lawgivers and Oracles',
@@ -469,6 +486,22 @@ export const GREEK_CANON: HellenCanon = {
               note: '以神嫉盈滿、神諭必應為史觀的希臘版列王紀。',
               intro: '表面寫波斯戰爭，骨子裡是一部神意史：神嫉恨過盛者、僭越必遭報、神諭終必應驗（只是人總誤解）。書中保存了大量他處不存的宗教材料——各地神諭原文、埃及與波斯宗教的比較觀察、祭儀與節期的實錄。就史觀而言，它與列王紀的「因行惡而失國」屬同一類寫作，只是希臘的神不立約、只維持平衡。',
             },
+          ],
+        },
+        {
+          key: 'n-dynastic', label: '王國與王朝崇拜', label_en: 'Kingdoms and the Ruler Cult',
+          desc: '亞歷山大死後兩百餘年，希臘化諸王朝把「活人受祀」由破例做成制度：王與王后有神號、有專屬祭司、有廟中共祀的神位，紀年即以王朝祭司之名繫年。這一套後來原封不動被羅馬接收（見羅馬卷 V）。理論根據見 Φ 卷歐赫美魯斯《聖史》。收錄以希臘文文本為限——埃及祭司會議的三文字詔令取其希臘文欄。',
+          works: [
+            { title_zh: '讚托勒密（牧歌十七）', title_orig: 'Εἰδύλλιον ιζ΄ / Encomium of Ptolemy', author: '敘拉古的忒奧克里托斯', era: '約前 273 年', place: '亞歷山卓', language: '古希臘文', extent: '137 行', status: 'whole', note: '在世君王的頌詩：托勒密一世已入奧林匹斯與亞歷山大同席，托勒密二世與姊妹同尊。宮廷詩人如何把王室寫進神譜，這是最完整的一篇。' },
+            { title_zh: '托勒密二世大遊行紀', title_orig: 'The Grand Procession of Ptolemy Philadelphus', author: '羅德島的卡利克塞諾斯《論亞歷山卓》', era: '約前 275 年（記事）', place: '亞歷山卓', language: '古希臘文', status: 'fragment', via: '阿特納烏斯《宴談錄》五‧196a–203b', note: '長篇實錄一場王朝大祭的行列：戴奧尼索斯的巨像自動起立奠酒、王室先祖與諸神同列受祀。希臘化祭典排場的唯一詳細紀錄。' },
+            { title_zh: '卡諾波斯詔令', title_orig: 'Decretum Canopicum', era: '前 238 年', place: '埃及‧卡諾波斯', author: '埃及祭司總會', language: '古希臘文（另有象形與世俗體對照）', status: 'inscription', note: '祭司會議議決：尊王與王后為「施惠神」、於各廟設像共祀、四年加一閏日、追封夭折的公主貝勒尼刻為女神並定其祭期。希臘化王朝崇拜的制度樣本。' },
+            { title_zh: '拉斐亞詔令', title_orig: 'The Raphia Decree', era: '前 217 年', place: '埃及‧孟斐斯', author: '埃及祭司總會', language: '古希臘文（另有象形與世俗體對照）', status: 'inscription', note: '為托勒密四世戰勝安條克三世而立；王被繪成埃及式的騎馬戰神，希臘與埃及兩套王權神學在同一塊石上並行。' },
+            { title_zh: '孟斐斯詔令（羅塞塔石碑）', title_orig: 'Decretum Memphiticum / The Rosetta Stone', era: '前 196 年', place: '埃及‧孟斐斯', author: '埃及祭司總會', language: '古希臘文（另有象形與世俗體對照）', status: 'inscription', note: '為托勒密五世加冠而立：授以「顯現之神」神號、命各廟增設其神龕與金像、定其誕辰與登基日為月祭。本藏經收其希臘文欄。' },
+            { title_zh: '王朝名祭司與紀年格式', title_orig: 'The eponymous priests of the Ptolemies', author: '綴輯（各地希臘文紙草與銘文首行）', era: '前 3 – 前 1 世紀', place: '埃及', language: '古希臘文', status: 'inscription', note: '契約首行須繫「亞歷山大與眾兄妹神某某任祭司之年」，另有阿爾西諾伊的提籃女與貝勒尼刻的獎品女。王朝崇拜滲進日常文書的證據——寫一張借據都要先數一遍神化的王。' },
+            { title_zh: '阿爾西諾伊二世封神', title_orig: 'The deification of Arsinoe Philadelphos', author: '綴輯（希臘文銘文、紙草、忒奧克里托斯、波希狄波斯詩選）', era: '前 270 年起', place: '埃及', language: '古希臘文', status: 'fragment', note: '王后死後入祀全埃及各廟為「共殿之神」，並有專屬祭司與海濱神所。女性受祀規模在此之前的希臘世界從未有過。' },
+            { title_zh: '薩拉皮斯之立', title_orig: 'The institution of Sarapis', author: '綴輯（普魯塔克《論伊西斯與奧西里斯》二十八、塔西佗《歷史》四‧83–84）', era: '前 3 世紀初（記事）', place: '亞歷山卓', language: '古希臘文／拉丁文', status: 'fragment', note: '托勒密一世依夢兆自西諾佩迎來神像，由祭司提摩泰烏斯與曼涅托定其名與儀——古代罕見的、可考的「新神被設計出來」的個案。羅馬卷 V 收其在羅馬的流布。' },
+            { title_zh: '安條克三世立王后祭司詔', title_orig: 'The letters instituting the cult of Queen Laodice', author: '塞琉古王朝', era: '前 193 年', place: '小亞細亞各行省', language: '古希臘文', status: 'inscription', note: '王致各總督書，命各行省為王后勞迪刻設祭司、戴金冠、其名列於王室祭司之後。塞琉古王朝崇拜的行政文件原件。' },
+            { title_zh: '科馬基尼的安條克一世聖陵銘文', title_orig: 'The hierothesion inscription of Nemrud Dağ', author: '科馬基尼的安條克一世', era: '約前 62–36 年', place: '科馬基尼‧奈姆魯特山', language: '古希臘文', status: 'inscription', note: '山頂巨像群旁的長篇希臘文詔銘，自訂身後祭期、祭品與祭司世襲之法，並把希臘與波斯諸神合名共祀（宙斯‧奧羅馬斯德斯等）。希臘化統治者崇拜最完整、也最鋪張的一份自撰祭儀法。' },
           ],
         },
       ],
@@ -789,6 +822,8 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             { title_zh: '殘篇', title_orig: 'Fragmenta', author: '科洛封的色諾芬尼', era: '約前 530 年', language: '古希臘文', status: 'fragment', note: '「牛馬若能作畫，畫出的神必像牛馬」——反神人同形的先知式批判，也是希臘一神傾向的最早聲音。' },
             { title_zh: '殘篇（宗教語句）', title_orig: 'Fragmenta', author: '以弗所的赫拉克利特', era: '約前 500 年', language: '古希臘文', status: 'fragment', note: '斥血祭如以泥洗泥、斥向偶像禱告如對房子說話；同時提出「邏各斯」——後世道成肉身神學的用語源頭。' },
+            { title_zh: '西緒福斯（殘篇）', title_orig: 'Σίσυφος', author: '克里提亞斯（一說歐里庇得斯）', era: '約前 410 年', language: '古希臘文', extent: '42 行', status: 'fragment', via: '塞克斯圖斯‧恩皮里庫斯《駁數理學家》九‧54', note: '「有一個精明的人發明了對神的畏懼」——律法只能管人前，於是虛構出無所不見的神來管人後。古代最露骨的一份宗教起源論。' },
+            { title_zh: '不敬神訴訟諸案', title_orig: 'The asebeia trials', author: '綴輯（柏拉圖《申辯》、第歐根尼‧拉爾修、普魯塔克《伯里克利傳》三十二）', era: '前 5 – 前 4 世紀', place: '雅典', language: '古希臘文', status: 'fragment', note: '阿那克薩哥拉斯說太陽是塊火石、普羅塔哥拉斯說「神是否存在我無從得知」、狄阿哥拉斯以祕儀為笑柄、蘇格拉底被控引進新神——希臘沒有教義，卻有瀆神罪，界線由陪審團當場劃定。' },
           ],
         },
         {
@@ -806,6 +841,17 @@ export const GREEK_CANON: HellenCanon = {
             { title_zh: '希臘神學要覽', title_orig: 'Ἐπιδρομὴ τῶν κατὰ τὴν Ἑλληνικὴν θεολογίαν', author: '科爾努圖斯', era: '公元 1 世紀', language: '古希臘文', status: 'whole', note: '現存最完整的斯多噶寓意神學手冊，逐一解釋諸神名號的自然意義。' },
             { title_zh: '論神性', title_orig: 'De natura deorum', author: '西塞羅', era: '前 45 年', language: '拉丁文', extent: '全 3 卷', track: 'latin', status: 'whole', note: '伊比鳩魯、斯多噶、學園派三方辯論；克呂西波斯神學的最完整轉述，希臘原典已佚。' },
             { title_zh: '物性論', title_orig: 'De rerum natura', author: '盧克萊修', era: '約前 55 年', language: '拉丁文', extent: '全 6 卷', track: 'latin', status: 'whole', note: '伊比鳩魯派的反宗教長詩：神存在但不管人事，畏神才是一切苦難之源。異教內部最徹底的宗教批判。' },
+            {
+              title_zh: '致美諾伊克烏斯書', title_orig: 'Ἐπιστολὴ πρὸς Μενοικέα', author: '伊比鳩魯',
+              era: '約前 300 年', place: '雅典', language: '古希臘文', status: 'whole',
+              via: '第歐根尼‧拉爾修《名哲言行錄》十‧122–135 全文轉錄',
+              note: '「神確實是有的，只是不像眾人所想的那樣。」',
+              intro: '伊比鳩魯寫給弟子的一封短信，開頭四句就把整套神學講完：神是有的，因為人人對神有先概念；但神至福而不朽，故不生怒也不施恩，一切禍福與祂無涉。褻瀆不在否認眾神，而在把庸眾的想法加在神身上。信的後半接著論死——「死與我們無涉」——把畏神與畏死一起解除。原書三百卷幾乎全佚，這封信因傳記家整篇抄錄而完整存世，是希臘化時代影響最大的一份神學宣告。',
+            },
+            { title_zh: '聖史（殘篇）', title_orig: 'Ἱερὰ ἀναγραφή / Sacra historia', author: '墨西拿的歐赫美魯斯', era: '約前 300 年', language: '古希臘文', status: 'fragment', via: '狄奧多羅斯《歷史叢書》五、六；恩尼烏斯拉丁譯本經拉克坦提烏斯《神聖原理》轉引', seealso: '希臘卷 Ν 王國與王朝崇拜', note: '假託航海見聞：在某座海島找到金柱刻文，記烏拉諾斯、克洛諾斯、宙斯本是遠古的王，因功業而受後人立祀。此說既為在世君王受祀備好理由，又被基督教護教家原樣借去證明異教諸神不過是死人。' },
+            { title_zh: '論虔敬（紙草殘卷）', title_orig: 'Περὶ εὐσεβείας', author: '加達拉的斐洛得摩斯', era: '約前 50 年', place: '赫庫蘭尼姆‧紙草莊', language: '古希臘文', status: 'fragment', note: '維蘇威火山灰下碳化的伊比鳩魯派論著，逐家駁斥而大量引錄原文，已佚的斯多噶神學與早期詩人神學賴此保存；書中並自辯本派並非無神論。' },
+            { title_zh: '反神諸論證（殘篇）', title_orig: 'Carneades against the gods', author: '昔蘭尼的卡爾涅阿德斯', era: '約前 150 年', language: '古希臘文', status: 'fragment', via: '西塞羅《論神性》三；塞克斯圖斯‧恩皮里庫斯《駁物理學家》一', note: '學園派的連鎖歸謬：若宙斯是神，則河神、風神亦然；若尼羅河是神，則一切河皆神——神的界線一經追問便無處可劃。古代最鋒利的一組反神論證，全靠敵手複述。' },
+            { title_zh: '駁物理學家‧卷一（論神）', title_orig: 'Πρὸς φυσικοὺς Α / Adversus physicos I', author: '塞克斯圖斯‧恩皮里庫斯', era: '約公元 200 年', language: '古希臘文', status: 'whole', note: '懷疑論的總結：把各家「神存在」的論證與各家反駁逐條並列，最後兩造勢均而懸置判斷。古代宗教哲學辯論最完整的一份目錄。' },
           ],
         },
         {
@@ -879,9 +925,27 @@ export const GREEK_CANON: HellenCanon = {
     // ──────────────────────────── Ψ 爭辯書 ────────────────────────────
     {
       key: 'Ps', sigil: 'Ψ', name: '爭辯書', name_en: 'The Book of Contention',
-      parallel: '護教書信', clock: 'historical', span: '公元 178–386 年',
-      summary: '按年代排，本卷自成一部節節敗退史：從「我來揭穿你們」到「請留我們一座神廟」。多數原書已被焚毀，僅存敵證。',
+      parallel: '護教書信', clock: 'historical', span: '公元 160–386 年',
+      summary: '按年代排，本卷自成一部節節敗退史：從街頭的驢首塗鴉，經「我來揭穿你們」，到「請留我們一座神廟」。多數原書已被焚毀，僅存敵證。',
       divisions: [
+        {
+          key: 'ps-mockery', label: '市井訾議', label_en: 'The Common Slander',
+          desc: '哲學家的駁論之外另有一層：驢首、殺嬰、亂倫、輕信。這一層多半不成書，靠敵手的引錄、牆上的塗鴉與醫生的旁註留下，卻比任何一部論著都更接近一般羅馬人眼中的基督徒。',
+          works: [
+            { title_zh: '驢首崇拜諸傳', title_orig: 'The onolatry libel', author: '姆納塞阿斯、阿皮翁、達莫克利圖斯等', era: '前 2 – 公元 1 世紀', place: '亞歷山卓', language: '古希臘文', status: 'hostile', via: '約瑟夫《駁阿皮翁》二‧79–96；塔西佗《歷史》五‧3–4 另述', note: '原是希臘化時代加在猶太人身上的誹謗——至聖所裡供一驢首金像、每年捕一希臘人育肥後獻祭——到公元二世紀整套轉嫁給基督徒。下一條塗鴉即其圖像形態。' },
+            {
+              title_zh: '論佩雷格里諾斯之死', title_orig: 'Περὶ τῆς Περεγρίνου τελευτῆς / De morte Peregrini', author: '薩莫薩塔的琉善',
+              era: '約公元 165 年', language: '古希臘文', status: 'whole',
+              note: '異教作家筆下最早的一幅基督徒群像——出自一篇存心刻薄的文章。',
+              intro: '琉善寫一名遊方騙徒佩雷格里諾斯：混入巴勒斯坦的基督徒中被奉為先知與立法者，下獄時信徒自遠方湧來探監送食、賄賂獄卒通宵陪伴，出教後又轉投犬儒派，最後在奧林匹亞競技當眾投火自焚。全文意在嘲笑，卻因此留下最早的第三方觀察紀錄：這些人輕信、共財、彼此以弟兄相待、深信自己不死，所以連死都不怕——「這些可憐人說服了自己將永遠活著」。敵意與史料價值同在一篇之內，是本卷體例的典型。',
+            },
+            { title_zh: '駁基督徒演說（殘篇）', title_orig: 'Oratio contra Christianos', author: '弗龍托', era: '約公元 160 年代', place: '羅馬', language: '拉丁文', track: 'latin', status: 'hostile', via: '米努奇烏斯‧菲利克斯《屋大維》九、三十一章凱奇利烏斯之詞', note: '皇帝的修辭學老師公開演說攻擊基督徒：入教禮上宰殺裹粉的嬰孩、共飲其血、宴末燈滅而男女雜交、所拜者為驢首。護教家的兩處引錄是此篇僅存的痕跡。' },
+            { title_zh: '阿萊克撒美諾斯塗鴉', title_orig: 'Alexamenos graffito', author: '佚名（帕拉丁山侍童學舍）', era: '約公元 200 年', place: '羅馬‧帕拉丁山', language: '古希臘文', extent: '1 行', status: 'inscription', note: '牆上刻一驢首人身者被釘於十字架，左側一人舉手行禮，旁題「阿萊克撒美諾斯敬拜他的神」。現存最早的耶穌受難圖像，出自一名同學的嘲笑。' },
+            { title_zh: '論基督徒（殘語）', title_orig: 'Galen on the Christians', author: '帕加馬的蓋倫', era: '約公元 180 年', language: '古希臘文（原文全佚，僅存阿拉伯文引錄）', status: 'fragment', via: '中世紀阿拉伯文醫學與哲學著作所引', note: '古代唯一以行醫者的旁觀口吻描述基督徒：他們守貞、自制、輕死，在行為上不遜於真正的哲學家——只是所憑的是不受檢驗的信仰而非論證。' },
+            { title_zh: '哲人旁註二則', title_orig: 'Epictetus, Diatribae IV.7.6; Marcus Aurelius, Ta eis heauton XI.3', author: '愛比克泰德、馬可‧奧理略', era: '約公元 108–180 年', language: '古希臘文', status: 'fragment', note: '愛比克泰德說「加利利人」全憑習慣而不畏暴君；馬可‧奧理略說靈魂當自有定見地離世，而非像基督徒那樣出於純然的對抗（該句是否後人竄入，學界尚有爭議）。最高層知識人對基督徒僅有的兩句評語，都極短、都帶輕蔑。' },
+            { title_zh: '偽彼拉多行傳', title_orig: 'Acta Pilati (pagana)', author: '佚名（馬克西米努斯‧達伊亞頒行）', era: '公元 311–312 年', language: '古希臘文', status: 'hostile', via: '優西比烏《教會史》九‧5、九‧7', note: '大迫害末期由皇帝下令公布、命各城張貼並令學童背誦抄寫的官方誹謗文書，內容詆毀耶穌其人其死。異教方唯一一次以國家力量製作反基督教教材。' },
+          ],
+        },
         {
           key: 'ps-attack', label: '攻勢', label_en: 'The Offensive',
           works: [
@@ -890,7 +954,8 @@ export const GREEK_CANON: HellenCanon = {
               era: '約公元 178 年', language: '古希臘文', status: 'hostile',
               via: '奧利金《駁塞爾蘇斯》（約公元 248 年）逐段引錄',
               note: '現存最早的反基督教論著，靠敵手的逐段引用而幾乎完整還原。',
-              intro: '一位中期柏拉圖派學者對基督教的全面批判：耶穌是私生子與埃及術士、門徒是無知漁夫、復活只有歇斯底里的女人作證、基督徒拒服兵役與公職將使帝國崩解。奧利金七十年後為駁斥而逐段引錄，使原書得以幾乎完整還原——這是「敵證」層最典型的個案，也是本藏經必須另設此標記的原因。',
+              seealso: '書中借猶太人之口所述「潘忒拉之子」一節，與猶太傳統的《托爾多‧耶書》及塔木德諸段（b. Sanhedrin 43a、107b）同源。該批文獻分屬猶太宗教系統、且多晚於本藏斷限，故不入藏，於此互見。',
+              intro: '一位中期柏拉圖派學者對基督教的全面批判：耶穌是私生子——母親與一名叫潘忒拉的羅馬士兵所生，被木匠丈夫逐出——後赴埃及習術而歸，靠術法自立為神；門徒是無知漁夫、復活只有歇斯底里的女人作證、基督徒拒服兵役與公職將使帝國崩解。全書前段刻意假託一名猶太人發言，等於把猶太與希臘兩路指控併為一書。奧利金七十年後為駁斥而逐段引錄，使原書得以幾乎完整還原——這是「敵證」層最典型的個案，也是本藏經必須另設此標記的原因。',
             },
             { title_zh: '駁基督徒', title_orig: 'Κατὰ Χριστιανῶν / Contra Christianos', author: '波菲利', era: '約公元 270–300 年', language: '古希臘文', extent: '原為 15 卷', status: 'hostile', via: '優西比烏、耶柔米、馬卡里烏斯等引錄', note: '古代最有學問的一部反基督教著作，開歷史考據式聖經批判之先；公元 448 年遭下令焚毀，僅存殘篇。' },
             { title_zh: '愛真理者', title_orig: 'Φιλαλήθης Λόγος', author: '希耶羅克勒斯', era: '公元 303 年', language: '古希臘文', status: 'hostile', via: '優西比烏《駁希耶羅克勒斯》', note: '大迫害發動之年所作，主張阿波羅尼烏斯的神蹟更可信而基督徒卻不奉之為神——首次以「比較宗教」為武器。' },
@@ -962,7 +1027,13 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'w-end', label: '五二九', label_en: 'The Year 529',
           works: [
-            { title_zh: '查士丁尼關閉雅典學園', title_orig: 'The closing of the Athenian Academy', author: '綴輯（馬拉拉斯《編年史》、《查士丁尼法典》I.11.10）', era: '公元 529 年', place: '雅典', language: '古希臘文／拉丁文', status: 'fragment', note: '禁異教徒授課並沒收其財產；柏拉圖創立於前 387 年的學統至此中斷。' },
+            {
+              title_zh: '查士丁尼反異教詔令', title_orig: 'Codex Iustinianus I.11.10', author: '查士丁尼一世',
+              era: '公元 529 年', place: '君士坦丁堡', language: '拉丁文', track: 'latin', status: 'whole',
+              note: '令異教徒受洗、禁其教書並停其公費、沒收財產並流放不從者。全書斷限所繫的那一紙。',
+              intro: '本藏經以公元 529 年為下限，所繫者即此詔。詔文命帝國境內尚存的異教徒受洗，禁其教書並停支公費，不從者沒收財產、逐出境外，其子女須受基督教教育，佯受洗者另有罰則。值得注意的是：詔文通篇並未點名雅典，也未提及柏拉圖學園或哲學一科——它是一紙針對全體異教徒的通令，「關閉學園」是後人自其效果回推的說法。真正記下「令人不得教授哲學」的是馬拉拉斯，見下條。此外法典二版將本條編為 I.11.9 並繫於阿納斯塔修斯名下，作者歸屬學界尚有爭議。',
+            },
+            { title_zh: '編年史 十八‧47（雅典禁授哲學）', title_orig: 'Χρονογραφία XVIII.47', author: '約翰‧馬拉拉斯', era: '公元 6 世紀中葉', place: '安提阿／君士坦丁堡', language: '古希臘文', status: 'fragment', note: '「皇帝下詔送往雅典，令任何人不得教授哲學、不得解說天文，各城亦不得擲骰卜卦」——「雅典學園關閉」一說的唯一直接文獻。柏拉圖創立於前 387 年的學統至此中斷。' },
             { title_zh: '七哲東走波斯', title_orig: 'The seven philosophers at the Persian court', author: '阿伽提亞斯《歷史》二‧30–31', era: '公元 531–532 年（記事）', language: '古希臘文', status: 'whole', note: '達馬斯基烏斯、辛普利丘等七人赴庫思老一世宮廷，失望而歸；和約中特別載明他們可返鄉且不得被迫改宗。全書之跋。' },
             { title_zh: '哲學的慰藉', title_orig: 'De consolatione philosophiae', author: '波愛修斯', era: '公元 524 年', place: '帕維亞獄中', language: '拉丁文', extent: '全 5 卷', track: 'latin', status: 'whole', note: '作者是基督徒，全書卻是純粹的新柏拉圖式慰藉，從頭到尾未出現基督之名。希臘傳統在拉丁世界的最後一口氣——已經不能叫神的名字，只能叫哲學。' },
           ],

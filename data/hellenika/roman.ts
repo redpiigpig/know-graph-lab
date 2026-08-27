@@ -178,6 +178,7 @@ export const ROMAN_CANON: HellenCanon = {
           works: [
             { title_zh: '奧古斯都功業錄', title_orig: 'Res Gestae Divi Augusti', author: '奧古斯都', era: '公元 14 年', place: '安卡拉等地銘刻', language: '拉丁文／古希臘文', status: 'inscription', note: '皇帝自撰的一生功業，逐條列出他修復了多少神廟、擔任哪些祭司職——政治權威以宗教職銜表述的範本。' },
             { title_zh: '神化制度', title_orig: 'Consecratio / divus', author: '綴輯（蘇埃托尼烏斯、狄奧、元老院決議）', era: '前 42 年 – 公元 4 世紀', language: '拉丁文／古希臘文', status: 'fragment', note: '皇帝死後由元老院表決是否成神；塞內卡《變瓜記》則以喜劇嘲弄此制。' },
+            { title_zh: '十二凱撒傳', title_orig: 'De vita Caesarum', author: '蘇埃托尼烏斯', era: '約公元 121 年', language: '拉丁文', extent: '全 8 卷', status: 'whole', note: '逐帝記其出生異兆、星象、褻瀆之舉與死後神化表決；帝王崇拜最密集的一部史料。書中並有羅馬官方視角最早的兩條基督徒記載（《革老丟傳》二十五、《尼祿傳》十六）。' },
             { title_zh: '杜拉歐羅波斯軍團祭曆', title_orig: 'Feriale Duranum', author: '羅馬第二十帕爾提亞弓騎兵團', era: '約公元 225–235 年', place: '敘利亞‧杜拉歐羅波斯', language: '拉丁文', status: 'inscription', note: '一份紙草軍團年度祭曆，逐日列出軍中該向哪位神與哪位先帝獻祭——帝國宗教制度化最直接的證據。' },
           ],
         },
@@ -194,6 +195,14 @@ export const ROMAN_CANON: HellenCanon = {
             { title_zh: '伊西斯與薩拉皮斯在羅馬', title_orig: 'The cult of Isis and Sarapis at Rome', author: '綴輯（銘文、塔西佗、阿普列尤斯）', era: '前 1 – 公元 4 世紀', language: '拉丁文／古希臘文', status: 'fragment', note: '數度被逐出羅馬又數度復歸，終成帝國最盛的密教之一。' },
             { title_zh: '密特拉教在軍中', title_orig: 'Mithraism in the Roman army', author: '各地密特拉窟銘文與浮雕', era: '公元 1–4 世紀', language: '拉丁文', status: 'inscription', note: '幾無經典傳世，全靠遺址與銘文重建；七階入教制與軍團分布是研究重點。與希臘卷 Λ 互見（該卷收禮文，此卷收制度）。' },
             { title_zh: '不敗太陽神國教化', title_orig: 'Sol Invictus', author: '綴輯（銘文、錢幣、《奧古斯都史》）', era: '公元 274 年起', language: '拉丁文', status: 'fragment', note: '奧勒良立為帝國主神；一神化傾向在異教內部的最後一次制度嘗試。' },
+          ],
+        },
+        {
+          key: 'rv-superstitio', label: '新迷信', label_en: 'The New Superstition',
+          desc: '羅馬官府最早注意到基督徒時的兩份文件。兩份都不在論教義，只在論一件事：一個不肯向皇帝像獻香的社團該怎麼辦。希臘卷 Ψ 收異教作家的譏刺與駁論，此處收官方文書。',
+          works: [
+            { title_zh: '編年史 十五‧44（尼祿嫁禍）', title_orig: 'Annales XV.44', author: '塔西佗', era: '約公元 116 年', language: '拉丁文', status: 'whole', note: '為平息羅馬大火的流言，尼祿以基督徒頂罪，「其名出於提比略朝被總督本丟彼拉多處死的基利斯督」。非基督教文獻中最早、也最常被引用的耶穌之死旁證，並稱其教為「有害的迷信」。' },
+            { title_zh: '書信 十‧96–97（與圖拉真論基督徒）', title_orig: 'Epistulae X.96–97', author: '小普林尼、圖拉真', era: '約公元 112 年', place: '比提尼亞', language: '拉丁文', status: 'whole', note: '總督請示如何審理：他令被告向皇帝像獻香、咒罵基督，肯做的即釋放。並記其人於天未亮時聚會、向基督唱詩如向神、共誓不偷不淫不背信。皇帝回覆定調：不主動搜捕、不受理匿名檢舉，被告不從則辦。羅馬對基督教的第一份成文政策。' },
           ],
         },
       ],
