@@ -876,11 +876,25 @@ def process_one(client, book, src_path, model, max_retries=3):
 
             if n_pages > GEMINI_PAGES_PER_CALL and _HAS_FITZ:
                 import fitz as _fitz
-                merged, nb = [], (n_pages + GEMINI_PAGES_PER_CALL - 1) // GEMINI_PAGES_PER_CALL
+                nb = (n_pages + GEMINI_PAGES_PER_CALL - 1) // GEMINI_PAGES_PER_CALL
+                # 斷點續傳：Gemini 常整批 503，11 批的任務若在第 5 批掛掉，
+                # 沒有 checkpoint 就得從第 1 批重跑（Haiku 那條路早有 ckpt）。
+                ck = CHUNKS_DIR / f"{book['id']}.gemini_ckpt.json"
+                done_batches = {}
+                if ck.exists():
+                    try:
+                        done_batches = {int(k): v for k, v in
+                                        json.loads(ck.read_text(encoding="utf-8")).items()}
+                        if done_batches:
+                            print(f"\n    [gemini] 續傳：已完成 {len(done_batches)}/{nb} 批", flush=True)
+                    except Exception:
+                        done_batches = {}
                 print(f"\n    [gemini] {n_pages} 頁，分 {nb} 批（每批 {GEMINI_PAGES_PER_CALL} 頁）",
                       flush=True)
                 try:
                     for bi in range(nb):
+                        if bi in done_batches:
+                            continue
                         lo = bi * GEMINI_PAGES_PER_CALL
                         hi = min(lo + GEMINI_PAGES_PER_CALL, n_pages) - 1
                         part = tmp_path.with_name(f"{tmp_path.stem}_p{lo}.pdf")
@@ -894,15 +908,21 @@ def process_one(client, book, src_path, model, max_retries=3):
                             for off, pg in enumerate(got):
                                 if isinstance(pg, dict):
                                     pg["page"] = lo + off + 1     # 還原成全書頁碼
-                            merged += got
+                            done_batches[bi] = got
+                            ck.parent.mkdir(parents=True, exist_ok=True)
+                            ck.write_text(json.dumps({str(k): v for k, v in done_batches.items()},
+                                                     ensure_ascii=False), encoding="utf-8")
                             print(f"    [gemini] batch {bi+1}/{nb} pp{lo+1}-{hi+1} → {len(got)} 頁",
                                   flush=True)
                         finally:
                             part.unlink(missing_ok=True)
                 finally:
                     tmp_path.unlink(missing_ok=True)
+                merged = [pg for bi in sorted(done_batches) for pg in done_batches[bi]]
                 data = {"pages": merged}
                 resp = None
+                if len(done_batches) == nb:
+                    ck.unlink(missing_ok=True)   # 全數完成才清 checkpoint
             else:
                 try:
                     resp = _ocr_pdf(tmp_path)
