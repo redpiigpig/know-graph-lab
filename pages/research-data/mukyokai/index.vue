@@ -32,12 +32,12 @@
           <p v-if="r.note" class="mt-1.5 text-xs text-gray-500 leading-relaxed break-words">{{ r.note }}</p>
 
           <div class="mt-3 flex items-center gap-3 text-xs">
-            <span class="text-gray-400">{{ r.pages }} 頁 · {{ r.chars.toLocaleString() }} 字</span>
+            <span class="text-gray-400">{{ r.pages ? `${r.pages} 頁 · ` : '' }}{{ r.chars.toLocaleString() }} 字</span>
             <button @click="toggle(r)" class="text-gray-500 hover:text-emerald-700">
               {{ states[r.stem]?.open ? '收合全文' : '全文' }}
             </button>
             <a :href="`/api/research-data/mukyokai-file?key=${encodeURIComponent(r.pdfKey)}&download=1`"
-              class="font-medium text-emerald-700 hover:underline no-underline">⬇ PDF</a>
+              class="font-medium text-emerald-700 hover:underline no-underline">⬇ {{ r.pdfKey.endsWith('.docx') ? 'Word' : 'PDF' }}</a>
           </div>
 
           <div v-if="states[r.stem]?.open" class="mt-2 rounded-lg border border-gray-100 bg-gray-50/70">

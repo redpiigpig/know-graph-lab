@@ -22,6 +22,7 @@ index：public/content/research-data/mukyokai/index.json
 import argparse
 import hashlib
 import json
+import html
 import re
 import sys
 from pathlib import Path
@@ -37,7 +38,8 @@ R2_PDF = "mukyokai"
 R2_TXT = "mukyokai-fulltext"
 INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/mukyokai/index.json"
 
-KINDS = {"thesis": "學位論文", "book": "專書", "article": "期刊論文", "archive": "檔案史料"}
+KINDS = {"thesis": "學位論文", "book": "專書", "article": "期刊論文",
+         "archive": "檔案史料", "manifesto": "宣言與綱領"}
 
 # 有假名就是日文；純漢字的中日文無法只靠字形分辨，故以 --lang 為準、此處只做預設值
 JP_KANA = re.compile(r"[぀-ゟ゠-ヿ]")
@@ -55,28 +57,42 @@ def load_index():
     return []
 
 
+def docx_text(path: Path) -> str:
+    """.docx 純文字：段落界線用 </w:p> 還原，其餘標籤去掉。"""
+    import zipfile
+    xml = zipfile.ZipFile(path).read("word/document.xml").decode("utf-8", "replace")
+    txt = html.unescape(re.sub(r"<[^>]+>", "", re.sub(r"</w:p>", "\n", xml)))
+    return re.sub(r"\n{3,}", "\n\n", txt).strip()
+
+
 def add(path, title, author, year, kind, note, publisher, title_original="", lang=""):
     src = Path(path)
     if not src.exists():
         raise SystemExit(f"找不到檔案：{src}")
     stem = stem_for(title, author)
 
-    doc = fitz.open(str(src))
-    pages = doc.page_count
-    text = "".join(p.get_text() for p in doc)
-    doc.close()
-    if h.pdf_text_sufficient(text, pages):
-        engine = "text"
+    if src.suffix.lower() == ".docx":
+        # 宣言、創刊宗旨這類原生 Word 檔沒有頁數概念，也不必 OCR
+        text, pages, engine = docx_text(src), 0, "docx"
     else:
-        text, engine = df.ocr_file(src, "application/pdf")
-        if not text.strip():
-            raise SystemExit("OCR 取不到文字，未入庫")
+        doc = fitz.open(str(src))
+        pages = doc.page_count
+        text = "".join(p.get_text() for p in doc)
+        doc.close()
+        if h.pdf_text_sufficient(text, pages):
+            engine = "text"
+        else:
+            text, engine = df.ocr_file(src, "application/pdf")
+            if not text.strip():
+                raise SystemExit("OCR 取不到文字，未入庫")
 
     DRIVE.mkdir(parents=True, exist_ok=True)
-    data = src.read_bytes()
-    (DRIVE / f"{stem}.pdf").write_bytes(data)
-    df.s3.upload_file(str(src), df.R2_BUCKET, f"{R2_PDF}/{stem}.pdf",
-                      ExtraArgs={"ContentType": "application/pdf"})
+    ext = src.suffix.lower()
+    mime = ("application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            if ext == ".docx" else "application/pdf")
+    (DRIVE / f"{stem}{ext}").write_bytes(src.read_bytes())
+    df.s3.upload_file(str(src), df.R2_BUCKET, f"{R2_PDF}/{stem}{ext}",
+                      ExtraArgs={"ContentType": mime})
     df.r2_put_text(f"{R2_TXT}/{stem}.txt", text.strip())
 
     rows = [r for r in load_index() if r["stem"] != stem]
@@ -86,7 +102,7 @@ def add(path, title, author, year, kind, note, publisher, title_original="", lan
         "author": author, "year": str(year),
         "kind": kind, "kindLabel": KINDS.get(kind, kind), "publisher": publisher,
         "note": note, "pages": pages, "chars": len(text),
-        "pdfKey": f"{R2_PDF}/{stem}.pdf", "textKey": f"{R2_TXT}/{stem}.txt",
+        "pdfKey": f"{R2_PDF}/{stem}{ext}", "textKey": f"{R2_TXT}/{stem}.txt",
     })
     rows.sort(key=lambda r: (r["year"], r["author"]))
     INDEX_OUT.parent.mkdir(parents=True, exist_ok=True)
