@@ -255,7 +255,9 @@ python scripts/build_flashcards.py --deck hbo --limit 16   # 打樣 16 張
 ```
 env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
   "C:/Program Files/LibreOffice/program/soffice.com" --headless --norestore \
-  -env:UserInstallation=file:///.../output/lo-profile-cards \
+  -env:UserInstallation=file:///<系統暫存>/lo-profile-cards \
+  # profile 一定要寫在系統暫存（`tempfile.mkdtemp`），不要寫進 output/——
+  # 舊做法在 output/ 留了 18 份 lo-profile-* 垃圾，2026-08-27 已清。
   --convert-to pdf --outdir .../output/flashcards .../output/flashcards/<deck>.docx
 ```
 

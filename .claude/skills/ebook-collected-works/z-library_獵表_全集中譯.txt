@@ -1,0 +1,1512 @@
+# 統計: 需獵 1193 筆 / 圖書館已有可搬 15 筆 / 已收錄(略) 359 筆
+
+# 全集中譯本獵表（z-library 搜尋清單）
+# 產生時間: 2026-07-23
+# 說明: 列出各全集作家「尚未收錄」的著作，供上 z-library 搜尋中譯本。
+#   [需獵] = 圖書館也沒有，請上 z-library 找中譯本
+#   [圖書館已有→可搬全集] = 圖書館已有此書，測試後搬進全集即可，不必再下載
+#   已 done 的（已收錄）不列。作者名對照供搜尋。
+
+
+═══════════ 哲學 ═══════════
+  ▍迦毘羅 (Kapila)  約西元前7世紀
+    [需獵] 《數論經》　（Sāṃkhya Sūtra (Kapila Sūtra)）
+    [需獵] 《數論頌》　（Sāṃkhyakārikā）
+    [需獵] 《薄伽梵往世書‧迦毘羅讚歌》　（Kapila Gītā (Bhāgavata Purāṇa)）
+  ▍泰利斯 (Thales of Miletus)  約前 624–546
+    [需獵] 《泰利斯見證與殘篇》　（Thales — Testimonia (DK 11)）
+  ▍阿那克西曼德 (Anaximander)  約前 610–546
+    [需獵] 《《論自然》殘篇》　（Περὶ φύσεως — Fragments (DK 12)）
+  ▍阿那克西美尼 (Anaximenes)  約前 586–526
+    [需獵] 《殘篇與見證》　（Fragments (DK 13)）
+  ▍老子 (Laozi)  前6世紀（生卒實不可考,傳統紀年約前571–前471）
+    [需獵] 《道德經（通行王弼本）》　（道德經）
+    [需獵] 《郭店楚簡老子》　（郭店楚簡《老子》）
+    [需獵] 《馬王堆帛書老子（甲‧乙本）》　（馬王堆帛書《老子》）
+  ▍畢達哥拉斯 (Pythagoras)  約前 570–495
+    [需獵] 《畢達哥拉斯學派見證與殘篇》　（Pythagoreans — Testimonia (DK 14, 58)）
+  ▍色諾芬尼 (Xenophanes)  約前 570–478
+    [需獵] 《哀歌與諷刺詩殘篇》　（Ἐλεγεῖαι / Σίλλοι — Fragments (DK 21)）
+  ▍孔子 (Confucius)  前551–前479
+    [需獵] 《論語》　（論語）
+    [需獵] 《春秋》　（春秋）
+    [需獵] 《六經整理（詩‧書‧禮‧樂‧易‧春秋）》　（詩‧書‧禮‧樂‧易‧春秋）
+  ▍赫拉克利特 (Heraclitus)  約前 535–475
+    [需獵] 《《論自然》殘篇》　（Περὶ φύσεως — Fragments (DK 22)）
+  ▍巴門尼德 (Parmenides)  約前 515–450
+    [需獵] 《《論自然》教誨詩殘篇》　（Περὶ φύσεως — Fragments (DK 28)）
+  ▍阿那克薩哥拉 (Anaxagoras)  約前 500–428
+    [需獵] 《《論自然》殘篇》　（Περὶ φύσεως — Fragments (DK 59)）
+  ▍伊利亞的芝諾 (Zeno of Elea)  約前 495–430
+    [需獵] 《悖論殘篇與見證》　（Fragments & Testimonia (DK 29)）
+  ▍恩培多克勒 (Empedocles)  約前 494–434
+    [需獵] 《《論自然》殘篇》　（Περὶ φύσεως — Fragments (DK 31)）
+    [需獵] 《《淨化》殘篇》　（Καθαρμοί / Purifications — Fragments (DK 31)）
+  ▍普羅塔哥拉 (Protagoras)  約前 490–420
+    [需獵] 《殘篇與見證》　（Fragments (DK 80)）
+  ▍高爾吉亞 (Gorgias)  約前 483–375
+    [需獵] 《〈論非存在〉殘篇》　（Περὶ τοῦ μὴ ὄντος — Fragments (DK 82)）
+    [需獵] 《〈海倫頌〉〈帕拉墨得斯的辯護〉》　（Ἑλένης ἐγκώμιον / Παλαμήδης）
+  ▍蘇格拉底 (Socrates)  前 470–399
+    [需獵] 《蘇格拉底（無著作；思想見柏拉圖與色諾芬）》　（Σωκράτης — sine scripto）
+    [需獵] 《色諾芬《回憶蘇格拉底》》　（Ξενοφῶν, Ἀπομνημονεύματα / Memorabilia）
+  ▍墨子 (Mozi)  前470–前391（約）
+    [需獵] 《墨子‧兼愛（上中下）》　（墨子‧兼愛）
+    [需獵] 《墨子‧非攻》　（墨子‧非攻）
+    [需獵] 《墨子‧尚賢》　（墨子‧尚賢）
+    [需獵] 《墨子‧天志》　（墨子‧天志）
+    [需獵] 《墨子‧經上‧經下（墨辯）》　（墨子‧經上‧經下）
+  ▍德謨克利特 (Democritus)  約前 460–370
+    [需獵] 《德謨克利特殘篇》　（Fragments (DK 68)）
+    [需獵] 《留基伯殘篇與見證》　（Λεύκιππος — Fragments (DK 67)）
+  ▍柏拉圖 (Plato)  約前 428/427–348/347
+    [需獵] 《斐多篇之外的臨終對話：〈斐利布斯〉？——早期短篇集》　（Charmides · Laches · Lysis · Ion · Hippias）
+  ▍足目喬達摩 (Akṣapāda Gautama)  生卒年不詳（約西元前6世紀–西元後2世紀間）
+    [需獵] 《正理經》　（Nyāyasūtra）
+    [需獵] 《正理經注》　（Nyāyabhāṣya (Vātsyāyana)）
+    [需獵] 《正理花束》　（Nyāyamañjarī (Jayanta Bhaṭṭa)）
+  ▍亞里斯多德 (Aristotle)  前 384–322
+    [需獵] 《範疇論》　（Κατηγορίαι / Categories）
+    [需獵] 《解釋篇》　（Περὶ Ἑρμηνείας / On Interpretation）
+    [需獵] 《前分析篇》　（Ἀναλυτικὰ Πρότερα / Prior Analytics）
+    [需獵] 《後分析篇》　（Ἀναλυτικὰ Ὕστερα / Posterior Analytics）
+    [需獵] 《論題篇》　（Τοπικά / Topics）
+    [需獵] 《辯謬篇》　（Σοφιστικοὶ Ἔλεγχοι / Sophistical Refutations）
+    [需獵] 《物理學》　（Φυσική / Physics）
+    [需獵] 《論天》　（Περὶ Οὐρανοῦ / On the Heavens）
+    [需獵] 《論生成與毀滅》　（Περὶ Γενέσεως καὶ Φθορᾶς / On Generation and Corruption）
+    [需獵] 《氣象學》　（Μετεωρολογικά / Meteorology）
+    [需獵] 《論靈魂》　（Περὶ Ψυχῆς / De Anima）
+    [需獵] 《自然諸短篇》　（Parva Naturalia）
+    [需獵] 《動物志》　（Τῶν περὶ τὰ ζῷα ἱστοριῶν / History of Animals）
+    [需獵] 《論動物之部分》　（Περὶ ζῴων μορίων / Parts of Animals）
+    [需獵] 《論動物之生成》　（Περὶ ζῴων γενέσεως / Generation of Animals）
+    [需獵] 《雅典政制》　（Ἀθηναίων Πολιτεία / Constitution of the Athenians）
+  ▍孟子 (Mencius)  前372–前289（約）
+    [需獵] 《孟子‧梁惠王篇》　（孟子‧梁惠王）
+    [需獵] 《孟子‧告子篇（性善論核心）》　（孟子‧告子）
+    [需獵] 《孟子‧盡心篇》　（孟子‧盡心）
+  ▍莊子 (Zhuangzi)  前369–前286（約）
+    [需獵] 《莊子‧內篇》　（莊子‧內篇）
+    [需獵] 《莊子‧外篇》　（莊子‧外篇）
+    [需獵] 《莊子‧雜篇》　（莊子‧雜篇）
+  ▍伊比鳩魯 (Epicurus)  前 341–270
+    [需獵] 《附：盧克萊修《物性論》》　（Lucretius, De Rerum Natura）
+  ▍荀子 (Xunzi)  前310–前235（約）
+    [需獵] 《荀子‧性惡篇》　（荀子‧性惡）
+    [需獵] 《荀子‧天論篇》　（荀子‧天論）
+    [需獵] 《荀子‧禮論篇》　（荀子‧禮論）
+    [需獵] 《荀子‧正名篇》　（荀子‧正名）
+    [需獵] 《荀子‧勸學篇》　（荀子‧勸學）
+  ▍韓非子 (Han Feizi)  前280–前233（約）
+    [需獵] 《韓非子‧五蠹》　（韓非子‧五蠹）
+    [需獵] 《韓非子‧孤憤》　（韓非子‧孤憤）
+    [需獵] 《韓非子‧說難》　（韓非子‧說難）
+    [需獵] 《韓非子‧二柄》　（韓非子‧二柄）
+  ▍波顛闍利 (Patañjali)  生卒年不詳（約西元前2世紀–西元後4世紀間）
+    [需獵] 《瑜伽經》　（Yogasūtra）
+    [需獵] 《瑜伽經疏》　（Yogabhāṣya (Vyāsa)）
+    [需獵] 《真相明燈疏》　（Tattvavaiśāradī (Vācaspati Miśra)）
+  ▍愛比克泰德 (Epictetus)  約 50–135
+    [需獵] 《馬可‧奧勒留《沉思錄》》　（Μάρκος Αὐρήλιος, Τὰ εἰς ἑαυτόν / Meditations）
+    [需獵] 《早期斯多噶殘篇（芝諾‧克呂西波）》　（Ζήνων ὁ Κιτιεύς · Χρύσιππος — Fragments (SVF)）
+  ▍波愛修斯 (Boethius)  480–524
+    [需獵] 《哲學的慰藉》　（De Consolatione Philosophiae）
+    [需獵] 《範疇論註釋》　（In Categorias Aristotelis）
+    [需獵] 《論三位一體》　（De Trinitate）
+    [需獵] 《論音樂》　（De Institutione Musica）
+    [需獵] 《波菲利《導論》註釋》　（In Isagogen Porphyrii Commenta）
+  ▍商羯羅 (Adi Shankara)  788–820（傳統紀年,學界另有約700–750之說）
+    [需獵] 《梵經注》　（Brahmasūtra Bhāṣya）
+    [需獵] 《薄伽梵歌注》　（Bhagavadgītā Bhāṣya）
+    [需獵] 《奧義書注（多部）》　（Upaniṣad Bhāṣya）
+    [需獵] 《示教千則》　（Upadeśasāhasrī）
+  ▍肯迪 (al-Kindi)  801–873
+    [需獵] 《論第一哲學》　（Fī al-Falsafah al-Ūlā）
+    [需獵] 《論理智》　（Risāla fī al-'Aql）
+    [需獵] 《密碼分析手稿》　（Risāla fī Istikhrāj al-Mu'ammā）
+    [需獵] 《論五本質》　（On the Five Essences）
+  ▍佛提烏 (Photios I of Constantinople)  810–893
+    [需獵] 《群書提要（千書）》　（Bibliotheca (Myriobiblon)）
+    [需獵] 《詞典》　（Lexicon）
+    [需獵] 《安菲羅奇亞疑難問答集》　（Amphilochia）
+    [需獵] 《論聖靈的奧秘引導》　（Mystagogia tou Hagiou Pneumatos）
+    [需獵] 《講道集》　（Homiliae）
+  ▍法拉比 (al-Farabi)  872–950
+    [需獵] 《至善城邦居民之見解》　（Ārā' Ahl al-Madīna al-Fāḍila）
+    [需獵] 《音樂大全》　（Kitāb al-Mūsīqā al-Kabīr）
+    [需獵] 《論理智》　（Risāla fī al-'Aql）
+    [需獵] 《諸學之分類》　（Iḥṣā' al-'Ulūm）
+    [需獵] 《柏拉圖與亞里斯多德哲學之調和》　（al-Jam' bayna Ra'yay al-Ḥakīmayn）
+  ▍伊本‧西那 (Avicenna)  980–1037
+    [需獵] 《治療論》　（Kitāb al-Shifā'）
+    [需獵] 《醫典》　（al-Qānūn fī al-Ṭibb）
+    [需獵] 《拯救論》　（Kitāb al-Najāt）
+    [需獵] 《指示與訓誡》　（al-Ishārāt wa al-Tanbīhāt）
+    [需獵] 《靈魂論（飛人論證）》　（Risāla fī al-Nafs）
+  ▍周敦頤 (Zhou Dunyi)  1017–1073
+    [需獵] 《太極圖說》　（太極圖說）
+    [需獵] 《通書》　（通書）
+    [需獵] 《愛蓮說》　（愛蓮說）
+  ▍羅摩奴闍 (Ramanuja)  1017–1137
+    [需獵] 《梵經注（吉祥疏）》　（Śrī Bhāṣya）
+    [需獵] 《薄伽梵歌注》　（Gītā Bhāṣya）
+    [需獵] 《韋丹陀精要》　（Vedārtha Saṅgraha）
+  ▍米海爾‧普塞洛斯 (Michael Psellos)  1018–1078
+    [需獵] 《編年史》　（Chronographia）
+    [需獵] 《論諸學》　（De Omnifaria Doctrina）
+    [需獵] 《柏拉圖與亞里斯多德哲學論集》　（Philosophica Minora）
+    [需獵] 《書信集》　（Epistulae）
+  ▍張載 (Zhang Zai)  1020–1077
+    [需獵] 《正蒙》　（正蒙）
+    [需獵] 《西銘》　（西銘）
+    [需獵] 《經學理窟》　（經學理窟）
+  ▍伊本‧蓋比魯勒 (Solomon ibn Gabirol)  1021–1058
+    [需獵] 《生命之源》　（Yanbū' al-Ḥayāh（原文佚失，僅存拉丁譯本 Fons Vitae））
+    [需獵] 《王冠》　（Keter Malkhut）
+    [需獵] 《性靈的整治》　（Tikkun Middot ha-Nefesh）
+  ▍二程（程顥‧程頤） (Cheng Hao and Cheng Yi)  1032–1107（程顥1032–1085／程頤1033–1107）
+    [需獵] 《二程遺書》　（二程遺書）
+    [需獵] 《易傳（程氏易傳）》　（伊川易傳）
+    [需獵] 《定性書》　（定性書）
+  ▍安瑟倫 (Anselm of Canterbury)  1033–1109
+    [需獵] 《宣講》　（Proslogion）
+    [需獵] 《獨白》　（Monologion）
+    [需獵] 《上帝何以成為人》　（Cur Deus Homo）
+    [需獵] 《論真理》　（De Veritate）
+    [需獵] 《論自由意志》　（De Libertate Arbitrii）
+  ▍安薩里 (al-Ghazali)  1058–1111
+    [需獵] 《哲學家的矛盾》　（Tahāfut al-Falāsifa）
+    [需獵] 《宗教學問的復興》　（Iḥyā' 'Ulūm al-Dīn）
+    [需獵] 《迷途指津》　（al-Munqidh min al-Ḍalāl）
+    [需獵] 《哲學家的目的》　（Maqāṣid al-Falāsifa）
+  ▍彼得‧阿伯拉 (Peter Abelard)  1079–1142
+    [需獵] 《是與非》　（Sic et Non）
+    [需獵] 《倫理學（認識你自己）》　（Ethica seu Scito te Ipsum）
+    [需獵] 《我的苦難史》　（Historia Calamitatum）
+    [需獵] 《論神聖一體與三一》　（Theologia Summi Boni）
+    [需獵] 《對話：哲學家‧猶太人與基督徒》　（Dialogus inter Philosophum, Iudaeum et Christianum）
+  ▍伊本‧圖費勒 (Ibn Tufayl)  1105–1185
+    [需獵] 《哈義‧本‧亞格贊》　（Ḥayy ibn Yaqẓān）
+  ▍伊本‧魯世德 (Averroes)  1126–1198
+    [需獵] 《矛盾的矛盾》　（Tahāfut al-Tahāfut）
+    [需獵] 《決定性的論述》　（Faṣl al-Maqāl）
+    [需獵] 《亞里斯多德《靈魂論》大註》　（Long Commentary on De Anima）
+    [需獵] 《亞里斯多德《形上學》大註》　（Long Commentary on Metaphysics）
+    [需獵] 《醫學通論》　（Kitāb al-Kulliyyāt fī al-Ṭibb）
+  ▍朱熹 (Zhu Xi)  1130–1200
+    [需獵] 《四書章句集注》　（四書章句集注）
+    [需獵] 《近思錄》　（近思錄）
+    [需獵] 《朱子語類》　（朱子語類）
+    [需獵] 《詩集傳》　（詩集傳）
+  ▍邁蒙尼德 (Maimonides)  1138–1204
+    [需獵] 《迷途指津》　（Dalālat al-Ḥā'irīn (Moreh Nevukhim)）
+    [需獵] 《密西那多拉（反覆法典）》　（Mishneh Torah）
+    [需獵] 《米示那註釋》　（Commentary on the Mishnah）
+    [需獵] 《醫學箴言》　（Fuṣūl Mūsā）
+    [需獵] 《論復活》　（Ma'amar Teḥiyyat ha-Metim）
+  ▍蘇赫拉瓦迪 (Suhrawardi (Shihab al-Din Yahya ibn Habash al-Suhrawardi))  約1154–1191
+    [需獵] 《照明的智慧》　（Ḥikmat al-Ishrāq）
+    [需獵] 《暗示之書》　（Kitāb al-Talwīḥāt）
+    [需獵] 《異鄉人的故事》　（Qiṣṣat al-Ghurba al-Gharbiyya）
+  ▍大阿爾伯特 (Albertus Magnus)  1200–1280
+    [需獵] 《論動物》　（De Animalibus）
+    [需獵] 《論礦物》　（De Mineralibus）
+    [需獵] 《形上學註釋》　（Metaphysica）
+    [需獵] 《神學大全》　（Summa Theologiae）
+    [需獵] 《論靈魂》　（De Anima）
+  ▍聖文德 (Bonaventure)  1221–1274
+    [需獵] 《心向上帝的旅程》　（Itinerarium Mentis in Deum）
+    [需獵] 《四部語錄註釋》　（Commentaria in IV Libros Sententiarum）
+    [需獵] 《簡明神學》　（Breviloquium）
+    [需獵] 《聖方濟各大傳》　（Legenda Maior）
+    [需獵] 《論技藝歸向神學》　（De Reductione Artium ad Theologiam）
+  ▍多瑪斯‧阿奎那 (Thomas Aquinas)  1225–1274
+    [需獵] 《神學大全》　（Summa Theologiae）
+    [需獵] 《駁異大全》　（Summa Contra Gentiles）
+    [需獵] 《論存在與本質》　（De Ente et Essentia）
+    [需獵] 《論真理》　（Quaestiones Disputatae de Veritate）
+    [需獵] 《亞里斯多德《靈魂論》註釋》　（Sententia Libri De Anima）
+    [需獵] 《論君王政治》　（De Regno (De Regimine Principum)）
+  ▍摩陀婆 (Madhva)  1238–1317
+    [需獵] 《梵經注》　（Brahmasūtra Bhāṣya (Pūrṇaprajña Bhāṣya)）
+    [需獵] 《摩訶婆羅多精要》　（Mahābhārata Tātparya Nirṇaya）
+    [需獵] 《薄伽梵歌注》　（Gītā Bhāṣya）
+  ▍鄧斯‧司各脫 (John Duns Scotus)  1266–1308
+    [需獵] 《牛津論著（俗稱牛津講稿）》　（Ordinatio (Opus Oxoniense)）
+    [需獵] 《巴黎報告》　（Reportata Parisiensia）
+    [需獵] 《論第一原理》　（Tractatus de Primo Principio）
+    [需獵] 《任意問題集》　（Quaestiones Quodlibetales）
+  ▍奧坎的威廉 (William of Ockham)  1287–1347
+    [需獵] 《邏輯大全》　（Summa Logicae）
+    [需獵] 《四部語錄論著》　（Ordinatio）
+    [需獵] 《七辯論問題集》　（Quodlibeta Septem）
+    [需獵] 《對話錄》　（Dialogus）
+    [需獵] 《九十日之作》　（Opus Nonaginta Dierum）
+  ▍格彌斯托斯‧普勒東 (Gemistos Plethon)  1355–1452
+    [需獵] 《論柏拉圖與亞里斯多德之異同》　（De Differentiis Platonis et Aristotelis）
+    [需獵] 《法律篇（殘篇）》　（Nomoi）
+    [需獵] 《致君王改革備忘錄》　（Memoranda to the Despots of the Morea）
+  ▍內薩瓦爾科約特爾 (Nezahualcoyotl)  1402–1472
+    [需獵] 《特斯科科哲理輓歌（合集）》　（Icnocuicatl (歸屬內薩瓦爾科約特爾之哀歌類詩作合集)）
+    [需獵] 《新西班牙諸侯之歌（收錄篇章）》　（Romances de los señores de la Nueva España）
+    [需獵] 《墨西哥人之歌（收錄篇章）》　（Cantares Mexicanos）
+  ▍王陽明 (Wang Yangming)  1472–1529
+    [圖書館已有→可搬全集] 《傳習錄》　（傳習錄）  ← lib:9c44fe68 王陽明
+    [需獵] 《大學問》　（大學問）
+    [需獵] 《王文成公全書》　（王文成公全書）
+  ▍李退溪 (Yi Hwang (Toegye))  1501–1570
+    [需獵] 《聖學十圖》　（聖學十圖）
+    [需獵] 《四端七情往復書》　（四七理氣往復書）
+    [需獵] 《自省錄》　（自省錄）
+  ▍李栗谷 (Yi I (Yulgok))  1536–1584
+    [需獵] 《聖學輯要》　（聖學輯要）
+    [需獵] 《擊蒙要訣》　（擊蒙要訣）
+    [需獵] 《栗谷全書》　（栗谷全書）
+  ▍法蘭西斯‧培根 (Francis Bacon)  1561–1626
+    [需獵] 《新工具論》　（Novum Organum）
+    [需獵] 《學術的進展》　（The Advancement of Learning）
+    [需獵] 《新亞特蘭提斯》　（New Atlantis）
+    [需獵] 《論說文集》　（Essays）
+  ▍穆拉‧薩德拉 (Mulla Sadra (Sadr al-Din Muhammad al-Shirazi))  約1571–1640
+    [需獵] 《四智之旅的超越智慧》　（al-Ḥikma al-Muta'āliya fī al-Asfār al-'Aqliyya al-Arba'a）
+    [需獵] 《神聖證道之書》　（al-Shawāhid al-Rubūbiyya）
+    [需獵] 《靈魂之書》　（al-Mabda' wa al-Ma'ād）
+  ▍霍布斯 (Thomas Hobbes)  1588–1679
+    [需獵] 《利維坦》　（Leviathan）
+    [需獵] 《論公民》　（De Cive）
+    [需獵] 《論物體》　（De Corpore）
+    [需獵] 《論人》　（De Homine）
+    [需獵] 《法律的原理》　（The Elements of Law, Natural and Politic）
+  ▍笛卡兒 (René Descartes)  1596–1650
+    [需獵] 《方法論》　（Discours de la méthode）
+    [需獵] 《沉思錄》　（Meditationes de Prima Philosophia）
+    [需獵] 《哲學原理》　（Principia Philosophiae）
+    [需獵] 《論靈魂的激情》　（Les Passions de l'âme）
+    [需獵] 《心靈指導規則》　（Regulae ad Directionem Ingenii）
+  ▍黃宗羲 (Huang Zongxi)  1610–1695
+    [需獵] 《明夷待訪錄》　（明夷待訪錄）
+    [需獵] 《明儒學案》　（明儒學案）
+  ▍王夫之 (Wang Fuzhi)  1619–1692
+    [需獵] 《周易外傳》　（周易外傳）
+    [需獵] 《讀通鑑論》　（讀通鑑論）
+    [需獵] 《張子正蒙注》　（張子正蒙注）
+    [需獵] 《尚書引義》　（尚書引義）
+  ▍伊藤仁齋 (Itō Jinsai)  1627–1705
+    [需獵] 《語孟字義》　（語孟字義）
+    [需獵] 《童子問》　（童子問）
+  ▍斯賓諾莎 (Baruch Spinoza)  1632–1677
+    [需獵] 《倫理學》　（Ethica, Ordine Geometrico Demonstrata）
+    [需獵] 《神學政治論》　（Tractatus Theologico-Politicus）
+    [需獵] 《知性改進論》　（Tractatus de Intellectus Emendatione）
+    [需獵] 《笛卡兒哲學原理》　（Renati Des Cartes Principiorum Philosophiae）
+    [需獵] 《政治論》　（Tractatus Politicus）
+  ▍洛克 (John Locke)  1632–1704
+    [需獵] 《人類理解論》　（An Essay Concerning Human Understanding）
+    [需獵] 《政府論兩篇》　（Two Treatises of Government）
+    [需獵] 《論寬容書》　（A Letter Concerning Toleration）
+    [需獵] 《教育漫話》　（Some Thoughts Concerning Education）
+    [需獵] 《基督教的合理性》　（The Reasonableness of Christianity）
+  ▍萊布尼茲 (Gottfried Wilhelm Leibniz)  1646–1716
+    [需獵] 《神義論》　（Essais de Théodicée sur la bonté de Dieu, la liberté de l'homme et l'origine du mal）
+    [需獵] 《單子論》　（La Monadologie）
+    [需獵] 《形上學論》　（Discours de métaphysique）
+    [需獵] 《人類理智新論》　（Nouveaux essais sur l'entendement humain）
+    [需獵] 《微分算法的新方法》　（Nova Methodus pro Maximis et Minimis）
+  ▍荻生徂徠 (Ogyū Sorai)  1666–1728
+    [需獵] 《辨道》　（辨道）
+    [需獵] 《辨名》　（辨名）
+    [需獵] 《政談》　（政談）
+  ▍柏克萊 (George Berkeley)  1685–1753
+    [需獵] 《人類知識原理》　（A Treatise Concerning the Principles of Human Knowledge）
+    [需獵] 《海拉斯與菲羅諾斯的三篇對話》　（Three Dialogues between Hylas and Philonous）
+    [需獵] 《視覺新論》　（An Essay Towards a New Theory of Vision）
+    [需獵] 《分析者》　（The Analyst）
+    [需獵] 《賽利斯》　（Siris）
+  ▍安東‧威廉‧阿莫 (Anton Wilhelm Amo)  約1703–約1759
+    [需獵] 《論歐洲摩爾人之權利》　（De Jure Maurorum in Europa）
+    [需獵] 《論人類心靈之不動情》　（Dissertatio Inauguralis De Humanae Mentis Apatheia）
+    [需獵] 《論嚴謹精確之哲學方法》　（Tractatus de Arte Sobrie et Accurate Philosophandi）
+  ▍夏特萊侯爵夫人 (Émilie du Châtelet)  1706–1749
+    [需獵] 《自然哲學的數學原理（法譯註本）》　（Principes mathématiques de la philosophie naturelle）
+    [需獵] 《物理學基礎》　（Institutions de Physique）
+    [需獵] 《論火的性質與傳播》　（Dissertation sur la nature et la propagation du feu）
+    [需獵] 《論幸福》　（Discours sur le bonheur）
+  ▍休謨 (David Hume)  1711–1776
+    [需獵] 《人性論》　（A Treatise of Human Nature）
+    [需獵] 《人類理解研究》　（An Enquiry Concerning Human Understanding）
+    [需獵] 《道德原理研究》　（An Enquiry Concerning the Principles of Morals）
+    [需獵] 《自然宗教對話錄》　（Dialogues Concerning Natural Religion）
+    [需獵] 《宗教的自然史》　（The Natural History of Religion）
+    [需獵] 《英格蘭史》　（The History of England）
+  ▍盧梭 (Jean-Jacques Rousseau)  1712–1778
+    [需獵] 《社會契約論》　（Du Contrat Social）
+    [需獵] 《愛彌兒》　（Émile, ou De l'éducation）
+    [需獵] 《論人類不平等的起源與基礎》　（Discours sur l'origine et les fondements de l'inégalité parmi les hommes）
+    [需獵] 《懺悔錄》　（Les Confessions）
+    [需獵] 《新愛洛伊絲》　（Julie, ou la Nouvelle Héloïse）
+    [需獵] 《論科學與藝術》　（Discours sur les sciences et les arts）
+  ▍戴震 (Dai Zhen)  1724–1777
+    [需獵] 《孟子字義疏證》　（孟子字義疏證）
+    [需獵] 《原善》　（原善）
+  ▍康德 (Immanuel Kant)  1724–1804
+    [圖書館已有→可搬全集] 《純粹理性批判》　（Kritik der reinen Vernunft）  ← lib:d4fd8e79 康德
+    [圖書館已有→可搬全集] 《實踐理性批判》　（Kritik der praktischen Vernunft）  ← lib:fb318069 康德
+    [圖書館已有→可搬全集] 《判斷力批判》　（Kritik der Urteilskraft）  ← lib:468d8b9c 康德
+    [需獵] 《道德形上學基礎》　（Grundlegung zur Metaphysik der Sitten）
+    [需獵] 《論永久和平》　（Zum ewigen Frieden）
+    [需獵] 《純粹理性限度內的宗教》　（Die Religion innerhalb der Grenzen der bloßen Vernunft）
+  ▍瑪麗‧沃斯通克拉夫特 (Mary Wollstonecraft)  1759–1797
+    [需獵] 《女權辯護》　（A Vindication of the Rights of Woman）
+    [需獵] 《男權辯護》　（A Vindication of the Rights of Men）
+    [需獵] 《瑪麗亞：女性的錯待》　（Maria: or, The Wrongs of Woman）
+    [需獵] 《女兒教育論》　（Thoughts on the Education of Daughters）
+    [需獵] 《瑞典書簡》　（Letters Written during a Short Residence in Sweden, Norway, and Denmark）
+  ▍費希特 (Johann Gottlieb Fichte)  1762–1814
+    [需獵] 《知識學基礎》　（Grundlage der gesamten Wissenschaftslehre）
+    [需獵] 《對德意志民族的演講》　（Reden an die deutsche Nation）
+    [需獵] 《人的使命》　（Die Bestimmung des Menschen）
+    [需獵] 《試論一切天啟的批判》　（Versuch einer Critik aller Offenbarung）
+    [需獵] 《自然法權基礎》　（Grundlage des Naturrechts）
+  ▍黑格爾 (Georg Wilhelm Friedrich Hegel)  1770–1831
+    [需獵] 《精神現象學》　（Phänomenologie des Geistes）
+    [需獵] 《邏輯學》　（Wissenschaft der Logik）
+    [需獵] 《法哲學原理》　（Grundlinien der Philosophie des Rechts）
+    [需獵] 《哲學全書》　（Enzyklopädie der philosophischen Wissenschaften im Grundrisse）
+    [需獵] 《歷史哲學講演錄》　（Vorlesungen über die Philosophie der Geschichte）
+    [需獵] 《美學講演錄》　（Vorlesungen über die Ästhetik）
+  ▍謝林 (Friedrich Wilhelm Joseph Schelling)  1775–1854
+    [需獵] 《先驗觀念論體系》　（System des transscendentalen Idealismus）
+    [需獵] 《關於人類自由本質的哲學研究》　（Philosophische Untersuchungen über das Wesen der menschlichen Freiheit）
+    [需獵] 《自然哲學的觀念》　（Ideen zu einer Philosophie der Natur）
+    [需獵] 《我的哲學體系的敘述》　（Darstellung meines Systems der Philosophie）
+    [需獵] 《啟示哲學》　（Philosophie der Offenbarung）
+  ▍叔本華 (Arthur Schopenhauer)  1788–1860
+    [圖書館已有→可搬全集] 《作為意志和表象的世界》　（Die Welt als Wille und Vorstellung）  ← lib:456686c5 [德]叔本華；石衝白譯，楊一之校
+    [需獵] 《論充足理由律的四重根》　（Über die vierfache Wurzel des Satzes vom zureichenden Grunde）
+    [需獵] 《倫理學的兩個基本問題》　（Die beiden Grundprobleme der Ethik）
+    [需獵] 《附錄與補遺》　（Parerga und Paralipomena）
+    [需獵] 《自然界中的意志》　（Über den Willen in der Natur）
+  ▍彌爾 (John Stuart Mill)  1806–1873
+    [需獵] 《論自由》　（On Liberty）
+    [需獵] 《功利主義》　（Utilitarianism）
+    [需獵] 《女性的屈從地位》　（The Subjection of Women）
+    [需獵] 《邏輯體系》　（A System of Logic）
+    [需獵] 《代議政府論》　（Considerations on Representative Government）
+    [需獵] 《政治經濟學原理》　（Principles of Political Economy）
+    [需獵] 《自傳》　（Autobiography）
+  ▍齊克果 (Søren Kierkegaard)  1813–1855
+    [需獵] 《非此即彼》　（Enten – Eller）
+    [需獵] 《恐懼與戰慄》　（Frygt og Bæven）
+    [需獵] 《焦慮的概念》　（Begrebet Angest）
+    [需獵] 《致死的疾病》　（Sygdommen til Døden）
+    [需獵] 《結論性非科學附言》　（Afsluttende uvidenskabelig Efterskrift）
+    [需獵] 《哲學片段》　（Philosophiske Smuler）
+    [需獵] 《攻擊基督王國》　（Øieblikket）
+  ▍馬克思 (Karl Marx)  1818–1883
+    [需獵] 《資本論》　（Das Kapital）
+    [需獵] 《共產黨宣言》　（Manifest der Kommunistischen Partei）
+    [需獵] 《1844年經濟學哲學手稿》　（Ökonomisch-philosophische Manuskripte aus dem Jahre 1844）
+    [需獵] 《德意志意識形態》　（Die deutsche Ideologie）
+    [需獵] 《路易‧波拿巴的霧月十八日》　（Der 18te Brumaire des Louis Napoleon）
+    [需獵] 《政治經濟學批判》　（Zur Kritik der Politischen Ökonomie）
+  ▍尼采 (Friedrich Nietzsche)  1844–1900
+    [圖書館已有→可搬全集] 《查拉圖斯特拉如是說》　（Also sprach Zarathustra）  ← lib:d12116ce 尼采
+    [需獵] 《善惡的彼岸》　（Jenseits von Gut und Böse）
+    [需獵] 《道德系譜學》　（Zur Genealogie der Moral）
+    [需獵] 《悲劇的誕生》　（Die Geburt der Tragödie）
+    [圖書館已有→可搬全集] 《偶像的黃昏》　（Götzen-Dämmerung）  ← lib:fd5eaad7 尼采
+    [需獵] 《瞧！這個人》　（Ecce Homo）
+    [需獵] 《權力意志》　（Der Wille zur Macht）
+  ▍柏格森 (Henri Bergson)  1859–1941
+    [需獵] 《時間與自由意志》　（Essai sur les données immédiates de la conscience）
+    [需獵] 《物質與記憶》　（Matière et mémoire）
+    [需獵] 《笑：論滑稽的意義》　（Le Rire : Essai sur la signification du comique）
+    [需獵] 《創造演化論》　（L'Évolution créatrice）
+    [需獵] 《心力：論心靈與身體的關係》　（L'Énergie spirituelle）
+    [需獵] 《道德與宗教的兩個來源》　（Les Deux Sources de la morale et de la religion）
+    [需獵] 《思想與運動》　（La Pensée et le mouvant）
+  ▍胡塞爾 (Edmund Husserl)  1859–1938
+    [需獵] 《邏輯研究》　（Logische Untersuchungen）
+    [需獵] 《純粹現象學通論（觀念一）》　（Ideen zu einer reinen Phänomenologie und phänomenologischen Philosophie I）
+    [需獵] 《內在時間意識現象學講稿》　（Vorlesungen zur Phänomenologie des inneren Zeitbewußtseins）
+    [需獵] 《笛卡兒式沉思》　（Méditations cartésiennes）
+    [需獵] 《歐洲科學危機與超越論現象學》　（Die Krisis der europäischen Wissenschaften und die transzendentale Phänomenologie）
+  ▍懷海德 (Alfred North Whitehead)  1861–1947
+    [需獵] 《數學原理（三卷本）》　（Principia Mathematica）
+    [需獵] 《自然知識原理探究》　（An Enquiry Concerning the Principles of Natural Knowledge）
+    [需獵] 《科學與現代世界》　（Science and the Modern World）
+    [需獵] 《歷程與實在》　（Process and Reality）
+    [需獵] 《觀念的探險》　（Adventures of Ideas）
+    [需獵] 《教育的目的》　（The Aims of Education）
+  ▍西田幾多郎 (Nishida Kitarō)  1870–1945
+    [需獵] 《善的研究》　（善の研究）
+    [需獵] 《自覺における直観と反省》　（自覚に於ける直観と反省）
+    [需獵] 《場所的邏輯與宗教的世界觀》　（場所的論理と宗教的世界観）
+  ▍奧羅賓多 (Sri Aurobindo)  1872–1950
+    [需獵] 《神聖人生論》　（The Life Divine）
+    [需獵] 《薄伽梵歌論》　（Essays on the Gita）
+    [需獵] 《綜合瑜伽》　（The Synthesis of Yoga）
+    [需獵] 《沙維德麗》　（Savitri: A Legend and a Symbol）
+  ▍羅素 (Bertrand Russell)  1872–1970
+    [需獵] 《數學原理（三卷本）》　（Principia Mathematica）
+    [需獵] 《哲學問題》　（The Problems of Philosophy）
+    [需獵] 《我們關於外在世界的知識》　（Our Knowledge of the External World）
+    [需獵] 《指稱論》　（On Denoting）
+    [需獵] 《我為什麼不是基督徒》　（Why I Am Not a Christian）
+    [需獵] 《西方哲學史》　（A History of Western Philosophy）
+    [需獵] 《人類知識：範圍與限度》　（Human Knowledge: Its Scope and Limits）
+  ▍何塞‧巴斯孔塞洛斯 (José Vasconcelos)  1882–1959
+    [需獵] 《宇宙種族》　（La raza cósmica）
+    [需獵] 《克里奧的尤利西斯》　（Ulises criollo）
+    [需獵] 《印度學研究》　（Indología: una interpretación de la cultura ibero-americana）
+  ▍熊十力 (Xiong Shili)  1885–1968
+    [需獵] 《新唯識論》　（新唯識論）
+    [需獵] 《體用論》　（體用論）
+    [需獵] 《讀經示要》　（讀經示要）
+    [需獵] 《原儒》　（原儒）
+  ▍田邊元 (Tanabe Hajime)  1885–1962
+    [需獵] 《種的邏輯》　（種の論理）
+    [需獵] 《懺悔道としての哲学》　（懺悔道としての哲学）
+  ▍拉達克里希南 (Sarvepalli Radhakrishnan)  1888–1975
+    [需獵] 《印度哲學》　（Indian Philosophy）
+    [需獵] 《生命的理想主義觀》　（An Idealist View of Life）
+    [需獵] 《薄伽梵歌（英譯與詮釋）》　（The Bhagavadgītā）
+    [需獵] 《東西方宗教》　（Eastern Religions and Western Thought）
+  ▍和辻哲郎 (Watsuji Tetsurō)  1889–1960
+    [需獵] 《風土》　（風土）
+    [需獵] 《人間の学としての倫理学》　（人間の学としての倫理学）
+    [需獵] 《倫理學（三卷本）》　（倫理学）
+  ▍維根斯坦 (Ludwig Wittgenstein)  1889–1951
+    [需獵] 《邏輯哲學論》　（Logisch-Philosophische Abhandlung (Tractatus Logico-Philosophicus)）
+    [需獵] 《哲學研究》　（Philosophische Untersuchungen）
+    [需獵] 《藍皮書與棕皮書》　（The Blue and Brown Books）
+    [需獵] 《論確定性》　（Über Gewißheit (On Certainty)）
+    [需獵] 《數學基礎評論》　（Bemerkungen über die Grundlagen der Mathematik）
+  ▍海德格 (Martin Heidegger)  1889–1976
+    [需獵] 《存有與時間》　（Sein und Zeit）
+    [需獵] 《形上學是什麼？》　（Was ist Metaphysik?）
+    [需獵] 《形上學導論》　（Einführung in die Metaphysik）
+    [需獵] 《關於人道主義的書信》　（Brief über den Humanismus）
+    [需獵] 《技術的追問》　（Die Frage nach der Technik）
+    [需獵] 《林中路》　（Holzwege）
+  ▍馮友蘭 (Feng Youlan)  1895–1990
+    [圖書館已有→可搬全集] 《中國哲學史》　（中國哲學史）  ← lib:541219a1 馮友蘭
+    [需獵] 《貞元六書》　（貞元六書）
+    [圖書館已有→可搬全集] 《中國哲學簡史》　（A Short History of Chinese Philosophy）  ← lib:b2a5e482 馮友蘭
+  ▍西谷啟治 (Nishitani Keiji)  1900–1990
+    [需獵] 《宗教とは何か》　（宗教とは何か）
+    [需獵] 《ニヒリズム》　（ニヒリズム）
+  ▍伽達默爾 (Hans-Georg Gadamer)  1900–2002
+    [需獵] 《真理與方法》　（Wahrheit und Methode）
+    [需獵] 《柏拉圖的辯證倫理學》　（Platos dialektische Ethik）
+    [需獵] 《哲學詮釋學》　（Philosophische Hermeneutik）
+    [需獵] 《科學時代的理性》　（Vernunft im Zeitalter der Wissenschaft）
+    [需獵] 《美的現實性》　（Die Aktualität des Schönen）
+  ▍沙特 (Jean-Paul Sartre)  1905–1980
+    [需獵] 《嘔吐》　（La Nausée）
+    [需獵] 《存有與虛無》　（L'Être et le Néant）
+    [圖書館已有→可搬全集] 《存在主義是一種人道主義》　（L'existentialisme est un humanisme）  ← lib:964a53ed 保羅‧沙特
+    [需獵] 《密室》　（Huis clos）
+    [需獵] 《辯證理性批判》　（Critique de la raison dialectique）
+    [需獵] 《聖徒惹內：喜劇演員與殉道者》　（Saint Genet, comédien et martyr）
+  ▍列維納斯 (Emmanuel Levinas)  1906–1995
+    [需獵] 《時間與他者》　（Le Temps et l'autre）
+    [需獵] 《總體與無限》　（Totalité et Infini）
+    [需獵] 《困難的自由》　（Difficile liberté）
+    [需獵] 《別於存有或超越本質》　（Autrement qu'être ou au-delà de l'essence）
+    [需獵] 《塔木德四講》　（Quatre lectures talmudiques）
+  ▍漢娜‧鄂蘭 (Hannah Arendt)  1906–1975
+    [圖書館已有→可搬全集] 《極權主義的起源》　（The Origins of Totalitarianism）  ← lib:2644ef5e 漢娜‧鄂蘭
+    [需獵] 《人的境況》　（The Human Condition）
+    [需獵] 《論革命》　（On Revolution）
+    [需獵] 《平凡的邪惡：艾希曼耶路撒冷大審紀實》　（Eichmann in Jerusalem: A Report on the Banality of Evil）
+    [需獵] 《心智生命》　（The Life of the Mind）
+  ▍西蒙‧德‧波娃 (Simone de Beauvoir)  1908–1986
+    [需獵] 《模稜兩可的倫理學》　（Pour une morale de l'ambiguïté）
+    [需獵] 《第二性》　（Le Deuxième Sexe）
+    [需獵] 《名士風流》　（Les Mandarins）
+    [需獵] 《一個乖女孩的回憶》　（Mémoires d'une jeune fille rangée）
+    [需獵] 《論老年》　（La Vieillesse）
+  ▍梅洛龐蒂 (Maurice Merleau-Ponty)  1908–1961
+    [需獵] 《行為的結構》　（La Structure du comportement）
+    [需獵] 《知覺現象學》　（Phénoménologie de la perception）
+    [需獵] 《人道主義與恐怖》　（Humanisme et terreur）
+    [需獵] 《符號》　（Signes）
+    [需獵] 《可見者與不可見者》　（Le Visible et l'invisible）
+  ▍牟宗三 (Mou Zongsan)  1909–1995
+    [需獵] 《心體與性體》　（心體與性體）
+    [需獵] 《現象與物自身》　（現象與物自身）
+    [需獵] 《圓善論》　（圓善論）
+    [需獵] 《中國哲學十九講》　（中國哲學十九講）
+  ▍唐君毅 (Tang Junyi)  1909–1978
+    [需獵] 《中國文化之精神價值》　（中國文化之精神價值）
+    [需獵] 《生命存在與心靈境界》　（生命存在與心靈境界）
+    [需獵] 《道德自我之建立》　（道德自我之建立）
+  ▍萊奧波爾多‧塞亞 (Leopoldo Zea)  1912–2004
+    [需獵] 《墨西哥的實證主義》　（El positivismo en México）
+    [需獵] 《美洲歷史哲學》　（Filosofía de la historia americana）
+    [需獵] 《作為單純哲學的美洲哲學》　（La filosofía americana como filosofía sin más）
+  ▍卡繆 (Albert Camus)  1913–1960
+    [需獵] 《異鄉人》　（L'Étranger）
+    [需獵] 《薛西弗斯的神話》　（Le Mythe de Sisyphe）
+    [需獵] 《卡里古拉》　（Caligula）
+    [需獵] 《鼠疫》　（La Peste）
+    [需獵] 《反抗者》　（L'Homme révolté）
+    [需獵] 《第一人》　（Le Premier Homme）
+  ▍羅爾斯 (John Rawls)  1921–2002
+    [需獵] 《正義論》　（A Theory of Justice）
+    [需獵] 《政治自由主義》　（Political Liberalism）
+    [需獵] 《萬民法》　（The Law of Peoples）
+    [需獵] 《作為公平的正義：一個重述》　（Justice as Fairness: A Restatement）
+    [需獵] 《道德哲學史講義》　（Lectures on the History of Moral Philosophy）
+  ▍德勒茲 (Gilles Deleuze)  1925–1995
+    [需獵] 《尼采與哲學》　（Nietzsche et la philosophie）
+    [需獵] 《差異與重複》　（Différence et répétition）
+    [需獵] 《反伊底帕斯》　（L'Anti-Œdipe）
+    [需獵] 《千高原》　（Mille plateaux）
+    [需獵] 《電影1：運動-影像》　（Cinéma 1: L'Image-mouvement）
+    [需獵] 《什麼是哲學？》　（Qu'est-ce que la philosophie?）
+  ▍傅柯 (Michel Foucault)  1926–1984
+    [需獵] 《瘋狂與文明》　（Histoire de la folie à l'âge classique）
+    [需獵] 《詞與物》　（Les Mots et les choses）
+    [需獵] 《知識考古學》　（L'Archéologie du savoir）
+    [圖書館已有→可搬全集] 《規訓與懲罰》　（Surveiller et punir）  ← lib:acf454b2 米歇爾·傅柯
+    [需獵] 《性史‧第一卷：求知的意志》　（Histoire de la sexualité I: La Volonté de savoir）
+    [需獵] 《性史‧第二卷：快感的享用》　（Histoire de la sexualité II: L'Usage des plaisirs）
+  ▍哈伯瑪斯 (Jürgen Habermas)  1929– 
+    [需獵] 《公共領域的結構轉型》　（Strukturwandel der Öffentlichkeit）
+    [需獵] 《知識與人類旨趣》　（Erkenntnis und Interesse）
+    [需獵] 《溝通行動理論》　（Theorie des kommunikativen Handelns）
+    [需獵] 《在事實與規範之間》　（Faktizität und Geltung）
+    [需獵] 《人類本性的未來》　（Die Zukunft der menschlichen Natur）
+  ▍德希達 (Jacques Derrida)  1930–2004
+    [需獵] 《論文字學》　（De la grammatologie）
+    [需獵] 《書寫與差異》　（L'écriture et la différence）
+    [需獵] 《言語與現象》　（La voix et le phénomène）
+    [需獵] 《播撒》　（La Dissémination）
+    [需獵] 《馬克思的幽靈》　（Spectres de Marx）
+    [需獵] 《友誼的政治學》　（Politiques de l'amitié）
+  ▍克瓦西‧維雷杜 (Kwasi Wiredu)  1931–2022
+    [需獵] 《文化普遍性與特殊性：一個非洲觀點》　（Cultural Universals and Particulars: An African Perspective）
+    [需獵] 《哲學與非洲文化》　（Philosophy and an African Culture）
+    [需獵] 《非洲哲學指南》　（A Companion to African Philosophy）
+  ▍恩里克‧杜塞爾 (Enrique Dussel)  1934–2023
+    [需獵] 《解放倫理學》　（Ética de la liberación）
+    [需獵] 《掩蓋的1492：現代性的起源神話》　（1492: El encubrimiento del Otro）
+    [需獵] 《政治20論》　（20 tesis de política）
+    [需獵] 《解放哲學》　（Filosofía de la liberación）
+  ▍瑪莎‧納思邦 (Martha Nussbaum)  1947– 
+    [需獵] 《善的脆弱性》　（The Fragility of Goodness）
+    [需獵] 《女性與人類發展：能力取向》　（Women and Human Development: The Capabilities Approach）
+    [需獵] 《思想的劇變：情感的智性》　（Upheavals of Thought: The Intelligence of Emotions）
+    [需獵] 《正義的邊界：身心障礙、民族屬性、種類成員與正義》　（Frontiers of Justice: Disability, Nationality, Species Membership）
+    [需獵] 《培育人性：人文教育改革的古典辯護》　（Cultivating Humanity）
+  ▍夸梅‧安東尼‧阿皮亞 (Kwame Anthony Appiah)  1954–
+    [需獵] 《我父親的房子：文化哲學中的非洲》　（In My Father's House: Africa in the Philosophy of Culture）
+    [需獵] 《世界主義：陌生人世界中的倫理》　（Cosmopolitanism: Ethics in a World of Strangers）
+    [需獵] 《榮譽法則》　（The Honor Code: How Moral Revolutions Happen）
+    [需獵] 《謊言：身份認同的四種思考練習》　（The Lies That Bind: Rethinking Identity）
+  ▍朱迪斯‧巴特勒 (Judith Butler)  1956– 
+    [需獵] 《性別麻煩：女性主義與身分顛覆》　（Gender Trouble: Feminism and the Subversion of Identity）
+    [需獵] 《身體之重：論「性別」的論述限度》　（Bodies That Matter: On the Discursive Limits of "Sex"）
+    [需獵] 《欲望的主體：二十世紀法國的黑格爾式反思》　（Subjects of Desire: Hegelian Reflections in Twentieth-Century France）
+    [需獵] 《危脆生命：哀悼與暴力的力量》　（Precarious Life: The Powers of Mourning and Violence）
+    [需獵] 《戰爭的框架：生命是否哀悼？》　（Frames of War: When Is Life Grievable?）
+  ▍阿希爾‧姆邦貝 (Achille Mbembe)  1957–
+    [需獵] 《殖民地治下》　（De la postcolonie）
+    [需獵] 《黑人理性批判》　（Critique de la raison nègre）
+    [需獵] 《死亡政治》　（Nécropolitique）
+
+═══════════ 宗教學 ═══════════
+  ▍弗里德里希‧馬克斯‧穆勒 (Friedrich Max Müller)  1823–1900
+    [需獵] 《東方聖書（主編）》　（The Sacred Books of the East）
+  ▍雷蒙‧潘尼卡 (Raimon Panikkar)  1918–2010
+    [需獵] 《印度教中未識的基督》　（The Unknown Christ of Hinduism）
+    [圖書館已有→可搬全集] 《神祕：生命的圓滿》　（Mysticism: The Fullness of Life (Opera Omnia I.1)）  ← lib:55555565 雷蒙‧潘尼卡
+    [需獵] 《靈性：生命之道》　（Spirituality: The Way of Life (Opera Omnia I.2)）
+    [需獵] 《宗教與諸宗教》　（Religion and Religions (Opera Omnia II)）
+    [需獵] 《基督宗教：基督宗教傳統》　（Christianity: The Christian Tradition (Opera Omnia III.1)）
+    [需獵] 《基督宗教：基督顯現》　（Christianity: A Christophany (Opera Omnia III.2)）
+    [圖書館已有→可搬全集] 《印度教：吠陀經驗》　（Hinduism: The Vedic Experience (Opera Omnia IV.1)）  ← lib:55555563 雷蒙‧潘尼卡
+    [需獵] 《印度教：印度的達磨》　（Hinduism: The Dharma of India (Opera Omnia IV.2)）
+    [需獵] 《佛教》　（Buddhism (Opera Omnia V)）
+    [需獵] 《文化與宗教的對話：多元論與跨文化性》　（Cultures and Religions in Dialogue: Pluralism and Interculturality (Opera Omnia VI.1)）
+    [需獵] 《文化與宗教的對話：跨文化與宗教間對話》　（Cultures and Religions in Dialogue: Intercultural and Interreligious Dialogue (Opera Omnia VI.2)）
+    [需獵] 《印度教與基督宗教》　（Hinduism and Christianity (Opera Omnia VII)）
+    [需獵] 《三一與宇宙神人共融觀》　（Trinitarian and Cosmotheandric Vision (Opera Omnia VIII)）
+    [需獵] 《奧祕與詮釋學：神話、象徵與禮儀》　（Mystery and Hermeneutics: Myth, Symbol, and Ritual (Opera Omnia IX.1)）
+    [需獵] 《奧祕與詮釋學：信仰、詮釋與道言》　（Mystery and Hermeneutics: Faith, Hermeneutics, and Word (Opera Omnia IX.2)）
+    [需獵] 《哲學與神學（下）》　（Philosophy and Theology — Part Two (Opera Omnia X.2)）
+    [需獵] 《神聖的世俗性》　（Sacred Secularity (Opera Omnia XI)）
+    [需獵] 《空間、時間與科學》　（Space, Time, and Science (Opera Omnia XII)）
+  ▍愛德華‧伯內特‧泰勒 (Edward Burnett Tylor)  1832–1917
+    [需獵] 《人類早期歷史研究》　（Researches into the Early History of Mankind and the Development of Civilization）
+    [需獵] 《原始文化》　（Primitive Culture: Researches into the Development of Mythology, Philosophy, Religion, Art, and Custom）
+    [需獵] 《人類學：人與文明研究導論》　（Anthropology: An Introduction to the Study of Man and Civilization）
+    [需獵] 《論制度發展研究方法及以婚姻與世系法作例證》　（On a Method of Investigating the Development of Institutions; Applied to Laws of Marriage and Descent）
+  ▍威廉‧羅伯遜‧史密斯 (William Robertson Smith)  1846–1894
+    [需獵] 《舊約教會之古今》　（The Old Testament in the Jewish Church）
+    [需獵] 《先知書》　（The Prophets of Israel and Their Place in History）
+    [需獵] 《阿拉伯古代的親屬與婚姻》　（Kinship and Marriage in Early Arabia）
+    [需獵] 《閃族宗教講座》　（Lectures on the Religion of the Semites）
+  ▍珍‧艾倫‧哈里森 (Jane Ellen Harrison)  1850–1928
+    [需獵] 《希臘宗教研究導論》　（Prolegomena to the Study of Greek Religion）
+    [需獵] 《忒彌斯：希臘宗教社會起源研究》　（Themis: A Study of the Social Origins of Greek Religion）
+    [需獵] 《古代藝術與儀式》　（Ancient Art and Ritual）
+    [需獵] 《一位工作學者的回憶》　（Reminiscences of a Student's Life）
+  ▍詹姆斯‧喬治‧弗雷澤 (James George Frazer)  1854–1941
+    [需獵] 《圖騰崇拜》　（Totemism）
+    [需獵] 《金枝：巫術與宗教之研究》　（The Golden Bough: A Study in Magic and Religion）
+    [需獵] 《舊約中的民俗：宗教、律法與風俗之比較研究》　（Folk-Lore in the Old Testament: Studies in Comparative Religion, Legend and Law）
+    [需獵] 《不朽的信仰與對亡者的崇拜》　（The Belief in Immortality and the Worship of the Dead）
+    [需獵] 《金枝（通俗刪節本）》　（The Golden Bough: A Study in Magic and Religion (abridged edition)）
+  ▍納坦‧瑟德布盧姆 (Nathan Söderblom)  1866–1931
+    [需獵] 《祆教末世論》　（La Vie Future d'après le Mazdéisme）
+    [需獵] 《宗教問題》　（Religionsproblemet）
+    [需獵] 《神觀的起源》　（Gudstrons uppkomst）
+    [需獵] 《活的上帝：位格宗教的基本形式》　（The Living God: Basal Forms of Personal Religion）
+  ▍魯道夫‧奧托 (Rudolf Otto)  1869–1937
+    [需獵] 《論「聖」：對神聖觀念中非理性因素的研究,及其與理性之關係》　（Das Heilige: Über das Irrationale in der Idee des Göttlichen und sein Verhältnis zum Rationalen）
+    [需獵] 《康德-弗里斯學派的宗教哲學及其與神學之關係》　（Kantisch-Fries'sche Religionsphilosophie）
+    [需獵] 《東西方的神祕主義：商羯羅與艾克哈特之比較》　（West-östliche Mystik: Vergleich und Unterscheidung zur Wesensdeutung）
+    [需獵] 《印度的恩典宗教與基督教之比較》　（Die Gnadenreligion Indiens und das Christentum）
+  ▍傑拉杜斯‧范德列烏 (Gerardus van der Leeuw)  1890–1950
+    [需獵] 《古埃及金字塔文獻中的神觀》　（Godsvoorstellingen in de oud-Aegyptische Pyramidetexten）
+    [需獵] 《宗教的本質與表現》　（Phänomenologie der Religion）
+    [需獵] 《原始人與宗教》　（De primitieve mensch en de religie）
+    [需獵] 《神聖之美：藝術中的神聖者》　（Sacred and Profane Beauty: The Holy in Art）
+  ▍約阿希姆‧瓦赫 (Joachim Wach)  1898–1955
+    [需獵] 《宗教學：其任務史概述》　（Religionswissenschaft: Prolegomena zu ihrer wissenschaftstheoretischen Grundlegung）
+    [需獵] 《理解：十九世紀詮釋學理論史綱要》　（Das Verstehen: Grundzüge einer Geschichte der hermeneutischen Theorie im 19. Jahrhundert）
+    [需獵] 《宗教社會學》　（Sociology of Religion）
+    [需獵] 《宗教經驗諸類型：基督教與非基督教》　（Types of Religious Experience: Christian and Non-Christian）
+    [需獵] 《比較宗教學》　（The Comparative Study of Religions）
+  ▍喬治‧杜梅齊爾 (Georges Dumézil)  1898–1986
+    [需獵] 《朱庇特‧瑪爾斯‧奎里努斯》　（Jupiter, Mars, Quirinus）
+    [需獵] 《米特拉-伐樓拿：印歐主權雙極本質研究》　（Mitra-Varuna: Essai sur deux représentations indo-européennes de la souveraineté）
+    [需獵] 《印歐人的神祇》　（Les Dieux des Indo-Européens）
+    [需獵] 《神話與史詩》　（Mythe et épopée）
+    [需獵] 《諸神的命運》　（Les Dieux souverains des Indo-Européens）
+  ▍米爾恰‧伊利亞德 (Mircea Eliade)  1907–1986
+    [需獵] 《瑜伽：不朽與自由》　（Le Yoga: Immortalité et liberté）
+    [需獵] 《永恆回歸的神話》　（Le Mythe de l'éternel retour: archétypes et répétition）
+    [需獵] 《宗教型態學》　（Traité d'histoire des religions）
+    [需獵] 《薩滿教：古老的出神技術》　（Le Chamanisme et les techniques archaïques de l'extase）
+    [需獵] 《聖與俗：宗教的本質》　（Das Heilige und das Profane: Vom Wesen des Religiösen）
+    [需獵] 《宗教百科全書（主編）》　（The Encyclopedia of Religion）
+  ▍中村元 (Hajime Nakamura)  1912–1999
+    [需獵] 《東方民族的思維方法》　（東洋人の思惟方法）
+    [需獵] 《印度思想史》　（インド思想史）
+    [需獵] 《原始佛教：其思想與生活》　（原始仏教――その思想と生活）
+    [需獵] 《佛陀的世界》　（ゴータマ‧ブッダ）
+    [需獵] 《慈悲》　（慈悲）
+  ▍井筒俊彦 (Toshihiko Izutsu)  1914–1993
+    [需獵] 《阿拉伯思想史》　（アラビア思想史）
+    [需獵] 《古蘭經中的神觀與人觀》　（God and Man in the Koran: Semantics of the Koranic Weltanschauung）
+    [需獵] 《蘇菲主義與道家：比較哲學結構之研究》　（Sufism and Taoism: A Comparative Study of Key Philosophical Concepts）
+    [需獵] 《意識與本質：探尋精神性東洋的共時性》　（意識と本質——精神的東洋を索めて）
+    [需獵] 《伊斯蘭哲學的原像》　（イスラーム哲学の原像）
+  ▍韋弗雷‧坎特維爾‧史密斯 (Wilfred Cantwell Smith)  1916–2000
+    [需獵] 《現代世界中的伊斯蘭》　（Modern Islam in India: A Social Analysis）
+    [需獵] 《宗教的意義與終結》　（The Meaning and End of Religion）
+    [需獵] 《宗教的多樣性：比較宗教學導論》　（The Faith of Other Men）
+    [需獵] 《信仰與信念》　（Faith and Belief）
+    [需獵] 《邁向世界神學：信仰與宗教傳統之比較史》　（Towards a World Theology: Faith and the Comparative History of Religion）
+  ▍喬納森‧Z‧史密斯 (Jonathan Z. Smith)  1938–2017
+    [需獵] 《地圖不等於疆域：宗教史論文集》　（Map Is Not Territory: Studies in the History of Religions）
+    [需獵] 《想像宗教：從巴比倫到瓊斯鎮》　（Imagining Religion: From Babylon to Jonestown）
+    [需獵] 《得其所哉：儀式中心的理論》　（To Take Place: Toward Theory in Ritual）
+    [需獵] 《神聖的褻瀆：早期基督教與晚期古代宗教之比較》　（Drudgery Divine: On the Comparison of Early Christianities and the Religions of Late Antiquity）
+    [需獵] 《關聯宗教：宗教研究論文集》　（Relating Religion: Essays in the Study of Religion）
+  ▍溫蒂‧多尼格 (Wendy Doniger)  1940–
+    [需獵] 《印度教神話中的邪惡起源》　（The Origins of Evil in Hindu Mythology）
+    [需獵] 《濕婆的苦行與情慾》　（Śiva: The Erotic Ascetic）
+    [需獵] 《印度教神話中的女性、雄性與雙性》　（Women, Androgynes, and Other Mythical Beasts）
+    [需獵] 《破鏡：神話比較研究論》　（The Implied Spider: Politics and Theology in Myth）
+    [需獵] 《印度教：另類的歷史》　（The Hindus: An Alternative History）
+
+═══════════ 宗教社會學 ═══════════
+  ▍涂爾幹 (Émile Durkheim)  1858–1917
+    [需獵] 《社會分工論》　（De la division du travail social）
+    [需獵] 《社會學方法的規則》　（Les Règles de la méthode sociologique）
+    [需獵] 《自殺論》　（Le Suicide: étude de sociologie）
+    [需獵] 《宗教生活的基本形式》　（Les Formes élémentaires de la vie religieuse）
+    [需獵] 《原始分類法》　（De quelques formes primitives de classification）
+    [需獵] 《道德教育》　（L'Éducation morale）
+  ▍齊美爾 (Georg Simmel)  1858–1918
+    [需獵] 《貨幣哲學》　（Philosophie des Geldes）
+    [需獵] 《宗教社會學》　（Die Religion）
+    [需獵] 《社會學：關於社會化形式的研究》　（Soziologie: Untersuchungen über die Formen der Vergesellschaftung）
+    [需獵] 《大都市與精神生活》　（Die Großstädte und das Geistesleben）
+    [需獵] 《陌生人》　（Exkurs über den Fremden）
+  ▍韋伯 (Max Weber)  1864–1920
+    [需獵] 《古猶太教》　（Das antike Judentum）
+    [需獵] 《經濟與社會》　（Wirtschaft und Gesellschaft）
+    [需獵] 《政治作為一種志業》　（Politik als Beruf）
+  ▍特洛爾奇 (Ernst Troeltsch)  1865–1923
+    [需獵] 《基督教會與團體的社會學說》　（Die Soziallehren der christlichen Kirchen und Gruppen）
+    [需獵] 《基督教的絕對性與宗教史》　（Die Absolutheit des Christentums und die Religionsgeschichte）
+    [需獵] 《歷史主義及其問題》　（Der Historismus und seine Probleme）
+    [需獵] 《新教教義史》　（Glaubenslehre）
+  ▍瑪麗‧道格拉斯 (Mary Douglas)  1921–2007
+    [需獵] 《純潔與危險》　（Purity and Danger: An Analysis of Concepts of Pollution and Taboo）
+    [需獵] 《自然的象徵》　（Natural Symbols: Explorations in Cosmology）
+    [需獵] 《風險與文化》　（Risk and Culture）
+    [需獵] 《在荒野中被拋棄》　（In the Wilderness: The Doctrine of Defilement in the Book of Numbers）
+    [需獵] 《利未記作為文學》　（Leviticus as Literature）
+  ▍布萊恩‧威爾遜 (Bryan R. Wilson)  1926–2004
+    [需獵] 《宗教在世俗社會》　（Religion in Secular Society）
+    [需獵] 《賤民聖徒》　（Sects and Society）
+    [需獵] 《宗教教派：一項社會學研究》　（Religious Sects: A Sociological Study）
+    [需獵] 《魔法與千禧年》　（Magic and the Millennium）
+    [需獵] 《世界的宗教運動邊緣》　（The Social Dimensions of Sectarianism）
+  ▍托馬斯‧盧克曼 (Thomas Luckmann)  1927–2016
+    [需獵] 《無形的宗教》　（The Invisible Religion: The Problem of Religion in Modern Society）
+    [需獵] 《社會實體的建構》　（The Social Construction of Reality）
+    [需獵] 《生活世界的結構》　（Die Strukturen der Lebenswelt）
+    [需獵] 《知識與社會論文集》　（Wissen und Gesellschaft: Ausgewählte Aufsätze 1981–2002）
+  ▍羅伯特‧貝拉 (Robert N. Bellah)  1927–2013
+    [需獵] 《德川宗教》　（Tokugawa Religion）
+    [需獵] 《美國的公民宗教》　（Civil Religion in America）
+    [需獵] 《心之習性》　（Habits of the Heart）
+    [需獵] 《善的習性》　（The Good Society）
+    [需獵] 《人類演化中的宗教》　（Religion in Human Evolution）
+  ▍彼得‧伯格 (Peter L. Berger)  1929–2017
+    [需獵] 《社會實體的建構》　（The Social Construction of Reality）
+    [需獵] 《神聖的帷幕》　（The Sacred Canopy）
+    [需獵] 《天使的傳言》　（A Rumor of Angels）
+    [需獵] 《世界的去世俗化》　（The Desecularization of the World）
+    [需獵] 《多元的祝福》　（The Many Altars of Modernity）
+  ▍大衛‧馬丁 (David Martin)  1929–2019
+    [需獵] 《世俗化通論》　（A General Theory of Secularization）
+    [需獵] 《叢林中的舌音》　（Tongues of Fire: The Explosion of Protestantism in Latin America）
+    [需獵] 《五旬節運動：拉美與其後的社會與宗教變遷》　（Pentecostalism: The World Their Parish）
+    [需獵] 《世俗化理論再修訂》　（On Secularization: Towards a Revised General Theory）
+  ▍塔拉爾‧阿薩德 (Talal Asad)  1932– 
+    [需獵] 《宗教的系譜》　（Genealogies of Religion: Discipline and Reasons of Power in Christianity and Islam）
+    [需獵] 《世俗的形構》　（Formations of the Secular: Christianity, Islam, Modernity）
+    [需獵] 《人類學家眼中的殖民接觸》　（Anthropology & the Colonial Encounter）
+    [需獵] 《論自殺炸彈》　（On Suicide Bombing）
+    [需獵] 《世俗的翻譯》　（Secular Translations: Nation-State, Modern Self, and Calculative Reason）
+  ▍羅德尼‧斯塔克 (Rodney Stark)  1934–2022
+    [需獵] 《基督教的興起》　（The Rise of Christianity）
+    [需獵] 《宗教的未來》　（The Future of Religion）
+    [需獵] 《美國宗教教會化》　（The Churching of America, 1776–1990）
+    [需獵] 《信仰的行動》　（Acts of Faith）
+    [需獵] 《一神信仰的勝利》　（One True God: Historical Consequences of Monotheism）
+  ▍格蕾絲‧戴維 (Grace Davie)  1946– 
+    [需獵] 《英國的宗教：信而不屬》　（Religion in Britain since 1945: Believing without Belonging）
+    [需獵] 《歐洲的宗教：一部異例》　（Religion in Modern Europe: A Memory Mutates）
+    [需獵] 《歐洲：例外的個案？》　（Europe: The Exceptional Case: Parameters of Faith in the Modern World）
+    [需獵] 《歐洲的宗教景況：代理式宗教的興衰》　（The Sociology of Religion in Europe: Making Sense of Modernity）
+    [需獵] 《全球視野下的宗教社會學》　（The Sociology of Religion: A Critical Agenda）
+  ▍羅伯特‧伍斯諾 (Robert Wuthnow)  1946– 
+    [需獵] 《意識的重構》　（The Consciousness Reformation）
+    [需獵] 《分享的美德》　（Acts of Compassion: Caring for Others and Helping Ourselves）
+    [需獵] 《上帝與瑪門在美國》　（God and Mammon in America）
+    [需獵] 《鬆散連結的自我》　（Loose Connections: Joining Together in America's Fragmented Communities）
+    [需獵] 《小鎮美國》　（Small-Town America: Finding Community, Shaping the Future）
+  ▍何塞‧卡薩諾瓦 (José Casanova)  1951– 
+    [需獵] 《現代世界中的公共宗教》　（Public Religions in the Modern World）
+    [需獵] 《全球宗教與世俗動力》　（Global Religious and Secular Dynamics: The Modern System of Classification）
+    [需獵] 《歐洲，例外的個案？》　（Europe: The Exceptional Case?）
+
+═══════════ 神學 ═══════════
+  ▍特土良 (Tertullian)  約 155–220
+    [需獵] 《護教篇》　（Apologeticum）
+    [需獵] 《駁異端者的抗辯》　（De Praescriptione Haereticorum）
+    [需獵] 《駁普拉克西亞》　（Adversus Praxean）
+    [需獵] 《論靈魂》　（De Anima）
+    [需獵] 《論洗禮》　（De Baptismo）
+  ▍俄利根 (Origen)  約 184–253
+    [需獵] 《論本原》　（Περὶ Ἀρχῶν）
+    [需獵] 《六文本合璧》　（Hexapla）
+    [需獵] 《駁塞爾修》　（Κατὰ Κέλσου）
+    [需獵] 《約翰福音注釋》　（Commentarii in Iohannem）
+    [需獵] 《論祈禱》　（Περὶ Εὐχῆς）
+  ▍居普良 (Cyprian of Carthage)  約 200–258
+    [需獵] 《論大公教會的合一》　（De Unitate Ecclesiae Catholicae）
+    [需獵] 《論背教者》　（De Lapsis）
+    [需獵] 《論主禱文》　（De Dominica Oratione）
+    [需獵] 《論死亡》　（De Mortalitate）
+    [需獵] 《書信集》　（Epistulae）
+  ▍啟蒙者聖額我略 (Gregory the Illuminator)  約257–331
+    [需獵] 《聖額我略的教導》　（Vardapetut'iwn (The Teaching of St. Gregory)）
+    [需獵] 《亞美尼亞史（額我略生平史料）》　（Agathangelos, Patmut'iwn Hayots'）
+  ▍亞他那修 (Athanasius)  約 296–373
+    [需獵] 《論道成肉身》　（Περὶ τῆς Ἐνανθρωπήσεως τοῦ Λόγου）
+    [需獵] 《駁亞流派講辭》　（Λόγοι κατὰ Ἀρειανῶν）
+    [需獵] 《安東尼傳》　（Βίος καὶ Πολιτεία τοῦ Ἀντωνίου）
+    [需獵] 《第 39 封復活節牧函》　（Epistula Festalis XXXIX）
+  ▍敘利亞的以法蓮 (Ephrem the Syrian)  約 306–373
+    [需獵] 《天堂讚美詩》　（ܡܕܪ̈ܫܐ ܥܠ ܦܪܕܝܣܐ (Madrashe 'al Pardaysa)）
+    [需獵] 《駁異端讚美詩》　（ܡܕܪ̈ܫܐ ܥܠ ܗܪ̈ܣܝܣ (Madrashe 'al Herese)）
+    [需獵] 《尼西比斯讚美詩》　（ܡܕܪ̈ܫܐ ܢܨܝ̈ܒܝܢܝܐ (Madrashe Nisibene)）
+    [需獵] 《四福音合參注釋》　（ܦܘܫܩܐ ܕܕܝܐܛܣܪܘܢ (Pushaqa d-Diatessaron)）
+  ▍拿先斯的貴格利 (Gregory of Nazianzus)  329–390
+    [需獵] 《五篇神學講辭》　（Λόγοι Θεολογικοί）
+    [需獵] 《論己身》　（Περὶ τοῦ ἰδίου βίου）
+    [需獵] 《詩集》　（Carmina）
+    [需獵] 《書信集》　（Epistulae）
+  ▍該撒利亞的巴西流 (Basil the Great)  330–379
+    [需獵] 《修道大規與小規》　（Regulae Fusius Tractatae / Regulae Brevius Tractatae）
+    [需獵] 《論聖靈》　（Περὶ τοῦ Ἁγίου Πνεύματος）
+    [需獵] 《六日創造講道集》　（Ὁμιλίαι εἰς τὴν Ἑξαήμερον）
+    [需獵] 《書信集》　（Epistulae）
+  ▍尼撒的貴格利 (Gregory of Nyssa)  約 335–395
+    [需獵] 《摩西的生平》　（Περὶ τοῦ βίου Μωϋσέως）
+    [需獵] 《駁攸諾米》　（Κατὰ Εὐνομίου）
+    [需獵] 《大要理問答》　（Λόγος Κατηχητικὸς ὁ Μέγας）
+    [需獵] 《雅歌講道集》　（In Canticum Canticorum Homiliae）
+  ▍安波羅修 (Ambrose)  339–397
+    [需獵] 《論聖職人員之責》　（De Officiis Ministrorum）
+    [需獵] 《論信仰》　（De Fide (ad Gratianum Augustum)）
+    [需獵] 《六日創造論》　（Hexaemeron）
+    [需獵] 《論奧秘》　（De Mysteriis）
+    [需獵] 《聖詩集》　（Hymni (含 Veni Redemptor Gentium、Aeterne rerum conditor)）
+  ▍金口約翰 (John Chrysostom)  約 347–407
+    [需獵] 《馬太福音講道集》　（Homiliae in Matthaeum）
+    [需獵] 《論司祭職》　（Περὶ Ἱερωσύνης）
+    [需獵] 《羅馬書講道集》　（Homiliae in Epistulam ad Romanos）
+    [需獵] 《聖金口約翰事奉聖禮（傳統歸於名下）》　（Θεία Λειτουργία τοῦ Ἁγίου Ἰωάννου τοῦ Χρυσοστόμου）
+    [需獵] 《致奧林匹雅書信集》　（Epistulae ad Olympiadem）
+  ▍耶柔米 (Jerome)  347–420
+    [需獵] 《拉丁通俗譯本（武加大譯本）》　（Vulgata）
+    [需獵] 《名人傳》　（De Viris Illustribus）
+    [需獵] 《先知書注釋集》　（Commentarii in Prophetas）
+    [需獵] 《駁約維年》　（Adversus Jovinianum）
+    [需獵] 《隱修聖徒傳三種》　（Vita Pauli、Vita Malchi、Vita Hilarionis）
+  ▍奧古斯丁 (Augustine of Hippo)  354–430
+    [需獵] 《懺悔錄》　（Confessiones）
+    [圖書館已有→可搬全集] 《上帝之城》　（De Civitate Dei contra Paganos）  ← lib:15b729dc 奧古斯丁
+    [需獵] 《論三一》　（De Trinitate）
+    [需獵] 《論基督教教義》　（De Doctrina Christiana）
+    [需獵] 《手冊：論信望愛》　（Enchiridion ad Laurentium de Fide, Spe et Caritate）
+    [需獵] 《論自由意志》　（De Libero Arbitrio）
+    [需獵] 《訂正錄》　（Retractationes）
+  ▍馬布格的腓羅森奴 (Philoxenus of Mabbug)  約440–523
+    [需獵] 《論信德十三講》　（Discourses (Memre on Faith and Christian Life)）
+    [需獵] 《駁聶斯脫里與迦克墩基督論文集》　（Against the Nestorians and Chalcedonians）
+    [需獵] 《腓羅森奴版新約（敘利亞文修訂本）》　（Philoxenian Version）
+    [需獵] 《致艾德莎／塞農修士信函》　（Letter to the Monks of Senoun）
+  ▍瑟魯格的雅各 (Jacob of Serugh)  約451–521
+    [需獵] 《論創世六日》　（Memra on the Six Days of Creation）
+    [需獵] 《論聖母瑪利亞講道集》　（Memre on the Mother of God）
+    [需獵] 《論信德及基督論講道集》　（Memre on Faith）
+    [需獵] 《頌聖以弗冷講道詞》　（Memra in Praise of Mar Ephrem）
+  ▍大貴格利 (Gregory the Great)  約 540–604
+    [需獵] 《教牧法規》　（Regula Pastoralis）
+    [需獵] 《約伯記倫理》　（Moralia in Job）
+    [需獵] 《對話錄》　（Dialogi）
+    [需獵] 《書信集》　（Registrum Epistularum）
+  ▍篤信者馬克西姆 (Maximus the Confessor)  約 580–662
+    [需獵] 《疑難解》　（Ἄπορα (Ambigua)）
+    [需獵] 《奧秘引導論》　（Μυσταγωγία）
+    [需獵] 《論愛百章》　（Κεφάλαια περὶ Ἀγάπης）
+    [需獵] 《與皮爾胡辯論錄》　（Disputatio cum Pyrrho）
+  ▍大馬士革的約翰 (John of Damascus)  約 675–749
+    [需獵] 《知識之源（辯證法、異端概要、正統信仰詳論）》　（Πηγὴ Γνώσεως）
+    [需獵] 《駁毀謗聖像三論》　（Λόγοι Ἀπολογητικοὶ πρὸς τοὺς Διαβάλλοντας τὰς Ἁγίας Εἰκόνας）
+    [需獵] 《教會頌歌集（含復活節金口頌）》　（Κανόνες）
+  ▍納雷克的聖額我略 (Gregory of Narek)  951–1003
+    [需獵] 《哀歌書（納雷克祈禱書）》　（Մատեան Ողբերգութեան (Matean Voghbergut'ean)）
+    [需獵] 《雅歌註釋》　（Commentary on the Song of Songs）
+    [需獵] 《禮儀讚美詩（沙拉坎）》　（Sharakans attributed to Narekatsi）
+  ▍明谷的伯爾納鐸 (Bernard of Clairvaux)  1090–1153
+    [需獵] 《雅歌講道集》　（Sermones super Cantica Canticorum）
+    [需獵] 《論愛神》　（De Diligendo Deo）
+    [需獵] 《論恩典與自由意志》　（De Gratia et Libero Arbitrio）
+    [需獵] 《沉思錄（呈教宗尤金三世）》　（De Consideratione）
+  ▍賓根的希爾德加德 (Hildegard of Bingen)  1098–1179
+    [需獵] 《認識道路》　（Scivias）
+    [需獵] 《天主作為之書》　（Liber Divinorum Operum）
+    [需獵] 《功過之書》　（Liber Vitae Meritorum）
+    [需獵] 《自然物理誌》　（Physica）
+    [需獵] 《天界啟示交響曲（含《德性劇》）》　（Symphonia Armonie Celestium Revelationum / Ordo Virtutum）
+  ▍巴爾‧希伯來 (Bar Hebraeus)  1226–1286
+    [需獵] 《編年史》　（Maktbanuth Zabne）
+    [需獵] 《隱秘寶藏（聖經註釋）》　（Awsar Raze）
+    [需獵] 《教規彙編》　（Nomocanon）
+    [需獵] 《鴿子之書》　（Kthobo d-Yauno）
+    [需獵] 《智慧之奶（哲學菁華）》　（Hewath Hekhmta）
+  ▍諾里奇的朱利安 (Julian of Norwich)  約 1342–1416 後
+    [需獵] 《神愛的啟示‧短本》　（A Vision Showed to a Devout Woman (Short Text)）
+    [需獵] 《神愛的啟示‧長本》　（A Revelation of Love (Long Text)）
+  ▍札拉‧雅各 (Zara Yaqob (Zär'a Ya'əqob))  1399–1468
+    [需獵] 《光明書》　（Maṣḥafa Berhān (መጽሐፈ ብርሃን)）
+    [需獵] 《誕生書》　（Maṣḥafa Milad (መጽሐፈ ልደት)）
+  ▍馬丁‧路德 (Martin Luther)  1483–1546
+    [需獵] 《九十五條論綱》　（Disputatio pro Declaratione Virtutis Indulgentiarum）
+    [需獵] 《論意志的捆綁》　（De Servo Arbitrio）
+    [需獵] 《德文聖經全譯本》　（Die Bibel (Luther-Übersetzung)）
+    [需獵] 《小要理問答／大要理問答》　（Der kleine Katechismus / Der große Katechismus）
+    [需獵] 《基督徒的自由》　（Von der Freiheit eines Christenmenschen）
+    [需獵] 《堅固保障》　（Ein feste Burg ist unser Gott）
+  ▍慈運理 (Huldrych Zwingli)  1484–1531
+    [需獵] 《六十七條論綱》　（Uslegen und Grund der Schlussreden (Sechsundsechzig Schlussreden)）
+    [需獵] 《論真假宗教述評》　（Commentarius de Vera et Falsa Religione）
+    [需獵] 《信仰答辯》　（Fidei Ratio）
+  ▍門諾‧西門斯 (Menno Simons)  1496–1561
+    [需獵] 《基督教教義根基》　（Dat Fundament des Christelycken leers）
+    [需獵] 《真實基督信仰》　（Van het Rechte Christen Geloove）
+    [需獵] 《論新造的人》　（Van de Nieuwe Creature）
+    [需獵] 《駁虛假指控書》　（Reply to False Accusations）
+  ▍菲利普‧墨蘭頓 (Philip Melanchthon)  1497–1560
+    [需獵] 《神學要目》　（Loci Communes Rerum Theologicarum）
+    [需獵] 《奧斯堡信條》　（Confessio Augustana）
+    [需獵] 《奧斯堡信條護教書》　（Apologia Confessionis Augustanae）
+    [需獵] 《人文教育改革著作集》　（De Rhetorica 等教育改革論著）
+  ▍約翰‧加爾文 (John Calvin)  1509–1564
+    [需獵] 《基督教要義》　（Institutio Christianae Religionis）
+    [需獵] 《聖經註釋集（幾乎全卷）》　（Commentarii in Sacram Scripturam）
+    [需獵] 《教會法規》　（Ordonnances Ecclésiastiques）
+  ▍阿維拉的德蘭 (Teresa of Ávila)  1515–1582
+    [需獵] 《生命之書（自傳）》　（Libro de la Vida）
+    [需獵] 《靈心城堡》　（Las Moradas del Castillo Interior）
+    [需獵] 《成全之路》　（Camino de Perfección）
+    [需獵] 《建院記》　（Libro de las Fundaciones）
+  ▍十字若望 (John of the Cross)  1542–1591
+    [需獵] 《攀登加爾默羅山》　（Subida del Monte Carmelo）
+    [需獵] 《心靈的黑夜》　（Noche Oscura del Alma）
+    [需獵] 《靈歌》　（Cántico Espiritual）
+    [需獵] 《愛的活焰》　（Llama de Amor Viva）
+  ▍理查‧胡克 (Richard Hooker)  1554–1600
+    [需獵] 《教會體制法論（前四卷）》　（Of the Laws of Ecclesiastical Polity, Books I–IV）
+    [需獵] 《教會體制法論‧卷五》　（Of the Laws of Ecclesiastical Polity, Book V）
+    [需獵] 《教會體制法論‧卷六至八》　（Of the Laws of Ecclesiastical Polity, Books VI–VIII）
+    [需獵] 《因信稱義講章》　（A Learned Discourse of Justification）
+  ▍亞米念 (Jacobus Arminius)  1560–1609
+    [需獵] 《公開與私下論辯集》　（Disputationes Publicae et Privatae）
+    [需獵] 《立場宣言》　（Declaratio Sententiae）
+    [需獵] 《駁珀金斯論預定》　（Examen Praedestinationis Perkinsianae）
+  ▍喬治‧福克斯 (George Fox)  1624–1691
+    [需獵] 《喬治‧福克斯日記》　（The Journal of George Fox）
+    [需獵] 《大奧祕：大淫婦之揭露》　（The Great Mystery of the Great Whore Unfolded）
+    [需獵] 《福音真理之證》　（Gospel Truth Demonstrated）
+    [需獵] 《福克斯書信集》　（Epistles of George Fox）
+  ▍喬納森‧愛德華茲 (Jonathan Edwards)  1703–1758
+    [需獵] 《罪人在忿怒之神手中》　（Sinners in the Hands of an Angry God）
+    [需獵] 《論宗教情感》　（A Treatise Concerning Religious Affections）
+    [需獵] 《論意志的自由》　（A Careful and Strict Enquiry into the Freedom of the Will）
+    [需獵] 《驚人神工紀實》　（A Faithful Narrative of the Surprising Work of God）
+    [需獵] 《上帝創造世界的目的》　（The End for Which God Created the World）
+  ▍約翰‧衛斯理 (John Wesley)  1703–1791
+    [需獵] 《數種場合講道集》　（Sermons on Several Occasions）
+    [需獵] 《新約聖經註釋》　（Explanatory Notes Upon the New Testament）
+    [需獵] 《基督徒完全淺釋》　（A Plain Account of Christian Perfection）
+    [需獵] 《約翰‧衛斯理日記》　（The Journal of John Wesley）
+    [需獵] 《循道派聖詩選集》　（A Collection of Hymns for the Use of the People Called Methodists）
+  ▍查理‧衛斯理 (Charles Wesley)  1707–1788
+    [需獵] 《聖詩與聖詩集》　（Hymns and Sacred Poems）
+    [需獵] 《主降生聖詩》　（Hymns for the Nativity of Our Lord）
+    [需獵] 《聖靈應許祈願感恩詩》　（Hymns of Petition and Thanksgiving for the Promise of the Father）
+    [需獵] 《查理‧衛斯理日記》　（The Journal of Charles Wesley）
+    [需獵] 《聖餐聖詩》　（Hymns on the Lord's Supper）
+  ▍士萊馬赫 (Friedrich Schleiermacher)  1768–1834
+    [需獵] 《論宗教：對蔑視宗教的有教養者演講》　（Über die Religion: Reden an die Gebildeten unter ihren Verächtern）
+    [需獵] 《基督教信仰論》　（Der christliche Glaube）
+    [需獵] 《神學研究綱要》　（Kurze Darstellung des theologischen Studiums）
+    [需獵] 《詮釋學與批判講稿》　（Hermeneutik und Kritik）
+    [需獵] 《柏拉圖著作德譯》　（Platons Werke）
+  ▍約翰‧亨利‧紐曼 (John Henry Newman)  1801–1890
+    [需獵] 《時代論冊第 90 號》　（Tract 90 (Tracts for the Times)）
+    [需獵] 《論基督教教義的發展》　（An Essay on the Development of Christian Doctrine）
+    [需獵] 《為吾生辯》　（Apologia Pro Vita Sua）
+    [需獵] 《大學的理念》　（The Idea of a University）
+    [需獵] 《贊同的文法》　（An Essay in Aid of a Grammar of Assent）
+  ▍立敕爾 (Albrecht Ritschl)  1822–1889
+    [需獵] 《稱義與和好的基督教教義》　（Die christliche Lehre von der Rechtfertigung und Versöhnung）
+    [需獵] 《古公教會的形成》　（Die Entstehung der altkatholischen Kirche）
+    [需獵] 《敬虔主義史》　（Geschichte des Pietismus）
+    [需獵] 《基督教要理教程》　（Unterricht in der christlichen Religion）
+  ▍哈納克 (Adolf von Harnack)  1851–1930
+    [需獵] 《教義史教本》　（Lehrbuch der Dogmengeschichte）
+    [需獵] 《基督教的本質》　（Das Wesen des Christentums）
+    [需獵] 《初代基督教文獻年代考》　（Die Chronologie der altchristlichen Litteratur bis Eusebius）
+    [需獵] 《馬吉安：陌生上帝的福音》　（Marcion: Das Evangelium vom fremden Gott）
+    [需獵] 《基督教的宣教與擴張》　（Die Mission und Ausbreitung des Christentums in den ersten drei Jahrhunderten）
+  ▍內村鑑三 (Uchimura Kanzō)  1861–1930
+    [需獵] 《求安錄》　（求安録）
+    [需獵] 《我如何成為基督徒》　（余は如何にして基督信徒となりし乎 / How I Became a Christian: Out of My Diary）
+    [需獵] 《代表的日本人》　（Representative Men of Japan / 代表的日本人）
+    [需獵] 《一日一生》　（一日一生）
+    [需獵] 《聖書之研究（雜誌）》　（聖書之研究）
+    [需獵] 《羅馬書之研究》　（ロマ書の研究）
+  ▍威廉‧西摩 (William J. Seymour)  1870–1922
+    [需獵] 《使徒信仰報》　（The Apostolic Faith）
+    [需獵] 《阿蘇薩街使徒信心會教義與紀律》　（The Doctrines and Discipline of the Azusa Street Apostolic Faith Mission）
+  ▍謝爾蓋‧布爾加科夫 (Sergei Bulgakov)  1871–1944
+    [需獵] 《不昏暗的光》　（Свет Невечерний）
+    [需獵] 《上帝的羔羊》　（Агнец Божий）
+    [需獵] 《施慰者》　（Утешитель）
+    [需獵] 《羔羊的新娘》　（Невеста Агнца）
+    [需獵] 《上帝的智慧：索菲亞學述要》　（Sophia, the Wisdom of God）
+  ▍德日進 (Pierre Teilhard de Chardin)  1881–1955
+    [需獵] 《人的現象》　（Le Phénomène Humain）
+    [需獵] 《神的氛圍》　（Le Milieu Divin）
+    [需獵] 《人的能量》　（L'Énergie humaine）
+    [需獵] 《我如何相信》　（Comment je crois）
+  ▍威廉‧田普 (William Temple)  1881–1944
+    [需獵] 《自然‧人與神》　（Nature, Man and God）
+    [需獵] 《基督教與社會秩序》　（Christianity and Social Order）
+    [需獵] 《約翰福音釋讀》　（Readings in St John's Gospel）
+    [需獵] 《基督即真理》　（Christus Veritas）
+    [需獵] 《創造之心》　（Mens Creatrix）
+  ▍畔上賢造 (Azegami Kenzō)  1884–1938
+    [需獵] 《宗教詩人白朗寧》　（宗教詩人としてのブラウニング）
+    [需獵] 《日本聖書雜誌（個人誌）》　（日本聖書雑誌）
+    [需獵] 《畔上賢造著作集（全 12 卷）》　（畔上賢造著作集）
+  ▍魯道夫‧布特曼 (Rudolf Bultmann)  1884–1976
+    [需獵] 《符類福音傳統史》　（Die Geschichte der synoptischen Tradition）
+    [需獵] 《耶穌》　（Jesus）
+    [需獵] 《新約與神話》　（Neues Testament und Mythologie）
+    [需獵] 《約翰福音注釋》　（Das Evangelium des Johannes）
+    [需獵] 《新約神學》　（Theologie des Neuen Testaments）
+  ▍塚本虎二 (Tsukamoto Torazi)  1885–1973
+    [需獵] 《聖書知識（個人誌）》　（聖書知識）
+    [需獵] 《新約聖書 福音書（口語譯）》　（新約聖書　福音書）
+    [需獵] 《塚本虎二譯新約聖書（歿後全卷本）》　（塚本虎二訳新約聖書）
+  ▍黒崎幸吉 (Kurosaki Kōkichi)  1886–1970
+    [需獵] 《註解新約聖書（全卷）》　（註解新約聖書）
+    [需獵] 《永遠的生命（個人誌）》　（永遠の生命）
+    [需獵] 《路德加拉太書註解（譯）》　（ルーテル加拉太書註解）
+  ▍卡爾‧巴特 (Karl Barth)  1886–1968
+    [需獵] 《羅馬書釋義》　（Der Römerbrief）
+    [需獵] 《教會教義學》　（Die Kirchliche Dogmatik）
+    [需獵] 《不！答布倫納》　（Nein! Antwort an Emil Brunner）
+    [需獵] 《福音與律法》　（Evangelium und Gesetz）
+    [需獵] 《教義學綱要》　（Dogmatik im Grundriss）
+  ▍保羅‧田立克 (Paul Tillich)  1886–1965
+    [需獵] 《系統神學》　（Systematic Theology）
+    [需獵] 《存在的勇氣》　（The Courage to Be）
+    [需獵] 《根基的動搖》　（The Shaking of the Foundations）
+    [需獵] 《信仰的動力》　（Dynamics of Faith）
+  ▍藤井武 (Fujii Takeshi)  1888–1930
+    [需獵] 《舊約與新約（個人誌）》　（旧約と新約）
+    [需獵] 《從聖經看日本》　（聖書より見たる日本）
+    [需獵] 《羔羊的婚姻（未完長詩）》　（羔の婚姻）
+    [需獵] 《藤井武全集（全 12 卷）》　（藤井武全集）
+  ▍趙紫宸 (T.C. Chao)  1888–1979
+    [需獵] 《耶穌傳》　（耶穌傳）
+    [需獵] 《基督教哲學》　（基督教哲學）
+    [需獵] 《神學四講》　（神學四講）
+    [需獵] 《普天頌讚（編纂與創作）》　（普天頌讚）
+  ▍南原繁 (Nanbara Shigeru)  1889–1974
+    [需獵] 《國家與宗教——歐洲精神史之研究》　（国家と宗教――ヨーロッパ精神史の研究）
+    [需獵] 《形相（歌集）》　（形相）
+    [需獵] 《費希特的政治哲學》　（フィヒテの政治哲学）
+    [需獵] 《南原繁著作集（全 10 卷）》　（南原繁著作集）
+  ▍萊因霍爾德‧尼布爾 (Reinhold Niebuhr)  1892–1971
+    [需獵] 《道德的人與不道德的社會》　（Moral Man and Immoral Society）
+    [需獵] 《人的本性與命運》　（The Nature and Destiny of Man）
+    [需獵] 《光明之子與黑暗之子》　（The Children of Light and the Children of Darkness）
+  ▍矢內原忠雄 (Yanaihara Tadao)  1893–1961
+    [需獵] 《殖民與殖民政策》　（植民及植民政策）
+    [需獵] 《帝國主義下的台灣》　（帝国主義下の台湾）
+    [需獵] 《滿洲問題》　（満洲問題）
+    [需獵] 《南洋群島之研究》　（南洋群島の研究）
+    [需獵] 《民族與和平》　（民族と平和）
+    [需獵] 《國家的理想》　（国家の理想）
+    [需獵] 《日本精神與和平國家》　（日本精神と平和国家）
+    [需獵] 《我所尊敬的人物》　（余の尊敬する人物）
+    [需獵] 《基督教入門》　（キリスト教入門）
+    [需獵] 《嘉信（個人傳道誌）》　（嘉信）
+    [需獵] 《耶穌傳（依馬可福音）》　（イエス伝　マルコ伝による）
+    [需獵] 《羅馬書講義》　（ロマ書（聖書講義 2））
+    [需獵] 《矢內原忠雄全集（全 29 卷）》　（矢内原忠雄全集）
+  ▍格奧爾基‧弗洛羅夫斯基 (Georges Florovsky)  1893–1979
+    [需獵] 《俄羅斯神學之路》　（Пути русского богословия）
+    [需獵] 《四世紀希臘教父》　（Восточные отцы IV века）
+    [需獵] 《五至八世紀拜占庭教父》　（Byzantine Fathers of the Fifth to Eighth Centuries）
+    [需獵] 《聖經、教會、傳統：東正教觀點》　（Bible, Church, Tradition: An Eastern Orthodox View）
+    [需獵] 《創造與救贖》　（Creation and Redemption）
+  ▍H‧理查‧尼布爾 (H. Richard Niebuhr)  1894–1962
+    [需獵] 《教派主義的社會根源》　（The Social Sources of Denominationalism）
+    [需獵] 《啟示的意義》　（The Meaning of Revelation）
+    [需獵] 《基督與文化》　（Christ and Culture）
+    [需獵] 《徹底一神論與西方文化》　（Radical Monotheism and Western Culture）
+  ▍查爾斯‧哈茨霍恩 (Charles Hartshorne)  1897–2000
+    [需獵] 《人對上帝的異象》　（Man's Vision of God）
+    [需獵] 《神聖的相對性》　（The Divine Relativity）
+    [需獵] 《當代自然神學》　（A Natural Theology for Our Time）
+    [需獵] 《全能與其他神學錯誤》　（Omnipotence and Other Theological Mistakes）
+  ▍金教臣 (Kim Kyo-shin)  1901–1945
+    [需獵] 《聖書朝鮮（誌，全 158 號）》　（성서조선（聖書朝鮮））
+    [需獵] 《山上垂訓研究》　（산상수훈연구（山上垂訓研究））
+    [需獵] 《金教臣全集》　（김교신전집（노평구 엮음））
+  ▍咸錫憲 (Ham Sok-hon)  1901–1989
+    [需獵] 《以聖經立場看朝鮮歷史》　（성서적 입장에서 본 조선역사）
+    [需獵] 《意義下所見的韓國歷史》　（뜻으로 본 한국역사）
+    [需獵] 《씨알의 소리（民草之聲，誌）》　（씨알의 소리）
+    [需獵] 《咸錫憲全集（全 20 卷）》　（함석헌전집）
+  ▍弗拉基米爾‧洛斯基 (Vladimir Lossky)  1903–1958
+    [需獵] 《東方教會的神秘神學》　（Essai sur la théologie mystique de l'Église d'Orient）
+    [需獵] 《上帝的異象》　（La Vision de Dieu）
+    [需獵] 《依上帝的形像與樣式》　（À l'image et à la ressemblance de Dieu）
+    [需獵] 《東正教神學導論》　（Orthodox Theology: An Introduction）
+  ▍伯納德‧洛納根 (Bernard Lonergan)  1904–1984
+    [需獵] 《言語：多瑪斯論聖言與觀念》　（Verbum: Word and Idea in Aquinas）
+    [需獵] 《洞察：人類理解研究》　（Insight: A Study of Human Understanding）
+    [需獵] 《神學方法》　（Method in Theology）
+  ▍卡爾‧拉納 (Karl Rahner)  1904–1984
+    [需獵] 《世界中的精神》　（Geist in Welt）
+    [需獵] 《聖言的傾聽者》　（Hörer des Wortes）
+    [需獵] 《神學文集》　（Schriften zur Theologie）
+    [需獵] 《基督信仰基礎》　（Grundkurs des Glaubens）
+  ▍伊夫‧康加爾 (Yves Congar)  1904–1995
+    [需獵] 《分裂的基督徒》　（Chrétiens désunis）
+    [需獵] 《教會中真假改革》　（Vraie et fausse réforme dans l'Église）
+    [需獵] 《平信徒神學初探》　（Jalons pour une théologie du laïcat）
+    [需獵] 《我信聖神》　（Je crois en l'Esprit Saint）
+  ▍漢斯‧烏爾斯‧馮‧巴爾塔薩 (Hans Urs von Balthasar)  1905–1988
+    [需獵] 《榮耀：神學美學》　（Herrlichkeit: Eine theologische Ästhetik）
+    [需獵] 《神學戲劇理論》　（Theodramatik）
+    [需獵] 《神學邏輯》　（Theologik）
+    [需獵] 《德意志靈魂的啟示錄》　（Apokalypse der deutschen Seele）
+  ▍迪特里希‧潘霍華 (Dietrich Bonhoeffer)  1906–1945
+    [需獵] 《聖徒相通》　（Sanctorum Communio）
+    [需獵] 《追隨基督》　（Nachfolge）
+    [需獵] 《團契生活》　（Gemeinsames Leben）
+    [需獵] 《倫理學》　（Ethik）
+    [需獵] 《獄中書簡》　（Widerstand und Ergebung）
+  ▍卡爾‧亨利 (Carl F.H. Henry)  1913–2003
+    [需獵] 《現代基要主義的不安良知》　（The Uneasy Conscience of Modern Fundamentalism）
+    [需獵] 《神‧啟示與權威（六卷本）》　（God, Revelation and Authority）
+    [需獵] 《尋找身份的福音派》　（Evangelicals in Search of Identity）
+    [需獵] 《基督徒個人倫理學》　（Christian Personal Ethics）
+  ▍M‧M‧托馬斯 (M.M. Thomas)  1916–1996
+    [需獵] 《印度復興中被承認的基督》　（The Acknowledged Christ of the Indian Renaissance）
+    [需獵] 《救恩與人性化》　（Salvation and Humanisation）
+    [需獵] 《信仰的宇宙》　（Man and the Universe of Faiths）
+    [需獵] 《為基督之故冒險：邁向多元主義的普世神學》　（Risking Christ for Christ's Sake: Towards an Ecumenical Theology of Pluralism）
+  ▍貧窮者馬太 (Matta al-Miskin (Matthew the Poor))  1919–2006
+    [需獵] 《東正教祈禱生活》　（Orthodox Prayer Life: The Interior Way）
+    [需獵] 《愛的共融》　（The Communion of Love）
+    [需獵] 《馬可與科普特教會》　（St. Mark and the Coptic Church）
+  ▍史丹利‧薩馬薩 (Stanley Samartha)  1920–2001
+    [需獵] 《印度教對無所限制的基督之回應》　（The Hindu Response to the Unbound Christ）
+    [需獵] 《對話的勇氣：普世宗教間關係議題》　（Courage for Dialogue: Ecumenical Issues in Inter-Religious Relationships）
+    [需獵] 《一位基督——多種宗教：邁向修正的基督論》　（One Christ – Many Religions: Toward a Revised Christology）
+    [需獵] 《跨越兩種文化之間：多元世界中的普世事奉》　（Between Two Cultures: Ecumenical Ministry in a Pluralist World）
+  ▍亞歷山大‧施梅曼 (Alexander Schmemann)  1921–1983
+    [需獵] 《禮儀神學導論》　（Введение в литургическое богословие）
+    [需獵] 《為世界的生命：聖事與東正教》　（For the Life of the World: Sacraments and Orthodoxy）
+    [需獵] 《大齋期：邁向逾越節的旅程》　（Great Lent: Journey to Pascha）
+    [需獵] 《聖體聖事：天國的聖事》　（Евхаристия: Таинство Царства）
+    [需獵] 《施梅曼神父日記》　（The Journals of Father Alexander Schmemann）
+  ▍約翰‧斯托得 (John Stott)  1921–2011
+    [需獵] 《基本基督教》　（Basic Christianity）
+    [需獵] 《十架基督》　（The Cross of Christ）
+    [需獵] 《當代世界中的基督教使命》　（Christian Mission in the Modern World）
+    [需獵] 《認識聖經》　（Understanding the Bible）
+    [需獵] 《活出激進門徒》　（The Radical Disciple）
+  ▍安炳茂 (Ahn Byung-Mu)  1922–1996
+    [需獵] 《民眾神學：作為歷史主體的民眾》　（Minjung Theology: People as the Subjects of History）
+    [需獵] 《民眾與馬可福音中的群眾》　（Minjung and Ochlos in the Gospel of Mark）
+  ▍保羅斯‧馬爾‧格里高利 (Paulos Mar Gregorios)  1922–1996
+    [需獵] 《宇宙人：神聖臨在》　（Cosmic Man: The Divine Presence）
+    [需獵] 《人的臨在：正教觀點下的自然》　（The Human Presence: An Orthodox View of Nature）
+    [需獵] 《東西方的啟蒙》　（Enlightenment East and West）
+    [需獵] 《自由的愛：宏大的奧秘》　（Love's Freedom: The Grand Mystery）
+  ▍約翰‧希克 (John Hick)  1922–2012
+    [需獵] 《信仰與知識》　（Faith and Knowledge）
+    [需獵] 《惡與愛之上帝》　（Evil and the God of Love）
+    [需獵] 《上帝與信仰的宇宙》　（God and the Universe of Faiths）
+    [需獵] 《宗教之詮釋》　（An Interpretation of Religion）
+    [需獵] 《成道成肉身的隱喻》　（The Metaphor of God Incarnate）
+  ▍謝努達三世 (Pope Shenouda III)  1923–2012
+    [需獵] 《比較神學》　（Comparative Theology）
+    [需獵] 《基督的本性》　（The Nature of Christ）
+    [需獵] 《真福八端》　（The Beatitudes）
+    [需獵] 《司祭職》　（The Priesthood）
+  ▍毛利‧馬斯登 (Rev. Māori Marsden)  1924–1993
+    [需獵] 《上帝、人與宇宙：一種毛利觀點》　（God, Man and Universe: A Māori View）
+    [需獵] 《編織的宇宙：馬斯登牧師選集》　（The Woven Universe: Selected Writings of Rev. Māori Marsden）
+  ▍約翰‧柯布 (John B. Cobb Jr.)  1925–2024
+    [需獵] 《基督教自然神學：本於懷海德的思想》　（A Christian Natural Theology）
+    [需獵] 《是否為時已晚？生態神學》　（Is It Too Late? A Theology of Ecology）
+    [需獵] 《過程神學導論》　（Process Theology: An Introductory Exposition）
+    [需獵] 《為了共同的善》　（For the Common Good）
+  ▍胡安‧路易斯‧塞貢多 (Juan Luis Segundo)  1925–1996
+    [需獵] 《神學的解放》　（Liberación de la teología）
+    [需獵] 《為成年平信徒開放的神學（五卷）》　（Teología abierta para el laico adulto）
+    [需獵] 《牧靈行動的隱藏動機》　（Acción pastoral latinoamericana）
+    [需獵] 《信仰與意識形態》　（Fe e ideología）
+  ▍于爾根‧莫特曼 (Jürgen Moltmann)  1926–2024
+    [需獵] 《盼望神學》　（Theologie der Hoffnung）
+    [需獵] 《被釘十字架的上帝》　（Der gekreuzigte Gott）
+    [需獵] 《聖靈大能中的教會》　（Kirche in der Kraft des Geistes）
+    [需獵] 《三一與上帝國》　（Trinität und Reich Gottes）
+    [需獵] 《創造中的上帝》　（Gott in der Schöpfung）
+  ▍瑪麗‧達利 (Mary Daly)  1928–2010
+    [需獵] 《教會與第二性》　（The Church and the Second Sex）
+    [需獵] 《超越天父上帝：邁向女性解放哲學》　（Beyond God the Father: Toward a Philosophy of Women's Liberation）
+    [需獵] 《婦科生態學：激進女性主義的元倫理學》　（Gyn/Ecology: The Metaethics of Radical Feminism）
+    [需獵] 《純然情慾：元素女性主義哲學》　（Pure Lust: Elemental Feminist Philosophy）
+  ▍古斯塔沃‧古鐵雷斯 (Gustavo Gutiérrez)  1928–2024
+    [需獵] 《解放神學：觀點》　（Teología de la liberación: Perspectivas）
+    [需獵] 《歷史中窮人的力量》　（La fuerza histórica de los pobres）
+    [需獵] 《汲飲自己的井》　（Beber en su propio pozo）
+    [需獵] 《從無辜者受苦談論上帝：約伯記釋讀》　（Hablar de Dios desde el sufrimiento del inocente）
+    [需獵] 《生命的上帝》　（El Dios de la vida）
+    [需獵] 《尋找耶穌基督的窮人：拉斯卡薩斯》　（En busca de los pobres de Jesucristo）
+  ▍沃爾夫哈特‧潘寧博 (Wolfhart Pannenberg)  1928–2014
+    [需獵] 《啟示即歷史》　（Offenbarung als Geschichte）
+    [需獵] 《基督論綱要》　（Grundzüge der Christologie）
+    [需獵] 《科學理論與神學》　（Wissenschaftstheorie und Theologie）
+    [需獵] 《系統神學》　（Systematische Theologie）
+  ▍漢斯‧龍（孔漢思） (Hans Küng)  1928–2021
+    [需獵] 《稱義論》　（Rechtfertigung）
+    [需獵] 《教會論》　（Die Kirche）
+    [需獵] 《不能錯嗎？》　（Unfehlbar? Eine Anfrage）
+    [需獵] 《論做基督徒》　（Christ sein）
+    [需獵] 《上帝存在嗎？》　（Existiert Gott?）
+    [需獵] 《世界倫理構想》　（Projekt Weltethos）
+  ▍宋泉盛 (Choan-Seng Song)  1929–
+    [需獵] 《第三隻眼神學：亞洲處境中的神學形成》　（Third-Eye Theology: Theology in Formation in Asian Settings）
+    [需獵] 《同感的上帝》　（The Compassionate God）
+    [需獵] 《叫我們的名字：從亞洲視角看故事神學》　（Tell Us Our Names: Story Theology from an Asian Perspective）
+    [需獵] 《被釘十字架的民眾》　（Jesus, the Crucified People）
+    [需獵] 《耶穌與上帝國》　（Jesus and the Reign of God）
+  ▍小山晃佑 (Kosuke Koyama)  1929–2009
+    [需獵] 《水牛神學》　（Waterbuffalo Theology）
+    [需獵] 《十字架無扶手：亞洲對受釘心靈的默想》　（No Handle on the Cross: An Asian Meditation on the Crucified Mind）
+    [需獵] 《三哩時速的上帝》　（Three Mile an Hour God）
+    [需獵] 《富士山與西奈山：偶像批判》　（Mount Fuji and Mount Sinai: A Critique of Idols）
+  ▍約翰‧齊澤烏拉斯 (John Zizioulas)  1931–2023
+    [需獵] 《聖體、主教與教會》　（Ἡ Ἑνότης τῆς Ἐκκλησίας ἐν τῇ Θείᾳ Εὐχαριστίᾳ）
+    [需獵] 《作為共融的存有：位格與教會研究》　（Being as Communion: Studies in Personhood and the Church）
+    [需獵] 《共融與他者性：位格與教會研究續篇》　（Communion and Otherness: Further Studies in Personhood and the Church）
+    [需獵] 《基督教教義講義》　（Lectures in Christian Dogmatics）
+  ▍約翰‧姆比蒂 (John Mbiti)  1931–2019
+    [需獵] 《非洲宗教與哲學》　（African Religions and Philosophy）
+    [需獵] 《非洲的上帝觀》　（Concepts of God in Africa）
+    [需獵] 《非洲背景下的新約末世論》　（New Testament Eschatology in an African Background）
+    [需獵] 《非洲宗教導論》　（Introduction to African Religion）
+    [需獵] 《聖經與非洲基督教中的神學》　（Bible and Theology in African Christianity）
+  ▍德斯蒙德‧屠圖 (Desmond Tutu)  1931–2021
+    [需獵] 《彩虹之民》　（The Rainbow People of God）
+    [需獵] 《沒有寬恕就沒有未來》　（No Future Without Forgiveness）
+    [需獵] 《上帝有一個夢：屬於我們時代的盼望異象》　（God Has a Dream: A Vision of Hope for Our Time）
+    [需獵] 《非洲祈禱書》　（An African Prayer Book）
+    [需獵] 《為良善而生》　（Made for Goodness）
+  ▍瓦恩‧德洛里亞 (Vine Deloria Jr.)  1933–2005
+    [需獵] 《卡斯特為你們的罪而死：一份印第安宣言》　（Custer Died for Your Sins: An Indian Manifesto）
+    [需獵] 《我們說，你們聽：新部落，新場域》　（We Talk, You Listen: New Tribes, New Turf）
+    [需獵] 《上帝是紅色的：原住民宗教觀》　（God Is Red: A Native View of Religion）
+    [需獵] 《現代存在的形上學》　（The Metaphysics of Modern Existence）
+    [需獵] 《紅色大地，白色謊言：美洲原住民與科學迷思》　（Red Earth, White Lies: Native Americans and the Myth of Scientific Fact）
+  ▍德洛麗絲‧威廉斯 (Delores S. Williams)  1934–2022
+    [需獵] 《曠野中的姊妹：非裔婦女神學的挑戰》　（Sisters in the Wilderness: The Challenge of Womanist God-Talk）
+  ▍阿洛伊修斯‧皮里斯 (Aloysius Pieris)  1934–
+    [需獵] 《亞洲解放神學》　（An Asian Theology of Liberation）
+    [需獵] 《愛與智相遇：基督徒經驗佛教》　（Love Meets Wisdom: A Christian Experience of Buddhism）
+    [需獵] 《水與火：亞洲佛教與基督教核心議題》　（Fire and Water: Basic Issues in Asian Buddhism and Christianity）
+    [需獵] 《上帝的國度為窮人所有》　（God's Reign for God's Poor）
+  ▍默西‧安芭‧奧杜約耶 (Mercy Amba Oduyoye)  1934–
+    [需獵] 《傾聽與認識：非洲基督教的神學反思》　（Hearing and Knowing: Theological Reflections on Christianity in Africa）
+    [需獵] 《以熱情與同情：第三世界女性做神學》　（With Passion and Compassion: Third World Women Doing Theology）
+    [需獵] 《安諾娃的女兒：非洲女性與父權制》　（Daughters of Anowa: African Women and Patriarchy）
+    [需獵] 《非洲女性神學導論》　（Introducing African Women's Theology）
+  ▍羅斯瑪麗‧盧瑟 (Rosemary Radford Ruether)  1936–2022
+    [需獵] 《信仰與弒親：反猶主義的神學根源》　（Faith and Fratricide: The Theological Roots of Anti-Semitism）
+    [需獵] 《新女性，新大地》　（New Woman, New Earth）
+    [需獵] 《性別歧視與言說上帝：邁向女性主義神學》　（Sexism and God-Talk: Toward a Feminist Theology）
+    [需獵] 《女性導引：邁向女性主義神學讀本》　（Womanguides: Readings Toward a Feminist Theology）
+    [需獵] 《蓋亞與上帝：療癒大地的生態女性主義神學》　（Gaia and God: An Ecofeminist Theology of Earth Healing）
+  ▍伊莉莎白‧許斯勒‧菲奧倫薩 (Elisabeth Schüssler Fiorenza)  1938–
+    [需獵] 《紀念她：早期基督教起源的女性主義神學重建》　（In Memory of Her: A Feminist Theological Reconstruction of Christian Origins）
+    [需獵] 《不是石頭而是麵包：女性主義聖經詮釋的挑戰》　（Bread Not Stone: The Challenge of Feminist Biblical Interpretation）
+    [需獵] 《但她說：女性主義聖經詮釋實踐》　（But She Said: Feminist Practices of Biblical Interpretation）
+    [需獵] 《耶穌：米利暗之子，索菲亞的先知》　（Jesus: Miriam's Child, Sophia's Prophet）
+    [需獵] 《智慧之道：女性主義聖經詮釋導論》　（Wisdom Ways: Introducing Feminist Biblical Interpretation）
+  ▍詹姆斯‧孔恩 (James H. Cone)  1938–2018
+    [需獵] 《黑人神學與黑人權力》　（Black Theology and Black Power）
+    [需獵] 《黑人解放神學》　（A Black Theology of Liberation）
+    [需獵] 《受壓迫者的上帝》　（God of the Oppressed）
+    [需獵] 《馬丁與麥爾坎與美國：一個夢想或一場惡夢》　（Martin & Malcolm & America: A Dream or a Nightmare）
+    [需獵] 《我的靈魂回顧》　（My Soul Looks Back）
+    [需獵] 《十字架與私刑之樹》　（The Cross and the Lynching Tree）
+  ▍萊昂納多‧博夫 (Leonardo Boff)  1938–
+    [需獵] 《解放者耶穌基督》　（Jesus Cristo Libertador）
+    [需獵] 《教會：神恩與權力》　（Igreja: Carisma e Poder）
+    [需獵] 《教會之起源：基層團體重塑教會》　（Eclesiogênese）
+    [需獵] 《三一、社會與解放》　（A Trindade, a Sociedade e a Libertação）
+    [需獵] 《亞西西的方濟：人類解放的典範》　（São Francisco de Assis: Ternura e Vigor）
+    [需獵] 《生態學：大地的吶喊，窮人的吶喊》　（Ecologia: Grito da Terra, Grito dos Pobres）
+  ▍宏‧索布里諾 (Jon Sobrino)  1938–
+    [需獵] 《十字路口的基督論》　（Cristología desde América Latina）
+    [需獵] 《解放者耶穌》　（Jesucristo Liberador）
+    [需獵] 《從受害者看基督：解放進路》　（La fe en Jesucristo: ensayo desde las víctimas）
+    [需獵] 《羅梅洛總主教：記憶與反思》　（Monseñor Romero）
+  ▍大衛‧特雷西 (David Tracy)  1939–
+    [需獵] 《秩序中蒙福的憤怒》　（Blessed Rage for Order）
+    [需獵] 《類比的想像》　（The Analogical Imagination）
+    [需獵] 《多元性與模糊性》　（Plurality and Ambiguity）
+  ▍斯坦利‧霍爾瓦斯 (Stanley Hauerwas)  1940–
+    [需獵] 《異象與德性》　（Vision and Virtue）
+    [需獵] 《品格群體》　（A Community of Character）
+    [需獵] 《和平的國度》　（The Peaceable Kingdom）
+    [需獵] 《異類僑居者》　（Resident Aliens）
+    [需獵] 《戰爭與美國差異》　（War and the American Difference）
+  ▍伊莉莎白‧約翰遜 (Elizabeth A. Johnson)  1941–
+    [需獵] 《祂是誰：女性主義神學論述中上帝的奧祕》　（She Who Is: The Mystery of God in Feminist Theological Discourse）
+    [需獵] 《上帝與眾聖徒之友》　（Friends of God and Prophets）
+    [需獵] 《真為我等之姊：聖徒相通功中的瑪利亞神學》　（Truly Our Sister: A Theology of Mary in the Communion of Saints）
+    [需獵] 《尋求活的上帝：探索神學前沿》　（Quest for the Living God: Mapping Frontiers in the Theology of God）
+    [需獵] 《問問野獸：達爾文與愛的上帝》　（Ask the Beasts: Darwin and the God of Love）
+  ▍夸梅‧貝迪亞科 (Kwame Bediako)  1945–2008
+    [需獵] 《神學與身分：文化對第二世紀與當代非洲基督教思想的影響》　（Theology and Identity: The Impact of Culture upon Christian Thought in the Second Century and in Modern Africa）
+    [需獵] 《非洲基督教：非西方宗教的更新》　（Christianity in Africa: The Renewal of a Non-Western Religion）
+    [需獵] 《耶穌與非洲的福音：歷史與經驗》　（Jesus and the Gospel in Africa: History and Experience）
+  ▍童春發 (Tung Chun-fa)  1946– 
+    [需獵] 《原住民教會宣教的反省和展望》　（原住民教會宣教的反省和展望）
+    [需獵] 《臺灣原住民史：排灣族史篇》　（臺灣原住民史：排灣族史篇）
+  ▍喬治‧廷克 (George E. "Tink" Tinker)  1949– 
+    [需獵] 《宣教的征服：福音與美洲原住民的文化滅絕》　（Missionary Conquest: The Gospel and Native American Cultural Genocide）
+    [需獵] 《美洲印第安神學》　（A Native American Theology）
+    [需獵] 《靈性與抵抗：政治神學與美洲印第安解放》　（Spirit and Resistance: Political Theology and American Indian Liberation）
+    [需獵] 《美洲印第安的解放：主權神學》　（American Indian Liberation: A Theology of Sovereignty）
+  ▍史蒂芬‧查爾斯頓 (Steven Charleston)  1949– 
+    [需獵] 《繞回全圓：建構原住民基督教神學》　（Coming Full Circle: Constructing Native Christian Theology）
+    [需獵] 《耶穌的四次異象追尋》　（The Four Vision Quests of Jesus）
+    [需獵] 《靈輪：一位原住民長者的沉思》　（Spirit Wheel: Meditations from an Indigenous Elder）
+    [需獵] 《希望的階梯：一位原住民長者論盼望與勇氣》　（Ladder to the Light: An Indigenous Elder's Meditations on Hope and Courage）
+    [需獵] 《我們活過了世界末日：北美原住民論末世與盼望》　（We Survived the End of the World: Lessons from Native America on Apocalypse and Hope）
+  ▍羅雲‧威廉斯 (Rowan Williams)  1950–
+    [需獵] 《認識的傷口》　（The Wound of Knowledge）
+    [需獵] 《阿里烏：異端與傳統》　（Arius: Heresy and Tradition）
+    [需獵] 《復活：詮釋復活節福音》　（Resurrection: Interpreting the Easter Gospel）
+    [需獵] 《論基督教神學》　（On Christian Theology）
+    [需獵] 《活出基督信仰》　（Being Christian）
+  ▍蘭迪‧伍德利 (Randy S. Woodley)  1955?– 
+    [需獵] 《活在色彩中：擁抱上帝對多族裔教會的心意》　（Living in Color: Embracing God's Passion for a Multiethnic Church）
+    [需獵] 《沙龍與受造群體：一種原住民異象》　（Shalom and the Community of Creation: An Indigenous Vision）
+    [需獵] 《解殖福音派：11:59的對話》　（Decolonizing Evangelicalism: An 11:59pm Conversation）
+    [需獵] 《受造大地重紮根：一百天與聖潔大地重新連結》　（Becoming Rooted: One Hundred Days of Reconnecting with Sacred Earth）
+    [需獵] 《原住民神學與西方世界觀：解殖化的基督教教義取徑》　（Indigenous Theology and the Western Worldview: A Decolonized Approach to Christian Doctrine）
+  ▍布興‧大立 (Pusin Tali)  1955– 
+    [需獵] 《寧死不屈的原住民：霧社事件的故事神學》　（寧死不屈的原住民：霧社事件的故事神學）
+    [需獵] 《台灣原住民族生存的神學》　（台灣原住民族生存的神學）
+    [需獵] 《台灣原住民轉型正義的神學》　（台灣原住民轉型正義的神學）
+  ▍阿摩司‧雲革 (Amos Yong)  1965–
+    [需獵] 《辨別諸靈：五旬節靈恩派對宗教神學的貢獻》　（Discerning the Spirit(s): A Pentecostal-Charismatic Contribution to Christian Theology of Religions）
+    [需獵] 《超越僵局：邁向聖靈論宗教神學》　（Beyond the Impasse: Toward a Pneumatological Theology of Religions）
+    [需獵] 《澆灌萬民的聖靈：五旬節運動與全球神學的可能性》　（The Spirit Poured Out on All Flesh: Pentecostalism and the Possibility of Global Theology）
+    [需獵] 《款待他者：五旬節、基督徒實踐與鄰舍》　（Hospitality and the Other: Pentecost, Christian Practices, and the Neighbor）
+    [需獵] 《聖經‧殘障與教會》　（The Bible, Disability, and the Church）
+  ▍瓦歷斯‧烏干（張秋雄） (Walis Ukan)  1965?– 
+    [需獵] 《原住民部落經驗與聖經情境化詮釋》　（原住民部落經驗與聖經情境化詮釋）
+    [需獵] 《被遮蔽之部落傳統哲學的視界與世界：「部落傳統哲學詮釋法」在原住民部落裡閱讀聖經的實踐》　（被遮蔽之部落傳統哲學的視界與世界）
+    [需獵] 《慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」》　（慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」）
+  ▍凱特琳‧柯蒂斯 (Kaitlin B. Curtice)  1986?– 
+    [需獵] 《榮耀正在發生：在日常之處尋見神聖》　（Glory Happening: Finding the Divine in Everyday Places）
+    [需獵] 《原住民：身分、歸屬與重新尋見上帝》　（Native: Identity, Belonging, and Rediscovering God）
+    [需獵] 《活著的抵抗：一種原住民異象，尋求日常的整全》　（Living Resistance: An Indigenous Vision for Seeking Wholeness Every Day）
+
+═══════════ 心理學 ═══════════
+  ▍卡爾‧古斯塔夫‧榮格 (Carl Gustav Jung)  1875–1961
+    [需獵] 《字詞聯想研究》　（Studies in Word-Association (1918)）
+    [需獵] 《總書目》　（General Bibliography of C. G. Jung’s Writings）
+    [需獵] 《總索引》　（General Index to the Collected Works）
+  ▍威廉‧詹姆斯 (William James)  1842–1910
+    [需獵] 《心理學原理》　（The Principles of Psychology）
+    [需獵] 《信仰的意志》　（The Will to Believe）
+    [需獵] 《宗教經驗之種種》　（The Varieties of Religious Experience）
+    [需獵] 《實用主義》　（Pragmatism）
+    [需獵] 《徹底經驗主義論文集》　（Essays in Radical Empiricism）
+  ▍西格蒙德‧佛洛伊德 (Sigmund Freud)  1856–1939
+    [需獵] 《夢的解析》　（Die Traumdeutung）
+    [需獵] 《性學三論》　（Drei Abhandlungen zur Sexualtheorie）
+    [需獵] 《圖騰與禁忌》　（Totem und Tabu）
+    [需獵] 《群體心理學與自我的分析》　（Massenpsychologie und Ich-Analyse）
+    [需獵] 《一個幻覺的未來》　（Die Zukunft einer Illusion）
+    [需獵] 《文明及其不滿》　（Das Unbehagen in der Kultur）
+    [需獵] 《摩西與一神教》　（Der Mann Moses und die monotheistische Religion）
+  ▍阿爾弗雷德‧阿德勒 (Alfred Adler)  1870–1937
+    [需獵] 《神經質性格》　（Über den nervösen Charakter）
+    [需獵] 《個體心理學的實踐與理論》　（The Practice and Theory of Individual Psychology）
+    [需獵] 《認識人性》　（Menschenkenntnis）
+    [需獵] 《學校中的個體心理學》　（Individualpsychologie in der Schule）
+    [需獵] 《自卑與超越》　（What Life Should Mean to You）
+  ▍森田正馬 (Shoma Morita)  1874–1938
+    [需獵] 《神經衰弱與強迫觀念之根治法》　（神経衰弱及強迫観念の根治法）
+    [需獵] 《神經質的本態與療法》　（神経質の本態と療法）
+    [需獵] 《自覺與領悟之道》　（自覚と悟りへの道）
+    [需獵] 《森田正馬全集（歿後彙編）》　（森田正馬全集）
+  ▍梅蘭妮‧克萊恩 (Melanie Klein)  1882–1960
+    [需獵] 《兒童精神分析》　（The Psycho-Analysis of Children）
+    [需獵] 《愛、罪疚與修復（論文集）》　（Love, Guilt and Reparation）
+    [需獵] 《對某些分裂機制的評論》　（Notes on Some Schizoid Mechanisms）
+    [需獵] 《嫉羨與感恩》　（Envy and Gratitude）
+  ▍卡倫‧荷妮 (Karen Horney)  1885–1952
+    [需獵] 《我們時代的神經質人格》　（The Neurotic Personality of Our Time）
+    [需獵] 《精神分析新法》　（New Ways in Psychoanalysis）
+    [需獵] 《我們的內在衝突》　（Our Inner Conflicts）
+    [需獵] 《自我分析》　（Neurosis and Human Growth）
+    [需獵] 《女性心理學（歿後論文集）》　（Feminine Psychology）
+  ▍安娜‧佛洛伊德 (Anna Freud)  1895–1982
+    [需獵] 《兒童分析技術導論》　（Einführung in die Technik der Kinderanalyse）
+    [需獵] 《戰爭與兒童》　（War and Children）
+    [需獵] 《自我與防衛機制》　（Das Ich und die Abwehrmechanismen）
+    [需獵] 《對兒童的正常與病態發展》　（Normality and Pathology in Childhood）
+  ▍唐納‧溫尼考特 (D. W. Winnicott)  1896–1971
+    [需獵] 《過渡客體與過渡現象》　（Transitional Objects and Transitional Phenomena）
+    [需獵] 《透過兒科學到精神分析》　（Through Paediatrics to Psycho-Analysis）
+    [需獵] 《成熟過程與促進性環境》　（The Maturational Processes and the Facilitating Environment）
+    [需獵] 《遊戲與現實》　（Playing and Reality）
+  ▍戈登‧奧爾波特 (Gordon Allport)  1897–1967
+    [需獵] 《人格：心理學的解釋》　（Personality: A Psychological Interpretation）
+    [需獵] 《個人及其宗教》　（The Individual and His Religion）
+    [需獵] 《偏見的本質》　（The Nature of Prejudice）
+    [需獵] 《成長中的人格模式》　（Pattern and Growth in Personality）
+  ▍埃里希‧佛洛姆 (Erich Fromm)  1900–1980
+    [需獵] 《逃避自由》　（Escape from Freedom）
+    [需獵] 《自我的追尋》　（Man for Himself）
+    [需獵] 《精神分析與宗教》　（Psychoanalysis and Religion）
+    [需獵] 《健全的社會》　（The Sane Society）
+    [需獵] 《愛的藝術》　（The Art of Loving）
+    [需獵] 《禪與精神分析》　（Zen Buddhism and Psychoanalysis）
+    [需獵] 《你要如神一樣》　（You Shall Be as Gods）
+  ▍艾瑞克‧艾瑞克森 (Erik Erikson)  1902–1994
+    [需獵] 《童年與社會》　（Childhood and Society）
+    [需獵] 《青年路德》　（Young Man Luther）
+    [需獵] 《身分：青年與危機》　（Identity: Youth and Crisis）
+    [需獵] 《甘地的真理》　（Gandhi's Truth）
+    [需獵] 《生命週期完成式》　（The Life Cycle Completed）
+  ▍卡爾‧羅哲斯 (Carl Rogers)  1902–1987
+    [需獵] 《諮商與心理治療》　（Counseling and Psychotherapy）
+    [需獵] 《個人中心治療法》　（Client-Centered Therapy）
+    [需獵] 《成為一個人》　（On Becoming a Person）
+    [需獵] 《自由學習》　（Freedom to Learn）
+    [需獵] 《存在之道》　（A Way of Being）
+  ▍維克多‧弗蘭克 (Viktor Frankl)  1905–1997
+    [需獵] 《活出意義來》　（…trotzdem Ja zum Leben sagen (Man's Search for Meaning)）
+    [需獵] 《醫師與心靈》　（Ärztliche Seelsorge）
+    [需獵] 《追尋意義的意志》　（The Will to Meaning）
+    [需獵] 《無意識的神》　（The Unconscious God）
+    [需獵] 《意義的呼喚：自傳》　（Recollections: An Autobiography）
+  ▍亞伯拉罕‧馬斯洛 (Abraham Maslow)  1908–1970
+    [需獵] 《動機與人格》　（Motivation and Personality）
+    [需獵] 《存在心理學探微》　（Toward a Psychology of Being）
+    [需獵] 《宗教、價值與高峰經驗》　（Religions, Values, and Peak-Experiences）
+    [需獵] 《人性能達到的境界》　（The Farther Reaches of Human Nature）
+  ▍羅洛‧梅 (Rollo May)  1909–1994
+    [需獵] 《焦慮的意義》　（The Meaning of Anxiety）
+    [需獵] 《存在：精神醫學與心理學新視野》　（Existence: A New Dimension in Psychiatry and Psychology）
+    [需獵] 《愛與意志》　（Love and Will）
+    [需獵] 《權力與無知》　（Power and Innocence）
+    [需獵] 《哭喊神話》　（The Cry for Myth）
+  ▍詹姆斯‧希爾曼 (James Hillman)  1926–2011
+    [需獵] 《重新思考心理學》　（Re-Visioning Psychology）
+    [需獵] 《夢與冥界》　（The Dream and the Underworld）
+    [需獵] 《治療的虛構》　（Healing Fiction）
+    [需獵] 《藍色之火（精選文集）》　（A Blue Fire）
+    [需獵] 《靈魂密碼》　（The Soul's Code）
+  ▍河合隼雄 (Hayao Kawai)  1928–2007
+    [需獵] 《榮格心理學入門》　（ユング心理学入門）
+    [需獵] 《箱庭療法入門》　（箱庭療法入門）
+    [需獵] 《日本人的傳說與心靈》　（昔話と日本人の心）
+    [需獵] 《小孩的宇宙》　（子どもの宇宙）
+    [需獵] 《佛教與心理治療藝術》　（Buddhism and the Art of Psychotherapy）

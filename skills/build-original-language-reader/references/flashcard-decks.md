@@ -269,7 +269,7 @@ written nothing.
 ```
 env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
   "C:/Program Files/LibreOffice/program/soffice.com" --headless --norestore \
-  -env:UserInstallation=file:///…/output/lo-profile-cards \
+  -env:UserInstallation=file:///<系統暫存>/lo-profile-cards \
   --convert-to pdf --outdir …/output/flashcards …/output/flashcards/<deck>.docx
 ```
 

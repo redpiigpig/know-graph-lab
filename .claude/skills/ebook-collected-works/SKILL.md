@@ -112,7 +112,7 @@ const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '�
 
 **任何卷要「翻譯」前，先查有無現成中譯本，不要一上來就自譯。** 見 [[feedback_collected_works_reference_first]]。
 1. 先比對該作家 works × **圖書館既有**（collection=null）→ 有就直接搬全集（PATCH collection + store 連 ebookId；見 [[feedback_collected_works_not_in_library]]）。
-2. 再查 **z-library**有無中譯本 → 有就**列進獵表**（`z-library_獵表_全集中譯.txt`，作家中英名＋書名＋原文名），交使用者下載，之後走 **REFERENCE**。
+2. 再查 **z-library**有無中譯本 → 有就**列進獵表**（本 skill 資料夾的 `z-library_獵表_全集中譯.txt`，作家中英名＋書名＋原文名；**不要放 repo 根目錄**），交使用者下載，之後走 **REFERENCE**。
 3. **只有查無任何中譯本才走自譯（pipeline④）**。多譯本取最新繁體（[[feedback_collected_works_latest_traditional_edition]]）。
 
 → 即 pipeline 選擇順序＝**REFERENCE ＞ 自譯**（翻轉原 English-first 預設）。全集書一律 `collection='collected-works'` 不進圖書館；轉錄批次後跑 `scripts/apply-ebooks-quality-collection.mjs` 補標。

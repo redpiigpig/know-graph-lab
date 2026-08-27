@@ -39,7 +39,7 @@
 /影片/
 # z-library / TRC 下載暫存 → Drive 電子圖書館/_待入庫
 /z-lib/
-z-library_獵表*.txt
+/z-library_獵表*.txt   # 只擋根目錄；獵表的正確位置是 .claude/skills/ebook-collected-works/
 
 # ── 快取 / 中繼 / 一次性工作檔 ─────────────────────────────────────
 /tmp/

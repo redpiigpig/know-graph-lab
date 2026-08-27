@@ -1,6 +1,6 @@
 # 全集翻譯進度桌面面板
 
-雙擊專案根目錄的 `translation-dashboard.cmd` 即可開啟。
+雙擊 `scripts/translation-dashboard.cmd` 即可開啟（2026-08-27 從根目錄移進 scripts/）。
 
 面板每 10 秒讀取一次本機 checkpoint、日誌修改時間與 Windows 程序列表，顯示：
 
