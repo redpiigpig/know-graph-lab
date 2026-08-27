@@ -36,6 +36,8 @@ from proper_name_categories import PRINT_ORDER  # noqa: E402
 from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machinery
     ACCENT,
     ACCENT_DARK,
+    add_contents,
+    cover_colors,
     GOLD,
     CAPTION_PT,
     FONT_UI,
@@ -105,15 +107,28 @@ def greek_width_mm(text: str, size_pt: float) -> float:
     return _greek_metrics.getlength(text) / 1000 * size_pt / 72 * 25.4
 
 
-def pack(tokens: list[dict], available_mm: float, *, lead_mm: float = 0.0) -> list[list[dict]]:
-    """Greedy left-to-right packing of word/gloss pairs into full-width rows."""
+def pack(
+    tokens: list[dict],
+    available_mm: float,
+    *,
+    lead_mm: float = 0.0,
+    measure=None,
+    script_pt: float = INTERLINEAR_GREEK_PT,
+) -> list[list[dict]]:
+    """Greedy left-to-right packing of word/gloss pairs into full-width rows.
+
+    ``measure`` is how wide a word of the *source* script is; it defaults to
+    Greek because that is the book this was written for, and the Latin reader
+    passes its own so a Noto Serif word is not measured with Palatino metrics.
+    """
+    measure = measure or greek_width_mm
     lines: list[list[dict]] = []
     current: list[dict] = []
     used = lead_mm
     for token in tokens:
         surface = token["word"] + token.get("trailing", "")
         width = max(
-            greek_width_mm(surface, INTERLINEAR_GREEK_PT),
+            measure(surface, script_pt),
             gloss_width_mm(token.get("glossZh", ""), INTERLINEAR_GLOSS_PT),
         ) + INTERLINEAR_GUTTER_MM
         if current and used + width > available_mm:
@@ -134,12 +149,20 @@ def add_interlinear(
     sense: str = "",
     greek_pt: float = INTERLINEAR_GREEK_PT,
     available_mm: float = USABLE_WIDTH_MM,
+    measure=None,
+    render=None,
 ) -> None:
-    """One unit as stacked word blocks, closed by the whole-sentence meaning."""
+    """One unit as stacked word blocks, closed by the whole-sentence meaning.
+
+    ``measure``/``render`` default to Greek. The Latin reader passes its own
+    pair; everything else about the layout — the packing, the gutters, the
+    gloss size, the keep-with-next — is deliberately the same in both books.
+    """
     if not tokens:
         return
+    render = render or (lambda paragraph, text, size: add_greek_run(paragraph, text, size))
     lead_mm = 8.0 if lead else 0.0
-    lines = pack(tokens, available_mm, lead_mm=lead_mm)
+    lines = pack(tokens, available_mm, lead_mm=lead_mm, measure=measure, script_pt=greek_pt)
     for line_index, line in enumerate(lines):
         cells_mm = [token["widthMm"] for token in line]
         if line_index == 0 and lead:
@@ -176,7 +199,7 @@ def add_interlinear(
             if token_index >= len(line):
                 continue
             token = line[token_index]
-            add_greek_run(top, token["word"] + token.get("trailing", ""), greek_pt)
+            render(top, token["word"] + token.get("trailing", ""), greek_pt)
             set_run_font(
                 bottom.add_run(token.get("glossZh", "")),
                 FONT_ZH,
@@ -227,7 +250,7 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
     set_borders(table, color=RULE)
     header = table.rows[0]
     set_repeat_header(header)
-    for cell, title in zip(header.cells, ["#", "詞條", "音譯", "繁體中文詞義"]):
+    for cell, title in zip(header.cells, ["#", "詞條", "詞類", "繁體中文詞義"]):
         shade(cell, PALE)
         set_cell_margins(cell)
         paragraph = cell.paragraphs[0]
@@ -248,7 +271,7 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
                 if entry.get("isProperName"):
                     set_run_font(paragraph.add_run("　專名"), FONT_UI, LABEL_PT, color=ACCENT)
             elif index == 2:
-                set_run_font(paragraph.add_run(entry["textbookTransliteration"]), "Noto Serif", TABLE_SIZE_PT, color=MUTED)
+                set_run_font(paragraph.add_run(entry.get("pos") or "—"), FONT_ZH, TABLE_SIZE_PT, color=MUTED)
             else:
                 add_mixed_script_text(paragraph, entry["glossZh"] or "—", FONT_ZH, TABLE_SIZE_PT, color=INK)
 
@@ -413,11 +436,13 @@ def add_cover(document: Document, master: dict, volume: dict) -> None:
     set_borders(table, outside=False, inside=False)
     cell = table.cell(0, 0)
     set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
-    shade(cell, ACCENT_DARK)
+    palette = cover_colors("grc")
+    shade(cell, palette["banner"])
 
     eyebrow = cell.paragraphs[0]
     eyebrow.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), FONT_UI, 8, color=GOLD, bold=True)
+    set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), FONT_UI, 8,
+                 color=palette["rule"], bold=True)
     name = cell.add_paragraph()
     name.alignment = WD_ALIGN_PARAGRAPH.CENTER
     add_mixed_script_text(name, master["title"], FONT_ZH, 25, bold=True, color="FFF8ED")
@@ -436,7 +461,7 @@ def add_cover(document: Document, master: dict, volume: dict) -> None:
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     spec = document.add_paragraph()
     spec.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    paragraph_rule(spec, color=GOLD, size="24")
+    paragraph_rule(spec, color=cover_colors("grc")["rule"], size="24")
     set_run_font(spec.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
     # `master["textbook"]` 只講得到上冊（它寫的就是「（上冊新約部分）」），印在下冊
     # 封面上是錯的。下冊的詞表來自語料頻率，不出自哪一本教科書，就照實那樣寫。
@@ -467,6 +492,20 @@ def add_front_matter(document: Document, master: dict, volume: dict) -> None:
         add_body(document, f"第 {half} 課：{label}", size=CAPTION_PT, color=MUTED)
     add_body(document, f"發布狀態：{master['releaseStatus']}", size=CAPTION_PT, color=MUTED)
     add_body(document, f"音訊：{master['audio']['status']}　{master['audio']['policy']}", size=CAPTION_PT, color=MUTED)
+    page_break(document)
+    add_contents(
+        document,
+        [
+            (
+                f"{lesson['lesson']:02d}",
+                lesson["reading"]["titleZh"],
+                "完整章" if lesson["reading"]["kind"] == "scripture_chapter" else "教父讀文",
+            )
+            for lesson in volume["lessons"]
+        ],
+        title=f"{volume['title']}目錄",
+        accent=cover_colors("grc")["accent"],
+    )
 
 
 def appendix_groups(table: dict) -> list[tuple[str, list[dict]]]:

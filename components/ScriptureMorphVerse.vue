@@ -11,17 +11,17 @@
         @click="open = open === index ? null : index"
       >{{ word.text }}<span
           v-if="open === index"
-          class="absolute left-1/2 top-full z-30 mt-1 w-64 -translate-x-1/2 rounded-xl border border-stone-300 bg-white px-3 py-2 text-left text-xs leading-6 text-stone-700 shadow-xl"
+          class="absolute left-1/2 top-full z-30 mt-1 w-72 -translate-x-1/2 rounded-xl border border-stone-300 bg-white px-3 py-2 text-left text-sm leading-6 text-stone-700 shadow-xl"
           dir="ltr"
         >
           <span class="block font-semibold text-stone-900" :class="scriptClass">{{ word.lemma }}</span>
-          <span class="mt-0.5 block text-[11px] text-stone-500">
+          <span class="mt-0.5 block text-xs text-stone-500">
             {{ word.pos }}<template v-if="word.parsing"> · {{ word.parsing }}</template>
             <template v-if="word.strong"> · {{ word.strong }}</template>
           </span>
           <span v-if="word.zh" class="mt-1 block break-words text-stone-800">{{ word.zh }}</span>
           <span v-else class="mt-1 block text-stone-400">（本站尚未收錄此字的中文詞義）</span>
-          <span v-if="word.en" class="mt-0.5 block break-words text-[11px] text-stone-500">{{ word.en }}</span>
+          <span v-if="word.en" class="mt-0.5 block break-words text-xs text-stone-500">{{ word.en }}</span>
         </span></span><span v-if="index < words.length - 1"> </span>
     </template>
   </span>

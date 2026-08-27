@@ -90,6 +90,61 @@ ACCENT = "8A4E2F"
 ACCENT_DARK = "3A2720"
 GOLD = "D4A653"
 PALE = "F3EDE3"
+
+# 四本並排時要一眼看得出是哪一種語言，所以封面橫幅一語一色（使用者 2026-08-28
+# 指定）：希伯來猶太藍、拉丁天主教金、希臘橄欖綠、日文櫻花粉。版式不變——同一
+# 條橫幅、同一行眉標、同一條細線與規格行——換的只有顏色，這樣它們仍是一套書。
+# 櫻花粉與天主教金本身太亮，白字壓不住，所以橫幅取同色系的深色，細線才用亮色。
+COVER_PALETTES = {
+    "hbo": {"banner": "13315C", "rule": "C8A24A", "accent": "1E4E8C", "name": "猶太藍"},
+    "la": {"banner": "5A4212", "rule": "E7C463", "accent": "8A6A1C", "name": "天主教金"},
+    "grc": {"banner": "3B4A26", "rule": "C7B87A", "accent": "5A6E38", "name": "橄欖綠"},
+    "ja": {"banner": "7A3B54", "rule": "F2B8CB", "accent": "A85476", "name": "櫻花粉"},
+}
+
+
+def cover_colors(language: str) -> dict:
+    """封面配色。查不到就退回原本的深棕與金，不要讓一個沒登記的語言沒有封面。"""
+
+    return COVER_PALETTES.get(language, {"banner": ACCENT_DARK, "rule": GOLD, "accent": ACCENT})
+
+
+def add_contents(document, rows: list[tuple[str, str, str]], *, title: str,
+                 headers: tuple[str, str, str] = ("課", "主讀文", "類型"),
+                 accent: str | None = None) -> None:
+    """三欄目錄，希伯來那本用的就是這一張表。
+
+    希臘與拉丁本來沒有印目錄——兩冊各五百到一千二百頁，翻到哪一課全靠猜。
+    表是同一張，只有標題與資料換。
+    """
+
+    accent = accent or ACCENT
+    add_label(document, "Contents")
+    document.add_heading(title, level=1)
+    table = document.add_table(rows=1, cols=3)
+    set_table_geometry(table, [14, 93, 34])
+    set_borders(table, outside=True, inside=True)
+    for index, header in enumerate(headers):
+        cell = table.cell(0, index)
+        shade(cell, accent)
+        set_cell_margins(cell)
+        paragraph = cell.paragraphs[0]
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        set_run_font(paragraph.add_run(header), FONT_UI, 7.5, bold=True, color="FFFFFF")
+    set_repeat_header(table.rows[0])
+    for index, values in enumerate(rows):
+        cells = table.add_row().cells
+        for position, value in enumerate(values):
+            set_cell_margins(cells[position], top=50, bottom=50)
+            if index % 2:
+                shade(cells[position], PALE_2)
+            paragraph = cells[position].paragraphs[0]
+            paragraph.alignment = (
+                WD_ALIGN_PARAGRAPH.LEFT if position == 1 else WD_ALIGN_PARAGRAPH.CENTER
+            )
+            add_mixed_script_text(paragraph, value, FONT_ZH if position == 1 else FONT_UI,
+                                  7.5, color=INK)
+
 PALE_2 = "FAF6EF"
 RULE = "D5C9BA"
 
@@ -649,9 +704,10 @@ def add_cover(document: Document, data: dict) -> None:
     set_borders(table, outside=False, inside=False)
     cell = table.cell(0, 0)
     set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
-    shade(cell, ACCENT_DARK)
+    palette = cover_colors("hbo")
+    shade(cell, palette["banner"])
     for index, (text, font, size, color, bold) in enumerate((
-        ("ORIGINAL-LANGUAGE READER", FONT_UI, 8, GOLD, True),
+        ("ORIGINAL-LANGUAGE READER", FONT_UI, 8, palette["rule"], True),
         (data["title"], FONT_ZH, 25, "FFF8ED", True),
         ("מִקְרָא עִבְרִי מְנֻקָּד", FONT_HEBREW, 20, "FFF8ED", False),
     )):
@@ -670,7 +726,7 @@ def add_cover(document: Document, data: dict) -> None:
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     p = document.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    paragraph_rule(p, color=GOLD, size="24")
+    paragraph_rule(p, color=cover_colors("hbo")["rule"], size="24")
     set_run_font(p.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
 
 
@@ -710,30 +766,19 @@ def add_front_matter(document: Document, data: dict) -> None:
 
 
 def add_toc(document: Document, data: dict) -> None:
-    add_label(document, "Contents")
-    document.add_heading("五十課目錄", level=1)
-    table = document.add_table(rows=1, cols=3)
-    set_table_geometry(table, [14, 93, 34])
-    set_borders(table, outside=True, inside=True)
-    headers = ("課", "主讀文", "類型")
-    for i, header in enumerate(headers):
-        cell = table.cell(0, i)
-        shade(cell, ACCENT)
-        set_cell_margins(cell)
-        p = cell.paragraphs[0]
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        set_run_font(p.add_run(header), FONT_UI, 7.5, bold=True, color="FFFFFF")
-    set_repeat_header(table.rows[0])
-    for lesson in data["lessons"]:
-        cells = table.add_row().cells
-        values = (f"{lesson['lesson']:02d}", lesson["title"], "完整章" if lesson["reading"]["kind"] == "bible_chapter" else "禱文／文章")
-        for i, value in enumerate(values):
-            set_cell_margins(cells[i], top=50, bottom=50)
-            if lesson["lesson"] % 2 == 0:
-                shade(cells[i], PALE_2)
-            p = cells[i].paragraphs[0]
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER if i != 1 else WD_ALIGN_PARAGRAPH.LEFT
-            set_run_font(p.add_run(value), FONT_ZH if i == 1 else FONT_UI, 7.5, color=INK)
+    add_contents(
+        document,
+        [
+            (
+                f"{lesson['lesson']:02d}",
+                lesson["title"],
+                "完整章" if lesson["reading"]["kind"] == "bible_chapter" else "禱文／文章",
+            )
+            for lesson in data["lessons"]
+        ],
+        title="五十課目錄",
+        accent=cover_colors("hbo")["accent"],
+    )
 
 
 def proper_name_label(item: dict) -> str:

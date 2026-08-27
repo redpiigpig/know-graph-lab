@@ -227,7 +227,7 @@ def hebrew_books() -> dict[str, list[dict]]:
     return verses
 
 
-def glossary() -> tuple[dict[str, dict], dict[str, dict]]:
+def glossary() -> tuple[dict[str, dict], dict[str, dict], dict[str, dict]]:
     """The Chinese this project has already reviewed, keyed for lookup.
 
     Greek by lemma (the reader's 2,000 words), Hebrew by Strong number (its
@@ -250,6 +250,18 @@ def glossary() -> tuple[dict[str, dict], dict[str, dict]]:
                     )
 
     hebrew: dict[str, dict] = {}
+    # 信望愛的中文原文字典（使用者 2026-08-28 取得私人使用授權）。本專案自己
+    # 覆核過的詞義仍然優先——那是為這幾本讀本寫的、跟讀本印出來的一致；字典
+    # 補的是覆核不到的那一半，尤其是罕用字。
+    fhl_path = ROOT / "output/source-cache/scripture/fhl-strong-dictionary.json"
+    fhl: dict[str, dict] = {}
+    if fhl_path.exists():
+        for key, entry in json.loads(fhl_path.read_text(encoding="utf-8"))["entries"].items():
+            senses = entry.get("senses") or []
+            if senses:
+                # 只取分項義的前三條，一個 hover 卡片放不下整條字典。
+                fhl[key] = {"zh": "；".join(s.split(") ", 1)[-1] for s in senses[:3])}
+
     # 覆核過的希伯來詞義在組好的主檔裡，不在 vocabulary/hebrew-1000.json——
     # 那一份的 glossZh 是空的，照它查會得到零筆而且不會報錯。
     path = ROOT / "output/source-cache/original-readers/hebrew-full/hebrew-reader-50-lessons.json"
@@ -264,13 +276,13 @@ def glossary() -> tuple[dict[str, dict], dict[str, dict]]:
                         f"H{int(digits):04d}",
                         {"zh": entry.get("glossZh", ""), "en": entry.get("glossEn", "")},
                     )
-    return greek, hebrew
+    return greek, hebrew, fhl
 
 
 def split_by_book(language: str, verses: dict[str, list[dict]]) -> None:
     """One file per book, so a chapter view loads a megabyte and not sixty."""
 
-    greek_gloss, hebrew_gloss = glossary()
+    greek_gloss, hebrew_gloss, fhl = glossary()
     books: dict[str, dict[str, list[dict]]] = {}
     glossed = 0
     for ref, words in verses.items():
@@ -281,11 +293,25 @@ def split_by_book(language: str, verses: dict[str, list[dict]]) -> None:
                 if language == "greek"
                 else hebrew_gloss.get(word.get("strong", ""))
             )
-            if found and found.get("zh"):
-                word["zh"] = found["zh"]
-                glossed += 1
             if found and found.get("en"):
                 word["en"] = found["en"]
+            if found and found.get("zh"):
+                word["zh"] = found["zh"]
+                word["zhSource"] = "reader"
+                glossed += 1
+                continue
+            # 覆核過的詞義沒有這一個字，才查信望愛字典。
+            strong = word.get("strong") or ""
+            if not strong and language == "greek":
+                strong = (greek_gloss.get(word["lemma"]) or {}).get("strong", "")
+            key = strong if strong else ""
+            if key.startswith("H"):
+                key = f"H{int(key[1:]):05d}" if key[1:].isdigit() else key
+            entry = fhl.get(key)
+            if entry and entry.get("zh"):
+                word["zh"] = entry["zh"]
+                word["zhSource"] = "fhl"
+                glossed += 1
         books.setdefault(book, {})[ref] = words
 
     folder = OUT / "books"

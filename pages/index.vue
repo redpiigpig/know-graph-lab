@@ -149,11 +149,11 @@
         <h2 class="group-label">🛠️ 語言與其他</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          <!-- AI 語言教練 -->
+          <!-- 語言學習 -->
           <NuxtLink :to="user ? '/coach' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
             <div class="tool-icon bg-indigo-50 text-indigo-600">🗣️</div>
             <div class="flex-1">
-              <h2 class="tool-title">AI 語言教練</h2>
+              <h2 class="tool-title">語言學習</h2>
               <p class="tool-desc">外語 VTuber 即時語音對話與練習</p>
             </div>
             <span class="tool-badge tool-badge--ready">可用</span>

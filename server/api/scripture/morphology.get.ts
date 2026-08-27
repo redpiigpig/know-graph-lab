@@ -41,6 +41,11 @@ async function load(book: string): Promise<Record<string, MorphWord[]> | null> {
 }
 
 export default defineEventHandler(async (event) => {
+  // 同一章的經文本體走 chapter.get.ts，那支要求登入；逐詞層更要——信望愛的
+  // 中文字典是「私人使用」授權，開著讓任何人取用就超出授權範圍了。
+  setHeader(event, "X-Robots-Tag", "noindex, nofollow, noarchive");
+  await requireAuth(event);
+
   const query = getQuery(event);
   const book = String(query.book || "");
   const chapter = Number(query.chapter || 0);

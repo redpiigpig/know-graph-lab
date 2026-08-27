@@ -33,6 +33,7 @@ from docx.shared import Mm, Pt
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import latin_source_texts as L  # noqa: E402
 import build_hebrew_full_reader as H
+import build_greek_full_reader as G
 from proper_name_categories import PRINT_ORDER  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +48,7 @@ CHURCH = CACHE / "church-plan.json"
 LITURGY = CACHE / "liturgy.json"
 READINGS_ZH = CACHE / "readings-zh.json"
 MEMORY = CACHE / "memory-units.json"
+INTERLINEAR_PATH = CACHE / "interlinear.json"
 GAP_ZH = CACHE / "reading-gap-zh.json"
 
 LITURGY_NOTE = "禮儀經文的固定對答採教會通行本文，其餘為自譯；付印前請對照《感恩祭典》核對"
@@ -157,6 +159,15 @@ def page_break(document):
 
 # 封面上的拉丁題辭，一冊一句。
 COVER_LATIN = {"上冊": "VULGATA ET LITURGIA", "下冊": "PATRES ET DOCTORES"}
+VOLUME_NUMBER = {"上冊": 1, "下冊": 2}
+
+
+def load_interlinear() -> dict:
+    """逐詞對譯層。沒有就回空的——書照樣印得出來，只是沒有那一層。"""
+
+    if not INTERLINEAR_PATH.exists():
+        return {}
+    return json.loads(INTERLINEAR_PATH.read_text(encoding="utf-8")).get("units", {})
 
 
 def title_page(document, volume: str, spec: dict, counts: str):
@@ -166,12 +177,13 @@ def title_page(document, volume: str, spec: dict, counts: str):
     H.set_borders(table, outside=False, inside=False)
     cell = table.cell(0, 0)
     H.set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
-    H.shade(cell, H.ACCENT_DARK)
+    palette = H.cover_colors("la")
+    H.shade(cell, palette["banner"])
 
     eyebrow = cell.paragraphs[0]
     eyebrow.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), H.FONT_UI, 8,
-                   color=H.GOLD, bold=True)
+                   color=palette["rule"], bold=True)
     name = cell.add_paragraph()
     name.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.add_mixed_script_text(name, "教會拉丁文原文讀本", H.FONT_ZH, 25, bold=True,
@@ -191,7 +203,7 @@ def title_page(document, volume: str, spec: dict, counts: str):
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     spec_line = document.add_paragraph()
     spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    H.paragraph_rule(spec_line, color=H.GOLD, size="24")
+    H.paragraph_rule(spec_line, color=palette["rule"], size="24")
     H.set_run_font(spec_line.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), H.FONT_UI,
                    8.5, color=H.MUTED)
     para = body(document, counts, H.CAPTION_PT, color=H.MUTED)
@@ -306,11 +318,16 @@ def short_pos(entry: dict) -> str:
     return ""
 
 
-def memory_block(document, units: list[dict]):
+def memory_block(document, units: list[dict], *, key: str = "",
+                 interlinear: dict | None = None):
     if not units:
         return
     heading(document, "記憶單元", H.H2_SIZE_PT, space_before=6, space_after=3)
-    for unit in units:
+    for position, unit in enumerate(units, start=1):
+        tokens = (interlinear or {}).get(f"memory:{key}:{position}", {}).get("tokens")
+        if tokens:
+            add_latin_interlinear(document, tokens, sense=unit.get("zh") or "")
+            continue
         body(document, unit["text"], LATIN_PT, font=FONT_LA, space_after=1, indent_mm=4)
         zh = unit.get("zh") or ""
         if zh and zh != "reading-has-chinese":
@@ -320,13 +337,67 @@ def memory_block(document, units: list[dict]):
                  space_after=3, indent_mm=4)
 
 
-def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str = ""):
+_LATIN_METRICS = None
+FONT_FILES = (
+    "C:/Windows/Fonts/NotoSerif-Regular.ttf",
+    "C:/Windows/Fonts/pala.ttf",
+    "C:/Windows/Fonts/times.ttf",
+)
+
+
+def latin_width_mm(text: str, size_pt: float) -> float:
+    """一個拉丁詞印出來有多寬。
+
+    量寬要用真的字體檔，不能用字數乘係數——逐詞排版是照量出來的寬度切行的。
+    系統沒有 Noto Serif 就退回 Palatino：都是襯線體，寬度差得有限，而且差的
+    後果只是某一行少排一個詞，不是排錯。
+    """
+
+    global _LATIN_METRICS
+    if _LATIN_METRICS is None:
+        from PIL import ImageFont
+
+        for candidate in FONT_FILES:
+            if Path(candidate).exists():
+                _LATIN_METRICS = ImageFont.truetype(candidate, 1000)
+                break
+    return _LATIN_METRICS.getlength(text) / 1000 * size_pt / 72 * 25.4
+
+
+def latin_run(paragraph, text: str, size_pt: float) -> None:
+    H.set_run_font(paragraph.add_run(text), FONT_LA, size_pt, color=H.INK)
+
+
+def add_latin_interlinear(document, tokens: list, *, sense: str = "") -> None:
+    """逐詞對譯：拉丁在上、繁中在下，整句中譯收在後面。
+
+    版式與希臘那本同一支函式，只換量寬與印字的字體——兩本並排時逐詞區塊要
+    長得一樣，那是同一套書的一部分。
+    """
+
+    G.add_interlinear(
+        document,
+        tokens,
+        sense=sense,
+        greek_pt=LATIN_PT,
+        available_mm=H.USABLE_WIDTH_MM,
+        measure=latin_width_mm,
+        render=latin_run,
+    )
+
+def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str = "",
+                  *, key: str = "", interlinear: dict | None = None):
     # 每一課的讀物另起一頁：詞表與記憶單元是準備，讀物是這一課的正事。
     page_break(document)
     heading(document, f"讀本　{title}", H.H2_SIZE_PT, space_before=0, space_after=3)
     if note:
         body(document, note, H.CAPTION_PT, color=H.MUTED, space_after=4)
-    for latin, chinese in pairs:
+    for index, (latin, chinese) in enumerate(pairs, start=1):
+        tokens = (interlinear or {}).get(f"reading:{key}:{index}", {}).get("tokens")
+        if tokens:
+            add_latin_interlinear(document, tokens, sense=chinese or "〔中譯待補〕")
+            continue
+        # 還沒有逐詞層的行照舊整行印，缺就要看得出來缺。
         body(document, latin, LATIN_PT, font=FONT_LA, space_after=1)
         body(document, chinese or "〔中譯待補〕", H.TRANSLATION_PT, color=H.MUTED,
              space_after=5)
@@ -532,6 +603,22 @@ def build(volume: str) -> Path:
                         for latin, _ in row["pairs"])
     title_page(document, volume, spec,
                f"五十課．{words} 詞．讀本 {reading_words:,} 詞")
+    interlinear = load_interlinear()
+    volume_number = VOLUME_NUMBER[volume]
+    H.add_contents(
+        document,
+        [
+            (
+                f"{lesson:02d}",
+                readings.get(lesson, {}).get("title") or "　",
+                "武加大經文" if volume == "上冊" else "教父與教廷文獻",
+            )
+            for lesson in range(1, 51)
+        ],
+        title=f"{volume}目錄",
+        accent=H.cover_colors("la")["accent"],
+    )
+    page_break(document)
 
     for lesson in range(1, 51):
         reading = readings.get(lesson, {"title": "", "pairs": [], "note": ""})
@@ -545,10 +632,13 @@ def build(volume: str) -> Path:
         opener = heading(document, reading["title"] or "　", H.H1_SIZE_PT,
                          space_before=0, space_after=6)
         H.paragraph_rule(opener, color=H.GOLD, size="14")
+        key = f"v{volume_number}-{lesson}"
         vocabulary_table(document, per_lesson.get(lesson, []))
-        memory_block(document, memory_by_lesson.get(lesson, []))
+        memory_block(document, memory_by_lesson.get(lesson, []), key=key,
+                     interlinear=interlinear)
         if reading["pairs"]:
-            reading_block(document, reading["title"], reading["pairs"], reading["note"])
+            reading_block(document, reading["title"], reading["pairs"], reading["note"],
+                          key=key, interlinear=interlinear)
 
     appendix_section(document, appendices.get(spec["appendix"], {}))
 

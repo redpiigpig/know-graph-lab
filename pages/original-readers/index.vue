@@ -80,6 +80,18 @@
         </article>
       </section>
 
+      <NuxtLink
+        to="/original-readers/flashcards"
+        class="mt-8 flex items-center justify-between gap-4 rounded-3xl border border-stone-300 bg-[#fffdf7] px-6 py-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md"
+      >
+        <div>
+          <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">FLASHCARDS</p>
+          <h2 class="mt-1 font-serif text-xl font-semibold">線上翻卡</h2>
+          <p class="mt-1 text-sm text-stone-500">與紙本同一份卡表，六千餘張；正面原文、背面圖與繁中詞義。</p>
+        </div>
+        <span class="text-xl text-stone-400">→</span>
+      </NuxtLink>
+
       <section class="mt-8 rounded-3xl border border-stone-300 bg-white/70 p-6 text-sm leading-7 text-stone-600">
         <h2 class="font-serif text-lg font-semibold text-stone-900">製作原則</h2>
         <p class="mt-2">三冊正文保持各語言的歷史字形與校訂本標記。希伯來文完整保留馬所拉母音點，不以現代無母音拼法代替；希伯來文與希臘文以官方參考及校訂音軌承擔正式發音，拉丁文裝置語音也只作明確標示的臨時試聽。</p>

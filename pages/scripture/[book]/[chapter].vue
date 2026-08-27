@@ -122,13 +122,13 @@
             class="bg-white border border-gray-200 rounded-md overflow-hidden"
           >
             <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: `auto ${gridCols}` }">
-              <div class="bg-stone-50 px-2 py-2 text-xs font-mono font-semibold text-stone-700 flex items-start">
+              <div class="bg-stone-50 px-2 py-2 text-sm font-mono font-semibold text-stone-700 flex items-start">
                 {{ v.verse }}
               </div>
               <div
                 v-for="(col, idx) in columns"
                 :key="idx"
-                class="bg-white px-3 py-2 text-sm leading-relaxed text-gray-800"
+                class="bg-white px-3 py-2 text-lg leading-loose text-gray-800"
                 :class="textClassFor(col.versionCode)"
               >
                 <template v-if="col.versionCode && v.byVersion[col.versionCode]">
@@ -170,13 +170,13 @@
                 class="bg-white border border-gray-200 rounded-md overflow-hidden"
               >
                 <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: `auto ${gridCols}` }">
-                  <div class="bg-stone-50 px-2 py-2 text-xs font-mono font-semibold text-stone-700 flex items-start">
+                  <div class="bg-stone-50 px-2 py-2 text-sm font-mono font-semibold text-stone-700 flex items-start">
                     {{ v.verse }}
                   </div>
                   <div
                     v-for="(col, idx) in columns"
                     :key="idx"
-                    class="bg-white px-3 py-2 text-sm leading-relaxed text-gray-800"
+                    class="bg-white px-3 py-2 text-lg leading-loose text-gray-800"
                     :class="textClassFor(col.versionCode)"
                   >
                     <template v-if="col.versionCode && v.byVersion[col.versionCode]">
@@ -412,7 +412,11 @@ async function loadMorphology() {
   try {
     const data = await $fetch<{ available: boolean; verses: Record<number, MorphWord[]> }>(
       '/api/scripture/morphology',
-      { query: { book: bookCode.value, chapter: chapterNum.value } },
+      {
+        // 這支端點要登入（信望愛字典是私人使用授權），跟其他經文端點一樣帶 token。
+        headers: await authHeaders(),
+        query: { book: bookCode.value, chapter: chapterNum.value },
+      },
     )
     if (data.available) morphology.value = data.verses
   } catch {
@@ -515,12 +519,15 @@ function removeColumn(idx: number) {
 const gridCols = computed(() => `repeat(${columns.value.length}, minmax(0, 1fr))`)
 
 function textClassFor(code: string) {
+  // 內頁字級（2026-08-28 使用者要求整體放大一倍）。原本欄位吃 text-sm，
+  // 原文欄只比中文大一點點，逐詞對譯的小字更是幾乎看不見。
+  // 這裡回傳的字級會蓋掉欄位預設的 text-sm。
   const v = versions.value?.find(x => x.code === code)
-  if (!v) return ''
-  if (v.language === 'hbo') return 'font-serif rtl-text text-right text-base'  // Hebrew RTL
-  if (v.language === 'grc') return 'font-serif'                                // Greek
-  if (v.language === 'lat') return 'font-serif italic'                         // Latin
-  return ''
+  if (!v) return 'text-lg leading-loose'
+  if (v.language === 'hbo') return 'font-serif rtl-text text-right text-2xl leading-loose'
+  if (v.language === 'grc') return 'font-serif text-xl leading-loose'
+  if (v.language === 'lat') return 'font-serif italic text-xl leading-loose'
+  return 'text-lg leading-loose'
 }
 
 // ── Chapter navigation

@@ -1,0 +1,58 @@
+{
+ "generatedFrom": "scripts/build_flashcards.py（與紙本同一份卡表）",
+ "artwork": {
+  "artwork": "OpenMoji 17.0.0",
+  "licence": "CC BY-SA 4.0",
+  "url": "https://openmoji.org"
+ },
+ "decks": [
+  {
+   "deck": "hbo",
+   "title": "聖經希伯來文",
+   "cards": 1000,
+   "withArt": 1000
+  },
+  {
+   "deck": "grc1",
+   "title": "通用希臘文・上冊",
+   "cards": 1000,
+   "withArt": 1000
+  },
+  {
+   "deck": "grc2",
+   "title": "通用希臘文・下冊",
+   "cards": 1000,
+   "withArt": 1000
+  },
+  {
+   "deck": "lat1",
+   "title": "教會拉丁文・上冊",
+   "cards": 1000,
+   "withArt": 996
+  },
+  {
+   "deck": "lat2",
+   "title": "教會拉丁文・下冊",
+   "cards": 1000,
+   "withArt": 1000
+  },
+  {
+   "deck": "hbo-appendix",
+   "title": "聖經希伯來文・附錄",
+   "cards": 255,
+   "withArt": 0
+  },
+  {
+   "deck": "grc-appendix",
+   "title": "通用希臘文・附錄",
+   "cards": 511,
+   "withArt": 0
+  },
+  {
+   "deck": "lat-appendix",
+   "title": "教會拉丁文・附錄",
+   "cards": 745,
+   "withArt": 0
+  }
+ ]
+}
