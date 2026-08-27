@@ -1,6 +1,6 @@
 {
  "schemaVersion": "1.0.0",
- "generatedOn": "2026-08-26",
+ "generatedOn": "2026-08-27",
  "volume": "上冊",
  "edition": {
   "latin": "Biblia Sacra Vulgata Clementina, eBible.org latVUC transcription",
@@ -8,7 +8,7 @@
  },
  "counts": {
   "chapters": 50,
-  "verses": 1208,
+  "verses": 1194,
   "words": 19570
  },
  "chapters": [
@@ -174,12 +174,12 @@
    "book": "",
    "chapter": 0,
    "zhBook": "",
-   "verses": 3,
+   "verses": 1,
    "words": 84,
    "coverage": 0.9506,
    "nameShare": 0.0,
-   "meanVerseWords": 28.0,
-   "difficulty": 11.94,
+   "meanVerseWords": 84.0,
+   "difficulty": 25.94,
    "extent": "complete",
    "lesson": 9
   },
@@ -193,12 +193,12 @@
    "book": "",
    "chapter": 0,
    "zhBook": "",
-   "verses": 13,
+   "verses": 1,
    "words": 174,
    "coverage": 0.9226,
    "nameShare": 0.0,
-   "meanVerseWords": 13.4,
-   "difficulty": 11.08,
+   "meanVerseWords": 174.0,
+   "difficulty": 51.24,
    "extent": "complete",
    "lesson": 10
   },

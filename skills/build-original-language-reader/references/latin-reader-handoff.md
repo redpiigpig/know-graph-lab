@@ -190,3 +190,38 @@ checksums.
 - **Do not re-scan a corpus per lookup.** Asking for one name's commonest
   spelling by scanning three million words, five hundred times, is why the first
   appendix build never finished.
+
+## Closing the last gaps (2026-08-27)
+
+- **Every reading and every liturgical line now carries Chinese.** 314 lines were
+  filled: 68 from the received wording of the Mass, 59 rendered structurally as
+  subscriptions, the rest self-translated and gated. `〔中譯待補〕` appears
+  nowhere in either volume.
+- **The signature list is rendered, not translated.** `subscription_zh()` in
+  `fill_latin_reading_gaps.py` maps a closed table of offices — 樞機, 總主教,
+  領銜主教, 宗主教, 首席總主教, 永久署理 — and keeps the personal name and the see
+  in Latin. Fifty-eight of the fifty-nine match the `Ego …` shape; the odd one
+  out is the secretary's countersignature.
+- **A repetition gate now runs on every line, apparatus included.** One
+  subscription had collapsed into six hundred characters of 聖 and passed every
+  other check. It measures the repetition as a share of the line, so the fivefold
+  parallelism of Deus Caritas Est still passes.
+- **The glosses were in the wrong register.** Eleven headwords came back in
+  Protestant Chinese — 教皇, 使徒, 上帝, 祭司, 聖靈降臨節, 道成肉身 — against the
+  Studium Biblicum readings on the facing page. `CATHOLIC_TERMS` in
+  `gloss_latin_vocabulary_zh.py` corrects them after the model, and the engine
+  field records `catholic-usage` so the override is visible.
+- **上冊 memory units are 100/100.** Four of the ten opening formulas are printed
+  as one block — the Confiteor, the Our Father, the Gloria, the Creed — so each
+  offered a single candidate longer than any unit may be, and those lessons came
+  out empty. `split_formula()` cuts them at sentence boundaries and marks the
+  pieces `reading-has-chinese`, because the published Chinese translates the
+  whole block and cannot travel with a clause. Two smaller fixes went with it:
+  the V./R. marker is apparatus and must not count against readability
+  (「R. Amen.」 was being read as half unintelligible), and two petitions of one
+  formula are allowed to resemble each other, since that repetition is the text.
+- **Proper-name Chinese is 389/585**, up from 53. The route is unchanged —
+  Studium Biblicum's own underlining, aligned verse by verse — and the gain came
+  from fetching the 154 chapters where the unnamed names actually occur. The
+  remaining 196 do not appear in any chapter the alignment can settle; a blank is
+  the correct state for them.

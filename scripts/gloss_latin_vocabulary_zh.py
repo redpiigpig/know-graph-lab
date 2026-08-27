@@ -59,6 +59,31 @@ PROMPT = """你是教會拉丁文讀本的繁體中文釋義編輯。以下是�
 """
 
 
+# The model glosses in the Chinese a Protestant Bible reader knows, because that
+# is what most Chinese text about Christianity is written in: 教皇, 使徒, 上帝,
+# 祭司, 聖靈降臨節, 道成肉身. Every one of them is wrong in this book. The
+# readings are printed from the Studium Biblicum version and the liturgy from
+# 《感恩祭典》, so the vocabulary column has to say 教宗, 宗徒, 天主, 司祭,
+# 聖神降臨節, 聖子降生 -- otherwise the word list and the facing page name the
+# same thing differently, in a reader whose whole subject is Catholic Latin.
+#
+# Correcting the model's output rather than the prompt is deliberate: the prompt
+# already asks for Catholic usage and still drifts on the handful of terms where
+# the Protestant rendering dominates its training text.
+CATHOLIC_TERMS: dict[str, str] = {
+    "pāpa": "教宗",
+    "apostolus": "宗徒",
+    "apostolicus": "宗徒的、屬於宗徒的",
+    "Deus": "天主",
+    "sacerdōs": "司祭、司鐸",
+    "sacerdotalis": "司祭的、聖職的",
+    "pontifex": "大司祭、宗教領袖；主教、教宗",
+    "baptisma": "聖洗、洗禮",
+    "Pentecoste": "聖神降臨節、五旬節",
+    "incarnatio": "聖子降生成人、降生奧蹟",
+    "lex": "法律、法度",
+}
+
 def batch_prompt(rows: list[dict]) -> str:
     lines = []
     for row in rows:
@@ -196,8 +221,10 @@ def main() -> None:
     if args.write:
         for entry in entries:
             hit = cache.get(entry["headword"])
-            entry["glossZh"] = hit["zh"] if hit else ""
-            entry["glossEngine"] = hit["engine"] if hit else ""
+            fixed = CATHOLIC_TERMS.get(entry["headword"])
+            entry["glossZh"] = fixed or (hit["zh"] if hit else "")
+            entry["glossEngine"] = ("catholic-usage" if fixed
+                                    else hit["engine"] if hit else "")
         VOCABULARY.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
         print("->", VOCABULARY.relative_to(ROOT))
 

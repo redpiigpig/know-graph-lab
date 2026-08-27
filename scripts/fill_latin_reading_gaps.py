@@ -88,42 +88,115 @@ RECEIVED: dict[str, str] = {
     "Habemus ad Dominum.": "我們全心歸向上主。",
     "Gratias agamus Domino Deo nostro.": "我們要感謝上主、我們的天主。",
     "Dignum et justum est.": "這是理所當然的。",
-    "Kyrie eleison.": "上主，求祢垂憐。",
-    "Christe eleison.": "基督，求祢垂憐。",
+    "Kyrie eleison.": "上主，求你垂憐。",
+    "Christe eleison.": "基督，求你垂憐。",
     "Oremus.": "請大家祈禱。",
     "Verbum Domini.": "上主的話。",
     "Deo gratias.": "感謝天主。",
-    "Gloria tibi, Domine.": "主，願光榮歸於祢。",
-    "Laus tibi, Christe.": "基督，願讚美歸於祢。",
+    "Gloria tibi, Domine.": "主，願光榮歸於你。",
+    "Laus tibi, Christe.": "基督，願讚美歸於你。",
     "Ite, missa est.": "彌撒禮成。",
     "Pax Domini sit semper vobiscum.": "願主的平安常與你們同在。",
     "Lectio sancti Evangelii secundum N.": "恭讀聖 N 所載主耶穌基督的福音。",
     "Benedicat vos omnipotens Deus, Pater, et Filius, et Spiritus Sanctus.":
-        "願全能的天主，聖父、聖子、聖神降福你們。",
+        "願全能的天主，聖父、聖子、聖神，降福你們。",
     "Agnus Dei, qui tollis peccata mundi: miserere nobis.":
-        "除免世罪的天主羔羊，求祢垂憐我們。",
+        "除免世罪的天主羔羊，求你垂憐我們。",
     "Agnus Dei, qui tollis peccata mundi: dona nobis pacem.":
-        "除免世罪的天主羔羊，求賜我們平安。",
+        "除免世罪的天主羔羊，求你賜給我們平安。",
     "Corpus Christi.": "基督聖體。",
     "Sanguis Christi.": "基督聖血。",
     "Offerte vobis pacem.": "請大家互祝平安。",
     "Mysterium fidei:": "信德的奧蹟：",
+    "Ipse enim in qua nocte tradebatur accepta panem et tibi gratias agens "
+    "benedixit, fregit, deditque discipulis suis, dicens: Accipite et manducate "
+    "ex hoc omnes; hoc est enim Corpus meum, quod pro vobis defertur.":
+        "他在被出賣的那天晚上，拿起麵餅，感謝了你，把麵餅分開、交給他的門徒說："
+        "你們大家拿去吃：這就是我的身體，將為你們而犧牲。",
+    "Domine, non sum dignus, ut intres sub tectum meum, sed tantum dic verbo, "
+    "et sanabitur anima mea.":
+        "主，我當不起你到我心裏來，只要你說一句話，我的靈魂就會痊癒。",
     # The two the congregation says word for word, and where a machine rendering
     # drifts into 文言 (「願爾名見聖」) or clips a clause.
-    "Pater noster, qui es in caelis, sanctificetur nomen tuum; adveniat regnum "
-    "tuum; fiat voluntas tua, sicut in caelo et in terra. Panem nostrum "
-    "cotidianum da nobis hodie; et dimitte nobis debita nostra, sicut et nos "
-    "dimittimus debitoribus nostris; et ne nos indicas in tentationem; sed "
-    "libera nos a malo.":
-        "我們的天父，願祢的名受顯揚；願祢的國來臨；願祢的旨意奉行在人間，"
-        "如同在天上。求祢今天賞給我們日用的食糧；求祢寬恕我們的罪過，"
-        "如同我們寬恕別人一樣；不要讓我們陷於誘惑；但救我們免於凶惡。",
-    "Sanctus, Sanctus, Sanctus Dominus Deus Sabaoth. Pleni sunt caeli et terra "
-    "gloria tua. Hosanna in excelsis. Benedictus qui venit in nomine Domini. "
-    "Hosanna in excelsis.":
-        "聖、聖、聖，上主、萬有的天主。祢的光榮充滿天地。歡呼之聲，響徹雲霄。"
-        "奉上主名而來的，當受讚美。歡呼之聲，響徹雲霄。",
 }
+
+
+# Nostra Aetate ends with the fifty-nine subscriptions of the Council fathers,
+# and every one of them is a personal name, a see and an office. A model asked
+# to translate that invents Chinese for cardinals nobody has transliterated --
+# and one of them collapsed outright, returning 「聖事聖殿聖祭司聖座聖禮聖宗座聖
+# 盛典聖聖聖…」 for six hundred characters, which the apparatus exemption then
+# waved past the length check.
+#
+# So the offices are translated from a closed table and the names and sees stay
+# in the Latin the document prints. This is what Chinese editions of the council
+# documents do, it invents nothing a reader cannot check, and it is deterministic
+# -- the model is never asked.
+SUBSCRIPTION = re.compile(r"^(†\s*)?Ego\s+(.+?)\.?$")
+
+OFFICES: list[tuple[str, str]] = [
+    (r"Catholicae Ecclesiae Episcopus", "公教會主教"),
+    (r"Archiepiscopus Primas", "首席總主教"),
+    (r"Episcopus Primas", "首席主教"),
+    (r"Concilii Secretarius Generalis", "公會議秘書長"),
+    (r"Sacri Collegii Decanus", "樞機團團長"),
+    (r"Protodiaconus Cardinalis", "首席執事級樞機"),
+    (r"Presbyter Cardinalis", "司鐸級樞機"),
+    (r"Diaconus Cardinalis", "執事級樞機"),
+    (r"Administrator Perpetuus", "永久署理"),
+    (r"Archiepiscopus tit\.", "領銜總主教"),
+    (r"Episcopus tit\.", "領銜主教"),
+    (r"Archiepiscopus", "總主教"),
+    (r"Patriarcha", "宗主教"),
+    (r"Episcopus", "主教"),
+    (r"Cardinalis", "樞機"),
+    (r"Primas", "首席主教"),
+    (r"tituli|titulo", "領銜"),
+    (r"\bSsmi\b", "至聖"),
+    (r"\bSs\.", "諸聖"),
+    (r"\bS\.", "聖"),
+    (r"\bac\b|\bet\b", "暨"),
+    (r"\bin\b", "於"),
+    (r"\bde\b", "de"),
+]
+
+
+def subscription_zh(latin: str) -> str:
+    """A council father's signature, with the office translated and the name kept."""
+    match = SUBSCRIPTION.match(latin.strip())
+    if not match:
+        return ""
+    body = match.group(2)
+    for pattern, chinese in OFFICES:
+        body = re.sub(pattern, chinese, body)
+    body = re.sub(r"\s*,\s*", "，", body)
+    body = re.sub(r"\s+", " ", body).strip()
+    return f"† 我，{body}。"
+
+PUBLISHED = ROOT / "data" / "originalReaders" / "latin-liturgy-received-zh.json"
+
+
+def published_blocks() -> dict[str, str]:
+    """The formulas whose Chinese comes from a printed missal, keyed by id.
+
+    Six of the ten are one continuous text -- the Confiteor, the Gloria, the
+    Creed, the Sanctus, the Agnus Dei, the Lord's Prayer -- and a published
+    Chinese Order of Mass prints each as one block. Setting the block against the
+    whole formula is exact; splitting it to match Collins's column breaks would
+    not be.
+    """
+    if not PUBLISHED.exists():
+        return {}
+    return json.loads(PUBLISHED.read_text(encoding="utf-8"))["formulas"]
+
+
+def formula_of_lesson() -> dict[int, str]:
+    plan = CACHE / "scripture-plan.json"
+    if not plan.exists():
+        return {}
+    return {row["lesson"]: row["id"]
+            for row in json.loads(plan.read_text(encoding="utf-8"))["chapters"]
+            if row.get("kind") == "liturgy"}
 
 
 def received(latin: str) -> str:
@@ -137,6 +210,8 @@ def liturgical_flaws(latin: str, zh: str) -> str:
     """Reject an answer that says more than the Latin said."""
     if not zh.strip():
         return "空白"
+    if repeats(zh):
+        return "譯文重複退化"
     if has_simplified(zh):
         return "含簡體字"
 
@@ -181,9 +256,36 @@ def liturgical_flaws(latin: str, zh: str) -> str:
 APPARATUS_LINE = re.compile(r"^(†|\(\d+\)|Cfr\.|Cf\.)")
 
 
+def repeats(zh: str) -> bool:
+    """A model that has lost the thread says the same four characters for ever.
+
+    This is the one check no exemption lifts: 「聖事聖殿聖祭司聖座聖禮聖宗座…」 is
+    not a signature, a citation or a creed, whatever the line it came from.
+    """
+    body = re.sub(r"[，。、；：？！「」（）()\s]", "", zh)
+    if len(body) < 24:
+        return False
+    # Counting repetitions alone flags good prose: Deus Caritas Est says 「之間的
+    # 愛」 five times because the Latin says `de amore inter` five times. What
+    # separates degeneration is how much of the line the repetition *is* -- half
+    # of it or more, against a fifth for the parallelism.
+    worst = max((len(re.findall(re.escape(body[i:i + 4]), body))
+                 for i in range(len(body) - 3)), default=0)
+    if worst * 4 > len(body) * 0.5:
+        return True
+    # The collapse that actually happened was not a repeated phrase but a
+    # repeated character: 聖 was seven characters in ten of a six-hundred-
+    # character line. No Chinese sentence does that; the densest real line in
+    # this book is the Creed at two in ten.
+    from collections import Counter
+    return Counter(body).most_common(1)[0][1] > len(body) * 0.35
+
+
 def prose_flaws(latin: str, zh: str) -> str:
     if not zh.strip():
         return "空白"
+    if repeats(zh):
+        return "譯文重複退化"
     if has_simplified(zh):
         return "含簡體字"
     if (not APPARATUS_LINE.match(latin.strip())
@@ -282,9 +384,18 @@ def main() -> None:
     print(f"待補 {len(gaps(master))} 段；本輪處理 {len(pending)}；已完成 {len(store['lines'])}")
 
     failures: list[str] = []
+    blocks = published_blocks()
+    lesson_formula = formula_of_lesson()
     supplied = 0
     for number, row in enumerate(pending, start=1):
         fixed = received(row["latin"]) if row["liturgical"] else ""
+        hand = "" if fixed else subscription_zh(row["latin"])
+        if not fixed and row["key"].startswith("v1:l"):
+            lesson = int(row["key"].split(":")[1][1:])
+            index = int(row["key"].split(":")[2])
+            formula = lesson_formula.get(lesson)
+            if index == 0 and formula in blocks:
+                fixed = blocks[formula]
         if fixed:
             marker = MARKER.match(row["latin"].strip())
             prefix = f"{marker.group(1)}. " if marker else ""
@@ -294,6 +405,12 @@ def main() -> None:
                 "liturgical": True, "latin": row["latin"],
             }
             supplied += 1
+            continue
+        if hand:
+            store["lines"][row["key"]] = {
+                "zh": hand, "engine": "hand-translated", "note": NOTE,
+                "liturgical": row["liturgical"], "latin": row["latin"],
+            }
             continue
         try:
             zh, engine = translate(row["latin"], row["liturgical"])

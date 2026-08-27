@@ -61,6 +61,30 @@ APPARATUS = {
 }
 
 # Encyclical folders are named 20c-john-paul-ii, so the century is a prefix.
+# Entries the corpora and the dictionary both failed, reviewed one at a time
+# against Whitaker.  Six are the scan misreading a letter; one is not a word at
+# all -- "boundary" is the English half of finis's definition, wrapped onto its
+# own line and stamped with a unit number by the OCR.
+OCR_CORRECTIONS: dict[str, tuple[str, str]] = {
+    "refugeō": ("refulgeō", "refulgeō, refulgēre, refulsī, —"),
+    "continueō": ("contineō", "contineō, continēre, continuī, contentus"),
+    "luminābē": ("lūmināre", "lūmināre, lūmināris, lūminārium, n."),
+    "oboeidiō": ("oboediō", "oboediō, oboedīre, oboedīvī, oboedītus"),
+    "paeniteor": ("paeniteō", "paeniteō, paenitēre, paenituī, —"),
+    "Galileaeus": ("Galilaeus", "Galilaeus, -a, -um"),
+    "immolātio": ("immolātiō", "immolātiō, immolātiōnis, f."),
+}
+
+# Not a Latin word: an English gloss the OCR promoted to a headword.
+DROP = {"boundary"}
+
+# Real church Latin that no treebank and no dictionary in this build attests --
+# checked by hand and kept, so the gate stops asking about them.  eléison is
+# Greek, retained untranslated by the Latin rite, which is why it is here.
+REVIEWED_REAL = {"eléison", "perenniter", "memoror", "avē!", "omissiō",
+                 "peregrīnantis", "nōlī/nōlite", "quaesō/quaesumus",
+                 "immolātiō"}  # 羅馬感恩經：cujus voluisti immolatione placari
+
 MODERN_GROUPS = re.compile(r"^(1[6-9]c|2[01]c)(-|$)|^(trent|vatican-i|vatican-ii)$")
 
 # The Latin Library wraps its texts in English navigation, and the modern curial
@@ -193,8 +217,10 @@ def load_collins(lm, words_index) -> tuple[list[dict], list[dict], list[str]]:
             continue
         forms = (entry.get("forms") or head).strip()
         key = unicodedata.normalize("NFC", headword_of(head, forms))
-        if not key:
+        if not key or key in DROP:
             continue
+        if key in OCR_CORRECTIONS:
+            key, forms = OCR_CORRECTIONS[key]
         record = {
             "headword": key,
             "forms": forms,
@@ -235,7 +261,10 @@ def load_collins(lm, words_index) -> tuple[list[dict], list[dict], list[str]]:
     # artifact is left in the list, marked, for a reviewer to strike.
     rejected = []
     for entry in ordered:
-        entry["attested"] = attested(entry["headword"], lm, words_index)
+        entry["attested"] = (attested(entry["headword"], lm, words_index)
+                             or entry["headword"] in REVIEWED_REAL)
+        entry["attestation"] = ("reviewed" if entry["headword"] in REVIEWED_REAL
+                                else "corpus" if entry["attested"] else "none")
         if not entry["attested"]:
             rejected.append(entry["headword"])
     names = [e for e in ordered if is_name(e)]

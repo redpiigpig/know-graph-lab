@@ -7,7 +7,8 @@
   "unit": 2,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Maria",
@@ -17,7 +18,8 @@
   "unit": 2,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Petrus",
@@ -27,7 +29,8 @@
   "unit": 2,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Hebraeus",
@@ -37,7 +40,8 @@
   "unit": 6,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Galilaea",
@@ -47,7 +51,8 @@
   "unit": 10,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Adam",
@@ -57,7 +62,8 @@
   "unit": 11,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Paulus",
@@ -67,7 +73,8 @@
   "unit": 11,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Ēva",
@@ -77,7 +84,8 @@
   "unit": 12,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Joannes",
@@ -87,7 +95,8 @@
   "unit": 14,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Jērūsālem",
@@ -97,7 +106,8 @@
   "unit": 17,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Rōma",
@@ -107,7 +117,8 @@
   "unit": 17,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Lūcās",
@@ -117,7 +128,8 @@
   "unit": 18,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Olivētum",
@@ -127,7 +139,8 @@
   "unit": 24,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Pontius Pilatus",
@@ -137,7 +150,8 @@
   "unit": 27,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  },
  {
   "headword": "Magdalēna",
@@ -147,6 +161,7 @@
   "unit": 29,
   "exerciseOnly": false,
   "under": "",
-  "attested": true
+  "attested": true,
+  "attestation": "corpus"
  }
 ]

@@ -143,9 +143,20 @@ def choose(candidates: list[dict], cumulative: list[set[str]], lm: Lemmatiser,
     scored = []
     for row in candidates:
         lemmas = row["lemmas"]
-        if not (MIN_WORDS <= len(lemmas) <= max_words):
+        # A liturgical formula is short by nature and is not punctuated like
+        # prose; both floors are lifted for it.
+        marked = row["text"].strip()[:2] in ("V.", "R.")
+        floor = (1 if marked else 2) if row.get("liturgical") else MIN_WORDS
+        if not (floor <= len(lemmas) <= max_words):
             continue
-        if not sentence_shape(row["text"]):
+        if row.get("liturgical"):
+            # A formula's lines are not punctuated like prose, but a line that
+            # opens lower-case is the middle of one: 「et vitam venturi saeculi.」
+            # is the Creed's last clause, not something to memorise on its own.
+            head = row["text"].strip()
+            if not (head[:2] in ("V.", "R.") or head[:1].isupper()):
+                continue
+        elif not sentence_shape(row["text"]):
             continue
         if census_like(lemmas, lm):
             continue
@@ -155,8 +166,12 @@ def choose(candidates: list[dict], cumulative: list[set[str]], lm: Lemmatiser,
             continue
         # A sentence the lemmatiser cannot mostly read is not Latin prose: it is
         # a reference, a heading, or a fragment of another language.
-        resolved = sum(1 for w in L.words(row["text"]) if lm.lemma(w))
-        if resolved < 0.8 * max(len(L.words(row["text"])), 1):
+        # The V./R. marker is apparatus, not Latin. Counting it as a word made
+        # 「R. Amen.」 half unreadable and dropped the one thing lesson one has
+        # to memorise.
+        body = re.sub(r"^[VR]\.\s*", "", row["text"].strip())
+        resolved = sum(1 for w in L.words(body) if lm.lemma(w))
+        if resolved < 0.8 * max(len(L.words(body)), 1):
             continue
         # The earliest lesson that can nearly read it.  Demanding every lemma
         # be taught is a threshold no verse clears: the Vulgate has some eight
@@ -170,6 +185,13 @@ def choose(candidates: list[dict], cumulative: list[set[str]], lm: Lemmatiser,
             if sum(1 for l in needed if l not in available) <= budget:
                 earliest = index
                 break
+        # A line out of the lesson's own reading belongs to that lesson whatever
+        # the cumulative vocabulary says: the reader has the text in front of
+        # them.  Without this the ten liturgical formulas were pushed past the
+        # lessons that print them and the early lessons stayed empty.
+        home = row.get("fromLesson")
+        if home and (earliest is None or home < earliest):
+            earliest = home
         if earliest is None:
             continue
         coverage = sum(1 for l in needed if l in cumulative[-1]) / max(len(needed), 1)
@@ -193,7 +215,13 @@ def choose(candidates: list[dict], cumulative: list[set[str]], lm: Lemmatiser,
             pool = available.get(earliest, [])
             while pool and picked < PER_LESSON:
                 row = pool.pop(0)
-                if similar(row["lemmas"], taken):
+                # Two petitions of one formula are near-identical by design --
+                # miserere nobis, dona nobis pacem -- and that repetition is the
+                # text, not a duplicate to weed out. The near-duplicate guard is
+                # for verses that resemble each other across the corpus.
+                sibling = any(row.get("ref") and row["ref"] == other.get("ref")
+                              for other in chosen if other["lesson"] == lesson)
+                if not sibling and similar(row["lemmas"], taken):
                     continue
                 taken.append(row["lemmas"])
                 record = {k: v for k, v in row.items() if k != "lemmas"}
@@ -204,6 +232,74 @@ def choose(candidates: list[dict], cumulative: list[set[str]], lm: Lemmatiser,
             if picked == PER_LESSON:
                 break
     return chosen
+
+
+SENTENCE = re.compile(r"[^.!?;:]+[.!?;:]+|[^.!?;:]+$")
+
+
+def split_formula(line: str, zh: str) -> list[tuple[str, str]]:
+    """One petition of the Our Father is a memory unit; the whole prayer is not.
+
+    Four of the ten formulas -- the Confiteor, the Our Father, the Gloria, the
+    Creed -- are printed as one continuous block, so each offered exactly one
+    candidate and it was longer than any memory unit may be. Every one of those
+    lessons came out empty while the text they memorise sat on the facing page.
+
+    The block's Chinese is a published translation of the whole block, so it
+    cannot travel with a sentence cut out of it -- that is alignment by
+    position, and it would print a paragraph beside a clause. The sentences
+    carry `reading-has-chinese` instead: the reader has the full Chinese in the
+    reading directly above.
+    """
+    if len(L.words(line)) <= MAX_WORDS:
+        return [(line, zh)]
+    parts = [m.group(0).strip() for m in SENTENCE.finditer(line)]
+    return [(part, "reading-has-chinese") for part in parts
+            if MIN_WORDS <= len(L.words(part)) <= MAX_WORDS]
+
+def liturgy_candidates() -> list[dict]:
+    """The ten formulas the upper volume now opens with.
+
+    Lessons one to ten read these, so this is where their memory units belong.
+    The earlier shape had no candidates for them at all -- a lesson that has
+    taught twenty words cannot read a complete Vulgate verse -- and the gap sat
+    at twenty-four units for want of looking in the reading the lesson actually
+    prints.
+
+    They come with their Chinese, and the shortest of them is two words, so the
+    usual floor is lifted here: 「R. Amen.」 is exactly what a first lesson
+    memorises.
+    """
+    plan_path = CACHE / "scripture-plan.json"
+    liturgy_path = CACHE / "liturgy.json"
+    gaps_path = CACHE / "reading-gap-zh.json"
+    if not (plan_path.exists() and liturgy_path.exists()):
+        return []
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    formulas = {row["id"]: row for row in
+                json.loads(liturgy_path.read_text(encoding="utf-8"))["formulas"]}
+    filled = (json.loads(gaps_path.read_text(encoding="utf-8"))["lines"]
+              if gaps_path.exists() else {})
+
+    rows: list[dict] = []
+    for entry in plan["chapters"]:
+        if entry.get("kind") != "liturgy":
+            continue
+        formula = formulas.get(entry["id"])
+        if not formula:
+            continue
+        for index, line in enumerate(formula["lines"]):
+            record = filled.get(f"v1:l{entry['lesson']}:{index}")
+            zh = (record or {}).get("zh", "")
+            for text, part_zh in split_formula(line.strip(), zh):
+                rows.append({
+                    "ref": formula["latinTitle"], "title": entry["title"],
+                    "text": text,
+                    "zh": part_zh,
+                    "fromLesson": entry["lesson"],
+                    "liturgical": True,
+                })
+    return rows
 
 
 def scripture_candidates() -> list[dict]:
@@ -288,7 +384,8 @@ def main() -> None:
     lm = Lemmatiser()
     vocab = json.loads(VOCABULARY.read_text(encoding="utf-8"))["entries"]
 
-    upper = choose(scripture_candidates(), cumulative_vocabulary(vocab, "上冊"), lm)
+    upper = choose(liturgy_candidates() + scripture_candidates(),
+                   cumulative_vocabulary(vocab, "上冊"), lm)
     # The lower volume's sentences run far longer than a Vulgate verse, and only
     # twenty-seven of its fifty readings have a Chinese parallel yet.  Selecting
     # only from those twenty-seven would pick the memory units for the whole

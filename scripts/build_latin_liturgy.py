@@ -165,6 +165,19 @@ def cut(lines: list[str], start: str, end: str) -> list[str] | None:
     return None
 
 
+# Collins breaks a long formula across lines to fit his column; the Gloria and
+# the Creed are one continuous text and a missal prints them as one. Joining
+# them back means the published Chinese, which is also one block, can be set
+# against the whole thing instead of guessed at line by line.
+CONTINUOUS = {"gloria", "credo", "confiteor", "sanctus", "pater-noster"}
+
+
+def join_continuous(key: str, lines: list[str]) -> list[str]:
+    if key not in CONTINUOUS or len(lines) < 2:
+        return lines
+    return [" ".join(line.strip() for line in lines)]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdf", help="Collins PDF, for the text-layer cross-check")
@@ -195,6 +208,7 @@ def main() -> None:
         if body is None:
             print(f"  [缺] {zh}（{la}）：在 OCR 結果裡找不到起訖")
             continue
+        body = join_continuous(key, body)
         formulas.append({
             "id": key, "title": zh, "latinTitle": la,
             "lines": body, "words": sum(len(L.words(l)) for l in body),

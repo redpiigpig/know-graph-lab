@@ -1,6 +1,6 @@
 {
  "schemaVersion": "1.0.0",
- "generatedOn": "2026-08-26",
+ "generatedOn": "2026-08-27",
  "source": {
   "edition": "John F. Collins, A Primer of Ecclesiastical Latin, Further Readings 1: The Ordinary of the Mass (CUA Press, 1985), printing the post-conciliar Missale Romanum ordinary",
   "creeds": "The Latin Library, Christian Creeds",
@@ -79,9 +79,7 @@
    "title": "光榮頌",
    "latinTitle": "Gloria in excelsis Deo",
    "lines": [
-    "Gloria in excelsis Deo et in terra pax hominibus bonae voluntatis. Laudamus te, benedicimus te, adoramus te, glorificamus te, gratias agimus tibi propter magnam gloriam tuam, Domine Deus, Rex caelistis, Deus Pater omnipotens. Domine Fili unigenite, Iesu Christe, Domine Deus, Agnus Dei, Filius Patris, qui tollis peccata mundi, miserere nobis; qui tollis peccata mundi, suscipe deprecationem nostram. Qui sedes ad dexteram Patris, miserere nobis. Quoniam tu",
-    "solus Sanctus, tu solus Dominus, tu solus Altissimus, Jesu Christe,",
-    "cum Sancto Spiritu: in gloria Dei Patris. Amen."
+    "Gloria in excelsis Deo et in terra pax hominibus bonae voluntatis. Laudamus te, benedicimus te, adoramus te, glorificamus te, gratias agimus tibi propter magnam gloriam tuam, Domine Deus, Rex caelistis, Deus Pater omnipotens. Domine Fili unigenite, Iesu Christe, Domine Deus, Agnus Dei, Filius Patris, qui tollis peccata mundi, miserere nobis; qui tollis peccata mundi, suscipe deprecationem nostram. Qui sedes ad dexteram Patris, miserere nobis. Quoniam tu solus Sanctus, tu solus Dominus, tu solus Altissimus, Jesu Christe, cum Sancto Spiritu: in gloria Dei Patris. Amen."
    ],
    "words": 84,
    "extent": "complete"
@@ -101,19 +99,7 @@
    "title": "尼西亞信經",
    "latinTitle": "Symbolum Nicaenum-Constantinopolitanum",
    "lines": [
-    "Credo in unum Deum Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Jesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, lumen de lumine, Deum verum de Deo vero, genitum, non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram sa-",
-    "lutem descendit de caelis. [Ad verba quae sequuntur, usque ad factus",
-    "est, omnes se inclinant.] Et incarnatus est de Spiritu Sancto ex Maria",
-    "Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio",
-    "Pilato; passus et sepultus est, et resurrexit tertia die, secundum",
-    "Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum",
-    "venturus est cum gloria judicare vivos et mortuos, cujus regni non",
-    "erit finis. Et in Spiritum Sanctum, Dominum et vivificantem; qui ex",
-    "Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et",
-    "conglorificatur; qui locutus est per prophetas. Et unam sanctam,",
-    "catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in",
-    "remissionem peccatorum. Et exspecto resurrectionem mortuorum,",
-    "et vitam venturi saeculi."
+    "Credo in unum Deum Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium. Et in unum Dominum Jesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, lumen de lumine, Deum verum de Deo vero, genitum, non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram sa- lutem descendit de caelis. [Ad verba quae sequuntur, usque ad factus est, omnes se inclinant.] Et incarnatus est de Spiritu Sancto ex Maria Virgine, et homo factus est. Crucifixus etiam pro nobis sub Pontio Pilato; passus et sepultus est, et resurrexit tertia die, secundum Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum venturus est cum gloria judicare vivos et mortuos, cujus regni non erit finis. Et in Spiritum Sanctum, Dominum et vivificantem; qui ex Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et conglorificatur; qui locutus est per prophetas. Et unam sanctam, catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in remissionem peccatorum. Et exspecto resurrectionem mortuorum, et vitam venturi saeculi."
    ],
    "words": 174,
    "extent": "complete"

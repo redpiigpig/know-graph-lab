@@ -121,7 +121,7 @@ When a layer stops advancing, probe the tiers before touching the code:
 - NVIDIA needs two checks, because its failures look alike. A bad-key POST that
   returns 401 in a fraction of a second and a `/v1/models` listing that returns
   200 prove the endpoint is healthy; if a real completion then hangs until the
-  read timeout, the *model* is saturated, not the account. `deepseek-v4-flash-0731`
+  read timeout, the *model* is saturated, not the account. `nemotron-3-super-120b-a12b`
   behaved exactly this way on 2026-08-21 — still listed, still authorised, and
   never answering.
 

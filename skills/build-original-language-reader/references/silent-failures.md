@@ -184,6 +184,60 @@ finding the character run common to its verses; it accepted any run that appeare
 in two of two sampled verses. Coverage as a ratio over a tiny sample is noise,
 which is how Ἡμὰθ came to be called 「我們」.
 
+## 12. The shell can kill a writer before it writes
+
+Every builder here prints a summary and then writes its file. Piping one through
+`| head -1` to read just the summary closes the pipe after that line; the next
+`print` raises SIGPIPE and Python dies — **before the write**. The run looked
+perfect: the summary line was the summary line, exit status was zero because
+`head` exited zero.
+
+Seven vocabulary corrections and a deletion never reached the JSON. The verifier
+went on reporting the same sixteen unattested entries for three rounds, and each
+round I looked for the bug in the corrections table, which was right all along.
+
+*Never pipe a script that writes. Redirect to a log and read the log.* The same
+goes for `| tail`, `| grep -m1`, and anything else that closes early.
+
+## 13. A model that loses the thread still returns a paragraph
+
+Asked for a cardinal's signature, the translator returned 「† 我尤金‧蒂瑟朗樞機
+主教，聖事聖殿聖祭司聖座聖禮聖宗座聖盛典聖聖聖…」 for six hundred characters —
+one character, 聖, was seven in ten of the line. Every gate passed it: it was not
+blank, not simplified, carried no Latin, and the apparatus exemption that lets a
+signature be long had turned off the length check.
+
+*Repetition is the one check no exemption may lift.* Count repetitions as a
+share of the line, not as a number: Deus Caritas Est says 「之間的愛」 five times
+because the Latin says `de amore inter` five times, and that is one fifth of the
+line where the collapse is more than half of it.
+
+## 14. Some lists are names, and translating them is inventing
+
+Nostra Aetate ends with fifty-nine subscriptions — a personal name, a see and an
+office each. A model translates them, because they are Latin sentences and it was
+asked to; what comes out is fifty-nine Chinese transliterations of cardinals
+nobody has ever transliterated, which no reader can check and no register can
+confirm. One of them collapsed outright (above) and shipped.
+
+*Render the closed part and keep the open part.* The offices are a table of a
+dozen phrases; the names and the sees stay in the Latin the document prints,
+which is what Chinese editions of the council documents do. Deterministic, and
+the model is never asked.
+
+## 15. The register of the gloss has to match the register of the page
+
+The model glosses `papa` as 教皇, `apostolus` as 使徒, `Deus` as 上帝, `sacerdos`
+as 祭司 — the Chinese a Protestant Bible reader knows, because that is what most
+Chinese writing about Christianity uses. The facing page of this reader is the
+Studium Biblicum version and 《感恩祭典》, which say 教宗, 宗徒, 天主, 司祭. The
+word list and the text it explains were naming the same things differently, in a
+book whose whole subject is Catholic Latin.
+
+*Asking the prompt for the right register is not enough where one rendering
+dominates the training text. Correct the output from a table, and audit the whole
+gloss column against the translation the readings actually use.*
+
 ## The audits that actually found these
 
 - **Count the same set twice, by different routes, and compare.** Plan versus
@@ -201,6 +255,11 @@ which is how Ἡμὰθ came to be called 「我們」.
 - **Read the output as a reader would, once, all of it.** The 49 wrong names, the
   modern-Greek sentence and the four memory verses that were fragments were all
   found by printing the column and reading it. No count would have moved.
+- **Check that the file changed.** A build that reports success and leaves the
+  file's mtime alone did not run. `ls -l` the output, not the log.
+- **Read the rendered page, not the JSON.** 教皇 sat in the vocabulary table
+  through every count and every gate; it was caught by opening the PDF at
+  lesson two and reading the second column.
 - **Group by the shared value and read what shares it.** Grouping the flashcard
   pictures by file found 公義 and 不義 on the same scales; grouping glosses by
   source found the commentary. Anything that legitimately repeats is worth

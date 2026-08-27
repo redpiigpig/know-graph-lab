@@ -8134,5 +8134,33 @@
  "ambō": {
   "zh": "講道壇、聖經台",
   "engine": "nvidia:meta/llama-3.1-70b-instruct"
+ },
+ "Galilaeus": {
+  "zh": "加里肋亞人的、來自加里肋亞的",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "refulgeō": {
+  "zh": "發光、閃爍、照耀",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "paeniteō": {
+  "zh": "悔改、懊悔",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "contineō": {
+  "zh": "容納、保持、約束",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "lūmināre": {
+  "zh": "光源、燈、天體",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "oboediō": {
+  "zh": "服從、順從",
+  "engine": "claude-haiku-4-5-20251001"
+ },
+ "immolātiō": {
+  "zh": "獻祭、犧牲",
+  "engine": "claude-haiku-4-5-20251001"
  }
 }

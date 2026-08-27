@@ -44,6 +44,7 @@ CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 CHURCH = CACHE / "latin-church"
 SIGAO = CACHE / "sigao-zh.json"
 SCRIPTURE_PLAN = CACHE / "scripture-plan.json"
+EXTRA_CHAPTERS = CACHE / "sigao-extra-chapters.json"
 OUTPUT = ROOT / "data" / "originalReaders" / "vocabulary" / "latin-appendices.json"
 
 SENTENCE_RE = __import__('re').compile(r'[.;:?!]')
@@ -233,9 +234,20 @@ def align_chinese(latin_names: set[str], lm) -> dict[str, dict]:
     # changes, while the Chinese export keeps the numbers it was written with.
     # Keying on them silently pairs Exodus 3 with John 17 and the alignment
     # collapses from fifty-six names to one -- which is exactly what happened.
-    for chapter in data["chapters"]:
-        verses = latin_chapters[(chapter["book"], chapter["latinChapter"])]
-        chinese = {v["verse"]: v for v in chapter["verses"]}
+    pages = [(c["book"], c["latinChapter"], c["verses"]) for c in data["chapters"]]
+    # Chapters fetched purely to name the appendix.  The reader does not print
+    # them, but the edition underlines its proper names in them just the same,
+    # and that is all the alignment needs.
+    if EXTRA_CHAPTERS.exists():
+        for key, page in json.loads(EXTRA_CHAPTERS.read_text(encoding="utf-8")).items():
+            book, chapter = key.split(".")
+            pages.append((book, int(chapter), page["verses"]))
+
+    for book, latin_chapter, chinese_verses in pages:
+        verses = latin_chapters.get((book, latin_chapter))
+        if not verses:
+            continue
+        chinese = {v["verse"]: v for v in chinese_verses}
         for number, text in verses.items():
             target = chinese.get(number)
             if not target:
@@ -290,6 +302,10 @@ def names_in_printed_chapters(latin_names: set[str], lm) -> set[str]:
     chapters = L.vulgate_chapters()
     seen: set[str] = set()
     for row in plan["chapters"]:
+        # The volume now opens with ten liturgical formulas, which carry no book
+        # or chapter; only the forty Bible chapters have names to find.
+        if row.get("kind") == "liturgy" or not row.get("book"):
+            continue
         for text in chapters[(row["book"], row["chapter"])].values():
             for position, word in enumerate(L.words(text)):
                 if not position or not word[:1].isupper():
@@ -414,7 +430,14 @@ def main() -> None:
     print(f"聖經專名共 {len(name_rows)}；其中讀本五十章實際出現 {len(reader_rows)}，"
           f"已由思高逐節對位定出中文 {named}"
           f"（{named / max(len(reader_rows), 1) * 100:.0f}%）")
-    print(f"其餘 {len(name_rows) - len(reader_rows)} 個只作查閱，中文從缺")
+    # Say what came out, not what the first design planned. The lookup-only
+    # names are no longer all blank: fetching the chapters where they occur
+    # gives most of them a Chinese too, and this line went on reporting them as
+    # 中文從缺 long after that stopped being true.
+    lookup = [r for r in name_rows if r["tier"] != "讀本所見"]
+    lookup_named = sum(1 for r in lookup if r["zh"])
+    print(f"其餘 {len(lookup)} 個只作查閱，其中 {lookup_named} 個另抓所在章定出中文")
+    print(f"專名中文合計 {named + lookup_named}/{len(name_rows)}")
     print(f"近現代專名 {len(modern_rows)}（表列前 400）")
     for section in ("upper", "lower"):
         for key, table in payload[section].items():
