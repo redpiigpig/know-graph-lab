@@ -1,0 +1,799 @@
+{
+ "schemaVersion": "1.0.0",
+ "note": "日文讀本讀文計畫（待人工覆核）。分數＝宗教學用語每千字命中次數。",
+ "rules": {
+  "perVolume": 50,
+  "authorCap": 8,
+  "charRange": [
+   400,
+   4000
+  ],
+  "completeness": "整篇或整節，不以字數截斷"
+ },
+ "volumes": [
+  {
+   "volume": 1,
+   "register": "現代語（新字新仮名）",
+   "readings": [
+    {
+     "workId": "060192",
+     "title": "キリスト教入門",
+     "author": "矢内原忠雄",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 7 節）",
+     "chars": 1417,
+     "score": 32.46,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001538/files/60192_ruby_74782.zip"
+    },
+    {
+     "workId": "049905",
+     "title": "日本精神史研究",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 一 節（完整，共 5 節）",
+     "chars": 1983,
+     "score": 12.61,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49905_ruby_63224.zip"
+    },
+    {
+     "workId": "049877",
+     "title": "ある思想家の手紙",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 7 節）",
+     "chars": 518,
+     "score": 9.65,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49877_ruby_42707.zip"
+    },
+    {
+     "workId": "003503",
+     "title": "愚禿親鸞",
+     "author": "西田幾多郎",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 1439,
+     "score": 9.03,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000182/files/3503_ruby_12195.zip"
+    },
+    {
+     "workId": "058286",
+     "title": "雛祭りとお彼岸",
+     "author": "折口信夫",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 1612,
+     "score": 8.68,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/58286_ruby_67370.zip"
+    },
+    {
+     "workId": "053738",
+     "title": "日本歴史の研究に於ける科学的態度",
+     "author": "津田左右吉",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 6 節）",
+     "chars": 2551,
+     "score": 8.62,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001535/files/53738_ruby_47462.zip"
+    },
+    {
+     "workId": "054331",
+     "title": "海上の道",
+     "author": "柳田国男",
+     "orthography": "新字新仮名",
+     "extent": "第 一八 節（完整，共 53 節）",
+     "chars": 861,
+     "score": 8.13,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/54331_ruby_53540.zip"
+    },
+    {
+     "workId": "053812",
+     "title": "年中行事覚書",
+     "author": "柳田国男",
+     "orthography": "新字新仮名",
+     "extent": "第 二 節（完整，共 19 節）",
+     "chars": 1450,
+     "score": 4.83,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/53812_ruby_50183.zip"
+    },
+    {
+     "workId": "055956",
+     "title": "読書と著書",
+     "author": "矢内原忠雄",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 3874,
+     "score": 4.13,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001538/files/55956_ruby_50809.zip"
+    },
+    {
+     "workId": "052505",
+     "title": "山の人生",
+     "author": "柳田国男",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 6 節）",
+     "chars": 1259,
+     "score": 3.97,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/52505_ruby_50193.zip"
+    },
+    {
+     "workId": "052208",
+     "title": "帝大聖書研究会終講の辞",
+     "author": "矢内原忠雄",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 3992,
+     "score": 3.51,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001538/files/52208_ruby_46191.zip"
+    },
+    {
+     "workId": "049874",
+     "title": "『偶像再興』序言",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 5 節）",
+     "chars": 908,
+     "score": 3.3,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49874_ruby_42525.zip"
+    },
+    {
+     "workId": "055960",
+     "title": "民族の感歎",
+     "author": "折口信夫",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 1910,
+     "score": 3.14,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/55960_ruby_50808.zip"
+    },
+    {
+     "workId": "054829",
+     "title": "歳棚に祭る神",
+     "author": "柳田国男",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 2889,
+     "score": 3.12,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/54829_ruby_49753.zip"
+    },
+    {
+     "workId": "049899",
+     "title": "停車場で感じたこと",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 五 節（完整，共 5 節）",
+     "chars": 1742,
+     "score": 2.87,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49899_ruby_42708.zip"
+    },
+    {
+     "workId": "049891",
+     "title": "古寺巡礼",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 三 節（完整，共 24 節）",
+     "chars": 3094,
+     "score": 2.59,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49891_ruby_41858.zip"
+    },
+    {
+     "workId": "043654",
+     "title": "アブセンス・オブ・マインド",
+     "author": "西田幾多郎",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 795,
+     "score": 2.52,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000182/files/43654_ruby_21728.zip"
+    },
+    {
+     "workId": "050744",
+     "title": "女子教育に就て",
+     "author": "新渡戸稲造",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 1041,
+     "score": 1.92,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000718/files/50744_ruby_39192.zip"
+    },
+    {
+     "workId": "051148",
+     "title": "「死」の問題に対して",
+     "author": "新渡戸稲造",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 2453,
+     "score": 1.63,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000718/files/51148_ruby_41563.zip"
+    },
+    {
+     "workId": "049915",
+     "title": "アフリカの文化",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 2572,
+     "score": 1.56,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49915_ruby_41878.zip"
+    },
+    {
+     "workId": "049913",
+     "title": "霊的本能主義",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "第 四 節（完整，共 5 節）",
+     "chars": 2650,
+     "score": 1.51,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/49913_ruby_42789.zip"
+    },
+    {
+     "workId": "050681",
+     "title": "「ゼエレン・キェルケゴオル」序",
+     "author": "和辻哲郎",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 2337,
+     "score": 1.28,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001395/files/50681_ruby_42486.zip"
+    },
+    {
+     "workId": "050530",
+     "title": "武士道の山",
+     "author": "新渡戸稲造",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 1613,
+     "score": 1.24,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000718/files/50530_ruby_37828.zip"
+    },
+    {
+     "workId": "050728",
+     "title": "人格を認知せざる国民",
+     "author": "新渡戸稲造",
+     "orthography": "新字新仮名",
+     "extent": "全文",
+     "chars": 3373,
+     "score": 1.19,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000718/files/50728_ruby_38731.zip"
+    }
+   ]
+  },
+  {
+   "volume": 2,
+   "register": "文語・舊字舊假名",
+   "readings": [
+    {
+     "workId": "058031",
+     "title": "祭礼名彙と其分類",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "全文",
+     "chars": 2941,
+     "score": 47.26,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58031_txt_73672.zip"
+    },
+    {
+     "workId": "046316",
+     "title": "盆踊りの話",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 一 節（完整，共 4 節）",
+     "chars": 469,
+     "score": 31.98,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/46316_ruby_24889.zip"
+    },
+    {
+     "workId": "013213",
+     "title": "ほうとする話",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 一 節（完整，共 5 節）",
+     "chars": 3407,
+     "score": 21.43,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/13213_ruby_14431.zip"
+    },
+    {
+     "workId": "018411",
+     "title": "大嘗祭の本義",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 四 節（完整，共 13 節）",
+     "chars": 3227,
+     "score": 20.45,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/18411_ruby_26906.zip"
+    },
+    {
+     "workId": "054830",
+     "title": "祭のさまざま",
+     "author": "柳田国男",
+     "orthography": "新字旧仮名",
+     "extent": "第 三 節（完整，共 5 節）",
+     "chars": 848,
+     "score": 20.05,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/54830_ruby_49769.zip"
+    },
+    {
+     "workId": "018410",
+     "title": "神道に現れた民族論理",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 一 節（完整，共 6 節）",
+     "chars": 1780,
+     "score": 12.92,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/18410_ruby_26904.zip"
+    },
+    {
+     "workId": "046326",
+     "title": "組踊り以前",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 二 節（完整，共 7 節）",
+     "chars": 2783,
+     "score": 11.5,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/46326_ruby_26246.zip"
+    },
+    {
+     "workId": "001213",
+     "title": "問答二三",
+     "author": "内村鑑三",
+     "orthography": "新字旧仮名",
+     "extent": "全文",
+     "chars": 987,
+     "score": 11.14,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000034/files/1213_ruby_19584.zip"
+    },
+    {
+     "workId": "053740",
+     "title": "仏教史家に一言す",
+     "author": "津田左右吉",
+     "orthography": "新字旧仮名",
+     "extent": "全文",
+     "chars": 2012,
+     "score": 10.93,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001535/files/53740_ruby_46373.zip"
+    },
+    {
+     "workId": "bible:出埃及記:29",
+     "title": "出埃及記 29",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 2260,
+     "score": 10.18,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E5%87%BA%E3%82%A8%E3%82%B8%E3%83%97%E3%83%88%E8%A8%98%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "001212",
+     "title": "時事雑評二三",
+     "author": "内村鑑三",
+     "orthography": "新字旧仮名",
+     "extent": "全文",
+     "chars": 1096,
+     "score": 10.04,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000034/files/1212_ruby_19586.zip"
+    },
+    {
+     "workId": "047723",
+     "title": "巫女と遊女と",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "全文",
+     "chars": 2552,
+     "score": 9.4,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/47723_txt_70432.zip"
+    },
+    {
+     "workId": "047689",
+     "title": "神賑ひ一般",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "全文",
+     "chars": 1656,
+     "score": 9.06,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/47689_ruby_69052.zip"
+    },
+    {
+     "workId": "047023",
+     "title": "国文学の発生（第四稿）",
+     "author": "折口信夫",
+     "orthography": "新字旧仮名",
+     "extent": "第 一 節（完整，共 6 節）",
+     "chars": 917,
+     "score": 8.72,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/47023_ruby_38234.zip"
+    },
+    {
+     "workId": "bible:使徒行傳:14",
+     "title": "使徒行傳 14",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1249,
+     "score": 8.01,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:約翰福音:18",
+     "title": "約翰福音 18",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1881,
+     "score": 6.38,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%A8%E3%83%8F%E3%83%8D%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:出埃及記:40",
+     "title": "出埃及記 40",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1337,
+     "score": 5.98,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E5%87%BA%E3%82%A8%E3%82%B8%E3%83%97%E3%83%88%E8%A8%98%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "058770",
+     "title": "魂の行くへ",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "第 四 節（完整，共 4 節）",
+     "chars": 2386,
+     "score": 5.87,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58770_ruby_77938.zip"
+    },
+    {
+     "workId": "bible:馬可福音:14",
+     "title": "馬可福音 14",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 3082,
+     "score": 5.84,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:8",
+     "title": "使徒行傳 8",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1659,
+     "score": 5.42,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:創世記:22",
+     "title": "創世記 22",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1118,
+     "score": 5.37,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E5%89%B5%E4%B8%96%E8%A8%98%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "正信念仏偈",
+     "title": "正信念佛偈",
+     "author": "佛典",
+     "orthography": "文語",
+     "extent": "全文",
+     "chars": 3414,
+     "score": 5.27,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E6%AD%A3%E4%BF%A1%E5%BF%B5%E4%BB%8F%E5%81%88",
+     "rightsChecked": false
+    },
+    {
+     "workId": "bible:約翰福音:7",
+     "title": "約翰福音 7",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 2164,
+     "score": 5.08,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%A8%E3%83%8F%E3%83%8D%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬太福音:26",
+     "title": "馬太福音 26",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 3131,
+     "score": 4.79,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬太福音:16",
+     "title": "馬太福音 16",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1261,
+     "score": 4.76,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:以賽亞書:56",
+     "title": "以賽亞書 56",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 712,
+     "score": 4.21,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%A4%E3%82%B6%E3%83%A4%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:6",
+     "title": "使徒行傳 6",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 713,
+     "score": 4.21,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬可福音:1",
+     "title": "馬可福音 1",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1707,
+     "score": 4.1,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "058768",
+     "title": "葬制の沿革について",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "第 六 節（完整，共 13 節）",
+     "chars": 1224,
+     "score": 4.08,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58768_ruby_78339.zip"
+    },
+    {
+     "workId": "bible:以賽亞書:61",
+     "title": "以賽亞書 61",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 746,
+     "score": 4.02,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%A4%E3%82%B6%E3%83%A4%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:出埃及記:30",
+     "title": "出埃及記 30",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1772,
+     "score": 3.95,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E5%87%BA%E3%82%A8%E3%82%B8%E3%83%97%E3%83%88%E8%A8%98%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:11",
+     "title": "使徒行傳 11",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1304,
+     "score": 3.83,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "058319",
+     "title": "伊豆大島の話",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "全文",
+     "chars": 1050,
+     "score": 3.81,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58319_ruby_71266.zip"
+    },
+    {
+     "workId": "bible:使徒行傳:15",
+     "title": "使徒行傳 15",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1858,
+     "score": 3.77,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:路加福音:22",
+     "title": "路加福音 22",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 2709,
+     "score": 3.69,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%AB%E3%82%AB%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "058780",
+     "title": "霊出現の地",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "全文",
+     "chars": 2452,
+     "score": 3.67,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58780_txt_77898.zip"
+    },
+    {
+     "workId": "bible:馬太福音:23",
+     "title": "馬太福音 23",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1641,
+     "score": 3.66,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:以賽亞書:19",
+     "title": "以賽亞書 19",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1442,
+     "score": 3.47,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%A4%E3%82%B6%E3%83%A4%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬可福音:15",
+     "title": "馬可福音 15",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1728,
+     "score": 3.47,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬可福音:16",
+     "title": "馬可福音 16",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 865,
+     "score": 3.47,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬可福音:7",
+     "title": "馬可福音 7",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1480,
+     "score": 3.38,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:12",
+     "title": "使徒行傳 12",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1182,
+     "score": 3.38,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "058758",
+     "title": "狐の嫁取といふこと",
+     "author": "柳田国男",
+     "orthography": "旧字旧仮名",
+     "extent": "全文",
+     "chars": 615,
+     "score": 3.25,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58758_txt_77968.zip"
+    },
+    {
+     "workId": "bible:路加福音:4",
+     "title": "路加福音 4",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1882,
+     "score": 3.19,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%AB%E3%82%AB%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:26",
+     "title": "使徒行傳 26",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1576,
+     "score": 3.17,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬太福音:27",
+     "title": "馬太福音 27",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 2548,
+     "score": 3.14,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:使徒行傳:5",
+     "title": "使徒行傳 5",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1912,
+     "score": 3.14,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E8%A1%8C%E5%82%B3%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:約翰福音:11",
+     "title": "約翰福音 11",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 2270,
+     "score": 3.08,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%A8%E3%83%8F%E3%83%8D%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:以賽亞書:47",
+     "title": "以賽亞書 47",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 985,
+     "score": 3.05,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%A4%E3%82%B6%E3%83%A4%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬可福音:2",
+     "title": "馬可福音 2",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1310,
+     "score": 3.05,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    }
+   ]
+  }
+ ]
+}

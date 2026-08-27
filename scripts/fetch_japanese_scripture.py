@@ -45,32 +45,26 @@ HEADERS = {"User-Agent": "know-graph-lab private reader build (contact: redpiigp
 # 文語訳聖書。維基文庫把它切成一章一頁——對這本讀本正好，因為一章就是文本
 # 自己的一個完整段落，不必再切。頁名格式是「マタイ伝福音書-第五章 (文語訳)」。
 # 選的是內村鑑三與矢內原忠雄講得最多、以及初學者最先讀的那些章。
-CHAPTER_NUMERALS = {
-    1: "一", 3: "三", 5: "五", 6: "六", 7: "七", 8: "八", 13: "十三", 15: "十五",
-    23: "二十三", 51: "五十一", 53: "五十三", 90: "九十", 121: "百二十一",
-}
-
-BIBLE_CHAPTERS = [
-    ("マタイ伝福音書", "馬太福音", [5, 6, 7, 13]),
-    ("マルコ伝福音書", "馬可福音", [1]),
-    ("ルカ伝福音書", "路加福音", [15]),
-    ("ヨハネ伝福音書", "約翰福音", [1, 3, 15]),
-    ("使徒行伝", "使徒行傳", [1]),
-    ("ロマ書", "羅馬書", [8]),
-    ("コリント前書", "哥林多前書", [13, 15]),
-    ("ガラテヤ書", "加拉太書", [5]),
-    ("ヨハネ黙示録", "啟示錄", [21]),
-    ("創世記", "創世記", [1, 3]),
-    ("詩篇", "詩篇", [23, 51, 90, 121]),
-    ("イザヤ書", "以賽亞書", [53]),
+# 維基文庫的文語訳是「一卷一頁」，頁內用 `== 第N章 ==` 分章——比逐章頁好用：
+# 抓一次就有整卷，章是它自己的分段，不必我來切。頁名的寫法不一致（伝／傳、
+# 括號前有沒有空格），所以每卷列幾個候選寫法，取第一個抓得到內容的。
+BIBLE_BOOKS = [
+    (["創世記(文語訳)", "創世記 (文語訳)"], "創世記", "舊約"),
+    (["出エジプト記(文語訳)", "出エジプト記 (文語訳)"], "出埃及記", "舊約"),
+    (["詩篇(文語訳)", "詩篇 (文語訳)"], "詩篇", "舊約"),
+    (["イザヤ書(文語訳)", "イザヤ書 (文語訳)"], "以賽亞書", "舊約"),
+    (["マタイ傳福音書(文語訳)", "マタイ伝福音書 (文語訳)"], "馬太福音", "新約"),
+    (["マルコ傳福音書 (文語訳)", "マルコ傳福音書(文語訳)"], "馬可福音", "新約"),
+    (["ルカ傳福音書(文語訳)", "ルカ傳福音書 (文語訳)"], "路加福音", "新約"),
+    (["ヨハネ傳福音書(文語訳)", "ヨハネ傳福音書 (文語訳)"], "約翰福音", "新約"),
+    (["使徒行傳(文語訳)", "使徒行傳 (文語訳)"], "使徒行傳", "新約"),
+    (["ロマ書(文語訳)", "ロマ書 (文語訳)"], "羅馬書", "新約"),
+    (["コリント前書(文語訳)", "コリント前書 (文語訳)"], "哥林多前書", "新約"),
+    (["ガラテヤ書(文語訳)", "ガラテヤ書 (文語訳)"], "加拉太書", "新約"),
+    (["ヨハネ黙示録(文語訳)", "ヨハネ黙示録 (文語訳)"], "啟示錄", "新約"),
 ]
 
-BIBLE = [
-    (f"{book}-第{CHAPTER_NUMERALS.get(chapter, chapter)}章 (文語訳)", f"{zh} {chapter}", "章")
-    for book, zh, chapters in BIBLE_CHAPTERS
-    for chapter in chapters
-    if chapter in CHAPTER_NUMERALS
-]
+CHAPTER_HEAD = re.compile(r"^==+\s*第\s*(\d+)\s*章\s*==+$", re.M)
 
 # 佛典：頁名是搜出來的，不是猜的。訓讀的權利狀態要逐篇確認。
 BUDDHIST = [
@@ -114,68 +108,109 @@ def clean(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
+def split_chapters(text: str) -> dict[int, str]:
+    """One book page, cut at its own `== 第N章 ==` headings."""
+
+    marks = [(m.start(), m.end(), int(m.group(1))) for m in CHAPTER_HEAD.finditer(text)]
+    chapters: dict[int, str] = {}
+    for index, (_, end, number) in enumerate(marks):
+        stop = marks[index + 1][0] if index + 1 < len(marks) else len(text)
+        body = clean(text[end:stop])
+        if len(body) > 120:
+            chapters[number] = body
+    return chapters
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--delay", type=float, default=6.0)
     args = parser.parse_args()
-
-    plan = [(t, zh, kind, "bible") for t, zh, kind in BIBLE] + [
-        (t, zh, kind, "buddhist") for t, zh, kind in BUDDHIST
-    ]
-    print(f"要抓 {len(plan)} 篇：文語訳聖書 {len(BIBLE)}、佛典 {len(BUDDHIST)}")
-
-    if not args.write:
-        for title, zh, kind, group in plan:
-            print(f"  [{group}] {title} — {zh}（{kind}）")
-        print("（未下載；加 --write）")
-        return 0
 
     CACHE.mkdir(parents=True, exist_ok=True)
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
 
-    for title, zh, kind, group in plan:
+    print(f"文語訳 {len(BIBLE_BOOKS)} 卷、佛典 {len(BUDDHIST)} 篇")
+    if not args.write:
+        print("（未下載；加 --write）")
+        return 0
+
+    for titles, zh, testament in BIBLE_BOOKS:
+        if any(key.startswith(f"bible:{zh}:") for key in manifest):
+            continue
+        raw = None
+        used = ""
+        for title in titles:
+            try:
+                raw = api_extract(title)
+            except Exception as error:  # noqa: BLE001
+                print(f"  ✗ {title}：{error}")
+                raw = None
+            time.sleep(args.delay)
+            if raw:
+                used = title
+                break
+        if not raw:
+            print(f"  ✗ {zh}：候選頁名都抓不到")
+            continue
+        chapters = split_chapters(raw)
+        if not chapters:
+            print(f"  ✗ {zh}：抓到頁面但切不出章（{len(raw)} 字）")
+            continue
+        for number, body in chapters.items():
+            path = CACHE / f"bible_{zh}_{number:03d}.txt"
+            path.write_text(body, encoding="utf-8")
+            manifest[f"bible:{zh}:{number}"] = {
+                "titleZh": f"{zh} {number}",
+                "kind": "章",
+                "group": "bible",
+                "testament": testament,
+                "chars": len(body),
+                "file": str(path.relative_to(ROOT)).replace("\\", "/"),
+                "sourceUrl": f"https://ja.wikisource.org/wiki/{urllib.parse.quote(used)}",
+                "rightsChecked": True,
+                "rightsNote": "文語訳（明治元訳舊約／大正改訳新約），公有領域",
+            }
+        MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"  ✓ {zh}：{len(chapters)} 章（{used}）")
+
+    for title, zh, kind in BUDDHIST:
         if title in manifest:
             continue
         try:
             raw = api_extract(title)
-        except Exception as error:  # noqa: BLE001 - re-runnable
+        except Exception as error:  # noqa: BLE001
             print(f"  ✗ {title}：{error}")
+            time.sleep(args.delay)
             continue
+        time.sleep(args.delay)
         if not raw:
             print(f"  ✗ {title}：維基文庫沒有這一頁")
             continue
         body = clean(raw)
         if len(body) < 200:
-            print(f"  ✗ {title}：抓到的內容太短（{len(body)} 字），可能只是目錄頁")
+            print(f"  ✗ {title}：內容太短（{len(body)} 字）")
             continue
         path = CACHE / f'{re.sub(r"[^0-9A-Za-zぁ-ゖァ-ヺ一-鿿]", "_", title)}.txt'
         path.write_text(body, encoding="utf-8")
         manifest[title] = {
             "titleZh": zh,
             "kind": kind,
-            "group": group,
+            "group": "buddhist",
             "chars": len(body),
             "file": str(path.relative_to(ROOT)).replace("\\", "/"),
             "sourceUrl": f"https://ja.wikisource.org/wiki/{urllib.parse.quote(title)}",
-            # 文語訳聖書是公有領域；佛典的訓讀各有譯者，未查證前不得當成公有領域。
-            "rightsChecked": group == "bible",
-            "rightsNote": (
-                "文語訳（1887 舊約／1917 新約改訳），公有領域"
-                if group == "bible"
-                else "訓讀／現代語譯各有譯者，收入前須逐篇查證譯者與年份"
-            ),
+            "rightsChecked": False,
+            "rightsNote": "訓讀／現代語譯各有譯者，收入前須逐篇查證譯者與年份",
         }
         MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"  ✓ {title} — {zh}（{len(body):,} 字）")
-        time.sleep(3.0)
 
     total = sum(item["chars"] for item in manifest.values())
     unchecked = [t for t, v in manifest.items() if not v["rightsChecked"]]
     print(f"完成 {len(manifest)} 篇，合計 {total:,} 字")
     if unchecked:
-        print(f"  ⚠ 權利未查證 {len(unchecked)} 篇，入書前逐篇確認訓讀者：")
-        for title in unchecked:
-            print(f"      {title}")
+        print(f"  ⚠ 權利未查證 {len(unchecked)} 篇，入書前逐篇確認訓讀者")
     return 0
 
 

@@ -38,6 +38,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
 MANIFEST = CACHE / "aozora/manifest.json"
+SCRIPTURE = CACHE / "scripture/manifest.json"
 PLAN = CACHE / "reading-plan.json"
 
 PER_VOLUME = 50
@@ -86,13 +87,47 @@ def score(text: str) -> float:
     return len(SUBJECT.findall(text)) * 1000 / len(text)
 
 
-def candidates() -> list[dict]:
+def scripture_candidates() -> list[dict]:
+    """文語訳聖書的每一章，與佛典的每一篇。
+
+    這些不必打宗教學用語密度的分數——它們本來就是宗教文本，而且一章就是文本
+    自己的一個完整段落。它們全部算 文語，進第二冊：明治元訳與大正改訳都是
+    文語，這也正是內村與矢內原引用的那一版。
+    """
+
+    if not SCRIPTURE.exists():
+        return []
+    rows = []
+    for key, item in json.loads(SCRIPTURE.read_text(encoding="utf-8")).items():
+        path = ROOT / item["file"]
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        if not (MIN_CHARS <= len(text) <= MAX_CHARS):
+            continue
+        rows.append(
+            {
+                "workId": key,
+                "title": item["titleZh"],
+                "author": "文語訳聖書" if item["group"] == "bible" else "佛典",
+                "orthography": "文語",
+                "extent": "全章" if item["group"] == "bible" else "全文",
+                "chars": len(text),
+                "score": round(score(text), 2),
+                "sourceUrl": item["sourceUrl"],
+                "rightsChecked": item.get("rightsChecked", False),
+            }
+        )
+    return rows
+
+
+def candidates(threshold: float = 1.0) -> list[dict]:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     rows = []
     for work_id, item in manifest.items():
         text = (ROOT / item["file"]).read_text(encoding="utf-8")
         density = score(text)
-        if density < 1.0:
+        if density < threshold:
             continue
         whole_ok = MIN_CHARS <= len(text) <= MAX_CHARS
         parts = [] if whole_ok else divisions(text)
@@ -136,7 +171,10 @@ def pick(rows: list[dict], modern: bool) -> list[dict]:
     for row in wanted:
         if len(chosen) >= PER_VOLUME:
             break
-        if per_author.get(row["author"], 0) >= AUTHOR_CAP:
+        # 「文語訳聖書」與「佛典」是文本群不是作者，上限對它們沒有意義：
+        # 五十課裡讀十章福音書是正常的，讀十篇折口不是。
+        capped = row["author"] not in ("文語訳聖書", "佛典")
+        if capped and per_author.get(row["author"], 0) >= AUTHOR_CAP:
             continue
         # 同一篇作品不重複入選，即使它有好幾節夠格。
         if row["workId"] in used_works:
@@ -150,10 +188,17 @@ def pick(rows: list[dict], modern: bool) -> list[dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--threshold", type=float, default=1.0,
+                        help="宗教學用語密度門檻（每千字命中次數）")
+    parser.add_argument("--author-cap", type=int, default=AUTHOR_CAP,
+                        help="每位作者最多幾篇（聖經與佛典不受此限，它們本來就是文本群）")
     args = parser.parse_args()
 
-    rows = candidates()
-    print(f"合格候選 {len(rows)} 筆（宗教學用語密度 ≥1／千字，長度 {MIN_CHARS}–{MAX_CHARS} 字）")
+    globals()["AUTHOR_CAP"] = args.author_cap
+    # 合併後重排：聖經章與青空文庫的篇章要照同一把尺競爭，不能因為附加在
+    # 後面就永遠排在最後。
+    rows = sorted(candidates(args.threshold) + scripture_candidates(), key=lambda r: -r["score"])
+    print(f"合格候選 {len(rows)} 筆（宗教學用語密度 ≥{args.threshold}／千字，長度 {MIN_CHARS}–{MAX_CHARS} 字）")
 
     first = pick(rows, modern=True)
     second = pick(rows, modern=False)
