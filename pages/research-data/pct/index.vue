@@ -23,10 +23,20 @@
           <span class="tool-badge bg-blue-50 text-blue-600">{{ tcnnCount ? `${tcnnCount} 篇` : '…' }}</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/pct/new-messenger" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">📖</div>
+          <div class="flex-1">
+            <h2 class="tool-title">新使者雜誌</h2>
+            <p class="tool-desc">長老教會青年刊物，1990 年創刊；黃彰輝小傳、宋泉盛專題、王憲治與鄉土神學等本土神學論述多刊於此</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">{{ nmCount ? `${nmCount} 篇` : '…' }}</span>
+        </NuxtLink>
+
       </div>
 
       <p class="mt-6 text-xs text-gray-400 leading-relaxed">
-        待補：《新使者》（PCT 焚而不燬站）、賴永祥台灣教會史料庫（王憲治、黃彰輝相關傳記與神學文章）。
+        待補：女宣雜誌與事工說明書（同站）、賴永祥台灣教會史料庫（王憲治、黃彰輝相關傳記與神學文章）。
+        《使者》（1963–1990，新使者前身）線上無全文典藏。
         《台灣教會公報》1885–2007 掃描檔須向公報社去信索取；2008 至 2010 年間的期別目前無免費線上來源。
       </p>
     </div>
@@ -40,14 +50,21 @@ definePageMeta({ middleware: 'auth' });
 useHead({ title: '台灣基督長老教會研究資料 — 論文資料整理' });
 
 const tcnnCount = ref(0);
+const nmCount = ref(0);
+
+// 各刊的計數彼此獨立：任一份 index 還沒產出，不該讓其他張卡也跟著空著
+async function total(url: string, pick: (row: any) => number): Promise<number> {
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return 0;
+    return ((await r.json()) as any[]).reduce((s, x) => s + pick(x), 0);
+  } catch { return 0; }
+}
 
 onMounted(async () => {
-  try {
-    const r = await fetch('/content/research-data/pct/tcnn-index.json');
-    if (!r.ok) return;
-    const d = await r.json() as { count: number }[];
-    tcnnCount.value = d.reduce((s, x) => s + (x.count ?? 0), 0);
-  } catch { /* keep 0 */ }
+  const base = '/content/research-data/pct';
+  tcnnCount.value = await total(`${base}/tcnn-index.json`, x => x.count ?? 0);
+  nmCount.value = await total(`${base}/new-messenger-index.json`, x => x.articles?.length ?? 0);
 });
 </script>
 
