@@ -13,6 +13,40 @@ Default physical specification:
 
 Use the frozen reader profile if the user approves a different specification.
 
+## One shared layout across the three readers
+
+The Hebrew builder is the standard; Greek and Latin import its size constants
+and must match its *structure* too, not just its scale. Checked 2026-08-27:
+
+- **Section headings are real headings.** `document.add_heading(..., level=2)`
+  at 14 pt, never the 8.2 pt all-caps eyebrow. Greek printed 「生詞／背誦／讀文」
+  through `add_label` for months — section headings smaller than the 11.5 pt
+  body text. The eyebrow is for the line *above* a heading, never instead of one.
+- **Heading scale**, from `build_hebrew_full_reader`: title 24, H1 17, H2 14,
+  H3 12.5, body 11.5, tables 9.6, label 8.2. Nothing that acts as a heading may
+  sit below the body size.
+- **Cover**: dark banner table (`ACCENT_DARK`) holding a gold `ORIGINAL-LANGUAGE
+  READER` eyebrow, the book name at 25 pt, and one line of the source script;
+  then the volume line, a gold rule, and the `JIS B5 182 × 257 mm · 私人研讀`
+  spec line. Three books side by side have to read as one series.
+- **Lesson opener**: `add_label(..., page_break_before=True)` → 第 NN 課 →
+  `add_heading(level=1)` → `paragraph_rule(..., color=GOLD)`.
+- **Each lesson's reading starts a new page.** Vocabulary and memory units are
+  preparation; the reading is the lesson itself and should begin at the top of
+  a page. This is a `page_break()` inside the reading function, so no call site
+  can forget it.
+- **Appendix tables print grouped**, in `PRINT_ORDER` from
+  `scripts/proper_name_categories.py`, with the group heading at H2/H3.
+- **No print caps.** Latin capped appendix groups at 200 rows to hold the page
+  count down; 385 of the 585 upper-volume proper names never reached paper. An
+  appendix you cannot look things up in is not worth the paper it saves.
+
+Verify with `scripts/render_and_check_reader_pdfs.py`: it converts each DOCX
+through LibreOffice (a separate `UserInstallation` profile per file — LibreOffice
+allows only one at a time) and checks page geometry, embedded fonts, U+FFFD, and
+blank pages. Note `□ U+25A1` is a real glyph in the Hebrew reader's 「完成本課」
+checklist; do not flag it as a missing glyph.
+
 ## DOCX rules
 
 - Generate from the authoritative master, never from UI HTML.
@@ -50,6 +84,15 @@ Use the frozen reader profile if the user approves a different specification.
 - Do not invent paper stock, caliper, binding allowance, or multiple width variants unless the user explicitly asks for them.
 - Keep the title, palette, and typography consistent with the reader cover.
 - Supply a PDF for handoff and an editable SVG so the printer can fit the art to the final die line.
+
+## Never fall back to another language to fill a hole
+
+The Latin appendix printer read `zh or glossZh or glossEn`. Three of its tables
+were built carrying only Whitaker's English, so a Traditional-Chinese reader
+printed whole pages of `mother's brother` and `the day before the Kalends` — and
+nothing on the page said whether that was a gap or the design. Print the empty
+state instead: `（中文待補）`, small and muted. A defaulting fallback hides the
+very hole it is standing in.
 
 ## Authenticated web counterpart
 

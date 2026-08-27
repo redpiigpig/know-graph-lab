@@ -1,4 +1,4 @@
-# Greek reader — handoff, 2026-08-26
+# Greek reader — handoff, 2026-08-27
 
 Written so another session can pick this up cold. Read
 [`greek-reader-contract.md`](greek-reader-contract.md) first; this file records
@@ -19,14 +19,15 @@ What is left is audio, and the root cause of one appendix defect.
 | 下冊 50 readings | ✅ 2,598 segments, 67,576 words |
 | 200 memory units | ✅ selected, Chinese complete, review recorded |
 | Word-by-word layer | ✅ 4,216 distinct units / 4,543 ids, ~100,400 glossed words |
-| 5 appendices, 625 entries | ⚠️ curated tables 220/220; names 291/405 (see below) |
+| 5 appendices, 625 entries | ⚠️ curated tables 220/220; names 291/405 with Chinese. All five print grouped by category (`PRINT_ORDER`), and the same grouping backs `/original-readers/grc-lessons/tables`. 114 names remain 待歸類. |
 | Chrysostom liturgy | ✅ 332 steps, 下冊 only |
 | Master | ✅ `greek-reader-two-volumes.json`, `content_complete_layout_pending` |
 | Validator | ✅ `--volume 1` 22 PASS, `--volume 2` 19 PASS |
-| Print masters | ✅ vol1 480 pp, vol2 1,138 pp; every page 182×257 mm, all fonts embedded, no replacement characters, no blank pages |
-| Web reader | ✅ two volumes, lesson key `v1-12`; 27 tests pass; production build passes |
+| Print masters | ✅ vol1 521 pp, vol2 1,184 pp; every page 182×257 mm, all fonts embedded, no replacement characters, no blank pages. Grew on 2026-08-27 when each lesson's reading moved to its own page and the appendix gained per-category sections. |
+| Web reader | ✅ two volumes, lesson key `v1-12`; appendix page at `/original-readers/grc-lessons/tables`; tests pass; production build passes |
 | Release hashes | ✅ `release-hashes.json`, 19 artifacts |
 | Audio | ⛔ `not_recorded`; TTS substitution forbidden |
+| Proper-name cards | ✅ 291 cards, `output/flashcards/greek-flashcards-proper-names.docx` |
 
 ## What is genuinely left
 
@@ -202,3 +203,15 @@ Each takes `--write` (or `--workers`); without it they print and change nothing.
 `build_greek_appendices.py` and `align_greek_names_chinese.py` need
 `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` from `.env`, and reach 信望愛 and
 和合本修訂版 over the network — both cache to disk, so a second run is fast.
+
+`scripts/render_and_check_reader_pdfs.py` now wraps both halves of that: it drives
+LibreOffice with a fresh profile per file and then checks page geometry, embedded
+fonts, U+FFFD and blank pages. `--only greek-original-reader-vol1` renders one.
+
+## Volume 2 needs `--scripture-lessons 0`
+
+The validator's default assumes the Hebrew shape, where every lesson reads a
+Bible chapter. Volume two is the patristic volume and reads none, so the default
+`--scripture-lessons 50` fails two checks — `reading-allocation` and
+`declared-counts` — on a book that is correct. Pass `0` and it reports 19 PASS.
+This is a flag, not a defect; do not "fix" the master to satisfy the default.

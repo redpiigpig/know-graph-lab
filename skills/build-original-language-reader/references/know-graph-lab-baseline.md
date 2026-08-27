@@ -27,7 +27,7 @@ Verify live before use. These paths describe the 2026-08 Hebrew production pipel
 - Data assembly: `data/originalReaders/hebrew-full-reader.ts`
 - Interlinear rendering: `components/HebrewInterlinear.vue`
 - APIs: `server/api/original-readers/hbo-lessons/`
-- Pages: `pages/original-readers/hbo-lessons/`
+- Pages: `pages/original-readers/hbo-lessons/`, `pages/original-readers/grc-lessons/` (including `tables.vue`, the Greek appendix, added 2026-08-27), `pages/original-readers/lat-lessons/`
 - Shared materializer: `server/utils/original-reader-materialize.ts`
 - Tests: `tests/original-readers.test.ts`
 
@@ -40,7 +40,8 @@ APIs must keep authentication, noindex/noarchive, private/no-store, and `Vary: A
 - 546 retained BBH2 entries plus 454 frequency-extension entries. The BBH2 run is shorter than the textbook's 552 because 119 person/place/nation names were lifted into the appendix; the extension reaches correspondingly further down the corpus (to 32 occurrences). Two exact duplicate textbook rows remain traceable through `sourceOrders`.
 - Proper names: 119 in the appendix table, 16 still in the lessons (11 divine names/titles, the sabbath, and אָדָם / נֶגֶב / שְׁאוֹל / יְאֹר, which carry a `keptInLessons` reason). The two halves total the same 135 verified Chinese names the QA gold list freezes, now keyed by `strong|pointed`.
 - Rebuilt by `scripts/rebuild_hebrew_vocab_without_proper_names.py` (a one-shot migration; it refuses to run twice) and `scripts/build_hebrew_appendix_tables.py`.
-- Four appendix reference tables, 287 rows: numerals 38, kinship 37, calendar 35, classified proper names 177 (names cross-listed under each type they carry). Web route `/original-readers/hbo-lessons/tables`.
+- Four appendix reference tables, 245 rows: numerals 38, kinship 37, calendar 35, classified proper names 135. Web route `/original-readers/hbo-lessons/tables`.
+- The proper-name table is split **nine** ways as of 2026-08-27 — 民族與國名, 地名, 神名與稱號, 族長與先知, 君王, 使徒與門徒, 教宗與主教, 教父與聖人, 其他人名, plus 節期與聖日 and a 待歸類 tail — rather than the earlier five, and each name appears once under its single category rather than being cross-listed. That is why the row count fell from 177 to 135 without a name being lost. The order is `PRINT_ORDER` in `scripts/proper_name_categories.py`, shared with the printed appendix and with Greek and Latin.
 - Traditional-Chinese glosses live in `hebrew-gloss-zh-reviewed-by-lemma.json`, keyed by `(strong, pointed)`. The old ordinal-keyed `hebrew-1000-gloss-zh-reviewed.json` is dead — it would misalign every meaning by one.
 - 100 unique WLC memory verses, two per lesson, **93 of them `pending_human_review`**: the vocabulary change invalidated the hand-reviewed pairing (only 51 of the old 100 still fell in any lesson's candidate pool), so the scorer re-selected. One verse (lesson 49 slot 2) matches a single lesson word because no verse in the corpus carries two of that lesson's rare words; it is labelled, not padded.
 - 25 approved complete WLC chapters, 614 source verse positions, 7,751 words.

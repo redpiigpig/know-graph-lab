@@ -2,6 +2,8 @@ import masterJson from "../../output/source-cache/original-readers/greek-full/gr
 import liturgyJson from "../../output/source-cache/original-readers/greek-full/liturgy-chrysostom.json";
 import interlinearJson from "../../output/source-cache/original-readers/greek-full/interlinear.json";
 
+import { groupAppendixEntries } from "./appendixGroups";
+
 // The Greek master is assembled once by scripts/build_greek_reader_data.py and
 // every surface reads that one file, so this module only types and slices it.
 // It deliberately does not re-derive anything: if a count looks wrong here, the
@@ -381,6 +383,28 @@ export function getGreekReaderOverview() {
 
 export function getGreekAppendix(key: string) {
   return master.appendices.find((table) => table.key === key) || null;
+}
+
+export function getGreekAppendixTables() {
+  return {
+    title: master.title,
+    note: "五張參考表索引全書兩冊，不分冊。專名表按類分節，與紙本讀本同一個次序。",
+    tables: master.appendices.map((table) => ({
+      key: table.key,
+      title: table.title,
+      note: table.note,
+      entryCount: table.entryCount,
+      groups: groupAppendixEntries(table.entries).map((group) => ({
+        title: group.title,
+        entries: group.entries.map((entry) => ({
+          headword: String(entry.headword ?? entry.lemma ?? ""),
+          zh: String(entry.zh ?? ""),
+          frequency: typeof entry.frequency === "number" ? entry.frequency : null,
+          category: String(entry.category ?? entry.group ?? ""),
+        })),
+      })),
+    })),
+  };
 }
 
 export function getGreekLiturgy() {

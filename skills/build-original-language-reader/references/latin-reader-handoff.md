@@ -225,3 +225,48 @@ checksums.
   from fetching the 154 chapters where the unnamed names actually occur. The
   remaining 196 do not appear in any chapter the alignment can settle; a blank is
   the correct state for them.
+
+## Layout unified and the appendix uncapped (2026-08-27, second session)
+
+- **The two volumes now match the Hebrew reader's structure**, which is the
+  house standard: banner cover, eyebrow → 課次 → Heading 1 → gold rule at each
+  lesson opener, section headings at H2 (14 pt) through real Heading styles, and
+  **each lesson's reading on its own page**. Sizes already came from
+  `build_hebrew_full_reader`; what differed was structure. `heading()` now maps
+  its size argument to a Word outline level, so the PDF gains bookmarks too.
+  Volume one 332 pp, volume two 489 pp, both 182×257 mm throughout.
+- **The 200-row appendix cap is gone.** It was there to hold the page count
+  down, and it silently withheld 385 of the 585 upper-volume proper names — an
+  appendix you cannot look a name up in is not worth the paper it saves.
+- **The proper-name tables print grouped by category**, nine of them, in
+  `PRINT_ORDER` from `scripts/proper_name_categories.py`.
+- **281 of 585 upper-volume names are still 待歸類.** The classifier reads
+  registers plus Strong's definition phrasing (see `strongs_name_kinds.py`); what
+  is left is largely inflected forms the Vulgate frequency pass captured as they
+  stood — `Jordanem`, `Jerosolymis`, `Levitarum`, `Pharaonem` — plus case and
+  spelling duplicates (`Levites`/`Levitæ`, `iordanes`/`Jordanem`). Normalising
+  that table to nominatives is the real fix and belongs to whoever owns it.
+- **下冊's `modernNames` table is not a proper-name table.** All 400 rows lack
+  Chinese, and the list contains abbreviations (`Psal`, `Joan`, `Virg`, `W`),
+  adjectives (`Latinus`, `Graece`, `Anglorum`) and common nouns (`Cardinalis`,
+  `Redemptoris`). It prints, because printing what the data says is honest, but
+  it produces no flashcards and should be rebuilt at source.
+
+### 兩件會再咬人的事
+
+- **`build_latin_appendices.py` 會整檔重生 `latin-appendices.json`，把 `category`
+  欄整批帶走。** 一個晚上發生兩次，兩次都是打開紙本才看到附錄又變成沒有分節的一長
+  串——檔案還在、還能解析、585 條一條不少，只是欄位沒了，沒有任何錯誤。重生後跑
+  `python scripts/classify_proper_names.py --reapply --write` 就好：它只從帳本
+  `data/originalReaders/vocabulary/proper-name-categories.json` 把分類補回去，不
+  連登錄、不重判。看得出來是這件事的兩個徵兆：檔案的 `generatedOn` 是今天而你自己
+  那一輪是幾小時前，而且欄位是**每一列**都不見，不是難判的那幾列不見。
+
+- **附錄那幾張表原本印的是英文。** 〈數字、羅馬數字與度量衡〉〈親屬稱謂〉〈羅馬
+  曆、月份與聖經節期〉建的時候只帶了 Whitaker 的英文釋義，而印表那行寫成
+  `zh or glossZh or glossEn`——沒有中文就退到英文。一本繁體中文讀本的附錄整頁
+  `mother's brother`、`the day before the Kalends`。`gloss_latin_appendices_zh.py`
+  補上了：先用五十課詞表已審過的中文（644 條），剩下 548 條才問模型，並沿用
+  `CATHOLIC_TERMS` 修正新教用語。八張表現在都是 100%：數字 81、親屬 48、曆法 43、
+  動詞主要部分 841、職分 64、禮儀年 32、文獻 41、經院 42。印表那行也改掉了，缺中文
+  就印「（中文待補）」而不是退到英文——退而求其次的預設值會把資料的缺口藏起來。

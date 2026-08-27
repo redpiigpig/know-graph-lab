@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  getGreekAppendixTables,
   getGreekLesson,
   getGreekLiturgy,
   getGreekReaderOverview,
@@ -158,5 +159,37 @@ describe("complete two-volume Koine Greek private reader", () => {
     expect(getGreekLesson(1, 0)).toBeNull();
     expect(getGreekLesson(1, 51)).toBeNull();
     expect(getGreekLesson(3, 1)).toBeNull();
+  });
+
+  it("splits the proper-name appendix into the printed category order", () => {
+    const tables = getGreekAppendixTables();
+    const names = tables.tables.find((table) => table.title.includes("人名"))!;
+    expect(names).toBeTruthy();
+
+    // 網頁與紙本讀同一份資料、走同一個次序，翻書找到哪一節，網頁就在哪一節。
+    const order = names.groups.map((group) => group.title);
+    const expected = [
+      "民族與國名",
+      "地名",
+      "神名與稱號",
+      "族長與先知",
+      "君王",
+      "使徒與門徒",
+      "教宗與主教",
+      "教父與聖人",
+      "其他人名",
+      "待歸類",
+    ];
+    expect(order).toEqual(expected.filter((title) => order.includes(title)));
+    // 判不出來的留在「待歸類」而不是倒進「其他人名」——倒進去等於宣稱它是人名。
+    expect(order[order.length - 1]).toBe("待歸類");
+
+    const total = names.groups.reduce((sum, group) => sum + group.entries.length, 0);
+    expect(total).toBe(names.entryCount);
+
+    // 其餘四張表本來就有 group 欄，照樣分節，不會整張攤成一長串。
+    const numerals = tables.tables.find((table) => table.title.includes("數字"))!;
+    expect(numerals.groups.length).toBeGreaterThan(1);
+    expect(numerals.groups.every((group) => group.title)).toBe(true);
   });
 });

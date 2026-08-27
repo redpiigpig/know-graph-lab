@@ -388,16 +388,23 @@ describe("complete 50-lesson Hebrew private reader", () => {
     expect(post?.entries.every((entry) => entry.attestation === "post_biblical")).toBe(true);
     expect(post?.source).toBeTruthy();
 
+    // The proper-name table is split nine ways rather than five: a single
+    // 「人名」 section swallowed most of the table, so looking up 保羅 and
+    // looking up 大衛 meant reading the same heap.  The order is the print
+    // order in scripts/proper_name_categories.py -- geography, then divine
+    // names, then people from specific to general, with 待歸類 last.
     const names = payload.tables.find((table) => table.id === "hbo-appendix-proper-names");
     expect(names?.groups.map((group) => group.id)).toEqual([
-      "person",
-      "place",
-      "people_or_nation",
-      "divine_name_or_title",
-      "festival_or_sacred_time",
+      "民族與國名",
+      "地名",
+      "神名與稱號",
+      "族長與先知",
+      "君王",
+      "其他人名",
+      "節期與聖日",
     ]);
     // Divine names stay in the lessons, so their rows carry a lesson number.
-    const divine = names?.groups.find((group) => group.id === "divine_name_or_title");
+    const divine = names?.groups.find((group) => group.id === "神名與稱號");
     expect(divine?.entries.every((entry) => typeof entry.lesson === "number")).toBe(true);
   });
 });

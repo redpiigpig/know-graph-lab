@@ -448,12 +448,20 @@ def appendix_section(document, tables: dict):
             # 上冊專名表 585 條裡有 385 條就是這樣沒印出來的。
             for row in rows:
                 latin = row.get("forms") or row.get("headword", "")
-                zh = row.get("zh") or row.get("glossZh") or row.get("glossEn") or ""
+                # 不退到 glossEn。退而求其次的預設值會把缺口藏起來：這幾張表建的
+                # 時候只帶英文釋義，於是一本繁體中文讀本的附錄印出整頁
+                # 「mother's brother」「the day before the Kalends」，而且看不出
+                # 那是缺中文還是本來就這樣。缺就該看得出來缺。
+                zh = (row.get("zh") or row.get("glossZh") or "").strip()
                 paragraph = document.add_paragraph()
                 paragraph.paragraph_format.space_after = Pt(1)
                 H.add_mixed_script_text(paragraph, latin + "　", FONT_LA, H.TABLE_SIZE_PT)
-                H.add_mixed_script_text(paragraph, zh, H.FONT_ZH, H.TABLE_SIZE_PT,
-                                        color=H.MUTED)
+                if zh:
+                    H.add_mixed_script_text(paragraph, zh, H.FONT_ZH, H.TABLE_SIZE_PT,
+                                            color=H.MUTED)
+                else:
+                    H.add_mixed_script_text(paragraph, "（中文待補）", H.FONT_ZH,
+                                            H.CAPTION_PT, color=H.MUTED)
 
 
 def relabel(document, volume: str, spec: dict) -> None:

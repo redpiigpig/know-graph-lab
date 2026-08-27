@@ -238,6 +238,63 @@ book whose whole subject is Catholic Latin.
 dominates the training text. Correct the output from a table, and audit the whole
 gloss column against the translation the readings actually use.*
 
+## 16. A register that answers about the wrong domain
+
+The proper-name classifier consulted `place_names` and got almost nothing:
+撒瑪黎雅, 赫貝龍, 加里肋亞, 貝特耳 all landed in 待歸類. The table exists, has
+268 rows, and answered every query — with 馬爾堡, 蘇美, 安息帝國. It is a general
+historical-geography register, and biblical geography is simply not in it.
+
+Nothing errors here. The register is present, queried correctly, and returns a
+clean empty result, so the failure looks like "these names are hard" rather than
+"this is the wrong book to look them up in."
+
+*When a lookup misses in bulk, print what the source does contain before
+concluding the inputs are the problem. A source that covers a neighbouring
+domain is worse than a missing one, because it keeps answering.*
+
+The fix was to read evidence already in the repo: Strong's definitions follow a
+house style — `a place in Palestine`, `a region of`, `a son of Joseph`,
+`the name of two Israelites`. Matching those phrases is reading the editor's
+convention, not guessing. Greek 139 → 114 unsorted, Latin upper 386 → 281.
+
+## 17. Two matching layers merged into one destroy each other
+
+Indexing Strong's by both exact spelling and trimmed stem in a single table,
+then dropping every key with more than one meaning, silently deleted the good
+keys. `ʼĔdôm` (a region) and `ʼĔdômîy` (its people) are adjacent entries; their
+exact spellings separate cleanly (`edom` / `edomi`), but the gentilic's *stem*
+is also `edom`. One shared table sees a conflict and throws away the place name
+that was never ambiguous to begin with.
+
+*Keep a strict layer and a loose layer as separate tables, check uniqueness
+within each, and always try the strict one first for every input before falling
+back. Loosening the match and tightening the uniqueness rule are not
+independent knobs; combined in one table they cancel.*
+
+The same run also showed why the loose layer needs a length floor: `Χεβρὼν`'s
+five-letter stem `chebr` collided with 赫貝龍人 and turned a place into a people.
+Six characters minimum, and only after every exact form has been tried.
+
+## 18. A field another pipeline does not know about is a field that disappears
+
+`category` was written into `latin-appendices.json` and printed correctly. Then
+`build_latin_appendices.py` — a different pipeline, run from a different session —
+rebuilt the file from its own sources, and every `category` went with it. The file
+still existed, still parsed, still had 585 proper names; the printed appendix
+quietly went back to one undivided list of names sorted by frequency. It happened
+twice in one evening before it was noticed, and only because a page was opened.
+
+*Any field you add to a file that some other job regenerates wholesale will be
+deleted without an error. Either derive it at read time, or keep a ledger you can
+re-apply offline.* `classify_proper_names.py --reapply` now restores every
+category from `proper-name-categories.json` without touching the registers or the
+network, so recovery is one command rather than a full re-classification.
+
+Two tells that this is what happened, both cheap: the file's `generatedOn` says
+today while your own run was hours ago, and the field is missing from **every**
+row rather than from the awkward ones.
+
 ## The audits that actually found these
 
 - **Count the same set twice, by different routes, and compare.** Plan versus

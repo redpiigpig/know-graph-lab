@@ -37,6 +37,13 @@
             <p class="mt-3 text-sm text-stone-600">{{ reader.terminal.segmentCount }} 段，附於下冊，不佔五十篇讀本額度。</p>
             <p v-if="reader.terminal.translationNote" class="mt-1 text-xs text-stone-500 break-words">{{ reader.terminal.translationNote }}</p>
           </NuxtLink>
+
+          <NuxtLink to="/original-readers/lat-lessons/tables" class="group rounded-3xl border border-stone-300 bg-[#fffdf7] p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md">
+            <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">APPENDIX · REFERENCE TABLES</p>
+            <h2 class="mt-2 font-serif text-xl font-semibold break-words">附錄參考表</h2>
+            <p class="mt-1 text-sm text-stone-500 break-words">專名按九類分節，另有數字、親屬、曆法、職分、禮儀年、文獻與經院用語各表</p>
+            <p class="mt-3 text-sm text-stone-600">兩冊各自的附錄，次序與紙本讀本相同。</p>
+          </NuxtLink>
         </section>
 
         <section v-for="volume in reader.volumes" :key="volume.slug" class="mt-8">

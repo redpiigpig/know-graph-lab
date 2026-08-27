@@ -37,7 +37,7 @@ For a Greek release in `know-graph-lab`, also read `references/greek-reader-cont
 
 Read `references/silent-failures.md` before wiring a new language, and before believing any count computed only once: every defect in it shipped a page that looked finished.
 
-Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio. Printed flashcard decks are their own skill, `original-reader-flashcards`; `references/flashcard-decks.md` holds their per-deck state.
+Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio. Its first section is the layout the three readers share; a new reader matches it rather than inventing its own. Printed flashcard decks are their own skill, `original-reader-flashcards`; `references/flashcard-decks.md` holds their per-deck state.
 
 Read `references/flashcard-decks.md` before building or changing a printed flashcard deck.
 
@@ -57,6 +57,17 @@ Two failures recur across languages and are worth carrying into any new reader:
   empty when none does. Where no register exists, the translation itself can be
   the register: a name's Chinese can be read out of the aligned Chinese text by
   counting, which is evidence rather than recall.
+- **A register can cover the neighbouring domain and still answer everything.**
+  `place_names` returned clean empty results for 撒瑪黎雅, 赫貝龍 and 加里肋亞
+  because it is a general historical-geography table, not a biblical one. Nothing
+  errors; the misses just look like hard inputs. Print what a source actually
+  contains before concluding your inputs are at fault.
+- **Classifying is also a register question.** Strong's writes its definitions to
+  a house style — `a place in Palestine`, `a son of Joseph`, `the name of two
+  Israelites` — so reading those phrases is reading evidence, not guessing
+  (`scripts/strongs_name_kinds.py`). Whatever cannot be settled stays in an
+  explicit 待歸類 bucket; folding it into 其他人名 asserts a fact nobody
+  established.
 
 ## Run the workflow in order
 

@@ -1,0 +1,6053 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "專名分類帳本：語言 -> 詞頭 -> {category, route}。分類本身由 scripts/classify_proper_names.py 判定；這份只是為了在附錄資料被上游管線整檔重生、category 欄整批消失時，能離線把分類補回去（--reapply）。",
+  "languages": {
+    "grc": {
+      "Ἰσραήλ": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἰησοῦς": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Χριστοῦ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰούδα": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰερουσαλήμ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Μωυσῆς": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Αἰγύπτου": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἰακὼβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαοὺλ": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Ἰουδαίων": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀαρὼν": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σαλωμὼν": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Φαραὼ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀβραὰμ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἰωσὴφ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Βαβυλῶνος": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἰορδάνου": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ἰωναθὰν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἐφράιμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Παῦλος": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Πέτρος": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Μωὰβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μανασσὴ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰωάννης": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Ἰσαὰκ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σίμων": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μωϋσῆς": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἰωὰβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Αἰγυπτίων": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἰουδαίας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Σαμουὴλ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Συρίας": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἀσσυρίων": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἑζεκίας": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Γαλαάδ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαμαρείας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἰερεμίας": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἠσαὺ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἰεροβοὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀβεσσαλὼμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀμμὼν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Χανάαν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Φαρισαῖοι": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἱεροσόλυμα": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀμορραίων": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀχαὰβ": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Χαλδαίων": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Δανιὴλ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ῥουβὴν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ναβουχοδονοσὸρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γὰδ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Δὰν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἐλεαζὰρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἠσαίας": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Χεβρὼν": {
+        "category": "地名",
+        "route": "Strong 釋義：H2275 a place"
+      },
+      "Γαλιλαίας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἑλλήνων": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἰωὰς": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Χαναναίων": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰὼβ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Βάαλ": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Λευεὶ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Πιλᾶτος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Βαλαὰμ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀβρὰμ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Δαυὶδ": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Ἰωσαφὰτ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Νῶε": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Δαμασκοῦ": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Βαιθήλ": {
+        "category": "地名",
+        "route": "Strong 釋義：H1008 a place"
+      },
+      "Συμεὼν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ῥοβοὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀβεννὴρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ζαχαρίας": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σάρρα": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Λαβὰν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀζαρίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰδουμαίας": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Μαδιάμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀσσοὺρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σιών": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Βαλὰκ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἰωρὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀσὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀντίοχος": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Ῥαχὴλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Τύρου": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἐδώμ": {
+        "category": "地名",
+        "route": "Strong 釋義：H123 the region"
+      },
+      "Ἡρῴδης": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Σοδόμων": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ναθὰν": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἰωδᾶε": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰεσσαὶ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀμαλὴκ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ζαβουλὼν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Φίλιππος": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Δημήτριος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σεδεκίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀδὰμ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ἁνανίας": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Γεδεὼν": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Καὰθ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Μαρίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαμψών": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ὀλοφέρνου": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Συχὲμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Πτολεμαῖος": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Ἀσὰφ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H623 the name of"
+      },
+      "Ἀσὴρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Λὼτ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Νικάνωρ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Χριστιανοὶ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σαδὼκ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰάκωβον": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μαριὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Καίσαρος": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Τιμόθεος": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Κόρε": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰσμαὴλ": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ἰσσαχὰρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Καδὴς": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Χαλὲβ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Χετταῖον": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Οὐρείας": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Γαβαὼν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀμὼς": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἠλίας": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ῥεβέκκα": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἁλληλουιά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥαγουὴλ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἁδὲρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰωνᾶς": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σύρος": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἐβραίων": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Νινευή": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἰεβουσαῖον": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βασὰν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Περσῶν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σηὼν": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ἑσεβὼν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γαί": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ναυὴ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βηρσάβεε": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀλέξανδρος": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Γέθ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀβιαθὰρ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Γάζης": {
+        "category": "地名",
+        "route": "Strong 釋義：H5804 a place"
+      },
+      "Ῥώμην": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀσίας": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Αἰθιόπων": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γαβαά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀμνὼν": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Βαναίας": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μακκαβαῖος": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥωμαίων": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἰεφθάε": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Θαιμάν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γάλγαλα": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βόος": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Βαρναβᾶς": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Σικίμων": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μεμφιβόσθε": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Πολύκαρπος": {
+        "category": "教父與聖人",
+        "route": "theologians"
+      },
+      "Ἀχὰζ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἄζωτον": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Εὑαῖον": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γεδσὼν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀβιὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Εὐφράτην": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ἐλιὰβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Γοδολίαν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Δαρείου": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γόμορρα": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ἑνὼχ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰωὴλ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Φερεζαῖον": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀβιμέλεχ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Λεία": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀρνών": {
+        "category": "地名",
+        "route": "Strong 釋義：H769 a river"
+      },
+      "Βαροὺχ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἰόππην": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Λυσίας": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Κάιν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Βαασὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ζοροβαβὲλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰωανὰν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀντιόχειαν": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ναβὰτ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἁζαὴλ": {
+        "category": "君王",
+        "route": "Strong 釋義：H2371 a king of"
+      },
+      "Κύρου": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Φάρες": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μεσοποταμίαν": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Καρμήλῳ": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H3760 the name of"
+      },
+      "Βηθλέεμ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἅβελ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μακεδονίαν": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἰεζάβελ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰθαμάρ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ναβὰλ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5037 an Israelite"
+      },
+      "Ὀρνὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Τρύφων": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ῥαμὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ματταθίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ναδὰβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ὣρ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2023 the name of"
+      },
+      "Ἀσκάλωνα": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀγχοὺς": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἁδραάζαρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥοὺθ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σιδῶνος": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ναχὼρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ὢγ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μασσηφά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σαφὰν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Βαιθλέεμ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Βαιθσάμυς": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βακχίδης": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰάσων": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀκκαρὼν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μανῶε": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μελχὸλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαμαίας": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰωαθὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰεχονίας": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σήμ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ναθαναὴλ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Γὼγ": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Σάρα": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Χωρήβ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σαρουίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ναβουθαὶ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σολομὼν": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Ἀβιοὺδ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Καισάρειαν": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ναιμὰν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἄραβες": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἔφεσον": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀραβίας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Σαβὰ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σηλώμ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἐλκανὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰεφοννὴ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σηλὼ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Δαγὼν": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Θημὰρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰωαχὰς": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Καφαρναοὺμ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἁγὰρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ῥαὰβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Χάμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἐφρὼν": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6085 the name of"
+      },
+      "Ἐφράθα": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰοθὸρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἑρμᾶ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Νὴρ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5369 an Israelite"
+      },
+      "Ἀσαὴλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἁγγαίου": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ὀνίαν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἄλκιμος": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μενέλαος": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥαββί": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Λάζαρος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Κεδρών": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Μήδων": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Κιλικίας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Χαρράν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σινᾶ": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Σαῦλος": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Ὡσῆε": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Τίτου": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Βαρὰκ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Γεργεσαῖον": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Αἱμὰν": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1968 the name of"
+      },
+      "Σοκχὼθ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Θερσά": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Γοθολία": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥαφαὴλ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαβυλωνίας": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαιτυλουὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μηδίαν": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Ζάρα": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαλαθιὴλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σαδδουκαίων": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Λευὶ": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Σιδωνίων": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἐμμὼρ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Φοινίκης": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀὼδ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀροὴρ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6177 the name of"
+      },
+      "Βαναιὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ὀζά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀχιὼρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀραβά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰωναδὰβ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3122 the name of"
+      },
+      "Σαμαιὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σαραιὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Τωβιὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀπολλώνιος": {
+        "category": "地名",
+        "route": "Strong 釋義（字幹）：G624 a place"
+      },
+      "Ἀρὰμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ναζωραῖος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἀνδρέας": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Ἰεριχὼ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἅννα": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ποντίου": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἢρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Θάρα": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀρφαξὰδ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Λάμεχ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μάρθα": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Φῆστος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Περσίδα": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἁρρὰν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Κενέζ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰδουμαῖοι": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Γάζερ": {
+        "category": "地名",
+        "route": "Strong 釋義：H1507 a place"
+      },
+      "Βαιθωρὼν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀναθὼθ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6068 the name of"
+      },
+      "Νεχαὼ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἁνὰν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαλτασὰρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σεδράχ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ναασσὼν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ζεβεδαίου": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Βηθανίαν": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Μαγδαληνὴ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἐλιέζερ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σιλᾶν": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Βοσόρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Αἰθιοπίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἀδὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰάφεθ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μελχὰ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Κηδάρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Δεββωρὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰαζὴρ": {
+        "category": "地名",
+        "route": "Strong 釋義：H3270 a place"
+      },
+      "Ἁερμών": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ὀδολλάμ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἁσὼρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥηχὰβ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ζέβεε": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἁρμαθάιμ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σουβὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥομελίου": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰωσεδὲκ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Μισάχ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀβδεναγώ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἐκβατάνοις": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἡλιόδωρον": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Θεοτόκου": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Θαμὰρ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2283 an Israelitess"
+      },
+      "Θωμᾶς": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Γαλιλαῖοι": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Βαραββᾶν": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σὴθ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἰσραηλῖται": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Ἀχαΐας": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Ἀπολλῶς": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Ἐφεσίων": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：G2180 inhabitant of"
+      },
+      "Φῆλιξ": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Ἀγρίππα": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Γεράρων": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἀσταρὼθ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Φαράν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαθουὴλ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Χέτ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Βεὼρ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Φογώρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαρνή": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥεμμὼν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γεθθαίου": {
+        "category": "民族與國名",
+        "route": "既有 kind 欄"
+      },
+      "Σελμανά": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ὠβήδ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ναὰς": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἠλὰ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Σαρουιὰ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ἡμὰθ": {
+        "category": "地名",
+        "route": "Strong 釋義：H2574 a place"
+      },
+      "Σαδδοὺκ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Φάκεε": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Σόρ": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Γοργίας": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Κηφᾶς": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Ὀζεὶ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μακεδών": {
+        "category": "地名",
+        "route": "Strong 釋義：G3109 a region"
+      },
+      "Γάϊος": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Ἰουδαισμοῦ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Μελχισέδεκ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Καινὰν": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2536 the name of"
+      },
+      "Ἰωβάβ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Βάλλα": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Αὐνάν": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Αἰνάν": {
+        "category": "地名",
+        "route": "既有 kind 欄"
+      },
+      "Γέσεμ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γηρὰ": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1617 the name of"
+      },
+      "Ἰσσαάρ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σαλπαὰδ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ναβαὺ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Γάβερ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥαμὼθ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Σεκελὰκ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Βαμὰ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ἰεροβάαλ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ῥαψάκης": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Νεεμίας": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Μισαήλ": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "Εἰρηναίου": {
+        "category": "待歸類",
+        "route": ""
+      }
+    },
+    "la": {
+      "David": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Jerusalem": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Juda": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ægyptus": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Saul": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Judæi": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Jacob": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Aaron": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Judas": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Babylon": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Salomon": {
+        "category": "君王",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Abraham": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Joseph": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Josue": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ephraim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sion": {
+        "category": "地名",
+        "route": "Strong 釋義：G4622 a hill"
+      },
+      "Paulus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Benjamin": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Pharao": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Petrus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "iohannes": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Philisthiim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Moab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Simon": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4826 the name of"
+      },
+      "Manasses": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3128 an Israelite"
+      },
+      "Joab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Samuel": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Samaria": {
+        "category": "地名",
+        "route": "Strong 釋義：H8111 a place"
+      },
+      "Galaad": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jordanem": {
+        "category": "地名",
+        "route": "Strong 釋義（字幹）：G2446 a river"
+      },
+      "Jeremias": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Ezechias": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jonathas": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Isaac": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Syria": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Nabuchodonosor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Levites": {
+        "category": "民族與國名",
+        "route": "Strong 釋義：G3019 descendant of"
+      },
+      "Judæa": {
+        "category": "地名",
+        "route": "Strong 釋義：G2449 a region"
+      },
+      "assirus": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ammon": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Daniel": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Absalom": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Chanaan": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jeroboam": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Levitæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achab": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H256 the name of"
+      },
+      "Josaphat": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2498 an Israelite"
+      },
+      "Galilæa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Esau": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Levi": {
+        "category": "其他人名",
+        "route": "聖經人物與後世主教同名，取聖經人物"
+      },
+      "Ruben": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H7205 a son"
+      },
+      "Hebron": {
+        "category": "地名",
+        "route": "Strong 釋義：H2275 a place"
+      },
+      "Gad": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Maria": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3137 the name of"
+      },
+      "iordanes": {
+        "category": "地名",
+        "route": "Strong 釋義：G2446 a river"
+      },
+      "Dan": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jericho": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Bethel": {
+        "category": "地名",
+        "route": "Strong 釋義：H1008 a place"
+      },
+      "Baal": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Elias": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Chaldæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Damascus": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Joas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tobias": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Philisthinorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Isaia": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Abner": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H74 an Israelite"
+      },
+      "Job": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Jonathan": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Edom": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Basan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sadoc": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4524 an Israelite"
+      },
+      "Jehu": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Pilatus": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Abimelech": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Asa": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Abram": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Adam": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Madian": {
+        "category": "地名",
+        "route": "Strong 釋義：G3099 a region"
+      },
+      "Nephthali": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：G3508 a tribe"
+      },
+      "Gabaa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Semei": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4584 an Israelite"
+      },
+      "Joram": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3141 the name of"
+      },
+      "Antiochus": {
+        "category": "君王",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jerosolymis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Noë": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Bethlehem": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Roboam": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4497 an Israelite"
+      },
+      "Asaph": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H623 the name of"
+      },
+      "symeon": {
+        "category": "其他人名",
+        "route": "聖經人物與後世主教同名，取聖經人物"
+      },
+      "tyros": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Joakim": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Philippus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Jerosolymam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sichem": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4966 the name of"
+      },
+      "Eleazar": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Aser": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G768 an Israelite"
+      },
+      "Zabulon": {
+        "category": "地名",
+        "route": "Strong 釋義：G2194 a region"
+      },
+      "Nathan": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Aman": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Balaam": {
+        "category": "地名",
+        "route": "Strong 釋義：H1109 a place"
+      },
+      "Herodes": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2264 the name of"
+      },
+      "Phase": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Levitarum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Caleb": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3612 the name of"
+      },
+      "persa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amalec": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Seir": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Issachar": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Caath": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Achaz": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H271 the name of"
+      },
+      "Timotheus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Assur": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Hesebon": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliseus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Merari": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Nun": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Esther": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Isai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Israëli": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Libani": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Gabaon": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Geth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sidon": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Sinai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ananias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G367 the name of"
+      },
+      "Lot": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Pharaonem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Silo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "hieremias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2408 an Israelite"
+      },
+      "Alexander": {
+        "category": "其他人名",
+        "route": "聖經人物與後世主教同名，取聖經人物"
+      },
+      "Sodoma": {
+        "category": "地名",
+        "route": "Strong 釋義：G4670 a place"
+      },
+      "Gedeon": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Abia": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H29 the name of"
+      },
+      "Johanan": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3110 the name of"
+      },
+      "Demetrius": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G1216 the name of"
+      },
+      "Rachel": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Sehon": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Heli": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "antiochea": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：G491 inhabitant of"
+      },
+      "Satanas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sara": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H8294 an Israelitess"
+      },
+      "Bersabee": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Laban": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jonathæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Abiathar": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H54 an Israelite"
+      },
+      "Sedecias": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Josiæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mardochæus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amorrhæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Judith": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Balac": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Ramoth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Barnabas": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Samson": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Jezrahel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Urias": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Ismahel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hai": {
+        "category": "地名",
+        "route": "Strong 釋義：H5857 a place"
+      },
+      "Phinees": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Baasa": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jojada": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3111 the name of"
+      },
+      "babylo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saphan": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Baruch": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1263 the name of"
+      },
+      "Libano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jabes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amnon": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "aelius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nabat": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Zorobabel": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2216 an Israelite"
+      },
+      "Nicanor": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3527 a Christian"
+      },
+      "Joppe": {
+        "category": "地名",
+        "route": "Strong 釋義：G2445 a place"
+      },
+      "Booz": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G1003 an Israelite"
+      },
+      "Abisai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sarviæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jojadæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zacharia": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G2197 the name of"
+      },
+      "Ozias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3604 an Israelite"
+      },
+      "Asia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amorrhæorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Philisthæos": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Benadad": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Joachaz": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3099 the name of"
+      },
+      "Amasias": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H6007 an Israelite"
+      },
+      "Medorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ælam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pharaone": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lachis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Baalim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mosollam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jonas": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Maacha": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Machir": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Chananæum": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H2605 the name of"
+      },
+      "Arnon": {
+        "category": "地名",
+        "route": "Strong 釋義：H769 a river"
+      },
+      "Og": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "idumea": {
+        "category": "地名",
+        "route": "Strong 釋義：H123 the region"
+      },
+      "Maspha": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Accaron": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cis": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2797 an Israelite"
+      },
+      "Achis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jezabel": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Amos": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Darius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Macedonia": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Euphrates": {
+        "category": "地名",
+        "route": "Strong 釋義：H6578 a river"
+      },
+      "Thamar": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2283 an Israelitess"
+      },
+      "Ithamar": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H385 a son"
+      },
+      "Masphath": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nabal": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5037 an Israelite"
+      },
+      "Adarezer": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Josias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2502 an Israelite"
+      },
+      "Naboth": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Græci": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mesopotamia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Raguel": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Nadab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Nathanaël": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3482 an Israelite"
+      },
+      "Helciæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Holofernis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sem": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Gaza": {
+        "category": "地名",
+        "route": "Strong 釋義：H5804 a place"
+      },
+      "Nachor": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5152 the name of"
+      },
+      "Elcana": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Galgala": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cariathiarim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Joatham": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2488 an Israelite"
+      },
+      "Obededom": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5654 the name of"
+      },
+      "Hazaël": {
+        "category": "君王",
+        "route": "Strong 釋義：H2371 a king of"
+      },
+      "Ahicam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Godoliam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nathaniæ": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H5416 the name of"
+      },
+      "Cain": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Tharsis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Syrus": {
+        "category": "民族與國名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Roma": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Syri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Horeb": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Asor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Carmeli": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H3760 the name of"
+      },
+      "Amon": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jephte": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Joël": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Achitophel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zachariæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sennacherib": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Sedeciam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Baltassar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jason": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Amorrhæum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliezer": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Adar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Thersa": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Rama": {
+        "category": "地名",
+        "route": "Strong 釋義：G4471 a place"
+      },
+      "Obed": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Anna": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Michol": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ner": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5369 an Israelite"
+      },
+      "Abigail": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Idithun": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Susan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Holofernes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cæsarea": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2542 the name of"
+      },
+      "Chananæus": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H2605 the name of"
+      },
+      "Ægyptiis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Oziel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rubrum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jephone": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Osee": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G5617 an Israelite"
+      },
+      "Jerimoth": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3406 the name of"
+      },
+      "Anathoth": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6068 the name of"
+      },
+      "Noëmi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achitob": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achimelech": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Azariæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Chaldæos": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliasib": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Esdras": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Capharnaum": {
+        "category": "地名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "ephesus": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Cham": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jebusæum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sarai": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H8297 wife of"
+      },
+      "Ela": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H414 an Israelite"
+      },
+      "Naaman": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5283 the name of"
+      },
+      "Jebusæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hur": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Cilicia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Michaël": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Aroër": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6177 the name of"
+      },
+      "Siceleg": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jerobaal": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ramatha": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：H7435 inhabitant of"
+      },
+      "Achimaas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Miphiboseth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jonadab": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3122 the name of"
+      },
+      "Satan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliæ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ochozias": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ninive": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sedeciæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nabuzardan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jehiel": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3171 the name of"
+      },
+      "Mathathias": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sidrach": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Misach": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Abdenago": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achior": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lysias": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Menelaus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Titus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Lazarus": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2976 the name of"
+      },
+      "Abel": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Hethæum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Raphaim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ephron": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H6085 the name of"
+      },
+      "Eliphaz": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Israëlem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Elisama": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Israëlitæ": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：H3481 descendant of"
+      },
+      "Jair": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2971 the name of"
+      },
+      "Bethsames": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Dagon": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Caree": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zachariam": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G2197 the name of"
+      },
+      "Josedec": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Ptolemæus": {
+        "category": "君王",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Antiochi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alcimus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Assyrios": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aram": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Thara": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2291 father of"
+      },
+      "Ismaël": {
+        "category": "地名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Saram": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rebecca": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4479 wife of"
+      },
+      "Hethæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cedar": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Chananæi": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2607 the name of"
+      },
+      "Ægyptios": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Naasson": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3476 an Israelite"
+      },
+      "Astaroth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hermon": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Belial": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eglon": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H5700 the name of"
+      },
+      "Bethoron": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Remmon": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H7417 the name of"
+      },
+      "Barac": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jonatha": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Isboseth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Asaël": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Rechab": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H7394 the name of"
+      },
+      "Romeliæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Salathiel": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4528 an Israelite"
+      },
+      "Gog": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1463 the name of"
+      },
+      "Tobiam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Silas": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Andreas": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Arphaxad": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Pharan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sur": {
+        "category": "地名",
+        "route": "Strong 釋義：H5495 a gate"
+      },
+      "Zara": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2226 the name of"
+      },
+      "Sobal": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebræorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zechri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Abiu": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Moloch": {
+        "category": "神名與稱號",
+        "route": "Strong 釋義：G3434 an idol"
+      },
+      "Rohob": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gazer": {
+        "category": "地名",
+        "route": "Strong 釋義：H1507 a place"
+      },
+      "Azotum": {
+        "category": "地名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Jether": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Bethsan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jemini": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Salmana": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Manue": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ruth": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Abinadab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Soba": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Philisthæus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bethsabee": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Berzellai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliseum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ochoziæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Giezi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Azariam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eliacim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Helcias": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hanan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jahiel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Assueri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nazareth": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "zebedaeus": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G2199 an Israelite"
+      },
+      "Bethania": {
+        "category": "地名",
+        "route": "Strong 釋義：G963 a place"
+      },
+      "Galilæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Magdalene": {
+        "category": "民族與國名",
+        "route": "Strong 釋義：G3094 inhabitant of"
+      },
+      "Martha": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G3136 a Christian"
+      },
+      "Æthiopiæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lamech": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Seth": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Japheth": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Haran": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Mambre": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Agar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Moabitarum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cenez": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Adad": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eleazari": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H499 the name of"
+      },
+      "Cadesbarne": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Galgalis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Dabir": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mageddo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zebee": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Baana": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1195 the name of"
+      },
+      "Siba": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Uriam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cedron": {
+        "category": "地名",
+        "route": "Strong 釋義：G2748 a brook"
+      },
+      "Chusai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hanani": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2607 the name of"
+      },
+      "Michæas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Beelzebub": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Phacee": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Oziæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Joachin": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jechonias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2423 an Israelite"
+      },
+      "Barachias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G914 an Israelite"
+      },
+      "Aggæus": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Nehemias": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H5166 the name of"
+      },
+      "Mardochæum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Demetrium": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G1216 the name of"
+      },
+      "Thomas": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Sodomam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Segor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Melchisedech": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G3198 a patriarch"
+      },
+      "Theman": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Samma": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Ana": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Beor": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Gessen": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Elisabeth": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G1665 an Israelitess"
+      },
+      "oliuetum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pherezæum": {
+        "category": "民族與國名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Ammiud": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Dathan": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Abiron": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eleazaro": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H499 the name of"
+      },
+      "Dibon": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1769 the name of"
+      },
+      "Jazer": {
+        "category": "地名",
+        "route": "Strong 釋義：H3270 a place"
+      },
+      "Agag": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "leuiticus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cariath": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ennom": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ziph": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2128 the name of"
+      },
+      "Thabor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mello": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jeroham": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Eliu": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Naas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Machmas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Philisthæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Chusi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Idumææ": {
+        "category": "民族與國名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Rasin": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Topheth": {
+        "category": "地名",
+        "route": "Strong 釋義：H8612 a place"
+      },
+      "Chaldæis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Semeia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Elioënai": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H462 an Israelite"
+      },
+      "Eliel": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H447 the name of"
+      },
+      "Arabs": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cyri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cyrus": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Samaritani": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：H8118 inhabitants of"
+      },
+      "Idumæam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jesse": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Bacchides": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nicanoris": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G3527 a Christian"
+      },
+      "Ptolemaidam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Oniam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achaia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Apollo": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Ophir": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jobab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Lia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hemor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hevæi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sela": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Charmi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gera": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1617 the name of"
+      },
+      "Isaar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Musi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Enan": {
+        "category": "地名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Hethæus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zambri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Salphaad": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Soccoth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Enacim": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rabbath": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H7237 the name of"
+      },
+      "Rahab": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Maresa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cedes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saraa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gaal": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1603 an Israelite"
+      },
+      "Philisthæum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ceilam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jerameel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hanon": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ethai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Banaiam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ethan": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H387 the name of"
+      },
+      "Michæam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Reblatha": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Phassur": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Emmer": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ornan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Raphaël": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bani": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H1137 the name of"
+      },
+      "Sanaballat": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Maasiæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vasthi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Neriæ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Jared": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Mosoch": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sale": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Phaleg": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aran": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Melcha": {
+        "category": "其他人名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Gomorrhæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Liæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Phanuel": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G5323 an Israelite"
+      },
+      "Oolibama": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sebeon": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rahuel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Thamna": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jachin": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3199 the name of"
+      },
+      "Saphat": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Enac": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Amorrhæus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hor": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2023 the name of"
+      },
+      "Eleazarum": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H499 the name of"
+      },
+      "Chamos": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Edrai": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lebna": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Maceda": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ajalon": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H357 the name of"
+      },
+      "Dor": {
+        "category": "地名",
+        "route": "Strong 釋義：H1756 a place"
+      },
+      "Aphec": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sina": {
+        "category": "地名",
+        "route": "Strong 釋義：G4614 a mountain"
+      },
+      "Socho": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sisaram": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Michæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Annas": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G452 an Israelite"
+      },
+      "Carmelo": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：H3760 the name of"
+      },
+      "Gelboë": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cerethi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gessur": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Seba": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Bochri": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ahiæ": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Semeiam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sesac": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Jozabad": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H3107 the name of"
+      },
+      "Jonam": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "Manahem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rabsaces": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Zabad": {
+        "category": "其他人名",
+        "route": "Strong 釋義：H2066 the name of"
+      },
+      "Æthiopes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cedmihel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Artaxerxis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Maasia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Casleu": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mardochæo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Macedo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tyrus": {
+        "category": "地名",
+        "route": "Strong 釋義：H6865 a place"
+      },
+      "Assyriis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Græcia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Chobar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Susanna": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G4677 an Israelitess"
+      },
+      "Rages": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Oniæ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Modin": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bethsuram": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bacchidem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cephas": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "W": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cardinalis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Latinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Iuppiter": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Psal": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Italia": {
+        "category": "地名",
+        "route": "Strong 釋義：G2482 a region"
+      },
+      "Joan": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Graece": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Graecus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Caesar": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Anglorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Latine": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cyrillus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gallia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Redemptoris": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hierosolyma": {
+        "category": "地名",
+        "route": "希臘↔拉丁字形橋"
+      },
+      "Latin": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Virg": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vaticanum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebraei": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Carolus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Romanam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nestorius": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Orientalium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Franci": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "IOSEPHUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinus": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Novembris": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Europa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Encyclicae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Osservatore": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Plato": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hispania": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Origenes": {
+        "category": "教父與聖人",
+        "route": "theologians"
+      },
+      "Vergilius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Roman": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Esaias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2268 an Israelite"
+      },
+      "FRANCISCUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Chalcedonensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "God": {
+        "category": "神名與稱號",
+        "route": "Strong 釋義：H433 a deity"
+      },
+      "Septembris": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Isa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alexandrinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Antiochenus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saturnus": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Encyclicas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Innocentii": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lateranensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tridentina": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vigilius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cicero": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "PPO": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Germania": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hercules": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vaticani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Brittaniam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "APO": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Venus": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Constantinopolis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saxonum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Antonius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Socrates": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Decessoris": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ven": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paolo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Redintegratio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Anastase": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Adrianus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Exod": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopoli": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Israelis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gothorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eva": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantini": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Langobardi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Helias": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G2243 an Israelite"
+      },
+      "Apocalypsis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vaticano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mercurius": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Corinthius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lateranensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Africa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Genesis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theodorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ATHALARICUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Varro": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bullarium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lateran": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nordanhymbrorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Galli": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mars": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Aristoteles": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitanum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Julianus": {
+        "category": "君王",
+        "route": "登錄"
+      },
+      "Africae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Valentinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Parisiis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Siculus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Deiparae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bibliorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Merciorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Emmanuel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lucanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Galliarum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Henricus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Manichaeus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ENCYCLICA": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Giovanni": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "TOU": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitanae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Occidentalium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Christ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Clementis": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G2815 a Christian"
+      },
+      "EFREM": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Iove": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantiensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sicilia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tullius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "India": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Lord": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Classics": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cant": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Source": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aquinas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alexandria": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "librarius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mediolanensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Minerva": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Anglia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Basileensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ezechiel": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Scottorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Redemptore": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Damaso": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Brittania": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Classical": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Florentinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Latino": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Siciliae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Africam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theodosio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Unitarum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pythagoras": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Appia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Germani": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "saracenus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alexandriae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sacrosancti": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Atheniensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Servator": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vigilio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebraice": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Symmachus": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Athenae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ephesius": {
+        "category": "民族與國名",
+        "route": "Strong 釋義（字幹）：G2180 inhabitant of"
+      },
+      "Arabia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Conferentiae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gothi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Page": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cornelius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Turonensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Augustino": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitana": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Basilii": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Stoicus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Genesi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gothis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Osuiu": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hibernia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cato": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Siricii": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Brittaniae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eboracensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Innocentio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ezech": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tiberis": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G5085 the name of"
+      },
+      "Iubilaei": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Servatoris": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Oecumenicorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nativ": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "GUILLELMUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Arius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ennius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saturnum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vaticana": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tridentino": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Biblia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tridentinum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Phrygia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Methodii": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paulinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Photinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "HISPALENSIS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theodoro": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cantuariorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Brettonum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cisterciensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paracliti": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ALOISIUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Valentiniani": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Albanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Claudius": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Enoch": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Deiparam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lateranense": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Athanasius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Anselmus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cappadocia": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Americae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Arianus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Marcion": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pisanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hermogenes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Qd": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Damiani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Loth": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tuscia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebraeus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Armenius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ioachim": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "Anastasio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Atticus": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Diana": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Arabiae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Franciae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alpes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Calvaria": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Radiomessaggi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cyrillo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rufinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ephesinam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alberigo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Calisti": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hiberniae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Coelestini": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Parisiensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ephesinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Methodius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vigilium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Valentiniano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Genes": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vor": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ostiensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Laurentium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lugdunensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Africanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Martinum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ALBERTUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mediolanum": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "Homerus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rufino": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bethleem": {
+        "category": "地名",
+        "route": "Strong 釋義：G965 a place"
+      },
+      "Immaculatae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paulinum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Italus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Alexandrinae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "GABRIEL": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Wicleff": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Scytha": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paulino": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Platonicus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theophilus": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Priscilla": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Justiniani": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Campaniae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pictorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aeduini": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantiensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Albanensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Boetius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ORIGINUM": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Assisiensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Galatas": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "COMPATRI": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "THEODAHADUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebraicus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saulus": {
+        "category": "使徒與門徒",
+        "route": "手列使徒門徒（原文字形）"
+      },
+      "Parthus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Flavianum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gallicus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Chalcedonensem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ratisp": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ibae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tuscus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Senonensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Vulcanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Seville": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Antonini": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "XIIIIa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Uilfrid": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rothomagensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "mattheus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitanam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Praenestinus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Lugdunensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Constantinopolitanus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Cantuariensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Conferentiis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Slavorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tiberius": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Theodoreti": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Foucauld": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ROBERTI": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Maximiano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Carthago": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "France": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "Lucina": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Londonensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ETYMOLOGIARUM": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Achamoth": {
+        "category": "神名與稱號",
+        "route": "deities"
+      },
+      "Trecensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Exodo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bonifacius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Toletano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Laicisque": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hierosolymitani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Arelatensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Venetiae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Anastasium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "AURELII": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saturninus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Portuensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Apollinis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Roger": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pearse": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Galat": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Honorio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Gothos": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theodoretus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mauricius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Mediolanensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Maximianus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pragmatic": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pompeius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Flaccus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aethiopia": {
+        "category": "民族與國名",
+        "route": "登錄"
+      },
+      "Cosmedin": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Pelagii": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Tiberio": {
+        "category": "其他人名",
+        "route": "Strong 釋義（字幹）：G5085 the name of"
+      },
+      "Sadducaei": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Deipara": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Origene": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Indiae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Antiocheno": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Seneca": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Sabellius": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Viennensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "CASSIODORI": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Dioscorum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Arianum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bononiensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Sarracenis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Huss": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bituricensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Colimbriensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Apelles": {
+        "category": "其他人名",
+        "route": "Strong 釋義：G559 a Christian"
+      },
+      "Saxia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Indos": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Allocutionibus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Bibliis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hieronymo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Ssmi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Neapolis": {
+        "category": "地名",
+        "route": "Strong 釋義：G3496 a place"
+      },
+      "Bononia": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Paschatis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Thessalonicenses": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Marciani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nicaena": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Siricio": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Eutyches": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Childebertum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Beneventani": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "ARCADIUS": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "Cererem": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Numa": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Minervae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aeonum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Basileensi": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Turonensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hebraeum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Neronis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Saxo": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hieronymum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Muratori": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Peter": {
+        "category": "教宗與主教",
+        "route": "episcopal_succession"
+      },
+      "Lucaniae": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Aquinatis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Justinianus": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Massonum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Parisiensis": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "FERDINANDUS": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Malabariam": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Theodosium": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Nicaeni": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Hierosolymitano": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Rufinum": {
+        "category": "待歸類",
+        "route": ""
+      },
+      "Arsiensis": {
+        "category": "待歸類",
+        "route": ""
+      }
+    },
+    "hbo": {
+      "ישראל": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "ירושלם": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "ירושלים": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "מצרים": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "משה": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "פרעה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "דוד": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "יהודה": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "שאול": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "יעקב": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "אהרון": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "שלמה": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "פלשתי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "לויי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "בבל": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "יהושוע": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "יוסף": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "ירדן": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "מואב": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "אפרים": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אברהם": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "בנימין": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ציון": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "אשור": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ירמיה": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "מנשה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "יואב": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "ביתאל": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "שמואל": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "גלעד": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ארם": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "חזקיה": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "אבישלום": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "שמרון": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "יצחק": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "עמון": {
+        "category": "民族與國名",
+        "route": "place_names"
+      },
+      "ירבעם": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "אדם": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "עשו": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "כנען": {
+        "category": "地名",
+        "route": "place_names"
+      },
+      "אחאב": {
+        "category": "君王",
+        "route": "historical_rulers"
+      },
+      "אמרי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "יהושפט": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ביתלחם": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "כשדי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "יהודי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "יהונתן": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "מצרי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "כנעני": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "ראובן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "גד": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אלעזר": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "חברון": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אליה": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "לבנון": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "דן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "בארשבע": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "אבימלך": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "לוי": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "צדקיה": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "שכם": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "אבנר": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אברם": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "בלעם": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "בשן": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "נבוכדנאצר": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "מרדכי": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "מדין": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "יהוא": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "אסא": {
+        "category": "其他人名",
+        "route": "biblical_people"
+      },
+      "אלישע": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "איוב": {
+        "category": "族長與先知",
+        "route": "手列族長先知"
+      },
+      "יריחו": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "לבן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אסתר": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "המן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "יאשיה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "צדוק": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "נפתלי": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "יהוידע": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "רחבעם": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "בןהדד": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ישמעאל": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "עזריה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "חתי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "יואש": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "רחל": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "נח": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אסף": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "זבולון": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "דמשק": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "שמעון": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "יונתן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "שמעי": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אשר": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "גבעה": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "בלק": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ישי": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "נתן": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "בניה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "ביתשמש": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "צר": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "יבוסי": {
+        "category": "民族與國名",
+        "route": "既有 properNameTypes"
+      },
+      "אחז": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "שמעיה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "זכריה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "גלגל": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "אמציה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "עבדאדום": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "עי": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "עמלק": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "שעיר": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "קריתיערים": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "ישעיה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "מררי": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "אוריה": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "סדם": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      },
+      "גדעון": {
+        "category": "其他人名",
+        "route": "既有 kind 欄"
+      },
+      "חשבון": {
+        "category": "地名",
+        "route": "既有 properNameTypes"
+      }
+    }
+  },
+  "counts": {
+    "grc": 405,
+    "la": 985,
+    "hbo": 119
+  }
+}

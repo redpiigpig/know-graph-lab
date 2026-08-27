@@ -240,100 +240,140 @@ DECKS: dict[str, dict] = {
     },
 }
 
-# 專名卡：讀本附錄那幾百個人名、地名、族名與國名，本來不在五十課的詞表裡。
-# 使用者要的是「卡片後面也要多做」——正課的卡念完，後面接一疊按類分色的專名卡。
-NAME_DECK_NOTE = (
-    "框色按類別輪替，同一類的卡同色：民族與國名、地名、神名與稱號、族長與先知、"
-    "君王、使徒與門徒、教宗與主教、教父與聖人、其他人名、待歸類。"
+# 附錄卡：讀本後面那幾張參考表——專名（人名／地名／民族與國名／君王／使徒／教宗與
+# 主教…）、數字與度量衡、親屬稱謂、曆法與月份、教會職分。這些詞不在五十課的詞表
+# 裡，使用者要的是「卡片後面也要多做」：正課的卡念完，後面接一疊按類分色的附錄卡。
+APPENDIX_DECK_NOTE = (
+    "框色按分節輪替，同一節的卡同色：專名依九類（民族與國名、地名、神名與稱號、"
+    "族長與先知、君王、使徒與門徒、教宗與主教、教父與聖人、其他人名），其餘各表依"
+    "原有分組（基數／序數、直系／旁係血親、月名／節期…）。"
 )
-NAME_SIDE_NOTE = "正面：原文專名。背面：繁體中文譯名與類別。專名不配圖。"
+APPENDIX_SIDE_NOTE = "正面：原文詞條。背面：繁體中文與所屬分節。附錄卡不配圖。"
 
-NAME_DECKS: dict[str, dict] = {
-    "hbo-names": {
-        "title": "聖經希伯來文專名卡",
-        "source": ROOT / "data/originalReaders/vocabulary/hebrew-proper-names.json",
+APPENDIX_DECKS: dict[str, dict] = {
+    "hbo-appendix": {
+        "title": "聖經希伯來文附錄卡",
+        "source": CACHE / "original-readers/hebrew-full/appendix-tables.json",
         "shape": "hebrew",
-        "output": "hebrew-flashcards-proper-names.docx",
+        "output": "hebrew-flashcards-appendix.docx",
         "font": "Noto Serif Hebrew",
         "fontFile": "C:/Windows/Fonts/NotoSerifHebrew-Regular.ttf",
         "rtl": True,
         "headword_pt": 46,
         "sources": [
-            "名單：讀本的分類專名表，字形取自 Westminster Leningrad Codex。",
+            "名單：讀本的四張附錄參考表，字形取自 Westminster Leningrad Codex。",
             "中文：和合本修訂版。",
+            "數字表的陽性、陰性兩式各出一張卡，卡面標明是哪一式。",
         ],
     },
-    "grc-names": {
-        "title": "通用希臘文專名卡",
+    "grc-appendix": {
+        "title": "通用希臘文附錄卡",
         "source": ROOT / "data/originalReaders/vocabulary/greek-appendices.json",
         "shape": "greek",
-        "output": "greek-flashcards-proper-names.docx",
+        "output": "greek-flashcards-appendix.docx",
         "font": "Palatino Linotype",
         "rtl": False,
         "headword_pt": 30,
         "sources": [
-            "名單：讀本附錄〈人名、地名與國族〉，字形取自新約與七十士譯本。",
+            "名單：讀本的五張附錄參考表，字形取自新約、七十士譯本與希臘教會文獻。",
             "中文：和合本修訂版。",
         ],
     },
-    "lat-names": {
-        "title": "教會拉丁文專名卡",
+    "lat-appendix": {
+        "title": "教會拉丁文附錄卡",
         "source": ROOT / "data/originalReaders/vocabulary/latin-appendices.json",
         "shape": "latin",
-        "output": "latin-flashcards-proper-names.docx",
+        "output": "latin-flashcards-appendix.docx",
         "font": "Noto Serif",
         "rtl": False,
         "headword_pt": 28,
         "sources": [
-            "名單：讀本上冊附錄〈人名、地名、民族與國名（武加大）〉。",
+            "名單：上冊的專名、數字、親屬、曆法四表，與下冊的職分、禮儀年、文獻、經院四表。",
             "中文：思高本。與希臘、希伯來兩副卡的和合本譯名不同，是既定的命名政策。",
-            "下冊〈近現代教廷拉丁〉那張表全數尚無中文，未收入本副卡。",
+            "下冊〈近現代教廷拉丁〉與上冊〈動詞主要部分〉兩表未收，理由見 skill 文件。",
         ],
     },
 }
 
-for _deck in NAME_DECKS.values():
-    _deck["colorNote"] = NAME_DECK_NOTE
-    _deck["sideNote"] = NAME_SIDE_NOTE
-DECKS.update(NAME_DECKS)
+for _deck in APPENDIX_DECKS.values():
+    _deck["colorNote"] = APPENDIX_DECK_NOTE
+    _deck["sideNote"] = APPENDIX_SIDE_NOTE
+DECKS.update(APPENDIX_DECKS)
+
+# 拉丁要收哪幾張表。principalParts 是 841 條動詞主要部分，那是查變化用的形態表，
+# 做成卡片會和課內動詞卡整批重複；modernNames 400 條全無中文、且混進了 Psal、
+# Latine、Cardinalis 這類縮寫與普通名詞，那張表本身要重做。兩張都不收。
+LATIN_APPENDIX_TABLES = [
+    ("upper", "names"), ("upper", "numerals"), ("upper", "kinship"),
+    ("upper", "calendar"),
+    ("lower", "offices"), ("lower", "liturgical_year"),
+    ("lower", "documents"), ("lower", "scholastic"),
+]
 
 
-def load_name_cards(deck: dict) -> list[dict]:
-    """把附錄的專名讀成卡片，按類別排序，同類同色。"""
+def appendix_rows(deck: dict) -> list[tuple[str, str, str]]:
+    """讀出 (原文, 繁中, 分節) 三元組。分節就是卡片下緣印的那一行。"""
     payload = json.loads(deck["source"].read_text(encoding="utf-8"))
-    rows: list[tuple[str, str, str]] = []          # (原文, 繁中, 類別)
-    if deck["shape"] == "hebrew":
-        for item in payload["items"]:
-            rows.append((item["pointed"], (item.get("glossZh") or "").strip(),
-                         item.get("category") or "待歸類"))
-    elif deck["shape"] == "greek":
-        for entry in payload["appendices"][0]["entries"]:
-            rows.append((entry.get("headword") or entry["lemma"],
-                         (entry.get("zh") or "").strip(),
-                         entry.get("category") or "待歸類"))
-    else:
-        for entry in payload["upper"]["names"]["entries"]:
-            rows.append((entry.get("forms") or entry["headword"],
-                         (entry.get("zh") or "").strip(),
-                         entry.get("category") or "待歸類"))
+    rows: list[tuple[str, str, str]] = []
 
+    if deck["shape"] == "hebrew":
+        for table in payload["tables"]:
+            for group in table["groups"]:
+                label = group["titleZh"]
+                for entry in group["entries"]:
+                    gloss = (entry.get("glossZh") or "").strip()
+                    if entry.get("pointed"):
+                        rows.append((entry["pointed"], gloss, label))
+                        continue
+                    # 數字表存的是陽性／陰性一對，不是單一詞形。合成一張卡會逼讀
+                    # 者同時背兩個形，所以各出一張，並在中文那面標明是哪一式。
+                    for slot, mark in (("masculine", "陽性"), ("feminine", "陰性")):
+                        form = (entry.get(slot) or {}).get("pointed")
+                        if form:
+                            rows.append((form, f"{gloss}（{mark}）", label))
+        return rows
+
+    if deck["shape"] == "greek":
+        for table in payload["appendices"]:
+            for entry in table["entries"]:
+                label = (entry.get("category") or entry.get("group") or table["title"]).strip()
+                rows.append((entry.get("headword") or entry["lemma"],
+                             (entry.get("zh") or "").strip(), label))
+        return rows
+
+    for half, key in LATIN_APPENDIX_TABLES:
+        table = payload[half][key]
+        for entry in table["entries"]:
+            label = (entry.get("category") or entry.get("group") or table["title"]).strip()
+            rows.append((entry.get("forms") or entry["headword"],
+                         (entry.get("zh") or "").strip(), label))
+    return rows
+
+
+def load_appendix_cards(deck: dict) -> list[dict]:
+    """把附錄各表讀成卡片，按分節排序，同節同色。"""
+    rows = appendix_rows(deck)
     # 沒有中文的卡等於背面空白，背不了；不印，並在下面報數字。
     usable = [row for row in rows if row[1]]
-    order = {name: index for index, name in enumerate(PRINT_ORDER)}
-    usable.sort(key=lambda row: (order.get(row[2], len(order)), row[0]))
-    print(f"  {deck['title']}：{len(usable)} 張"
-          f"（{len(rows) - len(usable)} 條無中文，未收）")
+    known = {name: index for index, name in enumerate(PRINT_ORDER)}
+    # 專名的九類照 PRINT_ORDER，其餘各表的分組照第一次出現的次序接在後面。
+    order: dict[str, int] = dict(known)
+    for _, _, label in usable:
+        order.setdefault(label, len(order))
+    usable.sort(key=lambda row: (order[row[2]], row[0]))
+    dropped = len(rows) - len(usable)
+    print(f"  {deck['title']}：{len(usable)} 張（{dropped} 條無中文，未收）")
     return [
         {
             "headword": headword,
             "glossZh": zh,
-            "pos": category,
+            "pos": label,
             "lesson": 0,
-            "footer": category,
-            "colorKey": order.get(category, len(order)) + 1,
+            "footer": label,
+            "colorKey": order[label] + 1,
             "picture": None,
         }
-        for headword, zh, category in usable
+        for headword, zh, label in usable
     ]
 
 
@@ -731,7 +771,7 @@ def add_cover(document: Document, deck: dict, total: int, sheets: int, with_pict
 
 def load_cards(deck: dict) -> list[dict]:
     if "source" in deck:
-        return load_name_cards(deck)
+        return load_appendix_cards(deck)
     entries = json.loads(deck["vocab"].read_text(encoding="utf-8"))
     gloss_payload = (json.loads(deck["glosses"].read_text(encoding="utf-8"))
                      if "glosses" in deck else {})

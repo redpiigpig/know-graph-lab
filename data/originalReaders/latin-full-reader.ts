@@ -1,5 +1,7 @@
 import masterJson from "../../output/source-cache/original-readers/latin-full/latin-reader-two-volumes.json";
 
+import { groupAppendixEntries } from "./appendixGroups";
+
 // The Latin master is assembled once by scripts/build_latin_reader_data.py and
 // every surface reads that one file, so this module only types and slices it.
 // It deliberately re-derives nothing: if a count looks wrong here, the master is
@@ -168,6 +170,38 @@ export function getLatinReaderOverview() {
 export function getLatinAppendices(volume: number) {
   const found = master.volumes.find((entry) => entry.volume === volume);
   return found ? found.appendices : {};
+}
+
+export function getLatinAppendixTables() {
+  // 兩冊各有自己的附錄，與希臘那本（五張表索引全書）不同，所以按冊分開列。
+  return {
+    title: master.title,
+    note: "各冊附錄。專名表按九類分節，其餘各表依原有分組，次序與紙本讀本相同。中文用思高本。",
+    volumes: master.volumes.map((volume) => ({
+      volume: volume.volume,
+      title: volume.title,
+      tables: Object.entries(volume.appendices).map(([key, table]) => ({
+        key: `v${volume.volume}-${key}`,
+        title: table.title,
+        entryCount: table.entries.length,
+        groups: groupAppendixEntries(table.entries).map((group) => ({
+          title: group.title,
+          entries: group.entries.map((entry) => ({
+            headword: String(entry.forms ?? entry.headword ?? ""),
+            // 中文缺就留空。先前印表程式退到 glossEn，於是一本繁體中文讀本的
+            // 附錄印出整頁英文；缺就該看得出來缺。
+            zh: String(entry.zh ?? entry.glossZh ?? ""),
+            frequency:
+              typeof entry.vulgateFrequency === "number"
+                ? entry.vulgateFrequency
+                : typeof entry.corpusFrequency === "number"
+                  ? entry.corpusFrequency
+                  : null,
+          })),
+        })),
+      })),
+    })),
+  };
 }
 
 export function getLatinTerminal() {

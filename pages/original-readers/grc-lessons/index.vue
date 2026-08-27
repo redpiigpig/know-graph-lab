@@ -44,6 +44,18 @@
               <span class="mt-1 shrink-0 text-2xl text-stone-400 transition group-hover:translate-x-1">→</span>
             </div>
           </NuxtLink>
+
+          <NuxtLink to="/original-readers/grc-lessons/tables" class="group rounded-3xl border border-stone-300 bg-[#fffdf7] p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md">
+            <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">APPENDIX · REFERENCE TABLES</p>
+            <div class="mt-2 flex items-start justify-between gap-5">
+              <div class="min-w-0">
+                <h2 class="font-serif text-xl font-semibold break-words">附錄參考表</h2>
+                <p class="mt-1 text-sm text-stone-500 break-words">專名按類分節，數字、親屬、曆法與職分各一張</p>
+                <p class="mt-2 text-sm text-stone-600">{{ reader.appendices.length }} 張表・{{ appendixEntryCount }} 條</p>
+              </div>
+              <span class="mt-1 shrink-0 text-2xl text-stone-400 transition group-hover:translate-x-1">→</span>
+            </div>
+          </NuxtLink>
         </section>
 
         <section v-for="volume in reader.volumes" :key="volume.slug" class="mt-8">
@@ -135,6 +147,10 @@ const STATUS_LABELS: Record<string, string> = {
 
 const statusLabel = computed(() =>
   reader.value ? STATUS_LABELS[reader.value.releaseStatus] || reader.value.releaseStatus : "",
+);
+
+const appendixEntryCount = computed(() =>
+  (reader.value?.appendices || []).reduce((sum, table) => sum + table.entryCount, 0),
 );
 
 const stats = computed(() => {

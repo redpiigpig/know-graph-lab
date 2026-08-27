@@ -1,0 +1,3898 @@
+{
+  "unus": {
+    "zh": "一、單一",
+    "route": "五十課詞表"
+  },
+  "quattuor": {
+    "zh": "四",
+    "route": "五十課詞表"
+  },
+  "quinque": {
+    "zh": "五",
+    "route": "五十課詞表"
+  },
+  "septem": {
+    "zh": "七",
+    "route": "五十課詞表"
+  },
+  "octo": {
+    "zh": "八",
+    "route": "五十課詞表"
+  },
+  "octoginta": {
+    "zh": "八十",
+    "route": "五十課詞表"
+  },
+  "mille": {
+    "zh": "千、一千",
+    "route": "五十課詞表"
+  },
+  "primus": {
+    "zh": "第一、最先",
+    "route": "五十課詞表"
+  },
+  "secundus": {
+    "zh": "次的、第二的",
+    "route": "五十課詞表"
+  },
+  "tertius": {
+    "zh": "第三",
+    "route": "五十課詞表"
+  },
+  "Quintus": {
+    "zh": "昆圖斯",
+    "route": "五十課詞表"
+  },
+  "Sextus": {
+    "zh": "第六",
+    "route": "五十課詞表"
+  },
+  "octavus": {
+    "zh": "第八",
+    "route": "五十課詞表"
+  },
+  "Decimus": {
+    "zh": "第十、戴克姆",
+    "route": "五十課詞表"
+  },
+  "novissimus": {
+    "zh": "最後的、最近的、極度的",
+    "route": "五十課詞表"
+  },
+  "pars": {
+    "zh": "部分、某些",
+    "route": "五十課詞表"
+  },
+  "digitus": {
+    "zh": "手指、腳趾",
+    "route": "五十課詞表"
+  },
+  "mensura": {
+    "zh": "量度、尺度；容量",
+    "route": "五十課詞表"
+  },
+  "aurum": {
+    "zh": "黃金、金",
+    "route": "五十課詞表"
+  },
+  "pater": {
+    "zh": "父親",
+    "route": "五十課詞表"
+  },
+  "mater": {
+    "zh": "母親",
+    "route": "五十課詞表"
+  },
+  "filius": {
+    "zh": "子、兒子",
+    "route": "五十課詞表"
+  },
+  "filia": {
+    "zh": "女兒",
+    "route": "五十課詞表"
+  },
+  "parens": {
+    "zh": "父母、親生者",
+    "route": "五十課詞表"
+  },
+  "unigenitus": {
+    "zh": "獨生的、唯一的",
+    "route": "五十課詞表"
+  },
+  "puer": {
+    "zh": "孩童、男孩、僮僕",
+    "route": "五十課詞表"
+  },
+  "frater": {
+    "zh": "兄弟",
+    "route": "五十課詞表"
+  },
+  "soror": {
+    "zh": "姐妹",
+    "route": "五十課詞表"
+  },
+  "vir": {
+    "zh": "人、男人、丈夫、英雄",
+    "route": "五十課詞表"
+  },
+  "uxor": {
+    "zh": "妻子",
+    "route": "五十課詞表"
+  },
+  "familia": {
+    "zh": "家庭、家屬",
+    "route": "五十課詞表"
+  },
+  "domus": {
+    "zh": "家、家宅、住所",
+    "route": "五十課詞表"
+  },
+  "generatio": {
+    "zh": "生殖、生成、代",
+    "route": "五十課詞表"
+  },
+  "semen": {
+    "zh": "種子、籽",
+    "route": "五十課詞表"
+  },
+  "hereditas": {
+    "zh": "遺產、世代",
+    "route": "五十課詞表"
+  },
+  "ante": {
+    "zh": "在……之前",
+    "route": "五十課詞表"
+  },
+  "annus": {
+    "zh": "年",
+    "route": "五十課詞表"
+  },
+  "mensis": {
+    "zh": "月份、月",
+    "route": "五十課詞表"
+  },
+  "dies": {
+    "zh": "白晝、日子、天數",
+    "route": "五十課詞表"
+  },
+  "hora": {
+    "zh": "時辰、時間",
+    "route": "五十課詞表"
+  },
+  "saeculum": {
+    "zh": "世代、世界",
+    "route": "五十課詞表"
+  },
+  "Januarius": {
+    "zh": "一月",
+    "route": "五十課詞表"
+  },
+  "Februarius": {
+    "zh": "二月",
+    "route": "五十課詞表"
+  },
+  "Martius": {
+    "zh": "三月",
+    "route": "五十課詞表"
+  },
+  "Aprilis": {
+    "zh": "四月",
+    "route": "五十課詞表"
+  },
+  "Junius": {
+    "zh": "六月",
+    "route": "五十課詞表"
+  },
+  "Julius": {
+    "zh": "七月",
+    "route": "五十課詞表"
+  },
+  "Augustus": {
+    "zh": "奧古斯都",
+    "route": "五十課詞表"
+  },
+  "December": {
+    "zh": "十二月",
+    "route": "五十課詞表"
+  },
+  "Pascha": {
+    "zh": "逾越節、復活節",
+    "route": "五十課詞表"
+  },
+  "Pentecoste": {
+    "zh": "聖神降臨節、五旬節",
+    "route": "五十課詞表"
+  },
+  "sabbatum": {
+    "zh": "安息日、聖安息日",
+    "route": "五十課詞表"
+  },
+  "nox": {
+    "zh": "夜、黑暗",
+    "route": "五十課詞表"
+  },
+  "hodie": {
+    "zh": "今日、今天",
+    "route": "五十課詞表"
+  },
+  "semper": {
+    "zh": "常、總是",
+    "route": "五十課詞表"
+  },
+  "absolvo": {
+    "zh": "赦免、解除；完成",
+    "route": "五十課詞表"
+  },
+  "abstineo": {
+    "zh": "節制、禁絕、遠離",
+    "route": "五十課詞表"
+  },
+  "accedo": {
+    "zh": "前往、接近",
+    "route": "五十課詞表"
+  },
+  "accipio": {
+    "zh": "取、領受、接納",
+    "route": "五十課詞表"
+  },
+  "addo": {
+    "zh": "給予、增加",
+    "route": "五十課詞表"
+  },
+  "adduco": {
+    "zh": "引領、帶往；勸誘、說服；收縮",
+    "route": "五十課詞表"
+  },
+  "adeo": {
+    "zh": "前往、接近",
+    "route": "五十課詞表"
+  },
+  "adhaereo": {
+    "zh": "粘著、依附；堅守、專注",
+    "route": "五十課詞表"
+  },
+  "adhibeo": {
+    "zh": "徵召、邀請；應用、採用、發動",
+    "route": "五十課詞表"
+  },
+  "admitto": {
+    "zh": "准許、允許；接納",
+    "route": "五十課詞表"
+  },
+  "adorno": {
+    "zh": "裝飾、妝點",
+    "route": "五十課詞表"
+  },
+  "adoro": {
+    "zh": "崇拜、朝拜",
+    "route": "五十課詞表"
+  },
+  "adsum": {
+    "zh": "在場、臨在",
+    "route": "五十課詞表"
+  },
+  "aedifico": {
+    "zh": "建造、築造；確立、改善、啟蒙",
+    "route": "五十課詞表"
+  },
+  "aestimo": {
+    "zh": "估價、評估；判斷、認為",
+    "route": "五十課詞表"
+  },
+  "affero": {
+    "zh": "帶來、運送、呈現、提出、引起",
+    "route": "五十課詞表"
+  },
+  "aggredior": {
+    "zh": "接近、前往",
+    "route": "五十課詞表"
+  },
+  "agnosco": {
+    "zh": "認識、承認",
+    "route": "五十課詞表"
+  },
+  "ago": {
+    "zh": "行為、行動、進行",
+    "route": "五十課詞表"
+  },
+  "aio": {
+    "zh": "言說、聲稱、肯定",
+    "route": "五十課詞表"
+  },
+  "ambulo": {
+    "zh": "行走、生活",
+    "route": "五十課詞表"
+  },
+  "amitto": {
+    "zh": "失去、喪失",
+    "route": "五十課詞表"
+  },
+  "amo": {
+    "zh": "愛、喜愛",
+    "route": "五十課詞表"
+  },
+  "amplector": {
+    "zh": "擁抱、懷抱",
+    "route": "五十課詞表"
+  },
+  "animadverto": {
+    "zh": "注意、察覺、觀察；評判、懲罰",
+    "route": "五十課詞表"
+  },
+  "aperio": {
+    "zh": "打開、闡釋",
+    "route": "五十課詞表"
+  },
+  "appareo": {
+    "zh": "顯現、出現、呈現",
+    "route": "五十課詞表"
+  },
+  "appello": {
+    "zh": "呼喚、稱呼、上訴、指控",
+    "route": "五十課詞表"
+  },
+  "arbitror": {
+    "zh": "見聞、作證；判決、認為",
+    "route": "五十課詞表"
+  },
+  "ardeo": {
+    "zh": "燃燒、熾熱",
+    "route": "五十課詞表"
+  },
+  "arguo": {
+    "zh": "證明、指控、譴責、駁斥",
+    "route": "五十課詞表"
+  },
+  "ascendo": {
+    "zh": "上升、攀登",
+    "route": "五十課詞表"
+  },
+  "aspicio": {
+    "zh": "看、注視",
+    "route": "五十課詞表"
+  },
+  "assero": {
+    "zh": "抓住、把握；主張、聲稱；解放、維護",
+    "route": "五十課詞表"
+  },
+  "asto": {
+    "zh": "站在……旁、站立",
+    "route": "五十課詞表"
+  },
+  "attendo": {
+    "zh": "注意、傾聽、專心",
+    "route": "五十課詞表"
+  },
+  "audeo": {
+    "zh": "敢、勇於",
+    "route": "五十課詞表"
+  },
+  "audio": {
+    "zh": "聽、聆聽",
+    "route": "五十課詞表"
+  },
+  "benedico": {
+    "zh": "祝福、頌讚",
+    "route": "五十課詞表"
+  },
+  "bibo": {
+    "zh": "飲、飲用",
+    "route": "五十課詞表"
+  },
+  "cado": {
+    "zh": "跌落、下落、陷落",
+    "route": "五十課詞表"
+  },
+  "cano": {
+    "zh": "唱歌、預言",
+    "route": "五十課詞表"
+  },
+  "canto": {
+    "zh": "唱、詠唱",
+    "route": "五十課詞表"
+  },
+  "capio": {
+    "zh": "取、得著、領悟",
+    "route": "五十課詞表"
+  },
+  "careo": {
+    "zh": "缺乏、沒有、喪失",
+    "route": "五十課詞表"
+  },
+  "cedo": {
+    "zh": "行去、退讓、屈服",
+    "route": "五十課詞表"
+  },
+  "celebro": {
+    "zh": "慶祝、舉行",
+    "route": "五十課詞表"
+  },
+  "ceno": {
+    "zh": "進晚餐、用晚餐",
+    "route": "五十課詞表"
+  },
+  "censeo": {
+    "zh": "認為、判斷、建議、評估、計算",
+    "route": "五十課詞表"
+  },
+  "cerno": {
+    "zh": "看、識別",
+    "route": "五十課詞表"
+  },
+  "cesso": {
+    "zh": "停止、終止、懈怠",
+    "route": "五十課詞表"
+  },
+  "circumspicio": {
+    "zh": "環顧、周圍觀察",
+    "route": "五十課詞表"
+  },
+  "cito": {
+    "zh": "迅速地、急速地、容易地",
+    "route": "五十課詞表"
+  },
+  "clamo": {
+    "zh": "呼喊、大聲喊叫",
+    "route": "五十課詞表"
+  },
+  "claudo": {
+    "zh": "關閉、閉合",
+    "route": "五十課詞表"
+  },
+  "cogito": {
+    "zh": "思考、籌謀",
+    "route": "五十課詞表"
+  },
+  "cognosco": {
+    "zh": "認識、知道",
+    "route": "五十課詞表"
+  },
+  "cogo": {
+    "zh": "聚集、強迫",
+    "route": "五十課詞表"
+  },
+  "colligo": {
+    "zh": "聚集、收集、採集",
+    "route": "五十課詞表"
+  },
+  "colo": {
+    "zh": "居住、住；耕作、培育；維護、保持",
+    "route": "五十課詞表"
+  },
+  "commemoro": {
+    "zh": "回憶、銘記；提及、記述",
+    "route": "五十課詞表"
+  },
+  "commendo": {
+    "zh": "託付、委託",
+    "route": "五十課詞表"
+  },
+  "committo": {
+    "zh": "結合、連接；製造；託付",
+    "route": "五十課詞表"
+  },
+  "commodo": {
+    "zh": "出借、租賃；給予、供應；適配、調和",
+    "route": "五十課詞表"
+  },
+  "communico": {
+    "zh": "共有、分享；交通、聯誼、領受",
+    "route": "五十課詞表"
+  },
+  "comparo": {
+    "zh": "籌備、預備；蒐集、徵集；聯合",
+    "route": "五十課詞表"
+  },
+  "comperio": {
+    "zh": "發現、確認、查明",
+    "route": "五十課詞表"
+  },
+  "complector": {
+    "zh": "擁抱、包含",
+    "route": "五十課詞表"
+  },
+  "concedo": {
+    "zh": "退讓、准許、賜予",
+    "route": "五十課詞表"
+  },
+  "concludo": {
+    "zh": "關閉、封閉；結論、推斷",
+    "route": "五十課詞表"
+  },
+  "condo": {
+    "zh": "創建、建立；隱藏",
+    "route": "五十課詞表"
+  },
+  "confero": {
+    "zh": "陪伴、賦予；前往",
+    "route": "五十課詞表"
+  },
+  "confido": {
+    "zh": "信賴、寄望",
+    "route": "五十課詞表"
+  },
+  "confirmo": {
+    "zh": "堅固、確認",
+    "route": "五十課詞表"
+  },
+  "confiteor": {
+    "zh": "認罪、告明、讚頌",
+    "route": "五十課詞表"
+  },
+  "confundo": {
+    "zh": "混淆、使困惑、羞辱",
+    "route": "五十課詞表"
+  },
+  "congrego": {
+    "zh": "聚集、集合",
+    "route": "五十課詞表"
+  },
+  "congruo": {
+    "zh": "相合、協調、相符；適應",
+    "route": "五十課詞表"
+  },
+  "conjungo": {
+    "zh": "連結、結合、統一",
+    "route": "五十課詞表"
+  },
+  "conor": {
+    "zh": "嘗試、努力",
+    "route": "五十課詞表"
+  },
+  "consentio": {
+    "zh": "同意、和諧、心意相通",
+    "route": "五十課詞表"
+  },
+  "conservo": {
+    "zh": "保持、保存",
+    "route": "五十課詞表"
+  },
+  "considero": {
+    "zh": "察看、深思、審視",
+    "route": "五十課詞表"
+  },
+  "consisto": {
+    "zh": "停止、駐足；立定、佇立；維持、保持",
+    "route": "五十課詞表"
+  },
+  "constituo": {
+    "zh": "規定、設立、任命",
+    "route": "五十課詞表"
+  },
+  "consulo": {
+    "zh": "請教、諮詢；思考、商議；建議",
+    "route": "五十課詞表"
+  },
+  "contendo": {
+    "zh": "拉緊、繃張、張弦、伸展",
+    "route": "五十課詞表"
+  },
+  "continuo": {
+    "zh": "立即、隨即、連續不斷",
+    "route": "五十課詞表"
+  },
+  "contraho": {
+    "zh": "締結、訂立、從事、交戰",
+    "route": "五十課詞表"
+  },
+  "convenio": {
+    "zh": "聚集、相聚；適合、相稱",
+    "route": "五十課詞表"
+  },
+  "converto": {
+    "zh": "轉變、改變、皈依",
+    "route": "五十課詞表"
+  },
+  "credo": {
+    "zh": "相信、信任",
+    "route": "五十課詞表"
+  },
+  "creo": {
+    "zh": "創造、製造",
+    "route": "五十課詞表"
+  },
+  "cupio": {
+    "zh": "渴望、熱望；欲得、貪求；贊許、祝福",
+    "route": "五十課詞表"
+  },
+  "curo": {
+    "zh": "醫治、治療、照顧",
+    "route": "五十課詞表"
+  },
+  "curro": {
+    "zh": "奔馳、急行",
+    "route": "五十課詞表"
+  },
+  "custodio": {
+    "zh": "守衛、看守、保護",
+    "route": "五十課詞表"
+  },
+  "damno": {
+    "zh": "判罪、定罪；譴責、宣判；傷害、危及",
+    "route": "五十課詞表"
+  },
+  "debeo": {
+    "zh": "欠、應該",
+    "route": "五十課詞表"
+  },
+  "decerno": {
+    "zh": "決定、頒布、裁決、表決",
+    "route": "五十課詞表"
+  },
+  "deduco": {
+    "zh": "引下、帶走；牽出；驅逐",
+    "route": "五十課詞表"
+  },
+  "defendo": {
+    "zh": "保衛、防禦",
+    "route": "五十課詞表"
+  },
+  "deficio": {
+    "zh": "衰退、虛弱、消失",
+    "route": "五十課詞表"
+  },
+  "definio": {
+    "zh": "界定、規定；限制、確定；制定",
+    "route": "五十課詞表"
+  },
+  "deleo": {
+    "zh": "摧毀、抹除、消滅",
+    "route": "五十課詞表"
+  },
+  "demonstro": {
+    "zh": "指示、揭示",
+    "route": "五十課詞表"
+  },
+  "depono": {
+    "zh": "放下、卸去、除去",
+    "route": "五十課詞表"
+  },
+  "deprecor": {
+    "zh": "懇求、哀求",
+    "route": "五十課詞表"
+  },
+  "descendo": {
+    "zh": "下降、下來",
+    "route": "五十課詞表"
+  },
+  "desidero": {
+    "zh": "渴望、期望",
+    "route": "五十課詞表"
+  },
+  "designo": {
+    "zh": "標記、描劃；指示、表明",
+    "route": "五十課詞表"
+  },
+  "despicio": {
+    "zh": "輕視、蔑視",
+    "route": "五十課詞表"
+  },
+  "desum": {
+    "zh": "不足、失職、缺席、背棄",
+    "route": "五十課詞表"
+  },
+  "detraho": {
+    "zh": "抽取、奪去",
+    "route": "五十課詞表"
+  },
+  "dico": {
+    "zh": "說、告訴；被稱為",
+    "route": "五十課詞表"
+  },
+  "differo": {
+    "zh": "延遲、推遲；不同、有別",
+    "route": "五十課詞表"
+  },
+  "diligo": {
+    "zh": "愛、珍視",
+    "route": "五十課詞表"
+  },
+  "dimitto": {
+    "zh": "遣送、赦免",
+    "route": "五十課詞表"
+  },
+  "dirigo": {
+    "zh": "指導、引導",
+    "route": "五十課詞表"
+  },
+  "discedo": {
+    "zh": "離開、出發",
+    "route": "五十課詞表"
+  },
+  "disco": {
+    "zh": "學習、習得",
+    "route": "五十課詞表"
+  },
+  "dispono": {
+    "zh": "配置、分佈；排列、布置；管理、治理、安排",
+    "route": "五十課詞表"
+  },
+  "divido": {
+    "zh": "分開、分割、分配",
+    "route": "五十課詞表"
+  },
+  "do": {
+    "zh": "給、賜予",
+    "route": "五十課詞表"
+  },
+  "doceo": {
+    "zh": "教導、傳授",
+    "route": "五十課詞表"
+  },
+  "doleo": {
+    "zh": "悲傷、受苦",
+    "route": "五十課詞表"
+  },
+  "dono": {
+    "zh": "給予、赦免",
+    "route": "五十課詞表"
+  },
+  "duco": {
+    "zh": "引導、率領、指揮",
+    "route": "五十課詞表"
+  },
+  "edo": {
+    "zh": "射出、發出；生出、長出；生育、產生；展現、表現",
+    "route": "五十課詞表"
+  },
+  "effundo": {
+    "zh": "傾倒、流出、灑出",
+    "route": "五十課詞表"
+  },
+  "egeo": {
+    "zh": "需要、缺乏；要求、必須",
+    "route": "五十課詞表"
+  },
+  "egredior": {
+    "zh": "出去、離開",
+    "route": "五十課詞表"
+  },
+  "eligo": {
+    "zh": "選擇、選舉",
+    "route": "五十課詞表"
+  },
+  "emitto": {
+    "zh": "發出、派遣",
+    "route": "五十課詞表"
+  },
+  "emo": {
+    "zh": "購買、買",
+    "route": "五十課詞表"
+  },
+  "eo": {
+    "zh": "行、往",
+    "route": "五十課詞表"
+  },
+  "erigo": {
+    "zh": "豎立、高舉",
+    "route": "五十課詞表"
+  },
+  "erro": {
+    "zh": "漂泊、迷途、犯錯",
+    "route": "五十課詞表"
+  },
+  "evado": {
+    "zh": "逃脫、躲避、免於",
+    "route": "五十課詞表"
+  },
+  "exaudio": {
+    "zh": "俯聽、垂聽、應允",
+    "route": "五十課詞表"
+  },
+  "excipio": {
+    "zh": "接待、迎接",
+    "route": "五十課詞表"
+  },
+  "excito": {
+    "zh": "喚醒、激起；引起；豎立；煽動",
+    "route": "五十課詞表"
+  },
+  "exclamo": {
+    "zh": "大聲喊叫、呼喊",
+    "route": "五十課詞表"
+  },
+  "excludo": {
+    "zh": "排除、驅逐、阻止",
+    "route": "五十課詞表"
+  },
+  "exeo": {
+    "zh": "出去、離開",
+    "route": "五十課詞表"
+  },
+  "exhibeo": {
+    "zh": "呈現、提供、展示",
+    "route": "五十課詞表"
+  },
+  "exigo": {
+    "zh": "驅逐、完成、審視、衡量",
+    "route": "五十課詞表"
+  },
+  "existimo": {
+    "zh": "認為、判斷、評估",
+    "route": "五十課詞表"
+  },
+  "exoro": {
+    "zh": "懇求、哀求",
+    "route": "五十課詞表"
+  },
+  "expono": {
+    "zh": "陳述、闡明、棄置、登陸",
+    "route": "五十課詞表"
+  },
+  "exprimo": {
+    "zh": "表達、表現、描繪",
+    "route": "五十課詞表"
+  },
+  "exspecto": {
+    "zh": "等待、期待",
+    "route": "五十課詞表"
+  },
+  "extendo": {
+    "zh": "伸展、延伸",
+    "route": "五十課詞表"
+  },
+  "extollo": {
+    "zh": "舉揚、讚頌",
+    "route": "五十課詞表"
+  },
+  "facio": {
+    "zh": "做、製作、創造",
+    "route": "五十課詞表"
+  },
+  "fateor": {
+    "zh": "承認、告明、讚頌",
+    "route": "五十課詞表"
+  },
+  "fero": {
+    "zh": "帶、持、運",
+    "route": "五十課詞表"
+  },
+  "fio": {
+    "zh": "被造成、生成、成為",
+    "route": "五十課詞表"
+  },
+  "firmo": {
+    "zh": "堅固、使穩固",
+    "route": "五十課詞表"
+  },
+  "flecto": {
+    "zh": "彎曲、屈膝",
+    "route": "五十課詞表"
+  },
+  "fleo": {
+    "zh": "哭泣、哀傷",
+    "route": "五十課詞表"
+  },
+  "formo": {
+    "zh": "訓練、指引；塑造、形成",
+    "route": "五十課詞表"
+  },
+  "fruor": {
+    "zh": "享受、受益；欣賞",
+    "route": "五十課詞表"
+  },
+  "fugio": {
+    "zh": "逃離、躲避",
+    "route": "五十課詞表"
+  },
+  "fundo": {
+    "zh": "建立、創立",
+    "route": "五十課詞表"
+  },
+  "fungor": {
+    "zh": "執行、履行",
+    "route": "五十課詞表"
+  },
+  "gaudeo": {
+    "zh": "喜樂、欣悅",
+    "route": "五十課詞表"
+  },
+  "gero": {
+    "zh": "持、經營、進行",
+    "route": "五十課詞表"
+  },
+  "habeo": {
+    "zh": "有、持有；認為、視為",
+    "route": "五十課詞表"
+  },
+  "habito": {
+    "zh": "居住、住在、停留",
+    "route": "五十課詞表"
+  },
+  "hortor": {
+    "zh": "勸勉、鼓勵、激勵；敦促、勸說",
+    "route": "五十課詞表"
+  },
+  "ignoro": {
+    "zh": "不知、不知悉、忽視",
+    "route": "五十課詞表"
+  },
+  "impedio": {
+    "zh": "阻礙、妨礙；阻止",
+    "route": "五十課詞表"
+  },
+  "impero": {
+    "zh": "命令、下令；統治",
+    "route": "五十課詞表"
+  },
+  "impleo": {
+    "zh": "充滿、成全",
+    "route": "五十課詞表"
+  },
+  "impono": {
+    "zh": "置於、加諸",
+    "route": "五十課詞表"
+  },
+  "incedo": {
+    "zh": "行走、前進",
+    "route": "五十課詞表"
+  },
+  "incipio": {
+    "zh": "開始",
+    "route": "五十課詞表"
+  },
+  "inclino": {
+    "zh": "躬身、屈服、傾斜",
+    "route": "五十課詞表"
+  },
+  "indico": {
+    "zh": "指示、表明；揭露、背叛；告發、控告",
+    "route": "五十課詞表"
+  },
+  "ineo": {
+    "zh": "進入、開始",
+    "route": "五十課詞表"
+  },
+  "infero": {
+    "zh": "依附、緊貼",
+    "route": "五十課詞表"
+  },
+  "ingredior": {
+    "zh": "進入、踏入",
+    "route": "五十課詞表"
+  },
+  "innitor": {
+    "zh": "依靠、憑藉、扶持",
+    "route": "五十課詞表"
+  },
+  "inquiro": {
+    "zh": "調查、追查、探尋",
+    "route": "五十課詞表"
+  },
+  "instruo": {
+    "zh": "教導、裝備",
+    "route": "五十課詞表"
+  },
+  "insum": {
+    "zh": "存在於、包含於；屬於",
+    "route": "五十課詞表"
+  },
+  "intellego": {
+    "zh": "理解、認知、領會",
+    "route": "五十課詞表"
+  },
+  "intendo": {
+    "zh": "瞄準、注視",
+    "route": "五十課詞表"
+  },
+  "interpretor": {
+    "zh": "解釋、說明；詮釋、預言；理解、領會",
+    "route": "五十課詞表"
+  },
+  "interrogo": {
+    "zh": "詢問、提問",
+    "route": "五十課詞表"
+  },
+  "intersum": {
+    "zh": "介於其間、在場、參與、有差異",
+    "route": "五十課詞表"
+  },
+  "intueor": {
+    "zh": "注視、觀看；考量、視為；欣賞",
+    "route": "五十課詞表"
+  },
+  "invenio": {
+    "zh": "發現、尋得、找到",
+    "route": "五十課詞表"
+  },
+  "jaceo": {
+    "zh": "躺臥、位於",
+    "route": "五十課詞表"
+  },
+  "jacio": {
+    "zh": "投擲、拋",
+    "route": "五十課詞表"
+  },
+  "jubeo": {
+    "zh": "命令、吩咐",
+    "route": "五十課詞表"
+  },
+  "labor": {
+    "zh": "滑落、跌倒",
+    "route": "五十課詞表"
+  },
+  "laboro": {
+    "zh": "勞動、工作",
+    "route": "五十課詞表"
+  },
+  "laudo": {
+    "zh": "讚美、稱讚",
+    "route": "五十課詞表"
+  },
+  "lego": {
+    "zh": "選擇、讀",
+    "route": "五十課詞表"
+  },
+  "libero": {
+    "zh": "解放、釋放",
+    "route": "五十課詞表"
+  },
+  "loquor": {
+    "zh": "說話、講述",
+    "route": "五十課詞表"
+  },
+  "mando": {
+    "zh": "咀嚼、進食",
+    "route": "五十課詞表"
+  },
+  "maneo": {
+    "zh": "留、停留、等待",
+    "route": "五十課詞表"
+  },
+  "ministro": {
+    "zh": "侍奉、供給、提供",
+    "route": "五十課詞表"
+  },
+  "miror": {
+    "zh": "驚異、讚歎",
+    "route": "五十課詞表"
+  },
+  "misereor": {
+    "zh": "憐憫、垂憐",
+    "route": "五十課詞表"
+  },
+  "mitto": {
+    "zh": "派遣、投擲、放置",
+    "route": "五十課詞表"
+  },
+  "moneo": {
+    "zh": "告誡、勸告；教導",
+    "route": "五十課詞表"
+  },
+  "monstro": {
+    "zh": "指示、示現",
+    "route": "五十課詞表"
+  },
+  "morior": {
+    "zh": "死去、逝世",
+    "route": "五十課詞表"
+  },
+  "muto": {
+    "zh": "改變、交換、轉移",
+    "route": "五十課詞表"
+  },
+  "narro": {
+    "zh": "述說、敍述",
+    "route": "五十課詞表"
+  },
+  "neglego": {
+    "zh": "忽視、漠視、輕視；不理會、放任",
+    "route": "五十課詞表"
+  },
+  "nego": {
+    "zh": "否認、拒絕、否定",
+    "route": "五十課詞表"
+  },
+  "nequeo": {
+    "zh": "不能、無能",
+    "route": "五十課詞表"
+  },
+  "nescio": {
+    "zh": "不知、無知",
+    "route": "五十課詞表"
+  },
+  "nitor": {
+    "zh": "依靠、倚託；奮力、努力",
+    "route": "五十課詞表"
+  },
+  "nolo": {
+    "zh": "不願、拒絕",
+    "route": "五十課詞表"
+  },
+  "nomino": {
+    "zh": "命名、稱呼、提名",
+    "route": "五十課詞表"
+  },
+  "nuntio": {
+    "zh": "宣告、報告",
+    "route": "五十課詞表"
+  },
+  "obsecro": {
+    "zh": "懇求、哀禱、拜託",
+    "route": "五十課詞表"
+  },
+  "observo": {
+    "zh": "觀察、遵守",
+    "route": "五十課詞表"
+  },
+  "occido": {
+    "zh": "殺死、殺害",
+    "route": "五十課詞表"
+  },
+  "occurro": {
+    "zh": "趨近、迎接",
+    "route": "五十課詞表"
+  },
+  "offero": {
+    "zh": "奉獻、呈獻、獻上",
+    "route": "五十課詞表"
+  },
+  "operor": {
+    "zh": "工作、執行",
+    "route": "五十課詞表"
+  },
+  "opto": {
+    "zh": "選擇、揀選；希望、願望",
+    "route": "五十課詞表"
+  },
+  "oro": {
+    "zh": "祈禱、懇求",
+    "route": "五十課詞表"
+  },
+  "ostendo": {
+    "zh": "展示、說明",
+    "route": "五十課詞表"
+  },
+  "parco": {
+    "zh": "饒恕、寬容",
+    "route": "五十課詞表"
+  },
+  "pario": {
+    "zh": "生產、產生、生育",
+    "route": "五十課詞表"
+  },
+  "paro": {
+    "zh": "備辦、預備、提供",
+    "route": "五十課詞表"
+  },
+  "patior": {
+    "zh": "忍受、允許",
+    "route": "五十課詞表"
+  },
+  "pecco": {
+    "zh": "犯罪、違過",
+    "route": "五十課詞表"
+  },
+  "pendeo": {
+    "zh": "懸掛、依附",
+    "route": "五十課詞表"
+  },
+  "penetro": {
+    "zh": "穿透、深入",
+    "route": "五十課詞表"
+  },
+  "perago": {
+    "zh": "擾亂；完成、終結；殺害",
+    "route": "五十課詞表"
+  },
+  "percipio": {
+    "zh": "獲得、領受；感知、察覺、瞭解",
+    "route": "五十課詞表"
+  },
+  "pereo": {
+    "zh": "滅亡、喪失",
+    "route": "五十課詞表"
+  },
+  "perficio": {
+    "zh": "完成、成就、做好",
+    "route": "五十課詞表"
+  },
+  "permitto": {
+    "zh": "允許、容許",
+    "route": "五十課詞表"
+  },
+  "persequor": {
+    "zh": "追趕、迫害",
+    "route": "五十課詞表"
+  },
+  "perspicio": {
+    "zh": "看透、察明；觀察、檢視",
+    "route": "五十課詞表"
+  },
+  "peto": {
+    "zh": "請求、懇求",
+    "route": "五十課詞表"
+  },
+  "placeo": {
+    "zh": "討好、令人滿意",
+    "route": "五十課詞表"
+  },
+  "plango": {
+    "zh": "哀悼、悲嘆",
+    "route": "五十課詞表"
+  },
+  "ploro": {
+    "zh": "哭泣、哀慟、悲慟",
+    "route": "五十課詞表"
+  },
+  "pono": {
+    "zh": "放置、設置",
+    "route": "五十課詞表"
+  },
+  "porto": {
+    "zh": "運載、攜帶",
+    "route": "五十課詞表"
+  },
+  "posco": {
+    "zh": "求、懇求",
+    "route": "五十課詞表"
+  },
+  "possideo": {
+    "zh": "佔有、擁有、統治",
+    "route": "五十課詞表"
+  },
+  "possum": {
+    "zh": "能、可以",
+    "route": "五十課詞表"
+  },
+  "postulo": {
+    "zh": "請求、祈求",
+    "route": "五十課詞表"
+  },
+  "potior": {
+    "zh": "更好的、更優越的、更重要的",
+    "route": "五十課詞表"
+  },
+  "praebeo": {
+    "zh": "呈現、提供、展示",
+    "route": "五十課詞表"
+  },
+  "praecipio": {
+    "zh": "命令、教導",
+    "route": "五十課詞表"
+  },
+  "praedico": {
+    "zh": "宣講、宣揚",
+    "route": "五十課詞表"
+  },
+  "praefero": {
+    "zh": "更喜好、偏好、展示",
+    "route": "五十課詞表"
+  },
+  "praeparo": {
+    "zh": "預備、準備",
+    "route": "五十課詞表"
+  },
+  "praesto": {
+    "zh": "施與、完成、提供",
+    "route": "五十課詞表"
+  },
+  "praesum": {
+    "zh": "統領、主持、帶頭、出席",
+    "route": "五十課詞表"
+  },
+  "praesumo": {
+    "zh": "預先使用、預期、假定",
+    "route": "五十課詞表"
+  },
+  "praetereo": {
+    "zh": "經過、超越；忽視、漏掉、遺漏",
+    "route": "五十課詞表"
+  },
+  "precor": {
+    "zh": "祈禱、懇求",
+    "route": "五十課詞表"
+  },
+  "probo": {
+    "zh": "贊同、讚許；認可、核准",
+    "route": "五十課詞表"
+  },
+  "prodeo": {
+    "zh": "走出、進前",
+    "route": "五十課詞表"
+  },
+  "profero": {
+    "zh": "提出、陳述、發言",
+    "route": "五十課詞表"
+  },
+  "proficiscor": {
+    "zh": "出發、啟程、前進",
+    "route": "五十課詞表"
+  },
+  "profiteor": {
+    "zh": "宣認、明認",
+    "route": "五十課詞表"
+  },
+  "promitto": {
+    "zh": "承諾、誓言",
+    "route": "五十課詞表"
+  },
+  "propono": {
+    "zh": "提出、建議",
+    "route": "五十課詞表"
+  },
+  "prosequor": {
+    "zh": "進行、貫徹",
+    "route": "五十課詞表"
+  },
+  "prosum": {
+    "zh": "有益、利於、幫助",
+    "route": "五十課詞表"
+  },
+  "puto": {
+    "zh": "認為、計算、考慮",
+    "route": "五十課詞表"
+  },
+  "quaero": {
+    "zh": "尋求、請求、詢問",
+    "route": "五十課詞表"
+  },
+  "queo": {
+    "zh": "能、能夠",
+    "route": "五十課詞表"
+  },
+  "recipio": {
+    "zh": "收回、接納",
+    "route": "五十課詞表"
+  },
+  "reddo": {
+    "zh": "歸還、呈現",
+    "route": "五十課詞表"
+  },
+  "redeo": {
+    "zh": "回來、歸返",
+    "route": "五十課詞表"
+  },
+  "redimo": {
+    "zh": "贖回、救贖",
+    "route": "五十課詞表"
+  },
+  "refero": {
+    "zh": "回報、呈獻、述說",
+    "route": "五十課詞表"
+  },
+  "regno": {
+    "zh": "統治、君臨",
+    "route": "五十課詞表"
+  },
+  "rego": {
+    "zh": "統治、引導、管理",
+    "route": "五十課詞表"
+  },
+  "regredior": {
+    "zh": "返回、退回",
+    "route": "五十課詞表"
+  },
+  "relinquo": {
+    "zh": "留下、拋棄",
+    "route": "五十課詞表"
+  },
+  "remitto": {
+    "zh": "遣回、寬赦",
+    "route": "五十課詞表"
+  },
+  "reperio": {
+    "zh": "發現、察覺；找到、獲得；得知、認識；創造",
+    "route": "五十課詞表"
+  },
+  "repeto": {
+    "zh": "返回、回到；取回、收回；重複、重申；索討",
+    "route": "五十課詞表"
+  },
+  "repleo": {
+    "zh": "充滿、完成",
+    "route": "五十課詞表"
+  },
+  "requiro": {
+    "zh": "尋求、要求、需要",
+    "route": "五十課詞表"
+  },
+  "resisto": {
+    "zh": "抵抗、反對、對抗；駐足",
+    "route": "五十課詞表"
+  },
+  "respicio": {
+    "zh": "看待、注視、顧慮",
+    "route": "五十課詞表"
+  },
+  "respondeo": {
+    "zh": "回答、應答",
+    "route": "五十課詞表"
+  },
+  "resto": {
+    "zh": "殘留、留下、尚存",
+    "route": "五十課詞表"
+  },
+  "resurgo": {
+    "zh": "重新起身、復興",
+    "route": "五十課詞表"
+  },
+  "retineo": {
+    "zh": "保留、扣留；堅守、維持",
+    "route": "五十課詞表"
+  },
+  "rogo": {
+    "zh": "請求、祈禱",
+    "route": "五十課詞表"
+  },
+  "sacro": {
+    "zh": "祝聖、使神聖",
+    "route": "五十課詞表"
+  },
+  "sancio": {
+    "zh": "確認、制定、履行、奉獻",
+    "route": "五十課詞表"
+  },
+  "sapio": {
+    "zh": "嚐、有味；領悟、明智",
+    "route": "五十課詞表"
+  },
+  "satio": {
+    "zh": "養育、飽足、滿足",
+    "route": "五十課詞表"
+  },
+  "satisfacio": {
+    "zh": "滿足、賠償、道歉、足夠",
+    "route": "五十課詞表"
+  },
+  "scio": {
+    "zh": "知道、認識",
+    "route": "五十課詞表"
+  },
+  "scribo": {
+    "zh": "書寫",
+    "route": "五十課詞表"
+  },
+  "sedeo": {
+    "zh": "坐、就座",
+    "route": "五十課詞表"
+  },
+  "sentio": {
+    "zh": "感受、知覺、體驗",
+    "route": "五十課詞表"
+  },
+  "sequor": {
+    "zh": "跟隨、追隨",
+    "route": "五十課詞表"
+  },
+  "servio": {
+    "zh": "事奉、服侍",
+    "route": "五十課詞表"
+  },
+  "servo": {
+    "zh": "保守、保護、遵守",
+    "route": "五十課詞表"
+  },
+  "socio": {
+    "zh": "使參與、聯合、結盟",
+    "route": "五十課詞表"
+  },
+  "soleo": {
+    "zh": "習慣於、慣常",
+    "route": "五十課詞表"
+  },
+  "sono": {
+    "zh": "發聲、鳴響",
+    "route": "五十課詞表"
+  },
+  "specto": {
+    "zh": "觀看、注視、審視、考慮",
+    "route": "五十課詞表"
+  },
+  "spero": {
+    "zh": "希望、期待、信賴",
+    "route": "五十課詞表"
+  },
+  "statuo": {
+    "zh": "建立、任命、決定",
+    "route": "五十課詞表"
+  },
+  "sto": {
+    "zh": "站立、停留",
+    "route": "五十課詞表"
+  },
+  "studeo": {
+    "zh": "渴望、熱衷於；致力於；努力",
+    "route": "五十課詞表"
+  },
+  "suadeo": {
+    "zh": "勸促、建議；誘導；勸服、勸告",
+    "route": "五十課詞表"
+  },
+  "subicio": {
+    "zh": "置於下、使屈從、暴露",
+    "route": "五十課詞表"
+  },
+  "sufficio": {
+    "zh": "足夠、充分、能勝任",
+    "route": "五十課詞表"
+  },
+  "supero": {
+    "zh": "克服、征服；超越、勝過",
+    "route": "五十課詞表"
+  },
+  "suscipio": {
+    "zh": "拿起、接受",
+    "route": "五十課詞表"
+  },
+  "sustineo": {
+    "zh": "支撐、維持、承受",
+    "route": "五十課詞表"
+  },
+  "taceo": {
+    "zh": "沉默、緘默",
+    "route": "五十課詞表"
+  },
+  "tendo": {
+    "zh": "伸展、張開",
+    "route": "五十課詞表"
+  },
+  "teneo": {
+    "zh": "握持、保有、扣留",
+    "route": "五十課詞表"
+  },
+  "testor": {
+    "zh": "作證、見證；立遺囑；宣誓",
+    "route": "五十課詞表"
+  },
+  "timeo": {
+    "zh": "害怕、畏懼",
+    "route": "五十課詞表"
+  },
+  "tollo": {
+    "zh": "移除、舉起、拿起",
+    "route": "五十課詞表"
+  },
+  "tracto": {
+    "zh": "拖曳、牽引、處理、論述",
+    "route": "五十課詞表"
+  },
+  "trado": {
+    "zh": "交付、背棄",
+    "route": "五十課詞表"
+  },
+  "traho": {
+    "zh": "拖拽、引導、吸引",
+    "route": "五十課詞表"
+  },
+  "transeo": {
+    "zh": "越過、穿過；消逝",
+    "route": "五十課詞表"
+  },
+  "tribuo": {
+    "zh": "分配、賦予、歸屬",
+    "route": "五十課詞表"
+  },
+  "utor": {
+    "zh": "使用、享受",
+    "route": "五十課詞表"
+  },
+  "vado": {
+    "zh": "行走、匆促",
+    "route": "五十課詞表"
+  },
+  "valeo": {
+    "zh": "安康、強壯；能夠",
+    "route": "五十課詞表"
+  },
+  "venio": {
+    "zh": "來、到達",
+    "route": "五十課詞表"
+  },
+  "verbero": {
+    "zh": "鞭打、殴打",
+    "route": "五十課詞表"
+  },
+  "verso": {
+    "zh": "旋轉、翻動、混合",
+    "route": "五十課詞表"
+  },
+  "verto": {
+    "zh": "轉、旋轉",
+    "route": "五十課詞表"
+  },
+  "veto": {
+    "zh": "禁止、阻止",
+    "route": "五十課詞表"
+  },
+  "video": {
+    "zh": "看、視；明白",
+    "route": "五十課詞表"
+  },
+  "vinco": {
+    "zh": "戰勝、征服",
+    "route": "五十課詞表"
+  },
+  "vindico": {
+    "zh": "聲張、懲罰、復仇",
+    "route": "五十課詞表"
+  },
+  "vito": {
+    "zh": "迴避、躲避、規避",
+    "route": "五十課詞表"
+  },
+  "vivo": {
+    "zh": "活著、生活",
+    "route": "五十課詞表"
+  },
+  "voco": {
+    "zh": "呼喚、邀請",
+    "route": "五十課詞表"
+  },
+  "volo": {
+    "zh": "願意、欲求、有意",
+    "route": "五十課詞表"
+  },
+  "Papa": {
+    "zh": "教宗",
+    "route": "五十課詞表"
+  },
+  "pontifex": {
+    "zh": "大司祭、宗教領袖；主教、教宗",
+    "route": "五十課詞表"
+  },
+  "episcopus": {
+    "zh": "主教、監督",
+    "route": "五十課詞表"
+  },
+  "patriarcha": {
+    "zh": "宗族長、族長；主教長",
+    "route": "五十課詞表"
+  },
+  "presbyter": {
+    "zh": "長老、司鐸；古典：長者",
+    "route": "五十課詞表"
+  },
+  "sacerdos": {
+    "zh": "司祭、司鐸",
+    "route": "五十課詞表"
+  },
+  "diaconus": {
+    "zh": "執事",
+    "route": "五十課詞表"
+  },
+  "clericus": {
+    "zh": "教士、神父、僧侶；學者、文書、秘書",
+    "route": "五十課詞表"
+  },
+  "abbas": {
+    "zh": "修道院院長、教會團體首長",
+    "route": "五十課詞表"
+  },
+  "prior": {
+    "zh": "在前的、先前的；基本的",
+    "route": "五十課詞表"
+  },
+  "curia": {
+    "zh": "議院、法院",
+    "route": "五十課詞表"
+  },
+  "congregatio": {
+    "zh": "聚集、集合；團體、教眾",
+    "route": "五十課詞表"
+  },
+  "synodus": {
+    "zh": "教區會議、主教會議；教令集",
+    "route": "五十課詞表"
+  },
+  "concilium": {
+    "zh": "大會、集會、議會、教區會議、討論",
+    "route": "五十課詞表"
+  },
+  "dioecesis": {
+    "zh": "教區、主教管轄區；羅馬行省",
+    "route": "五十課詞表"
+  },
+  "provincia": {
+    "zh": "行省、職責、管轄區",
+    "route": "五十課詞表"
+  },
+  "sedes": {
+    "zh": "座位、地點、住所",
+    "route": "五十課詞表"
+  },
+  "vicarius": {
+    "zh": "代理人、副手；奴僕",
+    "route": "五十課詞表"
+  },
+  "legatus": {
+    "zh": "使節、軍團長官、代理人",
+    "route": "五十課詞表"
+  },
+  "nuntius": {
+    "zh": "使者、信使、訊息、報告",
+    "route": "五十課詞表"
+  },
+  "introitus": {
+    "zh": "進入、聖祭開始式",
+    "route": "五十課詞表"
+  },
+  "Kyrie": {
+    "zh": "主啊",
+    "route": "五十課詞表"
+  },
+  "gloria": {
+    "zh": "光榮、榮耀",
+    "route": "五十課詞表"
+  },
+  "collecta": {
+    "zh": "集禱文、集合",
+    "route": "五十課詞表"
+  },
+  "lectio": {
+    "zh": "誦讀、經課",
+    "route": "五十課詞表"
+  },
+  "Alleluia": {
+    "zh": "阿肋路亞",
+    "route": "五十課詞表"
+  },
+  "evangelium": {
+    "zh": "福音、喜訊",
+    "route": "五十課詞表"
+  },
+  "praefatio": {
+    "zh": "序文、前言",
+    "route": "五十課詞表"
+  },
+  "sanctus": {
+    "zh": "聖的、神聖的；聖人",
+    "route": "五十課詞表"
+  },
+  "consecratio": {
+    "zh": "祝聖、獻奉；成聖、神聖化",
+    "route": "五十課詞表"
+  },
+  "communio": {
+    "zh": "聖體聖血、領聖體",
+    "route": "五十課詞表"
+  },
+  "benedictio": {
+    "zh": "祝福、降福",
+    "route": "五十課詞表"
+  },
+  "sacramentum": {
+    "zh": "聖事、聖禮",
+    "route": "五十課詞表"
+  },
+  "baptismus": {
+    "zh": "聖洗、洗禮",
+    "route": "五十課詞表"
+  },
+  "confirmatio": {
+    "zh": "堅定、鼓勵、安慰",
+    "route": "五十課詞表"
+  },
+  "eucharistia": {
+    "zh": "感恩祭、聖體聖事、祝聖禮品",
+    "route": "五十課詞表"
+  },
+  "paenitentia": {
+    "zh": "悔改、懺悔",
+    "route": "五十課詞表"
+  },
+  "unctio": {
+    "zh": "傅油、傅抹；塗膏",
+    "route": "五十課詞表"
+  },
+  "ordo": {
+    "zh": "等級、秩序",
+    "route": "五十課詞表"
+  },
+  "matrimonium": {
+    "zh": "婚姻、夫妻關係",
+    "route": "五十課詞表"
+  },
+  "missa": {
+    "zh": "彌撒、聖祭",
+    "route": "五十課詞表"
+  },
+  "liturgia": {
+    "zh": "禮儀、神聖祭儀",
+    "route": "五十課詞表"
+  },
+  "officium": {
+    "zh": "職責、義務、恩惠、職務",
+    "route": "五十課詞表"
+  },
+  "altare": {
+    "zh": "祭壇",
+    "route": "五十課詞表"
+  },
+  "hostia": {
+    "zh": "祭獻、聖體",
+    "route": "五十課詞表"
+  },
+  "calix": {
+    "zh": "杯子、聖爵",
+    "route": "五十課詞表"
+  },
+  "adventus": {
+    "zh": "降臨、來臨",
+    "route": "五十課詞表"
+  },
+  "nativitas": {
+    "zh": "誕生、出生",
+    "route": "五十課詞表"
+  },
+  "passio": {
+    "zh": "主受難、苦難",
+    "route": "五十課詞表"
+  },
+  "resurrectio": {
+    "zh": "復活、再起",
+    "route": "五十課詞表"
+  },
+  "ascensio": {
+    "zh": "上升、升天",
+    "route": "五十課詞表"
+  },
+  "tempus": {
+    "zh": "時間、時期",
+    "route": "五十課詞表"
+  },
+  "per": {
+    "zh": "經由、通過",
+    "route": "五十課詞表"
+  },
+  "festum": {
+    "zh": "慶節、盛宴",
+    "route": "五十課詞表"
+  },
+  "memoria": {
+    "zh": "記憶、追思",
+    "route": "五十課詞表"
+  },
+  "hymnus": {
+    "zh": "聖歌、讚美詩",
+    "route": "五十課詞表"
+  },
+  "canticum": {
+    "zh": "聖歌、讚美詩",
+    "route": "五十課詞表"
+  },
+  "constitutio": {
+    "zh": "構成、結構、體質；規定、制度",
+    "route": "五十課詞表"
+  },
+  "decretum": {
+    "zh": "教令、法令、決議",
+    "route": "五十課詞表"
+  },
+  "epistula": {
+    "zh": "書信、文件；皇帝詔令；書簡",
+    "route": "五十課詞表"
+  },
+  "privilegium": {
+    "zh": "特權、特免、特殊權利",
+    "route": "五十課詞表"
+  },
+  "venerabilis": {
+    "zh": "值得尊敬的、崇高的",
+    "route": "五十課詞表"
+  },
+  "dilectus": {
+    "zh": "心愛的、蒙愛的",
+    "route": "五十課詞表"
+  },
+  "jus": {
+    "zh": "法律、法典、權利、職責、正義、審判",
+    "route": "五十課詞表"
+  },
+  "lex": {
+    "zh": "法律、法度",
+    "route": "五十課詞表"
+  },
+  "praeceptum": {
+    "zh": "誡命、教訓",
+    "route": "五十課詞表"
+  },
+  "anathema": {
+    "zh": "咒詛、絕罰",
+    "route": "五十課詞表"
+  },
+  "nullus": {
+    "zh": "無、沒有",
+    "route": "五十課詞表"
+  },
+  "vigor": {
+    "zh": "活力、精力、氣勢",
+    "route": "五十課詞表"
+  },
+  "essentia": {
+    "zh": "本質、實體、存在",
+    "route": "五十課詞表"
+  },
+  "substantia": {
+    "zh": "本質、實體",
+    "route": "五十課詞表"
+  },
+  "natura": {
+    "zh": "性質、自然",
+    "route": "五十課詞表"
+  },
+  "persona": {
+    "zh": "假面、角色、人格、身份",
+    "route": "五十課詞表"
+  },
+  "causa": {
+    "zh": "原因、理由、目的",
+    "route": "五十課詞表"
+  },
+  "effectus": {
+    "zh": "執行、實行、效果、結果",
+    "route": "五十課詞表"
+  },
+  "actus": {
+    "zh": "行為、行動、表演；進程、序列",
+    "route": "五十課詞表"
+  },
+  "potentia": {
+    "zh": "力量、權勢",
+    "route": "五十課詞表"
+  },
+  "forma": {
+    "zh": "形狀、外貌、美麗；模式、範型",
+    "route": "五十課詞表"
+  },
+  "materia": {
+    "zh": "木材、木料；樹枝",
+    "route": "五十課詞表"
+  },
+  "finis": {
+    "zh": "界限、終點、目標；（複數）領地、地域",
+    "route": "五十課詞表"
+  },
+  "principium": {
+    "zh": "開始、起源",
+    "route": "五十課詞表"
+  },
+  "motus": {
+    "zh": "運動、移動；暴亂、騷擾；姿態；情緒",
+    "route": "五十課詞表"
+  },
+  "intellectus": {
+    "zh": "理解、領悟；知識、智力；意義",
+    "route": "五十課詞表"
+  },
+  "ratio": {
+    "zh": "理性、理由、方式、計算",
+    "route": "五十課詞表"
+  },
+  "voluntas": {
+    "zh": "意志、心願",
+    "route": "五十課詞表"
+  },
+  "species": {
+    "zh": "容貌、種類、美貌",
+    "route": "五十課詞表"
+  },
+  "scientia": {
+    "zh": "知識、學問、技能",
+    "route": "五十課詞表"
+  },
+  "sapientia": {
+    "zh": "智慧、聰慧",
+    "route": "五十課詞表"
+  },
+  "fides": {
+    "zh": "信德、忠信",
+    "route": "五十課詞表"
+  },
+  "gratia": {
+    "zh": "恩寵、感謝",
+    "route": "五十課詞表"
+  },
+  "meritum": {
+    "zh": "功績、善行",
+    "route": "五十課詞表"
+  },
+  "justificatio": {
+    "zh": "成義、稱義；正直、公正",
+    "route": "五十課詞表"
+  },
+  "missio": {
+    "zh": "遣遣、派遣；遣散、解職；赦免",
+    "route": "五十課詞表"
+  },
+  "visio": {
+    "zh": "視象、幻象、景象",
+    "route": "五十課詞表"
+  },
+  "duo": {
+    "zh": "二、兩",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "tres": {
+    "zh": "三",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "Sex": {
+    "zh": "塞克斯圖斯",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "novem": {
+    "zh": "九",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "decem": {
+    "zh": "十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "undecim": {
+    "zh": "十一",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "duodecim": {
+    "zh": "十二",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "viginti": {
+    "zh": "二十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "triginta": {
+    "zh": "三十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quadraginta": {
+    "zh": "四十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quinquaginta": {
+    "zh": "五十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "sexaginta": {
+    "zh": "六十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "septuaginta": {
+    "zh": "七十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "nonaginta": {
+    "zh": "九十",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "centum": {
+    "zh": "一百、百",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "ducenti": {
+    "zh": "二百",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "trecenti": {
+    "zh": "三百",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quadringenti": {
+    "zh": "四百",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quingenti": {
+    "zh": "五百",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quartus": {
+    "zh": "第四",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "septimus": {
+    "zh": "第七、第七的",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "nonus": {
+    "zh": "第九、第九的",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "undecimus": {
+    "zh": "第十一、第十一的",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "duodecimus": {
+    "zh": "第十二、第十二的",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "singuli": {
+    "zh": "各一、個別的、逐一的",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "bini": {
+    "zh": "各二、成雙的、每次兩個",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "terni": {
+    "zh": "各三、每次三個",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quaterni": {
+    "zh": "各四、每次四個",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "semel": {
+    "zh": "一次、一回、曾經",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "bis": {
+    "zh": "兩次、二度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "ter": {
+    "zh": "三次、三度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quater": {
+    "zh": "四次、四度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "quinquies": {
+    "zh": "五次、五度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "decies": {
+    "zh": "十次、十度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "centies": {
+    "zh": "百次、百度",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "milies": {
+    "zh": "千次、千度、無數次",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "dimidium": {
+    "zh": "一半、半數",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "tertia": {
+    "zh": "第三時辰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cubitus": {
+    "zh": "肘、肘尺、前臂",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "palmus": {
+    "zh": "手掌、掌寬",
+    "route": "gemini:gemini-flash-latest"
+  },
+  "libra": {
+    "zh": "天秤、磅秤、羅馬磅",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "uncia": {
+    "zh": "十二分之一、英吋、英寸",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "avus": {
+    "zh": "祖父、祖先、曾祖父",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "avia": {
+    "zh": "祖母、祖先、老派故事",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "proavus": {
+    "zh": "曾祖父、遠祖、高祖",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "nepos": {
+    "zh": "孫子、後代、浪子",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "neptis": {
+    "zh": "孫女、女後代",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "primogenitus": {
+    "zh": "長子、首生、長女",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "infans": {
+    "zh": "嬰兒、幼兒、孩童",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "puella": {
+    "zh": "女孩、少女、年輕女子",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "patruus": {
+    "zh": "父兄、父親的兄弟、伯父",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "amita": {
+    "zh": "姑母、父姊、伯母",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "avunculus": {
+    "zh": "母舅、母親的兄弟、外舅",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "matertera": {
+    "zh": "媽媽的姐姐、外姑、母姊",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "consobrinus": {
+    "zh": "表兄、母系堂兄、姨表兄",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "cognatus": {
+    "zh": "親戚、同族、姻親",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "propinquus": {
+    "zh": "親屬、近親、家族",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "gemini": {
+    "zh": "雙子、雙胞胎、雙星",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "maritus": {
+    "zh": "丈夫、已婚男子、配偶",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "sponsus": {
+    "zh": "新郎、未婚夫、訂婚男子",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "sponsa": {
+    "zh": "新娘、訂婚女子",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "socer": {
+    "zh": "岳父",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "socrus": {
+    "zh": "岳父、岳母",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "gener": {
+    "zh": "女婿",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "nurus": {
+    "zh": "媳婦、兒媳",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "levir": {
+    "zh": "夫之兄弟",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vidua": {
+    "zh": "寡婦",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "orphanus": {
+    "zh": "孤兒",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "nuptiae": {
+    "zh": "婚禮、婚姻",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "tribus": {
+    "zh": "部族、種族",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cognatio": {
+    "zh": "血親、親屬關係",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "stirps": {
+    "zh": "家系、血統；種族",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "posteritas": {
+    "zh": "後代、子孫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "haeres": {
+    "zh": "繼承人",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "kalendae": {
+    "zh": "月首（羅馬曆法初日）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "nonae": {
+    "zh": "月中第九日（羅馬曆法）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Idus": {
+    "zh": "月中日（羅馬曆法十五或十三日）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pridie": {
+    "zh": "前一日、前一天",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "postridie": {
+    "zh": "次日、後一天",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "diem": {
+    "zh": "日、天",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vigilia": {
+    "zh": "守夜、夜間巡守",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Maius": {
+    "zh": "五月",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "September": {
+    "zh": "九月",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "October": {
+    "zh": "十月",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "November": {
+    "zh": "十一月",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "scenopegia": {
+    "zh": "帳棚節（猶太人的盛宴）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "expiatio": {
+    "zh": "贖罪、潔淨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "neomenia": {
+    "zh": "新月",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "jubilaeus": {
+    "zh": "禧年（猶太人每五十年一次的賜福年）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mane": {
+    "zh": "早晨、黎明",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vesper": {
+    "zh": "黃昏、晚間、西方",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "meridies": {
+    "zh": "正午、南方",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cras": {
+    "zh": "明天、將來",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "heri": {
+    "zh": "昨天",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aeternum": {
+    "zh": "永遠地、常常",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abdo": {
+    "zh": "移除、藏匿、隱祕",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abigo": {
+    "zh": "驅逐、趕走、掠奪、誘惑",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abjicio": {
+    "zh": "拋棄、遺棄、貶低",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abnuo": {
+    "zh": "拒絕、否認、搖頭示意",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abscondo": {
+    "zh": "隱藏、隱匿、埋沒",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abundo": {
+    "zh": "充滿、富有、過度",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "accuso": {
+    "zh": "指控、譴責、控告",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "acquiesco": {
+    "zh": "安息、同意、屈服",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adaequo": {
+    "zh": "齊平、比擬、摧平",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adamo": {
+    "zh": "熱愛、迷戀、貪戀",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adfero": {
+    "zh": "帶來、傳報、引起",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adhortor": {
+    "zh": "勉勵、鼓舞、勸勉",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adicio": {
+    "zh": "添加、增加、投擲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adigo": {
+    "zh": "驅趕、強迫、投擲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "administro": {
+    "zh": "管理、執行、操縱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "admiror": {
+    "zh": "讚美、驚異、驚嘆",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "admoneo": {
+    "zh": "勸告、提醒、警告",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adprobo": {
+    "zh": "贊成、認可、證實",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adquiesco": {
+    "zh": "安息、同意、屈服",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adquiro": {
+    "zh": "獲得、取得、增加",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adsisto": {
+    "zh": "立於……旁、站立；出現；安置於……近處",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adsto": {
+    "zh": "站立於……旁；幫助；直立、待立",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adstringo": {
+    "zh": "綁束、緊束；結合、固定；形成邊界；強制、限制；皺起、凝固",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "adultero": {
+    "zh": "犯姦淫、玷污；偽造、摻假、敗壞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "advoco": {
+    "zh": "呼喚、召集、邀請；聘請為顧問；祈求神助",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aemulor": {
+    "zh": "模仿、競爭；嫉妒、與……爭競；抄襲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aequo": {
+    "zh": "平整、使平；等同；比較；達到同高度",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aestuo": {
+    "zh": "沸騰、翻騰、起伏；躁動、炎熱、猶豫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "affecto": {
+    "zh": "力求、渴望、冒充；妄圖統制；佯裝",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "afflicto": {
+    "zh": "重創、破壞、反覆打擊；壓迫、折磨、惱苦",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "agito": {
+    "zh": "驅動、搖撼、移動；生活、統馭、騎乘；思考、追求",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "alieno": {
+    "zh": "疏遠、轉讓所有權、使陌生；喪失感覺",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "allego": {
+    "zh": "派遣、委派；提出、陳述；聲稱、引用",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "allevo": {
+    "zh": "提起、抬高、堆積；緩解、減弱；安慰、鼓舞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "alterno": {
+    "zh": "輪流進行、交替；波動、盛衰循環；隔年結果",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ambigo": {
+    "zh": "猶豫、懷疑；爭論、質疑；成為問題",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ambio": {
+    "zh": "巡迴、循環檢視；拉票、遊說；環繞、擁抱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "amplexor": {
+    "zh": "擁抱、摟住；欣然接納；緊抱、依附",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "anhelo": {
+    "zh": "喘息、急促呼吸；喘氣吐出、咯出；急促說出",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "animo": {
+    "zh": "賦予生命、使活躍；復甦、振奮；鼓勵、激勵",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "antepono": {
+    "zh": "置於前、擺設於前；優先選擇、重視勝過",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "appeto": {
+    "zh": "追求、渴望；猛撲、襲擊；迫近",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "apporto": {
+    "zh": "運送、攜至；呈現、帶來消息；前往",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "approbo": {
+    "zh": "贊許、肯定；證實、確認；允准",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "apto": {
+    "zh": "適應、調整、安裝；穿戴、繫結；準備、配置",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "arcto": {
+    "zh": "緊密擠入、夾緊；壓縮、縮減；限制、狹隘",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "armo": {
+    "zh": "武裝、配備；強化；煽動戰事；裝配",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "arto": {
+    "zh": "緊密擠入、夾緊；壓縮、縮減；限制、狹隘",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aspero": {
+    "zh": "粗糙化、尖銳化；激怒、凶暴化；加劇",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "assentior": {
+    "zh": "同意、贊成、服從；認可真實",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "assum": {
+    "zh": "在場、出現、抵達；扶助",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "assurgo": {
+    "zh": "起身、站立；攀升、昇高；成長",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "astruo": {
+    "zh": "加建、堆積；增添、供應",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "attribuo": {
+    "zh": "分配、歸屬、賦予；委任、授權",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ausum": {
+    "zh": "敢於、膽敢行動；冒險",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "aversor": {
+    "zh": "厭惡而轉身；躲避、拒絕",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "bello": {
+    "zh": "交戰、宣戰；參與爭鬥",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "blandior": {
+    "zh": "諂媚、哄騙；撫慰、勸誘",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "caelo": {
+    "zh": "雕刻、浮雕；鐫刻、鎏金",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "caeno": {
+    "zh": "進晚餐、用晚餐",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "calco": {
+    "zh": "踐踏、碾壓；夯實；蔑視",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "capto": {
+    "zh": "覬覦、渴求；引誘；企圖捉住",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "carpo": {
+    "zh": "摘取、拔取；放牧採食；梳理",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "castigo": {
+    "zh": "懲罰、譴責；糾正、訓斥",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "castro": {
+    "zh": "閹割、去勢；閹割（動物）；削弱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cavo": {
+    "zh": "挖空、開鑿；鑿穿；凹雕",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "celo": {
+    "zh": "隱瞞、藏匿；掩飾、隱蔽",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "certo": {
+    "zh": "競爭、爭奪；爭訟、鬥爭",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cio": {
+    "zh": "移動、驅動；激發、煽動；徵召",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "circumscribo": {
+    "zh": "節約、簡潔敘述；欺騙、困阻",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "clamito": {
+    "zh": "呼喊、叫喊；反覆喊叫、宣呼",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "coalesco": {
+    "zh": "合生、聯合；癒合；增強",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "coco": {
+    "zh": "烹飪、煮沸；炙烤；醞釀；消化",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "coeno": {
+    "zh": "進晚餐、用晚餐",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "colloquor": {
+    "zh": "與人談話、交談、商議",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "comburo": {
+    "zh": "燒毀、焚化、消滅",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "comminiscor": {
+    "zh": "發明、虛構、捏造",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "commuto": {
+    "zh": "改變、變換、交換",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "compello": {
+    "zh": "呼喚、稱呼；責罵、控告",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "competo": {
+    "zh": "相遇、巧合；適當、足夠",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "concilio": {
+    "zh": "聯合、和解；贏得、獲得",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "concinno": {
+    "zh": "準備、修整、安排妥當",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "concito": {
+    "zh": "激起、煽動、驅使",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "condemno": {
+    "zh": "判罪、定罪、譴責",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "condico": {
+    "zh": "約定、承諾、約聘",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "congredior": {
+    "zh": "相遇、交戰、爭訟",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conicio": {
+    "zh": "投擲、推斷、歸類",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conjuro": {
+    "zh": "共誓、結盟、陰謀",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conligo": {
+    "zh": "聚集、蒐集、採收",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conmitto": {
+    "zh": "結合、聯接、委託",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conplector": {
+    "zh": "擁抱、環繞、包含",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conqueror": {
+    "zh": "哀悼、哭訴、抱怨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conspicio": {
+    "zh": "觀察、注視、望見",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "consulto": {
+    "zh": "諮詢、籌畫、求卜",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "contemno": {
+    "zh": "輕視、蔑視、鄙棄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "contemplor": {
+    "zh": "凝視、注視、沉思",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "contexo": {
+    "zh": "編織、交織、組合",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "contracto": {
+    "zh": "觸摸、把玩、反覆撫弄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "contristo": {
+    "zh": "使悲傷、使沮喪、使黯淡",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "convoco": {
+    "zh": "召集、聚集、召喚",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "copulo": {
+    "zh": "連接、結合、聯繫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "coquo": {
+    "zh": "烹飪、煮沸、燒烤",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "corusco": {
+    "zh": "揮舞、閃耀、�熠熠發光",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cumulo": {
+    "zh": "堆積、聚集、裝滿",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "declino": {
+    "zh": "轉向、迴避、偏離",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "decoro": {
+    "zh": "裝飾、美化、增光、榮耀",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "decurro": {
+    "zh": "急速下降、奔流、結束",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "denuntio": {
+    "zh": "公告、宣布；傳喚；遞交傳票",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "deprehendo": {
+    "zh": "捕獲、逮捕；當場抓住；攔截",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "desero": {
+    "zh": "離棄、放棄；背棄；撤回支持",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "desisto": {
+    "zh": "停止、放棄；脫身、疏遠",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "despero": {
+    "zh": "絕望；喪失希望；放棄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "detestor": {
+    "zh": "詛咒；厭惡、憎恨；消除不祥",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "detracto": {
+    "zh": "拒絕、推辭；規避",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "detrecto": {
+    "zh": "拒絕、推辭；規避",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "dicto": {
+    "zh": "口述、授意；制定、規定",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "diduco": {
+    "zh": "分開、分裂；使分離；鬆開",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "diffido": {
+    "zh": "不信任、絕望；對……無把握",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "digero": {
+    "zh": "散佈、運走；分配、區分",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "digno": {
+    "zh": "認為適當、值得；屈尊、俯就",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "dilato": {
+    "zh": "擴張、擴大、延伸；拉平、展開",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "discumbo": {
+    "zh": "斜靠進食、臥而用餐；躺下、就寢",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "discurro": {
+    "zh": "四處奔跑、奔馳；漫遊、徘徊",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "dormio": {
+    "zh": "睡眠、休息；昏睡、懈怠",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "duro": {
+    "zh": "變硬、堅強；持續、維持、忍耐",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "effugio": {
+    "zh": "逃脫、躲避、迴避；逃過察覺",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "eloquor": {
+    "zh": "言明、宣說",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "emendo": {
+    "zh": "更正、修正；改進、免除錯誤",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "erubesco": {
+    "zh": "臉紅、羞愧、為……感到羞恥",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "excuso": {
+    "zh": "辯解、說明、藉口；赦免、豁免",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "excusso": {
+    "zh": "辯解、說明、藉口；赦免、豁免",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "excutio": {
+    "zh": "搖落、拋出；搜查、檢查",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "exilio": {
+    "zh": "躍出、迸發、跳起；呈現、出現",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "eximo": {
+    "zh": "移除、取出；放逐、免除；解救、釋放",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "exolvo": {
+    "zh": "解開、鬆開；打開、放流；融化",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "expleo": {
+    "zh": "充滿、完成、滿足；完全實踐、滿願",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "exsilio": {
+    "zh": "跳躍、迸出、躍起",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ferio": {
+    "zh": "擊、打；殺害",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "fingo": {
+    "zh": "塑造、形成；創造、發明；想像、編造",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "flagro": {
+    "zh": "燃燒、熊熊燃燒；被激動、被激發",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "foedo": {
+    "zh": "污穢、玷污、弄髒；腐蝕、敗壞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "for": {
+    "zh": "說、講、述說",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "fraudo": {
+    "zh": "欺詐、詐騙；非法剝奪；破壞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "frequento": {
+    "zh": "常往、經常訪問；重複；擁擠",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "furo": {
+    "zh": "狂怒、憤怒；瘋狂、蠻橫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "furor": {
+    "zh": "竊取、掠奪",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "gemo": {
+    "zh": "呻吟、哀鳴；哀悼；發出沉悶聲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "gesto": {
+    "zh": "承載、攜帶；穿著、佩戴",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "glorior": {
+    "zh": "自豪、誇耀；以……自矜",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "haereo": {
+    "zh": "黏著、附著；遲疑、困窘",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "haurio": {
+    "zh": "汲取、飲；耗盡",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "honoro": {
+    "zh": "尊重、敬重",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "horreo": {
+    "zh": "恐懼、戰慄；豎立、蓬亂",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "impetro": {
+    "zh": "懇求而得、獲得、成就",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "incendo": {
+    "zh": "點燃、焚燒、發火",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "incurro": {
+    "zh": "衝向、進攻、遭遇、降臨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "indulgeo": {
+    "zh": "縱容、寬恕、批准、滿足",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "infesto": {
+    "zh": "騷擾、騷擾、危害、侵害",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ingero": {
+    "zh": "搬入、堆積、強行加諸",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "inicio": {
+    "zh": "投擲、注入、穿上、灌輸",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "injungo": {
+    "zh": "命令、強加、結合、繫結",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "inquieto": {
+    "zh": "擾亂、騷擾、控告、躁動",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "inspicio": {
+    "zh": "檢查、審視、考察、觀察",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "invado": {
+    "zh": "進入、嘗試、入侵、攻擊",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "invideo": {
+    "zh": "嫉妒、不滿、拒絕給予",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "invito": {
+    "zh": "邀請、召喚、挑戰、誘引",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "irascor": {
+    "zh": "生氣、發怒、憤恨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "jacto": {
+    "zh": "投擲、拋棄；誇耀、談論",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "jugo": {
+    "zh": "結婚、聯合",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "juro": {
+    "zh": "發誓、宣誓；立誓效忠",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "labo": {
+    "zh": "搖晃、將倒；動搖、衰退",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "lacero": {
+    "zh": "撕裂、毀損；詆毀、折磨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "langueo": {
+    "zh": "疲倦、無力；衰弱、枯萎",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "levo": {
+    "zh": "舉起、扶持；豎立、卸去；減輕、寬慰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ligo": {
+    "zh": "綁縛、繫結；聯合",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "linquo": {
+    "zh": "離開、拋棄；遺留、遺贈",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "loco": {
+    "zh": "放置、安置；租賃、承包",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ludo": {
+    "zh": "遊玩、戲謔；欺弄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "lugeo": {
+    "zh": "哀悼、哀悼；服喪",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "luo": {
+    "zh": "償付、贖罪；解放、兌現",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "malo": {
+    "zh": "寧願、傾向於",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "meditor": {
+    "zh": "意欲、準備；思考、構思；演練、誦讀",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "memini": {
+    "zh": "記得、銘記；留心、確知",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mentior": {
+    "zh": "撒謊、欺騙；模仿、假裝、虛言",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "meo": {
+    "zh": "行進、通過、旅行",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mereor": {
+    "zh": "獲得、應得、贏得；服役、娼妓營生",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "metuo": {
+    "zh": "害怕、恐懼、戰慄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "minor": {
+    "zh": "威脅、恐嚇；示意、預示",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "misereo": {
+    "zh": "憐憫、同情、施憐憫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mordeo": {
+    "zh": "咬、刺痛、傷害；譏諷、批評、侵蝕",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "moror": {
+    "zh": "耽延、停留、專注",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "nato": {
+    "zh": "游泳、漂浮",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "no": {
+    "zh": "游泳、漂浮",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "noto": {
+    "zh": "觀察、記錄、烙印、題寫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "numero": {
+    "zh": "計數、計算、列舉；視為、支付",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "nuncio": {
+    "zh": "報告、傳告、發警告；傳遞、陳述",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "obsto": {
+    "zh": "反對、阻礙",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "occulto": {
+    "zh": "隱藏、隱瞞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "odi": {
+    "zh": "仇恨、厭惡、不願",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "omitto": {
+    "zh": "放棄、省略、放手、漠視",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "opinor": {
+    "zh": "推測、想像、認為",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "oppono": {
+    "zh": "反對、對抗；置於對面",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "optineo": {
+    "zh": "掌握、保持、獲得；佔據、控制",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ovo": {
+    "zh": "歡欣、喜悅",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "paco": {
+    "zh": "平定、制服、安撫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "palleo": {
+    "zh": "蒼白、褪色",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pando": {
+    "zh": "展開、舒張、伸展",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pareo": {
+    "zh": "服從、順從、遵循、屈服",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "patefacio": {
+    "zh": "揭露、顯現、使明知；剖開、暴露",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pendo": {
+    "zh": "稱重、支付、給付",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "penso": {
+    "zh": "稱量、支付、補償；沉思、思量",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "percurro": {
+    "zh": "迅速通過；快速巡視",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pergo": {
+    "zh": "前進、繼續",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "polliceor": {
+    "zh": "承諾、許諾",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "praepono": {
+    "zh": "置於前方；任命統領",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "praevenio": {
+    "zh": "先到達、先發生；超越、預先阻止",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "prodigo": {
+    "zh": "驅逐、揮霍、耗盡",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "profundo": {
+    "zh": "傾倒、傾注；宣說、揮霍",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "promo": {
+    "zh": "取出、帶出；顯示、展示",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pronuntio": {
+    "zh": "宣告、宣讀；發表、訴說",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "provoco": {
+    "zh": "激起、挑釁；召喚",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pugno": {
+    "zh": "戰鬥、爭執",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "pulso": {
+    "zh": "擊打、跳動",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "quaeso": {
+    "zh": "乞求、詢問、尋求",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "queror": {
+    "zh": "抱怨、控訴",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "radio": {
+    "zh": "發光、放射光線",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "recido": {
+    "zh": "跌落、衰落；反彈",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "recordor": {
+    "zh": "思憶、記得",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "recuso": {
+    "zh": "拒絕、反對、辭退",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "refugio": {
+    "zh": "逃回、逃脫",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "renovo": {
+    "zh": "更新、修復；復興",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "reor": {
+    "zh": "認為、看作、推測、相信",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "replico": {
+    "zh": "摺回、展開、反覆",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "reporto": {
+    "zh": "帶回、報告",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "revolvo": {
+    "zh": "擲回、滾回、翻轉",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "rideo": {
+    "zh": "嘲笑、嗤笑",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "rubeo": {
+    "zh": "變紅、發紅",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "salio": {
+    "zh": "躍起、跳躍；噴出、迸出",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "saluto": {
+    "zh": "問安、致敬、拜訪",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "salvo": {
+    "zh": "拯救、拔救、保存",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "scrutor": {
+    "zh": "仔細搜索、仔細審視、探究",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "signo": {
+    "zh": "標記、蓋印、標示、簽署",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sileo": {
+    "zh": "沉默、不語、靜止",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sitio": {
+    "zh": "口渴、感到口渴",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sollicito": {
+    "zh": "擾亂、煩擾、激動、煽動",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "spolio": {
+    "zh": "搶劫、剝奪、掠奪",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "spondeo": {
+    "zh": "許諾、發誓、訂婚",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "stimulo": {
+    "zh": "刺激、驅使；煽動、激怒",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "stupeo": {
+    "zh": "驚呆、呆滯",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "succedo": {
+    "zh": "登上、前進；跟隨、接續",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "suspicio": {
+    "zh": "仰望、敬仰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "suspicor": {
+    "zh": "懷疑、推測",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "suspiro": {
+    "zh": "嘆息、發出嘆息",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "tardo": {
+    "zh": "阻礙、延遲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "tego": {
+    "zh": "覆蓋、保護；隱藏",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "terreo": {
+    "zh": "恐嚇、威嚇、嚇阻",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "tolero": {
+    "zh": "忍耐、容忍",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "tono": {
+    "zh": "雷鳴、轟隆作聲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "torto": {
+    "zh": "拷打、折磨",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "traduco": {
+    "zh": "運送、轉移；導引通過",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "trepido": {
+    "zh": "顫慄、恐懼",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "triumpho": {
+    "zh": "凱旋、勝利、戰勝",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "turbo": {
+    "zh": "擾亂、混亂",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vario": {
+    "zh": "彩飾、改變；搖擺、變化",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "veho": {
+    "zh": "運載、傳送；乘行、航行",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "velo": {
+    "zh": "覆蓋、遮蔽、隱藏",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "veneror": {
+    "zh": "崇拜、尊敬、敬禮",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vexo": {
+    "zh": "搖動、困擾、騷擾",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vigilo": {
+    "zh": "保持清醒、警醒、留意",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "viso": {
+    "zh": "拜訪、去見、觀看",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "volito": {
+    "zh": "飛翔、盤旋",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "voto": {
+    "zh": "禁止、否決、妨礙",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vulgo": {
+    "zh": "散布、公開、傳播",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "archiepiscopus": {
+    "zh": "大主教",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cardinalis": {
+    "zh": "樞機（主教）、主要的、關鍵的",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "subdiaconus": {
+    "zh": "副執事",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "laicus": {
+    "zh": "俗人、平信徒",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "monachus": {
+    "zh": "修士",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "monialis": {
+    "zh": "修女",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "dicasterium": {
+    "zh": "聖部、教廷部會",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conclave": {
+    "zh": "密室、房間",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "paroecia": {
+    "zh": "堂區、教區",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "cathedra": {
+    "zh": "主教座、椅子",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "homilia": {
+    "zh": "講道、聖言講解",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "offertorium": {
+    "zh": "奉獻禮、祭獻處、聖盤巾",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "canon": {
+    "zh": "聖堂主保、教律；聖堂參事、修會會士",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "postcommunio": {
+    "zh": "領聖體後經",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "breviarium": {
+    "zh": "日課經本",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Epiphania": {
+    "zh": "主顯節",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "quadragesima": {
+    "zh": "四旬期、四十天齋期",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "annum": {
+    "zh": "年、歲",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sollemnitas": {
+    "zh": "隆重慶典、禮儀紀念",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "feria": {
+    "zh": "聖日、節日",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Dominica": {
+    "zh": "主日、星期日",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "octava": {
+    "zh": "八日慶期",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "matutinum": {
+    "zh": "晨禱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "laudes": {
+    "zh": "讚美禱詞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "prima": {
+    "zh": "晨禱後首時辰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sexta": {
+    "zh": "第六時辰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Nona": {
+    "zh": "第九時辰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "vesperae": {
+    "zh": "晚禱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "completorium": {
+    "zh": "晚禱經、日終禱禮",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "horae": {
+    "zh": "時辰禱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "psalterium": {
+    "zh": "詩篇集、弦樂器",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "antiphona": {
+    "zh": "對經、聖詠應唱",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "responsorium": {
+    "zh": "應唱經、聖詠應答",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "bulla": {
+    "zh": "泡沫、圓形飾章、護符",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "Breve": {
+    "zh": "教宗簡諭",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "decretalis": {
+    "zh": "教令式的、依教令有效",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "encyclica": {
+    "zh": "通諭",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "exhortatio": {
+    "zh": "勸勉、勸諭",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "allocutio": {
+    "zh": "訓詞、敬禮詞",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "motu": {
+    "zh": "本人之動意、主動、出於自願",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "proprio": {
+    "zh": "本人的、己意的",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "rescriptum": {
+    "zh": "詔令、教宗回批",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "indultum": {
+    "zh": "寬免、特恩、豁免",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "datum": {
+    "zh": "禮物、給予之物",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "actum": {
+    "zh": "行為、事跡、官簽錄",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "praesentibus": {
+    "zh": "在場者、列名者",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "salutem": {
+    "zh": "祝安、敬禮",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "apostolica": {
+    "zh": "宗座的、聖座的",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "perpetuam": {
+    "zh": "永恆的、永久的",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "memoriam": {
+    "zh": "紀念、記憶",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mandamus": {
+    "zh": "我等命令",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "statuimus": {
+    "zh": "我等規定、我等制定",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "declaramus": {
+    "zh": "我等宣告、我等聲明",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "definimus": {
+    "zh": "我等界定、我等判定",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "promulgamus": {
+    "zh": "我等公布、我等頒行",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "obligatio": {
+    "zh": "債務、義務；約束、承諾",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "dispensatio": {
+    "zh": "豁免、寬赦；管理、實踐",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "censura": {
+    "zh": "譴責、監督；教會懲罰",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "excommunicatio": {
+    "zh": "絕罰、逐出教會",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "irritus": {
+    "zh": "無效的、徒勞的；廢止的",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "ens": {
+    "zh": "有、存在者；被存在者",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "existentia": {
+    "zh": "存在、現實；本質的現實化",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "accidens": {
+    "zh": "偶性、屬性；偶然事件",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "suppositum": {
+    "zh": "實體、自立體",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "quidditas": {
+    "zh": "本質、何物性；事物的是什麼",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "subsistentia": {
+    "zh": "自立性、自存性",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "corruptio": {
+    "zh": "敗壞、腐化；賄賂、腐蝕",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "phantasma": {
+    "zh": "幻象、鬼魂；（古典）虛像",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "abstractio": {
+    "zh": "分離、抽象",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "conceptus": {
+    "zh": "懷孕、胎兒；捕捉、蓄積",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "praedestinatio": {
+    "zh": "預定、預選；（古典）預先決定",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "satisfactio": {
+    "zh": "補贖、補償；滿足",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "transsubstantiatio": {
+    "zh": "聖體變化",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "processio": {
+    "zh": "發出、發出流出",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "beatifica": {
+    "zh": "至福的、使至福",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "azyma": {
+    "zh": "無酵餅",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "encaenia": {
+    "zh": "奉獻禮",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "annumero": {
+    "zh": "計數、列舉、加總",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "annuo": {
+    "zh": "點頭、表示、贊許",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "comedo": {
+    "zh": "吞食、咀嚼、浪費",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "computo": {
+    "zh": "計算、計入、估算",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "domo": {
+    "zh": "制服、馴服、征服",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "manduco": {
+    "zh": "咀嚼、吞食、吞噬",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "undo": {
+    "zh": "湧湧、澎湃、波動",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "protonotarius": {
+    "zh": "首席書記",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "graduale": {
+    "zh": "步驟、階段、等級",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  },
+  "stadium": {
+    "zh": "斯塔德（古希臘長度單位，約607英尺）；跑道",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "milia": {
+    "zh": "千步（羅馬長度單位）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "passuum": {
+    "zh": "步（長度單位，為千步的百分之一）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "modius": {
+    "zh": "摩迪烏斯（羅馬乾量度單位，約二加侖）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "satum": {
+    "zh": "播種、撒播",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "batus": {
+    "zh": "巴特（希伯來液量單位，約九加侖）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "corus": {
+    "zh": "科魯斯（西北風）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "hin": {
+    "zh": "欣（希伯來液量單位，約五升）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "gomor": {
+    "zh": "戈默（猶太乾量單位）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "sextarius": {
+    "zh": "塞克斯塔里烏斯（容量單位，約一品脫）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "talentum": {
+    "zh": "塔冷通（貨幣單位；大筆金額）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "mina": {
+    "zh": "彌那（希臘重量單位，百德拉克瑪；其重銀的價值）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "denarius": {
+    "zh": "德那里烏斯（銀幣）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "drachma": {
+    "zh": "德拉克瑪（希臘銀幣；重量單位）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "stater": {
+    "zh": "斯塔特（猶太銀幣，相當於四德拉克瑪）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "as": {
+    "zh": "阿司（銅幣；一磅；單位、整體）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "minutum": {
+    "zh": "分、極小部分",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "siclus": {
+    "zh": "錫克勒（猶太銀幣；舍客勒）",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "argentum": {
+    "zh": "銀、銀幣；貨幣、金錢",
+    "route": "claude-haiku-4-5-20251001"
+  },
+  "quadrans": {
+    "zh": "四分之一、小銅幣",
+    "route": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+  }
+}

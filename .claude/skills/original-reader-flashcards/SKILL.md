@@ -1,6 +1,6 @@
 ---
 name: original-reader-flashcards
-description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」— A4 橫式每頁 8 張、74.25×94 mm、正面原文背面繁中、雙面長邊翻、不印裁切線，配圖走 OpenMoji。目前五副：聖經希伯來文 1000、通用希臘文上下冊各 1000、教會拉丁文上下冊各 1000。Use when 要新增／重出某一副卡、要把某副的配圖率往上補、要換掉某張圖、要加第六副（新語言）、要改版面（卡片尺寸／字級／欄序）、頁數莫名變兩倍要 debug、或使用者說「單字卡」「字卡」「配圖」。方法在本檔，逐副現況在讀本 skill 的 references/flashcard-decks.md。
+description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」— A4 橫式每頁 8 張、74.25×94 mm、正面原文背面繁中、雙面長邊翻、不印裁切線，配圖走 OpenMoji。八副：課內詞卡五副（聖經希伯來文 1000、通用希臘文上下冊各 1000、教會拉丁文上下冊各 1000）＋附錄卡三副（專名九類＋數字／親屬／曆法／職分各表）。Use when 要新增／重出某一副卡、要把某副的配圖率往上補、要換掉某張圖、要加第六副（新語言）、要改版面（卡片尺寸／字級／欄序）、頁數莫名變兩倍要 debug、或使用者說「單字卡」「字卡」「配圖」。方法在本檔，逐副現況在讀本 skill 的 references/flashcard-decks.md。
 ---
 
 # 原文讀本印刷單字卡
@@ -152,12 +152,50 @@ matcher 由嚴到寬四段，配不到就留白：
 - **AI 生圖**（2026-08-25 實測）：七把 Gemini key 對 `gemini-2.5-flash-image`／`gemini-3.1-flash-image` 全 429（生圖等於付費層功能），NVIDIA 生圖端點 500/404/timeout。**若日後有付費 Gemini key，這是把風格做得比 emoji 更貼的最佳路徑，值得優先重試。**
 - **Openclipart**：JSON API 已死（搜尋端點回 HTML），而且會把幾十位作者的風格混進同一副牌。
 
+## 附錄卡（三副，接在課內詞卡後面）
+
+讀本後面那幾張參考表——專名（人名／地名／民族與國名／君王／使徒／教宗與主教…）、
+數字與度量衡、親屬稱謂、曆法與月份、教會職分——都不在五十課的詞表裡，另出三副：
+
+```
+python scripts/classify_proper_names.py --language all --write   # 先補 category
+python scripts/build_flashcards.py --deck hbo-appendix           # 或 grc-appendix / lat-appendix
+```
+
+與課內詞卡的差別只有三處，其餘（尺寸、欄序、雙面規則）完全共用：
+
+- **框色按分節輪替，不按課次**：同一節的卡同色。卡片走 `colorKey` 這個欄位，
+  詞卡不給就退回課次，所以兩種卡可以共用同一支 `framed()`。
+- **下緣印分節不印課次**（`footer` 欄位）：附錄詞沒有課次可印。
+- **不配圖**：人名地名與數字沒有誠實的 emoji 可對，全部留白。
+
+**沒有繁中譯名的一律不收**，並在輸出時報出被排除的條數。
+
+分節次序：專名走 [scripts/proper_name_categories.py](../../../scripts/proper_name_categories.py)
+的 `PRINT_ORDER`（紙本附錄、網頁與卡片三處同一個次序），其餘各表走資料裡本來就有
+的 `group`，照首次出現接在後面。判不出來的專名留在「待歸類」，不倒進「其他人名」
+——倒進去等於宣稱它是人名。
+
+### 兩張表刻意不收
+
+- 拉丁上冊〈動詞主要部分與不規則變化〉841 條：那是查變化用的形態表，做成卡片會
+  和課內動詞卡整批重複。
+- 拉丁下冊〈近現代教廷拉丁的地名、機構名與專名〉400 條：全無中文，而且混進了
+  `Psal`、`Joan`、`Latine`、`Cardinalis`、`Redemptoris` 這類縮寫、形容詞與普通名
+  詞。要修的是那張表本身，不是卡片。
+
+### 希伯來數字表是一對詞形，不是一個
+
+`hbo-appendix` 的數字表存的是陽性／陰性一對 `pointed`，沒有單一詞形。合成一張卡
+會逼讀者同時背兩個形，所以各出一張，中文那面標「（陽性）」「（陰性）」。任何新語
+言的數字表都要先看它是不是這種成對結構。
+
 ## 出片
 
 ```
 python scripts/hebrew_card_grammar.py --write           # 希伯來的性、數、狀態（改詞表才要重跑）
 python scripts/match_flashcard_images.py --write        # 希伯來配圖表
-python scripts/build_flashcards.py --deck hbo           # 或 grc1 / grc2 / lat1 / lat2
+python scripts/build_flashcards.py --deck hbo           # 或 grc1 / grc2 / lat1 / lat2 / hbo-appendix / grc-appendix / lat-appendix
 python scripts/build_flashcards.py --deck hbo --limit 16   # 打樣 16 張
 ```
 
@@ -179,6 +217,8 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 - 字頭沒有折行：用 PyMuPDF 取每格 `size>20` 的 span，同格內 y 差一整行（約 64 pt）就是折了；差 20 pt 上下是字母上方的重音符號，不算。
 - 字頭沒有字體回退：`pdfplumber` 逐字看 fontname，不該出現 Tahoma／Calibri。**例外**：希伯來有兩張卡的繁中詞義行內嵌希伯來文（「弟兄；兄弟（אָח 的複數）」「誡命（מִצְוָה 的不規則複數）」），那一段走 UI 字型、會回退到 Tahoma，是既有現象不是壞掉。
 - 配圖表每一把鍵都對得回詞表（matcher 內建 assert）。
+- 頁面尺寸、字型內嵌、U+FFFD 與空白頁：`python scripts/render_and_check_reader_pdfs.py --only <stem>`
+  一次做完轉檔與這四項（同一支腳本也管五本讀本）。
 
 ```python
 import pdfplumber, collections

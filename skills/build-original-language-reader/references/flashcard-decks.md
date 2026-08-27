@@ -18,10 +18,45 @@ and the same printer settings work for all of them.
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 
-**The Latin decks would gain from a re-run.** Their pictures were matched when
-Greek stood at 50% coverage; Greek is now complete, and the Chinese-meaning
-transfer reads the Greek map. Running `match_latin_card_images.py` again should
-raise both Latin decks without a single new hand pick.
+### Appendix decks, added 2026-08-27
+
+| Deck | Cards | Pages | Dropped (no Chinese) | File |
+|---|---:|---:|---:|---|
+| 聖經希伯來文附錄 | 255 | 64 | 0 | `output/flashcards/hebrew-flashcards-appendix.docx` |
+| 通用希臘文附錄 | 511 | 128 | 114 | `output/flashcards/greek-flashcards-appendix.docx` |
+| 教會拉丁文附錄 | 745 | 188 | 191 | `output/flashcards/latin-flashcards-appendix.docx` |
+
+The reader appendices hold the material that never enters the fifty lessons:
+proper names in nine categories, numerals and measures, kinship terms, the
+calendar and its feasts, church offices and liturgical vocabulary. The owner
+asked for cards for all of it. These share the sheet, the card size and the
+duplex rule with the five lesson decks and differ in exactly three ways: the
+frame colour cycles by **section** rather than by lesson (so one section is one
+colour), the footer prints the section name instead of a lesson number, and
+**there are no pictures** — no emoji honestly denotes 伯特利, 猶斯定 or 第十七.
+
+Section order is `PRINT_ORDER` from `scripts/proper_name_categories.py` for the
+proper names, then each remaining table's own `group` field in first-appearance
+order. The printed appendix and the web page use the same order.
+
+A row with no Traditional-Chinese rendering is not printed and the build reports
+how many it dropped. Latin's 191 are all proper names the Studium Biblicum
+alignment could not settle; its numerals, kinship, calendar, offices, liturgical
+year, document-genre and scholastic tables are at 100% since
+`gloss_latin_appendices_zh.py` ran. Greek's 114 are the appendix names no
+register covers.
+
+**Two Latin tables are deliberately excluded.** `principalParts` (841 rows) is a
+morphology reference whose headwords largely repeat the lesson verbs, and
+`modernNames` (400 rows) has no Chinese at all and has swept up abbreviations and
+common nouns (`Psal`, `Joan`, `Latine`, `Cardinalis`, `Redemptoris`); that table
+needs rebuilding at source.
+
+**Hebrew numerals are stored as a masculine/feminine pair**, with no single
+`pointed` field. One card per form, with 「（陽性）」/「（陰性）」 on the Chinese
+face — a combined card would make the reader memorise two forms at once. Check
+any new language's numeral table for the same shape before assuming one row is
+one card.
 
 ### What the owner has decided
 
@@ -219,12 +254,17 @@ python scripts/match_flashcard_images.py --write        # Hebrew picture map
 python scripts/match_greek_card_images.py --write       # Greek picture map
 python scripts/match_greek_card_images.py --uncovered 50  # what is still blank
 python scripts/match_latin_card_images.py --write       # Latin picture map
-python scripts/build_flashcards.py --deck hbo           # or grc1, grc2, lat1, lat2
+python scripts/classify_proper_names.py --language all --write  # categories, before the name decks
+python scripts/build_flashcards.py --deck hbo           # or grc1, grc2, lat1, lat2,
+                                                       # hbo-names, grc-names, lat-names
 python scripts/build_flashcards.py --deck hbo --limit 16   # proof sheet
 ```
 
-Then render the DOCX to PDF with LibreOffice. Clear `PYTHONHOME`/`PYTHONPATH`
-first: leaving them set makes `soffice` exit 0 having written nothing.
+`scripts/render_and_check_reader_pdfs.py --only <stem>` renders and checks page
+geometry, embedded fonts, U+FFFD and blank pages in one step, for the decks and
+the readers alike. To drive LibreOffice by hand instead, clear
+`PYTHONHOME`/`PYTHONPATH` first: leaving them set makes `soffice` exit 0 having
+written nothing.
 
 ```
 env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
