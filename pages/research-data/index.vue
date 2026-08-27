@@ -22,6 +22,14 @@
         </NuxtLink>
 
         <!-- 印順學派與弘誓研究資料 -->
+        <NuxtLink to="/research-data/pct" class="tool-card group border-blue-100 hover:border-blue-300 hover:shadow-blue-100">
+          <div class="tool-icon bg-blue-50 text-blue-600">⛪</div>
+          <div class="flex-1">
+            <h2 class="tool-title">台灣基督長老教會研究資料</h2>
+            <p class="tool-desc">台灣教會公報新聞網逐篇全文；黃彰輝、宋泉盛、王憲治、黃伯和一線本土神學與教會公共介入的史料</p>
+          </div>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/yinshun-hongshi" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
           <div class="tool-icon bg-rose-50 text-rose-600">🪷</div>
           <div class="flex-1">

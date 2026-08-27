@@ -10,8 +10,9 @@
 上限問題；每年一個 JSONL 存 R2，索引只留題名與日期，不把全文塞進 repo。
 
 R2：pct-fulltext/tcnn/<年>.jsonl（每行一篇：id/date/title/link/categories/text）
-index：public/content/research-data/pct/tcnn-index.json（各年篇數）
-       public/content/research-data/pct/tcnn/<年>.json（該年題名清單）
+index：public/content/research-data/pct/tcnn-index.json（只存各年篇數；逐年篇目清單
+       合計約 6 MB，由 /api/research-data/pct-tcnn-text?year=YYYY 直接讀 R2 供應，
+       不進 repo，免得每次重跑都整批改寫）
 
   python -X utf8 scripts/pct_tcnn.py --fetch [--year 2015] [--limit-years N]
   python -X utf8 scripts/pct_tcnn.py --publish
@@ -119,15 +120,12 @@ def fetch(only_year=None, limit_years=None):
 
 def publish():
     have = df.r2_existing_keys(R2_PREFIX)
-    (CONTENT / "tcnn").mkdir(parents=True, exist_ok=True)
+    CONTENT.mkdir(parents=True, exist_ok=True)
     summary = []
     for key in sorted(have):
         year = Path(key).stem
         body = df.s3.get_object(Bucket=df.R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
         rows = [json.loads(l) for l in body.splitlines() if l.strip()]
-        listing = [{"id": r["id"], "date": r["date"], "title": r["title"], "link": r["link"]} for r in rows]
-        (CONTENT / "tcnn" / f"{year}.json").write_text(
-            json.dumps(listing, ensure_ascii=False, indent=1), encoding="utf-8")
         summary.append({"year": year, "count": len(rows),
                         "chars": sum(len(r["text"]) for r in rows), "textKey": key})
     summary.sort(key=lambda x: x["year"], reverse=True)
