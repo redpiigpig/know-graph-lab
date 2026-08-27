@@ -307,9 +307,26 @@ def write_jsonl(book_id, chunks, staging=False):
                 "chunk_type": "page",
                 "page_number": c["page"],
                 "chapter_path": None,
-                "content": c["text"],
+                "content": _trad(c["text"]),
             }, ensure_ascii=False) + "\n")
     return out
+
+
+def _trad(text: str) -> str:
+    """簡→繁保險。
+
+    prompt 已要求繁體，但字跡淡時模型仍會漂向簡體（簡體在訓練分佈裡更常見），
+    而這條路徑原本直接把模型輸出寫進 JSONL，沒有任何轉換——《舊約神學辭典》
+    整本 97 萬字就是這樣以簡體入庫的。專案硬規則是所有寫入一律繁體。
+    """
+    if not text:
+        return text
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from parse_drive_inventory import to_traditional
+        return to_traditional(text)
+    except Exception:
+        return text        # opencc 缺席時不擋 OCR，寧可留原文
 
 
 # ── R2 upload (lazy client) ────────────────────────────────────
@@ -1032,6 +1049,14 @@ def process_one(client, book, src_path, model, max_retries=3):
 
 PROMPT = """\
 This PDF is a scanned book that may contain Chinese (Traditional or Simplified) and/or English text.
+
+🚨 ALL Chinese in your output MUST be Traditional Chinese (繁體中文, 台灣用字).
+If the scan itself is Simplified, convert it to Traditional as you transcribe.
+Never emit Simplified forms — 从→從, 见→見, 关→關, 时→時, 后→後, 只→隻/只 by sense.
+The source here is often a faint photocopy; when a glyph is unclear, infer it from
+the surrounding Chinese context rather than guessing a visually similar character
+from another script. Never substitute Korean hangul or Japanese kana for a Chinese
+character.
 
 Extract the FULL text from EVERY page of this PDF. Output ONLY a JSON object with this shape:
 {
