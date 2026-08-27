@@ -1,0 +1,9 @@
+{
+  "status": "idle",
+  "updated_at": "2026-08-27T16:45:11+00:00",
+  "pid": 19112,
+  "processed_this_run": 302,
+  "skipped_this_run": 1,
+  "total_done": 899,
+  "ledger": "data\\dazangjing\\source-catalog\\classified-records-zlz.jsonl"
+}
