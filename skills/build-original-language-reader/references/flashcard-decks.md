@@ -6,15 +6,15 @@ each. They follow the household's existing
 English tutoring deck (`家教單字卡.pdf` on the desktop) so the same guillotine
 and the same printer settings work for all of them.
 
-## State, 2026-08-27
+## State, 2026-08-28
 
 | Deck | Cards | Pages | With picture | Part of speech blank | File |
 |---|---:|---:|---:|---:|---|
 | 聖經希伯來文 | 1,000 | 252 | **1,000 (100%)** | 0 | `output/flashcards/hebrew-flashcards-1000.pdf` |
 | 通用希臘文・上冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-1.pdf` |
 | 通用希臘文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-2.pdf` |
-| 教會拉丁文・上冊 | 1,000 | 252 | 705 (71%) | 39 | `output/flashcards/latin-flashcards-volume-1.pdf` |
-| 教會拉丁文・下冊 | 1,000 | 252 | 656 (66%) | 9 | `output/flashcards/latin-flashcards-volume-2.pdf` |
+| 教會拉丁文・上冊 | 1,000 | 252 | **996 (99.6%)** | **0** | `output/flashcards/latin-flashcards-volume-1.pdf` |
+| 教會拉丁文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/latin-flashcards-volume-2.pdf` |
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 
@@ -64,7 +64,7 @@ one card.
   earns its keep if the picture aids memory, otherwise study online. Hebrew
   reached that on 2026-08-26 (419 blanks picked by hand), and Greek on the same
   day: 925 hand picks in four passes took the two volumes from 50% to 100%, so
-  the Greek `OVERRIDES` now carries 1,493 entries. Latin went 802 → 1,361 on 2026-08-27 without a single hand pick, by fixing two things in the borrowing rule rather than by picking pictures — see 「借圖只看第一個義項」 below. The remaining 639 are genuine hand picks.
+  the Greek `OVERRIDES` now carries 1,493 entries. Latin went 802 → 1,361 on 2026-08-27 without a single hand pick, by fixing two things in the borrowing rule rather than by picking pictures — see 「借圖只看第一個義項」 below. The remaining 639 were then hand-picked on 2026-08-28, which took all five decks to 1,996／2,000. The four left blank are 拿撒勒的、加里肋亞的、猶太的、羅馬的: 族屬形容詞, which in the other three readers live in the appendix, and appendix cards carry no picture — 沒有一個 emoji 誠實地代表得了「伯特利」.
 - **Cartoon style**, one consistent look.
 - **No cutting lines.** A hairline printed a millimetre off leaves every card
   with a crooked edge.
