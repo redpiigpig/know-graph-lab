@@ -1,0 +1,1636 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "希臘文與拉丁文專名的字形對照，以及由此得到的和合本↔思高本譯名對照。拉丁讀本用思高本、希臘與希伯來用和合本，是既定的命名政策；本表不統一譯名，只記錄同一個名字在兩套系統裡各叫什麼，並讓分類從希臘側傳到拉丁側。轉寫規則見 scripts/greek_latin_name_bridge.py；一對多的比對一律放棄。",
+  "pairCount": 181,
+  "pairs": [
+    {
+      "greek": "Ἰούδα",
+      "latin": "Juda",
+      "bridgeForm": "iuda",
+      "zhProtestant": "猶大",
+      "zhCatholicSgs": "猶大",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰερουσαλήμ",
+      "latin": "Jerusalem",
+      "bridgeForm": "ierusalem",
+      "zhProtestant": "耶路撒冷",
+      "zhCatholicSgs": "耶路撒冷",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Ἰακὼβ",
+      "latin": "Jacob",
+      "bridgeForm": "iacob",
+      "zhProtestant": "雅各",
+      "zhCatholicSgs": "雅各伯",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Σαοὺλ",
+      "latin": "Saul",
+      "bridgeForm": "saul",
+      "zhProtestant": "掃羅",
+      "zhCatholicSgs": "撒烏耳",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Ἀαρὼν",
+      "latin": "Aaron",
+      "bridgeForm": "aaron",
+      "zhProtestant": "亞倫",
+      "zhCatholicSgs": "亞郎",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Σαλωμὼν",
+      "latin": "Salomon",
+      "bridgeForm": "salomon",
+      "zhProtestant": "所羅門",
+      "zhCatholicSgs": "",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Φαραὼ",
+      "latin": "Pharao",
+      "bridgeForm": "pharao",
+      "zhProtestant": "法老",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰωσὴφ",
+      "latin": "Joseph",
+      "bridgeForm": "ioseph",
+      "zhProtestant": "約瑟",
+      "zhCatholicSgs": "若瑟",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἰωναθὰν",
+      "latin": "Jonathan",
+      "bridgeForm": "ionathan",
+      "zhProtestant": "約拿單",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Παῦλος",
+      "latin": "Paulus",
+      "bridgeForm": "paulus",
+      "zhProtestant": "保羅",
+      "zhCatholicSgs": "",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Πέτρος",
+      "latin": "Petrus",
+      "bridgeForm": "petrus",
+      "zhProtestant": "彼得",
+      "zhCatholicSgs": "伯多祿",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Μωὰβ",
+      "latin": "Moab",
+      "bridgeForm": "moab",
+      "zhProtestant": "摩押",
+      "zhCatholicSgs": "摩阿布",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰσαὰκ",
+      "latin": "Isaac",
+      "bridgeForm": "isaac",
+      "zhProtestant": "以撒",
+      "zhCatholicSgs": "依撒格",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Σίμων",
+      "latin": "Simon",
+      "bridgeForm": "simon",
+      "zhProtestant": "西門",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰωὰβ",
+      "latin": "Joab",
+      "bridgeForm": "ioab",
+      "zhProtestant": "約押",
+      "zhCatholicSgs": "約阿布",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Σαμουὴλ",
+      "latin": "Samuel",
+      "bridgeForm": "samuel",
+      "zhProtestant": "撒母耳",
+      "zhCatholicSgs": "撒慕爾",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Γαλαάδ",
+      "latin": "Galaad",
+      "bridgeForm": "galaad",
+      "zhProtestant": "基列",
+      "zhCatholicSgs": "基肋阿得",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰερεμίας",
+      "latin": "Jeremias",
+      "bridgeForm": "ieremias",
+      "zhProtestant": "耶利米",
+      "zhCatholicSgs": "耶肋米亞",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἠσαὺ",
+      "latin": "Esau",
+      "bridgeForm": "esau",
+      "zhProtestant": "以掃",
+      "zhCatholicSgs": "厄撒烏",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἰεροβοὰμ",
+      "latin": "Jeroboam",
+      "bridgeForm": "ieroboam",
+      "zhProtestant": "耶羅波安",
+      "zhCatholicSgs": "雅洛貝罕",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀμμὼν",
+      "latin": "Ammon",
+      "bridgeForm": "ammon",
+      "zhProtestant": "亞們",
+      "zhCatholicSgs": "阿孟",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Χανάαν",
+      "latin": "Chanaan",
+      "bridgeForm": "chanaan",
+      "zhProtestant": "迦南",
+      "zhCatholicSgs": "客納罕",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἱεροσόλυμα",
+      "latin": "Hierosolyma",
+      "bridgeForm": "hierosolima",
+      "zhProtestant": "耶路撒冷",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Δανιὴλ",
+      "latin": "Daniel",
+      "bridgeForm": "daniel",
+      "zhProtestant": "但以理",
+      "zhCatholicSgs": "達尼爾",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ναβουχοδονοσὸρ",
+      "latin": "Nabuchodonosor",
+      "bridgeForm": "nabuchodonosor",
+      "zhProtestant": "尼布甲尼撒",
+      "zhCatholicSgs": "拿步高",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Γὰδ",
+      "latin": "Gad",
+      "bridgeForm": "gad",
+      "zhProtestant": "迦得",
+      "zhCatholicSgs": "加得",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Δὰν",
+      "latin": "Dan",
+      "bridgeForm": "dan",
+      "zhProtestant": "但",
+      "zhCatholicSgs": "丹",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἐλεαζὰρ",
+      "latin": "Eleazar",
+      "bridgeForm": "eleazar",
+      "zhProtestant": "以利亞撒",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰωὰς",
+      "latin": "Joas",
+      "bridgeForm": "ioas",
+      "zhProtestant": "",
+      "zhCatholicSgs": "約阿士",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰὼβ",
+      "latin": "Job",
+      "bridgeForm": "iob",
+      "zhProtestant": "約伯",
+      "zhCatholicSgs": "約伯",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Βάαλ",
+      "latin": "Baal",
+      "bridgeForm": "baal",
+      "zhProtestant": "巴力",
+      "zhCatholicSgs": "巴耳",
+      "category": "神名與稱號",
+      "categoryRoute": "deities"
+    },
+    {
+      "greek": "Λευεὶ",
+      "latin": "Levi",
+      "bridgeForm": "leui",
+      "zhProtestant": "利未",
+      "zhCatholicSgs": "",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Πιλᾶτος",
+      "latin": "Pilatus",
+      "bridgeForm": "pilatus",
+      "zhProtestant": "彼拉多",
+      "zhCatholicSgs": "比拉多",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Βαλαὰμ",
+      "latin": "Balaam",
+      "bridgeForm": "balaam",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἀβρὰμ",
+      "latin": "Abram",
+      "bridgeForm": "abram",
+      "zhProtestant": "亞伯蘭",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Δαυὶδ",
+      "latin": "David",
+      "bridgeForm": "dauid",
+      "zhProtestant": "大衛",
+      "zhCatholicSgs": "達味",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Ἰωσαφὰτ",
+      "latin": "Josaphat",
+      "bridgeForm": "iosaphat",
+      "zhProtestant": "約沙法",
+      "zhCatholicSgs": "約沙法特",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Νῶε",
+      "latin": "Noë",
+      "bridgeForm": "ne",
+      "zhProtestant": "挪亞",
+      "zhCatholicSgs": "諾厄",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Βαιθήλ",
+      "latin": "Bethel",
+      "bridgeForm": "bethel",
+      "zhProtestant": "伯特利",
+      "zhCatholicSgs": "貝特耳",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Συμεὼν",
+      "latin": "symeon",
+      "bridgeForm": "simeon",
+      "zhProtestant": "",
+      "zhCatholicSgs": "西默盎",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Λαβὰν",
+      "latin": "Laban",
+      "bridgeForm": "laban",
+      "zhProtestant": "拉班",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀσσοὺρ",
+      "latin": "Assur",
+      "bridgeForm": "assur",
+      "zhProtestant": "亞述",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Σιών",
+      "latin": "Sion",
+      "bridgeForm": "sion",
+      "zhProtestant": "錫安",
+      "zhCatholicSgs": "熙雍",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Βαλὰκ",
+      "latin": "Balac",
+      "bridgeForm": "balac",
+      "zhProtestant": "巴勒",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἰωρὰμ",
+      "latin": "Joram",
+      "bridgeForm": "ioram",
+      "zhProtestant": "約蘭",
+      "zhCatholicSgs": "約蘭",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀσὰ",
+      "latin": "Asa",
+      "bridgeForm": "asa",
+      "zhProtestant": "亞撒",
+      "zhCatholicSgs": "阿撒",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀντίοχος",
+      "latin": "Antiochus",
+      "bridgeForm": "antiochus",
+      "zhProtestant": "",
+      "zhCatholicSgs": "安提約古",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Ἐδώμ",
+      "latin": "Edom",
+      "bridgeForm": "edom",
+      "zhProtestant": "",
+      "zhCatholicSgs": "厄東",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἡρῴδης",
+      "latin": "Herodes",
+      "bridgeForm": "herodes",
+      "zhProtestant": "希律",
+      "zhCatholicSgs": "",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Ναθὰν",
+      "latin": "Nathan",
+      "bridgeForm": "nathan",
+      "zhProtestant": "拿單",
+      "zhCatholicSgs": "納堂",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἰεσσαὶ",
+      "latin": "Jesse",
+      "bridgeForm": "iesse",
+      "zhProtestant": "耶西",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀμαλὴκ",
+      "latin": "Amalec",
+      "bridgeForm": "amalec",
+      "zhProtestant": "亞瑪力",
+      "zhCatholicSgs": "阿瑪肋克",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ζαβουλὼν",
+      "latin": "Zabulon",
+      "bridgeForm": "zabulon",
+      "zhProtestant": "西布倫",
+      "zhCatholicSgs": "則步隆",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Φίλιππος",
+      "latin": "Philippus",
+      "bridgeForm": "philippus",
+      "zhProtestant": "腓力",
+      "zhCatholicSgs": "斐理伯",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Δημήτριος",
+      "latin": "Demetrius",
+      "bridgeForm": "demetrius",
+      "zhProtestant": "底米丟",
+      "zhCatholicSgs": "德默特琉",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σεδεκίας",
+      "latin": "Sedecias",
+      "bridgeForm": "sedecias",
+      "zhProtestant": "西底家",
+      "zhCatholicSgs": "漆德克雅",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀδὰμ",
+      "latin": "Adam",
+      "bridgeForm": "adam",
+      "zhProtestant": "亞當",
+      "zhCatholicSgs": "",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Γεδεὼν",
+      "latin": "Gedeon",
+      "bridgeForm": "gedeon",
+      "zhProtestant": "基甸",
+      "zhCatholicSgs": "基德紅",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Καὰθ",
+      "latin": "Caath",
+      "bridgeForm": "caath",
+      "zhProtestant": "",
+      "zhCatholicSgs": "刻哈特",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Συχὲμ",
+      "latin": "Sichem",
+      "bridgeForm": "sichem",
+      "zhProtestant": "示劍",
+      "zhCatholicSgs": "舍根",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Πτολεμαῖος",
+      "latin": "Ptolemæus",
+      "bridgeForm": "ptolemeus",
+      "zhProtestant": "",
+      "zhCatholicSgs": "仆托肋米",
+      "category": "君王",
+      "categoryRoute": "historical_rulers"
+    },
+    {
+      "greek": "Ἀσὰφ",
+      "latin": "Asaph",
+      "bridgeForm": "asaph",
+      "zhProtestant": "亞薩",
+      "zhCatholicSgs": "阿撒夫",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀσὴρ",
+      "latin": "Aser",
+      "bridgeForm": "aser",
+      "zhProtestant": "亞設",
+      "zhCatholicSgs": "阿協爾",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Λὼτ",
+      "latin": "Lot",
+      "bridgeForm": "lot",
+      "zhProtestant": "羅得",
+      "zhCatholicSgs": "羅特",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Νικάνωρ",
+      "latin": "Nicanor",
+      "bridgeForm": "nicanor",
+      "zhProtestant": "尼迦挪",
+      "zhCatholicSgs": "尼加諾爾",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σαδὼκ",
+      "latin": "Sadoc",
+      "bridgeForm": "sadoc",
+      "zhProtestant": "撒督",
+      "zhCatholicSgs": "匝多克",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Τιμόθεος",
+      "latin": "Timotheus",
+      "bridgeForm": "timotheus",
+      "zhProtestant": "提摩太",
+      "zhCatholicSgs": "弟茂德",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Ἰσμαὴλ",
+      "latin": "Ismaël",
+      "bridgeForm": "ismel",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἰσσαχὰρ",
+      "latin": "Issachar",
+      "bridgeForm": "issachar",
+      "zhProtestant": "以薩迦",
+      "zhCatholicSgs": "依撒加爾",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Οὐρείας",
+      "latin": "Urias",
+      "bridgeForm": "urias",
+      "zhProtestant": "",
+      "zhCatholicSgs": "烏黎雅",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Γαβαὼν",
+      "latin": "Gabaon",
+      "bridgeForm": "gabaon",
+      "zhProtestant": "基遍",
+      "zhCatholicSgs": "基貝紅",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀμὼς",
+      "latin": "Amos",
+      "bridgeForm": "amos",
+      "zhProtestant": "亞摩斯",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἠλίας",
+      "latin": "Elias",
+      "bridgeForm": "elias",
+      "zhProtestant": "以利亞",
+      "zhCatholicSgs": "厄里亞",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἰωνᾶς",
+      "latin": "Jonas",
+      "bridgeForm": "ionas",
+      "zhProtestant": "約拿",
+      "zhCatholicSgs": "約納",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Σύρος",
+      "latin": "Syrus",
+      "bridgeForm": "sirus",
+      "zhProtestant": "敘利亞",
+      "zhCatholicSgs": "",
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Ἰεβουσαῖον",
+      "latin": "Jebusæum",
+      "bridgeForm": "iebuseum",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βασὰν",
+      "latin": "Basan",
+      "bridgeForm": "basan",
+      "zhProtestant": "巴珊",
+      "zhCatholicSgs": "巴商",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἑσεβὼν",
+      "latin": "Hesebon",
+      "bridgeForm": "hesebon",
+      "zhProtestant": "希實本",
+      "zhCatholicSgs": "赫市朋",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βηρσάβεε",
+      "latin": "Bersabee",
+      "bridgeForm": "bersabee",
+      "zhProtestant": "",
+      "zhCatholicSgs": "貝爾舍巴",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Γέθ",
+      "latin": "Geth",
+      "bridgeForm": "geth",
+      "zhProtestant": "",
+      "zhCatholicSgs": "加特",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀβιαθὰρ",
+      "latin": "Abiathar",
+      "bridgeForm": "abiathar",
+      "zhProtestant": "亞比亞他",
+      "zhCatholicSgs": "厄貝雅塔爾",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Γαβαά",
+      "latin": "Gabaa",
+      "bridgeForm": "gabaa",
+      "zhProtestant": "基比亞",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀμνὼν",
+      "latin": "Amnon",
+      "bridgeForm": "amnon",
+      "zhProtestant": "哀嫩",
+      "zhCatholicSgs": "阿默農",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Θαιμάν",
+      "latin": "Theman",
+      "bridgeForm": "theman",
+      "zhProtestant": "",
+      "zhCatholicSgs": "特曼",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Γάλγαλα",
+      "latin": "Galgala",
+      "bridgeForm": "galgala",
+      "zhProtestant": "吉甲",
+      "zhCatholicSgs": "基耳加耳",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βαρναβᾶς",
+      "latin": "Barnabas",
+      "bridgeForm": "barnabas",
+      "zhProtestant": "巴拿巴",
+      "zhCatholicSgs": "巴爾納伯",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Ἀχὰζ",
+      "latin": "Achaz",
+      "bridgeForm": "achaz",
+      "zhProtestant": "亞哈斯",
+      "zhCatholicSgs": "阿哈次",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἄζωτον",
+      "latin": "Azotum",
+      "bridgeForm": "azotum",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἀβιὰ",
+      "latin": "Abia",
+      "bridgeForm": "abia",
+      "zhProtestant": "亞比雅",
+      "zhCatholicSgs": "阿彼雅",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἐλιὰβ",
+      "latin": "Eliab",
+      "bridgeForm": "eliab",
+      "zhProtestant": "以利押",
+      "zhCatholicSgs": "厄里雅布",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰωὴλ",
+      "latin": "Joël",
+      "bridgeForm": "iel",
+      "zhProtestant": "約珥",
+      "zhCatholicSgs": "",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Φερεζαῖον",
+      "latin": "Pherezæum",
+      "bridgeForm": "pherezeum",
+      "zhProtestant": "比利洗人",
+      "zhCatholicSgs": "培黎齊",
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἀβιμέλεχ",
+      "latin": "Abimelech",
+      "bridgeForm": "abimelech",
+      "zhProtestant": "亞比米勒",
+      "zhCatholicSgs": "阿彼默肋客",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀρνών",
+      "latin": "Arnon",
+      "bridgeForm": "arnon",
+      "zhProtestant": "亞嫩",
+      "zhCatholicSgs": "阿爾農",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βαροὺχ",
+      "latin": "Baruch",
+      "bridgeForm": "baruch",
+      "zhProtestant": "",
+      "zhCatholicSgs": "巴路克",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Λυσίας",
+      "latin": "Lysias",
+      "bridgeForm": "lisias",
+      "zhProtestant": "呂西亞",
+      "zhCatholicSgs": "里息雅",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Βαασὰ",
+      "latin": "Baasa",
+      "bridgeForm": "baasa",
+      "zhProtestant": "巴沙",
+      "zhCatholicSgs": "巴厄沙",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ζοροβαβὲλ",
+      "latin": "Zorobabel",
+      "bridgeForm": "zorobabel",
+      "zhProtestant": "所羅巴伯",
+      "zhCatholicSgs": "耶叔亞",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ναβὰτ",
+      "latin": "Nabat",
+      "bridgeForm": "nabat",
+      "zhProtestant": "",
+      "zhCatholicSgs": "雅洛貝罕",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἁζαὴλ",
+      "latin": "Hazaël",
+      "bridgeForm": "hazel",
+      "zhProtestant": "哈薛",
+      "zhCatholicSgs": "哈匝耳",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Καρμήλῳ",
+      "latin": "Carmelo",
+      "bridgeForm": "carmelo",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βηθλέεμ",
+      "latin": "Bethleem",
+      "bridgeForm": "bethleem",
+      "zhProtestant": "伯利恆",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Ἰεζάβελ",
+      "latin": "Jezabel",
+      "bridgeForm": "iezabel",
+      "zhProtestant": "耶洗別",
+      "zhCatholicSgs": "依則貝耳",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰθαμάρ",
+      "latin": "Ithamar",
+      "bridgeForm": "ithamar",
+      "zhProtestant": "",
+      "zhCatholicSgs": "依塔瑪爾",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ναβὰλ",
+      "latin": "Nabal",
+      "bridgeForm": "nabal",
+      "zhProtestant": "拿八",
+      "zhCatholicSgs": "納巴耳",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ναδὰβ",
+      "latin": "Nadab",
+      "bridgeForm": "nadab",
+      "zhProtestant": "拿答",
+      "zhCatholicSgs": "納達布",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ὣρ",
+      "latin": "Hor",
+      "bridgeForm": "hor",
+      "zhProtestant": "",
+      "zhCatholicSgs": "曷爾",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ναχὼρ",
+      "latin": "Nachor",
+      "bridgeForm": "nachor",
+      "zhProtestant": "拿鶴",
+      "zhCatholicSgs": "納曷爾",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ὢγ",
+      "latin": "Og",
+      "bridgeForm": "og",
+      "zhProtestant": "",
+      "zhCatholicSgs": "敖格",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Σαφὰν",
+      "latin": "Saphan",
+      "bridgeForm": "saphan",
+      "zhProtestant": "",
+      "zhCatholicSgs": "沙番",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Βαιθλέεμ",
+      "latin": "Bethleem",
+      "bridgeForm": "bethleem",
+      "zhProtestant": "伯利恆",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Βακχίδης",
+      "latin": "Bacchides",
+      "bridgeForm": "bacchides",
+      "zhProtestant": "",
+      "zhCatholicSgs": "巴基德",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰάσων",
+      "latin": "Jason",
+      "bridgeForm": "iason",
+      "zhProtestant": "耶孫",
+      "zhCatholicSgs": "雅松",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ἀκκαρὼν",
+      "latin": "Accaron",
+      "bridgeForm": "accaron",
+      "zhProtestant": "革倫",
+      "zhCatholicSgs": "厄刻龍",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰωαθὰμ",
+      "latin": "Joatham",
+      "bridgeForm": "ioatham",
+      "zhProtestant": "約坦",
+      "zhCatholicSgs": "約堂",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰεχονίας",
+      "latin": "Jechonias",
+      "bridgeForm": "iechonias",
+      "zhProtestant": "耶哥尼雅",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σήμ",
+      "latin": "Sem",
+      "bridgeForm": "sem",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Ναθαναὴλ",
+      "latin": "Nathanaël",
+      "bridgeForm": "nathanel",
+      "zhProtestant": "拿但業",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Γὼγ",
+      "latin": "Gog",
+      "bridgeForm": "gog",
+      "zhProtestant": "歌革",
+      "zhCatholicSgs": "哥格",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σάρα",
+      "latin": "Sara",
+      "bridgeForm": "sara",
+      "zhProtestant": "撒拉",
+      "zhCatholicSgs": "",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἐλκανὰ",
+      "latin": "Elcana",
+      "bridgeForm": "elcana",
+      "zhProtestant": "以利加拿",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Δαγὼν",
+      "latin": "Dagon",
+      "bridgeForm": "dagon",
+      "zhProtestant": "大袞",
+      "zhCatholicSgs": "",
+      "category": "神名與稱號",
+      "categoryRoute": "deities"
+    },
+    {
+      "greek": "Καφαρναοὺμ",
+      "latin": "Capharnaum",
+      "bridgeForm": "capharnaum",
+      "zhProtestant": "迦百農",
+      "zhCatholicSgs": "",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Χάμ",
+      "latin": "Cham",
+      "bridgeForm": "cham",
+      "zhProtestant": "含",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἐφρὼν",
+      "latin": "Ephron",
+      "bridgeForm": "ephron",
+      "zhProtestant": "",
+      "zhCatholicSgs": "厄斐龍",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Νὴρ",
+      "latin": "Ner",
+      "bridgeForm": "ner",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀσαὴλ",
+      "latin": "Asaël",
+      "bridgeForm": "asel",
+      "zhProtestant": "亞撒黑",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἄλκιμος",
+      "latin": "Alcimus",
+      "bridgeForm": "alcimus",
+      "zhProtestant": "",
+      "zhCatholicSgs": "阿耳基慕",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Μενέλαος",
+      "latin": "Menelaus",
+      "bridgeForm": "menelaus",
+      "zhProtestant": "",
+      "zhCatholicSgs": "默乃勞",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Λάζαρος",
+      "latin": "Lazarus",
+      "bridgeForm": "lazarus",
+      "zhProtestant": "拉撒路",
+      "zhCatholicSgs": "拉匝祿",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Κεδρών",
+      "latin": "Cedron",
+      "bridgeForm": "cedron",
+      "zhProtestant": "汲淪",
+      "zhCatholicSgs": "克德龍",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σινᾶ",
+      "latin": "Sina",
+      "bridgeForm": "sina",
+      "zhProtestant": "西乃",
+      "zhCatholicSgs": "西乃",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Σαῦλος",
+      "latin": "Saulus",
+      "bridgeForm": "saulus",
+      "zhProtestant": "掃羅",
+      "zhCatholicSgs": "",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Βαρὰκ",
+      "latin": "Barac",
+      "bridgeForm": "barac",
+      "zhProtestant": "巴拉",
+      "zhCatholicSgs": "巴辣克",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Θερσά",
+      "latin": "Thersa",
+      "bridgeForm": "thersa",
+      "zhProtestant": "得撒",
+      "zhCatholicSgs": "提爾匝",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ζάρα",
+      "latin": "Zara",
+      "bridgeForm": "zara",
+      "zhProtestant": "謝拉",
+      "zhCatholicSgs": "則辣黑",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Σαλαθιὴλ",
+      "latin": "Salathiel",
+      "bridgeForm": "salathiel",
+      "zhProtestant": "撒拉鐵",
+      "zhCatholicSgs": "則魯巴貝耳",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Λευὶ",
+      "latin": "Levi",
+      "bridgeForm": "leui",
+      "zhProtestant": "利未",
+      "zhCatholicSgs": "",
+      "category": "族長與先知",
+      "categoryRoute": "手列族長先知"
+    },
+    {
+      "greek": "Ἀροὴρ",
+      "latin": "Aroër",
+      "bridgeForm": "arer",
+      "zhProtestant": "亞羅珥",
+      "zhCatholicSgs": "阿洛厄爾",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀχιὼρ",
+      "latin": "Achior",
+      "bridgeForm": "achior",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰωναδὰβ",
+      "latin": "Jonadab",
+      "bridgeForm": "ionadab",
+      "zhProtestant": "",
+      "zhCatholicSgs": "約納達布",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀρὰμ",
+      "latin": "Aram",
+      "bridgeForm": "aram",
+      "zhProtestant": "亞蘭",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀνδρέας",
+      "latin": "Andreas",
+      "bridgeForm": "andreas",
+      "zhProtestant": "安得烈",
+      "zhCatholicSgs": "安德肋",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Ἰεριχὼ",
+      "latin": "Jericho",
+      "bridgeForm": "iericho",
+      "zhProtestant": "耶利哥",
+      "zhCatholicSgs": "耶里哥",
+      "category": "地名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Θάρα",
+      "latin": "Thara",
+      "bridgeForm": "thara",
+      "zhProtestant": "他拉",
+      "zhCatholicSgs": "特辣黑",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἀρφαξὰδ",
+      "latin": "Arphaxad",
+      "bridgeForm": "arphaxad",
+      "zhProtestant": "亞法撒",
+      "zhCatholicSgs": "阿帕革沙得",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Λάμεχ",
+      "latin": "Lamech",
+      "bridgeForm": "lamech",
+      "zhProtestant": "拉麥",
+      "zhCatholicSgs": "拉默客",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Μάρθα",
+      "latin": "Martha",
+      "bridgeForm": "martha",
+      "zhProtestant": "馬大",
+      "zhCatholicSgs": "瑪爾大",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Κενέζ",
+      "latin": "Cenez",
+      "bridgeForm": "cenez",
+      "zhProtestant": "",
+      "zhCatholicSgs": "刻納次",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰδουμαῖοι",
+      "latin": "Idumææ",
+      "bridgeForm": "idumee",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Γάζερ",
+      "latin": "Gazer",
+      "bridgeForm": "gazer",
+      "zhProtestant": "",
+      "zhCatholicSgs": "革則爾",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βαιθωρὼν",
+      "latin": "Bethoron",
+      "bridgeForm": "bethoron",
+      "zhProtestant": "",
+      "zhCatholicSgs": "貝特曷龍",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀναθὼθ",
+      "latin": "Anathoth",
+      "bridgeForm": "anathoth",
+      "zhProtestant": "亞拿突",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἁνὰν",
+      "latin": "Hanan",
+      "bridgeForm": "hanan",
+      "zhProtestant": "哈拿尼",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ναασσὼν",
+      "latin": "Naasson",
+      "bridgeForm": "naasson",
+      "zhProtestant": "拿順",
+      "zhCatholicSgs": "納赫雄",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἐλιέζερ",
+      "latin": "Eliezer",
+      "bridgeForm": "eliezer",
+      "zhProtestant": "以利以謝",
+      "zhCatholicSgs": "厄里厄則爾",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰάφεθ",
+      "latin": "Japheth",
+      "bridgeForm": "iapheth",
+      "zhProtestant": "雅弗",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Μελχὰ",
+      "latin": "Melcha",
+      "bridgeForm": "melcha",
+      "zhProtestant": "",
+      "zhCatholicSgs": "米耳加",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Κηδάρ",
+      "latin": "Cedar",
+      "bridgeForm": "cedar",
+      "zhProtestant": "基達",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰαζὴρ",
+      "latin": "Jazer",
+      "bridgeForm": "iazer",
+      "zhProtestant": "雅謝",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἁερμών",
+      "latin": "Hermon",
+      "bridgeForm": "hermon",
+      "zhProtestant": "黑門山",
+      "zhCatholicSgs": "赫爾孟",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ζέβεε",
+      "latin": "Zebee",
+      "bridgeForm": "zebee",
+      "zhProtestant": "",
+      "zhCatholicSgs": "匝耳慕納",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰωσεδὲκ",
+      "latin": "Josedec",
+      "bridgeForm": "iosedec",
+      "zhProtestant": "",
+      "zhCatholicSgs": "約匝達克",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Μισάχ",
+      "latin": "Misach",
+      "bridgeForm": "misach",
+      "zhProtestant": "",
+      "zhCatholicSgs": "沙得辣客",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἀβδεναγώ",
+      "latin": "Abdenago",
+      "bridgeForm": "abdenago",
+      "zhProtestant": "",
+      "zhCatholicSgs": "沙得辣客",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Θαμὰρ",
+      "latin": "Thamar",
+      "bridgeForm": "thamar",
+      "zhProtestant": "他瑪",
+      "zhCatholicSgs": "塔瑪爾",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Θωμᾶς",
+      "latin": "Thomas",
+      "bridgeForm": "thomas",
+      "zhProtestant": "多馬",
+      "zhCatholicSgs": "",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Σὴθ",
+      "latin": "Seth",
+      "bridgeForm": "seth",
+      "zhProtestant": "塞特",
+      "zhCatholicSgs": "舍特",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ἰσραηλῖται",
+      "latin": "Israëlitæ",
+      "bridgeForm": "isrelite",
+      "zhProtestant": "以色列",
+      "zhCatholicSgs": "",
+      "category": "民族與國名",
+      "categoryRoute": "place_names"
+    },
+    {
+      "greek": "Ἀσταρὼθ",
+      "latin": "Astaroth",
+      "bridgeForm": "astaroth",
+      "zhProtestant": "",
+      "zhCatholicSgs": "阿市托勒特",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Φαράν",
+      "latin": "Pharan",
+      "bridgeForm": "pharan",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Βεὼρ",
+      "latin": "Beor",
+      "bridgeForm": "beor",
+      "zhProtestant": "比珥",
+      "zhCatholicSgs": "",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ὠβήδ",
+      "latin": "Obed",
+      "bridgeForm": "obed",
+      "zhProtestant": "俄備得",
+      "zhCatholicSgs": "加阿耳",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Ναὰς",
+      "latin": "Naas",
+      "bridgeForm": "naas",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἠλὰ",
+      "latin": "Ela",
+      "bridgeForm": "ela",
+      "zhProtestant": "",
+      "zhCatholicSgs": "厄拉",
+      "category": "其他人名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Φάκεε",
+      "latin": "Phacee",
+      "bridgeForm": "phacee",
+      "zhProtestant": "比加",
+      "zhCatholicSgs": "培卡黑",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Κηφᾶς",
+      "latin": "Cephas",
+      "bridgeForm": "cephas",
+      "zhProtestant": "磯法",
+      "zhCatholicSgs": "刻法",
+      "category": "使徒與門徒",
+      "categoryRoute": "手列使徒門徒（原文字形）"
+    },
+    {
+      "greek": "Ἰωβάβ",
+      "latin": "Jobab",
+      "bridgeForm": "iobab",
+      "zhProtestant": "約巴",
+      "zhCatholicSgs": "約巴布",
+      "category": "其他人名",
+      "categoryRoute": "biblical_people"
+    },
+    {
+      "greek": "Αἰνάν",
+      "latin": "Enan",
+      "bridgeForm": "enan",
+      "zhProtestant": "哀嫩",
+      "zhCatholicSgs": "阿希辣",
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄"
+    },
+    {
+      "greek": "Γηρὰ",
+      "latin": "Gera",
+      "bridgeForm": "gera",
+      "zhProtestant": "",
+      "zhCatholicSgs": "",
+      "category": "待歸類",
+      "categoryRoute": ""
+    },
+    {
+      "greek": "Ἰεροβάαλ",
+      "latin": "Jerobaal",
+      "bridgeForm": "ierobaal",
+      "zhProtestant": "耶路巴力",
+      "zhCatholicSgs": "耶魯巴耳",
+      "category": "待歸類",
+      "categoryRoute": ""
+    }
+  ]
+}

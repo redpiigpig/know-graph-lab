@@ -30,6 +30,7 @@ V = ROOT / "data" / "originalReaders" / "vocabulary"
 GREEK = V / "greek-appendices.json"
 LATIN = V / "latin-appendices.json"
 HEBREW_NAMES = V / "hebrew-proper-names.json"
+BRIDGE = V / "biblical-name-variants.json"
 
 # 希伯來既有的五類對到九類裡的哪一類；只有 person 需要再往下切。
 HEBREW_TYPE_MAP = {
@@ -77,8 +78,24 @@ def do_greek(classifier: Classifier, write: bool) -> None:
         print(f"      已寫回 {GREEK.name}")
 
 
+def latin_bridge() -> dict[str, dict]:
+    """拉丁字形 -> 希臘那邊已判好的分類。
+
+    拉丁的中文是思高本、登錄收的是和合本，中文對不上；字形對得上，分類就跟著過來。
+    """
+    if not BRIDGE.exists():
+        return {}
+    payload = json.loads(BRIDGE.read_text(encoding="utf-8"))
+    return {
+        pair["latin"]: pair
+        for pair in payload["pairs"]
+        if pair.get("category") and pair["category"] != UNSORTED
+    }
+
+
 def do_latin(classifier: Classifier, write: bool) -> None:
     payload = json.loads(LATIN.read_text(encoding="utf-8"))
+    bridge = latin_bridge()
     for half in ("upper", "lower"):
         for key, table in payload[half].items():
             entries = table.get("entries") or []
@@ -88,7 +105,23 @@ def do_latin(classifier: Classifier, write: bool) -> None:
             if "專名" not in table["title"] and "人名" not in table["title"]:
                 continue
             tally = apply(entries, classifier, form_key="headword")
+            # 自己判不出來的，看希臘那邊有沒有同一個名字
+            moved = 0
+            for entry in entries:
+                if entry["category"] != UNSORTED:
+                    continue
+                pair = bridge.get(entry["headword"])
+                if not pair:
+                    continue
+                tally[UNSORTED] -= 1
+                entry["category"] = pair["category"]
+                entry["categoryRoute"] = "希臘↔拉丁字形橋"
+                entry["zhProtestant"] = pair.get("zhProtestant", "")
+                tally[entry["category"]] += 1
+                moved += 1
             report(f"拉丁 {half}／{table['title']}", tally)
+            if moved:
+                print(f"      其中 {moved} 條由希臘側的分類經字形橋傳過來")
     if write:
         LATIN.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"      已寫回 {LATIN.name}")

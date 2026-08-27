@@ -134,8 +134,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "君王",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "所羅門"
         },
         {
           "headword": "Abraham",
@@ -194,8 +195,9 @@
           "zh": "熙雍",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "7/9 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "錫安"
         },
         {
           "headword": "Paulus",
@@ -290,8 +292,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "西門"
         },
         {
           "headword": "Manasses",
@@ -350,8 +353,9 @@
           "zh": "基肋阿得",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "18/29 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "基列"
         },
         {
           "headword": "Jordanem",
@@ -518,8 +522,9 @@
           "zh": "客納罕",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "24/24 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "迦南"
         },
         {
           "headword": "Jeroboam",
@@ -566,8 +571,9 @@
           "zh": "約沙法特",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "18/20 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "約沙法"
         },
         {
           "headword": "Galilæa",
@@ -866,8 +872,9 @@
           "zh": "匝多克",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "9/12 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "撒督"
         },
         {
           "headword": "Jehu",
@@ -890,8 +897,9 @@
           "zh": "比拉多",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "12/12 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "彼拉多"
         },
         {
           "headword": "Abimelech",
@@ -1010,8 +1018,9 @@
           "zh": "安提約古",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "10/16 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "君王",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Jerosolymis",
@@ -1142,8 +1151,9 @@
           "zh": "舍根",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "22/22 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "示劍"
         },
         {
           "headword": "Eleazar",
@@ -1166,8 +1176,9 @@
           "zh": "阿協爾",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞設"
         },
         {
           "headword": "Zabulon",
@@ -1178,8 +1189,9 @@
           "zh": "則步隆",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "6/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "西布倫"
         },
         {
           "headword": "Nathan",
@@ -1214,8 +1226,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Herodes",
@@ -1226,8 +1239,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "君王",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "希律"
         },
         {
           "headword": "Phase",
@@ -1286,8 +1300,9 @@
           "zh": "阿瑪肋克",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "10/11 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞瑪力"
         },
         {
           "headword": "Seir",
@@ -1322,8 +1337,9 @@
           "zh": "刻哈特",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "11/17 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Achaz",
@@ -1334,8 +1350,9 @@
           "zh": "阿哈次",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/4 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞哈斯"
         },
         {
           "headword": "Timotheus",
@@ -1358,8 +1375,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞述"
         },
         {
           "headword": "Hesebon",
@@ -1610,8 +1628,9 @@
           "zh": "阿彼雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞比雅"
         },
         {
           "headword": "Johanan",
@@ -1634,8 +1653,9 @@
           "zh": "德默特琉",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "12/12 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "底米丟"
         },
         {
           "headword": "Rachel",
@@ -1706,8 +1726,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "族長與先知",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "撒拉"
         },
         {
           "headword": "Bersabee",
@@ -1754,8 +1775,9 @@
           "zh": "厄貝雅塔爾",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "9/9 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞比亞他"
         },
         {
           "headword": "Sedecias",
@@ -1766,8 +1788,9 @@
           "zh": "漆德克雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "6/7 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "西底家"
         },
         {
           "headword": "Josiæ",
@@ -1826,8 +1849,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "巴勒"
         },
         {
           "headword": "Ramoth",
@@ -1886,8 +1910,9 @@
           "zh": "烏黎雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "13/13 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Ismahel",
@@ -1934,8 +1959,9 @@
           "zh": "巴厄沙",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "21/21 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "巴沙"
         },
         {
           "headword": "Jojada",
@@ -1970,8 +1996,9 @@
           "zh": "沙番",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/5 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Baruch",
@@ -1982,8 +2009,9 @@
           "zh": "巴路克",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "12/14 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Libano",
@@ -2042,8 +2070,9 @@
           "zh": "雅洛貝罕",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "11/11 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Zorobabel",
@@ -2054,8 +2083,9 @@
           "zh": "耶叔亞",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/5 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "所羅巴伯"
         },
         {
           "headword": "Nicanor",
@@ -2066,8 +2096,9 @@
           "zh": "尼加諾爾",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "6/6 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "尼迦挪"
         },
         {
           "headword": "Joppe",
@@ -2438,8 +2469,9 @@
           "zh": "依則貝耳",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "11/11 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "耶洗別"
         },
         {
           "headword": "Amos",
@@ -2510,8 +2542,9 @@
           "zh": "依塔瑪爾",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "2/3 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Masphath",
@@ -2630,8 +2663,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "拿但業"
         },
         {
           "headword": "Helciæ",
@@ -2666,8 +2700,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Gaza",
@@ -2690,8 +2725,9 @@
           "zh": "納曷爾",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "14/14 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "拿鶴"
         },
         {
           "headword": "Elcana",
@@ -2702,8 +2738,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "以利加拿"
         },
         {
           "headword": "Galgala",
@@ -2738,8 +2775,9 @@
           "zh": "約堂",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "9/9 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "約坦"
         },
         {
           "headword": "Obededom",
@@ -2834,8 +2872,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "民族與國名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "敘利亞"
         },
         {
           "headword": "Roma",
@@ -3074,8 +3113,9 @@
           "zh": "提爾匝",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "11/11 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "得撒"
         },
         {
           "headword": "Rama",
@@ -3398,8 +3438,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "迦百農"
         },
         {
           "headword": "ephesus",
@@ -3422,8 +3463,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "含"
         },
         {
           "headword": "Jebusæum",
@@ -3458,8 +3500,9 @@
           "zh": "厄拉",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/9 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Naaman",
@@ -3758,8 +3801,9 @@
           "zh": "里息雅",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/4 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "呂西亞"
         },
         {
           "headword": "Menelaus",
@@ -3794,8 +3838,9 @@
           "zh": "拉匝祿",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "6/6 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "拉撒路"
         },
         {
           "headword": "Abel",
@@ -3890,8 +3935,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "民族與國名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "以色列"
         },
         {
           "headword": "Jair",
@@ -3962,8 +4008,9 @@
           "zh": "約匝達克",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/6 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Ptolemæus",
@@ -3974,8 +4021,9 @@
           "zh": "仆托肋米",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "7/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "君王",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Antiochi",
@@ -4034,8 +4082,9 @@
           "zh": "特辣黑",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "他拉"
         },
         {
           "headword": "Ismaël",
@@ -4046,8 +4095,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Saram",
@@ -4094,8 +4144,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "基達"
         },
         {
           "headword": "Chananæi",
@@ -4130,8 +4181,9 @@
           "zh": "納赫雄",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "3/4 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "拿順"
         },
         {
           "headword": "Astaroth",
@@ -4214,8 +4266,9 @@
           "zh": "巴辣克",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "8/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "巴拉"
         },
         {
           "headword": "Jonatha",
@@ -4250,8 +4303,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "亞撒黑"
         },
         {
           "headword": "Rechab",
@@ -4286,8 +4340,9 @@
           "zh": "則魯巴貝耳",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "3/3 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "撒拉鐵"
         },
         {
           "headword": "Gog",
@@ -4298,8 +4353,9 @@
           "zh": "哥格",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "4/5 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "歌革"
         },
         {
           "headword": "Tobiam",
@@ -4382,8 +4438,9 @@
           "zh": "則辣黑",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "3/5 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "謝拉"
         },
         {
           "headword": "Sobal",
@@ -4478,8 +4535,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Jether",
@@ -4790,8 +4848,9 @@
           "zh": "瑪爾大",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "7/8 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "馬大"
         },
         {
           "headword": "Æthiopiæ",
@@ -5030,8 +5089,9 @@
           "zh": "克德龍",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/6 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "汲淪"
         },
         {
           "headword": "Chusai",
@@ -5090,8 +5150,9 @@
           "zh": "培卡黑",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "7/7 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "比加"
         },
         {
           "headword": "Oziæ",
@@ -5126,8 +5187,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "耶哥尼雅"
         },
         {
           "headword": "Barachias",
@@ -5330,8 +5392,9 @@
           "zh": "培黎齊",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "3/3 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "民族與國名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "比利洗人"
         },
         {
           "headword": "Ammiud",
@@ -5570,8 +5633,9 @@
           "zh": "",
           "zhRoute": "",
           "zhEvidence": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "民族與國名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Rasin",
@@ -5918,8 +5982,9 @@
           "zh": "阿希辣",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "2/2 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "哀嫩"
         },
         {
           "headword": "Hethæus",
@@ -6338,8 +6403,9 @@
           "zh": "米耳加",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "5/5 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "其他人名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": ""
         },
         {
           "headword": "Gomorrhæ",
@@ -6590,8 +6656,9 @@
           "zh": "西乃",
           "zhRoute": "sigao-underline-alignment",
           "zhEvidence": "2/2 節同現",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "西乃"
         },
         {
           "headword": "Socho",
@@ -16961,8 +17028,9 @@
           "churchFrequency": 182,
           "zh": "",
           "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "耶路撒冷"
         },
         {
           "headword": "Latin",
@@ -19112,8 +19180,9 @@
           "churchFrequency": 26,
           "zh": "",
           "zhRoute": "",
-          "category": "待歸類",
-          "categoryRoute": ""
+          "category": "地名",
+          "categoryRoute": "希臘↔拉丁字形橋",
+          "zhProtestant": "伯利恆"
         },
         {
           "headword": "Immaculatae",
