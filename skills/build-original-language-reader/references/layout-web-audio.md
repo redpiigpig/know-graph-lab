@@ -144,3 +144,22 @@ Use a state such as:
 ```
 
 An external textbook link may be shown as a reference. Browser/device TTS may be a clearly labelled provisional locator but never satisfies a required historical pronunciation track.
+
+### Where device speech is the deliverable, not a placeholder
+
+Latin is the exception, by the owner's decision (2026-08-27): its audio lives on
+the web page and there is no recorded track to wait for. That is defensible only
+because Roman ecclesiastical pronunciation is Italian phonology, so an Italian
+voice reading Italian-spelled Latin is *correct*, not approximate — see
+`utils/ecclesiasticalLatin.ts` and the Latin contract.
+
+Hebrew and Greek keep the old rule. Modern Israeli Hebrew merges the contrasts
+BBH2 teaches and Modern Greek is not Koine; for those two, device speech stays a
+labelled locator.
+
+The shared controller is `composables/useOriginalReaderAudio.ts`:
+`playDevice(language, segments)` walks a list with `currentSegmentId` for the
+highlight, `speakOne(language, text)` reads one line or one word, `rate` is
+shared, and `SPEECH_TEXT` holds the per-language rewrite. Warm `getVoices()` on
+mount — Chrome returns an empty list on the first call, and without the warm-up
+the first click reports a missing voice that is installed.

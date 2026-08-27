@@ -12,6 +12,11 @@
           <h1 class="mt-3 max-w-4xl font-serif text-3xl font-semibold leading-tight sm:text-5xl break-words">{{ reader.title }}</h1>
           <p class="mt-4 max-w-3xl text-sm leading-7 text-stone-300">{{ reader.subtitle }}</p>
           <p class="mt-2 text-xs text-stone-400">發音：{{ reader.pronunciation }}　·　資料產生於 {{ reader.generatedOn }}</p>
+          <p class="mt-3 max-w-3xl rounded-2xl border border-stone-600 bg-white/5 px-4 py-3 text-xs leading-6 text-stone-300 break-words">
+            朗讀：課文、記憶單元、彌撒經文與附錄各條都可以點著聽。走裝置語音，不另下載音檔——羅馬式教會發音本來就是照義大利語音韻讀拉丁文，
+            所以拼寫會先改寫成同音的義大利文寫法（<span class="latin">caelum→celum</span>、<span class="latin">gratia→grazia</span>、<span class="latin">excelsis→ecscelsis</span>）再交給義大利語聲線。
+            裝置若沒裝義大利語音，會退回預設聲線，發音就不準了。
+          </p>
           <dl class="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <div v-for="stat in stats" :key="stat.label" class="rounded-2xl border border-stone-600 bg-white/5 px-4 py-3">
               <dt class="text-[11px] text-stone-400 truncate">{{ stat.label }}</dt>

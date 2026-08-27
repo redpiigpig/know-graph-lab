@@ -322,11 +322,30 @@ pages live at `/original-readers/lat-lessons`. The overview prints what is *not*
 finished, because a page that shows only its finished parts invites a draft to
 be mistaken for a release.
 
-**Audio** — `scripts/build_latin_reader_audio.py` renders the ten formulas and
-every memory unit with an Italian system voice, at the Roman pronunciation's
-nearest available approximation, and stamps the manifest `draft`. **This does not
-satisfy the audio gate.** A release track records reader, rate, cues, checksum
-and rights, and is a human voice.
+**Audio** — the owner settled this on 2026-08-27: 「音訊都是要放在網頁上的」. The
+audio deliverable for this reader is the web reading aid, not a distributed file.
+It is browser speech, decided per page, with no stored track:
+
+- Every reading line, memory unit, Ordo Missae line, vocabulary headword and
+  appendix entry carries its own 🔊; the reading, the memory units and the whole
+  Ordo also play straight through with the current line highlighted, pausable,
+  and with a rate slider.
+- **The spelling is rewritten before it is spoken.** `utils/ecclesiasticalLatin.ts`
+  maps Latin to the Italian spelling of the same sound, because Roman
+  ecclesiastical pronunciation *is* Italian phonology: `ae/oe→e`, `ti+vowel→zi`
+  (but not after s/t/x), `j→i`, `y→i`, `ph→f`, `th→t`, `ch→c` except before e/i,
+  `xc→csc` before e/i, `mihi→michi`, macrons and apparatus stripped. What
+  Italian already gets right — c and g before e/i, `gn`, `sc` before e/i, `qu`,
+  silent h — is left alone. Eleven tests in
+  `tests/ecclesiastical-latin-speech.test.ts` hold each rule.
+- A device with no Italian voice falls back to the default one, and the page says
+  so rather than pretending the pronunciation is right.
+
+`scripts/build_latin_reader_audio.py` still renders draft WAVs locally for
+listening while a recorded track is arranged; nothing on the web reads them, and
+audio files never go to R2 (`docs/r2-policy.md`). The print release gate is
+unchanged: synthetic speech is not a recorded human track and must never be
+labelled one.
 
 ## Stop conditions specific to this release
 

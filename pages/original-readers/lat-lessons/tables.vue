@@ -51,7 +51,15 @@
                     </thead>
                     <tbody class="divide-y divide-stone-200">
                       <tr v-for="(entry, index) in group.entries" :key="`${group.title}-${index}`" class="align-top">
-                        <td class="latin px-3 py-2 text-base break-words">{{ entry.headword }}</td>
+                        <td class="latin px-3 py-2 text-base break-words">
+                          <button
+                            v-if="audio.deviceSupported.value"
+                            type="button"
+                            class="mr-1 align-middle text-xs text-stone-400 transition hover:text-stone-800"
+                            :aria-label="`朗讀 ${entry.headword}`"
+                            @click="audio.speakOne('la', entry.headword)"
+                          >🔊</button>{{ entry.headword }}
+                        </td>
                         <!-- 中文缺就留白。缺就該看得出來缺，不用英文頂替。 -->
                         <td class="px-3 py-2 break-words" :class="entry.zh ? '' : 'text-stone-400'">{{ entry.zh || "（中文待補）" }}</td>
                         <td class="px-3 py-2 font-mono text-stone-500">{{ entry.frequency ?? "—" }}</td>
@@ -69,6 +77,9 @@
 </template>
 
 <script setup lang="ts">
+// 附錄裡的月份、數字、親屬稱謂都是要唸出來記的，逐條給一個喇叭。
+const audio = useOriginalReaderAudio();
+
 interface Entry {
   headword: string;
   zh: string;

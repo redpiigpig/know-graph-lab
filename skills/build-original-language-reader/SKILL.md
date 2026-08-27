@@ -112,7 +112,7 @@ Two failures recur across languages and are worth carrying into any new reader:
 13. Run `scripts/validate_reader_release.py` against the master before layout. Its defaults assume the Hebrew shape, where every lesson reads a Bible chapter; a volume that reads none needs `--scripture-lessons 0`, and two of its checks fail on a correct book without it. That is a flag, not a defect to fix in the master.
 14. Generate JIS B5 DOCX and PDF from that exact master, matching the shared layout in `references/layout-web-audio.md` — banner cover, real Heading styles, no heading smaller than the body, each lesson's reading on its own page. `scripts/render_and_check_reader_pdfs.py` drives LibreOffice (one `UserInstallation` profile per file) and then checks page geometry, embedded fonts, U+FFFD and blank pages. Invoke the Documents and PDF skills and follow their render-and-verify procedures.
 15. Build the authenticated online counterpart from the same master. Keep authorized JSON and audio out of public static directories.
-16. Add real pronunciation recordings and segment cues only under the frozen historical/textbook profile. Do not expose a play control for a missing track. TTS or an external reference does not satisfy the audio release gate.
+16. Decide where the audio lives before building it. Where the owner has said it belongs on the web — as for Ecclesiastical Latin (2026-08-27) — the deliverable is device speech in the page: per-line and per-word controls, a straight-through walk with the current line highlighted, and a spelling rewrite that makes the voice correct rather than approximate (`utils/ecclesiasticalLatin.ts`). Where a recorded track is required instead, add real recordings and segment cues only under the frozen historical/textbook profile, never expose a play control for a missing track, and never let TTS or an external link satisfy that gate.
 17. Run the deterministic, package, raster, full-resolution visual, API, UI, type, build, and audio gates in `references/qa-gates.md`.
 18. Run `scripts/hash_release_artifacts.py` after all artifacts pass. Store the resulting hash manifest beside the QA report.
 19. Report exact paths, counts, versions, hashes, QA results, and audio status. Do not deploy, publish, or call the release complete without explicit authority and every required gate passing.
@@ -132,7 +132,7 @@ Stop the release and report the exact gap when:
 - a declared full reading contains placeholders or excerpts;
 - a Bible translation or variant is not explicit;
 - required pointing, accents, breathings, or transliteration fields are incomplete;
-- real reviewed audio is required but only TTS or links exist;
+- real reviewed audio is required but only TTS or links exist (this does not apply where the owner has designated web device speech as the deliverable);
 - a final artifact hash differs from its QA report or master;
 - an appendix row would print in a language other than the reader's own.
 
