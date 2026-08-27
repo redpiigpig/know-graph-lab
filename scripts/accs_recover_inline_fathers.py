@@ -59,6 +59,10 @@ MIN_NAME_USES = 5          # 在語料裡至少當過 5 次署名，濾掉一次
 MIN_NAME_LEN = 3           # 兩字以下多半是被切斷的殘名
 WORKISH = ('註釋', '作品', '斷片', '講道集', '書信集', '選集', '集萃', '《', '》')
 NOT_A_NAME = ('保羅說', '使徒', '經文', '先知')
+# 逐筆檢視 22 個候選時挑出來的 OCR 錯字名。語料裡這兩位各有十幾種寫法，
+# 沒有一種是正確的（Didymus 應為「失明者狄狄模」、Chrysostom 應為「屈梭多模」），
+# 補上去只是把既有的錯字擴散。等 father_name 全面正規化時一起處理。
+GARBLED = ('失明者獲地模', '屈梭模')
 
 
 def known_names(rows: list[dict]) -> list[str]:
@@ -68,7 +72,8 @@ def known_names(rows: list[dict]) -> list[str]:
     good = [n for n, c in uses.items()
             if c >= MIN_NAME_USES and len(n) >= MIN_NAME_LEN
             and not any(w in n for w in WORKISH)
-            and not any(w in n for w in NOT_A_NAME)]
+            and not any(w in n for w in NOT_A_NAME)
+            and n not in GARBLED]
     return sorted(good, key=len, reverse=True)   # 長名優先：「敘利亞人以法蓮」勝過「以法蓮」
 
 
