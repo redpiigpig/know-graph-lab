@@ -40,7 +40,10 @@ TERM_GROUPS = {
     "佛教系譜": ["太虛", "印順", "傳道法師", "昭慧", "性廣", "妙心寺", "弘誓"],
     "基督教系譜": ["黃彰輝", "宋泉盛", "王憲治", "黃伯和", "長老教會", "普世教會協會", "南神"],
     "公共議題": ["反核", "動物保護", "廢除死刑", "同志", "性別平權", "反賭", "八敬法", "人權宣言", "跨宗教"],
+    "無教會": ["無教會", "無教会", "內村鑑三", "内村鑑三", "矢內原忠雄", "矢内原忠雄", "金教臣", "無境界"],
 }
+# 日文語料照原樣收，所以「無教会」「内村鑑三」這種日文字形要各自成詞——
+# 同一個概念在中日文寫法不同，合併計數會讓兩邊的曲線互相污染。
 
 
 def all_terms():
@@ -121,6 +124,29 @@ def iter_faryin():
     return _iter_txt("yinshun-hongshi-fulltext/法印學報", meta)
 
 
+
+def iter_pct_documents():
+    meta = {}
+    for r in _load_index("pct/documents-index.json"):
+        meta[r["textKey"]] = {"year": r.get("year", ""), "title": r["title"]}
+    return _iter_txt("pct-fulltext/pct-documents", meta)
+
+
+def iter_laijohn():
+    meta = {}
+    for p in _load_index("pct/laijohn-index.json"):
+        for a in p["articles"]:
+            meta[a["textKey"]] = {"year": "", "title": a["title"]}
+    return _iter_txt("pct-fulltext/laijohn", meta)
+
+
+def iter_mukyokai():
+    meta = {}
+    for r in _load_index("mukyokai/index.json"):
+        meta[r["textKey"]] = {"year": r.get("year", ""), "title": r["title"]}
+    return _iter_txt("mukyokai-fulltext", meta)
+
+
 CORPORA = {
     "tcnn": {"name": "台灣教會公報新聞網", "side": "基督教", "iter": iter_tcnn},
     "new-messenger": {"name": "新使者", "side": "基督教", "iter": iter_new_messenger},
@@ -128,6 +154,9 @@ CORPORA = {
     "hongshi": {"name": "弘誓雙月刊", "side": "佛教", "iter": iter_hongshi_magazine},
     "xuanzang": {"name": "玄奘佛學研究", "side": "佛教", "iter": iter_xuanzang},
     "faryin": {"name": "法印學報", "side": "佛教", "iter": iter_faryin},
+    "pct-documents": {"name": "長老教會總會文獻", "side": "基督教", "iter": iter_pct_documents},
+    "laijohn": {"name": "本土信徒傳記", "side": "基督教", "iter": iter_laijohn},
+    "mukyokai": {"name": "無教會研究", "side": "基督教", "iter": iter_mukyokai},
 }
 
 

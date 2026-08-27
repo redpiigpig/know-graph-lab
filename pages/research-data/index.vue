@@ -22,6 +22,14 @@
         </NuxtLink>
 
         <!-- 印順學派與弘誓研究資料 -->
+        <NuxtLink to="/research-data/evangelical" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
+          <div class="tool-icon bg-orange-50 text-orange-600">🗞️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">台灣福音派研究資料</h2>
+            <p class="tool-desc">基督教論壇報等福音派報刊；長老教會公共神學的對照面，用來看基督教內部的分裂</p>
+          </div>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/mukyokai" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
           <div class="tool-icon bg-emerald-50 text-emerald-600">📄</div>
           <div class="flex-1">
