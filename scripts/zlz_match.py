@@ -82,6 +82,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--gap", action="store_true", help="輸出站上有但藏經沒有的")
     ap.add_argument("--out", help="寫出分類器 records JSON")
+    ap.add_argument("--todo", help="寫出 zlz_fetch 的下載清單 JSON")
     ap.add_argument("--min-len", type=int, default=3, help="標題正規化後短於此不比對")
     a = ap.parse_args()
 
@@ -153,6 +154,13 @@ def main() -> int:
             mk = "=" if h.get("match") == "exact" else "⊃"
             print(f"  [{h['category_zh']:<4}] {h['title'][:38]:<40}"
                   f"{mk} {d['era']:<13}{d['title_zh'][:22]}")
+
+    if a.todo:
+        Path(a.todo).write_text(json.dumps(
+            [{"id": r["id"], "title": r["title"], "url": r["url"],
+              "category_zh": r["category_zh"]} for r in rows],
+            ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"\n已寫下載清單 {a.todo}（{len(rows)} 筆）")
 
     if a.out:
         recs = [{
