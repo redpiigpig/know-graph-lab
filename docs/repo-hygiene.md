@@ -107,12 +107,18 @@ pytest.ini  .gitignore  .nuxtrc  .env
 
 ---
 
-## 七、已知待清（不阻塞，遇到順手處理）
+## 七、大檔的處理慣例（2026-08-27 三項已清）
 
-- `public/content/works/c12-presentation.pptx`（10.7 MB）：網站下載連結直接指向 `public/`。
-  照 `r2-policy.md` 應改走 Drive 正本 → R2 後備，正本移進 `著作/論文寫作/`。
-- `public/content/works/theological-studies-manifesto/images/`（15 MB）：目前沒有任何頁面引用，
-  確認用途後決定留 `public/` 或移 Drive。
-- `test/`（`*.spec.ts`）與 `tests/`（`*.test.ts`）兩個目錄並存，`vitest.config.ts` 兩邊都跑。
-  哪天要動測試佈局時併成一個，順手改 `include`。
-- `public/maps/*.geojson`（80 MB）：網站直接讀，暫留；若再長大就改走 API + R2。
+`public/` 放的是網站直接送出的資產，但**體積要壓在合理範圍**：單一下載檔 ≲ 5 MB
+（`docs/r2-policy.md` 的門檻），插圖用 JPEG 不用 PNG。已處理的三例可以照抄：
+
+- **簡報 `c12-presentation.pptx` 10.77 → 4.79 MB**：內嵌圖片全是原始解析度照片
+  （最大 3414×2466）。做法是解開 zip、把圖縮到寬 1920、JPEG q78 重存；那張 2.4 MB
+  的封面 PNG 無透明，轉成 JPEG 並同步改 `slide1.xml.rels` 的 Target 與檔名。
+  改完要驗兩件事：每個 `.rels` 的內部 Target 都存在，以及 python-pptx 讀出的
+  投影片數／圖片數／文字量與原檔一致。原檔留 Drive `寫作計畫/論文寫作/`。
+- **AI 生成插圖 15 → 1.8 MB**：1536×1024 的 PNG 一張 3 MB，轉 JPEG q86 只剩 0.4 MB。
+  AI 圖不可完全重現，原始 PNG 一律先備份到 Drive 再轉。
+- **`test/` 與 `tests/` 併成一個**：測試一律放 `test/`，副檔名一律 `.spec.ts`。
+
+`public/maps/*.geojson`（80 MB）網站直接讀，暫時留著；若再長大就改走 API + R2。

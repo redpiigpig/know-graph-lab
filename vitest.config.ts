@@ -5,7 +5,8 @@ import { defineVitestConfig } from '@nuxt/test-utils/config'
 export default defineVitestConfig({
   test: {
     environment: 'nuxt',
-    include: ['test/**/*.spec.ts', 'tests/**/*.test.ts'],
+    // 測試一律放 test/，副檔名一律 .spec.ts（2026-08-27 把原本並存的 tests/*.test.ts 併進來）
+    include: ['test/**/*.spec.ts'],
     // Each spec spins up its own Nuxt environment; running many concurrently races
     // on @nuxt/test-utils setup (entry.mjs) and intermittently aborts a file
     // (e.g. multilang-sources skipping all 27). Serialize files for stability —
