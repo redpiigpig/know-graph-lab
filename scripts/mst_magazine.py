@@ -63,6 +63,12 @@ def get(url: str) -> bytes:
             r = requests.get(url, headers=UA, timeout=45)
             r.raise_for_status()
             return r.content
+        except requests.HTTPError as e:
+            # 站上索引頁留有不少失效連結；4xx 重試沒有意義，直接放棄換下一篇。
+            if e.response is not None and 400 <= e.response.status_code < 500:
+                raise
+            last = e
+            time.sleep(3 * (attempt + 1))
         except Exception as e:  # noqa: BLE001  站在自架主機上，偶有斷線
             last = e
             time.sleep(3 * (attempt + 1))
@@ -160,6 +166,29 @@ def harvest():
 
 
 # ── process ───────────────────────────────────────────────────────────────
+def candidates(url: str):
+    """站方欄目頁的相對路徑常漏掉 magazinep/ 這一層，副檔名也 .htm/.html 混用。
+    依序試這些變體，第一個 200 的就是本篇。"""
+    seen, out = set(), []
+    for u in (url, url.replace("/Magazine/", "/Magazine/magazinep/", 1)):
+        for v in (u, re.sub(r"\.html$", ".htm", u), re.sub(r"\.htm$", ".html", u)):
+            if v not in seen:
+                seen.add(v)
+                out.append(v)
+    return out
+
+
+def fetch_article(url: str):
+    """→ (raw bytes, 實際生效的 URL)。全部候選都 4xx 才拋出最後一個錯誤。"""
+    last = None
+    for cand in candidates(url):
+        try:
+            return get(cand), cand
+        except requests.HTTPError as e:
+            last = e
+    raise last
+
+
 def article_text(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style"]):
@@ -182,11 +211,12 @@ def process(limit=None):
         if limit is not None and done >= limit:
             break
         try:
-            raw = get(row["url"])
+            raw, final_url = fetch_article(row["url"])
         except Exception as e:  # noqa: BLE001
             print(f"  ! {row['title']}: {e}")
             failed += 1
             continue
+        row["fetched"] = final_url
         html = decode(raw)
         text = article_text(html)
         if len(text) < 120:  # 目次殘頁／空殼，不入庫
@@ -213,11 +243,13 @@ def publish():
         if f"{R2_TXT}/{slug}.txt" not in have:
             continue
         issue = row["issue"] or 0
+        # srcKey 走既有的 yinshun-hongshi-text API：它會把 yinshun-hongshi/ 換成
+        # yinshun-hongshi-fulltext/ 再加 .txt，所以這裡不帶副檔名即可對上。
         by_issue.setdefault(issue, []).append({
             "title": row["title"],
             "column": row.get("column") or "",
-            "textKey": f"{R2_TXT}/{slug}.txt",
-            "source": row["url"],
+            "srcKey": f"yinshun-hongshi/妙心雜誌/{slug}",
+            "source": row.get("fetched") or row["url"],
         })
     out = [{"issue": str(i), "articles": sorted(a, key=lambda x: x["title"])}
            for i, a in sorted(by_issue.items(), reverse=True)]

@@ -56,6 +56,24 @@
           <span class="tool-badge bg-emerald-50 text-emerald-600">{{ fuyanCount || '…' }} 期</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/yinshun-hongshi/miaoxin" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
+          <div class="tool-icon bg-orange-50 text-orange-600">📙</div>
+          <div class="flex-1">
+            <h2 class="tool-title">妙心雜誌</h2>
+            <p class="tool-desc">台南妙心寺雙月刊，傳道法師人間佛教在地實踐的發聲處；《法句經講記》連載與傳道長老追思專輯</p>
+          </div>
+          <span class="tool-badge bg-orange-50 text-orange-600">{{ mstCount || '…' }} 期</span>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/yinshun-hongshi/faryin" class="tool-card group border-cyan-100 hover:border-cyan-300 hover:shadow-cyan-100">
+          <div class="tool-icon bg-cyan-50 text-cyan-600">📘</div>
+          <div class="flex-1">
+            <h2 class="tool-title">法印學報</h2>
+            <p class="tool-desc">佛教弘誓學院學術期刊；弘誓官網改版後舊連結失效，此處收玄奘大學佛教學系現存的第九～十三期</p>
+          </div>
+          <span class="tool-badge bg-cyan-50 text-cyan-600">{{ faryinCount || '…' }} 期</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
@@ -72,6 +90,8 @@ const logCount = ref(0);
 const fuyanCount = ref(0);
 const xzCount = ref(0);
 const meetCount = ref(0);
+const mstCount = ref(0);
+const faryinCount = ref(0);
 
 async function count(url: string): Promise<number> {
   try {
@@ -89,6 +109,8 @@ onMounted(async () => {
   fuyanCount.value = await count(`${base}/fuyan-index.json`);
   xzCount.value = await count(`${base}/xuanzang-index.json`);
   meetCount.value = await count(`${base}/meeting-index.json`);
+  mstCount.value = await count(`${base}/miaoxin-index.json`);
+  faryinCount.value = await count(`${base}/faryin-index.json`);
 });
 </script>
 
