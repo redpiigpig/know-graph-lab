@@ -73,6 +73,29 @@ UNAVAILABLE_PREFIXES = (
 MIN_FULLTEXT_PARAS = 6   # fewer than this ⇒ likely a homepage/paywall, not the article
 CONSEC_FAIL_ABORT = 4
 
+# 節流不等於額度耗盡。每分鐘速率限制、503/504、讀取逾時都是暫時的：退避幾分鐘再翻
+# 同一篇就能繼續。但原本這些全計入 consec_fail，四次就整條退出、外層再冷卻 30 分鐘
+# ——小卡頓被當成大故障。2026-08-27 實測 gemini lane 整夜在 run→429→abort→冷卻
+# 之間打轉，大半時間什麼都沒做。
+# 現在：節流類先走退避階梯重試同一篇，階梯跑完仍失敗才算一次真失敗。日配額真的乾掉
+# 時階梯會全部撞光、照樣累積到 abort，只是晚幾分鐘——那正是我們要的取捨。
+RATE_LIMIT_HINTS = (
+    "exhausted",          # Gemini「all N keys exhausted」／Anthropic「exhausted retries」
+    "throttl", "429", "rate limit", "rate_limit",
+    "503", "504", "timeout", "timed out", "temporarily",
+)
+RATE_LIMIT_BACKOFFS = (60, 180, 300)
+
+
+def is_rate_limited(exc: Exception) -> bool:
+    """暫時性節流＝值得等；模型消失／認證壞掉＝等再久也沒用。"""
+    msg = str(exc).lower()
+    for permanent in ("model unavailable", "no gemini api key", "no nvidia api key",
+                      "may need re-auth", "not installed"):
+        if permanent in msg:
+            return False
+    return any(h in msg for h in RATE_LIMIT_HINTS)
+
 
 # ── REST helpers ──────────────────────────────────────────────────────────────
 def rest_upsert(table: str, rows: list[dict], on_conflict: str) -> None:
@@ -341,51 +364,62 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
     consec_fail = 0
     for e in todo:
         print(f"  → {e['ref_key']}  ({e['fulltext_url']})", flush=True)
-        try:
-            kind, text = fetch_url(e["fulltext_url"])
-            paras = (lr.extract_paragraphs_from_text(text) if kind == "pdf"
-                     else lr.extract_paragraphs_from_html(text))
-            print(f"    {kind}: {len(paras)} paragraphs", flush=True)
-            if len(paras) < MIN_FULLTEXT_PARAS:
-                print("    ⚠ too few paragraphs (homepage/paywall?) — leave pending, fix URL", flush=True)
-                consec_fail = 0
-                continue
-            if dry_run:
-                continue
-            orig = paras[:limit_paras] if limit_paras else paras
-            if orig_only:
-                store_orig_sections(e["id"], orig)
-                rest_patch("lit_review_entries", f"id=eq.{e['id']}",
-                           {"fulltext_status": "fetched"})
-                print(f"    ✓ stored {len(orig)} original-language paragraphs", flush=True)
-                consec_fail = 0
-                continue
-            n = translate_and_store(e["id"], orig, te, fn, pace, resume)
-            # fully done only when the WHOLE article is translated — never mark a
-            # --limit-paras pilot 'translated' (it truncates orig, so resume would
-            # then wrongly skip the rest of the article).
-            complete = (limit_paras is None) and len(done_zh_indices(e["id"])) >= len(paras)
-            rest_patch("lit_review_entries", f"id=eq.{e['id']}",
-                       {"fulltext_status": "translated" if complete else "fetched"})
-            print(f"    ✓ +{n} paras this run; {'complete' if complete else 'partial (re-run --resume)'}", flush=True)
-            consec_fail = 0
-        except Exception as exc:  # noqa: BLE001
-            # Permanent HTTP errors (paywall/forbidden/not-found/gone) are NOT a
-            # quota/network problem — mark the entry unavailable and keep going so
-            # a wall of paywalled DOIs can't trip the consecutive-failure abort.
-            status = getattr(getattr(exc, "response", None), "status_code", None)
-            if status in (401, 403, 404, 410):
-                if not dry_run:
+        # 內層＝同一篇的節流退避重試；break 一律代表「這篇處理完了，換下一篇」。
+        for attempt in range(len(RATE_LIMIT_BACKOFFS) + 1):
+            try:
+                kind, text = fetch_url(e["fulltext_url"])
+                paras = (lr.extract_paragraphs_from_text(text) if kind == "pdf"
+                         else lr.extract_paragraphs_from_html(text))
+                print(f"    {kind}: {len(paras)} paragraphs", flush=True)
+                if len(paras) < MIN_FULLTEXT_PARAS:
+                    print("    ⚠ too few paragraphs (homepage/paywall?) — leave pending, fix URL", flush=True)
+                    consec_fail = 0
+                    break
+                if dry_run:
+                    break
+                orig = paras[:limit_paras] if limit_paras else paras
+                if orig_only:
+                    store_orig_sections(e["id"], orig)
                     rest_patch("lit_review_entries", f"id=eq.{e['id']}",
-                               {"fulltext_status": "unavailable"})
-                print(f"    ⏭ {status} not-OA → unavailable", flush=True)
+                               {"fulltext_status": "fetched"})
+                    print(f"    ✓ stored {len(orig)} original-language paragraphs", flush=True)
+                    consec_fail = 0
+                    break
+                n = translate_and_store(e["id"], orig, te, fn, pace, resume)
+                # fully done only when the WHOLE article is translated — never mark a
+                # --limit-paras pilot 'translated' (it truncates orig, so resume would
+                # then wrongly skip the rest of the article).
+                complete = (limit_paras is None) and len(done_zh_indices(e["id"])) >= len(paras)
+                rest_patch("lit_review_entries", f"id=eq.{e['id']}",
+                           {"fulltext_status": "translated" if complete else "fetched"})
+                print(f"    ✓ +{n} paras this run; {'complete' if complete else 'partial (re-run --resume)'}", flush=True)
                 consec_fail = 0
-                continue
-            consec_fail += 1
-            print(f"    ✗ FAIL: {exc}  (consec={consec_fail})", flush=True)
-            if consec_fail >= CONSEC_FAIL_ABORT:
-                raise SystemExit(f"aborting: {CONSEC_FAIL_ABORT} consecutive failures "
-                                 "(quota/network) — re-run with --resume later")
+                break
+            except Exception as exc:  # noqa: BLE001
+                # Permanent HTTP errors (paywall/forbidden/not-found/gone) are NOT a
+                # quota/network problem — mark the entry unavailable and keep going so
+                # a wall of paywalled DOIs can't trip the consecutive-failure abort.
+                status = getattr(getattr(exc, "response", None), "status_code", None)
+                if status in (401, 403, 404, 410):
+                    if not dry_run:
+                        rest_patch("lit_review_entries", f"id=eq.{e['id']}",
+                                   {"fulltext_status": "unavailable"})
+                    print(f"    ⏭ {status} not-OA → unavailable", flush=True)
+                    consec_fail = 0
+                    break
+                if is_rate_limited(exc) and attempt < len(RATE_LIMIT_BACKOFFS):
+                    wait = RATE_LIMIT_BACKOFFS[attempt]
+                    print(f"    ⏸ 節流（{exc}）— 等 {wait}s 再試同一篇 "
+                          f"[{attempt + 1}/{len(RATE_LIMIT_BACKOFFS)}]，不計入連續失敗",
+                          flush=True)
+                    time.sleep(wait)
+                    continue
+                consec_fail += 1
+                print(f"    ✗ FAIL: {exc}  (consec={consec_fail})", flush=True)
+                if consec_fail >= CONSEC_FAIL_ABORT:
+                    raise SystemExit(f"aborting: {CONSEC_FAIL_ABORT} consecutive failures "
+                                     "(quota/network) — re-run with --resume later")
+                break
 
 
 def main():
