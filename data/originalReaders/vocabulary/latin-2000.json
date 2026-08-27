@@ -1005,8 +1005,9 @@
       "volume": "上冊",
       "lesson": 4,
       "ordinal": 62,
-      "glossZh": "這、此",
-      "glossEngine": "claude-haiku-4-5-20251001"
+      "glossZh": "這裡、此處",
+      "glossEngine": "claude-haiku-4-5-20251001",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "hymnus",
@@ -3933,8 +3934,9 @@
       "volume": "上冊",
       "lesson": 13,
       "ordinal": 245,
-      "glossZh": "世界、宇宙",
-      "glossEngine": "claude-haiku-4-5-20251001"
+      "glossZh": "潔淨的、純潔的",
+      "glossEngine": "claude-haiku-4-5-20251001",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "per",
@@ -7793,9 +7795,9 @@
       "glossEngine": "claude-haiku-4-5-20251001"
     },
     {
-      "headword": "titive gen.",
-      "forms": "titive gen.",
-      "gram": "",
+      "headword": "satis (+ partitive gen.)",
+      "forms": "satis (+ partitive gen.)",
+      "gram": "adv. + partitive gen.",
       "glossEn": "enough, sufficiently",
       "unit": 15,
       "exerciseOnly": false,
@@ -7806,7 +7808,8 @@
       "lesson": 25,
       "ordinal": 487,
       "glossZh": "足夠、充分",
-      "glossEngine": "nvidia:meta/llama-3.1-70b-instruct"
+      "glossEngine": "nvidia:meta/llama-3.1-70b-instruct",
+      "ocrRepair": "OCR 把 Collins 的詞典行切斷，尾巴成了獨立詞條；2026-08-27 修回"
     },
     {
       "headword": "ācer",
@@ -8061,8 +8064,9 @@
       "volume": "上冊",
       "lesson": 26,
       "ordinal": 503,
-      "glossZh": "建立、創立",
-      "glossEngine": "claude-haiku-4-5-20251001"
+      "glossZh": "傾注、傾倒、流出",
+      "glossEngine": "claude-haiku-4-5-20251001",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "genū",
@@ -11069,8 +11073,9 @@
       "volume": "上冊",
       "lesson": 35,
       "ordinal": 691,
-      "glossZh": "書、卷",
-      "glossEngine": "nvidia:meta/llama-3.1-70b-instruct"
+      "glossZh": "自由的、無拘束的",
+      "glossEngine": "nvidia:meta/llama-3.1-70b-instruct",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "miseror",
@@ -13965,8 +13970,9 @@
       "volume": "上冊",
       "lesson": 44,
       "ordinal": 872,
-      "glossZh": "滑落、跌倒",
-      "glossEngine": "claude-haiku-4-5-20251001"
+      "glossZh": "勞苦、工作、辛勞",
+      "glossEngine": "claude-haiku-4-5-20251001",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "lavō",
@@ -15101,8 +15107,9 @@
       "volume": "上冊",
       "lesson": 48,
       "ordinal": 943,
-      "glossZh": "許可、得以",
-      "glossEngine": "claude-haiku-4-5-20251001"
+      "glossZh": "雖然、儘管",
+      "glossEngine": "claude-haiku-4-5-20251001",
+      "glossReview": "同形異義：詞義層鍵在 headword 撞號，2026-08-27 依整條詞典行更正"
     },
     {
       "headword": "mōnstrō",

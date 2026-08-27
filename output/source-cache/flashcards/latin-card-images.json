@@ -50,6 +50,20 @@
       "glossZh": "晚餐、宴席",
       "borrowedVia": "晚餐"
     },
+    "coram": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "cōram",
+      "glossZh": "在……面前"
+    },
+    "culpa, culpae, f.": {
+      "hexcode": "274C",
+      "file": "274C.png",
+      "source": "override",
+      "headword": "culpa",
+      "glossZh": "過錯、責任"
+    },
     "cum": {
       "hexcode": "1F9D1-200D-1F91D-200D-1F9D1",
       "file": "1F9D1-200D-1F91D-200D-1F9D1.png",
@@ -152,6 +166,13 @@
       "headword": "missa",
       "glossZh": "彌撒、聖祭"
     },
+    "natura, naturae, f.": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "headword": "nātūra",
+      "glossZh": "性質、自然"
+    },
     "papa, papae, m.": {
       "hexcode": "1F468",
       "file": "1F468.png",
@@ -241,6 +262,13 @@
       "headword": "apostolus",
       "glossZh": "宗徒",
       "borrowedVia": "使徒"
+    },
+    "archangelus, archangeli, m.": {
+      "hexcode": "1F47C",
+      "file": "1F47C.png",
+      "source": "override",
+      "headword": "archangelus",
+      "glossZh": "大天使"
     },
     "christus, christi, m.": {
       "hexcode": "271D",
@@ -366,6 +394,13 @@
       "glossZh": "是、存在",
       "borrowedVia": "是"
     },
+    "trans": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "override",
+      "headword": "trāns",
+      "glossZh": "越、橫過"
+    },
     "caelum, caeli, n.": {
       "hexcode": "2601",
       "file": "2601.png",
@@ -380,6 +415,13 @@
       "headword": "canticum",
       "glossZh": "聖歌、讚美詩",
       "borrowedVia": "讚美詩"
+    },
+    "chorus, chori, m.": {
+      "hexcode": "1F3B6",
+      "file": "1F3B6.png",
+      "source": "override",
+      "headword": "chorus",
+      "glossZh": "聖詠團、唱詩班"
     },
     "donum, doni, n.": {
       "hexcode": "1F381",
@@ -397,12 +439,26 @@
       "glossZh": "福音、喜訊",
       "borrowedVia": "福音"
     },
+    "festum, festi, n.": {
+      "hexcode": "1F389",
+      "file": "1F389.png",
+      "source": "override",
+      "headword": "festum",
+      "glossZh": "慶節、盛宴"
+    },
     "gaudium, gaudi, n.": {
       "hexcode": "1F600",
       "file": "1F600.png",
       "source": "override",
       "headword": "gaudium",
       "glossZh": "喜樂、歡欣"
+    },
+    "hic": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "hic",
+      "glossZh": "這裡、此處"
     },
     "hymnus, hymni, m.": {
       "hexcode": "1F3B6",
@@ -427,6 +483,20 @@
       "glossZh": "永遠、世世無窮",
       "borrowedVia": "永遠"
     },
+    "mysterium, mysterii, n.": {
+      "hexcode": "1F512",
+      "file": "1F512.png",
+      "source": "override",
+      "headword": "mystērium",
+      "glossZh": "奧祕、神聖奧祕"
+    },
+    "odium, odii, n.": {
+      "hexcode": "1F620",
+      "file": "1F620.png",
+      "source": "override",
+      "headword": "ōdium",
+      "glossZh": "憎恨、仇恨"
+    },
     "peccatum, peccati, n.": {
       "hexcode": "1F5A4",
       "file": "1F5A4.png",
@@ -449,6 +519,13 @@
       "headword": "praeceptum",
       "glossZh": "誡命、教訓",
       "borrowedVia": "誡命"
+    },
+    "praemium, praemii": {
+      "hexcode": "1F3C6",
+      "file": "1F3C6.png",
+      "source": "override",
+      "headword": "praemium",
+      "glossZh": "賞賜、獎勵"
     },
     "regina, reginae, f.": {
       "hexcode": "1F451",
@@ -495,6 +572,13 @@
       "glossZh": "盟約、聖約",
       "borrowedVia": "約"
     },
+    "uniuersum, uniuersi, n.": {
+      "hexcode": "1FA90",
+      "file": "1FA90.png",
+      "source": "override",
+      "headword": "ūniversum",
+      "glossZh": "宇宙、萬物"
+    },
     "uerbum, uerbi, n.": {
       "hexcode": "1F5EF",
       "file": "1F5EF.png",
@@ -518,6 +602,13 @@
       "headword": "vir",
       "glossZh": "人、男人、丈夫、英雄",
       "borrowedVia": "人"
+    },
+    "uitium, uitii, n.": {
+      "hexcode": "1F44E",
+      "file": "1F44E.png",
+      "source": "override",
+      "headword": "vitium",
+      "glossZh": "過失、缺點、惡行"
     },
     "aeternus, -a, -um": {
       "hexcode": "267E",
@@ -555,6 +646,20 @@
       "headword": "bonus",
       "glossZh": "善的、好的"
     },
+    "cenaculum, cenaculi, n.": {
+      "hexcode": "1F3E0",
+      "file": "1F3E0.png",
+      "source": "override",
+      "headword": "cēnāculum",
+      "glossZh": "餐室、樓上房間"
+    },
+    "clarus, -a, -um": {
+      "hexcode": "2600",
+      "file": "2600.png",
+      "source": "override",
+      "headword": "clārus",
+      "glossZh": "明亮的、光明的；著名的"
+    },
     "gladius, gladii, m.": {
       "hexcode": "1F5E1",
       "file": "1F5E1.png",
@@ -569,6 +674,13 @@
       "headword": "impius",
       "glossZh": "不虔誠的、邪惡的",
       "borrowedVia": "邪惡的"
+    },
+    "in aeternum": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "in aeternum",
+      "glossZh": "永遠地、至永遠"
     },
     "magister, magistri, m.": {
       "hexcode": "1F9D1-200D-1F3EB",
@@ -653,6 +765,13 @@
       "headword": "numerus",
       "glossZh": "數、數目、眾多"
     },
+    "pius, -a, -um": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "pius",
+      "glossZh": "虔敬的、仁慈的"
+    },
     "sabaoth": {
       "hexcode": "1FA96",
       "file": "1FA96.png",
@@ -676,6 +795,13 @@
       "headword": "sacrāmentum",
       "glossZh": "聖事、聖禮"
     },
+    "tuus, -a, -um": {
+      "hexcode": "1FAF5",
+      "file": "1FAF5.png",
+      "source": "override",
+      "headword": "tuus",
+      "glossZh": "你的"
+    },
     "uerus, -a, -um": {
       "hexcode": "1F4AF",
       "file": "1F4AF.png",
@@ -683,6 +809,20 @@
       "headword": "vērus",
       "glossZh": "真實的、真的",
       "borrowedVia": "真實的"
+    },
+    "uiuus, -a, -um": {
+      "hexcode": "1F493",
+      "file": "1F493.png",
+      "source": "override",
+      "headword": "vivus",
+      "glossZh": "活的、生活的"
+    },
+    "adoro, adorare, adoraui, adoratus": {
+      "hexcode": "1F647",
+      "file": "1F647.png",
+      "source": "override",
+      "headword": "adōrō",
+      "glossZh": "崇拜、朝拜"
     },
     "ambulo, ambulare, ambulaui, ambulatus": {
       "hexcode": "1F6B6",
@@ -706,6 +846,27 @@
       "headword": "cantō",
       "glossZh": "唱、詠唱"
     },
+    "collaudo, collaudare, collaudaui, collaudatus": {
+      "hexcode": "1F44F",
+      "file": "1F44F.png",
+      "source": "override",
+      "headword": "collaudō",
+      "glossZh": "極力讚美、共同讚美"
+    },
+    "consecro, consecrare, consecraui, consecratus": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "headword": "cōnsecrō",
+      "glossZh": "祝聖、奉獻為聖"
+    },
+    "conseruo, conseruare, conseruaui, conseruatus": {
+      "hexcode": "1F96B",
+      "file": "1F96B.png",
+      "source": "override",
+      "headword": "conservō",
+      "glossZh": "保持、保存"
+    },
     "diuinus, -a, -um": {
       "hexcode": "2728",
       "file": "2728.png",
@@ -721,6 +882,13 @@
       "headword": "dō",
       "glossZh": "給、賜予",
       "borrowedVia": "給"
+    },
+    "documentum, documenti, n.": {
+      "hexcode": "1F4C4",
+      "file": "1F4C4.png",
+      "source": "override",
+      "headword": "documentum",
+      "glossZh": "例證、文件"
     },
     "dono, donare, donaui, donatus": {
       "hexcode": "1F381",
@@ -746,6 +914,13 @@
       "glossZh": "喚起、召出",
       "borrowedVia": "喚起"
     },
+    "exemplum, exempli": {
+      "hexcode": "1F4DD",
+      "file": "1F4DD.png",
+      "source": "override",
+      "headword": "exemplum",
+      "glossZh": "例子、範例"
+    },
     "exoro, exorare, exoraui, exoratus": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -761,6 +936,13 @@
       "headword": "famulus",
       "glossZh": "僕人、侍者",
       "borrowedVia": "僕人"
+    },
+    "inuoco, inuocare, inuocaui, inuocatus": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "invocō",
+      "glossZh": "祈求、呼求"
     },
     "iustus, -um": {
       "hexcode": "2696",
@@ -784,6 +966,13 @@
       "headword": "liberō",
       "glossZh": "解放、釋放"
     },
+    "merito": {
+      "hexcode": "1F396",
+      "file": "1F396.png",
+      "source": "override",
+      "headword": "meritō",
+      "glossZh": "當之無愧地、應得地"
+    },
     "necnon": {
       "hexcode": "2795",
       "file": "2795.png",
@@ -806,6 +995,13 @@
       "headword": "nunc",
       "glossZh": "現在",
       "borrowedVia": "現在"
+    },
+    "obseruo, obseruare, obseruaui, obseruatus": {
+      "hexcode": "1F52D",
+      "file": "1F52D.png",
+      "source": "override",
+      "headword": "observō",
+      "glossZh": "觀察、遵守"
     },
     "opero, operare, operaui, operatus": {
       "hexcode": "1F4BC",
@@ -847,6 +1043,13 @@
       "glossZh": "統治、君臨",
       "borrowedVia": "統治"
     },
+    "sacro, sacrare, sacraui, sacratus": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "headword": "sacrō",
+      "glossZh": "祝聖、使神聖"
+    },
     "sanctus, -a, -um": {
       "hexcode": "1F607",
       "file": "1F607.png",
@@ -884,6 +1087,20 @@
       "glossZh": "路、道路、街道",
       "borrowedVia": "道路"
     },
+    "uoco, uocare, uocaui, uocatus": {
+      "hexcode": "1F4E2",
+      "file": "1F4E2.png",
+      "source": "override",
+      "headword": "vocō",
+      "glossZh": "呼喚、邀請"
+    },
+    "-ne": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "override",
+      "headword": "-ne",
+      "glossZh": "用於疑問句末尾"
+    },
     "accipio, accipere, accepi, acceptus": {
       "hexcode": "1F450",
       "file": "1F450.png",
@@ -892,6 +1109,13 @@
       "glossZh": "取、領受、接納",
       "borrowedVia": "領受"
     },
+    "adhuc": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "override",
+      "headword": "adhūc",
+      "glossZh": "迄今、至今、仍然"
+    },
     "aduenio, aduenire, adueni, aduentus": {
       "hexcode": "26F3",
       "file": "26F3.png",
@@ -899,6 +1123,20 @@
       "headword": "adveniō",
       "glossZh": "來臨、到達",
       "borrowedVia": "到達"
+    },
+    "aegyptius, -a, -um": {
+      "hexcode": "E20F",
+      "file": "E20F.png",
+      "source": "override",
+      "headword": "Aegyptius",
+      "glossZh": "埃及的"
+    },
+    "afficio, afficere, affeci, affectus": {
+      "hexcode": "1F9F2",
+      "file": "1F9F2.png",
+      "source": "override",
+      "headword": "afficiō",
+      "glossZh": "影響、施加、使具有"
     },
     "ago, agere, egi, actus": {
       "hexcode": "1F6E0",
@@ -923,6 +1161,13 @@
       "glossZh": "或、抑或",
       "borrowedVia": "或"
     },
+    "aut . . aut": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "headword": "aut . . aut",
+      "glossZh": "或……或、要麼……要麼"
+    },
     "bibo, bibere, bibi, bibitus": {
       "hexcode": "1F964",
       "file": "1F964.png",
@@ -937,6 +1182,13 @@
       "headword": "capiō",
       "glossZh": "取、得著、領悟",
       "borrowedVia": "領悟"
+    },
+    "christianus, -a, -um": {
+      "hexcode": "271D",
+      "file": "271D.png",
+      "source": "override",
+      "headword": "Chrīstiānus",
+      "glossZh": "基督徒的、基督教的"
     },
     "coniungo, coniungere, coniunxi, coniunctus": {
       "hexcode": "1F517",
@@ -961,6 +1213,13 @@
       "headword": "crēdō",
       "glossZh": "相信、信任",
       "borrowedVia": "相信"
+    },
+    "deficio, deficere, defeci, defectus": {
+      "hexcode": "1F4C9",
+      "file": "1F4C9.png",
+      "source": "override",
+      "headword": "dēficiō",
+      "glossZh": "衰退、虛弱、消失"
     },
     "deleo, delere, deleui, deletus": {
       "hexcode": "1F940",
@@ -993,6 +1252,20 @@
       "glossZh": "引出、培養、教育",
       "borrowedVia": "教育"
     },
+    "efficio, efficere, effeci, effectus": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "headword": "efficiō",
+      "glossZh": "製成、實現、造成"
+    },
+    "electus, -a, -um": {
+      "hexcode": "1F5F3",
+      "file": "1F5F3.png",
+      "source": "override",
+      "headword": "ēlēctus",
+      "glossZh": "蒙選的、被揀選的"
+    },
     "exaudio, exaudire, exaudiui (exaudii), exauditus": {
       "hexcode": "1F9BB",
       "file": "1F9BB.png",
@@ -1008,6 +1281,13 @@
       "headword": "faciō",
       "glossZh": "做、製作、創造",
       "borrowedVia": "做"
+    },
+    "fugo, fugare, fugaui, fugatus": {
+      "hexcode": "1F4A8",
+      "file": "1F4A8.png",
+      "source": "override",
+      "headword": "fugō",
+      "glossZh": "驅逐、趕走、放逐"
     },
     "gratias agere": {
       "hexcode": "1F64C",
@@ -1025,6 +1305,13 @@
       "glossZh": "有、持有；認為、視為",
       "borrowedVia": "有"
     },
+    "induco, inducere, induxi, inductus": {
+      "hexcode": "1F4E5",
+      "file": "1F4E5.png",
+      "source": "override",
+      "headword": "indūcō",
+      "glossZh": "引入、導入、納入"
+    },
     "inuenio, inuenire, inueni, inuentus": {
       "hexcode": "1F50D",
       "file": "1F50D.png",
@@ -1032,6 +1319,13 @@
       "headword": "inveniō",
       "glossZh": "發現、尋得、找到",
       "borrowedVia": "找到"
+    },
+    "iungo, iungere, iunxi, iunctus": {
+      "hexcode": "1F517",
+      "file": "1F517.png",
+      "source": "override",
+      "headword": "jungo",
+      "glossZh": "連結、合併；扣合、相握；聯繫、軛駕"
     },
     "misceo, miscere, miscui, mixtus": {
       "hexcode": "1F373",
@@ -1056,6 +1350,20 @@
       "headword": "nātus",
       "glossZh": "兒子、孩子",
       "borrowedVia": "兒子"
+    },
+    "perduco, perducere, perduxi, perductus": {
+      "hexcode": "1F9ED",
+      "file": "1F9ED.png",
+      "source": "override",
+      "headword": "perdūcō",
+      "glossZh": "引導至、導致"
+    },
+    "quare": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "quāré",
+      "glossZh": "何故、為何"
     },
     "recipio, recipere, recepi, receptus": {
       "hexcode": "1F450",
@@ -1103,6 +1411,13 @@
       "glossZh": "來、到達",
       "borrowedVia": "來"
     },
+    "affirmo, affirmare, affirmaui, affirmatus": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "headword": "affirmō",
+      "glossZh": "申明、主張"
+    },
     "anima, animae, f.": {
       "hexcode": "1F54A",
       "file": "1F54A.png",
@@ -1125,6 +1440,27 @@
       "headword": "benedīcō",
       "glossZh": "祝福、頌讚",
       "borrowedVia": "祝福"
+    },
+    "carus, -a, -um": {
+      "hexcode": "1F496",
+      "file": "1F496.png",
+      "source": "override",
+      "headword": "cārus",
+      "glossZh": "親愛的、珍貴的"
+    },
+    "celebro, celebrare, celebraui, celebratus": {
+      "hexcode": "1F38A",
+      "file": "1F38A.png",
+      "source": "override",
+      "headword": "celebrō",
+      "glossZh": "慶祝、舉行"
+    },
+    "concelebro, concelebrare, concelebraui, concelebratus": {
+      "hexcode": "1F942",
+      "file": "1F942.png",
+      "source": "override",
+      "headword": "concelebrō",
+      "glossZh": "共同慶祝、同祭"
     },
     "confirmo, confirmare, confirmaui, confirmatus": {
       "hexcode": "2693",
@@ -1149,6 +1485,13 @@
       "glossZh": "說、告訴；被稱為",
       "borrowedVia": "說"
     },
+    "dignus, -a, -um": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "override",
+      "headword": "dignus",
+      "glossZh": "值得、配得"
+    },
     "firmo, firmare, firmaui, firmatus": {
       "hexcode": "2693",
       "file": "2693.png",
@@ -1157,6 +1500,13 @@
       "glossZh": "堅固、使穩固",
       "borrowedVia": "堅固"
     },
+    "firmus, -a, -um": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "headword": "firmus",
+      "glossZh": "堅定、穩固"
+    },
     "in primis": {
       "hexcode": "1F947",
       "file": "1F947.png",
@@ -1164,6 +1514,27 @@
       "headword": "in prīmīs",
       "glossZh": "首先、第一",
       "borrowedVia": "第一"
+    },
+    "indignus, -a, -um": {
+      "hexcode": "26D4",
+      "file": "26D4.png",
+      "source": "override",
+      "headword": "indīgnus",
+      "glossZh": "不配、不值得"
+    },
+    "infirmus, -a, -um": {
+      "hexcode": "1F912",
+      "file": "1F912.png",
+      "source": "override",
+      "headword": "infirmus",
+      "glossZh": "虛弱、病弱"
+    },
+    "iesus, iesu, iesu, iesum, iesu": {
+      "hexcode": "271D",
+      "file": "271D.png",
+      "source": "override",
+      "headword": "Jēsus",
+      "glossZh": "耶穌"
     },
     "laetitia, laetitiae": {
       "hexcode": "1F973",
@@ -1180,6 +1551,34 @@
       "headword": "liturgia",
       "glossZh": "禮儀、神聖祭儀",
       "borrowedVia": "禮儀"
+    },
+    "maestus, -a, -um": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "maestus",
+      "glossZh": "憂傷、悲哀"
+    },
+    "male": {
+      "hexcode": "1F44E",
+      "file": "1F44E.png",
+      "source": "override",
+      "headword": "male",
+      "glossZh": "惡劣地、不善地"
+    },
+    "male habeo": {
+      "hexcode": "1F912",
+      "file": "1F912.png",
+      "source": "override",
+      "headword": "male habeō",
+      "glossZh": "患病、病患"
+    },
+    "maledico, maledicere, maledixi, maledictus": {
+      "hexcode": "1F92C",
+      "file": "1F92C.png",
+      "source": "override",
+      "headword": "maledīcō",
+      "glossZh": "咒罵、說壞話"
     },
     "misericordiae, f.": {
       "hexcode": "1F917",
@@ -1281,6 +1680,20 @@
       "glossZh": "充滿、完成",
       "borrowedVia": "充滿"
     },
+    "adimpleo, adimplere, adimpleui, adimpletus": {
+      "hexcode": "2705",
+      "file": "2705.png",
+      "source": "override",
+      "headword": "adimpleō",
+      "glossZh": "成全、履行"
+    },
+    "angelicus, -a, -um": {
+      "hexcode": "1F47C",
+      "file": "1F47C.png",
+      "source": "override",
+      "headword": "angelicus",
+      "glossZh": "天使的"
+    },
     "compleo, complere, compleui, completus": {
       "hexcode": "1F51A",
       "file": "1F51A.png",
@@ -1288,6 +1701,20 @@
       "headword": "compleō",
       "glossZh": "成全、完成",
       "borrowedVia": "完成"
+    },
+    "contritus, -a, -um": {
+      "hexcode": "1F614",
+      "file": "1F614.png",
+      "source": "override",
+      "headword": "contrītus",
+      "glossZh": "悔悟的、懺悔的"
+    },
+    "corrigo, corrigere, correxi, correctus": {
+      "hexcode": "270F",
+      "file": "270F.png",
+      "source": "override",
+      "headword": "corrigō",
+      "glossZh": "改正、糾正"
     },
     "cunctus, -a, -um": {
       "hexcode": "1F4CA",
@@ -1313,6 +1740,13 @@
       "glossZh": "指導、引導",
       "borrowedVia": "引導"
     },
+    "erigo, erigere, erexi, erectus": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "headword": "ērigō",
+      "glossZh": "豎立、高舉"
+    },
     "etiam": {
       "hexcode": "2795",
       "file": "2795.png",
@@ -1328,6 +1762,13 @@
       "headword": "glōriōsus",
       "glossZh": "光榮的、榮耀的",
       "borrowedVia": "榮耀的"
+    },
+    "gratus, -a, -um": {
+      "hexcode": "1F60A",
+      "file": "1F60A.png",
+      "source": "override",
+      "headword": "grātus",
+      "glossZh": "令人悅納的、可喜的"
     },
     "impleo, implere, impleui, impletus": {
       "hexcode": "1FAA3",
@@ -1376,12 +1817,11 @@
       "borrowedVia": "奇妙的"
     },
     "mundus, -a, -um": {
-      "hexcode": "1F310",
-      "file": "1F310.png",
-      "source": "zh_transfer",
+      "hexcode": "1F9FC",
+      "file": "1F9FC.png",
+      "source": "override",
       "headword": "mundus",
-      "glossZh": "世界、宇宙",
-      "borrowedVia": "世界"
+      "glossZh": "潔淨的、純潔的"
     },
     "per": {
       "hexcode": "27A1",
@@ -1396,6 +1836,13 @@
       "source": "override",
       "headword": "post",
       "glossZh": "在……之後、於……後方"
+    },
+    "quando": {
+      "hexcode": "23F0",
+      "file": "23F0.png",
+      "source": "override",
+      "headword": "quandō",
+      "glossZh": "何時；當……時"
     },
     "quia": {
       "hexcode": "27A1",
@@ -1489,6 +1936,20 @@
       "glossZh": "那時、當時",
       "borrowedVia": "那時"
     },
+    "altus, -a, -um": {
+      "hexcode": "26F0",
+      "file": "26F0.png",
+      "source": "override",
+      "headword": "altus",
+      "glossZh": "高、深"
+    },
+    "apostolicus, -a, -um": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "apostolicus",
+      "glossZh": "宗徒的、屬於宗徒的"
+    },
     "autem": {
       "hexcode": "2194",
       "file": "2194.png",
@@ -1497,13 +1958,26 @@
       "glossZh": "但是、然而；並且",
       "borrowedVia": "但是"
     },
+    "catholicus, -a, -um": {
+      "hexcode": "1F30D",
+      "file": "1F30D.png",
+      "source": "override",
+      "headword": "catholicus",
+      "glossZh": "普遍的、公教的"
+    },
     "causa, causae, f.": {
-      "hexcode": "2935",
-      "file": "2935.png",
-      "source": "zh_transfer",
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
       "headword": "causa",
-      "glossZh": "原因、理由、目的",
-      "borrowedVia": "原因"
+      "glossZh": "原因、理由、目的"
+    },
+    "causa": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "causā",
+      "glossZh": "為了……的緣故"
     },
     "cereus, cerei, m.": {
       "hexcode": "1F56F",
@@ -1527,6 +2001,13 @@
       "headword": "deinde",
       "glossZh": "然後、其次、隨後",
       "borrowedVia": "然後"
+    },
+    "diligenter": {
+      "hexcode": "1F41C",
+      "file": "1F41C.png",
+      "source": "override",
+      "headword": "dīligenter",
+      "glossZh": "勤勉地、謹慎地"
     },
     "formo, formare, formaui, formatus": {
       "hexcode": "1F3FA",
@@ -1567,6 +2048,20 @@
       "glossZh": "呈現、提供、施予",
       "borrowedVia": "呈現"
     },
+    "saepe": {
+      "hexcode": "1F501",
+      "file": "1F501.png",
+      "source": "override",
+      "headword": "saepe",
+      "glossZh": "經常、時常"
+    },
+    "satio, satiare, satiaui, satiatus": {
+      "hexcode": "1F372",
+      "file": "1F372.png",
+      "source": "override",
+      "headword": "satiō",
+      "glossZh": "養育、飽足、滿足"
+    },
     "scio, scire, sciui, scitus": {
       "hexcode": "1F9E0",
       "file": "1F9E0.png",
@@ -1575,6 +2070,13 @@
       "glossZh": "知道、認識",
       "borrowedVia": "知道"
     },
+    "separo, separare, separaui, separatus": {
+      "hexcode": "2702",
+      "file": "2702.png",
+      "source": "override",
+      "headword": "sēparō",
+      "glossZh": "分離、區分、隔開"
+    },
     "socius, socii, m.": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -1582,6 +2084,20 @@
       "headword": "socius",
       "glossZh": "同伴、盟友",
       "borrowedVia": "同伴"
+    },
+    "statim": {
+      "hexcode": "26A1",
+      "file": "26A1.png",
+      "source": "override",
+      "headword": "statim",
+      "glossZh": "立即、當下"
+    },
+    "sub": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "sub",
+      "glossZh": "在……下面；至……下方"
     },
     "tectum, tecti, n.": {
       "hexcode": "1F3E0",
@@ -1614,6 +2130,13 @@
       "glossZh": "你們的、貴方的",
       "borrowedVia": "你們的"
     },
+    "uestigium, uestigii, n.": {
+      "hexcode": "1F463",
+      "file": "1F463.png",
+      "source": "override",
+      "headword": "vestīgium",
+      "glossZh": "足跡、蹤跡"
+    },
     "uideo, uidere, uidi, uisus": {
       "hexcode": "1F440",
       "file": "1F440.png",
@@ -1630,6 +2153,13 @@
       "glossZh": "赦免、解除；完成",
       "borrowedVia": "赦免"
     },
+    "alleluia": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "headword": "allēlūjā",
+      "glossZh": "阿肋路亞"
+    },
     "annus, anni, m.": {
       "hexcode": "1F4C5",
       "file": "1F4C5.png",
@@ -1644,6 +2174,27 @@
       "headword": "ante",
       "glossZh": "在……之前"
     },
+    "clerus, cleri, m.": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "clērus",
+      "glossZh": "聖職者、教士"
+    },
+    "debitum, debiti, n.": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "debitum",
+      "glossZh": "債務、義務"
+    },
+    "detrimentum, detrimenti, n.": {
+      "hexcode": "1F4C9",
+      "file": "1F4C9.png",
+      "source": "override",
+      "headword": "dētrīmentum",
+      "glossZh": "損失、損傷"
+    },
     "ecce": {
       "hexcode": "1F440",
       "file": "1F440.png",
@@ -1651,6 +2202,27 @@
       "headword": "ecce",
       "glossZh": "看、請看",
       "borrowedVia": "看"
+    },
+    "eleison": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "eléison",
+      "glossZh": "求垂憐"
+    },
+    "excelsus, -a, -um": {
+      "hexcode": "1F5FB",
+      "file": "1F5FB.png",
+      "source": "override",
+      "headword": "excelsus",
+      "glossZh": "崇高的、至尊的"
+    },
+    "extollo, extollere, extuli, —": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "headword": "extollō",
+      "glossZh": "舉揚、讚頌"
     },
     "finio, finire, finiui [fini], finitus": {
       "hexcode": "1F51A",
@@ -1660,6 +2232,13 @@
       "glossZh": "結束、完成",
       "borrowedVia": "完成"
     },
+    "hosanna": {
+      "hexcode": "1F334",
+      "file": "1F334.png",
+      "source": "override",
+      "headword": "hōsānnā",
+      "glossZh": "和散那（讚美之聲）"
+    },
     "imperium, imperii, n.": {
       "hexcode": "270A",
       "file": "270A.png",
@@ -1668,6 +2247,13 @@
       "glossZh": "統治權、帝國、命令",
       "borrowedVia": "統治權"
     },
+    "kyrie": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "Kyrie",
+      "glossZh": "主啊"
+    },
     "ministerium, ministerii, n.": {
       "hexcode": "1F64C",
       "file": "1F64C.png",
@@ -1675,6 +2261,20 @@
       "headword": "ministerium",
       "glossZh": "侍奉、服事",
       "borrowedVia": "侍奉"
+    },
+    "perenniter": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "perenniter",
+      "glossZh": "恆久地、常年地"
+    },
+    "perpetuus, -a, -um": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "perpetuus",
+      "glossZh": "永恆的、永久的"
     },
     "postea": {
       "hexcode": "1F51C",
@@ -1691,6 +2291,13 @@
       "headword": "qui",
       "glossZh": "誰、什麼；哪個、那個",
       "borrowedVia": "誰"
+    },
+    "secundum": {
+      "hexcode": "1F4CF",
+      "file": "1F4CF.png",
+      "source": "override",
+      "headword": "secundum",
+      "glossZh": "依照、按照"
     },
     "secundus, -a, -um": {
       "hexcode": "1F948",
@@ -1739,6 +2346,13 @@
       "glossZh": "獨生的、唯一的",
       "borrowedVia": "獨生的"
     },
+    "uinculum, uinculi, n.": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "vinculum",
+      "glossZh": "束縛、鎖鏈"
+    },
     "uulnero, uulnerare, uulneraui, uulneratus": {
       "hexcode": "2623",
       "file": "2623.png",
@@ -1754,6 +2368,20 @@
       "headword": "-clīnō",
       "glossZh": "彎曲、傾斜",
       "borrowedVia": "傾斜"
+    },
+    "aggrego, aggregare, aggregaui, aggregatus": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "headword": "aggregō",
+      "glossZh": "加入、聯合"
+    },
+    "aperio, aperire, aperui, apertus": {
+      "hexcode": "1F4D6",
+      "file": "1F4D6.png",
+      "source": "override",
+      "headword": "aperiō",
+      "glossZh": "打開、闡釋"
     },
     "apud": {
       "hexcode": "27A1",
@@ -1785,6 +2413,13 @@
       "glossZh": "柱子、圓柱",
       "borrowedVia": "柱子"
     },
+    "conglorifico, conglorificare, conglorificaui, conglorificatus": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "conglōrificō",
+      "glossZh": "極其光榮、極為讚美"
+    },
     "congrego, congregare, congregaui, congregatus": {
       "hexcode": "1F465",
       "file": "1F465.png",
@@ -1792,6 +2427,27 @@
       "headword": "congregō",
       "glossZh": "聚集、集合",
       "borrowedVia": "聚集"
+    },
+    "creatura, creaturae, f.": {
+      "hexcode": "1F43E",
+      "file": "1F43E.png",
+      "source": "override",
+      "headword": "creātūra",
+      "glossZh": "受造物、被造者"
+    },
+    "dolorosus, -a, -um": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "dolōrōsus",
+      "glossZh": "哀傷的、痛苦的"
+    },
+    "exsulto, exsultare, exsultaui, exsultatus": {
+      "hexcode": "1F973",
+      "file": "1F973.png",
+      "source": "override",
+      "headword": "exsultō",
+      "glossZh": "歡欣、喜躍"
     },
     "flamma, flammae, f.": {
       "hexcode": "1F525",
@@ -1817,6 +2473,13 @@
       "glossZh": "聚集、會合",
       "borrowedVia": "聚集"
     },
+    "hinc": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "hinc",
+      "glossZh": "由此、從此處"
+    },
     "hostia, hostiae, f.": {
       "hexcode": "1F35E",
       "file": "1F35E.png",
@@ -1839,6 +2502,13 @@
       "glossZh": "純潔、無辜",
       "borrowedVia": "純潔"
     },
+    "laetus, -a, -um": {
+      "hexcode": "1F600",
+      "file": "1F600.png",
+      "source": "override",
+      "headword": "laetus",
+      "glossZh": "歡樂的、喜悅的"
+    },
     "ob": {
       "hexcode": "2935",
       "file": "2935.png",
@@ -1854,6 +2524,13 @@
       "headword": "parō",
       "glossZh": "備辦、預備、提供",
       "borrowedVia": "預備"
+    },
+    "paruulus, -a, -um": {
+      "hexcode": "1F476",
+      "file": "1F476.png",
+      "source": "override",
+      "headword": "parvulus",
+      "glossZh": "幼小的、細微的"
     },
     "paruus, -a, -um": {
       "hexcode": "1F41C",
@@ -1887,12 +2564,40 @@
       "glossZh": "先知",
       "borrowedVia": "先知"
     },
+    "reclino, reclinare, reclinaui, reclinatus": {
+      "hexcode": "1F6CC",
+      "file": "1F6CC.png",
+      "source": "override",
+      "headword": "reclīnō",
+      "glossZh": "靠後、斜倚"
+    },
+    "resulto, resultare, resultaui, resultatus": {
+      "hexcode": "1F514",
+      "file": "1F514.png",
+      "source": "override",
+      "headword": "resultō",
+      "glossZh": "回響、反彈"
+    },
+    "sanctifico, sanctificare, sanctificaui, sanctificatus": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "headword": "sanctificō",
+      "glossZh": "聖化、使成聖"
+    },
     "scriptura, scripturae, f.": {
       "hexcode": "1F4DC",
       "file": "1F4DC.png",
       "source": "override",
       "headword": "scriptūra",
       "glossZh": "聖經、經文"
+    },
+    "segrego, segregare, segregaui, segregatus": {
+      "hexcode": "2702",
+      "file": "2702.png",
+      "source": "override",
+      "headword": "sēgregō",
+      "glossZh": "分離、隔開"
     },
     "tertius, -a, -um": {
       "hexcode": "1F949",
@@ -1939,6 +2644,13 @@
       "headword": "clāmō",
       "glossZh": "呼喊、大聲喊叫"
     },
+    "collecta, collectae, f.": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "collēcta",
+      "glossZh": "集禱文、集合"
+    },
     "concipio, concipere, concepi, conceptus": {
       "hexcode": "1F930",
       "file": "1F930.png",
@@ -1946,6 +2658,13 @@
       "headword": "concipiō",
       "glossZh": "懷孕、構思",
       "borrowedVia": "懷孕"
+    },
+    "debeo, debere, debui, debitus": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "debeō",
+      "glossZh": "欠、應該"
     },
     "desino, desinere, desii, desitus": {
       "hexcode": "1F6D1",
@@ -1962,6 +2681,13 @@
       "headword": "dimittō",
       "glossZh": "遣送、赦免",
       "borrowedVia": "赦免"
+    },
+    "excipio, excipere, excepi, exceptus": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "override",
+      "headword": "excipiō",
+      "glossZh": "接待、迎接"
     },
     "exclamo, exclamare, exclamaui, exclamatus": {
       "hexcode": "1F4E2",
@@ -1994,6 +2720,20 @@
       "glossZh": "開始",
       "borrowedVia": "開始"
     },
+    "insurgo, insurgere, insurrexi, insurrectus": {
+      "hexcode": "270A",
+      "file": "270A.png",
+      "source": "override",
+      "headword": "insurgō",
+      "glossZh": "起身、起義"
+    },
+    "maximus, -a, -um": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "headword": "maximus",
+      "glossZh": "最大的、很大的"
+    },
     "mensae, f.": {
       "hexcode": "1F37D",
       "file": "1F37D.png",
@@ -2008,6 +2748,20 @@
       "headword": "mittō",
       "glossZh": "派遣、投擲、放置",
       "borrowedVia": "派遣"
+    },
+    "nimis": {
+      "hexcode": "203C",
+      "file": "203C.png",
+      "source": "override",
+      "headword": "nimis",
+      "glossZh": "過度、太"
+    },
+    "optimus, -a, -um": {
+      "hexcode": "1F947",
+      "file": "1F947.png",
+      "source": "override",
+      "headword": "optimus",
+      "glossZh": "最好的、很好的"
     },
     "permitto, permittere, permisi, permissus": {
       "hexcode": "1F450",
@@ -2033,6 +2787,20 @@
       "glossZh": "在……之後、自從",
       "borrowedVia": "在……之後"
     },
+    "quidam, quaedam, quiddam": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quidam",
+      "glossZh": "某個、某物"
+    },
+    "quidam, quaedam, quoddam": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quidam",
+      "glossZh": "某個、某物"
+    },
     "relinquo, relinquere, reliqui, relictus": {
       "hexcode": "1F3E0",
       "file": "1F3E0.png",
@@ -2040,6 +2808,20 @@
       "headword": "relinquō",
       "glossZh": "留下、拋棄",
       "borrowedVia": "留下"
+    },
+    "resurgo, resurgere, resurrexi, resurrectus": {
+      "hexcode": "1F305",
+      "file": "1F305.png",
+      "source": "override",
+      "headword": "resurgō",
+      "glossZh": "重新起身、復興"
+    },
+    "submitto, submittere, submisi, submissus": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "submittō",
+      "glossZh": "降低、收買"
     },
     "surgo, surgere, surrexi, surrectus": {
       "hexcode": "E202",
@@ -2056,6 +2838,13 @@
       "headword": "tamen",
       "glossZh": "然而、但是",
       "borrowedVia": "然而"
+    },
+    "utilitas, utilitatis, f.": {
+      "hexcode": "1F9F0",
+      "file": "1F9F0.png",
+      "source": "override",
+      "headword": "ūtilitās",
+      "glossZh": "利益、效用、好處"
     },
     "ualeo, ualere, ualui, —": {
       "hexcode": "1F4AA",
@@ -2081,6 +2870,13 @@
       "glossZh": "活著、生活",
       "borrowedVia": "活著、生活"
     },
+    "-do, -dere, -didi, -ditus": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "-dō",
+      "glossZh": "放、置"
+    },
     "addo, addere, addidi, additus": {
       "hexcode": "1F381",
       "file": "1F381.png",
@@ -2105,6 +2901,13 @@
       "glossZh": "站在……旁、站立",
       "borrowedVia": "站立"
     },
+    "baptista, baptistae, m.": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "headword": "baptista",
+      "glossZh": "施洗者"
+    },
     "brachium, brachii, n.": {
       "hexcode": "1F4AA",
       "file": "1F4AA.png",
@@ -2112,6 +2915,20 @@
       "headword": "brāchium",
       "glossZh": "臂膀、手臂",
       "borrowedVia": "臂膀"
+    },
+    "ceno, cenare, cenaui, cenatus": {
+      "hexcode": "1F37D",
+      "file": "1F37D.png",
+      "source": "override",
+      "headword": "cēnō",
+      "glossZh": "進晚餐、用晚餐"
+    },
+    "circumspicio, circumspicere, circumspexi, circumspectus": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "headword": "circumspiciō",
+      "glossZh": "環顧、周圍觀察"
     },
     "circumsto, circumstare, circumsteti, —": {
       "hexcode": "1F10E",
@@ -2198,6 +3015,13 @@
       "headword": "immūtō",
       "glossZh": "改變、變更、轉變",
       "borrowedVia": "改變"
+    },
+    "incarno, incarnare, incarnaui, incarnatus": {
+      "hexcode": "1FAC0",
+      "file": "1FAC0.png",
+      "source": "override",
+      "headword": "incarno",
+      "glossZh": "成肉身、使具肉身"
     },
     "insto, instare, institi, —": {
       "hexcode": "26A0",
@@ -2323,6 +3147,13 @@
       "headword": "tuba",
       "glossZh": "號筒、喇叭"
     },
+    "ubi": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "ubī",
+      "glossZh": "何處、何時、在……地方"
+    },
     "ubique": {
       "hexcode": "1F5FA",
       "file": "1F5FA.png",
@@ -2376,6 +3207,13 @@
       "glossZh": "描述、記載、登記",
       "borrowedVia": "記載"
     },
+    "detergeo, detergere, detersi, detersus": {
+      "hexcode": "1F9FD",
+      "file": "1F9FD.png",
+      "source": "override",
+      "headword": "dētergeō",
+      "glossZh": "擦去、抹除、消除"
+    },
     "diligo, diligere, dilexi, dilectus": {
       "hexcode": "1F495",
       "file": "1F495.png",
@@ -2420,6 +3258,13 @@
       "source": "override",
       "headword": "ideō",
       "glossZh": "因此、為此"
+    },
+    "infero, inferre, intuli, illatum": {
+      "hexcode": "1F4CE",
+      "file": "1F4CE.png",
+      "source": "override",
+      "headword": "infero",
+      "glossZh": "依附、緊貼"
     },
     "iuxta": {
       "hexcode": "27A1",
@@ -2502,6 +3347,13 @@
       "headword": "rēx",
       "glossZh": "國王"
     },
+    "ruber, rubra, rubrum": {
+      "hexcode": "1F534",
+      "file": "1F534.png",
+      "source": "override",
+      "headword": "ruber",
+      "glossZh": "紅色的"
+    },
     "sacerdos, sacerdotis, m.": {
       "hexcode": "1F468",
       "file": "1F468.png",
@@ -2516,6 +3368,13 @@
       "headword": "scrībō",
       "glossZh": "書寫"
     },
+    "siccus, -a, -um": {
+      "hexcode": "1F3DC",
+      "file": "1F3DC.png",
+      "source": "override",
+      "headword": "siccus",
+      "glossZh": "乾燥的"
+    },
     "suscipio, suscipere, suscepi, susceptus": {
       "hexcode": "1F450",
       "file": "1F450.png",
@@ -2524,6 +3383,13 @@
       "glossZh": "拿起、接受",
       "borrowedVia": "接受"
     },
+    "uirgo, uirginis, f.": {
+      "hexcode": "1F469",
+      "file": "1F469.png",
+      "source": "override",
+      "headword": "virgō",
+      "glossZh": "處女"
+    },
     "uoluntas, uoluntatis, f.": {
       "hexcode": "1F914",
       "file": "1F914.png",
@@ -2531,6 +3397,27 @@
       "headword": "voluntās",
       "glossZh": "意志、心願",
       "borrowedVia": "意志"
+    },
+    "ambo, ambonis, m.": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "headword": "ambō",
+      "glossZh": "講道壇、聖經台"
+    },
+    "aptus, -a, -um": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "aptus",
+      "glossZh": "恰當的、適合的"
+    },
+    "caligo, caliginis, f.": {
+      "hexcode": "1F32B",
+      "file": "1F32B.png",
+      "source": "override",
+      "headword": "cālīgō",
+      "glossZh": "霧靄、昏暗"
     },
     "cantor, cantoris, m.": {
       "hexcode": "1F9D1-200D-1F3A4",
@@ -2545,6 +3432,13 @@
       "source": "override",
       "headword": "cor",
       "glossZh": "心臟、心"
+    },
+    "cruor, cruoris, m.": {
+      "hexcode": "1FA78",
+      "file": "1FA78.png",
+      "source": "override",
+      "headword": "cruor",
+      "glossZh": "血液、創傷之血"
     },
     "humanus, -a, -um": {
       "hexcode": "1F9D1",
@@ -2561,6 +3455,41 @@
       "headword": "inīquitas",
       "glossZh": "邪惡、不義",
       "borrowedVia": "邪惡"
+    },
+    "insono, insonare, insonui, —": {
+      "hexcode": "1F514",
+      "file": "1F514.png",
+      "source": "override",
+      "headword": "insonō",
+      "glossZh": "迴響、鳴徹"
+    },
+    "largitas, largitatis": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "override",
+      "headword": "largitās",
+      "glossZh": "豐厚、慷慨"
+    },
+    "lectio, lectionis": {
+      "hexcode": "1F4D6",
+      "file": "1F4D6.png",
+      "source": "override",
+      "headword": "lectiō",
+      "glossZh": "誦讀、經課"
+    },
+    "lector, lectoris": {
+      "hexcode": "1F9D1-200D-1F393",
+      "file": "1F9D1-200D-1F393.png",
+      "source": "override",
+      "headword": "lector",
+      "glossZh": "誦讀者、讀經員"
+    },
+    "mando, mandare, manducaui, manducatus eat": {
+      "hexcode": "1F37D",
+      "file": "1F37D.png",
+      "source": "override",
+      "headword": "mandō",
+      "glossZh": "咀嚼、進食"
     },
     "mare, maris, marium, n.": {
       "hexcode": "1F30A",
@@ -2606,6 +3535,13 @@
       "glossZh": "宣告、迴響",
       "borrowedVia": "宣告"
     },
+    "postis, postis, postium, m.": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "override",
+      "headword": "postis",
+      "glossZh": "門柱、門框"
+    },
     "prae": {
       "hexcode": "2935",
       "file": "2935.png",
@@ -2621,6 +3557,13 @@
       "headword": "praeter",
       "glossZh": "除……外；超越、過去",
       "borrowedVia": "超越"
+    },
+    "proximus, -a, -um": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "proximus",
+      "glossZh": "最近的、鄰近的"
     },
     "resurrectio, resurrectionis, f.": {
       "hexcode": "1F305",
@@ -2661,13 +3604,20 @@
       "glossZh": "發聲、鳴響",
       "borrowedVia": "發聲"
     },
-    "titiue gen.": {
+    "satis (+ partitiue gen.)": {
       "hexcode": "2705",
       "file": "2705.png",
       "source": "zh_transfer",
-      "headword": "titive gen.",
+      "headword": "satis (+ partitive gen.)",
       "glossZh": "足夠、充分",
       "borrowedVia": "足夠"
+    },
+    "acer, acris, acre": {
+      "hexcode": "1F52A",
+      "file": "1F52A.png",
+      "source": "override",
+      "headword": "ācer",
+      "glossZh": "尖銳的、猛烈的、激烈的"
     },
     "ascendo, ascendere, ascendi, ascensus": {
       "hexcode": "E202",
@@ -2738,6 +3688,13 @@
       "glossZh": "下降、下來",
       "borrowedVia": "下來"
     },
+    "dissimilis, dissimile (+ dat.)": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "dissimilis",
+      "glossZh": "不相似的、異於"
+    },
     "effundo, effundere, effudi, effusus": {
       "hexcode": "1F4A7",
       "file": "1F4A7.png",
@@ -2754,6 +3711,13 @@
       "glossZh": "幸福的、蒙福的",
       "borrowedVia": "蒙福的"
     },
+    "figo, figere, fixi, fixus": {
+      "hexcode": "1F4CC",
+      "file": "1F4CC.png",
+      "source": "override",
+      "headword": "fīgō",
+      "glossZh": "刺穿、固定、釘牢"
+    },
     "frango, frangere, fregi, fractus": {
       "hexcode": "1F494",
       "file": "1F494.png",
@@ -2763,12 +3727,11 @@
       "borrowedVia": "破裂"
     },
     "fundo, fundere, fudi, fusus": {
-      "hexcode": "2693",
-      "file": "2693.png",
-      "source": "zh_transfer",
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
       "headword": "fundō",
-      "glossZh": "建立、創立",
-      "borrowedVia": "建立"
+      "glossZh": "傾注、傾倒、流出"
     },
     "genu, genus, n.": {
       "hexcode": "1F9B5",
@@ -2786,6 +3749,13 @@
       "glossZh": "跪下、屈膝",
       "borrowedVia": "屈膝"
     },
+    "infundo, infundere, infudi, infusus": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "headword": "infundō",
+      "glossZh": "倒入、注入"
+    },
     "intra": {
       "hexcode": "1F4E6",
       "file": "1F4E6.png",
@@ -2801,6 +3771,20 @@
       "headword": "manus",
       "glossZh": "手"
     },
+    "memor": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "headword": "memor",
+      "glossZh": "銘記、懷念"
+    },
+    "omnipotens (gen., omnipotentis)": {
+      "hexcode": "1F4AA",
+      "file": "1F4AA.png",
+      "source": "override",
+      "headword": "omnipotēns",
+      "glossZh": "全能的"
+    },
     "omnis, omne": {
       "hexcode": "1F310",
       "file": "1F310.png",
@@ -2815,6 +3799,13 @@
       "headword": "Pascha",
       "glossZh": "逾越節、復活節",
       "borrowedVia": "逾越節"
+    },
+    "paschalis, paschale": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "override",
+      "headword": "paschālis",
+      "glossZh": "逾越節的、復活節的"
     },
     "passio, passionis, f.": {
       "hexcode": "1F915",
@@ -2887,6 +3878,13 @@
       "headword": "spiritus",
       "glossZh": "聖神、精神、氣息"
     },
+    "suauitas, suauitatis, f.": {
+      "hexcode": "1F36F",
+      "file": "1F36F.png",
+      "source": "override",
+      "headword": "suāvitās",
+      "glossZh": "甘美、芬芳"
+    },
     "uultus, uultus, m.": {
       "hexcode": "1F642",
       "file": "1F642.png",
@@ -2935,6 +3933,20 @@
       "glossZh": "在場、臨在",
       "borrowedVia": "在場"
     },
+    "aduentus, aduentus, m.": {
+      "hexcode": "1F51C",
+      "file": "1F51C.png",
+      "source": "override",
+      "headword": "adventus",
+      "glossZh": "降臨、來臨"
+    },
+    "amitto, amittere, amisi, amissus": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "override",
+      "headword": "amittō",
+      "glossZh": "失去、喪失"
+    },
     "annuntio, annuntiare, annuntiaui, annuntiatus": {
       "hexcode": "1F4E3",
       "file": "1F4E3.png",
@@ -2942,6 +3954,13 @@
       "headword": "annūntiō",
       "glossZh": "宣告、報告",
       "borrowedVia": "宣告"
+    },
+    "circumeo, circumire, circumiui (circumii), circumitus": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "override",
+      "headword": "circumeō",
+      "glossZh": "繞行、巡行"
     },
     "clemens": {
       "hexcode": "1F54A",
@@ -2974,6 +3993,20 @@
       "headword": "emō",
       "glossZh": "購買、買",
       "borrowedVia": "買"
+    },
+    "eo, ire, iui (ii), itus": {
+      "hexcode": "1F463",
+      "file": "1F463.png",
+      "source": "override",
+      "headword": "eō",
+      "glossZh": "行、往"
+    },
+    "episcopalis, episcopale": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "episcopālis",
+      "glossZh": "主教的、聖階的"
     },
     "exeo, exire, exiui (exii), exitus": {
       "hexcode": "1F6AA",
@@ -3061,6 +4094,13 @@
       "glossZh": "滅亡、喪失",
       "borrowedVia": "滅亡"
     },
+    "pertranseo, pertransire, pertransiui (pertransii), pertransitus": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "pertrānseō",
+      "glossZh": "穿過、貫穿"
+    },
     "pietas, pietatis, f.": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -3069,6 +4109,13 @@
       "glossZh": "虔誠、孝心、憐憫",
       "borrowedVia": "虔誠"
     },
+    "placo, placare, placaui, placatus": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "placo",
+      "glossZh": "撫慰、和解"
+    },
     "praeeo, praeire, praeiui (praeii), praeitus": {
       "hexcode": "27A1",
       "file": "27A1.png",
@@ -3076,6 +4123,13 @@
       "headword": "praeeō",
       "glossZh": "走在前、引領",
       "borrowedVia": "引領"
+    },
+    "prodeo, prodire, prodiui (prodii), proditus": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "prōdeō",
+      "glossZh": "走出、進前"
     },
     "prosum, prodesse, profui, —": {
       "hexcode": "E083",
@@ -3108,6 +4162,13 @@
       "glossZh": "赦免、寬恕",
       "borrowedVia": "赦免"
     },
+    "remitto, remittere, remisi, remissus": {
+      "hexcode": "1F513",
+      "file": "1F513.png",
+      "source": "override",
+      "headword": "remittō",
+      "glossZh": "遣回、寬赦"
+    },
     "saluator, saluatoris, m.": {
       "hexcode": "1F6DF",
       "file": "1F6DF.png",
@@ -3123,6 +4184,20 @@
       "headword": "subeō",
       "glossZh": "承受、屈服、攀登",
       "borrowedVia": "承受"
+    },
+    "supplex (gen., supplicis)": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "supplex",
+      "glossZh": "懇求者、祈求者"
+    },
+    "tellus, telluris, f.": {
+      "hexcode": "1F30E",
+      "file": "1F30E.png",
+      "source": "override",
+      "headword": "tellus",
+      "glossZh": "大地、土地、地球"
     },
     "transeo, transire, transiui (transii), transitus": {
       "hexcode": "1F309",
@@ -3154,6 +4229,13 @@
       "headword": "vīsibilis",
       "glossZh": "可見的、有形的",
       "borrowedVia": "可見的"
+    },
+    "uiuifico, uiuificare, uiuificaui, uiuificatus": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "headword": "vivificō",
+      "glossZh": "使生活、賦予生命"
     },
     "uolo, uelle, uolui, —": {
       "hexcode": "1F914",
@@ -3194,6 +4276,27 @@
       "glossZh": "上升、升天",
       "borrowedVia": "上升"
     },
+    "baptizo, baptizare, baptizaui, baptizatus": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "headword": "baptizō",
+      "glossZh": "浸禮、施洗"
+    },
+    "benignus, -a, -um": {
+      "hexcode": "1F970",
+      "file": "1F970.png",
+      "source": "override",
+      "headword": "benignus",
+      "glossZh": "仁慈的、善良的"
+    },
+    "cedo, cedere, cessi, cessus": {
+      "hexcode": "2B05",
+      "file": "2B05.png",
+      "source": "override",
+      "headword": "cēdō",
+      "glossZh": "行去、退讓、屈服"
+    },
     "circum": {
       "hexcode": "1F10E",
       "file": "1F10E.png",
@@ -3218,6 +4321,13 @@
       "glossZh": "寬恕、仁慈",
       "borrowedVia": "寬恕"
     },
+    "concedo, concedere, concessi, concessus": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "concēdō",
+      "glossZh": "退讓、准許、賜予"
+    },
     "concludo, concludere, conclusi, conclusus": {
       "hexcode": "1F512",
       "file": "1F512.png",
@@ -3233,6 +4343,13 @@
       "headword": "cōtīdiānus",
       "glossZh": "每日的、日常的",
       "borrowedVia": "每日的"
+    },
+    "cotidie": {
+      "hexcode": "1F4C5",
+      "file": "1F4C5.png",
+      "source": "override",
+      "headword": "cōtīdiē",
+      "glossZh": "每日、日常地"
     },
     "custodio, custodire, custodiui (custodii), custoditus": {
       "hexcode": "1F482",
@@ -3258,12 +4375,40 @@
       "glossZh": "離開、出發",
       "borrowedVia": "離開"
     },
+    "euangelizo, euangelizare, euangelizaui, euangelizatus": {
+      "hexcode": "1F4E2",
+      "file": "1F4E2.png",
+      "source": "override",
+      "headword": "evangelizō",
+      "glossZh": "宣講福音"
+    },
+    "extendo, extendere, extendi, extentus": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "override",
+      "headword": "extendō",
+      "glossZh": "伸展、延伸"
+    },
+    "festus, -a, -um": {
+      "hexcode": "1F389",
+      "file": "1F389.png",
+      "source": "override",
+      "headword": "fēstus",
+      "glossZh": "節慶的、祭日的"
+    },
     "grex, gregis, m.": {
       "hexcode": "1F411",
       "file": "1F411.png",
       "source": "override",
       "headword": "grex",
       "glossZh": "羊群、牧群"
+    },
+    "humanitas, humanitatis, f.": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "override",
+      "headword": "hūmānitās",
+      "glossZh": "人性、人文、仁慈"
     },
     "incedo, incedere, incessi, incessus": {
       "hexcode": "1F6B6",
@@ -3273,6 +4418,20 @@
       "glossZh": "行走、前進",
       "borrowedVia": "行走"
     },
+    "inde": {
+      "hexcode": "2B05",
+      "file": "2B05.png",
+      "source": "override",
+      "headword": "inde",
+      "glossZh": "自彼處、自那時起"
+    },
+    "indeficiens (gen., indeficientis)": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "indeficiēns",
+      "glossZh": "不衰退的、恆久的"
+    },
     "intendo, intendere, intendi, intentus": {
       "hexcode": "1F440",
       "file": "1F440.png",
@@ -3280,6 +4439,13 @@
       "headword": "intendō",
       "glossZh": "瞄準、注視",
       "borrowedVia": "注視"
+    },
+    "intentus": {
+      "hexcode": "1F3F9",
+      "file": "1F3F9.png",
+      "source": "override",
+      "headword": "intentus",
+      "glossZh": "伸展的、緊張的"
     },
     "interficio, interficere, interfeci, interfectus": {
       "hexcode": "2620",
@@ -3289,12 +4455,26 @@
       "glossZh": "殺害、除去",
       "borrowedVia": "殺害"
     },
+    "leuita (leuites), leuitae, m.": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "Lēvīta",
+      "glossZh": "執事、利未人"
+    },
     "lex, legis, f.": {
       "hexcode": "2696",
       "file": "2696.png",
       "source": "override",
       "headword": "lex",
       "glossZh": "法律、法度"
+    },
+    "ostendo, ostendere, ostendi, ostentus": {
+      "hexcode": "1F5BC",
+      "file": "1F5BC.png",
+      "source": "override",
+      "headword": "ostendō",
+      "glossZh": "展示、說明"
     },
     "pastor, pastoris, m.": {
       "hexcode": "1F468",
@@ -3374,6 +4554,13 @@
       "glossZh": "突至、臨到、驚至",
       "borrowedVia": "臨到"
     },
+    "tendo, tendere, tetendi, tentus [tensus]": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "override",
+      "headword": "tendō",
+      "glossZh": "伸展、張開"
+    },
     "tenebrae, tenebarum, f.": {
       "hexcode": "1F311",
       "file": "1F311.png",
@@ -3403,6 +4590,13 @@
       "source": "override",
       "headword": "auris",
       "glossZh": "耳朵、聽覺"
+    },
+    "cado, cadere, cecidi, casus": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "cadō",
+      "glossZh": "跌落、下落、陷落"
     },
     "caput, capitis, n.": {
       "hexcode": "1F464",
@@ -3494,6 +4688,13 @@
       "glossZh": "陷入、發生",
       "borrowedVia": "陷入"
     },
+    "latus, lateris": {
+      "hexcode": "1FAC0",
+      "file": "1FAC0.png",
+      "source": "override",
+      "headword": "latus",
+      "glossZh": "側面、肋旁"
+    },
     "mulier, mulieris, f.": {
       "hexcode": "1F469",
       "file": "1F469.png",
@@ -3538,6 +4739,20 @@
       "headword": "spēs",
       "glossZh": "望德、希望"
     },
+    "supersubstantialis, supersubstantiale": {
+      "hexcode": "1F35E",
+      "file": "1F35E.png",
+      "source": "override",
+      "headword": "supersubstantiālis",
+      "glossZh": "超越本質的、生活必需的"
+    },
+    "sursum": {
+      "hexcode": "2B06",
+      "file": "2B06.png",
+      "source": "override",
+      "headword": "sursum",
+      "glossZh": "向上、在上"
+    },
     "tu, tui": {
       "hexcode": "1FAF5",
       "file": "1FAF5.png",
@@ -3553,12 +4768,33 @@
       "headword": "arbor",
       "glossZh": "樹"
     },
+    "audeo, audere, —, ausus sum": {
+      "hexcode": "1F981",
+      "file": "1F981.png",
+      "source": "override",
+      "headword": "audeō",
+      "glossZh": "敢、勇於"
+    },
     "benedictio, benedictionis, f.": {
       "hexcode": "270B",
       "file": "270B.png",
       "source": "override",
       "headword": "benedictiō",
       "glossZh": "祝福、降福"
+    },
+    "confido, confidere, —, confisus sum": {
+      "hexcode": "2693",
+      "file": "2693.png",
+      "source": "override",
+      "headword": "cōnfīdō",
+      "glossZh": "信賴、寄望"
+    },
+    "consubstantialis, consubstantiale": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "cōnsubstantiālis",
+      "glossZh": "同一本質的、共體"
     },
     "deprecor, deprecari, —, deprecatus sum": {
       "hexcode": "1F64F",
@@ -3598,12 +4834,33 @@
       "glossZh": "清白的、無辜的",
       "borrowedVia": "無辜的"
     },
+    "lacrima, lacrimae": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "lacrima",
+      "glossZh": "淚、淚水"
+    },
     "memoria, memoriae, f.": {
       "hexcode": "1F9E0",
       "file": "1F9E0.png",
       "source": "override",
       "headword": "memoria",
       "glossZh": "記憶、追思"
+    },
+    "miror, mirari, —, miratus sum": {
+      "hexcode": "1F632",
+      "file": "1F632.png",
+      "source": "override",
+      "headword": "mīror",
+      "glossZh": "驚異、讚歎"
+    },
+    "misera, miserum": {
+      "hexcode": "1F61F",
+      "file": "1F61F.png",
+      "source": "override",
+      "headword": "miser",
+      "glossZh": "悲慘的、可憐的"
     },
     "misereor, misereri, —, misertus sum": {
       "hexcode": "1FAC2",
@@ -3673,6 +4930,20 @@
       "glossZh": "忍受、允許",
       "borrowedVia": "忍受"
     },
+    "peccator, peccatoris, m.": {
+      "hexcode": "1F5A4",
+      "file": "1F5A4.png",
+      "source": "override",
+      "headword": "peccātor",
+      "glossZh": "罪人"
+    },
+    "potens (gen., potentis)": {
+      "hexcode": "1F4AA",
+      "file": "1F4AA.png",
+      "source": "override",
+      "headword": "potēns",
+      "glossZh": "有力的、掌權的"
+    },
     "potestas, potestatis, f.": {
       "hexcode": "1F4AA",
       "file": "1F4AA.png",
@@ -3687,6 +4958,20 @@
       "headword": "precor",
       "glossZh": "祈禱、懇求",
       "borrowedVia": "祈禱"
+    },
+    "scelus, sceleris, n.": {
+      "hexcode": "1F4A5",
+      "file": "1F4A5.png",
+      "source": "override",
+      "headword": "scelus",
+      "glossZh": "罪行、惡行"
+    },
+    "utique": {
+      "hexcode": "1F44C",
+      "file": "1F44C.png",
+      "source": "override",
+      "headword": "utique",
+      "glossZh": "當然、無論如何"
     },
     "ualde": {
       "hexcode": "1F4AF",
@@ -3728,6 +5013,27 @@
       "glossZh": "認識、承認",
       "borrowedVia": "認識"
     },
+    "amplector, amplecti, —, amplexus sum": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "override",
+      "headword": "amplector",
+      "glossZh": "擁抱、懷抱"
+    },
+    "assiduus, -a, -um": {
+      "hexcode": "1F501",
+      "file": "1F501.png",
+      "source": "override",
+      "headword": "assiduus",
+      "glossZh": "不斷的、恆常的"
+    },
+    "caelicola, caelicolae, m.": {
+      "hexcode": "1F47C",
+      "file": "1F47C.png",
+      "source": "override",
+      "headword": "caelicola",
+      "glossZh": "天人、天居者"
+    },
     "cognosco, cognoscere, cognoui, cognitus": {
       "hexcode": "1F9E0",
       "file": "1F9E0.png",
@@ -3736,6 +5042,13 @@
       "glossZh": "認識、知道",
       "borrowedVia": "認識"
     },
+    "collaetor, collaetari, —, collaetatus sum": {
+      "hexcode": "1F973",
+      "file": "1F973.png",
+      "source": "override",
+      "headword": "collaetor",
+      "glossZh": "同樂、共享歡樂"
+    },
     "conor, conari, —, conatus sum": {
       "hexcode": "1F3C3",
       "file": "1F3C3.png",
@@ -3743,6 +5056,20 @@
       "headword": "cōnor",
       "glossZh": "嘗試、努力",
       "borrowedVia": "努力"
+    },
+    "consolo, consolare, —, consolatus": {
+      "hexcode": "1F917",
+      "file": "1F917.png",
+      "source": "override",
+      "headword": "cōnsolō",
+      "glossZh": "安慰、慰勉"
+    },
+    "conspectus, conspectus, m.": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "headword": "cōnspectus",
+      "glossZh": "視野、眼前"
     },
     "corona, coronae, f.": {
       "hexcode": "1F451",
@@ -3774,6 +5101,13 @@
       "headword": "fletus",
       "glossZh": "哭泣、眼淚",
       "borrowedVia": "哭泣"
+    },
+    "fungor, fungi, —, functus sum": {
+      "hexcode": "2699",
+      "file": "2699.png",
+      "source": "override",
+      "headword": "fungor",
+      "glossZh": "執行、履行"
     },
     "gradior, gradi, —, gressus sum": {
       "hexcode": "1F6B6",
@@ -3808,11 +5142,25 @@
       "borrowedVia": "歡喜"
     },
     "liber, libera, liberum": {
-      "hexcode": "1F4D5",
-      "file": "1F4D5.png",
+      "hexcode": "1F513",
+      "file": "1F513.png",
       "source": "override",
       "headword": "liber",
-      "glossZh": "書、卷"
+      "glossZh": "自由的、無拘束的"
+    },
+    "miseror, miserari, —, miseratus sum": {
+      "hexcode": "1F97A",
+      "file": "1F97A.png",
+      "source": "override",
+      "headword": "miseror",
+      "glossZh": "哀憐、同情"
+    },
+    "neque (nec)": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "neque",
+      "glossZh": "既不……亦不"
     },
     "nosco, noscere, noui, notus": {
       "hexcode": "1F9E0",
@@ -3854,6 +5202,13 @@
       "glossZh": "返回、退回",
       "borrowedVia": "退回"
     },
+    "semita, semitae, f.": {
+      "hexcode": "1F463",
+      "file": "1F463.png",
+      "source": "override",
+      "headword": "sēmita",
+      "glossZh": "小徑、路徑"
+    },
     "senex (gen., senis)": {
       "hexcode": "1F9D3",
       "file": "1F9D3.png",
@@ -3876,6 +5231,13 @@
       "headword": "septem",
       "glossZh": "七",
       "borrowedVia": "七"
+    },
+    "solor, solari, —, solatus": {
+      "hexcode": "1F917",
+      "file": "1F917.png",
+      "source": "override",
+      "headword": "solor",
+      "glossZh": "安慰、寬解"
     },
     "substantia, substantiae, f.": {
       "hexcode": "269B",
@@ -3901,6 +5263,27 @@
       "glossZh": "衣著、穿衣",
       "borrowedVia": "衣著"
     },
+    "alloquor, alloqui, —, allocutus sum": {
+      "hexcode": "1F5E8",
+      "file": "1F5E8.png",
+      "source": "override",
+      "headword": "alloquor",
+      "glossZh": "對話、呼喚"
+    },
+    "antistes, antistitis, m.": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "antistes",
+      "glossZh": "主教"
+    },
+    "assequor, assequi, —, assecutus sum": {
+      "hexcode": "1F3C3",
+      "file": "1F3C3.png",
+      "source": "override",
+      "headword": "assequor",
+      "glossZh": "追隨、達成"
+    },
     "cantus, cantus, m.": {
       "hexcode": "1F3B6",
       "file": "1F3B6.png",
@@ -3924,6 +5307,20 @@
       "glossZh": "光輝、榮耀",
       "borrowedVia": "光輝"
     },
+    "communis, commune": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "headword": "commūnis",
+      "glossZh": "公共的、普遍的"
+    },
+    "confiteor, confiteri, —, confessus sum": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "cōnfiteor",
+      "glossZh": "認罪、告明、讚頌"
+    },
     "consequor, consequi, —, consecutus sum": {
       "hexcode": "270A",
       "file": "270A.png",
@@ -3940,6 +5337,27 @@
       "glossZh": "關切、照料",
       "borrowedVia": "關切"
     },
+    "dedignor, dedignari, —, dedignatus": {
+      "hexcode": "1F644",
+      "file": "1F644.png",
+      "source": "override",
+      "headword": "dēdignor",
+      "glossZh": "輕蔑、不屑"
+    },
+    "dignor, dignari, —, dignatus": {
+      "hexcode": "1F647",
+      "file": "1F647.png",
+      "source": "override",
+      "headword": "dignor",
+      "glossZh": "認為適宜、屈尊"
+    },
+    "diiudico, diiudicare, diiudicaui, diiudicatus": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "headword": "dijūdicō",
+      "glossZh": "分辨、區別"
+    },
     "fateor, fateri, —, sassus sum": {
       "hexcode": "1F5E3",
       "file": "1F5E3.png",
@@ -3947,6 +5365,13 @@
       "headword": "fateor",
       "glossZh": "承認、告明、讚頌",
       "borrowedVia": "承認"
+    },
+    "intercessio, intercessionis, f.": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "intercessio",
+      "glossZh": "代禱、轉求"
     },
     "interrogo, interrogare, interrogaui, interrogatus": {
       "hexcode": "2753",
@@ -3986,6 +5411,13 @@
       "headword": "loquor",
       "glossZh": "說話、講述"
     },
+    "maior, maius": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "headword": "major",
+      "glossZh": "較大的、較年長的"
+    },
     "memoror, memorari, —, memoratus sum": {
       "hexcode": "1F4AD",
       "file": "1F4AD.png",
@@ -4010,6 +5442,13 @@
       "glossZh": "請求、懇求",
       "borrowedVia": "請求"
     },
+    "planctus, planctus, m.": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "plānctus",
+      "glossZh": "哀慟、悲哭"
+    },
     "postulo, postulare, postulaui, postulatus": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -4024,6 +5463,20 @@
       "source": "override",
       "headword": "praedicō",
       "glossZh": "宣講、宣揚"
+    },
+    "profiteor, profiteri, —, professus sum": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "override",
+      "headword": "profiteor",
+      "glossZh": "宣認、明認"
+    },
+    "prosequor, prosequi, —, prosecutus sum": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "prōsequor",
+      "glossZh": "進行、貫徹"
     },
     "respondeo, respondere, respondi, responsus": {
       "hexcode": "1F4AC",
@@ -4048,6 +5501,13 @@
       "headword": "sequor",
       "glossZh": "跟隨、追隨",
       "borrowedVia": "跟隨"
+    },
+    "serenus, -a, -um": {
+      "hexcode": "26C5",
+      "file": "26C5.png",
+      "source": "override",
+      "headword": "serenus",
+      "glossZh": "明朗的、晴朗的"
     },
     "spina, spinae, f.": {
       "hexcode": "1F335",
@@ -4088,6 +5548,13 @@
       "glossZh": "紀念、追憶",
       "borrowedVia": "紀念"
     },
+    "cooperor, cooperari, —, cooperatus sum": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "cooperor",
+      "glossZh": "協作、共事"
+    },
     "delicia, deliciae, f.": {
       "hexcode": "1F973",
       "file": "1F973.png",
@@ -4103,6 +5570,20 @@
       "headword": "dēsertus",
       "glossZh": "被棄的、荒涼的",
       "borrowedVia": "荒涼的"
+    },
+    "factor, factoris, m.": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "headword": "factor",
+      "glossZh": "製造者、行為者"
+    },
+    "hic, haec, hoc": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "hic",
+      "glossZh": "這、此"
     },
     "ille, illa, illud": {
       "hexcode": "1F449",
@@ -4120,6 +5601,20 @@
       "glossZh": "照亮、啟蒙",
       "borrowedVia": "照亮"
     },
+    "is, ea, id": {
+      "hexcode": "1F449",
+      "file": "1F449.png",
+      "source": "override",
+      "headword": "is",
+      "glossZh": "此、彼；代稱人或物"
+    },
+    "iste, ista, istud": {
+      "hexcode": "1F448",
+      "file": "1F448.png",
+      "source": "override",
+      "headword": "iste",
+      "glossZh": "這、那（你的）"
+    },
     "ita": {
       "hexcode": "1F447",
       "file": "1F447.png",
@@ -4129,11 +5624,18 @@
       "borrowedVia": "如此"
     },
     "labor, labi, —, lapsus sum": {
-      "hexcode": "1F6E0",
-      "file": "1F6E0.png",
+      "hexcode": "1F342",
+      "file": "1F342.png",
       "source": "override",
       "headword": "labor",
       "glossZh": "滑落、跌倒"
+    },
+    "largior, largiri, —, largitus sum": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "override",
+      "headword": "largior",
+      "glossZh": "賜予、慷慨給予"
     },
     "operor, operari, —, operatus sum": {
       "hexcode": "1F4BC",
@@ -4205,6 +5707,13 @@
       "glossZh": "如、像；正如",
       "borrowedVia": "如"
     },
+    "sicut .. et": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "sicut .. et",
+      "glossZh": "正如……同樣也"
+    },
     "talis, tale": {
       "hexcode": "E265",
       "file": "E265.png",
@@ -4220,6 +5729,20 @@
       "headword": "tam",
       "glossZh": "那麼、如此地",
       "borrowedVia": "那麼"
+    },
+    "tantus, -a, -um": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "headword": "tantus",
+      "glossZh": "如此大、如此多"
+    },
+    "tueor, tueri, —, tuitus": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "override",
+      "headword": "tueor",
+      "glossZh": "守護、保護、維護"
     },
     "uitis, uitis, uitium, f.": {
       "hexcode": "1F347",
@@ -4269,6 +5792,13 @@
       "glossZh": "唱歌、和唱",
       "borrowedVia": "唱歌"
     },
+    "confestim": {
+      "hexcode": "26A1",
+      "file": "26A1.png",
+      "source": "override",
+      "headword": "cōnfestim",
+      "glossZh": "立即、馬上"
+    },
     "consors, consortis, consortium, m. or f.": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -4317,6 +5847,13 @@
       "glossZh": "照亮、啟蒙、闡明",
       "borrowedVia": "照亮"
     },
+    "impono, imponere, imposui, impositus": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "impōnō",
+      "glossZh": "置於、加諸"
+    },
     "ipse, ipsa, ipsum": {
       "hexcode": "1FA9E",
       "file": "1FA9E.png",
@@ -4331,6 +5868,13 @@
       "source": "override",
       "headword": "lux",
       "glossZh": "光、光明"
+    },
+    "miles, militis, m.": {
+      "hexcode": "1FA96",
+      "file": "1FA96.png",
+      "source": "override",
+      "headword": "miles",
+      "glossZh": "士兵、軍人"
     },
     "mitis, mite": {
       "hexcode": "1F54A",
@@ -4362,6 +5906,27 @@
       "headword": "octōgintā",
       "glossZh": "八十",
       "borrowedVia": "八十"
+    },
+    "particeps, participis, m. & f.": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "particeps",
+      "glossZh": "參與者、共享者"
+    },
+    "pauci, -ae, -a": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "paucī",
+      "glossZh": "少數、幾個"
+    },
+    "plango, plangere, planxi, planctus": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "plango",
+      "glossZh": "哀悼、悲嘆"
     },
     "pono, ponere, posuit, positus": {
       "hexcode": "1F4E6",
@@ -4427,6 +5992,13 @@
       "glossZh": "同時、一起",
       "borrowedVia": "同時"
     },
+    "simul ac": {
+      "hexcode": "23F1",
+      "file": "23F1.png",
+      "source": "override",
+      "headword": "simulac",
+      "glossZh": "一旦、伊始"
+    },
     "uado, uadere, —, —": {
       "hexcode": "1F6B6",
       "file": "1F6B6.png",
@@ -4467,12 +6039,26 @@
       "glossZh": "環繞、大約",
       "borrowedVia": "環繞"
     },
+    "contradico, contradicere, contradixi, contradictus": {
+      "hexcode": "1F4A2",
+      "file": "1F4A2.png",
+      "source": "override",
+      "headword": "contrādicō",
+      "glossZh": "爭辯、反駁"
+    },
     "curro, currere, cucurri, cursus": {
       "hexcode": "1F3C3",
       "file": "1F3C3.png",
       "source": "override",
       "headword": "currō",
       "glossZh": "奔馳、急行"
+    },
+    "defendo, defendere, defendi, defensus": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "override",
+      "headword": "defendō",
+      "glossZh": "保衛、防禦"
     },
     "deposco, deposcere, depoposci, —": {
       "hexcode": "1F64F",
@@ -4489,12 +6075,26 @@
       "headword": "diabolus",
       "glossZh": "魔鬼"
     },
+    "diues": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "override",
+      "headword": "dīves",
+      "glossZh": "富有、富裕"
+    },
     "dolor, doloris, m.": {
       "hexcode": "1F622",
       "file": "1F622.png",
       "source": "override",
       "headword": "dolor",
       "glossZh": "悲哀、痛苦"
+    },
+    "effusio, effusionis, f.": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "headword": "effūsiō",
+      "glossZh": "傾注、流溢"
     },
     "extra": {
       "hexcode": "1F51D",
@@ -4518,6 +6118,34 @@
       "headword": "fleō",
       "glossZh": "哭泣、哀傷"
     },
+    "fugio, fugere, fugi, fugitus": {
+      "hexcode": "1F4A8",
+      "file": "1F4A8.png",
+      "source": "override",
+      "headword": "fugiō",
+      "glossZh": "逃離、躲避"
+    },
+    "honor, honoris, m.": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "headword": "honor",
+      "glossZh": "榮譽、尊敬"
+    },
+    "imperator, imperatoris, m.": {
+      "hexcode": "1FAC5",
+      "file": "1FAC5.png",
+      "source": "override",
+      "headword": "imperātor",
+      "glossZh": "將軍、皇帝"
+    },
+    "ne": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "nē",
+      "glossZh": "以免、使不；使；恐怕"
+    },
     "necessarius, -a, -um": {
       "hexcode": "2049",
       "file": "2049.png",
@@ -4525,6 +6153,20 @@
       "headword": "necessārius",
       "glossZh": "必要的、緊迫的；所需的",
       "borrowedVia": "必要的"
+    },
+    "oblatio, oblationis, f.": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "oblātiō",
+      "glossZh": "奉獻、供物"
+    },
+    "occurro, occurrere, occurri, occursus": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "override",
+      "headword": "occurrō",
+      "glossZh": "趨近、迎接"
     },
     "patria, patriae, f.": {
       "hexcode": "1F3E1",
@@ -4542,6 +6184,13 @@
       "glossZh": "貧窮的、窮困的",
       "borrowedVia": "貧窮的"
     },
+    "perpetuo": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "perpetuō",
+      "glossZh": "持續地、永遠地"
+    },
     "posco, poscere, poposci, —": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -4557,6 +6206,13 @@
       "headword": "praedīcō",
       "glossZh": "預言、預告",
       "borrowedVia": "預言"
+    },
+    "salue": {
+      "hexcode": "1F44B",
+      "file": "1F44B.png",
+      "source": "override",
+      "headword": "salvē",
+      "glossZh": "敬禮、再見、問候"
     },
     "siue": {
       "hexcode": "1F500",
@@ -4628,6 +6284,13 @@
       "headword": "cōnsuētūdō",
       "glossZh": "習慣、風俗"
     },
+    "debitor, debitoris, m.": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "debitor",
+      "glossZh": "債務人、欠債者"
+    },
     "doctor, doctoris, m.": {
       "hexcode": "1F9D1-200D-1F3EB",
       "file": "1F9D1-200D-1F3EB.png",
@@ -4682,6 +6345,13 @@
       "headword": "labōrō",
       "glossZh": "勞動、工作"
     },
+    "lucifer, luciferi, m.": {
+      "hexcode": "1F320",
+      "file": "1F320.png",
+      "source": "override",
+      "headword": "lūcifer",
+      "glossZh": "晨星、金星"
+    },
     "martyr, martyris, m.": {
       "hexcode": "1F5E3",
       "file": "1F5E3.png",
@@ -4697,6 +6367,20 @@
       "headword": "nesciō",
       "glossZh": "不知、無知",
       "borrowedVia": "無知"
+    },
+    "patronus, patroni, m.": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "override",
+      "headword": "patrōnus",
+      "glossZh": "保護者、辯護人"
+    },
+    "peregrinantis, gen., peregrinantis": {
+      "hexcode": "1F6B6",
+      "file": "1F6B6.png",
+      "source": "override",
+      "headword": "peregrīnantis",
+      "glossZh": "旅行者、朝聖者"
     },
     "praestolor, praestolari, —, praestolatus sum": {
       "hexcode": "23F3",
@@ -4730,6 +6414,20 @@
       "glossZh": "如何、以何方式",
       "borrowedVia": "如何"
     },
+    "spiritualis, spirituale": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "spirituālis",
+      "glossZh": "精神的、靈性的"
+    },
+    "spiro, spirare, spiraui, spiratus": {
+      "hexcode": "1F32C",
+      "file": "1F32C.png",
+      "source": "override",
+      "headword": "spirō",
+      "glossZh": "呼吸、吐氣"
+    },
     "triumphus, triumphi, m.": {
       "hexcode": "1F3C6",
       "file": "1F3C6.png",
@@ -4738,6 +6436,13 @@
       "glossZh": "凱旋、勝利",
       "borrowedVia": "勝利"
     },
+    "ut quid": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "ut quid",
+      "glossZh": "為了什麼、何故"
+    },
     "adiuuo, adiuuare, adiuui, adiutus": {
       "hexcode": "E083",
       "file": "E083.png",
@@ -4745,6 +6450,20 @@
       "headword": "adjuvō",
       "glossZh": "幫助、輔助",
       "borrowedVia": "幫助"
+    },
+    "ait; aiunt": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "override",
+      "headword": "ait",
+      "glossZh": "說（他說；他們說）"
+    },
+    "circumfulgeo, circumfulgere, circumfulsi, —": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "circumfulgeō",
+      "glossZh": "周圍閃耀、環照"
     },
     "constituo, constituere, constitui, constitutus": {
       "hexcode": "1F4CF",
@@ -4770,6 +6489,13 @@
       "glossZh": "閃耀、發光",
       "borrowedVia": "發光"
     },
+    "genitus, -a, -um": {
+      "hexcode": "1F476",
+      "file": "1F476.png",
+      "source": "override",
+      "headword": "genitus",
+      "glossZh": "所生的、被生的"
+    },
     "gens, gentis, gentium, f.": {
       "hexcode": "1F310",
       "file": "1F310.png",
@@ -4790,7 +6516,7 @@
       "file": "1F6E0.png",
       "source": "override",
       "headword": "labor",
-      "glossZh": "滑落、跌倒"
+      "glossZh": "勞苦、工作、辛勞"
     },
     "lauo, lauare, laui, lautus": {
       "hexcode": "1F6BF",
@@ -4808,6 +6534,13 @@
       "glossZh": "更、更加",
       "borrowedVia": "更"
     },
+    "mereo, merere, merui, meritus": {
+      "hexcode": "1F396",
+      "file": "1F396.png",
+      "source": "override",
+      "headword": "mereō",
+      "glossZh": "值得、應得"
+    },
     "nondum": {
       "hexcode": "23F3",
       "file": "23F3.png",
@@ -4823,6 +6556,20 @@
       "headword": "odor",
       "glossZh": "香氣、芬芳",
       "borrowedVia": "香氣"
+    },
+    "pasco, pascere, paui, pastus": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "override",
+      "headword": "pascō",
+      "glossZh": "飼養、餵食"
+    },
+    "pretium, pretii": {
+      "hexcode": "1FA99",
+      "file": "1FA99.png",
+      "source": "override",
+      "headword": "pretium",
+      "glossZh": "代價、贖價"
     },
     "quo": {
       "hexcode": "1F3AF",
@@ -4871,6 +6618,13 @@
       "glossZh": "建立、任命、決定",
       "borrowedVia": "建立"
     },
+    "suauis, suaue": {
+      "hexcode": "1F36F",
+      "file": "1F36F.png",
+      "source": "override",
+      "headword": "suāvis",
+      "glossZh": "甘美、芬芳"
+    },
     "synagoga, synagogae, f.": {
       "hexcode": "1F54D",
       "file": "1F54D.png",
@@ -4878,12 +6632,26 @@
       "headword": "synagōga",
       "glossZh": "會堂、猶太教堂"
     },
+    "tantum": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "tantum",
+      "glossZh": "僅、只"
+    },
     "tempus, temporis, n.": {
       "hexcode": "231B",
       "file": "231B.png",
       "source": "override",
       "headword": "tempus",
       "glossZh": "時間、時期"
+    },
+    "unde": {
+      "hexcode": "2B05",
+      "file": "2B05.png",
+      "source": "override",
+      "headword": "unde",
+      "glossZh": "從何處、由此"
     },
     "uirtus, uirtutis, f.": {
       "hexcode": "1F4B0",
@@ -4909,6 +6677,27 @@
       "glossZh": "他人、另一個",
       "borrowedVia": "另一個"
     },
+    "alter, altera, alterum": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "headword": "alter",
+      "glossZh": "另一者、其二"
+    },
+    "amplius": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "headword": "amplius",
+      "glossZh": "更多、更進一步"
+    },
+    "amplus, -a, -um": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "headword": "amplus",
+      "glossZh": "充足、廣大"
+    },
     "ardeo, ardere, arsi, arsus": {
       "hexcode": "1F525",
       "file": "1F525.png",
@@ -4916,6 +6705,13 @@
       "headword": "ardeō",
       "glossZh": "燃燒、熾熱",
       "borrowedVia": "燃燒"
+    },
+    "condoleo, condolere, —, —": {
+      "hexcode": "1F97A",
+      "file": "1F97A.png",
+      "source": "override",
+      "headword": "condoleō",
+      "glossZh": "同情、共感痛楚"
     },
     "contra": {
       "hexcode": "2694",
@@ -4956,6 +6752,20 @@
       "glossZh": "沉重、嚴肅",
       "borrowedVia": "沉重"
     },
+    "inficio, inficere, infeci, infectus": {
+      "hexcode": "1F9A0",
+      "file": "1F9A0.png",
+      "source": "override",
+      "headword": "īnficiō",
+      "glossZh": "感染、污染"
+    },
+    "inuicem": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "override",
+      "headword": "invicem",
+      "glossZh": "輪流、互相"
+    },
     "lingua, linguae, f.": {
       "hexcode": "1F445",
       "file": "1F445.png",
@@ -4994,6 +6804,13 @@
       "glossZh": "完美、完成",
       "borrowedVia": "完成"
     },
+    "praefatio, praefationis": {
+      "hexcode": "1F4D1",
+      "file": "1F4D1.png",
+      "source": "override",
+      "headword": "praefātiō",
+      "glossZh": "序文、前言"
+    },
     "proficio, proficere, profeci, proiectus": {
       "hexcode": "2705",
       "file": "2705.png",
@@ -5002,6 +6819,20 @@
       "glossZh": "獲益、成功",
       "borrowedVia": "成功"
     },
+    "protectio, protectionis": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "override",
+      "headword": "prōtēctiō",
+      "glossZh": "保護"
+    },
+    "quies, quietis, f.": {
+      "hexcode": "1F4A4",
+      "file": "1F4A4.png",
+      "source": "override",
+      "headword": "quiēs",
+      "glossZh": "安寧、休息、寂靜"
+    },
     "reficio, reficere, refeci, refectus": {
       "hexcode": "267B",
       "file": "267B.png",
@@ -5009,6 +6840,13 @@
       "headword": "reficiō",
       "glossZh": "恢復、修復、重整",
       "borrowedVia": "恢復"
+    },
+    "solum": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "sōlum",
+      "glossZh": "僅、只"
     },
     "solus, -a, -um": {
       "hexcode": "1F464",
@@ -5025,6 +6863,13 @@
       "headword": "sui",
       "glossZh": "自己、其自身",
       "borrowedVia": "自己"
+    },
+    "suus, -a, -um": {
+      "hexcode": "1F464",
+      "file": "1F464.png",
+      "source": "override",
+      "headword": "suus",
+      "glossZh": "其、己之"
     },
     "tentatio, tentationis, f.": {
       "hexcode": "1F608",
@@ -5049,6 +6894,13 @@
       "headword": "tōtus",
       "glossZh": "全部、整個"
     },
+    "tristis, triste": {
+      "hexcode": "2639",
+      "file": "2639.png",
+      "source": "override",
+      "headword": "tristis",
+      "glossZh": "悲傷、憂鬱"
+    },
     "umbra, umbrae, f.": {
       "hexcode": "1F464",
       "file": "1F464.png",
@@ -5065,6 +6917,13 @@
       "glossZh": "敬拜、崇敬",
       "borrowedVia": "敬拜"
     },
+    "aliqui, aliqua, aliquod": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "aliquī",
+      "glossZh": "某些、某"
+    },
     "aliquis, aliquid": {
       "hexcode": "1F464",
       "file": "1F464.png",
@@ -5072,6 +6931,20 @@
       "headword": "aliquis",
       "glossZh": "某人、某物；任何人、任何物",
       "borrowedVia": "某人"
+    },
+    "assumo, assumere, assumpsi, assumptus": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "override",
+      "headword": "assūmō",
+      "glossZh": "取起、承擔"
+    },
+    "cautio, cautionis, f.": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "cautiō",
+      "glossZh": "保狀、保證"
     },
     "conclusio, conclusionis, f.": {
       "hexcode": "1F51A",
@@ -5096,6 +6969,13 @@
       "glossZh": "生長、增加",
       "borrowedVia": "增加"
     },
+    "curia, curiae, f.": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "override",
+      "headword": "cūria",
+      "glossZh": "議院、法院"
+    },
     "demonstro, demonstrare, demonstraui, demonstratus": {
       "hexcode": "1F449",
       "file": "1F449.png",
@@ -5104,12 +6984,26 @@
       "glossZh": "指示、揭示",
       "borrowedVia": "指示"
     },
+    "destruo, destruere, destruxi, destructus": {
+      "hexcode": "1F300",
+      "file": "1F300.png",
+      "source": "override",
+      "headword": "dēstruō",
+      "glossZh": "毀壞、推毀"
+    },
     "figura, figurae, f.": {
       "hexcode": "1F4D0",
       "file": "1F4D0.png",
       "source": "override",
       "headword": "figūra",
       "glossZh": "形像、形態"
+    },
+    "gero, gerere, gessi, gestus": {
+      "hexcode": "1F4BC",
+      "file": "1F4BC.png",
+      "source": "override",
+      "headword": "gerō",
+      "glossZh": "持、經營、進行"
     },
     "hospes, hospitis, m. & f.": {
       "hexcode": "1F454",
@@ -5150,6 +7044,13 @@
       "glossZh": "燈、火焰",
       "borrowedVia": "燈"
     },
+    "licet": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "headword": "licet",
+      "glossZh": "雖然、儘管"
+    },
     "monstro, monstrare, monstraui, monstratus": {
       "hexcode": "1F449",
       "file": "1F449.png",
@@ -5157,6 +7058,27 @@
       "headword": "mōnstrō",
       "glossZh": "指示、示現",
       "borrowedVia": "指示"
+    },
+    "omissio, omissionis, f.": {
+      "hexcode": "1F573",
+      "file": "1F573.png",
+      "source": "override",
+      "headword": "omissiō",
+      "glossZh": "遺漏、省略"
+    },
+    "pretiosus, -a, -um": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "override",
+      "headword": "pretiōsus",
+      "glossZh": "寶貴、珍貴"
+    },
+    "priusquam": {
+      "hexcode": "23EE",
+      "file": "23EE.png",
+      "source": "override",
+      "headword": "priusquam",
+      "glossZh": "在……之前"
     },
     "psalmista, psalmistae": {
       "hexcode": "270D",
@@ -5181,6 +7103,13 @@
       "headword": "sanctificātiō",
       "glossZh": "聖化、成聖",
       "borrowedVia": "成聖"
+    },
+    "struo, struere, struxi, structus": {
+      "hexcode": "1F3D7",
+      "file": "1F3D7.png",
+      "source": "override",
+      "headword": "struō",
+      "glossZh": "建築、構築"
     },
     "sumo, sumere, sumpsi, sumptus": {
       "hexcode": "2194",
@@ -5222,6 +7151,13 @@
       "glossZh": "敬畏天主的、虔誠",
       "borrowedVia": "虔誠"
     },
+    "uespertinus, -a, -um": {
+      "hexcode": "1F319",
+      "file": "1F319.png",
+      "source": "override",
+      "headword": "vespertīnus",
+      "glossZh": "晚間的、傍晚的"
+    },
     "amicus, amici, m.": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -5230,6 +7166,13 @@
       "glossZh": "友人、朋友",
       "borrowedVia": "朋友"
     },
+    "attraho, attrahere, attraxi, attractus": {
+      "hexcode": "1F9F2",
+      "file": "1F9F2.png",
+      "source": "override",
+      "headword": "attrahō",
+      "glossZh": "拉近、吸引"
+    },
     "cogito, cogitare, cogitaui, cogitatus": {
       "hexcode": "1F914",
       "file": "1F914.png",
@@ -5237,6 +7180,20 @@
       "headword": "cōgitō",
       "glossZh": "思考、籌謀",
       "borrowedVia": "思考"
+    },
+    "commendo, commendare, commendaui, commendatus": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "commendō",
+      "glossZh": "託付、委託"
+    },
+    "deputo, deputare, deputaui, deputatus": {
+      "hexcode": "1F4CB",
+      "file": "1F4CB.png",
+      "source": "override",
+      "headword": "dēputō",
+      "glossZh": "指派、計為"
     },
     "detraho, detrahere, detraxi, detractus": {
       "hexcode": "2796",
@@ -5270,6 +7227,13 @@
       "glossZh": "神性、神聖性",
       "borrowedVia": "神性"
     },
+    "domina, dominae, f.": {
+      "hexcode": "1F469",
+      "file": "1F469.png",
+      "source": "override",
+      "headword": "domina",
+      "glossZh": "女主人、夫人、貴婦"
+    },
     "existimo, existimare, existimaui, existimatus": {
       "hexcode": "1F914",
       "file": "1F914.png",
@@ -5277,6 +7241,13 @@
       "headword": "exīstimō",
       "glossZh": "認為、判斷、評估",
       "borrowedVia": "認為"
+    },
+    "exprimo, exprimere, expressi, expressus": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "headword": "exprimō",
+      "glossZh": "表達、表現、描繪"
     },
     "facilis, facile": {
       "hexcode": "1F44D",
@@ -5302,6 +7273,20 @@
       "glossZh": "照亮、發光、破曉",
       "borrowedVia": "照亮"
     },
+    "inaestimabilis, inaestimabile": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "override",
+      "headword": "inaestimābilis",
+      "glossZh": "無價、珍貴、不可估量"
+    },
+    "ineffabilis, ineffabile": {
+      "hexcode": "1F910",
+      "file": "1F910.png",
+      "source": "override",
+      "headword": "ineffābilis",
+      "glossZh": "不可言喻、無法表達、玄妙"
+    },
     "inimicus, inimici, m.": {
       "hexcode": "1F47F",
       "file": "1F47F.png",
@@ -5316,6 +7301,13 @@
       "source": "override",
       "headword": "lignum",
       "glossZh": "木、樹木、木料"
+    },
+    "liquo, liquare, liquaui, liquatus": {
+      "hexcode": "1F4A7",
+      "file": "1F4A7.png",
+      "source": "override",
+      "headword": "liquō",
+      "glossZh": "熔化、溶解"
     },
     "monumentum, monumenti, n.": {
       "hexcode": "26B0",
@@ -5349,6 +7341,13 @@
       "glossZh": "不願、勿、不要",
       "borrowedVia": "不要"
     },
+    "parens, parentis, m. & f.": {
+      "hexcode": "1F46A",
+      "file": "1F46A.png",
+      "source": "override",
+      "headword": "parēns",
+      "glossZh": "父母、親生者"
+    },
     "perseuero, perseuerare, perseueraui, perseueratus": {
       "hexcode": "270A",
       "file": "270A.png",
@@ -5373,6 +7372,13 @@
       "glossZh": "認為、計算、考慮",
       "borrowedVia": "認為"
     },
+    "quisquam, quaequam, quidquam": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quisquam",
+      "glossZh": "任何人、任何事物（用於否定或隱含否定句）"
+    },
     "sedes, sedis, f.": {
       "hexcode": "1F4BA",
       "file": "1F4BA.png",
@@ -5380,6 +7386,13 @@
       "headword": "sēdēs",
       "glossZh": "座位、地點、住所",
       "borrowedVia": "座位"
+    },
+    "socio, sociare, sociaui, sociatus": {
+      "hexcode": "1F517",
+      "file": "1F517.png",
+      "source": "override",
+      "headword": "sociō",
+      "glossZh": "使參與、聯合、結盟"
     },
     "somnus, somni, m.": {
       "hexcode": "1F4A4",
@@ -5413,13 +7426,19 @@
       "glossZh": "禁止、阻止",
       "borrowedVia": "阻止"
     },
+    "uicinus, uicina, uicinum": {
+      "hexcode": "1F3D8",
+      "file": "1F3D8.png",
+      "source": "override",
+      "headword": "vīcīnus",
+      "glossZh": "相鄰的、附近的"
+    },
     "uicinus, uicini, m.": {
       "hexcode": "1F3D8",
       "file": "1F3D8.png",
-      "source": "zh_transfer",
+      "source": "override",
       "headword": "vicīnus",
-      "glossZh": "鄰居",
-      "borrowedVia": "鄰居"
+      "glossZh": "鄰居"
     },
     "appropinquo, appropinquare, appropinquaui, appropinquatus": {
       "hexcode": "E0A7",
@@ -5437,6 +7456,13 @@
       "glossZh": "但是、然而",
       "borrowedVia": "但是"
     },
+    "auerto, auertere, auerti, auersus": {
+      "hexcode": "21AA",
+      "file": "21AA.png",
+      "source": "override",
+      "headword": "āvertō",
+      "glossZh": "轉身、移開"
+    },
     "compar, gen., comparis": {
       "hexcode": "1F7F0",
       "file": "1F7F0.png",
@@ -5453,12 +7479,33 @@
       "glossZh": "轉變、改變、皈依",
       "borrowedVia": "改變"
     },
+    "daemonium, daemonii, n.": {
+      "hexcode": "1F608",
+      "file": "1F608.png",
+      "source": "override",
+      "headword": "daemōnium",
+      "glossZh": "惡靈、魔鬼"
+    },
+    "dispar, gen., disparis": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "dispār",
+      "glossZh": "不同、有異"
+    },
     "infernus, -a, -um": {
       "hexcode": "1F525",
       "file": "1F525.png",
       "source": "override",
       "headword": "infernus",
       "glossZh": "地獄的、冥府的"
+    },
+    "inferus, -a, -um": {
+      "hexcode": "1F525",
+      "file": "1F525.png",
+      "source": "override",
+      "headword": "inferus",
+      "glossZh": "地下的、下方的"
     },
     "intellego, intellegere, intellexi, intellectus": {
       "hexcode": "1F9D0",
@@ -5482,6 +7529,13 @@
       "headword": "magus",
       "glossZh": "智者、術士、占星家",
       "borrowedVia": "術士"
+    },
+    "maiestas, maiestatis, f.": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "headword": "majestās",
+      "glossZh": "威嚴、尊嚴、陛下"
     },
     "maneo, manere, mansi, mansus": {
       "hexcode": "2693",
@@ -5515,6 +7569,13 @@
       "glossZh": "悔改、懊悔",
       "borrowedVia": "悔改"
     },
+    "par, gen., paris": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "pār",
+      "glossZh": "相等、相同、與……相等"
+    },
     "pariter": {
       "hexcode": "1F9D1-200D-1F91D-200D-1F9D1",
       "file": "1F9D1-200D-1F91D-200D-1F9D1.png",
@@ -5523,6 +7584,13 @@
       "glossZh": "平等地、一起",
       "borrowedVia": "一起"
     },
+    "permaneo, permanere, permansi, permansus": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "permaneō",
+      "glossZh": "持續、留存、不變"
+    },
     "ploro, plorare, ploraui, ploratus": {
       "hexcode": "1F622",
       "file": "1F622.png",
@@ -5530,6 +7598,13 @@
       "headword": "plōrō",
       "glossZh": "哭泣、哀慟、悲慟",
       "borrowedVia": "哭泣"
+    },
+    "praeses, praesidis": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "praeses",
+      "glossZh": "主持人、總督、州長"
     },
     "purus, -a, -um": {
       "hexcode": "1F9FC",
@@ -5561,6 +7636,13 @@
       "headword": "redemptiō",
       "glossZh": "救贖、解救",
       "borrowedVia": "救贖"
+    },
+    "remaneo, remanere, remansi, remansus": {
+      "hexcode": "23F3",
+      "file": "23F3.png",
+      "source": "override",
+      "headword": "remaneō",
+      "glossZh": "遺留、殘留、保存"
     },
     "requiro, requirere, requisiui, requisitus": {
       "hexcode": "1F50D",
@@ -5629,6 +7711,13 @@
       "glossZh": "衣服、衣著",
       "borrowedVia": "衣服"
     },
+    "uictor, uictoris, m.": {
+      "hexcode": "1F3C6",
+      "file": "1F3C6.png",
+      "source": "override",
+      "headword": "victor",
+      "glossZh": "勝利者、征服者"
+    },
     "aduersus (aduersum)": {
       "hexcode": "1F645",
       "file": "1F645.png",
@@ -5636,6 +7725,27 @@
       "headword": "adversus",
       "glossZh": "對著、相對、反對、面對",
       "borrowedVia": "反對"
+    },
+    "antequam": {
+      "hexcode": "23EE",
+      "file": "23EE.png",
+      "source": "override",
+      "headword": "antequam",
+      "glossZh": "在……之前"
+    },
+    "apis, apis, apium, f.": {
+      "hexcode": "1F41D",
+      "file": "1F41D.png",
+      "source": "override",
+      "headword": "apis",
+      "glossZh": "蜜蜂"
+    },
+    "cera, cerae, f.": {
+      "hexcode": "1F56F",
+      "file": "1F56F.png",
+      "source": "override",
+      "headword": "cēra",
+      "glossZh": "蠟"
     },
     "coaduno, coadunare, coadunaui, coadunatus": {
       "hexcode": "1F517",
@@ -5652,6 +7762,20 @@
       "headword": "contineō",
       "glossZh": "容納、保持、約束",
       "borrowedVia": "容納"
+    },
+    "deuinco, deuincere, deuici, deuictus": {
+      "hexcode": "1F3C6",
+      "file": "1F3C6.png",
+      "source": "override",
+      "headword": "dēvincō",
+      "glossZh": "徹底戰勝、完全征服"
+    },
+    "eucharisticus, -a, -um": {
+      "hexcode": "1F35E",
+      "file": "1F35E.png",
+      "source": "override",
+      "headword": "eucharisticus",
+      "glossZh": "感恩祭的、聖體的"
     },
     "exsisto, exsistere, exstiti, exstitus": {
       "hexcode": "1F6AA",
@@ -5675,6 +7799,27 @@
       "headword": "fōns",
       "glossZh": "泉源、水泉、根源"
     },
+    "fore": {
+      "hexcode": "1F51C",
+      "file": "1F51C.png",
+      "source": "override",
+      "headword": "fore",
+      "glossZh": "將是、即將"
+    },
+    "idem, eadem, idem": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "īdem",
+      "glossZh": "同一的、相同的"
+    },
+    "illuminatio, illuminationis, f.": {
+      "hexcode": "1F4A1",
+      "file": "1F4A1.png",
+      "source": "override",
+      "headword": "illūminātio",
+      "glossZh": "光照、照明"
+    },
     "iudex, iudicis": {
       "hexcode": "1F9D1-200D-2696-FE0F",
       "file": "1F9D1-200D-2696-FE0F.png",
@@ -5696,6 +7841,13 @@
       "headword": "orbis",
       "glossZh": "球體、圓盤、世界"
     },
+    "palam": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "palam",
+      "glossZh": "公開地、明白地"
+    },
     "palma, palmae, f.": {
       "hexcode": "1F3C6",
       "file": "1F3C6.png",
@@ -5711,6 +7863,20 @@
       "headword": "pendeō",
       "glossZh": "懸掛、依附",
       "borrowedVia": "懸掛"
+    },
+    "piaculum, piaculi, n.": {
+      "hexcode": "1F5A4",
+      "file": "1F5A4.png",
+      "source": "override",
+      "headword": "piāculum",
+      "glossZh": "罪愆、罪惡"
+    },
+    "quisquis, quaequae, quidquid": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quisquis",
+      "glossZh": "凡是……的人、無論誰"
     },
     "ratio, rationis, f.": {
       "hexcode": "1F9E0",
@@ -5734,6 +7900,13 @@
       "headword": "requiēs",
       "glossZh": "休息、安息",
       "borrowedVia": "安息"
+    },
+    "sidus, sideris, n.": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "sidus",
+      "glossZh": "星辰、星座"
     },
     "sisto, sistere, steti [stiti], status": {
       "hexcode": "1F9CD",
@@ -5782,6 +7955,20 @@
       "glossZh": "王座、寶座",
       "borrowedVia": "寶座"
     },
+    "uerbero, uerberare, uerberaui, uerberatus": {
+      "hexcode": "1F528",
+      "file": "1F528.png",
+      "source": "override",
+      "headword": "verberō",
+      "glossZh": "鞭打、殴打"
+    },
+    "uinco, uincere, uici, uictus": {
+      "hexcode": "1F3C6",
+      "file": "1F3C6.png",
+      "source": "override",
+      "headword": "vincō",
+      "glossZh": "戰勝、征服"
+    },
     "aspergo, aspergere, aspersi, aspersus": {
       "hexcode": "1F6BF",
       "file": "1F6BF.png",
@@ -5797,6 +7984,13 @@
       "headword": "auferō",
       "glossZh": "奪取、帶走",
       "borrowedVia": "奪取"
+    },
+    "castus, -a, -um": {
+      "hexcode": "1F90D",
+      "file": "1F90D.png",
+      "source": "override",
+      "headword": "castus",
+      "glossZh": "貞潔的、純淨的"
     },
     "cogo, cogere, coegi, coactus": {
       "hexcode": "1F465",
@@ -5814,6 +8008,13 @@
       "glossZh": "相通、交通、共融",
       "borrowedVia": "交通"
     },
+    "confero, conferre, contuli, collatus": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "cōnferō",
+      "glossZh": "陪伴、賦予；前往"
+    },
     "damnum, damni, n.": {
       "hexcode": "2623",
       "file": "2623.png",
@@ -5830,6 +8031,41 @@
       "glossZh": "呈獻、帶來",
       "borrowedVia": "帶來"
     },
+    "defunctus, -a, -um": {
+      "hexcode": "26B0",
+      "file": "26B0.png",
+      "source": "override",
+      "headword": "defunctus",
+      "glossZh": "已亡的、死亡的"
+    },
+    "dispergo, dispergere, dispersi, dispersus": {
+      "hexcode": "1F4A8",
+      "file": "1F4A8.png",
+      "source": "override",
+      "headword": "dispergō",
+      "glossZh": "散開、四散"
+    },
+    "dito, ditare, ditaui, —": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "override",
+      "headword": "dītō",
+      "glossZh": "豐富、充實"
+    },
+    "effero, efferre, extuli, elatus": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "override",
+      "headword": "efferō",
+      "glossZh": "舉出、擡起"
+    },
+    "expello, expellere, expuli, expulsus": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "expellō",
+      "glossZh": "逐出、驅逐"
+    },
     "fallo, fallere, fefelli, falsus": {
       "hexcode": "1F925",
       "file": "1F925.png",
@@ -5844,6 +8080,13 @@
       "source": "override",
       "headword": "falsus",
       "glossZh": "虛假的、欺詐的"
+    },
+    "fero, ferre, tuli, latus": {
+      "hexcode": "1F4E6",
+      "file": "1F4E6.png",
+      "source": "override",
+      "headword": "ferō",
+      "glossZh": "帶、持、運"
     },
     "flagellum, flagelli, n.": {
       "hexcode": "1F94A",
@@ -5861,6 +8104,13 @@
       "glossZh": "光輝、閃耀",
       "borrowedVia": "光輝"
     },
+    "infero, inferre, intuli, illatus": {
+      "hexcode": "1F4CE",
+      "file": "1F4CE.png",
+      "source": "override",
+      "headword": "īnferō",
+      "glossZh": "帶入、引入"
+    },
     "inquam": {
       "hexcode": "1F4AC",
       "file": "1F4AC.png",
@@ -5869,6 +8119,13 @@
       "glossZh": "我說",
       "borrowedVia": "我說"
     },
+    "iucundus, -a, -um": {
+      "hexcode": "1F60A",
+      "file": "1F60A.png",
+      "source": "override",
+      "headword": "jucundus",
+      "glossZh": "令人愉悅的、可喜的"
+    },
     "medium, medii, n.": {
       "hexcode": "2194",
       "file": "2194.png",
@@ -5876,6 +8133,13 @@
       "headword": "medium",
       "glossZh": "中間、中部、中央",
       "borrowedVia": "中間"
+    },
+    "mutuor, mutuari, —, mutuatus": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "mūtuor",
+      "glossZh": "借用、借入"
     },
     "natio, nationis, f.": {
       "hexcode": "1F310",
@@ -5933,6 +8197,13 @@
       "glossZh": "懲罰、刑罰、苦難",
       "borrowedVia": "懲罰"
     },
+    "praeconium, praeconii": {
+      "hexcode": "1F44F",
+      "file": "1F44F.png",
+      "source": "override",
+      "headword": "praecōnium",
+      "glossZh": "讚揚、頌言"
+    },
     "profero, proferre, protuli, prolatus": {
       "hexcode": "1F449",
       "file": "1F449.png",
@@ -5941,6 +8212,13 @@
       "glossZh": "提出、陳述、發言",
       "borrowedVia": "提出"
     },
+    "reconciliatio, reconciliationis, f.": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "reconciliātiō",
+      "glossZh": "和解、復和"
+    },
     "refero, referre, rettuli, relatus": {
       "hexcode": "1F5E8",
       "file": "1F5E8.png",
@@ -5948,6 +8226,13 @@
       "headword": "referō",
       "glossZh": "回報、呈獻、述說",
       "borrowedVia": "述說"
+    },
+    "repello, repellere, repuli, repulsus": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "repellō",
+      "glossZh": "驅逐、擊退、排斥"
     },
     "significo, significare, significaui, significatus": {
       "hexcode": "1F3F7",
@@ -5973,6 +8258,13 @@
       "glossZh": "撒、灑、散佈",
       "borrowedVia": "灑"
     },
+    "tranquillus, -a, -um": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "tranquillus",
+      "glossZh": "安寧的、寧靜的"
+    },
     "uelut": {
       "hexcode": "1F7F0",
       "file": "1F7F0.png",
@@ -5997,6 +8289,27 @@
       "glossZh": "鞭子、鞭打",
       "borrowedVia": "鞭子"
     },
+    "uincio, uincire, uinxi, uinctus": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "vinciō",
+      "glossZh": "綁、束縛、拘禁"
+    },
+    "communio, communionis, f.": {
+      "hexcode": "1F35E",
+      "file": "1F35E.png",
+      "source": "override",
+      "headword": "commūniō",
+      "glossZh": "聖體聖血、領聖體"
+    },
+    "complaceo, complacere, complacui (complacitus sum)": {
+      "hexcode": "1F60A",
+      "file": "1F60A.png",
+      "source": "override",
+      "headword": "complaceo",
+      "glossZh": "使悅納、蒙悅納"
+    },
     "concordia, concordiae, f.": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -6011,6 +8324,20 @@
       "headword": "ēnītor",
       "glossZh": "產生、生育",
       "borrowedVia": "生育"
+    },
+    "erro, errare, erraui, erratus": {
+      "hexcode": "1F5FA",
+      "file": "1F5FA.png",
+      "source": "override",
+      "headword": "errō",
+      "glossZh": "漂泊、迷途、犯錯"
+    },
+    "factum est": {
+      "hexcode": "2705",
+      "file": "2705.png",
+      "source": "override",
+      "headword": "factum est",
+      "glossZh": "事就這樣成了、遂成"
     },
     "fio, fieri, —, factus sum": {
       "hexcode": "1F504",
@@ -6043,6 +8370,20 @@
       "headword": "institutio",
       "glossZh": "教導、訓導",
       "borrowedVia": "教導"
+    },
+    "lacrimosus, -a, -um": {
+      "hexcode": "1F622",
+      "file": "1F622.png",
+      "source": "override",
+      "headword": "lacrimōsus",
+      "glossZh": "淚滿的、涕淚的"
+    },
+    "licet, licere, licuit": {
+      "hexcode": "2705",
+      "file": "2705.png",
+      "source": "override",
+      "headword": "licet",
+      "glossZh": "許可、得以"
     },
     "luminare, luminaris, luminarium, n.": {
       "hexcode": "1FA94",
@@ -6115,6 +8456,34 @@
       "glossZh": "饒恕、寬容",
       "borrowedVia": "饒恕"
     },
+    "pectus, pectoris, n.": {
+      "hexcode": "1FAC0",
+      "file": "1FAC0.png",
+      "source": "override",
+      "headword": "pectus",
+      "glossZh": "胸、胸膛"
+    },
+    "penetro, penetrare, penetraui, penetratus": {
+      "hexcode": "1F4CC",
+      "file": "1F4CC.png",
+      "source": "override",
+      "headword": "penetrō",
+      "glossZh": "穿透、深入"
+    },
+    "placeo, placere, placui, placitus": {
+      "hexcode": "1F60A",
+      "file": "1F60A.png",
+      "source": "override",
+      "headword": "placeo",
+      "glossZh": "討好、令人滿意"
+    },
+    "placet": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "override",
+      "headword": "placet",
+      "glossZh": "令人滿意、贊成"
+    },
     "procido, procidere, procidi, —": {
       "hexcode": "1F9CE",
       "file": "1F9CE.png",
@@ -6122,6 +8491,13 @@
       "headword": "prōcidō",
       "glossZh": "前撲、跌倒",
       "borrowedVia": "跌倒"
+    },
+    "radius, radii, m.": {
+      "hexcode": "1F526",
+      "file": "1F526.png",
+      "source": "override",
+      "headword": "radius",
+      "glossZh": "光線、射線"
     },
     "rutilo, rutilare, rutilaui, rutilatus": {
       "hexcode": "1F4A1",
@@ -6147,12 +8523,26 @@
       "glossZh": "事奉、服侍",
       "borrowedVia": "事奉"
     },
+    "sincerus, -a, -um": {
+      "hexcode": "1F90D",
+      "file": "1F90D.png",
+      "source": "override",
+      "headword": "sincērus",
+      "glossZh": "真摯、純正"
+    },
     "sol, solis, m.": {
       "hexcode": "2600",
       "file": "2600.png",
       "source": "override",
       "headword": "sōl",
       "glossZh": "太陽"
+    },
+    "accommodo, accommodare, accommodaui, accommodatus": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "accommodō",
+      "glossZh": "配合、調和；賦予"
     },
     "adorno, adornare, adornaui, adornatus": {
       "hexcode": "1F380",
@@ -6193,6 +8583,13 @@
       "glossZh": "堅強、使強硬；變強",
       "borrowedVia": "堅強"
     },
+    "dignitas, dignitanis, f.": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "headword": "dignitās",
+      "glossZh": "尊嚴、榮譽"
+    },
     "disco, discere, didici, —": {
       "hexcode": "1F9D1-200D-1F393",
       "file": "1F9D1-200D-1F393.png",
@@ -6206,6 +8603,13 @@
       "source": "override",
       "headword": "domus",
       "glossZh": "家、家宅、住所"
+    },
+    "eiicio, eiicere, eiect, eiectus": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "ējiciō",
+      "glossZh": "拋出、逐出"
     },
     "esurio, esurire, esuriui (esurii), esuritus": {
       "hexcode": "1F924",
@@ -6247,6 +8651,13 @@
       "glossZh": "照耀、照亮",
       "borrowedVia": "照亮"
     },
+    "iaceo, iacere, iacui, —": {
+      "hexcode": "1F6CC",
+      "file": "1F6CC.png",
+      "source": "override",
+      "headword": "jaceō",
+      "glossZh": "躺臥、位於"
+    },
     "iacio, iacere, ieci, iactus": {
       "hexcode": "26BE",
       "file": "26BE.png",
@@ -6254,6 +8665,20 @@
       "headword": "jaciō",
       "glossZh": "投擲、拋",
       "borrowedVia": "投擲"
+    },
+    "matutinus, -a, -um": {
+      "hexcode": "1F305",
+      "file": "1F305.png",
+      "source": "override",
+      "headword": "mātūtinus",
+      "glossZh": "朝晨的、清晨的"
+    },
+    "mirabilis, mirabile": {
+      "hexcode": "1F632",
+      "file": "1F632.png",
+      "source": "override",
+      "headword": "mirabilis",
+      "glossZh": "奇異的、令人驚嘆的"
     },
     "multitudo, multitudinis, f.": {
       "hexcode": "1F4C8",
@@ -6279,6 +8704,13 @@
       "glossZh": "裝飾、修飾",
       "borrowedVia": "裝飾"
     },
+    "pacifico, pacificare, pacificaui, pacificatus": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "pacificō",
+      "glossZh": "使和平、賜和平"
+    },
     "paenitentia, paenitentiae, f.": {
       "hexcode": "1F504",
       "file": "1F504.png",
@@ -6286,6 +8718,20 @@
       "headword": "paenitentia",
       "glossZh": "悔改、懺悔",
       "borrowedVia": "悔改"
+    },
+    "proiicio, proiicere, proiect, proiectus": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "prōjiciō",
+      "glossZh": "投出、拋下"
+    },
+    "propitius, -a, -um": {
+      "hexcode": "1F970",
+      "file": "1F970.png",
+      "source": "override",
+      "headword": "propitius",
+      "glossZh": "仁慈的、恩寵的、吉祥的"
     },
     "reuelo, reuelare, reuelaui, reuelatus": {
       "hexcode": "1F441-FE0F-200D-1F5E8-FE0F",
@@ -6302,6 +8748,20 @@
       "headword": "ruīna",
       "glossZh": "毀滅、衰頹、崩壞",
       "borrowedVia": "毀滅"
+    },
+    "splendor, splendoris, m.": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "splendor",
+      "glossZh": "光耀、壯麗、輝煌"
+    },
+    "tremo, tremere, tremui, —": {
+      "hexcode": "1F628",
+      "file": "1F628.png",
+      "source": "override",
+      "headword": "tremō",
+      "glossZh": "顫動、戰慄、發抖"
     },
     "ab": {
       "hexcode": "2B05",
@@ -6340,6 +8800,13 @@
       "headword": "sententia",
       "glossZh": "意見、見解、思想；意義、判詞、目的",
       "borrowedVia": "意見"
+    },
+    "proprius, propria, proprium": {
+      "hexcode": "1F464",
+      "file": "1F464.png",
+      "source": "override",
+      "headword": "proprius",
+      "glossZh": "自己的、特有的、固有的、獨特的"
     },
     "persona, personae": {
       "hexcode": "1F3AD",
@@ -6390,6 +8857,13 @@
       "source": "override",
       "headword": "monasterium",
       "glossZh": "修道院"
+    },
+    "parum": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "parum",
+      "glossZh": "太少、不足、很少"
     },
     "forma, formae": {
       "hexcode": "1F4D0",
@@ -6456,6 +8930,13 @@
       "source": "override",
       "headword": "probo",
       "glossZh": "贊同、讚許；認可、核准"
+    },
+    "potius": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "headword": "potius",
+      "glossZh": "寧可、更寧願、較為"
     },
     "singulus, singula, singulum": {
       "hexcode": "1F4CA",
@@ -6534,6 +9015,13 @@
       "glossZh": "選擇、揀選；教會：救恩的揀選",
       "borrowedVia": "選擇"
     },
+    "prius": {
+      "hexcode": "23EE",
+      "file": "23EE.png",
+      "source": "override",
+      "headword": "prius",
+      "glossZh": "早先、在前、首先"
+    },
     "publicus, publica, publicum": {
       "hexcode": "1F465",
       "file": "1F465.png",
@@ -6585,6 +9073,27 @@
       "headword": "quantum",
       "glossZh": "多少、到什麼程度",
       "borrowedVia": "多少"
+    },
+    "pertineo, pertinere, pertinui, pertentus": {
+      "hexcode": "1F517",
+      "file": "1F517.png",
+      "source": "override",
+      "headword": "pertineo",
+      "glossZh": "延伸、涉及、關乎"
+    },
+    "prior, prior, prius": {
+      "hexcode": "23EE",
+      "file": "23EE.png",
+      "source": "override",
+      "headword": "prior",
+      "glossZh": "在前的、先前的；基本的"
+    },
+    "uidelicet": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "videlicet",
+      "glossZh": "顯然、明白地"
     },
     "synodus, synodi": {
       "hexcode": "1F465",
@@ -6699,6 +9208,13 @@
       "glossZh": "也不、而且不；既不……亦不",
       "borrowedVia": "也不"
     },
+    "prouincia, prouinciae": {
+      "hexcode": "1F5FA",
+      "file": "1F5FA.png",
+      "source": "override",
+      "headword": "provincia",
+      "glossZh": "行省、職責、管轄區"
+    },
     "negotium, negoti(i)": {
       "hexcode": "1F4BC",
       "file": "1F4BC.png",
@@ -6811,6 +9327,13 @@
       "glossZh": "建立、創設、奠基、決定",
       "borrowedVia": "建立"
     },
+    "denique": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "headword": "denique",
+      "glossZh": "最後、總之、終於"
+    },
     "aetas, aetatis": {
       "hexcode": "23F3",
       "file": "23F3.png",
@@ -6854,6 +9377,13 @@
       "headword": "epistola",
       "glossZh": "書信、公文、書簡"
     },
+    "ample": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "headword": "ample",
+      "glossZh": "寬宏地、恢宏地、華麗地"
+    },
     "quippe": {
       "hexcode": "2714",
       "file": "2714.png",
@@ -6862,12 +9392,26 @@
       "glossZh": "誠然、自然、當然",
       "borrowedVia": "誠然"
     },
+    "quanto": {
+      "hexcode": "1F4CF",
+      "file": "1F4CF.png",
+      "source": "override",
+      "headword": "quanto",
+      "glossZh": "相差多少、相隔多遠"
+    },
     "matrimonium, matrimoni(i)": {
       "hexcode": "1F48D",
       "file": "1F48D.png",
       "source": "override",
       "headword": "matrimonium",
       "glossZh": "婚姻、夫妻關係"
+    },
+    "ullus, ulla, ullum": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "ullus",
+      "glossZh": "任何、任一"
     },
     "praemitto, praemittere, praemisi, praemissus": {
       "hexcode": "E24F",
@@ -6919,6 +9463,13 @@
       "headword": "usus",
       "glossZh": "使用、經驗、習慣",
       "borrowedVia": "使用"
+    },
+    "uenerabilis, uenerabilis, uenerabile": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "headword": "venerabilis",
+      "glossZh": "值得尊敬的、崇高的"
     },
     "utrum": {
       "hexcode": "2753",
@@ -7013,6 +9564,13 @@
       "source": "override",
       "headword": "status",
       "glossZh": "地位、狀況、身分"
+    },
+    "immo": {
+      "hexcode": "1F500",
+      "file": "1F500.png",
+      "source": "override",
+      "headword": "immo",
+      "glossZh": "不然、反而、更是"
     },
     "cesso, cessare, cessaui, cessatus": {
       "hexcode": "1F6D1",
@@ -7164,6 +9722,13 @@
       "headword": "intellectus",
       "glossZh": "理解、領悟；知識、智力；意義"
     },
+    "mox": {
+      "hexcode": "1F51C",
+      "file": "1F51C.png",
+      "source": "override",
+      "headword": "mox",
+      "glossZh": "不久、旋即；接著"
+    },
     "consensus, consensus": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -7179,6 +9744,13 @@
       "glossZh": "呈現、提供、展示",
       "borrowedVia": "呈現"
     },
+    "paucus, pauca, paucum": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "paucus",
+      "glossZh": "少量的、稀少的、少數"
+    },
     "aer, aeris": {
       "hexcode": "1F32C",
       "file": "1F32C.png",
@@ -7187,6 +9759,20 @@
       "glossZh": "空氣、大氣、天空、雲霧",
       "borrowedVia": "空氣"
     },
+    "color, coloris": {
+      "hexcode": "1F3A8",
+      "file": "1F3A8.png",
+      "source": "override",
+      "headword": "color",
+      "glossZh": "色彩、顏料、膚色、外表"
+    },
+    "idoneus, idonea, idoneum": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "idoneus",
+      "glossZh": "適當的、勝任的、具備所需條件"
+    },
     "animal, animalis": {
       "hexcode": "1F331",
       "file": "1F331.png",
@@ -7194,6 +9780,13 @@
       "headword": "animal",
       "glossZh": "動物、生物、野獸",
       "borrowedVia": "動物"
+    },
+    "casus, casus": {
+      "hexcode": "1F3B2",
+      "file": "1F3B2.png",
+      "source": "override",
+      "headword": "casus",
+      "glossZh": "跌落、偶然、不幸、命運"
     },
     "nihilominus": {
       "hexcode": "2194",
@@ -7227,6 +9820,13 @@
       "glossZh": "決定、頒布、裁決、表決",
       "borrowedVia": "決定"
     },
+    "moyses, moysis": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "Moyses",
+      "glossZh": "摩西"
+    },
     "delictum, delicti": {
       "hexcode": "1F494",
       "file": "1F494.png",
@@ -7251,12 +9851,26 @@
       "glossZh": "自由、許可、放縱、坦白言論",
       "borrowedVia": "放縱"
     },
+    "diu": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "override",
+      "headword": "diu",
+      "glossZh": "長久地、很久"
+    },
     "saecularis, saecularis, saeculare": {
       "hexcode": "26EA",
       "file": "26EA.png",
       "source": "annotation",
       "headword": "saecularis",
       "glossZh": "世俗的、非教會的"
+    },
+    "temporalis, temporalis, temporale": {
+      "hexcode": "23F3",
+      "file": "23F3.png",
+      "source": "override",
+      "headword": "temporalis",
+      "glossZh": "時間的、暫時的、屬世的"
     },
     "similitudo, similitudinis": {
       "hexcode": "1F7F0",
@@ -7265,6 +9879,13 @@
       "headword": "similitudo",
       "glossZh": "相似、相似性、比喻",
       "borrowedVia": "相似"
+    },
+    "manifestus, manifesta, manifestum": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "manifestus",
+      "glossZh": "明白的、顯著的、確定的"
     },
     "considero, considerare, consideraui, consideratus": {
       "hexcode": "1F50E",
@@ -7290,6 +9911,48 @@
       "glossZh": "無、除……外；除非",
       "borrowedVia": "無"
     },
+    "nobilis, nobilis, nobile": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "headword": "nobilis",
+      "glossZh": "貴族的、高貴的、傑出的"
+    },
+    "appellatio, appellationis": {
+      "hexcode": "1F3F7",
+      "file": "1F3F7.png",
+      "source": "override",
+      "headword": "appellatio",
+      "glossZh": "上訴、名稱、名詞、稱號"
+    },
+    "tot": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "override",
+      "headword": "tot",
+      "glossZh": "那麼多次、那樣的次數"
+    },
+    "uocabulum, uocabuli": {
+      "hexcode": "1F4DA",
+      "file": "1F4DA.png",
+      "source": "override",
+      "headword": "vocabulum",
+      "glossZh": "名詞、詞彙、術語"
+    },
+    "praesumo, praesumere, praesumpsi, praesumptus": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "praesumo",
+      "glossZh": "預先使用、預期、假定"
+    },
+    "confessio, confessionis": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "confessio",
+      "glossZh": "認信、信德告明；教難致命"
+    },
     "taliter": {
       "hexcode": "1F447",
       "file": "1F447.png",
@@ -7297,6 +9960,13 @@
       "headword": "taliter",
       "glossZh": "如此方式、這樣",
       "borrowedVia": "這樣"
+    },
+    "archidiaconus, archidiaconi": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "archidiaconus",
+      "glossZh": "副主教"
     },
     "simplex, simplicis": {
       "hexcode": "E24C",
@@ -7319,6 +9989,13 @@
       "source": "override",
       "headword": "lapis",
       "glossZh": "石、寶石、里程碑"
+    },
+    "dominicus, dominica, dominicum": {
+      "hexcode": "271D",
+      "file": "271D.png",
+      "source": "override",
+      "headword": "dominicus",
+      "glossZh": "主的、主人的"
     },
     "praebeo, praebere, praebui, praebitus": {
       "hexcode": "1F9CD",
@@ -7381,6 +10058,13 @@
       "glossZh": "在那裡、彼處",
       "borrowedVia": "在那裡"
     },
+    "subicio, subicere, subieci, subiectus": {
+      "hexcode": "1F647",
+      "file": "1F647.png",
+      "source": "override",
+      "headword": "subicio",
+      "glossZh": "置於下、使屈從、暴露"
+    },
     "prohibeo, prohibere, prohibui, prohibitus": {
       "hexcode": "1F6D1",
       "file": "1F6D1.png",
@@ -7404,6 +10088,13 @@
       "headword": "quemadmodum",
       "glossZh": "如何；如同、正如；到……程度",
       "borrowedVia": "如何"
+    },
+    "notus, nota, notum": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "notus",
+      "glossZh": "著名、為人所知、聲名狼籍"
     },
     "arbitrium, arbitri(i)": {
       "hexcode": "2696",
@@ -7445,6 +10136,13 @@
       "glossZh": "女人、女性",
       "borrowedVia": "女人"
     },
+    "contraho, contrahere, contraxi, contractus": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "contraho",
+      "glossZh": "締結、訂立、從事、交戰"
+    },
     "sapiens, sapientis": {
       "hexcode": "1F9E0",
       "file": "1F9E0.png",
@@ -7453,6 +10151,13 @@
       "glossZh": "聰慧、理性、明智、謹慎",
       "borrowedVia": "聰慧"
     },
+    "mortalis, mortalis, mortale": {
+      "hexcode": "1F480",
+      "file": "1F480.png",
+      "source": "override",
+      "headword": "mortalis",
+      "glossZh": "會死的、短暫的、人類的"
+    },
     "superus, supera, superum": {
       "hexcode": "2B06",
       "file": "2B06.png",
@@ -7460,6 +10165,20 @@
       "headword": "superus",
       "glossZh": "上面的、高的；上級的、在世的；最高的、終極的",
       "borrowedVia": "高的"
+    },
+    "conditio, conditionis": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "headword": "conditio",
+      "glossZh": "協議、契約；條款、提議；狀況、處境"
+    },
+    "praeterea": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "headword": "praeterea",
+      "glossZh": "此外、況且；其後、隨後"
     },
     "restituo, restituere, restitui, restitutus": {
       "hexcode": "267B",
@@ -7476,6 +10195,20 @@
       "headword": "dux",
       "glossZh": "領導者、引導者；統帥、將軍；公爵"
     },
+    "discretio, discretionis": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "headword": "discretio",
+      "glossZh": "區分、分離；識別力、判斷力、辨別智慧"
+    },
+    "intentio, intentionis": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "headword": "intentio",
+      "glossZh": "延伸、擴張；痙攣、抽搐；緊張、集中；意圖、目的"
+    },
     "origo, originis": {
       "hexcode": "1FABA",
       "file": "1FABA.png",
@@ -7491,6 +10224,13 @@
       "headword": "propositum",
       "glossZh": "意圖、目的、目標；決心、計劃、方案",
       "borrowedVia": "目標"
+    },
+    "philosophus, philosophi": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "philosophus",
+      "glossZh": "哲學家"
     },
     "qualitas, qualitatis": {
       "hexcode": "269B",
@@ -7580,6 +10320,13 @@
       "glossZh": "生育、產生、誕生",
       "borrowedVia": "生育"
     },
+    "pateo, patere, patui": {
+      "hexcode": "1F450",
+      "file": "1F450.png",
+      "source": "override",
+      "headword": "pateo",
+      "glossZh": "張開、延伸、眾所周知"
+    },
     "opinio, opinionis": {
       "hexcode": "1F4AD",
       "file": "1F4AD.png",
@@ -7642,6 +10389,20 @@
       "glossZh": "虛弱、病弱、疾病",
       "borrowedVia": "疾病"
     },
+    "consentio, consentire, consensi, consensus": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "override",
+      "headword": "consentio",
+      "glossZh": "同意、和諧、心意相通"
+    },
+    "transfero, transferre, transtuli, translatus": {
+      "hexcode": "1F69A",
+      "file": "1F69A.png",
+      "source": "override",
+      "headword": "transfero",
+      "glossZh": "運送、轉移、傳遞"
+    },
     "sollicitudo, sollicitudinis": {
       "hexcode": "1F61F",
       "file": "1F61F.png",
@@ -7650,6 +10411,13 @@
       "glossZh": "憂慮、關切、焦慮",
       "borrowedVia": "憂慮"
     },
+    "ibidem": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "ibidem",
+      "glossZh": "在同一地點、在同一時刻"
+    },
     "intersum, interesse, interfui, interfuturus": {
       "hexcode": "1F4CD",
       "file": "1F4CD.png",
@@ -7657,6 +10425,13 @@
       "headword": "intersum",
       "glossZh": "介於其間、在場、參與、有差異",
       "borrowedVia": "在場"
+    },
+    "tandem": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "headword": "tandem",
+      "glossZh": "最終、終於、最後"
     },
     "nuntius, nunti(i)": {
       "hexcode": "1F4E9",
@@ -7745,6 +10520,27 @@
       "glossZh": "驅逐、完成、審視、衡量",
       "borrowedVia": "完成"
     },
+    "expedio, expedire, expediui, expeditus": {
+      "hexcode": "1F4E6",
+      "file": "1F4E6.png",
+      "source": "override",
+      "headword": "expedio",
+      "glossZh": "解放、便利、備辦、調度"
+    },
+    "integer, integra, integrum": {
+      "hexcode": "26AA",
+      "file": "26AA.png",
+      "source": "override",
+      "headword": "integer",
+      "glossZh": "完整的、未損傷的、堅強的"
+    },
+    "uniuersalis, uniuersalis, uniuersale": {
+      "hexcode": "1F30D",
+      "file": "1F30D.png",
+      "source": "override",
+      "headword": "universalis",
+      "glossZh": "普遍的、廣泛適用的"
+    },
     "prout": {
       "hexcode": "1F7F0",
       "file": "1F7F0.png",
@@ -7761,6 +10557,13 @@
       "glossZh": "缺乏、沒有、喪失",
       "borrowedVia": "缺乏"
     },
+    "specialiter": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "headword": "specialiter",
+      "glossZh": "專門地、個別地、特別地"
+    },
     "desum, deesse, defui, defuturus": {
       "hexcode": "1F3DC",
       "file": "1F3DC.png",
@@ -7775,6 +10578,20 @@
       "headword": "promitto",
       "glossZh": "承諾、誓言",
       "borrowedVia": "誓言"
+    },
+    "expono, exponere, exposui, expositus": {
+      "hexcode": "1F5BC",
+      "file": "1F5BC.png",
+      "source": "override",
+      "headword": "expono",
+      "glossZh": "陳述、闡明、棄置、登陸"
+    },
+    "ingenium, ingeni(i)": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "headword": "ingenium",
+      "glossZh": "天性、稟賦、資質、才智"
     },
     "prouideo, prouidere, prouidi, prouisus": {
       "hexcode": "1F450",
@@ -7792,6 +10609,20 @@
       "glossZh": "順利、幫助、成功",
       "borrowedVia": "幫助"
     },
+    "utilis, utilis, utile": {
+      "hexcode": "1F9F0",
+      "file": "1F9F0.png",
+      "source": "override",
+      "headword": "utilis",
+      "glossZh": "有用、有益；實用、有利"
+    },
+    "reus, rei": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "reus",
+      "glossZh": "訴訟當事人、被告；犯人、罪人"
+    },
     "quin": {
       "hexcode": "1F573",
       "file": "1F573.png",
@@ -7807,6 +10638,20 @@
       "headword": "impedio",
       "glossZh": "阻礙、妨礙；阻止",
       "borrowedVia": "阻礙"
+    },
+    "nullatenus": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "nullatenus",
+      "glossZh": "決不、毫不；無論如何不"
+    },
+    "interdum": {
+      "hexcode": "23F0",
+      "file": "23F0.png",
+      "source": "override",
+      "headword": "interdum",
+      "glossZh": "有時、間或"
     },
     "luna, lunae": {
       "hexcode": "1F319",
@@ -7831,6 +10676,13 @@
       "glossZh": "記得、想起；提及、述說、提醒",
       "borrowedVia": "記得"
     },
+    "posterus, postera, posterum": {
+      "hexcode": "1F51C",
+      "file": "1F51C.png",
+      "source": "override",
+      "headword": "posterus",
+      "glossZh": "後來的、隨後的；次序在後的"
+    },
     "modicus, modica, modicum": {
       "hexcode": "1F41C",
       "file": "1F41C.png",
@@ -7847,12 +10699,33 @@
       "glossZh": "幾乎、差不多",
       "borrowedVia": "幾乎"
     },
+    "fama, famae": {
+      "hexcode": "1F4F0",
+      "file": "1F4F0.png",
+      "source": "override",
+      "headword": "fama",
+      "glossZh": "謠言、傳聞；名聲、名譽；輿論"
+    },
     "basilica, basilicae": {
       "hexcode": "26EA",
       "file": "26EA.png",
       "source": "annotation",
       "headword": "basilica",
       "glossZh": "長方形會堂、法庭；教堂"
+    },
+    "retineo, retinere, retinui, retentus": {
+      "hexcode": "1F5DC",
+      "file": "1F5DC.png",
+      "source": "override",
+      "headword": "retineo",
+      "glossZh": "保留、扣留；堅守、維持"
+    },
+    "adhibeo, adhibere, adhibui, adhibitus": {
+      "hexcode": "1F9F0",
+      "file": "1F9F0.png",
+      "source": "override",
+      "headword": "adhibeo",
+      "glossZh": "徵召、邀請；應用、採用、發動"
     },
     "legitimus, legitima, legitimum": {
       "hexcode": "2705",
@@ -7862,6 +10735,20 @@
       "glossZh": "合法的、正當的；真正的、適當的",
       "borrowedVia": "合法的"
     },
+    "dubius, dubia, dubium": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "dubius",
+      "glossZh": "可疑的、不確定的；危險的、令人費解的"
+    },
+    "libere": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "headword": "libere",
+      "glossZh": "自由地、坦率地"
+    },
     "colo, colere, colui, cultus": {
       "hexcode": "1F3E1",
       "file": "1F3E1.png",
@@ -7869,6 +10756,13 @@
       "headword": "colo",
       "glossZh": "居住、住；耕作、培育；維護、保持",
       "borrowedVia": "居住"
+    },
+    "frequenter": {
+      "hexcode": "1F501",
+      "file": "1F501.png",
+      "source": "override",
+      "headword": "frequenter",
+      "glossZh": "經常、頻繁；大量地、成群地"
     },
     "interpretor, interpretari, interpretatus sum": {
       "hexcode": "1F5E8",
@@ -7900,6 +10794,13 @@
       "source": "override",
       "headword": "propterea",
       "glossZh": "因此、故；由於、因為"
+    },
+    "alibi": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "alibi",
+      "glossZh": "他處、別地；別的方面、其他情況"
     },
     "cupio, cupere, cupiui, cupitus": {
       "hexcode": "1F497",
@@ -7972,12 +10873,26 @@
       "glossZh": "尤其、特別是",
       "borrowedVia": "尤其"
     },
+    "proprietas, proprietatis": {
+      "hexcode": "1F511",
+      "file": "1F511.png",
+      "source": "override",
+      "headword": "proprietas",
+      "glossZh": "特性、所有權"
+    },
     "soror, sororis": {
       "hexcode": "1F469",
       "file": "1F469.png",
       "source": "override",
       "headword": "soror",
       "glossZh": "姐妹"
+    },
+    "specialis, specialis, speciale": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "headword": "specialis",
+      "glossZh": "特殊的、具體的、個別的"
     },
     "dispositio, dispositionis": {
       "hexcode": "1F4CB",
@@ -7995,6 +10910,13 @@
       "glossZh": "欺詐、詭計、欺騙",
       "borrowedVia": "欺詐"
     },
+    "iniquus, iniqua, iniquum": {
+      "hexcode": "26D4",
+      "file": "26D4.png",
+      "source": "override",
+      "headword": "iniquus",
+      "glossZh": "不公正的、不利的、不善的"
+    },
     "ministro, ministrare, ministraui, ministratus": {
       "hexcode": "1F64C",
       "file": "1F64C.png",
@@ -8002,6 +10924,13 @@
       "headword": "ministro",
       "glossZh": "侍奉、供給、提供",
       "borrowedVia": "侍奉"
+    },
+    "exerceo, exercere, exercui, exercitus": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "override",
+      "headword": "exerceo",
+      "glossZh": "訓練、實行、施展、修習"
     },
     "trinitas, trinitatis": {
       "hexcode": "0033-FE0F-20E3",
@@ -8025,6 +10954,13 @@
       "source": "annotation",
       "headword": "navis",
       "glossZh": "船舶"
+    },
+    "decretum, decreti": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "headword": "decretum",
+      "glossZh": "教令、法令、決議"
     },
     "tribuo, tribuere, tribui, tributus": {
       "hexcode": "2797",
@@ -8057,6 +10993,13 @@
       "glossZh": "補救、治療、藥物",
       "borrowedVia": "藥物"
     },
+    "en": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "headword": "en",
+      "glossZh": "看！瞧！"
+    },
     "habito, habitare, habitaui, habitatus": {
       "hexcode": "1F3E1",
       "file": "1F3E1.png",
@@ -8064,6 +11007,13 @@
       "headword": "habito",
       "glossZh": "居住、住在、停留",
       "borrowedVia": "居住"
+    },
+    "priuilegium, priuilegi(i)": {
+      "hexcode": "1F511",
+      "file": "1F511.png",
+      "source": "override",
+      "headword": "privilegium",
+      "glossZh": "特權、特免、特殊權利"
     },
     "quam": {
       "hexcode": "1F3AF",
@@ -8097,6 +11047,13 @@
       "glossZh": "謹慎、智慧、遠見",
       "borrowedVia": "智慧"
     },
+    "cultus, culta, cultum": {
+      "hexcode": "1F3A9",
+      "file": "1F3A9.png",
+      "source": "override",
+      "headword": "cultus",
+      "glossZh": "耕耘的、雅緻的、彬彬有禮的"
+    },
     "anathema, anathematis": {
       "hexcode": "1F5E3",
       "file": "1F5E3.png",
@@ -8128,6 +11085,13 @@
       "glossZh": "幻影、影像；偶像",
       "borrowedVia": "偶像"
     },
+    "libido, libidinis": {
+      "hexcode": "2764-FE0F-200D-1F525",
+      "file": "2764-FE0F-200D-1F525.png",
+      "source": "override",
+      "headword": "libido",
+      "glossZh": "欲望、情慾、意願"
+    },
     "cupiditas, cupiditatis": {
       "hexcode": "1F497",
       "file": "1F497.png",
@@ -8135,6 +11099,20 @@
       "headword": "cupiditas",
       "glossZh": "熱情、渴望；欲望、貪心；野心",
       "borrowedVia": "渴望"
+    },
+    "principalis, principalis, principale": {
+      "hexcode": "1F947",
+      "file": "1F947.png",
+      "source": "override",
+      "headword": "principalis",
+      "glossZh": "主要的、首要的"
+    },
+    "plebs, plebis": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "headword": "plebs",
+      "glossZh": "平民、普通民眾；下層民眾、烏合之眾"
     },
     "qualiter": {
       "hexcode": "1F3AF",
@@ -8151,6 +11129,13 @@
       "headword": "lateo",
       "glossZh": "潛伏、隱沒；隱居、逃避",
       "borrowedVia": "逃避"
+    },
+    "nequaquam": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "nequaquam",
+      "glossZh": "絕非、決不"
     },
     "iurisdictio, iurisdictionis": {
       "hexcode": "E08F",
@@ -8175,6 +11160,20 @@
       "glossZh": "此外、另外；在上面",
       "borrowedVia": "另外"
     },
+    "nonnullus, nonnulla, nonnullum": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "nonnullus",
+      "glossZh": "一些、若干"
+    },
+    "aureus, aurea, aureum": {
+      "hexcode": "1FA99",
+      "file": "1FA99.png",
+      "source": "override",
+      "headword": "aureus",
+      "glossZh": "金製的、黃金色的；光輝的"
+    },
     "superbia, superbiae": {
       "hexcode": "1F60F",
       "file": "1F60F.png",
@@ -8182,6 +11181,13 @@
       "headword": "superbia",
       "glossZh": "傲慢、驕傲",
       "borrowedVia": "傲慢"
+    },
+    "tantummodo": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "tantummodo",
+      "glossZh": "只、僅"
     },
     "interim": {
       "hexcode": "1F91D",
@@ -8207,6 +11213,13 @@
       "glossZh": "獨特的、唯一的、逐一的、非凡的",
       "borrowedVia": "唯一的"
     },
+    "publice": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "publice",
+      "glossZh": "公開地、以公費"
+    },
     "interdico, interdicere, interdixi, interdictus": {
       "hexcode": "1F6D1",
       "file": "1F6D1.png",
@@ -8215,12 +11228,26 @@
       "glossZh": "禁止、阻止；拒絕",
       "borrowedVia": "阻止"
     },
+    "numquid": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "override",
+      "headword": "numquid",
+      "glossZh": "難道、莫非"
+    },
     "societas, societatis": {
       "hexcode": "1F9D1-200D-1F91D-200D-1F9D1",
       "file": "1F9D1-200D-1F91D-200D-1F9D1.png",
       "source": "override",
       "headword": "societas",
       "glossZh": "社團、同盟、夥伴關係、共融"
+    },
+    "condicio, condicionis": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "headword": "condicio",
+      "glossZh": "協議、條款、情況、提議"
     },
     "moralis, moralis, morale": {
       "hexcode": "2696",
@@ -8229,6 +11256,13 @@
       "headword": "moralis",
       "glossZh": "道德的、倫理的"
     },
+    "ueluti": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "veluti",
+      "glossZh": "恰如、彷彿"
+    },
     "haud": {
       "hexcode": "1F6AB",
       "file": "1F6AB.png",
@@ -8236,6 +11270,20 @@
       "headword": "haud",
       "glossZh": "不、毫不",
       "borrowedVia": "不"
+    },
+    "erga": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "erga",
+      "glossZh": "對於、面對"
+    },
+    "socialis, socialis, sociale": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "socialis",
+      "glossZh": "同盟的、社交的、親密的"
     },
     "opera, operae": {
       "hexcode": "1F6E0",
@@ -8251,6 +11299,20 @@
       "headword": "nempe",
       "glossZh": "確實、當然",
       "borrowedVia": "確實"
+    },
+    "profecto": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "override",
+      "headword": "profecto",
+      "glossZh": "必然、確然"
+    },
+    "ciuilis, ciuilis, ciuile": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "override",
+      "headword": "civilis",
+      "glossZh": "市民的、民事的、公眾的、有禮的"
     },
     "uarius, uaria, uarium": {
       "hexcode": "1F9E9",
@@ -8372,6 +11434,13 @@
       "glossZh": "農業、耕種、田地、培養、照料",
       "borrowedVia": "田地"
     },
+    "praecipuus, praecipua, praecipuum": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "headword": "praecipuus",
+      "glossZh": "特別的、主要的、顯著的"
+    },
     "philosophia, philosophiae": {
       "hexcode": "1F914",
       "file": "1F914.png",
@@ -8379,6 +11448,13 @@
       "headword": "philosophia",
       "glossZh": "哲學、愛智慧",
       "borrowedVia": "哲學"
+    },
+    "ua": {
+      "hexcode": "2757",
+      "file": "2757.png",
+      "source": "override",
+      "headword": "va",
+      "glossZh": "哎呀、噢、啊；表痛楚、輕蔑或驚喜的感嘆詞"
     },
     "cognitio, cognitionis": {
       "hexcode": "1F9E0",
@@ -8396,6 +11472,13 @@
       "glossZh": "前進、行進、發展、有進展",
       "borrowedVia": "前進"
     },
+    "contendo, contendere, contendi, contentus": {
+      "hexcode": "1F3F9",
+      "file": "1F3F9.png",
+      "source": "override",
+      "headword": "contendo",
+      "glossZh": "拉緊、繃張、張弦、伸展"
+    },
     "religiosus, religiosa, religiosum": {
       "hexcode": "1F607",
       "file": "1F607.png",
@@ -8403,6 +11486,20 @@
       "headword": "religiosus",
       "glossZh": "虔誠的、敬畏的、神聖的、謹慎的",
       "borrowedVia": "虔誠的"
+    },
+    "attineo, attinere, attinui, attentus": {
+      "hexcode": "1F5DC",
+      "file": "1F5DC.png",
+      "source": "override",
+      "headword": "attineo",
+      "glossZh": "握住、扣留、拘禁、延遲、關連"
+    },
+    "adiungo, adiungere, adiunxi, adiunctus": {
+      "hexcode": "1F517",
+      "file": "1F517.png",
+      "source": "override",
+      "headword": "adjungo",
+      "glossZh": "加入、附加、連結、馬套"
     },
     "significatio, significationis": {
       "hexcode": "E05D",
@@ -8426,6 +11523,13 @@
       "headword": "declaro",
       "glossZh": "宣布、公告；表明、證實；表示",
       "borrowedVia": "表示"
+    },
+    "plenitudo, plenitudinis": {
+      "hexcode": "1F315",
+      "file": "1F315.png",
+      "source": "override",
+      "headword": "plenitudo",
+      "glossZh": "圓滿、豐富；充實、厚度"
     },
     "difficultas, difficultatis": {
       "hexcode": "1FAA8",
@@ -8474,6 +11578,20 @@
       "glossZh": "引領、帶往；勸誘、說服；收縮",
       "borrowedVia": "引領"
     },
+    "apostolatus, apostolatus": {
+      "hexcode": "1F4E4",
+      "file": "1F4E4.png",
+      "source": "override",
+      "headword": "apostolatus",
+      "glossZh": "宗徒位份、宗徒職分"
+    },
+    "argumentum, argumenti": {
+      "hexcode": "1F4AD",
+      "file": "1F4AD.png",
+      "source": "override",
+      "headword": "argumentum",
+      "glossZh": "論據、論証、理由；情節"
+    },
     "unicus, unica, unicum": {
       "hexcode": "0031-FE0F-20E3",
       "file": "0031-FE0F-20E3.png",
@@ -8481,6 +11599,13 @@
       "headword": "unicus",
       "glossZh": "唯一的、獨有的、無與倫比的",
       "borrowedVia": "唯一的"
+    },
+    "patriarcha, patriarchae": {
+      "hexcode": "1F9D3",
+      "file": "1F9D3.png",
+      "source": "override",
+      "headword": "patriarcha",
+      "glossZh": "宗族長、族長；主教長"
     },
     "utpote": {
       "hexcode": "2935",
@@ -8530,6 +11655,20 @@
       "glossZh": "獲得、領受；感知、察覺、瞭解",
       "borrowedVia": "獲得"
     },
+    "saltem": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "saltem",
+      "glossZh": "至少、至多、即便、甚至"
+    },
+    "iunius, iunia, iunium": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Junius",
+      "glossZh": "六月"
+    },
     "missio, missionis": {
       "hexcode": "1F4E4",
       "file": "1F4E4.png",
@@ -8545,6 +11684,34 @@
       "headword": "ambitus",
       "glossZh": "周圍、邊界、範圍；軌跡、迴圈",
       "borrowedVia": "周圍"
+    },
+    "effectus, effectus": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "headword": "effectus",
+      "glossZh": "執行、實行、效果、結果"
+    },
+    "theologia, theologiae": {
+      "hexcode": "1F4D8",
+      "file": "1F4D8.png",
+      "source": "override",
+      "headword": "theologia",
+      "glossZh": "神學、關於天主事物的學問"
+    },
+    "augustinus, augustini": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "Augustinus",
+      "glossZh": "奧斯定"
+    },
+    "cottidie": {
+      "hexcode": "1F4C5",
+      "file": "1F4C5.png",
+      "source": "override",
+      "headword": "cottidie",
+      "glossZh": "每天、日日、通常、尋常"
     },
     "momentum, momenti": {
       "hexcode": "23F2",
@@ -8570,6 +11737,13 @@
       "glossZh": "共有、分享；交通、聯誼、領受",
       "borrowedVia": "分享"
     },
+    "rectus, recta, rectum": {
+      "hexcode": "1F4CF",
+      "file": "1F4CF.png",
+      "source": "override",
+      "headword": "rectus",
+      "glossZh": "正直、正當；筆直；誠實"
+    },
     "umquam": {
       "hexcode": "231B",
       "file": "231B.png",
@@ -8594,6 +11768,13 @@
       "glossZh": "集會、聚集；團體、幫派、群眾",
       "borrowedVia": "聚集"
     },
+    "educatio, educationis": {
+      "hexcode": "1F393",
+      "file": "1F393.png",
+      "source": "override",
+      "headword": "educatio",
+      "glossZh": "培養、教養、養育"
+    },
     "perfectio, perfectionis": {
       "hexcode": "1F51A",
       "file": "1F51A.png",
@@ -8617,6 +11798,20 @@
       "headword": "cursus",
       "glossZh": "奔跑、前進",
       "borrowedVia": "奔跑"
+    },
+    "dumtaxat": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "dumtaxat",
+      "glossZh": "至此、只限於"
+    },
+    "copia, copiae": {
+      "hexcode": "1F9FA",
+      "file": "1F9FA.png",
+      "source": "override",
+      "headword": "copia",
+      "glossZh": "豐富、充足"
     },
     "pondus, ponderis": {
       "hexcode": "2696",
@@ -8650,6 +11845,13 @@
       "glossZh": "擁抱、包含",
       "borrowedVia": "包含"
     },
+    "nequeo, nequire, nequiui, nequitus": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "nequeo",
+      "glossZh": "不能、無能"
+    },
     "industria, industriae": {
       "hexcode": "1F3C3",
       "file": "1F3C3.png",
@@ -8657,6 +11859,34 @@
       "headword": "industria",
       "glossZh": "勤奮、努力",
       "borrowedVia": "努力"
+    },
+    "regimen, regiminis": {
+      "hexcode": "1F579",
+      "file": "1F579.png",
+      "source": "override",
+      "headword": "regimen",
+      "glossZh": "控制、指導"
+    },
+    "reuera": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "override",
+      "headword": "revera",
+      "glossZh": "事實上、實際上"
+    },
+    "sacerdotium, sacerdoti(i)": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "sacerdotium",
+      "glossZh": "司鐸職、聖職"
+    },
+    "personalis, personalis, personale": {
+      "hexcode": "1F464",
+      "file": "1F464.png",
+      "source": "override",
+      "headword": "personalis",
+      "glossZh": "個人的、關於個人的"
     },
     "praecipue": {
       "hexcode": "1F4C8",
@@ -8698,6 +11928,13 @@
       "glossZh": "元素、起源；基本原理",
       "borrowedVia": "元素"
     },
+    "progressus, progressus": {
+      "hexcode": "1F4C8",
+      "file": "1F4C8.png",
+      "source": "override",
+      "headword": "progressus",
+      "glossZh": "進展、進步"
+    },
     "progressio, progressionis": {
       "hexcode": "27A1",
       "file": "27A1.png",
@@ -8714,6 +11951,34 @@
       "glossZh": "觸摸、接觸；到達、實現；提及",
       "borrowedVia": "接觸"
     },
+    "nimirum": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "nimirum",
+      "glossZh": "毫無疑問、顯然"
+    },
+    "december, decembris, decembre": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "December",
+      "glossZh": "十二月"
+    },
+    "multiplex, multiplicis": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "override",
+      "headword": "multiplex",
+      "glossZh": "多層次、複雜；多重、深奧"
+    },
+    "demum": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "headword": "demum",
+      "glossZh": "終於、最後；最終、遲遲"
+    },
     "fiducia, fiduciae": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -8729,6 +11994,27 @@
       "headword": "contentio",
       "glossZh": "拉伸、緊張；努力、比較",
       "borrowedVia": "努力"
+    },
+    "solummodo": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "solummodo",
+      "glossZh": "只、僅、唯一"
+    },
+    "quodammodo": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quodammodo",
+      "glossZh": "某種程度、某種方式"
+    },
+    "dubium, dubi(i)": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "dubium",
+      "glossZh": "疑問、懷疑"
     },
     "experior, experiri, expertus sum": {
       "hexcode": "2714",
@@ -8761,6 +12047,27 @@
       "headword": "redemptor",
       "glossZh": "贖回者、救贖者；承包人、供應商"
     },
+    "necessario": {
+      "hexcode": "2714",
+      "file": "2714.png",
+      "source": "override",
+      "headword": "necessario",
+      "glossZh": "必然地、不得已地、必定"
+    },
+    "rite": {
+      "hexcode": "26EA",
+      "file": "26EA.png",
+      "source": "override",
+      "headword": "rite",
+      "glossZh": "按禮儀地、莊嚴地；適當地"
+    },
+    "quodsi": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "quodsi",
+      "glossZh": "但若、若且、設若（引導條件句）"
+    },
     "uocatio, uocationis": {
       "hexcode": "1F4E2",
       "file": "1F4E2.png",
@@ -8776,6 +12083,13 @@
       "headword": "aequus",
       "glossZh": "平坦、相等；公正、寬容、泰然",
       "borrowedVia": "公正"
+    },
+    "diuinitus": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "divinitus",
+      "glossZh": "由天而降、出於神聖；神妙地"
     },
     "probe": {
       "hexcode": "1F4CF",
@@ -8793,6 +12107,13 @@
       "glossZh": "寶庫、庫藏；財寶、珍品",
       "borrowedVia": "財寶"
     },
+    "intimus, intima, intimum": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "override",
+      "headword": "intimus",
+      "glossZh": "最內部的、最密切、至親"
+    },
     "uerso, uersare, uersaui, uersatus": {
       "hexcode": "1F483",
       "file": "1F483.png",
@@ -8801,6 +12122,20 @@
       "glossZh": "旋轉、翻動、混合",
       "borrowedVia": "旋轉"
     },
+    "compono, componere, composui, compositus": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "compono",
+      "glossZh": "並排比較、組合；平定、緩和"
+    },
+    "subsidium, subsidi(i)": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "subsidium",
+      "glossZh": "援助、救濟；增援、後備兵力"
+    },
     "praetereo, praeterire, praeteriui, praeteritus": {
       "hexcode": "1F309",
       "file": "1F309.png",
@@ -8808,6 +12143,27 @@
       "headword": "praetereo",
       "glossZh": "經過、超越；忽視、漏掉、遺漏",
       "borrowedVia": "經過"
+    },
+    "congruo, congruere, congrui": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "congruo",
+      "glossZh": "相合、協調、相符；適應"
+    },
+    "aperte": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "aperte",
+      "glossZh": "公開地、明白地、坦率地"
+    },
+    "mysticus, mystica, mysticum": {
+      "hexcode": "1F512",
+      "file": "1F512.png",
+      "source": "override",
+      "headword": "mysticus",
+      "glossZh": "神祕的、屬於聖禮的；秘密的、神聖奧祕的"
     },
     "praesidium, praesidi(i)": {
       "hexcode": "1F482",
@@ -8823,6 +12179,20 @@
       "headword": "sino",
       "glossZh": "允許、容許",
       "borrowedVia": "允許"
+    },
+    "hodiernus, hodierna, hodiernum": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "hodiernus",
+      "glossZh": "今日的、當代的；現存的"
+    },
+    "priuatus, priuata, priuatum": {
+      "hexcode": "1F464",
+      "file": "1F464.png",
+      "source": "override",
+      "headword": "privatus",
+      "glossZh": "私人的、個人的；平民的"
     },
     "explico, explicare, explicaui, explicatus": {
       "hexcode": "1F450",
@@ -8855,6 +12225,13 @@
       "glossZh": "前進、進展；發展過程",
       "borrowedVia": "前進"
     },
+    "exercitium, exercitii": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "override",
+      "headword": "exercitium",
+      "glossZh": "習練、訓練；熟能、技能"
+    },
     "comparo, comparare, comparaui, comparatus": {
       "hexcode": "1F4E6",
       "file": "1F4E6.png",
@@ -8862,6 +12239,13 @@
       "headword": "comparo",
       "glossZh": "籌備、預備；蒐集、徵集；聯合",
       "borrowedVia": "預備"
+    },
+    "procul": {
+      "hexcode": "1F52D",
+      "file": "1F52D.png",
+      "source": "override",
+      "headword": "procul",
+      "glossZh": "遠處、遠方；隔離地"
     },
     "definio, definire, definiui, definitus": {
       "hexcode": "1F4CF",
@@ -8879,6 +12263,27 @@
       "glossZh": "妨礙、阻礙；（軍隊）輜重",
       "borrowedVia": "阻礙"
     },
+    "pastoralis, pastoralis, pastorale": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "override",
+      "headword": "pastoralis",
+      "glossZh": "牧者的、牧養的"
+    },
+    "prouidentia, prouidentiae": {
+      "hexcode": "1F441",
+      "file": "1F441.png",
+      "source": "override",
+      "headword": "providentia",
+      "glossZh": "先見、遠慮；天意、攝理"
+    },
+    "oeconomicus, oeconomica, oeconomicum": {
+      "hexcode": "1F3E0",
+      "file": "1F3E0.png",
+      "source": "override",
+      "headword": "oeconomicus",
+      "glossZh": "家政的、經濟的；井然有序的"
+    },
     "adipiscor, adipisci, adeptus sum": {
       "hexcode": "270A",
       "file": "270A.png",
@@ -8886,6 +12291,27 @@
       "headword": "adipiscor",
       "glossZh": "獲得、贏得；達到、趕上",
       "borrowedVia": "獲得"
+    },
+    "insum, inesse, infui, infuturus": {
+      "hexcode": "1F4E5",
+      "file": "1F4E5.png",
+      "source": "override",
+      "headword": "insum",
+      "glossZh": "存在於、包含於；屬於"
+    },
+    "successor, successoris": {
+      "hexcode": "23ED",
+      "file": "23ED.png",
+      "source": "override",
+      "headword": "successor",
+      "glossZh": "後繼者、接班人"
+    },
+    "absolutus, absoluta, absolutum": {
+      "hexcode": "1F4AF",
+      "file": "1F4AF.png",
+      "source": "override",
+      "headword": "absolutus",
+      "glossZh": "完美的、完整的；純淨的、絕對的"
     },
     "excito, excitare, excitaui, excitatus": {
       "hexcode": "1F305",
@@ -8910,6 +12336,13 @@
       "headword": "exitus",
       "glossZh": "出口、離去；終結、死亡；河口",
       "borrowedVia": "終結"
+    },
+    "notio, notionis": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "headword": "notio",
+      "glossZh": "司法審問、調查"
     },
     "uicarius, uicari(i)": {
       "hexcode": "1F477",
@@ -8967,6 +12400,20 @@
       "glossZh": "宣講、公開宣告；讚揚、稱讚",
       "borrowedVia": "宣講"
     },
+    "infinitus, infinita, infinitum": {
+      "hexcode": "267E",
+      "file": "267E.png",
+      "source": "override",
+      "headword": "infinitus",
+      "glossZh": "無限的、無邊的；無窮的"
+    },
+    "libenter": {
+      "hexcode": "1F600",
+      "file": "1F600.png",
+      "source": "override",
+      "headword": "libenter",
+      "glossZh": "欣然、樂意；甘心"
+    },
     "queo, quire, quiui, quitus": {
       "hexcode": "2714",
       "file": "2714.png",
@@ -8991,6 +12438,27 @@
       "glossZh": "善良、美德；仁慈、溫柔",
       "borrowedVia": "美德"
     },
+    "perspicio, perspicere, perspexi, perspectus": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "override",
+      "headword": "perspicio",
+      "glossZh": "看透、察明；觀察、檢視"
+    },
+    "regularis, regularis, regulare": {
+      "hexcode": "1F4CF",
+      "file": "1F4CF.png",
+      "source": "override",
+      "headword": "regularis",
+      "glossZh": "成條狀的、可錘成條狀的"
+    },
+    "particularis, particularis, particulare": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "particularis",
+      "glossZh": "特殊的、個別的、片段的"
+    },
     "sanus, sana, sanum": {
       "hexcode": "1F3CB",
       "file": "1F3CB.png",
@@ -8998,6 +12466,13 @@
       "headword": "sanus",
       "glossZh": "健全的、健康的、理智的",
       "borrowedVia": "健康的"
+    },
+    "efficaciter": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "headword": "efficaciter",
+      "glossZh": "有效地、確實地、產生法律效力地"
     },
     "pactum, pacti": {
       "hexcode": "1F91D",
@@ -9022,6 +12497,27 @@
       "glossZh": "年輕的、青年的",
       "borrowedVia": "年輕的"
     },
+    "innitor, inniti, innisus sum": {
+      "hexcode": "2693",
+      "file": "2693.png",
+      "source": "override",
+      "headword": "innitor",
+      "glossZh": "依靠、憑藉、扶持"
+    },
+    "seruitus, seruitutis": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "servitus",
+      "glossZh": "奴役、奴隸身分、束縛"
+    },
+    "fideliter": {
+      "hexcode": "1F415",
+      "file": "1F415.png",
+      "source": "override",
+      "headword": "fideliter",
+      "glossZh": "忠誠地、殷切地、可靠地"
+    },
     "commodum, commodi": {
       "hexcode": "1F9FE",
       "file": "1F9FE.png",
@@ -9029,6 +12525,34 @@
       "headword": "commodum",
       "glossZh": "便利、利益、好處、報酬",
       "borrowedVia": "報酬"
+    },
+    "sacerdotalis, sacerdotalis, sacerdotale": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "sacerdotalis",
+      "glossZh": "司祭的、聖職的"
+    },
+    "tracto, tractare, tractaui, tractatus": {
+      "hexcode": "1F4BC",
+      "file": "1F4BC.png",
+      "source": "override",
+      "headword": "tracto",
+      "glossZh": "拖曳、牽引、處理、論述"
+    },
+    "integritas, integritatis": {
+      "hexcode": "1F90D",
+      "file": "1F90D.png",
+      "source": "override",
+      "headword": "integritas",
+      "glossZh": "完整、貞潔、正直"
+    },
+    "inquisitio, inquisitionis": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "headword": "inquisitio",
+      "glossZh": "搜尋、查究、調查、偵查"
     },
     "proficiscor, proficisci, profectus sum": {
       "hexcode": "1F6EB",
@@ -9054,6 +12578,13 @@
       "glossZh": "光明的、燦爛的、卓越的",
       "borrowedVia": "卓越的"
     },
+    "martius, martia, martium": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Martius",
+      "glossZh": "三月"
+    },
     "institutum, instituti": {
       "hexcode": "1F501",
       "file": "1F501.png",
@@ -9077,6 +12608,20 @@
       "headword": "professio",
       "glossZh": "聲明、宣誓；職業、行業"
     },
+    "quotquot": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "override",
+      "headword": "quotquot",
+      "glossZh": "凡若干、若干個"
+    },
+    "late": {
+      "hexcode": "1F30D",
+      "file": "1F30D.png",
+      "source": "override",
+      "headword": "late",
+      "glossZh": "廣泛地、遠近聞名"
+    },
     "administratio, administrationis": {
       "hexcode": "2699",
       "file": "2699.png",
@@ -9093,6 +12638,20 @@
       "glossZh": "永恆的、永遠的、永久的",
       "borrowedVia": "永遠的"
     },
+    "nominatim": {
+      "hexcode": "1F3F7",
+      "file": "1F3F7.png",
+      "source": "override",
+      "headword": "nominatim",
+      "glossZh": "按名、點名"
+    },
+    "sedulo": {
+      "hexcode": "1F41C",
+      "file": "1F41C.png",
+      "source": "override",
+      "headword": "sedulo",
+      "glossZh": "殷切地、勤勉地、用心地"
+    },
     "distinguo, distinguere, distinxi, distinctus": {
       "hexcode": "2797",
       "file": "2797.png",
@@ -9100,6 +12659,13 @@
       "headword": "distinguo",
       "glossZh": "區分、分開、劃分；裝飾、修飾",
       "borrowedVia": "分開"
+    },
+    "clare": {
+      "hexcode": "1F4E2",
+      "file": "1F4E2.png",
+      "source": "override",
+      "headword": "clare",
+      "glossZh": "大聲地、響亮地；清晰地、明亮地"
     },
     "obsequium, obsequi(i)": {
       "hexcode": "1F44C",
@@ -9165,6 +12731,34 @@
       "glossZh": "注意、察覺、觀察；評判、懲罰",
       "borrowedVia": "懲罰"
     },
+    "quominus": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "override",
+      "headword": "quominus",
+      "glossZh": "使不……、妨礙……"
+    },
+    "spons, spontis": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "override",
+      "headword": "spons",
+      "glossZh": "自願"
+    },
+    "limes, limitis": {
+      "hexcode": "E091",
+      "file": "E091.png",
+      "source": "override",
+      "headword": "limes",
+      "glossZh": "小徑、界限、邊界標記的未開墾地帶"
+    },
+    "apte": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "apte",
+      "glossZh": "緊密地、恰當地、適宜地"
+    },
     "conuersio, conuersionis": {
       "hexcode": "1F483",
       "file": "1F483.png",
@@ -9173,6 +12767,27 @@
       "glossZh": "旋轉、迴圈、周期",
       "borrowedVia": "旋轉"
     },
+    "euangelicus, euangelica, euangelicum": {
+      "hexcode": "1F4D6",
+      "file": "1F4D6.png",
+      "source": "override",
+      "headword": "evangelicus",
+      "glossZh": "福音的、屬於福音"
+    },
+    "seruitium, seruiti(i)": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "servitium",
+      "glossZh": "奴隸制、奴役、奴隸階級"
+    },
+    "insero, inserere, inserui, insertus": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "headword": "insero",
+      "glossZh": "播種、嫁接、插入"
+    },
     "comprehendo, comprehendere, comprehendi, comprehensus": {
       "hexcode": "1F46E",
       "file": "1F46E.png",
@@ -9180,6 +12795,13 @@
       "headword": "comprehendo",
       "glossZh": "緊握、捕捉、逮捕、點燃、懷孕",
       "borrowedVia": "捕捉"
+    },
+    "relatio, relationis": {
+      "hexcode": "1F4DD",
+      "file": "1F4DD.png",
+      "source": "override",
+      "headword": "relatio",
+      "glossZh": "報告、轉介"
     },
     "generatio, generationis": {
       "hexcode": "1F46A",
@@ -9219,6 +12841,13 @@
       "headword": "creatio",
       "glossZh": "創造、由無中生有",
       "borrowedVia": "創造"
+    },
+    "mutatio, mutationis": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "override",
+      "headword": "mutatio",
+      "glossZh": "變化、更替、交換"
     },
     "campus, campi": {
       "hexcode": "1F3DE",
@@ -9275,6 +12904,13 @@
       "headword": "structura",
       "glossZh": "建築、構造；結構、砌體"
     },
+    "nonne": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "override",
+      "headword": "nonne",
+      "glossZh": "難道不是嗎？（疑問詞，預期肯定回答）"
+    },
     "indico, indicare, indicaui, indicatus": {
       "hexcode": "1F449",
       "file": "1F449.png",
@@ -9323,6 +12959,13 @@
       "glossZh": "貧窮、缺乏；卑微的境況",
       "borrowedVia": "貧窮"
     },
+    "supernaturalis, supernaturalis, supernaturale": {
+      "hexcode": "2728",
+      "file": "2728.png",
+      "source": "override",
+      "headword": "supernaturalis",
+      "glossZh": "超自然的"
+    },
     "euentus, euentus": {
       "hexcode": "1F4A5",
       "file": "1F4A5.png",
@@ -9338,6 +12981,20 @@
       "headword": "acquiro",
       "glossZh": "獲得、取得、贏得；增加、累積",
       "borrowedVia": "獲得"
+    },
+    "nimius, nimia, nimium": {
+      "hexcode": "203C",
+      "file": "203C.png",
+      "source": "override",
+      "headword": "nimius",
+      "glossZh": "過度的、過分的"
+    },
+    "denuo": {
+      "hexcode": "1F501",
+      "file": "1F501.png",
+      "source": "override",
+      "headword": "denuo",
+      "glossZh": "重新、再一次；轉而"
     },
     "robur, roboris": {
       "hexcode": "2693",
@@ -9379,6 +13036,34 @@
       "glossZh": "空的、虛空；徒然、愚蠢",
       "borrowedVia": "空的"
     },
+    "constanter": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "headword": "constanter",
+      "glossZh": "堅定不移地、恆常地、堅決地、忠誠地"
+    },
+    "efficax, efficacis": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "override",
+      "headword": "efficax",
+      "glossZh": "有效的、能勝任的；具法律效力的"
+    },
+    "augustus, augusti": {
+      "hexcode": "1FAC5",
+      "file": "1FAC5.png",
+      "source": "override",
+      "headword": "Augustus",
+      "glossZh": "奧古斯都"
+    },
+    "conuictus, conuictus": {
+      "hexcode": "1F942",
+      "file": "1F942.png",
+      "source": "override",
+      "headword": "convictus",
+      "glossZh": "親密相處、結社；密友、筵席"
+    },
     "supero, superare, superaui, superatus": {
       "hexcode": "1F51D",
       "file": "1F51D.png",
@@ -9411,6 +13096,13 @@
       "glossZh": "然而、然則、依然",
       "borrowedVia": "然而"
     },
+    "mutuo, mutuare, mutuaui, mutuatus": {
+      "hexcode": "1F9FE",
+      "file": "1F9FE.png",
+      "source": "override",
+      "headword": "mutuo",
+      "glossZh": "出借；交換"
+    },
     "interea": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -9418,6 +13110,20 @@
       "headword": "interea",
       "glossZh": "同時、其間",
       "borrowedVia": "同時"
+    },
+    "raro": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "override",
+      "headword": "raro",
+      "glossZh": "罕見地、難得"
+    },
+    "incarnatio, incarnationis": {
+      "hexcode": "1FAC0",
+      "file": "1FAC0.png",
+      "source": "override",
+      "headword": "incarnatio",
+      "glossZh": "聖子降生成人、降生奧蹟"
     },
     "aedifico, aedificare, aedificaui, aedificatus": {
       "hexcode": "1F3D7",
@@ -9481,6 +13187,13 @@
       "glossZh": "關切、憂慮；不安、焦慮",
       "borrowedVia": "關切"
     },
+    "materialis, materialis, materiale": {
+      "hexcode": "1F9F1",
+      "file": "1F9F1.png",
+      "source": "override",
+      "headword": "materialis",
+      "glossZh": "物質的、物質性的；與質料相關的"
+    },
     "prope": {
       "hexcode": "27A1",
       "file": "27A1.png",
@@ -9488,6 +13201,13 @@
       "headword": "prope",
       "glossZh": "靠近、接近；幾乎、差不多",
       "borrowedVia": "靠近"
+    },
+    "quocumque": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "quocumque",
+      "glossZh": "無論何處、到任何地方；任何地方"
     },
     "domesticus, domestica, domesticum": {
       "hexcode": "1F3E1",
@@ -9513,12 +13233,40 @@
       "glossZh": "最高地位、首位；統治、領導權",
       "borrowedVia": "統治"
     },
+    "beneuolentia, beneuolentiae": {
+      "hexcode": "1F970",
+      "file": "1F970.png",
+      "source": "override",
+      "headword": "benevolentia",
+      "glossZh": "善意、仁慈、好感；偏愛"
+    },
+    "ianuarius, ianuaria, ianuarium": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Januarius",
+      "glossZh": "一月"
+    },
     "aedificatio, aedificationis": {
       "hexcode": "1F3E0",
       "file": "1F3E0.png",
       "source": "annotation",
       "headword": "aedificatio",
       "glossZh": "建築物、建物；建築、營造"
+    },
+    "orientalis, orientalis, orientale": {
+      "hexcode": "1F9ED",
+      "file": "1F9ED.png",
+      "source": "override",
+      "headword": "orientalis",
+      "glossZh": "東方的、東部的；東方人的"
+    },
+    "postremo": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "headword": "postremo",
+      "glossZh": "最後、終於"
     },
     "uniuersitas, uniuersitatis": {
       "hexcode": "1F4CA",
@@ -9576,6 +13324,13 @@
       "glossZh": "命令、下令；統治",
       "borrowedVia": "命令"
     },
+    "israel, israelis": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "headword": "Israel",
+      "glossZh": "以色列民族、天主的民族"
+    },
     "miseria, miseriae": {
       "hexcode": "1F915",
       "file": "1F915.png",
@@ -9608,6 +13363,27 @@
       "glossZh": "聚集、集合；團體、教眾",
       "borrowedVia": "聚集"
     },
+    "huc": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "huc",
+      "glossZh": "到此地、至此"
+    },
+    "felicitas, felicitatis": {
+      "hexcode": "1F340",
+      "file": "1F340.png",
+      "source": "override",
+      "headword": "felicitas",
+      "glossZh": "幸運、幸福、好運"
+    },
+    "primas, primatis": {
+      "hexcode": "1F451",
+      "file": "1F451.png",
+      "source": "override",
+      "headword": "primas",
+      "glossZh": "貴族、第一人；最高級的"
+    },
     "arbitror, arbitrari, arbitratus sum": {
       "hexcode": "2696",
       "file": "2696.png",
@@ -9624,6 +13400,20 @@
       "glossZh": "祝聖、獻奉；成聖、神聖化",
       "borrowedVia": "成聖"
     },
+    "exemplar, exemplaris": {
+      "hexcode": "1F4DD",
+      "file": "1F4DD.png",
+      "source": "override",
+      "headword": "exemplar",
+      "glossZh": "範本、模式、典範；抄本"
+    },
+    "grauiter": {
+      "hexcode": "1F4A5",
+      "file": "1F4A5.png",
+      "source": "override",
+      "headword": "graviter",
+      "glossZh": "猛烈地、深深地；嚴厲地、勉強地"
+    },
     "conuentus, conuentus": {
       "hexcode": "1F465",
       "file": "1F465.png",
@@ -9631,6 +13421,27 @@
       "headword": "conventus",
       "glossZh": "約定、協議；聚集、集會",
       "borrowedVia": "聚集"
+    },
+    "consortium, consorti(i)": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "override",
+      "headword": "consortium",
+      "glossZh": "共有、合夥、交誼；伴侶"
+    },
+    "subsum, subesse, subfui, subfuturus": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "subsum",
+      "glossZh": "處於下位、潛伏；備用"
+    },
+    "imus, ima, imum": {
+      "hexcode": "2B07",
+      "file": "2B07.png",
+      "source": "override",
+      "headword": "imus",
+      "glossZh": "最深、最下、最末的"
     },
     "amicitia, amicitiae": {
       "hexcode": "1F49E",
@@ -9664,12 +13475,40 @@
       "glossZh": "力量、勇氣、堅毅",
       "borrowedVia": "力量"
     },
+    "dec": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Dec",
+      "glossZh": "十二月"
+    },
     "securitas, securitatis": {
       "hexcode": "E247",
       "file": "E247.png",
       "source": "annotation",
       "headword": "securitas",
       "glossZh": "無憂、安全、放心"
+    },
+    "nouissimus, nouissima, nouissimum": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "override",
+      "headword": "novissimus",
+      "glossZh": "最後的、最近的、極度的"
+    },
+    "respectus, respectus": {
+      "hexcode": "21A9",
+      "file": "21A9.png",
+      "source": "override",
+      "headword": "respectus",
+      "glossZh": "回顧、庇護、考慮"
+    },
+    "deinceps": {
+      "hexcode": "1F9EE",
+      "file": "1F9EE.png",
+      "source": "override",
+      "headword": "deinceps",
+      "glossZh": "依序、相繼、逐一"
     },
     "aditus, aditus": {
       "hexcode": "E0A7",
@@ -9687,6 +13526,20 @@
       "glossZh": "相遇、對面",
       "borrowedVia": "相遇"
     },
+    "confirmatio, confirmationis": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "headword": "confirmatio",
+      "glossZh": "堅定、鼓勵、安慰"
+    },
+    "insignis, insignis, insigne": {
+      "hexcode": "1F31F",
+      "file": "1F31F.png",
+      "source": "override",
+      "headword": "insignis",
+      "glossZh": "顯著的、傑出的、著名的"
+    },
     "uigeo, uigere": {
       "hexcode": "1F4AA",
       "file": "1F4AA.png",
@@ -9694,6 +13547,13 @@
       "headword": "vigeo",
       "glossZh": "強盛、興盛、活躍",
       "borrowedVia": "強盛"
+    },
+    "nexus, nexi": {
+      "hexcode": "26D3",
+      "file": "26D3.png",
+      "source": "override",
+      "headword": "nexus",
+      "glossZh": "債奴、從人"
     },
     "lucrum, lucri": {
       "hexcode": "1F911",
@@ -9710,6 +13570,13 @@
       "headword": "cottidianus",
       "glossZh": "每日的、日常的、普通的",
       "borrowedVia": "每日的"
+    },
+    "opportunus, opportuna, opportunum": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "opportunus",
+      "glossZh": "適當的、有利的、適合的"
     },
     "calamitas, calamitatis": {
       "hexcode": "2623",
@@ -9735,6 +13602,13 @@
       "glossZh": "排除、驅逐、阻止",
       "borrowedVia": "阻止"
     },
+    "continuo": {
+      "hexcode": "26A1",
+      "file": "26A1.png",
+      "source": "override",
+      "headword": "continuo",
+      "glossZh": "立即、隨即、連續不斷"
+    },
     "pulchritudo, pulchritudinis": {
       "hexcode": "1F607",
       "file": "1F607.png",
@@ -9742,6 +13616,13 @@
       "headword": "pulchritudo",
       "glossZh": "美、美德、卓越",
       "borrowedVia": "美德"
+    },
+    "sancio, sancire, sanxi, sanctus": {
+      "hexcode": "1F4DC",
+      "file": "1F4DC.png",
+      "source": "override",
+      "headword": "sancio",
+      "glossZh": "確認、制定、履行、奉獻"
     },
     "iuuo, iuuare, iuui, iutus": {
       "hexcode": "E083",
@@ -9751,6 +13632,13 @@
       "glossZh": "幫助、協助、助益",
       "borrowedVia": "幫助"
     },
+    "accurate": {
+      "hexcode": "1F3AF",
+      "file": "1F3AF.png",
+      "source": "override",
+      "headword": "accurate",
+      "glossZh": "謹慎、精確、細心"
+    },
     "reuerentia, reuerentiae": {
       "hexcode": "1F628",
       "file": "1F628.png",
@@ -9759,6 +13647,20 @@
       "glossZh": "敬畏、尊敬、虔誠",
       "borrowedVia": "敬畏"
     },
+    "uiolentia, uiolentiae": {
+      "hexcode": "1F4A5",
+      "file": "1F4A5.png",
+      "source": "override",
+      "headword": "violentia",
+      "glossZh": "暴力、猛烈"
+    },
+    "uix": {
+      "hexcode": "1F90F",
+      "file": "1F90F.png",
+      "source": "override",
+      "headword": "vix",
+      "glossZh": "幾乎不、勉強、不情願地"
+    },
     "passim": {
       "hexcode": "1F5FA",
       "file": "1F5FA.png",
@@ -9766,6 +13668,13 @@
       "headword": "passim",
       "glossZh": "到處、散見各處",
       "borrowedVia": "到處"
+    },
+    "diffundo, diffundere, diffundi, diffusus": {
+      "hexcode": "1F4A8",
+      "file": "1F4A8.png",
+      "source": "override",
+      "headword": "diffundo",
+      "glossZh": "散布、傾注、揮霍"
     },
     "artifex, artificis": {
       "hexcode": "1F6E0",
@@ -9823,6 +13732,20 @@
       "glossZh": "恰當地、相稱地、適切地",
       "borrowedVia": "相稱地"
     },
+    "iuuentus, iuuentutis": {
+      "hexcode": "1F466",
+      "file": "1F466.png",
+      "source": "override",
+      "headword": "juventus",
+      "glossZh": "青年、青年時期、年輕人"
+    },
+    "consolatio, consolationis": {
+      "hexcode": "1F917",
+      "file": "1F917.png",
+      "source": "override",
+      "headword": "consolatio",
+      "glossZh": "安慰、寬解、撫慰"
+    },
     "satisfacio, satisfacere, satisfeci, satisfactus": {
       "hexcode": "2705",
       "file": "2705.png",
@@ -9863,6 +13786,13 @@
       "glossZh": "證明、指控、譴責、駁斥",
       "borrowedVia": "證明"
     },
+    "nonnumquam": {
+      "hexcode": "23F0",
+      "file": "23F0.png",
+      "source": "override",
+      "headword": "nonnumquam",
+      "glossZh": "有時、偶爾"
+    },
     "ualidus, ualida, ualidum": {
       "hexcode": "1F32A",
       "file": "1F32A.png",
@@ -9887,6 +13817,20 @@
       "glossZh": "證據、示證、證明",
       "borrowedVia": "證明"
     },
+    "recens, recentis": {
+      "hexcode": "1F195",
+      "file": "1F195.png",
+      "source": "override",
+      "headword": "recens",
+      "glossZh": "新近的、新鮮的、休息過的"
+    },
+    "minuo, minuere, minui, minutus": {
+      "hexcode": "1F4C9",
+      "file": "1F4C9.png",
+      "source": "override",
+      "headword": "minuo",
+      "glossZh": "減少、減弱、減損、縮小"
+    },
     "fortuna, fortunae": {
       "hexcode": "1F48E",
       "file": "1F48E.png",
@@ -9901,6 +13845,20 @@
       "source": "annotation",
       "headword": "tuto",
       "glossZh": "保護、防衛、防止"
+    },
+    "feliciter": {
+      "hexcode": "1F340",
+      "file": "1F340.png",
+      "source": "override",
+      "headword": "feliciter",
+      "glossZh": "幸福地、幸運地、順利地"
+    },
+    "uigor, uigoris": {
+      "hexcode": "1F4AA",
+      "file": "1F4AA.png",
+      "source": "override",
+      "headword": "vigor",
+      "glossZh": "活力、精力、氣勢"
     },
     "caueo, cauere, caui, cautus": {
       "hexcode": "1F4CF",
@@ -9926,6 +13884,13 @@
       "glossZh": "應負責的、有罪的",
       "borrowedVia": "有罪的"
     },
+    "pentecoste, pentecostes": {
+      "hexcode": "1F54A",
+      "file": "1F54A.png",
+      "source": "override",
+      "headword": "Pentecoste",
+      "glossZh": "聖神降臨節、五旬節"
+    },
     "suffragium, suffragi(i)": {
       "hexcode": "2696",
       "file": "2696.png",
@@ -9942,6 +13907,27 @@
       "glossZh": "總和、完成；最高點",
       "borrowedVia": "完成"
     },
+    "cumque": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "cumque",
+      "glossZh": "無論何時；任意、某某"
+    },
+    "urgeo, urgere, ursi": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "urgeo",
+      "glossZh": "按壓、推動；不斷踐踏"
+    },
+    "patrimonium, patrimoni(i)": {
+      "hexcode": "1F3E0",
+      "file": "1F3E0.png",
+      "source": "override",
+      "headword": "patrimonium",
+      "glossZh": "遺產、世襲產業"
+    },
     "postulatum, postulati": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -9957,6 +13943,20 @@
       "headword": "induo",
       "glossZh": "穿上、披上；著衣",
       "borrowedVia": "穿上"
+    },
+    "paulatim": {
+      "hexcode": "1F40C",
+      "file": "1F40C.png",
+      "source": "override",
+      "headword": "paulatim",
+      "glossZh": "逐漸地、一點一點地"
+    },
+    "quintus, quinti": {
+      "hexcode": "1F468",
+      "file": "1F468.png",
+      "source": "override",
+      "headword": "Quintus",
+      "glossZh": "昆圖斯"
     },
     "reuoco, reuocare, reuocaui, reuocatus": {
       "hexcode": "267B",
@@ -9997,6 +13997,20 @@
       "glossZh": "不朽的、永恆的；不壞的",
       "borrowedVia": "不朽的"
     },
+    "duplex, duplicis": {
+      "hexcode": "203C",
+      "file": "203C.png",
+      "source": "override",
+      "headword": "duplex",
+      "glossZh": "雙重的、分裂的；虛偽的"
+    },
+    "promissio, promissionis": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "override",
+      "headword": "promissio",
+      "glossZh": "承諾、保證"
+    },
     "stabilis, stabilis, stabile": {
       "hexcode": "2693",
       "file": "2693.png",
@@ -10005,6 +14019,20 @@
       "glossZh": "穩定的、堅定的；不變的",
       "borrowedVia": "堅定的"
     },
+    "commemoro, commemorare, commemoraui, commemoratus": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "override",
+      "headword": "commemoro",
+      "glossZh": "回憶、銘記；提及、記述"
+    },
+    "fraternitas, fraternitatis": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "override",
+      "headword": "fraternitas",
+      "glossZh": "兄弟情誼、手足之愛；兄弟般的關係"
+    },
     "praescribo, praescribere, praescripsi, praescriptus": {
       "hexcode": "1F4DC",
       "file": "1F4DC.png",
@@ -10012,6 +14040,20 @@
       "headword": "praescribo",
       "glossZh": "命令、指示；規定",
       "borrowedVia": "命令"
+    },
+    "incommodus, incommoda, incommodum": {
+      "hexcode": "1F61F",
+      "file": "1F61F.png",
+      "source": "override",
+      "headword": "incommodus",
+      "glossZh": "不便的、令人厭煩的；不利的、不適當的"
+    },
+    "honestas, honestatis": {
+      "hexcode": "1F90D",
+      "file": "1F90D.png",
+      "source": "override",
+      "headword": "honestas",
+      "glossZh": "榮譽、廉正、誠實"
     },
     "equidem": {
       "hexcode": "2714",
@@ -10029,6 +14071,20 @@
       "glossZh": "呈液態、熔化；明白、顯然",
       "borrowedVia": "明白"
     },
+    "adhaereo, adhaerere, adhaesi, adhaesus": {
+      "hexcode": "1F4CE",
+      "file": "1F4CE.png",
+      "source": "override",
+      "headword": "adhaereo",
+      "glossZh": "粘著、依附；堅守、專注"
+    },
+    "solacium, solaci(i)": {
+      "hexcode": "1F917",
+      "file": "1F917.png",
+      "source": "override",
+      "headword": "solacium",
+      "glossZh": "安慰、撫慰；憂苦中的寬解"
+    },
     "hierarchia, hierarchiae": {
       "hexcode": "26EA",
       "file": "26EA.png",
@@ -10043,6 +14099,13 @@
       "headword": "dioecesis",
       "glossZh": "教區、主教管轄區；羅馬行省"
     },
+    "contemplatio, contemplationis": {
+      "hexcode": "1F9D8",
+      "file": "1F9D8.png",
+      "source": "override",
+      "headword": "contemplatio",
+      "glossZh": "觀察、凝視；冥想、沉思、思慮"
+    },
     "contextus, contextus": {
       "hexcode": "1F517",
       "file": "1F517.png",
@@ -10050,6 +14113,20 @@
       "headword": "contextus",
       "glossZh": "編織、結合；脈絡、連貫性",
       "borrowedVia": "結合"
+    },
+    "dummodo": {
+      "hexcode": "2754",
+      "file": "2754.png",
+      "source": "override",
+      "headword": "dummodo",
+      "glossZh": "只要、倘若（引導條件子句）"
+    },
+    "instar": {
+      "hexcode": "1F7F0",
+      "file": "1F7F0.png",
+      "source": "override",
+      "headword": "instar",
+      "glossZh": "肖像、類似物；與……相等"
     },
     "interpretatio, interpretationis": {
       "hexcode": "1F5E8",
@@ -10059,6 +14136,27 @@
       "glossZh": "解釋、闡釋；意義",
       "borrowedVia": "解釋"
     },
+    "iulius, iulia, iulium": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Julius",
+      "glossZh": "七月"
+    },
+    "mentio, mentionis": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "override",
+      "headword": "mentio",
+      "glossZh": "提及、言及；呼名、記述"
+    },
+    "constantia, constantiae": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "headword": "constantia",
+      "glossZh": "堅定、恆心、堅貞"
+    },
     "resisto, resistere, restiti": {
       "hexcode": "1F645",
       "file": "1F645.png",
@@ -10066,6 +14164,20 @@
       "headword": "resisto",
       "glossZh": "抵抗、反對、對抗；駐足",
       "borrowedVia": "反對"
+    },
+    "essentialis, essentialis, essentiale": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "override",
+      "headword": "essentialis",
+      "glossZh": "本質的、本有的"
+    },
+    "constans, constantis": {
+      "hexcode": "1FAA8",
+      "file": "1FAA8.png",
+      "source": "override",
+      "headword": "constans",
+      "glossZh": "恆定的、堅貞的、穩固的"
     },
     "fel, fellis": {
       "hexcode": "1F9A0",
@@ -10083,6 +14195,13 @@
       "glossZh": "堅固、牢固、強度",
       "borrowedVia": "堅固"
     },
+    "certamen, certaminis": {
+      "hexcode": "2694",
+      "file": "2694.png",
+      "source": "override",
+      "headword": "certamen",
+      "glossZh": "競賽、戰鬥、爭執"
+    },
     "sustento, sustentare, sustentaui, sustentatus": {
       "hexcode": "270A",
       "file": "270A.png",
@@ -10090,6 +14209,13 @@
       "headword": "sustento",
       "glossZh": "堅持、忍耐、支撐",
       "borrowedVia": "堅持"
+    },
+    "differo, differre, distuli, dilatus": {
+      "hexcode": "23F3",
+      "file": "23F3.png",
+      "source": "override",
+      "headword": "differo",
+      "glossZh": "延遲、推遲；不同、有別"
     },
     "diuturnus, diuturna, diuturnum": {
       "hexcode": "267E",
@@ -10115,6 +14241,13 @@
       "glossZh": "創傷、傷害、心靈創痛",
       "borrowedVia": "傷害"
     },
+    "priuatim": {
+      "hexcode": "1F464",
+      "file": "1F464.png",
+      "source": "override",
+      "headword": "privatim",
+      "glossZh": "私下地、以私人身份"
+    },
     "iugiter": {
       "hexcode": "1F501",
       "file": "1F501.png",
@@ -10123,6 +14256,20 @@
       "glossZh": "不斷地、持續地、頻繁地",
       "borrowedVia": "不斷地"
     },
+    "sinus, sini": {
+      "hexcode": "1F3FA",
+      "file": "1F3FA.png",
+      "source": "override",
+      "headword": "sinus",
+      "glossZh": "酒碗、盛酒器皿"
+    },
+    "inquiro, inquirere, inquisiui, inquisitus": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "headword": "inquiro",
+      "glossZh": "調查、追查、探尋"
+    },
     "impetus, impetus": {
       "hexcode": "1F3C3",
       "file": "1F3C3.png",
@@ -10130,6 +14277,13 @@
       "headword": "impetus",
       "glossZh": "衝擊、攻勢、衝動",
       "borrowedVia": "衝動"
+    },
+    "uito, uitare, uitaui, uitatus": {
+      "hexcode": "1F4A8",
+      "file": "1F4A8.png",
+      "source": "override",
+      "headword": "vito",
+      "glossZh": "迴避、躲避、規避"
     },
     "zelus, zeli": {
       "hexcode": "1F644",
@@ -10147,6 +14301,13 @@
       "glossZh": "模仿、效法、相似",
       "borrowedVia": "效法"
     },
+    "undique": {
+      "hexcode": "1F9ED",
+      "file": "1F9ED.png",
+      "source": "override",
+      "headword": "undique",
+      "glossZh": "四面八方、各方面"
+    },
     "corrumpo, corrumpere, corrupi, corruptus": {
       "hexcode": "1F940",
       "file": "1F940.png",
@@ -10154,6 +14315,27 @@
       "headword": "corrumpo",
       "glossZh": "腐爛、毀壞、污染、摧毀",
       "borrowedVia": "摧毀"
+    },
+    "partim": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "partim",
+      "glossZh": "部分地、一部分……另一部分"
+    },
+    "amanter": {
+      "hexcode": "1F970",
+      "file": "1F970.png",
+      "source": "override",
+      "headword": "amanter",
+      "glossZh": "親切地、充滿愛意地"
+    },
+    "acriter": {
+      "hexcode": "1F52A",
+      "file": "1F52A.png",
+      "source": "override",
+      "headword": "acriter",
+      "glossZh": "敏銳地、猛烈地、堅定地"
     },
     "essentia, essentiae": {
       "hexcode": "269B",
@@ -10179,6 +14361,13 @@
       "glossZh": "多樣、差異、斑駁",
       "borrowedVia": "差異"
     },
+    "comperio, comperire, comperi, compertus": {
+      "hexcode": "1F50D",
+      "file": "1F50D.png",
+      "source": "override",
+      "headword": "comperio",
+      "glossZh": "發現、確認、查明"
+    },
     "controuersia, controuersiae": {
       "hexcode": "1F5EF",
       "file": "1F5EF.png",
@@ -10195,6 +14384,20 @@
       "glossZh": "差異、不同",
       "borrowedVia": "差異"
     },
+    "exercitatio, exercitationis": {
+      "hexcode": "1F3CB",
+      "file": "1F3CB.png",
+      "source": "override",
+      "headword": "exercitatio",
+      "glossZh": "練習、訓練、修習"
+    },
+    "donatio, donationis": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "override",
+      "headword": "donatio",
+      "glossZh": "捐贈、贈禮"
+    },
     "tertio": {
       "hexcode": "1F949",
       "file": "1F949.png",
@@ -10202,6 +14405,13 @@
       "headword": "tertio",
       "glossZh": "第三、第三地",
       "borrowedVia": "第三"
+    },
+    "commode": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "commode",
+      "glossZh": "合宜地、恰當地、雅致地"
     },
     "ordinarius, ordinaria, ordinarium": {
       "hexcode": "1F91D",
@@ -10226,6 +14436,13 @@
       "glossZh": "流動、涌出、濕潤",
       "borrowedVia": "流動"
     },
+    "unctio, unctionis": {
+      "hexcode": "1FAD2",
+      "file": "1FAD2.png",
+      "source": "override",
+      "headword": "unctio",
+      "glossZh": "傅油、傅抹；塗膏"
+    },
     "iustifico, iustificare, iustificaui, iustificatus": {
       "hexcode": "2696",
       "file": "2696.png",
@@ -10242,12 +14459,33 @@
       "glossZh": "超越、逾越；離去、過世",
       "borrowedVia": "超越"
     },
+    "dubitatio, dubitationis": {
+      "hexcode": "1F914",
+      "file": "1F914.png",
+      "source": "override",
+      "headword": "dubitatio",
+      "glossZh": "疑惑、躊躇；猶豫、不決"
+    },
     "morbus, morbi": {
       "hexcode": "1F48A",
       "file": "1F48A.png",
       "source": "override",
       "headword": "morbus",
       "glossZh": "疾病、病患；症疾、缺陷"
+    },
+    "illuc": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "illuc",
+      "glossZh": "到那裡、至彼處"
+    },
+    "patrocinium, patrocini(i)": {
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "override",
+      "headword": "patrocinium",
+      "glossZh": "庇護、捍衛；代訟、法律扶助"
     },
     "designo, designare, designaui, designatus": {
       "hexcode": "1F3F7",
@@ -10265,6 +14503,13 @@
       "glossZh": "特選的、非凡的；卓越的",
       "borrowedVia": "卓越的"
     },
+    "hactenus": {
+      "hexcode": "231B",
+      "file": "231B.png",
+      "source": "override",
+      "headword": "hactenus",
+      "glossZh": "迄今、至此；在此限度內"
+    },
     "ardor, ardoris": {
       "hexcode": "1F525",
       "file": "1F525.png",
@@ -10280,6 +14525,20 @@
       "headword": "fas",
       "glossZh": "天法、神旨；合法的、應當的",
       "borrowedVia": "合法的"
+    },
+    "mercor, mercari, mercatus sum": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "override",
+      "headword": "mercor",
+      "glossZh": "貿易、經商；購買"
+    },
+    "utinam": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "override",
+      "headword": "utinam",
+      "glossZh": "願、若得"
     },
     "mendacium, mendaci(i)": {
       "hexcode": "1F925",
@@ -10297,6 +14556,20 @@
       "glossZh": "反對、敵對；抵抗",
       "borrowedVia": "反對"
     },
+    "consentaneus, consentanea, consentaneum": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "consentaneus",
+      "glossZh": "相宜的、相符的；一致的"
+    },
+    "februarius, februaria, februarium": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Februarius",
+      "glossZh": "二月"
+    },
     "occupo, occupare, occupaui, occupatus": {
       "hexcode": "E091",
       "file": "E091.png",
@@ -10304,6 +14577,20 @@
       "headword": "occupo",
       "glossZh": "佔領、奪取；攻擊、襲擊",
       "borrowedVia": "佔領"
+    },
+    "impulsus, impulsus": {
+      "hexcode": "1F4A5",
+      "file": "1F4A5.png",
+      "source": "override",
+      "headword": "impulsus",
+      "glossZh": "衝擊、震盪；激勵、驅使"
+    },
+    "uber, uberis": {
+      "hexcode": "1F95B",
+      "file": "1F95B.png",
+      "source": "override",
+      "headword": "uber",
+      "glossZh": "乳房、乳頭；乳汁；肥沃之土；豐饒、充足"
     },
     "repeto, repetere, repetiui, repetitus": {
       "hexcode": "1F501",
@@ -10337,6 +14624,13 @@
       "glossZh": "勸促、建議；誘導；勸服、勸告",
       "borrowedVia": "勸服"
     },
+    "sapienter": {
+      "hexcode": "1F989",
+      "file": "1F989.png",
+      "source": "override",
+      "headword": "sapienter",
+      "glossZh": "智慧地、明智地"
+    },
     "solutio, solutionis": {
       "hexcode": "1F62B",
       "file": "1F62B.png",
@@ -10352,6 +14646,13 @@
       "headword": "intueor",
       "glossZh": "注視、觀看；考量、視為；欣賞",
       "borrowedVia": "注視"
+    },
+    "nedum": {
+      "hexcode": "2795",
+      "file": "2795.png",
+      "source": "override",
+      "headword": "nedum",
+      "glossZh": "更不用說、況乎；遑論"
     },
     "promoueo, promouere, promoui, promotus": {
       "hexcode": "E24F",
@@ -10376,6 +14677,20 @@
       "glossZh": "認識、知曉；熟悉、相識",
       "borrowedVia": "認識"
     },
+    "redigo, redigere, redegi, redactus": {
+      "hexcode": "1F504",
+      "file": "1F504.png",
+      "source": "override",
+      "headword": "redigo",
+      "glossZh": "趕回、驅退；轉變、化為"
+    },
+    "beatitudo, beatitudinis": {
+      "hexcode": "1F607",
+      "file": "1F607.png",
+      "source": "override",
+      "headword": "beatitudo",
+      "glossZh": "至福、真福；幸福之境"
+    },
     "egregius, egregia, egregium": {
       "hexcode": "1F929",
       "file": "1F929.png",
@@ -10384,6 +14699,13 @@
       "glossZh": "非凡、卓異；傑出、優秀",
       "borrowedVia": "非凡"
     },
+    "peritus, perita, peritum": {
+      "hexcode": "1F393",
+      "file": "1F393.png",
+      "source": "override",
+      "headword": "peritus",
+      "glossZh": "熟練、精通；經驗豐富、專精"
+    },
     "uictus, uictus": {
       "hexcode": "1F6B6",
       "file": "1F6B6.png",
@@ -10391,6 +14713,20 @@
       "headword": "victus",
       "glossZh": "生活、生活方式；食物、養分；飲食",
       "borrowedVia": "生活"
+    },
+    "popularis, popularis, populare": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "override",
+      "headword": "popularis",
+      "glossZh": "人民的、平民的；通俗的"
+    },
+    "admiratio, admirationis": {
+      "hexcode": "1F632",
+      "file": "1F632.png",
+      "source": "override",
+      "headword": "admiratio",
+      "glossZh": "驚異、驚歎；敬慕、尊敬"
     },
     "factum, facti": {
       "hexcode": "1F6E0",
@@ -10416,6 +14752,27 @@
       "glossZh": "工匠、勞動者",
       "borrowedVia": "工匠"
     },
+    "localis, localis, locale": {
+      "hexcode": "1F4CD",
+      "file": "1F4CD.png",
+      "source": "override",
+      "headword": "localis",
+      "glossZh": "地方的、與地點相關的"
+    },
+    "gradatim": {
+      "hexcode": "1F40C",
+      "file": "1F40C.png",
+      "source": "override",
+      "headword": "gradatim",
+      "glossZh": "逐步地、漸進地"
+    },
+    "opportunitas, opportunitatis": {
+      "hexcode": "1F3B2",
+      "file": "1F3B2.png",
+      "source": "override",
+      "headword": "opportunitas",
+      "glossZh": "便利、適當時機、機會"
+    },
     "abstineo, abstinere, abstinui, abstentus": {
       "hexcode": "1F9D8",
       "file": "1F9D8.png",
@@ -10424,6 +14781,27 @@
       "glossZh": "節制、禁絕、遠離",
       "borrowedVia": "節制"
     },
+    "collegium, collegi(i)": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "override",
+      "headword": "collegium",
+      "glossZh": "學院、公會、同業組織"
+    },
+    "sexus, sexus": {
+      "hexcode": "1F9EC",
+      "file": "1F9EC.png",
+      "source": "override",
+      "headword": "sexus",
+      "glossZh": "性別、性徵"
+    },
+    "directe": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "override",
+      "headword": "directe",
+      "glossZh": "直接地、逐次地、筆直"
+    },
     "obsecro, obsecrare, obsecraui, obsecratus": {
       "hexcode": "1F64F",
       "file": "1F64F.png",
@@ -10431,6 +14809,20 @@
       "headword": "obsecro",
       "glossZh": "懇求、哀禱、拜託",
       "borrowedVia": "懇求"
+    },
+    "misere": {
+      "hexcode": "1F61F",
+      "file": "1F61F.png",
+      "source": "override",
+      "headword": "misere",
+      "glossZh": "悲慘地、絕望地"
+    },
+    "ethica, ethicae": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "override",
+      "headword": "ethica",
+      "glossZh": "倫理學、道德哲學"
     },
     "tutus, tuta, tutum": {
       "hexcode": "1F512",
@@ -10463,6 +14855,13 @@
       "glossZh": "確實性、堅固確信；真理",
       "borrowedVia": "真理"
     },
+    "attendo, attendere, attendi, attentus": {
+      "hexcode": "1F442",
+      "file": "1F442.png",
+      "source": "override",
+      "headword": "attendo",
+      "glossZh": "注意、傾聽、專心"
+    },
     "potior, potior, potius": {
       "hexcode": "1F4C8",
       "file": "1F4C8.png",
@@ -10479,6 +14878,13 @@
       "glossZh": "保護、監禁、看守",
       "borrowedVia": "看守"
     },
+    "subditus, subdita, subditum": {
+      "hexcode": "1F647",
+      "file": "1F647.png",
+      "source": "override",
+      "headword": "subditus",
+      "glossZh": "服從的、臣民的、被統治的"
+    },
     "uindico, uindicare, uindicaui, uindicatus": {
       "hexcode": "1F528",
       "file": "1F528.png",
@@ -10486,6 +14892,13 @@
       "headword": "vindico",
       "glossZh": "聲張、懲罰、復仇",
       "borrowedVia": "懲罰"
+    },
+    "studiose": {
+      "hexcode": "1F41C",
+      "file": "1F41C.png",
+      "source": "override",
+      "headword": "studiose",
+      "glossZh": "熱切地、勤勉地、認真地"
     },
     "conceptio, conceptionis": {
       "hexcode": "1F930",
@@ -10495,6 +14908,13 @@
       "glossZh": "懷孕、構想、觀念",
       "borrowedVia": "懷孕"
     },
+    "conuenienter": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "override",
+      "headword": "convenienter",
+      "glossZh": "適切地、相符地、協調地"
+    },
     "atqui": {
       "hexcode": "2194",
       "file": "2194.png",
@@ -10502,6 +14922,13 @@
       "headword": "atqui",
       "glossZh": "然而、但是、卻",
       "borrowedVia": "然而"
+    },
+    "primarius, primaria, primarium": {
+      "hexcode": "1F947",
+      "file": "1F947.png",
+      "source": "override",
+      "headword": "primarius",
+      "glossZh": "第一位的、傑出的"
     },
     "intellegentia, intellegentiae": {
       "hexcode": "1F9E0",
@@ -10550,6 +14977,20 @@
       "headword": "fames",
       "glossZh": "飢餓、饑荒、渴望",
       "borrowedVia": "飢餓"
+    },
+    "foueo, fouere, foui, fotus": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "override",
+      "headword": "foveo",
+      "glossZh": "溫暖、偏愛、培育"
+    },
+    "aprilis, aprilis, aprile": {
+      "hexcode": "1F4C6",
+      "file": "1F4C6.png",
+      "source": "override",
+      "headword": "Aprilis",
+      "glossZh": "四月"
     },
     "defensio, defensionis": {
       "hexcode": "1F4DD",

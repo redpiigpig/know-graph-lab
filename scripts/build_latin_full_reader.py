@@ -249,6 +249,31 @@ GRAM_HINTS = (
 )
 
 
+# 讀不出來的四十八條：三詞尾以外的形容詞（memor、vetus、dīves 只給屬格）、
+# 片語（in aeternum、grātiās agere）、不規則或缺位動詞（ait、inquam、fore）、
+# 以及兩個希臘文禮儀用語。讀規則讀不出來，就一條一條寫，不要留白也不要猜。
+BY_FORMS_POS = {
+    "in saecula (saeculōrum)": "片語", "in aeternum": "片語", "grātiās agere": "片語",
+    "in prīmīs": "片語", "male habeō": "片語", "sicut .. et": "片語", "aut . . aut": "片語",
+    "factum est": "片語", "necesse est": "片語",
+    "noster, nostra, nostrum": "形", "sacer, sacra, sacrum": "形",
+    "plēnus, -a, -um (+ abl.)": "形", "salūtifer, salūtifera, salūtiferum": "形",
+    "vester, vestra, vestrum": "形", "quidam, quaedam, quoddam": "形",
+    "ruber, rubra, rubrum": "形", "ācer, ācris, ācre": "形", "liber, libera, liberum": "形",
+    "dexter, dextera, dexterum": "形", "alius, alia, aliud": "形",
+    "alter, altera, alterum": "形", "vīcīnus, vīcīna, vīcīnum": "形", "intentus": "形",
+    "memor": "形", "clēmēns": "形", "vetus": "形", "dīves": "形",
+    "pauper, gen., pauperis": "形", "compār, gen., comparis": "形",
+    "dispār, gen., disparis": "形", "pār, gen., paris": "形",
+    "-plēre, -plēvi, -plētus": "動", "videor, vidērī, — vīsus sum": "動",
+    "ait; aiunt": "動", "quaesō/quaesumus": "動", "fore": "動", "inquam": "動",
+    "nōlī/nōlite": "動", "placet": "動", "eléison": "動",
+    "fulgor, fulgōris, —": "名", "peregrīnantis, gen., peregrīnantis": "名", "Kyrie": "名",
+    "-ne": "質", "ūsque": "副", "avē!": "嘆", "salvē": "嘆",
+    "satis (+ partitive gen.)": "副",
+}
+
+
 def short_pos(entry: dict) -> str:
     """Say what part of speech this is, reading the dictionary line if need be.
 
@@ -257,6 +282,9 @@ def short_pos(entry: dict) -> str:
     labels.  Taking the label only from an explicit field leaves the column
     empty for most of the book, which is what the first print run did.
     """
+    by_forms = BY_FORMS_POS.get((entry.get("forms") or "").strip())
+    if by_forms:
+        return by_forms
     for key in ("gram", "pos"):
         value = (entry.get(key) or "").strip()
         if value in POS_ZH:
