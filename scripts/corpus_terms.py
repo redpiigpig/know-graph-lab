@@ -215,6 +215,14 @@ def build(only=None):
         "docs": {t: {c: dict(y) for c, y in cs.items()} for t, cs in docs.items()},
         "samples": {t: dict(cs) for t, cs in samples.items()},
     }
+    if only:
+        # 🚨 單一語料的結果不能寫回計數表——build() 產出的是整份表，只掃一個語料
+        # 就上傳等於把其他八個語料的計數清成空的。--corpus 只作試跑用。
+        hits = sum(1 for t in terms if counts.get(t))
+        print(f"\n[試跑] 只掃了 {only}，{hits} 個詞有命中；**未寫回計數表**。"
+              f"\n要更新請跑不帶 --corpus 的完整 --build。")
+        return
+
     # 全文計數表不大（策展詞表），但仍放 R2 由 API 供應，repo 只留詞表設定
     df.r2_put_text(COUNTS_KEY, json.dumps(out, ensure_ascii=False))
     TERMS_FILE.parent.mkdir(parents=True, exist_ok=True)
