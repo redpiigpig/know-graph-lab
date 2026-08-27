@@ -1,4 +1,5 @@
 import masterJson from "../../output/source-cache/original-readers/latin-full/latin-reader-two-volumes.json";
+import interlinearJson from "../../output/source-cache/original-readers/latin-full/interlinear.json";
 
 import { groupAppendixEntries } from "./appendixGroups";
 
@@ -25,11 +26,21 @@ export interface LatinMemoryUnit {
   text: string;
   zh: string;
   readableFrom: number;
+  tokens?: LatinToken[];
+}
+
+export interface LatinToken {
+  word: string;
+  trailing: string;
+  glossZh: string;
 }
 
 export interface LatinReadingRow {
   latin: string;
   zh: string;
+  // 逐詞對譯層（scripts/build_latin_interlinear.py）。還沒跑到的行是空陣列，
+  // 頁面就照舊印整行拉丁文——缺就要看得出來缺，不要用整行中譯冒充。
+  tokens?: LatinToken[];
 }
 
 export interface LatinLesson {
@@ -77,6 +88,24 @@ interface LatinMaster {
 
 const master = masterJson as unknown as LatinMaster;
 
+const interlinear = (interlinearJson as { units?: Record<string, { tokens: LatinToken[] }> }).units || {};
+
+/** 逐詞對譯掛回一課的讀文與背誦；鍵是 build_latin_interlinear.py 寫的那一個。 */
+function withInterlinear(volume: number, lesson: LatinLesson): LatinLesson {
+  const key = latinLessonKey(volume, lesson.lesson);
+  return {
+    ...lesson,
+    reading: lesson.reading.map((row, index) => ({
+      ...row,
+      tokens: interlinear[`reading:${key}:${index + 1}`]?.tokens || [],
+    })),
+    memoryUnits: lesson.memoryUnits.map((unit, index) => ({
+      ...unit,
+      tokens: interlinear[`memory:${key}:${index + 1}`]?.tokens || [],
+    })),
+  };
+}
+
 export function latinLessonKey(volume: number, lesson: number): string {
   return `v${volume}-${lesson}`;
 }
@@ -90,7 +119,8 @@ export function parseLatinLessonKey(raw: string): { volume: number; lesson: numb
 
 export function getLatinLesson(volume: number, lesson: number): LatinLesson | null {
   const found = master.volumes.find((entry) => entry.volume === volume);
-  return found?.lessons.find((entry) => entry.lesson === lesson) || null;
+  const match = found?.lessons.find((entry) => entry.lesson === lesson);
+  return match ? withInterlinear(volume, match) : null;
 }
 
 export function listLatinVolumes() {

@@ -33,6 +33,8 @@
 !/output/source-cache/original-readers/japanese-full/
 !/output/source-cache/original-readers/japanese-full/*.json
 !/output/source-cache/original-readers/japanese-full/*.md
+!/output/source-cache/original-readers/japanese-full/aozora/
+!/output/source-cache/original-readers/japanese-full/aozora/manifest.json
 !/output/original-readers/
 !/output/original-readers/audio/
 !/output/original-readers/audio/**/
