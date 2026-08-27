@@ -1,6 +1,6 @@
 ---
 name: research-data-hongshi
-description: 「印順學派與弘誓研究資料」collection（/research-data/yinshun-hongshi，需登入）的抓取／OCR／上架流程 — 佛教弘誓學院／玄奘大學刊物典藏：弘誓雙月刊、學團日誌、玄奘佛學研究學報、歷屆學術活動、福嚴會訊。資料源 hongshi.org.tw 在 Cloudflare「Just a moment」JS 挑戰後 requests/curl 一律 403，須 headful 真實 Chrome；整天連抓會被持續硬封（改走 Wayback Machine）。hcu.edu.tw（玄奘）非 Cloudflare，純 requests 即可。Use when 要補抓／重抓任一刊物、跑全文、調各子頁、新增子站。與 [[project_chengzhong_bulletins]] 的 taiwan-methodist 並列於同一 /research-data portal。
+description: 「印順學派與弘誓研究資料」collection（/research-data/yinshun-hongshi，需登入）的抓取／OCR／上架流程 — 佛教弘誓學院／玄奘大學刊物典藏：弘誓雙月刊、學團日誌、玄奘佛學研究學報、歷屆學術活動、福嚴會訊。🚨 2026-08 弘誓官網已改版：www.hongshi.org.tw 現在 curl＋瀏覽器 UA 就能讀（不必再 headful Chrome），但「數位典藏」各頁改由 blog.hongshi.org.tw 的 Blogger feed 動態產生，而該 blog 尚未搬完（當時僅 13 篇）；**舊路徑全數 404**，Wayback 覆蓋也極薄。已抓下來的那批是趕上了。hcu.edu.tw（玄奘）非 Cloudflare，純 requests 即可。Use when 要補抓／重抓任一刊物、跑全文、調各子頁、新增子站。與 [[project_chengzhong_bulletins]] 的 taiwan-methodist 並列於同一 /research-data portal。
 ---
 
 > ⚙️ **引擎政策**：OCR 走 Gemini Vision（4 keys 輪流）→ Sonnet(OAuth) 救援，2-strike 配額停機（[[feedback_ocr_strategy]]、[[feedback_ocr_two_strike_quota]]）。所有中文一律繁體（[[feedback_traditional_chinese_only]]）。
@@ -16,6 +16,8 @@ description: 「印順學派與弘誓研究資料」collection（/research-data/
 | 玄奘佛學研究學報 `/xuanzang` | **hcu.edu.tw（非 CF）** | 45 期 / **304 篇全文 ✅(100%)** |
 | 歷屆學術活動 `/meeting` `/meeting/[n]` | hongshi（經 Wayback） | **24 項** ✅（卡 `v-if=meetCount`）|
 | 福嚴會訊 `/fuyan` | 沿用 dadaodao 前綴（原檔在 Drive，全文在 R2） | 71 期 ✅（品質不一，舊期有雜訊）|
+| 妙心雜誌 `/miaoxin` | **mst.org.tw（靜態 Big5 HTML，純 requests）** | 202 期 / **844 篇全文 ✅**（含傳道《法句經講記》連載 66 篇、傳道長老追思專輯 94 篇）|
+| 法印學報 `/faryin` | **hcu.edu.tw 佛教學系頁**（弘誓官網改版後舊路徑全 404） | 9–13 期 45 篇（30 篇有全文）|
 
 R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<刊>/...txt`（全文）。API：`server/api/research-data/yinshun-hongshi-file.get.ts`（簽名下載）、`yinshun-hongshi-text.get.ts`（全文，pdf key→txt key）。R2 前綴限定避免任意取用。
 
@@ -56,3 +58,17 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 
 ## See also
 [[project_yinshun_hongshi_collection]]、[[project_chengzhong_bulletins]]（同 portal 衛理公會 collection）、[[ebook-pipeline]]（OCR 同源）、[[feedback_drive_canonical_storage]]。
+
+
+## 2026-08-28 新增的兩個子站與判讀陷阱
+
+**妙心雜誌**（`scripts/mst_magazine.py`）——台南妙心寺，傳道法師人間佛教在地實踐的發聲處。站台是靜態 Big5 HTML、無反爬，但有兩個會讓人「抓到東西卻是錯的」的坑：
+
+1. **欄目索引頁的連結文字是期別標籤而非篇名**（「214期115.7.1」），直接拿 anchor text 當標題會得到一整批叫「214期115.7.1」的文章。要回頭從檔名取篇名，期別標籤則用來補期號與**出版日期**（民國年月日，語料層年表唯一的日期來源）。
+2. **相對路徑常漏掉 `magazinep/` 那一層**，導致大量 404（《法句經講記》舊期就是這樣掉的）。要備一組候選 URL（插 `magazinep/`、`.htm`/`.html` 互換）依序試。
+
+**法印學報**（`scripts/faryin_journal.py`）——弘誓的學報，但檔案掛在 hcu.edu.tw。**第 13 期整期的連結被貼成編輯者的 `file:///C:/Users/…` 本機路徑**，原檔從未上傳；PDF 拿不到，但檔名裡的作者與題名還在，仍記成「有目無文」。第 9–12 期則相反：檔名只是 `faryin12-1.pdf` 流水號，題名要從目次列「題名 作者 起始頁」解。要引的第 1 期不在此範圍，須向學團索取。
+
+## 語料層
+
+這批語料的最終用途是 `/research-data/corpus` 的跨刊物關鍵詞年表，見 [[project_corpus_layer]]。加新刊物時記得在 `scripts/corpus_terms.py` 的 `CORPORA` 註冊一個 `iter_*`，並確認**年份來源**——取不到年份的語料只計總數、不進年表，**一律不做內插**。
