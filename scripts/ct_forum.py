@@ -135,7 +135,12 @@ def harvest(max_pages=300):
 
 
 def article_text(html: str):
-    """→ (內文, 是否為專題頁)。專題頁只有導言＋一串子篇連結，不能當一篇文章收。"""
+    """→ (內文, 是否為專題頁)。專題頁只有導言＋一串子篇連結，不能當一篇文章收。
+
+    每一篇文章頁的側欄本來就固定掛著 8–9 條「相關文章」，所以不能單看子連結數——
+    那會把 2,000 多字的正常報導也判成專題頁（實測誤殺 8,960 篇）。專題頁的特徵是
+    子連結明顯多於側欄常數，且正文極短。
+    """
     soup = BeautifulSoup(html, "html.parser")
     sub_links = len({m.group(0) for a in soup.find_all("a", href=True)
                      for m in [re.search(r"article=\d{5,}", a["href"])] if m})
@@ -144,7 +149,7 @@ def article_text(html: str):
     lines = [clean(x) for x in soup.get_text("\n").split("\n")]
     lines = [l for l in lines if len(l) > 15 and not l.startswith('" class=')]
     body = "\n".join(lines)
-    return body, sub_links >= 6 and len(body) < 3000
+    return body, sub_links >= 14 and len(body) < 1200
 
 
 def process(limit=0):
