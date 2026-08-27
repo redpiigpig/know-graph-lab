@@ -38,7 +38,7 @@ DEFAULT_LOG = CATALOG_DIR / "catalog-loop.log"
 # 上千筆的批次跑不完，那種場合一律走 Gemini 優先（[[feedback_engine_nvidia_no_haiku]]）。
 ENGINE_ORDER = tuple(
     e.strip() for e in os.environ.get("DAZANGJING_ENGINE_ORDER", "ollama,gemini,nvidia").split(",")
-    if e.strip() in {"ollama", "gemini", "nvidia"}
+    if e.strip() in {"ollama", "gemini", "nvidia", "haiku"}
 ) or ("ollama", "gemini", "nvidia")
 
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
@@ -365,6 +365,35 @@ def call_gemini(prompt: str, keys: list[str], cursor: int) -> tuple[str, str, in
     raise RuntimeError(f"Gemini failed: {last}")
 
 
+HAIKU_MODEL = os.environ.get("DAZANGJING_HAIKU_MODEL", "claude-haiku-4-5-20251001")
+_haiku_client = None
+
+
+def call_haiku(prompt: str) -> tuple[str, str]:
+    """第三層救急。走 Claude Code 的 OAuth 憑證（無 ANTHROPIC_API_KEY 時），
+    client 與 token 更新邏輯直接重用 ocr_with_gemini 那一套，不另造。"""
+    global _haiku_client
+    import ocr_with_gemini as _o
+    if _haiku_client is None:
+        _haiku_client = _o._make_anthropic_client()
+    for attempt in (1, 2):
+        try:
+            r = _haiku_client.messages.create(
+                model=HAIKU_MODEL, max_tokens=4000, temperature=0,
+                system="You are a strict bibliographic classifier. Return valid JSON only.",
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return r.content[0].text, HAIKU_MODEL
+        except Exception as exc:
+            # token 過期（401）換新的再試一次，別浪費在必敗的呼叫上
+            if attempt == 1 and "401" in str(exc):
+                _o._refresh_oauth_token()
+                _haiku_client = _o._make_anthropic_client(proactive_refresh=False)
+                continue
+            raise RuntimeError(f"Haiku failed: {exc}")
+    raise RuntimeError("Haiku failed")
+
+
 def call_nvidia(prompt: str, keys: list[str], cursor: int) -> tuple[str, str, int]:
     if not keys:
         raise RuntimeError("no NVIDIA keys")
@@ -429,6 +458,8 @@ def classify_record(record: dict[str, Any], gemini_keys: list[str], nvidia_keys:
         try:
             if engine == "ollama":
                 text, model = call_ollama(prompt)
+            elif engine == "haiku":
+                text, model = call_haiku(prompt)
             elif engine == "gemini":
                 text, model, cursors["gemini"] = call_gemini(prompt, gemini_keys, cursors.get("gemini", 0))
             else:
