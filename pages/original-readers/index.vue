@@ -54,6 +54,15 @@
             <span aria-hidden="true">→</span>
           </NuxtLink>
 
+          <NuxtLink
+            v-if="volume.slug === 'la'"
+            to="/original-readers/lat-lessons"
+            class="mt-5 flex items-center justify-between rounded-2xl border border-rose-300 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-950 transition hover:border-rose-500 hover:bg-rose-100"
+          >
+            <span>開啟上下兩冊一百課完整私人讀本</span>
+            <span aria-hidden="true">→</span>
+          </NuxtLink>
+
           <div v-if="referenceProfiles(volume).length" class="mt-5 border-t border-stone-200 pt-4">
             <p class="text-[11px] font-bold tracking-wider text-stone-400">官方發音參考</p>
             <a

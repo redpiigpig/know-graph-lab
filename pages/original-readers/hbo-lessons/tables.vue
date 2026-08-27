@@ -1,15 +1,15 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="附錄對照表" :back="{ to: '/original-readers/hbo-lessons', label: '50課總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="附錄參考表" :back="{ to: '/original-readers/hbo-lessons', label: '讀本目錄' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-4 py-7 sm:px-8">
-      <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入附錄對照表…</div>
+      <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入附錄參考表…</div>
       <div v-else-if="error" class="rounded-2xl border border-red-200 bg-red-50 p-5 text-sm text-red-700">{{ error }}</div>
 
       <template v-else-if="payload">
         <header class="overflow-hidden rounded-[2rem] border border-stone-300 bg-[#17231f] px-6 py-9 text-[#f7f0df] shadow-xl sm:px-10">
           <p class="text-xs font-semibold tracking-[0.26em] text-amber-300">PRIVATE APPENDIX · REFERENCE TABLES</p>
-          <h1 class="mt-3 font-serif text-3xl font-semibold sm:text-5xl">附錄對照表</h1>
+          <h1 class="mt-3 font-serif text-3xl font-semibold sm:text-5xl">附錄參考表</h1>
           <p class="mt-3 max-w-3xl text-sm leading-7 text-stone-300">{{ payload.note }}</p>
           <div class="mt-6 flex flex-wrap gap-2 text-xs">
             <span v-for="table in payload.tables" :key="table.id" class="rounded-full border border-stone-500 px-3 py-1.5">
@@ -103,7 +103,7 @@
 <script setup lang="ts">
 definePageMeta({ middleware: "auth" });
 useHead({
-  title: "附錄對照表 — 希伯來文私人讀本",
+  title: "附錄參考表 — 希伯來文私人讀本",
   meta: [{ name: "robots", content: "noindex,nofollow,noarchive" }],
   bodyAttrs: { id: "top" },
 });

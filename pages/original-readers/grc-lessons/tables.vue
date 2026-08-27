@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="附錄參考表" :back="{ to: '/original-readers/grc-lessons', label: '希臘文讀本' }" container-class="max-w-6xl" />
+    <AppHeader title="附錄參考表" :back="{ to: '/original-readers/grc-lessons', label: '讀本目錄' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-4 py-7 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入附錄參考表…</div>

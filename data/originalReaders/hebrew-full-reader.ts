@@ -716,7 +716,7 @@ export function getHebrewFullReaderOverview() {
 export function getHebrewReferenceTables() {
   validateMasters();
   return {
-    titleZh: "附錄對照表",
+    titleZh: "附錄參考表",
     sources: referenceTables.sources,
     note: referenceTables.note,
     tables: referenceTables.tables,

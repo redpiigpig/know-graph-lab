@@ -2,7 +2,7 @@
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
     <AppHeader
       title="金口聖若望事奉聖禮"
-      :back="{ to: '/original-readers/grc-lessons', label: '50 課總覽' }"
+      :back="{ to: '/original-readers/grc-lessons', label: '讀本目錄' }"
       container-class="max-w-5xl"
     />
 

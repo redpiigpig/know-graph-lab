@@ -2,7 +2,7 @@
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
     <AppHeader
       :title="lesson ? `${volumeLabel}第 ${lesson.lesson} 課` : '通用希臘文讀本'"
-      :back="{ to: '/original-readers/grc-lessons', label: '50 課總覽' }"
+      :back="{ to: '/original-readers/grc-lessons', label: '讀本目錄' }"
       container-class="max-w-5xl"
     />
 
@@ -30,14 +30,14 @@
         </header>
 
         <section class="mt-7">
-          <h2 class="font-serif text-xl font-semibold">生詞（{{ lesson.vocabularyCount }}）</h2>
+          <h2 class="font-serif text-xl font-semibold">本課生詞（{{ lesson.vocabularyCount }}）</h2>
           <div class="mt-3 overflow-x-auto rounded-2xl border border-stone-300 bg-white">
             <table class="w-full min-w-[38rem] text-left text-sm">
               <thead class="bg-stone-100 text-[11px] uppercase tracking-wider text-stone-500">
                 <tr>
                   <th class="px-3 py-2">#</th>
                   <th class="px-3 py-2">詞條</th>
-                  <th class="px-3 py-2">音譯</th>
+                  <th class="px-3 py-2">詞類</th>
                   <th class="px-3 py-2">繁中詞義</th>
                   <th class="px-3 py-2">英文</th>
                   <th class="px-3 py-2">Strong</th>
@@ -52,7 +52,7 @@
                       {{ properNameLabel(word.properNameTypes) }}
                     </span>
                   </td>
-                  <td class="px-3 py-2 text-xs text-stone-500">{{ word.textbookTransliteration }}</td>
+                  <td class="px-3 py-2 text-xs text-stone-500">{{ word.pos || "—" }}</td>
                   <td class="px-3 py-2 break-words">
                     <span v-if="word.glossZh">{{ word.glossZh }}</span>
                     <span v-else class="text-amber-700">待補</span>
@@ -66,7 +66,7 @@
         </section>
 
         <section class="mt-8">
-          <h2 class="font-serif text-xl font-semibold">背誦（{{ lesson.volume === 2 ? "2 句" : "2 節" }}）</h2>
+          <h2 class="font-serif text-xl font-semibold">背誦單元（{{ lesson.volume === 2 ? "2 句" : "2 節" }}）</h2>
           <ul class="mt-3 space-y-3">
             <li v-for="verse in lesson.memoryUnits" :key="verse.ref" class="rounded-2xl border border-stone-300 bg-white p-4">
               <div class="flex flex-wrap items-center gap-2 text-[11px] text-stone-500">
@@ -144,7 +144,7 @@
 
 <script setup lang="ts">
 interface VocabularyEntry {
-  id: string; ordinal: number; printedEntry: string; textbookTransliteration: string;
+  id: string; ordinal: number; printedEntry: string; textbookTransliteration: string; pos: string;
   glossZh: string; glossEn: string; strong: string; isProperName: boolean; properNameTypes: string[];
 }
 interface MemoryVerse {

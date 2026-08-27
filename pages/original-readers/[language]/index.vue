@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="原文讀本" :back="{ to: '/original-readers', label: '三冊總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="原文讀本" :back="{ to: '/original-readers', label: '原文讀本總覽' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入本冊目錄…</div>

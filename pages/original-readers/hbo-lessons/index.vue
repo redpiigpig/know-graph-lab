@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="希伯來文50課讀本" :back="{ to: '/original-readers', label: '三冊總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="希伯來文50課讀本" :back="{ to: '/original-readers', label: '原文讀本總覽' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入50課完整主資料…</div>
@@ -47,6 +47,18 @@
                 <p class="mt-2 text-xs text-stone-500">傳統15步 · {{ reader.haggadah.segmentCount }}段 · 全文附點</p>
               </div>
               <span class="text-xl transition group-hover:translate-x-1">→</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/original-readers/hbo-lessons/tables" class="group rounded-3xl border border-stone-300 bg-[#fffdf7] p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-stone-500 hover:shadow-md">
+            <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">APPENDIX · REFERENCE TABLES</p>
+            <div class="mt-2 flex items-start justify-between gap-5">
+              <div class="min-w-0">
+                <h2 class="font-serif text-xl font-semibold">附錄參考表</h2>
+                <p class="mt-1 text-sm text-stone-500 break-words">專名按類分節，數字、親屬與曆法各一張</p>
+                <p class="mt-2 text-sm text-stone-600">{{ reader.referenceTables.length }} 張表・{{ referenceEntryCount }} 條</p>
+              </div>
+              <span class="mt-1 shrink-0 text-xl transition group-hover:translate-x-1">→</span>
             </div>
           </NuxtLink>
         </section>
@@ -146,6 +158,14 @@ interface ReaderOverview {
     stepCount: number;
     segmentCount: number;
   };
+  referenceTables: {
+    id: string;
+    titleZh: string;
+    titleHe: string;
+    groupCount: number;
+    entryCount: number;
+    href: string;
+  }[];
   lessons: LessonSummary[];
 }
 
@@ -181,6 +201,10 @@ const stats = computed(() => reader.value ? [
   { label: "Haggadah", value: `${reader.value.counts.haggadahSteps}步` },
 ] : []);
 const visibleSections = computed(() => sections.filter((section) => track.value === "all" || track.value === section.id));
+
+const referenceEntryCount = computed(() =>
+  (reader.value?.referenceTables ?? []).reduce((total, table) => total + table.entryCount, 0),
+);
 
 function lessonsFor(section: "scripture" | "prayer_article") {
   return reader.value?.lessons.filter((lesson) => lesson.track === section) || [];

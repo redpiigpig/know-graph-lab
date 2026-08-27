@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
-    <AppHeader title="常年期主日彌撒經文" :back="{ to: '/original-readers/lat-lessons', label: '兩冊總覽' }" container-class="max-w-4xl" />
+    <AppHeader title="常年期主日彌撒經文" :back="{ to: '/original-readers/lat-lessons', label: '讀本目錄' }" container-class="max-w-4xl" />
 
     <main class="mx-auto w-full max-w-4xl px-5 py-8 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入彌撒經文…</div>

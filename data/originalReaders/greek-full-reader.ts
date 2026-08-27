@@ -30,6 +30,9 @@ export interface GreekVocabularyEntry {
   transliterationStatus: string;
   glossEn: string;
   glossZh: string;
+  // Written into the master by scripts/backfill_greek_pos.py, so the Greek
+  // lesson table can print the same 詞類 column Hebrew and Latin print.
+  pos: string;
   strong: string;
   frequency: number;
   withinKoine: boolean;

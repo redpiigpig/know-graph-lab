@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
-    <AppHeader title="通用希臘文讀本（上下兩冊）" :back="{ to: '/original-readers', label: '三冊總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="通用希臘文讀本（上下兩冊）" :back="{ to: '/original-readers', label: '原文讀本總覽' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入兩冊一百課完整主資料…</div>

@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="希伯來文50課讀本" :back="{ to: '/original-readers/hbo-lessons', label: '50課總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="希伯來文50課讀本" :back="{ to: '/original-readers/hbo-lessons', label: '讀本目錄' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-4 py-7 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入本課真實主資料…</div>
@@ -40,7 +40,7 @@
           <header class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between sm:p-7">
             <div>
               <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">VOCABULARY · BBH ORDER</p>
-              <h2 class="mt-1 font-serif text-2xl font-semibold">本課{{ lessonData.vocabulary.length }}詞</h2>
+              <h2 class="mt-1 font-serif text-2xl font-semibold">本課生詞（{{ lessonData.vocabulary.length }}）</h2>
               <p class="mt-1 text-xs leading-5 text-stone-500">完整母音、BBH課本式音標（學術轉寫，非 IPA）、繁中義與專名類型。</p>
             </div>
             <span class="w-fit rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-800">{{ lessonData.properNameCount }} 個專名／神名</span>
@@ -84,7 +84,7 @@
         <section class="mt-6 rounded-3xl border border-stone-300 bg-white/80 p-5 shadow-sm sm:p-7">
           <header class="mb-4">
             <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">MEMORY · 2 VERSES</p>
-            <h2 class="mt-1 font-serif text-2xl font-semibold">本課背誦經文</h2>
+            <h2 class="mt-1 font-serif text-2xl font-semibold">背誦單元（2 節）</h2>
           </header>
           <div class="grid gap-4 lg:grid-cols-2">
             <article v-for="verse in lessonData.memoryVerses" :key="verse.ref" class="rounded-2xl border border-stone-200 bg-[#fffdf7] p-5">

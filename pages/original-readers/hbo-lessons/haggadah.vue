@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-dvh bg-[#f4f0e7] text-stone-900">
-    <AppHeader title="完整逾越節禮文" :back="{ to: '/original-readers/hbo-lessons', label: '50課總覽' }" container-class="max-w-6xl" />
+    <AppHeader title="完整逾越節禮文" :back="{ to: '/original-readers/hbo-lessons', label: '讀本目錄' }" container-class="max-w-6xl" />
 
     <main class="mx-auto w-full max-w-6xl px-4 py-7 sm:px-8">
       <div v-if="pending" class="py-20 text-center text-sm text-stone-500">載入完整十五步禮文…</div>

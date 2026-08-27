@@ -2,7 +2,7 @@
   <div class="min-h-dvh bg-[#f5f1ea] text-stone-900">
     <AppHeader
       :title="lesson ? `第 ${lesson.lesson} 課` : '教會拉丁文讀本'"
-      :back="{ to: '/original-readers/lat-lessons', label: '兩冊總覽' }"
+      :back="{ to: '/original-readers/lat-lessons', label: '讀本目錄' }"
       container-class="max-w-4xl"
     />
 
@@ -20,18 +20,21 @@
         </header>
 
         <section class="mt-6">
-          <h2 class="font-serif text-xl font-semibold">本課詞彙（{{ lesson.vocabulary.length }}）</h2>
+          <h2 class="font-serif text-xl font-semibold">本課生詞（{{ lesson.vocabulary.length }}）</h2>
           <div class="mt-3 overflow-x-auto rounded-2xl border border-stone-300 bg-white/80">
-            <table class="w-full min-w-[36rem] border-collapse text-sm">
+            <table class="w-full min-w-[38rem] border-collapse text-sm">
               <thead class="bg-stone-100 text-left text-[11px] tracking-widest text-stone-500">
                 <tr>
-                  <th class="px-4 py-2 font-semibold">拉丁文</th>
+                  <th class="px-3 py-2 font-semibold">#</th>
+                  <th class="px-4 py-2 font-semibold">詞條</th>
                   <th class="px-3 py-2 font-semibold">詞類</th>
-                  <th class="px-4 py-2 font-semibold">繁體中文</th>
+                  <th class="px-4 py-2 font-semibold">繁中詞義</th>
+                  <th class="px-3 py-2 font-semibold">英文</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="word in lesson.vocabulary" :key="word.headword" class="border-t border-stone-200 align-top">
+                <tr v-for="(word, index) in lesson.vocabulary" :key="word.headword" class="border-t border-stone-200 align-top">
+                  <td class="px-3 py-2 text-xs text-stone-400">{{ index + 1 }}</td>
                   <td class="px-4 py-2 font-serif break-words">
                     <button
                       v-if="audio.deviceSupported.value"
@@ -44,8 +47,9 @@
                     <span v-if="word.ecclesiastical" class="ml-1 rounded bg-amber-100 px-1 text-[10px] text-amber-800">教會</span>
                     <span v-if="!word.attested" class="ml-1 rounded bg-rose-100 px-1 text-[10px] text-rose-700">待覆核</span>
                   </td>
-                  <td class="px-3 py-2 text-stone-500">{{ word.pos }}</td>
+                  <td class="px-3 py-2 text-xs text-stone-500">{{ word.pos || "—" }}</td>
                   <td class="px-4 py-2 break-words">{{ word.glossZh || "〔待補〕" }}</td>
+                  <td class="px-3 py-2 text-xs text-stone-500 break-words">{{ word.glossEn || "—" }}</td>
                 </tr>
               </tbody>
             </table>
@@ -54,7 +58,7 @@
 
         <section v-if="lesson.memoryUnits.length" class="mt-8">
           <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <h2 class="font-serif text-xl font-semibold">記憶單元</h2>
+            <h2 class="font-serif text-xl font-semibold">背誦單元（{{ lesson.memoryUnits.length }}）</h2>
             <button
               v-if="audio.deviceSupported.value"
               type="button"
@@ -87,7 +91,7 @@
 
         <section v-if="lesson.reading.length" class="mt-8">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <h2 class="font-serif text-xl font-semibold">讀本</h2>
+            <h2 class="font-serif text-xl font-semibold">讀文</h2>
             <div v-if="audio.deviceSupported.value" class="flex flex-wrap items-center gap-2">
               <label class="flex items-center gap-1 text-[11px] text-stone-500">
                 語速
@@ -161,7 +165,7 @@ useHead(() => ({
 
 // 音訊走裝置語音，不預先合成檔案：羅馬式教會發音本來就是照義大利語音韻讀拉丁文，
 // 所以拼寫先經 toEcclesiasticalSpeech() 改寫，再交給義大利語聲線唸。改寫規則與
-// 測試在 utils/ecclesiasticalLatin.ts 與 tests/ecclesiastical-latin-speech.test.ts。
+// 測試在 utils/ecclesiasticalLatin.ts 與 test/ecclesiastical-latin-speech.spec.ts。
 const audio = useOriginalReaderAudio();
 
 const readingSegments = computed(() =>

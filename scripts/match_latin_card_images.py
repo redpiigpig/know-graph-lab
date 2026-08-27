@@ -217,6 +217,20 @@ OVERRIDES: dict[str, str] = {
 
 # Homographs that only a macron separates need different pictures, so those are
 # keyed on the whole dictionary line instead of the headword.
+# 2026-08-27：逐義項借圖之後，接觸表看出來的錯配。借來的圖對得起借方的那個
+# 義項，卻對不起這個字——「釋放」借到揮手、「留下」借到房子、ut 借到 🔚（跟
+# itaque 當初一樣，結果的箭頭不是終點）。覆蓋規則先於借用，所以寫在這裡就好。
+OVERRIDES.update({
+    "libero": "raising hands",          # 解放：揮手是道別，不是釋放
+    "reddo": "right arrow curving left",  # 歸還：不是「站著的人」
+    "condo": "building construction",   # 創建：錨是望德，不是建立
+    "resto": "hourglass not done",      # 殘留：房子是「留在家」，不是「尚存」
+    "clino": "person bowing",           # 傾斜、躬身：露營帳篷純屬誤配
+    "inclino": "person bowing",
+    "ut": "bullseye",                 # 目的連接詞，與希臘 ἵνα 同符號
+    "baptisma": "droplet",              # 與同冊 baptismus 同圖，浴缸不是洗禮
+})
+
 OVERRIDES_BY_FORMS: dict[str, str] = {
     "occīdō, occīdere, occīdī, occīsus": "dagger",
     "occidō, occidere, occidī, occāsus": "sunset",
@@ -228,6 +242,35 @@ OVERRIDES_BY_FORMS: dict[str, str] = {
 def key_of(entry: dict) -> str:
     """The identity the vocabulary master itself deduplicates on."""
     return L.fold(entry.get("forms") or entry["headword"])
+
+
+# 拉丁那本的中文用思高本，希伯來與希臘那兩本用《和合本修訂版》，所以同一個概念
+# 在兩邊寫法不同，圖就借不過來。這張表只放兩邊確實同指一物的對子；不確定的不放。
+CATHOLIC_TO_PROTESTANT = {
+    "宗徒": "使徒", "聖神": "聖靈", "天神": "天使", "恩寵": "恩典",
+    "默西亞": "彌賽亞", "法利塞": "法利賽", "撒殫": "撒但", "聖詠": "詩篇",
+    "司祭": "祭司", "盟約": "約", "光榮": "榮耀", "義德": "公義",
+}
+
+SENSE_SPLIT = re.compile(r"[；、，,;]")
+
+
+def senses(gloss: str) -> list[str]:
+    """The gloss's senses, in the order it writes them.
+
+    A Latin word's Chinese is usually several senses long, and only the first
+    was ever looked up — so `libero`「解放、釋放」 borrowed nothing although
+    「釋放」 was pictured, and `canticum`「聖歌、讚美詩」 nothing although
+    「讚美詩」 was. Order matters and is preserved: the first sense is the
+    word's core meaning and gets first refusal on a picture.
+    """
+
+    seen: list[str] = []
+    for part in SENSE_SPLIT.split(gloss):
+        part = part.strip()
+        if part and part not in seen:
+            seen.append(part)
+    return seen
 
 
 def borrowed_meanings() -> dict[str, str]:
@@ -257,6 +300,7 @@ def main() -> None:
     print(f"  可借用的中文詞義 {len(borrowed)} 個")
 
     assigned: dict[str, dict] = {}
+    borrowed_via: dict[str, str] = {}
     unresolved: list[str] = []
     sources = {"override": 0, "zh_transfer": 0, "annotation": 0, "none": 0}
 
@@ -279,10 +323,18 @@ def main() -> None:
             # Deliberately not named `key`: that holds this card's own identity,
             # and the Hebrew matcher once wrote a hundred and thirty-two entries
             # under their Chinese meaning by shadowing it here.
-            for meaning in (gloss, gloss.split("；")[0].strip(), gloss.split("、")[0].strip()):
-                hexcode = borrowed.get(meaning)
-                if hexcode and base.image_path(hexcode):
-                    chosen, source = hexcode, "zh_transfer"
+            for sense in [gloss, *senses(gloss)]:
+                candidates = [sense]
+                for catholic, protestant in CATHOLIC_TO_PROTESTANT.items():
+                    if catholic in sense:
+                        candidates.append(sense.replace(catholic, protestant))
+                for candidate in candidates:
+                    hexcode = borrowed.get(candidate)
+                    if hexcode and base.image_path(hexcode):
+                        chosen, source = hexcode, "zh_transfer"
+                        borrowed_via[key_of(entry)] = candidate
+                        break
+                if chosen:
                     break
 
         if not chosen:
@@ -302,6 +354,9 @@ def main() -> None:
                 "source": source,
                 "headword": entry["headword"],
                 "glossZh": entry.get("glossZh", ""),
+                # 借來的圖記下是循哪一個義項借的，之後回頭稽核時才看得出
+                # 這張圖對的是這個字的核心義還是末位義。
+                **({"borrowedVia": borrowed_via[card]} if card in borrowed_via else {}),
             }
 
     # Every key must resolve, or the deck builder silently prints a blank card.

@@ -402,6 +402,9 @@ def vocabulary_rows(words: list[dict], glosses: dict[str, dict]) -> list[dict]:
                 "transliterationStatus": word.get("transliterationStatus", ""),
                 "glossEn": word.get("glossEn", ""),
                 "glossZh": gloss,
+                # Written back by scripts/backfill_greek_pos.py; Hebrew and Latin
+                # both print a 詞類 column and this is where Greek's comes from.
+                "pos": word.get("pos", ""),
                 "strong": word.get("strong", ""),
                 "frequency": word.get("frequency", 0),
                 "withinKoine": word.get("withinKoine", True),
