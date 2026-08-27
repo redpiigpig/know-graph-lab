@@ -23,6 +23,9 @@ from docx.shared import Cm, Pt
 EN_FONT = "Times New Roman"
 CJK_FONT = "新細明體"
 
+# 這幾節各自另起一頁（送件文件的基本體例）
+PAGE_BREAK_BEFORE = ("Abstract", "一、研究動機", "論文大綱草案", "參考書目", "附錄")
+
 
 def add_run(par, text, *, bold=False, italic=False, size=12):
     run = par.add_run(text)
@@ -78,8 +81,12 @@ def build(md_path: Path, out_path: Path) -> None:
         head = re.match(r"^(#{1,6})\s+(.*)$", line)
         if head:
             level, text = len(head.group(1)), head.group(2)
+            page_break = False
             if text.strip() == "摘要":
                 on_cover = False
+                page_break = True             # 封面獨立一頁
+            elif any(text.startswith(k) for k in PAGE_BREAK_BEFORE):
+                page_break = True
             if "參考書目" in text:
                 in_biblio = True
             elif level <= 2 and in_biblio and "附錄" in text:
@@ -88,6 +95,9 @@ def build(md_path: Path, out_path: Path) -> None:
             align = WD_ALIGN_PARAGRAPH.CENTER if (level == 1 or on_cover) else None
             par = new_par(doc, align=align, space_after=10)
             par.paragraph_format.space_before = Pt(12 if level <= 2 else 8)
+            # 直接設在標題段上，而不是插一個只帶分頁符的空段——後者會留下空行、
+            # 在標題剛好落在頁首時還會多出一整頁空白。
+            par.paragraph_format.page_break_before = page_break
             add_inline(par, text, size=size, bold=True)
             continue
 

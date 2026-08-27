@@ -1,12 +1,30 @@
+玄奘大學社會科學院宗教與文化學系
+
+博士論文研究計畫
+
+Department of Religion and Culture
+
+College of Social Sciences
+
+Hsuan Chuang University
+
+Ph.D. Dissertation Research Proposal
+
 # 從彼岸向此岸的轉向
 
 ## 台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）
 
 *The Turn from the Other Shore to This World: A Comparative Study in Religious History of the Public Character of Buddhism and Christianity in Taiwan, 1920s–2020s*
 
-玄奘大學社會科學院宗教與文化學系博士班　研究計畫書
+張辰瑋
 
-張辰瑋　Chen-Wei Chang
+Chen-Wei Chang
+
+指導教授：釋昭慧
+
+中華民國115年08月
+
+August 2026
 
 ---
 
@@ -24,7 +42,25 @@
 
 第六章提出範式並予以檢證：把前面各章歸納出的歷史範式命名為「人間宗教」（Religion of the Human Realm），並以戰後台灣佛耶關係的實際歷程作為經驗檢證——雙方如何從一九五〇年代的護教論戰，經一九八〇年代的對話，走向二〇〇〇年以降在反賭、動保、廢死、性別平權等議題上的結盟；此處輔以口述歷史訪談，補足文獻所不能保存的行動者自我理解。交會史置於此章而非另立專章，是因為它在本研究中的作用正是證明「人間性的共同」足以作為宗教對話與合作的基礎。其後才檢討此一範式對宗教學的世俗化理論與宗教多元論、以及對比較神學的方法論，各具有什麼樣的修正意義。本研究主張，「人間性」不是宗教的世俗化讓步，而是各宗教在現代處境中回到自身創教關懷的重新界定；而以歷史經驗為基礎的比較，比以形上學設定為基礎的比較，更能保全各宗教的主體性。
 
-**關鍵詞**：宗教史比較研究、人間佛教、公共神學、宗教公共性、台灣宗教史、人間宗教
+**關鍵字**：宗教史比較研究、人間佛教、公共神學、宗教公共性、台灣宗教史、人間宗教
+
+## Abstract
+
+This study is a comparative inquiry in religious history. It asks a single question: how did the public character of Buddhism and of Christianity in postwar Taiwan actually come into being?
+
+Existing scholarship on "Humanistic Buddhism" (renjian fojiao) and on Taiwanese "contextual theology" belongs to two academic communities that rarely cite one another, each treating the other as background. Studies that address interreligious dialogue at the theoretical level, meanwhile, tend to adopt a Western framework first — religious pluralism, the soteriocentric model, the phenomenology of religion — and then look for East Asian cases to fill it in. This study proceeds in the opposite order: history first, theory afterwards.
+
+It begins by setting four East Asian societies side by side in order to re-examine the shared origins of the modern religious transformation: Buddhist reform and Christian social movements in Taishō Japan; the Buddhist revolution and the Social Gospel that arose in China out of the crisis over temple property; the interreligious alliance of the Korean March First Movement; and the religious awakening within Taiwan's New Culture Movement. The argument is that "this-worldly engagement" was not a doctrinal development internal to any one religion, but the common outcome of religions across East Asia being forced, under the same pressures of modernity, colonial rule and national survival, to redefine their relation to this world. This chapter is treated as prehistory: it synthesises existing scholarship rather than undertaking original archival work, and the title accordingly does not claim East Asia as an object of research.
+
+On that basis the study reconstructs, through two genealogies of four figures each, how the public character of Buddhism and of Christianity in postwar Taiwan was formed. The Buddhist line runs Taixu — Yinshun — Chuandao — Chao-Hwei; the Christian line runs Shoki Coe — Choan-Seng Song — Wang Hsien-chih — Huang Po-ho. Placing the two side by side reveals a strikingly isomorphic four-stage structure: reform initiated in crisis, reinterpretation of scriptural history or of context, grounding in local language and grassroots practice, and the institutionalisation of ethical discourse in the public sphere.
+
+The fifth chapter compares the two lines directly — their generative mechanisms, their key vocabularies, the sources of their legitimacy, and their organisational forms. The sixth chapter proposes and tests a paradigm. It names the historical pattern "Religion of the Human Realm," and verifies it against the actual course of Buddhist–Christian relations in postwar Taiwan: from the apologetic polemics of the 1950s, through the dialogue of the 1980s, to the alliances formed from the 2000s onward over gambling legalisation, animal protection, the abolition of the death penalty and gender equality. Oral history interviews supplement what the written record cannot preserve. The history of this encounter is placed in this chapter rather than given a chapter of its own, precisely because its function here is evidential: it shows that a shared this-worldliness suffices as a basis for interreligious dialogue and cooperation. Only then does the study consider what such a historically derived paradigm implies for the secularisation thesis and religious pluralism in religious studies, and for the method of comparative theology.
+
+The central claim is that this-worldliness is not a secularising concession but a redefinition, under modern conditions, by which each tradition returns to its own founding concerns; and that comparison grounded in historical experience preserves the subjectivity of each religion better than comparison grounded in metaphysical premises.
+
+**Keywords**: comparative religious history, Humanistic Buddhism, public theology, religious publicness, history of religion in Taiwan, Religion of the Human Realm
+
+---
 
 ---
 
@@ -72,7 +108,7 @@
 
 ---
 
-## 二、研究回顧
+## 二、文獻回顧與探討
 
 本研究的研究回顧不以宗教對話理論為主軸，而依歷史學的慣例，就本題所涉四個史學領域的研究積累與缺口逐一檢視。
 
@@ -106,7 +142,7 @@
 
 ---
 
-## 三、研究方法與史料
+## 三、研究方法與範圍
 
 本研究以歷史學為主要方法論，具體包含四種操作，並依研究對象的性質分工使用。
 
@@ -157,7 +193,23 @@
 
 ---
 
-## 四、章節架構
+## 四、預期研究成果與貢獻
+
+### （一）史學貢獻：兩段歷史的接合與兩條線索的補白
+
+本研究預期完成的第一件事，是把台灣佛教史與台灣基督教史這兩段一向分開講述的歷史，放在同一個問題（公共性與人間性的生成）之下接合起來，並以四地比較的東亞背景為之定位。其次，在史實層面補足兩條研究薄弱的線索：**傳道法師與妙心寺一系**在人間佛教落地過程中的位置，以及**王憲治與台灣鄉土神學**在本土神學系譜中的中介角色。這兩項補白本身即具獨立的學術價值。
+
+### （二）方法貢獻：以歷史經驗為基礎的宗教比較
+
+本研究示範一種操作程序：先以宗教史的比較建立歷史範式，再據以檢討既有理論。相對於「以理論框架收編個案」的常見做法，此一程序把理論的正當性建立在史料之上，因而對於被比較的各宗教而言，其主體性的折損最小。此一程序若成立，可推廣至東亞其他個案（韓國民眾神學與圓佛教、日本的入世佛教與無教會主義、越南的入世佛教）。
+
+### （三）理論貢獻：「人間宗教」作為一個經歷史檢證的範式
+
+本研究預期提出的「人間宗教」，與過去以「宗教對話理論」形式出現的各種主張不同之處在於：它不是一項應然的倡議，而是對一段已發生之歷史的歸納。其可檢驗性即在於此——它可以被更多的歷史個案支持或否證。就當代處境而言，此一範式對於兩個現實問題具有參考價值：面對生態與動物倫理等跨越信仰界線的議題時，各宗教如何在不放棄自身傳統的前提下共同行動；以及面對宗教在公共領域中日益兩極化的處境時，是否存在一條既保有神聖向度、又具備自我改革能力的路徑。
+
+---
+
+## 論文大綱草案
 
 全論文分七章。第一章交代方法與研究缺口，第二章立東亞前史背景，第三、四章各自重建一條系譜，第五章把兩條線並置比較，第六章提出「人間宗教」範式並以戰後佛耶交會與結盟的實際歷程加以檢證。
 
@@ -250,28 +302,6 @@
 **第二節　「人間宗教」範式的成立條件與理論位置**：此範式在宗教學與比較神學中的位置，及其可檢驗性。
 
 **第三節　未來研究方向**：東亞其他個案（韓國民眾神學與圓佛教、日本入世佛教與無教會主義、越南入世佛教）的檢證；跨宗教公共倫理的可能形態。
-
-## 五、預期研究成果與貢獻
-
-### （一）史學貢獻：兩段歷史的接合與兩條線索的補白
-
-本研究預期完成的第一件事，是把台灣佛教史與台灣基督教史這兩段一向分開講述的歷史，放在同一個問題（公共性與人間性的生成）之下接合起來，並以四地比較的東亞背景為之定位。其次，在史實層面補足兩條研究薄弱的線索：**傳道法師與妙心寺一系**在人間佛教落地過程中的位置，以及**王憲治與台灣鄉土神學**在本土神學系譜中的中介角色。這兩項補白本身即具獨立的學術價值。
-
-### （二）方法貢獻：以歷史經驗為基礎的宗教比較
-
-本研究示範一種操作程序：先以宗教史的比較建立歷史範式，再據以檢討既有理論。相對於「以理論框架收編個案」的常見做法，此一程序把理論的正當性建立在史料之上，因而對於被比較的各宗教而言，其主體性的折損最小。此一程序若成立，可推廣至東亞其他個案（韓國民眾神學與圓佛教、日本的入世佛教與無教會主義、越南的入世佛教）。
-
-### （三）理論貢獻：「人間宗教」作為一個經歷史檢證的範式
-
-本研究預期提出的「人間宗教」，與過去以「宗教對話理論」形式出現的各種主張不同之處在於：它不是一項應然的倡議，而是對一段已發生之歷史的歸納。其可檢驗性即在於此——它可以被更多的歷史個案支持或否證。就當代處境而言，此一範式對於兩個現實問題具有參考價值：面對生態與動物倫理等跨越信仰界線的議題時，各宗教如何在不放棄自身傳統的前提下共同行動；以及面對宗教在公共領域中日益兩極化的處境時，是否存在一條既保有神聖向度、又具備自我改革能力的路徑。
-
----
-
-## 六、研究進度規劃
-
-本研究預定以四年完成。第一年確立研究架構，完成第一章（研究方法與文獻回顧）與第二章（東亞近代宗教變革），並著手口述訪談的規劃；第二年完成第三、四章的史料處理與初稿；第三年完成第五章與第六章（含口述歷史採集）初稿；第四年進行全稿修訂、部分成果投稿與學位考試準備。
-
-其中**未來十個月（2026年9月至2027年6月）**的具體工作項目與指導安排，詳見文末附錄〈指導教授十個月指導目標〉。
 
 ---
 
@@ -613,111 +643,56 @@ Xing, J. (1996). *Baptized in the fire of revolution: The American social gospel
 
 ---
 
-## 附錄　指導教授十個月指導目標（2026年9月–2027年6月）
+---
 
-**適用**：玄奘大學研究生助學金——研究助學金（依《玄奘大學研究生助學金實施辦法》第五條，研究助學金以十個月為限）
+## 附錄　十個月研究工作計畫（2026年9月–2027年6月）
 
-**研究生**：張辰瑋　　**系所**：宗教與文化學系博士班　　**指導教授**：釋昭慧
+本研究預定以四年完成：第一年確立研究架構、完成第一、二章並著手口述訪談規劃；第二年完成第三、四章初稿；第三年完成第五、六章（含口述歷史採集）；第四年全稿修訂與學位考試準備。以下為未來十個月的工作項目。
 
-**論文題目**：從彼岸向此岸的轉向——台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）
+第一學期以研讀與史料整理為主，第二學期進入分章寫作。每月與指導教授進行二次以上研究進度討論，並於2027年1月與6月各繳交一次論文進度審查表。
 
-### 一、指導原則
+### 第一學期（2026年9月–2027年1月）
 
-本指導目標依《玄奘大學研究生助學金實施辦法》第六條第二款訂定，遵守下列三項規範：
+**九月　人間佛教的歷史脈絡（一）**
+研讀《太虛大師全書》相關編帙與印順教史著作（《印度之佛教》、《印度佛教思想史》、《原始佛教聖典之集成》、《初期大乘佛教之起源與開展》）及〈契理契機之人間佛教〉。產出：太虛、印順著作編年目錄；研讀札記與問題清單。
 
-其一，**每月與指導教授進行二次以上研究進度討論**，並由系所於次月五日前彙整「研究生論文指導紀錄表」送研發處。實際安排為每月上、下旬各一次個別討論（每次以九十分鐘為原則），必要時增加不定期討論。
+**十月　人間佛教的歷史脈絡（二）**
+研讀傳道法師著述、《人間佛教的理論與實踐——傳道法師訪談錄》、邱敏捷《傳道法師年譜》，及昭慧法師律學與倫理學著作。產出：傳道、昭慧著作編年目錄；《妙心雜誌》、《弘誓雙月刊》、《法印學報》篇目索引；第三章問題清單。
 
-其二，**學期補助結束後繳交論文進度審查表**。本計畫於2027年1月（第一學期）與2027年6月（第二學期）各設一次查核點，屆時檢附該學期完成之文稿與工作紀錄。
+**十一月　長老教會公共神學（一）**
+研讀《台灣基督長老教會史》兩卷、三大聲明相關文獻，及黃彰輝回憶錄與文集。產出：長老教會公共性年表；黃彰輝著作編年目錄。
 
-其三，**論文題目未經審查不得自行變更**（同辦法第七條第四款）。若因史料所得而需調整章節安排或副標，先經指導教授同意，並依規定程序送審。
+**十二月　長老教會公共神學（二）**
+研讀宋泉盛中英文著作、王憲治《台灣鄉土神學論文集》及其南神時期論述、黃伯和自一九九〇年代至二〇二二年的系列著作。產出：三人著作編年目錄；《台灣教會公報》、《新使者》、《神學與教會》、《道雜誌》篇目索引；第四章問題清單。
 
-### 二、十個月總目標
+**一月　收束為第一章初稿｜第一學期查核**
+將前四個月的研讀成果收束為第一章〈研究方法與文獻回顧〉初稿；建置兩組關鍵詞（人生佛教／人間佛教／此時此地此人；本色化／實況化／鄉土／出頭天）的出處編年索引。產出：第一章初稿（約兩萬字）；關鍵詞概念史索引；**第一學期論文進度審查表**。
 
-第一學期以**讀**為主、第二學期以**寫**為主：先把兩條系譜的歷史脈絡讀通、把史料清單與索引建起來，再進入分章寫作。
+### 第二學期（2027年2月–6月）
 
-1. **第一學期（9月–1月）**：前兩個月專讀人間佛教的歷史脈絡，後兩個月專讀台灣長老教會公共神學的歷史脈絡，第五個月收束為第一章〈研究方法與文獻回顧〉初稿。
-2. **第二學期（2月–6月）**：完成第二章〈東亞近代宗教變革〉全章初稿，並推進第三章的前三節與第四章的寫作大綱。
-3. **史料基礎工程**：兩條系譜八位人物的著作編年目錄、四份教團刊物（《妙心雜誌》、《弘誓雙月刊》、《台灣教會公報》、《神學與教會》）的相關篇目索引，以及兩組關鍵詞的概念史語料索引。
-4. **口述歷史前置**：受訪名單、訪綱、學術倫理程序與同意書格式，並於期末開始第一批訪談。
+**二月　第二章：日本線與中國線**
+完成第二章第一節（共同的歷史條件）、第二節（日本）、第三節（中國）初稿，約一萬六千字。
 
-### 三、逐月指導目標
+**三月　第二章：朝鮮線、台灣線與比較歸納**
+完成第四至六節初稿並整章統稿。產出：第二章全章初稿（約四萬字）。
 
-#### 第一學期
+**四月　第三章前三節：太虛、印順、傳道**
+以第一學期的長編為基礎完成初稿；赴台南妙心寺與中華佛教百科文獻基金會訪查，補齊傳道一節的一手材料。產出：第三章第一至三節初稿（約兩萬字）；妙心寺訪查紀錄。
 
-**第一個月（2026年9月）　人間佛教的歷史脈絡（一）：太虛與印順**
-研究生：研讀《太虛大師全書》相關編帙與印順教史著作（《印度之佛教》、《印度佛教思想史》、《原始佛教聖典之集成》、《初期大乘佛教之起源與開展》）及〈契理契機之人間佛教〉；同步整理太虛、印順著作編年目錄與問題清單。
-指導重點：確認研讀順序與取材範圍；辨明「印順自己的論證」與「後人對印順的詮釋」，避免以研究文獻代替原典。
-產出：太虛、印順著作編年目錄；研讀札記與問題清單。
+**五月　第三章第四節與第四章大綱**
+完成第三章第四節（昭慧）與小結；赴台南神學院、台灣教會公報社訪查。產出：第三章全章初稿；第四章寫作大綱與引文長編。
 
-**第二個月（2026年10月）　人間佛教的歷史脈絡（二）：傳道與昭慧**
-研究生：研讀傳道法師著述、《人間佛教的理論與實踐——傳道法師訪談錄》與邱敏捷《傳道法師年譜》，及昭慧法師律學與倫理學著作；建置《妙心雜誌》、《弘誓雙月刊》、《法印學報》相關篇目索引。
-指導重點：妙心寺一系與弘誓一系在實踐取向上的分工，應以材料呈現而非逕作評價；傳道相關一手材料的取得管道與引用授權，由指導教授協助引介。
-產出：傳道、昭慧著作編年目錄；三份佛教刊物篇目索引；第三章問題清單。
+**六月　投稿、口述訪談啟動｜第二學期查核**
+第二章定稿並投稿學術研討會；完成口述歷史受訪名單、訪綱與學術倫理程序，進行第一批訪談（至少三場）。產出：第二章定稿與投稿紀錄；訪談逐字稿三份；第二年工作計畫；**第二學期論文進度審查表**。
 
-**第三個月（2026年11月）　長老教會公共神學（一）：體制脈絡與黃彰輝**
-研究生：研讀台灣基督長老教會史（鄭仰恩主編兩卷）、三大聲明相關文獻，及黃彰輝回憶錄與文集；整理長老教會自立至實況化的年表。
-指導重點：注意教會體制史與神學思想史的分工，避免把神學概念直接當成組織行為的解釋。
-產出：長老教會公共性年表；黃彰輝著作編年目錄；研讀札記。
-
-**第四個月（2026年12月）　長老教會公共神學（二）：宋泉盛、王憲治、黃伯和**
-研究生：研讀宋泉盛中英文著作、王憲治《台灣鄉土神學論文集》及其南神時期論述、黃伯和自一九九〇年代至二〇二二年的系列著作；建置《台灣教會公報》、《新使者》、《神學與教會》、《道雜誌》相關篇目索引。
-指導重點：王憲治材料稀少，本月須確認可及範圍並及早規劃替代材料（同期南神刊物、學生筆記、追思文集）。
-產出：三人著作編年目錄；四份基督教刊物篇目索引；第四章問題清單。
-
-**第五個月（2027年1月）　收束：第一章初稿｜第一學期查核點**
-研究生：把前四個月的研讀成果收束為第一章〈研究方法與文獻回顧〉初稿（含四塊文獻回顧與研究缺口、研究方法、史料來源與限制、名詞界定）；建置兩組關鍵詞（人生佛教／人間佛教／此時此地此人；本色化／實況化／鄉土／出頭天）的出處編年索引。
-指導重點：檢驗研究缺口的陳述是否確由前四個月的研讀支撐；概念史索引的判準是否一致、引文年代是否可回溯至最早出處。
-產出：第一章初稿（約兩萬字）；關鍵詞概念史索引；**第一學期論文進度審查表**。
-
-#### 第二學期
-
-**第六個月（2027年2月）　第二章：日本線與中國線**
-研究生：完成第二章第一節（共同的歷史條件）、第二節（日本）、第三節（中國）初稿。
-指導重點：比較單位的界定是否嚴謹；避免以「危機—回應」模式過度簡化各地差異；中國線材料須與第三章的太虛部分明確分工。
-產出：第二章第一至三節初稿（約一萬六千字）。
-
-**第七個月（2027年3月）　第二章：朝鮮線、台灣線與比較歸納**
-研究生：完成第二章第四節（朝鮮）、第五節（台灣）、第六節（比較與歸納）初稿，並整章統稿。
-指導重點：檢驗第六節所提三項共同條件與兩項差異變項，是否確實由前五節材料支撐，而非後設加上；朝鮮線的二手研究依賴度較高，須在行文中誠實標示。
-產出：第二章全章初稿（約四萬字）。
-
-**第八個月（2027年4月）　第三章前三節：太虛、印順、傳道**
-研究生：以第一學期的長編為基礎，完成第三章第一、二、三節初稿；赴台南妙心寺與中華佛教百科文獻基金會訪查，補齊傳道一節的一手材料。
-指導重點：傳道一節是本研究的補白重點，須留意材料取得程序與引用授權；台語弘法的宗教史意義應以材料說明。
-產出：第三章第一至三節初稿（約兩萬字）；妙心寺訪查紀錄。
-
-**第九個月（2027年5月）　第三章第四節與第四章大綱**
-研究生：完成第三章第四節（昭慧）與第五節小結；赴台南神學院、台灣教會公報社訪查，完成第四章寫作大綱與引文長編。
-指導重點：昭慧一節涉及教內爭議，敘述須以文獻與時序為據，正反材料並列；第四章大綱應與第三章的四段結構可對照，以利第五章比較。
-產出：第三章全章初稿；第四章寫作大綱與引文長編。
-
-**第十個月（2027年6月）　投稿、口述訪談啟動｜第二學期查核點**
-研究生：第二章定稿並投稿學術研討會；完成口述歷史受訪名單、訪綱與學術倫理程序，進行第一批訪談（至少三場）；提出第二年工作計畫。
-指導重點：訪談對象的代表性與訪綱的中立性；確認第二年進度與學位考試時程的銜接。
-產出：第二章定稿與投稿紀錄；訪談逐字稿三份；第二年工作計畫；**第二學期論文進度審查表**。
-
-### 四、指導方式與紀錄
-
-**討論頻率**：每月二次以上（上旬、下旬各一次為原則），形式為個別面談，必要時輔以線上會議。
-
-**紀錄方式**：每次討論後由研究生當日填寫「研究生論文指導紀錄表」，記載討論主題、指導意見與下次工作項目，經指導教授簽核後，由系所於次月五日前彙整送研發處。
-
-**進度管控**：每月末提交當月產出文件（研讀札記、編年目錄、索引、初稿或訪談稿）；未達成之項目於次月列為優先工作並記錄原因。
-
-**查核點**：2027年1月、2027年6月各繳交一次論文進度審查表，並附該學期完成之文稿。
-
-### 五、預期十個月後的具體成果
+### 十個月後的預期成果
 
 1. 第一章〈研究方法與文獻回顧〉初稿（約兩萬字）。
 2. 第二章〈東亞近代宗教變革〉定稿（約四萬字），並完成一場學術研討會發表。
-3. 第三章〈人間佛教在台灣的發展〉全章初稿，其中第三節〈傳道與妙心寺路線的在地實踐〉為本研究補白重點。
+3. 第三章〈人間佛教在台灣的發展〉全章初稿。
 4. 第四章〈台灣長老教會的公共神學發展〉寫作大綱與引文長編。
 5. 八位人物的著作編年目錄、七份教團刊物的篇目索引、兩組關鍵詞的概念史索引。
-6. 口述歷史訪談三場以上之逐字稿，及後續訪談名單與訪綱。
+6. 口述歷史訪談三場以上之逐字稿。
 7. 兩份論文進度審查表與十個月份的論文指導紀錄表。
 
----
-
-指導教授簽名：＿＿＿＿＿＿＿＿＿　　日期：＿＿＿＿＿＿
-
-研究生簽名：＿＿＿＿＿＿＿＿＿　　日期：＿＿＿＿＿＿
+指導教授簽名：＿＿＿＿＿＿＿＿＿　　研究生簽名：＿＿＿＿＿＿＿＿＿　　日期：＿＿＿＿＿＿
