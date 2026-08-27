@@ -59,14 +59,29 @@ CHAPTERS = [
     5, 3, 5, 1, 1, 1, 22,
 ]
 
+# 站上的原文錄音照希伯來聖經的分章，瑪拉基書因此只有三章——基督教編號才把
+# 第三章拆成三、四。照基督教章數去要 39_004 只會拿到 404，那不是漏檔。
+HEBREW_CHAPTER_OVERRIDES = {39: 3}
+
 
 def targets(language: str) -> list[tuple[int, int]]:
     span = range(1, 40) if language == "hebrew" else range(40, 67)
-    return [(bid, chapter) for bid in span for chapter in range(1, CHAPTERS[bid - 1] + 1)]
+    return [
+        (bid, chapter)
+        for bid in span
+        for chapter in range(
+            1,
+            (HEBREW_CHAPTER_OVERRIDES.get(bid, CHAPTERS[bid - 1]) if language == "hebrew"
+             else CHAPTERS[bid - 1]) + 1,
+        )
+    ]
 
 
-def url_for(language: str, bid: int, chapter: int) -> str:
-    return f"https://media.fhl.net/{language}/{bid}/{bid}_{chapter:03d}.mp3"
+def urls_for(language: str, bid: int, chapter: int) -> list[str]:
+    """mp3 先，ogg 後。哈該書一、二章的 mp3 站上回 403 而 ogg 是好的。"""
+
+    stem = f"https://media.fhl.net/{language}/{bid}/{bid}_{chapter:03d}"
+    return [f"{stem}.mp3", f"{stem}.ogg"]
 
 
 def main() -> int:
@@ -95,7 +110,7 @@ def main() -> int:
 
     if not args.write:
         for language, bid, chapter in todo[:5]:
-            print(f"  {url_for(language, bid, chapter)}")
+            print(f"  {urls_for(language, bid, chapter)[0]}")
         print("（未下載；加 --write）")
         return 0
 
@@ -108,18 +123,31 @@ def main() -> int:
         key = f"{language}/{bid}/{chapter}"
         folder = DRIVE / f"fhl-{language}" / f"{bid:02d}"
         folder.mkdir(parents=True, exist_ok=True)
-        target = folder / f"{bid:02d}_{chapter:03d}.mp3"
-        url = url_for(language, bid, chapter)
-        try:
-            request = urllib.request.Request(url, headers=HEADERS)
-            payload = urllib.request.urlopen(request, timeout=120).read()
-        except Exception as error:  # noqa: BLE001 - re-runnable
+        payload = None
+        url = ""
+        error: Exception | None = None
+        for candidate in urls_for(language, bid, chapter):
+            try:
+                request = urllib.request.Request(candidate, headers=HEADERS)
+                payload = urllib.request.urlopen(request, timeout=120).read()
+                url = candidate
+                break
+            except Exception as problem:  # noqa: BLE001 - re-runnable
+                error = problem
+        if payload is None:
             failed += 1
             if failed % 20 == 1:
                 print(f"  ✗ {key}：{error}")
             continue
-        # 錯的章號會回一頁 HTML 而不是 404，靠大小與檔頭擋掉。
-        if len(payload) < MIN_BYTES or payload[:4] not in (b"ID3\x03", b"ID3\x04") and not payload.startswith(b"\xff\xfb"):
+        target = folder / f"{bid:02d}_{chapter:03d}{'.ogg' if url.endswith('.ogg') else '.mp3'}"
+        # 錯的章號會回一頁 HTML 而不是 404，靠大小與檔頭擋掉。ogg 的檔頭是
+        # OggS，先前只認 mp3 的兩種檔頭，於是 ogg 備援抓下來也被判成不是音檔。
+        is_audio = (
+            payload[:4] in (b"ID3\x03", b"ID3\x04")
+            or payload.startswith(b"\xff\xfb")
+            or payload[:4] == b"OggS"
+        )
+        if len(payload) < MIN_BYTES or not is_audio:
             failed += 1
             if failed % 20 == 1:
                 print(f"  ✗ {key}：拿到的不是音檔（{len(payload)} bytes）")
