@@ -438,9 +438,13 @@ def add_cover(document: Document, master: dict, volume: dict) -> None:
     spec.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph_rule(spec, color=GOLD, size="24")
     set_run_font(spec.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), FONT_UI, 8.5, color=MUTED)
+    # `master["textbook"]` 只講得到上冊（它寫的就是「（上冊新約部分）」），印在下冊
+    # 封面上是錯的。下冊的詞表來自語料頻率，不出自哪一本教科書，就照實那樣寫。
     textbook = document.add_paragraph()
     textbook.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    add_latin_and_cjk(textbook, master["textbook"], CAPTION_PT)
+    line = (master["textbook"] if volume["volume"] == 1
+            else "詞表：教父文獻與希臘教會文獻語料詞頻，與上冊不重複")
+    add_latin_and_cjk(textbook, line, CAPTION_PT)
 
 
 def add_front_matter(document: Document, master: dict, volume: dict) -> None:

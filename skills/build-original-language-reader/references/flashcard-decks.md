@@ -254,9 +254,9 @@ python scripts/match_flashcard_images.py --write        # Hebrew picture map
 python scripts/match_greek_card_images.py --write       # Greek picture map
 python scripts/match_greek_card_images.py --uncovered 50  # what is still blank
 python scripts/match_latin_card_images.py --write       # Latin picture map
-python scripts/classify_proper_names.py --language all --write  # categories, before the name decks
+python scripts/classify_proper_names.py --language all --write  # categories, before the appendix decks
 python scripts/build_flashcards.py --deck hbo           # or grc1, grc2, lat1, lat2,
-                                                       # hbo-names, grc-names, lat-names
+                                                       # hbo-appendix, grc-appendix, lat-appendix
 python scripts/build_flashcards.py --deck hbo --limit 16   # proof sheet
 ```
 

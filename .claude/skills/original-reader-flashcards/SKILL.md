@@ -159,6 +159,7 @@ matcher 由嚴到寬四段，配不到就留白：
 
 ```
 python scripts/classify_proper_names.py --language all --write   # 先補 category
+python scripts/classify_proper_names.py --reapply --write        # 上游重生附錄後只補回分類
 python scripts/build_flashcards.py --deck hbo-appendix           # 或 grc-appendix / lat-appendix
 ```
 

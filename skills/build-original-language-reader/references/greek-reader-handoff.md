@@ -27,7 +27,7 @@ What is left is audio, and the root cause of one appendix defect.
 | Web reader | ✅ two volumes, lesson key `v1-12`; appendix page at `/original-readers/grc-lessons/tables`; tests pass; production build passes |
 | Release hashes | ✅ `release-hashes.json`, 19 artifacts |
 | Audio | ⛔ `not_recorded`; TTS substitution forbidden |
-| Proper-name cards | ✅ 291 cards, `output/flashcards/greek-flashcards-proper-names.docx` |
+| Appendix cards | ✅ 511 cards, `output/flashcards/greek-flashcards-appendix.docx` — all five tables, sectioned by category |
 
 ## What is genuinely left
 
