@@ -19,7 +19,7 @@
           <div class="tool-icon bg-orange-50 text-orange-600">🗞️</div>
           <div class="flex-1">
             <h2 class="tool-title">基督教論壇報</h2>
-            <p class="tool-desc">1965 年創刊，福音派系統最主要的教派報紙；與長老教會系統的《台灣教會公報》同文類、可逐年並排比對</p>
+            <p class="tool-desc">1965 年創刊，福音派系統最主要的教派報紙；站上可回溯至 2019 年，與《台灣教會公報》同區段可逐年並排</p>
           </div>
           <span class="tool-badge bg-orange-50 text-orange-600">{{ ctCount ? `${ctCount.toLocaleString()} 篇` : '…' }}</span>
         </NuxtLink>

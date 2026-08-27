@@ -11,8 +11,10 @@
         </div>
         <h1 class="text-2xl font-bold text-gray-900 mb-1">基督教論壇報</h1>
         <p class="text-sm text-gray-500 leading-relaxed">
-          1965 年創刊，福音派系統最主要的教派報紙。站上現行網站可回溯的篇目逐年收錄，
-          與長老教會系統的《台灣教會公報》同文類，可在語料層並排比對同一議題的兩種走向。
+          1965 年創刊，福音派系統最主要的教派報紙。與長老教會系統的《台灣教會公報》同文類，
+          可在語料層並排比對同一議題的兩種走向。
+          <span class="text-gray-400">實際可用的斷限是 2019 年以後；2015–2018 站上只留下零星 31 篇，
+          應是改版時的殘留，不足以作年度比較。</span>
           <span v-if="years.length" class="text-gray-400">收錄 {{ years.length }} 個年度、共 {{ totalCount.toLocaleString() }} 篇。</span>
         </p>
       </div>
