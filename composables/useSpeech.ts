@@ -116,6 +116,28 @@ export function useSpeech() {
     listening.value = false;
   }
 
+  function preferredVoice(voices: SpeechSynthesisVoice[], lang: string) {
+    const wanted = lang.toLowerCase();
+    const base = wanted.split("-")[0];
+    const candidates = voices.filter((voice) => {
+      const voiceLang = voice.lang.toLowerCase();
+      return voiceLang === wanted || voiceLang.split("-")[0] === base;
+    });
+
+    // Windows/Edge 可能同時提供舊版與 Natural 聲線；Chrome 也可能有
+    // Google 聲線。不要只拿清單第一個，否則同一語系仍可能很機械。
+    const qualityScore = (voice: SpeechSynthesisVoice) => {
+      const name = voice.name.toLowerCase();
+      let score = voice.lang.toLowerCase() === wanted ? 20 : 0;
+      if (name.includes("natural")) score += 8;
+      if (name.includes("premium") || name.includes("enhanced")) score += 6;
+      if (name.includes("google")) score += 4;
+      return score;
+    };
+
+    return candidates.sort((a, b) => qualityScore(b) - qualityScore(a))[0];
+  }
+
   // 語音播放教練回覆。lang 為偏好語系；rate 語速
   function speak(text: string, lang: string, rate = 1) {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
@@ -124,9 +146,9 @@ export function useSpeech() {
     const u = new SpeechSynthesisUtterance(text);
     u.lang = lang;
     u.rate = rate;
-    // 盡量挑符合語系的語音
+    // 盡量挑符合語系且品質較好的語音
     const voices = window.speechSynthesis.getVoices();
-    const match = voices.find((v) => v.lang === lang) || voices.find((v) => v.lang?.startsWith(lang.split("-")[0]));
+    const match = preferredVoice(voices, lang);
     if (match) u.voice = match;
     u.onstart = () => (speaking.value = true);
     u.onend = () => (speaking.value = false);

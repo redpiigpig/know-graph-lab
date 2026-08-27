@@ -1,6 +1,6 @@
 /**
- * 把 /works 論文計畫「修改草稿」（public/content/works/<ref>-revision-draft.md）
- * 即時轉成「歷史論文格式」的 .docx 下載。md 改了，下載出來的 Word 就跟著變。
+ * 把 /works 論文計畫的指定稿件版本即時轉成「歷史論文格式」的 .docx。
+ * 未指定 version 時仍讀取 <ref>-revision-draft.md，維持舊連結相容。
  *
  * 版式（對齊根目錄「腳註版」交付檔）：
  *   - A4、頁邊 25mm；內文 12pt Times New Roman + 新細明體，首行縮排兩字，行距 1.5
@@ -144,17 +144,40 @@ function buildParagraphs(md: string): { paragraphs: Paragraph[]; notes: Record<n
 }
 
 export default defineEventHandler(async (event) => {
-  const { ref } = getQuery(event) as { ref?: string }
+  const { ref, version } = getQuery(event) as { ref?: string; version?: string }
   if (!ref) throw createError({ statusCode: 400, message: 'Missing ref' })
   const safe = ref.replace(/[^a-zA-Z0-9_-]/g, '')
   if (safe !== ref) throw createError({ statusCode: 400, message: 'Invalid ref' })
+  if (version && !['first', 'second', 'third'].includes(version)) {
+    throw createError({ statusCode: 400, message: 'Invalid version' })
+  }
 
-  const mdPath = join(process.cwd(), 'public', 'content', 'works', `${safe}-revision-draft.md`)
+  const mdPath = version === 'first'
+    ? join(process.cwd(), 'public', 'content', 'papers', `${safe}.txt`)
+    : version === 'second'
+      ? join(process.cwd(), 'public', 'content', 'works', `${safe}-v2.md`)
+      : version === 'third'
+        ? join(process.cwd(), 'public', 'content', 'works', `${safe}-v3.md`)
+        : join(process.cwd(), 'public', 'content', 'works', `${safe}-revision-draft.md`)
   let md: string
   try {
     md = await readFile(mdPath, 'utf-8')
   } catch {
-    throw createError({ statusCode: 404, message: `Draft not found: ${safe}` })
+    throw createError({ statusCode: 404, message: `Draft not found: ${safe}${version ? ` (${version})` : ''}` })
+  }
+
+  if (version === 'first') {
+    const lines = md.replace(/\r\n/g, '\n').split('\n')
+    const firstText = lines.findIndex(line => line.trim())
+    md = lines.map((line, index) => {
+      const text = line.trim()
+      if (!text) return ''
+      if (index === firstText) return `# ${text}`
+      if (text === '摘要') return '### 摘要'
+      if (/^[一二三四五六七八九十]+、/.test(text)) return `## ${text}`
+      if (/^（[一二三四五六七八九十]+）/.test(text)) return `### ${text}`
+      return line
+    }).join('\n')
   }
 
   const title = md.match(/^#\s+(.+)$/m)?.[1]?.trim() || `${safe}-draft`

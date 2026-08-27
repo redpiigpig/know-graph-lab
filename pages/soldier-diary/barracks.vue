@@ -97,7 +97,10 @@
       <p class="sd-sub sdb-cat-intro">兵員一次只能操練「當前軍種」的項目，該品質練滿 100 即突破、解鎖下一軍種；五種全破即結訓。</p>
 
       <div class="sd-panel sd-panel--raised sdb-cat-branch sdb-cat-rules">
-        <h3 class="sdb-cat-branch-name">📜 基本守則</h3>
+        <div class="sdb-cat-rules-head">
+          <h3 class="sdb-cat-branch-name">📜 基本守則摘要</h3>
+          <NuxtLink to="/soldier-diary/rules" class="sd-btn sd-btn--ghost sd-btn--sm">閱讀完整守則 →</NuxtLink>
+        </div>
         <ol class="sdb-rules-list">
           <li v-for="(r, i) in CODE_OF_CONDUCT" :key="i">
             <b>{{ r.title }}</b><span>{{ r.desc }}</span>
@@ -426,6 +429,8 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdb-catalog { display: flex; flex-direction: column; gap: 12px; }
 .sdb-cat-intro { margin: 0 0 4px; }
 .sdb-cat-rules { border-left: 3px solid var(--sd-brass); }
+.sdb-cat-rules-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.sdb-cat-rules-head .sdb-cat-branch-name { margin: 0; }
 .sdb-rules-list { margin: 10px 0 0; padding-left: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px 20px; }
 .sdb-rules-list li { color: var(--sd-khaki); font-size: 0.82rem; line-height: 1.6; }
 .sdb-rules-list li b { color: var(--sd-sand); display: block; letter-spacing: 0.04em; }

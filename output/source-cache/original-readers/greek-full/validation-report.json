@@ -1,0 +1,233 @@
+{
+  "result": "PASS",
+  "master": "c:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\greek-full\\greek-reader-50-lessons.json",
+  "summary": {
+    "PASS": 22,
+    "FAIL": 0
+  },
+  "checks": [
+    {
+      "status": "PASS",
+      "code": "release-schema",
+      "message": "release schema, language, privacy scope, and status are explicit",
+      "details": {
+        "missing": [],
+        "schemaVersion": "1.0.0",
+        "languageCode": "grc",
+        "releaseStatus": "content_complete_layout_pending"
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "print-profile",
+      "message": "print profile is explicit JIS B5 with mirrored margins",
+      "details": {
+        "actual": {
+          "preset": "JIS_B5_READER",
+          "trim": "JIS_B5",
+          "widthMm": 182,
+          "heightMm": 257,
+          "mirroredMargins": true,
+          "openingPattern": "recto-start",
+          "marginTopMm": 20,
+          "marginBottomMm": 22,
+          "marginInsideMm": 22,
+          "marginOutsideMm": 16
+        }
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "lessons",
+      "message": "lesson count and order match the frozen contract",
+      "details": {
+        "expected": 50,
+        "actual": 50
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "vocabulary",
+      "message": "vocabulary count, lesson allocation, and identities are complete",
+      "details": {
+        "actual": 1000,
+        "expected": 1000,
+        "perLessonRule": "uneven by design (textbook chapters)"
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "vocabulary-order",
+      "message": "vocabulary ordinals, lesson assignments, and lesson slots are continuous",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "transliteration",
+      "message": "every word has textbook-specific transliteration",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "glosses",
+      "message": "every word has a reviewed Traditional-Chinese gloss",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "source-orthography",
+      "message": "every vocabulary form satisfies the selected language profile",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "gloss-quality",
+      "message": "Traditional-Chinese glosses contain no placeholder or English leakage",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "proper-names",
+      "message": "proper-name flags and typed categories are consistent",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "memory",
+      "message": "memory units are complete and unique",
+      "details": {
+        "actual": 100,
+        "unique": 100
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "memory-review",
+      "message": "memory units contain source text, RCUV translation, overlap evidence, and human review",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "reading-allocation",
+      "message": "Scripture and non-Scripture lesson allocation matches the contract",
+      "details": {
+        "scripture": 25,
+        "nonScripture": 25
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "readings",
+      "message": "every lesson contains a nonempty full reading",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "reading-segments",
+      "message": "every declared reading segment contains source text",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "chinese-bible",
+      "message": "Traditional-Chinese Bible version, variant, private-use scope, and snapshot hash are explicit",
+      "details": {
+        "actual": {
+          "versionCode": "cuv2010",
+          "titleZh": "和合本修訂版（2010）",
+          "variant": "RCUV2（上帝版）",
+          "publisher": "香港聖經公會",
+          "useScope": "private-authorized",
+          "snapshot": "output/source-cache/original-readers/greek-full/RCUV2010.json",
+          "snapshotSha256": "8b5ba8a86c95323735f8fd06cce42e8993f51995b23b0e459a94a01eaf2efac6"
+        }
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "chinese-parallels",
+      "message": "every Scripture segment has a Traditional-Chinese parallel",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "chinese-crosswalk",
+      "message": "every Scripture segment records its RCUV range crosswalk",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "audio-state",
+      "message": "audio manifest truthfully represents missing or reviewed recordings",
+      "details": {
+        "actual": {
+          "status": "not_recorded",
+          "recordedTrackCount": 0,
+          "tracks": [],
+          "profile": "Mounce 標準 Erasmian；拜占庭讀音另立音軌，不混錄",
+          "policy": "沒有真實錄音就不顯示播放鍵；TTS 不算數"
+        }
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "build-provenance",
+      "message": "build provenance records the builder and cryptographic hashes of every input layer",
+      "details": {
+        "inputs": 7
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "declared-counts",
+      "message": "declared counts match the frozen release contract",
+      "details": {
+        "actual": {
+          "lessons": 50,
+          "bibleChapters": 25,
+          "prayersOrArticles": 25,
+          "vocabulary": 1000,
+          "vocabularyGlossedZh": 1000,
+          "memoryVerses": 100,
+          "scriptureChapters": 25,
+          "patristicReadings": 25,
+          "liturgySteps": 332,
+          "scriptureWords": 13214,
+          "patristicWords": 30060,
+          "liturgyWords": 6772,
+          "totalRunningWords": 50046
+        }
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "placeholders",
+      "message": "master contains no planning placeholders",
+      "details": {
+        "failures": []
+      }
+    }
+  ]
+}

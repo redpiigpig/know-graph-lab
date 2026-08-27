@@ -1,23 +1,67 @@
+import { buildDialogueKeywordFilter } from '~/server/utils/dialogue-search'
+
+const MAX_MERGED_KEYWORD_RESULTS = 1000
+
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const supabase = getAdminClient()
 
-  const { month, date, category, uncategorized, source = 'all', page = '1', limit = '50' } = getQuery(event) as {
+  const { month, date, category, uncategorized, source = 'all', q, page = '1', limit = '50' } = getQuery(event) as {
     month?: string
     date?: string
     category?: string
     uncategorized?: string
     source?: string
+    q?: string
     page?: string
     limit?: string
   }
 
-  const pageNum  = Math.max(1, parseInt(page))
-  const limitNum = (month || date) ? 2000 : Math.min(200, parseInt(limit))
+  const parsedPage = Number(page)
+  const parsedLimit = Number(limit)
+  const pageNum = Number.isInteger(parsedPage) && parsedPage >= 1 ? parsedPage : 1
+  const limitNum = (month || date)
+    ? 2000
+    : Number.isInteger(parsedLimit) && parsedLimit >= 1
+      ? Math.min(200, parsedLimit)
+      : 50
   const offset   = (month || date) ? 0 : (pageNum - 1) * limitNum
 
-  // Determine which tables to query
-  const tables = source === 'all' ? ['ai_dialogues_gemini', 'ai_dialogues_chatgpt'] : [`ai_dialogues_${source}`]
+  const keywordInput = String(q ?? '').trim()
+  const keywordFilter = buildDialogueKeywordFilter(keywordInput)
+  if (keywordInput && !keywordFilter) {
+    return { data: [], count: 0, page: pageNum }
+  }
+
+  // Keep the source value from becoming part of a dynamic table name.
+  const tables = source === 'gemini'
+    ? ['ai_dialogues_gemini']
+    : source === 'chatgpt'
+      ? ['ai_dialogues_chatgpt']
+      : ['ai_dialogues_gemini', 'ai_dialogues_chatgpt']
+
+  // Keyword results must exclude categorized rows before range/count are
+  // applied; filtering after pagination can produce empty or underfilled pages.
+  const assignedIdsForKeywordSearch: string[] = []
+  if (keywordFilter && uncategorized === '1') {
+    const assigned = new Set<string>()
+    let assignedOffset = 0
+    while (true) {
+      const { data, error } = await supabase
+        .from('ai_dialogue_entry_categories')
+        .select('dialogue_id')
+        .range(assignedOffset, assignedOffset + 999)
+      if (error) throw createError({ statusCode: 500, message: error.message })
+
+      for (const row of data ?? []) {
+        const id = String(row.dialogue_id ?? '')
+        if (/^[\p{L}\p{N}-]+$/u.test(id)) assigned.add(id)
+      }
+      if (!data || data.length < 1000) break
+      assignedOffset += 1000
+    }
+    assignedIdsForKeywordSearch.push(...assigned)
+  }
 
   // Fetch from each table and combine results
   const allData: any[] = []
@@ -32,11 +76,20 @@ export default defineEventHandler(async (event) => {
       `, { count: 'exact' })
       .order('dialogue_date', { ascending: false })
       .order('dialogue_time', { ascending: false })
+      .order('id', { ascending: false })
 
     if (date) {
       query = query.eq('dialogue_date', date)
     } else if (month) {
       query = query.gte('dialogue_date', `${month}-01`).lte('dialogue_date', `${month}-31`)
+    }
+
+    if (keywordFilter) {
+      query = query.or(keywordFilter)
+    }
+
+    if (assignedIdsForKeywordSearch.length > 0) {
+      query = query.not('id', 'in', `(${assignedIdsForKeywordSearch.join(',')})`)
     }
 
     if (category) {
@@ -60,9 +113,16 @@ export default defineEventHandler(async (event) => {
 
     // Note: uncategorized filter will be applied after fetching data (in memory)
 
-    // Only apply range when querying a single table (not combining)
-    if (tables.length === 1 && !month && !date) {
-      query = query.range(offset, offset + limitNum - 1)
+    if (!month && !date) {
+      if (keywordFilter) {
+        // A single source can page directly. Combined sources need an ordered
+        // prefix from each table before their rows can be merged correctly.
+        query = tables.length === 1
+          ? query.range(offset, offset + limitNum - 1)
+          : query.range(0, Math.min(offset + limitNum - 1, MAX_MERGED_KEYWORD_RESULTS - 1))
+      } else if (tables.length === 1) {
+        query = query.range(offset, offset + limitNum - 1)
+      }
     }
 
     const { data, error, count } = await query
@@ -114,7 +174,7 @@ export default defineEventHandler(async (event) => {
 
   // Apply uncategorized filter in memory (if needed)
   let filteredData = allData
-  if (uncategorized === '1') {
+  if (uncategorized === '1' && !keywordFilter) {
     const { data: catIds } = await supabase
       .from('ai_dialogue_entry_categories')
       .select('dialogue_id')
@@ -126,10 +186,33 @@ export default defineEventHandler(async (event) => {
   filteredData.sort((a, b) => {
     const dateComp = new Date(b.dialogue_date).getTime() - new Date(a.dialogue_date).getTime()
     if (dateComp !== 0) return dateComp
-    return b.dialogue_time.localeCompare(a.dialogue_time)
+    const timeComp = String(b.dialogue_time ?? '').localeCompare(String(a.dialogue_time ?? ''))
+    if (timeComp !== 0) return timeComp
+    const sourceComp = String(a.source).localeCompare(String(b.source))
+    if (sourceComp !== 0) return sourceComp
+    return String(b.id).localeCompare(String(a.id))
   })
 
-  const paginatedData = (month || date) ? filteredData : filteredData.slice(offset, offset + limitNum)
+  const paginatedData = (month || date)
+    ? filteredData
+    : (keywordFilter && tables.length === 1)
+      ? filteredData
+      : filteredData.slice(offset, offset + limitNum)
 
-  return { data: paginatedData, count: totalCount, page: pageNum }
+  const mergedSearchIsLimited = Boolean(
+    keywordFilter
+      && tables.length > 1
+      && !month
+      && !date
+      && totalCount > MAX_MERGED_KEYWORD_RESULTS,
+  )
+  const resultCount = mergedSearchIsLimited ? MAX_MERGED_KEYWORD_RESULTS : totalCount
+
+  return {
+    data: paginatedData,
+    count: resultCount,
+    totalMatches: totalCount,
+    limited: mergedSearchIsLimited,
+    page: pageNum,
+  }
 })

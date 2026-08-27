@@ -15,3 +15,9 @@ create table if not exists dialogue_days (
   unique(project_slug, day_date)
 );
 create index if not exists dialogue_days_slug_date_idx on dialogue_days(project_slug, day_date);
+
+-- Private content: access is mediated by authenticated server routes using
+-- the service-role client. Browser roles must never reach this table directly.
+alter table public.dialogue_days enable row level security;
+revoke all privileges on table public.dialogue_days from anon, authenticated;
+grant select, insert, update, delete on table public.dialogue_days to service_role;

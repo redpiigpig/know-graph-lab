@@ -5,12 +5,16 @@
   >
     <AppHeader title="AI 對話錄" :back="{ to: '/', label: '返回主頁' }" :editable="false">
       <template #actions>
-        <form @submit.prevent="doLookup" class="flex items-center gap-1">
-          <input v-model="lookupSeq" placeholder="編號查閱 C-/G-"
-            class="w-32 px-2 py-1 text-xs font-mono rounded border border-gray-200 focus:border-blue-400 outline-none" />
-          <button type="submit" class="text-xs px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700">查</button>
-        </form>
-        <span class="text-xs text-gray-400">{{ totalCount }} 筆對話</span>
+        <button
+          ref="lookupTrigger"
+          type="button"
+          class="whitespace-nowrap text-xs px-2.5 py-1 rounded border border-gray-200 bg-white text-gray-600 hover:border-blue-300 hover:text-blue-600 transition"
+          aria-haspopup="dialog"
+          @click="openLookup"
+        >
+          代碼查詢
+        </button>
+        <span class="hidden text-xs text-gray-400 sm:inline">{{ totalCount }} 筆對話</span>
       </template>
     </AppHeader>
 
@@ -228,11 +232,53 @@
 
       <!-- Main content -->
       <main class="flex-1 min-w-0">
+        <!-- Keyword search is the default search mode. Citation-code lookup lives behind the header button. -->
+        <div class="mb-5 rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
+          <form class="flex flex-col gap-2 sm:flex-row sm:items-center" @submit.prevent="runKeywordSearch">
+            <input
+              v-model="keywordDraft"
+              type="search"
+              maxlength="160"
+              autocomplete="off"
+              placeholder="搜尋提問或回應的關鍵字"
+              aria-label="搜尋對話關鍵字"
+              class="w-full min-w-0 flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <div class="flex w-full gap-2 sm:w-auto">
+              <button
+                type="submit"
+                :disabled="loading"
+                class="flex-1 shrink-0 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-wait disabled:opacity-60 sm:flex-none"
+              >
+                搜尋
+              </button>
+              <button
+                v-if="keywordQuery"
+                type="button"
+                :disabled="loading"
+                class="flex-1 shrink-0 rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-500 transition hover:bg-gray-50 disabled:cursor-wait disabled:opacity-60 sm:flex-none"
+                @click="clearKeywordSearch"
+              >
+                清除
+              </button>
+            </div>
+          </form>
+          <p class="mt-2 text-xs text-gray-400">
+            可輸入多個詞；任一詞出現在提問或回應中，就會列入結果。
+          </p>
+        </div>
+
         <!-- Filter breadcrumb -->
-        <div class="mb-4 flex items-center gap-2 text-sm text-gray-500">
+        <div class="mb-4 flex flex-wrap items-center gap-2 text-sm text-gray-500">
           <span>{{ filterLabel }}</span>
-          <span v-if="activeFilter !== 'all'" class="text-xs text-gray-400"
+          <span v-if="keywordQuery" class="text-xs text-blue-600"
+            >· 關鍵字「{{ keywordQuery }}」</span
+          >
+          <span v-if="activeFilter !== 'all' || keywordQuery" class="text-xs text-gray-400"
             >· {{ totalCount }} 筆</span
+          >
+          <span v-if="searchLimited" class="text-xs text-amber-600"
+            >· 符合超過 1,000 筆，顯示最近 1,000 筆</span
           >
         </div>
 
@@ -241,12 +287,20 @@
           載入中…
         </div>
 
+        <!-- Error -->
+        <div v-else-if="entriesError" class="py-20 text-center text-sm text-rose-600">
+          <p>{{ entriesError }}</p>
+          <button type="button" class="mt-3 text-blue-600 hover:underline" @click="loadEntries">
+            再試一次
+          </button>
+        </div>
+
         <!-- Empty -->
         <div
           v-else-if="entries.length === 0"
           class="py-20 text-center text-gray-400 text-sm"
         >
-          沒有符合的對話
+          {{ keywordQuery ? `找不到含有「${keywordQuery}」的對話` : "沒有符合的對話" }}
         </div>
 
         <!-- Entries grouped by date -->
@@ -523,16 +577,50 @@
       </div>
     </div>
 
-    <!-- 編號查閱結果 modal -->
-    <div v-if="lookupOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" @click="lookupOpen = false">
-      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-auto p-6 shadow-xl" @click.stop>
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-sm font-mono px-2 py-0.5 rounded bg-gray-100 text-gray-600">{{ lookupResult?.seq_label }}</span>
-          <button @click="lookupOpen = false" class="text-gray-400 hover:text-gray-700">×</button>
+    <!-- Citation code lookup modal -->
+    <div
+      v-if="lookupOpen"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="code-lookup-title"
+      @click="closeLookup"
+    >
+      <div
+        ref="lookupDialog"
+        class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-auto p-6 shadow-xl"
+        @click.stop
+        @keydown.esc.stop="closeLookup"
+        @keydown.tab="trapLookupFocus"
+      >
+        <div class="flex items-center justify-between mb-2">
+          <h3 id="code-lookup-title" class="font-semibold text-gray-900">代碼查詢</h3>
+          <button type="button" aria-label="關閉代碼查詢" @click="closeLookup" class="text-gray-400 hover:text-gray-700">×</button>
         </div>
+        <p class="mb-3 text-xs text-gray-400">輸入書中引用的 C- 或 G- 對話代碼。</p>
+        <form class="mb-4 flex items-center gap-2" @submit.prevent="doLookup">
+          <input
+            ref="lookupInput"
+            v-model="lookupSeq"
+            autocomplete="off"
+            placeholder="例如 C-00241 或 G-00789"
+            aria-label="對話代碼"
+            class="min-w-0 flex-1 rounded-lg border border-gray-200 px-3 py-2 font-mono text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+          />
+          <button
+            type="submit"
+            :disabled="lookupLoading || !lookupSeq.trim()"
+            class="shrink-0 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {{ lookupLoading ? "查詢中…" : "查詢" }}
+          </button>
+        </form>
         <div v-if="lookupErr" class="text-sm text-rose-600">{{ lookupErr }}</div>
         <template v-else-if="lookupResult">
-          <p class="text-xs text-gray-400 mb-3">{{ lookupResult.dialogue_date }} {{ lookupResult.source === 'chatgpt' ? 'ChatGPT' : 'Gemini' }}</p>
+          <div class="mb-3 flex flex-wrap items-center gap-2">
+            <span class="text-sm font-mono px-2 py-0.5 rounded bg-gray-100 text-gray-600">{{ lookupResult.seq_label }}</span>
+            <span class="text-xs text-gray-400">{{ lookupResult.dialogue_date }} {{ lookupResult.source === 'chatgpt' ? 'ChatGPT' : 'Gemini' }}</span>
+          </div>
           <h4 class="text-xs font-semibold text-gray-500 mb-1">提問</h4>
           <p class="text-sm text-gray-800 whitespace-pre-wrap mb-4">{{ lookupResult.prompt }}</p>
           <h4 class="text-xs font-semibold text-gray-500 mb-1">回應</h4>
@@ -557,12 +645,15 @@ const expandedMonth = ref<string | null>(null);
 const expandedEntry = ref<string | null>(null);
 const currentPage = ref(1);
 const loading = ref(false);
+const entriesError = ref("");
+let loadEntriesRequestId = 0;
 
 const months = ref<{ month: string; count: number }[]>([]);
 const allDates = ref<{ date: string; count: number }[]>([]);
 const categories = ref<any[]>([]);
 const entries = ref<any[]>([]);
 const totalCount = ref(0);
+const searchLimited = ref(false);
 const uncategorizedCount = ref(0);
 const sourceCounts = ref<Record<string, number>>({});
 
@@ -574,22 +665,94 @@ const expandedCats = ref<string[]>([]);
 const deleteTarget = ref<any>(null);
 const quickCatTarget = ref<string | null>(null);
 
+// 寬鬆關鍵字搜尋：輸入與已送出的查詢分開，避免每次按鍵都掃描完整對話。
+const keywordDraft = ref("");
+const keywordQuery = ref("");
+
+async function refreshFromFirstPage() {
+  expandedEntry.value = null;
+  if (currentPage.value === 1) await loadEntries();
+  else currentPage.value = 1;
+}
+
+async function runKeywordSearch() {
+  const nextQuery = keywordDraft.value.trim();
+  if (!nextQuery) {
+    await clearKeywordSearch();
+    return;
+  }
+  keywordQuery.value = nextQuery;
+  await refreshFromFirstPage();
+}
+
+async function clearKeywordSearch() {
+  keywordDraft.value = "";
+  if (!keywordQuery.value) return;
+  keywordQuery.value = "";
+  await refreshFromFirstPage();
+}
+
 // 編號查閱（書中引用 C-/G- 回查原始對話）
 const lookupSeq = ref("");
 const lookupOpen = ref(false);
 const lookupErr = ref("");
 const lookupResult = ref<any>(null);
+const lookupLoading = ref(false);
+const lookupTrigger = ref<HTMLButtonElement | null>(null);
+const lookupDialog = ref<HTMLElement | null>(null);
+const lookupInput = ref<HTMLInputElement | null>(null);
+
+async function openLookup() {
+  lookupOpen.value = true;
+  lookupErr.value = "";
+  lookupResult.value = null;
+  await nextTick();
+  lookupInput.value?.focus();
+}
+
+async function closeLookup() {
+  lookupOpen.value = false;
+  await nextTick();
+  lookupTrigger.value?.focus();
+}
+
+function trapLookupFocus(event: KeyboardEvent) {
+  const dialog = lookupDialog.value;
+  if (!dialog) return;
+  const focusable = Array.from(
+    dialog.querySelectorAll<HTMLElement>(
+      'button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])',
+    ),
+  ).filter((element) => !element.hasAttribute("hidden"));
+  if (focusable.length === 0) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
 async function doLookup() {
   const seq = lookupSeq.value.trim();
   if (!seq) return;
   lookupOpen.value = true;
+  await nextTick();
+  lookupInput.value?.focus();
   lookupErr.value = "";
   lookupResult.value = null;
+  lookupLoading.value = true;
   try {
     const h = await authHeader();
     lookupResult.value = await $fetch("/api/ai-dialogues/by-seq", { query: { seq }, headers: h });
   } catch (e: any) {
     lookupErr.value = e?.data?.message ?? "查閱失敗";
+  } finally {
+    lookupLoading.value = false;
   }
 }
 
@@ -644,7 +807,9 @@ async function loadCategories() {
 }
 
 async function loadEntries() {
+  const requestId = ++loadEntriesRequestId;
   loading.value = true;
+  entriesError.value = "";
   try {
     const h = await authHeader();
     const f = activeFilter.value;
@@ -660,6 +825,7 @@ async function loadEntries() {
     else if (f.startsWith("date:")) params.date = f.slice(5);
     else if (f.startsWith("cat:")) params.category = f.slice(4);
     else if (f === "uncategorized") params.uncategorized = "1";
+    if (keywordQuery.value) params.q = keywordQuery.value;
 
     console.log("📡 Loading entries with filter:", f, "params:", params);
     const data = await $fetch<any>("/api/ai-dialogues", {
@@ -672,12 +838,19 @@ async function loadEntries() {
       "entries, total:",
       data.count ?? 0,
     );
+    if (requestId !== loadEntriesRequestId) return;
     entries.value = data.data ?? [];
     totalCount.value = data.count ?? 0;
+    searchLimited.value = Boolean(data.limited);
   } catch (e) {
     console.error("❌ Error loading entries:", e);
+    if (requestId !== loadEntriesRequestId) return;
+    entries.value = [];
+    totalCount.value = 0;
+    searchLimited.value = false;
+    entriesError.value = "對話載入失敗，請稍後再試。";
   } finally {
-    loading.value = false;
+    if (requestId === loadEntriesRequestId) loading.value = false;
   }
 }
 

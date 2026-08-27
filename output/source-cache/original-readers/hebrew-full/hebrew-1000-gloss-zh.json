@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "language": "zh-Hant",
+  "status": "editorial-working-gloss",
+  "model": "qwen2.5:7b",
+  "items": [
+    {
+      "ordinal": 1,
+      "glossZh": "人；人類；亞當"
+    },
+    {
+      "ordinal": 2,
+      "glossZh": "地；土地；地面"
+    },
+    {
+      "ordinal": 3,
+      "glossZh": "神；上帝；神明"
+    },
+    {
+      "ordinal": 4,
+      "glossZh": "父親；祖先"
+    },
+    {
+      "ordinal": 5,
+      "glossZh": "神；神明"
+    },
+    {
+      "ordinal": 6,
+      "glossZh": "兒子"
+    },
+    {
+      "ordinal": 7,
+      "glossZh": "房屋；家戶"
+    },
+    {
+      "ordinal": 8,
+      "glossZh": "話；事；物"
+    },
+    {
+      "ordinal": 9,
+      "glossZh": "日"
+    },
+    {
+      "ordinal": 10,
+      "glossZh": "以色列人；以色列"
+    },
+    {
+      "ordinal": 11,
+      "glossZh": "耶路撒冷"
+    },
+    {
+      "ordinal": 12,
+      "glossZh": "耶路撒冷"
+    },
+    {
+      "ordinal": 13,
+      "glossZh": "耶和華；主"
+    },
+    {
+      "ordinal": 14,
+      "glossZh": "埃及"
+    },
+    {
+      "ordinal": 15,
+      "glossZh": "摩西"
+    },
+    {
+      "ordinal": 16,
+      "glossZh": "王；君王"
+    },
+    {
+      "ordinal": 17,
+      "glossZh": "馬"
+    },
+    {
+      "ordinal": 18,
+      "glossZh": "奴隸；僕人"
+    },
+    {
+      "ordinal": 19,
+      "glossZh": "法老"
+    },
+    {
+      "ordinal": 20,
+      "glossZh": "年"
+    },
+    {
+      "ordinal": 21,
+      "glossZh": "名；聲望"
+    },
+    {
+      "ordinal": 22,
+      "glossZh": "主；我的主"
+    },
+    {
+      "ordinal": 23,
+      "glossZh": "主人；長官"
+    },
+    {
+      "ordinal": 24,
+      "glossZh": "兄弟"
+    },
+    {
+      "ordinal": 25,
+      "glossZh": "弟兄 [亞當的複數]"
+    },
+    {
+      "ordinal": 26,
+      "glossZh": "男人；丈夫"
+    },
+    {
+      "ordinal": 27,
+      "glossZh": "男人；丈夫"
+    },
+    {
+      "ordinal": 28,
+      "glossZh": "女人；妻子"
+    },
+    {
+      "ordinal": 29,
+      "glossZh": "女人；妻子"
+    },
+    {
+      "ordinal": 30,
+      "glossZh": "女兒"
+    },
+    {
+      "ordinal": 31,
+      "glossZh": "女兒"
+    },
+    {
+      "ordinal": 32,
+      "glossZh": "民族；百姓"
+    },
+    {
+      "ordinal": 33,
+      "glossZh": "道路；旅程 [M/F]"
+    },
+    {
+      "ordinal": 34,
+      "glossZh": "山"
+    },
+    {
+      "ordinal": 35,
+      "glossZh": "山脈"
+    },
+    {
+      "ordinal": 36,
+      "glossZh": "祭司"
+    },
+    {
+      "ordinal": 37,
+      "glossZh": "心；意念"
+    },
+    {
+      "ordinal": 38,
+      "glossZh": "心；意念"
+    },
+    {
+      "ordinal": 39,
+      "glossZh": "水"
+    },
+    {
+      "ordinal": 40,
+      "glossZh": "靈；生命；人；頸；喉"
+    },
+    {
+      "ordinal": 41,
+      "glossZh": "先知"
+    },
+    {
+      "ordinal": 42,
+      "glossZh": "書；卷"
+    },
+    {
+      "ordinal": 43,
+      "glossZh": "眼；泉"
+    },
+    {
+      "ordinal": 44,
+      "glossZh": "兩眼"
+    },
+    {
+      "ordinal": 45,
+      "glossZh": "城；鎮"
+    },
+    {
+      "ordinal": 46,
+      "glossZh": "城；市"
+    },
+    {
+      "ordinal": 47,
+      "glossZh": "軍隊；戰爭；服兵役"
+    },
+    {
+      "ordinal": 48,
+      "glossZh": "軍隊；戰爭"
+    },
+    {
+      "ordinal": 49,
+      "glossZh": "聲音；響聲"
+    },
+    {
+      "ordinal": 50,
+      "glossZh": "頭；頂；首領"
+    },
+    {
+      "ordinal": 51,
+      "glossZh": "律法；教訓"
+    },
+    {
+      "ordinal": 52,
+      "glossZh": "父系祖先"
+    },
+    {
+      "ordinal": 53,
+      "glossZh": "房屋"
+    },
+    {
+      "ordinal": 54,
+      "glossZh": "兒子"
+    },
+    {
+      "ordinal": 55,
+      "glossZh": "日子"
+    },
+    {
+      "ordinal": 56,
+      "glossZh": "火"
+    },
+    {
+      "ordinal": 57,
+      "glossZh": "殿；宮廷"
+    },
+    {
+      "ordinal": 58,
+      "glossZh": "和；但；又；甚至；就"
+    },
+    {
+      "ordinal": 59,
+      "glossZh": "金"
+    },
+    {
+      "ordinal": 60,
+      "glossZh": "刀"
+    },
+    {
+      "ordinal": 61,
+      "glossZh": "活著；有生命"
+    },
+    {
+      "ordinal": 62,
+      "glossZh": "生命；一生"
+    },
+    {
+      "ordinal": 63,
+      "glossZh": "孩童；男孩；青年"
+    },
+    {
+      "ordinal": 64,
+      "glossZh": "海"
+    },
+    {
+      "ordinal": 65,
+      "glossZh": "大海； seas"
+    },
+    {
+      "ordinal": 66,
+      "glossZh": "銀；錢"
+    },
+    {
+      "ordinal": 67,
+      "glossZh": "如此；這裡"
+    },
+    {
+      "ordinal": 68,
+      "glossZh": "地方；位置"
+    },
+    {
+      "ordinal": 69,
+      "glossZh": "判決；決定；條例；法律；習俗；方式"
+    },
+    {
+      "ordinal": 70,
+      "glossZh": "祭壇"
+    },
+    {
+      "ordinal": 71,
+      "glossZh": "宣告；啟示"
+    },
+    {
+      "ordinal": 72,
+      "glossZh": "永遠；久遠"
+    },
+    {
+      "ordinal": 73,
+      "glossZh": "雲；雲層"
+    },
+    {
+      "ordinal": 74,
+      "glossZh": "靈；風；氣息 [F]"
+    },
+    {
+      "ordinal": 75,
+      "glossZh": "總管；統治者； princ"
+    }
+  ]
+}

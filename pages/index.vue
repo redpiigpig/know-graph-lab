@@ -170,6 +170,16 @@
             <span class="tool-badge tool-badge--ready">可用</span>
           </NuxtLink>
 
+          <!-- 旅遊日誌 -->
+          <NuxtLink :to="user ? '/travel' : '/login'" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
+            <div class="tool-icon bg-emerald-50 text-emerald-700">🧳</div>
+            <div class="flex-1">
+              <h2 class="tool-title">旅遊日誌</h2>
+              <p class="tool-desc">整理家庭旅程、每日行程與交通資訊</p>
+            </div>
+            <span class="tool-badge tool-badge--ready">可用</span>
+          </NuxtLink>
+
           <NuxtLink :to="user ? '/photos' : '/login'" class="tool-card group border-pink-100 hover:border-pink-300 hover:shadow-pink-100">
             <div class="tool-icon bg-pink-50 text-pink-600">📷</div>
             <div class="flex-1">

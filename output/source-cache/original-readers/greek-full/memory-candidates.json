@@ -1,0 +1,5461 @@
+{
+  "schemaVersion": "1.0.0",
+  "lessons": [
+    {
+      "lesson": 1,
+      "candidatesConsidered": 1859,
+      "top": [
+        {
+          "ref": "Phil.4.20",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αμην",
+            "δοξα",
+            "εγω",
+            "θεοσ",
+            "και"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 17.583
+        },
+        {
+          "ref": "2Tim.1.7",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αγαπη",
+            "εγω",
+            "θεοσ",
+            "και",
+            "πνευμα"
+          ],
+          "knownCoverage": 0.385,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 17.122
+        },
+        {
+          "ref": "Col.1.8",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "αγαπη",
+            "εγω",
+            "και",
+            "πνευμα"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 15.0
+        },
+        {
+          "ref": "Luke.1.47",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "εγω",
+            "θεοσ",
+            "και",
+            "πνευμα"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 14.833
+        },
+        {
+          "ref": "Acts.12.22",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "ανθρωποσ",
+            "θεοσ",
+            "και",
+            "φωνη"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 14.778
+        },
+        {
+          "ref": "Luke.12.9",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "αγγελοσ",
+            "ανθρωποσ",
+            "εγω",
+            "θεοσ"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 14.444
+        },
+        {
+          "ref": "Luke.2.14",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "ανθρωποσ",
+            "δοξα",
+            "θεοσ",
+            "και"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 14.433
+        },
+        {
+          "ref": "2Cor.1.22",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "εγω",
+            "και",
+            "καρδια",
+            "πνευμα"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 14.361
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "candidatesConsidered": 2485,
+      "top": [
+        {
+          "ref": "Matt.6.7",
+          "corpus": "new-testament",
+          "matchCount": 7,
+          "matchedTerms": [
+            "αυτοσ",
+            "γαρ",
+            "δε",
+            "εν",
+            "μη",
+            "ο",
+            "οτι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 23.5
+        },
+        {
+          "ref": "2Thess.2.6",
+          "corpus": "new-testament",
+          "matchCount": 6,
+          "matchedTerms": [
+            "αυτοσ",
+            "εισ",
+            "εν",
+            "καιροσ",
+            "νυν",
+            "ο"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 21.212
+        },
+        {
+          "ref": "1Thess.3.3",
+          "corpus": "new-testament",
+          "matchCount": 6,
+          "matchedTerms": [
+            "αυτοσ",
+            "γαρ",
+            "εισ",
+            "εν",
+            "ο",
+            "οτι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 20.583
+        },
+        {
+          "ref": "Phil.2.22",
+          "corpus": "new-testament",
+          "matchCount": 6,
+          "matchedTerms": [
+            "αυτοσ",
+            "δε",
+            "εισ",
+            "ευαγγελιον",
+            "ο",
+            "οτι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 20.5
+        },
+        {
+          "ref": "Matt.6.29",
+          "corpus": "new-testament",
+          "matchCount": 6,
+          "matchedTerms": [
+            "αυτοσ",
+            "δε",
+            "εισ",
+            "εν",
+            "ο",
+            "οτι"
+          ],
+          "knownCoverage": 0.467,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 19.667
+        },
+        {
+          "ref": "Phil.2.24",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αυτοσ",
+            "δε",
+            "εν",
+            "κυριοσ",
+            "οτι"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 18.667
+        },
+        {
+          "ref": "Luke.4.32",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αυτοσ",
+            "εν",
+            "εξουσια",
+            "ο",
+            "οτι"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 18.212
+        },
+        {
+          "ref": "Col.2.15",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αρχη",
+            "αυτοσ",
+            "εν",
+            "εξουσια",
+            "ο"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 18.067
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "candidatesConsidered": 1737,
+      "top": [
+        {
+          "ref": "Acts.2.16",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αλλα",
+            "δια",
+            "ειμι",
+            "λεγω",
+            "ουτοσ"
+          ],
+          "knownCoverage": 0.875,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 18.8
+        },
+        {
+          "ref": "Gal.4.7",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αλλα",
+            "δια",
+            "ειμι",
+            "υιοσ",
+            "ωστε"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 18.333
+        },
+        {
+          "ref": "John.5.34",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αλλα",
+            "ινα",
+            "λεγω",
+            "ουτοσ",
+            "συ"
+          ],
+          "knownCoverage": 0.643,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 18.155
+        },
+        {
+          "ref": "John.13.19",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "απο",
+            "ειμι",
+            "ινα",
+            "λεγω",
+            "συ"
+          ],
+          "knownCoverage": 0.615,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 18.045
+        },
+        {
+          "ref": "John.11.15",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "αλλα",
+            "δια",
+            "ειμι",
+            "ινα",
+            "συ"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 17.869
+        },
+        {
+          "ref": "Mark.11.24",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "δια",
+            "ειμι",
+            "λεγω",
+            "ουτοσ",
+            "συ"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 17.654
+        },
+        {
+          "ref": "Acts.21.23",
+          "corpus": "new-testament",
+          "matchCount": 5,
+          "matchedTerms": [
+            "απο",
+            "ειμι",
+            "λεγω",
+            "ουτοσ",
+            "συ"
+          ],
+          "knownCoverage": 0.429,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 17.298
+        },
+        {
+          "ref": "John.15.27",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "απο",
+            "ειμι",
+            "μετα",
+            "συ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 16.517
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "candidatesConsidered": 543,
+      "top": [
+        {
+          "ref": "John.15.12",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "αλληλων",
+            "εμοσ",
+            "εντολη",
+            "καθωσ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 16.35
+        },
+        {
+          "ref": "Rom.12.21",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αγαθοσ",
+            "κακοσ",
+            "υπο"
+          ],
+          "knownCoverage": 0.875,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 13.25
+        },
+        {
+          "ref": "John.14.15",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εαν",
+            "εμοσ",
+            "εντολη"
+          ],
+          "knownCoverage": 0.714,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 12.774
+        },
+        {
+          "ref": "John.13.35",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αλληλων",
+            "εαν",
+            "εμοσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.333
+        },
+        {
+          "ref": "Rom.7.12",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αγαθοσ",
+            "αγιοσ",
+            "εντολη"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.333
+        },
+        {
+          "ref": "John.13.34",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αλληλων",
+            "εντολη",
+            "καθωσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.167
+        },
+        {
+          "ref": "Eph.6.8",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αγαθοσ",
+            "δουλοσ",
+            "παρα"
+          ],
+          "knownCoverage": 0.429,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.214
+        },
+        {
+          "ref": "1John.2.3",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εαν",
+            "εντολη"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 9.95
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "candidatesConsidered": 1247,
+      "top": [
+        {
+          "ref": "1Cor.12.19",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "ει",
+            "εισ",
+            "πασ",
+            "σωμα"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 16.028
+        },
+        {
+          "ref": "1Cor.1.15",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εισ",
+            "ονομα",
+            "τισ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 13.517
+        },
+        {
+          "ref": "Mark.10.44",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αν",
+            "πασ",
+            "πρωτοσ"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 13.033
+        },
+        {
+          "ref": "Luke.10.5",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αν",
+            "εισ",
+            "πρωτοσ"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 12.75
+        },
+        {
+          "ref": "Luke.15.26",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αν",
+            "εισ",
+            "τισ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 12.717
+        },
+        {
+          "ref": "John.13.22",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εισ",
+            "περι",
+            "τισ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 12.667
+        },
+        {
+          "ref": "Rom.10.13",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αν",
+            "ονομα",
+            "πασ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 12.667
+        },
+        {
+          "ref": "Phil.4.21",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αδελφοσ",
+            "πασ",
+            "συν"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 12.659
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "candidatesConsidered": 492,
+      "top": [
+        {
+          "ref": "Luke.2.33",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "επι",
+            "μητηρ",
+            "πατηρ"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.783
+        },
+        {
+          "ref": "Luke.17.21",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ιδου",
+            "ουδε",
+            "ωδε"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.577
+        },
+        {
+          "ref": "Eph.4.6",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επι",
+            "πατηρ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.583
+        },
+        {
+          "ref": "Matt.6.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ουδε",
+            "πατηρ"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.783
+        },
+        {
+          "ref": "2Cor.9.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επι",
+            "χαρισ"
+          ],
+          "knownCoverage": 0.714,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 9.774
+        },
+        {
+          "ref": "Matt.19.16",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδασκαλοσ",
+            "ιδου"
+          ],
+          "knownCoverage": 0.786,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.726
+        },
+        {
+          "ref": "John.16.3",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ουδε",
+            "πατηρ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 9.717
+        },
+        {
+          "ref": "Eph.6.23",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "πατηρ",
+            "πιστισ"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.66
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "candidatesConsidered": 679,
+      "top": [
+        {
+          "ref": "John.20.10",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "εαυτου",
+            "μαθητησ",
+            "ουν",
+            "παλιν"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 16.262
+        },
+        {
+          "ref": "1John.3.7",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "δικαιοσυνη",
+            "εκεινοσ",
+            "μηδεισ"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.129
+        },
+        {
+          "ref": "Phil.2.28",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "καγω",
+            "ουν",
+            "παλιν"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 11.932
+        },
+        {
+          "ref": "Luke.10.23",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "μαθητησ",
+            "μακαριοσ",
+            "οφθαλμοσ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.833
+        },
+        {
+          "ref": "Acts.23.22",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "μεν",
+            "μηδεισ",
+            "ουν"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.786
+        },
+        {
+          "ref": "Acts.5.41",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "μεν",
+            "ουν",
+            "υπερ"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.654
+        },
+        {
+          "ref": "Mark.10.10",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μαθητησ",
+            "παλιν"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.433
+        },
+        {
+          "ref": "Matt.10.24",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μαθητησ",
+            "υπερ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.35
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "candidatesConsidered": 689,
+      "top": [
+        {
+          "ref": "2Pet.2.2",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "αληθεια",
+            "οδοσ",
+            "οσ",
+            "πολυσ"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 15.576
+        },
+        {
+          "ref": "Luke.8.4",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "κατα",
+            "πολισ",
+            "πολυσ"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 13.012
+        },
+        {
+          "ref": "Luke.2.29",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ειρηνη",
+            "κατα",
+            "ρημα"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 12.95
+        },
+        {
+          "ref": "John.6.2",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "οσ",
+            "πολυσ",
+            "σημειον"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.353
+        },
+        {
+          "ref": "Acts.2.43",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "πολυσ",
+            "σημειον",
+            "τε"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.353
+        },
+        {
+          "ref": "Acts.4.22",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "οσ",
+            "πολυσ",
+            "σημειον"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.269
+        },
+        {
+          "ref": "Rev.8.2",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ενωπιον",
+            "επτα",
+            "οσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.167
+        },
+        {
+          "ref": "1Cor.12.31",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "κατα",
+            "μεγασ",
+            "οδοσ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.0
+        }
+      ]
+    },
+    {
+      "lesson": 9,
+      "candidatesConsidered": 739,
+      "top": [
+        {
+          "ref": "John.18.21",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "λαλεω",
+            "οιδα"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 13.167
+        },
+        {
+          "ref": "John.10.20",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "δαιμονιον",
+            "εχω"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 13.023
+        },
+        {
+          "ref": "3John.1.4",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "εχω",
+            "χαρα"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.66
+        },
+        {
+          "ref": "Matt.15.12",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "οιδα",
+            "τοτε"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 11.883
+        },
+        {
+          "ref": "Luke.14.13",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "καλεω",
+            "οταν",
+            "τυφλοσ"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 11.778
+        },
+        {
+          "ref": "Acts.10.46",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "λαλεω",
+            "τοτε"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 11.717
+        },
+        {
+          "ref": "Acts.6.11",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ακουω",
+            "λαλεω",
+            "τοτε"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 11.3
+        },
+        {
+          "ref": "John.3.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εχω",
+            "πιστευω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 11.0
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "candidatesConsidered": 608,
+      "top": [
+        {
+          "ref": "Matt.22.2",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "βασιλευσ",
+            "οστισ",
+            "ποιεω"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.939
+        },
+        {
+          "ref": "1Thess.5.2",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ερχομαι",
+            "νυξ",
+            "ωσ"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.744
+        },
+        {
+          "ref": "Jas.2.10",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ολοσ",
+            "οστισ",
+            "τηρεω"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.744
+        },
+        {
+          "ref": "Luke.12.17",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "καρποσ",
+            "ποιεω",
+            "συναγω"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.7
+        },
+        {
+          "ref": "Matt.7.18",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "δυναμαι",
+            "καρποσ",
+            "ποιεω"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.467
+        },
+        {
+          "ref": "Luke.14.27",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "δυναμαι",
+            "ερχομαι",
+            "οστισ"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.269
+        },
+        {
+          "ref": "1Cor.4.18",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ερχομαι",
+            "ωσ"
+          ],
+          "knownCoverage": 0.889,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 10.556
+        },
+        {
+          "ref": "John.9.33",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δυναμαι",
+            "ποιεω"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.517
+        }
+      ]
+    },
+    {
+      "lesson": 11,
+      "candidatesConsidered": 539,
+      "top": [
+        {
+          "ref": "Acts.21.36",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αιρω",
+            "ακολουθεω",
+            "λαοσ"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 13.0
+        },
+        {
+          "ref": "Acts.26.8",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εγειρω",
+            "κρινω"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.517
+        },
+        {
+          "ref": "Matt.19.2",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ακολουθεω",
+            "εκει"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 10.429
+        },
+        {
+          "ref": "Matt.5.2",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδασκω",
+            "στομα"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.345
+        },
+        {
+          "ref": "Matt.9.19",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ακολουθεω",
+            "εγειρω"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.345
+        },
+        {
+          "ref": "Matt.28.17",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "οραω",
+            "προσκυνεω"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.262
+        },
+        {
+          "ref": "Luke.20.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αποκτεινω",
+            "εκβαλλω"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.136
+        },
+        {
+          "ref": "3John.1.14",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "οραω",
+            "στομα"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.028
+        }
+      ]
+    },
+    {
+      "lesson": 12,
+      "candidatesConsidered": 607,
+      "top": [
+        {
+          "ref": "Luke.12.49",
+          "corpus": "new-testament",
+          "matchCount": 4,
+          "matchedTerms": [
+            "βαλλω",
+            "γη",
+            "θελω",
+            "πυρ"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 16.417
+        },
+        {
+          "ref": "Rom.6.2",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "αποθνησκω",
+            "γινομαι",
+            "ετι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 13.833
+        },
+        {
+          "ref": "Luke.22.40",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "γινομαι",
+            "εισερχομαι",
+            "προσευχομαι"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 13.417
+        },
+        {
+          "ref": "Luke.15.28",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εισερχομαι",
+            "εξερχομαι",
+            "θελω"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.576
+        },
+        {
+          "ref": "Matt.25.18",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "απερχομαι",
+            "γη",
+            "λαμβανω"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.5
+        },
+        {
+          "ref": "Matt.18.30",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "απερχομαι",
+            "βαλλω",
+            "θελω"
+          ],
+          "knownCoverage": 0.714,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 12.357
+        },
+        {
+          "ref": "Mark.1.35",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "απερχομαι",
+            "εξερχομαι",
+            "προσευχομαι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 11.667
+        },
+        {
+          "ref": "Mark.14.39",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "απερχομαι",
+            "προσευχομαι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.917
+        }
+      ]
+    },
+    {
+      "lesson": 13,
+      "candidatesConsidered": 346,
+      "top": [
+        {
+          "ref": "Mark.15.8",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αιτεω",
+            "αναβαινω"
+          ],
+          "knownCoverage": 0.889,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 10.556
+        },
+        {
+          "ref": "John.11.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αγω",
+            "χαιρω"
+          ],
+          "knownCoverage": 0.929,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.298
+        },
+        {
+          "ref": "Mark.3.13",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αναβαινω",
+            "οροσ"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.22
+        },
+        {
+          "ref": "3John.1.3",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μαρτυρεω",
+            "χαιρω"
+          ],
+          "knownCoverage": 0.923,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.192
+        },
+        {
+          "ref": "Eph.3.13",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αιτεω",
+            "διο"
+          ],
+          "knownCoverage": 0.846,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.968
+        },
+        {
+          "ref": "Rom.5.9",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αιμα",
+            "μαλλον"
+          ],
+          "knownCoverage": 0.846,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.885
+        },
+        {
+          "ref": "Mark.7.36",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "κηρυσσω",
+            "μαλλον"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.856
+        },
+        {
+          "ref": "Matt.9.8",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δοξαζω",
+            "φοβεομαι"
+          ],
+          "knownCoverage": 0.833,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.833
+        }
+      ]
+    },
+    {
+      "lesson": 14,
+      "candidatesConsidered": 582,
+      "top": [
+        {
+          "ref": "Luke.3.18",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ετεροσ",
+            "ευαγγελιζω",
+            "παρακαλεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 14.0
+        },
+        {
+          "ref": "Matt.7.29",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "γραμματευσ",
+            "ου"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.667
+        },
+        {
+          "ref": "1Cor.14.29",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δυο",
+            "τρεισ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.517
+        },
+        {
+          "ref": "Acts.9.9",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ου",
+            "τρεισ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.433
+        },
+        {
+          "ref": "Mark.2.6",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "γραμματευσ",
+            "καθημαι"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.333
+        },
+        {
+          "ref": "Rev.5.7",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δεξιοσ",
+            "καθημαι"
+          ],
+          "knownCoverage": 0.889,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.306
+        },
+        {
+          "ref": "Matt.18.5",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δεχομαι",
+            "παιδιον"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.303
+        },
+        {
+          "ref": "Luke.15.28",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ου",
+            "παρακαλεω"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.303
+        }
+      ]
+    },
+    {
+      "lesson": 15,
+      "candidatesConsidered": 373,
+      "top": [
+        {
+          "ref": "John.4.33",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εσθιω",
+            "φερω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.833
+        },
+        {
+          "ref": "1Cor.10.31",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ειτε",
+            "εσθιω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.667
+        },
+        {
+          "ref": "Matt.9.8",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδωμι",
+            "τοιουτοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.5
+        },
+        {
+          "ref": "Matt.5.31",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "απολυω",
+            "διδωμι"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.433
+        },
+        {
+          "ref": "Rev.21.26",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εθνοσ",
+            "φερω"
+          ],
+          "knownCoverage": 0.875,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.333
+        },
+        {
+          "ref": "Mark.5.43",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδωμι",
+            "εσθιω"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.303
+        },
+        {
+          "ref": "Luke.12.51",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδωμι",
+            "δοκεω"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.012
+        },
+        {
+          "ref": "Matt.14.16",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδωμι",
+            "εσθιω"
+          ],
+          "knownCoverage": 0.833,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.0
+        }
+      ]
+    },
+    {
+      "lesson": 16,
+      "candidatesConsidered": 250,
+      "top": [
+        {
+          "ref": "Luke.4.39",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "ανιστημι",
+            "αφιημι",
+            "διακονεω"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.833
+        },
+        {
+          "ref": "Mark.12.23",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αναστασισ",
+            "ανιστημι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.5
+        },
+        {
+          "ref": "Luke.8.20",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "απαγγελλω",
+            "ιστημι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.5
+        },
+        {
+          "ref": "1Tim.5.20",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αμαρτανω",
+            "φοβοσ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.433
+        },
+        {
+          "ref": "Matt.4.11",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αφιημι",
+            "διακονεω"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.35
+        },
+        {
+          "ref": "Heb.1.14",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διακονια",
+            "σωτηρια"
+          ],
+          "knownCoverage": 0.846,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.051
+        },
+        {
+          "ref": "Luke.18.28",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αφιημι",
+            "ιδιοσ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 9.733
+        },
+        {
+          "ref": "Mark.1.31",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αφιημι",
+            "διακονεω"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.7
+        }
+      ]
+    },
+    {
+      "lesson": 17,
+      "candidatesConsidered": 211,
+      "top": [
+        {
+          "ref": "Matt.18.30",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αποδιδωμι",
+            "φυλακη"
+          ],
+          "knownCoverage": 0.929,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.214
+        },
+        {
+          "ref": "Acts.4.35",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "τιθημι",
+            "χρεια"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.929
+        },
+        {
+          "ref": "Rev.2.25",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αχρι",
+            "κρατεω"
+          ],
+          "knownCoverage": 0.714,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 9.774
+        },
+        {
+          "ref": "1Cor.15.25",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αχρι",
+            "τιθημι"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.583
+        },
+        {
+          "ref": "Matt.17.26",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αρα",
+            "φημι"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.269
+        },
+        {
+          "ref": "Mark.1.12",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ερημοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Luke.24.36",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μεσοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "John.9.12",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "που"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        }
+      ]
+    },
+    {
+      "lesson": 18,
+      "candidatesConsidered": 218,
+      "top": [
+        {
+          "ref": "Matt.22.39",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "δευτεροσ",
+            "ομοιοσ",
+            "σεαυτου"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 13.517
+        },
+        {
+          "ref": "Luke.17.25",
+          "corpus": "new-testament",
+          "matchCount": 3,
+          "matchedTerms": [
+            "γενεα",
+            "δεω",
+            "πασχω"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 13.417
+        },
+        {
+          "ref": "Luke.24.26",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δεω",
+            "πασχω"
+          ],
+          "knownCoverage": 0.909,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.386
+        },
+        {
+          "ref": "Luke.7.31",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "γενεα",
+            "ομοιοσ"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.35
+        },
+        {
+          "ref": "Acts.9.16",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δεω",
+            "πασχω"
+          ],
+          "knownCoverage": 0.9,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.35
+        },
+        {
+          "ref": "Mark.12.31",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δευτεροσ",
+            "σεαυτου"
+          ],
+          "knownCoverage": 0.923,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.276
+        },
+        {
+          "ref": "Rev.11.14",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "δευτεροσ",
+            "ουαι"
+          ],
+          "knownCoverage": 0.875,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.25
+        },
+        {
+          "ref": "Luke.9.6",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διερχομαι",
+            "θεραπευω"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.117
+        }
+      ]
+    },
+    {
+      "lesson": 19,
+      "candidatesConsidered": 191,
+      "top": [
+        {
+          "ref": "Rom.3.28",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "λογιζομαι",
+            "χωρισ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.917
+        },
+        {
+          "ref": "Luke.11.47",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μνημειον",
+            "οικοδομεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.583
+        },
+        {
+          "ref": "John.11.17",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μνημειον",
+            "τεσσαρεσ"
+          ],
+          "knownCoverage": 0.917,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.333
+        },
+        {
+          "ref": "Rev.5.4",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αξιοσ",
+            "κλαιω"
+          ],
+          "knownCoverage": 0.929,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.298
+        },
+        {
+          "ref": "Mark.6.5",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επιτιθημι",
+            "ολιγοσ"
+          ],
+          "knownCoverage": 0.933,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.233
+        },
+        {
+          "ref": "Rom.4.4",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εργαζομαι",
+            "λογιζομαι"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 9.95
+        },
+        {
+          "ref": "Mark.8.7",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ευλογεω",
+            "ολιγοσ"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 9.944
+        },
+        {
+          "ref": "Acts.28.10",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επιτιθημι",
+            "τιμη"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 9.939
+        }
+      ]
+    },
+    {
+      "lesson": 20,
+      "candidatesConsidered": 180,
+      "top": [
+        {
+          "ref": "1Cor.14.17",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ευχαριστεω",
+            "καλωσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.917
+        },
+        {
+          "ref": "Jas.1.14",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επιθυμια",
+            "πειραζω"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.117
+        },
+        {
+          "ref": "Jas.4.7",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διαβολοσ",
+            "υποτασσω"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.023
+        },
+        {
+          "ref": "Acts.3.17",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αρχων",
+            "πρασσω"
+          ],
+          "knownCoverage": 0.833,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 10.0
+        },
+        {
+          "ref": "Matt.4.1",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διαβολοσ",
+            "πειραζω"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.783
+        },
+        {
+          "ref": "Matt.12.12",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "καλωσ",
+            "προβατον"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 9.742
+        },
+        {
+          "ref": "Luke.20.39",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καλωσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Mark.12.27",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλαναω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        }
+      ]
+    },
+    {
+      "lesson": 21,
+      "candidatesConsidered": 145,
+      "top": [
+        {
+          "ref": "Matt.24.18",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επιστρεφω",
+            "οπισω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.75
+        },
+        {
+          "ref": "Mark.13.16",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "επιστρεφω",
+            "οπισω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 10.583
+        },
+        {
+          "ref": "1Tim.5.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "οπισω",
+            "σατανασ"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 9.562
+        },
+        {
+          "ref": "Luke.7.33",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "μητε",
+            "οινοσ"
+          ],
+          "knownCoverage": 0.867,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 9.267
+        },
+        {
+          "ref": "Matt.3.2",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μετανοεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Matt.9.3",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βλασφημεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Matt.21.22",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "προσευχη"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "1Cor.12.14",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μελοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        }
+      ]
+    },
+    {
+      "lesson": 22,
+      "candidatesConsidered": 147,
+      "top": [
+        {
+          "ref": "Rom.8.25",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ελπιζω",
+            "υπομονη"
+          ],
+          "knownCoverage": 0.889,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 10.556
+        },
+        {
+          "ref": "Matt.10.8",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ασθενεω",
+            "καθαριζω"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 10.023
+        },
+        {
+          "ref": "2Cor.13.9",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ασθενεω",
+            "δυνατοσ"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 9.929
+        },
+        {
+          "ref": "Matt.26.70",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αρνεομαι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Luke.22.57",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αρνεομαι"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "3John.1.14",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ελπιζω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Matt.22.36",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ποιοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.833
+        },
+        {
+          "ref": "1Cor.15.35",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ποιοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.833
+        }
+      ]
+    },
+    {
+      "lesson": 23,
+      "candidatesConsidered": 114,
+      "top": [
+        {
+          "ref": "Luke.11.21",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ισχυροσ",
+            "φυλασσω"
+          ],
+          "knownCoverage": 0.833,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.917
+        },
+        {
+          "ref": "Rev.2.15",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδαχη",
+            "ομοιωσ"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 9.411
+        },
+        {
+          "ref": "2Tim.4.2",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "διδαχη",
+            "επιτιμαω"
+          ],
+          "knownCoverage": 0.643,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 9.155
+        },
+        {
+          "ref": "Rom.10.13",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επικαλεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Matt.22.26",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ομοιωσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Mark.8.30",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επιτιμαω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Luke.13.3",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ομοιωσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Acts.2.21",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επικαλεω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        }
+      ]
+    },
+    {
+      "lesson": 24,
+      "candidatesConsidered": 106,
+      "top": [
+        {
+          "ref": "Luke.6.24",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "παρακλησισ",
+            "πλουσιοσ"
+          ],
+          "knownCoverage": 0.875,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 10.417
+        },
+        {
+          "ref": "Jas.1.10",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "παρερχομαι",
+            "πλουσιοσ"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 9.659
+        },
+        {
+          "ref": "Matt.11.6",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκανδαλιζω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Luke.7.23",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκανδαλιζω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Matt.24.10",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκανδαλιζω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Luke.22.13",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πασχα"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Col.3.7",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ποτε"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "3John.1.15",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "φιλοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.833
+        }
+      ]
+    },
+    {
+      "lesson": 25,
+      "candidatesConsidered": 126,
+      "top": [
+        {
+          "ref": "Luke.14.27",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "βασταζω",
+            "σταυροσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 10.5
+        },
+        {
+          "ref": "2Cor.5.3",
+          "corpus": "new-testament",
+          "matchCount": 2,
+          "matchedTerms": [
+            "γε",
+            "ενδυω"
+          ],
+          "knownCoverage": 0.857,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.262
+        },
+        {
+          "ref": "Rom.3.6",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επει"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 8.0
+        },
+        {
+          "ref": "Matt.5.8",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καθαροσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Matt.7.20",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "γε"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Matt.23.36",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ηκω"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "Mark.8.5",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ποσοσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        },
+        {
+          "ref": "John.15.3",
+          "corpus": "new-testament",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καθαροσ"
+          ],
+          "knownCoverage": 1.0,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.917
+        }
+      ]
+    },
+    {
+      "lesson": 26,
+      "candidatesConsidered": 858,
+      "top": [
+        {
+          "ref": "PssSol.5.3",
+          "corpus": "pseudepigrapha",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εμου",
+            "με",
+            "σε"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 12.917
+        },
+        {
+          "ref": "Jer.33.14",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "μοι",
+            "υμιν",
+            "υμων"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.85
+        },
+        {
+          "ref": "Isa.54.15",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εμου",
+            "σε",
+            "σοι"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.448
+        },
+        {
+          "ref": "Jer.49.12",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "υμασ",
+            "υμιν",
+            "υμων"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 12.365
+        },
+        {
+          "ref": "Jer.34.8",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "υμασ",
+            "υμιν",
+            "υμων"
+          ],
+          "knownCoverage": 0.462,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 12.113
+        },
+        {
+          "ref": "Deut.11.27",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "εντελλομαι",
+            "υμιν",
+            "υμων"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 11.7
+        },
+        {
+          "ref": "Gen.46.33",
+          "corpus": "septuagint",
+          "matchCount": 3,
+          "matchedTerms": [
+            "υμασ",
+            "υμιν",
+            "υμων"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 11.021
+        },
+        {
+          "ref": "Deut.3.22",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ημων",
+            "υμων"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 10.706
+        }
+      ]
+    },
+    {
+      "lesson": 27,
+      "candidatesConsidered": 167,
+      "top": [
+        {
+          "ref": "Jdt.2.18",
+          "corpus": "deuterocanonical",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αργυριον",
+            "σφοδρα"
+          ],
+          "knownCoverage": 0.417,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 8.85
+        },
+        {
+          "ref": "Gen.50.9",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "παρεμβολη",
+            "σφοδρα"
+          ],
+          "knownCoverage": 0.364,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 8.638
+        },
+        {
+          "ref": "Ps.6.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σφοδρα"
+          ],
+          "knownCoverage": 0.8,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.633
+        },
+        {
+          "ref": "1Kgs.14.30",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ανα",
+            "πολεμοσ"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 7.467
+        },
+        {
+          "ref": "Isa.52.13",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σφοδρα"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.183
+        },
+        {
+          "ref": "Gen.26.13",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σφοδρα"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.176
+        },
+        {
+          "ref": "Ps.117.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ισχυσ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 7.15
+        },
+        {
+          "ref": "Ezek.6.10",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διοτι"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 7.017
+        }
+      ]
+    },
+    {
+      "lesson": 28,
+      "candidatesConsidered": 153,
+      "top": [
+        {
+          "ref": "Ps.142.4",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εμε",
+            "εμοι"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 9.933
+        },
+        {
+          "ref": "Ps.54.5",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εμε",
+            "εμοι"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 9.683
+        },
+        {
+          "ref": "Ezek.41.10",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εικοσι",
+            "κυκλω"
+          ],
+          "knownCoverage": 0.308,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 8.497
+        },
+        {
+          "ref": "Prov.8.19",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εμε",
+            "χρυσιον"
+          ],
+          "knownCoverage": 0.333,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 8.433
+        },
+        {
+          "ref": "Ezek.40.14",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "εικοσι",
+            "κυκλω"
+          ],
+          "knownCoverage": 0.25,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 8.183
+        },
+        {
+          "ref": "Prov.11.31",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ασεβησ"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 7.259
+        },
+        {
+          "ref": "Jer.26.7",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ποταμοσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.183
+        },
+        {
+          "ref": "Prov.22.1",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "χρυσιον"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.036
+        }
+      ]
+    },
+    {
+      "lesson": 29,
+      "candidatesConsidered": 66,
+      "top": [
+        {
+          "ref": "Ezek.46.15",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "ελαιον",
+            "ολοκαυτωμα"
+          ],
+          "knownCoverage": 0.364,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 8.555
+        },
+        {
+          "ref": "Isa.21.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ανομια"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.767
+        },
+        {
+          "ref": "Prov.21.31",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ιπποσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Ps.91.16",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αδικια"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.469
+        },
+        {
+          "ref": "Ps.15.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κληρονομια"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.337
+        },
+        {
+          "ref": "Ps.108.24",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ελαιον"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Ps.112.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υψηλοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Jdt.1.16",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "εκατον"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        }
+      ]
+    },
+    {
+      "lesson": 30,
+      "candidatesConsidered": 84,
+      "top": [
+        {
+          "ref": "Gen.11.1",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "χειλοσ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.233
+        },
+        {
+          "ref": "Ps.87.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πρωι"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.933
+        },
+        {
+          "ref": "Prov.16.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σοφοσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Ps.17.30",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "τειχοσ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Ps.30.13",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ωσει"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "1En.89.48",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κριοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Exod.16.21",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πρωι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Prov.13.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σοφοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        }
+      ]
+    },
+    {
+      "lesson": 31,
+      "candidatesConsidered": 46,
+      "top": [
+        {
+          "ref": "Prov.8.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βουλη"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.886
+        },
+        {
+          "ref": "Sir.37.16",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βουλη"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Prov.20.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βουλη"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Ps.108.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αντι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Ps.110.1",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βουλη"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Prov.5.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αλλοτριοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Sir.25.5",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βουλη"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Deut.32.12",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αλλοτριοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        }
+      ]
+    },
+    {
+      "lesson": 32,
+      "candidatesConsidered": 68,
+      "top": [
+        {
+          "ref": "Prov.14.29",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.317
+        },
+        {
+          "ref": "Prov.21.15",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευφροσυνη"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Sir.20.7",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.683
+        },
+        {
+          "ref": "Prov.13.16",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Sir.21.23",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Sir.27.11",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Ps.91.7",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αφρων"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Sir.13.8",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευφροσυνη"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        }
+      ]
+    },
+    {
+      "lesson": 33,
+      "candidatesConsidered": 23,
+      "top": [
+        {
+          "ref": "Sir.25.19",
+          "corpus": "deuterocanonical",
+          "matchCount": 2,
+          "matchedTerms": [
+            "κακια",
+            "κληροσ"
+          ],
+          "knownCoverage": 0.3,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 8.717
+        },
+        {
+          "ref": "Prov.14.32",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κακια"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.683
+        },
+        {
+          "ref": "Wis.7.30",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κακια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Ps.121.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ενεκα"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.448
+        },
+        {
+          "ref": "Ps.96.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "νεφελη"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.35
+        },
+        {
+          "ref": "Sir.19.6",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κακια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.35
+        },
+        {
+          "ref": "Gen.49.3",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πρωτοτοκοσ"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.282
+        },
+        {
+          "ref": "Wis.5.5",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κληροσ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.168
+        }
+      ]
+    },
+    {
+      "lesson": 34,
+      "candidatesConsidered": 83,
+      "top": [
+        {
+          "ref": "Prov.15.26",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αδικοσ",
+            "βδελυγμα"
+          ],
+          "knownCoverage": 0.375,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 9.017
+        },
+        {
+          "ref": "Isa.13.3",
+          "corpus": "septuagint",
+          "matchCount": 2,
+          "matchedTerms": [
+            "αμα",
+            "συντασσω"
+          ],
+          "knownCoverage": 0.385,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 8.638
+        },
+        {
+          "ref": "Prov.14.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αδικοσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.1
+        },
+        {
+          "ref": "Ps.82.19",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υψιστοσ"
+          ],
+          "knownCoverage": 0.714,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 7.04
+        },
+        {
+          "ref": "Ps.46.3",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υψιστοσ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.917
+        },
+        {
+          "ref": "Ps.88.22",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βραχιων"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.895
+        },
+        {
+          "ref": "Ps.7.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υψοσ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.833
+        },
+        {
+          "ref": "Prov.2.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "συνεσισ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.833
+        }
+      ]
+    },
+    {
+      "lesson": 35,
+      "candidatesConsidered": 29,
+      "top": [
+        {
+          "ref": "Gen.27.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καθα"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.711
+        },
+        {
+          "ref": "Prov.19.19",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ψευδησ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.317
+        },
+        {
+          "ref": "Ps.32.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ψευδησ"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Prov.21.28",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ψευδησ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Sir.39.11",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "χιλιοι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Wis.8.10",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "νεοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.35
+        },
+        {
+          "ref": "Ps.74.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κερασ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Prov.19.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ψευδησ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        }
+      ]
+    },
+    {
+      "lesson": 36,
+      "candidatesConsidered": 53,
+      "top": [
+        {
+          "ref": "Prov.22.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλουτοσ"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.517
+        },
+        {
+          "ref": "Sir.28.21",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αδησ"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.433
+        },
+        {
+          "ref": "Prov.22.1",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλουτοσ"
+          ],
+          "knownCoverage": 0.769,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.344
+        },
+        {
+          "ref": "Prov.8.18",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλουτοσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Exod.16.21",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ηνικα"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.917
+        },
+        {
+          "ref": "Wis.5.8",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλουτοσ"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        },
+        {
+          "ref": "Sir.13.24",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πλουτοσ"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.469
+        },
+        {
+          "ref": "Sir.39.22",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευλογια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        }
+      ]
+    },
+    {
+      "lesson": 37,
+      "candidatesConsidered": 30,
+      "top": [
+        {
+          "ref": "Prov.18.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πηγη"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Sir.20.30",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "θησαυροσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Ps.35.10",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πηγη"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Sir.21.13",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πηγη"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        },
+        {
+          "ref": "Prov.13.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πηγη"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Prov.10.11",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πηγη"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.117
+        },
+        {
+          "ref": "1Kgs.4.24",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κυκλοθεν"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.1
+        },
+        {
+          "ref": "Sir.41.14",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "θησαυροσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.1
+        }
+      ]
+    },
+    {
+      "lesson": 38,
+      "candidatesConsidered": 10,
+      "top": [
+        {
+          "ref": "Ps.118.80",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμωμοσ"
+          ],
+          "knownCoverage": 0.615,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.728
+        },
+        {
+          "ref": "Deut.28.43",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "προσηλυτοσ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.667
+        },
+        {
+          "ref": "1Kgs.6.19",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μηκοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Sir.13.16",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "γενοσ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        },
+        {
+          "ref": "Sir.40.19",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμωμοσ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.168
+        },
+        {
+          "ref": "Ps.14.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμωμοσ"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.117
+        },
+        {
+          "ref": "Prov.20.7",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμωμοσ"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.117
+        },
+        {
+          "ref": "Ps.17.24",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμωμοσ"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.033
+        }
+      ]
+    },
+    {
+      "lesson": 39,
+      "candidatesConsidered": 39,
+      "top": [
+        {
+          "ref": "Ps.54.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ηγεμων"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.1
+        },
+        {
+          "ref": "Gen.9.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κρεασ"
+          ],
+          "knownCoverage": 0.571,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.719
+        },
+        {
+          "ref": "Ps.140.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "θυμιαμα"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.337
+        },
+        {
+          "ref": "Sir.28.26",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κατεναντι"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.294
+        },
+        {
+          "ref": "Ps.64.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευχη"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 6.133
+        },
+        {
+          "ref": "Sir.21.9",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "συντελεια"
+          ],
+          "knownCoverage": 0.4,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.117
+        },
+        {
+          "ref": "Ps.25.3",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κατεναντι"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.1
+        },
+        {
+          "ref": "Ps.71.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υετοσ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.085
+        }
+      ]
+    },
+    {
+      "lesson": 40,
+      "candidatesConsidered": 73,
+      "top": [
+        {
+          "ref": "Ps.108.22",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πενησ"
+          ],
+          "knownCoverage": 0.818,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.539
+        },
+        {
+          "ref": "Ps.142.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διαψαλμα"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.953
+        },
+        {
+          "ref": "Ps.88.38",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διαψαλμα"
+          ],
+          "knownCoverage": 0.643,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.671
+        },
+        {
+          "ref": "Ps.49.15",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διαψαλμα"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.667
+        },
+        {
+          "ref": "Ps.7.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονοσ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Sir.27.28",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ονειδισμοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Ps.54.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διαψαλμα"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.378
+        },
+        {
+          "ref": "Ps.81.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "διαψαλμα"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.378
+        }
+      ]
+    },
+    {
+      "lesson": 41,
+      "candidatesConsidered": 43,
+      "top": [
+        {
+          "ref": "PssSol.9.13",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αισχυνη"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.267
+        },
+        {
+          "ref": "Sir.4.21",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αισχυνη"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.933
+        },
+        {
+          "ref": "PssSol.6.9",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευλογητοσ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.917
+        },
+        {
+          "ref": "Ps.60.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πυργοσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "PssSol.10.3",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παιδεια"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Sir.1.27",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παιδεια"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.812
+        },
+        {
+          "ref": "Prov.16.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παιδεια"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        },
+        {
+          "ref": "Sir.4.24",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παιδεια"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        }
+      ]
+    },
+    {
+      "lesson": 42,
+      "candidatesConsidered": 23,
+      "top": [
+        {
+          "ref": "Sir.19.23",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονηρια"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Ps.72.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονηρια"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        },
+        {
+          "ref": "Sir.42.13",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονηρια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Sir.42.14",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονηρια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Ps.108.9",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "χηρα"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.294
+        },
+        {
+          "ref": "Ps.32.22",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καθαπερ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        },
+        {
+          "ref": "Jer.31.16",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "πονηρια"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 6.122
+        },
+        {
+          "ref": "Ps.7.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κενοσ"
+          ],
+          "knownCoverage": 0.462,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.113
+        }
+      ]
+    },
+    {
+      "lesson": 43,
+      "candidatesConsidered": 31,
+      "top": [
+        {
+          "ref": "Prov.10.24",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "απωλεια"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Jer.15.12",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σιδηροσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Jer.12.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "απωλεια"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        },
+        {
+          "ref": "Wis.14.9",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ασεβεια"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        },
+        {
+          "ref": "Prov.10.11",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "απωλεια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Prov.11.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ασεβεια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Wis.1.13",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "απωλεια"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        },
+        {
+          "ref": "Deut.31.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "καθοτι"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.211
+        }
+      ]
+    },
+    {
+      "lesson": 44,
+      "candidatesConsidered": 25,
+      "top": [
+        {
+          "ref": "PssSol.8.5",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οσφυσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Sir.24.20",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μνημοσυνον"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Ps.111.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μνημοσυνον"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Sir.24.17",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "αμπελοσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Prov.20.17",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ζυγοσ"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        },
+        {
+          "ref": "PssSol.13.10",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μνημοσυνον"
+          ],
+          "knownCoverage": 0.455,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.252
+        },
+        {
+          "ref": "PssSol.2.19",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μνημοσυνον"
+          ],
+          "knownCoverage": 0.533,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.233
+        },
+        {
+          "ref": "Sir.28.20",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ζυγοσ"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.128
+        }
+      ]
+    },
+    {
+      "lesson": 45,
+      "candidatesConsidered": 33,
+      "top": [
+        {
+          "ref": "Isa.5.16",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σαβαωθ"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 7.092
+        },
+        {
+          "ref": "Prov.21.31",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθεια"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.917
+        },
+        {
+          "ref": "Ps.23.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κραταιοσ"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.869
+        },
+        {
+          "ref": "Sir.24.20",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μελι"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 6.85
+        },
+        {
+          "ref": "Ps.43.26",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "γαστηρ"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.667
+        },
+        {
+          "ref": "Sir.46.3",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "προτερον"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Prov.24.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθεια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Isa.47.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σαβαωθ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [
+            "proper_names"
+          ],
+          "score": 6.567
+        }
+      ]
+    },
+    {
+      "lesson": 46,
+      "candidatesConsidered": 46,
+      "top": [
+        {
+          "ref": "PssSol.17.22",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κριτησ"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 0.583,
+          "memorabilityFlags": [],
+          "score": 7.294
+        },
+        {
+          "ref": "Ps.74.8",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κριτησ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        },
+        {
+          "ref": "Sir.16.22",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μακραν"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.656
+        },
+        {
+          "ref": "Sir.24.32",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "μακραν"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.615
+        },
+        {
+          "ref": "Ps.118.169",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "λογιον"
+          ],
+          "knownCoverage": 0.615,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.562
+        },
+        {
+          "ref": "Gen.26.23",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "φρεαρ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Ps.118.107",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "λογιον"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        },
+        {
+          "ref": "Prov.23.27",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "φρεαρ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.517
+        }
+      ]
+    },
+    {
+      "lesson": 47,
+      "candidatesConsidered": 19,
+      "top": [
+        {
+          "ref": "Prov.11.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υβρισ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.683
+        },
+        {
+          "ref": "Gen.49.3",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκληροσ"
+          ],
+          "knownCoverage": 0.636,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.645
+        },
+        {
+          "ref": "Ps.101.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κραυγη"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        },
+        {
+          "ref": "Sir.21.4",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υβρισ"
+          ],
+          "knownCoverage": 0.444,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.378
+        },
+        {
+          "ref": "Ps.48.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "κλινω"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.35
+        },
+        {
+          "ref": "Ezek.41.14",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ευροσ"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.267
+        },
+        {
+          "ref": "Isa.48.4",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκληροσ"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.5,
+          "memorabilityFlags": [],
+          "score": 6.254
+        },
+        {
+          "ref": "Prov.16.18",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "υβρισ"
+          ],
+          "knownCoverage": 0.429,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.231
+        }
+      ]
+    },
+    {
+      "lesson": 48,
+      "candidatesConsidered": 39,
+      "top": [
+        {
+          "ref": "Prov.3.32",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παρανομοσ"
+          ],
+          "knownCoverage": 0.727,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.342
+        },
+        {
+          "ref": "Ps.117.6",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.267
+        },
+        {
+          "ref": "Ps.29.11",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.1
+        },
+        {
+          "ref": "Ps.45.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.692,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.036
+        },
+        {
+          "ref": "Ps.117.7",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Prov.23.28",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "παρανομοσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Ps.70.7",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Ps.32.20",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "βοηθοσ"
+          ],
+          "knownCoverage": 0.545,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.532
+        }
+      ]
+    },
+    {
+      "lesson": 49,
+      "candidatesConsidered": 61,
+      "top": [
+        {
+          "ref": "PssSol.18.11",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ενδοξοσ"
+          ],
+          "knownCoverage": 0.778,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.711
+        },
+        {
+          "ref": "PssSol.10.3",
+          "corpus": "pseudepigrapha",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οδουσ"
+          ],
+          "knownCoverage": 0.667,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 7.267
+        },
+        {
+          "ref": "Prov.6.12",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οδουσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Prov.11.5",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οδουσ"
+          ],
+          "knownCoverage": 0.625,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 7.017
+        },
+        {
+          "ref": "Prov.7.25",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οδουσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Prov.4.11",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "οδουσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        },
+        {
+          "ref": "Sir.10.22",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ενδοξοσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 0.917,
+          "memorabilityFlags": [],
+          "score": 6.739
+        },
+        {
+          "ref": "Sir.19.22",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "επιστημη"
+          ],
+          "knownCoverage": 0.6,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.667
+        }
+      ]
+    },
+    {
+      "lesson": 50,
+      "candidatesConsidered": 22,
+      "top": [
+        {
+          "ref": "Ps.37.18",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ετοιμοσ"
+          ],
+          "knownCoverage": 0.75,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 7.267
+        },
+        {
+          "ref": "Ps.92.2",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ετοιμοσ"
+          ],
+          "knownCoverage": 0.7,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 7.233
+        },
+        {
+          "ref": "Prov.12.23",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "συνετοσ"
+          ],
+          "knownCoverage": 0.556,
+          "lengthFit": 1.0,
+          "memorabilityFlags": [],
+          "score": 6.822
+        },
+        {
+          "ref": "Ps.16.12",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ετοιμοσ"
+          ],
+          "knownCoverage": 0.583,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.6
+        },
+        {
+          "ref": "Ps.43.20",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Ps.101.12",
+          "corpus": "septuagint",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σκια"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.833,
+          "memorabilityFlags": [],
+          "score": 6.433
+        },
+        {
+          "ref": "Sir.26.15",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "σταθμοσ"
+          ],
+          "knownCoverage": 0.538,
+          "lengthFit": 0.667,
+          "memorabilityFlags": [],
+          "score": 6.421
+        },
+        {
+          "ref": "Wis.3.15",
+          "corpus": "deuterocanonical",
+          "matchCount": 1,
+          "matchedTerms": [
+            "ριζα"
+          ],
+          "knownCoverage": 0.5,
+          "lengthFit": 0.75,
+          "memorabilityFlags": [],
+          "score": 6.35
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2667 @@
+{
+  "source": {
+    "drive_file_id": "1ZESGF_oLVtTPwoeJZkWgsXnPc79vwNev",
+    "title": "張辰瑋，博士論文研究計畫.pdf",
+    "modified_time": "2026-06-25T04:54:01.444Z",
+    "reference_count": 252
+  },
+  "drive_root": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館",
+  "file_count_scanned": 1737,
+  "threshold": 0.76,
+  "matched_count": 4,
+  "missing_count": 248,
+  "db_matched_count": 11,
+  "references": [
+    {
+      "index": 1,
+      "title": "丁光訓文集：當代中國基督教發言人",
+      "citation": "丁光訓（1999）。《丁光訓文集：當代中國基督教發言人》。香港：基督教文 藝出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.5,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\丁光訓文集.pdf"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "宗敎、解釋與和平：對約翰‧希克宗敎多元論哲學的建設 性研究",
+      "citation": "王志成（1999）。《宗敎、解釋與和平：對約翰‧希克宗敎多元論哲學的建設 性研究》。成都：四川人民出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 3,
+      "title": "和平的渴望 : 當代宗教對話理論",
+      "citation": "王志成（2003）。《和平的渴望 : 當代宗教對話理論》。北京：宗教與文化出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 4,
+      "title": "當代宗教多元論",
+      "citation": "王志成（2013）。《當代宗教多元論》。北京：宗教文化出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 5,
+      "title": "走向第二軸心時代",
+      "citation": "王志成、段麗萍主編（2005）。《走向第二軸心時代》。北京：宗教文化出版 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 6,
+      "title": "文明對話與佛耶相遇",
+      "citation": "王志成、賴品超主編（2012）。《文明對話與佛耶相遇》。北京：社會科學文 獻出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 7,
+      "title": "苦難與拯救︰保羅‧尼特的宗教多元論與宗教對話思想研 究",
+      "citation": "王蓉（2011）。《苦難與拯救︰保羅‧尼特的宗教多元論與宗教對話思想研 究》。北京：宗教與文化出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 8,
+      "title": "分別為聖：長老教會．普渡．通靈象徵",
+      "citation": "王鏡玲（2016）。《分別為聖：長老教會．普渡．通靈象徵》。台北：前衛出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 9,
+      "title": "絕地逢生：澎湖公民力量的展現——台灣首次公投勝利的 故事",
+      "citation": "田智雄（2012）。《絕地逢生：澎湖公民力量的展現——台灣首次公投勝利的 故事》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 10,
+      "title": "讓牠活下去：台灣收容所「零撲殺」紀實",
+      "citation": "田智雄（2018）。《讓牠活下去：台灣收容所「零撲殺」紀實》。台北：台灣 動物保護行政監督聯盟。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 11,
+      "title": "駁「佛教與基督教的比較」",
+      "citation": "吳恩溥（1956）。《駁「佛教與基督教的比較」》。台北：聖文社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 12,
+      "title": "黑暗與光明",
+      "citation": "吳耀宗（1949）。《黑暗與光明》。上海：青年協會書局。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 13,
+      "title": "第三眼神學",
+      "citation": "宋泉盛（1989）。《第三眼神學》（莊雅棠譯）。台南：台灣教會公報社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 14,
+      "title": "故事神學",
+      "citation": "宋泉盛（1990）。《故事神學》（莊雅棠譯）。台南：台灣教會公報社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 15,
+      "title": "孟姜女的眼淚",
+      "citation": "宋泉盛（2002）。《孟姜女的眼淚》（鄭加泰譯）。台南：人光出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 16,
+      "title": "耶穌，被釘十字架的人民",
+      "citation": "宋泉盛（2002）。《耶穌，被釘十字架的人民》（莊雅棠譯）。台南：人光出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 17,
+      "title": "我們要選擇活路：台灣人自救運動(一)",
+      "citation": "宋泉盛（2006）。《我們要選擇活路：台灣人自救運動(一)》。台北：台灣獨 立安全基督徒促進會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 18,
+      "title": "悲天憫人的上帝",
+      "citation": "宋泉盛（2012）。《悲天憫人的上帝》（林弘宣譯）。台南：台灣教會公報 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 19,
+      "title": "我有明珠一顆",
+      "citation": "李元松（1993）。《我有明珠一顆》。台北：現代禪出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 20,
+      "title": "戰後台灣佛教與女性：李玉珍自選集",
+      "citation": "李玉珍（2016）。《戰後台灣佛教與女性：李玉珍自選集》。新北：博揚文化 事業有限公司。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 21,
+      "title": "革命，和尚，公民覺醒：台灣文化啟蒙先驅林秋梧傳 記",
+      "citation": "李筱峰（2026）。《革命，和尚，公民覺醒：台灣文化啟蒙先驅林秋梧傳 記》。台北：明白文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 22,
+      "title": "亞洲處境與聖經詮釋",
+      "citation": "李熾昌（1996）。《亞洲處境與聖經詮釋》。香港：基督教文藝出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 23,
+      "title": "動保足履：關懷二十年（1992-2012）",
+      "citation": "汪盈利（2013）。《動保足履：關懷二十年（1992-2012）》。台北：關懷生命 協會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 24,
+      "title": "台灣新而獨立的國家 -台灣基督長老教會人權宣言 週年國際研討會文集",
+      "citation": "林芳仲主編（2014）。《台灣新而獨立的國家 -台灣基督長老教會人權宣言 週年國際研討會文集》。台北：基督長老信仰與教制委員會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 25,
+      "title": "諸說中第一：力挺佛陀在人間",
+      "citation": "林建德（2003）。《諸說中第一：力挺佛陀在人間》。台南：妙心出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 26,
+      "title": "跨文化視野中的人文精神：儒、佛、耶、猶的觀點與 對話芻議",
+      "citation": "林鴻信主編（2011）。《跨文化視野中的人文精神：儒、佛、耶、猶的觀點與 對話芻議》。台北：國立台灣大學出版中心。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 27,
+      "title": "印順導師的佛教思想",
+      "citation": "邱敏捷（2000）。《印順導師的佛教思想》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 28,
+      "title": "真實與方便：印順思想研究",
+      "citation": "侯坤宏（2009）。《真實與方便：印順思想研究》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 29,
+      "title": "太虛時代：多維視角下的民國佛教（1912-1949）",
+      "citation": "侯坤宏（2018）。《太虛時代：多維視角下的民國佛教（1912-1949）》。台 北：政大出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 30,
+      "title": "台灣佛教通史",
+      "citation": "侯坤宏編（2022）。《台灣佛教通史》（第八冊）。台北：彌陀出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 31,
+      "title": "跨文化宗教學：以「彼岸」為主題",
+      "citation": "思竹（2024）。《跨文化宗教學：以「彼岸」為主題》。北京：中國社會科學 出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 32,
+      "title": "台灣人的先覺：黃彰輝",
+      "citation": "張瑞雄（2014）。《台灣人的先覺：黃彰輝》。台南：南神出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 33,
+      "title": "佛敎與基督敎信仰的交會 : 現代禪與中華信義 神學院的對話",
+      "citation": "現代禪教研部主編（2002）。《佛敎與基督敎信仰的交會 : 現代禪與中華信義 神學院的對話》。台北：現代禪出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 34,
+      "title": "故事神學家開講──宋泉盛牧師文集",
+      "citation": "陳榮爝編（2025）。《故事神學家開講──宋泉盛牧師文集》。台南：南神出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 35,
+      "title": "空虛自己─單國璽回憶錄",
+      "citation": "單國璽（2012）。《空虛自己─單國璽回憶錄》。台北：啟示文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 36,
+      "title": "生命告別之旅",
+      "citation": "單國璽、林保寶（2008）。《生命告別之旅》。台北：天下文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 37,
+      "title": "希望．使命傳承：處境化神學教育",
+      "citation": "黃伯和（2022）。《希望．使命傳承：處境化神學教育》。台南：恩惠文教基 金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 38,
+      "title": "盼．委身再告白：神學的應許之地",
+      "citation": "黃伯和（2022）。《盼．委身再告白：神學的應許之地》。台南：恩惠文教基 金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 39,
+      "title": "旅．轉身與啟程：神學的典範轉移",
+      "citation": "黃伯和（2022）。《旅．轉身與啟程：神學的典範轉移》。台南：恩惠文教基 金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 40,
+      "title": "悲憫．虛己的愛：本土的倫理學",
+      "citation": "黃伯和（2022）。《悲憫．虛己的愛：本土的倫理學》。台南：恩惠文教基金 會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 41,
+      "title": "道．自決出頭天：神學的道成肉身",
+      "citation": "黃伯和（2022）。《道．自決出頭天：神學的道成肉身》。台南：恩惠文教基 金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 42,
+      "title": "跨文化視野下的東亞宗教傳統：多元對話篇",
+      "citation": "黃冠閔主編（2010）。《跨文化視野下的東亞宗教傳統：多元對話篇》。台 北：中央研究院。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 43,
+      "title": "佛教的社會關懷與寺產問題",
+      "citation": "黃運喜（2019）。《佛教的社會關懷與寺產問題》。新北：大千出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 44,
+      "title": "當代佛教思想展望",
+      "citation": "楊惠南（1991）。《當代佛教思想展望》。台北：東大圖書公司。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 45,
+      "title": "繼承與批判印順法師人間佛教思想",
+      "citation": "溫金柯（2001）。《繼承與批判印順法師人間佛教思想》。台北：現代禪出版 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 46,
+      "title": "台灣宗教大觀",
+      "citation": "董芳苑（2008）。《台灣宗教大觀》。台北：前衛出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 47,
+      "title": "台灣宗教論集",
+      "citation": "董芳苑（2008）。《台灣宗教論集》。台北：前衛出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 48,
+      "title": "全球倫理與宗教對話",
+      "citation": "劉述先（2001）。《全球倫理與宗教對話》。新北：立緒文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 49,
+      "title": "神學的公共事務",
+      "citation": "劉錦昌（2014）。《神學的公共事務》。新竹：台灣基督長老教會聖經書院。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 50,
+      "title": "原住民文化與福音的對話",
+      "citation": "蔡彥仁等著（2004）。《原住民文化與福音的對話》。台北：台灣世界展望 會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 51,
+      "title": "從宗教到政治：黃彰輝牧師普世神學的實踐",
+      "citation": "蔡榮芳（2020）。《從宗教到政治：黃彰輝牧師普世神學的實踐》。台北：玉 山社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 52,
+      "title": "定根本土的臺灣基督教 ： 臺灣基督教史研究論集",
+      "citation": "鄭仰恩（2010）。《定根本土的臺灣基督教 ： 臺灣基督教史研究論集》。台 南：人光出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 53,
+      "title": "台灣基督長老教會史（1865-2015）卷一：分期史",
+      "citation": "鄭仰恩主編（2024）。《台灣基督長老教會史（1865-2015）卷一：分期史》。 台北：使徒出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 54,
+      "title": "台灣基督長老教會史（1865-2015）卷二：專題史",
+      "citation": "鄭仰恩主編（2025）。《台灣基督長老教會史（1865-2015）卷二：專題史》。 台北：使徒出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 55,
+      "title": "從大中華到台灣國：台灣基督長老教會的國家認同及其論 述轉換",
+      "citation": "鄭睦群（2023）。《從大中華到台灣國：台灣基督長老教會的國家認同及其論 述轉換》。台北：政大出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 56,
+      "title": "台灣之愛：盧俊義牧師的牧會筆記",
+      "citation": "盧俊義（2003）。《台灣之愛：盧俊義牧師的牧會筆記》。台北：前衛出版 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 57,
+      "title": "大乘基督教神學：漢語神學的思想實驗",
+      "citation": "賴品超（2011）。《大乘基督教神學：漢語神學的思想實驗》。香港：道風書 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 58,
+      "title": "多元、分歧與認同：神學與文化的探索",
+      "citation": "賴品超（2011）。《多元、分歧與認同：神學與文化的探索》。新北：橄欖出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 59,
+      "title": "天國、凈土與人間：耶佛對話與社會關懷",
+      "citation": "賴品超、學愚主編（2008）。《天國、凈土與人間：耶佛對話與社會關懷》。 香港：中華書局。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 60,
+      "title": "佛耶對話：近代中國佛教與基督宗教的相遇",
+      "citation": "賴品超主編（2008）。《佛耶對話：近代中國佛教與基督宗教的相遇》。北 京：宗教文化出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 61,
+      "title": "印度之佛教",
+      "citation": "釋印順（1988）。《印度之佛教》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000033",
+          "title": "印度之佛教",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/專書/印度之佛教",
+          "parsed_at": "2026-06-13T13:28:47.584076+00:00",
+          "chunk_count": 64,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:28:47.584076+00:00"
+        },
+        {
+          "score": 0.8,
+          "id": "b0000000-0000-4000-8000-000000000008",
+          "title": "印度佛教史",
+          "author": "聖嚴法師",
+          "file_path": "法鼓全集/第二輯 佛教史類/印度佛教史",
+          "parsed_at": "2026-06-13T13:58:51.457135+00:00",
+          "chunk_count": 15,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:58:51.457135+00:00"
+        },
+        {
+          "score": 0.8,
+          "id": "7db149ee-c862-4496-9a1b-b7b41469a82b",
+          "title": "印度佛教史",
+          "author": "沃德爾",
+          "file_path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\沃德爾，印度佛教史.pdf",
+          "parsed_at": "2026-06-11T07:37:05.849709+00:00",
+          "chunk_count": 4,
+          "parse_error": null,
+          "standardized_at": "2026-06-11T07:37:05.849709+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 62,
+      "title": "說一切有部為主的論書與論師之研究",
+      "citation": "釋印順（1992）。《說一切有部為主的論書與論師之研究》。新竹：正聞出版 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000036",
+          "title": "說一切有部為主的論書與論師之研究",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/專書/說一切有部為主的論書與論師之研究",
+          "parsed_at": "2026-06-13T13:29:01.740924+00:00",
+          "chunk_count": 139,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:29:01.740924+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 63,
+      "title": "印度佛教思想史",
+      "citation": "釋印順（1993）。《印度佛教思想史》。新竹：正聞出版社。",
+      "status": "drive_match",
+      "matches": [
+        {
+          "score": 0.976,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，印度佛教思想史.epub"
+        }
+      ],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000034",
+          "title": "印度佛教思想史",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/專書/印度佛教思想史",
+          "parsed_at": "2026-06-13T13:28:51.834437+00:00",
+          "chunk_count": 32,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:28:51.834437+00:00"
+        },
+        {
+          "score": 0.8333,
+          "id": "b0000000-0000-4000-8000-000000000008",
+          "title": "印度佛教史",
+          "author": "聖嚴法師",
+          "file_path": "法鼓全集/第二輯 佛教史類/印度佛教史",
+          "parsed_at": "2026-06-13T13:58:51.457135+00:00",
+          "chunk_count": 15,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:58:51.457135+00:00"
+        },
+        {
+          "score": 0.8333,
+          "id": "7db149ee-c862-4496-9a1b-b7b41469a82b",
+          "title": "印度佛教史",
+          "author": "沃德爾",
+          "file_path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\沃德爾，印度佛教史.pdf",
+          "parsed_at": "2026-06-11T07:37:05.849709+00:00",
+          "chunk_count": 4,
+          "parse_error": null,
+          "standardized_at": "2026-06-11T07:37:05.849709+00:00"
+        }
+      ],
+      "best_candidates": [
+        {
+          "score": 0.976,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，印度佛教思想史.epub"
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "title": "初期大乘佛教之起源與開展",
+      "citation": "釋印順（1993）。《初期大乘佛教之起源與開展》。新竹：正聞出版社。",
+      "status": "drive_match",
+      "matches": [
+        {
+          "score": 0.984,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，初期大乘佛教之起源與開展.epub"
+        }
+      ],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.984,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，初期大乘佛教之起源與開展.epub"
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "title": "華雨集",
+      "citation": "釋印順（1993）。《華雨集》（全五冊）。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 0.98,
+          "id": "a0000000-0000-4000-8000-000000000027",
+          "title": "華雨集（三）",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/華雨集/華雨集（三）",
+          "parsed_at": "2026-06-13T13:27:13.965723+00:00",
+          "chunk_count": 177,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:27:13.965723+00:00"
+        },
+        {
+          "score": 0.98,
+          "id": "a0000000-0000-4000-8000-000000000028",
+          "title": "華雨集（四）",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/華雨集/華雨集（四）",
+          "parsed_at": "2026-06-13T13:27:21.072567+00:00",
+          "chunk_count": 55,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:27:21.072567+00:00"
+        },
+        {
+          "score": 0.98,
+          "id": "a0000000-0000-4000-8000-000000000029",
+          "title": "華雨集（五）",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/華雨集/華雨集（五）",
+          "parsed_at": "2026-06-13T13:27:41.170513+00:00",
+          "chunk_count": 72,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:27:41.170513+00:00"
+        },
+        {
+          "score": 0.98,
+          "id": "a0000000-0000-4000-8000-000000000025",
+          "title": "華雨集（一）",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/華雨集/華雨集（一）",
+          "parsed_at": "2026-06-13T13:27:02.89065+00:00",
+          "chunk_count": 194,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:27:02.89065+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 66,
+      "title": "初期大乘佛教之起源與開展",
+      "citation": "釋印順（1994）。《初期大乘佛教之起源與開展》。新竹：正聞出版社。",
+      "status": "drive_match",
+      "matches": [
+        {
+          "score": 0.984,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，初期大乘佛教之起源與開展.epub"
+        }
+      ],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.984,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，初期大乘佛教之起源與開展.epub"
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "title": "原始佛教聖典之集成",
+      "citation": "釋印順（1994）。《原始佛教聖典之集成》。新竹：正聞出版社。",
+      "status": "drive_match",
+      "matches": [
+        {
+          "score": 0.98,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，原始佛教聖典之集成.epub"
+        }
+      ],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.98,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\佛教\\釋印順，原始佛教聖典之集成.epub"
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "title": "太虛大師年譜",
+      "citation": "釋印順（2000）。《太虛大師年譜》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 69,
+      "title": "成佛之道",
+      "citation": "釋印順（2000）。《成佛之道》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000012",
+          "title": "成佛之道",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/妙雲集/成佛之道",
+          "parsed_at": "2026-06-13T13:26:00.548883+00:00",
+          "chunk_count": 8,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:26:00.548883+00:00"
+        },
+        {
+          "score": 0.9657,
+          "id": "a0000000-0000-4000-8000-000000000042",
+          "title": "成佛之道（增注本）",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/專書/成佛之道（增注本）",
+          "parsed_at": "2026-06-13T13:29:46.103331+00:00",
+          "chunk_count": 7,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:29:46.103331+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 70,
+      "title": "佛在人間",
+      "citation": "釋印順（2000）。《佛在人間》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000014",
+          "title": "佛在人間",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/妙雲集/佛在人間",
+          "parsed_at": "2026-06-13T13:26:08.274999+00:00",
+          "chunk_count": 51,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:26:08.274999+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 71,
+      "title": "佛法概論",
+      "citation": "釋印順（2000）。《佛法概論》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000008",
+          "title": "佛法概論",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/妙雲集/佛法概論",
+          "parsed_at": "2026-06-13T13:25:36.750823+00:00",
+          "chunk_count": 108,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:25:36.750823+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 72,
+      "title": "我之宗教觀",
+      "citation": "釋印順（2000）。《我之宗教觀》（收錄於《妙雲集》下篇）。新竹：正聞出 版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "a0000000-0000-4000-8000-000000000019",
+          "title": "我之宗教觀",
+          "author": "印順法師",
+          "file_path": "印順法師佛學著作集/妙雲集/我之宗教觀",
+          "parsed_at": "2026-06-13T13:26:33.11955+00:00",
+          "chunk_count": 38,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:26:33.11955+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 73,
+      "title": "青年的佛教",
+      "citation": "釋印順（2000）。《青年的佛教》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 74,
+      "title": "教制教典與教學",
+      "citation": "釋印順（2000）。《教制教典與教學》。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 75,
+      "title": "平凡的一生",
+      "citation": "釋印順（2011）。《平凡的一生》（重訂本）。新竹：正聞出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 76,
+      "title": "為居士說居士法",
+      "citation": "釋印順（2013）。《為居士說居士法》。新竹：印順文教基金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 77,
+      "title": "人間佛教禪法及其當代實踐：印順導師禪學思想研究",
+      "citation": "釋性廣（2001）。《人間佛教禪法及其當代實踐：印順導師禪學思想研究》。 台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.3125,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\趙紫宸的神學思想研究.pdf"
+        },
+        {
+          "score": 0.2439,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\哲學\\伏愛華，想像自由 薩特存在主義美學思想研究.pdf"
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "title": "禪觀修持與人間關懷",
+      "citation": "釋性廣（2006）。《禪觀修持與人間關懷》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 79,
+      "title": "留得清白在人間",
+      "citation": "釋昭慧（1993）。《留得清白在人間》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 80,
+      "title": "獨留情義落江湖",
+      "citation": "釋昭慧（1993）。《獨留情義落江湖》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 81,
+      "title": "人間佛教的播種者",
+      "citation": "釋昭慧（1995）。《人間佛教的播種者》。台北：東大圖書公司。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 82,
+      "title": "佛教倫理學",
+      "citation": "釋昭慧（1995）。《佛教倫理學》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 0.8,
+          "id": "c0000000-0000-4000-8000-000000000017",
+          "title": "佛教管理學",
+          "author": "星雲大師",
+          "file_path": "星雲大師全集/第一類【經義】/佛教管理學",
+          "parsed_at": "2026-06-14T01:52:49.939221+00:00",
+          "chunk_count": 173,
+          "parse_error": null,
+          "standardized_at": "2026-06-14T01:52:49.939221+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 83,
+      "title": "願同弱少抗強權",
+      "citation": "釋昭慧（1995）。《願同弱少抗強權》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 84,
+      "title": "律學今詮",
+      "citation": "釋昭慧（1999）。《律學今詮》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 85,
+      "title": "千載沉吟——新世紀的佛教女性思維",
+      "citation": "釋昭慧（2001）。《千載沉吟——新世紀的佛教女性思維》。台北：法界出版 社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 86,
+      "title": "佛教規範倫理學",
+      "citation": "釋昭慧（2003）。《佛教規範倫理學》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 87,
+      "title": "佛教後設倫理學",
+      "citation": "釋昭慧（2008）。《佛教後設倫理學》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 88,
+      "title": "法與律之深層探索",
+      "citation": "釋昭慧（2009）。《法與律之深層探索》。台北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 89,
+      "title": "生命倫理與環境倫理——倫理抉擇的中道智慧(一)",
+      "citation": "釋昭慧（2022）。《生命倫理與環境倫理——倫理抉擇的中道智慧(一)》。桃 園：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 90,
+      "title": "性別倫理與社會關懷——倫理抉擇的中道智慧(二)",
+      "citation": "釋昭慧（2022）。《性別倫理與社會關懷——倫理抉擇的中道智慧(二)》。桃 園：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 91,
+      "title": "令梵行久住——僧制與戒規之當代詮釋",
+      "citation": "釋昭慧（2023）。《令梵行久住——僧制與戒規之當代詮釋》。桃園：法界出 版社。 釋昭慧、古倫（Anselm Grün）（2013）。《你信什麼？——基督宗教與佛教之 對話》（吳信如譯）。台北：南與北文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 92,
+      "title": "世紀新聲：當代台灣佛教的入世與出世之 爭",
+      "citation": "釋昭慧、江燦騰編（2002）。《世紀新聲：當代台灣佛教的入世與出世之 爭》。台北：法界出版社。 釋昭慧、彼得‧辛格（Peter Singer）（2021）。《心靈的交會——山間對 話》。桃園：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 93,
+      "title": "千載沉吟——新世紀的佛教女性思維",
+      "citation": "釋昭慧、釋性廣編（2001）。《千載沉吟——新世紀的佛教女性思維》。台 北：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 94,
+      "title": "浩蕩赴前程：昭慧法師訪談 錄",
+      "citation": "釋昭慧口述，侯坤宏、卓遵宏訪問（2017）。《浩蕩赴前程：昭慧法師訪談 錄》。桃園：法界出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 95,
+      "title": "當代佛教戒律新詮：印順導師人間佛教的戒律思想",
+      "citation": "釋清德（2022）。《當代佛教戒律新詮：印順導師人間佛教的戒律思想》。台 北：紹印出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 96,
+      "title": "佛教與基督教的比較",
+      "citation": "釋煮雲（1960）。《佛教與基督教的比較》。新北：華成書局。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 97,
+      "title": "印順導師與人間佛教",
+      "citation": "釋傳道（2001）。《印順導師與人間佛教》。台南：中華佛教百科文獻基金 會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 98,
+      "title": "基督教之研究",
+      "citation": "釋聖嚴（1967）。《基督教之研究》。台北：佛教文化服務處。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "b0000000-0000-4000-8000-000000000006",
+          "title": "基督教之研究",
+          "author": "聖嚴法師",
+          "file_path": "法鼓全集/第一輯 教義論述類/基督教之研究",
+          "parsed_at": "2026-06-13T13:58:38.722913+00:00",
+          "chunk_count": 10,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:58:38.722913+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 99,
+      "title": "比較宗教學",
+      "citation": "釋聖嚴（1968）。《比較宗教學》。台北：中華佛教文化館。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [
+        {
+          "score": 1.0,
+          "id": "b0000000-0000-4000-8000-000000000005",
+          "title": "比較宗教學",
+          "author": "聖嚴法師",
+          "file_path": "法鼓全集/第一輯 教義論述類/比較宗教學",
+          "parsed_at": "2026-06-13T13:58:30.314499+00:00",
+          "chunk_count": 13,
+          "parse_error": null,
+          "standardized_at": "2026-06-13T13:58:30.314499+00:00"
+        }
+      ],
+      "best_candidates": []
+    },
+    {
+      "index": 100,
+      "title": "聖嚴法師與宗教對話",
+      "citation": "釋聖嚴（2001）。《聖嚴法師與宗教對話》。台北：法鼓文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 101,
+      "title": "真理自明：基督教與佛教的比較",
+      "citation": "龔天民（1989）。《真理自明：基督教與佛教的比較》。香港：橄欖文化。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 102,
+      "title": "論宗教對話的軸心式轉變",
+      "citation": "王志成（2006）。〈論宗教對話的軸心式轉變〉。《新世紀宗教研究》， 4(4)，1-19。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 103,
+      "title": "道成肉身的政治詮釋學：丁光訓的福音書詮釋、耶穌形象 及其挪用",
+      "citation": "王志希（2016）。〈道成肉身的政治詮釋學：丁光訓的福音書詮釋、耶穌形象 及其挪用〉。《成大歷史學報》，(50)，255-296。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.25,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\神學\\約翰‧希克，上帝道成肉身的隱喻.pdf"
+        }
+      ]
+    },
+    {
+      "index": 104,
+      "title": "台灣南部長老教會 150 年來宣教反思",
+      "citation": "王崇堯（2015）。〈台灣南部長老教會 150 年來宣教反思〉。《神學與教 會》，40(2)，249-273。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 105,
+      "title": "論宗教共同體的建構與消除宗教排他性",
+      "citation": "王曉朝（2012）。〈論宗教共同體的建構與消除宗教排他性〉。《宗教哲 學》，(61)，41-52。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 106,
+      "title": "台灣基督長老教會「一神」信仰的三種表現類型初探",
+      "citation": "王鏡玲（2003）。〈台灣基督長老教會「一神」信仰的三種表現類型初探〉。 《真理大學人文學報》，(1)，1-33。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 107,
+      "title": "「神聖」的轉化－長老教會在臺灣的「本土化」現象探 討",
+      "citation": "王鏡玲（2016）。〈「神聖」的轉化－長老教會在臺灣的「本土化」現象探 討〉。《臺灣宗教研究》，15(1)，79-120。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 108,
+      "title": "台南妙心寺對印順「人間佛教」的落實與弘展",
+      "citation": "伍麗滿（2006）。《台南妙心寺對印順「人間佛教」的落實與弘展》（碩士論 文）。玄奘大學宗教學系碩士在職專班，新竹。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 109,
+      "title": "唐．庫比特的表現主義宗教思想之研究",
+      "citation": "江淑麗（2013）。《唐．庫比特的表現主義宗教思想之研究》（碩士論文）。 中原大學宗教研究所，桃園。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 110,
+      "title": "2010 開春「沉澱日」心靈遊記",
+      "citation": "何宗勳（2010）。〈2010 開春「沉澱日」心靈遊記〉。《弘誓雙月刊》， (103)，63-65。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 111,
+      "title": "普世教會的全球化問題",
+      "citation": "宋泉盛（1999）。〈普世教會的全球化問題〉。《新使者》，(55)，17-19。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 112,
+      "title": "台灣人民面臨抉擇的時刻",
+      "citation": "宋泉盛（2003）。〈台灣人民面臨抉擇的時刻〉。《道雜誌》，(12)，83-87。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 113,
+      "title": "以耶穌愛的大誡命來省思大使命",
+      "citation": "宋泉盛（2008）。〈以耶穌愛的大誡命來省思大使命〉。《新使者》，(107)， 4-8。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 114,
+      "title": "台灣的民主：其前進之道",
+      "citation": "宋泉盛、林明貞（2001）。《台灣的民主：其前進之道》。《道雜誌》，(1)， 4-23。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 115,
+      "title": "成為萬民的祝福",
+      "citation": "宋泉盛、林明貞（2001）。《成為萬民的祝福》。《道雜誌》，(3)，4-17。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 116,
+      "title": "耶穌的事工和我們的事工",
+      "citation": "宋泉盛、林晚生（2001）。《耶穌的事工和我們的事工》。《道雜誌》，(1)， 18-27。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 117,
+      "title": "多元宗教的世界（上）",
+      "citation": "宋泉盛、莊雅棠（2004）。〈多元宗教的世界（上）〉。《道雜誌》，(23)， 76-85。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 118,
+      "title": "免於束縛的心靈自由－後現代世界中的宗教使 命",
+      "citation": "宋泉盛、陳文珊（2001）。《免於束縛的心靈自由－後現代世界中的宗教使 命》。《道雜誌》，(3)，18-29。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 119,
+      "title": "基督教會不要再失信於世界",
+      "citation": "宋泉盛、陳文珊（2001）。《基督教會不要再失信於世界》。《道雜誌》， (4)，4-29。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 120,
+      "title": "受戒施教：戰後台灣比丘尼身分的形成與凝聚",
+      "citation": "李玉珍（2015）。〈受戒施教：戰後台灣比丘尼身分的形成與凝聚〉。《近代 中國婦女史研究》，(25)，1-52。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 121,
+      "title": "宗教多元論與現代世界－一場正與約翰‧希克共同進行的 哲學之約",
+      "citation": "李彥儀（2011）。〈宗教多元論與現代世界－一場正與約翰‧希克共同進行的 哲學之約〉。《鵝湖月刊》，(434)，62-64。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 122,
+      "title": "解放神學與本土神學的相遇─從解放神學省思第三眼神 學",
+      "citation": "李茂榮（2014）。〈解放神學與本土神學的相遇─從解放神學省思第三眼神 學〉。《神學論集》，(180-181)，427-446。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.2857,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\試論拉丁美洲解放神學與馬克思主義哲學.pdf"
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "title": "由台灣佛教比丘尼女權發展來看「廢除八敬法運動」",
+      "citation": "李翎毓（2005）。《由台灣佛教比丘尼女權發展來看「廢除八敬法運動」》 （碩士論文）。國立政治大學宗教研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 124,
+      "title": "印順法師思想精義之辯證",
+      "citation": "林建德（2011）。〈印順法師思想精義之辯證〉。《法印學報》，(1)，145- 183。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 125,
+      "title": "印順學派與慈濟宗門——試論印順思想對慈濟志業開展之 可能啟發",
+      "citation": "林建德（2012）。〈印順學派與慈濟宗門——試論印順思想對慈濟志業開展之 可能啟發〉。《玄奘佛學研究》，(17)，93-134。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 126,
+      "title": "「人類為本」與「眾生平等」――印順法師「人間佛教」 觀點下的動物保護",
+      "citation": "林建德（2015）。〈「人類為本」與「眾生平等」――印順法師「人間佛教」 觀點下的動物保護〉。《玄奘佛學研究》，(23)，197-222。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 127,
+      "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩 種立場",
+      "citation": "林建德（2016）。〈「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩 種立場〉。《人間佛教研究》，(7)，177-212。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 128,
+      "title": "台灣「人間佛教」之承傳與開展——從證嚴法師是否為 「印順學派」探討起",
+      "citation": "林建德（2023）。〈台灣「人間佛教」之承傳與開展——從證嚴法師是否為 「印順學派」探討起〉。《成大中文學報》，(81)，69-98。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 129,
+      "title": "動物解放與護生行動：從關懷生命協會的角度來探討",
+      "citation": "林朝成（2015）。〈動物解放與護生行動：從關懷生命協會的角度來探討〉。 《玄奘佛學研究》，(23)，175-195。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 130,
+      "title": "故事神學的進路",
+      "citation": "林碧堂（2015）。〈故事神學的進路〉。《神學與教會》，40(2)，554-574。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 131,
+      "title": "故事神學的方法、限制與實踐",
+      "citation": "林碧堂（2016）。〈故事神學的方法、限制與實踐〉。《神學與教會》， 41(1)，146-169。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 132,
+      "title": "佛教對女性主義的思考：以昭慧法師的佛教女性主義論述 為例",
+      "citation": "邱敏捷（2007）。〈佛教對女性主義的思考：以昭慧法師的佛教女性主義論述 為例〉。「宗教文化與性別倫理」國際學術會議，玄奘大學宗教與文化學 系，新竹。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 133,
+      "title": "佛教對女性主義的思考：以昭慧法師的佛教女性主義論述 為例",
+      "citation": "邱敏捷（2007）。〈佛教對女性主義的思考：以昭慧法師的佛教女性主義論述 為例〉。載於玄奘大學宗教與文化學系（編），《宗教文化與性別倫理國 際學術會議論文集》（頁 1-24）。新竹：玄奘大學宗教與文化學系。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 134,
+      "title": "印順學派的核心思想：以人間佛教為中心的開展",
+      "citation": "邱敏捷（2013）。〈印順學派的核心思想：以人間佛教為中心的開展〉。《人 文與社會研究學報》，(47)，19-32。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 135,
+      "title": "從人民自決到獨立建國：以後殖民觀點分析台灣基督長老 教會政治神學解嚴後三十年發展",
+      "citation": "邱凱莉（2021）。〈從人民自決到獨立建國：以後殖民觀點分析台灣基督長老 教會政治神學解嚴後三十年發展〉。《輔仁宗教研究》，(42)，121-146。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 136,
+      "title": "從太虛大師到印順法師：一個思想史角度的觀察",
+      "citation": "侯坤宏（2004）。〈從太虛大師到印順法師：一個思想史角度的觀察〉。載於 弘誓文教基金會（編），《第五屆「印順導師思想之理論與實踐」學術會 議論文集》（頁 R1-R59）。桃園：弘誓文教基金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 137,
+      "title": "戰後台灣佛教正義議題之回顧",
+      "citation": "侯坤宏（2016）。〈戰後台灣佛教正義議題之回顧〉。《法印學報》，(6)， 103-148。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 138,
+      "title": "中國大陸 2016 年「批印事件」評議",
+      "citation": "侯坤宏（2017）。〈中國大陸 2016 年「批印事件」評議〉。《法印學報》， (8)，1-52。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 139,
+      "title": "從生命中心交談概念反思當代宗教交談理論",
+      "citation": "高榮孝（2015）。〈從生命中心交談概念反思當代宗教交談理論〉。《新世紀 宗教研究》，14(2)，27-53。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 140,
+      "title": "從海德格生命與苦難的關係反思尼特宗教交談實踐的可能 性",
+      "citation": "高榮孝（2018）。〈從海德格生命與苦難的關係反思尼特宗教交談實踐的可能 性〉。《新世紀宗教研究》，16(4)，177-196。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 141,
+      "title": "歷史性的性別與宗教緣聚——「性別友善自在營」浮現的 緣起、挑戰、啟發與實踐",
+      "citation": "高穎超（2024）。〈歷史性的性別與宗教緣聚——「性別友善自在營」浮現的 緣起、挑戰、啟發與實踐〉。《弘誓雙月刊》，(190)，23-24。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 142,
+      "title": "昭慧法師與性廣法師對印順學的傳承與實踐——以經營佛 教弘誓學院、參與社運、闡揚人間佛教禪法為例",
+      "citation": "張辰瑋（2023）。〈昭慧法師與性廣法師對印順學的傳承與實踐——以經營佛 教弘誓學院、參與社運、闡揚人間佛教禪法為例〉。《法印學報》， (14)，181-204。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 143,
+      "title": "耶佛之間的跨宗教友誼與跨宗教合作：以釋昭慧法師、盧 俊義牧師、洪山川主教為例",
+      "citation": "張辰瑋（2024）。〈耶佛之間的跨宗教友誼與跨宗教合作：以釋昭慧法師、盧 俊義牧師、洪山川主教為例〉。台灣宗教學會 2024 年會「跨域與研修」學 術研討會，中央研究院民族學研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 144,
+      "title": "從「青年佛教」之精神看印順學派的歷史發展",
+      "citation": "張辰瑋（2024a）。〈從「青年佛教」之精神看印順學派的歷史發展〉。《法印 學報》，229-252。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 145,
+      "title": "耶佛之間的跨宗教友誼與跨宗教合作：以釋昭慧法師、盧 俊義牧師、洪山川主教為例",
+      "citation": "張辰瑋（2024b）。〈耶佛之間的跨宗教友誼與跨宗教合作：以釋昭慧法師、盧 俊義牧師、洪山川主教為例〉。發表於「2024 年度台灣宗教學會年會」， 台灣宗教學會，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 146,
+      "title": "昭慧法師的戒律學思想與實踐：以性別議題為核心",
+      "citation": "張辰瑋（2025）。〈昭慧法師的戒律學思想與實踐：以性別議題為核心〉。第 六屆中華國際佛學會議，法鼓山中華佛學研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 147,
+      "title": "印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣 法師為核心",
+      "citation": "張辰瑋（2025）。《印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣 法師為核心》（碩士論文）。國立台北教育大學台灣文化研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 148,
+      "title": "故事在宗教對話中的功能——以宋泉盛的故事神學為例",
+      "citation": "張鈞凱（2010）。《故事在宗教對話中的功能——以宋泉盛的故事神學為例》 （碩士論文）。國立政治大學宗教學研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 149,
+      "title": "當代台灣佛教與基督教對話之研究",
+      "citation": "莊秉潔（2011）。《當代台灣佛教與基督教對話之研究》（碩士論文）。玄奘 大學宗教學研究所，新竹。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 150,
+      "title": "實況化神學的意義及其超越一般─台灣本土神學方法論的 反思",
+      "citation": "莊雅棠（2001）。〈實況化神學的意義及其超越一般─台灣本土神學方法論的 反思〉。《道雜誌》，(2)，30-39。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 151,
+      "title": "宋泉盛的故事神學",
+      "citation": "莊雅棠（2003）。〈宋泉盛的故事神學〉。《神學與教會》，28(1)，123-145。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 152,
+      "title": "在後現代處境中的台灣本土神學",
+      "citation": "莊雅棠（2019）。〈在後現代處境中的台灣本土神學〉。《神學與教會》， 44(1)，75-102。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 153,
+      "title": "草根和尚—傳道法師與我",
+      "citation": "陳玉峯（2011）。〈草根和尚—傳道法師與我〉。《弘誓雙月刊》，(109)，22- 29。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 154,
+      "title": "試論「人間佛教」兩種社會再造方式 ——以證嚴法師「治 心」與昭慧法師「治境」為對比",
+      "citation": "陳芷蘋（2021）。〈試論「人間佛教」兩種社會再造方式 ——以證嚴法師「治 心」與昭慧法師「治境」為對比〉。《法印學報》，(12)，195-214。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 155,
+      "title": "實況化神學的開展：黃彰輝牧師神學思想的探討",
+      "citation": "陳南州（2004）。〈實況化神學的開展：黃彰輝牧師神學思想的探討〉。《台 灣神學論刊》，(26)，59-83。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 156,
+      "title": "廿世紀末期亞洲聖經詮釋學的發展：經外詮釋法",
+      "citation": "陳美玲（2008）。〈廿世紀末期亞洲聖經詮釋學的發展：經外詮釋法〉。《台 灣神學論刊》，(30)，157-172。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 157,
+      "title": "凡塵的美麗彩虹——佛化同志婚禮紀事",
+      "citation": "陳悅萱（2012）。〈凡塵的美麗彩虹——佛化同志婚禮紀事〉。《弘誓雙月 刊》，(119)，6-13。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 158,
+      "title": "「慈林巡禮」—慈林教育基金會的成立",
+      "citation": "陳鳳萍（2002）。〈「慈林巡禮」—慈林教育基金會的成立〉。《蘭陽電子 報》，(6)。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 159,
+      "title": "去殖民的上帝－聖經詮釋的轉換與上帝觀轉變",
+      "citation": "曾宗盛（2017）。《去殖民的上帝－聖經詮釋的轉換與上帝觀轉變》。《台灣 原住民族研究學報》，7(4)，33-62。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 160,
+      "title": "宗教對話與公共神學：跨越邊界的信仰實踐",
+      "citation": "曾慶豹（2007）。〈宗教對話與公共神學：跨越邊界的信仰實踐〉。《神學與 教會》，32(2)，55-78。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 161,
+      "title": "概念之物與實在之物：從超越性幻相到超越性回向－對希 克宗教多元論的批判考察",
+      "citation": "曾曉冬（2023）。〈概念之物與實在之物：從超越性幻相到超越性回向－對希 克宗教多元論的批判考察〉。《哲學與文化》，50(1)，165-179。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 162,
+      "title": "論全球入世佛教之發展進路—兼論其涉及公共事務時之政 治取向",
+      "citation": "游祥洲（2007）。〈論全球入世佛教之發展進路—兼論其涉及公共事務時之政 治取向〉。《弘誓雙月刊》，(88)，6-23。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 163,
+      "title": "論後太陽花運動教會參與公共性之「想像」 ─以台灣基督 長老教會為例",
+      "citation": "程璞薾（2017）。《論後太陽花運動教會參與公共性之「想像」 ─以台灣基督 長老教會為例》（碩士論文）。中原大學宗教研究所，桃園。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 164,
+      "title": "跨國宗教與受限制的黨國：從監控檔案再探長老教會的政 教關係",
+      "citation": "黃克先（2021）。〈跨國宗教與受限制的黨國：從監控檔案再探長老教會的政 教關係〉。《臺灣社會學刊》，(70)，1-76。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 165,
+      "title": "不斷處境化的神學",
+      "citation": "黃彰輝（2000）。〈不斷處境化的神學〉（林毓芬譯）。《台灣教會公報》， (2539)，12 版。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 166,
+      "title": "當代台灣佛教「出世」性格的分析",
+      "citation": "楊惠南（1990）。〈當代台灣佛教「出世」性格的分析〉。《東方宗教研 究》，(新 1)，317-343。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 167,
+      "title": "PCT 的時代使命：從生態危機談上帝國的實況化宣教",
+      "citation": "楊順從（2011）。〈PCT 的時代使命：從生態危機談上帝國的實況化宣教〉。 《神學與教會》，36(2)，268-277。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 168,
+      "title": "國際入世佛教協會年會開幕致詞——我從社會運動到內觀 修持的經驗分享",
+      "citation": "葉菊蘭（2007）。〈國際入世佛教協會年會開幕致詞——我從社會運動到內觀 修持的經驗分享〉。《弘誓雙月刊》，(89)，4-6。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 169,
+      "title": "大安森林公園觀音像遷移事件之政教研究",
+      "citation": "廖彼得（2009）。《大安森林公園觀音像遷移事件之政教研究》（碩士論 文）。輔仁大學宗教學系，新北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 170,
+      "title": "現代台灣佛教與印順法師——五大本山與人間佛教的背 景一探",
+      "citation": "蓑輪顕量（2016）。〈現代台灣佛教與印順法師——五大本山與人間佛教的背 景一探〉。《佛光學報》，2(2)，31-53。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 171,
+      "title": "由與多元他者在公共領域的對話論宗教大同",
+      "citation": "劉久清（2012）。〈由與多元他者在公共領域的對話論宗教大同〉。《宗教哲 學》，(61)，65-82。 劉文芳（釋傳法）（2002）。《當代台灣佛教的社會運動》（碩士論文）。玄 奘人文社會學院宗教學研究所，新竹。 劉文芳（釋傳法）（2019a）。《左翼佛教和公民社會：泰國和馬來西亞的佛教 公共介入之研究》（博士論文）。國立政治大學宗教研究所，台北。 劉文芳（釋傳法）（2019b）。《南北傳入世佛教在台灣的會遇：以佛教弘誓學 院與泰國國際入世佛教協會的交流為例》（博士論文）。國立政治大學宗 教研究所，台北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 172,
+      "title": "台灣佛教界的「印順學」走向",
+      "citation": "劉錦昌（1997）。〈台灣佛教界的「印順學」走向〉。《神學與教會》， 22(2)，14-21。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 173,
+      "title": "“敘事神學”的堅持與悖謬",
+      "citation": "歐力仁（2004）。〈“敘事神學”的堅持與悖謬〉。《中原學報》，32(4)， 653-666。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 174,
+      "title": "希克與庫比特之宗教哲學的批判性比較",
+      "citation": "歐力仁（2006）。〈希克與庫比特之宗教哲學的批判性比較〉。《漢語基督教 學術論評》，(2)，141-171。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 175,
+      "title": "保羅‧尼特與宋泉盛之多元宗教神學的批判性比較",
+      "citation": "歐力仁（2007）。〈保羅‧尼特與宋泉盛之多元宗教神學的批判性比較〉。 《輔仁宗教研究》，(15)，37-74。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 176,
+      "title": "亞洲神學之實況化詮釋學的形成與轉變",
+      "citation": "歐力仁（2009）。〈亞洲神學之實況化詮釋學的形成與轉變〉。《宗教哲 學》，(48)，123-142。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 177,
+      "title": "訴說苦難生命的故事－宋泉盛的故事神學方法論及其批 判",
+      "citation": "歐力仁（2011）。〈訴說苦難生命的故事－宋泉盛的故事神學方法論及其批 判〉。《道風：基督教文化評論》，(35)，245-277。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 178,
+      "title": "再思雷蒙．潘尼卡的宗教多元基督論",
+      "citation": "歐力仁（2012）。〈再思雷蒙．潘尼卡的宗教多元基督論〉。《宗教哲學》， (60)，67-82。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 179,
+      "title": "宗教經驗與其可理解性之追求",
+      "citation": "蔡怡佳（2010）。〈宗教經驗與其可理解性之追求〉。《臺灣宗教研究》， 9(2)，53-74。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 180,
+      "title": "地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生 態踐行",
+      "citation": "蔡怡佳（2015）。〈地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生 態踐行〉。《輔仁宗教研究》，(30)，1-23。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 181,
+      "title": "與佛相應、與神相契：臺灣佛教徒與基督徒的祈禱修行體 驗",
+      "citation": "蔡怡佳（2016）。〈與佛相應、與神相契：臺灣佛教徒與基督徒的祈禱修行體 驗〉。《臺灣宗教研究》，15(1)，51-78。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 182,
+      "title": "比較宗教學在台灣：回顧與展望",
+      "citation": "蔡彥仁（1999）。〈比較宗教學在台灣：回顧與展望〉。《宗教學研究》， (1)，1-18。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 183,
+      "title": "獻身普世運動的台灣本土神學家─黃彰輝牧師小傳",
+      "citation": "鄭仰恩（2001）。〈獻身普世運動的台灣本土神學家─黃彰輝牧師小傳〉。 《新使者》，(64)，30-33。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 184,
+      "title": "從「自立」到「認同」：台灣基督長老教會本土化過程的 歷史探討",
+      "citation": "鄭仰恩（2005）。〈從「自立」到「認同」：台灣基督長老教會本土化過程的 歷史探討〉。《台灣神學論刊》，(27)，75-102。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 185,
+      "title": "在合一與孤立之間擺盪－淺談二次大戰後 PCT 的認同與挑 戰",
+      "citation": "鄭仰恩（2015）。〈在合一與孤立之間擺盪－淺談二次大戰後 PCT 的認同與挑 戰〉。《新使者》，(146)，4-9。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 186,
+      "title": "黃彰輝牧師及現今普世視域中的實況化神學發展",
+      "citation": "鄭仰恩（2015）。〈黃彰輝牧師及現今普世視域中的實況化神學發展〉。載於 王崇堯等（主編），《黃彰輝牧師的精神資產研討會論文集》（頁 165- 192）。南神出版社。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 187,
+      "title": "神學博士黃武東牧師其生涯及時代背景",
+      "citation": "鄭兒玉（1995）。〈神學博士黃武東牧師其生涯及時代背景〉。《新使者》， (27)，46-49。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 188,
+      "title": "宗教多元問題的哲學及神學進路：一個漢語神學的觀 點",
+      "citation": "賴品超（2009）。〈宗教多元問題的哲學及神學進路：一個漢語神學的觀 點〉。《漢語基督教學術論評》，(7)，165-195。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 189,
+      "title": "從佛教反思基督宗教上帝觀：取道保羅．蒂利希的「終極 關切」",
+      "citation": "賴品超（2013）。〈從佛教反思基督宗教上帝觀：取道保羅．蒂利希的「終極 關切」〉。《輔仁宗教研究》，(26)，91-119。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 190,
+      "title": "公共領域中的寬恕與和解－一個跨學科的處境神學反 思",
+      "citation": "賴品超（2017）。〈公共領域中的寬恕與和解－一個跨學科的處境神學反 思〉。《道風：基督教文化評論》，(47)，281-307。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 191,
+      "title": "從利他主義的演化看人間佛教與人類的未來",
+      "citation": "賴品超（2020）。〈從利他主義的演化看人間佛教與人類的未來〉。《人間佛 教學報藝文》，(26)，34-45。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 192,
+      "title": "從基督宗教、儒家及演化論看利他主義",
+      "citation": "賴品超、王濤（2013）。〈從基督宗教、儒家及演化論看利他主義〉。《漢語 基督教學術論評》，(15)，183-214。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 193,
+      "title": "佛教與基督教的對話：以當代台灣宗教界為中心",
+      "citation": "賴賢宗（2004）。〈佛教與基督教的對話：以當代台灣宗教界為中心〉。《哲 學與文化》，31(5)，23-41。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 194,
+      "title": "鄉土神學「出埃及模式」的反思與再處境化",
+      "citation": "謝易宏（2011）。〈鄉土神學「出埃及模式」的反思與再處境化〉。《神學與 教會》，36(2)，387-408。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 195,
+      "title": "台灣佛教思想史上的後印順時代",
+      "citation": "藍吉富（2002）。〈台灣佛教思想史上的後印順時代〉。載於弘誓文教基金會 （編），《第三屆「印順導師思想之理論與實踐」學術研討會論文集》 （頁 O1-12）。桃園：弘誓文教基金會。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 196,
+      "title": "積極勇健‧入世關懷——佛教弘誓學院弘教之自許與展 望",
+      "citation": "釋性廣（1993）。〈積極勇健‧入世關懷——佛教弘誓學院弘教之自許與展 望〉。《弘誓會訊》，(1)，1。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 197,
+      "title": "只知其一者，一無所知——西方百年比較宗教學研究回 顧",
+      "citation": "釋性廣（2004）。〈只知其一者，一無所知——西方百年比較宗教學研究回 顧〉。《弘誓雙月刊》，(67)，5-12。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 198,
+      "title": "請務必支持「婚姻平權」——性廣法師於燃燈禪修營出堂 法談側記",
+      "citation": "釋性廣（2018）。〈請務必支持「婚姻平權」——性廣法師於燃燈禪修營出堂 法談側記〉（吳曙帆記錄）。《弘誓雙月刊》，(156)，21-23。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 199,
+      "title": "佛教與女性——解構佛門男性沙文主義",
+      "citation": "釋昭慧（1999）。〈佛教與女性——解構佛門男性沙文主義〉。發表於「哲學 與批評」學術研討會，國立中央大學哲學研究所，桃園。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 200,
+      "title": "自我消解與自我完成——「核四公投千里苦行」的文化意 義",
+      "citation": "釋昭慧（2002a）。〈自我消解與自我完成——「核四公投千里苦行」的文化意 義〉。《弘誓雙月刊》，(59)，3-4。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 201,
+      "title": "宗教倫理學的基本原理與中層原則——以基督宗教與佛教 為主軸的一個探索",
+      "citation": "釋昭慧（2002b）。〈宗教倫理學的基本原理與中層原則——以基督宗教與佛教 為主軸的一個探索〉。《法光學壇》，(6)，1-36。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.2439,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\基督宗教倫理學（第1卷）.pdf"
+        },
+        {
+          "score": 0.2439,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\基督宗教倫理學（第2卷）.pdf"
+        }
+      ]
+    },
+    {
+      "index": 202,
+      "title": "「同志」豈必承負罪軛？",
+      "citation": "釋昭慧（2006）。〈「同志」豈必承負罪軛？〉。《弘誓雙月刊》，(83)，6- 8。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 203,
+      "title": "反賭運動啟示錄",
+      "citation": "釋昭慧（2009）。〈反賭運動啟示錄〉。《弘誓雙月刊》，(98)，4-6。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 204,
+      "title": "從佛家看烈火焚身",
+      "citation": "釋昭慧（2012）。〈從佛家看烈火焚身〉（陳悅萱記錄）。《弘誓雙月刊》， (117)，28-38。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 205,
+      "title": "「千江映月」的生命風華－歐陽文風牧師《千江有水千江 月",
+      "citation": "釋昭慧（2018）。〈「千江映月」的生命風華－歐陽文風牧師《千江有水千江 月》序〉。《弘誓雙月刊》，(152)，44-46。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 206,
+      "title": "冥契經驗的宗教對話——古倫神父蒞院記",
+      "citation": "釋傳法（2008）。〈冥契經驗的宗教對話——古倫神父蒞院記〉。《弘誓雙月 刊》，(92)，60-62。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 207,
+      "title": "性別倫理的震撼教育",
+      "citation": "釋傳法（2010）。〈性別倫理的震撼教育〉。《弘誓雙月刊》，(103)，61-62。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 208,
+      "title": "社運浪潮中之護教運動——以中國佛教會護教組 為探討核心",
+      "citation": "釋傳法、釋性廣（2009）。〈社運浪潮中之護教運動——以中國佛教會護教組 為探討核心〉。《玄奘佛學研究》，(11)，55-86。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 209,
+      "title": "太虛大師對僧伽教育的貢獻",
+      "citation": "釋傳道（1997）。〈太虛大師對僧伽教育的貢獻〉。《妙心雜誌》，(16)，2- 4。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 210,
+      "title": "印順導師「人間佛教思想」之實踐——以妙心寺 為例",
+      "citation": "釋傳道、伍麗滿（2005）。〈印順導師「人間佛教思想」之實踐——以妙心寺 為例〉。載於玄奘大學宗教學系（編），《第六屆「印順導師思想之理論 與實踐」學術會議論文集》（頁廿七 1-26）。新竹：玄奘大學宗教學系。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 211,
+      "title": "印順長老的護教思想與現代社會",
+      "citation": "釋聖嚴（1991）。〈印順長老的護教思想與現代社會〉。《中華佛學學報》， (4)，序 7-序 10。 釋禪林（陳淑梅）（2019）。《入世證菩提：當代台灣人間佛教思想的爭辯與 開展》（碩士論文）。華梵大學東方人文思想研究所，新北。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.1786,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\社會政治學\\安東尼．紀登斯(Anthony Giddens) 簡惠美，資本主義與現代社會理論  馬克斯, 塗爾幹, 韋伯.pdf"
+        }
+      ]
+    },
+    {
+      "index": 212,
+      "title": "我思‧我師‧人間導師",
+      "citation": "釋證嚴（2005）。〈我思‧我師‧人間導師〉。《慈濟》，(463)，6-9。",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 213,
+      "title": "Zen and Western thought (W. R. LaFleur, Ed.)",
+      "citation": "Abe, M.( 阿部正雄) (1985). Zen and Western thought (W. R. LaFleur, Ed.). Honolulu: University of Hawaii Press. Ahn, B.-M. (안병무). (1981). Minjung theology: People as the subjects of history. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 214,
+      "title": "Beyond dialogue: Toward a mutual transformation of Christianity and Buddhism",
+      "citation": "Cobb, J. B., Jr. (1982). Beyond dialogue: Toward a mutual transformation of Christianity and Buddhism. Philadelphia: Fortress Press. Coe, S. (黃彰輝). (1993). Recollections and reflections. New York: The Rev. Dr. Shoki Coe’s Memorial Fund. Coe, S. (黃彰輝). (2011). Christian mission in the context of Asian nation building. New Jersey: Princeton Theological Seminary Educational Media.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.3924,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會史\\Anthony Grafton，Christianity and the Transformation of the Book Origen, Eusebius, and the Library of Caesarea.pdf"
+        }
+      ]
+    },
+    {
+      "index": 215,
+      "title": "The im-possibility of interreligious dialogue. Crossroad",
+      "citation": "Cornille, C. (2008). The im-possibility of interreligious dialogue. Crossroad",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 216,
+      "title": "The meeting of religions and the Trinity",
+      "citation": "Publishing. D'Costa, G. (2000). The meeting of religions and the Trinity. Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 217,
+      "title": "The crisis of global modernity: Asian traditions and a sustainable future",
+      "citation": "Duara, P. (2015). The crisis of global modernity: Asian traditions and a sustainable future. Cambridge University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 218,
+      "title": "Toward a Christian theology of religious pluralism",
+      "citation": "Dupuis, J. (1997). Toward a Christian theology of religious pluralism. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.5476,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\本地化處境神學\\Christian Theology and Intellectuals in China.pdf"
+        },
+        {
+          "score": 0.4222,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\宗教學\\宗教對話\\David Thomas，Christian Doctrines in Islamic Theology.pdf"
+        }
+      ]
+    },
+    {
+      "index": 219,
+      "title": "The sacred and the profane: The nature of religion (W. R. Trask, Trans.)",
+      "citation": "Eliade, M. (1959). The sacred and the profane: The nature of religion (W. R. Trask, Trans.). New York: Harcourt, Brace. (Original work published 1957)",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 220,
+      "title": "The essence of Christianity (G. Eliot, Trans.)",
+      "citation": "Feuerbach, L. (1957). The essence of Christianity (G. Eliot, Trans.). New York: Harper & Row. (Original work published 1841)",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.3465,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會史\\Anthony Grafton，Christianity and the Transformation of the Book Origen, Eusebius, and the Library of Caesarea.pdf"
+        }
+      ]
+    },
+    {
+      "index": 221,
+      "title": "Lectures on the essence of religion (R. Manheim, Trans.)",
+      "citation": "Feuerbach, L. (1967). Lectures on the essence of religion (R. Manheim, Trans.). New York: Harper & Row. (Original work published 1851)",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 222,
+      "title": "The Religious Question in Modern China",
+      "citation": "Goossaert, V., & Palmer, D. A. (2011). The Religious Question in Modern China. University of Chicago Press. Gutiérrez, G. (1973). A theology of liberation: History, politics, and salvation (C. Inda & J. Eagleson, Trans.). Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 223,
+      "title": "Salvations: Truth and difference in religion",
+      "citation": "Heim, S. M. (1995). Salvations: Truth and difference in religion. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 224,
+      "title": null,
+      "citation": "Hick, J. & Knitter, P. F. (Eds.) (1987), The myth of Christian uniqueness: Toward a pluralistic theology of religions. Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.4225,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\宗教學\\宗教對話\\David Thomas，Christian Doctrines in Islamic Theology.pdf"
+        },
+        {
+          "score": 0.3235,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\本地化處境神學\\Christian Theology and Intellectuals in China.pdf"
+        }
+      ]
+    },
+    {
+      "index": 225,
+      "title": "God and the universe of faiths",
+      "citation": "Hick, J. (1973). God and the universe of faiths. London: Macmillan.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 226,
+      "title": "God has many names",
+      "citation": "Hick, J. (1980). God has many names. London: Macmillan.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 227,
+      "title": "An interpretation of religion: Human responses to the transcendent. New Haven, CT: Yale University Press",
+      "citation": "Hick, J. (1989). An interpretation of religion: Human responses to the transcendent. New Haven, CT: Yale University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 228,
+      "title": "The metaphor of God incarnate: Christology in a pluralistic age",
+      "citation": "Hick, J. (1993). The metaphor of God incarnate: Christology in a pluralistic age. London: SCM Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 229,
+      "title": "The varieties of religious experience: A study in human nature",
+      "citation": "James, W. (1902). The varieties of religious experience: A study in human nature. New York: Longmans, Green, and Co. Kagawa, T. (賀川豊彦). (1922). Across the death-line (I. Fukumoto & T. Satchell, Trans.). Kobe: Japan Chronicle Office. Kagawa, T. (賀川豊彦). (1936). Brotherhood economics. New York: Harper & Brothers.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 230,
+      "title": "No other name? A critical survey of Christian attitudes toward the world religions",
+      "citation": "Knitter, P. F. (1985). No other name? A critical survey of Christian attitudes toward the world religions. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.4045,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\宗教學\\宗教對話\\Robert G. Hoyland，Seeing Islam as Others Saw- It A Survey and Evaluation of Christian, Jewish and Zoroastrian Writings on Early Islam.pdf"
+        },
+        {
+          "score": 0.3818,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會史\\東方教會史\\Augustine Casiday，The Orthodox Christian World.pdf"
+        },
+        {
+          "score": 0.3714,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\宗教學\\Michael Philip Penn，Envisioning Islam Syriac Christians and the Early Muslim World.pdf"
+        }
+      ]
+    },
+    {
+      "index": 231,
+      "title": "One earth many religions: Multifaith dialogue and global responsibility",
+      "citation": "Knitter, P. F. (1995). One earth many religions: Multifaith dialogue and global responsibility. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 232,
+      "title": "Introducing theologies of religions",
+      "citation": "Knitter, P. F. (2002). Introducing theologies of religions. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 233,
+      "title": "Without Buddha I could not be a Christian. Oxford: Oneworld Publications. Koyama, K. (小山晃佑). (1974). Water buffalo theology",
+      "citation": "Knitter, P. F. (2009). Without Buddha I could not be a Christian. Oxford: Oneworld Publications. Koyama, K. (小山晃佑). (1974). Water buffalo theology. Maryknoll, NY: Orbis Books. Küng, H. (1991). Global Responsibility: In Search of a New World Ethic. New York, NY: Crossroad.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.4113,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\宗教學\\宗教對話\\David Thomas，Christian Doctrines in Islamic Theology.pdf"
+        },
+        {
+          "score": 0.3194,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\伊斯蘭教\\Sabine Schmidtke，The Oxford Handbook of Islamic Theology.pdf"
+        },
+        {
+          "score": 0.2561,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\神學\\David Bentley Hart，The Hidden and the Manifest Essays in Theology and Metaphysics.mobi"
+        }
+      ]
+    },
+    {
+      "index": 234,
+      "title": "Redeemed by Fire: The Rise of Popular Christianity in Modern China",
+      "citation": "Lian, X. (2010). Redeemed by Fire: The Rise of Popular Christianity in Modern China. Yale University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.4409,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會法典與信條\\Schaff，History of the Christian Church Vol 7 — Modern Christianity, German Reformation.epub"
+        },
+        {
+          "score": 0.3968,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會法典與信條\\Schaff，History of the Christian Church Vol 8 — Modern Christianity, Swiss Reformation.epub"
+        },
+        {
+          "score": 0.381,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\其他宗教\\James J. ODonnell，Pagans The End of Traditional Religion and the Rise of Christianity.epub"
+        }
+      ]
+    },
+    {
+      "index": 235,
+      "title": "Marxism and Christianity",
+      "citation": "MacIntyre, A. (1968). Marxism and Christianity. London: Duckworth.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 236,
+      "title": "Democracy's dharma: Religious renaissance and political development in Taiwan",
+      "citation": "Madsen, R. (2007). Democracy's dharma: Religious renaissance and political development in Taiwan. University of California Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 237,
+      "title": "Zen and the birds of appetite",
+      "citation": "Merton, T. (1968). Zen and the birds of appetite. New York: New Directions. Müller, F. M. (1873). Introduction to the science of religion. London: Longmans, Green, and Co. Müller, F. M. (1878). Lectures on the origin and growth of religion as illustrated by the religions of India. London: Longmans, Green, and Co. Müller, F. M. (1889). Natural religion: The Gifford lectures. London: Longmans, Green, and Co.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 238,
+      "title": "The idea of the holy: An inquiry into the non-rational factor in the idea of the divine and its relation to the rational (J. W. Harvey, Trans.)",
+      "citation": "Otto, R. (1923). The idea of the holy: An inquiry into the non-rational factor in the idea of the divine and its relation to the rational (J. W. Harvey, Trans.). London: Oxford University Press. (Original work published 1917)",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.2471,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\伊斯蘭教\\Lewis, Bernard，Islam in History Ideas, People, and Events in the Middle East.epub"
+        }
+      ]
+    },
+    {
+      "index": 239,
+      "title": "The unknown Christ of Hinduism: Towards an ecumenical Christophany (Revised and enlarged ed.)",
+      "citation": "Panikkar, R. (1981). The unknown Christ of Hinduism: Towards an ecumenical Christophany (Revised and enlarged ed.). Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 240,
+      "title": "The cosmotheandric experience: Emerging religious consciousness",
+      "citation": "Panikkar, R. (1993). The cosmotheandric experience: Emerging religious consciousness. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 241,
+      "title": "Cultural disarmament: The way to peace",
+      "citation": "Panikkar, R. (1995). Cultural disarmament: The way to peace. Westminster John Knox Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 242,
+      "title": "The intra-religious dialogue (Rev. ed.)",
+      "citation": "Panikkar, R. (1999). The intra-religious dialogue (Rev. ed.). Paulist Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 243,
+      "title": "The intra-religious dialogue (Revised ed.)",
+      "citation": "Panikkar, R. (1999). The intra-religious dialogue (Revised ed.). New York: Paulist Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 244,
+      "title": "Christophany: The fullness of man",
+      "citation": "Panikkar, R. (2004). Christophany: The fullness of man. Maryknoll, NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 245,
+      "title": "An Asian theology of liberation",
+      "citation": "Pieris, A. (1988). An Asian theology of liberation. Maryknoll, NY: Orbis Books. Queen, C. S., & King, S. B. (Eds.). (1996). Engaged Buddhism: Buddhist Liberation Movements in Asia. State University of New York Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 246,
+      "title": "A theology for the social gospel",
+      "citation": "Rauschenbusch, W. (1917). A theology for the social gospel. New York: Macmillan.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 247,
+      "title": "Anarchy in the Pure Land: Tradition and modernity in the movements of Taixu and Yinshun",
+      "citation": "Ritzinger, J. R. (2017). Anarchy in the Pure Land: Tradition and modernity in the movements of Taixu and Yinshun. University of Hawaii Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 248,
+      "title": "Against harmony: Progressive and radical Buddhism in modern Japan",
+      "citation": "Shields, J. M. (2017). Against harmony: Progressive and radical Buddhism in modern Japan. Oxford University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 249,
+      "title": "Chinese theology: Text and context",
+      "citation": "Starr, C. (2016). Chinese theology: Text and context. Yale University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 250,
+      "title": "Centrality and commonality: An essay on Confucian religiousness",
+      "citation": "Tu, W. (1989). Centrality and commonality: An essay on Confucian religiousness. State University of New York Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    },
+    {
+      "index": 251,
+      "title": "Reconstructing Christianity in China: K. H. Ting and the Chinese church",
+      "citation": "Wickeri, P. L. (2007). Reconstructing Christianity in China: K. H. Ting and the Chinese church. NY: Orbis Books.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": [
+        {
+          "score": 0.4091,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會史\\東方教會史\\Aubrey Vine，The Nestorian Churches- A concise history of Nestorian Christianity in Asia.pdf"
+        },
+        {
+          "score": 0.3876,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會法典與信條\\Schaff，History of the Christian Church Vol 8 — Modern Christianity, Swiss Reformation.epub"
+        },
+        {
+          "score": 0.3846,
+          "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館\\世界宗教\\基督教\\教會法典與信條\\Schaff，History of the Christian Church Vol 7 — Modern Christianity, German Reformation.epub"
+        }
+      ]
+    },
+    {
+      "index": 252,
+      "title": "Baptized in the Fire of Revolution: The American Social Gospel and the YMCA in China, 1919-1937",
+      "citation": "Xing, J. (1996). Baptized in the Fire of Revolution: The American Social Gospel and the YMCA in China, 1919-1937. Lehigh University Press.",
+      "status": "missing",
+      "matches": [],
+      "db_matches": [],
+      "best_candidates": []
+    }
+  ]
+}

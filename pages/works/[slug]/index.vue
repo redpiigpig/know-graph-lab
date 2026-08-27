@@ -245,11 +245,18 @@
           <div v-show="bookTab === 'draft'">
             <div class="mb-4 flex items-start justify-between gap-3 flex-wrap">
               <div>
-                <h2 class="text-base font-semibold text-gray-900">專書初稿</h2>
-                <p class="text-xs text-gray-500 mt-0.5 max-w-2xl leading-relaxed">{{ bookDraftConf?.note || '碩論改寫的報導文學專書初稿' }}</p>
+                <h2 class="text-base font-semibold text-gray-900">專書版本</h2>
+                <p class="text-xs text-gray-500 mt-0.5 max-w-2xl leading-relaxed">{{ activeBookDraft?.note || bookDraftConf?.note || '碩論改寫的非虛構專書' }}</p>
               </div>
-              <a v-if="bookDraftConf?.docx" :href="bookDraftConf.docx" download
+              <a v-if="activeBookDraft?.docx" :href="activeBookDraft.docx" download
                 class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-300 text-rose-700 hover:bg-rose-50 no-underline flex-shrink-0">⬇ 下載 Word</a>
+            </div>
+            <div v-if="bookDraftVersions.length > 1" class="mb-4 inline-flex flex-wrap gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1">
+              <button v-for="version in bookDraftVersions" :key="version.id" type="button"
+                @click="activeBookDraftVersion = version.id"
+                :class="['px-3 py-1.5 rounded-lg text-xs transition-colors', activeBookDraftVersion === version.id ? 'bg-white text-rose-700 font-semibold shadow-sm' : 'text-gray-500 hover:text-gray-800']">
+                {{ version.label }}
+              </button>
             </div>
             <div v-if="bookDraftLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
             <div v-else-if="bookDraftHtml" class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-10" v-html="bookDraftHtml"></div>
@@ -466,6 +473,63 @@
             </div>
           </div>
 
+          <!-- ── 稿件版本 ── -->
+          <div v-show="activeTab === 'versions'">
+            <div class="mb-5 flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">稿件版本</h2>
+                <p class="text-xs text-gray-500 mt-0.5">三個版本各自保存；預設顯示第三版完稿。</p>
+              </div>
+              <a v-if="paperPresentation?.download" :href="paperPresentation.download"
+                class="flex-shrink-0 text-xs font-medium px-3 py-1.5 rounded-lg border border-teal-300 text-teal-700 hover:bg-teal-50">
+                ⬇ 下載{{ paperPresentation.label }}
+              </a>
+            </div>
+
+            <div class="mb-5 inline-flex max-w-full overflow-x-auto rounded-xl border border-gray-200 bg-gray-50 p-1">
+              <button v-for="version in paperVersions" :key="version.id"
+                class="min-w-max rounded-lg px-4 py-2 text-left transition"
+                :class="activePaperVersionId === version.id ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-800'"
+                @click="activePaperVersionId = version.id">
+                <span class="block text-sm font-semibold">{{ version.label }}</span>
+                <span class="block text-[11px] mt-0.5">{{ version.title }}</span>
+              </button>
+            </div>
+
+            <div v-if="activePaperVersion" class="mb-4 flex flex-wrap items-start justify-between gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3">
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-sm font-semibold text-gray-900">{{ activePaperVersion.label }}｜{{ activePaperVersion.title }}</span>
+                  <span v-if="activePaperVersion.id === paperVersionsDefault" class="rounded-full bg-teal-50 px-2 py-0.5 text-[11px] font-medium text-teal-700">預設完稿</span>
+                  <span v-if="activePaperVersion.date" class="text-xs text-gray-400">{{ activePaperVersion.date }}</span>
+                </div>
+                <p v-if="activePaperVersion.note" class="mt-1 text-xs leading-relaxed text-gray-500">{{ activePaperVersion.note }}</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <NuxtLink v-if="activePaperVersion.reader" :to="activePaperVersion.reader"
+                  class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">在閱讀器開啟 →</NuxtLink>
+                <a v-if="project?.paper_ref"
+                  :href="activePaperVersion.download || `/api/works/draft-docx?ref=${project.paper_ref}&version=${activePaperVersion.id}`"
+                  class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">⬇ 下載此版 Word</a>
+              </div>
+            </div>
+
+            <div v-if="visiblePaperMedia.length" class="mb-6 grid gap-4">
+              <figure v-for="item in visiblePaperMedia" :key="item.id" class="overflow-hidden rounded-2xl border border-gray-100 bg-white">
+                <img :src="item.src" :alt="item.alt" loading="lazy" class="block h-auto w-full object-cover">
+                <figcaption class="border-t border-gray-100 px-5 py-4">
+                  <div class="text-sm font-semibold text-gray-900">{{ item.title }}</div>
+                  <p class="mt-1 text-xs leading-relaxed text-gray-600">{{ item.caption }}</p>
+                  <p v-if="item.credit" class="mt-2 text-[11px] text-gray-400">{{ item.credit }}</p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div v-if="paperVersionLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="paperVersionHtml" class="doc-prose paper-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-12" v-html="paperVersionHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">找不到這一版的稿件。</div>
+          </div>
+
           <!-- ── 修改建議 ── -->
           <div v-show="activeTab === 'memo'">
             <div class="mb-4">
@@ -550,6 +614,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
 
 const route = useRoute()
@@ -691,7 +756,8 @@ interface MaterialGroup { label: string; count?: number; size?: number; tag?: st
 interface MaterialCategory { key: string; label: string; icon?: string; desc?: string; groups: MaterialGroup[] }
 interface ThesisChapter { id: string; title: string }
 interface ThesisConf { title?: string; note?: string; pdfKey?: string; contentBase?: string; chapters: ThesisChapter[] }
-interface BookDraftConf { md: string; docx?: string; note?: string }
+interface BookDraftVersion { id: string; label: string; md: string; docx?: string; note?: string }
+interface BookDraftConf { md?: string; docx?: string; note?: string; versions?: BookDraftVersion[]; defaultVersion?: string }
 interface InterviewVolume { label: string; docx: string }
 interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; interviewVolumes?: InterviewVolume[]; thesis?: ThesisConf; bookDraft?: BookDraftConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
 
@@ -824,6 +890,25 @@ function renderThesisText(txt: string): string {
 // ── 研究回顧（文獻綜述）資料 ──────────────────────────────────────────
 // 專書初稿 manifest 設定：必須宣告在 bookTabs 之前（bookTabs 的 watch 會立即求值）
 const bookDraftConf = computed(() => materials.value?.bookDraft ?? null)
+const bookDraftVersions = computed<BookDraftVersion[]>(() => {
+  const conf = bookDraftConf.value
+  if (!conf) return []
+  if (Array.isArray(conf.versions) && conf.versions.length) return conf.versions
+  return conf.md ? [{ id: 'default', label: '專書初稿', md: conf.md, docx: conf.docx, note: conf.note }] : []
+})
+const activeBookDraftVersion = ref('')
+const activeBookDraft = computed(() =>
+  bookDraftVersions.value.find((version) => version.id === activeBookDraftVersion.value)
+  ?? bookDraftVersions.value[0]
+  ?? null
+)
+watch(bookDraftVersions, (versions) => {
+  if (!versions.length) { activeBookDraftVersion.value = ''; return }
+  const preferred = bookDraftConf.value?.defaultVersion
+  if (!versions.some((version) => version.id === activeBookDraftVersion.value)) {
+    activeBookDraftVersion.value = versions.find((version) => version.id === preferred)?.id ?? versions[0].id
+  }
+}, { immediate: true })
 
 // Declared BEFORE the book-tab section: bookTabs (and its watcher, which Vue
 // evaluates eagerly on setup) reads litEntries, so it must exist by then —
@@ -839,7 +924,7 @@ const bookTabs = computed(() => {
   const tabs: { key: BookTab; label: string; badge?: string }[] = [
     { key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined },
   ]
-  if (bookDraftConf.value) tabs.push({ key: 'draft', label: '專書初稿' })
+  if (bookDraftVersions.value.length) tabs.push({ key: 'draft', label: '專書版本' })
   if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
   if (litEntries.value.length) tabs.push({ key: 'review', label: '研究回顧', badge: String(litEntries.value.length) })
@@ -853,14 +938,18 @@ watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoadin
 const bookDraftHtml = ref('')
 const bookDraftLoading = ref(false)
 async function loadBookDraft() {
-  if (!bookDraftConf.value?.md) return
+  if (!activeBookDraft.value?.md) return
   bookDraftLoading.value = true
   try {
-    const md = await $fetch<string>(bookDraftConf.value.md, { responseType: 'text' })
+    const md = await $fetch<string>(activeBookDraft.value.md, { responseType: 'text' })
     bookDraftHtml.value = renderBookMd(md || '')
   } catch { bookDraftHtml.value = '' } finally { bookDraftLoading.value = false }
 }
 watch(bookTab, (t) => { if (t === 'draft' && !bookDraftHtml.value && !bookDraftLoading.value) loadBookDraft() })
+watch(activeBookDraftVersion, () => {
+  bookDraftHtml.value = ''
+  if (bookTab.value === 'draft') loadBookDraft()
+})
 
 // 專書 md 渲染：標題／粗體／標楷體引文／[^n] 註釋——nonchurch 格式雙向互點
 // （正文上標→註釋；註釋尾「↩」→跳回原文）
@@ -930,9 +1019,55 @@ const litGroups = computed(() => {
   return groups
 })
 
-// ── 論文計畫分頁（研究回顧 / 修改建議 / 原文 / 書摘）─────────────────────
-type PaperTab = 'review' | 'memo' | 'draft' | 'original' | 'notes'
+// ── 論文計畫分頁（稿件版本 / 研究回顧 / 修改建議 / 書摘）────────────────
+type PaperTab = 'versions' | 'review' | 'memo' | 'draft' | 'original' | 'notes'
+type PaperVersionFormat = 'markdown' | 'text'
+interface PaperVersion {
+  id: string
+  label: string
+  title: string
+  date?: string
+  format: PaperVersionFormat
+  src: string
+  note?: string
+  download?: string
+  reader?: string
+}
+interface PaperPresentation {
+  label: string
+  download: string
+}
+interface PaperMedia {
+  id: string
+  src: string
+  alt: string
+  title: string
+  caption: string
+  credit?: string
+  versions?: string[]
+}
+interface PaperVersionsManifest {
+  defaultVersion: string
+  presentation?: PaperPresentation
+  media?: PaperMedia[]
+  versions: PaperVersion[]
+}
 const activeTab = ref<PaperTab>('review')
+
+const paperVersions = ref<PaperVersion[]>([])
+const paperVersionsDefault = ref('')
+const paperPresentation = ref<PaperPresentation | null>(null)
+const paperMedia = ref<PaperMedia[]>([])
+const activePaperVersionId = ref('')
+const activePaperVersion = computed(() =>
+  paperVersions.value.find(version => version.id === activePaperVersionId.value) || paperVersions.value[0] || null,
+)
+const paperVersionHtml = ref('')
+const paperVersionLoading = ref(false)
+let paperVersionLoadSequence = 0
+const visiblePaperMedia = computed(() => paperMedia.value.filter(item =>
+  !item.versions?.length || item.versions.includes(activePaperVersionId.value),
+))
 
 const memoHtml = ref('')
 const memoLoading = ref(false)
@@ -944,12 +1079,12 @@ const paperHtml = ref('')
 const paperLoading = ref(false)
 
 const paperTabs = computed(() => {
-  const tabs: { key: PaperTab; label: string; badge?: string }[] = [
-    { key: 'review', label: '研究回顧', badge: litEntries.value.length ? String(litEntries.value.length) : undefined },
-  ]
+  const tabs: { key: PaperTab; label: string; badge?: string }[] = []
+  if (paperVersions.value.length) tabs.push({ key: 'versions', label: '稿件版本', badge: String(paperVersions.value.length) })
+  tabs.push({ key: 'review', label: '研究回顧', badge: litEntries.value.length ? String(litEntries.value.length) : undefined })
   if (memoAvailable.value) tabs.push({ key: 'memo', label: '修改建議' })
-  if (draftAvailable.value) tabs.push({ key: 'draft', label: '修改草稿' })
-  if (project.value?.paper_ref) tabs.push({ key: 'original', label: '原文' })
+  if (!paperVersions.value.length && draftAvailable.value) tabs.push({ key: 'draft', label: '修改草稿' })
+  if (!paperVersions.value.length && project.value?.paper_ref) tabs.push({ key: 'original', label: '原文' })
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
 })
@@ -957,6 +1092,57 @@ const paperTabs = computed(() => {
 watch(paperTabs, (tabs) => {
   if (!tabs.some(t => t.key === activeTab.value)) activeTab.value = 'review'
 })
+
+async function loadPaperVersions() {
+  const paperRef = project.value?.paper_ref
+  paperVersions.value = []
+  paperVersionsDefault.value = ''
+  paperPresentation.value = null
+  paperMedia.value = []
+  activePaperVersionId.value = ''
+  paperVersionHtml.value = ''
+  if (!paperRef) return
+  try {
+    const manifest = await $fetch<PaperVersionsManifest>(`/content/works/${paperRef}-versions.json`)
+    const versions = Array.isArray(manifest?.versions)
+      ? manifest.versions.filter(version => version?.id && version?.src && (version.format === 'markdown' || version.format === 'text'))
+      : []
+    if (!versions.length) return
+    paperVersions.value = versions
+    paperVersionsDefault.value = versions.some(version => version.id === manifest.defaultVersion)
+      ? manifest.defaultVersion
+      : versions[0].id
+    paperPresentation.value = manifest.presentation?.download ? manifest.presentation : null
+    paperMedia.value = Array.isArray(manifest.media)
+      ? manifest.media.filter(item => item?.id && item?.src && item?.alt && item?.title && item?.caption)
+      : []
+    activePaperVersionId.value = paperVersionsDefault.value
+    activeTab.value = 'versions'
+  } catch {
+    // 沒有版本 manifest 的論文沿用既有「修改草稿／原文」介面。
+  }
+}
+
+async function loadActivePaperVersion() {
+  const version = activePaperVersion.value
+  const sequence = ++paperVersionLoadSequence
+  paperVersionHtml.value = ''
+  if (!version) { paperVersionLoading.value = false; return }
+  paperVersionLoading.value = true
+  try {
+    const content = await $fetch<string>(version.src, { responseType: 'text' })
+    if (sequence !== paperVersionLoadSequence) return
+    paperVersionHtml.value = version.format === 'text'
+      ? renderPaperText(content || '')
+      : renderMarkdown(content || '')
+  } catch {
+    if (sequence === paperVersionLoadSequence) paperVersionHtml.value = ''
+  } finally {
+    if (sequence === paperVersionLoadSequence) paperVersionLoading.value = false
+  }
+}
+
+watch(activePaperVersionId, () => { loadActivePaperVersion() })
 
 // 修改建議：抓 public/content/works/<ref>-revision-memo.md → 迷你 markdown 渲染
 async function loadMemo() {
@@ -993,25 +1179,59 @@ async function loadPaperText() {
   } catch { paperHtml.value = '' } finally { paperLoading.value = false }
 }
 
-watch(() => project.value?.paper_ref, (r) => { if (r) { loadMemo(); loadDraft(); loadPaperText() } }, { immediate: true })
+watch(() => project.value?.paper_ref, async (r) => {
+  if (r) {
+    await loadPaperVersions()
+    loadMemo()
+    if (paperVersions.value.length) {
+      draftHtml.value = ''
+      draftAvailable.value = false
+      paperHtml.value = ''
+    } else {
+      loadDraft()
+      loadPaperText()
+    }
+  }
+}, { immediate: true })
 
 // ── 迷你 markdown 渲染（無外部依賴；夠用於修改建議書：標題/粗體/清單/引用/表格/連結/分隔線）──
 function esc(s: string) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
 function inlineMd(s: string) {
   return esc(s)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
 }
 function renderMarkdown(md: string): string {
   const lines = md.replace(/\r\n/g, '\n').split('\n')
   const out: string[] = []
+  const noteRefs = new Set<string>()
+  const inline = (s: string, linkNotes = true) => {
+    const html = inlineMd(s)
+    if (!linkNotes) return html
+    return html.replace(/〔註(\d+)〕/g, (_, n) => {
+      const idAttr = noteRefs.has(n) ? '' : ` id="mdfn-ref-${n}"`
+      noteRefs.add(n)
+      return `<sup class="footnote-ref"><a href="#mdfn-${n}"${idAttr}>註${n}</a></sup>`
+    })
+  }
   let i = 0
   let list: 'ul' | 'ol' | null = null
+  let notesOpen = false
   const closeList = () => { if (list) { out.push(`</${list}>`); list = null } }
+  const closeNotes = () => { if (notesOpen) { out.push('</div>'); notesOpen = false } }
   while (i < lines.length) {
     const t = lines[i].trim()
     if (!t) { closeList(); i++; continue }
+    if (notesOpen) {
+      const definition = t.match(/^〔註(\d+)〕\s*(.*)$/)
+      if (definition) {
+        out.push(`<div class="fn-item" id="mdfn-${definition[1]}"><span class="fn-num">${definition[1]}</span><div class="fn-body">${inline(definition[2], false)}<a href="#mdfn-ref-${definition[1]}" class="footnote-backref">↩</a></div></div>`)
+        i++
+        continue
+      }
+    }
     if (/^---+$/.test(t)) { closeList(); out.push('<hr>'); i++; continue }
     // 表格：本行以 | 起，下一行為分隔列
     if (t.startsWith('|') && i + 1 < lines.length && /^\|[\s:|-]+\|?\s*$/.test(lines[i + 1].trim())) {
@@ -1020,24 +1240,33 @@ function renderMarkdown(md: string): string {
       const head = cells(t); i += 2
       const rows: string[][] = []
       while (i < lines.length && lines[i].trim().startsWith('|')) { rows.push(cells(lines[i])); i++ }
-      let tbl = '<table><thead><tr>' + head.map(h => `<th>${inlineMd(h)}</th>`).join('') + '</tr></thead><tbody>'
-      for (const r of rows) tbl += '<tr>' + r.map(c => `<td>${inlineMd(c)}</td>`).join('') + '</tr>'
+      let tbl = '<table><thead><tr>' + head.map(h => `<th>${inline(h)}</th>`).join('') + '</tr></thead><tbody>'
+      for (const r of rows) tbl += '<tr>' + r.map(c => `<td>${inline(c)}</td>`).join('') + '</tr>'
       out.push(tbl + '</tbody></table>'); continue
     }
     const h = t.match(/^(#{1,6})\s+(.*)$/)
-    if (h) { closeList(); const lvl = Math.min(h[1].length + 1, 6); out.push(`<h${lvl}>${inlineMd(h[2])}</h${lvl}>`); i++; continue }
+    if (h) {
+      closeList()
+      closeNotes()
+      const lvl = Math.min(h[1].length + 1, 6)
+      out.push(`<h${lvl}>${inline(h[2])}</h${lvl}>`)
+      if (h[2].trim() === '註釋') { out.push('<div class="footnotes">'); notesOpen = true }
+      i++
+      continue
+    }
     if (t.startsWith('>')) {
       closeList(); const buf: string[] = []
       while (i < lines.length && lines[i].trim().startsWith('>')) { buf.push(lines[i].trim().replace(/^>\s?/, '')); i++ }
-      out.push(`<blockquote>${inlineMd(buf.join(' '))}</blockquote>`); continue
+      out.push(`<blockquote>${inline(buf.join(' '))}</blockquote>`); continue
     }
     const ul = t.match(/^[-*]\s+(.*)$/)
-    if (ul) { if (list !== 'ul') { closeList(); out.push('<ul>'); list = 'ul' } out.push(`<li>${inlineMd(ul[1])}</li>`); i++; continue }
+    if (ul) { if (list !== 'ul') { closeList(); out.push('<ul>'); list = 'ul' } out.push(`<li>${inline(ul[1])}</li>`); i++; continue }
     const ol = t.match(/^\d+[.)]\s+(.*)$/)
-    if (ol) { if (list !== 'ol') { closeList(); out.push('<ol>'); list = 'ol' } out.push(`<li>${inlineMd(ol[1])}</li>`); i++; continue }
-    closeList(); out.push(`<p>${inlineMd(t)}</p>`); i++
+    if (ol) { if (list !== 'ol') { closeList(); out.push('<ol>'); list = 'ol' } out.push(`<li>${inline(ol[1])}</li>`); i++; continue }
+    closeList(); out.push(`<p>${inline(t)}</p>`); i++
   }
   closeList()
+  closeNotes()
   return out.join('\n')
 }
 
@@ -1192,7 +1421,8 @@ function onNotesUpdate(html: string) {
 .doc-prose :deep(sup.footnote-ref) { font-size: 0.68em; vertical-align: super; }
 .book-prose :deep(sup.footnote-ref a),
 .doc-prose :deep(sup.footnote-ref a) { color: #2563eb; text-decoration: none; }
-.book-prose :deep(.footnotes) { margin: 1.5em 0 0.5em; border-top: 2px solid #e5e7eb; padding-top: 0.9em; }
+.book-prose :deep(.footnotes),
+.doc-prose :deep(.footnotes) { margin: 1.5em 0 0.5em; border-top: 2px solid #e5e7eb; padding-top: 0.9em; }
 .book-prose :deep(.fn-item),
 .doc-prose :deep(.fn-item) { display: flex; align-items: baseline; line-height: 1.8; font-size: 0.78rem; color: #555; margin-bottom: 0.3rem; }
 .book-prose :deep(.fn-num),

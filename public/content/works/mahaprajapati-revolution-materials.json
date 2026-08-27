@@ -10,9 +10,23 @@
     { "label": "第三冊　社會運動與宗教對話", "docx": "/content/works/mahaprajapati-interviews-vol3.docx" }
   ],
   "bookDraft": {
-    "md": "/content/works/mahaprajapati-revolution-book.md",
-    "docx": "/content/works/mahaprajapati-revolution-book.docx",
-    "note": "碩論改寫的第一人稱參與式觀察報導文學專書——自序＋七章。訪談引文標楷體，章末尾註；【頁碼待核】處為定稿前待補。"
+    "defaultVersion": "v2",
+    "note": "碩士論文改寫為非虛構作品；可切換比較第一版與第二版。",
+    "versions": [
+      {
+        "id": "v1",
+        "label": "第一版｜原始初稿",
+        "md": "/content/works/mahaprajapati-revolution-book.md",
+        "docx": "/content/works/mahaprajapati-revolution-book.docx",
+        "note": "保留原始改寫供比較；仍含部分待核頁碼與較強的單線敘事。"
+      },
+      {
+        "id": "v2",
+        "label": "第二版｜非虛構改寫",
+        "md": "/content/works/mahaprajapati-revolution-book-v2.md",
+        "note": "以第一人稱報導介入為敘事主軸，明寫研究者的立場、初衷、參與與限制，並以外語研究提出比較與反例。"
+      }
+    ]
   },
   "thesis": {
     "title": "印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣法師為核心",

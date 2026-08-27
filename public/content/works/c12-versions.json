@@ -1,0 +1,49 @@
+{
+  "defaultVersion": "third",
+  "presentation": {
+    "label": "20 分鐘報告簡報",
+    "download": "/content/works/c12-presentation.pptx"
+  },
+  "media": [
+    {
+      "id": "shengyen-jingwei-calligraphy",
+      "src": "/content/works/c12-shengyen-jingwei-calligraphy.jpg",
+      "alt": "2002 年法印樓室內，右側懸掛聖嚴法師書寫、內容引自印順導師精衛銜石語句的墨寶",
+      "title": "法印樓的聖嚴法師墨寶",
+      "caption": "「本著精衛銜石的精神，做到哪裡，哪裡就是完成，又何必瞻前顧後呢。」字由聖嚴法師所書，內容引自印順導師；攝於 2002 年 11 月 15 日。",
+      "credit": "張辰瑋提供並授權使用｜原檔：111504-聖嚴墨寶.JPG",
+      "versions": ["third"]
+    }
+  ],
+  "versions": [
+    {
+      "id": "first",
+      "label": "第一版",
+      "title": "研討會原稿",
+      "date": "2026-06-05",
+      "format": "text",
+      "src": "/content/papers/c12.txt",
+      "reader": "/papers/c12",
+      "note": "最初完成的研討會原稿，保留當時的論證結構與文字。"
+    },
+    {
+      "id": "second",
+      "label": "第二版",
+      "title": "修改草稿",
+      "date": "2026-07-05",
+      "format": "markdown",
+      "src": "/content/works/c12-v2.md",
+      "note": "期刊論文改寫過程中的第二版草稿，含當時的修訂痕跡與待核事項。"
+    },
+    {
+      "id": "third",
+      "label": "第三版",
+      "title": "完稿",
+      "date": "2026-07-07",
+      "format": "markdown",
+      "src": "/content/works/c12-v3.md",
+      "download": "/content/works/c12-v3.docx",
+      "note": "後來完成的全文版本，預設顯示；保留原始 Word 完稿下載。"
+    }
+  ]
+}

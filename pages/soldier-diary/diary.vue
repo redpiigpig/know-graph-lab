@@ -221,13 +221,18 @@
       <!-- 基本守則 -->
       <section class="sd-panel sdd-block sdd-rules">
         <button class="sdd-rules-toggle" @click="showRules = !showRules">
-          <span>📜 基本守則</span><span class="sdd-rules-caret">{{ showRules ? '▲' : '▼' }}</span>
+          <span>📜 基本守則摘要</span><span class="sdd-rules-caret">{{ showRules ? '▲' : '▼' }}</span>
         </button>
-        <ol v-show="showRules" class="sdd-rules-list">
-          <li v-for="(r, i) in CODE_OF_CONDUCT" :key="i">
-            <b>{{ r.title }}</b><span>{{ r.desc }}</span>
-          </li>
-        </ol>
+        <div v-show="showRules">
+          <ol class="sdd-rules-list">
+            <li v-for="(r, i) in CODE_OF_CONDUCT" :key="i">
+              <b>{{ r.title }}</b><span>{{ r.desc }}</span>
+            </li>
+          </ol>
+          <NuxtLink to="/soldier-diary/rules" class="sd-btn sd-btn--ghost sd-btn--sm sdd-rules-full">
+            閱讀完整守則 →
+          </NuxtLink>
+        </div>
       </section>
     </template>
   </div>
@@ -500,6 +505,7 @@ onMounted(async () => {
 .sdd-rules-list li { color: var(--sd-khaki); font-size: 0.82rem; line-height: 1.6; }
 .sdd-rules-list li b { color: var(--sd-sand); display: block; letter-spacing: 0.04em; }
 .sdd-rules-list li span { color: var(--sd-muted); font-size: 0.76rem; }
+.sdd-rules-full { margin-top: 14px; }
 
 .sdd-history { margin-top: 14px; }
 .sdd-log { padding: 12px 0; border-bottom: 1px solid var(--sd-line); }

@@ -12,6 +12,7 @@
 
         <div class="sd-topbar-actions">
           <template v-if="isLoggedIn">
+            <NuxtLink to="/soldier-diary/rules" class="sd-rules-link">基本守則</NuxtLink>
             <span class="sd-role" :class="isChief ? 'sd-role--chief' : 'sd-role--recruit'">
               {{ isChief ? '教官' : session?.callsign }}
             </span>
@@ -104,6 +105,11 @@ async function doLogout() {
   color: var(--sd-olive); letter-spacing: 0.18em;
 }
 .sd-topbar-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.sd-rules-link {
+  font-size: 0.76rem; color: var(--sd-brass); text-decoration: none;
+  white-space: nowrap; letter-spacing: 0.08em; transition: color 0.15s;
+}
+.sd-rules-link:hover, .sd-rules-link.router-link-active { color: #ead27e; }
 .sd-role {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
   padding: 3px 10px; border-radius: 2px; border: 1px solid;

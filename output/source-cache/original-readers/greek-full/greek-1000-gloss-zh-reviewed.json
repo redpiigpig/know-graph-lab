@@ -1,0 +1,6010 @@
+{
+  "schemaVersion": "1.0.0",
+  "language": "New Testament Greek",
+  "languageCode": "grc",
+  "note": "greek-1000.json 的繁體中文詞義編輯層；主檔的 glossZh 一律留空，以免課程次序被語言模型改寫。",
+  "engine": "claude-haiku-4-5-20251001",
+  "count": 1000,
+  "glosses": {
+    "1": {
+      "glossZh": "天使；使者",
+      "lesson": 1,
+      "printedEntry": "ἄγγελος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "2": {
+      "glossZh": "阿們；誠然；願如此成就",
+      "lesson": 1,
+      "printedEntry": "ἀμήν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "3": {
+      "glossZh": "人；人類",
+      "lesson": 1,
+      "printedEntry": "ἄνθρωπος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "4": {
+      "glossZh": "使徒；受差遣者",
+      "lesson": 1,
+      "printedEntry": "ἀπόστολος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "5": {
+      "glossZh": "加利利",
+      "lesson": 1,
+      "printedEntry": "Γαλιλαία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "6": {
+      "glossZh": "文字；經文；聖經",
+      "lesson": 1,
+      "printedEntry": "γραφή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "7": {
+      "glossZh": "榮耀；尊榮；光輝",
+      "lesson": 1,
+      "printedEntry": "δόξα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "8": {
+      "glossZh": "我",
+      "lesson": 1,
+      "printedEntry": "ἐγώ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "9": {
+      "glossZh": "末後的；最後的",
+      "lesson": 1,
+      "printedEntry": "ἔσχατος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "10": {
+      "glossZh": "生命",
+      "lesson": 1,
+      "printedEntry": "ζωή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "11": {
+      "glossZh": "神；上帝；神靈",
+      "lesson": 1,
+      "printedEntry": "θεός, -οῦ, -ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "12": {
+      "glossZh": "並且；和；也；即",
+      "lesson": 1,
+      "printedEntry": "καί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "13": {
+      "glossZh": "心；內心；意念",
+      "lesson": 1,
+      "printedEntry": "καρδία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "14": {
+      "glossZh": "世界；宇宙；天地萬物",
+      "lesson": 1,
+      "printedEntry": "κόσμος, ου, -ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "15": {
+      "glossZh": "言語；道；話；神的言論",
+      "lesson": 1,
+      "printedEntry": "λόγος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "16": {
+      "glossZh": "風；氣息；靈",
+      "lesson": 1,
+      "printedEntry": "πνεῦμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "17": {
+      "glossZh": "先知",
+      "lesson": 1,
+      "printedEntry": "προφήτης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "18": {
+      "glossZh": "安息日；一週",
+      "lesson": 1,
+      "printedEntry": "σάββατον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "19": {
+      "glossZh": "聲音；聲響；呼聲",
+      "lesson": 1,
+      "printedEntry": "φωνή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "20": {
+      "glossZh": "基督；受膏者；彌賽亞",
+      "lesson": 1,
+      "printedEntry": "Χριστός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "21": {
+      "glossZh": "亞伯拉罕",
+      "lesson": 1,
+      "printedEntry": "Ἀβραάμ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "22": {
+      "glossZh": "大衛",
+      "lesson": 1,
+      "printedEntry": "Δαυίδ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "23": {
+      "glossZh": "保羅",
+      "lesson": 1,
+      "printedEntry": "Παῦλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "24": {
+      "glossZh": "彼得",
+      "lesson": 1,
+      "printedEntry": "Πέτρος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "25": {
+      "glossZh": "彼拉多",
+      "lesson": 1,
+      "printedEntry": "Πιλᾶτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "26": {
+      "glossZh": "西門",
+      "lesson": 1,
+      "printedEntry": "Σίμων, -ωνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "27": {
+      "glossZh": "愛；愛心",
+      "lesson": 2,
+      "printedEntry": "ἀγάπη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "28": {
+      "glossZh": "另一個；其他的；不同的",
+      "lesson": 2,
+      "printedEntry": "ἄλλος, -η, -ο",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "29": {
+      "glossZh": "他；她；它；他們；同樣的",
+      "lesson": 2,
+      "printedEntry": "αὐτός, -ή, -ό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "30": {
+      "glossZh": "國度；王權；統治",
+      "lesson": 2,
+      "printedEntry": "βασιλεία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "31": {
+      "glossZh": "但是；然而；而且",
+      "lesson": 2,
+      "printedEntry": "δέ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "32": {
+      "glossZh": "（配所有格）在…裡；在…上；在…中間",
+      "lesson": 2,
+      "printedEntry": "ἐν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "33": {
+      "glossZh": "工作；勞動；行為；事蹟",
+      "lesson": 2,
+      "printedEntry": "ἔργον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "34": {
+      "glossZh": "時刻；適當時機；時代",
+      "lesson": 2,
+      "printedEntry": "καιρός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "35": {
+      "glossZh": "現在；已經；此時",
+      "lesson": 2,
+      "printedEntry": "νῦν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "36": {
+      "glossZh": "定冠詞",
+      "lesson": 2,
+      "printedEntry": "ὁ, ἡ, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "37": {
+      "glossZh": "因為；既然；引出直接引語",
+      "lesson": 2,
+      "printedEntry": "ὅτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "38": {
+      "glossZh": "不；沒有",
+      "lesson": 2,
+      "printedEntry": "οὐ (οὐκ, οὐχ)",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "39": {
+      "glossZh": "時辰；時候；季節",
+      "lesson": 2,
+      "printedEntry": "ὥρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "40": {
+      "glossZh": "罪",
+      "lesson": 3,
+      "printedEntry": "ἁμαρτία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "41": {
+      "glossZh": "統治者；開始、起初",
+      "lesson": 3,
+      "printedEntry": "ἀρχή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "42": {
+      "glossZh": "因為",
+      "lesson": 3,
+      "printedEntry": "γάρ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "43": {
+      "glossZh": "說、講",
+      "lesson": 3,
+      "printedEntry": "εἶπεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "44": {
+      "glossZh": "（配賓格）到、進入、在…之中",
+      "lesson": 3,
+      "printedEntry": "εἰς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "45": {
+      "glossZh": "權柄、權能、權力",
+      "lesson": 3,
+      "printedEntry": "ἐξουσία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "46": {
+      "glossZh": "福音、好消息",
+      "lesson": 3,
+      "printedEntry": "εὐαγγέλιον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "47": {
+      "glossZh": "耶穌",
+      "lesson": 3,
+      "printedEntry": "Ἰησοῦς, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "48": {
+      "glossZh": "主；主人、先生",
+      "lesson": 3,
+      "printedEntry": "κύριος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "49": {
+      "glossZh": "不要；免得、恐怕",
+      "lesson": 3,
+      "printedEntry": "μή",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "50": {
+      "glossZh": "天、天空、天堂",
+      "lesson": 3,
+      "printedEntry": "οὐρανός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "51": {
+      "glossZh": "這個、這；他、她、它",
+      "lesson": 3,
+      "printedEntry": "οὗτος, αὕτη, τοῦτο",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "52": {
+      "glossZh": "你",
+      "lesson": 3,
+      "printedEntry": "σύ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "53": {
+      "glossZh": "兒子、後裔",
+      "lesson": 3,
+      "printedEntry": "υἱός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "54": {
+      "glossZh": "以至於、所以、因此",
+      "lesson": 3,
+      "printedEntry": "ὥστε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "55": {
+      "glossZh": "但是；除了",
+      "lesson": 4,
+      "printedEntry": "ἀλλά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "56": {
+      "glossZh": "（配屬格）從…；從…離開",
+      "lesson": 4,
+      "printedEntry": "ἀπό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "57": {
+      "glossZh": "（配屬格）通過…；因為…；藉著…",
+      "lesson": 4,
+      "printedEntry": "διά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "58": {
+      "glossZh": "是；存在",
+      "lesson": 4,
+      "printedEntry": "εἰμί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "59": {
+      "glossZh": "（配屬格）從…出來；從…當中",
+      "lesson": 4,
+      "printedEntry": "ἐκ (ἐξ)",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "60": {
+      "glossZh": "日子；天",
+      "lesson": 4,
+      "printedEntry": "ἡμέρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "61": {
+      "glossZh": "（過去式）是；曾是",
+      "lesson": 4,
+      "printedEntry": "ἦν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "62": {
+      "glossZh": "海；湖",
+      "lesson": 4,
+      "printedEntry": "θάλασσα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "63": {
+      "glossZh": "死；死亡",
+      "lesson": 4,
+      "printedEntry": "θάνατος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "64": {
+      "glossZh": "為要…；使得…",
+      "lesson": 4,
+      "printedEntry": "ἵνα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "65": {
+      "glossZh": "約翰",
+      "lesson": 4,
+      "printedEntry": "Ἰωάννης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "66": {
+      "glossZh": "說；講話",
+      "lesson": 4,
+      "printedEntry": "λέγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "67": {
+      "glossZh": "（配屬格）與…同；（配賓格）在…之後",
+      "lesson": 4,
+      "printedEntry": "μετά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "68": {
+      "glossZh": "房子；家；家人",
+      "lesson": 4,
+      "printedEntry": "οἰκία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "69": {
+      "glossZh": "房子；家；家人",
+      "lesson": 4,
+      "printedEntry": "οἶκος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "70": {
+      "glossZh": "群眾；民眾；人群",
+      "lesson": 4,
+      "printedEntry": "ὄχλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "71": {
+      "glossZh": "（配屬格）從…；在…面前",
+      "lesson": 4,
+      "printedEntry": "παρά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "72": {
+      "glossZh": "比喻；寓言",
+      "lesson": 4,
+      "printedEntry": "παραβολή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "73": {
+      "glossZh": "（配賓格）向…；朝向…；與…",
+      "lesson": 4,
+      "printedEntry": "πρός",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "74": {
+      "glossZh": "（配屬格）被…；（配賓格）在…之下；大約",
+      "lesson": 4,
+      "printedEntry": "ὑπό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "75": {
+      "glossZh": "良善的；美好的",
+      "lesson": 5,
+      "printedEntry": "ἀγαθός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "76": {
+      "glossZh": "聖潔的；分別為聖的",
+      "lesson": 5,
+      "printedEntry": "ἅγιος, -ία, -ιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "77": {
+      "glossZh": "蒙愛的；親愛的",
+      "lesson": 5,
+      "printedEntry": "ἀγαπητός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "78": {
+      "glossZh": "永遠的；不朽的",
+      "lesson": 5,
+      "printedEntry": "αἰώνιος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "79": {
+      "glossZh": "彼此；互相",
+      "lesson": 5,
+      "printedEntry": "ἀλλήλων",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "80": {
+      "glossZh": "回答；應答",
+      "lesson": 5,
+      "printedEntry": "ἀπεκρίθη",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "81": {
+      "glossZh": "奴僕；奴隸",
+      "lesson": 5,
+      "printedEntry": "δοῦλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "82": {
+      "glossZh": "如果；若；倘若",
+      "lesson": 5,
+      "printedEntry": "ἐάν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "83": {
+      "glossZh": "我的",
+      "lesson": 5,
+      "printedEntry": "ἐμός, ἐμή, ἐμόν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "84": {
+      "glossZh": "誡命；吩咐；命令",
+      "lesson": 5,
+      "printedEntry": "ἐντολή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "85": {
+      "glossZh": "就如；正如；照著",
+      "lesson": 5,
+      "printedEntry": "καθώς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "86": {
+      "glossZh": "邪惡的；有害的；壞的",
+      "lesson": 5,
+      "printedEntry": "κακός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "87": {
+      "glossZh": "我的",
+      "lesson": 5,
+      "printedEntry": "μου",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "88": {
+      "glossZh": "死的；屍體",
+      "lesson": 5,
+      "printedEntry": "νεκρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "89": {
+      "glossZh": "忠信的；可信的；信實的",
+      "lesson": 5,
+      "printedEntry": "πιστός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "90": {
+      "glossZh": "邪惡的；不義的；有害的",
+      "lesson": 5,
+      "printedEntry": "πονηρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "91": {
+      "glossZh": "首先的；第一的",
+      "lesson": 5,
+      "printedEntry": "πρῶτος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "92": {
+      "glossZh": "第三的",
+      "lesson": 5,
+      "printedEntry": "τρίτος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "93": {
+      "glossZh": "如果；若",
+      "lesson": 6,
+      "printedEntry": "εἰ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "94": {
+      "glossZh": "除非；如果不",
+      "lesson": 6,
+      "printedEntry": "εἰ μή",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "95": {
+      "glossZh": "一；某一",
+      "lesson": 6,
+      "printedEntry": "εἷς, μία, ἕν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "96": {
+      "glossZh": "已經；現在",
+      "lesson": 6,
+      "printedEntry": "ἤδη",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "97": {
+      "glossZh": "名字；名稱；品格；名聲",
+      "lesson": 6,
+      "printedEntry": "ὄνομα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "98": {
+      "glossZh": "沒有人；沒有任何人；沒有什麼",
+      "lesson": 6,
+      "printedEntry": "οὐδείς, οὐδεμία, οὐδέν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "99": {
+      "glossZh": "所有的；全部的；每一種",
+      "lesson": 6,
+      "printedEntry": "πᾶς, πᾶσα, πᾶν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "100": {
+      "glossZh": "（配屬格）關於；論及；圍繞",
+      "lesson": 6,
+      "printedEntry": "περί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "101": {
+      "glossZh": "肉體；身體；血肉",
+      "lesson": 6,
+      "printedEntry": "σάρξ, σαρκός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "102": {
+      "glossZh": "（配屬格）與…一起；同…",
+      "lesson": 6,
+      "printedEntry": "σύν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "103": {
+      "glossZh": "身體；軀體",
+      "lesson": 6,
+      "printedEntry": "σῶμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "104": {
+      "glossZh": "孩子；兒女；子孫；居民",
+      "lesson": 6,
+      "printedEntry": "τέκνον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "105": {
+      "glossZh": "誰；哪個；什麼（疑問詞）",
+      "lesson": 6,
+      "printedEntry": "τίς, τί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "106": {
+      "glossZh": "某人；有人；某事（不定詞）",
+      "lesson": 6,
+      "printedEntry": "τις, τι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "107": {
+      "glossZh": "兄弟",
+      "lesson": 7,
+      "printedEntry": "ἀδελφός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "108": {
+      "glossZh": "（條件語氣詞）若；假若",
+      "lesson": 7,
+      "printedEntry": "ἄν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "109": {
+      "glossZh": "男人；男性",
+      "lesson": 7,
+      "printedEntry": "ἀνήρ, ἀνδρός, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "110": {
+      "glossZh": "教會；集會；聚集",
+      "lesson": 7,
+      "printedEntry": "ἐκκλησία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "111": {
+      "glossZh": "盼望；期待",
+      "lesson": 7,
+      "printedEntry": "ἐλπίς, -ίδος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "112": {
+      "glossZh": "外面；在…外",
+      "lesson": 7,
+      "printedEntry": "ἔξω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "113": {
+      "glossZh": "（配所有格、賓格或處格）在…上；向…；針對…；基於…",
+      "lesson": 7,
+      "printedEntry": "ἐπί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "114": {
+      "glossZh": "我們（強調用法）",
+      "lesson": 7,
+      "printedEntry": "ἡμεῖς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "115": {
+      "glossZh": "意志；旨意；願望",
+      "lesson": 7,
+      "printedEntry": "θέλημα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "116": {
+      "glossZh": "看哪；看；看啊",
+      "lesson": 7,
+      "printedEntry": "ἴδε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "117": {
+      "glossZh": "看哪；看；看啊",
+      "lesson": 7,
+      "printedEntry": "ἰδού",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "118": {
+      "glossZh": "美好的；善的；優美的",
+      "lesson": 7,
+      "printedEntry": "καλός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "119": {
+      "glossZh": "母親",
+      "lesson": 7,
+      "printedEntry": "μήτηρ, μητρός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "120": {
+      "glossZh": "也不；既不…也不；甚至不",
+      "lesson": 7,
+      "printedEntry": "οὐδέ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "121": {
+      "glossZh": "父親；天父",
+      "lesson": 7,
+      "printedEntry": "πατήρ, πατρός, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "122": {
+      "glossZh": "信心；信仰；相信",
+      "lesson": 7,
+      "printedEntry": "πίστις, πίστεως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "123": {
+      "glossZh": "水",
+      "lesson": 7,
+      "printedEntry": "ὕδωρ, ὕδατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "124": {
+      "glossZh": "你們",
+      "lesson": 7,
+      "printedEntry": "ὑμεῖς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "125": {
+      "glossZh": "光；光源",
+      "lesson": 7,
+      "printedEntry": "φῶς, φωτός, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "126": {
+      "glossZh": "恩典；恩惠；憐憫",
+      "lesson": 7,
+      "printedEntry": "χάρις, -ιτος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "127": {
+      "glossZh": "在這裡；到這裡",
+      "lesson": 7,
+      "printedEntry": "ὧδε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "128": {
+      "glossZh": "時代；永遠",
+      "lesson": 8,
+      "printedEntry": "αἰών, -ῶνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "129": {
+      "glossZh": "教師",
+      "lesson": 8,
+      "printedEntry": "διδάσκαλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "130": {
+      "glossZh": "直的；立刻",
+      "lesson": 8,
+      "printedEntry": "εὐθύς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "131": {
+      "glossZh": "直到；到…為止",
+      "lesson": 8,
+      "printedEntry": "ἕως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "132": {
+      "glossZh": "門徒；學生",
+      "lesson": 8,
+      "printedEntry": "μαθητής, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "133": {
+      "glossZh": "誠然；確實",
+      "lesson": 8,
+      "printedEntry": "μέν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "134": {
+      "glossZh": "沒有人；沒有什麼",
+      "lesson": 8,
+      "printedEntry": "μηδείς, μηδεμία, μηδέν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "135": {
+      "glossZh": "唯一的；孤獨的",
+      "lesson": 8,
+      "printedEntry": "μόνος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "136": {
+      "glossZh": "如何；為了；使得",
+      "lesson": 8,
+      "printedEntry": "ὅπως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "137": {
+      "glossZh": "多少；多大；多少個",
+      "lesson": 8,
+      "printedEntry": "ὅσος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "138": {
+      "glossZh": "所以；那麼",
+      "lesson": 8,
+      "printedEntry": "οὖν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "139": {
+      "glossZh": "眼睛",
+      "lesson": 8,
+      "printedEntry": "ὀφθαλμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "140": {
+      "glossZh": "又；再；另一方面",
+      "lesson": 8,
+      "printedEntry": "πάλιν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "141": {
+      "glossZh": "腳",
+      "lesson": 8,
+      "printedEntry": "πούς, ποδός, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "142": {
+      "glossZh": "（配屬格）為了…；在…上方",
+      "lesson": 8,
+      "printedEntry": "ὑπέρ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "143": {
+      "glossZh": "婦女；妻子",
+      "lesson": 9,
+      "printedEntry": "γυνή, γυναικός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "144": {
+      "glossZh": "公義；正義",
+      "lesson": 9,
+      "printedEntry": "δικαιοσύνη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "145": {
+      "glossZh": "十二",
+      "lesson": 9,
+      "printedEntry": "δώδεκα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "146": {
+      "glossZh": "自己；他自己；她自己；它自己",
+      "lesson": 9,
+      "printedEntry": "ἑαυτοῦ, -ῆς, -οῦ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "147": {
+      "glossZh": "那；那個；那邊的",
+      "lesson": 9,
+      "printedEntry": "ἐκεῖνος, -η, -ο",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "148": {
+      "glossZh": "或者；比",
+      "lesson": 9,
+      "printedEntry": "ἤ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "149": {
+      "glossZh": "我也；我同樣",
+      "lesson": 9,
+      "printedEntry": "κἀγώ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "150": {
+      "glossZh": "有福的；蒙福的",
+      "lesson": 9,
+      "printedEntry": "μακάριος, -ία, -ιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "151": {
+      "glossZh": "大的；偉大的",
+      "lesson": 9,
+      "printedEntry": "μέγας, μεγάλη, μέγα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "152": {
+      "glossZh": "城市；城邑",
+      "lesson": 9,
+      "printedEntry": "πόλις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "153": {
+      "glossZh": "多的；許多的；常常",
+      "lesson": 9,
+      "printedEntry": "πολύς, πολλή, πολύ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "154": {
+      "glossZh": "怎樣；如何",
+      "lesson": 9,
+      "printedEntry": "πῶς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "155": {
+      "glossZh": "記號；奇蹟；徵兆",
+      "lesson": 9,
+      "printedEntry": "σημεῖον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "156": {
+      "glossZh": "真理；誠實",
+      "lesson": 10,
+      "printedEntry": "ἀλήθεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "157": {
+      "glossZh": "平安；心裡的平靜",
+      "lesson": 10,
+      "printedEntry": "εἰρήνη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "158": {
+      "glossZh": "（配屬格）在…面前；在…眼前",
+      "lesson": 10,
+      "printedEntry": "ἐνώπιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "159": {
+      "glossZh": "應許；承諾",
+      "lesson": 10,
+      "printedEntry": "ἐπαγγελία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "160": {
+      "glossZh": "七",
+      "lesson": 10,
+      "printedEntry": "ἑπτά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "161": {
+      "glossZh": "寶座；座位",
+      "lesson": 10,
+      "printedEntry": "θρόνος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "162": {
+      "glossZh": "耶路撒冷",
+      "lesson": 10,
+      "printedEntry": "Ἰερουσαλήμ, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "163": {
+      "glossZh": "（配屬格）從…下來；（配賓格）反對；按照；遍及；在…期間",
+      "lesson": 10,
+      "printedEntry": "κατά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "164": {
+      "glossZh": "頭",
+      "lesson": 10,
+      "printedEntry": "κεφαλή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "165": {
+      "glossZh": "道路；路；行程",
+      "lesson": 10,
+      "printedEntry": "ὁδός, -οῦ, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "166": {
+      "glossZh": "誰；哪一個；什麼；那",
+      "lesson": 10,
+      "printedEntry": "ὅς, ἥ, ὅ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "167": {
+      "glossZh": "當…時；當…的時候",
+      "lesson": 10,
+      "printedEntry": "ὅτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "168": {
+      "glossZh": "如此；這樣；以這種方式",
+      "lesson": 10,
+      "printedEntry": "οὕτως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "169": {
+      "glossZh": "船；船隻",
+      "lesson": 10,
+      "printedEntry": "πλοῖον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "170": {
+      "glossZh": "話語；言語；說過的事",
+      "lesson": 10,
+      "printedEntry": "ῥῆμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "171": {
+      "glossZh": "和；既…又…",
+      "lesson": 10,
+      "printedEntry": "τέ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "172": {
+      "glossZh": "手",
+      "lesson": 10,
+      "printedEntry": "χείρ, χειρός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "173": {
+      "glossZh": "靈魂；生命；自己",
+      "lesson": 10,
+      "printedEntry": "ψυχή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "174": {
+      "glossZh": "聽見；聽",
+      "lesson": 11,
+      "printedEntry": "ἀκούω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "175": {
+      "glossZh": "看；看見",
+      "lesson": 11,
+      "printedEntry": "βλέπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "176": {
+      "glossZh": "有；持有；擁有",
+      "lesson": 11,
+      "printedEntry": "ἔχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "177": {
+      "glossZh": "解開；鬆開；釋放；毀滅",
+      "lesson": 11,
+      "printedEntry": "λύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "178": {
+      "glossZh": "律法；摩西律法",
+      "lesson": 11,
+      "printedEntry": "νόμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "179": {
+      "glossZh": "在…地方；往…地方",
+      "lesson": 11,
+      "printedEntry": "ὅπου",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "180": {
+      "glossZh": "相信；信靠",
+      "lesson": 11,
+      "printedEntry": "πιστεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "181": {
+      "glossZh": "臉面；容貌；表面",
+      "lesson": 11,
+      "printedEntry": "πρόσωπον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "182": {
+      "glossZh": "那時；於是",
+      "lesson": 11,
+      "printedEntry": "τότε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "183": {
+      "glossZh": "瞎的；失明的",
+      "lesson": 11,
+      "printedEntry": "τυφλός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "184": {
+      "glossZh": "喜樂；歡樂",
+      "lesson": 11,
+      "printedEntry": "χαρά, -ᾶς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "185": {
+      "glossZh": "愛",
+      "lesson": 12,
+      "printedEntry": "ἀγαπάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "186": {
+      "glossZh": "邪靈；惡鬼",
+      "lesson": 12,
+      "printedEntry": "δαιμόνιον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "187": {
+      "glossZh": "尋求；追求；渴望",
+      "lesson": 12,
+      "printedEntry": "ζητέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "188": {
+      "glossZh": "呼召；邀請；稱呼",
+      "lesson": 12,
+      "printedEntry": "καλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "189": {
+      "glossZh": "說話；發言",
+      "lesson": 12,
+      "printedEntry": "λαλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "190": {
+      "glossZh": "知道；認識；記得",
+      "lesson": 12,
+      "printedEntry": "οἶδα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "191": {
+      "glossZh": "當…時候；無論何時",
+      "lesson": 12,
+      "printedEntry": "ὅταν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "192": {
+      "glossZh": "更多的；更大的；較大",
+      "lesson": 12,
+      "printedEntry": "πλείων, πλεῖον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "193": {
+      "glossZh": "充滿；成就；完成",
+      "lesson": 12,
+      "printedEntry": "πληρόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "194": {
+      "glossZh": "作；製造；行",
+      "lesson": 12,
+      "printedEntry": "ποιέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "195": {
+      "glossZh": "保守；守護；遵守",
+      "lesson": 12,
+      "printedEntry": "τηρέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "196": {
+      "glossZh": "回答；答覆",
+      "lesson": 13,
+      "printedEntry": "ἀποκρίνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "197": {
+      "glossZh": "必須；需要",
+      "lesson": 13,
+      "printedEntry": "δεῖ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "198": {
+      "glossZh": "能夠；有力量",
+      "lesson": 13,
+      "printedEntry": "δύναμαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "199": {
+      "glossZh": "來；去",
+      "lesson": 13,
+      "printedEntry": "ἔρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "200": {
+      "glossZh": "夜；夜間",
+      "lesson": 13,
+      "printedEntry": "νύξ, νυκτός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "201": {
+      "glossZh": "凡…的人；無論誰",
+      "lesson": 13,
+      "printedEntry": "ὅστις, ἥτις, ὅτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "202": {
+      "glossZh": "旅行；行走；去",
+      "lesson": 13,
+      "printedEntry": "πορεύομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "203": {
+      "glossZh": "聚集；聚合",
+      "lesson": 13,
+      "printedEntry": "συνάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "204": {
+      "glossZh": "地方；處所",
+      "lesson": 13,
+      "printedEntry": "τόπος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "205": {
+      "glossZh": "如；像；當…時；以便",
+      "lesson": 13,
+      "printedEntry": "ὡς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "206": {
+      "glossZh": "王；統治者、皇帝",
+      "lesson": 14,
+      "printedEntry": "βασιλεύς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "207": {
+      "glossZh": "生育、生出、誕生",
+      "lesson": 14,
+      "printedEntry": "γεννάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "208": {
+      "glossZh": "活著、生活",
+      "lesson": 14,
+      "printedEntry": "ζάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "209": {
+      "glossZh": "猶太",
+      "lesson": 14,
+      "printedEntry": "Ἰουδαία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "210": {
+      "glossZh": "猶太人；猶太的",
+      "lesson": 14,
+      "printedEntry": "Ἰουδαῖος, -αία, -αῖον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "211": {
+      "glossZh": "以色列",
+      "lesson": 14,
+      "printedEntry": "Ἰσραήλ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "212": {
+      "glossZh": "果子、果實；成果、果效",
+      "lesson": 14,
+      "printedEntry": "καρπός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "213": {
+      "glossZh": "更大的、最大的",
+      "lesson": 14,
+      "printedEntry": "μείζων, –ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "214": {
+      "glossZh": "全部的、整個的、所有的",
+      "lesson": 14,
+      "printedEntry": "ὅλος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "215": {
+      "glossZh": "敬拜、跪拜",
+      "lesson": 14,
+      "printedEntry": "προσκυνέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "216": {
+      "glossZh": "舉起；提起；奪取",
+      "lesson": 15,
+      "printedEntry": "αἴρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "217": {
+      "glossZh": "殺死；處死",
+      "lesson": 15,
+      "printedEntry": "ἀποκτείνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "218": {
+      "glossZh": "差遣；打發；送出",
+      "lesson": 15,
+      "printedEntry": "ἀποστέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "219": {
+      "glossZh": "浸；浸禮；洗禮",
+      "lesson": 15,
+      "printedEntry": "βαπτίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "220": {
+      "glossZh": "認識；知道；了解",
+      "lesson": 15,
+      "printedEntry": "γινώσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "221": {
+      "glossZh": "舌頭；方言；民族",
+      "lesson": 15,
+      "printedEntry": "γλῶσσα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "222": {
+      "glossZh": "喚醒；叫起；復活",
+      "lesson": 15,
+      "printedEntry": "ἐγείρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "223": {
+      "glossZh": "趕出；驅逐；扔出；產出",
+      "lesson": 15,
+      "printedEntry": "ἐκβάλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "224": {
+      "glossZh": "那裡；那邊",
+      "lesson": 15,
+      "printedEntry": "ἐκεῖ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "225": {
+      "glossZh": "判斷；審判；評定",
+      "lesson": 15,
+      "printedEntry": "κρίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "226": {
+      "glossZh": "人民；眾人；群眾",
+      "lesson": 15,
+      "printedEntry": "λαός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "227": {
+      "glossZh": "留下；住；存留",
+      "lesson": 15,
+      "printedEntry": "μένω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "228": {
+      "glossZh": "看見；觀看；經歷",
+      "lesson": 15,
+      "printedEntry": "ὁράω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "229": {
+      "glossZh": "智慧",
+      "lesson": 15,
+      "printedEntry": "σοφία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "230": {
+      "glossZh": "口；言語",
+      "lesson": 15,
+      "printedEntry": "στόμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "231": {
+      "glossZh": "拯救；拯救靈魂；醫治",
+      "lesson": 15,
+      "printedEntry": "σῴζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "232": {
+      "glossZh": "跟隨；陪伴；伴隨",
+      "lesson": 16,
+      "printedEntry": "ἀκολουθέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "233": {
+      "glossZh": "教導；教訓",
+      "lesson": 16,
+      "printedEntry": "διδάσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "234": {
+      "glossZh": "詢問；質問；要求",
+      "lesson": 16,
+      "printedEntry": "ἐπερωτάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "235": {
+      "glossZh": "問；請求；懇求",
+      "lesson": 16,
+      "printedEntry": "ἐρωτάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "236": {
+      "glossZh": "願意；想要；希望",
+      "lesson": 16,
+      "printedEntry": "θέλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "237": {
+      "glossZh": "行走；生活方式；行事為人",
+      "lesson": 16,
+      "printedEntry": "περιπατέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "238": {
+      "glossZh": "聚集；會堂；猶太會堂",
+      "lesson": 16,
+      "printedEntry": "συναγωγή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "239": {
+      "glossZh": "法利賽人",
+      "lesson": 16,
+      "printedEntry": "Φαρισαῖος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "240": {
+      "glossZh": "時間；時期；季節",
+      "lesson": 16,
+      "printedEntry": "χρόνος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "241": {
+      "glossZh": "死亡；將要死去",
+      "lesson": 17,
+      "printedEntry": "ἀποθνῄσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "242": {
+      "glossZh": "麵包；食物",
+      "lesson": 17,
+      "printedEntry": "ἄρτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "243": {
+      "glossZh": "投擲；拋；放；放置",
+      "lesson": 17,
+      "printedEntry": "βάλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "244": {
+      "glossZh": "地；土地；世界",
+      "lesson": 17,
+      "printedEntry": "γῆ, γῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "245": {
+      "glossZh": "成為；出生；發生",
+      "lesson": 17,
+      "printedEntry": "γίνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "246": {
+      "glossZh": "進去；進入",
+      "lesson": 17,
+      "printedEntry": "εἰσέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "247": {
+      "glossZh": "出去；出來",
+      "lesson": 17,
+      "printedEntry": "ἐξέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "248": {
+      "glossZh": "還；仍然；甚至",
+      "lesson": 17,
+      "printedEntry": "ἔτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "249": {
+      "glossZh": "尋找；發現",
+      "lesson": 17,
+      "printedEntry": "εὑρίσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "250": {
+      "glossZh": "接收；取；領受",
+      "lesson": 17,
+      "printedEntry": "λαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "251": {
+      "glossZh": "也不；既不…也不",
+      "lesson": 17,
+      "printedEntry": "οὔτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "252": {
+      "glossZh": "靠近；前來；贊同",
+      "lesson": 17,
+      "printedEntry": "προσέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "253": {
+      "glossZh": "禱告；為…禱告",
+      "lesson": 17,
+      "printedEntry": "προσεύχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "254": {
+      "glossZh": "火；試煉",
+      "lesson": 17,
+      "printedEntry": "πῦρ, πυρός, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "255": {
+      "glossZh": "離開；出發；回來",
+      "lesson": 18,
+      "printedEntry": "ἀπέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "256": {
+      "glossZh": "開始",
+      "lesson": 18,
+      "printedEntry": "ἄρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "257": {
+      "glossZh": "寫；著文",
+      "lesson": 18,
+      "printedEntry": "γράφω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "258": {
+      "glossZh": "因此；所以",
+      "lesson": 18,
+      "printedEntry": "διό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "259": {
+      "glossZh": "榮耀；尊榮；稱讚",
+      "lesson": 18,
+      "printedEntry": "δοξάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "260": {
+      "glossZh": "能力；權能；奇蹟",
+      "lesson": 18,
+      "printedEntry": "δύναμις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "261": {
+      "glossZh": "宣講；傳道；佈道",
+      "lesson": 18,
+      "printedEntry": "κηρύσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "262": {
+      "glossZh": "喝；飲",
+      "lesson": 18,
+      "printedEntry": "πίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "263": {
+      "glossZh": "引領；帶領",
+      "lesson": 19,
+      "printedEntry": "ἄγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "264": {
+      "glossZh": "血",
+      "lesson": 19,
+      "printedEntry": "αἷμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "265": {
+      "glossZh": "各個；每一個",
+      "lesson": 19,
+      "printedEntry": "ἕκαστος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "266": {
+      "glossZh": "外衣；袍子",
+      "lesson": 19,
+      "printedEntry": "ἱμάτιον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "267": {
+      "glossZh": "山",
+      "lesson": 19,
+      "printedEntry": "ὄρος, ὄρους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "268": {
+      "glossZh": "去；離開",
+      "lesson": 19,
+      "printedEntry": "ὑπάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "269": {
+      "glossZh": "懼怕；害怕",
+      "lesson": 19,
+      "printedEntry": "φοβέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "270": {
+      "glossZh": "喜樂；歡喜",
+      "lesson": 19,
+      "printedEntry": "χαίρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "271": {
+      "glossZh": "求；請求；懇求",
+      "lesson": 20,
+      "printedEntry": "αἰτέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "272": {
+      "glossZh": "更；寧可；反而",
+      "lesson": 20,
+      "printedEntry": "μᾶλλον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "273": {
+      "glossZh": "作見證；見證；證明",
+      "lesson": 20,
+      "printedEntry": "μαρτυρέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "274": {
+      "glossZh": "上去；登上；升起",
+      "lesson": 21,
+      "printedEntry": "ἀναβαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "275": {
+      "glossZh": "大祭司；祭司長",
+      "lesson": 21,
+      "printedEntry": "ἀρχιερεύς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "276": {
+      "glossZh": "右邊的；右手的",
+      "lesson": 21,
+      "printedEntry": "δεξιός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "277": {
+      "glossZh": "二；兩個",
+      "lesson": 21,
+      "printedEntry": "δύο",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "278": {
+      "glossZh": "另一個；不同的",
+      "lesson": 21,
+      "printedEntry": "ἕτερος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "279": {
+      "glossZh": "傳福音；宣講好訊息",
+      "lesson": 21,
+      "printedEntry": "εὐαγγελίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "280": {
+      "glossZh": "觀看；看見；經歷",
+      "lesson": 21,
+      "printedEntry": "θεωρέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "281": {
+      "glossZh": "耶路撒冷",
+      "lesson": 21,
+      "printedEntry": "Ἱεροσόλυμα, τά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "282": {
+      "glossZh": "坐著；就坐",
+      "lesson": 21,
+      "printedEntry": "κάθημαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "283": {
+      "glossZh": "下去；下來",
+      "lesson": 21,
+      "printedEntry": "καταβαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "284": {
+      "glossZh": "那裡；到那裡；當時",
+      "lesson": 21,
+      "printedEntry": "οὗ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "285": {
+      "glossZh": "勸勉；懇求；安慰；勸阻",
+      "lesson": 21,
+      "printedEntry": "παρακαλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "286": {
+      "glossZh": "勸服；說服",
+      "lesson": 21,
+      "printedEntry": "πείθω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "287": {
+      "glossZh": "三；三個",
+      "lesson": 21,
+      "printedEntry": "τρεῖς, τρία",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "288": {
+      "glossZh": "問安；向…致敬",
+      "lesson": 22,
+      "printedEntry": "ἀσπάζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "289": {
+      "glossZh": "文士；律法教師",
+      "lesson": 22,
+      "printedEntry": "γραμματεύς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "290": {
+      "glossZh": "說",
+      "lesson": 22,
+      "printedEntry": "ἔφη",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "291": {
+      "glossZh": "聖殿",
+      "lesson": 22,
+      "printedEntry": "ἱερόν, -οῦ, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "292": {
+      "glossZh": "大聲喊叫；呼喊",
+      "lesson": 22,
+      "printedEntry": "κράζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "293": {
+      "glossZh": "絕對不；決不",
+      "lesson": 22,
+      "printedEntry": "οὐχί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "294": {
+      "glossZh": "小孩；嬰孩",
+      "lesson": 22,
+      "printedEntry": "παιδίον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "295": {
+      "glossZh": "撒種；播撒；分散",
+      "lesson": 22,
+      "printedEntry": "σπείρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "296": {
+      "glossZh": "接受；歡迎",
+      "lesson": 23,
+      "printedEntry": "δέχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "297": {
+      "glossZh": "以為；看起來；似乎",
+      "lesson": 23,
+      "printedEntry": "δοκέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "298": {
+      "glossZh": "吃",
+      "lesson": 23,
+      "printedEntry": "ἐσθίω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "299": {
+      "glossZh": "差遣；派遣",
+      "lesson": 23,
+      "printedEntry": "πέμπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "300": {
+      "glossZh": "背負；携帶；帶來；引領",
+      "lesson": 23,
+      "printedEntry": "φέρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "301": {
+      "glossZh": "且不；也不",
+      "lesson": 24,
+      "printedEntry": "μηδέ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "302": {
+      "glossZh": "長老；年長的",
+      "lesson": 24,
+      "printedEntry": "πρεσβύτερος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "303": {
+      "glossZh": "石頭；寶石",
+      "lesson": 25,
+      "printedEntry": "λίθος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "304": {
+      "glossZh": "這樣的；如此的；這種",
+      "lesson": 25,
+      "printedEntry": "τοιοῦτος, -αύτη, -οῦτον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "305": {
+      "glossZh": "公義的；正直的；公正的",
+      "lesson": 26,
+      "printedEntry": "δίκαιος, -αία, -αιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "306": {
+      "glossZh": "將要；即將",
+      "lesson": 26,
+      "printedEntry": "μέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "307": {
+      "glossZh": "摧毀；喪失；滅亡",
+      "lesson": 27,
+      "printedEntry": "ἀπόλλυμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "308": {
+      "glossZh": "釋放；遣散；休妻",
+      "lesson": 27,
+      "printedEntry": "ἀπολύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "309": {
+      "glossZh": "無論是；或是",
+      "lesson": 27,
+      "printedEntry": "εἴτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "310": {
+      "glossZh": "給予；奉獻",
+      "lesson": 28,
+      "printedEntry": "δίδωμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "311": {
+      "glossZh": "民族；異邦人",
+      "lesson": 28,
+      "printedEntry": "ἔθνος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "312": {
+      "glossZh": "其餘的；剩下的",
+      "lesson": 28,
+      "printedEntry": "λοιπός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "313": {
+      "glossZh": "摩西",
+      "lesson": 28,
+      "printedEntry": "Μωϋσῆς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "314": {
+      "glossZh": "交付；背棄",
+      "lesson": 28,
+      "printedEntry": "παραδίδωμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "315": {
+      "glossZh": "跌倒；陷入",
+      "lesson": 28,
+      "printedEntry": "πίπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "316": {
+      "glossZh": "存在；擁有",
+      "lesson": 28,
+      "printedEntry": "ὑπάρχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "317": {
+      "glossZh": "使聖潔；分別為聖",
+      "lesson": 29,
+      "printedEntry": "ἁγιάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "318": {
+      "glossZh": "犯罪；作惡",
+      "lesson": 29,
+      "printedEntry": "ἁμαρτάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "319": {
+      "glossZh": "犯罪的；有罪的；罪人",
+      "lesson": 29,
+      "printedEntry": "ἁμαρτωλός, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "320": {
+      "glossZh": "復活；起死回生",
+      "lesson": 29,
+      "printedEntry": "ἀνάστασις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "321": {
+      "glossZh": "宣告；報告；傳達",
+      "lesson": 29,
+      "printedEntry": "ἀπαγγέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "322": {
+      "glossZh": "服侍；服事；侍候",
+      "lesson": 29,
+      "printedEntry": "διακονέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "323": {
+      "glossZh": "服侍；事奉；職役",
+      "lesson": 29,
+      "printedEntry": "διακονία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "324": {
+      "glossZh": "稱義；使公義；辯護",
+      "lesson": 29,
+      "printedEntry": "δικαιόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "325": {
+      "glossZh": "患難；迫害；困苦",
+      "lesson": 29,
+      "printedEntry": "θλῖψις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "326": {
+      "glossZh": "贖罪座；挽回祭",
+      "lesson": 29,
+      "printedEntry": "ἱλαστήριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "327": {
+      "glossZh": "釘十字架；被釘死",
+      "lesson": 29,
+      "printedEntry": "σταυρόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "328": {
+      "glossZh": "救主；救拯者",
+      "lesson": 29,
+      "printedEntry": "σωτήρ, -ῆρος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "329": {
+      "glossZh": "救恩；拯救；得救",
+      "lesson": 29,
+      "printedEntry": "σωτηρία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "330": {
+      "glossZh": "使顯明；啟示；彰顯",
+      "lesson": 29,
+      "printedEntry": "φανερόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "331": {
+      "glossZh": "恐懼；驚懼；敬畏",
+      "lesson": 29,
+      "printedEntry": "φόβος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "332": {
+      "glossZh": "我使起來，立起；我起來",
+      "lesson": 30,
+      "printedEntry": "ἀνίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "333": {
+      "glossZh": "我打開",
+      "lesson": 30,
+      "printedEntry": "ἀνοίγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "334": {
+      "glossZh": "我打發去，釋放；我赦免，准許",
+      "lesson": 30,
+      "printedEntry": "ἀφίημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "335": {
+      "glossZh": "我指出，顯示",
+      "lesson": 30,
+      "printedEntry": "δείκνυμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "336": {
+      "glossZh": "自己的，私人的",
+      "lesson": 30,
+      "printedEntry": "ἴδιος, ἴδια, ἴδιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "337": {
+      "glossZh": "我使站立，站立",
+      "lesson": 30,
+      "printedEntry": "ἵστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "338": {
+      "glossZh": "中間的，中間",
+      "lesson": 30,
+      "printedEntry": "μέσος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "339": {
+      "glossZh": "我放置，安放",
+      "lesson": 30,
+      "printedEntry": "τίθημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "340": {
+      "glossZh": "我說",
+      "lesson": 30,
+      "printedEntry": "φημί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "341": {
+      "glossZh": "那麼；因此",
+      "lesson": 31,
+      "printedEntry": "ἄρα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "342": {
+      "glossZh": "直到；達到",
+      "lesson": 31,
+      "printedEntry": "ἄχρι, ἄχρις",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "343": {
+      "glossZh": "年",
+      "lesson": 31,
+      "printedEntry": "ἔτος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "344": {
+      "glossZh": "領受；接納",
+      "lesson": 31,
+      "printedEntry": "παραλαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "345": {
+      "glossZh": "需要；必要",
+      "lesson": 31,
+      "printedEntry": "χρεία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "346": {
+      "glossZh": "償還；歸還；售出",
+      "lesson": 31,
+      "printedEntry": "ἀποδίδωμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "347": {
+      "glossZh": "在…面前；在前面",
+      "lesson": 31,
+      "printedEntry": "ἔμπροσθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "348": {
+      "glossZh": "荒涼的；曠野",
+      "lesson": 31,
+      "printedEntry": "ἔρημος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "349": {
+      "glossZh": "哪裡；何處",
+      "lesson": 31,
+      "printedEntry": "ποῦ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "350": {
+      "glossZh": "抓住；掌握",
+      "lesson": 31,
+      "printedEntry": "κρατέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "351": {
+      "glossZh": "審判；判決",
+      "lesson": 31,
+      "printedEntry": "κρίσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "352": {
+      "glossZh": "不再；不復",
+      "lesson": 31,
+      "printedEntry": "οὐκέτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "353": {
+      "glossZh": "（配所有格）在…之前",
+      "lesson": 31,
+      "printedEntry": "πρό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "354": {
+      "glossZh": "獻上；呈獻",
+      "lesson": 31,
+      "printedEntry": "προσφέρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "355": {
+      "glossZh": "看守；監禁；監獄",
+      "lesson": 31,
+      "printedEntry": "φυλακή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "356": {
+      "glossZh": "野獸；動物",
+      "lesson": 31,
+      "printedEntry": "θηρίον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "357": {
+      "glossZh": "使坐；安置",
+      "lesson": 31,
+      "printedEntry": "καθίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "358": {
+      "glossZh": "小的；微小",
+      "lesson": 31,
+      "printedEntry": "μικρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "359": {
+      "glossZh": "禍哉；唉呀",
+      "lesson": 31,
+      "printedEntry": "οὐαί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "360": {
+      "glossZh": "追逐；逼迫",
+      "lesson": 31,
+      "printedEntry": "διώκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "361": {
+      "glossZh": "聖殿；神廟",
+      "lesson": 31,
+      "printedEntry": "ναός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "362": {
+      "glossZh": "相似的；像……的",
+      "lesson": 31,
+      "printedEntry": "ὅμοιος, -οία, -οιον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "363": {
+      "glossZh": "認識；領悟；辨別",
+      "lesson": 31,
+      "printedEntry": "ἐπιγινώσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "364": {
+      "glossZh": "猶大；猶大人；猶大（人名）",
+      "lesson": 31,
+      "printedEntry": "Ἰούδας, -α, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "365": {
+      "glossZh": "住在；居住；定居",
+      "lesson": 31,
+      "printedEntry": "κατοικέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "366": {
+      "glossZh": "世代；一代人",
+      "lesson": 31,
+      "printedEntry": "γενεά, -ᾶς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "367": {
+      "glossZh": "第二的；其次",
+      "lesson": 31,
+      "printedEntry": "δεύτερος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "368": {
+      "glossZh": "綑綁；束縛",
+      "lesson": 31,
+      "printedEntry": "δέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "369": {
+      "glossZh": "經過；穿過；傳開",
+      "lesson": 31,
+      "printedEntry": "διέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "370": {
+      "glossZh": "希律（人名）",
+      "lesson": 31,
+      "printedEntry": "Ἡρῴδης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "371": {
+      "glossZh": "驚奇；讚嘆；佩服",
+      "lesson": 31,
+      "printedEntry": "θαυμάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "372": {
+      "glossZh": "照顧；服侍；醫治",
+      "lesson": 31,
+      "printedEntry": "θεραπεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "373": {
+      "glossZh": "你自己的",
+      "lesson": 31,
+      "printedEntry": "σεαυτοῦ, -ῆς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "374": {
+      "glossZh": "種子；後裔",
+      "lesson": 32,
+      "printedEntry": "σπέρμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "375": {
+      "glossZh": "鳴叫；喊叫；呼喚",
+      "lesson": 32,
+      "printedEntry": "φωνέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "376": {
+      "glossZh": "接近；來臨",
+      "lesson": 32,
+      "printedEntry": "ἐγγίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "377": {
+      "glossZh": "雅各",
+      "lesson": 32,
+      "printedEntry": "Ἰάκωβος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "378": {
+      "glossZh": "新的；嶄新的",
+      "lesson": 32,
+      "printedEntry": "καινός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "379": {
+      "glossZh": "部分；份額",
+      "lesson": 32,
+      "printedEntry": "μέρος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "380": {
+      "glossZh": "受苦；遭受",
+      "lesson": 32,
+      "printedEntry": "πάσχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "381": {
+      "glossZh": "配得的；值得的",
+      "lesson": 32,
+      "printedEntry": "ἄξιος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "382": {
+      "glossZh": "做工；經營；行動",
+      "lesson": 32,
+      "printedEntry": "ἐργάζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "383": {
+      "glossZh": "祝福",
+      "lesson": 32,
+      "printedEntry": "εὐλογέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "384": {
+      "glossZh": "常常；始終",
+      "lesson": 32,
+      "printedEntry": "πάντοτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "385": {
+      "glossZh": "呈現；站在…面前",
+      "lesson": 32,
+      "printedEntry": "παρίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "386": {
+      "glossZh": "今天；現在",
+      "lesson": 32,
+      "printedEntry": "σήμερον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "387": {
+      "glossZh": "四",
+      "lesson": 32,
+      "printedEntry": "τέσσαρες, -ων",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "388": {
+      "glossZh": "價格；尊榮",
+      "lesson": 32,
+      "printedEntry": "τιμή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "389": {
+      "glossZh": "（配所有格）除…之外；沒有",
+      "lesson": 32,
+      "printedEntry": "χωρίς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "390": {
+      "glossZh": "預備；準備",
+      "lesson": 32,
+      "printedEntry": "ἑτοιμάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "391": {
+      "glossZh": "哭；哭泣；哀傷",
+      "lesson": 32,
+      "printedEntry": "κλαίω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "392": {
+      "glossZh": "計算；認為；估量",
+      "lesson": 32,
+      "printedEntry": "λογίζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "393": {
+      "glossZh": "恨；厭惡",
+      "lesson": 32,
+      "printedEntry": "μισέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "394": {
+      "glossZh": "墳墓；墓地",
+      "lesson": 32,
+      "printedEntry": "μνημεῖον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "395": {
+      "glossZh": "建造；建立；勸勉",
+      "lesson": 32,
+      "printedEntry": "οἰκοδομέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "396": {
+      "glossZh": "小的；少的；短暫的",
+      "lesson": 32,
+      "printedEntry": "ὀλίγος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "397": {
+      "glossZh": "終結；目的；稅金",
+      "lesson": 32,
+      "printedEntry": "τέλος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "398": {
+      "glossZh": "點燃；照亮",
+      "lesson": 32,
+      "printedEntry": "ἅπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "399": {
+      "glossZh": "放在…上；加在…身上",
+      "lesson": 32,
+      "printedEntry": "ἐπιτίθημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "400": {
+      "glossZh": "門；機會",
+      "lesson": 32,
+      "printedEntry": "θύρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "401": {
+      "glossZh": "足夠的；配得的；許多的",
+      "lesson": 32,
+      "printedEntry": "ἱκανός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "402": {
+      "glossZh": "超過；剩餘；充裕",
+      "lesson": 32,
+      "printedEntry": "περισσεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "403": {
+      "glossZh": "誘惑；迷惑",
+      "lesson": 32,
+      "printedEntry": "πλανάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "404": {
+      "glossZh": "行為；對待；索求",
+      "lesson": 32,
+      "printedEntry": "πράσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "405": {
+      "glossZh": "羊",
+      "lesson": 32,
+      "printedEntry": "πρόβατον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "406": {
+      "glossZh": "慾望；渴望；貪欲",
+      "lesson": 32,
+      "printedEntry": "ἐπιθυμία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "407": {
+      "glossZh": "感謝；稱謝",
+      "lesson": 33,
+      "printedEntry": "εὐχαριστέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "408": {
+      "glossZh": "試探；考驗；試煉",
+      "lesson": 33,
+      "printedEntry": "πειράζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "409": {
+      "glossZh": "五",
+      "lesson": 33,
+      "printedEntry": "πέντε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "410": {
+      "glossZh": "服從；順服；使降服",
+      "lesson": 33,
+      "printedEntry": "ὑποτάσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "411": {
+      "glossZh": "統治者；官長；首領",
+      "lesson": 33,
+      "printedEntry": "ἄρχων, -οντος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "412": {
+      "glossZh": "願意；打算；想要",
+      "lesson": 33,
+      "printedEntry": "βούλομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "413": {
+      "glossZh": "誹謗的；魔鬼；撒但",
+      "lesson": 33,
+      "printedEntry": "διάβολος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "414": {
+      "glossZh": "從那裡；從那地方",
+      "lesson": 33,
+      "printedEntry": "ἐκεῖθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "415": {
+      "glossZh": "好；恰當地；正確地",
+      "lesson": 33,
+      "printedEntry": "καλῶς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "416": {
+      "glossZh": "誇耀；自誇；誇口",
+      "lesson": 33,
+      "printedEntry": "καυχάομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "417": {
+      "glossZh": "見證；證據；作證",
+      "lesson": 33,
+      "printedEntry": "μαρτυρία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "418": {
+      "glossZh": "出現；來到；到達",
+      "lesson": 33,
+      "printedEntry": "παραγίνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "419": {
+      "glossZh": "田地；鄉村",
+      "lesson": 33,
+      "printedEntry": "ἀγρός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "420": {
+      "glossZh": "現在；此刻；剛才",
+      "lesson": 33,
+      "printedEntry": "ἄρτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "421": {
+      "glossZh": "轉回；歸回；悔改",
+      "lesson": 33,
+      "printedEntry": "ἐπιστρέφω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "422": {
+      "glossZh": "立刻；隨即；馬上",
+      "lesson": 33,
+      "printedEntry": "εὐθέως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "423": {
+      "glossZh": "憤怒；怒氣；烈怒",
+      "lesson": 33,
+      "printedEntry": "ὀργή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "424": {
+      "glossZh": "耳朵",
+      "lesson": 33,
+      "printedEntry": "οὖς, ὠτός, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "425": {
+      "glossZh": "割禮；受割禮的人",
+      "lesson": 33,
+      "printedEntry": "περιτομή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "426": {
+      "glossZh": "禱告；祈禱；禱告所",
+      "lesson": 33,
+      "printedEntry": "προσευχή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "427": {
+      "glossZh": "對敵者；撒但",
+      "lesson": 33,
+      "printedEntry": "σατανᾶς, -ᾶ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "428": {
+      "glossZh": "腓力",
+      "lesson": 33,
+      "printedEntry": "Φίλιππος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "429": {
+      "glossZh": "正如；猶如",
+      "lesson": 33,
+      "printedEntry": "ὥσπερ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "430": {
+      "glossZh": "約瑟",
+      "lesson": 33,
+      "printedEntry": "Ἰωσήφ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "431": {
+      "glossZh": "見證人；殉道者",
+      "lesson": 33,
+      "printedEntry": "μάρτυς, -υρος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "432": {
+      "glossZh": "（配所有格）在…後面；跟隨",
+      "lesson": 33,
+      "printedEntry": "ὀπίσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "433": {
+      "glossZh": "欠債；應當；有責任",
+      "lesson": 33,
+      "printedEntry": "ὀφείλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "434": {
+      "glossZh": "轉身回去；返回",
+      "lesson": 33,
+      "printedEntry": "ὑποστρέφω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "435": {
+      "glossZh": "全部；整個；所有",
+      "lesson": 33,
+      "printedEntry": "ἅπας, -ασα, -αν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "436": {
+      "glossZh": "書卷；書",
+      "lesson": 33,
+      "printedEntry": "βιβλίον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "437": {
+      "glossZh": "褻瀆；詆毀；說壞話",
+      "lesson": 33,
+      "printedEntry": "βλασφημέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "438": {
+      "glossZh": "肢體；身體部分",
+      "lesson": 33,
+      "printedEntry": "μέλος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "439": {
+      "glossZh": "悔改；改變心意",
+      "lesson": 33,
+      "printedEntry": "μετανοέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "440": {
+      "glossZh": "也不，既不……也不；甚至不",
+      "lesson": 34,
+      "printedEntry": "μήτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "441": {
+      "glossZh": "葡萄酒",
+      "lesson": 34,
+      "printedEntry": "οἶνος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "442": {
+      "glossZh": "貧窮的；乞丐",
+      "lesson": 34,
+      "printedEntry": "πτωχός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "443": {
+      "glossZh": "否認；背棄",
+      "lesson": 34,
+      "printedEntry": "ἀρνέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "444": {
+      "glossZh": "軟弱；患病",
+      "lesson": 34,
+      "printedEntry": "ἀσθενέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "445": {
+      "glossZh": "約；遺囑",
+      "lesson": 34,
+      "printedEntry": "διαθήκη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "446": {
+      "glossZh": "出去；發出",
+      "lesson": 34,
+      "printedEntry": "ἐκπορεύομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "447": {
+      "glossZh": "是的；確實",
+      "lesson": 34,
+      "printedEntry": "ναί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "448": {
+      "glossZh": "什麼樣的；哪一種",
+      "lesson": 34,
+      "printedEntry": "ποῖος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "449": {
+      "glossZh": "不潔淨的；污穢的",
+      "lesson": 34,
+      "printedEntry": "ἀκάθαρτος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "450": {
+      "glossZh": "讀；誦讀",
+      "lesson": 34,
+      "printedEntry": "ἀναγινώσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "451": {
+      "glossZh": "有能力的；可能的",
+      "lesson": 34,
+      "printedEntry": "δυνατός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "452": {
+      "glossZh": "敵對的；仇敵",
+      "lesson": 34,
+      "printedEntry": "ἐχθρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "453": {
+      "glossZh": "太陽",
+      "lesson": 34,
+      "printedEntry": "ἥλιος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "454": {
+      "glossZh": "吩咐；命令",
+      "lesson": 34,
+      "printedEntry": "παραγγέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "455": {
+      "glossZh": "忍耐；堅忍",
+      "lesson": 34,
+      "printedEntry": "ὑπομονή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "456": {
+      "glossZh": "風",
+      "lesson": 34,
+      "printedEntry": "ἄνεμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "457": {
+      "glossZh": "近的；靠近",
+      "lesson": 34,
+      "printedEntry": "ἐγγύς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "458": {
+      "glossZh": "盼望；期待",
+      "lesson": 34,
+      "printedEntry": "ἐλπίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "459": {
+      "glossZh": "可以；被允許",
+      "lesson": 34,
+      "printedEntry": "ἔξεστιν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "460": {
+      "glossZh": "祭司",
+      "lesson": 34,
+      "printedEntry": "ἱερεύς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "461": {
+      "glossZh": "潔淨；使…潔淨",
+      "lesson": 34,
+      "printedEntry": "καθαρίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "462": {
+      "glossZh": "坦然；信心；膽量",
+      "lesson": 34,
+      "printedEntry": "παρρησία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "463": {
+      "glossZh": "眾多；群眾",
+      "lesson": 34,
+      "printedEntry": "πλῆθος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "464": {
+      "glossZh": "然而；除了…以外",
+      "lesson": 34,
+      "printedEntry": "πλήν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "465": {
+      "glossZh": "杯；酒杯",
+      "lesson": 34,
+      "printedEntry": "ποτήριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "466": {
+      "glossZh": "黑暗；幽暗",
+      "lesson": 34,
+      "printedEntry": "σκότος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "467": {
+      "glossZh": "發光；顯現；似乎；看起來",
+      "lesson": 34,
+      "printedEntry": "φαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "468": {
+      "glossZh": "保守；看守；遵守；謹慎",
+      "lesson": 34,
+      "printedEntry": "φυλάσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "469": {
+      "glossZh": "支派；宗族；民族",
+      "lesson": 34,
+      "printedEntry": "φυλή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "470": {
+      "glossZh": "買；購買；贖",
+      "lesson": 34,
+      "printedEntry": "ἀγοράζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "471": {
+      "glossZh": "羊羔",
+      "lesson": 34,
+      "printedEntry": "ἀρνίον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "472": {
+      "glossZh": "教導；教義；道理",
+      "lesson": 34,
+      "printedEntry": "διδαχή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "473": {
+      "glossZh": "額外地稱呼；呼求、上訴",
+      "lesson": 35,
+      "printedEntry": "ἐπικαλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "474": {
+      "glossZh": "同樣地；照樣",
+      "lesson": 35,
+      "printedEntry": "ὁμοίως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "475": {
+      "glossZh": "良心",
+      "lesson": 35,
+      "printedEntry": "συνείδησις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "476": {
+      "glossZh": "與…一起來；聚集",
+      "lesson": 35,
+      "printedEntry": "συνέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "477": {
+      "glossZh": "知識；智慧；教義",
+      "lesson": 35,
+      "printedEntry": "γνῶσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "478": {
+      "glossZh": "僕人；執事；侍者",
+      "lesson": 35,
+      "printedEntry": "διάκονος, -ου, ὁ or ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "479": {
+      "glossZh": "責備；勸阻；警告",
+      "lesson": 35,
+      "printedEntry": "ἐπιτιμάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "480": {
+      "glossZh": "以利亞",
+      "lesson": 35,
+      "printedEntry": "Ἠλίας, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "481": {
+      "glossZh": "強大的；有力的；堅強的",
+      "lesson": 35,
+      "printedEntry": "ἰσχυρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "482": {
+      "glossZh": "凱撒",
+      "lesson": 35,
+      "printedEntry": "Καῖσαρ, -ος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "483": {
+      "glossZh": "刀；劍",
+      "lesson": 35,
+      "printedEntry": "μάχαιρα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "484": {
+      "glossZh": "工價；報酬；賞賜",
+      "lesson": 35,
+      "printedEntry": "μισθός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "485": {
+      "glossZh": "勸勉；請求；安慰",
+      "lesson": 35,
+      "printedEntry": "παράκλησις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "486": {
+      "glossZh": "經過；消逝",
+      "lesson": 35,
+      "printedEntry": "παρέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "487": {
+      "glossZh": "逾越節；逾越節的羊羔",
+      "lesson": 35,
+      "printedEntry": "πάσχα, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "488": {
+      "glossZh": "從哪裡；何處",
+      "lesson": 35,
+      "printedEntry": "πόθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "489": {
+      "glossZh": "曾經；一度；某時",
+      "lesson": 35,
+      "printedEntry": "ποτέ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "490": {
+      "glossZh": "召喚；召集",
+      "lesson": 35,
+      "printedEntry": "προσκαλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "491": {
+      "glossZh": "使絆倒；冒犯",
+      "lesson": 35,
+      "printedEntry": "σκανδαλίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "492": {
+      "glossZh": "逃避；躲避；避開",
+      "lesson": 35,
+      "printedEntry": "φεύγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "493": {
+      "glossZh": "友好的；朋友",
+      "lesson": 35,
+      "printedEntry": "φίλος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "494": {
+      "glossZh": "不義待人；傷害",
+      "lesson": 35,
+      "printedEntry": "ἀδικέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "495": {
+      "glossZh": "真實的；真正的",
+      "lesson": 35,
+      "printedEntry": "ἀληθινός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "496": {
+      "glossZh": "巴拿巴",
+      "lesson": 35,
+      "printedEntry": "Βαρναβᾶς, -ᾶ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "497": {
+      "glossZh": "與…結婚",
+      "lesson": 35,
+      "printedEntry": "γαμέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "498": {
+      "glossZh": "憐憫；施憐憫於",
+      "lesson": 35,
+      "printedEntry": "ἐλεέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "499": {
+      "glossZh": "領導；認為；估計",
+      "lesson": 35,
+      "printedEntry": "ἡγέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "500": {
+      "glossZh": "女兒",
+      "lesson": 35,
+      "printedEntry": "θυγάτηρ, -τρός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "501": {
+      "glossZh": "祭祀；祭物",
+      "lesson": 35,
+      "printedEntry": "θυσία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "502": {
+      "glossZh": "強壯；有能力",
+      "lesson": 35,
+      "printedEntry": "ἰσχύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "503": {
+      "glossZh": "隱密之事；奧祕",
+      "lesson": 35,
+      "printedEntry": "μυστήριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "504": {
+      "glossZh": "得勝；戰勝",
+      "lesson": 35,
+      "printedEntry": "νικάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "505": {
+      "glossZh": "富有的；財主",
+      "lesson": 35,
+      "printedEntry": "πλούσιος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "506": {
+      "glossZh": "預言；宣告",
+      "lesson": 36,
+      "printedEntry": "προφητεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "507": {
+      "glossZh": "完成；結束；償付",
+      "lesson": 36,
+      "printedEntry": "τελέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "508": {
+      "glossZh": "地區；田野；鄉村",
+      "lesson": 36,
+      "printedEntry": "χώρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "509": {
+      "glossZh": "背負；攜帶；忍耐",
+      "lesson": 36,
+      "printedEntry": "βαστάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "510": {
+      "glossZh": "憐憫；恩憐",
+      "lesson": 36,
+      "printedEntry": "ἔλεος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "511": {
+      "glossZh": "穿上；披衣",
+      "lesson": 36,
+      "printedEntry": "ἐνδύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "512": {
+      "glossZh": "雅各",
+      "lesson": 36,
+      "printedEntry": "Ἰακώβ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "513": {
+      "glossZh": "潔淨的；純淨的；無污穢的",
+      "lesson": 36,
+      "printedEntry": "καθαρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "514": {
+      "glossZh": "廢除；使失效；除掉",
+      "lesson": 36,
+      "printedEntry": "καταργέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "515": {
+      "glossZh": "判決；定罪；訴訟",
+      "lesson": 36,
+      "printedEntry": "κρίμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "516": {
+      "glossZh": "村莊",
+      "lesson": 36,
+      "printedEntry": "κώμη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "517": {
+      "glossZh": "馬利亞；米利暗",
+      "lesson": 36,
+      "printedEntry": "Μαρία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "518": {
+      "glossZh": "馬利亞；米利暗",
+      "lesson": 36,
+      "printedEntry": "Μαριάμ, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "519": {
+      "glossZh": "多少；何等大；幾多",
+      "lesson": 36,
+      "printedEntry": "πόσος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "520": {
+      "glossZh": "十字架",
+      "lesson": 36,
+      "printedEntry": "σταυρός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "521": {
+      "glossZh": "姐妹",
+      "lesson": 36,
+      "printedEntry": "ἀδελφή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "522": {
+      "glossZh": "真實的；真正的；坦率的",
+      "lesson": 36,
+      "printedEntry": "ἀληθής, -ές",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "523": {
+      "glossZh": "啟示；揭露；顯明",
+      "lesson": 36,
+      "printedEntry": "ἀποκαλύπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "524": {
+      "glossZh": "軟弱的；患病的；虛弱的",
+      "lesson": 36,
+      "printedEntry": "ἀσθενής, -ές",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "525": {
+      "glossZh": "確實；至少；真的",
+      "lesson": 36,
+      "printedEntry": "γε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "526": {
+      "glossZh": "以後；因為；否則",
+      "lesson": 36,
+      "printedEntry": "ἐπεί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "527": {
+      "glossZh": "已經來到；在此",
+      "lesson": 36,
+      "printedEntry": "ἥκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "528": {
+      "glossZh": "醫治",
+      "lesson": 36,
+      "printedEntry": "ἰάομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "529": {
+      "glossZh": "使悲傷；使煩惱",
+      "lesson": 36,
+      "printedEntry": "λυπέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "530": {
+      "glossZh": "承認；宣認；稱讚",
+      "lesson": 36,
+      "printedEntry": "ὁμολογέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "531": {
+      "glossZh": "還沒有",
+      "lesson": 36,
+      "printedEntry": "οὔπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "532": {
+      "glossZh": "屬靈的；精神上的",
+      "lesson": 36,
+      "printedEntry": "πνευματικός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "533": {
+      "glossZh": "士兵",
+      "lesson": 36,
+      "printedEntry": "στρατιώτης, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "534": {
+      "glossZh": "領悟；明白",
+      "lesson": 36,
+      "printedEntry": "συνίημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "535": {
+      "glossZh": "思考；判斷；體察",
+      "lesson": 36,
+      "printedEntry": "φρονέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "536": {
+      "glossZh": "寡婦",
+      "lesson": 36,
+      "printedEntry": "χήρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "537": {
+      "glossZh": "不義；邪惡",
+      "lesson": 36,
+      "printedEntry": "ἀδικία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "538": {
+      "glossZh": "埃及",
+      "lesson": 36,
+      "printedEntry": "Αἴγυπτος, -ου, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "539": {
+      "glossZh": "抬眼看；恢復視力",
+      "lesson": 37,
+      "printedEntry": "ἀναβλέπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "540": {
+      "glossZh": "使知道；宣告；知道",
+      "lesson": 37,
+      "printedEntry": "γνωρίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "541": {
+      "glossZh": "十",
+      "lesson": 37,
+      "printedEntry": "δέκα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "542": {
+      "glossZh": "樹",
+      "lesson": 37,
+      "printedEntry": "δένδρον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "543": {
+      "glossZh": "做奴隸；服侍；順從",
+      "lesson": 37,
+      "printedEntry": "δουλεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "544": {
+      "glossZh": "希臘人",
+      "lesson": 37,
+      "printedEntry": "Ἕλλην, -ηνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "545": {
+      "glossZh": "節期；筵席",
+      "lesson": 37,
+      "printedEntry": "ἑορτή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "546": {
+      "glossZh": "吩咐；命令",
+      "lesson": 37,
+      "printedEntry": "κελεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "547": {
+      "glossZh": "白的；明亮的",
+      "lesson": 37,
+      "printedEntry": "λευκός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "548": {
+      "glossZh": "學習；確知",
+      "lesson": 37,
+      "printedEntry": "μανθάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "549": {
+      "glossZh": "免得；恐怕",
+      "lesson": 37,
+      "printedEntry": "μήποτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "550": {
+      "glossZh": "雲",
+      "lesson": 37,
+      "printedEntry": "νεφέλη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "551": {
+      "glossZh": "起誓；發誓",
+      "lesson": 37,
+      "printedEntry": "ὀμνύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "552": {
+      "glossZh": "淫亂；拜偶像",
+      "lesson": 37,
+      "printedEntry": "πορνεία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "553": {
+      "glossZh": "你的；你們的",
+      "lesson": 37,
+      "printedEntry": "σός, σή, σόν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "554": {
+      "glossZh": "愛；親吻",
+      "lesson": 37,
+      "printedEntry": "φιλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "555": {
+      "glossZh": "聽覺；聽力；耳朵",
+      "lesson": 37,
+      "printedEntry": "ἀκοή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "556": {
+      "glossZh": "舉起；廢除；殺害",
+      "lesson": 37,
+      "printedEntry": "ἀναιρέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "557": {
+      "glossZh": "軟弱；無力；疾病",
+      "lesson": 37,
+      "printedEntry": "ἀσθένεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "558": {
+      "glossZh": "星",
+      "lesson": 37,
+      "printedEntry": "ἀστήρ, -έρος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "559": {
+      "glossZh": "為了…起見；因為",
+      "lesson": 37,
+      "printedEntry": "ἕνεκα or ἕνεκεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "560": {
+      "glossZh": "信件；書信",
+      "lesson": 37,
+      "printedEntry": "ἐπιστολή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "561": {
+      "glossZh": "留下；遺棄",
+      "lesson": 37,
+      "printedEntry": "καταλείπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "562": {
+      "glossZh": "躺；靠著；被放置",
+      "lesson": 37,
+      "printedEntry": "κεῖμαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "563": {
+      "glossZh": "年輕的；新的",
+      "lesson": 37,
+      "printedEntry": "νέος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "564": {
+      "glossZh": "心思；思想；悟性",
+      "lesson": 37,
+      "printedEntry": "νοῦς, νοός, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "565": {
+      "glossZh": "孩子；小孩；男孩或女孩",
+      "lesson": 37,
+      "printedEntry": "παῖς, παιδός, ὁ or ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "566": {
+      "glossZh": "在場；臨近",
+      "lesson": 37,
+      "printedEntry": "πάρειμι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "567": {
+      "glossZh": "同在；降臨；來到",
+      "lesson": 37,
+      "printedEntry": "παρουσία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "568": {
+      "glossZh": "充滿；裝滿",
+      "lesson": 37,
+      "printedEntry": "πίμπλημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "569": {
+      "glossZh": "留心；注意；專心",
+      "lesson": 37,
+      "printedEntry": "προσέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "570": {
+      "glossZh": "提摩太",
+      "lesson": 37,
+      "printedEntry": "Τιμόθεος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "571": {
+      "glossZh": "葡萄園",
+      "lesson": 37,
+      "printedEntry": "ἀμπελών, -ῶνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "572": {
+      "glossZh": "領上去；駛向外海；啟航",
+      "lesson": 38,
+      "printedEntry": "ἀνάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "573": {
+      "glossZh": "不信的；懷疑的；不信者",
+      "lesson": 38,
+      "printedEntry": "ἄπιστος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "574": {
+      "glossZh": "因為這個緣故；因為；所以",
+      "lesson": 38,
+      "printedEntry": "διότι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "575": {
+      "glossZh": "像；肖像；形象",
+      "lesson": 38,
+      "printedEntry": "εἰκών, -όνος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "576": {
+      "glossZh": "自由的；蒙救贖的",
+      "lesson": 38,
+      "printedEntry": "ἐλεύθερος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "577": {
+      "glossZh": "動物",
+      "lesson": 38,
+      "printedEntry": "ζῷον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "578": {
+      "glossZh": "祭壇",
+      "lesson": 38,
+      "printedEntry": "θυσιαστήριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "579": {
+      "glossZh": "控告；起訴；譴責",
+      "lesson": 38,
+      "printedEntry": "κατηγορέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "580": {
+      "glossZh": "勞苦；疲倦；操勞",
+      "lesson": 38,
+      "printedEntry": "κοπιάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "581": {
+      "glossZh": "阻止；妨礙；禁止",
+      "lesson": 38,
+      "printedEntry": "κωλύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "582": {
+      "glossZh": "記得；想起；回憶",
+      "lesson": 38,
+      "printedEntry": "μιμνῄσκομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "583": {
+      "glossZh": "飢餓；缺乏",
+      "lesson": 38,
+      "printedEntry": "πεινάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "584": {
+      "glossZh": "（配所有格）彼岸；另一邊",
+      "lesson": 38,
+      "printedEntry": "πέραν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "585": {
+      "glossZh": "披；穿；裹",
+      "lesson": 38,
+      "printedEntry": "περιβάλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "586": {
+      "glossZh": "器皿；用具；家具",
+      "lesson": 38,
+      "printedEntry": "σκεῦος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "587": {
+      "glossZh": "完成；成全；使完美",
+      "lesson": 38,
+      "printedEntry": "τελειόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "588": {
+      "glossZh": "施恩；饒恕；赦免",
+      "lesson": 38,
+      "printedEntry": "χαρίζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "589": {
+      "glossZh": "千；成千上萬",
+      "lesson": 38,
+      "printedEntry": "χιλιάς, -άδος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "590": {
+      "glossZh": "不知道；無知；不曉得",
+      "lesson": 38,
+      "printedEntry": "ἀγνοέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "591": {
+      "glossZh": "（配所有格）代替；取代；作為交換",
+      "lesson": 38,
+      "printedEntry": "ἀντί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "592": {
+      "glossZh": "保持清醒；警醒；守望",
+      "lesson": 38,
+      "printedEntry": "γρηγορέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "593": {
+      "glossZh": "懇求；祈禱",
+      "lesson": 38,
+      "printedEntry": "δέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "594": {
+      "glossZh": "察驗；試驗；證明",
+      "lesson": 38,
+      "printedEntry": "δοκιμάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "595": {
+      "glossZh": "揀選；選出",
+      "lesson": 38,
+      "printedEntry": "ἐκλέγομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "596": {
+      "glossZh": "蒙揀選的；精選的",
+      "lesson": 38,
+      "printedEntry": "ἐκλεκτός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "597": {
+      "glossZh": "以賽亞",
+      "lesson": 38,
+      "printedEntry": "Ἠσαΐας, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "598": {
+      "glossZh": "看見；觀看；注視",
+      "lesson": 38,
+      "printedEntry": "θεάομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "599": {
+      "glossZh": "睡眠",
+      "lesson": 38,
+      "printedEntry": "καθεύδω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "600": {
+      "glossZh": "那人；那個",
+      "lesson": 38,
+      "printedEntry": "κἀκεῖνος",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "601": {
+      "glossZh": "作成；實行；完成",
+      "lesson": 38,
+      "printedEntry": "κατεργάζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "602": {
+      "glossZh": "腹部；子宮；內心",
+      "lesson": 38,
+      "printedEntry": "κοιλία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "603": {
+      "glossZh": "馬其頓",
+      "lesson": 38,
+      "printedEntry": "Μακεδονία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "604": {
+      "glossZh": "悔改；心意更新",
+      "lesson": 38,
+      "printedEntry": "μετάνοια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "605": {
+      "glossZh": "不再；再也不",
+      "lesson": 39,
+      "printedEntry": "μηκέτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "606": {
+      "glossZh": "打擊；傷痕；災禍",
+      "lesson": 39,
+      "printedEntry": "πληγή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "607": {
+      "glossZh": "財富；豐富",
+      "lesson": 39,
+      "printedEntry": "πλοῦτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "608": {
+      "glossZh": "出售；賣",
+      "lesson": 39,
+      "printedEntry": "πωλέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "609": {
+      "glossZh": "議會；公會；猶太人最高法院",
+      "lesson": 39,
+      "printedEntry": "συνέδριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "610": {
+      "glossZh": "四十",
+      "lesson": 39,
+      "printedEntry": "τεσσεράκοντα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "611": {
+      "glossZh": "增長；擴大；成長",
+      "lesson": 39,
+      "printedEntry": "αὐξάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "612": {
+      "glossZh": "統治；作王；統治（配所有格）",
+      "lesson": 39,
+      "printedEntry": "βασιλεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "613": {
+      "glossZh": "教導；教訓；道理",
+      "lesson": 39,
+      "printedEntry": "διδασκαλία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "614": {
+      "glossZh": "工作；運行；發揮作用",
+      "lesson": 39,
+      "printedEntry": "ἐνεργέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "615": {
+      "glossZh": "決定；喜悅；樂意",
+      "lesson": 39,
+      "printedEntry": "εὐδοκέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "616": {
+      "glossZh": "站在旁邊；臨近；突然出現",
+      "lesson": 39,
+      "printedEntry": "ἐφίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "617": {
+      "glossZh": "收割；收成",
+      "lesson": 39,
+      "printedEntry": "θερίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "618": {
+      "glossZh": "設立；任命；指派；安排",
+      "lesson": 39,
+      "printedEntry": "καθίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "619": {
+      "glossZh": "侍奉；敬拜；服事",
+      "lesson": 39,
+      "printedEntry": "λατρεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "620": {
+      "glossZh": "記得；提到；想起",
+      "lesson": 39,
+      "printedEntry": "μνημονεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "621": {
+      "glossZh": "試探；試驗；誘惑；困難",
+      "lesson": 39,
+      "printedEntry": "πειρασμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "622": {
+      "glossZh": "轉向；改變方向；悔改",
+      "lesson": 39,
+      "printedEntry": "στρέφω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "623": {
+      "glossZh": "稅吏；收稅人",
+      "lesson": 39,
+      "printedEntry": "τελώνης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "624": {
+      "glossZh": "估價；尊敬；看重",
+      "lesson": 39,
+      "printedEntry": "τιμάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "625": {
+      "glossZh": "聽從；順服",
+      "lesson": 39,
+      "printedEntry": "ὑπακούω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "626": {
+      "glossZh": "千夫長；軍事護衛官",
+      "lesson": 39,
+      "printedEntry": "χιλίαρχος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "627": {
+      "glossZh": "好像；彷彿；約",
+      "lesson": 39,
+      "printedEntry": "ὡσεί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "628": {
+      "glossZh": "原因；理由；控狀",
+      "lesson": 39,
+      "printedEntry": "αἰτία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "629": {
+      "glossZh": "包皮",
+      "lesson": 39,
+      "printedEntry": "ἀκροβυστία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "630": {
+      "glossZh": "銀子；銀錢；金錢",
+      "lesson": 39,
+      "printedEntry": "ἀργύριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "631": {
+      "glossZh": "後裔；家族；種族；類別",
+      "lesson": 39,
+      "printedEntry": "γένος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "632": {
+      "glossZh": "父親；母親；雙親",
+      "lesson": 39,
+      "printedEntry": "γονεύς, -έως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "633": {
+      "glossZh": "百夫長",
+      "lesson": 39,
+      "printedEntry": "ἑκατοντάρχης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "634": {
+      "glossZh": "認識；明白；知識",
+      "lesson": 39,
+      "printedEntry": "ἐπίγνωσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "635": {
+      "glossZh": "巡撫；總督",
+      "lesson": 39,
+      "printedEntry": "ἡγεμών, -όνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "636": {
+      "glossZh": "以撒",
+      "lesson": 39,
+      "printedEntry": "Ἰσαάκ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "637": {
+      "glossZh": "魚",
+      "lesson": 39,
+      "printedEntry": "ἰχθύς, -ύος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "638": {
+      "glossZh": "禁食；齋戒",
+      "lesson": 40,
+      "printedEntry": "νηστεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "639": {
+      "glossZh": "現在；已經",
+      "lesson": 40,
+      "printedEntry": "νυνί",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "640": {
+      "glossZh": "木杖；木料；十字架",
+      "lesson": 40,
+      "printedEntry": "ξύλον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "641": {
+      "glossZh": "領先；先行；走在前面",
+      "lesson": 40,
+      "printedEntry": "προάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "642": {
+      "glossZh": "帳幕；會幕；聖殿",
+      "lesson": 40,
+      "printedEntry": "σκηνή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "643": {
+      "glossZh": "智慧的；聰慧的",
+      "lesson": 40,
+      "printedEntry": "σοφός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "644": {
+      "glossZh": "這樣大的；如此多的",
+      "lesson": 40,
+      "printedEntry": "τοσοῦτος, -αύτη, -οῦτον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "645": {
+      "glossZh": "奔跑；競賽；操練",
+      "lesson": 40,
+      "printedEntry": "τρέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "646": {
+      "glossZh": "僕人；侍從；執事",
+      "lesson": 40,
+      "printedEntry": "ὑπηρέτης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "647": {
+      "glossZh": "舉起；高舉；尊高",
+      "lesson": 40,
+      "printedEntry": "ὑψόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "648": {
+      "glossZh": "領取；距離；足夠；已經得著",
+      "lesson": 40,
+      "printedEntry": "ἀπέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "649": {
+      "glossZh": "洗禮；施洗",
+      "lesson": 40,
+      "printedEntry": "βάπτισμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "650": {
+      "glossZh": "農夫；莊稼人；葡萄園主",
+      "lesson": 40,
+      "printedEntry": "γεωργός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "651": {
+      "glossZh": "分別；辨別；懷疑；猶豫",
+      "lesson": 40,
+      "printedEntry": "διακρίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "652": {
+      "glossZh": "禮物；恩賜",
+      "lesson": 40,
+      "printedEntry": "δῶρον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "653": {
+      "glossZh": "舉起；抬起；揚起",
+      "lesson": 40,
+      "printedEntry": "ἐπαίρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "654": {
+      "glossZh": "在…上面；上方；優於",
+      "lesson": 40,
+      "printedEntry": "ἐπάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "655": {
+      "glossZh": "抓住；拿住；扶持",
+      "lesson": 40,
+      "printedEntry": "ἐπιλαμβάνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "656": {
+      "glossZh": "天上的；屬靈的",
+      "lesson": 40,
+      "printedEntry": "ἐπουράνιος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "657": {
+      "glossZh": "交通；相交；團契；分享",
+      "lesson": 40,
+      "printedEntry": "κοινωνία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "658": {
+      "glossZh": "更強的；更卓越的",
+      "lesson": 40,
+      "printedEntry": "κρείσσων, -ονος",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "659": {
+      "glossZh": "審判官；法官",
+      "lesson": 40,
+      "printedEntry": "κριτής, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "660": {
+      "glossZh": "創造；被造物；制度",
+      "lesson": 40,
+      "printedEntry": "κτίσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "661": {
+      "glossZh": "見證；憑據；證據",
+      "lesson": 40,
+      "printedEntry": "μαρτύριον, -ίου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "662": {
+      "glossZh": "為…掛慮；心煩意亂",
+      "lesson": 40,
+      "printedEntry": "μεριμνάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "663": {
+      "glossZh": "舊的；古老的；破舊的",
+      "lesson": 40,
+      "printedEntry": "παλαιός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "664": {
+      "glossZh": "過犯；罪愆",
+      "lesson": 40,
+      "printedEntry": "παράπτωμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "665": {
+      "glossZh": "擺在…前面；供應；交託",
+      "lesson": 40,
+      "printedEntry": "παρατίθημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "666": {
+      "glossZh": "何時；在什麼時候",
+      "lesson": 40,
+      "printedEntry": "πότε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "667": {
+      "glossZh": "預言",
+      "lesson": 40,
+      "printedEntry": "προφητεία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "668": {
+      "glossZh": "完全的；成熟的",
+      "lesson": 40,
+      "printedEntry": "τέλειος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "669": {
+      "glossZh": "實在；確實；真正",
+      "lesson": 40,
+      "printedEntry": "ἀληθῶς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "670": {
+      "glossZh": "安提阿",
+      "lesson": 40,
+      "printedEntry": "Ἀντιόχεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "671": {
+      "glossZh": "啟示；揭露",
+      "lesson": 41,
+      "printedEntry": "ἀποκάλυψις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "672": {
+      "glossZh": "毀滅；喪失",
+      "lesson": 41,
+      "printedEntry": "ἀπώλεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "673": {
+      "glossZh": "數字；總數",
+      "lesson": 41,
+      "printedEntry": "ἀριθμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "674": {
+      "glossZh": "亞細亞",
+      "lesson": 41,
+      "printedEntry": "Ἀσία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "675": {
+      "glossZh": "褻瀆；毀謗",
+      "lesson": 41,
+      "printedEntry": "βλασφημία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "676": {
+      "glossZh": "懇求；祈禱",
+      "lesson": 41,
+      "printedEntry": "δέησις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "677": {
+      "glossZh": "鎖鍊；束縛",
+      "lesson": 41,
+      "printedEntry": "δεσμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "678": {
+      "glossZh": "進去；前往",
+      "lesson": 41,
+      "printedEntry": "εἰσπορεύομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "679": {
+      "glossZh": "投在…上；加在…上",
+      "lesson": 41,
+      "printedEntry": "ἐπιβάλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "680": {
+      "glossZh": "允許；准許",
+      "lesson": 41,
+      "printedEntry": "ἐπιτρέπω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "681": {
+      "glossZh": "暴怒；烈怒",
+      "lesson": 41,
+      "printedEntry": "θυμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "682": {
+      "glossZh": "公開宣揚；傳講",
+      "lesson": 41,
+      "printedEntry": "καταγγέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "683": {
+      "glossZh": "定罪；判罪",
+      "lesson": 41,
+      "printedEntry": "κατακρίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "684": {
+      "glossZh": "空的；虛妄的",
+      "lesson": 41,
+      "printedEntry": "κενός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "685": {
+      "glossZh": "承受產業；獲得",
+      "lesson": 41,
+      "printedEntry": "κληρονομέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "686": {
+      "glossZh": "睡著；入眠",
+      "lesson": 41,
+      "printedEntry": "κοιμάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "687": {
+      "glossZh": "勞苦；辛勞",
+      "lesson": 41,
+      "printedEntry": "κόπος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "688": {
+      "glossZh": "隱藏；掩蓋",
+      "lesson": 41,
+      "printedEntry": "κρύπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "689": {
+      "glossZh": "月份",
+      "lesson": 41,
+      "printedEntry": "μήν, μηνός, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "690": {
+      "glossZh": "豈不；若不",
+      "lesson": 41,
+      "printedEntry": "μήτι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "691": {
+      "glossZh": "建造；建築物；造就",
+      "lesson": 41,
+      "printedEntry": "οἰκοδομή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "692": {
+      "glossZh": "立刻；瞬間",
+      "lesson": 41,
+      "printedEntry": "παραχρῆμα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "693": {
+      "glossZh": "牧羊人；牧者",
+      "lesson": 41,
+      "printedEntry": "ποιμήν, -ένος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "694": {
+      "glossZh": "戰爭；爭戰；紛爭",
+      "lesson": 41,
+      "printedEntry": "πόλεμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "695": {
+      "glossZh": "多次；常常",
+      "lesson": 41,
+      "printedEntry": "πολλάκις",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "696": {
+      "glossZh": "加上；增加；再次做",
+      "lesson": 41,
+      "printedEntry": "προστίθημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "697": {
+      "glossZh": "大門；門樓；門廊",
+      "lesson": 41,
+      "printedEntry": "πυλών, -ῶνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "698": {
+      "glossZh": "冠冕；花冠",
+      "lesson": 41,
+      "printedEntry": "στέφανος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "699": {
+      "glossZh": "生育；產生；生出",
+      "lesson": 41,
+      "printedEntry": "τίκτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "700": {
+      "glossZh": "明顯的；清楚的；可見的；顯然",
+      "lesson": 41,
+      "printedEntry": "φανερός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "701": {
+      "glossZh": "金的；黃金的",
+      "lesson": 41,
+      "printedEntry": "χρύσοῦς, -ῆ, -οῦν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "702": {
+      "glossZh": "必需；迫切；強制",
+      "lesson": 41,
+      "printedEntry": "ἀνάγκη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "703": {
+      "glossZh": "使喜悅；討好",
+      "lesson": 41,
+      "printedEntry": "ἀρέσκω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "704": {
+      "glossZh": "赦免；寬恕；完全的饒恕",
+      "lesson": 42,
+      "printedEntry": "ἄφεσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "705": {
+      "glossZh": "食物",
+      "lesson": 42,
+      "printedEntry": "βρῶμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "706": {
+      "glossZh": "一百",
+      "lesson": 42,
+      "printedEntry": "ἑκατόν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "707": {
+      "glossZh": "責備；揭露",
+      "lesson": 42,
+      "printedEntry": "ἐλέγχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "708": {
+      "glossZh": "使驚奇；被驚奇",
+      "lesson": 42,
+      "printedEntry": "ἐξίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "709": {
+      "glossZh": "明天",
+      "lesson": 42,
+      "printedEntry": "ἐπαύριον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "710": {
+      "glossZh": "預備好的；現成的",
+      "lesson": 42,
+      "printedEntry": "ἕτοιμος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "711": {
+      "glossZh": "寶藏；庫存",
+      "lesson": 42,
+      "printedEntry": "θησαυρός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "712": {
+      "glossZh": "馬",
+      "lesson": 42,
+      "printedEntry": "ἵππος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "713": {
+      "glossZh": "該撒利亞",
+      "lesson": 42,
+      "printedEntry": "Καισάρεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "714": {
+      "glossZh": "即使；如果",
+      "lesson": 42,
+      "printedEntry": "κἄν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "715": {
+      "glossZh": "拆毀；推翻；卸下；找住處",
+      "lesson": 42,
+      "printedEntry": "καταλύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "716": {
+      "glossZh": "緊持；束縛；抑制",
+      "lesson": 42,
+      "printedEntry": "κατέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "717": {
+      "glossZh": "獲得；贏得；避免損失",
+      "lesson": 42,
+      "printedEntry": "κερδαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "718": {
+      "glossZh": "隱藏的；秘密的",
+      "lesson": 42,
+      "printedEntry": "κρυπτός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "719": {
+      "glossZh": "（配所有格或賓格）直到；到…為止",
+      "lesson": 42,
+      "printedEntry": "μέχρι or μέχρις",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "720": {
+      "glossZh": "洗",
+      "lesson": 42,
+      "printedEntry": "νίπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "721": {
+      "glossZh": "行割禮",
+      "lesson": 42,
+      "printedEntry": "περιτέμνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "722": {
+      "glossZh": "滿的；充滿的",
+      "lesson": 42,
+      "printedEntry": "πλήρης, -ες",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "723": {
+      "glossZh": "豐滿；成就；圓滿",
+      "lesson": 42,
+      "printedEntry": "πλήρωμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "724": {
+      "glossZh": "近的；鄰居",
+      "lesson": 42,
+      "printedEntry": "πλησίον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "725": {
+      "glossZh": "河流；急流",
+      "lesson": 42,
+      "printedEntry": "ποταμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "726": {
+      "glossZh": "根；根源",
+      "lesson": 42,
+      "printedEntry": "ῥίζα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "727": {
+      "glossZh": "拯救；解救",
+      "lesson": 42,
+      "printedEntry": "ῥύομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "728": {
+      "glossZh": "擾亂；使困擾",
+      "lesson": 42,
+      "printedEntry": "ταράσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "729": {
+      "glossZh": "偽君子；裝假的人",
+      "lesson": 42,
+      "printedEntry": "ὑποκριτής, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "730": {
+      "glossZh": "堅忍；承受",
+      "lesson": 42,
+      "printedEntry": "ὑπομένω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "731": {
+      "glossZh": "恩賜；屬靈的恩賜",
+      "lesson": 42,
+      "printedEntry": "χάρισμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "732": {
+      "glossZh": "呵；嘆詞",
+      "lesson": 42,
+      "printedEntry": "ὦ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "733": {
+      "glossZh": "同樣地；照樣",
+      "lesson": 42,
+      "printedEntry": "ὡσαύτως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "734": {
+      "glossZh": "廢棄；違背",
+      "lesson": 42,
+      "printedEntry": "ἀθετέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "735": {
+      "glossZh": "審問；盤問",
+      "lesson": 42,
+      "printedEntry": "ἀνακρίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "736": {
+      "glossZh": "婚姻；婚宴",
+      "lesson": 42,
+      "printedEntry": "γάμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "737": {
+      "glossZh": "晚餐；午餐或晚間的飯食",
+      "lesson": 43,
+      "printedEntry": "δεῖπνον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "738": {
+      "glossZh": "被囚禁者；囚犯",
+      "lesson": 43,
+      "printedEntry": "δέσμιος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "739": {
+      "glossZh": "銀幣；羅馬銀幣",
+      "lesson": 43,
+      "printedEntry": "δηνάριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "740": {
+      "glossZh": "推理；辯論；考慮",
+      "lesson": 43,
+      "printedEntry": "διαλογίζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "741": {
+      "glossZh": "下令；規定",
+      "lesson": 43,
+      "printedEntry": "διατάσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "742": {
+      "glossZh": "渴望；熱烈欲求",
+      "lesson": 43,
+      "printedEntry": "διψάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "743": {
+      "glossZh": "伸出；拋出",
+      "lesson": 43,
+      "printedEntry": "ἐκτείνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "744": {
+      "glossZh": "倒出；傾灑",
+      "lesson": 43,
+      "printedEntry": "ἐκχέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "745": {
+      "glossZh": "上船；登船",
+      "lesson": 43,
+      "printedEntry": "ἐμβαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "746": {
+      "glossZh": "然後；其後；隨後",
+      "lesson": 43,
+      "printedEntry": "ἔπειτα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "747": {
+      "glossZh": "貪求；渴望；私慾",
+      "lesson": 43,
+      "printedEntry": "ἐπιθυμέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "748": {
+      "glossZh": "停留；逗留；堅持",
+      "lesson": 43,
+      "printedEntry": "ἐπιμένω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "749": {
+      "glossZh": "田間勞動者；工人",
+      "lesson": 43,
+      "printedEntry": "ἐργάτης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "750": {
+      "glossZh": "祝福；讚美；恭維",
+      "lesson": 43,
+      "printedEntry": "εὐλογία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "751": {
+      "glossZh": "以弗所",
+      "lesson": 43,
+      "printedEntry": "Ἔφεσος, -ου, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "752": {
+      "glossZh": "熱心；妒忌；競爭心",
+      "lesson": 43,
+      "printedEntry": "ζῆλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "753": {
+      "glossZh": "邪惡地；惡劣地",
+      "lesson": 43,
+      "printedEntry": "κακῶς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "754": {
+      "glossZh": "下來；降下",
+      "lesson": 43,
+      "printedEntry": "κατέρχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "755": {
+      "glossZh": "迦百農",
+      "lesson": 43,
+      "printedEntry": "Καφαρναούμ, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "756": {
+      "glossZh": "關閉；上鎖",
+      "lesson": 43,
+      "printedEntry": "κλείω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "757": {
+      "glossZh": "盜賊；賊",
+      "lesson": 43,
+      "printedEntry": "κλέπτης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "758": {
+      "glossZh": "痛苦；哀傷",
+      "lesson": 43,
+      "printedEntry": "λύπη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "759": {
+      "glossZh": "新郎",
+      "lesson": 43,
+      "printedEntry": "νυμφίος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "760": {
+      "glossZh": "絕不；從不",
+      "lesson": 43,
+      "printedEntry": "οὐδέποτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "761": {
+      "glossZh": "苦難；受苦",
+      "lesson": 43,
+      "printedEntry": "πάθημα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "762": {
+      "glossZh": "供給；提供",
+      "lesson": 43,
+      "printedEntry": "παρέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "763": {
+      "glossZh": "更大的；更多的",
+      "lesson": 43,
+      "printedEntry": "περισσότερος, τερον –τέρα, –",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "764": {
+      "glossZh": "期待；等候",
+      "lesson": 43,
+      "printedEntry": "προσδοκάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "765": {
+      "glossZh": "黑暗",
+      "lesson": 43,
+      "printedEntry": "σκοτία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "766": {
+      "glossZh": "無花果樹",
+      "lesson": 43,
+      "printedEntry": "συκῆ, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "767": {
+      "glossZh": "捕捉；逮捕；懷孕",
+      "lesson": 43,
+      "printedEntry": "συλλαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "768": {
+      "glossZh": "推薦；證明；組成；結合",
+      "lesson": 43,
+      "printedEntry": "συνίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "769": {
+      "glossZh": "印璽；印記；憑證",
+      "lesson": 43,
+      "printedEntry": "σφραγίς, -ῖδος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "770": {
+      "glossZh": "奇蹟；異兆",
+      "lesson": 44,
+      "printedEntry": "τέρας, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "771": {
+      "glossZh": "膽敢；勇敢",
+      "lesson": 44,
+      "printedEntry": "τολμάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "772": {
+      "glossZh": "食物；滋養",
+      "lesson": 44,
+      "printedEntry": "τροφή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "773": {
+      "glossZh": "缺乏；不足",
+      "lesson": 44,
+      "printedEntry": "ὑστερέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "774": {
+      "glossZh": "飽足；餵飽",
+      "lesson": 44,
+      "printedEntry": "χορτάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "775": {
+      "glossZh": "忍耐；寬容",
+      "lesson": 44,
+      "printedEntry": "ἀνέχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "776": {
+      "glossZh": "不法；邪惡",
+      "lesson": 44,
+      "printedEntry": "ἀνομία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "777": {
+      "glossZh": "帶走；領去",
+      "lesson": 44,
+      "printedEntry": "ἀπάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "778": {
+      "glossZh": "嚐；經歷",
+      "lesson": 44,
+      "printedEntry": "γεύομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "779": {
+      "glossZh": "已知的；熟人",
+      "lesson": 44,
+      "printedEntry": "γνωστός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "780": {
+      "glossZh": "赤身的；裸露的",
+      "lesson": 44,
+      "printedEntry": "γυμνός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "781": {
+      "glossZh": "大馬士革",
+      "lesson": 44,
+      "printedEntry": "Δαμασκός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "782": {
+      "glossZh": "鞭打；毆打",
+      "lesson": 44,
+      "printedEntry": "δέρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "783": {
+      "glossZh": "鄭重作證；莊嚴見證",
+      "lesson": 44,
+      "printedEntry": "διαμαρτύρομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "784": {
+      "glossZh": "然後；隨後",
+      "lesson": 44,
+      "printedEntry": "εἶτα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "785": {
+      "glossZh": "橄欖樹",
+      "lesson": 44,
+      "printedEntry": "ἐλαία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "786": {
+      "glossZh": "吩咐；命令",
+      "lesson": 44,
+      "printedEntry": "ἐντέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "787": {
+      "glossZh": "應許；宣稱",
+      "lesson": 44,
+      "printedEntry": "ἐπαγγέλλομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "788": {
+      "glossZh": "敬虔；虔誠",
+      "lesson": 44,
+      "printedEntry": "εὐσέβεια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "789": {
+      "glossZh": "感謝；謝恩",
+      "lesson": 44,
+      "printedEntry": "εὐχαριστία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "790": {
+      "glossZh": "基礎的；地基",
+      "lesson": 44,
+      "printedEntry": "θεμέλιος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "791": {
+      "glossZh": "頭髮；毛髮",
+      "lesson": 44,
+      "printedEntry": "θρίξ, τριχός, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "792": {
+      "glossZh": "約旦河",
+      "lesson": 44,
+      "printedEntry": "Ἰορδάνης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "793": {
+      "glossZh": "抓住；追上；領會",
+      "lesson": 44,
+      "printedEntry": "καταλαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "794": {
+      "glossZh": "繼承人；後嗣",
+      "lesson": 44,
+      "printedEntry": "κληρονόμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "795": {
+      "glossZh": "創造；建立；造就",
+      "lesson": 44,
+      "printedEntry": "κτίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "796": {
+      "glossZh": "拉撒路",
+      "lesson": 44,
+      "printedEntry": "Λάζαρος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "797": {
+      "glossZh": "盜賊；強盜",
+      "lesson": 44,
+      "printedEntry": "λῃστής, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "798": {
+      "glossZh": "犯姦淫",
+      "lesson": 44,
+      "printedEntry": "μοιχεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "799": {
+      "glossZh": "嬰孩；小孩；無知的人",
+      "lesson": 44,
+      "printedEntry": "νήπιος, -ίου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "800": {
+      "glossZh": "認為；以為；想",
+      "lesson": 44,
+      "printedEntry": "νομίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "801": {
+      "glossZh": "使乾；枯乾；成熟",
+      "lesson": 44,
+      "printedEntry": "ξηραίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "802": {
+      "glossZh": "從…地方；因此；所以",
+      "lesson": 44,
+      "printedEntry": "ὅθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "803": {
+      "glossZh": "已住之地；（羅馬）已知世界",
+      "lesson": 45,
+      "printedEntry": "οἰκουμένη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "804": {
+      "glossZh": "使相似；比作",
+      "lesson": 45,
+      "printedEntry": "ὁμοιόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "805": {
+      "glossZh": "晚的；後來的",
+      "lesson": 45,
+      "printedEntry": "ὄψιος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "806": {
+      "glossZh": "童女；未曾嫁娶的女子",
+      "lesson": 45,
+      "printedEntry": "παρθένος, -ου, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "807": {
+      "glossZh": "使停止；終止",
+      "lesson": 45,
+      "printedEntry": "παύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "808": {
+      "glossZh": "磐石；岩石",
+      "lesson": 45,
+      "printedEntry": "πέτρα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "809": {
+      "glossZh": "給飲；使喝",
+      "lesson": 45,
+      "printedEntry": "ποτίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "810": {
+      "glossZh": "預先警告；提前告知",
+      "lesson": 45,
+      "printedEntry": "προλέγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "811": {
+      "glossZh": "不定語氣詞；以某種方式",
+      "lesson": 45,
+      "printedEntry": "πώς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "812": {
+      "glossZh": "拉比；師傅；老師",
+      "lesson": 45,
+      "printedEntry": "ῥαββί, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "813": {
+      "glossZh": "搖動；動搖；激動",
+      "lesson": 45,
+      "printedEntry": "σαλεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "814": {
+      "glossZh": "掃羅",
+      "lesson": 45,
+      "printedEntry": "Σαῦλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "815": {
+      "glossZh": "絆腳石；使人跌倒之物；陷阱",
+      "lesson": 45,
+      "printedEntry": "σκάνδαλον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "816": {
+      "glossZh": "聚集；對…有益；有利",
+      "lesson": 45,
+      "printedEntry": "συμφέρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "817": {
+      "glossZh": "蓋印；加封印",
+      "lesson": 45,
+      "printedEntry": "σφραγίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "818": {
+      "glossZh": "很快地；迅速地；立刻",
+      "lesson": 45,
+      "printedEntry": "ταχέως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "819": {
+      "glossZh": "桌子；筵席",
+      "lesson": 45,
+      "printedEntry": "τράπεζα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "820": {
+      "glossZh": "樣式；榜樣；預表；類型",
+      "lesson": 45,
+      "printedEntry": "τύπος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "821": {
+      "glossZh": "順從；聽從",
+      "lesson": 45,
+      "printedEntry": "ὑπακοή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "822": {
+      "glossZh": "草；青草；乾草",
+      "lesson": 45,
+      "printedEntry": "χόρτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "823": {
+      "glossZh": "幫助；有益；行善",
+      "lesson": 45,
+      "printedEntry": "ὠφελέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "824": {
+      "glossZh": "荊棘；荊棘叢",
+      "lesson": 45,
+      "printedEntry": "ἄκανθα, ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "825": {
+      "glossZh": "他人的；外邦的；陌生的",
+      "lesson": 45,
+      "printedEntry": "ἀλλότριος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "826": {
+      "glossZh": "兩者；雙方",
+      "lesson": 45,
+      "printedEntry": "ἀμφότεροι, -αι, -α",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "827": {
+      "glossZh": "宣告；通知；報告",
+      "lesson": 45,
+      "printedEntry": "ἀναγγέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "828": {
+      "glossZh": "斜倚；坐席進食",
+      "lesson": 45,
+      "printedEntry": "ἀνάκειμαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "829": {
+      "glossZh": "退回；隱退；離開；撤退",
+      "lesson": 45,
+      "printedEntry": "ἀναχωρέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "830": {
+      "glossZh": "對抗；反對；抵抗",
+      "lesson": 45,
+      "printedEntry": "ἀνθίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "831": {
+      "glossZh": "一次；一次永遠",
+      "lesson": 45,
+      "printedEntry": "ἅπαξ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "832": {
+      "glossZh": "不順從；反叛；不忠",
+      "lesson": 45,
+      "printedEntry": "ἀπειθέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "833": {
+      "glossZh": "奪取；搶奪；掠奪",
+      "lesson": 45,
+      "printedEntry": "ἁρπάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "834": {
+      "glossZh": "注視；凝視",
+      "lesson": 45,
+      "printedEntry": "ἀτενίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "835": {
+      "glossZh": "明天",
+      "lesson": 45,
+      "printedEntry": "αὔριον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "836": {
+      "glossZh": "引開；誘惑；離開；戒絕",
+      "lesson": 46,
+      "printedEntry": "ἀφίστημι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "837": {
+      "glossZh": "字母；文字；著作；學問",
+      "lesson": 46,
+      "printedEntry": "γράμμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "838": {
+      "glossZh": "思慮；推理；想法；詭計",
+      "lesson": 46,
+      "printedEntry": "διαλογισμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "839": {
+      "glossZh": "第六",
+      "lesson": 46,
+      "printedEntry": "ἕκτος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "840": {
+      "glossZh": "最小的；極少的",
+      "lesson": 46,
+      "printedEntry": "ἐλάχιστος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "841": {
+      "glossZh": "年",
+      "lesson": 46,
+      "printedEntry": "ἐνιαυτός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "842": {
+      "glossZh": "知道；明白",
+      "lesson": 46,
+      "printedEntry": "ἐπίσταμαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "843": {
+      "glossZh": "歡樂；喜悅；歡宴",
+      "lesson": 46,
+      "printedEntry": "εὐφραίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "844": {
+      "glossZh": "獻祭；宰殺",
+      "lesson": 46,
+      "printedEntry": "θύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "845": {
+      "glossZh": "領悟；察覺；思想",
+      "lesson": 46,
+      "printedEntry": "κατανοέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "846": {
+      "glossZh": "吃盡；吞盡",
+      "lesson": 46,
+      "printedEntry": "κατεσθίω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "847": {
+      "glossZh": "折斷；摧毀",
+      "lesson": 46,
+      "printedEntry": "κλάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "848": {
+      "glossZh": "產業；遺產；所得",
+      "lesson": 46,
+      "printedEntry": "κληρονομία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "849": {
+      "glossZh": "普通的；共同的；不潔淨的",
+      "lesson": 46,
+      "printedEntry": "κοινός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "850": {
+      "glossZh": "玷污；視為不潔淨",
+      "lesson": 46,
+      "printedEntry": "κοινόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "851": {
+      "glossZh": "啞巴；聾子",
+      "lesson": 46,
+      "printedEntry": "κωφός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "852": {
+      "glossZh": "燈；燈火",
+      "lesson": 46,
+      "printedEntry": "λύχνος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "853": {
+      "glossZh": "從遠處；遠遠地",
+      "lesson": 46,
+      "printedEntry": "μακρόθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "854": {
+      "glossZh": "忍耐；恆久忍耐；寬容",
+      "lesson": 46,
+      "printedEntry": "μακροθυμία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "855": {
+      "glossZh": "分開；分派；分享",
+      "lesson": 46,
+      "printedEntry": "μερίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "856": {
+      "glossZh": "量度；量器",
+      "lesson": 46,
+      "printedEntry": "μέτρον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "857": {
+      "glossZh": "香膏；油膏",
+      "lesson": 46,
+      "printedEntry": "μύρον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "858": {
+      "glossZh": "明白；領會；思考",
+      "lesson": 46,
+      "printedEntry": "νοέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "859": {
+      "glossZh": "陌生的；新奇的；異邦人；外地人",
+      "lesson": 46,
+      "printedEntry": "ξένος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "860": {
+      "glossZh": "怎樣的；什麼樣的；如此的",
+      "lesson": 46,
+      "printedEntry": "οἷος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "861": {
+      "glossZh": "蛇",
+      "lesson": 46,
+      "printedEntry": "ὄφις, -εως, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "862": {
+      "glossZh": "鳥",
+      "lesson": 46,
+      "printedEntry": "πετεινόν, -οῦ, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "863": {
+      "glossZh": "期望；接待；領受",
+      "lesson": 46,
+      "printedEntry": "προσδέχομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "864": {
+      "glossZh": "撒都該人",
+      "lesson": 46,
+      "printedEntry": "Σαδδουκαῖος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "865": {
+      "glossZh": "地震；風暴",
+      "lesson": 46,
+      "printedEntry": "σεισμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "866": {
+      "glossZh": "麥子；五穀",
+      "lesson": 46,
+      "printedEntry": "σῖτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "867": {
+      "glossZh": "他連得（古代重量貨幣單位）",
+      "lesson": 46,
+      "printedEntry": "τάλαντον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "868": {
+      "glossZh": "貶低；羞辱；使謙卑",
+      "lesson": 46,
+      "printedEntry": "ταπεινόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "869": {
+      "glossZh": "聰慧的；審慎的",
+      "lesson": 47,
+      "printedEntry": "φρόνιμος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "870": {
+      "glossZh": "本性；本質；天性",
+      "lesson": 47,
+      "printedEntry": "φύσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "871": {
+      "glossZh": "瘸腿的；殘廢的",
+      "lesson": 47,
+      "printedEntry": "χωλός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "872": {
+      "glossZh": "（配所有格）每個；各個",
+      "lesson": 47,
+      "printedEntry": "ἀνά",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "873": {
+      "glossZh": "舉起；承接；接納",
+      "lesson": 47,
+      "printedEntry": "ἀναλαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "874": {
+      "glossZh": "行為；生活方式；品行",
+      "lesson": 47,
+      "printedEntry": "ἀναστροφή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "875": {
+      "glossZh": "安得烈",
+      "lesson": 47,
+      "printedEntry": "Ἀνδρέας, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "876": {
+      "glossZh": "從上面；從起初；重新",
+      "lesson": 47,
+      "printedEntry": "ἄνωθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "877": {
+      "glossZh": "被鬼附；被惡鬼所附",
+      "lesson": 47,
+      "printedEntry": "δαιμονίζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "878": {
+      "glossZh": "交談；辯論；講論",
+      "lesson": 47,
+      "printedEntry": "διαλέγομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "879": {
+      "glossZh": "運載；不同；超越",
+      "lesson": 47,
+      "printedEntry": "διαφέρω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "880": {
+      "glossZh": "龍；大蛇",
+      "lesson": 47,
+      "printedEntry": "δράκων, -οντος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "881": {
+      "glossZh": "驚駭；震驚",
+      "lesson": 47,
+      "printedEntry": "ἐκπλήσσω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "882": {
+      "glossZh": "施捨；慈善",
+      "lesson": 47,
+      "printedEntry": "ἐλεημοσύνη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "883": {
+      "glossZh": "嘲笑；戲弄",
+      "lesson": 47,
+      "printedEntry": "ἐμπαίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "884": {
+      "glossZh": "六",
+      "lesson": 47,
+      "printedEntry": "ἕξ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "885": {
+      "glossZh": "派遣；打發",
+      "lesson": 47,
+      "printedEntry": "ἐξαποστέλλω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "886": {
+      "glossZh": "從外面；外部；外邊",
+      "lesson": 47,
+      "printedEntry": "ἔξωθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "887": {
+      "glossZh": "尋求；渴望；追求",
+      "lesson": 47,
+      "printedEntry": "ἐπιζητέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "888": {
+      "glossZh": "酵母；麵酵",
+      "lesson": 47,
+      "printedEntry": "ζύμη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "889": {
+      "glossZh": "收割；收穫",
+      "lesson": 47,
+      "printedEntry": "θερισμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "890": {
+      "glossZh": "正如；就像",
+      "lesson": 47,
+      "printedEntry": "καθάπερ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "891": {
+      "glossZh": "煙",
+      "lesson": 47,
+      "printedEntry": "καπνός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "892": {
+      "glossZh": "使蒙羞；貶低；使極其慚愧",
+      "lesson": 47,
+      "printedEntry": "καταισχύνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "893": {
+      "glossZh": "下來；到達；抵達",
+      "lesson": 47,
+      "printedEntry": "καταντάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "894": {
+      "glossZh": "裝備；預備；完成",
+      "lesson": 47,
+      "printedEntry": "καταρτίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "895": {
+      "glossZh": "偷竊；盜取",
+      "lesson": 47,
+      "printedEntry": "κλέπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "896": {
+      "glossZh": "馬大",
+      "lesson": 47,
+      "printedEntry": "Μάρθα, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "897": {
+      "glossZh": "拿撒勒人",
+      "lesson": 47,
+      "printedEntry": "Ναζωραῖος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "898": {
+      "glossZh": "管教；教導；訓練；懲罰",
+      "lesson": 47,
+      "printedEntry": "παιδεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "899": {
+      "glossZh": "婢女；女僕",
+      "lesson": 47,
+      "printedEntry": "παιδίσκη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "900": {
+      "glossZh": "傳統；教導",
+      "lesson": 47,
+      "printedEntry": "παράδοσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "901": {
+      "glossZh": "曾經；以前；之前",
+      "lesson": 47,
+      "printedEntry": "πρίν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "902": {
+      "glossZh": "堅固；加強",
+      "lesson": 48,
+      "printedEntry": "στηρίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "903": {
+      "glossZh": "同工；同伴",
+      "lesson": 48,
+      "printedEntry": "συνεργός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "904": {
+      "glossZh": "快的；迅速的",
+      "lesson": 48,
+      "printedEntry": "ταχύς, -εῖα, -ύ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "905": {
+      "glossZh": "寶貴的；尊貴的；被敬重的",
+      "lesson": 48,
+      "printedEntry": "τίμιος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "906": {
+      "glossZh": "提多",
+      "lesson": 48,
+      "printedEntry": "Τίτος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "907": {
+      "glossZh": "方式；行為；品格",
+      "lesson": 48,
+      "printedEntry": "τρόπος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "908": {
+      "glossZh": "打；擊打；傷害",
+      "lesson": 48,
+      "printedEntry": "τύπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "909": {
+      "glossZh": "至高的；最高的",
+      "lesson": 48,
+      "printedEntry": "ὕψιστος, -η, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "910": {
+      "glossZh": "非斯都",
+      "lesson": 48,
+      "printedEntry": "Φῆστος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "911": {
+      "glossZh": "分開；離別",
+      "lesson": 48,
+      "printedEntry": "χωρίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "912": {
+      "glossZh": "不義的；不公正的",
+      "lesson": 48,
+      "printedEntry": "ἄδικος, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "913": {
+      "glossZh": "公雞",
+      "lesson": 48,
+      "printedEntry": "ἀλέκτωρ, -ορος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "914": {
+      "glossZh": "使安息；給予安息；休息",
+      "lesson": 48,
+      "printedEntry": "ἀναπαύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "915": {
+      "glossZh": "躺臥；靠著；仰卧",
+      "lesson": 48,
+      "printedEntry": "ἀναπίπτω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "916": {
+      "glossZh": "皮袋；酒囊",
+      "lesson": 48,
+      "printedEntry": "ἀσκός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "917": {
+      "glossZh": "院子；庭院；宮殿",
+      "lesson": 48,
+      "printedEntry": "αὐλή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "918": {
+      "glossZh": "巴比倫",
+      "lesson": 48,
+      "printedEntry": "Βαβυλών, -ῶνος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "919": {
+      "glossZh": "施洗者；浸禮者",
+      "lesson": 48,
+      "printedEntry": "βαπτιστής, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "920": {
+      "glossZh": "折磨；拷打；苦害",
+      "lesson": 48,
+      "printedEntry": "βασανίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "921": {
+      "glossZh": "伯大尼",
+      "lesson": 48,
+      "printedEntry": "Βηθανία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "922": {
+      "glossZh": "腳步；講臺、審判臺",
+      "lesson": 48,
+      "printedEntry": "βῆμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "923": {
+      "glossZh": "呼喊、大聲叫喊",
+      "lesson": 48,
+      "printedEntry": "βοάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "924": {
+      "glossZh": "計畫、主張、議會",
+      "lesson": 48,
+      "printedEntry": "βουλή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "925": {
+      "glossZh": "雷、雷聲",
+      "lesson": 48,
+      "printedEntry": "βροντή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "926": {
+      "glossZh": "地獄",
+      "lesson": 48,
+      "printedEntry": "γέεννα, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "927": {
+      "glossZh": "膝蓋",
+      "lesson": 48,
+      "printedEntry": "γόνυ, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "928": {
+      "glossZh": "來吧、來",
+      "lesson": 48,
+      "printedEntry": "δεῦτε",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "929": {
+      "glossZh": "思想、悟性、心智",
+      "lesson": 48,
+      "printedEntry": "διάνοια, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "930": {
+      "glossZh": "漁網",
+      "lesson": 48,
+      "printedEntry": "δίκτυον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "931": {
+      "glossZh": "習俗、風俗",
+      "lesson": 48,
+      "printedEntry": "ἔθος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "932": {
+      "glossZh": "帶出、領出",
+      "lesson": 48,
+      "printedEntry": "ἐξάγω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "933": {
+      "glossZh": "裡面、內部",
+      "lesson": 48,
+      "printedEntry": "ἔσωθεν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "934": {
+      "glossZh": "西庇太",
+      "lesson": 48,
+      "printedEntry": "Ζεβεδαῖος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "935": {
+      "glossZh": "蘆葦；蘆葦筆",
+      "lesson": 49,
+      "printedEntry": "κάλαμος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "936": {
+      "glossZh": "燒毀；完全焚燒",
+      "lesson": 49,
+      "printedEntry": "κατακαίω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "937": {
+      "glossZh": "躺臥；臥病在床",
+      "lesson": 49,
+      "printedEntry": "κατάκειμαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "938": {
+      "glossZh": "膠合；黏附；親近來往",
+      "lesson": 49,
+      "printedEntry": "κολλάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "939": {
+      "glossZh": "統治權；力量；權能",
+      "lesson": 49,
+      "printedEntry": "κράτος, -ους, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "940": {
+      "glossZh": "甚；非常；極其",
+      "lesson": 49,
+      "printedEntry": "λίαν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "941": {
+      "glossZh": "饑荒；飢餓",
+      "lesson": 49,
+      "printedEntry": "λιμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "942": {
+      "glossZh": "燈臺",
+      "lesson": 49,
+      "printedEntry": "λυχνία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "943": {
+      "glossZh": "抹大拉的馬利亞",
+      "lesson": 49,
+      "printedEntry": "Μαγδαληνή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "944": {
+      "glossZh": "尤其；最重要的是",
+      "lesson": 49,
+      "printedEntry": "μάλιστα",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "945": {
+      "glossZh": "離開；出發；越過；轉移",
+      "lesson": 49,
+      "printedEntry": "μεταβαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "946": {
+      "glossZh": "愚蠢的；無知的",
+      "lesson": 49,
+      "printedEntry": "μωρός, -ά, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "947": {
+      "glossZh": "牙齒",
+      "lesson": 49,
+      "printedEntry": "ὀδούς, -όντος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "948": {
+      "glossZh": "家主；一家之主",
+      "lesson": 49,
+      "printedEntry": "οἰκοδεσπότης, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "949": {
+      "glossZh": "景象；異象",
+      "lesson": 49,
+      "printedEntry": "ὅραμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "950": {
+      "glossZh": "地區；邊界；領土",
+      "lesson": 49,
+      "printedEntry": "ὅριον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "951": {
+      "glossZh": "藉口；推辭；拒絕",
+      "lesson": 49,
+      "printedEntry": "παραιτέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "952": {
+      "glossZh": "更加豐盛地；越發",
+      "lesson": 49,
+      "printedEntry": "περισσοτέρως",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "953": {
+      "glossZh": "逮捕；抓住",
+      "lesson": 49,
+      "printedEntry": "πιάζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "954": {
+      "glossZh": "增加；倍增",
+      "lesson": 49,
+      "printedEntry": "πληθύνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "955": {
+      "glossZh": "變富有；富足",
+      "lesson": 49,
+      "printedEntry": "πλουτέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "956": {
+      "glossZh": "妓女",
+      "lesson": 49,
+      "printedEntry": "πόρνη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "957": {
+      "glossZh": "陳設餅；預定；目的",
+      "lesson": 49,
+      "printedEntry": "πρόθεσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "958": {
+      "glossZh": "接納；歡迎；與…同住",
+      "lesson": 49,
+      "printedEntry": "προσλαμβάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "959": {
+      "glossZh": "清晨；黎明",
+      "lesson": 49,
+      "printedEntry": "πρωΐ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "960": {
+      "glossZh": "詢問；打聽",
+      "lesson": 49,
+      "printedEntry": "πυνθάνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "961": {
+      "glossZh": "小馬駒；驢駒",
+      "lesson": 49,
+      "printedEntry": "πῶλος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "962": {
+      "glossZh": "杖；棍；鞭子",
+      "lesson": 49,
+      "printedEntry": "ῥάβδος, -ου, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "963": {
+      "glossZh": "羅馬人；羅馬的",
+      "lesson": 49,
+      "printedEntry": "Ῥωμαῖος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "964": {
+      "glossZh": "吹號角；吹喇叭",
+      "lesson": 49,
+      "printedEntry": "σαλπίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "965": {
+      "glossZh": "西拉",
+      "lesson": 49,
+      "printedEntry": "Σίλας, -ᾶ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "966": {
+      "glossZh": "所羅門",
+      "lesson": 49,
+      "printedEntry": "Σολομῶν, -ῶνος, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "967": {
+      "glossZh": "動憐憫；同情",
+      "lesson": 49,
+      "printedEntry": "σπλαγχνίζομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "968": {
+      "glossZh": "急速；殷勤",
+      "lesson": 50,
+      "printedEntry": "σπουδή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "969": {
+      "glossZh": "壓擠；監禁；逼迫；困擾",
+      "lesson": 50,
+      "printedEntry": "συνέχω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "970": {
+      "glossZh": "三次",
+      "lesson": 50,
+      "printedEntry": "τρίς",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "971": {
+      "glossZh": "獲得；恰好遇到；碰巧",
+      "lesson": 50,
+      "printedEntry": "τυγχάνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "972": {
+      "glossZh": "健康；安好",
+      "lesson": 50,
+      "printedEntry": "ὑγιαίνω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "973": {
+      "glossZh": "後來的；較晚的",
+      "lesson": 50,
+      "printedEntry": "ὕστερος, -α, -ον",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "974": {
+      "glossZh": "淺盤；碗",
+      "lesson": 50,
+      "printedEntry": "φιάλη, -ης, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "975": {
+      "glossZh": "殺害；謀殺",
+      "lesson": 50,
+      "printedEntry": "φονεύω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "976": {
+      "glossZh": "豬",
+      "lesson": 50,
+      "printedEntry": "χοῖρος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "977": {
+      "glossZh": "金製飾物",
+      "lesson": 50,
+      "printedEntry": "χρυσίον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "978": {
+      "glossZh": "說謊；欺騙",
+      "lesson": 50,
+      "printedEntry": "ψεύδομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "979": {
+      "glossZh": "欣喜若狂；大大喜樂",
+      "lesson": 50,
+      "printedEntry": "ἀγαλλιάω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "980": {
+      "glossZh": "否認；背棄；不顧",
+      "lesson": 50,
+      "printedEntry": "ἀπαρνέομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "981": {
+      "glossZh": "自由；解放",
+      "lesson": 50,
+      "printedEntry": "ἐλευθερία, -ας, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "982": {
+      "glossZh": "稱讚；頌詞",
+      "lesson": 50,
+      "printedEntry": "ἔπαινος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "983": {
+      "glossZh": "感到羞恥；以…為恥",
+      "lesson": 50,
+      "printedEntry": "ἐπαισχύνομαι",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "984": {
+      "glossZh": "嫉妒；熱心於；渴望",
+      "lesson": 50,
+      "printedEntry": "ζηλόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "985": {
+      "glossZh": "置死地；征服；制伏",
+      "lesson": 50,
+      "printedEntry": "θανατόω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "986": {
+      "glossZh": "根基；奠定；播種",
+      "lesson": 50,
+      "printedEntry": "καταβολή, -ῆς, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "987": {
+      "glossZh": "自誇；誇耀的事",
+      "lesson": 50,
+      "printedEntry": "καύχημα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "988": {
+      "glossZh": "誇耀；自誇之事",
+      "lesson": 50,
+      "printedEntry": "καύχησις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "989": {
+      "glossZh": "呼召；召喚",
+      "lesson": 50,
+      "printedEntry": "κλῆσις, εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "990": {
+      "glossZh": "溫柔；谦和",
+      "lesson": 50,
+      "printedEntry": "πραΰτης, -ῆτος, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "991": {
+      "glossZh": "憐憫；同情心",
+      "lesson": 50,
+      "printedEntry": "σπλάγχνον, -ου, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "992": {
+      "glossZh": "撕裂；分開",
+      "lesson": 50,
+      "printedEntry": "σχίζω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "993": {
+      "glossZh": "聖潔；成聖",
+      "lesson": 50,
+      "printedEntry": "ἁγιασμός, -οῦ, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "994": {
+      "glossZh": "救贖；拯救",
+      "lesson": 50,
+      "printedEntry": "ἀπολύτρωσις, -εως, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "995": {
+      "glossZh": "書卷；書籍",
+      "lesson": 50,
+      "printedEntry": "βίβλος, -ου, ἡ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "996": {
+      "glossZh": "生命；生活方式；生計",
+      "lesson": 50,
+      "printedEntry": "βίος, -ου, ὁ",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "997": {
+      "glossZh": "公義之舉；義的行為",
+      "lesson": 50,
+      "printedEntry": "δικαίωμα, -ατος, τό",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "998": {
+      "glossZh": "承認；認罪",
+      "lesson": 50,
+      "printedEntry": "ἐξομολογέω",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "999": {
+      "glossZh": "蒙召的；被選中的",
+      "lesson": 50,
+      "printedEntry": "κλητός, -ή, -όν",
+      "engine": "claude-haiku-4-5-20251001"
+    },
+    "1000": {
+      "glossZh": "忍耐；寬容；長久忍耐",
+      "lesson": 50,
+      "printedEntry": "μακροθυμέω",
+      "engine": "claude-haiku-4-5-20251001"
+    }
+  }
+}

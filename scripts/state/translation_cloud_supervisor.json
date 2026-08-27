@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "pid": 9572,
+  "pid": 14700,
   "status": "running",
-  "updated_at": "2026-08-26T23:59:38+08:00",
+  "updated_at": "2026-08-27T17:27:08+08:00",
   "project": "genesis-philosophy",
   "shard_count": 7,
   "lanes": {
@@ -15,12 +15,12 @@
       "kind": "translate",
       "pid": 0,
       "state": "cooldown",
-      "next_restart_at": 1787761336.7939906,
-      "started_at": "2026-08-26T23:49:46+08:00",
+      "next_restart_at": 1787823037.7254913,
+      "started_at": "2026-08-27T16:57:42+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-1.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:52:16+08:00"
+      "last_exit_at": "2026-08-27T17:00:37+08:00"
     },
     "gemini-2": {
       "id": "gemini-2",
@@ -29,14 +29,14 @@
       "shard": 1,
       "engine": "gemini-only",
       "kind": "translate",
-      "pid": 0,
-      "state": "cooldown",
-      "next_restart_at": 1787761123.5698931,
-      "started_at": "2026-08-26T23:46:53+08:00",
+      "pid": 24836,
+      "state": "running",
+      "next_restart_at": 1787822732.647162,
+      "started_at": "2026-08-27T17:25:40+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-2.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:48:43+08:00"
+      "last_exit_at": "2026-08-27T16:55:32+08:00"
     },
     "gemini-3": {
       "id": "gemini-3",
@@ -47,12 +47,12 @@
       "kind": "translate",
       "pid": 0,
       "state": "cooldown",
-      "next_restart_at": 1787761246.203051,
-      "started_at": "2026-08-26T23:48:44+08:00",
+      "next_restart_at": 1787824616.830194,
+      "started_at": "2026-08-27T17:25:03+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-3.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:50:46+08:00"
+      "last_exit_at": "2026-08-27T17:26:56+08:00"
     },
     "nvidia-1": {
       "id": "nvidia-1",
@@ -61,14 +61,12 @@
       "shard": 3,
       "engine": "nvidia",
       "kind": "translate",
-      "pid": 0,
-      "state": "cooldown",
-      "next_restart_at": 1787760048.7393582,
-      "started_at": "2026-08-26T23:29:38+08:00",
+      "pid": 6644,
+      "state": "running",
+      "next_restart_at": 0,
+      "started_at": "2026-08-27T00:01:54+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_nvidia-1.log",
-      "engine_in_use": "nvidia",
-      "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:30:48+08:00"
+      "engine_in_use": "nvidia"
     },
     "nvidia-2": {
       "id": "nvidia-2",
@@ -77,14 +75,12 @@
       "shard": 4,
       "engine": "nvidia",
       "kind": "translate",
-      "pid": 0,
-      "state": "cooldown",
-      "next_restart_at": 1787760219.2938418,
-      "started_at": "2026-08-26T23:32:19+08:00",
+      "pid": 12656,
+      "state": "running",
+      "next_restart_at": 0,
+      "started_at": "2026-08-27T00:01:55+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_nvidia-2.log",
-      "engine_in_use": "nvidia",
-      "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:33:39+08:00"
+      "engine_in_use": "nvidia"
     },
     "nvidia-3": {
       "id": "nvidia-3",
@@ -94,13 +90,8 @@
       "engine": "nvidia",
       "kind": "translate",
       "pid": 9088,
-      "state": "running",
-      "next_restart_at": 1787759947.7104483,
-      "started_at": "2026-08-26T23:59:08+08:00",
-      "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_nvidia-3.log",
-      "engine_in_use": "nvidia",
-      "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:29:07+08:00"
+      "state": "running-existing",
+      "next_restart_at": 0
     },
     "nvidia-4": {
       "id": "nvidia-4",
@@ -109,14 +100,12 @@
       "shard": 6,
       "engine": "nvidia",
       "kind": "translate",
-      "pid": 0,
-      "state": "cooldown",
-      "next_restart_at": 1787760038.7310286,
-      "started_at": "2026-08-26T23:29:38+08:00",
+      "pid": 26056,
+      "state": "running",
+      "next_restart_at": 0,
+      "started_at": "2026-08-27T00:01:56+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_nvidia-4.log",
-      "engine_in_use": "nvidia",
-      "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T23:30:38+08:00"
+      "engine_in_use": "nvidia"
     },
     "gemini-4-reviewer": {
       "id": "gemini-4-reviewer",
@@ -126,16 +115,11 @@
       "engine": "gemini-review",
       "kind": "review",
       "pid": 19236,
-      "state": "running",
-      "next_restart_at": 1787703307.1508217,
-      "started_at": "2026-08-26T08:15:08+08:00",
-      "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-4-reviewer.log",
-      "engine_in_use": "gemini-review",
-      "last_exit_code": 1,
-      "last_exit_at": "2026-08-26T07:45:07+08:00"
+      "state": "running-existing",
+      "next_restart_at": 0
     }
   },
   "on_ac_power": true,
-  "running_lanes": 2,
+  "running_lanes": 6,
   "claims": {}
 }

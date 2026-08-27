@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-08-25T16:18:59.374632+00:00",
+  "artifacts": [
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json",
+      "bytes": 7861436,
+      "sha256": "2656068e43330f9e9e3c8723e912da950843e408846c7fdcff37b1290f70aee0"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/interlinear.json",
+      "bytes": 13284504,
+      "sha256": "684eb7eb78668f33414c31c1220038974654ae9501df5c126d6ff7bebd882274"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/scripture-plan.json",
+      "bytes": 1451402,
+      "sha256": "f4ff044e4a29aaed9fcf7128b9f017f2e906831a5a28c8f8cf674799a32b3343"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/patristic-plan.json",
+      "bytes": 2041317,
+      "sha256": "f3ec2cf654cda5b1d4625fef47ddf34ecb125a3d7d678ca4a57aec42284735f5"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/liturgy-chrysostom.json",
+      "bytes": 304160,
+      "sha256": "28b61dd175757a876ae4442544ff1a37b796af068c240d9fa0ea9e9421ac7bd5"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/memory-verses.json",
+      "bytes": 84725,
+      "sha256": "0d751c2cf0ddb0714f139d28764865d46e9f92eddecf75b1636ff2d0c1cd925e"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/memory-sentences.json",
+      "bytes": 105154,
+      "sha256": "e4d43e148e5c566729a28934085629029bb60dee6b66320315c4052f9642ecfe"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/RCUV2010.json",
+      "bytes": 795110,
+      "sha256": "09a579a713afd68a40512cdb0b207e184a9cdad399b6e84a2f0f795047aa8da0"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/deuterocanon-zh.json",
+      "bytes": 69690,
+      "sha256": "b6d6b23512604828b280218999e35c4cdaba6b2e4a057e95e4f41529fac1ed78"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/greek-2000-gloss-zh-by-lemma.json",
+      "bytes": 477514,
+      "sha256": "647c36c18b1aa651b33c9228648252ea163fcfb7ace1ff9f4c59ba288dbb981c"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/validation-report-vol1.json",
+      "bytes": 6661,
+      "sha256": "86cae10b79e02336f1c44225f0d02f35422f0e8f5bcf4a1a808f9db08e94c143"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/validation-report-vol2.json",
+      "bytes": 5594,
+      "sha256": "5417c0854b4d65b9df96b0802551f4a61bc4cec506e3bf105536ad6a7caf6c2e"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/source-cache/original-readers/greek-full/sources/church-documents/manifest.json",
+      "bytes": 13602,
+      "sha256": "cdebdfc8badff7c2bb89d1779f1ea5c4c8ee4547db5d9267b72bf496f06dde40"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/data/originalReaders/vocabulary/greek-2000.json",
+      "bytes": 1514419,
+      "sha256": "e70f60c5fc03a02acf3a65496814563695f81b8ea757d9efe1ec849706095e11"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/data/originalReaders/vocabulary/greek-appendices.json",
+      "bytes": 264846,
+      "sha256": "d6a5572e3f75f95b00fe98a064edec8078b0e8e871ae967c35256eaa8d482350"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/original-readers/greek-original-reader-vol1.docx",
+      "bytes": 1096411,
+      "sha256": "ad2fd7f8e17cdb85fb4f8679f2d42f4111f6c56e60e5a81a8cf9fd439cecac61"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/original-readers/greek-original-reader-vol1.pdf",
+      "bytes": 28496465,
+      "sha256": "d29d9c76ea735884b6e0b6e69b793e38afe7036457dddba1e5f85d561951ea54"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/original-readers/greek-original-reader-vol2.docx",
+      "bytes": 2898345,
+      "sha256": "bafd1ced95f18e6e73aba2f9b2ed6ea70a4e4bf6bd00e6d185a9906b35c42850"
+    },
+    {
+      "path": "C:/Users/user/Desktop/know-graph-lab/output/original-readers/greek-original-reader-vol2.pdf",
+      "bytes": 75031365,
+      "sha256": "e127ea61372f29f6145efde87bcca79c03fc82692cb6a56168648ca9f2044f9f"
+    }
+  ]
+}

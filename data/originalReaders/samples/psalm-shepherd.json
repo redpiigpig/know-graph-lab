@@ -1,0 +1,132 @@
+{
+  "translation": [
+    "耶和華是我的牧者，我必不致缺乏。",
+    "他使我躺臥在青草地上，領我在可安歇的水邊。",
+    "他使我的靈魂甦醒，為自己的名引導我走義路。",
+    "我雖然行過死蔭的幽谷，也不怕遭害，因為你與我同在；你的杖，你的竿，都安慰我。",
+    "在我敵人面前，你為我擺設筵席；你用油膏了我的頭，使我的福杯滿溢。",
+    "我一生一世必有恩惠慈愛隨著我；我且要住在耶和華的殿中，直到永遠。"
+  ],
+  "volumes": [
+    {
+      "slug": "hebrew",
+      "languageCode": "hbo",
+      "title": "希伯來文原文讀本",
+      "subtitle": "Biblical Hebrew Original-Language Reader",
+      "sampleTitle": "詩篇 23｜牧者之歌",
+      "sampleOriginalTitle": "תְּהִלִּים כ״ג",
+      "reference": "MT Psalm 23",
+      "direction": "rtl",
+      "accent": "8C5A2B",
+      "font": "Noto Serif Hebrew",
+      "sourceEdition": "Westminster Leningrad Codex／私人授權校訂來源；本樣張與 Mechon-Mamre 標點本文交叉核對",
+      "sourceUrl": "https://www.mechon-mamre.org/p/pt/pt2623.htm",
+      "textPolicy": "正文完整保留馬所拉母音點（niqqud）、複合 shewa、dagesh、shin/sin dot 與 qamats qatan；不得改成現代無母音拼法。誦讀音軌另依聖經希伯來文校訂，不採現代以色列語 TTS。",
+      "curriculum": "詞彙 50 課 × 每課 20 字（共 1,000 字），順序以 Pratico／Van Pelt《Basics of Biblical Hebrew Grammar》授權逐課詞表為準。",
+      "verses": [
+        "מִזְמוֹר לְדָוִד יְהוָה רֹעִי לֹא אֶחְסָר׃",
+        "בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי עַל־מֵי מְנֻחוֹת יְנַהֲלֵנִי׃",
+        "נַפְשִׁי יְשׁוֹבֵב יַנְחֵנִי בְמַעְגְּלֵי־צֶדֶק לְמַעַן שְׁמוֹ׃",
+        "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+        "תַּעֲרֹךְ לְפָנַי שֻׁלְחָן נֶגֶד צֹרְרָי דִּשַּׁנְתָּ בַשֶּׁמֶן רֹאשִׁי כּוֹסִי רְוָיָה׃",
+        "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל־יְמֵי חַיָּי וְשַׁבְתִּי בְּבֵית־יְהוָה לְאֹרֶךְ יָמִים׃"
+      ],
+      "vocabulary": [
+        ["רֹעִי", "רֹעֶה", "רעה", "我的牧者；牧養者", "名詞／分詞，陽性單數＋1cs"],
+        ["אֶחְסָר", "חָסֵר", "חסר", "我缺乏", "Qal 未完成式 1cs"],
+        ["מְנֻחוֹת", "מְנוּחָה", "נוח", "安歇之處；休息", "陰性複數"],
+        ["נַפְשִׁי", "נֶפֶשׁ", "נפשׁ", "我的生命／心魂", "陰性單數＋1cs"],
+        ["יְשׁוֹבֵב", "שׁוּב", "שׁוב", "使恢復、帶回", "Polel 未完成式 3ms"],
+        ["צֶדֶק", "צֶדֶק", "צדק", "公義；正直", "陽性單數"],
+        ["צַלְמָוֶת", "צַלְמָוֶת", "צלמות", "深暗；死蔭", "名詞"],
+        ["חֶסֶד", "חֶסֶד", "חסד", "慈愛；信實之愛", "陽性單數"]
+      ],
+      "grammar": [
+        "רֹעִי 的 yod 是第一人稱單數所有格：『我的牧者』。正文與詞典欄都保留母音點。",
+        "לֹא＋未完成式 אֶחְסָר 在此表達有把握的否定：『我必不缺乏』。",
+        "עַל־מֵי 以 maqqef 連接；排版時不可在連字符兩側任意斷行。",
+        "詩歌平行句以語義組塊分行；右至左段落不得用手動空格模擬對齊。"
+      ]
+    },
+    {
+      "slug": "greek",
+      "languageCode": "grc",
+      "title": "希臘文原文讀本",
+      "subtitle": "Biblical & Patristic Greek Reader",
+      "sampleTitle": "詩篇 22（LXX）｜牧者之歌",
+      "sampleOriginalTitle": "Ψαλμὸς τῷ Δαυίδ",
+      "reference": "LXX Psalm 22",
+      "direction": "ltr",
+      "accent": "256D85",
+      "font": "Noto Serif",
+      "sourceEdition": "Septuaginta, Rahlfs–Hanhart；私人授權使用",
+      "sourceUrl": "https://www.die-bibel.de/en/bible/LXX/PSA.22",
+      "textPolicy": "正文保留多調號希臘文的重音、氣音、iota subscript 與句讀；詞形分析另列 lemma，不把正文正規化成單調號現代希臘文。",
+      "curriculum": "詞彙先依孟恩思《聖經希臘文基礎：課本》（2017 修訂中譯）章次，再以《A Graded Reader of Biblical Greek》的讀文難度與首次出現補足。",
+      "verses": [
+        "Ψαλμὸς τῷ Δαυίδ. Κύριος ποιμαίνει με, καὶ οὐδέν με ὑστερήσει.",
+        "εἰς τόπον χλόης, ἐκεῖ με κατεσκήνωσεν· ἐπὶ ὕδατος ἀναπαύσεως ἐξέθρεψέν με,",
+        "τὴν ψυχήν μου ἐπέστρεψεν. ὡδήγησέν με ἐπὶ τρίβους δικαιοσύνης ἕνεκεν τοῦ ὀνόματος αὐτοῦ.",
+        "ἐὰν γὰρ καὶ πορευθῶ ἐν μέσῳ σκιᾶς θανάτου, οὐ φοβηθήσομαι κακά, ὅτι σὺ μετ᾽ ἐμοῦ εἶ· ἡ ῥάβδος σου καὶ ἡ βακτηρία σου, αὐταί με παρεκάλεσαν.",
+        "ἡτοίμασας ἐνώπιόν μου τράπεζαν ἐξ ἐναντίας τῶν θλιβόντων με· ἐλίπανας ἐν ἐλαίῳ τὴν κεφαλήν μου, καὶ τὸ ποτήριόν σου μεθύσκον ὡς κράτιστον.",
+        "καὶ τὸ ἔλεός σου καταδιώξεταί με πάσας τὰς ἡμέρας τῆς ζωῆς μου, καὶ τὸ κατοικεῖν με ἐν οἴκῳ κυρίου εἰς μακρότητα ἡμερῶν."
+      ],
+      "vocabulary": [
+        ["ποιμαίνει", "ποιμαίνω", "—", "牧養；作牧者", "現在主動直說語氣 3sg"],
+        ["ὑστερήσει", "ὑστερέω", "—", "缺少；匱乏", "未來主動直說語氣 3sg"],
+        ["κατεσκήνωσεν", "κατασκηνόω", "—", "使安居、搭帳棚", "不定過去主動 3sg"],
+        ["ἀναπαύσεως", "ἀνάπαυσις", "—", "安息；歇息", "陰性屬格單數"],
+        ["ψυχήν", "ψυχή", "—", "生命；心魂", "陰性受格單數"],
+        ["δικαιοσύνης", "δικαιοσύνη", "—", "公義", "陰性屬格單數"],
+        ["φοβηθήσομαι", "φοβέομαι", "—", "我將懼怕", "未來被動形（deponent）1sg"],
+        ["ἔλεός", "ἔλεος", "—", "憐憫；慈愛", "中性主格單數"]
+      ],
+      "grammar": [
+        "ποιμαίνει 的主語 Κύριος 在前；με 是受格第一人稱代名詞。",
+        "οὐδέν 是中性單數，在此作實詞：『沒有任何事物』。",
+        "ἐὰν＋虛擬語氣 πορευθῶ 構成未定條件；γὰρ 與 καὶ 調整論述連接。",
+        "正式錄音須按通用希臘文校訂方案標註，不以現代希臘語裝置聲線冒充。"
+      ]
+    },
+    {
+      "slug": "latin",
+      "languageCode": "la",
+      "title": "拉丁文原文讀本",
+      "subtitle": "Biblical, Liturgical & Patristic Latin Reader",
+      "sampleTitle": "詩篇 22（Vulgata）｜牧者之歌",
+      "sampleOriginalTitle": "Dominus regit me",
+      "reference": "Vulgata Psalmus 22",
+      "direction": "ltr",
+      "accent": "8A3B46",
+      "font": "Noto Serif",
+      "sourceEdition": "Biblia Sacra iuxta Vulgatam Clementinam；私人授權使用",
+      "sourceUrl": "https://www.biblegateway.com/passage/?search=Psalmi+22&version=VULGATE",
+      "textPolicy": "正文採校訂拉丁文拼字與句讀；詞彙欄保留長音提示的學習層，但不擅自改寫來源正文。正式錄音分慢速教學、自然朗讀與禮儀吟誦。",
+      "curriculum": "以武加大聖經高頻詞為骨架，配合 Ordo Missae、拉丁禱文與拉丁教父選文按首次讀文補入。",
+      "verses": [
+        "Psalmus David. Dominus regit me, et nihil mihi deerit:",
+        "in loco pascuae, ibi me collocavit. Super aquam refectionis educavit me;",
+        "animam meam convertit. Deduxit me super semitas justitiae propter nomen suum.",
+        "Nam etsi ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es. Virga tua, et baculus tuus, ipsa me consolata sunt.",
+        "Parasti in conspectu meo mensam adversus eos qui tribulant me; impinguasti in oleo caput meum: et calix meus inebrians, quam praeclarus est!",
+        "Et misericordia tua subsequetur me omnibus diebus vitae meae; et ut inhabitem in domo Domini in longitudinem dierum."
+      ],
+      "vocabulary": [
+        ["Dominus", "dominus", "—", "主；主人", "主格陽性單數"],
+        ["regit", "regō", "—", "治理；引領", "現在主動直說語氣 3sg"],
+        ["deerit", "dēsum", "—", "將缺少", "未來主動直說語氣 3sg"],
+        ["pascuae", "pascua", "—", "草場；牧地", "屬格陰性單數"],
+        ["animam", "anima", "—", "生命；心魂", "受格陰性單數"],
+        ["semitas", "sēmita", "—", "小徑；道路", "受格陰性複數"],
+        ["baculus", "baculus", "—", "杖；棍", "主格陽性單數"],
+        ["misericordia", "misericordia", "—", "憐憫；慈愛", "主格陰性單數"]
+      ],
+      "grammar": [
+        "regit 是第三人稱單數；me 作直接受詞：『主引領我』。",
+        "nihil 是不可變化的中性代名詞；mihi 是與格，表『對我而言』。",
+        "etsi＋未來完成式 ambulavero 呈現讓步：『即使我走過……』。",
+        "教學長音只放在 lemma 欄；正文依所選武加大版本，不混入後加符號。"
+      ]
+    }
+  ]
+}
