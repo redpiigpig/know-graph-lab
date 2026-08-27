@@ -27,7 +27,7 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 
 配圖表是獨立產物，重跑 matcher 不會動到卡檔；換過圖一定要重跑 build 再重出 PDF。
 
-## 版面（五副共用，別自己重算）
+## 版面（各副共用，別自己重算）
 
 | | |
 |---|---|
@@ -104,12 +104,48 @@ matcher 由嚴到寬四段，配不到就留白：
 
 1. **人工 override**：以 emoji 的**本名**（不是 hexcode）指定，寫錯會當場報「查無此圖」而不是靜靜印錯。高頻核心詞與虛詞都在這裡。
 2. **繁中詞義轉移**：五副共用同一套繁中詞義，別副已經配過的詞義就沿用（πῦρ 和 אֵשׁ 都是「火」）。兩副互讀、交替跑到數字不再動為止，兩輪就夠。
-3. **第二層圖庫**（`scripts/iconify_card_images.py`）：OpenMoji 只有兩千多個概念，五副卡卻有 3,802 張，所以「跟**不相干的詞**共用同一張圖」的卡再去 Iconify 上的四個開源圖庫找 —— game-icons（4,133，CC BY 3.0，古代器物最齊）、Phosphor（9,072，MIT）、MDI（7,447，Apache 2.0）、Tabler（6,184，MIT）。同詞根共用（בֵּן／בָּנִים 都用男孩）不算，那是刻意的。一次抓下整份圖示清單在本機比對，不逐字打 search API。
-   🚨 **這一層一定要人工看過才能上**：328 張自動配出來的圖裡有 81 張是錯的（25%）。英文對得上不代表圖對：`mdi:iron` 是熨斗不是鐵、`ph:alien` 是外星人不是外邦人、`ph:command` 是 ⌘ 不是吩咐、`tabler:grave` 是墓碑不是「寫」、`mdi:cast` 是投影不是鑄造。UI 圖庫的命名是給軟體用的，撞名率極高。刷掉的組合寫進 `icon-rejects.json`，那張卡會自動去試下一個候選詞。
-4. **emoji 本名精確比對**，**絕不比對標籤欄**。比標籤有 72% 命中率，但會把「房屋」配成盆栽、「道路」配成爆炸頭、「水」配成汗滴。
+3. **emoji 本名精確比對**，**絕不比對標籤欄**。比標籤有 72% 命中率，但會把「房屋」配成盆栽、「道路」配成爆炸頭、「水」配成汗滴。
 4. **留白**。
 
 `AMBIGUOUS_EN` 另外擋掉義項會分岔的英文詞（watch 動詞 vs 手錶、bear 動詞 vs 熊），因為 Strong 的釋義是英文，而英文滿地都是這種詞。
+
+### 第二層圖庫：補「不相干的詞共用一張圖」
+
+OpenMoji 只有兩千多個概念，五副課內詞卡卻有 3,802 張，結果 681 張圖被重複用掉——
+希臘卡有一張握手用在 26 張卡上。**同詞根共用是刻意的**（בֵּן／בָּנִים 都用男孩），
+**不相干的詞共用才是教錯**：學的人會把兩個字記成同一件事。
+
+`scripts/iconify_card_images.py` 只動後者，去 Iconify 上四個開源圖庫找同名圖示：
+
+| 圖庫 | 張數 | 授權 | 強項 |
+|---|---:|---|---|
+| game-icons | 4,133 | CC BY 3.0 | 古代器物最齊（鐮刀、戰車、祭壇、軛） |
+| Phosphor | 9,072 | MIT | 線條乾淨 |
+| MDI | 7,447 | Apache 2.0 | 概念最全 |
+| Tabler | 6,184 | MIT | 與 Phosphor 互補 |
+
+一次抓下整份圖示清單在本機比對，不逐字打 search API（三千多張卡會打上萬次）。
+SVG 用 PyMuPDF 轉 PNG（`fitz.open("x.svg")` 直接讀，這台機器的 cairo 與 rlPyCairo 都裝不起來）。
+四個圖庫的授權標示要印在封面。
+
+🚨 **這一層一定要人工逐張看過才能上：328 張自動配出來的圖有 81 張是錯的（25%）。**
+英文對得上不代表圖對，而 UI 圖庫的命名是給軟體用的，撞名率極高：
+
+| 圖示 | 實際畫的 | 配到哪個詞 |
+|---|---|---|
+| `mdi:iron` | 熨斗 | 鐵 |
+| `ph:alien` | 外星人 | 陌生人、外邦的 |
+| `ph:command` | ⌘ 指令鍵 | 吩咐、命令 |
+| `tabler:grave` | 墓碑 | 寫、著文 |
+| `mdi:cast` | 投影 | 澆灌、鑄造 |
+| `game-icons:help` | 問號 | 幫助、輔助 |
+| `mdi:food` | 漢堡 | 食物、糧食 |
+
+審圖流程：`python scripts/flashcard_contact_sheet.py --audit-icons` 會把這一層配到的圖
+排成**標了中文詞義的樣張**（每頁 40 張，8 欄）——只印圖示名字看不出錯，一定要連中文詞義一起印。
+逐張看過，把錯的記進 `output/source-cache/flashcards/icon-rejects.json`（`圖示|英文關鍵詞` 一行一組），
+重跑時那張卡會自動去試下一個候選詞。
+2026-08-27 這一輪的成果：三語不同的圖 **1,360 → 1,601**，留下 247 張都是看過的。
 
 ### 手工補圖的紀律（把某副補到 100% 時就是在做這件事）
 
@@ -195,7 +231,10 @@ python scripts/build_flashcards.py --deck hbo-appendix           # 或 grc-appen
 
 ```
 python scripts/hebrew_card_grammar.py --write           # 希伯來的性、數、狀態（改詞表才要重跑）
-python scripts/match_flashcard_images.py --write        # 希伯來配圖表
+python scripts/match_flashcard_images.py --write        # 希伯來配圖表（OpenMoji）
+python scripts/iconify_card_images.py --lang hbo --write   # 第二層圖庫，補共用圖的卡（grc / lat）
+python scripts/flashcard_contact_sheet.py --names "x-ray" "wedding"   # 決定用哪張圖前先看圖
+python scripts/flashcard_contact_sheet.py --audit-icons                # 第二層圖庫的審圖樣張（附中文詞義）
 python scripts/build_flashcards.py --deck hbo           # 或 grc1 / grc2 / lat1 / lat2 / hbo-appendix / grc-appendix / lat-appendix
 python scripts/build_flashcards.py --deck hbo --limit 16   # 打樣 16 張
 ```
@@ -218,6 +257,10 @@ env -u PYTHONHOME -u PYTHONPATH -u PYTHONIOENCODING \
 - 字頭沒有折行：用 PyMuPDF 取每格 `size>20` 的 span，同格內 y 差一整行（約 64 pt）就是折了；差 20 pt 上下是字母上方的重音符號，不算。
 - 字頭沒有字體回退：`pdfplumber` 逐字看 fontname，不該出現 Tahoma／Calibri。**例外**：希伯來有兩張卡的繁中詞義行內嵌希伯來文（「弟兄；兄弟（אָח 的複數）」「誡命（מִצְוָה 的不規則複數）」），那一段走 UI 字型、會回退到 Tahoma，是既有現象不是壞掉。
 - 配圖表每一把鍵都對得回詞表（matcher 內建 assert）。
+- **卡框每頁 8 個、一個都不越裁切線**：PyMuPDF 取 `type=="s"` 且高度 > 10 mm 的線條，
+  外緣要落在該排的 5–99 / 99–193 mm 內，寬高各為 68.25 × 88 mm。
+- **十色到齊且對得上課次**：把每頁的框色抓出來比 `FRAME_COLORS[(lesson-1) % 10]`，
+  第 11 課要回到第 1 課的紅。
 - 頁面尺寸、字型內嵌、U+FFFD 與空白頁：`python scripts/render_and_check_reader_pdfs.py --only <stem>`
   一次做完轉檔與這四項（同一支腳本也管五本讀本）。
 
