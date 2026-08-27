@@ -37,6 +37,8 @@ For a Greek release in `know-graph-lab`, also read `references/greek-reader-cont
 
 Read `references/silent-failures.md` before wiring a new language, and before believing any count computed only once: every defect in it shipped a page that looked finished.
 
+**Where the artifacts go (from 2026-08-27):** `output/` is no longer version-controlled. Finished DOCX and PDF stay in the local `output/original-readers/` working copy and are also copied to Drive `資料\知識圖工作室\語言\原文讀本\讀本\`; the print-ready masters go to `…\原文讀本\印刷母版\`. What stays in git is the curated layer only — the top-level `*.json` and `*.md` under `output/source-cache/original-readers/{hebrew,greek,latin}-full/` (scripture plans, reviewed glosses, memory selections, validation reports) plus each audio `manifest.json`. Downloaded third-party corpora under `sources/`, `morphhb-src/` and the lexicon dumps are never tracked. To track a new curated file, add one line to the `.gitignore` allowlist rather than un-ignoring a directory; the full rule is `docs/repo-hygiene.md`.
+
 Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio. Its first section is the layout the three readers share; a new reader matches it rather than inventing its own. Printed flashcard decks are their own skill, `original-reader-flashcards`; `references/flashcard-decks.md` holds their per-deck state.
 
 Read `references/flashcard-decks.md` before building or changing a printed flashcard deck.

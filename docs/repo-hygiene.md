@@ -113,4 +113,6 @@ pytest.ini  .gitignore  .nuxtrc  .env
   照 `r2-policy.md` 應改走 Drive 正本 → R2 後備，正本移進 `著作/論文寫作/`。
 - `public/content/works/theological-studies-manifesto/images/`（15 MB）：目前沒有任何頁面引用，
   確認用途後決定留 `public/` 或移 Drive。
+- `test/`（`*.spec.ts`）與 `tests/`（`*.test.ts`）兩個目錄並存，`vitest.config.ts` 兩邊都跑。
+  哪天要動測試佈局時併成一個，順手改 `include`。
 - `public/maps/*.geojson`（80 MB）：網站直接讀，暫留；若再長大就改走 API + R2。

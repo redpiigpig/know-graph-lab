@@ -2,7 +2,7 @@
   "version": 1,
   "pid": 14700,
   "status": "running",
-  "updated_at": "2026-08-27T17:27:08+08:00",
+  "updated_at": "2026-08-27T18:10:38+08:00",
   "project": "genesis-philosophy",
   "shard_count": 7,
   "lanes": {
@@ -15,12 +15,12 @@
       "kind": "translate",
       "pid": 0,
       "state": "cooldown",
-      "next_restart_at": 1787823037.7254913,
-      "started_at": "2026-08-27T16:57:42+08:00",
+      "next_restart_at": 1787826976.9276931,
+      "started_at": "2026-08-27T18:04:18+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-1.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-27T17:00:37+08:00"
+      "last_exit_at": "2026-08-27T18:06:16+08:00"
     },
     "gemini-2": {
       "id": "gemini-2",
@@ -29,14 +29,14 @@
       "shard": 1,
       "engine": "gemini-only",
       "kind": "translate",
-      "pid": 24836,
-      "state": "running",
-      "next_restart_at": 1787822732.647162,
-      "started_at": "2026-08-27T17:25:40+08:00",
+      "pid": 0,
+      "state": "cooldown",
+      "next_restart_at": 1787826711.348398,
+      "started_at": "2026-08-27T17:58:05+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-2.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-27T16:55:32+08:00"
+      "last_exit_at": "2026-08-27T18:01:51+08:00"
     },
     "gemini-3": {
       "id": "gemini-3",
@@ -47,12 +47,12 @@
       "kind": "translate",
       "pid": 0,
       "state": "cooldown",
-      "next_restart_at": 1787824616.830194,
-      "started_at": "2026-08-27T17:25:03+08:00",
+      "next_restart_at": 1787826678.7979486,
+      "started_at": "2026-08-27T17:57:32+08:00",
       "log": "C:\\Users\\user\\Desktop\\know-graph-lab\\scripts\\logs\\cloud-lanes\\genesis-philosophy_gemini-3.log",
       "engine_in_use": "gemini-only",
       "last_exit_code": 1,
-      "last_exit_at": "2026-08-27T17:26:56+08:00"
+      "last_exit_at": "2026-08-27T18:01:18+08:00"
     },
     "nvidia-1": {
       "id": "nvidia-1",
@@ -90,7 +90,7 @@
       "engine": "nvidia",
       "kind": "translate",
       "pid": 9088,
-      "state": "running-existing",
+      "state": "probe-failed",
       "next_restart_at": 0
     },
     "nvidia-4": {
@@ -119,7 +119,7 @@
       "next_restart_at": 0
     }
   },
-  "on_ac_power": true,
-  "running_lanes": 6,
+  "on_ac_power": false,
+  "running_lanes": 4,
   "claims": {}
 }

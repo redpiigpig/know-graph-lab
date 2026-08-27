@@ -27,6 +27,17 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 
 配圖表是獨立產物，重跑 matcher 不會動到卡檔；換過圖一定要重跑 build 再重出 PDF。
 
+## 成品去處（2026-08-27 起）
+
+`output/` **不進版控**。跑完一副卡，DOCX／PDF 留在本機 `output/flashcards/`，
+同時複製一份到 Drive `資料\知識圖工作室\語言\原文讀本\單字卡\`；
+送印用的定稿另放 `…\原文讀本\印刷母版\`。
+
+進版控的只有配圖對照與審閱紀錄——`output/source-cache/flashcards/*.json`
+（`*-card-images.json`、`*-card-icons.json`、`icon-rejects.json`、`proper-name-registers.json`）。
+新增別種策展 JSON 要追蹤時，去 `.gitignore` 白名單補一條，別把整個目錄放行。
+規則全文見 [docs/repo-hygiene.md](../../../docs/repo-hygiene.md)。
+
 ## 版面（各副共用，別自己重算）
 
 | | |

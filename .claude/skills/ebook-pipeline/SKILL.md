@@ -121,6 +121,12 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set
 ```
 
+> 🚨 2026-08-27 repo 大整理：`z-lib/` 是**純本機 drop 區**，永不進版控（`.gitignore` 已擋）。
+> 當時尚未入庫的 173 檔（Panikkar 11 種 + TRC 各分類）已移到
+> Drive `資料\知識圖工作室\電子圖書館\_待入庫\z-lib-2026-08-27\`，採購獵表與訂單也在同一夾。
+> 要續處理就把該夾內容複製回本機 `z-lib/` 再跑 ingest；歸類完成後檔案照舊落到
+> `電子圖書館/{學科}/`，`_待入庫` 應該清空。規則見 `docs/repo-hygiene.md`。
+
 **每日 3 次自動偵測 z-lib/ drop**（user 規則 2026-05-20）：
 - **10:00 / 14:00 / 18:00 Taipei** — Windows Task Scheduler 觸發
 - 對話中 Claude 啟動或被詢問「z-lib」「新書」「ingest」時，**主動跑 `python scripts/ingest_new_books.py status`** 看看有沒有未處理的 drop
