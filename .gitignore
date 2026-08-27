@@ -30,6 +30,9 @@
 !/output/source-cache/original-readers/latin-full/*.md
 !/output/source-cache/original-readers/latin-full/collins-readings/
 !/output/source-cache/original-readers/latin-full/collins-readings/*.json
+!/output/source-cache/original-readers/japanese-full/
+!/output/source-cache/original-readers/japanese-full/*.json
+!/output/source-cache/original-readers/japanese-full/*.md
 !/output/original-readers/
 !/output/original-readers/audio/
 !/output/original-readers/audio/**/
