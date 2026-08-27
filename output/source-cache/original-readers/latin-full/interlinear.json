@@ -3,7 +3,7 @@
   "language": "Ecclesiastical Latin",
   "languageCode": "la",
   "engine": "claude-haiku-4-5-20251001",
-  "count": 2438,
+  "count": 2440,
   "units": {
     "reading:v1-1:2": {
       "ref": "上冊第 1 課・十字聖號　Signum Crucis 第 2 段",
@@ -449755,6 +449755,370 @@
         }
       ],
       "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "reading:v2-7:53": {
+      "ref": "下冊第 7 課・聖奧思定懺悔錄 卷一　Confessiones I 第 53 段",
+      "group": "reading",
+      "tokens": [
+        {
+          "word": "ita",
+          "trailing": "",
+          "glossZh": "如此"
+        },
+        {
+          "word": "enim",
+          "trailing": "",
+          "glossZh": "因為"
+        },
+        {
+          "word": "servabis",
+          "trailing": "",
+          "glossZh": "保佑"
+        },
+        {
+          "word": "me",
+          "trailing": ",",
+          "glossZh": "我"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "和"
+        },
+        {
+          "word": "augebuntur",
+          "trailing": "",
+          "glossZh": "將增"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "和"
+        },
+        {
+          "word": "perficientur",
+          "trailing": "",
+          "glossZh": "將成"
+        },
+        {
+          "word": "quae",
+          "trailing": "",
+          "glossZh": "哪些"
+        },
+        {
+          "word": "dedisti",
+          "trailing": "",
+          "glossZh": "賜"
+        },
+        {
+          "word": "mihi",
+          "trailing": ",",
+          "glossZh": "於我"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "和"
+        },
+        {
+          "word": "ero",
+          "trailing": "",
+          "glossZh": "將是"
+        },
+        {
+          "word": "ipse",
+          "trailing": "",
+          "glossZh": "親自"
+        },
+        {
+          "word": "tecum",
+          "trailing": ",",
+          "glossZh": "與你"
+        },
+        {
+          "word": "quia",
+          "trailing": "",
+          "glossZh": "因為"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "和"
+        },
+        {
+          "word": "ut",
+          "trailing": "",
+          "glossZh": "使"
+        },
+        {
+          "word": "sim",
+          "trailing": "",
+          "glossZh": "存在"
+        },
+        {
+          "word": "tu",
+          "trailing": "",
+          "glossZh": "你"
+        },
+        {
+          "word": "dedisti",
+          "trailing": "",
+          "glossZh": "賜"
+        },
+        {
+          "word": "mihi",
+          "trailing": ".",
+          "glossZh": "於我"
+        }
+      ],
+      "engine": "nvidia:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "reading:v2-8:60": {
+      "ref": "下冊第 8 課・聖奧思定懺悔錄 卷八　Confessiones VIII 第 60 段",
+      "group": "reading",
+      "tokens": [
+        {
+          "word": "convertisti",
+          "trailing": "",
+          "glossZh": "使我皈依"
+        },
+        {
+          "word": "enim",
+          "trailing": "",
+          "glossZh": "因為"
+        },
+        {
+          "word": "me",
+          "trailing": "",
+          "glossZh": "我"
+        },
+        {
+          "word": "ad",
+          "trailing": "",
+          "glossZh": "向"
+        },
+        {
+          "word": "te",
+          "trailing": ",",
+          "glossZh": "你"
+        },
+        {
+          "word": "ut",
+          "trailing": "",
+          "glossZh": "以免"
+        },
+        {
+          "word": "nec",
+          "trailing": "",
+          "glossZh": "也不"
+        },
+        {
+          "word": "uxorem",
+          "trailing": "",
+          "glossZh": "妻子"
+        },
+        {
+          "word": "quaererem",
+          "trailing": "",
+          "glossZh": "尋找"
+        },
+        {
+          "word": "nec",
+          "trailing": "",
+          "glossZh": "也不"
+        },
+        {
+          "word": "aliquam",
+          "trailing": "",
+          "glossZh": "任何"
+        },
+        {
+          "word": "spem",
+          "trailing": "",
+          "glossZh": "希望"
+        },
+        {
+          "word": "saeculi",
+          "trailing": "",
+          "glossZh": "世俗"
+        },
+        {
+          "word": "huius",
+          "trailing": ",",
+          "glossZh": "這個"
+        },
+        {
+          "word": "stans",
+          "trailing": "",
+          "glossZh": "站在"
+        },
+        {
+          "word": "in",
+          "trailing": "",
+          "glossZh": "在"
+        },
+        {
+          "word": "ea",
+          "trailing": "",
+          "glossZh": "該"
+        },
+        {
+          "word": "regula",
+          "trailing": "",
+          "glossZh": "規則"
+        },
+        {
+          "word": "fidei",
+          "trailing": "",
+          "glossZh": "信德"
+        },
+        {
+          "word": "in",
+          "trailing": "",
+          "glossZh": "在"
+        },
+        {
+          "word": "qua",
+          "trailing": "",
+          "glossZh": "其中"
+        },
+        {
+          "word": "me",
+          "trailing": "",
+          "glossZh": "我"
+        },
+        {
+          "word": "ante",
+          "trailing": "",
+          "glossZh": "以前"
+        },
+        {
+          "word": "tot",
+          "trailing": "",
+          "glossZh": "那麼多"
+        },
+        {
+          "word": "annos",
+          "trailing": "",
+          "glossZh": "年"
+        },
+        {
+          "word": "ei",
+          "trailing": "",
+          "glossZh": "給他"
+        },
+        {
+          "word": "revelaveras",
+          "trailing": ",",
+          "glossZh": "顯示"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "和"
+        },
+        {
+          "word": "convertisti",
+          "trailing": "",
+          "glossZh": "轉變"
+        },
+        {
+          "word": "luctum",
+          "trailing": "",
+          "glossZh": "悲傷"
+        },
+        {
+          "word": "eius",
+          "trailing": "",
+          "glossZh": "他的"
+        },
+        {
+          "word": "in",
+          "trailing": "",
+          "glossZh": "在"
+        },
+        {
+          "word": "gaudium",
+          "trailing": "",
+          "glossZh": "喜樂"
+        },
+        {
+          "word": "multo",
+          "trailing": "",
+          "glossZh": "更多"
+        },
+        {
+          "word": "uberius",
+          "trailing": "",
+          "glossZh": "更豐"
+        },
+        {
+          "word": "quam",
+          "trailing": "",
+          "glossZh": "比"
+        },
+        {
+          "word": "voluerat",
+          "trailing": ",",
+          "glossZh": "曾希望"
+        },
+        {
+          "word": "et",
+          "trailing": "",
+          "glossZh": "且"
+        },
+        {
+          "word": "multo",
+          "trailing": "",
+          "glossZh": "遠更"
+        },
+        {
+          "word": "carius",
+          "trailing": "",
+          "glossZh": "親愛地"
+        },
+        {
+          "word": "atque",
+          "trailing": "",
+          "glossZh": "且"
+        },
+        {
+          "word": "castius",
+          "trailing": "",
+          "glossZh": "純潔地"
+        },
+        {
+          "word": "quam",
+          "trailing": "",
+          "glossZh": "比"
+        },
+        {
+          "word": "de",
+          "trailing": "",
+          "glossZh": "從"
+        },
+        {
+          "word": "nepotibus",
+          "trailing": "",
+          "glossZh": "孫兒"
+        },
+        {
+          "word": "carnis",
+          "trailing": "",
+          "glossZh": "肉體的"
+        },
+        {
+          "word": "meae",
+          "trailing": "",
+          "glossZh": "我的"
+        },
+        {
+          "word": "requirebat",
+          "trailing": ".",
+          "glossZh": "所要求"
+        }
+      ],
+      "engine": "claude-haiku-4-5-20251001"
     }
   }
 }

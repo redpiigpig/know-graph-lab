@@ -144,6 +144,35 @@ def chinese_kind(latin_path: Path) -> tuple[str, int]:
             "full-translation-unnumbered"), numbers
 
 
+# The Latin Library 的頁面末尾帶著電子版的來源說明——「Submitted by James J.
+# O'Donnell (Univ. of Pennsylvania) from his new edition…」——那是編者的話，
+# 不是奧思定的話。它跟著最後一段進了書，中譯者略過它所以中文看起來沒問題，
+# 只有拉丁欄多出兩行英文。逐詞對譯的閘（中文裡不得出現拉丁字母）是它被抓到
+# 的地方；讀進來就先切掉，不要等到印出來。
+EDITORIAL_TRAILERS = (
+    "Submitted by",
+    "The Latin Library",
+    "The Classics Page",
+    "Prepared by",
+    "Transcribed by",
+)
+
+
+def strip_editorial(text: str) -> str:
+    """Cut the electronic edition's own credits off the end of a work."""
+
+    cut = len(text)
+    for marker in EDITORIAL_TRAILERS:
+        found = text.find(marker)
+        # 這幾句英文不會出現在拉丁正文裡，位置在哪都是編者的話。原本加了
+        # 「要在後半段才切」的保險，結果最後一段本身很短、說明比正文還長，
+        # 那一段就沒切到——保險反而擋掉了它該擋的東西。只保留一條：不能把
+        # 整段切光。
+        if found > 0:
+            cut = min(cut, found)
+    return text[:cut].rstrip() if cut > 0 else text
+
+
 def load_text(kind: str, ref: str, repo_index: dict) -> tuple[str, str, bool]:
     """Return (text, source path, whether a Chinese parallel already exists)."""
     if kind == "repo":
@@ -154,7 +183,7 @@ def load_text(kind: str, ref: str, repo_index: dict) -> tuple[str, str, bool]:
     path = CHURCH / ref
     if not path.exists():
         raise SystemExit(f"語料缺檔 {ref}")
-    return (path.read_text(encoding="utf-8", errors="replace"),
+    return (strip_editorial(path.read_text(encoding="utf-8", errors="replace")),
             str(path.relative_to(ROOT)).replace("\\", "/"), False)
 
 
