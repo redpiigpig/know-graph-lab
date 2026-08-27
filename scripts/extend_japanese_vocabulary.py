@@ -64,6 +64,23 @@ TOO_BASIC = {
 }
 
 
+# 斷詞器在歷史假名遣上會留下不成詞的假名片段——いふ、かう、あらう、うい、
+# へる——它們看起來像詞、頻率也高，印成卡片卻教不了任何東西。所以延伸只收
+# 含漢字的詞，外加一張明列的學術連接詞表：這些是讀論文真正需要而課本沒教的。
+SAFE_KANA = {
+    "すなわち", "あるいは", "または", "やはり", "ただし", "したがって", "しかも",
+    "むしろ", "および", "ならびに", "つまり", "いわゆる", "おそらく", "もちろん",
+    "とくに", "ほとんど", "かならずしも", "たとえば", "ゆえに", "かつて", "つねに",
+    "きわめて", "まったく", "けっして", "いっぽう", "なお", "また", "さらに",
+}
+
+
+def worth_a_card(base: str) -> bool:
+    """含漢字，或在明列的學術連接詞表裡。"""
+
+    return bool(re.search(r"[一-鿿]", base)) or base in SAFE_KANA
+
+
 def counted() -> dict:
     """Corpus counts, computed once and cached — tokenising 433 works is slow."""
 
@@ -164,6 +181,8 @@ def main() -> int:
         if len(chosen) >= need:
             break
         if item["works"] < MIN_WORKS:
+            continue
+        if not worth_a_card(base):
             continue
         reading = katakana_to_hiragana(item["reading"])
         if base in have_written or reading in have_kana or base in have_kana:

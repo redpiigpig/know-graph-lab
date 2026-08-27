@@ -1,0 +1,1626 @@
+{
+ "schemaVersion": "1.0.0",
+ "authorisation": {
+  "source": "信望愛信望愛全球資訊網 bible.fhl.net / media.fhl.net",
+  "versions": {
+   "hebrew": "version=7 希伯來文",
+   "greek": "version=9 希臘文"
+  },
+  "grantedBy": "站方授權（使用者 2026-08-28 告知已取得）",
+  "scope": "私人研讀用；轉載或公開散布前須再確認授權範圍",
+  "recordedBy": "未知，需向站方確認朗讀者"
+ },
+ "files": {
+  "hebrew/1/1": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 1,
+   "url": "https://media.fhl.net/hebrew/1/1_001.mp3",
+   "bytes": 5651312,
+   "sha256": "3bdc9b36c6ecac9929d39ed1120681ac7cf9218fff6092d1b6f31127cbca1272",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_001.mp3"
+  },
+  "hebrew/1/2": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 2,
+   "url": "https://media.fhl.net/hebrew/1/1_002.mp3",
+   "bytes": 4189081,
+   "sha256": "211e94393b886e5fffe59a2afaaae837b4d88dde55ce912c4f22da6215f3bbe1",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_002.mp3"
+  },
+  "hebrew/1/3": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 3,
+   "url": "https://media.fhl.net/hebrew/1/1_003.mp3",
+   "bytes": 4506939,
+   "sha256": "2af962503bdf6eb9d6ad775a6982289b02ccc3361af273c4ff879c792917e8f0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_003.mp3"
+  },
+  "hebrew/1/4": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 4,
+   "url": "https://media.fhl.net/hebrew/1/1_004.mp3",
+   "bytes": 4255328,
+   "sha256": "0e5934aec9fcfd4d50090d94d6a58dfffc34c2d966d807c46566f722c2a8fd36",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_004.mp3"
+  },
+  "hebrew/1/5": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 5,
+   "url": "https://media.fhl.net/hebrew/1/1_005.mp3",
+   "bytes": 4527628,
+   "sha256": "66d05a8fe2fdb15e1ca2152bd4683c0d2900428fc4e965fec4a7203fc66f7c58",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_005.mp3"
+  },
+  "hebrew/1/6": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 6,
+   "url": "https://media.fhl.net/hebrew/1/1_006.mp3",
+   "bytes": 3772167,
+   "sha256": "9530ddf43cb11e886b5322b383c859f31e96d895626ae0b03f7e2ae8a475a3c9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_006.mp3"
+  },
+  "hebrew/1/7": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 7,
+   "url": "https://media.fhl.net/hebrew/1/1_007.mp3",
+   "bytes": 4026704,
+   "sha256": "a56336d5c2d5c38c10ac563bb9ee6659fd3755d7fbc2e2fa0888d068e3ac366d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_007.mp3"
+  },
+  "hebrew/1/8": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 8,
+   "url": "https://media.fhl.net/hebrew/1/1_008.mp3",
+   "bytes": 3854923,
+   "sha256": "56d303926833cc2e412178cd45331e8da03ac11b8b0995af1b542347dcb2bece",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_008.mp3"
+  },
+  "hebrew/1/9": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 9,
+   "url": "https://media.fhl.net/hebrew/1/1_009.mp3",
+   "bytes": 4442365,
+   "sha256": "af31c89767a182f23e9c62aff4a3632b7a31c75fc044c32f4153e64b57c9bc77",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_009.mp3"
+  },
+  "hebrew/1/10": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 10,
+   "url": "https://media.fhl.net/hebrew/1/1_010.mp3",
+   "bytes": 4124716,
+   "sha256": "c76dc503f5fe6286ad3a38002fefc60bb8603faff67bea8e56b55f5f28eaa387",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_010.mp3"
+  },
+  "hebrew/1/11": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 11,
+   "url": "https://media.fhl.net/hebrew/1/1_011.mp3",
+   "bytes": 4852174,
+   "sha256": "0e55d130a5e45b8ae82c61c033f7a33829312d23376ea0a4422e15b2d88f78f3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_011.mp3"
+  },
+  "hebrew/1/12": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 12,
+   "url": "https://media.fhl.net/hebrew/1/1_012.mp3",
+   "bytes": 3449294,
+   "sha256": "274a2229bb9e56096f2dafe4b9a7003902bdf4d9c71b0af92e67312fe42a4d01",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_012.mp3"
+  },
+  "hebrew/1/13": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 13,
+   "url": "https://media.fhl.net/hebrew/1/1_013.mp3",
+   "bytes": 2921411,
+   "sha256": "5719c21586c7ab8f7c472ba7471939a8b5c678845290a6a87e87cd7ce4082ba1",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_013.mp3"
+  },
+  "hebrew/1/14": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 14,
+   "url": "https://media.fhl.net/hebrew/1/1_014.mp3",
+   "bytes": 4319485,
+   "sha256": "8ac802ba4151f8196cf4ee64a826476a6a032e5f0db7d1469b74c7f049d0d213",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_014.mp3"
+  },
+  "hebrew/1/15": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 15,
+   "url": "https://media.fhl.net/hebrew/1/1_015.mp3",
+   "bytes": 3411259,
+   "sha256": "59f2bdf77a047a171bc0875fa6988c0f9f7fa677582141c286277b7acb6b0d2b",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_015.mp3"
+  },
+  "hebrew/1/16": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 16,
+   "url": "https://media.fhl.net/hebrew/1/1_016.mp3",
+   "bytes": 2871674,
+   "sha256": "111605e9206baea128ec0323ba2f9a8edb71492ea558d80c0d754ca3799f186a",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_016.mp3"
+  },
+  "hebrew/1/17": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 17,
+   "url": "https://media.fhl.net/hebrew/1/1_017.mp3",
+   "bytes": 4689588,
+   "sha256": "28a8922b989a49613d201219e623ac927507be99a1f91b70af40132d53c88e0d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_017.mp3"
+  },
+  "hebrew/1/18": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 18,
+   "url": "https://media.fhl.net/hebrew/1/1_018.mp3",
+   "bytes": 5701885,
+   "sha256": "36b0476a3c904a52330c4132237af3158452b863dfc4015e237cebedb9028f1d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_018.mp3"
+  },
+  "hebrew/1/19": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 19,
+   "url": "https://media.fhl.net/hebrew/1/1_019.mp3",
+   "bytes": 7172683,
+   "sha256": "2c2c1d2ecc39fc17567a635ebf253d8edc28c1098344de9062da5b8280206d99",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_019.mp3"
+  },
+  "hebrew/1/20": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 20,
+   "url": "https://media.fhl.net/hebrew/1/1_020.mp3",
+   "bytes": 3390152,
+   "sha256": "d7aa41f7dfc30167d515e72ec1bfa1e868527c26be9b6988de7ebcdf8d064120",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_020.mp3"
+  },
+  "hebrew/1/21": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 21,
+   "url": "https://media.fhl.net/hebrew/1/1_021.mp3",
+   "bytes": 5489561,
+   "sha256": "0adb4fec2230f8639714a317fe4aa64d101ee4d17ff46367f6c3630f0d6a433d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_021.mp3"
+  },
+  "hebrew/1/22": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 22,
+   "url": "https://media.fhl.net/hebrew/1/1_022.mp3",
+   "bytes": 4433588,
+   "sha256": "6796add031dac636a8db9efbf92e64c54d10507ecab2a25c10e69f6978b4af06",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_022.mp3"
+  },
+  "hebrew/1/23": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 23,
+   "url": "https://media.fhl.net/hebrew/1/1_023.mp3",
+   "bytes": 3564859,
+   "sha256": "7b6f6d4ebdaf64386601408472619d9b8f2f2ffc55f8fac7f8a29ff1e2c48b3c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_023.mp3"
+  },
+  "hebrew/1/24": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 24,
+   "url": "https://media.fhl.net/hebrew/1/1_024.mp3",
+   "bytes": 12070956,
+   "sha256": "12eb6b358914d75804aedc88f890d738a78fb4e87d3d84936e1bcea5262aa1b0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_024.mp3"
+  },
+  "hebrew/1/25": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 25,
+   "url": "https://media.fhl.net/hebrew/1/1_025.mp3",
+   "bytes": 5470753,
+   "sha256": "f9b8d24fb28492d935490db92d0c38143ee6afeed45e4be1ba50a9aec70337ac",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_025.mp3"
+  },
+  "hebrew/1/26": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 26,
+   "url": "https://media.fhl.net/hebrew/1/1_026.mp3",
+   "bytes": 6166655,
+   "sha256": "ae32bcd96471b4656486e6f514e2aa4bdfe9f46e0044f027d3374ee5a760f77d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_026.mp3"
+  },
+  "hebrew/1/27": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 27,
+   "url": "https://media.fhl.net/hebrew/1/1_027.mp3",
+   "bytes": 8447250,
+   "sha256": "1078832e8e0b2ef31e37ee299827c7805fd6cb3fbe0f888889a38c45950ed9c4",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_027.mp3"
+  },
+  "hebrew/1/28": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 28,
+   "url": "https://media.fhl.net/hebrew/1/1_028.mp3",
+   "bytes": 4153764,
+   "sha256": "48e980509dc13f073b6f756a504c917cd0df861d54d27eac9233b8e8ed085964",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_028.mp3"
+  },
+  "hebrew/1/29": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 29,
+   "url": "https://media.fhl.net/hebrew/1/1_029.mp3",
+   "bytes": 5720066,
+   "sha256": "cc36162ae442153ac3cbc6d85d9ba8a145b168e1112d2b00b71cc2323af59411",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_029.mp3"
+  },
+  "hebrew/1/30": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 30,
+   "url": "https://media.fhl.net/hebrew/1/1_030.mp3",
+   "bytes": 7228063,
+   "sha256": "0c11310f45f28529c1cd2b4c46ebb316c421bfad5fac487a82d2cac9abe2f94c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_030.mp3"
+  },
+  "hebrew/1/31": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 31,
+   "url": "https://media.fhl.net/hebrew/1/1_031.mp3",
+   "bytes": 9525166,
+   "sha256": "b5513f603cb49d24c081af39f244262b73ffd9d45bc64e7ecb132cbb81660dfc",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_031.mp3"
+  },
+  "hebrew/1/32": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 32,
+   "url": "https://media.fhl.net/hebrew/1/1_032.mp3",
+   "bytes": 5799478,
+   "sha256": "72eda5d58f1faeca87ea3c7d3e6cc897263cdcfc4a1aef0c978954ffc88513b3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_032.mp3"
+  },
+  "hebrew/1/33": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 33,
+   "url": "https://media.fhl.net/hebrew/1/1_033.mp3",
+   "bytes": 3329339,
+   "sha256": "afacdec9bbcc3572dfbfa477fa258c5c9e3095999769e0fc736f47fbd2e30c45",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_033.mp3"
+  },
+  "hebrew/1/34": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 34,
+   "url": "https://media.fhl.net/hebrew/1/1_034.mp3",
+   "bytes": 5585901,
+   "sha256": "64448cefc778455adc216fb3b516f441f79397f22eeb671a84281b1c36951afc",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_034.mp3"
+  },
+  "hebrew/1/35": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 35,
+   "url": "https://media.fhl.net/hebrew/1/1_035.mp3",
+   "bytes": 4860951,
+   "sha256": "9ca428274702c66644d568c191d641f336250a1e8f80e034f38b813480e8547f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_035.mp3"
+  },
+  "hebrew/1/36": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 36,
+   "url": "https://media.fhl.net/hebrew/1/1_036.mp3",
+   "bytes": 6496634,
+   "sha256": "68ed3f44ffa123b4397be6b79fe8f9c3d0fca4a432f34e6fac889ce5f9ee6385",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_036.mp3"
+  },
+  "hebrew/1/37": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 37,
+   "url": "https://media.fhl.net/hebrew/1/1_037.mp3",
+   "bytes": 6461735,
+   "sha256": "0307ebcee9dfa1d77f27f629706dfc7d25edff50ddee75cfef6cc74e8f129eac",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_037.mp3"
+  },
+  "hebrew/1/38": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 38,
+   "url": "https://media.fhl.net/hebrew/1/1_038.mp3",
+   "bytes": 5086022,
+   "sha256": "b2e00ca0f26107e044ed7f074fadeddeab06a76c191d100beb5380da09a80e91",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_038.mp3"
+  },
+  "hebrew/1/39": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 39,
+   "url": "https://media.fhl.net/hebrew/1/1_039.mp3",
+   "bytes": 4168810,
+   "sha256": "c859a08b4ada2fa77188c2fc3d748467414d38be38cfad09c4639f8ec5f2ad41",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_039.mp3"
+  },
+  "hebrew/1/40": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 40,
+   "url": "https://media.fhl.net/hebrew/1/1_040.mp3",
+   "bytes": 3951472,
+   "sha256": "8a2e9b22dd607856f516814521c7258e1d10fb836af5787838fcb93b3fc9f80a",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_040.mp3"
+  },
+  "hebrew/1/41": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 41,
+   "url": "https://media.fhl.net/hebrew/1/1_041.mp3",
+   "bytes": 9754208,
+   "sha256": "c7a6163404e6a1036d938a66b344e2dd12b96c90781ef9348a99a4ac5c9ca135",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_041.mp3"
+  },
+  "hebrew/1/42": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 42,
+   "url": "https://media.fhl.net/hebrew/1/1_042.mp3",
+   "bytes": 6823687,
+   "sha256": "e5c524a13efcdf71d38b86c31d2c65acb3137071f77e54881842b47ddeb0d2df",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_042.mp3"
+  },
+  "hebrew/1/43": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 43,
+   "url": "https://media.fhl.net/hebrew/1/1_043.mp3",
+   "bytes": 6524846,
+   "sha256": "ebb4438ae374f2b31ec0b0663b9a43aad33c01a5862cdb75afbe6589382d274f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_043.mp3"
+  },
+  "hebrew/1/44": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 44,
+   "url": "https://media.fhl.net/hebrew/1/1_044.mp3",
+   "bytes": 5677225,
+   "sha256": "101c05b277a4018328e3660cebb3eb3cb266a0ab0644fd9b81b166b847410970",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_044.mp3"
+  },
+  "hebrew/1/45": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 45,
+   "url": "https://media.fhl.net/hebrew/1/1_045.mp3",
+   "bytes": 5073274,
+   "sha256": "5bf653f85d5c3d5ecf5cb5b5621d603b3c2f7bdf5db5acd4f3382d10abd91de9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_045.mp3"
+  },
+  "hebrew/1/46": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 46,
+   "url": "https://media.fhl.net/hebrew/1/1_046.mp3",
+   "bytes": 5447557,
+   "sha256": "6299b7926b07a1c1b214162ca3850bebf95ee3a5864c8566e4538e733582feec",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_046.mp3"
+  },
+  "hebrew/1/47": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 47,
+   "url": "https://media.fhl.net/hebrew/1/1_047.mp3",
+   "bytes": 6328823,
+   "sha256": "ef7e5388554475e05f1b4da04ad43840d77e47e671183bcd7cfe883da26d4495",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_047.mp3"
+  },
+  "hebrew/1/48": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 48,
+   "url": "https://media.fhl.net/hebrew/1/1_048.mp3",
+   "bytes": 4307364,
+   "sha256": "91a97723762d4a873e113c5bdfa5da7f6f6b996e6de5040035bd791ad0c7a22e",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_048.mp3"
+  },
+  "hebrew/1/49": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 49,
+   "url": "https://media.fhl.net/hebrew/1/1_049.mp3",
+   "bytes": 5050077,
+   "sha256": "e758a5aa08e281ce730376b6282f329080c317ced9028d105f8ea79cf450d6c3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_049.mp3"
+  },
+  "hebrew/1/50": {
+   "language": "hebrew",
+   "book": 1,
+   "chapter": 50,
+   "url": "https://media.fhl.net/hebrew/1/1_050.mp3",
+   "bytes": 4660539,
+   "sha256": "7d58e96a5845dc413ae8d8afee7f07df2d420c4fa6cd51c3e5fe7a48ad95c71c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\01\\01_050.mp3"
+  },
+  "hebrew/2/1": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 1,
+   "url": "https://media.fhl.net/hebrew/2/2_001.mp3",
+   "bytes": 3386809,
+   "sha256": "c08282b19bca571e6ca218070f616699ea9f55d8bb9c1fcdcb180bc07128370d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_001.mp3"
+  },
+  "hebrew/2/2": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 2,
+   "url": "https://media.fhl.net/hebrew/2/2_002.mp3",
+   "bytes": 4427736,
+   "sha256": "910b31b45e40fd5a9a69ba845fb2da1c09952d4495fe5ede01d44c9acd28d9e0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_002.mp3"
+  },
+  "hebrew/2/3": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 3,
+   "url": "https://media.fhl.net/hebrew/2/2_003.mp3",
+   "bytes": 4824797,
+   "sha256": "25d29dd29c38b6dd9d49750ba757f7c5dd4aef82ba3185cad071f3262f1dfad8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_003.mp3"
+  },
+  "hebrew/2/4": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 4,
+   "url": "https://media.fhl.net/hebrew/2/2_004.mp3",
+   "bytes": 5726335,
+   "sha256": "3cc3dffd53b4c11e0541272909dd4b53839936a852a3c25b0cc976db6ea5f7e9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_004.mp3"
+  },
+  "hebrew/2/5": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 5,
+   "url": "https://media.fhl.net/hebrew/2/2_005.mp3",
+   "bytes": 4260343,
+   "sha256": "f350ac4d5e39b91b6751bdab36ce99295a179a85f97a6e4c42e63a03f69dc641",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_005.mp3"
+  },
+  "hebrew/2/6": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 6,
+   "url": "https://media.fhl.net/hebrew/2/2_006.mp3",
+   "bytes": 5202423,
+   "sha256": "bb20f7bedf0b81c21c80571294bcaa6b71429dca26b458e3f180f94e0da39c57",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_006.mp3"
+  },
+  "hebrew/2/7": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 7,
+   "url": "https://media.fhl.net/hebrew/2/2_007.mp3",
+   "bytes": 5387370,
+   "sha256": "7a119dd56a1edad91f2fd32f08a2cc008e22dd976bfff0ff058ac455f04175c5",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_007.mp3"
+  },
+  "hebrew/2/8": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 8,
+   "url": "https://media.fhl.net/hebrew/2/2_008.mp3",
+   "bytes": 5674717,
+   "sha256": "76bb7c308e2007af37f0d1f7486f08bcbb4f57d1e2bdc9a97136649bb00a8b34",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_008.mp3"
+  },
+  "hebrew/2/9": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 9,
+   "url": "https://media.fhl.net/hebrew/2/2_009.mp3",
+   "bytes": 6647517,
+   "sha256": "b04289f5e87ba9797b62301bc18d865d04c5f774a0f5f165bc6ae40806189352",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_009.mp3"
+  },
+  "hebrew/2/10": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 10,
+   "url": "https://media.fhl.net/hebrew/2/2_010.mp3",
+   "bytes": 5863635,
+   "sha256": "30d3215e72776f094654e225b2e4678119e20d524417da011df0a26ddfd3e665",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_010.mp3"
+  },
+  "hebrew/2/11": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 11,
+   "url": "https://media.fhl.net/hebrew/2/2_011.mp3",
+   "bytes": 2078806,
+   "sha256": "9f746d7422839e8e2f3c6b11e2f2245f7f227f66fd9cb2ff5d9a1a483fd41176",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_011.mp3"
+  },
+  "hebrew/2/12": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 12,
+   "url": "https://media.fhl.net/hebrew/2/2_012.mp3",
+   "bytes": 9341891,
+   "sha256": "80bd15b7e649103d65e80a37ba348d593889f42e9c480039fe9c44cc7d6a78d3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_012.mp3"
+  },
+  "hebrew/2/13": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 13,
+   "url": "https://media.fhl.net/hebrew/2/2_013.mp3",
+   "bytes": 4084801,
+   "sha256": "389bec4f1ac790b9f6e97e0fbc5e297df49379205890f5d5a5f9a1dba196521f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_013.mp3"
+  },
+  "hebrew/2/14": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 14,
+   "url": "https://media.fhl.net/hebrew/2/2_014.mp3",
+   "bytes": 5901042,
+   "sha256": "4da36daae1205827e15e054d2b7c64510e8cbdf6c59dbfd5edb562096b6de2ad",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_014.mp3"
+  },
+  "hebrew/2/15": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 15,
+   "url": "https://media.fhl.net/hebrew/2/2_015.mp3",
+   "bytes": 4539331,
+   "sha256": "b3e9be114991b3c56dccf688da8f6444f8a654794c62d11e2da0308a8e4acb43",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_015.mp3"
+  },
+  "hebrew/2/16": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 16,
+   "url": "https://media.fhl.net/hebrew/2/2_016.mp3",
+   "bytes": 6646263,
+   "sha256": "98797f50aed81fb0792e1f89e9cdcb23e783ff64f1a344c3cbc8b3f67ca0c126",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_016.mp3"
+  },
+  "hebrew/2/17": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 17,
+   "url": "https://media.fhl.net/hebrew/2/2_017.mp3",
+   "bytes": 3047635,
+   "sha256": "7b9345b56dd005d7d8097fa43630d1cd637664df52c9a70cc829c4a67d004ae5",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_017.mp3"
+  },
+  "hebrew/2/18": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 18,
+   "url": "https://media.fhl.net/hebrew/2/2_018.mp3",
+   "bytes": 5184451,
+   "sha256": "0ac7bb1d0422b22531a0094988debbca5e1fd31d1bc70b6186d73cc057a61c22",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_018.mp3"
+  },
+  "hebrew/2/19": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 19,
+   "url": "https://media.fhl.net/hebrew/2/2_019.mp3",
+   "bytes": 4809542,
+   "sha256": "a21f6de84109c12f0fc53e6d9a489ef82c0ce5a389d50903e2bb921aea65edae",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_019.mp3"
+  },
+  "hebrew/2/20": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 20,
+   "url": "https://media.fhl.net/hebrew/2/2_020.mp3",
+   "bytes": 4067037,
+   "sha256": "a44d625959b3cdd3e768c6596ed7e54825a771f1b7a3ace1e20d683f179ccc33",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_020.mp3"
+  },
+  "hebrew/2/21": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 21,
+   "url": "https://media.fhl.net/hebrew/2/2_021.mp3",
+   "bytes": 5781506,
+   "sha256": "550e72d3ce6db0079b4bbd4a03d9df48a768d95987482594d7c5dc27184822d9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_021.mp3"
+  },
+  "hebrew/2/22": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 22,
+   "url": "https://media.fhl.net/hebrew/2/2_022.mp3",
+   "bytes": 4610384,
+   "sha256": "f31b2ef5979556021e680cd68156ca1e192af2244051c2305fda18f372606efb",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_022.mp3"
+  },
+  "hebrew/2/23": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 23,
+   "url": "https://media.fhl.net/hebrew/2/2_023.mp3",
+   "bytes": 5513803,
+   "sha256": "f8ac659dac3edcc35f0bc3d02db76442b4fb390bee19d4520a1dccfc22245b97",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_023.mp3"
+  },
+  "hebrew/2/24": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 24,
+   "url": "https://media.fhl.net/hebrew/2/2_024.mp3",
+   "bytes": 3165081,
+   "sha256": "66398851b777f2815018bb1b4d6b9a5cda6d0eaedb10890d1c19889f13c460b2",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_024.mp3"
+  },
+  "hebrew/2/25": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 25,
+   "url": "https://media.fhl.net/hebrew/2/2_025.mp3",
+   "bytes": 6420148,
+   "sha256": "ec9e239742691371ed8095472eedbc9f9a5dc5a042d851eec98c3f0120016776",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_025.mp3"
+  },
+  "hebrew/2/26": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 26,
+   "url": "https://media.fhl.net/hebrew/2/2_026.mp3",
+   "bytes": 6857960,
+   "sha256": "5f226fc280a4a9faa603f6f976f940fe396209adcc97e60bf4061c64bb418073",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_026.mp3"
+  },
+  "hebrew/2/27": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 27,
+   "url": "https://media.fhl.net/hebrew/2/2_027.mp3",
+   "bytes": 3830681,
+   "sha256": "99e1d31d4efb16c15193d0b734b57020dee051a410b1e896dd31ed3d8f803f4c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_027.mp3"
+  },
+  "hebrew/2/28": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 28,
+   "url": "https://media.fhl.net/hebrew/2/2_028.mp3",
+   "bytes": 8083834,
+   "sha256": "ad4e685b0092fa55f69b13bd3219c2aaa4b49a942aada4329885f8adceae8432",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_028.mp3"
+  },
+  "hebrew/2/29": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 29,
+   "url": "https://media.fhl.net/hebrew/2/2_029.mp3",
+   "bytes": 8642646,
+   "sha256": "3a218b70ef7aa6b4c3997c22e0305dc2d81c89df2a596cd517cd50ffaeb1c23d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_029.mp3"
+  },
+  "hebrew/2/30": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 30,
+   "url": "https://media.fhl.net/hebrew/2/2_030.mp3",
+   "bytes": 6122979,
+   "sha256": "9e64ca2cf890f3080f9ca64e36d1dbc4be096a4dadc71110eb23e6cc88a3096a",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_030.mp3"
+  },
+  "hebrew/2/31": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 31,
+   "url": "https://media.fhl.net/hebrew/2/2_031.mp3",
+   "bytes": 3071668,
+   "sha256": "9ab7afb6378d61a266e9d83f20af5f3c61bd9de50a78581a47a53ba703db238f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_031.mp3"
+  },
+  "hebrew/2/32": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 32,
+   "url": "https://media.fhl.net/hebrew/2/2_032.mp3",
+   "bytes": 6790668,
+   "sha256": "cd788756b4aa75ff1484f60dab655590ba589482352f653a2d216dbbb3ede38d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_032.mp3"
+  },
+  "hebrew/2/33": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 33,
+   "url": "https://media.fhl.net/hebrew/2/2_033.mp3",
+   "bytes": 4436304,
+   "sha256": "5f3799b6504c0e43fb968675624fc4c23dd58ef6ce2f382b965a8c459dac31a4",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_033.mp3"
+  },
+  "hebrew/2/34": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 34,
+   "url": "https://media.fhl.net/hebrew/2/2_034.mp3",
+   "bytes": 6796311,
+   "sha256": "7c757fa7a64738f9906984536d4c40749df2f54142507e1812a516d1005631f7",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_034.mp3"
+  },
+  "hebrew/2/35": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 35,
+   "url": "https://media.fhl.net/hebrew/2/2_035.mp3",
+   "bytes": 5946391,
+   "sha256": "045c8a514cd7361bd6eaeb4d18f86dcb0599a026a64c96d323facdfbe4d528c9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_035.mp3"
+  },
+  "hebrew/2/36": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 36,
+   "url": "https://media.fhl.net/hebrew/2/2_036.mp3",
+   "bytes": 7204657,
+   "sha256": "e452fbb74868e94d4e57e3167166db113f202855016d000d1e149b8f4b03fd6d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_036.mp3"
+  },
+  "hebrew/2/37": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 37,
+   "url": "https://media.fhl.net/hebrew/2/2_037.mp3",
+   "bytes": 5004102,
+   "sha256": "086518ba8f118f154def7d07fc19ce9aa22cf483999f6a7cb14ef5eb89f36ac8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_037.mp3"
+  },
+  "hebrew/2/38": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 38,
+   "url": "https://media.fhl.net/hebrew/2/2_038.mp3",
+   "bytes": 5700004,
+   "sha256": "a3f78a1efe7684c7ac2e99ddfaad2d426529a69ad7ea44471a2c7801a5b554cc",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_038.mp3"
+  },
+  "hebrew/2/39": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 39,
+   "url": "https://media.fhl.net/hebrew/2/2_039.mp3",
+   "bytes": 7720628,
+   "sha256": "1090b651f089e897f7968bb0615d55ac59834b9d93c6b19a2d8368204106d550",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_039.mp3"
+  },
+  "hebrew/2/40": {
+   "language": "hebrew",
+   "book": 2,
+   "chapter": 40,
+   "url": "https://media.fhl.net/hebrew/2/2_040.mp3",
+   "bytes": 5574407,
+   "sha256": "b55e8974361aa7f1c38e0affcf3f38e441152b656dd124673ce0292376cbe3cb",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\02\\02_040.mp3"
+  },
+  "hebrew/3/1": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 1,
+   "url": "https://media.fhl.net/hebrew/3/3_001.mp3",
+   "bytes": 3457258,
+   "sha256": "a60cee23fe61768485a91c6db3f38b410e6e3b72c347d52ade1f0548e5e16f65",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_001.mp3"
+  },
+  "hebrew/3/2": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 2,
+   "url": "https://media.fhl.net/hebrew/3/3_002.mp3",
+   "bytes": 2980575,
+   "sha256": "a545fc5790f06c28dfb4cbaedabdcbcf9c0c67879b9844602e791d7324b97261",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_002.mp3"
+  },
+  "hebrew/3/3": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 3,
+   "url": "https://media.fhl.net/hebrew/3/3_003.mp3",
+   "bytes": 3392474,
+   "sha256": "d859018f8d6b3a15a7d4497e331264b83b82551118ca5198202fe6ef49a73420",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_003.mp3"
+  },
+  "hebrew/3/4": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 4,
+   "url": "https://media.fhl.net/hebrew/3/3_004.mp3",
+   "bytes": 7050244,
+   "sha256": "a1db0b76275f4d96291f52395b11c7a564ba84edaa5b95d45a07afe103e1aec0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_004.mp3"
+  },
+  "hebrew/3/5": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 5,
+   "url": "https://media.fhl.net/hebrew/3/3_005.mp3",
+   "bytes": 5500242,
+   "sha256": "88d7795c7817ace84f11f773c736f794cdac4538edec7d4fbe2c342fa3a8a804",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_005.mp3"
+  },
+  "hebrew/3/6": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 6,
+   "url": "https://media.fhl.net/hebrew/3/3_006.mp3",
+   "bytes": 4331420,
+   "sha256": "3699ef28e97f8e0db4d47f628040c82942e78939c38809a36b50d7f3868014e8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_006.mp3"
+  },
+  "hebrew/3/7": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 7,
+   "url": "https://media.fhl.net/hebrew/3/3_007.mp3",
+   "bytes": 6907302,
+   "sha256": "2032e46b3fc59dcf47e5b44a60470697404c1020d0a4ad6141880236617e5db6",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_007.mp3"
+  },
+  "hebrew/3/8": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 8,
+   "url": "https://media.fhl.net/hebrew/3/3_008.mp3",
+   "bytes": 7201963,
+   "sha256": "efe97e088063e92e21fa9b6b1a8187eced78f93dc3e79bcccd1def9b6074e974",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_008.mp3"
+  },
+  "hebrew/3/9": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 9,
+   "url": "https://media.fhl.net/hebrew/3/3_009.mp3",
+   "bytes": 4337898,
+   "sha256": "bf6234566b40e350020a4d527c14c1873a091b2e22e54b04a3f03f7466f8f647",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_009.mp3"
+  },
+  "hebrew/3/10": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 10,
+   "url": "https://media.fhl.net/hebrew/3/3_010.mp3",
+   "bytes": 4112200,
+   "sha256": "5db0ba6f8aba2efc9178ad8207004068fd40566aa79d0a12de3c5cf2c4d1c766",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_010.mp3"
+  },
+  "hebrew/3/11": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 11,
+   "url": "https://media.fhl.net/hebrew/3/3_011.mp3",
+   "bytes": 8438078,
+   "sha256": "89acec2a47f150f6f93690137ab89fcb81bfd4ce2dacde729b848fe49c43af52",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_011.mp3"
+  },
+  "hebrew/3/12": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 12,
+   "url": "https://media.fhl.net/hebrew/3/3_012.mp3",
+   "bytes": 1650838,
+   "sha256": "25e416daa23e7694bb72325b7e44a60546fd0d178c827a197007c8322c079959",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_012.mp3"
+  },
+  "hebrew/3/13": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 13,
+   "url": "https://media.fhl.net/hebrew/3/3_013.mp3",
+   "bytes": 12067844,
+   "sha256": "d070bebe3e513a64a81f87aa169078011fc5855791ef4d4bb5fc61b7f3f64822",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_013.mp3"
+  },
+  "hebrew/3/14": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 14,
+   "url": "https://media.fhl.net/hebrew/3/3_014.mp3",
+   "bytes": 10845731,
+   "sha256": "7d51a52da6e6050ce68fa7ecc6b2283d74f05bb08c73093fea72083e675453ce",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_014.mp3"
+  },
+  "hebrew/3/15": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 15,
+   "url": "https://media.fhl.net/hebrew/3/3_015.mp3",
+   "bytes": 6393212,
+   "sha256": "04b1c49747c3c77e8ab7048958814cc2a7576e770748fd1ee14c0299b1a62912",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_015.mp3"
+  },
+  "hebrew/3/16": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 16,
+   "url": "https://media.fhl.net/hebrew/3/3_016.mp3",
+   "bytes": 7713336,
+   "sha256": "b41f521af432917d253ca8443940e677ec43bd1f5937712419543ffebb5e6a6d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_016.mp3"
+  },
+  "hebrew/3/17": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 17,
+   "url": "https://media.fhl.net/hebrew/3/3_017.mp3",
+   "bytes": 3436151,
+   "sha256": "1fad37e3f25ad075b2401954fa7ec68a414b9a8a7924cb8b1fceb3fe81f48acf",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_017.mp3"
+  },
+  "hebrew/3/18": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 18,
+   "url": "https://media.fhl.net/hebrew/3/3_018.mp3",
+   "bytes": 4758574,
+   "sha256": "2000e5ee40488312ee0433382cf807831275eccb5045f44eab70c04817ca186d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_018.mp3"
+  },
+  "hebrew/3/19": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 19,
+   "url": "https://media.fhl.net/hebrew/3/3_019.mp3",
+   "bytes": 6133242,
+   "sha256": "6a50438b174819c4989bdd27d13545d0d72f92eb6d09d1d01686d73a4c9f3951",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_019.mp3"
+  },
+  "hebrew/3/20": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 20,
+   "url": "https://media.fhl.net/hebrew/3/3_020.mp3",
+   "bytes": 5572131,
+   "sha256": "4739c576f0c468806bfbddceca96f15c9571e5792b9cd598ffb722928e717ddd",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_020.mp3"
+  },
+  "hebrew/3/21": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 21,
+   "url": "https://media.fhl.net/hebrew/3/3_021.mp3",
+   "bytes": 4048461,
+   "sha256": "f0a20a987d759f39a37214fa11fae33993b2dc38e11dd213311e6dc6fda63a84",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_021.mp3"
+  },
+  "hebrew/3/22": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 22,
+   "url": "https://media.fhl.net/hebrew/3/3_022.mp3",
+   "bytes": 5723433,
+   "sha256": "9dfe11db10817e244c7e91b43b44e0b6ca18b26f421bc325b502813218389e1a",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_022.mp3"
+  },
+  "hebrew/3/23": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 23,
+   "url": "https://media.fhl.net/hebrew/3/3_023.mp3",
+   "bytes": 8433689,
+   "sha256": "ef62dad97467cc455b14a9c6d1512b3698af77d8772a08d84682ea5192d964cc",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_023.mp3"
+  },
+  "hebrew/3/24": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 24,
+   "url": "https://media.fhl.net/hebrew/3/3_024.mp3",
+   "bytes": 3811269,
+   "sha256": "43e3ad8a95849db35298e84b3d6737e57eed6a3c5fe5f1f74b68b311d4e4291c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_024.mp3"
+  },
+  "hebrew/3/25": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 25,
+   "url": "https://media.fhl.net/hebrew/3/3_025.mp3",
+   "bytes": 9900726,
+   "sha256": "8352b491a22cdd600c4db14c4b7e48297c6edc73c516c6ceee7cadc0591b0076",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_025.mp3"
+  },
+  "hebrew/3/26": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 26,
+   "url": "https://media.fhl.net/hebrew/3/3_026.mp3",
+   "bytes": 8816540,
+   "sha256": "af37d5434dd22cde366bbd6bea65e53ecd89c7dbd618d830774689585d877fb2",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_026.mp3"
+  },
+  "hebrew/3/27": {
+   "language": "hebrew",
+   "book": 3,
+   "chapter": 27,
+   "url": "https://media.fhl.net/hebrew/3/3_027.mp3",
+   "bytes": 6164589,
+   "sha256": "d5e08734ca15a579dbb279631bd5ff144b6bfc272d2539d120271036ce7021c8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\03\\03_027.mp3"
+  },
+  "hebrew/4/1": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 1,
+   "url": "https://media.fhl.net/hebrew/4/4_001.mp3",
+   "bytes": 8391452,
+   "sha256": "84bd5e8a7a1331271e07bbed1df5e07383e753f028b5bf923d450a00609522d8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_001.mp3"
+  },
+  "hebrew/4/2": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 2,
+   "url": "https://media.fhl.net/hebrew/4/4_002.mp3",
+   "bytes": 5074737,
+   "sha256": "2aa07a2bbe105f29f56677b52a55c655adbe251dcd08174acf6ee66d46145838",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_002.mp3"
+  },
+  "hebrew/4/3": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 3,
+   "url": "https://media.fhl.net/hebrew/4/4_003.mp3",
+   "bytes": 8471700,
+   "sha256": "fbc241a4f90fba57024ee169d285b0f27a5c6ef057fd70c8ab2ec4c076e3f999",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_003.mp3"
+  },
+  "hebrew/4/4": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 4,
+   "url": "https://media.fhl.net/hebrew/4/4_004.mp3",
+   "bytes": 8980983,
+   "sha256": "c7de08cfd364173c2b5856982a259ece56545f08221ff833e471d9415accc951",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_004.mp3"
+  },
+  "hebrew/4/5": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 5,
+   "url": "https://media.fhl.net/hebrew/4/4_005.mp3",
+   "bytes": 6082019,
+   "sha256": "07912b8b3da7c9182d030a61b08edecd390bf3b9224481e6aa29da553536b871",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_005.mp3"
+  },
+  "hebrew/4/6": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 6,
+   "url": "https://media.fhl.net/hebrew/4/4_006.mp3",
+   "bytes": 4647792,
+   "sha256": "9800de65aae3708223377dac2146735d9dc7dc7006b6b09a204ed651d3aa9562",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_006.mp3"
+  },
+  "hebrew/4/7": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 7,
+   "url": "https://media.fhl.net/hebrew/4/4_007.mp3",
+   "bytes": 13990015,
+   "sha256": "d72423da260e912d98fb2ea68d459f40761b293d87c539801743776d736c9988",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_007.mp3"
+  },
+  "hebrew/4/8": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 8,
+   "url": "https://media.fhl.net/hebrew/4/4_008.mp3",
+   "bytes": 4515926,
+   "sha256": "b7c76509a3a0864399a7236e1a05bf6d6834968f74b0ac11be26b1992e475840",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_008.mp3"
+  },
+  "hebrew/4/9": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 9,
+   "url": "https://media.fhl.net/hebrew/4/4_009.mp3",
+   "bytes": 4245088,
+   "sha256": "598dfdc5cf5d079f796d3e74018252adcbf21adbb9e8a5efd7df0d7640283f82",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_009.mp3"
+  },
+  "hebrew/4/10": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 10,
+   "url": "https://media.fhl.net/hebrew/4/4_010.mp3",
+   "bytes": 5424569,
+   "sha256": "b6282d691544ed881ad23d29e532992511c4279490627f06f887eefd5aaa8640",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_010.mp3"
+  },
+  "hebrew/4/11": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 11,
+   "url": "https://media.fhl.net/hebrew/4/4_011.mp3",
+   "bytes": 7263798,
+   "sha256": "e3e36a98be9a091ef097ad56ab1de562ed3fba110e6aa6a7e8ad75a2b4ef670a",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_011.mp3"
+  },
+  "hebrew/4/12": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 12,
+   "url": "https://media.fhl.net/hebrew/4/4_012.mp3",
+   "bytes": 2549010,
+   "sha256": "621c6579289925b47a358faddb4cf59c073a7ce26154e2b8994bae46063493d2",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_012.mp3"
+  },
+  "hebrew/4/13": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 13,
+   "url": "https://media.fhl.net/hebrew/4/4_013.mp3",
+   "bytes": 5090828,
+   "sha256": "7028d719973aa1380b7b680901426a1fdb4f98c4fafd07aa6a72bc3c850fcbe0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_013.mp3"
+  },
+  "hebrew/4/14": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 14,
+   "url": "https://media.fhl.net/hebrew/4/4_014.mp3",
+   "bytes": 8094701,
+   "sha256": "d5e21132dd3cb80c06a9a37244a5d88a15de47b9787c99909ef9bc8c58ba2655",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_014.mp3"
+  },
+  "hebrew/4/15": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 15,
+   "url": "https://media.fhl.net/hebrew/4/4_015.mp3",
+   "bytes": 6758068,
+   "sha256": "727d5cb14c97006867aa4604f11f6b8a4bc33a28c1076da575e2327b7bd12efe",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_015.mp3"
+  },
+  "hebrew/4/16": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 16,
+   "url": "https://media.fhl.net/hebrew/4/4_016.mp3",
+   "bytes": 6284520,
+   "sha256": "e3a4c32b4a3d93ef1845138490ab03b21c1c88d506806fe1959d0fec9c10763d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_016.mp3"
+  },
+  "hebrew/4/17": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 17,
+   "url": "https://media.fhl.net/hebrew/4/4_017.mp3",
+   "bytes": 4981114,
+   "sha256": "8c96d62b209a3b0d98c82e09bdaf71557a13785d45ba7e97abd3f5c123f7365d",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_017.mp3"
+  },
+  "hebrew/4/18": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 18,
+   "url": "https://media.fhl.net/hebrew/4/4_018.mp3",
+   "bytes": 6682208,
+   "sha256": "a7840da4fd1fd7639a2e4fa1531799dac882f5eee6190af11fe7b6216d0c6dc3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_018.mp3"
+  },
+  "hebrew/4/19": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 19,
+   "url": "https://media.fhl.net/hebrew/4/4_019.mp3",
+   "bytes": 4197441,
+   "sha256": "66d1c7f53f1b3c3d5cb344a2b4401ff1d55d0770f56246eba9eb1db9e3fc81fa",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_019.mp3"
+  },
+  "hebrew/4/20": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 20,
+   "url": "https://media.fhl.net/hebrew/4/4_020.mp3",
+   "bytes": 5326139,
+   "sha256": "6c00caa91437fc32541fc0eed372fa9cac389bd10a53ab963adb832078ed95c8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_020.mp3"
+  },
+  "hebrew/4/21": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 21,
+   "url": "https://media.fhl.net/hebrew/4/4_021.mp3",
+   "bytes": 6308552,
+   "sha256": "99c949e1f5fb70c76a32e4edbbc36b8ac3e9c4cad44d5b15a57ab04323542587",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_021.mp3"
+  },
+  "hebrew/4/22": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 22,
+   "url": "https://media.fhl.net/hebrew/4/4_022.mp3",
+   "bytes": 8029499,
+   "sha256": "e2eb337b7944b0ad019661a624c7dba54c4cac0ef2b82d694b7b0f20565aa667",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_022.mp3"
+  },
+  "hebrew/4/23": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 23,
+   "url": "https://media.fhl.net/hebrew/4/4_023.mp3",
+   "bytes": 5170868,
+   "sha256": "85475eba2d00a4ea33126ea594507d747196bfe8e1894fedb687467ffc6d4104",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_023.mp3"
+  },
+  "hebrew/4/24": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 24,
+   "url": "https://media.fhl.net/hebrew/4/4_024.mp3",
+   "bytes": 4290019,
+   "sha256": "00490d8d07a8fea0a1a5f97a0165d7d4e03cd0871857cb8b49c78a26287a8050",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_024.mp3"
+  },
+  "hebrew/4/25": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 25,
+   "url": "https://media.fhl.net/hebrew/4/4_025.mp3",
+   "bytes": 2997689,
+   "sha256": "c5fdfb7ec7a7e09134a3043b73a03a7bc726d0d42f627ffb6b768faad45eff11",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_025.mp3"
+  },
+  "hebrew/4/26": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 26,
+   "url": "https://media.fhl.net/hebrew/4/4_026.mp3",
+   "bytes": 9933303,
+   "sha256": "d14994d053682c893452210010d15ec0c713de2b0f9185111e0ef3212b91d03f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_026.mp3"
+  },
+  "hebrew/4/27": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 27,
+   "url": "https://media.fhl.net/hebrew/4/4_027.mp3",
+   "bytes": 3906750,
+   "sha256": "b362a370535b42354d902d44b10a647e9541b3594da82367a39696bd0eb0b296",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_027.mp3"
+  },
+  "hebrew/4/28": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 28,
+   "url": "https://media.fhl.net/hebrew/4/4_028.mp3",
+   "bytes": 4898358,
+   "sha256": "96e0ea63535a896e2bf104c05f2ac760a910798f89dc8976aa027834ddc43031",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_028.mp3"
+  },
+  "hebrew/4/29": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 29,
+   "url": "https://media.fhl.net/hebrew/4/4_029.mp3",
+   "bytes": 6119008,
+   "sha256": "8fe8d7038d075f9387363502c3181da6f51320d769b9b40c3fa9abaa1dd8a688",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_029.mp3"
+  },
+  "hebrew/4/30": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 30,
+   "url": "https://media.fhl.net/hebrew/4/4_030.mp3",
+   "bytes": 3241150,
+   "sha256": "339d1581c62d1fc4ac607020a23328648912fc63471651e5aa00325dd25900b8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_030.mp3"
+  },
+  "hebrew/4/31": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 31,
+   "url": "https://media.fhl.net/hebrew/4/4_031.mp3",
+   "bytes": 8904079,
+   "sha256": "ed2128689eb582a07f14a64609b1b89be1b18815ba60115e117fae4a0a62e56b",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_031.mp3"
+  },
+  "hebrew/4/32": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 32,
+   "url": "https://media.fhl.net/hebrew/4/4_032.mp3",
+   "bytes": 7208210,
+   "sha256": "c4d7ffa2fc6ea28dfa208d720bd0369a336c6b3c2045136b47027e80be7bced1",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_032.mp3"
+  },
+  "hebrew/4/33": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 33,
+   "url": "https://media.fhl.net/hebrew/4/4_033.mp3",
+   "bytes": 7279472,
+   "sha256": "54fbec04fd5fcfcd0a403280162785303feb9b3535a2507a004092b389761d40",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_033.mp3"
+  },
+  "hebrew/4/34": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 34,
+   "url": "https://media.fhl.net/hebrew/4/4_034.mp3",
+   "bytes": 4175289,
+   "sha256": "6dc19c9c5c9c6f23045e3389f671f877039bef10aba28c855a4b05975b148690",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_034.mp3"
+  },
+  "hebrew/4/35": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 35,
+   "url": "https://media.fhl.net/hebrew/4/4_035.mp3",
+   "bytes": 5956213,
+   "sha256": "19310a23e6b94ff5d5612af566321a9a812eec7f3c2947fb17e6b46fd9b625ae",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_035.mp3"
+  },
+  "hebrew/4/36": {
+   "language": "hebrew",
+   "book": 4,
+   "chapter": 36,
+   "url": "https://media.fhl.net/hebrew/4/4_036.mp3",
+   "bytes": 2794979,
+   "sha256": "b76d131565e5a30898aee5d460c05418e9524a8d59a5131094d0185770efbcf8",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\04\\04_036.mp3"
+  },
+  "hebrew/5/1": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 1,
+   "url": "https://media.fhl.net/hebrew/5/5_001.mp3",
+   "bytes": 9020481,
+   "sha256": "39b8ccf44d65b9c0acf867f6ce9df9a42cfb4e560fe5233b970817fb821100b7",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_001.mp3"
+  },
+  "hebrew/5/2": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 2,
+   "url": "https://media.fhl.net/hebrew/5/5_002.mp3",
+   "bytes": 6908951,
+   "sha256": "d544c28460307031ec7078b3746e91f2352ef7fa638ba1fbba2f039fe41a04b9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_002.mp3"
+  },
+  "hebrew/5/3": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 3,
+   "url": "https://media.fhl.net/hebrew/5/5_003.mp3",
+   "bytes": 5968752,
+   "sha256": "6805dfa6aa0bbcf7f5afde4eff0d5631b20033b664c2e7d9837a9640bc138efb",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_003.mp3"
+  },
+  "hebrew/5/4": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 4,
+   "url": "https://media.fhl.net/hebrew/5/5_004.mp3",
+   "bytes": 10651357,
+   "sha256": "91db0473bb2a9763e4567695f82908e7b9a82e4f9d76be1c7c3b973aa823b204",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_004.mp3"
+  },
+  "hebrew/5/5": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 5,
+   "url": "https://media.fhl.net/hebrew/5/5_005.mp3",
+   "bytes": 6109186,
+   "sha256": "8538d987ac0f8a005afb2b30a30c9f874bbbe08ce1ddc48e5d7c17553c127f4f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_005.mp3"
+  },
+  "hebrew/5/6": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 6,
+   "url": "https://media.fhl.net/hebrew/5/5_006.mp3",
+   "bytes": 4374864,
+   "sha256": "7bdd0f7c0659cfb6c3131b3fb6845d90daebd8507a2b36bf370d51dfc051fabf",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_006.mp3"
+  },
+  "hebrew/5/7": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 7,
+   "url": "https://media.fhl.net/hebrew/5/5_007.mp3",
+   "bytes": 5700213,
+   "sha256": "929199f63ac82693ac7ab635199d46e84b0389492e64932ade901124332719a3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_007.mp3"
+  },
+  "hebrew/5/8": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 8,
+   "url": "https://media.fhl.net/hebrew/5/5_008.mp3",
+   "bytes": 4078113,
+   "sha256": "10fd937a470993c8524ab03c6fe219573a3d0621031a0a7a7afc4524fd359e33",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_008.mp3"
+  },
+  "hebrew/5/9": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 9,
+   "url": "https://media.fhl.net/hebrew/5/5_009.mp3",
+   "bytes": 6537803,
+   "sha256": "98667190024bce7bc952831e82113a11d467c493ea08f220777324d5970cc7e9",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_009.mp3"
+  },
+  "hebrew/5/10": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 10,
+   "url": "https://media.fhl.net/hebrew/5/5_010.mp3",
+   "bytes": 4204337,
+   "sha256": "4048108097ae71884feba5cee88464cf1284e9cdf57e1c8446cb61b725c2b290",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_010.mp3"
+  },
+  "hebrew/5/11": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 11,
+   "url": "https://media.fhl.net/hebrew/5/5_011.mp3",
+   "bytes": 6452748,
+   "sha256": "5ec512cd3bd4ca503befc7b6eae55340946fe67f9c1e39f0753299162a60bb3e",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_011.mp3"
+  },
+  "hebrew/5/12": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 12,
+   "url": "https://media.fhl.net/hebrew/5/5_012.mp3",
+   "bytes": 6906652,
+   "sha256": "7f84904d3156a8d62c01ae73d75f31858ac0c4291928cb802750050060539dcb",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_012.mp3"
+  },
+  "hebrew/5/13": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 13,
+   "url": "https://media.fhl.net/hebrew/5/5_013.mp3",
+   "bytes": 4149793,
+   "sha256": "99a5ac3a58009b472895cf83e211c078623cc681e873531f2b0c802db4b395b7",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_013.mp3"
+  },
+  "hebrew/5/14": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 14,
+   "url": "https://media.fhl.net/hebrew/5/5_014.mp3",
+   "bytes": 4703798,
+   "sha256": "97f59d7568976186fd459f1c1ea186e73f0fd479b8e4ca4bcafa2c4239a2410f",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_014.mp3"
+  },
+  "hebrew/5/15": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 15,
+   "url": "https://media.fhl.net/hebrew/5/5_015.mp3",
+   "bytes": 4616236,
+   "sha256": "5090fcc14400b358ac3d14683f2363a7121253e81a32eec50f66e3ce746a0dc6",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_015.mp3"
+  },
+  "hebrew/5/16": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 16,
+   "url": "https://media.fhl.net/hebrew/5/5_016.mp3",
+   "bytes": 4328471,
+   "sha256": "2d941bee451b42d8a5aac5b92ceb6516e82ec6cca5515cb361710cf06adc432c",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_016.mp3"
+  },
+  "hebrew/5/17": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 17,
+   "url": "https://media.fhl.net/hebrew/5/5_017.mp3",
+   "bytes": 4294407,
+   "sha256": "e801311db94647cae9bfdcf69a03cd60a14cd557ac9ceb70bf99417c9dd7fb11",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_017.mp3"
+  },
+  "hebrew/5/18": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 18,
+   "url": "https://media.fhl.net/hebrew/5/5_018.mp3",
+   "bytes": 3906541,
+   "sha256": "527c0e56c06316e804e4e9779d7900811c39b8f0cd1e96ac8365ce83fa09ef2e",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_018.mp3"
+  },
+  "hebrew/5/19": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 19,
+   "url": "https://media.fhl.net/hebrew/5/5_019.mp3",
+   "bytes": 4119282,
+   "sha256": "ff7ca64965bf0ee9ad2f12d27aaf1b49e1f989d503b37c14a01610fc654c87e3",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_019.mp3"
+  },
+  "hebrew/5/20": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 20,
+   "url": "https://media.fhl.net/hebrew/5/5_020.mp3",
+   "bytes": 4033601,
+   "sha256": "ce5b972fe6a8d680e324a6eefb25d601ea208a3ea60fd16e1bc7f21942f4c152",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_020.mp3"
+  },
+  "hebrew/5/21": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 21,
+   "url": "https://media.fhl.net/hebrew/5/5_021.mp3",
+   "bytes": 4601607,
+   "sha256": "3d8ba2724d581914681ff3631279b5579f81b37bad66c42de0708db8aa5cd5ca",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_021.mp3"
+  },
+  "hebrew/5/22": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 22,
+   "url": "https://media.fhl.net/hebrew/5/5_022.mp3",
+   "bytes": 5496667,
+   "sha256": "8b7984a9193e9e3cbff240c9b9bf67f9bc1a23b812087669ba23da2ffde565d0",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_022.mp3"
+  },
+  "hebrew/5/23": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 23,
+   "url": "https://media.fhl.net/hebrew/5/5_023.mp3",
+   "bytes": 4451351,
+   "sha256": "0f1c03c56ee711d5598a57053ec01d354d82f44e71238a24113bfda03d6248b1",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_023.mp3"
+  },
+  "hebrew/5/24": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 24,
+   "url": "https://media.fhl.net/hebrew/5/5_024.mp3",
+   "bytes": 4159197,
+   "sha256": "4ae8db367fb1af195495662f8925d85e096d69c32de9f6533ee7cf5cd7e9df73",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_024.mp3"
+  },
+  "hebrew/5/25": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 25,
+   "url": "https://media.fhl.net/hebrew/5/5_025.mp3",
+   "bytes": 3360268,
+   "sha256": "e20023ba2c80d0c1bbacdfe5bcc7f79be99666ebda1fc673a732c5a36eedcab6",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_025.mp3"
+  },
+  "hebrew/5/26": {
+   "language": "hebrew",
+   "book": 5,
+   "chapter": 26,
+   "url": "https://media.fhl.net/hebrew/5/5_026.mp3",
+   "bytes": 4528255,
+   "sha256": "017eefa4a7cf42d02b196609219699589e081f4f49a13f281b51aec136f72495",
+   "path": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\語言\\原文讀本\\讀本\\audio\\fhl-hebrew\\05\\05_026.mp3"
+  }
+ }
+}

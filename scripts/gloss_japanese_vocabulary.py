@@ -69,6 +69,39 @@ PROMPT = """你是日文讀本的詞義編輯，讀者是中文母語的宗教�
 """
 
 
+ITEM_RE = re.compile(
+    r'"index"\s*:\s*(\d+)\s*,\s*"zh"\s*:\s*"(.*?)"\s*,\s*"en"\s*:\s*"(.*?)"\s*,'
+    r'\s*"pos"\s*:\s*"(.*?)"\s*(?:,\s*"dict"\s*:\s*"(.*?)")?',
+    re.S,
+)
+
+
+def parse_words(raw: str) -> dict[int, dict]:
+    """Read the reply whether or not it is strict JSON.
+
+    英文欄裡的撇號與括號常讓 json.loads 讀不動整批；欄位本身讀得出來，
+    為了一個引號把二十個詞丟掉只是再付一次錢。
+    """
+
+    block = re.search(r"\{.*\}", raw, re.S)
+    if block:
+        try:
+            payload = json.loads(block.group(0))
+            answers = {
+                int(item["index"]): item
+                for item in payload.get("words", [])
+                if str(item.get("index", "")).strip().isdigit()
+            }
+            if answers:
+                return answers
+        except (ValueError, TypeError, AttributeError):
+            pass
+    return {
+        int(index): {"index": int(index), "zh": zh, "en": en, "pos": pos, "dict": dictionary or ""}
+        for index, zh, en, pos, dictionary in ITEM_RE.findall(raw)
+    }
+
+
 def load_cache() -> dict:
     if CACHE.exists():
         return json.loads(CACHE.read_text(encoding="utf-8")).get("words", {})
@@ -151,15 +184,13 @@ def main() -> int:
         )
         try:
             raw = llm.call_model(PROMPT.format(items=items), max_tokens=2600)
-            payload = json.loads(re.search(r"\{.*\}", raw, re.S).group(0))
         except Exception as error:  # noqa: BLE001 - re-runnable
             print(f"  ✗ 第 {start + 1}–{start + len(chunk)} 批：{error}")
             continue
-        answers = {
-            int(item["index"]): item
-            for item in payload.get("words", [])
-            if str(item.get("index", "")).strip().isdigit()
-        }
+        answers = parse_words(raw)
+        if not answers:
+            print(f"  ✗ 第 {start + 1}–{start + len(chunk)} 批：回應讀不出 index")
+            continue
         for index, entry in enumerate(chunk, start=1):
             answer = answers.get(index)
             if not answer:
