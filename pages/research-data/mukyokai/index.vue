@@ -9,6 +9,7 @@
         <p class="text-gray-500 text-sm leading-relaxed">
           內村鑑三所開創、經矢內原忠雄一代傳衍的無教會主義，其研究文獻與史料。
           博士論文第二章「東亞近代宗教變革」的日本線，與台灣日治時期教會經驗都用得上。
+          日文論著保留原題，另附中譯。
           <span class="text-gray-400">無教會依其主張本無教會組織，故此處以「運動」而非機構為收錄單位。</span>
         </p>
         <p class="mt-2 text-xs text-gray-400 leading-relaxed">
@@ -23,8 +24,10 @@
             <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">{{ r.kindLabel }}</span>
             <span class="text-xs text-gray-400">{{ r.year }}</span>
             <span class="text-sm font-semibold text-gray-900 break-words">{{ r.author }}</span>
+            <span v-if="r.lang === 'ja'" class="text-[11px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">日文</span>
           </div>
-          <h2 class="text-sm text-gray-800 leading-relaxed break-words">《{{ r.title }}》</h2>
+          <h2 class="text-sm text-gray-800 leading-relaxed break-words">《{{ r.titleOriginal || r.title }}》</h2>
+          <p v-if="r.titleOriginal" class="text-xs text-gray-500 leading-relaxed break-words">中譯：《{{ r.title }}》</p>
           <p v-if="r.publisher" class="mt-0.5 text-xs text-gray-500 break-words">{{ r.publisher }}</p>
           <p v-if="r.note" class="mt-1.5 text-xs text-gray-500 leading-relaxed break-words">{{ r.note }}</p>
 
@@ -62,7 +65,7 @@ definePageMeta({ middleware: 'auth' });
 useHead({ title: '無教會主義研究資料 — 論文資料整理' });
 
 interface Row {
-  stem: string; title: string; author: string; year: string;
+  stem: string; title: string; titleOriginal?: string; lang?: string; author: string; year: string;
   kindLabel: string; publisher: string; note: string;
   pages: number; chars: number; pdfKey: string; textKey: string;
 }

@@ -82,8 +82,43 @@ def parse_doc(html: str):
         if cand and "台灣基督長老教會" != cand and len(cand) < 60:
             title = cand
             break
-    m = re.search(r"(19\d{2}|20\d{2})", title) or re.search(r"(19\d{2}|20\d{2})", body[:400])
-    return title or lines[0][:50], (m.group(1) if m else ""), body
+    # 頁面 <title> 是「文獻名 - 1971重要文獻 - 關於我們 - 台灣基督長老教會」，年份取第二段最準
+    year = ""
+    parts = lines[0].split(" - ") if lines else []
+    if len(parts) > 1:
+        my = re.match(r"\s*(19\d{2}|20\d{2})", parts[1])
+        if my:
+            year = my.group(1)
+    if not year:
+        m = re.search(r"(19\d{2}|20\d{2})", title) or re.search(r"(19\d{2}|20\d{2})", body[:400])
+        year = m.group(1) if m else ""
+    return title or lines[0][:50], year, body
+
+
+# DocID 那批只有 2006 年以後的牧函；信仰告白與三大聲明各有自己的靜態頁
+STATIC_PAGES = [
+    ("faith", "https://www.pct.org.tw/ab_faith.aspx", "台灣基督長老教會信仰告白", "1985"),
+]
+
+
+def scan_static():
+    """收信仰告白這類不走 DocID 的固定頁。"""
+    rows = {}
+    if HARVEST.exists():
+        rows = {r["docId"]: r for r in json.loads(HARVEST.read_text(encoding="utf-8"))}
+    for key, url, title, year in STATIC_PAGES:
+        html = get(url)
+        _, _, body = parse_doc(html)
+        if not body:
+            print(f"  ! {title}：取不到內文", flush=True)
+            continue
+        rows[key] = {"docId": key, "title": title, "year": year,
+                     "chars": len(body), "source": url}
+        df.r2_put_text(f"{R2_TXT}/{key}.txt", body)
+        print(f"  ✓ {year}  {title}（{len(body):,} 字）", flush=True)
+    out = sorted(rows.values(), key=lambda r: str(r["docId"]))
+    HARVEST.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"累計 {len(out)} 件")
 
 
 def scan(lo, hi):
@@ -92,20 +127,22 @@ def scan(lo, hi):
         rows = {r["docId"]: r for r in json.loads(HARVEST.read_text(encoding="utf-8"))}
     found = 0
     for n in range(lo, hi + 1):
+        # 站方用補零三位（DocID=001）；不補零的 1 會回 500，早期文獻整批漏掉
+        doc_id = f"{n:03d}"
         try:
-            title, year, body = parse_doc(get(URL, {"DocID": n}))
+            title, year, body = parse_doc(get(URL, {"DocID": doc_id}))
         except Exception as e:  # noqa: BLE001
             print(f"  ! DocID={n}: {e}", flush=True)
             continue
         if not title:
             continue
-        rows[n] = {"docId": n, "title": title, "year": year, "chars": len(body),
-                   "source": f"{URL}?DocID={n}"}
-        df.r2_put_text(f"{R2_TXT}/{n}.txt", body)
+        rows[doc_id] = {"docId": doc_id, "title": title, "year": year, "chars": len(body),
+                        "source": f"{URL}?DocID={doc_id}"}
+        df.r2_put_text(f"{R2_TXT}/{doc_id}.txt", body)
         found += 1
-        print(f"  ✓ {n:>4}  {year or '—':<5} {title[:44]} （{len(body):,} 字）", flush=True)
+        print(f"  ✓ {doc_id}  {year or '—':<5} {title[:44]} （{len(body):,} 字）", flush=True)
         time.sleep(0.4)
-    out = sorted(rows.values(), key=lambda r: r["docId"])
+    out = sorted(rows.values(), key=lambda r: str(r["docId"]))
     HARVEST.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n本輪新增／更新 {found}，累計 {len(out)} 件 → {HARVEST}")
 
@@ -115,7 +152,7 @@ def publish():
     have = df.r2_existing_keys(R2_TXT)
     out = [{**r, "textKey": f"{R2_TXT}/{r['docId']}.txt"}
            for r in rows if f"{R2_TXT}/{r['docId']}.txt" in have]
-    out.sort(key=lambda r: (r["year"] or "0000", r["docId"]), reverse=True)
+    out.sort(key=lambda r: (r["year"] or "0000", str(r["docId"])), reverse=True)
     INDEX_OUT.parent.mkdir(parents=True, exist_ok=True)
     INDEX_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(out)} 件 → {INDEX_OUT}")
@@ -124,15 +161,18 @@ def publish():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scan", action="store_true")
+    ap.add_argument("--static", action="store_true", help="收信仰告白等固定頁")
     ap.add_argument("--from", dest="lo", type=int, default=1)
     ap.add_argument("--to", dest="hi", type=int, default=200)
     ap.add_argument("--publish", action="store_true")
     args = ap.parse_args()
+    if args.static:
+        scan_static()
     if args.scan:
         scan(args.lo, args.hi)
     if args.publish:
         publish()
-    if not (args.scan or args.publish):
+    if not (args.scan or args.static or args.publish):
         ap.print_help()
 
 

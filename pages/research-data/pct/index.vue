@@ -32,10 +32,28 @@
           <span class="tool-badge bg-indigo-50 text-indigo-600">{{ nmCount ? `${nmCount} 篇` : '…' }}</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/pct/documents" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">📜</div>
+          <div class="flex-1">
+            <h2 class="tool-title">總會重要文獻</h2>
+            <p class="tool-desc">三大聲明（1971國是聲明、1975我們的呼籲、1977人權宣言）、1985 信仰告白，及歷年牧函、宣言、請願書</p>
+          </div>
+          <span class="tool-badge bg-rose-50 text-rose-600">{{ docCount ? `${docCount} 件` : '…' }}</span>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/pct/laijohn" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
+          <div class="tool-icon bg-teal-50 text-teal-600">👤</div>
+          <div class="flex-1">
+            <h2 class="tool-title">本土信徒傳記</h2>
+            <p class="tool-desc">賴永祥長老史料庫「本土信徒」一區：台灣本土基督徒的略歷、訪問記、告別禮拜與回憶錄</p>
+          </div>
+          <span class="tool-badge bg-teal-50 text-teal-600">{{ ljCount ? `${ljCount} 人` : '…' }}</span>
+        </NuxtLink>
+
       </div>
 
       <p class="mt-6 text-xs text-gray-400 leading-relaxed">
-        待補：事工說明書（同站）、賴永祥台灣教會史料庫（王憲治、黃彰輝相關傳記與神學文章）。女宣雜誌經評估不收。
+        待補：事工說明書（同站）。女宣雜誌經評估不收。
         《使者》（1963–1990，新使者前身）線上無全文典藏。
         《台灣教會公報》1885–2007 掃描檔須向公報社去信索取；2008 至 2010 年間的期別目前無免費線上來源。
       </p>
@@ -51,6 +69,8 @@ useHead({ title: '台灣基督長老教會研究資料 — 論文資料整理' }
 
 const tcnnCount = ref(0);
 const nmCount = ref(0);
+const docCount = ref(0);
+const ljCount = ref(0);
 
 // 各刊的計數彼此獨立：任一份 index 還沒產出，不該讓其他張卡也跟著空著
 async function total(url: string, pick: (row: any) => number): Promise<number> {
@@ -65,6 +85,8 @@ onMounted(async () => {
   const base = '/content/research-data/pct';
   tcnnCount.value = await total(`${base}/tcnn-index.json`, x => x.count ?? 0);
   nmCount.value = await total(`${base}/new-messenger-index.json`, x => x.articles?.length ?? 0);
+  docCount.value = await total(`${base}/documents-index.json`, () => 1);
+  ljCount.value = await total(`${base}/laijohn-index.json`, () => 1);
 });
 </script>
 

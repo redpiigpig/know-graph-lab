@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import collections
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,7 +45,23 @@ MIN_WORKS = 3
 
 # 自立語だけ。助詞・助動詞・記号は語彙にならないし、固有名詞は附錄に行く。
 KEEP_POS = {"名詞", "動詞", "形容詞", "副詞", "連体詞", "接続詞", "感動詞"}
-DROP_SUB = {"固有名詞", "数", "非自立", "接尾", "代名詞", "サ変接続"}
+DROP_SUB = {"固有名詞", "数", "非自立", "接尾", "代名詞", "サ変接続", "接続詞的", "特殊"}
+
+# 語料是戰前文章，用的是歷史假名遣：思ふ／考へる／ゐる 就是課本教的
+# 思う／考える／いる。比對時要能看穿這一層，否則整批「新詞」其實是舊拼法。
+HISTORICAL = str.maketrans({"ゐ": "い", "ゑ": "え", "ヰ": "イ", "ヱ": "エ"})
+
+# 這些是課本第一課就教的機能語與最常見的動詞，語料裡自然名列前茅，但它們
+# 是「已經會了」而不是「該學的下一批」。基本形與課本的ます形對不上，所以
+# 光靠比對詞表擋不住，要明寫。
+TOO_BASIC = {
+    "する", "なる", "ない", "ある", "いる", "ゐる", "居る", "來る", "来る", "行く",
+    "見る", "言う", "いう", "云う", "云ふ", "言ふ", "思う", "思ふ", "出る", "出す",
+    "入る", "取る", "持つ", "知る", "出来る", "できる", "せる", "れる", "られる",
+    "つて", "ふる", "さ", "こと", "もの", "ため", "とき", "ところ", "よう", "そう",
+    "これ", "それ", "あれ", "どれ", "ここ", "そこ", "此", "其", "彼", "斯", "如く",
+    "一つ", "二つ", "多い", "無い", "良い", "好い", "いい", "大きい", "小さい",
+}
 
 
 def counted() -> dict:
@@ -72,9 +89,21 @@ def counted() -> dict:
             base = token.base_form
             if base in ("*", "") or len(base) == 1 and base.isascii():
                 continue
+            if base in TOO_BASIC or base.translate(HISTORICAL) in TOO_BASIC:
+                continue
+            # 一個字的漢字詞多半是被切碎的詞素（言、其、此），不是詞。
+            if len(base) == 1 and not base.isdigit():
+                continue
             total[base] += 1
             here.add(base)
-            readings.setdefault(base, token.reading if token.reading != "*" else "")
+            # token.reading 是「表面形」的讀音（見る→みん），不是辭書形的讀音。
+            # 拿它當假名欄會印出一個不存在的詞，所以辭書形要自己再斷一次。
+            if base not in readings:
+                heads = list(tokenizer.tokenize(base))
+                reading = "".join(
+                    t.reading if t.reading != "*" else t.surface for t in heads
+                )
+                readings[base] = reading
             surfaces.setdefault(base, collections.Counter())[parts[0]] += 1
         for base in here:
             works[base] += 1
@@ -115,6 +144,12 @@ def main() -> int:
     entries = vocab["entries"]
     have_written = {e["kanji"] for e in entries if e["kanji"]}
     have_kana = {e["kana"] for e in entries}
+    # 課本用ます形（休みます），語料給辭書形（休む）——不比對辭書形，
+    # 課本教過的動詞會整批被當成新詞收進來。
+    have_written |= {e["dictionaryForm"] for e in entries if e.get("dictionaryForm")}
+    # 漢字詞幹：思ふ 與 思います 的共同部分是「思」，歷史假名遣就靠這一層擋。
+    stems = {re.match(r"^[一-鿿]+", e["kanji"] or "").group(0)
+             for e in entries if e["kanji"] and re.match(r"^[一-鿿]+", e["kanji"])}
     need = TARGET - len(entries)
     print(f"課內詞 {len(entries)}，還差 {need}")
     if need <= 0:
@@ -132,6 +167,11 @@ def main() -> int:
             continue
         reading = katakana_to_hiragana(item["reading"])
         if base in have_written or reading in have_kana or base in have_kana:
+            continue
+        if base.translate(HISTORICAL) in have_written:
+            continue
+        stem = re.match(r"^[一-鿿]+", base)
+        if stem and stem.group(0) in stems and len(stem.group(0)) >= 1 and len(base) <= 4:
             continue
         chosen.append(
             {

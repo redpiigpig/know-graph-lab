@@ -39,6 +39,9 @@ INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/
 
 KINDS = {"thesis": "學位論文", "book": "專書", "article": "期刊論文", "archive": "檔案史料"}
 
+# 有假名就是日文；純漢字的中日文無法只靠字形分辨，故以 --lang 為準、此處只做預設值
+JP_KANA = re.compile(r"[぀-ゟ゠-ヿ]")
+
 
 def stem_for(title: str, author: str) -> str:
     digest = hashlib.md5(f"{author}/{title}".encode("utf-8")).hexdigest()[:8]
@@ -52,7 +55,7 @@ def load_index():
     return []
 
 
-def add(path, title, author, year, kind, note, publisher):
+def add(path, title, author, year, kind, note, publisher, title_original="", lang=""):
     src = Path(path)
     if not src.exists():
         raise SystemExit(f"找不到檔案：{src}")
@@ -78,7 +81,9 @@ def add(path, title, author, year, kind, note, publisher):
 
     rows = [r for r in load_index() if r["stem"] != stem]
     rows.append({
-        "stem": stem, "title": title, "author": author, "year": str(year),
+        "stem": stem, "title": title, "titleOriginal": title_original,
+        "lang": lang or ("ja" if JP_KANA.search(title_original or title) else "zh"),
+        "author": author, "year": str(year),
         "kind": kind, "kindLabel": KINDS.get(kind, kind), "publisher": publisher,
         "note": note, "pages": pages, "chars": len(text),
         "pdfKey": f"{R2_PDF}/{stem}.pdf", "textKey": f"{R2_TXT}/{stem}.txt",
@@ -106,12 +111,15 @@ def main():
     ap.add_argument("--kind", default="thesis", choices=sorted(KINDS))
     ap.add_argument("--note", default="")
     ap.add_argument("--publisher", default="")
+    ap.add_argument("--title-original", default="", help="日文等原文題名；中譯放 --title")
+    ap.add_argument("--lang", default="", choices=["", "zh", "ja", "en"])
     ap.add_argument("--list", action="store_true")
     args = ap.parse_args()
     if args.add:
         if not (args.title and args.author):
             raise SystemExit("--add 需同時給 --title 與 --author")
-        add(args.add, args.title, args.author, args.year, args.kind, args.note, args.publisher)
+        add(args.add, args.title, args.author, args.year, args.kind, args.note,
+            args.publisher, args.title_original, args.lang)
     if args.list:
         listing()
     if not (args.add or args.list):
