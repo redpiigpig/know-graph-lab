@@ -175,12 +175,14 @@ def build(only=None):
     samples = defaultdict(lambda: defaultdict(list))                       # term→corpus→[..]
     totals = {}
 
+    chars = defaultdict(lambda: defaultdict(int))          # corpus→year→總字數
     for cid, conf in CORPORA.items():
         if only and cid != only:
             continue
         n = 0
         for doc_id, year, title, text in conf["iter"]():
             n += 1
+            chars[cid][year] += len(text)
             for t in terms:
                 c = text.count(t)
                 if not c:
@@ -191,11 +193,15 @@ def build(only=None):
                     samples[t][cid].append({"docId": doc_id, "year": year,
                                             "title": title[:60], "text": kwic(text, t)})
         totals[cid] = n
-        print(f"{conf['name']}：掃過 {n} 篇", flush=True)
+        print(f"{conf['name']}：掃過 {n} 篇 / {sum(chars[cid].values()):,} 字", flush=True)
 
     out = {
         "groups": TERM_GROUPS,
-        "corpora": {k: {"name": v["name"], "side": v["side"], "docs": totals.get(k, 0)}
+        # 各語料規模差到兩個數量級（教會公報 38,451 篇 vs 法印學報 30 篇），
+        # 所以絕對次數不能直接橫向比；chars 讓前端算得出每萬字的相對頻率。
+        "corpora": {k: {"name": v["name"], "side": v["side"], "docs": totals.get(k, 0),
+                        "chars": sum(chars[k].values()),
+                        "charsByYear": dict(chars[k])}
                     for k, v in CORPORA.items()},
         "counts": {t: {c: dict(y) for c, y in cs.items()} for t, cs in counts.items()},
         "docs": {t: {c: dict(y) for c, y in cs.items()} for t, cs in docs.items()},

@@ -227,6 +227,79 @@ def hebrew_books() -> dict[str, list[dict]]:
     return verses
 
 
+def glossary() -> tuple[dict[str, dict], dict[str, dict]]:
+    """The Chinese this project has already reviewed, keyed for lookup.
+
+    Greek by lemma (the reader's 2,000 words), Hebrew by Strong number (its
+    1,000). Nothing else is invented: a word this project has not glossed shows
+    its parsing and its lemma and an empty meaning, which is the honest state.
+    Filling the rest means either translating them here or licensing a Chinese
+    lexicon — a decision, not a default.
+    """
+
+    greek: dict[str, dict] = {}
+    path = ROOT / "output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json"
+    if path.exists():
+        master = json.loads(path.read_text(encoding="utf-8"))
+        for volume in master["volumes"]:
+            for lesson in volume["lessons"]:
+                for word in lesson["vocabulary"]:
+                    greek.setdefault(
+                        word["lemma"],
+                        {"zh": word.get("glossZh", ""), "en": word.get("glossEn", "")},
+                    )
+
+    hebrew: dict[str, dict] = {}
+    # 覆核過的希伯來詞義在組好的主檔裡，不在 vocabulary/hebrew-1000.json——
+    # 那一份的 glossZh 是空的，照它查會得到零筆而且不會報錯。
+    path = ROOT / "output/source-cache/original-readers/hebrew-full/hebrew-reader-50-lessons.json"
+    if path.exists():
+        master = json.loads(path.read_text(encoding="utf-8"))
+        words = [w for lesson in master["lessons"] for w in lesson["vocabulary"]]
+        for entry in words:
+            for number in entry.get("strongs") or ([entry["strong"]] if entry.get("strong") else []):
+                digits = re.sub(r"\D", "", str(number))
+                if digits:
+                    hebrew.setdefault(
+                        f"H{int(digits):04d}",
+                        {"zh": entry.get("glossZh", ""), "en": entry.get("glossEn", "")},
+                    )
+    return greek, hebrew
+
+
+def split_by_book(language: str, verses: dict[str, list[dict]]) -> None:
+    """One file per book, so a chapter view loads a megabyte and not sixty."""
+
+    greek_gloss, hebrew_gloss = glossary()
+    books: dict[str, dict[str, list[dict]]] = {}
+    glossed = 0
+    for ref, words in verses.items():
+        book = ref.rsplit(".", 2)[0]
+        for word in words:
+            found = (
+                greek_gloss.get(word["lemma"])
+                if language == "greek"
+                else hebrew_gloss.get(word.get("strong", ""))
+            )
+            if found and found.get("zh"):
+                word["zh"] = found["zh"]
+                glossed += 1
+            if found and found.get("en"):
+                word["en"] = found["en"]
+        books.setdefault(book, {})[ref] = words
+
+    folder = OUT / "books"
+    folder.mkdir(parents=True, exist_ok=True)
+    for book, chapters in books.items():
+        (folder / f"{book}.json").write_text(
+            json.dumps({"book": book, "language": language, "byVerse": chapters}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    total = sum(len(w) for w in verses.values())
+    print(f"  分卷 {len(books)} 檔；有中文詞義的詞 {glossed}／{total}"
+          f"（{glossed * 100 // max(total, 1)}%）")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--language", choices=("greek", "hebrew", "both"), default="both")
@@ -243,6 +316,7 @@ def main() -> int:
             for word in verses[ref]:
                 print(f"    {word['text']:<20} {word['lemma']:<16} {word['pos']:<8} {word['parsing']}")
         if args.write:
+            split_by_book(language, verses)
             OUT.mkdir(parents=True, exist_ok=True)
             path = OUT / f"{language}.json"
             path.write_text(

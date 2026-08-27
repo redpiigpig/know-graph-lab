@@ -132,7 +132,12 @@
                 :class="textClassFor(col.versionCode)"
               >
                 <template v-if="col.versionCode && v.byVersion[col.versionCode]">
-                  {{ v.byVersion[col.versionCode] }}
+                  <ScriptureMorphVerse
+                    v-if="morphFor(col.versionCode, v.verse)"
+                    :words="morphFor(col.versionCode, v.verse)!"
+                    :language="col.versionCode === 'wlc' ? 'hbo' : 'grc'"
+                  />
+                  <template v-else>{{ v.byVersion[col.versionCode] }}</template>
                 </template>
                 <span v-else class="text-gray-300 italic text-xs">—</span>
               </div>
@@ -175,7 +180,12 @@
                     :class="textClassFor(col.versionCode)"
                   >
                     <template v-if="col.versionCode && v.byVersion[col.versionCode]">
-                      {{ v.byVersion[col.versionCode] }}
+                      <ScriptureMorphVerse
+                        v-if="morphFor(col.versionCode, v.verse)"
+                        :words="morphFor(col.versionCode, v.verse)!"
+                        :language="col.versionCode === 'wlc' ? 'hbo' : 'grc'"
+                      />
+                      <template v-else>{{ v.byVersion[col.versionCode] }}</template>
                     </template>
                     <span v-else class="text-gray-300 italic text-xs">—</span>
                   </div>
@@ -367,10 +377,12 @@ async function loadChapter() {
 onMounted(async () => {
   await loadBootstrap()
   await loadChapter()
+  await loadMorphology()
 })
 
 watch([bookCode, chapterNum], () => {
   if (books.value.length > 0) loadChapter()
+  loadMorphology()
 })
 
 useHead({
@@ -378,6 +390,35 @@ useHead({
     ? `${chapterData.value.book.name_zh} ${chapterNum.value} — 聖經對照`
     : '聖經對照',
 })
+
+// ── 逐詞詞形分析：滑過原文就看到詞性、格位、性數與中文詞義
+// 資料是本機用 MorphGNT（SBLGNT）與 OSHB（WLC）的標註建的，一卷一檔，
+// 進到哪一章才抓那一章。原文以外的欄位不受影響。
+type MorphWord = {
+  text: string; lemma: string; strong?: string; pos: string;
+  parsing: string; zh?: string; en?: string
+}
+const morphOn = ref(true)
+const morphology = ref<Record<number, MorphWord[]>>({})
+
+function morphFor(versionCode: string, verse: number): MorphWord[] | null {
+  if (!morphOn.value) return null
+  if (versionCode !== 'wlc' && versionCode !== 'sblgnt') return null
+  return morphology.value[verse] || null
+}
+
+async function loadMorphology() {
+  morphology.value = {}
+  try {
+    const data = await $fetch<{ available: boolean; verses: Record<number, MorphWord[]> }>(
+      '/api/scripture/morphology',
+      { query: { book: bookCode.value, chapter: chapterNum.value } },
+    )
+    if (data.available) morphology.value = data.verses
+  } catch {
+    // 沒有分析檔就照舊印整節原文，不是錯誤。
+  }
+}
 
 // ── Columns: each = { label, category, versionCode }
 type ColCategory = 'chinese' | 'english' | 'source'

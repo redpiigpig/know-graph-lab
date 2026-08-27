@@ -40,6 +40,18 @@
           </div>
         </div>
 
+        <div class="mt-5 flex items-center gap-2">
+          <span class="text-xs text-gray-400">計數方式</span>
+          <button v-for="m in ['絕對次數', '每萬字']" :key="m" @click="mode = m"
+            :class="['px-2.5 py-1 rounded-full text-xs border transition',
+                     mode === m ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400']">
+            {{ m }}
+          </button>
+          <span class="text-xs text-gray-400">
+            各語料規模差到兩個數量級，橫向比較請用「每萬字」
+          </span>
+        </div>
+
         <p v-if="!selected.length" class="py-16 text-center text-sm text-gray-400">選一個以上的詞，看它在各語料的逐年分布。</p>
 
         <!-- 年表 -->
@@ -57,7 +69,7 @@
                     :y="170 - barH(t, c, y)"
                     :width="26 / corporaWithData(t).length" :height="barH(t, c, y)"
                     :fill="sideColor(c)" :opacity="0.55 + 0.45 * (ci % 2)">
-                    <title>{{ corpora[c].name }} {{ y }}：{{ count(t, c, y) }} 次</title>
+                    <title>{{ corpora[c].name }} {{ y }}：{{ fmt(count(t, c, y)) }}</title>
                   </rect>
                 </g>
                 <text :x="i * 34 + 19" y="179" text-anchor="middle" class="fill-gray-400" style="font-size:9px">
@@ -73,7 +85,7 @@
             <span v-for="c in corporaWithData(t)" :key="c"
               class="text-xs px-2 py-1 rounded-lg border" :style="{ borderColor: sideColor(c) }">
               <span :style="{ color: sideColor(c) }">{{ corpora[c].name }}</span>
-              <span class="text-gray-500 ml-1">{{ corpusTotal(t, c).toLocaleString() }} 次</span>
+              <span class="text-gray-500 ml-1">{{ fmt(corpusTotal(t, c)) }} {{ mode === '每萬字' ? '／萬字' : '次' }}</span>
             </span>
           </div>
 
@@ -101,7 +113,7 @@ import { ref, computed, onMounted } from 'vue';
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '語料層：關鍵詞年表 — 論文資料整理' });
 
-interface CorpusMeta { name: string; side: string; docs: number }
+interface CorpusMeta { name: string; side: string; docs: number; chars: number; charsByYear: Record<string, number> }
 interface Sample { docId: string; year: string; title: string; text: string }
 type ByCorpusYear = Record<string, Record<string, number>>;
 
@@ -123,13 +135,29 @@ function toggleTerm(t: string) {
     : [...selected.value, t];
 }
 
+const mode = ref('絕對次數');
 const sum = (o?: Record<string, number>) => Object.values(o ?? {}).reduce((s, n) => s + n, 0);
+
+// 每萬字：以該語料（或該語料該年）的總字數為分母，讓不同規模的語料可比
+function per10k(raw: number, c: string, y?: string) {
+  const meta = corpora.value[c];
+  const base = y === undefined ? meta?.chars ?? 0 : meta?.charsByYear?.[y] ?? 0;
+  return base ? (raw / base) * 10000 : 0;
+}
+const fmt = (n: number) => (mode.value === '每萬字' ? n.toFixed(2) : Math.round(n).toLocaleString());
 const totalFor = (t: string) => Object.values(counts.value[t] ?? {}).reduce((s, y) => s + sum(y), 0);
 const docsFor = (t: string) => Object.values(docCounts.value[t] ?? {}).reduce((s, y) => s + sum(y), 0);
 const hasData = (t: string) => totalFor(t) > 0;
-const corpusTotal = (t: string, c: string) => sum(counts.value[t]?.[c]);
-const corporaWithData = (t: string) => Object.keys(counts.value[t] ?? {}).filter(c => corpusTotal(t, c) > 0);
-const count = (t: string, c: string, y: string) => counts.value[t]?.[c]?.[y] ?? 0;
+function corpusTotal(t: string, c: string) {
+  const raw = sum(counts.value[t]?.[c]);
+  return mode.value === '每萬字' ? per10k(raw, c) : raw;
+}
+const corpusRaw = (t: string, c: string) => sum(counts.value[t]?.[c]);
+const corporaWithData = (t: string) => Object.keys(counts.value[t] ?? {}).filter(c => corpusRaw(t, c) > 0);
+function count(t: string, c: string, y: string) {
+  const raw = counts.value[t]?.[c]?.[y] ?? 0;
+  return mode.value === '每萬字' ? per10k(raw, c, y) : raw;
+}
 
 // 沒有年份的篇目歸在 "" 桶，年表不畫它
 function years(t: string) {
