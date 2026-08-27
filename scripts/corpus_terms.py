@@ -147,6 +147,13 @@ def iter_mukyokai():
     return _iter_txt("mukyokai-fulltext", meta)
 
 
+def iter_nonchurch():
+    meta = {}
+    for r in _load_index("mukyokai/nonchurch-index.json"):
+        meta[r["textKey"]] = {"year": "", "title": f"第{r['issue']}期 {r['title']}"}
+    return _iter_txt("mukyokai-fulltext/nonchurch", meta)
+
+
 CORPORA = {
     "tcnn": {"name": "台灣教會公報新聞網", "side": "基督教", "iter": iter_tcnn},
     "new-messenger": {"name": "新使者", "side": "基督教", "iter": iter_new_messenger},
@@ -157,6 +164,7 @@ CORPORA = {
     "pct-documents": {"name": "長老教會總會文獻", "side": "基督教", "iter": iter_pct_documents},
     "laijohn": {"name": "本土信徒傳記", "side": "基督教", "iter": iter_laijohn},
     "mukyokai": {"name": "無教會研究", "side": "基督教", "iter": iter_mukyokai},
+    "nonchurch": {"name": "無境界者", "side": "基督教", "iter": iter_nonchurch},
 }
 
 
