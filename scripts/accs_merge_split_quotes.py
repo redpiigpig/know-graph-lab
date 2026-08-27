@@ -38,6 +38,11 @@ import translate_ebook_to_zh as te
 TABLE = 'accs_commentary'
 BACKUP_DIR = Path('c:/tmp/accs_rows_backup')
 ENDCH = set('。！？」』）.!?')
+# ACCS 的引文以出處收尾（《作品》＋節號），不是句號。少了這一條會把「已經結束的
+# 引文」誤判成「話還沒說完」，跟下一則獨立引文合在一起——2026-08-28 就這樣合錯 4 對
+# （例：…《羅馬書講道集》11 ‖ 屈梭多模：不可為自己攫取…），已回復。
+import re as _re
+ENDS_CITATION = _re.compile(r'》[\d.、,，\s]*$')
 
 
 def fetch_all() -> list[dict]:
@@ -80,6 +85,8 @@ def find_pairs(rows: list[dict]) -> list[tuple[dict, dict]]:
         tail = (a['body_zh'] or '').rstrip()
         if tail and tail[-1] in ENDCH:
             continue
+        if ENDS_CITATION.search(tail):
+            continue                      # 以出處收尾＝這則引文已經結束
         out.append((a, b))
     return out
 
