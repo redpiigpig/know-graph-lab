@@ -28,6 +28,30 @@ NAME = {
 }
 
 
+def _range_pages(spec: str) -> int:
+    """把 "43-300,412" 這種頁碼字串算成頁數。"""
+    n = 0
+    for part in spec.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        if "-" in part:
+            a, b = part.split("-", 1)
+            n += int(b) - int(a) + 1
+        else:
+            n += 1
+    return n
+
+
+def _marker_pages(marker: Path) -> int | None:
+    """.done 的內容是 "N pages"；讀不出數字就回 None（當成無法判斷，照舊跳過）。"""
+    try:
+        head = marker.read_text(encoding="utf-8").strip().split()[0]
+        return int(head)
+    except (OSError, ValueError, IndexError):
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", default="gemini", choices=["gemini", "sonnet", "haiku"])
@@ -63,9 +87,20 @@ def main():
             done_marker = (Path("c:/tmp" if sys.platform == "win32" else "/tmp")
                            / f"accs_{book}_{Path(vol['pdf']).stem}.raw.done")
             if done_marker.exists():
-                print(f"  [skip] {book} 全卷已完成 → 跳過"
-                      f"（要重做請刪 {done_marker.name}）", flush=True)
-                continue
+                # .done 只代表「寫檔當時的 --pages 都跑完了」。範圍後來被改寬（定界
+                # 修正、合刊重切）時，舊標記就變成謊報，而只看檔案在不在會讓那一卷
+                # 永遠跳過。2026-08-27 雅歌就是這樣：設定 120 頁、標記只記 36 頁，
+                # 卻照樣被當成完成，DB 只有 2/8 章。所以要對頁數。
+                recorded = _marker_pages(done_marker)
+                want = _range_pages(rng["pages"])
+                if recorded is not None and recorded < want:
+                    print(f"  [stale] {book} 標記只記 {recorded} 頁、設定要 {want} 頁"
+                          f" → 標記過期，重跑補齊", flush=True)
+                    done_marker.unlink()
+                else:
+                    print(f"  [skip] {book} 全卷已完成 → 跳過"
+                          f"（要重做請刪 {done_marker.name}）", flush=True)
+                    continue
             print(f"\n=== {book}  {rng['pages']}  {os.path.basename(vol['pdf'])} ===", flush=True)
             # 來源在 Google Drive 虛擬磁碟（G:）上，Drive 崩潰／重連時整個磁碟會消失。
             # 沒這道預檢，PyMuPDF 會對每一頁噴 "page not in document"，一卷燒掉幾百頁
