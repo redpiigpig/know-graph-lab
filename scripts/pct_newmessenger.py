@@ -22,6 +22,7 @@ import json
 import re
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 
 import requests
@@ -140,6 +141,25 @@ def parse_article(html: str):
     return column, clean(title_el.get_text(" ")) if title_el else "", first("td.title1"), body
 
 
+ISSUE_DATE_RE = re.compile(r"發行日期[：:]\s*(\d{4})/(\d{1,2})/(\d{1,2})")
+
+
+def parse_issue_date(html: str) -> str:
+    """文章頁上有「發行日期：1997/12/10」——期別的出刊日只在這裡，
+    是語料層替新使者排年表唯一的來源（目次頁與 index 都沒有）。
+
+    站方偶有佔位值（第199期填 1900/01/01），落在刊物存續區間外的一律當無效——
+    這種值進了年表會在 1900 年憑空長出一根柱子，比沒有日期更糟。
+    """
+    m = ISSUE_DATE_RE.search(re.sub(r"<[^>]+>", " ", html))
+    if not m:
+        return ""
+    year = int(m.group(1))
+    if not 1990 <= year <= datetime.now().year + 1:   # 新使者 1990 創刊
+        return ""
+    return f"{year}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+
+
 def parse_issue_title(html: str, isid: int) -> str:
     """文章頁的麵包屑帶著期名（「第43期 世紀末的文化現象」），目次頁反而沒有。"""
     soup = BeautifulSoup(html, "html.parser")
@@ -190,6 +210,8 @@ def process(limit=0):
                 html = get(article_url(it["issue"], art["magid"]))
                 if not it.get("title"):
                     it["title"] = parse_issue_title(html, it["issue"])
+                if not it.get("date"):
+                    it["date"] = parse_issue_date(html)
                 col, title, author, body = parse_article(html)
                 if len(body) < 200:      # 只有連結沒有正文的條目
                     skip += 1
@@ -232,7 +254,8 @@ def publish():
                 "source": article_url(it["issue"], a["magid"]),
             })
         if arts:
-            out.append({"issue": str(it["issue"]), "title": it["title"], "articles": arts})
+            out.append({"issue": str(it["issue"]), "title": it["title"],
+                        "date": it.get("date", ""), "articles": arts})
     INDEX_OUT.parent.mkdir(parents=True, exist_ok=True)
     INDEX_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(out)} 期 / {sum(len(x['articles']) for x in out)} 篇 → {INDEX_OUT}")

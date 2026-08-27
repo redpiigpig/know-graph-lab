@@ -86,8 +86,9 @@ def iter_miaoxin():
 def iter_new_messenger():
     meta = {}
     for issue in _load_index("pct/new-messenger-index.json"):
+        year = (issue.get("date") or "")[:4]      # 期別出刊日，站方「發行日期」欄
         for a in issue["articles"]:
-            meta[a["textKey"]] = {"year": "", "title": a["title"]}
+            meta[a["textKey"]] = {"year": year, "title": a["title"]}
     return _iter_txt("pct-fulltext/new-messenger", meta)
 
 
