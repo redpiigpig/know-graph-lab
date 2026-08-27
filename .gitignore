@@ -49,6 +49,12 @@ z-library_獵表*.txt
 /.agents/
 /_whisper_venv/
 
+# 背景艦隊的 runtime state（pid／lock／pause 旗標）：程序自己寫，每次執行都變，
+# 對別的機器毫無意義。進度 checkpoint 與品質帳本（*.json / *.jsonl）仍然追蹤。
+/scripts/state/*.pid
+/scripts/state/*.lock
+/scripts/state/*.pause.*
+
 # Nuxt
 .nuxt
 .output

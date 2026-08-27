@@ -1,5 +1,0 @@
-paused_at=2026-08-09T14:01:00+08:00
-reason=Gemini returned repeated 429 while requesting ACCS John pages 457-460; exited immediately with code 2
-checkpoint=accs_jhn_古代基督信仰聖經註釋叢書43約翰福音1-10x.raw.jsonl covered 468/652
-last_effective_increment=12 pages via Codex vision (457-468); Gemini remains paused
-resume_policy=do not retry until Gemini quota/rate limit is confirmed available
