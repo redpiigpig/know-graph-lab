@@ -229,3 +229,7 @@ output/source-cache/original-readers/latin-full/sigao-cache.json
 # The manifest is tracked so the clip list and checksums stay reviewable.
 output/original-readers/audio/latin/*.mp3
 output/original-readers/audio/latin/*.wav
+
+# 青空文庫下載的原文與全站書目（可重抓，不進版控；manifest 留著）
+output/source-cache/original-readers/japanese-full/aozora/texts/
+output/source-cache/original-readers/japanese-full/aozora/index.json

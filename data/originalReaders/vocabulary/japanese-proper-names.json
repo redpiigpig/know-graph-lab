@@ -1,0 +1,480 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "《大家的日本語》詞表裡的專名，不佔課內詞額，進附錄專名表。",
+  "count": 38,
+  "items": [
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "アメリカ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 32,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "イギリス",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 33,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "インド",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 34,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "インドネシア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3,
+        2
+      ],
+      "ordinal": 35,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "かんこく",
+      "kanji": "韓国",
+      "accentBreaks": [
+        1,
+        3,
+        4
+      ],
+      "ordinal": 36,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "タイ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        1
+      ],
+      "ordinal": 37,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "ちゅうごく",
+      "kanji": "中国",
+      "accentBreaks": [
+        2,
+        3,
+        4
+      ],
+      "ordinal": 38,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "ドイツ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 39,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "フランス",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 40,
+      "category": "國名"
+    },
+    {
+      "lesson": 1,
+      "step": 2,
+      "kana": "ブラジル",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 41,
+      "category": "國名"
+    },
+    {
+      "lesson": 3,
+      "step": 2,
+      "kana": "イタリア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 43,
+      "category": "國名"
+    },
+    {
+      "lesson": 3,
+      "step": 2,
+      "kana": "スイス",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 44,
+      "category": "國名"
+    },
+    {
+      "lesson": 4,
+      "step": 2,
+      "kana": "ニューヨーク",
+      "kanji": "",
+      "accentBreaks": [
+        2,
+        2,
+        2
+      ],
+      "ordinal": 53,
+      "category": "都市"
+    },
+    {
+      "lesson": 4,
+      "step": 2,
+      "kana": "ロンドン",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 55,
+      "category": "都市"
+    },
+    {
+      "lesson": 4,
+      "step": 2,
+      "kana": "バンコク",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 56,
+      "category": "都市"
+    },
+    {
+      "lesson": 4,
+      "step": 2,
+      "kana": "ロサンゼルス",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3,
+        2
+      ],
+      "ordinal": 57,
+      "category": "都市"
+    },
+    {
+      "lesson": 6,
+      "step": 2,
+      "kana": "メキシコ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 49,
+      "category": "國名"
+    },
+    {
+      "lesson": 7,
+      "step": 2,
+      "kana": "ヨーロッパ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2,
+        2
+      ],
+      "ordinal": 46,
+      "category": "地域"
+    },
+    {
+      "lesson": 7,
+      "step": 2,
+      "kana": "スペイン",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        1,
+        2
+      ],
+      "ordinal": 47,
+      "category": "國名"
+    },
+    {
+      "lesson": 11,
+      "step": 2,
+      "kana": "オーストラリア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        4,
+        2
+      ],
+      "ordinal": 45,
+      "category": "國名"
+    },
+    {
+      "lesson": 12,
+      "step": 2,
+      "kana": "シンガポール",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3,
+        2
+      ],
+      "ordinal": 45,
+      "category": "國名"
+    },
+    {
+      "lesson": 13,
+      "step": 2,
+      "kana": "ロシア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 40,
+      "category": "國名"
+    },
+    {
+      "lesson": 16,
+      "step": 2,
+      "kana": "ベトナム",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 46,
+      "category": "國名"
+    },
+    {
+      "lesson": 16,
+      "step": 2,
+      "kana": "アジア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 47,
+      "category": "地域"
+    },
+    {
+      "lesson": 35,
+      "step": 1,
+      "kana": "アフリカ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3
+      ],
+      "ordinal": 22,
+      "category": "地域"
+    },
+    {
+      "lesson": 36,
+      "step": 2,
+      "kana": "ショパン",
+      "kanji": "",
+      "accentBreaks": [
+        2,
+        2
+      ],
+      "ordinal": 39,
+      "category": "人名"
+    },
+    {
+      "lesson": 37,
+      "step": 2,
+      "kana": "サウジアラビア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        3,
+        3
+      ],
+      "ordinal": 36,
+      "category": "國名"
+    },
+    {
+      "lesson": 37,
+      "step": 2,
+      "kana": "ドミニカ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        1,
+        2
+      ],
+      "ordinal": 37,
+      "category": "國名"
+    },
+    {
+      "lesson": 37,
+      "step": 2,
+      "kana": "グラハム・ベル",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        5,
+        1
+      ],
+      "ordinal": 42,
+      "category": "人名"
+    },
+    {
+      "lesson": 40,
+      "step": 2,
+      "kana": "ゴッホ",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 60,
+      "category": "人名"
+    },
+    {
+      "lesson": 42,
+      "step": 2,
+      "kana": "ポーランド",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        4
+      ],
+      "ordinal": 48,
+      "category": "國名"
+    },
+    {
+      "lesson": 42,
+      "step": 2,
+      "kana": "ベートーベン",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2,
+        3
+      ],
+      "ordinal": 51,
+      "category": "人名"
+    },
+    {
+      "lesson": 47,
+      "step": 2,
+      "kana": "イラン",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        2
+      ],
+      "ordinal": 35,
+      "category": "國名"
+    },
+    {
+      "lesson": 47,
+      "step": 2,
+      "kana": "カリフォルニア",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        6
+      ],
+      "ordinal": 36,
+      "category": "地名"
+    },
+    {
+      "lesson": 47,
+      "step": 2,
+      "kana": "グアム",
+      "kanji": "",
+      "accentBreaks": [
+        1,
+        1,
+        1
+      ],
+      "ordinal": 37,
+      "category": "地名"
+    },
+    {
+      "lesson": 49,
+      "step": 2,
+      "kana": "とうきょうだいがく",
+      "kanji": "東京大学",
+      "accentBreaks": [
+        1,
+        5,
+        3,
+        6
+      ],
+      "ordinal": 38,
+      "category": "機構"
+    },
+    {
+      "lesson": 50,
+      "step": 2,
+      "kana": "ミュンヘン",
+      "kanji": "",
+      "accentBreaks": [
+        2,
+        3
+      ],
+      "ordinal": 41,
+      "category": "都市"
+    },
+    {
+      "lesson": 50,
+      "step": 2,
+      "kana": "えどとうきょうはくぶつかん",
+      "kanji": "江戸東京博物館",
+      "accentBreaks": [
+        1,
+        10,
+        2
+      ],
+      "ordinal": 42,
+      "category": "機構"
+    }
+  ]
+}
