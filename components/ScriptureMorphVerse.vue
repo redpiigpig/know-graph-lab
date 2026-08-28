@@ -15,10 +15,16 @@
           dir="ltr"
         >
           <span class="block font-semibold text-stone-900" :class="[scriptClass, language === 'hbo' ? 'text-2xl leading-relaxed' : 'text-lg']">{{ word.lemma }}</span>
-          <span class="mt-0.5 block text-xs text-stone-500">
-            {{ word.pos }}<template v-if="word.parsing"> · {{ word.parsing }}</template>
-            <template v-if="word.strong"> · {{ word.strong }}</template>
+          <span v-if="word.features?.length" class="mt-1.5 grid grid-cols-[3.5rem_1fr] gap-x-2 gap-y-0.5 text-xs">
+            <template v-for="(item, position) in word.features" :key="position">
+              <span class="text-stone-400">{{ item.label }}</span>
+              <span class="font-medium text-stone-700">{{ item.value }}</span>
+            </template>
           </span>
+          <span v-else class="mt-0.5 block text-xs text-stone-500">
+            {{ word.pos }}<template v-if="word.parsing"> · {{ word.parsing }}</template>
+          </span>
+          <span v-if="word.strong" class="mt-1 block text-[11px] text-stone-400">{{ word.strong }}</span>
           <span v-if="word.zh" class="mt-1 block break-words text-stone-800">{{ word.zh }}</span>
           <span v-else class="mt-1 block text-stone-400">（本站尚未收錄此字的中文詞義）</span>
           <span v-if="word.en" class="mt-0.5 block break-words text-xs text-stone-500">{{ word.en }}</span>
@@ -36,6 +42,7 @@ interface MorphWord {
   strong?: string;
   pos: string;
   parsing: string;
+  features?: { label: string; value: string }[];
   zh?: string;
   en?: string;
 }

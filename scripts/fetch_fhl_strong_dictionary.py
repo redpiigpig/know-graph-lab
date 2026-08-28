@@ -84,8 +84,19 @@ def greek_numbers() -> list[str]:
     somewhere else: the reader's 2,000-word vocabulary carries both.
     """
 
-    path = ROOT / "output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json"
     numbers: set[str] = set()
+    # 詞位→Strong 對照表（scripts/fetch_fhl_greek_strongs.py）涵蓋整本新約，
+    # 讀本詞表只涵蓋它自己教的兩千詞——只查後者，字典就只補得到已經有中文的
+    # 那一批，等於白查。
+    bridge = ROOT / "output/source-cache/scripture/greek-lemma-strong.json"
+    if bridge.exists():
+        numbers.update(
+            f"{int(value):05d}"
+            for value in json.loads(bridge.read_text(encoding="utf-8"))["lemmas"].values()
+            if str(value).isdigit()
+        )
+
+    path = ROOT / "output/source-cache/original-readers/greek-full/greek-reader-two-volumes.json"
     if path.exists():
         master = json.loads(path.read_text(encoding="utf-8"))
         for volume in master["volumes"]:

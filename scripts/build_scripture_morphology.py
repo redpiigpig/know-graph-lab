@@ -54,20 +54,33 @@ GREEK_GENDER = {"M": "陽性", "F": "陰性", "N": "中性"}
 GREEK_DEGREE = {"C": "比較級", "S": "最高級"}
 
 
-def greek_parsing(code: str) -> str:
-    """MorphGNT's eight characters, read left to right, in Chinese."""
+GREEK_SLOTS = [
+    (0, "人稱", GREEK_PERSON), (1, "時態", GREEK_TENSE), (2, "語態", GREEK_VOICE),
+    (3, "語氣", GREEK_MOOD), (4, "格", GREEK_CASE), (5, "數", GREEK_NUMBER),
+    (6, "性", GREEK_GENDER), (7, "級", GREEK_DEGREE),
+]
 
-    slots = [
-        (0, GREEK_PERSON), (1, GREEK_TENSE), (2, GREEK_VOICE), (3, GREEK_MOOD),
-        (4, GREEK_CASE), (5, GREEK_NUMBER), (6, GREEK_GENDER), (7, GREEK_DEGREE),
-    ]
-    parts = []
-    for index, table in slots:
+
+def greek_features(code: str) -> list[dict]:
+    """MorphGNT 的八格，一格一列，帶欄名。
+
+    原本只回傳「主格單數陰性」這樣一串——讀得懂的人才讀得懂。使用者要的是
+    每一項都寫出來：格是格、數是數、性是性。
+    """
+
+    rows = []
+    for index, label, table in GREEK_SLOTS:
         if index < len(code):
-            label = table.get(code[index])
-            if label:
-                parts.append(label)
-    return "".join(parts)
+            value = table.get(code[index])
+            if value:
+                rows.append({"label": label, "value": value})
+    return rows
+
+
+def greek_parsing(code: str) -> str:
+    """同樣的內容串成一行，給不想展開的地方用。"""
+
+    return "".join(item["value"] for item in greek_features(code))
 
 
 def greek_books() -> dict[str, list[dict]]:
@@ -99,6 +112,8 @@ def greek_books() -> dict[str, list[dict]]:
                     "lemma": lemma,
                     "pos": GREEK_POS.get(pos, pos),
                     "parsing": greek_parsing(parse),
+                    "features": [{"label": "詞性", "value": GREEK_POS.get(pos, pos)}]
+                    + greek_features(parse),
                     "code": parse,
                 }
             )
@@ -129,6 +144,77 @@ HEBREW_PARTICLE = {
     "a": "感嘆詞", "d": "定冠詞", "e": "疑問詞", "i": "間投詞",
     "j": "指示詞", "m": "指示詞", "n": "否定詞", "o": "受詞記號", "r": "關係詞",
 }
+
+
+PREFIX_PARTS = {"R": "介系詞", "C": "連接詞", "T": "冠詞／質詞"}
+
+
+def hebrew_features(segments: list[str]) -> list[dict]:
+    """OSHB 的碼，一項一列，帶欄名。
+
+    希伯來一個「字」常是好幾個語素：介系詞＋冠詞＋名詞＋人稱詞尾。所以前綴與
+    詞尾各自列出來，實詞的語幹、時態、人稱、性、數、狀態再逐項列——使用者要的
+    是「詞性、格、性、數」都寫出來，不是一串看得懂才看得懂的黏著標記。
+    """
+
+    rows: list[dict] = []
+    head_seen = False
+    for segment in segments:
+        if not segment:
+            continue
+        part = segment[0]
+        rest = segment[1:]
+        if part in PREFIX_PARTS and not head_seen:
+            rows.append({"label": "前綴", "value": HEBREW_PARTICLE.get(rest[:1], PREFIX_PARTS[part])})
+            continue
+        if part == "S":
+            # 跳過類別碼（p 代名詞／d 指示／h 冠詞）再讀人稱性數。
+            body = rest[1:] if rest[:1] in ("p", "d", "h") else rest
+            rows.append({"label": "詞尾", "value": _affix(body) or "人稱詞尾"})
+            continue
+        head_seen = True
+        rows.append({"label": "詞性", "value": HEBREW_PART.get(part, part)})
+        if part == "V":
+            if rest[:1] in HEBREW_STEM:
+                rows.append({"label": "語幹", "value": HEBREW_STEM[rest[:1]]})
+            if rest[1:2] in HEBREW_ASPECT:
+                rows.append({"label": "時態", "value": HEBREW_ASPECT[rest[1:2]]})
+            # 限定動詞是人稱性數；分詞與不定詞是性數狀態。
+            finite = rest[1:2] not in ("r", "s", "a", "c")
+            rows.extend(_named(rest[2:], ("人稱", "性", "數") if finite else ("性", "數", "狀態")))
+        elif part == "N":
+            if rest[:1] in ("g", "p"):
+                rows.append({"label": "類別", "value": "專有名詞"})
+            rows.extend(_named(rest[1:], ("性", "數", "狀態")))
+        elif part == "T":
+            rows.append({"label": "類別", "value": HEBREW_PARTICLE.get(rest[:1], "質詞")})
+        else:
+            rows.extend(_named(rest, ("人稱", "性", "數")))
+    return rows
+
+
+def _named(code: str, labels: tuple[str, ...]) -> list[dict]:
+    """按位置讀，不要按查表順序讀。
+
+    OSHB 的碼是定位的：名詞是「性數狀態」，限定動詞是「人稱性數」。若改成
+    「哪張表查得到就算哪一項」，`Ncmsc` 末尾的 c 會先在性別表裡命中「通性」，
+    於是 בְּנוֹ 印成「陽性單數通性」——實際上那個 c 是附屬式。
+    """
+
+    tables = {
+        "人稱": HEBREW_PERSON, "性": HEBREW_GENDER,
+        "數": HEBREW_NUMBER, "狀態": HEBREW_STATE,
+    }
+    rows = []
+    for char, label in zip(code, labels):
+        value = tables[label].get(char)
+        if value:
+            rows.append({"label": label, "value": value})
+    return rows
+
+
+def _affix(code: str) -> str:
+    return "".join(item["value"] for item in _named(code, ("人稱", "性", "數")))
 
 
 def hebrew_segment(code: str) -> str:
@@ -219,12 +305,23 @@ def hebrew_books() -> dict[str, list[dict]]:
                         "parsing": "＋".join(
                             label for label in (hebrew_segment(s) for s in segments) if label
                         ),
+                        "features": hebrew_features(segments),
                         "code": morph,
                     }
                 )
             if words:
                 verses[ref] = words
     return verses
+
+
+def fold(text: str) -> str:
+    """比對希臘詞位時把重音折掉：兩邊的送氣與重音標法不一致。"""
+
+    import unicodedata
+
+    return "".join(
+        c for c in unicodedata.normalize("NFD", text) if not unicodedata.combining(c)
+    ).lower()
 
 
 def glossary() -> tuple[dict[str, dict], dict[str, dict], dict[str, dict]]:
@@ -283,6 +380,11 @@ def split_by_book(language: str, verses: dict[str, list[dict]]) -> None:
     """One file per book, so a chapter view loads a megabyte and not sixty."""
 
     greek_gloss, hebrew_gloss, fhl = glossary()
+    strong_path = ROOT / "output/source-cache/scripture/greek-lemma-strong.json"
+    greek_strongs = (
+        json.loads(strong_path.read_text(encoding="utf-8"))["lemmas"]
+        if strong_path.exists() else {}
+    )
     books: dict[str, dict[str, list[dict]]] = {}
     glossed = 0
     for ref, words in verses.items():
@@ -303,7 +405,12 @@ def split_by_book(language: str, verses: dict[str, list[dict]]) -> None:
             # 覆核過的詞義沒有這一個字，才查信望愛字典。
             strong = word.get("strong") or ""
             if not strong and language == "greek":
-                strong = (greek_gloss.get(word["lemma"]) or {}).get("strong", "")
+                # MorphGNT 標詞位不標 Strong，字典因此接不上；這張對照表就是
+                # 為了接上它建的（scripts/fetch_fhl_greek_strongs.py）。
+                number = greek_strongs.get(fold(word["lemma"]))
+                strong = f"G{number}" if number else ""
+                if strong:
+                    word["strong"] = strong
             key = strong if strong else ""
             if key.startswith("H"):
                 key = f"H{int(key[1:]):05d}" if key[1:].isdigit() else key
