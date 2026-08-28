@@ -136,6 +136,19 @@ def test_lotus_chapter_map_has_two_divergences_not_one():
     assert cmap[27] == 22, "梵 27 囑累 → 漢 22（羅什移到前面）"
 
 
+def test_vimalakirti_map_is_two_merges_not_an_offset():
+    """維摩詰梵 12 品 vs 羅什 14 品，差異是**兩處合品**不是位移 ——
+    依梵本尾題判定：梵 3「遣聲聞菩薩問疾」＝漢 3 弟子＋4 菩薩、
+    梵 12「結勸囑累」＝漢 13 法供養＋14 囑累。
+    故漢 4 與漢 14 沒有獨立梵文可掛，那是實情不是漏做。"""
+    e = next(x for x in ts.REGISTRY if x["work"] == "T0475")
+    cmap = e["chapter_map"]
+    assert len(cmap) == 12
+    assert cmap[3] == 3 and cmap[4] == 5, "梵 4 應對到漢 5（漢 4 併在梵 3 裡）"
+    assert cmap[11] == 12 and cmap[12] == 13, "梵 12 對到漢 13（漢 14 併在其中）"
+    assert 4 not in cmap.values() and 14 not in cmap.values()
+
+
 def test_registry_entries_are_wellformed():
     for e in ts.REGISTRY:
         assert e["form"] in ("chapter", "chapter.verse", "regex", "none"), e["zh"]

@@ -116,17 +116,28 @@ REGISTRY: list[dict] = [
      "note": "漢譯四十卷本為單一品（入法界品），梵本亦不另分品"},
 
     # ── 經集部 ──
+    # 梵本 12 品 vs 羅什 14 品。對應不是位移，是**兩處合品**，
+    # 依梵本各品尾題（colophon）判定，非憑記憶：
+    #   梵 3 śrāvakabodhisatvavisarjanapraśna「遣聲聞菩薩問疾」＝漢 3 弟子品＋4 菩薩品
+    #   梵12 nigamanaparīndanā「結勸囑累」        ＝漢13 法供養品＋14 囑累品
+    # 故漢 4 與漢 14 沒有獨立的梵文可掛（併在梵 3、梵 12 裡），那是實情不是漏做。
     {"file": "sa_vimalakIrtinirdeza", "work": "T0475",
      "zh": "維摩詰所說經", "sa": "Vimalakīrtinirdeśa", "siglum": "Vkn",
      "form": "chapter.verse",
-     "note": "梵本 12 品、羅什譯 14 品 —— 品數不同，需手寫 chapter_map"},
+     "chapter_map": {1: 1, 2: 2, 3: 3, 4: 5, 5: 6, 6: 7,
+                     7: 8, 8: 9, 9: 10, 10: 11, 11: 12, 12: 13},
+     "note": "梵 12 品、羅什 14 品；梵 3 含漢 3+4、梵 12 含漢 13+14（依梵本尾題判定）"},
     {"file": "sa_vajracchedikA-prajJApAramitA", "work": "T0235",
      "zh": "金剛般若波羅蜜經", "sa": "Vajracchedikā Prajñāpāramitā",
      "siglum": "", "form": "none",
      "note": "梵本不分品（Vaidya 本只有頁碼）；漢譯的三十二分是昭明太子後加"},
+    # 梵本品號有跳號（解出 1,2,4,5,6,7,8,9,13,14,15,17,19,20,21，缺 3/10–12/16/18），
+    # 且梵本 21 品、曇無讖譯 19 品、義淨譯 31 品，三者分品各不相同。
+    # 要對得先做真正的文獻學比對，不是調參數 —— 暫由閘擋下。
     {"file": "sa_suvarNaprabhAsasUtra", "work": "T0663",
      "zh": "金光明經", "sa": "Suvarṇaprabhāsasūtra", "siglum": "Suv",
-     "form": "chapter"},
+     "form": "chapter",
+     "note": "梵本品號跳號且梵漢分品互異，待文獻學比對後才能手寫 chapter_map"},
 
     # ── 尚無可靠章節標記，退回整部層級 ──
     {"file": "sa_azvaghoSa-buddhacarita", "work": "T0192",
