@@ -41,6 +41,42 @@ INDEX = CACHE / "index.json"
 TEXTS = CACHE / "texts"
 MANIFEST = CACHE / "manifest.json"
 
+# 收哪些人，寫在這裡而不是散在一次性的指令裡——第一冊需要現代假名遣的宗教學
+# 散文，而青空文庫裡這一類的作者比第一輪想的多。全部卒於 1967 年前。
+AUTHORS = [
+    # 無教會與基督教
+    "内村 鑑三", "矢内原 忠雄", "新渡戸 稲造", "植村 正久", "海老名 弾正",
+    "新島 襄", "山室 軍平", "綱島 梁川", "賀川 豊彦",
+    # 宗教學・宗教哲學
+    "姉崎 正治", "波多野 精一", "井上 円了", "井上 哲次郎", "西田 幾多郎",
+    "三木 清", "倉田 百三", "清沢 満之",
+    # 佛教
+    "鈴木 大拙", "高楠 順次郎", "高神 覚昇", "暁烏 敏",
+    # 民俗學・宗教史・東洋史
+    "柳田 国男", "折口 信夫", "和辻 哲郎", "津田 左右吉", "喜田 貞吉",
+    "白鳥 庫吉", "内藤 湖南", "南方 熊楠", "中山 太郎", "早川 孝太郎",
+    # 明治文人裡談宗教談得最多的幾位
+    "幸田 露伴", "高山 樗牛", "北村 透谷", "岡倉 覚三", "徳富 蘇峰",
+    # 日本古典（使用者 2026-08-28 追加）：讀本不能只有宗教學論文，古典本身
+    # 就是宗教史的第一手材料——記紀神話、物語、俳諧、說話、戰國人物譚。
+    # 原文與譯者分屬不同人，兩邊都要收：譯者也須卒於 1967 年前。
+    "太安 万侶",        # 古事記
+    "紫式部",           # 源氏物語
+    "鈴木 三重吉",      # 古事記物語（1936 卒）
+    "和田 万吉",        # 竹取物語ほか（1934 卒）
+    "尾崎 士郎",        # 現代語訳 平家物語（1964 卒）
+    "楠山 正雄",        # 日本の神話と昔話（1954 卒）
+    "菊池 寛",          # 武将譚・戦国人物（1948 卒）
+    "松尾 芭蕉",        # 俳諧
+    "鴨 長明",          # 方丈記
+    "兼好法師",         # 徒然草
+    "与謝野 晶子",      # 源氏物語現代語訳・和歌（1942 卒）
+    "高木 敏雄",        # 日本神話伝説の研究（1922 卒）
+    "作者不詳",         # 説話・軍記の無名テキスト
+]
+
+INDEX_URL = "https://www.aozora.gr.jp/index_pages/list_person_all_extended_utf8.zip"
+
 HEADERS = {"User-Agent": "know-graph-lab private reader build (contact: redpiigpig)"}
 
 RUBY = re.compile(r"《[^》]*》")
@@ -89,13 +125,42 @@ def fetch(url: str) -> str | None:
     return raw.decode("shift_jis", "replace")
 
 
+def build_index() -> list[dict]:
+    """青空文庫的全站書目，濾出 AUTHORS 這幾位。
+
+    書目本身是一個 2 MB 的壓縮 CSV，抓一次存下來；作者名單改了就重抓。
+    """
+
+    import csv
+    import io
+    import zipfile
+
+    request = urllib.request.Request(INDEX_URL, headers=HEADERS)
+    raw = urllib.request.urlopen(request, timeout=180).read()
+    archive = zipfile.ZipFile(io.BytesIO(raw))
+    text = archive.read(archive.namelist()[0]).decode("utf-8-sig", "replace")
+    wanted = set(AUTHORS)
+    rows = [
+        row
+        for row in csv.DictReader(io.StringIO(text))
+        if f'{row.get("姓", "")} {row.get("名", "")}'.strip() in wanted
+    ]
+    INDEX.parent.mkdir(parents=True, exist_ok=True)
+    INDEX.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--refresh-index", action="store_true", help="重抓全站書目")
     args = parser.parse_args()
 
-    rows = json.loads(INDEX.read_text(encoding="utf-8"))
+    if args.refresh_index or not INDEX.exists():
+        rows = build_index()
+    else:
+        rows = json.loads(INDEX.read_text(encoding="utf-8"))
     wanted = [r for r in rows if (r.get("テキストファイルURL") or "").strip()]
     print(f"書目 {len(rows)} 筆，其中有純文字檔的 {len(wanted)}")
     by_author: dict[str, int] = {}

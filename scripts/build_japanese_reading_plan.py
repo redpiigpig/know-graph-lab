@@ -42,6 +42,10 @@ SCRIPTURE = CACHE / "scripture/manifest.json"
 PLAN = CACHE / "reading-plan.json"
 
 PER_VOLUME = 50
+# 一冊五十課分兩軌：宗教學與宗教史一半，日本古典一半（使用者 2026-08-28 定）。
+# 古典不打宗教學用語的分數——《源氏物語》不會滿篇「宗教」二字，但它是宗教史
+# 的第一手材料。它走作者名單，分數只用來排序同一位作者的篇章。
+PER_TRACK = PER_VOLUME // 2
 MIN_CHARS, MAX_CHARS = 400, 4000
 AUTHOR_CAP = PER_VOLUME // 6
 
@@ -55,6 +59,14 @@ SUBJECT = re.compile(
 
 # 舊字舊假名／新字舊假名是第二冊要的；新字新假名是第一冊。
 MODERN = {"新字新仮名"}
+
+# 古典軌：記紀神話、物語、俳諧、說話、戰國人物譚。原文與現代語譯者都在裡面，
+# 誰譯的就算誰的一篇——譯本與原文是兩種讀物，不該互相排擠。
+CLASSICS = {
+    "太安万侶", "紫式部", "鈴木三重吉", "和田万吉", "尾崎士郎", "楠山正雄",
+    "菊池寛", "松尾芭蕉", "鴨長明", "兼好法師", "与謝野晶子", "高木敏雄",
+    "作者不詳",
+}
 
 
 def divisions(text: str) -> list[tuple[str, str]]:
@@ -127,7 +139,8 @@ def candidates(threshold: float = 1.0) -> list[dict]:
     for work_id, item in manifest.items():
         text = (ROOT / item["file"]).read_text(encoding="utf-8")
         density = score(text)
-        if density < threshold:
+        # 古典軌不看宗教學用語密度，只看長度；門檻留給宗教軌在 pick() 裡用。
+        if item["author"] not in CLASSICS and density < threshold:
             continue
         whole_ok = MIN_CHARS <= len(text) <= MAX_CHARS
         parts = [] if whole_ok else divisions(text)
@@ -163,13 +176,21 @@ def candidates(threshold: float = 1.0) -> list[dict]:
     return sorted(rows, key=lambda r: -r["score"])
 
 
-def pick(rows: list[dict], modern: bool) -> list[dict]:
-    wanted = [r for r in rows if (r["orthography"] in MODERN) == modern]
+def pick(rows: list[dict], modern: bool, *, track: str = "religion",
+         limit: int = PER_VOLUME) -> list[dict]:
+    wanted = [
+        r for r in rows
+        if (r["orthography"] in MODERN) == modern
+        and (r["author"] in CLASSICS) == (track == "classics")
+    ]
+    if track == "classics":
+        # 古典按篇幅適中優先，長短極端的先不選——一課讀完是硬條件。
+        wanted = sorted(wanted, key=lambda r: abs(r["chars"] - 1800))
     chosen: list[dict] = []
     per_author: dict[str, int] = {}
     used_works: set[str] = set()
     for row in wanted:
-        if len(chosen) >= PER_VOLUME:
+        if len(chosen) >= limit:
             break
         # 「文語訳聖書」與「佛典」是文本群不是作者，上限對它們沒有意義：
         # 五十課裡讀十章福音書是正常的，讀十篇折口不是。
@@ -200,8 +221,28 @@ def main() -> int:
     rows = sorted(candidates(args.threshold) + scripture_candidates(), key=lambda r: -r["score"])
     print(f"合格候選 {len(rows)} 筆（宗教學用語密度 ≥{args.threshold}／千字，長度 {MIN_CHARS}–{MAX_CHARS} 字）")
 
-    first = pick(rows, modern=True)
-    second = pick(rows, modern=False)
+    def volume(modern: bool) -> list[dict]:
+        """一半宗教學、一半古典；哪一軌的候選先見底，另一軌補上。
+
+        兩軌各二十五是目標不是配額：文語的古典夠不到二十五篇時，把缺額讓給
+        文語訳聖書比讓那一冊少四課好。補進來的仍然照分數排序。
+        """
+
+        religion = pick(rows, modern=modern, track="religion", limit=PER_TRACK)
+        classics = pick(rows, modern=modern, track="classics", limit=PER_TRACK)
+        short = PER_VOLUME - len(religion) - len(classics)
+        if short > 0:
+            taken = {row["workId"] for row in religion + classics}
+            extra = [
+                row for row in pick(rows, modern=modern, track="religion", limit=PER_VOLUME)
+                + pick(rows, modern=modern, track="classics", limit=PER_VOLUME)
+                if row["workId"] not in taken
+            ]
+            religion = religion + extra[:short]
+        return religion + classics
+
+    first = volume(True)
+    second = volume(False)
     for label, chosen in (("第一冊・現代語", first), ("第二冊・文語舊假名", second)):
         by_author: dict[str, int] = {}
         for row in chosen:
