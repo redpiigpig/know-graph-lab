@@ -524,7 +524,10 @@ function textClassFor(code: string) {
   // 這裡回傳的字級會蓋掉欄位預設的 text-sm。
   const v = versions.value?.find(x => x.code === code)
   if (!v) return 'text-lg leading-loose'
-  if (v.language === 'hbo') return 'font-serif rtl-text text-right text-2xl leading-loose'
+  // 希伯來再放大一級半（2026-08-28 使用者第二次要求）：帶母音點的字形本來就
+  // 比拉丁字母密，點在字下面，字級不夠時母音點會糊成一團——那正是這本讀本
+  // 堅持保留馬所拉母音點的意義所在。
+  if (v.language === 'hbo') return 'font-serif rtl-text text-right text-4xl leading-loose'
   if (v.language === 'grc') return 'font-serif text-xl leading-loose'
   if (v.language === 'lat') return 'font-serif italic text-xl leading-loose'
   return 'text-lg leading-loose'

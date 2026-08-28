@@ -14,7 +14,7 @@
           class="absolute left-1/2 top-full z-30 mt-1 w-72 -translate-x-1/2 rounded-xl border border-stone-300 bg-white px-3 py-2 text-left text-sm leading-6 text-stone-700 shadow-xl"
           dir="ltr"
         >
-          <span class="block font-semibold text-stone-900" :class="scriptClass">{{ word.lemma }}</span>
+          <span class="block font-semibold text-stone-900" :class="[scriptClass, language === 'hbo' ? 'text-2xl leading-relaxed' : 'text-lg']">{{ word.lemma }}</span>
           <span class="mt-0.5 block text-xs text-stone-500">
             {{ word.pos }}<template v-if="word.parsing"> · {{ word.parsing }}</template>
             <template v-if="word.strong"> · {{ word.strong }}</template>
