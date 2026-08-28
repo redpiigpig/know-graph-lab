@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 21",
+  "slug": "homeric-hymn-21",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg021/tlg0013.tlg021.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第21首",
+  "title_en": "Homeric Hymn 21",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "φοῖβε, σὲ μὲν καὶ κύκνος ὑπὸ πτερύγων λίγʼ ἀείδει,\nὄχθῃ ἐπιθρώσκων ποταμὸν πάρα δινήεντα,\nΠηνειόν· σὲ δʼ ἀοιδὸς ἔχων φόρμιγγα λίγειαν\nἡδυεπὴς πρῶτόν τε καὶ ὕστατον αἰὲν ἀείδει.\nκαὶ σὺ μὲν οὕτω χαῖρε, ἄναξ, ἵλαμαι δέ σʼ ἀοιδῇ.",
+      "en": "Phoebus, of you even the swan sings with clear voice to the beating of his wings, as he alights upon the bank by the eddying river Peneus; and of you the sweet-tongued minstrel, holding his high-pitched lyre, always sings both first and last. And so hail to you, lord! I seek your favor with my song.",
+      "zh": ""
+    }
+  ]
+}

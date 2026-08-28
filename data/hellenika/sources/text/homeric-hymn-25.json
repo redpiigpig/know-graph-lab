@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 25",
+  "slug": "homeric-hymn-25",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg025/tlg0013.tlg025.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第25首",
+  "title_en": "Homeric Hymn 25",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 7,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 7,
+      "greek": "μουσάων ἄρχωμαι Ἀπόλλωνός τε Διός τε·\nἐκ γὰρ Μουσάων καὶ ἑκηβόλου Ἀπόλλωνος\nἄνδρες ἀοιδοὶ ἔασιν ἐπὶ χθονὶ καὶ κιθαρισταί,\nἐκ δὲ Διὸς βασιλῆες· ὃ δʼ ὄλβιος, ὅν τινα Μοῦσαι\nφίλωνται· γλυκερή οἱ ἀπὸ στόματος ῥέει αὐδή.\nχαίρετε, τέκνα Διός, καὶ ἐμὴν τιμήσατʼ ἀοιδήν·\nαὐτὰρ ἐγὼν ὑμέων τε καὶ ἄλλης μνήσομʼ ἀοιδῆς.",
+      "en": "I will begin with the Muses and Apollo and Zeus. For it is through the Muses and Apollo that there are singers upon the earth and players upon the lyre; but kings are from Zeus. Happy is he whom the Muses love: sweet flows speech from his lips. Hail, children of Zeus! Give honor to my song! And now I will remember you and another song also.",
+      "zh": ""
+    }
+  ]
+}

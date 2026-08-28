@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 26",
+  "slug": "homeric-hymn-26",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg026/tlg0013.tlg026.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第26首",
+  "title_en": "Homeric Hymn 26",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 13,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 13,
+      "greek": "κισσοκόμην Διόνυσον ἐρίβρομον ἄρχομʼ ἀείδειν,\nΖηνὸς καὶ Σεμέλης ἐρικυδέος ἀγλαὸν υἱόν,\nὃν τρέφον ἠύκομοι Νύμφαι παρὰ πατρὸς ἄνακτος\nδεξάμεναι κόλποισι καὶ ἐνδυκέως ἀτίταλλον\nΝύσης ἐν γυάλοις· ὃ δʼ ἀέξετο πατρὸς ἕκητι\nἄντρῳ ἐν εὐώδει μεταρίθμιος ἀθανάτοισιν.\nαὐτὰρ ἐπειδὴ τόνδε θεαὶ πολύυμνον ἔθρεψαν,\nδὴ τότε φοιτίζεσκε καθʼ ὑλήεντας ἐναύλους,\nκισσῷ καὶ δάφνῃ πεπυκασμένος· αἳ δʼ ἅμʼ ἕποντο\nΝύμφαι, ὃ δʼ ἐξηγεῖτο· βρόμος δʼ ἔχεν ἄσπετον ὕλην.\nκαὶ σὺ μὲν οὕτω χαῖρε, πολυστάφυλʼ ὦ Διόνυσε·\nδὸς δʼ ἡμᾶς χαίροντας ἐς ὥρας αὖτις ἱκέσθαι,\nἐκ δʼ αὖθʼ ὡράων εἰς τοὺς πολλοὺς ἐνιαυτούς.",
+      "en": "I begin to sing of ivy-crowned Dionysus, the loud-crying god, splendid son of Zeus and glorious Semele. The rich-haired Nymphs received him in their bosoms from the lord his father and fostered and nurtured him carefully in the dells of Nysa, where by the will of his father he grew up in a sweet-smelling cave, being reckoned among the immortals. But when the goddesses had brought him up, a god oft hymned, then began he to wander continually through the woody coombes, thickly wreathed with ivy and laurel. And the Nymphs followed in his train with him for their leader; and the boundless forest was filled with their outcry. And so hail to you, Dionysus, god of abundant clusters! Grant that we may come again rejoicing to this season, and from that season onwards for many a year.",
+      "zh": ""
+    }
+  ]
+}

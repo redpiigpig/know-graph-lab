@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 31",
+  "slug": "homeric-hymn-31",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg031/tlg0013.tlg031.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第31首",
+  "title_en": "Homeric Hymn 31",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 19,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 19,
+      "greek": "ἥλιον ὑμνεῖν αὖτε Διὸς τέκος ἄρχεο Μοῦσα,\nΚαλλιόπη, φαέθοντα, τὸν Εὐρυφάεσσα βοῶπις\nγείνατο Γαίης παιδὶ καὶ Οὐρανοῦ ἀστερόεντος·\nγῆμε γὰρ Εὐρυφάεσσαν ἀγακλειτὴν Ὑπερίων,\nαὐτοκασιγνήτην, ἥ οἱ τέκε κάλλιμα τέκνα,\nἨῶ τε ῥοδόπηχυν ἐυπλόκαμόν τε Σελήνην\nἨέλιόν τʼ ἀκάμαντʼ, ἐπιείκελον ἀθανάτοισιν,\nὃς φαίνει θνητοῖσι καὶ ἀθανάτοισι θεοῖσιν\nἵπποις ἐμβεβαώς· σμερδνὸν δʼ ὅ γε δέρκεται ὄσσοις\nχρυσέης ἐκ κόρυθος· λαμπραὶ δʼ ἀκτῖνες ἀπʼ αὐτοῦ\nαἰγλῆεν στίλβουσι παρὰ κροτάφων δέ τʼ ἔθειραι\nλαμπραὶ ἀπὸ κρατὸς χαρίεν κατέχουσι πρόσωπον\nτηλαυγές· καλὸν δὲ περὶ χροῒ λάμπεται ἔσθος\nλεπτουργές, πνοιῇ ἀνέμων· ὕπο δʼ ἄρσενες ἵπποι.\nἔνθʼ ἄρʼ ὅ γε στήσας χρυσόζυγον ἅρμα καὶ ἵππους,\nθεσπέσιος πέμπῃσι διʼ οὐρανοῦ Ὠκεανόνδε.\nχαῖρε, ἄναξ, πρόφρων δὲ βίον θυμήρεʼ ὄπαζε.\nἐκ σέο δʼ ἀρξάμενος κλῄσω μερόπων γένος ἀνδρῶν\nἡμιθέων, ὧν ἔργα θεαὶ θνητοῖσιν ἔδειξαν.",
+      "en": "And now, O Muse Calliope, daughter of Zeus, begin to sing of glowing Helios whom mild-eyed Euryphaessa, the far-shining one, bare to the Son of Earth and starry Heaven. For Hyperion wedded glorious Euryphaessa, his own sister, who bare him lovely children, rosy-armed Eos and rich-tressed Selene and tireless Helios who is like the deathless gods. As he rides in his chariot, he shines upon men and deathless gods, and piercingly he gazes with his eyes from his golden helmet. Bright rays beam dazzlingly from him, and his bright locks streaming from the temples of his head gracefully enclose his far-seen face: a rich, fine-spun garment glows upon his body and flutters in the wind: and stallions carry him. Then, when he has stayed his golden-yoked chariot and horses,",
+      "zh": ""
+    }
+  ]
+}

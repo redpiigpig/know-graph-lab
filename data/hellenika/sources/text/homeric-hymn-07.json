@@ -1,0 +1,38 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 7",
+  "slug": "homeric-hymn-07",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg007/tlg0013.tlg007.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第7首",
+  "title_en": "Homeric Hymn 7",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 59,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 19,
+      "greek": "ἀμφὶ Διώνυσον, Σεμέλης ἐρικυδέος υἱόν,\nμνήσομαι, ὡς ἐφάνη παρὰ θῖν’ ἁλὸς ἀτρυγέτοιο\nἀκτῇ ἔπι προβλῆτι νεηνίῃ ἀνδρὶ ἐοικώς,\nπρωθήβῃ· καλαὶ δὲ περισσείοντο ἔθειραι,\nκυάνεαι, φᾶρος δὲ περὶ στιβαροῖς ἔχεν ὤμοις\nπορφύρεον· τάχα δ’ ἄνδρες ἐυσσέλμου ἀπὸ νηὸς\nληισταὶ προγένοντο θοῶς ἐπὶ οἴνοπα πόντον,\nΤυρσηνοί· τοὺς δ’ ἦγε κακὸς μόρος· οἳ δὲ ἰδόντες\nνεῦσαν ἐς ἀλλήλους, τάχα δ’ ἔκθορον. αἶψα δ’ ἑλόντες\nεἷσαν ἐπὶ σφετέρης νηὸς κεχαρημένοι ἦτορ.\nυἱὸν γάρ μιν ἔφαντο διοτρεφέων βασιλήων\nεἶναι καὶ δεσμοῖς ἔθελον δεῖν ἀργαλέοισι.\nτὸν δ’ οὐκ ἴσχανε δεσμά, λύγοι δ’ ἀπὸ τηλόσε πῖπτον\nχειρῶν ἠδὲ ποδῶν· ὃ δὲ μειδιάων ἐκάθητο\nὄμμασι κυανέοισι· κυβερνήτης δὲ νοήσας\nαὐτίκα οἷς ἑτάροισιν ἐκέκλετο φώνησέν τε·\nδαιμόνιοι, τίνα τόνδε θεὸν δεσμεύεθ’ ἑλόντες,\nκαρτερόν; οὐδὲ φέρειν δύναταί μιν νηῦς εὐεργής.\nἢ γὰρ Ζεὺς ὅδε γ’ ἐστὶν ἢ ἀργυρότοξος Ἀπόλλων",
+      "en": "I will tell of Dionysus, the son of glorious Semele, how he appeared on a jutting headland by the shore of the fruitless sea, seeming like a stripling in the first flush of manhood: his rich, dark hair was waving about him, and on his strong shoulders he wore a purple robe. Presently there came swiftly over the sparkling sea Tyrsenian Probably not Etruscans, but the non-Hellenic peoples of Thrace and (according to Thucydides) of Lemnos and Athens. Cp. Herodotus i. 57; Thucydides iv. 109. pirates on a well-decked ship —a miserable doom led them on. When they saw him they made signs to one another and sprang out quickly, and seizing him straightway put him on board their ship exultingly; for they thought him the son of heaven-nurtured kings. They sought to bind him with rude bonds, but the bonds would not hold him, and the withes fell far away from his hands and feet: and he sat with a smile in his dark eyes. Then the helmsman understood all and cried out at once to his fellows and said: “Madmen! what god is this whom you have taken and bind, strong that he is? Not even the well-built ship can carry him. Surely this is either Zeus or Apollo who has the silver bow,",
+      "zh": ""
+    },
+    {
+      "line_from": 20,
+      "line_to": 39,
+      "greek": "ἠὲ Ποσειδάων· ἐπεὶ οὐ θνητοῖσι βροτοῖσιν\nεἴκελος, ἀλλὰ θεοῖς, οἳ Ὀλύμπια δώματ’ ἔχουσιν.\nἀλλ’ ἄγετ’, αὐτὸν ἀφῶμεν ἐπ’ ἠπείροιο μελαίνης\nαὐτίκα· μηδ’ ἐπὶ χεῖρας ἰάλλετε, μή τι χολωθεὶς\nὄρσῃ ἔπ’ ἀργαλέους τ’ ἀνέμους καὶ λαίλαπα πολλήν.\nὫς φάτο· τὸν δ’ ἀρχὸς στυγερῷ ἠνίπαπε μύθῳ·\nδαιμόνι’, οὖρον ὅρα, ἅμα δ’ ἱστίον ἕλκεο νηὸς\nσύμπανθ’ ὅπλα λαβών· ὅδε δ’ αὖτ’ ἄνδρεσσι μελήσει.\nἔλπομαι, ἢ Αἴγυπτον ἀφίξεται ἢ ὅ γε Κύπρον\nἢ ἐς Ὑπερβορέους ἢ ἑκαστέρω· ἐς δὲ τελευτὴν\nἔκ ποτ’ ἐρεῖ αὐτοῦ τε φίλους καὶ κτήματα πάντα\nοὕς τε κασιγνήτους, ἐπεὶ ἡμῖν ἔμβαλε δαίμων.\nὣς εἰπὼν ἱστόν τε καὶ ἱστίον ἕλκετο νηός.\nἔμπνευσεν δ’ ἄνεμος μέσον ἱστίον· ἀμφὶ δ’ ἄρ’ ὅπλα\nκαττάνυσαν· τάχα δέ σφιν ἐφαίνετο θαυματὰ ἔργα.\nοἶνος μὲν πρώτιστα θοὴν ἀνὰ νῆα μέλαιναν\nἡδύποτος κελάρυζ’ εὐώδης, ὤρνυτο δ’ ὀδμὴ\nἀμβροσίη· ναύτας δὲ τάφος λάβε πάντας ἰδόντας.\nαὐτίκα δ’ ἀκρότατον παρὰ ἱστίον ἐξετανύσθη\nἄμπελος ἔνθα καὶ ἔνθα, κατεκρημνῶντο δὲ πολλοὶ",
+      "en": "or Poseidon, for he looks not like mortal men but like the gods who dwell on Olympus. Come, then, let us set him free upon the dark shore at once: do not lay hands on him, lest he grow angry and stir up dangerous winds and heavy squalls.” So said he: but the master chid him with taunting words: “Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.” When he had said this, he had mast and sail hoisted on the ship, and the wind filled the sail and the crew hauled taut the sheets on either side. But soon strange things were seen among them. First of all sweet, fragrant wine ran streaming throughout all the black ship and a heavenly smell arose, so that all the seamen were seized with amazement when they saw it. And all at once a vine spread out both ways along the top of the sail with many clusters hanging down from it,",
+      "zh": ""
+    },
+    {
+      "line_from": 40,
+      "line_to": 59,
+      "greek": "βότρυες· ἀμφ’ ἱστὸν δὲ μέλας εἱλίσσετο κισσός,\nἄνθεσι τηλεθάων, χαρίεις δ’ ἐπὶ καρπὸς ὀρώρει·\nπάντες δὲ σκαλμοὶ στεφάνους ἔχον· οἳ δὲ ἰδόντες,\nνῆ’ ἤδη τότ’ ἔπειτα κυβερνήτην ἐκέλευον\nγῇ πελάαν· ὃ δ’ ἄρα σφι λέων γένετ’ ἔνδοθι νηὸς\nδεινὸς ἐπ’ ἀκροτάτης, μέγα δ’ ἔβραχεν, ἐν δ’ ἄρα μέσσῃ\nἄρκτον ἐποίησεν λασιαύχενα, σήματα φαίνων·\nἂν δ’ ἔστη μεμαυῖα· λέων δ’ ἐπὶ σέλματος ἄκρου\nδεινὸν ὑπόδρα ἰδών· οἳ δ’ ἐς πρύμνην ἐφόβηθεν,\nἀμφὶ κυβερνήτην δὲ σαόφρονα θυμὸν ἔχοντα\nἔσταν ἄρ’ ἐκπληγέντες· ὃ δ’ ἐξαπίνης ἐπορούσας\nἀρχὸν ἕλ’, οἳ δὲ θύραζε κακὸν μόρον ἐξαλύοντες\nπάντες ὁμῶς πήδησαν, ἐπεὶ ἴδον, εἰς ἅλα δῖαν,\nδελφῖνες δ’ ἐγένοντο· κυβερνήτην δ’ ἐλεήσας\nἔσχεθε καί μιν ἔθηκε πανόλβιον εἶπέ τε μῦθον·\nθάρσει, †δῖε κάτωρ†, τῷ ἐμῷ κεχαρισμένε θυμῷ·\nεἰμὶ δ’ ἐγὼ Διόνυσος ἐρίβρομος, ὃν τέκε μήτηρ\nΚαδμηὶς Σεμέλη Διὸς ἐν φιλότητι μιγεῖσα.\nχαῖρε, τέκος Σεμέλης εὐώπιδος· οὐδέ πη ἔστι\nσεῖό γε ληθόμενον γλυκερὴν κοσμῆσαι ἀοιδήν.",
+      "en": "and a dark ivy-plant twined about the mast, blossoming with flowers, and with rich berries growing on it; and all the thole-pins were covered with garlands. When the pirates saw all this, then at last they bade the helmsman to put the ship to land. But the god changed into a dreadful lion there on the ship, in the bows, and roared loudly: amidships also he showed his wonders and created a shaggy bear which stood up ravening, while on the forepeak was the lion glaring fiercely with scowling brows. And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins. But on the helmsman Dionysus had mercy and held him back and made him altogether happy, saying to him: “Take courage, good ; you have found favour with my heart. I am loud-crying Dionysus whom Cadmus' daughter Semele bare of union with Zeus.” Hail, child of fair-faced Semele! He who forgets you can in no wise order sweet song.",
+      "zh": ""
+    }
+  ]
+}

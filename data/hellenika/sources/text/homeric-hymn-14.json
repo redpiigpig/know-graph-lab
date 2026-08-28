@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 14",
+  "slug": "homeric-hymn-14",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg014/tlg0013.tlg014.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第14首",
+  "title_en": "Homeric Hymn 14",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 6,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 6,
+      "greek": "μητέρα μοι πάντων τε θεῶν πάντων τʼ ἀνθρώπων\nὕμνει, Μοῦσα λίγεια, Διὸς θυγάτηρ μεγάλοιο,\nᾗ κροτάλων τυπάνων τʼ ἰαχὴ σύν τε βρόμος αὐλῶν\nεὔαδεν ἠδὲ λύκων κλαγγὴ χαροπῶν τε λεόντων\nοὔρεά τʼ ἠχήεντα καὶ ὑλήεντες ἔναυλοι.\nκαὶ σὺ μὲν οὕτω χαῖρε θεαί θʼ ἅμα πᾶσαι ἀοιδῇ.",
+      "en": "I Prithee, clear-voiced Muse, daughter of mighty Zeus, sing of the mother of all gods and men. She is well-pleased with the sound of rattles and of timbrels, with the voice of flutes and the outcry of wolves and bright-eyed lions, with echoing hills and wooded coombes. And so hail to you in my song and to all goddesses as well!",
+      "zh": ""
+    }
+  ]
+}

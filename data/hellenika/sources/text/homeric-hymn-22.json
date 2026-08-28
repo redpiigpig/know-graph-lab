@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 22",
+  "slug": "homeric-hymn-22",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg022/tlg0013.tlg022.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第22首",
+  "title_en": "Homeric Hymn 22",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 7,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 7,
+      "greek": "ἀμφὶ Ποσειδάωνα, μέγαν θεόν, ἄρχομʼ ἀείδειν,\nγαίης κινητῆρα καὶ ἀτρυγέτοιο θαλάσσης,\nπόντιον, ὅσθʼ Ἑλικῶνα καὶ εὐρείας ἔχει Αἰγάς.\nδιχθά τοι, Ἐννοσίγαιε, θεοὶ τιμὴν ἐδάσαντο,\nἵππων τε δμητῆρʼ ἔμεναι σωτῆρά τε νηῶν.\nχαῖρε, Ποσείδαον γαιήοχε, κυανοχαῖτα,\nκαί, μάκαρ, εὐμενὲς ἦτορ ἔχων πλώουσιν ἄρηγε.",
+      "en": "I begin to sing about Poseidon, the great god, mover of the earth and fruitless sea, god of the deep who is also lord of Helicon and wide Aegae. A two-fold office the gods allotted you, O Shaker of the Earth, to be a tamer of horses and a saviour of ships! Hail, Poseidon, Holder of the Earth, dark-haired lord! O blessed one, be kindly in heart and help those who voyage in ships!",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 23",
+  "slug": "homeric-hymn-23",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg023/tlg0013.tlg023.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第23首",
+  "title_en": "Homeric Hymn 23",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 4,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 4,
+      "greek": "Ζῆνα θεῶν τὸν ἄριστον ἀείσομαι ἠδὲ μέγιστον,\nεὐρύοπα, κρείοντα, τελεσφόρον, ὅστε Θέμιστι\nἐγκλιδὸν ἑζομένῃ πυκινοὺς ὀάρους ὀαρίζει.\nἵληθʼ, εὐρύοπα Κρονίδη, κύδιστε μέγιστε.",
+      "en": "I will sing of Zeus, chiefest among the gods and greatest, all-seeing, the lord of all, the fulfiller who whispers words of wisdom to Themis as she sits leaning towards him. Be gracious, all-seeing Son of Cronos, most excellent and great!",
+      "zh": ""
+    }
+  ]
+}

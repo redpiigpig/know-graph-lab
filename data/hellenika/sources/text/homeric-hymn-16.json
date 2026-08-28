@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 16",
+  "slug": "homeric-hymn-16",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg016/tlg0013.tlg016.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第16首",
+  "title_en": "Homeric Hymn 16",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "ἰητῆρα νόσων Ἀσκληπιὸν ἄρχομʼ ἀείδειν,\nυἱὸν Ἀπόλλωνος, τὸν ἐγείνατο δῖα Κορωνὶς\nΔωτίῳ ἐν πεδίῳ, κούρη Φλεγύου βασιλῆος,\nχάρμα μέγʼ ἀνθρώποισι, κακῶν θελκτῆρʼ ὀδυνάων.\nκαὶ σὺ μὲν οὕτω χαῖρε, ἄναξ· λίτομαι δέ σʼ ἀοιδῇ.",
+      "en": "I begin to sing of Asclepius, son of Apollo and healer of sicknesses. In the Dotian plain fair Coronis, daughter of King Phlegyas, bare him, a great joy to men, a soother of cruel pangs. And so hail to you, lord: in my song I make my prayer to thee!",
+      "zh": ""
+    }
+  ]
+}

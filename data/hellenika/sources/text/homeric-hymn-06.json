@@ -1,0 +1,31 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 6",
+  "slug": "homeric-hymn-06",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg006/tlg0013.tlg006.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第6首",
+  "title_en": "Homeric Hymn 6",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 21,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 19,
+      "greek": "αἰδοίην, χρυσοστέφανον, καλὴν Ἀφροδίτην\nᾄσομαι, ἣ πάσης Κύπρου κρήδεμνα λέλογχεν\nεἰναλίης, ὅθι μιν Ζεφύρου μένος ὑγρὸν ἀέντος\nἤνεικεν κατὰ κῦμα πολυφλοίσβοιο θαλάσσης\nἀφρῷ ἔνι μαλακῷ· τὴν δὲ χρυσάμπυκες Ὧραι\nδέξαντ’ ἀσπασίως, περὶ δ’ ἄμβροτα εἵματα ἕσσαν·\nκρατὶ δ’ ἐπ’ ἀθανάτῳ στεφάνην εὔτυκτον ἔθηκαν\nκαλήν, χρυσείην· ἐν δὲ τρητοῖσι λοβοῖσιν\nἄνθεμ’ ὀρειχάλκου χρυσοῖό τε τιμήεντος·\nδειρῇ δ’ ἀμφ’ ἁπαλῇ καὶ στήθεσιν ἀργυφέοισιν\nὅρμοισι χρυσέοισιν ἐκόσμεον, οἷσί περ αὐταὶ\nὯραι κοσμείσθην χρυσάμπυκες, ὁππότ’ ἴοιεν\nἐς χορὸν ἱμερόεντα θεῶν καὶ δώματα πατρός.\nαὐτὰρ ἐπειδὴ πάντα περὶ χροῒ κόσμον ἔθηκαν,\nἦγον ἐς ἀθανάτους· οἳ δ’ ἠσπάζοντο ἰδόντες\nχερσί τ’ ἐδεξιόωντο καὶ ἠρήσαντο ἕκαστος\nεἶναι κουριδίην ἄλοχον καὶ οἴκαδ’ ἄγεσθαι,\nεἶδος θαυμάζοντες ἰοστεφάνου Κυθερείης.\nχαῖρ’ ἑλικοβλέφαρε, γλυκυμείλιχε· δὸς δ’ ἐν ἀγῶνι",
+      "en": "I will sing of stately Aphrodite, gold-crowned and beautiful, whose dominion is the walled cities of all sea-set Cyprus. There the moist breath of the western wind wafted her over the waves of the loud-moaning sea in soft foam, and there the gold-filleted Hours welcomed her joyously. They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods. And when they had fully decked her, they brought her to the gods, who welcomed her when they saw her, giving her their hands. Each one of them prayed that he might lead her home to be his wedded wife, so greatly were they amazed at the beauty of violet-crowned Cytherea. Hail, sweetly-winning, coy-eyed goddess! Grant that I may gain the victory in this contest,",
+      "zh": ""
+    },
+    {
+      "line_from": 20,
+      "line_to": 21,
+      "greek": "νίκην τῷδε φέρεσθαι, ἐμὴν δ’ ἔντυνον ἀοιδήν.\nαὐτὰρ ἐγὼ καὶ σεῖο καὶ ἄλλης μνήσομ’ ἀοιδῆς.",
+      "en": "and order you my song. And now I will remember you and another song also.",
+      "zh": ""
+    }
+  ]
+}

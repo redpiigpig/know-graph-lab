@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 10",
+  "slug": "homeric-hymn-10",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg010/tlg0013.tlg010.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第10首",
+  "title_en": "Homeric Hymn 10",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 6,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 6,
+      "greek": "κυπρογενῆ Κυθέρειαν ἀείσομαι, ἥτε βροτοῖσι\nμείλιχα δῶρα δίδωσιν, ἐφ’ ἱμερτῷ δὲ προσώπῳ\nαἰεὶ μειδιάει καὶ ἐφ’ ἱμερτὸν θέει ἄνθος.\nχαῖρε, θεά, Σαλαμῖνος ἐυκτιμένης μεδέουσα\nεἰναλίης τε Κύπρου· δὸς δ’ ἱμερόεσσαν ἀοιδήν.\nαὐτὰρ ἐγὼ καὶ σεῖο καὶ ἄλλης μνήσομ’ ἀοιδῆς.",
+      "en": "Of Cytherea, born in Cyprus, I will sing. She gives kindly gifts to men: smiles are ever on her lovely face, and lovely is the brightness that plays over it. Hail, goddess, queen of well-built Salamis and sea-girt Cyprus; grant me a cheerful song. And now I will remember you and another song also.",
+      "zh": ""
+    }
+  ]
+}

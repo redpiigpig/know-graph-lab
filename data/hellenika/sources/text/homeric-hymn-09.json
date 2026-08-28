@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 9",
+  "slug": "homeric-hymn-09",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg009/tlg0013.tlg009.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第9首",
+  "title_en": "Homeric Hymn 9",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 9,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 9,
+      "greek": "Ἄρτεμιν ὕμνει, Μοῦσα, κασιγνήτην Ἑκάτοιο.\nπαρθένον ἰοχέαιραν, ὁμότροφον Ἀπόλλωνος,\nἥθʼ ἵππους ἄρσασα βαθυσχοίνοιο Μέλητος\nῥίμφα διὰ Σμύρνης παγχρύσεον ἅρμα διώκει\nἐς Κλάρον ἀμπελόεσσαν, ὅθʼ ἀργυρότοξος Ἀπόλλων\nἧσται μιμνάζων ἑκατηβόλον ἰοχέαιραν.\nκαὶ σὺ μὲν οὕτω χαῖρε θεαί θʼ ἅμα πᾶσαι ἀοιδῇ·\nαὐτὰρ ἐγώ σε πρῶτα καὶ ἐκ σέθεν ἄρχομʼ ἀείδειν,\nσεῦ δʼ ἐγὼ ἀρξάμενος μεταβήσομαι ἄλλον ἐς ὕμνον.",
+      "en": "Muse, sing of Artemis, sister of the Far-shooter, the virgin who delights in arrows, who was fostered with Apollo. She waters her horses from Meles deep in reeds, and swiftly drives her all-golden chariot through Smyrna to vine-clad Claros where Apollo, god of the silver bow, sits waiting for the far-shooting goddess who delights in arrows. And so hail to you, Artemis, in my song and to all goddesses as well. Of you first I sing and with you I begin; now that I have begun with you, I will turn to another song.",
+      "zh": ""
+    }
+  ]
+}

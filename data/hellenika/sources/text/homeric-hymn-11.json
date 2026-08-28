@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 11",
+  "slug": "homeric-hymn-11",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg011/tlg0013.tlg011.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第11首",
+  "title_en": "Homeric Hymn 11",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "Παλλάδʼ Ἀθηναίην ἐρυσίπτολιν ἄρχομʼ ἀείδειν,\nδεινήν, ᾗ σὺν Ἄρηι μέλει πολεμήια ἔργα\nπερθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,\nκαί τʼ ἐρρύσατο λαὸν ἰόντα τε νισσόμενόν τε.\nχαῖρε, θεά, δὸς δʼ ἄμμι τύχην εὐδαιμονίην τε.",
+      "en": "Of Pallas Athena, guardian of the city, I begin to sing. Dread is she, and with Ares she loves deeds of war, the sack of cities and the shouting and the battle. It is she who saves the people as they go out to war and come back. Hail, goddess, and give us good fortune with happiness!",
+      "zh": ""
+    }
+  ]
+}

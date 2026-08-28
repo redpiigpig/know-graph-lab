@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 8",
+  "slug": "homeric-hymn-08",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg008/tlg0013.tlg008.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第8首",
+  "title_en": "Homeric Hymn 8",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 17,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 17,
+      "greek": "Ἆρες ὑπερμενέτα, βρισάρματε, χρυσεοπήληξ,\nὀβριμόθυμε, φέρασπι, πολισσόε, χαλκοκορυστά,\nκαρτερόχειρ, ἀμόγητε, δορισθενές, ἕρκος Ὀλύμπου,\nΝίκης εὐπολέμοιο πάτερ, συναρωγὲ Θέμιστος,\nἀντιβίοισι τύραννε, δικαιοτάτων ἀγὲ φωτῶν,\nἠνορέης σκηπτοῦχε, πυραυγέα κύκλον ἑλίσσων\nαἰθέρος ἑπταπόροις ἐνὶ τείρεσιν, ἔνθα σε πῶλοι\nζαφλεγέες τριτάτης ὑπὲρ ἄντυγος αἰὲν ἔχουσι·\nκλῦθι, βροτῶν ἐπίκουρε, δοτὴρ εὐθαρσέος ἥβης,\nπρηὺ καταστίλβων σέλας ὑψόθεν ἐς βιότητα\nἡμετέρην καὶ κάρτος ἀρήιον, ὥς κε δυναίμην\nσεύασθαι κακότητα πικρὴν ἀπʼ ἐμοῖο καρήνου,\nκαὶ ψυχῆς ἀπατηλὸν ὑπογνάμψαι φρεσὶν ὁρμήν,\nθυμοῦ αὖ μένος ὀξὺ κατισχέμεν, ὅς μʼ ἐρέθῃσι\nφυλόπιδος κρυερῆς ἐπιβαινέμεν· ἀλλὰ σὺ θάρσος\nδός, μάκαρ, εἰρήνης τε μένειν ἐν ἀπήμοσι θεσμοῖς\nδυσμενέων προφυγόντα μόθον Κῆράς τε βιαίους.",
+      "en": "Ares, exceeding in strength, chariot-rider, golden-helmed, doughty in heart, shield-bearer, Saviour of cities, harnessed in bronze, strong of arm, unwearying, mighty with the spear, O defence of Olympus, father of warlike Victory, ally of Themis, stern governor of the rebellious, leader of righteous men, sceptred King of manliness, who whirl your fiery sphere among the planets in their sevenfold courses through the aether wherein your blazing steeds ever bear you above the third firmament of heaven; hear me, helper of men, giver of dauntless youth! Shed down a kindly ray from above upon my life, and strength of war, that I may be able to drive away bitter cowardice from my head and crush down the deceitful impulses of my soul. Restrain also the keen fury of my heart which provokes me to tread the ways of blood-curdling strife. Rather, O blessed one, give you me boldness to abide within the harmless laws of peace, avoiding strife and hatred and the violent fiends of death.",
+      "zh": ""
+    }
+  ]
+}

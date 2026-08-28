@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 24",
+  "slug": "homeric-hymn-24",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg024/tlg0013.tlg024.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第24首",
+  "title_en": "Homeric Hymn 24",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "Ἑστίη, ἥτε ἄνακτος Ἀπόλλωνος ἑκάτοιο\nΠυθοῖ ἐν ἠγαθέῃ ἱερὸν δόμον ἀμφιπολεύεις,\nαἰεὶ σῶν πλοκάμων ἀπολείβεται ὑγρὸν ἔλαιον·\nἔρχεο τόνδʼ ἀνὰ οἶκον, ἕνʼ ἔρχεο θυμὸν ἔχουσα\nσὺν Διὶ μητιόεντι· χάριν δʼ ἅμʼ ὄπασσον ἀοιδῇ.",
+      "en": "Hestia, you who tend the holy house of the lord Apollo, the Far-shooter at goodly Pytho, with soft oil dripping ever from your locks, come now into this house, come, having one mind with Zeus the all-wise —draw near, and withal bestow grace upon my song.",
+      "zh": ""
+    }
+  ]
+}

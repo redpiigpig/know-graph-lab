@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 18",
+  "slug": "homeric-hymn-18",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg018/tlg0013.tlg018.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第18首",
+  "title_en": "Homeric Hymn 18",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 12,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 12,
+      "greek": "Ἑρμῆν ἀείδω Κυλλήνιον, Ἀργειφόντην,\nΚυλλήνης μεδέοντα καὶ Ἀρκαδίης πολυμήλου,\nἄγγελον ἀθανάτων ἐριούνιον, ὃν τέκε Μαῖα,\nΑτλαντος θυγάτηρ, Διὸς ἐν φιλότητι μιγεῖσα,\nαἰδοίη· μακάρων δὲ θεῶν ἀλέεινεν ὅμιλον,\nἄντρῳ ναιετάουσα παλισκίῳ· ἔνθα Κρονίων\nνύμφῃ ἐυπλοκάμῳ μισγέσκετο νυκτὸς ἀμολγῷ,\nεὖτε κατὰ γλυκὺς ὕπνος ἔχοι λευκώλενον Ἥρην·\nλάνθανε δ’ ἀθανάτους τε θεοὺς θνητούς τ’ ἀνθρώπους.\nκαὶ σὺ μὲν οὕτω χαῖρε, Διὸς καὶ Μαιάδος υἱέ·\nσεῦ δ’ ἐγὼ ἀρξάμενος μεταβήσομαι ἄλλον ἐς ὕμνον.\n[χαῖρ’. Ἑρμῆ χαριδῶτα, διάκτορε, δῶτορ ἐάων.]",
+      "en": "I sing of Cyllenian Hermes, the Slayer of Argus, lord of Cyllene and Arcadia rich in flocks, luck-bringing messenger of the deathless gods. He was born of Maia, the daughter of Atlas, when she had mated with Zeus,— a shy goddess she. Ever she avoided the throng of the blessed gods and lived in a shadowy cave, and there the Son of Cronos used to lie with the rich-tressed nymph at dead of night, while white-armed Hera lay bound in sweet sleep: and neither deathless god nor mortal man knew it. And so hail to you, Son of Zeus and Maia; with you I have begun: now I will turn to another song!Hail, Hermes, giver of grace, guide, and giver of good things!",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 13",
+  "slug": "homeric-hymn-13",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg013/tlg0013.tlg013.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第13首",
+  "title_en": "Homeric Hymn 13",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 3,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 3,
+      "greek": "Δημήτηρ’ ἠύκομον, σεμνὴν θεάν, ἄρχομ’ ἀείδειν,\nαὐτὴν καὶ κούρην, περικαλλέα Περσεφόνειαν.\nχαῖρε, θεά, καὶ τήνδε σάου πόλιν· ἄρχε δ’ ἀοιδῆς.",
+      "en": "I begin to sing of rich-haired Demeter, awful goddess, of her and of her daughter lovely Persephone. Hail, goddess! Keep this city safe, and govern my song.",
+      "zh": ""
+    }
+  ]
+}

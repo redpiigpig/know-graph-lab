@@ -1,0 +1,31 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 32",
+  "slug": "homeric-hymn-32",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg032/tlg0013.tlg032.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第32首",
+  "title_en": "Homeric Hymn 32",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 20,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 19,
+      "greek": "μήνην ἀείδειν τανυσίπτερον ἔσπετε, Μοῦσαι,\nἡδυεπεῖς κοῦραι Κρονίδεω Διός, ἵστορες ᾠδῆς·\nἧς ἄπο αἴγλη γαῖαν ἑλίσσεται οὐρανόδεικτος\nκρατὸς ἀπʼ ἀθανάτοιο, πολὺς δʼ ὑπὸ κόσμος ὄρωρεν\nαἴγλης λαμπούσης· στίλβει δέ τʼ ἀλάμπετος ἀὴρ\nχρυσέου ἀπὸ στεφάνου, ἀκτῖνες δʼ ἐνδιάονται,\nεὖτʼ ἂν ἀπʼ Ὠκεανοῖο λοεσσαμένη χρόα καλόν,\nεἵματα ἑσσαμένη τηλαυγέα δῖα Σελήνη,\nζευξαμένη πώλους ἐριαύχενας, αἰγλήεντας,\nἐσσυμένως προτέρωσʼ ἐλάσῃ καλλίτριχας ἵππους,\nἑσπερίη, διχόμηνος· ὃ δὲ πλήθει μέγας ὄγμος\nλαμπρόταταί τʼ αὐγαὶ τότʼ ἀεξομένης τελέθουσιν\nοὐρανόθεν· τέκμωρ δὲ βροτοῖς καὶ σῆμα τέτυκται.\nτῇ ῥά ποτε Κρονίδης ἐμίγη φιλότητι καὶ εὐνῇ·\nἣ δʼ ὑποκυσαμένη Πανδείην γείνατο κούρην,\nἐκπρεπὲς εἶδος ἔχουσαν ἐν ἀθανάτοισι θεοῖσι.\nχαῖρε, ἄνασσα, θεὰ λευκώλενε, δῖα Σελήνη,\nπρόφρον, ἐυπλόκαμος· σέο δʼ ἀρχόμενος κλέα φωτῶν\nᾄσομαι ἡμιθέων, ὧν κλείουσʼ ἔργματʼ ἀοιδοί,",
+      "en": "And next, sweet voiced Muses, daughters of Zeus, well-skilled in song, tell of the long-wingedThe epithet is a usual one for birds, cp. Hesiod, Works and Days, 210; as applied to Selene it may merely indicate her passage, like a bird, through the air, or mean “far-flying.” Moon. From her immortal head a radiance is shown from heaven and embraces earth; and great is the beauty that ariseth from her shining light. The air, unlit before, glows with the light of her golden crown, and her rays beam clear, whensoever bright Selene having bathed her lovely body in the waters of Ocean, and donned her far-gleaming raiment, and yoked her strong-necked, shining team, drives on her long-maned horses at full speed, at eventime in the mid-month: then her great orbit is full and then her beams shine brightest as she increases. So she is a sure token and a sign to mortal men. Once the Son of Cronos was joined with her in love; and she conceived and bare a daughter Pandia, exceeding lovely amongst the deathless gods. Hail, white-armed goddess, bright Selene, mild, bright-tressed queen! And now I will leave you and sing the glories of men half-divine, whose deeds minstrels,",
+      "zh": ""
+    },
+    {
+      "line_from": 20,
+      "line_to": 20,
+      "greek": "Μουσάων θεράποντες, ἀπὸ στομάτων ἐροέντων.",
+      "en": "the servants of the Muses, celebrate with lovely lips.",
+      "zh": ""
+    }
+  ]
+}

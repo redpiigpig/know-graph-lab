@@ -1,0 +1,31 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 1",
+  "slug": "homeric-hymn-01",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg001/tlg0013.tlg001.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第1首（致戴奧尼索斯）",
+  "title_en": "Homeric Hymn 1",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 21,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 19,
+      "greek": "οἳ μὲν γὰρ Δρακάνῳ σʼ, οἳ δʼ Ἰκάρῳ ἠνεμοέσσῃ\nφάσʼ, οἳ δʼ ἐν Νάξῳ, δῖον γένος, εἰραφιῶτα,\nοἳ δέ σʼ ἐπʼ Ἀλφειῷ ποταμῷ βαθυδινήεντι\nκυσαμένην Σεμέλην τεκέειν Διὶ τερπικεραύνῳ·\nἄλλοι δʼ ἐν Θήβῃσιν, ἄναξ, σε λέγουσι γενέσθαι,\nψευδόμενοι· σὲ δʼ ἔτικτε πατὴρ ἀνδρῶν τε θεῶν τε\nπολλὸν ἀπʼ ἀνθρώπων, κρύπτων λευκώλενον Ἥρην.\nἔστι δέ τις Νύση, ὕπατον ὄρος, ἀνθέον ὕλῃ,\nτηλοῦ Φοινίκης, σχεδὸν Αἰγύπτοιο ῥοάων,\nκαί οἱ ἀναστήσουσιν ἀγάλματα πόλλʼ ἐνὶ νηοῖς.\nὣς δὲ τὰ μὲν τρία, σοὶ πάντως τριετηρίσιν αἰεὶ\nἄνθρωποι ῥέξουσι τεληέσσας ἑκατόμβας.\nἦ καὶ κυανέῃσιν ἐπʼ ὀφρύσι νεῦσε Κρονίων·\nἀμβρόσιαι δʼ ἄρα χαῖται ἐπερρώσαντο ἄνακτος\nκρατὸς ἀπʼ ἀθανάτοιο· μέγαν δʼ ἐλέλιξεν Ὄλυμπον.\nὣς εἰπὼν ἐπένευσε καρήατι μητίετα Ζεύς.\nἵληθʼ, εἰραφιῶτα, γυναιμανές· οἱ δέ σʼ ἀοιδοὶ\nᾄδομεν ἀρχόμενοι λήγοντές τʼ· οὐδέ πῃ ἔστι\nσεῖʼ ἐπιληθομένῳ ἱερῆς μεμνῆσθαι ἀοιδῆς.",
+      "en": "For some say, at Dracanum; and some, on windy Icarus; and some, in Naxos, O Heaven-born, InsewnDionysus, after his untimely birth from Semele, was sewn into the thigh of Zeus.; and others by the deep-eddying river Alpheus that pregnant Semele bare you to Zeus the thunder-lover. And others yet, lord, say you were born in Thebes; but all these lie. The Father of men and gods gave you birth remote from men and secretly from white-armed Hera. There is a certain Nysa, a mountain most high and richly grown with woods, far off in Phoenice, near the streams of Aegyptus “and men will lay up for hersc. Semele. Zeus is here speaking. many offerings in her shrines. And as these things are three,The reference is apparently to something in the body of the hymn, now lost. so shall mortals ever sacrifice perfect hecatombs to you at your feasts each three years.”The Son of Cronos spoke and nodded with his dark brows. And the divine locks of the king flowed forward from his immortal head, and he made great Olympus reel. So spake wise Zeus and ordained it with a nod. Be favorable, O Insewn, Inspirer of frenzied women! we singers sing of you as we begin and as we end a strain, and none forgetting you may call holy song to mind.",
+      "zh": ""
+    },
+    {
+      "line_from": 20,
+      "line_to": 21,
+      "greek": "καὶ σὺ μὲν οὕτω χαῖρε, Διώνυσʼ εἰραφιῶτα,\nσὺν μητρὶ Σεμέλῃ, ἥν περ καλέουσι Θυώνην.",
+      "en": "And so, farewell, Dionysus, Insewn, with your mother Semele whom men call Thyone.",
+      "zh": ""
+    }
+  ]
+}

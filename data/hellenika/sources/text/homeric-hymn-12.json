@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 12",
+  "slug": "homeric-hymn-12",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg012/tlg0013.tlg012.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第12首",
+  "title_en": "Homeric Hymn 12",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "Ἥρην ἀείδω χρυσόθρονον, ἣν τέκε Ῥείη,\nἀθανάτων βασίλειαν, ὑπείροχον εἶδος ἔχουσαν,\nΖηνὸς ἐριγδούποιο κασιγνήτην ἄλοχόν τε,\nκυδρήν, ἣν πάντες μάκαρες κατὰ μακρὸν Ὄλυμπον\nἁζόμενοι τίουσιν ὁμῶς Διὶ τερπικεραύνῳ.",
+      "en": "I sing of golden-throned Hera whom Rhea bare. Queen of the immortals is she, surpassing all in beauty: she is the sister and the wife of loud-thundering Zeus, —the glorious one whom all the blessed throughout high Olympus reverence and honor even as Zeus who delights in thunder.",
+      "zh": ""
+    }
+  ]
+}

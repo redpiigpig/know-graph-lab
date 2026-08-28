@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 28",
+  "slug": "homeric-hymn-28",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg028/tlg0013.tlg028.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第28首",
+  "title_en": "Homeric Hymn 28",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 18,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 18,
+      "greek": "Παλλάδ’ Ἀθηναίην, κυδρὴν θεόν, ἄρχομ’ ἀείδειν\nγλαυκῶπιν, πολύμητιν, ἀμείλιχον ἦτορ ἔχουσαν,\nπαρθένον αἰδοίην, ἐρυσίπτολιν, ἀλκήεσσαν,\nΤριτογενῆ, τὴν αὐτὸς ἐγείνατο μητίετα Ζεὺς\nσεμνῆς ἐκ κεφαλῆς, πολεμήια τεύχε’ ἔχουσαν,\nχρύσεα, παμφανόωντα· σέβας δ’ ἔχε πάντας ὁρῶντας\nἀθανάτους· ἣ δὲ πρόσθεν Διὸς αἰγιόχοιο\nἐσσυμένως ὤρουσεν ἀπ’ ἀθανάτοιο καρήνου,\nσείσασ’ ὀξὺν ἄκοντα· μέγας δ’ ἐλελίζετ’ Ὄλυμπος\nδεινὸν ὑπὸ βρίμης γλαυκώπιδος· ἀμφὶ δὲ γαῖα\nσμερδαλέον ἰάχησεν· ἐκινήθη δ’ ἄρα πόντος,\nκύμασι πορφυρέοισι κυκώμενος· ἔκχυτο δ’ ἅλμη\nἐξαπίνης· στῆσεν δ’ Ὑπερίονος ἀγλαὸς υἱὸς\nἵππους ὠκύποδας δηρὸν χρόνον, εἰσότε κούρη\nεἵλετ’ ἀπ’ ἀθανάτων ὤμων θεοείκελα τεύχη\nΠαλλὰς Ἀθηναίη· γήθησε δὲ μητίετα Ζεύς.\nκαὶ σὺ μὲν οὕτω χαῖρε, Διὸς τέκος αἰγιόχοιο·\nαὐτὰρ ἐγὼ καὶ σεῖο καὶ ἄλλης μνήσομ’ ἀοιδῆς.",
+      "en": "I begin to sing of Pallas Athena, the glorious goddess, bright-eyed, inventive, unbending of heart, pure virgin, saviour of cities, courageous, Tritogeneia. Wise Zeus himself bare her from his awful head, arrayed in warlike arms of flashing gold, and awe seized all the gods as they gazed. But Athena sprang quickly from the immortal head and stood before Zeus who holds the aegis, shaking a sharp spear: great Olympus began to reel horribly at the might of the bright-eyed goddess, and earth round about cried fearfully, and the sea was moved and tossed with dark waves, while foam burst forth suddenly: the bright Son of Hyperion stopped his swift-footed horses a long while, until the maiden Pallas Athena had stripped the heavenly armour from her immortal shoulders. And wise Zeus was glad. And so hail to you, daughter of Zeus who holds the aegis! Now I will remember you and another song as well.",
+      "zh": ""
+    }
+  ]
+}

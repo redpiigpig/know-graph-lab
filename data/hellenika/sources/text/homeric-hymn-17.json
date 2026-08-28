@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 17",
+  "slug": "homeric-hymn-17",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg017/tlg0013.tlg017.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第17首",
+  "title_en": "Homeric Hymn 17",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 5,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 5,
+      "greek": "Κάστορα καὶ Πολυδεύκἐ ἀείσεο, Μοῦσα λίγεια,\nΤυνδαρίδας, οἳ Ζηνὸς Ὀλυμπίου ἐξεγένοντο·\nτοὺς ὑπὸ Τηϋγέτου κορυφῇς τέκε πότνια Λήδη\nλάθρη ὑποδμηθεῖσα κελαινεφέι Κρονίωνι.\nχαίρετε, Τυνδαρίδαι, ταχέων ἐπιβήτορες ἵππων.",
+      "en": "Sing, clear-voiced Muse, of Castor and Polydeuces, the Tyndaridae, who sprang from Olympian Zeus. Beneath the heights of Taygetus stately Leda bare them, when the dark-clouded Son of Cronos had privily bent her to his will. Hail, children of Tyndareus, riders upon swift horses!",
+      "zh": ""
+    }
+  ]
+}

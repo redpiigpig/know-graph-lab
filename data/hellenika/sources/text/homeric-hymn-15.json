@@ -1,0 +1,24 @@
+{
+  "source": "perseus",
+  "siglum": "Hom. Hymn 15",
+  "slug": "homeric-hymn-15",
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0013/tlg015/tlg0013.tlg015.perseus-grc2.xml",
+  "title_zh": "荷馬詩頌 第15首",
+  "title_en": "Homeric Hymn 15",
+  "author": "託名荷馬",
+  "volume": "O",
+  "licence": "原文與英譯皆取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），CC BY-SA 3.0；英譯為 Hugh G. Evelyn-White (1914) 等已入公有領域之譯本。",
+  "pivot": "perseus-eng",
+  "pivot_note": null,
+  "lines_total": 9,
+  "names": {},
+  "segments": [
+    {
+      "line_from": 1,
+      "line_to": 9,
+      "greek": "Ἡρακλέα, Διὸς υἱόν, ἀείσομαι, ὃν μέγʼ ἄριστον\nγείνατʼ ἐπιχθονίων Θήβῃς ἔνι καλλιχόροισιν\nἈλκμήνη μιχθεῖσα κελαινεφέι Κρονίωνι·\nὃς πρὶν μὲν κατὰ γαῖαν ἀθέσφατον ἠδὲ θάλασσαν\nπλαζόμενος πομπῇσιν ὕπʼ Εὐρυσθῆος ἄνακτος\nπολλὰ μὲν αὐτὸς ἔρεξεν ἀτάσθαλα, πολλὰ δʼ ἀνέτλη·\nνῦν δʼ ἤδη κατὰ καλὸν ἕδος νιφόεντος Ὀλύμπου\nναίει τερπόμενος καὶ ἔχει καλλίσφυρον Ἥβην.\nχαῖρε, ἄναξ, Διὸς υἱέ· δίδου δʼ ἀρετήν τε καὶ ὄλβον.",
+      "en": "I will sing of Heracles, the son of Zeus and much the mightiest of men on earth. Alcmena bare him in Thebes, the city of lovely dances, when the dark-clouded Son of Cronos had lain with her. Once he used to wander over unmeasured tracts of land and sea at the bidding of King Eurystheus, and himself did many deeds of violence and endured many; but now he lives happily in the glorious home of snowy Olympus, and has neat-ankled Hebe for his wife. Hail, lord, son of Zeus' Give me success and prosperity.",
+      "zh": ""
+    }
+  ]
+}
