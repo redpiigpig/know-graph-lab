@@ -22,6 +22,7 @@ import os
 import re
 import shutil
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -224,7 +225,7 @@ def cmd_push_r2(only: str | None, force: bool = False):
         skip = sum(1 for f in files if f"{R2_PREFIX}{f.name}.gz" in have)
         print(f"R2 已有 {len(have)} 物件，本批跳過 {skip} 檔")
         files = [f for f in files if f"{R2_PREFIX}{f.name}.gz" not in have]
-    big = []
+    big, failed = [], []
     for i, f in enumerate(files, 1):
         raw = f.read_bytes()
         buf = io.BytesIO()
@@ -235,13 +236,26 @@ def cmd_push_r2(only: str | None, force: bool = False):
         if len(data) > 10 * 1024 * 1024:
             big.append((f.name, len(data)))
             continue
-        s3.put_object(Bucket=bucket, Key=f"{R2_PREFIX}{f.name}.gz", Body=data,
-                      ContentType="application/json", ContentEncoding="gzip")
+        # 5,295 檔的上傳不該被一次網路抖動整個打掉 —— 退避重試三次，
+        # 三次都失敗才記下來繼續推下一檔（結尾列出未成功者）。
+        for attempt in range(3):
+            try:
+                s3.put_object(Bucket=bucket, Key=f"{R2_PREFIX}{f.name}.gz",
+                              Body=data, ContentType="application/json",
+                              ContentEncoding="gzip")
+                break
+            except Exception as e:  # noqa: BLE001
+                if attempt == 2:
+                    failed.append((f.name, type(e).__name__))
+                else:
+                    time.sleep(2 ** attempt)
         if i % 200 == 0:
             print(f"  … {i}/{len(files)}", flush=True)
-    print(f"✓ R2 {len(files) - len(big)} 檔")
+    print(f"✓ R2 {len(files) - len(big) - len(failed)} 檔")
     for name, n in big:
         print(f"  ⚠ 超過 10 MB 未上傳（Drive 仍有正本）: {name} {n/1048576:.1f} MB")
+    for name, err in failed:
+        print(f"  ⚠ 三次重試仍失敗（Drive 仍有正本，可重跑本指令補）: {name} {err}")
 
 
 def main():
