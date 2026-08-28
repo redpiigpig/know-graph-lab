@@ -15,7 +15,22 @@ description: 佛教大藏經（/tripitaka）—— 把 CBETA 的《大正新脩�
 | 收錄 | 大正藏 T01–T55 ＋ T85（2,471 部）／漢譯南傳 N01–N70（83 冊） |
 | 規模 | **2,554 部・97,879,719 字・1,014,824 段**，零空檔 |
 | 分類 | 大正藏 31 部門（按經號區間）＋南傳 8 分部（按**冊號**） |
-| 原文對照 | 巴利原文 8,309 部／118 萬行（20 部漢文經）・梵文原文 4 部逐品（中論／法華／方廣大莊嚴經／華嚴入法界品）・平行經目 23,321 筆（172 部）・CBETA 漢梵巴詞條 29,930 組（142 部）・大正藏原註巴利對應 1,597 條（21 部） |
+| 原文對照 | 見下表 |
+
+### 原文對照現況（去重後的實際落地數）
+
+| 層 | 區塊 | 行 | 掛在漢文段 | 涵蓋 | 來源 |
+|---|---|---|---|---|---|
+| 巴利原文 | 4,582 | 536,901 | 1,755 | 20 部 | SuttaCentral 逐段本 |
+| 漢譯南傳 | 1,974 | 63,916 | 1,395 | 17 部 | CBETA N 部（元亨寺版） |
+| 梵文原文 | 82 | 10,521 | 82 | 4 部 | GRETIL |
+| 平行經目 | 23,321 筆 | — | 87% 對到段落 | 172 部 | SuttaCentral parallels |
+| 漢梵巴詞條 | 29,930 組 | — | 逐詞 | 142 部 | CBETA `<cb:tt>` |
+| 大正藏原註 | 1,597 條 | — | 99.8% 貼回段落 | 21 部 | 大正藏編者 1924–34 |
+
+⚠ 建置時的 `--build` 輸出是**去重前**的筆數（同一部巴利經若是多部漢文經的
+平行本會被重複計，例如巴利那層報 8,309 筆但實際落地 4,582 個區塊）。
+對外講數字要用上表，不要抄 stdout。
 | 存放 | 目錄進 Supabase（2,554 列）；正文 JSONL 在 Drive `_tripitaka/`，R2 `tripitaka/` 為線上後備 |
 
 ## 🚨 段怎麼切、怎麼編號（使用者定調，別再改）
@@ -64,9 +79,10 @@ scripts/tripitaka_cbeta.py          CBETA TEI P5 → 目錄 rows ＋ 逐段 JSON
 scripts/tripitaka_parallels.py      SuttaCentral 平行經目 → 對照 rows
 scripts/tripitaka_original_text.py  平行經目的「指標」→ 巴利原典全文（SuttaCentral）
 scripts/tripitaka_sanskrit.py       梵文原典（GRETIL）逐品掛上，含品數對齊閘
+scripts/tripitaka_nanchuan.py      漢譯南傳（元亨寺版）掛成對照欄，含經數硬閘
 scripts/tripitaka_db.py             建表 SQL／目錄入庫／Drive 同步／R2 上傳
 scripts/sql/tripitaka_schema.sql    DDL（Management API token 掛掉時手動貼 Dashboard）
-scripts/tests/test_tripitaka_*.py   純函式測試（40 個，鎖住下列所有陷阱）
+scripts/tests/test_tripitaka_*.py   純函式測試（47 個，鎖住下列所有陷阱）
 
 data/tripitaka/divisions.ts         部類標籤／配色／語言與來源分級（顯示層）
 server/utils/tripitaka.ts           file-backed 讀取器（本機 Drive → R2 → null）
@@ -97,6 +113,8 @@ python scripts/tripitaka_parallels.py --build
 python scripts/tripitaka_original_text.py --pali
 python scripts/tripitaka_sanskrit.py --audit      # 梵品數 vs 漢品數（不寫）
 python scripts/tripitaka_sanskrit.py --build
+python scripts/tripitaka_nanchuan.py --audit      # 驗五尼柯耶經數（不寫）
+python scripts/tripitaka_nanchuan.py --build
 
 python scripts/tripitaka_db.py --push            # 目錄 → Supabase（走 PostgREST）
 python scripts/tripitaka_db.py --sync-drive --push-r2
@@ -171,7 +189,17 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
 16. **CBETA 有時不給 div 的 `type`。** 道行般若 T0224 只有第一品標了 `pin`，
     其餘 29 品是空字串 —— 只認 `type=='pin'` 會把整部書判成「無品層」。
 
-17. **大正藏行號不唯一。** 同一行可以起頭好幾段 —— 全藏 **65,483 段（6.5%）、
+17. **漢譯南傳的五尼柯耶編號方式互不相同**，且相應部有三個疊在一起的陷阱：
+    ① 相應號**每冊重新編**（N17 從「第八 聚落主相應」起，跨篇又跳回
+       「第三 念處相應」）→ 不能讀標題序數，要跨六冊照文件順序連號。
+    ② N14 把相應與其下的品**放在同一深度**，父子鏈是斷的 → 不能用
+       parent 往上找，改用「文件順序上最近的前一個相應」。
+    ③ 判別相應要看**標題結尾是不是「相應」**，看深度會把「食品」也算成相應。
+    任一條沒處理好，1,691 經整批位移而頁面看不出來。
+    閘：長部必須恰好 34 經、中部 152 經、相應部 56 相應 —— 都是巴利藏的定數，
+    對不上就整個尼柯耶不掛。
+
+18. **大正藏行號不唯一。** 同一行可以起頭好幾段 —— 全藏 **65,483 段（6.5%）、
     672 部**如此。行號是段的*引用式*（使用者定調，不改），但不能當鍵：
     拿它 join 對照／詞條，同行的段會互相串；當 DOM anchor 會出現重複 id。
     故每段有兩個欄位：
@@ -192,8 +220,10 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
   分品不同，要逐部手寫 `chapter_map` 才能對，不可自動化。REGISTRY 待擴充。
 - **藏文原文**。須從 **84000**（Toh 編號＋英譯）或 **Adarsha／ACIP** 取德格版。
   目前只有平行經目編號。
-- **漢譯南傳當對照欄**。N 部已全文收錄、可獨立閱讀，但尚未與漢譯阿含
-  逐經串接（做法：巴利 uid 同時映射到 N 的冊內位置）。
+- **漢譯南傳只接了三部尼柯耶**（長部 34 經、中部 152 經、相應部 56 相應
+  1,691 經，皆通過經數硬閘）。**增支部與小部尚未接** —— 增支部的「集」號不在
+  標題層級裡，得另定判別法；小部各書結構互異。5,166 筆巴利對應因此查不到
+  漢譯南傳。
 - **繁中白話**。尚未起跑。走既有 Gemini→NVIDIA→Haiku 引擎（見
   [[feedback_engine_nvidia_no_haiku]]），量大，宜逐部類分批。
 - **T56–T84 日本撰述部**。CBETA 未提供 XML，非本站遺漏，凡例已註明。
