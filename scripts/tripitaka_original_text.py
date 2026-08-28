@@ -83,7 +83,7 @@ def build_pali(only: str | None) -> None:
     missing = Counter()
 
     for r in rows:
-        if r["lang"] != "pi" or not r.get("seg"):
+        if r["lang"] != "pi" or not r.get("seg_uid"):
             continue
         if only and r["work_id"] != only:
             continue
@@ -97,7 +97,7 @@ def build_pali(only: str | None) -> None:
         if not lines:
             stats["empty"] += 1
             continue
-        by_work[r["work_id"]][r["seg"]].append({
+        by_work[r["work_id"]][r["seg_uid"]].append({
             "lang": "pi",
             "uid": uid,
             "ref": r["ref"],

@@ -214,17 +214,17 @@ def sutta_index(work_id: str) -> dict[str, str]:
             parent = node.get("parent", -1)
             pin = toc[parent] if 0 <= parent < len(toc) else None
             if pin and pin.get("type") == "pin" and pin.get("n") and node.get("n"):
-                idx.setdefault(f"{pin['n']}.{node['n']}", node["seg"])
+                idx.setdefault(f"{pin['n']}.{node['n']}", node["uid"])
             continue
         if t not in ("jing", "other"):
             continue
         n = node.get("n")
         if n and str(n).isdigit():
-            idx.setdefault(str(int(n)), node["seg"])
+            idx.setdefault(str(int(n)), node["uid"])
             continue
         no = head_sutta_no(node.get("head") or "")
         if no is not None:
-            idx.setdefault(str(no), node["seg"])
+            idx.setdefault(str(no), node["uid"])
     _SUTTA_INDEX[work_id] = idx
     return idx
 
@@ -254,7 +254,7 @@ def pin_seg(work_id: str, pin_no: str | None) -> str | None:
         return None
     for node in toc_of(work_id):
         if node.get("type") == "pin" and str(node.get("n") or "") == str(int(pin_no)):
-            return node["seg"]
+            return node["uid"]
     return None
 
 
@@ -344,7 +344,7 @@ def build(audit_only: bool) -> list[dict]:
             for lang, prefix, number, fseg, fpart in foreign:
                 rows.append({
                     "work_id": wid,
-                    "seg": cseg,
+                    "seg_uid": cseg,
                     "level": "seg" if cseg else "work",
                     "cn_ref": f"{cp}{cn}",
                     "lang": lang,
@@ -390,12 +390,12 @@ def cmd_push():
     for p in sorted(SEG_DIR.glob("*.equiv.json")):
         wid = p.name.split(".")[0]
         for e in json.loads(p.read_text(encoding="utf-8")):
-            rows.append({"work_id": wid, "seg": e.get("seg"), "lang": "pi",
+            rows.append({"work_id": wid, "seg_uid": e.get("uid"), "lang": "pi",
                          "ref": e["ref"], "src": "taisho-equiv", "note": None})
-    payload = [{k: r.get(k) for k in ("work_id", "seg", "lang", "ref", "src", "note")}
+    payload = [{k: r.get(k) for k in ("work_id", "seg_uid", "lang", "ref", "src", "note")}
                for r in rows]
     for i in range(0, len(payload), 500):
-        td.postgrest("tripitaka_parallels?on_conflict=work_id,seg,lang,ref,src",
+        td.postgrest("tripitaka_parallels?on_conflict=work_id,seg_uid,lang,ref,src",
                      payload[i:i + 500])
         print(f"  … {min(i + 500, len(payload))}/{len(payload)}", flush=True)
     print(f"✓ tripitaka_parallels {len(payload):,} 筆")

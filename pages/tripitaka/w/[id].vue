@@ -57,7 +57,7 @@
           <a
             v-for="n in tocInJuan"
             :key="n.i"
-            :href="`#${n.seg}`"
+            :href="`#${n.uid}`"
             class="block py-1 text-xs text-gray-600 hover:text-amber-700 truncate"
             :style="{ paddingLeft: `${n.depth * 10}px` }"
             :title="n.head"
@@ -82,7 +82,7 @@
           </div>
 
           <div class="space-y-5">
-            <div v-for="s in segments" :id="s.seg" :key="s.seg" class="group scroll-mt-20">
+            <div v-for="s in segments" :id="s.uid" :key="s.uid" class="group scroll-mt-20">
               <!-- 段首：大正藏行號（可引用、可複製） -->
               <button
                 class="font-mono text-[10px] text-gray-300 group-hover:text-amber-600 transition mb-0.5"
@@ -118,10 +118,10 @@
               </div>
 
               <!-- 該段的平行經目：巴／梵／藏／中期印度語 -->
-              <div v-if="parallelsOf(s.seg).length" class="mt-2 flex flex-wrap items-center gap-1.5">
+              <div v-if="parallelsOf(s.uid).length" class="mt-2 flex flex-wrap items-center gap-1.5">
                 <span class="text-[10px] text-gray-400">原文對應</span>
                 <span
-                  v-for="(p, pi) in parallelsOf(s.seg)"
+                  v-for="(p, pi) in parallelsOf(s.uid)"
                   :key="pi"
                   class="px-1.5 py-0.5 rounded border text-[11px]"
                   :class="[
@@ -139,7 +139,7 @@
                    刻意做成可展開，而非左右並排：原文那一側是「一整部經」，
                    漢文這一側只是該經的起首段。並排會讓人誤以為逐句對得上。 -->
               <details
-                v-for="(o, oi) in originalsOf(s.seg)"
+                v-for="(o, oi) in originalsOf(s.uid)"
                 :key="`o${oi}`"
                 class="mt-2 rounded-lg border border-indigo-200 bg-indigo-50/40 overflow-hidden"
               >
@@ -166,9 +166,9 @@
               </details>
 
               <!-- 該段的漢梵巴詞條 -->
-              <div v-if="termsOf(s.seg).length" class="mt-1.5 flex flex-wrap gap-1.5">
+              <div v-if="termsOf(s.uid).length" class="mt-1.5 flex flex-wrap gap-1.5">
                 <span
-                  v-for="(t, ti) in termsOf(s.seg)"
+                  v-for="(t, ti) in termsOf(s.uid)"
                   :key="ti"
                   class="px-1.5 py-0.5 rounded border border-sky-200 bg-sky-50 text-[11px] text-sky-800"
                   title="CBETA 詞條對照"
@@ -260,28 +260,28 @@ const nextJuan = computed(() => {
 const termsBySeg = computed(() => {
   const m = new Map<string, any[]>()
   for (const t of terms.value) {
-    if (!t.seg) continue
-    if (!m.has(t.seg)) m.set(t.seg, [])
-    m.get(t.seg)!.push(t)
+    if (!t.uid) continue
+    if (!m.has(t.uid)) m.set(t.uid, [])
+    m.get(t.uid)!.push(t)
   }
   return m
 })
-function termsOf(seg: string) { return termsBySeg.value.get(seg) ?? [] }
+function termsOf(uid: string) { return termsBySeg.value.get(uid) ?? [] }
 
 const parallelsBySeg = computed(() => {
   const m = new Map<string, any[]>()
   for (const p of parallels.value) {
-    if (!p.seg) continue
-    if (!m.has(p.seg)) m.set(p.seg, [])
-    m.get(p.seg)!.push(p)
+    if (!p.seg_uid) continue
+    if (!m.has(p.seg_uid)) m.set(p.seg_uid, [])
+    m.get(p.seg_uid)!.push(p)
   }
   // 大正藏原註排最前（權威度最高），本站對齊排最後
   const rank: Record<string, number> = { 'taisho-equiv': 0, suttacentral: 1, 'cbeta-term': 2, site: 3 }
   for (const list of m.values()) list.sort((a, b) => (rank[a.src] ?? 9) - (rank[b.src] ?? 9))
   return m
 })
-function parallelsOf(seg: string) { return parallelsBySeg.value.get(seg) ?? [] }
-function originalsOf(seg: string) { return originals.value[seg] ?? [] }
+function parallelsOf(uid: string) { return parallelsBySeg.value.get(uid) ?? [] }
+function originalsOf(uid: string) { return originals.value[uid] ?? [] }
 
 /** 原文的行號標籤。SuttaCentral 是 `sn22.12:1.3`（取冒號後），
  *  GRETIL 是 `MMK 1.1`（原書頌號，整串就是引用式）；抓不到頌號的行留空 ——
@@ -296,7 +296,7 @@ function highlight(s: any, lang: string) {
   const raw = String(s.sources[lang] ?? '')
   const esc = raw.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' } as any)[c])
   if (lang !== 'lzh') return esc
-  const words = termsOf(s.seg).map(t => t.zh).filter(w => w && w.length > 1)
+  const words = termsOf(s.uid).map(t => t.zh).filter(w => w && w.length > 1)
   if (!words.length) return esc
   const re = new RegExp(`(${words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'g')
   return esc.replace(re, '<span class="border-b border-dotted border-sky-400">$1</span>')

@@ -47,8 +47,8 @@ export default defineEventHandler(async (event) => {
   const segments = juan == null ? allSegs : allSegs.filter((s) => s.juan === juan);
 
   // 詞條只送這一卷用得到的（長阿含 402 條，全送也還好；密教部可上千）
-  const segIds = new Set(segments.map((s) => s.seg));
-  const juanTerms = terms.filter((t) => t.seg && segIds.has(t.seg));
+  const segIds = new Set(segments.map((s) => s.uid));
+  const juanTerms = terms.filter((t) => t.uid && segIds.has(t.uid));
 
   // 平行經目（巴／梵／藏／中期印度語）。DB 尚未建表時退回空陣列，
   // 讓漢文照樣讀得到 —— 對照缺席不該讓整部經打不開。
@@ -56,10 +56,10 @@ export default defineEventHandler(async (event) => {
   try {
     const { data } = await supabase
       .from("tripitaka_parallels")
-      .select("seg,lang,ref,src,note")
+      .select("seg_uid,lang,ref,src,note")
       .eq("work_id", id)
       .limit(5000);
-    parallels = (data ?? []).filter((p: any) => !p.seg || segIds.has(p.seg));
+    parallels = (data ?? []).filter((p: any) => !p.seg_uid || segIds.has(p.seg_uid));
   } catch {
     parallels = [];
   }

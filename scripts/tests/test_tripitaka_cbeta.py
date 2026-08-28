@@ -136,6 +136,20 @@ def test_segment_key_is_taisho_line_number():
     assert all("cite" not in s for s in segs)
 
 
+def test_uid_disambiguates_segments_sharing_a_line():
+    """🚨 行號不唯一：同一行可以起頭好幾段（全藏 6.5%、672 部）。
+    seg 是引用式（可重複），uid 才是鍵。撞鍵會讓對照掛到同行的別段上。"""
+    _, segs, _ = _parse()
+    uids = [s["uid"] for s in segs]
+    assert len(uids) == len(set(uids)), "uid 必須唯一"
+    # 樣本裡序的 head 與其後的 <p> 不同行，故此處 uid == seg；
+    # 真有同行兩段時，第二段起加 .2 後綴
+    same_line = [s for s in segs if s["seg"] == "T30n1564_p0001b10"]
+    if len(same_line) > 1:
+        assert same_line[1]["uid"].endswith(".2")
+    assert all(s["uid"].startswith(s["seg"]) for s in segs)
+
+
 def test_verse_keeps_line_breaks():
     """偈頌若被壓成一段散文，梵藏漢的頌號就對不上了。"""
     _, segs, _ = _parse()
@@ -182,6 +196,7 @@ def test_equiv_notes_found_in_cb_namespace():
     _, _, eq = _parse()
     assert len(eq) == 1
     assert eq[0]["n"] == "0001001"
+    assert "uid" in eq[0]           # 對應註要能貼回確切段落，不能只有註號
     assert eq[0]["ref"].startswith("S. 22. 12-14.")
 
 
@@ -194,6 +209,7 @@ def test_toc_tree_and_segment_index():
     assert node["head"] == "觀因緣品第一" and node["type"] == "pin"
     assert node["parent"] == -1
     assert "path" not in v
+    assert node["uid"] == v["uid"] or node["uid"].startswith("T30n1564_p")
     heads = [t["head"] for t in toc]
     assert heads == ["釋僧叡序", "觀因緣品第一"]
     # 卷二那段不在任何 div 內

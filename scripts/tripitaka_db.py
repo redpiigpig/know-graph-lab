@@ -99,7 +99,10 @@ create index if not exists tripitaka_works_title_idx
 create table if not exists tripitaka_parallels (
   id       bigserial primary key,
   work_id  text not null references tripitaka_works(id) on delete cascade,
-  seg      text,
+  -- 段的**唯一鍵**（T02n0099_p0001a06 或同行第二段的 …a06.2）。
+  -- 純行號不唯一：全藏 6.5% 的段與別的段同行起頭，拿行號當鍵會讓
+  -- 對照掛到同一行的其他段上。引用式仍是行號，顯示時去掉 .n 後綴。
+  seg_uid  text,
   lang     text not null,
   ref      text not null,
   src      text not null,
@@ -107,7 +110,7 @@ create table if not exists tripitaka_parallels (
 );
 create index if not exists tripitaka_parallels_work_idx on tripitaka_parallels (work_id);
 create unique index if not exists tripitaka_parallels_uniq
-  on tripitaka_parallels (work_id, coalesce(seg,''), lang, ref, src);
+  on tripitaka_parallels (work_id, coalesce(seg_uid,''), lang, ref, src);
 
 alter table tripitaka_works    enable row level security;
 alter table tripitaka_parallels enable row level security;
@@ -196,10 +199,31 @@ def _r2():
                      region_name="auto", config=Config(signature_version="s3v4"))
 
 
-def cmd_push_r2(only: str | None):
+def _r2_existing(s3, bucket: str) -> set[str]:
+    """已在 R2 上的 key。全藏 5,295 檔重傳一次要十幾分鐘，
+    補幾個新檔不該把整批再推一遍。"""
+    keys: set[str] = set()
+    token = None
+    while True:
+        kw = {"Bucket": bucket, "Prefix": R2_PREFIX, "MaxKeys": 1000}
+        if token:
+            kw["ContinuationToken"] = token
+        r = s3.list_objects_v2(**kw)
+        keys.update(o["Key"] for o in r.get("Contents", []))
+        if not r.get("IsTruncated"):
+            return keys
+        token = r["NextContinuationToken"]
+
+
+def cmd_push_r2(only: str | None, force: bool = False):
     s3, bucket = _r2(), _env("R2_BUCKET")
     src = LOCAL_OUT if LOCAL_OUT.exists() else tc.OUT_DIR
     files = sorted(src.glob(f"{only}.*" if only else "*"))
+    have = set() if force else _r2_existing(s3, bucket)
+    if have:
+        skip = sum(1 for f in files if f"{R2_PREFIX}{f.name}.gz" in have)
+        print(f"R2 已有 {len(have)} 物件，本批跳過 {skip} 檔")
+        files = [f for f in files if f"{R2_PREFIX}{f.name}.gz" not in have]
     big = []
     for i, f in enumerate(files, 1):
         raw = f.read_bytes()
@@ -227,6 +251,7 @@ def main():
     ap.add_argument("--sync-drive", action="store_true")
     ap.add_argument("--push-r2", action="store_true")
     ap.add_argument("--only", type=str)
+    ap.add_argument("--force", action="store_true", help="不管 R2 已有，全部重傳")
     a = ap.parse_args()
     if a.schema:
         cmd_schema()
@@ -235,7 +260,7 @@ def main():
     if a.sync_drive:
         cmd_sync_drive()
     if a.push_r2:
-        cmd_push_r2(a.only)
+        cmd_push_r2(a.only, a.force)
     if not any([a.schema, a.push, a.sync_drive, a.push_r2]):
         ap.print_help()
 

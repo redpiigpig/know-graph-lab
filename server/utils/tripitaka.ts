@@ -20,6 +20,10 @@ import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 /** 一段。`seg` 即大正藏行號（T09n0262_p0008a13），本身就是通行引用式。 */
 export interface TripSegment {
   i: number;
+  /** 段的唯一鍵。純行號不唯一（全藏 6.5% 的段與別的段同行起頭），
+   *  所以同行第二段起加 `.2` 後綴。對照／詞條／DOM anchor 一律用這個。 */
+  uid: string;
+  /** 引用式 ＝ 大正藏行號，允許重複，只作顯示與引用之用 */
   seg: string;
   juan?: number;
   /** 目錄樹索引（-1 = 不屬任何卷品）。整串路徑存在 toc，不逐段重複。 */
@@ -37,14 +41,15 @@ export interface TripTocNode {
   head: string;
   n: string | null;
   parent: number;
-  seg: string;
+  /** 該節點起始段的唯一鍵 */
+  uid: string;
   juan: number;
 }
 
 export interface TripTerm {
   zh: string;
   forms: Record<string, string>;
-  seg: string | null;
+  uid: string | null;
   anchor: string | null;
 }
 

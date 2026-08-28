@@ -208,14 +208,14 @@ def zh_pin_segs(work_id: str) -> dict[int, str]:
             continue
         n = node.get("n")
         if n and str(n).isdigit():
-            out.setdefault(int(n), node["seg"])
+            out.setdefault(int(n), node["uid"])
             continue
         # 品號寫在標題（「觀因緣品第一」）時，取「第X」的漢數字
         m = re.search(r"第([一二三四五六七八九十百〇零]+)", head)
         if m:
             no = tpp.cjk_number(m.group(1))
             if no:
-                out.setdefault(no, node["seg"])
+                out.setdefault(no, node["uid"])
     return out
 
 

@@ -409,7 +409,7 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
     if body is None:
         return meta, segs, equivalents
 
-    state = {"juan": 0, "page": "", "line": "", "idx": 0}
+    state = {"juan": 0, "page": "", "line": "", "idx": 0, "line_use": {}}
     toc: list[dict] = []          # 結構樹（卷/品/經），供 reader 側欄
     toc_key: dict[tuple, int] = {}
     anchor_seg: dict[str, str] = {}   # anchor xml:id → 所屬段，供詞條層回貼
@@ -422,7 +422,7 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
     def cite(line: str) -> str:
         return f"{pfx}_p{line}" if line else ""
 
-    def toc_index(path: list[dict], first_line: str) -> int:
+    def toc_index(path: list[dict], first_uid: str) -> int:
         """把 div 路徑登記進目錄樹，回傳最深一層的索引（-1 = 不在任何 div 內）。"""
         parent = -1
         for depth, node in enumerate(path):
@@ -433,7 +433,8 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
                 toc_key[key] = len(toc)
                 toc.append({"i": len(toc), "depth": depth, "type": node["type"],
                             "head": node["head"], "n": node.get("n"),
-                            "parent": parent, "seg": first_line, "juan": state["juan"]})
+                            "parent": parent, "uid": first_uid,
+                            "juan": state["juan"]})
             parent = toc_key[key]
         return parent
 
@@ -450,17 +451,23 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
             return
         state["idx"] += 1
         seg_id = f"{pfx}_p{first_line}" if first_line else f"{wid}#{state['idx']}"
+        # 🚨 行號不唯一：同一行可以起頭好幾段（全藏 6.5%、672 部）。
+        # seg 是引用式（照使用者定調，就是大正藏行號，允許重複），
+        # uid 才是鍵 —— 對照、詞條、DOM anchor 全掛 uid，否則同行的段會互相串。
+        seen = state["line_use"][seg_id] = state["line_use"].get(seg_id, 0) + 1
+        uid = seg_id if seen == 1 else f"{seg_id}.{seen}"
         # 記下段內每個 anchor 落在哪一段 —— <cb:tt> 的漢梵巴詞條用
         # from="#beg0001011" 指回正文，靠這張表才貼得回去
         for a in el.iter(f"{{{TEI}}}anchor"):
             aid = a.get("{http://www.w3.org/XML/1998/namespace}id")
             if aid:
-                anchor_seg[aid] = seg_id
+                anchor_seg[aid] = uid
         segs.append({
             "i": state["idx"],
+            "uid": uid,
             "seg": seg_id,
             "juan": state["juan"] or None,
-            "d": toc_index(path, seg_id),   # 目錄樹索引，非整串路徑（省 95 萬段的重複）
+            "d": toc_index(path, uid),   # 目錄樹索引，非整串路徑（省 95 萬段的重複）
             "kind": kind,
             "sources": {"lzh": text},
             "notes": collect_notes(el, gaiji) or None,
@@ -555,7 +562,7 @@ def parse_terms(root: ET.Element, anchor_seg: dict[str, str] | None = None,
             continue
         anchor = (tt.get("from") or "").lstrip("#")
         out.append({"zh": zh, "forms": forms,
-                    "seg": anchor_seg.get(anchor), "anchor": anchor or None})
+                    "uid": anchor_seg.get(anchor), "anchor": anchor or None})
     return out
 
 
@@ -610,7 +617,7 @@ def parse_equivalents(root: ET.Element, anchor_seg: dict[str, str] | None = None
             if txt:
                 nn = n.get("n")
                 out.append({"n": nn, "ref": txt,
-                            "seg": anchor_seg.get(f"nkr_note_equivalent_{nn}")})
+                            "uid": anchor_seg.get(f"nkr_note_equivalent_{nn}")})
     return out
 
 

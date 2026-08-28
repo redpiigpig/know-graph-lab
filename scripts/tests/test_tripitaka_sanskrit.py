@@ -63,11 +63,11 @@ def test_zh_pin_segs_accepts_untyped_divs(monkeypatch):
     只認 type=='pin' 會讓整部書的品層被判定為不存在。"""
     tpp._TOC_CACHE["TX"] = [
         {"i": 0, "depth": 0, "type": "xu", "head": "道行般若經序", "n": None,
-         "parent": -1, "seg": "S0", "juan": 1},
+         "parent": -1, "uid": "S0", "juan": 1},
         {"i": 1, "depth": 0, "type": "pin", "head": "摩訶般若波羅蜜道行品第一",
-         "n": "1", "parent": -1, "seg": "S1", "juan": 1},
+         "n": "1", "parent": -1, "uid": "S1", "juan": 1},
         {"i": 2, "depth": 0, "type": "", "head": "摩訶般若波羅蜜難問品第二",
-         "n": "2", "parent": -1, "seg": "S2", "juan": 1},
+         "n": "2", "parent": -1, "uid": "S2", "juan": 1},
     ]
     out = ts.zh_pin_segs("TX")
     assert out == {1: "S1", 2: "S2"}
@@ -77,9 +77,9 @@ def test_zh_pin_segs_accepts_untyped_divs(monkeypatch):
 def test_zh_pin_segs_reads_number_from_head(monkeypatch):
     tpp._TOC_CACHE["TY"] = [
         {"i": 0, "depth": 0, "type": "pin", "head": "中論觀因緣品第一（十六偈）",
-         "n": None, "parent": -1, "seg": "A", "juan": 1},
+         "n": None, "parent": -1, "uid": "A", "juan": 1},
         {"i": 1, "depth": 0, "type": "pin", "head": "中論觀去來品第二",
-         "n": None, "parent": -1, "seg": "B", "juan": 1},
+         "n": None, "parent": -1, "uid": "B", "juan": 1},
     ]
     assert ts.zh_pin_segs("TY") == {1: "A", 2: "B"}
 
@@ -92,7 +92,7 @@ def test_gate_blocks_mismatched_chapter_counts(tmp_path, monkeypatch):
     monkeypatch.setattr(ts, "fetch", lambda _n: p)
     tpp._TOC_CACHE["TZ"] = [
         {"i": i, "depth": 0, "type": "pin", "head": f"第{n}品", "n": str(i + 1),
-         "parent": -1, "seg": f"S{i + 1}", "juan": 1}
+         "parent": -1, "uid": f"S{i + 1}", "juan": 1}
         for i, n in enumerate("一二三四五")
     ]
     r = ts.audit_one({"file": "x", "work": "TZ", "zh": "測", "sa": "Test",
@@ -107,7 +107,7 @@ def test_gate_allows_equal_chapter_counts(tmp_path, monkeypatch):
     monkeypatch.setattr(ts, "fetch", lambda _n: p)
     tpp._TOC_CACHE["TW"] = [
         {"i": i, "depth": 0, "type": "pin", "head": f"第{n}品", "n": str(i + 1),
-         "parent": -1, "seg": f"S{i + 1}", "juan": 1}
+         "parent": -1, "uid": f"S{i + 1}", "juan": 1}
         for i, n in enumerate("一二三")
     ]
     r = ts.audit_one({"file": "y", "work": "TW", "zh": "測", "sa": "Test",

@@ -66,7 +66,7 @@ scripts/tripitaka_original_text.py  平行經目的「指標」→ 巴利原典�
 scripts/tripitaka_sanskrit.py       梵文原典（GRETIL）逐品掛上，含品數對齊閘
 scripts/tripitaka_db.py             建表 SQL／目錄入庫／Drive 同步／R2 上傳
 scripts/sql/tripitaka_schema.sql    DDL（Management API token 掛掉時手動貼 Dashboard）
-scripts/tests/test_tripitaka_*.py   純函式測試（39 個，鎖住下列所有陷阱）
+scripts/tests/test_tripitaka_*.py   純函式測試（40 個，鎖住下列所有陷阱）
 
 data/tripitaka/divisions.ts         部類標籤／配色／語言與來源分級（顯示層）
 server/utils/tripitaka.ts           file-backed 讀取器（本機 Drive → R2 → null）
@@ -170,6 +170,18 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
 
 16. **CBETA 有時不給 div 的 `type`。** 道行般若 T0224 只有第一品標了 `pin`，
     其餘 29 品是空字串 —— 只認 `type=='pin'` 會把整部書判成「無品層」。
+
+17. **大正藏行號不唯一。** 同一行可以起頭好幾段 —— 全藏 **65,483 段（6.5%）、
+    672 部**如此。行號是段的*引用式*（使用者定調，不改），但不能當鍵：
+    拿它 join 對照／詞條，同行的段會互相串；當 DOM anchor 會出現重複 id。
+    故每段有兩個欄位：
+
+    | 欄 | 是什麼 | 用途 |
+    |---|---|---|
+    | `seg` | 大正藏行號 `T02n0099_p0001a06` | 顯示與引用，允許重複 |
+    | `uid` | 同行第二段起加 `.2`／`.3` | 對照／詞條／anchor 的**唯一鍵** |
+
+    DB 的 `tripitaka_parallels.seg_uid` 存的是 uid，不是 seg。
 
 ## 尚未完成（誠實列出，別當成已完成）
 

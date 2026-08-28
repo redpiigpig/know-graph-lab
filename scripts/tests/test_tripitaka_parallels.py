@@ -95,11 +95,11 @@ def test_sutta_index_reads_number_from_head_when_n_missing(monkeypatch):
     """長阿含／中阿含的 jing 沒有 n，經號只在標題裡。"""
     _fake_toc(monkeypatch, "T0026", [
         {"i": 0, "depth": 0, "type": "pin", "head": "七法品第一", "n": None,
-         "parent": -1, "seg": "S0", "juan": 1},
+         "parent": -1, "uid": "S0", "juan": 1},
         {"i": 1, "depth": 1, "type": "jing", "head": "（一）中阿含七法品善法經第一",
-         "n": None, "parent": 0, "seg": "S1", "juan": 1},
+         "n": None, "parent": 0, "uid": "S1", "juan": 1},
         {"i": 2, "depth": 1, "type": "jing", "head": "（二二二）中阿含例品例經第十一",
-         "n": None, "parent": 0, "seg": "S222", "juan": 60},
+         "n": None, "parent": 0, "uid": "S222", "juan": 60},
     ])
     assert tp.jing_seg("T0026", "1") == "S1"
     assert tp.jing_seg("T0026", "222") == "S222"
@@ -110,11 +110,11 @@ def test_sutta_index_ekottarika_uses_pin_dot_jing(monkeypatch):
     """增壹阿含 SC 用「品.經」（ea32.2），CBETA 的 n 是品內序號。"""
     _fake_toc(monkeypatch, "T0125", [
         {"i": 0, "depth": 0, "type": "pin", "head": "十念品第二", "n": "2",
-         "parent": -1, "seg": "P2", "juan": 1},
+         "parent": -1, "uid": "P2", "juan": 1},
         {"i": 1, "depth": 1, "type": "jing", "head": "（一）", "n": "1",
-         "parent": 0, "seg": "P2J1", "juan": 1},
+         "parent": 0, "uid": "P2J1", "juan": 1},
         {"i": 2, "depth": 1, "type": "jing", "head": "（二）", "n": "2",
-         "parent": 0, "seg": "P2J2", "juan": 1},
+         "parent": 0, "uid": "P2J2", "juan": 1},
     ])
     assert tp.jing_seg("T0125", "2.2") == "P2J2"
     assert tp.jing_seg("T0125", "2.9") is None
@@ -124,7 +124,7 @@ def test_range_uid_resolves_to_its_start(monkeypatch):
     """'sa1060-1061' 指一段連續的經 —— 取起點，不硬拆成多筆。"""
     _fake_toc(monkeypatch, "T0099", [
         {"i": 0, "depth": 0, "type": "jing", "head": "（一〇六〇）", "n": "1060",
-         "parent": -1, "seg": "S1060", "juan": 38},
+         "parent": -1, "uid": "S1060", "juan": 38},
     ])
     assert tp.jing_seg("T0099", "1060-1061") == "S1060"
 
@@ -133,9 +133,9 @@ def test_pin_seg(monkeypatch):
     """t213.4 的品號＝跨語言主對齊層，不可丟。"""
     tp._TOC_CACHE["T0213"] = [
         {"i": 0, "depth": 0, "type": "pin", "head": "1 有為品", "n": "1",
-         "parent": -1, "seg": "A", "juan": 1},
+         "parent": -1, "uid": "A", "juan": 1},
         {"i": 1, "depth": 0, "type": "pin", "head": "法集要頌經放逸品第四", "n": "4",
-         "parent": -1, "seg": "D", "juan": 1},
+         "parent": -1, "uid": "D", "juan": 1},
     ]
     assert tp.pin_seg("T0213", "4") == "D"
     assert tp.pin_seg("T0213", "9") is None
