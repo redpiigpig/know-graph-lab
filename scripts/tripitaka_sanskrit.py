@@ -55,14 +55,28 @@ REGISTRY: list[dict] = [
      "form": "chapter.verse"},
 
     # ── 法華部 ──
-    # 梵 27 品 vs 漢 28 品：梵本第 11 品（見寶塔）含漢本第 12 品（提婆達多）的內容。
-    # 故 12 之後漢比梵多一。此表為人工對照，非自動推得。
+    # 🚨 這張表不是「梵 12 起加一」那麼簡單，第一版就是那樣寫而錯了 4 個品。
+    # 梵／藏本 27 品，羅什本 28 品，差異有兩處而非一處：
+    #   ① 提婆達多品（漢 12）在梵本併入見寶塔品（梵 11）→ 之後位移一格
+    #   ② 羅什把**囑累品移到第 22**、陀羅尼品排到第 26，梵藏本則
+    #      陀羅尼在 21、囑累在最末 27 → 尾段七品的次序完全不同
+    # 下表的梵本品名取自 GRETIL 的 `Saddhp_N:` 標記、漢本品名取自 CBETA 目錄，
+    # 兩邊逐一核對過（藏譯 Toh 113 的章序與梵本一致，故共用此表）。
     {"file": "sa_saddharmapuNDarIkasUtra", "work": "T0262",
      "zh": "妙法蓮華經", "sa": "Saddharmapuṇḍarīkasūtra", "siglum": "Saddhp",
      "form": "chapter",
-     "chapter_map": {**{i: i for i in range(1, 12)},
-                     **{i: i + 1 for i in range(12, 28)}},
-     "note": "梵本 27 品、羅什譯 28 品；提婆達多品（漢 12）在梵本併入見寶塔品（梵 11）"},
+     "chapter_map": {
+         **{i: i for i in range(1, 12)},        # 序…見寶塔（梵 11 含漢 12 提婆達多）
+         **{i: i + 1 for i in range(12, 21)},   # 勸持…如來神力 → 漢 13–21
+         21: 26,   # dhāraṇī            陀羅尼品     （羅什排第 26）
+         22: 23,   # bhaiṣajyarājapūrva 藥王菩薩本事品
+         23: 24,   # gadgadasvara       妙音菩薩品
+         24: 25,   # samantamukha       觀世音菩薩普門品
+         25: 27,   # śubhavyūharāja     妙莊嚴王本事品
+         26: 28,   # samantabhadra      普賢菩薩勸發品
+         27: 22,   # anuparīndanā       囑累品       （羅什移到第 22）
+     },
+     "note": "梵藏 27 品、羅什 28 品；提婆達多併入見寶塔，且羅什把囑累品移到第 22"},
 
     # ── 本緣部 ──
     {"file": "sa_lalitavistara", "work": "T0187",
@@ -219,6 +233,21 @@ def zh_pin_segs(work_id: str) -> dict[int, str]:
     return out
 
 
+def first_segment(work_id: str) -> str | None:
+    """整部層級的落點：該經的第一段。心經、藥師這類漢本無品層的書，
+    藏／梵文只能掛在全經開頭，不該因為「沒有品」就整個不掛。"""
+    toc = tpp.toc_of(work_id)
+    if toc:
+        return toc[0]["uid"]
+    p = SEG_DIR / f"{work_id}.jsonl"
+    if not p.exists():
+        return None
+    for line in p.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            return json.loads(line)["uid"]
+    return None
+
+
 def audit_one(entry: dict) -> dict:
     path = fetch(entry["file"])
     sa = parse_gretil(path, entry["siglum"], entry["form"])
@@ -276,6 +305,9 @@ def cmd_build(only: str | None):
             continue
         sa, zh = r["_sa"], r["_zh"]
         cmap = e.get("chapter_map") or {k: k for k in sa}
+        if not zh:                       # 漢本無品層 → 整部掛在全經首段
+            head = first_segment(e["work"])
+            zh = {k: head for k in cmap} if head else {}
 
         by_seg: dict[str, list] = {}
         for sa_no, zh_no in cmap.items():

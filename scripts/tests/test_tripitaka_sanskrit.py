@@ -115,15 +115,25 @@ def test_gate_allows_equal_chapter_counts(tmp_path, monkeypatch):
     assert r["status"] == "品數相符"
 
 
-def test_lotus_chapter_map_is_offset_after_devadatta():
-    """法華：梵 27 品、羅什漢譯 28 品。梵 11（見寶塔）含漢 12（提婆達多），
-    故漢從 12 起比梵多一。照順序對會讓 12 品以後全體位移。"""
+def test_lotus_chapter_map_has_two_divergences_not_one():
+    """🚨 法華的梵漢差異有**兩處**，不是一處。第一版只處理了第一處，
+    尾段四個品全配錯（陀羅尼、妙莊嚴王、普賢、囑累），而頁面看不出來。
+
+      ① 提婆達多品（漢 12）在梵本併入見寶塔品（梵 11）→ 之後位移一格
+      ② 羅什把囑累品移到第 22、陀羅尼排到第 26；梵藏本則陀羅尼在 21、
+         囑累在最末 27 → 尾段七品次序完全不同
+    """
     e = next(x for x in ts.REGISTRY if x["work"] == "T0262")
     cmap = e["chapter_map"]
-    assert cmap[11] == 11
-    assert cmap[12] == 13, "梵 12 應對到漢 13，不是漢 12"
-    assert cmap[27] == 28
     assert len(cmap) == 27
+    assert sorted(cmap.values()) == [i for i in range(1, 29) if i != 12],         "27 個梵品應一對一蓋住漢 28 品中除提婆達多品（12）以外的全部"
+    assert cmap[11] == 11                      # 見寶塔（含提婆達多）
+    assert cmap[12] == 13                      # 勸持
+    assert cmap[20] == 21                      # 如來神力
+    assert cmap[21] == 26, "梵 21 陀羅尼 → 漢 26，不是漢 22"
+    assert cmap[25] == 27, "梵 25 妙莊嚴王 → 漢 27"
+    assert cmap[26] == 28, "梵 26 普賢勸發 → 漢 28"
+    assert cmap[27] == 22, "梵 27 囑累 → 漢 22（羅什移到前面）"
 
 
 def test_registry_entries_are_wellformed():
