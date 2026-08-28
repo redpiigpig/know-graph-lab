@@ -6,7 +6,9 @@
   100–200 字繁體，必含四件事（這是什麼／為何入這一卷／一個具體可查證的細節／
   存世處境），並避開六條禁忌。
 
-引擎鏈 Gemini → NVIDIA（見 feedback_engine_nvidia_no_haiku）。
+引擎鏈 Gemini → NVIDIA → OpenRouter → Haiku（前三層都是免費額度，撞牆是常態；
+Haiku 是救急層，走 Claude Code 的 OAuth 憑證即 Max 訂閱，不另計費）。
+要整條鏈只走 Haiku：設 HELLENIKA_ENGINE=haiku。
 逐卷跑而非全書一次跑——卷的功能位置是第二要件的依據。
 
 產物寫進 data/hellenika/intros.json（鍵為 corpus id），由 data/hellenika/index.ts
@@ -195,7 +197,70 @@ def ask_openrouter(prompt: str) -> str:
     raise RuntimeError('all OpenRouter keys exhausted')
 
 
+# ─────────────────────────── 第四層：Haiku（救急） ───────────────────────────
+#
+# 前三層全是免費額度，撞牆是常態（Gemini 每日額度、NVIDIA 斷路、OpenRouter 連線）。
+# Haiku 4.5 走 Anthropic：優先吃 ANTHROPIC_API_KEY，沒有就用 Claude Code 的
+# OAuth 憑證（Max 訂閱，不另計費）。憑證每幾小時會換一次 access token，故每次
+# 呼叫前重讀 .credentials.json——長跑的 worker 抓著舊 token 會整批 401。
+# 作法沿用 scripts/translate_ebook_to_zh.py 既有的那套。
+
+HAIKU_MODEL = 'claude-haiku-4-5-20251001'
+_anth = None
+_anth_mtime = 0.0
+
+
+def _cred_path() -> str:
+    home = os.environ.get('USERPROFILE') or os.environ.get('HOME') or ''
+    return os.path.join(home, '.claude', '.credentials.json')
+
+
+def _anth_client():
+    global _anth, _anth_mtime
+    import anthropic
+    kw = {'timeout': 600.0, 'max_retries': 2}
+    key = os.environ.get('ANTHROPIC_API_KEY')
+    if key:
+        if _anth is None:
+            _anth = anthropic.Anthropic(api_key=key, **kw)
+        return _anth
+    cp = _cred_path()
+    if not os.path.exists(cp):
+        raise RuntimeError('no Anthropic credentials')
+    m = os.path.getmtime(cp)
+    if _anth is None or m > _anth_mtime:      # token 換過就重建 client
+        creds = json.loads(io.open(cp, encoding='utf-8').read())
+        token = creds.get('claudeAiOauth', {}).get('accessToken', '')
+        if not token:
+            raise RuntimeError('no Anthropic OAuth token')
+        _anth = anthropic.Anthropic(auth_token=token, **kw)
+        _anth_mtime = m
+    return _anth
+
+
+def ask_haiku(prompt: str) -> str:
+    import anthropic
+    for attempt, wait in enumerate((0, 30, 90, 240), start=1):
+        if wait:
+            print(f'    haiku 429 → 等 {wait}s（第 {attempt} 次）', file=sys.stderr, flush=True)
+            time.sleep(wait)
+        try:
+            msg = _anth_client().messages.create(
+                model=HAIKU_MODEL, max_tokens=16000,
+                messages=[{'role': 'user', 'content': prompt}])
+            return ''.join(b.text for b in msg.content if hasattr(b, 'text')).strip()
+        except anthropic.RateLimitError:
+            continue
+        except (anthropic.APIConnectionError, anthropic.APITimeoutError) as e:
+            print(f'    haiku conn-err: {type(e).__name__}', file=sys.stderr, flush=True)
+            continue
+    raise RuntimeError('Haiku 重試耗盡')
+
+
 def ask(prompt: str) -> str:
+    forced = os.environ.get('HELLENIKA_ENGINE', '').strip().lower()
+    if forced == 'haiku':          # 使用者明確下令只走 Haiku（見 feedback_ocr_strategy）
+        return ask_haiku(prompt)
     try:
         return ask_gemini(prompt)
     except Exception as e:  # noqa: BLE001 — 整條 Gemini 鏈乾了才降級
@@ -204,7 +269,11 @@ def ask(prompt: str) -> str:
         return ask_nvidia(prompt)
     except Exception as e:  # noqa: BLE001
         print(f'  ⤷ NVIDIA 失敗（{e}），改走 OpenRouter', file=sys.stderr, flush=True)
+    try:
         return ask_openrouter(prompt)
+    except Exception as e:  # noqa: BLE001
+        print(f'  ⤷ OpenRouter 失敗（{e}），改走 Haiku', file=sys.stderr, flush=True)
+        return ask_haiku(prompt)
 
 
 # ─────────────────────────── prompt ───────────────────────────
