@@ -235,6 +235,7 @@ output/original-readers/audio/latin/*.wav
 # 青空文庫下載的原文與全站書目（可重抓，不進版控；manifest 留著）
 output/source-cache/original-readers/japanese-full/aozora/texts/
 output/source-cache/original-readers/japanese-full/scripture/*.txt
+output/source-cache/original-readers/japanese-full/manyoshu/*.txt
 output/source-cache/original-readers/japanese-full/aozora/index.json
 
 # 逐詞詞形分析：由本機的 MorphGNT 與 OSHB 標註重建得出，92 MB，

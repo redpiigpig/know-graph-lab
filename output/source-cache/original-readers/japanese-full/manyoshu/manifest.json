@@ -1,0 +1,1550 @@
+{
+ "manyoshu:1:1": {
+  "titleZh": "萬葉集 卷第一",
+  "extent": "第 1–16 首（完整 16 首）",
+  "chars": 2603,
+  "poems": 16,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_01_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:1:2": {
+  "titleZh": "萬葉集 卷第一",
+  "extent": "第 17–37 首（完整 20 首）",
+  "chars": 2538,
+  "poems": 20,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_01_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:1:3": {
+  "titleZh": "萬葉集 卷第一",
+  "extent": "第 38–69 首（完整 20 首）",
+  "chars": 2605,
+  "poems": 20,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_01_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:1:4": {
+  "titleZh": "萬葉集 卷第一",
+  "extent": "第 70–84 首（完整 26 首）",
+  "chars": 2485,
+  "poems": 26,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_01_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:1": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 85–110 首（完整 24 首）",
+  "chars": 2598,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:2": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 111–132 首（完整 22 首）",
+  "chars": 2403,
+  "poems": 22,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:3": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 133–158 首（完整 22 首）",
+  "chars": 2435,
+  "poems": 22,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:4": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 159–192 首（完整 30 首）",
+  "chars": 2603,
+  "poems": 30,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:5": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 193–206 首（完整 9 首）",
+  "chars": 2283,
+  "poems": 9,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:6": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 196–216 首（完整 10 首）",
+  "chars": 2374,
+  "poems": 10,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:2:7": {
+  "titleZh": "萬葉集 卷第二",
+  "extent": "第 217–232 首（完整 17 首）",
+  "chars": 2084,
+  "poems": 17,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_02_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:1": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 235–269 首（完整 32 首）",
+  "chars": 2655,
+  "poems": 32,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:2": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 270–313 首（完整 44 首）",
+  "chars": 2663,
+  "poems": 44,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:3": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 314–347 首（完整 34 首）",
+  "chars": 2636,
+  "poems": 34,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:4": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 348–382 首（完整 34 首）",
+  "chars": 2661,
+  "poems": 34,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:5": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 383–416 首（完整 36 首）",
+  "chars": 2575,
+  "poems": 36,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:6": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 417–442 首（完整 22 首）",
+  "chars": 2322,
+  "poems": 22,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:7": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 443–463 首（完整 21 首）",
+  "chars": 2592,
+  "poems": 21,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:3:8": {
+  "titleZh": "萬葉集 卷第三",
+  "extent": "第 464–483 首（完整 20 首）",
+  "chars": 2111,
+  "poems": 20,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_03_08.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:1": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 484–522 首（完整 39 首）",
+  "chars": 2667,
+  "poems": 39,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:2": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 523–552 首（完整 30 首）",
+  "chars": 2583,
+  "poems": 30,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:3": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 553–590 首（完整 38 首）",
+  "chars": 2648,
+  "poems": 38,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:4": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 591–639 首（完整 49 首）",
+  "chars": 2672,
+  "poems": 49,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:5": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 640–693 首（完整 54 首）",
+  "chars": 2690,
+  "poems": 54,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:6": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 694–747 首（完整 54 首）",
+  "chars": 2687,
+  "poems": 54,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:4:7": {
+  "titleZh": "萬葉集 卷第四",
+  "extent": "第 748–792 首（完整 45 首）",
+  "chars": 2284,
+  "poems": 45,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_04_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:1": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 793–805 首（完整 13 首）",
+  "chars": 2605,
+  "poems": 13,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:2": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 806–820 首（完整 15 首）",
+  "chars": 2595,
+  "poems": 15,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:3": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 821–863 首（完整 43 首）",
+  "chars": 2402,
+  "poems": 43,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:4": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 864–884 首（完整 21 首）",
+  "chars": 2134,
+  "poems": 21,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:5": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 885–896 首（完整 14 首）",
+  "chars": 2520,
+  "poems": 14,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:6": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 897–897 首（完整 1 首）",
+  "chars": 3904,
+  "poems": 1,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:5:7": {
+  "titleZh": "萬葉集 卷第五",
+  "extent": "第 898–906 首（完整 7 首）",
+  "chars": 889,
+  "poems": 7,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_05_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:1": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 907–934 首（完整 23 首）",
+  "chars": 2604,
+  "poems": 23,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:2": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 935–959 首（完整 25 首）",
+  "chars": 2629,
+  "poems": 25,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:3": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 960–986 首（完整 27 首）",
+  "chars": 2648,
+  "poems": 27,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:4": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 987–1012 首（完整 26 首）",
+  "chars": 2527,
+  "poems": 26,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:5": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 1013–1034 首（完整 21 首）",
+  "chars": 2634,
+  "poems": 21,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:6": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 1035–1061 首（完整 27 首）",
+  "chars": 2501,
+  "poems": 27,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:6:7": {
+  "titleZh": "萬葉集 卷第六",
+  "extent": "第 1062–1067 首（完整 6 首）",
+  "chars": 598,
+  "poems": 6,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_06_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:1": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1068–1129 首（完整 62 首）",
+  "chars": 2676,
+  "poems": 62,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:2": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1130–1199 首（完整 70 首）",
+  "chars": 2724,
+  "poems": 70,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:3": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1200–1266 首（完整 68 首）",
+  "chars": 2734,
+  "poems": 68,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:4": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1267–1331 首（完整 57 首）",
+  "chars": 2689,
+  "poems": 57,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:5": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1332–1386 首（完整 63 首）",
+  "chars": 2695,
+  "poems": 63,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:7:6": {
+  "titleZh": "萬葉集 卷第七",
+  "extent": "第 1387–1415 首（完整 29 首）",
+  "chars": 1154,
+  "poems": 29,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_07_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:1": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1418–1459 首（完整 42 首）",
+  "chars": 2625,
+  "poems": 42,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:2": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1460–1505 首（完整 46 首）",
+  "chars": 2649,
+  "poems": 46,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:3": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1506–1546 首（完整 41 首）",
+  "chars": 2676,
+  "poems": 41,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:4": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1547–1592 首（完整 46 首）",
+  "chars": 2680,
+  "poems": 46,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:5": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1593–1628 首（完整 36 首）",
+  "chars": 2355,
+  "poems": 36,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:8:6": {
+  "titleZh": "萬葉集 卷第八",
+  "extent": "第 1629–1663 首（完整 35 首）",
+  "chars": 2511,
+  "poems": 35,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_08_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:9:1": {
+  "titleZh": "萬葉集 卷第九",
+  "extent": "第 1664–1715 首（完整 52 首）",
+  "chars": 2683,
+  "poems": 52,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_09_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:9:2": {
+  "titleZh": "萬葉集 卷第九",
+  "extent": "第 1716–1744 首（完整 29 首）",
+  "chars": 2644,
+  "poems": 29,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_09_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:9:3": {
+  "titleZh": "萬葉集 卷第九",
+  "extent": "第 1745–1769 首（完整 25 首）",
+  "chars": 2558,
+  "poems": 25,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_09_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:9:4": {
+  "titleZh": "萬葉集 卷第九",
+  "extent": "第 1770–1799 首（完整 30 首）",
+  "chars": 2591,
+  "poems": 30,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_09_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:9:5": {
+  "titleZh": "萬葉集 卷第九",
+  "extent": "第 1800–1811 首（完整 12 首）",
+  "chars": 2159,
+  "poems": 12,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_09_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:1": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 1812–1882 首（完整 73 首）",
+  "chars": 2711,
+  "poems": 73,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:2": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 1883–1951 首（完整 66 首）",
+  "chars": 2725,
+  "poems": 66,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:3": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 1952–2022 首（完整 71 首）",
+  "chars": 2723,
+  "poems": 71,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:4": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 2023–2089 首（完整 67 首）",
+  "chars": 2697,
+  "poems": 67,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:5": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 2090–2159 首（完整 70 首）",
+  "chars": 2714,
+  "poems": 70,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:6": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 2160–2234 首（完整 75 首）",
+  "chars": 2747,
+  "poems": 75,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:7": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 2235–2302 首（完整 70 首）",
+  "chars": 2737,
+  "poems": 70,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:10:8": {
+  "titleZh": "萬葉集 卷第十",
+  "extent": "第 2303–2350 首（完整 46 首）",
+  "chars": 1913,
+  "poems": 46,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_10_08.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:1": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2351–2517 首（完整 65 首）",
+  "chars": 2716,
+  "poems": 65,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:2": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2518–2589 首（完整 72 首）",
+  "chars": 2716,
+  "poems": 72,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:3": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2590–2453 首（完整 68 首）",
+  "chars": 2721,
+  "poems": 68,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:4": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2454–2631 首（完整 67 首）",
+  "chars": 2711,
+  "poems": 67,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:5": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2632–2700 首（完整 69 首）",
+  "chars": 2718,
+  "poems": 69,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:6": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2701–2769 首（完整 69 首）",
+  "chars": 2733,
+  "poems": 69,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:7": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2770–2824 首（完整 64 首）",
+  "chars": 2706,
+  "poems": 64,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:11:8": {
+  "titleZh": "萬葉集 卷第十一",
+  "extent": "第 2825–2840 首（完整 16 首）",
+  "chars": 871,
+  "poems": 16,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_11_08.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%80",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:1": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 2841–2923 首（完整 71 首）",
+  "chars": 2721,
+  "poems": 71,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:2": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 2924–2979 首（完整 68 首）",
+  "chars": 2729,
+  "poems": 68,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:3": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 2980–3049 首（完整 70 首）",
+  "chars": 2724,
+  "poems": 70,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:4": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 3050–3109 首（完整 60 首）",
+  "chars": 2705,
+  "poems": 60,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:5": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 3110–3176 首（完整 67 首）",
+  "chars": 2700,
+  "poems": 67,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:12:6": {
+  "titleZh": "萬葉集 卷第十二",
+  "extent": "第 3177–3220 首（完整 44 首）",
+  "chars": 1810,
+  "poems": 44,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_12_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:1": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3221–3242 首（完整 22 首）",
+  "chars": 2578,
+  "poems": 22,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:2": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3243–3269 首（完整 27 首）",
+  "chars": 2543,
+  "poems": 27,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:3": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3270–3293 首（完整 23 首）",
+  "chars": 2618,
+  "poems": 23,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:4": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3294–3317 首（完整 24 首）",
+  "chars": 2428,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:5": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3318–3332 首（完整 14 首）",
+  "chars": 2513,
+  "poems": 14,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:13:6": {
+  "titleZh": "萬葉集 卷第十三",
+  "extent": "第 3333–3347 首（完整 15 首）",
+  "chars": 1695,
+  "poems": 15,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_13_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:14:1": {
+  "titleZh": "萬葉集 卷第十四",
+  "extent": "第 3348–3395 首（完整 48 首）",
+  "chars": 2662,
+  "poems": 48,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_14_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:14:2": {
+  "titleZh": "萬葉集 卷第十四",
+  "extent": "第 3396–3446 首（完整 51 首）",
+  "chars": 2667,
+  "poems": 51,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_14_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:14:3": {
+  "titleZh": "萬葉集 卷第十四",
+  "extent": "第 3447–3501 首（完整 55 首）",
+  "chars": 2669,
+  "poems": 55,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_14_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:14:4": {
+  "titleZh": "萬葉集 卷第十四",
+  "extent": "第 3502–3563 首（完整 62 首）",
+  "chars": 2694,
+  "poems": 62,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_14_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:14:5": {
+  "titleZh": "萬葉集 卷第十四",
+  "extent": "第 3564–3577 首（完整 14 首）",
+  "chars": 632,
+  "poems": 14,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_14_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%9B%9B",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:15:1": {
+  "titleZh": "萬葉集 卷第十五",
+  "extent": "第 3578–3626 首（完整 49 首）",
+  "chars": 2685,
+  "poems": 49,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_15_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:15:2": {
+  "titleZh": "萬葉集 卷第十五",
+  "extent": "第 3627–3667 首（完整 41 首）",
+  "chars": 2608,
+  "poems": 41,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_15_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:15:3": {
+  "titleZh": "萬葉集 卷第十五",
+  "extent": "第 3668–3706 首（完整 39 首）",
+  "chars": 2666,
+  "poems": 39,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_15_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:15:4": {
+  "titleZh": "萬葉集 卷第十五",
+  "extent": "第 3707–3766 首（完整 60 首）",
+  "chars": 2715,
+  "poems": 60,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_15_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:15:5": {
+  "titleZh": "萬葉集 卷第十五",
+  "extent": "第 3767–3785 首（完整 19 首）",
+  "chars": 841,
+  "poems": 19,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_15_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%94",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:1": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3786–3803 首（完整 18 首）",
+  "chars": 2462,
+  "poems": 18,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:2": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3804–3814 首（完整 10 首）",
+  "chars": 2419,
+  "poems": 10,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:3": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3815–3836 首（完整 21 首）",
+  "chars": 2591,
+  "poems": 21,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:4": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3837–3860 首（完整 24 首）",
+  "chars": 2634,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:5": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3861–3884 首（完整 24 首）",
+  "chars": 2180,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:16:6": {
+  "titleZh": "萬葉集 卷第十六",
+  "extent": "第 3885–3889 首（完整 5 首）",
+  "chars": 1154,
+  "poems": 5,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_16_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AD",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:1": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3890–3922 首（完整 33 首）",
+  "chars": 2626,
+  "poems": 33,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:2": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3923–3956 首（完整 34 首）",
+  "chars": 2295,
+  "poems": 34,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:3": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3957–3968 首（完整 12 首）",
+  "chars": 2519,
+  "poems": 12,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:4": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3969–3977 首（完整 9 首）",
+  "chars": 2574,
+  "poems": 9,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:5": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3978–3994 首（完整 17 首）",
+  "chars": 2626,
+  "poems": 17,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:6": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 3995–4010 首（完整 16 首）",
+  "chars": 2397,
+  "poems": 16,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:17:7": {
+  "titleZh": "萬葉集 卷第十七",
+  "extent": "第 4011–4030 首（完整 20 首）",
+  "chars": 2620,
+  "poems": 20,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_17_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%83",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:18:1": {
+  "titleZh": "萬葉集 卷第十八",
+  "extent": "第 4032–4070 首（完整 35 首）",
+  "chars": 2610,
+  "poems": 35,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_18_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:18:2": {
+  "titleZh": "萬葉集 卷第十八",
+  "extent": "第 4071–4093 首（完整 27 首）",
+  "chars": 2606,
+  "poems": 27,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_18_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:18:3": {
+  "titleZh": "萬葉集 卷第十八",
+  "extent": "第 4094–4106 首（完整 13 首）",
+  "chars": 2619,
+  "poems": 13,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_18_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:18:4": {
+  "titleZh": "萬葉集 卷第十八",
+  "extent": "第 4107–4124 首（完整 18 首）",
+  "chars": 2565,
+  "poems": 18,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_18_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:18:5": {
+  "titleZh": "萬葉集 卷第十八",
+  "extent": "第 4125–4138 首（完整 14 首）",
+  "chars": 2020,
+  "poems": 14,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_18_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:1": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4139–4165 首（完整 27 首）",
+  "chars": 2345,
+  "poems": 27,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:2": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4166–4188 首（完整 23 首）",
+  "chars": 2511,
+  "poems": 23,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:3": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4189–4212 首（完整 24 首）",
+  "chars": 2588,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:4": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4213–4232 首（完整 20 首）",
+  "chars": 2616,
+  "poems": 20,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:5": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4233–4250 首（完整 18 首）",
+  "chars": 2389,
+  "poems": 18,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:6": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4251–4266 首（完整 16 首）",
+  "chars": 2572,
+  "poems": 16,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:19:7": {
+  "titleZh": "萬葉集 卷第十九",
+  "extent": "第 4267–4292 首（完整 26 首）",
+  "chars": 2384,
+  "poems": 26,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_19_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B9%9D",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:1": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4293–4320 首（完整 28 首）",
+  "chars": 2520,
+  "poems": 28,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_01.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:2": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4321–4345 首（完整 25 首）",
+  "chars": 2581,
+  "poems": 25,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_02.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:3": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4346–4371 首（完整 26 首）",
+  "chars": 2519,
+  "poems": 26,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_03.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:4": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4372–4397 首（完整 26 首）",
+  "chars": 2505,
+  "poems": 26,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_04.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:5": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4398–4419 首（完整 22 首）",
+  "chars": 2621,
+  "poems": 22,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_05.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:6": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4420–4448 首（完整 29 首）",
+  "chars": 2580,
+  "poems": 29,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_06.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:7": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4449–4469 首（完整 21 首）",
+  "chars": 2541,
+  "poems": 21,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_07.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:8": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4470–4492 首（完整 23 首）",
+  "chars": 2371,
+  "poems": 23,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_08.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ },
+ "manyoshu:20:9": {
+  "titleZh": "萬葉集 卷第二十",
+  "extent": "第 4493–4516 首（完整 24 首）",
+  "chars": 2420,
+  "poems": 24,
+  "file": "output/source-cache/original-readers/japanese-full/manyoshu/manyoshu_20_09.txt",
+  "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C%E5%8D%81",
+  "rights": {
+   "text": "鹿持雅澄訓訂（1791–1858 卒，公有領域）",
+   "transcription": "日本語版ウィキソース，CC BY-SA 4.0"
+  }
+ }
+}

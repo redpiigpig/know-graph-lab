@@ -786,6 +786,16 @@
      "sourceUrl": "https://www.aozora.gr.jp/cards/000107/files/45186_ruby_23419.zip"
     },
     {
+     "workId": "manyoshu:12:6",
+     "title": "萬葉集 卷第十二",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 3177–3220 首（完整 44 首）",
+     "chars": 1810,
+     "score": 0.55,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%BA%8C"
+    },
+    {
      "workId": "013217",
      "title": "真珠夫人",
      "author": "菊池寛",
@@ -856,6 +866,26 @@
      "sourceUrl": "https://www.aozora.gr.jp/cards/001181/files/45194_ruby_26533.zip"
     },
     {
+     "workId": "manyoshu:13:6",
+     "title": "萬葉集 卷第十三",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 3333–3347 首（完整 15 首）",
+     "chars": 1695,
+     "score": 0.59,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E4%B8%89"
+    },
+    {
+     "workId": "manyoshu:10:8",
+     "title": "萬葉集 卷第十",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 2303–2350 首（完整 46 首）",
+     "chars": 1913,
+     "score": 0.52,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81"
+    },
+    {
      "workId": "045183",
      "title": "一本足の兵隊",
      "author": "鈴木三重吉",
@@ -876,6 +906,16 @@
      "sourceUrl": "https://www.aozora.gr.jp/cards/000107/files/45189_ruby_26076.zip"
     },
     {
+     "workId": "002166",
+     "title": "夢の影響",
+     "author": "与謝野晶子",
+     "orthography": "旧字旧仮名",
+     "extent": "全文",
+     "chars": 1660,
+     "score": 0.0,
+     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/2166_txt_28785.zip"
+    },
+    {
      "workId": "002167",
      "title": "隣の家",
      "author": "与謝野晶子",
@@ -894,6 +934,56 @@
      "chars": 1599,
      "score": 0.0,
      "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/61380_ruby_77681.zip"
+    },
+    {
+     "workId": "manyoshu:18:5",
+     "title": "萬葉集 卷第十八",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 4125–4138 首（完整 14 首）",
+     "chars": 2020,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB"
+    },
+    {
+     "workId": "manyoshu:2:7",
+     "title": "萬葉集 卷第二",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 217–232 首（完整 17 首）",
+     "chars": 2084,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C"
+    },
+    {
+     "workId": "manyoshu:3:8",
+     "title": "萬葉集 卷第三",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 464–483 首（完整 20 首）",
+     "chars": 2111,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89"
+    },
+    {
+     "workId": "manyoshu:5:4",
+     "title": "萬葉集 卷第五",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 864–884 首（完整 21 首）",
+     "chars": 2134,
+     "score": 0.47,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94"
+    },
+    {
+     "workId": "manyoshu:9:5",
+     "title": "萬葉集 卷第九",
+     "author": "萬葉集",
+     "orthography": "文語",
+     "extent": "第 1800–1811 首（完整 12 首）",
+     "chars": 2159,
+     "score": 0.46,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D"
     },
     {
      "workId": "043058",
@@ -934,96 +1024,6 @@
      "chars": 1366,
      "score": 0.0,
      "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/60739_ruby_75114.zip"
-    },
-    {
-     "workId": "048206",
-     "title": "差押へられる話",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2288,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/48206_ruby_31049.zip"
-    },
-    {
-     "workId": "043288",
-     "title": "はじめに",
-     "author": "楠山正雄",
-     "orthography": "旧字旧仮名",
-     "extent": "全文",
-     "chars": 2306,
-     "score": 0.43,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000329/files/43288_ruby_16270.zip"
-    },
-    {
-     "workId": "056530",
-     "title": "風雲児、坂本竜馬",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2323,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/56530_ruby_77792.zip"
-    },
-    {
-     "workId": "002548",
-     "title": "月二夜",
-     "author": "与謝野晶子",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2329,
-     "score": 1.29,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/2548_ruby_24159.zip"
-    },
-    {
-     "workId": "060740",
-     "title": "学生時代の久米正雄",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2329,
-     "score": 0.86,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/60740_ruby_77092.zip"
-    },
-    {
-     "workId": "000809",
-     "title": "台風",
-     "author": "与謝野晶子",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2346,
-     "score": 0.43,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/809_ruby_4174.zip"
-    },
-    {
-     "workId": "059150",
-     "title": "そぞろごと",
-     "author": "与謝野晶子",
-     "orthography": "旧字旧仮名",
-     "extent": "全文",
-     "chars": 1217,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/59150_ruby_67992.zip"
-    },
-    {
-     "workId": "004290",
-     "title": "巴里にて",
-     "author": "与謝野晶子",
-     "orthography": "旧字旧仮名",
-     "extent": "全文",
-     "chars": 2698,
-     "score": 0.37,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/4290_ruby_14061.zip"
-    },
-    {
-     "workId": "002550",
-     "title": "御門主",
-     "author": "与謝野晶子",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2770,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/2550_ruby_8229.zip"
     }
    ]
   }

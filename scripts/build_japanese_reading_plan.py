@@ -39,6 +39,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
 MANIFEST = CACHE / "aozora/manifest.json"
 SCRIPTURE = CACHE / "scripture/manifest.json"
+MANYOSHU = CACHE / "manyoshu/manifest.json"
 PLAN = CACHE / "reading-plan.json"
 
 PER_VOLUME = 50
@@ -65,7 +66,7 @@ MODERN = {"新字新仮名"}
 CLASSICS = {
     "太安万侶", "紫式部", "鈴木三重吉", "和田万吉", "尾崎士郎", "楠山正雄",
     "菊池寛", "松尾芭蕉", "鴨長明", "兼好法師", "与謝野晶子", "高木敏雄",
-    "作者不詳",
+    "作者不詳", "萬葉集",
 }
 
 
@@ -128,6 +129,37 @@ def scripture_candidates() -> list[dict]:
                 "score": round(score(text), 2),
                 "sourceUrl": item["sourceUrl"],
                 "rightsChecked": item.get("rightsChecked", False),
+            }
+        )
+    return rows
+
+
+def manyoshu_candidates() -> list[dict]:
+    """萬葉集，一篇讀物是一串完整的歌。
+
+    青空文庫只有折口信夫論萬葉集的文章，沒有歌本身；歌取自維基文庫的鹿持雅澄
+    訓訂本，照它自己印的歌番號切，不切斷任何一首。全部算文語，進第二冊，
+    走古典軌。
+    """
+
+    if not MANYOSHU.exists():
+        return []
+    rows = []
+    for key, item in json.loads(MANYOSHU.read_text(encoding="utf-8")).items():
+        path = ROOT / item["file"]
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        rows.append(
+            {
+                "workId": key,
+                "title": item["titleZh"],
+                "author": "萬葉集",
+                "orthography": "文語",
+                "extent": item["extent"],
+                "chars": len(text),
+                "score": round(score(text), 2),
+                "sourceUrl": item["sourceUrl"],
             }
         )
     return rows
@@ -218,7 +250,7 @@ def main() -> int:
     globals()["AUTHOR_CAP"] = args.author_cap
     # 合併後重排：聖經章與青空文庫的篇章要照同一把尺競爭，不能因為附加在
     # 後面就永遠排在最後。
-    rows = sorted(candidates(args.threshold) + scripture_candidates(), key=lambda r: -r["score"])
+    rows = sorted(candidates(args.threshold) + scripture_candidates() + manyoshu_candidates(), key=lambda r: -r["score"])
     print(f"合格候選 {len(rows)} 筆（宗教學用語密度 ≥{args.threshold}／千字，長度 {MIN_CHARS}–{MAX_CHARS} 字）")
 
     def volume(modern: bool) -> list[dict]:
