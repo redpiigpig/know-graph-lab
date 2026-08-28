@@ -10,7 +10,14 @@
     相應部 N13–N18 相應(d1)「第一　諸天相應」› 品(d2) › 經(d3)「〔一一〕歡喜園」
                    ⚠ 〔n〕**跨品連號**（葦品〔一〕–〔一〇〕、歡喜園品〔一一〕–〔二〇〕），
                      與巴利 SN 1.1–1.10 / 1.11–1.20 一致 → 鍵為「相應.經」
-    增支部 N19–N25 集 › 品 › 經，集號不在標題層級裡，尚未接（見 --audit）
+    增支部 N19–N25 **不接**。理由不是沒試，是兩種判準都對不上定數（見下）：
+                   ① 「經號歸零＝新的一集」→ 得 9 集
+                   ② 同上但不看深度、排除「第…品」→ 得 15 集
+                   定數是 11。原因是集號標記時有時無（每冊第一個集併在書名
+                   節點裡，且一個集可跨冊：N25 的第一個 d0 是集十的延續，
+                   經號從六十一起），而經節點的深度逐冊不同（N22 有 d4、
+                   N23 有 d5），d5 那些小群組還會造成假的歸零。
+                   要接得先逐冊人工核定集界，不是調參數能解決的。
 
 所以本檔的規矩是：**先驗經數，數不對就整個尼柯耶不掛**。
 長部必須恰好 34 經、中部必須恰好 152 經 —— 這兩個數字是巴利藏的定數，
@@ -46,6 +53,44 @@ NIKAYA = {
 }
 
 
+# 小部（N26–N47）各書自成一個 N 作品，結構互異，逐本指定判別法。
+# `suttas`／`vaggas` 是巴利藏的定數，對不上就該書不掛。
+KHUDDAKA = {
+    "ud":  {"work": "N26n0010", "form": "vagga.sutta", "vaggas": 8, "suttas": 80,
+            "zh": "自說經"},
+    "snp": {"work": "N27n0012", "form": "vagga.sutta", "vaggas": 5, "suttas": 72,
+            "zh": "經集"},
+    # `depth` 要逐本指定：如是語的經在 d1（d0 是十一個品），
+    # 小誦經卻全在 d0。用同一個深度會一本全對、另一本全空。
+    "iti": {"work": "N26n0011", "form": "sequential", "depth": 1,
+            "suttas": 112, "zh": "如是語經"},
+    "kp":  {"work": "N26n0008", "form": "sequential", "depth": 0,
+            "suttas": 9, "zh": "小誦經"},
+    # 法句經的 SC uid 是**偈頌號**（1–423）不是品號，要先把偈頌號換算成品。
+    # 換算表不自己寫死：SuttaCentral 的檔名本身就是品的偈頌區間
+    # （dhp1-20＝第一品、dhp21-32＝第二品…dhp383-423＝第二六品，恰好 26 個），
+    # 直接讀那 26 個檔名，比抄一張表可靠。
+    "dhp": {"work": "N26n0009", "form": "dhp-verse", "vaggas": 26, "zh": "法句經"},
+}
+SC_DHP_DIR = Path(os.environ.get(
+    "SC_DATA", "C:/tmp/cbeta/sc-data/sc_bilara_data")) / "root/pli/ms/sutta/kn/dhp"
+
+
+def dhp_verse_to_vagga() -> dict[int, int]:
+    """法句偈頌號 → 品號。區間取自 SuttaCentral 的檔名，不自己寫死。"""
+    ranges = []
+    for p in SC_DHP_DIR.glob("dhp*-*_root-pli-ms.json"):
+        m = re.match(r"^dhp(\d+)-(\d+)$", p.name.split("_")[0])
+        if m:
+            ranges.append((int(m.group(1)), int(m.group(2))))
+    ranges.sort()
+    out: dict[int, int] = {}
+    for i, (lo, hi) in enumerate(ranges, start=1):
+        for v in range(lo, hi + 1):
+            out[v] = i
+    return out
+
+
 def n_works(lo: int, hi: int) -> list[str]:
     rows = json.loads(CATALOG.read_text(encoding="utf-8"))
     return [r["id"] for r in sorted(rows, key=lambda r: (r["vol"], r["work_no"]))
@@ -62,6 +107,19 @@ def ordinal_no(head: str) -> int | None:
     """「第一　諸天相應」→ 1。"""
     m = re.match(r"^第([一二三四五六七八九十百千〇零]+)", head.strip())
     return tpp.cjk_number(m.group(1)) if m else None
+
+
+def belongs_to(key: str, prefix: str) -> bool:
+    """key 是否屬於某個集號。
+
+    🚨 純用 startswith 會讓 `snp1.1`（經集）被判成 `sn`（相應部）的條目 ——
+    相應部若被閘擋下，清理時會把經集一起刪掉。前綴後面必須直接接編號。
+    （與 tripitaka_parallels.split_uid 裡 `sa` 不可吃掉 `sa-2` 是同一類錯。）
+    """
+    if not key.startswith(prefix):
+        return False
+    rest = key[len(prefix):]
+    return rest[:1].isdigit() or rest[:1] == "."
 
 
 def build_index() -> tuple[dict[str, tuple[str, int]], dict]:
@@ -122,8 +180,58 @@ def build_index() -> tuple[dict[str, tuple[str, int]], dict]:
                        "samyuttas": locals().get("sam_no")}
         if not ok:
             # 定數對不上 → 該尼柯耶整個不掛（把 idx 裡它的條目清掉）
-            for k in [k for k in idx if k.startswith(nik)]:
+            for k in [k for k in idx if belongs_to(k, nik)]:
                 del idx[k]
+
+    # ── 小部：每本書自成一個 N 作品，逐本判別 ──────────────
+    for pref, cfg in KHUDDAKA.items():
+        wid = cfg["work"]
+        toc = tpp.toc_of(wid)
+        local: dict[str, tuple[str, int]] = {}
+        vaggas = 0
+
+        if cfg["form"] == "sequential":
+            # ⚠ 第一單元沒有編號，併在書名節點裡（「小誦經」＝第一三歸文、
+            # 「法句經」＝第一雙品），其餘才從「二」起編。故照文件順序連號，
+            # 不要讀標題裡的數字。
+            for node in toc:
+                if node["depth"] != cfg["depth"]:
+                    continue
+                local[f"{pref}{len(local) + 1}"] = (wid, node["i"])
+        elif cfg["form"] == "vagga.sutta":
+            # 品界＝ depth 0 的節點（第一個就是書名兼第一品，
+            # 自說經的「自說經」即第一品菩提品、經集的「經集」即第一品蛇品）。
+            # 經號**每品重編**（一–一〇），所以鍵直接是「品.經」。
+            for node in toc:
+                if node["depth"] == 0:
+                    vaggas += 1
+                    continue
+                no = ordinal_no(node["head"]) or bracket_no(node["head"])                     or tpp.cjk_number(node["head"].split()[0].strip("　"))
+                if no and vaggas:
+                    local.setdefault(f"{pref}{vaggas}.{no}", (wid, node["i"]))
+        elif cfg["form"] == "dhp-verse":
+            v2v = dhp_verse_to_vagga()
+            # 品節點散在 depth 0 與 1（第一、二品在 d0，其餘在 d1），且第一品
+            # 「雙品」沒有編號、併在書名節點裡 —— 所以既不能看深度、也不能讀
+            # 標題數字，照文件順序連號才對（全部 26 個節點即 26 品）。
+            vagga_nodes = list(toc)
+            vaggas = len(vagga_nodes)
+            if vaggas == cfg["vaggas"]:
+                by_no = {i + 1: n for i, n in enumerate(vagga_nodes)}
+                for verse, vg in v2v.items():
+                    node = by_no.get(vg)
+                    if node:
+                        local[f"dhp{verse}"] = (wid, node["i"])
+
+        exp_s, exp_v = cfg.get("suttas"), cfg.get("vaggas")
+        n_suttas = len(local) if cfg["form"] != "dhp-verse" else vaggas
+        target = exp_s if cfg["form"] != "dhp-verse" else exp_v
+        ok = target is None or n_suttas == target
+        if ok:
+            idx.update(local)
+        report[pref] = {"zh": cfg["zh"], "works": 1, "found": n_suttas,
+                        "expect": target, "ok": ok, "samyuttas": None,
+                        "khuddaka": True}
     return idx, report
 
 
@@ -173,7 +281,9 @@ def cmd_audit():
         extra = f"（{r['samyuttas']} 相應）" if r.get("samyuttas") else ""
         print(f"{r['zh']:8s} {r['works']:>3d} {str(got):>8s}{extra:>10s} {str(exp):>12s}  {mark}")
     print("─" * 78)
-    print("增支部尚未接：集號不在標題層級裡，需另定判別法（見檔頭）。")
+    print("增支部（1,975 筆對應）不接：兩種判準分別得 9 集與 15 集，定數是 11。")
+    print("  集號標記時有時無、集可跨冊、經節點深度逐冊不同 —— 詳見檔頭。")
+    print("  硬湊會在約 2,000 筆對應上產生看起來對、其實錯的結果。")
 
 
 def cmd_build():
@@ -226,7 +336,7 @@ def cmd_build():
     print(f"\n掛上 {stats['attached']:,} 筆／{stats['lines']:,} 段漢譯南傳，"
           f"涵蓋 {len(by_work)} 部漢文經")
     print(f"  {stats['no_zh_nan']:,} 筆巴利對應在漢譯南傳裡查不到"
-          f"（增支部、小部、律藏尚未接）")
+          f"（增支部見檔頭；律藏、譬喻經、本生經、長老偈尼偈尚未接）")
 
 
 def main():

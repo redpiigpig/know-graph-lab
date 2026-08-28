@@ -56,7 +56,7 @@ def test_samyutta_numbering_is_cumulative_across_volumes(monkeypatch):
     idx, report = nc.build_index()
     # 只有 3 個相應 ≠ 56 → 閘擋下，整個相應部不掛
     assert report["sn"]["ok"] is False
-    assert not any(k.startswith("sn") for k in idx)
+    assert not any(nc.belongs_to(k, "sn") for k in idx)
 
 
 def test_samyutta_detected_by_head_suffix_not_depth(monkeypatch):
@@ -85,7 +85,7 @@ def test_dn_mn_counts_are_hard_gates(monkeypatch):
     monkeypatch.setitem(nc.NIKAYA, "sn", {"vols": (13, 18), "depth": 3, "expect": "56 相應", "zh": "相應部"})
     idx, report = nc.build_index()
     assert report["dn"]["ok"] is False
-    assert not any(k.startswith("dn") for k in idx)
+    assert not any(nc.belongs_to(k, "dn") for k in idx)
 
 
 def test_dn_mn_index_is_sequential(monkeypatch):
@@ -100,6 +100,58 @@ def test_dn_mn_index_is_sequential(monkeypatch):
     assert report["dn"]["ok"] is True
     assert idx["dn1"] == ("A", 0)
     assert idx["dn3"] == ("B", 0), "經號要跨冊連號，不是每冊重來"
+
+
+# ── 小部：每本書結構互異 ────────────────────────────────
+def test_khuddaka_first_unit_is_unnumbered(monkeypatch):
+    """🚨 小誦經與法句經的**第一單元沒有編號**，併在書名節點裡
+    （「小誦經」＝第一三歸文、「法句經」＝第一雙品），其餘才從「二」起編。
+    讀標題數字會少一個單元、且整體位移。要照文件順序連號。"""
+    tpp._TOC_CACHE["N26n0008"] = [
+        _node(0, 0, "小誦經"), _node(1, 0, "二　十戒文"), _node(2, 0, "三　三十二身分"),
+    ]
+    got = []
+    for n in tpp._TOC_CACHE["N26n0008"]:
+        if n["depth"] == 0:
+            got.append(f"kp{len(got) + 1}")
+    assert got == ["kp1", "kp2", "kp3"]
+
+
+def test_khuddaka_depth_differs_per_book():
+    """如是語的經在 d1（d0 是十一個品），小誦經卻全在 d0。
+    用同一個深度會一本全對、另一本全空 —— 故 depth 要逐本指定。"""
+    assert nc.KHUDDAKA["iti"]["depth"] == 1
+    assert nc.KHUDDAKA["kp"]["depth"] == 0
+
+
+def test_dhp_verse_to_vagga_comes_from_suttacentral_filenames(monkeypatch, tmp_path):
+    """法句的 SC uid 是偈頌號（1–423）不是品號。換算表不自己寫死，
+    讀 SuttaCentral 的區間檔名（dhp1-20＝第一品…dhp383-423＝第二六品）。"""
+    for name in ("dhp1-20", "dhp21-32", "dhp33-43"):
+        (tmp_path / f"{name}_root-pli-ms.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(nc, "SC_DHP_DIR", tmp_path)
+    v2v = nc.dhp_verse_to_vagga()
+    assert v2v[1] == 1 and v2v[20] == 1
+    assert v2v[21] == 2 and v2v[32] == 2
+    assert v2v[33] == 3
+    assert 44 not in v2v          # 超出已知區間就不猜
+
+
+def test_snp_is_not_mistaken_for_sn():
+    """🚨 `snp1.1`（經集）開頭就是 `sn`（相應部）。純用 startswith，
+    相應部被閘擋下時會把經集的條目一起刪掉。"""
+    assert nc.belongs_to("sn1.1", "sn") is True
+    assert nc.belongs_to("snp1.1", "sn") is False
+    assert nc.belongs_to("snp1.1", "snp") is True
+    assert nc.belongs_to("dhp1", "dn") is False
+
+
+def test_anguttara_is_deliberately_not_mapped():
+    """增支部不接是**刻意**的，不是忘了。兩種判準分別得 9 集與 15 集，
+    定數是 11 —— 硬湊會在約 2,000 筆對應上給出看起來對、其實錯的結果。
+    若日後要接，得先逐冊人工核定集界。"""
+    assert "an" not in nc.NIKAYA
+    assert "an" not in nc.KHUDDAKA
 
 
 # ── 取經文 ────────────────────────────────────────────────
