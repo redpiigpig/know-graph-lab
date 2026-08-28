@@ -35,6 +35,10 @@ export default defineNuxtConfig({
     r2Endpoint: process.env.R2_ENDPOINT,
     r2Bucket: process.env.R2_BUCKET,
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
+    // 佛教大藏經逐段全文（9,788 萬字／101 萬段，絕不進 DB）。
+    // Drive 是正本，production 由 server/utils/tripitaka.ts fallback 到 R2。
+    tripitakaDir:
+      process.env.TRIPITAKA_DIR || "G:/我的雲端硬碟/資料/知識圖工作室/_tripitaka",
     // 聖經經文 gz JSON（bible_verses 已搬出 DB — 2026-07-08 超量救援）；
     // dev 直讀 Drive，production 由 server/utils/bible-verses.ts fallback 到 R2。
     bibleVersesDir: process.env.BIBLE_VERSES_DIR || "G:/我的雲端硬碟/資料/聖經/_verses",

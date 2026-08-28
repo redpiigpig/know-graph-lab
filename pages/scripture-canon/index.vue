@@ -32,7 +32,7 @@
         </div>
 
         <div class="mt-10 text-xs text-gray-400 leading-relaxed text-center">
-          <p>每個傳統下收該宗教的聖典多版本、教義／信條、法規與經典註釋等對照工具。基督教部分已上線七個子工具。</p>
+          <p>每個傳統下收該宗教的聖典多版本、教義／信條、法規與經典註釋等對照工具。基督教已上線八個子工具，佛教已上線大藏經全文。</p>
         </div>
       </div>
     </div>
@@ -62,8 +62,8 @@ const religions = [
     path: '/scripture-canon/buddhism',
     icon: '☸️',
     title: '佛教',
-    desc: '佛典多版本對照（大正藏／巴利三藏／藏譯）、宗派教義、經論註疏 —— 規劃中',
-    enabled: false,
+    desc: '佛教大藏經 —— 大正藏 2,471 部＋漢譯南傳 83 冊，9,788 萬字全文逐段可讀；段號採大正藏頁欄行，並掛梵／巴利／藏原典與 CBETA 漢梵巴詞條對照',
+    enabled: true,
   },
   {
     path: '/scripture-canon/islam',
