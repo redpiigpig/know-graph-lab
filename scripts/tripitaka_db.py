@@ -216,10 +216,14 @@ def _r2_existing(s3, bucket: str) -> set[str]:
         token = r["NextContinuationToken"]
 
 
-def cmd_push_r2(only: str | None, force: bool = False):
+def cmd_push_r2(only: str | None, force: bool = False, suffix: str | None = None):
     s3, bucket = _r2(), _env("R2_BUCKET")
     src = LOCAL_OUT if LOCAL_OUT.exists() else tc.OUT_DIR
     files = sorted(src.glob(f"{only}.*" if only else "*"))
+    if suffix:
+        # 只重推某一類檔（例：對照層重建後只有 *.orig.json 變了，
+        # 不必把 108 MB 的正文再推一遍）
+        files = [f for f in files if f.name.endswith(suffix)]
     have = set() if force else _r2_existing(s3, bucket)
     if have:
         skip = sum(1 for f in files if f"{R2_PREFIX}{f.name}.gz" in have)
@@ -266,6 +270,7 @@ def main():
     ap.add_argument("--push-r2", action="store_true")
     ap.add_argument("--only", type=str)
     ap.add_argument("--force", action="store_true", help="不管 R2 已有，全部重傳")
+    ap.add_argument("--suffix", type=str, help="只推指定後綴的檔，如 .orig.json")
     a = ap.parse_args()
     if a.schema:
         cmd_schema()
@@ -274,7 +279,7 @@ def main():
     if a.sync_drive:
         cmd_sync_drive()
     if a.push_r2:
-        cmd_push_r2(a.only, a.force)
+        cmd_push_r2(a.only, a.force, a.suffix)
     if not any([a.schema, a.push, a.sync_drive, a.push_r2]):
         ap.print_help()
 
