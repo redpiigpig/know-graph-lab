@@ -159,7 +159,7 @@
                     :key="li"
                     class="flex gap-2 py-0.5 text-[13px]"
                   >
-                    <span class="font-mono text-[9px] text-gray-300 w-20 flex-shrink-0 pt-1">{{ ln[0].split(':')[1] }}</span>
+                    <span class="font-mono text-[9px] text-gray-300 w-20 flex-shrink-0 pt-1">{{ segLabel(ln[0]) }}</span>
                     <span class="font-serif text-gray-700 leading-relaxed">{{ ln[1] }}</span>
                   </div>
                 </div>
@@ -282,6 +282,14 @@ const parallelsBySeg = computed(() => {
 })
 function parallelsOf(seg: string) { return parallelsBySeg.value.get(seg) ?? [] }
 function originalsOf(seg: string) { return originals.value[seg] ?? [] }
+
+/** 原文的行號標籤。SuttaCentral 是 `sn22.12:1.3`（取冒號後），
+ *  GRETIL 是 `MMK 1.1`（原書頌號，整串就是引用式）；抓不到頌號的行留空 ——
+ *  寧可沒有標籤，也不要顯示看起來像引用式的自編序號。 */
+function segLabel(id: string) {
+  if (!id) return ''
+  return id.includes(':') ? id.split(':')[1] : id
+}
 
 /** 把該段有詞條對照的漢字標底線，讀者一眼看見哪些詞查得到原語。 */
 function highlight(s: any, lang: string) {
