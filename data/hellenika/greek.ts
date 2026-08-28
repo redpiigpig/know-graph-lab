@@ -186,7 +186,7 @@ export const GREEK_CANON: HellenCanon = {
           ],
         },
         {
-          key: 'e-latin', label: '拉丁續典', label_en: 'Latin Continuations',
+          key: 'e-latin', label: '後世續補', label_en: 'Later Continuations',
           desc: '希臘本已佚而拉丁本完整者；本卷唯一能讀到全篇敘事的來源。',
           works: [
             { title_zh: '底比斯戰記', title_orig: 'Thebais', author: '斯塔提烏斯', era: '公元 80–92 年', place: '羅馬', language: '拉丁文', extent: '全 12 卷', track: 'latin', status: 'whole', note: '七雄攻底比斯最完整的古代敘事，底比斯循環希臘本已佚，全靠此書。' },
@@ -382,6 +382,8 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             { title_zh: '論虔敬', title_orig: 'Περὶ εὐσεβείας / De pietate', author: '泰奧弗拉斯托斯', era: '約前 4 世紀末', language: '古希臘文', status: 'fragment', via: '波菲利《論戒食》大段引錄', note: '主張獻祭原以穀果為始、血祭是墮落後的產物；古代唯一一部祭祀理論專著。' },
             { title_zh: '論戒食動物', title_orig: 'Περὶ ἀποχῆς ἐμψύχων / De abstinentia', author: '波菲利', era: '約公元 270 年', language: '古希臘文', extent: '全 4 卷', status: 'whole', note: '從哲學與宗教兩面反對血祭，並保存泰奧弗拉斯托斯的祭祀史；異教內部的祭儀改革宣言。' },
+            { title_zh: '性格論‧十六（迷信者）', title_orig: 'Χαρακτῆρες ιϛ΄ (Δεισιδαιμονίας)', author: '泰奧弗拉斯托斯', era: '約前 319 年', language: '古希臘文', status: 'whole', note: '一日之內：見黃鼠狼過路即擲三石、夢見任何事都跑去問解夢人、每月赴俄耳甫斯祭司處受潔。古代唯一一篇逐條記錄過度虔敬者日常舉止的文字，是希臘宗教心態史的第一手材料。' },
+            { title_zh: '鳥', title_orig: 'Ὄρνιθες / Aves', author: '阿里斯托芬', era: '前 414 年', language: '古希臘文', status: 'whole', note: '兩個雅典人與眾鳥在雲中築城，切斷祭煙上達奧林匹斯之路，逼諸神談和讓位。全劇建立在一個祭儀事實上：希臘的神靠人獻祭的煙為食，斷了煙路神就得餓——古代對「獻祭究竟是什麼」最尖銳的一次反思。' },
             { title_zh: '帝王崇拜祭儀銘文', title_orig: 'Imperial cult regulations', author: '希臘各城邦', era: '前 1 – 公元 3 世紀', language: '古希臘文', status: 'inscription', note: '希臘城邦以希臘文、依希臘儀節奉祀在世皇帝；執行者是希臘人，故列本卷而不列羅馬卷。' },
           ],
         },
@@ -398,6 +400,7 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             { title_zh: '荷馬詩頌‧致得墨忒耳', title_orig: 'Ὁμηρικὸς Ὕμνος εἰς Δημήτραν', author: '託名荷馬', era: '約前 7 世紀末', language: '古希臘文', extent: '495 行', status: 'whole', note: '厄琉息斯祕儀的創教敘事：珀耳塞福涅被劫、母神哀行、祕儀由神親授。末句明言見過者有福、未見者死後不得同分。' },
             { title_zh: '厄琉息斯銘文與祭司法', title_orig: 'Eleusinian inscriptions', author: '雅典與厄琉息斯', era: '前 5 – 公元 3 世紀', language: '古希臘文', status: 'inscription', note: '聖休戰佈告、初穗奉獻令、祭司世家（歐摩爾波斯族與刻律克斯族）的職權劃分。' },
+            { title_zh: '蛙（入教者歌隊）', title_orig: 'Βάτραχοι / Ranae', author: '阿里斯托芬', era: '前 405 年', language: '古希臘文', status: 'whole', note: '戴奧尼索斯下冥府，途中遇一隊持火把、唱伊阿科斯之歌的入教者。這段歌隊唱詞是厄琉息斯入教者來世境遇最生動的旁證——祕儀不許洩漏，喜劇卻可以在舞台上演一遍。' },
           ],
         },
         {
@@ -419,9 +422,9 @@ export const GREEK_CANON: HellenCanon = {
           key: 'l-foreign', label: '外來密教', label_en: 'Imported Mysteries',
           works: [
             { title_zh: '薩摩色雷斯大神祕儀', title_orig: 'The Mysteries of the Great Gods of Samothrace', author: '綴輯（阿波羅尼俄斯、入教者名錄銘文）', era: '前 4 世紀 – 公元 4 世紀', language: '古希臘文', status: 'fragment', note: '航海者的保命祕儀；入教者名錄石刻是研究其社會構成的主要材料。' },
-            { title_zh: '密特拉禮文', title_orig: 'The Mithras Liturgy (PGM IV.475–834)', author: '佚名', era: '約公元 4 世紀', language: '古希臘文', status: 'inscription', parent: '希臘魔法紙草', note: '第一人稱的升天儀軌：屏息、見火門、與太陽神面對面。是否真屬密特拉教有爭議，但作為升天啟示文本無可取代。' },
+            { seealso: '希臘卷 Υ 啟示書‧召神術（該卷按升天異象收，此處按入教禮文收）', title_zh: '密特拉禮文', title_orig: 'The Mithras Liturgy (PGM IV.475–834)', author: '佚名', era: '約公元 4 世紀', language: '古希臘文', status: 'inscription', parent: '希臘魔法紙草', note: '第一人稱的升天儀軌：屏息、見火門、與太陽神面對面。是否真屬密特拉教有爭議，但作為升天啟示文本無可取代。' },
             { title_zh: '伊西斯自述文', title_orig: 'The Isis aretalogies (Kyme, Maroneia, Andros)', author: '伊西斯祭司傳統', era: '前 1 – 公元 2 世紀', language: '古希臘文', status: 'inscription', note: '「我是伊西斯，萬國之主……是我立定法律，人不能廢」——第一人稱神的自我宣告，句式與約翰福音的「我是」極近。' },
-            { title_zh: '金驢記‧卷十一', title_orig: 'Metamorphoses XI', author: '阿普列尤斯', era: '約公元 170 年', language: '拉丁文', track: 'latin', status: 'whole', note: '全部古代文獻中唯一的第一人稱入教皈依敘事，希臘文沒有對應物。' },
+            { seealso: '希臘卷 Υ 啟示書‧帝國期啟示文集', title_zh: '金驢記‧卷十一', title_orig: 'Metamorphoses XI', author: '阿普列尤斯', era: '約公元 170 年', language: '拉丁文', track: 'latin', status: 'whole', note: '全部古代文獻中唯一的第一人稱入教皈依敘事，希臘文沒有對應物。' },
           ],
         },
         {
@@ -522,12 +525,14 @@ export const GREEK_CANON: HellenCanon = {
               intro: '古代唯一一部實地踏查的希臘宗教地誌，也是本藏經單一分量最大的來源。作者親歷阿提卡、伯羅奔尼撒、彼奧提亞與福基斯，凡聖所必記其創建傳說、神像形制、祭儀細節、司祭家族與地方異說，並常註明「當地人是這樣講的，但我不信」。許多祭儀與神話僅賴此書存世；十九世紀以來的希臘考古幾乎全以它為地圖。',
             },
             { title_zh: '歷史叢書‧卷一至六', title_orig: 'Βιβλιοθήκη Ἱστορική I–VI', author: '西西里的狄奧多羅斯', era: '約前 60–30 年', language: '古希臘文', status: 'whole', note: '神話部六卷，含歐赫美魯斯《聖史》的主要摘要與埃及、東方諸神的希臘化解釋。' },
+            { title_zh: '論敘利亞女神', title_orig: 'Περὶ τῆς Συρίης θεοῦ / De Dea Syria', author: '薩莫薩塔的琉善（署名，作者歸屬有爭議）', era: '公元 2 世紀', place: '敘利亞‧希拉波利斯', language: '古希臘文（仿希羅多德的伊奧尼亞方言）', status: 'whole', note: '一座東方大神廟的實地報導：神像、聖池、聖魚、登柱苦行、春祭中自宮入教的祭司。作者自稱親身入廟並依儀剃髮還願。古代唯一一篇由參與者寫成的異族聖所民族誌。' },
           ],
         },
         {
           key: 'x-votive', label: '還願銘文', label_en: 'Votive Inscriptions',
           works: [
             { title_zh: '還願銘文集', title_orig: 'Votive inscriptions', author: '各地信眾', era: '前 7 – 公元 4 世紀', language: '古希臘文', status: 'inscription', note: '「某某還願獻上，因神垂聽」——最大宗、也最貼近實際信仰生活的一批文獻。' },
+            { title_zh: '聖產帳目與神廟財務銘文', title_orig: 'Temple inventories and accounts', author: '德爾菲、提洛、厄琉息斯等聖所司庫', era: '前 5 – 前 2 世紀', language: '古希臘文', status: 'inscription', note: '逐年刻出聖所收受的銀器、地租、貸款與利息。神廟同時是銀行與地主，希臘宗教的經濟面只靠這批石頭才看得見。' },
             { title_zh: '認罪碑（利底亞—弗里吉亞）', title_orig: 'The confession inscriptions of Lydia and Phrygia', author: '小亞細亞鄉間信眾', era: '公元 1–3 世紀', language: '古希臘文', status: 'inscription', note: '公開刻石承認自己犯了何罪、受神何種懲罰、如何贖回——異教中極罕見的認罪文獻。' },
           ],
         },
@@ -642,6 +647,7 @@ export const GREEK_CANON: HellenCanon = {
               note: '因愛人類而受縛的義者，當面指控至高神不義。',
               intro: '普羅米修斯因把火與技藝給了人類而被釘在高加索絕壁，全劇他始終不肯屈服，公開指宙斯為新僭主、其統治靠暴力而非公義，並預言宙斯終將如其父祖一樣被推翻。這是古代世界最徹底的一次神義論抗辯——它與約伯的差別在於：約伯質問一位他仍信的神，普羅米修斯質問一位他準備熬過去的神。',
             },
+            { title_zh: '安蒂岡妮', title_orig: 'Ἀντιγόνη', author: '索福克勒斯', era: '約前 441 年', language: '古希臘文', status: 'whole', note: '「這不是宙斯所宣告的；我不信一紙城邦法令強得過諸神那不成文、不可動搖的律法。」埋葬死者是神法所命，城邦禁令與之相衝——古代第一個把神法與人法正面對立起來的文本。' },
           ],
         },
         {
@@ -657,6 +663,7 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             { title_zh: '伊底帕斯在科隆諾斯', title_orig: 'Οἰδίπους ἐπὶ Κολωνῷ', author: '索福克勒斯', era: '前 401 年（身後上演）', language: '古希臘文', status: 'whole', note: '受盡神罰的瞎眼老人終被大地接納而成守護英雄；最接近「苦難得贖」的一部希臘戲。' },
             { title_zh: '阿伽門農（歌隊神學段）', title_orig: 'Ἀγαμέμνων', author: '埃斯庫羅斯', era: '前 458 年', language: '古希臘文', status: 'whole', note: '「宙斯教人受苦而後知」——希臘神義論最凝練的一句，本卷收其歌隊各段。' },
+            { title_zh: '歐墨尼得斯（慈心女神）', title_orig: 'Εὐμενίδες', author: '埃斯庫羅斯', era: '前 458 年', language: '古希臘文', status: 'whole', note: '《奧瑞斯提亞》終篇：復仇女神追捕弒母者，雅典娜設戰神山法庭以投票裁決，並勸復仇女神留在雅典受祀改稱慈心女神。血債血償的舊神秩序讓位給城邦法庭——希臘宗教史上最重要的一次「制度轉換」被寫成一齣戲。' },
             { title_zh: '悲劇', title_orig: 'Tragoediae', author: '塞內卡', era: '公元 1 世紀中', language: '拉丁文', extent: '9 部', track: 'latin', status: 'whole', note: '斯多噶版神義論；也是中世紀歐洲唯一讀得到的「希臘悲劇」。' },
           ],
         },
@@ -728,6 +735,7 @@ export const GREEK_CANON: HellenCanon = {
           key: 't-sibyl', label: '西比拉與遊方預言', label_en: 'Sibyls and Wandering Prophets',
           works: [
             { title_zh: '西比拉神諭（異教核心層）', title_orig: 'Oracula Sibyllina', author: '託名各地西比拉', era: '前 2 世紀 – 公元 4 世紀', language: '古希臘文', extent: '現存 12 卷', status: 'fragment', note: '現存本已被猶太與基督教徒大幅改寫，本卷僅收可辨識的異教殘核，並標明改寫層。' },
+            { title_zh: '亞歷山大：假先知', title_orig: 'Ἀλέξανδρος ἢ Ψευδόμαντις / Alexander the False Prophet', author: '薩莫薩塔的琉善', era: '約公元 180 年', place: '帕夫拉戈尼亞‧阿波努特伊科斯', language: '古希臘文', status: 'whole', note: '逐步拆解一座新神諭所的創建：以馴蛇裝上亞麻人頭立為新神格呂孔，密封問卜、偽造答覆、按則收費，信眾上達元老貴族與皇帝軍中。書中並記其祕儀開場先逐「無神論者」出場——所指是伊比鳩魯派與基督徒。古代唯一一部專寫神諭騙術的書。' },
             { title_zh: '巴基斯與穆賽俄斯神諭殘篇', title_orig: 'The oracles of Bakis and Musaeus', author: '託名', era: '前 6–5 世紀', language: '古希臘文', status: 'fragment', via: '希羅多德、亞里斯多芬', note: '遊方神諭販子所售的成套預言集；雅典喜劇常拿來嘲諷。' },
           ],
         },
@@ -779,7 +787,7 @@ export const GREEK_CANON: HellenCanon = {
               note: '新柏拉圖學派奉為聖經的啟示詩；召神術（theurgy）的根本典據。',
               intro: '以六步格寫成的神諭詩殘篇，自稱得自諸神。內容為父、力、心智的三一結構、靈魂下降與上升、以及藉儀式（而非僅靠思辨）促使神明降臨的召神術。楊布里科斯以下的新柏拉圖學派把它抬到與柏拉圖對話錄同等的地位，普羅克洛斯甚至說若能決定哪些書留存於世，他只留《蒂邁歐》與《迦勒底神諭》。異教最後三百年的教義核心即由此出。',
             },
-            { title_zh: '密特拉禮文', title_orig: 'PGM IV.475–834', author: '佚名', era: '約公元 4 世紀', language: '古希臘文', status: 'inscription', parent: '希臘魔法紙草', note: '逐步指示如何屏息、見火門開啟、與太陽神面對面並索求不朽——現存最詳盡的升天儀軌。' },
+            { seealso: '希臘卷 Λ 祕儀書‧外來密教（該卷按入教禮文收，此處按升天異象收）', title_zh: '密特拉禮文', title_orig: 'PGM IV.475–834', author: '佚名', era: '約公元 4 世紀', language: '古希臘文', status: 'inscription', parent: '希臘魔法紙草', note: '逐步指示如何屏息、見火門開啟、與太陽神面對面並索求不朽——現存最詳盡的升天儀軌。' },
             {
               title_zh: '聖言錄', title_orig: 'Ἱεροὶ Λόγοι / Sacred Tales', author: '埃利烏斯‧阿里斯提德斯',
               era: '約公元 170 年', place: '帕加馬', language: '古希臘文', extent: '6 卷', status: 'whole',
@@ -787,7 +795,7 @@ export const GREEK_CANON: HellenCanon = {
               intro: '長年患病的雄辯家在帕加馬的醫神聖所住院求夢，把神每夜的指示逐一記錄：何時放血、何時在寒冬下河、該寫什麼講稿、該去哪裡演說。全書把生活的每一件小事都繫於神的親自指引，是整個古代唯一一部完整的個人宗教經驗紀錄，也是研究醫神信仰、夢占與宗教心理的第一手材料。',
             },
             { title_zh: '解夢書', title_orig: 'Ὀνειροκριτικά / Oneirocritica', author: '達爾狄斯的阿爾特米多羅斯', era: '公元 2 世紀', language: '古希臘文', extent: '全 5 卷', status: 'whole', note: '古代唯一完整傳世的解夢手冊，作者自陳走遍各地蒐羅夢例；通俗宗教生活的百科。' },
-            { title_zh: '金驢記‧卷十一', title_orig: 'Metamorphoses XI', author: '阿普列尤斯', era: '約公元 170 年', language: '拉丁文', track: 'latin', status: 'whole', note: '女神夜半顯現、自陳萬名歸一——第一人稱皈依敘事，與 Λ 卷互見。' },
+            { seealso: '希臘卷 Λ 祕儀書‧外來密教', title_zh: '金驢記‧卷十一', title_orig: 'Metamorphoses XI', author: '阿普列尤斯', era: '約公元 170 年', language: '拉丁文', track: 'latin', status: 'whole', note: '女神夜半顯現、自陳萬名歸一——第一人稱皈依敘事，與 Λ 卷互見。' },
           ],
         },
         {
@@ -795,6 +803,8 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             { title_zh: '論祕儀（答波菲利書）', title_orig: 'Περὶ μυστηρίων / De mysteriis', author: '楊布里科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '主張人不能靠思辨上達於神，必須藉神所定的儀式；異教晚期由哲學轉回祭儀的分水嶺。' },
             { title_zh: '論召神術（殘篇）', title_orig: 'Περὶ τῆς καθ᾿ Ἕλληνας ἱερατικῆς τέχνης', author: '普羅克洛斯', era: '公元 5 世紀', language: '古希臘文', status: 'fragment', note: '論物質中的神性印記與交感原理，是理解晚期異教「聖物觀」的關鍵短篇。' },
+            { title_zh: '希臘魔法紙草', title_orig: 'Papyri Graecae Magicae', author: '佚名（埃及希臘語術士）', era: '約公元 2–5 世紀', place: '埃及‧底比斯等地', language: '古希臘文（雜科普特語與希伯來神名）', extent: '現存逾 130 件', status: 'inscription', note: '實用術書：招神現形、求夢、驅鬼、致愛、致病，逐條列出咒語、材料與所需時辰。希臘、埃及、猶太三系神名在同一張紙上混用——古代晚期宗教實際長什麼樣，這批紙草比任何神學著作都誠實。' },
+            { title_zh: '詛咒鉛片', title_orig: 'Κατάδεσμοι / Defixionum tabellae', author: '各地委託者（佚名）', era: '前 5 世紀 – 公元 5 世紀', place: '希臘、義大利、北非各地墓葬與泉眼', language: '古希臘文／拉丁文', extent: '現存逾 1,600 件', status: 'inscription', note: '刻在薄鉛片上、捲起釘穿後投入墓穴或聖泉，求地下諸神綁住對手的舌、手與心智——訴訟、競技、情敵、生意各有專門套語。與體面的還願銘文並看，才是完整的希臘宗教。' },
           ],
         },
       ],
@@ -824,6 +834,7 @@ export const GREEK_CANON: HellenCanon = {
             { title_zh: '殘篇（宗教語句）', title_orig: 'Fragmenta', author: '以弗所的赫拉克利特', era: '約前 500 年', language: '古希臘文', status: 'fragment', note: '斥血祭如以泥洗泥、斥向偶像禱告如對房子說話；同時提出「邏各斯」——後世道成肉身神學的用語源頭。' },
             { title_zh: '西緒福斯（殘篇）', title_orig: 'Σίσυφος', author: '克里提亞斯（一說歐里庇得斯）', era: '約前 410 年', language: '古希臘文', extent: '42 行', status: 'fragment', via: '塞克斯圖斯‧恩皮里庫斯《駁數理學家》九‧54', note: '「有一個精明的人發明了對神的畏懼」——律法只能管人前，於是虛構出無所不見的神來管人後。古代最露骨的一份宗教起源論。' },
             { title_zh: '不敬神訴訟諸案', title_orig: 'The asebeia trials', author: '綴輯（柏拉圖《申辯》、第歐根尼‧拉爾修、普魯塔克《伯里克利傳》三十二）', era: '前 5 – 前 4 世紀', place: '雅典', language: '古希臘文', status: 'fragment', note: '阿那克薩哥拉斯說太陽是塊火石、普羅塔哥拉斯說「神是否存在我無從得知」、狄阿哥拉斯以祕儀為笑柄、蘇格拉底被控引進新神——希臘沒有教義，卻有瀆神罪，界線由陪審團當場劃定。' },
+            { title_zh: '雲', title_orig: 'Νεφέλαι / Nubes', author: '阿里斯托芬', era: '前 423 年', language: '古希臘文', status: 'whole', note: '舞台上的蘇格拉底吊在籃裡研究天象，宣稱宙斯不存在、下雨的是雲、打雷的是渦旋。二十四年後的不敬神審判中，柏拉圖說控訴的底本正是這齣戲——喜劇如何預演一場宗教審判。' },
           ],
         },
         {
@@ -860,6 +871,7 @@ export const GREEK_CANON: HellenCanon = {
             { title_zh: '論伊西斯與奧西里斯', title_orig: 'Περὶ Ἴσιδος καὶ Ὀσίριδος', author: '普魯塔克', era: '約公元 120 年', language: '古希臘文', status: 'whole', note: '以希臘哲學解埃及神話，並提出善惡二原理說；古代比較宗教學的開山之作。' },
             { title_zh: '論德爾菲的 E 字', title_orig: 'Περὶ τοῦ Εἶ τοῦ ἐν Δελφοῖς', author: '普魯塔克', era: '約公元 100 年', language: '古希臘文', status: 'whole', note: '德爾菲廟門的神祕字母 E 何解；末段以「你是」為神之名，直逼一神論。' },
             { title_zh: '論神遲罰惡', title_orig: 'Περὶ τῶν ὑπὸ τοῦ θείου βραδέως τιμωρουμένων', author: '普魯塔克', era: '公元 2 世紀初', language: '古希臘文', status: 'whole', note: '正面處理「惡人為何不立刻遭報」，末附靈魂受審異象；異教神義論的代表作。' },
+            { title_zh: '論迷信', title_orig: 'Περὶ δεισιδαιμονίας / De superstitione', author: '普魯塔克', era: '公元 1 世紀末', language: '古希臘文', status: 'whole', note: '無神論者只是不信，迷信者卻把神想成暴君而終日戰慄——作者判定後者更壞，因為誹謗神比否認神更嚴重。古代唯一一篇專論宗教情感之病態的文章。' },
             { title_zh: '講演集', title_orig: 'Διαλέξεις / Orationes', author: '推羅的馬克西姆斯', era: '公元 2 世紀後半', language: '古希臘文', extent: '41 篇', status: 'whole', note: '面向大眾的哲學佈道：該不該立神像、該不該向神禱告、何謂神——古代少見的「講章集」。' },
             { title_zh: '教程（柏拉圖學說綱要）', title_orig: 'Διδασκαλικός / Didaskalikos', author: '阿爾基努斯', era: '公元 2 世紀', language: '古希臘文', status: 'whole', note: '中期柏拉圖主義的教科書，第一因、心智、質料三層結構於此定型。' },
             { title_zh: '論善（殘篇）', title_orig: 'Περὶ τἀγαθοῦ', author: '阿帕梅亞的努美尼烏斯', era: '公元 2 世紀後半', language: '古希臘文', status: 'fragment', note: '「柏拉圖不過是說阿提卡話的摩西」——把希臘哲學與東方啟示打通的關鍵人物。' },
@@ -913,6 +925,7 @@ export const GREEK_CANON: HellenCanon = {
               note: '全部異教文獻中最接近福音書的一部。',
               intro: '受尤利亞‧多姆娜之託所寫的一位一世紀畢達哥拉斯派聖者傳：神異降生、周遊行教、醫病驅鬼、復活少女、遠赴印度求道、面斥暴君、受審時自行消失、死後顯現向弟子證明靈魂不朽。全書與福音書的敘事結構重疊之深，使它在三世紀末就被希耶羅克勒斯拿來與基督直接比較，也因此成為此後一千七百年比較宗教爭論的中心文本。',
             },
+            { title_zh: '書信集', title_orig: 'Ἐπιστολαὶ Ἀπολλωνίου', author: '託名提亞納的阿波羅尼烏斯', era: '公元 1–2 世紀', language: '古希臘文', extent: '存 77 通', status: 'whole', note: '與傳記分開流傳的一批短簡，多數應為託名。其中論獻祭數通最為著名：真正的敬神不焚牲、不奠酒、不用任何物質，只在心中默禱——與畢達哥拉斯派的無血祭傳統一脈，也是異教內部對血祭最徹底的否定。' },
             { title_zh: '畢達哥拉斯傳（論畢達哥拉斯的生活方式）', title_orig: 'Περὶ τοῦ Πυθαγορείου βίου', author: '楊布里科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '把畢達哥拉斯寫成教團創立者：入教考驗、緘默期、共財、戒律——異教修道生活的典範文本。' },
             { title_zh: '普羅提諾傳', title_orig: 'Περὶ τοῦ Πλωτίνου βίου', author: '波菲利', era: '約公元 301 年', language: '古希臘文', status: 'whole', note: '弟子為師作傳並附《九章集》編纂說明；記其一生四次與太一合一，及臨終遺言「把你們裡面的神帶回宇宙的神那裡」。' },
             { title_zh: '哲學家與辯士傳', title_orig: 'Βίοι φιλοσόφων καὶ σοφιστῶν', author: '薩爾迪斯的歐納庇烏斯', era: '約公元 396 年', language: '古希臘文', status: 'whole', note: '新柏拉圖師承的群像傳，並記塞拉皮雍神廟被毀、修士取代哲人的過程——異教知識人的悲憤實錄。' },
@@ -959,6 +972,14 @@ export const GREEK_CANON: HellenCanon = {
             },
             { title_zh: '駁基督徒', title_orig: 'Κατὰ Χριστιανῶν / Contra Christianos', author: '波菲利', era: '約公元 270–300 年', language: '古希臘文', extent: '原為 15 卷', status: 'hostile', via: '優西比烏、耶柔米、馬卡里烏斯等引錄', note: '古代最有學問的一部反基督教著作，開歷史考據式聖經批判之先；公元 448 年遭下令焚毀，僅存殘篇。' },
             { title_zh: '愛真理者', title_orig: 'Φιλαλήθης Λόγος', author: '希耶羅克勒斯', era: '公元 303 年', language: '古希臘文', status: 'hostile', via: '優西比烏《駁希耶羅克勒斯》', note: '大迫害發動之年所作，主張阿波羅尼烏斯的神蹟更可信而基督徒卻不奉之為神——首次以「比較宗教」為武器。' },
+          ],
+        },
+        {
+          key: 'ps-defence', label: '守勢', label_en: 'The Defence',
+          desc: '基督教方的兩部大書。收進本藏經不為其論點，而為其引錄：為了駁倒異教，它們整段整段抄錄了如今別無他本的異教原文——本藏經的「敵證」層，泰半靠這兩部書才存在。',
+          works: [
+            { title_zh: '福音的預備', title_orig: 'Εὐαγγελικὴ Προπαρασκευή / Praeparatio Evangelica', author: '該撒利亞的優西比烏', era: '約公元 314–321 年', language: '古希臘文', extent: '全 15 卷', status: 'whole', note: '為證明基督教勝過異教而遍引異教著作，逐段抄錄柏拉圖派、斯多噶派、腓尼基與埃及神譜、神諭集與波菲利諸書。古代異教文獻最大的單一保存者：本藏經有數十條殘篇的唯一出處就是這部書。' },
+            { title_zh: '神聖原理', title_orig: 'Divinae Institutiones', author: '拉克坦提烏斯', era: '約公元 303–311 年', language: '拉丁文', track: 'latin', extent: '全 7 卷', status: 'whole', note: '拉丁世界第一部系統性護教書。為駁斥而大量徵引歐赫美魯斯、西比拉神諭與赫爾墨斯文集，其中若干段落已無他本可校。' },
           ],
         },
         {

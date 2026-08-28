@@ -57,9 +57,11 @@ def dump() -> dict:
     for canon in canons:
         for volume in canon['volumes']:
             for division in volume['divisions']:
-                for i, w in enumerate(division['works']):
+                for w in division['works']:
+                    # 🚨 鍵必須是內容鍵不是位置鍵：曾用陣列索引，中途插入一條就把
+                    # intros.json 的簡介整段錯位一格（見 SKILL.md §5）。
                     works.append({
-                        'id': f"{canon['key']}:{volume['key']}:{division['key']}:{i}",
+                        'id': f"{canon['key']}:{volume['key']}:{division['key']}:{w['title_zh']}｜{w.get('author', '')}",
                         'canon_key': canon['key'],
                         'canon_name': canon['name'],
                         'volume_key': volume['key'],
