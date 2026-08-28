@@ -115,6 +115,19 @@ REGISTRY: list[dict] = [
      "siglum": "", "form": "none",
      "note": "漢譯四十卷本為單一品（入法界品），梵本亦不另分品"},
 
+    # ── 經集部 ──
+    {"file": "sa_vimalakIrtinirdeza", "work": "T0475",
+     "zh": "維摩詰所說經", "sa": "Vimalakīrtinirdeśa", "siglum": "Vkn",
+     "form": "chapter.verse",
+     "note": "梵本 12 品、羅什譯 14 品 —— 品數不同，需手寫 chapter_map"},
+    {"file": "sa_vajracchedikA-prajJApAramitA", "work": "T0235",
+     "zh": "金剛般若波羅蜜經", "sa": "Vajracchedikā Prajñāpāramitā",
+     "siglum": "", "form": "none",
+     "note": "梵本不分品（Vaidya 本只有頁碼）；漢譯的三十二分是昭明太子後加"},
+    {"file": "sa_suvarNaprabhAsasUtra", "work": "T0663",
+     "zh": "金光明經", "sa": "Suvarṇaprabhāsasūtra", "siglum": "Suv",
+     "form": "chapter"},
+
     # ── 尚無可靠章節標記，退回整部層級 ──
     {"file": "sa_azvaghoSa-buddhacarita", "work": "T0192",
      "zh": "佛所行讚", "sa": "Buddhacarita", "siglum": "", "form": "none",
@@ -271,6 +284,27 @@ def audit_one(entry: dict) -> dict:
             "status": status, "detail": detail, "_sa": sa, "_zh": zh}
 
 
+def cmd_probe(file_name: str):
+    """報一個 GRETIL 檔的縮寫候選與章數，供建 REGISTRY 用。
+    縮寫不能用猜的 —— 每部書自定，猜錯會整部只解出一品。"""
+    path = fetch(file_name)
+    raw = re.sub(r"<[^>]+>", " ", path.read_text(encoding="utf-8"))
+    body = raw[raw.find("Suggested") if False else 0:]
+    from collections import Counter
+    cv = Counter(m[0] for m in re.findall(r"([A-Za-z][A-Za-z]{1,9})[_\s]?(\d+)[.,](\d+)", body))
+    c1 = Counter(m[0] for m in re.findall(r"([A-Za-z][A-Za-z]{1,9})_(\d+)", body))
+    print(f"{file_name}")
+    print(f"  品.頌式縮寫候選: {cv.most_common(4)}")
+    print(f"  品式縮寫候選:   {c1.most_common(4)}")
+    for form, cand in (("chapter.verse", cv), ("chapter", c1)):
+        if not cand:
+            continue
+        sig = cand.most_common(1)[0][0]
+        ch = parse_gretil(path, sig, form)
+        print(f"  以 siglum={sig} form={form} → {len(ch)} 品／"
+              f"{sum(len(v) for v in ch.values())} 行")
+
+
 def cmd_audit(only: str | None):
     print(f"{'漢譯':28s} {'梵本':30s} {'梵品':>4s} {'漢品':>4s}  狀態")
     print("─" * 108)
@@ -346,9 +380,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--audit", action="store_true")
     ap.add_argument("--build", action="store_true")
+    ap.add_argument("--probe", type=str, help="GRETIL 檔名（不含 .xml），報縮寫與章數")
     ap.add_argument("--only", type=str)
     a = ap.parse_args()
-    if a.audit:
+    if a.probe:
+        cmd_probe(a.probe)
+    elif a.audit:
         cmd_audit(a.only)
     elif a.build:
         cmd_build(a.only)

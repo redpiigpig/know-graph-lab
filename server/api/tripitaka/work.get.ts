@@ -9,6 +9,7 @@ import {
   loadTerms,
   loadEquivalents,
   loadOriginals,
+  loadVernacular,
 } from "~/server/utils/tripitaka";
 
 export default defineEventHandler(async (event) => {
@@ -28,11 +29,12 @@ export default defineEventHandler(async (event) => {
   if (error) throw createError({ statusCode: 500, message: error.message });
   if (!work) throw createError({ statusCode: 404, message: "work not found" });
 
-  const [tocFile, allSegs, terms, originals] = await Promise.all([
+  const [tocFile, allSegs, terms, originals, vernacular] = await Promise.all([
     loadToc(id),
     loadSegments(id),
     loadTerms(id),
     loadOriginals(id),
+    loadVernacular(id),
   ]);
   if (!allSegs) {
     // 目錄有這部經、正文檔卻不在 —— 是資料缺漏，不可當成空經悄悄呈現
@@ -40,6 +42,14 @@ export default defineEventHandler(async (event) => {
       statusCode: 503,
       message: `《${work.title_zh}》正文尚未上架（${id}.jsonl 不在 Drive 也不在 R2）`,
     });
+  }
+
+  // 白話併進 sources，reader 就能把它當成一欄與文言並排
+  if (Object.keys(vernacular).length) {
+    for (const s of allSegs) {
+      const zh = vernacular[s.uid];
+      if (zh) s.sources = { ...s.sources, "zh-mod": zh };
+    }
   }
 
   const juans = [...new Set(allSegs.map((s) => s.juan).filter(Boolean))] as number[];
@@ -81,6 +91,7 @@ export default defineEventHandler(async (event) => {
     segments,
     terms: juanTerms,
     parallels,
+    vernacular_total: Object.keys(vernacular).length,
     term_total: terms.length,
     equiv_total: (await loadEquivalents(id)).length,
     seg_total: allSegs.length,

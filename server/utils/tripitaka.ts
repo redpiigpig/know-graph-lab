@@ -208,6 +208,20 @@ export async function loadOriginals(
   return parsed;
 }
 
+/** 現代繁中白話（本站自譯）。段 uid → 白話。
+ *  另存一檔而不寫進正文 JSONL：正文是 CBETA 的原始資料、白話是本站產物，
+ *  兩者分開才好各自重建。讀取時再併進該段的 sources.zh-mod。 */
+export async function loadVernacular(workId: string): Promise<Record<string, string>> {
+  if (!isValidWorkId(workId)) return {};
+  const key = `zhmod:${workId}`;
+  const hit = cacheGet<Record<string, string>>(key);
+  if (hit) return hit;
+  const raw = await readFile(`${workId}.zhmod.json`);
+  const parsed = raw === null ? {} : JSON.parse(raw);
+  cachePut(key, parsed);
+  return parsed;
+}
+
 /** 把目錄索引還原成麵包屑（「卷第一 › 觀因緣品第一」）。 */
 export function breadcrumb(toc: TripTocNode[], d: number): string[] {
   const out: string[] = [];

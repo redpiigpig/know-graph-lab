@@ -235,6 +235,13 @@ const availableLangs = computed(() => {
   return order.filter(l => s.has(l))
 })
 const shown = ref<Set<string>>(new Set(['lzh']))
+// 有白話就預設打開 —— 文言與白話並排正是這一欄存在的理由，
+// 不該讓使用者自己去點才看得到
+watch(availableLangs, (langs) => {
+  if (langs.includes('zh-mod') && !shown.value.has('zh-mod')) {
+    shown.value = new Set([...shown.value, 'zh-mod'])
+  }
+}, { immediate: true })
 const cols = computed(() => availableLangs.value.filter(l => shown.value.has(l)))
 const gridStyle = computed(() =>
   cols.value.length > 1 ? { gridTemplateColumns: `repeat(${cols.value.length}, minmax(0, 1fr))` } : {},
