@@ -828,10 +828,23 @@ export const GREEK_CANON: HellenCanon = {
           ],
         },
         {
-          key: 'ph-early', label: '早期批判', label_en: 'Early Critique',
+          key: 'ph-presocratic', label: '先蘇神論', label_en: 'Presocratic Theology',
+          desc: '哲學一開始就在談神。先蘇諸家並不否認神，而是換一種說法：神不是奧林匹斯山上那些會嫉妒的人形者，而是那個不生不滅、包圍並統轄一切的東西。西方神學的第一批命題出在這裡。',
           works: [
+            { title_zh: '無限者（殘篇）', title_orig: 'τὸ ἄπειρον', author: '米利都的阿那克西曼德', era: '約前 550 年', language: '古希臘文', status: 'fragment', via: '辛普利丘《物理學註》、亞里斯多德《物理學》三', note: '萬物所自出而復歸的「無限者」不生不滅、包圍一切並統轄一切——亞里斯多德說他明白稱之為「神性的」。哲學史上第一個非人形的神概念。' },
             { title_zh: '殘篇', title_orig: 'Fragmenta', author: '科洛封的色諾芬尼', era: '約前 530 年', language: '古希臘文', status: 'fragment', note: '「牛馬若能作畫，畫出的神必像牛馬」——反神人同形的先知式批判，也是希臘一神傾向的最早聲音。' },
             { title_zh: '殘篇（宗教語句）', title_orig: 'Fragmenta', author: '以弗所的赫拉克利特', era: '約前 500 年', language: '古希臘文', status: 'fragment', note: '斥血祭如以泥洗泥、斥向偶像禱告如對房子說話；同時提出「邏各斯」——後世道成肉身神學的用語源頭。' },
+            { title_zh: '心智（殘篇）', title_orig: 'νοῦς', author: '克拉佐美奈的阿那克薩哥拉斯', era: '約前 460 年', language: '古希臘文', status: 'fragment', via: '辛普利丘《物理學註》', note: '「心智是無限的、自主的、不與任何物混合，且安排了一切。」第一次把宇宙秩序歸給一個有智的原理——後世「神以理智造世界」的祖型。他本人卻因說太陽是塊燒紅的石頭而被控不敬神。' },
+            { seealso: '希臘卷 Υ 啟示書‧早期異象（該卷收《淨化篇》的第一人稱異象）', title_zh: '論自然（神論殘篇）', title_orig: 'Περὶ φύσεως', author: '阿克拉加斯的恩培多克勒', era: '約前 450 年', language: '古希臘文', status: 'fragment', note: '「神沒有人的頭顱與肢體，只是一個聖潔而不可名狀的心智，以迅疾的思維貫穿全宇宙。」（殘篇 134）先蘇對神最徹底的去人形化表述。' },
+            { title_zh: '聽誡', title_orig: 'Ἀκούσματα / Symbola', author: '畢達哥拉斯派', era: '前 6 – 前 4 世紀', language: '古希臘文', status: 'fragment', via: '楊布里科斯《畢達哥拉斯傳》、波菲利、第歐根尼‧拉爾修', note: '「不可食豆」「不可以鐵撥火」「不可踏過秤桿」——問答式的教團禁忌，與靈魂輪迴、不食肉的潔淨戒律相連。希臘唯一一個有明文戒條與入教程序的哲學團體。' },
+          ],
+        },
+        {
+          key: 'ph-early', label: '早期批判', label_en: 'Early Critique',
+          desc: '同一個世紀的另一路：不追問神是什麼，而追問人為什麼會有神。古代三大宗教起源論——恐懼說、有益說、統治說——都出在前 5 世紀末的雅典，並且很快就有人為此上法庭。',
+          works: [
+            { title_zh: '論神之起源（殘篇）', title_orig: 'Περὶ θεῶν', author: '刻俄斯的普羅狄科斯', era: '約前 420 年', language: '古希臘文', status: 'fragment', via: '斐洛得摩斯《論虔敬》、塞克斯圖斯‧恩皮里庫斯《駁數理學家》九‧18', note: '古人先把有益於生的東西奉為神——太陽、河流、麵包與酒——後來才把發明這些的人也奉為神。故德墨忒耳即麵包、戴奧尼索斯即酒。「有益說」的原型。' },
+            { title_zh: '論神像與宗教之起源（殘篇）', title_orig: 'Fragmenta (de diis)', author: '阿布德拉的德謨克利特', era: '約前 410 年', language: '古希臘文', status: 'fragment', via: '塞克斯圖斯‧恩皮里庫斯、西塞羅《論神性》一', note: '古人見天象雷電而生畏，遂以為有神；又謂空中確有巨大的「影像」出入人夢、能預示禍福，人誤認之為神。恐懼說與影像說並陳，是原子論者對宗教最完整的解釋。' },
             { title_zh: '西緒福斯（殘篇）', title_orig: 'Σίσυφος', author: '克里提亞斯（一說歐里庇得斯）', era: '約前 410 年', language: '古希臘文', extent: '42 行', status: 'fragment', via: '塞克斯圖斯‧恩皮里庫斯《駁數理學家》九‧54', note: '「有一個精明的人發明了對神的畏懼」——律法只能管人前，於是虛構出無所不見的神來管人後。古代最露骨的一份宗教起源論。' },
             { title_zh: '不敬神訴訟諸案', title_orig: 'The asebeia trials', author: '綴輯（柏拉圖《申辯》、第歐根尼‧拉爾修、普魯塔克《伯里克利傳》三十二）', era: '前 5 – 前 4 世紀', place: '雅典', language: '古希臘文', status: 'fragment', note: '阿那克薩哥拉斯說太陽是塊火石、普羅塔哥拉斯說「神是否存在我無從得知」、狄阿哥拉斯以祕儀為笑柄、蘇格拉底被控引進新神——希臘沒有教義，卻有瀆神罪，界線由陪審團當場劃定。' },
             { title_zh: '雲', title_orig: 'Νεφέλαι / Nubes', author: '阿里斯托芬', era: '前 423 年', language: '古希臘文', status: 'whole', note: '舞台上的蘇格拉底吊在籃裡研究天象，宣稱宙斯不存在、下雨的是雲、打雷的是渦旋。二十四年後的不敬神審判中，柏拉圖說控訴的底本正是這齣戲——喜劇如何預演一場宗教審判。' },
@@ -840,14 +853,19 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'ph-classical', label: '古典神學', label_en: 'Classical Theology',
           works: [
+            { title_zh: '理想國‧卷二至三（神學規範）', title_orig: 'Πολιτεία Β–Γ', author: '柏拉圖', era: '約前 375 年', language: '古希臘文', status: 'whole', note: '「θεολογία」一詞在此首次出現。柏拉圖為城邦立下講神的規矩：神必善、神不致惡、神不變形、神不說謊——凡荷馬與赫西俄德不合此律者一律禁講。西方第一份神學正確性標準，也是第一次以哲學之名審查經典。' },
             { title_zh: '蒂邁歐', title_orig: 'Τίμαιος / Timaeus', author: '柏拉圖', era: '約前 360 年', language: '古希臘文', status: 'whole', note: '工匠神依永恆典範造宇宙——古代影響最大的一部創世論，經卡爾奇迪烏斯拉丁譯註成為中世紀西方唯一讀得到的柏拉圖。' },
             { title_zh: '法律篇‧卷十', title_orig: 'Νόμοι Ι', author: '柏拉圖', era: '約前 350 年', language: '古希臘文', status: 'whole', note: '古代第一部有系統的「神存在論證」，並主張無神論應以法律論罪——異教版的異端法。' },
+            { title_zh: '會飲（狄奧提瑪之言）', title_orig: 'Συμπόσιον', author: '柏拉圖', era: '約前 385 年', language: '古希臘文', status: 'whole', note: '愛若斯不是神而是「大精靈」，居於神人之間傳遞祈禱與祭品、傳回誥命與報償——「神不與人直接來往，一切交通都經由精靈」。後世整套精靈學與中介者神學的源頭。' },
+            { title_zh: '伊翁', title_orig: 'Ἴων', author: '柏拉圖', era: '約前 390 年', language: '古希臘文', status: 'whole', note: '詩人不憑技藝而憑神附：如磁石一環扣一環，神先動詩人、詩人動吟誦者、再動聽眾。古代「靈感即附體」說最完整的一篇，與女祭司出神、神諭發語同屬一套解釋。' },
             { title_zh: '形上學‧卷十二', title_orig: 'Μετὰ τὰ φυσικά Λ', author: '亞里斯多德', era: '約前 340 年', language: '古希臘文', status: 'whole', note: '不動的推動者、思想自身的思想；經阿拉伯與經院哲學轉手，成為西方一神論的哲學骨幹。' },
           ],
         },
         {
           key: 'ph-schools', label: '學派神學', label_en: 'School Theologies',
           works: [
+            { title_zh: '論哲學（殘篇）', title_orig: 'Περὶ φιλοσοφίας', author: '亞里斯多德', era: '約前 350 年', language: '古希臘文', status: 'fragment', via: '西塞羅《論神性》二、塞克斯圖斯‧恩皮里庫斯', note: '論神觀念如何生成：一來自靈魂在睡夢與瀕死時的經驗，二來自對天象秩序的驚異——「若有人終生居於地下，忽然上到地面見日月星辰，必判定確有神明存在。」另有《論祈禱》殘篇一句傳世：「神或是心智，或是超乎心智者。」' },
+            { title_zh: '尼各馬可倫理學‧卷十‧7–8', title_orig: 'Ἠθικὰ Νικομάχεια Κ', author: '亞里斯多德', era: '約前 335 年', language: '古希臘文', status: 'whole', note: '人身上最神性的是理智，故沉思的生活即最接近神的生活；並謂諸神既不交易也不打仗，除了沉思沒有別的活動可想。以「像神一樣活著」為倫理目標，此說經新柏拉圖派轉手成為基督教默觀傳統的哲學根據。' },
             { title_zh: '斯多噶神學殘篇', title_orig: 'Stoicorum Veterum Fragmenta (theologica)', author: '克呂西波斯等', era: '前 3–2 世紀', language: '古希臘文', status: 'fragment', note: '神即遍在的理性之火與命運本身；泛神論在古代的最完整形態。' },
             { title_zh: '希臘神學要覽', title_orig: 'Ἐπιδρομὴ τῶν κατὰ τὴν Ἑλληνικὴν θεολογίαν', author: '科爾努圖斯', era: '公元 1 世紀', language: '古希臘文', status: 'whole', note: '現存最完整的斯多噶寓意神學手冊，逐一解釋諸神名號的自然意義。' },
             { title_zh: '論神性', title_orig: 'De natura deorum', author: '西塞羅', era: '前 45 年', language: '拉丁文', extent: '全 3 卷', track: 'latin', status: 'whole', note: '伊比鳩魯、斯多噶、學園派三方辯論；克呂西波斯神學的最完整轉述，希臘原典已佚。' },
