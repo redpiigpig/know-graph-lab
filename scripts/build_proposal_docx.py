@@ -24,7 +24,7 @@ EN_FONT = "Times New Roman"
 CJK_FONT = "新細明體"
 
 # 這幾節各自另起一頁（送件文件的基本體例）
-PAGE_BREAK_BEFORE = ("Abstract", "一、研究動機", "論文大綱草案", "參考書目", "附錄")
+PAGE_BREAK_BEFORE = ("Abstract", "目錄", "前言", "參考書目", "附錄")
 
 
 def add_run(par, text, *, bold=False, italic=False, size=12):
