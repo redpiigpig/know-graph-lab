@@ -50,6 +50,14 @@
           <span class="tool-badge bg-teal-50 text-teal-600">{{ ljCount ? `${ljCount} 人` : '…' }}</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/pct/biblio" class="tool-card group border-sky-100 hover:border-sky-300 hover:shadow-sky-100">
+          <div class="tool-icon bg-sky-50 text-sky-600">🔖</div>
+          <div class="flex-1">
+            <h2 class="tool-title">參考書目與館藏清單</h2>
+            <p class="tool-desc">華藝檢索的參考書目，與臺灣記憶的長老教會文獻館藏目錄；到館調閱前用來選件</p>
+          </div>
+        </NuxtLink>
+
       </div>
 
       <p class="mt-6 text-xs text-gray-400 leading-relaxed">
