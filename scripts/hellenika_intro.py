@@ -239,16 +239,23 @@ def _anth_client():
 
 
 def ask_haiku(prompt: str) -> str:
+    global _anth, _anth_mtime
     import anthropic
     for attempt, wait in enumerate((0, 30, 90, 240), start=1):
         if wait:
-            print(f'    haiku 429 → 等 {wait}s（第 {attempt} 次）', file=sys.stderr, flush=True)
+            print(f'    haiku 退避 {wait}s（第 {attempt} 次）', file=sys.stderr, flush=True)
             time.sleep(wait)
         try:
             msg = _anth_client().messages.create(
                 model=HAIKU_MODEL, max_tokens=16000,
                 messages=[{'role': 'user', 'content': prompt}])
             return ''.join(b.text for b in msg.content if hasattr(b, 'text')).strip()
+        except anthropic.AuthenticationError:
+            # OAuth access token 每幾小時滾一次。長跑的 worker 抓著舊 token 會整批
+            # 401——丟掉 client 並清掉 mtime 記憶，下一次呼叫必重讀憑證檔。
+            print('    haiku 401 → 憑證過期，重讀 .credentials.json', file=sys.stderr, flush=True)
+            _anth, _anth_mtime = None, 0.0
+            continue
         except anthropic.RateLimitError:
             continue
         except (anthropic.APIConnectionError, anthropic.APITimeoutError) as e:

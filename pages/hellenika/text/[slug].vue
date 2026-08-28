@@ -17,7 +17,10 @@
       <div class="mb-5">
         <div class="flex items-baseline gap-2 flex-wrap mb-1">
           <h1 class="text-xl font-bold text-gray-900 break-words">{{ doc.title_zh }}</h1>
-          <span class="text-[11px] px-2 py-0.5 rounded bg-sky-50 text-sky-700">銘文／紙草</span>
+          <span
+            class="text-[11px] px-2 py-0.5 rounded"
+            :class="doc.source === 'perseus' ? 'bg-emerald-50 text-emerald-700' : 'bg-sky-50 text-sky-700'"
+          >{{ doc.source === 'perseus' ? '文獻' : '銘文／紙草' }}</span>
           <a
             :href="doc.url" target="_blank" rel="noopener"
             class="text-[11px] px-2 py-0.5 rounded bg-stone-100 text-stone-600 hover:bg-stone-200 transition"
@@ -28,6 +31,8 @@
           <div v-if="doc.date" class="flex gap-2"><dt class="shrink-0 text-gray-400">年代</dt><dd class="break-words">{{ doc.date }}</dd></div>
           <div v-if="doc.provenance" class="flex gap-2"><dt class="shrink-0 text-gray-400">出土地</dt><dd class="break-words">{{ doc.provenance }}</dd></div>
           <div v-if="doc.support" class="flex gap-2 sm:col-span-2"><dt class="shrink-0 text-gray-400">載體</dt><dd class="break-words">{{ doc.support }}</dd></div>
+          <div v-if="doc.author" class="flex gap-2"><dt class="shrink-0 text-gray-400">作者</dt><dd class="break-words">{{ doc.author }}</dd></div>
+          <div v-if="doc.lines_total" class="flex gap-2"><dt class="shrink-0 text-gray-400">篇幅</dt><dd class="break-words">全 {{ doc.lines_total }} 行</dd></div>
         </dl>
       </div>
 

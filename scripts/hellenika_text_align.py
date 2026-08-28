@@ -112,6 +112,10 @@ def translate_batch(doc: dict, batch: list[tuple[int, dict]]) -> int:
     if not got:
         print('    X 回傳非 JSON，整批丟棄', file=sys.stderr, flush=True)
         return 0
+    # 鍵先正規化再核對。模型時常把鍵寫成「第3段」「segment 3」而非「3」——
+    # 那不是譯錯，只是格式，硬性比對會把整批好譯文丟掉（實測 homeric-hymn-03
+    # 就是這樣卡在 19/28）。抽出數字即可，抽完仍須一一對上才採用。
+    got = {re.sub(r'\D', '', k): v for k, v in got.items()}
     want = {str(i) for i, _ in batch}
     if set(got) != want:                          # 編號對不上就整批丟棄，不做部分採用
         print('    X 段號對不上（要 %s，得 %s），整批丟棄'

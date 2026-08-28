@@ -29,10 +29,16 @@ export interface AlignedSegment {
 }
 
 export interface AlignedText {
-  /** 來源庫 */
-  source: 'cgrn' | 'phi'
-  /** 該庫的編號 */
+  /** 來源庫。perseus ＝ 傳世文獻（Perseus 標準 TEI），其餘兩者為銘文 */
+  source: 'cgrn' | 'phi' | 'perseus'
+  /** 該庫的編號；perseus 無編號，一律 0，改以 slug 定位 */
   ref: number
+  /** perseus 專用：檔名即路由 slug */
+  slug?: string
+  /** 作者（文獻才有；銘文多為佚名或城邦） */
+  author?: string
+  /** 詩行總數（文獻才有） */
+  lines_total?: number
   /** 學術編號，如 'IG IV²,1 121'；CGRN 用 'CGRN 13' */
   siglum: string
   url: string
@@ -45,8 +51,9 @@ export interface AlignedText {
   support?: string
   bibliography?: string
   licence: string
-  /** 'cgrn' = 以 CGRN 英譯為中介；'none' = 直接譯自希臘原文 */
-  pivot: 'cgrn' | 'none'
+  /** 'cgrn' = 以 CGRN 英譯為中介；'perseus-eng' = 以 Perseus 收錄的公有領域英譯
+   *  為中介；'none' = 無英譯可依據，直接譯自希臘原文（可信度較低，版面須標明） */
+  pivot: 'cgrn' | 'perseus-eng' | 'none'
   pivot_note?: string
   /** 本篇專名定譯表 */
   names: Record<string, string>
@@ -56,6 +63,9 @@ export interface AlignedText {
 interface RawDoc {
   cgrn?: number
   phi?: number
+  slug?: string
+  author?: string
+  lines_total?: number
   siglum?: string
   url: string
   title_zh: string
@@ -76,12 +86,18 @@ const cgrnMods = import.meta.glob('./cgrn/*.aligned.json', { eager: true }) as
   Record<string, { default: RawDoc }>
 const phiMods = import.meta.glob('./phi/*.aligned.json', { eager: true }) as
   Record<string, { default: RawDoc }>
+// 文獻（Perseus TEI）。檔名不帶 .aligned——取源與翻譯寫同一個檔，沒有兩階段產物。
+const textMods = import.meta.glob('./text/*.json', { eager: true }) as
+  Record<string, { default: RawDoc }>
 
-function normalise(d: RawDoc, source: 'cgrn' | 'phi'): AlignedText {
-  const ref = (source === 'cgrn' ? d.cgrn : d.phi) ?? 0
+function normalise(d: RawDoc, source: 'cgrn' | 'phi' | 'perseus'): AlignedText {
+  const ref = (source === 'cgrn' ? d.cgrn : source === 'phi' ? d.phi : 0) ?? 0
   return {
     source,
     ref,
+    slug: d.slug,
+    author: d.author,
+    lines_total: d.lines_total,
     siglum: d.siglum ?? `CGRN ${ref}`,
     url: d.url,
     title_zh: d.title_zh,
@@ -92,7 +108,7 @@ function normalise(d: RawDoc, source: 'cgrn' | 'phi'): AlignedText {
     support: d.support,
     bibliography: d.bibliography,
     licence: d.licence,
-    pivot: d.pivot === 'none' ? 'none' : 'cgrn',
+    pivot: d.pivot === 'none' ? 'none' : d.pivot === 'perseus-eng' ? 'perseus-eng' : 'cgrn',
     pivot_note: d.pivot_note,
     names: d.names ?? {},
     segments: d.segments,
@@ -102,10 +118,15 @@ function normalise(d: RawDoc, source: 'cgrn' | 'phi'): AlignedText {
 export const ALIGNED_TEXTS: AlignedText[] = [
   ...Object.values(cgrnMods).map(m => normalise(m.default, 'cgrn')),
   ...Object.values(phiMods).map(m => normalise(m.default, 'phi')),
-].sort((a, b) => (a.source === b.source ? a.ref - b.ref : a.source < b.source ? -1 : 1))
+  ...Object.values(textMods).map(m => normalise(m.default, 'perseus')),
+].sort((a, b) => (a.source === b.source
+  ? (a.slug && b.slug ? a.slug.localeCompare(b.slug) : a.ref - b.ref)
+  : a.source < b.source ? -1 : 1))
 
 export function alignedSlug(t: AlignedText): string {
-  return `${t.source}-${t.ref}`
+  // 銘文以「庫-編號」定位；文獻沒有庫編號，改用檔名 slug（theogony、
+  // homeric-hymn-04…），路由才讀得懂也才看得懂。
+  return t.source === 'perseus' ? (t.slug ?? `perseus-${t.ref}`) : `${t.source}-${t.ref}`
 }
 
 export function findAligned(slug: string): AlignedText | undefined {
