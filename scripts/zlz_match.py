@@ -28,9 +28,43 @@ from parse_drive_inventory import to_traditional
 DAZANG = Path("c:/tmp/dazang_works.json")
 ZLZ = Path("c:/tmp/zlz_catalog.json")
 
-# 天主教↔新教的定名差異，字串比對永遠對不上，只能列表。
-# 左為天主教慣用、右為藏經可能採用的形式（雙向都試）。
-ALIASES = [
+def glossary_aliases() -> list[tuple[str, str]]:
+    """從翻譯詞庫讀天主教↔新教的定名對照。
+
+    詞庫的 theologians / theological_terms 早就有 name_protestant、
+    name_catholic_sgs、zh_protestant、zh_catholic_sgs 這些逐傳統欄位——
+    別名表寫死在腳本裡等於在重造詞庫，用完即棄。改為讀 DB 之後，
+    每往詞庫補一筆譯名，比對能力就自動變強一次，不必改程式。
+    連不上 DB 時退回下方的靜態表，不讓比對整個停擺。
+    """
+    try:
+        import os
+        import requests
+        from dotenv import load_dotenv
+        load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
+        url, key = os.environ["SUPABASE_URL"], os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+        h = {"apikey": key, "Authorization": f"Bearer {key}"}
+        out: list[tuple[str, str]] = []
+        for table, prot, cath in (("theologians", "name_protestant", "name_catholic_sgs"),
+                                  ("theological_terms", "zh_protestant", "zh_catholic_sgs")):
+            r = requests.get(f"{url}/rest/v1/{table}", headers=h,
+                             params={"select": f"{prot},{cath}", "limit": 5000}, timeout=30)
+            r.raise_for_status()
+            for row in r.json():
+                # 一格可能塞多個變體，用「；」分隔
+                ps = [x.strip() for x in re.split(r"[；;]", row.get(prot) or "") if x.strip()]
+                cs = [x.strip() for x in re.split(r"[；;]", row.get(cath) or "") if x.strip()]
+                for p in ps:
+                    for c in cs:
+                        if p != c and len(p) >= 2 and len(c) >= 2:
+                            out.append((c, p))
+        return out or ALIASES_STATIC
+    except Exception:
+        return ALIASES_STATIC
+
+
+# 連不上詞庫時的退路。左為天主教慣用、右為藏經可能採用的形式（雙向都試）。
+ALIASES_STATIC = [
     ("天主之城", "上帝之城"), ("天主經", "主禱文"), ("默示錄", "啟示錄"),
     ("聖詠集", "詩篇"), ("宗徒大事錄", "使徒行傳"), ("依撒意亞", "以賽亞"),
     ("耶肋米亞", "耶利米"), ("厄則克耳", "以西結"), ("達尼爾", "但以理"),
@@ -60,6 +94,9 @@ NOISE = re.compile(
     r"|拉丁文|中英雙語|繁體|简体|簡體")
 
 
+_ALIASES = glossary_aliases()
+
+
 def norm(s: str) -> str:
     """正規化：轉繁 → 去書名號/冊次/版本註記 → 去空白。"""
     return NOISE.sub("", to_traditional(s or "")).lower()
@@ -69,7 +106,7 @@ def variants(s: str) -> set[str]:
     """加上天主教↔新教定名互換後的所有寫法。"""
     base = norm(s)
     out = {base}
-    for a, b in ALIASES:
+    for a, b in _ALIASES:
         na, nb = norm(a), norm(b)
         if na and na in base:
             out.add(base.replace(na, nb))
