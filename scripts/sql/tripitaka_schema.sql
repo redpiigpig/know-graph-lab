@@ -1,7 +1,11 @@
 -- 佛教大藏經 /tripitaka —— 目錄與對照表。
 -- 正文（9,788 萬字／101 萬段）不進 DB，走 Drive + R2（server/utils/tripitaka.ts）。
--- 2026-08-28：Management API token 失效，此檔供 Supabase Dashboard SQL Editor 手動執行；
---            執行後跑 python scripts/tripitaka_db.py --push 灌 2,554 列目錄。
+--
+-- 2026-08-28：SUPABASE_ACCESS_TOKEN（Management API 那把）失效回 403，DDL 跑不了。
+-- 請到 Supabase Dashboard → SQL Editor 貼上本檔執行一次，然後：
+--   python scripts/tripitaka_db.py --push          # 灌 2,554 列目錄
+--   python scripts/tripitaka_parallels.py --push   # 灌對照
+-- 資料寫入走 PostgREST（service role key 正常），不需要那把 token。
 
 create table if not exists tripitaka_works (
   id              text primary key,
@@ -48,7 +52,10 @@ create index if not exists tripitaka_works_title_idx
 create table if not exists tripitaka_parallels (
   id       bigserial primary key,
   work_id  text not null references tripitaka_works(id) on delete cascade,
-  seg      text,
+  -- 段的**唯一鍵**（T02n0099_p0001a06 或同行第二段的 …a06.2）。
+  -- 純行號不唯一：全藏 6.5% 的段與別的段同行起頭，拿行號當鍵會讓
+  -- 對照掛到同一行的其他段上。引用式仍是行號，顯示時去掉 .n 後綴。
+  seg_uid  text,
   lang     text not null,
   ref      text not null,
   src      text not null,
@@ -56,7 +63,7 @@ create table if not exists tripitaka_parallels (
 );
 create index if not exists tripitaka_parallels_work_idx on tripitaka_parallels (work_id);
 create unique index if not exists tripitaka_parallels_uniq
-  on tripitaka_parallels (work_id, coalesce(seg,''), lang, ref, src);
+  on tripitaka_parallels (work_id, coalesce(seg_uid,''), lang, ref, src);
 
 alter table tripitaka_works    enable row level security;
 alter table tripitaka_parallels enable row level security;

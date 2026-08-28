@@ -6,7 +6,8 @@
       :editable="false"
     >
       <template #actions>
-        <div class="flex items-center gap-1.5">
+        <!-- 只有漢文時不必顯示語言切換（原文是可展開區塊，不佔欄） -->
+        <div v-if="availableLangs.length > 1" class="flex items-center gap-1.5">
           <button
             v-for="l in availableLangs"
             :key="l"
