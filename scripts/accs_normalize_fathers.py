@@ -29,7 +29,8 @@ import translate_ebook_to_zh as te
 TABLE = 'accs_commentary'
 BACKUP_DIR = Path('c:/tmp/accs_rows_backup')
 NAME_COLS = ['name_recommended', 'name_protestant', 'name_catholic_sgs',
-             'name_orthodox', 'name_hk', 'name_tw', 'name_china_academic']
+             'name_orthodox', 'name_hk', 'name_tw', 'name_china_academic',
+             'name_variants']   # 各語料的既有譯法與 OCR 錯字都收在這一欄
 
 
 def load_glossary() -> dict[str, str]:
