@@ -26,6 +26,7 @@ import argparse
 import collections
 import importlib.util
 import json
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -172,6 +173,27 @@ def cards_for(lang: str) -> list[dict]:
     return rows
 
 
+def variants(names: dict[str, str], keyword: str) -> list[tuple[str, str]]:
+    """同一個概念的其他畫法：名字裡含這個關鍵詞的圖示。
+
+    使用者要的正是這一層——「眼睛的單數與複數也要用不同的眼睛卡通圖」。
+    Iconify 那四個庫對一個概念常有十幾種畫法（eye、eye-off、eye-closed、
+    eye-slash…），所以本名對不上的時候，就在同一個概念裡換一張畫法。
+
+    只認以連字號分隔的詞，不做子字串比對：`ear` 不可以命中 `search`、
+    `research`、`earth`，那種命中看起來像成功而畫的是完全不同的東西。
+    """
+
+    hits = []
+    for name, icon in names.items():
+        parts = re.split(r"[-_]", name)
+        if keyword in parts and name != keyword:
+            hits.append((name, icon))
+    # 名字越短越接近那個概念本身（eye-off 勝過 eye-dropper-empty）。
+    hits.sort(key=lambda pair: (len(pair[0]), pair[0]))
+    return hits
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="替共用圖的卡另找一張圖")
     parser.add_argument("--lang", choices=sorted(LANGS), required=True)
@@ -184,22 +206,37 @@ def main() -> None:
     images = json.loads(config["images"].read_text(encoding="utf-8"))["images"]
     rows = cards_for(args.lang)
 
-    # 一張圖被幾個「不同的詞」用到。同一個詞的不同字形共用是刻意的，不算。
-    lemmas_per_picture: dict[str, set[str]] = collections.defaultdict(set)
+    # 使用者 2026-08-29 定的硬規矩：**同一種語言裡，一張圖只能出現在一張卡上**，
+    # 連「眼睛的單數與複數」都要用不同的眼睛圖。所以這裡看的是「幾張卡」而不是
+    # 「幾個詞」——同一個詞的兩個字形共用，以前算刻意，現在也要拆開。
+    #
+    # 每張圖留給最有資格的那張卡：手工指定的優先（那是有人特地為它挑的），
+    # 其次詞義最短的（意思最直白的那個詞最配得上那張圖）。其餘的另外找圖。
+    cards_per_picture: dict[str, list[dict]] = collections.defaultdict(list)
     for row in rows:
         record = images.get(row["key"])
         if record:
-            lemmas_per_picture[record["hexcode"]].add(row["lemma"])
+            cards_per_picture[record["hexcode"]].append(row)
 
-    shared = [row for row in rows
-              if images.get(row["key"])
-              and len(lemmas_per_picture[images[row["key"]]["hexcode"]]) > 1]
-    shared.sort(key=lambda row: -len(lemmas_per_picture[images[row["key"]]["hexcode"]]))
+    def claim(row: dict) -> tuple[int, int, str]:
+        record = images.get(row["key"], {})
+        override = 0 if record.get("source") == "override" else 1
+        return (override, len(row.get("glossZh") or ""), row["key"])
+
+    shared: list[dict] = []
+    for hexcode, cards in cards_per_picture.items():
+        if len(cards) < 2:
+            continue
+        cards.sort(key=claim)
+        shared.extend(cards[1:])          # 第一張保留原圖，其餘要換
+    shared.sort(key=lambda row: -len(cards_per_picture[images[row["key"]]["hexcode"]]))
     if args.limit:
         shared = shared[: args.limit]
-    print(f"  跟不相干的詞共用一張圖：{len(shared)} 張卡")
+    print(f"  與同語言其他卡共用一張圖、必須換掉的：{len(shared)} 張")
 
     names = icon_names()
+    # hexcode → OpenMoji 本名，給上面那層備援查概念用。
+    openmoji_name = {entry["hexcode"]: name for name, entry in module.load_openmoji().items()}
     print(f"  四個圖庫合計 {len(names)} 個圖示本名")
     # 人工審圖刷掉的組合：英文對得上、圖卻不對（mdi:iron 是熨斗不是鐵、
     # ph:alien 是外星人不是外邦人、ph:command 是 ⌘ 不是吩咐、tabler:grave 是
@@ -213,11 +250,30 @@ def main() -> None:
     taken = {record["hexcode"] for record in images.values()}
     assigned: dict[str, dict] = {}
     for row in shared:
+        options: list[tuple[str, str]] = []
         for candidate in keywords(row["glossEn"], module):
             if candidate in module.AMBIGUOUS_EN:
                 continue
-            icon = names.get(candidate)
-            if not icon or icon in taken or f"{icon}|{candidate}" in rejects:
+            exact = names.get(candidate)
+            if exact:
+                options.append((candidate, exact))
+            # 本名對不上就找同概念的其他畫法，一個關鍵詞最多試六種。
+            options.extend((candidate, icon) for _, icon in variants(names, candidate)[:6])
+        if not options:
+            # 英文詞義一個字也配不上時，改用「它現在共用的那張圖」的概念去找。
+            # 那張圖本來就是為這個意思挑的，換的是畫法不是意思——使用者要的
+            # 「同一個眼睛概念、不同的眼睛圖」正是這一層。
+            current = images.get(row["key"], {})
+            concept = (openmoji_name.get(current.get("hexcode")) or "").lower()
+            for word in re.split(r"[\s-]+", concept):
+                if len(word) < 3 or word in module.AMBIGUOUS_EN:
+                    continue
+                exact = names.get(word)
+                if exact:
+                    options.append((word, exact))
+                options.extend((word, icon) for _, icon in variants(names, word)[:6])
+        for candidate, icon in options:
+            if icon in taken or f"{icon}|{candidate}" in rejects:
                 continue
             if args.write:
                 try:

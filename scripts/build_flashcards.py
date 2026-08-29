@@ -63,13 +63,24 @@ PAGE_W_MM = 297.0
 PAGE_H_MM = 210.0
 COLS = 4
 ROWS = 2
-CARD_W_MM = PAGE_W_MM / COLS      # 74.25
-# Both figures are measured, not derived.  The renderer reserves more vertical
-# space than the declared margins account for, and it moves the second row to a
-# page of its own well before the arithmetic says the rows should stop fitting;
-# a 10 mm margin fails where 5 mm holds, and 97 mm rows fail where 94 mm hold.
-CARD_H_MM = 94.0
-MARGIN_V_MM = 5.0
+# 版面要能用裁刀等切八份，所以三件事必須同時成立：八張卡一樣大、四邊留白對稱、
+# 中間那兩刀落在紙張的中線上。舊版是 74.25 × 94、左右 0、上 5 下 17——卡確實
+# 一樣大，但上下差 12 mm，中間橫刀落在 99 mm 而紙中線在 105 mm，而且左右貼邊
+# 印表機根本印不到，裁出來自然歪。
+#
+# 現在：卡 71.25 × 98，左右各 6 mm、上下各 7 mm。
+#   直刀 6 ｜ 77.25 ｜ 148.5 ｜ 219.75 ｜ 291   ← 中間那刀正好是紙寬中線
+#   橫刀 7 ｜ 105 ｜ 203                        ← 中間那刀正好是紙高中線
+# 卡面面積 6,983 mm²，與舊版的 6,980 mm² 幾乎一樣，換來的是四邊對稱與可等切。
+#
+# **下、右留白宣告成 0，不是筆誤。** 上下都宣告成對稱值等於把整頁填滿，渲染器
+# 一點餘裕都沒有，第二列就被擠到下一頁——86 mm 的卡也一樣爆，所以這不是卡太高。
+# 宣告成 0 之後版面實際仍然置中：內容從 MARGIN 開始、到 MARGIN + 2×卡高 結束，
+# 剩下的就是視覺上的下留白。
+CARD_W_MM = 71.25
+CARD_H_MM = 98.0
+MARGIN_H_MM = (PAGE_W_MM - COLS * CARD_W_MM) / 2   # 6.0
+MARGIN_V_MM = (PAGE_H_MM - ROWS * CARD_H_MM) / 2   # 7.0
 
 FONT_ZH = "MingLiU"
 FONT_UI = "MingLiU"
@@ -107,7 +118,9 @@ FRAME_SLACK_MM = 2.0
 FRAME_PAD_DXA = 110         # 框內再留 2 mm，字不要貼著框
 # 卡寬 74.25 mm 扣掉兩側格線邊距，再留一點安全量；超過這個寬度 LibreOffice 會把
 # 字頭的最後一個字母折到第二行，把下面的課次擠掉。
-HEADWORD_MAX_MM = 54
+# 字頭最寬能佔多少：卡寬扣掉框內縮再留一段安全量。原本寫死 54（照 74.25 mm
+# 的卡量的），卡一改寬度就會悄悄溢出——改成跟著卡寬走。
+HEADWORD_MAX_MM = CARD_W_MM - 2 * FRAME_INSET_MM - 14.25
 
 # The glosses run from two characters to twenty-seven, so the meaning line is
 # sized to fit the card rather than set at one size and allowed to overflow.
@@ -561,7 +574,7 @@ def framed(cell, lesson: int, place: tuple[int, int, int]):
     frame_shape(
         cell,
         FRAME_COLORS[(lesson - 1) % len(FRAME_COLORS)],
-        column * CARD_W_MM + FRAME_INSET_MM,
+        MARGIN_H_MM + column * CARD_W_MM + FRAME_INSET_MM,
         MARGIN_V_MM + row * CARD_H_MM + FRAME_INSET_MM,
         shape_id,
     )
@@ -713,10 +726,14 @@ def configure(document: Document) -> None:
     section.orientation = WD_ORIENT.LANDSCAPE
     section.page_width = Mm(PAGE_W_MM)
     section.page_height = Mm(PAGE_H_MM)
-    for attribute in ("left_margin", "right_margin", "header_distance", "footer_distance", "gutter"):
+    for attribute in ("header_distance", "footer_distance", "gutter"):
         setattr(section, attribute, Mm(0))
+    section.left_margin = Mm(MARGIN_H_MM)
     section.top_margin = Mm(MARGIN_V_MM)
-    section.bottom_margin = Mm(MARGIN_V_MM)
+    # 右與下宣告成 0：餘裕留給渲染器，視覺上的留白由「頁寬減去左留白與四張卡」
+    # 補齊，兩邊仍然是 6 mm 與 7 mm。宣告成對稱值反而會把第二列擠到下一頁。
+    section.right_margin = Mm(0)
+    section.bottom_margin = Mm(0)
     style = document.styles["Normal"]
     style.font.name = FONT_UI
     style.font.size = Pt(11)

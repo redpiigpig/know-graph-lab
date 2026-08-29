@@ -100,18 +100,33 @@ Ruled out, so nobody spends the time again:
 |---|---|
 | Page | A4 landscape, 297 × 210 mm |
 | Grid | 4 columns × 2 rows, 8 cards a sheet |
-| Card | 74.25 × 94 mm |
-| Margins | 5 mm top and bottom, 0 left and right |
-| Cuts | horizontal 5 / 99 / 193 mm from the top, vertical 74.25 / 148.5 / 222.75 mm from the left |
+| Card | 71.25 × 98 mm |
+| Margins | 6 mm left and right, 7 mm top and bottom — **symmetric on all four sides** |
+| Cuts | vertical 6 / 77.25 / **148.5** / 219.75 / 291 mm from the left; horizontal 7 / **105** / 203 mm from the top |
 | Duplex | long-edge flip; the back sheet mirrors the column order 4-3-2-1 |
 
-**The card height is measured, not derived.** The renderer reserves more vertical
-space than the declared margins account for and drops the second row onto a page
-of its own long before the arithmetic says it should: a 10 mm margin fails where
-5 mm holds, and 97 mm rows fail where 94 mm hold. If the page count comes out at
-double what it should be, that is what happened — shrink the row, do not reason
-about it. Setting `row.height` and then appending a second `w:trHeight` leaves
-two competing rules in the XML and produces the same symptom.
+**The two middle cuts land on the paper's own centre lines** (148.5 = half of
+297, 105 = half of 210), which is what makes a guillotine stack cuttable: the
+operator folds or measures to the centre once and the rest follows. The previous
+sheet could not be cut evenly — 74.25 × 94 with 0 side margins and 5 mm top left
+17 mm at the bottom, so the middle horizontal cut sat at 99 mm against a 105 mm
+centre line, and the cards ran to the paper edge where no home printer can print.
+Measured on the rendered page: now 8.9 mm top and bottom, 7.9/8.1 left and
+right; before, 6.9 top against 18.8 bottom and under 2 mm at the sides.
+
+**Declaring symmetric margins is what pushes the second row onto its own page —
+not the card height.** A symmetric declaration means `top + 2×height + bottom`
+equals the page exactly, and the renderer needs a little slack it never asked
+for; an 86 mm card fails just as an 98 mm one does when both margins are
+declared. The fix is to declare the top and left margins at their real value and
+the bottom and right at **zero**: the block still ends at `margin + 2×height`,
+so the leftover *is* the visual bottom margin and the page stays centred, while
+the renderer keeps its slack. Setting `row.height` and then appending a second
+`w:trHeight` leaves two competing rules in the XML and produces the same symptom.
+
+`HEADWORD_MAX_MM` follows the card width rather than being written out: it was
+hard-coded to 54 mm for the 74.25 mm card, and a hard-coded limit silently
+overflows the moment the card changes width.
 
 ## Card faces
 

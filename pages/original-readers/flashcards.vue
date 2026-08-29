@@ -61,6 +61,13 @@
             <template v-if="!flipped">
               <p class="text-[11px] font-semibold tracking-[0.24em] text-stone-400">正面</p>
               <p :class="frontClass">{{ card.front }}</p>
+              <button
+                v-if="audio.deviceSupported.value"
+                type="button"
+                class="rounded-full border border-stone-300 px-4 py-1.5 text-xs text-stone-600 transition hover:border-stone-600 hover:text-stone-900"
+                :aria-label="`朗讀 ${card.front}`"
+                @click.stop="speak(card.front)"
+              >🔊 朗讀</button>
               <p class="text-xs text-stone-400">第 {{ card.lesson }} 課　·　點一下翻面</p>
             </template>
             <template v-else>
@@ -73,6 +80,13 @@
               >
               <p class="font-serif text-2xl font-semibold leading-9 text-stone-900 sm:text-3xl">{{ card.zh }}</p>
               <p v-if="card.pos" class="text-sm text-stone-500">{{ card.pos }}</p>
+              <button
+                v-if="audio.deviceSupported.value"
+                type="button"
+                class="rounded-full border border-stone-300 px-4 py-1.5 text-xs text-stone-600 transition hover:border-stone-600 hover:text-stone-900"
+                :aria-label="`朗讀 ${card.front}`"
+                @click.stop="speak(card.front)"
+              >🔊 朗讀原文</button>
               <p class="text-xs text-stone-400">第 {{ card.lesson }} 課</p>
             </template>
           </div>
@@ -89,7 +103,7 @@
               @click="markKnown"
             >會了</button>
           </div>
-          <p class="mt-3 text-center text-xs text-stone-400">鍵盤：空白鍵翻面、← 再看一次、→ 會了</p>
+          <p class="mt-3 text-center text-xs text-stone-400">鍵盤：空白鍵翻面、← 再看一次、→ 會了、S 朗讀</p>
         </section>
 
         <section v-else class="mt-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-8 text-center">
@@ -118,6 +132,9 @@ interface Deck {
   lessons: string[]; cards: Card[];
 }
 
+// 朗讀走裝置語音，與讀本頁同一支 composable：希伯來與希臘只當定位用，
+// 正式發音仍以讀本標示的參考音軌為準；拉丁走羅馬式教會發音的拼寫改寫。
+const audio = useOriginalReaderAudio();
 const decks = ref<{ deck: string; title: string; cards: number }[]>([]);
 const current = ref<Deck | null>(null);
 const deck = ref("hbo");
@@ -142,6 +159,12 @@ const frontClass = computed(() => {
   if (language === "grc") return "greek text-4xl leading-tight sm:text-5xl";
   return "font-serif text-3xl leading-snug sm:text-4xl";
 });
+
+function speak(text: string) {
+  const language = current.value?.language;
+  if (!language) return;
+  audio.speakOne(language, text);
+}
 
 function storageKey(name: string) {
   return `flashcards:known:${name}`;
@@ -234,6 +257,8 @@ function onKey(event: KeyboardEvent) {
   if (event.key === " ") { event.preventDefault(); flipped.value = !flipped.value; }
   if (event.key === "ArrowLeft") again();
   if (event.key === "ArrowRight") markKnown();
+  // s＝speak，念正面那個字。
+  if ((event.key === "s" || event.key === "S") && card.value) speak(card.value.front);
 }
 
 watch(lesson, rebuildQueue);

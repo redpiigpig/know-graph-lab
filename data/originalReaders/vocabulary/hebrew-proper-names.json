@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "note": "自 1000 詞課表移出的聖經專名，改由附錄「分類專名表」收錄。",
+  "note": "希伯來專名表。一筆一個名字（依附點寫法去重），標籤取九類分類，一張卡只印一個；亞當到約瑟的世系另行補入，附點取自創世記本文。",
   "items": [
     {
       "ordinal": 10,
@@ -14,7 +14,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Israel",
-      "glossZh": "以色列人；以色列",
+      "glossZh": "以色列人",
       "sourceType": "bbh2_order",
       "sourceChapter": 3,
       "sourceOrder": 10,
@@ -37,9 +37,12 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 10,
+      "lessonSlot": 1,
       "category": "民族與國名",
-      "categoryRoute": "place_names"
+      "categoryRoute": "place_names",
+      "name": "以色列人",
+      "printedLabel": "民族與國名",
+      "nameNote": "以色列"
     },
     {
       "ordinal": 11,
@@ -75,47 +78,12 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 11,
+      "lessonSlot": 2,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
-    },
-    {
-      "ordinal": 12,
-      "pointed": "יְרוּשָׁלַ֫יִם",
-      "sourcePointed": "יְרוּשָׁלַ֫יִם",
-      "unpointed": "ירושלים",
-      "unpointedVariants": [
-        "ירושלים"
-      ],
-      "textbookTransliteration": "yərûšālayim",
-      "transliterationSystem": "Pratico-Van Pelt BBH2",
-      "transliterationStatus": "rule_generated_exception_review",
-      "glossEn": "Jerusalem",
-      "glossZh": "耶路撒冷",
-      "sourceType": "bbh2_order",
-      "sourceChapter": 3,
-      "sourceOrder": 12,
-      "sourceOrders": [
-        12
-      ],
-      "itemKind": "lexeme",
-      "frequency": 643,
-      "frequencyStrong": "H3389",
-      "strong": "H3389",
-      "strongs": [
-        "H3389"
-      ],
-      "partOfSpeech": "proper_name",
-      "isProperName": true,
-      "properNameTypes": [
-        "place"
-      ],
-      "verification": "source_and_lexicon_matched",
-      "languageVariety": "biblical_hebrew",
-      "lesson": 1,
-      "lessonSlot": 12,
-      "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "耶路撒冷",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "ordinal": 14,
@@ -151,9 +119,12 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 14,
+      "lessonSlot": 3,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "埃及",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "ordinal": 15,
@@ -189,9 +160,12 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 15,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 4,
+      "category": "先知",
+      "categoryRoute": "手列族長先知",
+      "name": "摩西",
+      "printedLabel": "先知",
+      "nameNote": ""
     },
     {
       "ordinal": 19,
@@ -227,9 +201,12 @@
       "verification": "source_and_lexicon_matched",
       "languageVariety": "biblical_hebrew",
       "lesson": 1,
-      "lessonSlot": 19,
+      "lessonSlot": 5,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "法老",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "דָּוִד",
@@ -242,7 +219,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "David, the youngest son of Jesse",
-      "glossZh": "大衛；耶西的幼子",
+      "glossZh": "大衛",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -263,9 +240,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 553,
       "lesson": 28,
-      "lessonSlot": 13,
+      "lessonSlot": 1,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "大衛",
+      "printedLabel": "君王",
+      "nameNote": "耶西的幼子"
     },
     {
       "pointed": "יְהוּדָה",
@@ -278,7 +258,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jehudah (or Judah), the name of five Israelites; also of the tribe descended from the first, and of its territory",
-      "glossZh": "猶大；猶大支派；猶大地",
+      "glossZh": "猶大",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -301,9 +281,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 555,
       "lesson": 28,
-      "lessonSlot": 15,
-      "category": "民族與國名",
-      "categoryRoute": "place_names"
+      "lessonSlot": 2,
+      "category": "先祖與族長",
+      "categoryRoute": "place_names",
+      "name": "猶大",
+      "printedLabel": "先祖與族長",
+      "nameNote": "猶大支派；猶大地"
     },
     {
       "pointed": "שָׁאוּל",
@@ -337,9 +320,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 559,
       "lesson": 28,
-      "lessonSlot": 19,
+      "lessonSlot": 3,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "掃羅",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "יַעֲקֹב",
@@ -374,8 +360,11 @@
       "ordinal": 561,
       "lesson": 29,
       "lessonSlot": 1,
-      "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "category": "先祖與族長",
+      "categoryRoute": "biblical_people",
+      "name": "雅各",
+      "printedLabel": "先祖與族長",
+      "nameNote": ""
     },
     {
       "pointed": "אַהֲרוֹן",
@@ -388,7 +377,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Aharon, the brother of Moses",
-      "glossZh": "亞倫；摩西的兄弟",
+      "glossZh": "亞倫",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -411,7 +400,10 @@
       "lesson": 29,
       "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞倫",
+      "printedLabel": "其他人名",
+      "nameNote": "摩西的兄弟"
     },
     {
       "pointed": "שְׁלֹמֹה",
@@ -424,7 +416,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Shelomah, David's successor",
-      "glossZh": "所羅門；大衛的繼承者",
+      "glossZh": "所羅門",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -445,9 +437,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 568,
       "lesson": 29,
-      "lessonSlot": 8,
+      "lessonSlot": 3,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "所羅門",
+      "printedLabel": "君王",
+      "nameNote": "大衛的繼承者"
     },
     {
       "pointed": "פְּלִשְׁתִּי",
@@ -481,9 +476,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 569,
       "lesson": 29,
-      "lessonSlot": 9,
+      "lessonSlot": 4,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "非利士人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "לֵוִיִּי",
@@ -517,9 +515,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 570,
       "lesson": 29,
-      "lessonSlot": 10,
+      "lessonSlot": 5,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "利未人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "בָּבֶל",
@@ -532,7 +533,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Babel (i.e. Babylon), including Babylonia and the Babylonian empire",
-      "glossZh": "巴別；巴比倫；巴比倫帝國",
+      "glossZh": "巴別",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -553,9 +554,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 571,
       "lesson": 29,
-      "lessonSlot": 11,
+      "lessonSlot": 6,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "巴別",
+      "printedLabel": "地名",
+      "nameNote": "巴比倫；巴比倫帝國"
     },
     {
       "pointed": "יְהוֹשׁוּעַ",
@@ -589,9 +593,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 572,
       "lesson": 29,
-      "lessonSlot": 12,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 7,
+      "category": "其他人名",
+      "categoryRoute": "手列族長先知",
+      "name": "約書亞",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "יוֹסֵף",
@@ -625,9 +632,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 574,
       "lesson": 29,
-      "lessonSlot": 14,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 8,
+      "category": "先祖與族長",
+      "categoryRoute": "手列族長先知",
+      "name": "約瑟",
+      "printedLabel": "先祖與族長",
+      "nameNote": ""
     },
     {
       "pointed": "יַרְדֵּן",
@@ -661,9 +671,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 575,
       "lesson": 29,
-      "lessonSlot": 15,
+      "lessonSlot": 9,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "約旦河",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "מוֹאָב",
@@ -676,7 +689,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Moab, an incestuous son of Lot; also his territory and descendants",
-      "glossZh": "摩押；摩押地；摩押人",
+      "glossZh": "摩押",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -699,9 +712,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 577,
       "lesson": 29,
-      "lessonSlot": 17,
+      "lessonSlot": 10,
       "category": "民族與國名",
-      "categoryRoute": "place_names"
+      "categoryRoute": "place_names",
+      "name": "摩押",
+      "printedLabel": "民族與國名",
+      "nameNote": "摩押地；摩押人"
     },
     {
       "pointed": "אֶפְרַיִם",
@@ -714,7 +730,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Ephrajim, a son of Joseph; also the tribe descended from him, and its territory",
-      "glossZh": "以法蓮；以法蓮支派；以法蓮地",
+      "glossZh": "以法蓮",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -737,9 +753,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 578,
       "lesson": 29,
-      "lessonSlot": 18,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 11,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "以法蓮",
+      "printedLabel": "先祖與族長",
+      "nameNote": "以法蓮支派；以法蓮地"
     },
     {
       "pointed": "אַבְרָהָם",
@@ -773,9 +792,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 579,
       "lesson": 29,
-      "lessonSlot": 19,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 12,
+      "category": "先祖與族長",
+      "categoryRoute": "手列族長先知",
+      "name": "亞伯拉罕",
+      "printedLabel": "先祖與族長",
+      "nameNote": ""
     },
     {
       "pointed": "בִּנְיָמִין",
@@ -788,7 +810,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Binjamin, youngest son of Jacob; also the tribe descended from him, and its territory",
-      "glossZh": "便雅憫；便雅憫支派；便雅憫地",
+      "glossZh": "便雅憫",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -811,9 +833,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 582,
       "lesson": 30,
-      "lessonSlot": 2,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "便雅憫",
+      "printedLabel": "先祖與族長",
+      "nameNote": "便雅憫支派；便雅憫地"
     },
     {
       "pointed": "צִיּוֹן",
@@ -826,7 +851,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Tsijon (as a permanent capital), a mountain of Jerusalem",
-      "glossZh": "錫安；耶路撒冷的山",
+      "glossZh": "錫安",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -847,9 +872,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 585,
       "lesson": 30,
-      "lessonSlot": 5,
+      "lessonSlot": 2,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "錫安",
+      "printedLabel": "地名",
+      "nameNote": "耶路撒冷的山"
     },
     {
       "pointed": "אַשּׁוּר",
@@ -862,7 +890,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Ashshur, the second son of Shem; also his descendants and the country occupied by them (i.e. Assyria), its region and its empire",
-      "glossZh": "亞述；亞述人；亞述國",
+      "glossZh": "亞述",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -885,9 +913,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 586,
       "lesson": 30,
-      "lessonSlot": 6,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞述",
+      "printedLabel": "民族與國名",
+      "nameNote": "亞述人；亞述國"
     },
     {
       "pointed": "יִרְמְיָה",
@@ -921,9 +952,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 587,
       "lesson": 30,
-      "lessonSlot": 7,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 4,
+      "category": "先知",
+      "categoryRoute": "手列族長先知",
+      "name": "耶利米",
+      "printedLabel": "先知",
+      "nameNote": ""
     },
     {
       "pointed": "מְנַשֶּׁה",
@@ -936,7 +970,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Menashsheh, a grandson of Jacob, also the tribe descended from him, and its territory",
-      "glossZh": "瑪拿西；瑪拿西支派；瑪拿西地",
+      "glossZh": "瑪拿西",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -959,9 +993,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 588,
       "lesson": 30,
-      "lessonSlot": 8,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 5,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "瑪拿西",
+      "printedLabel": "先祖與族長",
+      "nameNote": "瑪拿西支派；瑪拿西地"
     },
     {
       "pointed": "יוֹאָב",
@@ -995,9 +1032,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 589,
       "lesson": 30,
-      "lessonSlot": 9,
+      "lessonSlot": 6,
       "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "categoryRoute": "biblical_people",
+      "name": "約押",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "בֵּית־אֵל",
@@ -1031,9 +1071,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 590,
       "lesson": 30,
-      "lessonSlot": 10,
+      "lessonSlot": 7,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "伯特利",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "שְׁמוּאֵל",
@@ -1067,9 +1110,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 592,
       "lesson": 30,
-      "lessonSlot": 12,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 8,
+      "category": "先知",
+      "categoryRoute": "手列族長先知",
+      "name": "撒母耳",
+      "printedLabel": "先知",
+      "nameNote": ""
     },
     {
       "pointed": "גִּלְעָד",
@@ -1082,7 +1128,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Gilad, a region East of the Jordan; also the name of three Israelites",
-      "glossZh": "基列；基列地",
+      "glossZh": "基列",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1104,9 +1150,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 594,
       "lesson": 30,
-      "lessonSlot": 14,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 9,
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "基列",
+      "printedLabel": "地名",
+      "nameNote": "基列地"
     },
     {
       "pointed": "אֲרָם",
@@ -1119,7 +1168,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Aram or Syria, and its inhabitants; also the name of the son of Shem, a grandson of Nahor, and of an Israelite",
-      "glossZh": "亞蘭；亞蘭地；亞蘭人",
+      "glossZh": "亞蘭",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1142,9 +1191,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 595,
       "lesson": 30,
-      "lessonSlot": 15,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 10,
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞蘭",
+      "printedLabel": "民族與國名",
+      "nameNote": "亞蘭地；亞蘭人"
     },
     {
       "pointed": "חִזְקִיָּה",
@@ -1178,9 +1230,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 596,
       "lesson": 30,
-      "lessonSlot": 16,
+      "lessonSlot": 11,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "希西家",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "אֲבִישָׁלוֹם",
@@ -1193,7 +1248,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Abshalom, a son of David; also (the fuller form) a later Israelite",
-      "glossZh": "押沙龍；大衛的兒子",
+      "glossZh": "押沙龍",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1214,9 +1269,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 597,
       "lesson": 30,
-      "lessonSlot": 17,
+      "lessonSlot": 12,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "押沙龍",
+      "printedLabel": "其他人名",
+      "nameNote": "大衛的兒子"
     },
     {
       "pointed": "שֹׁמְרוֹן",
@@ -1250,9 +1308,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 599,
       "lesson": 30,
-      "lessonSlot": 19,
+      "lessonSlot": 13,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "撒馬利亞",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "יִצְחָק",
@@ -1265,7 +1326,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jitschak (or Isaac), son of Abraham",
-      "glossZh": "以撒；亞伯拉罕的兒子",
+      "glossZh": "以撒",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1286,9 +1347,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 600,
       "lesson": 30,
-      "lessonSlot": 20,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 14,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "以撒",
+      "printedLabel": "先祖與族長",
+      "nameNote": "亞伯拉罕的兒子"
     },
     {
       "pointed": "עַמּוֹן",
@@ -1301,7 +1365,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Ammon, a son of Lot; also his posterity and their country",
-      "glossZh": "亞捫；亞捫地；亞捫人",
+      "glossZh": "亞捫",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1324,9 +1388,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 602,
       "lesson": 31,
-      "lessonSlot": 2,
+      "lessonSlot": 1,
       "category": "民族與國名",
-      "categoryRoute": "place_names"
+      "categoryRoute": "place_names",
+      "name": "亞捫",
+      "printedLabel": "民族與國名",
+      "nameNote": "亞捫地；亞捫人"
     },
     {
       "pointed": "יָרׇבְעָם",
@@ -1360,9 +1427,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 603,
       "lesson": 31,
-      "lessonSlot": 3,
+      "lessonSlot": 2,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "耶羅波安",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "אֱדֹם",
@@ -1375,7 +1445,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Edom, the elder twin-brother of Jacob; hence the region (Idumaea) occupied by him",
-      "glossZh": "以東；以東地；以東人",
+      "glossZh": "以東",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1397,9 +1467,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 605,
       "lesson": 31,
-      "lessonSlot": 5,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "以東",
+      "printedLabel": "民族與國名",
+      "nameNote": "以東地；以東人"
     },
     {
       "pointed": "עֵשָׂו",
@@ -1412,7 +1485,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Esav, a son of Isaac, including his posterity",
-      "glossZh": "以掃；以掃的後裔",
+      "glossZh": "以掃",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1434,9 +1507,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 608,
       "lesson": 31,
-      "lessonSlot": 8,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 4,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "以掃",
+      "printedLabel": "先祖與族長",
+      "nameNote": "以掃的後裔"
     },
     {
       "pointed": "כְּנַעַן",
@@ -1449,7 +1525,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Kenaan, a son a Ham; also the country inhabited by him",
-      "glossZh": "迦南；迦南地",
+      "glossZh": "迦南",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1471,9 +1547,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 610,
       "lesson": 31,
-      "lessonSlot": 10,
+      "lessonSlot": 5,
       "category": "地名",
-      "categoryRoute": "place_names"
+      "categoryRoute": "place_names",
+      "name": "迦南",
+      "printedLabel": "地名",
+      "nameNote": "迦南地"
     },
     {
       "pointed": "אַחְאָב",
@@ -1507,9 +1586,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 611,
       "lesson": 31,
-      "lessonSlot": 11,
+      "lessonSlot": 6,
       "category": "君王",
-      "categoryRoute": "historical_rulers"
+      "categoryRoute": "historical_rulers",
+      "name": "亞哈",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "אֱמֹרִי",
@@ -1543,9 +1625,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 615,
       "lesson": 31,
-      "lessonSlot": 15,
+      "lessonSlot": 7,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "亞摩利人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "יְהוֹשָׁפָט",
@@ -1558,7 +1643,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jehoshaphat, the name of six Israelites; also of a valley near Jerusalem",
-      "glossZh": "約沙法；約沙法谷",
+      "glossZh": "約沙法",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1580,9 +1665,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 619,
       "lesson": 31,
-      "lessonSlot": 19,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 8,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "約沙法",
+      "printedLabel": "君王",
+      "nameNote": "約沙法谷"
     },
     {
       "pointed": "בֵּית לֶחֶם",
@@ -1616,9 +1704,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 620,
       "lesson": 31,
-      "lessonSlot": 20,
+      "lessonSlot": 9,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "伯利恆",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "כַּשְׂדִּי",
@@ -1631,7 +1722,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "a Kasdite, or descendant of Kesed; by implication, a Chaldaean (as if so descended); also an astrologer (as if proverbial of that people",
-      "glossZh": "迦勒底人；占星家",
+      "glossZh": "迦勒底人",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1654,7 +1745,10 @@
       "lesson": 32,
       "lessonSlot": 1,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "迦勒底人",
+      "printedLabel": "民族與國名",
+      "nameNote": "占星家"
     },
     {
       "pointed": "יְהוּדִי",
@@ -1688,9 +1782,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 623,
       "lesson": 32,
-      "lessonSlot": 3,
+      "lessonSlot": 2,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "猶太人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "יְהוֹנָתָן",
@@ -1724,9 +1821,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 625,
       "lesson": 32,
-      "lessonSlot": 5,
+      "lessonSlot": 3,
       "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "categoryRoute": "biblical_people",
+      "name": "約拿單",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "מִצְרִי",
@@ -1760,9 +1860,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 627,
       "lesson": 32,
-      "lessonSlot": 7,
+      "lessonSlot": 4,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "埃及人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "כְּנַעַנִי",
@@ -1775,7 +1878,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "a Kenaanite or inhabitant of Kenaan; by implication, a pedlar (the Canaanites standing for their neighbors the Ishmaelites, who conducted mercantile caravans)",
-      "glossZh": "迦南人；商人",
+      "glossZh": "迦南人",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1796,9 +1899,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 633,
       "lesson": 32,
-      "lessonSlot": 13,
+      "lessonSlot": 5,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "迦南人",
+      "printedLabel": "民族與國名",
+      "nameNote": "商人"
     },
     {
       "pointed": "רְאוּבֵן",
@@ -1811,7 +1917,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Reuben, a son of Jacob",
-      "glossZh": "呂便；雅各的兒子",
+      "glossZh": "呂便",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1832,9 +1938,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 635,
       "lesson": 32,
-      "lessonSlot": 15,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 6,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "呂便",
+      "printedLabel": "先祖與族長",
+      "nameNote": "雅各的兒子"
     },
     {
       "pointed": "גָּד",
@@ -1847,7 +1956,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Gad, a son of Jacob, including his tribe and its territory; also a prophet",
-      "glossZh": "迦得；迦得支派；迦得地",
+      "glossZh": "迦得",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -1870,9 +1979,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 636,
       "lesson": 32,
-      "lessonSlot": 16,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 7,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "迦得",
+      "printedLabel": "先祖與族長",
+      "nameNote": "迦得支派；迦得地"
     },
     {
       "pointed": "אֶלְעָזָר",
@@ -1906,9 +2018,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 637,
       "lesson": 32,
-      "lessonSlot": 17,
+      "lessonSlot": 8,
       "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "categoryRoute": "biblical_people",
+      "name": "以利亞撒",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "חֶבְרוֹן",
@@ -1943,9 +2058,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 640,
       "lesson": 32,
-      "lessonSlot": 20,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 9,
+      "category": "地名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "希伯崙",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "אֵלִיָּה",
@@ -1980,8 +2098,11 @@
       "ordinal": 641,
       "lesson": 33,
       "lessonSlot": 1,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "category": "先知",
+      "categoryRoute": "手列族長先知",
+      "name": "以利亞",
+      "printedLabel": "先知",
+      "nameNote": ""
     },
     {
       "pointed": "לְבָנוֹן",
@@ -2017,7 +2138,10 @@
       "lesson": 33,
       "lessonSlot": 2,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "黎巴嫩",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "דָּן",
@@ -2030,7 +2154,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Dan, one of the sons of Jacob; also the tribe descended from him, and its territory; likewise a place in Palestine colonized by them",
-      "glossZh": "但；但支派；但地",
+      "glossZh": "但",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2053,9 +2177,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 644,
       "lesson": 33,
-      "lessonSlot": 4,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "但",
+      "printedLabel": "先祖與族長",
+      "nameNote": "但支派；但地"
     },
     {
       "pointed": "בְּאֵר שֶׁבַע",
@@ -2089,9 +2216,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 652,
       "lesson": 33,
-      "lessonSlot": 12,
+      "lessonSlot": 4,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "別是巴",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "אֲבִימֶלֶךְ",
@@ -2125,9 +2255,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 657,
       "lesson": 33,
-      "lessonSlot": 17,
-      "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "lessonSlot": 5,
+      "category": "君王",
+      "categoryRoute": "biblical_people",
+      "name": "亞比米勒",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "לֵוִי",
@@ -2161,9 +2294,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 676,
       "lesson": 34,
-      "lessonSlot": 16,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "手列族長先知",
+      "name": "利未",
+      "printedLabel": "先祖與族長",
+      "nameNote": ""
     },
     {
       "pointed": "צִדְקִיָּה",
@@ -2197,9 +2333,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 679,
       "lesson": 34,
-      "lessonSlot": 19,
-      "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "lessonSlot": 2,
+      "category": "君王",
+      "categoryRoute": "biblical_people",
+      "name": "西底家",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "שְׁכֶם",
@@ -2233,9 +2372,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 682,
       "lesson": 35,
-      "lessonSlot": 2,
+      "lessonSlot": 1,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "示劍",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "אַבְנֵר",
@@ -2269,9 +2411,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 683,
       "lesson": 35,
-      "lessonSlot": 3,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "押尼珥",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "אַבְרָם",
@@ -2305,9 +2450,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 692,
       "lesson": 35,
-      "lessonSlot": 12,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞伯蘭",
+      "printedLabel": "先祖與族長",
+      "nameNote": ""
     },
     {
       "pointed": "בִּלְעָם",
@@ -2342,9 +2490,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 693,
       "lesson": 35,
-      "lessonSlot": 13,
+      "lessonSlot": 4,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "巴蘭",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "בָּשָׁן",
@@ -2380,7 +2531,10 @@
       "lesson": 36,
       "lessonSlot": 1,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "巴珊",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "נְבוּכַדְנֶאצַּר",
@@ -2393,7 +2547,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Nebukadnetstsar (or -retstsar, or -retstsor), king of Babylon",
-      "glossZh": "尼布甲尼撒；巴比倫王",
+      "glossZh": "尼布甲尼撒",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2415,8 +2569,11 @@
       "ordinal": 702,
       "lesson": 36,
       "lessonSlot": 2,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "尼布甲尼撒",
+      "printedLabel": "君王",
+      "nameNote": "巴比倫王"
     },
     {
       "pointed": "מׇרְדְּכַי",
@@ -2450,9 +2607,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 707,
       "lesson": 36,
-      "lessonSlot": 7,
+      "lessonSlot": 3,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "末底改",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "מִדְיָן",
@@ -2465,7 +2625,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Midjan, a son of Abraham; also his country and (collectively) his descendants",
-      "glossZh": "米甸；米甸地；米甸人",
+      "glossZh": "米甸",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2488,9 +2648,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 709,
       "lesson": 36,
-      "lessonSlot": 9,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 4,
+      "category": "民族與國名",
+      "categoryRoute": "既有 kind 欄",
+      "name": "米甸",
+      "printedLabel": "民族與國名",
+      "nameNote": "米甸地；米甸人"
     },
     {
       "pointed": "יֵהוּא",
@@ -2524,9 +2687,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 720,
       "lesson": 36,
-      "lessonSlot": 20,
-      "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "lessonSlot": 5,
+      "category": "君王",
+      "categoryRoute": "biblical_people",
+      "name": "耶戶",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "אָסָא",
@@ -2560,9 +2726,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 722,
       "lesson": 37,
-      "lessonSlot": 2,
-      "category": "其他人名",
-      "categoryRoute": "biblical_people"
+      "lessonSlot": 1,
+      "category": "君王",
+      "categoryRoute": "biblical_people",
+      "name": "亞撒",
+      "printedLabel": "君王",
+      "nameNote": ""
     },
     {
       "pointed": "אֱלִישָׁע",
@@ -2596,9 +2765,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 725,
       "lesson": 37,
-      "lessonSlot": 5,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 2,
+      "category": "先知",
+      "categoryRoute": "手列族長先知",
+      "name": "以利沙",
+      "printedLabel": "先知",
+      "nameNote": ""
     },
     {
       "pointed": "אִיּוֹב",
@@ -2632,9 +2804,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 730,
       "lesson": 37,
-      "lessonSlot": 10,
-      "category": "族長與先知",
-      "categoryRoute": "手列族長先知"
+      "lessonSlot": 3,
+      "category": "其他人名",
+      "categoryRoute": "手列族長先知",
+      "name": "約伯",
+      "printedLabel": "其他人名",
+      "nameNote": ""
     },
     {
       "pointed": "יְרִיחוֹ",
@@ -2668,9 +2843,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 732,
       "lesson": 37,
-      "lessonSlot": 12,
+      "lessonSlot": 4,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "耶利哥",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "לָבָן",
@@ -2683,7 +2861,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Laban, a Mesopotamian; also a place in the Desert",
-      "glossZh": "拉班；米所波大米人；亦為曠野一處地名",
+      "glossZh": "拉班",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2705,9 +2883,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 751,
       "lesson": 38,
-      "lessonSlot": 11,
+      "lessonSlot": 1,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "拉班",
+      "printedLabel": "其他人名",
+      "nameNote": "米所波大米人；亦為曠野一處地名"
     },
     {
       "pointed": "אֶסְתֵּר",
@@ -2720,7 +2901,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Ester, the Jewish heroine",
-      "glossZh": "以斯帖；猶太女英雄",
+      "glossZh": "以斯帖",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2741,9 +2922,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 753,
       "lesson": 38,
-      "lessonSlot": 13,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "以斯帖",
+      "printedLabel": "其他人名",
+      "nameNote": "猶太女英雄"
     },
     {
       "pointed": "הָמָן",
@@ -2756,7 +2940,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Haman, a Persian vizier",
-      "glossZh": "哈曼；波斯宰相",
+      "glossZh": "哈曼",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2777,9 +2961,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 766,
       "lesson": 39,
-      "lessonSlot": 6,
+      "lessonSlot": 1,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "哈曼",
+      "printedLabel": "其他人名",
+      "nameNote": "波斯宰相"
     },
     {
       "pointed": "יֹאשִׁיָּה",
@@ -2792,7 +2979,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Joshijah, the name of two Israelites",
-      "glossZh": "約西亞；兩名以色列人的名字",
+      "glossZh": "約西亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2813,9 +3000,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 767,
       "lesson": 39,
-      "lessonSlot": 7,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 2,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "約西亞",
+      "printedLabel": "君王",
+      "nameNote": "兩名以色列人的名字"
     },
     {
       "pointed": "צָדוֹק",
@@ -2828,7 +3018,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Tsadok, the name of eight or nine Israelites",
-      "glossZh": "撒督；多名以色列人的名字",
+      "glossZh": "撒督",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2849,9 +3039,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 768,
       "lesson": 39,
-      "lessonSlot": 8,
+      "lessonSlot": 3,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "撒督",
+      "printedLabel": "其他人名",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "נַפְתָּלִי",
@@ -2864,7 +3057,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Naphtali, a son of Jacob, with the tribe descended from him, and its territory",
-      "glossZh": "拿弗他利；雅各的兒子、其支派及地業",
+      "glossZh": "拿弗他利",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2887,9 +3080,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 780,
       "lesson": 39,
-      "lessonSlot": 20,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 4,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "拿弗他利",
+      "printedLabel": "先祖與族長",
+      "nameNote": "雅各的兒子、其支派及地業"
     },
     {
       "pointed": "יְהוֹיָדָע",
@@ -2902,7 +3098,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jehojada, the name of three Israelites",
-      "glossZh": "耶何耶大；三名以色列人的名字",
+      "glossZh": "耶何耶大",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2923,9 +3119,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 783,
       "lesson": 40,
-      "lessonSlot": 3,
+      "lessonSlot": 1,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "耶何耶大",
+      "printedLabel": "其他人名",
+      "nameNote": "三名以色列人的名字"
     },
     {
       "pointed": "רְחַבְעָם",
@@ -2938,7 +3137,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Rechabam, an Israelite king",
-      "glossZh": "羅波安；以色列王",
+      "glossZh": "羅波安",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2959,9 +3158,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 795,
       "lesson": 40,
-      "lessonSlot": 15,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 2,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "羅波安",
+      "printedLabel": "君王",
+      "nameNote": "以色列王"
     },
     {
       "pointed": "בֶּן־הֲדַד",
@@ -2974,7 +3176,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Ben-Hadad, the name of several Syrian kings",
-      "glossZh": "便哈達；多名亞蘭王的名字",
+      "glossZh": "便哈達",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -2995,9 +3197,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 802,
       "lesson": 41,
-      "lessonSlot": 2,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "便哈達",
+      "printedLabel": "君王",
+      "nameNote": "多名亞蘭王的名字"
     },
     {
       "pointed": "יִשְׁמָעֵאל",
@@ -3010,7 +3215,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jishmael, the name of Abraham's oldest son, and of five Israelites",
-      "glossZh": "以實瑪利；亞伯拉罕長子及五名以色列人的名字",
+      "glossZh": "以實瑪利",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3031,9 +3236,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 823,
       "lesson": 42,
-      "lessonSlot": 3,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "以實瑪利",
+      "printedLabel": "先祖與族長",
+      "nameNote": "亞伯拉罕長子及五名以色列人的名字"
     },
     {
       "pointed": "עֲזַרְיָה",
@@ -3046,7 +3254,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Azarjah, the name of nineteen Israelites",
-      "glossZh": "亞撒利雅；多名以色列人的名字",
+      "glossZh": "亞撒利雅",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3067,9 +3275,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 824,
       "lesson": 42,
-      "lessonSlot": 4,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 2,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞撒利雅",
+      "printedLabel": "君王",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "חִתִּי",
@@ -3082,7 +3293,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "a Chittite, or descendant of Cheth",
-      "glossZh": "赫人；赫的後裔",
+      "glossZh": "赫人",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3103,9 +3314,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 828,
       "lesson": 42,
-      "lessonSlot": 8,
+      "lessonSlot": 3,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "赫人",
+      "printedLabel": "民族與國名",
+      "nameNote": "赫的後裔"
     },
     {
       "pointed": "יוֹאָשׁ",
@@ -3118,7 +3332,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Joash, the name of six Israelites",
-      "glossZh": "約阿施；六名以色列人的名字",
+      "glossZh": "約阿施",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3139,9 +3353,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 838,
       "lesson": 42,
-      "lessonSlot": 18,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 4,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "約阿施",
+      "printedLabel": "君王",
+      "nameNote": "六名以色列人的名字"
     },
     {
       "pointed": "רָחֵל",
@@ -3154,7 +3371,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Rachel, a wife of Jacob",
-      "glossZh": "拉結；雅各的妻子",
+      "glossZh": "拉結",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3175,9 +3392,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 846,
       "lesson": 43,
-      "lessonSlot": 6,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "拉結",
+      "printedLabel": "先祖與族長",
+      "nameNote": "雅各的妻子"
     },
     {
       "pointed": "נֹחַ",
@@ -3190,7 +3410,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Noach, the patriarch of the flood",
-      "glossZh": "挪亞；洪水時代的先祖",
+      "glossZh": "挪亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3211,9 +3431,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 849,
       "lesson": 43,
-      "lessonSlot": 9,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 2,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "挪亞",
+      "printedLabel": "先祖與族長",
+      "nameNote": "洪水時代的先祖"
     },
     {
       "pointed": "אָסָף",
@@ -3226,7 +3449,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Asaph, the name of three Israelites, and of the family of the first",
-      "glossZh": "亞薩；三名以色列人的名字及其家族",
+      "glossZh": "亞薩",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3248,9 +3471,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 850,
       "lesson": 43,
-      "lessonSlot": 10,
+      "lessonSlot": 3,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞薩",
+      "printedLabel": "其他人名",
+      "nameNote": "三名以色列人的名字及其家族"
     },
     {
       "pointed": "זְבוּלוּן",
@@ -3263,7 +3489,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Zebulon, a son of Jacob; also his territory and tribe",
-      "glossZh": "西布倫；雅各的兒子、其地業及支派",
+      "glossZh": "西布倫",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3286,9 +3512,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 862,
       "lesson": 44,
-      "lessonSlot": 2,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "西布倫",
+      "printedLabel": "先祖與族長",
+      "nameNote": "雅各的兒子、其地業及支派"
     },
     {
       "pointed": "דַּמֶּשֶׂק",
@@ -3301,7 +3530,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Damascus, a city of Syria",
-      "glossZh": "大馬士革；亞蘭的一座城",
+      "glossZh": "大馬士革",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3322,9 +3551,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 866,
       "lesson": 44,
-      "lessonSlot": 6,
+      "lessonSlot": 2,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "大馬士革",
+      "printedLabel": "地名",
+      "nameNote": "亞蘭的一座城"
     },
     {
       "pointed": "שִׁמְעוֹן",
@@ -3337,7 +3569,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Shimon, one of Jacob's sons, also the tribe descended from him",
-      "glossZh": "西緬；雅各的兒子及其支派",
+      "glossZh": "西緬",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3359,45 +3591,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 871,
       "lesson": 44,
-      "lessonSlot": 11,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
-    },
-    {
-      "pointed": "יוֹנָתָן",
-      "sourcePointed": "יוֹנָתָן",
-      "unpointed": "יונתן",
-      "unpointedVariants": [
-        "יונתן"
-      ],
-      "textbookTransliteration": "yônāṯān",
-      "transliterationSystem": "Pratico-Van Pelt BBH2",
-      "transliterationStatus": "rule_generated_exception_review",
-      "glossEn": "Jonathan, the name of ten Israelites",
-      "glossZh": "約拿單；十名以色列人的名字",
-      "sourceType": "reader_frequency_extension",
-      "sourceChapter": null,
-      "sourceOrder": null,
-      "sourceOrders": [],
-      "itemKind": "lexeme",
-      "frequency": 44,
-      "frequencyStrong": "H3129",
-      "strong": "H3129",
-      "strongs": [
-        "H3129"
-      ],
-      "partOfSpeech": "proper_name",
-      "isProperName": true,
-      "properNameTypes": [
-        "person"
-      ],
-      "verification": "lemma_frequency_verified",
-      "languageVariety": "biblical_hebrew",
-      "ordinal": 872,
-      "lesson": 44,
-      "lessonSlot": 12,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "西緬",
+      "printedLabel": "先祖與族長",
+      "nameNote": "雅各的兒子及其支派"
     },
     {
       "pointed": "שִׁמְעִי",
@@ -3410,7 +3609,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Shimi, the name of twenty Israelites",
-      "glossZh": "示每；多名以色列人的名字",
+      "glossZh": "示每",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3431,9 +3630,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 873,
       "lesson": 44,
-      "lessonSlot": 13,
+      "lessonSlot": 4,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "示每",
+      "printedLabel": "其他人名",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "אָשֵׁר",
@@ -3446,7 +3648,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "happy; Asher, a son of Jacob, and the tribe descended from him, with its territory; also a place in Palestine",
-      "glossZh": "有福的；亞設；雅各的兒子、其支派、地業及一處地名",
+      "glossZh": "亞設",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3469,9 +3671,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 888,
       "lesson": 45,
-      "lessonSlot": 8,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "先祖與族長",
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞設",
+      "printedLabel": "先祖與族長",
+      "nameNote": "亞設；雅各的兒子、其支派、地業及一處地名"
     },
     {
       "pointed": "גִּבְעָה",
@@ -3484,7 +3689,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Gibah; the name of three places in Palestine",
-      "glossZh": "基比亞；三處地名",
+      "glossZh": "基比亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3505,9 +3710,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 892,
       "lesson": 45,
-      "lessonSlot": 12,
+      "lessonSlot": 2,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "基比亞",
+      "printedLabel": "地名",
+      "nameNote": "三處地名"
     },
     {
       "pointed": "בָּלָק",
@@ -3520,7 +3728,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Balak, a Moabitish king",
-      "glossZh": "巴勒；摩押王",
+      "glossZh": "巴勒",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3541,9 +3749,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 911,
       "lesson": 46,
-      "lessonSlot": 11,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 1,
+      "category": "君王",
+      "categoryRoute": "既有 kind 欄",
+      "name": "巴勒",
+      "printedLabel": "君王",
+      "nameNote": "摩押王"
     },
     {
       "pointed": "יִשַׁי",
@@ -3556,7 +3767,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jishai, David's father",
-      "glossZh": "耶西；大衛的父親",
+      "glossZh": "耶西",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3577,9 +3788,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 912,
       "lesson": 46,
-      "lessonSlot": 12,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "耶西",
+      "printedLabel": "其他人名",
+      "nameNote": "大衛的父親"
     },
     {
       "pointed": "נָתָן",
@@ -3592,7 +3806,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Nathan, the name of five Israelites",
-      "glossZh": "拿單；五名以色列人的名字",
+      "glossZh": "拿單",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3613,9 +3827,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 913,
       "lesson": 46,
-      "lessonSlot": 13,
-      "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "lessonSlot": 3,
+      "category": "先知",
+      "categoryRoute": "既有 kind 欄",
+      "name": "拿單",
+      "printedLabel": "先知",
+      "nameNote": "五名以色列人的名字"
     },
     {
       "pointed": "בְּנָיָה",
@@ -3628,7 +3845,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Benajah, the name of twelve Israelites",
-      "glossZh": "比拿雅；多名以色列人的名字",
+      "glossZh": "比拿雅",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3649,9 +3866,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 914,
       "lesson": 46,
-      "lessonSlot": 14,
+      "lessonSlot": 4,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "比拿雅",
+      "printedLabel": "其他人名",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "בֵּית שֶׁמֶשׁ",
@@ -3685,9 +3905,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 916,
       "lesson": 46,
-      "lessonSlot": 16,
+      "lessonSlot": 5,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "伯示麥",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "צֹר",
@@ -3721,9 +3944,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 920,
       "lesson": 46,
-      "lessonSlot": 20,
+      "lessonSlot": 6,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "推羅",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "יְבוּסִי",
@@ -3757,9 +3983,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 939,
       "lesson": 47,
-      "lessonSlot": 19,
+      "lessonSlot": 1,
       "category": "民族與國名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "耶布斯人",
+      "printedLabel": "民族與國名",
+      "nameNote": ""
     },
     {
       "pointed": "אָחָז",
@@ -3772,7 +4001,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Achaz, the name of a Jewish king and of an Israelite",
-      "glossZh": "亞哈斯；一名猶大王及一名以色列人的名字",
+      "glossZh": "亞哈斯",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3793,9 +4022,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 940,
       "lesson": 47,
-      "lessonSlot": 20,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞哈斯",
+      "printedLabel": "其他人名",
+      "nameNote": "一名猶大王及一名以色列人的名字"
     },
     {
       "pointed": "שְׁמַעְיָה",
@@ -3808,7 +4040,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Shemajah, the name of twenty-five Israelites",
-      "glossZh": "示瑪雅；多名以色列人的名字",
+      "glossZh": "示瑪雅",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3831,7 +4063,10 @@
       "lesson": 48,
       "lessonSlot": 1,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "示瑪雅",
+      "printedLabel": "其他人名",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "זְכַרְיָה",
@@ -3844,7 +4079,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Zecarjah, the name of twenty-nine Israelites",
-      "glossZh": "撒迦利亞；多名以色列人的名字",
+      "glossZh": "撒迦利亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3867,7 +4102,10 @@
       "lesson": 48,
       "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "撒迦利亞",
+      "printedLabel": "其他人名",
+      "nameNote": "多名以色列人的名字"
     },
     {
       "pointed": "גִּלְגָּל",
@@ -3880,7 +4118,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Gilgal, the name of three places in Palestine",
-      "glossZh": "吉甲；三處地名",
+      "glossZh": "吉甲",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3901,9 +4139,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 951,
       "lesson": 48,
-      "lessonSlot": 11,
+      "lessonSlot": 3,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "吉甲",
+      "printedLabel": "地名",
+      "nameNote": "三處地名"
     },
     {
       "pointed": "אֲמַצְיָה",
@@ -3916,7 +4157,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Amatsjah, the name of four Israelites",
-      "glossZh": "亞瑪謝；四名以色列人的名字",
+      "glossZh": "亞瑪謝",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3937,9 +4178,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 958,
       "lesson": 48,
-      "lessonSlot": 18,
+      "lessonSlot": 4,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞瑪謝",
+      "printedLabel": "其他人名",
+      "nameNote": "四名以色列人的名字"
     },
     {
       "pointed": "עֹבֵד אֱדוֹם",
@@ -3952,7 +4196,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Obed-Edom, the name of five Israelites",
-      "glossZh": "俄別以東；五名以色列人的名字",
+      "glossZh": "俄別以東",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -3973,9 +4217,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 960,
       "lesson": 48,
-      "lessonSlot": 20,
+      "lessonSlot": 5,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "俄別以東",
+      "printedLabel": "其他人名",
+      "nameNote": "五名以色列人的名字"
     },
     {
       "pointed": "עַי",
@@ -4009,9 +4256,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 970,
       "lesson": 49,
-      "lessonSlot": 10,
+      "lessonSlot": 1,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "艾城",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "עֲמָלֵק",
@@ -4024,7 +4274,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Amalek, a descendant of Esau; also his posterity and their country",
-      "glossZh": "亞瑪力；以掃的後裔、其族及其地",
+      "glossZh": "亞瑪力",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4047,9 +4297,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 972,
       "lesson": 49,
-      "lessonSlot": 12,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "亞瑪力",
+      "printedLabel": "其他人名",
+      "nameNote": "以掃的後裔、其族及其地"
     },
     {
       "pointed": "שֵׂעִיר",
@@ -4062,7 +4315,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Seir, a mountain of Idumaea and its aboriginal occupants, also one in Palestine",
-      "glossZh": "西珥；以東的山及其居民",
+      "glossZh": "西珥",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4084,9 +4337,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 973,
       "lesson": 49,
-      "lessonSlot": 13,
+      "lessonSlot": 3,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "西珥",
+      "printedLabel": "地名",
+      "nameNote": "以東的山及其居民"
     },
     {
       "pointed": "קִרְיַת יְעָרִים",
@@ -4120,9 +4376,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 974,
       "lesson": 49,
-      "lessonSlot": 14,
+      "lessonSlot": 4,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "基列耶琳",
+      "printedLabel": "地名",
+      "nameNote": ""
     },
     {
       "pointed": "יְשַׁעְיָה",
@@ -4135,7 +4394,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Jeshajah, the name of seven Israelites",
-      "glossZh": "以賽亞；七名以色列人的名字",
+      "glossZh": "以賽亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4156,9 +4415,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 975,
       "lesson": 49,
-      "lessonSlot": 15,
+      "lessonSlot": 5,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "以賽亞",
+      "printedLabel": "其他人名",
+      "nameNote": "七名以色列人的名字"
     },
     {
       "pointed": "מְרָרִי",
@@ -4171,7 +4433,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Merari, an Israelite",
-      "glossZh": "米拉利；以色列人",
+      "glossZh": "米拉利",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4192,9 +4454,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 976,
       "lesson": 49,
-      "lessonSlot": 16,
+      "lessonSlot": 6,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "米拉利",
+      "printedLabel": "其他人名",
+      "nameNote": "以色列人"
     },
     {
       "pointed": "אוּרִיָּה",
@@ -4207,7 +4472,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Urijah, the name of one Hittite and five Israelites",
-      "glossZh": "烏利亞；一名赫人及五名以色列人的名字",
+      "glossZh": "烏利亞",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4228,9 +4493,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 978,
       "lesson": 49,
-      "lessonSlot": 18,
+      "lessonSlot": 7,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "烏利亞",
+      "printedLabel": "其他人名",
+      "nameNote": "一名赫人及五名以色列人的名字"
     },
     {
       "pointed": "סְדֹם",
@@ -4243,7 +4511,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Sedom, a place near the Dead Sea",
-      "glossZh": "所多瑪；死海附近的城",
+      "glossZh": "所多瑪",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4264,9 +4532,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 993,
       "lesson": 50,
-      "lessonSlot": 13,
+      "lessonSlot": 1,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "所多瑪",
+      "printedLabel": "地名",
+      "nameNote": "死海附近的城"
     },
     {
       "pointed": "גִּדְעוֹן",
@@ -4279,7 +4550,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Gidon, an Israelite",
-      "glossZh": "基甸；以色列人",
+      "glossZh": "基甸",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4300,9 +4571,12 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 994,
       "lesson": 50,
-      "lessonSlot": 14,
+      "lessonSlot": 2,
       "category": "其他人名",
-      "categoryRoute": "既有 kind 欄"
+      "categoryRoute": "既有 kind 欄",
+      "name": "基甸",
+      "printedLabel": "其他人名",
+      "nameNote": "以色列人"
     },
     {
       "pointed": "חֶשְׁבּוֹן",
@@ -4315,7 +4589,7 @@
       "transliterationSystem": "Pratico-Van Pelt BBH2",
       "transliterationStatus": "rule_generated_exception_review",
       "glossEn": "Cheshbon, a place East of the Jordan",
-      "glossZh": "希實本；約旦河東的城",
+      "glossZh": "希實本",
       "sourceType": "reader_frequency_extension",
       "sourceChapter": null,
       "sourceOrder": null,
@@ -4336,9 +4610,325 @@
       "languageVariety": "biblical_hebrew",
       "ordinal": 996,
       "lesson": 50,
-      "lessonSlot": 16,
+      "lessonSlot": 3,
       "category": "地名",
-      "categoryRoute": "既有 properNameTypes"
+      "categoryRoute": "既有 properNameTypes",
+      "name": "希實本",
+      "printedLabel": "地名",
+      "nameNote": "約旦河東的城"
+    },
+    {
+      "pointed": "אָדָם",
+      "sourcePointed": "אָדָם",
+      "unpointed": "אדם",
+      "glossZh": "亞當",
+      "name": "亞當",
+      "glossEn": "'adam",
+      "note": "人類始祖；亞當",
+      "strong": "H120",
+      "strongs": [
+        "H120"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.1.26",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "人類始祖；亞當",
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "שֵׁת",
+      "sourcePointed": "שֵׁת",
+      "unpointed": "שת",
+      "glossZh": "塞特",
+      "name": "塞特",
+      "glossEn": "",
+      "note": "塞特，亞當第三子",
+      "strong": "H8352",
+      "strongs": [
+        "H8352"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.4.25",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "塞特，亞當第三子",
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "חֲנוֹךְ",
+      "sourcePointed": "חֲנוֹךְ",
+      "unpointed": "חנוך",
+      "glossZh": "以諾",
+      "name": "以諾",
+      "glossEn": "Chanowk",
+      "note": "以諾，與神同行",
+      "strong": "H2585",
+      "strongs": [
+        "H2585"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.4.17",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "以諾，與神同行",
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "מְתוּשָׁלַח",
+      "sourcePointed": "מְתוּשָׁלַח",
+      "unpointed": "מתושלח",
+      "glossZh": "瑪土撒拉",
+      "name": "瑪土撒拉",
+      "glossEn": "M@thuwshelach",
+      "note": "瑪土撒拉，以諾之子",
+      "strong": "H4968",
+      "strongs": [
+        "H4968"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.5.21",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "瑪土撒拉，以諾之子",
+      "lessonSlot": 4
+    },
+    {
+      "pointed": "שָׂרָה",
+      "sourcePointed": "שָׂרָה",
+      "unpointed": "שרה",
+      "glossZh": "撒拉",
+      "name": "撒拉",
+      "glossEn": "",
+      "note": "撒拉，亞伯拉罕之妻",
+      "strong": "H8283",
+      "strongs": [
+        "H8283"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.17.15",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "撒拉，亞伯拉罕之妻",
+      "lessonSlot": 5
+    },
+    {
+      "pointed": "הָגָר",
+      "sourcePointed": "הָגָר",
+      "unpointed": "הגר",
+      "glossZh": "夏甲",
+      "name": "夏甲",
+      "glossEn": "Hagar",
+      "note": "夏甲，撒拉的埃及使女",
+      "strong": "H1904",
+      "strongs": [
+        "H1904"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.16.1",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "夏甲，撒拉的埃及使女",
+      "lessonSlot": 6
+    },
+    {
+      "pointed": "קְטוּרָה",
+      "sourcePointed": "קְטוּרָה",
+      "unpointed": "קטורה",
+      "glossZh": "基土拉",
+      "name": "基土拉",
+      "glossEn": "Q@tuwrah",
+      "note": "基土拉，亞伯拉罕續娶之妻",
+      "strong": "H6989",
+      "strongs": [
+        "H6989"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.25.1",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "基土拉，亞伯拉罕續娶之妻",
+      "lessonSlot": 7
+    },
+    {
+      "pointed": "רִבְקָה",
+      "sourcePointed": "רִבְקָה",
+      "unpointed": "רבקה",
+      "glossZh": "利百加",
+      "name": "利百加",
+      "glossEn": "Ribqah",
+      "note": "利百加，以撒之妻",
+      "strong": "H7259",
+      "strongs": [
+        "H7259"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.22.23",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "利百加，以撒之妻",
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "לֵאָה",
+      "sourcePointed": "לֵאָה",
+      "unpointed": "לאה",
+      "glossZh": "利亞",
+      "name": "利亞",
+      "glossEn": "Le'ah",
+      "note": "利亞，雅各之妻",
+      "strong": "H3812",
+      "strongs": [
+        "H3812"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.29.16",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "利亞，雅各之妻",
+      "lessonSlot": 9
+    },
+    {
+      "pointed": "זִלְפָּה",
+      "sourcePointed": "זִלְפָּה",
+      "unpointed": "זלפה",
+      "glossZh": "悉帕",
+      "name": "悉帕",
+      "glossEn": "Zilpah",
+      "note": "悉帕，利亞的使女",
+      "strong": "H2153",
+      "strongs": [
+        "H2153"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.29.24",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "悉帕，利亞的使女",
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "בִּלְהָה",
+      "sourcePointed": "בִּלְהָה",
+      "unpointed": "בלהה",
+      "glossZh": "辟拉",
+      "name": "辟拉",
+      "glossEn": "Bilhah",
+      "note": "辟拉，拉結的使女",
+      "strong": "H1090",
+      "strongs": [
+        "H1090"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.29.29",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "辟拉，拉結的使女",
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "יִשָּׂשכָר",
+      "sourcePointed": "יִשָּׂשכָר",
+      "unpointed": "יששכר",
+      "glossZh": "以薩迦",
+      "name": "以薩迦",
+      "glossEn": "Yissaskar",
+      "note": "以薩迦，雅各九子；以薩迦支派",
+      "strong": "H3485",
+      "strongs": [
+        "H3485"
+      ],
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "category": "先祖與族長",
+      "categoryRoute": "genesis-line",
+      "firstOccurrence": "Gen.30.18",
+      "itemKind": "proper_name",
+      "sourceType": "genesis_line",
+      "verification": "附點取自創世記本文（OSHB），Strong 編號經信望愛字典釋義核對",
+      "printedLabel": "先祖與族長",
+      "nameNote": "以薩迦，雅各九子；以薩迦支派",
+      "lessonSlot": 12
     }
-  ]
+  ],
+  "count": 129
 }
