@@ -1,0 +1,317 @@
+[
+ {
+  "query": "王憲治 鄉土神學",
+  "note": "自訂",
+  "count": 28,
+  "items": [
+   {
+    "kind": "學位論文",
+    "title": "從信仰到行動：一位牧師實踐社會關懷的歷程研究",
+    "author": "楊捷",
+    "advisor": "呂明蓁",
+    "school": "國立臺南大學",
+    "dept": "教育學系教育行政碩士在職專班",
+    "year": "114",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "宗教地理學視角下的本土神學-以台灣基督長老教會及韓國長老教會發展之比較",
+    "author": "陳宗元",
+    "advisor": "洪富峰",
+    "school": "國立高雄師範大學",
+    "dept": "地理學系",
+    "year": "114",
+    "degree": "博士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "「客家」牧師的族群經驗與人際網絡： 從月眉教會談起",
+    "author": "吳祈得",
+    "advisor": "連瑞枝",
+    "school": "國立陽明交通大學",
+    "dept": "人文社會學系族群與文化",
+    "year": "113",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "以本土神學視角閱讀李喬《V 與身體》",
+    "author": "連以諾",
+    "advisor": "邱凱莉",
+    "school": "台灣神學研究學院",
+    "dept": "神學研究道學碩士班",
+    "year": "112",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "獨什麼立？：台灣基督長老教會國族認同及其神學理論之分析",
+    "author": "楊文豪",
+    "advisor": "鄭仰恩",
+    "school": "台灣神學研究學院",
+    "dept": "神學研究道學碩士班",
+    "year": "109",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣本土神學：以宋泉盛為中心之研究",
+    "author": "潘馨逸",
+    "advisor": "黄懷秋",
+    "school": "輔仁大學",
+    "dept": "宗教學系",
+    "year": "109",
+    "degree": "博士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "以台灣基督長老教會2009年版《聖詩》探討台灣處境化聖詩創作的發展",
+    "author": "李金幸",
+    "advisor": "駱維道 ／吳基仁",
+    "school": "長榮大學",
+    "dept": "神學系碩士班",
+    "year": "108",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會倍加運動與新倍加運動之處境化宣教的探討",
+    "author": "黃淑雯",
+    "advisor": "莊雅棠",
+    "school": "長榮大學",
+    "dept": "神學系碩士班",
+    "year": "106",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "論後太陽花運動教會參與公共性之「想像」─以台灣基督長老教會為例",
+    "author": "程璞薾",
+    "advisor": "李信毅 ／曾慶豹",
+    "school": "中原大學",
+    "dept": "宗教研究所",
+    "year": "105",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "西洋教，台灣情，中國結──探討台灣基督長老教會本土意識與中國認識",
+    "author": "曾菀妤",
+    "advisor": "石之瑜",
+    "school": "國立中山大學",
+    "dept": "政治學研究所",
+    "year": "104",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "黄武東與台灣基督長老教會主體意識的變遷(1951-1965)",
+    "author": "陸毓輝",
+    "advisor": "吳昶興",
+    "school": "中原大學",
+    "dept": "宗教研究所",
+    "year": "103",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "以社區事工為本的社區宣教－以台灣基督長老教會東港教會為例",
+    "author": "蔡郁欣",
+    "advisor": "陳宇嘉",
+    "school": "國立東華大學",
+    "dept": "臺灣文化學系",
+    "year": "102",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "從倍加運動到信仰告白：台灣基督長老教會之關懷流轉",
+    "author": "劉雅菁",
+    "advisor": "王崇堯",
+    "school": "國立成功大學",
+    "dept": "歷史學系碩博士班",
+    "year": "101",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "哲學詮釋學在解放神學中之運用",
+    "author": "李茂榮",
+    "advisor": "武金正",
+    "school": "輔仁大學",
+    "dept": "宗教學系",
+    "year": "101",
+    "degree": "博士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會原住民牧者的社會運動參與",
+    "author": "艾美英",
+    "advisor": "陳毅峰 ／謝若蘭",
+    "school": "國立東華大學",
+    "dept": "族群關係與文化學系",
+    "year": "101",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "基督新教環保思想與實踐--以台灣長老教會為例",
+    "author": "鄭明桂",
+    "advisor": "莊慶信",
+    "school": "輔仁大學",
+    "dept": "宗教學系",
+    "year": "99",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "田立克本體論政治神學對法蘭克福學派公共領域的批判性轉化--兼論台灣長老教會政治神學的批判與建構",
+    "author": "莊信德",
+    "advisor": "石計生",
+    "school": "東吳大學",
+    "dept": "社會學系",
+    "year": "98",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台語、文學、基督教──王貞文文學創作歷程佮台文作品中的基督教關懷",
+    "author": "謝惠貞",
+    "advisor": "廖淑芳",
+    "school": "國立成功大學",
+    "dept": "台灣文學系碩博士在職專班",
+    "year": "98",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "戰後台南神學院本土神學教育的發展",
+    "author": "周學蕙",
+    "advisor": "王崇堯",
+    "school": "國立成功大學",
+    "dept": "歷史學系碩博士班",
+    "year": "97",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "臺灣政教關係之研究—以臺灣基督長老教會三大宣言為中心",
+    "author": "洪辭惠",
+    "advisor": "吳學明",
+    "school": "國立中央大學",
+    "dept": "歷史研究所",
+    "year": "97",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "ATaleofTwoWorld:台灣基督長老教會與戰後台灣民族主義",
+    "author": "李偉誠",
+    "advisor": "沈秀華",
+    "school": "國立清華大學",
+    "dept": "社會學研究所",
+    "year": "97",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會信仰的本土化與台灣認同",
+    "author": "吳慶武",
+    "advisor": "詹卓穎",
+    "school": "國立臺東大學",
+    "dept": "進修部暑期社教碩士班",
+    "year": "96",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "台南神學院研究(1876-2007)",
+    "author": "張美月",
+    "advisor": "溫振華",
+    "school": "國立臺灣師範大學",
+    "dept": "歷史學系在職進修碩士班",
+    "year": "96",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會政教關係之研究",
+    "author": "許銘閎",
+    "advisor": "黃昭弘",
+    "school": "東吳大學",
+    "dept": "政治學系",
+    "year": "96",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "從宣教神學到政治神學－台灣基督長老教會神學的範式轉移及其批判",
+    "author": "黃以諾",
+    "advisor": "歐力仁",
+    "school": "中原大學",
+    "dept": "宗教研究所",
+    "year": "93",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會政教關係之演變",
+    "author": "張兆林",
+    "advisor": "陳志榮",
+    "school": "真理大學",
+    "dept": "宗教學系碩士班",
+    "year": "93",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "台灣基督長老教會與反對運動---一個歷史比較分析",
+    "author": "陳迪暉",
+    "advisor": "張維安",
+    "school": "國立清華大學",
+    "dept": "社會學研究所",
+    "year": "88",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "看不見的權利：從民族主義、族群文化與殖民歷史反思台灣原住民族財產權在國內法制中的發展",
+    "author": "陳竹上",
+    "advisor": "吳天泰",
+    "school": "國立東華大學",
+    "dept": "族群關係與文化研究所",
+    "year": "88",
+    "degree": "碩士",
+    "fulltext": true
+   }
+  ]
+ }
+]

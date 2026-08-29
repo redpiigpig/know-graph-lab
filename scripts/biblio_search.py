@@ -7,13 +7,15 @@
 華藝的檢索是把一整包 JSON 塞進網址的 queryString，本檔負責構造那包 JSON；
 結果頁是 JS 渲染，所以用 playwright 取。
 
-臺灣博碩士論文加值系統（ndltd.ncl.edu.tw）**不做程式化抓取**：全站掛驗證碼
-（連檢索頁都有 validinput），要人工過驗證，故本流程不含它——改由使用者以
-本檔產出的關鍵詞人工查詢，或到館用館內資料庫。
+學位論文另走 `scripts/thesis_ndltd.py`（臺灣博碩士論文加值系統）——先前判定它
+「全站驗證碼、不可抓取」是**錯的**，2026-08 實測可抓，坑寫在那支的檔頭。
+
+每組最多翻 8 頁 ×50 筆＝400 筆；撞到上限的組會標 `truncated: true` 並在
+console 印警告，清單頁也會顯示，不讓截斷看起來像「這題目就這麼多」。
 
 index：public/content/research-data/pct/biblio-airiti.json
 
-  python -X utf8 scripts/biblio_search.py --search          # 跑內建詞表
+  python -X utf8 scripts/biblio_search.py --search
   python -X utf8 scripts/biblio_search.py --search --query "王憲治 鄉土神學"
 """
 import argparse
@@ -46,6 +48,7 @@ QUERIES = [
 JS_TEMPLATE = r"""
 import { chromium } from 'playwright'
 const queries = JSON.parse(process.argv[2])
+const MAX_PAGES = 8
 const b = await chromium.launch()
 const p = await b.newPage()
 const out = []
@@ -58,9 +61,20 @@ for (const [q, note] of queries) {
     await box.press('Enter')
     await p.waitForTimeout(7000)
     const url = p.url()
-    const text = await p.locator('body').innerText()
-    out.push({ query: q, note, url, text })
-    console.error(`  ${q}: 取得結果頁`)
+    // 每頁改 50 筆，減少翻頁次數
+    try {
+      await p.selectOption('#Result_每頁顯示', { label: '50 筆' })
+      await p.waitForTimeout(6000)
+    } catch (e) { /* 版面偶爾沒有這個選單，照 10 筆翻 */ }
+    let text = '', cur = 1
+    while (cur <= MAX_PAGES) {
+      text += "\n" + await p.locator('body').innerText()
+      const next = p.locator(`.page a`, { hasText: new RegExp(`^${cur + 1}$`) }).first()
+      if (!(await next.count())) break
+      await next.click(); await p.waitForTimeout(5000); cur++
+    }
+    out.push({ query: q, note, url, text, pages: cur })
+    console.error(`  ${q}: ${cur} 頁`)
   } catch (e) {
     out.push({ query: q, note, error: String(e).slice(0, 120), text: '' })
     console.error(`  ${q}: FAIL`)
@@ -136,8 +150,12 @@ def main():
     data = []
     for g in raw:
         items = parse_results(g.get("text", ""))
+        # 撞到 MAX_PAGES 就是被截斷的，必須標記——否則清單看起來像「這個題目就這麼多」
+        truncated = g.get("pages", 0) > 8
         data.append({"query": g["query"], "note": g["note"], "url": g.get("url", ""),
-                     "count": len(items), "items": items})
+                     "count": len(items), "truncated": truncated, "items": items})
+        if truncated:
+            print(f"    ⚠ {g['query']}：已達 8 頁上限，站上還有更多未取")
         print(f"  {g['query']}：{len(items)} 筆")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -20,6 +20,7 @@ index：public/content/research-data/pct/tm-presbyterian-index.json
 import argparse
 import json
 import re
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -92,12 +93,96 @@ def cmd_list():
     print(f"其中開放授權 {n} 件——目前為 0，故本流程一律不取數位影像。")
 
 
+# ── 目次 ────────────────────────────────────────────────────────────────
+# 單件頁的目次由 JS 產生，requests 拿不到，要用瀏覽器。
+# 版面上沒有「目次」標題也沒有專屬容器，目次就夾在
+#   「<影像頁次>/<總頁數>」（例：1/338）  ←→  「數位物件瀏覽」
+# 這兩個標記之間，只能用標記切。切不到就當這件沒有目次（不少單件本來就沒有）。
+TOC_JS = r"""
+import { chromium } from 'playwright'
+const items = JSON.parse(process.argv[2])
+const b = await chromium.launch()
+const p = await b.newPage()
+const out = []
+for (const it of items) {
+  try {
+    await p.goto(it.url, { waitUntil: 'domcontentloaded', timeout: 90000 })
+    await p.waitForTimeout(4500)
+    out.push({ uniID: it.uniID, text: await p.locator('body').innerText() })
+  } catch (e) {
+    out.push({ uniID: it.uniID, text: '', error: String(e).slice(0, 100) })
+  }
+}
+console.log(JSON.stringify(out))
+await b.close()
+"""
+NODE_SCRIPT = Path(__file__).resolve().parent / ".tm_toc.mjs"
+IMG_COUNT_RE = re.compile(r"^\s*(\d+)\s*/\s*(\d+)\s*$")
+
+
+def slice_toc(text: str):
+    """回傳 (目次列表, 影像總頁數)。抓不到就 ([], 0)。"""
+    lines = [l.strip() for l in (text or "").split("\n")]
+    start = total = None
+    for i, l in enumerate(lines):
+        m = IMG_COUNT_RE.match(l)
+        if m:
+            start, total = i + 1, int(m.group(2))
+            break
+    if start is None:
+        return [], 0
+    toc = []
+    for l in lines[start:]:
+        if "數位物件瀏覽" in l or l == "中文題名":
+            break
+        if l and l != "載入更多":
+            toc.append(l)
+    return toc, total
+
+
+def cmd_toc(limit: int, batch: int = 40):
+    rows = json.loads(OUT.read_text(encoding="utf-8"))
+    todo = [r for r in rows if not r.get("toc") and not r.get("tocChecked")]
+    if limit:
+        todo = todo[:limit]
+    print(f"待補目次 {len(todo)} 件（全庫 {len(rows)} 件）", flush=True)
+    by_id = {r["uniID"]: r for r in rows}
+    repo = Path(__file__).resolve().parents[1]
+    NODE_SCRIPT.write_text(TOC_JS, encoding="utf-8")
+    for i in range(0, len(todo), batch):
+        chunk = [{"uniID": r["uniID"], "url": r["url"]} for r in todo[i:i + batch]]
+        r = subprocess.run(["node", str(NODE_SCRIPT), json.dumps(chunk, ensure_ascii=False)],
+                           cwd=repo, capture_output=True, text=True, encoding="utf-8", timeout=3600)
+        if not r.stdout.strip():
+            sys.stderr.write(r.stderr or "")
+            print("  這批沒有回傳，跳過", flush=True)
+            continue
+        got = 0
+        for res in json.loads(r.stdout):
+            row = by_id.get(res["uniID"])
+            if row is None:
+                continue
+            toc, total = slice_toc(res.get("text", ""))
+            row["tocChecked"] = True          # 記下「查過了」，沒有目次的不必重查
+            if toc:
+                row["toc"] = toc
+                got += 1
+            if total:
+                row["imageCount"] = total
+        save(rows)
+        print(f"  {i + len(chunk)}/{len(todo)}：本批 {got} 件有目次", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
+    ap.add_argument("--toc", action="store_true")
+    ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
     if args.list:
         cmd_list()
+    elif args.toc:
+        cmd_toc(args.limit)
     else:
         ap.print_help()
 

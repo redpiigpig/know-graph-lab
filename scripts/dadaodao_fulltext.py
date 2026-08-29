@@ -23,6 +23,7 @@ import time
 from pathlib import Path
 
 import boto3
+from botocore.config import Config as BotoConfig
 import requests
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -49,6 +50,10 @@ MIN_TEXT_PER_PAGE = 60  # PDF 平均每頁字元數低於此 → 視為掃描檔
 s3 = boto3.client(
     "s3", region_name="auto", endpoint_url=ENV["R2_ENDPOINT"],
     aws_access_key_id=ENV["R2_ACCESS_KEY"], aws_secret_access_key=ENV["R2_SECRET_KEY"],
+    # R2 偶爾會斷（SSL: UNEXPECTED_EOF / EndpointConnectionError），預設只重試 3 次，
+    # 長時間的批次上傳一撞就整個 script 死掉。交給 botocore 自己退避重試。
+    config=BotoConfig(retries={"max_attempts": 10, "mode": "adaptive"},
+                      connect_timeout=20, read_timeout=90),
 )
 
 def _gemini_keys():
