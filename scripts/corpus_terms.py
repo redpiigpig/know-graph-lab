@@ -155,8 +155,17 @@ def iter_nonchurch():
     return _iter_txt("mukyokai-fulltext/nonchurch", meta)
 
 
+def iter_ct():
+    """《基督教論壇報》。日期只在列表頁上，所以年份一律由篇目清單提供。"""
+    meta = {f"evangelical-fulltext/ct/{r['id']}.txt":
+            {"year": (r.get("date") or "")[:4], "title": r["title"]}
+            for r in _load_index("evangelical/ct-articles.json")}
+    return _iter_txt("evangelical-fulltext/ct", meta)
+
+
 CORPORA = {
     "tcnn": {"name": "台灣教會公報新聞網", "side": "基督教", "iter": iter_tcnn},
+    "ct": {"name": "基督教論壇報", "side": "基督教", "iter": iter_ct},
     "new-messenger": {"name": "新使者", "side": "基督教", "iter": iter_new_messenger},
     "miaoxin": {"name": "妙心雜誌", "side": "佛教", "iter": iter_miaoxin},
     "hongshi": {"name": "弘誓雙月刊", "side": "佛教", "iter": iter_hongshi_magazine},

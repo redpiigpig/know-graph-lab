@@ -68,6 +68,12 @@ for (const [q, note] of queries) {
       } catch (e) { if (a) throw e; await p.waitForTimeout(8000) }
     }
     await p.waitForTimeout(3000)
+    // 站方的驗證碼是「流量觸發」的（依連線 IP），不是常態掛著：抓密了就跳出來，
+    // 停一段時間才會退掉。不先認出來的話，只會看到 #ALLFIELD 選擇器逾時，
+    // 誤以為是版面改版。⚠️ 不要繞過它——那是站方為維持服務品質設的。
+    if ((await p.locator('body').innerText()).includes('驗證碼')) {
+      throw new Error('CAPTCHA：站方因流量對本 IP 掛出驗證碼，需等冷卻後再跑')
+    }
     await p.check('#ALLFIELD_不限欄位', { force: true })          // 坑 1：不勾就只查論文名稱
     await p.fill('input[name="qs0"]', q)          // 坑 2：模式維持預設「精準」
     await Promise.all([
@@ -178,6 +184,9 @@ def main():
             print(f"  {one[0]}：沒有回傳，跳過", flush=True)
             continue
         for g in json.loads(r.stdout):
+            if g.get("error"):
+                print(f"  {g['query']}：抓取失敗，不寫入（{g['error'][:80]}）", flush=True)
+                continue
             items = parse(g.get("text", ""))
             data = [d for d in data if d["query"] != g["query"]]
             data.append({"query": g["query"], "note": g["note"], "count": len(items),

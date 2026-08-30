@@ -241,3 +241,6 @@ output/source-cache/original-readers/japanese-full/aozora/index.json
 # 逐詞詞形分析：由本機的 MorphGNT 與 OSHB 標註重建得出，92 MB，
 # 屬快取不屬策展。要部署到線上得另想去處（R2 或隨源碼重建）。
 output/source-cache/scripture/morphology/
+
+# thesis_ndltd.py 每次執行都由 JS 常數重寫這支 playwright 腳本，屬快取不屬源碼。
+scripts/.ndltd_fetch.mjs
