@@ -1,0 +1,3844 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "逐張審圖的判決。verdict=ok 放行進 cards，verdict=wrong 從帳本刪掉、那張卡退回原本共用的 OpenMoji 圖。icon 欄記的是判決當時看的那張圖，帳本換圖後舊判決自動失效。",
+  "decisions": {
+    "hebrew": {
+      "H1157|בַּ֫עַד": {
+        "icon": "game-icons:window",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H1219|בָּצַר": {
+        "icon": "game-icons:grapes",
+        "verdict": "ok"
+      },
+      "H1254|בָּרָא": {
+        "icon": "tabler:cut",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H1293|בְּרָכָה": {
+        "icon": "ph:gift",
+        "verdict": "ok"
+      },
+      "H1817|דֶּ֫לֶת": {
+        "icon": "game-icons:door",
+        "verdict": "ok"
+      },
+      "H1984|הָלַל": {
+        "icon": "game-icons:sing",
+        "verdict": "ok"
+      },
+      "H1995|הָמוֹן": {
+        "icon": "mdi:crowd",
+        "verdict": "ok"
+      },
+      "H2009|הִנֵּה": {
+        "icon": "game-icons:behold",
+        "verdict": "ok"
+      },
+      "H2022|הַר": {
+        "icon": "tabler:mountain",
+        "verdict": "ok"
+      },
+      "H2022|הָרִים": {
+        "icon": "game-icons:mountains",
+        "verdict": "ok"
+      },
+      "H2088|זֶה": {
+        "icon": "game-icons:pointing",
+        "verdict": "ok"
+      },
+      "H215|אוֹר": {
+        "icon": "game-icons:bulb",
+        "verdict": "ok"
+      },
+      "H2232|זָרַע": {
+        "icon": "game-icons:seedling",
+        "verdict": "ok"
+      },
+      "H2346|חוֹמָה": {
+        "icon": "ph:wall",
+        "verdict": "ok"
+      },
+      "H2388|חָזַק": {
+        "icon": "game-icons:strong",
+        "verdict": "ok"
+      },
+      "H2803|חָשַׁב": {
+        "icon": "game-icons:think",
+        "verdict": "ok"
+      },
+      "H2930|טָמֵא": {
+        "icon": "game-icons:biohazard",
+        "verdict": "ok"
+      },
+      "H3045|יָדַע": {
+        "icon": "game-icons:brain",
+        "verdict": "ok"
+      },
+      "H312|אַחֵר": {
+        "icon": "ph:shuffle",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H335|אַי": {
+        "icon": "ph:question",
+        "verdict": "ok"
+      },
+      "H3426|יֵשׁ": {
+        "icon": "ph:check",
+        "verdict": "ok"
+      },
+      "H352|אַ֫יִל": {
+        "icon": "game-icons:ram",
+        "verdict": "ok"
+      },
+      "H3658|כִּנּוֹר": {
+        "icon": "game-icons:harp",
+        "verdict": "ok"
+      },
+      "H4043|מָגֵן": {
+        "icon": "game-icons:shield",
+        "verdict": "ok"
+      },
+      "H4186|מוֹשָׁב": {
+        "icon": "ph:seat",
+        "verdict": "ok"
+      },
+      "H4191|מוּת": {
+        "icon": "ph:skull",
+        "verdict": "ok"
+      },
+      "H4256|מַחֲלֹקֶת": {
+        "icon": "tabler:section",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H4393|מְלֹא": {
+        "icon": "mdi:bucket",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H4428|מֶ֫לֶךְ": {
+        "icon": "game-icons:king",
+        "verdict": "ok"
+      },
+      "H4467|מַמְלָכָה": {
+        "icon": "game-icons:castle",
+        "verdict": "ok"
+      },
+      "H4631|מְעָרָה": {
+        "icon": "game-icons:hole",
+        "verdict": "ok"
+      },
+      "H4687|מִצְוָה": {
+        "icon": "ph:spiral",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H4735|מִקְנֶה": {
+        "icon": "mdi:water",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H4818|מֶרְכָּבָה": {
+        "icon": "game-icons:chariot",
+        "verdict": "ok"
+      },
+      "H4904|מִשְׁכָּב": {
+        "icon": "game-icons:bed",
+        "verdict": "ok"
+      },
+      "H4948|מִשְׁקָל": {
+        "icon": "game-icons:weight",
+        "verdict": "ok"
+      },
+      "H505|אֶ֫לֶף": {
+        "icon": "game-icons:abacus",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H5104|נָהָר": {
+        "icon": "game-icons:river",
+        "verdict": "ok"
+      },
+      "H5159|נַחֲלָה": {
+        "icon": "game-icons:house",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H520|אַמָּה": {
+        "icon": "game-icons:forearm",
+        "verdict": "ok"
+      },
+      "H5265|נָסַע": {
+        "icon": "game-icons:pull",
+        "verdict": "ok"
+      },
+      "H530|אֱמוּנָה": {
+        "icon": "mdi:security",
+        "verdict": "ok"
+      },
+      "H5337|נָצַל": {
+        "icon": "tabler:sos",
+        "verdict": "ok"
+      },
+      "H5375|נָשָׂא": {
+        "icon": "game-icons:lift",
+        "verdict": "ok"
+      },
+      "H539|אָמַן": {
+        "icon": "ph:handshake",
+        "verdict": "ok"
+      },
+      "H5518|סִיר": {
+        "icon": "mdi:pot",
+        "verdict": "ok"
+      },
+      "H553|אָמַץ": {
+        "icon": "mdi:alert",
+        "verdict": "ok"
+      },
+      "H561|אֵמֶר": {
+        "icon": "ph:balloon",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H5647|עָבַד": {
+        "icon": "ph:hammer",
+        "verdict": "ok"
+      },
+      "H5795|עֵז": {
+        "icon": "game-icons:goat",
+        "verdict": "ok"
+      },
+      "H5869|עַ֫יִן": {
+        "icon": "ph:eye",
+        "verdict": "ok"
+      },
+      "H5892|עָרִים": {
+        "icon": "ph:city",
+        "verdict": "ok"
+      },
+      "H5982|עַמּוּד": {
+        "icon": "mdi:pillar",
+        "verdict": "ok"
+      },
+      "H6030|עָנָה": {
+        "icon": "mdi:reply",
+        "verdict": "ok"
+      },
+      "H6086|עֵץ": {
+        "icon": "ph:tree",
+        "verdict": "ok"
+      },
+      "H6189|עָרֵל": {
+        "icon": "game-icons:razor",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H6419|פָּלַל": {
+        "icon": "tabler:pray",
+        "verdict": "ok"
+      },
+      "H6817|צָעַק": {
+        "icon": "game-icons:megaphone",
+        "verdict": "ok"
+      },
+      "H6908|קָבַץ": {
+        "icon": "game-icons:basket",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H6912|קָבַר": {
+        "icon": "game-icons:coffin",
+        "verdict": "ok"
+      },
+      "H6|אָבַד": {
+        "icon": "mdi:vanish",
+        "verdict": "ok"
+      },
+      "H7070|קָנֶה": {
+        "icon": "game-icons:reed",
+        "verdict": "ok"
+      },
+      "H7200|רָאָה": {
+        "icon": "ph:eyes",
+        "verdict": "ok"
+      },
+      "H7230|רֹב": {
+        "icon": "game-icons:chart",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H727|אֲרוֹן": {
+        "icon": "game-icons:chest",
+        "verdict": "ok"
+      },
+      "H7323|רוּץ": {
+        "icon": "game-icons:run",
+        "verdict": "ok"
+      },
+      "H734|אֹרַח": {
+        "icon": "game-icons:road",
+        "verdict": "ok"
+      },
+      "H7379|רִיב": {
+        "icon": "tabler:bubble",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H7462|רֹעֶה": {
+        "icon": "ph:dog",
+        "verdict": "wrong",
+        "reason": "圖示畫的是另一個概念，學的人看圖只會背到那個概念"
+      },
+      "H7673|שָׁבַת": {
+        "icon": "ph:stop",
+        "verdict": "ok"
+      },
+      "H7704|שָׂדֶה": {
+        "icon": "game-icons:field",
+        "verdict": "ok"
+      },
+      "H7782|שׁוֹפָר": {
+        "icon": "game-icons:trumpet",
+        "verdict": "ok"
+      },
+      "H7794|שׁוֹר": {
+        "icon": "game-icons:bull",
+        "verdict": "ok"
+      },
+      "H784|אֵשׁ": {
+        "icon": "game-icons:fire",
+        "verdict": "ok"
+      },
+      "H7965|שָׁלוֹם": {
+        "icon": "ph:peace",
+        "verdict": "ok"
+      },
+      "H802|אִשָּׁה": {
+        "icon": "tabler:woman",
+        "verdict": "ok"
+      },
+      "H8077|שְׁמָמָה": {
+        "icon": "game-icons:desert",
+        "verdict": "ok"
+      },
+      "H8121|שֶׁ֫מֶשׁ": {
+        "icon": "game-icons:sun",
+        "verdict": "ok"
+      },
+      "H8179|שַׁ֫עַר": {
+        "icon": "game-icons:gate",
+        "verdict": "ok"
+      },
+      "H8184|שְׂעֹרָה": {
+        "icon": "mdi:barley",
+        "verdict": "ok"
+      },
+      "H8398|תֵּבֵל": {
+        "icon": "mdi:earth",
+        "verdict": "ok"
+      },
+      "H8548|תָּמִיד": {
+        "icon": "ph:repeat",
+        "verdict": "ok"
+      },
+      "H8597|תִּפְאָרָה": {
+        "icon": "mdi:ornament",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H8605|תְּפִלָּה": {
+        "icon": "game-icons:prayer",
+        "verdict": "ok"
+      },
+      "H8668|תְּשׁוּעָה": {
+        "icon": "game-icons:buoy",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H899|בֶּ֫גֶד": {
+        "icon": "game-icons:shirt",
+        "verdict": "ok"
+      },
+      "H914|בָּדַל": {
+        "icon": "ph:divide",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H995|בִּין": {
+        "icon": "game-icons:puzzle",
+        "verdict": "ok"
+      },
+      "H1004|בָּֽתִּים": {
+        "icon": "game-icons:bird-house",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1077|בַּל": {
+        "icon": "tabler:equal-not",
+        "verdict": "ok"
+      },
+      "H1115|לְבִּלְתִּי": {
+        "icon": "tabler:math-not",
+        "verdict": "ok"
+      },
+      "H1121|בָּנִים": {
+        "icon": "tabler:mood-boy",
+        "verdict": "ok"
+      },
+      "H1323|בָּנוֹת": {
+        "icon": "mdi:human-male-girl",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1330|בְּתוּלָה": {
+        "icon": "tabler:sort-a-z",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1350|גָּאַל": {
+        "icon": "mdi:email-mark-as-unread",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1369|גְּבוּרָה": {
+        "icon": "game-icons:air-force",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1431|גָּדַל": {
+        "icon": "tabler:eye-up",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1580|גָּמַל": {
+        "icon": "tabler:a-b-off",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H160|אַהֲבָה": {
+        "icon": "ph:dice-two",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1612|גֶּפֶן": {
+        "icon": "game-icons:vine-leaf",
+        "verdict": "ok"
+      },
+      "H1616|גֵּר": {
+        "icon": "game-icons:alien-bug",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1730|דּוֹד": {
+        "icon": "game-icons:evil-love",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1847|דַּ֫עַת": {
+        "icon": "game-icons:gift-of-knowledge",
+        "verdict": "ok"
+      },
+      "H1875|דָּרַשׁ": {
+        "icon": "game-icons:all-for-one",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1931|הוּא": {
+        "icon": "mdi:power-socket-it",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1964|הֵיכָל": {
+        "icon": "game-icons:temple-door",
+        "verdict": "ok"
+      },
+      "H1980|הָלַךְ": {
+        "icon": "mdi:pokemon-go",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1992|הֵם": {
+        "icon": "game-icons:fire-silhouette",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1|אָב": {
+        "icon": "game-icons:air-man",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H1|אָבוֹת": {
+        "icon": "mdi:pac-man",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2007|הֵ֫נָּה": {
+        "icon": "ph:hands-praying",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2145|זָכָר": {
+        "icon": "tabler:cookie-man",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H226|אוֹת": {
+        "icon": "mdi:size-m",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2377|חָזוֹן": {
+        "icon": "game-icons:sight-disabled",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H238|אָזַן": {
+        "icon": "tabler:ease-out",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2399|חֵטְא": {
+        "icon": "game-icons:crime-scene-tape",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2403|חַטָּאת": {
+        "icon": "mdi:math-sin",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2416|חַי": {
+        "icon": "game-icons:schrodingers-cat-alive",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2416|חַיִּים": {
+        "icon": "game-icons:life-bar",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2416|חַיָּה": {
+        "icon": "game-icons:animal-hide",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2428|חַ֫יִל": {
+        "icon": "mdi:wifi-strength-1",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2474|חַלּוֹן": {
+        "icon": "ph:app-window",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H251|אַחִים": {
+        "icon": "mdi:point-of-sale",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H251|אָח": {
+        "icon": "game-icons:glowing-hands",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2568|חָמֵשׁ": {
+        "icon": "ph:dice-five",
+        "verdict": "ok"
+      },
+      "H259|אֶחָד": {
+        "icon": "ph:dice-one",
+        "verdict": "ok"
+      },
+      "H269|אָחוֹת": {
+        "icon": "mdi:relative-scale",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2708|חֻקֹּת": {
+        "icon": "game-icons:eye-of-horus",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2708|חֻקּוֹת": {
+        "icon": "ph:not-subset-of",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H270|אָחַז": {
+        "icon": "game-icons:shadow-grasp",
+        "verdict": "ok"
+      },
+      "H272|אֲחֻזָּה": {
+        "icon": "tabler:letter-i-small",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2763|חָרַם": {
+        "icon": "mdi:exit-to-app",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2778|חָרַף": {
+        "icon": "game-icons:daemon-pull",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2822|חֹ֫שֶׁךְ": {
+        "icon": "mdi:new-box",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2889|טָהוֹר": {
+        "icon": "mdi:silverware-clean",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2931|טָמֵא": {
+        "icon": "tabler:biohazard-off",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H2945|טַף": {
+        "icon": "game-icons:family-house",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3027|יָדוֹת": {
+        "icon": "game-icons:shaking-hands",
+        "verdict": "ok"
+      },
+      "H3034|יָדָה": {
+        "icon": "mdi:hands-pray",
+        "verdict": "ok"
+      },
+      "H310|אַחַר": {
+        "icon": "mdi:table-row-plus-after",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3117|יוֹם": {
+        "icon": "mdi:view-day",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H314|אַחֲרוֹן": {
+        "icon": "ph:less-than-or-equal-light",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3162|יַחְדָּו": {
+        "icon": "ph:at-fill",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3190|יָטַב": {
+        "icon": "mdi:format-letter-starts-with",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3220|יַמִּים": {
+        "icon": "game-icons:at-sea",
+        "verdict": "ok"
+      },
+      "H3220|יָם": {
+        "icon": "game-icons:sea-star",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3225|יָמִין": {
+        "icon": "tabler:map-south",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3233|יְמָנִי": {
+        "icon": "tabler:uv-index",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3245|יָסַד": {
+        "icon": "tabler:map-down",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3254|יָסַף": {
+        "icon": "tabler:playlist-add",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3282|יַ֫עַן": {
+        "icon": "game-icons:on-sight",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3289|יָעַץ": {
+        "icon": "mdi:floor-plan",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3368|יָקָר": {
+        "icon": "game-icons:gem-chain",
+        "verdict": "ok"
+      },
+      "H3372|יָרֵא": {
+        "icon": "ph:sign-in",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3374|יִרְאָה": {
+        "icon": "game-icons:pig-face",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3384|יָרָה": {
+        "icon": "ph:flow-arrow",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H341|אֹיֵב": {
+        "icon": "mdi:robot-angry",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3426|יֶשׁ־": {
+        "icon": "mdi:bug-check",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3444|יְשׁוּעָה": {
+        "icon": "mdi:help-box",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3468|יֶשַׁע": {
+        "icon": "game-icons:liberty-wing",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3490|יָתוֹם": {
+        "icon": "ph:person-bold",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3498|יָתַר": {
+        "icon": "game-icons:over-infinity",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H349|אֵיכָה": {
+        "icon": "ph:person-fill",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H34|אֶבְיוֹן": {
+        "icon": "game-icons:baby-face",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3513|כָּבֵד": {
+        "icon": "game-icons:heavy-fall",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3541|כֹּה": {
+        "icon": "ph:hand-pointing",
+        "verdict": "ok"
+      },
+      "H3548|כֹּהֵן": {
+        "icon": "game-icons:sun-priest",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3557|כּוּל": {
+        "icon": "mdi:google-keep",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3581|כֹּחַ": {
+        "icon": "mdi:wifi-strength-3",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3602|כָּכָה": {
+        "icon": "ph:dev-to-logo",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3605|כֹּל": {
+        "icon": "mdi:set-all",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3615|כָּלָה": {
+        "icon": "mdi:timer-sand-complete",
+        "verdict": "ok"
+      },
+      "H3627|כְּלִי": {
+        "icon": "game-icons:soul-vessel",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3651|כֵּן": {
+        "icon": "tabler:pin-end",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3651|לָכֵן": {
+        "icon": "mdi:ray-end",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3671|כָּנָף": {
+        "icon": "game-icons:bat-wing",
+        "verdict": "ok"
+      },
+      "H3684|כְּסִיל": {
+        "icon": "game-icons:tarot-00-the-fool",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H369|אַ֫יִן": {
+        "icon": "mdi:gate-not",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3722|כָּפַר": {
+        "icon": "game-icons:book-cover",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H376|אֲנָשִׁים": {
+        "icon": "mdi:face-man",
+        "verdict": "ok"
+      },
+      "H376|אִישׁ": {
+        "icon": "game-icons:quick-man",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3808|לֹא": {
+        "icon": "tabler:smoking-no",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3816|לְאֹם": {
+        "icon": "tabler:building-community",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3830|לְבוּשׁ": {
+        "icon": "tabler:wash-dry-a",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3898|לָחַם": {
+        "icon": "mdi:axe-battle",
+        "verdict": "ok"
+      },
+      "H389|אַךְ": {
+        "icon": "mdi:relation-only-one-to-one",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3925|לָמַד": {
+        "icon": "ph:graduation-cap",
+        "verdict": "ok"
+      },
+      "H3947|לָקַח": {
+        "icon": "game-icons:take-my-money",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H3957|לִשְׁכָּה": {
+        "icon": "mdi:room-service-outline",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H400|אֹכֶל": {
+        "icon": "mdi:food-off",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4013|מִבְצָר": {
+        "icon": "game-icons:sand-castle",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4058|מָדַד": {
+        "icon": "mdi:stretch-to-page",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4082|מְדִינָה": {
+        "icon": "mdi:alpha-i-circle-outline",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H408|אַל": {
+        "icon": "tabler:no-copyright",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4100|לָמָה": {
+        "icon": "game-icons:red-carpet",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4100|מָה": {
+        "icon": "mdi:flash-red-eye",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H410|אֵל": {
+        "icon": "game-icons:hand-of-god",
+        "verdict": "ok"
+      },
+      "H4136|מוּל": {
+        "icon": "game-icons:i-beam",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4150|מוֹעֵד": {
+        "icon": "game-icons:time-bomb",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4193|מוֹת": {
+        "icon": "game-icons:death-note",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4194|מָ֫וֶת": {
+        "icon": "game-icons:death-star",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4196|מִזְבֵּחַ": {
+        "icon": "game-icons:star-altar",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4217|מִזְרָח": {
+        "icon": "tabler:map-east",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4264|מַחֲנֶה": {
+        "icon": "game-icons:forest-camp",
+        "verdict": "ok"
+      },
+      "H4283|מׇחֳרָת": {
+        "icon": "ph:greater-than-or-equal-thin",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4284|מַחֲשָׁבָה": {
+        "icon": "tabler:hexagon-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H428|אֵ֫לֶּה": {
+        "icon": "mdi:hand-pointing-up",
+        "verdict": "ok"
+      },
+      "H4294|מַטֶּה": {
+        "icon": "tabler:clef-staff",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4306|מָטַר": {
+        "icon": "ph:cloud-rain",
+        "verdict": "ok"
+      },
+      "H4310|מִי": {
+        "icon": "game-icons:deshret-red-crown",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H433|אֱלוֹהַּ": {
+        "icon": "tabler:logic-or",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4390|מָלֵא": {
+        "icon": "mdi:moon-full",
+        "verdict": "wrong",
+        "reason": "第三層備援：拿現有圖的概念名再找，結果多半命中的是 of/to/at/i/not 這類功能詞，配到的圖與詞義無關"
+      },
+      "H4480|מִן / מִן־": {
+        "icon": "tabler:arrow-up-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H4605|מַ֫עַל": {
+        "icon": "mdi:led-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H4791|מָרוֹם": {
+        "icon": "tabler:square-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H490|אַלְמָנָה": {
+        "icon": "ph:lightning-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H4931|מִשְׁמֶ֫רֶת": {
+        "icon": "game-icons:f-clef",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5234|נָכַר": {
+        "icon": "mdi:alpha-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5236|נֵכָר": {
+        "icon": "mdi:code-greater-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5237|נׇכְרִי": {
+        "icon": "tabler:sort-z-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5352|נָקָה": {
+        "icon": "mdi:coffee-to-go",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5592|סַף": {
+        "icon": "tabler:a-b-2",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5703|עַד": {
+        "icon": "mdi:alpha-i-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5739|עֵדֶר": {
+        "icon": "game-icons:i-brick",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5921|עַל": {
+        "icon": "mdi:mower-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5923|עֹל": {
+        "icon": "ph:less-than-or-equal-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H595|אָנֹכִי": {
+        "icon": "mdi:alpha-i-box-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5973|עִם": {
+        "icon": "game-icons:pouch-with-beads",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5978|עִמָּד": {
+        "icon": "mdi:format-letter-ends-with",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H5980|עֻמָּה": {
+        "icon": "game-icons:sverd-i-fjell",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6203|עֹרֶף": {
+        "icon": "ph:greater-than-or-equal-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6293|פָּגַע": {
+        "icon": "ph:less-than-or-equal-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6311|פֹּה": {
+        "icon": "tabler:at-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6370|פִּילֶגֶשׁ": {
+        "icon": "mdi:alpha-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6453|פֶּסַח": {
+        "icon": "tabler:letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6467|פֹּעַל": {
+        "icon": "mdi:gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H657|אֶפֶס": {
+        "icon": "tabler:circle-dashed-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6629|צֹאן": {
+        "icon": "ph:superset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6696|צוּר": {
+        "icon": "mdi:alpha-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6921|קָדִים": {
+        "icon": "ph:greater-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6960|קָוָה": {
+        "icon": "tabler:letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H6999|קָטַר": {
+        "icon": "tabler:letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7065|קָנָא": {
+        "icon": "tabler:square-rounded-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7122|קָרָא": {
+        "icon": "game-icons:logic-gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7130|בְּקֶ֫רֶב": {
+        "icon": "game-icons:tarot-19-the-sun",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7167|קָרַע": {
+        "icon": "ph:greater-than-or-equal-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7243|רְבִיעִי": {
+        "icon": "tabler:play-card-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7368|רָחַק": {
+        "icon": "tabler:square-rounded-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7535|רַק": {
+        "icon": "mdi:relation-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7604|שָׁאַר": {
+        "icon": "mdi:debug-step-over",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7611|שְׁאֵרִית": {
+        "icon": "ph:less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7901|שָׁכַב": {
+        "icon": "tabler:eye-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H7970|שְׁלוֹשִׁים": {
+        "icon": "mdi:code-less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8002|שֶׁלֶם": {
+        "icon": "tabler:circle-dotted-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H801|אִשָּׁה": {
+        "icon": "ph:subset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H802|אֵ֫שֶׁת": {
+        "icon": "ph:member-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8033|שָׁם": {
+        "icon": "ph:at-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8085|שָׁמַע": {
+        "icon": "tabler:congruent-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8248|שָׁקָה": {
+        "icon": "tabler:circle-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8255|שֶׁקֶל": {
+        "icon": "mdi:alpha-a-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8334|שָׁרַת": {
+        "icon": "mdi:flip-to-back",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8393|תְּבוּאָה": {
+        "icon": "tabler:square-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8415|תְּהוֹם": {
+        "icon": "game-icons:rally-the-troops",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8416|תְּהִלָּה": {
+        "icon": "tabler:xbox-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8432|בְּתוֹךְ": {
+        "icon": "ph:finn-the-human",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8435|תּוֹלְדָה": {
+        "icon": "mdi:alpha-i-circle",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8492|תִּירוֹשׁ": {
+        "icon": "ph:less-than-or-equal-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H853|אֵת/אֶת־": {
+        "icon": "game-icons:skull-with-syringe",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8552|תָּמַם": {
+        "icon": "mdi:dev-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8610|תָּפַשׂ": {
+        "icon": "tabler:circle-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8615|תִּקְוָה": {
+        "icon": "tabler:a-b",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8641|תְּרוּמָה": {
+        "icon": "tabler:ease-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H8643|תְּרוּעָה": {
+        "icon": "tabler:hexagon-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H983|בֶּטַח": {
+        "icon": "game-icons:sands-of-time",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H996|וּבֵין": {
+        "icon": "tabler:logic-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "|וְ": {
+        "icon": "mdi:gate-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "|כְּ": {
+        "icon": "game-icons:face-to-face",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "|כִּי־אִם": {
+        "icon": "mdi:relation-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "|לְ": {
+        "icon": "mdi:fit-to-page",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "|עַל־דְּבַר": {
+        "icon": "game-icons:bowl-of-rice",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      }
+    },
+    "greek": {
+      "αἴτιος": {
+        "icon": "ph:member-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "βαπτίζω": {
+        "icon": "mdi:relation-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "βλασφημία": {
+        "icon": "mdi:relation-one-or-many-to-zero-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "γάρ": {
+        "icon": "tabler:sort-a-z",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "γνῶσις": {
+        "icon": "tabler:e-passport",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δαιμόνιον": {
+        "icon": "mdi:alpha-d",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δημιουργέω": {
+        "icon": "ph:less-than-or-equal-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δημιουργία": {
+        "icon": "ph:superset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "διαθήκη": {
+        "icon": "game-icons:i-beam",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "διανοέομαι": {
+        "icon": "ph:greater-than-or-equal-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "διατίθεμαι": {
+        "icon": "mdi:alpha-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δικαίωμα": {
+        "icon": "mdi:fit-to-screen",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δικαιόω": {
+        "icon": "mdi:relation-zero-or-many-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "διό": {
+        "icon": "tabler:square-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "διότι": {
+        "icon": "mdi:mower-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δουλεύω": {
+        "icon": "mdi:home-floor-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δυνατός": {
+        "icon": "mdi:relation-zero-or-one-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "δύναμαι": {
+        "icon": "ph:less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εἰδωλολατρία": {
+        "icon": "ph:member-of-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εἰρηνικός": {
+        "icon": "mdi:flip-to-front",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εἰσφέρω": {
+        "icon": "mdi:debug-step-into",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εὐλογέω": {
+        "icon": "game-icons:bowl-of-rice",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εὐλογητός": {
+        "icon": "ph:superset-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "εὐοδόω": {
+        "icon": "tabler:congruent-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ζητέω": {
+        "icon": "ph:dev-to-logo-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θέλημα": {
+        "icon": "mdi:alpha-e-box-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θέλω": {
+        "icon": "tabler:xbox-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θεάομαι": {
+        "icon": "tabler:square-rounded-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θεμέλιος": {
+        "icon": "ph:dev-to-logo-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θεμελιόω": {
+        "icon": "game-icons:tarot-15-the-devil",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θεοσέβεια": {
+        "icon": "game-icons:all-for-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "θεωρέω": {
+        "icon": "tabler:a-b",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κάθημαι": {
+        "icon": "ph:star-and-crescent",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "καθήκω": {
+        "icon": "mdi:power-socket-it",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "καθαιρέω": {
+        "icon": "tabler:home-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κατά": {
+        "icon": "tabler:eye-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κατάγω": {
+        "icon": "tabler:map-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κατέρχομαι": {
+        "icon": "mdi:pan-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "καταβαίνω": {
+        "icon": "tabler:flag-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "καταδιώκω": {
+        "icon": "tabler:fold-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "καταισχύνω": {
+        "icon": "mdi:fit-to-page-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κατακαίω": {
+        "icon": "tabler:map-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κατεργάζομαι": {
+        "icon": "tabler:ease-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κεφαλή": {
+        "icon": "ph:less-than-or-equal-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κινδυνεύω": {
+        "icon": "ph:sign-in-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κοινωνέω": {
+        "icon": "tabler:circle-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κράζω": {
+        "icon": "mdi:relation-zero-or-many-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κρύπτω": {
+        "icon": "tabler:home-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κύκλῳ": {
+        "icon": "mdi:alpha-a-circle",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κύριος": {
+        "icon": "mdi:open-in-app",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κἀκεῖνος": {
+        "icon": "game-icons:froe-and-mallet",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "κἄν": {
+        "icon": "tabler:logic-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "λαμβάνω": {
+        "icon": "game-icons:g-clef",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "λοιπόν": {
+        "icon": "mdi:magnet-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "λόγος": {
+        "icon": "mdi:relation-one-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μάλιστα": {
+        "icon": "game-icons:hand-of-god",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μάρτυς": {
+        "icon": "mdi:relation-zero-or-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μάχομαι": {
+        "icon": "game-icons:skull-in-jar",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μέλλω": {
+        "icon": "tabler:arrow-left-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μέλω": {
+        "icon": "ph:subset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μέν": {
+        "icon": "ph:subset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μακάριος": {
+        "icon": "mdi:api-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μαρτυρέω": {
+        "icon": "mdi:alpha-a-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μετά": {
+        "icon": "mdi:dev-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μετέχω": {
+        "icon": "tabler:square-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μεταδίδωμι": {
+        "icon": "tabler:hexagon-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μεταλαμβάνω": {
+        "icon": "game-icons:i-brick",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μετανοέω": {
+        "icon": "mdi:relation-many-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μιαρός": {
+        "icon": "ph:star-and-crescent-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μνημονεύω": {
+        "icon": "game-icons:master-of-arms",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "μονογενής": {
+        "icon": "mdi:relation-only-one-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "νοερός": {
+        "icon": "ph:star-and-crescent-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "οἰκοδομή": {
+        "icon": "mdi:table-of-contents",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "οὗ": {
+        "icon": "ph:at-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πάντοτε": {
+        "icon": "ph:at-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πάσχω": {
+        "icon": "tabler:xbox-a-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πέμπω": {
+        "icon": "ph:dev-to-logo-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πέραν": {
+        "icon": "mdi:kettle-pour-over",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πίστις": {
+        "icon": "tabler:letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παντελῶς": {
+        "icon": "mdi:relation-only-one-to-zero-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παντοκράτωρ": {
+        "icon": "ph:superset-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παράμονος": {
+        "icon": "game-icons:logic-gate-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παράνομος": {
+        "icon": "mdi:gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παρέρχομαι": {
+        "icon": "tabler:arrow-bar-to-right",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παραβολή": {
+        "icon": "mdi:relation-one-or-many-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παραγγέλλω": {
+        "icon": "tabler:a-b-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παραμένω": {
+        "icon": "mdi:format-letter-ends-with",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "παρατάσσω": {
+        "icon": "tabler:flag-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "περισσεύω": {
+        "icon": "tabler:ease-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πιστεύω": {
+        "icon": "mdi:alpha-i-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πιστόω": {
+        "icon": "mdi:relation-one-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πλημμέλημα": {
+        "icon": "mdi:relation-zero-or-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πληρόω": {
+        "icon": "mdi:stretch-to-page-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πλούσιος": {
+        "icon": "mdi:format-letter-starts-with",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πλῆθος": {
+        "icon": "tabler:signal-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πνεῦμα": {
+        "icon": "ph:member-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ποιέω": {
+        "icon": "ph:less-than-or-equal-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ποικιλία": {
+        "icon": "ph:star-and-crescent-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πολύς": {
+        "icon": "mdi:code-less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πονηρός": {
+        "icon": "tabler:hexagon-letter-e-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ποῦ": {
+        "icon": "game-icons:eye-of-horus",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πράσσω": {
+        "icon": "tabler:letter-e-small",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πρέπω": {
+        "icon": "mdi:fit-to-page",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προσέρχομαι": {
+        "icon": "ph:dev-to-logo-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προσέχω": {
+        "icon": "tabler:circle-dotted-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προσίημι": {
+        "icon": "ph:greater-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προσπίπτω": {
+        "icon": "tabler:lock-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προστίθημι": {
+        "icon": "tabler:arrow-bar-to-up-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "προσφέρω": {
+        "icon": "tabler:arrow-up-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πρό": {
+        "icon": "ph:sign-in-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πρός": {
+        "icon": "game-icons:pick-of-destiny",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πτωχός": {
+        "icon": "game-icons:face-to-face",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πόθεν": {
+        "icon": "tabler:arrow-down-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πόρρω": {
+        "icon": "tabler:bed-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πότερος": {
+        "icon": "mdi:point-of-sale",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "πῶς": {
+        "icon": "game-icons:sands-of-time",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σάρξ": {
+        "icon": "game-icons:tarot-21-the-world",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σήμερον": {
+        "icon": "mdi:mower-bag-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σεμνῶς": {
+        "icon": "game-icons:plants-and-animals",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σημεῖον": {
+        "icon": "mdi:relation-one-to-zero-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σκέπτομαι": {
+        "icon": "ph:less-than-or-equal-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σκῦλον": {
+        "icon": "tabler:circle-letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σπλαγχνίζομαι": {
+        "icon": "game-icons:on-target",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σταυρόω": {
+        "icon": "mdi:lightbulb-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συμφέρω": {
+        "icon": "mdi:flip-to-back",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συμφωνέω": {
+        "icon": "game-icons:sverd-i-fjell",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συνάγω": {
+        "icon": "mdi:alpha-e-circle-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συνέρχομαι": {
+        "icon": "mdi:clock-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συνίστημι": {
+        "icon": "ph:member-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συναντάω": {
+        "icon": "mdi:alpha-i-box-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "συνείδησις": {
+        "icon": "mdi:alpha-e-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σφραγίς": {
+        "icon": "ph:not-subset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σύν": {
+        "icon": "game-icons:pouch-with-beads",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σύνειμι": {
+        "icon": "game-icons:skull-with-syringe",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σύνοιδα": {
+        "icon": "mdi:radio-am",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "σύστασις": {
+        "icon": "mdi:relation-one-or-many-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τάλαντον": {
+        "icon": "ph:subset-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τέ": {
+        "icon": "tabler:arrow-bar-both",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τέλος": {
+        "icon": "ph:at-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τίς": {
+        "icon": "ph:greater-than-or-equal-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ταράσσω": {
+        "icon": "tabler:lock-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τηρέω": {
+        "icon": "tabler:arrow-bar-to-down-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τιμάω": {
+        "icon": "ph:at-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τοιοῦτος": {
+        "icon": "ph:subset-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "τότε": {
+        "icon": "game-icons:tarot-00-the-fool",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "υἱός": {
+        "icon": "ph:not-member-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φέρω": {
+        "icon": "mdi:relation-zero-or-one-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φίλος": {
+        "icon": "mdi:alpha-i-circle",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φημί": {
+        "icon": "mdi:relation-zero-or-one-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φυλάσσω": {
+        "icon": "mdi:desk-lamp-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φυλή": {
+        "icon": "tabler:circle-dashed-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "φωνέω": {
+        "icon": "tabler:letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χάρις": {
+        "icon": "mdi:relation-zero-or-one-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χαμαί": {
+        "icon": "game-icons:sound-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χαρίζομαι": {
+        "icon": "mdi:coffee-to-go",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χειροτονέω": {
+        "icon": "tabler:creative-commons-by",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χρόνος": {
+        "icon": "ph:subset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χρύσεος": {
+        "icon": "game-icons:rod-of-asclepius",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "χωρίς": {
+        "icon": "game-icons:at-sea",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀκολουθέω": {
+        "icon": "tabler:transfer-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀκροατής": {
+        "icon": "game-icons:potion-of-madness",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀλλότριος": {
+        "icon": "tabler:arrow-bar-to-left",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀμήν": {
+        "icon": "mdi:alpha-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀμφότερος": {
+        "icon": "tabler:arrow-merge-both",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀνά": {
+        "icon": "mdi:gate-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀνάστασις": {
+        "icon": "tabler:fold-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀναβλέπω": {
+        "icon": "tabler:circle-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀναιρέω": {
+        "icon": "mdi:pan-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀναλαμβάνω": {
+        "icon": "tabler:bell-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀνατίθημι": {
+        "icon": "ph:lightning-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀνατολή": {
+        "icon": "ph:superset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀντί": {
+        "icon": "ph:star-of-david",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀντίψυχος": {
+        "icon": "mdi:relation-many-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀνταποδίδωμι": {
+        "icon": "game-icons:axe-in-log",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀντιλέγω": {
+        "icon": "mdi:phone-in-talk",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀξίως": {
+        "icon": "tabler:square-letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπέναντι": {
+        "icon": "game-icons:over-infinity",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπέχω": {
+        "icon": "tabler:ease-in-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπατάω": {
+        "icon": "tabler:step-into",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀποδίδωμι": {
+        "icon": "tabler:square-rounded-letter-e-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀποθνῄσκω": {
+        "icon": "tabler:arrow-down-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀποκρίνομαι": {
+        "icon": "tabler:square-rounded-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀποτίθημι": {
+        "icon": "tabler:ad-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπό": {
+        "icon": "tabler:ce-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπόλαυσις": {
+        "icon": "ph:not-subset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀπόστολος": {
+        "icon": "game-icons:crown-of-thorns",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀρνέομαι": {
+        "icon": "tabler:circle-dashed-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀρχιερεύς": {
+        "icon": "tabler:a-b-2",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀσθένεια": {
+        "icon": "ph:subset-proper-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀσπάζομαι": {
+        "icon": "ph:sign-in-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀφίημι": {
+        "icon": "ph:superset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀφαιρέω": {
+        "icon": "tabler:id-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀφανίζω": {
+        "icon": "tabler:arrow-right-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἀφροσύνη": {
+        "icon": "ph:subset-of-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἁμαρτάνω": {
+        "icon": "game-icons:tarot-19-the-sun",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἁμαρτωλός": {
+        "icon": "tabler:sort-z-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἁρπαγή": {
+        "icon": "ph:not-member-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄλλος": {
+        "icon": "tabler:square-letter-e-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄνευ": {
+        "icon": "ph:finn-the-human",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄνθρωπος": {
+        "icon": "mdi:alpha-g",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄνω": {
+        "icon": "mdi:one-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄνωθεν": {
+        "icon": "tabler:arrow-left-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄξιος": {
+        "icon": "game-icons:logic-gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄρα": {
+        "icon": "mdi:code-greater-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄτερ": {
+        "icon": "tabler:arrow-up-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἄχρι": {
+        "icon": "tabler:mail-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἅμα": {
+        "icon": "tabler:at-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἅπτω": {
+        "icon": "tabler:arrow-bar-to-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἅτε": {
+        "icon": "mdi:relation-only-one-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐάν": {
+        "icon": "ph:arrows-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐγγύς": {
+        "icon": "ph:dev-to-logo-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐκ (ἐξ)": {
+        "icon": "tabler:zoom-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐκζητέω": {
+        "icon": "tabler:step-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐκφέρω": {
+        "icon": "ph:sign-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐκφεύγω": {
+        "icon": "ph:arrows-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐλπίζω": {
+        "icon": "ph:greater-than-or-equal-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐλπίς": {
+        "icon": "mdi:relation-many-to-zero-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐμβλέπω": {
+        "icon": "tabler:square-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐμμένω": {
+        "icon": "mdi:relation-one-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐν": {
+        "icon": "ph:arrows-in-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐνίστημι": {
+        "icon": "mdi:home-sound-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐναντίον": {
+        "icon": "ph:finn-the-human-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐνδόξως": {
+        "icon": "tabler:play-card-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐντεῦθεν": {
+        "icon": "tabler:arrow-right-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐνώπιον": {
+        "icon": "game-icons:rally-the-troops",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐξάγω": {
+        "icon": "mdi:clock-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐξήγησις": {
+        "icon": "ph:sign-in-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐξαριθμέω": {
+        "icon": "tabler:zoom-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπάνω": {
+        "icon": "mdi:power-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπί": {
+        "icon": "tabler:wash-dry-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπίσκεψις": {
+        "icon": "tabler:logic-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπαγγέλλομαι": {
+        "icon": "mdi:alpha-i-circle-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπακούω": {
+        "icon": "mdi:relation-many-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπερωτάω": {
+        "icon": "tabler:hexagon-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπιβλέπω": {
+        "icon": "tabler:hexagon-letter-i-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπιγινώσκω": {
+        "icon": "mdi:alpha-e-circle",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπιδίδωμι": {
+        "icon": "mdi:open-in-new",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπιμένω": {
+        "icon": "tabler:queue-pop-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπισκοπέω": {
+        "icon": "tabler:square-rounded-letter-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπισκοπή": {
+        "icon": "ph:member-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπιτήδευμα": {
+        "icon": "ph:less-than-or-equal-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐπονομάζω": {
+        "icon": "tabler:scan-letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐργάζομαι": {
+        "icon": "ph:sign-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἐσθίω": {
+        "icon": "mdi:relation-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἔθνος": {
+        "icon": "tabler:letter-a-small",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἔνοχος": {
+        "icon": "ph:corners-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἔρχομαι": {
+        "icon": "mdi:relation-only-one-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἕκαστος": {
+        "icon": "mdi:relation-one-or-many-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἕνεκα": {
+        "icon": "ph:member-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἕτερος": {
+        "icon": "mdi:relation-one-or-many-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἕως": {
+        "icon": "game-icons:saber-and-pistol",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἤ": {
+        "icon": "ph:greater-than-or-equal-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἥλιος": {
+        "icon": "ph:finn-the-human-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἥμερος": {
+        "icon": "mdi:relation-one-or-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἰδού": {
+        "icon": "mdi:email-mark-as-unread",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἰσχυρῶς": {
+        "icon": "mdi:alpha-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἱερόν": {
+        "icon": "game-icons:tarot-18-the-moon",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἱκανός": {
+        "icon": "tabler:letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἱλάσκομαι": {
+        "icon": "mdi:led-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἱλαστήριον": {
+        "icon": "ph:finn-the-human-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἴδε": {
+        "icon": "ph:dev-to-logo",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ἴδιος": {
+        "icon": "mdi:fit-to-screen-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὀνίνημι": {
+        "icon": "tabler:letter-i-small",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὀνομάζω": {
+        "icon": "mdi:cabin-a-frame",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὀπίσω": {
+        "icon": "game-icons:tarot-17-the-star",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὀφείλω": {
+        "icon": "game-icons:axe-in-stump",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὁ": {
+        "icon": "game-icons:tarot-16-the-tower",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὁποῖος": {
+        "icon": "ph:greater-than-or-equal-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὁράω": {
+        "icon": "mdi:exit-to-app",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὄρος": {
+        "icon": "tabler:arrow-bar-to-left-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὅπου": {
+        "icon": "ph:at-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὅπως": {
+        "icon": "tabler:zoom-in-area",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπέρ": {
+        "icon": "mdi:debug-step-over",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπήκοος": {
+        "icon": "mdi:coffee-to-go-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπηρετέω": {
+        "icon": "tabler:arrow-bar-to-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑποκάτω": {
+        "icon": "tabler:bell-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπολαμβάνω": {
+        "icon": "tabler:eye-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπό": {
+        "icon": "game-icons:school-of-fish",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὑπόκειμαι": {
+        "icon": "game-icons:fall-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὠδίνω": {
+        "icon": "ph:arrows-in-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὡς": {
+        "icon": "tabler:circle-dotted-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὥσπερ": {
+        "icon": "tabler:circle-letter-e-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὥστε": {
+        "icon": "tabler:circle-letter-e",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ὦ": {
+        "icon": "mdi:alpha-o",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      }
+    },
+    "latin": {
+      "accido, accidere, accidi": {
+        "icon": "tabler:eye-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "addo, addere, addidi, additus": {
+        "icon": "ph:dev-to-logo-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "adduco, adducere, adduxi, adductus": {
+        "icon": "tabler:eye-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "adipiscor, adipisci, adeptus sum": {
+        "icon": "tabler:fold-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "administratio, administrationis": {
+        "icon": "game-icons:potion-of-madness",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "aestimatio, aestimationis": {
+        "icon": "ph:member-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "affero, afferre, attuli, allatus": {
+        "icon": "tabler:arrow-bar-to-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "aio": {
+        "icon": "mdi:pan-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "alienus, aliena, alienum": {
+        "icon": "mdi:size-s",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "an": {
+        "icon": "game-icons:logic-gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "animaduerto, animaduertere, animaduerti, animaduersus": {
+        "icon": "tabler:arrow-bar-to-left-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "apte": {
+        "icon": "game-icons:face-to-face",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "apud": {
+        "icon": "game-icons:tarot-19-the-sun",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "arguo, arguere, argui, argutus": {
+        "icon": "ph:not-member-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "artifex, artificis": {
+        "icon": "game-icons:eye-of-horus",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ascensionis, f.": {
+        "icon": "tabler:lock-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "assero, asserere, asserui, assertus": {
+        "icon": "game-icons:on-target",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "atque (ac)": {
+        "icon": "game-icons:froe-and-mallet",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "atqui": {
+        "icon": "game-icons:plants-and-animals",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "aut": {
+        "icon": "ph:less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "aut . . aut": {
+        "icon": "tabler:logic-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "autem": {
+        "icon": "ph:star-and-crescent-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "careo, carere, carui, caritus": {
+        "icon": "ph:superset-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "causa": {
+        "icon": "game-icons:rally-the-troops",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "certe": {
+        "icon": "ph:at-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ceterus, cetera, ceterum": {
+        "icon": "ph:finn-the-human-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "colligo, colligere, collegi, collectus": {
+        "icon": "tabler:map-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "complector, complecti, complexus sum": {
+        "icon": "tabler:queue-pop-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "concludo, concludere, conclusi, conclusus": {
+        "icon": "tabler:home-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "confero, conferre, contuli, collatus": {
+        "icon": "ph:file-c",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "confessio, confessionis": {
+        "icon": "ph:member-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "congregatio, congregationis": {
+        "icon": "mdi:point-of-sale",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "conscientia, conscientiae": {
+        "icon": "ph:star-of-david",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "conscius, conscia, conscium": {
+        "icon": "mdi:table-of-contents",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "consolo, consolare, —, consolatus": {
+        "icon": "ph:less-than-or-equal-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "consummatio, consummationis": {
+        "icon": "ph:superset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "cooperor, cooperari, —, cooperatus sum": {
+        "icon": "game-icons:pouch-with-beads",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "coram": {
+        "icon": "ph:finn-the-human-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "corporalis, corporalis, corporale": {
+        "icon": "tabler:arrow-bar-to-down-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "cultura, culturae": {
+        "icon": "ph:superset-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "cupio, cupere, cupiui, cupitus": {
+        "icon": "mdi:alpha-a-box",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "cur": {
+        "icon": "mdi:power-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "de": {
+        "icon": "tabler:map-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "december, decembris, decembre": {
+        "icon": "mdi:relation-one-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "deleo, delere, deleui, deletus": {
+        "icon": "ph:sign-out-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "denique": {
+        "icon": "game-icons:tarot-00-the-fool",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "denuo": {
+        "icon": "tabler:arrow-right-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "descendo, descendere, descendi, descensus": {
+        "icon": "game-icons:fall-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "despicio, despicere, despexi, despectus": {
+        "icon": "tabler:lock-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "differo, differre, distuli, dilatus": {
+        "icon": "tabler:ad-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "diuinitus": {
+        "icon": "tabler:arrow-down-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "domesticus, domestica, domesticum": {
+        "icon": "game-icons:tarot-01-the-magician",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "dominicus, dominica, dominicum": {
+        "icon": "mdi:fit-to-screen-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "dominor, dominari, dominatus sum": {
+        "icon": "mdi:open-in-new",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "e (ex)": {
+        "icon": "tabler:transfer-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ecclesiasticus, ecclesiastica, ecclesiasticum": {
+        "icon": "ph:dev-to-logo-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "educo, educere, eduxi, eductus": {
+        "icon": "ph:sign-out-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "effero, efferre, extuli, elatus": {
+        "icon": "ph:corners-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "efficaciter": {
+        "icon": "mdi:email-mark-as-unread",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "efficax, efficacis": {
+        "icon": "game-icons:bowl-of-rice",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "effundo, effundere, effudi, effusus": {
+        "icon": "ph:sign-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "egredior, egredi, —, egressus sum": {
+        "icon": "tabler:ease-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "enitor, eniti, —, enisus (enixus) sum": {
+        "icon": "tabler:arrow-bar-to-right",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "episcopalis, episcopale": {
+        "icon": "tabler:a-b-2",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "et": {
+        "icon": "game-icons:saber-and-pistol",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "etenim": {
+        "icon": "ph:star-and-crescent-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "etsi": {
+        "icon": "tabler:flag-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "euangelicus, euangelica, euangelicum": {
+        "icon": "ph:finn-the-human-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "euangelizo, euangelizare, euangelizaui, euangelizatus": {
+        "icon": "game-icons:tarot-06-the-lovers",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "euenio, euenire, eueni, euentus": {
+        "icon": "ph:arrows-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "factum est": {
+        "icon": "ph:dev-to-logo-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "februarius, februaria, februarium": {
+        "icon": "tabler:ce-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "fore": {
+        "icon": "mdi:stretch-to-page-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "fortasse": {
+        "icon": "mdi:power-socket-it",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "fugo, fugare, fugaui, fugatus": {
+        "icon": "tabler:arrow-bar-to-up-dashed",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "funditus": {
+        "icon": "tabler:arrow-left-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "generalis, generalis, generale": {
+        "icon": "tabler:creative-commons-by",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "gigno, gignere, genui, genitus": {
+        "icon": "tabler:arrow-right-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "haeresis, haeresis": {
+        "icon": "ph:member-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "hinc": {
+        "icon": "tabler:arrow-up-from-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ianuarius, ianuaria, ianuarium": {
+        "icon": "tabler:id-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ibidem": {
+        "icon": "game-icons:look-at",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "idcirco": {
+        "icon": "mdi:mower-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ideo": {
+        "icon": "mdi:led-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "illic": {
+        "icon": "game-icons:over-infinity",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "imprimis": {
+        "icon": "game-icons:tarot-15-the-devil",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "in": {
+        "icon": "tabler:step-into",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "incarno, incarnare, incarnaui, incarnatus": {
+        "icon": "mdi:debug-step-into",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "indico, indicare, indicaui, indicatus": {
+        "icon": "mdi:clock-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "induo, induere, indui, indutus": {
+        "icon": "mdi:lightbulb-on-30",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "infero, inferre, intuli, illatus": {
+        "icon": "ph:sign-in-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "infra": {
+        "icon": "mdi:lighthouse-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "innitor, inniti, innisus sum": {
+        "icon": "game-icons:sound-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "inquam": {
+        "icon": "mdi:alpha-i",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "insero, inserere, inserui, insertus": {
+        "icon": "mdi:lightbulb-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "instituo, instituere, institui, institutus": {
+        "icon": "tabler:flag-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "insum, inesse, infui, infuturus": {
+        "icon": "ph:sign-in-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "interim": {
+        "icon": "ph:finn-the-human",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "intersum, interesse, interfui, interfuturus": {
+        "icon": "tabler:zoom-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "introitus, introitus, m.": {
+        "icon": "ph:corners-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "israel, israelis": {
+        "icon": "ph:not-subset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "itaque": {
+        "icon": "tabler:logic-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "iulius, iulia, iulium": {
+        "icon": "mdi:open-in-app",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "iunius, iunia, iunium": {
+        "icon": "mdi:api-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "iurisdictio, iurisdictionis": {
+        "icon": "ph:subset-of-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "iustifico, iustificare, iustificaui, iustificatus": {
+        "icon": "mdi:fit-to-page",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "iuuentus, iuuentutis": {
+        "icon": "ph:superset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "kyrie": {
+        "icon": "mdi:alpha-o",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "late": {
+        "icon": "ph:star-and-crescent-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "liqueo, liquere, licui": {
+        "icon": "ph:arrows-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "longe": {
+        "icon": "tabler:play-card-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "martius, martia, martium": {
+        "icon": "mdi:arrange-send-to-back",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "memor": {
+        "icon": "game-icons:sands-of-time",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "memoro, memorare, memoraui, memoratus": {
+        "icon": "game-icons:crown-of-thorns",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "memoror, memorari, —, memoratus sum": {
+        "icon": "ph:member-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "mille": {
+        "icon": "tabler:wash-dry-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "modo": {
+        "icon": "mdi:relation-only-one-to-zero-or-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "moralis, moralis, morale": {
+        "icon": "mdi:alpha-w",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "mysticus, mystica, mysticum": {
+        "icon": "tabler:transfer-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "necnon": {
+        "icon": "ph:star-and-crescent",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "neue": {
+        "icon": "mdi:gate-or",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "nitor, niti, nisus sum": {
+        "icon": "mdi:desk-lamp-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "notio, notionis": {
+        "icon": "ph:less-than-or-equal-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ob": {
+        "icon": "game-icons:school-of-fish",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "obeo, obire, obiui (obii), obitus": {
+        "icon": "mdi:relation-many-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "obiectum, obiecti": {
+        "icon": "mdi:alpha-s",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "oboedio, oboedire, oboediui, oboeditus": {
+        "icon": "ph:dev-to-logo-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "occasus, occasus, m.": {
+        "icon": "game-icons:tarot-05-the-hierophant",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "oeconomicus, oeconomica, oeconomicum": {
+        "icon": "tabler:arrow-down-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "palma, palmae, f.": {
+        "icon": "ph:subset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "passim": {
+        "icon": "ph:star-and-crescent-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "paternus, -a, -um": {
+        "icon": "tabler:xbox-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "patriarcha, patriarchae": {
+        "icon": "ph:member-of-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "perfectio, perfectionis": {
+        "icon": "ph:dev-to-logo",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "perhibeo, perhibere, perhibui, perhibitus": {
+        "icon": "tabler:queue-pop-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "pertineo, pertinere, pertinui, pertentus": {
+        "icon": "tabler:arrow-bar-to-left",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "politicus, politica, politicum": {
+        "icon": "game-icons:tarot-03-the-empress",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "popularis, popularis, populare": {
+        "icon": "game-icons:tarot-17-the-star",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "possideo, possidere, possedi, possessus": {
+        "icon": "ph:subset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "postea": {
+        "icon": "mdi:led-variant-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "postmodum": {
+        "icon": "tabler:sort-z-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "postremo": {
+        "icon": "game-icons:at-sea",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "postulo, postulare, postulaui, postulatus": {
+        "icon": "game-icons:all-for-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "praesum, praeesse, praefui, praefuturus": {
+        "icon": "tabler:ease-in-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "primarius, primaria, primarium": {
+        "icon": "game-icons:tarot-09-the-hermit",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "primas, primatis": {
+        "icon": "ph:finn-the-human-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "proinde": {
+        "icon": "mdi:exit-to-app",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "promissio, promissionis": {
+        "icon": "ph:subset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "propter": {
+        "icon": "mdi:magnet-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "prosequor, prosequi, —, prosecutus sum": {
+        "icon": "game-icons:skull-with-syringe",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "prouideo, prouidere, prouidi, prouisus": {
+        "icon": "mdi:format-letter-starts-with",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "publicus, publica, publicum": {
+        "icon": "game-icons:tarot-18-the-moon",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quaeso/quaesumus": {
+        "icon": "game-icons:i-beam",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quam": {
+        "icon": "mdi:code-less-than",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quamquam": {
+        "icon": "tabler:fold-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quamuis": {
+        "icon": "tabler:home-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quapropter": {
+        "icon": "game-icons:logic-gate-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "que": {
+        "icon": "mdi:gate-and",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quemadmodum": {
+        "icon": "game-icons:tarot-21-the-world",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quidem": {
+        "icon": "ph:at-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quocumque": {
+        "icon": "ph:sign-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quodammodo": {
+        "icon": "tabler:letter-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "quodsi": {
+        "icon": "ph:star-and-crescent-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "regularis, regularis, regulare": {
+        "icon": "game-icons:axe-in-log",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "relatio, relationis": {
+        "icon": "ph:superset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "reliquus, reliqua, reliquum": {
+        "icon": "ph:member-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "reperio, reperire, repperi, repertus": {
+        "icon": "mdi:mower-bag-on",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "respicio, respicere, respexi, respectus": {
+        "icon": "ph:at-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "reuelatio, reuelationis": {
+        "icon": "ph:subset-of-light",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "reuerentia, reuerentiae": {
+        "icon": "game-icons:rod-of-asclepius",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "rite": {
+        "icon": "tabler:arrow-left-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "sapio, sapere, sapiui": {
+        "icon": "ph:not-subset-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "satisfacio, satisfacere, satisfeci, satisfactus": {
+        "icon": "mdi:alpha-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "secundum": {
+        "icon": "tabler:arrow-bar-to-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "secus": {
+        "icon": "mdi:format-letter-ends-with",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "sententia, sententiae": {
+        "icon": "game-icons:pick-of-destiny",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "seu": {
+        "icon": "ph:greater-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "similis, simile (+ dat.)": {
+        "icon": "mdi:flip-to-back",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "simpliciter": {
+        "icon": "tabler:letter-w",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "simul": {
+        "icon": "tabler:at-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "siquidem": {
+        "icon": "mdi:clock-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "siue": {
+        "icon": "mdi:code-less-than-or-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "solacium, solaci(i)": {
+        "icon": "game-icons:axe-in-stump",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "soleo, solere, solitus sum": {
+        "icon": "tabler:ease-in",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "solum": {
+        "icon": "mdi:relation-only-one-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "solummodo": {
+        "icon": "mdi:relation-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "solus, -a, -um": {
+        "icon": "mdi:relation-only-one-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "specialiter": {
+        "icon": "tabler:arrow-up-to-arc",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "specio, specere, spexi, spectus": {
+        "icon": "ph:at-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "spiritalis, spiritalis, spiritale": {
+        "icon": "ph:finn-the-human-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "spiritualis, spirituale": {
+        "icon": "game-icons:tarot-16-the-tower",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "sub": {
+        "icon": "tabler:bell-down",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "subsum, subesse, subfui, subfuturus": {
+        "icon": "tabler:sort-a-z",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "subuenio, subuenire, subueni, subuentus": {
+        "icon": "ph:dev-to-logo-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "super": {
+        "icon": "mdi:debug-step-over",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "supero, superare, superaui, superatus": {
+        "icon": "game-icons:tarot-07-the-chariot",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "surgo, surgere, surrexi, surrectus": {
+        "icon": "tabler:mail-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "sursum": {
+        "icon": "mdi:lightbulb-on-20",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "suscipio, suscipere, suscepi, susceptus": {
+        "icon": "mdi:pan-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "sustento, sustentare, sustentaui, sustentatus": {
+        "icon": "tabler:zoom-out",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "talis, tale": {
+        "icon": "mdi:home-floor-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "taliter": {
+        "icon": "ph:lightning-a",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "tam": {
+        "icon": "tabler:a-b",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "tamquam": {
+        "icon": "mdi:flip-to-front",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "tandem": {
+        "icon": "ph:at-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "tantum": {
+        "icon": "mdi:relation-only-one-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "tantummodo": {
+        "icon": "mdi:relation-only-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "testor, testari, testatus sum": {
+        "icon": "tabler:a-b-off",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "traditio, traditionis": {
+        "icon": "tabler:bell-up",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "uel": {
+        "icon": "ph:less-than-or-equal-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "uictus, uictus": {
+        "icon": "ph:subset-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "uiuifico, uiuificare, uiuificaui, uiuificatus": {
+        "icon": "mdi:relation-one-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "uix": {
+        "icon": "mdi:relation-one-or-many-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ultra": {
+        "icon": "mdi:lightbulb-on-10",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "unicus, unica, unicum": {
+        "icon": "mdi:relation-zero-or-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "unigenitus, -a, -um": {
+        "icon": "mdi:relation-only-one-to-zero-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "usque": {
+        "icon": "mdi:dev-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "ut quid": {
+        "icon": "tabler:congruent-to",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "utinam": {
+        "icon": "mdi:relation-one-to-only-one",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "utrum": {
+        "icon": "ph:less-than-or-equal-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "zelus, zeli": {
+        "icon": "ph:not-subset-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      }
+    }
+  }
+}
