@@ -193,9 +193,14 @@ def repair_appendix(forms: dict[str, tuple[str, str]], dictionary: dict, write: 
         group["entries"] = kept
 
     # 分節即標籤，所以移動一筆就是改它的標籤。
+    # 上一輪先建了 id 是英文的節（ancestors／prophets），這張表其餘的節 id 都是
+    # 中文類名。id 一半中文一半英文，靠 id 找節的程式就會找不到——順手正規化。
+    for group in table["groups"]:
+        if group.get("titleZh"):
+            group["id"] = group["titleZh"]
     by_title = {g.get("titleZh") or g.get("id"): g for g in table["groups"]}
-    ancestors = by_title.setdefault("先祖與族長", {"id": "ancestors", "titleZh": "先祖與族長", "entries": []})
-    prophets = by_title.setdefault("先知", {"id": "prophets", "titleZh": "先知", "entries": []})
+    ancestors = by_title.setdefault("先祖與族長", {"id": "先祖與族長", "titleZh": "先祖與族長", "entries": []})
+    prophets = by_title.setdefault("先知", {"id": "先知", "titleZh": "先知", "entries": []})
     if ancestors not in table["groups"]:
         table["groups"].append(ancestors)
     if prophets not in table["groups"]:
@@ -218,7 +223,7 @@ def repair_appendix(forms: dict[str, tuple[str, str]], dictionary: dict, write: 
                 # 族長也不是先知，歸其他人名。
                 entry["category"] = "其他人名"
                 by_title.setdefault(
-                    "其他人名", {"id": "other-people", "titleZh": "其他人名", "entries": []}
+                    "其他人名", {"id": "其他人名", "titleZh": "其他人名", "entries": []}
                 )["entries"].append(entry)
                 moved += 1
             else:

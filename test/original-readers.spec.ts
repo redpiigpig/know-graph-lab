@@ -394,15 +394,23 @@ describe("complete 50-lesson Hebrew private reader", () => {
     // order in scripts/proper_name_categories.py -- geography, then divine
     // names, then people from specific to general, with 待歸類 last.
     const names = payload.tables.find((table) => table.id === "hbo-appendix-proper-names");
+    // 2026-08-29 使用者重定人名分類：「族長與先知」拆成「先祖與族長」與「先知」，
+    // 節期歸曆法表（安息日本來在兩張表各一張卡）。一個名字只出現在一節裡，
+    // 所以節名就是卡上那一個標籤。
     expect(names?.groups.map((group) => group.id)).toEqual([
       "民族與國名",
       "地名",
       "神名與稱號",
-      "族長與先知",
       "君王",
       "其他人名",
-      "節期與聖日",
+      "先祖與族長",
+      "先知",
     ]);
+    // 一個名字只能出現在一節裡：跨節重複就是同一個詞印兩張卡。
+    const everyName = names!.groups.flatMap((group) =>
+      group.entries.map((entry) => entry.glossZh),
+    );
+    expect(new Set(everyName).size).toBe(everyName.length);
     // Divine names stay in the lessons, so their rows carry a lesson number.
     const divine = names?.groups.find((group) => group.id === "神名與稱號");
     expect(divine?.entries.every((entry) => typeof entry.lesson === "number")).toBe(true);
