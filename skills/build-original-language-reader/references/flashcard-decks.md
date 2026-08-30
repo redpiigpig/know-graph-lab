@@ -140,6 +140,48 @@ Tabler，25,059 個概念，`scripts/iconify_card_images.py`），比對分三�
 背進去，而且背了改不掉。所以 `*-card-icons.json` 分兩區：`cards` 是放行的
 （本名完全相符），`pendingReview` 是待審的 2,507 張，逐張看過才可以搬進 `cards`。
 
+### 放行的那 431 張也不是自動安全的（2026-08-30 查出）
+
+放行的判準是「圖示本名與候選詞完全相符」——但**相符在第幾個義項上，判準沒有
+問**。Strong's 與 Whitaker 的釋義把引申義、冷僻義並列，於是：
+
+| 卡 | 中文 | 配到 | 命中的是 |
+|---|---|---|---|
+| בָּרָא | 創造；砍伐 | `tabler:cut` | 第二義「砍伐」——剪刀在教創造 |
+| מִקְנֶה | 牲畜 | `mdi:water` | 釋義裡的 watering |
+| רֹעֶה | 牧人 | `ph:dog` | 牧羊犬不是牧人 |
+| מִצְוָה | 誡命 | `ph:spiral` | 螺旋 |
+| עָרֵל | 未受割禮的 | `game-icons:razor` | 剃刀，方向相反 |
+| εἰ／licet | 如果／雖然 | `ph:shuffle` | 洗牌 |
+| βελτίων | 更好的 | `game-icons:chart` | 長條圖 |
+| πρᾶξις | 行為 | `ph:function` | 數學的 f(x) |
+
+`scripts/audit_card_icons.py` 把「候選詞不在第一個義項」的挑出來排在前面：
+431 張裡有 **245 張**是這種，逐張看過大多是同義（多數／群眾、看見／眼睛）沒問題，
+確實錯的約兩成。**所以要人看的不是 2,507 張，是 2,938 張**（431 放行＋2,507 待審），
+只是放行那批錯得比較稀。
+
+    python scripts/audit_card_icons.py                      # 三語言的放行區，只列可疑的
+    python scripts/audit_card_icons.py --lang hebrew --all  # 連沒疑點的也列
+    python scripts/audit_card_icons.py --section pending    # 待審那一區
+
+中文欄一律讀 `build_flashcards.py` 讀的那份（希伯來與希臘各有審過的 by-lemma
+詞義檔，拉丁在詞表自己身上）。**不要讀詞表的 `glossZh`**：希伯來詞表那一欄一千筆
+全是空的，拿它當中文欄會印出一張空表，而表本身看起來跑完了。
+
+### 帳本會被重跑洗掉——已經擋住（2026-08-30）
+
+`cards`／`pendingReview` 這個分區是人工審圖的帳本，沒有任何程式讀得懂它：
+`build_flashcards.py` 只讀 `cards`（讀到什麼就印什麼），而
+`iconify_card_images.py --write` 舊版**無論哪一層配到的都寫進 `cards`**。也就是
+說任何人再跑一次 `--write`，那 2,507 張沒人看過、約三分之一是錯的圖就整批進了
+印卡流程，沒有錯誤訊息、沒有警告。這正是 silent-failures.md 第 18 條。
+
+現在該腳本會先把舊帳本讀回來，帳本裡已有的卡不重配（保住人工判斷），舊帳本
+佔用的圖示也算進 `taken`（否則重跑會把同一張圖再發給第二張卡），新配到的只有
+「本名完全相符」那一層自動進 `cards`，其餘一律進 `pendingReview`。三種語言重跑
+都是 0 增 0 減，可以安全地反覆跑。
+
 ### 還沒決定的事
 
 owner 尚未在三條路裡選：①逐批手挑那 2,507 張＋仍共用的；②回到「同一詞族可共用」

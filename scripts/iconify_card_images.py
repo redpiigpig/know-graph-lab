@@ -194,6 +194,20 @@ def variants(names: dict[str, str], keyword: str) -> list[tuple[str, str]]:
     return hits
 
 
+def exact_name(record: dict) -> bool:
+    """這張配圖是不是「圖示本名與候選詞完全相符」那一層。
+
+    只有這一層可以不經人看就放行；第 2、3 層（同概念換畫法、循舊圖概念再找）
+    逐張看過大約三分之一是錯的，一律進 pendingReview。
+
+    比對前兩邊都把連字號當空白：候選詞會出現 `look-at`、`willow-tree` 這種兩詞
+    相接的寫法，圖示本名同樣用連字號，不正規化就會把對的判成不對。
+    """
+
+    return (record["icon"].split(":", 1)[1].replace("-", " ")
+            == (record.get("glossEn") or "").replace("-", " "))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="替共用圖的卡另找一張圖")
     parser.add_argument("--lang", choices=sorted(LANGS), required=True)
@@ -247,9 +261,32 @@ def main() -> None:
         rejects = set(json.loads(reject_file.read_text(encoding="utf-8"))["pairs"])
     print(f"  人工排除的組合 {len(rejects)}")
 
+    # 這個檔是人工審圖的帳本，不是每次重跑都能重算的東西。`cards` 是放行的、
+    # 會真的印上卡片（build_flashcards.py 只讀這一個 key），`pendingReview` 是
+    # 待審的。舊版無論哪一層配到的都寫進 `cards`，所以只要有人再跑一次 --write，
+    # 兩千多張沒人看過、約三分之一是錯的圖就會直接進印卡流程——mdi:delete-forever
+    # 給「永遠」是垃圾桶、game-icons:swiss-army-knife 給「軍隊」是瑞士刀。
+    # 這正是 silent-failures.md 第 18 條：別的流程整份重建，你加的欄位就無聲消失。
+    # 所以先把舊帳本讀回來，帳本裡有的卡一律不重配（保住人工判斷）。
+    ledger_path = config["output"]
+    approved: dict[str, dict] = {}
+    pending: dict[str, dict] = {}
+    if ledger_path.exists():
+        previous = json.loads(ledger_path.read_text(encoding="utf-8"))
+        approved = dict(previous.get("cards") or {})
+        pending = dict(previous.get("pendingReview") or {})
+        print(f"  沿用舊帳本：已放行 {len(approved)}、待審 {len(pending)}")
+
+    # 舊帳本佔用的圖示也要算進 taken，否則重跑會把同一張圖再發給第二張卡，
+    # 而「一張圖只出現在一張卡上」正是這支腳本存在的理由。
     taken = {record["hexcode"] for record in images.values()}
+    taken.update(record["icon"] for record in approved.values())
+    taken.update(record["icon"] for record in pending.values())
+
     assigned: dict[str, dict] = {}
     for row in shared:
+        if row["key"] in approved or row["key"] in pending:
+            continue                      # 帳本裡已經有了，不重配
         options: list[tuple[str, str]] = []
         for candidate in keywords(row["glossEn"], module):
             if candidate in module.AMBIGUOUS_EN:
@@ -293,7 +330,15 @@ def main() -> None:
             break
 
     by_set = collections.Counter(record["source"] for record in assigned.values())
-    print(f"  另配到獨立圖示 {len(assigned)} 張：{dict(by_set)}")
+    print(f"  這一輪另配到獨立圖示 {len(assigned)} 張：{dict(by_set)}")
+
+    fresh_cards = {key: record for key, record in assigned.items() if exact_name(record)}
+    fresh_pending = {key: record for key, record in assigned.items() if not exact_name(record)}
+    approved.update(fresh_cards)
+    pending.update(fresh_pending)
+    print(f"  其中本名完全相符可直接放行 {len(fresh_cards)} 張，"
+          f"其餘 {len(fresh_pending)} 張進待審")
+    print(f"  帳本合計：已放行 {len(approved)}、待審 {len(pending)}")
 
     if args.write:
         config["output"].write_text(
@@ -306,8 +351,11 @@ def main() -> None:
                         "mdi": "Apache 2.0 — Material Design Icons",
                         "tabler": "MIT — Tabler Icons",
                     },
-                    "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。",
-                    "cards": assigned,
+                    "note": "只補「與不相干的詞共用一張圖」的卡；配不到就維持原圖。"
+                            " ｜ 只有『圖示本名與英文詞義完全相符』的留在 cards（印卡只讀這一個 key）；"
+                            "靠同概念換畫法猜出來的放 pendingReview，逐張看過才可放行。",
+                    "cards": approved,
+                    "pendingReview": pending,
                 },
                 ensure_ascii=False,
                 indent=2,
