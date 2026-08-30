@@ -17,7 +17,7 @@
 
 index：public/content/research-data/pct/biblio-ndltd.json
 
-  python -X utf8 scripts/thesis_ndltd.py --search
+  python -X utf8 scripts/thesis_ndltd.py --search        # 一組一組跑、每組存檔，可續跑
   python -X utf8 scripts/thesis_ndltd.py --search --query "王憲治 鄉土神學"
 """
 import argparse
@@ -156,24 +156,34 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--search", action="store_true")
     ap.add_argument("--query")
+    ap.add_argument("--force", action="store_true", help="已完成的組也重跑")
     args = ap.parse_args()
     if not args.search:
         ap.print_help()
         return
     qs = [[args.query, "自訂"]] if args.query else [[q, n] for q, n in QUERIES]
     NODE_SCRIPT.write_text(JS, encoding="utf-8")
-    r = subprocess.run(["node", str(NODE_SCRIPT), json.dumps(qs, ensure_ascii=False)],
-                       cwd=REPO, capture_output=True, text=True, encoding="utf-8", timeout=3600)
-    sys.stderr.write(r.stderr or "")
-    if not r.stdout.strip():
-        raise SystemExit("NDLTD 沒有回傳結果")
-    data = []
-    for g in json.loads(r.stdout):
-        items = parse(g.get("text", ""))
-        data.append({"query": g["query"], "note": g["note"], "count": len(items), "items": items})
-        print(f"  {g['query']}：取得 {len(items)} 筆")
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    # 🚨 一次把 14 組丟給 node 會撞逾時，而且**跑完才回傳＝中斷就全部白跑**（踩過一次，
+    # 一小時的結果全丟）。改成一組一組跑、每組存檔；已在檔裡的組跳過，可續跑。
+    data = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else []
+    done = {d["query"] for d in data if d.get("count")}
+    todo = [q for q in qs if q[0] not in done or args.force]
+    print(f"待查 {len(todo)} 組（已完成 {len(done)} 組）", flush=True)
+    for one in todo:
+        r = subprocess.run(["node", str(NODE_SCRIPT), json.dumps([one], ensure_ascii=False)],
+                           cwd=REPO, capture_output=True, text=True, encoding="utf-8", timeout=900)
+        sys.stderr.write(r.stderr or "")
+        if not r.stdout.strip():
+            print(f"  {one[0]}：沒有回傳，跳過", flush=True)
+            continue
+        for g in json.loads(r.stdout):
+            items = parse(g.get("text", ""))
+            data = [d for d in data if d["query"] != g["query"]]
+            data.append({"query": g["query"], "note": g["note"], "count": len(items),
+                         "truncated": g.get("pages", 0) > 8, "items": items})
+            print(f"  {g['query']}：取得 {len(items)} 筆", flush=True)
+        OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(data)} 組檢索 / {sum(d['count'] for d in data)} 筆學位論文 → {OUT}")
 
 
