@@ -98,7 +98,7 @@ Gemini／NVIDIA／OpenRouter 的額度，而整夜驅動器
 
 ---
 
-## 5. 現況（2026-08-28）
+## 5. 現況（2026-08-30）
 
 ### ✅ 原文＋英譯＋繁中三欄全數完成（2026-08-29）
 
@@ -144,11 +144,28 @@ TAM V,1 452 ＝ PHI 263861、TAM V,1 535 ＝ PHI 263959，同一部書內編號�
 
 ---
 
+## 5b. 已接進 reader（2026-08-29）
+
+`data/hellenika/sources/index.ts` 原本只認 `cgrn` 與 `phi` 兩種來源，現已認第三種
+`perseus`，`pivot` 也多一個 `'perseus-eng'`。三處要一起改，漏一處就是靜默失效：
+
+| 檔 | 改了什麼 |
+|---|---|
+| `sources/index.ts` | `AlignedText.source` 加 `'perseus'`；多 `slug`／`author`／`lines_total` 三欄；加 `./text/*.json` 的 glob；`normalise()` 收第三種 source |
+| 同上 `alignedSlug()` | **文獻沒有庫編號，路由改用檔名** —— `/hellenika/text/theogony`，不是「庫-編號」 |
+| `pages/hellenika/text/[slug].vue` | 篇首標籤依來源分「文獻」（綠）與「銘文／紙草」（藍）；文獻另顯作者與詩行總數 |
+
+排序：同來源時 `perseus` 依 slug 字典序，銘文仍依數字編號。
+
+---
+
 ## 6. 加一篇的流程
 
 1. 在 `TARGETS` 加一筆（slug／中英題／作者／所屬卷 key／siglum／grc 與 eng 的 urn）。
 2. `--fetch {slug} --lines 1-115` 先試跑一小段，肉眼確認兩欄對得上。
 3. 確認後 `--fetch {slug}` 全篇。
 4. 填 `names`（專名定譯先過 [[translation-glossary]]）。
-5. 翻譯（第二步，另跑；引擎鏈同 repo 慣例 Gemini → NVIDIA → OpenRouter）。
+5. 翻譯（第二步，另跑）：`python scripts/hellenika_text_align.py --file {slug}`。
+   引擎鏈 Gemini → NVIDIA → OpenRouter → Haiku；要只走 Haiku 就設
+   `HELLENIKA_ENGINE=haiku`。先加 `--limit 1` 跑一批肉眼看過再全開。
 6. 書目條目補 `link` 指向 reader。
