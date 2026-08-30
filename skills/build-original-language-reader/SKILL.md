@@ -49,7 +49,11 @@ Read `references/silent-failures.md` before wiring a new language, and before be
 
 Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio. Its first section is the layout the three readers share; a new reader matches it rather than inventing its own. Printed flashcard decks are their own skill, `original-reader-flashcards`; `references/flashcard-decks.md` holds their per-deck state.
 
-Read `references/flashcard-decks.md` before building or changing a printed flashcard deck.
+Read `references/flashcard-decks.md` before building or changing a printed flashcard deck;
+it also carries the sheet geometry that makes a stack cuttable and the state of the
+one-picture-per-card rule. For the Hebrew proper-name appendix — its four person
+categories, the three kinds of duplicate, and the two traps that make a repair land
+on nothing — read `references/hebrew-appendix-names.md`.
 
 When working in `know-graph-lab`, read `references/know-graph-lab-baseline.md`. Treat all paths and counts there as checkout-specific facts that must be verified live.
 

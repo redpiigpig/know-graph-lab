@@ -6,7 +6,7 @@ each. They follow the household's existing
 English tutoring deck (`家教單字卡.pdf` on the desktop) so the same guillotine
 and the same printer settings work for all of them.
 
-## State, 2026-08-28
+## State, 2026-08-30
 
 | Deck | Cards | Pages | With picture | Part of speech blank | File |
 |---|---:|---:|---:|---:|---|
@@ -93,6 +93,58 @@ Ruled out, so nobody spends the time again:
 - **Openclipart** (CC0, would have been ideal for coverage) has a dead JSON API
   — the search endpoint returns HTML. Scraping it would also mix dozens of
   artists' styles in one deck.
+
+## 一圖一卡：規則、現況與那條擋住它的天花板
+
+owner 2026-08-29：「同一種語言的圖，我嚴格禁止用同一張圖，即使是眼睛的單數或
+複數，也要用不同眼睛的卡通圖。」規則從「不相干的詞不共用」收緊成**同一語言內
+一張圖只出現在一張卡上**（跨語言仍可共用——πῦρ 與 אֵשׁ 都用火是刻意的）。
+
+### 起點與現況
+
+| | 原本要換 | 目前仍共用 |
+|---|---:|---:|
+| 聖經希伯來文 | 475 | 37 |
+| 通用希臘文 | 1,464 | 280 |
+| 教會拉丁文 | 1,543 | 227 |
+
+**但那三個「目前仍共用」是把自動配的圖全部算進去的數字。逐張看過之後，自動配
+的有大約三分之一是錯的，已經擋下來，所以實際進卡的只有本名完全相符的 431 張，
+仍共用的回到 387／1,308／1,356。** 這件事還沒完成，不要照上表回報。
+
+### 天花板在哪
+
+OpenMoji 扣掉旗幟與膚色變體只剩約 2,185 張可用，而希臘與拉丁各要 2,000 張
+不重複——靠它本身做不到。第二層走 Iconify 四庫（game-icons／Phosphor／MDI／
+Tabler，25,059 個概念，`scripts/iconify_card_images.py`），比對分三層：
+
+1. 圖示本名與英文詞義**完全相符**；
+2. 同概念的其他畫法（`eye` → `eye-off`、`eye-closed`），只認以連字號分隔的
+   整詞，`ear` 不可以命中 `search`／`earth`；
+3. 前兩層都沒有時，用它現在共用的那張圖的 OpenMoji 概念名再走第 2 層。
+
+### 為什麼第 2、3 層的結果一律要人看過
+
+接觸表（`flashcard_contact_sheet.py --audit-icons`）第一頁就有：
+
+| 卡 | 配到 | 實際是 |
+|---|---|---|
+| 弟兄 | `mdi:point-of-sale` | 刷卡機 |
+| 永遠；久遠 | `mdi:delete-forever` | 垃圾桶（命中 forever） |
+| 中間；裡面 | `ph:finn-the-human` | 卡通《探險活寶》主角 |
+| 生命；一生 | `game-icons:life-bar` | 電玩血條 |
+| 軍隊 | `game-icons:swiss-army-knife` | 瑞士刀（命中 army） |
+| 頭；頂；首領 | `game-icons:top-hat` | 高禮帽（命中 top） |
+
+**錯圖比共用圖更糟**：共用只是兩張卡指向同一個意思；錯圖是把一個不存在的意思
+背進去，而且背了改不掉。所以 `*-card-icons.json` 分兩區：`cards` 是放行的
+（本名完全相符），`pendingReview` 是待審的 2,507 張，逐張看過才可以搬進 `cards`。
+
+### 還沒決定的事
+
+owner 尚未在三條路裡選：①逐批手挑那 2,507 張＋仍共用的；②回到「同一詞族可共用」
+（所有「不」字共用一個禁止符號），只在指定的幾組上做到完全不重複；③只在 owner
+指定的組（眼睛、手、人）做到完全不重複。**沒得到答覆前不要自行放行 pendingReview。**
 
 ## Sheet
 
