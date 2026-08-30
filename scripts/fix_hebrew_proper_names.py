@@ -40,6 +40,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ROOT / "data/originalReaders/vocabulary/hebrew-proper-names.json"
+# 印出來的附錄卡與網頁附錄表讀的是這一份，不是上面那一份詞表。第一次只改了
+# 詞表，卡片一點也沒變——改對了檔案才算修好。
+APPENDIX = ROOT / "output/source-cache/original-readers/hebrew-full/appendix-tables.json"
 GENESIS = ROOT / "output/source-cache/scripture/morphology/books/Gen.json"
 DICTIONARY = ROOT / "output/source-cache/scripture/fhl-strong-dictionary.json"
 
@@ -159,6 +162,112 @@ def genesis_forms() -> dict[int, tuple[str, str]]:
     return found
 
 
+def repair_appendix(forms: dict[str, tuple[str, str]], dictionary: dict, write: bool) -> None:
+    """同樣三件事，做在附錄表上：補世系、去重複、一節一個標籤。
+
+    附錄表的專名是按「節」分組的，而節名就是那九類——所以「一張卡一個標籤」
+    在這裡等於「一個名字只出現在一節裡」。以色列同時是人也是國，放在民族與
+    國名那一節，types 欄留著當證據。
+    """
+
+    payload = json.loads(APPENDIX.read_text(encoding="utf-8"))
+    table = next(t for t in payload["tables"] if "proper" in t["id"])
+
+    seen_names: set[str] = set()
+    seen_forms: set[str] = set()
+    dropped = []
+    for group in table["groups"]:
+        kept = []
+        for entry in group["entries"]:
+            name = NAME_FIXES.get(head_name(entry.get("glossZh", "")), head_name(entry.get("glossZh", "")))
+            form = strip_accents(entry.get("pointed", ""))
+            if name in seen_names or form in seen_forms:
+                dropped.append(name)
+                continue
+            seen_names.add(name)
+            seen_forms.add(form)
+            entry["name"] = name
+            entry["nameNote"] = (re.split(r"[；;]", entry.get("glossZh", ""), 1) + [""])[1].strip()
+            entry["glossZh"] = name
+            kept.append(entry)
+        group["entries"] = kept
+
+    # 分節即標籤，所以移動一筆就是改它的標籤。
+    by_title = {g.get("titleZh") or g.get("id"): g for g in table["groups"]}
+    ancestors = by_title.setdefault("先祖與族長", {"id": "ancestors", "titleZh": "先祖與族長", "entries": []})
+    prophets = by_title.setdefault("先知", {"id": "prophets", "titleZh": "先知", "entries": []})
+    if ancestors not in table["groups"]:
+        table["groups"].append(ancestors)
+    if prophets not in table["groups"]:
+        table["groups"].append(prophets)
+
+    moved = 0
+    for group in table["groups"]:
+        if group is ancestors or group is prophets:
+            continue
+        staying = []
+        for entry in group["entries"]:
+            name = entry["name"]
+            if name in ANCESTORS:
+                ancestors["entries"].append(entry); moved += 1
+            elif name in PROPHETS:
+                prophets["entries"].append(entry); moved += 1
+            elif (group.get("titleZh") or "") == "族長與先知":
+                # 舊節拆成「先祖與族長」與「先知」之後，這一節就不該再存在。
+                # 留在裡面的是約書亞（領袖）與約伯（受苦的義人），兩位都不是
+                # 族長也不是先知，歸其他人名。
+                entry["category"] = "其他人名"
+                by_title.setdefault(
+                    "其他人名", {"id": "other-people", "titleZh": "其他人名", "entries": []}
+                )["entries"].append(entry)
+                moved += 1
+            else:
+                staying.append(entry)
+        group["entries"] = staying
+
+    added = 0
+    for number, zh, category, note in ADDITIONS:
+        if zh in seen_names:
+            continue
+        pointed, ref = forms.get(number, ("", ""))
+        if not pointed:
+            continue
+        entry = dictionary.get(f"H{number:05d}", {})
+        ancestors["entries"].append(
+            {
+                "pointed": pointed,
+                "glossZh": zh,
+                "name": zh,
+                "nameNote": note,
+                "strong": f"H{number}",
+                "types": ["person"],
+                "category": "先祖與族長",
+                "firstOccurrence": ref,
+                "transliteration": "",
+                "frequency": None,
+                "verification": "附點取自創世記本文（OSHB）",
+            }
+        )
+        seen_names.add(zh)
+        added += 1
+
+    # 安息日在曆法表已經有一張卡了，專名表的「節期與聖日」再出一張就是同一個
+    # 詞出現兩次——跨表也算重複。節期歸曆法表。
+    for group in table["groups"]:
+        if (group.get("titleZh") or "") == "節期與聖日":
+            group["entries"] = []
+
+    # 舊的「族長與先知」那一節已經拆成兩節，空了就拿掉。
+    table["groups"] = [g for g in table["groups"] if g["entries"]]
+    total = sum(len(g["entries"]) for g in table["groups"])
+    print(f"附錄表：刪重複 {len(dropped)}（{dropped}）、改節 {moved}、補世系 {added}，共 {total} 條")
+    for group in table["groups"]:
+        print(f'    {group.get("titleZh") or group["id"]}: {len(group["entries"])}')
+    if write:
+        APPENDIX.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"  已寫入 {APPENDIX.relative_to(ROOT)}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
@@ -239,6 +348,7 @@ def main() -> int:
     labels = {item["printedLabel"] for item in kept}
     print("印在卡上的標籤（一張一個）:", sorted(labels))
 
+    repair_appendix(forms, dictionary, False)
     if not args.write:
         print("（未寫入；加 --write）")
         return 0
@@ -251,6 +361,7 @@ def main() -> int:
     )
     NAMES.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"已寫入 {NAMES.relative_to(ROOT)}")
+    repair_appendix(forms, dictionary, True)
     return 0
 
 

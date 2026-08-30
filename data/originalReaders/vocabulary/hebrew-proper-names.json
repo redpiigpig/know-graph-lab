@@ -42,7 +42,7 @@
       "categoryRoute": "place_names",
       "name": "以色列人",
       "printedLabel": "民族與國名",
-      "nameNote": "以色列"
+      "nameNote": ""
     },
     {
       "ordinal": 11,
@@ -245,7 +245,7 @@
       "categoryRoute": "historical_rulers",
       "name": "大衛",
       "printedLabel": "君王",
-      "nameNote": "耶西的幼子"
+      "nameNote": ""
     },
     {
       "pointed": "יְהוּדָה",
@@ -286,7 +286,7 @@
       "categoryRoute": "place_names",
       "name": "猶大",
       "printedLabel": "先祖與族長",
-      "nameNote": "猶大支派；猶大地"
+      "nameNote": ""
     },
     {
       "pointed": "שָׁאוּל",
@@ -403,7 +403,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞倫",
       "printedLabel": "其他人名",
-      "nameNote": "摩西的兄弟"
+      "nameNote": ""
     },
     {
       "pointed": "שְׁלֹמֹה",
@@ -442,7 +442,7 @@
       "categoryRoute": "historical_rulers",
       "name": "所羅門",
       "printedLabel": "君王",
-      "nameNote": "大衛的繼承者"
+      "nameNote": ""
     },
     {
       "pointed": "פְּלִשְׁתִּי",
@@ -559,7 +559,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "巴別",
       "printedLabel": "地名",
-      "nameNote": "巴比倫；巴比倫帝國"
+      "nameNote": ""
     },
     {
       "pointed": "יְהוֹשׁוּעַ",
@@ -717,7 +717,7 @@
       "categoryRoute": "place_names",
       "name": "摩押",
       "printedLabel": "民族與國名",
-      "nameNote": "摩押地；摩押人"
+      "nameNote": ""
     },
     {
       "pointed": "אֶפְרַיִם",
@@ -758,7 +758,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以法蓮",
       "printedLabel": "先祖與族長",
-      "nameNote": "以法蓮支派；以法蓮地"
+      "nameNote": ""
     },
     {
       "pointed": "אַבְרָהָם",
@@ -838,7 +838,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "便雅憫",
       "printedLabel": "先祖與族長",
-      "nameNote": "便雅憫支派；便雅憫地"
+      "nameNote": ""
     },
     {
       "pointed": "צִיּוֹן",
@@ -877,7 +877,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "錫安",
       "printedLabel": "地名",
-      "nameNote": "耶路撒冷的山"
+      "nameNote": ""
     },
     {
       "pointed": "אַשּׁוּר",
@@ -918,7 +918,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞述",
       "printedLabel": "民族與國名",
-      "nameNote": "亞述人；亞述國"
+      "nameNote": ""
     },
     {
       "pointed": "יִרְמְיָה",
@@ -998,7 +998,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "瑪拿西",
       "printedLabel": "先祖與族長",
-      "nameNote": "瑪拿西支派；瑪拿西地"
+      "nameNote": ""
     },
     {
       "pointed": "יוֹאָב",
@@ -1155,7 +1155,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "基列",
       "printedLabel": "地名",
-      "nameNote": "基列地"
+      "nameNote": ""
     },
     {
       "pointed": "אֲרָם",
@@ -1196,7 +1196,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞蘭",
       "printedLabel": "民族與國名",
-      "nameNote": "亞蘭地；亞蘭人"
+      "nameNote": ""
     },
     {
       "pointed": "חִזְקִיָּה",
@@ -1274,7 +1274,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "押沙龍",
       "printedLabel": "其他人名",
-      "nameNote": "大衛的兒子"
+      "nameNote": ""
     },
     {
       "pointed": "שֹׁמְרוֹן",
@@ -1352,7 +1352,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以撒",
       "printedLabel": "先祖與族長",
-      "nameNote": "亞伯拉罕的兒子"
+      "nameNote": ""
     },
     {
       "pointed": "עַמּוֹן",
@@ -1393,7 +1393,7 @@
       "categoryRoute": "place_names",
       "name": "亞捫",
       "printedLabel": "民族與國名",
-      "nameNote": "亞捫地；亞捫人"
+      "nameNote": ""
     },
     {
       "pointed": "יָרׇבְעָם",
@@ -1472,7 +1472,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以東",
       "printedLabel": "民族與國名",
-      "nameNote": "以東地；以東人"
+      "nameNote": ""
     },
     {
       "pointed": "עֵשָׂו",
@@ -1512,7 +1512,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以掃",
       "printedLabel": "先祖與族長",
-      "nameNote": "以掃的後裔"
+      "nameNote": ""
     },
     {
       "pointed": "כְּנַעַן",
@@ -1552,7 +1552,7 @@
       "categoryRoute": "place_names",
       "name": "迦南",
       "printedLabel": "地名",
-      "nameNote": "迦南地"
+      "nameNote": ""
     },
     {
       "pointed": "אַחְאָב",
@@ -1670,7 +1670,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "約沙法",
       "printedLabel": "君王",
-      "nameNote": "約沙法谷"
+      "nameNote": ""
     },
     {
       "pointed": "בֵּית לֶחֶם",
@@ -1748,7 +1748,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "迦勒底人",
       "printedLabel": "民族與國名",
-      "nameNote": "占星家"
+      "nameNote": ""
     },
     {
       "pointed": "יְהוּדִי",
@@ -1904,7 +1904,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "迦南人",
       "printedLabel": "民族與國名",
-      "nameNote": "商人"
+      "nameNote": ""
     },
     {
       "pointed": "רְאוּבֵן",
@@ -1943,7 +1943,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "呂便",
       "printedLabel": "先祖與族長",
-      "nameNote": "雅各的兒子"
+      "nameNote": ""
     },
     {
       "pointed": "גָּד",
@@ -1984,7 +1984,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "迦得",
       "printedLabel": "先祖與族長",
-      "nameNote": "迦得支派；迦得地"
+      "nameNote": ""
     },
     {
       "pointed": "אֶלְעָזָר",
@@ -2182,7 +2182,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "但",
       "printedLabel": "先祖與族長",
-      "nameNote": "但支派；但地"
+      "nameNote": ""
     },
     {
       "pointed": "בְּאֵר שֶׁבַע",
@@ -2573,7 +2573,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "尼布甲尼撒",
       "printedLabel": "君王",
-      "nameNote": "巴比倫王"
+      "nameNote": ""
     },
     {
       "pointed": "מׇרְדְּכַי",
@@ -2653,7 +2653,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "米甸",
       "printedLabel": "民族與國名",
-      "nameNote": "米甸地；米甸人"
+      "nameNote": ""
     },
     {
       "pointed": "יֵהוּא",
@@ -2888,7 +2888,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "拉班",
       "printedLabel": "其他人名",
-      "nameNote": "米所波大米人；亦為曠野一處地名"
+      "nameNote": ""
     },
     {
       "pointed": "אֶסְתֵּר",
@@ -2927,7 +2927,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以斯帖",
       "printedLabel": "其他人名",
-      "nameNote": "猶太女英雄"
+      "nameNote": ""
     },
     {
       "pointed": "הָמָן",
@@ -2966,7 +2966,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "哈曼",
       "printedLabel": "其他人名",
-      "nameNote": "波斯宰相"
+      "nameNote": ""
     },
     {
       "pointed": "יֹאשִׁיָּה",
@@ -3005,7 +3005,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "約西亞",
       "printedLabel": "君王",
-      "nameNote": "兩名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "צָדוֹק",
@@ -3044,7 +3044,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "撒督",
       "printedLabel": "其他人名",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "נַפְתָּלִי",
@@ -3085,7 +3085,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "拿弗他利",
       "printedLabel": "先祖與族長",
-      "nameNote": "雅各的兒子、其支派及地業"
+      "nameNote": ""
     },
     {
       "pointed": "יְהוֹיָדָע",
@@ -3124,7 +3124,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "耶何耶大",
       "printedLabel": "其他人名",
-      "nameNote": "三名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "רְחַבְעָם",
@@ -3163,7 +3163,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "羅波安",
       "printedLabel": "君王",
-      "nameNote": "以色列王"
+      "nameNote": ""
     },
     {
       "pointed": "בֶּן־הֲדַד",
@@ -3202,7 +3202,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "便哈達",
       "printedLabel": "君王",
-      "nameNote": "多名亞蘭王的名字"
+      "nameNote": ""
     },
     {
       "pointed": "יִשְׁמָעֵאל",
@@ -3241,7 +3241,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以實瑪利",
       "printedLabel": "先祖與族長",
-      "nameNote": "亞伯拉罕長子及五名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "עֲזַרְיָה",
@@ -3280,7 +3280,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞撒利雅",
       "printedLabel": "君王",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "חִתִּי",
@@ -3319,7 +3319,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "赫人",
       "printedLabel": "民族與國名",
-      "nameNote": "赫的後裔"
+      "nameNote": ""
     },
     {
       "pointed": "יוֹאָשׁ",
@@ -3358,7 +3358,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "約阿施",
       "printedLabel": "君王",
-      "nameNote": "六名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "רָחֵל",
@@ -3397,7 +3397,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "拉結",
       "printedLabel": "先祖與族長",
-      "nameNote": "雅各的妻子"
+      "nameNote": ""
     },
     {
       "pointed": "נֹחַ",
@@ -3436,7 +3436,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "挪亞",
       "printedLabel": "先祖與族長",
-      "nameNote": "洪水時代的先祖"
+      "nameNote": ""
     },
     {
       "pointed": "אָסָף",
@@ -3476,7 +3476,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞薩",
       "printedLabel": "其他人名",
-      "nameNote": "三名以色列人的名字及其家族"
+      "nameNote": ""
     },
     {
       "pointed": "זְבוּלוּן",
@@ -3517,7 +3517,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "西布倫",
       "printedLabel": "先祖與族長",
-      "nameNote": "雅各的兒子、其地業及支派"
+      "nameNote": ""
     },
     {
       "pointed": "דַּמֶּשֶׂק",
@@ -3556,7 +3556,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "大馬士革",
       "printedLabel": "地名",
-      "nameNote": "亞蘭的一座城"
+      "nameNote": ""
     },
     {
       "pointed": "שִׁמְעוֹן",
@@ -3596,7 +3596,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "西緬",
       "printedLabel": "先祖與族長",
-      "nameNote": "雅各的兒子及其支派"
+      "nameNote": ""
     },
     {
       "pointed": "שִׁמְעִי",
@@ -3635,7 +3635,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "示每",
       "printedLabel": "其他人名",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "אָשֵׁר",
@@ -3676,7 +3676,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞設",
       "printedLabel": "先祖與族長",
-      "nameNote": "亞設；雅各的兒子、其支派、地業及一處地名"
+      "nameNote": ""
     },
     {
       "pointed": "גִּבְעָה",
@@ -3715,7 +3715,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "基比亞",
       "printedLabel": "地名",
-      "nameNote": "三處地名"
+      "nameNote": ""
     },
     {
       "pointed": "בָּלָק",
@@ -3754,7 +3754,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "巴勒",
       "printedLabel": "君王",
-      "nameNote": "摩押王"
+      "nameNote": ""
     },
     {
       "pointed": "יִשַׁי",
@@ -3793,7 +3793,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "耶西",
       "printedLabel": "其他人名",
-      "nameNote": "大衛的父親"
+      "nameNote": ""
     },
     {
       "pointed": "נָתָן",
@@ -3832,7 +3832,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "拿單",
       "printedLabel": "先知",
-      "nameNote": "五名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "בְּנָיָה",
@@ -3871,7 +3871,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "比拿雅",
       "printedLabel": "其他人名",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "בֵּית שֶׁמֶשׁ",
@@ -4027,7 +4027,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞哈斯",
       "printedLabel": "其他人名",
-      "nameNote": "一名猶大王及一名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "שְׁמַעְיָה",
@@ -4066,7 +4066,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "示瑪雅",
       "printedLabel": "其他人名",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "זְכַרְיָה",
@@ -4105,7 +4105,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "撒迦利亞",
       "printedLabel": "其他人名",
-      "nameNote": "多名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "גִּלְגָּל",
@@ -4144,7 +4144,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "吉甲",
       "printedLabel": "地名",
-      "nameNote": "三處地名"
+      "nameNote": ""
     },
     {
       "pointed": "אֲמַצְיָה",
@@ -4183,7 +4183,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞瑪謝",
       "printedLabel": "其他人名",
-      "nameNote": "四名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "עֹבֵד אֱדוֹם",
@@ -4222,7 +4222,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "俄別以東",
       "printedLabel": "其他人名",
-      "nameNote": "五名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "עַי",
@@ -4302,7 +4302,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "亞瑪力",
       "printedLabel": "其他人名",
-      "nameNote": "以掃的後裔、其族及其地"
+      "nameNote": ""
     },
     {
       "pointed": "שֵׂעִיר",
@@ -4342,7 +4342,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "西珥",
       "printedLabel": "地名",
-      "nameNote": "以東的山及其居民"
+      "nameNote": ""
     },
     {
       "pointed": "קִרְיַת יְעָרִים",
@@ -4420,7 +4420,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "以賽亞",
       "printedLabel": "其他人名",
-      "nameNote": "七名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "מְרָרִי",
@@ -4459,7 +4459,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "米拉利",
       "printedLabel": "其他人名",
-      "nameNote": "以色列人"
+      "nameNote": ""
     },
     {
       "pointed": "אוּרִיָּה",
@@ -4498,7 +4498,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "烏利亞",
       "printedLabel": "其他人名",
-      "nameNote": "一名赫人及五名以色列人的名字"
+      "nameNote": ""
     },
     {
       "pointed": "סְדֹם",
@@ -4537,7 +4537,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "所多瑪",
       "printedLabel": "地名",
-      "nameNote": "死海附近的城"
+      "nameNote": ""
     },
     {
       "pointed": "גִּדְעוֹן",
@@ -4576,7 +4576,7 @@
       "categoryRoute": "既有 kind 欄",
       "name": "基甸",
       "printedLabel": "其他人名",
-      "nameNote": "以色列人"
+      "nameNote": ""
     },
     {
       "pointed": "חֶשְׁבּוֹן",
@@ -4615,7 +4615,7 @@
       "categoryRoute": "既有 properNameTypes",
       "name": "希實本",
       "printedLabel": "地名",
-      "nameNote": "約旦河東的城"
+      "nameNote": ""
     },
     {
       "pointed": "אָדָם",

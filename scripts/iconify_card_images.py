@@ -258,7 +258,7 @@ def main() -> None:
             if exact:
                 options.append((candidate, exact))
             # 本名對不上就找同概念的其他畫法，一個關鍵詞最多試六種。
-            options.extend((candidate, icon) for _, icon in variants(names, candidate)[:6])
+            options.extend((candidate, icon) for _, icon in variants(names, candidate)[:40])
         if not options:
             # 英文詞義一個字也配不上時，改用「它現在共用的那張圖」的概念去找。
             # 那張圖本來就是為這個意思挑的，換的是畫法不是意思——使用者要的
@@ -271,7 +271,7 @@ def main() -> None:
                 exact = names.get(word)
                 if exact:
                     options.append((word, exact))
-                options.extend((word, icon) for _, icon in variants(names, word)[:6])
+                options.extend((word, icon) for _, icon in variants(names, word)[:40])
         for candidate, icon in options:
             if icon in taken or f"{icon}|{candidate}" in rejects:
                 continue

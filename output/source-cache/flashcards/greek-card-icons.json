@@ -1,324 +1,7118 @@
 {
-  "schemaVersion": "1.0.0",
-  "sources": {
-    "game-icons": "CC BY 3.0 — game-icons.net",
-    "ph": "MIT — Phosphor Icons",
-    "mdi": "Apache 2.0 — Material Design Icons",
-    "tabler": "MIT — Tabler Icons"
+ "schemaVersion": "1.0.0",
+ "sources": {
+  "game-icons": "CC BY 3.0 — game-icons.net",
+  "ph": "MIT — Phosphor Icons",
+  "mdi": "Apache 2.0 — Material Design Icons",
+  "tabler": "MIT — Tabler Icons"
+ },
+ "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。 ｜ 只有『圖示本名與英文詞義完全相符』的留在 cards；靠同概念換畫法猜出來的放 pendingReview，逐張看過才可放行。",
+ "cards": {
+  "κοινωνός": {
+   "icon": "ph:handshake",
+   "file": "ph-handshake.png",
+   "source": "ph",
+   "glossEn": "handshake"
   },
-  "note": "只補「與不相干的詞共用一張圖」的卡；只認圖示本名精確相符，配不到就維持原圖。",
-  "cards": {
-    "βλέπω": {
-      "icon": "game-icons:look-at",
-      "file": "game-icons-look-at.png",
-      "source": "game-icons",
-      "glossEn": "look-at"
-    },
-    "προσεύχομαι": {
-      "icon": "tabler:pray",
-      "file": "tabler-pray.png",
-      "source": "tabler",
-      "glossEn": "pray"
-    },
-    "προσευχή": {
-      "icon": "game-icons:prayer",
-      "file": "game-icons-prayer.png",
-      "source": "game-icons",
-      "glossEn": "prayer"
-    },
-    "πλείων": {
-      "icon": "mdi:more",
-      "file": "mdi-more.png",
-      "source": "mdi",
-      "glossEn": "more"
-    },
-    "σοφία": {
-      "icon": "game-icons:wisdom",
-      "file": "game-icons-wisdom.png",
-      "source": "game-icons",
-      "glossEn": "wisdom"
-    },
-    "θέλημα": {
-      "icon": "game-icons:choice",
-      "file": "game-icons-choice.png",
-      "source": "game-icons",
-      "glossEn": "choice"
-    },
-    "δώδεκα": {
-      "icon": "game-icons:dozen",
-      "file": "game-icons-dozen.png",
-      "source": "game-icons",
-      "glossEn": "dozen"
-    },
-    "δοκέω": {
-      "icon": "mdi:compare",
-      "file": "mdi-compare.png",
-      "source": "mdi",
-      "glossEn": "compare"
-    },
-    "εὐαγγέλιον": {
-      "icon": "mdi:message",
-      "file": "mdi-message.png",
-      "source": "mdi",
-      "glossEn": "message"
-    },
-    "ἐάν": {
-      "icon": "game-icons:uncertainty",
-      "file": "game-icons-uncertainty.png",
-      "source": "game-icons",
-      "glossEn": "uncertainty"
-    },
-    "εὐαγγελίζω": {
-      "icon": "tabler:news",
-      "file": "tabler-news.png",
-      "source": "tabler",
-      "glossEn": "news"
-    },
-    "ἀπεκρίθη": {
-      "icon": "mdi:reply",
-      "file": "mdi-reply.png",
-      "source": "mdi",
-      "glossEn": "reply"
-    },
-    "δύναμις": {
-      "icon": "ph:power",
-      "file": "ph-power.png",
-      "source": "ph",
-      "glossEn": "power"
-    },
-    "μετανοέω": {
-      "icon": "game-icons:think",
-      "file": "game-icons-think.png",
-      "source": "game-icons",
-      "glossEn": "think"
-    },
-    "προφήτης": {
-      "icon": "game-icons:speaker",
-      "file": "game-icons-speaker.png",
-      "source": "game-icons",
-      "glossEn": "speaker"
-    },
-    "αἰών": {
-      "icon": "game-icons:world",
-      "file": "game-icons-world.png",
-      "source": "game-icons",
-      "glossEn": "world"
-    },
-    "εἰρήνη": {
-      "icon": "ph:peace",
-      "file": "ph-peace.png",
-      "source": "ph",
-      "glossEn": "peace"
-    },
-    "πῦρ": {
-      "icon": "game-icons:fire",
-      "file": "game-icons-fire.png",
-      "source": "game-icons",
-      "glossEn": "fire"
-    },
-    "σπέρμα": {
-      "icon": "mdi:seed",
-      "file": "mdi-seed.png",
-      "source": "mdi",
-      "glossEn": "seed"
-    },
-    "προφητεύω": {
-      "icon": "game-icons:inspiration",
-      "file": "game-icons-inspiration.png",
-      "source": "game-icons",
-      "glossEn": "inspiration"
-    },
-    "ἐπί": {
-      "icon": "tabler:direction",
-      "file": "tabler-direction.png",
-      "source": "tabler",
-      "glossEn": "direction"
-    },
-    "λαλέω": {
-      "icon": "game-icons:talk",
-      "file": "game-icons-talk.png",
-      "source": "game-icons",
-      "glossEn": "talk"
-    },
-    "τόπος": {
-      "icon": "tabler:location",
-      "file": "tabler-location.png",
-      "source": "tabler",
-      "glossEn": "location"
-    },
-    "πείθω": {
-      "icon": "game-icons:convince",
-      "file": "game-icons-convince.png",
-      "source": "game-icons",
-      "glossEn": "convince"
-    },
-    "ἐκεῖνος": {
-      "icon": "ph:article",
-      "file": "ph-article.png",
-      "source": "ph",
-      "glossEn": "article"
-    },
-    "αἴρω": {
-      "icon": "game-icons:lift",
-      "file": "game-icons-lift.png",
-      "source": "game-icons",
-      "glossEn": "lift"
-    },
-    "περιπατέω": {
-      "icon": "game-icons:tread",
-      "file": "game-icons-tread.png",
-      "source": "game-icons",
-      "glossEn": "tread"
-    },
-    "τιμή": {
-      "icon": "ph:money",
-      "file": "ph-money.png",
-      "source": "ph",
-      "glossEn": "money"
-    },
-    "φεύγω": {
-      "icon": "game-icons:run",
-      "file": "game-icons-run.png",
-      "source": "game-icons",
-      "glossEn": "run"
-    },
-    "πνεῦμα": {
-      "icon": "game-icons:soul",
-      "file": "game-icons-soul.png",
-      "source": "game-icons",
-      "glossEn": "soul"
-    },
-    "ἀποστέλλω": {
-      "icon": "mdi:send",
-      "file": "mdi-send.png",
-      "source": "mdi",
-      "glossEn": "send"
-    },
-    "ἐκβάλλω": {
-      "icon": "ph:eject",
-      "file": "ph-eject.png",
-      "source": "ph",
-      "glossEn": "eject"
-    },
-    "πέμπω": {
-      "icon": "mdi:motion",
-      "file": "mdi-motion.png",
-      "source": "mdi",
-      "glossEn": "motion"
-    },
-    "κατοικέω": {
-      "icon": "game-icons:house",
-      "file": "game-icons-house.png",
-      "source": "game-icons",
-      "glossEn": "house"
-    },
-    "πρόβατον": {
-      "icon": "game-icons:sheep",
-      "file": "game-icons-sheep.png",
-      "source": "game-icons",
-      "glossEn": "sheep"
-    },
-    "ἐπιτιμάω": {
-      "icon": "tabler:forbid",
-      "file": "tabler-forbid.png",
-      "source": "tabler",
-      "glossEn": "forbid"
-    },
-    "μάχαιρα": {
-      "icon": "ph:knife",
-      "file": "ph-knife.png",
-      "source": "ph",
-      "glossEn": "knife"
-    },
-    "θρόνος": {
-      "icon": "ph:seat",
-      "file": "ph-seat.png",
-      "source": "ph",
-      "glossEn": "seat"
-    },
-    "ἱμάτιον": {
-      "icon": "game-icons:dress",
-      "file": "game-icons-dress.png",
-      "source": "game-icons",
-      "glossEn": "dress"
-    },
-    "ἀγρός": {
-      "icon": "game-icons:field",
-      "file": "game-icons-field.png",
-      "source": "game-icons",
-      "glossEn": "field"
-    },
-    "ἄνθρωπος": {
-      "icon": "mdi:human",
-      "file": "mdi-human.png",
-      "source": "mdi",
-      "glossEn": "human"
-    },
-    "σάρξ": {
-      "icon": "game-icons:meat",
-      "file": "game-icons-meat.png",
-      "source": "game-icons",
-      "glossEn": "meat"
-    },
-    "ὕδωρ": {
-      "icon": "mdi:water",
-      "file": "mdi-water.png",
-      "source": "mdi",
-      "glossEn": "water"
-    },
-    "γυνή": {
-      "icon": "tabler:woman",
-      "file": "tabler-woman.png",
-      "source": "tabler",
-      "glossEn": "woman"
-    },
-    "ὄρος": {
-      "icon": "tabler:mountain",
-      "file": "tabler-mountain.png",
-      "source": "tabler",
-      "glossEn": "mountain"
-    },
-    "ἔρημος": {
-      "icon": "game-icons:desert",
-      "file": "game-icons-desert.png",
-      "source": "game-icons",
-      "glossEn": "desert"
-    },
-    "οὖς": {
-      "icon": "ph:ear",
-      "file": "ph-ear.png",
-      "source": "ph",
-      "glossEn": "ear"
-    },
-    "ἀναγινώσκω": {
-      "icon": "game-icons:read",
-      "file": "game-icons-read.png",
-      "source": "game-icons",
-      "glossEn": "read"
-    },
-    "θυγάτηρ": {
-      "icon": "game-icons:female",
-      "file": "game-icons-female.png",
-      "source": "game-icons",
-      "glossEn": "female"
-    },
-    "γλῶσσα": {
-      "icon": "game-icons:tongue",
-      "file": "game-icons-tongue.png",
-      "source": "game-icons",
-      "glossEn": "tongue"
-    },
-    "γῆ": {
-      "icon": "game-icons:globe",
-      "file": "game-icons-globe.png",
-      "source": "game-icons",
-      "glossEn": "globe"
-    },
-    "ἥλιος": {
-      "icon": "game-icons:sun",
-      "file": "game-icons-sun.png",
-      "source": "game-icons",
-      "glossEn": "sun"
-    }
+  "βλέπω": {
+   "icon": "game-icons:look-at",
+   "file": "game-icons-look-at.png",
+   "source": "game-icons",
+   "glossEn": "look-at"
+  },
+  "ὁρατός": {
+   "icon": "ph:eyes",
+   "file": "ph-eyes.png",
+   "source": "ph",
+   "glossEn": "eyes"
+  },
+  "δέησις": {
+   "icon": "game-icons:prayer",
+   "file": "game-icons-prayer.png",
+   "source": "game-icons",
+   "glossEn": "prayer"
+  },
+  "προσεύχομαι": {
+   "icon": "tabler:pray",
+   "file": "tabler-pray.png",
+   "source": "tabler",
+   "glossEn": "pray"
+  },
+  "δή": {
+   "icon": "ph:check",
+   "file": "ph-check.png",
+   "source": "ph",
+   "glossEn": "check"
+  },
+  "παρέχω": {
+   "icon": "mdi:offer",
+   "file": "mdi-offer.png",
+   "source": "mdi",
+   "glossEn": "offer"
+  },
+  "βελτίων": {
+   "icon": "game-icons:chart",
+   "file": "game-icons-chart.png",
+   "source": "game-icons",
+   "glossEn": "chart"
+  },
+  "κρείσσων": {
+   "icon": "mdi:more",
+   "file": "mdi-more.png",
+   "source": "mdi",
+   "glossEn": "more"
+  },
+  "μεγαλύνω": {
+   "icon": "mdi:magnify",
+   "file": "mdi-magnify.png",
+   "source": "mdi",
+   "glossEn": "magnify"
+  },
+  "σοφία": {
+   "icon": "game-icons:wisdom",
+   "file": "game-icons-wisdom.png",
+   "source": "game-icons",
+   "glossEn": "wisdom"
+  },
+  "συνετός": {
+   "icon": "game-icons:brain",
+   "file": "game-icons-brain.png",
+   "source": "game-icons",
+   "glossEn": "brain"
+  },
+  "κτίσις": {
+   "icon": "mdi:creation",
+   "file": "mdi-creation.png",
+   "source": "mdi",
+   "glossEn": "creation"
+  },
+  "τέχνη": {
+   "icon": "game-icons:trade",
+   "file": "game-icons-trade.png",
+   "source": "game-icons",
+   "glossEn": "trade"
+  },
+  "ὄργανον": {
+   "icon": "tabler:tool",
+   "file": "tabler-tool.png",
+   "source": "tabler",
+   "glossEn": "tool"
+  },
+  "κτίζω": {
+   "icon": "mdi:shape",
+   "file": "mdi-shape.png",
+   "source": "mdi",
+   "glossEn": "shape"
+  },
+  "πρᾶξις": {
+   "icon": "ph:function",
+   "file": "ph-function.png",
+   "source": "ph",
+   "glossEn": "function"
+  },
+  "τεχνίτης": {
+   "icon": "ph:hammer",
+   "file": "ph-hammer.png",
+   "source": "ph",
+   "glossEn": "hammer"
+  },
+  "ἐξετάζω": {
+   "icon": "ph:question",
+   "file": "ph-question.png",
+   "source": "ph",
+   "glossEn": "question"
+  },
+  "κενός": {
+   "icon": "ph:empty",
+   "file": "ph-empty.png",
+   "source": "ph",
+   "glossEn": "empty"
+  },
+  "μάταιος": {
+   "icon": "game-icons:hole",
+   "file": "game-icons-hole.png",
+   "source": "game-icons",
+   "glossEn": "hole"
+  },
+  "ἀόρατος": {
+   "icon": "game-icons:invisible",
+   "file": "game-icons-invisible.png",
+   "source": "game-icons",
+   "glossEn": "invisible"
+  },
+  "δοκέω": {
+   "icon": "mdi:compare",
+   "file": "mdi-compare.png",
+   "source": "mdi",
+   "glossEn": "compare"
+  },
+  "νομίζω": {
+   "icon": "game-icons:think",
+   "file": "game-icons-think.png",
+   "source": "game-icons",
+   "glossEn": "think"
+  },
+  "ἴσος": {
+   "icon": "mdi:equal",
+   "file": "mdi-equal.png",
+   "source": "mdi",
+   "glossEn": "equal"
+  },
+  "εἰκών": {
+   "icon": "ph:image",
+   "file": "ph-image.png",
+   "source": "ph",
+   "glossEn": "image"
+  },
+  "εἰ": {
+   "icon": "ph:shuffle",
+   "file": "ph-shuffle.png",
+   "source": "ph",
+   "glossEn": "shuffle"
+  },
+  "εὐαγγέλιον": {
+   "icon": "mdi:message",
+   "file": "mdi-message.png",
+   "source": "mdi",
+   "glossEn": "message"
+  },
+  "εὐαγγελίζω": {
+   "icon": "tabler:news",
+   "file": "tabler-news.png",
+   "source": "tabler",
+   "glossEn": "news"
+  },
+  "κήρυγμα": {
+   "icon": "game-icons:megaphone",
+   "file": "game-icons-megaphone.png",
+   "source": "game-icons",
+   "glossEn": "megaphone"
+  },
+  "ἀναγγέλλω": {
+   "icon": "tabler:report",
+   "file": "tabler-report.png",
+   "source": "tabler",
+   "glossEn": "report"
+  },
+  "αὐθάδης": {
+   "icon": "game-icons:fist",
+   "file": "game-icons-fist.png",
+   "source": "game-icons",
+   "glossEn": "fist"
+  },
+  "ἐξεῖπον": {
+   "icon": "ph:balloon",
+   "file": "ph-balloon.png",
+   "source": "ph",
+   "glossEn": "balloon"
+  },
+  "ἀπεκρίθη": {
+   "icon": "mdi:reply",
+   "file": "mdi-reply.png",
+   "source": "mdi",
+   "glossEn": "reply"
+  },
+  "θεῖος": {
+   "icon": "game-icons:sparkles",
+   "file": "game-icons-sparkles.png",
+   "source": "game-icons",
+   "glossEn": "sparkles"
+  },
+  "καυχάομαι": {
+   "icon": "game-icons:biceps",
+   "file": "game-icons-biceps.png",
+   "source": "game-icons",
+   "glossEn": "biceps"
+  },
+  "κραταιόω": {
+   "icon": "game-icons:strong",
+   "file": "game-icons-strong.png",
+   "source": "game-icons",
+   "glossEn": "strong"
+  },
+  "σπέρμα": {
+   "icon": "mdi:seed",
+   "file": "mdi-seed.png",
+   "source": "mdi",
+   "glossEn": "seed"
+  },
+  "προφήτης": {
+   "icon": "game-icons:speaker",
+   "file": "game-icons-speaker.png",
+   "source": "game-icons",
+   "glossEn": "speaker"
+  },
+  "αἰώνιος": {
+   "icon": "game-icons:infinity",
+   "file": "game-icons-infinity.png",
+   "source": "game-icons",
+   "glossEn": "infinity"
+  },
+  "πραΰτης": {
+   "icon": "game-icons:dove",
+   "file": "game-icons-dove.png",
+   "source": "game-icons",
+   "glossEn": "dove"
+  },
+  "πύλη": {
+   "icon": "game-icons:door",
+   "file": "game-icons-door.png",
+   "source": "game-icons",
+   "glossEn": "door"
+  },
+  "εἰσπορεύομαι": {
+   "icon": "game-icons:journey",
+   "file": "game-icons-journey.png",
+   "source": "game-icons",
+   "glossEn": "journey"
+  },
+  "προθυμία": {
+   "icon": "game-icons:fire",
+   "file": "game-icons-fire.png",
+   "source": "game-icons",
+   "glossEn": "fire"
+  },
+  "φλόξ": {
+   "icon": "game-icons:flame",
+   "file": "game-icons-flame.png",
+   "source": "game-icons",
+   "glossEn": "flame"
+  },
+  "ἐκκαίω": {
+   "icon": "game-icons:kindle",
+   "file": "game-icons-kindle.png",
+   "source": "game-icons",
+   "glossEn": "kindle"
+  },
+  "παράπτωμα": {
+   "icon": "game-icons:falling",
+   "file": "game-icons-falling.png",
+   "source": "game-icons",
+   "glossEn": "falling"
+  },
+  "στέφανος": {
+   "icon": "game-icons:crown",
+   "file": "game-icons-crown.png",
+   "source": "game-icons",
+   "glossEn": "crown"
+  },
+  "φανερόω": {
+   "icon": "game-icons:bulb",
+   "file": "game-icons-bulb.png",
+   "source": "game-icons",
+   "glossEn": "bulb"
+  },
+  "λαλέω": {
+   "icon": "game-icons:talk",
+   "file": "game-icons-talk.png",
+   "source": "game-icons",
+   "glossEn": "talk"
+  },
+  "πείθω": {
+   "icon": "game-icons:convince",
+   "file": "game-icons-convince.png",
+   "source": "game-icons",
+   "glossEn": "convince"
+  },
+  "ἰδέα": {
+   "icon": "game-icons:puzzle",
+   "file": "game-icons-puzzle.png",
+   "source": "game-icons",
+   "glossEn": "puzzle"
+  },
+  "πυκνός": {
+   "icon": "ph:repeat",
+   "file": "ph-repeat.png",
+   "source": "ph",
+   "glossEn": "repeat"
+  },
+  "δῶρον": {
+   "icon": "ph:gift",
+   "file": "ph-gift.png",
+   "source": "ph",
+   "glossEn": "gift"
+  },
+  "περιπατέω": {
+   "icon": "game-icons:tread",
+   "file": "game-icons-tread.png",
+   "source": "game-icons",
+   "glossEn": "tread"
+  },
+  "αἴρω": {
+   "icon": "game-icons:lift",
+   "file": "game-icons-lift.png",
+   "source": "game-icons",
+   "glossEn": "lift"
+  },
+  "μιμητής": {
+   "icon": "ph:footprints",
+   "file": "ph-footprints.png",
+   "source": "ph",
+   "glossEn": "footprints"
+  },
+  "ὑπόδειγμα": {
+   "icon": "ph:copy",
+   "file": "ph-copy.png",
+   "source": "ph",
+   "glossEn": "copy"
+  },
+  "λοιπός": {
+   "icon": "ph:package",
+   "file": "ph-package.png",
+   "source": "ph",
+   "glossEn": "package"
+  },
+  "μακρόθυμος": {
+   "icon": "game-icons:hourglass",
+   "file": "game-icons-hourglass.png",
+   "source": "game-icons",
+   "glossEn": "hourglass"
+  },
+  "φιλάνθρωπος": {
+   "icon": "ph:heart",
+   "file": "ph-heart.png",
+   "source": "ph",
+   "glossEn": "heart"
+  },
+  "μένω": {
+   "icon": "game-icons:house",
+   "file": "game-icons-house.png",
+   "source": "game-icons",
+   "glossEn": "house"
+  },
+  "ὁμόνοια": {
+   "icon": "mdi:unity",
+   "file": "mdi-unity.png",
+   "source": "mdi",
+   "glossEn": "unity"
+  },
+  "παλαιός": {
+   "icon": "tabler:old",
+   "file": "tabler-old.png",
+   "source": "tabler",
+   "glossEn": "old"
+  },
+  "τρέχω": {
+   "icon": "game-icons:run",
+   "file": "game-icons-run.png",
+   "source": "game-icons",
+   "glossEn": "run"
+  },
+  "τιμή": {
+   "icon": "ph:money",
+   "file": "ph-money.png",
+   "source": "ph",
+   "glossEn": "money"
+  },
+  "κολοβόω": {
+   "icon": "tabler:cut",
+   "file": "tabler-cut.png",
+   "source": "tabler",
+   "glossEn": "cut"
+  },
+  "περιτομή": {
+   "icon": "game-icons:scissors",
+   "file": "game-icons-scissors.png",
+   "source": "game-icons",
+   "glossEn": "scissors"
+  },
+  "σχισμή": {
+   "icon": "mdi:division",
+   "file": "mdi-division.png",
+   "source": "mdi",
+   "glossEn": "division"
+  },
+  "πεποίθησις": {
+   "icon": "game-icons:anchor",
+   "file": "game-icons-anchor.png",
+   "source": "game-icons",
+   "glossEn": "anchor"
+  },
+  "ἐκβάλλω": {
+   "icon": "ph:eject",
+   "file": "ph-eject.png",
+   "source": "ph",
+   "glossEn": "eject"
+  },
+  "ἐξαποστέλλω": {
+   "icon": "mdi:send",
+   "file": "mdi-send.png",
+   "source": "mdi",
+   "glossEn": "send"
+  },
+  "δόγμα": {
+   "icon": "ph:scroll",
+   "file": "ph-scroll.png",
+   "source": "ph",
+   "glossEn": "scroll"
+  },
+  "σύμβολον": {
+   "icon": "mdi:symbol",
+   "file": "mdi-symbol.png",
+   "source": "mdi",
+   "glossEn": "symbol"
+  },
+  "μεγαλειότης": {
+   "icon": "game-icons:castle",
+   "file": "game-icons-castle.png",
+   "source": "game-icons",
+   "glossEn": "castle"
+  },
+  "σωτήριος": {
+   "icon": "game-icons:buoy",
+   "file": "game-icons-buoy.png",
+   "source": "game-icons",
+   "glossEn": "buoy"
+  },
+  "οὐαί": {
+   "icon": "ph:warning",
+   "file": "ph-warning.png",
+   "source": "ph",
+   "glossEn": "warning"
+  },
+  "πανταχοῦ": {
+   "icon": "game-icons:world",
+   "file": "game-icons-world.png",
+   "source": "game-icons",
+   "glossEn": "world"
+  },
+  "θραύω": {
+   "icon": "game-icons:crush",
+   "file": "game-icons-crush.png",
+   "source": "game-icons",
+   "glossEn": "crush"
+  },
+  "ἐγκαταλείπω": {
+   "icon": "game-icons:desert",
+   "file": "game-icons-desert.png",
+   "source": "game-icons",
+   "glossEn": "desert"
+  },
+  "λαμπρότης": {
+   "icon": "tabler:brightness",
+   "file": "tabler-brightness.png",
+   "source": "tabler",
+   "glossEn": "brightness"
+  },
+  "ὅδε": {
+   "icon": "game-icons:pointing",
+   "file": "game-icons-pointing.png",
+   "source": "game-icons",
+   "glossEn": "pointing"
+  },
+  "θνητός": {
+   "icon": "ph:skull",
+   "file": "ph-skull.png",
+   "source": "ph",
+   "glossEn": "skull"
+  },
+  "ὄνομα": {
+   "icon": "tabler:badge",
+   "file": "tabler-badge.png",
+   "source": "tabler",
+   "glossEn": "badge"
+  },
+  "ποιητής": {
+   "icon": "tabler:writing",
+   "file": "tabler-writing.png",
+   "source": "tabler",
+   "glossEn": "writing"
+  },
+  "καταφθορά": {
+   "icon": "ph:bomb",
+   "file": "ph-bomb.png",
+   "source": "ph",
+   "glossEn": "bomb"
+  },
+  "μερισμός": {
+   "icon": "ph:divide",
+   "file": "ph-divide.png",
+   "source": "ph",
+   "glossEn": "divide"
+  },
+  "φορά": {
+   "icon": "mdi:motion",
+   "file": "mdi-motion.png",
+   "source": "mdi",
+   "glossEn": "motion"
+  },
+  "στῦλος": {
+   "icon": "mdi:pillar",
+   "file": "mdi-pillar.png",
+   "source": "mdi",
+   "glossEn": "pillar"
+  },
+  "παράβασις": {
+   "icon": "game-icons:bridge",
+   "file": "game-icons-bridge.png",
+   "source": "game-icons",
+   "glossEn": "bridge"
+  },
+  "λογικός": {
+   "icon": "game-icons:abacus",
+   "file": "game-icons-abacus.png",
+   "source": "game-icons",
+   "glossEn": "abacus"
+  },
+  "κιβωτός": {
+   "icon": "game-icons:coffin",
+   "file": "game-icons-coffin.png",
+   "source": "game-icons",
+   "glossEn": "coffin"
+  },
+  "ῥομφαία": {
+   "icon": "ph:sword",
+   "file": "ph-sword.png",
+   "source": "ph",
+   "glossEn": "sword"
+  },
+  "μεταφέρω": {
+   "icon": "game-icons:move",
+   "file": "game-icons-move.png",
+   "source": "game-icons",
+   "glossEn": "move"
+  },
+  "περιέχω": {
+   "icon": "mdi:contain",
+   "file": "mdi-contain.png",
+   "source": "mdi",
+   "glossEn": "contain"
+  },
+  "τεῖχος": {
+   "icon": "ph:wall",
+   "file": "ph-wall.png",
+   "source": "ph",
+   "glossEn": "wall"
+  },
+  "πάντῃ": {
+   "icon": "game-icons:compass",
+   "file": "game-icons-compass.png",
+   "source": "game-icons",
+   "glossEn": "compass"
+  },
+  "ἔργον": {
+   "icon": "game-icons:briefcase",
+   "file": "game-icons-briefcase.png",
+   "source": "game-icons",
+   "glossEn": "briefcase"
+  },
+  "προκρίνω": {
+   "icon": "game-icons:medal",
+   "file": "game-icons-medal.png",
+   "source": "game-icons",
+   "glossEn": "medal"
+  },
+  "ὄψις": {
+   "icon": "mdi:mirror",
+   "file": "mdi-mirror.png",
+   "source": "mdi",
+   "glossEn": "mirror"
+  },
+  "καθίζω": {
+   "icon": "ph:seat",
+   "file": "ph-seat.png",
+   "source": "ph",
+   "glossEn": "seat"
+  },
+  "ὅς": {
+   "icon": "ph:link",
+   "file": "ph-link.png",
+   "source": "ph",
+   "glossEn": "link"
+  },
+  "ἱμάτιον": {
+   "icon": "game-icons:dress",
+   "file": "game-icons-dress.png",
+   "source": "game-icons",
+   "glossEn": "dress"
+  },
+  "ἔνδυμα": {
+   "icon": "game-icons:shirt",
+   "file": "game-icons-shirt.png",
+   "source": "game-icons",
+   "glossEn": "shirt"
+  },
+  "τολμάω": {
+   "icon": "tabler:bold",
+   "file": "tabler-bold.png",
+   "source": "tabler",
+   "glossEn": "bold"
+  },
+  "ἄγριος": {
+   "icon": "game-icons:lion",
+   "file": "game-icons-lion.png",
+   "source": "game-icons",
+   "glossEn": "lion"
+  },
+  "σῖτος": {
+   "icon": "game-icons:wheat",
+   "file": "game-icons-wheat.png",
+   "source": "game-icons",
+   "glossEn": "wheat"
+  },
+  "ἀγρός": {
+   "icon": "game-icons:field",
+   "file": "game-icons-field.png",
+   "source": "game-icons",
+   "glossEn": "field"
+  },
+  "ἀπαρχή": {
+   "icon": "mdi:rice",
+   "file": "mdi-rice.png",
+   "source": "mdi",
+   "glossEn": "rice"
+  },
+  "βλαβερός": {
+   "icon": "game-icons:biohazard",
+   "file": "game-icons-biohazard.png",
+   "source": "game-icons",
+   "glossEn": "biohazard"
+  },
+  "χίμαρος": {
+   "icon": "game-icons:male",
+   "file": "game-icons-male.png",
+   "source": "game-icons",
+   "glossEn": "male"
+  },
+  "αἴξ": {
+   "icon": "game-icons:female",
+   "file": "game-icons-female.png",
+   "source": "game-icons",
+   "glossEn": "female"
+  },
+  "τράγος": {
+   "icon": "game-icons:goat",
+   "file": "game-icons-goat.png",
+   "source": "game-icons",
+   "glossEn": "goat"
+  },
+  "σκηνή": {
+   "icon": "ph:tent",
+   "file": "ph-tent.png",
+   "source": "ph",
+   "glossEn": "tent"
+  },
+  "ἐλεημοσύνη": {
+   "icon": "mdi:charity",
+   "file": "mdi-charity.png",
+   "source": "mdi",
+   "glossEn": "charity"
+  },
+  "ἁρπάζω": {
+   "icon": "game-icons:snatch",
+   "file": "game-icons-snatch.png",
+   "source": "game-icons",
+   "glossEn": "snatch"
+  },
+  "ἄφρων": {
+   "icon": "game-icons:clown",
+   "file": "game-icons-clown.png",
+   "source": "game-icons",
+   "glossEn": "clown"
+  },
+  "κόπος": {
+   "icon": "game-icons:droplets",
+   "file": "game-icons-droplets.png",
+   "source": "game-icons",
+   "glossEn": "droplets"
+  },
+  "ἐπιστολή": {
+   "icon": "game-icons:envelope",
+   "file": "game-icons-envelope.png",
+   "source": "game-icons",
+   "glossEn": "envelope"
+  },
+  "ἐπουράνιος": {
+   "icon": "ph:cloud",
+   "file": "ph-cloud.png",
+   "source": "ph",
+   "glossEn": "cloud"
+  },
+  "κυρία": {
+   "icon": "tabler:woman",
+   "file": "tabler-woman.png",
+   "source": "tabler",
+   "glossEn": "woman"
+  },
+  "ὕδωρ": {
+   "icon": "mdi:water",
+   "file": "mdi-water.png",
+   "source": "mdi",
+   "glossEn": "water"
+  },
+  "ἀκούω": {
+   "icon": "ph:ear",
+   "file": "ph-ear.png",
+   "source": "ph",
+   "glossEn": "ear"
+  },
+  "ἐκτρίβω": {
+   "icon": "ph:flower",
+   "file": "ph-flower.png",
+   "source": "ph",
+   "glossEn": "flower"
+  },
+  "ἀναγινώσκω": {
+   "icon": "game-icons:read",
+   "file": "game-icons-read.png",
+   "source": "game-icons",
+   "glossEn": "read"
+  },
+  "βίβλος": {
+   "icon": "ph:book",
+   "file": "ph-book.png",
+   "source": "ph",
+   "glossEn": "book"
+  },
+  "νικάω": {
+   "icon": "game-icons:trophy",
+   "file": "game-icons-trophy.png",
+   "source": "game-icons",
+   "glossEn": "trophy"
+  },
+  "ἀποκάλυψις": {
+   "icon": "ph:eye",
+   "file": "ph-eye.png",
+   "source": "ph",
+   "glossEn": "eye"
+  },
+  "ὕλη": {
+   "icon": "tabler:wood",
+   "file": "tabler-wood.png",
+   "source": "tabler",
+   "glossEn": "wood"
+  },
+  "πλάξ": {
+   "icon": "game-icons:tablet",
+   "file": "game-icons-tablet.png",
+   "source": "game-icons",
+   "glossEn": "tablet"
+  },
+  "ποταμός": {
+   "icon": "game-icons:river",
+   "file": "game-icons-river.png",
+   "source": "game-icons",
+   "glossEn": "river"
+  },
+  "ἀμπελών": {
+   "icon": "game-icons:grapes",
+   "file": "game-icons-grapes.png",
+   "source": "game-icons",
+   "glossEn": "grapes"
+  },
+  "μνημόσυνον": {
+   "icon": "mdi:reminder",
+   "file": "mdi-reminder.png",
+   "source": "mdi",
+   "glossEn": "reminder"
+  },
+  "συνόχωκα": {
+   "icon": "game-icons:clamp",
+   "file": "game-icons-clamp.png",
+   "source": "game-icons",
+   "glossEn": "clamp"
+  },
+  "πτελέα": {
+   "icon": "ph:tree",
+   "file": "ph-tree.png",
+   "source": "ph",
+   "glossEn": "tree"
+  },
+  "ἰτέα": {
+   "icon": "game-icons:willow-tree",
+   "file": "game-icons-willow-tree.png",
+   "source": "game-icons",
+   "glossEn": "willow-tree"
+  },
+  "σελήνη": {
+   "icon": "game-icons:moon",
+   "file": "game-icons-moon.png",
+   "source": "game-icons",
+   "glossEn": "moon"
+  },
+  "φανερῶς": {
+   "icon": "game-icons:flashlight",
+   "file": "game-icons-flashlight.png",
+   "source": "game-icons",
+   "glossEn": "flashlight"
+  },
+  "χρήσιμος": {
+   "icon": "game-icons:toolbox",
+   "file": "game-icons-toolbox.png",
+   "source": "game-icons",
+   "glossEn": "toolbox"
+  },
+  "τρίβολος": {
+   "icon": "game-icons:cactus",
+   "file": "game-icons-cactus.png",
+   "source": "game-icons",
+   "glossEn": "cactus"
+  },
+  "ἀσφαλής": {
+   "icon": "mdi:safe",
+   "file": "mdi-safe.png",
+   "source": "mdi",
+   "glossEn": "safe"
+  },
+  "γλῶσσα": {
+   "icon": "game-icons:tongue",
+   "file": "game-icons-tongue.png",
+   "source": "game-icons",
+   "glossEn": "tongue"
+  },
+  "ἐπίγειος": {
+   "icon": "game-icons:globe",
+   "file": "game-icons-globe.png",
+   "source": "game-icons",
+   "glossEn": "globe"
+  },
+  "ἀρνίον": {
+   "icon": "game-icons:ram",
+   "file": "game-icons-ram.png",
+   "source": "game-icons",
+   "glossEn": "ram"
+  },
+  "ἴασις": {
+   "icon": "game-icons:healing",
+   "file": "game-icons-healing.png",
+   "source": "game-icons",
+   "glossEn": "healing"
+  },
+  "ἵππος": {
+   "icon": "ph:horse",
+   "file": "ph-horse.png",
+   "source": "ph",
+   "glossEn": "horse"
+  },
+  "ἐκλεκτός": {
+   "icon": "game-icons:choice",
+   "file": "game-icons-choice.png",
+   "source": "game-icons",
+   "glossEn": "choice"
+  },
+  "ἑσπέρα": {
+   "icon": "game-icons:sunset",
+   "file": "game-icons-sunset.png",
+   "source": "game-icons",
+   "glossEn": "sunset"
+  },
+  "ἱματισμός": {
+   "icon": "game-icons:clothes",
+   "file": "game-icons-clothes.png",
+   "source": "game-icons",
+   "glossEn": "clothes"
+  },
+  "κοίτη": {
+   "icon": "game-icons:bed",
+   "file": "game-icons-bed.png",
+   "source": "game-icons",
+   "glossEn": "bed"
+  },
+  "ὀδούς": {
+   "icon": "game-icons:tooth",
+   "file": "game-icons-tooth.png",
+   "source": "game-icons",
+   "glossEn": "tooth"
+  },
+  "ἦθος": {
+   "icon": "ph:fingerprint",
+   "file": "ph-fingerprint.png",
+   "source": "ph",
+   "glossEn": "fingerprint"
+  },
+  "πικρός": {
+   "icon": "game-icons:lemon",
+   "file": "game-icons-lemon.png",
+   "source": "game-icons",
+   "glossEn": "lemon"
+  },
+  "ἕλκω": {
+   "icon": "game-icons:pull",
+   "file": "game-icons-pull.png",
+   "source": "game-icons",
+   "glossEn": "pull"
+  },
+  "κρύφιος": {
+   "icon": "game-icons:hidden",
+   "file": "game-icons-hidden.png",
+   "source": "game-icons",
+   "glossEn": "hidden"
+  },
+  "κλοπή": {
+   "icon": "mdi:ninja",
+   "file": "mdi-ninja.png",
+   "source": "mdi",
+   "glossEn": "ninja"
   }
+ },
+ "pendingReview": {
+  "βοηθός": {
+   "icon": "mdi:scan-helper",
+   "file": "mdi-scan-helper.png",
+   "source": "mdi",
+   "glossEn": "helper"
+  },
+  "διαθήκη": {
+   "icon": "game-icons:i-beam",
+   "file": "game-icons-i-beam.png",
+   "source": "game-icons",
+   "glossEn": "i"
+  },
+  "διατίθεμαι": {
+   "icon": "mdi:alpha-i",
+   "file": "mdi-alpha-i.png",
+   "source": "mdi",
+   "glossEn": "i"
+  },
+  "κοινός": {
+   "icon": "ph:handshake-bold",
+   "file": "ph-handshake-bold.png",
+   "source": "ph",
+   "glossEn": "handshake"
+  },
+  "μετά": {
+   "icon": "mdi:dev-to",
+   "file": "mdi-dev-to.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "μεταλαμβάνω": {
+   "icon": "game-icons:i-brick",
+   "file": "game-icons-i-brick.png",
+   "source": "game-icons",
+   "glossEn": "i"
+  },
+  "πίστις": {
+   "icon": "tabler:letter-i",
+   "file": "tabler-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "πιστεύω": {
+   "icon": "mdi:alpha-i-box",
+   "file": "mdi-alpha-i-box.png",
+   "source": "mdi",
+   "glossEn": "i"
+  },
+  "πιστός": {
+   "icon": "ph:handshake-fill",
+   "file": "ph-handshake-fill.png",
+   "source": "ph",
+   "glossEn": "handshake"
+  },
+  "συμφωνέω": {
+   "icon": "game-icons:sverd-i-fjell",
+   "file": "game-icons-sverd-i-fjell.png",
+   "source": "game-icons",
+   "glossEn": "i"
+  },
+  "συνάντησις": {
+   "icon": "game-icons:explosive-meeting",
+   "file": "game-icons-explosive-meeting.png",
+   "source": "game-icons",
+   "glossEn": "meeting"
+  },
+  "σύν": {
+   "icon": "game-icons:pouch-with-beads",
+   "file": "game-icons-pouch-with-beads.png",
+   "source": "game-icons",
+   "glossEn": "with"
+  },
+  "φίλος": {
+   "icon": "mdi:alpha-i-circle",
+   "file": "mdi-alpha-i-circle.png",
+   "source": "mdi",
+   "glossEn": "i"
+  },
+  "ἅμα": {
+   "icon": "tabler:at-off",
+   "file": "tabler-at-off.png",
+   "source": "tabler",
+   "glossEn": "at"
+  },
+  "ἐπαγγελία": {
+   "icon": "ph:handshake-thin",
+   "file": "ph-handshake-thin.png",
+   "source": "ph",
+   "glossEn": "handshake"
+  },
+  "ὀνίνημι": {
+   "icon": "tabler:letter-i-small",
+   "file": "tabler-letter-i-small.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ὁμοῦ": {
+   "icon": "ph:handshake-light",
+   "file": "ph-handshake-light.png",
+   "source": "ph",
+   "glossEn": "handshake"
+  },
+  "κοινωνέω": {
+   "icon": "tabler:circle-letter-i",
+   "file": "tabler-circle-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "μετέχω": {
+   "icon": "tabler:square-letter-i",
+   "file": "tabler-square-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "μεταδίδωμι": {
+   "icon": "tabler:hexagon-letter-i",
+   "file": "tabler-hexagon-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "συναντάω": {
+   "icon": "mdi:alpha-i-box-outline",
+   "file": "mdi-alpha-i-box-outline.png",
+   "source": "mdi",
+   "glossEn": "i"
+  },
+  "τέ": {
+   "icon": "tabler:arrow-bar-both",
+   "file": "tabler-arrow-bar-both.png",
+   "source": "tabler",
+   "glossEn": "both"
+  },
+  "ἐπαγγέλλομαι": {
+   "icon": "mdi:alpha-i-circle-outline",
+   "file": "mdi-alpha-i-circle-outline.png",
+   "source": "mdi",
+   "glossEn": "i"
+  },
+  "ἐπαγγέλλω": {
+   "icon": "tabler:heart-handshake",
+   "file": "tabler-heart-handshake.png",
+   "source": "tabler",
+   "glossEn": "handshake"
+  },
+  "μή": {
+   "icon": "mdi:gate-not",
+   "file": "mdi-gate-not.png",
+   "source": "mdi",
+   "glossEn": "not"
+  },
+  "μήτε": {
+   "icon": "tabler:math-not",
+   "file": "tabler-math-not.png",
+   "source": "tabler",
+   "glossEn": "not"
+  },
+  "μηδέ": {
+   "icon": "tabler:equal-not",
+   "file": "tabler-equal-not.png",
+   "source": "tabler",
+   "glossEn": "not"
+  },
+  "μηδέποτε": {
+   "icon": "tabler:logic-not",
+   "file": "tabler-logic-not.png",
+   "source": "tabler",
+   "glossEn": "not"
+  },
+  "οὐ (οὐκ": {
+   "icon": "tabler:smoking-no",
+   "file": "tabler-smoking-no.png",
+   "source": "tabler",
+   "glossEn": "no"
+  },
+  "οὐδέ": {
+   "icon": "mdi:not-equal",
+   "file": "mdi-not-equal.png",
+   "source": "mdi",
+   "glossEn": "not"
+  },
+  "οὐκέτι": {
+   "icon": "ph:not-equals",
+   "file": "ph-not-equals.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "οὐχί": {
+   "icon": "ph:not-member-of",
+   "file": "ph-not-member-of.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "οὔτε": {
+   "icon": "ph:not-subset-of",
+   "file": "ph-not-subset-of.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "χωρίς": {
+   "icon": "game-icons:at-sea",
+   "file": "game-icons-at-sea.png",
+   "source": "game-icons",
+   "glossEn": "at"
+  },
+  "ἀρνέομαι": {
+   "icon": "tabler:circle-dashed-letter-i",
+   "file": "tabler-circle-dashed-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἄνευ": {
+   "icon": "ph:finn-the-human",
+   "file": "ph-finn-the-human.png",
+   "source": "ph",
+   "glossEn": "the"
+  },
+  "μηδαμῶς": {
+   "icon": "tabler:no-copyright",
+   "file": "tabler-no-copyright.png",
+   "source": "tabler",
+   "glossEn": "no"
+  },
+  "μηκέτι": {
+   "icon": "tabler:no-derivatives",
+   "file": "tabler-no-derivatives.png",
+   "source": "tabler",
+   "glossEn": "no"
+  },
+  "παράνομος": {
+   "icon": "mdi:gate-or",
+   "file": "mdi-gate-or.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἄτερ": {
+   "icon": "tabler:arrow-up-from-arc",
+   "file": "tabler-arrow-up-from-arc.png",
+   "source": "tabler",
+   "glossEn": "from"
+  },
+  "θεωρέω": {
+   "icon": "tabler:a-b",
+   "file": "tabler-a-b.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "προσέχω": {
+   "icon": "tabler:circle-dotted-letter-i",
+   "file": "tabler-circle-dotted-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἀναβλέπω": {
+   "icon": "tabler:circle-letter-i-filled",
+   "file": "tabler-circle-letter-i-filled.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἐμβλέπω": {
+   "icon": "tabler:square-letter-i-filled",
+   "file": "tabler-square-letter-i-filled.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἐνώπιον": {
+   "icon": "game-icons:rally-the-troops",
+   "file": "game-icons-rally-the-troops.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "ἐνώπιος": {
+   "icon": "mdi:table-row-plus-before",
+   "file": "mdi-table-row-plus-before.png",
+   "source": "mdi",
+   "glossEn": "before"
+  },
+  "ἐπίσκοπος": {
+   "icon": "mdi:account-supervisor",
+   "file": "mdi-account-supervisor.png",
+   "source": "mdi",
+   "glossEn": "supervisor"
+  },
+  "ἐπιβλέπω": {
+   "icon": "tabler:hexagon-letter-i-filled",
+   "file": "tabler-hexagon-letter-i-filled.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἐπισκοπέω": {
+   "icon": "tabler:square-rounded-letter-i",
+   "file": "tabler-square-rounded-letter-i.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "ἔμπροσθεν": {
+   "icon": "game-icons:paw-front",
+   "file": "game-icons-paw-front.png",
+   "source": "game-icons",
+   "glossEn": "front"
+  },
+  "ἔναντι": {
+   "icon": "mdi:table-column-plus-before",
+   "file": "mdi-table-column-plus-before.png",
+   "source": "mdi",
+   "glossEn": "before"
+  },
+  "ἰδού": {
+   "icon": "mdi:email-mark-as-unread",
+   "file": "mdi-email-mark-as-unread.png",
+   "source": "mdi",
+   "glossEn": "as"
+  },
+  "ἴδε": {
+   "icon": "ph:dev-to-logo",
+   "file": "ph-dev-to-logo.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "ὁράω": {
+   "icon": "mdi:exit-to-app",
+   "file": "mdi-exit-to-app.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "θεάομαι": {
+   "icon": "tabler:square-rounded-letter-i-filled",
+   "file": "tabler-square-rounded-letter-i-filled.png",
+   "source": "tabler",
+   "glossEn": "i"
+  },
+  "θεωρία": {
+   "icon": "game-icons:on-sight",
+   "file": "game-icons-on-sight.png",
+   "source": "game-icons",
+   "glossEn": "sight"
+  },
+  "σκοπέω": {
+   "icon": "game-icons:take-my-money",
+   "file": "game-icons-take-my-money.png",
+   "source": "game-icons",
+   "glossEn": "take"
+  },
+  "ἐπίσκεψις": {
+   "icon": "tabler:logic-or",
+   "file": "tabler-logic-or.png",
+   "source": "tabler",
+   "glossEn": "or"
+  },
+  "ἐπεῖδον": {
+   "icon": "tabler:mood-look-up",
+   "file": "tabler-mood-look-up.png",
+   "source": "tabler",
+   "glossEn": "look"
+  },
+  "ἐπισκοπή": {
+   "icon": "ph:member-of",
+   "file": "ph-member-of.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "αἴτημα": {
+   "icon": "ph:git-pull-request",
+   "file": "ph-git-pull-request.png",
+   "source": "ph",
+   "glossEn": "request"
+  },
+  "εὐσέβεια": {
+   "icon": "game-icons:folded-paper",
+   "file": "game-icons-folded-paper.png",
+   "source": "game-icons",
+   "glossEn": "folded"
+  },
+  "ἐξιλάσκομαι": {
+   "icon": "ph:shirt-folded",
+   "file": "ph-shirt-folded.png",
+   "source": "ph",
+   "glossEn": "folded"
+  },
+  "ἔντευξις": {
+   "icon": "game-icons:prayer-beads",
+   "file": "game-icons-prayer-beads.png",
+   "source": "game-icons",
+   "glossEn": "prayer"
+  },
+  "ἱκετεύω": {
+   "icon": "game-icons:paper-bag-folded",
+   "file": "game-icons-paper-bag-folded.png",
+   "source": "game-icons",
+   "glossEn": "folded"
+  },
+  "ἱλάσκομαι": {
+   "icon": "mdi:led-on",
+   "file": "mdi-led-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "ὁσίως": {
+   "icon": "ph:shirt-folded-bold",
+   "file": "ph-shirt-folded-bold.png",
+   "source": "ph",
+   "glossEn": "folded"
+  },
+  "ὁσιότης": {
+   "icon": "ph:shirt-folded-fill",
+   "file": "ph-shirt-folded-fill.png",
+   "source": "ph",
+   "glossEn": "folded"
+  },
+  "δέομαι": {
+   "icon": "ph:git-pull-request-bold",
+   "file": "ph-git-pull-request-bold.png",
+   "source": "ph",
+   "glossEn": "request"
+  },
+  "εὐλάβεια": {
+   "icon": "ph:shirt-folded-thin",
+   "file": "ph-shirt-folded-thin.png",
+   "source": "ph",
+   "glossEn": "folded"
+  },
+  "εὔχομαι": {
+   "icon": "mdi:hands-pray",
+   "file": "mdi-hands-pray.png",
+   "source": "mdi",
+   "glossEn": "pray"
+  },
+  "θεοσέβεια": {
+   "icon": "game-icons:all-for-one",
+   "file": "game-icons-all-for-one.png",
+   "source": "game-icons",
+   "glossEn": "for"
+  },
+  "σκεπάζω": {
+   "icon": "game-icons:book-cover",
+   "file": "game-icons-book-cover.png",
+   "source": "game-icons",
+   "glossEn": "cover"
+  },
+  "ἐντυγχάνω": {
+   "icon": "ph:call-bell",
+   "file": "ph-call-bell.png",
+   "source": "ph",
+   "glossEn": "call"
+  },
+  "εἰκότως": {
+   "icon": "mdi:bug-check",
+   "file": "mdi-bug-check.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "εὔλογος": {
+   "icon": "mdi:check-all",
+   "file": "mdi-check-all.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "καθήκω": {
+   "icon": "mdi:power-socket-it",
+   "file": "mdi-power-socket-it.png",
+   "source": "mdi",
+   "glossEn": "it"
+  },
+  "μέν": {
+   "icon": "ph:subset-of",
+   "file": "ph-subset-of.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ναί": {
+   "icon": "ph:check-fat",
+   "file": "ph-check-fat.png",
+   "source": "ph",
+   "glossEn": "check"
+  },
+  "πρέπω": {
+   "icon": "mdi:fit-to-page",
+   "file": "mdi-fit-to-page.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἀμήν": {
+   "icon": "mdi:alpha-e",
+   "file": "mdi-alpha-e.png",
+   "source": "mdi",
+   "glossEn": "e"
+  },
+  "ἀξιόω": {
+   "icon": "mdi:account-box",
+   "file": "mdi-account-box.png",
+   "source": "mdi",
+   "glossEn": "account"
+  },
+  "ἀπόδειξις": {
+   "icon": "mdi:eye-check",
+   "file": "mdi-eye-check.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "ἄξιος": {
+   "icon": "game-icons:logic-gate-or",
+   "file": "game-icons-logic-gate-or.png",
+   "source": "game-icons",
+   "glossEn": "or"
+  },
+  "ἱκανός": {
+   "icon": "tabler:letter-e",
+   "file": "tabler-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ὄντως": {
+   "icon": "mdi:lan-check",
+   "file": "mdi-lan-check.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "ὑπάρχω": {
+   "icon": "mdi:calendar-week-begin",
+   "file": "mdi-calendar-week-begin.png",
+   "source": "mdi",
+   "glossEn": "begin"
+  },
+  "δύναμαι": {
+   "icon": "ph:less-than-or-equal",
+   "file": "ph-less-than-or-equal.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "ἀποδείκνυμι": {
+   "icon": "tabler:keyboard-show",
+   "file": "tabler-keyboard-show.png",
+   "source": "tabler",
+   "glossEn": "show"
+  },
+  "ἔξεστι": {
+   "icon": "mdi:map-check",
+   "file": "mdi-map-check.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "ἔχω": {
+   "icon": "mdi:car-brake-hold",
+   "file": "mdi-car-brake-hold.png",
+   "source": "mdi",
+   "glossEn": "hold"
+  },
+  "διακονία": {
+   "icon": "ph:first-aid",
+   "file": "ph-first-aid.png",
+   "source": "ph",
+   "glossEn": "aid"
+  },
+  "παραδέχομαι": {
+   "icon": "game-icons:receive-money",
+   "file": "game-icons-receive-money.png",
+   "source": "game-icons",
+   "glossEn": "receive"
+  },
+  "παραλαμβάνω": {
+   "icon": "mdi:near-me",
+   "file": "mdi-near-me.png",
+   "source": "mdi",
+   "glossEn": "near"
+  },
+  "περιλαμβάνω": {
+   "icon": "mdi:surround-sound",
+   "file": "mdi-surround-sound.png",
+   "source": "mdi",
+   "glossEn": "surround"
+  },
+  "πρόνοια": {
+   "icon": "ph:book-open",
+   "file": "ph-book-open.png",
+   "source": "ph",
+   "glossEn": "open"
+  },
+  "συγχωρέω": {
+   "icon": "ph:door-open",
+   "file": "ph-door-open.png",
+   "source": "ph",
+   "glossEn": "open"
+  },
+  "ἐκπετάννυμι": {
+   "icon": "mdi:gesture-spread",
+   "file": "mdi-gesture-spread.png",
+   "source": "mdi",
+   "glossEn": "spread"
+  },
+  "ἐκτείνω": {
+   "icon": "mdi:stretch-to-page",
+   "file": "mdi-stretch-to-page.png",
+   "source": "mdi",
+   "glossEn": "stretch"
+  },
+  "κατάληψις": {
+   "icon": "game-icons:grasping-slug",
+   "file": "game-icons-grasping-slug.png",
+   "source": "game-icons",
+   "glossEn": "grasping"
+  },
+  "προσίημι": {
+   "icon": "ph:greater-than-or-equal",
+   "file": "ph-greater-than-or-equal.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "χαρίζομαι": {
+   "icon": "mdi:coffee-to-go",
+   "file": "mdi-coffee-to-go.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἀπολαμβάνω": {
+   "icon": "tabler:http-get",
+   "file": "tabler-http-get.png",
+   "source": "tabler",
+   "glossEn": "get"
+  },
+  "εὐοδόω": {
+   "icon": "tabler:congruent-to",
+   "file": "tabler-congruent-to.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "μάλιστα": {
+   "icon": "game-icons:hand-of-god",
+   "file": "game-icons-hand-of-god.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "μείζων": {
+   "icon": "mdi:chart-arc",
+   "file": "mdi-chart-arc.png",
+   "source": "mdi",
+   "glossEn": "chart"
+  },
+  "μᾶλλον": {
+   "icon": "mdi:skew-more",
+   "file": "mdi-skew-more.png",
+   "source": "mdi",
+   "glossEn": "more"
+  },
+  "περισσεύω": {
+   "icon": "tabler:ease-in",
+   "file": "tabler-ease-in.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "περισσός": {
+   "icon": "ph:greater-than",
+   "file": "ph-greater-than.png",
+   "source": "ph",
+   "glossEn": "greater"
+  },
+  "πλείων": {
+   "icon": "mdi:perspective-more",
+   "file": "mdi-perspective-more.png",
+   "source": "mdi",
+   "glossEn": "more"
+  },
+  "πολύς": {
+   "icon": "mdi:code-less-than-or-equal",
+   "file": "mdi-code-less-than-or-equal.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "τοσοῦτος": {
+   "icon": "game-icons:great-pyramid",
+   "file": "game-icons-great-pyramid.png",
+   "source": "game-icons",
+   "glossEn": "great"
+  },
+  "ἀμείνων": {
+   "icon": "mdi:unfold-more-vertical",
+   "file": "mdi-unfold-more-vertical.png",
+   "source": "mdi",
+   "glossEn": "more"
+  },
+  "κρείττων": {
+   "icon": "mdi:unfold-more-horizontal",
+   "file": "mdi-unfold-more-horizontal.png",
+   "source": "mdi",
+   "glossEn": "more"
+  },
+  "πλῆθος": {
+   "icon": "tabler:signal-e",
+   "file": "tabler-signal-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "τηλικοῦτος": {
+   "icon": "game-icons:great-war-tank",
+   "file": "game-icons-great-war-tank.png",
+   "source": "game-icons",
+   "glossEn": "great"
+  },
+  "γνῶσις": {
+   "icon": "tabler:e-passport",
+   "file": "tabler-e-passport.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "κεφαλή": {
+   "icon": "ph:less-than-or-equal-bold",
+   "file": "ph-less-than-or-equal-bold.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "νοῦς": {
+   "icon": "game-icons:hive-mind",
+   "file": "game-icons-hive-mind.png",
+   "source": "game-icons",
+   "glossEn": "mind"
+  },
+  "συνείδησις": {
+   "icon": "mdi:alpha-e-box",
+   "file": "mdi-alpha-e-box.png",
+   "source": "mdi",
+   "glossEn": "e"
+  },
+  "σύνεσις": {
+   "icon": "ph:brain-bold",
+   "file": "ph-brain-bold.png",
+   "source": "ph",
+   "glossEn": "brain"
+  },
+  "ἐπιγινώσκω": {
+   "icon": "mdi:alpha-e-circle",
+   "file": "mdi-alpha-e-circle.png",
+   "source": "mdi",
+   "glossEn": "e"
+  },
+  "σύνοιδα": {
+   "icon": "mdi:radio-am",
+   "file": "mdi-radio-am.png",
+   "source": "mdi",
+   "glossEn": "am"
+  },
+  "φρόνιμος": {
+   "icon": "game-icons:brain-dump",
+   "file": "game-icons-brain-dump.png",
+   "source": "game-icons",
+   "glossEn": "brain"
+  },
+  "ἐπίγνωσις": {
+   "icon": "game-icons:gift-of-knowledge",
+   "file": "game-icons-gift-of-knowledge.png",
+   "source": "game-icons",
+   "glossEn": "knowledge"
+  },
+  "ἐπιστήμη": {
+   "icon": "game-icons:classical-knowledge",
+   "file": "game-icons-classical-knowledge.png",
+   "source": "game-icons",
+   "glossEn": "knowledge"
+  },
+  "κατεργάζομαι": {
+   "icon": "tabler:ease-out",
+   "file": "tabler-ease-out.png",
+   "source": "tabler",
+   "glossEn": "out"
+  },
+  "ποιέω": {
+   "icon": "ph:less-than-or-equal-fill",
+   "file": "ph-less-than-or-equal-fill.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "πράσσω": {
+   "icon": "tabler:letter-e-small",
+   "file": "tabler-letter-e-small.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "χράομαι": {
+   "icon": "mdi:gas-station-in-use",
+   "file": "mdi-gas-station-in-use.png",
+   "source": "mdi",
+   "glossEn": "use"
+  },
+  "ἐργάζομαι": {
+   "icon": "ph:sign-in",
+   "file": "ph-sign-in.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "δημιουργέω": {
+   "icon": "ph:less-than-or-equal-thin",
+   "file": "ph-less-than-or-equal-thin.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "δημιουργία": {
+   "icon": "ph:superset-of",
+   "file": "ph-superset-of.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "χρῆσις": {
+   "icon": "mdi:gas-station-in-use-outline",
+   "file": "mdi-gas-station-in-use-outline.png",
+   "source": "mdi",
+   "glossEn": "use"
+  },
+  "ἐπιτήδευμα": {
+   "icon": "ph:less-than-or-equal-light",
+   "file": "ph-less-than-or-equal-light.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "λειτουργός": {
+   "icon": "game-icons:glowing-hands",
+   "file": "game-icons-glowing-hands.png",
+   "source": "game-icons",
+   "glossEn": "hands"
+  },
+  "τιμάω": {
+   "icon": "ph:at-bold",
+   "file": "ph-at-bold.png",
+   "source": "ph",
+   "glossEn": "at"
+  },
+  "χειροτονέω": {
+   "icon": "tabler:creative-commons-by",
+   "file": "tabler-creative-commons-by.png",
+   "source": "tabler",
+   "glossEn": "by"
+  },
+  "ἀναφέρω": {
+   "icon": "mdi:bag-carry-on",
+   "file": "mdi-bag-carry-on.png",
+   "source": "mdi",
+   "glossEn": "carry"
+  },
+  "ἀρχιερεύς": {
+   "icon": "tabler:a-b-2",
+   "file": "tabler-a-b-2.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ἱερεύς": {
+   "icon": "game-icons:sun-priest",
+   "file": "game-icons-sun-priest.png",
+   "source": "game-icons",
+   "glossEn": "priest"
+  },
+  "ἱερωσύνη": {
+   "icon": "game-icons:post-office",
+   "file": "game-icons-post-office.png",
+   "source": "game-icons",
+   "glossEn": "office"
+  },
+  "αἴνεσις": {
+   "icon": "ph:hands-praying",
+   "file": "ph-hands-praying.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "αἶνος": {
+   "icon": "game-icons:shaking-hands",
+   "file": "game-icons-shaking-hands.png",
+   "source": "game-icons",
+   "glossEn": "hands"
+  },
+  "εὐλογέω": {
+   "icon": "game-icons:bowl-of-rice",
+   "file": "game-icons-bowl-of-rice.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "εὐλογία": {
+   "icon": "ph:hands-clapping",
+   "file": "ph-hands-clapping.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "εὐχαριστία": {
+   "icon": "ph:hands-praying-bold",
+   "file": "ph-hands-praying-bold.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "λατρεία": {
+   "icon": "mdi:dog-service",
+   "file": "mdi-dog-service.png",
+   "source": "mdi",
+   "glossEn": "service"
+  },
+  "προσφορά": {
+   "icon": "ph:hands-praying-fill",
+   "file": "ph-hands-praying-fill.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "τέλος": {
+   "icon": "ph:at-fill",
+   "file": "ph-at-fill.png",
+   "source": "ph",
+   "glossEn": "at"
+  },
+  "ἄρα": {
+   "icon": "mdi:code-greater-than-or-equal",
+   "file": "mdi-code-greater-than-or-equal.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἔσχατος": {
+   "icon": "tabler:pin-end",
+   "file": "tabler-pin-end.png",
+   "source": "tabler",
+   "glossEn": "end"
+  },
+  "ὅθεν": {
+   "icon": "mdi:ray-end",
+   "file": "mdi-ray-end.png",
+   "source": "mdi",
+   "glossEn": "end"
+  },
+  "ὥστε": {
+   "icon": "tabler:circle-letter-e",
+   "file": "tabler-circle-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "γοῦν": {
+   "icon": "mdi:clock-end",
+   "file": "mdi-clock-end.png",
+   "source": "mdi",
+   "glossEn": "end"
+  },
+  "διό": {
+   "icon": "tabler:square-letter-e",
+   "file": "tabler-square-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "οὐκοῦν": {
+   "icon": "mdi:code-not-equal",
+   "file": "mdi-code-not-equal.png",
+   "source": "mdi",
+   "glossEn": "not"
+  },
+  "πέρας": {
+   "icon": "tabler:phone-end",
+   "file": "tabler-phone-end.png",
+   "source": "tabler",
+   "glossEn": "end"
+  },
+  "συντέλεια": {
+   "icon": "mdi:contain-end",
+   "file": "mdi-contain-end.png",
+   "source": "mdi",
+   "glossEn": "end"
+  },
+  "τελέω": {
+   "icon": "mdi:calendar-end",
+   "file": "mdi-calendar-end.png",
+   "source": "mdi",
+   "glossEn": "end"
+  },
+  "τελειόω": {
+   "icon": "mdi:timer-sand-complete",
+   "file": "mdi-timer-sand-complete.png",
+   "source": "mdi",
+   "glossEn": "complete"
+  },
+  "τοίνυν": {
+   "icon": "mdi:ray-end-arrow",
+   "file": "mdi-ray-end-arrow.png",
+   "source": "mdi",
+   "glossEn": "end"
+  },
+  "ποῖος": {
+   "icon": "tabler:sort-0-9",
+   "file": "tabler-sort-0-9.png",
+   "source": "tabler",
+   "glossEn": "sort"
+  },
+  "ποῦ": {
+   "icon": "game-icons:eye-of-horus",
+   "file": "game-icons-eye-of-horus.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "πόθεν": {
+   "icon": "tabler:arrow-down-from-arc",
+   "file": "tabler-arrow-down-from-arc.png",
+   "source": "tabler",
+   "glossEn": "from"
+  },
+  "πόσος": {
+   "icon": "mdi:relation-many-to-one",
+   "file": "mdi-relation-many-to-one.png",
+   "source": "mdi",
+   "glossEn": "many"
+  },
+  "πότερος": {
+   "icon": "mdi:point-of-sale",
+   "file": "mdi-point-of-sale.png",
+   "source": "mdi",
+   "glossEn": "of"
+  },
+  "πῶς": {
+   "icon": "game-icons:sands-of-time",
+   "file": "game-icons-sands-of-time.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "τίς": {
+   "icon": "ph:greater-than-or-equal-bold",
+   "file": "ph-greater-than-or-equal-bold.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "ἀγνοέω": {
+   "icon": "game-icons:logic-gate-not",
+   "file": "game-icons-logic-gate-not.png",
+   "source": "game-icons",
+   "glossEn": "not"
+  },
+  "ἐρωτάω": {
+   "icon": "ph:git-pull-request-fill",
+   "file": "ph-git-pull-request-fill.png",
+   "source": "ph",
+   "glossEn": "request"
+  },
+  "ἐπερωτάω": {
+   "icon": "tabler:hexagon-letter-e",
+   "file": "tabler-hexagon-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ὁποῖος": {
+   "icon": "ph:greater-than-or-equal-fill",
+   "file": "ph-greater-than-or-equal-fill.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "μάτην": {
+   "icon": "mdi:pi-hole",
+   "file": "mdi-pi-hole.png",
+   "source": "mdi",
+   "glossEn": "hole"
+  },
+  "ματαιότης": {
+   "icon": "mdi:vanity-light",
+   "file": "mdi-vanity-light.png",
+   "source": "mdi",
+   "glossEn": "vanity"
+  },
+  "μηδείς": {
+   "icon": "ph:not-equals-bold",
+   "file": "ph-not-equals-bold.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "οὐδαμοῦ": {
+   "icon": "ph:not-equals-fill",
+   "file": "ph-not-equals-fill.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "οὐδείς": {
+   "icon": "ph:not-equals-thin",
+   "file": "ph-not-equals-thin.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "πτωχός": {
+   "icon": "game-icons:face-to-face",
+   "file": "game-icons-face-to-face.png",
+   "source": "game-icons",
+   "glossEn": "to"
+  },
+  "ἄβυσσος": {
+   "icon": "game-icons:dig-hole",
+   "file": "game-icons-dig-hole.png",
+   "source": "game-icons",
+   "glossEn": "hole"
+  },
+  "λάκκος": {
+   "icon": "game-icons:spiky-pit",
+   "file": "game-icons-spiky-pit.png",
+   "source": "game-icons",
+   "glossEn": "pit"
+  },
+  "σπήλαιον": {
+   "icon": "game-icons:cave-entrance",
+   "file": "game-icons-cave-entrance.png",
+   "source": "game-icons",
+   "glossEn": "cave"
+  },
+  "ἀφανής": {
+   "icon": "game-icons:invisible-face",
+   "file": "game-icons-invisible-face.png",
+   "source": "game-icons",
+   "glossEn": "invisible"
+  },
+  "θέλημα": {
+   "icon": "mdi:alpha-e-box-outline",
+   "file": "mdi-alpha-e-box-outline.png",
+   "source": "mdi",
+   "glossEn": "e"
+  },
+  "θέλω": {
+   "icon": "tabler:xbox-a",
+   "file": "tabler-xbox-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "μελετάω": {
+   "icon": "mdi:floor-plan",
+   "file": "mdi-floor-plan.png",
+   "source": "mdi",
+   "glossEn": "plan"
+  },
+  "τάχα": {
+   "icon": "tabler:thinking-low",
+   "file": "tabler-thinking-low.png",
+   "source": "tabler",
+   "glossEn": "thinking"
+  },
+  "φιλοσοφέω": {
+   "icon": "game-icons:shield-reflect",
+   "file": "game-icons-shield-reflect.png",
+   "source": "game-icons",
+   "glossEn": "reflect"
+  },
+  "φιλοσοφία": {
+   "icon": "game-icons:evil-love",
+   "file": "game-icons-evil-love.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "ἴσως": {
+   "icon": "tabler:thinking-high",
+   "file": "tabler-thinking-high.png",
+   "source": "tabler",
+   "glossEn": "thinking"
+  },
+  "διανοέομαι": {
+   "icon": "ph:greater-than-or-equal-thin",
+   "file": "ph-greater-than-or-equal-thin.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "σκέπτομαι": {
+   "icon": "ph:less-than-or-equal-duotone",
+   "file": "ph-less-than-or-equal-duotone.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "ἐνθύμησις": {
+   "icon": "game-icons:thought-bubble",
+   "file": "game-icons-thought-bubble.png",
+   "source": "game-icons",
+   "glossEn": "thought"
+  },
+  "δώδεκα": {
+   "icon": "ph:dice-two",
+   "file": "ph-dice-two.png",
+   "source": "ph",
+   "glossEn": "two"
+  },
+  "πεντακόσιοι": {
+   "icon": "ph:dice-five",
+   "file": "ph-dice-five.png",
+   "source": "ph",
+   "glossEn": "five"
+  },
+  "τετρακόσιοι": {
+   "icon": "ph:four-k",
+   "file": "ph-four-k.png",
+   "source": "ph",
+   "glossEn": "four"
+  },
+  "τριακόσιοι": {
+   "icon": "ph:three-d",
+   "file": "ph-three-d.png",
+   "source": "ph",
+   "glossEn": "three"
+  },
+  "χίλιοι": {
+   "icon": "tabler:input-x",
+   "file": "tabler-input-x.png",
+   "source": "tabler",
+   "glossEn": "input"
+  },
+  "ἀνά": {
+   "icon": "mdi:gate-and",
+   "file": "mdi-gate-and.png",
+   "source": "mdi",
+   "glossEn": "and"
+  },
+  "ἀριθμός": {
+   "icon": "tabler:number-0",
+   "file": "tabler-number-0.png",
+   "source": "tabler",
+   "glossEn": "number"
+  },
+  "ἐξαριθμέω": {
+   "icon": "tabler:zoom-in",
+   "file": "tabler-zoom-in.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "ἑξακόσιοι": {
+   "icon": "ph:dice-six",
+   "file": "ph-dice-six.png",
+   "source": "ph",
+   "glossEn": "six"
+  },
+  "εἴκοσι": {
+   "icon": "game-icons:dice-twenty-faces-one",
+   "file": "game-icons-dice-twenty-faces-one.png",
+   "source": "game-icons",
+   "glossEn": "twenty"
+  },
+  "πεντήκοντα": {
+   "icon": "tabler:input-ai",
+   "file": "tabler-input-ai.png",
+   "source": "tabler",
+   "glossEn": "input"
+  },
+  "τεσσαράκοντα": {
+   "icon": "tabler:input-check",
+   "file": "tabler-input-check.png",
+   "source": "tabler",
+   "glossEn": "input"
+  },
+  "τεσσεράκοντα": {
+   "icon": "tabler:number-1",
+   "file": "tabler-number-1.png",
+   "source": "tabler",
+   "glossEn": "number"
+  },
+  "τριάκοντα": {
+   "icon": "tabler:input-spark",
+   "file": "tabler-input-spark.png",
+   "source": "tabler",
+   "glossEn": "input"
+  },
+  "συνάγω": {
+   "icon": "mdi:alpha-e-circle-outline",
+   "file": "mdi-alpha-e-circle-outline.png",
+   "source": "mdi",
+   "glossEn": "e"
+  },
+  "συνέρχομαι": {
+   "icon": "mdi:clock-in",
+   "file": "mdi-clock-in.png",
+   "source": "mdi",
+   "glossEn": "in"
+  },
+  "φυλή": {
+   "icon": "tabler:circle-dashed-letter-e",
+   "file": "tabler-circle-dashed-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ἐκκλησία": {
+   "icon": "tabler:phone-calling",
+   "file": "tabler-phone-calling.png",
+   "source": "tabler",
+   "glossEn": "calling"
+  },
+  "ὄχλος": {
+   "icon": "game-icons:private-first-class",
+   "file": "game-icons-private-first-class.png",
+   "source": "game-icons",
+   "glossEn": "class"
+  },
+  "ὑμεῖς": {
+   "icon": "tabler:hand-love-you",
+   "file": "tabler-hand-love-you.png",
+   "source": "tabler",
+   "glossEn": "you"
+  },
+  "δῆμος": {
+   "icon": "mdi:nature-people",
+   "file": "mdi-nature-people.png",
+   "source": "mdi",
+   "glossEn": "people"
+  },
+  "συμφέρω": {
+   "icon": "mdi:flip-to-back",
+   "file": "mdi-flip-to-back.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "σύνειμι": {
+   "icon": "game-icons:skull-with-syringe",
+   "file": "game-icons-skull-with-syringe.png",
+   "source": "game-icons",
+   "glossEn": "with"
+  },
+  "ὑμέτερος": {
+   "icon": "game-icons:fire-silhouette",
+   "file": "game-icons-fire-silhouette.png",
+   "source": "game-icons",
+   "glossEn": "silhouette"
+  },
+  "ἀδιάκριτος": {
+   "icon": "game-icons:heavy-fall",
+   "file": "game-icons-heavy-fall.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ὁμοίως": {
+   "icon": "game-icons:heavy-helm",
+   "file": "game-icons-heavy-helm.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ὁμοίωσις": {
+   "icon": "game-icons:heavy-rain",
+   "file": "game-icons-heavy-rain.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ὅμοιος": {
+   "icon": "game-icons:heavy-arrow",
+   "file": "game-icons-heavy-arrow.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ὡς": {
+   "icon": "tabler:circle-dotted-letter-e",
+   "file": "tabler-circle-dotted-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ὥσπερ": {
+   "icon": "tabler:circle-letter-e-filled",
+   "file": "tabler-circle-letter-e-filled.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ὁμοιότης": {
+   "icon": "game-icons:heavy-timer",
+   "file": "game-icons-heavy-timer.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ὡσαύτως": {
+   "icon": "game-icons:heavy-collar",
+   "file": "game-icons-heavy-collar.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "εἰ μή": {
+   "icon": "ph:not-superset-of",
+   "file": "ph-not-superset-of.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "εἴπερ": {
+   "icon": "ph:shuffle-bold",
+   "file": "ph-shuffle-bold.png",
+   "source": "ph",
+   "glossEn": "shuffle"
+  },
+  "εἴτε": {
+   "icon": "ph:shuffle-fill",
+   "file": "ph-shuffle-fill.png",
+   "source": "ph",
+   "glossEn": "shuffle"
+  },
+  "κἄν": {
+   "icon": "tabler:logic-and",
+   "file": "tabler-logic-and.png",
+   "source": "tabler",
+   "glossEn": "and"
+  },
+  "ἄλλως": {
+   "icon": "ph:shuffle-thin",
+   "file": "ph-shuffle-thin.png",
+   "source": "ph",
+   "glossEn": "shuffle"
+  },
+  "ἄν": {
+   "icon": "mdi:file-word",
+   "file": "mdi-file-word.png",
+   "source": "mdi",
+   "glossEn": "word"
+  },
+  "ἐάν": {
+   "icon": "ph:arrows-in",
+   "file": "ph-arrows-in.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "ἤ": {
+   "icon": "ph:greater-than-or-equal-light",
+   "file": "ph-greater-than-or-equal-light.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "ἄλλος": {
+   "icon": "tabler:square-letter-e-filled",
+   "file": "tabler-square-letter-e-filled.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ἐάνπερ": {
+   "icon": "ph:shuffle-light",
+   "file": "ph-shuffle-light.png",
+   "source": "ph",
+   "glossEn": "shuffle"
+  },
+  "ἕτερος": {
+   "icon": "mdi:relation-one-or-many-to-one",
+   "file": "mdi-relation-one-or-many-to-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "κηρύσσω": {
+   "icon": "ph:megaphone-bold",
+   "file": "ph-megaphone-bold.png",
+   "source": "ph",
+   "glossEn": "megaphone"
+  },
+  "κῆρυξ": {
+   "icon": "ph:megaphone-fill",
+   "file": "ph-megaphone-fill.png",
+   "source": "ph",
+   "glossEn": "megaphone"
+  },
+  "ἀπαγγέλλω": {
+   "icon": "ph:megaphone-thin",
+   "file": "ph-megaphone-thin.png",
+   "source": "ph",
+   "glossEn": "megaphone"
+  },
+  "κελεύω": {
+   "icon": "tabler:command-off",
+   "file": "tabler-command-off.png",
+   "source": "tabler",
+   "glossEn": "command"
+  },
+  "παραγγέλλω": {
+   "icon": "tabler:a-b-off",
+   "file": "tabler-a-b-off.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ἐπιτάσσω": {
+   "icon": "ph:command-bold",
+   "file": "ph-command-bold.png",
+   "source": "ph",
+   "glossEn": "command"
+  },
+  "διάβολος": {
+   "icon": "tabler:face-id",
+   "file": "tabler-face-id.png",
+   "source": "tabler",
+   "glossEn": "face"
+  },
+  "πειράζω": {
+   "icon": "tabler:test-pipe",
+   "file": "tabler-test-pipe.png",
+   "source": "tabler",
+   "glossEn": "test"
+  },
+  "πονηρεύομαι": {
+   "icon": "game-icons:evil-bat",
+   "file": "game-icons-evil-bat.png",
+   "source": "game-icons",
+   "glossEn": "evil"
+  },
+  "πονηρός": {
+   "icon": "tabler:hexagon-letter-e-filled",
+   "file": "tabler-hexagon-letter-e-filled.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ἀσέβεια": {
+   "icon": "mdi:face-man",
+   "file": "mdi-face-man.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἀσεβής": {
+   "icon": "game-icons:nun-face",
+   "file": "game-icons-nun-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "κακία": {
+   "icon": "game-icons:evil-bud",
+   "file": "game-icons-evil-bud.png",
+   "source": "game-icons",
+   "glossEn": "evil"
+  },
+  "πειράω": {
+   "icon": "mdi:currency-try",
+   "file": "mdi-currency-try.png",
+   "source": "mdi",
+   "glossEn": "try"
+  },
+  "πειρασμός": {
+   "icon": "mdi:ab-testing",
+   "file": "mdi-ab-testing.png",
+   "source": "mdi",
+   "glossEn": "testing"
+  },
+  "πονηρία": {
+   "icon": "game-icons:pig-face",
+   "file": "game-icons-pig-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "ἀνόσιος": {
+   "icon": "game-icons:nothing-to-say",
+   "file": "game-icons-nothing-to-say.png",
+   "source": "game-icons",
+   "glossEn": "nothing"
+  },
+  "κράτος": {
+   "icon": "mdi:wifi-strength-1",
+   "file": "mdi-wifi-strength-1.png",
+   "source": "mdi",
+   "glossEn": "strength"
+  },
+  "κρατέω": {
+   "icon": "mdi:wifi-strength-2",
+   "file": "mdi-wifi-strength-2.png",
+   "source": "mdi",
+   "glossEn": "strength"
+  },
+  "λαμβάνω": {
+   "icon": "game-icons:g-clef",
+   "file": "game-icons-g-clef.png",
+   "source": "game-icons",
+   "glossEn": "g"
+  },
+  "ἀντέχω": {
+   "icon": "ph:hand-fist",
+   "file": "ph-hand-fist.png",
+   "source": "ph",
+   "glossEn": "fist"
+  },
+  "καταλαμβάνω": {
+   "icon": "mdi:format-wrap-tight",
+   "file": "mdi-format-wrap-tight.png",
+   "source": "mdi",
+   "glossEn": "tight"
+  },
+  "κτάομαι": {
+   "icon": "tabler:http-get-off",
+   "file": "tabler-http-get-off.png",
+   "source": "tabler",
+   "glossEn": "get"
+  },
+  "ἐμμένω": {
+   "icon": "mdi:relation-one-to-one-or-many",
+   "file": "mdi-relation-one-to-one-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "λέγω": {
+   "icon": "game-icons:back-forth",
+   "file": "game-icons-back-forth.png",
+   "source": "game-icons",
+   "glossEn": "forth"
+  },
+  "λόγος": {
+   "icon": "mdi:relation-one-to-zero-or-one",
+   "file": "mdi-relation-one-to-zero-or-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "φάσις": {
+   "icon": "tabler:report-off",
+   "file": "tabler-report-off.png",
+   "source": "tabler",
+   "glossEn": "report"
+  },
+  "φημί": {
+   "icon": "mdi:relation-zero-or-one-to-one",
+   "file": "mdi-relation-zero-or-one-to-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ῥῆμα": {
+   "icon": "game-icons:matter-states",
+   "file": "game-icons-matter-states.png",
+   "source": "game-icons",
+   "glossEn": "matter"
+  },
+  "ἀποκρίνομαι": {
+   "icon": "tabler:square-rounded-letter-e",
+   "file": "tabler-square-rounded-letter-e.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "ἑρῶ": {
+   "icon": "game-icons:william-tell",
+   "file": "game-icons-william-tell.png",
+   "source": "game-icons",
+   "glossEn": "tell"
+  },
+  "μεταβάλλω": {
+   "icon": "mdi:key-change",
+   "file": "mdi-key-change.png",
+   "source": "mdi",
+   "glossEn": "change"
+  },
+  "μετανοέω": {
+   "icon": "mdi:relation-many-to-one-or-many",
+   "file": "mdi-relation-many-to-one-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἀντί": {
+   "icon": "ph:star-of-david",
+   "file": "ph-star-of-david.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ἀντίψυχος": {
+   "icon": "mdi:relation-many-to-zero-or-one",
+   "file": "mdi-relation-many-to-zero-or-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἀνταποδίδωμι": {
+   "icon": "game-icons:axe-in-log",
+   "file": "game-icons-axe-in-log.png",
+   "source": "game-icons",
+   "glossEn": "in"
+  },
+  "ἀποδίδωμι": {
+   "icon": "tabler:square-rounded-letter-e-filled",
+   "file": "tabler-square-rounded-letter-e-filled.png",
+   "source": "tabler",
+   "glossEn": "e"
+  },
+  "μετάνοια": {
+   "icon": "tabler:status-change",
+   "file": "tabler-status-change.png",
+   "source": "tabler",
+   "glossEn": "change"
+  },
+  "ἐπιστρέφω": {
+   "icon": "mdi:cog-counterclockwise",
+   "file": "mdi-cog-counterclockwise.png",
+   "source": "mdi",
+   "glossEn": "counterclockwise"
+  },
+  "βούλημα": {
+   "icon": "mdi:thought-bubble-outline",
+   "file": "mdi-thought-bubble-outline.png",
+   "source": "mdi",
+   "glossEn": "thought"
+  },
+  "γνώμη": {
+   "icon": "game-icons:air-balloon",
+   "file": "game-icons-air-balloon.png",
+   "source": "game-icons",
+   "glossEn": "balloon"
+  },
+  "μιμνήσκω": {
+   "icon": "game-icons:balloon-dog",
+   "file": "game-icons-balloon-dog.png",
+   "source": "game-icons",
+   "glossEn": "balloon"
+  },
+  "μνημονεύω": {
+   "icon": "game-icons:master-of-arms",
+   "file": "game-icons-master-of-arms.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "παραβολή": {
+   "icon": "mdi:relation-one-or-many-to-many",
+   "file": "mdi-relation-one-or-many-to-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ὑπολαμβάνω": {
+   "icon": "tabler:eye-up",
+   "file": "tabler-eye-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "πανάγιος": {
+   "icon": "game-icons:holy-oak",
+   "file": "game-icons-holy-oak.png",
+   "source": "game-icons",
+   "glossEn": "holy"
+  },
+  "σημεῖον": {
+   "icon": "mdi:relation-one-to-zero-or-many",
+   "file": "mdi-relation-one-to-zero-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἁγίασμα": {
+   "icon": "game-icons:holy-grail",
+   "file": "game-icons-holy-grail.png",
+   "source": "game-icons",
+   "glossEn": "holy"
+  },
+  "ἁγιάζω": {
+   "icon": "game-icons:holy-water",
+   "file": "game-icons-holy-water.png",
+   "source": "game-icons",
+   "glossEn": "holy"
+  },
+  "ἁγιασμός": {
+   "icon": "tabler:sparkles-2",
+   "file": "tabler-sparkles-2.png",
+   "source": "tabler",
+   "glossEn": "sparkles"
+  },
+  "ἅγιος": {
+   "icon": "tabler:sparkles-2-off",
+   "file": "tabler-sparkles-2-off.png",
+   "source": "tabler",
+   "glossEn": "sparkles"
+  },
+  "ἐπιφάνεια": {
+   "icon": "tabler:sparkles-filled",
+   "file": "tabler-sparkles-filled.png",
+   "source": "tabler",
+   "glossEn": "sparkles"
+  },
+  "ἱερός": {
+   "icon": "game-icons:holy-symbol",
+   "file": "game-icons-holy-symbol.png",
+   "source": "game-icons",
+   "glossEn": "holy"
+  },
+  "ἐπιφαίνω": {
+   "icon": "game-icons:crystal-shine",
+   "file": "game-icons-crystal-shine.png",
+   "source": "game-icons",
+   "glossEn": "shine"
+  },
+  "ὅσιος": {
+   "icon": "game-icons:holy-hand-grenade",
+   "file": "game-icons-holy-hand-grenade.png",
+   "source": "game-icons",
+   "glossEn": "holy"
+  },
+  "δικαίωμα": {
+   "icon": "mdi:fit-to-screen",
+   "file": "mdi-fit-to-screen.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "δικαίως": {
+   "icon": "game-icons:body-balance",
+   "file": "game-icons-body-balance.png",
+   "source": "game-icons",
+   "glossEn": "balance"
+  },
+  "δικαιοσύνη": {
+   "icon": "mdi:scale-balance",
+   "file": "mdi-scale-balance.png",
+   "source": "mdi",
+   "glossEn": "balance"
+  },
+  "δικαιόω": {
+   "icon": "mdi:relation-zero-or-many-to-one",
+   "file": "mdi-relation-zero-or-many-to-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "κρίσις": {
+   "icon": "mdi:arrow-decision",
+   "file": "mdi-arrow-decision.png",
+   "source": "mdi",
+   "glossEn": "decision"
+  },
+  "ἐκδίκησις": {
+   "icon": "game-icons:egg-defense",
+   "file": "game-icons-egg-defense.png",
+   "source": "game-icons",
+   "glossEn": "defense"
+  },
+  "ἐκδικέω": {
+   "icon": "game-icons:justice-star",
+   "file": "game-icons-justice-star.png",
+   "source": "game-icons",
+   "glossEn": "justice"
+  },
+  "ἔνοχος": {
+   "icon": "ph:corners-in",
+   "file": "ph-corners-in.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "αἴτιος": {
+   "icon": "ph:member-of-bold",
+   "file": "ph-member-of-bold.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "κρίμα": {
+   "icon": "mdi:arrow-decision-auto",
+   "file": "mdi-arrow-decision-auto.png",
+   "source": "mdi",
+   "glossEn": "decision"
+  },
+  "δυνατός": {
+   "icon": "mdi:relation-zero-or-one-to-many",
+   "file": "mdi-relation-zero-or-one-to-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "δύναμις": {
+   "icon": "game-icons:air-force",
+   "file": "game-icons-air-force.png",
+   "source": "game-icons",
+   "glossEn": "force"
+  },
+  "παῤῥησία": {
+   "icon": "mdi:set-all",
+   "file": "mdi-set-all.png",
+   "source": "mdi",
+   "glossEn": "all"
+  },
+  "ἰσχυρῶς": {
+   "icon": "mdi:alpha-a",
+   "file": "mdi-alpha-a.png",
+   "source": "mdi",
+   "glossEn": "a"
+  },
+  "ἰσχύω": {
+   "icon": "game-icons:mighty-force",
+   "file": "game-icons-mighty-force.png",
+   "source": "game-icons",
+   "glossEn": "force"
+  },
+  "κραταιός": {
+   "icon": "game-icons:strong-man",
+   "file": "game-icons-strong-man.png",
+   "source": "game-icons",
+   "glossEn": "strong"
+  },
+  "μέ": {
+   "icon": "game-icons:drink-me",
+   "file": "game-icons-drink-me.png",
+   "source": "game-icons",
+   "glossEn": "me"
+  },
+  "ἐμαυτοῦ": {
+   "icon": "ph:person-bold",
+   "file": "ph-person-bold.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "ἐμός": {
+   "icon": "tabler:brand-my-oppo",
+   "file": "tabler-brand-my-oppo.png",
+   "source": "tabler",
+   "glossEn": "my"
+  },
+  "ζωή": {
+   "icon": "game-icons:life-bar",
+   "file": "game-icons-life-bar.png",
+   "source": "game-icons",
+   "glossEn": "life"
+  },
+  "κτίσμα": {
+   "icon": "game-icons:sea-creature",
+   "file": "game-icons-sea-creature.png",
+   "source": "game-icons",
+   "glossEn": "creature"
+  },
+  "σπείρω": {
+   "icon": "mdi:scatter-plot",
+   "file": "mdi-scatter-plot.png",
+   "source": "mdi",
+   "glossEn": "scatter"
+  },
+  "φυσικός": {
+   "icon": "mdi:music-accidental-natural",
+   "file": "mdi-music-accidental-natural.png",
+   "source": "mdi",
+   "glossEn": "natural"
+  },
+  "ἐλπίζω": {
+   "icon": "ph:greater-than-or-equal-duotone",
+   "file": "ph-greater-than-or-equal-duotone.png",
+   "source": "ph",
+   "glossEn": "or"
+  },
+  "ἐλπίς": {
+   "icon": "mdi:relation-many-to-zero-or-many",
+   "file": "mdi-relation-many-to-zero-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "βίος": {
+   "icon": "game-icons:life-tap",
+   "file": "game-icons-life-tap.png",
+   "source": "game-icons",
+   "glossEn": "life"
+  },
+  "ζῷον": {
+   "icon": "game-icons:animal-hide",
+   "file": "game-icons-animal-hide.png",
+   "source": "game-icons",
+   "glossEn": "animal"
+  },
+  "κράζω": {
+   "icon": "mdi:relation-zero-or-many-to-many",
+   "file": "mdi-relation-zero-or-many-to-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "προφητεύω": {
+   "icon": "tabler:calendar-event",
+   "file": "tabler-calendar-event.png",
+   "source": "tabler",
+   "glossEn": "event"
+  },
+  "φωνέω": {
+   "icon": "tabler:letter-a",
+   "file": "tabler-letter-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ἐπικαλέω": {
+   "icon": "mdi:call-made",
+   "file": "mdi-call-made.png",
+   "source": "mdi",
+   "glossEn": "call"
+  },
+  "κλῆσις": {
+   "icon": "tabler:phone-calling-filled",
+   "file": "tabler-phone-calling-filled.png",
+   "source": "tabler",
+   "glossEn": "calling"
+  },
+  "προσκαλέομαι": {
+   "icon": "game-icons:bugle-call",
+   "file": "game-icons-bugle-call.png",
+   "source": "game-icons",
+   "glossEn": "call"
+  },
+  "παράμονος": {
+   "icon": "game-icons:logic-gate-and",
+   "file": "game-icons-logic-gate-and.png",
+   "source": "game-icons",
+   "glossEn": "and"
+  },
+  "ἀδιαλείπτως": {
+   "icon": "tabler:infinity-2",
+   "file": "tabler-infinity-2.png",
+   "source": "tabler",
+   "glossEn": "infinity"
+  },
+  "ἀθάνατος": {
+   "icon": "tabler:infinity-off",
+   "file": "tabler-infinity-off.png",
+   "source": "tabler",
+   "glossEn": "infinity"
+  },
+  "ἀθανασία": {
+   "icon": "tabler:file-infinity",
+   "file": "tabler-file-infinity.png",
+   "source": "tabler",
+   "glossEn": "infinity"
+  },
+  "ἀφθαρσία": {
+   "icon": "tabler:home-infinity",
+   "file": "tabler-home-infinity.png",
+   "source": "tabler",
+   "glossEn": "infinity"
+  },
+  "ἄφθαρτος": {
+   "icon": "ph:infinity-bold",
+   "file": "ph-infinity-bold.png",
+   "source": "ph",
+   "glossEn": "infinity"
+  },
+  "σκοπός": {
+   "icon": "game-icons:goal-keeper",
+   "file": "game-icons-goal-keeper.png",
+   "source": "game-icons",
+   "glossEn": "goal"
+  },
+  "ἀεί": {
+   "icon": "ph:infinity-fill",
+   "file": "ph-infinity-fill.png",
+   "source": "ph",
+   "glossEn": "infinity"
+  },
+  "εἰρηνεύω": {
+   "icon": "mdi:google-keep",
+   "file": "mdi-google-keep.png",
+   "source": "mdi",
+   "glossEn": "keep"
+  },
+  "εἰρηνικός": {
+   "icon": "mdi:flip-to-front",
+   "file": "mdi-flip-to-front.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "πραΰς": {
+   "icon": "mdi:chili-mild",
+   "file": "mdi-chili-mild.png",
+   "source": "mdi",
+   "glossEn": "mild"
+  },
+  "πρᾳότης": {
+   "icon": "game-icons:peace-dove",
+   "file": "game-icons-peace-dove.png",
+   "source": "game-icons",
+   "glossEn": "dove"
+  },
+  "ἀθῷος": {
+   "icon": "game-icons:freedom-dove",
+   "file": "game-icons-freedom-dove.png",
+   "source": "game-icons",
+   "glossEn": "dove"
+  },
+  "ἐπιεικής": {
+   "icon": "tabler:wash-gentle",
+   "file": "tabler-wash-gentle.png",
+   "source": "tabler",
+   "glossEn": "gentle"
+  },
+  "ἥμερος": {
+   "icon": "mdi:relation-one-or-many-to-only-one",
+   "file": "mdi-relation-one-or-many-to-only-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "θύρα": {
+   "icon": "game-icons:magic-portal",
+   "file": "game-icons-magic-portal.png",
+   "source": "game-icons",
+   "glossEn": "portal"
+  },
+  "παρουσία": {
+   "icon": "tabler:plane-arrival",
+   "file": "tabler-plane-arrival.png",
+   "source": "tabler",
+   "glossEn": "arrival"
+  },
+  "ἀφορμή": {
+   "icon": "game-icons:car-door",
+   "file": "game-icons-car-door.png",
+   "source": "game-icons",
+   "glossEn": "door"
+  },
+  "ἔρχομαι": {
+   "icon": "mdi:relation-only-one-to-one-or-many",
+   "file": "mdi-relation-only-one-to-one-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "εἴσοδος": {
+   "icon": "game-icons:crypt-entrance",
+   "file": "game-icons-crypt-entrance.png",
+   "source": "game-icons",
+   "glossEn": "entrance"
+  },
+  "ἐκπορεύομαι": {
+   "icon": "tabler:door-off",
+   "file": "tabler-door-off.png",
+   "source": "tabler",
+   "glossEn": "door"
+  },
+  "ἐξέρχομαι": {
+   "icon": "ph:door-bold",
+   "file": "ph-door-bold.png",
+   "source": "ph",
+   "glossEn": "door"
+  },
+  "καίω": {
+   "icon": "game-icons:card-burn",
+   "file": "game-icons-card-burn.png",
+   "source": "game-icons",
+   "glossEn": "burn"
+  },
+  "κατακαίω": {
+   "icon": "tabler:map-up",
+   "file": "tabler-map-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "προθύμως": {
+   "icon": "game-icons:fire-ace",
+   "file": "game-icons-fire-ace.png",
+   "source": "game-icons",
+   "glossEn": "fire"
+  },
+  "πῦρ": {
+   "icon": "game-icons:fire-axe",
+   "file": "game-icons-fire-axe.png",
+   "source": "game-icons",
+   "glossEn": "fire"
+  },
+  "σπουδαῖος": {
+   "icon": "game-icons:fire-gem",
+   "file": "game-icons-fire-gem.png",
+   "source": "game-icons",
+   "glossEn": "fire"
+  },
+  "ἅπτω": {
+   "icon": "tabler:arrow-bar-to-up",
+   "file": "tabler-arrow-bar-to-up.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "ὁλοκαύτωσις": {
+   "icon": "mdi:music-note-whole",
+   "file": "mdi-music-note-whole.png",
+   "source": "mdi",
+   "glossEn": "whole"
+  },
+  "μέσος": {
+   "icon": "game-icons:middle-arrow",
+   "file": "game-icons-middle-arrow.png",
+   "source": "game-icons",
+   "glossEn": "middle"
+  },
+  "μεταξύ": {
+   "icon": "ph:arrow-up",
+   "file": "ph-arrow-up.png",
+   "source": "ph",
+   "glossEn": "arrow"
+  },
+  "πλήν": {
+   "icon": "game-icons:save-arrow",
+   "file": "game-icons-save-arrow.png",
+   "source": "game-icons",
+   "glossEn": "save"
+  },
+  "ἀπέχω": {
+   "icon": "tabler:ease-in-out",
+   "file": "tabler-ease-in-out.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "εὖρος": {
+   "icon": "mdi:table-column-width",
+   "file": "mdi-table-column-width.png",
+   "source": "mdi",
+   "glossEn": "width"
+  },
+  "πλάτος": {
+   "icon": "mdi:arrow-all",
+   "file": "mdi-arrow-all.png",
+   "source": "mdi",
+   "glossEn": "arrow"
+  },
+  "ἀπέναντι": {
+   "icon": "game-icons:over-infinity",
+   "file": "game-icons-over-infinity.png",
+   "source": "game-icons",
+   "glossEn": "over"
+  },
+  "ὅμως": {
+   "icon": "game-icons:bow-arrow",
+   "file": "game-icons-bow-arrow.png",
+   "source": "game-icons",
+   "glossEn": "arrow"
+  },
+  "γάρ": {
+   "icon": "tabler:sort-a-z",
+   "file": "tabler-sort-a-z.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "διά": {
+   "icon": "game-icons:lob-arrow",
+   "file": "game-icons-lob-arrow.png",
+   "source": "game-icons",
+   "glossEn": "arrow"
+  },
+  "διότι": {
+   "icon": "mdi:mower-on",
+   "file": "mdi-mower-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "ἐπειδή": {
+   "icon": "game-icons:zig-arrow",
+   "file": "game-icons-zig-arrow.png",
+   "source": "game-icons",
+   "glossEn": "arrow"
+  },
+  "ἕνεκα": {
+   "icon": "ph:member-of-fill",
+   "file": "ph-member-of-fill.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ὅτι": {
+   "icon": "tabler:arrow-back",
+   "file": "tabler-arrow-back.png",
+   "source": "tabler",
+   "glossEn": "arrow"
+  },
+  "ἅτε": {
+   "icon": "mdi:relation-only-one-to-zero-or-one",
+   "file": "mdi-relation-only-one-to-zero-or-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "μοιχεύω": {
+   "icon": "ph:git-commit",
+   "file": "ph-git-commit.png",
+   "source": "ph",
+   "glossEn": "commit"
+  },
+  "μοιχός": {
+   "icon": "game-icons:broken-axe",
+   "file": "game-icons-broken-axe.png",
+   "source": "game-icons",
+   "glossEn": "broken"
+  },
+  "πορνεία": {
+   "icon": "game-icons:broken-bone",
+   "file": "game-icons-broken-bone.png",
+   "source": "game-icons",
+   "glossEn": "broken"
+  },
+  "ἁμαρτάνω": {
+   "icon": "game-icons:tarot-19-the-sun",
+   "file": "game-icons-tarot-19-the-sun.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "ἁμαρτία": {
+   "icon": "mdi:math-sin",
+   "file": "mdi-math-sin.png",
+   "source": "mdi",
+   "glossEn": "sin"
+  },
+  "ἁμαρτωλός": {
+   "icon": "tabler:sort-z-a",
+   "file": "tabler-sort-z-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "πλημμέλημα": {
+   "icon": "mdi:relation-zero-or-one-to-only-one",
+   "file": "mdi-relation-zero-or-one-to-only-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἁμάρτημα": {
+   "icon": "game-icons:evil-book",
+   "file": "game-icons-evil-book.png",
+   "source": "game-icons",
+   "glossEn": "evil"
+  },
+  "κύριος": {
+   "icon": "mdi:open-in-app",
+   "file": "mdi-open-in-app.png",
+   "source": "mdi",
+   "glossEn": "in"
+  },
+  "στεφανόω": {
+   "icon": "tabler:crown-off",
+   "file": "tabler-crown-off.png",
+   "source": "tabler",
+   "glossEn": "crown"
+  },
+  "τύραννος": {
+   "icon": "ph:crown-bold",
+   "file": "ph-crown-bold.png",
+   "source": "ph",
+   "glossEn": "crown"
+  },
+  "ἄρχων": {
+   "icon": "mdi:page-first",
+   "file": "mdi-page-first.png",
+   "source": "mdi",
+   "glossEn": "first"
+  },
+  "ἐξουσία": {
+   "icon": "mdi:human-capacity-decrease",
+   "file": "mdi-human-capacity-decrease.png",
+   "source": "mdi",
+   "glossEn": "capacity"
+  },
+  "ἡγέομαι": {
+   "icon": "ph:command-fill",
+   "file": "ph-command-fill.png",
+   "source": "ph",
+   "glossEn": "command"
+  },
+  "προΐστημι": {
+   "icon": "game-icons:rule-book",
+   "file": "game-icons-rule-book.png",
+   "source": "game-icons",
+   "glossEn": "rule"
+  },
+  "ἀνίστημι": {
+   "icon": "ph:globe-stand",
+   "file": "ph-globe-stand.png",
+   "source": "ph",
+   "glossEn": "stand"
+  },
+  "ἄνω": {
+   "icon": "mdi:one-up",
+   "file": "mdi-one-up.png",
+   "source": "mdi",
+   "glossEn": "up"
+  },
+  "ἄνωθεν": {
+   "icon": "tabler:arrow-left-from-arc",
+   "file": "tabler-arrow-left-from-arc.png",
+   "source": "tabler",
+   "glossEn": "from"
+  },
+  "ἐπάνω": {
+   "icon": "mdi:power-on",
+   "file": "mdi-power-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "ἐπί": {
+   "icon": "tabler:wash-dry-a",
+   "file": "tabler-wash-dry-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ἐπιτίθημι": {
+   "icon": "ph:arrow-down",
+   "file": "ph-arrow-down.png",
+   "source": "ph",
+   "glossEn": "arrow"
+  },
+  "ὑπέρ": {
+   "icon": "mdi:debug-step-over",
+   "file": "mdi-debug-step-over.png",
+   "source": "mdi",
+   "glossEn": "over"
+  },
+  "ἀναβαίνω": {
+   "icon": "tabler:go-game",
+   "file": "tabler-go-game.png",
+   "source": "tabler",
+   "glossEn": "go"
+  },
+  "ὑψηλός": {
+   "icon": "tabler:sun-high",
+   "file": "tabler-sun-high.png",
+   "source": "tabler",
+   "glossEn": "high"
+  },
+  "δηλόω": {
+   "icon": "tabler:clear-all",
+   "file": "tabler-clear-all.png",
+   "source": "tabler",
+   "glossEn": "clear"
+  },
+  "φανερός": {
+   "icon": "mdi:format-clear",
+   "file": "mdi-format-clear.png",
+   "source": "mdi",
+   "glossEn": "clear"
+  },
+  "φῶς": {
+   "icon": "tabler:git-compare",
+   "file": "tabler-git-compare.png",
+   "source": "tabler",
+   "glossEn": "compare"
+  },
+  "δῆλος": {
+   "icon": "tabler:clear-formatting",
+   "file": "tabler-clear-formatting.png",
+   "source": "tabler",
+   "glossEn": "clear"
+  },
+  "πρόδηλος": {
+   "icon": "tabler:bulb-off",
+   "file": "tabler-bulb-off.png",
+   "source": "tabler",
+   "glossEn": "bulb"
+  },
+  "ἐναργής": {
+   "icon": "game-icons:light-bulb",
+   "file": "game-icons-light-bulb.png",
+   "source": "game-icons",
+   "glossEn": "bulb"
+  },
+  "ἐκεῖ": {
+   "icon": "tabler:join-round",
+   "file": "tabler-join-round.png",
+   "source": "tabler",
+   "glossEn": "round"
+  },
+  "ἐντεῦθεν": {
+   "icon": "tabler:arrow-right-from-arc",
+   "file": "tabler-arrow-right-from-arc.png",
+   "source": "tabler",
+   "glossEn": "from"
+  },
+  "ἔνθα": {
+   "icon": "game-icons:round-knob",
+   "file": "game-icons-round-knob.png",
+   "source": "game-icons",
+   "glossEn": "round"
+  },
+  "ὅπου": {
+   "icon": "ph:at-thin",
+   "file": "ph-at-thin.png",
+   "source": "ph",
+   "glossEn": "at"
+  },
+  "ὧδε": {
+   "icon": "mdi:liquid-spot",
+   "file": "mdi-liquid-spot.png",
+   "source": "mdi",
+   "glossEn": "spot"
+  },
+  "οὗ": {
+   "icon": "ph:at-light",
+   "file": "ph-at-light.png",
+   "source": "ph",
+   "glossEn": "at"
+  },
+  "τόπος": {
+   "icon": "mdi:lightbulb-spot",
+   "file": "mdi-lightbulb-spot.png",
+   "source": "mdi",
+   "glossEn": "spot"
+  },
+  "ἐνθάδε": {
+   "icon": "mdi:select-place",
+   "file": "mdi-select-place.png",
+   "source": "mdi",
+   "glossEn": "place"
+  },
+  "ἐνταῦθα": {
+   "icon": "game-icons:round-silo",
+   "file": "game-icons-round-silo.png",
+   "source": "game-icons",
+   "glossEn": "round"
+  },
+  "μέγεθος": {
+   "icon": "tabler:cap-straight",
+   "file": "tabler-cap-straight.png",
+   "source": "tabler",
+   "glossEn": "straight"
+  },
+  "μέτρον": {
+   "icon": "game-icons:measure-tape",
+   "file": "game-icons-measure-tape.png",
+   "source": "game-icons",
+   "glossEn": "measure"
+  },
+  "μετρέω": {
+   "icon": "mdi:tape-measure",
+   "file": "mdi-tape-measure.png",
+   "source": "mdi",
+   "glossEn": "measure"
+  },
+  "ἀκριβῶς": {
+   "icon": "ph:hash-straight",
+   "file": "ph-hash-straight.png",
+   "source": "ph",
+   "glossEn": "straight"
+  },
+  "ἡλικία": {
+   "icon": "tabler:join-straight",
+   "file": "tabler-join-straight.png",
+   "source": "tabler",
+   "glossEn": "straight"
+  },
+  "ὀρθῶς": {
+   "icon": "game-icons:straight-pipe",
+   "file": "game-icons-straight-pipe.png",
+   "source": "game-icons",
+   "glossEn": "straight"
+  },
+  "ὀρθός": {
+   "icon": "ph:heart-straight",
+   "file": "ph-heart-straight.png",
+   "source": "ph",
+   "glossEn": "straight"
+  },
+  "παντελῶς": {
+   "icon": "mdi:relation-only-one-to-zero-or-many",
+   "file": "mdi-relation-only-one-to-zero-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "σφόδρα": {
+   "icon": "mdi:star-four-points",
+   "file": "mdi-star-four-points.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "τέλειος": {
+   "icon": "mdi:star-three-points",
+   "file": "mdi-star-three-points.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "τελείως": {
+   "icon": "mdi:star-four-points-box",
+   "file": "mdi-star-four-points-box.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "ἀλήθεια": {
+   "icon": "mdi:file-star-four-points",
+   "file": "mdi-file-star-four-points.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "ἀληθινός": {
+   "icon": "mdi:clock-star-four-points",
+   "file": "mdi-clock-star-four-points.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "ἀληθῶς": {
+   "icon": "mdi:star-four-points-small",
+   "file": "mdi-star-four-points-small.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "ἀληθής": {
+   "icon": "mdi:star-four-points-circle",
+   "file": "mdi-star-four-points-circle.png",
+   "source": "mdi",
+   "glossEn": "points"
+  },
+  "μάρτυς": {
+   "icon": "mdi:relation-zero-or-many-to-only-one",
+   "file": "mdi-relation-zero-or-many-to-only-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "μαρτυρέω": {
+   "icon": "mdi:alpha-a-box",
+   "file": "mdi-alpha-a-box.png",
+   "source": "mdi",
+   "glossEn": "a"
+  },
+  "διαφέρω": {
+   "icon": "mdi:bag-carry-on-off",
+   "file": "mdi-bag-carry-on-off.png",
+   "source": "mdi",
+   "glossEn": "carry"
+  },
+  "εἶδος": {
+   "icon": "tabler:shape-2",
+   "file": "tabler-shape-2.png",
+   "source": "tabler",
+   "glossEn": "shape"
+  },
+  "μορφή": {
+   "icon": "tabler:shape-3",
+   "file": "tabler-shape-3.png",
+   "source": "tabler",
+   "glossEn": "shape"
+  },
+  "συνίστημι": {
+   "icon": "ph:member-of-thin",
+   "file": "ph-member-of-thin.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "σύστασις": {
+   "icon": "mdi:relation-one-or-many-to-one-or-many",
+   "file": "mdi-relation-one-or-many-to-one-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἀνήκω": {
+   "icon": "tabler:calendar-due",
+   "file": "tabler-calendar-due.png",
+   "source": "tabler",
+   "glossEn": "due"
+  },
+  "ἁρμόζω": {
+   "icon": "mdi:google-fit",
+   "file": "mdi-google-fit.png",
+   "source": "mdi",
+   "glossEn": "fit"
+  },
+  "δεξιός": {
+   "icon": "mdi:bus-side",
+   "file": "mdi-bus-side.png",
+   "source": "mdi",
+   "glossEn": "side"
+  },
+  "κἀκεῖνος": {
+   "icon": "game-icons:froe-and-mallet",
+   "file": "game-icons-froe-and-mallet.png",
+   "source": "game-icons",
+   "glossEn": "and"
+  },
+  "προβάλλω": {
+   "icon": "tabler:http-put",
+   "file": "tabler-http-put.png",
+   "source": "tabler",
+   "glossEn": "put"
+  },
+  "ἐκεῖνος": {
+   "icon": "ph:dice-one",
+   "file": "ph-dice-one.png",
+   "source": "ph",
+   "glossEn": "one"
+  },
+  "αὐτός": {
+   "icon": "game-icons:self-love",
+   "file": "game-icons-self-love.png",
+   "source": "game-icons",
+   "glossEn": "self"
+  },
+  "κατά": {
+   "icon": "tabler:eye-down",
+   "file": "tabler-eye-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "κατάγω": {
+   "icon": "tabler:map-down",
+   "file": "tabler-map-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "κατέρχομαι": {
+   "icon": "mdi:pan-down",
+   "file": "mdi-pan-down.png",
+   "source": "mdi",
+   "glossEn": "down"
+  },
+  "χαμαί": {
+   "icon": "game-icons:sound-on",
+   "file": "game-icons-sound-on.png",
+   "source": "game-icons",
+   "glossEn": "on"
+  },
+  "ὑποκάτω": {
+   "icon": "tabler:bell-down",
+   "file": "tabler-bell-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "ὑπό": {
+   "icon": "game-icons:school-of-fish",
+   "file": "game-icons-school-of-fish.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "ὑπόκειμαι": {
+   "icon": "game-icons:fall-down",
+   "file": "game-icons-fall-down.png",
+   "source": "game-icons",
+   "glossEn": "down"
+  },
+  "καταβαίνω": {
+   "icon": "tabler:flag-down",
+   "file": "tabler-flag-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "πάντοτε": {
+   "icon": "ph:at-duotone",
+   "file": "ph-at-duotone.png",
+   "source": "ph",
+   "glossEn": "at"
+  },
+  "πολλάκις": {
+   "icon": "mdi:relation-one-to-many",
+   "file": "mdi-relation-one-to-many.png",
+   "source": "mdi",
+   "glossEn": "many"
+  },
+  "συνήθεια": {
+   "icon": "mdi:repeat-off",
+   "file": "mdi-repeat-off.png",
+   "source": "mdi",
+   "glossEn": "repeat"
+  },
+  "ἔθος": {
+   "icon": "ph:repeat-bold",
+   "file": "ph-repeat-bold.png",
+   "source": "ph",
+   "glossEn": "repeat"
+  },
+  "ἔθω": {
+   "icon": "ph:repeat-fill",
+   "file": "ph-repeat-fill.png",
+   "source": "ph",
+   "glossEn": "repeat"
+  },
+  "ἔτι": {
+   "icon": "ph:repeat-once",
+   "file": "ph-repeat-once.png",
+   "source": "ph",
+   "glossEn": "repeat"
+  },
+  "ἤδη": {
+   "icon": "ph:repeat-thin",
+   "file": "ph-repeat-thin.png",
+   "source": "ph",
+   "glossEn": "repeat"
+  },
+  "πλεῖστος": {
+   "icon": "game-icons:gold-bar",
+   "file": "game-icons-gold-bar.png",
+   "source": "game-icons",
+   "glossEn": "bar"
+  },
+  "πᾶς": {
+   "icon": "mdi:reply-all",
+   "file": "mdi-reply-all.png",
+   "source": "mdi",
+   "glossEn": "all"
+  },
+  "σύμπας": {
+   "icon": "mdi:music-rest-whole",
+   "file": "mdi-music-rest-whole.png",
+   "source": "mdi",
+   "glossEn": "whole"
+  },
+  "τάγμα": {
+   "icon": "game-icons:rank-1",
+   "file": "game-icons-rank-1.png",
+   "source": "game-icons",
+   "glossEn": "rank"
+  },
+  "ἅπας": {
+   "icon": "mdi:share-all",
+   "file": "mdi-share-all.png",
+   "source": "mdi",
+   "glossEn": "all"
+  },
+  "ἕκαστος": {
+   "icon": "mdi:relation-one-or-many-to-zero-or-one",
+   "file": "mdi-relation-one-or-many-to-zero-or-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ὅλος": {
+   "icon": "mdi:music-note-whole-dotted",
+   "file": "mdi-music-note-whole-dotted.png",
+   "source": "mdi",
+   "glossEn": "whole"
+  },
+  "ὅλως": {
+   "icon": "ph:not-equals-light",
+   "file": "ph-not-equals-light.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "δωρεά": {
+   "icon": "mdi:crop-free",
+   "file": "mdi-crop-free.png",
+   "source": "mdi",
+   "glossEn": "free"
+  },
+  "παραδίδωμι": {
+   "icon": "mdi:sign-yield",
+   "file": "mdi-sign-yield.png",
+   "source": "mdi",
+   "glossEn": "yield"
+  },
+  "προσφέρω": {
+   "icon": "tabler:arrow-up-to-arc",
+   "file": "tabler-arrow-up-to-arc.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "χάρις": {
+   "icon": "mdi:relation-zero-or-one-to-one-or-many",
+   "file": "mdi-relation-zero-or-one-to-one-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "χάρισμα": {
+   "icon": "game-icons:wrapped-heart",
+   "file": "game-icons-wrapped-heart.png",
+   "source": "game-icons",
+   "glossEn": "wrapped"
+  },
+  "ἐπιδίδωμι": {
+   "icon": "mdi:open-in-new",
+   "file": "mdi-open-in-new.png",
+   "source": "mdi",
+   "glossEn": "in"
+  },
+  "ἀνατίθημι": {
+   "icon": "ph:lightning-a",
+   "file": "ph-lightning-a.png",
+   "source": "ph",
+   "glossEn": "a"
+  },
+  "διάγω": {
+   "icon": "tabler:file-time",
+   "file": "tabler-file-time.png",
+   "source": "tabler",
+   "glossEn": "time"
+  },
+  "πορεύομαι": {
+   "icon": "game-icons:travel-dress",
+   "file": "game-icons-travel-dress.png",
+   "source": "game-icons",
+   "glossEn": "travel"
+  },
+  "ἀναστρέφω": {
+   "icon": "tabler:s-turn-up",
+   "file": "tabler-s-turn-up.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "ἐπισκέπτομαι": {
+   "icon": "tabler:mood-look-down",
+   "file": "tabler-mood-look-down.png",
+   "source": "tabler",
+   "glossEn": "look"
+  },
+  "βαδίζω": {
+   "icon": "game-icons:egyptian-walk",
+   "file": "game-icons-egyptian-walk.png",
+   "source": "game-icons",
+   "glossEn": "walk"
+  },
+  "ὁδεύω": {
+   "icon": "mdi:wallet-travel",
+   "file": "mdi-wallet-travel.png",
+   "source": "mdi",
+   "glossEn": "travel"
+  },
+  "ἀναιρέω": {
+   "icon": "mdi:pan-up",
+   "file": "mdi-pan-up.png",
+   "source": "mdi",
+   "glossEn": "up"
+  },
+  "ἀναλαμβάνω": {
+   "icon": "tabler:bell-up",
+   "file": "tabler-bell-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "ἀπαίρω": {
+   "icon": "mdi:eye-remove",
+   "file": "mdi-eye-remove.png",
+   "source": "mdi",
+   "glossEn": "remove"
+  },
+  "ἐξαίρω": {
+   "icon": "tabler:aerial-lift",
+   "file": "tabler-aerial-lift.png",
+   "source": "tabler",
+   "glossEn": "lift"
+  },
+  "ἐπαίρω": {
+   "icon": "game-icons:raise-zombie",
+   "file": "game-icons-raise-zombie.png",
+   "source": "game-icons",
+   "glossEn": "raise"
+  },
+  "ὑψόω": {
+   "icon": "tabler:aerial-lift-filled",
+   "file": "tabler-aerial-lift-filled.png",
+   "source": "tabler",
+   "glossEn": "lift"
+  },
+  "τρίβος": {
+   "icon": "mdi:car-brake-worn-linings",
+   "file": "mdi-car-brake-worn-linings.png",
+   "source": "mdi",
+   "glossEn": "worn"
+  },
+  "ἀκολουθέω": {
+   "icon": "tabler:transfer-in",
+   "file": "tabler-transfer-in.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "ἀκόλουθος": {
+   "icon": "game-icons:shadow-follower",
+   "file": "game-icons-shadow-follower.png",
+   "source": "game-icons",
+   "glossEn": "follower"
+  },
+  "καταδιώκω": {
+   "icon": "tabler:fold-down",
+   "file": "tabler-fold-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "ὑπάγω": {
+   "icon": "ph:hand-withdraw",
+   "file": "ph-hand-withdraw.png",
+   "source": "ph",
+   "glossEn": "withdraw"
+  },
+  "παράκλησις": {
+   "icon": "mdi:nature-people-outline",
+   "file": "mdi-nature-people-outline.png",
+   "source": "mdi",
+   "glossEn": "people"
+  },
+  "παρακαλέω": {
+   "icon": "mdi:call-merge",
+   "file": "mdi-call-merge.png",
+   "source": "mdi",
+   "glossEn": "call"
+  },
+  "κομίζω": {
+   "icon": "mdi:arrange-bring-forward",
+   "file": "mdi-arrange-bring-forward.png",
+   "source": "mdi",
+   "glossEn": "bring"
+  },
+  "λοιπόν": {
+   "icon": "mdi:magnet-on",
+   "file": "mdi-magnet-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "παραφέρω": {
+   "icon": "tabler:s-turn-down",
+   "file": "tabler-s-turn-down.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "φέρω": {
+   "icon": "mdi:relation-zero-or-one-to-zero-or-one",
+   "file": "mdi-relation-zero-or-one-to-zero-or-one.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ἀποφέρω": {
+   "icon": "mdi:bag-carry-on-check",
+   "file": "mdi-bag-carry-on-check.png",
+   "source": "mdi",
+   "glossEn": "carry"
+  },
+  "ἐπάγω": {
+   "icon": "mdi:arrange-bring-to-front",
+   "file": "mdi-arrange-bring-to-front.png",
+   "source": "mdi",
+   "glossEn": "bring"
+  },
+  "ἑτοιμάζω": {
+   "icon": "mdi:package-up",
+   "file": "mdi-package-up.png",
+   "source": "mdi",
+   "glossEn": "package"
+  },
+  "οὔπω": {
+   "icon": "mdi:not-equal-variant",
+   "file": "mdi-not-equal-variant.png",
+   "source": "mdi",
+   "glossEn": "not"
+  },
+  "μήπω": {
+   "icon": "ph:not-equals-duotone",
+   "file": "ph-not-equals-duotone.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "μακροθυμία": {
+   "icon": "ph:hourglass-low",
+   "file": "ph-hourglass-low.png",
+   "source": "ph",
+   "glossEn": "hourglass"
+  },
+  "ἀνέχω": {
+   "icon": "tabler:hourglass-off",
+   "file": "tabler-hourglass-off.png",
+   "source": "tabler",
+   "glossEn": "hourglass"
+  },
+  "μέλω": {
+   "icon": "ph:subset-of-bold",
+   "file": "ph-subset-of-bold.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "σπλαγχνίζομαι": {
+   "icon": "game-icons:on-target",
+   "file": "game-icons-on-target.png",
+   "source": "game-icons",
+   "glossEn": "on"
+  },
+  "φιλανθρωπία": {
+   "icon": "game-icons:love-howl",
+   "file": "game-icons-love-howl.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "φροντίς": {
+   "icon": "tabler:heart-x",
+   "file": "tabler-heart-x.png",
+   "source": "tabler",
+   "glossEn": "heart"
+  },
+  "ἐλεήμων": {
+   "icon": "mdi:moon-full",
+   "file": "mdi-moon-full.png",
+   "source": "mdi",
+   "glossEn": "full"
+  },
+  "οἰκία": {
+   "icon": "game-icons:family-tree",
+   "file": "game-icons-family-tree.png",
+   "source": "game-icons",
+   "glossEn": "family"
+  },
+  "οἶκος": {
+   "icon": "game-icons:hobbit-dwelling",
+   "file": "game-icons-hobbit-dwelling.png",
+   "source": "game-icons",
+   "glossEn": "dwelling"
+  },
+  "κατοικητήριον": {
+   "icon": "game-icons:dog-house",
+   "file": "game-icons-dog-house.png",
+   "source": "game-icons",
+   "glossEn": "house"
+  },
+  "παραμένω": {
+   "icon": "mdi:format-letter-ends-with",
+   "file": "mdi-format-letter-ends-with.png",
+   "source": "mdi",
+   "glossEn": "with"
+  },
+  "καλός": {
+   "icon": "ph:thumbs-up",
+   "file": "ph-thumbs-up.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "καλῶς": {
+   "icon": "ph:thumbs-down",
+   "file": "ph-thumbs-down.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "ἀγαθός": {
+   "icon": "ph:thumbs-up-bold",
+   "file": "ph-thumbs-up-bold.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "ῥᾴδιος": {
+   "icon": "mdi:thumbs-up-down",
+   "file": "mdi-thumbs-up-down.png",
+   "source": "mdi",
+   "glossEn": "thumbs"
+  },
+  "χρηστότης": {
+   "icon": "ph:thumbs-up-fill",
+   "file": "ph-thumbs-up-fill.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "ἀγαθότης": {
+   "icon": "ph:thumbs-up-thin",
+   "file": "ph-thumbs-up-thin.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "ἀμφότερος": {
+   "icon": "tabler:arrow-merge-both",
+   "file": "tabler-arrow-merge-both.png",
+   "source": "tabler",
+   "glossEn": "both"
+  },
+  "ἡμέτερος": {
+   "icon": "ph:hands-praying-thin",
+   "file": "ph-hands-praying-thin.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "ἡμεῖς": {
+   "icon": "ph:hands-clapping-bold",
+   "file": "ph-hands-clapping-bold.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "ἡμᾶς": {
+   "icon": "tabler:brand-among-us",
+   "file": "tabler-brand-among-us.png",
+   "source": "tabler",
+   "glossEn": "us"
+  },
+  "ἡμῖν": {
+   "icon": "mdi:power-socket-us",
+   "file": "mdi-power-socket-us.png",
+   "source": "mdi",
+   "glossEn": "us"
+  },
+  "ποτέ": {
+   "icon": "game-icons:time-bomb",
+   "file": "game-icons-time-bomb.png",
+   "source": "game-icons",
+   "glossEn": "time"
+  },
+  "χρόνος": {
+   "icon": "ph:subset-of-fill",
+   "file": "ph-subset-of-fill.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ἀρχαῖος": {
+   "icon": "game-icons:primitive-torch",
+   "file": "game-icons-primitive-torch.png",
+   "source": "game-icons",
+   "glossEn": "primitive"
+  },
+  "πώποτε": {
+   "icon": "game-icons:time-trap",
+   "file": "game-icons-time-trap.png",
+   "source": "game-icons",
+   "glossEn": "time"
+  },
+  "τότε": {
+   "icon": "game-icons:tarot-00-the-fool",
+   "file": "game-icons-tarot-00-the-fool.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "τροφή": {
+   "icon": "mdi:food-off",
+   "file": "mdi-food-off.png",
+   "source": "mdi",
+   "glossEn": "food"
+  },
+  "ἐσθίω": {
+   "icon": "mdi:relation-one-to-only-one",
+   "file": "mdi-relation-one-to-only-one.png",
+   "source": "mdi",
+   "glossEn": "only"
+  },
+  "βορά": {
+   "icon": "ph:bowl-food",
+   "file": "ph-bowl-food.png",
+   "source": "ph",
+   "glossEn": "food"
+  },
+  "βρῶμα": {
+   "icon": "mdi:food-apple",
+   "file": "mdi-food-apple.png",
+   "source": "mdi",
+   "glossEn": "food"
+  },
+  "ἔδεσμα": {
+   "icon": "game-icons:food-chain",
+   "file": "game-icons-food-chain.png",
+   "source": "game-icons",
+   "glossEn": "food"
+  },
+  "δρόμος": {
+   "icon": "game-icons:running-shoe",
+   "file": "game-icons-running-shoe.png",
+   "source": "game-icons",
+   "glossEn": "running"
+  },
+  "σπουδή": {
+   "icon": "ph:person-fill",
+   "file": "ph-person-fill.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "φεύγω": {
+   "icon": "mdi:exit-run",
+   "file": "mdi-exit-run.png",
+   "source": "mdi",
+   "glossEn": "run"
+  },
+  "πλούσιος": {
+   "icon": "mdi:format-letter-starts-with",
+   "file": "mdi-format-letter-starts-with.png",
+   "source": "mdi",
+   "glossEn": "with"
+  },
+  "τάλαντον": {
+   "icon": "ph:subset-of-thin",
+   "file": "ph-subset-of-thin.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ὀφείλω": {
+   "icon": "game-icons:axe-in-stump",
+   "file": "game-icons-axe-in-stump.png",
+   "source": "game-icons",
+   "glossEn": "in"
+  },
+  "ὑπάρχοντα": {
+   "icon": "game-icons:pay-money",
+   "file": "game-icons-pay-money.png",
+   "source": "game-icons",
+   "glossEn": "money"
+  },
+  "ἰσχύς": {
+   "icon": "mdi:wifi-strength-3",
+   "file": "mdi-wifi-strength-3.png",
+   "source": "mdi",
+   "glossEn": "strength"
+  },
+  "ἀφορίζω": {
+   "icon": "game-icons:rail-road",
+   "file": "game-icons-rail-road.png",
+   "source": "game-icons",
+   "glossEn": "rail"
+  },
+  "διαρρήγνυμι": {
+   "icon": "game-icons:tear-tracks",
+   "file": "game-icons-tear-tracks.png",
+   "source": "game-icons",
+   "glossEn": "tear"
+  },
+  "διχοστασία": {
+   "icon": "mdi:division-box",
+   "file": "mdi-division-box.png",
+   "source": "mdi",
+   "glossEn": "division"
+  },
+  "ἐπικατάρατος": {
+   "icon": "game-icons:baby-face",
+   "file": "game-icons-baby-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "ὀνειδισμός": {
+   "icon": "game-icons:bear-face",
+   "file": "game-icons-bear-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "βλασφημία": {
+   "icon": "mdi:relation-one-or-many-to-zero-or-many",
+   "file": "mdi-relation-one-or-many-to-zero-or-many.png",
+   "source": "mdi",
+   "glossEn": "or"
+  },
+  "ψευδομαρτυρία": {
+   "icon": "ph:face-mask",
+   "file": "ph-face-mask.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "ψευδοπροφήτης": {
+   "icon": "game-icons:monk-face",
+   "file": "game-icons-monk-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "ψεύδω": {
+   "icon": "mdi:star-face",
+   "file": "mdi-star-face.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἀπάτη": {
+   "icon": "game-icons:tree-face",
+   "file": "game-icons-tree-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "ἀπατάω": {
+   "icon": "tabler:step-into",
+   "file": "tabler-step-into.png",
+   "source": "tabler",
+   "glossEn": "into"
+  },
+  "ψεῦδος": {
+   "icon": "game-icons:dwarf-face",
+   "file": "game-icons-dwarf-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "ἀδίστακτος": {
+   "icon": "tabler:anchor-off",
+   "file": "tabler-anchor-off.png",
+   "source": "tabler",
+   "glossEn": "anchor"
+  },
+  "ἀκίνητος": {
+   "icon": "ph:not-member-of-bold",
+   "file": "ph-not-member-of-bold.png",
+   "source": "ph",
+   "glossEn": "not"
+  },
+  "ἄτρεπτος": {
+   "icon": "ph:anchor-bold",
+   "file": "ph-anchor-bold.png",
+   "source": "ph",
+   "glossEn": "anchor"
+  },
+  "ἐπιμένω": {
+   "icon": "tabler:queue-pop-in",
+   "file": "tabler-queue-pop-in.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "στηρίζω": {
+   "icon": "ph:gps-fix",
+   "file": "ph-gps-fix.png",
+   "source": "ph",
+   "glossEn": "fix"
+  },
+  "ἱδρύω": {
+   "icon": "ph:anchor-fill",
+   "file": "ph-anchor-fill.png",
+   "source": "ph",
+   "glossEn": "anchor"
+  },
+  "ἀπόστολος": {
+   "icon": "game-icons:crown-of-thorns",
+   "file": "game-icons-crown-of-thorns.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "ἐκφέρω": {
+   "icon": "ph:sign-out",
+   "file": "ph-sign-out.png",
+   "source": "ph",
+   "glossEn": "out"
+  },
+  "ἔξωθεν": {
+   "icon": "mdi:border-outside",
+   "file": "mdi-border-outside.png",
+   "source": "mdi",
+   "glossEn": "outside"
+  },
+  "πέμπω": {
+   "icon": "ph:dev-to-logo-bold",
+   "file": "ph-dev-to-logo-bold.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "νόμος": {
+   "icon": "game-icons:law-star",
+   "file": "game-icons-law-star.png",
+   "source": "game-icons",
+   "glossEn": "law"
+  },
+  "πρόσταγμα": {
+   "icon": "ph:scroll-bold",
+   "file": "ph-scroll-bold.png",
+   "source": "ph",
+   "glossEn": "scroll"
+  },
+  "σύγγραμμα": {
+   "icon": "mdi:file-document",
+   "file": "mdi-file-document.png",
+   "source": "mdi",
+   "glossEn": "document"
+  },
+  "προστάσσω": {
+   "icon": "ph:command-thin",
+   "file": "ph-command-thin.png",
+   "source": "ph",
+   "glossEn": "command"
+  },
+  "πνευματικός": {
+   "icon": "mdi:face-agent",
+   "file": "mdi-face-agent.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "πνεῦμα": {
+   "icon": "ph:member-of-light",
+   "file": "ph-member-of-light.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "φυσάω": {
+   "icon": "game-icons:air-man",
+   "file": "game-icons-air-man.png",
+   "source": "game-icons",
+   "glossEn": "air"
+  },
+  "ἀήρ": {
+   "icon": "mdi:air-horn",
+   "file": "mdi-air-horn.png",
+   "source": "mdi",
+   "glossEn": "air"
+  },
+  "ἀσώματος": {
+   "icon": "mdi:face-woman",
+   "file": "mdi-face-woman.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἄνεμος": {
+   "icon": "tabler:loader-quarter",
+   "file": "tabler-loader-quarter.png",
+   "source": "tabler",
+   "glossEn": "quarter"
+  },
+  "μεγαλεῖος": {
+   "icon": "game-icons:grand-piano",
+   "file": "game-icons-grand-piano.png",
+   "source": "game-icons",
+   "glossEn": "grand"
+  },
+  "μεγαλοπρεπής": {
+   "icon": "game-icons:sand-castle",
+   "file": "game-icons-sand-castle.png",
+   "source": "game-icons",
+   "glossEn": "castle"
+  },
+  "μεγαλωσύνη": {
+   "icon": "game-icons:castle-ruins",
+   "file": "game-icons-castle-ruins.png",
+   "source": "game-icons",
+   "glossEn": "castle"
+  },
+  "ὀχυρός": {
+   "icon": "mdi:image-filter-center-focus-strong",
+   "file": "mdi-image-filter-center-focus-strong.png",
+   "source": "mdi",
+   "glossEn": "strong"
+  },
+  "ὀχύρωμα": {
+   "icon": "game-icons:locked-fortress",
+   "file": "game-icons-locked-fortress.png",
+   "source": "game-icons",
+   "glossEn": "fortress"
+  },
+  "προέρχομαι": {
+   "icon": "mdi:go-kart",
+   "file": "mdi-go-kart.png",
+   "source": "mdi",
+   "glossEn": "go"
+  },
+  "προσέρχομαι": {
+   "icon": "ph:dev-to-logo-fill",
+   "file": "ph-dev-to-logo-fill.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "πρός": {
+   "icon": "game-icons:pick-of-destiny",
+   "file": "game-icons-pick-of-destiny.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "ἄγω": {
+   "icon": "ph:hard-drive",
+   "file": "ph-hard-drive.png",
+   "source": "ph",
+   "glossEn": "drive"
+  },
+  "ἐγγύς": {
+   "icon": "ph:dev-to-logo-thin",
+   "file": "ph-dev-to-logo-thin.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "πλησίον": {
+   "icon": "mdi:google-nearby",
+   "file": "mdi-google-nearby.png",
+   "source": "mdi",
+   "glossEn": "nearby"
+  },
+  "πρό": {
+   "icon": "ph:sign-in-bold",
+   "file": "ph-sign-in-bold.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "ἀναχωρέω": {
+   "icon": "ph:key-return",
+   "file": "ph-key-return.png",
+   "source": "ph",
+   "glossEn": "return"
+  },
+  "ὀπίσω": {
+   "icon": "game-icons:tarot-17-the-star",
+   "file": "game-icons-tarot-17-the-star.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "μισέω": {
+   "icon": "game-icons:love-song",
+   "file": "game-icons-love-song.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "φαῦλος": {
+   "icon": "game-icons:base-dome",
+   "file": "game-icons-base-dome.png",
+   "source": "game-icons",
+   "glossEn": "base"
+  },
+  "ὀργίζω": {
+   "icon": "game-icons:angry-eyes",
+   "file": "game-icons-angry-eyes.png",
+   "source": "game-icons",
+   "glossEn": "angry"
+  },
+  "διδάσκω": {
+   "icon": "ph:chalkboard-teacher",
+   "file": "ph-chalkboard-teacher.png",
+   "source": "ph",
+   "glossEn": "teacher"
+  },
+  "διδαχή": {
+   "icon": "ph:chalkboard-teacher-bold",
+   "file": "ph-chalkboard-teacher-bold.png",
+   "source": "ph",
+   "glossEn": "teacher"
+  },
+  "διακονέω": {
+   "icon": "ph:chalkboard-teacher-fill",
+   "file": "ph-chalkboard-teacher-fill.png",
+   "source": "ph",
+   "glossEn": "teacher"
+  },
+  "διδασκαλία": {
+   "icon": "ph:chalkboard-teacher-thin",
+   "file": "ph-chalkboard-teacher-thin.png",
+   "source": "ph",
+   "glossEn": "teacher"
+  },
+  "ὑπηρετέω": {
+   "icon": "tabler:arrow-bar-to-down",
+   "file": "tabler-arrow-bar-to-down.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "σωτηρία": {
+   "icon": "game-icons:safety-pin",
+   "file": "game-icons-safety-pin.png",
+   "source": "game-icons",
+   "glossEn": "safety"
+  },
+  "σῴζω": {
+   "icon": "mdi:content-save",
+   "file": "mdi-content-save.png",
+   "source": "mdi",
+   "glossEn": "save"
+  },
+  "διασώζω": {
+   "icon": "mdi:content-save-all",
+   "file": "mdi-content-save-all.png",
+   "source": "mdi",
+   "glossEn": "save"
+  },
+  "ἐξαιρέω": {
+   "icon": "mdi:fan-remove",
+   "file": "mdi-fan-remove.png",
+   "source": "mdi",
+   "glossEn": "remove"
+  },
+  "τάξις": {
+   "icon": "tabler:scan-position",
+   "file": "tabler-scan-position.png",
+   "source": "tabler",
+   "glossEn": "position"
+  },
+  "ἀκολουθία": {
+   "icon": "tabler:sort-9-0",
+   "file": "tabler-sort-9-0.png",
+   "source": "tabler",
+   "glossEn": "sort"
+  },
+  "παρατάσσω": {
+   "icon": "tabler:flag-up",
+   "file": "tabler-flag-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "ποταπός": {
+   "icon": "tabler:arrows-sort",
+   "file": "tabler-arrows-sort.png",
+   "source": "tabler",
+   "glossEn": "sort"
+  },
+  "τάσσω": {
+   "icon": "mdi:arrange-send-to-back",
+   "file": "mdi-arrange-send-to-back.png",
+   "source": "mdi",
+   "glossEn": "arrange"
+  },
+  "τοιοῦτος": {
+   "icon": "ph:subset-of-light",
+   "file": "ph-subset-of-light.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "κινδυνεύω": {
+   "icon": "ph:sign-in-fill",
+   "file": "ph-sign-in-fill.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "σκανδαλίζω": {
+   "icon": "game-icons:foot-trip",
+   "file": "game-icons-foot-trip.png",
+   "source": "game-icons",
+   "glossEn": "trip"
+  },
+  "ἀπειλή": {
+   "icon": "ph:seal-warning",
+   "file": "ph-seal-warning.png",
+   "source": "ph",
+   "glossEn": "warning"
+  },
+  "μήποτε": {
+   "icon": "game-icons:extra-time",
+   "file": "game-icons-extra-time.png",
+   "source": "game-icons",
+   "glossEn": "time"
+  },
+  "οἰκεῖος": {
+   "icon": "game-icons:one-eyed",
+   "file": "game-icons-one-eyed.png",
+   "source": "game-icons",
+   "glossEn": "one"
+  },
+  "παράδεισος": {
+   "icon": "game-icons:bird-house",
+   "file": "game-icons-bird-house.png",
+   "source": "game-icons",
+   "glossEn": "house"
+  },
+  "πατρίς": {
+   "icon": "mdi:hoop-house",
+   "file": "mdi-hoop-house.png",
+   "source": "mdi",
+   "glossEn": "house"
+  },
+  "κληρονομία": {
+   "icon": "ph:house-bold",
+   "file": "ph-house-bold.png",
+   "source": "ph",
+   "glossEn": "house"
+  },
+  "βάρβαρος": {
+   "icon": "game-icons:greek-sphinx",
+   "file": "game-icons-greek-sphinx.png",
+   "source": "game-icons",
+   "glossEn": "greek"
+  },
+  "χώρα": {
+   "icon": "mdi:room-service",
+   "file": "mdi-room-service.png",
+   "source": "mdi",
+   "glossEn": "room"
+  },
+  "ἀλλότριος": {
+   "icon": "tabler:arrow-bar-to-left",
+   "file": "tabler-arrow-bar-to-left.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "ἀλλόφυλος": {
+   "icon": "tabler:world-x",
+   "file": "tabler-world-x.png",
+   "source": "tabler",
+   "glossEn": "world"
+  },
+  "ὅριον": {
+   "icon": "tabler:world-up",
+   "file": "tabler-world-up.png",
+   "source": "tabler",
+   "glossEn": "world"
+  },
+  "συντρίβω": {
+   "icon": "ph:link-break",
+   "file": "ph-link-break.png",
+   "source": "ph",
+   "glossEn": "break"
+  },
+  "ῥήγνυμι": {
+   "icon": "tabler:page-break",
+   "file": "tabler-page-break.png",
+   "source": "tabler",
+   "glossEn": "break"
+  },
+  "πολυτελής": {
+   "icon": "game-icons:gem-chain",
+   "file": "game-icons-gem-chain.png",
+   "source": "game-icons",
+   "glossEn": "gem"
+  },
+  "τίμιος": {
+   "icon": "game-icons:price-tag",
+   "file": "game-icons-price-tag.png",
+   "source": "game-icons",
+   "glossEn": "price"
+  },
+  "τρυφή": {
+   "icon": "game-icons:gem-pendant",
+   "file": "game-icons-gem-pendant.png",
+   "source": "game-icons",
+   "glossEn": "gem"
+  },
+  "χρύσεος": {
+   "icon": "game-icons:rod-of-asclepius",
+   "file": "game-icons-rod-of-asclepius.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "ἔντιμος": {
+   "icon": "game-icons:gem-necklace",
+   "file": "game-icons-gem-necklace.png",
+   "source": "game-icons",
+   "glossEn": "gem"
+  },
+  "πλοῦτος": {
+   "icon": "game-icons:stone-axe",
+   "file": "game-icons-stone-axe.png",
+   "source": "game-icons",
+   "glossEn": "stone"
+  },
+  "καθαιρέω": {
+   "icon": "tabler:home-down",
+   "file": "tabler-home-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "κόλασις": {
+   "icon": "game-icons:3d-hammer",
+   "file": "game-icons-3d-hammer.png",
+   "source": "game-icons",
+   "glossEn": "hammer"
+  },
+  "τιμωρία": {
+   "icon": "tabler:hammer-off",
+   "file": "tabler-hammer-off.png",
+   "source": "tabler",
+   "glossEn": "hammer"
+  },
+  "ἀμίαντος": {
+   "icon": "game-icons:white-book",
+   "file": "game-icons-white-book.png",
+   "source": "game-icons",
+   "glossEn": "white"
+  },
+  "ἁγνεία": {
+   "icon": "game-icons:white-tower",
+   "file": "game-icons-white-tower.png",
+   "source": "game-icons",
+   "glossEn": "white"
+  },
+  "ἁγνός": {
+   "icon": "mdi:human-white-cane",
+   "file": "mdi-human-white-cane.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "ἁγνῶς": {
+   "icon": "game-icons:hedjet-white-crown",
+   "file": "game-icons-hedjet-white-crown.png",
+   "source": "game-icons",
+   "glossEn": "white"
+  },
+  "ἄμεμπτος": {
+   "icon": "mdi:white-balance-auto",
+   "file": "mdi-white-balance-auto.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "ἄμωμος": {
+   "icon": "mdi:white-balance-sunny",
+   "file": "mdi-white-balance-sunny.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "ἐνδεής": {
+   "icon": "mdi:bed-empty",
+   "file": "mdi-bed-empty.png",
+   "source": "mdi",
+   "glossEn": "empty"
+  },
+  "ὑστερέω": {
+   "icon": "mdi:text-short",
+   "file": "mdi-text-short.png",
+   "source": "mdi",
+   "glossEn": "short"
+  },
+  "καταλιμπάνω": {
+   "icon": "ph:empty-bold",
+   "file": "ph-empty-bold.png",
+   "source": "ph",
+   "glossEn": "empty"
+  },
+  "ἀπολιμπάνω": {
+   "icon": "ph:empty-fill",
+   "file": "ph-empty-fill.png",
+   "source": "ph",
+   "glossEn": "empty"
+  },
+  "λαμπρός": {
+   "icon": "game-icons:shining-claw",
+   "file": "game-icons-shining-claw.png",
+   "source": "game-icons",
+   "glossEn": "shining"
+  },
+  "ἐνδόξως": {
+   "icon": "tabler:play-card-a",
+   "file": "tabler-play-card-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ἔνδοξος": {
+   "icon": "game-icons:glowing-artifact",
+   "file": "game-icons-glowing-artifact.png",
+   "source": "game-icons",
+   "glossEn": "glowing"
+  },
+  "ἐξεγείρω": {
+   "icon": "game-icons:raise-skeleton",
+   "file": "game-icons-raise-skeleton.png",
+   "source": "game-icons",
+   "glossEn": "raise"
+  },
+  "ἄρτι": {
+   "icon": "mdi:alarm-off",
+   "file": "mdi-alarm-off.png",
+   "source": "mdi",
+   "glossEn": "alarm"
+  },
+  "ἡνίκα": {
+   "icon": "mdi:alarm-bell",
+   "file": "mdi-alarm-bell.png",
+   "source": "mdi",
+   "glossEn": "alarm"
+  },
+  "δεῦτε": {
+   "icon": "tabler:uv-index",
+   "file": "tabler-uv-index.png",
+   "source": "tabler",
+   "glossEn": "index"
+  },
+  "οὕτως": {
+   "icon": "ph:hand-pointing",
+   "file": "ph-hand-pointing.png",
+   "source": "ph",
+   "glossEn": "pointing"
+  },
+  "θανατόω": {
+   "icon": "tabler:http-put-off",
+   "file": "tabler-http-put-off.png",
+   "source": "tabler",
+   "glossEn": "put"
+  },
+  "νεκρός": {
+   "icon": "game-icons:dead-eye",
+   "file": "game-icons-dead-eye.png",
+   "source": "game-icons",
+   "glossEn": "dead"
+  },
+  "ἀποθνῄσκω": {
+   "icon": "tabler:arrow-down-to-arc",
+   "file": "tabler-arrow-down-to-arc.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "θνήσκω": {
+   "icon": "game-icons:dead-head",
+   "file": "game-icons-dead-head.png",
+   "source": "game-icons",
+   "glossEn": "dead"
+  },
+  "δουλεύω": {
+   "icon": "mdi:home-floor-a",
+   "file": "mdi-home-floor-a.png",
+   "source": "mdi",
+   "glossEn": "a"
+  },
+  "οἰκέτης": {
+   "icon": "ph:paint-brush-household",
+   "file": "ph-paint-brush-household.png",
+   "source": "ph",
+   "glossEn": "household"
+  },
+  "μονογενής": {
+   "icon": "mdi:relation-only-one-to-one",
+   "file": "mdi-relation-only-one-to-one.png",
+   "source": "mdi",
+   "glossEn": "only"
+  },
+  "μόνος": {
+   "icon": "mdi:bed-single",
+   "file": "mdi-bed-single.png",
+   "source": "mdi",
+   "glossEn": "single"
+  },
+  "ἅπαξ": {
+   "icon": "ph:repeat-once-bold",
+   "file": "ph-repeat-once-bold.png",
+   "source": "ph",
+   "glossEn": "once"
+  },
+  "προσαγορεύω": {
+   "icon": "ph:address-book",
+   "file": "ph-address-book.png",
+   "source": "ph",
+   "glossEn": "address"
+  },
+  "ὀνομάζω": {
+   "icon": "mdi:cabin-a-frame",
+   "file": "mdi-cabin-a-frame.png",
+   "source": "mdi",
+   "glossEn": "a"
+  },
+  "ἐπονομάζω": {
+   "icon": "tabler:scan-letter-a",
+   "file": "tabler-scan-letter-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "σωματικός": {
+   "icon": "ph:person-thin",
+   "file": "ph-person-thin.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "σῶμα": {
+   "icon": "tabler:body-scan",
+   "file": "tabler-body-scan.png",
+   "source": "tabler",
+   "glossEn": "body"
+  },
+  "ἐφίστημι": {
+   "icon": "ph:globe-stand-bold",
+   "file": "ph-globe-stand-bold.png",
+   "source": "ph",
+   "glossEn": "stand"
+  },
+  "ἵστημι": {
+   "icon": "ph:globe-stand-fill",
+   "file": "ph-globe-stand-fill.png",
+   "source": "ph",
+   "glossEn": "stand"
+  },
+  "στάσις": {
+   "icon": "game-icons:standing-potion",
+   "file": "game-icons-standing-potion.png",
+   "source": "game-icons",
+   "glossEn": "standing"
+  },
+  "χαίρω": {
+   "icon": "ph:mask-happy",
+   "file": "ph-mask-happy.png",
+   "source": "ph",
+   "glossEn": "happy"
+  },
+  "ἀγαλλιάω": {
+   "icon": "mdi:tray-full",
+   "file": "mdi-tray-full.png",
+   "source": "mdi",
+   "glossEn": "full"
+  },
+  "ἡδονή": {
+   "icon": "mdi:image-filter-center-focus-strong-outline",
+   "file": "mdi-image-filter-center-focus-strong-outline.png",
+   "source": "mdi",
+   "glossEn": "strong"
+  },
+  "προσπίπτω": {
+   "icon": "tabler:lock-down",
+   "file": "tabler-lock-down.png",
+   "source": "tabler",
+   "glossEn": "down"
+  },
+  "ταπεινόω": {
+   "icon": "mdi:humble-bundle",
+   "file": "mdi-humble-bundle.png",
+   "source": "mdi",
+   "glossEn": "humble"
+  },
+  "θρησκεύω": {
+   "icon": "ph:person-light",
+   "file": "ph-person-light.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "πίπτω": {
+   "icon": "game-icons:person-in-bed",
+   "file": "game-icons-person-in-bed.png",
+   "source": "game-icons",
+   "glossEn": "person"
+  },
+  "ἀσπάζομαι": {
+   "icon": "ph:sign-in-thin",
+   "file": "ph-sign-in-thin.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "ἀπέρχομαι": {
+   "icon": "mdi:pokemon-go",
+   "file": "mdi-pokemon-go.png",
+   "source": "mdi",
+   "glossEn": "go"
+  },
+  "ἀποχωρέω": {
+   "icon": "mdi:language-go",
+   "file": "mdi-language-go.png",
+   "source": "mdi",
+   "glossEn": "go"
+  },
+  "γραμματεύς": {
+   "icon": "mdi:pac-man",
+   "file": "mdi-pac-man.png",
+   "source": "mdi",
+   "glossEn": "man"
+  },
+  "συγγραφεύς": {
+   "icon": "tabler:writing-off",
+   "file": "tabler-writing-off.png",
+   "source": "tabler",
+   "glossEn": "writing"
+  },
+  "ἀναγράφω": {
+   "icon": "tabler:writing-sign",
+   "file": "tabler-writing-sign.png",
+   "source": "tabler",
+   "glossEn": "writing"
+  },
+  "δεινός": {
+   "icon": "tabler:robot-face",
+   "file": "tabler-robot-face.png",
+   "source": "tabler",
+   "glossEn": "face"
+  },
+  "φοβέω": {
+   "icon": "game-icons:witch-face",
+   "file": "game-icons-witch-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "φοβερός": {
+   "icon": "game-icons:cyborg-face",
+   "file": "game-icons-cyborg-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "φόβος": {
+   "icon": "ph:alarm-bold",
+   "file": "ph-alarm-bold.png",
+   "source": "ph",
+   "glossEn": "alarm"
+  },
+  "μέλλω": {
+   "icon": "tabler:arrow-left-to-arc",
+   "file": "tabler-arrow-left-to-arc.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "ὕστερον": {
+   "icon": "game-icons:arrow-dunk",
+   "file": "game-icons-arrow-dunk.png",
+   "source": "game-icons",
+   "glossEn": "arrow"
+  },
+  "ἔπειτα": {
+   "icon": "tabler:arrow-fork",
+   "file": "tabler-arrow-fork.png",
+   "source": "tabler",
+   "glossEn": "arrow"
+  },
+  "ἅπτομαι": {
+   "icon": "mdi:touch-text-outline",
+   "file": "mdi-touch-text-outline.png",
+   "source": "mdi",
+   "glossEn": "touch"
+  },
+  "ἁφή": {
+   "icon": "mdi:hand-pointing-up",
+   "file": "mdi-hand-pointing-up.png",
+   "source": "mdi",
+   "glossEn": "pointing"
+  },
+  "θαυμαστός": {
+   "icon": "game-icons:doctor-face",
+   "file": "game-icons-doctor-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "θαυμάσιος": {
+   "icon": "game-icons:spider-face",
+   "file": "game-icons-spider-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "παράδοξος": {
+   "icon": "game-icons:wizard-face",
+   "file": "game-icons-wizard-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "πάθος": {
+   "icon": "game-icons:burning-passion",
+   "file": "game-icons-burning-passion.png",
+   "source": "game-icons",
+   "glossEn": "passion"
+  },
+  "πάσχω": {
+   "icon": "tabler:xbox-a-filled",
+   "file": "tabler-xbox-a-filled.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "πρόβατον": {
+   "icon": "game-icons:forward-sun",
+   "file": "game-icons-forward-sun.png",
+   "source": "game-icons",
+   "glossEn": "forward"
+  },
+  "ποίμνιον": {
+   "icon": "tabler:hand-little-finger",
+   "file": "tabler-hand-little-finger.png",
+   "source": "tabler",
+   "glossEn": "little"
+  },
+  "νόσος": {
+   "icon": "tabler:face-id-error",
+   "file": "tabler-face-id-error.png",
+   "source": "tabler",
+   "glossEn": "face"
+  },
+  "ἀσθενέω": {
+   "icon": "tabler:face-mask-off",
+   "file": "tabler-face-mask-off.png",
+   "source": "tabler",
+   "glossEn": "face"
+  },
+  "ἀσθενής": {
+   "icon": "ph:face-mask-bold",
+   "file": "ph-face-mask-bold.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "μαλακία": {
+   "icon": "ph:face-mask-fill",
+   "file": "ph-face-mask-fill.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "ἀσθένεια": {
+   "icon": "ph:subset-proper-of",
+   "file": "ph-subset-proper-of.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "σαβαώθ": {
+   "icon": "game-icons:meeple-army",
+   "file": "game-icons-meeple-army.png",
+   "source": "game-icons",
+   "glossEn": "army"
+  },
+  "μάχη": {
+   "icon": "game-icons:crossed-axes",
+   "file": "game-icons-crossed-axes.png",
+   "source": "game-icons",
+   "glossEn": "crossed"
+  },
+  "μάχομαι": {
+   "icon": "game-icons:skull-in-jar",
+   "file": "game-icons-skull-in-jar.png",
+   "source": "game-icons",
+   "glossEn": "in"
+  },
+  "πολεμέω": {
+   "icon": "game-icons:war-axe",
+   "file": "game-icons-war-axe.png",
+   "source": "game-icons",
+   "glossEn": "war"
+  },
+  "διαφθείρω": {
+   "icon": "game-icons:nuclear-waste",
+   "file": "game-icons-nuclear-waste.png",
+   "source": "game-icons",
+   "glossEn": "waste"
+  },
+  "φθορά": {
+   "icon": "mdi:bomb-off",
+   "file": "mdi-bomb-off.png",
+   "source": "mdi",
+   "glossEn": "bomb"
+  },
+  "χαλεπός": {
+   "icon": "ph:hard-hat",
+   "file": "ph-hard-hat.png",
+   "source": "ph",
+   "glossEn": "hard"
+  },
+  "δύσκολος": {
+   "icon": "ph:person-simple",
+   "file": "ph-person-simple.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "ἀποβάλλω": {
+   "icon": "ph:person-simple-throw",
+   "file": "ph-person-simple-throw.png",
+   "source": "ph",
+   "glossEn": "throw"
+  },
+  "ἀποτίθημι": {
+   "icon": "tabler:ad-off",
+   "file": "tabler-ad-off.png",
+   "source": "tabler",
+   "glossEn": "off"
+  },
+  "ἀπορρίπτω": {
+   "icon": "ph:person-simple-throw-bold",
+   "file": "ph-person-simple-throw-bold.png",
+   "source": "ph",
+   "glossEn": "throw"
+  },
+  "διαφορά": {
+   "icon": "tabler:layers-difference",
+   "file": "tabler-layers-difference.png",
+   "source": "tabler",
+   "glossEn": "difference"
+  },
+  "διαιρέω": {
+   "icon": "ph:divide-bold",
+   "file": "ph-divide-bold.png",
+   "source": "ph",
+   "glossEn": "divide"
+  },
+  "διαστέλλω": {
+   "icon": "ph:command-light",
+   "file": "ph-command-light.png",
+   "source": "ph",
+   "glossEn": "command"
+  },
+  "μερίζω": {
+   "icon": "ph:divide-fill",
+   "file": "ph-divide-fill.png",
+   "source": "ph",
+   "glossEn": "divide"
+  },
+  "φιλαδελφία": {
+   "icon": "mdi:robot-love",
+   "file": "mdi-robot-love.png",
+   "source": "mdi",
+   "glossEn": "love"
+  },
+  "ἀγάπη": {
+   "icon": "game-icons:royal-love",
+   "file": "game-icons-royal-love.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "ἀγαπάω": {
+   "icon": "game-icons:love-letter",
+   "file": "game-icons-love-letter.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "στέργω": {
+   "icon": "game-icons:eternal-love",
+   "file": "game-icons-eternal-love.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "στρέφω": {
+   "icon": "tabler:s-turn-left",
+   "file": "tabler-s-turn-left.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "τρέπω": {
+   "icon": "tabler:u-turn-left",
+   "file": "tabler-u-turn-left.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "τροπέω": {
+   "icon": "tabler:s-turn-right",
+   "file": "tabler-s-turn-right.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "ἀνοίγω": {
+   "icon": "mdi:gate-open",
+   "file": "mdi-gate-open.png",
+   "source": "mdi",
+   "glossEn": "open"
+  },
+  "ἀφίημι": {
+   "icon": "ph:superset-of-bold",
+   "file": "ph-superset-of-bold.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ζητέω": {
+   "icon": "ph:dev-to-logo-light",
+   "file": "ph-dev-to-logo-light.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "ἐπιμελῶς": {
+   "icon": "game-icons:magnifying-glass",
+   "file": "game-icons-magnifying-glass.png",
+   "source": "game-icons",
+   "glossEn": "magnifying"
+  },
+  "ἐκζητέω": {
+   "icon": "tabler:step-out",
+   "file": "tabler-step-out.png",
+   "source": "tabler",
+   "glossEn": "out"
+  },
+  "ἐπιζητέω": {
+   "icon": "mdi:table-row-plus-after",
+   "file": "mdi-table-row-plus-after.png",
+   "source": "mdi",
+   "glossEn": "after"
+  },
+  "ἀνάγκη": {
+   "icon": "game-icons:red-carpet",
+   "file": "game-icons-red-carpet.png",
+   "source": "game-icons",
+   "glossEn": "red"
+  },
+  "ὦ": {
+   "icon": "mdi:alpha-o",
+   "file": "mdi-alpha-o.png",
+   "source": "mdi",
+   "glossEn": "o"
+  },
+  "ἀνάστασις": {
+   "icon": "tabler:fold-up",
+   "file": "tabler-fold-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "ἀνατολή": {
+   "icon": "ph:superset-of-fill",
+   "file": "ph-superset-of-fill.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ὀρθρίζω": {
+   "icon": "mdi:elevation-rise",
+   "file": "mdi-elevation-rise.png",
+   "source": "mdi",
+   "glossEn": "rise"
+  },
+  "πολιτεία": {
+   "icon": "game-icons:split-body",
+   "file": "game-icons-split-body.png",
+   "source": "game-icons",
+   "glossEn": "body"
+  },
+  "πολιτεύω": {
+   "icon": "tabler:live-view",
+   "file": "tabler-live-view.png",
+   "source": "tabler",
+   "glossEn": "live"
+  },
+  "ἱερόν": {
+   "icon": "game-icons:tarot-18-the-moon",
+   "file": "game-icons-tarot-18-the-moon.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "εὐλογητός": {
+   "icon": "ph:superset-of-thin",
+   "file": "ph-superset-of-thin.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "μακαρίζω": {
+   "icon": "tabler:mood-happy",
+   "file": "tabler-mood-happy.png",
+   "source": "tabler",
+   "glossEn": "happy"
+  },
+  "ἀρετή": {
+   "icon": "ph:face-mask-thin",
+   "file": "ph-face-mask-thin.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "εὐσεβής": {
+   "icon": "game-icons:woman-elf-face",
+   "file": "game-icons-woman-elf-face.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "διαβαίνω": {
+   "icon": "game-icons:subway-pass",
+   "file": "game-icons-subway-pass.png",
+   "source": "game-icons",
+   "glossEn": "pass"
+  },
+  "πέραν": {
+   "icon": "mdi:kettle-pour-over",
+   "file": "mdi-kettle-pour-over.png",
+   "source": "mdi",
+   "glossEn": "over"
+  },
+  "παράγω": {
+   "icon": "game-icons:boarding-pass",
+   "file": "game-icons-boarding-pass.png",
+   "source": "game-icons",
+   "glossEn": "pass"
+  },
+  "μώλωψ": {
+   "icon": "ph:stripe-logo",
+   "file": "ph-stripe-logo.png",
+   "source": "ph",
+   "glossEn": "stripe"
+  },
+  "πληγή": {
+   "icon": "tabler:brand-stripe",
+   "file": "tabler-brand-stripe.png",
+   "source": "tabler",
+   "glossEn": "stripe"
+  },
+  "τραυματίας": {
+   "icon": "ph:person-duotone",
+   "file": "ph-person-duotone.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "τραυματίζω": {
+   "icon": "game-icons:open-wound",
+   "file": "game-icons-open-wound.png",
+   "source": "game-icons",
+   "glossEn": "wound"
+  },
+  "λογισμός": {
+   "icon": "tabler:thinking-medium",
+   "file": "tabler-thinking-medium.png",
+   "source": "tabler",
+   "glossEn": "thinking"
+  },
+  "χιλιάς": {
+   "icon": "tabler:abacus-off",
+   "file": "tabler-abacus-off.png",
+   "source": "tabler",
+   "glossEn": "abacus"
+  },
+  "ἑκατόν": {
+   "icon": "ph:number-one",
+   "file": "ph-number-one.png",
+   "source": "ph",
+   "glossEn": "one"
+  },
+  "πλανάω": {
+   "icon": "ph:face-mask-light",
+   "file": "ph-face-mask-light.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "ἐπιθυμέω": {
+   "icon": "mdi:text-long",
+   "file": "mdi-text-long.png",
+   "source": "mdi",
+   "glossEn": "long"
+  },
+  "ἐπιθυμία": {
+   "icon": "game-icons:double-face-mask",
+   "file": "game-icons-double-face-mask.png",
+   "source": "game-icons",
+   "glossEn": "face"
+  },
+  "λιμός": {
+   "icon": "mdi:face-man-outline",
+   "file": "mdi-face-man-outline.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἐπιτιμάω": {
+   "icon": "tabler:tax-euro",
+   "file": "tabler-tax-euro.png",
+   "source": "tabler",
+   "glossEn": "tax"
+  },
+  "ἔλεγχος": {
+   "icon": "game-icons:hades-symbol",
+   "file": "game-icons-hades-symbol.png",
+   "source": "game-icons",
+   "glossEn": "symbol"
+  },
+  "προδότης": {
+   "icon": "game-icons:dagger-rose",
+   "file": "game-icons-dagger-rose.png",
+   "source": "game-icons",
+   "glossEn": "dagger"
+  },
+  "ξίφος": {
+   "icon": "game-icons:axe-sword",
+   "file": "game-icons-axe-sword.png",
+   "source": "game-icons",
+   "glossEn": "sword"
+  },
+  "παρέρχομαι": {
+   "icon": "tabler:arrow-bar-to-right",
+   "file": "tabler-arrow-bar-to-right.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "ἀφανίζω": {
+   "icon": "tabler:arrow-right-to-arc",
+   "file": "tabler-arrow-right-to-arc.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "κυκλόω": {
+   "icon": "mdi:surround-sound-2-0",
+   "file": "mdi-surround-sound-2-0.png",
+   "source": "mdi",
+   "glossEn": "surround"
+  },
+  "κύκλῳ": {
+   "icon": "mdi:alpha-a-circle",
+   "file": "mdi-alpha-a-circle.png",
+   "source": "mdi",
+   "glossEn": "a"
+  },
+  "περίκειμαι": {
+   "icon": "mdi:surround-sound-2-1",
+   "file": "mdi-surround-sound-2-1.png",
+   "source": "mdi",
+   "glossEn": "surround"
+  },
+  "θεμέλιος": {
+   "icon": "ph:dev-to-logo-duotone",
+   "file": "ph-dev-to-logo-duotone.png",
+   "source": "ph",
+   "glossEn": "to"
+  },
+  "θεμελιόω": {
+   "icon": "game-icons:tarot-15-the-devil",
+   "file": "game-icons-tarot-15-the-devil.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "τοῖχος": {
+   "icon": "tabler:wall-off",
+   "file": "tabler-wall-off.png",
+   "source": "tabler",
+   "glossEn": "wall"
+  },
+  "ἀμέλεια": {
+   "icon": "game-icons:evil-eyes",
+   "file": "game-icons-evil-eyes.png",
+   "source": "game-icons",
+   "glossEn": "evil"
+  },
+  "κρύπτω": {
+   "icon": "tabler:home-up",
+   "file": "tabler-home-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "εἰσφέρω": {
+   "icon": "mdi:debug-step-into",
+   "file": "mdi-debug-step-into.png",
+   "source": "mdi",
+   "glossEn": "into"
+  },
+  "ἐμβάλλω": {
+   "icon": "mdi:cast-off",
+   "file": "mdi-cast-off.png",
+   "source": "mdi",
+   "glossEn": "cast"
+  },
+  "ἐντός": {
+   "icon": "game-icons:heart-inside",
+   "file": "game-icons-heart-inside.png",
+   "source": "game-icons",
+   "glossEn": "inside"
+  },
+  "ἔσω": {
+   "icon": "mdi:border-inside",
+   "file": "mdi-border-inside.png",
+   "source": "mdi",
+   "glossEn": "inside"
+  },
+  "ὕψιστος": {
+   "icon": "game-icons:high-five",
+   "file": "game-icons-high-five.png",
+   "source": "game-icons",
+   "glossEn": "high"
+  },
+  "ὑπερέχω": {
+   "icon": "mdi:file-excel",
+   "file": "mdi-file-excel.png",
+   "source": "mdi",
+   "glossEn": "excel"
+  },
+  "ὑπερβολή": {
+   "icon": "game-icons:top-hat",
+   "file": "game-icons-top-hat.png",
+   "source": "game-icons",
+   "glossEn": "top"
+  },
+  "ἀπαλλάσσω": {
+   "icon": "tabler:free-rights",
+   "file": "tabler-free-rights.png",
+   "source": "tabler",
+   "glossEn": "free"
+  },
+  "ταράσσω": {
+   "icon": "tabler:lock-up",
+   "file": "tabler-lock-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "αἰσχύνη": {
+   "icon": "mdi:face-man-profile",
+   "file": "mdi-face-man-profile.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "αἰσχύνω": {
+   "icon": "mdi:face-man-shimmer",
+   "file": "mdi-face-man-shimmer.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "καταισχύνω": {
+   "icon": "mdi:fit-to-page-outline",
+   "file": "mdi-fit-to-page-outline.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἐντρέπω": {
+   "icon": "tabler:u-turn-right",
+   "file": "tabler-u-turn-right.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "πανταχόθεν": {
+   "icon": "mdi:border-all",
+   "file": "mdi-border-all.png",
+   "source": "mdi",
+   "glossEn": "all"
+  },
+  "κατευθύνω": {
+   "icon": "ph:magnet-straight",
+   "file": "ph-magnet-straight.png",
+   "source": "ph",
+   "glossEn": "straight"
+  },
+  "ὁδηγέω": {
+   "icon": "tabler:arrow-guide",
+   "file": "tabler-arrow-guide.png",
+   "source": "tabler",
+   "glossEn": "guide"
+  },
+  "πιστόω": {
+   "icon": "mdi:relation-one-to-one",
+   "file": "mdi-relation-one-to-one.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἀξιόπιστος": {
+   "icon": "mdi:tag-check",
+   "file": "mdi-tag-check.png",
+   "source": "mdi",
+   "glossEn": "check"
+  },
+  "ἀρκέω": {
+   "icon": "mdi:content-cut",
+   "file": "mdi-content-cut.png",
+   "source": "mdi",
+   "glossEn": "content"
+  },
+  "ἀλαζονεία": {
+   "icon": "game-icons:necklace-display",
+   "file": "game-icons-necklace-display.png",
+   "source": "game-icons",
+   "glossEn": "display"
+  },
+  "ὑπερήφανος": {
+   "icon": "tabler:face-mask-filled",
+   "file": "tabler-face-mask-filled.png",
+   "source": "tabler",
+   "glossEn": "face"
+  },
+  "ὕβρις": {
+   "icon": "mdi:face-recognition",
+   "file": "mdi-face-recognition.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ὑπερηφανία": {
+   "icon": "mdi:baby-face-outline",
+   "file": "mdi-baby-face-outline.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἑτοίμος": {
+   "icon": "game-icons:traffic-lights-ready-to-go",
+   "file": "game-icons-traffic-lights-ready-to-go.png",
+   "source": "game-icons",
+   "glossEn": "ready"
+  },
+  "ὑπήκοος": {
+   "icon": "mdi:coffee-to-go-outline",
+   "file": "mdi-coffee-to-go-outline.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "σωφροσύνη": {
+   "icon": "ph:person-simple-run",
+   "file": "ph-person-simple-run.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "σώφρων": {
+   "icon": "ph:person-simple-ski",
+   "file": "ph-person-simple-ski.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "ἐγκράτεια": {
+   "icon": "ph:person-arms-spread",
+   "file": "ph-person-arms-spread.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "ἀσύνετος": {
+   "icon": "tabler:mood-confused",
+   "file": "tabler-mood-confused.png",
+   "source": "tabler",
+   "glossEn": "confused"
+  },
+  "ἄλογος": {
+   "icon": "mdi:robot-confused",
+   "file": "mdi-robot-confused.png",
+   "source": "mdi",
+   "glossEn": "confused"
+  },
+  "ἄτοπος": {
+   "icon": "mdi:emoticon-confused",
+   "file": "mdi-emoticon-confused.png",
+   "source": "mdi",
+   "glossEn": "confused"
+  },
+  "ἀπρεπής": {
+   "icon": "tabler:mood-confused-filled",
+   "file": "tabler-mood-confused-filled.png",
+   "source": "tabler",
+   "glossEn": "confused"
+  },
+  "οἰκουμένη": {
+   "icon": "tabler:world-cog",
+   "file": "tabler-world-cog.png",
+   "source": "tabler",
+   "glossEn": "world"
+  },
+  "ξένος": {
+   "icon": "mdi:new-box",
+   "file": "mdi-new-box.png",
+   "source": "mdi",
+   "glossEn": "new"
+  },
+  "ἔθνος": {
+   "icon": "tabler:letter-a-small",
+   "file": "tabler-letter-a-small.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "πρᾶγμα": {
+   "icon": "tabler:phone-done",
+   "file": "tabler-phone-done.png",
+   "source": "tabler",
+   "glossEn": "done"
+  },
+  "τύπος": {
+   "icon": "tabler:box-model",
+   "file": "tabler-box-model.png",
+   "source": "tabler",
+   "glossEn": "model"
+  },
+  "ὁ": {
+   "icon": "game-icons:tarot-16-the-tower",
+   "file": "game-icons-tarot-16-the-tower.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "ἄρχομαι": {
+   "icon": "mdi:bug-play",
+   "file": "mdi-bug-play.png",
+   "source": "mdi",
+   "glossEn": "play"
+  },
+  "δυνάστης": {
+   "icon": "mdi:cog-play",
+   "file": "mdi-cog-play.png",
+   "source": "mdi",
+   "glossEn": "play"
+  },
+  "ἀπό": {
+   "icon": "tabler:ce-off",
+   "file": "tabler-ce-off.png",
+   "source": "tabler",
+   "glossEn": "off"
+  },
+  "ἐκ (ἐξ)": {
+   "icon": "tabler:zoom-out",
+   "file": "tabler-zoom-out.png",
+   "source": "tabler",
+   "glossEn": "out"
+  },
+  "ἐκεῖθεν": {
+   "icon": "ph:arrow-left",
+   "file": "ph-arrow-left.png",
+   "source": "ph",
+   "glossEn": "arrow"
+  },
+  "ἵνα": {
+   "icon": "mdi:file-compare",
+   "file": "mdi-file-compare.png",
+   "source": "mdi",
+   "glossEn": "compare"
+  },
+  "ὅπως": {
+   "icon": "tabler:zoom-in-area",
+   "file": "tabler-zoom-in-area.png",
+   "source": "tabler",
+   "glossEn": "in"
+  },
+  "ὅσπερ": {
+   "icon": "ph:text-h-one",
+   "file": "ph-text-h-one.png",
+   "source": "ph",
+   "glossEn": "one"
+  },
+  "πρῶτος": {
+   "icon": "tabler:medal-2",
+   "file": "tabler-medal-2.png",
+   "source": "tabler",
+   "glossEn": "medal"
+  },
+  "τέκνον": {
+   "icon": "mdi:human-child",
+   "file": "mdi-human-child.png",
+   "source": "mdi",
+   "glossEn": "child"
+  },
+  "παιδάριον": {
+   "icon": "tabler:mood-boy",
+   "file": "tabler-mood-boy.png",
+   "source": "tabler",
+   "glossEn": "boy"
+  },
+  "παῖς": {
+   "icon": "mdi:human-male-boy",
+   "file": "mdi-human-male-boy.png",
+   "source": "mdi",
+   "glossEn": "boy"
+  },
+  "πατρικός": {
+   "icon": "game-icons:quick-man",
+   "file": "game-icons-quick-man.png",
+   "source": "game-icons",
+   "glossEn": "man"
+  },
+  "ἀνήρ": {
+   "icon": "tabler:cookie-man",
+   "file": "tabler-cookie-man.png",
+   "source": "tabler",
+   "glossEn": "man"
+  },
+  "γονεύς": {
+   "icon": "game-icons:magnet-man",
+   "file": "game-icons-magnet-man.png",
+   "source": "game-icons",
+   "glossEn": "man"
+  },
+  "ἄχρι": {
+   "icon": "tabler:mail-up",
+   "file": "tabler-mail-up.png",
+   "source": "tabler",
+   "glossEn": "up"
+  },
+  "ἕως": {
+   "icon": "game-icons:saber-and-pistol",
+   "file": "game-icons-saber-and-pistol.png",
+   "source": "game-icons",
+   "glossEn": "and"
+  },
+  "ἑαυτοῦ": {
+   "icon": "game-icons:inner-self",
+   "file": "game-icons-inner-self.png",
+   "source": "game-icons",
+   "glossEn": "self"
+  },
+  "ἴδιος": {
+   "icon": "mdi:fit-to-screen-outline",
+   "file": "mdi-fit-to-screen-outline.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "κάθημαι": {
+   "icon": "ph:star-and-crescent",
+   "file": "ph-star-and-crescent.png",
+   "source": "ph",
+   "glossEn": "and"
+  },
+  "καθέζομαι": {
+   "icon": "game-icons:sitting-dog",
+   "file": "game-icons-sitting-dog.png",
+   "source": "game-icons",
+   "glossEn": "sitting"
+  },
+  "ἑνότης": {
+   "icon": "tabler:brand-unity",
+   "file": "tabler-brand-unity.png",
+   "source": "tabler",
+   "glossEn": "unity"
+  },
+  "λίθος": {
+   "icon": "game-icons:rune-stone",
+   "file": "game-icons-rune-stone.png",
+   "source": "game-icons",
+   "glossEn": "stone"
+  },
+  "τραχύς": {
+   "icon": "game-icons:rough-wound",
+   "file": "game-icons-rough-wound.png",
+   "source": "game-icons",
+   "glossEn": "rough"
+  },
+  "ὁπλίζομαι": {
+   "icon": "mdi:arm-flex",
+   "file": "mdi-arm-flex.png",
+   "source": "mdi",
+   "glossEn": "arm"
+  },
+  "ὅπλον": {
+   "icon": "mdi:instrument-triangle",
+   "file": "mdi-instrument-triangle.png",
+   "source": "mdi",
+   "glossEn": "instrument"
+  },
+  "φυλακή": {
+   "icon": "game-icons:person-in-blizzard",
+   "file": "game-icons-person-in-blizzard.png",
+   "source": "game-icons",
+   "glossEn": "person"
+  },
+  "δεσμός": {
+   "icon": "game-icons:james-bond-aperture",
+   "file": "game-icons-james-bond-aperture.png",
+   "source": "game-icons",
+   "glossEn": "bond"
+  },
+  "δουλεία": {
+   "icon": "game-icons:slavery-whip",
+   "file": "game-icons-slavery-whip.png",
+   "source": "game-icons",
+   "glossEn": "slavery"
+  },
+  "σίδηρος": {
+   "icon": "game-icons:iron-mask",
+   "file": "game-icons-iron-mask.png",
+   "source": "game-icons",
+   "glossEn": "iron"
+  },
+  "λύπη": {
+   "icon": "game-icons:back-pain",
+   "file": "game-icons-back-pain.png",
+   "source": "game-icons",
+   "glossEn": "pain"
+  },
+  "ὀδύνη": {
+   "icon": "game-icons:distress-signal",
+   "file": "game-icons-distress-signal.png",
+   "source": "game-icons",
+   "glossEn": "distress"
+  },
+  "ταπεινοφροσύνη": {
+   "icon": "ph:person-simple-bike",
+   "file": "ph-person-simple-bike.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "ὑποτάσσω": {
+   "icon": "ph:person-simple-bold",
+   "file": "ph-person-simple-bold.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "βλάπτω": {
+   "icon": "game-icons:trigger-hurt",
+   "file": "game-icons-trigger-hurt.png",
+   "source": "game-icons",
+   "glossEn": "hurt"
+  },
+  "μυστήριον": {
+   "icon": "game-icons:secret-book",
+   "file": "game-icons-secret-book.png",
+   "source": "game-icons",
+   "glossEn": "secret"
+  },
+  "ὅρασις": {
+   "icon": "game-icons:sight-disabled",
+   "file": "game-icons-sight-disabled.png",
+   "source": "game-icons",
+   "glossEn": "sight"
+  },
+  "ἐνίστημι": {
+   "icon": "mdi:home-sound-in",
+   "file": "mdi-home-sound-in.png",
+   "source": "mdi",
+   "glossEn": "in"
+  },
+  "ἐπέρχομαι": {
+   "icon": "game-icons:attack-gauge",
+   "file": "game-icons-attack-gauge.png",
+   "source": "game-icons",
+   "glossEn": "attack"
+  },
+  "παρεμβάλλω": {
+   "icon": "game-icons:desert-camp",
+   "file": "game-icons-desert-camp.png",
+   "source": "game-icons",
+   "glossEn": "camp"
+  },
+  "εἰδωλολατρία": {
+   "icon": "ph:member-of-duotone",
+   "file": "ph-member-of-duotone.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "θυσιαστήριον": {
+   "icon": "game-icons:star-altar",
+   "file": "game-icons-star-altar.png",
+   "source": "game-icons",
+   "glossEn": "altar"
+  },
+  "συντάσσω": {
+   "icon": "mdi:vector-arrange-above",
+   "file": "mdi-vector-arrange-above.png",
+   "source": "mdi",
+   "glossEn": "arrange"
+  },
+  "ἐντέλλομαι": {
+   "icon": "ph:command-duotone",
+   "file": "ph-command-duotone.png",
+   "source": "ph",
+   "glossEn": "command"
+  },
+  "κατακυριεύω": {
+   "icon": "tabler:exercise-ball",
+   "file": "tabler-exercise-ball.png",
+   "source": "tabler",
+   "glossEn": "exercise"
+  },
+  "ἀργύρεος": {
+   "icon": "mdi:podium-silver",
+   "file": "mdi-podium-silver.png",
+   "source": "mdi",
+   "glossEn": "silver"
+  },
+  "ἀργύριον": {
+   "icon": "game-icons:silver-bullet",
+   "file": "game-icons-silver-bullet.png",
+   "source": "game-icons",
+   "glossEn": "silver"
+  },
+  "ἀκροατής": {
+   "icon": "game-icons:potion-of-madness",
+   "file": "game-icons-potion-of-madness.png",
+   "source": "game-icons",
+   "glossEn": "of"
+  },
+  "ἐπακούω": {
+   "icon": "mdi:relation-many-to-many",
+   "file": "mdi-relation-many-to-many.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἐλάσσων": {
+   "icon": "ph:less-than",
+   "file": "ph-less-than.png",
+   "source": "ph",
+   "glossEn": "less"
+  },
+  "ἥττον": {
+   "icon": "mdi:skew-less",
+   "file": "mdi-skew-less.png",
+   "source": "mdi",
+   "glossEn": "less"
+  },
+  "ἀποστερέω": {
+   "icon": "ph:dice-one-bold",
+   "file": "ph-dice-one-bold.png",
+   "source": "ph",
+   "glossEn": "one"
+  },
+  "ἀφαιρέω": {
+   "icon": "tabler:id-off",
+   "file": "tabler-id-off.png",
+   "source": "tabler",
+   "glossEn": "off"
+  },
+  "ἀφροσύνη": {
+   "icon": "ph:subset-of-duotone",
+   "file": "ph-subset-of-duotone.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "μωρός": {
+   "icon": "ph:face-mask-duotone",
+   "file": "ph-face-mask-duotone.png",
+   "source": "ph",
+   "glossEn": "face"
+  },
+  "συγκόπτω": {
+   "icon": "game-icons:cut-palm",
+   "file": "game-icons-cut-palm.png",
+   "source": "game-icons",
+   "glossEn": "cut"
+  },
+  "ἐκκόπτω": {
+   "icon": "game-icons:cut-lemon",
+   "file": "game-icons-cut-lemon.png",
+   "source": "game-icons",
+   "glossEn": "cut"
+  },
+  "ῥάβδος": {
+   "icon": "tabler:clef-staff",
+   "file": "tabler-clef-staff.png",
+   "source": "tabler",
+   "glossEn": "staff"
+  },
+  "ἀρεστός": {
+   "icon": "mdi:face-mask-outline",
+   "file": "mdi-face-mask-outline.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἵλεως": {
+   "icon": "mdi:face-woman-outline",
+   "file": "mdi-face-woman-outline.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "σεμνός": {
+   "icon": "game-icons:top-paw",
+   "file": "game-icons-top-paw.png",
+   "source": "game-icons",
+   "glossEn": "top"
+  },
+  "σεμνότης": {
+   "icon": "mdi:dock-top",
+   "file": "mdi-dock-top.png",
+   "source": "mdi",
+   "glossEn": "top"
+  },
+  "σεμνῶς": {
+   "icon": "game-icons:plants-and-animals",
+   "file": "game-icons-plants-and-animals.png",
+   "source": "game-icons",
+   "glossEn": "and"
+  },
+  "ἀκακία": {
+   "icon": "mdi:image-filter-black-white",
+   "file": "mdi-image-filter-black-white.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "ἁπλότης": {
+   "icon": "mdi:white-balance-iridescent",
+   "file": "mdi-white-balance-iridescent.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "ἄκακος": {
+   "icon": "ph:bag-simple",
+   "file": "ph-bag-simple.png",
+   "source": "ph",
+   "glossEn": "simple"
+  },
+  "τάχος": {
+   "icon": "mdi:play-speed",
+   "file": "mdi-play-speed.png",
+   "source": "mdi",
+   "glossEn": "speed"
+  },
+  "ταχύ": {
+   "icon": "game-icons:high-heel",
+   "file": "game-icons-high-heel.png",
+   "source": "game-icons",
+   "glossEn": "high"
+  },
+  "ταχύς": {
+   "icon": "game-icons:quick-slash",
+   "file": "game-icons-quick-slash.png",
+   "source": "game-icons",
+   "glossEn": "quick"
+  },
+  "σιωπάω": {
+   "icon": "tabler:mood-silence",
+   "file": "tabler-mood-silence.png",
+   "source": "tabler",
+   "glossEn": "silence"
+  },
+  "ἡσυχάζω": {
+   "icon": "tabler:live-photo",
+   "file": "tabler-live-photo.png",
+   "source": "tabler",
+   "glossEn": "live"
+  },
+  "ἡσύχιος": {
+   "icon": "mdi:face-woman-profile",
+   "file": "mdi-face-woman-profile.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "ἀντιλέγω": {
+   "icon": "mdi:phone-in-talk",
+   "file": "mdi-phone-in-talk.png",
+   "source": "mdi",
+   "glossEn": "in"
+  },
+  "ἄγγελος": {
+   "icon": "mdi:compare-remove",
+   "file": "mdi-compare-remove.png",
+   "source": "mdi",
+   "glossEn": "compare"
+  },
+  "ἄνθρωπος": {
+   "icon": "mdi:alpha-g",
+   "file": "mdi-alpha-g.png",
+   "source": "mdi",
+   "glossEn": "g"
+  },
+  "πρόσωπον": {
+   "icon": "game-icons:nose-front",
+   "file": "game-icons-nose-front.png",
+   "source": "game-icons",
+   "glossEn": "front"
+  },
+  "παντοκράτωρ": {
+   "icon": "ph:superset-of-light",
+   "file": "ph-superset-of-light.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "προστίθημι": {
+   "icon": "tabler:arrow-bar-to-up-dashed",
+   "file": "tabler-arrow-bar-to-up-dashed.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "πληθύνω": {
+   "icon": "tabler:text-increase",
+   "file": "tabler-text-increase.png",
+   "source": "tabler",
+   "glossEn": "increase"
+  },
+  "οὐράνιος": {
+   "icon": "ph:cloud-x",
+   "file": "ph-cloud-x.png",
+   "source": "ph",
+   "glossEn": "cloud"
+  },
+  "σύ": {
+   "icon": "ph:hand-pointing-bold",
+   "file": "ph-hand-pointing-bold.png",
+   "source": "ph",
+   "glossEn": "pointing"
+  },
+  "θάλασσα": {
+   "icon": "game-icons:sea-star",
+   "file": "game-icons-sea-star.png",
+   "source": "game-icons",
+   "glossEn": "sea"
+  },
+  "χειμάρρους": {
+   "icon": "game-icons:winter-hat",
+   "file": "game-icons-winter-hat.png",
+   "source": "game-icons",
+   "glossEn": "winter"
+  },
+  "σάρξ": {
+   "icon": "game-icons:tarot-21-the-world",
+   "file": "game-icons-tarot-21-the-world.png",
+   "source": "game-icons",
+   "glossEn": "the"
+  },
+  "σαρκικός": {
+   "icon": "game-icons:cut-diamond",
+   "file": "game-icons-cut-diamond.png",
+   "source": "game-icons",
+   "glossEn": "cut"
+  },
+  "ἀδελφός": {
+   "icon": "mdi:remote-tv",
+   "file": "mdi-remote-tv.png",
+   "source": "mdi",
+   "glossEn": "remote"
+  },
+  "ἀδελφότης": {
+   "icon": "ph:hands-clapping-fill",
+   "file": "ph-hands-clapping-fill.png",
+   "source": "ph",
+   "glossEn": "hands"
+  },
+  "μήτηρ": {
+   "icon": "mdi:mother-heart",
+   "file": "mdi-mother-heart.png",
+   "source": "mdi",
+   "glossEn": "mother"
+  },
+  "βαπτίζω": {
+   "icon": "mdi:relation-many-to-only-one",
+   "file": "mdi-relation-many-to-only-one.png",
+   "source": "mdi",
+   "glossEn": "only"
+  },
+  "παιδεία": {
+   "icon": "ph:graduation-cap",
+   "file": "ph-graduation-cap.png",
+   "source": "ph",
+   "glossEn": "graduation"
+  },
+  "μακάριος": {
+   "icon": "mdi:api-off",
+   "file": "mdi-api-off.png",
+   "source": "mdi",
+   "glossEn": "off"
+  },
+  "τέρας": {
+   "icon": "game-icons:star-struck",
+   "file": "game-icons-star-struck.png",
+   "source": "game-icons",
+   "glossEn": "struck"
+  },
+  "ἑπτά": {
+   "icon": "ph:number-seven",
+   "file": "ph-number-seven.png",
+   "source": "ph",
+   "glossEn": "seven"
+  },
+  "ἀκοή": {
+   "icon": "mdi:ear-hearing",
+   "file": "mdi-ear-hearing.png",
+   "source": "mdi",
+   "glossEn": "hearing"
+  },
+  "πληρόω": {
+   "icon": "mdi:stretch-to-page-outline",
+   "file": "mdi-stretch-to-page-outline.png",
+   "source": "mdi",
+   "glossEn": "to"
+  },
+  "ἐμπίπλημι": {
+   "icon": "ph:x-fill",
+   "file": "ph-x-fill.png",
+   "source": "ph",
+   "glossEn": "fill"
+  },
+  "τηρέω": {
+   "icon": "tabler:arrow-bar-to-down-dashed",
+   "file": "tabler-arrow-bar-to-down-dashed.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "φυλάσσω": {
+   "icon": "mdi:desk-lamp-on",
+   "file": "mdi-desk-lamp-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "νέος": {
+   "icon": "mdi:moon-new",
+   "file": "mdi-moon-new.png",
+   "source": "mdi",
+   "glossEn": "new"
+  },
+  "νήπιος": {
+   "icon": "mdi:account-child",
+   "file": "mdi-account-child.png",
+   "source": "mdi",
+   "glossEn": "child"
+  },
+  "φόνος": {
+   "icon": "game-icons:chalk-outline-murder",
+   "file": "game-icons-chalk-outline-murder.png",
+   "source": "game-icons",
+   "glossEn": "murder"
+  },
+  "ἀποκτείνω": {
+   "icon": "game-icons:goo-skull",
+   "file": "game-icons-goo-skull.png",
+   "source": "game-icons",
+   "glossEn": "skull"
+  },
+  "ὄρος": {
+   "icon": "tabler:arrow-bar-to-left-dashed",
+   "file": "tabler-arrow-bar-to-left-dashed.png",
+   "source": "tabler",
+   "glossEn": "to"
+  },
+  "βουνός": {
+   "icon": "game-icons:hill-fort",
+   "file": "game-icons-hill-fort.png",
+   "source": "game-icons",
+   "glossEn": "hill"
+  },
+  "χήρα": {
+   "icon": "ph:person-simple-fill",
+   "file": "ph-person-simple-fill.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "λειτουργία": {
+   "icon": "mdi:gift-off",
+   "file": "mdi-gift-off.png",
+   "source": "mdi",
+   "glossEn": "gift"
+  },
+  "ἱλαστήριον": {
+   "icon": "ph:finn-the-human-bold",
+   "file": "ph-finn-the-human-bold.png",
+   "source": "ph",
+   "glossEn": "the"
+  },
+  "ἐρημόω": {
+   "icon": "mdi:led-strip",
+   "file": "mdi-led-strip.png",
+   "source": "mdi",
+   "glossEn": "strip"
+  },
+  "ἔρημος": {
+   "icon": "game-icons:desert-eagle",
+   "file": "game-icons-desert-eagle.png",
+   "source": "game-icons",
+   "glossEn": "desert"
+  },
+  "πατριά": {
+   "icon": "game-icons:family-house",
+   "file": "game-icons-family-house.png",
+   "source": "game-icons",
+   "glossEn": "family"
+  },
+  "γενεά": {
+   "icon": "tabler:image-generation",
+   "file": "tabler-image-generation.png",
+   "source": "tabler",
+   "glossEn": "generation"
+  },
+  "οἰκοδομή": {
+   "icon": "mdi:table-of-contents",
+   "file": "mdi-table-of-contents.png",
+   "source": "mdi",
+   "glossEn": "of"
+  },
+  "ἐνέργεια": {
+   "icon": "tabler:activity-heartbeat",
+   "file": "tabler-activity-heartbeat.png",
+   "source": "tabler",
+   "glossEn": "activity"
+  },
+  "ἐξαίφνης": {
+   "icon": "game-icons:high-kick",
+   "file": "game-icons-high-kick.png",
+   "source": "game-icons",
+   "glossEn": "high"
+  },
+  "κόρη": {
+   "icon": "mdi:human-male-girl",
+   "file": "mdi-human-male-girl.png",
+   "source": "mdi",
+   "glossEn": "girl"
+  },
+  "παρθένος": {
+   "icon": "mdi:human-female-girl",
+   "file": "mdi-human-female-girl.png",
+   "source": "mdi",
+   "glossEn": "girl"
+  },
+  "τρόπαιον": {
+   "icon": "game-icons:monument-valley",
+   "file": "game-icons-monument-valley.png",
+   "source": "game-icons",
+   "glossEn": "monument"
+  },
+  "αὐλή": {
+   "icon": "game-icons:indian-palace",
+   "file": "game-icons-indian-palace.png",
+   "source": "game-icons",
+   "glossEn": "palace"
+  },
+  "ὅραμα": {
+   "icon": "game-icons:spectacle-lenses",
+   "file": "game-icons-spectacle-lenses.png",
+   "source": "game-icons",
+   "glossEn": "spectacle"
+  },
+  "πλάσσω": {
+   "icon": "game-icons:ring-mould",
+   "file": "game-icons-ring-mould.png",
+   "source": "game-icons",
+   "glossEn": "mould"
+  },
+  "σκεῦος": {
+   "icon": "game-icons:soul-vessel",
+   "file": "game-icons-soul-vessel.png",
+   "source": "game-icons",
+   "glossEn": "vessel"
+  },
+  "ἀγαλλίασις": {
+   "icon": "game-icons:party-hat",
+   "file": "game-icons-party-hat.png",
+   "source": "game-icons",
+   "glossEn": "party"
+  },
+  "ἑορτή": {
+   "icon": "game-icons:party-flags",
+   "file": "game-icons-party-flags.png",
+   "source": "game-icons",
+   "glossEn": "party"
+  },
+  "μιαρός": {
+   "icon": "ph:star-and-crescent-bold",
+   "file": "ph-star-and-crescent-bold.png",
+   "source": "ph",
+   "glossEn": "and"
+  },
+  "ἐναντίος": {
+   "icon": "game-icons:opposite-hearts",
+   "file": "game-icons-opposite-hearts.png",
+   "source": "game-icons",
+   "glossEn": "opposite"
+  },
+  "ὕψος": {
+   "icon": "game-icons:body-height",
+   "file": "game-icons-body-height.png",
+   "source": "game-icons",
+   "glossEn": "height"
+  },
+  "γωνία": {
+   "icon": "game-icons:corner-flag",
+   "file": "game-icons-corner-flag.png",
+   "source": "game-icons",
+   "glossEn": "corner"
+  },
+  "κέρας": {
+   "icon": "game-icons:beer-horn",
+   "file": "game-icons-beer-horn.png",
+   "source": "game-icons",
+   "glossEn": "horn"
+  },
+  "ἄμπελος": {
+   "icon": "game-icons:vine-leaf",
+   "file": "game-icons-vine-leaf.png",
+   "source": "game-icons",
+   "glossEn": "vine"
+  },
+  "ὀσμή": {
+   "icon": "game-icons:nose-side",
+   "file": "game-icons-nose-side.png",
+   "source": "game-icons",
+   "glossEn": "nose"
+  },
+  "εὐωδία": {
+   "icon": "game-icons:wrapped-sweet",
+   "file": "game-icons-wrapped-sweet.png",
+   "source": "game-icons",
+   "glossEn": "sweet"
+  },
+  "ἐπιβάλλω": {
+   "icon": "ph:person-simple-throw-fill",
+   "file": "ph-person-simple-throw-fill.png",
+   "source": "ph",
+   "glossEn": "throw"
+  },
+  "ἐπιφέρω": {
+   "icon": "ph:fast-forward",
+   "file": "ph-fast-forward.png",
+   "source": "ph",
+   "glossEn": "forward"
+  },
+  "ἀνάμνησις": {
+   "icon": "ph:memory-bold",
+   "file": "ph-memory-bold.png",
+   "source": "ph",
+   "glossEn": "memory"
+  },
+  "ἀντιλαμβάνω": {
+   "icon": "game-icons:life-support",
+   "file": "game-icons-life-support.png",
+   "source": "game-icons",
+   "glossEn": "support"
+  },
+  "ὠφελέω": {
+   "icon": "mdi:help-box",
+   "file": "mdi-help-box.png",
+   "source": "mdi",
+   "glossEn": "help"
+  },
+  "ἐξήγησις": {
+   "icon": "ph:sign-in-light",
+   "file": "ph-sign-in-light.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "πρόφασις": {
+   "icon": "mdi:face-woman-shimmer",
+   "file": "mdi-face-woman-shimmer.png",
+   "source": "mdi",
+   "glossEn": "face"
+  },
+  "συνέχω": {
+   "icon": "tabler:wash-press",
+   "file": "tabler-wash-press.png",
+   "source": "tabler",
+   "glossEn": "press"
+  },
+  "κλάδος": {
+   "icon": "ph:git-branch",
+   "file": "ph-git-branch.png",
+   "source": "ph",
+   "glossEn": "branch"
+  },
+  "παραφυάς": {
+   "icon": "game-icons:tree-branch",
+   "file": "game-icons-tree-branch.png",
+   "source": "game-icons",
+   "glossEn": "branch"
+  },
+  "λευκός": {
+   "icon": "mdi:white-balance-incandescent",
+   "file": "mdi-white-balance-incandescent.png",
+   "source": "mdi",
+   "glossEn": "white"
+  },
+  "στρογγύλος": {
+   "icon": "game-icons:round-star",
+   "file": "game-icons-round-star.png",
+   "source": "game-icons",
+   "glossEn": "round"
+  },
+  "πλήρωμα": {
+   "icon": "game-icons:full-pizza",
+   "file": "game-icons-full-pizza.png",
+   "source": "game-icons",
+   "glossEn": "full"
+  },
+  "καταρτίζω": {
+   "icon": "tabler:brand-google-fit",
+   "file": "tabler-brand-google-fit.png",
+   "source": "tabler",
+   "glossEn": "fit"
+  },
+  "ἄτιμος": {
+   "icon": "ph:thumbs-up-light",
+   "file": "ph-thumbs-up-light.png",
+   "source": "ph",
+   "glossEn": "thumbs"
+  },
+  "περιζώννυμι": {
+   "icon": "game-icons:round-table",
+   "file": "game-icons-round-table.png",
+   "source": "game-icons",
+   "glossEn": "round"
+  },
+  "διακοσμέω": {
+   "icon": "mdi:vector-arrange-below",
+   "file": "mdi-vector-arrange-below.png",
+   "source": "mdi",
+   "glossEn": "arrange"
+  },
+  "ἐνάρετος": {
+   "icon": "game-icons:military-fort",
+   "file": "game-icons-military-fort.png",
+   "source": "game-icons",
+   "glossEn": "military"
+  },
+  "ἀρχηγός": {
+   "icon": "tabler:military-rank",
+   "file": "tabler-military-rank.png",
+   "source": "tabler",
+   "glossEn": "military"
+  },
+  "ἀγών": {
+   "icon": "game-icons:boxing-ring",
+   "file": "game-icons-boxing-ring.png",
+   "source": "game-icons",
+   "glossEn": "boxing"
+  },
+  "ἁρπαγή": {
+   "icon": "ph:not-member-of-fill",
+   "file": "ph-not-member-of-fill.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "δεῖπνον": {
+   "icon": "ph:clock-afternoon",
+   "file": "ph-clock-afternoon.png",
+   "source": "ph",
+   "glossEn": "afternoon"
+  },
+  "ἄκανθα": {
+   "icon": "tabler:cactus-off",
+   "file": "tabler-cactus-off.png",
+   "source": "tabler",
+   "glossEn": "cactus"
+  },
+  "χρῶμα": {
+   "icon": "tabler:text-color",
+   "file": "tabler-text-color.png",
+   "source": "tabler",
+   "glossEn": "color"
+  },
+  "κλείω": {
+   "icon": "game-icons:shut-rose",
+   "file": "game-icons-shut-rose.png",
+   "source": "game-icons",
+   "glossEn": "shut"
+  },
+  "σής": {
+   "icon": "game-icons:earth-worm",
+   "file": "game-icons-earth-worm.png",
+   "source": "game-icons",
+   "glossEn": "worm"
+  },
+  "σκώληξ": {
+   "icon": "game-icons:worm-mouth",
+   "file": "game-icons-worm-mouth.png",
+   "source": "game-icons",
+   "glossEn": "worm"
+  },
+  "φωνή": {
+   "icon": "tabler:address-book-off",
+   "file": "tabler-address-book-off.png",
+   "source": "tabler",
+   "glossEn": "address"
+  },
+  "ἐν": {
+   "icon": "ph:arrows-in-bold",
+   "file": "ph-arrows-in-bold.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "ὥρα": {
+   "icon": "tabler:clock-hour-1",
+   "file": "tabler-clock-hour-1.png",
+   "source": "tabler",
+   "glossEn": "hour"
+  },
+  "υἱός": {
+   "icon": "ph:not-member-of-thin",
+   "file": "ph-not-member-of-thin.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ἥλιος": {
+   "icon": "ph:finn-the-human-fill",
+   "file": "ph-finn-the-human-fill.png",
+   "source": "ph",
+   "glossEn": "the"
+  },
+  "τὶς": {
+   "icon": "ph:person-simple-hike",
+   "file": "ph-person-simple-hike.png",
+   "source": "ph",
+   "glossEn": "person"
+  },
+  "δαιμόνιον": {
+   "icon": "mdi:alpha-d",
+   "file": "mdi-alpha-d.png",
+   "source": "mdi",
+   "glossEn": "d"
+  },
+  "καρπός": {
+   "icon": "game-icons:fruit-bowl",
+   "file": "game-icons-fruit-bowl.png",
+   "source": "game-icons",
+   "glossEn": "fruit"
+  },
+  "χεῖλος": {
+   "icon": "game-icons:ent-mouth",
+   "file": "game-icons-ent-mouth.png",
+   "source": "game-icons",
+   "glossEn": "mouth"
+  },
+  "βάλλω": {
+   "icon": "ph:person-simple-throw-thin",
+   "file": "ph-person-simple-throw-thin.png",
+   "source": "ph",
+   "glossEn": "throw"
+  },
+  "ποτήριον": {
+   "icon": "mdi:content-copy",
+   "file": "mdi-content-copy.png",
+   "source": "mdi",
+   "glossEn": "content"
+  },
+  "σταυρόω": {
+   "icon": "mdi:lightbulb-on",
+   "file": "mdi-lightbulb-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "ἐνιαυτός": {
+   "icon": "game-icons:calendar-half-year",
+   "file": "game-icons-calendar-half-year.png",
+   "source": "game-icons",
+   "glossEn": "year"
+  },
+  "ὀλίγος": {
+   "icon": "ph:gender-neuter",
+   "file": "ph-gender-neuter.png",
+   "source": "ph",
+   "glossEn": "neuter"
+  },
+  "σήμερον": {
+   "icon": "mdi:mower-bag-on",
+   "file": "mdi-mower-bag-on.png",
+   "source": "mdi",
+   "glossEn": "on"
+  },
+  "πέντε": {
+   "icon": "ph:number-five",
+   "file": "ph-number-five.png",
+   "source": "ph",
+   "glossEn": "five"
+  },
+  "ὑποστρέφω": {
+   "icon": "tabler:arrow-sharp-turn-left",
+   "file": "tabler-arrow-sharp-turn-left.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "μέλος": {
+   "icon": "game-icons:bird-limb",
+   "file": "game-icons-bird-limb.png",
+   "source": "game-icons",
+   "glossEn": "limb"
+  },
+  "καθαρός": {
+   "icon": "mdi:silverware-clean",
+   "file": "mdi-silverware-clean.png",
+   "source": "mdi",
+   "glossEn": "clean"
+  },
+  "ἐναντίον": {
+   "icon": "ph:finn-the-human-thin",
+   "file": "ph-finn-the-human-thin.png",
+   "source": "ph",
+   "glossEn": "the"
+  },
+  "ἐκκλίνω": {
+   "icon": "tabler:arrow-sharp-turn-right",
+   "file": "tabler-arrow-sharp-turn-right.png",
+   "source": "tabler",
+   "glossEn": "turn"
+  },
+  "πατάσσω": {
+   "icon": "game-icons:wave-strike",
+   "file": "game-icons-wave-strike.png",
+   "source": "game-icons",
+   "glossEn": "strike"
+  },
+  "κλίνω": {
+   "icon": "mdi:seat-recline-extra",
+   "file": "mdi-seat-recline-extra.png",
+   "source": "mdi",
+   "glossEn": "recline"
+  },
+  "θυμόω": {
+   "icon": "mdi:gauge-full",
+   "file": "mdi-gauge-full.png",
+   "source": "mdi",
+   "glossEn": "full"
+  },
+  "δέκα": {
+   "icon": "mdi:clock-time-ten",
+   "file": "mdi-clock-time-ten.png",
+   "source": "mdi",
+   "glossEn": "ten"
+  },
+  "ὠδίνω": {
+   "icon": "ph:arrows-in-fill",
+   "file": "ph-arrows-in-fill.png",
+   "source": "ph",
+   "glossEn": "in"
+  },
+  "ἐξάγω": {
+   "icon": "mdi:clock-out",
+   "file": "mdi-clock-out.png",
+   "source": "mdi",
+   "glossEn": "out"
+  },
+  "ἀργός": {
+   "icon": "game-icons:sleeping-bag",
+   "file": "game-icons-sleeping-bag.png",
+   "source": "game-icons",
+   "glossEn": "sleeping"
+  },
+  "νοερός": {
+   "icon": "ph:star-and-crescent-fill",
+   "file": "ph-star-and-crescent-fill.png",
+   "source": "ph",
+   "glossEn": "and"
+  },
+  "ζυγός": {
+   "icon": "game-icons:heavy-bullets",
+   "file": "game-icons-heavy-bullets.png",
+   "source": "game-icons",
+   "glossEn": "heavy"
+  },
+  "ἀπαιτέω": {
+   "icon": "mdi:google-my-business",
+   "file": "mdi-google-my-business.png",
+   "source": "mdi",
+   "glossEn": "my"
+  },
+  "ἀπόλαυσις": {
+   "icon": "ph:not-subset-of-bold",
+   "file": "ph-not-subset-of-bold.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "μερίς": {
+   "icon": "ph:chart-pie",
+   "file": "ph-chart-pie.png",
+   "source": "ph",
+   "glossEn": "pie"
+  },
+  "κλῆρος": {
+   "icon": "game-icons:game-console",
+   "file": "game-icons-game-console.png",
+   "source": "game-icons",
+   "glossEn": "game"
+  },
+  "νεφέλη": {
+   "icon": "tabler:cloud-up",
+   "file": "tabler-cloud-up.png",
+   "source": "tabler",
+   "glossEn": "cloud"
+  },
+  "τέμνω": {
+   "icon": "mdi:paper-cut-vertical",
+   "file": "mdi-paper-cut-vertical.png",
+   "source": "mdi",
+   "glossEn": "cut"
+  },
+  "κοιλία": {
+   "icon": "tabler:border-inner",
+   "file": "tabler-border-inner.png",
+   "source": "tabler",
+   "glossEn": "inner"
+  },
+  "σκῦλον": {
+   "icon": "tabler:circle-letter-a",
+   "file": "tabler-circle-letter-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "ψαλμός": {
+   "icon": "game-icons:musical-notes",
+   "file": "game-icons-musical-notes.png",
+   "source": "game-icons",
+   "glossEn": "musical"
+  },
+  "ἡγεμών": {
+   "icon": "tabler:man-filled",
+   "file": "tabler-man-filled.png",
+   "source": "tabler",
+   "glossEn": "man"
+  },
+  "δέρμα": {
+   "icon": "game-icons:lab-coat",
+   "file": "game-icons-lab-coat.png",
+   "source": "game-icons",
+   "glossEn": "coat"
+  },
+  "ῥέω": {
+   "icon": "ph:flow-arrow",
+   "file": "ph-flow-arrow.png",
+   "source": "ph",
+   "glossEn": "flow"
+  },
+  "ὀκτώ": {
+   "icon": "game-icons:eight-ball",
+   "file": "game-icons-eight-ball.png",
+   "source": "game-icons",
+   "glossEn": "eight"
+  },
+  "ἐνύπνιον": {
+   "icon": "game-icons:dream-catcher",
+   "file": "game-icons-dream-catcher.png",
+   "source": "game-icons",
+   "glossEn": "dream"
+  },
+  "δεσπότης": {
+   "icon": "game-icons:frog-prince",
+   "file": "game-icons-frog-prince.png",
+   "source": "game-icons",
+   "glossEn": "prince"
+  },
+  "ποτίζω": {
+   "icon": "mdi:food-fork-drink",
+   "file": "mdi-food-fork-drink.png",
+   "source": "mdi",
+   "glossEn": "drink"
+  },
+  "μέλι": {
+   "icon": "game-icons:honey-jar",
+   "file": "game-icons-honey-jar.png",
+   "source": "game-icons",
+   "glossEn": "honey"
+  },
+  "ἀναπαύω": {
+   "icon": "tabler:ease-in-control-point",
+   "file": "tabler-ease-in-control-point.png",
+   "source": "tabler",
+   "glossEn": "ease"
+  },
+  "στείρος": {
+   "icon": "game-icons:deku-tree",
+   "file": "game-icons-deku-tree.png",
+   "source": "game-icons",
+   "glossEn": "tree"
+  },
+  "ἄρσην": {
+   "icon": "mdi:human-male",
+   "file": "mdi-human-male.png",
+   "source": "mdi",
+   "glossEn": "male"
+  },
+  "πόρρω": {
+   "icon": "tabler:bed-off",
+   "file": "tabler-bed-off.png",
+   "source": "tabler",
+   "glossEn": "off"
+  },
+  "λόγιον": {
+   "icon": "game-icons:satellite-communication",
+   "file": "game-icons-satellite-communication.png",
+   "source": "game-icons",
+   "glossEn": "communication"
+  },
+  "χωρέω": {
+   "icon": "mdi:room-service-outline",
+   "file": "mdi-room-service-outline.png",
+   "source": "mdi",
+   "glossEn": "room"
+  },
+  "γενετή": {
+   "icon": "game-icons:crow-nest",
+   "file": "game-icons-crow-nest.png",
+   "source": "game-icons",
+   "glossEn": "nest"
+  },
+  "ἀπελαύνω": {
+   "icon": "mdi:tape-drive",
+   "file": "mdi-tape-drive.png",
+   "source": "mdi",
+   "glossEn": "drive"
+  },
+  "ποικιλία": {
+   "icon": "ph:star-and-crescent-thin",
+   "file": "ph-star-and-crescent-thin.png",
+   "source": "ph",
+   "glossEn": "and"
+  },
+  "σφραγίς": {
+   "icon": "ph:not-subset-of-fill",
+   "file": "ph-not-subset-of-fill.png",
+   "source": "ph",
+   "glossEn": "of"
+  },
+  "ἀξίως": {
+   "icon": "tabler:square-letter-a",
+   "file": "tabler-square-letter-a.png",
+   "source": "tabler",
+   "glossEn": "a"
+  },
+  "καθέδρα": {
+   "icon": "game-icons:car-seat",
+   "file": "game-icons-car-seat.png",
+   "source": "game-icons",
+   "glossEn": "seat"
+  },
+  "προαίρεσις": {
+   "icon": "mdi:arrow-decision-outline",
+   "file": "mdi-arrow-decision-outline.png",
+   "source": "mdi",
+   "glossEn": "decision"
+  },
+  "ὑπόκρισις": {
+   "icon": "mdi:mixed-martial-arts",
+   "file": "mdi-mixed-martial-arts.png",
+   "source": "mdi",
+   "glossEn": "arts"
+  },
+  "γελάω": {
+   "icon": "game-icons:imp-laugh",
+   "file": "game-icons-imp-laugh.png",
+   "source": "game-icons",
+   "glossEn": "laugh"
+  },
+  "ἄγνοια": {
+   "icon": "game-icons:lamprey-mouth",
+   "file": "game-icons-lamprey-mouth.png",
+   "source": "game-icons",
+   "glossEn": "mouth"
+  },
+  "φύρω": {
+   "icon": "mdi:pot-mix",
+   "file": "mdi-pot-mix.png",
+   "source": "mdi",
+   "glossEn": "mix"
+  },
+  "στοιχεῖον": {
+   "icon": "game-icons:frozen-body",
+   "file": "game-icons-frozen-body.png",
+   "source": "game-icons",
+   "glossEn": "body"
+  },
+  "ἀναγκαῖος": {
+   "icon": "tabler:eye-exclamation",
+   "file": "tabler-eye-exclamation.png",
+   "source": "tabler",
+   "glossEn": "exclamation"
+  },
+  "χορός": {
+   "icon": "mdi:dance-pole",
+   "file": "mdi-dance-pole.png",
+   "source": "mdi",
+   "glossEn": "dance"
+  },
+  "ἐπιβουλή": {
+   "icon": "mdi:chart-scatter-plot",
+   "file": "mdi-chart-scatter-plot.png",
+   "source": "mdi",
+   "glossEn": "plot"
+  },
+  "ἐπίτροπος": {
+   "icon": "tabler:brand-guardian",
+   "file": "tabler-brand-guardian.png",
+   "source": "tabler",
+   "glossEn": "guardian"
+  },
+  "ἐκφεύγω": {
+   "icon": "ph:arrows-out",
+   "file": "ph-arrows-out.png",
+   "source": "ph",
+   "glossEn": "out"
+  },
+  "ἀσέλγεια": {
+   "icon": "game-icons:tropical-fish",
+   "file": "game-icons-tropical-fish.png",
+   "source": "game-icons",
+   "glossEn": "tropical"
+  },
+  "φιλαργυρία": {
+   "icon": "game-icons:love-mystery",
+   "file": "game-icons-love-mystery.png",
+   "source": "game-icons",
+   "glossEn": "love"
+  },
+  "ἀντιμισθία": {
+   "icon": "game-icons:wanted-reward",
+   "file": "game-icons-wanted-reward.png",
+   "source": "game-icons",
+   "glossEn": "reward"
+  }
+ }
 }
