@@ -1,0 +1,2390 @@
+{
+ "generated": "2026-08-30",
+ "source_proposal": "PROPOSAL_2026-08-28.md",
+ "match_key": [
+  "source",
+  "title_zh",
+  "eraKey",
+  "collectionKey"
+ ],
+ "note": "人工審定結果。verdict 為 keep 者套用 patch 後入提案；drop_* 者不入提案。alias 欄的同書異名要補進翻譯詞庫 theological_terms（entity_type 為 work）。",
+ "verdicts": [
+  {
+   "source": "trc",
+   "title_zh": "希波的奧古斯丁",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 作者資料夾層，不是作品",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "殉教者遊斯丁",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 作者資料夾層；且譯名應依詞庫作「猶斯定」",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "羅馬的革利免",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 作者資料夾層",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "里昂的愛任紐",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 作者資料夾層",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "該撒利亞的優西比烏",
+   "eraKey": "ancient",
+   "collectionKey": "shizhuan",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 作者資料夾層",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "上帝之城",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/論] 上帝之城｜奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "傳道員指南",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 信望愛手冊｜希波的奧古斯丁",
+   "alias": [
+    "信望愛手冊",
+    "傳道員指南",
+    "論信望愛"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "創世六日",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 六日創造講疏｜大巴西略",
+   "alias": [
+    "六日創造講疏",
+    "創世六日",
+    "六日創造解"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "懺悔錄",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/史傳] 懺悔錄｜奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "懺悔錄",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/史傳] 懺悔錄｜奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖奧思定主教聖詠釋義",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 詩篇詮釋｜希波的奧古斯丁",
+   "alias": [
+    "詩篇詮釋",
+    "聖奧思定主教聖詠釋義",
+    "詩篇註解"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖靈論",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 論聖靈｜大巴西略",
+   "alias": [
+    "論聖靈",
+    "聖靈論"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "論三位一體",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏（另有希拉流同名書，勿混）",
+   "dup_of": "[古代/正/論] 三位一體論｜奧古斯丁",
+   "alias": [
+    "三位一體論",
+    "論三位一體"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "論信望愛",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 信望愛手冊｜希波的奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論信望愛",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 信望愛手冊｜希波的奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "論教師",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/論] 論教師｜希波的奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論責任",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 論教牧職分｜安波羅修",
+   "alias": [
+    "論教牧職分",
+    "論責任"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "論靈魂及其起源",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏（既有作「源起」，建議正名為「起源」）",
+   "dup_of": "[古代/正/論] 論靈魂及其源起｜希波的奧古斯丁",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "護教篇",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 特土良護教辯｜特土良",
+   "alias": [
+    "特土良護教辯",
+    "護教篇"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "駁塞爾修斯",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏（既有重出兩筆，見稽核報告）",
+   "dup_of": "[古代/正/論] 駁塞爾修斯｜俄利根",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "沙漠教父言行錄",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/宣道] 沙漠父老語錄｜沙漠教父",
+   "alias": [
+    "沙漠父老語錄",
+    "沙漠教父言行錄"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "沙漠教父言行錄",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/宣道] 沙漠父老語錄｜沙漠教父",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "牧靈指南",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 司牧守則｜大額我略",
+   "alias": [
+    "司牧守則",
+    "牧靈指南",
+    "教牧規則"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "神學演講錄",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 五篇神學講辭｜拿先斯的格列高理",
+   "alias": [
+    "五篇神學講辭",
+    "神學演講錄",
+    "神學講演錄"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "神學講演錄",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 五篇神學講辭｜拿先斯的格列高理",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖奧思定主教講道詞",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/宣道] 大眾講章集｜奧古斯丁",
+   "alias": [
+    "大眾講章集",
+    "聖奧思定主教講道詞"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖安東尼傳",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/史傳] 安東尼傳｜亞他那修",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論四福音和諧",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/遺教] 論福音書的和諧｜希波的奧古斯丁",
+   "alias": [
+    "論福音書的和諧",
+    "論四福音和諧"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "金口若望：雕像講道詞選集",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/宣道] 雕像講道｜金口若望",
+   "alias": [
+    "雕像講道",
+    "雕像講道詞選集"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "教會史",
+   "eraKey": "ancient",
+   "collectionKey": "shizhuan",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[古代/正/史傳] 教會史｜優西比烏",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "勸勉希臘人",
+   "eraKey": "ancient",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/論] 亞歷山卓的克勉勸希臘人歸主辭｜亞歷山卓的克勉",
+   "alias": [
+    "勸希臘人歸主辭",
+    "勸勉希臘人"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "護教篇",
+   "eraKey": "ancient",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏；譯名依詞庫作「猶斯定」",
+   "dup_of": "[古代/正/論] 猶斯定第一護教詞・第二護教詞｜猶斯定",
+   "alias": [
+    "護教詞",
+    "護教篇"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "使徒教父著作",
+   "eraKey": "ancient",
+   "collectionKey": "shiwen",
+   "verdict": "drop_anthology",
+   "reason": "三聯書店譯本合集；所收各篇（克勉書、伊格那丟書信、波利甲…）已分別在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論基督教信仰；論聖靈；論復活；論奧秘；論悔改",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "三聯書店安波羅修五篇合集；論信德致格拉提安皇帝、論懺悔、論奧祕均已在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論自由意志；論本性與恩典",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "譯本合集；論自由意志、駁伯拉糾論本性與恩典均已在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "獨語錄",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏，奧古斯丁早期對話錄",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Soliloquia",
+    "author": "希波的奧古斯丁",
+    "era": "約 386–387 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "駁朱利安",
+   "eraKey": "ancient",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏，駁伊克拉農的儒略（伯拉糾派）之作",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Contra Julianum",
+    "author": "希波的奧古斯丁",
+    "era": "約 421 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "哲學大全 Summa contra Gentiles 駁異大全",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "書名欄是 TRC 資料夾名殘留；與《駁異大全》同書，且已在藏",
+   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜托馬斯‧阿奎那",
+   "alias": [
+    "哲學大全",
+    "駁異大全",
+    "駁異教大全"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "駁異大全",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏（既有於論藏、宣道藏重出兩筆）",
+   "dup_of": "[中世紀/正/論] 哲學大全（駁異教大全）｜托馬斯‧阿奎那",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "師主篇",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[中世紀/正/論] 效法基督｜托馬斯‧厄‧肯培",
+   "alias": [
+    "效法基督",
+    "師主篇",
+    "輕世金書",
+    "遵主聖範"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "輕世金書",
+   "eraKey": "medieval",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "與《師主篇》同書（De Imitatione Christi），已在藏；原提案作者欄有誤——原著為托馬斯‧厄‧肯培，陽瑪諾（Manuel Dias Jr.）是明末漢譯者，與利瑪竇圈、Gerhard of Zutphen 均無關",
+   "dup_of": "[中世紀/正/論] 效法基督｜托馬斯‧厄‧肯培",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "維護神聖靜修者三論集",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[中世紀/正/論] 為神聖靜修者辯護（三聯論）｜額我略‧帕拉瑪斯",
+   "alias": [
+    "為神聖靜修者辯護",
+    "維護神聖靜修者三論集",
+    "三聯論"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖女加大利納對話錄",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[中世紀/正/論] 對話錄（天主上智之書）｜錫耶納的加大利納",
+   "alias": [
+    "對話錄（天主上智之書）",
+    "聖女加大利納對話錄"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "法蘭克人史",
+   "eraKey": "medieval",
+   "collectionKey": "shizhuan",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[古代/正/史傳] 法蘭克人歷史｜都爾的格列高利",
+   "alias": [
+    "法蘭克人歷史",
+    "法蘭克人史"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "安瑟倫著作選",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "宗教文化出版社選集；所收《上帝何以化身為人》《獨白篇》《論道篇》均已在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "神對他無所隱藏的人（艾克哈靈修著作選譯）",
+   "eraKey": "medieval",
+   "collectionKey": "xuandao",
+   "verdict": "drop_anthology",
+   "reason": "光啟選譯本，非單一原典",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論隱秘的上帝",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "三聯譯叢庫薩文集（含論隱祕的上帝、論尋找上帝、論有學識的無知等）；原提案 title_orig 誤植 De Docta Ignorantia，該篇已在藏。缺口：De Deo abscondito 單篇尚未入藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "宇宙間的靈智實體問題",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏（既有僅《論真理》辯論問題集）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "托馬斯‧阿奎那",
+    "era": "約 1267–1268 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "安瑟倫論自由",
+   "eraKey": "medieval",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏（既有安瑟莫四種不含此篇）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "De libertate arbitrii",
+    "author": "坎特伯里的安瑟莫",
+    "era": "約 1080–1086 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "盎格魯-撒克遜編年史",
+   "eraKey": "medieval",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "佚名（多所修道院遞修）",
+    "era": "9–12 世紀"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "1560 蘇格蘭人信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[近代/正/律] 蘇格蘭信條｜諾克斯等六人",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1619 多特信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/律] 多特信經｜多特會議",
+   "alias": [
+    "多特信經",
+    "多特信條",
+    "多特法典"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "多特信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同上",
+   "dup_of": "[近代/正/律] 多特信經｜多特會議",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1646 西敏信綱",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/律] 西敏信條｜西敏會議",
+   "alias": [
+    "西敏信條",
+    "西敏信綱"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "王瑞珍新譯西敏信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同一信條的另一中譯本，非新作品",
+   "dup_of": "[近代/正/律] 西敏信條｜西敏會議",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1647 西敏大問答",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[近代/正/律] 西敏大小要理問答｜西敏會議",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1658 薩伏伊宣言",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[近代/正/律] 薩伏依宣言｜英格蘭公理會諸教會",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "比利時信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏（兩筆同判）",
+   "dup_of": "[近代/正/律] 比利時信條｜德布雷",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "第二瑞士信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[近代/正/律] 第二瑞士信條｜布林格",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "多特教會法規",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/律] 多特教會條例｜多特總會",
+   "alias": [
+    "多特教會條例",
+    "多特教會法規"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "脫利騰公議會教理問答",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/論] 羅馬要理問答｜特倫多會議奉命編纂",
+   "alias": [
+    "羅馬要理問答",
+    "脫利騰公議會教理問答",
+    "特倫多公議會教理問答"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "特倫多公議會教理問答",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "同上",
+   "dup_of": "[近代/正/論] 羅馬要理問答｜特倫多會議奉命編纂",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1629 東方正教信仰告白",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/律] 盧卡里斯東方信仰宣認｜盧卡里斯",
+   "alias": [
+    "盧卡里斯東方信仰宣認",
+    "東方正教信仰告白"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1644 公眾敬拜指南",
+   "eraKey": "early-modern",
+   "collectionKey": "liyi",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[近代/正/禮儀] 公眾崇拜指南｜西敏會議",
+   "alias": [
+    "公眾崇拜指南",
+    "公眾敬拜指南"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "神操",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏（既有那筆時代誤標現代，應為近代）",
+   "dup_of": "[現代/正/禮儀] 神操｜依納爵‧羅耀拉",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "簡易祈禱法",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[近代/正/禮儀] 簡易祈禱法｜蓋恩夫人",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "不得已 附二種",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏，且楊光先為反教者應歸外藏",
+   "dup_of": "[近代/外/論] 不得已｜楊光先",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖朝破邪集",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏，且應歸外藏",
+   "dup_of": "[近代/外/論] 聖朝破邪集｜徐昌治 輯",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1619 三項聯合信綱",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "三份信條（比利時／海德堡／多特）的合稱，三份均已在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "三項聯合信綱",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "同上",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "西敏準則",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "西敏信條＋大小要理問答＋治理形式＋崇拜指南的合稱，各份均已在藏（兩筆同判）",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "歷代基督教信條",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_anthology",
+   "reason": "趙中輝譯信條選集，非單一作品",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "信綱及教理問答",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_person_or_folder",
+   "reason": "TRC 頂層分類資料夾名，不是作品",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "兒童簡明要理問答",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_secondary",
+   "reason": "西敏小要理問答的現代兒童簡化改編，屬次級教材",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "1559 高盧信綱",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏——藏內作《法國信條》。首輪人工審定誤判為「未在藏」，是自動全藏比對抓回來的：查了高盧／Gallicana／法蘭西信條卻沒查「法國信條」",
+   "dup_of": "[近代/正/律] 法國信條｜法國改革宗教會首屆全國總會（加爾文草稿）",
+   "alias": [
+    "法國信條",
+    "高盧信綱",
+    "拉羅歇爾信條"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "海德堡要理問答註釋__扎哈利亞斯·烏爾西努博士",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；烏爾西努正是該要理問答執筆者，非後世次級註釋",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "海德堡要理問答註釋",
+    "author": "匝加利亞‧烏爾西努斯（Zacharias Ursinus）",
+    "era": "1584 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "基督教信仰告白",
+   "eraKey": "unknown",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；係貝扎 1558 年信仰告白",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "early-modern",
+    "title_orig": "Confessio Christianae fidei",
+    "author": "泰奧多爾‧德‧貝扎（Théodore de Bèze）",
+    "era": "1558 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖言小學的開端",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏，荷蘭改革宗要理教本",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "亞伯拉罕‧海倫布魯克（Abraham Hellenbroek）",
+    "era": "1706 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "天學初函",
+   "eraKey": "early-modern",
+   "collectionKey": "leishu",
+   "verdict": "keep",
+   "reason": "未在藏，明末耶穌會漢文著述總集",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "李之藻 輯",
+    "era": "1628 年（崇禎元年）",
+    "extent": "理編十種‧器編十種，共二十種"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "天主實義",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；明末天主教漢語神學奠基之作",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "利瑪竇（Matteo Ricci）",
+    "era": "1603 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "天主降生引義",
+   "eraKey": "early-modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "艾儒略（Giulio Aleni）",
+    "era": "1635 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "七克真訓",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏（七克真訓為清刻本題名，正名作《七克》）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "七克",
+    "title_orig": "",
+    "author": "龐迪我（Diego de Pantoja）",
+    "era": "1614 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "新法表異",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "湯若望（Johann Adam Schall von Bell）",
+    "era": "明末（17 世紀）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "救靈箴言",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "李杖（問漁）",
+    "era": "1890 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "中國年報 1606-1607年",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏，在華耶穌會年信",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "在華耶穌會士（年信編者）",
+    "era": "1606–1607 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "安德烈·李神父日記 1746-1748年",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；首位華籍司鐸的拉丁文日記",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "李安德日記（1746–1748）",
+    "author": "李安德（André Ly）",
+    "era": "1746–1748 年",
+    "language": "拉丁文"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "徐光啟集",
+   "eraKey": "early-modern",
+   "collectionKey": "shuxin",
+   "verdict": "keep",
+   "reason": "未在藏（既有僅《辨學章疏》單篇）；兩筆合併為一",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "徐光啟",
+    "era": "明末（1562–1633）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "萊布尼茨與克拉克論戰書信集",
+   "eraKey": "early-modern",
+   "collectionKey": "shuxin",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "萊布尼茲；塞繆爾‧克拉克",
+    "era": "1715–1716 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "基督的憂傷",
+   "eraKey": "early-modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏（既有莫爾的《患難慰藉對話錄》《獄中書信》不含此篇）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "托馬斯‧莫爾",
+    "era": "1534–1535 年（獄中）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "光與愛的話語",
+   "eraKey": "early-modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Dichos de luz y amor",
+    "author": "十字若望",
+    "era": "16 世紀"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "靈歌",
+   "eraKey": "early-modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Cántico espiritual",
+    "author": "十字若望",
+    "era": "1578–1586 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "登上嘉默羅山",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Subida del Monte Carmelo",
+    "author": "十字若望",
+    "era": "約 1578–1585 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖依納爵自述小傳心靈日記",
+   "eraKey": "early-modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Autobiografía; Diario espiritual",
+    "author": "依納爵‧羅耀拉",
+    "era": "1553–1555 年（自述）；1544–1545 年（日記）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖女耶穌大德蘭自傳",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏（既有僅書信集與詩）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Libro de la vida",
+    "author": "亞維拉的德蘭",
+    "era": "1562–1565 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "真誠孝愛聖母",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Traité de la vraie dévotion à la Sainte Vierge",
+    "author": "蒙福的路易‧瑪利（Louis-Marie Grignion de Montfort）",
+    "era": "約 1712 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "父，隨你安排",
+   "eraKey": "early-modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "L'Abandon à la Providence divine",
+    "author": "高薩德（Jean-Pierre de Caussade）",
+    "era": "18 世紀"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "聖依納爵特輯",
+   "eraKey": "early-modern",
+   "collectionKey": "shuxin",
+   "verdict": "drop_secondary",
+   "reason": "來源為不明編選之「特輯」，非單一原典；依納爵書信集與會憲已在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "謝國楨編：稗說、出劫記略、利瑪竇日記",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "drop_anthology",
+   "reason": "1982 年三種明清史料合刊；利瑪竇日記部分已由既有《基督教遠征中國史》涵蓋",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "庚子教會華人流血史",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；時代改標現代（庚子＝1900）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "",
+    "era": "1900 年庚子教難紀事"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "教務紀略",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；時代改標現代（光緒三十一年＝1905）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "",
+    "author": "李剛己 輯",
+    "era": "1905 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "景教碑考",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏（既有景教條目均為原始殘卷，非近人考證）；時代改標現代",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "",
+    "author": "馮承鈞",
+    "era": "民國（20 世紀前半）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "明末奉使羅馬教廷耶穌會士卜彌格傳",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；沙不烈原著係近人研究，時代改標現代",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "Le P. Michel Boym, jésuite polonais",
+    "author": "沙不烈（Robert Chabrié）著；馮承鈞 譯",
+    "era": "1933 年（原著）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖五傷方濟各行實",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；約根森原著 1907、中譯 1949，時代改標現代",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "Den hellige Frans af Assisi",
+    "author": "約翰內斯‧約根森（Johannes Jørgensen）著；何芳理 譯",
+    "era": "1907 年（原著）／1949 年（漢譯）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖女瑪德肋納素非拔拉傳",
+   "eraKey": "early-modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；土山灣民國本，時代改標現代",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "",
+    "author": "耶穌聖心末僕 譯",
+    "era": "民國（土山灣印書館本）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "彌撒祭考",
+   "eraKey": "early-modern",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏；時代改標現代。作者存疑：英千里生於 1900，館藏標 1912 出版與之不合，疑為其父英斂之或年份有誤",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_orig": "",
+    "author": "英千里（待考，見審定註）",
+    "era": "民國初年（待考）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《百年通諭》",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[現代/正/書信] 百年通諭｜教宗若望保祿二世",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《貞潔婚姻》通諭",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[現代/正/書信] 論基督徒婚姻通諭｜教宗庇護十一世",
+   "alias": [
+    "論基督徒婚姻通諭",
+    "貞潔婚姻通諭"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "上主的話",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[現代/正/書信] 上主的話勸諭｜教宗本篤十六世",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "福音的喜樂",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[現代/正/書信] 福音的喜樂勸諭｜教宗方濟各",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "上帝存在嗎？",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[現代/正/論] 上帝存在嗎？今日的解答｜孔漢思",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "做基督徒",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[現代/正/論] 論作基督徒｜孔漢思",
+   "alias": [
+    "論作基督徒",
+    "做基督徒",
+    "論基督徒"
+   ],
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "論基督徒",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同上（兩筆同判）",
+   "dup_of": "[現代/正/論] 論作基督徒｜孔漢思",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論基督徒",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同上（兩站各一本）",
+   "dup_of": "[現代/正/論] 論作基督徒｜孔漢思",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "trc",
+   "title_zh": "回到正統",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[現代/正/詩文] 正統｜G.K.切斯特頓",
+   "alias": [
+    "正統",
+    "回到正統"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "基督教導論",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "drop_dup_existing",
+   "reason": "已在藏",
+   "dup_of": "[現代/正/論] 基督教導論：使徒信經講釋｜拉辛格",
+   "alias": null,
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "默觀生活探秘",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[現代/正/論] 默觀的種子｜牟敦",
+   "alias": [
+    "默觀的種子",
+    "默觀生活探秘"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "教宗若望二十三世靈心日記",
+   "eraKey": "modern",
+   "collectionKey": "shuxin",
+   "verdict": "drop_dup_existing",
+   "reason": "同書異名，已在藏",
+   "dup_of": "[現代/正/史傳] 靈魂日記｜若望二十三世",
+   "alias": [
+    "靈魂日記",
+    "靈心日記"
+   ],
+   "patch": null
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "禮儀的真諦",
+   "eraKey": "modern",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏。勿與既有瓜爾迪尼《禮儀精神》相混——同名不同書，拉辛格此書是對前者的呼應",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Der Geist der Liturgie",
+    "author": "若瑟‧拉辛格（後為教宗本篤十六世）",
+    "era": "2000 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "愛的聖事",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "教宗本篤十六世",
+    "era": "2007 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "納匝肋人耶穌",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；原提案 title_orig「Nazarener Jesus」有誤",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Jesus von Nazareth",
+    "author": "教宗本篤十六世（若瑟‧拉辛格）",
+    "era": "2007–2012 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "天主與世界",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Gott und die Welt",
+    "author": "若瑟‧拉辛格；彼得‧西瓦爾德 訪談",
+    "era": "2000 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "耶穌基督",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；title_orig 補德文原題",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Jesus der Christus",
+    "author": "華特‧卡斯培（Walter Kasper）",
+    "era": "1974 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "基督之律",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Das Gesetz Christi",
+    "author": "白舍客（Bernhard Häring）",
+    "era": "1954 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "世界倫理構想",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；作者名統一（既有藏內孔漢思／龔漢斯兩式並存，見稽核報告）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Projekt Weltethos",
+    "author": "孔漢思（Hans Küng）",
+    "era": "1990 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "為何耶穌很重要？",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Why Is He Important?",
+    "author": "丹尼爾‧哈靈頓（Daniel J. Harrington）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "癖基督抹殺論",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；書名 OCR 誤字——「癖」應作「闢」，係駁幸德秋水《基督抹殺論》之護教書",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "闢基督抹殺論",
+    "title_orig": "",
+    "author": "殷雅各",
+    "era": "1925 年（廣學會）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "評基督抹殺論",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；與上書同為民國護教文獻，作者不同勿併",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "沈嗣莊",
+    "era": "1925 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "創世論",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏（既有同名者為五世紀維克託利烏斯的詩作，非同書）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "湯漢",
+    "era": "現代"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖域門檻：洗禮、堅振、感恩聖事、聖秩",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；作者欄有誤——Joseph Martos 不是明清耶穌會士「馬若瑟」（Joseph de Prémare）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Doors to the Sacred",
+    "author": "若瑟‧馬托斯（Joseph Martos）著；劉國清 譯"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "關於祈求天主治癒的訓令",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "教廷信理部",
+    "era": "2000 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "從共融的觀點看教會",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Communionis notio",
+    "author": "教廷信理部",
+    "era": "1992 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "一九九九年基督降生第三個千年的司鐸",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "教廷聖職部；天主教臺灣地區主教團秘書處 編譯",
+    "era": "1999 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "耶穌會第卅五屆大會文獻",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "耶穌會第三十五屆全體大會",
+    "era": "2008 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "2004年救贖聖事訓令",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "救贖聖事訓令",
+    "title_orig": "Redemptionis Sacramentum",
+    "author": "教廷禮儀及聖事部",
+    "era": "2004 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "一九九三年大公指南：大公運動原則與規範之應用指南",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "大公指南：大公運動原則與規範之應用指南",
+    "title_orig": "Directory for the Application of Principles and Norms on Ecumenism",
+    "author": "宗座促進基督徒合一委員會",
+    "era": "1993 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "司鐸聖召的禮物：司鐸培育基本方案",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Ratio Fundamentalis Institutionis Sacerdotalis",
+    "author": "教廷聖職部",
+    "era": "2016 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "有關傳教區派遣司鐸出國並居留之訓令",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "教廷萬民福音傳播部",
+    "era": "2001 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "權威的服務及服從",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Faciem tuam, Domine, requiram",
+    "author": "教廷獻身生活及使徒團體部",
+    "era": "2008 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聽告解者指南：論婚姻生活中的某些倫理問題",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "宗座家庭委員會",
+    "era": "1997 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論主教團之神學及法律性質",
+   "eraKey": "modern",
+   "collectionKey": "lu",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "教宗若望保祿二世",
+    "era": "1998 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《我要給你們牧者》勸諭",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座勸諭）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "我要給你們牧者勸諭",
+    "title_orig": "Pastores Dabo Vobis",
+    "author": "教宗若望保祿二世",
+    "era": "1992 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "主，請同我們一起住下罷",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座牧函）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_orig": "Mane Nobiscum Domine",
+    "author": "教宗若望保祿二世",
+    "era": "2004 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "活於感恩祭的教會",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（通諭）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "教會活於感恩祭通諭",
+    "title_orig": "Ecclesia de Eucharistia",
+    "author": "教宗若望保祿二世",
+    "era": "2003 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "論天主仁慈自動諭牧函",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_orig": "Misericordia Dei",
+    "author": "教宗若望保祿二世",
+    "era": "2002 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《奉獻生活》宗座勸諭",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座勸諭）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "奉獻生活勸諭",
+    "title_orig": "Vita Consecrata",
+    "author": "教宗若望保祿二世",
+    "era": "1996 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《教會在亞洲》勸諭",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座勸諭）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "教會在亞洲勸諭",
+    "title_orig": "Ecclesia in Asia",
+    "author": "教宗若望保祿二世",
+    "era": "1999 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "《第三個千年降臨之際》文告",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座牧函）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "第三個千年將臨之際牧函",
+    "title_orig": "Tertio Millennio Adveniente",
+    "author": "教宗若望保祿二世",
+    "era": "1994 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "主的日子",
+   "eraKey": "modern",
+   "collectionKey": "lun",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（宗座牧函）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_orig": "Dies Domini",
+    "author": "教宗若望保祿二世",
+    "era": "1998 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "一九九五年致全球司鐸書",
+   "eraKey": "modern",
+   "collectionKey": "shuxin",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_zh": "致全球司鐸書（1995）",
+    "title_orig": "",
+    "author": "教宗若望保祿二世",
+    "era": "1995 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "禮物與奧蹟",
+   "eraKey": "modern",
+   "collectionKey": "shuxin",
+   "verdict": "keep",
+   "reason": "未在藏；教宗晉鐸五十週年回憶錄",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Dono e Mistero",
+    "author": "教宗若望保祿二世",
+    "era": "1996 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "教宗若望保祿二世元旦文告集",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸書信藏（歷年世界和平日文告）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shuxin",
+    "title_zh": "世界和平日文告集",
+    "title_orig": "Messaggi per la Giornata Mondiale della Pace",
+    "author": "教宗若望保祿二世",
+    "era": "1979–2005 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "第十六屆世界主教代表常務會議大會第一會期《綜合報告》：以福傳為使命的共議性的教會",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸律藏（世界主教會議文獻，與既有《世界正義文件》同類）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "lu",
+    "title_zh": "共議同行：第十六屆世界主教會議第一會期綜合報告",
+    "title_orig": "Una Chiesa sinodale in missione: Relazione di sintesi",
+    "author": "世界主教代表會議",
+    "era": "2023 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "禮者，履也",
+   "eraKey": "modern",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "羅國輝",
+    "era": "現代"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "耶穌會團體祈禱手冊",
+   "eraKey": "modern",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "耶穌會中華省",
+    "era": "1978 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "袖珍每日禮讚",
+   "eraKey": "modern",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏（既有《時辰祈禱禮》為拉丁通用本，此為華語簡編本）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "天主教主教團禮儀委員會 編譯",
+    "era": "1991 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "《華文聖體降福經文》雷鳴遠神父編",
+   "eraKey": "unknown",
+   "collectionKey": "liyi",
+   "verdict": "keep",
+   "reason": "未在藏；時代改標現代",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "eraKey": "modern",
+    "title_zh": "華文聖體降福經文",
+    "title_orig": "",
+    "author": "雷鳴遠（Vincent Lebbe）編",
+    "era": "民國（20 世紀前半）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "心語融入靜默",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Worte ins Schweigen",
+    "author": "卡爾‧拉納（Karl Rahner）",
+    "era": "1938 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "沒有人是一座孤島",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "托馬斯‧牟敦（Thomas Merton）",
+    "era": "1955 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "為什麼要告解",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Perché la confessione?",
+    "author": "布魯諾‧福爾泰（Bruno Forte）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "與主接觸",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Contact with God",
+    "author": "戴邁樂（Anthony de Mello）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "青蛙的禱聲",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "The Prayer of the Frog",
+    "author": "戴邁樂（Anthony de Mello）",
+    "era": "1988 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "內心平安之道",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "La paix intérieure",
+    "author": "雅克‧菲利普（Jacques Philippe）"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "慕道者指南",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "李善修",
+    "era": "現代"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "基督之友",
+   "eraKey": "modern",
+   "collectionKey": "xuandao",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "文助華",
+    "era": "現代"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "沒有意外這回事",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "葛羅謝爾（Benedict J. Groeschel）、畢夏普（John Bishop）；沈映志 譯",
+    "era": "2004 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖女小德蘭二十一篇祈禱",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Prières de sainte Thérèse de l'Enfant-Jésus",
+    "author": "里修的德蘭（聖女小德蘭）",
+    "era": "1893–1897 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖女小德蘭回憶錄",
+   "eraKey": "modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "Histoire d'une âme",
+    "author": "里修的德蘭（聖女小德蘭）；張秀亞 譯",
+    "era": "1895–1897 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "中國天主教傳教史",
+   "eraKey": "modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "德禮賢（Pasquale d'Elia）",
+    "era": "1930 年代"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "聖董文學神父傳",
+   "eraKey": "modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏；董文學＝遣使會士 Jean-Gabriel Perboyre，1840 年殉道於武昌",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "佚名（公教出版社本）",
+    "era": "民國"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "超越東西方",
+   "eraKey": "modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏（既有吳經熊條目均為聖經漢譯）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "author": "吳經熊",
+    "era": "1951 年"
+   }
+  },
+  {
+   "source": "ziliaozhan",
+   "title_zh": "馬相伯集",
+   "eraKey": "modern",
+   "collectionKey": "shizhuan",
+   "verdict": "keep",
+   "reason": "未在藏",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "title_orig": "",
+    "author": "馬相伯",
+    "era": "1840–1939"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "方濟各傳阿奎那傳",
+   "eraKey": "modern",
+   "collectionKey": "shiwen",
+   "verdict": "keep",
+   "reason": "未在藏；改歸史傳藏（兩篇聖徒傳合刊，非文學創作）",
+   "dup_of": null,
+   "alias": null,
+   "patch": {
+    "collectionKey": "shizhuan",
+    "title_zh": "方濟各傳‧阿奎那傳",
+    "title_orig": "St. Francis of Assisi; St. Thomas Aquinas",
+    "author": "G.K.切斯特頓",
+    "era": "1923 年／1933 年"
+   }
+  },
+  {
+   "source": "trc",
+   "title_zh": "甜蜜的家—羅馬",
+   "eraKey": "unknown",
+   "collectionKey": "lun",
+   "verdict": "drop_secondary",
+   "reason": "已識定為史考特‧韓與金柏莉‧韓《Rome Sweet Home》（1993）——由改革宗轉信天主教的通俗歸信見證，非原典層級，建議剔除。若使用者決定保留，應歸「現代／正藏／史傳藏」，作者「史考特‧韓、金柏莉‧韓」",
+   "dup_of": null,
+   "alias": null,
+   "patch": null
+  }
+ ]
+}

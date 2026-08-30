@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 """分類 ledger → `DazangWork` 格式的待審提案（不入庫）。
 
+  node scripts/dazangjing_dump_corpus.mjs c:/tmp/dz_corpus.json
   python scripts/dazangjing_proposal.py --ledger <a.jsonl> [--ledger <b.jsonl>] \
+         --corpus c:/tmp/dz_corpus.json \
+         --adjudication data/dazangjing/source-catalog/adjudication-<date>.json \
          --out c:/tmp/dazang_proposal.md
 
 只取 decision=keep_primary_work。輸出兩份：
@@ -10,6 +13,16 @@
   ② 同名 .ts 片段，審過後可直接貼進 data/dazangjing/{era}.ts
 
 🚨 不自動寫入 data/dazangjing/*.ts——那一步要人看過。
+
+`--adjudication`（2026-08-30 加）帶入**人工**審定，與 `--corpus` 的自動撞名比對
+分工：自動比對抓「機器看得出來的同書」，審定表記「只有人判得了的」——譯本合集
+（《使徒教父著作》所收各篇早已分別在藏）、次級改編、時代標錯（《教務紀略》
+光緒三十一年卻被歸到近代）、書名 OCR 誤字（「癖基督抹殺論」應作「闢」）、
+作者張冠李戴（Joseph Martos 被安成明清耶穌會士「馬若瑟」）。
+
+審定表的 keep 條目可帶 `patch` 改寫欄位，且**在自動比對之前套用**——改過的
+時代與藏別才是拿去跟全藏比的那一份。沒有判定的 record 會照常留在提案裡並列
+警告，**新增來源站後別忘了補判定**。
 """
 from __future__ import annotations
 
@@ -225,6 +238,44 @@ def already_in_canon(c: dict, zh_idx: dict, orig_idx: dict,
     return "suspect", cand[0]
 
 
+def apply_adjudication(keep: list[dict], path: str) -> tuple[list[dict], list[tuple[dict, dict]]]:
+    """套用人工審定表：drop_* 的剔除、keep 的套 patch。
+
+    回傳 (留下的, 被剔除的 (條目, 判定) 配對)。比對鍵與審定表的 match_key 一致：
+    (source, title_zh, eraKey, collectionKey)。同鍵重出的（比利時信條、西敏準則、
+    徐光啟集各兩筆）本來就同判定，共用一條規則。
+    """
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    table = {(v["source"], re.sub(r"\s+", "", v["title_zh"]),
+              v["eraKey"], v["collectionKey"]): v for v in data["verdicts"]}
+    kept: list[dict] = []
+    dropped: list[tuple[dict, dict]] = []
+    unjudged: list[dict] = []
+    for c in keep:
+        key = (c.get("_source", ""), re.sub(r"\s+", "", c.get("title_zh") or ""),
+               c.get("eraKey", ""), c.get("collectionKey", ""))
+        v = table.get(key)
+        if v is None:
+            unjudged.append(c)
+            kept.append(c)
+        elif v["verdict"].startswith("drop"):
+            dropped.append((c, v))
+        else:
+            # patch 可改 title_zh / eraKey / collectionKey，要在分組與全藏比對前套完
+            c.update(v.get("patch") or {})
+            c["_verdict_reason"] = v.get("reason", "")
+            kept.append(c)
+    by_verdict: dict[str, int] = defaultdict(int)
+    for _, v in dropped:
+        by_verdict[v["verdict"]] += 1
+    print(f"人工審定 {Path(path).name}：剔除 {len(dropped)} 部（"
+          + "、".join(f"{k} {n}" for k, n in sorted(by_verdict.items())) + f"），留 {len(kept)} 部")
+    if unjudged:
+        print(f"  ⚠ 尚無判定 {len(unjudged)} 部，先留在提案內請補審："
+              + "、".join(c["title_zh"][:18] for c in unjudged[:8]))
+    return kept, dropped
+
+
 def misnamed(c: dict, variants: dict[str, str]) -> list[str]:
     """定名沒對齊詞庫者，回傳「異譯 → 建議」的說明。"""
     hay = f"{c.get('title_zh','')} {c.get('author','')}"
@@ -237,6 +288,8 @@ def main() -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--corpus", help="node scripts/dazangjing_dump_corpus.mjs 產出的全藏 JSON；"
                                      "不給就跳過與現有全藏的去重（不建議）")
+    ap.add_argument("--adjudication", help="人工審定 JSON（drop/keep 判定與欄位 patch）；"
+                                           "不給就只跑自動比對")
     a = ap.parse_args()
 
     rows: list[dict] = []
@@ -251,10 +304,16 @@ def main() -> int:
 
     keep = [r["classification"] for r in rows
             if r["classification"]["decision"] == "keep_primary_work"]
-    # 來源網址帶回去，方便審閱時查證
-    src = {id(r["classification"]): (r["source_record"].get("url") or "") for r in rows}
+    # 來源網址與站別帶回去：網址方便審閱時查證，站別是審定表的比對鍵之一
+    # （同名書兩站各有一本，判定未必相同）。
+    meta = {id(r["classification"]): (r["source_record"].get("url") or "",
+                                      r["source_record"].get("source") or "") for r in rows}
     for c in keep:
-        c["_url"] = src.get(id(c), "")
+        c["_url"], c["_source"] = meta.get(id(c), ("", ""))
+
+    adjudicated: list[tuple[dict, dict]] = []
+    if a.adjudication:
+        keep, adjudicated = apply_adjudication(keep, a.adjudication)
 
     people_en, variants, en2zh = load_people()
 
@@ -320,6 +379,34 @@ def main() -> int:
                         esc(c["title_zh"]), esc(c.get("title_orig", "")),
                         esc(c.get("author", "")), esc(c.get("era", "")),
                         esc(c.get("place", "")), esc(c.get("language", ""))))
+            md.append("")
+
+    if adjudicated:
+        LABEL = {"drop_dup_existing": "藏內已收（同書異名）",
+                 "drop_anthology": "譯本合集／選集，非單一原典",
+                 "drop_person_or_folder": "書名欄其實是人名或來源站分類夾",
+                 "drop_secondary": "次級改編或非原典層級"}
+        by: dict[str, list] = defaultdict(list)
+        for c, v in adjudicated:
+            by[v["verdict"]].append((c, v))
+        md += ["## 已剔除：人工審定", "",
+               "逐筆查證後判定不入藏者。剔除理由與對應的藏內既有條目一併列出，"
+               "供日後回查；判定表在 `data/dazangjing/source-catalog/`。", ""]
+        for verdict in sorted(by):
+            md += [f"### {LABEL.get(verdict, verdict)}（{len(by[verdict])} 部）", ""]
+            for c, v in sorted(by[verdict], key=lambda x: x[0]["title_zh"]):
+                line = f"- ~~{c['title_zh']}~~（{c.get('author','') or '作者未填'}）—— {v['reason']}"
+                if v.get("dup_of"):
+                    line += f"　→ 已在藏：{v['dup_of']}"
+                md.append(line)
+            md.append("")
+        aliases = [v["alias"] for _, v in adjudicated if v.get("alias")]
+        if aliases:
+            md += ["### 待補進翻譯詞庫的同書異名", "",
+                   "以下各組是同一部書的不同漢譯名，要補進 `theological_terms`"
+                   "（`entity_type='work'`）——比對能力靠詞庫累積，補了下一輪自動就抓得到。", ""]
+            for grp in sorted(aliases, key=lambda g: g[0]):
+                md.append(f"- {'／'.join(grp)}")
             md.append("")
 
     if dupes:
