@@ -14,10 +14,15 @@ description: 把中文基督宗教檔案站系統性收進本專案 —— **兩
 |---|---:|---:|
 | TRC 改革宗檔案站 | **2,761 部** | 56 部 |
 | 天主教在線 ziliaozhan | **71 部** | 115 部 |
-| 合計 | **2,832 部** | 待審 **170 部** |
+| 合計 | **2,832 部** | 審定後 **88 部** |
 
-待審提案：`data/dazangjing/source-catalog/PROPOSAL_2026-08-28.md`（**尚未入庫**）。
+待審提案：`data/dazangjing/source-catalog/PROPOSAL_2026-08-30_trc-zlz.md`（**尚未入庫**）。
 分類 ledger：同目錄 `classified-records-trc.jsonl` / `-zlz.jsonl`。
+人工審定表：同目錄 `adjudication-2026-08-30.json`（由 `dazangjing_build_adjudication.py` 產生）。
+
+🚨 **檔名要帶來源**。`PROPOSAL_2026-08-30.md` 已被另一個 session 用掉（那是跨全部
+ledger 的 310 部提案），本站這批一律寫 `_trc-zlz` 後綴。2026-08-30 曾整份覆蓋掉別人
+那份，靠 `git checkout` 才救回。
 
 ---
 
@@ -79,8 +84,11 @@ trc_ingest.py     內容特徵去重 → 命名 → Drive → 登錄 ebooks    �
 zlz_catalog.py    天主教在線書目普查（只讀目錄頁）
 zlz_match.py      書目 × 大藏經 比對 → 交集／缺口
 zlz_fetch.py      天主教在線逐檔下載
-dazangjing_proposal.py  分類 ledger → 待審提案（Markdown + .ts 片段）
-ocr_overnight.py  整夜 OCR 看守（先探活、無進度即停）
+dazangjing_dump_corpus.mjs      data/dazangjing/*.ts → 全藏 JSON（給 --corpus 比對）
+dazangjing_proposal.py          分類 ledger → 待審提案（Markdown + .ts 片段）
+dazangjing_build_adjudication.py 人工審定表 → adjudication-<date>.json
+dazangjing_alias_to_glossary.py  審定表的同書異名 → theological_terms（預設 dry-run）
+ocr_overnight.py                整夜 OCR 看守（先探活、無進度即停）
 ```
 
 ### 🚨 兩站共用的硬規矩
@@ -153,8 +161,81 @@ python scripts/dazangjing_catalog_ai.py once \
 ### 同書異名一律入翻譯詞庫
 
 已入 `theological_terms`（`entity_type='work'`）：天主之城／上帝之城、**師主篇／效法基督／輕世金書（三名同書）**、特倫多／脫利騰公議會教理問答、使徒行傳／宗徒大事錄。人名補了大額我略、利瑪竇。
+2026-08-30 審定又補 32 組（`scripts/dazangjing_alias_to_glossary.py`，含 dry-run）：
+信望愛手冊／論信望愛／傳道員指南、司牧守則／牧靈指南、五篇神學講辭／神學演講錄、
+法國信條／高盧信綱、多特信經／多特信條、論作基督徒／做基督徒、正統／回到正統…
 
 🚨 **產提案時去重鍵必須含作者**。只用（書名＋時代）會把**儒斯定《護教篇》Apologia 與特土良《護教篇》Apologeticum 併成一部**——中文書名撞名在教父文獻很常見。
+
+🚨 **別名不可用泛稱**。候選別名要先確認它不是**另一部書的正式名**：
+「六日創造解」是尼撒的格列高利另一部書（不是巴西流的 Hexaemeron）、
+「詩篇註」是狄奧多若的（不是奧古斯丁的 Enarrationes）。這兩個一度被寫進別名組，
+真的入庫就會把兩位教父的不同著作永久黏成同一部。「三聯論」「多特法典」這類泛稱同樣剔掉。
+
+🚨 `term_english` 有唯一索引。補別名撞 409 表示**該作品早已在詞庫、只是 `term_original` 不同**——
+要 PATCH 既有列的空別名槽，不是硬塞新列。
+
+⚠️ 詞庫與藏內定名不一致 **2 筆待使用者定奪**（[[feedback_glossary_strict_authority]] 說詞庫是權威，
+但改的是藏內條目，不自行動手）：
+- 詞庫 `致安提阿人論雕像講道集` ↔ 藏內 `雕像講道`
+- 詞庫 `特倫多公議會教理問答` ↔ 藏內 `羅馬要理問答`
+
+---
+
+## 提案審定（2026-08-30 定型）
+
+分類器只看單筆 record，看不到藏內既有 8,016 卷，所以**提案一定要過兩道關才入庫**：
+
+```bash
+node scripts/dazangjing_dump_corpus.mjs c:/tmp/dz_corpus.json
+python scripts/dazangjing_proposal.py \
+  --ledger .../classified-records-trc.jsonl --ledger .../classified-records-zlz.jsonl \
+  --corpus c:/tmp/dz_corpus.json \
+  --adjudication .../adjudication-2026-08-30.json \
+  --out .../PROPOSAL_<date>_trc-zlz.md
+```
+
+- `--corpus`：**自動**撞名比對，兩級判定。書名＋作者都對上＝`same` 直接剔；只有書名對上＝
+  `suspect` 留在提案另列一區。分兩級是必要的——奧古斯丁與希拉流各有一部《論三位一體》，
+  湯漢與維克託利烏斯各有一部《創世論》，自動剔掉就少收真書。
+- `--adjudication`：**人工**審定表，記機器判不了的。keep 條目可帶 `patch` 改欄位，
+  **在自動比對之前套用**（改過的時代／藏別才是拿去比的那一份）；未判定的會列警告。
+
+首輪成績：176 筆候選 → 剔 87 → **實收 88 部**。剔除分佈：
+
+| 類別 | 部數 | 例 |
+|---|---:|---|
+| 藏內已收（多為同書異名） | 66 | 信望愛手冊／論信望愛、效法基督／師主篇、法國信條／高盧信綱 |
+| 譯本合集‧選集非單一原典 | 12 | 《使徒教父著作》《安瑟倫著作選》所收各篇早已分別在藏 |
+| 來源站資料夾層被當成書 | 6 | 「希波的奧古斯丁」「信綱及教理問答」 |
+| 次級改編‧非原典層級 | 3 | 兒童簡明要理問答、《Rome Sweet Home》歸信見證 |
+
+### 🚨 只靠關鍵字查「在不在藏」會漏
+
+《高盧信綱》查了「高盧／Gallicana／法蘭西信條／拉羅歇爾」全無，判成「改革宗信條中唯一缺者」，
+**其實藏內作《法國信條》**——是 `--corpus` 的自動比對抓回來的。人工查證一律要跟自動比對兩邊對照，
+別只信任何一邊。
+
+### 審定時實際抓到的錯（都不是分類器判得出來的）
+
+- **書名欄是來源站資料夾名殘留**：「哲學大全 Summa contra Gentiles 駁異大全」。
+- **作者張冠李戴**：《輕世金書》原著標成 Gerhard of Zutphen、譯者標成「利瑪竇圈」——
+  實為托馬斯‧厄‧肯培原著、陽瑪諾（Manuel Dias Jr.）漢譯。
+  《聖域門檻》的 Joseph Martos 被安成明清耶穌會士「馬若瑟」（Joseph de Prémare）。
+- **書名 OCR 誤字**：「癖基督抹殺論」應作「**闢**」——駁幸德秋水《基督抹殺論》的民國護教書。
+- **時代標錯**：清末民初材料被歸「近代」6 部（教務紀略 1905、庚子教會華人流血史 1900、
+  景教碑考、卜彌格傳、聖五傷方濟各行實、聖女瑪德肋納傳）。**看的是成書年代不是題材年代。**
+- **`title_orig` 只是複製 `title_zh`** 35 筆：漢語原著（天主實義、天學初函）該**清空**，
+  外文原著（納匝肋人耶穌、耶穌基督）該補回真原題。
+- **待定條目查得出來**：「甜蜜的家—羅馬」＝ Scott & Kimberly Hahn《Rome Sweet Home》(1993)。
+
+### 這批真正的收穫
+
+價值集中在**漢語天主教文獻與教廷文件**，不在教父區（教父區早就滿了）：
+天主實義、天學初函、天主降生引義、七克、新法表異、李安德日記（首位華籍司鐸拉丁文日記）、
+闢／評基督抹殺論、馬相伯集、超越東西方，以及十餘份此前未收的若望保祿二世通諭勸諭
+（Dies Domini、Vita Consecrata、Ecclesia in Asia、Ecclesia de Eucharistia…）。
+**教宗文告一律歸書信藏**，與藏內既有通諭條目同列。
 
 ---
 
@@ -181,13 +262,51 @@ python scripts/dazangjing_catalog_ai.py once \
 
 **品質閘盲區已補**：`quality_sweep` 的 `blank_rate` 抓「內容爛」，抓不到「內容漂亮卻只有前面幾十頁」。已加 `page_coverage`（chunk 最大 `page_number` ÷ 實際頁數，<0.92 標 `TRUNCATED` 落 REOCR）。
 
+### 🚨 Gemini 模型名會過期，503／404 要分開讀（2026-08-30）
+
+一本書連撞三種狀態，**換模型就過**，不必動用 Haiku：
+
+| 模型 | 結果 |
+|---|---|
+| `gemini-flash-latest`（`DEFAULT_MODEL`） | **503** high demand，retry 兩次仍掛 |
+| `gemini-2.5-flash` | **404**，錯誤訊息明講「no longer available to new users」 |
+| `gemini-3.6-flash` | ✅ 102 頁／2 批／379 秒 |
+
+- **503 是模型忙不是額度乾**，換個模型名往往就通；429 才是額度，會自動輪 key。
+- **404 的錯誤訊息會直接告訴你接班模型是哪個**，照著換即可（此次指向 `gemini-3.6-flash`）。
+- `--model` 可即時覆寫，不必改 `.env`。判定 Gemini 全掛、要退 Haiku 之前，**先把候選模型名試過一輪**。
+
+### 已有文字層 ≠ 不用 OCR
+
+掃描本常帶 Acrobat Paper Capture 的舊 OCR 層，`parse_worker` 會把它當正文抽走並標 `parsed_at`，
+書就**再也不會進 OCR 佇列**。《復活的基督》那層把「第三章」認成「第一章」、「註釋」認成
+「言主釋」、「若望二十章」認成「若望二十量」。**直式排版與老舊影印本的舊文字層一律不可信**，
+先 `--book <id>` 手動送 OCR，別讓 parse_worker 先碰。
+
+`--book <id>` 吃不在 OCR 佇列的書（走 `fetch_books_by_ids`），新登錄、未 parse 的書也能直接指定。
+
 ---
 
 ## 🚨 多 session 並行時的寫檔風險
 
-本專案常有多個 session 同時動 repo。2026-08-30 實例：本檔改寫完成後、`git add` 之前，被另一個 session 的 checkout 覆蓋回舊版，該次 commit 因此只包含別人暫存區的無關檔案，**改寫內容完全遺失**。
+本專案常有多個 session 同時動 repo。2026-08-30 兩次實例：
 
-**寫完 skill 或任何文件後，`git add` 前先確認檔案還是你寫的那份**（`wc -l` 或 grep 特徵字），commit 後再驗一次 `git show HEAD --stat` 有沒有你的檔。
+1. 本檔改寫完成後、`git add` 之前，被另一個 session 的 checkout 覆蓋回舊版，
+   該次 commit 因此只包含別人暫存區的無關檔案，**改寫內容完全遺失**。
+2. 產提案時寫到 `PROPOSAL_2026-08-30.md`，**整份覆蓋掉另一個 session 剛 commit 的 310 部提案**。
+   `git status` 顯示成 ` M`（已追蹤且被修改）而不是 `??`，才發現撞檔；靠 `git checkout --` 救回。
+
+**寫完 skill 或任何文件後，`git add` 前先確認檔案還是你寫的那份**（`wc -l` 或 grep 特徵字），
+commit 後再驗一次 `git show HEAD --stat` 有沒有你的檔。
+
+**另外三條**：
+- **輸出檔名帶來源後綴**（`_trc-zlz`），別用只有日期的通名——日期一定會撞。
+- **寫檔前看 `git status`**：目標檔若是 ` M` 而非 `??`，表示別人已經建過同名檔，換名再寫。
+- **只 `git add` 指定路徑，絕不 `git add -A`**。這個 repo 隨時有別的 session 的半成品
+  （本輪同時在跑 hellenika 俄耳甫斯讚歌、fathers 連結、accs 正規化），
+  `git diff --cached --stat` 確認staged 清單只有自己的檔再 commit。
+- **共用腳本改之前先重讀**。`dazangjing_proposal.py` 在本輪被另一個 session 從 172 行擴到 386 行
+  （加了全藏撞名比對），照舊版記憶去 Edit 會直接失配；失配就是提醒，不要硬改。
 
 ---
 
