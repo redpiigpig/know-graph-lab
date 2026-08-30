@@ -216,7 +216,22 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
     閘：長部必須恰好 34 經、中部 152 經、相應部 56 相應 —— 都是巴利藏的定數，
     對不上就整個尼柯耶不掛。
 
-20. **大正藏行號不唯一。** 同一行可以起頭好幾段 —— 全藏 **65,483 段（6.5%）、
+20. **PostgREST 的三個寫入坑**（灌 tripitaka_parallels 時一次踩齊）：
+    - 唯一索引若寫成 `coalesce(seg_uid,'')` 是**運算式索引**，`on_conflict`
+      認不得 → 42P10。改成一般欄位索引，整部層級的列存空字串而非 NULL。
+    - 同批次出現重複的唯一鍵 → 21000「cannot affect row a second time」。
+      同一漢文段可能從兩個平行組收到同一筆對應，**推之前要去重**
+      （23,321 筆去重後剩 10,168）。
+    - 回填 `parallel_langs` 不可用 upsert：那是 INSERT…ON CONFLICT，
+      只給三個欄位會撞 NOT NULL → 409。要用 `UPDATE…FROM`。
+
+21. **🚨 CBETA 的字母後綴兩種大小寫都用**（`T0128a`／`T0128b` 小寫，
+    `T1670B`／`T2917A` 大寫），不能一律轉大寫，也不能照 SuttaCentral uid 的
+    小寫直接用。而 **Windows 檔名不分大小寫** —— 拿「檔案存在」當檢查會讓
+    `T1670b` 一路通過，寫進 DB 才撞外鍵。一律對照真實目錄查正規 id
+    （`tripitaka_parallels.canonical_work_id`）。
+
+22. **大正藏行號不唯一。** 同一行可以起頭好幾段 —— 全藏 **65,483 段（6.5%）、
     672 部**如此。行號是段的*引用式*（使用者定調，不改），但不能當鍵：
     拿它 join 對照／詞條，同行的段會互相串；當 DOM anchor 會出現重複 id。
     故每段有兩個欄位：
@@ -250,10 +265,12 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
 - **T56–T84 日本撰述部**。CBETA 未提供 XML，非本站遺漏，凡例已註明。
 - **律部的條級對齊**。SC 有逐條學處編號，CBETA 的目錄樹沒有可對的鍵；
   要對上得自建「廣律條號 → 段」索引。
-- **Supabase 建表**。2026-08-28 當下 `SUPABASE_ACCESS_TOKEN`（Management API
-  那把）已失效回 403，DDL 跑不了。SQL 已備在 `scripts/sql/tripitaka_schema.sql`，
-  在 Dashboard SQL Editor 貼一次即可；資料寫入走 PostgREST（service role key
-  正常），不需要那把 token。
+（已完成，保留紀錄）**Supabase 上線**。`SUPABASE_ACCESS_TOKEN`（Management API
+  那把）失效回 403，但 **`.env` 的 `KGL_DB_PASSWORD` 直連可用** ——
+  `pip install psycopg2-binary` 後 `db.{ref}.supabase.co:5432` 直接連得上。
+  ⚠️ 2026-08-28 我一度判定「直連 IPv6-only 無路由」，那是錯的：只用 `ping -6`
+  逾時就下結論，但 ICMP 被擋不代表 TCP 不通，而且當時根本沒裝驅動。
+  DDL 與「只更新部分欄位」的回填走 `tripitaka_db.pg_exec`，大量寫入走 PostgREST。
 
 ## 相關
 

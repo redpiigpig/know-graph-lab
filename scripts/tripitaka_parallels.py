@@ -258,6 +258,26 @@ def pin_seg(work_id: str, pin_no: str | None) -> str | None:
     return None
 
 
+_WORK_IDS: dict[str, str] | None = None
+
+
+def canonical_work_id(guess: str) -> str | None:
+    """把猜出來的作品 id 對回 CBETA 的正規寫法；查無則回 None。
+
+    🚨 CBETA 的字母後綴**兩種大小寫都用**（T0128a／T0128b 小寫，
+    T1670B／T2917A 大寫），不能一律轉大寫，也不能照 SC uid 的小寫直接用。
+    而 Windows 檔名不分大小寫 —— 拿「檔案存在」當檢查會讓 `T1670b` 通過，
+    寫進 DB 才撞外鍵。故一律對照真實目錄查正規 id。
+    """
+    global _WORK_IDS
+    if _WORK_IDS is None:
+        _WORK_IDS = {}
+        for p in SEG_DIR.glob("*.toc.json"):
+            wid = p.name[: -len(".toc.json")]
+            _WORK_IDS[wid.lower()] = wid
+    return _WORK_IDS.get(guess.lower())
+
+
 def vinaya_parts(prefix: str) -> tuple[str | None, str | None]:
     """'lzh-mi-bi-vb-pc' → ('lzh', 'mi')；非律典 uid 回 (None, None)。"""
     bits = prefix.split("-")
@@ -286,16 +306,16 @@ def resolve_chinese(prefix: str, number: str) -> tuple[str, str | None] | None:
         # 逐品對照全塌成「整部」—— 品號要用上，那正是跨語言的主對齊層。
         m = re.match(r"^(\d+)([A-Za-z]?)(?:\.(\d+))?", number)
         if m:
-            wid = f"T{int(m.group(1)):04d}{m.group(2)}"
-            if not (SEG_DIR / f"{wid}.toc.json").exists():
+            wid = canonical_work_id(f"T{int(m.group(1)):04d}{m.group(2)}")
+            if not wid:
                 return None
             return wid, (pin_seg(wid, m.group(3)) if m.group(3) else None)
     # 漢譯廣律：lzh-{部派}-… → 該部派的漢譯廣律（只能對到整部，
     # 學處條號在 CBETA 的目錄樹裡沒有可對的鍵）
     lang, school = vinaya_parts(prefix)
     if lang == "lzh" and school:
-        wid = VINAYA_SCHOOL_TO_TAISHO.get(school)
-        if wid and (SEG_DIR / f"{wid}.toc.json").exists():
+        wid = canonical_work_id(VINAYA_SCHOOL_TO_TAISHO.get(school) or "")
+        if wid:
             return wid, None
     return None
 
@@ -392,24 +412,41 @@ def cmd_push():
         for e in json.loads(p.read_text(encoding="utf-8")):
             rows.append({"work_id": wid, "seg_uid": e.get("uid"), "lang": "pi",
                          "ref": e["ref"], "src": "taisho-equiv", "note": None})
-    payload = [{k: r.get(k) for k in ("work_id", "seg_uid", "lang", "ref", "src", "note")}
-               for r in rows]
+    # 同一漢文段可能從兩個平行組收到同一筆對應（例：一經同時是甲乙兩部漢譯的
+    # 平行本）。同批次出現重複的唯一鍵，PostgREST 的 upsert 會回 21000
+    # 「cannot affect row a second time」—— 推之前先去重。
+    seen: set[tuple] = set()
+    payload = []
+    for r in rows:
+        rec = {**{k: r.get(k) for k in ("work_id", "seg_uid", "lang", "ref", "src", "note")},
+               "seg_uid": r.get("seg_uid") or ""}       # 整部層級用空字串，見 schema 註
+        key = (rec["work_id"], rec["seg_uid"], rec["lang"], rec["ref"], rec["src"])
+        if key in seen:
+            continue
+        seen.add(key)
+        payload.append(rec)
+    print(f"去重後 {len(payload):,} 筆（原 {len(rows):,}）", flush=True)
     for i in range(0, len(payload), 500):
         td.postgrest("tripitaka_parallels?on_conflict=work_id,seg_uid,lang,ref,src",
                      payload[i:i + 500])
         print(f"  … {min(i + 500, len(payload))}/{len(payload)}", flush=True)
     print(f"✓ tripitaka_parallels {len(payload):,} 筆")
 
-    # 回填每部經有哪些對照語言，供列表頁的標籤
-    langs = defaultdict(set)
-    for r in payload:
-        langs[r["work_id"]].add(r["lang"])
-    upd = [{"id": w, "parallel_langs": sorted(ls),
-            "parallel_count": sum(1 for r in payload if r["work_id"] == w)}
-           for w, ls in langs.items()]
-    for i in range(0, len(upd), 400):
-        td.postgrest("tripitaka_works?on_conflict=id", upd[i:i + 400])
-    print(f"✓ 回填 {len(upd)} 部的 parallel_langs")
+    # 回填每部經有哪些對照語言，供列表頁的標籤。
+    # 不用 PostgREST 的 upsert：那是 INSERT…ON CONFLICT，只給三個欄位會撞
+    # tripitaka_works 的 NOT NULL（回 409）。直接下 UPDATE…FROM 才對。
+    n = td.pg_exec("""
+        update tripitaka_works w
+           set parallel_langs = s.langs,
+               parallel_count = s.n
+          from (select work_id,
+                       array_agg(distinct lang order by lang) as langs,
+                       count(*) as n
+                  from tripitaka_parallels group by work_id) s
+         where w.id = s.work_id
+     returning w.id
+    """)
+    print(f"✓ 回填 {len(n)} 部的 parallel_langs")
 
 
 def main():

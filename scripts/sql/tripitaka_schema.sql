@@ -55,7 +55,9 @@ create table if not exists tripitaka_parallels (
   -- 段的**唯一鍵**（T02n0099_p0001a06 或同行第二段的 …a06.2）。
   -- 純行號不唯一：全藏 6.5% 的段與別的段同行起頭，拿行號當鍵會讓
   -- 對照掛到同一行的其他段上。引用式仍是行號，顯示時去掉 .n 後綴。
-  seg_uid  text,
+  -- 整部層級的列用空字串而非 NULL：唯一索引若寫成 coalesce(seg_uid,'')
+  -- 是運算式索引，PostgREST 的 on_conflict 認不得，寫入會回 42P10。
+  seg_uid  text not null default '',
   lang     text not null,
   ref      text not null,
   src      text not null,
@@ -63,7 +65,7 @@ create table if not exists tripitaka_parallels (
 );
 create index if not exists tripitaka_parallels_work_idx on tripitaka_parallels (work_id);
 create unique index if not exists tripitaka_parallels_uniq
-  on tripitaka_parallels (work_id, coalesce(seg_uid,''), lang, ref, src);
+  on tripitaka_parallels (work_id, seg_uid, lang, ref, src);
 
 alter table tripitaka_works    enable row level security;
 alter table tripitaka_parallels enable row level security;

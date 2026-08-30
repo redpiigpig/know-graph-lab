@@ -103,7 +103,9 @@ create table if not exists tripitaka_parallels (
   -- 段的**唯一鍵**（T02n0099_p0001a06 或同行第二段的 …a06.2）。
   -- 純行號不唯一：全藏 6.5% 的段與別的段同行起頭，拿行號當鍵會讓
   -- 對照掛到同一行的其他段上。引用式仍是行號，顯示時去掉 .n 後綴。
-  seg_uid  text,
+  -- 整部層級的列用空字串而非 NULL：唯一索引若寫成 coalesce(seg_uid,'')
+  -- 是運算式索引，PostgREST 的 on_conflict 認不得，寫入會回 42P10。
+  seg_uid  text not null default '',
   lang     text not null,
   ref      text not null,
   src      text not null,
@@ -111,7 +113,7 @@ create table if not exists tripitaka_parallels (
 );
 create index if not exists tripitaka_parallels_work_idx on tripitaka_parallels (work_id);
 create unique index if not exists tripitaka_parallels_uniq
-  on tripitaka_parallels (work_id, coalesce(seg_uid,''), lang, ref, src);
+  on tripitaka_parallels (work_id, seg_uid, lang, ref, src);
 
 alter table tripitaka_works    enable row level security;
 alter table tripitaka_parallels enable row level security;
@@ -131,7 +133,7 @@ def series_of(row: dict) -> str:
 
 
 def cmd_schema():
-    sql(SCHEMA)
+    pg_exec(SCHEMA)
     print("✓ tripitaka_works / tripitaka_parallels 已就緒")
 
 
@@ -139,6 +141,28 @@ COLS = ["id", "canon", "vol", "work_no", "work_suffix", "title_zh", "series", "b
         "dynasty", "translator", "author", "lost_translator", "extent", "juan_count",
         "division_key", "japanese", "xml_path", "seg_count", "char_count",
         "toc_count", "equiv_count", "term_count", "term_langs", "display_order"]
+
+
+def pg_exec(sql_text: str, params=None):
+    """直連 Postgres 跑 SQL。DDL 與「只更新部分欄位」的回填走這條。
+
+    2026-08-29 更正：先前判定「直連 IPv6-only 無路由」是錯的 —— 當時只用
+    `ping -6` 逾時就下結論，但 ICMP 被擋不代表 TCP 不通，而且當時沒裝驅動。
+    裝上 psycopg2 後 db.{ref}.supabase.co:5432 直接連得上（密碼在 .env）。
+    """
+    import psycopg2
+    conn = psycopg2.connect(
+        host=_env("KGL_DB_HOST"), port=int(os.environ.get("KGL_DB_PORT", 5432)),
+        user=os.environ.get("KGL_DB_USER", "postgres"), password=_env("KGL_DB_PASSWORD"),
+        dbname=os.environ.get("KGL_DB_NAME", "postgres"),
+        connect_timeout=15, sslmode="require")
+    conn.autocommit = True
+    try:
+        with conn.cursor() as cur:
+            cur.execute(sql_text, params)
+            return cur.fetchall() if cur.description else []
+    finally:
+        conn.close()
 
 
 def postgrest(path: str, rows: list[dict] | None = None, method: str = "POST"):
