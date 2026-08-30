@@ -67,6 +67,58 @@ def is_stopword_match(row: dict) -> bool:
     return bool(words) and all(word in STOPWORDS or len(word) == 1 for word in words)
 
 
+# 除了功能詞，逐張看下來還有三類不必一張一張判——判準寫在圖示本名裡，不是猜的。
+#
+# negated：名字帶 -off／-disabled／no-／not-，畫的是「打了叉的那個東西」。
+#   gift-off 是被劃掉的禮物、food-off 是被劃掉的食物、assembly-off 是被劃掉的
+#   集會。這種圖教的是相反的意思，比配錯還糟。
+# brand：名字是商標、電玩、動漫、塔羅。death-star 是星際大戰、death-note 是死亡
+#   筆記本、finn-the-human 是探險活寶、tarot-* 是塔羅牌、humble-bundle 是遊戲
+#   商城。學的人背到的是那個作品，不是這個字。
+# software：名字是介面元件或檔案格式。file-word 是 Word 檔、http-put 是 HTTP
+#   動詞、git-fork 是版本控制、wifi-strength-2 是訊號強度、subset-of 是集合論。
+#   古典語言的單字卡上沒有一個字的意思是這些。
+NEGATED_PARTS = {"off", "disabled"}
+BRAND_PARTS = {
+    "brand", "logo", "tarot", "pokemon", "xbox", "google", "adobe", "humble",
+    "bundle", "schrodingers", "finn", "pac", "meeple", "gnome", "hobbit",
+    "companion", "cube", "deathstar", "gokart", "geographic",
+}
+BRAND_NAMES = {
+    "death-star", "death-note", "dev-to", "dev-to-logo", "go-kart",
+    "companion-cube", "national-geographic", "swiss-army-knife",
+}
+#   keyboard／letter／mail 這幾個字**不能**放進來：musical-keyboard 是鋼琴鍵盤、
+#   love-letter 是插著心的信封、mail-forward 是信件，都是真實名物，`愛` 配
+#   love-letter 是好圖。字母框那一類改用字首比對抓（letter-a、alpha-i、
+#   square-letter-i），才不會連帶掃掉真名物。
+SOFTWARE_PARTS = {
+    "file", "http", "git", "wifi", "api", "app", "playlist", "dock", "css",
+    "html", "sql", "url", "json", "folder", "clipboard",
+    "subset", "superset", "congruent", "math", "logic",
+    "code", "relation", "input", "select", "view", "table", "page",
+    "zoom", "crop", "set", "sort", "socket", "screen", "scan", "server",
+}
+SOFTWARE_PREFIXES = ("letter-", "alpha-", "square-letter", "hexagon-letter",
+                     "circle-letter", "rounded-letter")
+
+
+def rule_reason(row: dict) -> str | None:
+    """這張圖能不能靠圖示本名直接判錯，不必逐張看。回傳規則名，或 None。"""
+
+    if is_stopword_match(row):
+        return "stopword"
+    name = row["icon"].split(":", 1)[1]
+    parts = set(name.split("-"))
+    if name.startswith(("no-", "not-")) or parts & NEGATED_PARTS:
+        return "negated"
+    if name in BRAND_NAMES or parts & BRAND_PARTS:
+        return "brand"
+    if parts & SOFTWARE_PARTS or name.startswith(SOFTWARE_PREFIXES):
+        return "software"
+    return None
+
+
 def load(name: str, path: Path):
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
@@ -202,8 +254,9 @@ def main() -> None:
                              "編號就是 --list／--sheet 印出來的那組，所以 --skip/--size/--lang "
                              "必須跟當時完全一樣，否則記到別張卡上。")
     parser.add_argument("--reason", default="", help="這一批判錯的共同理由，寫進判決檔備查")
-    parser.add_argument("--filter", choices=("stopword", "other"),
-                        help="只看命中功能詞／單字母的那一批（stopword），或只看其餘的（other）")
+    parser.add_argument("--filter",
+                        choices=("stopword", "negated", "brand", "software", "ruled", "other"),
+                        help="只看某一條規則判得出來的那一批，或只看規則判不出來、必須逐張看的（other）")
     parser.add_argument("--lang", choices=LANGS + ("all",), default="all")
     parser.add_argument("--size", type=int, default=200)
     parser.add_argument("--skip", type=int, default=0, help="跳過前 N 筆")
@@ -224,10 +277,12 @@ def main() -> None:
     for lang in languages:
         rows.extend(pending_rows(lang, decisions, audit))
 
-    if args.filter == "stopword":
-        rows = [row for row in rows if is_stopword_match(row)]
+    if args.filter == "ruled":
+        rows = [row for row in rows if rule_reason(row)]
     elif args.filter == "other":
-        rows = [row for row in rows if not is_stopword_match(row)]
+        rows = [row for row in rows if not rule_reason(row)]
+    elif args.filter:
+        rows = [row for row in rows if rule_reason(row) == args.filter]
 
     judged = sum(len(decisions[lang]) for lang in languages)
     print(f"待審 {len(rows)} 張，已判 {judged} 張")

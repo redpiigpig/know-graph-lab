@@ -1309,6 +1309,643 @@
         "icon": "game-icons:bowl-of-rice",
         "verdict": "wrong",
         "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "H4399|מְלָאכָה": {
+        "icon": "mdi:dog-service",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4405|מִלָּה": {
+        "icon": "mdi:file-word",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H441|אַלּוּף": {
+        "icon": "tabler:wash-gentle",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4421|מִלְחָמָה": {
+        "icon": "game-icons:war-axe",
+        "verdict": "ok"
+      },
+      "H4557|מִסְפָּר": {
+        "icon": "tabler:number-0",
+        "verdict": "ok"
+      },
+      "H4605|מִמַּ֫עַל": {
+        "icon": "mdi:vector-arrange-above",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4611|מַעֲלָל": {
+        "icon": "tabler:hammer-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4672|מָצָא": {
+        "icon": "mdi:file-find",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4687|מִצְוֹת": {
+        "icon": "tabler:irregular-polyhedron",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4725|מָקוֹם": {
+        "icon": "mdi:select-place",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4908|מִשְׁכָּן": {
+        "icon": "game-icons:hobbit-dwelling",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H4940|מִשְׁפָּחָה": {
+        "icon": "game-icons:family-tree",
+        "verdict": "ok"
+      },
+      "H4994|נָא": {
+        "icon": "tabler:logic-not",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5027|נָבַט": {
+        "icon": "game-icons:look-at",
+        "verdict": "ok"
+      },
+      "H5045|נֶ֫גֶב": {
+        "icon": "game-icons:south-korea",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5061|נֶ֫גַע": {
+        "icon": "game-icons:plague-doctor-profile",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5066|נָגַשׁ": {
+        "icon": "mdi:near-me",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5127|נוּס": {
+        "icon": "game-icons:fish-escape",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5157|נָחַל": {
+        "icon": "mdi:auto-mode",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5158|נַ֫חַל": {
+        "icon": "mdi:view-stream",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5186|נָטָה": {
+        "icon": "ph:person-arms-spread",
+        "verdict": "ok"
+      },
+      "H518|אִם": {
+        "icon": "ph:shuffle-bold",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5193|נָטַע": {
+        "icon": "game-icons:wave-strike",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5221|נָכָה": {
+        "icon": "game-icons:deadly-strike",
+        "verdict": "ok"
+      },
+      "H5254|נָסָה": {
+        "icon": "tabler:test-pipe",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5288|נַ֫עַר": {
+        "icon": "mdi:human-male-boy",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5291|נַעֲרָה": {
+        "icon": "mdi:human-female-girl",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5307|נָפַל": {
+        "icon": "ph:person-thin",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5387|נָשִׂיא": {
+        "icon": "game-icons:frog-prince",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5414|נָתַן": {
+        "icon": "tabler:http-put",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5462|סָגַר": {
+        "icon": "game-icons:shut-rose",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H559|אָמַר": {
+        "icon": "game-icons:nothing-to-say",
+        "verdict": "ok"
+      },
+      "H5608|סָפַר": {
+        "icon": "tabler:abacus-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5656|עֲבֹדָה": {
+        "icon": "mdi:room-service",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5656|עֲבוֹדָה": {
+        "icon": "tabler:hotel-service",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H565|אִמְרָה": {
+        "icon": "game-icons:air-balloon",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5668|עָבוּר": {
+        "icon": "game-icons:crossed-axes",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5676|עֵבֶר": {
+        "icon": "game-icons:jump-across",
+        "verdict": "ok"
+      },
+      "H56|אָבַל": {
+        "icon": "game-icons:monk-face",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5712|עֵדָה": {
+        "icon": "tabler:assembly-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5750|עוֹד": {
+        "icon": "game-icons:long-antennae-bug",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5769|עוֹלָם": {
+        "icon": "mdi:delete-forever",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5771|עָוֹן": {
+        "icon": "game-icons:broken-axe",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5797|עֹז": {
+        "icon": "mdi:wifi-strength-2",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5800|עָזַב": {
+        "icon": "mdi:crop-free",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H582|אֱנוֹשׁ": {
+        "icon": "game-icons:magnet-man",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H587|אֲנַ֫חְנוּ": {
+        "icon": "mdi:nature-people-outline",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5927|עָלָה": {
+        "icon": "mdi:go-kart",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5971|עַם": {
+        "icon": "mdi:nature-people",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H5975|עָמַד": {
+        "icon": "ph:globe-stand",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6010|עֵמֶק": {
+        "icon": "tabler:brand-national-geographic",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6041|עָנִי": {
+        "icon": "mdi:humble-bundle",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6113|עָצָר": {
+        "icon": "mdi:car-brake-hold",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6160|עֲרָבָה": {
+        "icon": "game-icons:desert-camp",
+        "verdict": "ok"
+      },
+      "H6187|עֵרֶךְ": {
+        "icon": "game-icons:book-pile",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6213|עָשָׂה": {
+        "icon": "game-icons:3d-hammer",
+        "verdict": "ok"
+      },
+      "H6239|עֹשֶׁר": {
+        "icon": "game-icons:fire-gem",
+        "verdict": "ok"
+      },
+      "H6240|עָשָׂר": {
+        "icon": "mdi:clock-time-ten",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6242|עֶשְׂרִים": {
+        "icon": "game-icons:dice-twenty-faces-one",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6256|עֵת": {
+        "icon": "tabler:file-time",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6258|עַתָּה": {
+        "icon": "mdi:arrow-all",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6285|פֵּאָה": {
+        "icon": "game-icons:ent-mouth",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H631|אָסַר": {
+        "icon": "game-icons:locked-box",
+        "verdict": "ok"
+      },
+      "H637|אַף": {
+        "icon": "mdi:power-socket-ch",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H639|אַפַּ֫יִם": {
+        "icon": "tabler:dual-screen",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6437|פָּנָה": {
+        "icon": "tabler:s-turn-down",
+        "verdict": "ok"
+      },
+      "H6440|פְּנֵי": {
+        "icon": "tabler:face-id",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6440|פָּנִים": {
+        "icon": "game-icons:nun-face",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6471|פַּ֫עַם": {
+        "icon": "game-icons:foot-trip",
+        "verdict": "ok"
+      },
+      "H6499|פַּר": {
+        "icon": "game-icons:bull-horns",
+        "verdict": "ok"
+      },
+      "H6566|פָּרַשׂ": {
+        "icon": "tabler:page-break",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6584|פָּשַׁט": {
+        "icon": "mdi:gesture-spread",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6607|פֶּ֫תַח": {
+        "icon": "game-icons:opening-shell",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6635|צְבָאוֹת": {
+        "icon": "game-icons:meeple-army",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6635|צָבָא": {
+        "icon": "game-icons:swiss-army-knife",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6662|צַדִּיק": {
+        "icon": "game-icons:bear-face",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6663|צָדַק": {
+        "icon": "game-icons:radial-balance",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6664|צֶ֫דֶק": {
+        "icon": "game-icons:body-balance",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6666|צְדָקָה": {
+        "icon": "game-icons:justice-star",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6680|צָוָה": {
+        "icon": "tabler:command-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6697|צוּר": {
+        "icon": "game-icons:boulder-dash",
+        "verdict": "ok"
+      },
+      "H681|אֵצֶל": {
+        "icon": "mdi:bus-side",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6822|צָפָה": {
+        "icon": "game-icons:forward-sun",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6833|צִפּוֹר": {
+        "icon": "tabler:hand-little-finger",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6862|צַר": {
+        "icon": "ph:smiley-angry",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H68|אֶ֫בֶן": {
+        "icon": "game-icons:stone-axe",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6924|קֶ֫דֶם": {
+        "icon": "tabler:navigation-east",
+        "verdict": "ok"
+      },
+      "H6942|קָדַשׁ": {
+        "icon": "game-icons:holy-oak",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6944|קֹ֫דֶשׁ": {
+        "icon": "game-icons:holy-grail",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6951|קָהָל": {
+        "icon": "tabler:assembly-filled",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H6965|קוּם": {
+        "icon": "mdi:elevation-rise",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7023|קִיר": {
+        "icon": "tabler:wall-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H705|אַרְבָּעִים": {
+        "icon": "tabler:input-x",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7093|קֵץ": {
+        "icon": "mdi:table-column-plus-after",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7097|קָצֶה": {
+        "icon": "mdi:clock-end",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7098|קָצָה": {
+        "icon": "tabler:phone-end",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7114|קָצַר": {
+        "icon": "mdi:dock-top",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7121|קָרָא": {
+        "icon": "ph:call-bell",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7125|קִרְאָה": {
+        "icon": "mdi:music-accidental-flat",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7130|קֶ֫רֶב": {
+        "icon": "game-icons:inner-self",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7133|קָרְבָּן": {
+        "icon": "mdi:gift-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7186|קָשֶׁה": {
+        "icon": "ph:hard-hat",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7198|קֶ֫שֶׁת": {
+        "icon": "game-icons:drop-weapon",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7218|רֹאשׁ": {
+        "icon": "game-icons:top-hat",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7223|רִאשׁוֹן": {
+        "icon": "mdi:page-first",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7225|רֵאשִׁית": {
+        "icon": "ph:first-aid",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7227|רַב": {
+        "icon": "game-icons:great-pyramid",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7235|רָבָה": {
+        "icon": "game-icons:great-war-tank",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7291|רָדַף": {
+        "icon": "tabler:brand-adobe-after-effects",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7311|רוּם": {
+        "icon": "tabler:sun-high",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7321|רוּעַ": {
+        "icon": "mdi:set-split",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7339|רְחֹב": {
+        "icon": "tabler:arrow-autofit-width",
+        "verdict": "ok"
+      },
+      "H7341|רֹחַב": {
+        "icon": "mdi:table-column-width",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7381|רֵיחַ": {
+        "icon": "game-icons:nose-side",
+        "verdict": "ok"
+      },
+      "H7451|רַע": {
+        "icon": "game-icons:bad-gnome",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7453|רֵ֫עַ": {
+        "icon": "game-icons:companion-cube",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7458|רָעָב": {
+        "icon": "game-icons:tree-face",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H748|אָרַךְ": {
+        "icon": "mdi:text-long",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7563|רָשָׁע": {
+        "icon": "ph:face-mask",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7592|שָׁאַל": {
+        "icon": "ph:git-pull-request",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7626|שֵׁ֫בֶט": {
+        "icon": "game-icons:rod-of-asclepius",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7651|שֶׁבַע": {
+        "icon": "ph:number-seven",
+        "verdict": "ok"
+      },
+      "H7665|שָׁבַר": {
+        "icon": "ph:link-break",
+        "verdict": "ok"
+      },
+      "H7667|שֶׁבֶר": {
+        "icon": "game-icons:broken-bone",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7716|שֶׂה": {
+        "icon": "ph:not-member-of",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7725|שׁוּב": {
+        "icon": "tabler:s-turn-up",
+        "verdict": "ok"
+      },
+      "H7896|שִׁית": {
+        "icon": "tabler:http-put-off",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7919|שָׂכַל": {
+        "icon": "tabler:puzzle-2",
+        "verdict": "ok"
+      },
+      "H7925|שָׁכַם": {
+        "icon": "tabler:load-balancer",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7931|שָׁכַן": {
+        "icon": "game-icons:dog-house",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7979|שֻׁלְחָן": {
+        "icon": "ph:git-fork",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H7992|שְׁלִישִׁי": {
+        "icon": "game-icons:third-eye",
+        "verdict": "wrong",
+        "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
       }
     },
     "greek": {
@@ -2731,6 +3368,536 @@
         "icon": "mdi:alpha-o",
         "verdict": "wrong",
         "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "αἴτημα": {
+        "icon": "ph:git-pull-request",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "βοηθός": {
+        "icon": "mdi:scan-helper",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "γραμματεύς": {
+        "icon": "mdi:pac-man",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "δέομαι": {
+        "icon": "ph:git-pull-request-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "διάγω": {
+        "icon": "tabler:file-time",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "διαφέρω": {
+        "icon": "mdi:bag-carry-on-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "δωρεά": {
+        "icon": "mdi:crop-free",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "εἰ μή": {
+        "icon": "ph:not-superset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "εἰρηνεύω": {
+        "icon": "mdi:google-keep",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "εὖρος": {
+        "icon": "mdi:table-column-width",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "θανατόω": {
+        "icon": "tabler:http-put-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "καταρτίζω": {
+        "icon": "tabler:brand-google-fit",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "κελεύω": {
+        "icon": "tabler:command-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "κλάδος": {
+        "icon": "ph:git-branch",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "κράτος": {
+        "icon": "mdi:wifi-strength-1",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "κρατέω": {
+        "icon": "mdi:wifi-strength-2",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "κτάομαι": {
+        "icon": "tabler:http-get-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "λειτουργία": {
+        "icon": "mdi:gift-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μήπω": {
+        "icon": "ph:not-equals-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μήτε": {
+        "icon": "tabler:math-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μηδέποτε": {
+        "icon": "tabler:logic-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μηδαμῶς": {
+        "icon": "tabler:no-copyright",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μηδείς": {
+        "icon": "ph:not-equals-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μηκέτι": {
+        "icon": "tabler:no-derivatives",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μοιχεύω": {
+        "icon": "ph:git-commit",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "μώλωψ": {
+        "icon": "ph:stripe-logo",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οἶκος": {
+        "icon": "game-icons:hobbit-dwelling",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐδέ": {
+        "icon": "mdi:not-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐδαμοῦ": {
+        "icon": "ph:not-equals-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐδείς": {
+        "icon": "ph:not-equals-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐκέτι": {
+        "icon": "ph:not-equals",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐκοῦν": {
+        "icon": "mdi:code-not-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὐχί": {
+        "icon": "ph:not-member-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὔπω": {
+        "icon": "mdi:not-equal-variant",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "οὔτε": {
+        "icon": "ph:not-subset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "παῤῥησία": {
+        "icon": "mdi:set-all",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πεντήκοντα": {
+        "icon": "tabler:input-ai",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "περιζώννυμι": {
+        "icon": "game-icons:round-table",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πληγή": {
+        "icon": "tabler:brand-stripe",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πλησίον": {
+        "icon": "mdi:google-nearby",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πολιτεύω": {
+        "icon": "tabler:live-view",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πολλάκις": {
+        "icon": "mdi:relation-one-to-many",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ποταπός": {
+        "icon": "tabler:arrows-sort",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ποῖος": {
+        "icon": "tabler:sort-0-9",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "προέρχομαι": {
+        "icon": "mdi:go-kart",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "προβάλλω": {
+        "icon": "tabler:http-put",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πρόδηλος": {
+        "icon": "tabler:bulb-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "πόσος": {
+        "icon": "mdi:relation-many-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "σαβαώθ": {
+        "icon": "game-icons:meeple-army",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "σεμνότης": {
+        "icon": "mdi:dock-top",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "στεφανόω": {
+        "icon": "tabler:crown-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "συγγραφεύς": {
+        "icon": "tabler:writing-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "συνήθεια": {
+        "icon": "mdi:repeat-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "σύγγραμμα": {
+        "icon": "mdi:file-document",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "σῶμα": {
+        "icon": "tabler:body-scan",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τάξις": {
+        "icon": "tabler:scan-position",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ταπεινόω": {
+        "icon": "mdi:humble-bundle",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τεσσαράκοντα": {
+        "icon": "tabler:input-check",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τιμωρία": {
+        "icon": "tabler:hammer-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τοῖχος": {
+        "icon": "tabler:wall-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τριάκοντα": {
+        "icon": "tabler:input-spark",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "τροφή": {
+        "icon": "mdi:food-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "φάσις": {
+        "icon": "tabler:report-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "φθορά": {
+        "icon": "mdi:bomb-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "φωνή": {
+        "icon": "tabler:address-book-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "φῶς": {
+        "icon": "tabler:git-compare",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "χίλιοι": {
+        "icon": "tabler:input-x",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "χιλιάς": {
+        "icon": "tabler:abacus-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀγνοέω": {
+        "icon": "game-icons:logic-gate-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀδίστακτος": {
+        "icon": "tabler:anchor-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀθάνατος": {
+        "icon": "tabler:infinity-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀθανασία": {
+        "icon": "tabler:file-infinity",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀκίνητος": {
+        "icon": "ph:not-member-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀκολουθία": {
+        "icon": "tabler:sort-9-0",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀλήθεια": {
+        "icon": "mdi:file-star-four-points",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀνέχω": {
+        "icon": "tabler:hourglass-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀπέρχομαι": {
+        "icon": "mdi:pokemon-go",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀπαιτέω": {
+        "icon": "mdi:google-my-business",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀπολαμβάνω": {
+        "icon": "tabler:http-get",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἀσθενέω": {
+        "icon": "tabler:face-mask-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἁμαρτία": {
+        "icon": "mdi:math-sin",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἁρμόζω": {
+        "icon": "mdi:google-fit",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἄκανθα": {
+        "icon": "tabler:cactus-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἄν": {
+        "icon": "mdi:file-word",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἄρτι": {
+        "icon": "mdi:alarm-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἄρχων": {
+        "icon": "mdi:page-first",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἅγιος": {
+        "icon": "tabler:sparkles-2-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐκπορεύομαι": {
+        "icon": "tabler:door-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐκτείνω": {
+        "icon": "mdi:stretch-to-page",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐμβάλλω": {
+        "icon": "mdi:cast-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐμός": {
+        "icon": "tabler:brand-my-oppo",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐνθάδε": {
+        "icon": "mdi:select-place",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐνώπιος": {
+        "icon": "mdi:table-row-plus-before",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐπίτροπος": {
+        "icon": "tabler:brand-guardian",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐπιζητέω": {
+        "icon": "mdi:table-row-plus-after",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἐρωτάω": {
+        "icon": "ph:git-pull-request-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἑνότης": {
+        "icon": "tabler:brand-unity",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἔναντι": {
+        "icon": "mdi:table-column-plus-before",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἡμᾶς": {
+        "icon": "tabler:brand-among-us",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἡμῖν": {
+        "icon": "mdi:power-socket-us",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἰσχύς": {
+        "icon": "mdi:wifi-strength-3",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ἵνα": {
+        "icon": "mdi:file-compare",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ὅλως": {
+        "icon": "ph:not-equals-light",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ὅρασις": {
+        "icon": "game-icons:sight-disabled",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ὑπερέχω": {
+        "icon": "mdi:file-excel",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ῥήγνυμι": {
+        "icon": "tabler:page-break",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
       }
     },
     "latin": {
@@ -3838,6 +5005,656 @@
         "icon": "ph:not-subset-of-bold",
         "verdict": "wrong",
         "reason": "規則判定：命中理由是功能詞或單字母（of／to／at／i／not…），圖不是為這個意思挑的。頭尾各抽 132 張看過樣張，無例外"
+      },
+      "eximius, eximia, eximium": {
+        "icon": "game-icons:select",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "accipio, accipere, accepi, acceptus": {
+        "icon": "tabler:http-get",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "adiuuo, adiuuare, adiuui, adiutus": {
+        "icon": "tabler:help-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "aequitas, aequitatis": {
+        "icon": "game-icons:tarot-11-justice",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "angelus, angeli, m.": {
+        "icon": "ph:messenger-logo",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "antea": {
+        "icon": "mdi:table-row-plus-before",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "augustinus, augustini": {
+        "icon": "mdi:pac-man",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "auris, auris, aurium, f.": {
+        "icon": "tabler:ear-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "cibus, cibi, m.": {
+        "icon": "mdi:food-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "coetus, coetus": {
+        "icon": "tabler:assembly-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "comes, comitis": {
+        "icon": "game-icons:companion-cube",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "commodo, commodare, commodaui, commodatus": {
+        "icon": "tabler:http-put",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "comparo, comparare, comparaui, comparatus": {
+        "icon": "tabler:http-get-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "confirmo, confirmare, confirmaui, confirmatus": {
+        "icon": "tabler:anchor-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "congruo, congruere, congrui": {
+        "icon": "mdi:fit-to-screen",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "congruus, congrua, congruum": {
+        "icon": "mdi:fit-to-page-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "consto, constare, constiti, constatus": {
+        "icon": "mdi:google-fit",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "consuesco, consuescere, consueui, consuetus": {
+        "icon": "mdi:repeat-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "consummo, consummare, consummaui, consummatus": {
+        "icon": "tabler:playlist-add",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "conuenienter": {
+        "icon": "tabler:puzzle-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "conuictus, conuictus": {
+        "icon": "tabler:friends-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "corpus, corporis, n.": {
+        "icon": "tabler:body-scan",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "cottidie": {
+        "icon": "mdi:view-day-outline",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "creo, creare, creaui, creatus": {
+        "icon": "tabler:hammer-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "crimen, criminis, n.": {
+        "icon": "mdi:math-sin",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "debitum, debiti, n.": {
+        "icon": "tabler:receipt-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "decretum, decreti": {
+        "icon": "tabler:brand-doctrine",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "describo, describere, descripsi, descriptus": {
+        "icon": "tabler:writing-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "designo, designare, designaui, designatus": {
+        "icon": "tabler:http-trace",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "dimitto, dimittere, dimisi, dimissus": {
+        "icon": "mdi:cube-send",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "diuinitas, diuinitatis, f.": {
+        "icon": "tabler:sparkles-2-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "dono, donare, donaui, donatus": {
+        "icon": "mdi:gift-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "duco, ducere, duxi, ductus": {
+        "icon": "mdi:compass-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "effusio, effusionis, f.": {
+        "icon": "tabler:droplet-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "eiusmodi": {
+        "icon": "tabler:sort-0-9",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "equidem": {
+        "icon": "tabler:brand-my-oppo",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "eucharisticus, -a, -um": {
+        "icon": "tabler:bread-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "exinde": {
+        "icon": "mdi:table-column-plus-after",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "firmitas, firmitatis": {
+        "icon": "mdi:wifi-strength-1",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "fortitudo, fortitudinis": {
+        "icon": "mdi:wifi-strength-2",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "frango, frangere, fregi, fractus": {
+        "icon": "tabler:page-break",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "fundamentum, fundamenti": {
+        "icon": "tabler:building-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "habito, habitare, habitaui, habitatus": {
+        "icon": "tabler:live-view",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "haud": {
+        "icon": "mdi:code-not-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "hic": {
+        "icon": "mdi:select-place",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "honor, honoris, m.": {
+        "icon": "tabler:crown-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "humilis, humile": {
+        "icon": "mdi:humble-bundle",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "immo": {
+        "icon": "tabler:no-copyright",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "immortalis, immortalis, immortale": {
+        "icon": "ph:not-equals-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "imperator, imperatoris, m.": {
+        "icon": "game-icons:tarot-04-the-emperor",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "impero, imperare, imperaui, imperatus": {
+        "icon": "tabler:command-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "inter": {
+        "icon": "tabler:brand-among-us",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "inuenio, inuenire, inueni, inuentus": {
+        "icon": "mdi:file-find",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "laetor, laetari, —, laetatus sum": {
+        "icon": "tabler:face-mask-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "lego, legere, legi, lectus": {
+        "icon": "mdi:car-select",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "lumen, luminis, n.": {
+        "icon": "tabler:bulb-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "maestus, -a, -um": {
+        "icon": "tabler:file-sad",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "malus, -a, -um": {
+        "icon": "game-icons:bad-gnome",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "mando, mandare, manducaui, manducatus eat": {
+        "icon": "ph:git-fork",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "membrum, membri": {
+        "icon": "ph:not-member-of-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "meus, -a, -um": {
+        "icon": "mdi:google-my-business",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "mors, mortis, mortium, f.": {
+        "icon": "game-icons:death-note",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "multiplex, multiplicis": {
+        "icon": "mdi:relation-one-or-many-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "multus, -a, -um": {
+        "icon": "mdi:relation-many-to-one",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "mutuo, mutuare, mutuaui, mutuatus": {
+        "icon": "tabler:exchange-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nascor, nasci, —, natus": {
+        "icon": "tabler:sum-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "natio, nationis, f.": {
+        "icon": "tabler:globe-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nec": {
+        "icon": "tabler:logic-nor",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nemo, nullius, nemini, neminem, nullo/nulla": {
+        "icon": "tabler:no-derivatives",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nihil": {
+        "icon": "ph:not-member-of-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nihilominus": {
+        "icon": "mdi:set-none",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nisi": {
+        "icon": "ph:not-equals-fill",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "noli/nolite": {
+        "icon": "game-icons:logic-gate-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nolo, nolle, nolui": {
+        "icon": "tabler:math-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nondum": {
+        "icon": "mdi:not-equal-variant",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nonne": {
+        "icon": "ph:not-equals-thin",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nonnumquam": {
+        "icon": "mdi:alarm-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nullatenus": {
+        "icon": "tabler:logic-not",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "nullus, -a, -um": {
+        "icon": "mdi:not-equal",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "numquid": {
+        "icon": "ph:not-superset-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "occupo, occupare, occupaui, occupatus": {
+        "icon": "tabler:capture-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "omnino": {
+        "icon": "tabler:brand-adobe-after-effects",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "oportet, oportere, oportuit, —": {
+        "icon": "ph:superset-proper-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "opportunus, opportuna, opportunum": {
+        "icon": "tabler:brand-google-fit",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "opto, optare, optaui, optatus": {
+        "icon": "mdi:select-all",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "patientia, patientiae": {
+        "icon": "tabler:hourglass-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "patria, patriae, f.": {
+        "icon": "tabler:brand-react-native",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "pauper, gen., pauperis": {
+        "icon": "ph:not-equals-duotone",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "pentecoste, pentecostes": {
+        "icon": "mdi:view-day",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "perago, peragere, peregi, peractus": {
+        "icon": "mdi:bag-carry-on-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "perenniter": {
+        "icon": "tabler:infinity-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "permaneo, permanere, permansi, permansus": {
+        "icon": "tabler:file-infinity",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "plane": {
+        "icon": "mdi:flashlight-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "post": {
+        "icon": "mdi:table-row-plus-after",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "postulatum, postulati": {
+        "icon": "ph:git-pull-request",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "potens (gen., potentis)": {
+        "icon": "tabler:file-power",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "potentia, potentiae, f.": {
+        "icon": "mdi:power-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "prae": {
+        "icon": "mdi:table-column-plus-before",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "praeeo, praeire, praeiui (praeii), praeitus": {
+        "icon": "mdi:pokemon-go",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "praesentia, praesentiae": {
+        "icon": "tabler:file-time",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "principatus, principatus": {
+        "icon": "mdi:page-first",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "priuatus, priuata, priuatum": {
+        "icon": "mdi:bag-personal-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "prodeo, prodire, prodiui (prodii), proditus": {
+        "icon": "mdi:go-kart",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "proiicio, proiicere, proiect, proiectus": {
+        "icon": "mdi:cast-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "prospectus, prospectus": {
+        "icon": "tabler:view-360",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "quin": {
+        "icon": "ph:not-member-of-bold",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "quominus": {
+        "icon": "ph:not-equals",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "quotquot": {
+        "icon": "tabler:relation-one-to-many-filled",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "rectus, recta, rectum": {
+        "icon": "ph:subset-proper-of",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "redigo, redigere, redegi, redactus": {
+        "icon": "mdi:google-drive",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "remitto, remittere, remisi, remissus": {
+        "icon": "tabler:send-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "sabaoth": {
+        "icon": "game-icons:meeple-army",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "saltem": {
+        "icon": "mdi:set-all",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "seruo, seruare, seruaui, seruatus": {
+        "icon": "mdi:google-keep",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "significo, significare, significaui, significatus": {
+        "icon": "mdi:label-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "solemnis, solemne": {
+        "icon": "mdi:dock-top",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "soluo, soluere, solui, solutus": {
+        "icon": "mdi:crop-free",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "subdo, subdere, subdidi, subditus": {
+        "icon": "tabler:http-put-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "submitto, submittere, submisi, submissus": {
+        "icon": "tabler:math-lower",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "tendo, tendere, tetendi, tentus [tensus]": {
+        "icon": "mdi:stretch-to-page",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "tot": {
+        "icon": "mdi:relation-one-to-one-or-many",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "tum": {
+        "icon": "mdi:page-next",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uarius, uaria, uarium": {
+        "icon": "mdi:human-baby-changing-table",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uerbum, uerbi, n.": {
+        "icon": "mdi:file-word",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ueritas, ueritatis, f.": {
+        "icon": "mdi:file-star-four-points",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uictoria, uictoriae, f.": {
+        "icon": "tabler:trophy-off",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uis, uis": {
+        "icon": "mdi:wifi-strength-3",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uisus, uisus": {
+        "icon": "game-icons:sight-disabled",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "uolo, uelle, uolui, —": {
+        "icon": "tabler:brand-wish",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "ut": {
+        "icon": "ph:not-equals-light",
+        "verdict": "wrong",
+        "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
       }
     }
   }
