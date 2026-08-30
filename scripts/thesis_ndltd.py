@@ -63,17 +63,21 @@ for (const [q, note] of queries) {
     for (let a = 0; a < 2; a++) {
       try {
         await p.goto('https://ndltd.ncl.edu.tw/', { waitUntil: 'domcontentloaded', timeout: 90000 })
+        // 首頁是一段 JS 轉址，等它跳完才讀得到真正的頁面
+        await p.waitForTimeout(3000)
+        // 驗證碼頁沒有 #ALLFIELD_不限欄位，所以要搶在 waitForSelector 之前認，
+        // 否則只會拿到一句選擇器逾時，看不出真正的原因。
+        if ((await p.locator('body').innerText()).includes('驗證碼')) {
+          throw new Error('CAPTCHA：站方因流量對本 IP 掛出驗證碼，需等冷卻後再跑')
+        }
         await p.waitForSelector('#ALLFIELD_不限欄位', { state: 'attached', timeout: 30000 })
         break
-      } catch (e) { if (a) throw e; await p.waitForTimeout(8000) }
+      } catch (e) {
+        if (a || String(e).includes('CAPTCHA')) throw e   // 驗證碼不必重試
+        await p.waitForTimeout(8000)
+      }
     }
     await p.waitForTimeout(3000)
-    // 站方的驗證碼是「流量觸發」的（依連線 IP），不是常態掛著：抓密了就跳出來，
-    // 停一段時間才會退掉。不先認出來的話，只會看到 #ALLFIELD 選擇器逾時，
-    // 誤以為是版面改版。⚠️ 不要繞過它——那是站方為維持服務品質設的。
-    if ((await p.locator('body').innerText()).includes('驗證碼')) {
-      throw new Error('CAPTCHA：站方因流量對本 IP 掛出驗證碼，需等冷卻後再跑')
-    }
     await p.check('#ALLFIELD_不限欄位', { force: true })          // 坑 1：不勾就只查論文名稱
     await p.fill('input[name="qs0"]', q)          // 坑 2：模式維持預設「精準」
     await Promise.all([
@@ -97,8 +101,11 @@ for (const [q, note] of queries) {
       await p.waitForTimeout(4000)
       page++
     }
-    out.push({ query: q, note, text, pages: page })
+    // 站方自報的總筆數要一起帶回來：光看翻了幾頁判斷不出有沒有截斷
+    // （分頁鍵有時會在同一頁上打轉，翻滿 8 頁卻只拿到個位數筆）。
     const m = text.match(/檢索結果共\s*([\d,]+)\s*筆/)
+    const total = m ? parseInt(m[1].replace(/,/g, ''), 10) : 0
+    out.push({ query: q, note, text, pages: page, total })
     console.error(`  ${q}: 站上共 ${m ? m[1] : '?'} 筆，翻 ${page} 頁`)
   } catch (e) {
     out.push({ query: q, note, error: String(e).slice(0, 120), text: '' })
@@ -183,16 +190,28 @@ def main():
         if not r.stdout.strip():
             print(f"  {one[0]}：沒有回傳，跳過", flush=True)
             continue
+        stop = False
         for g in json.loads(r.stdout):
             if g.get("error"):
                 print(f"  {g['query']}：抓取失敗，不寫入（{g['error'][:80]}）", flush=True)
+                # 撞到驗證碼就整輪收手。站方是按 IP 計量的，剩下的組照跑只會一路撞、
+                # 一路加重同一個 IP 的量，冷卻反而更久（踩過一次，13 組全撞完才停）。
+                stop = stop or "CAPTCHA" in g["error"]
                 continue
             items = parse(g.get("text", ""))
             data = [d for d in data if d["query"] != g["query"]]
+            total = g.get("total") or 0
+            # 截斷與否以「站方自報總數 vs 實際取回」為準，不看翻了幾頁。
             data.append({"query": g["query"], "note": g["note"], "count": len(items),
-                         "truncated": g.get("pages", 0) > 8, "items": items})
-            print(f"  {g['query']}：取得 {len(items)} 筆", flush=True)
+                         "total": total, "truncated": bool(total) and total > len(items),
+                         "items": items})
+            print(f"  {g['query']}：取得 {len(items)} 筆"
+                  f"{f'（站上共 {total} 筆）' if total else ''}", flush=True)
         OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        if stop:
+            print("")
+            print("站方已對本 IP 掛出驗證碼，停止本輪；等冷卻後再下一次即可續跑。", flush=True)
+            break
     print(f"{len(data)} 組檢索 / {sum(d['count'] for d in data)} 筆學位論文 → {OUT}")
 
 

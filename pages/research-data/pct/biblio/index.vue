@@ -56,6 +56,7 @@
           <div class="flex items-baseline gap-2 mb-2">
             <h2 class="text-sm font-bold text-gray-900">{{ g.query }}</h2>
             <span class="text-xs text-gray-400">{{ g.note }}</span>
+            <span v-if="g.truncated && g.total" class="text-[11px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">已達抓取上限，站上共 {{ g.total }} 筆</span>
             <span class="ml-auto text-xs text-gray-400">{{ g.count }} 筆</span>
           </div>
           <div class="bg-white rounded-xl border border-gray-100 divide-y divide-gray-50">
@@ -131,7 +132,7 @@ interface BiblioItem { kind: string; title: string; author: string; source: stri
 interface BiblioGroup { query: string; note: string; url: string; count: number; truncated?: boolean; items: BiblioItem[] }
 interface TmRow { uniID: string; title: string; accessionNo: string; url: string; toc?: string[]; imageCount?: number }
 interface NdltdItem { title: string; author: string; advisor: string; school: string; dept: string; year: string; degree: string; fulltext: boolean }
-interface NdltdGroup { query: string; note: string; count: number; items: NdltdItem[] }
+interface NdltdGroup { query: string; note: string; count: number; total?: number; truncated?: boolean; items: NdltdItem[] }
 
 const biblio = ref<BiblioGroup[]>([]);
 const ndltd = ref<NdltdGroup[]>([]);

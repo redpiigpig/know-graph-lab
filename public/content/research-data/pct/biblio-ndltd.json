@@ -1,7 +1,7 @@
 [
  {
   "query": "王憲治 鄉土神學",
-  "note": "自訂",
+  "note": "第四章第四節",
   "count": 28,
   "items": [
    {
@@ -311,6 +311,102 @@
     "year": "88",
     "degree": "碩士",
     "fulltext": true
+   }
+  ]
+ },
+ {
+  "query": "無教會主義",
+  "note": "第二章日本線",
+  "count": 8,
+  "truncated": true,
+  "items": [
+   {
+    "kind": "學位論文",
+    "title": "日本受容基督教之研究─以無教會主義為中心─",
+    "author": "張秀羽",
+    "advisor": "何思慎",
+    "school": "輔仁大學",
+    "dept": "日本語文學系",
+    "year": "100",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "日本統治的另類殖民遺產：臺灣聖教會之發展（1910s-1950s）",
+    "author": "劉悅音",
+    "advisor": "林欣宜",
+    "school": "國立臺灣師範大學",
+    "dept": "歷史學系",
+    "year": "113",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "「權力」中譜寫「權利」之聲： 探討日治時期林獻堂的音樂贊助與公共領域之建構",
+    "author": "陳郁莛",
+    "advisor": "山內文登",
+    "school": "國立臺灣大學",
+    "dept": "音樂學研究所",
+    "year": "111",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "青少年宣教策略的研究與建構：台南市基督教協進會舉辦之青少年【Shine營會】的分析與神學探討",
+    "author": "吳信達",
+    "advisor": "黃伯和",
+    "school": "長榮大學",
+    "dept": "神學系",
+    "year": "105",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "內村鑑三思想研究—近代知識分子的信仰問題",
+    "author": "龔婉宜",
+    "advisor": "太田登",
+    "school": "國立臺灣大學",
+    "dept": "日本語文學研究所",
+    "year": "101",
+    "degree": "碩士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "日治時期台灣知識份子對於「世界主義」的實踐：以基督教受容為中心",
+    "author": "鄧慧恩",
+    "advisor": "呂興昌",
+    "school": "國立成功大學",
+    "dept": "台灣文學系碩博士班",
+    "year": "99",
+    "degree": "博士",
+    "fulltext": false
+   },
+   {
+    "kind": "學位論文",
+    "title": "日治末期臺灣基督徒「傳道報國」認同之研究（1937-1945）",
+    "author": "盧啟明",
+    "advisor": "吳文星",
+    "school": "國立臺灣師範大學",
+    "dept": "歷史學系",
+    "year": "99",
+    "degree": "碩士",
+    "fulltext": true
+   },
+   {
+    "kind": "學位論文",
+    "title": "內村鑑三與基督新教",
+    "author": "陳智為",
+    "advisor": "李永熾 ／---",
+    "school": "國立臺灣大學",
+    "dept": "歷史學系",
+    "year": "86",
+    "degree": "碩士",
+    "fulltext": false
    }
   ]
  }
