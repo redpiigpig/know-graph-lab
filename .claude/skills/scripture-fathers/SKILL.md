@@ -726,6 +726,62 @@ ACCS 已轉軌至 [[scripture-accs]]（嵌進聖經逐節閱讀器，不再整�
 
 ---
 
+## 第三欄原文：中文 / 英文 / 拉丁‧希臘（2026-08-30 起）
+
+教父卷本來是兩欄——`content` 繁中、`source_text` Schaff 英譯。補第三欄原典之後
+就是使用者要的「中文 英文 原文」三欄。reader 本來就吃 N 欄
+（`pages/fathers/[id].vue` 的 `v-for="lang in parallelColumns.langs"`），資料補上去
+就會長出來，不必動前端。
+
+```bash
+python scripts/fathers_add_original.py --work augustine-confessions           # 只驗不寫
+python scripts/fathers_add_original.py --work augustine-confessions --apply   # 寫回 JSONL
+python scripts/upload_chunks_to_r2.py upload --id <ebook_id> --force          # 只重傳這一本
+```
+
+新增一部著作＝在 `scripts/fathers_add_original.py` 的 `WORKS` 登一筆：站上哪一本
+ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權威值，用來判站上缺不缺章，
+不可以拿站上的章數回填）。純函式核心在 `scripts/fathers_original.py`，測試在
+`scripts/tests/test_fathers_original.py`。
+
+### 對齊靠古典編號，不靠語意
+
+The Latin Library 的行標 `1.11.17` ＝ liber.caput.paragraphus，而站上的中英譯段落
+開頭正好帶著同一組**節號**（「17. 我自幼就聽聞了…」／「17. Even as a boy I had
+heard…」）。那是唯一可靠的鍵。
+
+🚨 **只按章對會錯**。一章十節的拉丁若整團塞給該章第一段，之後整欄往下錯開，而
+畫面上完全看不出來。首例《懺悔錄》按節對齊命中 395/395。
+
+### 三道防線（都是在擋「看起來成功的失敗」）
+
+1. **覆蓋率閘** —— 站上章節 vs 原典章節逐卷比。首跑就抓到站上《懺悔錄》卷一只到
+   第 18 章、**第 19–20 章中英文都不存在**。書打得開、讀起來順，兩章卻不見了。
+2. **對不上就留空，絕不往下順推。** 順推一次，之後整欄全錯。
+3. **頁尾導覽列過濾**（`SITE_CHROME`）—— The Latin Library 每頁末尾的站台連結位在
+   最後一個段標「之後」，不擋就會被接到該卷最後一節的尾巴，13 卷全中。
+
+### 對照欄的等段數契約
+
+`zipParallel` 按索引 zip，而 reader 重建欄位時 `.filter(Boolean)` 會丟掉空白段。所以
+只填部分位置的欄位，空位必須放 `BLANK_PARAGRAPH`（U+200B，見
+`lib/multilang-sources.ts`）——普通空字串與 NBSP 都會被 trim 掉，一被丟掉，之後每
+一列都上移。
+
+### ⚠ 既有問題：中英兩欄本身有 10% 嚴重錯位
+
+補第三欄時量出來的：全教父 4,611 段裡，**中英正文段數不符 3,241 段（70%），相差一
+倍以上 451 段（10%）**。根因是英譯那側常有**沒有配對的註釋分隔線**——一條
+`———…`（15 字以上）就把它之後的整段正文都歸成註釋，正文憑空少掉。例：《懺悔錄》
+卷七第 21 章，中文 24 段、英文只剩 3 段。
+
+最嚴重的幾冊：Chrysostom 使徒行傳講道集 34%、奧古斯丁詩篇釋義 27%、Gregory
+Thaumaturgus 卷 27%、Chrysostom 論司鐸職分 24%。
+
+節號同樣可以拿來修這一側（英譯段落也帶 `17.`），但那是改既有資料，要另開一輪。
+
+---
+
 ## 跟 [[ebook-translate]] 的分工
 
 | 範圍 | 歸屬 |
@@ -748,4 +804,5 @@ ACCS 已轉軌至 [[scripture-accs]]（嵌進聖經逐節閱讀器，不再整�
 - [[ebook-pipeline]] — parse/OCR/standardize 上游
 - [[translation-glossary]] — 詞庫工具
 - [book-structure-spec.md](../ebook-pipeline/book-structure-spec.md) — chunk schema + R/T 規則完整對照
+- [[scripture-canon]] — 《基督教大藏經》教父卷的逐卷連結由 `scripts/dazangjing_link_fathers.py` 解析
 - [glossary.md](../ebook-translate/glossary.md) — 教父人名／聖經書卷／神學術語 markdown 表（DB 之外的補充）
