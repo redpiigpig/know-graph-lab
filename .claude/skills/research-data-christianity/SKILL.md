@@ -51,9 +51,10 @@ WordPress 且 REST API 未關，逐篇連全文一起給，最省事。以「年
 以「運動」而非機構為單位。日文論著保留原題（`titleOriginal`）另附中譯，`--lang ja`。支援 .docx（宣言、創刊宗旨這類原生 Word 檔，走 zipfile 讀 document.xml，不必 OCR）。
 🚨 廖本恩那兩篇論文在 `G:\公事\無境界者雜誌資訊\無教會者雙月刊\`，**不在** `資料\無境界者\`（那裡只有雜誌文章 docx）。
 
-## 到館前要用的兩份清單 `/research-data/pct/biblio`
+## 到館前要用的三份清單 `/research-data/pct/biblio`
 
-三個分頁：華藝期刊書目、臺灣博碩士論文、臺灣記憶館藏。都只收書目，不取全文。
+三個分頁：華藝期刊書目（1,728 筆）、臺灣博碩士論文、臺灣記憶館藏（444 件，434 件附目次共 12,821 條）。
+都只收書目，不取全文。
 
 **華藝** `scripts/biblio_search.py`
 搜尋是把一整包 JSON 塞進網址 queryString，結果頁 JS 渲染，故用 playwright。
