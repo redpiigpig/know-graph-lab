@@ -84,6 +84,43 @@ def test_zh_pin_segs_reads_number_from_head(monkeypatch):
     assert ts.zh_pin_segs("TY") == {1: "A", 2: "B"}
 
 
+def test_zh_pin_segs_prefers_head_number_over_div_n():
+    """🚨 CBETA 的 n 有時是**文件順序流水號**而非品號。
+
+    寶性論 T1611 的偈本在卷一（品一～十一），釋論在卷二～四重出品二／五／六，
+    那三個節點的 n 是 12／15／16。先讀 n 就會憑空多出品 12／15／16，
+    漢品數從 11 變 14 —— 而 --audit 只會報「品數不合」，看不出是幻影品。
+    """
+    tpp._TOC_CACHE["TZ"] = [
+        {"i": 0, "depth": 0, "type": "pin", "head": "教化品第一",
+         "n": "1", "parent": -1, "uid": "P1", "juan": 1},
+        {"i": 1, "depth": 0, "type": "pin", "head": "究竟一乘寶性論佛寶品第二",
+         "n": "2", "parent": -1, "uid": "P2", "juan": 1},
+        # 卷二重出品二，n 卻是 12
+        {"i": 2, "depth": 0, "type": "pin", "head": "佛寶品第二",
+         "n": "12", "parent": -1, "uid": "P2b", "juan": 2},
+    ]
+    out = ts.zh_pin_segs("TZ")
+    assert out == {1: "P1", 2: "P2"}, "重出的品要併回原品號，不可另立新品"
+    assert 12 not in out, "n=12 是流水號，不是品十二"
+
+
+def test_zh_pin_segs_subdivided_pin_keeps_real_number():
+    """「述求品第十二之一／之二」的 n 是「之幾」（1、2），不是品號。
+    先讀 n 會讓品十二的落點掛到品一去（setdefault 撞到既有鍵而靜默失敗）。"""
+    tpp._TOC_CACHE["TW"] = [
+        {"i": 0, "depth": 0, "type": "pin", "head": "緣起品第一",
+         "n": "1", "parent": -1, "uid": "Q1", "juan": 1},
+        {"i": 1, "depth": 0, "type": "pin", "head": "大乘莊嚴經論述求品第十二之一",
+         "n": "1", "parent": -1, "uid": "Q12", "juan": 5},
+        {"i": 2, "depth": 0, "type": "pin", "head": "述求品第十二之二",
+         "n": "2", "parent": -1, "uid": "Q12b", "juan": 6},
+    ]
+    out = ts.zh_pin_segs("TW")
+    assert out[1] == "Q1"
+    assert out[12] == "Q12", "品十二要指向「之一」，不是掉進品一或品二"
+
+
 # ── 🚨 對齊閘 ───────────────────────────────────────────────
 def test_gate_blocks_mismatched_chapter_counts(tmp_path, monkeypatch):
     """梵 3 品 vs 漢 5 品 → 必須擋下，不可照順序對前三品。"""
@@ -147,6 +184,46 @@ def test_vimalakirti_map_is_two_merges_not_an_offset():
     assert cmap[3] == 3 and cmap[4] == 5, "梵 4 應對到漢 5（漢 4 併在梵 3 裡）"
     assert cmap[11] == 12 and cmap[12] == 13, "梵 12 對到漢 13（漢 14 併在其中）"
     assert 4 not in cmap.values() and 14 not in cmap.values()
+
+
+def test_madhyantavibhaga_map_is_one_merge_of_three():
+    """辯中邊論梵 5 章 vs 玄奘 7 品。差異是**一章含三品**，不是位移。
+
+    證據在梵本第四章自己的尾題：
+      Pratipakṣabhāvanā·avasthā·phala·paricchedaścaturthaḥ
+      ＝ 對治修習（漢 4）＋分位（漢 5）＋果（漢 6）
+    照順序對會讓梵 5 無上乘掛到漢 5 分位品去 —— 頁面照樣正常。
+    """
+    e = next(x for x in ts.REGISTRY if x["work"] == "T1600")
+    cmap = e["chapter_map"]
+    assert len(cmap) == 5
+    assert cmap[4] == 4, "梵 4 掛在該三品的第一品（漢 4 辯修對治品）"
+    assert cmap[5] == 7, "梵 5 無上乘 → 漢 7 辯無上乘品，不是漢 5"
+    assert 5 not in cmap.values() and 6 not in cmap.values(),         "漢 5 分位、漢 6 得果併在梵 4 裡，沒有獨立梵章可掛"
+
+
+def test_ratnagotravibhaga_map_and_heading_regex():
+    """寶性論梵 5 章 vs 漢 11 品。兩件事都要鎖住：
+
+    ① 章標題拼寫不一致（「2. dvitīya pariccheda」少了尾巴的 ḥ），
+       regex 若把 `paricchedaḥ` 寫死，第二、三章會**整章抓不到**、
+       內容默默併進第一章，梵本只解出 3 章。
+    ② 梵 1 如來藏章含漢 1–7（開頭即七金剛句＝漢 1 教化品），
+       其後 bodhi／guṇa／kṛtyakriyā／anuśaṃsā 逐章對漢 8–11。
+    """
+    import re as _re
+    e = next(x for x in ts.REGISTRY if x["work"] == "T1611")
+    pat = _re.compile(e["siglum"])
+    for line, want in [("1. prathamaḥ paricchedaḥ", 1),
+                       ("2. dvitīya pariccheda", 2),      # 少 ḥ，一樣要抓到
+                       ("3. tṛtīya pariccheda", 3),
+                       ("4. caturthaḥ paricchedaḥ", 4),
+                       ("5. paṃcamaḥ paricchedaḥ", 5)]:
+        m = pat.search(line)
+        assert m and int(m.group(1)) == want, line
+    cmap = e["chapter_map"]
+    assert cmap == {1: 1, 2: 8, 3: 9, 4: 10, 5: 11}
+    assert sorted(cmap.values())[1] == 8, "梵 2 菩提章要跳到漢 8，不是接著漢 2"
 
 
 def test_registry_entries_are_wellformed():

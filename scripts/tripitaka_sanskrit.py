@@ -83,9 +83,17 @@ REGISTRY: list[dict] = [
      "zh": "方廣大莊嚴經", "sa": "Lalitavistara", "siglum": "Lal", "form": "chapter"},
 
     # ── 瑜伽部・論集部（頌號式，梵藏漢共通）──
+    # 梵 5 章 vs 玄奘 7 品。差在**一章含三品**，不是位移 ——
+    # 梵本第四章的尾題自己就把三件事寫全了：
+    #   「Pratipakṣabhāvanā·avasthā·phala·paricchedaścaturthaḥ」
+    #     ＝ 對治修習（漢 4 辯修對治品）＋分位（漢 5 辯修分位品）＋果（漢 6 辯得果品）
+    # 其餘四章的尾題與漢品名逐一對得上：lakṣaṇa 相／āvaraṇa 障／tattva 真實／
+    # yānānuttarya 無上乘。依尾題判定，非憑記憶也非照順序推。
     {"file": "sa_maitreya-madhyAntavibhAgakArikA", "work": "T1600",
      "zh": "辯中邊論", "sa": "Madhyāntavibhāgakārikā", "siglum": "Mvk",
-     "form": "chapter.verse"},
+     "form": "chapter.verse",
+     "chapter_map": {1: 1, 2: 2, 3: 3, 4: 4, 5: 7},
+     "note": "梵 5 章、漢 7 品；梵 4 含漢 4+5+6（尾題即作 對治修習‧分位‧果），梵 5 對漢 7"},
     {"file": "sa_asaGga-mahAyAnasUtrAlaMkAra", "work": "T1604",
      "zh": "大乘莊嚴經論", "sa": "Mahāyānasūtrālaṃkāra", "siglum": "Msa",
      "form": "chapter.verse"},
@@ -97,9 +105,16 @@ REGISTRY: list[dict] = [
     {"file": "sa_dazabhUmikasUtra", "work": "T0286",
      "zh": "十住經", "sa": "Daśabhūmikasūtra",
      "siglum": r"(?:^|// )(\d+) \w+ nāma \w+ bhūmiḥ", "form": "regex"},
+    # 🚨 章標題的拼寫不一致：1／4／5 作「4. caturthaḥ paricchedaḥ」，
+    # 2／3 卻作「2. dvitīya pariccheda」（序數與 pariccheda 都少了尾巴的 ḥ）。
+    # 原本的 regex 硬要 `paricchedaḥ`，於是第二、三章的標題整個抓不到，
+    # 內容被默默併進第一章 —— 梵本因此只解出 3 章（實為 5 章），
+    # 而 --audit 只報「品數不合」，看不出是漏抓標題。故尾字不要寫死。
     {"file": "sa_ratnagotravibhAga", "work": "T1611",
      "zh": "究竟一乘寶性論", "sa": "Ratnagotravibhāga",
-     "siglum": r"(\d+)\. \w+ paricchedaḥ", "form": "regex"},
+     "siglum": r"^(\d+)\.\s+\w+\s+pariccheda", "form": "regex",
+     "chapter_map": {1: 1, 2: 8, 3: 9, 4: 10, 5: 11},
+     "note": "梵 5 章、漢 11 品；梵 1 如來藏章含漢 1–7，其後梵 2–5 逐章對漢 8–11"},
 
     # ── 般若部 ──
     {"file": "sa_aSTasAhasrikA-prajJApAramitA", "work": "T0224",
@@ -244,16 +259,20 @@ def zh_pin_segs(work_id: str) -> dict[int, str]:
             continue
         if t == "" and not re.search(r"[品分會]第|[品分會]$", head):
             continue
-        n = node.get("n")
-        if n and str(n).isdigit():
-            out.setdefault(int(n), node["uid"])
-            continue
-        # 品號寫在標題（「觀因緣品第一」）時，取「第X」的漢數字
+        # 🚨 標題的「第X」優先於 div 的 n —— CBETA 的 n 有時是**文件順序的流水號**
+        # 而非品號。寶性論 T1611 卷 2–4 重出品二／五／六（偈本在卷一、釋論在後三卷），
+        # 那三個節點的 n 是 12／15／16；先讀 n 就會多出三個根本不存在的品，
+        # 漢品數從 11 變 14。大乘莊嚴經論 T1604 的「述求品第十二之一／之二」
+        # 同理，n 是「之幾」的序號（1、2、3）不是品號。
         m = re.search(r"第([一二三四五六七八九十百〇零]+)", head)
         if m:
             no = tpp.cjk_number(m.group(1))
             if no:
                 out.setdefault(no, node["uid"])
+                continue
+        n = node.get("n")
+        if n and str(n).isdigit():
+            out.setdefault(int(n), node["uid"])
     return out
 
 
@@ -354,6 +373,11 @@ def cmd_build(only: str | None):
             head = first_segment(e["work"])
             zh = {k: head for k in cmap} if head else {}
 
+        # form=="regex" 時 siglum 欄放的是整條 regex，直接拿去組 uid 會寫出
+        # `(?:^|// )(\d+) \w+ nāma \w+ bhūmiḥ_1` 這種東西（十住經就是這樣存的）。
+        # uid 目前不顯示，但它是識別碼，不該塞一條正規式進去。
+        abbr = e["siglum"] if e["form"] in ("chapter", "chapter.verse") else e["work"]
+
         by_seg: dict[str, list] = {}
         for sa_no, zh_no in cmap.items():
             lines = sa.get(int(sa_no))
@@ -362,7 +386,7 @@ def cmd_build(only: str | None):
                 continue
             by_seg.setdefault(seg, []).append({
                 "lang": "sa",
-                "uid": f"{e['siglum']}_{sa_no}",
+                "uid": f"{abbr}_{sa_no}",
                 "ref": f"{e['sa']} {sa_no}",
                 "src": "site",          # 本站對齊：琥珀色，非學術定論
                 "partial": False,
