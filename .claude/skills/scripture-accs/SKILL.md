@@ -100,7 +100,153 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 接手清單（2026-08-22）
+## 🧭 接手清單（2026-08-30）
+
+**這一輪做完的事**：資料正確性大掃除（刪索引污染 1,425 列、併回被切開的引文 181 對、補回正文裡的署名 18 列）＋教父署名照詞庫全面統一 10,651 列＋英文版卷十二（耶利米書‧哀歌）的解析與入庫管線。DB 36,245 → **34,639 列**（減少是刪掉污染，不是掉資料）。
+
+### 🔴 正在跑／未完成：英文卷十二翻譯
+
+中文版沒有第 24-25 卷（耶利米書、哀歌），校園沒出、Drive 沒書源，`jer`/`lam` 在 DB 裡是 0 列。改用**圖書館既有的英文版卷十二**（`ACCS_Jeremiah_Lamentations.epub`，IVP 2009）自譯成繁中再入庫。
+
+```bash
+# 續傳（checkpoint 在 c:/tmp/accs_epub_zh_jer_lam.jsonl，逐則寫入可隨時中斷）
+python -X utf8 scripts/accs_ingest_epub.py --batch 8
+# 全部譯完後才上傳
+python -X utf8 scripts/accs_ingest_epub.py --upload
+```
+
+- 進度：**50 / 806 則**（2026-08-30 20:45）
+- 🚨 **慢的原因不是額度乾**：機器上同時有十幾個工作在搶同一批引擎池
+  （`ingest_lit_review` × 6、`ocr_with_gemini` × 2、`tripitaka_vernacular` × 2、
+  `panikkar_auto`、`plato_*`、`ct_forum`、`thesis_ndltd`、`fix_fathers_*`…），
+  每一路都在 503/429 退避。實測 37 小時只跑完 50 則。
+- 已改成**批次送**（`translate_batch()`，預設 8 則一次）把呼叫數從 1,612 降到約 200，
+  但 **2026-08-30 尚未驗證通過就交接了**。接手第一件事：跑
+  `--batch 8 --limit 16` 確認批次對齊沒問題，再全開。
+- 批次的護欄：每段帶 `<<編號>>`，回來驗編號集合；少一個、多一個或有空段就
+  **整批作廢改逐段**。寧可慢，不可把甲教父的話配到乙教父身上。
+- 值得考慮的替代解：先盤點哪些線其實在空轉（本輪就發現 ACCS OCR／SBE／jung／
+  philo 四條都是跑完的工作在重跑），關掉一批讓剩下的跑順，可能比繼續加批次有效。
+
+### 英文 EPUB 這條線的三個關鍵（都寫進程式碼註解了）
+
+1. **小型大寫是「首字母在外、其餘包在 `<small>` 裡」**排版的，直接去標籤會得到
+   `A THANASIUS`。`accs_epub.unsmallcaps()` 先併回去再轉正常大小寫。
+2. **書名絕不可交給 LLM 自由翻譯**。實測把 `City of God 18.33.1` 丟給 Gemini，
+   它把沒有上下文的短標題當成待續寫的開頭，吐回一整段哈巴谷引文。改走
+   `accs_work_titles.json` 對照表＋規則推導（`Homilies on X→X講道集`，X 查聖經
+   書卷表）；查不到又推不出來就**原樣保留英文並標記待補，絕不臆造**。
+   目前 488/644 對上。
+3. **原書與排版的雜訊**：EPUB 保留了換行連字號（`Chrysos-tom`、
+   `Prosper of Aqui-taine`），字母間的連字號要接回去；`[dub.]` 存疑標記與
+   `(via 某某)` 轉引註記要摘掉但別丟資訊（譯名後綴「（存疑）」）；簡稱可能在
+   **後綴**（`Chrysostom ⊂ John Chrysostom`）不只是前綴；原書自己會拼錯
+   （`Clement of Alexandra`）。署名對照做到 **715/716**。
+
+英文版的品質遠勝中文掃描版：**無署名引文只有 1 則**（中文版是 8.3%），沒有 OCR
+錯字，也沒有跨批次斷句。
+
+### 教父署名統一（做完了，但尾巴還在）
+
+權威＝`theologians.name_recommended`。腳本**冪等且由詞庫驅動**——要改定名只要改
+詞庫再重跑，不必回頭動資料表。
+
+```bash
+python -X utf8 scripts/accs_seed_father_variants.py --apply   # 把 ACCS 寫法掛進詞庫變體欄
+python -X utf8 scripts/accs_normalize_fathers.py --apply      # 照詞庫改寫 accs_commentary
+```
+
+- 累計改寫 **10,651 列**；相異寫法 1,438 → 1,374 種。
+- 為此給 `theologians` **補了 `name_variants` 欄**（原本沒有通用變體欄位，
+  只有那 5 張新領域表才有）。
+- 🚨 **詞庫自己會有重複人物**：厄弗冷原本有兩筆（`Ephraem the Syrian (Mar Ephraem)`
+  → 敘利亞的厄弗冷／`Ephrem the Syrian` → 敘利亞的艾弗冷），互為對方的變體所以
+  彼此抵銷、兩邊都不會被改寫。已合併，正名取思高與語料通用的「敘利亞的厄弗冷」。
+  日後正規化跑出來「改 0 列」但明明有變體，先查是不是又撞到這種。
+- **還剩 1,279 種 / 3,486 列詞庫查不到**，多半是詞庫真的沒收的人。做法：把高頻
+  的補進詞庫（本輪補了 21 位）再重跑，**不要用字串相似度自動歸併**——
+  `狄奧多若`（Theodore of Mopsuestia）與 `狄奧多勒`（Theodoret of Cyrus）
+  相似度 0.75 但是兩個人。
+
+### 🚨 只能靠作品與書卷分布認人的兩組
+
+字串比對一定會判錯，已分別建檔並在詞庫條目寫明理由：
+
+| | 出現書卷 | 作品 |
+|---|---|---|
+| 安德烈亞斯 | 雅／彼前後／約壹貳參／猶 | 《註釋集萃》 |
+| 凱撒利亞的安德烈 | 只在啟示錄 | 《啟示錄註釋》 |
+| 馬流‧維克多納 | 弗／腓／加 | 《保羅書信註釋》 |
+| 彼他的維克多納 | 只在啟示錄 | 《啟示錄註釋》 |
+
+裸寫的「維克多納」22 筆全在啟示錄，據此歸彼他。四種只差中間點的
+「馬流X維克多納」（・ ‧ · ．）已統一為「‧」。
+
+### 資料正確性：本輪修掉的三類，都不會報錯只會靜靜地錯
+
+1. **書末索引混進註釋表**（`scripts/accs_purge_index_rows.py`，已刪 1,425 列）。
+   四本書的主題索引被 OCR 成 comment，詞條當 heading、頁碼當 body
+   （`{"heading":"十八劃","body":"曠野, 184"}`），**ref 落在合法章節範圍內所以
+   躲過 `CHAPTER_COUNTS` 章數閘**，在網站上以教父註釋顯示。
+   🚨 判定只用三訊號：筆劃索引標題、body 純頁碼、「詞條, 184」格式。
+   **絕不可加「body 太短」**——會誤殺真的跨頁續行殘句
+   （`pro 13:1` 的「食，惡人無以果腹。」是真內容）。
+   源頭已收窄頁範圍到附錄前：rev 1-690／rom 1-578／heb 1-450／isa賽1-39 1-490。
+   🚨 **逐卷不是逐書**：賽40-66 是另一個 PDF、末尾沒索引，維持 1-584，
+   照書名套同一切點會砍掉它 94 頁真註釋（我犯過這個錯）。
+
+2. **一則引文被批次邊界切成兩列**（`scripts/accs_merge_split_quotes.py`，已併 181 對）。
+   OCR 逐批處理，prompt 的「跨頁未完要接成完整一段」只在同一批內有效，批與批
+   之間沒人負責。讀者看到的是同一位作者的署名在段落中間冒出來一次、結尾再一次。
+   切點常落在詞中間（「創造天」‖「地。」、「殺他」‖「們」）所以正文直接相接。
+   🚨 判定要五個條件同時成立，其中**「前半以出處收尾就不是未完」是關鍵**——
+   ACCS 的引文以《作品》＋節號收尾而不是句號，第一版漏了這條，合錯 4 對
+   （`…《羅馬書講道集》11 ‖ 屈梭多模：不可為自己攫取…`），已從備份回復。
+
+3. **教父名寫在正文裡沒被抽出**（`scripts/accs_recover_inline_fathers.py`，補 18 列）。
+   規則收過三輪才敢寫：第一版拿語料所有 `father_name` 當名字表，80 列裡一半是錯的
+   （把「油：」當名字、「使徒保羅說：」切成「保羅說」、作品名當人名）。
+
+### 版面
+
+`pages/scripture/[book]/[chapter].vue` 的署名行改成三態：有教父名照舊／只有作品名
+就單獨顯示作品名／兩者皆無**整行不輸出**。原本寫死破折號，害 2,720 筆無署名引文
+渲染成「— 　《創世記註解》」，破折號後空一塊像壞掉。
+
+### 其他修掉的坑
+
+- **Drive 重整**：ACCS 從 `知識圖工作室\教父著作\` 搬到 `經典對照與註釋\`。
+  `accs_volume_config.json` 23 卷路徑已更新；`ebooks.file_path` 也有 67 本斷鏈，
+  已修（29 本靠目錄層級對應、38 本靠檔名在整個 Drive 樹全域比對）。
+- **`.done` 要跟「範圍與 PDF 實際頁數的交集」比，不是跟設定比**。雅歌設定
+  437-556（120 頁）但那本 PDF 只有 472 頁；只比設定會判成過期→刪標記→重跑→
+  寫回同樣頁數→再刪，每 30 分鐘空轉一次。已加 `_effective_pages()`。
+- **雅歌 2/8 章是書源缺口不是漏抓**：掃描檔最後一頁停在雅歌 2:1-7、句子斷在
+  「因為」，沒有其餘章節也沒有其他卷都有的書末附錄。同 `jer`/`lam` 那一類。
+
+### 現況數字（2026-08-30）
+
+```
+accs_commentary          34,639 列
+書卷                     64 / 66（缺 jer、lam，正在補英文版）
+章數已滿                  54 卷
+相異教父署名               1,374 種（原 1,438）
+詞庫外署名                1,279 種 / 3,486 列
+theologians              458 位（本輪 +21，並新增 name_variants 欄）
+```
+
+### 未完成
+
+- 英文卷十二翻譯 50/806（見上）。
+- 中文語料的 `work_title` 有 **2,334 種**寫法，同樣需要照
+  `accs_work_titles.json` 的體例統一（user 2026-08-28 指示「書名按大藏經統一」）。
+  尚未開始。
+- 詞庫外的 3,486 列署名，繼續補人進詞庫再重跑。
+- 上一輪留下的未滿章 10 卷仍待翻紙本目錄確認；馬太 14-28 的 7 頁 catena 劣化仍未重跑。
+
+---
+
+## 🗂️ 上一輪接手清單（2026-08-22，已完成，留作沿革）
 
 **這一輪做完的事**：8 卷合刊定界 → 21 個新書卷首度入庫；parser 三個資料正確性 bug（句點式 ref／書末索引污染／單章書交叉引用）修好並全庫重建；艦隊的額度與卡死問題修好。DB 從 25,200 筆 / 21 卷 長到 **36,245 筆 / 64 卷**。
 
@@ -116,7 +262,15 @@ python scripts/ingest_accs_genesis.py \
 - `scripts/accs_find_boundaries.py` — 合刊定界（vision 讀目錄＋讀印刷頁碼反推 offset＋標題頁回驗；`--write` 才寫 config）
 - `scripts/accs_rebuild_rows.py` — 從 raw jsonl 重建 DB 列（`--apply` 才寫；會先備份到 `c:/tmp/accs_rows_backup/` 並核對筆數）
 - `scripts/accs_resolve_blank_fathers.py` — blank father 續行併入／回填
+- `scripts/accs_purge_index_rows.py` — 刪書末索引污染（dry-run 預設；備份＋核對筆數才刪）
+- `scripts/accs_merge_split_quotes.py` — 併回被批次邊界切成兩列的引文
+- `scripts/accs_recover_inline_fathers.py` — 補回寫在正文裡的教父名
+- `scripts/accs_normalize_fathers.py` — 照 theologians 詞庫統一署名（冪等）
+- `scripts/accs_seed_father_variants.py` + `accs_father_variants.json` — 把 ACCS 寫法掛進詞庫變體欄
+- `scripts/accs_new_fathers.json` — 新建詞庫人物的資料
+- `scripts/accs_epub.py` + `accs_ingest_epub.py` + `accs_work_titles.json` — 英文版 EPUB 解析／翻譯／入庫
 - 測試：`pytest scripts/tests/test_accs_commentary.py`（**52 例**）
+  、`pytest scripts/tests/test_accs_epub.py`（**7 例**，片段取自實際 EPUB）
 
 **未完成／待定**
 - 上述 10 卷未滿章 → 先翻紙本目錄確認是選錄還是漏抓，再決定補不補。

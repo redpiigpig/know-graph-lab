@@ -170,63 +170,10 @@ def translate(text: str) -> str:
     return te.gemini_with_nvidia_fallback(text)
 
 
-
-
-BATCH_PROMPT = """你是古代基督教教父文獻的專業譯者。下面是若干段獨立的英文，
-每段以 <<編號>> 起始。把每一段譯成**繁體中文**。
-
-規則：
-1. 嚴守繁體中文（禁簡體）；學術散文語氣，忠實流暢，不加註、不改寫、不省略。
-2. 經文引語沿用和合本語感。
-3. 保留原有的省略號（. . . 譯為 ……）與方括號補字。
-4. **輸出格式必須與輸入相同**：每段譯文前加上原本的 <<編號>>，段數與編號完全
-   對應，不可合併、不可漏、不可多。編號行以外不要任何說明。
-
-{source}"""
-
-_MARKER = re.compile(r'<<\s*(\d+)\s*>>')
-
-
-def translate_batch(items: list[str]) -> list[str] | None:
-    """一次送多段，回傳等長的譯文串列；對不齊就回 None，讓呼叫端退回逐段。
-
-    這台機器同時有十幾個工作在搶同一批引擎池，瓶頸是**呼叫次數**而不是字數
-    （原本每則要打兩次：正文與小標，806 則＝1,612 次呼叫，實測 37 小時只跑完
-    50 則）。合併送出把呼叫降到約 200 次。
-
-    但批次翻譯最大的風險是段落錯位（見 [[project_alignment_gate]]），所以一律
-    驗編號：少一個、多一個、或有空段就整批作廢改逐段——寧可慢，不可把甲教父的
-    話配到乙教父身上。
-    """
-    if not items:
-        return []
-    src = '\n\n'.join(f'<<{i + 1}>> {s}' for i, s in enumerate(items))
-    te.PROMPT_TMPL = BATCH_PROMPT
-    out = te.gemini_with_nvidia_fallback(src)
-    parts: dict[int, str] = {}
-    cur, buf = None, []
-    for line in out.splitlines():
-        m = _MARKER.match(line.strip())
-        if m:
-            if cur is not None:
-                parts[cur] = '\n'.join(buf).strip()
-            cur, buf = int(m.group(1)), [_MARKER.sub('', line, count=1).strip()]
-        elif cur is not None:
-            buf.append(line)
-    if cur is not None:
-        parts[cur] = '\n'.join(buf).strip()
-    if set(parts) != set(range(1, len(items) + 1)):
-        return None
-    if any(not parts[i + 1] for i in range(len(items))):
-        return None
-    return [parts[i + 1] for i in range(len(items))]
-
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('--upload', action='store_true')
     ap.add_argument('--limit', type=int)
-    ap.add_argument('--batch', type=int, default=8,
-                    help='一次送幾則進 LLM；對不齊會自動退回逐段')
     ap.add_argument('--names-only', action='store_true',
                     help='只檢查署名對照，不翻譯')
     args = ap.parse_args()
@@ -270,46 +217,24 @@ def main() -> int:
         todo = todo[:args.limit]
     print(f'待譯 {len(todo)} 則', flush=True)
 
-    def key_of(r: dict) -> str:
-        return (f"{r['book_code']}|{r['chapter']}|{r['pericope_order']}|"
-                f"{r['heading']}|{r['body'][:40]}")
-
     fh = ckpt.open('a', encoding='utf-8')
-    done_n = 0
-    for start in range(0, len(todo), args.batch):
-        group = todo[start:start + args.batch]
-        # 小標與正文一起送，省掉一半呼叫（原本每則要打兩次）
-        payload = []
-        for r in group:
-            payload.append(r['body'])
-            if r['heading'] and r['heading'] != 'Overview':
-                payload.append(r['heading'])
+    for i, r in enumerate(todo, 1):
+        key = (f"{r['book_code']}|{r['chapter']}|{r['pericope_order']}|"
+               f"{r['heading']}|{r['body'][:40]}")
         try:
-            got = translate_batch(payload)
-            if got is None:            # 對不齊 → 退回逐段，寧可慢也不可錯位
-                print('  ⚠ 批次對不齊，改逐段', flush=True)
-                got = [translate(s) for s in payload]
-        except Exception as exc:  # noqa: BLE001
-            print(f'  ✗ {type(exc).__name__}: {str(exc)[:110]}', flush=True)
-            time.sleep(20)
-            continue
-        k = 0
-        for r in group:
-            body_zh = got[k]
-            k += 1
-            if r['heading'] and r['heading'] != 'Overview':
-                head_zh = got[k]
-                k += 1
-            else:
-                head_zh = '概述' if r['heading'] == 'Overview' else ''
+            body_zh = translate(r['body'])
+            head_zh = translate(r['heading']) if r['heading'] and r['heading'] != 'Overview' else (
+                '概述' if r['heading'] == 'Overview' else '')
             work_zh, _how = resolve_work(r['work'])
-            fh.write(json.dumps({**r, 'key': key_of(r), 'body_zh': body_zh,
-                                 'heading_zh': head_zh, 'work_zh': work_zh},
-                                ensure_ascii=False) + '\n')
-            done_n += 1
+        except Exception as exc:  # noqa: BLE001
+            print(f'  ✗ {i}/{len(todo)} {type(exc).__name__}: {str(exc)[:120]}', flush=True)
+            time.sleep(30)
+            continue
+        rec = {**r, 'key': key, 'body_zh': body_zh, 'heading_zh': head_zh, 'work_zh': work_zh}
+        fh.write(json.dumps(rec, ensure_ascii=False) + '\n')
         fh.flush()
-        print(f'  · {done_n}/{len(todo)}  {group[-1]["book_code"]} '
-              f'{group[-1]["chapter"]}:{group[-1]["verse_start"]}', flush=True)
+        if i % 20 == 0 or i == len(todo):
+            print(f'  · {i}/{len(todo)}  {r["book_code"]} {r["chapter"]}:{r["verse_start"]}', flush=True)
     fh.close()
 
     if not args.upload:
