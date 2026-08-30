@@ -25,7 +25,7 @@ description: 佛教大藏經（/tripitaka）—— 把 CBETA 的《大正新脩�
 | 漢譯南傳 | 3,487 | 141,284 | — | 18 部 | CBETA N 部（元亨寺版） |
 | 梵文原文 | 117 | 17,195 | — | 11 部 | GRETIL |
 | 藏文原文 | 29 | 4,871 | — | 3 部 | 84000 翻譯記憶（TMX） |
-| 繁中白話 | — | 2,698 段（91%） | — | 13/14 部 | 本站自譯（Haiku）|
+| 繁中白話 | — | 2,964 段（100%） | — | 14/14 部 | 本站自譯（Haiku）|
 | 平行經目 | 23,321 筆 | — | 87% 對到段落 | 172 部 | SuttaCentral parallels |
 | 漢梵巴詞條 | 29,930 組 | — | 逐詞 | 142 部 | CBETA `<cb:tt>` |
 | 大正藏原註 | 1,597 條 | — | 99.8% 貼回段落 | 21 部 | 大正藏編者 1924–34 |
@@ -41,7 +41,7 @@ description: 佛教大藏經（/tripitaka）—— 把 CBETA 的《大正新脩�
 | | |
 |---|---|
 | 上線 | ✅ **已上線**。`tripitaka_works` 2,554 列、`tripitaka_parallels` 10,168 列、184 部有原文對照、142 部有詞條 |
-| 存放 | 目錄進 Supabase；正文 JSONL 在 Drive `_tripitaka/`（5,299 檔），R2 `tripitaka/` 為線上後備（123 MB） |
+| 存放 | 目錄進 Supabase；正文 JSONL 在 Drive `_tripitaka/`（5,317 檔），R2 `tripitaka/` 為線上後備（Drive 與 R2 同步至 5,317） |
 
 ## 🚨 段怎麼切、怎麼編號（使用者定調，別再改）
 
@@ -285,23 +285,19 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
 
 ## 交接：正在跑的事
 
-**繁中白話翻譯**（`scripts/tripitaka_vernacular.py --run-all --engine haiku`）。
-2026-08-30 晚間進度 **2,698/2,964 段（91%）**。已完成 13 部（T0159 大乘本生心地觀經
-已收），只剩 **T0262 妙法蓮華經**（514 段，當時 248 段／48%）。
-log 在 `C:/tmp/cbeta/vernacular.log`。掉了就直接重跑同一行指令 ——
-有 resume，已譯的段會跳過。**重跑前先確認沒有同一支已經在跑**
-（`Get-CimInstance Win32_Process` 看 CommandLine），兩支同時跑會互相覆寫
-那個非原子寫入的 `.zhmod.json`。
+**（無）** —— 2026-08-30 晚間這一輪的東西都跑完並落地了。
 
-已完成的 13 部 `.zhmod.json` 已手動複製上 Drive（2026-08-30），白話欄現在
-看得到了。**T0262 刻意沒複製** —— 還在寫，複製會拿到截斷檔（見踩坑 25）。
+### 繁中白話翻譯 ✅ 收工
 
-T0262 跑完後要做三件事：
-```bash
-python scripts/tripitaka_db.py --sync-drive                      # .zhmod.json → Drive
-python scripts/tripitaka_db.py --push-r2 --suffix .zhmod.json    # → R2
-python scripts/tripitaka_vernacular.py --audit                   # 確認 100%
-```
+`scripts/tripitaka_vernacular.py --run-all --engine haiku` 已跑完：
+**2,964/2,964 段 100%、14 部全數完成、0 失敗**（`--audit` 確認過）。
+收尾三件事都做了：`--sync-drive`（Drive 5,317 檔）、
+`--push-r2 --suffix .zhmod.json`（14 檔）、`--audit` 100%。
+梵文那四個新／補的 `.orig.json` 也一併推了 R2，**Drive 與 R2 現在都是 5,317**。
+
+要再擴充白話就往 `tripitaka_vernacular.WORKS` 加經號，然後重跑同一行。
+重跑前**先確認沒有同一支已經在跑**（`Get-CimInstance Win32_Process` 看
+CommandLine）—— 兩支同時跑會互相覆寫那個非原子寫入的 `.zhmod.json`。
 
 ⚠️ Gemini 目前**連線不通**（七把金鑰全 ConnectionError，不是配額），所以固定
 `--engine haiku`。日後 Gemini 通了可拿掉這個旗標回到免費鏈。
