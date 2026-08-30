@@ -1946,6 +1946,127 @@
         "icon": "game-icons:third-eye",
         "verdict": "wrong",
         "reason": "第二層換畫法：多出來的那個字改掉了意思（dog-service 導盲犬、hobbit-dwelling 哈比人洞、south-korea 南韓地圖、frog-prince 青蛙王子），或畫的是加了否定的相反意思（hammer-off、gift-off、assembly-off）"
+      },
+      "H802|נָשִׁים": {
+        "icon": "mdi:face-woman",
+        "verdict": "ok"
+      },
+      "H8057|שִׂמְחָה": {
+        "icon": "mdi:star-face",
+        "verdict": "ok"
+      },
+      "H8104|שָׁמַר": {
+        "icon": "game-icons:static-guard",
+        "verdict": "ok"
+      },
+      "H8130|שָׂנֵא": {
+        "icon": "game-icons:angry-eyes",
+        "verdict": "ok"
+      },
+      "H8199|שָׁפַט": {
+        "icon": "mdi:scale-balance",
+        "verdict": "ok"
+      },
+      "H8199|שֹׁפֵט": {
+        "icon": "mdi:one-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8210|שָׁפַךְ": {
+        "icon": "mdi:kettle-pour-over",
+        "verdict": "ok"
+      },
+      "H8267|שֶׁ֫קֶר": {
+        "icon": "mdi:face-agent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8313|שָׂרַף": {
+        "icon": "game-icons:card-burn",
+        "verdict": "ok"
+      },
+      "H8354|שָׁתָה": {
+        "icon": "game-icons:drink-me",
+        "verdict": "ok"
+      },
+      "H8384|תְּאֵן": {
+        "icon": "game-icons:deku-tree",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8394|תָּבוּן": {
+        "icon": "game-icons:artificial-intelligence",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8432|תָּ֫וֶךְ": {
+        "icon": "game-icons:middle-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8451|תּוֹרָה": {
+        "icon": "game-icons:law-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8478|תַּ֫חַת": {
+        "icon": "mdi:vector-arrange-below",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H8549|תָּמִים": {
+        "icon": "game-icons:gold-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H859|אַתֵּ֫נָה": {
+        "icon": "tabler:hand-love-you",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H875|בְּאֵר": {
+        "icon": "game-icons:spiky-pit",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H935|בּוֹא": {
+        "icon": "tabler:go-game",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H953|בּוֹר": {
+        "icon": "mdi:pi-hole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H954|בּוֹשׁ": {
+        "icon": "game-icons:dwarf-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H959|בָּזָה": {
+        "icon": "tabler:mood-angry",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "H982|בָּטַח": {
+        "icon": "ph:handshake-bold",
+        "verdict": "ok"
+      },
+      "H996|בֵּין": {
+        "icon": "ph:arrow-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "|הֲ": {
+        "icon": "game-icons:traffic-lights-red",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "|עַל־כֵּן": {
+        "icon": "mdi:contain-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
       }
     },
     "greek": {
@@ -3898,6 +4019,1678 @@
         "icon": "tabler:page-break",
         "verdict": "wrong",
         "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "αἰώνιος": {
+        "icon": "game-icons:infinity",
+        "verdict": "ok"
+      },
+      "αἴξ": {
+        "icon": "game-icons:female",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "αἴρω": {
+        "icon": "game-icons:lift",
+        "verdict": "ok"
+      },
+      "αὐθάδης": {
+        "icon": "game-icons:fist",
+        "verdict": "ok"
+      },
+      "βίβλος": {
+        "icon": "ph:book",
+        "verdict": "ok"
+      },
+      "βελτίων": {
+        "icon": "game-icons:chart",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "βλέπω": {
+        "icon": "game-icons:look-at",
+        "verdict": "ok"
+      },
+      "βλαβερός": {
+        "icon": "game-icons:biohazard",
+        "verdict": "ok"
+      },
+      "γλῶσσα": {
+        "icon": "game-icons:tongue",
+        "verdict": "ok"
+      },
+      "δέησις": {
+        "icon": "game-icons:prayer",
+        "verdict": "ok"
+      },
+      "δή": {
+        "icon": "ph:check",
+        "verdict": "ok"
+      },
+      "δοκέω": {
+        "icon": "mdi:compare",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "δόγμα": {
+        "icon": "ph:scroll",
+        "verdict": "ok"
+      },
+      "δῶρον": {
+        "icon": "ph:gift",
+        "verdict": "ok"
+      },
+      "εἰ": {
+        "icon": "ph:shuffle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "εἰκών": {
+        "icon": "ph:image",
+        "verdict": "ok"
+      },
+      "εἰσπορεύομαι": {
+        "icon": "game-icons:journey",
+        "verdict": "ok"
+      },
+      "εὐαγγέλιον": {
+        "icon": "mdi:message",
+        "verdict": "ok"
+      },
+      "εὐαγγελίζω": {
+        "icon": "tabler:news",
+        "verdict": "ok"
+      },
+      "θεῖος": {
+        "icon": "game-icons:sparkles",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "θνητός": {
+        "icon": "ph:skull",
+        "verdict": "ok"
+      },
+      "θραύω": {
+        "icon": "game-icons:crush",
+        "verdict": "ok"
+      },
+      "κήρυγμα": {
+        "icon": "game-icons:megaphone",
+        "verdict": "ok"
+      },
+      "καθίζω": {
+        "icon": "ph:seat",
+        "verdict": "ok"
+      },
+      "καταφθορά": {
+        "icon": "ph:bomb",
+        "verdict": "ok"
+      },
+      "καυχάομαι": {
+        "icon": "game-icons:biceps",
+        "verdict": "ok"
+      },
+      "κενός": {
+        "icon": "ph:empty",
+        "verdict": "ok"
+      },
+      "κιβωτός": {
+        "icon": "game-icons:coffin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "κλοπή": {
+        "icon": "mdi:ninja",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "κοίτη": {
+        "icon": "game-icons:bed",
+        "verdict": "ok"
+      },
+      "κοινωνός": {
+        "icon": "ph:handshake",
+        "verdict": "ok"
+      },
+      "κολοβόω": {
+        "icon": "tabler:cut",
+        "verdict": "ok"
+      },
+      "κραταιόω": {
+        "icon": "game-icons:strong",
+        "verdict": "ok"
+      },
+      "κρείσσων": {
+        "icon": "mdi:more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "κρύφιος": {
+        "icon": "game-icons:hidden",
+        "verdict": "ok"
+      },
+      "κτίζω": {
+        "icon": "mdi:shape",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "κτίσις": {
+        "icon": "mdi:creation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "κυρία": {
+        "icon": "tabler:woman",
+        "verdict": "ok"
+      },
+      "κόπος": {
+        "icon": "game-icons:droplets",
+        "verdict": "ok"
+      },
+      "λαλέω": {
+        "icon": "game-icons:talk",
+        "verdict": "ok"
+      },
+      "λαμπρότης": {
+        "icon": "tabler:brightness",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "λογικός": {
+        "icon": "game-icons:abacus",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "λοιπός": {
+        "icon": "ph:package",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "μάταιος": {
+        "icon": "game-icons:hole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "μένω": {
+        "icon": "game-icons:house",
+        "verdict": "ok"
+      },
+      "μακρόθυμος": {
+        "icon": "game-icons:hourglass",
+        "verdict": "ok"
+      },
+      "μεγαλειότης": {
+        "icon": "game-icons:castle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "μεγαλύνω": {
+        "icon": "mdi:magnify",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "μερισμός": {
+        "icon": "ph:divide",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "μεταφέρω": {
+        "icon": "game-icons:move",
+        "verdict": "ok"
+      },
+      "μιμητής": {
+        "icon": "ph:footprints",
+        "verdict": "ok"
+      },
+      "μνημόσυνον": {
+        "icon": "mdi:reminder",
+        "verdict": "ok"
+      },
+      "νικάω": {
+        "icon": "game-icons:trophy",
+        "verdict": "ok"
+      },
+      "νομίζω": {
+        "icon": "game-icons:think",
+        "verdict": "ok"
+      },
+      "οὐαί": {
+        "icon": "ph:warning",
+        "verdict": "ok"
+      },
+      "πάντῃ": {
+        "icon": "game-icons:compass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "παλαιός": {
+        "icon": "tabler:old",
+        "verdict": "ok"
+      },
+      "πανταχοῦ": {
+        "icon": "game-icons:world",
+        "verdict": "ok"
+      },
+      "παράβασις": {
+        "icon": "game-icons:bridge",
+        "verdict": "ok"
+      },
+      "παράπτωμα": {
+        "icon": "game-icons:falling",
+        "verdict": "ok"
+      },
+      "παρέχω": {
+        "icon": "mdi:offer",
+        "verdict": "ok"
+      },
+      "πείθω": {
+        "icon": "game-icons:convince",
+        "verdict": "ok"
+      },
+      "πεποίθησις": {
+        "icon": "game-icons:anchor",
+        "verdict": "ok"
+      },
+      "περιέχω": {
+        "icon": "mdi:contain",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "περιπατέω": {
+        "icon": "game-icons:tread",
+        "verdict": "ok"
+      },
+      "περιτομή": {
+        "icon": "game-icons:scissors",
+        "verdict": "ok"
+      },
+      "πικρός": {
+        "icon": "game-icons:lemon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "πλάξ": {
+        "icon": "game-icons:tablet",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "ποιητής": {
+        "icon": "tabler:writing",
+        "verdict": "ok"
+      },
+      "ποταμός": {
+        "icon": "game-icons:river",
+        "verdict": "ok"
+      },
+      "πραΰτης": {
+        "icon": "game-icons:dove",
+        "verdict": "ok"
+      },
+      "προθυμία": {
+        "icon": "game-icons:fire",
+        "verdict": "ok"
+      },
+      "προκρίνω": {
+        "icon": "game-icons:medal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "προσεύχομαι": {
+        "icon": "tabler:pray",
+        "verdict": "ok"
+      },
+      "προφήτης": {
+        "icon": "game-icons:speaker",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "πρᾶξις": {
+        "icon": "ph:function",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "πτελέα": {
+        "icon": "ph:tree",
+        "verdict": "ok"
+      },
+      "πυκνός": {
+        "icon": "ph:repeat",
+        "verdict": "ok"
+      },
+      "πύλη": {
+        "icon": "game-icons:door",
+        "verdict": "ok"
+      },
+      "σελήνη": {
+        "icon": "game-icons:moon",
+        "verdict": "ok"
+      },
+      "σκηνή": {
+        "icon": "ph:tent",
+        "verdict": "ok"
+      },
+      "σοφία": {
+        "icon": "game-icons:wisdom",
+        "verdict": "ok"
+      },
+      "σπέρμα": {
+        "icon": "mdi:seed",
+        "verdict": "ok"
+      },
+      "στέφανος": {
+        "icon": "game-icons:crown",
+        "verdict": "ok"
+      },
+      "στῦλος": {
+        "icon": "mdi:pillar",
+        "verdict": "ok"
+      },
+      "συνετός": {
+        "icon": "game-icons:brain",
+        "verdict": "ok"
+      },
+      "συνόχωκα": {
+        "icon": "game-icons:clamp",
+        "verdict": "ok"
+      },
+      "σχισμή": {
+        "icon": "mdi:division",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "σωτήριος": {
+        "icon": "game-icons:buoy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "σύμβολον": {
+        "icon": "mdi:symbol",
+        "verdict": "ok"
+      },
+      "σῖτος": {
+        "icon": "game-icons:wheat",
+        "verdict": "ok"
+      },
+      "τέχνη": {
+        "icon": "game-icons:trade",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "τεχνίτης": {
+        "icon": "ph:hammer",
+        "verdict": "ok"
+      },
+      "τεῖχος": {
+        "icon": "ph:wall",
+        "verdict": "ok"
+      },
+      "τιμή": {
+        "icon": "ph:money",
+        "verdict": "ok"
+      },
+      "τολμάω": {
+        "icon": "tabler:bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "τράγος": {
+        "icon": "game-icons:goat",
+        "verdict": "ok"
+      },
+      "τρέχω": {
+        "icon": "game-icons:run",
+        "verdict": "ok"
+      },
+      "τρίβολος": {
+        "icon": "game-icons:cactus",
+        "verdict": "ok"
+      },
+      "φανερόω": {
+        "icon": "game-icons:bulb",
+        "verdict": "ok"
+      },
+      "φανερῶς": {
+        "icon": "game-icons:flashlight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "φιλάνθρωπος": {
+        "icon": "ph:heart",
+        "verdict": "ok"
+      },
+      "φλόξ": {
+        "icon": "game-icons:flame",
+        "verdict": "ok"
+      },
+      "φορά": {
+        "icon": "mdi:motion",
+        "verdict": "ok"
+      },
+      "χίμαρος": {
+        "icon": "game-icons:male",
+        "verdict": "wrong",
+        "reason": "逐張看圖：畫的是另一個東西（one-up 是瑪利歐蘑菇、deku-tree 是薩爾達神木、pi-hole 是軟體標誌、law-star 是警徽、female/male 是性別符號、bold 是粗體 B、speaker 是喇叭）"
+      },
+      "χρήσιμος": {
+        "icon": "game-icons:toolbox",
+        "verdict": "ok"
+      },
+      "ἀγρός": {
+        "icon": "game-icons:field",
+        "verdict": "ok"
+      },
+      "ἀκούω": {
+        "icon": "ph:ear",
+        "verdict": "ok"
+      },
+      "ἀμπελών": {
+        "icon": "game-icons:grapes",
+        "verdict": "ok"
+      },
+      "ἀναγγέλλω": {
+        "icon": "tabler:report",
+        "verdict": "ok"
+      },
+      "ἀναγινώσκω": {
+        "icon": "game-icons:read",
+        "verdict": "ok"
+      },
+      "ἀπαρχή": {
+        "icon": "mdi:rice",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἀπεκρίθη": {
+        "icon": "mdi:reply",
+        "verdict": "ok"
+      },
+      "ἀποκάλυψις": {
+        "icon": "ph:eye",
+        "verdict": "ok"
+      },
+      "ἀρνίον": {
+        "icon": "game-icons:ram",
+        "verdict": "ok"
+      },
+      "ἀσφαλής": {
+        "icon": "mdi:safe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἀόρατος": {
+        "icon": "game-icons:invisible",
+        "verdict": "ok"
+      },
+      "ἁρπάζω": {
+        "icon": "game-icons:snatch",
+        "verdict": "ok"
+      },
+      "ἄγριος": {
+        "icon": "game-icons:lion",
+        "verdict": "ok"
+      },
+      "ἄφρων": {
+        "icon": "game-icons:clown",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἐγκαταλείπω": {
+        "icon": "game-icons:desert",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἐκβάλλω": {
+        "icon": "ph:eject",
+        "verdict": "ok"
+      },
+      "ἐκκαίω": {
+        "icon": "game-icons:kindle",
+        "verdict": "ok"
+      },
+      "ἐκλεκτός": {
+        "icon": "game-icons:choice",
+        "verdict": "ok"
+      },
+      "ἐκτρίβω": {
+        "icon": "ph:flower",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἐλεημοσύνη": {
+        "icon": "mdi:charity",
+        "verdict": "ok"
+      },
+      "ἐξαποστέλλω": {
+        "icon": "mdi:send",
+        "verdict": "ok"
+      },
+      "ἐξετάζω": {
+        "icon": "ph:question",
+        "verdict": "ok"
+      },
+      "ἐξεῖπον": {
+        "icon": "ph:balloon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἐπίγειος": {
+        "icon": "game-icons:globe",
+        "verdict": "ok"
+      },
+      "ἐπιστολή": {
+        "icon": "game-icons:envelope",
+        "verdict": "ok"
+      },
+      "ἐπουράνιος": {
+        "icon": "ph:cloud",
+        "verdict": "ok"
+      },
+      "ἑσπέρα": {
+        "icon": "game-icons:sunset",
+        "verdict": "ok"
+      },
+      "ἔνδυμα": {
+        "icon": "game-icons:shirt",
+        "verdict": "ok"
+      },
+      "ἔργον": {
+        "icon": "game-icons:briefcase",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ἕλκω": {
+        "icon": "game-icons:pull",
+        "verdict": "ok"
+      },
+      "ἦθος": {
+        "icon": "ph:fingerprint",
+        "verdict": "ok"
+      },
+      "ἰδέα": {
+        "icon": "game-icons:puzzle",
+        "verdict": "ok"
+      },
+      "ἰτέα": {
+        "icon": "game-icons:willow-tree",
+        "verdict": "ok"
+      },
+      "ἱμάτιον": {
+        "icon": "game-icons:dress",
+        "verdict": "ok"
+      },
+      "ἱματισμός": {
+        "icon": "game-icons:clothes",
+        "verdict": "ok"
+      },
+      "ἴασις": {
+        "icon": "game-icons:healing",
+        "verdict": "ok"
+      },
+      "ἴσος": {
+        "icon": "mdi:equal",
+        "verdict": "ok"
+      },
+      "ἵππος": {
+        "icon": "ph:horse",
+        "verdict": "ok"
+      },
+      "ὀδούς": {
+        "icon": "game-icons:tooth",
+        "verdict": "ok"
+      },
+      "ὁμόνοια": {
+        "icon": "mdi:unity",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ὁρατός": {
+        "icon": "ph:eyes",
+        "verdict": "ok"
+      },
+      "ὄνομα": {
+        "icon": "tabler:badge",
+        "verdict": "ok"
+      },
+      "ὄργανον": {
+        "icon": "tabler:tool",
+        "verdict": "ok"
+      },
+      "ὄψις": {
+        "icon": "mdi:mirror",
+        "verdict": "ok"
+      },
+      "ὅδε": {
+        "icon": "game-icons:pointing",
+        "verdict": "ok"
+      },
+      "ὅς": {
+        "icon": "ph:link",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ὑπόδειγμα": {
+        "icon": "ph:copy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ὕδωρ": {
+        "icon": "mdi:water",
+        "verdict": "ok"
+      },
+      "ὕλη": {
+        "icon": "tabler:wood",
+        "verdict": "ok"
+      },
+      "ῥομφαία": {
+        "icon": "ph:sword",
+        "verdict": "ok"
+      },
+      "αἰσχύνη": {
+        "icon": "mdi:face-man-profile",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "αἰσχύνω": {
+        "icon": "mdi:face-man-shimmer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "αἴνεσις": {
+        "icon": "ph:hands-praying",
+        "verdict": "ok"
+      },
+      "αἶνος": {
+        "icon": "game-icons:shaking-hands",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "αὐλή": {
+        "icon": "game-icons:indian-palace",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "αὐτός": {
+        "icon": "game-icons:self-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "βάλλω": {
+        "icon": "ph:person-simple-throw-thin",
+        "verdict": "ok"
+      },
+      "βάρβαρος": {
+        "icon": "game-icons:greek-sphinx",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "βίος": {
+        "icon": "game-icons:life-tap",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "βαδίζω": {
+        "icon": "game-icons:egyptian-walk",
+        "verdict": "ok"
+      },
+      "βλάπτω": {
+        "icon": "game-icons:trigger-hurt",
+        "verdict": "ok"
+      },
+      "βορά": {
+        "icon": "ph:bowl-food",
+        "verdict": "ok"
+      },
+      "βουνός": {
+        "icon": "game-icons:hill-fort",
+        "verdict": "ok"
+      },
+      "βούλημα": {
+        "icon": "mdi:thought-bubble-outline",
+        "verdict": "ok"
+      },
+      "βρῶμα": {
+        "icon": "mdi:food-apple",
+        "verdict": "ok"
+      },
+      "γελάω": {
+        "icon": "game-icons:imp-laugh",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γενεά": {
+        "icon": "tabler:image-generation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γενετή": {
+        "icon": "game-icons:crow-nest",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γνώμη": {
+        "icon": "game-icons:air-balloon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γονεύς": {
+        "icon": "game-icons:magnet-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γοῦν": {
+        "icon": "mdi:clock-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "γωνία": {
+        "icon": "game-icons:corner-flag",
+        "verdict": "ok"
+      },
+      "δέκα": {
+        "icon": "mdi:clock-time-ten",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δέρμα": {
+        "icon": "game-icons:lab-coat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεινός": {
+        "icon": "tabler:robot-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεξιός": {
+        "icon": "mdi:bus-side",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεσμός": {
+        "icon": "game-icons:james-bond-aperture",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεσπότης": {
+        "icon": "game-icons:frog-prince",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεῖπνον": {
+        "icon": "ph:clock-afternoon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δεῦτε": {
+        "icon": "tabler:uv-index",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δηλόω": {
+        "icon": "tabler:clear-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διά": {
+        "icon": "game-icons:lob-arrow",
+        "verdict": "ok"
+      },
+      "διάβολος": {
+        "icon": "tabler:face-id",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαβαίνω": {
+        "icon": "game-icons:subway-pass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαιρέω": {
+        "icon": "ph:divide-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διακονέω": {
+        "icon": "ph:chalkboard-teacher-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διακονία": {
+        "icon": "ph:first-aid",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διακοσμέω": {
+        "icon": "mdi:vector-arrange-below",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαρρήγνυμι": {
+        "icon": "game-icons:tear-tracks",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαστέλλω": {
+        "icon": "ph:command-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διασώζω": {
+        "icon": "mdi:content-save-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαφθείρω": {
+        "icon": "game-icons:nuclear-waste",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διαφορά": {
+        "icon": "tabler:layers-difference",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "διδάσκω": {
+        "icon": "ph:chalkboard-teacher",
+        "verdict": "ok"
+      },
+      "διδασκαλία": {
+        "icon": "ph:chalkboard-teacher-thin",
+        "verdict": "ok"
+      },
+      "διδαχή": {
+        "icon": "ph:chalkboard-teacher-bold",
+        "verdict": "ok"
+      },
+      "δικαίως": {
+        "icon": "game-icons:body-balance",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δικαιοσύνη": {
+        "icon": "mdi:scale-balance",
+        "verdict": "ok"
+      },
+      "διχοστασία": {
+        "icon": "mdi:division-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δουλεία": {
+        "icon": "game-icons:slavery-whip",
+        "verdict": "ok"
+      },
+      "δρόμος": {
+        "icon": "game-icons:running-shoe",
+        "verdict": "ok"
+      },
+      "δυνάστης": {
+        "icon": "mdi:cog-play",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δύναμις": {
+        "icon": "game-icons:air-force",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δύσκολος": {
+        "icon": "ph:person-simple",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δώδεκα": {
+        "icon": "ph:dice-two",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δῆλος": {
+        "icon": "tabler:clear-formatting",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "δῆμος": {
+        "icon": "mdi:nature-people",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εἰκότως": {
+        "icon": "mdi:bug-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εἴκοσι": {
+        "icon": "game-icons:dice-twenty-faces-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εἴπερ": {
+        "icon": "ph:shuffle-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εἴσοδος": {
+        "icon": "game-icons:crypt-entrance",
+        "verdict": "ok"
+      },
+      "εἴτε": {
+        "icon": "ph:shuffle-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εἶδος": {
+        "icon": "tabler:shape-2",
+        "verdict": "ok"
+      },
+      "εὐλάβεια": {
+        "icon": "ph:shirt-folded-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εὐλογία": {
+        "icon": "ph:hands-clapping",
+        "verdict": "ok"
+      },
+      "εὐσέβεια": {
+        "icon": "game-icons:folded-paper",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εὐσεβής": {
+        "icon": "game-icons:woman-elf-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εὐχαριστία": {
+        "icon": "ph:hands-praying-bold",
+        "verdict": "ok"
+      },
+      "εὐωδία": {
+        "icon": "game-icons:wrapped-sweet",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εὔλογος": {
+        "icon": "mdi:check-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "εὔχομαι": {
+        "icon": "mdi:hands-pray",
+        "verdict": "ok"
+      },
+      "ζυγός": {
+        "icon": "game-icons:heavy-bullets",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ζωή": {
+        "icon": "game-icons:life-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "ζῷον": {
+        "icon": "game-icons:animal-hide",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θάλασσα": {
+        "icon": "game-icons:sea-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θαυμάσιος": {
+        "icon": "game-icons:spider-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θαυμαστός": {
+        "icon": "game-icons:doctor-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θεωρία": {
+        "icon": "game-icons:on-sight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θνήσκω": {
+        "icon": "game-icons:dead-head",
+        "verdict": "ok"
+      },
+      "θρησκεύω": {
+        "icon": "ph:person-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θυμόω": {
+        "icon": "mdi:gauge-full",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θυσιαστήριον": {
+        "icon": "game-icons:star-altar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：unity 是遊戲引擎標誌、indian-palace 是泰姬瑪哈陵、greek-sphinx 是人面獅身、james-bond-aperture 是 007 槍管、content-save-all 是磁片、chalkboard-teacher 教的是老師不是僕役"
+      },
+      "θύρα": {
+        "icon": "game-icons:magic-portal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κέρας": {
+        "icon": "game-icons:beer-horn",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καίω": {
+        "icon": "game-icons:card-burn",
+        "verdict": "ok"
+      },
+      "καθέδρα": {
+        "icon": "game-icons:car-seat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καθέζομαι": {
+        "icon": "game-icons:sitting-dog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καθαρός": {
+        "icon": "mdi:silverware-clean",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κακία": {
+        "icon": "game-icons:evil-bud",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καλός": {
+        "icon": "ph:thumbs-up",
+        "verdict": "ok"
+      },
+      "καλῶς": {
+        "icon": "ph:thumbs-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καρπός": {
+        "icon": "game-icons:fruit-bowl",
+        "verdict": "ok"
+      },
+      "κατάληψις": {
+        "icon": "game-icons:grasping-slug",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κατακυριεύω": {
+        "icon": "tabler:exercise-ball",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καταλαμβάνω": {
+        "icon": "mdi:format-wrap-tight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "καταλιμπάνω": {
+        "icon": "ph:empty-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κατευθύνω": {
+        "icon": "ph:magnet-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κατοικητήριον": {
+        "icon": "game-icons:dog-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κηρύσσω": {
+        "icon": "ph:megaphone-bold",
+        "verdict": "ok"
+      },
+      "κλίνω": {
+        "icon": "mdi:seat-recline-extra",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κλείω": {
+        "icon": "game-icons:shut-rose",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κληρονομία": {
+        "icon": "ph:house-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κλῆρος": {
+        "icon": "game-icons:game-console",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κλῆσις": {
+        "icon": "tabler:phone-calling-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κοιλία": {
+        "icon": "tabler:border-inner",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κοινός": {
+        "icon": "ph:handshake-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κομίζω": {
+        "icon": "mdi:arrange-bring-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κρίμα": {
+        "icon": "mdi:arrow-decision-auto",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κρίσις": {
+        "icon": "mdi:arrow-decision",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κραταιός": {
+        "icon": "game-icons:strong-man",
+        "verdict": "ok"
+      },
+      "κρείττων": {
+        "icon": "mdi:unfold-more-horizontal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κτίσμα": {
+        "icon": "game-icons:sea-creature",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κυκλόω": {
+        "icon": "mdi:surround-sound-2-0",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κόλασις": {
+        "icon": "game-icons:3d-hammer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κόρη": {
+        "icon": "mdi:human-male-girl",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "κῆρυξ": {
+        "icon": "ph:megaphone-fill",
+        "verdict": "ok"
+      },
+      "λάκκος": {
+        "icon": "game-icons:spiky-pit",
+        "verdict": "ok"
+      },
+      "λέγω": {
+        "icon": "game-icons:back-forth",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λίθος": {
+        "icon": "game-icons:rune-stone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λαμπρός": {
+        "icon": "game-icons:shining-claw",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λατρεία": {
+        "icon": "mdi:dog-service",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λειτουργός": {
+        "icon": "game-icons:glowing-hands",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λευκός": {
+        "icon": "mdi:white-balance-incandescent",
+        "verdict": "ok"
+      },
+      "λιμός": {
+        "icon": "mdi:face-man-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λογισμός": {
+        "icon": "tabler:thinking-medium",
+        "verdict": "ok"
+      },
+      "λόγιον": {
+        "icon": "game-icons:satellite-communication",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "λύπη": {
+        "icon": "game-icons:back-pain",
+        "verdict": "ok"
+      },
+      "μάτην": {
+        "icon": "mdi:pi-hole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μάχη": {
+        "icon": "game-icons:crossed-axes",
+        "verdict": "ok"
+      },
+      "μέ": {
+        "icon": "game-icons:drink-me",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μέγεθος": {
+        "icon": "tabler:cap-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μέλι": {
+        "icon": "game-icons:honey-jar",
+        "verdict": "ok"
+      },
+      "μέλος": {
+        "icon": "game-icons:bird-limb",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μέσος": {
+        "icon": "game-icons:middle-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μέτρον": {
+        "icon": "game-icons:measure-tape",
+        "verdict": "ok"
+      },
+      "μή": {
+        "icon": "mdi:gate-not",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μήποτε": {
+        "icon": "game-icons:extra-time",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μήτηρ": {
+        "icon": "mdi:mother-heart",
+        "verdict": "ok"
+      },
+      "μακαρίζω": {
+        "icon": "tabler:mood-happy",
+        "verdict": "ok"
+      },
+      "μακροθυμία": {
+        "icon": "ph:hourglass-low",
+        "verdict": "ok"
+      },
+      "μαλακία": {
+        "icon": "ph:face-mask-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "ματαιότης": {
+        "icon": "mdi:vanity-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μείζων": {
+        "icon": "mdi:chart-arc",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μεγαλεῖος": {
+        "icon": "game-icons:grand-piano",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μεγαλοπρεπής": {
+        "icon": "game-icons:sand-castle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μεγαλωσύνη": {
+        "icon": "game-icons:castle-ruins",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μελετάω": {
+        "icon": "mdi:floor-plan",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μερίζω": {
+        "icon": "ph:divide-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μερίς": {
+        "icon": "ph:chart-pie",
+        "verdict": "ok"
+      },
+      "μετάνοια": {
+        "icon": "tabler:status-change",
+        "verdict": "ok"
+      },
+      "μεταβάλλω": {
+        "icon": "mdi:key-change",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μεταξύ": {
+        "icon": "ph:arrow-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μετρέω": {
+        "icon": "mdi:tape-measure",
+        "verdict": "ok"
+      },
+      "μηδέ": {
+        "icon": "tabler:equal-not",
+        "verdict": "ok"
+      },
+      "μιμνήσκω": {
+        "icon": "game-icons:balloon-dog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μισέω": {
+        "icon": "game-icons:love-song",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μοιχός": {
+        "icon": "game-icons:broken-axe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μορφή": {
+        "icon": "tabler:shape-3",
+        "verdict": "ok"
+      },
+      "μυστήριον": {
+        "icon": "game-icons:secret-book",
+        "verdict": "ok"
+      },
+      "μωρός": {
+        "icon": "ph:face-mask-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μόνος": {
+        "icon": "mdi:bed-single",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "μᾶλλον": {
+        "icon": "mdi:skew-more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "νέος": {
+        "icon": "mdi:moon-new",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "νήπιος": {
+        "icon": "mdi:account-child",
+        "verdict": "ok"
+      },
+      "ναί": {
+        "icon": "ph:check-fat",
+        "verdict": "ok"
+      },
+      "νεκρός": {
+        "icon": "game-icons:dead-eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "νεφέλη": {
+        "icon": "tabler:cloud-up",
+        "verdict": "ok"
+      },
+      "νοῦς": {
+        "icon": "game-icons:hive-mind",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "νόμος": {
+        "icon": "game-icons:law-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "νόσος": {
+        "icon": "tabler:face-id-error",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "ξένος": {
+        "icon": "mdi:new-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "ξίφος": {
+        "icon": "game-icons:axe-sword",
+        "verdict": "ok"
+      },
+      "οἰκέτης": {
+        "icon": "ph:paint-brush-household",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "οἰκία": {
+        "icon": "game-icons:family-tree",
+        "verdict": "ok"
+      },
+      "οἰκεῖος": {
+        "icon": "game-icons:one-eyed",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "οἰκουμένη": {
+        "icon": "tabler:world-cog",
+        "verdict": "ok"
+      },
+      "οὐ (οὐκ": {
+        "icon": "tabler:smoking-no",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "οὐράνιος": {
+        "icon": "ph:cloud-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "οὕτως": {
+        "icon": "ph:hand-pointing",
+        "verdict": "ok"
+      },
+      "πάθος": {
+        "icon": "game-icons:burning-passion",
+        "verdict": "ok"
+      },
+      "πέντε": {
+        "icon": "ph:number-five",
+        "verdict": "ok"
+      },
+      "πέρας": {
+        "icon": "tabler:phone-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πίπτω": {
+        "icon": "game-icons:person-in-bed",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παιδάριον": {
+        "icon": "tabler:mood-boy",
+        "verdict": "ok"
+      },
+      "παιδεία": {
+        "icon": "ph:graduation-cap",
+        "verdict": "ok"
+      },
+      "πανάγιος": {
+        "icon": "game-icons:holy-oak",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πανταχόθεν": {
+        "icon": "mdi:border-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παράγω": {
+        "icon": "game-icons:boarding-pass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παράδεισος": {
+        "icon": "game-icons:bird-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παράδοξος": {
+        "icon": "game-icons:wizard-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παράκλησις": {
+        "icon": "mdi:nature-people-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παραδέχομαι": {
+        "icon": "game-icons:receive-money",
+        "verdict": "ok"
+      },
+      "παραδίδωμι": {
+        "icon": "mdi:sign-yield",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παρακαλέω": {
+        "icon": "mdi:call-merge",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παραλαμβάνω": {
+        "icon": "mdi:near-me",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παραφέρω": {
+        "icon": "tabler:s-turn-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παραφυάς": {
+        "icon": "game-icons:tree-branch",
+        "verdict": "ok"
+      },
+      "παρεμβάλλω": {
+        "icon": "game-icons:desert-camp",
+        "verdict": "ok"
+      },
+      "παρθένος": {
+        "icon": "mdi:human-female-girl",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παρουσία": {
+        "icon": "tabler:plane-arrival",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πατάσσω": {
+        "icon": "game-icons:wave-strike",
+        "verdict": "ok"
+      },
+      "πατρίς": {
+        "icon": "mdi:hoop-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πατριά": {
+        "icon": "game-icons:family-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πατρικός": {
+        "icon": "game-icons:quick-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "παῖς": {
+        "icon": "mdi:human-male-boy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πειράζω": {
+        "icon": "tabler:test-pipe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πειράω": {
+        "icon": "mdi:currency-try",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πειρασμός": {
+        "icon": "mdi:ab-testing",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "πεντακόσιοι": {
+        "icon": "ph:dice-five",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "περίκειμαι": {
+        "icon": "mdi:surround-sound-2-1",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "περιλαμβάνω": {
+        "icon": "mdi:surround-sound",
+        "verdict": "wrong",
+        "reason": "逐張看圖：thumbs-down 配「好」是相反、love-song 配「恨」是相反、currency-try 是土耳其里拉、ab-testing 是 A/B 測試、magic-portal 是傳送門、sitting-dog 是坐著的狗、dice-five 配「五百」教的是五"
+      },
+      "περισσός": {
+        "icon": "ph:greater-than",
+        "verdict": "ok"
+      },
+      "πιστός": {
+        "icon": "ph:handshake-fill",
+        "verdict": "ok"
+      },
+      "πλάσσω": {
+        "icon": "game-icons:ring-mould",
+        "verdict": "ok"
       }
     },
     "latin": {
