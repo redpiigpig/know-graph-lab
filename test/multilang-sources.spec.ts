@@ -7,6 +7,7 @@ import {
   migrateLegacyViewMode,
   langLabel,
   zipParallel,
+  BLANK_PARAGRAPH,
 } from "~/lib/multilang-sources";
 
 // Contract for the collected-works multi-language schema. See
@@ -188,5 +189,38 @@ describe("zipParallel", () => {
 
   it("empty everything → no rows", () => {
     expect(zipParallel([], {}, [])).toEqual([]);
+  });
+});
+
+// BLANK_PARAGRAPH holds a slot in a source column that only fills SOME indices
+// (e.g. a Latin original aligned to the 繁中 by paragraphus number — numbered
+// body paragraphs match, headings and footnote blocks have no counterpart).
+// The reader rebuilds each column with `split(/\n{2,}/).map(trim).filter(Boolean)`,
+// so the filler must survive BOTH trim and the truthiness filter; if it does not,
+// every later row in that column silently shifts up.
+describe("BLANK_PARAGRAPH", () => {
+  const splitLikeReader = (md: string) =>
+    md.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+
+  it("survives the reader's paragraph split so positions are preserved", () => {
+    const col = ["", "alpha", "", "beta"].map((p) => p || BLANK_PARAGRAPH);
+    const paras = splitLikeReader(col.join("\n\n"));
+    expect(paras).toHaveLength(4);
+    expect(paras[1]).toBe("alpha");
+    expect(paras[3]).toBe("beta");
+  });
+
+  it("keeps a Latin column aligned with the 中文 column through zipParallel", () => {
+    const zh = ["# 第十一章", "17. 我自幼…", "18. 我懇求禰…"];
+    const la = [BLANK_PARAGRAPH, "audieram…", "obsecro te…"];
+    const rows = zipParallel(zh, { la }, ["la"]);
+    expect(rows[1].cols.la).toBe("audieram…");
+    expect(rows[2].cols.la).toBe("obsecro te…");
+  });
+
+  it("is dropped by the split if a writer uses an ordinary blank instead", () => {
+    // Regression guard: NBSP and "" are both filtered out — the bug this exists to prevent.
+    expect(splitLikeReader(["", "alpha"].join("\n\n"))).toEqual(["alpha"]);
+    expect(splitLikeReader([" ", "alpha"].join("\n\n"))).toEqual(["alpha"]);
   });
 });

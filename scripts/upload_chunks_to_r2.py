@@ -22,6 +22,7 @@ Usage:
   python scripts/upload_chunks_to_r2.py upload --limit 5  # test with 5 files
   python scripts/upload_chunks_to_r2.py upload            # upload all
   python scripts/upload_chunks_to_r2.py upload --force    # re-upload existing
+  python scripts/upload_chunks_to_r2.py upload --id <ebook_id> --force   # 只重傳這一本
 """
 import gzip
 import io
@@ -139,6 +140,16 @@ def gz_compress(data: bytes) -> bytes:
 def cmd_status():
     print(f"Chunks dir: {CHUNKS_DIR}")
     locals_ = list_local_files()
+    if only:
+        # 改了一本書就重傳整批不合理，也白花頻寬。--id 只傳指定的那幾本。
+        want = set(only)
+        locals_ = [(p, s) for p, s in locals_ if p.stem in want]
+        missing = want - {p.stem for p, _ in locals_}
+        if missing:
+            print(f"  ⚠ 本機找不到：{', '.join(sorted(missing))}")
+        if not locals_:
+            print("沒有可傳的檔案。")
+            return
     local_total = sum(s for _, s in locals_)
     print(f"  Local: {len(locals_)} files, {fmt_size(local_total)}")
     print(f"  Estimated gzipped: {fmt_size(int(local_total * 0.25))}  (~25% of original)")
@@ -155,7 +166,7 @@ def cmd_status():
     print(f"\nPending: {len(todo)} files to upload")
 
 
-def cmd_upload(limit=None, dry_run=False, force=False):
+def cmd_upload(limit=None, dry_run=False, force=False, only=None):
     client = get_r2_client()
 
     print("Pre-flight checks…")
@@ -258,7 +269,11 @@ def main():
         if "--limit" in args:
             i = args.index("--limit")
             limit = int(args[i + 1])
-        cmd_upload(limit=limit, dry_run=dry_run, force=force)
+        only = None
+        if "--id" in args:
+            i = args.index("--id")
+            only = [x for x in args[i + 1].split(",") if x]
+        cmd_upload(limit=limit, dry_run=dry_run, force=force, only=only)
     else:
         print(f"Unknown command: {cmd}")
         print(__doc__)

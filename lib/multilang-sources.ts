@@ -120,6 +120,21 @@ export interface ParallelRow {
 }
 
 /**
+ * Filler for a source paragraph that has no counterpart at that index.
+ *
+ * The parallel grid zips columns BY INDEX, and the reader builds each column by
+ * splitting on blank lines and dropping empties — so an empty paragraph would
+ * be discarded and shift every later row in that column. A writer that can only
+ * fill SOME positions (e.g. a Latin original aligned to the 繁中 by the classical
+ * paragraphus number: numbered body paragraphs match, headings and footnote
+ * blocks have no Latin) must emit this instead of "" to hold the slot.
+ *
+ * U+200B ZERO WIDTH SPACE specifically: it survives `String.trim()` (unlike NBSP
+ * and ordinary spaces) so it is not filtered out, and renders as nothing.
+ */
+export const BLANK_PARAGRAPH = "​";
+
+/**
  * Reader-side parallel grid: zip the 繁中 paragraphs with each source language's
  * paragraphs BY INDEX, padding short columns with "" so one missing paragraph
  * never shifts every following row in another column (same posture as the
