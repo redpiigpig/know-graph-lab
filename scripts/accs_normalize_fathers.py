@@ -32,6 +32,19 @@ NAME_COLS = ['name_recommended', 'name_protestant', 'name_catholic_sgs',
              'name_orthodox', 'name_hk', 'name_tw', 'name_china_academic',
              'name_variants']   # 各語料的既有譯法與 OCR 錯字都收在這一欄
 
+# 機械層：中間點統一成「‧」。掃描來源混用了 · ・ ． • ∙ ⋅ 六種，
+# 「彼得·屈梭羅古」「彼得・屈梭羅古」「彼得．屈梭羅古」在讀者眼裡是三個人。
+# 這一層只換分隔字元、不動任何一個名字用字，所以可以放心自動套用；
+# 真正的用字差異（屈梭羅古／屈稜羅古）一律留給詞庫，絕不在這裡猜。
+DOTS = '·・．•∙⋅'
+CANON_DOT = '‧'
+
+
+def normalize_dots(name: str) -> str:
+    for d in DOTS:
+        name = name.replace(d, CANON_DOT)
+    return name
+
 
 def load_glossary() -> dict[str, str]:
     """各傳統寫法 → name_recommended。"""
@@ -89,11 +102,14 @@ def main() -> int:
         cur = (x['father_name'] or '').strip()
         if not cur:
             continue
-        rec = variants.get(cur)
+        # 先過機械層（中間點），再查詞庫；詞庫查不到就至少保住中間點的統一
+        dotted = normalize_dots(cur)
+        rec = variants.get(dotted) or variants.get(cur)
+        target = rec or dotted
         if rec is None:
-            unknown[cur] += 1
-        elif rec != cur:
-            todo[(cur, rec)].append(x['id'])
+            unknown[dotted] += 1
+        if target != cur:
+            todo[(cur, target)].append(x['id'])
 
     n_rows = sum(len(v) for v in todo.values())
     print(f'\n要改寫 {len(todo)} 種寫法 / {n_rows} 列：')
