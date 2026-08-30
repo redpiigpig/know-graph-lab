@@ -111,7 +111,20 @@ function normalizedHebrewLetters(word: string): string {
  * consonants, normal matres, shureq, and the traditional YHWH spelling remain
  * valid; a single vowel elsewhere in a partly pointed word is not enough.
  */
+// 幾個名字的馬所拉寫法本身就有不帶母音的字母，那是文本的樣子而不是漏標：
+// יִשָּׂשכָר（以薩迦）中間那個 שׂ 不發音，是這個名字有名的怪拼法；耶路撒冷的
+// ketiv 也少一個 yod。照經文抄下來就會長這樣，把它們判成「未標母音」等於要求
+// 資料比馬所拉本更整齊。比對時去掉母音點，只認輔音骨架。
+const HEBREW_DEFECTIVE_SPELLINGS = new Set(["יששכר", "ירושלם"]);
+
+function hebrewConsonantSkeleton(word: string): string {
+  return [...word.normalize("NFD")]
+    .filter((character) => HEBREW_LETTER.test(character))
+    .join("");
+}
+
 export function isFullyPointedHebrewWord(word: string): boolean {
+  if (HEBREW_DEFECTIVE_SPELLINGS.has(hebrewConsonantSkeleton(word))) return true;
   if (normalizedHebrewLetters(word) === "יהוה") return true;
   const clusters = hebrewClusters(word);
   if (!clusters.length) return false;
