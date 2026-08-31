@@ -91,7 +91,7 @@ def test_zh_pin_segs_prefers_head_number_over_div_n():
     那三個節點的 n 是 12／15／16。先讀 n 就會憑空多出品 12／15／16，
     漢品數從 11 變 14 —— 而 --audit 只會報「品數不合」，看不出是幻影品。
     """
-    tpp._TOC_CACHE["TZ"] = [
+    tpp._TOC_CACHE["TRGV"] = [
         {"i": 0, "depth": 0, "type": "pin", "head": "教化品第一",
          "n": "1", "parent": -1, "uid": "P1", "juan": 1},
         {"i": 1, "depth": 0, "type": "pin", "head": "究竟一乘寶性論佛寶品第二",
@@ -100,7 +100,7 @@ def test_zh_pin_segs_prefers_head_number_over_div_n():
         {"i": 2, "depth": 0, "type": "pin", "head": "佛寶品第二",
          "n": "12", "parent": -1, "uid": "P2b", "juan": 2},
     ]
-    out = ts.zh_pin_segs("TZ")
+    out = ts.zh_pin_segs("TRGV")
     assert out == {1: "P1", 2: "P2"}, "重出的品要併回原品號，不可另立新品"
     assert 12 not in out, "n=12 是流水號，不是品十二"
 
@@ -108,7 +108,7 @@ def test_zh_pin_segs_prefers_head_number_over_div_n():
 def test_zh_pin_segs_subdivided_pin_keeps_real_number():
     """「述求品第十二之一／之二」的 n 是「之幾」（1、2），不是品號。
     先讀 n 會讓品十二的落點掛到品一去（setdefault 撞到既有鍵而靜默失敗）。"""
-    tpp._TOC_CACHE["TW"] = [
+    tpp._TOC_CACHE["TMSA"] = [
         {"i": 0, "depth": 0, "type": "pin", "head": "緣起品第一",
          "n": "1", "parent": -1, "uid": "Q1", "juan": 1},
         {"i": 1, "depth": 0, "type": "pin", "head": "大乘莊嚴經論述求品第十二之一",
@@ -116,7 +116,7 @@ def test_zh_pin_segs_subdivided_pin_keeps_real_number():
         {"i": 2, "depth": 0, "type": "pin", "head": "述求品第十二之二",
          "n": "2", "parent": -1, "uid": "Q12b", "juan": 6},
     ]
-    out = ts.zh_pin_segs("TW")
+    out = ts.zh_pin_segs("TMSA")
     assert out[1] == "Q1"
     assert out[12] == "Q12", "品十二要指向「之一」，不是掉進品一或品二"
 
@@ -226,9 +226,63 @@ def test_ratnagotravibhaga_map_and_heading_regex():
     assert sorted(cmap.values())[1] == 8, "梵 2 菩提章要跳到漢 8，不是接著漢 2"
 
 
+def test_suvarnaprabhasa_map_covers_all_21_chapters():
+    """金光明經梵 21 章 vs 曇無讖 19 品。
+
+    原本判「梵本品號跳號（缺 3/10–12/16/18）」是誤診 —— 散文章沒有 `Suv_N.M`
+    頌號，用頌號判品自然看不見那幾章。原書每章有章首標題與帶序數的章尾題各
+    21 條，末章尾題自書 nāmaikaviṃśatitamaḥ（第二十一）。
+
+    差異兩處：梵 3 svapna＋梵 4 deśanā 併為漢 3 懺悔品；
+    梵 10 諸佛菩薩名號陀羅尼章漢本無。21 − 1 − 1 ＝ 19，恰合漢本品數。
+    """
+    e = next(x for x in ts.REGISTRY if x["work"] == "T0663")
+    cmap = e["chapter_map"]
+    assert e["expect_chapters"] == 21
+    assert cmap[3] == 3 and cmap[4] == 3, "梵 3 夢與梵 4 懺悔都掛在漢 3 懺悔品"
+    assert 10 not in cmap, "梵 10 陀羅尼章曇無讖沒有，不可硬掛"
+    assert cmap[11] == 9, "梵 11 堅牢地神 → 漢 9（梵 10 缺席後不是接著漢 10）"
+    assert cmap[21] == 19, "梵 21 囑累 → 漢 19"
+    assert sorted(set(cmap.values())) == list(range(1, 20)),         "漢 19 品每一品都要被蓋到，且不多不少"
+
+
+def test_heading_seq_numbers_by_document_order(tmp_path):
+    """`heading-seq`：章標題只有名字沒有號時，按文件順序編號。
+    金光明經的章首作 `// vyāghrīparivartaḥ //`，抓不到號就會整部塌成一章。"""
+    p = _write(tmp_path, "suv", "".join(
+        f"<p>// {n}parivartaḥ //</p><p>{n} 的內容</p>"
+        for n in ("nidāna", "svapna", "vyāghrī")))
+    sa = ts.parse_gretil(p, r"^//\s*\S.*parivartaḥ\s*//$", "heading-seq")
+    assert sorted(sa) == [1, 2, 3]
+    assert any("svapna 的內容" in x for x in sa[2])
+    assert any("vyāghrī 的內容" in x for x in sa[3])
+
+
+def test_expect_chapters_blocks_a_misparsed_sanskrit_side(tmp_path, monkeypatch):
+    """🚨 有 chapter_map 時就不再比對梵漢品數，那道閘管不到「梵本自己解錯了」。
+    expect_chapters 是補這個洞的：解出的章數與原書尾題條數不符就擋下，
+    別讓一張對著錯章號的表悄悄掛上去。"""
+    p = _write(tmp_path, "z", "<p>// aparivartaḥ //</p><p>甲</p>")
+    monkeypatch.setattr(ts, "fetch", lambda _n: p)
+    tpp._TOC_CACHE["TQ"] = [
+        {"i": 0, "depth": 0, "type": "pin", "head": "某品第一", "n": None,
+         "parent": -1, "uid": "U1", "juan": 1},
+    ]
+    r = ts.audit_one({"file": "z", "work": "TQ", "zh": "測", "sa": "T",
+                      "siglum": r"^//\s*\S.*parivartaḥ\s*//$", "form": "heading-seq",
+                      "expect_chapters": 21, "chapter_map": {1: 1}})
+    assert "🚨" in r["status"] and "解析" in r["status"]
+    assert "21" in r["detail"]
+
+
 def test_registry_entries_are_wellformed():
     for e in ts.REGISTRY:
-        assert e["form"] in ("chapter", "chapter.verse", "regex", "none"), e["zh"]
+        assert e["form"] in ("chapter", "chapter.verse", "regex",
+                             "heading-seq", "none"), e["zh"]
+        # heading-seq 是按文件順序編號，沒有原書的號可核對 —— 故一律要求
+        # 宣告 expect_chapters（＝原書尾題條數），讓解析錯誤擋得下來
+        if e["form"] == "heading-seq":
+            assert e.get("expect_chapters"), f"{e['zh']}：heading-seq 必須宣告 expect_chapters"
         assert e["work"].startswith("T"), e["zh"]
         # chapter_map 只在梵漢品數不同時才該出現，且鍵值都要是正整數
         for k, v in (e.get("chapter_map") or {}).items():

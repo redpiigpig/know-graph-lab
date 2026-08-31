@@ -146,13 +146,48 @@ REGISTRY: list[dict] = [
      "zh": "金剛般若波羅蜜經", "sa": "Vajracchedikā Prajñāpāramitā",
      "siglum": "", "form": "none",
      "note": "梵本不分品（Vaidya 本只有頁碼）；漢譯的三十二分是昭明太子後加"},
-    # 梵本品號有跳號（解出 1,2,4,5,6,7,8,9,13,14,15,17,19,20,21，缺 3/10–12/16/18），
-    # 且梵本 21 品、曇無讖譯 19 品、義淨譯 31 品，三者分品各不相同。
-    # 要對得先做真正的文獻學比對，不是調參數 —— 暫由閘擋下。
+    # 🚨 原本判「梵本品號跳號（缺 3/10–12/16/18）」是**誤診**。品號沒有跳 ——
+    # 是散文章（無偈頌）裡根本不會出現 `Suv_N.M` 頌號，用頌號判品自然看不到那幾章。
+    # 本書每章有兩個標記：章首 `// vyāghrīparivartaḥ //`（只有名字沒有號）
+    # 與章尾 `iti śrīsuvarṇaprabhāsottamasūtrendrarāje …parivarto nāma prathamaḥ //`
+    # （帶序數詞）。兩者各 21 條，末章尾題自書 `nāmaikaviṃśatitamaḥ`（第二十一），
+    # 即原書自己說了是 21 章。故改用章首標題按文件順序編號，並以 expect_chapters
+    # 對驗 21。
+    #
+    # 梵 21 章 vs 曇無讖 19 品，差異兩處，逐章核對章名而非照順序推：
+    #   ① 梵 3 svapna（夢）＋梵 4 deśanā（懺悔）→ 併為漢 3 懺悔品
+    #      （曇無讖把妙幢夢見金鼓與其懺悔文合為一品）
+    #   ② 梵 10 sarvabuddhabodhisattvanāmasaṃdhāraṇi（諸佛菩薩名號陀羅尼，
+    #      全章僅四行）曇無讖無此品，義淨三十一品本才有
+    # 21 − 1（合品）− 1（漢本無）＝ 19，與漢本品數恰好相符，其餘章名逐一對得上。
     {"file": "sa_suvarNaprabhAsasUtra", "work": "T0663",
-     "zh": "金光明經", "sa": "Suvarṇaprabhāsasūtra", "siglum": "Suv",
-     "form": "chapter",
-     "note": "梵本品號跳號且梵漢分品互異，待文獻學比對後才能手寫 chapter_map"},
+     "zh": "金光明經", "sa": "Suvarṇaprabhāsasūtra",
+     "siglum": r"^//\s*\S.*parivartaḥ\s*//$", "form": "heading-seq",
+     "expect_chapters": 21,
+     "chapter_map": {
+         1: 1,    # nidāna                              序品
+         2: 2,    # tathāgatāyuḥpramāṇanirdeśa          壽量品
+         3: 3,    # svapna                    夢 ┐
+         4: 3,    # deśanā                  懺悔 ┴→ 漢 3 懺悔品
+         5: 4,    # kamalākarasarvatathāgatastava       讚歎品
+         6: 5,    # śūnyatā                             空品
+         7: 6,    # caturmahārāja                       四天王品
+         8: 7,    # sarasvatīdevī                       大辯天神品
+         9: 8,    # śrīmahādevī                         功德天品
+         # 10 sarvabuddhabodhisattvanāmasaṃdhāraṇi —— 曇無讖無，故不掛
+         11: 9,   # dṛḍhāpṛthivīdevatā                  堅牢地神品
+         12: 10,  # saṃjñeyamahāyakṣasenāpati           散脂鬼神品
+         13: 11,  # devendrasamayarājaśāstra            正論品
+         14: 12,  # susaṃbhava                          善集品
+         15: 13,  # yakṣāśrayarakṣā                     鬼神品
+         16: 14,  # daśadevaputrasahasravyākaraṇa       授記品
+         17: 15,  # vyādhipraśamana                     除病品
+         18: 16,  # jalavāhanasya matsyavaineya         流水長者子品
+         19: 17,  # vyāghrī                             捨身品
+         20: 18,  # sarvatathāgatastava                 讚佛品
+         21: 19,  # nigamana                            囑累品
+     },
+     "note": "梵 21 章、曇無讖 19 品；梵 3+4 併為漢 3 懺悔品，梵 10 陀羅尼章漢本無"},
 
     # ── 尚無可靠章節標記，退回整部層級 ──
     {"file": "sa_azvaghoSa-buddhacarita", "work": "T0192",
@@ -189,7 +224,7 @@ def parse_gretil(path: Path, siglum: str, form: str) -> dict[int, list[str]]:
     if body is None:
         return {}
 
-    if form == "regex":
+    if form in ("regex", "heading-seq"):
         pat = re.compile(siglum)          # 此時 siglum 欄放的是完整 regex
     elif form == "chapter.verse":
         pat = re.compile(rf"\b{re.escape(siglum)}[_\s]*(\d+)[.,](\d+)")
@@ -199,7 +234,7 @@ def parse_gretil(path: Path, siglum: str, form: str) -> dict[int, list[str]]:
         pat = None
 
     out: dict[int, list[str]] = {}
-    state = {"cur": 1}
+    state = {"cur": 1, "seq": 0}
 
     def emit(lines: list[str]):
         """一個單位（一組偈頌，或一段散文）→ 歸入一品。
@@ -215,7 +250,15 @@ def parse_gretil(path: Path, siglum: str, form: str) -> dict[int, list[str]]:
             for s in lines:
                 m = pat.search(s)
                 if m:
-                    state["cur"] = int(m.group(1))
+                    if form == "heading-seq":
+                        # 章標題只有名字沒有號（金光明經作 `// vyāghrīparivartaḥ //`），
+                        # 故按文件順序遞增。這不是「自編引用式」（踩坑 15 禁的那種）——
+                        # 它不外顯、只作對齊鍵，而且章數會拿原書尾題的條數對驗
+                        # （expect_chapters），對不上就在 --audit 報出來。
+                        state["seq"] += 1
+                        state["cur"] = state["seq"]
+                    else:
+                        state["cur"] = int(m.group(1))
                     break
         out.setdefault(state["cur"], []).extend(lines)
 
@@ -296,6 +339,17 @@ def audit_one(entry: dict) -> dict:
     sa = parse_gretil(path, entry["siglum"], entry["form"])
     zh = zh_pin_segs(entry["work"])
     cmap = entry.get("chapter_map")
+    # 🚨 有 chapter_map 時就不再比對梵漢品數了 —— 那道閘管不到「梵本那一側
+    # 自己就解錯了」。故手寫表的條目可再宣告 expect_chapters（＝原書尾題的條數），
+    # 解出來的章數對不上就先擋下，別讓一張對著錯章號的表悄悄掛上去。
+    want = entry.get("expect_chapters")
+    if want and len(sa) != want:
+        return {**entry, "sa_chapters": len(sa), "zh_chapters": len(zh),
+                "sa_lines": sum(len(v) for v in sa.values()),
+                "status": "🚨 梵本解析有誤",
+                "detail": f"應為 {want} 章（依原書尾題），實解出 {len(sa)} 章 —— "
+                          f"先修解析，別動 chapter_map",
+                "_sa": sa, "_zh": zh}
     if cmap:
         status = "手寫品對照表"
         aligned = sum(1 for k, v in cmap.items() if k in sa and v in zh)
