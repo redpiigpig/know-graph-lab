@@ -1,4 +1,3 @@
-import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 
 // 回傳白話字《台灣教會公報》某一篇的全文（漢羅＋台羅兩種寫法）。
 // 全文按十年打包成 JSONL 放 R2（pct-fulltext/poj/<年代>.jsonl），一包最大約 1 MB，
@@ -24,28 +23,11 @@ async function loadDecade(decade: string): Promise<Map<string, PojRow> | null> {
   const hit = cache.get(decade)
   if (hit) return hit
 
-  const config = useRuntimeConfig()
-  const s3 = new S3Client({
-    region: 'auto',
-    endpoint: config.r2Endpoint,
-    credentials: { accessKeyId: config.r2AccessKey, secretAccessKey: config.r2SecretKey },
-  })
-  let body: string
-  try {
-    const r = await s3.send(new GetObjectCommand({ Bucket: config.r2Bucket, Key: `${PREFIX}${decade}.jsonl` }))
-    body = (await r.Body?.transformToString('utf-8')) ?? ''
-  } catch {
-    return null
-  }
+  const body = await r2Text(`${PREFIX}${decade}.jsonl`)
+  if (body === null) return null
 
   const rows = new Map<string, PojRow>()
-  for (const line of body.split('\n')) {
-    if (!line.trim()) continue
-    try {
-      const row = JSON.parse(line) as PojRow
-      rows.set(row.id, row)
-    } catch { /* 單行壞掉不該讓整個年代讀不出來 */ }
-  }
+  for (const row of parseJsonl<PojRow>(body)) rows.set(row.id, row)
   if (cache.size >= MAX_DECADES_CACHED) cache.delete(cache.keys().next().value as string)
   cache.set(decade, rows)
   return rows

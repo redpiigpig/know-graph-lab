@@ -102,7 +102,7 @@ def fetch(only_year=None, limit_years=None):
         years = years[:limit_years]
     have = df.r2_existing_keys(R2_PREFIX)
     for year in years:
-        key = f"{R2_PREFIX}/{year}.jsonl"
+        key = f"{R2_PREFIX}/{year}.jsonl.gz"
         if key in have and year != this_year:   # 當年度仍在增修，一律重抓
             print(f"{year}：已有，略過")
             continue
@@ -123,8 +123,10 @@ def publish():
     CONTENT.mkdir(parents=True, exist_ok=True)
     summary = []
     for key in sorted(have):
-        year = Path(key).stem
-        body = df.s3.get_object(Bucket=df.R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
+        # 檔名是 <年>.jsonl.gz，Path().stem 只會剝掉一層而回 "2011.jsonl"，
+        # 要一路剝到沒有副檔名為止
+        year = Path(key).name.split(".")[0]
+        body = df.r2_get_text(key)          # 會自動解 gzip
         rows = [json.loads(l) for l in body.splitlines() if l.strip()]
         summary.append({"year": year, "count": len(rows),
                         "chars": sum(len(r["text"]) for r in rows), "textKey": key})

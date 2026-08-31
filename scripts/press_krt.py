@@ -193,7 +193,8 @@ def publish():
              "title": x.get("title", ""), "text": x["text"],
              "wayback": f"https://web.archive.org/web/{x['ts']}/{x['url']}"},
             ensure_ascii=False) for x in items)
-        df.r2_put_text(f"{R2_PREFIX}/{y}.jsonl", body)
+        # 存 gzip：中文純文字壓到 43%，而且讀取反而快一倍（時間都在下載不在解析）
+        df.r2_put_text_gz(f"{R2_PREFIX}/{y}.jsonl.gz", body)
         index.append({"capturedYear": y, "count": len(items),
                       "chars": sum(x["chars"] for x in items)})
         print(f"  快照 {y}：{len(items)} 篇 / {sum(x['chars'] for x in items):,} 字", flush=True)

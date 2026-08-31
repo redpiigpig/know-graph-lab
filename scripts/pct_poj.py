@@ -99,7 +99,8 @@ def build():
     for dec in sorted(by_dec, key=lambda d: (d == "未詳", d)):
         items = by_dec[dec]
         body = "\n".join(json.dumps(x, ensure_ascii=False) for x in items)
-        df.r2_put_text(f"{R2_PREFIX}/{dec}.jsonl", body)
+        # 存 gzip：中文純文字壓到 43%，而且讀取反而快一倍（時間都在下載不在解析）
+        df.r2_put_text_gz(f"{R2_PREFIX}/{dec}.jsonl.gz", body)
         chars = sum(len(x["hanlo"]) for x in items)
         index.append({"decade": dec, "count": len(items), "chars": chars})
         print(f"  {dec}：{len(items)} 篇 / {chars:,} 字", flush=True)

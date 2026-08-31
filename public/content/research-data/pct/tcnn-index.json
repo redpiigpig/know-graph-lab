@@ -3,102 +3,102 @@
   "year": "2026",
   "count": 1707,
   "chars": 2133783,
-  "textKey": "pct-fulltext/tcnn/2026.jsonl"
+  "textKey": "pct-fulltext/tcnn/2026.jsonl.gz"
  },
  {
   "year": "2025",
   "count": 2775,
   "chars": 3334823,
-  "textKey": "pct-fulltext/tcnn/2025.jsonl"
+  "textKey": "pct-fulltext/tcnn/2025.jsonl.gz"
  },
  {
   "year": "2024",
   "count": 2906,
   "chars": 3256033,
-  "textKey": "pct-fulltext/tcnn/2024.jsonl"
+  "textKey": "pct-fulltext/tcnn/2024.jsonl.gz"
  },
  {
   "year": "2023",
   "count": 2932,
   "chars": 3426940,
-  "textKey": "pct-fulltext/tcnn/2023.jsonl"
+  "textKey": "pct-fulltext/tcnn/2023.jsonl.gz"
  },
  {
   "year": "2022",
   "count": 3162,
   "chars": 3883093,
-  "textKey": "pct-fulltext/tcnn/2022.jsonl"
+  "textKey": "pct-fulltext/tcnn/2022.jsonl.gz"
  },
  {
   "year": "2021",
   "count": 2459,
   "chars": 2918098,
-  "textKey": "pct-fulltext/tcnn/2021.jsonl"
+  "textKey": "pct-fulltext/tcnn/2021.jsonl.gz"
  },
  {
   "year": "2020",
   "count": 2205,
   "chars": 2624667,
-  "textKey": "pct-fulltext/tcnn/2020.jsonl"
+  "textKey": "pct-fulltext/tcnn/2020.jsonl.gz"
  },
  {
   "year": "2019",
   "count": 2265,
   "chars": 2754452,
-  "textKey": "pct-fulltext/tcnn/2019.jsonl"
+  "textKey": "pct-fulltext/tcnn/2019.jsonl.gz"
  },
  {
   "year": "2018",
   "count": 2261,
   "chars": 2889914,
-  "textKey": "pct-fulltext/tcnn/2018.jsonl"
+  "textKey": "pct-fulltext/tcnn/2018.jsonl.gz"
  },
  {
   "year": "2017",
   "count": 2446,
   "chars": 2973183,
-  "textKey": "pct-fulltext/tcnn/2017.jsonl"
+  "textKey": "pct-fulltext/tcnn/2017.jsonl.gz"
  },
  {
   "year": "2016",
   "count": 2422,
   "chars": 2922187,
-  "textKey": "pct-fulltext/tcnn/2016.jsonl"
+  "textKey": "pct-fulltext/tcnn/2016.jsonl.gz"
  },
  {
   "year": "2015",
   "count": 2428,
   "chars": 2955289,
-  "textKey": "pct-fulltext/tcnn/2015.jsonl"
+  "textKey": "pct-fulltext/tcnn/2015.jsonl.gz"
  },
  {
   "year": "2014",
   "count": 2589,
   "chars": 3157198,
-  "textKey": "pct-fulltext/tcnn/2014.jsonl"
+  "textKey": "pct-fulltext/tcnn/2014.jsonl.gz"
  },
  {
   "year": "2013",
   "count": 2313,
   "chars": 2899635,
-  "textKey": "pct-fulltext/tcnn/2013.jsonl"
+  "textKey": "pct-fulltext/tcnn/2013.jsonl.gz"
  },
  {
   "year": "2012",
   "count": 2263,
   "chars": 3131588,
-  "textKey": "pct-fulltext/tcnn/2012.jsonl"
+  "textKey": "pct-fulltext/tcnn/2012.jsonl.gz"
  },
  {
   "year": "2011",
   "count": 1309,
   "chars": 2026720,
-  "textKey": "pct-fulltext/tcnn/2011.jsonl"
+  "textKey": "pct-fulltext/tcnn/2011.jsonl.gz"
  },
  {
   "year": "2010",
   "count": 9,
   "chars": 8639,
-  "textKey": "pct-fulltext/tcnn/2010.jsonl"
+  "textKey": "pct-fulltext/tcnn/2010.jsonl.gz"
  }
 ]

@@ -1,4 +1,3 @@
-import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 
 // 回傳《台灣教會公報》新聞網某一篇的全文。全文按年打包成 JSONL 放 R2
 // （pct-fulltext/tcnn/<年>.jsonl），一年約 3 MB；讀者通常會在同一年裡連看好幾篇，
@@ -19,28 +18,11 @@ async function loadYear(year: string): Promise<Map<number, TcnnRow> | null> {
   const hit = cache.get(year)
   if (hit) return hit
 
-  const config = useRuntimeConfig()
-  const s3 = new S3Client({
-    region: 'auto',
-    endpoint: config.r2Endpoint,
-    credentials: { accessKeyId: config.r2AccessKey, secretAccessKey: config.r2SecretKey },
-  })
-  let body: string
-  try {
-    const r = await s3.send(new GetObjectCommand({ Bucket: config.r2Bucket, Key: `${PREFIX}${year}.jsonl` }))
-    body = (await r.Body?.transformToString('utf-8')) ?? ''
-  } catch {
-    return null
-  }
+  const body = await r2Text(`${PREFIX}${year}.jsonl`)
+  if (body === null) return null
 
   const rows = new Map<number, TcnnRow>()
-  for (const line of body.split('\n')) {
-    if (!line.trim()) continue
-    try {
-      const row = JSON.parse(line) as TcnnRow
-      rows.set(row.id, row)
-    } catch { /* 單行壞掉不該讓整年讀不出來 */ }
-  }
+  for (const row of parseJsonl<TcnnRow>(body)) rows.set(row.id, row)
   if (cache.size >= MAX_YEARS_CACHED) cache.delete(cache.keys().next().value as string)
   cache.set(year, rows)
   return rows

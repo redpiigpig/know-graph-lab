@@ -13,6 +13,7 @@
 import argparse
 import base64
 from collections import Counter
+import gzip
 import io
 import json
 import os
@@ -139,19 +140,36 @@ def r2_put_text(key, text):
     s3.put_object(Bucket=R2_BUCKET, Key=key, Body=text.encode("utf-8"), ContentType="text/plain; charset=utf-8")
 
 def r2_get_text(key, attempts=4):
-    """讀一個文字物件，外掛一層重試。
+    """讀一個文字物件，外掛一層重試，並自動解 gzip。
 
     boto 本身已經 adaptive 重試 10 次，但整批掃語料要讀好幾萬個物件，
     R2 偶爾回 InternalError 仍會把那 10 次用完。掃到一半炸掉＝整輪重來
     （語料層 --build 一次要掃九萬多個物件），所以這裡再包一層慢一點的重試。
+
+    gzip 是**看內容的魔術位元組**（1f 8b）判斷，不是看副檔名——遷移期間同一個
+    前綴底下會 .jsonl 與 .jsonl.gz 並存，看副檔名就得在每個呼叫端各判一次。
     """
     for i in range(attempts):
         try:
-            return s3.get_object(Bucket=R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
+            raw = s3.get_object(Bucket=R2_BUCKET, Key=key)["Body"].read()
+            if raw[:2] == bytes((0x1F, 0x8B)):        # gzip 魔術位元組
+                raw = gzip.decompress(raw)
+            return raw.decode("utf-8")
         except Exception:
             if i == attempts - 1:
                 raise
             time.sleep(2 ** i)
+
+
+def r2_put_text_gz(key, text):
+    """壓縮存放。key 要自己帶 .gz（讓 bucket 一眼看得出哪些壓過）。
+
+    中文純文字實測壓到 43%，而且**讀取反而更快**——時間幾乎全花在 R2→伺服器的
+    下載上（5.6 MB 要 1.8 秒），解壓只要 42 ms。
+    """
+    s3.put_object(Bucket=R2_BUCKET, Key=key,
+                  Body=gzip.compress(text.encode("utf-8"), 6),
+                  ContentType="application/json", ContentEncoding="gzip")
 
 class RateLimited(Exception):
     pass
