@@ -246,3 +246,6 @@ output/source-cache/scripture/morphology/
 
 # thesis_ndltd.py 每次執行都由 JS 常數重寫這支 playwright 腳本，屬快取不屬源碼。
 scripts/.ndltd_fetch.mjs
+# 站台偵查用的一次性 playwright 腳本（必須放 repo 內才找得到 playwright）
+scripts/.aa_probe.mjs
+scripts/.krt_probe.mjs

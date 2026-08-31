@@ -38,6 +38,14 @@
           </div>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/press" class="tool-card group border-violet-100 hover:border-violet-300 hover:shadow-violet-100">
+          <div class="tool-icon bg-violet-50 text-violet-600">🗞️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">期刊與報紙</h2>
+            <p class="tool-desc">刊物本位的一層，與各教派研究資料平行互指：基督教三大報、佛教四刊、台灣五大報，各標明全文／篇目索引／檢索指引三種收錄層級</p>
+          </div>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/corpus" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
           <div class="tool-icon bg-amber-50 text-amber-600">📈</div>
           <div class="flex-1">
