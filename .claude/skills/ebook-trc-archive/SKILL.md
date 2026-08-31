@@ -276,6 +276,45 @@ python scripts/dazangjing_proposal.py \
 - **404 的錯誤訊息會直接告訴你接班模型是哪個**，照著換即可（此次指向 `gemini-3.6-flash`）。
 - `--model` 可即時覆寫，不必改 `.env`。判定 Gemini 全掛、要退 Haiku 之前，**先把候選模型名試過一輪**。
 
+**別自己挑模型——問 `gemini_probe.py`。** 它掃 MODELS 清單找第一個真的能生成的，
+把 `MODEL=xxx` 印在 stdout 第一行並寫進 `scripts/state/gemini_live_model.txt`。
+免費層日配額是**每 key 每模型**各自獨立，所以「某個模型乾了」永遠不等於「Gemini 乾了」。
+
+### 🚨 日常 OCR 排程其實沒在跑（2026-08-30 修好）
+
+積壓不動的真正原因不在額度，是排程根本沒啟動，而且**沒有任何錯誤會被看見**：
+
+1. `KGLab-OCR-Daily-10/14/18` 的 `DisallowStartIfOnBatteries=True`。這台是筆電，
+   10/14/18 點只要在電池上就直接拒跑，`LastTaskResult=0x800710E0`（工作被拒絕）。
+   **`scripts/logs/` 148 個檔案裡一個 `ocr_*.log` 都沒有**——bat 從來沒跑完過。
+   已把三個排程的電池限制關掉。（`KGLab-Quality-Sweep` 仍有同樣設定，待使用者決定。）
+2. `run_ocr_daily.bat` 第 3 步直接呼叫 `ocr_with_gemini.py`，**沒先跑探針**，
+   吃的是正在 503 的 `DEFAULT_MODEL`。全 repo 五支 Gemini runner
+   （`fleet_keeper.ps1`／`accs_ocr_gemini_runner.ps1`／`resume_lanes_on_gemini.ps1`／
+   `translation_cloud_supervisor.py`／`ingest_accs_genesis.py`）都會先探，只有這支漏接。
+   已補 Step 3a：探針成功就 `set GEMINI_MODEL`，全掛則跳過 OCR 並設 `GEMINI_EXIT=2`
+   走既有的通知分支。
+
+🚨 **改 bat 的控制流一定要實測兩條路徑**（`goto` 標籤打錯、`set /p` 讀不到檔會**卡住等 stdin**，
+在排程裡就是掛到 `ExecutionTimeLimit` 為止）。用 scratchpad 的假 bat 分別測「探針成功」與
+「全掛」兩條，確認都走到 `:after_ocr`。`set /p` 讀沒有結尾換行的檔沒問題（已實測）。
+
+⚠️ 從 Git Bash 測 bat 要用 PowerShell 轉手：`cmd.exe /c "path"` 會被 MSYS 路徑轉換
+吃掉參數而開成互動式 cmd，看起來就像「腳本卡住」。
+PowerShell 端寫 ``cmd.exe /c "`"<bat>`" < NUL"``。
+
+### 積壓的組成跟數字給人的印象不同（2026-08-30 實測）
+
+| | 數量 |
+|---|---:|
+| 全館 | 5,012 |
+| 未 parse 總數（`parsed_at IS NULL`） | 2,985 |
+| ├ 已確認掃描本、在 OCR 佇列（`parse_error` 含 no extractable text） | **156** |
+| └ 尚未過 `parse_worker`（其中 pdf 2,181） | 其餘 |
+
+**「OCR 積壓 2,986」其實是「未處理 2,985」**，只跑 `ocr_overnight.py` 也只碰得到 156 本；
+大宗要先過 `parse_worker` 分流才會落進 OCR 佇列。報進度前先把這兩個數字分清楚。
+
 ### 已有文字層 ≠ 不用 OCR
 
 掃描本常帶 Acrobat Paper Capture 的舊 OCR 層，`parse_worker` 會把它當正文抽走並標 `parsed_at`，

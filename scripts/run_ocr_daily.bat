@@ -44,11 +44,35 @@ echo --- parse_worker --- >> "%LOGFILE%"
 "%PY%" scripts\parse_worker.py run --limit 30 >> "%LOGFILE%" 2>&1
 echo step2 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 3a: pick a Gemini model that is actually alive right now.
+REM   Every other Gemini consumer in this repo already probes first
+REM   (fleet_keeper.ps1, accs_ocr_gemini_runner.ps1, resume_lanes_on_gemini.ps1,
+REM   translation_cloud_supervisor.py). This bat was the only one hardcoded to
+REM   ocr_with_gemini.py's DEFAULT_MODEL, and on 2026-08-30 that default
+REM   (gemini-flash-latest) returned 503 "high demand" while gemini-3.6-flash
+REM   worked fine -- the daily run was dying on the MODEL NAME, not on quota,
+REM   and nothing said so. Free-tier quota is per-model, so "one model is dry"
+REM   never means "Gemini is dry": probe, then use whatever still lives.
+echo --- gemini_probe --- >> "%LOGFILE%"
+"%PY%" scripts\gemini_probe.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 goto :gemini_dry
+set /p GEMINI_MODEL=<scripts\state\gemini_live_model.txt
+echo probe picked GEMINI_MODEL=%GEMINI_MODEL% >> "%LOGFILE%"
+
 REM Step 3: OCR scanned PDFs until daily Gemini quota exhausted
 echo --- ocr_with_gemini --- >> "%LOGFILE%"
 "%PY%" scripts\ocr_with_gemini.py run --rpm 8 >> "%LOGFILE%" 2>&1
 set GEMINI_EXIT=%ERRORLEVEL%
 echo step3 exit=%GEMINI_EXIT% >> "%LOGFILE%"
+goto :after_ocr
+
+:gemini_dry
+REM Probe swept every candidate model on every key and none could generate.
+REM Reuse exit code 2 so the existing quota-notify branch below handles it.
+echo step3 SKIPPED: gemini_probe found no live model on any key >> "%LOGFILE%"
+set GEMINI_EXIT=2
+
+:after_ocr
 
 REM On Gemini daily-quota exhaustion (exit 2): notify desktop + skip fallback.
 REM Qwen fallback DISABLED on this laptop (RTX 4050 Mobile, 6 GB VRAM):
