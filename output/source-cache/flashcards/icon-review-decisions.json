@@ -12302,6 +12302,1568 @@
         "icon": "tabler:help-square",
         "verdict": "wrong",
         "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "opus, operis, n.": {
+        "icon": "game-icons:3d-hammer",
+        "verdict": "ok"
+      },
+      "ordino, ordinare, ordinaui, ordinatus": {
+        "icon": "mdi:arrange-send-backward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "ordo, ordinis, m.": {
+        "icon": "game-icons:rank-1",
+        "verdict": "ok"
+      },
+      "paenitentia, paenitentiae, f.": {
+        "icon": "mdi:axis-y-rotate-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "paeniteo, paenitere, paenitui, —": {
+        "icon": "mdi:axis-z-rotate-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "palam": {
+        "icon": "game-icons:egg-eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "panis, panis, panium, m.": {
+        "icon": "ph:bread-bold",
+        "verdict": "ok"
+      },
+      "papa, papae, m.": {
+        "icon": "game-icons:pope-crown",
+        "verdict": "ok"
+      },
+      "parco, parcere, peperci, parsus": {
+        "icon": "ph:lock-open",
+        "verdict": "ok"
+      },
+      "pario, parere, peperi, partus": {
+        "icon": "ph:baby-bold",
+        "verdict": "ok"
+      },
+      "particeps, participis, m. & f.": {
+        "icon": "ph:handshake-bold",
+        "verdict": "ok"
+      },
+      "participo, participare, participaui, participatus": {
+        "icon": "tabler:share-2",
+        "verdict": "ok"
+      },
+      "particularis, particularis, particulare": {
+        "icon": "mdi:camera-metering-partial",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "partim": {
+        "icon": "mdi:weather-partly-rainy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "parum": {
+        "icon": "tabler:hand-little-finger",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "paruulus, -a, -um": {
+        "icon": "tabler:info-small",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "paruus, -a, -um": {
+        "icon": "tabler:alert-small",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pascha, paschae, f.": {
+        "icon": "mdi:egg-easter",
+        "verdict": "ok"
+      },
+      "paschalis, paschale": {
+        "icon": "game-icons:easter-egg",
+        "verdict": "ok"
+      },
+      "passio, passionis, f.": {
+        "icon": "game-icons:burning-passion",
+        "verdict": "ok"
+      },
+      "pastor, pastoris, m.": {
+        "icon": "game-icons:strong-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pateo, patere, patui": {
+        "icon": "ph:globe-stand",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pater, patris, m.": {
+        "icon": "game-icons:vitruvian-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "patior, pati, —, passus": {
+        "icon": "ph:person-simple-bike",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "patrocinium, patrocini(i)": {
+        "icon": "game-icons:protection-glasses",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "paucus, pauca, paucum": {
+        "icon": "tabler:help-small",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "paulatim": {
+        "icon": "mdi:circle-small",
+        "verdict": "ok"
+      },
+      "pax, pacis, f.": {
+        "icon": "ph:hand-peace",
+        "verdict": "ok"
+      },
+      "pectus, pectoris, n.": {
+        "icon": "tabler:heart-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pecunia, pecuniae": {
+        "icon": "game-icons:pay-money",
+        "verdict": "ok"
+      },
+      "pello, pellere, pepuli, pulsus": {
+        "icon": "ph:hard-drive-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "penitus": {
+        "icon": "game-icons:heart-inside",
+        "verdict": "ok"
+      },
+      "per": {
+        "icon": "game-icons:lob-arrow",
+        "verdict": "ok"
+      },
+      "percipio, percipere, percepi, perceptus": {
+        "icon": "ph:hand-fist",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "peregrinantis, gen., peregrinantis": {
+        "icon": "game-icons:pilgrim-hat",
+        "verdict": "ok"
+      },
+      "perennis, perenne": {
+        "icon": "game-icons:eternal-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pereo, perire, periui (perii), peritus": {
+        "icon": "game-icons:lost-limb",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "perfectus, -a, -um": {
+        "icon": "mdi:contain-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "perfero, perferre, pertuli, perlatus": {
+        "icon": "mdi:bag-carry-on-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "perficio, perficere, perfeci, perfectus": {
+        "icon": "game-icons:finish-line",
+        "verdict": "ok"
+      },
+      "permitto, permittere, permisi, permissus": {
+        "icon": "mdi:menu-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "perpetuo": {
+        "icon": "tabler:home-infinity",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "perpetuus, -a, -um": {
+        "icon": "ph:infinity-bold",
+        "verdict": "ok"
+      },
+      "persequor, persequi, —, persecutus sum": {
+        "icon": "game-icons:deer-track",
+        "verdict": "ok"
+      },
+      "perseuero, perseuerare, perseueraui, perseueratus": {
+        "icon": "game-icons:thor-fist",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "personalis, personalis, personale": {
+        "icon": "mdi:bag-personal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "persono, personare, personui, personitus": {
+        "icon": "ph:megaphone-fill",
+        "verdict": "ok"
+      },
+      "pertranseo, pertransire, pertransiui (pertransii), pertransitus": {
+        "icon": "tabler:go-game",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "peto, petere, petiui, petitus": {
+        "icon": "game-icons:glowing-hands",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "philosophia, philosophiae": {
+        "icon": "game-icons:evil-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "philosophus, philosophi": {
+        "icon": "game-icons:philosopher-bust",
+        "verdict": "ok"
+      },
+      "pietas, pietatis, f.": {
+        "icon": "ph:hands-praying",
+        "verdict": "ok"
+      },
+      "pius, -a, -um": {
+        "icon": "game-icons:holy-oak",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "planctus, planctus, m.": {
+        "icon": "game-icons:dwarf-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "plango, plangere, planxi, planctus": {
+        "icon": "mdi:face-agent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "plebs, plebis": {
+        "icon": "mdi:nature-people",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "plene": {
+        "icon": "game-icons:gold-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "plenus, -a, -um (+ abl.)": {
+        "icon": "mdi:moon-full",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "ploro, plorare, ploraui, ploratus": {
+        "icon": "game-icons:witch-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "poena, poenae, f.": {
+        "icon": "game-icons:back-pain",
+        "verdict": "ok"
+      },
+      "pondus, ponderis": {
+        "icon": "mdi:weight-gram",
+        "verdict": "ok"
+      },
+      "pontifex, pontificis": {
+        "icon": "tabler:sun-high",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "populus, populi, m.": {
+        "icon": "mdi:nature-people-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "porro": {
+        "icon": "game-icons:path-distance",
+        "verdict": "ok"
+      },
+      "porto, portare, portaui, portatus": {
+        "icon": "mdi:bag-carry-on",
+        "verdict": "ok"
+      },
+      "posco, poscere, poposci, —": {
+        "icon": "game-icons:shaking-hands",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "possessio, possessionis": {
+        "icon": "tabler:pig-money",
+        "verdict": "ok"
+      },
+      "possum, posse, potui, —": {
+        "icon": "ph:check-fat",
+        "verdict": "ok"
+      },
+      "posterus, postera, posterum": {
+        "icon": "game-icons:next-button",
+        "verdict": "ok"
+      },
+      "potestas, potestatis, f.": {
+        "icon": "ph:power-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "potior, potior, potius": {
+        "icon": "mdi:unfold-more-vertical",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "potis": {
+        "icon": "mdi:eye-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "potus, potus, m.": {
+        "icon": "game-icons:drink-me",
+        "verdict": "ok"
+      },
+      "praebeo, praebere, praebui, praebitus": {
+        "icon": "tabler:mail-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praeceptum, praecepti, n.": {
+        "icon": "ph:command-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praecipio, praecipere, praecepi, praeceptus": {
+        "icon": "ph:command-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praeclarus, praeclara, praeclarum": {
+        "icon": "mdi:format-clear",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praeparo, praeparare, praeparaui, praeparatus": {
+        "icon": "mdi:package-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praescribo, praescribere, praescripsi, praescriptus": {
+        "icon": "ph:scroll-bold",
+        "verdict": "ok"
+      },
+      "praesens, praesentis": {
+        "icon": "ph:person-simple-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praesertim": {
+        "icon": "mdi:chart-arc",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praeses, praesidis": {
+        "icon": "game-icons:gingerbread-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praesidium, praesidi(i)": {
+        "icon": "tabler:help-hexagon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praesto, praestare, praestiti [praestaui], praestatus [praestitus]": {
+        "icon": "mdi:calendar-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "praesumo, praesumere, praesumpsi, praesumptus": {
+        "icon": "tabler:thinking-high",
+        "verdict": "ok"
+      },
+      "praeter": {
+        "icon": "game-icons:top-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pretiosus, -a, -um": {
+        "icon": "game-icons:gem-pendant",
+        "verdict": "ok"
+      },
+      "pretium, pretii": {
+        "icon": "game-icons:price-tag",
+        "verdict": "ok"
+      },
+      "primus, -a, -um": {
+        "icon": "game-icons:first-aid-kit",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "principium, principii": {
+        "icon": "mdi:bug-play",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prior, prior, prius": {
+        "icon": "game-icons:nose-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "priuatim": {
+        "icon": "game-icons:private-first-class",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prius": {
+        "icon": "ph:first-aid-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "pro": {
+        "icon": "game-icons:paw-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "probe": {
+        "icon": "game-icons:straight-pipe",
+        "verdict": "ok"
+      },
+      "procedo, procedere, processi, processus": {
+        "icon": "mdi:language-go",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "processus, processus": {
+        "icon": "tabler:progress-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "procido, procidere, procidi, —": {
+        "icon": "ph:skip-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "procul": {
+        "icon": "mdi:map-marker-distance",
+        "verdict": "ok"
+      },
+      "produco, producere, produxi, productus": {
+        "icon": "mdi:step-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "profectus, profectus": {
+        "icon": "tabler:progress-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "profero, proferre, protuli, prolatus": {
+        "icon": "game-icons:back-forth",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "professio, professionis": {
+        "icon": "mdi:shoe-formal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "proficio, proficere, profeci, proiectus": {
+        "icon": "mdi:bank-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "progredior, progredi, progressus sum": {
+        "icon": "mdi:coffee-to-go",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "progressio, progressionis": {
+        "icon": "mdi:progress-tag",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "progressus, progressus": {
+        "icon": "tabler:progress-bolt",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prohibeo, prohibere, prohibui, prohibitus": {
+        "icon": "tabler:forbid-2",
+        "verdict": "ok"
+      },
+      "promoueo, promouere, promoui, promotus": {
+        "icon": "tabler:cash-move",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "propitius, -a, -um": {
+        "icon": "game-icons:invisible-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "propositum, propositi": {
+        "icon": "game-icons:flag-objective",
+        "verdict": "ok"
+      },
+      "proprie": {
+        "icon": "ph:chart-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "proprietas, proprietatis": {
+        "icon": "mdi:quality-medium",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prorsus": {
+        "icon": "ph:fast-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prouidentia, prouidentiae": {
+        "icon": "tabler:eye-cog",
+        "verdict": "ok"
+      },
+      "prouincia, prouinciae": {
+        "icon": "game-icons:post-office",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "proximus, -a, -um": {
+        "icon": "ph:handshake-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "prudens, prudentis": {
+        "icon": "ph:person-arms-spread",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "psalmista, psalmistae": {
+        "icon": "tabler:writing-sign",
+        "verdict": "ok"
+      },
+      "puer, pueri": {
+        "icon": "tabler:mood-boy",
+        "verdict": "ok"
+      },
+      "pulchritudo, pulchritudinis": {
+        "icon": "game-icons:bear-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "punio, punire, puniui, punitus": {
+        "icon": "ph:hammer-bold",
+        "verdict": "ok"
+      },
+      "quaestio, quaestionis": {
+        "icon": "game-icons:red-carpet",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "qualis, quale": {
+        "icon": "game-icons:traffic-lights-red",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "qualitas, qualitatis": {
+        "icon": "mdi:quality-high",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "quando": {
+        "icon": "mdi:alarm-bell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "quanto": {
+        "icon": "ph:hash-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "queo, quire, quiui, quitus": {
+        "icon": "mdi:lan-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "qui, quae, quod": {
+        "icon": "tabler:eye-question",
+        "verdict": "ok"
+      },
+      "quia": {
+        "icon": "game-icons:zig-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "quid": {
+        "icon": "tabler:map-question",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "quidam, quaedam, quiddam": {
+        "icon": "ph:number-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：vitruvian-man 配「父親」是達文西人體比例圖、thor-fist 是雷神之拳、shoe-formal 配「宣誓」是皮鞋、quality-high／-medium 是 HQ／MQ 畫質、progress-down 配「進步」是往下的箭頭"
+      },
+      "quidam, quaedam, quoddam": {
+        "icon": "game-icons:white-tower",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quintus, quinti": {
+        "icon": "mdi:face-man-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quippe": {
+        "icon": "tabler:hand-love-you",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quis, quid": {
+        "icon": "tabler:bell-question",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quisquam, quaequam, quidquam": {
+        "icon": "mdi:human-white-cane",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quisquis, quaequae, quidquid": {
+        "icon": "game-icons:hedjet-white-crown",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quo": {
+        "icon": "mdi:bullseye-arrow",
+        "verdict": "ok"
+      },
+      "quod": {
+        "icon": "ph:arrow-left",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quondam": {
+        "icon": "ph:repeat-once-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quoniam": {
+        "icon": "mdi:axis-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "quoque": {
+        "icon": "mdi:fan-plus",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "raro": {
+        "icon": "game-icons:gem-necklace",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "ratio, rationis, f.": {
+        "icon": "mdi:account-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "rationalis, rationalis, rationale": {
+        "icon": "mdi:account-cog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "recipio, recipere, recepi, receptus": {
+        "icon": "game-icons:receive-money",
+        "verdict": "ok"
+      },
+      "reclino, reclinare, reclinaui, reclinatus": {
+        "icon": "mdi:seat-recline-extra",
+        "verdict": "ok"
+      },
+      "reconciliatio, reconciliationis, f.": {
+        "icon": "ph:handshake-thin",
+        "verdict": "ok"
+      },
+      "recte": {
+        "icon": "ph:heart-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "rector, rectoris": {
+        "icon": "mdi:television-guide",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "redeo, redire, rediui (redii), reditus": {
+        "icon": "mdi:phone-return",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "redimo, redimere, redemi, redemptus": {
+        "icon": "game-icons:buy-card",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "refundo, refundere, refudi, refusus": {
+        "icon": "mdi:kettle-pour-over",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "regina, reginae, f.": {
+        "icon": "mdi:bed-queen",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "regio, regionis, f.": {
+        "icon": "mdi:ski-cross-country",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "rego, regere, rexi, rectus": {
+        "icon": "game-icons:rule-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "regredior, regredi, —, regressus sum": {
+        "icon": "tabler:truck-return",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "regula, regulae": {
+        "icon": "ph:magnet-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "religio, religionis": {
+        "icon": "ph:shirt-folded-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "religiosus, religiosa, religiosum": {
+        "icon": "ph:face-mask",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "relinquo, relinquere, reliqui, relictus": {
+        "icon": "game-icons:bird-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "remedium, remedi(i)": {
+        "icon": "game-icons:medicine-pills",
+        "verdict": "ok"
+      },
+      "repello, repellere, repuli, repulsus": {
+        "icon": "mdi:cast-audio",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "repeto, repetere, repetiui, repetitus": {
+        "icon": "ph:key-return",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "repleo, replere, repleui, repletus": {
+        "icon": "ph:pi-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "requies, requiei, f.": {
+        "icon": "ph:person-simple-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "requiro, requirere, requisiui, requisitus": {
+        "icon": "game-icons:magnifying-glass",
+        "verdict": "ok"
+      },
+      "res, rei, f.": {
+        "icon": "game-icons:wood-axe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "resisto, resistere, restiti": {
+        "icon": "mdi:bug-pause",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "respectus, respectus": {
+        "icon": "ph:flow-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "respondeo, respondere, respondi, responsus": {
+        "icon": "game-icons:balloon-dog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "responsum, responsi, n.": {
+        "icon": "game-icons:air-balloon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "resto, restare, restiti, —": {
+        "icon": "ph:hourglass-low",
+        "verdict": "ok"
+      },
+      "resurgo, resurgere, resurrexi, resurrectus": {
+        "icon": "mdi:elevation-rise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "resuscito, resuscitare, resuscitaui, resuscitatus": {
+        "icon": "game-icons:raise-skeleton",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "reuera": {
+        "icon": "mdi:mixed-reality",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "reuerto, reuerti, —, reuersus sum": {
+        "icon": "game-icons:return-arrow",
+        "verdict": "ok"
+      },
+      "reuertor, reuerti, reuersus sum": {
+        "icon": "tabler:s-turn-left",
+        "verdict": "ok"
+      },
+      "reuoco, reuocare, reuocaui, reuocatus": {
+        "icon": "ph:phone-call",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "reus, rei": {
+        "icon": "game-icons:party-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "rursus": {
+        "icon": "mdi:skip-backward",
+        "verdict": "ok"
+      },
+      "rutilo, rutilare, rutilaui, rutilatus": {
+        "icon": "game-icons:ball-glow",
+        "verdict": "ok"
+      },
+      "sacerdos, sacerdotis, m.": {
+        "icon": "game-icons:sun-priest",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sacerdotalis, sacerdotalis, sacerdotale": {
+        "icon": "mdi:car-connected",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sacerdotium, sacerdoti(i)": {
+        "icon": "mdi:face-man-profile",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sacro, sacrare, sacraui, sacratus": {
+        "icon": "game-icons:holy-water",
+        "verdict": "ok"
+      },
+      "saeculum, saeculi, n.": {
+        "icon": "tabler:world-map",
+        "verdict": "ok"
+      },
+      "salus, salutis, f.": {
+        "icon": "game-icons:safety-pin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "salutaris, salutare": {
+        "icon": "game-icons:life-buoy",
+        "verdict": "ok"
+      },
+      "sanctificatio, sanctificationis, f.": {
+        "icon": "game-icons:love-mystery",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sanctifico, sanctificare, sanctificaui, sanctificatus": {
+        "icon": "game-icons:holy-symbol",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sanctitas, sanctitatis, f.": {
+        "icon": "tabler:sparkles-2-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sanctus, -a, -um": {
+        "icon": "game-icons:holy-hand-grenade",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sane": {
+        "icon": "mdi:map-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sanus, sana, sanum": {
+        "icon": "ph:person-simple",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "satis": {
+        "icon": "mdi:bell-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "satis (+ partitiue gen.)": {
+        "icon": "mdi:book-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "scelus, sceleris, n.": {
+        "icon": "game-icons:crime-scene-tape",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "scilicet": {
+        "icon": "mdi:one-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "scio, scire, sciui, scitus": {
+        "icon": "game-icons:brain-leak",
+        "verdict": "ok"
+      },
+      "secundo, secundare, secundaui, secundatus": {
+        "icon": "mdi:image-auto-adjust",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "securitas, securitatis": {
+        "icon": "mdi:safety-goggles",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sed": {
+        "icon": "tabler:arrow-back",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sedeo, sedere, sedi, sessus": {
+        "icon": "game-icons:seated-mouse",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "semper": {
+        "icon": "ph:infinity-fill",
+        "verdict": "ok"
+      },
+      "senex (gen., senis)": {
+        "icon": "game-icons:old-wagon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sentio, sentire, sensi, sensus": {
+        "icon": "game-icons:nose-side",
+        "verdict": "ok"
+      },
+      "sequor, sequi, —, secutus sum": {
+        "icon": "ph:footprints-bold",
+        "verdict": "ok"
+      },
+      "seruitium, seruiti(i)": {
+        "icon": "game-icons:slavery-whip",
+        "verdict": "ok"
+      },
+      "si": {
+        "icon": "mdi:flash-red-eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sic": {
+        "icon": "mdi:hand-pointing-up",
+        "verdict": "ok"
+      },
+      "siccus, -a, -um": {
+        "icon": "tabler:wash-dry",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "signum, signi, n.": {
+        "icon": "game-icons:miracle-medecine",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "similiter": {
+        "icon": "game-icons:heavy-rain",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "similitudo, similitudinis": {
+        "icon": "game-icons:heavy-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sincerus, -a, -um": {
+        "icon": "mdi:white-balance-incandescent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "singularis, singularis, singulare": {
+        "icon": "mdi:bed-single",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "singulus, singula, singulum": {
+        "icon": "ph:dice-one-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sino, sinere, siui, situs": {
+        "icon": "game-icons:open-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sisto, sistere, steti [stiti], status": {
+        "icon": "ph:globe-stand-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "socialis, socialis, sociale": {
+        "icon": "game-icons:allied-star",
+        "verdict": "ok"
+      },
+      "socio, sociare, sociaui, sociatus": {
+        "icon": "tabler:share-3",
+        "verdict": "ok"
+      },
+      "socius, socii, m.": {
+        "icon": "game-icons:ghost-ally",
+        "verdict": "ok"
+      },
+      "solidus, solidi": {
+        "icon": "game-icons:gold-mine",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "soror, sororis": {
+        "icon": "tabler:woman-filled",
+        "verdict": "ok"
+      },
+      "sors, sortis": {
+        "icon": "game-icons:game-console",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "spatium, spatii, n.": {
+        "icon": "tabler:world-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "specialis, specialis, speciale": {
+        "icon": "mdi:seat-individual-suite",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "specto, spectare, spectaui, spectatus": {
+        "icon": "ph:test-tube",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "spiritus, spiritus, m.": {
+        "icon": "game-icons:bad-breath",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "statim": {
+        "icon": "ph:repeat-once-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "statuo, statuere, statui, statutus": {
+        "icon": "ph:anchor-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sto, stare, steti, status": {
+        "icon": "ph:globe-stand-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "struo, struere, struxi, structus": {
+        "icon": "tabler:building-arch",
+        "verdict": "ok"
+      },
+      "studium, studi(i)": {
+        "icon": "game-icons:open-palm",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "suauitas, suauitatis, f.": {
+        "icon": "game-icons:honey-jar",
+        "verdict": "ok"
+      },
+      "subditus, subdita, subditum": {
+        "icon": "ph:person-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "subicio, subicere, subieci, subiectus": {
+        "icon": "ph:person-simple-throw",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "subito": {
+        "icon": "game-icons:high-heel",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "subsidium, subsidi(i)": {
+        "icon": "mdi:help-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sufficio, sufficere, suffeci, suffectus": {
+        "icon": "mdi:cart-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "sui": {
+        "icon": "game-icons:mirror-mirror",
+        "verdict": "ok"
+      },
+      "sum, esse, fui, futurus": {
+        "icon": "mdi:horizontal-rotate-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "summa, summae": {
+        "icon": "game-icons:matter-states",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "summus, summa, summum": {
+        "icon": "game-icons:top-paw",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supernaturalis, supernaturalis, supernaturale": {
+        "icon": "tabler:sparkles-2",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supernus, -a, -um": {
+        "icon": "ph:cloud-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supersubstantialis, supersubstantiale": {
+        "icon": "ph:bread-fill",
+        "verdict": "ok"
+      },
+      "superus, supera, superum": {
+        "icon": "game-icons:high-five",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supplex (gen., supplicis)": {
+        "icon": "ph:shirt-folded-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supplico, supplicare, supplicaui, supplicatus": {
+        "icon": "ph:hands-clapping",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "supra": {
+        "icon": "mdi:unfold-more-horizontal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "suscito, suscitare, suscitaui, suscitatus": {
+        "icon": "game-icons:raise-zombie",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "suus, -a, -um": {
+        "icon": "game-icons:one-eyed",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "tamen": {
+        "icon": "game-icons:arrow-dunk",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "tantopere": {
+        "icon": "ph:hard-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "tantus, -a, -um": {
+        "icon": "game-icons:great-war-tank",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "tectum, tecti, n.": {
+        "icon": "mdi:home-roof",
+        "verdict": "ok"
+      },
+      "templum, templi, n.": {
+        "icon": "game-icons:temple-door",
+        "verdict": "ok"
+      },
+      "temporalis, temporalis, temporale": {
+        "icon": "game-icons:backward-time",
+        "verdict": "ok"
+      },
+      "tempus, temporis, n.": {
+        "icon": "game-icons:time-trap",
+        "verdict": "ok"
+      },
+      "terminus, termini": {
+        "icon": "mdi:ray-end-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：bad-breath 配「聖神、氣息」是口臭、bed-queen 配「女王」是雙人床、mixed-reality 是 MR、one-up 是瑪利歐蘑菇、seated-mouse 配「就座」是坐著的老鼠、old-wagon 配「年老」是篷車"
+      },
+      "terrenus, -a, -um": {
+        "icon": "ph:globe-bold",
+        "verdict": "ok"
+      },
+      "tertius, -a, -um": {
+        "icon": "game-icons:third-eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "thesaurus, thesauri": {
+        "icon": "game-icons:treasure-map",
+        "verdict": "ok"
+      },
+      "timor, timoris, m.": {
+        "icon": "mdi:face-man-shimmer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "timoratus, -a, -um": {
+        "icon": "ph:hands-praying-bold",
+        "verdict": "ok"
+      },
+      "titulus, tituli": {
+        "icon": "mdi:format-title",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "tollo, tollere, sustuli, sublatus": {
+        "icon": "tabler:aerial-lift",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "totus, -a, -um": {
+        "icon": "tabler:clear-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "tracto, tractare, tractaui, tractatus": {
+        "icon": "game-icons:daemon-pull",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "tranquillus, -a, -um": {
+        "icon": "game-icons:peace-dove",
+        "verdict": "ok"
+      },
+      "trans": {
+        "icon": "game-icons:jump-across",
+        "verdict": "ok"
+      },
+      "tremo, tremere, tremui, —": {
+        "icon": "game-icons:quake-stomp",
+        "verdict": "ok"
+      },
+      "tribuo, tribuere, tribui, tributus": {
+        "icon": "ph:divide-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "triumphus, triumphi, m.": {
+        "icon": "game-icons:trophy-cup",
+        "verdict": "ok"
+      },
+      "tunc": {
+        "icon": "game-icons:solar-time",
+        "verdict": "ok"
+      },
+      "tutus, tuta, tutum": {
+        "icon": "mdi:safe-square",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uado, uadere, —, —": {
+        "icon": "ph:person-simple-walk-fill",
+        "verdict": "ok"
+      },
+      "ualde": {
+        "icon": "mdi:star-three-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "ualeo, ualere, ualui, —": {
+        "icon": "mdi:image-filter-center-focus-strong-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uarietas, uarietatis": {
+        "icon": "mdi:vector-difference",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "ubique": {
+        "icon": "tabler:world-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uehementer": {
+        "icon": "mdi:star-four-points-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uenerabilis, uenerabilis, uenerabile": {
+        "icon": "tabler:face-id",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uenero, uenerare, ueneraui, ueneratus or ueneror, uenerari, —, ueneratus sum": {
+        "icon": "game-icons:person-in-blizzard",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uenia, ueniae, f.": {
+        "icon": "ph:gift-fill",
+        "verdict": "ok"
+      },
+      "uenio, uenire, ueni, uentus": {
+        "icon": "game-icons:car-door",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uerber, uerberis, n.": {
+        "icon": "game-icons:boxing-glove",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uerbero, uerberare, uerberaui, uerberatus": {
+        "icon": "game-icons:gear-hammer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uere": {
+        "icon": "mdi:tag-check",
+        "verdict": "ok"
+      },
+      "uero": {
+        "icon": "mdi:clock-star-four-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uerso, uersare, uersaui, uersatus": {
+        "icon": "game-icons:round-silo",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uerto, uertere, uerti, uersus": {
+        "icon": "tabler:u-turn-left",
+        "verdict": "ok"
+      },
+      "uerumtamen": {
+        "icon": "tabler:arrow-fork",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uerus, -a, -um": {
+        "icon": "mdi:star-four-points-small",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uespertinus, -a, -um": {
+        "icon": "mdi:star-crescent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "ueto, uetare, uetui, uetatus": {
+        "icon": "tabler:forbid-filled",
+        "verdict": "ok"
+      },
+      "uetus": {
+        "icon": "game-icons:old-king",
+        "verdict": "ok"
+      },
+      "uicarius, uicari(i)": {
+        "icon": "mdi:clock-time-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uidelicet": {
+        "icon": "ph:text-h-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uideo, uidere, uidi, uisus": {
+        "icon": "game-icons:evil-eyes",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uideor, uideri, — uisus sum": {
+        "icon": "ph:money-wavy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uigeo, uigere": {
+        "icon": "game-icons:spiral-bloom",
+        "verdict": "ok"
+      },
+      "uincio, uincire, uinxi, uinctus": {
+        "icon": "game-icons:wavy-chains",
+        "verdict": "ok"
+      },
+      "uinculum, uinculi, n.": {
+        "icon": "game-icons:james-bond-aperture",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uindico, uindicare, uindicaui, uindicatus": {
+        "icon": "game-icons:hammer-drop",
+        "verdict": "ok"
+      },
+      "uir, uiri, m.": {
+        "icon": "tabler:cookie-man-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uirgo, uirginis, f.": {
+        "icon": "game-icons:woman-elf-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uirtus, uirtutis, f.": {
+        "icon": "tabler:x-power-y",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uisibilis, uisibile": {
+        "icon": "ph:eyes-bold",
+        "verdict": "ok"
+      },
+      "uisio, uisionis": {
+        "icon": "game-icons:extra-vision",
+        "verdict": "ok"
+      },
+      "uita, uitae, f.": {
+        "icon": "game-icons:life-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uiuo, uiuere, uixi, uictus": {
+        "icon": "tabler:live-photo",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "ullus, ulla, ullum": {
+        "icon": "mdi:white-balance-sunny",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "umquam": {
+        "icon": "game-icons:player-time",
+        "verdict": "ok"
+      },
+      "undique": {
+        "icon": "mdi:bus-side",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "unio, unire, uniui, unitus": {
+        "icon": "ph:unite-fill",
+        "verdict": "ok"
+      },
+      "uniuersalis, uniuersalis, uniuersale": {
+        "icon": "mdi:application-cog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uniuersus, -a, -um": {
+        "icon": "mdi:reply-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "unus, -a, -um": {
+        "icon": "ph:dice-one-fill",
+        "verdict": "ok"
+      },
+      "uocabulum, uocabuli": {
+        "icon": "game-icons:concrete-bag",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uocatio, uocationis": {
+        "icon": "tabler:phone-calling",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uoco, uocare, uocaui, uocatus": {
+        "icon": "game-icons:bugle-call",
+        "verdict": "ok"
+      },
+      "uoluntas, uoluntatis, f.": {
+        "icon": "tabler:thinking-medium",
+        "verdict": "ok"
+      },
+      "uox, uocis, f.": {
+        "icon": "mdi:account-voice",
+        "verdict": "ok"
+      },
+      "urgeo, urgere, ursi": {
+        "icon": "tabler:wash-press",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "usus, usus": {
+        "icon": "mdi:gas-station-in-use",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "utor, uti, —, usus sum": {
+        "icon": "mdi:gas-station-in-use-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
+      },
+      "uulnero, uulnerare, uulneraui, uulneratus": {
+        "icon": "game-icons:open-wound",
+        "verdict": "ok"
+      },
+      "uulnus, uulneris": {
+        "icon": "game-icons:scar-wound",
+        "verdict": "ok"
+      },
+      "—, —, coepi, coeptus": {
+        "icon": "mdi:cog-play",
+        "verdict": "wrong",
+        "reason": "逐張看圖：star-crescent 配「傍晚」是伊斯蘭星月標誌、x-power-y 是次方運算、concrete-bag 配「詞彙」是水泥袋、gas-station-in-use 配「使用」是加油站"
       }
     }
   }
