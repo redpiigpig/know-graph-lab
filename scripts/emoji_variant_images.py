@@ -108,10 +108,11 @@ FAMILIES: dict[str, list[str]] = {
     "person bowing": ["person-kneeling", "person-raising-hand", "place-of-worship"],
     "smiling face with halo": ["baby-angel", "dove", "sparkles", "glowing-star"],
     # 手與人際。
-    "handshake": ["people-holding-hands", "people-hugging", "busts-in-silhouette", "link",
-                  "couple-with-heart", "two-men-holding-hands", "chains", "knot"],
-    "open hands": ["palms-up-together", "clapping-hands", "waving-hand",
-                   "hand-with-fingers-splayed", "raising-hands", "heart-hands"],
+    "handshake": ["people-holding-hands", "people-hugging", "busts-in-silhouette",
+                  "two-men-holding-hands", "two-women-holding-hands", "family",
+                  "couple-with-heart", "link"],
+    "open hands": ["palms-up-together", "clapping-hands", "hand-with-fingers-splayed",
+                   "raising-hands", "heart-hands", "handshake"],
     "help others": ["handshake", "raising-hands", "person-raising-hand", "heart-hands",
                     "people-hugging", "hugging-face", "ring-buoy"],
     "people hugging": ["couple-with-heart", "people-holding-hands", "two-women-holding-hands",
@@ -133,7 +134,7 @@ FAMILIES: dict[str, list[str]] = {
     "check mark button": ["heavy-check-mark", "white-heavy-check-mark", "ok-button"],
     "hundred points": ["check-mark-button", "gem-stone", "trophy", "glowing-star",
                        "sparkles", "bullseye", "sports-medal"],
-    "safety": ["shield", "locked", "ring-buoy", "rescue-workers-helmet"],
+    "safety": ["shield", "ring-buoy", "rescue-workers-helmet", "locked"],
     # 疑問。
     "red question mark": ["white-question-mark", "question-mark", "exclamation-question-mark",
                           "thinking-face", "person-shrugging"],
@@ -142,7 +143,8 @@ FAMILIES: dict[str, list[str]] = {
                              "exclamation-mark"],
     "thinking face": ["thought-balloon", "face-with-monocle", "person-shrugging",
                       "nerd-face", "brain"],
-    "thought balloon": ["speech-balloon", "left-speech-bubble", "right-anger-bubble"],
+    "thought balloon": ["speech-balloon", "left-speech-bubble", "eye-in-speech-bubble",
+                        "brain"],
     "speech balloon": ["left-speech-bubble", "speaking-head", "thought-balloon",
                        "eye-in-speech-bubble"],
     "speaking head": ["left-speech-bubble", "megaphone", "loudspeaker", "postal-horn"],
@@ -152,8 +154,7 @@ FAMILIES: dict[str, list[str]] = {
     "eyes": ["eye", "eye-in-speech-bubble", "magnifying-glass-tilted-left",
              "magnifying-glass-tilted-right", "telescope", "glasses", "face-with-monocle"],
     # 數與量。這一團只收「不指定數目」的計數符號。
-    "input numbers": ["abacus", "straight-ruler", "triangular-ruler", "bar-chart",
-                      "chart-increasing"],
+    "input numbers": ["abacus", "bar-chart", "chart-increasing", "straight-ruler"],
     "chart increasing": ["bar-chart", "heavy-plus-sign", "up-arrow", "money-bag",
                          "ear-of-corn", "full-moon", "sheaf-of-rice"],
     "sort": ["card-index-dividers", "bookmark-tabs", "abacus", "clipboard",
@@ -164,8 +165,8 @@ FAMILIES: dict[str, list[str]] = {
                  "evergreen-tree", "rock"],
     "keycap: 1": ["1st-place-medal", "top-arrow", "sunrise", "new-button", "egg",
                   "baby", "seedling"],
-    "heavy equals sign": ["double-exclamation-mark", "wavy-dash", "heavy-minus-sign",
-                          "heavy-division-sign", "left-right-arrow", "repeat-button"],
+    "heavy equals sign": ["wavy-dash", "left-right-arrow", "repeat-button",
+                          "heavy-minus-sign", "heavy-division-sign", "link"],
     # 器物與抽象。
     "hammer and wrench": ["hammer", "wrench", "carpentry-saw", "screwdriver", "pick",
                           "toolbox", "gear", "nut-and-bolt", "hammer-and-pick"],
@@ -178,7 +179,7 @@ FAMILIES: dict[str, list[str]] = {
                       "droplet", "ant", "mouse"],
     "bullseye": ["direct-hit", "chequered-flag", "trophy", "goal-net"],
     "straight ruler": ["triangular-ruler", "abacus", "compass", "pencil"],
-    "sparkles": ["sparkle", "glowing-star", "star", "dizzy", "high-voltage"],
+    "sparkles": ["glowing-star", "star", "dizzy", "high-voltage", "sun-with-face"],
     "rock": ["mountain", "brick", "moai", "gem-stone"],
     "receipt": ["scroll", "page-with-curl", "ledger", "clipboard"],
     "ring buoy": ["anchor", "shield", "rescue-workers-helmet", "locked"],
@@ -323,6 +324,47 @@ def review_sheet(lang: str, out: Path, columns: int = 12, size: int = 132,
           f"本張排了 {len(rows)} 張 → {out}")
 
 
+def verify(lang: str, builder) -> int:
+    """驗收：同一語言內，還有幾張卡跟別張卡印出同一張圖。
+
+    比的是**（圖庫, 概念名）**而不是檔名。檔名會騙人：OpenMoji 本地下載的 `link`
+    叫 `1F517.png`，同一張圖從 Iconify 抓來叫 `openmoji-link.png`，檔名不同、
+    畫面相同。這支驗收要是照檔名比，會回報「零重複」而卡片上明明有兩張一樣的。
+    """
+
+    matcher = load("match_flashcard_images", ROOT / "scripts/match_flashcard_images.py")
+    by_hexcode = {record["hexcode"]: name for name, record in matcher.load_openmoji().items()}
+    used: dict[tuple[str, str], list[str]] = collections.defaultdict(list)
+    blank = 0
+    for deck in LANGS[lang]["decks"]:
+        config = builder.DECKS[deck]
+        variants = (json.loads(config["variants"].read_text(encoding="utf-8"))["cards"]
+                    if "variants" in config and config["variants"].exists() else {})
+        icons = (json.loads(config["icons"].read_text(encoding="utf-8"))["cards"]
+                 if "icons" in config and config["icons"].exists() else {})
+        images = json.loads(config["images"].read_text(encoding="utf-8"))["images"]
+        for card in builder.load_cards(config):
+            key = card["key"]
+            if key in icons:
+                identity = ("iconify", icons[key]["icon"])
+            elif key in variants:
+                identity = (variants[key]["set"], variants[key]["name"])
+            elif key in images:
+                identity = ("openmoji", slug(by_hexcode.get(images[key]["hexcode"], "")))
+            else:
+                blank += 1
+                continue
+            used[identity].append(card["glossZh"])
+
+    repeats = {identity: glosses for identity, glosses in used.items() if len(glosses) > 1}
+    extra = sum(len(glosses) - 1 for glosses in repeats.values())
+    print(f"  {lang}：用到 {len(used)} 張不同的圖、留白 {blank} 張；"
+          f"仍與別張卡共用的 {extra} 張（{len(repeats)} 團）")
+    for identity, glosses in sorted(repeats.items(), key=lambda kv: -len(kv[1]))[:8]:
+        print(f"      {identity[0]}:{identity[1]} × {len(glosses)}　{'、'.join(glosses[:4])[:44]}")
+    return extra
+
+
 def cards_by_picture(decks: list[str], builder) -> dict[str, list[dict]]:
     """同一張 OpenMoji 圖底下有哪些卡。第二層審過的 Iconify 圖各自獨立，不動。
 
@@ -356,6 +398,8 @@ def main() -> None:
     parser.add_argument("--lang", choices=sorted(LANGS), help="hbo／grc／lat")
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--probe", nargs="*", help="只看這幾個概念在各套裡長什麼樣")
+    parser.add_argument("--verify", action="store_true",
+                        help="驗收：同語言內還有幾張卡印出同一張圖（比概念身分，不比檔名）")
     parser.add_argument("--review", action="store_true",
                         help="把「改用同語意場別的符號」那一層排成樣張（同概念換畫法那層不必看）")
     parser.add_argument("--size", type=int, default=132, help="--review 一張排幾個")
@@ -370,6 +414,9 @@ def main() -> None:
         raise SystemExit("要 --lang，或用 --probe 看樣張")
     if args.review:
         review_sheet(args.lang, Path(args.out), size=args.size, skip=args.skip)
+        return
+    if args.verify:
+        verify(args.lang, load("build_flashcards", ROOT / "scripts/build_flashcards.py"))
         return
 
     names = emoji_names()
@@ -395,37 +442,49 @@ def main() -> None:
             taken.add(("openmoji", slug(concept)))   # 每一團的第一張都留著原圖
 
     assigned: dict[str, dict] = {}
-    short = 0
     by_layer: collections.Counter = collections.Counter()
+
+    # 每一團的第一張留著原本的 OpenMoji（那是有人特地挑的），其餘要換。
+    # 詞義最短的那張最配得上原圖，所以它排第一。
+    queue: list[tuple[str, str, list[dict]]] = []
+    unnamed = 0
     for hexcode, rows in sorted(shared.items()):
         concept = by_hexcode.get(hexcode)
         if not concept:
-            short += len(rows) - 1
+            unnamed += len(rows) - 1
             continue
-        key = slug(concept)
-        # 第一張留著原本的 OpenMoji（那是有人特地挑的），其餘依序換圖。
-        # 詞義最短的那張最配得上原圖，所以它排第一。
         rows = sorted(rows, key=lambda row: (len(row["glossZh"]), row["key"]))
+        queue.append((concept, slug(concept), rows[1:]))
 
-        # 第一層：同一個概念、別套繪者的畫法。概念沒動，不必逐張審。
-        pool = [(prefix, key, "set") for prefix in SET_ORDER if key in names[prefix]]
-        # 第二層：同一個語意場裡的另一個符號。概念動了，要人看過。
-        for sibling in FAMILIES.get(concept, []):
-            pool.extend((prefix, sibling, "family")
-                        for prefix in ALL_SETS if sibling in names[prefix])
+    def take(row: dict, concept: str, prefix: str, name: str, layer: str) -> None:
+        taken.add((prefix, name))
+        by_layer[layer] += 1
+        assigned[row["key"]] = {"set": prefix, "name": name,
+                                "file": f"{prefix}-{name}.png",
+                                "concept": concept, "layer": layer}
 
-        wanted = rows[1:]
-        for row in wanted:
-            choice = next((item for item in pool if (item[0], item[1]) not in taken), None)
+    # **兩趟，順序有意義。** 第一趟先把所有團的「同概念換畫法」發完，第二趟才發
+    # 家族借圖。反過來一趟做完會出事：`end arrow` 那一團循家族借走了 top-arrow 的
+    # 各套畫法，等輪到 `top arrow` 自己那一團時，它自己的畫法已經被借光，只好整團
+    # 維持共用。驗收看到的「openmoji:top-arrow × 6」就是這樣來的。
+    for concept, key, rows in queue:
+        pool = [prefix for prefix in SET_ORDER
+                if key in names[prefix] and (prefix, key) not in taken]
+        for row, prefix in zip(rows, pool):
+            take(row, concept, prefix, key, "set")
+
+    short = unnamed
+    for concept, key, rows in queue:
+        pool = [(prefix, sibling) for sibling in FAMILIES.get(concept, [])
+                for prefix in ALL_SETS if sibling in names[prefix]]
+        for row in rows:
+            if row["key"] in assigned:
+                continue
+            choice = next((item for item in pool if item not in taken), None)
             if choice is None:
                 short += 1
                 continue
-            prefix, name, layer = choice
-            taken.add((prefix, name))
-            by_layer[layer] += 1
-            assigned[row["key"]] = {"set": prefix, "name": name,
-                                    "file": f"{prefix}-{name}.png",
-                                    "concept": concept, "layer": layer}
+            take(row, concept, choice[0], choice[1], "family")
 
     print(f"  換掉 {len(assigned)} 張（同概念換畫法 {by_layer['set']}、"
           f"改用同語意場的別的符號 {by_layer['family']}），仍不足 {short} 張")
