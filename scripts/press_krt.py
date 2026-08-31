@@ -51,13 +51,15 @@ R2_PREFIX = "evangelical-fulltext/krt"
 OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/evangelical"
 
 ART_RE = re.compile(r"/(?:article|item)/(\d+)")
-# 🚨 發布日期一定要認「YYYY-MM-DD, 週X」這個型態（Joomla 的建立日期）。
-#    頁面上還有一個「2012年 08月14日 星期二 天氣：」的今日天氣小工具，那等於**快照當天**；
-#    若照「頁面上第一個日期」抓，每一篇都會被蓋成抓取日期，年表整個作廢。
-PUBDATE_RE = re.compile(r"(20\d{2})-(\d{1,2})-(\d{1,2})\s*,\s*[週星]")
-DATE_RE = re.compile(r"(20\d{2})-(\d{1,2})-(\d{1,2})")
 TITLE_TAIL = re.compile(r"\s*[-|｜]\s*國度復興報.*$")
-DELAY = 1.2          # Wayback 是非營利站，慢慢來
+DELAY = 4.0          # Wayback 是非營利站，而且會擋；放慢到四秒
+
+# 🚨 **這批快照沒有可用的發布日期**，三種欄位都驗過（2026-08）：
+#    - 站頭「2012年 08月14日 星期二 天氣：」＝今日天氣小工具，等於**快照當天**
+#    - div.itemToolbar 的「2012-01-15, 週日 00:00」在**每一篇都一模一樣**，是站台固定值
+#    - krtnews.tw 的 .date 三個值分別是快照日、與兩個在不同文章間重複的值
+#    所以本 pipeline **完全不產生 date 欄位**，只存 capturedAt（快照日）並在頁面標明
+#    那是「發布日的上限」。絕不拿快照日冒充發布日——那會讓年表看起來成立而其實是假的。
 
 
 def clean(s):
@@ -115,31 +117,20 @@ def harvest():
 
 
 def parse_article(html: str):
-    """→ (標題, 日期, 內文)。抓不到內文就回 None，交給呼叫端計為失敗。"""
+    """→ (標題, 內文)。抓不到內文就回 None，交給呼叫端計為失敗。
+
+    刻意不回日期：見檔頭，這批快照沒有可信的發布日期。
+    """
     soup = BeautifulSoup(html, "html.parser")
     for t in soup(["script", "style"]):
         t.decompose()
     title = ""
     if soup.title:
         title = TITLE_TAIL.sub("", clean(soup.title.get_text())).strip()
-
-    # 先在整頁找「YYYY-MM-DD, 週X」；找不到才退而求其次用 .date 這類容器。
-    # 兩者都沒有就留空——**絕不拿快照時間戳當日期**，那是抓取日不是發布日。
-    full = clean(soup.get_text(" "))
-    m = PUBDATE_RE.search(full)
-    date = ""
-    if m:
-        date = f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-    else:
-        for el in soup.select(".date, .itemDateCreated, time"):
-            m = DATE_RE.search(clean(el.get_text(" ")))
-            if m:
-                date = f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-                break
-    # 正文＝最長的那幾個 <p> 串起來。這站的側欄全是短連結列，長段落只會是內文。
+    # 正文＝夠長的 <p> 串起來。這站的側欄全是短連結列，長段落只會是內文。
     paras = [clean(p.get_text(" ")) for p in soup.find_all("p")]
-    body = "\n".join(p for p in paras if len(p) >= 40)
-    return (title, date, body) if len(body) >= 120 else (title, date, None)
+    body = chr(10).join(p for p in paras if len(p) >= 40)
+    return (title, body) if len(body) >= 120 else (title, None)
 
 
 def process(limit=0):
@@ -153,12 +144,14 @@ def process(limit=0):
         if not html:
             fail += 1
             continue
-        title, date, body = parse_article(html)
+        title, body = parse_article(html)
         if not body:
             r["chars"] = 0          # 記下來，下一輪不必再抓
             fail += 1
             continue
-        r.update(title=title, date=date, chars=len(body), text=body)
+        ts = r["ts"]
+        r.update(title=title, capturedAt=f"{ts[:4]}-{ts[4:6]}-{ts[6:8]}",
+                 chars=len(body), text=body)
         done += 1
         if done % 100 == 0:
             print(f"  …已處理 {done}（失敗 {fail}）", flush=True)
@@ -171,39 +164,45 @@ def process(limit=0):
 
 
 def publish():
+    """打包上 R2 並產 index。
+
+    分桶用的是**快照年**不是發布年——這批沒有可信的發布日期（見檔頭）。
+    欄位一律叫 capturedAt／capturedYear，不留任何叫 date/year 的東西，
+    免得日後有人拿去當發布日排年表。
+    """
     rows = json.loads(HARVEST.read_text(encoding="utf-8"))
     have = [r for r in rows if r.get("text")]
-    # 兩個網域收了同一篇的情況：同題同日視為重複，留字數多的那一份
+    # 兩個網域收了同一篇的情況：同題同字數視為重複，留快照較早的那一份
     best = {}
     for r in have:
-        k = (r.get("title", ""), r.get("date", ""))
-        if k not in best or r["chars"] > best[k]["chars"]:
+        k = (r.get("title", ""), r["chars"])
+        if k not in best or r["ts"] < best[k]["ts"]:
             best[k] = r
-    uniq = sorted(best.values(), key=lambda r: (r.get("date") or "", r["id"]))
+    uniq = sorted(best.values(), key=lambda r: (r["ts"], r["key"]))
 
     by_year, arts = defaultdict(list), []
     for r in uniq:
-        y = (r.get("date") or "")[:4] or "未標年"
-        by_year[y].append(r)
-        arts.append({"id": r["key"], "cat": r["cat"], "date": r.get("date", ""),
+        by_year[r["capturedAt"][:4]].append(r)
+        arts.append({"id": r["key"], "cat": r["cat"], "capturedAt": r["capturedAt"],
                      "title": r.get("title", ""), "chars": r["chars"]})
     index = []
-    for y in sorted(by_year, key=lambda x: (x == "未標年", x), reverse=False):
+    for y in sorted(by_year):
         items = by_year[y]
-        body = "\n".join(json.dumps(
-            {"id": x["key"], "cat": x["cat"], "date": x.get("date", ""),
+        body = chr(10).join(json.dumps(
+            {"id": x["key"], "cat": x["cat"], "capturedAt": x["capturedAt"],
              "title": x.get("title", ""), "text": x["text"],
              "wayback": f"https://web.archive.org/web/{x['ts']}/{x['url']}"},
             ensure_ascii=False) for x in items)
         df.r2_put_text(f"{R2_PREFIX}/{y}.jsonl", body)
-        index.append({"year": y, "count": len(items),
+        index.append({"capturedYear": y, "count": len(items),
                       "chars": sum(x["chars"] for x in items)})
-        print(f"  {y}：{len(items)} 篇 / {sum(x['chars'] for x in items):,} 字", flush=True)
+        print(f"  快照 {y}：{len(items)} 篇 / {sum(x['chars'] for x in items):,} 字", flush=True)
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "krt-index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "krt-articles.json").write_text(json.dumps(arts, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"\n{len(uniq)} 篇（去重前 {len(have)}）/ {sum(x['chars'] for x in index):,} 字 → {OUT}")
+    print("")
+    print(f"{len(uniq)} 篇（去重前 {len(have)}）/ {sum(x['chars'] for x in index):,} 字 → {OUT}")
 
 
 def main():
