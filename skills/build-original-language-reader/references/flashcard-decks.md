@@ -17,6 +17,21 @@ and the same printer settings work for all of them.
 | 教會拉丁文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/latin-flashcards-volume-2.pdf` |
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
+2026-08-31 全部依審過的配圖帳本重出一次；覆蓋率不變（刪掉的圖只是退回原本的
+OpenMoji 圖，不是變成空白）。
+
+**轉檔有兩個會讓人以為轉好了的坑，兩個都踩過：**
+
+1. `render_and_check_reader_pdfs.py` 的 `--only` 是 `nargs="*"`，所以
+   `--only a --only b --only c` **只會跑 c**——後面的旗標把前面的整個蓋掉，而且
+   不會有任何警告。要跑多個就寫成 `--only a b c`。
+2. 它**寫到 `output/print-masters/`，不是 `output/flashcards/`**。`output/flashcards/`
+   那份 PDF 是工作副本，由 `sync_reader_artifacts.py` 從 masters 拉齊。只看
+   `output/flashcards/` 的 PDF 會看到三天前的舊檔而以為重轉過了。
+
+這兩個加起來的結果是：build 全綠、render 報 `✔`、頁數尺寸全對，而五份 PDF 有四份
+根本沒重轉。抓到它的方法是 silent-failures.md 那條「打開頁面找你剛做的那個改動」
+——去看那張「創造」卡，剪刀還在。`ls -l` 比對 docx 與 pdf 的 mtime 一秒就確認。
 
 ### Appendix decks, added 2026-08-27
 
