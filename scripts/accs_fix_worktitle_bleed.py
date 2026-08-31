@@ -14,14 +14,21 @@ accs_merge_split_quotes.py、accs_recover_inline_fathers.py）。OCR 把一整�
    `亞哈隨魯──《七十士譯本》稱作亞達薛西` 的《七十士譯本》是正文提到的譯本，
    不是這一則的出處。ACCS 的體例是**引文以《作品》收尾**，所以只認結尾的《》。
 
-修法按可修復性分級，**只動逐列查證過安全的那兩類**：
+修法按可修復性分級，**只動逐列查證過安全的**：
 
   A1  結尾有《書名》，且前面那段正文已經在 body_zh 裡 → 清成書名。 安全
   C   整段與 body_zh 重複                            → 清空。     安全
+  E   body_zh 整格只是一個《書名》、work_title 裝著整段正文
+      → **兩欄對調**。兩個值都保留只是換位，不丟任何資料，最安全的一種。
   ── 以下一律不碰，等人工判讀 ──
   A2  結尾有《書名》，但前段不在 body_zh → 清掉會掉這段字
   B   《》出現在句中而非結尾           → 抽出來會配錯出處
-  D   沒有書名、內容也不在 body_zh     → 多半是被批次邊界切掉的引文續行
+  D   其餘：沒有書名、內容也不在 body_zh
+
+🚨 D 那一批**不是**批次邊界切開的引文續行。第一版憑印象這樣寫進交接文件，
+   實測後推翻了：拿「開頭像續行 ＋ 前一列 body 未收尾 ＋ 同章」三個條件去比對，
+   命中 0 列。真正的病根是欄位錯位（E 那類就是它的可解子集）。
+   別再照「續行」的方向去修這批。
 
 預設 dry-run，要 --apply 才寫入；寫入前一律先把原值備份成 jsonl。
 """
@@ -43,6 +50,8 @@ BACKUP_DIR = Path('c:/tmp/accs_rows_backup')
 SENTENCE = re.compile(r'[。！？]')
 END_TITLE = re.compile(r'《([^》]{2,30})》\s*[0-9.\-–,，:：\s]*$')
 ANY_TITLE = re.compile(r'《([^》]{2,30})》')
+# body_zh 整格就只是一個《書名》→ 這一列的兩欄是對調的
+PURE_TITLE = re.compile(r'^\s*《([^》]{2,40})》\s*([0-9.\-–,，:：\s]*)$')
 
 # 前段要比對多少字才算「已經在 body 裡」。取尾端 25 字：夠長到不會誤中，
 # 又短到不會因為一兩個 OCR 錯字就整段對不上。
@@ -66,9 +75,9 @@ def fetch_rows() -> list:
 
 
 def classify(x: dict) -> tuple:
-    """回傳 (級別, 新值 or None)。新值 None 代表本腳本不處理。"""
+    """回傳 (級別, patch dict or None)。patch 為 None 代表本腳本不處理。"""
     wt = (x.get('work_title') or '').strip()
-    body = x.get('body_zh') or ''
+    body = (x.get('body_zh') or '')
     m = END_TITLE.search(wt)
     if m:
         lead = wt[:m.start()].strip()
@@ -77,16 +86,25 @@ def classify(x: dict) -> tuple:
         sect = wt[m.end(1) + 1:].strip()
         new = (title + (' ' + sect if sect else '')).strip()
         if not lead:
-            return 'A0 只有書名', new
+            return 'A0 只有書名', {'work_title': new}
         probe = lead[-PROBE:] if len(lead) >= PROBE else lead
         if probe and probe in body:
-            return 'A1 前段已在 body', new
+            return 'A1 前段已在 body', {'work_title': new}
         return 'A2 前段不在 body（不碰）', None
     if ANY_TITLE.search(wt):
         return 'B 《》在句中（不碰）', None
     probe = wt[:20]
     if probe and probe in body:
-        return 'C 與 body 重複', ''
+        return 'C 與 body 重複', {'work_title': ''}
+    # E：兩欄對調。body_zh 整格只是一個《書名》，而 work_title 裝著整段正文。
+    # 網站上會顯示成「出處＝幾百字經文、正文＝一個書名」。
+    # 對調不丟任何資料（兩個值都保留、只是換位），所以是最安全的一種修法。
+    ms = PURE_TITLE.match(body.strip())
+    if ms and len(wt) > 25:
+        title = ms.group(1).strip()
+        sect = (ms.group(2) or '').strip()
+        return 'E 兩欄對調', {'work_title': (title + (' ' + sect if sect else '')).strip(),
+                               'body_zh': wt}
     return 'D 內容不在 body（不碰）', None
 
 
@@ -105,12 +123,12 @@ def main() -> int:
     tiers = Counter()
     todo, manual = [], []
     for x in bad:
-        tier, new = classify(x)
+        tier, patch = classify(x)
         tiers[tier] += 1
-        if new is None:
+        if patch is None:
             manual.append((tier, x))
         else:
-            todo.append((tier, x, new))
+            todo.append((tier, x, patch))
 
     print('\n=== 分級 ===')
     for k, v in sorted(tiers.items()):
@@ -118,11 +136,14 @@ def main() -> int:
 
     print(f'\n本腳本要修 {len(todo)} 列；留給人工 {len(manual)} 列')
     print('\n=== 要修的前 15 列 ===')
-    for tier, x, new in todo[:15]:
+    for tier, x, patch in todo[:15]:
         old = x['work_title'].strip()
         shown = (old[:38] + '…') if len(old) > 38 else old
         print(f'   [{tier[:2]}] {x["book_code"]} {x["chapter"]}  {shown!r}')
-        print(f'          → {new!r}' if new else '          → (清空)')
+        wt = patch.get('work_title')
+        print(f'          出處 → {wt!r}' if wt else '          出處 → (清空)')
+        if 'body_zh' in patch:
+            print(f'          正文 → {patch["body_zh"][:38]!r}…  (兩欄對調)')
 
     if args.dump:
         BACKUP_DIR.mkdir(parents=True, exist_ok=True)
@@ -143,10 +164,12 @@ def main() -> int:
     stamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     backup = BACKUP_DIR / f'accs_worktitle_bleed_{stamp}.jsonl'
     with backup.open('w', encoding='utf-8') as fh:
-        for tier, x, new in todo:
+        for tier, x, patch in todo:
+            # 🚨 兩欄對調要把 body_zh 的原值也記下來，否則回復不了
             fh.write(json.dumps({'id': x['id'], 'tier': tier,
-                                 'from': x['work_title'], 'to': new},
-                                ensure_ascii=False) + '\n')
+                                 'from_work_title': x.get('work_title'),
+                                 'from_body_zh': x.get('body_zh'),
+                                 'patch': patch}, ensure_ascii=False) + '\n')
     print(f'\n備份原值 → {backup}（{len(todo)} 列）')
 
     if not args.apply:
@@ -154,10 +177,10 @@ def main() -> int:
         return 0
 
     changed = 0
-    for tier, x, new in todo:
+    for tier, x, patch in todo:
         r = requests.patch(f'{te.URL}/rest/v1/{TABLE}?id=eq.{x["id"]}',
                            headers={**te.H_JSON, 'Prefer': 'return=minimal'},
-                           json={'work_title': new}, timeout=60)
+                           json=patch, timeout=60)
         r.raise_for_status()
         changed += 1
     print(f'已修 {changed} 列')
