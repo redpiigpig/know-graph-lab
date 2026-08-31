@@ -9882,6 +9882,1200 @@
         "icon": "ph:eye",
         "verdict": "wrong",
         "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "nomen, nominis, n.": {
+        "icon": "mdi:label",
+        "verdict": "ok"
+      },
+      "obsecro, obsecrare, obsecraui, obsecratus": {
+        "icon": "tabler:pray",
+        "verdict": "ok"
+      },
+      "offero, offerre, obtuli, oblatus": {
+        "icon": "mdi:offer",
+        "verdict": "ok"
+      },
+      "opero, operare, operaui, operatus": {
+        "icon": "game-icons:briefcase",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "opinio, opinionis": {
+        "icon": "game-icons:idea",
+        "verdict": "ok"
+      },
+      "oratio, orationis, f.": {
+        "icon": "game-icons:prayer",
+        "verdict": "ok"
+      },
+      "orbis, orbis, orbium, m.": {
+        "icon": "ph:sphere",
+        "verdict": "ok"
+      },
+      "origo, originis": {
+        "icon": "mdi:origin",
+        "verdict": "ok"
+      },
+      "orno, ornare, ornaui, ornatus": {
+        "icon": "game-icons:ribbon",
+        "verdict": "ok"
+      },
+      "ouis, ouis, ouium, f.": {
+        "icon": "game-icons:sheep",
+        "verdict": "ok"
+      },
+      "pacifico, pacificare, pacificaui, pacificatus": {
+        "icon": "ph:peace",
+        "verdict": "ok"
+      },
+      "pactum, pacti": {
+        "icon": "ph:handshake",
+        "verdict": "ok"
+      },
+      "pango, pangere, panxi [pegi, pepigi], pactus (pactus)": {
+        "icon": "game-icons:sing",
+        "verdict": "ok"
+      },
+      "par, gen., paris": {
+        "icon": "mdi:equal",
+        "verdict": "ok"
+      },
+      "paro, parare, paraui, paratus": {
+        "icon": "ph:package",
+        "verdict": "ok"
+      },
+      "patrimonium, patrimoni(i)": {
+        "icon": "game-icons:house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "patronus, patroni, m.": {
+        "icon": "game-icons:shield",
+        "verdict": "ok"
+      },
+      "perspicio, perspicere, perspexi, perspectus": {
+        "icon": "ph:eyes",
+        "verdict": "ok"
+      },
+      "persuadeo, persuadere, persuasi, persuasus": {
+        "icon": "game-icons:convince",
+        "verdict": "ok"
+      },
+      "peruenio, peruenire, perueni, peruentus": {
+        "icon": "ph:flag",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "placo, placare, placaui, placatus": {
+        "icon": "game-icons:dove",
+        "verdict": "ok"
+      },
+      "postis, postis, postium, m.": {
+        "icon": "game-icons:door",
+        "verdict": "ok"
+      },
+      "potius": {
+        "icon": "mdi:more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "praecipue": {
+        "icon": "game-icons:chart",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "praecipuus, praecipua, praecipuum": {
+        "icon": "game-icons:bullseye",
+        "verdict": "ok"
+      },
+      "praeterea": {
+        "icon": "ph:plus",
+        "verdict": "ok"
+      },
+      "principalis, principalis, principale": {
+        "icon": "game-icons:medal",
+        "verdict": "ok"
+      },
+      "profecto": {
+        "icon": "ph:check",
+        "verdict": "ok"
+      },
+      "prosum, prodesse, profui, —": {
+        "icon": "game-icons:profit",
+        "verdict": "ok"
+      },
+      "prudentia, prudentiae": {
+        "icon": "game-icons:wisdom",
+        "verdict": "ok"
+      },
+      "psalmus, psalmi": {
+        "icon": "tabler:notes",
+        "verdict": "ok"
+      },
+      "publice": {
+        "icon": "game-icons:expense",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "purgo, purgare, purgaui, purgatus": {
+        "icon": "game-icons:soap",
+        "verdict": "ok"
+      },
+      "refero, referre, rettuli, relatus": {
+        "icon": "tabler:report",
+        "verdict": "ok"
+      },
+      "reficio, reficere, refeci, refectus": {
+        "icon": "mdi:refresh",
+        "verdict": "ok"
+      },
+      "remaneo, remanere, remansi, remansus": {
+        "icon": "game-icons:hourglass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "repono, reponere, reposuit, repositus": {
+        "icon": "tabler:replace",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "restituo, restituere, restitui, restitutus": {
+        "icon": "mdi:restore",
+        "verdict": "ok"
+      },
+      "resulto, resultare, resultaui, resultatus": {
+        "icon": "ph:bell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "resurrectio, resurrectionis, f.": {
+        "icon": "game-icons:sunrise",
+        "verdict": "ok"
+      },
+      "rex, regis, m.": {
+        "icon": "game-icons:king",
+        "verdict": "ok"
+      },
+      "robur, roboris": {
+        "icon": "game-icons:oak",
+        "verdict": "ok"
+      },
+      "sacramentum, sacramenti, n.": {
+        "icon": "game-icons:sparkles",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "sacrificium, sacrificii, n.": {
+        "icon": "game-icons:fire",
+        "verdict": "ok"
+      },
+      "saecularis, saecularis, saeculare": {
+        "icon": "game-icons:world",
+        "verdict": "ok"
+      },
+      "saepe": {
+        "icon": "ph:repeat",
+        "verdict": "ok"
+      },
+      "salue": {
+        "icon": "mdi:hail",
+        "verdict": "ok"
+      },
+      "salutare, salutaris, salutarium, n.": {
+        "icon": "game-icons:buoy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "saluus, -a, -um": {
+        "icon": "mdi:safe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "sancio, sancire, sanxi, sanctus": {
+        "icon": "ph:scroll",
+        "verdict": "ok"
+      },
+      "sanguis, sanguinis, m.": {
+        "icon": "game-icons:blood",
+        "verdict": "ok"
+      },
+      "scriptura, scripturae, f.": {
+        "icon": "tabler:writing",
+        "verdict": "ok"
+      },
+      "sedulo": {
+        "icon": "game-icons:ant",
+        "verdict": "ok"
+      },
+      "semen, seminis": {
+        "icon": "mdi:seed",
+        "verdict": "ok"
+      },
+      "semita, semitae, f.": {
+        "icon": "ph:path",
+        "verdict": "ok"
+      },
+      "separo, separare, separaui, separatus": {
+        "icon": "game-icons:scissors",
+        "verdict": "ok"
+      },
+      "sermo, sermonis, m.": {
+        "icon": "game-icons:talk",
+        "verdict": "ok"
+      },
+      "sol, solis, m.": {
+        "icon": "game-icons:sun",
+        "verdict": "ok"
+      },
+      "solor, solari, —, solatus": {
+        "icon": "mdi:console",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "somnus, somni, m.": {
+        "icon": "mdi:sleep",
+        "verdict": "ok"
+      },
+      "spargo, spargere, sparsi, sparsus": {
+        "icon": "game-icons:shower",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "species, speciei, f.": {
+        "icon": "mdi:mirror",
+        "verdict": "ok"
+      },
+      "spes, spei, f.": {
+        "icon": "game-icons:anchor",
+        "verdict": "ok"
+      },
+      "stabilis, stabilis, stabile": {
+        "icon": "game-icons:stable",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "succurro, succurrere, succurri, succursus": {
+        "icon": "game-icons:run",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "suffragium, suffragi(i)": {
+        "icon": "game-icons:vote",
+        "verdict": "ok"
+      },
+      "synodus, synodi": {
+        "icon": "ph:book",
+        "verdict": "ok"
+      },
+      "tentatio, tentationis, f.": {
+        "icon": "game-icons:temptation",
+        "verdict": "ok"
+      },
+      "terra, terrae, f.": {
+        "icon": "mdi:earth",
+        "verdict": "ok"
+      },
+      "traho, trahere, traxi, tractus": {
+        "icon": "mdi:drag",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "turba, turbae, f.": {
+        "icon": "mdi:crowd",
+        "verdict": "ok"
+      },
+      "uestigium, uestigii, n.": {
+        "icon": "ph:footprints",
+        "verdict": "ok"
+      },
+      "uestis, uestis, uestium, f.": {
+        "icon": "game-icons:shirt",
+        "verdict": "ok"
+      },
+      "uia, uiae, f.": {
+        "icon": "game-icons:road",
+        "verdict": "ok"
+      },
+      "uictor, uictoris, m.": {
+        "icon": "game-icons:conqueror",
+        "verdict": "ok"
+      },
+      "uigor, uigoris": {
+        "icon": "game-icons:biceps",
+        "verdict": "ok"
+      },
+      "uinco, uincere, uici, uictus": {
+        "icon": "game-icons:trophy",
+        "verdict": "ok"
+      },
+      "uinum, uini, n.": {
+        "icon": "ph:wine",
+        "verdict": "ok"
+      },
+      "umbra, umbrae, f.": {
+        "icon": "tabler:shadow",
+        "verdict": "ok"
+      },
+      "unitas, unitatis, f.": {
+        "icon": "mdi:unity",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "uniuersitas, uniuersitatis": {
+        "icon": "tabler:universe",
+        "verdict": "ok"
+      },
+      "utilis, utilis, utile": {
+        "icon": "game-icons:toolbox",
+        "verdict": "ok"
+      },
+      "abstineo, abstinere, abstinui, abstentus": {
+        "icon": "tabler:clear-formatting",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "accessus, accessus": {
+        "icon": "tabler:plane-arrival",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "acquiro, acquirere, acquisiui, acquisitus": {
+        "icon": "tabler:layout-grid-add",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "acriter": {
+        "icon": "game-icons:kitchen-tap",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "actio, actionis": {
+        "icon": "tabler:activity-heartbeat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "actus, actus": {
+        "icon": "game-icons:delivery-drone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "addico, addicere, addixi, addictus": {
+        "icon": "mdi:white-balance-auto",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aditus, aditus": {
+        "icon": "tabler:lock-access",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "adsum, adesse, affui, —": {
+        "icon": "game-icons:round-knob",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aduersus (aduersum)": {
+        "icon": "ph:person-simple-hike",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aedificatio, aedificationis": {
+        "icon": "game-icons:dog-house",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aequus, aequa, aequum": {
+        "icon": "game-icons:level-two",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aer, aeris": {
+        "icon": "mdi:air-horn",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aestimo, aestimare, aestimaui, aestimatus": {
+        "icon": "ph:hands-praying-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "affectus, affectus, m.": {
+        "icon": "ph:shirt-folded-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aggredior, aggredi, —, aggressus sum": {
+        "icon": "game-icons:fast-arrow",
+        "verdict": "ok"
+      },
+      "ago, agere, egi, actus": {
+        "icon": "mdi:tape-drive",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aliquando": {
+        "icon": "game-icons:extra-time",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aliquis, aliquid": {
+        "icon": "game-icons:stone-bust",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aliter": {
+        "icon": "mdi:current-ac",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "alius, alia, aliud": {
+        "icon": "ph:shuffle-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "amen": {
+        "icon": "mdi:bug-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "amicus, amici, m.": {
+        "icon": "ph:handshake-light",
+        "verdict": "ok"
+      },
+      "ample": {
+        "icon": "mdi:border-style",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "amplius": {
+        "icon": "mdi:skew-more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "amplus, -a, -um": {
+        "icon": "game-icons:ample-dress",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "anathema, anathematis": {
+        "icon": "game-icons:sacrificial-dagger",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "angustia, angustiae": {
+        "icon": "tabler:arrow-narrow-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "animal, animalis": {
+        "icon": "game-icons:animal-hide",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "animus, animi, m.": {
+        "icon": "tabler:eye-heart",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "apostolus, apostoli, m.": {
+        "icon": "ph:tray-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "appareo, apparere, apparui, apparitus": {
+        "icon": "tabler:keyboard-show",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "arcanus, arcana, arcanum": {
+        "icon": "game-icons:secret-door",
+        "verdict": "ok"
+      },
+      "archangelus, archangeli, m.": {
+        "icon": "ph:baby-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "archidiaconus, archidiaconi": {
+        "icon": "game-icons:air-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "ardeo, ardere, arsi, arsus": {
+        "icon": "game-icons:card-burn",
+        "verdict": "ok"
+      },
+      "ardor, ardoris": {
+        "icon": "game-icons:fire-ace",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "ars, artis, artium, f.": {
+        "icon": "game-icons:gift-of-knowledge",
+        "verdict": "ok"
+      },
+      "aspicio, aspicere, aspexi, aspectus": {
+        "icon": "tabler:mood-look-up",
+        "verdict": "ok"
+      },
+      "at": {
+        "icon": "ph:arrow-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aue!": {
+        "icon": "mdi:weather-hail",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "augeo, augere, auxi, auctus": {
+        "icon": "tabler:text-increase",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "aula, aulae, f.": {
+        "icon": "mdi:town-hall",
+        "verdict": "ok"
+      },
+      "auxilium, auxili(i)": {
+        "icon": "mdi:help-circle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "baptismus, baptismi, m.": {
+        "icon": "tabler:droplet-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "baptista, baptistae, m.": {
+        "icon": "tabler:droplet-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "baptizo, baptizare, baptizaui, baptizatus": {
+        "icon": "tabler:droplet-cog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "beatus, -a, -um": {
+        "icon": "ph:mask-happy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：mdi:console 是終端機提示字元、game-icons:stable 是馬廄、weather-hail 是冰雹（命中 hail 問安）、droplet-x／-up／-cog 是打叉加箭頭加齒輪的水滴、delivery-drone 是送貨無人機"
+      },
+      "bene": {
+        "icon": "ph:thumbs-up",
+        "verdict": "ok"
+      },
+      "benedico, benedicere, benedixi, benedictus": {
+        "icon": "ph:hands-clapping-bold",
+        "verdict": "ok"
+      },
+      "benedictus, -a, -um": {
+        "icon": "game-icons:nun-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "beneuolentia, beneuolentiae": {
+        "icon": "ph:face-mask-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "benignus, -a, -um": {
+        "icon": "ph:face-mask-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "bonitas, bonitatis": {
+        "icon": "game-icons:pig-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "brachium, brachii, n.": {
+        "icon": "mdi:arm-flex",
+        "verdict": "ok"
+      },
+      "breuis, breuis, breue": {
+        "icon": "mdi:text-short",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "caelicola, caelicolae, m.": {
+        "icon": "ph:baby-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "canticum, cantici, n.": {
+        "icon": "game-icons:love-song",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cantus, cantus, m.": {
+        "icon": "game-icons:musical-notes",
+        "verdict": "ok"
+      },
+      "capio, capere, cepi, captus": {
+        "icon": "game-icons:take-my-money",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "caritas, caritatis, f.": {
+        "icon": "game-icons:self-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "caueo, cauere, caui, cautus": {
+        "icon": "game-icons:defensive-wall",
+        "verdict": "ok"
+      },
+      "causa, causae, f.": {
+        "icon": "ph:arrow-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cena, cenae, f.": {
+        "icon": "ph:fork-knife",
+        "verdict": "ok"
+      },
+      "censeo, censere, censui, census": {
+        "icon": "mdi:vote-outline",
+        "verdict": "ok"
+      },
+      "cerno, cernere, creui, cretus": {
+        "icon": "game-icons:six-eyes",
+        "verdict": "ok"
+      },
+      "certamen, certaminis": {
+        "icon": "mdi:axe-battle",
+        "verdict": "ok"
+      },
+      "certitudo, certitudinis": {
+        "icon": "mdi:star-four-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "certus, -a, -um": {
+        "icon": "mdi:web-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "chorus, chori, m.": {
+        "icon": "game-icons:musical-score",
+        "verdict": "ok"
+      },
+      "christus, christi, m.": {
+        "icon": "ph:dice-one-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "circum": {
+        "icon": "game-icons:anticlockwise-rotation",
+        "verdict": "ok"
+      },
+      "circumsto, circumstare, circumsteti, —": {
+        "icon": "ph:globe-stand-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "ciuis, ciuis": {
+        "icon": "mdi:account-tie-woman",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "clamo, clamare, clamaui, clamatus": {
+        "icon": "tabler:mood-cry",
+        "verdict": "ok"
+      },
+      "clementia, clementiae, f.": {
+        "icon": "mdi:gate-open",
+        "verdict": "ok"
+      },
+      "clericus, clerici": {
+        "icon": "ph:student-bold",
+        "verdict": "ok"
+      },
+      "clerus, cleri, m.": {
+        "icon": "mdi:face-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cogitatio, cogitationis, f.": {
+        "icon": "game-icons:thought-bubble",
+        "verdict": "ok"
+      },
+      "cogito, cogitare, cogitaui, cogitatus": {
+        "icon": "mdi:floor-plan",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cognitio, cognitionis": {
+        "icon": "game-icons:classical-knowledge",
+        "verdict": "ok"
+      },
+      "cognosco, cognoscere, cognoui, cognitus": {
+        "icon": "ph:brain-bold",
+        "verdict": "ok"
+      },
+      "cogo, cogere, coegi, coactus": {
+        "icon": "mdi:arrange-bring-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "collegium, collegi(i)": {
+        "icon": "mdi:iron-board",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "commendo, commendare, commendaui, commendatus": {
+        "icon": "ph:book-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "committo, committere, commisi, commissus": {
+        "icon": "ph:unite-bold",
+        "verdict": "ok"
+      },
+      "commode": {
+        "icon": "tabler:puzzle-2",
+        "verdict": "ok"
+      },
+      "commodum, commodi": {
+        "icon": "game-icons:wanted-reward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "communis, commune": {
+        "icon": "game-icons:fire-silhouette",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "communitas, communitatis": {
+        "icon": "tabler:building-community",
+        "verdict": "ok"
+      },
+      "compar, gen., comparis": {
+        "icon": "mdi:equal-box",
+        "verdict": "ok"
+      },
+      "compleo, complere, compleui, completus": {
+        "icon": "mdi:ray-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "concedo, concedere, concessi, concessus": {
+        "icon": "mdi:sign-yield",
+        "verdict": "ok"
+      },
+      "concilium, concili(i)": {
+        "icon": "game-icons:public-speaker",
+        "verdict": "ok"
+      },
+      "concino, concinere, concinui, concentus": {
+        "icon": "tabler:mood-sing",
+        "verdict": "ok"
+      },
+      "concipio, concipere, concepi, conceptus": {
+        "icon": "mdi:human-pregnant",
+        "verdict": "ok"
+      },
+      "conclusio, conclusionis, f.": {
+        "icon": "mdi:clock-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conditio, conditionis": {
+        "icon": "ph:option-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "condo, condere, condidi, conditus": {
+        "icon": "tabler:building-cog",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conficio, conficere, confeci, confectus": {
+        "icon": "mdi:timer-sand-complete",
+        "verdict": "ok"
+      },
+      "confiteor, confiteri, —, confessus sum": {
+        "icon": "game-icons:folded-paper",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conforto, confortare, —, —": {
+        "icon": "mdi:image-filter-center-focus-strong",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "confringo, confringere, confregi, conractus": {
+        "icon": "ph:link-break",
+        "verdict": "ok"
+      },
+      "conglorifico, conglorificare, conglorificaui, conglorificatus": {
+        "icon": "game-icons:glowing-artifact",
+        "verdict": "ok"
+      },
+      "coniunctio, coniunctionis": {
+        "icon": "ph:union-bold",
+        "verdict": "ok"
+      },
+      "coniungo, coniungere, coniunxi, coniunctus": {
+        "icon": "tabler:arrows-join",
+        "verdict": "ok"
+      },
+      "conor, conari, —, conatus sum": {
+        "icon": "mdi:currency-try",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "consecratio, consecrationis": {
+        "icon": "game-icons:person-in-bed",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "consecro, consecrare, consecraui, consecratus": {
+        "icon": "game-icons:holy-grail",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "consensus, consensus": {
+        "icon": "mdi:scatter-plot",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "consentio, consentire, consensi, consensus": {
+        "icon": "tabler:arrows-join-2",
+        "verdict": "ok"
+      },
+      "consors, consortis, consortium, m. or f.": {
+        "icon": "tabler:heart-handshake",
+        "verdict": "ok"
+      },
+      "consortium, consorti(i)": {
+        "icon": "tabler:cloud-data-connection",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conspectus, conspectus, m.": {
+        "icon": "game-icons:on-sight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "constituo, constituere, constitui, constitutus": {
+        "icon": "tabler:join-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "constitutio, constitutionis": {
+        "icon": "ph:tree-structure",
+        "verdict": "ok"
+      },
+      "consuetudo, consuetudinis, f.": {
+        "icon": "mdi:cog-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "consulo, consulere, consului, consultus": {
+        "icon": "mdi:information-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "contextus, contextus": {
+        "icon": "mdi:transit-connection",
+        "verdict": "ok"
+      },
+      "contingo, contingere, contigi, contactus": {
+        "icon": "mdi:touch-text-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "continuo": {
+        "icon": "ph:repeat-once-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "contraho, contrahere, contraxi, contractus": {
+        "icon": "tabler:door-enter",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conuentus, conuentus": {
+        "icon": "game-icons:roman-toga",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "conuerto, conuertere, conuerti, conuersus or conuertor, conuerti, —, conuersus sum": {
+        "icon": "tabler:s-turn-down",
+        "verdict": "ok"
+      },
+      "cornu, cornus, n.": {
+        "icon": "game-icons:beer-horn",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "corono, coronare, coronaui, coronatus": {
+        "icon": "game-icons:crown-coin",
+        "verdict": "ok"
+      },
+      "cotidianus, -a, -um": {
+        "icon": "ph:calendar-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cottidianus, cottidiana, cottidianum": {
+        "icon": "game-icons:health-normal",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "creator, creatoris, m.": {
+        "icon": "mdi:coffee-maker-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "credo, credere, credidi, creditus": {
+        "icon": "ph:handshake-duotone",
+        "verdict": "ok"
+      },
+      "cresco, crescere, creui, cretus": {
+        "icon": "game-icons:health-increase",
+        "verdict": "ok"
+      },
+      "crucifigo, crucifigere, crucifixi, crucifixus": {
+        "icon": "mdi:auto-fix",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "crux, crucis, f.": {
+        "icon": "mdi:alphabet-latin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "cumque": {
+        "icon": "tabler:calendar-time",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "curro, currere, cucurri, cursus": {
+        "icon": "mdi:run-fast",
+        "verdict": "ok"
+      },
+      "cursus, cursus": {
+        "icon": "game-icons:running-shoe",
+        "verdict": "ok"
+      },
+      "curuo, curuare, curuaui, curuatus": {
+        "icon": "game-icons:thrust-bend",
+        "verdict": "ok"
+      },
+      "custodia, custodiae": {
+        "icon": "game-icons:egg-defense",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "custos, custodis": {
+        "icon": "game-icons:static-guard",
+        "verdict": "ok"
+      },
+      "damno, damnare, damnaui, damnatus": {
+        "icon": "game-icons:boarding-pass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "debeo, debere, debui, debitus": {
+        "icon": "tabler:receipt-2",
+        "verdict": "ok"
+      },
+      "debitor, debitoris, m.": {
+        "icon": "ph:receipt-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dec": {
+        "icon": "game-icons:lightning-tear",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "defensio, defensionis": {
+        "icon": "game-icons:defense-satellite",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "definio, definire, definiui, definitus": {
+        "icon": "ph:gps-fix",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "defungor, defungi, defunctus sum": {
+        "icon": "tabler:phone-done",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "deinde": {
+        "icon": "game-icons:player-next",
+        "verdict": "ok"
+      },
+      "delicia, deliciae, f.": {
+        "icon": "game-icons:wizard-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "delictum, delicti": {
+        "icon": "tabler:viewport-short",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "deposco, deposcere, depoposci, —": {
+        "icon": "ph:shirt-folded-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "deprecatio, deprecationis, f.": {
+        "icon": "game-icons:prayer-beads",
+        "verdict": "ok"
+      },
+      "deprecor, deprecari, —, deprecatus sum": {
+        "icon": "ph:shirt-folded-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "desidero, desiderare, desideraui, desideratus": {
+        "icon": "tabler:heart-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "desino, desinere, desii, desitus": {
+        "icon": "mdi:bug-stop",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "desum, deesse, defui, defuturus": {
+        "icon": "game-icons:desert-camp",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "detrimentum, detrimenti, n.": {
+        "icon": "mdi:chart-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "deuotus, -a, -um": {
+        "icon": "game-icons:baby-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "deus, dei, m.": {
+        "icon": "game-icons:hand-of-god",
+        "verdict": "ok"
+      },
+      "dexter, dextera, dexterum": {
+        "icon": "tabler:uv-index",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diabolus, diaboli, m.": {
+        "icon": "game-icons:devil-mask",
+        "verdict": "ok"
+      },
+      "diaconus, diaconi, m.": {
+        "icon": "game-icons:quick-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dico, dicere, dixi, dictus": {
+        "icon": "game-icons:william-tell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "difficultas, difficultatis": {
+        "icon": "game-icons:distress-signal",
+        "verdict": "ok"
+      },
+      "dignor, dignari, —, dignatus": {
+        "icon": "ph:person-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dilectio, dilectionis, f.": {
+        "icon": "mdi:robot-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dilectus, -a, -um": {
+        "icon": "ph:face-mask-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diligentia, diligentiae": {
+        "icon": "game-icons:love-howl",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diligo, diligere, dilexi, dilectus": {
+        "icon": "game-icons:royal-love",
+        "verdict": "ok"
+      },
+      "directe": {
+        "icon": "tabler:cap-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "discedo, discedere, discessi, discessus": {
+        "icon": "ph:hand-waving",
+        "verdict": "ok"
+      },
+      "disciplina, disciplinae": {
+        "icon": "mdi:book-education",
+        "verdict": "ok"
+      },
+      "dispergo, dispergere, dispersi, dispersus": {
+        "icon": "ph:chart-scatter",
+        "verdict": "ok"
+      },
+      "diu": {
+        "icon": "game-icons:long-legged-spider",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diuersitas, diuersitatis": {
+        "icon": "tabler:layers-difference",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diuido, diuidere, diuisi, diuisus": {
+        "icon": "ph:divide-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diuinus, -a, -um": {
+        "icon": "tabler:sparkles-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "diuturnus, diuturna, diuturnum": {
+        "icon": "mdi:text-long",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "doctor, doctoris, m.": {
+        "icon": "ph:chalkboard-teacher",
+        "verdict": "ok"
+      },
+      "dogma, dogmatis, n.": {
+        "icon": "mdi:arrow-decision",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dolorosus, -a, -um": {
+        "icon": "game-icons:monk-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：iron-board 是燙衣板、coffee-maker-check 配「造物主」是咖啡機、alphabet-latin 配「十字架」是 ab 兩個字母、auto-fix 配「釘十字架」是魔法棒、calendar-x／receipt-x／heart-x 都是打了叉的相反意思"
+      },
+      "dominus, domini, m.": {
+        "icon": "game-icons:master-of-arms",
+        "verdict": "ok"
+      },
+      "domus, domus, f.": {
+        "icon": "tabler:home-2",
+        "verdict": "ok"
       }
     }
   }
