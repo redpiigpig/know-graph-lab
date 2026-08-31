@@ -247,9 +247,86 @@ Tabler，25,059 個概念，`scripts/iconify_card_images.py`），比對分三�
 - **畫的是現代器物**：`briefcase` 配「工作」、`test-pipe` 配「試探」、
   `chess-bishop` 配「主教」（那是西洋棋子）、`gas-station-in-use` 配「使用」。
 
-還沒做的是 owner 那條原始規則（同一語言內一張圖只出現在一張卡上）。錯圖清乾淨
-之後才輪得到它，而且清完之後仍共用的張數會比原先估的多——被刪掉的 2,106 張都
-退回了共用圖。
+錯圖清乾淨之後，才輪得到 owner 那條原始規則——見下一節。
+
+## 一圖一卡：用九套 emoji 做到 97.8%（2026-08-31）
+
+owner：「那就不要圖重複，去找幾種不同的來源。」清完錯圖後仍共用 2,650 張
+（希伯來 350、希臘 1,164、拉丁 1,136）。
+
+### 來源：九套彩色 emoji，命名互通
+
+Iconify 上有 237 個圖庫，其中十二套是 emoji。**它們用同一套名字**——`dog`、
+`folded-hands`、`prohibited` 每一套都叫同一個名字——所以同一個概念可以拿到九種
+不同繪者的畫法。這正是這條規則要的東西：「眼睛的單數與複數也要用不同的眼睛圖」。
+
+| 圖庫 | 張數 | 授權 |
+|---|---:|---|
+| openmoji | 4,544 | CC BY-SA 4.0（本專案原本就在用） |
+| twemoji | 3,988 | CC BY 4.0 |
+| noto | 3,710 | Apache 2.0 |
+| fluent-emoji-flat | 3,145 | MIT |
+| noto-v1 | 2,162 | Apache 2.0 |
+| emojione | 1,834 | CC BY 4.0 |
+| emojione-v1 | 1,262 | CC BY-SA 4.0 |
+| fxemoji | 1,034 | Apache 2.0 |
+| streamline-emojis | 787 | CC BY 4.0 |
+
+**`fluent-emoji`（3D 那套，3,126 張）驗過之後剔除。** 它的 SVG 用漸層與內嵌點陣，
+PyMuPDF 一律 render 成全黑剪影，五個概念抓下來全是黑影。不會報錯，會安靜地印出
+一張純黑的卡。新增任何圖庫都要先 `--probe` 排樣張看圖再收。
+
+### 兩層，只有第二層要人看
+
+| 層 | 做什麼 | 張數 | 要不要審 |
+|---|---|---:|---|
+| 同概念換畫法 | `folded-hands` 換成 twemoji 的 `folded-hands` | 2,010 | **不用**——概念沒動，twemoji 的狗還是狗 |
+| 同語意場換符號 | `folded-hands` 換成 `prayer-beads`、`prohibited` 換成 `cross-mark` | 529 | **要**——概念動了，跟 Iconify 那層同一個風險 |
+
+這個分界是這一輪最重要的一件事：上一輪 Iconify 那層七成是錯的，是因為它去找
+「名字碰巧對得上的另一個概念」；換畫法這層完全沒有那個風險，所以兩千張不必看。
+
+家族表（`FAMILIES`，64 個概念、327 個兄弟）逐條列出來看過，改掉七處，其中兩處
+是真的會教錯：`right-anger-bubble` 配「提醒、記得」教的是生氣，`waving-hand` 配
+「允許、容許」是道別（skill 早就記過「釋放」借到揮手是錯的）。表裡刻意**不收
+膚色變體**（`folded-hands-dark` 那一類）：拿膚色去區分兩張卡，學的人什麼也沒多
+學到。也不收會帶進錯值的：`input numbers` 那一團的卡是「五十、十二、二十」，
+給它 `keycap-7` 就是在教 7。
+
+### 結果與剩下的 111 張
+
+    希伯來  990 張不同的圖，仍共用 10 張（7 團）
+    希臘  1,948 張不同的圖，仍共用 52 張（28 團）
+    拉丁  1,947 張不同的圖，仍共用 49 張（28 團）
+
+2,650 → 111（2.2%）。剩下的多半是數字（`keycap: 1`／`4`／`6`／`8`／`10`、
+`abacus`、`input numbers`）——「六百」跟「一千」之間沒有第二張誠實的圖可換，
+硬換就是在教一個錯的數目，所以留著共用。
+
+### 三個坑，每一個都會安靜地毀掉結果
+
+1. **分組要讀「原本的 OpenMoji 配圖表」，不能讀 `load_cards` 解出來的圖。**
+   印卡端已經會讀換圖帳本，所以第二次跑會看到「幾乎沒有重複」，然後把帳本重寫
+   成只剩十幾筆——前一輪的兩千張無聲消失。
+2. **佔用表的鍵是（圖庫, 概念名），不是檔名。** OpenMoji 本地下載的 `link` 叫
+   `1F517.png`，同一張圖從 Iconify 抓來叫 `openmoji-link.png`：檔名不同、畫面
+   相同。照檔名比會回報「零重複」，而卡片上明明有兩張一樣的。
+3. **要分兩趟發。** 一趟做完，`end arrow` 那一團會循家族借走 `top-arrow` 的各套
+   畫法，等輪到 `top arrow` 自己那一團時它自己的畫法已經被借光，只好整團維持
+   共用。先把所有團的同概念換畫法發完，第二趟才發家族借圖：希臘 81→52、
+   拉丁 92→49。
+
+### 一個誠實的但書：簡單符號換了套也還是很像
+
+九套的狗、皇冠、房子明顯不同，但**紅心、叉叉、箭頭這類簡單符號，換一套仍然幾乎
+一模一樣**——一個叉就是一個叉。規則在「圖檔層級」是達成了（`--verify` 比概念身分
+過關），但學的人翻到那兩張卡，看到的差別很小。這是這條路的天花板，不是實作沒做好。
+
+    python scripts/emoji_variant_images.py --probe dog folded-hands   # 各套畫法對照
+    python scripts/emoji_variant_images.py --lang grc                 # 只算不下載
+    python scripts/emoji_variant_images.py --lang grc --write
+    python scripts/emoji_variant_images.py --lang grc --review        # 只看家族層樣張
+    python scripts/emoji_variant_images.py --lang grc --verify        # 驗收同語言重複
 
 ### 下一層還沒審過：手挑的 OpenMoji override
 
