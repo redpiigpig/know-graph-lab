@@ -5691,6 +5691,1248 @@
       "πλάσσω": {
         "icon": "game-icons:ring-mould",
         "verdict": "ok"
+      },
+      "πλάτος": {
+        "icon": "mdi:arrow-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλήν": {
+        "icon": "game-icons:save-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλήρωμα": {
+        "icon": "game-icons:full-pizza",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλανάω": {
+        "icon": "ph:face-mask-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλείων": {
+        "icon": "mdi:perspective-more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλεῖστος": {
+        "icon": "game-icons:gold-bar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πληθύνω": {
+        "icon": "tabler:text-increase",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πλοῦτος": {
+        "icon": "game-icons:stone-axe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πνευματικός": {
+        "icon": "mdi:face-agent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ποίμνιον": {
+        "icon": "tabler:hand-little-finger",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πολεμέω": {
+        "icon": "game-icons:war-axe",
+        "verdict": "ok"
+      },
+      "πολιτεία": {
+        "icon": "game-icons:split-body",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πολυτελής": {
+        "icon": "game-icons:gem-chain",
+        "verdict": "ok"
+      },
+      "πονηρία": {
+        "icon": "game-icons:pig-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πονηρεύομαι": {
+        "icon": "game-icons:evil-bat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πορεύομαι": {
+        "icon": "game-icons:travel-dress",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πορνεία": {
+        "icon": "game-icons:broken-bone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ποτέ": {
+        "icon": "game-icons:time-bomb",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ποτήριον": {
+        "icon": "mdi:content-copy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ποτίζω": {
+        "icon": "mdi:food-fork-drink",
+        "verdict": "ok"
+      },
+      "πραΰς": {
+        "icon": "mdi:chili-mild",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "προΐστημι": {
+        "icon": "game-icons:rule-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "προαίρεσις": {
+        "icon": "mdi:arrow-decision-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "προδότης": {
+        "icon": "game-icons:dagger-rose",
+        "verdict": "ok"
+      },
+      "προθύμως": {
+        "icon": "game-icons:fire-ace",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "προσαγορεύω": {
+        "icon": "ph:address-book",
+        "verdict": "ok"
+      },
+      "προσκαλέομαι": {
+        "icon": "game-icons:bugle-call",
+        "verdict": "ok"
+      },
+      "προστάσσω": {
+        "icon": "ph:command-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "προσφορά": {
+        "icon": "ph:hands-praying-fill",
+        "verdict": "ok"
+      },
+      "προφητεύω": {
+        "icon": "tabler:calendar-event",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρόβατον": {
+        "icon": "game-icons:forward-sun",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρόνοια": {
+        "icon": "ph:book-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρόσταγμα": {
+        "icon": "ph:scroll-bold",
+        "verdict": "ok"
+      },
+      "πρόσωπον": {
+        "icon": "game-icons:nose-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρόφασις": {
+        "icon": "mdi:face-woman-shimmer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρᾳότης": {
+        "icon": "game-icons:peace-dove",
+        "verdict": "ok"
+      },
+      "πρᾶγμα": {
+        "icon": "tabler:phone-done",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πρῶτος": {
+        "icon": "tabler:medal-2",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πώποτε": {
+        "icon": "game-icons:time-trap",
+        "verdict": "ok"
+      },
+      "πᾶς": {
+        "icon": "mdi:reply-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "πῦρ": {
+        "icon": "game-icons:fire-axe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σής": {
+        "icon": "game-icons:earth-worm",
+        "verdict": "ok"
+      },
+      "σίδηρος": {
+        "icon": "game-icons:iron-mask",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σαρκικός": {
+        "icon": "game-icons:cut-diamond",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σεμνός": {
+        "icon": "game-icons:top-paw",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σιωπάω": {
+        "icon": "tabler:mood-silence",
+        "verdict": "ok"
+      },
+      "σκανδαλίζω": {
+        "icon": "game-icons:foot-trip",
+        "verdict": "ok"
+      },
+      "σκεπάζω": {
+        "icon": "game-icons:book-cover",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σκεῦος": {
+        "icon": "game-icons:soul-vessel",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σκοπέω": {
+        "icon": "game-icons:take-my-money",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σκοπός": {
+        "icon": "game-icons:goal-keeper",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σκώληξ": {
+        "icon": "game-icons:worm-mouth",
+        "verdict": "ok"
+      },
+      "σπήλαιον": {
+        "icon": "game-icons:cave-entrance",
+        "verdict": "ok"
+      },
+      "σπείρω": {
+        "icon": "mdi:scatter-plot",
+        "verdict": "ok"
+      },
+      "σπουδή": {
+        "icon": "ph:person-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σπουδαῖος": {
+        "icon": "game-icons:fire-gem",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "στάσις": {
+        "icon": "game-icons:standing-potion",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "στέργω": {
+        "icon": "game-icons:eternal-love",
+        "verdict": "ok"
+      },
+      "στείρος": {
+        "icon": "game-icons:deku-tree",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "στηρίζω": {
+        "icon": "ph:gps-fix",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "στοιχεῖον": {
+        "icon": "game-icons:frozen-body",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "στρέφω": {
+        "icon": "tabler:s-turn-left",
+        "verdict": "ok"
+      },
+      "στρογγύλος": {
+        "icon": "game-icons:round-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συγκόπτω": {
+        "icon": "game-icons:cut-palm",
+        "verdict": "ok"
+      },
+      "συγχωρέω": {
+        "icon": "ph:door-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συνάντησις": {
+        "icon": "game-icons:explosive-meeting",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συνέχω": {
+        "icon": "tabler:wash-press",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συντάσσω": {
+        "icon": "mdi:vector-arrange-above",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συντέλεια": {
+        "icon": "mdi:contain-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "συντρίβω": {
+        "icon": "ph:link-break",
+        "verdict": "ok"
+      },
+      "σφόδρα": {
+        "icon": "mdi:star-four-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σωματικός": {
+        "icon": "ph:person-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σωτηρία": {
+        "icon": "game-icons:safety-pin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σωφροσύνη": {
+        "icon": "ph:person-simple-run",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σύ": {
+        "icon": "ph:hand-pointing-bold",
+        "verdict": "ok"
+      },
+      "σύμπας": {
+        "icon": "mdi:music-rest-whole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σύνεσις": {
+        "icon": "ph:brain-bold",
+        "verdict": "ok"
+      },
+      "σώφρων": {
+        "icon": "ph:person-simple-ski",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "σῴζω": {
+        "icon": "mdi:content-save",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τάγμα": {
+        "icon": "game-icons:rank-1",
+        "verdict": "ok"
+      },
+      "τάσσω": {
+        "icon": "mdi:arrange-send-to-back",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τάχα": {
+        "icon": "tabler:thinking-low",
+        "verdict": "ok"
+      },
+      "τάχος": {
+        "icon": "mdi:play-speed",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τέκνον": {
+        "icon": "mdi:human-child",
+        "verdict": "ok"
+      },
+      "τέλειος": {
+        "icon": "mdi:star-three-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τέμνω": {
+        "icon": "mdi:paper-cut-vertical",
+        "verdict": "ok"
+      },
+      "τέρας": {
+        "icon": "game-icons:star-struck",
+        "verdict": "ok"
+      },
+      "τίμιος": {
+        "icon": "game-icons:price-tag",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ταπεινοφροσύνη": {
+        "icon": "ph:person-simple-bike",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ταχύ": {
+        "icon": "game-icons:high-heel",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "ταχύς": {
+        "icon": "game-icons:quick-slash",
+        "verdict": "ok"
+      },
+      "τελέω": {
+        "icon": "mdi:calendar-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τελείως": {
+        "icon": "mdi:star-four-points-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τελειόω": {
+        "icon": "mdi:timer-sand-complete",
+        "verdict": "ok"
+      },
+      "τεσσεράκοντα": {
+        "icon": "tabler:number-1",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τετρακόσιοι": {
+        "icon": "ph:four-k",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τηλικοῦτος": {
+        "icon": "game-icons:great-war-tank",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τοίνυν": {
+        "icon": "mdi:ray-end-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τοσοῦτος": {
+        "icon": "game-icons:great-pyramid",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τρέπω": {
+        "icon": "tabler:u-turn-left",
+        "verdict": "ok"
+      },
+      "τρίβος": {
+        "icon": "mdi:car-brake-worn-linings",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τραυματίας": {
+        "icon": "ph:person-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τραυματίζω": {
+        "icon": "game-icons:open-wound",
+        "verdict": "ok"
+      },
+      "τραχύς": {
+        "icon": "game-icons:rough-wound",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τριακόσιοι": {
+        "icon": "ph:three-d",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τροπέω": {
+        "icon": "tabler:s-turn-right",
+        "verdict": "ok"
+      },
+      "τρυφή": {
+        "icon": "game-icons:gem-pendant",
+        "verdict": "ok"
+      },
+      "τρόπαιον": {
+        "icon": "game-icons:monument-valley",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τόπος": {
+        "icon": "mdi:lightbulb-spot",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τύπος": {
+        "icon": "tabler:box-model",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τύραννος": {
+        "icon": "ph:crown-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "τὶς": {
+        "icon": "ph:person-simple-hike",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φανερός": {
+        "icon": "mdi:format-clear",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φαῦλος": {
+        "icon": "game-icons:base-dome",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φεύγω": {
+        "icon": "mdi:exit-run",
+        "verdict": "ok"
+      },
+      "φιλαδελφία": {
+        "icon": "mdi:robot-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φιλανθρωπία": {
+        "icon": "game-icons:love-howl",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φιλαργυρία": {
+        "icon": "game-icons:love-mystery",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φιλοσοφέω": {
+        "icon": "game-icons:shield-reflect",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φιλοσοφία": {
+        "icon": "game-icons:evil-love",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φοβέω": {
+        "icon": "game-icons:witch-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φοβερός": {
+        "icon": "game-icons:cyborg-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φροντίς": {
+        "icon": "tabler:heart-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φρόνιμος": {
+        "icon": "game-icons:brain-dump",
+        "verdict": "ok"
+      },
+      "φυλακή": {
+        "icon": "game-icons:person-in-blizzard",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φυσάω": {
+        "icon": "game-icons:air-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φυσικός": {
+        "icon": "mdi:music-accidental-natural",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φόβος": {
+        "icon": "ph:alarm-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "φόνος": {
+        "icon": "game-icons:chalk-outline-murder",
+        "verdict": "ok"
+      },
+      "φύρω": {
+        "icon": "mdi:pot-mix",
+        "verdict": "ok"
+      },
+      "χάρισμα": {
+        "icon": "game-icons:wrapped-heart",
+        "verdict": "ok"
+      },
+      "χήρα": {
+        "icon": "ph:person-simple-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：full-pizza 配「圓滿」是披薩、iron-mask 配「鐵」是面具、chili-mild 配「溫柔」是辣椒、four-k 配「四百」是 4K 畫質、monument-valley 是猶他州地景、heart-x 配「關切」是打叉的心"
+      },
+      "χαίρω": {
+        "icon": "ph:mask-happy",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χαλεπός": {
+        "icon": "ph:hard-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χειμάρρους": {
+        "icon": "game-icons:winter-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χεῖλος": {
+        "icon": "game-icons:ent-mouth",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χορός": {
+        "icon": "mdi:dance-pole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χράομαι": {
+        "icon": "mdi:gas-station-in-use",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χρηστότης": {
+        "icon": "ph:thumbs-up-fill",
+        "verdict": "ok"
+      },
+      "χρῆσις": {
+        "icon": "mdi:gas-station-in-use-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χρῶμα": {
+        "icon": "tabler:text-color",
+        "verdict": "ok"
+      },
+      "χωρέω": {
+        "icon": "mdi:room-service-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "χώρα": {
+        "icon": "mdi:room-service",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ψαλμός": {
+        "icon": "game-icons:musical-notes",
+        "verdict": "ok"
+      },
+      "ψευδομαρτυρία": {
+        "icon": "ph:face-mask",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ψευδοπροφήτης": {
+        "icon": "game-icons:monk-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ψεύδω": {
+        "icon": "mdi:star-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ψεῦδος": {
+        "icon": "game-icons:dwarf-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀήρ": {
+        "icon": "mdi:air-horn",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀγάπη": {
+        "icon": "game-icons:royal-love",
+        "verdict": "ok"
+      },
+      "ἀγαθός": {
+        "icon": "ph:thumbs-up-bold",
+        "verdict": "ok"
+      },
+      "ἀγαθότης": {
+        "icon": "ph:thumbs-up-thin",
+        "verdict": "ok"
+      },
+      "ἀγαλλίασις": {
+        "icon": "game-icons:party-hat",
+        "verdict": "ok"
+      },
+      "ἀγαλλιάω": {
+        "icon": "mdi:tray-full",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀγαπάω": {
+        "icon": "game-icons:love-letter",
+        "verdict": "ok"
+      },
+      "ἀγών": {
+        "icon": "game-icons:boxing-ring",
+        "verdict": "ok"
+      },
+      "ἀδελφός": {
+        "icon": "mdi:remote-tv",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀδελφότης": {
+        "icon": "ph:hands-clapping-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀδιάκριτος": {
+        "icon": "game-icons:heavy-fall",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀδιαλείπτως": {
+        "icon": "tabler:infinity-2",
+        "verdict": "ok"
+      },
+      "ἀεί": {
+        "icon": "ph:infinity-fill",
+        "verdict": "ok"
+      },
+      "ἀθῷος": {
+        "icon": "game-icons:freedom-dove",
+        "verdict": "ok"
+      },
+      "ἀκακία": {
+        "icon": "mdi:image-filter-black-white",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀκοή": {
+        "icon": "mdi:ear-hearing",
+        "verdict": "ok"
+      },
+      "ἀκριβῶς": {
+        "icon": "ph:hash-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀκόλουθος": {
+        "icon": "game-icons:shadow-follower",
+        "verdict": "ok"
+      },
+      "ἀλαζονεία": {
+        "icon": "game-icons:necklace-display",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀληθής": {
+        "icon": "mdi:star-four-points-circle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀληθινός": {
+        "icon": "mdi:clock-star-four-points",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀληθῶς": {
+        "icon": "mdi:star-four-points-small",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀλλόφυλος": {
+        "icon": "tabler:world-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀμέλεια": {
+        "icon": "game-icons:evil-eyes",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀμίαντος": {
+        "icon": "game-icons:white-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀμείνων": {
+        "icon": "mdi:unfold-more-vertical",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνάγκη": {
+        "icon": "game-icons:red-carpet",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνάμνησις": {
+        "icon": "ph:memory-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνήκω": {
+        "icon": "tabler:calendar-due",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνήρ": {
+        "icon": "tabler:cookie-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνίστημι": {
+        "icon": "ph:globe-stand",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀναβαίνω": {
+        "icon": "tabler:go-game",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀναγκαῖος": {
+        "icon": "tabler:eye-exclamation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀναγράφω": {
+        "icon": "tabler:writing-sign",
+        "verdict": "ok"
+      },
+      "ἀναπαύω": {
+        "icon": "tabler:ease-in-control-point",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀναστρέφω": {
+        "icon": "tabler:s-turn-up",
+        "verdict": "ok"
+      },
+      "ἀναφέρω": {
+        "icon": "mdi:bag-carry-on",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀναχωρέω": {
+        "icon": "ph:key-return",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνοίγω": {
+        "icon": "mdi:gate-open",
+        "verdict": "ok"
+      },
+      "ἀντέχω": {
+        "icon": "ph:hand-fist",
+        "verdict": "ok"
+      },
+      "ἀντιλαμβάνω": {
+        "icon": "game-icons:life-support",
+        "verdict": "ok"
+      },
+      "ἀντιμισθία": {
+        "icon": "game-icons:wanted-reward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀνόσιος": {
+        "icon": "game-icons:nothing-to-say",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀξιόπιστος": {
+        "icon": "mdi:tag-check",
+        "verdict": "ok"
+      },
+      "ἀξιόω": {
+        "icon": "mdi:account-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπάτη": {
+        "icon": "game-icons:tree-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπαίρω": {
+        "icon": "mdi:eye-remove",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπαγγέλλω": {
+        "icon": "ph:megaphone-thin",
+        "verdict": "ok"
+      },
+      "ἀπαλλάσσω": {
+        "icon": "tabler:free-rights",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπειλή": {
+        "icon": "ph:seal-warning",
+        "verdict": "ok"
+      },
+      "ἀπελαύνω": {
+        "icon": "mdi:tape-drive",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀποβάλλω": {
+        "icon": "ph:person-simple-throw",
+        "verdict": "ok"
+      },
+      "ἀποδείκνυμι": {
+        "icon": "tabler:keyboard-show",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀποκτείνω": {
+        "icon": "game-icons:goo-skull",
+        "verdict": "ok"
+      },
+      "ἀπολιμπάνω": {
+        "icon": "ph:empty-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπορρίπτω": {
+        "icon": "ph:person-simple-throw-bold",
+        "verdict": "ok"
+      },
+      "ἀποστερέω": {
+        "icon": "ph:dice-one-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀποφέρω": {
+        "icon": "mdi:bag-carry-on-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀποχωρέω": {
+        "icon": "mdi:language-go",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπρεπής": {
+        "icon": "tabler:mood-confused-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀπόδειξις": {
+        "icon": "mdi:eye-check",
+        "verdict": "ok"
+      },
+      "ἀργός": {
+        "icon": "game-icons:sleeping-bag",
+        "verdict": "ok"
+      },
+      "ἀργύρεος": {
+        "icon": "mdi:podium-silver",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀργύριον": {
+        "icon": "game-icons:silver-bullet",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀρεστός": {
+        "icon": "mdi:face-mask-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀρετή": {
+        "icon": "ph:face-mask-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀριθμός": {
+        "icon": "tabler:number-0",
+        "verdict": "ok"
+      },
+      "ἀρκέω": {
+        "icon": "mdi:content-cut",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀρχαῖος": {
+        "icon": "game-icons:primitive-torch",
+        "verdict": "ok"
+      },
+      "ἀρχηγός": {
+        "icon": "tabler:military-rank",
+        "verdict": "ok"
+      },
+      "ἀσέβεια": {
+        "icon": "mdi:face-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀσέλγεια": {
+        "icon": "game-icons:tropical-fish",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀσεβής": {
+        "icon": "game-icons:nun-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀσθενής": {
+        "icon": "ph:face-mask-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀσύνετος": {
+        "icon": "tabler:mood-confused",
+        "verdict": "ok"
+      },
+      "ἀσώματος": {
+        "icon": "mdi:face-woman",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀφανής": {
+        "icon": "game-icons:invisible-face",
+        "verdict": "ok"
+      },
+      "ἀφθαρσία": {
+        "icon": "tabler:home-infinity",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀφορίζω": {
+        "icon": "game-icons:rail-road",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἀφορμή": {
+        "icon": "game-icons:car-door",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁγίασμα": {
+        "icon": "game-icons:holy-grail",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁγιάζω": {
+        "icon": "game-icons:holy-water",
+        "verdict": "ok"
+      },
+      "ἁγιασμός": {
+        "icon": "tabler:sparkles-2",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁγνεία": {
+        "icon": "game-icons:white-tower",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁγνός": {
+        "icon": "mdi:human-white-cane",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁγνῶς": {
+        "icon": "game-icons:hedjet-white-crown",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁμάρτημα": {
+        "icon": "game-icons:evil-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁπλότης": {
+        "icon": "mdi:white-balance-iridescent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἁφή": {
+        "icon": "mdi:hand-pointing-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄβυσσος": {
+        "icon": "game-icons:dig-hole",
+        "verdict": "ok"
+      },
+      "ἄγγελος": {
+        "icon": "mdi:compare-remove",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄγνοια": {
+        "icon": "game-icons:lamprey-mouth",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄγω": {
+        "icon": "ph:hard-drive",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄκακος": {
+        "icon": "ph:bag-simple",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄλλως": {
+        "icon": "ph:shuffle-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄλογος": {
+        "icon": "mdi:robot-confused",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄμεμπτος": {
+        "icon": "mdi:white-balance-auto",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄμπελος": {
+        "icon": "game-icons:vine-leaf",
+        "verdict": "ok"
+      },
+      "ἄμωμος": {
+        "icon": "mdi:white-balance-sunny",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄνεμος": {
+        "icon": "tabler:loader-quarter",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄρσην": {
+        "icon": "mdi:human-male",
+        "verdict": "ok"
+      },
+      "ἄρχομαι": {
+        "icon": "mdi:bug-play",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄτιμος": {
+        "icon": "ph:thumbs-up-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄτοπος": {
+        "icon": "mdi:emoticon-confused",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἄτρεπτος": {
+        "icon": "ph:anchor-bold",
+        "verdict": "ok"
+      },
+      "ἄφθαρτος": {
+        "icon": "ph:infinity-bold",
+        "verdict": "ok"
+      },
+      "ἅπαξ": {
+        "icon": "ph:repeat-once-bold",
+        "verdict": "ok"
+      },
+      "ἅπας": {
+        "icon": "mdi:share-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἅπτομαι": {
+        "icon": "mdi:touch-text-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐάνπερ": {
+        "icon": "ph:shuffle-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐγκράτεια": {
+        "icon": "ph:person-arms-spread",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐκδίκησις": {
+        "icon": "game-icons:egg-defense",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐκδικέω": {
+        "icon": "game-icons:justice-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐκεῖ": {
+        "icon": "tabler:join-round",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐκεῖθεν": {
+        "icon": "ph:arrow-left",
+        "verdict": "ok"
+      },
+      "ἐκεῖνος": {
+        "icon": "ph:dice-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
       }
     },
     "latin": {
