@@ -159,6 +159,139 @@ def parse_bracketed_chapters(text: str, book: int,
     return {k: "\n".join(v).strip() for k, v in out.items() if v}
 
 
+# ── 希臘原典（Migne PG 的 OCR 稿）───────────────────────────────────────────
+# 第三種行標：希臘字母數字。ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號正好對得上 NPNF 中英譯
+# 段落開頭的 1. 2. 3.（同一套本篤會編次）。
+GREEK_LETTER_VALUE = {
+    "α": 1, "β": 2, "γ": 3, "δ": 4, "ε": 5, "ϛ": 6, "ς": 6, "ζ": 7, "η": 8, "θ": 9,
+    "ι": 10, "κ": 20, "λ": 30, "μ": 40, "ν": 50, "ξ": 60, "ο": 70, "π": 80,
+    "ρ": 100, "σ": 200, "τ": 300, "υ": 400, "φ": 500, "χ": 600, "ψ": 700, "ω": 800,
+}
+GREEK_SECTION = re.compile(r"^\s*([α-ωϛ]{1,3})[΄'’]\s*[.·]?\s*(.*)$")
+GREEK_BOOK_WORD = {
+    "ΠΡΩΤΟΣ": 1, "ΔΕΥΤΕΡΟΣ": 2, "ΤΡΙΤΟΣ": 3,
+    "ΤΕΤΑΡΤΟΣ": 4, "ΠΕΜΠΤΟΣ": 5, "ΕΚΤΟΣ": 6, "ΕΚΤΟΣ.": 6,
+}
+GREEK_BOOK = re.compile(r"^\s*ΛΟΓΟΣ\s+([Α-Ωα-ωϛ]{1,9})[΄'’]?\.?\s*$")
+# 每一卷正文前都有一份目錄，開頭是 ΤΑΔΕ ΕΝΕΣΤΙΝ，而且同樣用 α΄ β΄ γ΄ 編號。
+GREEK_TOC = re.compile(r"ΤΑΔΕ\s+ΕΝΕΣΤΙΝ")
+
+
+TOC_ORDINAL = (("ΠΡΩΤ", 1), ("ΔΕΥΤΕΡ", 2), ("ΤΡΙΤ", 3),
+               ("ΤΕΤΑΡΤ", 4), ("ΠΕΜΠΤ", 5), ("ΕΚΤ", 6),
+               ("ΕΒΔΟΜ", 7), ("ΟΓΔΟ", 8), ("ΕΝΑΤ", 9), ("ΔΕΚΑΤ", 10))
+
+
+def toc_book_number(line: str) -> int | None:
+    """從「ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ」讀出這是第幾卷。讀不出回 None。"""
+    up = line.upper()
+    for stem, n in TOC_ORDINAL:
+        if stem in up:
+            return n
+    return None
+
+
+def greek_numeral(s: str) -> int | None:
+    """「ια΄」→ 11。讀不準回 None，不猜。"""
+    total = 0
+    for ch in s:
+        v = GREEK_LETTER_VALUE.get(ch)
+        if v is None:
+            return None
+        total += v
+    return total or None
+
+
+def join_crops(texts: list[str]) -> str:
+    """把同一頁上下兩半（含 1.5% 重疊）的 OCR 稿接起來，去掉接縫處重複的行。
+
+    留重疊是為了不讓剛好切在字行中間的那一行消失；代價是接縫上下各有幾行相同，
+    不去重就會在正文裡憑空多出重複的句子。
+    """
+    out: list[str] = []
+    for chunk in texts:
+        lines = [l.rstrip() for l in chunk.split("\n")]
+        while lines and not lines[0].strip():
+            lines.pop(0)
+        tail = [l.strip() for l in out[-6:] if l.strip()]
+        while lines and lines[0].strip() in tail:
+            lines.pop(0)
+            while lines and not lines[0].strip():
+                lines.pop(0)
+        out.extend(lines)
+    return "\n".join(out)
+
+
+def parse_greek_sections(text: str) -> dict[tuple[int | None, int], str]:
+    """把 PG 的希臘 OCR 稿切成 {(卷, 節): 文字}。
+
+    三個陷阱，都是掃描本 OCR 稿特有的：
+
+    ① **每卷正文前有一份目錄**（ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ），同樣用
+       α΄ β΄ γ΄ 編號。不濾掉就會拿目錄的一行摘要當整節原文，而三欄照樣排得整整
+       齊齊。作法：ΤΑΔΕ 之後進「目錄模式」，節號回頭（又見 α΄）才算目錄結束。
+       🚨 不要改成「一回頭就把已收的整串丟掉」——正文裡只要有一個 OCR 誤判的低
+       節號，那一卷就會被整卷丟光，而且沒有任何錯誤訊息。
+    ② **卷號不在 `ΛΟΓΟΣ ΠΡΩΤΟΣ` 那一行**——書名頁常被 OCR 拆成 `ΛΟΓ` / `ΛΟΓΟΣ`
+       兩個殘行，卷號整個掉了。改以目錄標題那一行的序數（ΠΡΩΤΩ／ΔΕΥΤΕΡΩ…）為準，
+       讀不出來就在前一卷上加一。
+    ③ **正文中間會冒出書眉 `ΛΟΓΟΣ Α΄`**。同一卷的書眉不可以觸發換卷，否則那一卷
+       會被切成好幾段。
+    """
+    result: dict[tuple[int | None, int], list[str]] = {}
+    book: int | None = None
+    current: list[str] | None = None
+    last = 0
+    in_toc = False
+    toc_last = 0
+
+    def new_book(n: int | None) -> None:
+        nonlocal book, current, last
+        book = n if n is not None else ((book or 0) + 1)
+        current, last = None, 0
+
+    for raw in text.split("\n"):
+        line = raw.strip()
+        if not line:
+            continue
+
+        if GREEK_TOC.search(line):
+            new_book(toc_book_number(line))
+            in_toc, toc_last = True, 0
+            continue
+
+        m = GREEK_BOOK.match(line)
+        if m:
+            n = GREEK_BOOK_WORD.get(m.group(1)) or greek_numeral(m.group(1).lower())
+            if n is not None and n != book:       # 同一卷的書眉不算換卷
+                new_book(n)
+                in_toc = False
+            continue
+
+        m = GREEK_SECTION.match(line)
+        n = greek_numeral(m.group(1)) if m else None
+
+        if in_toc:
+            if n is not None and n <= toc_last:
+                in_toc = False                     # 節號回頭 → 目錄結束，正文開始
+            else:
+                if n is not None:
+                    toc_last = n
+                continue                           # 目錄項一律不收
+
+        # 正文只認遞增的節號，往下最多跳兩節（OCR 偶爾漏一個，ς΄ 最常漏）。
+        # 其餘一律當成內文接下去——普通希臘字後面接撇號長得很像節號。
+        if n is not None and last < n <= last + 3:
+            current = [m.group(2)] if m.group(2) else []
+            result[(book, n)] = current
+            last = n
+        elif current is not None:
+            current.append(line)
+
+    return {k: "\n".join(x for x in v if x).strip()
+            for k, v in result.items() if any(x.strip() for x in v)}
+
+
 ZH_CHAPTER_HEAD = re.compile(r"^#{0,4}\s*第([零〇一二三四五六七八九十百]+)章")
 
 

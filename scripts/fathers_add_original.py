@@ -51,7 +51,9 @@ _spec.loader.exec_module(FO)
 # `mode` 決定原典怎麼切、又怎麼放進中譯的段落格：
 #   paragraph — 原典帶 `卷.章.節` 行標，中譯段落也帶同一組節號 → 逐節對齊（最細）
 #   chapter   — 原典只有 `[I]` 這種章號，中譯只有「第N章」標題 → 逐章對齊（較粗）
-# 兩種都不猜：對不上就留空。
+#   greek     — 原典是 Migne PG 掃描本的自家 OCR 帳本（scripts/fathers_pg_ocr.py），
+#               ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號與中英譯的 1. 2. 是同一套編次 → 逐節
+# 三種都不猜：對不上就留空。
 WORKS: dict[str, dict] = {
     "augustine-confessions": {
         "label": "奧古斯丁《懺悔錄》",
@@ -75,6 +77,18 @@ WORKS: dict[str, dict] = {
                  for b in range(1, 23)],
         "source": "The Latin Library（Dombart–Kalb 校本，公有領域）",
     },
+    "chrysostom-de-sacerdotio": {
+        "label": "金口若望《論司祭職》",
+        "ebook_id": "76df31fe-e732-4aa6-88c2-d650a09fb688",
+        "prefix": "論司祭職",
+        "lang": "grc",
+        "mode": "greek",
+        "ledger": "c:/tmp/pg48_desac.jsonl",
+        # 站上這一部切成「論司祭職 第3章」…「第8章」，其實是六卷正文；前兩段是
+        # 書名頁與導論。第N章 → 卷 N-2。
+        "book_from_chapter": -2,
+        "source": "Migne PG 48.623–692 掃描本，Gemini Vision 逐欄 OCR",
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -84,16 +98,30 @@ WORKS: dict[str, dict] = {
 #    齊，內容卻是兩部不同的書。要收這一部，得先把那一冊重新分篇。
 
 
+def load_greek_ledger(path: Path) -> dict[tuple[int | None, int], str]:
+    """讀 fathers_pg_ocr.py 的帳本，按頁與欄的閱讀順序接稿，再切成 {(卷,節): 文字}。"""
+    rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    order = {"c0h0": 0, "c0h1": 1, "c1h0": 2, "c1h1": 3}
+    rows.sort(key=lambda r: (r["page"], order.get(r["crop"], 9)))
+    text = FO.join_crops([r["text"] for r in rows])
+    pages = len({r["page"] for r in rows})
+    print(f"  OCR 帳本 {len(rows)} 塊 / {pages} 頁 → {len(text)} 字")
+    return FO.parse_greek_sections(text)
+
+
 def fetch_original(spec: dict) -> tuple[dict, dict]:
     """抓原典。回傳 (逐章 {(卷,章): 文字}, 逐節 {(卷,節): 文字})。
 
     chapter 模式沒有節，第二項是空的。
     """
+    if spec["mode"] == "greek":
+        paragraphs = load_greek_ledger(Path(spec["ledger"]))
+        return {}, paragraphs
     s = requests.Session()
     s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
     chapters: dict[tuple[int | None, int], str] = {}
     sections: dict[tuple[int | None, int, int | None], str] = {}
-    unit = "節" if spec["mode"] == "paragraph" else "章"
+    unit = "章" if spec["mode"] == "chapter" else "節"
     for i, url in enumerate(spec["urls"], 1):
         r = s.get(url, timeout=45)
         r.raise_for_status()
@@ -142,7 +170,7 @@ def main() -> int:
         return 1
 
     print(f"《{spec['label']}》 原文 {spec['lang']} ← {spec['source']}"
-          f"（{'逐節' if spec['mode'] == 'paragraph' else '逐章'}對齊）")
+          f"（{'逐章' if spec['mode'] == 'chapter' else '逐節'}對齊）")
     chapters, paragraphs = fetch_original(spec)
     print(f"原典共 {len(chapters)} 章"
           + (f" / {len(paragraphs)} 節" if paragraphs else "") + "\n")
@@ -159,12 +187,32 @@ def main() -> int:
         if m and m.group(2) is None:
             book_hint = (spec.get("chapters") or {}).get(FO.zh_numeral(m.group(1)))
         s = FO.parse_chapter_path(cp, chapters_in_book=book_hint)
+        if s and spec["mode"] == "greek":
+            # 這一部的 chapter_path 是「論司祭職 第3章」，第 N 章其實是第 N-2 卷
+            s = FO.Span(s.first + spec["book_from_chapter"], s.first, s.last)
+            if s.book < 1:
+                continue
         if s:
             spans[c["chunk_index"]] = s
 
     print(f"站上可對齊段落 {len(spans)} / 全書 {len(chunks)} 段")
 
-    if spec["mode"] == "chapter":
+    if spec["mode"] == "greek":
+        # 沒有章這一層，覆蓋率就看節：原典有而站上中譯沒有的節，一樣要報出來。
+        by_book: dict[int | None, set[int]] = {}
+        for (b, n) in paragraphs:
+            by_book.setdefault(b, set()).add(n)
+        found = []
+        for c in chunks:
+            s = spans.get(c["chunk_index"])
+            if not s:
+                continue
+            for p in FO.split_body(c.get("content") or ""):
+                m = FO.LEADING_NO.match(p)
+                if m:
+                    found.append(FO.Span(s.book, int(m.group(1)), int(m.group(1))))
+        covs = FO.coverage(found, {k: "x" for k in paragraphs})
+    elif spec["mode"] == "chapter":
         # 章模式的覆蓋率要看「內文裡真的出現的章標題」，不要看 chapter_path 的範圍
         # 標籤——標籤會湊整（該卷只到第 35 章，標籤照樣寫「第31-40章」），拿它比對
         # 會冒出一堆不存在的「多出章」，把真正的缺章淹掉。
@@ -202,7 +250,7 @@ def main() -> int:
             updated.append(c)
             continue
         body = FO.split_body(c.get("content") or "")
-        if spec["mode"] == "paragraph":
+        if spec["mode"] in ("paragraph", "greek"):
             col, hit, numbered = FO.align_by_paragraph_number(body, s.book, paragraphs)
         else:
             col, hit, numbered = FO.align_by_chapter_heading(body, s.book, chapters)

@@ -247,3 +247,112 @@ def test_align_by_chapter_heading_matches_headings_without_hashes():
     col, hit, _ = fo.align_by_chapter_heading(
         ["第十二章——某某某"], 1, {(1, 12): "caput duodecimum"})
     assert hit == 1 and col[0] == "caput duodecimum"
+
+
+# ── 希臘原典（Migne PG 的 OCR 稿）───────────────────────────────────────────
+GREEK = """ΛΟΓΟΣ ΠΡΩΤΟΣ.
+
+[362] ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ.
+α΄. Βασίλειος ὁ πάντας ὑπερβαλλόμενος.
+β΄. Ἡ ὁμόνοια Βασιλείου καὶ Χρυσοστόμου.
+
+α΄. Ἐμοὶ πολλοὶ μὲν ἐγένοντο φίλοι γνήσιοί τε καὶ ἀληθεῖς
+καὶ τοὺς τῆς φιλίας νόμους εἰδότες.
+β΄. Ἦν δὲ καὶ ἕτερα πολλὰ τὰ συνάγοντα ἡμᾶς.
+
+ΛΟΓΟΣ ΔΕΥΤΕΡΟΣ.
+
+α΄. Ὅτι μὲν οὖν ἔστιν ἀπάτῃ χρήσασθαι καλῶς.
+"""
+
+
+def test_greek_numeral():
+    assert fo.greek_numeral("α") == 1
+    assert fo.greek_numeral("ς") == 6
+    assert fo.greek_numeral("ια") == 11
+    assert fo.greek_numeral("x") is None
+
+
+def test_parse_greek_sections_skips_table_of_contents():
+    """每卷正文前的目錄也是 α΄ β΄ γ΄。不濾掉就會拿目錄的一行摘要當整節原文，
+    而三欄照樣排得整整齊齊——最難察覺的那種錯。"""
+    got = fo.parse_greek_sections(GREEK)
+    assert set(got) == {(1, 1), (1, 2), (2, 1)}
+    assert got[(1, 1)].startswith("Ἐμοὶ πολλοὶ")     # 正文，不是目錄那行
+    assert "ὑπερβαλλόμενος" not in got[(1, 1)]
+
+
+def test_parse_greek_sections_keeps_continuation_lines():
+    assert "νόμους εἰδότες" in fo.parse_greek_sections(GREEK)[(1, 1)]
+
+
+def test_parse_greek_sections_reads_book_ordinals():
+    got = fo.parse_greek_sections(GREEK)
+    assert got[(2, 1)].startswith("Ὅτι μὲν οὖν")
+
+
+def test_greek_sections_feed_the_existing_paragraph_aligner():
+    """希臘節號與中英譯的 1. 2. 是同一套編次，所以直接餵既有的逐節對齊器。"""
+    body = ["## 第一卷", "1. 我有許多真誠而忠實的友人…", "2. 除此之外…"]
+    paras = fo.parse_greek_sections(GREEK)
+    col, hit, numbered = fo.align_by_paragraph_number(body, 1, paras)
+    assert (hit, numbered) == (2, 2)
+    assert col[1].startswith("Ἐμοὶ πολλοὶ")
+
+
+def test_join_crops_removes_overlap_at_the_seam():
+    """上下兩半刻意留重疊（免得切在字行中間弄丟一行），接稿時要把重複的去掉。"""
+    top = "alpha\nbeta\ngamma"
+    bottom = "beta\ngamma\ndelta"
+    assert fo.join_crops([top, bottom]).split("\n") == ["alpha", "beta", "gamma", "delta"]
+
+
+def test_join_crops_keeps_distinct_text():
+    assert fo.join_crops(["a\nb", "c\nd"]).split("\n") == ["a", "b", "c", "d"]
+
+
+GREEK_WITH_RUNNING_HEAD = """[362] ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ.
+α΄. Βασίλειος ὁ πάντας ὑπερβαλλόμενος.
+β΄. Ἡ ὁμόνοια Βασιλείου.
+
+α΄. Ἐμοὶ πολλοὶ μὲν ἐγένοντο φίλοι.
+β΄. Καὶ ἕτερα δὲ πρὸς τούτοις.
+ΛΟΓΟΣ Α΄.
+γ΄. Ἐπειδὴ δὲ ἔδει τὸν μακάριον.
+
+ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΔΕΥΤΕΡΩ ΛΟΓΩ.
+α΄. Ὅτι ἔστιν ἀπάτῃ χρήσασθαι.
+
+α΄. Ὅτι μὲν οὖν ἔστιν ἀπάτῃ χρήσασθαι καλῶς, τοσοῦτον.
+"""
+
+
+def test_book_number_comes_from_the_toc_heading():
+    """書名頁的 ΛΟΓΟΣ ΠΡΩΤΟΣ 常被 OCR 拆成殘行，卷號整個掉了；目錄標題那一行
+    「ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ」才是可靠的卷號來源。"""
+    assert fo.toc_book_number("ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΠΡΩΤΩ ΛΟΓΩ.") == 1
+    assert fo.toc_book_number("ΤΑΔΕ ΕΝΕΣΤΙΝ ΕΝ ΤΩ ΔΕΥΤΕΡΩ ΛΟΓΩ.") == 2
+    got = fo.parse_greek_sections(GREEK_WITH_RUNNING_HEAD)
+    assert (1, 1) in got and (2, 1) in got
+    assert got[(1, 1)].startswith("Ἐμοὶ")
+    assert got[(2, 1)].startswith("Ὅτι μὲν οὖν")
+
+
+def test_running_head_does_not_split_a_book():
+    """正文中間的書眉 ΛΟΓΟΣ Α΄ 若被當成換卷，那一卷會被切碎、只留最後一段。"""
+    got = fo.parse_greek_sections(GREEK_WITH_RUNNING_HEAD)
+    assert {n for (b, n) in got if b == 1} == {1, 2, 3}
+
+
+def test_section_numbers_must_stay_in_sequence():
+    """普通希臘字後面接撇號會長得像節號。σ΄ 若照收就會冒出「第 200 節」。"""
+    text = "α΄. πρῶτον\nσ΄ τι δὴ τοῦτο λέγω\nβ΄. δεύτερον\n"
+    got = fo.parse_greek_sections(text)
+    assert set(got) == {(None, 1), (None, 2)}
+    assert "τι δὴ τοῦτο" in got[(None, 1)]      # 當成第 1 節的內文接下去
+
+
+def test_ocr_may_drop_a_section_and_the_next_still_lands():
+    """OCR 偶爾漏掉一個節號（ς΄ 最常漏）。往下跳兩節之內仍要收，否則後面全丟。"""
+    got = fo.parse_greek_sections("α΄. ενα\nβ΄. δυο\nδ΄. τεσσερα\n")
+    assert set(got) == {(None, 1), (None, 2), (None, 4)}
