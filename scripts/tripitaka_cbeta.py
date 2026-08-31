@@ -391,15 +391,23 @@ SKIP_DIV_TYPES = {"apparatus", "cbeta-notes", "taisho-notes", "add-notes",
 _SPLIT_SUFFIX = re.compile(r"[（(]第\d+卷-第\d+卷[）)]$")
 
 
-def _norm_title(title: str) -> str:
-    """剝掉拆檔書名尾巴的「(第1卷-第44卷)」。
+def _norm_title(title: str, canon: str = "") -> str:
+    """剝掉拆檔書名尾巴的「(第1卷-第44卷)」—— **只對 X**。
 
     那是 CBETA 為「同一部書拆成兩個 XML 檔」加的卷範圍註記，不是書名的一部分；
     留著會讓同一部書的上下半在目錄上看起來是兩本不同的書。
     全 X 部只有 12 個檔（＝6 部書 × 2）帶這個式樣，實掃確認過。
-    ⚠ 只剝這個確切式樣：「華嚴經論〔卷十〕」「四家語錄卷一」那類的「卷」
+
+    🚨 南傳**不可**剝。N 有 51 筆帶同樣式樣的書名（「經分別(第1卷-第4卷)」
+    ／「經分別(第5卷-第15卷)」…），但那是**兩部不同的書**（id 帶冊號，
+    N01n0001 ≠ N02n0001），卷範圍正是區分它們的唯一資訊；剝掉會讓目錄上
+    出現兩本同名的「經分別」。X 那 6 部才是同一部書的上下半。
+
+    ⚠ 也只剝這個確切式樣：「華嚴經論〔卷十〕」「四家語錄卷一」那類的「卷」
     是書名本身，剝掉就改了書名。
     """
+    if canon != "X":
+        return title.strip()
     return _SPLIT_SUFFIX.sub("", title).strip()
 
 
@@ -449,7 +457,7 @@ def work_meta(root: ET.Element) -> dict:
         "vol": vol,
         "work_no": no,
         "work_suffix": sfx,
-        "title_zh": _norm_title(_title("m", True) or _title("m", False)),
+        "title_zh": _norm_title(_title("m", True) or _title("m", False), canon),
         "byline": byline,
         "dynasty": bl["dynasty"],
         "translator": bl["translator"],

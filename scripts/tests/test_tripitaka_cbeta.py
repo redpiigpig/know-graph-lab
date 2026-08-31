@@ -172,10 +172,14 @@ def test_shizhuan_subdivisions_are_interleaved_not_contiguous():
 def test_split_work_title_suffix_stripped_but_real_juan_titles_kept():
     """CBETA 把 6 部跨冊的書切成兩檔，書名尾巴加「(第1卷-第44卷)」。
     那是檔案註記不是書名；但「華嚴經論〔卷十〕」「四家語錄卷一」的卷是書名本身。"""
-    assert tc._norm_title("華嚴綱要(第1卷-第44卷)") == "華嚴綱要"
-    assert tc._norm_title("五燈全書(第34卷-第120卷)") == "五燈全書"
-    assert tc._norm_title("華嚴經論〔卷十〕") == "華嚴經論〔卷十〕"
-    assert tc._norm_title("馬祖道一禪師廣錄（四家語錄卷一）") == "馬祖道一禪師廣錄（四家語錄卷一）"
+    assert tc._norm_title("華嚴綱要(第1卷-第44卷)", "X") == "華嚴綱要"
+    assert tc._norm_title("五燈全書(第34卷-第120卷)", "X") == "五燈全書"
+    assert tc._norm_title("華嚴經論〔卷十〕", "X") == "華嚴經論〔卷十〕"
+    assert tc._norm_title("馬祖道一禪師廣錄（四家語錄卷一）", "X") == "馬祖道一禪師廣錄（四家語錄卷一）"
+    # 🚨 南傳不可剝：N01n0001「經分別(第1卷-第4卷)」與 N02n0001「經分別(第5卷-第15卷)」
+    # 是**兩部不同的書**（id 帶冊號），卷範圍正是區分它們的唯一資訊。全 N 有 51 筆。
+    assert tc._norm_title("經分別(第1卷-第4卷)", "N") == "經分別(第1卷-第4卷)"
+    assert tc._norm_title("長部經典(第15卷-第23卷)", "N") == "長部經典(第15卷-第23卷)"
 
 
 def test_merge_parts_offsets_toc_and_segment_pointers():
