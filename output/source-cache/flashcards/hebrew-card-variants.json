@@ -1,0 +1,2397 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": {
+    "openmoji": "CC BY-SA 4.0 — OpenMoji",
+    "twemoji": "CC BY 4.0 — Twitter Emoji",
+    "noto": "Apache 2.0 — Noto Emoji",
+    "fluent-emoji-flat": "MIT — Fluent Emoji Flat",
+    "noto-v1": "Apache 2.0 — Noto Emoji (v1)",
+    "emojione": "CC BY 4.0 — Emoji One",
+    "emojione-v1": "CC BY-SA 4.0 — Emoji One (v1)",
+    "fxemoji": "Apache 2.0 — Firefox OS Emoji",
+    "streamline-emojis": "CC BY 4.0 — Streamline Emojis"
+  },
+  "note": "同一個概念換另一套 emoji 的畫法，只為了讓同語言內一張圖不重複出現。概念沒有改變，所以這一層不需要逐張審圖；要審的是新收的圖庫會不會render 成全黑（見 --probe）。",
+  "cards": {
+    "H6921|קָדִים": {
+      "set": "twemoji",
+      "name": "sunrise",
+      "file": "twemoji-sunrise.png",
+      "concept": "sunrise",
+      "layer": "set"
+    },
+    "H4217|מִזְרָח": {
+      "set": "noto",
+      "name": "sunrise",
+      "file": "noto-sunrise.png",
+      "concept": "sunrise",
+      "layer": "set"
+    },
+    "H7925|שָׁכַם": {
+      "set": "fluent-emoji-flat",
+      "name": "sunrise",
+      "file": "fluent-emoji-flat-sunrise.png",
+      "concept": "sunrise",
+      "layer": "set"
+    },
+    "H8415|תְּהוֹם": {
+      "set": "twemoji",
+      "name": "water-wave",
+      "file": "twemoji-water-wave.png",
+      "concept": "water wave",
+      "layer": "set"
+    },
+    "H1530|גַּל": {
+      "set": "noto",
+      "name": "water-wave",
+      "file": "noto-water-wave.png",
+      "concept": "water wave",
+      "layer": "set"
+    },
+    "H5158|נַ֫חַל": {
+      "set": "fluent-emoji-flat",
+      "name": "water-wave",
+      "file": "fluent-emoji-flat-water-wave.png",
+      "concept": "water wave",
+      "layer": "set"
+    },
+    "H3816|לְאֹם": {
+      "set": "twemoji",
+      "name": "globe-with-meridians",
+      "file": "twemoji-globe-with-meridians.png",
+      "concept": "globe with meridians",
+      "layer": "set"
+    },
+    "H5237|נׇכְרִי": {
+      "set": "noto",
+      "name": "globe-with-meridians",
+      "file": "noto-globe-with-meridians.png",
+      "concept": "globe with meridians",
+      "layer": "set"
+    },
+    "H2320|חֹ֫דֶשׁ": {
+      "set": "twemoji",
+      "name": "new-moon",
+      "file": "twemoji-new-moon.png",
+      "concept": "new moon",
+      "layer": "set"
+    },
+    "H3519|כָּבוֹד": {
+      "set": "twemoji",
+      "name": "glowing-star",
+      "file": "twemoji-glowing-star.png",
+      "concept": "glowing star",
+      "layer": "set"
+    },
+    "H3384|יָרָה": {
+      "set": "twemoji",
+      "name": "cloud-with-rain",
+      "file": "twemoji-cloud-with-rain.png",
+      "concept": "cloud with rain",
+      "layer": "set"
+    },
+    "H2416|חַיָּה": {
+      "set": "twemoji",
+      "name": "seedling",
+      "file": "twemoji-seedling.png",
+      "concept": "seedling",
+      "layer": "set"
+    },
+    "H8615|תִּקְוָה": {
+      "set": "noto",
+      "name": "seedling",
+      "file": "noto-seedling.png",
+      "concept": "seedling",
+      "layer": "set"
+    },
+    "H2416|חַי": {
+      "set": "fluent-emoji-flat",
+      "name": "seedling",
+      "file": "fluent-emoji-flat-seedling.png",
+      "concept": "seedling",
+      "layer": "set"
+    },
+    "H2233|זֶ֫רַע": {
+      "set": "noto-v1",
+      "name": "seedling",
+      "file": "noto-v1-seedling.png",
+      "concept": "seedling",
+      "layer": "set"
+    },
+    "H5193|נָטַע": {
+      "set": "emojione",
+      "name": "seedling",
+      "file": "emojione-seedling.png",
+      "concept": "seedling",
+      "layer": "set"
+    },
+    "H3293|יַעַר": {
+      "set": "twemoji",
+      "name": "deciduous-tree",
+      "file": "twemoji-deciduous-tree.png",
+      "concept": "deciduous tree",
+      "layer": "set"
+    },
+    "H7114|קָצַר": {
+      "set": "twemoji",
+      "name": "sheaf-of-rice",
+      "file": "twemoji-sheaf-of-rice.png",
+      "concept": "sheaf of rice",
+      "layer": "set"
+    },
+    "H3754|כֶּ֫רֶם": {
+      "set": "twemoji",
+      "name": "grapes",
+      "file": "twemoji-grapes.png",
+      "concept": "grapes",
+      "layer": "set"
+    },
+    "H7979|שֻׁלְחָן": {
+      "set": "twemoji",
+      "name": "fork-and-knife",
+      "file": "twemoji-fork-and-knife.png",
+      "concept": "fork and knife",
+      "layer": "set"
+    },
+    "H398|אָכַל": {
+      "set": "noto",
+      "name": "fork-and-knife",
+      "file": "noto-fork-and-knife.png",
+      "concept": "fork and knife",
+      "layer": "set"
+    },
+    "H5414|נָתַן": {
+      "set": "twemoji",
+      "name": "wrapped-gift",
+      "file": "twemoji-wrapped-gift.png",
+      "concept": "wrapped gift",
+      "layer": "set"
+    },
+    "H7133|קָרְבָּן": {
+      "set": "noto",
+      "name": "wrapped-gift",
+      "file": "noto-wrapped-gift.png",
+      "concept": "wrapped gift",
+      "layer": "set"
+    },
+    "H8641|תְּרוּמָה": {
+      "set": "fluent-emoji-flat",
+      "name": "wrapped-gift",
+      "file": "fluent-emoji-flat-wrapped-gift.png",
+      "concept": "wrapped gift",
+      "layer": "set"
+    },
+    "H5127|נוּס": {
+      "set": "twemoji",
+      "name": "person-running",
+      "file": "twemoji-person-running.png",
+      "concept": "person running",
+      "layer": "set"
+    },
+    "H2389|חָזָק": {
+      "set": "twemoji",
+      "name": "person-lifting-weights",
+      "file": "twemoji-person-lifting-weights.png",
+      "concept": "person lifting weights",
+      "layer": "set"
+    },
+    "H4791|מָרוֹם": {
+      "set": "twemoji",
+      "name": "snow-capped-mountain",
+      "file": "twemoji-snow-capped-mountain.png",
+      "concept": "snow-capped mountain",
+      "layer": "set"
+    },
+    "H3245|יָסַד": {
+      "set": "twemoji",
+      "name": "building-construction",
+      "file": "twemoji-building-construction.png",
+      "concept": "building construction",
+      "layer": "set"
+    },
+    "H4057|מִדְבָּר": {
+      "set": "twemoji",
+      "name": "desert",
+      "file": "twemoji-desert.png",
+      "concept": "desert",
+      "layer": "set"
+    },
+    "H2975|יְאֹר": {
+      "set": "twemoji",
+      "name": "national-park",
+      "file": "twemoji-national-park.png",
+      "concept": "national park",
+      "layer": "set"
+    },
+    "H1004|בַּ֫יִת": {
+      "set": "twemoji",
+      "name": "house",
+      "file": "twemoji-house.png",
+      "concept": "house",
+      "layer": "set"
+    },
+    "H272|אֲחֻזָּה": {
+      "set": "twemoji",
+      "name": "house-with-garden",
+      "file": "twemoji-house-with-garden.png",
+      "concept": "house with garden",
+      "layer": "set"
+    },
+    "H7931|שָׁכַן": {
+      "set": "noto",
+      "name": "house-with-garden",
+      "file": "noto-house-with-garden.png",
+      "concept": "house with garden",
+      "layer": "set"
+    },
+    "H5159|נַחֲלָה": {
+      "set": "fluent-emoji-flat",
+      "name": "house-with-garden",
+      "file": "fluent-emoji-flat-house-with-garden.png",
+      "concept": "house with garden",
+      "layer": "set"
+    },
+    "H4438|מַלְכּוּת": {
+      "set": "twemoji",
+      "name": "castle",
+      "file": "twemoji-castle.png",
+      "concept": "castle",
+      "layer": "set"
+    },
+    "H2671|חֵץ": {
+      "set": "twemoji",
+      "name": "bow-and-arrow",
+      "file": "twemoji-bow-and-arrow.png",
+      "concept": "bow and arrow",
+      "layer": "set"
+    },
+    "H3627|כְּלִי": {
+      "set": "twemoji",
+      "name": "amphora",
+      "file": "twemoji-amphora.png",
+      "concept": "amphora",
+      "layer": "set"
+    },
+    "H1168|בַּעַל": {
+      "set": "twemoji",
+      "name": "ox",
+      "file": "twemoji-ox.png",
+      "concept": "ox",
+      "layer": "set"
+    },
+    "H929|בְּהֵמָה": {
+      "set": "twemoji",
+      "name": "water-buffalo",
+      "file": "twemoji-water-buffalo.png",
+      "concept": "water buffalo",
+      "layer": "set"
+    },
+    "H441|אַלּוּף": {
+      "set": "twemoji",
+      "name": "cow",
+      "file": "twemoji-cow.png",
+      "concept": "cow",
+      "layer": "set"
+    },
+    "H8163|שָׂעִיר": {
+      "set": "twemoji",
+      "name": "goat",
+      "file": "twemoji-goat.png",
+      "concept": "goat",
+      "layer": "set"
+    },
+    "H7716|שֶׂה": {
+      "set": "noto",
+      "name": "goat",
+      "file": "noto-goat.png",
+      "concept": "goat",
+      "layer": "set"
+    },
+    "H2076|זָבַח": {
+      "set": "twemoji",
+      "name": "ewe",
+      "file": "twemoji-ewe.png",
+      "concept": "ewe",
+      "layer": "set"
+    },
+    "H5739|עֵדֶר": {
+      "set": "noto",
+      "name": "ewe",
+      "file": "noto-ewe.png",
+      "concept": "ewe",
+      "layer": "set"
+    },
+    "H6629|צֹאן": {
+      "set": "fluent-emoji-flat",
+      "name": "ewe",
+      "file": "fluent-emoji-flat-ewe.png",
+      "concept": "ewe",
+      "layer": "set"
+    },
+    "H6453|פֶּסַח": {
+      "set": "noto-v1",
+      "name": "ewe",
+      "file": "noto-v1-ewe.png",
+      "concept": "ewe",
+      "layer": "set"
+    },
+    "H7462|רָעָה": {
+      "set": "twemoji",
+      "name": "dog",
+      "file": "twemoji-dog.png",
+      "concept": "dog",
+      "layer": "set"
+    },
+    "H5775|עוֹף": {
+      "set": "twemoji",
+      "name": "bird",
+      "file": "twemoji-bird.png",
+      "concept": "bird",
+      "layer": "set"
+    },
+    "H2005|הֵן": {
+      "set": "twemoji",
+      "name": "eyes",
+      "file": "twemoji-eyes.png",
+      "concept": "eyes",
+      "layer": "set"
+    },
+    "H5234|נָכַר": {
+      "set": "noto",
+      "name": "eyes",
+      "file": "noto-eyes.png",
+      "concept": "eyes",
+      "layer": "set"
+    },
+    "H238|אָזַן": {
+      "set": "twemoji",
+      "name": "ear",
+      "file": "twemoji-ear.png",
+      "concept": "ear",
+      "layer": "set"
+    },
+    "H8085|שָׁמַע": {
+      "set": "noto",
+      "name": "ear",
+      "file": "noto-ear.png",
+      "concept": "ear",
+      "layer": "set"
+    },
+    "H639|אַף": {
+      "set": "twemoji",
+      "name": "nose",
+      "file": "twemoji-nose.png",
+      "concept": "nose",
+      "layer": "set"
+    },
+    "H2763|חָרַם": {
+      "set": "noto",
+      "name": "nose",
+      "file": "noto-nose.png",
+      "concept": "nose",
+      "layer": "set"
+    },
+    "H637|אַף": {
+      "set": "fluent-emoji-flat",
+      "name": "nose",
+      "file": "fluent-emoji-flat-nose.png",
+      "concept": "nose",
+      "layer": "set"
+    },
+    "H2063|זֹאת": {
+      "set": "twemoji",
+      "name": "backhand-index-pointing-down",
+      "file": "twemoji-backhand-index-pointing-down.png",
+      "concept": "backhand index pointing down",
+      "layer": "set"
+    },
+    "H3225|יָמִין": {
+      "set": "twemoji",
+      "name": "backhand-index-pointing-right",
+      "file": "twemoji-backhand-index-pointing-right.png",
+      "concept": "backhand index pointing right",
+      "layer": "set"
+    },
+    "H681|אֵצֶל": {
+      "set": "noto",
+      "name": "backhand-index-pointing-right",
+      "file": "noto-backhand-index-pointing-right.png",
+      "concept": "backhand index pointing right",
+      "layer": "set"
+    },
+    "H1931|הִיא": {
+      "set": "fluent-emoji-flat",
+      "name": "backhand-index-pointing-right",
+      "file": "fluent-emoji-flat-backhand-index-pointing-right.png",
+      "concept": "backhand index pointing right",
+      "layer": "set"
+    },
+    "H1931|הוּא": {
+      "set": "noto-v1",
+      "name": "backhand-index-pointing-right",
+      "file": "noto-v1-backhand-index-pointing-right.png",
+      "concept": "backhand index pointing right",
+      "layer": "set"
+    },
+    "H853|אֵת/אֶת־": {
+      "set": "emojione",
+      "name": "backhand-index-pointing-right",
+      "file": "emojione-backhand-index-pointing-right.png",
+      "concept": "backhand index pointing right",
+      "layer": "set"
+    },
+    "H5800|עָזַב": {
+      "set": "twemoji",
+      "name": "waving-hand",
+      "file": "twemoji-waving-hand.png",
+      "concept": "waving hand",
+      "layer": "set"
+    },
+    "H2895|טוֹב": {
+      "set": "twemoji",
+      "name": "thumbs-up",
+      "file": "twemoji-thumbs-up.png",
+      "concept": "thumbs up",
+      "layer": "set"
+    },
+    "H2896|טוֹב": {
+      "set": "noto",
+      "name": "thumbs-up",
+      "file": "noto-thumbs-up.png",
+      "concept": "thumbs up",
+      "layer": "set"
+    },
+    "H113|אָדוֹן": {
+      "set": "twemoji",
+      "name": "necktie",
+      "file": "twemoji-necktie.png",
+      "concept": "necktie",
+      "layer": "set"
+    },
+    "H3847|לָבַשׁ": {
+      "set": "twemoji",
+      "name": "t-shirt",
+      "file": "twemoji-t-shirt.png",
+      "concept": "t-shirt",
+      "layer": "set"
+    },
+    "H6584|פָּשַׁט": {
+      "set": "noto",
+      "name": "t-shirt",
+      "file": "noto-t-shirt.png",
+      "concept": "t-shirt",
+      "layer": "set"
+    },
+    "H7291|רָדַף": {
+      "set": "twemoji",
+      "name": "footprints",
+      "file": "twemoji-footprints.png",
+      "concept": "footprints",
+      "layer": "set"
+    },
+    "H1980|הָלַךְ": {
+      "set": "noto",
+      "name": "footprints",
+      "file": "noto-footprints.png",
+      "concept": "footprints",
+      "layer": "set"
+    },
+    "H4256|מַחֲלֹקֶת": {
+      "set": "twemoji",
+      "name": "busts-in-silhouette",
+      "file": "twemoji-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H5712|עֵדָה": {
+      "set": "noto",
+      "name": "busts-in-silhouette",
+      "file": "noto-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H7611|שְׁאֵרִית": {
+      "set": "fluent-emoji-flat",
+      "name": "busts-in-silhouette",
+      "file": "fluent-emoji-flat-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H6951|קָהָל": {
+      "set": "noto-v1",
+      "name": "busts-in-silhouette",
+      "file": "noto-v1-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H1992|הֵ֫מָּה": {
+      "set": "emojione",
+      "name": "busts-in-silhouette",
+      "file": "emojione-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H1992|הֵם": {
+      "set": "emojione-v1",
+      "name": "busts-in-silhouette",
+      "file": "emojione-v1-busts-in-silhouette.png",
+      "concept": "busts in silhouette",
+      "layer": "set"
+    },
+    "H5288|נַ֫עַר": {
+      "set": "twemoji",
+      "name": "boy",
+      "file": "twemoji-boy.png",
+      "concept": "boy",
+      "layer": "set"
+    },
+    "H1323|בָּנוֹת": {
+      "set": "twemoji",
+      "name": "girl",
+      "file": "twemoji-girl.png",
+      "concept": "girl",
+      "layer": "set"
+    },
+    "H5291|נַעֲרָה": {
+      "set": "noto",
+      "name": "girl",
+      "file": "noto-girl.png",
+      "concept": "girl",
+      "layer": "set"
+    },
+    "H1330|בְּתוּלָה": {
+      "set": "fluent-emoji-flat",
+      "name": "girl",
+      "file": "fluent-emoji-flat-girl.png",
+      "concept": "girl",
+      "layer": "set"
+    },
+    "H1|אָב": {
+      "set": "twemoji",
+      "name": "man",
+      "file": "twemoji-man.png",
+      "concept": "man",
+      "layer": "set"
+    },
+    "H1|אָבוֹת": {
+      "set": "noto",
+      "name": "man",
+      "file": "noto-man.png",
+      "concept": "man",
+      "layer": "set"
+    },
+    "H2145|זָכָר": {
+      "set": "fluent-emoji-flat",
+      "name": "man",
+      "file": "fluent-emoji-flat-man.png",
+      "concept": "man",
+      "layer": "set"
+    },
+    "H376|אִישׁ": {
+      "set": "noto-v1",
+      "name": "man",
+      "file": "noto-v1-man.png",
+      "concept": "man",
+      "layer": "set"
+    },
+    "H517|אֵם": {
+      "set": "twemoji",
+      "name": "woman",
+      "file": "twemoji-woman.png",
+      "concept": "woman",
+      "layer": "set"
+    },
+    "H802|אֵ֫שֶׁת": {
+      "set": "noto",
+      "name": "woman",
+      "file": "noto-woman.png",
+      "concept": "woman",
+      "layer": "set"
+    },
+    "H2945|טַף": {
+      "set": "twemoji",
+      "name": "family",
+      "file": "twemoji-family.png",
+      "concept": "family",
+      "layer": "set"
+    },
+    "H8435|תּוֹלְדָה": {
+      "set": "noto",
+      "name": "family",
+      "file": "noto-family.png",
+      "concept": "family",
+      "layer": "set"
+    },
+    "H251|אֲחִי": {
+      "set": "twemoji",
+      "name": "men-holding-hands",
+      "file": "twemoji-men-holding-hands.png",
+      "concept": "men holding hands",
+      "layer": "set"
+    },
+    "H251|אַחִים": {
+      "set": "noto",
+      "name": "men-holding-hands",
+      "file": "noto-men-holding-hands.png",
+      "concept": "men holding hands",
+      "layer": "set"
+    },
+    "H269|אָחוֹת": {
+      "set": "twemoji",
+      "name": "women-holding-hands",
+      "file": "twemoji-women-holding-hands.png",
+      "concept": "women holding hands",
+      "layer": "set"
+    },
+    "H2007|הֵ֫נָּה": {
+      "set": "noto",
+      "name": "women-holding-hands",
+      "file": "noto-women-holding-hands.png",
+      "concept": "women holding hands",
+      "layer": "set"
+    },
+    "H6862|צַר": {
+      "set": "twemoji",
+      "name": "angry-face-with-horns",
+      "file": "twemoji-angry-face-with-horns.png",
+      "concept": "angry face with horns",
+      "layer": "set"
+    },
+    "H205|אָוֶן": {
+      "set": "noto",
+      "name": "angry-face-with-horns",
+      "file": "noto-angry-face-with-horns.png",
+      "concept": "angry face with horns",
+      "layer": "set"
+    },
+    "H4194|מָ֫וֶת": {
+      "set": "twemoji",
+      "name": "skull",
+      "file": "twemoji-skull.png",
+      "concept": "skull",
+      "layer": "set"
+    },
+    "H2491|חָלָל": {
+      "set": "noto",
+      "name": "skull",
+      "file": "noto-skull.png",
+      "concept": "skull",
+      "layer": "set"
+    },
+    "H5341|נָצַר": {
+      "set": "twemoji",
+      "name": "guard",
+      "file": "twemoji-guard.png",
+      "concept": "guard",
+      "layer": "set"
+    },
+    "H2403|חַטָּאת": {
+      "set": "twemoji",
+      "name": "broken-heart",
+      "file": "twemoji-broken-heart.png",
+      "concept": "broken heart",
+      "layer": "set"
+    },
+    "H2398|חָטָא": {
+      "set": "noto",
+      "name": "broken-heart",
+      "file": "noto-broken-heart.png",
+      "concept": "broken heart",
+      "layer": "set"
+    },
+    "H6588|פֶּ֫שַׁע": {
+      "set": "fluent-emoji-flat",
+      "name": "broken-heart",
+      "file": "fluent-emoji-flat-broken-heart.png",
+      "concept": "broken heart",
+      "layer": "set"
+    },
+    "H7667|שֶׁבֶר": {
+      "set": "noto-v1",
+      "name": "broken-heart",
+      "file": "noto-v1-broken-heart.png",
+      "concept": "broken heart",
+      "layer": "set"
+    },
+    "H5771|עָוֹן": {
+      "set": "emojione",
+      "name": "broken-heart",
+      "file": "emojione-broken-heart.png",
+      "concept": "broken heart",
+      "layer": "set"
+    },
+    "H160|אַהֲבָה": {
+      "set": "twemoji",
+      "name": "two-hearts",
+      "file": "twemoji-two-hearts.png",
+      "concept": "two hearts",
+      "layer": "set"
+    },
+    "H1730|דּוֹד": {
+      "set": "noto",
+      "name": "two-hearts",
+      "file": "noto-two-hearts.png",
+      "concept": "two hearts",
+      "layer": "set"
+    },
+    "H2778|חָרַף": {
+      "set": "twemoji",
+      "name": "anger-symbol",
+      "file": "twemoji-anger-symbol.png",
+      "concept": "anger symbol",
+      "layer": "set"
+    },
+    "H8045|שָׁמַד": {
+      "set": "twemoji",
+      "name": "collision",
+      "file": "twemoji-collision.png",
+      "concept": "collision",
+      "layer": "set"
+    },
+    "H7368|רָחַק": {
+      "set": "twemoji",
+      "name": "dashing-away",
+      "file": "twemoji-dashing-away.png",
+      "concept": "dashing away",
+      "layer": "set"
+    },
+    "H2220|זְרוֹעַ": {
+      "set": "twemoji",
+      "name": "flexed-biceps",
+      "file": "twemoji-flexed-biceps.png",
+      "concept": "flexed biceps",
+      "layer": "set"
+    },
+    "H4405|מִלָּה": {
+      "set": "twemoji",
+      "name": "speech-balloon",
+      "file": "twemoji-speech-balloon.png",
+      "concept": "speech balloon",
+      "layer": "set"
+    },
+    "H565|אִמְרָה": {
+      "set": "noto",
+      "name": "speech-balloon",
+      "file": "noto-speech-balloon.png",
+      "concept": "speech balloon",
+      "layer": "set"
+    },
+    "H561|אֵמֶר": {
+      "set": "fluent-emoji-flat",
+      "name": "speech-balloon",
+      "file": "fluent-emoji-flat-speech-balloon.png",
+      "concept": "speech balloon",
+      "layer": "set"
+    },
+    "H4284|מַחֲשָׁבָה": {
+      "set": "twemoji",
+      "name": "thought-balloon",
+      "file": "twemoji-thought-balloon.png",
+      "concept": "thought balloon",
+      "layer": "set"
+    },
+    "H214|אוֹצָר": {
+      "set": "twemoji",
+      "name": "money-bag",
+      "file": "twemoji-money-bag.png",
+      "concept": "money bag",
+      "layer": "set"
+    },
+    "H2428|חַ֫יִל": {
+      "set": "noto",
+      "name": "money-bag",
+      "file": "noto-money-bag.png",
+      "concept": "money bag",
+      "layer": "set"
+    },
+    "H5797|עֹז": {
+      "set": "fluent-emoji-flat",
+      "name": "money-bag",
+      "file": "fluent-emoji-flat-money-bag.png",
+      "concept": "money bag",
+      "layer": "set"
+    },
+    "H4150|מוֹעֵד": {
+      "set": "twemoji",
+      "name": "calendar",
+      "file": "twemoji-calendar.png",
+      "concept": "calendar",
+      "layer": "set"
+    },
+    "H4283|מׇחֳרָת": {
+      "set": "twemoji",
+      "name": "tear-off-calendar",
+      "file": "twemoji-tear-off-calendar.png",
+      "concept": "tear-off calendar",
+      "layer": "set"
+    },
+    "H1361|גָּבַהּ": {
+      "set": "twemoji",
+      "name": "chart-increasing",
+      "file": "twemoji-chart-increasing.png",
+      "concept": "chart increasing",
+      "layer": "set"
+    },
+    "H7230|רֹב": {
+      "set": "noto",
+      "name": "chart-increasing",
+      "file": "noto-chart-increasing.png",
+      "concept": "chart increasing",
+      "layer": "set"
+    },
+    "H7235|רָבָה": {
+      "set": "fluent-emoji-flat",
+      "name": "chart-increasing",
+      "file": "fluent-emoji-flat-chart-increasing.png",
+      "concept": "chart increasing",
+      "layer": "set"
+    },
+    "H1431|גָּדַל": {
+      "set": "noto-v1",
+      "name": "chart-increasing",
+      "file": "noto-v1-chart-increasing.png",
+      "concept": "chart increasing",
+      "layer": "set"
+    },
+    "H3605|כָּל־": {
+      "set": "twemoji",
+      "name": "bar-chart",
+      "file": "twemoji-bar-chart.png",
+      "concept": "bar chart",
+      "layer": "set"
+    },
+    "H8549|תָּמִים": {
+      "set": "noto",
+      "name": "bar-chart",
+      "file": "noto-bar-chart.png",
+      "concept": "bar chart",
+      "layer": "set"
+    },
+    "H7760|שִׂים": {
+      "set": "twemoji",
+      "name": "pushpin",
+      "file": "twemoji-pushpin.png",
+      "concept": "pushpin",
+      "layer": "set"
+    },
+    "H6311|פֹּה": {
+      "set": "twemoji",
+      "name": "round-pushpin",
+      "file": "twemoji-round-pushpin.png",
+      "concept": "round pushpin",
+      "layer": "set"
+    },
+    "H8033|שָׁם": {
+      "set": "noto",
+      "name": "round-pushpin",
+      "file": "noto-round-pushpin.png",
+      "concept": "round pushpin",
+      "layer": "set"
+    },
+    "H2008|הֵנָּה": {
+      "set": "fluent-emoji-flat",
+      "name": "round-pushpin",
+      "file": "fluent-emoji-flat-round-pushpin.png",
+      "concept": "round pushpin",
+      "layer": "set"
+    },
+    "H3477|יָשָׁר": {
+      "set": "twemoji",
+      "name": "straight-ruler",
+      "file": "twemoji-straight-ruler.png",
+      "concept": "straight ruler",
+      "layer": "set"
+    },
+    "H8451|תּוֹרָה": {
+      "set": "twemoji",
+      "name": "scroll",
+      "file": "twemoji-scroll.png",
+      "concept": "scroll",
+      "layer": "set"
+    },
+    "H2706|חֹק": {
+      "set": "twemoji",
+      "name": "memo",
+      "file": "twemoji-memo.png",
+      "concept": "memo",
+      "layer": "set"
+    },
+    "H2708|חֻקֹּת": {
+      "set": "noto",
+      "name": "memo",
+      "file": "noto-memo.png",
+      "concept": "memo",
+      "layer": "set"
+    },
+    "H2708|חֻקּוֹת": {
+      "set": "fluent-emoji-flat",
+      "name": "memo",
+      "file": "fluent-emoji-flat-memo.png",
+      "concept": "memo",
+      "layer": "set"
+    },
+    "H5012|נָבָא": {
+      "set": "twemoji",
+      "name": "loudspeaker",
+      "file": "twemoji-loudspeaker.png",
+      "concept": "loudspeaker",
+      "layer": "set"
+    },
+    "H7121|קָרָא": {
+      "set": "noto",
+      "name": "loudspeaker",
+      "file": "noto-loudspeaker.png",
+      "concept": "loudspeaker",
+      "layer": "set"
+    },
+    "H5046|נָגַד": {
+      "set": "twemoji",
+      "name": "megaphone",
+      "file": "twemoji-megaphone.png",
+      "concept": "megaphone",
+      "layer": "set"
+    },
+    "H7130|קֶ֫רֶב": {
+      "set": "twemoji",
+      "name": "package",
+      "file": "twemoji-package.png",
+      "concept": "package",
+      "layer": "set"
+    },
+    "H7604|שָׁאַר": {
+      "set": "noto",
+      "name": "package",
+      "file": "noto-package.png",
+      "concept": "package",
+      "layer": "set"
+    },
+    "H3240|יָנַח": {
+      "set": "fluent-emoji-flat",
+      "name": "package",
+      "file": "fluent-emoji-flat-package.png",
+      "concept": "package",
+      "layer": "set"
+    },
+    "H7130|בְּקֶ֫רֶב": {
+      "set": "noto-v1",
+      "name": "package",
+      "file": "noto-v1-package.png",
+      "concept": "package",
+      "layer": "set"
+    },
+    "H518|אִם": {
+      "set": "twemoji",
+      "name": "shuffle-tracks-button",
+      "file": "twemoji-shuffle-tracks-button.png",
+      "concept": "shuffle tracks button",
+      "layer": "set"
+    },
+    "H312|אַחֵר": {
+      "set": "noto",
+      "name": "shuffle-tracks-button",
+      "file": "noto-shuffle-tracks-button.png",
+      "concept": "shuffle tracks button",
+      "layer": "set"
+    },
+    "H5749|עוּד": {
+      "set": "twemoji",
+      "name": "repeat-button",
+      "file": "twemoji-repeat-button.png",
+      "concept": "repeat button",
+      "layer": "set"
+    },
+    "H8643|תְּרוּעָה": {
+      "set": "twemoji",
+      "name": "speaker-high-volume",
+      "file": "twemoji-speaker-high-volume.png",
+      "concept": "speaker high volume",
+      "layer": "set"
+    },
+    "H7321|רוּעַ": {
+      "set": "noto",
+      "name": "speaker-high-volume",
+      "file": "noto-speaker-high-volume.png",
+      "concept": "speaker high volume",
+      "layer": "set"
+    },
+    "H1245|בָּקַשׁ": {
+      "set": "twemoji",
+      "name": "magnifying-glass-tilted-left",
+      "file": "twemoji-magnifying-glass-tilted-left.png",
+      "concept": "magnifying glass tilted left",
+      "layer": "set"
+    },
+    "H1875|דָּרַשׁ": {
+      "set": "noto",
+      "name": "magnifying-glass-tilted-left",
+      "file": "noto-magnifying-glass-tilted-left.png",
+      "concept": "magnifying glass tilted left",
+      "layer": "set"
+    },
+    "H7628|שְׁבִי": {
+      "set": "twemoji",
+      "name": "locked-with-key",
+      "file": "twemoji-locked-with-key.png",
+      "concept": "locked with key",
+      "layer": "set"
+    },
+    "H3423|יָרַשׁ": {
+      "set": "twemoji",
+      "name": "key",
+      "file": "twemoji-key.png",
+      "concept": "key",
+      "layer": "set"
+    },
+    "H1280|בְּרִיחַ": {
+      "set": "twemoji",
+      "name": "locked",
+      "file": "twemoji-locked.png",
+      "concept": "locked",
+      "layer": "set"
+    },
+    "H6605|פָּתַח": {
+      "set": "twemoji",
+      "name": "unlocked",
+      "file": "twemoji-unlocked.png",
+      "concept": "unlocked",
+      "layer": "set"
+    },
+    "H834|אֲשֶׁר": {
+      "set": "twemoji",
+      "name": "link",
+      "file": "twemoji-link.png",
+      "concept": "link",
+      "layer": "set"
+    },
+    "H310|אַחַר": {
+      "set": "twemoji",
+      "name": "back-arrow",
+      "file": "twemoji-back-arrow.png",
+      "concept": "back arrow",
+      "layer": "set"
+    },
+    "H314|אַחֲרוֹן": {
+      "set": "noto",
+      "name": "back-arrow",
+      "file": "noto-back-arrow.png",
+      "concept": "back arrow",
+      "layer": "set"
+    },
+    "|עַל־כֵּן": {
+      "set": "twemoji",
+      "name": "end-arrow",
+      "file": "twemoji-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H3651|כֵּן": {
+      "set": "noto",
+      "name": "end-arrow",
+      "file": "noto-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H7098|קָצָה": {
+      "set": "fluent-emoji-flat",
+      "name": "end-arrow",
+      "file": "fluent-emoji-flat-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H7097|קָצֶה": {
+      "set": "noto-v1",
+      "name": "end-arrow",
+      "file": "noto-v1-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H319|אַחֲרִית": {
+      "set": "emojione",
+      "name": "end-arrow",
+      "file": "emojione-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H8552|תָּמַם": {
+      "set": "emojione-v1",
+      "name": "end-arrow",
+      "file": "emojione-v1-end-arrow.png",
+      "concept": "end arrow",
+      "layer": "set"
+    },
+    "H705|אַרְבָּעִים": {
+      "set": "twemoji",
+      "name": "input-numbers",
+      "file": "twemoji-input-numbers.png",
+      "concept": "input numbers",
+      "layer": "set"
+    },
+    "H6242|עֶשְׂרִים": {
+      "set": "noto",
+      "name": "input-numbers",
+      "file": "noto-input-numbers.png",
+      "concept": "input numbers",
+      "layer": "set"
+    },
+    "H7970|שְׁלוֹשִׁים": {
+      "set": "fluent-emoji-flat",
+      "name": "input-numbers",
+      "file": "fluent-emoji-flat-input-numbers.png",
+      "concept": "input numbers",
+      "layer": "set"
+    },
+    "H801|אִשָּׁה": {
+      "set": "twemoji",
+      "name": "fire",
+      "file": "twemoji-fire.png",
+      "concept": "fire",
+      "layer": "set"
+    },
+    "H6999|קָטַר": {
+      "set": "noto",
+      "name": "fire",
+      "file": "noto-fire.png",
+      "concept": "fire",
+      "layer": "set"
+    },
+    "H6466|פָּעַל": {
+      "set": "twemoji",
+      "name": "hammer",
+      "file": "twemoji-hammer.png",
+      "concept": "hammer",
+      "layer": "set"
+    },
+    "H4758|מַרְאֶה": {
+      "set": "twemoji",
+      "name": "crystal-ball",
+      "file": "twemoji-crystal-ball.png",
+      "concept": "crystal ball",
+      "layer": "set"
+    },
+    "H8002|שֶׁלֶם": {
+      "set": "twemoji",
+      "name": "dove",
+      "file": "twemoji-dove.png",
+      "concept": "dove",
+      "layer": "set"
+    },
+    "H369|אֵין": {
+      "set": "twemoji",
+      "name": "hole",
+      "file": "twemoji-hole.png",
+      "concept": "hole",
+      "layer": "set"
+    },
+    "H369|אַ֫יִן": {
+      "set": "noto",
+      "name": "hole",
+      "file": "noto-hole.png",
+      "concept": "hole",
+      "layer": "set"
+    },
+    "H953|בּוֹר": {
+      "set": "fluent-emoji-flat",
+      "name": "hole",
+      "file": "fluent-emoji-flat-hole.png",
+      "concept": "hole",
+      "layer": "set"
+    },
+    "H6041|עָנִי": {
+      "set": "noto-v1",
+      "name": "hole",
+      "file": "noto-v1-hole.png",
+      "concept": "hole",
+      "layer": "set"
+    },
+    "H1540|גָּלָה": {
+      "set": "twemoji",
+      "name": "spiral-notepad",
+      "file": "twemoji-spiral-notepad.png",
+      "concept": "spiral notepad",
+      "layer": "set"
+    },
+    "H4687|מִצְוֹת": {
+      "set": "noto",
+      "name": "spiral-notepad",
+      "file": "noto-spiral-notepad.png",
+      "concept": "spiral notepad",
+      "layer": "set"
+    },
+    "H7045|קְלָלָה": {
+      "set": "twemoji",
+      "name": "speaking-head",
+      "file": "twemoji-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H779|אָרַר": {
+      "set": "noto",
+      "name": "speaking-head",
+      "file": "noto-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H5707|עֵד": {
+      "set": "fluent-emoji-flat",
+      "name": "speaking-head",
+      "file": "fluent-emoji-flat-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H423|אָלָה": {
+      "set": "noto-v1",
+      "name": "speaking-head",
+      "file": "noto-v1-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H5715|עֵדוּת": {
+      "set": "emojione",
+      "name": "speaking-head",
+      "file": "emojione-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H3289|יָעַץ": {
+      "set": "emojione-v1",
+      "name": "speaking-head",
+      "file": "emojione-v1-speaking-head.png",
+      "concept": "speaking head",
+      "layer": "set"
+    },
+    "H5002|נְאֻם": {
+      "set": "twemoji",
+      "name": "right-anger-bubble",
+      "file": "twemoji-right-anger-bubble.png",
+      "concept": "right anger bubble",
+      "layer": "set"
+    },
+    "H5236|נֵכָר": {
+      "set": "twemoji",
+      "name": "world-map",
+      "file": "twemoji-world-map.png",
+      "concept": "world map",
+      "layer": "set"
+    },
+    "H1366|גְּבוּל": {
+      "set": "noto",
+      "name": "world-map",
+      "file": "noto-world-map.png",
+      "concept": "world map",
+      "layer": "set"
+    },
+    "H1544|גִּלּוּל": {
+      "set": "twemoji",
+      "name": "moai",
+      "file": "twemoji-moai.png",
+      "concept": "moai",
+      "layer": "set"
+    },
+    "H6662|צַדִּיק": {
+      "set": "twemoji",
+      "name": "smiling-face-with-halo",
+      "file": "twemoji-smiling-face-with-halo.png",
+      "concept": "smiling face with halo",
+      "layer": "set"
+    },
+    "H7489|רָעַע": {
+      "set": "twemoji",
+      "name": "smiling-face-with-horns",
+      "file": "twemoji-smiling-face-with-horns.png",
+      "concept": "smiling face with horns",
+      "layer": "set"
+    },
+    "H7451|רַע": {
+      "set": "twemoji",
+      "name": "angry-face",
+      "file": "twemoji-angry-face.png",
+      "concept": "angry face",
+      "layer": "set"
+    },
+    "H3707|כַּעַס": {
+      "set": "noto",
+      "name": "angry-face",
+      "file": "noto-angry-face.png",
+      "concept": "angry face",
+      "layer": "set"
+    },
+    "H1058|בָּכָה": {
+      "set": "twemoji",
+      "name": "crying-face",
+      "file": "twemoji-crying-face.png",
+      "concept": "crying face",
+      "layer": "set"
+    },
+    "H7065|קָנָא": {
+      "set": "twemoji",
+      "name": "face-with-steam-from-nose",
+      "file": "twemoji-face-with-steam-from-nose.png",
+      "concept": "face with steam from nose",
+      "layer": "set"
+    },
+    "H3374|יִרְאָה": {
+      "set": "twemoji",
+      "name": "fearful-face",
+      "file": "twemoji-fearful-face.png",
+      "concept": "fearful face",
+      "layer": "set"
+    },
+    "H2865|חָתַת": {
+      "set": "noto",
+      "name": "fearful-face",
+      "file": "noto-fearful-face.png",
+      "concept": "fearful face",
+      "layer": "set"
+    },
+    "H2781|חֶרְפָּה": {
+      "set": "twemoji",
+      "name": "flushed-face",
+      "file": "twemoji-flushed-face.png",
+      "concept": "flushed face",
+      "layer": "set"
+    },
+    "H6440|לִפְנֵי": {
+      "set": "twemoji",
+      "name": "slightly-smiling-face",
+      "file": "twemoji-slightly-smiling-face.png",
+      "concept": "slightly smiling face",
+      "layer": "set"
+    },
+    "H6440|פְּנֵי": {
+      "set": "noto",
+      "name": "slightly-smiling-face",
+      "file": "noto-slightly-smiling-face.png",
+      "concept": "slightly smiling face",
+      "layer": "set"
+    },
+    "H8334|שָׁרַת": {
+      "set": "twemoji",
+      "name": "person-bowing",
+      "file": "twemoji-person-bowing.png",
+      "concept": "person bowing",
+      "layer": "set"
+    },
+    "H595|אָנֹכִי": {
+      "set": "twemoji",
+      "name": "person-raising-hand",
+      "file": "twemoji-person-raising-hand.png",
+      "concept": "person raising hand",
+      "layer": "set"
+    },
+    "H7650|שָׁבַע": {
+      "set": "noto",
+      "name": "person-raising-hand",
+      "file": "noto-person-raising-hand.png",
+      "concept": "person raising hand",
+      "layer": "set"
+    },
+    "H3548|כֹּהֵן": {
+      "set": "twemoji",
+      "name": "raising-hands",
+      "file": "twemoji-raising-hands.png",
+      "concept": "raising hands",
+      "layer": "set"
+    },
+    "H8416|תְּהִלָּה": {
+      "set": "noto",
+      "name": "raising-hands",
+      "file": "noto-raising-hands.png",
+      "concept": "raising hands",
+      "layer": "set"
+    },
+    "H3722|כָּפַר": {
+      "set": "twemoji",
+      "name": "folded-hands",
+      "file": "twemoji-folded-hands.png",
+      "concept": "folded hands",
+      "layer": "set"
+    },
+    "H4994|נָא": {
+      "set": "noto",
+      "name": "folded-hands",
+      "file": "noto-folded-hands.png",
+      "concept": "folded hands",
+      "layer": "set"
+    },
+    "H3318|יָצָא": {
+      "set": "twemoji",
+      "name": "door",
+      "file": "twemoji-door.png",
+      "concept": "door",
+      "layer": "set"
+    },
+    "H3957|לִשְׁכָּה": {
+      "set": "noto",
+      "name": "door",
+      "file": "noto-door.png",
+      "concept": "door",
+      "layer": "set"
+    },
+    "H935|בּוֹא": {
+      "set": "fluent-emoji-flat",
+      "name": "door",
+      "file": "fluent-emoji-flat-door.png",
+      "concept": "door",
+      "layer": "set"
+    },
+    "H6607|פֶּ֫תַח": {
+      "set": "noto-v1",
+      "name": "door",
+      "file": "noto-v1-door.png",
+      "concept": "door",
+      "layer": "set"
+    },
+    "H3808|לֹא": {
+      "set": "twemoji",
+      "name": "prohibited",
+      "file": "twemoji-prohibited.png",
+      "concept": "prohibited",
+      "layer": "set"
+    },
+    "H408|אַל": {
+      "set": "noto",
+      "name": "prohibited",
+      "file": "noto-prohibited.png",
+      "concept": "prohibited",
+      "layer": "set"
+    },
+    "H7901|שָׁכַב": {
+      "set": "twemoji",
+      "name": "bed",
+      "file": "twemoji-bed.png",
+      "concept": "bed",
+      "layer": "set"
+    },
+    "H8668|תְּשׁוּעָה": {
+      "set": "twemoji",
+      "name": "ring-buoy",
+      "file": "twemoji-ring-buoy.png",
+      "concept": "ring buoy",
+      "layer": "set"
+    },
+    "H3444|יְשׁוּעָה": {
+      "set": "noto",
+      "name": "ring-buoy",
+      "file": "noto-ring-buoy.png",
+      "concept": "ring buoy",
+      "layer": "set"
+    },
+    "H3467|יָשַׁע": {
+      "set": "fluent-emoji-flat",
+      "name": "ring-buoy",
+      "file": "fluent-emoji-flat-ring-buoy.png",
+      "concept": "ring buoy",
+      "layer": "set"
+    },
+    "H4611|מַעֲלָל": {
+      "set": "twemoji",
+      "name": "hammer-and-wrench",
+      "file": "twemoji-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H6467|פֹּעַל": {
+      "set": "noto",
+      "name": "hammer-and-wrench",
+      "file": "noto-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H4399|מְלָאכָה": {
+      "set": "fluent-emoji-flat",
+      "name": "hammer-and-wrench",
+      "file": "fluent-emoji-flat-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H1254|בָּרָא": {
+      "set": "noto-v1",
+      "name": "hammer-and-wrench",
+      "file": "noto-v1-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H5656|עֲבֹדָה": {
+      "set": "emojione",
+      "name": "hammer-and-wrench",
+      "file": "emojione-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H5656|עֲבוֹדָה": {
+      "set": "emojione-v1",
+      "name": "hammer-and-wrench",
+      "file": "emojione-v1-hammer-and-wrench.png",
+      "concept": "hammer and wrench",
+      "layer": "set"
+    },
+    "H4931|מִשְׁמֶ֫רֶת": {
+      "set": "twemoji",
+      "name": "shield",
+      "file": "twemoji-shield.png",
+      "concept": "shield",
+      "layer": "set"
+    },
+    "|כְּ": {
+      "set": "twemoji",
+      "name": "heavy-equals-sign",
+      "file": "twemoji-heavy-equals-sign.png",
+      "concept": "heavy equals sign",
+      "layer": "set"
+    },
+    "H1285|בְּרִית": {
+      "set": "twemoji",
+      "name": "handshake",
+      "file": "twemoji-handshake.png",
+      "concept": "handshake",
+      "layer": "set"
+    },
+    "H7122|קָרָא": {
+      "set": "noto",
+      "name": "handshake",
+      "file": "noto-handshake.png",
+      "concept": "handshake",
+      "layer": "set"
+    },
+    "H7453|רֵ֫עַ": {
+      "set": "fluent-emoji-flat",
+      "name": "handshake",
+      "file": "fluent-emoji-flat-handshake.png",
+      "concept": "handshake",
+      "layer": "set"
+    },
+    "|וְ": {
+      "set": "noto-v1",
+      "name": "handshake",
+      "file": "noto-v1-handshake.png",
+      "concept": "handshake",
+      "layer": "set"
+    },
+    "H1350|גָּאַל": {
+      "set": "emojione",
+      "name": "handshake",
+      "file": "emojione-handshake.png",
+      "concept": "handshake",
+      "layer": "set"
+    },
+    "H7458|רָעָב": {
+      "set": "twemoji",
+      "name": "drooling-face",
+      "file": "twemoji-drooling-face.png",
+      "concept": "drooling face",
+      "layer": "set"
+    },
+    "H7723|שָׁוְא": {
+      "set": "twemoji",
+      "name": "lying-face",
+      "file": "twemoji-lying-face.png",
+      "concept": "lying face",
+      "layer": "set"
+    },
+    "H7706|שַׁדַּי": {
+      "set": "twemoji",
+      "name": "palms-up-together",
+      "file": "twemoji-palms-up-together.png",
+      "concept": "palms up together",
+      "layer": "set"
+    },
+    "H433|אֱלוֹהַּ": {
+      "set": "noto",
+      "name": "palms-up-together",
+      "file": "noto-palms-up-together.png",
+      "concept": "palms up together",
+      "layer": "set"
+    },
+    "H136|אֲדֹנָי": {
+      "set": "fluent-emoji-flat",
+      "name": "palms-up-together",
+      "file": "fluent-emoji-flat-palms-up-together.png",
+      "concept": "palms up together",
+      "layer": "set"
+    },
+    "H5387|נָשִׂיא": {
+      "set": "twemoji",
+      "name": "prince",
+      "file": "twemoji-prince.png",
+      "concept": "prince",
+      "layer": "set"
+    },
+    "H8269|שַׂר": {
+      "set": "noto",
+      "name": "prince",
+      "file": "noto-prince.png",
+      "concept": "prince",
+      "layer": "set"
+    },
+    "H349|אֵיכָה": {
+      "set": "twemoji",
+      "name": "person-shrugging",
+      "file": "twemoji-person-shrugging.png",
+      "concept": "person shrugging",
+      "layer": "set"
+    },
+    "H5329|נָצַח": {
+      "set": "twemoji",
+      "name": "1st-place-medal",
+      "file": "twemoji-1st-place-medal.png",
+      "concept": "1st place medal",
+      "layer": "set"
+    },
+    "H7992|שְׁלִישִׁי": {
+      "set": "twemoji",
+      "name": "3rd-place-medal",
+      "file": "twemoji-3rd-place-medal.png",
+      "concept": "3rd place medal",
+      "layer": "set"
+    },
+    "H8248|שָׁקָה": {
+      "set": "twemoji",
+      "name": "cup-with-straw",
+      "file": "twemoji-cup-with-straw.png",
+      "concept": "cup with straw",
+      "layer": "set"
+    },
+    "H1800|דַּל": {
+      "set": "twemoji",
+      "name": "pleading-face",
+      "file": "twemoji-pleading-face.png",
+      "concept": "pleading face",
+      "layer": "set"
+    },
+    "H657|אֶפֶס": {
+      "set": "twemoji",
+      "name": "foot",
+      "file": "twemoji-foot.png",
+      "concept": "foot",
+      "layer": "set"
+    },
+    "H5975|עָמַד": {
+      "set": "twemoji",
+      "name": "person-standing",
+      "file": "twemoji-person-standing.png",
+      "concept": "person standing",
+      "layer": "set"
+    },
+    "H6965|קוּם": {
+      "set": "noto",
+      "name": "person-standing",
+      "file": "noto-person-standing.png",
+      "concept": "person standing",
+      "layer": "set"
+    },
+    "H5307|נָפַל": {
+      "set": "twemoji",
+      "name": "person-kneeling",
+      "file": "twemoji-person-kneeling.png",
+      "concept": "person kneeling",
+      "layer": "set"
+    },
+    "H120|אָדָם": {
+      "set": "twemoji",
+      "name": "person",
+      "file": "twemoji-person.png",
+      "concept": "person",
+      "layer": "set"
+    },
+    "H1580|גָּמַל": {
+      "set": "noto",
+      "name": "person",
+      "file": "noto-person.png",
+      "concept": "person",
+      "layer": "set"
+    },
+    "H3684|כְּסִיל": {
+      "set": "fluent-emoji-flat",
+      "name": "person",
+      "file": "fluent-emoji-flat-person.png",
+      "concept": "person",
+      "layer": "set"
+    },
+    "H5978|עִמָּד": {
+      "set": "twemoji",
+      "name": "people-holding-hands",
+      "file": "twemoji-people-holding-hands.png",
+      "concept": "people holding hands",
+      "layer": "set"
+    },
+    "H3162|יַ֫חַד": {
+      "set": "noto",
+      "name": "people-holding-hands",
+      "file": "noto-people-holding-hands.png",
+      "concept": "people holding hands",
+      "layer": "set"
+    },
+    "H2205|זָקֵן": {
+      "set": "twemoji",
+      "name": "older-person",
+      "file": "twemoji-older-person.png",
+      "concept": "older person",
+      "layer": "set"
+    },
+    "H7218|רֹאשׁ": {
+      "set": "twemoji",
+      "name": "brain",
+      "file": "twemoji-brain.png",
+      "concept": "brain",
+      "layer": "set"
+    },
+    "H8394|תָּבוּן": {
+      "set": "noto",
+      "name": "brain",
+      "file": "noto-brain.png",
+      "concept": "brain",
+      "layer": "set"
+    },
+    "H6285|פֵּאָה": {
+      "set": "twemoji",
+      "name": "compass",
+      "file": "twemoji-compass.png",
+      "concept": "compass",
+      "layer": "set"
+    },
+    "H5608|סָפַר": {
+      "set": "twemoji",
+      "name": "abacus",
+      "file": "twemoji-abacus.png",
+      "concept": "abacus",
+      "layer": "set"
+    },
+    "H6187|עֵרֶךְ": {
+      "set": "noto",
+      "name": "abacus",
+      "file": "noto-abacus.png",
+      "concept": "abacus",
+      "layer": "set"
+    },
+    "H3967|מֵאָה": {
+      "set": "fluent-emoji-flat",
+      "name": "abacus",
+      "file": "fluent-emoji-flat-abacus.png",
+      "concept": "abacus",
+      "layer": "set"
+    },
+    "H134|אֶדֶן": {
+      "set": "twemoji",
+      "name": "brick",
+      "file": "twemoji-brick.png",
+      "concept": "brick",
+      "layer": "set"
+    },
+    "H1616|גֵּר": {
+      "set": "twemoji",
+      "name": "luggage",
+      "file": "twemoji-luggage.png",
+      "concept": "luggage",
+      "layer": "set"
+    },
+    "H8393|תְּבוּאָה": {
+      "set": "twemoji",
+      "name": "basket",
+      "file": "twemoji-basket.png",
+      "concept": "basket",
+      "layer": "set"
+    },
+    "H6908|קָבַץ": {
+      "set": "noto",
+      "name": "basket",
+      "file": "noto-basket.png",
+      "concept": "basket",
+      "layer": "set"
+    },
+    "H622|אָסַף": {
+      "set": "fluent-emoji-flat",
+      "name": "basket",
+      "file": "fluent-emoji-flat-basket.png",
+      "concept": "basket",
+      "layer": "set"
+    },
+    "H2891|טָהֵר": {
+      "set": "twemoji",
+      "name": "soap",
+      "file": "twemoji-soap.png",
+      "concept": "soap",
+      "layer": "set"
+    },
+    "H5355|נָקִי": {
+      "set": "noto",
+      "name": "soap",
+      "file": "noto-soap.png",
+      "concept": "soap",
+      "layer": "set"
+    },
+    "H5352|נָקָה": {
+      "set": "fluent-emoji-flat",
+      "name": "soap",
+      "file": "fluent-emoji-flat-soap.png",
+      "concept": "soap",
+      "layer": "set"
+    },
+    "H6189|עָרֵל": {
+      "set": "twemoji",
+      "name": "razor",
+      "file": "twemoji-razor.png",
+      "concept": "razor",
+      "layer": "set"
+    },
+    "H7626|שֵׁ֫בֶט": {
+      "set": "twemoji",
+      "name": "axe",
+      "file": "twemoji-axe.png",
+      "concept": "axe",
+      "layer": "set"
+    },
+    "H1234|בָּקַע": {
+      "set": "noto",
+      "name": "axe",
+      "file": "noto-axe.png",
+      "concept": "axe",
+      "layer": "set"
+    },
+    "H2296|חָגַר": {
+      "set": "twemoji",
+      "name": "military-helmet",
+      "file": "twemoji-military-helmet.png",
+      "concept": "military helmet",
+      "layer": "set"
+    },
+    "H6635|צָבָא": {
+      "set": "noto",
+      "name": "military-helmet",
+      "file": "noto-military-helmet.png",
+      "concept": "military helmet",
+      "layer": "set"
+    },
+    "H8255|שֶׁקֶל": {
+      "set": "twemoji",
+      "name": "coin",
+      "file": "twemoji-coin.png",
+      "concept": "coin",
+      "layer": "set"
+    },
+    "H1157|בְּעַד": {
+      "set": "twemoji",
+      "name": "window",
+      "file": "twemoji-window.png",
+      "concept": "window",
+      "layer": "set"
+    },
+    "H1157|בַּ֫עַד": {
+      "set": "noto",
+      "name": "window",
+      "file": "noto-window.png",
+      "concept": "window",
+      "layer": "set"
+    },
+    "H4393|מְלֹא": {
+      "set": "twemoji",
+      "name": "bucket",
+      "file": "twemoji-bucket.png",
+      "concept": "bucket",
+      "layer": "set"
+    },
+    "H3332|יָצַק": {
+      "set": "noto",
+      "name": "bucket",
+      "file": "noto-bucket.png",
+      "concept": "bucket",
+      "layer": "set"
+    },
+    "H5553|סֶלַע": {
+      "set": "twemoji",
+      "name": "rock",
+      "file": "twemoji-rock.png",
+      "concept": "rock",
+      "layer": "set"
+    },
+    "H7186|קָשֶׁה": {
+      "set": "noto",
+      "name": "rock",
+      "file": "noto-rock.png",
+      "concept": "rock",
+      "layer": "set"
+    },
+    "H7125|קִרְאָה": {
+      "set": "twemoji",
+      "name": "people-hugging",
+      "file": "twemoji-people-hugging.png",
+      "concept": "people hugging",
+      "layer": "set"
+    },
+    "H7356|רַחַם": {
+      "set": "noto",
+      "name": "people-hugging",
+      "file": "noto-people-hugging.png",
+      "concept": "people hugging",
+      "layer": "set"
+    },
+    "H6293|פָּגַע": {
+      "set": "fluent-emoji-flat",
+      "name": "people-hugging",
+      "file": "fluent-emoji-flat-people-hugging.png",
+      "concept": "people hugging",
+      "layer": "set"
+    },
+    "H859|אַתָּה": {
+      "set": "twemoji",
+      "name": "index-pointing-at-the-viewer",
+      "file": "twemoji-index-pointing-at-the-viewer.png",
+      "concept": "index pointing at the viewer",
+      "layer": "set"
+    },
+    "H859|אַתֵּ֫נָה": {
+      "set": "noto",
+      "name": "index-pointing-at-the-viewer",
+      "file": "noto-index-pointing-at-the-viewer.png",
+      "concept": "index pointing at the viewer",
+      "layer": "set"
+    },
+    "H859|אַתֶּם": {
+      "set": "fluent-emoji-flat",
+      "name": "index-pointing-at-the-viewer",
+      "file": "fluent-emoji-flat-index-pointing-at-the-viewer.png",
+      "concept": "index pointing at the viewer",
+      "layer": "set"
+    },
+    "H8432|בְּתוֹךְ": {
+      "set": "twemoji",
+      "name": "left-right-arrow",
+      "file": "twemoji-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H8432|תָּ֫וֶךְ": {
+      "set": "noto",
+      "name": "left-right-arrow",
+      "file": "noto-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H996|בֵּין": {
+      "set": "fluent-emoji-flat",
+      "name": "left-right-arrow",
+      "file": "fluent-emoji-flat-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H996|וּבֵין": {
+      "set": "noto-v1",
+      "name": "left-right-arrow",
+      "file": "noto-v1-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H4136|מוּל": {
+      "set": "emojione",
+      "name": "left-right-arrow",
+      "file": "emojione-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H5048|נֶ֫גֶד": {
+      "set": "emojione-v1",
+      "name": "left-right-arrow",
+      "file": "emojione-v1-left-right-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "set"
+    },
+    "H227|אָז": {
+      "set": "twemoji",
+      "name": "hourglass-done",
+      "file": "twemoji-hourglass-done.png",
+      "concept": "hourglass done",
+      "layer": "set"
+    },
+    "H7093|קֵץ": {
+      "set": "noto",
+      "name": "hourglass-done",
+      "file": "noto-hourglass-done.png",
+      "concept": "hourglass done",
+      "layer": "set"
+    },
+    "H6258|עַתָּה": {
+      "set": "twemoji",
+      "name": "alarm-clock",
+      "file": "twemoji-alarm-clock.png",
+      "concept": "alarm clock",
+      "layer": "set"
+    },
+    "H6960|קָוָה": {
+      "set": "twemoji",
+      "name": "hourglass-not-done",
+      "file": "twemoji-hourglass-not-done.png",
+      "concept": "hourglass not done",
+      "layer": "set"
+    },
+    "H3117|יָמִים": {
+      "set": "twemoji",
+      "name": "sun",
+      "file": "twemoji-sun.png",
+      "concept": "sun",
+      "layer": "set"
+    },
+    "H3680|כָּסָה": {
+      "set": "twemoji",
+      "name": "umbrella",
+      "file": "twemoji-umbrella.png",
+      "concept": "umbrella",
+      "layer": "set"
+    },
+    "H5061|נֶ֫גַע": {
+      "set": "twemoji",
+      "name": "biohazard",
+      "file": "twemoji-biohazard.png",
+      "concept": "biohazard",
+      "layer": "set"
+    },
+    "H2490|חָלַל": {
+      "set": "noto",
+      "name": "biohazard",
+      "file": "noto-biohazard.png",
+      "concept": "biohazard",
+      "layer": "set"
+    },
+    "H5769|עוֹלָם": {
+      "set": "twemoji",
+      "name": "infinity",
+      "file": "twemoji-infinity.png",
+      "concept": "infinity",
+      "layer": "set"
+    },
+    "H5703|עַד": {
+      "set": "noto",
+      "name": "infinity",
+      "file": "noto-infinity.png",
+      "concept": "infinity",
+      "layer": "set"
+    },
+    "H5331|נֶצַח": {
+      "set": "fluent-emoji-flat",
+      "name": "infinity",
+      "file": "fluent-emoji-flat-infinity.png",
+      "concept": "infinity",
+      "layer": "set"
+    },
+    "H6663|צָדַק": {
+      "set": "twemoji",
+      "name": "balance-scale",
+      "file": "twemoji-balance-scale.png",
+      "concept": "balance scale",
+      "layer": "set"
+    },
+    "H8199|שֹׁפֵט": {
+      "set": "noto",
+      "name": "balance-scale",
+      "file": "noto-balance-scale.png",
+      "concept": "balance scale",
+      "layer": "set"
+    },
+    "H6666|צְדָקָה": {
+      "set": "fluent-emoji-flat",
+      "name": "balance-scale",
+      "file": "fluent-emoji-flat-balance-scale.png",
+      "concept": "balance scale",
+      "layer": "set"
+    },
+    "H4941|מִשְׁפָּט": {
+      "set": "noto-v1",
+      "name": "balance-scale",
+      "file": "noto-v1-balance-scale.png",
+      "concept": "balance scale",
+      "layer": "set"
+    },
+    "H5038|נְבֵלָה": {
+      "set": "twemoji",
+      "name": "coffin",
+      "file": "twemoji-coffin.png",
+      "concept": "coffin",
+      "layer": "set"
+    },
+    "H6696|צוּר": {
+      "set": "twemoji",
+      "name": "chains",
+      "file": "twemoji-chains.png",
+      "concept": "chains",
+      "layer": "set"
+    },
+    "H4908|מִשְׁכָּן": {
+      "set": "twemoji",
+      "name": "tent",
+      "file": "twemoji-tent.png",
+      "concept": "tent",
+      "layer": "set"
+    },
+    "H7167|קָרַע": {
+      "set": "twemoji",
+      "name": "scissors",
+      "file": "twemoji-scissors.png",
+      "concept": "scissors",
+      "layer": "set"
+    },
+    "H3947|לָקַח": {
+      "set": "twemoji",
+      "name": "raised-fist",
+      "file": "twemoji-raised-fist.png",
+      "concept": "raised fist",
+      "layer": "set"
+    },
+    "H8610|תָּפַשׂ": {
+      "set": "noto",
+      "name": "raised-fist",
+      "file": "noto-raised-fist.png",
+      "concept": "raised fist",
+      "layer": "set"
+    },
+    "H6113|עָצָר": {
+      "set": "twemoji",
+      "name": "raised-hand",
+      "file": "twemoji-raised-hand.png",
+      "concept": "raised hand",
+      "layer": "set"
+    },
+    "H7999|שָׁלֵם": {
+      "set": "twemoji",
+      "name": "check-mark",
+      "file": "twemoji-check-mark.png",
+      "concept": "check mark",
+      "layer": "set"
+    },
+    "H3201|יָכֹל": {
+      "set": "noto",
+      "name": "check-mark",
+      "file": "noto-check-mark.png",
+      "concept": "check mark",
+      "layer": "set"
+    },
+    "H226|אוֹת": {
+      "set": "twemoji",
+      "name": "sparkles",
+      "file": "twemoji-sparkles.png",
+      "concept": "sparkles",
+      "layer": "set"
+    },
+    "H6944|קֹ֫דֶשׁ": {
+      "set": "noto",
+      "name": "sparkles",
+      "file": "noto-sparkles.png",
+      "concept": "sparkles",
+      "layer": "set"
+    },
+    "H6918|קָדוֹשׁ": {
+      "set": "fluent-emoji-flat",
+      "name": "sparkles",
+      "file": "fluent-emoji-flat-sparkles.png",
+      "concept": "sparkles",
+      "layer": "set"
+    },
+    "H4100|מָה": {
+      "set": "twemoji",
+      "name": "red-question-mark",
+      "file": "twemoji-red-question-mark.png",
+      "concept": "red question mark",
+      "layer": "set"
+    },
+    "H4100|לָ֫מָּה": {
+      "set": "noto",
+      "name": "red-question-mark",
+      "file": "noto-red-question-mark.png",
+      "concept": "red question mark",
+      "layer": "set"
+    },
+    "H4100|לָמָה": {
+      "set": "fluent-emoji-flat",
+      "name": "red-question-mark",
+      "file": "fluent-emoji-flat-red-question-mark.png",
+      "concept": "red question mark",
+      "layer": "set"
+    },
+    "H389|אַךְ": {
+      "set": "twemoji",
+      "name": "red-exclamation-mark",
+      "file": "twemoji-red-exclamation-mark.png",
+      "concept": "red exclamation mark",
+      "layer": "set"
+    },
+    "H7535|רַק": {
+      "set": "noto",
+      "name": "red-exclamation-mark",
+      "file": "noto-red-exclamation-mark.png",
+      "concept": "red exclamation mark",
+      "layer": "set"
+    },
+    "H3254|יָסַף": {
+      "set": "twemoji",
+      "name": "plus",
+      "file": "twemoji-plus.png",
+      "concept": "plus",
+      "layer": "set"
+    },
+    "H2505|חָלַק": {
+      "set": "twemoji",
+      "name": "divide",
+      "file": "twemoji-divide.png",
+      "concept": "divide",
+      "layer": "set"
+    },
+    "H914|בָּדַל": {
+      "set": "noto",
+      "name": "divide",
+      "file": "noto-divide.png",
+      "concept": "divide",
+      "layer": "set"
+    },
+    "H5980|עֻמָּה": {
+      "set": "twemoji",
+      "name": "right-arrow",
+      "file": "twemoji-right-arrow.png",
+      "concept": "right arrow",
+      "layer": "set"
+    },
+    "|לְ": {
+      "set": "noto",
+      "name": "right-arrow",
+      "file": "noto-right-arrow.png",
+      "concept": "right arrow",
+      "layer": "set"
+    },
+    "H413|אֶל/אֶל־": {
+      "set": "fluent-emoji-flat",
+      "name": "right-arrow",
+      "file": "fluent-emoji-flat-right-arrow.png",
+      "concept": "right arrow",
+      "layer": "set"
+    },
+    "|עַל־דְּבַר": {
+      "set": "twemoji",
+      "name": "right-arrow-curving-down",
+      "file": "twemoji-right-arrow-curving-down.png",
+      "concept": "right arrow curving down",
+      "layer": "set"
+    },
+    "H5668|עָבוּר": {
+      "set": "noto",
+      "name": "right-arrow-curving-down",
+      "file": "noto-right-arrow-curving-down.png",
+      "concept": "right arrow curving down",
+      "layer": "set"
+    },
+    "H3588|כִּי": {
+      "set": "fluent-emoji-flat",
+      "name": "right-arrow-curving-down",
+      "file": "fluent-emoji-flat-right-arrow-curving-down.png",
+      "concept": "right arrow curving down",
+      "layer": "set"
+    },
+    "H268|אָחוֹר": {
+      "set": "twemoji",
+      "name": "left-arrow",
+      "file": "twemoji-left-arrow.png",
+      "concept": "left arrow",
+      "layer": "set"
+    },
+    "H1364|גָּבֹהַּ": {
+      "set": "twemoji",
+      "name": "up-arrow",
+      "file": "twemoji-up-arrow.png",
+      "concept": "up arrow",
+      "layer": "set"
+    },
+    "H4605|מַ֫עַל": {
+      "set": "noto",
+      "name": "up-arrow",
+      "file": "noto-up-arrow.png",
+      "concept": "up arrow",
+      "layer": "set"
+    },
+    "H5921|עַל": {
+      "set": "fluent-emoji-flat",
+      "name": "up-arrow",
+      "file": "fluent-emoji-flat-up-arrow.png",
+      "concept": "up arrow",
+      "layer": "set"
+    },
+    "H7311|רוּם": {
+      "set": "noto-v1",
+      "name": "up-arrow",
+      "file": "noto-v1-up-arrow.png",
+      "concept": "up arrow",
+      "layer": "set"
+    },
+    "H4605|מִמַּ֫עַל": {
+      "set": "emojione",
+      "name": "up-arrow",
+      "file": "emojione-up-arrow.png",
+      "concept": "up arrow",
+      "layer": "set"
+    },
+    "H8478|תַּ֫חַת": {
+      "set": "twemoji",
+      "name": "down-arrow",
+      "file": "twemoji-down-arrow.png",
+      "concept": "down arrow",
+      "layer": "set"
+    },
+    "H1060|בְּכוֹר": {
+      "set": "noto",
+      "name": "1st-place-medal",
+      "file": "noto-1st-place-medal.png",
+      "concept": "keycap: 1",
+      "layer": "family"
+    },
+    "H7225|רֵאשִׁית": {
+      "set": "fluent-emoji-flat",
+      "name": "1st-place-medal",
+      "file": "fluent-emoji-flat-1st-place-medal.png",
+      "concept": "keycap: 1",
+      "layer": "family"
+    },
+    "H587|אֲנַ֫חְנוּ": {
+      "set": "emojione",
+      "name": "two-men-holding-hands",
+      "file": "emojione-two-men-holding-hands.png",
+      "concept": "people holding hands",
+      "layer": "family"
+    },
+    "|כִּי־אִם": {
+      "set": "twemoji",
+      "name": "up-down-arrow",
+      "file": "twemoji-up-down-arrow.png",
+      "concept": "left-right arrow",
+      "layer": "family"
+    },
+    "|הֲ": {
+      "set": "twemoji",
+      "name": "white-question-mark",
+      "file": "twemoji-white-question-mark.png",
+      "concept": "red question mark",
+      "layer": "family"
+    },
+    "H7592|שָׁאַל": {
+      "set": "noto",
+      "name": "white-question-mark",
+      "file": "noto-white-question-mark.png",
+      "concept": "red question mark",
+      "layer": "family"
+    },
+    "H7126|קָרַב": {
+      "set": "openmoji",
+      "name": "right-arrow-curving-up",
+      "file": "openmoji-right-arrow-curving-up.png",
+      "concept": "arrow turn right",
+      "layer": "family"
+    },
+    "H983|בֶּטַח": {
+      "set": "noto",
+      "name": "shield",
+      "file": "noto-shield.png",
+      "concept": "safety",
+      "layer": "family"
+    },
+    "H6743|צָלַח": {
+      "set": "twemoji",
+      "name": "fast-forward-button",
+      "file": "twemoji-fast-forward-button.png",
+      "concept": "forward",
+      "layer": "family"
+    }
+  }
+}
