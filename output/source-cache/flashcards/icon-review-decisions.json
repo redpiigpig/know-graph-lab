@@ -6933,6 +6933,762 @@
         "icon": "ph:dice-one",
         "verdict": "wrong",
         "reason": "逐張看圖：ph:face-mask 那一族是醫療口罩、mdi:white-balance-* 是相機白平衡、memory-bold 是記憶體條、remote-tv 是電視遙控器、dance-pole 是鋼管舞、thumbs-up-light 配「卑賤」是相反"
+      },
+      "ἐκκλίνω": {
+        "icon": "tabler:arrow-sharp-turn-right",
+        "verdict": "ok"
+      },
+      "ἐκκλησία": {
+        "icon": "tabler:phone-calling",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐκκόπτω": {
+        "icon": "game-icons:cut-lemon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐκπετάννυμι": {
+        "icon": "mdi:gesture-spread",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐλάσσων": {
+        "icon": "ph:less-than",
+        "verdict": "ok"
+      },
+      "ἐλεήμων": {
+        "icon": "mdi:moon-full",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐμαυτοῦ": {
+        "icon": "ph:person-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐμπίπλημι": {
+        "icon": "ph:x-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐνάρετος": {
+        "icon": "game-icons:military-fort",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐνέργεια": {
+        "icon": "tabler:activity-heartbeat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐναντίος": {
+        "icon": "game-icons:opposite-hearts",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐναργής": {
+        "icon": "game-icons:light-bulb",
+        "verdict": "ok"
+      },
+      "ἐνδεής": {
+        "icon": "mdi:bed-empty",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐνθύμησις": {
+        "icon": "game-icons:thought-bubble",
+        "verdict": "ok"
+      },
+      "ἐνιαυτός": {
+        "icon": "game-icons:calendar-half-year",
+        "verdict": "ok"
+      },
+      "ἐντέλλομαι": {
+        "icon": "ph:command-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐνταῦθα": {
+        "icon": "game-icons:round-silo",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐντρέπω": {
+        "icon": "tabler:u-turn-right",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐντυγχάνω": {
+        "icon": "ph:call-bell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐντός": {
+        "icon": "game-icons:heart-inside",
+        "verdict": "ok"
+      },
+      "ἐνύπνιον": {
+        "icon": "game-icons:dream-catcher",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξέρχομαι": {
+        "icon": "ph:door-bold",
+        "verdict": "ok"
+      },
+      "ἐξαίρω": {
+        "icon": "tabler:aerial-lift",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξαίφνης": {
+        "icon": "game-icons:high-kick",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξαιρέω": {
+        "icon": "mdi:fan-remove",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξεγείρω": {
+        "icon": "game-icons:raise-skeleton",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξιλάσκομαι": {
+        "icon": "ph:shirt-folded",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐξουσία": {
+        "icon": "mdi:human-capacity-decrease",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπάγω": {
+        "icon": "mdi:arrange-bring-to-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπέρχομαι": {
+        "icon": "game-icons:attack-gauge",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπίγνωσις": {
+        "icon": "game-icons:gift-of-knowledge",
+        "verdict": "ok"
+      },
+      "ἐπίσκοπος": {
+        "icon": "mdi:account-supervisor",
+        "verdict": "ok"
+      },
+      "ἐπαίρω": {
+        "icon": "game-icons:raise-zombie",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπαγγέλλω": {
+        "icon": "tabler:heart-handshake",
+        "verdict": "ok"
+      },
+      "ἐπαγγελία": {
+        "icon": "ph:handshake-thin",
+        "verdict": "ok"
+      },
+      "ἐπειδή": {
+        "icon": "game-icons:zig-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπεῖδον": {
+        "icon": "tabler:mood-look-up",
+        "verdict": "ok"
+      },
+      "ἐπιβάλλω": {
+        "icon": "ph:person-simple-throw-fill",
+        "verdict": "ok"
+      },
+      "ἐπιβουλή": {
+        "icon": "mdi:chart-scatter-plot",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιεικής": {
+        "icon": "tabler:wash-gentle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιθυμέω": {
+        "icon": "mdi:text-long",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιθυμία": {
+        "icon": "game-icons:double-face-mask",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπικαλέω": {
+        "icon": "mdi:call-made",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπικατάρατος": {
+        "icon": "game-icons:baby-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιμελῶς": {
+        "icon": "game-icons:magnifying-glass",
+        "verdict": "ok"
+      },
+      "ἐπισκέπτομαι": {
+        "icon": "tabler:mood-look-down",
+        "verdict": "ok"
+      },
+      "ἐπιστήμη": {
+        "icon": "game-icons:classical-knowledge",
+        "verdict": "ok"
+      },
+      "ἐπιστρέφω": {
+        "icon": "mdi:cog-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιτάσσω": {
+        "icon": "ph:command-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιτίθημι": {
+        "icon": "ph:arrow-down",
+        "verdict": "ok"
+      },
+      "ἐπιτιμάω": {
+        "icon": "tabler:tax-euro",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιφάνεια": {
+        "icon": "tabler:sparkles-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιφέρω": {
+        "icon": "ph:fast-forward",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐπιφαίνω": {
+        "icon": "game-icons:crystal-shine",
+        "verdict": "ok"
+      },
+      "ἐρημόω": {
+        "icon": "mdi:led-strip",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἐφίστημι": {
+        "icon": "ph:globe-stand-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἑαυτοῦ": {
+        "icon": "game-icons:inner-self",
+        "verdict": "ok"
+      },
+      "ἑκατόν": {
+        "icon": "ph:number-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἑξακόσιοι": {
+        "icon": "ph:dice-six",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἑορτή": {
+        "icon": "game-icons:party-flags",
+        "verdict": "ok"
+      },
+      "ἑπτά": {
+        "icon": "ph:number-seven",
+        "verdict": "ok"
+      },
+      "ἑρῶ": {
+        "icon": "game-icons:william-tell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἑτοίμος": {
+        "icon": "game-icons:traffic-lights-ready-to-go",
+        "verdict": "ok"
+      },
+      "ἑτοιμάζω": {
+        "icon": "mdi:package-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔδεσμα": {
+        "icon": "game-icons:food-chain",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔθος": {
+        "icon": "ph:repeat-bold",
+        "verdict": "ok"
+      },
+      "ἔθω": {
+        "icon": "ph:repeat-fill",
+        "verdict": "ok"
+      },
+      "ἔλεγχος": {
+        "icon": "game-icons:hades-symbol",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔμπροσθεν": {
+        "icon": "game-icons:paw-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔνδοξος": {
+        "icon": "game-icons:glowing-artifact",
+        "verdict": "ok"
+      },
+      "ἔνθα": {
+        "icon": "game-icons:round-knob",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔντευξις": {
+        "icon": "game-icons:prayer-beads",
+        "verdict": "ok"
+      },
+      "ἔντιμος": {
+        "icon": "game-icons:gem-necklace",
+        "verdict": "ok"
+      },
+      "ἔξεστι": {
+        "icon": "mdi:map-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔξωθεν": {
+        "icon": "mdi:border-outside",
+        "verdict": "ok"
+      },
+      "ἔπειτα": {
+        "icon": "tabler:arrow-fork",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔρημος": {
+        "icon": "game-icons:desert-eagle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔσχατος": {
+        "icon": "tabler:pin-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔσω": {
+        "icon": "mdi:border-inside",
+        "verdict": "ok"
+      },
+      "ἔτι": {
+        "icon": "ph:repeat-once",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἔχω": {
+        "icon": "mdi:car-brake-hold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡγέομαι": {
+        "icon": "ph:command-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡγεμών": {
+        "icon": "tabler:man-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡδονή": {
+        "icon": "mdi:image-filter-center-focus-strong-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡλικία": {
+        "icon": "tabler:join-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡμέτερος": {
+        "icon": "ph:hands-praying-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡμεῖς": {
+        "icon": "ph:hands-clapping-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡνίκα": {
+        "icon": "mdi:alarm-bell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡσυχάζω": {
+        "icon": "tabler:live-photo",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἡσύχιος": {
+        "icon": "mdi:face-woman-profile",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἤδη": {
+        "icon": "ph:repeat-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἥττον": {
+        "icon": "mdi:skew-less",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἰσχύω": {
+        "icon": "game-icons:mighty-force",
+        "verdict": "ok"
+      },
+      "ἱδρύω": {
+        "icon": "ph:anchor-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἱερεύς": {
+        "icon": "game-icons:sun-priest",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἱερωσύνη": {
+        "icon": "game-icons:post-office",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἱερός": {
+        "icon": "game-icons:holy-symbol",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἱκετεύω": {
+        "icon": "game-icons:paper-bag-folded",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἴσως": {
+        "icon": "tabler:thinking-high",
+        "verdict": "ok"
+      },
+      "ἵλεως": {
+        "icon": "mdi:face-woman-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ἵστημι": {
+        "icon": "ph:globe-stand-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀδύνη": {
+        "icon": "game-icons:distress-signal",
+        "verdict": "ok"
+      },
+      "ὀκτώ": {
+        "icon": "game-icons:eight-ball",
+        "verdict": "ok"
+      },
+      "ὀλίγος": {
+        "icon": "ph:gender-neuter",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀνειδισμός": {
+        "icon": "game-icons:bear-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀργίζω": {
+        "icon": "game-icons:angry-eyes",
+        "verdict": "ok"
+      },
+      "ὀρθρίζω": {
+        "icon": "mdi:elevation-rise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀρθός": {
+        "icon": "ph:heart-straight",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀρθῶς": {
+        "icon": "game-icons:straight-pipe",
+        "verdict": "ok"
+      },
+      "ὀσμή": {
+        "icon": "game-icons:nose-side",
+        "verdict": "ok"
+      },
+      "ὀχυρός": {
+        "icon": "mdi:image-filter-center-focus-strong",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὀχύρωμα": {
+        "icon": "game-icons:locked-fortress",
+        "verdict": "ok"
+      },
+      "ὁδεύω": {
+        "icon": "mdi:wallet-travel",
+        "verdict": "ok"
+      },
+      "ὁδηγέω": {
+        "icon": "tabler:arrow-guide",
+        "verdict": "ok"
+      },
+      "ὁλοκαύτωσις": {
+        "icon": "mdi:music-note-whole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁμοίως": {
+        "icon": "game-icons:heavy-helm",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁμοίωσις": {
+        "icon": "game-icons:heavy-rain",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁμοιότης": {
+        "icon": "game-icons:heavy-timer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁμοῦ": {
+        "icon": "ph:handshake-light",
+        "verdict": "ok"
+      },
+      "ὁπλίζομαι": {
+        "icon": "mdi:arm-flex",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁσίως": {
+        "icon": "ph:shirt-folded-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὁσιότης": {
+        "icon": "ph:shirt-folded-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὄντως": {
+        "icon": "mdi:lan-check",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὄχλος": {
+        "icon": "game-icons:private-first-class",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅθεν": {
+        "icon": "mdi:ray-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅλος": {
+        "icon": "mdi:music-note-whole-dotted",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅμοιος": {
+        "icon": "game-icons:heavy-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅμως": {
+        "icon": "game-icons:bow-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅπλον": {
+        "icon": "mdi:instrument-triangle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅραμα": {
+        "icon": "game-icons:spectacle-lenses",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅριον": {
+        "icon": "tabler:world-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅσιος": {
+        "icon": "game-icons:holy-hand-grenade",
+        "verdict": "wrong",
+        "reason": "逐張看圖：desert-eagle 是手槍不是曠野、holy-hand-grenade 是 Monty Python、hades-symbol 是冥王雙叉戟、william-tell 是射蘋果、raise-skeleton／raise-zombie 是喚起亡靈、instrument-triangle 是三角鐵"
+      },
+      "ὅσπερ": {
+        "icon": "ph:text-h-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὅτι": {
+        "icon": "tabler:arrow-back",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑμέτερος": {
+        "icon": "game-icons:fire-silhouette",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑμεῖς": {
+        "icon": "tabler:hand-love-you",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπάγω": {
+        "icon": "ph:hand-withdraw",
+        "verdict": "ok"
+      },
+      "ὑπάρχοντα": {
+        "icon": "game-icons:pay-money",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπάρχω": {
+        "icon": "mdi:calendar-week-begin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπερήφανος": {
+        "icon": "tabler:face-mask-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπερβολή": {
+        "icon": "game-icons:top-hat",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπερηφανία": {
+        "icon": "mdi:baby-face-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑποστρέφω": {
+        "icon": "tabler:arrow-sharp-turn-left",
+        "verdict": "ok"
+      },
+      "ὑποτάσσω": {
+        "icon": "ph:person-simple-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑπόκρισις": {
+        "icon": "mdi:mixed-martial-arts",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑστερέω": {
+        "icon": "mdi:text-short",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑψηλός": {
+        "icon": "tabler:sun-high",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὑψόω": {
+        "icon": "tabler:aerial-lift-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὕβρις": {
+        "icon": "mdi:face-recognition",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὕστερον": {
+        "icon": "game-icons:arrow-dunk",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὕψιστος": {
+        "icon": "game-icons:high-five",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὕψος": {
+        "icon": "game-icons:body-height",
+        "verdict": "ok"
+      },
+      "ὠφελέω": {
+        "icon": "mdi:help-box",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὡσαύτως": {
+        "icon": "game-icons:heavy-collar",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ὥρα": {
+        "icon": "tabler:clock-hour-1",
+        "verdict": "ok"
+      },
+      "ὧδε": {
+        "icon": "mdi:liquid-spot",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ῥάβδος": {
+        "icon": "tabler:clef-staff",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ῥέω": {
+        "icon": "ph:flow-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ῥᾴδιος": {
+        "icon": "mdi:thumbs-up-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ῥῆμα": {
+        "icon": "game-icons:matter-states",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
       }
     },
     "latin": {
@@ -8690,6 +9446,442 @@
         "icon": "ph:not-equals-light",
         "verdict": "wrong",
         "reason": "規則判定：圖示本名帶否定（-off／no-／not-，畫的是打叉的相反意思）、是商標電玩動漫塔羅、或是介面元件與檔案格式。兩張樣張 242 張全部看過，無例外"
+      },
+      "accendo, accendere, accendi, accensus": {
+        "icon": "game-icons:kindle",
+        "verdict": "ok"
+      },
+      "admitto, admittere, admisi, admissus": {
+        "icon": "game-icons:join",
+        "verdict": "ok"
+      },
+      "agnosco, agnoscere, agnoui, agnitus": {
+        "icon": "game-icons:brain",
+        "verdict": "ok"
+      },
+      "annuntio, annuntiare, annuntiaui, annuntiatus": {
+        "icon": "game-icons:megaphone",
+        "verdict": "ok"
+      },
+      "antiquus, -a, -um": {
+        "icon": "tabler:old",
+        "verdict": "ok"
+      },
+      "apostolicus, -a, -um": {
+        "icon": "ph:tray",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "aptus, -a, -um": {
+        "icon": "game-icons:puzzle",
+        "verdict": "ok"
+      },
+      "arbitrium, arbitri(i)": {
+        "icon": "game-icons:choice",
+        "verdict": "ok"
+      },
+      "arbitror, arbitrari, arbitratus sum": {
+        "icon": "game-icons:think",
+        "verdict": "ok"
+      },
+      "attraho, attrahere, attraxi, attractus": {
+        "icon": "game-icons:magnet",
+        "verdict": "ok"
+      },
+      "audio, audire, audiui (audii), auditus": {
+        "icon": "ph:ear",
+        "verdict": "ok"
+      },
+      "aurum, auri, n.": {
+        "icon": "mdi:gold",
+        "verdict": "ok"
+      },
+      "baptisma, baptismatis, n.": {
+        "icon": "tabler:droplet",
+        "verdict": "ok"
+      },
+      "basilica, basilicae": {
+        "icon": "tabler:exchange",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "caelestis, caeleste": {
+        "icon": "ph:cloud",
+        "verdict": "ok"
+      },
+      "capitulum, capituli": {
+        "icon": "ph:article",
+        "verdict": "ok"
+      },
+      "cereus, cerei, m.": {
+        "icon": "mdi:candle",
+        "verdict": "ok"
+      },
+      "ciuitas, ciuitatis, f.": {
+        "icon": "ph:city",
+        "verdict": "ok"
+      },
+      "claritas, claritatis, f.": {
+        "icon": "tabler:brightness",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "coaduno, coadunare, coadunaui, coadunatus": {
+        "icon": "ph:unite",
+        "verdict": "ok"
+      },
+      "columna, columnae, f.": {
+        "icon": "mdi:pillar",
+        "verdict": "ok"
+      },
+      "communico, communicare, communicaui, communicatus": {
+        "icon": "game-icons:share",
+        "verdict": "ok"
+      },
+      "compono, componere, composui, compositus": {
+        "icon": "mdi:compare",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "condicio, condicionis": {
+        "icon": "ph:option",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "consequor, consequi, —, consecutus sum": {
+        "icon": "game-icons:fist",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "consideratio, considerationis": {
+        "icon": "game-icons:gaze",
+        "verdict": "ok"
+      },
+      "consilium, consili(i)": {
+        "icon": "game-icons:discussion",
+        "verdict": "ok"
+      },
+      "consisto, consistere, constiti, constitus": {
+        "icon": "ph:stop",
+        "verdict": "ok"
+      },
+      "contentio, contentionis": {
+        "icon": "tabler:stretching",
+        "verdict": "ok"
+      },
+      "continenter": {
+        "icon": "ph:pause",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "contineo, continere, continui, contentus": {
+        "icon": "mdi:contain",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "cotidie": {
+        "icon": "game-icons:calendar",
+        "verdict": "ok"
+      },
+      "creatio, creationis": {
+        "icon": "mdi:creation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "curia, curiae, f.": {
+        "icon": "ph:building",
+        "verdict": "ok"
+      },
+      "damnum, damni, n.": {
+        "icon": "game-icons:biohazard",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "deduco, deducere, deduxi, deductus": {
+        "icon": "game-icons:pull",
+        "verdict": "ok"
+      },
+      "desertus, -a, -um": {
+        "icon": "game-icons:desert",
+        "verdict": "ok"
+      },
+      "desiderium, desiderii, n.": {
+        "icon": "ph:heart",
+        "verdict": "ok"
+      },
+      "dextera, dexterae, f.": {
+        "icon": "game-icons:pointing",
+        "verdict": "ok"
+      },
+      "dignitas, dignitanis, f.": {
+        "icon": "game-icons:crown",
+        "verdict": "ok"
+      },
+      "dirig o, dirigere, direxi, directus": {
+        "icon": "game-icons:compass",
+        "verdict": "ok"
+      },
+      "disco, discere, didici, —": {
+        "icon": "ph:student",
+        "verdict": "ok"
+      },
+      "discretio, discretionis": {
+        "icon": "ph:power",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "dispositio, dispositionis": {
+        "icon": "ph:layout",
+        "verdict": "ok"
+      },
+      "distinguo, distinguere, distinxi, distinctus": {
+        "icon": "ph:divide",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "diuerto, diuertere, diuerti, diuersus": {
+        "icon": "game-icons:divert",
+        "verdict": "ok"
+      },
+      "diues": {
+        "icon": "ph:money",
+        "verdict": "ok"
+      },
+      "domus, domi, f.": {
+        "icon": "mdi:home",
+        "verdict": "ok"
+      },
+      "dubium, dubi(i)": {
+        "icon": "ph:question",
+        "verdict": "ok"
+      },
+      "dubius, dubia, dubium": {
+        "icon": "mdi:variable",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "ecclesia, ecclesiae, f.": {
+        "icon": "game-icons:church",
+        "verdict": "ok"
+      },
+      "edo, edare, edidi, editus": {
+        "icon": "ph:eject",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "eligo, eligere, elegi, electus": {
+        "icon": "mdi:ballot",
+        "verdict": "ok"
+      },
+      "emitto, emittere, emisi, emissus": {
+        "icon": "mdi:send",
+        "verdict": "ok"
+      },
+      "en": {
+        "icon": "game-icons:behold",
+        "verdict": "ok"
+      },
+      "euangelium, euangelii": {
+        "icon": "tabler:news",
+        "verdict": "ok"
+      },
+      "eucharistia, eucharistiae": {
+        "icon": "game-icons:bread",
+        "verdict": "ok"
+      },
+      "exprimo, exprimere, expressi, expressus": {
+        "icon": "ph:balloon",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "exspiro, exspirare, exspiraui, exspiratus": {
+        "icon": "ph:skull",
+        "verdict": "ok"
+      },
+      "extollo, extollere, extuli, —": {
+        "icon": "game-icons:lift",
+        "verdict": "ok"
+      },
+      "factum, facti": {
+        "icon": "game-icons:achievement",
+        "verdict": "ok"
+      },
+      "flamma, flammae, f.": {
+        "icon": "game-icons:flame",
+        "verdict": "ok"
+      },
+      "fortis, forte": {
+        "icon": "game-icons:strong",
+        "verdict": "ok"
+      },
+      "gens, gentis, gentium, f.": {
+        "icon": "game-icons:globe",
+        "verdict": "ok"
+      },
+      "grauitas, grauitatis": {
+        "icon": "game-icons:weight",
+        "verdict": "ok"
+      },
+      "hierarchia, hierarchiae": {
+        "icon": "tabler:hierarchy",
+        "verdict": "ok"
+      },
+      "homo, hominis, m.": {
+        "icon": "mdi:human",
+        "verdict": "ok"
+      },
+      "illustro, illustrare, illustraui, illustratus": {
+        "icon": "game-icons:flashlight",
+        "verdict": "ok"
+      },
+      "imitor, imitari, imitatus sum": {
+        "icon": "ph:copy",
+        "verdict": "ok"
+      },
+      "immuto, immutare, immutaui, immutatus": {
+        "icon": "game-icons:transform",
+        "verdict": "ok"
+      },
+      "imperium, imperii, n.": {
+        "icon": "ph:receipt",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "inanis, inanis, inane": {
+        "icon": "ph:empty",
+        "verdict": "ok"
+      },
+      "incensum, incensi, n.": {
+        "icon": "game-icons:incense",
+        "verdict": "ok"
+      },
+      "incrementum, incrementi": {
+        "icon": "game-icons:growth",
+        "verdict": "ok"
+      },
+      "indeficiens (gen., indeficientis)": {
+        "icon": "game-icons:infinity",
+        "verdict": "ok"
+      },
+      "indicium, indici(i)": {
+        "icon": "mdi:information",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "infirmitas, infirmitatis": {
+        "icon": "ph:thermometer",
+        "verdict": "ok"
+      },
+      "ingenium, ingeni(i)": {
+        "icon": "mdi:nature",
+        "verdict": "ok"
+      },
+      "inquiro, inquirere, inquisiui, inquisitus": {
+        "icon": "tabler:search",
+        "verdict": "ok"
+      },
+      "instar": {
+        "icon": "ph:image",
+        "verdict": "ok"
+      },
+      "insto, instare, institi, —": {
+        "icon": "ph:warning",
+        "verdict": "ok"
+      },
+      "instrumentum, instrumenti": {
+        "icon": "tabler:tool",
+        "verdict": "ok"
+      },
+      "insula, insulae": {
+        "icon": "game-icons:island",
+        "verdict": "ok"
+      },
+      "interdico, interdicere, interdixi, interdictus": {
+        "icon": "tabler:forbid",
+        "verdict": "ok"
+      },
+      "interpretatio, interpretationis": {
+        "icon": "tabler:bubble",
+        "verdict": "ok"
+      },
+      "inuisibilis, inuisible": {
+        "icon": "game-icons:invisible",
+        "verdict": "ok"
+      },
+      "iuuenis, iuuenis, iuuene": {
+        "icon": "ph:baby",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "labor, laboris": {
+        "icon": "ph:hammer",
+        "verdict": "ok"
+      },
+      "largitas, largitatis": {
+        "icon": "ph:gift",
+        "verdict": "ok"
+      },
+      "lateo, latere, latui": {
+        "icon": "game-icons:hidden",
+        "verdict": "ok"
+      },
+      "lauo, lauare, laui, lautus": {
+        "icon": "tabler:wash",
+        "verdict": "ok"
+      },
+      "leo, leonis": {
+        "icon": "game-icons:lion",
+        "verdict": "ok"
+      },
+      "licet": {
+        "icon": "ph:shuffle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
+      },
+      "littera, litterae": {
+        "icon": "ph:books",
+        "verdict": "ok"
+      },
+      "luminare, luminaris, luminarium, n.": {
+        "icon": "ph:lamp",
+        "verdict": "ok"
+      },
+      "lux, lucis, f.": {
+        "icon": "game-icons:bulb",
+        "verdict": "ok"
+      },
+      "materia, materiae": {
+        "icon": "tabler:wood",
+        "verdict": "ok"
+      },
+      "mercor, mercari, mercatus sum": {
+        "icon": "game-icons:trade",
+        "verdict": "ok"
+      },
+      "metus, metus": {
+        "icon": "game-icons:dread",
+        "verdict": "ok"
+      },
+      "mons, montis, montium, m.": {
+        "icon": "tabler:mountain",
+        "verdict": "ok"
+      },
+      "monumentum, monumenti, n.": {
+        "icon": "game-icons:coffin",
+        "verdict": "ok"
+      },
+      "moueo, mouere, moui, motus": {
+        "icon": "game-icons:move",
+        "verdict": "ok"
+      },
+      "mulier, mulieris, f.": {
+        "icon": "tabler:woman",
+        "verdict": "ok"
+      },
+      "nimirum": {
+        "icon": "ph:eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：text-h-one 是 H1 標題、mixed-martial-arts 是綜合格鬥手套、matter-states 是物質三態、ph:pause 配「連續不斷」是相反、ph:power 是電源鍵、mdi:variable 是數學變數"
       }
     }
   }
