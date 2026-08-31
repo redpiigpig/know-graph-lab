@@ -246,8 +246,14 @@ def _r2_existing(s3, bucket: str) -> set[str]:
 
 def cmd_push_r2(only: str | None, force: bool = False, suffix: str | None = None):
     s3, bucket = _r2(), _env("R2_BUCKET")
-    src = LOCAL_OUT if LOCAL_OUT.exists() else tc.OUT_DIR
+    # 🚨 來源必須是 Drive（正本），不是本機 out/。
+    # 原本寫成「本機目錄存在就用本機」，但 tripitaka_cbeta 是**建到 Drive** 的，
+    # 而 tripitaka_sanskrit／vernacular 建到本機 —— 兩邊內容不一樣。
+    # 於是推 X 那 2,480 個檔時，它去掃本機（沒有 X）、發現本機的檔 R2 都已有，
+    # 印出「✓ R2 0 檔」當作成功，X 一個都沒上去。見 SKILL 踩坑 25。
+    src = tc.OUT_DIR if tc.OUT_DIR.exists() else LOCAL_OUT
     files = sorted(src.glob(f"{only}.*" if only else "*"))
+    print(f"來源 {src}（{len(files)} 檔）", flush=True)
     if suffix:
         # 只重推某一類檔（例：對照層重建後只有 *.orig.json 變了，
         # 不必把 108 MB 的正文再推一遍）
