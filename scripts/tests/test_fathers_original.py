@@ -356,3 +356,76 @@ def test_ocr_may_drop_a_section_and_the_next_still_lands():
     """OCR 偶爾漏掉一個節號（ς΄ 最常漏）。往下跳兩節之內仍要收，否則後面全丟。"""
     got = fo.parse_greek_sections("α΄. ενα\nβ΄. δυο\nδ΄. τεσσερα\n")
     assert set(got) == {(None, 1), (None, 2), (None, 4)}
+
+
+# ── 行首羅馬章號（特土良全集那一系）─────────────────────────────────────────
+TERT = """Tertullian: Apology
+
+TERTULLIANI APOLOGETICUM
+
+I. [1] Si non licet vobis, Romani imperii antistites, in aperto et edito.
+[2] Nihil de causa sua deprecatur, quia nec de condicione miratur.
+
+II. [1] Si certum est nos nocentissimos esse.
+
+III. [1] Quid quod ita plerique clausis oculis in odium eius impingunt.
+
+The Latin Library
+"""
+
+
+def test_parse_chapter_markers():
+    got = fo.parse_chapter_markers(TERT)
+    assert set(got) == {(None, 1), (None, 2), (None, 3)}
+    assert got[(None, 1)].startswith("[1] Si non licet")
+    assert "[2] Nihil de causa" in got[(None, 1)]      # 章內的節接在同一章
+    assert got[(None, 2)].startswith("[1] Si certum")
+
+
+def test_parse_chapter_markers_drops_heading_and_chrome():
+    joined = "".join(fo.parse_chapter_markers(TERT).values())
+    assert "APOLOGETICUM" not in joined
+    assert "The Latin Library" not in joined
+
+
+def test_parse_chapter_markers_rejects_out_of_sequence_numerals():
+    """正文裡以大寫羅馬字母起頭又跟著句點的行（縮寫、人名）不可當成新的一章，
+    否則後面的內容會被整段切走。"""
+    text = "I. [1] primum\nD. Iunius Iuvenalis haec scripsit.\nII. [1] secundum\n"
+    got = fo.parse_chapter_markers(text)
+    assert set(got) == {(None, 1), (None, 2)}
+    assert "Iuvenalis" in got[(None, 1)]               # 當成第 1 章的內文接下去
+
+
+def test_roman_chapters_feed_the_chapter_aligner():
+    body = ["### 第一章", "若不許你們…", "# 第二章", "倘若我們確實是…"]
+    col, hit, heads = fo.align_by_chapter_heading(body, None, fo.parse_chapter_markers(TERT))
+    assert (hit, heads) == (2, 2)
+    assert col[0].startswith("[1] Si non licet")
+    assert col[2].startswith("[1] Si certum")
+
+
+# The Latin Library 的特土良同一位作者就有五種章標寫法，解析器要自己認出用哪一種。
+@pytest.mark.parametrize("text,label", [
+    ("I. [1] alpha\n\nII. [1] beta\n\nIII. [1] gamma\n", "行首羅馬數字後接正文"),
+    ("I\n[1] alpha\n\nII\n[1] beta\n\nIII\n[1] gamma\n", "羅馬數字獨佔一行"),
+    ("Capitulum I\n[1] alpha\nCapitulum II\n[1] beta\nCapitulum III\n[1] gamma\n", "Capitulum"),
+    ("CAPUT 1. [1] alpha\nCAPUT 2. [1] beta\nCAPUT 3. [1] gamma\n", "CAPUT＋阿拉伯數字"),
+    ("LIBER DE BAPTISMO CAP. 1. [1] alpha CAP. 2. [1] beta CAP. 3. [1] gamma", "整篇不換行"),
+])
+def test_chapter_markers_cover_every_house_style(text, label):
+    got = fo.parse_chapter_markers(text)
+    assert set(got) == {(None, 1), (None, 2), (None, 3)}, label
+    assert got[(None, 1)].startswith("[1] alpha"), label
+    assert "beta" not in got[(None, 1)], label      # 不可把下一章吞進來
+
+
+def test_chapter_markers_do_not_swallow_the_next_marker():
+    """章內文要切到「下一個章標之前」。切到之後的話，每一章都會把下一章的標記
+    吞進來，畫面上看起來只是多了幾個字，實際上章與章的邊界整個錯開。"""
+    got = fo.parse_chapter_markers("I. [1] alpha\n\nII. [1] beta\n")
+    assert "II" not in got[(None, 1)]
+
+
+def test_chapter_markers_need_at_least_two():
+    assert fo.parse_chapter_markers("I. [1] only one chapter\n") == {}

@@ -76,24 +76,58 @@ def categories(html: str):
     return [(mc, c, n) for (mc, c), n in sorted(out.items())]
 
 
+ART_RE = re.compile(r"3-3\.php\?cat=(\d+)&article=(\d{5,})")
+
+
 def parse_listing(html: str, cat: int):
-    """→ [{id, date, author, title}]；日期與作者只在列表頁上。"""
+    """→ [{id, cat, date, author, title}]；日期與作者只在列表頁上。
+
+    列表頁有兩種版型，兩種都要收：
+      div.card     分類列表本體，一頁 12 篇；日期在 span.date、作者在 span.author
+      div.caption  頁首輪播 6 篇，每一頁都一樣；日期刊名作者擠在 div.description
+    兩種的作者都是「刊名連結後面那段純文字」（本報訊／記者梁敬彥／編譯余友梅…），
+    所以先把 <a> 拆掉再取剩下的字。12+6=18 正好是 PER_PAGE。
+
+    最後再用寬鬆的方式把不在這兩種盒子裡的文章連結補進來（只有日期、沒有作者）：
+    版型日後若再改，寧可少一個作者，也不要整批文章漏收。
+    """
     soup = BeautifulSoup(html, "html.parser")
     rows, seen = [], set()
-    for a in soup.find_all("a", href=True):
-        m = re.search(r"3-3\.php\?cat=(\d+)&article=(\d{5,})", a["href"])
-        if not m:
-            continue
-        aid = int(m.group(2))
-        title = clean(a.get_text())
+
+    def add(aid, cat_id, title, date, author):
         if not title or aid in seen:
-            continue
+            return
         seen.add(aid)
+        rows.append({"id": aid, "cat": cat_id, "date": date,
+                     "author": author, "title": title})
+
+    for box in soup.select("div.card, div.caption"):
+        link = next((a for a in box.find_all("a", href=True)
+                     if ART_RE.search(a["href"]) and clean(a.get_text())), None)
+        if not link:
+            continue
+        m = ART_RE.search(link["href"])
+        blob = clean(box.get_text(" "))          # 先取日期，下面會改動 meta
+        md = DATE_RE.search(blob)
+        date = f"{md.group(1)}-{int(md.group(2)):02d}-{int(md.group(3)):02d}" if md else ""
+        author = ""
+        meta = box.select_one("span.author, div.description")
+        if meta:
+            for x in meta.find_all("a"):         # 拆掉刊名連結，剩下的就是署名
+                x.extract()
+            author = DATE_RE.sub("", clean(meta.get_text(" "))).strip(" |｜/、,")
+        add(int(m.group(2)), int(m.group(1)), clean(link.get_text()), date, author)
+
+    for a in soup.find_all("a", href=True):      # 後備：漏網的照舊只取日期
+        m = ART_RE.search(a["href"])
+        if not m or int(m.group(2)) in seen:
+            continue
         par = a.find_parent(["li", "div", "tr", "td"])
         blob = clean(par.get_text(" ")) if par else ""
         md = DATE_RE.search(blob)
         date = f"{md.group(1)}-{int(md.group(2)):02d}-{int(md.group(3)):02d}" if md else ""
-        rows.append({"id": aid, "cat": int(m.group(1)), "date": date, "title": title})
+        add(int(m.group(2)), int(m.group(1)), clean(a.get_text()), date, "")
+
     return rows
 
 
@@ -115,7 +149,14 @@ def harvest(max_pages=300):
             rows = parse_listing(html, c)
             ids = {r["id"] for r in rows}
             for r in rows:
-                arts.setdefault(r["id"], r)
+                cur = arts.get(r["id"])
+                if cur is None:
+                    arts[r["id"]] = r
+                else:
+                    # 只補空欄位：chars 是 --process 算出來的，不能被列表頁蓋掉
+                    for k, v in r.items():
+                        if v and not cur.get(k):
+                            cur[k] = v
             # 終止條件只看「這一頁還是不是真的列表頁」，不能看「有沒有新文章」——
             # 續跑時前幾頁本來就都收過了，用新舊判斷會一開頁就誤判到底。
             if page == 1:
@@ -226,7 +267,8 @@ def publish():
     INDEX_OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 
     # 篇目清單（不含全文）另存一份給頁面用；只留有全文的，避免點開全是空的
-    arts = [{"id": r["id"], "cat": r["cat"], "date": r["date"], "title": r["title"]}
+    arts = [{"id": r["id"], "cat": r["cat"], "date": r["date"],
+             "author": r.get("author", ""), "title": r["title"]}
             for r in rows if f"{R2_TXT}/{r['id']}.txt" in have]
     arts.sort(key=lambda r: (r["date"], r["id"]), reverse=True)
     (INDEX_OUT.parent / "ct-articles.json").write_text(

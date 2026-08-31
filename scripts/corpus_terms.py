@@ -53,7 +53,7 @@ def all_terms():
 # ── 各語料的讀法：回傳 (doc_id, 年, 標題, 全文) ──────────────────────────
 def iter_tcnn():
     for key in sorted(df.r2_existing_keys("pct-fulltext/tcnn")):
-        body = df.s3.get_object(Bucket=df.R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
+        body = df.r2_get_text(key)
         for line in body.splitlines():
             if not line.strip():
                 continue
@@ -65,7 +65,7 @@ def _iter_txt(prefix, meta_by_key):
     """逐篇一個 .txt 的語料；年份與標題由 index 檔提供（沒有就留空）。"""
     for key in sorted(df.r2_existing_keys(prefix)):
         meta = meta_by_key.get(key, {})
-        text = df.s3.get_object(Bucket=df.R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
+        text = df.r2_get_text(key)
         yield key, meta.get("year", ""), meta.get("title", Path(key).stem), text
 
 

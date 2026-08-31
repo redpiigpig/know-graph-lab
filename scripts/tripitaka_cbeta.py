@@ -116,20 +116,142 @@ NANCHUAN_DIVISIONS: list[tuple[str, str, int, int]] = [
     ("n-outside",    "藏外",   63, 70),  # 彌蘭王問・史書・清淨道論・攝義論・阿育王刻文
 ]
 
+# ─────────────────────────────────────────────────────────────
+# 卍新纂大日本續藏經 X 部（88 冊）。
+#
+# 🚨 部類邊界**不是憑記憶寫的**，是抓 CBETA 站方的「原書目錄」樹：
+#     https://cbdata.dila.edu.tw/stable/catalog_entry?q=orig-X
+#   （2026-08-31 取；第一層 7 部類、第二層 109 子類，經號區間由站方標明）
+#   X 的 teiHeader 裡**沒有任何分類欄位**（<title level="s"> 一律是藏經名），
+#   所以分部資訊只能外求，不能像南傳那樣實掃卷首標題。
+#
+# 第一層的經號區間連續覆蓋 1–1671，故可沿用 T 那套「按經號分部」。
+# 第二層有三個子類的經號是**交錯不連續**的（史傳部的雜傳／感應神異傳／
+# 居士善女傳），所以子類一律用「多段區間」表示，不可假設連續。
+#
+# ⚠ CBETA 收的是**選錄**（站方自書「卍新纂續藏經選錄」）：經號到 1671，
+#   但實際只有 1,230 部有 XML。缺的不是本站漏抓，凡例須註明。
+# ─────────────────────────────────────────────────────────────
+XUZANG_DIVISIONS: list[tuple[str, str, int, int]] = [
+    ("x-india", "印度撰述", 1, 207),  # X01-02
+    ("x-jingshu", "大小乘釋經部", 208, 675),  # X03-37
+    ("x-lushu", "大小乘釋律部", 676, 751),  # X38-44
+    ("x-lunshu", "大小乘釋論部", 752, 862),  # X45-53
+    ("x-zhuzong", "諸宗著述部", 863, 1458),  # X54-73
+    ("x-lichan", "禮懺部", 1459, 1507),  # X74
+    ("x-shizhuan", "史傳部", 1508, 1671),  # X75-88
+]
+
+XUZANG_SUBDIVISIONS: list[tuple[str, str, list[tuple[int, int]]]] = [
+    # ── X01-02 印度撰述 ──
+    ("x-india-001", "經部", [(1, 45)]),
+    ("x-india-002", "律部", [(46, 51)]),
+    ("x-india-003", "論集部", [(52, 58)]),
+    ("x-india-004", "密經儀軌部", [(59, 207)]),
+    # ── X03-37 大小乘釋經部 ──
+    ("x-jingshu-001", "華嚴部疏", [(208, 242)]),
+    ("x-jingshu-002", "方等部疏", [(243, 447)]),
+    ("x-jingshu-003", "般若部疏", [(448, 576)]),
+    ("x-jingshu-004", "法華部疏", [(577, 652)]),
+    ("x-jingshu-005", "涅槃部疏", [(653, 664)]),
+    ("x-jingshu-006", "小乘經並聖賢集疏", [(665, 675)]),
+    # ── X38-44 大小乘釋律部 ──
+    ("x-lushu-001", "大乘律疏", [(676, 706)]),
+    ("x-lushu-002", "小乘律疏", [(707, 749)]),
+    ("x-lushu-003", "疑似雜偽律疏", [(750, 751)]),
+    # ── X45-53 大小乘釋論部 ──
+    ("x-lunshu-001", "淨土論疏", [(752, 752)]),
+    ("x-lunshu-002", "十地經論疏", [(753, 753)]),
+    ("x-lunshu-003", "起信論疏", [(754, 769)]),
+    ("x-lunshu-004", "釋摩訶衍論疏", [(770, 776)]),
+    ("x-lunshu-005", "金剛頂菩提心論疏", [(777, 777)]),
+    ("x-lunshu-006", "三論部疏", [(778, 783)]),
+    ("x-lunshu-007", "四論部疏", [(784, 784)]),
+    ("x-lunshu-008", "法界無差別論疏", [(785, 787)]),
+    ("x-lunshu-009", "掌珍論疏", [(788, 788)]),
+    ("x-lunshu-010", "法華論疏", [(789, 790)]),
+    ("x-lunshu-011", "般若論疏", [(791, 792)]),
+    ("x-lunshu-012", "瑜伽論疏", [(793, 795)]),
+    ("x-lunshu-013", "雜集論疏", [(796, 796)]),
+    ("x-lunshu-014", "中邊論疏", [(797, 798)]),
+    ("x-lunshu-015", "百法並百法明門論疏", [(799, 805)]),
+    ("x-lunshu-016", "唯識論疏", [(806, 829)]),
+    ("x-lunshu-017", "觀所緣緣論疏", [(830, 833)]),
+    ("x-lunshu-018", "俱舍並順正論疏", [(834, 843)]),
+    ("x-lunshu-019", "異部宗輪論疏", [(844, 844)]),
+    ("x-lunshu-020", "遺教經論疏", [(845, 846)]),
+    ("x-lunshu-021", "因明論疏", [(847, 862)]),
+    # ── X54-73 諸宗著述部 ──
+    ("x-zhuzong-001", "三論宗", [(863, 880)]),
+    ("x-zhuzong-002", "法相宗", [(881, 902)]),
+    ("x-zhuzong-003", "天台宗", [(903, 980)]),
+    ("x-zhuzong-004", "華嚴宗", [(981, 1033)]),
+    ("x-zhuzong-005", "真言宗", [(1034, 1084)]),
+    ("x-zhuzong-006", "戒律宗", [(1085, 1139)]),
+    ("x-zhuzong-007", "淨土宗", [(1140, 1216)]),
+    ("x-zhuzong-008", "禪宗雜著", [(1217, 1294)]),
+    ("x-zhuzong-009", "禪宗語錄通集", [(1295, 1319)]),
+    ("x-zhuzong-010", "禪宗語錄別集", [(1320, 1458)]),
+    # X74 禮懺部：站方未再分子類（列的是逐部經），不設子類
+    # ── X75-88 史傳部 ──
+    ("x-shizhuan-001", "釋迦傳", [(1508, 1511)]),
+    ("x-shizhuan-002", "編年通史", [(1512, 1521)]),
+    ("x-shizhuan-003", "諸宗通傳", [(1522, 1527)]),
+    ("x-shizhuan-004", "華嚴宗", [(1528, 1534)]),
+    ("x-shizhuan-005", "天台宗", [(1535, 1542)]),
+    ("x-shizhuan-006", "淨土宗", [(1543, 1552)]),
+    ("x-shizhuan-007", "禪宗", [(1553, 1622)]),
+    ("x-shizhuan-008", "法相宗", [(1651, 1651)]),
+    ("x-shizhuan-009", "真言宗", [(1652, 1654)]),
+    ("x-shizhuan-010", "戒律宗", [(1655, 1655)]),
+    ("x-shizhuan-011", "雜傳", [(1623, 1628), (1640, 1645), (1647, 1650), (1656, 1656), (1658, 1659), (1666, 1667)]),
+    ("x-shizhuan-012", "感應神異傳", [(1629, 1639), (1660, 1661)]),
+    ("x-shizhuan-013", "居士善女傳", [(1646, 1646), (1657, 1657)]),
+    ("x-shizhuan-014", "古剎傳", [(1662, 1665)]),
+    ("x-shizhuan-015", "剌麻教", [(1668, 1668)]),
+    ("x-shizhuan-016", "朝鮮僧史", [(1669, 1671)]),
+]
+
+
 # 大正藏 T56–T84（日本撰述部）CBETA 未收錄 XML，故下列部類必然為空。
 # 保留區間定義以求分類完整，但目錄頁不列出（凡例須說明「非本站遺漏」）。
 CBETA_MISSING_VOLS = set(range(56, 85))
 
 def division_of(canon: str, work_no: int, vol: int = 0) -> str:
-    """T 按經號分部，N 按冊號分部（N 的經號只是冊內序號，不可拿來分部）。"""
+    """T／X 按經號分部，N 按冊號分部（N 的經號只是冊內序號，不可拿來分部）。
+
+    🚨 原本寫成「不是 T 就套南傳表」，加 X 進來時那個 else 會把整部續藏
+    默默按冊號丟進南傳的八個分部裡 —— 每一部都會拿到一個看起來正常的
+    division_key（X01 → n-vinaya…），目錄頁完全不會報錯。故改成明列。
+    """
     if canon == "T":
         table, n = TAISHO_DIVISIONS, work_no
-    else:
+    elif canon == "X":
+        table, n = XUZANG_DIVISIONS, work_no
+    elif canon == "N":
         table, n = NANCHUAN_DIVISIONS, vol
+    else:
+        raise ValueError(f"未知的藏經代號 {canon!r}：要先為它定義部類表，"
+                         f"不可沿用別藏的表")
     for key, _label, lo, hi in table:
         if lo <= n <= hi:
             return key
     return "other"
+
+
+def subdivision_of(canon: str, work_no: int) -> str:
+    """X 的第二層子類（宗派／經疏類目）。只有 X 有；其餘藏回空字串。
+
+    子類的經號**可能交錯不連續**（史傳部的雜傳散在 1623-1628、1640-1645…），
+    所以是多段區間比對，不是單一 lo..hi。
+    """
+    if canon != "X":
+        return ""
+    for key, _label, spans in XUZANG_SUBDIVISIONS:
+        for lo, hi in spans:
+            if lo <= work_no <= hi:
+                return key
+    return ""
 
 
 def is_japanese_compilation(canon: str, work_no: int) -> bool:
@@ -261,6 +383,21 @@ SKIP_DIV_TYPES = {"apparatus", "cbeta-notes", "taisho-notes", "add-notes",
                   "rest-notes", "equiv-notes", "orig-notes"}
 
 
+_SPLIT_SUFFIX = re.compile(r"[（(]第\d+卷-第\d+卷[）)]$")
+
+
+def _norm_title(title: str) -> str:
+    """剝掉拆檔書名尾巴的「(第1卷-第44卷)」。
+
+    那是 CBETA 為「同一部書拆成兩個 XML 檔」加的卷範圍註記，不是書名的一部分；
+    留著會讓同一部書的上下半在目錄上看起來是兩本不同的書。
+    全 X 部只有 12 個檔（＝6 部書 × 2）帶這個式樣，實掃確認過。
+    ⚠ 只剝這個確切式樣：「華嚴經論〔卷十〕」「四家語錄卷一」那類的「卷」
+    是書名本身，剝掉就改了書名。
+    """
+    return _SPLIT_SUFFIX.sub("", title).strip()
+
+
 def work_meta(root: ET.Element) -> dict:
     """teiHeader → 目錄欄位。"""
     def _title(level: str, zh: bool) -> str:
@@ -294,16 +431,20 @@ def work_meta(root: ET.Element) -> dict:
     if m:
         juan = int(m.group(1))
 
-    # 作品 id：T 的經號跨冊唯一（T0099 即通行引用式）；
+    # 作品 id：T 與 X 的經號跨冊唯一（T0099、X0240 即通行引用式）；
     # N 的經號只是冊內序號（N01n0001 ≠ N02n0001），必須帶冊號才唯一。
-    wid = f"{canon}{no:04d}{sfx}" if canon == "T" else f"{canon}{vol:02d}n{no:04d}{sfx}"
+    # ⚠ X 有 6 部書因印本跨冊而被切成兩個 XML 檔（華嚴綱要 X08+X09 等），
+    #   兩檔同經號 —— 那是**同一部書的上下半**，不是兩部書。id 取經號即可，
+    #   但建置時必須把兩檔接起來，否則後一檔會把前一檔整個蓋掉（見 split_works）。
+    wid = (f"{canon}{no:04d}{sfx}" if canon in ("T", "X")
+           else f"{canon}{vol:02d}n{no:04d}{sfx}")
     return {
         "id": wid,
         "canon": canon,
         "vol": vol,
         "work_no": no,
         "work_suffix": sfx,
-        "title_zh": _title("m", True) or _title("m", False),
+        "title_zh": _norm_title(_title("m", True) or _title("m", False)),
         "byline": byline,
         "dynasty": bl["dynasty"],
         "translator": bl["translator"],
@@ -313,6 +454,7 @@ def work_meta(root: ET.Element) -> dict:
         "extent": extent,
         "juan_count": juan,
         "division_key": division_of(canon, no, vol),
+        "subdivision_key": subdivision_of(canon, no),
         "japanese": is_japanese_compilation(canon, no),
     }
 
@@ -627,6 +769,71 @@ def parse_equivalents(root: ET.Element, anchor_seg: dict[str, str] | None = None
 def xml_files(canon: str) -> list[Path]:
     root = CBETA_ROOT / canon
     return sorted(root.glob(f"{canon}*/{canon}*n*.xml"))
+
+
+_FILE_RE = re.compile(r"^([A-Z]+)(\d+)n(\d+)([A-Za-z]*)\.xml$")
+
+
+def work_groups(canon: str) -> list[list[Path]]:
+    """檔案 → 依「作品 id」分組，一組就是一部書。
+
+    🚨 X 部有 6 部書因印本跨冊被切成兩個 XML 檔（華嚴綱要 X08n0240＋X09n0240、
+    五燈全書 X81n1571＋X82n1571 …）。逐檔建置會讓後一檔把前一檔**整個蓋掉**
+    （檔名都是 X0240.jsonl），華嚴綱要就只剩卷 45–80 而頁面完全正常 ——
+    少掉的是前 44 卷。故一律先分組再建。
+    T／N 沒有這種情形，每組就一個檔，行為不變。
+    """
+    groups: dict[str, list[Path]] = {}
+    for p in xml_files(canon):
+        m = _FILE_RE.match(p.name)
+        if not m:
+            groups.setdefault(p.name, []).append(p)
+            continue
+        cn, vol, no, sfx = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4)
+        key = (f"{cn}{no:04d}{sfx}" if cn in ("T", "X")
+               else f"{cn}{vol:02d}n{no:04d}{sfx}")
+        groups.setdefault(key, []).append(p)
+    return [sorted(v) for _k, v in sorted(groups.items())]
+
+
+def merge_parts(parts: list[tuple[dict, list[dict], list[dict]]]
+                ) -> tuple[dict, list[dict], list[dict]]:
+    """把同一部書的數個 XML 檔接成一部。
+
+    段的 `i` 與目錄節點的 `i`／`parent`，以及段指向目錄的 `d`，都是**檔內索引**，
+    直接串接會讓後半部的目錄父子鏈指到前半部的節點上 —— 側欄看起來有東西、
+    但層級全錯。故一律位移。段的 uid／seg 帶冊號（X09n0240_p0611a02），
+    跨檔本來就不會撞，詞條與對應註引用的是 uid，不必動。
+    """
+    if len(parts) == 1:
+        return parts[0]
+    meta = dict(parts[0][0])
+    segs: list[dict] = []
+    toc: list[dict] = []
+    terms: list[dict] = []
+    equivs: list[dict] = []
+    for m, s, e in parts:
+        seg_off, toc_off = len(segs), len(toc)
+        for node in m.get("toc", []):
+            n2 = dict(node)
+            n2["i"] += toc_off
+            n2["parent"] = n2["parent"] + toc_off if n2["parent"] >= 0 else -1
+            toc.append(n2)
+        for x in s:
+            x2 = dict(x)
+            x2["i"] += seg_off
+            x2["d"] = x2["d"] + toc_off if x2["d"] >= 0 else -1
+            segs.append(x2)
+        terms.extend(m.get("terms", []))
+        equivs.extend(e)
+    meta["toc"] = toc
+    meta["terms"] = terms
+    # 卷數是各檔相加（華嚴綱要 44 卷＋36 卷＝80 卷）；extent 改寫成合計
+    total_juan = sum(m.get("juan_count") or 0 for m, _, _ in parts)
+    meta["juan_count"] = total_juan
+    meta["extent"] = f"{total_juan}卷" if total_juan else meta.get("extent", "")
+    meta["xml_parts"] = len(parts)
+    return meta, segs, equivs
 
 
 def build_one(path: Path, *, write: bool) -> dict:

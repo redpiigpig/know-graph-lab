@@ -159,6 +159,89 @@ def parse_bracketed_chapters(text: str, book: int,
     return {k: "\n".join(v).strip() for k, v in out.items() if v}
 
 
+# 第三種行標：章號。同一個網站的同一位作者就有五種寫法（實測 The Latin Library
+# 的特土良）：
+#   I. [1] Si non licet…        行首羅馬數字後直接接正文
+#   I / [1] Qui status fidei…   羅馬數字獨佔一行
+#   Capitulum I                 拼出 Capitulum
+#   CAPUT 1. [1] Varie…         拼出 CAPUT，用阿拉伯數字
+#   …CAP. 1. [1] De Sacramento… 整篇沒有換行，章標只能在行中找
+# 所以不預設某一種，而是每種都掃一遍、取「遞增序列最長」的那一種。
+# 🚨 每一種都要允許行首縮排。少了 `[ 	]*`，只要那個檔的行有縮排就一個章標也
+#    掃不到，而腳本只會回報「命中 0」，看不出是格式沒對上還是原典真的沒有。
+CHAPTER_PATTERNS = (
+    re.compile(r"(?:^|(?<=[\s.]))(?:CAPUT|CAP\.|Capitulum|Caput)\s*([IVXLCDM]+|\d+)\s*\.?\s+", re.M),
+    re.compile(r"^[ 	]*([IVXLCDM]{1,7})\.\s+", re.M),
+    re.compile(r"^[ 	]*(\d{1,3})\.\s+", re.M),
+    re.compile(r"^[ 	]*([IVXLCDM]{1,7})\.?[ 	]*$", re.M),
+)
+# 頁尾導覽列，在整篇不換行的檔案裡會黏在最後一章的尾巴。
+TRAILING_CHROME = re.compile(
+    r"(?:Tertullian|Christian Latin|The Latin Library|The Classics Page|"
+    r"Augustine|Ambrose|Jerome)[\s\w]*$")
+
+
+def _longest_increasing(marks):
+    """在候選章標裡取「章號遞增」的最長一串，其餘丟掉。
+
+    不能只用「最多往後跳 N 章」那種簡單門檻：The Latin Library 的
+    de Praescriptione 檔案本身就缺了第 4–22 章，III 之後直接跳 XXIII，門檻一擋
+    就只剩三章。但也不能完全不管——正文裡任何大寫羅馬字母加句點的行（縮寫、
+    人名縮寫）都會被讀成一個天文數字的章號，把後面整串毀掉。取最長遞增子序列
+    兩邊都顧得到：容得下缺章，又會自動丟掉離群值。
+    """
+    if not marks:
+        return []
+    best = [0] * len(marks)
+    prev = [-1] * len(marks)
+    for i in range(len(marks)):
+        best[i] = 1
+        for j in range(i):
+            if marks[j][2] < marks[i][2] and best[j] + 1 > best[i]:
+                best[i] = best[j] + 1
+                prev[i] = j
+    i = max(range(len(marks)), key=lambda k: best[k])
+    out = []
+    while i >= 0:
+        out.append(marks[i])
+        i = prev[i]
+    return out[::-1]
+
+
+def _chapter_marks(text, pat):
+    """該寫法掃得出的 (章標起點, 章標終點, 章號)，取最長遞增的一串。"""
+    found = []
+    for m in pat.finditer(text):
+        token = m.group(1)
+        n = int(token) if token.isdigit() else roman(token)
+        if n is not None and 0 < n < 400:
+            found.append((m.start(), m.end(), n))
+    return _longest_increasing(found)
+
+
+def parse_chapter_markers(text: str) -> dict[tuple[int | None, int], str]:
+    """把帶章標的原典切成 {(None, 章): 文字}，自動判斷該檔用哪一種章標寫法。"""
+    best: list[tuple[int, int, int]] = []
+    for pat in CHAPTER_PATTERNS:
+        marks = _chapter_marks(text, pat)
+        if len(marks) > len(best):
+            best = marks
+    if len(best) < 2:
+        return {}
+    out: dict[tuple[int | None, int], str] = {}
+    for i, (_, mark_end, n) in enumerate(best):
+        # 這一章的正文從自己的章標之後，切到「下一個章標之前」——不是下一個章標
+        # 之後，否則每一章都會把下一章的標記一起吞進來。
+        stop = best[i + 1][0] if i + 1 < len(best) else len(text)
+        body = text[mark_end:stop]
+        if i + 1 == len(best):
+            body = TRAILING_CHROME.sub("", body)
+        kept = [l.strip() for l in body.split("\n")
+                if l.strip() and not SITE_CHROME.match(l.strip())]
+        if kept:
+            out[(None, n)] = "\n".join(kept)
+    return out
+
 # ── 希臘原典（Migne PG 的 OCR 稿）───────────────────────────────────────────
 # 第三種行標：希臘字母數字。ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號正好對得上 NPNF 中英譯
 # 段落開頭的 1. 2. 3.（同一套本篤會編次）。

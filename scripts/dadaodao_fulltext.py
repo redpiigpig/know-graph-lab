@@ -138,6 +138,21 @@ def r2_existing_keys(prefix=TEXT_PREFIX):
 def r2_put_text(key, text):
     s3.put_object(Bucket=R2_BUCKET, Key=key, Body=text.encode("utf-8"), ContentType="text/plain; charset=utf-8")
 
+def r2_get_text(key, attempts=4):
+    """讀一個文字物件，外掛一層重試。
+
+    boto 本身已經 adaptive 重試 10 次，但整批掃語料要讀好幾萬個物件，
+    R2 偶爾回 InternalError 仍會把那 10 次用完。掃到一半炸掉＝整輪重來
+    （語料層 --build 一次要掃九萬多個物件），所以這裡再包一層慢一點的重試。
+    """
+    for i in range(attempts):
+        try:
+            return s3.get_object(Bucket=R2_BUCKET, Key=key)["Body"].read().decode("utf-8")
+        except Exception:
+            if i == attempts - 1:
+                raise
+            time.sleep(2 ** i)
+
 class RateLimited(Exception):
     pass
 
