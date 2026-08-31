@@ -18,6 +18,8 @@
 !/output/source-cache/*.json
 !/output/source-cache/flashcards/
 !/output/source-cache/flashcards/*.json
+!/output/source-cache/pg-greek-ocr/
+!/output/source-cache/pg-greek-ocr/*.jsonl
 !/output/source-cache/original-readers/
 !/output/source-cache/original-readers/*.json
 !/output/source-cache/original-readers/greek-full/

@@ -83,7 +83,7 @@ WORKS: dict[str, dict] = {
         "prefix": "論司祭職",
         "lang": "grc",
         "mode": "greek",
-        "ledger": "c:/tmp/pg48_desac.jsonl",
+        "ledger": "output/source-cache/pg-greek-ocr/pg48-de-sacerdotio.jsonl",
         # 站上這一部切成「論司祭職 第3章」…「第8章」，其實是六卷正文；前兩段是
         # 書名頁與導論。第N章 → 卷 N-2。
         "book_from_chapter": -2,

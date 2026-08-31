@@ -3,7 +3,7 @@
 """把 Migne《希臘教父學大全》(PG) 掃描本的希臘欄 OCR 成文字，供教父卷第三欄使用。
 
   python scripts/fathers_pg_ocr.py --pdf c:/tmp/pg48.pdf --first 103 --last 171 \
-         --out c:/tmp/pg48_desacerdotio.jsonl
+         --out output/source-cache/pg-greek-ocr/pg48-de-sacerdotio.jsonl
   python scripts/fathers_pg_ocr.py ... --limit 4        # 試跑
   python scripts/fathers_pg_ocr.py ... --status         # 只看進度
 
@@ -11,6 +11,10 @@
 不在裡面）、Patristic Text Archive 只有偽金口若望、希臘 Wikisource 幾乎空的、
 Myriobiblos 只有零星幾篇、earlychurchtexts 的希臘全文要訂閱。剩下的只有 Migne 的
 頁面掃描。
+
+OCR 帳本進 `output/source-cache/pg-greek-ocr/`（.gitignore 白名單放行）。LLM 輸出
+不是決定性的，刪掉重跑長不回一模一樣的東西，而且它是下一步的輸入——照 repo 的
+三分法就該進版控。
 
 🚨 archive.org 附的 OCR 不能用。那份是整卷用希臘模式跑的：καί 有 70% 被讀成 χαὶ，
    連 Google 的英文版權頁都被寫成希臘字母，相異詞／總詞數比高達 37%（乾淨希臘文
@@ -93,6 +97,11 @@ def crops(page: fitz.Page, dpi: int) -> list[tuple[str, bytes]]:
             im.crop(box).save(buf, "JPEG", quality=93)
             out.append((f"c{ci}h{hi}", buf.getvalue()))
     return out
+
+
+# 連續幾塊都是「所有金鑰皆失敗」就收工。見 feedback_ocr_two_strike_quota：
+# 配額到頂之後再跑下去，只是把剩下的裁切一個個標成失敗。
+QUOTA_STRIKES = 3
 
 
 PROMPT = """這是 Migne《希臘教父學大全》一欄希臘原文的一半。逐字轉錄成多音調希臘文。
@@ -191,6 +200,7 @@ def main() -> int:
     if a.limit:
         todo = todo[: a.limit]
     written = failed = 0
+    streak = 0
     cache: dict[int, dict[str, bytes]] = {}
     with out.open("a", encoding="utf-8") as fh:
         for page, crop in todo:
@@ -200,7 +210,15 @@ def main() -> int:
             if not got:
                 print(f"  p{page} {crop} ✗ 所有金鑰皆失敗（多半是配額）")
                 failed += 1
+                streak += 1
+                # 全部金鑰都拒收就是配額到頂了，再跑下去只是把剩下的裁切一個個
+                # 標成失敗、白燒時間。帳本會記住做到哪，配額回復後直接再跑一次。
+                if streak >= QUOTA_STRIKES:
+                    print(f"\n連續 {streak} 塊所有金鑰皆失敗 —— 判定配額到頂，收工。"
+                          f"\n配額回復後用同一道指令續跑（帳本會跳過已完成的）。")
+                    break
                 continue
+            streak = 0
             text, model = got
             bad = looks_degenerate(text)
             if bad:
