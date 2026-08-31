@@ -41,6 +41,25 @@
         <div class="text-[11px] font-semibold text-amber-900 mb-0.5">繁中直接譯自希臘原文</div>
         <p class="text-[11px] text-amber-800 leading-relaxed break-words">{{ doc.pivot_note }}</p>
       </div>
+      <!-- 有英譯中介、但切段方式需要說明者（如逐行對不起來的舊譯）走中性告示，不用警示色 -->
+      <p
+        v-else-if="doc.pivot_note"
+        class="mb-4 px-3 py-2 bg-white border border-gray-200 rounded-lg text-[11px] text-gray-500 leading-relaxed break-words"
+      >{{ doc.pivot_note }}</p>
+
+      <!-- 同組篇目：荷馬詩頌 33 首、俄耳甫斯詩頌 87 首各自成組，逐首一頁，須能互相走到 -->
+      <nav v-if="series.length > 1" class="mb-5">
+        <div class="flex flex-wrap gap-1">
+          <NuxtLink
+            v-for="t in series" :key="t.slug"
+            :to="`/hellenika/text/${alignedSlug(t)}`"
+            class="px-1.5 py-0.5 rounded text-[11px] border tabular-nums transition"
+            :class="t.slug === slug
+              ? 'bg-stone-900 text-white border-stone-900'
+              : 'bg-white text-gray-500 border-gray-200 hover:border-stone-400'"
+          >{{ seriesLabel(t) }}</NuxtLink>
+        </div>
+      </nav>
 
       <!-- 欄位切換 -->
       <div class="flex flex-wrap items-center gap-1.5 mb-4">
@@ -91,7 +110,7 @@
                 <p class="text-[13px] leading-relaxed text-gray-800 break-words whitespace-pre-line font-serif">{{ seg.greek || '—' }}</p>
               </div>
               <div v-if="cols.includes('en')" class="min-w-0">
-                <div class="text-[10px] text-gray-400 mb-0.5">英譯（CGRN）</div>
+                <div class="text-[10px] text-gray-400 mb-0.5">英譯（{{ EN_SOURCE[doc.pivot] ?? 'CGRN' }}）</div>
                 <p class="text-[13px] leading-relaxed text-gray-700 break-words">{{ seg.en || '—' }}</p>
               </div>
               <div v-if="cols.includes('zh')" class="min-w-0">
@@ -115,9 +134,17 @@
 </template>
 
 <script setup lang="ts">
-import { findAligned, hasEnglish } from '~/data/hellenika/sources'
+import type { AlignedRef } from '~/data/hellenika/sources'
+import { ALIGNED_REFS, alignedSlug, hasEnglish, loadAligned } from '~/data/hellenika/sources'
 
 definePageMeta({ middleware: 'auth' })
+
+// 英譯欄該標誰的譯本。原本寫死「CGRN」，文獻篇目全標錯了。
+const EN_SOURCE: Record<string, string> = {
+  'cgrn': 'CGRN',
+  'perseus-eng': 'Perseus',
+  'taylor-eng': 'Taylor 1792',
+}
 
 const ALL_COLUMNS = [
   { key: 'greek', label: '希臘原文' },
@@ -126,7 +153,12 @@ const ALL_COLUMNS = [
 ]
 
 const route = useRoute()
-const doc = computed(() => findAligned(String(route.params.slug)))
+// 正文按需載入：全部篇目合計 5.9 MB，不可在建置期一次打包（見 sources/index.ts）
+const slug = computed(() => String(route.params.slug))
+const { data: doc } = await useAsyncData(
+  () => `hellenika-text-${slug.value}`,
+  () => loadAligned(slug.value).then(d => d ?? null),
+  { watch: [slug] })
 const translated = computed(() => doc.value?.segments.filter(s => s.zh).length ?? 0)
 const backTo = computed(() => (doc.value ? `/hellenika/greek/${doc.value.volume}` : '/hellenika'))
 
@@ -136,6 +168,22 @@ const COLUMNS = computed(() =>
 const cols = ref<string[]>(['greek', 'en', 'zh'])
 watchEffect(() => { cols.value = COLUMNS.value.map(c => c.key) })
 const showNames = ref(false)
+
+// 成組的篇目（slug 為「前綴-兩位數」者）。荷馬詩頌與俄耳甫斯詩頌都是逐首一頁，
+// 書目那邊只掛得住一條連結，沒有這條列就走不到其餘各首。
+const series = computed<AlignedRef[]>(() => {
+  const m = slug.value.match(/^(.+)-(\d+)$/)
+  if (!m) return []
+  const prefix = `${m[1]}-`
+  return ALIGNED_REFS.filter(
+    t => t.slug.startsWith(prefix) && /^\d+$/.test(t.slug.slice(prefix.length)))
+})
+
+/** 俄耳甫斯詩頌的第 0 首是序詩，不是「第 0 首」，另標。 */
+function seriesLabel(t: AlignedRef): string {
+  const n = Number(t.slug.split('-').pop())
+  return n === 0 ? '序' : String(n)
+}
 
 function toggle(key: string) {
   if (cols.value.includes(key)) {

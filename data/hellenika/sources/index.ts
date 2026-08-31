@@ -52,8 +52,9 @@ export interface AlignedText {
   bibliography?: string
   licence: string
   /** 'cgrn' = 以 CGRN 英譯為中介；'perseus-eng' = 以 Perseus 收錄的公有領域英譯
-   *  為中介；'none' = 無英譯可依據，直接譯自希臘原文（可信度較低，版面須標明） */
-  pivot: 'cgrn' | 'perseus-eng' | 'none'
+   *  為中介；'taylor-eng' = 以 Taylor 1792《俄耳甫斯讚歌》英譯為中介；
+   *  'none' = 無英譯可依據，直接譯自希臘原文（可信度較低，版面須標明） */
+  pivot: 'cgrn' | 'perseus-eng' | 'taylor-eng' | 'none'
   pivot_note?: string
   /** 本篇專名定譯表 */
   names: Record<string, string>
@@ -82,13 +83,42 @@ interface RawDoc {
   segments: AlignedSegment[]
 }
 
-const cgrnMods = import.meta.glob('./cgrn/*.aligned.json', { eager: true }) as
-  Record<string, { default: RawDoc }>
-const phiMods = import.meta.glob('./phi/*.aligned.json', { eager: true }) as
-  Record<string, { default: RawDoc }>
-// 文獻（Perseus TEI）。檔名不帶 .aligned——取源與翻譯寫同一個檔，沒有兩階段產物。
-const textMods = import.meta.glob('./text/*.json', { eager: true }) as
-  Record<string, { default: RawDoc }>
+// 🚨 **不可用 `{ eager: true }`。** 這三個目錄現在有 5.9 MB（光荷馬兩部史詩就
+// 4.2 MB），eager 會把全部 JSON 打進 /hellenika/text 這條路由的 chunk，讀者點開
+// 任何一首詩頌都得先下載整套藏經。改成惰性：**篇目清單只從檔名推導**（不載內容），
+// 正文按 slug 現載一份。
+const MODS: Record<string, () => Promise<{ default: RawDoc }>> = {
+  ...import.meta.glob('./cgrn/*.aligned.json'),
+  ...import.meta.glob('./phi/*.aligned.json'),
+  // 文獻。檔名不帶 .aligned——取源與翻譯寫同一個檔，沒有兩階段產物。
+  ...import.meta.glob('./text/*.json'),
+} as Record<string, () => Promise<{ default: RawDoc }>>
+
+/** 篇目清單的一列。只有路由定位所需的資訊，都是從檔名推得，不必載入正文。 */
+export interface AlignedRef {
+  source: 'cgrn' | 'phi' | 'perseus'
+  /** 路由 slug：銘文為「庫-編號」，文獻為檔名 */
+  slug: string
+  path: string
+}
+
+function refOf(path: string): AlignedRef {
+  const file = path.split('/').pop()!.replace(/\.aligned\.json$|\.json$/, '')
+  const source = path.includes('/cgrn/') ? 'cgrn' : path.includes('/phi/') ? 'phi' : 'perseus'
+  // 銘文的檔名本身就是「庫-編號」，文獻的檔名本身就是 slug——兩者都直接當 slug 用。
+  return { source, slug: file, path }
+}
+
+/** 全部篇目，依「來源、再依 slug」排序。**不含正文**。 */
+export const ALIGNED_REFS: AlignedRef[] = Object.keys(MODS)
+  .map(refOf)
+  .sort((a, b) => (a.source === b.source
+    ? a.slug.localeCompare(b.slug, undefined, { numeric: true })
+    : a.source < b.source ? -1 : 1))
+
+export function alignedSlug(t: AlignedRef): string {
+  return t.slug
+}
 
 function normalise(d: RawDoc, source: 'cgrn' | 'phi' | 'perseus'): AlignedText {
   const ref = (source === 'cgrn' ? d.cgrn : source === 'phi' ? d.phi : 0) ?? 0
@@ -108,34 +138,20 @@ function normalise(d: RawDoc, source: 'cgrn' | 'phi' | 'perseus'): AlignedText {
     support: d.support,
     bibliography: d.bibliography,
     licence: d.licence,
-    pivot: d.pivot === 'none' ? 'none' : d.pivot === 'perseus-eng' ? 'perseus-eng' : 'cgrn',
+    pivot: d.pivot === 'none' || d.pivot === 'perseus-eng' || d.pivot === 'taylor-eng'
+      ? d.pivot
+      : 'cgrn',
     pivot_note: d.pivot_note,
     names: d.names ?? {},
     segments: d.segments,
   }
 }
 
-export const ALIGNED_TEXTS: AlignedText[] = [
-  ...Object.values(cgrnMods).map(m => normalise(m.default, 'cgrn')),
-  ...Object.values(phiMods).map(m => normalise(m.default, 'phi')),
-  ...Object.values(textMods).map(m => normalise(m.default, 'perseus')),
-].sort((a, b) => (a.source === b.source
-  ? (a.slug && b.slug ? a.slug.localeCompare(b.slug) : a.ref - b.ref)
-  : a.source < b.source ? -1 : 1))
-
-export function alignedSlug(t: AlignedText): string {
-  // 銘文以「庫-編號」定位；文獻沒有庫編號，改用檔名 slug（theogony、
-  // homeric-hymn-04…），路由才讀得懂也才看得懂。
-  return t.source === 'perseus' ? (t.slug ?? `perseus-${t.ref}`) : `${t.source}-${t.ref}`
-}
-
-export function findAligned(slug: string): AlignedText | undefined {
-  return ALIGNED_TEXTS.find(t => alignedSlug(t) === slug)
-}
-
-/** 某一卷底下已有原文對照的篇目 */
-export function alignedInVolume(volumeKey: string): AlignedText[] {
-  return ALIGNED_TEXTS.filter(t => t.volume === volumeKey)
+/** 載入一篇的正文。找不到回 undefined。 */
+export async function loadAligned(slug: string): Promise<AlignedText | undefined> {
+  const ref = ALIGNED_REFS.find(r => r.slug === slug)
+  if (!ref) return undefined
+  return normalise((await MODS[ref.path]!()).default, ref.source)
 }
 
 /** 本篇是否提供英譯欄 */

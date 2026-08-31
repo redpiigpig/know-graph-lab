@@ -36,7 +36,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '神譜', title_orig: 'Θεογονία / Theogonia', author: '赫西俄德',
               era: '約前 8 世紀末至前 7 世紀初', place: '希臘‧彼奧提亞‧阿斯克拉', language: '古希臘文（六步格）',
-              extent: '約 1,022 行', status: 'whole',
+              extent: '約 1,022 行', status: 'whole', link: '/hellenika/text/theogony',
               note: '自混沌開篇，敘三代神權交替至宙斯確立統治。',
               intro: '現存最早的希臘系統性宇宙起源與諸神譜系詩。自混沌（卡俄斯）、大地（蓋亞）開始，經烏拉諾斯遭閹、克羅諾斯吞子、提坦之戰與提豐之亂，敘諸神世代更迭直至宙斯確立統治並分定職司。全詩以繆斯在赫利孔山授予詩人歌權開篇，等於自陳其權威來自神的委任。希羅多德視之與荷馬同為希臘人神觀的立法者，本藏經因此以之為 Α 卷本文。',
               seealso: '基督教大藏經‧前藏經藏‧創世神話部',
@@ -99,7 +99,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '工作與時日（神話段）', title_orig: 'Ἔργα καὶ Ἡμέραι / Opera et Dies', author: '赫西俄德',
               era: '約前 700 年', place: '希臘‧彼奧提亞', language: '古希臘文（六步格）',
-              extent: '全詩 828 行，本卷取 1–201 行', status: 'whole',
+              extent: '全詩 828 行，本卷取 1–201 行', status: 'whole', link: '/hellenika/text/works-and-days',
               note: '普羅米修斯盜火、潘朵拉開甕、黃金至鐵的五族說。',
               intro: '全詩後半的農時勸誡歸 Π 箴言卷，本卷只取前段神話。普羅米修斯代人盜火，宙斯以潘朵拉為報復——她揭開甕蓋放出一切疾苦，唯「期望」留在甕內；接著是黃金、白銀、青銅、英雄、黑鐵五族一代不如一代，詩人自陳生在鐵族而恨不得早生或晚生。這是希臘唯一一套完整的墮落論，與創世記三章的功能位置相同，但責任歸屬相反：人受苦不因人犯罪，而因神記恨。',
             },
@@ -131,7 +131,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '伊利亞特', title_orig: 'Ἰλιάς / Ilias', author: '荷馬',
               era: '約前 750–700 年', place: '小亞細亞西岸（愛奧尼亞）', language: '古希臘文（六步格）',
-              extent: '全 24 卷，15,693 行', status: 'whole',
+              extent: '全 24 卷，15,693 行', status: 'whole', link: '/hellenika/text/iliad-01',
               note: '阿基里斯之怒；戰爭第十年的五十一天。',
               intro: '西方最早的完整文學作品，也是希臘宗教最核心的文本。全詩只寫特洛伊戰爭第十年的五十一天，自阿基里斯與阿伽門農爭執起，至赫克托爾葬禮止。宗教上的分量在於：它決定了奧林匹亞諸神的形貌、名號、職司與相互關係，記錄了祈禱、獻祭、誓約、屍體處置的完整儀節，並提出了此後希臘一切神義論的原始問題——宙斯的意志與命運（moira）孰先，以及神為何偏袒。',
             },
@@ -151,7 +151,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '奧德賽', title_orig: 'Ὀδύσσεια / Odysseia', author: '荷馬',
               era: '約前 720–670 年', place: '小亞細亞西岸（愛奧尼亞）', language: '古希臘文（六步格）',
-              extent: '全 24 卷，12,110 行', status: 'whole',
+              extent: '全 24 卷，12,110 行', status: 'whole', link: '/hellenika/text/odyssey-01',
               note: '奧德修斯十年歸途；卷十一為希臘最早的冥府之行。',
               intro: '與《伊利亞特》並列本經。宗教上最重的是卷十一「招魂」（Nekyia）——奧德修斯依女巫指示掘坑、以血引魂，與亡母、阿基里斯、阿伽門農對話，並見審判者米諾斯與受罰的坦塔洛斯、西緒福斯。這是希臘文獻中最早也最完整的來世圖景，此後一切冥府敘述（柏拉圖、維吉爾、乃至但丁）皆以之為原型。全詩另貫穿一條神學主線：宙斯在開篇即宣告人的災禍多半是自作，這是荷馬對神義論的正面答覆。',
             },
@@ -398,7 +398,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'l-eleusis', label: '厄琉息斯', label_en: 'Eleusis',
           works: [
-            { title_zh: '荷馬詩頌‧致得墨忒耳', title_orig: 'Ὁμηρικὸς Ὕμνος εἰς Δημήτραν', author: '託名荷馬', era: '約前 7 世紀末', language: '古希臘文', extent: '495 行', status: 'whole', note: '厄琉息斯祕儀的創教敘事：珀耳塞福涅被劫、母神哀行、祕儀由神親授。末句明言見過者有福、未見者死後不得同分。' },
+            { title_zh: '荷馬詩頌‧致得墨忒耳', title_orig: 'Ὁμηρικὸς Ὕμνος εἰς Δημήτραν', author: '託名荷馬', era: '約前 7 世紀末', language: '古希臘文', extent: '495 行', status: 'whole', link: '/hellenika/text/homeric-hymn-02', note: '厄琉息斯祕儀的創教敘事：珀耳塞福涅被劫、母神哀行、祕儀由神親授。末句明言見過者有福、未見者死後不得同分。' },
             { title_zh: '厄琉息斯銘文與祭司法', title_orig: 'Eleusinian inscriptions', author: '雅典與厄琉息斯', era: '前 5 – 公元 3 世紀', language: '古希臘文', status: 'inscription', note: '聖休戰佈告、初穗奉獻令、祭司世家（歐摩爾波斯族與刻律克斯族）的職權劃分。' },
             { title_zh: '蛙（入教者歌隊）', title_orig: 'Βάτραχοι / Ranae', author: '阿里斯托芬', era: '前 405 年', language: '古希臘文', status: 'whole', note: '戴奧尼索斯下冥府，途中遇一隊持火把、唱伊阿科斯之歌的入教者。這段歌隊唱詞是厄琉息斯入教者來世境遇最生動的旁證——祕儀不許洩漏，喜劇卻可以在舞台上演一遍。' },
           ],
@@ -549,7 +549,7 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             {
               title_zh: '荷馬詩頌', title_orig: 'Ὁμηρικοὶ Ὕμνοι / Homerici Hymni', author: '託名荷馬（諸家）',
-              era: '約前 7 – 前 5 世紀', language: '古希臘文（六步格）', extent: '33 首', status: 'whole',
+              era: '約前 7 – 前 5 世紀', language: '古希臘文（六步格）', extent: '33 首', status: 'whole', link: '/hellenika/text/homeric-hymn-01',
               note: '各篇年代不一，須逐篇定位；長篇五首（得墨忒耳、阿波羅、赫爾墨斯、阿芙羅狄忒、狄奧尼索斯）自成敘事。',
               intro: '掛荷馬之名、實出諸家之手的一組頌詩，原為史詩吟誦前的開場。宗教上的價值在於它們是「神的簡介」——每首說明一位神的出生、權能之取得與聖所之建立。致得墨忒耳一首是厄琉息斯祕儀的創教敘事，致阿波羅一首記德爾菲神諭所的建立，兩篇分別是 Λ 卷與 Τ 卷的源頭文本。本卷雖屬詩頌，其年代與權威實與 Γ、Δ 同層，導言須點明。',
             },
@@ -580,7 +580,7 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             {
               title_zh: '俄耳甫斯詩頌', title_orig: 'Ὀρφικοὶ Ὕμνοι / Orphic Hymns', author: '託名俄耳甫斯（小亞細亞某信團）',
-              era: '約公元 2–3 世紀', place: '小亞細亞（推測帕加馬一帶）', language: '古希臘文', extent: '87 首', status: 'whole',
+              era: '約公元 2–3 世紀', place: '小亞細亞（推測帕加馬一帶）', language: '古希臘文', extent: '87 首', status: 'whole', link: '/hellenika/text/orphic-hymn-00',
               note: '一個信團實際使用的整套禮文，每首附焚香指示。',
               intro: '八十七首短頌，前有致穆賽俄斯的引詩，每首標明應焚何香（乳香、沒藥、番紅花、種子……）。這不是文學選集，而是某個小亞細亞信團從頭到尾的一套禮儀本——按聚會次序呼求諸神，先原初諸力，再奧林匹亞眾神，終以死亡收束。它是異教晚期唯一完整傳世的成套禮文，功能上等同於一本會眾詩歌本。',
             },
@@ -707,7 +707,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 't-delphi', label: '德爾菲', label_en: 'Delphi',
           works: [
-            { title_zh: '荷馬詩頌‧致阿波羅', title_orig: 'Ὕμνος εἰς Ἀπόλλωνα', author: '託名荷馬', era: '約前 7–6 世紀', language: '古希臘文', status: 'whole', note: '德爾菲神諭所的創建敘事：阿波羅殺巨蟒、擄克里特商人為祭司。' },
+            { title_zh: '荷馬詩頌‧致阿波羅', title_orig: 'Ὕμνος εἰς Ἀπόλλωνα', author: '託名荷馬', era: '約前 7–6 世紀', language: '古希臘文', status: 'whole', link: '/hellenika/text/homeric-hymn-03', note: '德爾菲神諭所的創建敘事：阿波羅殺巨蟒、擄克里特商人為祭司。' },
             { title_zh: '德爾菲神諭彙編', title_orig: 'The Delphic responses', author: '皮媞亞（德爾菲阿波羅祭司）', era: '前 8 – 公元 4 世紀', language: '古希臘文', status: 'fragment', via: '希羅多德、修昔底德、普魯塔克、狄奧多羅斯等轉引', extent: '傳世逾 600 則', note: '本卷主體，按年代編次；含「木牆」「呂庫古大諭令」「蘇格拉底最智慧」諸則。', seealso: '基督教大藏經‧前藏經藏‧希臘神諭部' },
           ],
         },

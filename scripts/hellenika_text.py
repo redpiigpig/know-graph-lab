@@ -26,12 +26,19 @@ import argparse
 import io
 import json
 import os
+import copy
 import re
 import sys
 import time
 
 import requests
 from lxml import etree
+
+TEI = '{http://www.tei-c.org/ns/1.0}'
+# 散文英譯裡標行號用的哨兵。必須是正文絕不會出現的字元——用「空格＋數字＋空格」
+# 會把譯文中每個獨立數字都當成行號切開，那是切錯而不是切不到，且看不出來。
+MARK = '\ue000%s\ue000'
+MARK_RE = r'\ue000(\d+)\ue000'
 
 for _s in (sys.stdout, sys.stderr):
     try:
@@ -75,27 +82,109 @@ for _i in range(1, 34):
     })
 
 
+# 荷馬兩部史詩，各廿四卷。Perseus 一部一個 TEI 檔而**行號逐卷從 1 重來**，
+# 故一卷一個 target（`book`），檔名 iliad-01…24／odyssey-01…24，與詩頌同慣例。
+#
+# 英譯取 A. T. Murray 的 Loeb 本（伊 1924–25、奧 1919，皆公有領域）。那是**散文**，
+# 沒有 <l>，行號以 <milestone unit="line"/> 埋在段落裡，故走 prose_lines()。
+# eng4（Butler 經 Power 與 Nagy 修訂）里程碑較疏且修訂本年代晚，不取。
+LOEB = ('原文取自 Perseus Digital Library 的標準 TEI（PerseusDL/canonical-greekLit），'
+        'CC BY-SA 3.0；英譯為 A. T. Murray 的 Loeb 本（《伊利亞特》1924–25、'
+        '《奧德賽》1919），已入公有領域。')
+CN = '一二三四五六七八九十'
+
+
+def _cn(n: int) -> str:
+    """1–24 的中文數字。卷次用中文數字，與書目「全 24 卷」的阿拉伯數字分工。"""
+    if n <= 10:
+        return CN[n - 1]
+    return '十' + (CN[n - 11] if n > 10 and n % 10 else '') if n < 20 else         '二十' + (CN[n - 21] if n % 10 else '')
+
+
+for _wk, _slug, _zh, _vol, _sig, _n in (
+        (1, 'iliad', '伊利亞特', 'G', 'Hom. Il.', 24),
+        (2, 'odyssey', '奧德賽', 'D', 'Hom. Od.', 24)):
+    for _b in range(1, _n + 1):
+        TARGETS.append({
+            'slug': '%s-%02d' % (_slug, _b),
+            'zh': '%s 卷%s' % (_zh, _cn(_b)),
+            'en': '%s, Book %d' % (_zh == '伊利亞特' and 'Iliad' or 'Odyssey', _b),
+            'author': '荷馬', 'volume': _vol, 'siglum': '%s %d' % (_sig, _b),
+            'book': _b, 'licence': LOEB,
+            'grc': 'tlg0012.tlg%03d.perseus-grc2' % _wk,
+            'eng': 'tlg0012.tlg%03d.perseus-eng3' % _wk,
+        })
+
+
+_CACHE: dict[str, bytes | None] = {}
+
+
 def fetch(urn):
+    """史詩一部 TEI 兩三 MB，而 24 卷是 24 個 target，故同一次執行內只抓一次。"""
+    if urn in _CACHE:
+        return _CACHE[urn]
     grp, wk, _ = urn.split('.', 2)
     url = RAW.format(grp=grp, wk=wk, urn=urn)
-    r = requests.get(url, headers={'User-Agent': UA}, timeout=60)
-    if r.status_code == 404:
-        return None
-    r.raise_for_status()
-    return r.content
+    r = requests.get(url, headers={'User-Agent': UA}, timeout=180)
+    _CACHE[urn] = None if r.status_code == 404 else (r.raise_for_status() or r.content)
+    return _CACHE[urn]
 
 
-def lines_of(xml):
-    """取出 (行號, 該 <l> 的全部文字)。行號非數字者跳過。"""
+def book_of(root, n):
+    """取第 n 卷的 <div subtype="book">。🚨 史詩的行號**逐卷從 1 重來**，不分卷就會
+    把二十四卷的第 1 行疊成同一行；grc 寫 Book、eng 寫 book，故不分大小寫比對。"""
+    for d in root.iter(TEI + 'div'):
+        if (d.get('subtype') or '').lower() == 'book' and d.get('n') == str(n):
+            return d
+    return None
+
+
+def prose_lines(node):
+    """散文英譯的行號取法。
+
+    Murray 的 Loeb 譯本是散文，沒有 <l>，行號改以 <milestone n="N" unit="line"/>
+    埋在段落中間。故把里程碑換成哨兵再按哨兵切開，切出來的 (行號, 該行號起的文字)
+    與 <l> 那條路的回傳格式相同，下游不必分辨。Loeb 的 <note> 是編者註不是譯文，先剝掉。
+    """
+    node = copy.deepcopy(node)
+    etree.strip_elements(node, TEI + 'note', with_tail=False)
+    for ms in node.iter(TEI + 'milestone'):
+        if ms.get('unit') == 'line' and (ms.get('n') or '').isdigit():
+            ms.text = MARK % ms.get('n')
+    parts = re.split(MARK_RE, ''.join(node.itertext()))
+    raw = [(int(parts[i]), re.sub(r'\s+', ' ', parts[i + 1]).strip())
+           for i in range(1, len(parts) - 1, 2)]
+
+    # 🚨 上游 TEI 偶有行號筆誤：《奧德賽》十六的 275 與 285 之間夾了一個 n="580"
+    # （顯然是 280 之誤）。放著不管，切段會排出 line_from 580 → line_to 299 這種
+    # 倒置的段，而且希臘文那欄整段空掉——頁面照樣渲染。故凡「比前一個大、卻又比
+    # 後一個大」的尖刺一律剔除，其文字併回前一段，一個字都不丟。
+    out: list[tuple[int, str]] = []
+    for i, (n, txt) in enumerate(raw):
+        nxt = raw[i + 1][0] if i + 1 < len(raw) else None
+        if out and (n <= out[-1][0] or (nxt is not None and n >= nxt)):
+            print('    ! 行號 %d 不合序，併入第 %d 行那一段（上游 TEI 之誤）'
+                  % (n, out[-1][0]), file=sys.stderr)
+            out[-1] = (out[-1][0], (out[-1][1] + ' ' + txt).strip())
+            continue
+        out.append((n, txt))
+    return out
+
+
+def lines_of(xml, book=None):
+    """取出 (行號, 文字)。行號非數字者跳過；book 有值時只取該卷。"""
     root = etree.fromstring(xml)
+    scope = root if book is None else book_of(root, book)
+    if scope is None:
+        return []
     out = []
-    for el in root.iter('{http://www.tei-c.org/ns/1.0}l'):
+    for el in scope.iter(TEI + 'l'):
         n = el.get('n')
         if not n or not n.isdigit():
             continue
         txt = re.sub(r'\s+', ' ', ''.join(el.itertext())).strip()
         out.append((int(n), txt))
-    return out
+    return out or prose_lines(scope)
 
 
 def segment(grc, eng, lo, hi):
@@ -132,8 +221,9 @@ def build(t, lo, hi):
         return None
     time.sleep(DELAY)
     ex = fetch(t['eng'])
-    grc = lines_of(gx)
-    eng = lines_of(ex) if ex else []
+    book = t.get('book')
+    grc = lines_of(gx, book)
+    eng = lines_of(ex, book) if ex else []
     if not grc:
         print('  X %s：TEI 裡沒有帶數字行號的 <l>，需個別處理' % t['slug'])
         return None
@@ -143,7 +233,7 @@ def build(t, lo, hi):
         'source': 'perseus', 'siglum': t['siglum'], 'slug': t['slug'],
         'url': RAW.format(grp=grp, wk=wk, urn=t['grc']),
         'title_zh': t['zh'], 'title_en': t['en'], 'author': t['author'],
-        'volume': t['volume'], 'licence': LICENCE,
+        'volume': t['volume'], 'licence': t.get('licence', LICENCE),
         'pivot': 'perseus-eng' if eng else 'none',
         'pivot_note': None if eng else '無公有領域英譯可依據，繁中須直接譯自希臘原文。',
         'lines_total': max(n for n, _ in grc),
