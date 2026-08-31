@@ -587,7 +587,7 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
 
     def emit(el: ET.Element, kind: str, path: list[dict]):
         """一個 <p>/<lg>/<head> → 一筆 segment。"""
-        first_line = _first_line_in(el) or state["line"]
+        first_line = _first_line_in(el, canon) or state["line"]
         if kind == "verse":
             lines = [_clean(extract_text(l, gaiji))
                      for l in el.iter(f"{{{TEI}}}l")]
@@ -630,10 +630,17 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
                     state["juan"] = int(child.get("n") or 0)
                 except ValueError:
                     pass
+            # 🚨 X 的每一行同時標了兩套行號：卍續藏自己的 <lb ed="X"> 與
+            # 新文豐影印本的 <lb ed="R013">，交錯出現。對任何 lb 都吃的話，
+            # 段鍵會拿到**後出現的那個**，於是同一部書裡一半是卍續藏行號、
+            # 一半是影印本行號 —— 引用式錯了，而頁面完全正常。
+            # T／N 只有一套（ed="T"／"N"），所以這個洞到收 X 才現形。
             elif t == "pb":
-                state["page"] = child.get("n") or ""
+                if _own_ed(child, canon):
+                    state["page"] = child.get("n") or ""
             elif t == "lb":
-                state["line"] = child.get("n") or ""
+                if _own_ed(child, canon):
+                    state["line"] = child.get("n") or ""
             elif t == "div":
                 dtype = child.get(f"{{{CB}}}type") or child.get("type") or ""
                 if dtype in SKIP_DIV_TYPES:
@@ -750,8 +757,21 @@ def _div_head(div: ET.Element, gaiji: dict) -> str:
     return ""
 
 
-def _first_line_in(el: ET.Element) -> str:
+def _own_ed(el: ET.Element, canon: str) -> bool:
+    """這個 <lb>／<pb> 是不是**本藏自己**的行號／頁碼。
+
+    X 的每一行同時標了卍續藏的 `ed="X"` 與新文豐影印本的 `ed="R013"`，
+    兩者交錯。不篩選就會讓段鍵一半用卍續藏行號、一半用影印本行號。
+    沒有 ed 屬性時視為本藏（舊檔容錯）。
+    """
+    ed = el.get("ed")
+    return not ed or ed == canon
+
+
+def _first_line_in(el: ET.Element, canon: str = "") -> str:
     for lb in el.iter(f"{{{TEI}}}lb"):
+        if canon and not _own_ed(lb, canon):
+            continue
         n = lb.get("n")
         if n:
             return n

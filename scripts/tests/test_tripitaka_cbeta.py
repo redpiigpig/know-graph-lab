@@ -232,6 +232,35 @@ def test_chan_dialog_paragraphs_are_not_dropped():
     assert len(segs) >= 2
 
 
+def test_only_own_canon_line_numbers_become_segment_keys():
+    """🚨 X 的每一行同時標了兩套行號：卍續藏自己的 <lb ed="X"> 與
+    新文豐影印本的 <lb ed="R013">，交錯出現。對任何 lb 都吃的話，段鍵會拿到
+    **後出現的那個**，同一部書一半是卍續藏行號、一半是影印本行號 ——
+    引用式錯了，而頁面完全正常。T／N 只有一套，所以此洞到收 X 才現形。"""
+    doc = f"""<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="{TEI}" xmlns:cb="{CB}" xml:id="X09n0240">
+ <teiHeader><fileDesc>
+  <titleStmt><title level="m" xml:lang="zh-Hant">華嚴綱要</title></titleStmt>
+  <extent>80卷</extent>
+  <publicationStmt><idno type="CBETA">
+    <idno type="canon">X</idno>.<idno type="vol">9</idno>.<idno type="no">240</idno>
+  </idno></publicationStmt>
+ </fileDesc></teiHeader>
+ <text><body>
+  <milestone unit="juan" n="45"/>
+  <pb n="0001a" ed="X"/>
+  <lb n="0001a05" ed="X"/><lb n="0611a02" ed="R013"/>
+  <p>于闐國三藏沙門實叉難陀譯經。</p>
+ </body></text>
+</TEI>"""
+    tc._GAIJI = {}
+    _meta, segs, _ = tc.parse_work(doc)
+    assert segs, "應該有段"
+    assert segs[0]["seg"] == "X09n0240_p0001a05", \
+        f"段鍵要用卍續藏自己的行號，拿到的是 {segs[0]['seg']}"
+    assert "0611a02" not in segs[0]["seg"], "影印本 R013 的行號不可當引用式"
+
+
 def test_glossary_entries_are_not_dropped():
     """🚨 辭書體 <entry><form>詞目</form><cb:def><p>釋義</p></cb:def></entry>。
     「事義」那一類整部都是這個結構；不處理只會留下卷首標題 ——

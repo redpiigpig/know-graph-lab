@@ -93,7 +93,7 @@ scripts/tripitaka_nanchuan.py      漢譯南傳（元亨寺版）掛成對照欄
 scripts/tripitaka_tibetan.py       藏譯原典（84000 TMX）逐章掛上，含章數對齊閘
 scripts/tripitaka_db.py             建表 SQL／目錄入庫／Drive 同步／R2 上傳
 scripts/sql/tripitaka_schema.sql    DDL（Management API token 掛掉時手動貼 Dashboard）
-scripts/tests/test_tripitaka_*.py   純函式測試（78 個，鎖住下列所有陷阱）
+scripts/tests/test_tripitaka_*.py   純函式測試（88 個，鎖住下列所有陷阱）
 
 data/tripitaka/divisions.ts         部類標籤／配色／語言與來源分級（顯示層）
 server/utils/tripitaka.ts           file-backed 讀取器（本機 Drive → R2 → null）
@@ -343,6 +343,15 @@ python scripts/tripitaka_db.py --sync-drive --push-r2
     故子類一律用多段區間，不可假設連續。
     禮懺部站方未再分子類（列的是逐部經），那 42 部的 `subdivision_key` 為空
     是預期不是漏填。
+
+33. **🚨 X 的每一行標了兩套行號 —— 段鍵會一半用錯。**
+    卍續藏自己的 `<lb ed="X" n="0001a05">` 與新文豐影印本的
+    `<lb ed="R013" n="0611a02">` **交錯出現**。對任何 `lb` 都吃的話，
+    段鍵拿到的是後出現的那個，於是同一部書一半是卍續藏行號、一半是影印本行號
+    —— 引用式錯了，而頁面完全正常（華嚴綱要的段鍵一度從 p0611 跳到 p0300，
+    非單調就是徵兆）。`pb` 只有一套（`ed="X"`），所以只有行號被污染。
+    T／N 各只有一套（`ed="T"`／`"N"`），故此洞到收 X 才現形。
+    規矩：`_own_ed()` 只認 `ed` 等於本藏代號（或沒有 ed）的 `lb`／`pb`。
 
 32. **CBETA 的 X 是「選錄」不是全帙。**
     站方自書「卍新纂續藏經選錄」：經號到 1671，實際只有 **1,230 部**有 XML。
