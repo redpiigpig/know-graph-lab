@@ -11076,6 +11076,1232 @@
       "domus, domus, f.": {
         "icon": "tabler:home-2",
         "verdict": "ok"
+      },
+      "donum, doni, n.": {
+        "icon": "ph:gift-bold",
+        "verdict": "ok"
+      },
+      "dubito, dubitare, dubitaui, dubitatus": {
+        "icon": "tabler:thinking-low",
+        "verdict": "ok"
+      },
+      "dulcis, dulce": {
+        "icon": "game-icons:wrapped-sweet",
+        "verdict": "ok"
+      },
+      "dummodo": {
+        "icon": "game-icons:white-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "dux, ducis": {
+        "icon": "tabler:arrow-guide",
+        "verdict": "ok"
+      },
+      "ecce": {
+        "icon": "tabler:mood-look-down",
+        "verdict": "ok"
+      },
+      "efficio, efficere, effeci, effectus": {
+        "icon": "game-icons:subway-pass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "egeo, egere, egui": {
+        "icon": "tabler:eye-exclamation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "eiicio, eiicere, eiect, eiectus": {
+        "icon": "ph:person-simple-throw-bold",
+        "verdict": "ok"
+      },
+      "electio, electionis": {
+        "icon": "ph:selection-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "eleison": {
+        "icon": "ph:shirt-folded",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "episcopatus, episcopatus": {
+        "icon": "tabler:chess-bishop-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "episcopus, episcopi": {
+        "icon": "game-icons:chess-bishop",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "epistula, epistulae": {
+        "icon": "game-icons:satellite-communication",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "erga": {
+        "icon": "game-icons:opposite-hearts",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "ergo": {
+        "icon": "mdi:arrow-all",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "essentia, essentiae": {
+        "icon": "mdi:music-note-whole",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "essentialis, essentialis, essentiale": {
+        "icon": "game-icons:fire-gem",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "ethica, ethicae": {
+        "icon": "game-icons:materials-science",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "etiam": {
+        "icon": "mdi:eye-plus",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "etiamsi": {
+        "icon": "ph:shuffle-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "euentus, euentus": {
+        "icon": "tabler:calendar-event",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "euoco, euocare, euocaui, euocatus": {
+        "icon": "mdi:call-split",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "excito, excitare, excitaui, excitatus": {
+        "icon": "game-icons:beam-wake",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exclamo, exclamare, exclamaui, exclamatus": {
+        "icon": "mdi:emoticon-cry",
+        "verdict": "ok"
+      },
+      "excludo, excludere, exclusi, exclusus": {
+        "icon": "game-icons:shut-rose",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exeo, exire, exiui (exii), exitus": {
+        "icon": "mdi:go-kart-track",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exerceo, exercere, exercui, exercitus": {
+        "icon": "tabler:exercise-ball",
+        "verdict": "ok"
+      },
+      "exhibeo, exhibere, exhibui, exhibitus": {
+        "icon": "ph:person-simple-run",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exigo, exigere, exegi, exactus": {
+        "icon": "ph:hard-drive",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exitus, exitus": {
+        "icon": "mdi:exit-run",
+        "verdict": "ok"
+      },
+      "exoro, exorare, exoraui, exoratus": {
+        "icon": "mdi:hands-pray",
+        "verdict": "ok"
+      },
+      "expello, expellere, expuli, expulsus": {
+        "icon": "ph:hard-drive-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "experientia, experientiae": {
+        "icon": "game-icons:soap-experiment",
+        "verdict": "ok"
+      },
+      "experior, experiri, expertus sum": {
+        "icon": "tabler:test-pipe",
+        "verdict": "ok"
+      },
+      "explico, explicare, explicaui, explicatus": {
+        "icon": "mdi:unfold-less-vertical",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "exsisto, exsistere, exstiti, exstitus": {
+        "icon": "tabler:step-out",
+        "verdict": "ok"
+      },
+      "exsulto, exsultare, exsultaui, exsultatus": {
+        "icon": "game-icons:spider-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "extremum, extremi": {
+        "icon": "mdi:border-outside",
+        "verdict": "ok"
+      },
+      "facies, faciei": {
+        "icon": "game-icons:double-face-mask",
+        "verdict": "ok"
+      },
+      "facilis, facile": {
+        "icon": "ph:thumbs-down",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "facio, facere, feci, factus": {
+        "icon": "game-icons:claw-hammer",
+        "verdict": "ok"
+      },
+      "factor, factoris, m.": {
+        "icon": "mdi:coffee-maker",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "familia, familiae, f.": {
+        "icon": "ph:paint-brush-household",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "familiaris, familiaris, familiare": {
+        "icon": "game-icons:family-tree",
+        "verdict": "ok"
+      },
+      "fas": {
+        "icon": "game-icons:heaven-gate",
+        "verdict": "ok"
+      },
+      "fel, fellis": {
+        "icon": "game-icons:poison-gas",
+        "verdict": "ok"
+      },
+      "feliciter": {
+        "icon": "ph:four-k",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "felix (gen., felicis)": {
+        "icon": "tabler:mood-happy",
+        "verdict": "ok"
+      },
+      "femina, feminae": {
+        "icon": "mdi:face-woman-outline",
+        "verdict": "ok"
+      },
+      "fero, ferre, tuli, latus": {
+        "icon": "mdi:arrange-bring-to-front",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "festus, -a, -um": {
+        "icon": "game-icons:party-flags",
+        "verdict": "ok"
+      },
+      "fidelis, fidele": {
+        "icon": "mdi:handshake-outline",
+        "verdict": "ok"
+      },
+      "finio, finire, finiui [fini], finitus": {
+        "icon": "tabler:phone-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "finis, finis": {
+        "icon": "tabler:pin-end",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fio, fieri, —, factus sum": {
+        "icon": "mdi:call-made",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "firmo, firmare, firmaui, firmatus": {
+        "icon": "ph:anchor-bold",
+        "verdict": "ok"
+      },
+      "flagellum, flagelli, n.": {
+        "icon": "game-icons:boxing-ring",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fleo, flere, fleui, fletus": {
+        "icon": "mdi:star-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fletus, fletus, m.": {
+        "icon": "mdi:face-woman",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "forma, formae": {
+        "icon": "game-icons:sword-mold",
+        "verdict": "ok"
+      },
+      "formo, formare, formaui, formatus": {
+        "icon": "tabler:arrow-guide-filled",
+        "verdict": "ok"
+      },
+      "fortuna, fortunae": {
+        "icon": "game-icons:rune-stone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "frater, fratris, m.": {
+        "icon": "tabler:cookie-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fraternitas, fraternitatis": {
+        "icon": "game-icons:relationship-bounds",
+        "verdict": "ok"
+      },
+      "frequenter": {
+        "icon": "mdi:frequently-asked-questions",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fulgeo, fulgere, fulsi, —": {
+        "icon": "game-icons:crystal-shine",
+        "verdict": "ok"
+      },
+      "fulgor, fulgoris, —": {
+        "icon": "mdi:brightness-1",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "fundo, fundare, fundaui, fundatus": {
+        "icon": "ph:anchor-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "gaudium, gaudi, n.": {
+        "icon": "tabler:face-mask-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "generatio, generationis": {
+        "icon": "tabler:image-generation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "genetrix, genetricis, f.": {
+        "icon": "mdi:mother-nurse",
+        "verdict": "ok"
+      },
+      "genuflecto, genuflectere, genuflexi, genuflexus": {
+        "icon": "ph:arrow-bend-left-up",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "genus, generis, n.": {
+        "icon": "ph:globe-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "glorifico, glorificare, glorificaui, glorificatus": {
+        "icon": "ph:hands-clapping-fill",
+        "verdict": "ok"
+      },
+      "gradior, gradi, —, gressus sum": {
+        "icon": "ph:person-simple-walk",
+        "verdict": "ok"
+      },
+      "gratias agere": {
+        "icon": "ph:hands-clapping-thin",
+        "verdict": "ok"
+      },
+      "gratus, -a, -um": {
+        "icon": "ph:face-mask-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "grauis, graue": {
+        "icon": "game-icons:heavy-timer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "guberno, gubernare, gubernaui, gubernatus": {
+        "icon": "ph:person-duotone",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "habeo, habere, habui, habitus": {
+        "icon": "mdi:car-brake-hold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "hactenus": {
+        "icon": "game-icons:time-bomb",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "hic, haec, hoc": {
+        "icon": "tabler:join-round",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "hodie": {
+        "icon": "mdi:calendar-today-outline",
+        "verdict": "ok"
+      },
+      "hodiernus, hodierna, hodiernum": {
+        "icon": "mdi:calendar-today",
+        "verdict": "ok"
+      },
+      "honestas, honestatis": {
+        "icon": "mdi:image-filter-black-white",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "honestus, honesta, honestum": {
+        "icon": "tabler:military-rank",
+        "verdict": "ok"
+      },
+      "humilitas, humilitatis, f.": {
+        "icon": "ph:person-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "hymnus, hymni, m.": {
+        "icon": "game-icons:musical-keyboard",
+        "verdict": "ok"
+      },
+      "iam": {
+        "icon": "ph:repeat-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "idem, eadem, idem": {
+        "icon": "game-icons:heavy-fall",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "idoneus, idonea, idoneum": {
+        "icon": "mdi:quality-low",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "ieiunium, ieiuni(i)": {
+        "icon": "ph:person-simple-ski",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "igitur": {
+        "icon": "game-icons:bow-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "ille, illa, illud": {
+        "icon": "ph:hand-pointing",
+        "verdict": "ok"
+      },
+      "immolatio, immolationis, f.": {
+        "icon": "ph:hands-praying-light",
+        "verdict": "ok"
+      },
+      "impetus, impetus": {
+        "icon": "game-icons:attack-gauge",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "impius, -a, -um": {
+        "icon": "game-icons:cyborg-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "impleo, implere, impleui, impletus": {
+        "icon": "ph:x-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "impulsus, impulsus": {
+        "icon": "game-icons:anvil-impact",
+        "verdict": "ok"
+      },
+      "imus, ima, imum": {
+        "icon": "mdi:music-clef-treble",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "in aeternum": {
+        "icon": "mdi:delete-forever",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "in primis": {
+        "icon": "ph:first-aid-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "in saecula (saeculorum)": {
+        "icon": "mdi:delete-forever-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "inaestimabilis, inaestimabile": {
+        "icon": "game-icons:gem-chain",
+        "verdict": "ok"
+      },
+      "incarnatio, incarnationis": {
+        "icon": "ph:union-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "incedo, incedere, incessi, incessus": {
+        "icon": "ph:person-simple-walk-bold",
+        "verdict": "ok"
+      },
+      "inclino, inclinare, inclinaui, inclinatus": {
+        "icon": "game-icons:forward-sun",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "indigeo, indigere, indigui": {
+        "icon": "tabler:map-exclamation",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "indulgentia, indulgentiae, f.": {
+        "icon": "mdi:gift-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "ineo, inire, iniui (inii), initus": {
+        "icon": "mdi:coffee-to-go-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "infernus, -a, -um": {
+        "icon": "game-icons:hell-crosses",
+        "verdict": "ok"
+      },
+      "inferus, -a, -um": {
+        "icon": "mdi:vector-arrange-below",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "infinitus, infinita, infinitum": {
+        "icon": "tabler:infinity-2",
+        "verdict": "ok"
+      },
+      "ingredior, ingredi, —, ingressus sum": {
+        "icon": "game-icons:egyptian-walk",
+        "verdict": "ok"
+      },
+      "inimicus, inimici, m.": {
+        "icon": "tabler:mood-angry",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "iniquitas, iniquitatis, f.": {
+        "icon": "game-icons:doctor-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "iniquus, iniqua, iniquum": {
+        "icon": "game-icons:entry-door",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "innocens (gen., innocentis)": {
+        "icon": "mdi:silverware-clean",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "inopia, inopiae": {
+        "icon": "mdi:bed-empty",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "inquisitio, inquisitionis": {
+        "icon": "mdi:car-search",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "institutio, institutionis, f.": {
+        "icon": "ph:chalkboard-teacher-fill",
+        "verdict": "ok"
+      },
+      "instruo, instruere, instruxi, instructus": {
+        "icon": "ph:chalkboard-teacher-thin",
+        "verdict": "ok"
+      },
+      "insuper": {
+        "icon": "mdi:vector-arrange-above",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "integritas, integritatis": {
+        "icon": "mdi:white-balance-iridescent",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intellectus, intellectus": {
+        "icon": "mdi:face-recognition",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intellegentia, intellegentiae": {
+        "icon": "game-icons:artificial-intelligence",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intendo, intendere, intendi, intentus": {
+        "icon": "tabler:mood-look-left",
+        "verdict": "ok"
+      },
+      "intentio, intentionis": {
+        "icon": "tabler:align-box-left-stretch",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intentus": {
+        "icon": "tabler:align-box-right-stretch",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intercessio, intercessionis, f.": {
+        "icon": "game-icons:paper-bag-folded",
+        "verdict": "wrong",
+        "reason": "逐張看圖：chess-bishop 配「主教」是西洋棋子、coffee-maker 配「製造者」是咖啡機、quality-low 是 LQ 畫質、music-clef-treble 是高音譜號、delete-forever 配「永遠」是垃圾桶、unfold-less 配「展開」是相反"
+      },
+      "intereo, interire, interiui (interii), interitus": {
+        "icon": "game-icons:goo-skull",
+        "verdict": "ok"
+      },
+      "interior, interior, interius": {
+        "icon": "game-icons:inner-self",
+        "verdict": "ok"
+      },
+      "interrogo, interrogare, interrogaui, interrogatus": {
+        "icon": "game-icons:deshret-red-crown",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "intimus, intima, intimum": {
+        "icon": "game-icons:secret-book",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "intro, intrare, intraui, intratus": {
+        "icon": "mdi:location-enter",
+        "verdict": "ok"
+      },
+      "introeo, introire, introiui (introii), introitus": {
+        "icon": "game-icons:traffic-lights-ready-to-go",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "intueor, intueri, intuitus sum": {
+        "icon": "tabler:mood-look-right",
+        "verdict": "ok"
+      },
+      "inuicem": {
+        "icon": "tabler:s-turn-up",
+        "verdict": "ok"
+      },
+      "inuoco, inuocare, inuocaui, inuocatus": {
+        "icon": "ph:call-bell",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "item": {
+        "icon": "game-icons:heavy-helm",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iterum": {
+        "icon": "mdi:axis-x-rotate-counterclockwise",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iubeo, iubere, iussi, iussus": {
+        "icon": "ph:command-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iucundus, -a, -um": {
+        "icon": "mdi:face-mask-outline",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iudicium, iudicii": {
+        "icon": "game-icons:body-balance",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iudico, iudicare, iudicaui, iudicatus": {
+        "icon": "mdi:scale-balance",
+        "verdict": "ok"
+      },
+      "iugiter": {
+        "icon": "ph:repeat-fill",
+        "verdict": "ok"
+      },
+      "iungo, iungere, iunxi, iunctus": {
+        "icon": "tabler:join-bevel",
+        "verdict": "ok"
+      },
+      "ius, iuris": {
+        "icon": "game-icons:law-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iustificatio, iustificationis": {
+        "icon": "tabler:calendar-due",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iustitia, iustitiae": {
+        "icon": "game-icons:justice-star",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iustus, -um": {
+        "icon": "game-icons:radial-balance",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iuuo, iuuare, iuui, iutus": {
+        "icon": "tabler:help-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "iuxta": {
+        "icon": "mdi:near-me",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "lacrima, lacrimae": {
+        "icon": "game-icons:tear-tracks",
+        "verdict": "ok"
+      },
+      "lacrimor, lacrimari, —, lacrimatus sum": {
+        "icon": "tabler:robot-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "lacrimosus, -a, -um": {
+        "icon": "game-icons:tree-face",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "laetitia, laetitiae": {
+        "icon": "tabler:face-id-error",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "laetus, -a, -um": {
+        "icon": "mdi:baby-face-outline",
+        "verdict": "ok"
+      },
+      "lapis, lapidis": {
+        "icon": "game-icons:stone-axe",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "largior, largiri, —, largitus sum": {
+        "icon": "game-icons:wrapped-heart",
+        "verdict": "ok"
+      },
+      "latus, lateris": {
+        "icon": "mdi:car-side",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "laudo, laudare, laudaui, laudatus": {
+        "icon": "ph:hands-clapping-light",
+        "verdict": "ok"
+      },
+      "laus, laudis": {
+        "icon": "ph:hands-praying-duotone",
+        "verdict": "ok"
+      },
+      "lectio, lectionis": {
+        "icon": "game-icons:open-gate",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "lector, lectoris": {
+        "icon": "mdi:smart-card-reader",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "legitimus, legitima, legitimum": {
+        "icon": "tabler:currency-real",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "leuita (leuites), leuitae, m.": {
+        "icon": "game-icons:magnet-man",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "libere": {
+        "icon": "ph:hands-praying-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "libero, liberare, liberaui, liberatus": {
+        "icon": "tabler:free-rights",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "libertas, libertatis": {
+        "icon": "game-icons:freedom-dove",
+        "verdict": "ok"
+      },
+      "liquo, liquare, liquaui, liquatus": {
+        "icon": "mdi:snowflake-melt",
+        "verdict": "ok"
+      },
+      "localis, localis, locale": {
+        "icon": "mdi:source-commit-local",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "longus, longa, longum": {
+        "icon": "game-icons:long-antennae-bug",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "magis": {
+        "icon": "mdi:perspective-more",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "magister, magistri, m.": {
+        "icon": "ph:chalkboard-teacher-bold",
+        "verdict": "ok"
+      },
+      "magnifico, magnificare, magnificaui, magnificatus": {
+        "icon": "ph:hands-clapping-duotone",
+        "verdict": "ok"
+      },
+      "magnitudo, magnitudinis": {
+        "icon": "mdi:size-l",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "maiestas, maiestatis, f.": {
+        "icon": "ph:crown-bold",
+        "verdict": "ok"
+      },
+      "maior, maius": {
+        "icon": "ph:greater-than",
+        "verdict": "ok"
+      },
+      "male habeo": {
+        "icon": "tabler:mood-sick",
+        "verdict": "ok"
+      },
+      "maneo, manere, mansi, mansus": {
+        "icon": "ph:anchor-thin",
+        "verdict": "ok"
+      },
+      "manifesto, manifestare, manifestaui, manifestatus": {
+        "icon": "game-icons:plain-circle",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "manifestus, manifesta, manifestum": {
+        "icon": "game-icons:plain-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "martyr, martyris, m.": {
+        "icon": "game-icons:martyr-memorial",
+        "verdict": "ok"
+      },
+      "mater, matris, f.": {
+        "icon": "mdi:mother-heart",
+        "verdict": "ok"
+      },
+      "maximus, -a, -um": {
+        "icon": "game-icons:great-pyramid",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "medium, medii, n.": {
+        "icon": "game-icons:middle-arrow",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "memoria, memoriae, f.": {
+        "icon": "ph:memory-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mens, mentis, mentium, f.": {
+        "icon": "game-icons:hive-mind",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mensae, f.": {
+        "icon": "game-icons:evil-fork",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mensis, mensis": {
+        "icon": "mdi:calendar-month",
+        "verdict": "ok"
+      },
+      "mensura, mensurae": {
+        "icon": "game-icons:measure-tape",
+        "verdict": "ok"
+      },
+      "mentio, mentionis": {
+        "icon": "tabler:phone-calling-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "merces, mercedis": {
+        "icon": "tabler:credit-card-pay",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "merito": {
+        "icon": "game-icons:military-fort",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "meritum, meriti, n.": {
+        "icon": "mdi:heart-box",
+        "verdict": "ok"
+      },
+      "ministerium, ministerii, n.": {
+        "icon": "mdi:dog-service",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "minuo, minuere, minui, minutus": {
+        "icon": "ph:chart-pie",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mirabilis, mirabile": {
+        "icon": "mdi:face-woman-profile",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "miror, mirari, —, miratus sum": {
+        "icon": "mdi:face-woman-shimmer",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "misceo, miscere, miscui, mixtus": {
+        "icon": "mdi:pot-mix",
+        "verdict": "ok"
+      },
+      "misera, miserum": {
+        "icon": "game-icons:worried-eyes",
+        "verdict": "ok"
+      },
+      "misericordiae, f.": {
+        "icon": "ph:face-mask-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "missa, missae, f.": {
+        "icon": "game-icons:fleshy-mass",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "missio, missionis": {
+        "icon": "ph:tray-fill",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mitis, mite": {
+        "icon": "mdi:chili-mild",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mitto, mittere, misi, missus": {
+        "icon": "tabler:send-2",
+        "verdict": "ok"
+      },
+      "modicus, modica, modicum": {
+        "icon": "game-icons:small-fire",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "monstro, monstrare, monstraui, monstratus": {
+        "icon": "ph:command-thin",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mortalis, mortalis, mortale": {
+        "icon": "game-icons:human-ear",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mortuus, -a, -um": {
+        "icon": "game-icons:dead-eye",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mos, moris": {
+        "icon": "tabler:mood-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mox": {
+        "icon": "mdi:skip-next",
+        "verdict": "ok"
+      },
+      "moyses, moysis": {
+        "icon": "tabler:man-filled",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "multitudo, multitudinis, f.": {
+        "icon": "tabler:number-0",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mundus, mundi, m.": {
+        "icon": "tabler:world-cog",
+        "verdict": "ok"
+      },
+      "munus, muneris, n.": {
+        "icon": "tabler:gift-card",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "mutatio, mutationis": {
+        "icon": "mdi:key-change",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "muto, mutare, mutaui, mutatus": {
+        "icon": "tabler:status-change",
+        "verdict": "ok"
+      },
+      "narro, narrare, narraui, narratus": {
+        "icon": "game-icons:william-tell-skull",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "natura, naturae, f.": {
+        "icon": "mdi:nature-outline",
+        "verdict": "ok"
+      },
+      "naturalis, naturalis, naturale": {
+        "icon": "mdi:music-accidental-natural",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "natus, nati, m.": {
+        "icon": "mdi:human-child",
+        "verdict": "ok"
+      },
+      "ne": {
+        "icon": "mdi:gate-not",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "necessitudo, necessitudinis": {
+        "icon": "mdi:transit-connection-variant",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nedum": {
+        "icon": "ph:less-than",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "neglego, neglegere, neglexi, neglectus": {
+        "icon": "tabler:bleach-no-chlorine",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nego, negare, negaui, negatus": {
+        "icon": "game-icons:nothing-to-say",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "negotium, negoti(i)": {
+        "icon": "mdi:skype-business",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nempe": {
+        "icon": "mdi:check-all",
+        "verdict": "ok"
+      },
+      "nequaquam": {
+        "icon": "tabler:smoking-no",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "neque (nec)": {
+        "icon": "mdi:gate-nor",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nimis": {
+        "icon": "mdi:bed-double",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nobilis, nobilis, nobile": {
+        "icon": "game-icons:new-born",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "noceo, nocere, nocui, nocitus": {
+        "icon": "game-icons:trigger-hurt",
+        "verdict": "ok"
+      },
+      "nominatim": {
+        "icon": "ph:jar-label",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nomino, nominare, nominaui, nominatus": {
+        "icon": "mdi:call-merge",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "non": {
+        "icon": "tabler:equal-not",
+        "verdict": "ok"
+      },
+      "nonnullus, nonnulla, nonnullum": {
+        "icon": "ph:dice-one",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nosco, noscere, noui, notus": {
+        "icon": "game-icons:brain-dump",
+        "verdict": "ok"
+      },
+      "notitia, notitiae": {
+        "icon": "ph:brain-fill",
+        "verdict": "ok"
+      },
+      "nouissimus, nouissima, nouissimum": {
+        "icon": "game-icons:rear-aura",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nouus, -a, -um": {
+        "icon": "mdi:new-box",
+        "verdict": "ok"
+      },
+      "nunc": {
+        "icon": "ph:alarm-bold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "nuntio, nuntiare, nuntiaui, nuntiatus": {
+        "icon": "ph:megaphone-bold",
+        "verdict": "ok"
+      },
+      "oblatio, oblationis, f.": {
+        "icon": "ph:door-open",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "obnoxius, obnoxia, obnoxium": {
+        "icon": "game-icons:life-in-the-balance",
+        "verdict": "ok"
+      },
+      "oboedientia, oboedientiae, f.": {
+        "icon": "ph:person-light",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "obtineo, obtinere, obtinui, obtentus": {
+        "icon": "mdi:gesture-tap-hold",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "occido, occidere, occidi, occisus": {
+        "icon": "game-icons:dagger-rose",
+        "verdict": "ok"
+      },
+      "occurro, occurrere, occurri, occursus": {
+        "icon": "tabler:run-sprint",
+        "verdict": "ok"
+      },
+      "occursus, occursus": {
+        "icon": "game-icons:explosive-meeting",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "octo": {
+        "icon": "game-icons:eight-ball",
+        "verdict": "ok"
+      },
+      "oculus, oculi, m.": {
+        "icon": "tabler:eye-x",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "odium, odii, n.": {
+        "icon": "game-icons:angry-eyes",
+        "verdict": "ok"
+      },
+      "officium, offici(i)": {
+        "icon": "game-icons:stapler-heavy-duty",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "olim": {
+        "icon": "ph:repeat-once",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "opera, operae": {
+        "icon": "ph:first-aid",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "operarius, operari(i)": {
+        "icon": "game-icons:mechanic-garage",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "operor, operari, —, operatus sum": {
+        "icon": "tabler:briefcase-2",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "opifex, opificis": {
+        "icon": "game-icons:flat-hammer",
+        "verdict": "ok"
+      },
+      "opportunitas, opportunitatis": {
+        "icon": "game-icons:time-dynamite",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
+      },
+      "ops, opis, f.": {
+        "icon": "tabler:help-square",
+        "verdict": "wrong",
+        "reason": "逐張看圖：fleshy-mass 配「彌撒」是一團肉（命中 mass）、stapler-heavy-duty 配「職責」是釘書機（命中 duty）、currency-real 是巴西雷亞爾、skype-business 是 Skype、size-l 是尺寸 L、eye-x 是打叉的眼睛"
       }
     }
   }
