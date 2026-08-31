@@ -1,0 +1,47 @@
+[
+ {
+  "decade": "1880",
+  "count": 49,
+  "chars": 73516
+ },
+ {
+  "decade": "1890",
+  "count": 131,
+  "chars": 156150
+ },
+ {
+  "decade": "1900",
+  "count": 136,
+  "chars": 167915
+ },
+ {
+  "decade": "1910",
+  "count": 300,
+  "chars": 303154
+ },
+ {
+  "decade": "1920",
+  "count": 515,
+  "chars": 604554
+ },
+ {
+  "decade": "1930",
+  "count": 594,
+  "chars": 687396
+ },
+ {
+  "decade": "1940",
+  "count": 231,
+  "chars": 285603
+ },
+ {
+  "decade": "1950",
+  "count": 356,
+  "chars": 411852
+ },
+ {
+  "decade": "1960",
+  "count": 423,
+  "chars": 750472
+ }
+]

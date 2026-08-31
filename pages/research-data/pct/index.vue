@@ -23,6 +23,15 @@
           <span class="tool-badge bg-blue-50 text-blue-600">{{ tcnnCount ? `${tcnnCount} 篇` : '…' }}</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/pct/poj" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">🕰️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">白話字教會公報</h2>
+            <p class="tool-desc">1885 巴克禮創刊至 1969 改出華文，八十四年全以白話字書寫；新聞網之前唯一的機關報底本，漢羅與台羅兩種寫法對照</p>
+          </div>
+          <span class="tool-badge bg-amber-50 text-amber-600">{{ pojCount ? `${pojCount} 篇` : '…' }}</span>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/pct/new-messenger" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
           <div class="tool-icon bg-indigo-50 text-indigo-600">📖</div>
           <div class="flex-1">
@@ -79,6 +88,7 @@ const tcnnCount = ref(0);
 const nmCount = ref(0);
 const docCount = ref(0);
 const ljCount = ref(0);
+const pojCount = ref(0);
 
 // 各刊的計數彼此獨立：任一份 index 還沒產出，不該讓其他張卡也跟著空著
 async function total(url: string, pick: (row: any) => number): Promise<number> {
@@ -95,6 +105,7 @@ onMounted(async () => {
   nmCount.value = await total(`${base}/new-messenger-index.json`, x => x.articles?.length ?? 0);
   docCount.value = await total(`${base}/documents-index.json`, () => 1);
   ljCount.value = await total(`${base}/laijohn-index.json`, () => 1);
+  pojCount.value = await total(`${base}/poj-index.json`, x => x.count ?? 0);
 });
 </script>
 
