@@ -183,7 +183,11 @@ def postgrest(path: str, rows: list[dict] | None = None, method: str = "POST"):
 
 def cmd_push():
     rows = json.loads(CATALOG.read_text(encoding="utf-8"))
-    rows.sort(key=lambda r: (r["canon"] != "T", r["vol"], r["work_no"], r.get("work_suffix", "")))
+    # 藏經次序照目錄頁的群組：大正藏 → 卍續藏 → 漢譯南傳。
+    # 原本寫成 `canon != "T"`（T=0、其餘都=1），N 與 X 會依冊號交錯排在一起。
+    _CANON_ORDER = {"T": 0, "X": 1, "N": 2}
+    rows.sort(key=lambda r: (_CANON_ORDER.get(r["canon"], 9), r["vol"],
+                             r["work_no"], r.get("work_suffix", "")))
     payload = []
     for n, r in enumerate(rows, start=1):
         rec = {c: r.get(c) for c in COLS}

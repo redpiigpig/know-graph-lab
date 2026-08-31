@@ -126,7 +126,8 @@ NANCHUAN_DIVISIONS: list[tuple[str, str, int, int]] = [
 #
 # 🚨 部類邊界**不是憑記憶寫的**，是抓 CBETA 站方的「原書目錄」樹：
 #     https://cbdata.dila.edu.tw/stable/catalog_entry?q=orig-X
-#   （2026-08-31 取；第一層 7 部類、第二層 109 子類，經號區間由站方標明）
+#   （2026-08-31 取；第一層 7 部類、第二層 60 子類，經號區間由站方標明。
+#    ⚠ 禮懺部底下站方列的是**逐部經 49 筆**不是子類，別算進子類數）
 #   X 的 teiHeader 裡**沒有任何分類欄位**（<title level="s"> 一律是藏經名），
 #   所以分部資訊只能外求，不能像南傳那樣實掃卷首標題。
 #

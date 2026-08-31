@@ -93,7 +93,8 @@ export const NANCHUAN: Division[] = [
  * 宋元明清的疏鈔、各宗語錄、禮懺儀軌與寺志僧傳。兩藏合看，漢傳佛教才是全的。
  *
  * 部類與經號區間抓自 CBETA 站方原書目錄（見 tripitaka_cbeta.XUZANG_DIVISIONS），
- * 不是自訂的。每部底下另有第二層子類（宗派／經疏類目）共 109 個。
+ * 不是自訂的。每部底下另有第二層子類（宗派／經疏類目）共 60 個；
+ * 禮懺部站方未再分子類，那 42 部沒有子類是預期。
  */
 export const XUZANG: Division[] = [
   { key: 'x-india', label: '印度撰述', label_alt: 'Indian works', vols: 'X01–02',

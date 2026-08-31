@@ -23,7 +23,8 @@ create table if not exists tripitaka_works (
   extent          text,
   juan_count      int,
   division_key    text not null,
-  -- X（卍續藏）另有第二層子類（宗派／經疏類目），共 109 個；T／N 為空字串。
+  -- X（卍續藏）另有第二層子類（宗派／經疏類目），共 60 個；T／N 為空字串。
+  -- 禮懺部站方未再分子類，那 42 部為空字串是預期不是漏填。
   -- 權威來源是 CBETA 站方原書目錄，見 tripitaka_cbeta.XUZANG_SUBDIVISIONS。
   subdivision_key text default '',
   japanese        boolean default false,

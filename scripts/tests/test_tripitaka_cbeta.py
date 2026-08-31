@@ -149,7 +149,8 @@ def test_division_of_refuses_unknown_canon():
 
 
 def test_xuzang_subdivisions_nest_inside_their_division():
-    """109 個子類都必須落在自己的第一層部類區間內，否則就是抄錯了。"""
+    """60 個子類都必須落在自己的第一層部類區間內，否則就是抄錯了。"""
+    assert len(tc.XUZANG_SUBDIVISIONS) == 60, "站方在禮懺部底下列的是逐部經（49 筆）不是子類，別把它們算進來"
     divs = {k: (lo, hi) for k, _l, lo, hi in tc.XUZANG_DIVISIONS}
     for key, label, spans in tc.XUZANG_SUBDIVISIONS:
         parent = key.rsplit("-", 1)[0]
