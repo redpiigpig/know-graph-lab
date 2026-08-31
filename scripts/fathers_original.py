@@ -244,6 +244,60 @@ def parse_chapter_markers(text: str) -> dict[tuple[int | None, int], str]:
             out[(None, n)] = "\n".join(kept)
     return out
 
+# ── TEI 原典（Open Greek and Latin 的 First1KGreek）──────────────────────────
+# 使徒教父、猶斯定、亞歷山卓的革利免、俄利根都在裡面，是機讀的 TEI XML，不必自己
+# OCR。結構是 <div type="textpart" subtype="chapter" n="1"> 內含 subtype="section"；
+# 伊格那丟那份多一層 subtype="epistle"，七封書信裝在同一個檔裡。
+#
+# 🚨 <note> 是校勘註釋，必須整個剔掉。留著的話異文與手稿代號會混進正文，而讀者
+#    看到的是一段「看起來像希臘文」的東西——這種錯不會有任何訊號。
+TEI_PREFACE = {"praef": 0, "prooemium": 0, "preface": 0, "pr": 0, "praefatio": 0}
+
+
+def parse_tei_chapters(xml: str, epistle: str | None = None
+                       ) -> dict[tuple[int | None, int], str]:
+    """把 First1KGreek 的 TEI 切成 {(None, 章): 文字}。序言記為第 0 章。
+
+    `epistle` 有值時只取那一封（伊格那丟七書共用一個檔，n 是 "1".."7"）。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"))
+    ns = {"t": "http://www.tei-c.org/ns/1.0"}
+
+    scope = root
+    if epistle is not None:
+        found = root.xpath(f'.//t:div[@subtype="epistle"][@n="{epistle}"]', namespaces=ns)
+        if not found:
+            return {}
+        scope = found[0]
+
+    out: dict[tuple[int | None, int], str] = {}
+    for div in scope.xpath('.//t:div[@subtype="chapter"]', namespaces=ns):
+        raw = (div.get("n") or "").strip()
+        n = TEI_PREFACE.get(raw.lower())
+        if n is None:
+            if not raw.isdigit():
+                continue
+            n = int(raw)
+        # 校勘註釋整個拿掉，連同它的 tail（註釋之後、下一個節點之前的文字仍是正文，
+        # 所以 tail 要接回去，不能連著 note 一起刪）
+        clone = etree.fromstring(etree.tostring(div))
+        for note in clone.xpath('.//*[local-name()="note"]'):
+            tail = note.tail or ""
+            parent = note.getparent()
+            prev = note.getprevious()
+            if prev is not None:
+                prev.tail = (prev.tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+            parent.remove(note)
+        text = " ".join(" ".join(clone.itertext()).split())
+        if text:
+            out[(None, n)] = text
+    return out
+
+
 # ── 希臘原典（Migne PG 的 OCR 稿）───────────────────────────────────────────
 # 第三種行標：希臘字母數字。ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號正好對得上 NPNF 中英譯
 # 段落開頭的 1. 2. 3.（同一套本篤會編次）。
@@ -424,6 +478,21 @@ def book_of(numbers: list[int]) -> list[int]:
         out.append(book)
         last = n
     return out
+
+
+def work_name(chapter_path: str) -> str:
+    """把 chapter_path 的「作品名」切出來（去掉「 第N章」「 卷一 第N章」後綴）。
+
+    🚨 比對一定要用「作品名完全相符」，不可以用 startswith。ANF 第一卷同時收了
+       〈依納爵致以弗所人書〉與〈依納爵致以弗所人書（敘利亞文版）〉——敘利亞短本
+       是另一個文本，用 startswith 就會把標準希臘本配到它身上，而三欄照樣排得
+       整整齊齊。
+    """
+    name = re.sub(r"\s*第\d+.*$", "", chapter_path or "")
+    # 「懺悔錄 卷二」整卷收成一段時沒有「第N章」後綴，卷次也要剝掉，
+    # 否則那一整卷會被當成另一部著作而整段跳過。
+    name = re.sub(r"\s*卷[一二三四五六七八九十]+\s*$", "", name)
+    return name.strip()
 
 
 def chapter_headings(body: list[str]) -> list[tuple[int, int]]:

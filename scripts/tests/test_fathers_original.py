@@ -464,3 +464,82 @@ def test_cap_must_not_match_inside_a_word():
     text = "CAPTIVITAS non est caput\nI. [1] alpha\nII. [1] beta\n"
     got = fo.parse_chapter_markers(text)
     assert set(got) == {(None, 1), (None, 2)}
+
+
+# ── TEI 原典（First1KGreek）─────────────────────────────────────────────────
+TEI = """<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+<div type="edition">
+  <div type="textpart" subtype="epistle" n="1">
+    <div type="textpart" subtype="chapter" n="praef">
+      <div type="textpart" subtype="section" n="1"><p>Ἰγνάτιος τῇ ἐκκλησίᾳ</p></div>
+    </div>
+    <div type="textpart" subtype="chapter" n="1">
+      <div type="textpart" subtype="section" n="1"><p>Ἀποδεξάμενος <note n="2">codd. AB</note> ἐν θεῷ</p></div>
+      <div type="textpart" subtype="section" n="2"><p>τὸ πολυαγάπητόν σου ὄνομα</p></div>
+    </div>
+  </div>
+  <div type="textpart" subtype="epistle" n="2">
+    <div type="textpart" subtype="chapter" n="1">
+      <div type="textpart" subtype="section" n="1"><p>Γνοὺς ὑμῶν τὸ πολυεύτακτον</p></div>
+    </div>
+  </div>
+</div></body></text></TEI>"""
+
+
+def test_tei_chapters_and_preface():
+    got = fo.parse_tei_chapters(TEI, epistle="1")
+    assert set(got) == {(None, 0), (None, 1)}      # praef 記為第 0 章
+    assert got[(None, 0)].startswith("Ἰγνάτιος")
+
+
+def test_tei_joins_sections_within_a_chapter():
+    got = fo.parse_tei_chapters(TEI, epistle="1")
+    assert "Ἀποδεξάμενος" in got[(None, 1)]
+    assert "πολυαγάπητόν" in got[(None, 1)]
+
+
+def test_tei_drops_the_apparatus_but_keeps_the_text_around_it():
+    """<note> 是校勘註釋，留著會把手稿代號混進正文；但它後面的文字仍是正文，
+    刪 note 時要把 tail 接回去，否則正文會缺一截而完全看不出來。"""
+    got = fo.parse_tei_chapters(TEI, epistle="1")
+    assert "codd. AB" not in got[(None, 1)]
+    assert "ἐν θεῷ" in got[(None, 1)]
+
+
+def test_tei_epistle_scoping():
+    """七封書信裝在同一個檔裡，取錯一封就整部配到別封的內容。"""
+    assert fo.parse_tei_chapters(TEI, epistle="2")[(None, 1)].startswith("Γνοὺς")
+    assert fo.parse_tei_chapters(TEI, epistle="9") == {}
+
+
+def test_work_name_strips_the_chapter_suffix():
+    assert fo.work_name("特土良護教辭 第1-10章") == "特土良護教辭"
+    assert fo.work_name("懺悔錄 卷一 第1-10章") == "懺悔錄"
+    assert fo.work_name("依納爵致羅馬人書") == "依納爵致羅馬人書"
+
+
+def test_work_name_keeps_variant_editions_distinct():
+    """ANF 第一卷同時收了〈依納爵致以弗所人書〉與〈…（敘利亞文版）〉。敘利亞短本
+    是另一個文本，用 startswith 比對就會把標準希臘本配到它身上，而三欄照樣排得
+    整整齊齊——這是最難察覺的那種錯。"""
+    a = fo.work_name("依納爵致以弗所人書 第1-10章")
+    b = fo.work_name("依納爵致以弗所人書（敘利亞文版）")
+    assert a != b
+
+
+def test_work_name_strips_a_bare_book_suffix():
+    """《懺悔錄》卷二整卷收成一段，路徑沒有「第N章」；卷次也要剝掉，否則那一整卷
+    會被當成另一部著作而整段跳過（實測少了 16 節原文）。"""
+    assert fo.work_name("懺悔錄 卷二") == "懺悔錄"
+    assert fo.work_name("懺悔錄 卷十三 第31-38章") == "懺悔錄"
+
+
+def test_chapter_lookup_must_carry_the_book_number():
+    """《上帝之城》22 卷，每卷的章號都從一起算。查表時漏掉卷次的話，卷十三的第一
+    章會拿到卷一第一章的拉丁文——命中率照樣很高、三欄照樣排得整整齊齊，內容卻是
+    別一卷的。這是實際發生過的錯（539→514，而那 514 裡有一部分是錯的）。"""
+    chapters = {(1, 1): "liber I caput I", (13, 1): "liber XIII caput I"}
+    assert chapters.get((13, 1)) != chapters.get((1, 1))
+    # 對齊器拿到 book=13 就該取卷十三那一條
+    col, hit, _ = fo.align_by_chapter_heading(["# 第一章 甲"], 13, chapters)
+    assert col[0] == "liber XIII caput I" and hit == 1

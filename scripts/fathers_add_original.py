@@ -161,6 +161,32 @@ WORKS: dict[str, dict] = {
                       ("密努修《屋大維對話錄》", "https://www.thelatinlibrary.com/minucius.html"),
         ],
     },
+    "anf1-greek": {
+        "label": "ANF 第一卷的希臘原典（使徒教父＋猶斯定）",
+        "ebook_id": "c98d358d-7066-4691-a896-b7232707b0db",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 🚨 愛任紐《駁異端》不在這裡：希臘文只存殘篇，完整本是拉丁譯本
+        #    （PG 7）。硬拿 tlg1447 去配會讓五卷大部分留白而看不出原因。
+        # 網址後面的 #N 是伊格那丟七封真書在同一個 TEI 檔裡的 epistle 序號。
+        "parts": [
+                      ("克勉致哥林多人前書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1271/tlg001/tlg1271.tlg001.1st1K-grc1.xml"),
+                      ("巴拿巴書信", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1216/tlg001/tlg1216.tlg001.opp-grc1.xml"),
+                      ("致丟格那妥書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0646/tlg004/tlg0646.tlg004.1st1K-grc1.xml"),
+                      ("坡旅甲致腓立比人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1622/tlg001/tlg1622.tlg001.1st1K-grc1.xml"),
+                      ("猶斯定第一護教辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0645/tlg001/tlg0645.tlg001.1st1K-grc1.xml"),
+                      ("猶斯定第二護教辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0645/tlg002/tlg0645.tlg002.perseus-grc2.xml"),
+                      ("與特里弗的對話", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0645/tlg003/tlg0645.tlg003.perseus-grc2.xml"),
+                      ("依納爵致以弗所人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#1"),
+                      ("依納爵致馬內夏人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#2"),
+                      ("依納爵致特拉勒人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#3"),
+                      ("依納爵致羅馬人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#4"),
+                      ("依納爵致非拉鐵非人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#5"),
+                      ("依納爵致士每拿人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#6"),
+                      ("依納爵致坡旅甲書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#7"),
+        ],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -196,14 +222,23 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     chapters: dict[tuple[int | None, int], str] = {}
     by_book: dict[tuple[int | None, int], str] = {}
     sections: dict[tuple[int | None, int, int | None], str] = {}
-    unit = "章" if spec["mode"] == "chapter" else "節"
+    unit = "節" if spec["mode"] == "paragraph" else "章"
     for i, url in enumerate(spec["urls"], 1):
-        r = s.get(url, timeout=45)
-        r.raise_for_status()
+        # 伊格那丟七封真書共用一個 TEI 檔，網址後面的 #N 是 epistle 序號
+        url, _, epistle = url.partition("#")
+        r = s.get(url, timeout=90)
+        if r.status_code != 200:
+            # 一個取源壞掉不該讓整輪中止——其餘幾十部照樣做得完，缺的那一部會在
+            # 命中率那一行看得出來。
+            print(f"  ⚠ 取源 {r.status_code}：{url}")
+            continue
         text = FO.strip_html(r.text)
         if spec["mode"] == "paragraph":
             got = FO.parse_numbered_text(text, default_book=i)
             sections.update(got)
+        elif spec["mode"] == "tei":
+            got = FO.parse_tei_chapters(r.text, epistle or None)
+            chapters.update(got)
         elif spec["mode"] == "roman":
             got = FO.parse_chapter_markers(text)
             # 多卷的著作（《駁馬吉安》五卷、《致萬民》兩卷）原典每卷的章號都從
@@ -236,25 +271,31 @@ def align_part(chunks, spans, chapters, by_book):
     """
     seq = []
     for c in chunks:
-        if c["chunk_index"] not in spans:
+        sp = spans.get(c["chunk_index"])
+        if not sp:
             continue
         body = FO.split_body(c.get("content") or "")
         for i, n in FO.chapter_headings(body):
-            seq.append((c["chunk_index"], i, n))
+            seq.append((c["chunk_index"], i, n, sp.book))
     if not seq:
         return {}, 0, 0
 
     flat: dict[int, list] = {}
     n_flat = 0
-    for ci, i, n in seq:
-        text = chapters.get((None, n)) or chapters.get((1, n))
+    for ci, i, n, book in seq:
+        # 🚨 卷次一定要帶進查表。少了它，《上帝之城》卷十三的第一章會拿到卷一
+        #    第一章的拉丁文——命中率照樣很高，三欄照樣排得整整齊齊，內容卻是別
+        #    一卷的。只有在完全沒有卷這一層時（單卷著作）才退回 (None, n)。
+        text = chapters.get((book, n)) if book is not None else None
+        if text is None:
+            text = chapters.get((None, n))
         if text:
             flat.setdefault(ci, []).append((i, text))
             n_flat += 1
 
     per: dict[int, list] = {}
     n_per = 0
-    for (ci, i, n), b in zip(seq, FO.book_of([n for _, _, n in seq])):
+    for (ci, i, n, _), b in zip(seq, FO.book_of([x[2] for x in seq])):
         text = by_book.get((b, n))
         if text:
             per.setdefault(ci, []).append((i, text))
@@ -284,7 +325,7 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
     out: dict[int, FO.Span] = {}
     for c in chunks:
         cp = c.get("chapter_path") or ""
-        if not cp.startswith(part["prefix"]):
+        if FO.work_name(cp) != part["prefix"]:
             continue
         # 「卷二」整卷一段時要餵該卷章數才解得出範圍
         book_hint = None
@@ -297,6 +338,11 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
             s = FO.Span(s.first + part["book_from_chapter"], s.first, s.last)
             if s.book < 1:
                 continue
+        if s is None and part["mode"] in ("chapter", "roman", "tei"):
+            # 逐章模式的錨點是內文裡的「第N章」標題，不是 chapter_path 的後綴。
+            # 只用一段收完的著作（依納爵致羅馬人書、致坡旅甲書）路徑上沒有那個
+            # 後綴，硬要它就會整部被跳過而毫無訊號。
+            s = FO.Span(None, 1, 1)
         if s:
             out[c["chunk_index"]] = s
     return out
@@ -321,7 +367,7 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
                 if m:
                     found.append(FO.Span(s.book, int(m.group(1)), int(m.group(1))))
         return FO.coverage(found, {k: "x" for k in paragraphs})
-    if part["mode"] in ("chapter", "roman"):
+    if part["mode"] in ("chapter", "roman", "tei"):
         found = []
         for c in chunks:
             s = spans.get(c["chunk_index"])
@@ -371,7 +417,7 @@ def main() -> int:
             print(f"沒有前綴為「{a.only}」的部")
             return 1
     print(f"《{spec['label']}》 原文 {spec['lang']} ← {spec['source']}"
-          f"（{'逐章' if spec['mode'] in ('chapter', 'roman') else '逐節'}對齊）"
+          f"（{'逐節' if spec['mode'] in ('paragraph', 'greek') else '逐章'}對齊）"
           + (f"，共 {len(parts)} 部" if len(parts) > 1 else ""))
 
     chunks = load_chunks(path)
