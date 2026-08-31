@@ -106,7 +106,8 @@
                   <span v-if="w.era">{{ w.era }}</span>
                   <span v-if="w.place">{{ w.place }}</span>
                   <span v-if="w.language">{{ w.language }}</span>
-                  <span v-if="w.link" class="text-emerald-600">對照 →</span>
+                  <span v-if="isDeepLink(w.link)" class="text-emerald-600">全文對照 →</span>
+                  <span v-else-if="w.link" class="text-gray-400">見對照工具 →</span>
                 </div>
               </div>
               <!-- 右：簡介 -->
@@ -117,7 +118,7 @@
       </section>
 
       <div class="text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
-        <p>「對照 →」表示該卷已有站內全文對照可閱讀；其餘為待補的「漢語神學尋寶圖」條目。</p>
+        <p>「全文對照 →」直接開到該卷的逐段對照；「見對照工具 →」只到該工具的入口頁，那一卷的全文尚未逐卷定位。其餘為待補的「漢語神學尋寶圖」條目。</p>
       </div>
     </div>
   </div>
@@ -159,6 +160,12 @@ const usedSources = computed<string[]>(() => {
 useHead(() => ({ title: `${collection.value?.name ?? '大藏經'}·${canonLabel.value.zh} — Know Graph Lab` }))
 
 function count(c: DazangCanon) { return canonWorkCount(c) }
+// `/fathers` 只到入口頁，`/fathers/{id}?page=N` 才真的開到那一卷。兩者都寫
+// 「對照 →」的時候，讀者點下去看到的是搜尋頁而不是他點的那部書——目錄看起來
+// 完好，內容卻不是他要的。多一段路徑或帶 query 才算逐卷。
+function isDeepLink(link?: string) {
+  return !!link && /^\/[^/?#]+\/[^?#]/.test(link)
+}
 // 連續卷號（跨部累計）
 function runningNo(div: DazangDivision, idx: number) {
   if (!canon.value) return idx + 1
