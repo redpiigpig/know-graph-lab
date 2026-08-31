@@ -125,6 +125,163 @@ def test_work_id_scheme():
     assert meta["id"] == "T1564"
 
 
+# ── 卍續藏 X ───────────────────────────────────────────────
+def test_xuzang_divisions_cover_1_to_1671():
+    """X 第一層部類（抓自 CBETA 原書目錄）必須連續覆蓋經號 1–1671。"""
+    prev = 0
+    for _k, _l, lo, hi in tc.XUZANG_DIVISIONS:
+        assert lo == prev + 1, f"{_l} 起點 {lo} 與前一部尾 {prev} 不連續"
+        assert hi >= lo
+        prev = hi
+    assert prev == 1671
+    assert tc.division_of("X", 240) == "x-jingshu"     # 華嚴綱要
+    assert tc.division_of("X", 1571) == "x-shizhuan"   # 五燈全書
+    assert tc.division_of("X", 1) == "x-india"
+
+
+def test_division_of_refuses_unknown_canon():
+    """🚨 原本寫成「不是 T 就套南傳表」—— 加 X 進來時整部續藏會被默默
+    按冊號丟進南傳八分部，每部都拿到看似正常的 division_key。必須明列。"""
+    import pytest
+    with pytest.raises(ValueError):
+        tc.division_of("J", 1, vol=1)          # 嘉興藏，還沒定部類表
+    assert tc.division_of("N", 1, vol=9) == "n-majjhima"   # N 仍照冊號
+
+
+def test_xuzang_subdivisions_nest_inside_their_division():
+    """109 個子類都必須落在自己的第一層部類區間內，否則就是抄錯了。"""
+    divs = {k: (lo, hi) for k, _l, lo, hi in tc.XUZANG_DIVISIONS}
+    for key, label, spans in tc.XUZANG_SUBDIVISIONS:
+        parent = key.rsplit("-", 1)[0]
+        lo, hi = divs[parent]
+        for a, b in spans:
+            assert lo <= a <= b <= hi, f"{label} {a}-{b} 落在 {parent} {lo}-{hi} 之外"
+
+
+def test_shizhuan_subdivisions_are_interleaved_not_contiguous():
+    """🚨 史傳部的子類經號是**交錯**的（雜傳散在 1623-1628、1640-1645…），
+    假設連續會把感應神異傳、居士善女傳整批吃進雜傳。"""
+    sub = {k: spans for k, _l, spans in tc.XUZANG_SUBDIVISIONS}
+    assert len(sub["x-shizhuan-011"]) > 1          # 雜傳本身就是多段
+    assert tc.subdivision_of("X", 1646) == "x-shizhuan-013"   # 居士善女傳
+    assert tc.subdivision_of("X", 1645) == "x-shizhuan-011"   # 雜傳
+    assert tc.subdivision_of("X", 1639) == "x-shizhuan-012"   # 感應神異傳
+    assert tc.subdivision_of("T", 262) == ""       # 只有 X 有子類
+
+
+def test_split_work_title_suffix_stripped_but_real_juan_titles_kept():
+    """CBETA 把 6 部跨冊的書切成兩檔，書名尾巴加「(第1卷-第44卷)」。
+    那是檔案註記不是書名；但「華嚴經論〔卷十〕」「四家語錄卷一」的卷是書名本身。"""
+    assert tc._norm_title("華嚴綱要(第1卷-第44卷)") == "華嚴綱要"
+    assert tc._norm_title("五燈全書(第34卷-第120卷)") == "五燈全書"
+    assert tc._norm_title("華嚴經論〔卷十〕") == "華嚴經論〔卷十〕"
+    assert tc._norm_title("馬祖道一禪師廣錄（四家語錄卷一）") == "馬祖道一禪師廣錄（四家語錄卷一）"
+
+
+def test_merge_parts_offsets_toc_and_segment_pointers():
+    """🚨 段的 i、目錄的 i/parent、段指向目錄的 d 都是**檔內索引**。
+    直接串接會讓後半部的目錄父子鏈指到前半部的節點上 ——
+    側欄看起來有東西，層級卻全錯，而頁面完全正常。"""
+    a = ({"id": "X0240", "juan_count": 44,
+          "toc": [{"i": 0, "parent": -1, "head": "上"},
+                  {"i": 1, "parent": 0, "head": "上-子"}], "terms": []},
+         [{"i": 0, "d": 0, "uid": "A0"}, {"i": 1, "d": 1, "uid": "A1"}], [])
+    b = ({"id": "X0240", "juan_count": 36,
+          "toc": [{"i": 0, "parent": -1, "head": "下"},
+                  {"i": 1, "parent": 0, "head": "下-子"}], "terms": []},
+         [{"i": 0, "d": 0, "uid": "B0"}, {"i": 1, "d": -1, "uid": "B1"}], [])
+    meta, segs, _ = tc.merge_parts([a, b])
+    assert [s["uid"] for s in segs] == ["A0", "A1", "B0", "B1"]
+    assert [s["i"] for s in segs] == [0, 1, 2, 3]
+    # 後半的目錄節點要位移，父指標跟著位移，根節點仍是 -1
+    assert [n["i"] for n in meta["toc"]] == [0, 1, 2, 3]
+    assert [n["parent"] for n in meta["toc"]] == [-1, 0, -1, 2]
+    # 後半的段要指到後半自己的目錄節點（2），不是前半的 0
+    assert segs[2]["d"] == 2
+    assert segs[3]["d"] == -1, "本來就不屬任何節點的段要保持 -1"
+    assert meta["xml_parts"] == 2
+
+
+def test_chan_dialog_paragraphs_are_not_dropped():
+    """🚨 禪宗語錄的問答體 <cb:dialog><sp><p>…</p></sp> —— 走訪器不往下走
+    就整批靜默丟掉。達磨大師破相論 X1220 全篇問答，因此一度解析成 0 段；
+    全 X 部 60 部用了它、約 90.7 萬字。T／N 一個都沒有，故此洞到收 X 才現形。"""
+    doc = f"""<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="{TEI}" xmlns:cb="{CB}" xml:id="X63n1220">
+ <teiHeader><fileDesc>
+  <titleStmt><title level="m" xml:lang="zh-Hant">達磨大師破相論</title></titleStmt>
+  <extent>1卷</extent>
+  <publicationStmt><idno type="CBETA">
+    <idno type="canon">X</idno>.<idno type="vol">63</idno>.<idno type="no">1220</idno>
+  </idno></publicationStmt>
+ </fileDesc></teiHeader>
+ <text><body>
+  <milestone unit="juan" n="1"/><pb n="0008c" ed="X"/>
+  <cb:div><cb:dialog type="qa">
+    <sp cb:type="question"><lb n="0008c09" ed="X"/><p>若復有人志求佛道者，當脩何法最為省要？</p></sp>
+    <sp cb:type="answer"><lb n="0008c12" ed="X"/><p>唯觀心一法，總攝諸法，最為省要。</p></sp>
+  </cb:dialog></cb:div>
+ </body></text>
+</TEI>"""
+    tc._GAIJI = {}
+    meta, segs, _ = tc.parse_work(doc)
+    assert meta["id"] == "X1220"
+    texts = [s["sources"]["lzh"] for s in segs]
+    assert any("志求佛道" in t for t in texts), "問句被丟掉了"
+    assert any("唯觀心一法" in t for t in texts), "答句被丟掉了"
+    assert len(segs) >= 2
+
+
+def test_glossary_entries_are_not_dropped():
+    """🚨 辭書體 <entry><form>詞目</form><cb:def><p>釋義</p></cb:def></entry>。
+    「事義」那一類整部都是這個結構；不處理只會留下卷首標題 ——
+    阿彌陀經疏鈔事義 X0425 一度只解出 16 字，而目錄頁看起來完全正常，
+    只是顯示「這部書很短」。全 X 部 105 部、約 223.7 萬字。"""
+    doc = f"""<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="{TEI}" xmlns:cb="{CB}" xml:id="X22n0425">
+ <teiHeader><fileDesc>
+  <titleStmt><title level="m" xml:lang="zh-Hant">阿彌陀經疏鈔事義</title></titleStmt>
+  <extent>1卷</extent>
+  <publicationStmt><idno type="CBETA">
+    <idno type="canon">X</idno>.<idno type="vol">22</idno>.<idno type="no">425</idno>
+  </idno></publicationStmt>
+ </fileDesc></teiHeader>
+ <text><body>
+  <milestone unit="juan" n="1"/><pb n="0685a" ed="X"/>
+  <cb:div type="other"><lb n="0685a07" ed="X"/>
+    <entry><form>雲棲寺</form>
+      <cb:def><lb n="0685a08" ed="X"/><p>寺名雲棲，在錢塘五雲山後。</p></cb:def></entry>
+    <entry><form>棲真寺</form>
+      <cb:def><lb n="0685a12" ed="X"/><p>治平二年改名。</p></cb:def></entry>
+  </cb:div>
+ </body></text>
+</TEI>"""
+    tc._GAIJI = {}
+    meta, segs, _ = tc.parse_work(doc)
+    assert meta["id"] == "X0425"
+    texts = [s["sources"]["lzh"] for s in segs]
+    assert "雲棲寺" in texts and "棲真寺" in texts, "詞目沒收進來"
+    assert any("錢塘五雲山" in t for t in texts), "釋義被丟掉了"
+    # 詞目是小標，釋義是本文，兩者不可黏成一段
+    assert [s["kind"] for s in segs if s["sources"]["lzh"] == "雲棲寺"] == ["head"]
+
+
+def test_merge_counts_distinct_juan_not_sum_of_extents():
+    """🚨 印本可能在同一卷中間斷冊：四分律含注戒本疏行宗記作
+    「(第1卷-第3卷)」＋「(第3卷-第4卷)」，**卷三跨兩冊**。
+    把兩檔的 extent 相加得 3+2=5 卷，實際只有 4 卷。"""
+    a = ({"id": "X0714", "juan_count": 3, "toc": [], "terms": []},
+         [{"i": 0, "d": -1, "uid": "a", "juan": 1},
+          {"i": 1, "d": -1, "uid": "a2", "juan": 2},
+          {"i": 2, "d": -1, "uid": "b", "juan": 3}], [])
+    b = ({"id": "X0714", "juan_count": 2, "toc": [], "terms": []},
+         [{"i": 0, "d": -1, "uid": "c", "juan": 3},   # 同一卷延續到下一冊
+          {"i": 1, "d": -1, "uid": "d", "juan": 4}], [])
+    meta, _segs, _ = tc.merge_parts([a, b])
+    assert meta["juan_count"] == 4, "卷三只能算一次"
+    assert meta["extent"] == "4卷"
+
+
 # ── 切段 ──────────────────────────────────────────────────
 def test_segment_key_is_taisho_line_number():
     """使用者定調：段鍵＝大正藏行號，不自編流水號。"""

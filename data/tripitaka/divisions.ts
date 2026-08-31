@@ -86,8 +86,34 @@ export const NANCHUAN: Division[] = [
     desc: '彌蘭王問經、島史、大史、小史、清淨道論、善見律註序、攝阿毘達磨義論、阿育王刻文。', color: 'violet' },
 ]
 
+/**
+ * 卍新纂大日本續藏經（X）—— 大正藏的補遺。
+ *
+ * 大正藏偏重印度傳來的經律論與唐以前的中土著述；卍續藏補的正是它略掉的那一半：
+ * 宋元明清的疏鈔、各宗語錄、禮懺儀軌與寺志僧傳。兩藏合看，漢傳佛教才是全的。
+ *
+ * 部類與經號區間抓自 CBETA 站方原書目錄（見 tripitaka_cbeta.XUZANG_DIVISIONS），
+ * 不是自訂的。每部底下另有第二層子類（宗派／經疏類目）共 109 個。
+ */
+export const XUZANG: Division[] = [
+  { key: 'x-india', label: '印度撰述', label_alt: 'Indian works', vols: 'X01–02',
+    desc: '大正藏未收的印度經律論譯本與密教儀軌。全 X 部唯一非中土撰述的一區。', color: 'amber' },
+  { key: 'x-jingshu', label: '大小乘釋經部', label_alt: 'Sūtra commentaries', vols: 'X03–37',
+    desc: '華嚴、方等、般若、法華、涅槃各部的疏鈔，佔全藏三分之一。歷代講經的實錄。', color: 'emerald' },
+  { key: 'x-lushu', label: '大小乘釋律部', label_alt: 'Vinaya commentaries', vols: 'X38–44',
+    desc: '梵網、四分律的疏記。南山律宗的核心文獻多在此。', color: 'stone' },
+  { key: 'x-lunshu', label: '大小乘釋論部', label_alt: 'Śāstra commentaries', vols: 'X45–53',
+    desc: '起信、唯識、俱舍、因明各論的注疏。明末唯識學復興的著作集中於此。', color: 'cyan' },
+  { key: 'x-zhuzong', label: '諸宗著述部', label_alt: 'Sectarian works', vols: 'X54–73',
+    desc: '三論、法相、天台、華嚴、真言、戒律、淨土各宗著述，及禪宗語錄通集與別集。全藏最大一部。', color: 'purple' },
+  { key: 'x-lichan', label: '禮懺部', label_alt: 'Liturgy & repentance', vols: 'X74',
+    desc: '水陸、梁皇、藥師、地藏各種懺儀與道場儀軌。漢傳佛教實際怎麼做法事，看這一部。', color: 'rose' },
+  { key: 'x-shizhuan', label: '史傳部', label_alt: 'Histories & biographies', vols: 'X75–88',
+    desc: '燈錄、僧傳、編年史、寺志、居士傳、感應記。禪宗燈史的主體在此不在大正藏。', color: 'orange' },
+]
+
 export const ALL_DIVISIONS = [
-  ...TAISHO_TRANSLATED, ...TAISHO_CHINESE, ...NANCHUAN,
+  ...TAISHO_TRANSLATED, ...TAISHO_CHINESE, ...NANCHUAN, ...XUZANG,
 ]
 
 export function divisionByKey(key: string): Division | undefined {

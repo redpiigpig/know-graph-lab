@@ -139,7 +139,7 @@ def cmd_schema():
 
 COLS = ["id", "canon", "vol", "work_no", "work_suffix", "title_zh", "series", "byline",
         "dynasty", "translator", "author", "lost_translator", "extent", "juan_count",
-        "division_key", "japanese", "xml_path", "seg_count", "char_count",
+        "division_key", "subdivision_key", "japanese", "xml_path", "seg_count", "char_count",
         "toc_count", "equiv_count", "term_count", "term_langs", "display_order"]
 
 

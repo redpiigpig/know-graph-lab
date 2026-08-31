@@ -118,7 +118,7 @@
 
 <script setup lang="ts">
 import {
-  TAISHO_TRANSLATED, TAISHO_CHINESE, NANCHUAN, COLOR_CLASS,
+  TAISHO_TRANSLATED, TAISHO_CHINESE, NANCHUAN, XUZANG, COLOR_CLASS,
 } from '~/data/tripitaka/divisions'
 
 definePageMeta({ middleware: 'auth' })
@@ -127,6 +127,7 @@ useHead({ title: '佛教大藏經 — Know Graph Lab' })
 const groups = [
   { title: '大正藏 · 漢譯經律論', desc: '自印度傳入、譯成漢文的經律論本體（T01–T32）', divisions: TAISHO_TRANSLATED },
   { title: '大正藏 · 中土撰述', desc: '漢地祖師的注疏、宗論、史傳與經錄（T33–T55、T85）', divisions: TAISHO_CHINESE },
+  { title: '卍新纂續藏經 · 中土撰述補遺', desc: '大正藏略掉的那一半：宋元明清的疏鈔、各宗語錄、禮懺儀軌與寺志僧傳（X01–X88）', divisions: XUZANG },
   { title: '漢譯南傳大藏經 · 元亨寺版', desc: '巴利三藏的完整現代漢譯，與上列漢譯阿含互為對照（N01–N70）', divisions: NANCHUAN },
 ]
 

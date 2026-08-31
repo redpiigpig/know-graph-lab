@@ -1,7 +1,12 @@
 """佛教大藏經 /tripitaka —— CBETA TEI P5 → 目錄 rows ＋ 逐段 JSONL。
 
-《大正新脩大藏經》(canon T, 2,920 部) 與《漢譯南傳大藏經》(canon N, 元亨寺版)
-的漢文層。原文（梵／巴／藏）由 tripitaka_parallels.py 另行掛上，本檔只管漢文。
+《大正新脩大藏經》(canon T)、《卍新纂大日本續藏經》(canon X, 選錄 1,230 部)
+與《漢譯南傳大藏經》(canon N, 元亨寺版) 的漢文層。
+原文（梵／巴／藏）由 tripitaka_parallels.py 另行掛上，本檔只管漢文。
+
+⚠ 產出寫到 OUT_DIR ＝ **Drive** `_tripitaka/`（.env 的 TRIPITAKA_DIR），
+  不是本機 C:/tmp/cbeta/out —— 那是 tripitaka_sanskrit／tripitaka_vernacular
+  寫的地方。兩者不同，別假設「建好了就都在同一處」（見 SKILL 踩坑 25）。
 
 切段規則（使用者定調 2026-08-28）：
   段的鍵 = 該段第一行的**大正藏行號**，如 `T09n0262_p0008a13`。不自編段號。
@@ -24,7 +29,7 @@
   python scripts/tripitaka_cbeta.py --inspect T/T02/T02n0099.xml
   python scripts/tripitaka_cbeta.py --catalog            # 掃全藏 → 目錄 JSON
   python scripts/tripitaka_cbeta.py --build T0262        # 單部 → JSONL
-  python scripts/tripitaka_cbeta.py --build-all --canon T
+  python scripts/tripitaka_cbeta.py --build-all --canon X
 """
 from __future__ import annotations
 
@@ -652,7 +657,23 @@ def parse_work(xml_text: str) -> tuple[dict, list[dict], list[dict]]:
                     walk(child, path)
                 else:
                     emit(child, "item", path)
-            elif t in ("list", "table", "cell", "row", "quote"):
+            # 🚨 辭書體：<entry><form>詞目</form><cb:def><p>釋義</p></cb:def></entry>
+            # 「事義」那一類（疏鈔的詞語彙釋）整部都是這個結構。不處理的話
+            # 只有卷首標題會留下來 —— 阿彌陀經疏鈔事義 X0425 一度只解出 16 字，
+            # 而目錄頁看起來完全正常，只是「這部書很短」。
+            # 全 X 部 105 部、32,997 個詞條、約 223.7 萬字。T／N 一個都沒有。
+            elif t == "entry":
+                walk(child, path)
+            elif t == "form":
+                emit(child, "head", path)      # 詞目當小標，與釋義分開成段
+            elif t == "def":
+                walk(child, path)
+            # 🚨 dialog／sp 是禪宗語錄的問答體：
+            #   <cb:dialog type="qa"><sp cb:type="question"><p>…</p></sp>…
+            # 不往下走就會**整批靜默丟掉**裡面的 <p>。全 X 部 60 部用了它、
+            # 約 90.7 萬字；達磨大師破相論 X1220 全篇問答，因此一度解析成 0 段。
+            # T／N 一個都沒有，所以這個洞到收 X 才現形。
+            elif t in ("list", "table", "cell", "row", "quote", "dialog", "sp"):
                 walk(child, path)
 
     walk(body, [])
@@ -828,16 +849,22 @@ def merge_parts(parts: list[tuple[dict, list[dict], list[dict]]]
         equivs.extend(e)
     meta["toc"] = toc
     meta["terms"] = terms
-    # 卷數是各檔相加（華嚴綱要 44 卷＋36 卷＝80 卷）；extent 改寫成合計
-    total_juan = sum(m.get("juan_count") or 0 for m, _, _ in parts)
+    # 🚨 卷數不可把各檔的 extent 相加 —— 印本可能在同一卷中間斷冊：
+    # 四分律含注戒本疏行宗記作「(第1卷-第3卷)」＋「(第3卷-第4卷)」，**卷三跨兩冊**，
+    # 相加得 3+2=5 卷，實際只有 4 卷。改數實際出現的相異卷號。
+    juans = {x["juan"] for x in segs if x.get("juan")}
+    total_juan = len(juans) or sum(m.get("juan_count") or 0 for m, _, _ in parts)
     meta["juan_count"] = total_juan
     meta["extent"] = f"{total_juan}卷" if total_juan else meta.get("extent", "")
     meta["xml_parts"] = len(parts)
     return meta, segs, equivs
 
 
-def build_one(path: Path, *, write: bool) -> dict:
-    meta, segs, equivs = parse_work(path.read_text(encoding="utf-8"))
+def build_one(path: Path | list[Path], *, write: bool) -> dict:
+    """建一部書。傳入單一路徑或同一部書的數個檔（X 有 6 部拆檔，見 work_groups）。"""
+    paths = [path] if isinstance(path, Path) else list(path)
+    parts = [parse_work(p.read_text(encoding="utf-8")) for p in paths]
+    meta, segs, equivs = merge_parts(parts)
     chars = sum(len(x["sources"]["lzh"]) for x in segs)
     toc = meta.pop("toc", [])
     terms = meta.pop("terms", [])
@@ -845,7 +872,8 @@ def build_one(path: Path, *, write: bool) -> dict:
     meta.update({"seg_count": len(segs), "char_count": chars,
                  "equiv_count": len(equivs), "toc_count": len(toc),
                  "term_count": len(terms), "term_langs": langs,
-                 "xml_path": str(path.relative_to(CBETA_ROOT)).replace("\\", "/")})
+                 "xml_path": ",".join(
+                     str(p.relative_to(CBETA_ROOT)).replace("\\", "/") for p in paths)})
     if write:
         OUT_DIR.mkdir(parents=True, exist_ok=True)
         with (OUT_DIR / f"{meta['id']}.jsonl").open("w", encoding="utf-8") as f:
@@ -892,15 +920,18 @@ def cmd_inspect(rel: str):
 def cmd_catalog(canons: list[str], out_path: Path):
     rows = []
     for canon in canons:
-        files = xml_files(canon)
-        print(f"{canon}: {len(files)} XML", flush=True)
-        for i, p in enumerate(files, 1):
+        groups = work_groups(canon)
+        nfiles = sum(len(g) for g in groups)
+        extra = nfiles - len(groups)
+        print(f"{canon}: {nfiles} XML → {len(groups)} 部"
+              + (f"（{extra} 個檔是拆檔的後半，已併回）" if extra else ""), flush=True)
+        for i, g in enumerate(groups, 1):
             try:
-                rows.append(build_one(p, write=False))
+                rows.append(build_one(g, write=False))
             except Exception as e:  # noqa: BLE001
-                print(f"  ⚠ {p.name}: {type(e).__name__} {e}", flush=True)
+                print(f"  ⚠ {g[0].name}: {type(e).__name__} {e}", flush=True)
             if i % 200 == 0:
-                print(f"  … {i}/{len(files)}", flush=True)
+                print(f"  … {i}/{len(groups)}", flush=True)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"✓ {len(rows)} 部 → {out_path}")
@@ -910,7 +941,8 @@ def cmd_catalog(canons: list[str], out_path: Path):
 def _report_divisions(rows: list[dict]):
     from collections import Counter
     c = Counter(r["division_key"] for r in rows)
-    labels = {k: l for k, l, _, _ in TAISHO_DIVISIONS + NANCHUAN_DIVISIONS}
+    labels = {k: l for k, l, _, _ in
+              TAISHO_DIVISIONS + NANCHUAN_DIVISIONS + XUZANG_DIVISIONS}
     for k, n in sorted(c.items(), key=lambda kv: -kv[1]):
         print(f"  {labels.get(k, k):8s} {n:5d} 部")
     if c.get("other"):
@@ -921,7 +953,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--inspect", type=str, help="單檔檢視（相對 CBETA_XML_DIR）")
     ap.add_argument("--catalog", action="store_true", help="掃全藏建目錄")
-    ap.add_argument("--canon", type=str, default="T,N")
+    ap.add_argument("--canon", type=str, default="T,N,X")
     ap.add_argument("--build", type=str, help="單部 id，如 T0262")
     ap.add_argument("--build-all", action="store_true")
     ap.add_argument("--out", type=str, default="C:/tmp/cbeta/catalog.json")
@@ -938,18 +970,19 @@ def main():
         hit = [p for p in xml_files(canon) if f"n{no:04d}." in p.name]
         if not hit:
             sys.exit(f"找不到 {a.build}")
-        m = build_one(hit[0], write=True)
+        m = build_one(hit, write=True)   # 拆檔的書要整組一起建，別只建前半
         print(json.dumps(m, ensure_ascii=False))
     elif a.build_all:
         for canon in canons:
-            files = xml_files(canon)
-            for i, p in enumerate(files, 1):
+            groups = work_groups(canon)
+            print(f"{canon}: {sum(len(g) for g in groups)} XML → {len(groups)} 部", flush=True)
+            for i, g in enumerate(groups, 1):
                 try:
-                    m = build_one(p, write=True)
+                    m = build_one(g, write=True)
                     if i % 100 == 0:
-                        print(f"  {canon} {i}/{len(files)} … {m['id']} {m['title_zh']}", flush=True)
+                        print(f"  {canon} {i}/{len(groups)} … {m['id']} {m['title_zh']}", flush=True)
                 except Exception as e:  # noqa: BLE001
-                    print(f"  ⚠ {p.name}: {type(e).__name__} {e}", flush=True)
+                    print(f"  ⚠ {g[0].name}: {type(e).__name__} {e}", flush=True)
     else:
         ap.print_help()
 
