@@ -107,8 +107,11 @@ async function select(year: string) {
 interface TextState { open: boolean; loading: boolean; loaded: boolean; text: string | null }
 const states = reactive<Record<number, TextState>>({});
 async function toggle(a: Article) {
-  let st = states[a.id];
-  if (!st) st = states[a.id] = { open: false, loading: false, loaded: false, text: null };
+  // 🚨 一定要「先寫入、再從 states 讀回來」。`st = states[id] = {...}` 這個賦值運算式
+  //    回傳的是**原始物件**而不是 reactive 的 proxy，改它不會觸發重繪——
+  //    症狀是按「全文」前兩下毫無反應、第三下才出現。
+  if (!states[a.id]) states[a.id] = { open: false, loading: false, loaded: false, text: null };
+  const st = states[a.id];
   st.open = !st.open;
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
