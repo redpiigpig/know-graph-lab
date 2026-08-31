@@ -2,7 +2,7 @@
  {
   "year": "2026",
   "count": 1308,
-  "chars": 3153909
+  "chars": 3172241
  },
  {
   "year": "2025",
@@ -11,42 +11,52 @@
  },
  {
   "year": "2024",
-  "count": 2694,
-  "chars": 5700348
+  "count": 2702,
+  "chars": 5718522
  },
  {
   "year": "2023",
-  "count": 2447,
-  "chars": 4782513
+  "count": 3513,
+  "chars": 6630472
  },
  {
   "year": "2022",
-  "count": 1186,
-  "chars": 2868641
+  "count": 4163,
+  "chars": 7319612
  },
  {
   "year": "2021",
-  "count": 1505,
-  "chars": 3194908
+  "count": 3448,
+  "chars": 6393554
  },
  {
   "year": "2020",
-  "count": 1757,
-  "chars": 3444151
+  "count": 2780,
+  "chars": 5636150
  },
  {
   "year": "2019",
-  "count": 2056,
-  "chars": 4110964
+  "count": 3083,
+  "chars": 6402848
  },
  {
   "year": "2018",
-  "count": 8,
-  "chars": 19005
+  "count": 10,
+  "chars": 24010
+ },
+ {
+  "year": "2017",
+  "count": 1,
+  "chars": 3240
  },
  {
   "year": "2016",
-  "count": 1,
-  "chars": 2527
+  "count": 15,
+  "chars": 41306
+ },
+ {
+  "year": "2015",
+  "count": 5,
+  "chars": 12864
  }
 ]

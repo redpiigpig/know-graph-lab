@@ -190,6 +190,28 @@ def process(limit=0):
     print(f"\n新增 {done}、專題頁略過 {topic}、其他略過 {skip}、失敗 {fail}", flush=True)
 
 
+def backfill_chars():
+    """補回 chars 欄。
+
+    --process 中途被中斷時，最後那批已經上傳 R2、卻還沒寫回 harvest 的篇目會缺
+    chars；而重跑 --process 只會因為「R2 已有」把它們跳過，chars 永遠補不回來，
+    /research-data 上的字數就一路少算。這裡直接從 R2 讀回長度。
+    """
+    rows = json.loads(HARVEST.read_text(encoding="utf-8"))
+    have = df.r2_existing_keys(R2_TXT)
+    todo = [r for r in rows
+            if f"{R2_TXT}/{r['id']}.txt" in have and not r.get("chars")]
+    print(f"缺 chars 的篇目：{len(todo)}", flush=True)
+    for i, r in enumerate(todo, 1):
+        obj = df.s3.get_object(Bucket=df.R2_BUCKET, Key=f"{R2_TXT}/{r['id']}.txt")
+        r["chars"] = len(obj["Body"].read().decode("utf-8"))
+        if i % 100 == 0:
+            print(f"  …已補 {i}/{len(todo)}", flush=True)
+            HARVEST.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    HARVEST.write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"補回 {len(todo)} 篇的字數", flush=True)
+
+
 def publish():
     rows = json.loads(HARVEST.read_text(encoding="utf-8"))
     have = df.r2_existing_keys(R2_TXT)
@@ -217,6 +239,8 @@ def main():
     ap.add_argument("--harvest", action="store_true")
     ap.add_argument("--process", action="store_true")
     ap.add_argument("--publish", action="store_true")
+    ap.add_argument("--backfill-chars", action="store_true",
+                    help="--process 被中斷後補回缺漏的字數")
     ap.add_argument("--max-pages", type=int, default=300)
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
@@ -224,9 +248,11 @@ def main():
         harvest(args.max_pages)
     if args.process:
         process(args.limit)
+    if args.backfill_chars:
+        backfill_chars()
     if args.publish:
         publish()
-    if not (args.harvest or args.process or args.publish):
+    if not (args.harvest or args.process or args.publish or args.backfill_chars):
         ap.print_help()
 
 
