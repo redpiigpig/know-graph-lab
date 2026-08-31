@@ -20,11 +20,9 @@ import re
 from dataclasses import dataclass
 
 # ── 章節編號 ────────────────────────────────────────────────────────────────
-ZH_NUM = {
-    "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8,
-    "九": 9, "十": 10, "十一": 11, "十二": 12, "十三": 13, "十四": 14, "十五": 15,
-    "十六": 16, "十七": 17, "十八": 18, "十九": 19, "二十": 20,
-}
+# 🚨 卷次一律走 zh_numeral() 現算，不要再列舉對照表。先前列到「二十」為止，
+#    《上帝之城》有 22 卷，卷二十一與卷二十二整整兩卷就靜靜地沒被解析到——
+#    腳本照跑、不報錯，只是那兩卷沒有原文。
 
 CHAPTER_PATH = re.compile(
     r"卷([一二三四五六七八九十]+)"          # 卷次（無「卷」的單卷著作見下）
@@ -54,7 +52,7 @@ def parse_chapter_path(path: str, chapters_in_book: int | None = None) -> Span |
         return None
     m = CHAPTER_PATH.search(path)
     if m:
-        book = ZH_NUM.get(m.group(1))
+        book = zh_numeral(m.group(1))
         if book is None:
             return None
         if m.group(2) is None:
@@ -115,6 +113,105 @@ def parse_numbered_text(text: str, default_book: int | None = None,
         elif key is not None and line and not drop.match(line):
             out[key].append(line)
     return {k: "\n".join(v).strip() for k, v in out.items() if v}
+
+
+# 第二種行標：章號用方括號夾的羅馬數字，寫在該章第一行的行首，同行接正文。
+#   [Pr] Gloriosissimam ciuitatem Dei…      ← 序言
+#   [I]  Ex hac namque existunt inimici…
+# 《上帝之城》《論三位一體》這一系的電子本都是這個樣子，沒有節號可用，只能對到章。
+BRACKET_CHAPTER = re.compile(r"^\[(Pr|[IVXLCDM]+)\]\s*(.*)$", re.I)
+_ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+
+
+def roman(s: str) -> int | None:
+    """羅馬數字轉整數；讀不準就回 None，不猜。"""
+    total = highest = 0
+    for ch in reversed(s.upper()):
+        v = _ROMAN.get(ch)
+        if not v:
+            return None
+        total += v if v >= highest else -v
+        highest = max(highest, v)
+    return total
+
+
+def parse_bracketed_chapters(text: str, book: int,
+                             drop: re.Pattern[str] = SITE_CHROME
+                             ) -> dict[tuple[int | None, int], str]:
+    """把 `[I] …` 這種行標的原典切成 {(卷, 章): 文字}。序言記為第 0 章。"""
+    out: dict[tuple[int | None, int], list[str]] = {}
+    key: tuple[int | None, int] | None = None
+    for line in text.split("\n"):
+        line = line.strip()
+        if not line or drop.match(line):
+            continue
+        m = BRACKET_CHAPTER.match(line)
+        if m:
+            n = 0 if m.group(1).lower() == "pr" else roman(m.group(1))
+            if n is None:
+                continue
+            key = (book, n)
+            out.setdefault(key, [])
+            if m.group(2):
+                out[key].append(m.group(2))
+        elif key is not None:
+            out[key].append(line)
+    return {k: "\n".join(v).strip() for k, v in out.items() if v}
+
+
+ZH_CHAPTER_HEAD = re.compile(r"^#{0,4}\s*第([零〇一二三四五六七八九十百]+)章")
+
+
+def zh_numeral(s: str) -> int | None:
+    """「二十一」→ 21。讀不準回 None。與 lib/multilang-sources.ts 的同名函式同規則。"""
+    digits = {"零": 0, "〇": 0, "一": 1, "二": 2, "三": 3, "四": 4,
+              "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
+    if not s:
+        return None
+    if "十" not in s and "百" not in s:
+        v = 0
+        for ch in s:
+            if ch not in digits:
+                return None
+            v = v * 10 + digits[ch]
+        return v
+    acc = digit = 0
+    for ch in s:
+        if ch in digits:
+            digit = digits[ch]
+        elif ch == "十":
+            acc += (digit or 1) * 10
+            digit = 0
+        elif ch == "百":
+            acc += (digit or 1) * 100
+            digit = 0
+        else:
+            return None
+    return acc + digit
+
+
+def align_by_chapter_heading(body: list[str], book: int | None,
+                             chapters: dict[tuple[int | None, int], str]
+                             ) -> tuple[list[str], int, int]:
+    """沒有節號的著作，退一級對到章：整章原文放在該章中文標題那一格。
+
+    比逐節粗，但位置是對的。粗而對，好過細而錯位——錯位在畫面上看不出來。
+    """
+    col = [""] * len(body)
+    hit = heads = 0
+    for i, p in enumerate(body):
+        m = ZH_CHAPTER_HEAD.match(p)
+        if not m:
+            continue
+        n = zh_numeral(m.group(1))
+        if n is None:
+            continue
+        heads += 1
+        text = chapters.get((book, n))
+        if text:
+            col[i] = text
+            hit += 1
+    return col, hit, heads
 
 
 def by_chapter(sections: dict[tuple[int | None, int, int | None], str]

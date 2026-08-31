@@ -187,3 +187,63 @@ def test_build_sources_keeps_existing():
 def test_build_sources_without_original():
     sources, order = fo.build_sources(None, "E", "en", None, "la")
     assert order == ["en"] and "la" not in sources
+
+
+# ── 方括號羅馬章號（《上帝之城》《論三位一體》那一系）─────────────────────────
+CIV = """Augustine: De Civitate Dei Liber I
+
+AUGUSTINI DE CIVITATE DEI LIBER I
+
+[Pr] Gloriosissimam ciuitatem Dei siue in hoc temporum cursu.
+
+[I] Ex hac namque existunt inimici, aduersus quos defendenda est Dei ciuitas.
+
+[II] Tot bella gesta conscripta sunt uel ante conditam Romam.
+Interest autem plurimum, qualis sit usus.
+
+The Latin Library
+"""
+
+
+def test_bracketed_chapters():
+    got = fo.parse_bracketed_chapters(CIV, 1)
+    assert set(got) == {(1, 0), (1, 1), (1, 2)}
+    assert got[(1, 0)].startswith("Gloriosissimam")     # [Pr] 記為第 0 章
+    assert got[(1, 1)].startswith("Ex hac namque")
+
+
+def test_bracketed_chapter_keeps_continuation_lines():
+    """沒有行標的續行屬於前一章，不可以自成一段或被丟掉。"""
+    assert "Interest autem plurimum" in fo.parse_bracketed_chapters(CIV, 1)[(1, 2)]
+
+
+def test_bracketed_chapter_drops_heading_and_chrome():
+    got = fo.parse_bracketed_chapters(CIV, 1)
+    joined = "".join(got.values())
+    assert "LIBER I" not in joined
+    assert "The Latin Library" not in joined
+
+
+def test_roman_and_zh_numerals():
+    assert fo.roman("XXI") == 21
+    assert fo.roman("IV") == 4
+    assert fo.roman("ABC") is None
+    assert fo.zh_numeral("二十一") == 21
+    assert fo.zh_numeral("一百二十三") == 123
+    assert fo.zh_numeral("甲") is None
+
+
+def test_align_by_chapter_heading():
+    body = ["上帝之城第一卷", "# 第一章——基督名號的敵人", "蓋此塵世城邦…",
+            "第二章——戰爭的慣例中…", "「垂死的普里亞摩斯…"]
+    chapters = {(1, 1): "Ex hac namque", (1, 2): "Tot bella gesta"}
+    col, hit, heads = fo.align_by_chapter_heading(body, 1, chapters)
+    assert (hit, heads) == (2, 2)
+    assert col == ["", "Ex hac namque", "", "Tot bella gesta", ""]
+
+
+def test_align_by_chapter_heading_matches_headings_without_hashes():
+    """中譯有時把章標題併進段落，`#` 就沒了；照樣要認得出來。"""
+    col, hit, _ = fo.align_by_chapter_heading(
+        ["第十二章——某某某"], 1, {(1, 12): "caput duodecimum"})
+    assert hit == 1 and col[0] == "caput duodecimum"

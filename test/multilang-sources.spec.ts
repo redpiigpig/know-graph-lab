@@ -9,6 +9,8 @@ import {
   zipParallel,
   BLANK_PARAGRAPH,
   alignByAnchors,
+  chineseNumeral,
+  romanNumeral,
 } from "~/lib/multilang-sources";
 
 // Contract for the collected-works multi-language schema. See
@@ -308,5 +310,67 @@ describe("alignByAnchors", () => {
     const zh = ["1. a", "x", "y", "2. b", "z"];
     const got = alignByAnchors(zh, ["1. A", "2. B"])!;
     expect(got).toHaveLength(zh.length);
+  });
+});
+
+describe("numeral helpers", () => {
+  it("reads Chinese numerals", () => {
+    expect(chineseNumeral("一")).toBe(1);
+    expect(chineseNumeral("十")).toBe(10);
+    expect(chineseNumeral("十二")).toBe(12);
+    expect(chineseNumeral("二十一")).toBe(21);
+    expect(chineseNumeral("一百")).toBe(100);
+    expect(chineseNumeral("一百二十三")).toBe(123);
+  });
+  it("reads Roman numerals and plain digits", () => {
+    expect(romanNumeral("XXI")).toBe(21);
+    expect(romanNumeral("IV")).toBe(4);
+    expect(romanNumeral("MCMXC")).toBe(1990);
+    expect(romanNumeral("21")).toBe(21);
+  });
+  it("returns null rather than guessing", () => {
+    expect(chineseNumeral("甲")).toBeNull();
+    expect(chineseNumeral("")).toBeNull();
+    expect(romanNumeral("ABC")).toBeNull();
+    expect(romanNumeral("")).toBeNull();
+  });
+});
+
+describe("alignByAnchors — chapter headings", () => {
+  it("matches 第N章 against Chapter N across the two numeral systems", () => {
+    // 《上帝之城》卷一: no section numbers and no shared page markers; the only
+    // thing both sides carry is the chapter number, in different scripts.
+    const zh = ["# 第一章——基督名號的敵人", "蓋此塵世城邦屬於眾敵…",
+                "第二章——戰爭的慣例中…", "有無數的戰爭歷史…"];
+    const en = ["Chapter 1.—Of the Adversaries of the Name of Christ", "For to this earthly city…",
+                "Chapter 2.—That It is Quite Contrary to the Usage of War", "There are histories…"];
+    expect(alignByAnchors(zh, en)).toEqual(en);
+  });
+
+  it("reads Roman-numbered chapter headings too", () => {
+    const zh = ["# 第十一章 甲", "x", "# 第十二章 乙", "y"];
+    const en = ["Chapter XI.—A", "X", "Chapter XII.—B", "Y"];
+    expect(alignByAnchors(zh, en)).toEqual(en);
+  });
+
+  it("prefers section numbers over chapter headings when both exist", () => {
+    // Section numbers cut finer, so they win; the chapter key is the fallback.
+    const zh = ["# 第一章", "1. a", "extra", "2. b"];
+    const en = ["Chapter 1.", "1. A", "2. B"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[1]).toBe("1. A");
+    expect(got[3]).toBe("2. B");
+  });
+
+  it("takes the key that yields the most pairs, not the first that yields any", () => {
+    // 《上帝之城》卷十三: three shared page markers, four shared chapter numbers.
+    // Stopping at the first key with a hit picks the coarser one and leaves the
+    // chapter headings a row out of step.
+    const zh = ["{{p:246}} 甲", "# 第一章", "# 第二章", "# 第三章", "{{p:247}} 乙"];
+    const en = ["{{p:246}} A", "Chapter 1.", "x", "Chapter 2.", "Chapter 3.", "{{p:247}} B"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[1]).toBe("Chapter 1.\n\nx");
+    expect(got[2]).toBe("Chapter 2.");
+    expect(got[3]).toBe("Chapter 3.");
   });
 });

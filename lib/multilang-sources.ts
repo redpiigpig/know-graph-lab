@@ -141,23 +141,76 @@ export const BLANK_PARAGRAPH = "​";
 // always agree on where the footnote section starts. The result is a 對照 grid
 // whose rows drift apart while looking perfectly normal.
 //
-// Both sides do, however, carry the same inline markers. Two keys cover 56% of
-// chunks between them:
+// Both sides do, however, carry the same markers. Three keys, tried in order of
+// how finely they cut, cover 65% of chunks between them:
 //   n:  a leading section number — 「17. 我自幼就聽聞了…」 / "17. Even as a boy…"
-//       (the classical paragraphus; the same number the Latin original uses)
-//   p:  a page marker — {{p:226}} — emitted on both sides by the parser
-// Anchoring on those repairs 2,007 of the 3,241 mismatched chunks. The rest have
-// no shared marker at all (mostly front matter) and keep the old index zip.
+//       (the classical paragraphus; the same number the Latin original uses)  29%
+//   p:  a page marker — {{p:226}} — emitted on both sides by the parser        27%
+//   c:  a chapter heading — 「第二章——…」 / "Chapter 2.—…" or "Chapter II."      9%
+// The remaining 35% carry no shared marker (mostly front matter) and keep the
+// old index zip.
 
 const LEADING_NUMBER = /^\s*(\d+)\.\s/;
 const PAGE_MARKER = /\{\{p:(\d+)\}\}/;
+// Chapter headings are matched with or without the markdown hashes: the 繁中
+// side sometimes loses them when a heading gets merged into the paragraph body.
+const ZH_CHAPTER = /^#{0,4}\s*第([零〇一二三四五六七八九十百]+)章/;
+const EN_CHAPTER = /^#{0,4}\s*Chapter\s+([IVXLCDM]+|\d+)\b/i;
+
+const ZH_DIGIT: Record<string, number> = {
+  零: 0, 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9,
+};
+const ROMAN: Record<string, number> = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+
+/** 「二十一」→ 21. Returns null for anything it cannot read exactly. */
+export function chineseNumeral(s: string): number | null {
+  if (!s) return null;
+  if (!/[十百]/.test(s)) {
+    let v = 0;
+    for (const ch of s) {
+      if (!(ch in ZH_DIGIT)) return null;
+      v = v * 10 + ZH_DIGIT[ch];
+    }
+    return v;
+  }
+  let acc = 0;
+  let digit = 0;
+  for (const ch of s) {
+    if (ch in ZH_DIGIT) digit = ZH_DIGIT[ch];
+    else if (ch === "十") { acc += (digit || 1) * 10; digit = 0; }
+    else if (ch === "百") { acc += (digit || 1) * 100; digit = 0; }
+    else return null;
+  }
+  return acc + digit;
+}
+
+/** "XXI" → 21, "21" → 21. Returns null for anything it cannot read exactly. */
+export function romanNumeral(s: string): number | null {
+  if (!s) return null;
+  if (/^\d+$/.test(s)) return parseInt(s, 10);
+  let total = 0;
+  let highest = 0;
+  for (const ch of [...s.toUpperCase()].reverse()) {
+    const v = ROMAN[ch];
+    if (!v) return null;
+    total += v >= highest ? v : -v;
+    highest = Math.max(highest, v);
+  }
+  return total;
+}
 
 /** Paragraphs carrying a *unique* anchor of one kind, in document order. */
-function anchorsOf(paras: string[], re: RegExp): { key: string; index: number }[] {
+function anchorsOf(
+  paras: string[],
+  re: RegExp,
+  toKey: (raw: string) => string | null = (raw) => raw
+): { key: string; index: number }[] {
   const found: { key: string; index: number }[] = [];
   paras.forEach((p, index) => {
     const m = p.match(re);
-    if (m) found.push({ key: m[1], index });
+    if (!m) return;
+    const key = toKey(m[1]);
+    if (key !== null) found.push({ key, index });
   });
   const seen = new Map<string, number>();
   for (const a of found) seen.set(a.key, (seen.get(a.key) ?? 0) + 1);
@@ -198,13 +251,27 @@ function pairAnchors(
 export function alignByAnchors(zhParas: string[], srcParas: string[]): string[] | null {
   if (!zhParas.length || !srcParas.length) return null;
 
+  const num = (n: number | null) => (n === null ? null : String(n));
+  const schemes: [
+    [RegExp, (raw: string) => string | null],
+    [RegExp, (raw: string) => string | null],
+  ][] = [
+    [[LEADING_NUMBER, (r) => r], [LEADING_NUMBER, (r) => r]],
+    [[PAGE_MARKER, (r) => r], [PAGE_MARKER, (r) => r]],
+    // The two sides number their chapters in different scripts, so both are
+    // normalised to an integer before they are compared.
+    [[ZH_CHAPTER, (r) => num(chineseNumeral(r))], [EN_CHAPTER, (r) => num(romanNumeral(r))]],
+  ];
+
+  // Take the scheme that produces the MOST pairs, not the first that produces
+  // any: more anchors means shorter stretches between them, so less room to
+  // drift. 《上帝之城》卷十三 has three shared page markers but four shared chapter
+  // numbers — stopping at the first hit would have used the coarser one and left
+  // the chapter headings a row out of step.
   let pairs: [number, number][] = [];
-  for (const re of [LEADING_NUMBER, PAGE_MARKER]) {
-    const p = pairAnchors(anchorsOf(zhParas, re), anchorsOf(srcParas, re));
-    if (p.length >= 2) {
-      pairs = p;
-      break;
-    }
+  for (const [[zhRe, zhKey], [srcRe, srcKey]] of schemes) {
+    const p = pairAnchors(anchorsOf(zhParas, zhRe, zhKey), anchorsOf(srcParas, srcRe, srcKey));
+    if (p.length > pairs.length) pairs = p;
   }
   if (pairs.length < 2) return null;
 

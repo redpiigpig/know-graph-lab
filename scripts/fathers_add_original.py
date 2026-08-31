@@ -48,33 +48,66 @@ _spec.loader.exec_module(FO)
 # ── 取源登錄 ────────────────────────────────────────────────────────────────
 # 每一部著作登記：站上是哪一本 ebook、原文語言、原典從哪裡抓、每卷幾章。
 # `chapters` 是原典的權威章數，用來判站上有沒有缺章——不可以拿站上的章數回填。
+# `mode` 決定原典怎麼切、又怎麼放進中譯的段落格：
+#   paragraph — 原典帶 `卷.章.節` 行標，中譯段落也帶同一組節號 → 逐節對齊（最細）
+#   chapter   — 原典只有 `[I]` 這種章號，中譯只有「第N章」標題 → 逐章對齊（較粗）
+# 兩種都不猜：對不上就留空。
 WORKS: dict[str, dict] = {
     "augustine-confessions": {
         "label": "奧古斯丁《懺悔錄》",
         "ebook_id": "9edb7c37-4231-412b-83bd-78f3f793cc0a",
         "prefix": "懺悔錄",
         "lang": "la",
+        "mode": "paragraph",
         "urls": [f"https://www.thelatinlibrary.com/augustine/conf{b}.shtml"
                  for b in range(1, 14)],
         "chapters": {1: 20, 2: 10, 3: 12, 4: 16, 5: 14, 6: 16, 7: 21,
                      8: 12, 9: 13, 10: 43, 11: 31, 12: 32, 13: 38},
         "source": "The Latin Library（Corpus Christianorum 系 Verheijen 校本，公有領域）",
     },
+    "augustine-city-of-god": {
+        "label": "奧古斯丁《上帝之城》",
+        "ebook_id": "1eb50be9-34ac-4ce3-874d-1280975851fc",
+        "prefix": "上帝之城",
+        "lang": "la",
+        "mode": "chapter",
+        "urls": [f"https://www.thelatinlibrary.com/augustine/civ{b}.shtml"
+                 for b in range(1, 23)],
+        "source": "The Latin Library（Dombart–Kalb 校本，公有領域）",
+    },
 }
 
+# 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
+#    （NPNF1 Vol 3, d7f66759-3fa9-4633-abde-87003cdbcc06）把它和《創世記字義解》等
+#    併成一個「奧古斯丁教義論集」，共用同一組卷號，從 chapter_path 分不出哪一卷屬
+#    哪一部。硬接會把《創世記字義解》的中譯配上《論三位一體》的拉丁文——三欄看起來
+#    齊，內容卻是兩部不同的書。要收這一部，得先把那一冊重新分篇。
 
-def fetch_original(spec: dict) -> dict[tuple[int | None, int, int | None], str]:
-    """抓原典並切成 {(卷, 章, 節): 原文}。"""
+
+def fetch_original(spec: dict) -> tuple[dict, dict]:
+    """抓原典。回傳 (逐章 {(卷,章): 文字}, 逐節 {(卷,節): 文字})。
+
+    chapter 模式沒有節，第二項是空的。
+    """
     s = requests.Session()
     s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
-    out: dict[tuple[int | None, int, int | None], str] = {}
+    chapters: dict[tuple[int | None, int], str] = {}
+    sections: dict[tuple[int | None, int, int | None], str] = {}
+    unit = "節" if spec["mode"] == "paragraph" else "章"
     for i, url in enumerate(spec["urls"], 1):
         r = s.get(url, timeout=45)
         r.raise_for_status()
-        got = FO.parse_numbered_text(FO.strip_html(r.text), default_book=i)
-        out.update(got)
-        print(f"  抓 {url.rsplit('/', 1)[-1]:16} → {len(got)} 節")
-    return out
+        text = FO.strip_html(r.text)
+        if spec["mode"] == "paragraph":
+            got = FO.parse_numbered_text(text, default_book=i)
+            sections.update(got)
+        else:
+            got = FO.parse_bracketed_chapters(text, i)
+            chapters.update(got)
+        print(f"  抓 {url.rsplit('/', 1)[-1]:16} → {len(got)} {unit}")
+    if spec["mode"] == "paragraph":
+        chapters = FO.by_chapter(sections)
+    return chapters, FO.by_paragraph(sections)
 
 
 def load_chunks(path: Path) -> list[dict]:
@@ -108,11 +141,11 @@ def main() -> int:
         print(f"找不到 {path}")
         return 1
 
-    print(f"《{spec['label']}》 原文 {spec['lang']} ← {spec['source']}")
-    sections = fetch_original(spec)
-    chapters = FO.by_chapter(sections)     # 覆蓋率閘看章
-    paragraphs = FO.by_paragraph(sections)  # 逐段對齊看節
-    print(f"原典共 {len(chapters)} 章 / {len(paragraphs)} 節\n")
+    print(f"《{spec['label']}》 原文 {spec['lang']} ← {spec['source']}"
+          f"（{'逐節' if spec['mode'] == 'paragraph' else '逐章'}對齊）")
+    chapters, paragraphs = fetch_original(spec)
+    print(f"原典共 {len(chapters)} 章"
+          + (f" / {len(paragraphs)} 節" if paragraphs else "") + "\n")
 
     chunks = load_chunks(path)
     spans: dict[int, FO.Span] = {}
@@ -124,19 +157,41 @@ def main() -> int:
         book_hint = None
         m = FO.CHAPTER_PATH.search(cp)
         if m and m.group(2) is None:
-            book_hint = spec["chapters"].get(FO.ZH_NUM.get(m.group(1), -1))
+            book_hint = (spec.get("chapters") or {}).get(FO.zh_numeral(m.group(1)))
         s = FO.parse_chapter_path(cp, chapters_in_book=book_hint)
         if s:
             spans[c["chunk_index"]] = s
 
     print(f"站上可對齊段落 {len(spans)} / 全書 {len(chunks)} 段")
 
-    covs = FO.coverage(list(spans.values()), chapters)
+    if spec["mode"] == "chapter":
+        # 章模式的覆蓋率要看「內文裡真的出現的章標題」，不要看 chapter_path 的範圍
+        # 標籤——標籤會湊整（該卷只到第 35 章，標籤照樣寫「第31-40章」），拿它比對
+        # 會冒出一堆不存在的「多出章」，把真正的缺章淹掉。
+        found: list[FO.Span] = []
+        for c in chunks:
+            s = spans.get(c["chunk_index"])
+            if not s:
+                continue
+            for p in FO.split_body(c.get("content") or ""):
+                m = FO.ZH_CHAPTER_HEAD.match(p)
+                n = FO.zh_numeral(m.group(1)) if m else None
+                if n is not None:
+                    found.append(FO.Span(s.book, n, n))
+        covs = FO.coverage(found, chapters)
+    else:
+        covs = FO.coverage(list(spans.values()), chapters)
     bad = [c for c in covs if not c.ok]
     print(f"\n覆蓋率閘：{len(covs) - len(bad)} / {len(covs)} 卷齊全")
     for c in bad:
-        print(f"  ⚠ 卷 {c.book}：站上缺第 {c.missing} 章"
-              + (f"；站上多出第 {c.extra} 章" if c.extra else ""))
+        parts = []
+        if c.missing:
+            parts.append(f"站上中譯沒有第 {c.missing} 章")
+        if c.extra:
+            # 這一側是原典電子本的缺口，不是我們的問題——civ18 那頁就從 [XXXI]
+            # 直接跳到 [XLVII]，中間 15 章根本沒收。分開講才不會誤判責任歸屬。
+            parts.append(f"原典電子本沒有第 {c.extra} 章")
+        print(f"  ⚠ 卷 {c.book}：" + "；".join(parts))
 
     done = 0
     hit_total = num_total = 0
@@ -147,16 +202,19 @@ def main() -> int:
             updated.append(c)
             continue
         body = FO.split_body(c.get("content") or "")
-        col, hit, numbered = FO.align_by_paragraph_number(body, s.book, paragraphs)
+        if spec["mode"] == "paragraph":
+            col, hit, numbered = FO.align_by_paragraph_number(body, s.book, paragraphs)
+        else:
+            col, hit, numbered = FO.align_by_chapter_heading(body, s.book, chapters)
         hit_total += hit
         num_total += numbered
         if not hit:
-            # 一節都對不上 → 那一段的節號跟原典編號體系不一致，別硬塞
-            print(f"  ⚠ 「{c['chapter_path']}」{numbered} 個帶節號的段落全對不上，跳過")
+            # 一個錨點都對不上 → 這一段的編號體系跟原典不一致，別硬塞
+            print(f"  ⚠ 「{c['chapter_path']}」{numbered} 個錨點全對不上，跳過")
             updated.append(c)
             continue
         if hit < numbered:
-            print(f"  · 「{c['chapter_path']}」{hit}/{numbered} 節配到原文，其餘留白")
+            print(f"  · 「{c['chapter_path']}」{hit}/{numbered} 個錨點配到原文，其餘留白")
         sources, order = FO.build_sources(
             c.get("sources"), c.get("source_text"), c.get("source_lang"),
             FO.render_column(col), spec["lang"])
