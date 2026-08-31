@@ -6559,51 +6559,44 @@
       "layer": "family"
     },
     "μάλιστα": {
-      "set": "streamline-emojis",
-      "name": "money-bag",
-      "file": "streamline-emojis-money-bag.png",
+      "set": "twemoji",
+      "name": "up-right-arrow",
+      "file": "twemoji-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },
     "μεγαλύνω": {
-      "set": "openmoji",
-      "name": "ear-of-corn",
-      "file": "openmoji-ear-of-corn.png",
+      "set": "noto",
+      "name": "up-right-arrow",
+      "file": "noto-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },
     "περισσεύω": {
-      "set": "twemoji",
-      "name": "ear-of-corn",
-      "file": "twemoji-ear-of-corn.png",
+      "set": "fluent-emoji-flat",
+      "name": "up-right-arrow",
+      "file": "fluent-emoji-flat-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },
     "πολύς": {
-      "set": "noto",
-      "name": "ear-of-corn",
-      "file": "noto-ear-of-corn.png",
+      "set": "noto-v1",
+      "name": "up-right-arrow",
+      "file": "noto-v1-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },
     "τοσοῦτος": {
-      "set": "fluent-emoji-flat",
-      "name": "ear-of-corn",
-      "file": "fluent-emoji-flat-ear-of-corn.png",
+      "set": "emojione",
+      "name": "up-right-arrow",
+      "file": "emojione-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },
     "πλείων": {
-      "set": "noto-v1",
-      "name": "ear-of-corn",
-      "file": "noto-v1-ear-of-corn.png",
-      "concept": "chart increasing",
-      "layer": "family"
-    },
-    "τηλικοῦτος": {
-      "set": "emojione",
-      "name": "ear-of-corn",
-      "file": "emojione-ear-of-corn.png",
+      "set": "emojione-v1",
+      "name": "up-right-arrow",
+      "file": "emojione-v1-up-right-arrow.png",
       "concept": "chart increasing",
       "layer": "family"
     },

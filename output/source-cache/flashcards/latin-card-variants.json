@@ -7321,20 +7321,6 @@
       "concept": "plus",
       "layer": "family"
     },
-    "nedum": {
-      "set": "openmoji",
-      "name": "sparkle",
-      "file": "openmoji-sparkle.png",
-      "concept": "plus",
-      "layer": "family"
-    },
-    "ample": {
-      "set": "twemoji",
-      "name": "sparkle",
-      "file": "twemoji-sparkle.png",
-      "concept": "plus",
-      "layer": "family"
-    },
     "prosequor, prosequi, —, prosecutus sum": {
       "set": "openmoji",
       "name": "up-right-arrow",
