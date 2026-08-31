@@ -40,6 +40,7 @@
           <div class="flex items-baseline gap-2 text-sm">
             <span class="flex-shrink-0 text-xs text-gray-400 font-mono">{{ a.date.slice(5) }}</span>
             <span class="flex-1 text-gray-800 break-words">{{ a.title }}</span>
+            <span v-if="a.author" class="flex-shrink-0 text-xs text-gray-400 break-words">{{ a.author }}</span>
             <button @click="toggle(a)" class="flex-shrink-0 text-xs text-gray-400 hover:text-orange-600">
               {{ states[a.id]?.open ? '收合' : '全文' }}
             </button>
@@ -74,7 +75,7 @@ definePageMeta({ middleware: 'auth' });
 useHead({ title: '基督教論壇報 — 台灣福音派研究資料' });
 
 interface YearRow { year: string; count: number; chars: number }
-interface Article { id: number; cat: number; date: string; title: string }
+interface Article { id: number; cat: number; date: string; author?: string; title: string }
 
 const years = ref<YearRow[]>([]);
 const loaded = ref(false);
@@ -87,7 +88,7 @@ const limit = ref(200);
 const totalCount = computed(() => years.value.reduce((s, y) => s + y.count, 0));
 const filtered = computed(() => {
   const term = q.value.trim();
-  return term ? list.value.filter(a => a.title.includes(term)) : list.value;
+  return term ? list.value.filter(a => a.title.includes(term) || (a.author || '').includes(term)) : list.value;
 });
 const paged = computed(() => filtered.value.slice(0, limit.value));
 watch([activeYear, q], () => { limit.value = 200; });
