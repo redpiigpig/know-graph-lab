@@ -429,3 +429,38 @@ def test_chapter_markers_do_not_swallow_the_next_marker():
 
 def test_chapter_markers_need_at_least_two():
     assert fo.parse_chapter_markers("I. [1] only one chapter\n") == {}
+
+
+# ── 多卷著作的兩種中譯編號習慣 ───────────────────────────────────────────────
+def test_book_of_detects_restart():
+    """《論婦女裝飾》兩卷，中譯每卷從第一章重來。"""
+    assert fo.book_of([1, 2, 3, 1, 2, 3, 4]) == [1, 1, 1, 2, 2, 2, 2]
+
+
+def test_book_of_keeps_one_book_when_numbering_is_continuous():
+    """《駁馬吉安》五卷，中譯卻是整部連續編號 1–145，不算換卷。"""
+    assert fo.book_of([1, 2, 3, 4, 5]) == [1, 1, 1, 1, 1]
+
+
+def test_chapter_headings_indexes_only_readable_numbers():
+    body = ["前言", "# 第一章——甲", "內文", "第二章 乙", "# 第甲章"]
+    assert fo.chapter_headings(body) == [(1, 1), (3, 2)]
+
+
+def test_fill_column_lands_on_the_right_slots():
+    assert fo.fill_column(4, [(1, "alpha"), (3, "beta")]) == ["", "alpha", "", "beta"]
+
+
+def test_chapter_markers_accept_cap_without_a_period():
+    """de Ieiunio 只有第一章寫「CAP.  I.」，其餘全是「CAP II.」。硬要那個句點的
+    話那一篇就只認得出第一章——而腳本只會回報命中低，看不出是格式沒對上。"""
+    text = "CAP.  I.  1.  Mirarer psychicos\nCAP II.  1.  Nam quod\nCAP III.  1.  Itaque nos\n"
+    got = fo.parse_chapter_markers(text)
+    assert set(got) == {(None, 1), (None, 2), (None, 3)}
+    assert got[(None, 2)].startswith("1.  Nam quod")
+
+
+def test_cap_must_not_match_inside_a_word():
+    text = "CAPTIVITAS non est caput\nI. [1] alpha\nII. [1] beta\n"
+    got = fo.parse_chapter_markers(text)
+    assert set(got) == {(None, 1), (None, 2)}

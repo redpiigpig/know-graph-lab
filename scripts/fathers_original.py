@@ -170,7 +170,9 @@ def parse_bracketed_chapters(text: str, book: int,
 # 🚨 每一種都要允許行首縮排。少了 `[ 	]*`，只要那個檔的行有縮排就一個章標也
 #    掃不到，而腳本只會回報「命中 0」，看不出是格式沒對上還是原典真的沒有。
 CHAPTER_PATTERNS = (
-    re.compile(r"(?:^|(?<=[\s.]))(?:CAPUT|CAP\.|Capitulum|Caput)\s*([IVXLCDM]+|\d+)\s*\.?\s+", re.M),
+    # 🚨 CAP 後面的句點可有可無：de Ieiunio 只有第一章寫「CAP.  I.」，其餘全是
+    #    「CAP II.」。硬要那個句點的話，那一篇就只認得出第一章。
+    re.compile(r"(?:^|(?<=[\s.]))(?:CAPUT|CAP|Capitulum|Caput)(?![A-Za-z])\.?\s*([IVXLCDM]+|\d+)\s*\.?\s+", re.M),
     re.compile(r"^[ 	]*([IVXLCDM]{1,7})\.\s+", re.M),
     re.compile(r"^[ 	]*(\d{1,3})\.\s+", re.M),
     re.compile(r"^[ 	]*([IVXLCDM]{1,7})\.?[ 	]*$", re.M),
@@ -405,6 +407,42 @@ def zh_numeral(s: str) -> int | None:
             return None
     return acc + digit
 
+
+def book_of(numbers: list[int]) -> list[int]:
+    """章號序列 → 每個章號屬於第幾卷。章號不再遞增就算換了一卷。
+
+    多卷著作的中譯有兩種編號習慣，同一冊裡都有：《駁馬吉安》五卷是整部連續
+    編號 1–145，《論婦女裝飾》兩卷卻是每卷從第一章重來。前者要把原典各卷的
+    章號累計接續，後者要按卷分開對——搞反了就整部對不上。這個函式服務後者。
+    """
+    out: list[int] = []
+    book = 1
+    last = 0
+    for n in numbers:
+        if n <= last:
+            book += 1
+        out.append(book)
+        last = n
+    return out
+
+
+def chapter_headings(body: list[str]) -> list[tuple[int, int]]:
+    """回傳 [(段索引, 章號)]，只收讀得準的。"""
+    out: list[tuple[int, int]] = []
+    for i, p in enumerate(body):
+        m = ZH_CHAPTER_HEAD.match(p)
+        n = zh_numeral(m.group(1)) if m else None
+        if n is not None:
+            out.append((i, n))
+    return out
+
+
+def fill_column(size: int, hits: list[tuple[int, str]]) -> list[str]:
+    """把 (段索引, 原文) 排進一個與中文欄等長的欄位。"""
+    col = [""] * size
+    for i, text in hits:
+        col[i] = text
+    return col
 
 def align_by_chapter_heading(body: list[str], book: int | None,
                              chapters: dict[tuple[int | None, int], str]

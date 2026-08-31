@@ -133,6 +133,34 @@ WORKS: dict[str, dict] = {
                       ("特土良論忍耐", "patientia"),
                   )],
     },
+    "anf4-latin": {
+        "label": "ANF 第四卷的拉丁篇（特土良後期著作＋密努修＋科摩狄安）",
+        "ebook_id": "904661d3-16fc-4f37-bb04-f7c4aa7671e9",
+        "lang": "la",
+        "mode": "roman",
+        "source": "The Latin Library（公有領域）",
+        # 🚨 同一冊的俄利根八卷《駁塞爾蘇斯》與《論原理》是希臘文，要走 PG 掃描本
+        #    的 OCR（見 fathers_pg_ocr.py），這裡只收拉丁的部分。
+        # 🚨 兩部拉丁原文有、卻對不起來，先不收：
+        #    ·《論逼迫中逃避》—— 站上那一整部塞在單一段落裡（465 個段落），
+        #      一個「第N章」標題都沒有，我方沒有錨點可用。要收得先重新分章。
+        #    ·科摩狄安《教誨集》—— 拉丁本（commodianus2）的每首詩只有詩題沒有
+        #      編號，而中譯用 ANF 的章號。兩邊沒有共同的鍵，只能靠第幾首的次序
+        #      硬對，那是另一種對齊機制。
+        "parts": [
+                      ("特土良《論婦女裝飾》", "https://www.thelatinlibrary.com/tertullian/tertullian.cultu1.shtml"),
+                      ("特土良《論婦女裝飾》", "https://www.thelatinlibrary.com/tertullian/tertullian.cultu2.shtml"),
+                      ("特土良《致妻書》", "https://www.thelatinlibrary.com/tertullian/tertullian.uxor1.shtml"),
+                      ("特土良《致妻書》", "https://www.thelatinlibrary.com/tertullian/tertullian.uxor2.shtml"),
+                      ("特土良《論貞女蒙頭》", "https://www.thelatinlibrary.com/tertullian/tertullian.virginibus.shtml"),
+                      ("特土良《勸貞潔書》", "https://www.thelatinlibrary.com/tertullian/tertullian.castitatis.shtml"),
+                      ("特土良《論獨婚》", "https://www.thelatinlibrary.com/tertullian/tertullian.monog.shtml"),
+                      ("特土良《論貞操》", "https://www.thelatinlibrary.com/tertullian/tertullian.pudicitia.shtml"),
+                      ("特土良《論禁食》", "https://www.thelatinlibrary.com/tertullian/tertullian.ieiunio.shtml"),
+                      ("特土良《論披袍》", "https://www.thelatinlibrary.com/tertullian/tertullian.pallio.shtml"),
+                      ("密努修《屋大維對話錄》", "https://www.thelatinlibrary.com/minucius.html"),
+        ],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -154,16 +182,19 @@ def load_greek_ledger(path: Path) -> dict[tuple[int | None, int], str]:
 
 
 def fetch_original(spec: dict) -> tuple[dict, dict]:
-    """抓原典。回傳 (逐章 {(卷,章): 文字}, 逐節 {(卷,節): 文字})。
+    """抓原典。回傳 (逐章, 逐節, 逐卷逐章)。
 
-    chapter 模式沒有節，第二項是空的。
+    第三項只有多卷的 roman 模式用得到：原典每卷的章號都從一起算，而中譯有兩種
+    習慣——《駁馬吉安》整部連續編號 1–145，《論婦女裝飾》卻每卷從第一章重來。
+    機器分不出是哪一種，所以兩種鍵都備好，對齊時各試一次、取命中高的那個。
     """
     if spec["mode"] == "greek":
         paragraphs = load_greek_ledger(Path(spec["ledger"]))
-        return {}, paragraphs
+        return {}, paragraphs, {}
     s = requests.Session()
     s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
     chapters: dict[tuple[int | None, int], str] = {}
+    by_book: dict[tuple[int | None, int], str] = {}
     sections: dict[tuple[int | None, int, int | None], str] = {}
     unit = "章" if spec["mode"] == "chapter" else "節"
     for i, url in enumerate(spec["urls"], 1):
@@ -179,6 +210,7 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             # 一重新起算，但站上的中譯是整部連續編號（駁馬吉安 29+29+24+43+20
             # ＝145，正好是中譯的 1–145）。所以第二卷起要接著前面累計的章數。
             base = max((k[1] for k in chapters), default=0)
+            by_book.update({(i, k[1]): v for k, v in got.items()})
             got = {(None, k[1] + base): v for k, v in got.items()}
             chapters.update(got)
         else:
@@ -187,11 +219,49 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
         print(f"  抓 {url.rsplit('/', 1)[-1]:16} → {len(got)} {unit}")
     if spec["mode"] == "paragraph":
         chapters = FO.by_chapter(sections)
-    return chapters, FO.by_paragraph(sections)
+    return chapters, FO.by_paragraph(sections), by_book
 
 
 def load_chunks(path: Path) -> list[dict]:
     return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+
+
+def align_part(chunks, spans, chapters, by_book):
+    """對整部做逐章對齊，兩種編號法各試一次，取命中高的那個。
+
+    多卷著作的中譯有兩種編號習慣，同一冊裡都有：《駁馬吉安》五卷整部連續編號
+    1–145（→ 用累計後的 chapters），《論婦女裝飾》兩卷每卷從第一章重來（→ 用
+    逐卷的 by_book，卷次靠章號回頭偵測）。機器分不出是哪一種，所以兩種都跑，
+    看誰命中多。猜錯的那一種通常是 0 命中，差距非常明顯。
+    """
+    seq = []
+    for c in chunks:
+        if c["chunk_index"] not in spans:
+            continue
+        body = FO.split_body(c.get("content") or "")
+        for i, n in FO.chapter_headings(body):
+            seq.append((c["chunk_index"], i, n))
+    if not seq:
+        return {}, 0, 0
+
+    flat: dict[int, list] = {}
+    n_flat = 0
+    for ci, i, n in seq:
+        text = chapters.get((None, n)) or chapters.get((1, n))
+        if text:
+            flat.setdefault(ci, []).append((i, text))
+            n_flat += 1
+
+    per: dict[int, list] = {}
+    n_per = 0
+    for (ci, i, n), b in zip(seq, FO.book_of([n for _, _, n in seq])):
+        text = by_book.get((b, n))
+        if text:
+            per.setdefault(ci, []).append((i, text))
+            n_per += 1
+
+    hits, n_hit = (per, n_per) if n_per > n_flat else (flat, n_flat)
+    return hits, n_hit, len(seq)
 
 
 def parts_of(spec: dict) -> list[tuple[str, dict]]:
@@ -309,7 +379,7 @@ def main() -> int:
     hit_total = num_total = 0
     skipped: list[str] = []
     for prefix, part in parts:
-        chapters, paragraphs = fetch_original(part)
+        chapters, paragraphs, by_book = fetch_original(part)
         spans = spans_for(chunks, part)
         if not spans:
             print(f"  ⚠ 「{prefix}」站上找不到對應段落，跳過")
@@ -329,21 +399,30 @@ def main() -> int:
             note += "\n      ⚠ 卷 " + str(c.book) + "：" + "；".join(bits)
 
         hit = num = 0
-        for c in chunks:
-            s = spans.get(c["chunk_index"])
-            if not s:
-                continue
-            body = FO.split_body(c.get("content") or "")
-            if part["mode"] in ("paragraph", "greek"):
-                col, h, n = FO.align_by_paragraph_number(body, s.book, paragraphs)
-            else:
-                col, h, n = FO.align_by_chapter_heading(body, s.book, chapters)
-            hit += h
-            num += n
-            if h:
-                cols[c["chunk_index"]] = col
-            else:
-                skipped.append(f"{c['chapter_path']}（{n} 個錨點全對不上）")
+        if part["mode"] in ("paragraph", "greek"):
+            for c in chunks:
+                sp = spans.get(c["chunk_index"])
+                if not sp:
+                    continue
+                body = FO.split_body(c.get("content") or "")
+                col, h, n = FO.align_by_paragraph_number(body, sp.book, paragraphs)
+                hit += h
+                num += n
+                if h:
+                    cols[c["chunk_index"]] = col
+                else:
+                    skipped.append(f"{c['chapter_path']}（{n} 個錨點全對不上）")
+        else:
+            placed, hit, num = align_part(chunks, spans, chapters, by_book)
+            for c in chunks:
+                if c["chunk_index"] not in spans:
+                    continue
+                got = placed.get(c["chunk_index"])
+                size = len(FO.split_body(c.get("content") or ""))
+                if got:
+                    cols[c["chunk_index"]] = FO.fill_column(size, got)
+                else:
+                    skipped.append(f"{c['chapter_path']}（錨點全對不上）")
         hit_total += hit
         num_total += num
         pct = f"{hit / num:.0%}" if num else "—"
