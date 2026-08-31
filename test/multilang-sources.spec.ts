@@ -8,6 +8,7 @@ import {
   langLabel,
   zipParallel,
   BLANK_PARAGRAPH,
+  alignByAnchors,
 } from "~/lib/multilang-sources";
 
 // Contract for the collected-works multi-language schema. See
@@ -222,5 +223,90 @@ describe("BLANK_PARAGRAPH", () => {
     // Regression guard: NBSP and "" are both filtered out — the bug this exists to prevent.
     expect(splitLikeReader(["", "alpha"].join("\n\n"))).toEqual(["alpha"]);
     expect(splitLikeReader([" ", "alpha"].join("\n\n"))).toEqual(["alpha"]);
+  });
+});
+
+// alignByAnchors repairs the 對照 grid without touching stored data. Index
+// zipping only holds when both sides split into the same number of paragraphs,
+// which is true for 30% of 教父 chunks; the rest drift while looking normal.
+describe("alignByAnchors", () => {
+  it("anchors on the leading section number and blanks the rest", () => {
+    // Confessions 卷一第11-18章 shape: the 繁中 side's footnote separator is too
+    // short to be recognised, so its footnote items sit in the body between the
+    // numbered sections. Index zipping slides §18 up beside a 繁中 footnote.
+    const zh = ["# 第十一章", "17. 我自幼就聽聞了…", "(161) 一種西方教會的聖禮…",
+                "18. 我懇求禰，我的上帝…"];
+    const en = ["Chapter XI.—Seized by Disease…", "17. Even as a boy I had heard…",
+                "18. I beseech Thee, my God…"];
+    expect(alignByAnchors(zh, en)).toEqual([
+      "Chapter XI.—Seized by Disease…",
+      "17. Even as a boy I had heard…",
+      "",
+      "18. I beseech Thee, my God…",
+    ]);
+  });
+
+  it("folds an extra source paragraph into the stretch's last slot, not the next row", () => {
+    const zh = ["1. alpha", "narrative", "2. beta"];
+    const en = ["1. alpha", "ref line", "narrative", "2. beta"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[0]).toBe("1. alpha");
+    expect(got[1]).toBe("ref line\n\nnarrative");
+    expect(got[2]).toBe("2. beta"); // the next anchor resets the drift
+  });
+
+  it("zips a stretch from its start when the source side is shorter", () => {
+    // 《懺悔錄》卷四第1-10章: the rows before the first anchor were already paired
+    // correctly by plain index zipping. Collapsing that stretch into one cell —
+    // an earlier version of this function did — threw six good rows away.
+    const zh = ["第四冊。", "# 第一章", "1. 從我十九歲…", "a", "b", "2. 那些年間…"];
+    const en = ["Book IV.", "Chapter I.—…", "1. During this space…", "2. In those years…"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got.slice(0, 3)).toEqual(["Book IV.", "Chapter I.—…", "1. During this space…"]);
+    expect(got[3]).toBe("");
+    expect(got[5]).toBe("2. In those years…");
+  });
+
+  it("keeps one-to-one granularity when a stretch matches in length", () => {
+    const zh = ["1. alpha", "mid", "2. beta", "tail"];
+    const en = ["1. A", "MID", "2. B", "TAIL"];
+    expect(alignByAnchors(zh, en)).toEqual(["1. A", "MID", "2. B", "TAIL"]);
+  });
+
+  it("falls back to page markers when there are no section numbers", () => {
+    const zh = ["{{p:226}} 講道集第三十八篇", "他既講完了…", "{{p:227}} 但這些邪惡的魔鬼…"];
+    const en = ["{{p:226}} Homily XXXVIII.", "1 Cor. xv. 1, 2", "Having finished…",
+                "{{p:227}} But these things…"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[0]).toBe("{{p:226}} Homily XXXVIII.");
+    expect(got[1]).toBe("1 Cor. xv. 1, 2\n\nHaving finished…");
+    expect(got[2]).toBe("{{p:227}} But these things…");
+  });
+
+  it("ignores a marker that repeats — it cannot say which occurrence is which", () => {
+    const zh = ["1. a", "1. a again", "2. b", "3. c"];
+    const en = ["1. A", "1. A again", "2. B", "3. C"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[2]).toBe("2. B");
+    expect(got[3]).toBe("3. C");
+  });
+
+  it("returns null when fewer than two anchors are shared", () => {
+    expect(alignByAnchors(["# 前言", "正文"], ["# Preface", "Body"])).toBeNull();
+    expect(alignByAnchors(["1. a", "x"], ["1. A", "X"])).toBeNull();
+    expect(alignByAnchors([], ["1. A", "2. B"])).toBeNull();
+  });
+
+  it("never drops source text", () => {
+    const zh = ["1. a", "2. b"];
+    const en = ["preamble", "1. A", "extra", "2. B", "trailing"];
+    const got = alignByAnchors(zh, en)!;
+    for (const p of en) expect(got.join("\n\n")).toContain(p);
+  });
+
+  it("output length always matches the 繁中 column", () => {
+    const zh = ["1. a", "x", "y", "2. b", "z"];
+    const got = alignByAnchors(zh, ["1. A", "2. B"])!;
+    expect(got).toHaveLength(zh.length);
   });
 });

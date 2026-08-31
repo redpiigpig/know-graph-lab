@@ -6,7 +6,7 @@
 // functions — no reactive/DOM deps — so both pages wrap them in their own
 // computeds. Highlight/annotation injection stays page-side (DOM-based).
 
-import { zipParallel } from "~/lib/multilang-sources";
+import { zipParallel, alignByAnchors } from "~/lib/multilang-sources";
 
 // ── Inline formatters ──
 export function escapeHtml(s: string): string {
@@ -270,7 +270,10 @@ export function buildParallelColumns(
   langs.forEach((lang, li) => {
     const ns = zhChunkIdx + 100000 * (li + 1);
     const split = splitBodyAndFootnotes(sources[lang] ?? "");
-    bodyByLang[lang] = split.body.map(p => renderMarkdown(p, ns));
+    // Anchor BEFORE rendering — the section numbers and {{p:NNN}} markers the
+    // alignment keys off are gone once the paragraphs become HTML.
+    const aligned = alignByAnchors(zhSplit.body, split.body) ?? split.body;
+    bodyByLang[lang] = aligned.map(p => renderMarkdown(p, ns));
     fnByLang[lang] = parseFootnoteColumn(split.footnotes, ns);
   });
   const rows = zipParallel(zhBody, bodyByLang, langs);
