@@ -41,7 +41,7 @@ description: 佛教大藏經（/tripitaka）—— 把 CBETA 的《大正新脩�
 | | |
 |---|---|
 | 上線 | ✅ **已上線**。`tripitaka_works` **3,784 列**、`tripitaka_parallels` 10,168 列、184 部有原文對照、142 部有詞條。`division_key='other'` 為 0 |
-| 存放 | 目錄進 Supabase；正文 JSONL 在 Drive `_tripitaka/`（**7,798 檔**），R2 `tripitaka/` 為線上後備（X 加約 122 MB，前綴由 123 → 約 245 MB） |
+| 存放 | 目錄進 Supabase；正文 JSONL 在 Drive `_tripitaka/`（**7,798 檔**），R2 `tripitaka/` 為線上後備，**與 Drive 同步至 7,798 物件／251 MB**（X 加了 2,480 檔） |
 
 ## 🚨 段怎麼切、怎麼編號（使用者定調，別再改）
 
