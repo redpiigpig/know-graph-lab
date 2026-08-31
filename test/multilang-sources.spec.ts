@@ -374,3 +374,28 @@ describe("alignByAnchors — chapter headings", () => {
     expect(got[3]).toBe("Chapter 3.");
   });
 });
+
+describe("alignByAnchors — lopsided stretches", () => {
+  it("hangs a wildly longer stretch off the anchor instead of pairing rows off", () => {
+    // 特土良《論貞操》: between two anchors the English side has 34 paragraphs
+    // (its footnote block leaked into the body) where the 繁中 has 5. Pairing
+    // them one by one put 繁中 第二章 opposite an English footnote — which reads
+    // as a real correspondence.
+    const zh = ["1. a", "# 第二章", "x", "y", "2. b"];
+    const en = ["1. A", "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9",
+                "f10", "f11", "2. B"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[0]).toContain("1. A");
+    expect(got[1]).toBe("");            // 不拿註腳去配「第二章」
+    expect(got[4]).toBe("2. B");        // 下一個錨點照樣對上
+  });
+
+  it("still zips a mildly longer stretch so granularity is not thrown away", () => {
+    const zh = ["1. a", "mid", "2. b"];
+    const en = ["1. A", "MID", "extra", "2. B"];
+    const got = alignByAnchors(zh, en)!;
+    expect(got[0]).toBe("1. A");
+    expect(got[1]).toBe("MID\n\nextra");
+    expect(got[2]).toBe("2. B");
+  });
+});

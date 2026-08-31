@@ -226,14 +226,42 @@ function pairAnchors(
 ): [number, number][] {
   const byKey = new Map(src.map((a) => [a.key, a.index]));
   const pairs: [number, number][] = [];
-  let lastSrc = -1;
   for (const a of zh) {
     const si = byKey.get(a.key);
-    if (si === undefined || si <= lastSrc) continue;
-    pairs.push([a.index, si]);
-    lastSrc = si;
+    if (si !== undefined) pairs.push([a.index, si]);
   }
   return pairs;
+}
+
+/**
+ * Longest chain of anchors that advances on BOTH sides.
+ *
+ * Anchors from the different schemes are pooled rather than picked one scheme at
+ * a time, so a chunk gets every marker both sides share — more anchors means
+ * shorter stretches between them and less room to drift. Pooling needs this
+ * filter: schemes can disagree, and a single bad pair would otherwise drag the
+ * rest out of order. Keeping the longest consistent chain drops the outliers.
+ */
+function longestChain(pairs: [number, number][]): [number, number][] {
+  if (!pairs.length) return [];
+  const sorted = [...pairs].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const best = new Array<number>(sorted.length).fill(1);
+  const prev = new Array<number>(sorted.length).fill(-1);
+  for (let i = 0; i < sorted.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (sorted[j][0] < sorted[i][0] && sorted[j][1] < sorted[i][1] && best[j] + 1 > best[i]) {
+        best[i] = best[j] + 1;
+        prev[i] = j;
+      }
+    }
+  }
+  let i = best.indexOf(Math.max(...best));
+  const out: [number, number][] = [];
+  while (i >= 0) {
+    out.push(sorted[i]);
+    i = prev[i];
+  }
+  return out.reverse();
 }
 
 /**
@@ -263,16 +291,16 @@ export function alignByAnchors(zhParas: string[], srcParas: string[]): string[] 
     [[ZH_CHAPTER, (r) => num(chineseNumeral(r))], [EN_CHAPTER, (r) => num(romanNumeral(r))]],
   ];
 
-  // Take the scheme that produces the MOST pairs, not the first that produces
-  // any: more anchors means shorter stretches between them, so less room to
-  // drift. 《上帝之城》卷十三 has three shared page markers but four shared chapter
-  // numbers — stopping at the first hit would have used the coarser one and left
-  // the chapter headings a row out of step.
-  let pairs: [number, number][] = [];
-  for (const [[zhRe, zhKey], [srcRe, srcKey]] of schemes) {
-    const p = pairAnchors(anchorsOf(zhParas, zhRe, zhKey), anchorsOf(srcParas, srcRe, srcKey));
-    if (p.length > pairs.length) pairs = p;
-  }
+  // Pool every scheme's anchors, then keep the longest chain that advances on
+  // both sides. Picking a single scheme was not enough: 特土良《論貞操》 has four
+  // shared page markers AND four shared chapter numbers, and whichever won the
+  // tie left the other's rows out of step — with the page markers winning, 繁中
+  // 第二章 sat opposite an English footnote.
+  const pairs = longestChain(
+    schemes.flatMap(([[zhRe, zhKey], [srcRe, srcKey]]) =>
+      pairAnchors(anchorsOf(zhParas, zhRe, zhKey), anchorsOf(srcParas, srcRe, srcKey))
+    )
+  );
   if (pairs.length < 2) return null;
 
   const out = new Array<string>(zhParas.length).fill("");
@@ -290,6 +318,16 @@ export function alignByAnchors(zhParas: string[], srcParas: string[]): string[] 
     }
     if (src.length <= span) {
       src.forEach((p, k) => { out[zFrom + k] = p; });
+      return;
+    }
+    if (src.length > span * 2) {
+      // The two sides are so far apart here that position carries no meaning —
+      // usually the source side's footnote block leaked into its body, so it has
+      // dozens of paragraphs where the 繁中 has a handful. Pairing them off one
+      // by one put 繁中 第二章 opposite an unrelated English footnote in
+      // 特土良《論貞操》, which reads as a real correspondence. Hang the whole
+      // stretch off the anchor and leave the rest blank: blank is honest.
+      out[zFrom] = src.join("\n\n");
       return;
     }
     for (let k = 0; k < span - 1; k++) out[zFrom + k] = src[k];
