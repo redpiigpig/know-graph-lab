@@ -312,6 +312,39 @@ WORKS: dict[str, dict] = {
         # （tlg2040 只有 tlg002、tlg004），要補得走 Migne PG 29/32 自家 OCR。
         "urls": ["https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg2040/tlg004/tlg2040.tlg004.perseus-grc2.xml"],
     },
+    "sulpicius-chronica": {
+        "label": "蘇皮丘‧塞維魯《編年史》兩卷（NPNF2 第十一卷）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "蘇皮修《神聖歷史》",
+        "lang": "la",
+        "mode": "dotted",
+        "marker": "paren",
+        "source": "The Latin Library（公有領域）",
+        # 行標是「章 (節) 正文」——章號在行首、節號用括號夾、同行接正文。
+        # 中譯是整部連續的第1-106章，原典兩卷各自 1–54、1–51。
+        "urls": ["https://www.thelatinlibrary.com/sulpiciusseveruschron1.html",
+                 "https://www.thelatinlibrary.com/sulpiciusseveruschron2.html"],
+    },
+    "sulpicius-vita-martini": {
+        "label": "蘇皮丘‧塞維魯《聖瑪爾定傳》（NPNF2 第十一卷）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "蘇皮修《聖瑪爾定傳》",
+        "lang": "la",
+        "mode": "dotted",
+        "marker": "paren",
+        "source": "The Latin Library（公有領域）",
+        # 站上宣告 31 章，原典 27 章——多出來的是序言與兩封書信，不是缺章。
+        "urls": ["https://www.thelatinlibrary.com/sulpiciusseverusmartin.html"],
+    },
+    "vincent-commonitorium": {
+        "label": "勒蘭的文森《勸誡錄》（NPNF2 第十一卷）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "勒蘭的文生《勸誡錄》",
+        "lang": "la",
+        "mode": "roman",
+        "source": "The Latin Library（公有領域）",
+        "urls": ["https://www.thelatinlibrary.com/vicentius.html"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -398,7 +431,9 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
         elif spec["mode"] == "dotted":
             # 行標是「章.節 正文」寫在行首、不獨佔一行。原典每卷章號從一起算，
             # 而中譯是整部連續編號，所以與 roman 一樣累計接續。
-            got = FO.parse_dotted_chapters(text)
+            got = FO.parse_dotted_chapters(
+                text, mark=(FO.PAREN_MARK if spec.get("marker") == "paren"
+                            else FO.DOTTED_MARK))
             base = max((k[1] for k in chapters), default=0)
             by_book.update({(i, k[1]): v for k, v in got.items()})
             chapters.update({(None, k[1] + base): v for k, v in got.items()})

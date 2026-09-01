@@ -711,3 +711,14 @@ def test_assign_books_picks_the_book_that_fits_the_numbers():
 
 def test_assign_books_with_no_sizes_gives_up_quietly():
     assert fo.assign_books([[1, 2]], []) == [(None, [])]
+
+
+def test_paren_marker_style():
+    # 蘇皮丘‧塞維魯：章號在行首、節號用括號夾、同行接正文
+    text = ("1 (1) Res a mundi exordio sacris litteris editas.\n"
+            "(2) plura eodem loco.\n"
+            "2 (1) Mundus a Deo constitutus est.\n")
+    got = fo.parse_dotted_chapters(text, mark=fo.PAREN_MARK)
+    assert sorted(k[1] for k in got) == [1, 2]
+    assert got[(None, 1)].startswith("Res a mundi exordio")
+    assert "plura eodem loco" in got[(None, 1)]

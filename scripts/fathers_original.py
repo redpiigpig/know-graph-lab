@@ -466,10 +466,18 @@ def align_letter(body: list[str], letter: list[str]) -> tuple[list[str], int, in
 #   1.2. Hoc in loco tribui si ulla facultas posset…
 # 阿諾比烏《駁異教徒》那一系是這個樣子。與 LL_MARK 的差別在於標記不獨佔一行，
 # 所以那支解析不到（實測七卷全部回 0 章）。
-DOTTED_MARK = re.compile(r"^[ 	]*(\d{1,3})\.(\d{1,3})\.?\s+(.*)$")
+DOTTED_MARK = re.compile(
+    r"^[ 	]*(?P<ch>\d{1,3})\.(?P<sec>\d{1,3})\.?\s+(?P<text>.*)$")
+
+# 第五種：章號在行首，節號用括號夾，同行接正文。
+#   1 (1) Res a mundi exordio sacris litteris editas…
+# 蘇皮丘‧塞維魯《編年史》《聖瑪爾定傳》是這個樣子。
+PAREN_MARK = re.compile(
+    r"^[ 	]*(?P<ch>\d{1,3})\s*\((?P<sec>\d{1,3})\)\s+(?P<text>.*)$")
 
 
-def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME
+def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME,
+                          mark: "re.Pattern[str]" = DOTTED_MARK
                           ) -> dict[tuple[int | None, int], str]:
     """把 `章.節 正文` 這種行標的原典切成 {(None, 章): 文字}，同章的節接起來。
 
@@ -483,8 +491,8 @@ def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME
         line = line.strip()
         if not line or drop.match(line):
             continue
-        m = DOTTED_MARK.match(line)
-        n = int(m.group(1)) if m else None
+        m = mark.match(line)
+        n = int(m.group("ch")) if m else None
         if n is not None and last <= n <= last + 3:
             if n != last:
                 current = out.setdefault(n, [])

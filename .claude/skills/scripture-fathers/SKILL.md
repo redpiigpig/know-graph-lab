@@ -760,6 +760,9 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 美多德《十處女宴飲集》 | ANF Vol 6 | 希臘‧First1KGreek TEI | 逐章 | 80/82（98%）|
 | 巴西流《書信集》356 封 | NPNF2 Vol 8 | 希臘‧Perseus TEI | 逐段（見下） | 575/1168（49%）|
 | 亞他那修《駁亞流派講辭》四篇 | NPNF2 Vol 4 | 希臘‧First1KGreek TEI | 逐節 | 185/196（94%）|
+| 蘇皮丘‧塞維魯《編年史》兩卷 | NPNF2 Vol 11 | 拉丁‧The Latin Library | 逐章 | 104/105（99%）|
+| 蘇皮丘‧塞維魯《聖瑪爾定傳》 | NPNF2 Vol 11 | 拉丁‧The Latin Library | 逐章 | 27/27（100%）|
+| 勒蘭的文森《勸誡錄》 | NPNF2 Vol 11 | 拉丁‧The Latin Library | 逐章 | 33/33（100%）|
 | 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
@@ -775,6 +778,12 @@ https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/{�
 
 🚨 **檔名不統一**，不要照 `{作者}.{作品}.1st1K-grc1.xml` 套——有的是 `opp-grc1`、
    有的是 `perseus-grc2`。先用 GitHub contents API 列目錄取實際檔名。
+
+🚨 **行標又多一種寫法：`章 (節) 正文`。** 蘇皮丘‧塞維魯《編年史》《聖瑪爾定傳》
+   的章號在行首、節號用括號夾、同行接正文（`1 (1) Res a mundi exordio…`）。
+   `parse_chapter_markers()` 對這種回 0 章。用 `parse_dotted_chapters(mark=PAREN_MARK)`。
+   同一冊的迦仙（《會院規章》285 章、《會談錄》24 篇）兩個易取的拉丁站都沒有，
+   要補得走 PL 49/50。
 
 🚨 **「編號變小＝換了一卷」這種回頭偵測不可靠。** 亞他那修《駁亞流派講辭》四篇
    的中譯節號各自從一起算，而 chapter_path 的「第1章…第35章」只是分段序號、給不
