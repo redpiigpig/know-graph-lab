@@ -539,8 +539,9 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             # 行標是「章.節 正文」寫在行首、不獨佔一行。原典每卷章號從一起算，
             # 而中譯是整部連續編號，所以與 roman 一樣累計接續。
             got = FO.parse_dotted_chapters(
-                text, mark=(FO.PAREN_MARK if spec.get("marker") == "paren"
-                            else FO.DOTTED_MARK))
+                text, mark={"paren": FO.PAREN_MARK,
+                            "solo-paren": FO.SOLO_PAREN}.get(
+                                spec.get("marker"), FO.DOTTED_MARK))
             base = max((k[1] for k in chapters), default=0)
             by_book.update({(i, k[1]): v for k, v in got.items()})
             chapters.update({(None, k[1] + base): v for k, v in got.items()})
@@ -813,7 +814,7 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
             s = FO.Span(s.first + part["book_from_chapter"], s.first, s.last)
             if s.book < 1:
                 continue
-        if s is None and part["mode"] in ("chapter", "roman", "tei"):
+        if s is None and part["mode"] in ("chapter", "roman", "tei", "dotted"):
             # 逐章模式的錨點是內文裡的「第N章」標題，不是 chapter_path 的後綴。
             # 只用一段收完的著作（依納爵致羅馬人書、致坡旅甲書）路徑上沒有那個
             # 後綴，硬要它就會整部被跳過而毫無訊號。

@@ -522,6 +522,12 @@ PAREN_MARK = re.compile(
     r"^[ 	]*(?P<ch>\d{1,3})\s*\((?P<sec>\d{1,3})\)\s+(?P<text>.*)$")
 
 
+# 第七種：章號單獨用括號夾在行首，同行接正文。
+#   (1) Inter multos saepe dubitatum est…
+# 耶柔米《首位隱士保羅傳》是這個樣子。
+SOLO_PAREN = re.compile(r"^[ 	]*\((?P<ch>\d{1,3})\)\s+(?P<text>.*)$")
+
+
 def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME,
                           mark: "re.Pattern[str]" = DOTTED_MARK
                           ) -> dict[tuple[int | None, int], str]:
@@ -543,8 +549,8 @@ def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME,
             if n != last:
                 current = out.setdefault(n, [])
                 last = n
-            if m.group(3):
-                current.append(m.group(3))
+            if m.group("text"):
+                current.append(m.group("text"))
         elif current is not None:
             current.append(line)
     return {(None, n): "\n".join(v).strip() for n, v in out.items() if any(v)}

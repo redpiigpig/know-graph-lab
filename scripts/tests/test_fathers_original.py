@@ -744,3 +744,13 @@ def test_roman_bracketed_chapters_treat_bare_numbers_as_sections():
     assert sorted(k[1] for k in got) == [1, 2]
     assert "Vt ergo" in got[(None, 1)]
     assert got[(None, 2)].startswith("Quapropter")
+
+
+def test_solo_paren_marker_style():
+    # 耶柔米《首位隱士保羅傳》：章號單獨用括號夾在行首
+    text = ("(1) Inter multos saepe dubitatum est.\n"
+            "Amatas uero et Macarius.\n"
+            "(2) Sub Decio et Valeriano persecutoribus.\n")
+    got = fo.parse_dotted_chapters(text, mark=fo.SOLO_PAREN)
+    assert sorted(k[1] for k in got) == [1, 2]
+    assert "Amatas uero" in got[(None, 1)]
