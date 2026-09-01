@@ -357,6 +357,66 @@ def parse_tei_letters(xml: str) -> dict[int, list[str]]:
     return out
 
 
+def _chain(values: list[int], low: int, high: int) -> list[int]:
+    """values 裡「大於 low、不超過 high、而且遞增」的最長一串（回傳選中的位置）。"""
+    idx = [i for i, v in enumerate(values) if low < v <= high]
+    if not idx:
+        return []
+    best = [1] * len(idx)
+    prev = [-1] * len(idx)
+    for a in range(len(idx)):
+        for b in range(a):
+            if values[idx[b]] < values[idx[a]] and best[b] + 1 > best[a]:
+                best[a], prev[a] = best[b] + 1, b
+    k = max(range(len(idx)), key=lambda i: best[i])
+    out = []
+    while k >= 0:
+        out.append(idx[k])
+        k = prev[k]
+    return out[::-1]
+
+
+def assign_books(chunk_anchors: list[list[int]], sizes: list[int]
+                 ) -> list[tuple[int | None, list[int]]]:
+    """逐段的錨點序列 → 每一段 (原典第幾卷, 用得上的錨點位置)。卷次 1-based。
+
+    用在「中譯每卷都從第一節重新編號，而 chapter_path 完全看不出卷次」的著作。
+    亞他那修《駁亞流派講辭》四篇就是這樣：站上的「第1章…第35章」只是分段序號，
+    內文的節號則是 23…64、1…82、1…67、1…35 四段。
+
+    🚨 不能靠「編號變小就是換了一卷」回頭偵測。那一部的中譯有兩段的節號重疊
+       （第8章收 1–9、第9章又從 1 開始），偵測法會切出八篇而不是四篇，命中率
+       掉到三成——而且錯配的那幾段看起來完全正常。
+
+    改用原典自己給的資訊：每一卷幾節是已知的。在「同一卷內遞增、不超過該卷節數」
+    這個限制下，用動態規劃找出讓最多錨點成立的切法。卷的順序不可調換，可以整卷
+    沒有對應的段落。不合限制的錨點不配——重複的那幾段因此會空著，這是對的。
+    """
+    if not sizes:
+        return [(None, []) for _ in chunk_anchors]
+    states: dict[tuple[int, int], tuple] = {(0, 0): (0, None, None, [])}
+    trail = []
+    for anchors in chunk_anchors:
+        nxt: dict[tuple[int, int], tuple] = {}
+        for (b, last), (score, _, _, _) in states.items():
+            for nb in range(b, len(sizes)):
+                got = _chain(anchors, last if nb == b else 0, sizes[nb])
+                s2 = score + len(got)
+                last2 = anchors[got[-1]] if got else (last if nb == b else 0)
+                key = (nb, last2)
+                if key not in nxt or nxt[key][0] < s2:
+                    nxt[key] = (s2, (b, last), nb if got else None, got)
+        states = nxt
+        trail.append(states)
+    key = max(states, key=lambda k: states[k][0])
+    out: list[tuple[int | None, list[int]]] = []
+    for step in reversed(trail):
+        _, prev, nb, got = step[key]
+        out.append((None if nb is None else nb + 1, got))
+        key = prev
+    return out[::-1]
+
+
 # 收信人自成一段時就是短短一句（「致坎迪狄亞努」）。超過這個長度表示中譯把收信
 # 人與正文第一段併在一起了——356 封裡有 88 封這樣。
 ADDRESS_MAX = 60

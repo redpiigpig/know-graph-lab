@@ -370,6 +370,7 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             print(f"  ⚠ 取源 {r.status_code}：{url}")
             continue
         text = FO.strip_html(r.text)
+        shown = None      # got 有時會被清空（見 tei 分支），印出來的數目要另外記
         if spec["mode"] == "paragraph":
             got = FO.parse_numbered_text(text, default_book=i)
             sections.update(got)
@@ -380,6 +381,9 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             #    序號當卷次補上去。
             if len(spec["urls"]) > 1 and all(k[0] is None for k in got):
                 by_book.update({(i, k[1]): v for k, v in got.items()})
+                # got 清空是為了不讓四篇的章號互相覆蓋，但下面印的是 len(got)，
+                # 清空後會印「0 章」，看起來像取源壞掉。
+                shown = len(got)
                 got = {}
             elif any(k[0] is not None for k in got):
                 # TEI 有 book 那一層，而中譯的 chapter_path 不一定跟著分卷：美多德
@@ -390,6 +394,7 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
                 chapters.update({(None, k[1] + bases[k[0]]): v
                                  for k, v in got.items()})
             chapters.update(got)
+
         elif spec["mode"] == "dotted":
             # 行標是「章.節 正文」寫在行首、不獨佔一行。原典每卷章號從一起算，
             # 而中譯是整部連續編號，所以與 roman 一樣累計接續。
@@ -411,7 +416,8 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
         else:
             got = FO.parse_bracketed_chapters(text, i)
             chapters.update(got)
-        print(f"  抓 {url.rsplit('/', 1)[-1]:16} → {len(got)} {unit}")
+        print(f"  抓 {url.rsplit('/', 1)[-1]:16} → "
+              f"{len(got) if shown is None else shown} {unit}")
     if spec["mode"] == "paragraph":
         chapters = FO.by_chapter(sections)
     return chapters, FO.by_paragraph(sections), by_book
@@ -512,6 +518,32 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
     # 七卷，中譯標「第71-80章」而內文寫「6.」）。用宣告的章範圍反推是哪一卷——
     # 各卷累計基底相差都大於一段的章數，所以答案唯一；不唯一或無解就不算命中，
     # 不猜。只在 chapter_path 沒有卷次時才試，否則《上帝之城》卷十三會被算成卷一。
+    # 第四種：中譯每卷從第一節重編，而 chapter_path 連個範圍都給不出來（亞他那修
+    # 《駁亞流派講辭》的「第1章…第35章」只是分段序號）。原典自己知道每卷幾節，
+    # 拿去切最省事也最穩，見 assign_books()。
+    sizes_by_book = {}
+    for b, n in by_book:
+        sizes_by_book[b] = max(sizes_by_book.get(b, 0), n)
+    order = sorted(sizes_by_book)
+    fit: dict[int, list] = {}
+    n_fit = 0
+    if len(order) > 1 and all(x[3].book is None for x in seq):
+        by_chunk: dict[int, list] = {}
+        for ci, i, n, _ in seq:
+            by_chunk.setdefault(ci, []).append((i, n))
+        cis = list(by_chunk)
+        got = FO.assign_books([[n for _, n in by_chunk[ci]] for ci in cis],
+                              [sizes_by_book[b] for b in order])
+        for ci, (bk, used) in zip(cis, got):
+            if bk is None:
+                continue
+            for pos in used:
+                i, n = by_chunk[ci][pos]
+                text = by_book.get((order[bk - 1], n))
+                if text:
+                    fit.setdefault(ci, []).append((i, text))
+                    n_fit += 1
+
     bases = cumulative_bases(by_book)
     off: dict[int, list] = {}
     n_off = 0
@@ -533,10 +565,10 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
 
     if os.environ.get("ALIGN_DEBUG"):
         print(f"    [debug] seq={len(seq)} flat={n_flat} "
-              f"lis={lis}/{len(ns)} per={n_per} off={n_off} "
+              f"lis={lis}/{len(ns)} per={n_per} off={n_off} fit={n_fit} "
               f"spans={[ (x[0], x[3].book, x[3].first, x[3].last) for x in seq[:3] ]} "
               f"ns={[x[2] for x in seq[:8]]}")
-    hits, n_hit = max(((flat, n_flat), (per, n_per), (off, n_off)),
+    hits, n_hit = max(((flat, n_flat), (per, n_per), (off, n_off), (fit, n_fit)),
                       key=lambda x: x[1])
     return hits, n_hit, len(seq)
 

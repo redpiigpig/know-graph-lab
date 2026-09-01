@@ -755,10 +755,11 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 使徒教父＋猶斯定 14 部 | ANF Vol 1 | 希臘‧First1KGreek TEI | 逐章 | 418/419（100%）|
 | 俄利根《駁塞爾蘇斯》八卷 | ANF Vol 4 | 希臘‧First1KGreek TEI | 逐章 | 589/589（100%）|
 | 優西比烏《教會史》十卷 | NPNF2 Vol 1 | 希臘‧Perseus TEI | 逐章 | 118/118（100%）|
-| 優西比烏《君士坦丁傳》＋兩篇頌辭 | NPNF2 Vol 1 | 希臘‧First1KGreek TEI | 逐章 | 231/233（99%）|
+| 優西比烏《君士坦丁傳》＋兩篇頌辭 | NPNF2 Vol 1 | 希臘‧First1KGreek TEI | 逐章 | 233/233（100%）|
 | 阿諾比烏《駁異教徒》七卷 | ANF Vol 6 | 拉丁‧The Latin Library | 逐章 | 301/322（93%）|
 | 美多德《十處女宴飲集》 | ANF Vol 6 | 希臘‧First1KGreek TEI | 逐章 | 80/82（98%）|
 | 巴西流《書信集》356 封 | NPNF2 Vol 8 | 希臘‧Perseus TEI | 逐段（見下） | 575/1168（49%）|
+| 亞他那修《駁亞流派講辭》四篇 | NPNF2 Vol 4 | 希臘‧First1KGreek TEI | 逐節 | 185/196（94%）|
 | 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
@@ -774,6 +775,14 @@ https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/{�
 
 🚨 **檔名不統一**，不要照 `{作者}.{作品}.1st1K-grc1.xml` 套——有的是 `opp-grc1`、
    有的是 `perseus-grc2`。先用 GitHub contents API 列目錄取實際檔名。
+
+🚨 **「編號變小＝換了一卷」這種回頭偵測不可靠。** 亞他那修《駁亞流派講辭》四篇
+   的中譯節號各自從一起算，而 chapter_path 的「第1章…第35章」只是分段序號、給不
+   出任何範圍。`book_of()` 的回頭偵測被資料裡的重疊騙到——第8章收 1–9、第9章又
+   從 1 開始（但兩段都還在第二篇）——切出八篇而不是四篇，命中率 31%，錯配的那些
+   看起來完全正常。改用原典自己給的資訊：每篇幾節是已知的（64/82/67/36），在
+   「同一篇內遞增、不超過該篇節數」的限制下用 DP 找最多錨點成立的切法
+   （`assign_books()`），94%。`align_part()` 現在同時算四種鍵法取最高分。
 
 🚨 **書信集沒有章可以對，只有段落順序——所以寧可空著。** 巴西流《書信集》的
    Perseus TEI 只有 letter 一層，信裡的分段是 `<p>`，不帶編號。NPNF 中譯的節號
