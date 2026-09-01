@@ -538,6 +538,21 @@ def chapter_headings(body: list[str]) -> list[tuple[int, int]]:
     return out
 
 
+def section_numbers(body: list[str]) -> list[tuple[int, int]]:
+    """回傳 [(段索引, 節號)]，取段首的「17. 」那個數字。
+
+    與 chapter_headings() 是同一個形狀，好讓對齊器可以換著用：有些著作的錨點是
+    章標題（《上帝之城》），有些是節號（亞他那修《駁亞流派講辭》——那一部整卷
+    沒有可用的章標題，只有連續節號，而且每篇講辭都從一重新起算）。
+    """
+    out: list[tuple[int, int]] = []
+    for i, p in enumerate(body):
+        m = LEADING_NO.match(p)
+        if m:
+            out.append((i, int(m.group(1))))
+    return out
+
+
 def fill_column(size: int, hits: list[tuple[int, str]]) -> list[str]:
     """把 (段索引, 原文) 排進一個與中文欄等長的欄位。"""
     col = [""] * size

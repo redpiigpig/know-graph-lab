@@ -609,3 +609,16 @@ def test_tei_prefers_chapter_over_section_when_both_exist():
     """兩層都有時要用 chapter（較粗的那層），section 是章內的細分。"""
     got = fo.parse_tei_chapters(TEI_BOOKS)
     assert set(got) == {(1, 1), (1, 2), (8, 1)}
+
+
+def test_section_numbers_matches_chapter_headings_shape():
+    """兩種錨點抽取器形狀要一致，對齊器才能換著用。"""
+    body = ["# 第一章", "1. 甲", "內文", "2. 乙"]
+    assert fo.section_numbers(body) == [(1, 1), (3, 2)]
+    assert fo.chapter_headings(body) == [(0, 1)]
+
+
+def test_section_numbers_feed_book_restart_detection():
+    """亞他那修《駁亞流派講辭》四篇的節號各自從一起算，靠回頭偵測分篇。"""
+    nums = [n for _, n in fo.section_numbers(["63. a", "64. b", "1. c", "2. d"])]
+    assert fo.book_of(nums) == [1, 1, 2, 2]

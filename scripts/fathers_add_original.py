@@ -234,6 +234,39 @@ WORKS: dict[str, dict] = {
                       ("優西比烏讚辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2018/tlg022/tlg2018.tlg022.1st1K-grc1.xml"),
         ],
     },
+    "athanasius-orations": {
+        "label": "亞他那修《駁亞流派講辭》四篇（NPNF2 第四卷）",
+        "ebook_id": "e01917ab-7429-41a0-9859-eddad413ef60",
+        "lang": "grc",
+        "mode": "tei",
+        "anchor": "section",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 這一部整卷沒有可用的章標題，錨點是連續節號——而四篇講辭的節號各自從一
+        # 起算（64/82/67/36），靠 book_of() 的回頭偵測分篇。
+        # 🚨 TEI 那邊把節叫做 chapter（章數 64/82/67/36 正好等於我方的節號上限），
+        #    層級名不同但編號是同一套。
+        "parts": [
+                      ("駁亞流派講辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2035/tlg130/tlg2035.tlg130.1st1K-grc1.xml"),
+                      ("駁亞流派講辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2035/tlg131/tlg2035.tlg131.1st1K-grc1.xml"),
+                      ("駁亞流派講辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2035/tlg132/tlg2035.tlg132.1st1K-grc1.xml"),
+                      ("駁亞流派講辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2035/tlg117/tlg2035.tlg117.1st1K-grc1.xml"),
+        ],
+    },
+    "hippolytus-refutatio": {
+        "label": "希波呂圖《駁諸異端》（ANF 第五卷）",
+        "ebook_id": "0e08c662-540b-4186-b250-9bca0cfe1002",
+        "prefix": "希波呂圖《駁諸異端》",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 卷次直接對應，不需 book_map：TEI 與我方都是卷 1、4–10（第二、三卷本來
+        # 就佚失），章數 27/51/28/55/38/20/31/34 與我方的章標題數相符。
+        # 🚨 同一個目錄有 opp-grc1 與 perseus-grc1 兩份；取希臘字元較多的 opp
+        #    （45.7 萬 vs 36.4 萬）。
+        # 🚨 同冊的「居普良 論述集」不收：那是把十二部各自獨立的著作壓成一個
+        #    前綴（196 章），分不出哪一章屬哪一部。
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2115/tlg060/tlg2115.tlg060.opp-grc1.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -289,6 +322,12 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             sections.update(got)
         elif spec["mode"] == "tei":
             got = FO.parse_tei_chapters(r.text, epistle or None)
+            # 🚨 一部著作分成好幾個 TEI 檔（亞他那修四篇《駁亞流派講辭》各一檔）
+            #    而檔內沒有 book 那一層時，四篇的章號都是 1.. 會互相覆蓋。用網址
+            #    序號當卷次補上去。
+            if len(spec["urls"]) > 1 and all(k[0] is None for k in got):
+                by_book.update({(i, k[1]): v for k, v in got.items()})
+                got = {}
             chapters.update(got)
         elif spec["mode"] == "roman":
             got = FO.parse_chapter_markers(text)
@@ -312,7 +351,7 @@ def load_chunks(path: Path) -> list[dict]:
     return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
-def align_part(chunks, spans, chapters, by_book):
+def align_part(chunks, spans, chapters, by_book, extract=None):
     """對整部做逐章對齊，兩種編號法各試一次，取命中高的那個。
 
     多卷著作的中譯有兩種編號習慣，同一冊裡都有：《駁馬吉安》五卷整部連續編號
@@ -326,7 +365,7 @@ def align_part(chunks, spans, chapters, by_book):
         if not sp:
             continue
         body = FO.split_body(c.get("content") or "")
-        for i, n in FO.chapter_headings(body):
+        for i, n in (extract or FO.chapter_headings)(body):
             seq.append((c["chunk_index"], i, n, sp.book))
     if not seq:
         return {}, 0, 0
@@ -426,16 +465,15 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
                     found.append(FO.Span(s.book, int(m.group(1)), int(m.group(1))))
         return FO.coverage(found, {k: "x" for k in paragraphs})
     if part["mode"] in ("chapter", "roman", "tei"):
+        extract = (FO.section_numbers if part.get("anchor") == "section"
+                   else FO.chapter_headings)
         found = []
         for c in chunks:
             s = spans.get(c["chunk_index"])
             if not s:
                 continue
-            for p in FO.split_body(c.get("content") or ""):
-                m = FO.ZH_CHAPTER_HEAD.match(p)
-                n = FO.zh_numeral(m.group(1)) if m else None
-                if n is not None:
-                    found.append(FO.Span(s.book, n, n))
+            for _, n in extract(FO.split_body(c.get("content") or "")):
+                found.append(FO.Span(s.book, n, n))
         return FO.coverage(found, chapters)
     return FO.coverage(list(spans.values()), chapters)
 
@@ -517,7 +555,9 @@ def main() -> int:
                 else:
                     skipped.append(f"{c['chapter_path']}（{n} 個錨點全對不上）")
         else:
-            placed, hit, num = align_part(chunks, spans, chapters, by_book)
+            extract = (FO.section_numbers if part.get("anchor") == "section"
+                       else FO.chapter_headings)
+            placed, hit, num = align_part(chunks, spans, chapters, by_book, extract)
             for c in chunks:
                 if c["chunk_index"] not in spans:
                     continue
