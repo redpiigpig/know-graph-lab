@@ -299,6 +299,19 @@ WORKS: dict[str, dict] = {
         # 比烏同一種形狀，靠 resolve_continuous() 反推是哪一篇。
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2959/tlg001/tlg2959.tlg001.opp-grc1.xml"],
     },
+    "basil-letters": {
+        "label": "巴西流《書信集》（NPNF2 第八卷）",
+        "ebook_id": "3c48472c-fbca-48fb-9db1-ca5a08827ef3",
+        "prefix": "書信",
+        "lang": "grc",
+        "mode": "letter",
+        "source": "Perseus canonical-greekLit（TEI，公有領域）",
+        # 這一部沒有章可以對，只有「第幾封信的第幾段」。原文的分段不帶編號，
+        # 所以順序就是唯一的鍵——段數對不上就整封空著，見 align_letter()。
+        # 《論聖靈》三十章與《六日創世講道》九講的希臘本兩個 TEI 庫都沒有
+        # （tlg2040 只有 tlg002、tlg004），要補得走 Migne PG 29/32 自家 OCR。
+        "urls": ["https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg2040/tlg004/tlg2040.tlg004.perseus-grc2.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -333,6 +346,14 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "greek":
         paragraphs = load_greek_ledger(Path(spec["ledger"]))
         return {}, paragraphs, {}
+    if spec["mode"] == "letter":
+        s = requests.Session()
+        s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
+        r = s.get(spec["urls"][0], timeout=180)
+        r.raise_for_status()
+        letters = FO.parse_tei_letters(r.text)
+        print(f"  抓 {spec['urls'][0].rsplit('/', 1)[-1]:22} → {len(letters)} 封")
+        return {}, letters, {}
     s = requests.Session()
     s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
     chapters: dict[tuple[int | None, int], str] = {}
@@ -547,6 +568,11 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
         m = FO.CHAPTER_PATH.search(cp)
         if m and m.group(2) is None:
             book_hint = (part.get("chapters") or {}).get(FO.zh_numeral(m.group(1)))
+        if part["mode"] == "letter":
+            m = FO.LETTER_PATH.search(cp)
+            if m:
+                out[c["chunk_index"]] = FO.Span(int(m.group(1)), 1, 1)
+            continue
         s = FO.parse_chapter_path(cp, chapters_in_book=book_hint)
         if s and part.get("book_map"):
             # 站上的卷次與原典卷次不是固定偏移（優西比烏《教會史》的卷一是譯者
@@ -578,6 +604,8 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
        （該卷只到第 35 章，標籤照樣寫「第31-40章」），拿它比對會冒出一堆不存在的
        「多出章」，把真正的缺章淹掉。要數內文裡真的出現的章標題。
     """
+    if part["mode"] == "letter":
+        return []
     if part["mode"] == "greek":
         found = []
         for c in chunks:
@@ -648,7 +676,7 @@ def main() -> int:
             print(f"沒有前綴為「{a.only}」的部")
             return 1
     print(f"《{spec['label']}》 原文 {spec['lang']} ← {spec['source']}"
-          f"（{'逐節' if spec['mode'] in ('paragraph', 'greek') else '逐章'}對齊）"
+          f"（{'逐節' if spec['mode'] in ('paragraph', 'greek', 'letter') else '逐章'}對齊）"
           + (f"，共 {len(parts)} 部" if len(parts) > 1 else ""))
 
     chunks = load_chunks(path)
@@ -676,7 +704,20 @@ def main() -> int:
             note += "\n      ⚠ 卷 " + str(c.book) + "：" + "；".join(bits)
 
         hit = num = 0
-        if part["mode"] in ("paragraph", "greek"):
+        if part["mode"] == "letter":
+            for c in chunks:
+                sp = spans.get(c["chunk_index"])
+                if not sp or sp.book not in paragraphs:
+                    continue
+                body = FO.split_body(c.get("content") or "")
+                col, h, n = FO.align_letter(body, paragraphs[sp.book])
+                hit += h
+                num += n
+                if h:
+                    cols[c["chunk_index"]] = col
+                elif n:
+                    skipped.append(f"{c['chapter_path']}（節數與原文段數對不上）")
+        elif part["mode"] in ("paragraph", "greek"):
             for c in chunks:
                 sp = spans.get(c["chunk_index"])
                 if not sp:

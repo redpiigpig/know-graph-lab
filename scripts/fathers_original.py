@@ -28,6 +28,8 @@ CHAPTER_PATH = re.compile(
     r"卷([一二三四五六七八九十]+)"          # 卷次（無「卷」的單卷著作見下）
     r"(?:\s*第(\d+)(?:[-–](\d+))?章)?\s*$")
 CHAPTER_ONLY = re.compile(r"第(\d+)(?:[-–](\d+))?章\s*$")
+# 書信集的 chapter_path 是「書信 第12封」，不是「第12章」。
+LETTER_PATH = re.compile(r"第(\d+)封")
 
 
 @dataclass(frozen=True)
@@ -315,6 +317,88 @@ def parse_tei_chapters(xml: str, epistle: str | None = None
         if text:
             out[(book, n)] = text
     return out
+
+
+def parse_tei_letters(xml: str) -> dict[int, list[str]]:
+    """把書信集的 TEI 切成 {信件編號: [收信人, 第一段, 第二段, …]}。
+
+    巴西流《書信集》（Perseus tlg2040.tlg004）只有 letter 這一層，信裡的分節不
+    是 div 而是 <p>。NPNF 中譯的「1. 2. 3.」節號對的就是這些 <p>，所以段落順序
+    本身就是鍵——也因此段數對不上時絕不能硬排，見 align_letter()。
+
+    第 0 格放 <head>（收信人），校勘註釋一律拿掉。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"))
+    ns = {"t": "http://www.tei-c.org/ns/1.0"}
+    out: dict[int, list[str]] = {}
+    for div in root.xpath('.//t:div[@subtype="letter"]', namespaces=ns):
+        raw = (div.get("n") or "").strip()
+        if not raw.isdigit():
+            continue
+        clone = etree.fromstring(etree.tostring(div))
+        for note in clone.xpath('.//*[local-name()="note"]'):
+            tail = note.tail or ""
+            parent = note.getparent()
+            prev = note.getprevious()
+            if prev is not None:
+                prev.tail = (prev.tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+            parent.remove(note)
+        parts = []
+        for el in clone.xpath('.//*[local-name()="head" or local-name()="p"]'):
+            text = " ".join(" ".join(el.itertext()).split())
+            if text:
+                parts.append(text)
+        if parts:
+            out[int(raw)] = parts
+    return out
+
+
+# 收信人自成一段時就是短短一句（「致坎迪狄亞努」）。超過這個長度表示中譯把收信
+# 人與正文第一段併在一起了——356 封裡有 88 封這樣。
+ADDRESS_MAX = 60
+
+
+def align_letter(body: list[str], letter: list[str]) -> tuple[list[str], int, int]:
+    """一封信的中譯段落 → 原文欄。只在確定的情形下填，其餘整封空著。
+
+    🚨 這裡沒有編號可以查，只有順序，所以絕不能「大致排一排」。實測巴西流第五
+       封：中譯兩節，原文四段——NPNF 的節號是本篤版的分節，Perseus 那份走的是
+       更細的分段，一節等於兩三段。硬排的話第二節會配到原文第二段，往後每一段
+       都錯開一格，讀起來完全通順。
+
+    🚨 有 88 封的中譯把收信人與正文第一段併成一段。不認出來的話段數會少一段，
+       而少一段有時剛好等於原文段數——整封位移一格，照樣填滿。所以先看第二段有
+       多長。
+
+    填的情形：
+      · 收信人那一行 ↔ 原文的 <head>（位置固定，每封都對得上）
+      · 剩下的段數剛好相等 → 逐段一對一
+      · 中譯只剩一段 → 整封原文併進那一格（沒有切錯的餘地）
+    """
+    col = [BLANK_PARAGRAPH] * len(body)
+    if not letter or len(body) < 2:
+        return col, 0, 0
+    head, rest = letter[0], letter[1:]
+    merged = len(body[1].lstrip("# ").strip()) > ADDRESS_MAX
+    if merged and rest:
+        col[1] = head + chr(10) + rest[0]
+        rest = rest[1:]
+    else:
+        col[1] = head
+    zh = body[2:]
+    hit = 1
+    if rest and len(zh) == len(rest):
+        for i, text in enumerate(rest):
+            col[i + 2] = text
+        hit += len(rest)
+    elif rest and len(zh) == 1:
+        col[2] = chr(10).join(rest)
+        hit += 1
+    return col, hit, len(zh) + 1
 
 
 # 第四種行標：`章.節` 寫在行首、同行接正文。

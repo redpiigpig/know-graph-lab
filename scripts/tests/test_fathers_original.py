@@ -622,3 +622,46 @@ def test_section_numbers_feed_book_restart_detection():
     """亞他那修《駁亞流派講辭》四篇的節號各自從一起算，靠回頭偵測分篇。"""
     nums = [n for _, n in fo.section_numbers(["63. a", "64. b", "1. c", "2. d"])]
     assert fo.book_of(nums) == [1, 1, 2, 2]
+
+
+# ── 書信集（巴西流《書信集》，Perseus TEI 只有 letter 一層）────────────────
+def _letter(*paras):
+    return list(paras)
+
+
+def test_letter_head_always_pairs_with_the_address_line():
+    body = ["# 第三封信", "致坎迪狄亞努", "1. 當我接過你的信時…"]
+    col, hit, total = fo.align_letter(body, _letter("Κανδιδιανῷ", "Ὅτε εἰς χεῖρας…"))
+    assert col[1] == "Κανδιδιανῷ"
+    assert hit == 2
+
+
+def test_letter_pairs_one_to_one_when_counts_match():
+    body = ["# 第三封信", "致某人", "一", "二"]
+    col, hit, _ = fo.align_letter(body, _letter("head", "α", "β"))
+    assert col[2:] == ["α", "β"]
+    assert hit == 3
+
+
+def test_letter_leaves_everything_blank_when_counts_differ():
+    # 巴西流第五封：中譯兩節，原文四段。硬排會整封錯開一格而讀起來完全通順。
+    body = ["# 第五封信", "致涅克塔略", "1. …", "2. …"]
+    col, hit, _ = fo.align_letter(body, _letter("head", "α", "β", "γ", "δ"))
+    assert col[2:] == [fo.BLANK_PARAGRAPH, fo.BLANK_PARAGRAPH]
+    assert hit == 1
+
+
+def test_letter_joins_whole_greek_when_chinese_has_one_paragraph():
+    body = ["# 第一百封信", "致優西比烏", "當我在亞美尼亞…"]
+    col, hit, _ = fo.align_letter(body, _letter("head", "α", "β"))
+    assert col[2] == "α\nβ"
+    assert hit == 2
+
+
+def test_letter_detects_merged_address_paragraph():
+    # 356 封裡有 88 封把收信人與正文第一段併成一段；不認出來就會整封位移一格
+    body = ["書信十四", "致友人格列高里" + "我弟兄格列高里寫信告訴我" * 5, "其餘"]
+    col, hit, _ = fo.align_letter(body, _letter("Γρηγορίῳ ἑταίρῳ", "α", "β"))
+    assert col[1].startswith("Γρηγορίῳ ἑταίρῳ\n")
+    assert col[1].endswith("α")
+    assert col[2] == "β"
