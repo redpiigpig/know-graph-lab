@@ -433,6 +433,19 @@ WORKS: dict[str, dict] = {
         "book_map": {2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9},
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2048/tlg001/tlg2048.tlg001.1st1K-grc1.xml"],
     },
+    "passio-perpetuae": {
+        "label": "《佩爾佩圖亞與費莉西塔斯殉道記》（ANF 第三卷）",
+        "ebook_id": "364dac2e-410f-4906-be63-8bb86b4865ee",
+        "prefix": "佩爾佩圖亞與費莉西塔斯殉道記",
+        "lang": "la",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 同一個目錄裡希臘、拉丁兩本都有；ANF 譯的是拉丁本，所以取 lat1。
+        # 站上只標得出前六章的章標題（該篇 21 章），其餘空著。
+        # 拉丁本把序編成第一節，ANF 的章號從序之後起算，所以差一節。
+        "chapter_offset": 1,
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2016/tlg001/tlg2016.tlg001.1st1K-lat1.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -497,6 +510,12 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             sections.update(got)
         elif spec["mode"] == "tei":
             got = FO.parse_tei_chapters(r.text, epistle or None)
+            # 原典把序也編成第一節，而 ANF 的章號從序之後才起算（《佩爾佩圖亞殉道
+            # 記》就是這樣：站上第一章＝拉丁本第二節）。差一章的錯位讀起來完全通
+            # 順，只有逐段核對內容才看得出來。
+            off = spec.get("chapter_offset")
+            if off:
+                got = {(b, n - off): v for (b, n), v in got.items() if n - off >= 1}
             # 🚨 一部著作分成好幾個 TEI 檔（亞他那修四篇《駁亞流派講辭》各一檔）
             #    而檔內沒有 book 那一層時，四篇的章號都是 1.. 會互相覆蓋。用網址
             #    序號當卷次補上去。
