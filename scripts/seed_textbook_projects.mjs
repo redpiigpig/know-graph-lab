@@ -1,6 +1,6 @@
 /**
  * 在 writing_projects 新增兩本教科書寫作計畫（kind='lecture' 講義寫作分區）：
- *  1.《世界宗教文化導論》（world-religions-intro）— 八大界域架構的宗教系教科書
+ *  1. 宗教學授課講義（world-religions-intro）—《世界宗教文化導論》＋《宗教歷史地理學》兩本
  *  2.《漢字文學史》（sinographic-literature）— 宗教系國文講義
  * 走 Supabase Management API（見 reference_supabase_management_api）。
  */
@@ -34,8 +34,8 @@ const books = [
   {
     slug: 'world-religions-intro',
     title: '世界宗教文化導論',
-    subtitle: '全球八大人文宗教界域',
-    description: '宗教系大學教科書：以六百年時代律 × 八大界域為時空雙座標的世界宗教文化史。',
+    subtitle: '宗教學授課講義兩種',
+    description: '《世界宗教文化導論》以〈神學地圖〉四大信仰型態橫切世界宗教（十六週）；《宗教歷史地理學》以六百年時代律 × 八大界域縱走全球宗教史。',
     emoji: '🌍',
     color: 'emerald',
   },
