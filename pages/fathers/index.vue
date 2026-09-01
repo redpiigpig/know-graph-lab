@@ -54,6 +54,7 @@
             >
               <div class="flex items-baseline gap-2 mb-1.5">
                 <span class="fathers-card-vol">卷&nbsp;{{ b.vol }}</span>
+                <span v-if="b.original" class="fathers-badge is-original">附原典</span>
                 <span v-if="b.refined" class="fathers-badge is-refined">已精修</span>
                 <span v-else-if="b.parsed" class="fathers-badge is-rough">粗譯</span>
                 <span v-else class="fathers-badge is-none">未譯</span>
@@ -71,6 +72,7 @@
       <div class="fathers-legend">
         <p>狀態說明：</p>
         <ul>
+          <li><b class="text-sky-700">附原典</b>：該卷已有部分著作補上拉丁／希臘原典第三欄；哪幾部、對到幾成見 skill 的對照表</li>
           <li><b class="text-emerald-700">已精修</b>：跑過完整 5 步驟 pipeline + A+B+C 三層校對，T9 cross-bleed = 0</li>
           <li><b class="text-amber-700">粗譯</b>：完成翻譯但未經 v4 pipeline 精修，章節結構可能有 bleed bug</li>
           <li><b class="text-stone-500">未譯</b>：source 已在庫但尚未翻譯</li>
@@ -100,7 +102,27 @@ interface BookView extends BookRow {
   display_title: string
   parsed: boolean
   refined: boolean
+  original: boolean
 }
+
+// 已補上第三欄（拉丁／希臘原典）的卷。逐部的取源與命中率記在
+// .claude/skills/scripture-fathers/SKILL.md 的對照表。
+const ORIGINAL_IDS = new Set([
+  '0e08c662-540b-4186-b250-9bca0cfe1002',  // grc/la 35 段 — 希波呂圖《駁諸異端》、諾瓦提安《論三位一體》
+  '1eb50be9-34ac-4ce3-874d-1280975851fc',  // la 78 段 — 奧古斯丁《上帝之城》
+  '24c53ede-8787-442e-a3ba-0cd55d0effac',  // la 19 段 — 勒蘭的文森《勸誡錄》、蘇皮丘‧塞維魯《編年史》兩卷、蘇皮丘‧塞維魯《聖瑪爾定傳》
+  '29782dd6-ece9-446a-83ed-9cc0892d7cc7',  // grc 55 段 — 索佐門《教會史》九卷、蘇格拉底《教會史》七卷
+  '364dac2e-410f-4906-be63-8bb86b4865ee',  // la 85 段 — 《佩爾佩圖亞與費莉西塔斯殉道記》、特土良
+  '3c48472c-fbca-48fb-9db1-ca5a08827ef3',  // grc 338 段 — 巴西流《書信集》
+  '75d8aae0-7431-4be9-baee-c57d26599653',  // la 9 段 — 拉克坦提烏《神學原理》卷一、拉克坦提烏《論逼迫者之死》
+  '904661d3-16fc-4f37-bb04-f7c4aa7671e9',  // grc/la 87 段 — ANF 第四卷的拉丁篇、俄利根《駁塞爾蘇斯》
+  '91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9',  // grc 62 段 — 優西比烏《君士坦丁傳》與兩篇頌辭、優西比烏《教會史》
+  '9edb7c37-4231-412b-83bd-78f3f793cc0a',  // la 35 段 — 奧古斯丁《懺悔錄》
+  'c98d358d-7066-4691-a896-b7232707b0db',  // grc 60 段 — ANF 第一卷的希臘原典
+  'd7f66759-3fa9-4633-abde-87003cdbcc06',  // la 25 段 — 奧古斯丁《論三位一體》十五卷
+  'dffaae40-e088-41c1-ab7f-9b96f9249661',  // grc/la 42 段 — 美多德《十處女宴飲集》、阿諾比烏《駁異教徒》七卷
+  'e01917ab-7429-41a0-9859-eddad413ef60',  // grc 32 段 — 亞他那修《駁亞流派講辭》四篇
+])
 
 const books = ref<BookView[]>([])
 const loading = ref(true)
@@ -260,6 +282,7 @@ onMounted(async () => {
       display_title: displayTitle(b, parsed.series, parsed.vol),
       parsed: !!b.parsed_at && (b.chunk_count || 0) > 0,
       refined: REFINED_IDS.has(b.id),
+      original: ORIGINAL_IDS.has(b.id),
     })
   }
   books.value = rows
@@ -327,6 +350,7 @@ onMounted(async () => {
 .fathers-card-meta { font-size: 12px; color: #9c8a63; margin-top: .4rem; }
 .fathers-badge { font-size: 10px; padding: 1px 7px; border-radius: 9999px; font-weight: 600; }
 .fathers-badge.is-refined { background: #d1e7d3; color: #2f6b3a; }
+.fathers-badge.is-original { background: #cfe0ef; color: #2c5678; }
 .fathers-badge.is-rough { background: #f2e3bf; color: #8a6414; }
 .fathers-badge.is-none { background: #e4d6b6; color: #8a7145; }
 

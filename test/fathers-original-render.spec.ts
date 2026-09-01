@@ -42,3 +42,27 @@ describe.skipIf(!hasDrive)('教父卷第三欄真的排得出來', () => {
     })
   }
 })
+
+// 目錄頁的「附原典」標籤是硬寫的一份 id 清單。清單與實際資料一旦脫節，頁面就會
+// 宣稱某一卷有第三欄而點進去沒有——金口若望那一卷就差點這樣（OCR 還沒跑完就先
+// 列進去了）。這支逐個回頭查 JSONL。
+describe.skipIf(!hasDrive)('目錄頁的「附原典」清單與實際資料一致', () => {
+  const page = fs.readFileSync('pages/fathers/index.vue', 'utf8')
+  const block = page.slice(page.indexOf('const ORIGINAL_IDS'))
+  const listed = (block.slice(0, block.indexOf('])')).match(/'([0-9a-f-]{36})'/g) || [])
+    .map((s) => s.replace(/'/g, ''))
+
+  it('清單不是空的', () => expect(listed.length).toBeGreaterThan(5))
+
+  for (const id of listed) {
+    it(id.slice(0, 8), () => {
+      const lines = fs.readFileSync(`${DIR}/${id}.jsonl`, 'utf8').split(String.fromCharCode(10))
+      const has = lines.some((l) => {
+        if (!l.trim()) return false
+        const src = JSON.parse(l).sources || {}
+        return Object.keys(src).some((k) => k !== 'en')
+      })
+      expect(has, '標了附原典，實際卻沒有原文欄').toBe(true)
+    })
+  }
+})
