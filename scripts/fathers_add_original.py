@@ -594,9 +594,33 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
     if not seq:
         return {}, 0, 0
 
+    # 🚨 單卷著作的錨點如果「掉回第一章再走一遍」，那後半多半是隔壁那部混進來的。
+    #    ANF 第一卷的中譯分段是系統性地「自己這部的尾巴＋下一部的開頭」：
+    #    「依納爵致他爾索人書」那一段收的是他爾索書第 9–10 章，接著就是《致安提阿
+    #    人書》的第 1–6 章；「致特拉勒人書」那兩段的後半是《致羅馬人書》第一到第六
+    #    章（章題「作為囚犯」「容我成為野獸的獵物」都是羅馬書的）。照編號查的話那
+    #    幾列會拿到本部的希臘文——同一位作者、同樣的文體，讀起來完全正常，而命中
+    #    率是 100%。
+    #    兩道一起用，順序不能反：先按 chapter_path 宣告的章範圍濾掉離得太遠的
+    #    （差幾章很正常，分段處常多一兩章；差十章以上就是別部的），再在濾完的序列
+    #    上找「掉回第一、二章」的地方切斷。反過來的話，《駁黑摩根》第一章前面那個
+    #    誤讀的「21.」會造成假重編，整部 1–45 章全被切掉。
+    single = (len({b for b, _ in by_book}) <= 1
+              and all(x[3].book is None for x in seq))
+    ranged = single and any(x[3].last > 1 for x in seq)
+    kept = [x for x in seq
+            if not ranged or x[3].first - 4 <= x[2] <= x[3].last + 4]
+    if single:
+        top = 0
+        for k, x in enumerate(kept):
+            if x[2] <= 2 and top >= 5:
+                kept = kept[:k]
+                break
+            top = max(top, x[2])
+
     flat: dict[int, list] = {}
     n_flat = 0
-    for ci, i, n, sp in seq:
+    for ci, i, n, sp in kept:
         book = sp.book
         # 🚨 卷次一定要帶進查表。少了它，《上帝之城》卷十三的第一章會拿到卷一
         #    第一章的拉丁文——命中率照樣很高，三欄照樣排得整整齊齊，內容卻是別

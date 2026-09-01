@@ -58,3 +58,32 @@ def test_ambiguous_returns_none():
 
 def test_single_book_has_no_offset():
     assert AO.cumulative_bases({(1, n): "x" for n in range(1, 46)}) == {1: 0}
+
+
+# ── 隔壁那部混進來（ANF 第一卷的中譯分段是「自己的尾巴＋下一部的開頭」）──────
+def test_bleed_cut_keeps_only_the_first_run_when_no_declared_range():
+    # 「依納爵致他爾索人書」整部擠在一段、路徑上沒有章範圍：9、10 是他爾索書自己
+    # 的，後面的 1–6 是《致安提阿人書》。
+    chapters = {(None, n): f"grc{n}" for n in range(1, 20)}
+    seq_pairs = [(9, 1, 1), (10, 1, 1), (1, 1, 1), (2, 1, 1), (3, 1, 1)]
+    chunks = [{"chunk_index": 0, "chapter_path": "x",
+               "content": "\n\n".join(f"# 第{n}章" for n, _, _ in seq_pairs)}]
+    spans = {0: FO.Span(None, 1, 1)}
+    placed, hit, num = AO.align_part(chunks, spans, chapters, {},
+                                     lambda body: [(i, n) for i, (n, _, _)
+                                                   in enumerate(seq_pairs)])
+    assert hit == 2
+    assert [t for _, t in placed[0]] == ["grc9", "grc10"]
+
+
+def test_declared_range_drops_a_stray_without_cutting_the_work():
+    # 《駁黑摩根》第一章前面有個誤讀的「21.」。先濾範圍再找重編點，整部才留得住。
+    chapters = {(None, n): f"la{n}" for n in range(1, 50)}
+    pairs = [(21, 1, 10), (1, 1, 10), (2, 1, 10), (3, 1, 10)]
+    chunks = [{"chunk_index": 0, "chapter_path": "x", "content": "x"}]
+    spans = {0: FO.Span(None, 1, 10)}
+    placed, hit, num = AO.align_part(chunks, spans, chapters, {},
+                                     lambda body: [(i, n) for i, (n, _, _)
+                                                   in enumerate(pairs)])
+    assert hit == 3
+    assert [t for _, t in placed[0]] == ["la1", "la2", "la3"]
