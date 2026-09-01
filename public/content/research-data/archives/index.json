@@ -1,0 +1,34 @@
+{
+ "total": 5057,
+ "online": 528,
+ "sections": [
+  {
+   "slug": "pct",
+   "name": "台灣基督長老教會",
+   "count": 2714,
+   "online": 309,
+   "groups": 16
+  },
+  {
+   "slug": "buddhist",
+   "name": "佛教",
+   "count": 1861,
+   "online": 75,
+   "groups": 7
+  },
+  {
+   "slug": "yiguandao",
+   "name": "一貫道",
+   "count": 417,
+   "online": 131,
+   "groups": 1
+  },
+  {
+   "slug": "methodist",
+   "name": "衛理公會",
+   "count": 65,
+   "online": 13,
+   "groups": 2
+  }
+ ]
+}

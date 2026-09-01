@@ -46,9 +46,42 @@ DELAY = 2.5          # 站方對密集請求敏感，慢慢來
 #    所以不跑兩輪——跑了也是同一批，只是白費站方頻寬。若日後找到正確參數再加回來。
 #    （關鍵詞本身確實有效：對照組「鰻魚養殖」只有 11 筆。）
 QUERIES = [
-    ("長老教會", "第四章：長老教會與國家"),
-    ("佛教",     "第三章：佛教教團與國家"),
-    ("一貫道",   "一貫道：1953 查禁至 1987 合法化"),
+    # ── 機構／運動 ──
+    ("長老教會",   "第四章：長老教會與國家"),
+    ("佛教",       "第三章：佛教教團與國家"),
+    ("一貫道",     "一貫道：1953 查禁至 1987 合法化"),
+    ("台灣神學院", "第四章：北部神學教育（帶出董芳苑、賴顯章等人）"),
+    ("台南神學院", "第四章：南神（黃彰輝、宋泉盛、王憲治的所在）"),
+    ("玉山神學院", "第四章：玉神（原住民神學教育；與原權會、牧羊會案相關）"),
+    # 上位詞：把三神以外、案名只寫「神學院」的那些也撈進來（249 筆，含各專案）
+    ("神學院",     "第四章：神學院總集（含三神以外者）"),
+    # 專案代號——監控行動的組織單位，比人名更能看出國家的部署
+    ("一二一O專案", "美麗島：高俊明窩藏施明德案的專案代號"),
+    ("二二二專案", "台南神學院案的專案代號"),
+    ("衛理公會",   "衛理公會：教產與行政"),
+    ("清寧專案",   "專案代號：監控長老教會人士的專案"),
+    # ── 基督教系譜四人與周邊 ──
+    ("黃彰輝",     "第四章第二節"),
+    ("宋泉盛",     "第四章第三節"),
+    ("王憲治",     "第四章第四節"),
+    ("黃伯和",     "第四章第五節"),
+    ("高俊明",     "第四章：美麗島事件與長老教會"),
+    ("鄭仰恩",     "長老教會史學者；清寧專案與道風山案"),
+    ("董芳苑",     "台灣神學院；調查局有專案"),
+    ("陳主顯",     "與鄭仰恩同列道風山案"),
+    ("周聯華",     "衛理公會；七二○專案"),
+    # ── 佛教系譜 ──
+    ("印順",       "第三章第二節；可疑分子考管"),
+    ("佛法概論",   "第三章第二節：1950 年代查禁案"),
+    ("太虛",       "第三章第一節"),
+    ("傳道",       "第三章第三節：妙心寺"),
+    ("妙心寺",     "第三章第三節"),
+    # 🚨 昭慧：已逐筆查證「昭慧」17 筆全是同名者（曾昭慧／江昭慧／楊昭慧），
+    #    「昭慧法師」「盧瓊昭」（俗名）「弘誓」三個寫法都是 0 筆。
+    #    唯一可能相關的是法務部調查局「七十八年二月份教育情報存參卷案」，
+    #    但案名不含其名，須調閱全文才能確認。收在這裡是為了留下「查過而確實沒有」
+    #    的紀錄——那與「沒查過」是兩回事。
+    ("昭慧",       "已查證：無專屬檔案，多為同名者"),
 ]
 
 # 「已數位化」不等於「可以下載」：多數寫「須提出申請」，只有少數是「可線上閱覽」。
@@ -56,6 +89,23 @@ ONLINE_RE = re.compile(r"可線上閱覽")
 PAGES_RE = re.compile(r"影像\s*([\d,]+)\s*頁")
 
 TOTAL_RE = re.compile(r"共為\s*([\d,]+)\s*筆")
+
+# 🚨 **零結果與請求失敗必須分得開**。站方查無資料時回的是一頁沒有結果表、
+#    也沒有「共為 N 筆」的表單頁，長度約 187 KB；有結果時 800 KB 以上。
+#    對照組實測：一貫道 836,855 bytes／共為 417 筆；zzqqxxyy 187,743 bytes／無筆數欄；
+#    昭慧法師 187,734、盧瓊昭 187,733、弘誓 187,732——與無結果組同型，確定是真的 0 筆。
+#    只回報一個「?」會讓「查無」與「抓壞了」混在一起，那是最容易誤導人的回報方式。
+EMPTY_MIN, EMPTY_MAX = 150_000, 220_000
+
+
+def classify(html):
+    """→ ('ok', n) / ('empty', 0) / ('fail', 0)"""
+    m = TOTAL_RE.search(html or "")
+    if m:
+        return "ok", int(m.group(1).replace(",", ""))
+    if EMPTY_MIN < len(html or "") < EMPTY_MAX:
+        return "empty", 0
+    return "fail", 0
 
 
 def clean(s):
@@ -145,19 +195,28 @@ def parse_rows(html):
         level = clean(badge.get_text()) if badge else ""
         btn = h3.select_one("button.for-btn")
         title = clean(btn.get_text()) if btn else ""
-        if not title:
-            continue
+        if not title or title.startswith("檢視全部案件"):
+            continue      # 那是同一筆的下層連結，不是另一筆檔案
         # 這一筆的資訊都掛在 h3 後面那個 <dl>
         dl = h3.find_next("dl")
-        rec = {"level": level, "title": title, "fonds": "", "archiveNo": "",
+        rec = {"level": level, "title": title, "fonds": "", "archiveNo": "", "dateRange": "",
                "access": "", "online": False, "pages": 0, "summary": "", "subjects": []}
         if dl:
             txt = clean(dl.get_text(" "))
-            for label, key in (("全宗名", "fonds"), ("檔號", "archiveNo"),
-                               ("檔案形式/提供方式", "access")):
-                m = re.search(re.escape(label) + r"\s*(.{0,60}?)(?=\s(?:全宗名|檔號|檔案形式|全宗描述|內容摘要|展開|關閉)|$)", txt)
-                if m:
-                    rec[key] = clean(m.group(1))
+            # 🚨 每個欄位各用自己的樣式，不要共用一條「非貪婪 + 前瞻」的通式。
+            #    那種寫法兩頭都會出錯：後面緊接標記時 `.{0,60}?` 會匹配成**空字串**
+            #    （實測 56.8% 的檔號變空白，而檔號是申請調閱唯一必填的欄位）；
+            #    沒緊接時又會吃進隔壁的「檔案起訖日期」（1,636 筆被污染）。
+            m = re.search(r"檔號\s*([A-Za-z0-9/.\-]+)", txt)
+            rec["archiveNo"] = m.group(1) if m else ""
+            m = re.search(r"檔案起訖日期\s*(民國.{0,40}?)(?=\s(?:檔號|全宗|檔案形式|內容摘要|展開|關閉)|$)", txt)
+            rec["dateRange"] = clean(m.group(1)) if m else ""
+            m = re.search(r"檔案形式/提供方式\s*(.+?)(?=\s(?:檔號|全宗|內容摘要|展開|關閉)|$)", txt)
+            rec["access"] = clean(m.group(1)) if m else ""
+            dd = dl.find("dt", string=re.compile("全宗名"))
+            if dd:
+                nxt = dd.find_next("dd")
+                rec["fonds"] = clean(nxt.get_text(" ")) if nxt else ""
             rec["online"] = bool(ONLINE_RE.search(rec["access"]))
             pm = PAGES_RE.search(rec["access"])
             rec["pages"] = int(pm.group(1).replace(",", "")) if pm else 0
@@ -198,8 +257,17 @@ def harvest(max_pages=30):
             print(f"  {gkey}：已有 {len(store[gkey]['items'])} 筆，跳過")
             continue
         html = search(base, kw, page=1, per=100)
-        m = TOTAL_RE.search(html)
-        total = int(m.group(1).replace(",", "")) if m else 0
+        state, total = classify(html)
+        if state == "fail":
+            print(f"  {gkey}：請求失敗（長度 {len(html):,}），跳過不寫入", flush=True)
+            continue
+        if state == "empty":
+            store[gkey] = {"query": kw, "note": note, "total": 0, "count": 0,
+                           "state": "empty", "items": []}
+            print(f"  {gkey}：查無資料（已查證，非抓取失敗）", flush=True)
+            HARVEST.write_text(json.dumps(store, ensure_ascii=False, indent=1), encoding="utf-8")
+            time.sleep(DELAY)
+            continue
         items, seen = [], set()
         page = 1
         while page <= max_pages:
@@ -214,8 +282,9 @@ def harvest(max_pages=30):
             page += 1
             time.sleep(DELAY)
             html = search(base, kw, page=page, per=100)
-        store[gkey] = {"query": kw, "note": note,
-                       "total": total, "count": len(items), "items": items}
+        store[gkey] = {"query": kw, "note": note, "state": "ok",
+                       "total": total, "count": len(items),
+                       "online": sum(1 for x in items if x["online"]), "items": items}
         print(f"  {gkey}：站上 {total} 筆，取回 {len(items)} 筆", flush=True)
         HARVEST.write_text(json.dumps(store, ensure_ascii=False, indent=1), encoding="utf-8")
         time.sleep(DELAY)
