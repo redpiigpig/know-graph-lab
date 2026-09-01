@@ -41,16 +41,19 @@ OUT = Path(__file__).resolve().parents[1] / "public/content/research-data"
 HARVEST = Path(r"C:/tmp/archives_gov.json")
 DELAY = 2.5          # 站方對密集請求敏感，慢慢來
 
-# 每組＝(關鍵詞, 是否限政治檔案, 說明)。宗教管理類未必歸在政治檔案，
-# 所以每個詞都跑「限政治檔案」與「不限」兩輪。
+# 🚨 **政治檔案篩選（QueryRange2／IfQueryRange2）送出去沒有作用**（2026-09 實測）：
+#    長老教會 1,012／1,012、佛教 1,694／1,694、一貫道 417／417，限與不限完全一樣。
+#    所以不跑兩輪——跑了也是同一批，只是白費站方頻寬。若日後找到正確參數再加回來。
+#    （關鍵詞本身確實有效：對照組「鰻魚養殖」只有 11 筆。）
 QUERIES = [
-    ("長老教會", True,  "第四章：長老教會與國家"),
-    ("長老教會", False, "第四章：長老教會與國家（不限政治檔案）"),
-    ("佛教",     True,  "第三章：佛教教團與國家"),
-    ("佛教",     False, "第三章：佛教教團與國家（不限政治檔案）"),
-    ("一貫道",   True,  "一貫道：查禁至 1987 合法化"),
-    ("一貫道",   False, "一貫道（不限政治檔案）"),
+    ("長老教會", "第四章：長老教會與國家"),
+    ("佛教",     "第三章：佛教教團與國家"),
+    ("一貫道",   "一貫道：1953 查禁至 1987 合法化"),
 ]
+
+# 「已數位化」不等於「可以下載」：多數寫「須提出申請」，只有少數是「可線上閱覽」。
+ONLINE_RE = re.compile(r"可線上閱覽")
+PAGES_RE = re.compile(r"影像\s*([\d,]+)\s*頁")
 
 TOTAL_RE = re.compile(r"共為\s*([\d,]+)\s*筆")
 
@@ -120,21 +123,17 @@ def form_defaults():
     return d
 
 
-def build(base_payload, kw, political, page=1, per=20):
+def build(base_payload, kw, page=1, per=20):
     d = dict(base_payload)
     d["q1"] = kw
     d["QueryRange3"] = "QueryRange3"        # 已全文影像公開
-    if political:
-        d["QueryRange2"] = "1"
-        d["IfQueryRange2"] = "1"            # 政治檔案：是
     d["PageNow"] = str(page)
     d["DisplayNumber"] = str(per)
     return d
 
 
-def search(base_payload, kw, political, page=1, per=20):
-    return curl(f"{BASE}/ELK/AdvSearchResult",
-                build(base_payload, kw, political, page, per))
+def search(base_payload, kw, page=1, per=20):
+    return curl(f"{BASE}/ELK/AdvSearchResult", build(base_payload, kw, page, per))
 
 
 def parse_rows(html):
@@ -151,7 +150,7 @@ def parse_rows(html):
         # 這一筆的資訊都掛在 h3 後面那個 <dl>
         dl = h3.find_next("dl")
         rec = {"level": level, "title": title, "fonds": "", "archiveNo": "",
-               "access": "", "summary": "", "subjects": []}
+               "access": "", "online": False, "pages": 0, "summary": "", "subjects": []}
         if dl:
             txt = clean(dl.get_text(" "))
             for label, key in (("全宗名", "fonds"), ("檔號", "archiveNo"),
@@ -159,6 +158,9 @@ def parse_rows(html):
                 m = re.search(re.escape(label) + r"\s*(.{0,60}?)(?=\s(?:全宗名|檔號|檔案形式|全宗描述|內容摘要|展開|關閉)|$)", txt)
                 if m:
                     rec[key] = clean(m.group(1))
+            rec["online"] = bool(ONLINE_RE.search(rec["access"]))
+            pm = PAGES_RE.search(rec["access"])
+            rec["pages"] = int(pm.group(1).replace(",", "")) if pm else 0
             sm = dl.select_one("div.ellipsis-1")
             if sm:
                 rec["summary"] = clean(sm.get_text(" "))[:400]
@@ -176,13 +178,12 @@ def survey():
     ctrl = TOTAL_RE.search(search(base, "鰻魚養殖", False))
     print(f"對照組『鰻魚養殖』：{ctrl.group(1) if ctrl else '?'} 筆")
     time.sleep(DELAY)
-    for kw, pol, note in QUERIES:
-        html = search(base, kw, pol)
+    for kw, note in QUERIES:
+        html = search(base, kw)
         m = TOTAL_RE.search(html)
         rows = parse_rows(html)
-        acc = Counter(r["access"] or "(未標)" for r in rows)
-        tag = "政治檔案" if pol else "不限    "
-        print(f"  {kw:6s} {tag} 共 {m.group(1) if m else '?':>8s} 筆 ｜ 首頁提供方式：{dict(acc)}")
+        on = sum(1 for r in rows if r["online"])
+        print(f"  {kw:6s} 共 {m.group(1) if m else '?':>8s} 筆 ｜ 首頁 {len(rows)} 筆中可線上閱覽 {on}")
         time.sleep(DELAY)
 
 
@@ -191,12 +192,12 @@ def harvest(max_pages=30):
     store = {}
     if HARVEST.exists():
         store = json.loads(HARVEST.read_text(encoding="utf-8"))
-    for kw, pol, note in QUERIES:
-        gkey = f"{kw}|{'政治檔案' if pol else '不限'}"
+    for kw, note in QUERIES:
+        gkey = kw
         if store.get(gkey, {}).get("items"):
             print(f"  {gkey}：已有 {len(store[gkey]['items'])} 筆，跳過")
             continue
-        html = search(base, kw, pol, page=1, per=100)
+        html = search(base, kw, page=1, per=100)
         m = TOTAL_RE.search(html)
         total = int(m.group(1).replace(",", "")) if m else 0
         items, seen = [], set()
@@ -212,8 +213,8 @@ def harvest(max_pages=30):
                 break
             page += 1
             time.sleep(DELAY)
-            html = search(base, kw, pol, page=page, per=100)
-        store[gkey] = {"query": kw, "political": pol, "note": note,
+            html = search(base, kw, page=page, per=100)
+        store[gkey] = {"query": kw, "note": note,
                        "total": total, "count": len(items), "items": items}
         print(f"  {gkey}：站上 {total} 筆，取回 {len(items)} 筆", flush=True)
         HARVEST.write_text(json.dumps(store, ensure_ascii=False, indent=1), encoding="utf-8")

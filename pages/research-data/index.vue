@@ -38,6 +38,15 @@
           </div>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/yiguandao" class="tool-card group border-purple-100 hover:border-purple-300 hover:shadow-purple-100">
+          <div class="tool-icon bg-purple-50 text-purple-600">☯️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">一貫道研究資料</h2>
+            <p class="tool-desc">1930 年代起被國民政府以「敵偽、附匪、邪教」取締，1987 才合法化；國家檔案 417 筆與研究文獻，與長老教會恰成政教關係的對照</p>
+          </div>
+          <span class="tool-badge bg-purple-50 text-purple-600">{{ ykdCount ? `${ykdCount} 件` : '…' }}</span>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/press" class="tool-card group border-violet-100 hover:border-violet-300 hover:shadow-violet-100">
           <div class="tool-icon bg-violet-50 text-violet-600">🗞️</div>
           <div class="flex-1">
@@ -77,8 +86,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '論文資料整理 — Know Graph Lab' });
+
+const ykdCount = ref(0);
+onMounted(async () => {
+  try {
+    const r = await fetch('/content/research-data/yiguandao/archives-index.json');
+    if (r.ok) ykdCount.value = (await r.json()).count ?? 0;
+  } catch { /* 讀不到就讓 badge 留白，不要讓整頁掛掉 */ }
+});
 </script>
 
 <style scoped>
