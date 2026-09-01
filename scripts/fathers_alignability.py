@@ -17,6 +17,11 @@
     → 看「錨點覆蓋率」。
 
 🚨 別憑節號密度挑冊。我曾照節號密度 89% 挑安波羅修，結果整冊是未分篇的。
+
+🚨 「重編」那一欄不是零就停下來看一眼。多半不是同一部又編一次號，而是隔壁那部混
+   進來了——ANF 第一卷的分段是「自己這部的尾巴＋下一部的開頭」，耶柔米那一冊的
+   「首位隱士保羅傳」裝的根本是《駁路西弗派對話錄》。真的分卷的著作也會在這裡顯
+   出來（那是好事，走 assign_books）。**動工前先讀那一段的第一段中文。**
 """
 from __future__ import annotations
 
@@ -67,7 +72,8 @@ def fetch_books() -> list[dict]:
 def survey(path: Path) -> dict[str, dict]:
     """逐部統計：段數、chapter_path 宣告的最大章、中譯裡數得到的錨點。"""
     works: dict[str, dict] = defaultdict(
-        lambda: {"chunks": 0, "declared": 0, "headings": 0, "numbered": 0})
+        lambda: {"chunks": 0, "declared": 0, "headings": 0, "numbered": 0,
+                 "seq": []})
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
@@ -82,9 +88,29 @@ def survey(path: Path) -> dict[str, dict]:
         if m:
             w["declared"] = max(w["declared"], int(m.group(2) or m.group(1)))
         body = FO.split_body(c.get("content") or "")
-        w["headings"] += len(FO.chapter_headings(body))
-        w["numbered"] += sum(1 for p in body if FO.LEADING_NO.match(p))
+        heads = FO.chapter_headings(body)
+        nums = [(i, int(FO.LEADING_NO.match(p).group(1)))
+                for i, p in enumerate(body) if FO.LEADING_NO.match(p)]
+        w["headings"] += len(heads)
+        w["numbered"] += len(nums)
+        w["seq"] += [n for _, n in (heads if len(heads) >= len(nums) else nums)]
     return works
+
+
+def restarts(seq: list[int]) -> int:
+    """錨點編號「掉回第一、二章」的次數。
+
+    一次就值得停下來看：多半不是同一部又編一次號，而是隔壁那部混進來了（ANF 第
+    一卷的分段是「自己這部的尾巴＋下一部的開頭」），或者那個前綴壓了好幾部著作。
+    真的分卷的著作（原典每卷從第一章重來）也會在這裡顯出來，那是好事。
+    """
+    out = top = 0
+    for a in seq:
+        if a <= 2 and top >= 5:
+            out += 1
+            top = 0
+        top = max(top, a)
+    return out
 
 
 def verdict(w: dict) -> str:
@@ -125,10 +151,12 @@ def main() -> int:
             continue
         if a.volume:
             print(f"《{b['title']}》")
-            print(f"  {'作品':30}{'段':>4}{'宣告章':>7}{'章標題':>7}{'節號':>6}  判定")
+            print(f"  {'作品':30}{'段':>4}{'宣告章':>7}{'章標題':>7}{'節號':>6}"
+                  f"{'重編':>5}  判定")
             for name, w in sorted(works.items(), key=lambda x: -x[1]["declared"]):
                 print(f"  {name:30}{w['chunks']:>4}{w['declared']:>7}"
-                      f"{w['headings']:>7}{w['numbered']:>6}  {verdict(w)}")
+                      f"{w['headings']:>7}{w['numbered']:>6}"
+                      f"{restarts(w['seq']):>5}  {verdict(w)}")
             continue
         ok = sum(1 for w in works.values() if verdict(w) == "可對齊")
         anchors = sum(max(w["headings"], w["numbered"]) for w in works.values())
