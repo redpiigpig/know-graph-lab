@@ -256,7 +256,9 @@ TEI_PREFACE = {"praef": 0, "prooemium": 0, "preface": 0, "pr": 0, "praefatio": 0
 
 def parse_tei_chapters(xml: str, epistle: str | None = None
                        ) -> dict[tuple[int | None, int], str]:
-    """把 First1KGreek 的 TEI 切成 {(None, 章): 文字}。序言記為第 0 章。
+    """把 First1KGreek 的 TEI 切成 {(卷, 章): 文字}。序言記為第 0 章。
+
+    檔案沒有 book 這一層時卷次是 None（伊格那丟、革利免那些單卷著作）。
 
     `epistle` 有值時只取那一封（伊格那丟七書共用一個檔，n 是 "1".."7"）。
     """
@@ -280,6 +282,16 @@ def parse_tei_chapters(xml: str, epistle: str | None = None
             if not raw.isdigit():
                 continue
             n = int(raw)
+        # 🚨 有 book 這一層就一定要把卷次帶進鍵。《駁塞爾蘇斯》八卷的章號各自從
+        #    一起算，只用章號當鍵的話八卷會互相覆蓋，最後每一卷都拿到第八卷的
+        #    內容——命中率照樣滿分，三欄照樣排得整整齊齊。
+        book: int | None = None
+        for anc in div.iterancestors():
+            if anc.get("subtype") == "book":
+                token = (anc.get("n") or "").strip()
+                book = TEI_PREFACE.get(token.lower(),
+                                       int(token) if token.isdigit() else None)
+                break
         # 校勘註釋整個拿掉，連同它的 tail（註釋之後、下一個節點之前的文字仍是正文，
         # 所以 tail 要接回去，不能連著 note 一起刪）
         clone = etree.fromstring(etree.tostring(div))
@@ -294,7 +306,7 @@ def parse_tei_chapters(xml: str, epistle: str | None = None
             parent.remove(note)
         text = " ".join(" ".join(clone.itertext()).split())
         if text:
-            out[(None, n)] = text
+            out[(book, n)] = text
     return out
 
 

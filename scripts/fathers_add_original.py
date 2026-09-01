@@ -187,6 +187,21 @@ WORKS: dict[str, dict] = {
                       ("依納爵致坡旅甲書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#7"),
         ],
     },
+    "anf4-origen": {
+        "label": "俄利根《駁塞爾蘇斯》（ANF 第四卷）",
+        "ebook_id": "904661d3-16fc-4f37-bb04-f7c4aa7671e9",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 八卷共用一個 TEI 檔，卷次由 TEI 的 book 層與我方的「卷一…卷八」對上。
+        # 站上那一冊的拉丁篇另立 anf4-latin；兩者寫同一個 JSONL，先後跑都可以，
+        # build_sources 會保留已存在的語言欄。
+        # 🚨 同一冊的《論原理》不收：希臘文只存 Philocalia 裡的殘篇，完整本是
+        #    盧菲努的拉丁譯（PG 11），First1KGreek 沒有。硬拿殘篇去配會讓四卷
+        #    大部分留白而看不出原因。
+        "prefix": "俄利根《駁塞爾蘇斯》",
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2042/tlg001/tlg2042.tlg001.perseus-grc1.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊

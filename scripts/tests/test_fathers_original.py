@@ -543,3 +543,29 @@ def test_chapter_lookup_must_carry_the_book_number():
     # 對齊器拿到 book=13 就該取卷十三那一條
     col, hit, _ = fo.align_by_chapter_heading(["# 第一章 甲"], 13, chapters)
     assert col[0] == "liber XIII caput I" and hit == 1
+
+
+TEI_BOOKS = """<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+<div type="edition">
+  <div type="textpart" subtype="book" n="1">
+    <div type="textpart" subtype="chapter" n="1"><p>λόγος πρῶτος κεφάλαιον πρῶτον</p></div>
+    <div type="textpart" subtype="chapter" n="2"><p>λόγος πρῶτος κεφάλαιον δεύτερον</p></div>
+  </div>
+  <div type="textpart" subtype="book" n="8">
+    <div type="textpart" subtype="chapter" n="1"><p>λόγος ὄγδοος κεφάλαιον πρῶτον</p></div>
+  </div>
+</div></body></text></TEI>"""
+
+
+def test_tei_keys_carry_the_book_number():
+    """《駁塞爾蘇斯》八卷的章號各自從一起算。只用章號當鍵的話八卷互相覆蓋，
+    每一卷都會拿到第八卷的內容——命中率照樣滿分，三欄照樣排得整整齊齊。"""
+    got = fo.parse_tei_chapters(TEI_BOOKS)
+    assert set(got) == {(1, 1), (1, 2), (8, 1)}
+    assert got[(1, 1)].startswith("λόγος πρῶτος")
+    assert got[(8, 1)].startswith("λόγος ὄγδοος")
+
+
+def test_tei_without_a_book_level_keys_on_none():
+    """伊格那丟、革利免那些單卷著作沒有 book 這一層，卷次留 None。"""
+    assert set(fo.parse_tei_chapters(TEI, epistle="2")) == {(None, 1)}

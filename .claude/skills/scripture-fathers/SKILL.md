@@ -753,6 +753,7 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 特土良 23 部 | ANF Vol 3 | 拉丁‧The Latin Library | 逐章 | 691/733（94%）|
 | 特土良後期 8 部＋密努修 | ANF Vol 4 | 拉丁‧The Latin Library | 逐章 | 141/143（99%）|
 | 使徒教父＋猶斯定 14 部 | ANF Vol 1 | 希臘‧First1KGreek TEI | 逐章 | 418/419（100%）|
+| 俄利根《駁塞爾蘇斯》八卷 | ANF Vol 4 | 希臘‧First1KGreek TEI | 逐章 | 589/589（100%）|
 | 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
@@ -768,6 +769,11 @@ https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/{�
 
 🚨 **檔名不統一**，不要照 `{作者}.{作品}.1st1K-grc1.xml` 套——有的是 `opp-grc1`、
    有的是 `perseus-grc2`。先用 GitHub contents API 列目錄取實際檔名。
+
+🚨 **TEI 有 `book` 這一層時，鍵一定要帶卷次。**《駁塞爾蘇斯》八卷的章號各自從一
+   起算（71/79/81/99/65/81/70/76 章）。只用章號當鍵的話八卷互相覆蓋，最後每一卷
+   都拿到第八卷的內容——**命中率照樣滿分**，三欄照樣排得整整齊齊。單卷著作
+   （伊格那丟、革利免）沒有那一層，卷次留 None。
 
 🚨 **`<note>` 是校勘註釋，必須整個剔掉**，但刪的時候要把它的 `tail` 接回去，
    否則註釋後面那一截正文會一起消失，而讀者看到的仍是一段通順的希臘文。
@@ -811,8 +817,9 @@ https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/{�
 反過來，逐部切得乾淨、還沒做的與各自的取源狀況：
 
 - **NPNF2 Vol 4（亞他那修 24 部）** — 希臘，First1KGreek 沒收，要 PG 25–26 OCR。
-- **ANF Vol 4 的俄利根**（《駁塞爾蘇斯》八卷＋《論原理》）— First1KGreek 有
-  tlg2042，是下一個現成的大批。
+- ~~ANF Vol 4 的俄利根~~ — 《駁塞爾蘇斯》八卷已收（tlg2042/tlg001，589/589）。
+  同冊的《論原理》**不收**：希臘文只存 Philocalia 裡的殘篇，完整本是盧菲努的拉丁
+  譯（PG 11），First1KGreek 沒有。硬拿殘篇去配會讓四卷大部分留白而看不出原因。
 - **NPNF2 Vol 6（耶柔米 20 部）** — 拉丁有，但那一冊是按「收信人」分部（致瑪爾切
   拉、致奧古斯丁…），要先做「收信人 → 書信編號」的對照表才接得上。
 - **ANF Vol 7（Lactantius 17 部）** — The Latin Library 只有《神學原理》第一卷

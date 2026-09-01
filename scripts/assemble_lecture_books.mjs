@@ -1,14 +1,17 @@
 /**
  * 講義書組裝：public/content/works/{slug}/chapters/（_head.html + chNN.html 逐章 fragment）
- * → 串成單一書檔（WR1.html / SL1.html）供 /works 章節閱讀器讀取。
- * 世界宗教文化導論 ch06–ch14 於 h2 之後自動插入對應界域地圖 <figure>。
+ * → 串成單一書檔（WR1.html / WR2.html / SL1.html）供 /works 章節閱讀器讀取。
+ * 同一 slug 底下可放多本書，各自一個 chapters 目錄（BOOKS[].dir）。
+ * 宗教歷史地理學（WR1，maps:true）ch06–ch14 於 h2 之後自動插入對應界域地圖 <figure>。
  * 用法：node scripts/assemble_lecture_books.mjs [--split] （--split＝反向：把現有書檔拆成 fragments，僅初始化用）
  */
 import fs from 'node:fs'
 import path from 'node:path'
 
+// 同一 slug 可掛多本書，各自一個 chapters 目錄（dir 省略＝'chapters'）。
 const BOOKS = [
-  { slug: 'world-religions-intro', out: 'WR1.html', n: 17 },
+  { slug: 'world-religions-intro', out: 'WR1.html', n: 17, maps: true },
+  { slug: 'world-religions-intro', dir: 'chapters-wr2', out: 'WR2.html', n: 16 },
   { slug: 'sinographic-literature', out: 'SL1.html', n: 17 },
 ]
 
@@ -36,7 +39,7 @@ function figureHtml(slug, file, caption) {
 function split() {
   for (const b of BOOKS) {
     const raw = fs.readFileSync(path.join(root, b.slug, b.out), 'utf8')
-    const dir = path.join(root, b.slug, 'chapters')
+    const dir = path.join(root, b.slug, b.dir || 'chapters')
     fs.mkdirSync(dir, { recursive: true })
     const parts = raw.split('<section class="chapter">')
     fs.writeFileSync(path.join(dir, '_head.html'), parts[0].trimEnd() + '\n', 'utf8')
@@ -44,13 +47,13 @@ function split() {
       const body = ('<section class="chapter">' + p).trimEnd()
       fs.writeFileSync(path.join(dir, `ch${String(i + 1).padStart(2, '0')}.html`), body + '\n', 'utf8')
     })
-    console.log(`${b.slug}: head + ${parts.length - 1} chapters split`)
+    console.log(`${b.slug}/${b.out}: head + ${parts.length - 1} chapters split`)
   }
 }
 
 function assemble() {
   for (const b of BOOKS) {
-    const dir = path.join(root, b.slug, 'chapters')
+    const dir = path.join(root, b.slug, b.dir || 'chapters')
     let out = fs.readFileSync(path.join(dir, '_head.html'), 'utf8').trimEnd() + '\n\n'
     for (let i = 1; i <= b.n; i++) {
       const f = path.join(dir, `ch${String(i).padStart(2, '0')}.html`)
@@ -58,7 +61,7 @@ function assemble() {
       let ch = fs.readFileSync(f, 'utf8').trimEnd()
       // 移除 fragment 內既有的 chapter-map（以組裝規則為準，避免重複）
       ch = ch.replace(/\n?<figure class="chapter-map"[\s\S]*?<\/figure>\n?/g, '\n')
-      if (b.slug === 'world-religions-intro' && WR_MAPS[i]) {
+      if (b.maps && WR_MAPS[i]) {
         const [file, caption] = WR_MAPS[i]
         ch = ch.replace(/(<\/h2>)/, `$1${figureHtml(b.slug, file, caption)}`)
       }
