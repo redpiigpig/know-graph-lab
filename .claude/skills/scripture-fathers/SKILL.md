@@ -734,7 +734,8 @@ ACCS 已轉軌至 [[scripture-accs]]（嵌進聖經逐節閱讀器，不再整�
 就會長出來，不必動前端。
 
 ```bash
-python scripts/fathers_add_original.py --work augustine-confessions           # 只驗不寫
+python scripts/fathers_add_original.py --work augustine-confessions
+python scripts/fathers_add_original.py --work all      # 改了對齊邏輯就整批重跑           # 只驗不寫
 python scripts/fathers_add_original.py --work augustine-confessions --apply   # 寫回 JSONL
 python scripts/upload_chunks_to_r2.py upload --id <ebook_id> --force          # 只重傳這一本
 ```

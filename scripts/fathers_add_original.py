@@ -29,6 +29,7 @@ import json
 import os
 import shutil
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -871,17 +872,32 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--work", required=True, choices=sorted(WORKS))
+    ap.add_argument("--work", required=True,
+                    choices=sorted(WORKS) + ["all"],
+                    help="all＝依序跑完全部（改了對齊邏輯之後要重跑全部時用）")
     ap.add_argument("--chunks-dir", default=None)
     ap.add_argument("--apply", action="store_true", help="寫回 JSONL（預設只驗不寫）")
     ap.add_argument("--only", help="只跑某一部（chapter_path 前綴），試跑用")
     a = ap.parse_args()
 
-    spec = WORKS[a.work]
     for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
         if "=" in line and not line.lstrip().startswith("#"):
             k, v = line.split("=", 1)
             os.environ.setdefault(k.strip(), v.strip().strip('"'))
+    if a.work == "all":
+        # 對齊邏輯一改就得整批重跑——每一部的命中數都要跟改動前比對過，
+        # 少一個都可能是靜默錯配。
+        bad = 0
+        for name in sorted(WORKS):
+            print(chr(10) + f"=== {name}")
+            bad |= run_work(name, a)
+            time.sleep(2)
+        return bad
+    return run_work(a.work, a)
+
+
+def run_work(name: str, a) -> int:
+    spec = WORKS[name]
     raw = a.chunks_dir or os.environ.get("EBOOK_CHUNKS_DIR") or ""
     # 🚨 別偷懶寫 Path(raw).is_dir()——Path("") 等於「.」，在 Windows 上是存在的，
     # 環境變數沒讀到時會安靜地把工作目錄當成 chunks 目錄，然後報「找不到檔案」。
