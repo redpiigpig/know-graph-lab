@@ -287,6 +287,18 @@ WORKS: dict[str, dict] = {
             ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius7.shtml"),
         ],
     },
+    "methodius-symposium": {
+        "label": "美多德《十處女宴飲集》（ANF 第六卷）",
+        "ebook_id": "dffaae40-e088-41c1-ab7f-9b96f9249661",
+        "prefix": "美多德《十處女宴飲集／論童貞》",
+        "lang": "grc",
+        "mode": "tei",
+        "anchor": "both",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 序＋十一篇講辭各自從第一章重來，站上卻是整部連續的第1-85章——與阿諾
+        # 比烏同一種形狀，靠 resolve_continuous() 反推是哪一篇。
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2959/tlg001/tlg2959.tlg001.opp-grc1.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -348,6 +360,14 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             if len(spec["urls"]) > 1 and all(k[0] is None for k in got):
                 by_book.update({(i, k[1]): v for k, v in got.items()})
                 got = {}
+            elif any(k[0] is not None for k in got):
+                # TEI 有 book 那一層，而中譯的 chapter_path 不一定跟著分卷：美多德
+                # 《十處女宴飲集》站上是整部連續的第1-85章，內文編號卻逐篇重來。
+                # 兩種鍵都放進去，align_part 會自己挑分數高的那一種。
+                by_book.update(got)
+                bases = cumulative_bases(got)
+                chapters.update({(None, k[1] + bases[k[0]]): v
+                                 for k, v in got.items()})
             chapters.update(got)
         elif spec["mode"] == "dotted":
             # 行標是「章.節 正文」寫在行首、不獨佔一行。原典每卷章號從一起算，

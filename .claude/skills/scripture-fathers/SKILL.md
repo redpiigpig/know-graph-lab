@@ -757,6 +757,7 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 優西比烏《教會史》十卷 | NPNF2 Vol 1 | 希臘‧Perseus TEI | 逐章 | 118/118（100%）|
 | 優西比烏《君士坦丁傳》＋兩篇頌辭 | NPNF2 Vol 1 | 希臘‧First1KGreek TEI | 逐章 | 231/233（99%）|
 | 阿諾比烏《駁異教徒》七卷 | ANF Vol 6 | 拉丁‧The Latin Library | 逐章 | 301/322（93%）|
+| 美多德《十處女宴飲集》 | ANF Vol 6 | 希臘‧First1KGreek TEI | 逐章 | 80/82（98%）|
 | 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
