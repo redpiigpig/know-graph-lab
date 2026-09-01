@@ -582,3 +582,30 @@ def test_dedupe_ledger_keeps_the_last_write():
     got = fo.dedupe_ledger(rows)
     assert len(got) == 2
     assert {(r["page"], r["crop"]): r["text"] for r in got}[(144, "c1h1")] == "新"
+
+
+TEI_SECTION_ONLY = """<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+<div type="edition">
+  <div type="textpart" subtype="book" n="1">
+    <div type="textpart" subtype="section" n="1"><p>Εὔστομον μὲν γλῶσσαν</p></div>
+    <div type="textpart" subtype="section" n="2"><p>Καὶ σὺ μὲν λέγεις</p></div>
+  </div>
+  <div type="textpart" subtype="book" n="2">
+    <div type="textpart" subtype="section" n="1"><p>Ἀχρεῖος μὲν ἡ πρόσφατος</p></div>
+  </div>
+</div></body></text></TEI>"""
+
+
+def test_tei_falls_back_to_section_when_there_is_no_chapter_level():
+    """提阿非羅《致奧托呂庫書》那份 TEI 只有 book/section 兩層。硬找 chapter 會
+    解析出 0 章，而腳本只回報「命中 0」——看起來像取源壞掉，其實是層級名不同。"""
+    got = fo.parse_tei_chapters(TEI_SECTION_ONLY)
+    assert set(got) == {(1, 1), (1, 2), (2, 1)}
+    assert got[(1, 1)].startswith("Εὔστομον")
+    assert got[(2, 1)].startswith("Ἀχρεῖος")
+
+
+def test_tei_prefers_chapter_over_section_when_both_exist():
+    """兩層都有時要用 chapter（較粗的那層），section 是章內的細分。"""
+    got = fo.parse_tei_chapters(TEI_BOOKS)
+    assert set(got) == {(1, 1), (1, 2), (8, 1)}

@@ -274,8 +274,15 @@ def parse_tei_chapters(xml: str, epistle: str | None = None
             return {}
         scope = found[0]
 
+    # 🚨 章那一層不一定叫 chapter。提阿非羅《致奧托呂庫書》那份只有 book/section
+    #    兩層，硬找 chapter 會解析出 0 章——而腳本只回報「命中 0」，看起來像取源
+    #    壞掉。找不到 chapter 就退而用 section。
+    divs = scope.xpath('.//t:div[@subtype="chapter"]', namespaces=ns)
+    if not divs:
+        divs = scope.xpath('.//t:div[@subtype="section"]', namespaces=ns)
+
     out: dict[tuple[int | None, int], str] = {}
-    for div in scope.xpath('.//t:div[@subtype="chapter"]', namespaces=ns):
+    for div in divs:
         raw = (div.get("n") or "").strip()
         n = TEI_PREFACE.get(raw.lower())
         if n is None:

@@ -202,6 +202,38 @@ WORKS: dict[str, dict] = {
         "prefix": "俄利根《駁塞爾蘇斯》",
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2042/tlg001/tlg2042.tlg001.perseus-grc1.xml"],
     },
+    "eusebius-church-history": {
+        "label": "優西比烏《教會史》（NPNF2 第一卷）",
+        "ebook_id": "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9",
+        "prefix": "教會史",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Perseus canonical-greekLit（TEI，公有領域）",
+        # 🚨 取源用 Perseus 不用 First1KGreek：後者那份 grc 只有 4,815 個希臘
+        #    字元（殘本），而且同一個目錄裡還混著英譯檔，盲取第一個 xml 會拿到
+        #    英文。Perseus 這份 54.7 萬字元、十卷 13/27/39/30/29/46/33/18/11/9
+        #    章，與《教會史》已知結構相符。
+        # 🚨 站上的「卷N」不等於原典的卷N，而且位移不是固定的：卷一是譯者導論，
+        #    卷十是附錄〈巴勒斯坦的殉道者〉（不是第九卷），卷十三是補充註釋。
+        #    用固定偏移的話最後兩卷會配到別卷的希臘文而照樣顯示滿分，所以逐卷
+        #    明列。沒列到的（1、10、13）不收。
+        "book_map": {2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 11: 9, 12: 10},
+        "urls": ["https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg2018/tlg002/tlg2018.tlg002.perseus-grc2.xml"],
+    },
+    "eusebius-constantine": {
+        "label": "優西比烏《君士坦丁傳》與兩篇頌辭（NPNF2 第一卷）",
+        "ebook_id": "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 與 eusebius-church-history 同一本 ebook，分開登記是因為《教會史》的
+        # 卷次要另外對照（見那一條的 book_map），這三部則是直接對應。
+        "parts": [
+                      ("君士坦丁傳", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2018/tlg020/tlg2018.tlg020.1st1K-grc1.xml"),
+                      ("君士坦丁御前演說辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2018/tlg021/tlg2018.tlg021.1st1K-grc1.xml"),
+                      ("優西比烏讚辭", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2018/tlg022/tlg2018.tlg022.1st1K-grc1.xml"),
+        ],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -352,6 +384,13 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
         if m and m.group(2) is None:
             book_hint = (part.get("chapters") or {}).get(FO.zh_numeral(m.group(1)))
         s = FO.parse_chapter_path(cp, chapters_in_book=book_hint)
+        if s and part.get("book_map"):
+            # 站上的卷次與原典卷次不是固定偏移（優西比烏《教會史》的卷一是譯者
+            # 導論、卷十是附錄）。逐卷明列，沒列到的不收——比錯配安全。
+            mapped = part["book_map"].get(s.book)
+            if mapped is None:
+                continue
+            s = FO.Span(mapped, s.first, s.last)
         if s and part["mode"] == "greek":
             # 這一部的 chapter_path 是「論司祭職 第3章」，第 N 章其實是第 N-2 卷
             s = FO.Span(s.first + part["book_from_chapter"], s.first, s.last)
