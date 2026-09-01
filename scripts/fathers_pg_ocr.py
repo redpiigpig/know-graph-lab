@@ -34,8 +34,10 @@ import argparse
 import importlib.util
 import io
 import json
+import os
 import re
 import sys
+import time
 import unicodedata
 from pathlib import Path
 
@@ -102,6 +104,8 @@ def crops(page: fitz.Page, dpi: int) -> list[tuple[str, bytes]]:
 # 連續幾塊都是「所有金鑰皆失敗」就收工。見 feedback_ocr_two_strike_quota：
 # 配額到頂之後再跑下去，只是把剩下的裁切一個個標成失敗。
 QUOTA_STRIKES = 3
+# 鎖檔超過這個時間就視為前一次沒收乾淨（機器重開、session 被砍）
+STALE_LOCK_SECONDS = 6 * 3600
 
 
 PROMPT = """這是 Migne《希臘教父學大全》一欄希臘原文的一半。逐字轉錄成多音調希臘文。
@@ -173,6 +177,17 @@ def main() -> int:
 
     AI.load_dotenv()
     out = Path(a.out)
+    # 🚨 帳本是 append-only，兩個程序同時跑會各自 OCR 同一個裁切、各寫一列。
+    #    重複的列讀回去會把那幾塊的希臘文接兩遍——通順、看不出錯。上鎖擋掉。
+    lock = out.with_suffix(out.suffix + ".lock")
+    if lock.exists():
+        age = time.time() - lock.stat().st_mtime
+        if age < STALE_LOCK_SECONDS:
+            print(f"另一個 OCR 程序正在寫同一個帳本（{lock.name}，{age / 60:.0f} 分鐘前）。\n"
+                  f"要接手的話先確認那個程序已結束，再刪掉那個鎖檔。")
+            return 1
+        print(f"發現逾時的鎖檔（{age / 3600:.1f} 小時），視為前一次沒收乾淨，接手。")
+    lock.write_text(str(os.getpid()), encoding="utf-8")
     done: dict[str, dict] = {}
     if out.exists():
         for line in out.read_text(encoding="utf-8").splitlines():
@@ -188,11 +203,13 @@ def main() -> int:
     print(f"頁 {a.first}–{a.last} 中希臘正文 {len(pages)} 頁 → 裁切 {len(pages) * 4} 塊；"
           f"已完成 {len(done)}，待做 {len(todo)}")
     if a.status:
+        lock.unlink(missing_ok=True)
         return 0
 
     keys = AI.env_keys(("GEMINI_API_KEY", "GOOGLE_API_KEY"))
     if not keys:
         print("找不到 GEMINI_API_KEY")
+        lock.unlink(missing_ok=True)
         return 1
     print(f"金鑰 {len(keys)} 把")
 

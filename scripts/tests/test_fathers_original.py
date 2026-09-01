@@ -569,3 +569,16 @@ def test_tei_keys_carry_the_book_number():
 def test_tei_without_a_book_level_keys_on_none():
     """伊格那丟、革利免那些單卷著作沒有 book 這一層，卷次留 None。"""
     assert set(fo.parse_tei_chapters(TEI, epistle="2")) == {(None, 1)}
+
+
+def test_dedupe_ledger_keeps_the_last_write():
+    """OCR 帳本是 append-only，兩個程序同時跑會各寫一列同一個裁切（實際發生過）。
+    不去重的話那幾塊的原文會被接兩遍——同一段話講兩次，通順、看不出錯。"""
+    rows = [
+        {"page": 144, "crop": "c1h1", "text": "舊"},
+        {"page": 145, "crop": "c0h0", "text": "甲"},
+        {"page": 144, "crop": "c1h1", "text": "新"},
+    ]
+    got = fo.dedupe_ledger(rows)
+    assert len(got) == 2
+    assert {(r["page"], r["crop"]): r["text"] for r in got}[(144, "c1h1")] == "新"

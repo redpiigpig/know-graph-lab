@@ -353,6 +353,19 @@ def greek_numeral(s: str) -> int | None:
     return total or None
 
 
+def dedupe_ledger(rows: list[dict], key: tuple[str, ...] = ("page", "crop")) -> list[dict]:
+    """帳本去重：同一個裁切只留最後寫入的那一筆。
+
+    🚨 OCR 帳本是 append-only，兩個程序同時跑就會各自 OCR 同一個裁切、各寫一列
+       （實際發生過，4 個裁切重複）。不去重的話那幾塊的原文會被接兩遍，讀起來是
+       同一段話講了兩次——通順、看不出錯。
+    """
+    latest: dict[tuple, dict] = {}
+    for r in rows:
+        latest[tuple(r[k] for k in key)] = r
+    return list(latest.values())
+
+
 def join_crops(texts: list[str]) -> str:
     """把同一頁上下兩半（含 1.5% 重疊）的 OCR 稿接起來，去掉接縫處重複的行。
 

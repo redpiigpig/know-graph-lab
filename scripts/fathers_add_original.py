@@ -214,6 +214,10 @@ WORKS: dict[str, dict] = {
 def load_greek_ledger(path: Path) -> dict[tuple[int | None, int], str]:
     """讀 fathers_pg_ocr.py 的帳本，按頁與欄的閱讀順序接稿，再切成 {(卷,節): 文字}。"""
     rows = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    # 🚨 同一個裁切可能有兩列：帳本是 append-only，兩個 OCR 程序同時跑就會各寫一
+    #    次（實際發生過，4 個裁切重複）。不去重的話那幾塊的希臘文會被接兩遍，讀
+    #    起來是同一段話講了兩次——通順、看不出錯。後寫的那筆勝出。
+    rows = FO.dedupe_ledger(rows)
     order = {"c0h0": 0, "c0h1": 1, "c1h0": 2, "c1h1": 3}
     rows.sort(key=lambda r: (r["page"], order.get(r["crop"], 9)))
     text = FO.join_crops([r["text"] for r in rows])
