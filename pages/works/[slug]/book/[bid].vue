@@ -267,8 +267,9 @@ const tab = ref<'book' | 'review' | 'quiz'>('book')
 const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
 
-// ── 小考卷（每兩章一張）──
-interface QuizMeta { id: string; title: string; range?: string; file: string }
+// ── 小考卷 ──
+// bookId 用來把同一 slug 底下多本書的考卷分流；未標 bookId 者視為全書共用。
+interface QuizMeta { id: string; title: string; range?: string; file: string; bookId?: string }
 const quizzes = ref<QuizMeta[]>([])
 const activeQuiz = ref<string>('')
 const quizHtml = ref('')
@@ -276,7 +277,8 @@ const showAnswers = ref(false)
 async function loadQuizzes() {
   try {
     const d = await $fetch<{ quizzes?: QuizMeta[] }>(`/content/works/${slug.value}-quizzes.json`, { responseType: 'json' })
-    quizzes.value = Array.isArray(d?.quizzes) ? d.quizzes : []
+    const all = Array.isArray(d?.quizzes) ? d.quizzes : []
+    quizzes.value = all.filter((q) => !q.bookId || q.bookId === bid.value)
   } catch { quizzes.value = [] }
 }
 async function openQuiz(q: QuizMeta) {

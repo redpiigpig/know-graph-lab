@@ -113,8 +113,9 @@ def para(doc_or_cell, el=None, text=None, font=MING, size=11.0, bold=False,
 
 
 def heading(doc, text, level, center=False):
+    # 套 Word 內建 Heading 樣式（目錄欄位靠它抓章節），字型另外指定
     sizes = {1: 17, 2: 13.5, 3: 11.5}
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style=f'Heading {level}')
     p.paragraph_format.space_before = Pt(4 if level == 1 else 14)
     p.paragraph_format.space_after = Pt(10 if level == 1 else 6)
     p.paragraph_format.line_spacing = 1.3
@@ -233,6 +234,19 @@ def emit_chapter(doc, sec):
             emit_footnotes(doc, ch)
 
 
+def add_toc(doc):
+    """插入 Word 目錄欄位（開檔後按 F9 或轉 PDF 時會回填頁碼）。"""
+    p = doc.add_paragraph()
+    fld = OxmlElement('w:fldSimple')
+    fld.set(qn('w:instr'), r'TOC \o "1-2" \h \z \u')
+    inner = OxmlElement('w:p')
+    r = OxmlElement('w:r')
+    t = OxmlElement('w:t')
+    t.text = '（目錄：在 Word 中按 Ctrl+A 再按 F9 更新頁碼）'
+    r.append(t); inner.append(r); fld.append(inner)
+    p._p.append(fld)
+
+
 def add_page_numbers(doc, label):
     par = doc.sections[0].footer.paragraphs[0]
     par.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -308,8 +322,66 @@ def build(session):
     return out
 
 
+def build_book():
+    """紙本版講義全書：封面＋目錄＋十六章。"""
+    cdir = PUB / 'content/works' / COURSE['slug'] / COURSE['chapters_dir']
+
+    doc = Document()
+    s = doc.sections[0]
+    s.top_margin = s.bottom_margin = Cm(2.4)
+    s.left_margin = s.right_margin = Cm(2.6)
+    st = doc.styles['Normal']
+    st.font.name = 'Times New Roman'
+    st.element.rPr.rFonts.set(qn('w:eastAsia'), MING)
+    st.font.size = Pt(11)
+    for name, size in (('Heading 1', 17), ('Heading 2', 13.5), ('Heading 3', 11.5)):
+        stl = doc.styles[name]
+        stl.font.name = 'Times New Roman'
+        stl.element.rPr.rFonts.set(qn('w:eastAsia'), KAI)
+        stl.font.size = Pt(size)
+        stl.font.bold = True
+        stl.font.color.rgb = RGBColor(0x1F, 0x39, 0x64)
+
+    def cover(txt, font, size, bold, before, color=None):
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.space_before = Pt(before)
+        p.paragraph_format.space_after = Pt(0)
+        run_ea(p, txt, font, size, bold, color=color)
+
+    cover(COURSE['klass'], HEI, 11, False, 150, GRAY)
+    cover(COURSE['title'], KAI, 32, True, 26)
+    cover('神聖的經驗與探詢——一部以信仰型態為軸的世界宗教入門', KAI, 13, False, 18, GRAY)
+    cover(f"授課教師　{COURSE['teacher']}", KAI, 13, False, 70)
+    cover('全書十六章　配合十六週、雙週上課八次的學期使用', HEI, 10, False, 40, GRAY)
+
+    doc.add_page_break()
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_after = Pt(12)
+    run_ea(p, '目次', KAI, 17, bold=True, color=RGBColor(0x1F, 0x39, 0x64))
+    add_toc(doc)
+
+    for n in range(1, 17):
+        f = cdir / f'ch{n:02d}.html'
+        tree = lhtml.fromstring(f.read_text(encoding='utf-8'))
+        sec = tree if tree.tag == 'section' else (tree.cssselect('section') or [tree])[0]
+        doc.add_page_break()
+        emit_chapter(doc, sec)
+
+    add_page_numbers(doc, COURSE['title'])
+    outdir = DRIVE / COURSE['folder'] / '講義'
+    outdir.mkdir(parents=True, exist_ok=True)
+    out = outdir / f"{COURSE['title']}（紙本版‧全十六章）.docx"
+    doc.save(out)
+    return out
+
+
 if __name__ == '__main__':
     args = sys.argv[1:] or ['1']
+    if args == ['book']:
+        print('✔', build_book())
+        raise SystemExit
     nos = [s[0] for s in COURSE['sessions']] if args == ['all'] else [int(a) for a in args]
     for no in nos:
         sess = next(s for s in COURSE['sessions'] if s[0] == no)

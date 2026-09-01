@@ -1,13 +1,179 @@
 {
   "quizzes": [
-    { "id": "q01-02", "title": "第一～二章", "range": "什麼是宗教・信仰與靈性", "file": "/content/works/world-religions-intro/quizzes/q01-02.html" },
-    { "id": "q03-04", "title": "第三~四章", "range": "起源演化・分類學", "file": "/content/works/world-religions-intro/quizzes/q03-04.html" },
-    { "id": "q05-06", "title": "第五~六章", "range": "時代分期・八大界域方法論", "file": "/content/works/world-religions-intro/quizzes/q05-06.html" },
-    { "id": "q07-08", "title": "第七~八章", "range": "中央界域・東方界域", "file": "/content/works/world-religions-intro/quizzes/q07-08.html" },
-    { "id": "q09-10", "title": "第九~十章", "range": "西方界域・北方界域", "file": "/content/works/world-religions-intro/quizzes/q09-10.html" },
-    { "id": "q11-12", "title": "第十一~十二章", "range": "南方界域・亞太界域", "file": "/content/works/world-religions-intro/quizzes/q11-12.html" },
-    { "id": "q13-14", "title": "第十三~十四章", "range": "北美界域・拉美界域", "file": "/content/works/world-religions-intro/quizzes/q13-14.html" },
-    { "id": "q15-16", "title": "第十五~十六章", "range": "儀式・現代社會", "file": "/content/works/world-religions-intro/quizzes/q15-16.html" },
-    { "id": "q17", "title": "第十七章", "range": "跨宗教對話", "file": "/content/works/world-religions-intro/quizzes/q17.html" }
+    {
+      "id": "q01-02",
+      "title": "第一～二章",
+      "range": "什麼是宗教・信仰與靈性",
+      "file": "/content/works/world-religions-intro/quizzes/q01-02.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q03-04",
+      "title": "第三~四章",
+      "range": "起源演化・分類學",
+      "file": "/content/works/world-religions-intro/quizzes/q03-04.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q05-06",
+      "title": "第五~六章",
+      "range": "時代分期・八大界域方法論",
+      "file": "/content/works/world-religions-intro/quizzes/q05-06.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q07-08",
+      "title": "第七~八章",
+      "range": "中央界域・東方界域",
+      "file": "/content/works/world-religions-intro/quizzes/q07-08.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q09-10",
+      "title": "第九~十章",
+      "range": "西方界域・北方界域",
+      "file": "/content/works/world-religions-intro/quizzes/q09-10.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q11-12",
+      "title": "第十一~十二章",
+      "range": "南方界域・亞太界域",
+      "file": "/content/works/world-religions-intro/quizzes/q11-12.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q13-14",
+      "title": "第十三~十四章",
+      "range": "北美界域・拉美界域",
+      "file": "/content/works/world-religions-intro/quizzes/q13-14.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q15-16",
+      "title": "第十五~十六章",
+      "range": "儀式・現代社會",
+      "file": "/content/works/world-religions-intro/quizzes/q15-16.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "q17",
+      "title": "第十七章",
+      "range": "跨宗教對話",
+      "file": "/content/works/world-religions-intro/quizzes/q17.html",
+      "bookId": "WR1"
+    },
+    {
+      "id": "wr2-ch01",
+      "title": "第一章",
+      "range": "什麼是宗教——神聖的經驗與探詢",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch01.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch02",
+      "title": "第二章",
+      "range": "宗教裡有什麼——八個向度",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch02.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch03",
+      "title": "第三章",
+      "range": "信仰、體制與範疇",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch03.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch04",
+      "title": "第四章",
+      "range": "宗教怎麼分類——語族分類與〈神學地圖〉",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch04.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch05",
+      "title": "第五章",
+      "range": "泛神論（上）：泛靈論與哲學泛神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch05.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch06",
+      "title": "第六章",
+      "range": "泛神論（下）：自然神論與萬有在神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch06.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch07",
+      "title": "第七章",
+      "range": "多神論（上）：神話多神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch07.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch08",
+      "title": "第八章",
+      "range": "多神論（下）：哲學多神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch08.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch09",
+      "title": "第九章",
+      "range": "一神論（上）：統攝一神論與本體一神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch09.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch10",
+      "title": "第十章",
+      "range": "一神論（下）：二元神論與融合一神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch10.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch11",
+      "title": "第十十章",
+      "range": "實用神論（上）：功能神論與非神中心論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch11.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch12",
+      "title": "第一十章",
+      "range": "實用神論（下）：不可知論與無神論",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch12.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch13",
+      "title": "第二十章",
+      "range": "現代世界的宗教（上）：世俗化、政教關係與宗教市場",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch13.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch14",
+      "title": "第三十章",
+      "range": "現代世界的宗教（下）：個人化、基要主義、暴力與對話",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch14.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch15",
+      "title": "第四十章",
+      "range": "臺灣宗教（上）：歷史的層積",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch15.html",
+      "bookId": "WR2"
+    },
+    {
+      "id": "wr2-ch16",
+      "title": "第五十章",
+      "range": "臺灣宗教（下）：四種型態在同一座島上",
+      "file": "/content/works/world-religions-intro/quizzes/wr2-ch16.html",
+      "bookId": "WR2"
+    }
   ]
 }
