@@ -267,6 +267,26 @@ WORKS: dict[str, dict] = {
         #    前綴（196 章），分不出哪一章屬哪一部。
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2115/tlg060/tlg2115.tlg060.opp-grc1.xml"],
     },
+    "arnobius-adversus-nationes": {
+        "label": "阿諾比烏《駁異教徒》七卷（ANF 第六卷）",
+        "ebook_id": "dffaae40-e088-41c1-ab7f-9b96f9249661",
+        "lang": "la",
+        "mode": "dotted",
+        "anchor": "both",
+        "source": "The Latin Library（公有領域）",
+        # 🚨 行標是「章.節 正文」寫在行首（1.1 Quoniam…），不獨佔一行，所以要走
+        #    parse_dotted_chapters；用 parse_chapter_markers 七卷全部回 0 章，而
+        #    腳本只會說「命中 0」，看起來像取源壞掉。
+        "parts": [
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius1.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius2.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius3.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius4.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius5.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius6.shtml"),
+            ("阿諾比烏《駁異教徒》", "https://www.thelatinlibrary.com/arnobius/arnobius7.shtml"),
+        ],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -329,6 +349,15 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
                 by_book.update({(i, k[1]): v for k, v in got.items()})
                 got = {}
             chapters.update(got)
+        elif spec["mode"] == "dotted":
+            # 行標是「章.節 正文」寫在行首、不獨佔一行。原典每卷章號從一起算，
+            # 而中譯是整部連續編號，所以與 roman 一樣累計接續。
+            got = FO.parse_dotted_chapters(text)
+            base = max((k[1] for k in chapters), default=0)
+            by_book.update({(i, k[1]): v for k, v in got.items()})
+            chapters.update({(None, k[1] + base): v for k, v in got.items()})
+            print(f"  抓 {url.rsplit('/', 1)[-1]:22} → {len(got)} 章")
+            continue
         elif spec["mode"] == "roman":
             got = FO.parse_chapter_markers(text)
             # 多卷的著作（《駁馬吉安》五卷、《致萬民》兩卷）原典每卷的章號都從
@@ -351,6 +380,44 @@ def load_chunks(path: Path) -> list[dict]:
     return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
+def _both_anchors(body):
+    """章標題與節號合併。阿諾比烏的中譯多半只寫「17. …」，偶爾才寫「# 第十七章」；
+    只取其中一種會漏掉另一種（章標題 44 vs 節號 283）。同一段兩種都中時以章標題為準。"""
+    out = dict(FO.section_numbers(body))
+    # 同一章兩種寫法都在時（「# 第五章」後面接「5. 你們這無知的人哪…」），只留
+    # 正文那一段；兩段都給會讓同一段拉丁文重複出現在兩列。
+    taken = set(out.values())
+    for i, n in FO.chapter_headings(body):
+        if n not in taken:
+            out[i] = n
+    return sorted(out.items())
+
+
+ANCHORS = {"section": FO.section_numbers, "both": _both_anchors}
+
+
+def cumulative_bases(by_book: dict) -> dict[int, int]:
+    """各卷在「整部連續編號」裡的起算基底。第三卷的基底＝第一、二卷的章數和。"""
+    sizes: dict[int, int] = {}
+    for b, n in by_book:
+        sizes[b] = max(sizes.get(b, 0), n)
+    bases, run = {}, 0
+    for b in sorted(sizes):
+        bases[b] = run
+        run += sizes[b]
+    return bases
+
+
+def resolve_continuous(n: int, sp, bases: dict[int, int]) -> int | None:
+    """逐卷重編的章號 n 落在這一段宣告的章範圍內時，反推它的整部連續號。
+
+    各卷基底相差都大於一段涵蓋的章數，所以答案唯一。不唯一或無解就回 None——
+    寧可少對一章，也不要猜。
+    """
+    fit = [b for b, base in bases.items() if sp.first <= n + base <= sp.last]
+    return n + bases[fit[0]] if len(fit) == 1 else None
+
+
 def align_part(chunks, spans, chapters, by_book, extract=None):
     """對整部做逐章對齊，兩種編號法各試一次，取命中高的那個。
 
@@ -366,13 +433,14 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
             continue
         body = FO.split_body(c.get("content") or "")
         for i, n in (extract or FO.chapter_headings)(body):
-            seq.append((c["chunk_index"], i, n, sp.book))
+            seq.append((c["chunk_index"], i, n, sp))
     if not seq:
         return {}, 0, 0
 
     flat: dict[int, list] = {}
     n_flat = 0
-    for ci, i, n, book in seq:
+    for ci, i, n, sp in seq:
+        book = sp.book
         # 🚨 卷次一定要帶進查表。少了它，《上帝之城》卷十三的第一章會拿到卷一
         #    第一章的拉丁文——命中率照樣很高，三欄照樣排得整整齊齊，內容卻是別
         #    一卷的。只有在完全沒有卷這一層時（單卷著作）才退回 (None, n)。
@@ -383,6 +451,37 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
             flat.setdefault(ci, []).append((i, text))
             n_flat += 1
 
+    # 🚨 命中率高不代表配對正確。阿諾比烏的中譯 chapter_path 是整部連續號
+    #    （第71-80章），行內編號卻是逐卷重編的（第二卷第六章寫成「6.」）——直接
+    #    拿「6」查整部第 6 章，七卷全部查得到，報 100%，內容卻全是第一卷的。
+    #    分得出來的是「編號整體遞不遞增」：整部連續編號的著作（《駁馬吉安》五卷
+    #    連續 1–145）幾乎全串遞增，逐卷重編的則每換一卷掉回小數字，最長遞增子序
+    #    列只剩最長那一卷。不能只數「掉了幾次」——《駁黑摩根》正文裡一個誤讀的
+    #    「21.」就掉兩次，那本其實是乾淨的 1–45。chapter_path 自己帶卷次時不算：
+    #    那時 flat 查的是 (卷, 章)，本來就對。
+    #    而且只有分卷的著作才談得上「逐卷重編」——單卷的（依納爵七封書信各一封）
+    #    編號本來就零亂，LIS 低不代表換過卷。
+    ns = [x[2] for x in seq]
+    lis = len(FO._longest_increasing([(0, 0, n) for n in ns]))
+    if (len({b for b, _ in by_book}) > 1 and lis < len(ns) * 0.6
+            and all(x[3].book is None for x in seq)):
+        n_flat = 0
+
+    # 第三種：chapter_path 是整部連續號、行內編號卻逐卷重編（阿諾比烏《駁異教徒》
+    # 七卷，中譯標「第71-80章」而內文寫「6.」）。用宣告的章範圍反推是哪一卷——
+    # 各卷累計基底相差都大於一段的章數，所以答案唯一；不唯一或無解就不算命中，
+    # 不猜。只在 chapter_path 沒有卷次時才試，否則《上帝之城》卷十三會被算成卷一。
+    bases = cumulative_bases(by_book)
+    off: dict[int, list] = {}
+    n_off = 0
+    if bases and all(x[3].book is None for x in seq):
+        for ci, i, n, sp in seq:
+            cont = resolve_continuous(n, sp, bases)
+            text = chapters.get((None, cont)) if cont else None
+            if text:
+                off.setdefault(ci, []).append((i, text))
+                n_off += 1
+
     per: dict[int, list] = {}
     n_per = 0
     for (ci, i, n, _), b in zip(seq, FO.book_of([x[2] for x in seq])):
@@ -391,7 +490,13 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
             per.setdefault(ci, []).append((i, text))
             n_per += 1
 
-    hits, n_hit = (per, n_per) if n_per > n_flat else (flat, n_flat)
+    if os.environ.get("ALIGN_DEBUG"):
+        print(f"    [debug] seq={len(seq)} flat={n_flat} "
+              f"lis={lis}/{len(ns)} per={n_per} off={n_off} "
+              f"spans={[ (x[0], x[3].book, x[3].first, x[3].last) for x in seq[:3] ]} "
+              f"ns={[x[2] for x in seq[:8]]}")
+    hits, n_hit = max(((flat, n_flat), (per, n_per), (off, n_off)),
+                      key=lambda x: x[1])
     return hits, n_hit, len(seq)
 
 
@@ -446,7 +551,7 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
 
 
 def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
-                 chapters: dict, paragraphs: dict) -> list:
+                 chapters: dict, paragraphs: dict, by_book: dict | None = None) -> list:
     """依模式挑對的比對層級。
 
     🚨 章模式不可以拿 chapter_path 的範圍標籤當「站上有哪些章」——標籤會湊整
@@ -464,15 +569,25 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
                 if m:
                     found.append(FO.Span(s.book, int(m.group(1)), int(m.group(1))))
         return FO.coverage(found, {k: "x" for k in paragraphs})
-    if part["mode"] in ("chapter", "roman", "tei"):
-        extract = (FO.section_numbers if part.get("anchor") == "section"
-                   else FO.chapter_headings)
+    if part["mode"] in ("chapter", "roman", "tei", "dotted"):
+        extract = ANCHORS.get(part.get("anchor"), FO.chapter_headings)
+        bases = cumulative_bases(by_book or {})
+        if len(bases) < 2:
+            bases = {}
         found = []
         for c in chunks:
             s = spans.get(c["chunk_index"])
             if not s:
                 continue
             for _, n in extract(FO.split_body(c.get("content") or "")):
+                # 🚨 中譯逐卷重編、chapters 卻是整部連續號時要先換算。不換算的話
+                #    報告會列出兩百多章根本不存在的「站上中譯沒有第 N 章」，把真正
+                #    的缺口（原典電子本第七卷只收到第 34 章）淹掉。
+                if bases and s.book is None:
+                    cont = resolve_continuous(n, s, bases)
+                    if cont:
+                        found.append(FO.Span(None, cont, cont))
+                    continue
                 found.append(FO.Span(s.book, n, n))
         return FO.coverage(found, chapters)
     return FO.coverage(list(spans.values()), chapters)
@@ -526,7 +641,7 @@ def main() -> int:
         if not spans:
             print(f"  ⚠ 「{prefix}」站上找不到對應段落，跳過")
             continue
-        bad = [c for c in coverage_for(chunks, spans, part, chapters, paragraphs)
+        bad = [c for c in coverage_for(chunks, spans, part, chapters, paragraphs, by_book)
                if not c.ok]
         note = ""
         for c in bad:
@@ -555,8 +670,7 @@ def main() -> int:
                 else:
                     skipped.append(f"{c['chapter_path']}（{n} 個錨點全對不上）")
         else:
-            extract = (FO.section_numbers if part.get("anchor") == "section"
-                       else FO.chapter_headings)
+            extract = ANCHORS.get(part.get("anchor"), FO.chapter_headings)
             placed, hit, num = align_part(chunks, spans, chapters, by_book, extract)
             for c in chunks:
                 if c["chunk_index"] not in spans:

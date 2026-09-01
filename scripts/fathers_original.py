@@ -317,6 +317,41 @@ def parse_tei_chapters(xml: str, epistle: str | None = None
     return out
 
 
+# 第四種行標：`章.節` 寫在行首、同行接正文。
+#   1.1 Quoniam comperi nonnullos, qui se plurimum sapere…
+#   1.2. Hoc in loco tribui si ulla facultas posset…
+# 阿諾比烏《駁異教徒》那一系是這個樣子。與 LL_MARK 的差別在於標記不獨佔一行，
+# 所以那支解析不到（實測七卷全部回 0 章）。
+DOTTED_MARK = re.compile(r"^[ 	]*(\d{1,3})\.(\d{1,3})\.?\s+(.*)$")
+
+
+def parse_dotted_chapters(text: str, drop: "re.Pattern[str]" = SITE_CHROME
+                          ) -> dict[tuple[int | None, int], str]:
+    """把 `章.節 正文` 這種行標的原典切成 {(None, 章): 文字}，同章的節接起來。
+
+    章號必須不遞減——正文裡的年份、聖經章節引用（「2.15」）都長得像行標，一遞減
+    就知道那不是章標。
+    """
+    out: dict[int, list[str]] = {}
+    current: list[str] | None = None
+    last = 0
+    for line in text.split("\n"):
+        line = line.strip()
+        if not line or drop.match(line):
+            continue
+        m = DOTTED_MARK.match(line)
+        n = int(m.group(1)) if m else None
+        if n is not None and last <= n <= last + 3:
+            if n != last:
+                current = out.setdefault(n, [])
+                last = n
+            if m.group(3):
+                current.append(m.group(3))
+        elif current is not None:
+            current.append(line)
+    return {(None, n): "\n".join(v).strip() for n, v in out.items() if any(v)}
+
+
 # ── 希臘原典（Migne PG 的 OCR 稿）───────────────────────────────────────────
 # 第三種行標：希臘字母數字。ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號正好對得上 NPNF 中英譯
 # 段落開頭的 1. 2. 3.（同一套本篤會編次）。
