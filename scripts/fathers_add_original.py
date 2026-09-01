@@ -185,6 +185,13 @@ WORKS: dict[str, dict] = {
                       ("依納爵致非拉鐵非人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#5"),
                       ("依納爵致士每拿人書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#6"),
                       ("依納爵致坡旅甲書", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg001/tlg1443.tlg001.1st1K-grc1.xml#7"),
+                      ("坡旅甲殉道記", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1484/tlg001/tlg1484.tlg001.1st1K-grc1.xml"),
+                      ("依納爵致內亞坡里的瑪利亞書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#1"),
+                      ("依納爵致他爾索人書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#4"),
+                      ("依納爵致腓立比人書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#5"),
+                      ("依納爵致安提阿人書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#9"),
+                      ("依納爵致黑羅書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#10"),
+                      ("瑪利雅致依納爵書（偽作）", "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg1443/tlg002/tlg1443.tlg002.1st1K-grc1.xml#13"),
         ],
     },
     "anf4-origen": {
