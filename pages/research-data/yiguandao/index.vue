@@ -90,8 +90,10 @@
               <span class="flex-1 text-gray-800 break-words">{{ b.title }}</span>
               <span v-if="b.verify" class="flex-shrink-0 text-[11px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">待核</span>
             </div>
+            <p v-if="b.titleEn" class="mt-0.5 text-[11px] text-gray-400 italic break-words">{{ b.titleEn }}</p>
             <div class="mt-0.5 text-[11px] text-gray-400 break-words">
-              {{ b.author }}<template v-if="b.container">　收於《{{ b.container }}》</template><template
+              {{ b.author }}<template v-if="b.advisor">（指導教授：{{ b.advisor }}）</template><template
+                v-if="b.container">　收於《{{ b.container }}》</template><template
                 v-if="b.journal">　《{{ b.journal }}》{{ b.vol }}</template><template
                 v-if="b.pub">　{{ b.pub }}</template><template v-if="b.pages">　{{ b.pages }}</template>
             </div>
@@ -117,6 +119,7 @@ interface BiblioRow {
   author: string; year: string; title: string; kind: string;
   container?: string; journal?: string; vol?: string; pub?: string;
   pages?: string; editor?: string; verify?: boolean; note?: string;
+  titleEn?: string; authorEn?: string; advisor?: string; degree?: string;
 }
 
 const archive = ref<{ total: number; count: number; online: number; items: ArchiveRow[] }>(

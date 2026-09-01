@@ -1,6 +1,6 @@
 {
  "source": "鍾雲鶯〈敵偽、附匪與邪教？：從檔案觀察三十年代國民政府在中國取締一貫道之歷程〉引用書目（頁 104–106）",
- "note": "由使用者提供的三張書頁照片逐條轉錄。verify=true 者為判讀不夠有把握的欄位，須核對原件後修正。",
+ "note": "由使用者提供的三張書頁照片逐條轉錄。verify=true 者為判讀不夠有把握的欄位，須核對原件後修正。 王博賢該筆已由使用者提供完整書目確認為博士論文（指導教授蔡源林），不再標待核。",
  "count": 35,
  "items": [
   {
@@ -33,10 +33,13 @@
    "author": "王博賢",
    "year": "2006",
    "title": "從宗教市場理論分析解嚴前後的台灣政教關係——以長老教會與一貫道為例",
-   "pub": "國立政治大學宗教研究所",
+   "pub": "國立政治大學宗教研究所博士論文",
    "kind": "學位論文",
-   "verify": true,
-   "note": "🚨 使用者指此為博士論文；照片上該欄我判讀為「碩士論文」，學位別待核對原件。"
+   "note": "★ 與本論文同一組研究對象：把長老教會與一貫道並置，比較解嚴前後的政教關係。年份 2006 取自鍾雲鶯該文的引用書目。",
+   "titleEn": "An Investigation on the Political-Religious Relationship in Taiwan Before and After the Lifting of Martial Law in Terms of Religious Market Theory: the Presbyterian Church in Taiwan and the Yiguandao as the Two Examples",
+   "authorEn": "Wang, Po-Hsien",
+   "advisor": "蔡源林",
+   "degree": "博士"
   },
   {
    "author": "白水老人韓雨霖親記",
