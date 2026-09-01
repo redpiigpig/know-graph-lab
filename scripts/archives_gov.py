@@ -200,7 +200,8 @@ def parse_rows(html):
         # 這一筆的資訊都掛在 h3 後面那個 <dl>
         dl = h3.find_next("dl")
         rec = {"level": level, "title": title, "fonds": "", "archiveNo": "", "dateRange": "",
-               "access": "", "online": False, "pages": 0, "summary": "", "subjects": []}
+               "access": "", "online": False, "pages": 0, "summary": "", "subjects": [],
+               "systemId": "", "fullpath": ""}
         if dl:
             txt = clean(dl.get_text(" "))
             # 🚨 每個欄位各用自己的樣式，不要共用一條「非貪婪 + 前瞻」的通式。
@@ -218,6 +219,13 @@ def parse_rows(html):
                 nxt = dd.find_next("dd")
                 rec["fonds"] = clean(nxt.get_text(" ")) if nxt else ""
             rec["online"] = bool(ONLINE_RE.search(rec["access"]))
+            # 「可線上閱覽」鈕帶 GoToMoreImage('<base64 SystemID>', '<fullpath>')——
+            # 下載影像非有這兩個值不可（見 archives_images.py）
+            btn = dl.find("button", onclick=re.compile("GoToMoreImage"))
+            if btn:
+                m2 = re.search(r"GoToMoreImage\('([^']+)'\s*,\s*'([^']+)'", btn["onclick"])
+                if m2:
+                    rec["systemId"], rec["fullpath"] = m2.group(1), m2.group(2)
             pm = PAGES_RE.search(rec["access"])
             rec["pages"] = int(pm.group(1).replace(",", "")) if pm else 0
             sm = dl.select_one("div.ellipsis-1")
