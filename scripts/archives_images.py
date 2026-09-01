@@ -39,7 +39,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Sa
 SRC = Path(r"C:/tmp/archives_gov.json")
 DRIVE = Path(r"G:/我的雲端硬碟/資料/知識圖工作室/研究資料/國家檔案調閱/影像")
 LEDGER = Path(r"C:/tmp/archives_images_done.json")
-DELAY = 1.5
+DELAY = 2.0        # 站方會限流；實測 1.5 秒跑二十幾件就被擋
 
 SECTIONS = {
     "yiguandao": ("一貫道", ["一貫道"]),
@@ -51,11 +51,27 @@ SECTIONS = {
 }
 
 
-def curl(url, binary=False):
-    r = subprocess.run(["curl", "-s", "--max-time", "180", "-A", UA,
-                        "-H", "Accept-Language: zh-TW,zh;q=0.9", url],
-                       capture_output=True, timeout=200)
-    return r.stdout if binary else r.stdout.decode("utf-8", "replace")
+def curl(url, binary=False, tries=3):
+    """一律走 curl（站方擋 python 的 TLS 指紋，見 archives_gov.py）。
+
+    🚨 單張失敗絕不能讓整輪死掉。這批要跑十小時，中途機器休眠過一次，
+       subprocess 的截止時間被算成負值而丟出
+       `TimeoutExpired: timed out after -11800 seconds`，27/131 就整個中斷。
+       所以每張都包例外並重試；真的拿不到就回空字串，讓呼叫端跳過。
+       交給 curl 自己的 --max-time 控時，不再另外傳 subprocess timeout。
+    """
+    for i in range(tries):
+        try:
+            r = subprocess.run(["curl", "-s", "--max-time", "180", "-A", UA,
+                                "-H", "Accept-Language: zh-TW,zh;q=0.9", url],
+                               capture_output=True)
+            if r.stdout:
+                return r.stdout if binary else r.stdout.decode("utf-8", "replace")
+        except Exception as e:  # noqa: BLE001
+            if i == tries - 1:
+                print(f"    ! curl 失敗：{str(e)[:80]}", flush=True)
+        time.sleep(2 ** i * 2)
+    return b"" if binary else ""
 
 
 def safe(s, n=80):
@@ -99,20 +115,44 @@ def run(section, limit=0):
         seen.add(r["archiveNo"])
         uniq.append(r)
     print(f"{name}：待抓 {len(uniq)} 件（已完成 {len(ledger)} 件）", flush=True)
+    blocked = 0
 
     for i, r in enumerate(uniq, 1):
         if limit and i > limit:
             break
-        enc, cnt = viewer_info(r["systemId"], r["fullpath"])
+        # 🚨 拿不到 encPath 幾乎都是**站方限流**，不是這筆資料有問題（實測：當時
+        #    102 筆全失敗，事後同樣三筆再試全部正常）。所以要退避重試，
+        #    絕不能「跳過、繼續下一筆」——那會在被擋的十分鐘內把整份清單燒光，
+        #    最後還印一句「完成 29 件」，看起來像跑完了。
+        enc = cnt = None
+        for attempt in range(4):
+            enc, cnt = viewer_info(r["systemId"], r["fullpath"])
+            if enc:
+                break
+            wait = 60 * (attempt + 1)
+            print(f"    …{r['archiveNo']} 拿不到 encPath，{wait}s 後重試（{attempt+1}/4）", flush=True)
+            time.sleep(wait)
         if not enc:
-            print(f"  ! {r['archiveNo']}：檢視頁拿不到 encPath，跳過", flush=True)
+            blocked += 1
+            print(f"  ! {r['archiveNo']}：四次都拿不到，判定站方限流", flush=True)
+            if blocked >= 3:
+                print("")
+                print(f"連續 {blocked} 筆拿不到 encPath，停止本輪以免燒掉清單。", flush=True)
+                print(f"已完成 {len(ledger)} 件，稍後重跑會從未完成處接續。", flush=True)
+                return
             continue
+        blocked = 0
         out = DRIVE / section / f"{safe(r['archiveNo'].replace('/', '_'), 60)}_{safe(r['title'], 40)}"
         out.mkdir(parents=True, exist_ok=True)
-        got = 0
+        got, missing = 0, []
         for p in range(1, cnt + 1):
-            fn, blob = fetch_page(enc, p)
+            try:
+                fn, blob = fetch_page(enc, p)
+            except Exception as e:  # noqa: BLE001
+                print(f"    ! 第 {p} 張：{str(e)[:60]}", flush=True)
+                fn, blob = None, None
             if not blob:
+                missing.append(p)
                 continue
             (out / f"{p:04d}_{fn}").write_bytes(blob)
             got += 1
@@ -126,9 +166,12 @@ def run(section, limit=0):
                        "      https://aa.archives.gov.tw/",
                        "利用限制：非商業性；引用須標示上列來源；含第三人姓名，再公開前須自行評估。"]),
             encoding="utf-8")
-        ledger[r["archiveNo"]] = {"title": r["title"], "pages": got, "dir": str(out)}
+        # 缺頁要記下來：不記的話「27 張」看起來就像「這件只有 27 頁」
+        ledger[r["archiveNo"]] = {"title": r["title"], "pages": got, "expected": cnt,
+                                  "missing": missing, "dir": str(out)}
         LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"  [{i}/{len(uniq)}] {r['title'][:34]} → {got}/{cnt} 張", flush=True)
+        flag = f"（缺 {len(missing)} 張）" if missing else ""
+        print(f"  [{i}/{len(uniq)}] {r['title'][:34]} → {got}/{cnt} 張{flag}", flush=True)
     print(f"\n完成 {len(ledger)} 件 → {DRIVE / section}")
 
 
