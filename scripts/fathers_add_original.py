@@ -411,6 +411,28 @@ WORKS: dict[str, dict] = {
                  "https://www.thelatinlibrary.com/augustine/trin14.shtml",
                  "https://www.thelatinlibrary.com/augustine/trin15.shtml"],
     },
+    "socrates-historia": {
+        "label": "蘇格拉底《教會史》七卷（NPNF2 第二卷）",
+        "ebook_id": "29782dd6-ece9-446a-83ed-9cc0892d7cc7",
+        "prefix": "蘇格拉底教會史",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        # 站上卷一是譯者導論，卷二起才是原典卷一。每一段的第一行就寫著「第N卷」，
+        # 照那個對出來的。
+        "book_map": {2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7},
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2057/tlg002/tlg2057.tlg002.1st1K-grc1.xml"],
+    },
+    "sozomen-historia": {
+        "label": "索佐門《教會史》九卷（NPNF2 第二卷）",
+        "ebook_id": "29782dd6-ece9-446a-83ed-9cc0892d7cc7",
+        "prefix": "索佐門教會史",
+        "lang": "grc",
+        "mode": "tei",
+        "source": "Open Greek and Latin · First1KGreek（TEI，CC BY-SA）",
+        "book_map": {2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9},
+        "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2048/tlg001/tlg2048.tlg001.1st1K-grc1.xml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊

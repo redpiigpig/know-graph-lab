@@ -767,6 +767,8 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 拉克坦提烏《神學原理》卷一 | ANF Vol 7 | 拉丁‧The Latin Library | 逐章 | 22/179（12%，那邊只有卷一）|
 | 諾瓦提安《論三位一體》 | ANF Vol 5 | 拉丁‧The Latin Library | 逐章 | 26/26（100%）|
 | 奧古斯丁《論三位一體》十五卷 | NPNF1 Vol 3 | 拉丁‧The Latin Library | 逐章 | 191/202（95%）|
+| 蘇格拉底《教會史》七卷 | NPNF2 Vol 2 | 希臘‧First1KGreek TEI | 逐章 | 130/130（100%）|
+| 索佐門《教會史》九卷 | NPNF2 Vol 2 | 希臘‧First1KGreek TEI | 逐章 | 205/205（100%）|
 | 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
@@ -916,6 +918,15 @@ https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/{�
 🚨 《上帝之城》22 卷，每卷章號都從一起算。查表漏掉卷次的話，卷十三的第一章會拿到
    **卷一**第一章的拉丁文——命中率 514 看起來還不錯，其中卻有一部分是別一卷的內容。
    帶回卷次後 539/557。只有真正沒有卷這一層的單卷著作才退回 `(None, n)`。
+
+### 兩個 TEI 庫收了誰 —— 別再一部一部猜
+
+問 GitHub 的 `contents/data`，作者代號那一層一次就拿得到（First1KGreek 309 個、
+Perseus 100 個）；作者夾底下的 `__cts__.xml` 有 `groupname`，可以直接對名字。
+
+實測 tlg2000–2130 之間兩庫合起來只有 27 個作者代號，**尼撒的格列高里
+（tlg2017）、耶路撒冷的西里爾（tlg2110）都不在**——那兩冊不用再找了。有的但還
+沒用到的：tlg2021 Epiphanius、tlg2041 Marcellus、tlg2058 Philostorgius。
 
 ### 挑下一冊：先跑 `fathers_alignability.py`
 
