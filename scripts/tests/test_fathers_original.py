@@ -730,3 +730,17 @@ def test_bracketed_chapters_accept_arabic_numerals():
     got = fo.parse_bracketed_chapters(text, None)
     assert sorted(k[1] for k in got) == [1, 2]
     assert got[(None, 2)].startswith("Extremis temporibus")
+
+
+def test_roman_bracketed_chapters_treat_bare_numbers_as_sections():
+    """奧古斯丁《論三位一體》：`[I 1]` 開新章、`[2]` 是同一章的下一節。
+
+    當成章讀的話卷一會變成 21 章（實際 13 章），而且每一章都從節的中間開始。
+    """
+    text = ("[I 1] Lecturus haec quae de trinitate disserimus.\n"
+            "[2] Vt ergo ab huiusmodi falsitatibus.\n"
+            "[II 4] Quapropter adiuuante domino deo nostro.\n")
+    got = fo.parse_roman_bracketed_chapters(text)
+    assert sorted(k[1] for k in got) == [1, 2]
+    assert "Vt ergo" in got[(None, 1)]
+    assert got[(None, 2)].startswith("Quapropter")

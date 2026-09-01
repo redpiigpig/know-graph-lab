@@ -364,6 +364,45 @@ def parse_tei_letters(xml: str) -> dict[int, list[str]]:
     return out
 
 
+# 第六種行標：方括號裡是「羅馬章號＋阿拉伯節號」，同章其餘的節只寫節號。
+#   [I 1] Lecturus haec quae de trinitate disserimus…
+#   [2]   Vt ergo ab huiusmodi falsitatibus…
+# 奧古斯丁《論三位一體》十五卷是這個樣子。
+# 🚨 拿 parse_bracketed_chapters 讀會把 `[2]` 當成第二章——卷一因此變成 21 章
+#    （實際 13 章），而且每一章的內容都從節的中間開始。
+ROMAN_SECTION = re.compile(r"^\[([IVXLCDM]+)(?:\s+(\d+))?\]\s*(.*)$")
+BARE_SECTION = re.compile(r"^\[(\d+)\]\s*(.*)$")
+
+
+def parse_roman_bracketed_chapters(text: str, book: int | None = None,
+                                   drop: "re.Pattern[str]" = SITE_CHROME
+                                   ) -> dict[tuple[int | None, int], str]:
+    """把 `[I 1] … [2] …` 這種行標的原典切成 {(卷, 章): 文字}。"""
+    out: dict[int, list[str]] = {}
+    current: list[str] | None = None
+    for line in text.split(chr(10)):
+        line = line.strip()
+        if not line or drop.match(line):
+            continue
+        m = ROMAN_SECTION.match(line)
+        if m:
+            n = roman(m.group(1))
+            if n is None:
+                continue
+            current = out.setdefault(n, [])
+            if m.group(3):
+                current.append(m.group(3))
+            continue
+        c = BARE_SECTION.match(line)
+        if c:
+            if current is not None and c.group(2):
+                current.append(c.group(2))
+            continue
+        if current is not None:
+            current.append(line)
+    return {(book, n): chr(10).join(v).strip() for n, v in out.items() if any(v)}
+
+
 def _chain(values: list[int], low: int, high: int) -> list[int]:
     """values 裡「大於 low、不超過 high、而且遞增」的最長一串（回傳選中的位置）。"""
     idx = [i for i, v in enumerate(values) if low < v <= high]

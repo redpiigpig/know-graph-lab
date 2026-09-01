@@ -376,6 +376,34 @@ WORKS: dict[str, dict] = {
         #    卷的第 N 章都配成卷一第 N 章（align_part 有一道專門擋這個的閘）。
         "urls": ["https://www.thelatinlibrary.com/lactantius/divinst1.shtml"],
     },
+    "augustine-de-trinitate": {
+        "label": "奧古斯丁《論三位一體》十五卷（NPNF1 第三卷）",
+        "ebook_id": "d7f66759-3fa9-4633-abde-87003cdbcc06",
+        "prefix": "奧古斯丁教義論集",
+        "site_book": 1,
+        "lang": "la",
+        "mode": "chapter",
+        "marker": "roman-section",
+        "source": "The Latin Library（公有領域）",
+        # 站上「奧古斯丁教義論集」一個前綴壓了七部著作，用卷一…卷七分開；卷一
+        # 就是《論三位一體》十五卷。那個「卷」是第幾部著作，不是原典卷次，所以
+        # site_book 挑完之後要把它拿掉。
+        "urls": ["https://www.thelatinlibrary.com/augustine/trin1.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin2.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin3.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin4.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin5.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin6.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin7.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin8.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin9.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin10.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin11.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin12.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin13.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin14.shtml",
+                 "https://www.thelatinlibrary.com/augustine/trin15.shtml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -479,6 +507,13 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             by_book.update({(i, k[1]): v for k, v in got.items()})
             got = {(None, k[1] + base): v for k, v in got.items()}
             chapters.update(got)
+        elif spec.get("marker") == "roman-section":
+            # 每一卷的章號都從 I 重新起算，而中譯是整部連續編號，所以累計接續；
+            # 逐卷的鍵也留著，align_part 會挑分數高的。
+            got = FO.parse_roman_bracketed_chapters(text)
+            by_book.update({(i, k[1]): v for k, v in got.items()})
+            base = max((k[1] for k in chapters), default=0)
+            chapters.update({(None, k[1] + base): v for k, v in got.items()})
         else:
             # 單卷著作要鍵成 (None, 章)，不然 chapter_path 沒有卷次的那些查不到。
             got = FO.parse_bracketed_chapters(
@@ -679,6 +714,15 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
         m = FO.CHAPTER_PATH.search(cp)
         if m and m.group(2) is None:
             book_hint = (part.get("chapters") or {}).get(FO.zh_numeral(m.group(1)))
+        if part.get("site_book"):
+            # 站上把好幾部著作壓成一個前綴、用「卷N」分開（奧古斯丁教義論集的
+            # 卷一是《論三位一體》、卷二是《信望愛手冊》…）。挑出那一卷，並把卷次
+            # 拿掉——它是「第幾部著作」，不是原典的卷次，留著會讓查表用錯鍵。
+            sp0 = FO.parse_chapter_path(cp)
+            if not sp0 or sp0.book != part["site_book"]:
+                continue
+            out[c["chunk_index"]] = FO.Span(None, sp0.first, sp0.last)
+            continue
         if part["mode"] == "letter":
             m = FO.LETTER_PATH.search(cp)
             if m:
