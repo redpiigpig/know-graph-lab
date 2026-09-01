@@ -722,3 +722,11 @@ def test_paren_marker_style():
     assert sorted(k[1] for k in got) == [1, 2]
     assert got[(None, 1)].startswith("Res a mundi exordio")
     assert "plura eodem loco" in got[(None, 1)]
+
+
+def test_bracketed_chapters_accept_arabic_numerals():
+    # 拉克坦提烏《論逼迫者之死》：`[1] Audivit dominus…`
+    text = "[1] Audivit dominus orationes tuas.\n[2] Extremis temporibus Tiberii.\n"
+    got = fo.parse_bracketed_chapters(text, None)
+    assert sorted(k[1] for k in got) == [1, 2]
+    assert got[(None, 2)].startswith("Extremis temporibus")

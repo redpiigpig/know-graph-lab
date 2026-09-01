@@ -345,6 +345,37 @@ WORKS: dict[str, dict] = {
         "source": "The Latin Library（公有領域）",
         "urls": ["https://www.thelatinlibrary.com/vicentius.html"],
     },
+    "lactantius-de-mortibus": {
+        "label": "拉克坦提烏《論逼迫者之死》（ANF 第七卷）",
+        "ebook_id": "75d8aae0-7431-4be9-baee-c57d26599653",
+        "prefix": "拉克坦提烏《論逼迫者之死》",
+        "lang": "la",
+        "mode": "chapter",
+        "source": "The Latin Library（公有領域）",
+        # 行標是方括號夾阿拉伯數字（`[1] Audivit dominus…`），不是羅馬數字。
+        "urls": ["https://www.thelatinlibrary.com/lactantius/demort.shtml"],
+    },
+    "novatian-de-trinitate": {
+        "label": "諾瓦提安《論三位一體》（ANF 第五卷）",
+        "ebook_id": "0e08c662-540b-4186-b250-9bca0cfe1002",
+        "prefix": "諾瓦提安《論三位一體》",
+        "lang": "la",
+        "mode": "roman",
+        "source": "The Latin Library（公有領域）",
+        "urls": ["https://www.thelatinlibrary.com/novatian.html"],
+    },
+    "lactantius-divinae-institutiones": {
+        "label": "拉克坦提烏《神學原理》卷一（ANF 第七卷）",
+        "ebook_id": "75d8aae0-7431-4be9-baee-c57d26599653",
+        "prefix": "拉克坦提烏《神學原理》",
+        "lang": "la",
+        "mode": "roman",
+        "source": "The Latin Library（公有領域）",
+        # 🚨 那邊只收了七卷中的第一卷（23 章），而站上是七卷連號的第1-188章、
+        #    中譯逐卷重編。只有卷一那 23 章填得上，其餘照實空著——別讓它把每一
+        #    卷的第 N 章都配成卷一第 N 章（align_part 有一道專門擋這個的閘）。
+        "urls": ["https://www.thelatinlibrary.com/lactantius/divinst1.shtml"],
+    },
 }
 
 # 🚨 《論三位一體》拉丁原文有（thelatinlibrary.com/augustine/trin1–15），但站上那一冊
@@ -449,7 +480,9 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
             got = {(None, k[1] + base): v for k, v in got.items()}
             chapters.update(got)
         else:
-            got = FO.parse_bracketed_chapters(text, i)
+            # 單卷著作要鍵成 (None, 章)，不然 chapter_path 沒有卷次的那些查不到。
+            got = FO.parse_bracketed_chapters(
+                text, i if len(spec["urls"]) > 1 else None)
             chapters.update(got)
         print(f"  抓 {url.rsplit('/', 1)[-1]:16} → "
               f"{len(got) if shown is None else shown} {unit}")
@@ -541,12 +574,23 @@ def align_part(chunks, spans, chapters, by_book, extract=None):
     #    列只剩最長那一卷。不能只數「掉了幾次」——《駁黑摩根》正文裡一個誤讀的
     #    「21.」就掉兩次，那本其實是乾淨的 1–45。chapter_path 自己帶卷次時不算：
     #    那時 flat 查的是 (卷, 章)，本來就對。
-    #    而且只有分卷的著作才談得上「逐卷重編」——單卷的（依納爵七封書信各一封）
-    #    編號本來就零亂，LIS 低不代表換過卷。
+    #    而且只有分卷的著作才談得上「逐卷重編」。依納爵那幾封書信的編號會從頭再走
+    #    一次（短、長兩種抄本各編一次號：6…12、1…6），但兩次走的是同一封信，flat
+    #    給的是對的。
     ns = [x[2] for x in seq]
     lis = len(FO._longest_increasing([(0, 0, n) for n in ns]))
     if (len({b for b, _ in by_book}) > 1 and lis < len(ns) * 0.6
             and all(x[3].book is None for x in seq)):
+        n_flat = 0
+
+    # 🚨 另一種同樣安靜的錯配：原典電子本只收了整部著作的第一卷。拉克坦提烏
+    #    《神學原理》站上是七卷連在一起的第1-188章、中譯逐卷重編（1–23、1–20、
+    #    1–30…），而 The Latin Library 只有第一卷 23 章——每一卷的第 5 章都會配到
+    #    第一卷第 5 章，七卷份的錯配，而且上面那條規則擋不住（原典只有一卷）。
+    #    站上宣告的章數遠超過原典的章數就是這種情形。
+    declared = max((x[3].last for x in seq), default=0)
+    largest = max((k[1] for k in chapters), default=0)
+    if largest and declared > largest * 1.5 and all(x[3].book is None for x in seq):
         n_flat = 0
 
     # 第三種：chapter_path 是整部連續號、行內編號卻逐卷重編（阿諾比烏《駁異教徒》

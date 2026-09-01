@@ -121,7 +121,8 @@ def parse_numbered_text(text: str, default_book: int | None = None,
 #   [Pr] Gloriosissimam ciuitatem Dei…      ← 序言
 #   [I]  Ex hac namque existunt inimici…
 # 《上帝之城》《論三位一體》這一系的電子本都是這個樣子，沒有節號可用，只能對到章。
-BRACKET_CHAPTER = re.compile(r"^\[(Pr|[IVXLCDM]+)\]\s*(.*)$", re.I)
+# 章號也可能是阿拉伯數字（拉克坦提烏《論逼迫者之死》：`[1] Audivit dominus…`）。
+BRACKET_CHAPTER = re.compile(r"^\[(Pr|\d{1,3}|[IVXLCDM]+)\]\s*(.*)$", re.I)
 _ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
 
@@ -149,7 +150,13 @@ def parse_bracketed_chapters(text: str, book: int,
             continue
         m = BRACKET_CHAPTER.match(line)
         if m:
-            n = 0 if m.group(1).lower() == "pr" else roman(m.group(1))
+            token = m.group(1)
+            if token.lower() == "pr":
+                n = 0
+            elif token.isdigit():
+                n = int(token)
+            else:
+                n = roman(token)
             if n is None:
                 continue
             key = (book, n)
