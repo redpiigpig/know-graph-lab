@@ -23,6 +23,8 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
+import re  # noqa: E402
+
 import uchimura_build as ub  # noqa: E402  (載 .env、青空 XHTML 解析、stdout 轉碼)
 
 CACHE_DIR = Path("c:/tmp/yanaihara_cache")
@@ -62,6 +64,18 @@ REGISTRY: dict[str, dict] = {
         "parent_volume": "信仰與人物",
         "files": ["60192_74816.html"],
     },
+    "teikoku-taiwan": {
+        "ebook_id": "e0000000-0000-4000-8000-000000000005",
+        "title": "帝國主義下的台灣",
+        "original_title": "帝国主義下の台湾",
+        "subtitle": "一九二七年來台實地調查的成果，出版後旋在台灣遭禁（日文原文＋繁中對照）",
+        "year": 1929,
+        "parent_volume": "殖民政策學",
+        # 青空文庫沒有這一本：來源是 NDL 掃描（pid 1191101）經 Gemini Vision OCR，
+        # 見 scripts/yanaihara_ndl.py。舊字舊假名原樣保留。
+        "text_dir": r"c:/tmp/yanaihara_ndl/ocr",
+        "files": [],
+    },
     "jesus-life": {
         "ebook_id": "e0000000-0000-4000-8000-000000000004",
         "title": "耶穌傳：據馬可福音",
@@ -74,11 +88,40 @@ REGISTRY: dict[str, dict] = {
 }
 
 # 先短後長：兩篇短文當日就能見效，《耶穌傳》一百八十餘節排最後。
-QUEUE = ["final-lecture", "reading-and-writing", "christianity-intro", "jesus-life"]
+QUEUE = ["final-lecture", "reading-and-writing", "christianity-intro", "jesus-life",
+         "teikoku-taiwan"]   # 最後一本要等 NDL OCR 跑完才有東西可翻
+
+# NDL 掃描 → OCR 出來的純文字（青空文庫沒有這一本）。章題自成一行，靠這個切節。
+_JA_HEADING = re.compile(
+    r"^\s*(第[一二三四五六七八九十百]+[章節篇部]|序[章文]?|緒言|結論|附録|附錄|凡例|目次)"
+    r"[　\s]*(.{0,40})$")
+
+
+def load_text_sections(slug: str) -> list[dict]:
+    """OCR 純文字 → [{heading, paras}]。青空那條走 load_work_sections，這條走檔案。"""
+    d = Path(REGISTRY[slug]["text_dir"])
+    text = "\n\n".join(f.read_text(encoding="utf-8") for f in sorted(d.glob("*.txt")))
+    out: list[dict] = []
+    heading, buf = "(front)", []
+    for para in (p.strip() for p in text.split("\n\n")):
+        if not para:
+            continue
+        m = _JA_HEADING.match(para)
+        if m and len(para) < 60:
+            if buf:
+                out.append({"heading": heading, "paras": ub.split_long_paras(buf)})
+            heading, buf = para, []
+            continue
+        buf.append(para)
+    if buf:
+        out.append({"heading": heading, "paras": ub.split_long_paras(buf)})
+    return out
 
 
 def load_work_sections(slug: str, cache_dir: Path = CACHE_DIR) -> list[dict]:
     """與 uchimura_build.load_work_sections 同介面，換一個快取目錄與 registry。"""
+    if REGISTRY[slug].get("text_dir"):
+        return load_text_sections(slug)
     out: list[dict] = []
     for name in REGISTRY[slug]["files"]:
         raw = (cache_dir / name).read_bytes()
