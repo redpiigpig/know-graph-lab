@@ -159,6 +159,13 @@ Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all
 # Those 15 hub cards have existed with zero chunks because no lane ever ran the three
 # builders. Haiku on Max: Gemini belongs to ACCS and NVIDIA has been 503-ing all day.
 Ensure 'philo-queue' 'plato_run_queue|hellenistic_run_queue' @('-X','utf8','scripts\hellenistic_run_queue.py','--engine','haiku')
+# Yanaihara (Uchimura's disciple, 2nd-generation Mukyokai): the four Aozora Bunko texts,
+# ja -> Traditional Chinese. The two short pieces are already up; this lane finishes the
+# two long ones (Introduction to Christianity 490 paras, Life of Jesus 1017 paras).
+# Same driver as Uchimura, --author switches the registry. Haiku for the same reason as
+# the philo lane. Per-section checkpoints, so a restart resumes.
+Ensure 'yanaihara' 'uchimura_auto' @('-X','utf8','scripts\uchimura_auto.py','--author','yanaihara','--run-queue','--backend','haiku')
+
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
 # Moved off Gemini 2026-08-17 so ACCS owns the Gemini pool (see top of file).
