@@ -249,3 +249,8 @@ scripts/.ndltd_fetch.mjs
 # 站台偵查用的一次性 playwright 腳本（必須放 repo 內才找得到 playwright）
 scripts/.aa_probe.mjs
 scripts/.krt_probe.mjs
+
+# 🚨 國史館那兩份標「勿外傳」，repo 是公開的，全文一律走 R2 不進版控。
+# public/content/research-data/yiguandao/guoshiguan.json 只留書目層（無 text）。
+public/content/research-data/**/*-fulltext.json
+G:/

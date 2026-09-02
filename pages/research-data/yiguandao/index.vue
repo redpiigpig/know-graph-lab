@@ -72,6 +72,41 @@
         </div>
       </section>
 
+      <!-- 國史館 -->
+      <section v-if="gsg.docs?.length" class="mb-10">
+        <div class="flex items-baseline gap-2 mb-3">
+          <h2 class="text-base font-bold text-gray-900">{{ gsg.name }}</h2>
+          <span class="text-xs text-gray-400">{{ gsg.access }}</span>
+          <span class="ml-auto text-xs text-gray-500">{{ gsg.count }} 份 / {{ gsg.chars?.toLocaleString() }} 字</span>
+        </div>
+        <p class="mb-3 text-xs text-rose-700 bg-rose-50/70 border border-rose-100 rounded-lg px-3 py-2 leading-relaxed">
+          {{ gsg.notice }}
+        </p>
+        <div class="space-y-3">
+          <div v-for="(d, i) in gsg.docs" :key="i" class="bg-white rounded-xl border border-gray-100 p-4">
+            <div class="flex flex-wrap items-baseline gap-2 mb-1">
+              <h3 class="text-sm font-semibold text-gray-900">{{ d.title }}</h3>
+              <span class="text-[11px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">{{ d.fonds }}</span>
+              <span class="text-[11px] text-gray-400 font-mono">{{ d.dateRange }}</span>
+              <span class="ml-auto text-xs text-gray-500">{{ d.chars.toLocaleString() }} 字</span>
+            </div>
+            <p class="text-[11px] text-gray-400 break-words">檔號 {{ d.archiveNo }}</p>
+            <p class="text-[11px] text-gray-400 break-words">{{ d.declassified }}</p>
+            <p class="mt-1 text-xs text-gray-600 leading-relaxed break-words">{{ d.note }}</p>
+            <button @click="toggleDoc(i, d.archiveNo)"
+              class="mt-2 text-xs text-purple-600 hover:underline">
+              {{ openDoc === i ? '收合全文' : '展開全文' }}
+            </button>
+            <div v-if="openDoc === i" class="mt-2">
+              <div v-if="docLoading" class="px-3 py-2 text-[11px] text-gray-400">載入全文⋯</div>
+              <pre v-else-if="docText"
+                class="px-3 py-2 rounded-lg bg-gray-50/70 border border-gray-100 text-[11px] leading-relaxed text-gray-700 whitespace-pre-wrap font-sans max-h-[32rem] overflow-auto">{{ docText }}</pre>
+              <div v-else class="px-3 py-2 text-[11px] text-gray-400">取不到全文（需登入）。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 引用書目 -->
       <section class="mb-10">
         <div class="flex items-baseline gap-2 mb-3">
@@ -106,6 +141,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, computed, onMounted, watch } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -125,6 +161,25 @@ interface BiblioRow {
 const archive = ref<{ total: number; count: number; online: number; items: ArchiveRow[] }>(
   { total: 0, count: 0, online: 0, items: [] });
 const biblio = ref<{ source?: string; count?: number; items?: BiblioRow[] }>({});
+interface GsgDoc {
+  title: string; fonds: string; archiveNo: string; dateRange: string;
+  declassified: string; note: string; lines: number; chars: number; text: string;
+}
+const gsg = ref<{ name?: string; access?: string; notice?: string; count?: number; chars?: number; docs?: GsgDoc[] }>({});
+const openDoc = ref(-1);
+const docText = ref('');
+const docLoading = ref(false);
+
+// 全文不在 repo 裡（那會被 GitHub 公開），存 R2 由需驗證的端點供應
+async function toggleDoc(i: number, archiveNo: string) {
+  if (openDoc.value === i) { openDoc.value = -1; return; }
+  openDoc.value = i; docText.value = ''; docLoading.value = true;
+  try {
+    const r = await authedFetch<{ available: boolean; doc?: { text: string } }>(
+      '/api/research-data/guoshiguan-text', { query: { archiveNo } });
+    docText.value = r.available ? (r.doc?.text ?? '') : '';
+  } catch { docText.value = ''; } finally { docLoading.value = false; }
+}
 const loaded = ref(false);
 const onlyOnline = ref(false);
 const q = ref('');
@@ -144,10 +199,12 @@ watch([onlyOnline, q], () => { limit.value = 100; });
 onMounted(async () => {
   const base = '/content/research-data/yiguandao';
   try {
-    const [a, b] = await Promise.all([
-      fetch(`${base}/archives-index.json`), fetch(`${base}/biblio-zhong.json`)]);
+    const [a, b, g] = await Promise.all([
+      fetch(`${base}/archives-index.json`), fetch(`${base}/biblio-zhong.json`),
+      fetch(`${base}/guoshiguan.json`)]);
     if (a.ok) archive.value = await a.json();
     if (b.ok) biblio.value = await b.json();
+    if (g.ok) gsg.value = await g.json();
   } catch { /* keep empty */ } finally { loaded.value = true; }
 });
 </script>
