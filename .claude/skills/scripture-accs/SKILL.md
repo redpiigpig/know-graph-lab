@@ -100,13 +100,94 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 接手清單（2026-08-31）
+## 🧭 接手清單（2026-09-02）
+
+這一輪不是加新書，是**盤點「哪幾卷悄悄缺了整段」並修**。起因：被問「ACCS 都好了
+嗎」，先前只看覆蓋率就答「好了」，逐章核對之後發現不是。
+
+### 新工具：`accs_audit_empty_pages.py`
+
+```bash
+python -X utf8 scripts/accs_audit_empty_pages.py          # 只列有缺口的
+python -X utf8 scripts/accs_audit_empty_pages.py --all
+```
+
+以**資料庫章覆蓋率**為判準，列出連續缺 3 章以上的書卷，並指出該書每個 checkpoint
+最後一個有內容的頁（方便回 PDF 對照）。
+
+🚨 **第一版寫成掃「連續空頁」，那條路是錯的**：每一卷書末都有附錄（人物小傳、
+   主題索引、引用經文索引），那幾十上百頁本來就吐不出條目。拿空頁去掃，13 個
+   checkpoint 全中而其中 11 個完全正常。
+
+🚨 `KNOWN_SPARSE` 是「查過而且確定是 ACCS 本來就沒註」的清單，不是「先放過再說」。
+   以西結 21–27 已回 PDF 核過：掃描本第 163 頁印的是「結 20.40-44」、第 165 頁已經
+   是第 28 章，中間只隔一頁，塞不下七章。要往裡面加東西，先做同樣的核對。
+
+### 修掉的根因：完成標記蓋在「跑過但整段吐空」的頁上
+
+`ingest_accs_genesis.py` 的 `.done` 只檢查「目標頁是否都在 checkpoint 裡」，不檢查
+那些頁有沒有吐出條目。視覺引擎乾掉的那一夜，每一頁照樣寫進
+`{"pages": [...], "entries": []}`，整本被標成完成、排程從此不再重跑——書打得開、
+前面幾章讀起來正常，後面整段悄悄不見。
+
+已加 `BLANK_RATIO_LIMIT = 0.45`：目標頁裡超過 45% 完全沒吐出條目就不寫 `.done`。
+**閘用比例不用「有沒有空頁」**——實測正常卷 18–36%、出事的兩本 60% 與 70%。
+
+### 五卷缺口的處置
+
+| 書卷 | 缺 | 病因 | 處置 |
+|---|---|---|---|
+| 耶利米書 | 全部 | 中文版沒有這一卷 | ✅ 英文 EPUB 自譯 806 則已入庫（756 列 51/52 章）|
+| 耶利米哀歌 | 全部 | 同上 | ✅ 50 列 4/5 章（缺的兩章英文原書就沒註）|
+| 利未記 | 12–27 | OCR 整段吐空 | ⏳ 已補到 19/27，剩 PDF 頁 311–332 |
+| 詩篇 | 28–50 | 同上（詩1-50 卷第 325 頁之後 384 頁全空）| ⏳ 未動 |
+| 雅歌 | 3–8 | 🚨 **掃描檔本身只到雅歌 2:7** | ❌ 要重新掃描，不是程式的事 |
+
+回 PDF 核過那些空頁確實有正文：詩1-50 第 400 頁印的是「詩 34.1-22」、出利民申
+第 330 頁是「利 27.26-34」、箴傳歌第 471 頁（全 472 頁）是「歌 2.1-7」。
+
+**重跑那些頁的作法**（利未記已照此做完一輪）：
+
+```bash
+# 1. 先備份 checkpoint，把 entries 為空的那些行刪掉，並移走 .done
+# 2. --resume 只會重跑被刪掉的頁；Gemini 乾了就 --engine sonnet
+python -X utf8 scripts/ingest_accs_genesis.py --pdf "<PDF>" --book lev   --pages 273-332 --source-vol "ACCS（lev）" --engine sonnet --resume --batch 1
+# 3. 🚨 硬性 bail（連續額度乾）走的是 SystemExit(2)，**不會 upsert**。
+#    要把已 OCR 的頁寫進 DB，拿「全部已在 checkpoint 的頁範圍」再跑一次，
+#    它會 0 頁待做 → 直接 build_rows → upsert。跑完記得檢查有沒有被誤標 .done。
+# 4. 跑完務必重跑三支冪等修正（raw 會把它們覆蓋回去）
+python -X utf8 scripts/accs_normalize_fathers.py   --apply
+python -X utf8 scripts/accs_normalize_works.py     --apply
+python -X utf8 scripts/accs_fix_worktitle_bleed.py --apply
+```
+
+### 英文 EPUB 那條線修掉的兩個坑
+
+🚨 **upload 的 `entry_order` 分組鍵要與資料表唯一鍵一模一樣**
+   `(book_code, chapter, verse_start, verse_end, entry_order)`。原本用
+   `pericope_order` 分組，同一個經文範圍分屬兩個段落時兩列都拿到 0，寫到第 300 列
+   才被唯一鍵擋下（7 組 14 列）。POST 也已改成冪等 upsert，中途失敗重跑不會變兩份。
+   第一次失敗留下的 119 列孤兒是靠「用修好後的規則重算應有的鍵、比對 DB」清掉的。
+
+🚨 **後備引擎會把自己的思考當譯文交出來。** 806 則裡 53 則中招而且不會報錯：
+   10 則整則是「We need to translate the English passage into Traditional Chinese,
+   following rules: ...」，其餘是中文句子裡夾著沒譯完的外文——hingegen（德）、
+   przeciw（波蘭）、continually、slaughter、disposition，總論的教父署名整批留成
+   英文。`accs_epub_retranslate_dirty.py` 以「中文正文裡的拉丁字母比例」挑出來，
+   走 Sonnet 重譯、**逐則驗過才寫回**，驗不過保留原譯並列出來。
+
+   判準寫在 `is_dirty()`：有 meta 語句、或拉丁字母比例 > 2% 且出現連續三個以上
+   拉丁字母。乾淨的譯文只有註腳編號與少數專名，比例趨近 0。
+
+---
+
+## 🗂️ 上一輪接手清單（2026-08-31，留作沿革）
 
 **這一輪做完的事**：書名體例統一起手（163 列）＋教父署名中間點統一與詞庫補變體
 （400 列）＋新發現並修掉第四類靜默資料錯誤「正文漏進書名欄／兩欄對調」（116 列）。
 合計寫入 **811 列**，全部先 dry-run、先備份、先核對筆數。
 
-### 🔴 英文卷十二翻譯：**74 / 806**（2026-08-31 08:00）
+### 英文卷十二翻譯（此節已過期：2026-09-02 已跑完 806/806 並入庫）
 
 ```bash
 python -X utf8 scripts/accs_ingest_epub.py --batch 8     # 續傳
