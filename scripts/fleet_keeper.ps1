@@ -147,10 +147,18 @@ if (LanePaused 'accs-gemini') {
 # for what is still dirty; --upload is idempotent (upsert + replace chunks).
 Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all','--clean','--engine','openrouter','--upload')
 
-# Overnight ACCS priority (user 2026-07-22): ACCS OCR owns Gemini; jung + philo on NVIDIA.
-# jung: full 19-vol CW queue (9ii/11/12 done, resume skips them); NVIDIA keeps Gemini for ACCS.
-Ensure 'jung-queue' 'jung_cw_translate|jung_run_queue' @('-X','utf8','scripts\jung_run_queue.py','--engine','nvidia','--no-upload')
-Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py','--engine','nvidia','--no-upload')
+# Jung: DONE 2026-09-02. All 16 translated volumes are on the site (the lane had been
+# dead since the source EPUB moved to Drive, and file_path collisions were rejecting
+# every volume but CW11 - see jung_collected_works.md). Nothing left to translate, and
+# a lane that only re-assembles 16 volumes every 30 min is pure I/O waste. Re-add it
+# only if a copyright-cleared volume shows up.
+#
+# Philo: the Plato/Aristotle queue (26 works) finished the same day and scanned clean,
+# so the lane now runs the Hellenistic/Neoplatonic queue instead - Plotinus' six
+# Enneads + Porphyry's Life, Epicurus' five letters/sayings, Epictetus' three works.
+# Those 15 hub cards have existed with zero chunks because no lane ever ran the three
+# builders. Haiku on Max: Gemini belongs to ACCS and NVIDIA has been 503-ing all day.
+Ensure 'philo-queue' 'plato_run_queue|hellenistic_run_queue' @('-X','utf8','scripts\hellenistic_run_queue.py','--engine','haiku')
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
 # Moved off Gemini 2026-08-17 so ACCS owns the Gemini pool (see top of file).
