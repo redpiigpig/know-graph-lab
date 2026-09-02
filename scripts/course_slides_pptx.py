@@ -22,7 +22,12 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.util import Cm, Pt
 
 DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
-FOLDER = '115-1_世界宗教文化導論'
+# 一門課一個資料夾；`--course=sl` 切到宗教系國文講義。
+COURSES = {
+    'wr': '115-1_世界宗教文化導論',
+    'sl': '宗教系國文講義',
+}
+FOLDER = COURSES['wr']
 IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'
 
 
@@ -345,11 +350,24 @@ def build(deck):
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
+    args = sys.argv[1:]
+    course = next((a.split('=')[1] for a in args if a.startswith('--course=')), 'wr')
+    if course != 'wr':
+        FOLDER = COURSES[course]
+        IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'
+        MANIFEST = load_manifest()
+    if course == 'sl':
+        from course_slides_data_sl import DECKS_SL
+        DECKS = DECKS_SL
+        for n in [a for a in args if not a.startswith('--')] or sorted(DECKS):
+            out, cnt = build(DECKS[int(n)])
+            print(f'✔ {out}　（{cnt} 張）')
+        raise SystemExit
     from course_slides_data import DECKS
     from course_slides_data2 import DECKS2
     from course_slides_data3 import DECKS3
     from course_slides_data4 import DECKS4
     DECKS = {**DECKS, **DECKS2, **DECKS3, **DECKS4}
-    for n in (sys.argv[1:] or ['1']):
+    for n in ([a for a in args if not a.startswith('--')] or ['1']):
         out, cnt = build(DECKS[int(n)])
         print(f'✔ {out}　（{cnt} 張）')
