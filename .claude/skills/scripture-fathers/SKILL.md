@@ -770,7 +770,8 @@ ebook、原文語言、原典網址、**每卷幾章**（章數是原典的權�
 | 奧古斯丁《論三位一體》十五卷 | NPNF1 Vol 3 | 拉丁‧The Latin Library | 逐章 | 191/202（95%）|
 | 蘇格拉底《教會史》七卷 | NPNF2 Vol 2 | 希臘‧First1KGreek TEI | 逐章 | 130/130（100%）|
 | 索佐門《教會史》九卷 | NPNF2 Vol 2 | 希臘‧First1KGreek TEI | 逐章 | 205/205（100%）|
-| 金口若望《論司祭職》 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | ⏳ OCR 12/140 塊 |
+| 金口若望《論司祭職》六卷 | NPNF1 Vol 9 | 希臘‧Migne PG 48 自家 OCR | 逐節 | 40/50（80%）|
+| 《佩爾佩圖亞與費莉西塔斯殉道記》 | ANF Vol 3 | 拉丁‧First1KGreek TEI | 逐章 | 6/6（100%）|
 
 ### 希臘原典先查 First1KGreek，不要動手 OCR
 

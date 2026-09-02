@@ -102,7 +102,7 @@ def list_remote_keys(client):
         kw = {"Bucket": BUCKET, "Prefix": R2_PREFIX}
         if token:
             kw["ContinuationToken"] = token
-        r = client.list_objects_v2(**kw)
+        r = _list_page(client, kw)
         for o in r.get("Contents", []):
             out[o["Key"]] = o["Size"]
         if not r.get("IsTruncated"):
@@ -111,22 +111,67 @@ def list_remote_keys(client):
     return out
 
 
-def list_bucket_total(client):
-    """Return (count, bytes) for the entire bucket — for free-tier ceiling check."""
+TOTAL_CACHE = Path(__file__).resolve().parent / "state" / "r2_bucket_total.json"
+TOTAL_CACHE_HOURS = 24
+
+
+def _list_page(client, kw, tries=4):
+    """列一頁，斷線就退避重試。
+
+    🚨 這個桶現在有好幾萬個物件（photos 縮圖佔絕大多數），整桶列舉要翻幾十頁，
+       中途斷一次就整趟白做。實測會出現 EndpointConnectionError 與
+       「SSL: UNEXPECTED_EOF_WHILE_READING」，兩種都是暫時性的。
+    """
+    last = None
+    for i in range(tries):
+        try:
+            return client.list_objects_v2(**kw)
+        except Exception as e:          # botocore 的暫時性連線錯誤種類很多
+            last = e
+            time.sleep(2 ** i)
+    raise last
+
+
+def list_bucket_total(client, use_cache=True):
+    """Return (count, bytes) for the entire bucket — for free-tier ceiling check.
+
+    整桶掃一趟很貴又容易斷，所以結果存一天。傳一本書的差量對 10 GB 的天花板來說
+    是雜訊，用昨天的數字判斷完全夠；但這道閘不能拿掉——它是 R2 免費額度的守門。
+    """
+    import json as _json
+    if use_cache and TOTAL_CACHE.exists():
+        try:
+            c = _json.loads(TOTAL_CACHE.read_text(encoding="utf-8"))
+            if time.time() - c["at"] < TOTAL_CACHE_HOURS * 3600:
+                print(f"  （沿用 {(time.time() - c['at']) / 3600:.1f} 小時前掃的整桶用量）")
+                return c["n"], c["b"]
+        except Exception:
+            pass
     total_n = 0
     total_b = 0
     token = None
-    while True:
-        kw = {"Bucket": BUCKET}
-        if token:
-            kw["ContinuationToken"] = token
-        r = client.list_objects_v2(**kw)
-        for o in r.get("Contents", []):
-            total_n += 1
-            total_b += o["Size"]
-        if not r.get("IsTruncated"):
-            break
-        token = r.get("NextContinuationToken")
+    try:
+        while True:
+            kw = {"Bucket": BUCKET}
+            if token:
+                kw["ContinuationToken"] = token
+            r = _list_page(client, kw)
+            for o in r.get("Contents", []):
+                total_n += 1
+                total_b += o["Size"]
+            if not r.get("IsTruncated"):
+                break
+            token = r.get("NextContinuationToken")
+    except Exception as e:
+        if TOTAL_CACHE.exists():
+            c = _json.loads(TOTAL_CACHE.read_text(encoding="utf-8"))
+            print(f"  ⚠ 整桶列舉中斷（{type(e).__name__}），改用 "
+                  f"{(time.time() - c['at']) / 3600:.1f} 小時前的數字")
+            return c["n"], c["b"]
+        raise
+    TOTAL_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    TOTAL_CACHE.write_text(
+        _json.dumps({"at": time.time(), "n": total_n, "b": total_b}), encoding="utf-8")
     return total_n, total_b
 
 
@@ -146,7 +191,7 @@ def cmd_status():
 
     print(f"\nR2 bucket: {BUCKET}")
     client = get_r2_client()
-    bucket_n, bucket_b = list_bucket_total(client)
+    bucket_n, bucket_b = list_bucket_total(client, use_cache=False)
     print(f"  Whole bucket: {bucket_n} objects, {fmt_size(bucket_b)}  (free tier: {FREE_TIER_GB} GB)")
 
     remote = list_remote_keys(client)
