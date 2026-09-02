@@ -90,13 +90,30 @@ def viewer_info(system_id, fullpath):
     return fp["value"], int((cnt.get("value") if cnt else "0") or 0)
 
 
-def fetch_page(enc, page):
-    """→ (檔名, bytes)。回傳格式是 `檔名|data:image/jpeg;base64,...`。"""
-    t = curl(f"{BASE}/ELK/LoadImages?encPath={enc}&page={page}&type=9&ck=false")
-    if "|" not in t or "base64," not in t:
-        return None, None
-    name, data = t.split("|", 1)
-    return safe(name.split("=")[-1] or f"{page:04d}.jpg", 60), base64.b64decode(data.split("base64,", 1)[1])
+def fetch_page(enc, page, tries=3):
+    """→ (檔名, bytes)。回傳格式是 `檔名|data:image/jpeg;base64,...`。
+
+    🚨 回應會被截斷。截斷的徵狀是 base64 解碼丟
+       `Invalid base64-encoded string: number of data characters cannot be
+       1 more than a multiple of 4`——那不是「這一頁沒有影像」，是這一次沒收完。
+       實測 6,731 張裡有 20 張是這樣掉的。所以要重抓，不要直接記成缺頁。
+    """
+    for i in range(tries):
+        t = curl(f"{BASE}/ELK/LoadImages?encPath={enc}&page={page}&type=9&ck=false")
+        if "|" not in t or "base64," not in t:
+            time.sleep(2 ** i)
+            continue
+        name, data = t.split("|", 1)
+        try:
+            blob = base64.b64decode(data.split("base64,", 1)[1])
+        except Exception:                      # 截斷：重抓
+            time.sleep(2 ** i)
+            continue
+        if blob[:3] != bytes((0xFF, 0xD8, 0xFF)):   # 不是 JPEG 就是拿到錯的東西
+            time.sleep(2 ** i)
+            continue
+        return safe(name.split("=")[-1] or f"{page:04d}.jpg", 60), blob
+    return None, None
 
 
 def run(section, limit=0):

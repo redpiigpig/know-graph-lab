@@ -163,9 +163,26 @@ def iter_ct():
     return _iter_txt("evangelical-fulltext/ct", meta)
 
 
+def iter_krt():
+    """《國度復興報》。按快照年打包在 evangelical-fulltext/krt/<年>.jsonl.gz。
+
+    🚨 **年份一律回空字串**。這批只有 capturedAt（Wayback 快照日）而沒有發布日期
+    ——三種欄位都驗過是站台固定值或快照日（見 press_krt.py）。快照日是「發布日的
+    上限」不是發布日，拿它當年份會讓年代曲線看起來成立而其實是假的。
+    語料層本來就把取不到年份的歸到 "" 那一桶，這裡照辦。
+    """
+    for key in sorted(df.r2_existing_keys("evangelical-fulltext/krt")):
+        for line in df.r2_get_text(key).splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            yield str(r["id"]), "", r.get("title", ""), r["text"]
+
+
 CORPORA = {
     "tcnn": {"name": "台灣教會公報新聞網", "side": "基督教", "iter": iter_tcnn},
     "ct": {"name": "基督教論壇報", "side": "基督教", "iter": iter_ct},
+    "krt": {"name": "國度復興報", "side": "基督教", "iter": iter_krt},
     "new-messenger": {"name": "新使者", "side": "基督教", "iter": iter_new_messenger},
     "miaoxin": {"name": "妙心雜誌", "side": "佛教", "iter": iter_miaoxin},
     "hongshi": {"name": "弘誓雙月刊", "side": "佛教", "iter": iter_hongshi_magazine},
