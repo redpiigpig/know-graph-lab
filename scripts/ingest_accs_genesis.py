@@ -386,6 +386,10 @@ def delete_book_rows(book: str, demo_only: bool = False) -> None:
     print(f"  delete {'demo ' if demo_only else ''}rows ({book}): {r.status_code}")
 
 
+# 目標頁裡「跑過卻一條都沒吐」的比例上限。超過就不寫完成標記。
+BLANK_RATIO_LIMIT = 0.45
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdf", required=True)
@@ -522,7 +526,29 @@ def main():
             covered.update(_rec_pages(json.loads(ln)))
         except Exception:
             pass
+    # 🚨 「頁跑過了」不等於「頁有東西」。視覺引擎乾掉的那一夜，每一頁照樣寫進
+    #    {"pages": [...], "entries": []}，本書於是被標成完成，排程從此不再重跑——
+    #    書打得開、前面幾章讀起來正常，後面整段悄悄不見。2026-09-02 查出兩本中招：
+    #    詩篇 1-50 卷第 325 頁之後全空（詩 28–50 章沒進庫）、利未記第 294 頁之後全空
+    #    （利 12–27 章沒進庫），兩本的 .done 都寫著「全部頁數」。
+    #    🚨 不可用「有沒有空頁」當判準：書末附錄（人物小傳／主題索引／引用經文索引）
+    #    本來就吐不出條目。實測正常卷的空頁比例 18–36%，出事的兩本是 60% 與 70%。
+    live: set[int] = set()
+    for ln in ckpt.read_text(encoding="utf-8").splitlines():
+        try:
+            rec = json.loads(ln)
+        except Exception:
+            continue
+        if rec.get("entries"):
+            live.update(_rec_pages(rec))
+    blank_ratio = 1 - len(live & set(pages)) / max(len(set(pages)), 1)
     if set(pages) and set(pages).issubset(covered):
+        if blank_ratio > BLANK_RATIO_LIMIT:
+            print(f"  [not-done] {len(set(pages))} 頁裡 {blank_ratio:.0%} 完全沒吐出條目"
+                  f"（上限 {BLANK_RATIO_LIMIT:.0%}）——多半是引擎當時乾了。不寫完成標記，"
+                  f"讓下一輪重跑；跑 scripts/accs_audit_empty_pages.py 看缺哪幾章。",
+                  flush=True)
+            return
         done_marker = ckpt.with_suffix(".done")
         done_marker.write_text(f"{len(covered)} pages\n", encoding="utf-8")
         print(f"  [done] all {len(set(pages))} target pages OCR'd → {done_marker.name}", flush=True)
