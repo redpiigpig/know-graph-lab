@@ -2638,6 +2638,29 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         { year: '1961', text: '12 月 25 日卒；歿後岩波書店編《矢內原忠雄全集》29 卷（1963–65）。' },
       ],
       works: [
+        // 時論與信仰（青空文庫，零 OCR，2026-09-02 上架）
+        {
+          title: '帝大聖經研究會終講之辭',
+          titleOriginal: '帝大聖書研究会終講の辞',
+          year: '1937',
+          yearSort: 1937,
+          category: '時論與信仰',
+          languages: ['ja'],
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000001',
+          note: '因〈國家的理想〉遭迫去職前的最後一講，講《以賽亞書》三十四、三十五章。青空文庫（新字新假名）；日文原文＋繁中對照。',
+        },
+        {
+          title: '讀書與著書',
+          titleOriginal: '読書と著書',
+          year: '1938',
+          yearSort: 1938,
+          category: '時論與信仰',
+          languages: ['ja'],
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000002',
+          note: '論讀書之道與著述之責。青空文庫（新字新假名）；日文原文＋繁中對照。',
+        },
         // 殖民政策學
         {
           title: '殖民與殖民政策',

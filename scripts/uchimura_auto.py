@@ -54,13 +54,19 @@ def use_author(name: str) -> None:
 _TRIVIAL_HEADING = re.compile(r"^[\s0-9０-９一二三四五六七八九十百IVXLivxl.、。．・：:＝=－ー\-—–()（）\[\]［］]*$")
 
 
+def clean_heading(out: str, heading: str) -> str:
+    """引擎常把原標題連著譯文一起吐回來（「門をたたけ 叩門吧」），只留譯文那半。"""
+    out = (out or "").strip()
+    if out.startswith(heading):
+        out = out[len(heading):].strip(" 　:：・-——")
+    return out or heading
+
+
 def heading_zh(heading: str, fallback: str, translate_para) -> str:
     """章名的中譯：瑣碎標題原樣留著，其餘翻過之後擋掉 prompt echo。"""
     if not heading or _TRIVIAL_HEADING.match(heading):
         return heading or fallback
-    out = (translate_para(heading) or "").strip()
-    if not out:
-        return heading
+    out = clean_heading(translate_para(heading) or "", heading)
     import translate_ebook_to_zh as te
     if te._looks_like_prompt_echo(out) or len(out) > max(40, len(heading) * 4):
         return heading
@@ -130,9 +136,13 @@ def fix_headings(slug: str) -> list[str]:
         if not title:
             continue
         if te._looks_like_prompt_echo(title) or len(title) > max(40, len(head) * 4):
-            c["title_zh"] = head if head not in ("(front)", "") else ub.REGISTRY[slug]["title"]
+            new = head if head not in ("(front)", "") else ub.REGISTRY[slug]["title"]
+        else:
+            new = clean_heading(title, head)
+        if new != title:
+            c["title_zh"] = new
             cp.write_text(json.dumps(c, ensure_ascii=False, indent=1), encoding="utf-8")
-            fixed.append(f"sec{i}: {title[:24]} → {c['title_zh']}")
+            fixed.append(f"sec{i}: {title[:24]} → {new}")
     return fixed
 
 
