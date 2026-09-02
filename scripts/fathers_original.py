@@ -364,6 +364,230 @@ def parse_tei_letters(xml: str) -> dict[int, list[str]]:
     return out
 
 
+# ── Corpus Corporum 的 Migne PL（mlat.uzh.ch）─────────────────────────────────
+# 蘇黎世大學把整套《拉丁教父學大全》做成了機讀的 TEI（5,277 部、8,550 萬字，
+# 底本是 Open Greek and Latin 的 patrologia_latina-dev）。The Latin Library 與兩個
+# 希臘 TEI 庫都沒有的拉丁教父——居普良、耶柔米書信、迦仙、安波羅修——都在裡面，
+# 所以這一批不必走 PL 掃描本的自家 OCR。
+#
+#   目錄：https://mlat.uzh.ch/php_modules/navigate.php?load=/38/{作者}/{作品}
+#   取檔：https://mlat.uzh.ch/php_modules/download.php?idno={文本 idno}&type=file-xml
+#
+# 🚨 這份 TEI 的 <emph> 幾乎都是 Migne 的欄號（1,123 個裡 1,113 個是純數字），
+#    夾在句子中間（「Saepe <emph>1</emph> a me…」）。不剔掉的話拉丁文裡會冒出
+#    一串莫名其妙的數字——讀者看得到，卻看不出那是什麼。
+# 🚨 <note> 同樣要整個剔掉，但 tail 要接回去（同 parse_tei_chapters 的理由）。
+NUMERIC_ONLY = re.compile(r"^\s*\d{1,4}\s*$")
+CC_SECTION_HEAD = re.compile(r"^\s*(\d{1,3})\s*\.?\s*$")
+CC_EPISTLE_HEAD = re.compile(r"EPISTOLA\s+([IVXLCDM]+)")
+
+
+def strip_apparatus(el, numeric_emph: bool = False):
+    """回傳剔掉 <note>（與純數字 <emph>）之後的純文字。
+
+    刪節點時一定要把它的 tail 接到前一個節點上——不接的話，註釋後面那一截正文
+    會跟著消失，而畫面上留下的仍是一段通順的拉丁文。
+    """
+    from lxml import etree
+
+    clone = etree.fromstring(etree.tostring(el))
+    targets = './/*[local-name()="note"]'
+    if numeric_emph:
+        targets += ' | .//*[local-name()="emph"]'
+    for bad in clone.xpath(targets):
+        if bad.tag.endswith("emph") and not NUMERIC_ONLY.match("".join(bad.itertext())):
+            continue
+        tail = bad.tail or ""
+        parent, prev = bad.getparent(), bad.getprevious()
+        if prev is not None:
+            prev.tail = (prev.tail or "") + tail
+        else:
+            parent.text = (parent.text or "") + tail
+        parent.remove(bad)
+    return " ".join(" ".join(clone.itertext()).split())
+
+
+def parse_cc_letters(xml: str) -> tuple[dict[tuple[int, int], str], list[str]]:
+    """把 Corpus Corporum 的書信集 TEI 切成 {(信號, 節號): 拉丁文}。
+
+    結構是 <div1> 一封信、<div3> 一節，節的 <head> 就是「1.」「2.」。回傳的第二
+    項是逐封的自我檢查訊息，空的才算對得上。
+
+    🚨 **信號取 div1 的順序，不取 <head> 裡的羅馬數字**——126 封的 head 寫成
+       「EPISTOLA XVI.」，另外 24 封寫成「EPISTOLA XLVIII,」（逗號）或整個沒有
+       head。但兩者一致與否是最好的閘：150 個 div1 逐一比對下來全部相符，
+       所以順序是可信的。不符就記進 problems，寧可整封不收。
+
+    🚨 **第一節常常沒有自己的 div3**（150 封裡有 27 封），正文落在 div1 這一層的
+       <p>，而那一層的第一段是 Migne 的內容提要（argumentum，整段斜體）不是正文。
+       不認出來的話每一封的第一節都會拿到提要——提要是第三人稱的拉丁散文，貼在
+       第三欄讀起來完全像正文。判法是「這一段幾乎整段包在 <hi> 裡」。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"), etree.XMLParser(recover=True))
+    ns = "{http://www.tei-c.org/ns/1.0}"
+    body = root.find(f".//{ns}body")
+    out: dict[tuple[int, int], str] = {}
+    problems: list[str] = []
+    if body is None:
+        return out, ["TEI 裡找不到 <body>"]
+    for no, div in enumerate(body.findall(f"{ns}div1"), start=1):
+        declared = None
+        for head in div.findall(f"{ns}head"):
+            m = CC_EPISTLE_HEAD.search(strip_apparatus(head, True).upper())
+            if m:
+                declared = roman_to_int(m.group(1))
+                break
+        if declared is not None and declared != no:
+            problems.append(f"第 {no} 封的 head 自稱 EPISTOLA {declared}")
+            continue
+        sections: dict[int, str] = {}
+        # 🚨 節不一定是 div1 的直屬子節點：有序言或問題目次的信（117、120、121）
+        #    多一層 div2，只找直屬子節點的話那三封整封空著，而其餘 147 封滿分。
+        for sub in div.iter(f"{ns}div3"):
+            head = sub.find(f"{ns}head")
+            m = CC_SECTION_HEAD.match(strip_apparatus(head, True)) if head is not None else None
+            if not m:
+                continue
+            if head is not None:
+                sub = etree.fromstring(etree.tostring(sub))
+                sub.remove(sub.find(f"{ns}head"))
+            sections[int(m.group(1))] = strip_apparatus(sub, True)
+        if 1 not in sections:
+            kept = []
+            for i, para in enumerate(div.findall(f"{ns}p")):   # 只看直屬的
+                whole = strip_apparatus(para, True)
+                italic = sum(len("".join(h.itertext())) for h in para.findall(f"{ns}hi"))
+                if i == 0 and italic > 0.8 * max(len(whole), 1):
+                    continue          # Migne 的內容提要，不是正文
+                if whole:
+                    kept.append(whole)
+            if kept:
+                sections[1] = " ".join(kept)
+        for n, text in sections.items():
+            if text:
+                out[(no, n)] = text
+    return out, problems
+
+
+# ── 中譯自己宣告的信號 ──────────────────────────────────────────────────────
+# 耶柔米那一冊的 chapter_path 從第 140 段起與內文脫節（見 SKILL.md），所以「這是
+# 第幾封信」只能問內文自己。同一冊裡至少有十四種寫法：
+#   第一信／信件第四封／Letter VIII./第十一函／十二、／書信第十三封／XVI./
+#   第二十二封／信簡四十／信函 L./第60封信／第一三一號／信第一百四十四封／信件CL.
+ZH_POSITIONAL = {"零": 0, "〇": 0, "○": 0, "一": 1, "二": 2, "三": 3, "四": 4,
+                 "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
+ROMAN_VALUE = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+_ZH = r"[零〇○一二三四五六七八九十百]+"
+_UNIT = r"(?:封信|封|函|號|信|卷|篇|書信|簡狀)"
+# 「第一三一號」是逐位寫的（131），「第一百三十一」是進位寫的。有十／百／千就是
+# 後者，交給 zh_numeral；沒有就逐位讀。
+LETTER_FORMS = [
+    (re.compile(rf"第\s*({_ZH})\s*{_UNIT}"), "zh"),
+    (re.compile(rf"第\s*({_ZH})(?![零〇○一二三四五六七八九十百章節次年日月世個位人])"), "zh"),
+    (re.compile(rf"第\s*(\d{{1,3}})\s*{_UNIT}"), "int"),
+    (re.compile(rf"(?:信函|書信|信札|信簡|書簡|信件|信)\s*({_ZH})(?=\s*[致論出來從自，。：:])"), "zh"),
+    (re.compile(rf"({_ZH})、"), "zh"),
+    (re.compile(r"(?:Letter|Epistle)\s+([IVXLCDM]+)"), "roman"),
+    (re.compile(r"(?<![A-Za-z])([IVXLCDM]{1,9})(?![A-Za-z])"), "roman"),
+]
+
+
+def roman_to_int(s: str) -> int | None:
+    n = 0
+    for i, ch in enumerate(s):
+        v = ROMAN_VALUE.get(ch)
+        if v is None:
+            return None
+        nxt = ROMAN_VALUE.get(s[i + 1]) if i + 1 < len(s) else None
+        n += -v if nxt and nxt > v else v
+    return n
+
+
+def positional_numeral(s: str) -> int | None:
+    if any(c in s for c in "十百千"):
+        return zh_numeral(s.replace("○", "〇"))
+    n = 0
+    for c in s:
+        if c not in ZH_POSITIONAL:
+            return None
+        n = n * 10 + ZH_POSITIONAL[c]
+    return n
+
+
+def heading_region(md: str, limit: int = 60) -> str:
+    """只取開頭那幾行標題。整段掃會讀到內文的交叉引用而讀成別封信。"""
+    out: list[str] = []
+    for line in (md or "").split("\n"):
+        s = re.sub(r"\{\{?p:\d+\}?\}", "", line).strip()
+        if not s:
+            continue
+        out.append(s.lstrip("#").strip())
+        if len(" ".join(out)) > 40:
+            break
+    return " ".join(out)[:limit]
+
+
+def declared_letter_no(md: str, ceiling: int = 150) -> int | None:
+    """從中譯自己的標題讀出信號。讀不準回 None——猜不如空著。
+
+    🚨 取「最早出現」的那個編號，不是「第一種成立的寫法」。〈書簡 LVI〉的導言
+       第二句就寫著「寫給耶柔米的第一封信」，先試「第N封信」那一式會讀成第 1 封，
+       而第 1 封本來就在，於是同一封拉丁文被貼到兩個地方，兩邊都通順。
+    """
+    head = heading_region(md)
+    best: tuple[int, int] | None = None
+    for pat, kind in LETTER_FORMS:
+        m = pat.search(head)
+        if not m:
+            continue
+        raw = m.group(1)
+        n = (positional_numeral(raw) if kind == "zh"
+             else int(raw) if kind == "int" else roman_to_int(raw))
+        if n and 1 <= n <= ceiling and (best is None or m.start() < best[1]):
+            best = (n, m.start())
+    return best[0] if best else None
+
+
+def letter_anchors(body: list[str]) -> list[tuple[int, int]]:
+    """書信裡的節錨點：段首的「3. 」與獨佔一行的「## 3」兩種都算。
+
+    耶柔米那一冊 150 封裡有 147 封用前者，第 1、3、7 封用後者——只認一種的話
+    那三封整封空著，而其餘 147 封滿分，看起來像那三封本來就沒有原文。
+    """
+    out = dict(section_numbers(body))
+    for i, p in enumerate(body):
+        m = NUM_HEADING.match(p)
+        if not m or i in out:
+            continue
+        # 「## 3」自己是一行標題、正文在下一段。原文放在標題那一格的話，中譯欄
+        # 那一列只有一個「3」，而正文那一列空著——兩欄看起來就差了一列。
+        at = i + 1 if i + 1 < len(body) and i + 1 not in out else i
+        out[at] = int(m.group(1))
+    return sorted(out.items())
+
+
+NUM_HEADING = re.compile(r"^#{1,4}\s*(\d{1,3})\s*\.?\s*$")
+
+
+
+def align_by_letter_section(body: list[str], letter: int | None,
+                            sections: dict[tuple[int, int], str]
+                            ) -> tuple[list[str], int, int]:
+    """書信集逐節對齊：把第 letter 封的第 n 節排到中譯第 n 節那一格。"""
+    col = [""] * len(body)
+    hit = numbered = 0
+    for i, n in letter_anchors(body):
+        numbered += 1
+        text = sections.get((letter, n))
+        if text:
+            col[i] = text
+            hit += 1
+    return col, hit, numbered
+
+
+
 # 第六種行標：方括號裡是「羅馬章號＋阿拉伯節號」，同章其餘的節只寫節號。
 #   [I 1] Lecturus haec quae de trinitate disserimus…
 #   [2]   Vt ergo ab huiusmodi falsitatibus…

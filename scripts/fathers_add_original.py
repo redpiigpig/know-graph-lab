@@ -54,6 +54,8 @@ _spec.loader.exec_module(FO)
 #   chapter   — 原典只有 `[I]` 這種章號，中譯只有「第N章」標題 → 逐章對齊（較粗）
 #   greek     — 原典是 Migne PG 掃描本的自家 OCR 帳本（scripts/fathers_pg_ocr.py），
 #               ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號與中英譯的 1. 2. 是同一套編次 → 逐節
+#   cc-letter — 原典是 Corpus Corporum（mlat.uzh.ch）的 Migne PL 書信集 TEI，
+#               <div1> 一封、<div3> 一節；中譯的信號由每段自己的標題讀出
 #   roman     — 原典行標是 `I. [1] …`（行首羅馬章號＋章內方括號節號），中譯只有
 #               「第N章」標題 → 逐章對齊。特土良全集那一系。
 # 四種都不猜：對不上就留空。
@@ -307,6 +309,24 @@ WORKS: dict[str, dict] = {
         # 比烏同一種形狀，靠 resolve_continuous() 反推是哪一篇。
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2959/tlg001/tlg2959.tlg001.opp-grc1.xml"],
     },
+    "jerome-letters": {
+        "label": "耶柔米《書信集》150 封（NPNF2 第六卷）",
+        "ebook_id": "d229a6d4-14de-4e28-92de-4855c75cbf68",
+        "prefix": "耶柔米書信集",
+        "lang": "la",
+        "mode": "cc-letter",
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 22 的 TEI，蘇黎世大學",
+        # 這一部的拉丁全本兩個易取的站都沒有（The Latin Library 只到第十封、拉丁文
+        # 維基文庫只有十八封而且標題不帶編號）。Corpus Corporum 把整套 PL 做成了
+        # 機讀 TEI，所以不必走 PL 22 掃描本的自家 OCR。
+        #
+        # 🚨 這一冊的 chapter_path 從第 140 段起與內文脫節（中譯少了第 130、133、
+        #    135 封，路徑卻照排，於是往後每一段的標題都指著前一封信；第 158 段起
+        #    路徑寫著書信、內文已經是《保羅隱士傳》那些論著了）。所以信號一律由
+        #    內文自己的標題讀（declared_letter_no），不看 chapter_path——看路徑的話
+        #    第 140 段之後整批配到隔壁那封信，而拉丁文照樣通順、命中率照樣好看。
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7132&type=file-xml"],
+    },
     "basil-letters": {
         "label": "巴西流《書信集》（NPNF2 第八卷）",
         "ebook_id": "3c48472c-fbca-48fb-9db1-ca5a08827ef3",
@@ -481,6 +501,17 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "greek":
         paragraphs = load_greek_ledger(Path(spec["ledger"]))
         return {}, paragraphs, {}
+    if spec["mode"] == "cc-letter":
+        s = requests.Session()
+        s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
+        r = s.get(spec["urls"][0], timeout=300)
+        r.raise_for_status()
+        sections, problems = FO.parse_cc_letters(r.text)
+        letters = len({k[0] for k in sections})
+        print(f"  抓 Corpus Corporum TEI → {letters} 封 / {len(sections)} 節")
+        for msg in problems:
+            print(f"  ⚠ {msg}")
+        return {}, sections, {}
     if spec["mode"] == "letter":
         s = requests.Session()
         s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
@@ -777,7 +808,36 @@ def parts_of(spec: dict) -> list[tuple[str, dict]]:
             for prefix, urls in grouped.items()]
 
 
+def cc_letter_spans(chunks: list[dict]) -> dict[int, FO.Span]:
+    """書信集：每一段的信號由它自己的標題讀出，chapter_path 一概不看。
+
+    一串合格的書信要同時滿足三件事——這三條就是這一部的閘：
+      · 從宣告「第一封」的那一段起算；
+      · 段序連續（中間跳號代表跑到別的東西上去了）；
+      · 信號嚴格遞增（讀錯、或讀到內文的交叉引用，會在這裡現形）。
+
+    🚨 **取最長的那一串，不是第一串。** 這一冊的〈導論〉六節編成 I.–VI.，照樣
+       成立一串「第 1–6 封」，接在最前面。取第一串的話只收到那六段導論——而那
+       六段真的配得上耶柔米前六封信的拉丁文，六段都是拉丁散文，看起來很正常。
+    """
+    ordered = sorted(chunks, key=lambda c: c["chunk_index"])
+    declared = [(c["chunk_index"], FO.declared_letter_no(c.get("content") or ""))
+                for c in ordered]
+    best: list[tuple[int, int]] = []
+    run: list[tuple[int, int]] = []
+    for idx, no in declared:
+        if run and no is not None and no > run[-1][1] and idx == run[-1][0] + 1:
+            run.append((idx, no))
+        else:
+            run = [(idx, no)] if no == 1 else []
+        if len(run) > len(best):
+            best = list(run)
+    return {idx: FO.Span(no, 1, 1) for idx, no in best}
+
+
 def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
+    if part["mode"] == "cc-letter":
+        return cc_letter_spans(chunks)
     out: dict[int, FO.Span] = {}
     for c in chunks:
         cp = c.get("chapter_path") or ""
@@ -833,7 +893,7 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
        （該卷只到第 35 章，標籤照樣寫「第31-40章」），拿它比對會冒出一堆不存在的
        「多出章」，把真正的缺章淹掉。要數內文裡真的出現的章標題。
     """
-    if part["mode"] == "letter":
+    if part["mode"] in ("letter", "cc-letter"):
         return []
     if part["mode"] == "greek":
         found = []
@@ -961,6 +1021,19 @@ def run_work(name: str, a) -> int:
                     cols[c["chunk_index"]] = col
                 elif n:
                     skipped.append(f"{c['chapter_path']}（節數與原文段數對不上）")
+        elif part["mode"] == "cc-letter":
+            for c in chunks:
+                sp = spans.get(c["chunk_index"])
+                if not sp:
+                    continue
+                body = FO.split_body(c.get("content") or "")
+                col, h, n = FO.align_by_letter_section(body, sp.book, paragraphs)
+                hit += h
+                num += n
+                if h:
+                    cols[c["chunk_index"]] = col
+                elif n:
+                    skipped.append(f"第 {sp.book} 封（{n} 個節錨點全對不上）")
         elif part["mode"] in ("paragraph", "greek"):
             for c in chunks:
                 sp = spans.get(c["chunk_index"])
