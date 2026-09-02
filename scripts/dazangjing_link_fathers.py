@@ -16,7 +16,23 @@
 靈」會配到「論聖靈與字句」。所以改成每卷書問一次 LLM，給它整卷目錄與候選定
 名做對齊；回傳的單元名必須逐字存在於該卷目錄中，否則整筆丟掉。
 
-🚨 只產提案，不寫回 data/dazangjing/*.ts——那一步要人看過。
+五道閘（前兩道在採用時、後三道在 finish()，可用 --from-jsonl 重跑不必再打 LLM）：
+  1. 定名必須在候選清單裡
+  2. 單元名必須逐字對得上該冊目錄
+  3. 單元名不是導言／序／光禿禿的「第N章」
+  4. 單元名點名的教父與該條的作者不衝突（兩邊都認得出來才算數——譯名不同不算，
+     科莫狄安／科摩狄安、蘇爾皮基烏／蘇皮修都是同一人）
+  5. 同一冊三部以上被依序填成「…第1章」「…第2章」「…第3章」時整組丟掉
+
+🚨 只產提案，不寫回 data/dazangjing/*.ts——那一步要人看過。五道閘擋不掉的還有一種：
+   **同一位作者、但不是那一部**。實測第二輪 16 條裡有 6 條是這樣——奧古斯丁《信望
+   愛手冊》配到「奧古斯丁道德論集」（它其實在教義論集卷二）、尼撒的格列高里《論靈
+   魂與復活》配到「哲學著作卷一」（那是《論人的造成》）、《六日創造解》配到「護教
+   著作」（那是《大教理書》）。作者對、冊也對、單元名也真的在目錄裡，只有讀過那一
+   卷的人分得出來。逐條核的辦法：拿 link 的 page 回頭查該冊 JSONL 第 page 段的
+   chapter_path，再對作者。
+
+第一輪 145 條、第二輪 10 條已寫回 ancient.ts（共 155 條直達）。
 """
 from __future__ import annotations
 
@@ -231,7 +247,8 @@ def main() -> int:
                 Path(a.from_jsonl).read_text(encoding="utf-8").splitlines() if l.strip()]
         corpus = json.loads(Path(a.corpus).read_text(encoding="utf-8"))
         total = sum(1 for w in corpus if w["link"] == "/fathers")
-        return finish(rows, total, Path(a.out), a.min_confidence)
+        return finish(rows, total, Path(a.out), a.min_confidence,
+                      build_zh2en(PROP.load_people()[2]))
 
     AI.load_dotenv()
     chunks_dir = Path(a.chunks_dir or os.environ["EBOOK_CHUNKS_DIR"])
@@ -311,11 +328,79 @@ def main() -> int:
     # 原始結果先落地，之後調閘用 --from-jsonl 重跑就好，不必再打一輪 LLM
     Path(a.out).with_suffix(".raw.jsonl").write_text(
         "\n".join(json.dumps(r, ensure_ascii=False) for r in results), encoding="utf-8")
-    return finish(results, len(targets), Path(a.out), a.min_confidence)
+    return finish(results, len(targets), Path(a.out), a.min_confidence, zh2en)
 
 
-def finish(results: list[dict], total: int, out: Path, min_conf: float) -> int:
-    """三道閘 → 報告。與主流程分開，好讓 --from-jsonl 走同一段。"""
+# 指到卷首導言、或只有一個光禿禿「第N章」的單元，等於沒對到那一部。
+BAD_UNIT = re.compile(r"^(導言|引言|導論|前言|序|緒論|凡例|編者|第[一二三四五六七八九十\d]+章)"
+                      r"[（(]?[^》]{0,6}[）)]?$")
+
+
+def wrong_author(unit: str, author: str, zh2en: dict[str, set[str]]) -> bool:
+    """單元名點名了某位教父，而那位不是這一條的作者 → 丟掉。
+
+    🚨 實測第二輪 24 條裡有兩條是這樣：託名居普良的《論慶觀劇》配到「特土良論觀
+       劇」（同名不同書），亞挪比烏的《駁外邦人七卷》配到「特土良致萬民」。兩條
+       信心都是 1.0，單元名也逐字對得上目錄——前面那兩道閘都攔不住。
+    """
+    def ens(text: str) -> set[str]:
+        # 詞元切法對不上定名時（「託名居普良」是一整串、沒有分隔），改用「定名是
+        # 不是這串字的一部分」。少了這一步，託名居普良會被判成沒認出作者。
+        text = re.sub(r"[的‧·・《》〈〉]", " ", text or "")
+        return {e for zh, es in zh2en.items() if zh in text for e in es}
+    in_unit, in_author = ens(unit), ens(author)
+    # 兩邊都認得出教父、而且互相不同，才算對不上。有一邊認不出來就沒有證據——
+    # 譯名不同（科莫狄安／科摩狄安、蘇爾皮基烏／蘇皮修）不能當成配錯。
+    return bool(in_unit) and bool(in_author) and not (in_unit & in_author)
+
+
+SEQ_UNIT = re.compile(r"^(?P<stem>.+?)\s*第(?P<n>\d+)章$")
+
+
+def sequential_fill(results: list[dict]) -> list[dict]:
+    """同一冊裡三部以上不同的著作被依序填進「…第1章」「…第2章」「…第3章」。
+
+    🚨 這是本腳本最常見也最像成功的錯法：模型不知道那一部在不在這一冊，就照候選
+       的順序把章號填下去，信心還開得很高。實測尼撒的格列高里四部著作被填進「教
+       義論集 第1章」到「第4章」（信心全 0.8），安波羅修八部被填進「論著選 第
+       1-10章」到「第71-80章」。整組丟掉，不要挑著留。
+    """
+    groups: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for r in results:
+        m = SEQ_UNIT.match(r["unit"])
+        if m:
+            groups[(r["ebook_id"], m.group("stem"))].append((int(m.group("n")), r))
+    bad = set()
+    for rows in groups.values():
+        ns = sorted(n for n, _ in rows)
+        if len(ns) >= 3 and ns == list(range(ns[0], ns[0] + len(ns))):
+            bad |= {id(r) for _, r in rows}
+    return [r for r in results if id(r) in bad]
+
+
+def finish(results: list[dict], total: int, out: Path, min_conf: float,
+           zh2en: dict[str, set[str]] | None = None) -> int:
+    """五道閘 → 報告。與主流程分開，好讓 --from-jsonl 走同一段。"""
+    zh2en = zh2en or {}
+    bad_unit = [r for r in results if BAD_UNIT.match(r["unit"])]
+    results = [r for r in results if not BAD_UNIT.match(r["unit"])]
+    bad_author = [r for r in results
+                  if wrong_author(r["unit"], r.get("author", ""), zh2en)]
+    results = [r for r in results
+               if not wrong_author(r["unit"], r.get("author", ""), zh2en)]
+    if bad_unit:
+        print(f"單元名是導言／光禿禿的第N章，不採用 {len(bad_unit)} 條")
+    if bad_author:
+        print(f"單元名點名的教父與作者不符，不採用 {len(bad_author)} 條")
+        for r in bad_author[:6]:
+            print(f"  · {r['title_zh']}（{r.get('author')}）→ {r['unit']}")
+    seq = sequential_fill(results)
+    if seq:
+        print(f"同一冊被依序填成第1、2、3…章，整組不採用 {len(seq)} 條")
+        for r in seq[:4]:
+            print(f"  · {r['title_zh']} → {r['unit']}")
+        ids = {id(r) for r in seq}
+        results = [r for r in results if id(r) not in ids]
     lowconf = [r for r in results if (r.get("confidence") or 0) < min_conf]
     results = [r for r in results if (r.get("confidence") or 0) >= min_conf]
     if lowconf:
