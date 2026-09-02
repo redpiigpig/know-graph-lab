@@ -158,7 +158,9 @@ Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all
 # Enneads + Porphyry's Life, Epicurus' five letters/sayings, Epictetus' three works.
 # Those 15 hub cards have existed with zero chunks because no lane ever ran the three
 # builders. Haiku on Max: Gemini belongs to ACCS and NVIDIA has been 503-ing all day.
-Ensure 'philo-queue' 'plato_run_queue|hellenistic_run_queue' @('-X','utf8','scripts\hellenistic_run_queue.py','--engine','haiku')
+# Split in two so both halves move at once - the per-section caches do not overlap.
+Ensure 'philo-queue' 'hellenistic_run_queue.py --group short' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','short','--engine','haiku')
+Ensure 'plotinus-queue' 'hellenistic_run_queue.py --group plotinus' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','plotinus','--engine','haiku')
 # Yanaihara (Uchimura's disciple, 2nd-generation Mukyokai): the four Aozora Bunko texts,
 # ja -> Traditional Chinese. The two short pieces are already up; this lane finishes the
 # two long ones (Introduction to Christianity 490 paras, Life of Jesus 1017 paras).

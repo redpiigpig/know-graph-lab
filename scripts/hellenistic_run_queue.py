@@ -10,7 +10,11 @@ lane 掛著它們，所以卡片點進去是空的。本檔就是那條缺掉的
 額度政策比照 plato_run_queue：**兩次連續失敗才退**。單部失敗先跳過換下一部，連續
 兩部都掛才視為 provider 整體乾掉，停整批交給 fleet_keeper 下一輪重探。
 
+兩個 group 可以平行跑（各自的逐節快取不重疊）：`short`＝伊比鳩魯＋愛比克泰德，
+`plotinus`＝九章集六集＋波菲利《生平》。fleet keeper 各給一條 lane。
+
   python scripts/hellenistic_run_queue.py --engine haiku
+  python scripts/hellenistic_run_queue.py --group plotinus --engine haiku
   python scripts/hellenistic_run_queue.py --engine haiku --no-upload
 """
 from __future__ import annotations
@@ -46,12 +50,17 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", default="haiku",
                     help="haiku（預設；Gemini 留給 ACCS、NVIDIA 常 503）")
+    ap.add_argument("--group", choices=["all", "short", "plotinus"], default="all",
+                    help="short＝伊比鳩魯＋愛比克泰德；plotinus＝九章集＋波菲利")
     ap.add_argument("--no-upload", action="store_true")
     args = ap.parse_args()
 
+    queue = [(s, w) for s, w in QUEUE
+             if args.group == "all"
+             or (args.group == "plotinus") == s.startswith("plotinus")]
     consecutive_fails = 0
     skipped: list[str] = []
-    for script, work in QUEUE:
+    for script, work in queue:
         print(f"\n=== {script} {work} ===", flush=True)
         cmd = [sys.executable, "-X", "utf8", str(ROOT / script), work,
                "--engine", args.engine]
