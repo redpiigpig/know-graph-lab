@@ -37,6 +37,18 @@ TMP = Path("c:/tmp" if sys.platform == "win32" else "/tmp")
 # 連續缺幾章以上才算「整段不見」，低於這個數多半是 ACCS 本來就沒註的族譜等段落
 RUN = 3
 
+# ACCS 本來就不註的段落——2026-09-02 回 PDF 逐段核過，不是我們漏掉的：
+#   ezk 21–27：掃描本第 163 頁印的是「結 20.40-44」、第 165 頁已經是第 28 章，
+#              中間只隔一頁，塞不下七章。ACCS 從以西結 20 直接跳到 28。
+#   ezk 5–8、29–32：同樣的形狀（前後兩頁相鄰）。
+#   1ch 2–4、18–20：族譜與戰功名單，ACCS 沒有教父註釋。
+# 🚨 這一份是「查過而且確定沒問題」的清單，不是「先放過再說」。要往裡面加東西，
+#    先回 PDF 看前後兩頁的頁眉章號夠不夠塞得下那幾章。
+KNOWN_SPARSE: dict[str, list[tuple[int, int]]] = {
+    "ezk": [(5, 8), (21, 27), (29, 32)],
+    "1ch": [(2, 4), (18, 20)],
+}
+
 sys.path.insert(0, str(ROOT / "scripts"))
 from accs_commentary import CHAPTER_COUNTS      # noqa: E402
 
@@ -123,7 +135,8 @@ def main() -> int:
             print(f"🚨 {book:<4} 一條註釋都沒有（該書 {total} 章）")
             bad += 1
             continue
-        bad_runs = gaps(have, total)
+        known = KNOWN_SPARSE.get(book, [])
+        bad_runs = [r for r in gaps(have, total) if r not in known]
         if bad_runs:
             bad += 1
             span = "、".join(f"{x}–{y}" if x != y else str(x) for x, y in bad_runs)
