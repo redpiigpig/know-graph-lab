@@ -13,6 +13,7 @@ const BOOKS = [
   { slug: 'world-religions-intro', out: 'WR1.html', n: 17, maps: true },
   { slug: 'world-religions-intro', dir: 'chapters-wr2', out: 'WR2.html', n: 16 },
   { slug: 'sinographic-literature', out: 'SL1.html', n: 17 },
+  { slug: 'christianity-intro', out: 'CH1.html', n: 16 },
 ]
 
 // WR 各章地圖（章號 → 圖檔與圖說）
