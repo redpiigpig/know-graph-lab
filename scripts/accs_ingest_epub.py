@@ -339,14 +339,23 @@ def upload(ckpt: Path) -> int:
     # entry_order 依 pericope 內順序重編
     seq: dict[tuple, int] = {}
     for x in rows:
-        k = (x['book_code'], x['chapter'], x['pericope_order'])
+        # 🚨 entry_order 的分組鍵一定要跟資料表的唯一鍵一模一樣
+        #    (book_code, chapter, verse_start, verse_end, entry_order)。
+        #    原本用 pericope_order 分組，於是同一個經文範圍分屬兩個段落時
+        #    兩列都拿到 entry_order 0，上傳到一半才被唯一鍵擋下（實測 7 組
+        #    14 列，jer 已寫進 300 列才炸）。
+        k = (x['book_code'], x['chapter'], x['verse_start'], x['verse_end'])
         x['entry_order'] = seq.get(k, 0)
         seq[k] = x['entry_order'] + 1
     print(f'準備上傳 {len(rows)} 列', flush=True)
     for i in range(0, len(rows), 100):
-        r = requests.post(f'{te.URL}/rest/v1/accs_commentary',
-                          headers={**te.H_JSON, 'Prefer': 'return=minimal'},
-                          json=rows[i:i + 100], timeout=120)
+        # 冪等 upsert：中途失敗重跑不會變成兩份
+        r = requests.post(
+            f'{te.URL}/rest/v1/accs_commentary'
+            '?on_conflict=book_code,chapter,verse_start,verse_end,entry_order',
+            headers={**te.H_JSON,
+                     'Prefer': 'resolution=merge-duplicates,return=minimal'},
+            json=rows[i:i + 100], timeout=120)
         if not r.ok:
             print('✗', r.status_code, r.text[:300], flush=True)
             return 1
