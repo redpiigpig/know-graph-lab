@@ -213,7 +213,8 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
 
 
 def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None,
-            mark_headings: bool = False, batch: int = 0) -> list[dict]:
+            mark_headings: bool = False, batch: int = 0,
+            prompt: str | None = None) -> list[dict]:
     """OCR a PDF → list of {page,text} (global 1-based page numbers). Rotates
     Gemini keys on quota. When batch>0 and the range exceeds it, OCRs in page
     batches (whole-book single calls truncate past the output-token limit) and
@@ -221,7 +222,8 @@ def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None,
     keys = _gemini_keys()
     if not keys:
         raise RuntimeError("no Gemini keys in .env (Gemini_API_Key_1..)")
-    prompt = PROMPT_MARK_HEADINGS if mark_headings else PROMPT
+    # 呼叫端可自帶 prompt（舊字舊假名、縱排這類本文特有的指示）；沒帶就用內建的。
+    prompt = prompt or (PROMPT_MARK_HEADINGS if mark_headings else PROMPT)
 
     total = _pdf_page_count(src)
     lo, hi = (pages[0], pages[1]) if pages else (1, total)
