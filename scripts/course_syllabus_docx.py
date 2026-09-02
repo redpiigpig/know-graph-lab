@@ -13,9 +13,15 @@
 成品是 docx，依 docs/repo-hygiene.md 不進 git，輸出到 Drive：
   G:\\我的雲端硬碟\\資料\\知識圖工作室\\教學\\{課程資料夾}\\
 
-用法：python scripts/course_syllabus_docx.py [course_key ...]（預設全部）
+用法：
+  python scripts/course_syllabus_docx.py                 # 由範本重出整份（會覆蓋既有檔）
+  python scripts/course_syllabus_docx.py --schedule-only # 只改既有檔的「授課進度與內容」
+
+⚠ 檔案若正在 Word 中開啟會寫入失敗；使用者可能正在手改該檔，
+  要改既有檔時一律走 --schedule-only，不要整份覆蓋掉別人的編輯。
 """
 import copy
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -61,30 +67,18 @@ WORLD_RELIGIONS = {
         '口頭報告': '25%',
         '期末考-筆試': '25%',
     },
-    # 授課進度：(周次, 日期, 單元) ×18
+    # 授課進度：(日期, 章號)。章名一律取自講義章節檔的 <h2>，不另行改寫；
+    # 章號 None 表示非授課週（自由學習等），此時第二欄直接寫該字串。
+    'chapters_html': 'public/content/works/world-religions-intro/chapters-wr2',
     'schedule': [
-        ('9月20日', '第一章　什麼是宗教——神聖的經驗與探詢；宗教學者的定義譜系；'
-                    '十九世紀歐洲從宗教等同拜神的轉向'),
-        ('9月20日', '第二章　宗教裡有什麼——神聖者、經驗、神話、教義、儀式、倫理、社群、物質'),
-        ('10月4日', '第三章　信仰、體制與範疇——聖書與專職宗教師的門檻；宗教的演進；'
-                    '普世宗教／民族宗教／少數民族宗教／新興宗教'),
-        ('10月4日', '第四章　宗教怎麼分類——語言民族型分類與四大信仰型態；'
-                    '信徒千萬以上的宗教與古代宗教全數歸位'),
-        ('10月18日', '第五章　泛神論（上）：泛靈論與哲學泛神論'),
-        ('10月18日', '第六章　泛神論（下）：自然神論與萬有在神論'),
-        ('11月1日', '第七章　多神論（上）：神話多神論——兩河、埃及、吠陀、希臘羅馬、迦南、北歐'),
-        ('11月1日', '第八章　多神論（下）：哲學多神論——梵、道、太一、邏各斯'),
-        ('11月15日', '第九章　一神論（上）：統攝一神論（阿頓、馬爾杜克、馬茲達、'
-                     '早期耶和華信仰）與本體一神論'),
-        ('11月15日', '第十章　一神論（下）：二元神論與融合一神論'),
-        ('11月29日', '第十一章　實用神論（上）：功能神論與非神中心論'),
-        ('11月29日', '第十二章　實用神論（下）：不可知論與無神論'),
-        ('12月13日', '第十三章　現代世界的宗教（上）：世俗化論爭、政教關係、宗教市場'),
-        ('12月13日', '第十四章　現代世界的宗教（下）：靈性個人化、基要主義、'
-                     '宗教與暴力、跨宗教對話'),
-        ('12月27日', '第十五章　臺灣宗教（上）：歷史層積——南島祭儀、漢人移民信仰、'
-                     '荷西與清領、日治、戰後'),
-        ('12月27日', '第十六章　臺灣宗教（下）：當代圖像——四種型態在同一座島上。期末考'),
+        ('9月20日', 1), ('9月20日', 2),
+        ('10月4日', 3), ('10月4日', 4),
+        ('10月18日', 5), ('10月18日', 6),
+        ('11月1日', 7), ('11月1日', 8),
+        ('11月15日', 9), ('11月15日', 10),
+        ('11月29日', 11), ('11月29日', 12),
+        ('12月13日', 13), ('12月13日', 14),
+        ('12月27日', 15), ('12月27日', '第十六章　臺灣宗教（下）：當代圖像——四種型態在同一座島上，期末考'),
         ('1月10日', '自由學習：個別與老師討論自評'),
         ('1月10日', '自由學習：個別與老師討論自評'),
     ],
@@ -198,6 +192,33 @@ def cell_label(cell):
     return cell.paragraphs[0].text.replace('☐', '').replace('☒', '').strip()
 
 
+def chapter_title(c, n):
+    """章名一律取自講義章節檔的 <h2>，不在授課表裡另行改寫。"""
+    cdir = Path(__file__).resolve().parent.parent / c['chapters_html']
+    html = (cdir / f'ch{n:02d}.html').read_text(encoding='utf-8')
+    return re.sub(r'<[^>]+>', '', re.search(r'<h2>(.*?)</h2>', html).group(1)).strip()
+
+
+def write_schedule(c, T2):
+    for i, (date, topic) in enumerate(c['schedule']):
+        if isinstance(topic, int):
+            topic = chapter_title(c, topic)
+        row = T2.rows[i + 2]
+        set_cell(row.cells[0], [f'{i + 1:02d}', date])
+        set_cell(row.cells[1], topic)
+
+
+def update_schedule(c):
+    """只改既有檔的「授課進度與內容」，其餘欄位（可能已被手動編輯）原樣保留。"""
+    out = DRIVE / c['folder'] / f"{c['filename']}.docx"
+    if not out.exists():
+        raise SystemExit(f'找不到 {out}，請先跑一次完整產生')
+    doc = Document(str(out))
+    write_schedule(c, doc.tables[2])
+    doc.save(str(out))
+    return out
+
+
 # ── 產生 ────────────────────────────────────────────────────────────────────
 def build(c):
     outdir = DRIVE / c['folder']
@@ -228,11 +249,7 @@ def build(c):
                 continue
             set_checkbox(cell, any(k in label for k in on))
 
-    # ── 授課進度與內容（r2–r19）──
-    for i, (date, topic) in enumerate(c['schedule']):
-        row = T2.rows[i + 2]
-        set_cell(row.cells[0], [f'{i + 1:02d}', date])
-        set_cell(row.cells[1], topic)
+    write_schedule(c, T2)
 
     # ── 學習評量方式（r2–r24）──
     for ri in range(2, len(T3.rows)):
@@ -255,5 +272,13 @@ def build(c):
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    for k in (sys.argv[1:] or list(COURSES)):
-        print('✔', build(COURSES[k]))
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    only = '--schedule-only' in sys.argv
+    for k in (args or list(COURSES)):
+        c = COURSES[k]
+        # Word 開檔時會留下 ~$ 開頭的鎖檔（檔名會被截去前幾個字，故用 glob 比對）
+        locks = list((DRIVE / c['folder']).glob('~$*.docx'))
+        if locks:
+            raise SystemExit(f'⚠ {c["filename"]}.docx 正在 Word 中開啟（鎖檔 {locks[0].name}）。'
+                             '請先在 Word 關閉這個檔再執行，以免蓋掉尚未存檔的編輯。')
+        print('✔', update_schedule(c) if only else build(c))

@@ -15,6 +15,7 @@
 """
 import html
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -46,8 +47,17 @@ CN = '一二三四五六七八九十十一十二十三十四十五十六'
 OPT = 'ABCD'
 
 
+def chapter_title(n):
+    """章名一律取自講義章節檔的 <h2>（去掉「第N章　」前綴），避免題庫與講義走鐘。"""
+    f = PUB / 'content/works' / SLUG / 'chapters-wr2' / f'ch{n:02d}.html'
+    h = re.sub(r'<[^>]+>', '', re.search(r'<h2>(.*?)</h2>',
+               f.read_text(encoding='utf-8')).group(1)).strip()
+    return re.sub(r'^第[一二三四五六七八九十]+章[　\s]*', '', h)
+
+
 def cn(n):
-    return CN[n - 1] if n <= 10 else CN[9:][(n - 11) * 2:(n - 11) * 2 + 2]
+    # CN 前十個字是一~十，之後每兩個字一組（十一、十二…）
+    return CN[n - 1] if n <= 10 else CN[10:][(n - 11) * 2:(n - 11) * 2 + 2]
 
 
 # 出題時容易把正解都寫在同一個位置。這裡以確定性的輪轉把正解均勻攤到 A–D，
@@ -65,7 +75,7 @@ def balanced(n, i, opts, ans):
 def build_html(n, q):
     e = html.escape
     out = [f'<p class="quiz-meta">{COURSE_TITLE}　第{cn(n)}章小考　'
-           f'{e(q["title"])}　共 10 題，每題 10 分</p>',
+           f'{e(chapter_title(n))}　共 10 題，每題 10 分</p>',
            '<h4>選擇題</h4>', '<ol>']
     for i, (stem, opts, ans, _) in enumerate(q['items']):
         opts, _ans = balanced(n, i, opts, ans)
@@ -126,7 +136,7 @@ def build_docx(n, q, with_answers):
     run_ea(p, f'{COURSE_TITLE}　第{cn(n)}章小考', KAI, 18, bold=True, color=NAVY)
     p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(10)
-    run_ea(p, q['title'], KAI, 12, color=GRAY)
+    run_ea(p, chapter_title(n), KAI, 12, color=GRAY)
 
     if with_answers:
         p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -198,7 +208,7 @@ def main(nums):
         entries.append({
             'id': f'wr2-ch{n:02d}',
             'title': f'第{cn(n)}章',
-            'range': q['title'],
+            'range': chapter_title(n),
             'file': f'/content/works/{SLUG}/quizzes/wr2-ch{n:02d}.html',
             'bookId': BOOK_ID,
         })

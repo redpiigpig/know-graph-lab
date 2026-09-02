@@ -1,30 +1,21 @@
 {
-  "series": "宗教學講義",
+  "series": "宗教學授課講義",
   "note": "宗教與文化學系授課講義兩種。《世界宗教文化導論》（PPA001，二年制在職專班雙週班，十六週十六章）以〈神學地圖〉的四大信仰型態橫切世界宗教；《宗教歷史地理學》以六百年時代律與八大界域 × 48 文化圈（見 /maps/world-religions）縱走全球宗教史。",
-  "groups": [
+  "independent": true,
+  "books": [
     {
-      "branch": "世界宗教文化導論（十六週講義）",
-      "books": [
-        {
-          "id": "WR2",
-          "title": "世界宗教文化導論",
-          "subtitle": "宗教是什麼‧宗教裡有什麼‧四種信仰型態——泛神論／多神論／一神論／實用神論",
-          "file": "/content/works/world-religions-intro/WR2.html",
-          "nChapters": 16
-        }
-      ]
+      "id": "WR2",
+      "title": "世界宗教文化導論",
+      "subtitle": "宗教是什麼‧宗教裡有什麼‧四種信仰型態——泛神論／多神論／一神論／實用神論",
+      "file": "/content/works/world-religions-intro/WR2.html",
+      "nChapters": 16
     },
     {
-      "branch": "宗教歷史地理學（十七章）",
-      "books": [
-        {
-          "id": "WR1",
-          "title": "宗教歷史地理學",
-          "subtitle": "六百年時代律 × 八大界域——第一部 本質、演化與時代分期（1–5）／第二部 八大界域巡禮（6–14）／第三部 宗教與當代世界（15–17）",
-          "file": "/content/works/world-religions-intro/WR1.html",
-          "nChapters": 17
-        }
-      ]
+      "id": "WR1",
+      "title": "宗教歷史地理學",
+      "subtitle": "六百年時代律 × 八大界域——第一部 本質、演化與時代分期（1–5）／第二部 八大界域巡禮（6–14）／第三部 宗教與當代世界（15–17）",
+      "file": "/content/works/world-religions-intro/WR1.html",
+      "nChapters": 17
     }
   ]
 }

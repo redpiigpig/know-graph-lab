@@ -73,7 +73,10 @@
       <div v-if="seriesBookCount" class="max-w-5xl mx-auto px-6 py-8">
         <div class="mb-4">
           <h2 class="text-base font-semibold text-gray-900">書目</h2>
-          <p class="text-xs text-gray-500 mt-0.5">本叢書共 {{ seriesBookCount }} 冊 · 點選一冊閱讀（各冊內含章節目錄）</p>
+          <p class="text-xs text-gray-500 mt-0.5">
+            {{ seriesIndependent ? `共 ${seriesBookCount} 本 · 點選一本閱讀（各書內含章節目錄）`
+                                 : `本叢書共 ${seriesBookCount} 冊 · 點選一冊閱讀（各冊內含章節目錄）` }}
+          </p>
         </div>
         <div v-for="g in seriesGroups" :key="g.branch" class="mb-7">
           <h3 v-if="g.branch" class="text-xs font-semibold text-violet-400 uppercase tracking-widest mb-3">{{ g.branch }}</h3>
@@ -81,7 +84,7 @@
             <NuxtLink v-for="(b, i) in g.books" :key="b.id"
               :to="`/works/${slug}/book/${b.id}`"
               class="no-underline group flex flex-col min-w-0 p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
-              <div class="text-xs text-violet-400 mb-2">第{{ CN_NUM[i] || (i + 1) }}部</div>
+              <div v-if="!seriesIndependent" class="text-xs text-violet-400 mb-2">第{{ CN_NUM[i] || (i + 1) }}部</div>
               <h3 class="text-lg font-bold text-gray-900 leading-snug break-words line-clamp-2">{{ b.title }}</h3>
               <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words line-clamp-2">{{ b.subtitle }}</p>
               <div class="mt-auto pt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
@@ -783,15 +786,19 @@ const materialsAvailable = ref(false)
 interface SeriesBook { id: string; title: string; subtitle: string; nChapters: number }
 interface SeriesGroup { branch: string; books: SeriesBook[] }
 const seriesGroups = ref<SeriesGroup[]>([])
+// independent=true：底下各本是彼此獨立的書，不是同一套書的分冊
+// → 不標「第 N 部」、不用「叢書」字樣
+const seriesIndependent = ref(false)
 const seriesBookCount = computed(() => seriesGroups.value.reduce((s, g) => s + g.books.length, 0))
 const CN_NUM = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
 async function loadSeriesBooks() {
   try {
-    const data = await $fetch<{ groups?: SeriesGroup[]; books?: SeriesBook[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    const data = await $fetch<{ groups?: SeriesGroup[]; books?: SeriesBook[]; independent?: boolean }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    seriesIndependent.value = data?.independent === true
     if (Array.isArray(data?.groups)) seriesGroups.value = data.groups
     else if (Array.isArray(data?.books)) seriesGroups.value = [{ branch: '', books: data.books }]
     else seriesGroups.value = []
-  } catch { seriesGroups.value = [] }
+  } catch { seriesGroups.value = []; seriesIndependent.value = false }
 }
 watch(() => project.value?.slug, loadSeriesBooks)
 
