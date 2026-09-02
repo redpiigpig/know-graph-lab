@@ -69,3 +69,29 @@
 4. 青空文庫信仰線兩篇平行上架（零 OCR，快速見效）。
 5. hub works `status→done`＋填 `ebookId`（deterministic 命名空間建議 `e0000000-…`）。
 6. 其餘 NDL 各卷逐 pid 用 IIIF manifest 探公開區分，公開者排入 queue。
+
+## 2026-09-02：青空文庫這一線開工（driver 與內村共用）
+
+**不另寫 driver**。青空文庫 → ja＋繁中的整套流程（Shift_JIS 解碼、ruby 剝除、
+［＃…］注記、gaiji、midashi 切節、逐段續傳翻譯、chunk 組裝上傳）內村那邊已經做過
+且有 test，所以只把「作家層」抽出來：
+
+* `scripts/yanaihara_build.py` — registry／來源檔／`AUTHOR_ZH`・`CATEGORY`・
+  `DATA_DIRNAME`，外加一個換了快取目錄的 `load_work_sections`。
+* `scripts/uchimura_auto.py --author {uchimura,yanaihara}` — driver 依 `--author`
+  載入對應 registry 模組。之後加藤井武、塚本虎二就是再寫一個同形狀的 registry 檔。
+
+順手補上 `ensure_row` 的 `collection='collected-works'`（原本要靠事後補標）。
+
+### 四篇的規模（2026-09-02 節流抓下，存 `c:/tmp/yanaihara_cache/`）
+
+| slug | 篇名 | sections | paras | 日文字 |
+|---|---|---|---|---|
+| final-lecture | 帝大聖經研究會終講之辭（1937） | 1 | 27 | 3,923 |
+| reading-and-writing | 讀書與著書 | 2 | 26 | 3,813 |
+| christianity-intro | 基督教入門（1952） | 50 | 490 | 118,298 |
+| jesus-life | 耶穌傳：據馬可福音（1948） | 139 | 1,017 | 218,143 |
+
+ebook_id 命名空間 `e0000000-…`（a=印順 b=聖嚴 c=星雲 d=內村 → e=矢內原）。
+翻譯佇列先短後長：`--run-queue --backend haiku`，逐節 checkpoint 可續。
+**《帝国主義下の台湾》仍是 NDL IIIF＋OCR 那條線，未動**——本批純粹是零 OCR 的快線。

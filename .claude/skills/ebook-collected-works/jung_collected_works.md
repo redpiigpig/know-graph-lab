@@ -236,3 +236,29 @@
 - Gemini 4 key 全耗盡（billing），別再排 Gemini OCR/翻譯，一律 Haiku。
 - `_jung_*.py`、`c:/tmp/*` 是一次性（`_`/tmp 已 gitignore）；別當正式碼。
 - 三欄 build 三 list 段數不等 → reader 會錯位；build 後務必驗段數。
+
+## 2026-09-02：CW 全 16 卷終於上得了站（翻譯早就翻完了）
+
+`jung_data/cw-full/*/status.json` 從 8 月起就已經全卷 `done == total`（最後一卷 CW18
+於 2026-08-20 收尾），但站上長期只有 CW11 一卷。**三個原因疊在一起**，各修一個：
+
+1. **來源 EPUB 被搬走**：檔案依 Drive-canonical 政策移到
+   `G:\…\全集\心理學\榮格\`，`jung_cw_translate.py` 卻仍只 glob repo root
+   → fleet keeper 的 jung lane 每 30 分啟動、每 30 分秒退在
+   `CW EPUB not found in repo root`。現在 repo root 找不到就讀 Drive。
+2. **`ebooks_file_path_uniq`**：16 卷共用同一個 `file_path`，第一卷（CW11）進得去，
+   其餘每次上傳都 409 Conflict——而 `--no-upload` 的 lane 根本不會讓人看見這個錯。
+   改成 `…/CW-complete.epub#CW{vol}`，每卷唯一。
+3. **`collection` 沒帶**：row 少了 `collected-works`，卷子會以 NULL 落進電子圖書館
+   （[[feedback_collected_works_not_in_library]]）。補上後重跑一次 upsert 即可。
+
+結果：榮格 `collection='collected-works'` 從 6 本／164 萬字 → **21 本／648 萬字**
+（16 卷 CW ＋ 5 本 standalone）。
+
+**教訓**：`--no-upload` 的 lane 加上被吞掉的 HTTP 錯誤，會讓「翻完了」和「上架了」
+差了一整個月而沒有任何徵兆。上傳失敗現在會把 PostgREST 的 body 印出來
+（撞了哪條約束一眼可見）；lane 的完成度別只看 status.json，要回頭查 DB。
+
+**還沒做**：hub `works[]` 這 16 卷的 `ebookId` 尚未回填（status 仍是舊值）；圖書館裡
+另有 9 本榮格中譯本（紅書、自傳、伊雍簡體全譯…）`collection` 仍是 NULL，要不要一併
+搬進全集待定。

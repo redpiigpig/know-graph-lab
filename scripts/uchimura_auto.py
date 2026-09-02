@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -30,8 +31,40 @@ import uchimura_build as ub  # noqa: E402  (loads .env, reconfigures stdout)
 import panikkar_build as pb  # noqa: E402  (build_section_chunk / build_multilang_chunk)
 from multilang_chunks import write_jsonl  # noqa: E402
 
-DATA_ROOT = SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works" / "uchimura_data"
+_SKILL_DATA = SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works"
+DATA_ROOT = _SKILL_DATA / "uchimura_data"
 MAX_PARAS_PER_CHUNK = 10
+
+# 同一套青空文庫 → ja＋繁中的流程，換一位作家只是換 registry 模組（無教會主義群像
+# 之後還有藤井武、塚本虎二…）。模組要提供 REGISTRY/QUEUE/load_work_sections/
+# make_engine 與 AUTHOR_ZH/AUTHOR_EN/CATEGORY/DATA_DIRNAME。
+AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build"}
+
+
+def use_author(name: str) -> None:
+    global ub, DATA_ROOT
+    if name != "uchimura":
+        import importlib
+        ub = importlib.import_module(AUTHOR_MODULES[name])
+    DATA_ROOT = _SKILL_DATA / getattr(ub, "DATA_DIRNAME", "uchimura_data")
+
+
+# 純數字／符號的章名（「１」「三」「II」）送進翻譯引擎，回來的是「我已準備好進行翻譯。
+# 請提供日文原文」這類招呼語——而且會直接被當成章名寫進 reader 的目錄。
+_TRIVIAL_HEADING = re.compile(r"^[\s0-9０-９一二三四五六七八九十百IVXLivxl.、。．・：:＝=－ー\-—–()（）\[\]［］]*$")
+
+
+def heading_zh(heading: str, fallback: str, translate_para) -> str:
+    """章名的中譯：瑣碎標題原樣留著，其餘翻過之後擋掉 prompt echo。"""
+    if not heading or _TRIVIAL_HEADING.match(heading):
+        return heading or fallback
+    out = (translate_para(heading) or "").strip()
+    if not out:
+        return heading
+    import translate_ebook_to_zh as te
+    if te._looks_like_prompt_echo(out) or len(out) > max(40, len(heading) * 4):
+        return heading
+    return out
 
 
 def _sec_path(slug: str, idx: int) -> Path:
@@ -57,7 +90,7 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
             if s["heading"] in ("(front)", ""):
                 title_zh = w["title"] if i == 0 else s["heading"]
             else:
-                title_zh = translate_para(s["heading"]) or s["heading"]
+                title_zh = heading_zh(s["heading"], w["title"], translate_para)
         todo = [j for j in range(len(src)) if not zh[j]]
         if maxparas is not None:
             todo = todo[:maxparas]
@@ -82,6 +115,27 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
     return translated
 
 
+def fix_headings(slug: str) -> list[str]:
+    """把先前寫壞的章名換回原文標題（引擎的招呼語一旦寫進快取就會一直用下去）。"""
+    import translate_ebook_to_zh as te
+    secs = ub.load_work_sections(slug)
+    fixed = []
+    for i, s in enumerate(secs):
+        cp = _sec_path(slug, i)
+        if not cp.exists():
+            continue
+        c = json.loads(cp.read_text(encoding="utf-8"))
+        title = (c.get("title_zh") or "").strip()
+        head = s["heading"]
+        if not title:
+            continue
+        if te._looks_like_prompt_echo(title) or len(title) > max(40, len(head) * 4):
+            c["title_zh"] = head if head not in ("(front)", "") else ub.REGISTRY[slug]["title"]
+            cp.write_text(json.dumps(c, ensure_ascii=False, indent=1), encoding="utf-8")
+            fixed.append(f"sec{i}: {title[:24]} → {c['title_zh']}")
+    return fixed
+
+
 def is_done(slug: str) -> bool:
     secs = ub.load_work_sections(slug)
     for i, s in enumerate(secs):
@@ -103,7 +157,7 @@ def _chunked(zh: list, src: list, maxp: int = MAX_PARAS_PER_CHUNK):
 
 def build_chunks(slug: str) -> list[dict]:
     w = ub.REGISTRY[slug]
-    volume = f"{w['title']}（內村鑑三）"
+    volume = f"{w['title']}（{getattr(ub, 'AUTHOR_ZH', '內村鑑三')}）"
     chunks = [pb.build_multilang_chunk(
         chunk_index=0, chapter_path="封面", content_zh="## 封面", sources={},
         source_order=[], volume=volume, parent_volume=w["parent_volume"],
@@ -140,9 +194,13 @@ def ensure_row(slug: str):
     import translate_ebook_to_zh as te
     w = ub.REGISTRY[slug]
     row = {"id": w["ebook_id"], "title": w["title"], "subtitle": w["subtitle"],
-           "author": "內村鑑三", "author_en": "Uchimura Kanzō",
+           "author": getattr(ub, "AUTHOR_ZH", "內村鑑三"),
+           "author_en": getattr(ub, "AUTHOR_EN", "Uchimura Kanzō"),
            "original_title": w["original_title"], "original_publish_year": w["year"],
-           "file_type": "epub", "category": "神學"}
+           "file_type": "epub", "category": getattr(ub, "CATEGORY", "神學"),
+           # 沒這一欄就會落進電子圖書館，得事後補標
+           # （[[feedback_collected_works_not_in_library]]）。
+           "collection": "collected-works"}
     r = requests.post(f"{te.URL}/rest/v1/ebooks?on_conflict=id",
                       headers={**te.H_JSON, "Prefer": "resolution=merge-duplicates"},
                       json=row, timeout=30)
@@ -217,7 +275,18 @@ def main():
     ap.add_argument("--upload", action="store_true")
     ap.add_argument("--build-only", action="store_true")
     ap.add_argument("--run-queue", action="store_true")
+    ap.add_argument("--author", choices=sorted(AUTHOR_MODULES), default="uchimura")
+    ap.add_argument("--fix-headings", action="store_true",
+                    help="把寫壞的章名換回原文標題（之後要重建該書）")
     args = ap.parse_args()
+    use_author(args.author)
+
+    if args.fix_headings:
+        for slug in ([args.work] if args.work else ub.QUEUE):
+            for line in fix_headings(slug):
+                print(f"  {slug} {line}")
+        print("done（記得重跑 --work <slug> --build-only --upload）")
+        return
 
     if args.list:
         for slug in ub.QUEUE:
