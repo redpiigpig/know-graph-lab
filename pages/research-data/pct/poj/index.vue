@@ -90,6 +90,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted, watch } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -145,7 +146,7 @@ async function toggle(a: Article) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const r = await $fetch<{ available: boolean; hanlo?: string; tailo?: string }>(
+      const r = await authedFetch<{ available: boolean; hanlo?: string; tailo?: string }>(
         '/api/research-data/pct-poj-text', { query: { decade: a.decade, id: a.id } });
       st.hanlo = r.available ? (r.hanlo ?? '') : '';
       st.tailo = r.available ? (r.tailo ?? '') : '';

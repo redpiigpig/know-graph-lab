@@ -1,3 +1,4 @@
+import { requireAdmin } from '~/server/utils/auth-helper'
 
 // 回傳白話字《台灣教會公報》某一篇的全文（漢羅＋台羅兩種寫法）。
 // 全文按十年打包成 JSONL 放 R2（pct-fulltext/poj/<年代>.jsonl），一包最大約 1 MB，
@@ -33,7 +34,12 @@ async function loadDecade(decade: string): Promise<Map<string, PojRow> | null> {
   return rows
 }
 
+// 🚨 頁面的 `middleware: 'auth'` 只擋頁面，**不擋這個資料端點**。
+//    2026-09-02 實測：未登入直接打這支 API 會回 HTTP 200 連同全文。
+//    所有 research-data 的端點都要自己驗，否則「網站有密碼」是假的。
 export default defineEventHandler(async (event) => {
+  await requireAdmin(event)
+
   const q = getQuery(event)
   const decade = String(q.decade ?? '')
   // 年代是 1880…1960，另有一桶「未詳」給日期寫「不詳」的那幾筆

@@ -1,3 +1,4 @@
+import { requireAdmin } from '~/server/utils/auth-helper'
 import fs from 'node:fs'
 import { stat } from 'node:fs/promises'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
@@ -11,7 +12,12 @@ import { resolveResearchFile } from '~/server/utils/research-files'
 // 數 MB，符合 docs/r2-policy.md 的小體積衍生物，故兩邊都放。
 const ALLOWED_PREFIX = 'mukyokai/'
 
+// 🚨 頁面的 `middleware: 'auth'` 只擋頁面，**不擋這個資料端點**。
+//    2026-09-02 實測：未登入直接打這支 API 會回 HTTP 200 連同全文。
+//    所有 research-data 的端點都要自己驗，否則「網站有密碼」是假的。
 export default defineEventHandler(async (event) => {
+  await requireAdmin(event)
+
   const key = String(getQuery(event).key ?? '')
   if (!key.startsWith(ALLOWED_PREFIX) || key.includes('..')) {
     throw createError({ statusCode: 400, message: 'invalid key' })

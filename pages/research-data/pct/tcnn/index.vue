@@ -66,6 +66,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted, watch } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -95,7 +96,7 @@ async function select(year: string) {
   activeYear.value = year;
   listLoading.value = true;
   try {
-    const r = await $fetch<{ available: boolean; articles: Article[] }>(
+    const r = await authedFetch<{ available: boolean; articles: Article[] }>(
       '/api/research-data/pct-tcnn-text', { query: { year } });
     list.value = r.available ? r.articles : [];
   } catch { list.value = []; } finally { listLoading.value = false; }
@@ -113,7 +114,7 @@ async function toggle(a: Article) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const r = await $fetch<{ available: boolean; text: string | null }>(
+      const r = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/pct-tcnn-text', { query: { year: activeYear.value, id: a.id } });
       st.text = r.available ? (r.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }

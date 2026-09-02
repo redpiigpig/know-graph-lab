@@ -28,7 +28,7 @@
               <div class="flex items-baseline gap-2 text-sm">
                 <span class="flex-1 text-gray-800 break-words">{{ a.title }}<span v-if="a.author" class="text-gray-400 text-xs">　{{ a.author }}</span></span>
                 <button v-if="a.hasFulltext" @click="toggle(a)" class="flex-shrink-0 text-xs text-gray-400 hover:text-violet-600">{{ states[a.pdfKey]?.open ? '收合' : '全文' }}</button>
-                <a :href="`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(a.pdfKey)}&download=1`" class="flex-shrink-0 text-xs font-medium text-violet-700 hover:underline no-underline">⬇ PDF</a>
+                <button type="button" @click="dl(a.pdfKey)" class="flex-shrink-0 text-xs font-medium text-violet-700 hover:underline no-underline">⬇ PDF</button>
               </div>
               <div v-if="states[a.pdfKey]?.open" class="mt-1 rounded-lg border border-gray-100 bg-gray-50/70">
                 <div v-if="states[a.pdfKey].loading" class="px-3 py-2 text-[11px] text-gray-400">載入全文⋯</div>
@@ -46,6 +46,8 @@
 </template>
 
 <script setup lang="ts">
+import { authedDownload } from '~/composables/useAuthedDownload';
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -68,7 +70,7 @@ async function toggle(a: Article) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const r = await $fetch<{ available: boolean; text: string | null }>(
+      const r = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/yinshun-hongshi-text', { query: { key: a.pdfKey } });
       st.text = r.available ? (r.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
@@ -81,4 +83,10 @@ onMounted(async () => {
     if (r.ok) issues.value = await r.json();
   } catch { /* keep empty */ } finally { loaded.value = true; }
 });
+// 端點加了 requireAdmin，`<a href>` 帶不了 Authorization header，
+// 所以下載改走 authedFetch 取 blob（見 useAuthedDownload）。
+async function dl(key: string) {
+  await authedDownload(`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(key)}&download=1`,
+    key.split('/').pop() || 'download.pdf');
+}
 </script>

@@ -1,3 +1,4 @@
+import { requireAdmin } from '~/server/utils/auth-helper'
 
 // 回傳《台灣教會公報》新聞網某一篇的全文。全文按年打包成 JSONL 放 R2
 // （pct-fulltext/tcnn/<年>.jsonl），一年約 3 MB；讀者通常會在同一年裡連看好幾篇，
@@ -28,7 +29,12 @@ async function loadYear(year: string): Promise<Map<number, TcnnRow> | null> {
   return rows
 }
 
+// 🚨 頁面的 `middleware: 'auth'` 只擋頁面，**不擋這個資料端點**。
+//    2026-09-02 實測：未登入直接打這支 API 會回 HTTP 200 連同全文。
+//    所有 research-data 的端點都要自己驗，否則「網站有密碼」是假的。
 export default defineEventHandler(async (event) => {
+  await requireAdmin(event)
+
   const q = getQuery(event)
   const year = String(q.year ?? '')
   if (!/^\d{4}$/.test(year)) {

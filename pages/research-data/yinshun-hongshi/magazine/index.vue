@@ -28,11 +28,11 @@
               <button @click="toggle(p)" class="inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
                 {{ states[p.key]?.open ? '收合' : (it.parts.length > 1 ? `第${p.part}冊全文` : '全文') }}
               </button>
-              <a :href="`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(p.key)}&download=1`"
+              <button type="button" @click="dl(p.key)"
                 class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-lg border border-rose-200 text-rose-700 hover:bg-rose-50 no-underline">
                 ⬇ {{ it.parts.length > 1 ? `第${p.part}冊 PDF` : 'PDF 全本' }}
                 <span class="text-rose-300">{{ fmtSize(p.size) }}</span>
-              </a>
+              </button>
             </template>
           </div>
           <div v-for="p in it.parts" :key="`ft-${p.part}`">
@@ -51,6 +51,8 @@
 </template>
 
 <script setup lang="ts">
+import { authedDownload } from '~/composables/useAuthedDownload';
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -70,7 +72,7 @@ async function toggle(p: Part) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const r = await $fetch<{ available: boolean; text: string | null }>(
+      const r = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/yinshun-hongshi-text', { query: { key: p.key } });
       st.text = r.available ? (r.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
@@ -107,6 +109,12 @@ onMounted(async () => {
     if (r.ok) issues.value = await r.json();
   } catch { /* keep empty */ } finally { loaded.value = true; }
 });
+// 端點加了 requireAdmin，`<a href>` 帶不了 Authorization header，
+// 所以下載改走 authedFetch 取 blob（見 useAuthedDownload）。
+async function dl(key: string) {
+  await authedDownload(`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(key)}&download=1`,
+    key.split('/').pop() || 'download.pdf');
+}
 </script>
 
 <style scoped>

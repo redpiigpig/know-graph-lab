@@ -108,6 +108,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -183,7 +184,7 @@ function highlight(text: string, term: string) {
 
 onMounted(async () => {
   try {
-    const d = await $fetch<any>('/api/research-data/corpus-terms');
+    const d = await authedFetch<any>('/api/research-data/corpus-terms');
     if (d?.available) {
       groups.value = d.groups ?? {};
       corpora.value = d.corpora ?? {};

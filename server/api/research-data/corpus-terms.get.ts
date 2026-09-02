@@ -1,3 +1,4 @@
+import { requireAdmin } from '~/server/utils/auth-helper'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 
 // 跨語料關鍵詞年表的計數表。scripts/corpus_terms.py --build 產出後放 R2；
@@ -5,7 +6,12 @@ import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 const KEY = 'corpus-index/term-counts.json'
 let cached: unknown = null
 
-export default defineEventHandler(async () => {
+// 🚨 頁面的 `middleware: 'auth'` 只擋頁面，**不擋這個資料端點**。
+//    2026-09-02 實測：未登入直接打這支 API 會回 HTTP 200 連同全文。
+//    所有 research-data 的端點都要自己驗，否則「網站有密碼」是假的。
+export default defineEventHandler(async (event) => {
+  await requireAdmin(event)
+
   if (cached) return cached
   const config = useRuntimeConfig()
   const s3 = new S3Client({

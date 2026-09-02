@@ -36,8 +36,8 @@
             <button @click="toggle(r)" class="text-gray-500 hover:text-emerald-700">
               {{ states[r.stem]?.open ? '收合全文' : '全文' }}
             </button>
-            <a :href="`/api/research-data/mukyokai-file?key=${encodeURIComponent(r.pdfKey)}&download=1`"
-              class="font-medium text-emerald-700 hover:underline no-underline">⬇ {{ r.pdfKey.endsWith('.docx') ? 'Word' : 'PDF' }}</a>
+            <button type="button" @click="dl(r.pdfKey)"
+              class="font-medium text-emerald-700 hover:underline no-underline">⬇ {{ r.pdfKey.endsWith('.docx') ? 'Word' : 'PDF' }}</button>
           </div>
 
           <div v-if="states[r.stem]?.open" class="mt-2 rounded-lg border border-gray-100 bg-gray-50/70">
@@ -95,6 +95,8 @@
 </template>
 
 <script setup lang="ts">
+import { authedDownload } from '~/composables/useAuthedDownload';
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -125,7 +127,7 @@ async function toggleMag(a: MagRow) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const res = await $fetch<{ available: boolean; text: string | null }>(
+      const res = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/mukyokai-text', { query: { key: a.textKey } });
       st.text = res.available ? (res.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
@@ -141,7 +143,7 @@ async function toggle(r: Row) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const res = await $fetch<{ available: boolean; text: string | null }>(
+      const res = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/mukyokai-text', { query: { key: r.textKey } });
       st.text = res.available ? (res.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
@@ -158,4 +160,10 @@ onMounted(async () => {
     if (r.ok) mag.value = await r.json();
   } catch { /* keep empty */ } finally { loaded.value = true; }
 });
+// 端點加了 requireAdmin，`<a href>` 帶不了 Authorization header，
+// 所以下載改走 authedFetch 取 blob（見 useAuthedDownload）。
+async function dl(key: string) {
+  await authedDownload(`/api/research-data/mukyokai-file?key=${encodeURIComponent(key)}&download=1`,
+    key.split('/').pop() || 'download.pdf');
+}
 </script>

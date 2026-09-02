@@ -50,6 +50,7 @@
 </template>
 
 <script setup lang="ts">
+import { authedFetch } from '~/composables/useAuthedFetch';
 import { ref, reactive, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
@@ -78,7 +79,7 @@ async function toggle(r: Row) {
   if (st.open && !st.loaded && !st.loading) {
     st.loading = true;
     try {
-      const res = await $fetch<{ available: boolean; text: string | null }>(
+      const res = await authedFetch<{ available: boolean; text: string | null }>(
         '/api/research-data/pct-text', { query: { key: r.textKey } });
       st.text = res.available ? (res.text ?? null) : null;
     } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
