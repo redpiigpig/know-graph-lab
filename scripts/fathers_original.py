@@ -754,6 +754,10 @@ def align_cc_books(seq: list[tuple[int, int, int]],
         if pick is None:
             report.append(f"{label}（{len(items)} 個錨點）沒有對應的原典卷 → 留空")
             continue
+        if not 1 <= pick <= len(order):
+            report.append(f"{label} 指到原典卷 {pick}，但只解析出 {len(order)} 卷"
+                          f"——多半是 unit 挑錯層（章在 div2 還是 div3）→ 留空")
+            continue
         book = order[pick - 1]
         top = max(n for _, _, n in items)
         # 🚨 比的是「最大編號」不是「錨點個數」：中譯常有幾個章標題沒被解析出來

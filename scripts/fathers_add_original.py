@@ -461,6 +461,24 @@ WORKS: dict[str, dict] = {
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7480&type=file-xml"],
     },
+    "jerome-de-viris": {
+        "label": "耶柔米《名人傳》135 章（NPNF2 第三卷）",
+        "ebook_id": "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81",
+        "prefix": "耶柔米《名人傳》",
+        "lang": "la",
+        "mode": "cc-book",
+        "anchor": "both",
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 23 的 TEI，蘇黎世大學",
+        # 拉丁本的 135 個 CAPUT 掛在 <div2>（走 parse_cc_chapters，不是節號那一層）；
+        # 前面三個 div1（序、章目、標題頁）底下沒有帶編號的章，所以只數出一卷。
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7156&type=file-xml"],
+    },
+    # 🚨 同一冊的《根那狄名人傳續編》**不收**。拉丁本在 Corpus Corporum（作者 998、
+    #    文本 7668，100 章），中譯也切得乾淨，第 2 章與第 98 章都逐字對得上——但
+    #    中間對不上：中譯第 32–86 章比 Migne 多一號（中 49 保利努斯＝拉 48 PAULINUS，
+    #    而拉 49 是 EUTROPIUS），第 87 章起又回到同號。前後各自成立、中間整段錯開，
+    #    一個偏移量修不了。是抽查「中間那一章」才發現的——只驗首末會全部通過。
     # ── NPNF2 第九卷（希拉里《論三位一體》十二卷）──────────────────────────
     # 站上這一冊把每一卷切成一段，chapter_path 就叫「第一卷」…「第十二卷」——
     # 作品名那一欄看起來像壞掉，其實乾乾淨淨：一段一卷、卷內是連續節號。
@@ -640,6 +658,7 @@ WORKS: dict[str, dict] = {
         "prefix": "居普良 論述集",
         "lang": "la",
         "mode": "cc-book",
+        "unit": "work",
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 4 的 TEI，蘇黎世大學",
         # 🚨 站上「居普良 論述集」的第 83 段是一個 140,898 字、445 個正文段的巨塊，
         #    裡面裝了九部各自從第一章重編的著作。**章號重編的位置不能當切點**
@@ -676,6 +695,9 @@ WORKS: dict[str, dict] = {
                  "https://mlat.uzh.ch/php_modules/download.php?idno=118&type=file-xml",
                  "https://mlat.uzh.ch/php_modules/download.php?idno=128&type=file-xml"],
         "blocks": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        # 第九部之後緊接著的是編者對詩篇編號的附註，不是正文——沒有這個結尾標記
+        # 的話那幾列會拿到《論嫉妒與羨慕》第一、五章的拉丁文。
+        "end_marker": r"^1\. 我們的英文版本遵循希伯來文編號",
         # 逐部讀過首章、末章（《論教會的合一》另加第 5、10、13、16、20、23、26 章）
         # 確認編號真的對得上，所以章數不等的那幾部也收。
         "numbering_verified": [1, 4, 6, 9],
@@ -940,9 +962,12 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "cc-book":
         s = requests.Session()
         s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
-        parse = (FO.parse_cc_work if spec.get("markers")
-                 else FO.parse_cc_paragraphs if spec.get("unit") == "paragraph"
-                 else FO.parse_cc_chapters)
+        # 原典的章掛在哪一層，逐部指定：div3 帶編號的用 "work"（居普良那批的章號
+        # 是羅馬數字、直接掛 div3），Migne 的奧古斯丁走節號那一層用 "paragraph"，
+        # 其餘（章在 div2 的 CAPUT）走預設。挑錯層會解析出 0 章。
+        parse = {"work": FO.parse_cc_work,
+                 "paragraph": FO.parse_cc_paragraphs}.get(
+                     spec.get("unit"), FO.parse_cc_chapters)
         # 一部著作的各卷可能分裝成好幾個檔（NPNF 把《論聖徒的預定》與《論堅忍的
         # 恩賜》併成一部的上下兩卷，Corpus Corporum 那邊是兩份文本）。接續編號。
         got: dict[tuple[int, int], str] = {}
@@ -1518,18 +1543,21 @@ def run_work(name: str, a) -> int:
                 if pending:
                     print(f"  ⚠ 找不到這幾個著作起點，整部不收：{pending}")
                     continue
+                # 🚨 最後一部要有明確的**結尾標記**。沒有的話它會一路吃到整部的
+                #    最後——居普良那一部實測吃進了下一段的編者附註（「我們的英文
+                #    版本遵循希伯來文編號…」），那幾列拿到了《論嫉妒與羨慕》第
+                #    一、五章的拉丁文，讀起來像正文。
+                end = len(flat)
+                if part.get("end_marker"):
+                    hit = [j for j in range(bounds[-1] + 1, len(flat))
+                           if re.search(part["end_marker"], flat[j][2])]
+                    if not hit:
+                        print(f"  ⚠ 找不到結尾標記 {part['end_marker']!r}，整部不收")
+                        continue
+                    end = hit[0]
                 marker_blocks, seq = [], []
                 for k, start in enumerate(bounds):
-                    # 🚨 最後一部的結尾要**收在自己那一段之內**。不收的話它會一路
-                    #    吃到整部的最後——居普良那一部實測吃進了下一段的編者附註
-                    #    （「我們的英文版本遵循希伯來文編號…」），那幾列拿到了
-                    #    《論嫉妒與羨慕》第一、五章的拉丁文，讀起來像正文。
-                    #    走 markers 的前提就是「一段裡壓了好幾部完整的著作」，
-                    #    所以一部著作不會跨段。
-                    same_chunk = next((j for j in range(start, len(flat))
-                                       if flat[j][0] != flat[start][0]), len(flat))
-                    stop = min(bounds[k + 1] if k + 1 < len(bounds) else len(flat),
-                               same_chunk)
+                    stop = bounds[k + 1] if k + 1 < len(bounds) else end
                     piece = flat[start:stop]
                     block = [(piece[i][0], piece[i][1], n)
                              for i, n in FO.both_anchors([x[2] for x in piece])]
