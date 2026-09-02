@@ -427,6 +427,28 @@ Supabase/R2 偶發 `RemoteDisconnected`/`ConnectionError` → **`--all` 迴圈�
 7. full run（engine/quota 看 [[ebook-translate]]）→ 多語 JSONL
 8. volume/parent_volume backfill → R2 + DB previews
 9. reader 多欄驗證 → hub works `status→done`+`ebookId` → commit + push（[[feedback-auto-push]]）
+10. **收工前跑一次對帳**：`python scripts/collected_works_status.py`（改完再 `--apply`）
+
+### 🚨 第 10 步不能省：「翻完了／上架了／標好了」是三件事
+
+榮格十六卷 2026-08 就翻完，hub 卻掛著 in-progress、DB 裡只有一卷——三個原因疊在一起
+（來源檔搬走、`file_path` 撞唯一鍵、row 沒帶 `collection`），每一個都沒有徵兆
+（[[feedback_reader_silent_failures]]）。`collected_works_status.py` 把三者擺在一起看：
+
+| 分類 | 意思 | 怎麼修 |
+|---|---|---|
+| 假 done | hub 說完成，DB 沒內容 | `--fix-fake` 降回 planned，順手拿掉查無此書的 ebookId |
+| 該標 done | DB 已滿，hub 還沒改 | `--apply` |
+| 沒列進 hub | DB 有這本全集書，works[] 沒有它 | `--link --apply`（書名對得上就自動補 ebookId） |
+| 進行中 | 還在跑 | `--apply` 會把「本機已完成 N 節」寫進 note |
+| 同書異版／譯本集 | hub 已指到另一譯本／本體在 /sacred-books-east | 不算缺漏，不用動 |
+
+2026-09-02 這一輪：50 筆該標 done、4 筆假 done 降級、11 筆補進 hub，另補建**太虛大師
+hub**（21 編早就上架卻沒有作家頁）與**佛洛伊德 hub**（《夢的解析》324 chunks 同上）。
+
+⚠️ 手工往 store 插 works 條目時，插入點務必落在該作者的 `works: [...]` 之內——
+`test/collected-works/isolation.spec.ts` 會抓到（它比對 regex 抽到的 ebookId 數與
+store 實際載入的數量，插進 timeline 陣列會多一個對不上）。
 
 **單一語言卷（pipeline ②，如印順／聖嚴／星雲）**：照 §B5 —— 來源分級 → 找內容端點 → 麵包屑反推結構 → 禮貌爬取+快取 → 解析器 → 入庫（per-book try/except+resume）→ hub。
 

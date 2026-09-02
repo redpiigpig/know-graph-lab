@@ -189,6 +189,86 @@ def demote_fake(fake_done: list, books: dict) -> int:
     return changed
 
 
+def _norm_title(s: str) -> str:
+    """比對書名用：去掉括號註記（英繁對照…）與標點。"""
+    s = re.sub(r"[（(\[【].*?[）)\]】]", "", s or "")
+    return re.sub(r"[《》〈〉·‧・\s：:—\-]", "", s)
+
+
+def author_names(text: str) -> dict[str, str]:
+    """hub slug → 繁中作者名（DB 的 author 欄用的是繁中名）。"""
+    out, cur = {}, None
+    for line in text.splitlines():
+        m = re.match(r"""^\s*["']?slug["']?:\s*['"]([a-z0-9-]+)['"]""", line)
+        if m:
+            cur = m.group(1)
+            continue
+        m2 = re.match(r"""^\s*["']?name["']?:\s*['"]([^'"]+)['"]""", line)
+        if m2 and cur and cur not in out:
+            out[cur] = m2.group(1)
+    return out
+
+
+def link_orphans(works: list, books: dict, *, apply: bool) -> list[str]:
+    """DB 有、hub 沒指到的書：書名對得上就把 ebookId 補進去（或換成內容較多的那本）。"""
+    text = STORE.read_text(encoding="utf-8")
+    zh2slug = {v: k for k, v in author_names(text).items()}
+    claimed = {w["ebookId"] for w in works if w["ebookId"]}
+    orphans = [b for eid, b in books.items()
+               if eid not in claimed and (b["chunk_count"] or 0) >= 2]
+    by_author: dict[str, list] = {}
+    for w in works:
+        by_author.setdefault(w["author"], []).append(w)
+
+    lines = text.splitlines(keepends=True)
+    plan: list[tuple[int, str, str]] = []   # (status_line, 新 ebookId, 說明)
+    notes: list[str] = []
+    for b in sorted(orphans, key=lambda x: -(x["chunk_count"] or 0)):
+        author = b["author"] or ""
+        slug = zh2slug.get(author)
+        if not slug:
+            # DB 的 author 常是簡稱（「弗雷澤」對 hub 的「詹姆斯‧弗雷澤」），互為包含就算同一人
+            cands = [s for zh, s in zh2slug.items()
+                     if len(zh) > 1 and (zh in author or author in zh)]
+            slug = cands[0] if len(cands) == 1 else None
+        if not slug:
+            notes.append(f"無 hub：{b['author']}／{b['title'][:24]}（{b['chunk_count']} chunks）")
+            continue
+        nb = _norm_title(b["title"])
+        for w in by_author.get(slug, []):
+            nw = _norm_title(w["title"])
+            if not nw or nw not in nb:
+                continue
+            old = (books.get(w["ebookId"], {}) or {}).get("chunk_count") or 0
+            if w["ebookId"] and old >= (b["chunk_count"] or 0):
+                continue                      # 已指到內容更多的版本，別動
+            why = "補上" if not w["ebookId"] else f"換版本（{old}→{b['chunk_count']}）"
+            plan.append((w["status_line"], b["id"], w["ebookId"],
+                         f"{slug}／{w['title'][:20]}：{why}"))
+            break
+
+    for i, eid, old_id, why in sorted(plan, key=lambda t: t[0], reverse=True):
+        notes.append(why)
+        if not apply or i < 0:
+            continue
+        line = lines[i]
+        quote = "'" if "'" in line.split(":", 1)[1] else '"'
+        indent = line[:len(line) - len(line.lstrip())]
+        lines[i] = re.sub(r"(['\"])(?:planned|in-progress)\1", r"\1done\1", line, count=1)
+        if eid in "".join(lines[max(0, i - 6):i + 7]):
+            continue                          # 已經有這個 id 了
+        if old_id:                            # 換版本：改寫原本那行，不是再插一行
+            for j in range(max(0, i - 6), min(len(lines), i + 7)):
+                if old_id in lines[j]:
+                    lines[j] = lines[j].replace(old_id, eid)
+                    break
+            continue
+        lines.insert(i + 1, f"{indent}ebookId: {quote}{eid}{quote},\n")
+    if apply and plan:
+        STORE.write_text("".join(lines), encoding="utf-8")
+    return notes
+
+
 def apply_marks(should_done: list, in_flight: list, titles: dict) -> int:
     """把 status 改對、把進度寫進 note。逐行替換，不動縮排與引號風格。"""
     lines = STORE.read_text(encoding="utf-8").splitlines(keepends=True)
@@ -222,6 +302,8 @@ def main() -> None:
                     help="把「該標 done」改成 done，並把進度寫進 in-progress 的 note")
     ap.add_argument("--fix-fake", action="store_true",
                     help="假 done 降級 planned，並拿掉查無此書的 ebookId")
+    ap.add_argument("--link", action="store_true",
+                    help="孤兒書：書名對得上就把 ebookId 補進 hub（先看 --link 再加 --apply）")
     a = ap.parse_args()
 
     works = parse_store(STORE.read_text(encoding="utf-8"))
@@ -241,9 +323,29 @@ def main() -> None:
         elif w["status"] == "in-progress" and n < 2:
             in_flight.append(w)
 
-    orphan = [b for eid, b in books.items()
-              if eid not in claimed and (b["chunk_count"] or 0) >= 2
-              and not a.author]
+    # 兩種「看起來像缺漏、其實不是」：
+    #   譯本集——東方聖書那五十卷的 author 是譯者，本體在 /sacred-books-east
+    #   同書異版——hub 已經指到同一著作的另一個譯本（通常是內容更多的那個）
+    text = STORE.read_text(encoding="utf-8")
+    zh2slug = {v: k for k, v in author_names(text).items()}
+    # 只有「hub 那一筆已經指到別本」才算同書異版；hub 那筆若還沒有 ebookId，
+    # 這本就是該補上去的那一本（矢內原《耶穌傳》一度被這條吃掉）。
+    linked_titles: dict[str, set] = {}
+    for w in works:
+        if w["ebookId"]:
+            linked_titles.setdefault(w["author"], set()).add(_norm_title(w["title"]))
+
+    def other_edition(b: dict) -> bool:
+        slug = zh2slug.get(b["author"] or "")
+        nb = _norm_title(b["title"])
+        return any(t and t in nb for t in linked_titles.get(slug, ()))
+
+    corpus, other, orphan = [], [], []
+    for eid, b in books.items():
+        if eid in claimed or (b["chunk_count"] or 0) < 2 or a.author:
+            continue
+        (corpus if "（譯）" in (b["author"] or "")
+         else other if other_edition(b) else orphan).append(b)
 
     def show(title, rows, fmt):
         print(f"\n■ {title}（{len(rows)}）")
@@ -260,12 +362,19 @@ def main() -> None:
          lambda w: f"{w['author']:14} {w['title'][:26]:28} {w['note'][:40]}")
     show("沒列進 hub：DB 有這本全集書，works[] 沒有它", orphan,
          lambda b: f"{(b['author'] or '?')[:14]:14} {b['title'][:30]:32} chunks={b['chunk_count']}")
+    show("同書異版：hub 指到另一個譯本（不算缺漏）", other,
+         lambda b: f"{(b['author'] or '?')[:14]:14} {b['title'][:30]:32} chunks={b['chunk_count']}")
+    show("譯本集：本體在 /sacred-books-east（不算缺漏）", corpus,
+         lambda b: f"{(b['author'] or '?')[:14]:14} {b['title'][:30]:32} chunks={b['chunk_count']}")
 
     if a.progress:
         print("\n■ 本機佇列進度")
         for name, line in local_progress().items():
             print(f"   {name}: {line[:160]}")
 
+    if a.link:
+        for line in link_orphans(works, books, apply=a.apply):
+            print("   " + line)
     if a.fix_fake:
         n = demote_fake(fake_done, books)
         print(f"\n✔ 假 done 降級 {n} 筆（status→planned，查無此書的 ebookId 已移除）")

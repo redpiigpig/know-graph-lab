@@ -1517,9 +1517,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 2,
           category: '《九章集》（Enneads）',
           languages: ['grc', 'en'],
-          status: 'in-progress',
+          status: 'done',
           ebookId: '70000000-0000-4000-8000-000000000062',
-          note: '論物質世界、天體、質料。｜轉錄中：本機已完成 26 節（2026-09-02）',
+          note: '論物質世界、天體、質料。｜轉錄中：本機已完成 66 節（2026-09-02）',
         },
         {
           title: '第三集：宇宙、命運與時間（九篇）',
@@ -1530,7 +1530,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           languages: ['grc', 'en'],
           status: 'in-progress',
           ebookId: '70000000-0000-4000-8000-000000000063',
-          note: '論命運、天意、永恆與時間。',
+          note: '論命運、天意、永恆與時間。｜轉錄中：本機已完成 27 節（2026-09-02）',
         },
         {
           title: '第四集：論靈魂（九篇）',
@@ -1804,6 +1804,85 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     // ────────────────────────────────────────────────────────────────
     // 卡爾‧古斯塔夫‧榮格（分析心理學）
     // ────────────────────────────────────────────────────────────────
+    // ────────────────────────────────────────────────────────────────
+    // 佛洛伊德（精神分析創立者；宗教研究上的「幻覺」論題起點）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'sigmund-freud',
+      name: '佛洛伊德',
+      nameEn: 'Sigmund Freud',
+      nameOriginal: 'Sigmund Freud',
+      lifespan: '1856–1939',
+      disciplineGroup: '心理學',
+      sortYear: 1856,
+      discipline: '精神分析創立者；以無意識、夢的解析與伊底帕斯情結重寫人對自身的理解，並把宗教當成集體幻覺來分析',
+      fields: ['精神分析', '無意識', '夢', '宗教批判', '文化理論'],
+      portraitUrl:
+        'https://commons.wikimedia.org/wiki/Special:FilePath/Sigmund%20Freud%2C%20by%20Max%20Halberstadt%20(cropped).jpg?width=500',
+      portraitCredit: 'Wikimedia Commons 公有領域肖像（Max Halberstadt 攝，約 1921）',
+      color: 'slate',
+      emoji: '🛋️',
+      contribution: [
+        '佛洛伊德（1856–1939）以《夢的解析》（1900）確立**無意識**作為心理生活的主體，並提出夢是「願望的偽裝滿足」、可藉自由聯想與象徵解讀通往潛意識——這本書同時是精神分析的起點與二十世紀人文學科的共同語彙來源。',
+        '在**宗教研究**上他是繞不開的一方：《圖騰與禁忌》（1913）以原初弒父的神話解釋圖騰與禁忌的起源，《一個幻覺的未來》（1927）把宗教定義為出於無助感的**幻覺**（Illusion），《摩西與一神教》（1939）則以精神分析重讀出埃及敘事。榮格與他的決裂，正是圍繞「宗教經驗是病理還是資源」這個分歧。',
+        '本站以宗教研究為主軸收錄他：《夢的解析》已逐段自譯上架（英繁對照），其餘幾部宗教相關著作待轉錄。',
+      ],
+      sourceNote:
+        '佛洛伊德 1939 卒，德文原著在多數司法管轄區已進入公有領域；英譯視版本而定，本站採已進入公有領域的早期英譯逐段自譯成繁中（英繁對照）。',
+      timeline: [
+        { year: '1856', text: '生於摩拉維亞弗萊堡（今捷克 Příbor）猶太家庭。' },
+        { year: '1885', text: '赴巴黎隨夏爾科學習催眠與歇斯底里研究。' },
+        { year: '1900', text: '出版《夢的解析》。' },
+        { year: '1913', text: '出版《圖騰與禁忌》；同年與榮格決裂。' },
+        { year: '1927', text: '出版《一個幻覺的未來》，把宗教定義為幻覺。' },
+        { year: '1938', text: '納粹併奧後流亡倫敦。' },
+        { year: '1939', text: '卒於倫敦。' },
+      ],
+      works: [
+        {
+          title: '夢的解析',
+          titleOriginal: 'Die Traumdeutung',
+          year: '1900',
+          yearSort: 1900,
+          category: '精神分析奠基作',
+          languages: ['de', 'en'],
+          status: 'done',
+          ebookId: '80000000-0000-4000-8000-000000000010',
+          note: '英譯逐段自譯（英繁對照）；無意識與夢的象徵解讀。',
+        },
+        {
+          title: '圖騰與禁忌',
+          titleOriginal: 'Totem und Tabu',
+          year: '1913',
+          yearSort: 1913,
+          category: '宗教與文化',
+          languages: ['de'],
+          status: 'planned',
+          note: '以原初弒父解釋圖騰與禁忌；宗教人類學論戰的常客。',
+        },
+        {
+          title: '一個幻覺的未來',
+          titleOriginal: 'Die Zukunft einer Illusion',
+          year: '1927',
+          yearSort: 1927,
+          category: '宗教與文化',
+          languages: ['de'],
+          status: 'planned',
+          note: '把宗教定義為出於無助感的幻覺；宗教批判的代表文本。',
+        },
+        {
+          title: '摩西與一神教',
+          titleOriginal: 'Der Mann Moses und die monotheistische Religion',
+          year: '1939',
+          yearSort: 1939,
+          category: '宗教與文化',
+          languages: ['de'],
+          status: 'planned',
+          note: '以精神分析重讀出埃及敘事與一神教起源。',
+        },
+      ],
+    },
+
     {
       slug: 'jung',
       name: '卡爾‧古斯塔夫‧榮格',
@@ -1939,9 +2018,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1907–58',
           yearSort: 3,
           category: '精神醫學與實驗心理學（早期）',
-          status: 'in-progress',
+          status: 'planned',
           ebookId: '22220000-0000-4222-8222-000000000003',
-          note: '全集 CW 3 ＝ GW 3。含 1907《早發性癡呆心理學》（德文原典公有領域）。',
+          note: '全集 CW 3 ＝ GW 3。**不重譯**：已有 standalone 完整譯本《早發性癡呆心理學》（1909 英譯，109 chunks），見上。',
         },
         // 精神分析與力比多理論
         {
@@ -1950,9 +2029,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1906–16',
           yearSort: 4,
           category: '精神分析與力比多理論',
-          status: 'in-progress',
+          status: 'planned',
           ebookId: '22220000-0000-4222-8222-000000000004',
-          note: '全集 CW 4 ＝ GW 4。部分早期德文論文 1929 前公有領域；Hull 英譯仍受版權。',
+          note: '全集 CW 4 ＝ GW 4。**不重譯**：已有 standalone 完整譯本《精神分析理論》（1913 Fordham 講稿，89 chunks），見上。',
         },
         {
           title: '轉化的象徵',
@@ -1971,9 +2050,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1921',
           yearSort: 6,
           category: '分析心理學核心理論',
-          status: 'in-progress',
+          status: 'planned',
           ebookId: '22220000-0000-4222-8222-000000000006',
-          note: '全集 CW 6 ＝ GW 6。',
+          note: '全集 CW 6 ＝ GW 6。**不重譯**：已有 standalone 完整譯本《心理類型》（1921 德文·1923 英譯三欄，258 chunks），見上。',
         },
         {
           title: '分析心理學二論',
@@ -2127,6 +2206,83 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           category: '工具卷（書目與索引）',
           status: 'copyright',
           note: '全集 CW 20（無 GW 對應）。工具卷（索引），不翻譯。',
+        },
+        // 既有中譯本（參考層）——不是我的逐段翻譯，是圖書館既有的第三方中譯，
+        // 2026-09-02 從電子圖書館歸位到全集（[[feedback_collected_works_not_in_library]]）。
+        {
+          title: '紅書',
+          titleOriginal: 'Liber Novus',
+          year: '2009',
+          yearSort: 2009,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'de58044e-d56c-478e-8e01-b11f40d3a157',
+          note: '繁體中譯本；1913–1930 私人紅皮筆記，2009 年始公開出版。',
+        },
+        {
+          title: '榮格論心理類型',
+          titleOriginal: 'Psychologische Typen',
+          year: '1921',
+          yearSort: 1921,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '2feb39cd-22cb-4413-ad24-39dbd194779d',
+          note: '莊仲黎繁譯；與 CW 6 同書，這一版是既有中譯本（參考層）。',
+        },
+        {
+          title: '伊雍：自性現象學研究',
+          titleOriginal: 'Aion',
+          year: '1951',
+          yearSort: 1951,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '82128c89-5313-409b-a3e2-f4de58eacff2',
+          note: '簡體全譯；與 CW 9ii 同書，這一版是既有中譯本（參考層）。',
+        },
+        {
+          title: '未發現的自我',
+          titleOriginal: 'Gegenwart und Zukunft',
+          year: '1957',
+          yearSort: 1957,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'f10da364-b449-4002-8661-e8e52be3617c',
+          note: '既有中譯本（簡體）；收於 CW 10。',
+        },
+        {
+          title: '英雄與母親',
+          titleOriginal: 'Symbole der Wandlung（選譯）',
+          year: '1912',
+          yearSort: 1912,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'cf2197ab-7bc3-40ce-a243-a748f4d6e85b',
+          note: '既有中譯本（簡體）；與 CW 5 相關。',
+        },
+        {
+          title: '東方的智慧',
+          year: '1936',
+          yearSort: 1936,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '708321c8-00be-4a9f-b84d-eced12ec4d81',
+          note: '既有中譯本（簡體）；收榮格論東方宗教諸文，與 CW 11 東方部分相關。',
+        },
+        {
+          title: '榮格自傳：回憶‧夢‧省思',
+          titleOriginal: 'Erinnerungen, Träume, Gedanken',
+          year: '1962',
+          yearSort: 1962,
+          category: '既有中譯本（參考層）',
+          languages: ['zh'],
+          status: 'in-progress',
+          note: '繁體中譯本已在 Drive，但 EPUB 的 manifest 列了一張不存在的圖，ebooklib 解析當掉（0 chunk）｜轉錄中：待改走 zipfile 重轉。',
         },
       ],
     },
@@ -2751,7 +2907,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1952,
           category: '信仰與人物',
           languages: ['ja'],
-          status: 'planned',
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000003',
           note: '《嘉信》1951 年連載成書（角川 1952）。青空文庫有全文。',
         },
         // 聖書講義
@@ -2772,7 +2929,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1948,
           category: '聖書講義',
           languages: ['ja'],
-          status: 'planned',
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000004',
           note: '初出 1940《イエス伝講話》（嘉信文庫）；《聖書講義 1》角川書店 1948。青空文庫有全文（底本角川文庫 1999）。',
         },
         {
@@ -3327,6 +3485,253 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         },
       ],
     },
+    // ────────────────────────────────────────────────────────────────
+    // 太虛大師（人生佛教的提出者；印順的老師）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'taixu',
+      name: '太虛大師',
+      nameEn: 'Taixu',
+      nameOriginal: '釋太虛',
+      lifespan: '1890–1947',
+      disciplineGroup: '佛學',
+      discipline: '近代漢傳佛教改革運動的領袖、「人生佛教」的提出者；主張教理、教制、教產三大革命',
+      fields: ['人生佛教', '佛教改革', '唯識學', '判教', '僧教育'],
+      portraitUrl: '',
+      portraitCredit: '（暫無公有領域肖像）',
+      color: 'amber',
+      emoji: '☸️',
+      contribution: [
+        '太虛大師（1890–1947）是**近代漢傳佛教改革運動的核心人物**。面對清末民初廟產興學、僧伽衰頹的局面，他提出**教理革命、教制革命、教產革命**三大主張，要把佛教從經懺應赴的營生裡拉回教義與教育，創辦武昌佛學院、閩南佛學院、漢藏教理院，培養出一整代僧才——印順、法尊、法舫等皆出其門下。',
+        '思想上他提出**「人生佛教」**：佛法的重心應在**此生此世的人格養成與社會關懷**，而非死後與鬼神；「仰止唯佛陀，完成在人格，人成即佛成，是名真現實」四句偈是其綱領。這一路線後經印順深化為**「人間佛教」**，並成為戰後台灣佛教（慈濟、佛光山、法鼓山）共同的思想底盤。',
+        '學問上他以**唯識學**為骨幹會通全體佛法，晚年《真現實論》三部（宗依、宗體、宗用）是其體系性的總結。畢生著述由門人編為《太虛大師全書》二十編，本全集即據 CBETA 數位版逐編轉錄。',
+      ],
+      sourceNote:
+        '太虛大師 1947 圓寂，《全書》為門人歿後編纂；本站為私人研究圖書館（auth-gate 後僅供個人閱讀）收錄，文本採自 CBETA《太虛大師全書》TX 系列。全書本即繁體中文，reader 單欄呈現，零翻譯零對齊。',
+      timeline: [
+        { year: '1890', text: '生於浙江省崇德縣（俗名呂淦森）。' },
+        { year: '1904', text: '於蘇州小九華寺出家，法名唯心，號太虛。' },
+        { year: '1913', text: '在八指頭陀追悼會上提出教理、教制、教產三大革命。' },
+        { year: '1922', text: '創辦武昌佛學院，開近代僧教育之先。' },
+        { year: '1928', text: '赴歐美弘法，為近代中國僧人訪歐第一人。' },
+        { year: '1932', text: '主持閩南佛學院；印順於此親近受學。' },
+        { year: '1940', text: '創辦漢藏教理院，推動漢藏佛教交流。' },
+        { year: '1947', text: '圓寂於上海玉佛寺，世壽五十八。' },
+      ],
+      works: [
+        {
+          title: '太虛大師全書編纂說明',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '編纂資料',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '47168443-f7c4-5e1a-89f4-88f876f32d20',
+          note: 'CBETA 太虛大師全書（TXA001）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第一編 佛法總學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '8048e039-bbc1-5cde-972e-a32f19cffad0',
+          note: 'CBETA 太虛大師全書（TX0001）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第二編 五乘共學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '13328373-1e7b-521d-ba11-e35482ca6607',
+          note: 'CBETA 太虛大師全書（TX0002）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第三編 三乘共學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '21037791-026c-535d-9251-4c394632dd09',
+          note: 'CBETA 太虛大師全書（TX0003）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第四編 大乘通學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'f49bad31-01a0-520c-a015-ef8b7352b178',
+          note: 'CBETA 太虛大師全書（TX0004）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第五編 法性空慧學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'bd45ece0-cb4b-574f-932d-47aa517031b2',
+          note: 'CBETA 太虛大師全書（TX0005）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第六編 法相唯識學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'f4810ad6-b61f-5ce7-b00a-b6f99b5ebc54',
+          note: 'CBETA 太虛大師全書（TX0006）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第七編 法界圓覺學',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '法藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'c704b33f-090e-598d-9371-52a3e6363f1a',
+          note: 'CBETA 太虛大師全書（TX0007）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第八編 律釋',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '制藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '22112529-173b-56d2-bf55-f32c264e60f9',
+          note: 'CBETA 太虛大師全書（TX0008）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第九編 制議',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '制藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'd9636e26-45cd-5593-83df-a1843b2eadb2',
+          note: 'CBETA 太虛大師全書（TX0009）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十編 學行',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '制藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '4c7853ac-50fb-54b3-97f3-73ebfacbbbfd',
+          note: 'CBETA 太虛大師全書（TX0010）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十一編 真現實論宗依論',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '論藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '5deecd03-48b6-537f-97d4-399aaf0e6b3a',
+          note: 'CBETA 太虛大師全書（TX0011）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十二編 真現實論宗體論',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '論藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '35943f38-442c-55e9-b6a8-61d0c411d362',
+          note: 'CBETA 太虛大師全書（TX0012）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十三編 真現實論宗用論',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '論藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '48d153c7-11a4-5b70-ae32-f71a79c3562a',
+          note: 'CBETA 太虛大師全書（TX0013）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十四編 支論',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '論藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'ec43b43b-5c2f-5470-9d4e-787983c4b00d',
+          note: 'CBETA 太虛大師全書（TX0014）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十五編 時論',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'cb220c60-8e88-58bd-93e3-431ee9b48b20',
+          note: 'CBETA 太虛大師全書（TX0015）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十六編 書評',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: '4bd3050c-76f4-5a3e-b0ad-73b54e44fc4c',
+          note: 'CBETA 太虛大師全書（TX0016）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十七編 酬對',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'b423f434-3db8-5c23-8f72-9c4b8cc20c0d',
+          note: 'CBETA 太虛大師全書（TX0017）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十八編 講演',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'f671f4a6-407b-57ff-91dc-929e33a0f5d4',
+          note: 'CBETA 太虛大師全書（TX0018）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第十九編 文叢',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'a42103d5-9a5f-54cb-84f7-c08214621a85',
+          note: 'CBETA 太虛大師全書（TX0019）；本即繁中，reader 單欄。',
+        },
+        {
+          title: '第二十編 詩存',
+          year: '1947–1956',
+          yearSort: 1947,
+          category: '雜藏',
+          languages: ['zh'],
+          status: 'done',
+          ebookId: 'f4be2a20-014f-5d9a-897a-23ee9f86d345',
+          note: 'CBETA 太虛大師全書（TX0020）；本即繁中，reader 單欄。',
+        },
+      ],
+    },
+
     {
       slug: 'yinshun',
       name: '印順法師',
@@ -15602,7 +16007,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "note": "「我思故我在」首度提出之作，附三篇科學論文示範方法應用。"
                 },
                 {
-                      "title": "沉思錄",
+                      "title": "第一哲學沉思集",
                       "titleOriginal": "Meditationes de Prima Philosophia",
                       "year": "1641",
                       "yearSort": 1641,
@@ -15610,8 +16015,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "la"
                       ],
-                      "status": "planned",
-                      "note": "六篇沉思，系統論證懷疑法、心物二元論與上帝存在證明。"
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000003",
+                      "note": "六篇沉思，系統論證懷疑法、心物二元論與上帝存在證明。英譯逐段自譯（英繁對照）。"
                 },
                 {
                       "title": "哲學原理",
@@ -15723,7 +16129,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "la"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000005",
                       "note": "代表作，以幾何學方式論證泛神論形上學與理性倫理學。"
                 },
                 {
@@ -16368,7 +16775,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000004",
                       "note": "改寫《人性論》卷一，含著名的因果性與歸納問題論證。"
                 },
                 {
@@ -16643,7 +17051,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "de"
                       ],
                       "status": "done",
-                      ebookId: "d4fd8e79-eb34-4fc7-8d6d-bb344c176995",
+                      ebookId: "80000000-0000-4000-8000-000000000011",
                       "note": "西方哲學史最重要著作之一，發動「哥白尼式革命」。"
                 },
                 {
@@ -17446,7 +17854,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000002",
                       "note": "代表作，提出傷害原則，捍衛個人自由與言論自由。"
                 },
                 {
@@ -17772,7 +18181,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000001",
                       "note": "與恩格斯合著，國際共產主義運動最重要的綱領性文本。"
                 },
                 {
@@ -18377,7 +18787,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000012",
                       "note": "兩卷本,首創「文化」人類學定義,提出萬物有靈論與遺存說,宗教人類學奠基之作。"
                 },
                 {
@@ -18767,7 +19178,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000009",
                       "note": "濃縮十二卷為一冊,是二十世紀讀者最廣的版本。"
                 }
           ]
@@ -20282,7 +20694,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000008",
                       "note": "宗教社會學奠基之作，以圖騰制度論神聖/世俗二元與集體歡騰"
                 },
                 {
@@ -20600,6 +21013,19 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       ebookId: "18640000-0000-4000-8000-000000000002",
                       "note": "李中文譯《以政治為志業》（暖暖書屋）；提出「責任倫理／信念倫理」與國家作為壟斷正當暴力的定義"
+                },
+                {
+                      "title": "科學作為天職（李猛譯本）",
+                      "titleOriginal": "Wissenschaft als Beruf",
+                      "year": "1919",
+                      "yearSort": 1919,
+                      "category": "演講與方法論文集",
+                      "languages": [
+                            "de"
+                      ],
+                      "status": "done",
+                      ebookId: "424dc120-0bc8-410d-aa63-ae5786d250b0",
+                      "note": "既有中譯本（參考層，簡體李猛譯）；主譯本用李中文《以學術為志業》繁體新譯"
                 }
           ]
     },
@@ -22124,7 +22550,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "80000000-0000-4000-8000-000000000007",
                       "note": "吉福德講座集結，以經驗分類法研究神祕經驗與皈依經驗，宗教心理學奠基之作。"
                 },
                 {
