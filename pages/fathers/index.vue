@@ -108,7 +108,7 @@ interface BookView extends BookRow {
 // 已補上第三欄（拉丁／希臘原典）的卷。逐部的取源與命中率記在
 // .claude/skills/scripture-fathers/SKILL.md 的對照表。
 const ORIGINAL_IDS = new Set([
-  '0e08c662-540b-4186-b250-9bca0cfe1002',  // grc/la 35 段 — 希波呂圖《駁諸異端》、諾瓦提安《論三位一體》
+  '0e08c662-540b-4186-b250-9bca0cfe1002',  // grc/la 36 段 — 希波呂圖《駁諸異端》、諾瓦提安《論三位一體》、居普良《論述集》九部
   '1eb50be9-34ac-4ce3-874d-1280975851fc',  // la 78 段 — 奧古斯丁《上帝之城》
   '24c53ede-8787-442e-a3ba-0cd55d0effac',  // la 19 段 — 勒蘭的文森《勸誡錄》、蘇皮丘‧塞維魯《編年史》兩卷、蘇皮丘‧塞維魯《聖瑪爾定傳》
   '29782dd6-ece9-446a-83ed-9cc0892d7cc7',  // grc 55 段 — 索佐門《教會史》九卷、蘇格拉底《教會史》七卷

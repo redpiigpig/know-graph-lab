@@ -27,6 +27,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -369,7 +370,7 @@ WORKS: dict[str, dict] = {
         "mode": "cc-book",
         "unit": "paragraph",
         # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
-        "short_ok": [1],
+        "numbering_verified": [1],
         "blocks": [1, 2],
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7475&type=file-xml"],
@@ -415,7 +416,7 @@ WORKS: dict[str, dict] = {
         "mode": "cc-book",
         "unit": "paragraph",
         # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
-        "short_ok": [1],
+        "numbering_verified": [1],
         "blocks": [1],
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7476&type=file-xml"],
@@ -428,7 +429,7 @@ WORKS: dict[str, dict] = {
         "mode": "cc-book",
         "unit": "paragraph",
         # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
-        "short_ok": [1],
+        "numbering_verified": [1],
         "blocks": [1],
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7473&type=file-xml"],
@@ -441,7 +442,7 @@ WORKS: dict[str, dict] = {
         "mode": "cc-book",
         "unit": "paragraph",
         # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
-        "short_ok": [1],
+        "numbering_verified": [1],
         # NPNF 把《論聖徒的預定》與《論堅忍的恩賜》併成一部的上下兩卷，
         # Corpus Corporum 那邊是兩份文本，所以 urls 有兩個、接續編號。
         "blocks": [1, 2],
@@ -459,6 +460,52 @@ WORKS: dict[str, dict] = {
         "blocks": [1],
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7480&type=file-xml"],
+    },
+    "cyprian-treatises": {
+        "label": "居普良《論述集》九部（ANF 第五卷）",
+        "ebook_id": "0e08c662-540b-4186-b250-9bca0cfe1002",
+        "prefix": "居普良 論述集",
+        "lang": "la",
+        "mode": "cc-book",
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 4 的 TEI，蘇黎世大學",
+        # 🚨 站上「居普良 論述集」的第 83 段是一個 140,898 字、445 個正文段的巨塊，
+        #    裡面裝了九部各自從第一章重編的著作。**章號重編的位置不能當切點**
+        #    （十部的編號互相穿插），只能靠每一部自己的標題切——markers 就是那些
+        #    標題，逐一對應下面 urls 的同一順位。
+        # 🚨 中譯少了兩部的正文而註腳還在：論文二《論貞女的服飾》整部只剩註腳，
+        #    論文十《論嫉妒與羨慕》只剩第 14–18 章。所以 markers 只有九個。
+        #    分段那一層要修的話，這一份對照表就是起點。
+        #   1. 論教會的合一 De unitate ecclesiae（拉丁 26 章，中譯 27 —— NPNF 把末章拆成兩章）
+        #   2. 論失足者 De lapsis
+        #   3. 論主禱文 De oratione dominica
+        #   4. 致德米特里安努 Ad Demetrianum（中譯只到第 24 章）
+        #   5. 論偶像的虛妄 De idolorum vanitate
+        #   6. 論死亡 De mortalitate（中譯只到第 14 章）
+        #   7. 論行為與施捨 De opere et eleemosynis
+        #   8. 論耐心的益處 De bono patientiae
+        #   9. 論嫉妒與羨慕 De zelo et livore（中譯只剩第 14–18 章）
+        "markers": [r"論文第一篇",
+                    r"論文三",
+                    r"第四篇",
+                    r"論文\s*V\.",
+                    r"論文六",
+                    r"論文七",
+                    r"論文第八篇",
+                    r"論文九",
+                    r"^#\s*第十四章$"],
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=127&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=121&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=125&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=117&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=120&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=123&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=124&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=118&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=128&type=file-xml"],
+        "blocks": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        # 逐部讀過首章、末章（《論教會的合一》另加第 5、10、13、16、20、23、26 章）
+        # 確認編號真的對得上，所以章數不等的那幾部也收。
+        "numbering_verified": [1, 4, 6, 9],
     },
     "cassian-institutes": {
         "label": "迦仙《會院規章十二書》（NPNF2 第十一卷）",
@@ -717,7 +764,8 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "cc-book":
         s = requests.Session()
         s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
-        parse = (FO.parse_cc_paragraphs if spec.get("unit") == "paragraph"
+        parse = (FO.parse_cc_work if spec.get("markers")
+                 else FO.parse_cc_paragraphs if spec.get("unit") == "paragraph"
                  else FO.parse_cc_chapters)
         # 一部著作的各卷可能分裝成好幾個檔（NPNF 把《論聖徒的預定》與《論堅忍的
         # 恩賜》併成一部的上下兩卷，Corpus Corporum 那邊是兩份文本）。接續編號。
@@ -1271,15 +1319,53 @@ def run_work(name: str, a) -> int:
                 elif n:
                     skipped.append(f"{c['chapter_path']}（節數與原文段數對不上）")
         elif part["mode"] == "cc-book":
-            seq = []
+            flat = []
             for c in sorted(chunks, key=lambda x: x["chunk_index"]):
                 if c["chunk_index"] not in spans:
                     continue
-                body = FO.split_body(c.get("content") or "")
-                for i, n in FO.chapter_headings(body):
-                    seq.append((c["chunk_index"], i, n))
+                for i, p in enumerate(FO.split_body(c.get("content") or "")):
+                    flat.append((c["chunk_index"], i, p))
+            marker_blocks = None
+            if part.get("markers"):
+                # 🚨 一段裡壓了好幾部著作時，錨點**一定要逐部抽**。整塊一起抽的話
+                #    去重規則會把章標題全部丟掉——它們的號碼都被隔壁那部著作的節號
+                #    佔走了（居普良那一塊實測 17 個章標題全滅），而腳本只回報命中低。
+                bounds, pending = [], list(part["markers"])
+                for pos, (_, _, p) in enumerate(flat):
+                    if pending and re.search(pending[0], p):
+                        bounds.append(pos)
+                        pending.pop(0)
+                if pending:
+                    print(f"  ⚠ 找不到這幾個著作起點，整部不收：{pending}")
+                    continue
+                marker_blocks, seq = [], []
+                for k, start in enumerate(bounds):
+                    # 🚨 最後一部的結尾要**收在自己那一段之內**。不收的話它會一路
+                    #    吃到整部的最後——居普良那一部實測吃進了下一段的編者附註
+                    #    （「我們的英文版本遵循希伯來文編號…」），那幾列拿到了
+                    #    《論嫉妒與羨慕》第一、五章的拉丁文，讀起來像正文。
+                    #    走 markers 的前提就是「一段裡壓了好幾部完整的著作」，
+                    #    所以一部著作不會跨段。
+                    same_chunk = next((j for j in range(start, len(flat))
+                                       if flat[j][0] != flat[start][0]), len(flat))
+                    stop = min(bounds[k + 1] if k + 1 < len(bounds) else len(flat),
+                               same_chunk)
+                    piece = flat[start:stop]
+                    block = [(piece[i][0], piece[i][1], n)
+                             for i, n in FO.both_anchors([x[2] for x in piece])]
+                    marker_blocks.append(block)
+                    seq += block
+            else:
+                seq = []
+                for c in sorted(chunks, key=lambda x: x["chunk_index"]):
+                    if c["chunk_index"] not in spans:
+                        continue
+                    body = FO.split_body(c.get("content") or "")
+                    for i, n in FO.chapter_headings(body):
+                        seq.append((c["chunk_index"], i, n))
             placed, hit, num, report = FO.align_cc_books(
-                seq, by_book, part.get("blocks"), part.get("short_ok"))
+                seq, by_book, part.get("blocks"),
+                part.get("numbering_verified"), marker_blocks)
             for line in report:
                 print(f"    {line}")
             for c in chunks:

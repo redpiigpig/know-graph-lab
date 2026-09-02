@@ -620,10 +620,87 @@ def parse_cc_paragraphs(xml: str) -> tuple[dict[tuple[int, int], str], list[str]
     return out, notes
 
 
+CC_ANY_NO = re.compile(r"^\s*(\d{1,3}|[IVXLCDM]{1,9})\s*\.?\s*$")
+
+
+def parse_cc_work(xml: str) -> tuple[dict[tuple[int, int], str], list[str]]:
+    """單一著作的 Corpus Corporum TEI → {(1, 章): 拉丁文}。章號阿拉伯或羅馬都認。
+
+    居普良那一批的章在 <div3>（head 是「I.」「II.」），但《論行為與施捨》的章
+    直接掛在 <div1>（26 個）。找不到帶編號的 div3 就退用 div1——不退的話那一部
+    解析出 0 章，而腳本只回報「命中 0」，看起來像取源壞掉。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"), etree.XMLParser(recover=True))
+    ns = "{http://www.tei-c.org/ns/1.0}"
+    body = root.find(f".//{ns}body")
+    if body is None:
+        return {}, ["TEI 裡找不到 <body>"]
+
+    def collect(level: str) -> dict[int, str]:
+        got: dict[int, str] = {}
+        for sub in body.iter(f"{ns}{level}"):
+            head = sub.find(f"{ns}head")
+            m = CC_ANY_NO.match(strip_apparatus(head, True)) if head is not None else None
+            if not m:
+                continue
+            raw = m.group(1)
+            n = int(raw) if raw.isdigit() else roman_to_int(raw)
+            if not n:
+                continue
+            clone = etree.fromstring(etree.tostring(sub))
+            clone.remove(clone.find(f"{ns}head"))
+            got[n] = strip_apparatus(clone, True)
+        return got
+
+    got = collect("div3") or collect("div1")
+    if not got:
+        return {}, ["div3 與 div1 都找不到帶編號的章"]
+    return ({(1, n): t for n, t in got.items() if t},
+            [f"卷 1：{len(got)} 章（最大 {max(got)}）"])
+
+
+def both_anchors(body: list[str]) -> list[tuple[int, int]]:
+    """章標題與節號合併，同一段兩種都中時以節號那一段為準。
+
+    🚨 這個函式**只能餵單一部著作的段落**。餵一整個壓了十部著作的巨塊時，「這個
+       號碼已經被別處佔用了」這條去重規則會把十七個章標題全部丟掉——它們的號碼
+       都被隔壁那部著作的節號佔走了，而腳本只回報「命中 0」。
+    """
+    out = dict(letter_anchors(body))          # 「17. 」與獨佔一行的「## 17」
+    taken = set(out.values())
+    for i, n in chapter_headings(body):       # 「## 第十七章」
+        if n not in taken:
+            out[i] = n
+    return sorted(out.items())
+
+
+def split_marker_blocks(seq: list[tuple[int, int, int]],
+                        marks: list[tuple[int, int]]) -> list[list[tuple[int, int, int]]]:
+    """依「著作起點」把錨點序列切塊，一塊一部著作。
+
+    `marks` 是逐部著作第一段的 (段索引, 段內位置)，已按閱讀順序排好。用在一個
+    chunk 裡壓了好幾部著作的場合（居普良論述集那 14 萬字的巨塊）——那裡章號重編
+    的位置**不能**當切點：十部著作的編號互相穿插，而且中譯本身就缺了兩部的正文。
+    """
+    blocks: list[list[tuple[int, int, int]]] = [[] for _ in marks]
+    for item in seq:
+        here = (item[0], item[1])
+        k = -1
+        for j, mark in enumerate(marks):
+            if mark <= here:
+                k = j
+        if k >= 0:
+            blocks[k].append(item)
+    return blocks
+
+
 def align_cc_books(seq: list[tuple[int, int, int]],
                    by_book: dict[tuple[int, int], str],
                    declared: list[int | None] | None = None,
-                   short_ok: list[int] | None = None
+                   numbering_verified: list[int] | None = None,
+                   blocks: list[list[tuple[int, int, int]]] | None = None
                    ) -> tuple[dict[int, list[tuple[int, str]]], int, int, list[str]]:
     """多卷著作逐章對齊：中譯依章號重編切塊，一塊配原典的一卷。
 
@@ -646,7 +723,8 @@ def align_cc_books(seq: list[tuple[int, int, int]],
     for b, n in by_book:
         sizes[b] = max(sizes.get(b, 0), n)
     order = sorted(sizes)
-    blocks = split_restart_blocks(seq)
+    if blocks is None:
+        blocks = split_restart_blocks(seq)
     if declared is None:
         picks = match_blocks_by_size([len(b) for b in blocks],
                                      [sizes[b] for b in order])
@@ -681,12 +759,13 @@ def align_cc_books(seq: list[tuple[int, int, int]],
         # 🚨 比的是「最大編號」不是「錨點個數」：中譯常有幾個章標題沒被解析出來
         #    （《論聖靈與字句》66 章只讀得出 57 個標題），拿個數比會把整部好好的
         #    著作誤判成錯開。編號本身對得上就行，讀不出標題的那幾格本來就留空。
-        # 中譯的編號停在原典之前（尾巴那幾章的標題沒解析出來）本身是安全的——
-        # 但也可能是 NPNF 把兩章併成一章、整卷往前錯位。分不出來，所以預設一律
-        # 留空；讀過那一塊**最後兩章**確認編號真的對得上，才把卷次列進 short_ok。
-        if top < sizes[book] and book in (short_ok or []):
+        # 編號數對不上有兩種原因，數字上長得一模一樣：①中譯只是漏掉幾個標題、或
+        # 尾巴沒收完（安全，照實留空即可）②NPNF 把一章拆成兩章／併成一章，整卷
+        # 從那裡開始錯位（不安全）。所以預設一律留空；**逐章讀過首、中、末確認
+        # 編號真的對得上**，才把卷次列進 numbering_verified。
+        if book in (numbering_verified or []):
             report.append(f"{label}（{len(items)} 個錨點，最大 {top}）→ 原典卷 {book}"
-                          f"（{sizes[book]} 節，中譯只到 {top}，尾端已人工核對）")
+                          f"（{sizes[book]} 節；編號已人工逐點核對）")
         elif top != sizes[book]:
             report.append(f"{label}（{len(items)} 個錨點，最大 {top}）對原典卷 {book}"
                           f"（{sizes[book]} 節）——編號對不上，整卷會錯開 → 留空")
