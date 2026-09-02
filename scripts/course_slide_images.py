@@ -23,7 +23,8 @@ import urllib.request
 from pathlib import Path
 
 TEACH = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
-FOLDERS = {'wr': '115-1_世界宗教文化導論', 'sl': '宗教系國文講義'}
+FOLDERS = {'wr': '115-1_世界宗教文化導論', 'sl': '宗教系國文講義',
+           'ch': '115-2_基督宗教概論'}
 OUT = TEACH / FOLDERS['wr'] / '簡報' / '圖片'
 MANIFEST = OUT / '_manifest.json'
 UA = 'know-graph-lab-course-slides/1.0 (teaching material; contact via redpiigpig.com)'
@@ -265,9 +266,12 @@ if __name__ == '__main__':
     if course != 'wr':
         OUT = TEACH / FOLDERS[course] / '簡報' / '圖片'
         MANIFEST = OUT / '_manifest.json'
-        from course_slide_images_sl import IMAGES_SL, EXACT_SL
-        IMAGES = IMAGES_SL
-        EXACT = EXACT_SL
+        if course == 'sl':
+            from course_slide_images_sl import IMAGES_SL as I, EXACT_SL as E
+        else:
+            from course_slide_images_ch import IMAGES_CH as I, EXACT_CH as E
+        IMAGES = I
+        EXACT = E
     only = [a for a in sys.argv[1:] if not a.startswith('--')]
     OUT.mkdir(parents=True, exist_ok=True)
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8')) if MANIFEST.exists() else {}
