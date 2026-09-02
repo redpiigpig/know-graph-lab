@@ -24,7 +24,12 @@ from pathlib import Path
 sys.path.insert(0, "scripts")
 from multilang_chunks import build_multilang_chunk, validate_multilang_chunk, write_jsonl
 
-EPUB = next(iter(glob.glob("The Collected Works of C. G. Jung*.epub")), "")
+_EPUB_GLOB = "The Collected Works of C. G. Jung*.epub"
+# 原檔 2026-08 依 Drive-canonical 政策從 repo root 移到全集夾；repo root 先找（舊機器
+# 還放著就用），找不到再讀 Drive。少了這一段，fleet keeper 的 jung lane 會每 30 分
+# 秒退在 "CW EPUB not found"。
+_DRIVE_JUNG = r"G:\我的雲端硬碟\資料\知識圖工作室\全集\心理學\榮格"
+EPUB = next(iter(glob.glob(_EPUB_GLOB) or glob.glob(str(Path(_DRIVE_JUNG) / _EPUB_GLOB))), "")
 DATA_ROOT = Path(".claude/skills/ebook-collected-works/jung_data/cw-full")
 
 # num → (繁中卷名, part_start). Ends are the next volume's start; vol 19
@@ -193,19 +198,33 @@ def assemble(vol, cfg_title: str, ebid: str, data: Path, units: list[str], *, up
     now = dt.datetime.utcnow().isoformat() + "Z"
     row = {"id": ebid, "title": f"{cfg_title}（CW {vol}·英繁中）", "author": "C. G. 榮格",
            "author_en": "C. G. Jung", "original_title": f"Collected Works vol. {vol} (Hull)",
-           "file_type": "epub", "file_path": "Drive/世界宗教/榮格全集/CW-complete.epub",
+           "file_type": "epub",
+           # 全 16 卷同一個 file_path 會撞 ebooks_file_path_uniq：第一卷進得去，其餘
+           # 每次上傳都 409（2026-09 之前只有 CW11 上得了站就是這個原因）。卷號後綴
+           # 讓每卷唯一，仍指得回同一份 Drive 原檔。
+           "file_path": f"Drive/全集/心理學/榮格/CW-complete.epub#CW{vol}",
            "category": "世界宗教", "subcategory": "深層心理學", "display_mode": "standard",
+           # 少了這一欄，卷子會以 collection=NULL 落進電子圖書館
+           # （[[feedback_collected_works_not_in_library]]）。
+           "collection": "collected-works",
            "translator": "Codex（NVIDIA 英譯本重譯繁中）", "publication_year": 1960,
            "chunk_count": len(out), "total_pages": len(out),
            "total_chars": sum(len(c["content"]) for c in out), "parsed_at": now, "standardized_at": now}
+    # raise_for_status() 只給狀態碼，PostgREST 把真正的原因（撞哪一條約束）放在 body，
+    # 沒印出來就只能猜。
+    def _ok(resp):
+        if resp.status_code >= 300:
+            raise RuntimeError(f"{resp.status_code} {resp.text[:400]}")
+        return resp
+
     try:
-        requests.post(f"{url}/rest/v1/ebooks", headers=hj, json=row, timeout=30).raise_for_status()
-        requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{ebid}", headers=hg, timeout=60).raise_for_status()
+        _ok(requests.post(f"{url}/rest/v1/ebooks", headers=hj, json=row, timeout=30))
+        _ok(requests.delete(f"{url}/rest/v1/ebook_chunks?ebook_id=eq.{ebid}", headers=hg, timeout=60))
         prev = [{"ebook_id": ebid, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
                  "page_number": c.get("page_number"), "chapter_path": c["chapter_path"],
                  "content": c["content"][:200], "char_count": len(c["content"])} for c in out]
         for i in range(0, len(prev), 20):
-            requests.post(f"{url}/rest/v1/ebook_chunks", headers=hj, json=prev[i:i + 20], timeout=60).raise_for_status()
+            _ok(requests.post(f"{url}/rest/v1/ebook_chunks", headers=hj, json=prev[i:i + 20], timeout=60))
         print(f"  upserted previews={len(prev)}", flush=True)
     except Exception as exc:  # noqa: BLE001
         print(f"  WARN upload: {exc}", flush=True)
