@@ -461,6 +461,179 @@ WORKS: dict[str, dict] = {
         "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
         "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7480&type=file-xml"],
     },
+    # ── NPNF2 第九卷（希拉里《論三位一體》十二卷）──────────────────────────
+    # 站上這一冊把每一卷切成一段，chapter_path 就叫「第一卷」…「第十二卷」——
+    # 作品名那一欄看起來像壞掉，其實乾乾淨淨：一段一卷、卷內是連續節號。
+    # 十二卷都逐卷讀過首、中、末節確認編號對得上；中譯有六卷沒收完
+    # （第二卷只到第 11 節、第八卷到 49、第十卷到 69、第十二卷到 53），照實留空。
+    "hilary-trinitate-1": {
+        "label": "希拉里《論三位一體》卷一（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第一卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (1, 1),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-2": {
+        "label": "希拉里《論三位一體》卷二（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第二卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (2, 2),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-3": {
+        "label": "希拉里《論三位一體》卷三（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第三卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (3, 3),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-4": {
+        "label": "希拉里《論三位一體》卷四（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第四卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (4, 4),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-5": {
+        "label": "希拉里《論三位一體》卷五（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第五卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (5, 5),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-6": {
+        "label": "希拉里《論三位一體》卷六（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第六卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (6, 6),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-7": {
+        "label": "希拉里《論三位一體》卷七（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第七卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (7, 7),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-8": {
+        "label": "希拉里《論三位一體》卷八（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第八卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (8, 8),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-9": {
+        "label": "希拉里《論三位一體》卷九（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第九卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (9, 9),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-10": {
+        "label": "希拉里《論三位一體》卷十（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第十卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (10, 10),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-11": {
+        "label": "希拉里《論三位一體》卷十一（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第十一卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (11, 11),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
+    "hilary-trinitate-12": {
+        "label": "希拉里《論三位一體》卷十二（NPNF2 第九卷）",
+        "ebook_id": "709f43f9-724c-4cd5-b6b0-570d26083d24",
+        "prefix": "第十二卷",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "anchor": "both",
+        "books": (12, 12),
+        "blocks": [1],
+        "numbering_verified": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 10 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=6871&type=file-xml"],
+    },
     "cyprian-treatises": {
         "label": "居普良《論述集》九部（ANF 第五卷）",
         "ebook_id": "0e08c662-540b-4186-b250-9bca0cfe1002",
@@ -751,6 +924,9 @@ def load_greek_ledger(path: Path) -> dict[tuple[int | None, int], str]:
     return FO.parse_greek_sections(text)
 
 
+_TEI_CACHE: dict[str, str] = {}
+
+
 def fetch_original(spec: dict) -> tuple[dict, dict]:
     """抓原典。回傳 (逐章, 逐節, 逐卷逐章)。
 
@@ -772,9 +948,13 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
         got: dict[tuple[int, int], str] = {}
         notes: list[str] = []
         for url in spec["urls"]:
-            r = s.get(url, timeout=600)
-            r.raise_for_status()
-            part_got, part_notes = parse(r.text)
+            # 同一個 TEI 檔常被好幾部共用（迦仙《會談錄》三部共用一檔、希拉里
+            #《論三位一體》十二卷共用一檔）。--work all 一次跑完，抓一次就夠。
+            if url not in _TEI_CACHE:
+                r = s.get(url, timeout=600)
+                r.raise_for_status()
+                _TEI_CACHE[url] = r.text
+            part_got, part_notes = parse(_TEI_CACHE[url])
             base = max((b for b, _ in got), default=0)
             got.update({(b + base, n): v for (b, n), v in part_got.items()})
             notes += part_notes
@@ -1361,7 +1541,12 @@ def run_work(name: str, a) -> int:
                     if c["chunk_index"] not in spans:
                         continue
                     body = FO.split_body(c.get("content") or "")
-                    for i, n in FO.chapter_headings(body):
+                    # 同一冊裡兩種錨點都有：希拉里《論三位一體》第一、五卷寫
+                    # 「## 第二十章」，第二、九、十二卷寫「11. 」。只認一種的話
+                    # 那幾卷整卷命中 0，看起來像取源壞掉。
+                    pick = (FO.both_anchors if part.get("anchor") == "both"
+                            else FO.chapter_headings)
+                    for i, n in pick(body):
                         seq.append((c["chunk_index"], i, n))
             placed, hit, num, report = FO.align_cc_books(
                 seq, by_book, part.get("blocks"),
