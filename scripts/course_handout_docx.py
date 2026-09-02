@@ -35,7 +35,7 @@ MING = 'PMingLiU'       # 明體：正文
 HEI = 'Microsoft JhengHei'
 GRAY = RGBColor(0x60, 0x60, 0x60)
 
-COURSE = {
+COURSE_WR2 = {
     'slug': 'world-religions-intro',
     'chapters_dir': 'chapters-wr2',
     'folder': '115-1_世界宗教文化導論',
@@ -55,6 +55,31 @@ COURSE = {
         (8, '2026年12月27日', [15, 16], '臺灣宗教（含期末考）'),
     ],
 }
+
+# PPA005 基督宗教概論（雙週班）。日期依開課學期填；book 模式不使用日期。
+COURSE_CH = {
+    'slug': 'christianity-intro',
+    'chapters_dir': 'chapters',
+    'folder': '115-2_基督宗教概論',
+    'title': '基督宗教概論',
+    'code': 'PPA005',
+    'teacher': '張辰瑋',
+    'klass': '玄奘大學宗教與文化學系‧二年制在職專班1年A班（雙週）',
+    'place': '待定',
+    'sessions': [
+        (1, '待定', [1, 2], '四項核心傳統；拿撒勒人耶穌'),
+        (2, '待定', [3, 4], '初代教會；正典的形成'),
+        (3, '待定', [5, 6], '釋經傳統；大公會議'),
+        (4, '待定', [7, 8], '教父與東方教會；中世紀西方教會'),
+        (5, '待定', [9, 10], '宗教改革；近代基督教'),
+        (6, '待定', [11, 12], '二十世紀與當代；禮儀與聖事'),
+        (7, '待定', [13, 14], '聖職與體制；藝術與物質文化'),
+        (8, '待定', [15, 16], '臺灣的基督宗教；生死觀（含期末考）'),
+    ],
+}
+
+COURSES = {'wr2': COURSE_WR2, 'ch': COURSE_CH}
+COURSE = COURSE_WR2
 
 
 # ── Word 基本工具 ───────────────────────────────────────────────────────────
@@ -379,6 +404,9 @@ def build_book():
 
 if __name__ == '__main__':
     args = sys.argv[1:] or ['1']
+    course = next((a.split('=')[1] for a in args if a.startswith('--course=')), 'wr2')
+    COURSE = COURSES[course]
+    args = [a for a in args if not a.startswith('--')] or ['1']
     if args == ['book']:
         print('✔', build_book())
         raise SystemExit

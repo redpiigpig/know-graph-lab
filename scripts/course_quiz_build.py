@@ -26,18 +26,37 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from course_quiz_data import QUIZZES          # noqa: E402
-from course_quiz_data2 import QUIZZES2        # noqa: E402
-
-ALL = {**QUIZZES, **QUIZZES2}
-
 ROOT = Path(__file__).resolve().parent.parent
 PUB = ROOT / 'public'
-DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學\115-1_世界宗教文化導論\小考')
+DRIVE_ROOT = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
 
-SLUG = 'world-religions-intro'
-BOOK_ID = 'WR2'
-COURSE_TITLE = '世界宗教文化導論'
+# 一個課程一組設定；預設世界宗教文化導論，`--course=ch` 切到基督宗教概論。
+COURSES = {
+    'wr2': dict(slug='world-religions-intro', book_id='WR2', prefix='wr2',
+                chapters='chapters-wr2', title='世界宗教文化導論',
+                folder='115-1_世界宗教文化導論'),
+    'ch': dict(slug='christianity-intro', book_id='CH1', prefix='ch1',
+               chapters='chapters', title='基督宗教概論',
+               folder='115-2_基督宗教概論'),
+}
+
+
+def load_course(key):
+    """把課程設定攤成模組層常數；產生器各函式直接讀這些名字。"""
+    global ALL, DRIVE, SLUG, BOOK_ID, PREFIX, CHAPTERS, COURSE_TITLE
+    c = COURSES[key]
+    SLUG, BOOK_ID, PREFIX = c['slug'], c['book_id'], c['prefix']
+    CHAPTERS, COURSE_TITLE = c['chapters'], c['title']
+    DRIVE = DRIVE_ROOT / c['folder'] / '小考'
+    if key == 'wr2':
+        from course_quiz_data import QUIZZES
+        from course_quiz_data2 import QUIZZES2
+        ALL = {**QUIZZES, **QUIZZES2}
+    else:
+        from course_quiz_data_ch import QUIZZES_CH
+        ALL = QUIZZES_CH
+
+
 KLASS = '玄奘大學宗教與文化學系‧二年制在職專班1年A班'
 KAI, MING, HEI = 'DFKai-SB', 'PMingLiU', 'Microsoft JhengHei'
 GRAY = RGBColor(0x60, 0x60, 0x60)
@@ -49,7 +68,7 @@ OPT = 'ABCD'
 
 def chapter_title(n):
     """章名一律取自講義章節檔的 <h2>（去掉「第N章　」前綴），避免題庫與講義走鐘。"""
-    f = PUB / 'content/works' / SLUG / 'chapters-wr2' / f'ch{n:02d}.html'
+    f = PUB / 'content/works' / SLUG / CHAPTERS / f'ch{n:02d}.html'
     h = re.sub(r'<[^>]+>', '', re.search(r'<h2>(.*?)</h2>',
                f.read_text(encoding='utf-8')).group(1)).strip()
     return re.sub(r'^第[一二三四五六七八九十]+章[　\s]*', '', h)
@@ -197,7 +216,8 @@ def main(nums):
     qdir = PUB / 'content/works' / SLUG / 'quizzes'
     qdir.mkdir(parents=True, exist_ok=True)
     meta_path = PUB / 'content/works' / f'{SLUG}-quizzes.json'
-    meta = json.loads(meta_path.read_text(encoding='utf-8'))
+    meta = (json.loads(meta_path.read_text(encoding='utf-8'))
+            if meta_path.exists() else {'quizzes': []})
     entries = [q for q in meta['quizzes'] if q.get('bookId') != BOOK_ID]
 
     for n in sorted(ALL):
@@ -206,14 +226,14 @@ def main(nums):
         for stem, opts, ans, why in q['items']:
             assert len(opts) == 4 and 0 <= ans < 4, f'第{n}章選項或答案有誤：{stem[:20]}'
         entries.append({
-            'id': f'wr2-ch{n:02d}',
+            'id': f'{PREFIX}-ch{n:02d}',
             'title': f'第{cn(n)}章',
             'range': chapter_title(n),
-            'file': f'/content/works/{SLUG}/quizzes/wr2-ch{n:02d}.html',
+            'file': f'/content/works/{SLUG}/quizzes/{PREFIX}-ch{n:02d}.html',
             'bookId': BOOK_ID,
         })
         if n in nums:
-            (qdir / f'wr2-ch{n:02d}.html').write_text(build_html(n, q), encoding='utf-8')
+            (qdir / f'{PREFIX}-ch{n:02d}.html').write_text(build_html(n, q), encoding='utf-8')
             build_docx(n, q, with_answers=False)
             build_docx(n, q, with_answers=True)
             print(f'✔ 第{n:02d}章　線上 HTML ＋ 考卷 ＋ 解答卷')
@@ -221,11 +241,15 @@ def main(nums):
     meta['quizzes'] = entries
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n',
                          encoding='utf-8')
-    print(f'✔ quizzes.json：WR1 {len([q for q in entries if q.get("bookId") == "WR1"])} 張、'
-          f'WR2 {len([q for q in entries if q.get("bookId") == BOOK_ID])} 張')
+    print(f'✔ quizzes.json：{BOOK_ID} '
+          f'{len([q for q in entries if q.get("bookId") == BOOK_ID])} 張'
+          f'（本檔共 {len(entries)} 張）')
 
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    nums = set(int(a) for a in sys.argv[1:]) or set(ALL)
+    args = sys.argv[1:]
+    course = next((a.split('=')[1] for a in args if a.startswith('--course=')), 'wr2')
+    load_course(course)
+    nums = set(int(a) for a in args if not a.startswith('--')) or set(ALL)
     main(nums)
