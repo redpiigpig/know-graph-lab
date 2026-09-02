@@ -7,10 +7,10 @@
 
 IMAGES_CH = {
     # ── 第 1 次：四項核心傳統；拿撒勒人耶穌 ──
-    'st-peters-square': 'St Peters Square Vatican aerial',
+    'st-peters-square': 'Saint Peters Basilica',
     'orthodox-liturgy': 'Orthodox Divine Liturgy service',
     'ethiopian-church': 'Lalibela rock hewn church',
-    'protestant-interior': 'Reformed church interior plain white',
+    'protestant-interior': 'Protestant church interior pulpit',
     'pentecostal-worship': 'Pentecostal worship service',
     'sea-of-galilee': 'Sea of Galilee landscape',
     'dead-sea-scrolls': 'Great Isaiah Scroll Dead Sea Scrolls',
@@ -39,8 +39,8 @@ IMAGES_CH = {
     'constantine': 'Constantine the Great statue',
     'athanasius': 'Athanasius of Alexandria icon',
     'hagia-sophia': 'Hagia Sophia interior Istanbul',
-    'chalcedon-icon': 'Council of Chalcedon painting',
-    'apostles-creed': 'Credo manuscript illumination',
+    'chalcedon-icon': 'Council of Chalcedon',
+    'apostles-creed': 'Apostles Creed',
 
     # ── 第 4 次：教父與東方教會；中世紀西方教會 ──
     'desert-monastery': 'Saint Catherine Monastery Sinai',
@@ -95,7 +95,6 @@ IMAGES_CH = {
     'tainan-church': 'Taiwan Presbyterian church historic',
     'pehoeji-bible': 'Pe̍h-ōe-jī romanized Taiwanese text',
     'taipei-cathedral': 'Catholic cathedral Taiwan',
-    'taiwan-indigenous-church': 'Taiwan indigenous church building',
     'last-judgment': 'Last Judgment medieval painting',
     'catacomb-tomb': 'early Christian sarcophagus',
     'all-souls-day': 'All Souls Day cemetery candles',
