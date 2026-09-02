@@ -471,6 +471,170 @@ def parse_cc_letters(xml: str) -> tuple[dict[tuple[int, int], str], list[str]]:
     return out, problems
 
 
+CC_CAPUT = re.compile(r"^\s*CAPUT\s+([IVXLCDM]+|PRIM\w+)\b", re.I)
+
+
+def parse_cc_chapters(xml: str) -> tuple[dict[tuple[int, int], str], list[str]]:
+    """把 Corpus Corporum 的多卷著作 TEI 切成 {(卷, 章): 拉丁文}。
+
+    結構是 <div1> 一卷、<div2> 一章，章的 <head> 寫「CAPUT II. De cingulo Monachi.」
+    ——章標題留著不剔，那正是第三欄該有的東西。回傳的第二項是逐卷的檢查訊息。
+
+    🚨 **卷次只數「真的有章的 div1」。** 序言（Praefatio）與《會談錄》的三個
+       PARS 分隔頁也是 div1，但底下一章都沒有。把它們算進去的話整部的卷次會往
+       後推一格——第二卷的章配到第一卷、第三卷配到第二卷，逐章排得整整齊齊而
+       每一章都是隔壁卷的內容。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"), etree.XMLParser(recover=True))
+    ns = "{http://www.tei-c.org/ns/1.0}"
+    body = root.find(f".//{ns}body")
+    out: dict[tuple[int, int], str] = {}
+    notes: list[str] = []
+    if body is None:
+        return out, ["TEI 裡找不到 <body>"]
+    book = 0
+    for div in body.findall(f"{ns}div1"):
+        chapters: dict[int, str] = {}
+        for sub in div.iter(f"{ns}div2"):
+            head = sub.find(f"{ns}head")
+            m = CC_CAPUT.match(strip_apparatus(head, True)) if head is not None else None
+            if not m:
+                continue
+            raw = m.group(1).upper()
+            n = 1 if raw.startswith("PRIM") else roman_to_int(raw)
+            if n:
+                chapters[n] = strip_apparatus(sub, True)
+        if not chapters:
+            continue
+        book += 1
+        head = div.find(f"{ns}head")
+        label = strip_apparatus(head, True)[:46] if head is not None else "(無標題)"
+        notes.append(f"卷 {book}：{len(chapters)} 章 — {label}")
+        for n, text in chapters.items():
+            if text:
+                out[(book, n)] = text
+    return out, notes
+
+
+
+def split_restart_blocks(seq: list[tuple[int, int, int]]
+                         ) -> list[list[tuple[int, int, int]]]:
+    """把 [(段索引, 段內位置, 章號)] 依「章號掉回去」切成一卷一塊。"""
+    out: list[list[tuple[int, int, int]]] = []
+    cur: list[tuple[int, int, int]] = []
+    for item in seq:
+        if cur and item[2] <= cur[-1][2]:
+            out.append(cur)
+            cur = []
+        cur.append(item)
+    if cur:
+        out.append(cur)
+    return out
+
+
+def match_blocks_by_size(zh: list[int], la: list[int]) -> list[int | None]:
+    """按「章數完全相等」把中譯的每一塊配到原典的某一卷，回傳逐塊的卷次（1-based）。
+
+    只在**保序**（前一塊配到的卷次一定在後一塊之前）且**章數一模一樣**時才算配上；
+    原典的卷可以被跳過（中譯漏收整卷時會這樣）。最佳解不只一個時，只留「每個最佳
+    解都指向同一卷」的那些塊，其餘回 None。
+
+    為什麼要這麼保守：迦仙那一冊的中譯與 Migne 逐卷對不齊——《會院規章》缺了整個
+    第六書，而第一、八、十一書各多一章（NPNF 把一章拆成兩章）。用章號硬對的話，
+    多出來的那一章之後整卷往下錯一位，而每一章都還是同一卷、同一位作者、同一個
+    題材，讀起來完全通順。章數相等是唯一擋得住這種錯位的訊號。
+    """
+    n, m = len(zh), len(la)
+    NEG = float("-inf")
+    # best[i][j] ＝ 前 i 塊用掉原典前 j 卷時，最多配上幾塊
+    best = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(0, m + 1):
+            skip_zh = best[i - 1][j]
+            skip_la = best[i][j - 1] if j else NEG
+            take = (best[i - 1][j - 1] + 1
+                    if j and zh[i - 1] == la[j - 1] else NEG)
+            best[i][j] = max(skip_zh, skip_la, take)
+    # 回頭收集：每一塊在所有最佳解裡用過哪些卷
+    used: list[set[int]] = [set() for _ in range(n)]
+    seen = set()
+    stack = [(n, m, best[n][m])]
+    while stack:
+        i, j, want = stack.pop()
+        if (i, j, want) in seen or i == 0:
+            continue
+        seen.add((i, j, want))
+        if best[i - 1][j] == want:
+            stack.append((i - 1, j, want))
+        if j and best[i][j - 1] == want:
+            stack.append((i, j - 1, want))
+        if j and zh[i - 1] == la[j - 1] and best[i - 1][j - 1] + 1 == want:
+            used[i - 1].add(j)
+            stack.append((i - 1, j - 1, want - 1))
+    return [next(iter(u)) if len(u) == 1 else None for u in used]
+
+
+
+def align_cc_books(seq: list[tuple[int, int, int]],
+                   by_book: dict[tuple[int, int], str],
+                   declared: list[int | None] | None = None
+                   ) -> tuple[dict[int, list[tuple[int, str]]], int, int, list[str]]:
+    """多卷著作逐章對齊：中譯依章號重編切塊，一塊配原典的一卷。
+
+    `declared` 是 spec 裡逐塊寫死、**逐塊讀過內容確認過**的卷次（None ＝ 那一塊
+    不收）。沒給就退回按「章數相等且唯一」自動配。回傳 (逐段的 [(段內位置, 原文)],
+    命中, 錨點數, 逐塊報告)。
+
+    🚨 **章數相等且唯一，不代表配對正確。** 迦仙《會談錄》第三部的第一塊有 16 章，
+       而原典第十八次會談有 17 章、第十九次剛好 16 章——自動配就唯一地配到第十九次
+       去了，兩邊都是同一位作者的沙漠會談錄，逐章排得整整齊齊。是讀了第一章才發現
+       中譯寫「我們如何來到狄奧爾科斯並受到皮阿蒙修士長的接待」而拉丁文是「論保羅
+       長老的共居修院」。所以正式收的每一部都把逐塊卷次寫死在 spec 裡。
+
+    🚨 **卷次配對正確，章號仍可能整卷錯開一位。** NPNF 的中譯把 Migne 的某一章拆成
+       兩章（《會院規章》第一、八、十一書，《會談錄》第十八、二十、十三、十七次），
+       多出來的那一章之後整卷往下錯一格——同一卷、同一題材，讀起來完全通順。所以
+       即使 spec 指名了卷次，**章數不相等的那一塊照樣整塊留空**。
+    """
+    sizes: dict[int, int] = {}
+    for b, n in by_book:
+        sizes[b] = max(sizes.get(b, 0), n)
+    order = sorted(sizes)
+    blocks = split_restart_blocks(seq)
+    if declared is None:
+        picks = match_blocks_by_size([len(b) for b in blocks],
+                                     [sizes[b] for b in order])
+    elif len(declared) != len(blocks):
+        return {}, 0, len(seq), [
+            f"spec 的 blocks 有 {len(declared)} 筆，中譯卻切出 {len(blocks)} 塊"
+            f"（各 {[len(b) for b in blocks]} 章）——分段變了，整部不收"]
+    else:
+        picks = list(declared)
+
+    out: dict[int, list[tuple[int, str]]] = {}
+    hit = 0
+    report: list[str] = []
+    for k, (block, pick) in enumerate(zip(blocks, picks), start=1):
+        if pick is None:
+            report.append(f"塊 {k}（{len(block)} 章）沒有對應的原典卷 → 留空")
+            continue
+        book = order[pick - 1]
+        if len(block) != sizes[book]:
+            report.append(f"塊 {k}（{len(block)} 章）對原典卷 {book}（{sizes[book]} 章）"
+                          f"——章數不等，整卷會錯開一位 → 留空")
+            continue
+        for ci, i, n in block:
+            text = by_book.get((book, n))
+            if text:
+                out.setdefault(ci, []).append((i, text))
+                hit += 1
+        report.append(f"塊 {k}（{len(block)} 章）→ 原典卷 {book}")
+    return out, hit, len(seq), report
+
+
+
 # ── 中譯自己宣告的信號 ──────────────────────────────────────────────────────
 # 耶柔米那一冊的 chapter_path 從第 140 段起與內文脫節（見 SKILL.md），所以「這是
 # 第幾封信」只能問內文自己。同一冊裡至少有十四種寫法：
@@ -489,7 +653,7 @@ LETTER_FORMS = [
     (re.compile(rf"第\s*(\d{{1,3}})\s*{_UNIT}"), "int"),
     (re.compile(rf"(?:信函|書信|信札|信簡|書簡|信件|信)\s*({_ZH})(?=\s*[致論出來從自，。：:])"), "zh"),
     (re.compile(rf"({_ZH})、"), "zh"),
-    (re.compile(r"(?:Letter|Epistle)\s+([IVXLCDM]+)"), "roman"),
+    (re.compile(r"(?:Letter|Epistle)\s+([IVXLCDM]+)\b"), "roman"),
     (re.compile(r"(?<![A-Za-z])([IVXLCDM]{1,9})(?![A-Za-z])"), "roman"),
 ]
 

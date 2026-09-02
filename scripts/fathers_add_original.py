@@ -54,6 +54,8 @@ _spec.loader.exec_module(FO)
 #   chapter   — 原典只有 `[I]` 這種章號，中譯只有「第N章」標題 → 逐章對齊（較粗）
 #   greek     — 原典是 Migne PG 掃描本的自家 OCR 帳本（scripts/fathers_pg_ocr.py），
 #               ΛΟΓΟΣ 分卷、α΄ β΄ γ΄ 分節，節號與中英譯的 1. 2. 是同一套編次 → 逐節
+#   cc-book   — 原典是 Corpus Corporum 的多卷著作 TEI，<div1> 一卷、<div2> 一章；
+#               `books` 指名這一部取原典的哪幾卷（《會談錄》24 篇分裝成三部）
 #   cc-letter — 原典是 Corpus Corporum（mlat.uzh.ch）的 Migne PL 書信集 TEI，
 #               <div1> 一封、<div3> 一節；中譯的信號由每段自己的標題讀出
 #   roman     — 原典行標是 `I. [1] …`（行首羅馬章號＋章內方括號節號），中譯只有
@@ -309,6 +311,68 @@ WORKS: dict[str, dict] = {
         # 比烏同一種形狀，靠 resolve_continuous() 反推是哪一篇。
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2959/tlg001/tlg2959.tlg001.opp-grc1.xml"],
     },
+    "cassian-institutes": {
+        "label": "迦仙《會院規章十二書》（NPNF2 第十一卷）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "若望‧格西安《會院規章十二書》",
+        "lang": "la",
+        "mode": "cc-book",
+        # 逐塊的卷次，每一塊都讀過第一章確認過（塊 1 是譯者導論的「格西安生平」，
+        # 不是《會院規章》；原典第六書〈論淫亂之靈〉中譯整卷沒收，所以塊 7 跳到卷 7）。
+        "blocks": [None, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12],
+        "books": (1, 12),
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 49 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7531&type=file-xml"],
+    },
+    "cassian-conferences-1": {
+        "label": "迦仙《會談錄》第一部（第 1–10 篇）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "若望‧格西安《會談錄‧第一部》",
+        "lang": "la",
+        "mode": "cc-book",
+        "blocks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        # 《會談錄》24 篇在原典是一個檔，站上分裝成三部，所以逐部指名取哪幾篇。
+        # 三個 PARS 分隔頁在 TEI 裡也是 div1 但底下一章都沒有，parse_cc_chapters
+        # 只數「真的有章的 div1」，所以這裡的 1–10 就是第一到第十篇。
+        "books": (1, 10),
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 49 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7530&type=file-xml"],
+    },
+    "cassian-conferences-2": {
+        "label": "迦仙《會談錄》第二部（第 11–17 篇）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "若望‧格西安《會談錄‧第二部》",
+        "lang": "la",
+        "mode": "cc-book",
+        # 原典第十二次會談中譯沒收，所以第二塊跳到卷 3。
+        "blocks": [1, 3, 4, 5, 6, 7],
+        "books": (11, 17),
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 49 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7530&type=file-xml"],
+    },
+    "cassian-conferences-3": {
+        "label": "迦仙《會談錄》第三部（第 18–24 篇）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "若望‧格西安《會談錄‧第三部》",
+        "lang": "la",
+        "mode": "cc-book",
+        # 原典第二十二次會談中譯沒收，所以第五塊跳到卷 6。
+        "blocks": [1, 2, 3, 4, 6, 7],
+        "books": (18, 24),
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 49 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7530&type=file-xml"],
+    },
+    "cassian-incarnation": {
+        "label": "迦仙《論主之降生：駁聶斯脫里七書》（NPNF2 第十一卷）",
+        "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
+        "prefix": "若望‧格西安《論主之降生：駁聶斯脫里七書》",
+        "lang": "la",
+        "mode": "cc-book",
+        "blocks": [1, 2, 3, 4, 5, 6, 7],
+        "books": (1, 7),
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 50 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7557&type=file-xml"],
+    },
     "jerome-letters": {
         "label": "耶柔米《書信集》150 封（NPNF2 第六卷）",
         "ebook_id": "d229a6d4-14de-4e28-92de-4855c75cbf68",
@@ -501,6 +565,30 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "greek":
         paragraphs = load_greek_ledger(Path(spec["ledger"]))
         return {}, paragraphs, {}
+    if spec["mode"] == "cc-book":
+        s = requests.Session()
+        s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
+        r = s.get(spec["urls"][0], timeout=600)
+        r.raise_for_status()
+        got, notes = FO.parse_cc_chapters(r.text)
+        first, last = spec.get("books") or (1, max((k[0] for k in got), default=0))
+        for line in notes[first - 1:last]:
+            print(f"    {line}")
+        # 這一部只取原典的第 first..last 卷（《會談錄》24 篇在站上分裝成三部），
+        # 卷次重編成 1..N，好讓中譯那三部各自從「卷一」算起。
+        by_book = {(b - first + 1, n): v for (b, n), v in got.items()
+                   if first <= b <= last}
+        # 中譯的另一種習慣是整部連續編號（第1-257章），所以第二種鍵也備好，
+        # align_part 會各對一次取命中高的那個。
+        chapters: dict[tuple[int | None, int], str] = {}
+        base = 0
+        for b in range(1, last - first + 2):
+            ns = sorted(n for (bb, n) in by_book if bb == b)
+            for n in ns:
+                chapters[(None, n + base)] = by_book[(b, n)]
+            base += max(ns, default=0)
+        print(f"  抓 Corpus Corporum TEI → {last - first + 1} 卷 / {len(by_book)} 章")
+        return chapters, {}, by_book
     if spec["mode"] == "cc-letter":
         s = requests.Session()
         s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
@@ -875,7 +963,7 @@ def spans_for(chunks: list[dict], part: dict) -> dict[int, FO.Span]:
             s = FO.Span(s.first + part["book_from_chapter"], s.first, s.last)
             if s.book < 1:
                 continue
-        if s is None and part["mode"] in ("chapter", "roman", "tei", "dotted"):
+        if s is None and part["mode"] in ("chapter", "roman", "tei", "dotted", "cc-book"):
             # 逐章模式的錨點是內文裡的「第N章」標題，不是 chapter_path 的後綴。
             # 只用一段收完的著作（依納爵致羅馬人書、致坡旅甲書）路徑上沒有那個
             # 後綴，硬要它就會整部被跳過而毫無訊號。
@@ -893,7 +981,9 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
        （該卷只到第 35 章，標籤照樣寫「第31-40章」），拿它比對會冒出一堆不存在的
        「多出章」，把真正的缺章淹掉。要數內文裡真的出現的章標題。
     """
-    if part["mode"] in ("letter", "cc-letter"):
+    # cc-book 的逐塊報告已經把「哪一塊配上了哪一卷、哪一塊留空」講完了；再跑一次
+    # 逐章覆蓋率只會列出兩百多章根本不適用的「站上中譯沒有第N章」，把它淹掉。
+    if part["mode"] in ("letter", "cc-letter", "cc-book"):
         return []
     if part["mode"] == "greek":
         found = []
@@ -906,7 +996,7 @@ def coverage_for(chunks: list[dict], spans: dict[int, FO.Span], part: dict,
                 if m:
                     found.append(FO.Span(s.book, int(m.group(1)), int(m.group(1))))
         return FO.coverage(found, {k: "x" for k in paragraphs})
-    if part["mode"] in ("chapter", "roman", "tei", "dotted"):
+    if part["mode"] in ("chapter", "roman", "tei", "dotted", "cc-book"):
         extract = ANCHORS.get(part.get("anchor"), FO.chapter_headings)
         bases = cumulative_bases(by_book or {})
         if len(bases) < 2:
@@ -1021,6 +1111,25 @@ def run_work(name: str, a) -> int:
                     cols[c["chunk_index"]] = col
                 elif n:
                     skipped.append(f"{c['chapter_path']}（節數與原文段數對不上）")
+        elif part["mode"] == "cc-book":
+            seq = []
+            for c in sorted(chunks, key=lambda x: x["chunk_index"]):
+                if c["chunk_index"] not in spans:
+                    continue
+                body = FO.split_body(c.get("content") or "")
+                for i, n in FO.chapter_headings(body):
+                    seq.append((c["chunk_index"], i, n))
+            placed, hit, num, report = FO.align_cc_books(
+                seq, by_book, part.get("blocks"))
+            for line in report:
+                print(f"    {line}")
+            for c in chunks:
+                if c["chunk_index"] not in spans:
+                    continue
+                got = placed.get(c["chunk_index"])
+                size = len(FO.split_body(c.get("content") or ""))
+                if got:
+                    cols[c["chunk_index"]] = FO.fill_column(size, got)
         elif part["mode"] == "cc-letter":
             for c in chunks:
                 sp = spans.get(c["chunk_index"])
