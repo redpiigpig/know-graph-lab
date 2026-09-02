@@ -577,9 +577,53 @@ def match_blocks_by_size(zh: list[int], la: list[int]) -> list[int | None]:
 
 
 
+CC_BARE_NO = re.compile(r"^\s*(\d{1,3})\s*\.?\s*$")
+
+
+def parse_cc_paragraphs(xml: str) -> tuple[dict[tuple[int, int], str], list[str]]:
+    """把 Corpus Corporum 的 TEI 切成 {(卷, 節): 拉丁文}——鍵是 Migne 的**節號**。
+
+    與 parse_cc_chapters 的差別只在讀哪一層：Migne 的奧古斯丁同時有 CAPUT（章）與
+    節號兩套編號，而 Schaff 的英譯是**按節號編章的**（《論聖靈與字句》拉丁本 36 個
+    CAPUT、66 個節，NPNF 的「第 N 章」跑到 66）。拿 CAPUT 對的話前 36 章配得上、
+    看起來很正常，第 37 章之後整段落空——而落空的原因看不出來。
+    """
+    from lxml import etree
+
+    root = etree.fromstring(xml.encode("utf-8"), etree.XMLParser(recover=True))
+    ns = "{http://www.tei-c.org/ns/1.0}"
+    body = root.find(f".//{ns}body")
+    out: dict[tuple[int, int], str] = {}
+    notes: list[str] = []
+    if body is None:
+        return out, ["TEI 裡找不到 <body>"]
+    book = 0
+    for div in body.findall(f"{ns}div1"):
+        got: dict[int, str] = {}
+        for sub in div.iter(f"{ns}div3"):
+            head = sub.find(f"{ns}head")
+            m = CC_BARE_NO.match(strip_apparatus(head, True)) if head is not None else None
+            if not m:
+                continue
+            clone = etree.fromstring(etree.tostring(sub))
+            clone.remove(clone.find(f"{ns}head"))
+            got[int(m.group(1))] = strip_apparatus(clone, True)
+        if not got:
+            continue
+        book += 1
+        head = div.find(f"{ns}head")
+        label = strip_apparatus(head, True)[:46] if head is not None else "(無標題)"
+        notes.append(f"卷 {book}：{len(got)} 節 — {label}")
+        for n, text in got.items():
+            if text:
+                out[(book, n)] = text
+    return out, notes
+
+
 def align_cc_books(seq: list[tuple[int, int, int]],
                    by_book: dict[tuple[int, int], str],
-                   declared: list[int | None] | None = None
+                   declared: list[int | None] | None = None,
+                   short_ok: list[int] | None = None
                    ) -> tuple[dict[int, list[tuple[int, str]]], int, int, list[str]]:
     """多卷著作逐章對齊：中譯依章號重編切塊，一塊配原典的一卷。
 
@@ -613,24 +657,47 @@ def align_cc_books(seq: list[tuple[int, int, int]],
     else:
         picks = list(declared)
 
+    # 連續幾塊指到同一卷時要合起來判：中譯偶爾會在一卷中間重複一次編號
+    #（〈論伯拉糾案的審理〉第二十一章寫了兩次），切塊器因此把一卷切成兩塊，
+    # 各自的最大編號都小於原典的節數，兩塊就都被判成錯開而整卷留空。
+    groups: list[tuple[list[int], int | None]] = []
+    for k, pick in enumerate(picks):
+        if groups and groups[-1][1] == pick and pick is not None:
+            groups[-1][0].append(k)
+        else:
+            groups.append(([k], pick))
+
     out: dict[int, list[tuple[int, str]]] = {}
     hit = 0
     report: list[str] = []
-    for k, (block, pick) in enumerate(zip(blocks, picks), start=1):
+    for idxs, pick in groups:
+        label = "塊 " + "＋".join(str(i + 1) for i in idxs)
+        items = [x for i in idxs for x in blocks[i]]
         if pick is None:
-            report.append(f"塊 {k}（{len(block)} 章）沒有對應的原典卷 → 留空")
+            report.append(f"{label}（{len(items)} 個錨點）沒有對應的原典卷 → 留空")
             continue
         book = order[pick - 1]
-        if len(block) != sizes[book]:
-            report.append(f"塊 {k}（{len(block)} 章）對原典卷 {book}（{sizes[book]} 章）"
-                          f"——章數不等，整卷會錯開一位 → 留空")
+        top = max(n for _, _, n in items)
+        # 🚨 比的是「最大編號」不是「錨點個數」：中譯常有幾個章標題沒被解析出來
+        #    （《論聖靈與字句》66 章只讀得出 57 個標題），拿個數比會把整部好好的
+        #    著作誤判成錯開。編號本身對得上就行，讀不出標題的那幾格本來就留空。
+        # 中譯的編號停在原典之前（尾巴那幾章的標題沒解析出來）本身是安全的——
+        # 但也可能是 NPNF 把兩章併成一章、整卷往前錯位。分不出來，所以預設一律
+        # 留空；讀過那一塊**最後兩章**確認編號真的對得上，才把卷次列進 short_ok。
+        if top < sizes[book] and book in (short_ok or []):
+            report.append(f"{label}（{len(items)} 個錨點，最大 {top}）→ 原典卷 {book}"
+                          f"（{sizes[book]} 節，中譯只到 {top}，尾端已人工核對）")
+        elif top != sizes[book]:
+            report.append(f"{label}（{len(items)} 個錨點，最大 {top}）對原典卷 {book}"
+                          f"（{sizes[book]} 節）——編號對不上，整卷會錯開 → 留空")
             continue
-        for ci, i, n in block:
+        else:
+            report.append(f"{label}（{len(items)} 個錨點，最大 {top}）→ 原典卷 {book}")
+        for ci, i, n in items:
             text = by_book.get((book, n))
             if text:
                 out.setdefault(ci, []).append((i, text))
                 hit += 1
-        report.append(f"塊 {k}（{len(block)} 章）→ 原典卷 {book}")
     return out, hit, len(seq), report
 
 

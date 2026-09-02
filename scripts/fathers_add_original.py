@@ -311,6 +311,155 @@ WORKS: dict[str, dict] = {
         # 比烏同一種形狀，靠 resolve_continuous() 反推是哪一篇。
         "urls": ["https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg2959/tlg001/tlg2959.tlg001.opp-grc1.xml"],
     },
+    # ── NPNF1 第五卷（奧古斯丁反伯拉糾論戰十二部）────────────────────────
+    # 🚨 這一卷的「第N章」對的是 Migne 的**節號**不是 CAPUT：拉丁本《論聖靈與
+    #    字句》有 36 個 CAPUT、66 個節，而 Schaff 的英譯是按節編章的（章號到 66）。
+    #    拿 CAPUT 對的話前 36 章配得上、看起來完全正常，第 37 章之後整批落空。
+    #    所以這一卷全部 unit="paragraph"。
+    "aug-peccatorum-meritis": {
+        "label": "奧古斯丁《論罪的功過與赦免》三卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論罪的功過與赦免及嬰兒的洗禮",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1, 2, 3],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7479&type=file-xml"],
+    },
+    "aug-spiritu-littera": {
+        "label": "奧古斯丁《論聖靈與字句》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論聖靈與字句",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7482&type=file-xml"],
+    },
+    "aug-natura-gratia": {
+        "label": "奧古斯丁《論自然與恩典》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論自然與恩典",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7477&type=file-xml"],
+    },
+    "aug-gestis-pelagii": {
+        "label": "奧古斯丁《論伯拉糾案的審理》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論伯拉糾案的審理",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        # 中譯第二十一章的編號寫了兩次，切塊器因此把一卷切成兩塊——兩塊都是卷 1。
+        "blocks": [1, 1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7474&type=file-xml"],
+    },
+    "aug-gratia-christi": {
+        "label": "奧古斯丁《論基督的恩典與原罪》兩卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論基督的恩典與原罪",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
+        "short_ok": [1],
+        "blocks": [1, 2],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7475&type=file-xml"],
+    },
+    "aug-nuptiis": {
+        "label": "奧古斯丁《論婚姻與情慾》兩卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論婚姻與情慾",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1, 2],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7478&type=file-xml"],
+    },
+    "aug-anima-origine": {
+        "label": "奧古斯丁《論靈魂及其起源》四卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論靈魂及其起源",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1, 2, 3, 4],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7472&type=file-xml"],
+    },
+    "aug-duas-epistolas": {
+        "label": "奧古斯丁《駁伯拉糾派的兩封書信》四卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "駁伯拉糾派的兩封書信",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1, 2, 3, 4],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7471&type=file-xml"],
+    },
+    "aug-gratia-libero": {
+        "label": "奧古斯丁《論恩典與自由意志》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論恩典與自由意志",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
+        "short_ok": [1],
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7476&type=file-xml"],
+    },
+    "aug-correptione": {
+        "label": "奧古斯丁《論責備與恩典》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論責備與恩典",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
+        "short_ok": [1],
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7473&type=file-xml"],
+    },
+    "aug-praedestinatione": {
+        "label": "奧古斯丁《論聖徒的預定》兩卷（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論聖徒的預定",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        # 中譯的編號停在原典之前，該塊最後兩章已逐字核對過確實對得上。
+        "short_ok": [1],
+        # NPNF 把《論聖徒的預定》與《論堅忍的恩賜》併成一部的上下兩卷，
+        # Corpus Corporum 那邊是兩份文本，所以 urls 有兩個、接續編號。
+        "blocks": [1, 2],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7481&type=file-xml",
+                 "https://mlat.uzh.ch/php_modules/download.php?idno=7494&type=file-xml"],
+    },
+    "aug-perfectione": {
+        "label": "奧古斯丁《論人在義中的完全》（NPNF1 第五卷）",
+        "ebook_id": "df789501-5620-4833-a0a0-6e8f1a031bb1",
+        "prefix": "論人在義中的完全",
+        "lang": "la",
+        "mode": "cc-book",
+        "unit": "paragraph",
+        "blocks": [1],
+        "source": "Corpus Corporum（mlat.uzh.ch）· Migne PL 44–45 的 TEI，蘇黎世大學",
+        "urls": ["https://mlat.uzh.ch/php_modules/download.php?idno=7480&type=file-xml"],
+    },
     "cassian-institutes": {
         "label": "迦仙《會院規章十二書》（NPNF2 第十一卷）",
         "ebook_id": "24c53ede-8787-442e-a3ba-0cd55d0effac",
@@ -568,9 +717,19 @@ def fetch_original(spec: dict) -> tuple[dict, dict]:
     if spec["mode"] == "cc-book":
         s = requests.Session()
         s.headers["User-Agent"] = "Mozilla/5.0 (know-graph-lab fathers-original)"
-        r = s.get(spec["urls"][0], timeout=600)
-        r.raise_for_status()
-        got, notes = FO.parse_cc_chapters(r.text)
+        parse = (FO.parse_cc_paragraphs if spec.get("unit") == "paragraph"
+                 else FO.parse_cc_chapters)
+        # 一部著作的各卷可能分裝成好幾個檔（NPNF 把《論聖徒的預定》與《論堅忍的
+        # 恩賜》併成一部的上下兩卷，Corpus Corporum 那邊是兩份文本）。接續編號。
+        got: dict[tuple[int, int], str] = {}
+        notes: list[str] = []
+        for url in spec["urls"]:
+            r = s.get(url, timeout=600)
+            r.raise_for_status()
+            part_got, part_notes = parse(r.text)
+            base = max((b for b, _ in got), default=0)
+            got.update({(b + base, n): v for (b, n), v in part_got.items()})
+            notes += part_notes
         first, last = spec.get("books") or (1, max((k[0] for k in got), default=0))
         for line in notes[first - 1:last]:
             print(f"    {line}")
@@ -1120,7 +1279,7 @@ def run_work(name: str, a) -> int:
                 for i, n in FO.chapter_headings(body):
                     seq.append((c["chunk_index"], i, n))
             placed, hit, num, report = FO.align_cc_books(
-                seq, by_book, part.get("blocks"))
+                seq, by_book, part.get("blocks"), part.get("short_ok"))
             for line in report:
                 print(f"    {line}")
             for c in chunks:
