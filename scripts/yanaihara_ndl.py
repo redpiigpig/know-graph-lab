@@ -153,11 +153,35 @@ def run_ocr(batch: int) -> None:
         print(f"  ✓ {dst.name} {len(text):,} 字", flush=True)
 
 
+def auto(pause: float, batch: int) -> None:
+    """抓圖→併 PDF→OCR，跑到哪算哪。給 fleet keeper 掛 lane 用：
+
+    NDL 會 429、Gemini 會 503，兩邊都是「等一下再來」的錯，所以這支不重試到死，
+    做得動就往前一步，做不動就退出來讓 keeper 下一輪再探。
+    """
+    ids = json.loads((WORK_DIR / "manifest.json").read_text(encoding="utf-8"))
+    total = len(canvas_ids(ids))
+    have = len(list(IMG_DIR.glob("*.jpg"))) if IMG_DIR.is_dir() else 0
+    if have < total:
+        print(f"画像 {have}/{total} → 続きを取得", flush=True)
+        fetch_images(pause=pause)
+        have = len(list(IMG_DIR.glob("*.jpg")))
+    if have < total:
+        print(f"まだ {have}/{total}；次のラウンドで続行", flush=True)
+        return
+    if not PDF_PATH.exists() or PDF_PATH.stat().st_mtime < max(
+            f.stat().st_mtime for f in IMG_DIR.glob("*.jpg")):
+        make_pdf()
+    run_ocr(batch)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--fetch", action="store_true")
     ap.add_argument("--pdf", action="store_true")
     ap.add_argument("--ocr", action="store_true")
+    ap.add_argument("--auto", action="store_true",
+                    help="抓圖→PDF→OCR 一氣呵成，做不動就退（keeper lane 用）")
     ap.add_argument("--batch", type=int, default=10)
     ap.add_argument("--width", type=int, default=1800)
     ap.add_argument("--pause", type=float, default=3.0, help="コマ間の待ち（秒）")
@@ -169,8 +193,10 @@ def main() -> None:
         make_pdf()
     if a.ocr:
         run_ocr(a.batch)
-    if not (a.fetch or a.pdf or a.ocr):
-        ap.error("--fetch / --pdf / --ocr のいずれか")
+    if a.auto:
+        auto(a.pause, a.batch)
+    if not (a.fetch or a.pdf or a.ocr or a.auto):
+        ap.error("--fetch / --pdf / --ocr / --auto のいずれか")
 
 
 if __name__ == "__main__":

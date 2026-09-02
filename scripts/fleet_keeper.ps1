@@ -161,6 +161,12 @@ Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all
 # Split in two so both halves move at once - the per-section caches do not overlap.
 Ensure 'philo-queue' 'hellenistic_run_queue.py --group short' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','short','--engine','haiku')
 Ensure 'plotinus-queue' 'hellenistic_run_queue.py --group plotinus' @('-X','utf8','scripts\hellenistic_run_queue.py','--group','plotinus','--engine','haiku')
+# Yanaihara's Taiwan book (Iwanami 1929, public domain worldwide): NDL scan pid 1191101,
+# 201 images -> PDF -> Gemini Vision OCR. Both ends throttle us (NDL answers 429, Gemini
+# answers 503), so the script never retries to death - it moves one step and exits, and
+# this 30-min lane IS the retry. Slower page pause than a one-off run, on purpose.
+Ensure 'yanaihara-ndl' 'yanaihara_ndl' @('-X','utf8','scripts\yanaihara_ndl.py','--auto','--pause','6','--batch','8')
+
 # Yanaihara (Uchimura's disciple, 2nd-generation Mukyokai): the four Aozora Bunko texts,
 # ja -> Traditional Chinese. The two short pieces are already up; this lane finishes the
 # two long ones (Introduction to Christianity 490 paras, Life of Jesus 1017 paras).
