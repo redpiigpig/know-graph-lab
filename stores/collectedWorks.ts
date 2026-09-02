@@ -20566,8 +20566,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "de"
                       ],
                       "status": "done",
-                      ebookId: "424dc120-0bc8-410d-aa63-ae5786d250b0",
-                      "note": "李猛譯《科學作為天職》"
+                      ebookId: "18640000-0000-4000-8000-000000000001",
+                      "note": "李中文譯《以學術為志業》（暖暖書屋，取最新繁體版）；另有李猛譯《科學作為天職》簡體本"
                 },
                 {
                       "title": "政治作為一種志業",
@@ -20578,8 +20578,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "與〈學術作為志業〉並列的慕尼黑演講，提出「責任倫理／信念倫理」與國家作為壟斷正當暴力的定義"
+                      "status": "done",
+                      ebookId: "18640000-0000-4000-8000-000000000002",
+                      "note": "李中文譯《以政治為志業》（暖暖書屋）；提出「責任倫理／信念倫理」與國家作為壟斷正當暴力的定義"
                 }
           ]
     },

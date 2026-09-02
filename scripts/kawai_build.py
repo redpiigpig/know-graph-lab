@@ -70,10 +70,13 @@ class _TextExtractor(HTMLParser):
     """收集 xhtml 內文；<p>/<div>/<h*>/<br> 視為段落邊界。"""
     _BLOCK = {"p", "div", "h1", "h2", "h3", "h4", "h5", "h6", "li", "br", "blockquote"}
 
+    _DROP = {"style", "script"}  # 內文抽取碰到 <style> 會把整段 CSS 當文字收進去
+
     def __init__(self):
         super().__init__()
         self._buf: list[str] = []
         self.paras: list[str] = []
+        self._drop_depth = 0
 
     def _flush(self):
         s = "".join(self._buf).strip()
@@ -82,15 +85,20 @@ class _TextExtractor(HTMLParser):
         self._buf = []
 
     def handle_starttag(self, tag, attrs):
+        if tag in self._DROP:
+            self._drop_depth += 1
         if tag in self._BLOCK:
             self._flush()
 
     def handle_endtag(self, tag):
+        if tag in self._DROP and self._drop_depth:
+            self._drop_depth -= 1
         if tag in self._BLOCK:
             self._flush()
 
     def handle_data(self, data):
-        self._buf.append(data)
+        if not self._drop_depth:
+            self._buf.append(data)
 
     def close(self):
         super().close()
