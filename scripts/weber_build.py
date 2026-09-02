@@ -50,8 +50,49 @@ BOOKS = [
      "translator": "李中文", "publisher": "暖暖書屋",
      "file": "以政治為志業 = Politik als Beruf (馬克斯 · 韋伯 (Max Weber) 著  李中文 譯) "
              "(z-library.sk, 1lib.sk, z-lib.sk).epub"},
+    {"slug": "methodology", "n": 3, "title": "韋伯方法論文集",
+     "original": "Gesammelte Aufsätze zur Wissenschaftslehre（選）", "year": 1922,
+     "pub_year": 2013, "translator": "張旺山", "publisher": "聯經",
+     # 聯經本來就是繁體：再跑一次 s2tw 只會製造錯（「闡明了」被轉成「闡明瞭」）。
+     "already_traditional": True,
+     "file": "韋伯方法論文集 (馬克斯 · 韋伯 (Max Weber) 著  張旺山 譯) "
+             "(z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     # 依 PDF 書籤定的篇界（0-based 頁索引，含起不含迄）。書籤標題本身有 OCR 殘缺
+     # （「弁百1」之類），所以篇名照論文本身重打。
+     "sections": [
+         (4, 9, "譯者序"),
+         (9, 87, "中譯本導讀（張旺山）"),
+         (87, 104, "參考書目‧凡例‧目次"),
+         (104, 272, "羅謝與肯尼士和歷史的國民經濟學之邏輯問題（1903–1906）"),
+         (272, 344, "社會科學的與社會政策的知識之「客觀性」（1904）"),
+         (344, 428, "在「文化科學的邏輯」這個領域的一些批判性的研究（1906）"),
+         (428, 532, "史坦樂之「克服」唯物論的歷史觀（1907）"),
+         (532, 550, "邊際效用學說與「心理物理學的基本法則」（1908）"),
+         (550, 582, "「能量學」的文化理論（1909）"),
+         (582, 640, "社會學與經濟學的諸科學之「價值中立」的意義（1917）"),
+         (640, 725, "人名譯註"),
+     ]},
 ]
 BY_SLUG = {b["slug"]: b for b in BOOKS}
+
+# 這本 PDF 的文字層是 OCR 產物，帶著一批字形固定的錯。只收「幾乎不可能是原字」的
+# 那幾組——異體字與形近誤認；語境相關的（「住心理」該是「在心理」）一概不動，
+# 那要逐字校對，不是查表能解決的。
+_OCR_FIXES = {
+    "説": "說", "値": "值", "硏": "研", "敎": "教", "靑": "青", "淸": "清",
+    "擧": "舉", "槪": "概", "杜會": "社會", "経": "經", "実": "實", "対": "對",
+    "眞": "真", "囘": "回", "縂": "總", "領城": "領域",
+}
+
+# 這本的文字層是「簡體 OCR → 工具轉繁」的產物，所以還帶著一批**過度轉換**：
+# 面→麵、了→瞭、髮→發 這類一字多繁的誤選。共用的 TRAD_FIXES 收了曆／歷那批，
+# 這裡補上本書實際出現的；限定片語與上下文，避免把真的「麵」「瞭」改掉。
+_OVER_CONVERSION = [
+    (re.compile(r"麵(?=向|對|臨|貌|前|積|板|紗)"), "面"),
+    (re.compile(r"(?<=方|全|表|片|局|層|正|反|側|平|封|地|水|情|場|界)麵"), "面"),
+    (re.compile(r"(?<=明|白)瞭(?=[一二三四五六七八九十這那件個點什麼他她它我們你])"), "了"),
+    (re.compile(r"(?<=為|因)瞭(?=[^解然])"), "了"),
+]
 
 # 封面、導航、書末書訊不是內文；照片頁沒有文字，抽出來是空的自然會被略過。
 _SKIP = re.compile(r"(cover|nav|Review)\.xhtml$", re.I)
@@ -165,6 +206,52 @@ def build_book(book: dict, *, to_trad) -> list[dict]:
     return chunks
 
 
+def fix_ocr(text: str) -> str:
+    """字形固定的 OCR 錯 ＋ 簡繁過度轉換。兩者都只收「幾乎不可能是原字」的組合。"""
+    from parse_drive_inventory import TRAD_FIXES
+
+    for bad, good in _OCR_FIXES.items():
+        text = text.replace(bad, good)
+    for wrong, right in TRAD_FIXES:
+        text = text.replace(wrong, right)
+    for rx, good in _OVER_CONVERSION:
+        text = rx.sub(good, text)
+    return text
+
+
+def build_pdf_book(book: dict, *, to_trad) -> list[dict]:
+    """文字層 PDF → 一頁一 chunk。
+
+    頁碼原樣保留（[[feedback_pdf_page_number]]：PDF 的任何重整都不可重編頁碼），
+    篇名取自 book['sections'] 的頁區間。
+    """
+    import pypdf
+
+    reader = pypdf.PdfReader(str(SRC_DIR / book["file"]))
+    title = book["title"]
+    head = (f"# {title}\n\n{PARENT_VOLUME}\n\n"
+            f"德文原名：{book['original']}\n\n"
+            f"中譯：{book['translator']}（{book['publisher']}，{book['pub_year']}）")
+    chunks = [{"chunk_index": 0, "chunk_type": "cover", "page_number": 0,
+               "chapter_path": title, "volume": title, "parent_volume": PARENT_VOLUME,
+               "format": "markdown", "content": head}]
+    idx = 0
+    for start, end, name in book["sections"]:
+        for p in range(start, min(end, len(reader.pages))):
+            raw = reader.pages[p].extract_text() or ""
+            body = to_trad(fix_ocr(re.sub(r"\n{3,}", "\n\n", raw.strip())))
+            if len(body) < 80:              # 空白頁、只有頁碼的頁
+                continue
+            idx += 1
+            chunks.append({
+                "chunk_index": idx, "chunk_type": "chapter", "page_number": p + 1,
+                "chapter_path": to_trad(f"{title} · {name} · 第 {p + 1} 頁"),
+                "volume": title, "parent_volume": PARENT_VOLUME,
+                "format": "markdown", "content": body,
+            })
+    return chunks
+
+
 def _upload(book: dict, chunks: list[dict]):
     import datetime
     import requests
@@ -184,7 +271,8 @@ def _upload(book: dict, chunks: list[dict]):
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
     row = {
         "id": ebid, "title": book["title"], "author": "馬克斯‧韋伯", "author_en": "Max Weber",
-        "original_title": book["original"], "file_type": "epub",
+        "original_title": book["original"],
+        "file_type": "pdf" if book.get("sections") else "epub",
         "file_path": f"全集/宗教社會學/韋伯/{book['file']}",
         "category": "宗教社會學", "subcategory": "支配與理性化", "display_mode": "standard",
         "collection": "collected-works", "translator": book["translator"],
@@ -226,7 +314,8 @@ def main():
     if not targets:
         ap.error("需 --inspect / --book <slug> / --all")
     for b in targets:
-        chunks = build_book(b, to_trad=to_traditional)
+        builder = build_pdf_book if b.get("sections") else build_book
+        chunks = builder(b, to_trad=to_traditional)
         chars = sum(len(c["content"]) for c in chunks)
         print(f"[{b['n']}] {b['title']}（{b['original']}）  chunks={len(chunks)}  {chars:,} 字  "
               f"{EBID.format(b['n'])}", flush=True)

@@ -21027,6 +21027,19 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       ebookId: "424dc120-0bc8-410d-aa63-ae5786d250b0",
                       "note": "既有中譯本（參考層，簡體李猛譯）；主譯本用李中文《以學術為志業》繁體新譯"
+                },
+                {
+                      "title": "韋伯方法論文集",
+                      "titleOriginal": "Gesammelte Aufsätze zur Wissenschaftslehre（選）",
+                      "year": "1903–1917",
+                      "yearSort": 1917,
+                      "category": "理論方法論代表作",
+                      "languages": [
+                            "de"
+                      ],
+                      "status": "done",
+                      ebookId: "18640000-0000-4000-8000-000000000003",
+                      "note": "張旺山譯（聯經 2013）；收〈客觀性〉〈價值中立〉等八篇。來源是文字層 PDF，逐頁轉錄並修過字形與簡繁過度轉換，未逐字校對。"
                 }
           ]
     },
