@@ -38,6 +38,9 @@ COURSES = {
     'ch': dict(slug='christianity-intro', book_id='CH1', prefix='ch1',
                chapters='chapters', title='基督宗教概論',
                folder='115-2_基督宗教概論'),
+    'sl': dict(slug='sinographic-literature', book_id='SL1', prefix='sl1',
+               chapters='chapters', title='宗教系國文講義',
+               folder='宗教系國文講義'),
 }
 
 
@@ -52,9 +55,12 @@ def load_course(key):
         from course_quiz_data import QUIZZES
         from course_quiz_data2 import QUIZZES2
         ALL = {**QUIZZES, **QUIZZES2}
-    else:
+    elif key == 'ch':
         from course_quiz_data_ch import QUIZZES_CH
         ALL = QUIZZES_CH
+    else:
+        from course_quiz_data_sl import QUIZZES_SL
+        ALL = QUIZZES_SL
 
 
 KLASS = '玄奘大學宗教與文化學系‧二年制在職專班1年A班'

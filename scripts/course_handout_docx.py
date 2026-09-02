@@ -78,7 +78,20 @@ COURSE_CH = {
     ],
 }
 
-COURSES = {'wr2': COURSE_WR2, 'ch': COURSE_CH}
+# 大學國文（十六週）；book 模式不使用日期與場地。
+COURSE_SL = {
+    'slug': 'sinographic-literature',
+    'chapters_dir': 'chapters',
+    'folder': '宗教系國文講義',
+    'title': '宗教系國文講義',
+    'code': '大學國文',
+    'teacher': '張辰瑋',
+    'klass': '玄奘大學宗教與文化學系',
+    'place': '待定',
+    'sessions': [(i, '待定', [2 * i - 1, 2 * i], '') for i in range(1, 9)],
+}
+
+COURSES = {'wr2': COURSE_WR2, 'ch': COURSE_CH, 'sl': COURSE_SL}
 COURSE = COURSE_WR2
 
 

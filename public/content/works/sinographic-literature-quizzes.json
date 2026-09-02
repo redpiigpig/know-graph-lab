@@ -1,13 +1,116 @@
 {
   "quizzes": [
-    { "id": "q01-02", "title": "第一～二章", "range": "導論・漢字發展", "file": "/content/works/sinographic-literature/quizzes/q01-02.html" },
-    { "id": "q03-04", "title": "第三～四章", "range": "卜辭神話・經典正典化", "file": "/content/works/sinographic-literature/quizzes/q03-04.html" },
-    { "id": "q05-06", "title": "第五~六章", "range": "佛典漢譯・大藏經", "file": "/content/works/sinographic-literature/quizzes/q05-06.html" },
-    { "id": "q07-08", "title": "第七~八章", "range": "六朝・唐代", "file": "/content/works/sinographic-literature/quizzes/q07-08.html" },
-    { "id": "q09-10", "title": "第九~十章", "range": "變文・戲曲", "file": "/content/works/sinographic-literature/quizzes/q09-10.html" },
-    { "id": "q11-12", "title": "第十一~十二章", "range": "神魔小說・日本漢文學", "file": "/content/works/sinographic-literature/quizzes/q11-12.html" },
-    { "id": "q13-14", "title": "第十三~十四章", "range": "韓半島・越南漢文學", "file": "/content/works/sinographic-literature/quizzes/q13-14.html" },
-    { "id": "q15-16", "title": "第十五~十六章", "range": "台灣漢文學・聖經漢譯", "file": "/content/works/sinographic-literature/quizzes/q15-16.html" },
-    { "id": "q17", "title": "第十七章", "range": "去漢字化與漢文再生", "file": "/content/works/sinographic-literature/quizzes/q17.html" }
+    {
+      "id": "sl1-ch01",
+      "title": "第一章",
+      "range": "導論——為什麼是「漢字文學史」而不是「中國文學史」",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch01.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch02",
+      "title": "第二章",
+      "range": "漢字與最早的書寫——六書、字體，與卜辭裡的神人溝通",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch02.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch03",
+      "title": "第三章",
+      "range": "經典的成立——儒道文本的正典化與祭祀文體",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch03.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch04",
+      "title": "第四章",
+      "range": "佛典漢譯——世界翻譯史上最大的工程",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch04.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch05",
+      "title": "第五章",
+      "range": "大藏經的世界——奠基於漢字的跨國宗教工程",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch05.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch06",
+      "title": "第六章",
+      "range": "六朝——玄言、遊仙、志怪與靈驗記",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch06.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch07",
+      "title": "第七章",
+      "range": "唐代——禪宗語錄、詩僧與道教文學的黃金時代",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch07.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch08",
+      "title": "第八章",
+      "range": "敦煌變文與講唱文學——白話文學的宗教起源",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch08.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch09",
+      "title": "第九章",
+      "range": "戲曲與宗教演藝——祭壇上的劇場",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch09.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch10",
+      "title": "第十章",
+      "range": "明清神魔小說與三教合流——通俗敘事的宗教宇宙",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch10.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch11",
+      "title": "第十一章",
+      "range": "日本漢文學——訓讀的文明",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch11.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch12",
+      "title": "第十二章",
+      "range": "韓半島漢文學——儒佛雙軌的千年書寫",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch12.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch13",
+      "title": "第十三章",
+      "range": "越南漢文學——南國的文脈",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch13.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch14",
+      "title": "第十四章",
+      "range": "台灣漢文學——移民、殖民與漢文的韌性",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch14.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch15",
+      "title": "第十五章",
+      "range": "聖經漢譯與宗教經典的漢文翻譯——從景教碑到漢語神學",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch15.html",
+      "bookId": "SL1"
+    },
+    {
+      "id": "sl1-ch16",
+      "title": "第十六章",
+      "range": "去漢字化與漢文傳統的斷裂與再生",
+      "file": "/content/works/sinographic-literature/quizzes/sl1-ch16.html",
+      "bookId": "SL1"
+    }
   ]
 }
