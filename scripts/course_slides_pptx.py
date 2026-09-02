@@ -12,6 +12,7 @@
   python scripts/course_slides_pptx.py          # 第 1 次
   python scripts/course_slides_pptx.py 1 2
 """
+import json
 import sys
 from pathlib import Path
 
@@ -22,6 +23,16 @@ from pptx.util import Cm, Pt
 
 DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
 FOLDER = '115-1_世界宗教文化導論'
+IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'
+
+
+def load_manifest():
+    f = IMGDIR / '_manifest.json'
+    return json.loads(f.read_text(encoding='utf-8')) if f.exists() else {}
+
+
+MANIFEST = load_manifest()
+USED = []          # 本份簡報實際用到的圖，供「圖片出處」頁使用
 
 HEI = '微軟正黑體'
 KAI = '標楷體'
@@ -206,11 +217,114 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
     return s
 
 
+def place_image(slide, key, x, y, w, h):
+    """把圖等比塞進 (x,y,w,h) 的框裡並置中；圖不存在就回傳 False。"""
+    m = MANIFEST.get(key)
+    if not m:
+        return False
+    f = IMGDIR / m['file']
+    if not f.exists():
+        return False
+    pic = slide.shapes.add_picture(str(f), x, y, width=w)
+    if pic.height > h:                      # 太高就改用高度縮，維持比例
+        ratio = pic.width / pic.height
+        pic.height = h
+        pic.width = int(h * ratio)
+    pic.left = x + int((w - pic.width) / 2)
+    pic.top = y + int((h - pic.height) / 2)
+    if key not in USED:
+        USED.append(key)
+    return True
+
+
+def caption(slide, text, x, y, w):
+    tf = textbox(slide, x, y, w, Cm(1.1))
+    put(tf, text, 11.5, color=GRAY, first=True, space_after=0, align=PP_ALIGN.CENTER)
+
+
+def s_photo(prs, title, key, cap=None, sub=None):
+    s = blank(prs)
+    slide_title(s, title, sub)
+    box_y, box_h = Cm(4.7), H - Cm(7.2)
+    if not place_image(s, key, Cm(2.0), box_y, W - Cm(4.0), box_h):
+        put(textbox(s, Cm(2.0), box_y, W - Cm(4.0), Cm(2)), f'（缺圖：{key}）',
+            14, color=GRAY, first=True)
+    if cap:
+        caption(s, cap, Cm(2.0), H - Cm(2.4), W - Cm(4.0))
+    return s
+
+
+def s_gallery(prs, title, items, sub=None):
+    """items: [(圖 key, 說明), ...]，二至四張並排。"""
+    s = blank(prs)
+    slide_title(s, title, sub)
+    n = len(items)
+    gap = Cm(0.7)
+    colw = int((W - Cm(4.0) - gap * (n - 1)) / n)
+    top, boxh = Cm(4.9), H - Cm(8.0)
+    for i, (key, label) in enumerate(items):
+        x = Cm(2.0) + i * (colw + gap)
+        if not place_image(s, key, x, top, colw, boxh):
+            put(textbox(s, x, top, colw, Cm(2)), f'（缺圖：{key}）', 11,
+                color=GRAY, first=True)
+        tf = textbox(s, x, top + boxh + Cm(0.25), colw, Cm(1.6))
+        put(tf, label, 12, color=INK, first=True, space_after=0,
+            align=PP_ALIGN.CENTER, line=1.25)
+    return s
+
+
+def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
+    """左文右圖。"""
+    s = blank(prs)
+    slide_title(s, title, sub)
+    textw = int((W - Cm(4.5)) * 0.56)
+    imgx = Cm(2.0) + textw + Cm(0.9)
+    imgw = W - Cm(2.0) - imgx
+    tf = textbox(s, Cm(2.0), Cm(4.7), textw, H - Cm(6.5))
+    firstdone = False
+    for b in bullets:
+        lvl, txt = (b if isinstance(b, tuple) else (0, b))
+        if txt == '':
+            put(tf, ' ', 8, first=not firstdone, space_after=0); firstdone = True; continue
+        size = {0: 18, 1: 15, 2: 13}[lvl]
+        color = {0: INK, 1: RGBColor(0x3A, 0x3A, 0x3A), 2: GRAY}[lvl]
+        mark = {0: '▍', 1: '‧', 2: '－'}[lvl]
+        put(tf, f'{mark} {txt}', size, color=color, bold=(lvl == 0),
+            first=not firstdone, space_after={0: 9, 1: 6, 2: 4}[lvl],
+            indent=lvl, line=1.3)
+        firstdone = True
+    boxh = H - Cm(7.2)
+    place_image(s, key, imgx, Cm(4.7), imgw, boxh)
+    if cap:
+        caption(s, cap, imgx, H - Cm(2.4), imgw)
+    return s
+
+
+def s_credits(prs, label):
+    """圖片出處頁：課堂投影用圖必須標明作者與授權。"""
+    if not USED:
+        return None
+    s = blank(prs)
+    slide_title(s, '圖片出處', '本份簡報用圖均取自維基共享資源，授權為公有領域或 CC')
+    tf = textbox(s, Cm(2.0), Cm(4.7), W - Cm(4.0), H - Cm(6.4))
+    for i, k in enumerate(USED):
+        m = MANIFEST.get(k, {})
+        name = m.get('title', k)[5:]            # 去掉 'File:'
+        line = f'{name}　—　{m.get("license", "")}'
+        if m.get('author'):
+            line += f'　／　{m["author"][:44]}'
+        put(tf, line, 9.5, color=GRAY, first=(i == 0), space_after=3, line=1.2)
+    return s
+
+
 RENDER = {'cover': s_cover, 'section': s_section, 'big': s_big,
-          'bullets': s_bullets, 'two': s_two, 'table': s_table}
+          'bullets': s_bullets, 'two': s_two, 'table': s_table,
+          'photo': s_photo, 'gallery': s_gallery, 'imgbullets': s_imgbullets}
 
 
 def build(deck):
+    global USED
+    USED = []
     prs = Presentation()
     prs.slide_width, prs.slide_height = W, H
     for i, item in enumerate(deck['slides']):
@@ -219,16 +333,23 @@ def build(deck):
         s = RENDER[kind](prs, *args, **kw)
         if kind not in ('cover', 'section', 'big'):
             footer(s, i, deck['footer'])
+    c = s_credits(prs, deck['footer'])
+    if c is not None:
+        footer(c, len(deck['slides']), deck['footer'])
     outdir = DRIVE / FOLDER / '簡報'
     outdir.mkdir(parents=True, exist_ok=True)
     out = outdir / deck['filename']
     prs.save(out)
-    return out, len(deck['slides'])
+    return out, len(prs.slides._sldIdLst)
 
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
     from course_slides_data import DECKS
+    from course_slides_data2 import DECKS2
+    from course_slides_data3 import DECKS3
+    from course_slides_data4 import DECKS4
+    DECKS = {**DECKS, **DECKS2, **DECKS3, **DECKS4}
     for n in (sys.argv[1:] or ['1']):
         out, cnt = build(DECKS[int(n)])
         print(f'✔ {out}　（{cnt} 張）')
