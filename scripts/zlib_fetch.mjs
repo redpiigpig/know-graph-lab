@@ -78,12 +78,32 @@ async function gotoPastWall(page, url, tries = 3) {
  * 挑版本。`expect` 是書名核心詞、`who` 是作者／譯者核心詞——沒有這道閘，搜「韋伯
  * 中國的宗教」會抓到孫中興《久等了，韋伯先生！》這種研究專書而不是原著中譯。
  */
+const BLACKLIST = (() => {
+  // 跟 scripts/author_blacklist.py 同一份名單，避免兩邊各記一套。
+  try {
+    const f = new URL('../data/author-blacklist.json', import.meta.url)
+    const raw = JSON.parse(readFileSync(f, 'utf-8'))
+    return (raw.authors || []).flatMap((a) => [a.name, ...(a.aka || [])])
+      .map((n) => n.toLowerCase().replace(/\s+/g, ''))
+      .filter(Boolean)
+  } catch {
+    return []
+  }
+})()
+
+export function isBlacklisted(...fields) {
+  const hay = fields.filter(Boolean).join(' | ').toLowerCase().replace(/\s+/g, '')
+  return BLACKLIST.some((n) => hay.includes(n))
+}
+
 export function rank(hit, query = '', expect = '', who = '') {
   const lang = (hit.language || '').toLowerCase()
   const ext = (hit.extension || '').toLowerCase()
   // 站上有一批「書名就是別人的搜尋字串」的垃圾上傳（多半是 txt/english），
   // 命中它們比沒命中更糟——會把一本假書送進 drop 夾。
   const title = (hit.title || '').trim()
+  // 使用者判定不值得讀的作者（data/author-blacklist.json）——寧可沒命中也別抓回來
+  if (isBlacklisted(hit.author, title)) return -100
   if (['txt', 'rar', 'zip', 'doc'].includes(ext)) return -100
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
   const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')

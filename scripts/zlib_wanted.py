@@ -22,7 +22,11 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import author_blacklist
 
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data" / "zlib-wanted"
@@ -117,11 +121,16 @@ def main() -> None:
         text = path.read_text(encoding="utf-8")
         items += parse_hunt(text, source) + parse_christianity(text, source)
 
-    seen, merged = set(), []
+    seen, merged, banned = set(), [], []
     for it in items:
         if it["key"] in seen:
             continue
         seen.add(it["key"])
+        # 使用者判定不值得讀的作者，連搜都不要搜（data/author-blacklist.json）
+        hit = author_blacklist.match(it.get("who", ""), it.get("zh", ""), it.get("query", ""))
+        if hit:
+            banned.append((hit["name"], it.get("zh") or it.get("query", "")))
+            continue
         merged.append(it)
 
     by_source: dict[str, int] = {}
@@ -130,6 +139,12 @@ def main() -> None:
     for s, n in sorted(by_source.items(), key=lambda x: -x[1]):
         print(f"  {s:28} {n:5}")
     print(f"  {'合計':28} {len(merged):5}")
+    if banned:
+        print(f"\n  黑名單濾掉 {len(banned)} 筆：")
+        for who, what in banned[:10]:
+            print(f"    [{who}] {what}")
+        if len(banned) > 10:
+            print(f"    …另 {len(banned) - 10} 筆")
 
     if a.stats:
         return

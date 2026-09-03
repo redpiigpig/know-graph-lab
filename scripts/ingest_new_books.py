@@ -39,6 +39,7 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 from parse_drive_inventory import parse_filename, to_traditional, TITLE_AUTHOR_OVERRIDES
 from file_validation import validate_ebook
+import author_blacklist
 import book_classifier
 
 
@@ -49,6 +50,8 @@ EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
 # Broken / truncated downloads are held here, OUT of Drive, so they never
 # produce empty chunks downstream. Reviewed manually.
 CORRUPT_DIR = NEW_BOOK_DIR / "_corrupt"
+# 使用者判定「不值得讀」的作者（data/author-blacklist.json）。不刪檔，隔離著等人確認。
+BLACKLIST_DIR = NEW_BOOK_DIR / "_blacklisted"
 # Books the classifiers can't place with confidence go to a review queue
 # instead of being blind-dumped into a wrong category (the old 哲學 default).
 REVIEW_CATEGORY = "_待審分類"
@@ -602,6 +605,7 @@ def cmd_run(limit: int | None, dry_run: bool):
     ok = 0
     fail = 0
     corrupt = 0
+    blacklisted = 0
     for p in files:
         print(f"\n[{p.name}]")
 
@@ -626,6 +630,18 @@ def cmd_run(limit: int | None, dry_run: bool):
             fail += 1
             continue
         print(f"  parsed: title={meta['title']!r}  author={meta.get('author')!r}  ext={meta['ext']}")
+
+        banned = author_blacklist.match(meta.get("author") or "", meta["title"], p.name)
+        if banned:
+            print(f"  BLACKLIST [{banned['name']}] {banned.get('note', '')} — 隔離到 _blacklisted/，不入 Drive 不入庫")
+            if not dry_run:
+                BLACKLIST_DIR.mkdir(parents=True, exist_ok=True)
+                try:
+                    shutil.move(str(p), str(BLACKLIST_DIR / p.name))
+                except Exception as e:
+                    print(f"    (隔離搬移失敗，檔案留原處: {e})")
+            blacklisted += 1
+            continue
 
         try:
             cls = classify(meta["title"], meta.get("author") or "", p.name)
@@ -676,8 +692,8 @@ def cmd_run(limit: int | None, dry_run: bool):
         ok += 1
         time.sleep(0.5)  # gentle pacing for Gemini RPM
 
-    print(f"\nDone: {ok} ingested, {fail} failed/skipped, {corrupt} corrupt-quarantined "
-          f"(of {len(files)} processed)")
+    print(f"\nDone: {ok} ingested, {fail} failed/skipped, {corrupt} corrupt-quarantined, "
+          f"{blacklisted} blacklisted (of {len(files)} processed)")
     return ok
 
 

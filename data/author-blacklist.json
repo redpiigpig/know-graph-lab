@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "不值得收的作者。三個地方會讀這份名單：",
+    "  1. scripts/zlib_wanted.py  —— 產每日獵書清單時先濾掉，根本不去下載",
+    "  2. scripts/zlib_fetch.mjs  —— 搜到的結果若命中黑名單就不挑這個版本",
+    "  3. scripts/ingest_new_books.py —— 萬一還是掉進 z-lib/ drop 夾，隔離到 _blacklisted/ 不入 Drive 不入庫",
+    "name 用最常見的寫法，aka 補其他寫法（英文名、簡體、筆名）。比對會做繁簡與全半形正規化。",
+    "這是「作者不值得讀」的判斷，一律由使用者拍板，不要自己往裡加人。"
+  ],
+  "authors": [
+    {
+      "name": "孫中興",
+      "aka": ["Sun Chung-hsing", "Sun Zhongxing"],
+      "at": "2026-09-04",
+      "note": "使用者判定：著作不值得讀。已刪《久等了，韋伯先生》(ebook 4f736264)"
+    }
+  ]
+}

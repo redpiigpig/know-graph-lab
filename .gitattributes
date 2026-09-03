@@ -1,0 +1,6 @@
+# Windows 批次檔一定要 CRLF。cmd.exe 讀 .bat 是按位元組位移走的，LF-only 會讓
+# parser 錯位、把註解行的殘片當指令執行 —— 2026-08-31 到 09-04 的每日 OCR 排程
+# 就是這樣死的（連自己的 log 都寫不出來，Task Scheduler 只回一個 255）。
+# autocrlf 是每台機器的設定，靠不住；用 attribute 釘死。
+*.bat text eol=crlf
+*.cmd text eol=crlf
