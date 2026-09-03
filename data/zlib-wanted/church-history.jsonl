@@ -1,0 +1,21 @@
+{"key":"ch-harnack-history-dogma","query":"Harnack History of Dogma","expect":"History of Dogma","who":"Harnack","source":"church-history","zh":"哈納克《教義史》"}
+{"key":"ch-harnack-mission-expansion","query":"Harnack The Mission and Expansion of Christianity","expect":"Mission and Expansion","who":"Harnack","source":"church-history","zh":"哈納克《基督教的宣教與擴展》"}
+{"key":"ch-latourette-expansion","query":"Latourette A History of the Expansion of Christianity","expect":"Expansion of Christianity","who":"Latourette","source":"church-history","zh":"賴德烈《基督教擴展史》"}
+{"key":"ch-pelikan-christian-tradition","query":"Pelikan The Christian Tradition A History of the Development of Doctrine","expect":"Christian Tradition","who":"Pelikan","source":"church-history","zh":"帕利坎《基督教傳統》"}
+{"key":"ch-brown-body-society","query":"Peter Brown The Body and Society men women and sexual renunciation","expect":"Body and Society","who":"Brown","source":"church-history","zh":"彼得‧布朗《身體與社會》"}
+{"key":"ch-brown-cult-saints","query":"Peter Brown The Cult of the Saints","expect":"Cult of the Saints","who":"Brown","source":"church-history","zh":"彼得‧布朗《聖徒崇拜》"}
+{"key":"ch-brown-rise-western","query":"Peter Brown The Rise of Western Christendom","expect":"Rise of Western Christendom","who":"Brown","source":"church-history","zh":"彼得‧布朗《西方基督教世界的興起》"}
+{"key":"ch-chadwick-early-church","query":"Chadwick The Early Church Pelican History","expect":"Early Church","who":"Chadwick","source":"church-history","zh":"查德威克《早期教會》"}
+{"key":"ch-frend-martyrdom","query":"Frend Martyrdom and Persecution in the Early Church","expect":"Martyrdom and Persecution","who":"Frend","source":"church-history","zh":"弗蘭德《早期教會的殉道與逼迫》"}
+{"key":"ch-macculloch-3000","query":"MacCulloch Christianity The First Three Thousand Years","expect":"Three Thousand Years","who":"MacCulloch","source":"church-history","zh":"麥卡洛克《基督教三千年》"}
+{"key":"ch-macculloch-reformation","query":"MacCulloch The Reformation A History","expect":"Reformation","who":"MacCulloch","source":"church-history","zh":"麥卡洛克《宗教改革》"}
+{"key":"ch-gonzalez-story","query":"Gonzalez The Story of Christianity","expect":"Story of Christianity","who":"Gonzalez","source":"church-history","zh":"岡薩雷斯《基督教史》"}
+{"key":"ch-bainton-here-i-stand","query":"Bainton Here I Stand A Life of Martin Luther","expect":"Here I Stand","who":"Bainton","source":"church-history","zh":"班頓《這是我的立場：馬丁路德傳》"}
+{"key":"ch-cameron-later-roman","query":"Averil Cameron The Mediterranean World in Late Antiquity","expect":"Late Antiquity","who":"Cameron","source":"church-history","zh":"卡梅隆《晚期古代的地中海世界》"}
+{"key":"ch-wilken-christians-romans","query":"Wilken The Christians as the Romans Saw Them","expect":"Romans Saw Them","who":"Wilken","source":"church-history","zh":"威爾肯《羅馬人眼中的基督徒》"}
+{"key":"ch-pagels-gnostic-gospels","query":"Pagels The Gnostic Gospels","expect":"Gnostic Gospels","who":"Pagels","source":"church-history","zh":"帕格爾斯《諾斯底福音》"}
+{"key":"ch-stark-rise-christianity","query":"Stark The Rise of Christianity sociologist reconsiders history","expect":"Rise of Christianity","who":"Stark","source":"church-history","zh":"史塔克《基督教的興起》"}
+{"key":"ch-mosheim-institutes","query":"Mosheim Institutes of Ecclesiastical History","expect":"Ecclesiastical History","who":"Mosheim","source":"church-history","zh":"莫斯海姆《教會史綱》"}
+{"key":"ch-schaff-history","query":"Schaff History of the Christian Church","expect":"History of the Christian Church","who":"Schaff","source":"church-history","zh":"沙夫《基督教會史》"}
+{"key":"ch-bays-china","query":"Bays A New History of Christianity in China","expect":"Christianity in China","who":"Bays","source":"church-history","zh":"裴士丹《中國基督教新史》"}
+{"key":"ch-standaert-handbook","query":"Standaert Handbook of Christianity in China","expect":"Christianity in China","who":"Standaert","source":"church-history","zh":"鐘鳴旦《中國基督教手冊》"}

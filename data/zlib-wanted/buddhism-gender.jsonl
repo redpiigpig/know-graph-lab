@@ -1,0 +1,20 @@
+{"key":"bg-horner-women-primitive","query":"I.B. Horner Women Under Primitive Buddhism","expect":"Women Under Primitive Buddhism","who":"Horner","source":"buddhism-gender","zh":"霍納《原始佛教中的女性》"}
+{"key":"bg-paul-women-buddhism","query":"Diana Paul Women in Buddhism images of the feminine","expect":"Women in Buddhism","who":"Paul","source":"buddhism-gender","zh":"保羅《佛教中的女性》"}
+{"key":"bg-gross-buddhism-after-patriarchy","query":"Rita Gross Buddhism After Patriarchy","expect":"After Patriarchy","who":"Gross","source":"buddhism-gender","zh":"葛羅絲《父權之後的佛教》"}
+{"key":"bg-sponberg-attitudes","query":"Alan Sponberg Attitudes toward Women and the Feminine in Early Buddhism","expect":"Attitudes toward Women","who":"Sponberg","source":"buddhism-gender","zh":"史邦柏〈早期佛教對女性的態度〉"}
+{"key":"bg-analayo-foundation-history","query":"Analayo The Foundation History of the Nuns Order","expect":"Foundation History","who":"Analayo","source":"buddhism-gender","zh":"無著比丘《比丘尼僧團的建立史》"}
+{"key":"bg-analayo-bhikkhuni-ordination","query":"Analayo Bhikkhuni Ordination revival","expect":"Bhikkhuni Ordination","who":"Analayo","source":"buddhism-gender","zh":"無著比丘《比丘尼受戒》"}
+{"key":"bg-heirman-nuns-vinaya","query":"Ann Heirman Rules for Nuns according to the Dharmaguptakavinaya","expect":"Rules for Nuns","who":"Heirman","source":"buddhism-gender","zh":"海曼《四分律比丘尼戒》"}
+{"key":"bg-tsomo-sisters","query":"Karma Lekshe Tsomo Sisters in Solitude","expect":"Sisters in Solitude","who":"Tsomo","source":"buddhism-gender","zh":"慈悲喜捨《孤獨中的姊妹》"}
+{"key":"bg-tsomo-buddhist-women","query":"Karma Lekshe Tsomo Buddhist Women Across Cultures","expect":"Buddhist Women","who":"Tsomo","source":"buddhism-gender","zh":"慈悲喜捨《跨文化的佛教女性》"}
+{"key":"bg-faure-power-denial","query":"Bernard Faure The Power of Denial Buddhism purity and gender","expect":"Power of Denial","who":"Faure","source":"buddhism-gender","zh":"佛爾《否定的力量：佛教、純潔與性別》"}
+{"key":"bg-faure-red-thread","query":"Bernard Faure The Red Thread Buddhist approaches to sexuality","expect":"Red Thread","who":"Faure","source":"buddhism-gender","zh":"佛爾《紅線：佛教的性論述》"}
+{"key":"bg-wilson-charming-cadavers","query":"Liz Wilson Charming Cadavers horrific figurations of the feminine","expect":"Charming Cadavers","who":"Wilson","source":"buddhism-gender","zh":"威爾森《迷人的屍體》"}
+{"key":"bg-ohnuma-ties-that-bind","query":"Reiko Ohnuma Ties That Bind maternal imagery Indian Buddhism","expect":"Ties That Bind","who":"Ohnuma","source":"buddhism-gender","zh":"大沼玲子《牽繫之緣：印度佛教的母性意象》"}
+{"key":"bg-collett-women-early-indian","query":"Alice Collett Women in Early Indian Buddhism","expect":"Women in Early Indian Buddhism","who":"Collett","source":"buddhism-gender","zh":"柯萊特《早期印度佛教中的女性》"}
+{"key":"bg-cabezon-sexuality-buddhist","query":"Jose Cabezon Sexuality in Classical South Asian Buddhism","expect":"Sexuality","who":"Cabezon","source":"buddhism-gender","zh":"卡貝松《古典南亞佛教的性》"}
+{"key":"bg-grant-eminent-nuns","query":"Beata Grant Eminent Nuns women Chan masters seventeenth-century China","expect":"Eminent Nuns","who":"Grant","source":"buddhism-gender","zh":"管佩達《比丘尼傳：十七世紀中國的女禪師》"}
+{"key":"bg-levering-lin-chiao","query":"Miriam Levering Lin-chi Chan and gender","expect":"gender","who":"Levering","source":"buddhism-gender","zh":"黎惠倫〈禪與性別〉","note":"論文集篇章，未必單獨成書"}
+{"key":"bg-kim-receptacle-sacred","query":"Jinah Kim Receptacle of the Sacred","expect":"Receptacle of the Sacred","who":"Kim","source":"buddhism-gender","zh":"金珍娥《聖物的容器》"}
+{"key":"bg-arai-women-living-zen","query":"Paula Arai Women Living Zen Japanese Soto Buddhist nuns","expect":"Women Living Zen","who":"Arai","source":"buddhism-gender","zh":"新井保拉《女性的禪修生活》"}
+{"key":"bg-meeks-hokkeji","query":"Lori Meeks Hokkeji and the Reemergence of Female Monastic Orders","expect":"Hokkeji","who":"Meeks","source":"buddhism-gender","zh":"米克斯《法華寺與女性僧團的復興》"}

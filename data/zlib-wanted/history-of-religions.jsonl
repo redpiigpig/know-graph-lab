@@ -1,0 +1,22 @@
+{"key":"hr-eliade-history-religious-ideas","query":"Eliade A History of Religious Ideas","expect":"History of Religious Ideas","who":"Eliade","source":"history-of-religions","zh":"伊利亞德《宗教思想史》"}
+{"key":"hr-armstrong-history-god","query":"Karen Armstrong A History of God","expect":"History of God","who":"Armstrong","source":"history-of-religions","zh":"阿姆斯壯《神的歷史》"}
+{"key":"hr-armstrong-great-transformation","query":"Karen Armstrong The Great Transformation axial age","expect":"Great Transformation","who":"Armstrong","source":"history-of-religions","zh":"阿姆斯壯《大蛻變：軸心時代》"}
+{"key":"hr-bellah-religion-human-evolution","query":"Robert Bellah Religion in Human Evolution","expect":"Religion in Human Evolution","who":"Bellah","source":"history-of-religions","zh":"貝拉《人類演化中的宗教》"}
+{"key":"hr-jaspers-origin-goal","query":"Jaspers The Origin and Goal of History","expect":"Origin and Goal of History","who":"Jaspers","source":"history-of-religions","zh":"雅斯培《歷史的起源與目標》"}
+{"key":"hr-burkert-greek-religion","query":"Walter Burkert Greek Religion","expect":"Greek Religion","who":"Burkert","source":"history-of-religions","zh":"布克特《希臘宗教》"}
+{"key":"hr-burkert-homo-necans","query":"Walter Burkert Homo Necans","expect":"Homo Necans","who":"Burkert","source":"history-of-religions","zh":"布克特《殺生者》"}
+{"key":"hr-vernant-myth-society","query":"Vernant Myth and Society in Ancient Greece","expect":"Myth and Society","who":"Vernant","source":"history-of-religions","zh":"韋爾南《古希臘的神話與社會》"}
+{"key":"hr-assmann-moses-egyptian","query":"Jan Assmann Moses the Egyptian","expect":"Moses the Egyptian","who":"Assmann","source":"history-of-religions","zh":"阿斯曼《埃及人摩西》"}
+{"key":"hr-assmann-price-monotheism","query":"Jan Assmann The Price of Monotheism","expect":"Price of Monotheism","who":"Assmann","source":"history-of-religions","zh":"阿斯曼《一神論的代價》"}
+{"key":"hr-boyarin-border-lines","query":"Daniel Boyarin Border Lines partition of Judaeo-Christianity","expect":"Border Lines","who":"Boyarin","source":"history-of-religions","zh":"博亞林《界線》"}
+{"key":"hr-hodgson-venture-islam","query":"Hodgson The Venture of Islam","expect":"Venture of Islam","who":"Hodgson","source":"history-of-religions","zh":"霍奇森《伊斯蘭的冒險》"}
+{"key":"hr-nasr-islamic-philosophy","query":"Seyyed Hossein Nasr History of Islamic Philosophy","expect":"Islamic Philosophy","who":"Nasr","source":"history-of-religions","zh":"納斯爾《伊斯蘭哲學史》"}
+{"key":"hr-flood-introduction-hinduism","query":"Gavin Flood An Introduction to Hinduism","expect":"Introduction to Hinduism","who":"Flood","source":"history-of-religions","zh":"弗勒德《印度教導論》"}
+{"key":"hr-doniger-hindus","query":"Wendy Doniger The Hindus An Alternative History","expect":"Alternative History","who":"Doniger","source":"history-of-religions","zh":"多尼格《印度教徒：另一種歷史》"}
+{"key":"hr-scholem-major-trends","query":"Gershom Scholem Major Trends in Jewish Mysticism","expect":"Major Trends in Jewish Mysticism","who":"Scholem","source":"history-of-religions","zh":"肖勒姆《猶太神祕主義主流》"}
+{"key":"hr-lopez-prisoners-shangrila","query":"Donald Lopez Prisoners of Shangri-La","expect":"Prisoners of Shangri","who":"Lopez","source":"history-of-religions","zh":"洛佩茲《香格里拉的囚徒》"}
+{"key":"hr-nakamura-ways-thinking","query":"Hajime Nakamura Ways of Thinking of Eastern Peoples","expect":"Ways of Thinking","who":"Nakamura","source":"history-of-religions","zh":"中村元《東方民族的思維方法》"}
+{"key":"hr-overmyer-folk-buddhist","query":"Daniel Overmyer Folk Buddhist Religion dissenting sects","expect":"Folk Buddhist Religion","who":"Overmyer","source":"history-of-religions","zh":"歐大年《中國民間佛教教派研究》"}
+{"key":"hr-teiser-ghost-festival","query":"Stephen Teiser The Ghost Festival in Medieval China","expect":"Ghost Festival","who":"Teiser","source":"history-of-religions","zh":"太史文《中古中國的盂蘭盆節》"}
+{"key":"hr-schipper-taoist-body","query":"Kristofer Schipper The Taoist Body","expect":"Taoist Body","who":"Schipper","source":"history-of-religions","zh":"施舟人《道體論》"}
+{"key":"hr-jordan-flying-phoenix","query":"David Jordan Overmyer The Flying Phoenix aspects of Chinese sectarianism","expect":"Flying Phoenix","who":"Jordan","source":"history-of-religions","zh":"焦大衛、歐大年《飛鸞》"}

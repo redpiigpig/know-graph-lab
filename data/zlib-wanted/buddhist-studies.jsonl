@@ -1,0 +1,22 @@
+{"key":"bs-williams-mahayana","query":"Paul Williams Mahayana Buddhism the doctrinal foundations","expect":"Mahayana Buddhism","who":"Williams","source":"buddhist-studies","zh":"威廉斯《大乘佛教》"}
+{"key":"bs-harvey-introduction","query":"Peter Harvey An Introduction to Buddhism teachings history practices","expect":"Introduction to Buddhism","who":"Harvey","source":"buddhist-studies","zh":"哈維《佛教導論》"}
+{"key":"bs-gethin-foundations","query":"Rupert Gethin The Foundations of Buddhism","expect":"Foundations of Buddhism","who":"Gethin","source":"buddhist-studies","zh":"格辛《佛教基礎》"}
+{"key":"bs-kalupahana-nagarjuna","query":"Kalupahana Nagarjuna The Philosophy of the Middle Way","expect":"Philosophy of the Middle Way","who":"Kalupahana","source":"buddhist-studies","zh":"卡魯帕哈那《龍樹：中道哲學》"}
+{"key":"bs-siderits-nagarjuna","query":"Siderits Katsura Nagarjuna's Middle Way Mulamadhyamakakarika","expect":"Middle Way","who":"Siderits","source":"buddhist-studies","zh":"希德里茨、桂紹隆《中論》"}
+{"key":"bs-westerhoff-nagarjuna","query":"Jan Westerhoff Nagarjuna's Madhyamaka a philosophical introduction","expect":"Madhyamaka","who":"Westerhoff","source":"buddhist-studies","zh":"韋斯特霍夫《龍樹的中觀》"}
+{"key":"bs-schmithausen-alayavijnana","query":"Schmithausen Alayavijnana origin and early development","expect":"Alayavijnana","who":"Schmithausen","source":"buddhist-studies","zh":"施密特豪森《阿賴耶識》"}
+{"key":"bs-waldron-buddhist-unconscious","query":"William Waldron The Buddhist Unconscious alaya-vijnana","expect":"Buddhist Unconscious","who":"Waldron","source":"buddhist-studies","zh":"沃爾德倫《佛教的無意識》"}
+{"key":"bs-king-buddha-nature","query":"Sallie King Buddha Nature","expect":"Buddha Nature","who":"King","source":"buddhist-studies","zh":"金恩《佛性》"}
+{"key":"bs-gimello-hua-yen","query":"Gregory Gimello Studies in Ch'an and Hua-yen","expect":"Hua-yen","who":"Gimello","source":"buddhist-studies","zh":"吉梅洛《禪與華嚴研究》"}
+{"key":"bs-swanson-tien-tai","query":"Paul Swanson Foundations of T'ien-T'ai Philosophy","expect":"T'ien-T'ai","who":"Swanson","source":"buddhist-studies","zh":"史旺森《天台哲學的基礎》"}
+{"key":"bs-buswell-formation-chan","query":"Robert Buswell The Formation of Ch'an Ideology","expect":"Formation of Ch","who":"Buswell","source":"buddhist-studies","zh":"巴斯威爾《禪宗意識形態的形成》"}
+{"key":"bs-cox-disputed-dharmas","query":"Collett Cox Disputed Dharmas early Buddhist theories on existence","expect":"Disputed Dharmas","who":"Cox","source":"buddhist-studies","zh":"考克斯《爭議的法》"}
+{"key":"bs-cousins-vitakka","query":"Lance Cousins Buddhist meditation studies","expect":"meditation","who":"Cousins","source":"buddhist-studies","zh":"考辛斯《佛教禪修研究》","note":"多為論文，未必單獨成書"}
+{"key":"bs-analayo-satipatthana","query":"Analayo Satipatthana the direct path to realization","expect":"Satipatthana","who":"Analayo","source":"buddhist-studies","zh":"無著比丘《念住：通往證悟的直接之道》"}
+{"key":"bs-wynne-origin-meditation","query":"Alexander Wynne The Origin of Buddhist Meditation","expect":"Origin of Buddhist Meditation","who":"Wynne","source":"buddhist-studies","zh":"韋恩《佛教禪修的起源》"}
+{"key":"bs-bronkhorst-two-traditions","query":"Bronkhorst The Two Traditions of Meditation in Ancient India","expect":"Two Traditions of Meditation","who":"Bronkhorst","source":"buddhist-studies","zh":"布隆霍斯特《古印度的兩種禪修傳統》"}
+{"key":"bs-collins-selfless-persons","query":"Steven Collins Selfless Persons","expect":"Selfless Persons","who":"Collins","source":"buddhist-studies","zh":"柯林斯《無我的人》"}
+{"key":"bs-collins-nirvana","query":"Steven Collins Nirvana and Other Buddhist Felicities","expect":"Nirvana","who":"Collins","source":"buddhist-studies","zh":"柯林斯《涅槃與其他佛教福樂》"}
+{"key":"bs-gomez-land-bliss","query":"Luis Gomez The Land of Bliss Sukhavati","expect":"Land of Bliss","who":"Gomez","source":"buddhist-studies","zh":"戈麥斯《極樂國土》"}
+{"key":"bs-nattier-few-good-men","query":"Jan Nattier A Few Good Men Ugrapariprccha","expect":"Few Good Men","who":"Nattier","source":"buddhist-studies","zh":"那體慧《少數善男子》"}
+{"key":"bs-schopen-bones-stones","query":"Gregory Schopen Bones Stones and Buddhist Monks","expect":"Bones Stones","who":"Schopen","source":"buddhist-studies","zh":"邵本《骨、石與僧侶》"}

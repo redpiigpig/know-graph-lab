@@ -1,0 +1,21 @@
+{"key":"tm-schleiermacher-christian-faith","query":"Schleiermacher The Christian Faith","expect":"Christian Faith","who":"Schleiermacher","source":"theological-method","zh":"士萊馬赫《基督教信仰》"}
+{"key":"tm-barth-church-dogmatics","query":"Barth Church Dogmatics","expect":"Church Dogmatics","who":"Barth","source":"theological-method","zh":"巴特《教會教義學》"}
+{"key":"tm-bultmann-kerygma-myth","query":"Bultmann Kerygma and Myth","expect":"Kerygma and Myth","who":"Bultmann","source":"theological-method","zh":"布特曼《宣道與神話》"}
+{"key":"tm-tillich-systematic","query":"Tillich Systematic Theology","expect":"Systematic Theology","who":"Tillich","source":"theological-method","zh":"提利希《系統神學》"}
+{"key":"tm-rahner-foundations","query":"Rahner Foundations of Christian Faith","expect":"Foundations of Christian Faith","who":"Rahner","source":"theological-method","zh":"拉內《基督信仰的基礎》"}
+{"key":"tm-lonergan-method","query":"Lonergan Method in Theology","expect":"Method in Theology","who":"Lonergan","source":"theological-method","zh":"隆納根《神學方法》"}
+{"key":"tm-tracy-analogical","query":"Tracy The Analogical Imagination","expect":"Analogical Imagination","who":"Tracy","source":"theological-method","zh":"崔西《類比的想像》"}
+{"key":"tm-lindbeck-nature-doctrine","query":"Lindbeck The Nature of Doctrine","expect":"Nature of Doctrine","who":"Lindbeck","source":"theological-method","zh":"林貝克《教義的本質》"}
+{"key":"tm-frei-eclipse","query":"Frei The Eclipse of Biblical Narrative","expect":"Eclipse of Biblical Narrative","who":"Frei","source":"theological-method","zh":"弗萊《聖經敘事的隱沒》"}
+{"key":"tm-gutierrez-liberation","query":"Gutierrez A Theology of Liberation","expect":"Theology of Liberation","who":"Gutierrez","source":"theological-method","zh":"古鐵雷斯《解放神學》"}
+{"key":"tm-moltmann-theology-hope","query":"Moltmann Theology of Hope","expect":"Theology of Hope","who":"Moltmann","source":"theological-method","zh":"莫特曼《希望神學》"}
+{"key":"tm-moltmann-crucified-god","query":"Moltmann The Crucified God","expect":"Crucified God","who":"Moltmann","source":"theological-method","zh":"莫特曼《被釘十字架的上帝》"}
+{"key":"tm-pannenberg-systematic","query":"Pannenberg Systematic Theology","expect":"Systematic Theology","who":"Pannenberg","source":"theological-method","zh":"潘能伯格《系統神學》"}
+{"key":"tm-fiorenza-memory-her","query":"Schussler Fiorenza In Memory of Her","expect":"In Memory of Her","who":"Fiorenza","source":"theological-method","zh":"菲奧倫查《紀念她》"}
+{"key":"tm-ruether-sexism","query":"Ruether Sexism and God-Talk","expect":"Sexism and God","who":"Ruether","source":"theological-method","zh":"魯瑟《性別歧視與神言》"}
+{"key":"tm-cone-black-theology","query":"Cone A Black Theology of Liberation","expect":"Black Theology","who":"Cone","source":"theological-method","zh":"康恩《黑人解放神學》"}
+{"key":"tm-song-third-eye","query":"Choan-Seng Song Third-Eye Theology","expect":"Third-Eye Theology","who":"Song","source":"theological-method","zh":"宋泉盛《第三眼神學》"}
+{"key":"tm-kaufman-essay-theological-method","query":"Kaufman An Essay on Theological Method","expect":"Theological Method","who":"Kaufman","source":"theological-method","zh":"考夫曼《神學方法論》"}
+{"key":"tm-mcgrath-scientific-theology","query":"McGrath A Scientific Theology","expect":"Scientific Theology","who":"McGrath","source":"theological-method","zh":"麥格夫《科學神學》"}
+{"key":"tm-hauerwas-community-character","query":"Hauerwas A Community of Character","expect":"Community of Character","who":"Hauerwas","source":"theological-method","zh":"侯活士《品格群體》"}
+{"key":"tm-milbank-theology-social","query":"Milbank Theology and Social Theory","expect":"Theology and Social Theory","who":"Milbank","source":"theological-method","zh":"米爾班克《神學與社會理論》"}

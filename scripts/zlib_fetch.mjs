@@ -86,7 +86,7 @@ export function rank(hit, query = '', expect = '', who = '') {
   const title = (hit.title || '').trim()
   if (['txt', 'rar', 'zip', 'doc'].includes(ext)) return -100
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
-  const flat = (x) => (x || '').replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
+  const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
   if (expect && !flat(title).includes(flat(expect))) return -100
   if (who && !flat(`${hit.author} ${title}`).includes(flat(who))) return -100
   let s = 0

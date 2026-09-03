@@ -1,0 +1,22 @@
+{"key":"rs-muller-science-religion","query":"Max Muller Introduction to the Science of Religion","expect":"Science of Religion","who":"Muller","source":"religious-studies","zh":"穆勒《宗教學導論》"}
+{"key":"rs-tylor-primitive-culture","query":"Tylor Primitive Culture","expect":"Primitive Culture","who":"Tylor","source":"religious-studies","zh":"泰勒《原始文化》"}
+{"key":"rs-frazer-golden-bough","query":"Frazer The Golden Bough","expect":"Golden Bough","who":"Frazer","source":"religious-studies","zh":"弗雷澤《金枝》"}
+{"key":"rs-otto-idea-holy","query":"Otto The Idea of the Holy","expect":"Idea of the Holy","who":"Otto","source":"religious-studies","zh":"奧托《論神聖》"}
+{"key":"rs-eliade-sacred-profane","query":"Eliade The Sacred and the Profane","expect":"Sacred and the Profane","who":"Eliade","source":"religious-studies","zh":"伊利亞德《聖與俗》"}
+{"key":"rs-eliade-patterns","query":"Eliade Patterns in Comparative Religion","expect":"Patterns in Comparative Religion","who":"Eliade","source":"religious-studies","zh":"伊利亞德《比較宗教的範式》"}
+{"key":"rs-vandeleeuw-essence","query":"van der Leeuw Religion in Essence and Manifestation","expect":"Essence and Manifestation","who":"Leeuw","source":"religious-studies","zh":"范德列烏《宗教的本質與顯現》"}
+{"key":"rs-wach-sociology-religion","query":"Joachim Wach Sociology of Religion","expect":"Sociology of Religion","who":"Wach","source":"religious-studies","zh":"瓦赫《宗教社會學》"}
+{"key":"rs-smart-dimensions","query":"Ninian Smart Dimensions of the Sacred","expect":"Dimensions of the Sacred","who":"Smart","source":"religious-studies","zh":"斯馬特《神聖的向度》"}
+{"key":"rs-smith-imagining-religion","query":"Jonathan Z. Smith Imagining Religion","expect":"Imagining Religion","who":"Smith","source":"religious-studies","zh":"史密斯《想像宗教》"}
+{"key":"rs-smith-map-not-territory","query":"Jonathan Z. Smith Map Is Not Territory","expect":"Map Is Not Territory","who":"Smith","source":"religious-studies","zh":"史密斯《地圖不是疆域》"}
+{"key":"rs-asad-genealogies","query":"Talal Asad Genealogies of Religion","expect":"Genealogies of Religion","who":"Asad","source":"religious-studies","zh":"阿薩德《宗教的系譜》"}
+{"key":"rs-asad-formations-secular","query":"Talal Asad Formations of the Secular","expect":"Formations of the Secular","who":"Asad","source":"religious-studies","zh":"阿薩德《世俗的構成》"}
+{"key":"rs-masuzawa-invention","query":"Masuzawa The Invention of World Religions","expect":"Invention of World Religions","who":"Masuzawa","source":"religious-studies","zh":"增澤知子《世界宗教的發明》"}
+{"key":"rs-geertz-interpretation","query":"Clifford Geertz The Interpretation of Cultures","expect":"Interpretation of Cultures","who":"Geertz","source":"religious-studies","zh":"紀爾茲《文化的解釋》"}
+{"key":"rs-douglas-purity-danger","query":"Mary Douglas Purity and Danger","expect":"Purity and Danger","who":"Douglas","source":"religious-studies","zh":"道格拉斯《潔淨與危險》"}
+{"key":"rs-turner-ritual-process","query":"Victor Turner The Ritual Process","expect":"Ritual Process","who":"Turner","source":"religious-studies","zh":"特納《儀式過程》"}
+{"key":"rs-berger-sacred-canopy","query":"Peter Berger The Sacred Canopy","expect":"Sacred Canopy","who":"Berger","source":"religious-studies","zh":"柏格《神聖的帷幕》"}
+{"key":"rs-taylor-secular-age","query":"Charles Taylor A Secular Age","expect":"Secular Age","who":"Taylor","source":"religious-studies","zh":"泰勒《世俗時代》"}
+{"key":"rs-smith-meaning-end-religion","query":"Wilfred Cantwell Smith The Meaning and End of Religion","expect":"Meaning and End of Religion","who":"Smith","source":"religious-studies","zh":"史密斯《宗教的意義與終結》"}
+{"key":"rs-doniger-implied-spider","query":"Wendy Doniger The Implied Spider","expect":"Implied Spider","who":"Doniger","source":"religious-studies","zh":"多尼格《隱含的蜘蛛》"}
+{"key":"rs-izutsu-sufism-taoism","query":"Toshihiko Izutsu Sufism and Taoism","expect":"Sufism and Taoism","who":"Izutsu","source":"religious-studies","zh":"井筒俊彥《蘇非主義與道教》"}

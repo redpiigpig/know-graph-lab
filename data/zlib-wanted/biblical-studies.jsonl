@@ -1,0 +1,22 @@
+{"key":"bib-wellhausen-prolegomena","query":"Wellhausen Prolegomena to the History of Israel","expect":"Prolegomena","who":"Wellhausen","source":"biblical-studies","zh":"威爾豪森《以色列史導論》"}
+{"key":"bib-gunkel-legends","query":"Gunkel The Legends of Genesis","expect":"Legends of Genesis","who":"Gunkel","source":"biblical-studies","zh":"貢克爾《創世記的傳說》"}
+{"key":"bib-vonrad-ot-theology","query":"von Rad Old Testament Theology","expect":"Old Testament Theology","who":"Rad","source":"biblical-studies","zh":"馮拉德《舊約神學》"}
+{"key":"bib-noth-history-pentateuchal","query":"Noth A History of Pentateuchal Traditions","expect":"Pentateuchal Traditions","who":"Noth","source":"biblical-studies","zh":"諾特《五經傳統史》"}
+{"key":"bib-childs-canon","query":"Childs Introduction to the Old Testament as Scripture","expect":"Old Testament as Scripture","who":"Childs","source":"biblical-studies","zh":"柴爾茲《作為聖經的舊約導論》"}
+{"key":"bib-cross-canaanite","query":"Cross Canaanite Myth and Hebrew Epic","expect":"Canaanite Myth","who":"Cross","source":"biblical-studies","zh":"克羅斯《迦南神話與希伯來史詩》"}
+{"key":"bib-brueggemann-ot-theology","query":"Brueggemann Theology of the Old Testament Testimony Dispute Advocacy","expect":"Theology of the Old Testament","who":"Brueggemann","source":"biblical-studies","zh":"布魯格曼《舊約神學》"}
+{"key":"bib-trible-texts-terror","query":"Trible Texts of Terror","expect":"Texts of Terror","who":"Trible","source":"biblical-studies","zh":"特里布爾《恐怖文本》"}
+{"key":"bib-bultmann-history-synoptic","query":"Bultmann The History of the Synoptic Tradition","expect":"History of the Synoptic Tradition","who":"Bultmann","source":"biblical-studies","zh":"布特曼《符類福音傳統史》"}
+{"key":"bib-dodd-parables","query":"Dodd The Parables of the Kingdom","expect":"Parables of the Kingdom","who":"Dodd","source":"biblical-studies","zh":"陶德《天國的比喻》"}
+{"key":"bib-jeremias-parables","query":"Jeremias The Parables of Jesus","expect":"Parables of Jesus","who":"Jeremias","source":"biblical-studies","zh":"耶利米亞斯《耶穌的比喻》"}
+{"key":"bib-kasemann-romans","query":"Kasemann Commentary on Romans","expect":"Romans","who":"Kasemann","source":"biblical-studies","zh":"凱澤曼《羅馬書註釋》"}
+{"key":"bib-metzger-textual","query":"Metzger The Text of the New Testament transmission corruption restoration","expect":"Text of the New Testament","who":"Metzger","source":"biblical-studies","zh":"梅茨格《新約經文》"}
+{"key":"bib-sanders-paul-palestinian","query":"Sanders Paul and Palestinian Judaism","expect":"Palestinian Judaism","who":"Sanders","source":"biblical-studies","zh":"桑德斯《保羅與巴勒斯坦猶太教》"}
+{"key":"bib-dunn-theology-paul","query":"Dunn The Theology of Paul the Apostle","expect":"Theology of Paul","who":"Dunn","source":"biblical-studies","zh":"鄧恩《使徒保羅的神學》"}
+{"key":"bib-wright-nt-people-god","query":"Wright The New Testament and the People of God","expect":"People of God","who":"Wright","source":"biblical-studies","zh":"賴特《新約與神的子民》"}
+{"key":"bib-hengel-judaism-hellenism","query":"Hengel Judaism and Hellenism","expect":"Judaism and Hellenism","who":"Hengel","source":"biblical-studies","zh":"亨格爾《猶太教與希臘化》"}
+{"key":"bib-brown-death-messiah","query":"Brown The Death of the Messiah","expect":"Death of the Messiah","who":"Brown","source":"biblical-studies","zh":"布朗《默西亞之死》"}
+{"key":"bib-fitzmyer-luke","query":"Fitzmyer The Gospel According to Luke Anchor Bible","expect":"According to Luke","who":"Fitzmyer","source":"biblical-studies","zh":"費茲邁爾《路加福音註釋》"}
+{"key":"bib-ehrman-orthodox-corruption","query":"Ehrman The Orthodox Corruption of Scripture","expect":"Orthodox Corruption","who":"Ehrman","source":"biblical-studies","zh":"葉爾曼《正統對經文的篡改》"}
+{"key":"bib-fishbane-biblical-interpretation","query":"Fishbane Biblical Interpretation in Ancient Israel","expect":"Biblical Interpretation in Ancient Israel","who":"Fishbane","source":"biblical-studies","zh":"費希班《古以色列的聖經詮釋》"}
+{"key":"bib-alter-art-biblical-narrative","query":"Alter The Art of Biblical Narrative","expect":"Art of Biblical Narrative","who":"Alter","source":"biblical-studies","zh":"阿爾特《聖經敘事的藝術》"}
