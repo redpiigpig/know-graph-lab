@@ -196,6 +196,34 @@ python -X utf8 scripts/accs_purge_index_rows.py    --apply   # 書末索引灌�
    2026-09-03 已用 `accs_purge_index_rows.py` 清掉。**每次 ingest 之後把那支跑一遍**，
    它是冪等的、預設 dry-run。
 
+### 🚨 第五類靜默錯誤：pericope_order 混了兩個經文範圍，註釋就掛到別節底下
+
+`/api/scripture/commentary` 按 `pericope_order` 分組，並拿**該組第一列**的
+verse_start/verse_end 當整組的經文範圍。一組裡混著兩個範圍時，後面那個範圍的註釋
+就顯示在前一個範圍底下——畫面完全正常，只是掛錯節。
+
+兩個來源：
+
+1. **英文 EPUB 那條線**沿用了 EPUB 自己的 `pericope_order`，那是「h1 那一大段」
+   （如 `Jeremiah 1:1-19`），底下還有好幾個 h2 小節範圍。耶利米書第 1 章 5 組裡
+   有 3 組是混的（一組同時裝著 2:2、6:6、11:12）。已改成與 `build_rows` 一致、
+   **一個經文範圍一組**。
+2. **掃描本那條線**的 `pericope_order` 是「該次執行內」依範圍首次出現順序編的。
+   同一章分兩次跑（續傳、補頁、重 OCR）時兩次都從 1 編起，不同範圍就拿到同一個
+   號碼。全表 12,683 組裡有 3 組（isa 42、isa 30、mat 14）。
+
+修法：`accs_fix_pericope_groups.py`，把受影響的**整章**依「範圍首次出現順序」重編
+（不是按經文大小排序——那會改掉書本身的段落順序；mat 14 就有一處 (2,2) 排在
+(1,2) 前面，那是原書的排法）。entry_order 不動，它的分組鍵本來就是經文範圍。
+
+```bash
+python -X utf8 scripts/accs_fix_pericope_groups.py --skip-books jer,lam          # 只列
+python -X utf8 scripts/accs_fix_pericope_groups.py --skip-books jer,lam --apply
+```
+
+🚨 `--skip-books jer,lam`：那兩卷由 `accs_ingest_epub.py --upload` 自己重編，
+   兩支都動會互相蓋來蓋去。2026-09-03 已修 14 列，複查 0 組殘留。
+
 ### 🚨 單書卷的卷也要切在附錄前
 
 `accs_volume_config.json` 裡 `19a`（詩1-50）原本寫 `1-708`——整份 PDF，附錄與四種
