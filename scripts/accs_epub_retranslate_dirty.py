@@ -17,8 +17,11 @@
 實測 806 則裡有 58 則中招（10 則是①）。判準是**中文正文裡的拉丁字母比例**：
 乾淨的譯文只有註腳編號與少數專名，比例趨近 0。
 
-重譯走 Sonnet（Max OAuth，不另計費，中英翻譯最穩），並且**逐則驗過才寫回**——
-驗不過就保留原譯並列出來，不要用另一個壞譯蓋掉一個壞譯。
+重譯走 **Gemini → Haiku**，逐則驗過才寫回——驗不過就換下一個引擎，都不過就保留
+原譯並列出來，不要用另一個壞譯蓋掉一個壞譯。
+
+🚨 **不要用 NVIDIA 重譯。** 上面②那種語言切換（hingegen／przeciw／continually）
+   正是它出的，拿它來修等於再壞一次。Sonnet 最穩但常整天 429，所以不放在鏈首。
 """
 from __future__ import annotations
 
@@ -68,6 +71,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--engines", default="gemini,haiku",
+                    help="逐則依序試，第一個通過驗證的就採用（預設 gemini,haiku）")
     a = ap.parse_args()
 
     rows = [json.loads(l) for l in CKPT.read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -81,22 +86,30 @@ def main() -> int:
         return 0
 
     te.PROMPT_TMPL = PROMPT
+    ENGINES = {"gemini": te.gemini_translate, "haiku": te.haiku_translate,
+               "sonnet": te.sonnet_translate, "nvidia": te.nvidia_translate}
+    chain = [e.strip() for e in a.engines.split(",") if e.strip()]
     fixed = failed = 0
     for n, i in enumerate(dirty[: a.limit] if a.limit else dirty, 1):
         src = rows[i].get("body") or ""
-        try:
-            out = te.sonnet_translate(src).strip()
-        except Exception as e:                                  # noqa: BLE001
-            print(f"  [{i}] ✗ {str(e)[:70]}")
+        got = None
+        for eng in chain:
+            try:
+                out = ENGINES[eng](src).strip()
+            except Exception as e:                              # noqa: BLE001
+                print(f"  [{i}] {eng} ✗ {str(e)[:60]}", flush=True)
+                continue
+            if is_dirty(out):
+                print(f"  [{i}] {eng} ⊘ 仍不乾淨（拉丁比 {latin_ratio(out):.0%}）", flush=True)
+                continue
+            got = (eng, out)
+            break
+        if not got:
             failed += 1
             continue
-        if is_dirty(out):
-            print(f"  [{i}] ⊘ 重譯後仍不乾淨（拉丁比 {latin_ratio(out):.0%}），保留原譯")
-            failed += 1
-            continue
-        rows[i]["body_zh"] = out
+        rows[i]["body_zh"] = got[1]
         fixed += 1
-        print(f"  [{n}/{len(dirty)}] {i} ✓ {len(out)} 字")
+        print(f"  [{n}/{len(dirty)}] {i} ✓ {got[0]} {len(got[1])} 字", flush=True)
         CKPT.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n",
                         encoding="utf-8")
     print(f"\n重譯成功 {fixed}，仍待處理 {failed}")
