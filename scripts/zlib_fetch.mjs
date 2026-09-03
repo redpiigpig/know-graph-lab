@@ -155,6 +155,7 @@ async function main() {
     ...(existsSync(STATE) ? { storageState: STATE } : {}),
   })
   const page = await context.newPage()
+  let downloadFails = 0
   try {
     const ok = await login(page, e)
     console.log(ok ? '✓ 已登入' : '⚠ 登入狀態不明，先試著抓看看')
@@ -201,12 +202,20 @@ async function main() {
         const name = dl.suggestedFilename()
         await dl.saveAs(resolve(DROP, name))
         console.log(`     ✓ ${name}`)
+        downloadFails = 0
         note({ key: w.key, query: w.query, status: 'downloaded', file: name, pick: best })
       } catch (err) {
         const msg = String(err).slice(0, 120)
         console.log(`     ✗ 下載失敗：${msg}`)
         note({ key: w.key, query: w.query, status: 'download-failed', error: msg })
-        if (/limit|quota|上限/i.test(msg)) break
+        // 額度用完的樣子就是「點了下載鈕但永遠等不到 download 事件」，站方不會
+        // 明說。連兩本都這樣就是今天到頂了，收工，明天排程再來。
+        downloadFails += 1
+        if (/limit|quota|上限/i.test(msg) || downloadFails >= 2) {
+          console.log('  今日額度應該用完了，本輪結束')
+          note({ key: '_quota', status: 'quota-exhausted' })
+          break
+        }
       }
       await page.waitForTimeout(4000)
     }

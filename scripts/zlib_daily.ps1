@@ -15,7 +15,9 @@ function Note($m) {
     "[{0}] {1}" -f (Get-Date -Format 'MM-dd HH:mm'), $m | Add-Content -Path $log -Encoding utf8
 }
 
-$limit = 10
+# Free tier tops out at 10 downloads a day (measured 2026-09-02); ask for a
+# couple more and the extras just fail, which the fetcher now detects and stops on.
+$limit = 12
 if ($args.Count -ge 1) { $limit = [int]$args[0] }
 
 Note "start (limit=$limit)"
