@@ -76,6 +76,25 @@ IMAGES_SL = {
     'pehoeji-text': 'Pe̍h-ōe-jī romanized Taiwanese text',
     'barclay-thomas': 'Barclay missionary',
     'quoc-ngu': 'Gia Dinh Bao',
+
+    # ── 補充：擴充版簡報新增的題材 ──
+    'guodian-slips': 'Guodian Chu Slips',
+    'mawangdui-silk': 'Mawangdui Silk Texts',
+    'diamond-sutra-print': 'Diamond Sutra 868',
+    'laozi-riding-ox': 'Laozi riding water buffalo painting',
+    'zhuangzi-butterfly': 'Zhuangzi dreaming of a butterfly',
+    'zhu-xi': 'Zhu Xi portrait',
+    'kojiki': 'Kojiki manuscript',
+    'genji-monogatari': 'Tale of Genji illustrated handscroll',
+    'kanbun-marks': 'Kanbun kaeriten',
+    'mulian-opera': 'Mulian opera performance',
+    'temple-couplet-tainan': 'Tainan temple plaque calligraphy',
+    'jesuit-china': 'Matteo Ricci and Xu Guangqi',
+    'hu-shih': 'Hu Shih portrait',
+    'manichaean-temple': 'Cao an Manichaean temple Jinjiang',
+    'woodblock-printing': 'Chinese woodblock printing blocks',
+    'thread-bound-book': 'Chinese thread bound books stack',
+    'stone-rubbing': 'Chinese stele rubbing ink',
 }
 
 # 冷門題材：英文查詢詞對不上，直接指名 Commons 檔案。

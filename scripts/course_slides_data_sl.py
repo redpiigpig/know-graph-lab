@@ -6,6 +6,7 @@
 """
 
 from course_slides_data_sl2 import DECKS_SL2
+from course_slides_data_sl_ext import EXTRA_SL
 
 
 def cover(no, sub, chs):
@@ -389,4 +390,11 @@ DECK2 = {
 }
 
 
-DECKS_SL = {1: DECK1, 2: DECK2, **DECKS_SL2}
+_BASE_SL = {1: DECK1, 2: DECK2, **DECKS_SL2}
+
+# 增補投影片插在各份最後一張（課後作業）之前
+DECKS_SL = {}
+for _n, _d in _BASE_SL.items():
+    _sl = list(_d['slides'])
+    _ex = EXTRA_SL.get(_n, [])
+    DECKS_SL[_n] = {**_d, 'slides': _sl[:-1] + _ex + _sl[-1:]}
