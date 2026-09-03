@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = Path(r'G:\我的雲端硬碟\玄奘\博一') / '115-1 週末授課.ics'
+OUT = Path(r'G:\我的雲端硬碟\玄奘\博一') / '115-1 玄奘教課.ics'
 
 SAT = ['2026-09-12', '2026-09-26', '2026-10-10', '2026-10-24', '2026-11-07',
        '2026-11-21', '2026-12-05', '2026-12-19', '2027-01-02']
@@ -64,8 +64,10 @@ def build():
     L = ['BEGIN:VCALENDAR', 'VERSION:2.0',
          'PRODID:-//know-graph-lab//115-1 weekend classes//ZH-TW',
          'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
-         'X-WR-CALNAME:115-1 週末授課',
+         'X-WR-CALNAME:115-1 玄奘教課',
          'X-WR-TIMEZONE:Asia/Taipei',
+         # Google 匯入不吃事件層顏色，顏色綁在日曆上；這兩行是給 Apple 行事曆看的
+         'COLOR:#0B8043', 'X-APPLE-CALENDAR-COLOR:#0B8043',   # 羅勒葉／深綠
          'BEGIN:VTIMEZONE', 'TZID:Asia/Taipei',
          'BEGIN:STANDARD', 'DTSTART:19800101T000000',
          'TZOFFSETFROM:+0800', 'TZOFFSETTO:+0800', 'TZNAME:CST',
