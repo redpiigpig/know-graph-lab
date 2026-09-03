@@ -147,7 +147,17 @@ def run_ocr(batch: int) -> None:
                            prompt=OCR_PROMPT)
         text = op.pages_to_text(pages)
         if not text.strip():
-            print(f"  [{start}-{end}] 空 → 中断", flush=True)
+            # 空有兩種：Gemini 暫時掛掉（503/額度），或那幾頁真的是白頁（奧付、
+            # 見返し）。分不出來，所以記次數：連三輪都空就當白頁放行，不然整本
+            # 會卡在最後一張空白頁上永遠等不到「OCR 跑完」。
+            miss = OCR_DIR / f"{start:03d}-{end:03d}.miss"
+            n = int(miss.read_text(encoding="utf-8").strip() or 0) + 1 if miss.exists() else 1
+            miss.write_text(str(n), encoding="utf-8")
+            if n >= 3:
+                dst.write_text("（このコマに本文なし）", encoding="utf-8")
+                print(f"  [{start}-{end}] 三輪とも空 → 白頁として確定", flush=True)
+                continue
+            print(f"  [{start}-{end}] 空（{n}/3 回目）→ 中断、次のラウンドで再試行", flush=True)
             break
         dst.write_text(text, encoding="utf-8")
         print(f"  ✓ {dst.name} {len(text):,} 字", flush=True)
