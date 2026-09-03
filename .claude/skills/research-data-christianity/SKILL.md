@@ -62,6 +62,41 @@ API：`pct-text`（逐篇 txt）、`pct-tcnn-text`（按年 JSONL，帶 year 回
 - `位單轉移`／`位單案原` 這種格內橫排右至左的欄位名**原樣保留**——需要語意判斷，
   硬套規則會把正常詞也弄反
 
+## 儲存配置：什麼放哪裡（2026-09-04 盤點）
+
+| | 位置 | 量 |
+|---|---|---|
+| 報紙期刊全文 | **R2**（gzip JSONL） | 390 MB |
+| 檔案局影像 | **Drive**，不上 R2 不上站 | 3.6 GB |
+| 照片 | **Drive 原檔**；R2 縮圖已刪 | 71,851 張 |
+| 書目／索引 | repo `public/content/` | 小 |
+| 非公開材料全文 | R2 `research-private/` ＋ requireAdmin 端點 | — |
+
+🚨 **常見的誤記，查證過的事實**：
+- **照片不在 Supabase**，全在 R2（曾佔 6.66 GB）。Supabase 只有 32 KB 的 `pong_photos`
+- **報紙全文不在 Supabase**，一開始就是 file-backed。站上索引本來就只有標題日期作者
+- **「放回 Drive」不等於搬家**：Zeabur 上的伺服器碰不到本機 `G:`，搬到 Drive＝該功能下線；
+  要讓網站還讀得到，只能搬 R2
+
+2026-09-04 刪掉 R2 上 138,674 個照片縮圖，**8.72 GB → 2.06 GB（87%→21%）**。
+Drive 原檔完好，`sync_photos_to_r2.mjs` 隨時可重建。代價是 `/photos` 網頁版顯示不出圖。
+
+## Supabase 降容：逐張查證的結論
+
+519 MB／額度 500 MB。三張大表**兩張不能搬、一張不該搬**：
+
+| 表 | 大小 | 結論 |
+|---|---|---|
+| `ebook_chunks` | 158 MB | ❌ content 是列表要顯示的 100 字 preview，搬走每次列表都要回 R2；
+  且 158 MB 裡有 80 MB 是 24 萬列的固定開銷，搬內容也省不掉 |
+| `ai_dialogues`×2 | 71 MB | ❌ `buildDialogueKeywordFilter` 對 prompt/response 做 ILIKE 全表搜尋，
+  搬走 `/ai-dialogues` 的搜尋整個失效 |
+| `lit_review_sections` | 90 MB | ⚠️ 技術上可搬（唯一無檢索的），但它是**創生哲學改寫的活躍底本**
+  （406/520 筆屬 `genesis-philosophy`）且**正被 quality_reviewer 寫入**，已停手 |
+
+🚨 **VACUUM 這條路是死的**：一般 VACUUM 527→528 MB，`VACUUM FULL` 三張表大小完全不變。
+先前「死列 11–14%、可回收 15–20 MB」的估計是看錯了統計——那些死列 autovacuum 早已回收。
+
 ## 各站台的解析陷阱
 
 **tcnn.org.tw（教會公報新聞網）** `scripts/pct_tcnn.py`
