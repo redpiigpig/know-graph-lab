@@ -6,9 +6,13 @@
 
 資料來源：
   - 榮格：jung_data/*/status.json
+  - 哲學家全集：C:/tmp/plato_cache/<slug>_zh/
+  - 希臘化哲學：C:/tmp/{plotinus,epicurus,epictetus}_cache/<slug>_zh/
   - 潘尼卡：panikkar_data/<slug>/sec*.json
   - 東方聖卷：mueller_data/sbe-*/sec*.json
+  - 無教會主義：yanaihara_data/<slug>/sec*.json + C:/tmp/yanaihara_ndl/（NDL 掃描與 OCR）
   - ACCS：C:/tmp/accs_*.raw.jsonl + .done
+  - z-library 收書：output/zlib_wanted_all.jsonl + scripts/state/zlib_ledger.jsonl
   - 是否運行：Windows Win32_Process command line
 
 Usage:
@@ -70,6 +74,20 @@ PROCESS_PATTERNS = {
         "dazangjing_catalog_ai.py",
         "dazangjing_catalog_curate.py",
         "dazangjing_source_catalog.py",
+    ),
+    "希臘化哲學": (
+        "hellenistic_run_queue.py",
+        "plotinus_build.py",
+        "epicurus_build.py",
+        "epictetus_build.py",
+    ),
+    "無教會主義": (
+        "uchimura_auto.py",
+        "yanaihara_ndl.py",
+    ),
+    "z-library 收書": (
+        "zlib_fetch.mjs",
+        "zlib_daily.ps1",
     ),
 }
 
@@ -461,6 +479,11 @@ def _literal_assignment(path: Path, name: str) -> Any:
     try:
         tree = ast.parse(path.read_text(encoding="utf-8"))
         for node in tree.body:
+            # 帶型別註解的 `REGISTRY: dict[str, dict] = {...}` 是 AnnAssign 不是
+            # Assign，只認後者會靜靜地讀不到（回 None，該區塊就整段消失）。
+            if isinstance(node, ast.AnnAssign):
+                if isinstance(node.target, ast.Name) and node.target.id == name:
+                    return ast.literal_eval(node.value) if node.value else None
             if isinstance(node, ast.Assign):
                 if any(isinstance(t, ast.Name) and t.id == name for t in node.targets):
                     return ast.literal_eval(node.value)
@@ -1192,6 +1215,178 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     return rows
 
 
+# plotinus_build 的 WORKS 讀不到（comprehension），退用 slug 時至少給個中文名。
+_PLOTINUS_TITLES = {
+    "ennead-1": "第一集：倫理與人生", "ennead-2": "第二集：自然與宇宙",
+    "ennead-3": "第三集：宇宙、命運與時間", "ennead-4": "第四集：論靈魂",
+    "ennead-5": "第五集：論智性", "ennead-6": "第六集：存有與太一",
+    "life": "波菲利《普羅提諾生平》",
+}
+
+_HELLENISTIC = (
+    ("plotinus_build.py", "plotinus_cache", "普羅提諾"),
+    ("epicurus_build.py", "epicurus_cache", "伊比鳩魯"),
+    ("epictetus_build.py", "epictetus_cache", "愛比克泰德"),
+)
+
+
+def scan_hellenistic(processes: list[dict[str, Any]]) -> list[WorkProgress]:
+    """希臘化與新柏拉圖：三支 builder 各自的逐節快取 vs 該部的來源單位數。
+
+    來源單位數從各 builder 的 WORKS 表讀不到（那裡只有書目），所以用「已翻節數」
+    對照 jsonl 的 chunk 數；jsonl 還沒生成的就只報節數。
+    """
+    rows = []
+    commands = [str(p.get("CommandLine") or "").lower() for p in processes]
+    for script, cache_name, author in _HELLENISTIC:
+        works = _literal_assignment(ROOT / "scripts" / script, "WORKS") or {}
+        cache_root = TMP_ROOT / cache_name
+        if not works and cache_root.is_dir():
+            # plotinus_build 的 WORKS 是 comprehension 產生的，literal_eval 讀不到；
+            # 退而用快取目錄名當 slug，至少進度看得到。
+            works = {d.name[:-3]: {} for d in cache_root.iterdir()
+                     if d.is_dir() and d.name.endswith("_zh")}
+        for slug, cfg in works.items():
+            title = (cfg.get("title_zh") or cfg.get("title") if isinstance(cfg, dict) else None)                 or _PLOTINUS_TITLES.get(slug) or slug
+            zh_dir = cache_root / f"{slug}_zh"
+            files = sorted(zh_dir.glob("*.txt")) if zh_dir.exists() else []
+            jsonl = TMP_ROOT / f"{cache_name.replace('_cache', '')}_{slug}.jsonl"
+            total = 0
+            if jsonl.exists():
+                # jsonl 的第一個 chunk 是封面，不是翻出來的節，扣掉才對得上快取檔數
+                total = max(0, sum(1 for line in jsonl.read_text(encoding="utf-8").splitlines()
+                                   if line.strip()) - 1)
+            done = len(files)
+            total = max(total, done)
+            running = any(f"{script} {slug}".lower() in c or
+                          (script.lower() in c and slug.lower() in c) for c in commands)
+            updated = _latest_mtime(files)
+            rows.append(WorkProgress(
+                group="希臘化哲學",
+                key=f"hel-{slug}",
+                title=f"{author}·{title}",
+                done=done, total=total or 1, unit="節",
+                state=_state(done, total or 1, running, updated),
+                running=running,
+                current=f"逐節快取 {done} 節" if done else "尚未開跑",
+                updated_at=updated,
+                source=str(zh_dir),
+                detail="",
+            ))
+    return rows
+
+
+def scan_yanaihara(processes: list[dict[str, Any]]) -> list[WorkProgress]:
+    """無教會主義第二代：矢內原的青空四篇＋NDL 掃描那一本。
+
+    青空那四篇與內村同一種 checkpoint（sec*.json），直接借 scan_json_checkpoints；
+    《帝国主義下の台湾》還在 OCR，另外列一行讓人看得到它卡在哪一步。
+    """
+    registry = _literal_assignment(ROOT / "scripts" / "yanaihara_build.py", "REGISTRY") or {}
+    titles = {slug: cfg.get("title", slug) for slug, cfg in registry.items()
+              if not cfg.get("text_dir")}
+    rows = scan_json_checkpoints("無教會主義", CW_ROOT / "yanaihara_data", titles,
+                                 processes, "src")
+
+    img_dir = TMP_ROOT / "yanaihara_ndl" / "img"
+    ocr_dir = TMP_ROOT / "yanaihara_ndl" / "ocr"
+    if img_dir.exists() or ocr_dir.exists():
+        total_pages = len(list(img_dir.glob("*.jpg"))) if img_dir.exists() else 0
+        covered = 0
+        for f in ocr_dir.glob("*.txt") if ocr_dir.exists() else []:
+            try:
+                covered = max(covered, int(f.stem.split("-")[1]))
+            except (IndexError, ValueError):
+                pass
+        running = any("yanaihara_ndl" in str(p.get("CommandLine") or "").lower()
+                      for p in processes)
+        updated = _latest_mtime(list(ocr_dir.glob("*.txt"))) if ocr_dir.exists() else None
+        stage = ("OCR" if total_pages and covered < total_pages
+                 else "待切節翻譯" if total_pages else "抓圖")
+        rows.append(WorkProgress(
+            group="無教會主義",
+            key="teikoku-taiwan",
+            title="帝國主義下的台灣（NDL 掃描）",
+            done=covered, total=total_pages or 201, unit="頁",
+            state=_state(covered, total_pages or 201, running, updated),
+            running=running,
+            current=f"{stage}；掃描 {total_pages}/201 コマ",
+            updated_at=updated,
+            source="c:/tmp/yanaihara_ndl",
+            detail="OCR 未到齊前佇列會跳過這本（段落序號會位移）",
+        ))
+    return rows
+
+
+def _zlib_counts() -> tuple[dict[str, int], dict[str, dict[str, int]], float | None]:
+    """(清單各來源筆數, 各來源已結案筆數, 帳本最後更新時間)。
+
+    「已結案」＝下載到、查無、沒有對得上的版本三種；下載失敗不算——那多半是當天
+    額度用完，算進去的話那本書就再也輪不到（見 [[ebook-zlib-harvest]]）。
+    """
+    wanted_path = ROOT / "output" / "zlib_wanted_all.jsonl"
+    totals: dict[str, int] = {}
+    key_source: dict[str, str] = {}
+    if wanted_path.exists():
+        for line in wanted_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                item = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            src = item.get("source", "?")
+            totals[src] = totals.get(src, 0) + 1
+            key_source[item.get("key", "")] = src
+
+    settled = {"downloaded", "not-found", "no-usable-hit"}
+    done: dict[str, dict[str, int]] = {}
+    ledger = ROOT / "scripts" / "state" / "zlib_ledger.jsonl"
+    if ledger.exists():
+        for line in ledger.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            status = rec.get("status", "")
+            if status not in settled:
+                continue
+            src = key_source.get(rec.get("key", ""), "?")
+            bucket = done.setdefault(src, {})
+            bucket[status] = bucket.get(status, 0) + 1
+    updated = ledger.stat().st_mtime if ledger.exists() else None
+    return totals, done, updated
+
+
+def scan_zlib(processes: list[dict[str, Any]]) -> list[WorkProgress]:
+    """z-library 收書清單消化到哪。免費帳號一天十本，所以這是長線滴流。"""
+    totals, done, updated = _zlib_counts()
+    if not totals:
+        return []
+    running = bool(processes)
+    rows = []
+    for src, total in sorted(totals.items(), key=lambda kv: -kv[1]):
+        bucket = done.get(src, {})
+        settled = sum(bucket.values())
+        got = bucket.get("downloaded", 0)
+        misses = settled - got
+        rows.append(WorkProgress(
+            group="z-library 收書",
+            key=f"zlib-{src}",
+            title=src,
+            done=settled, total=total, unit="本",
+            state=_state(settled, total, running, updated),
+            running=running,
+            current=f"下載 {got} 本" + (f"／查無 {misses}" if misses else ""),
+            updated_at=updated,
+            source="scripts/state/zlib_ledger.jsonl",
+            detail="每日 09:30 排程；免費帳號額度十本／日",
+        ))
+    return rows
+
+
 def _dazangjing_catalog_stats(
         seed_path: Path, ledger_path: Path) -> tuple[int, int, int]:
     """Return classified, valid candidate, and manual-review counts."""
@@ -1331,6 +1526,9 @@ def collect_snapshot() -> tuple[list[WorkProgress], dict[str, list[dict[str, Any
         "東方聖卷", MUELLER_ROOT, sbe_titles, groups["東方聖卷"], "en"))
     rows.extend(scan_accs(groups["ACCS"]))
     rows.extend(scan_dazangjing(groups["基督教大藏經"]))
+    rows.extend(scan_hellenistic(groups["希臘化哲學"]))
+    rows.extend(scan_yanaihara(groups["無教會主義"]))
+    rows.extend(scan_zlib(groups["z-library 收書"]))
     rows.extend(scan_other_work(processes))
     return rows, groups
 
@@ -1470,8 +1668,8 @@ class Dashboard:
         self.notebook = self.ttk.Notebook(self.root)
         self.notebook.pack(fill="both", expand=True, padx=24)
         self.trees: dict[str, Any] = {}
-        for group in ("全部", "榮格", "哲學家全集", "潘尼卡", "東方聖卷",
-                      "ACCS", "基督教大藏經", "其他工作"):
+        for group in ("全部", "榮格", "哲學家全集", "希臘化哲學", "潘尼卡", "東方聖卷",
+                      "無教會主義", "ACCS", "基督教大藏經", "z-library 收書", "其他工作"):
             frame = tk.Frame(self.notebook, bg=self.COLORS["panel"])
             self.notebook.add(frame, text=group)
             tree = self.ttk.Treeview(
