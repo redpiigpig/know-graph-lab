@@ -25,7 +25,32 @@ STROKE = re.compile(r'^[一二三四五六七八九十百]+劃$')
 PAGEREF = re.compile(r'[,，]\s*(x{0,3}[ivx]+|\d{1,3})(\s*[-–,，]\s*\d{1,3})*$')
 
 
+PAGES_ONLY = re.compile(r'^[\d,，\s\-–]+$')
+
+
+def _term_became_father(x: dict) -> bool:
+    """索引詞條被當成教父名：body 恰好是「<教父名>, 頁碼」。
+
+    🚨 這一型「有教父名」，所以會躲過下面那條「有教父名就是真引文」的早退。
+       實測 129 列（以賽亞 125、啟示錄 4），長這樣：
+         father_name='哥拉汛'  body='哥拉汛,68'
+         father_name='得兒女的名分'  body='得兒女的名分,4, 9, 16'
+       判準要三個同時成立才算：教父名非空、body 逗號前與教父名**完全相同**、
+       逗號後只剩頁碼。少任何一個都可能誤殺真引文。
+    """
+    f = (x.get('father_name') or '').strip()
+    body = (x.get('body_zh') or '').strip()
+    if not f or not body:
+        return False
+    head, sep, tail = body.partition(',')
+    if not sep:
+        head, sep, tail = body.partition('，')
+    return bool(sep) and head.strip() == f and bool(PAGES_ONLY.match(tail.strip()))
+
+
 def is_index_row(x: dict) -> bool:
+    if _term_became_father(x):
+        return True
     if (x.get('father_name') or '').strip():
         return False                      # 有教父名就是真引文
     body = (x.get('body_zh') or '').strip()
