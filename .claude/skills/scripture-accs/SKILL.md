@@ -169,7 +169,32 @@ python -X utf8 scripts/ingest_accs_genesis.py --pdf "<PDF>" --book lev   --pages
 python -X utf8 scripts/accs_normalize_fathers.py   --apply
 python -X utf8 scripts/accs_normalize_works.py     --apply
 python -X utf8 scripts/accs_fix_worktitle_bleed.py --apply
+python -X utf8 scripts/accs_purge_index_rows.py    --apply   # 書末索引灌進來的列
 ```
+
+### 全庫掃過一遍：只有那三卷是真的缺，其餘長空白段都是附錄
+
+把 71 個 checkpoint 逐頁攤開算「空頁比例」與「最長連續空頁段」，十三個 checkpoint
+的空白段超過 40 頁。**逐一對過 DB 章覆蓋率之後，除了已知那三卷，其餘全是附錄**：
+
+| checkpoint | 總頁 | 最長空白段 | 該書章覆蓋 | 判定 |
+|---|---|---|---|---|
+| jhn 43a | 652 | 112 頁（自 541）| 21/21 | 附錄 |
+| psa 51-150 | 760 | 132 頁（自 629）| 全覆蓋 | 附錄 |
+| act | 606 | 110 頁（自 497）| 28/28 | 附錄 |
+| luk | 736 | 108 頁（自 629）| 24/24 | 附錄 |
+| gen 創12-50 | 654 | 103 頁（自 552）| 49/50 | 附錄 |
+| isa 賽40-66 | 584 | 100 頁（自 485）| 全覆蓋 | 附錄 |
+| mrk / job / mat / heb / rev … | | 40–84 頁 | 全覆蓋 | 附錄 |
+
+所以判斷有沒有真缺口**要看 DB 的章覆蓋率，不能看空頁**（第一版就是栽在這裡）。
+上表「最長空白段起點」可以當各卷附錄起始頁的**粗估**，要拿去改 config 的話先回
+目錄核對——那一欄只是推測。
+
+🚨 **這些卷的 config 至今仍把附錄含在頁界裡。** 大多無害（附錄吐不出帶 ref 的條目），
+   但**引用經文索引**那種會直接進表：以賽亞 483 列、啟示錄 4 列就是這樣來的，
+   2026-09-03 已用 `accs_purge_index_rows.py` 清掉。**每次 ingest 之後把那支跑一遍**，
+   它是冪等的、預設 dry-run。
 
 ### 🚨 單書卷的卷也要切在附錄前
 
