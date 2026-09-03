@@ -112,7 +112,7 @@ const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '�
 
 **任何卷要「翻譯」前，先查有無現成中譯本，不要一上來就自譯。** 見 [[feedback_collected_works_reference_first]]。
 1. 先比對該作家 works × **圖書館既有**（collection=null）→ 有就直接搬全集（PATCH collection + store 連 ebookId；見 [[feedback_collected_works_not_in_library]]）。
-2. 再查 **z-library**有無中譯本 → 有就**列進獵表**（本 skill 資料夾的 `z-library_獵表_全集中譯.txt`，作家中英名＋書名＋原文名；**不要放 repo 根目錄**），交使用者下載，之後走 **REFERENCE**。
+2. 再查 **z-library**（2026-09-02 起這一步已自動化：[[ebook-zlib-harvest]]，每日排程依清單抓，額度十本／日）有無中譯本 → 有就**列進獵表**（本 skill 資料夾的 `z-library_獵表_全集中譯.txt`，作家中英名＋書名＋原文名；**不要放 repo 根目錄**），交使用者下載，之後走 **REFERENCE**。
 3. **只有查無任何中譯本才走自譯（pipeline④）**。多譯本取最新繁體（[[feedback_collected_works_latest_traditional_edition]]）。
 
 → 即 pipeline 選擇順序＝**REFERENCE ＞ 自譯**（翻轉原 English-first 預設）。全集書一律 `collection='collected-works'` 不進圖書館；轉錄批次後跑 `scripts/apply-ebooks-quality-collection.mjs` 補標。
@@ -465,3 +465,33 @@ store 實際載入的數量，插進 timeline 陣列會多一個對不上）。
 - [scripture-papal](../scripture-papal/SKILL.md) — 既有「拉/英/中三欄逐段對照」(alignDocs) content-file 版實作，可參考對齊邏輯
 - 案例檔：[jung_collected_works.md](jung_collected_works.md)（心理學）／[mueller_collected_works.md](mueller_collected_works.md)（宗教學）／[panikkar_collected_works.md](panikkar_collected_works.md)（宗教學）／[yinshun_collected_works.md](yinshun_collected_works.md)‧[shengyen_collected_works.md](shengyen_collected_works.md)‧[hsingyun_collected_works.md](hsingyun_collected_works.md)（佛學）
 - 詞庫：[jung_glossary.md](jung_glossary.md)／[mueller_glossary.md](mueller_glossary.md)／[panikkar_glossary.md](panikkar_glossary.md)（古希臘待建 `greek_philosophy_glossary.md`）
+
+# 2026-09-02 交接：空殼歸零
+
+這一天把 portal 上「有卡片、點進去是空的」全部清掉，並補了兩個根本不存在的作家頁。
+
+| 做了什麼 | 結果 |
+|---|---|
+| 榮格 CW 十六卷上架（三個原因各修一個，見 [jung_collected_works.md](jung_collected_works.md)） | 6 本／164 萬字 → 21 本／648 萬字 |
+| 希臘化與新柏拉圖 15 本（普羅提諾六集＋波菲利、伊比鳩魯五篇、愛比克泰德三種） | 71.8 萬字，佇列全數完成 |
+| 韋伯三本（兩篇志業演講 EPUB＋方法論文集 714 頁，見 [weber_collected_works.md](weber_collected_works.md)） | 零 LLM 轉錄 |
+| 矢內原青空文庫四篇（見 [yanaihara_collected_works.md](yanaihara_collected_works.md)） | 全部上架 |
+| 榮格自傳（ebooklib 被一張不存在的圖擋了幾個月，改走 zipfile） | 15 章／24.4 萬字 |
+| **太虛大師 hub**（21 編／595 萬字早就上架，portal 上卻沒有這個人） | 補建 |
+| **佛洛伊德 hub**（《夢的解析》324 chunks 同樣情形） | 補建 |
+| 狀態對帳（`scripts/collected_works_status.py`） | 四類落差全部歸零 |
+
+**全集：446 本／9,339 萬字，空殼 0 本。**
+
+## 這一天學到最貴的一課
+
+「翻完了」「上架了」「標好了」是**三件事**，中間任何一環斷掉都不會有徵兆：
+
+* 榮格十六卷八月就翻完，hub 掛著 in-progress，DB 裡只有一卷——原因是來源檔搬走、
+  `file_path` 撞唯一鍵、row 沒帶 `collection`，三個疊在一起。
+* 太虛 21 編、佛洛伊德《夢的解析》內容都在 DB，只是 portal 沒有那個作家。
+* 亞里斯多德《政治學》43/98 個 chunk 的譯文後半是模型的自語（`"政", "體", … same.`），
+  chunk 照樣寫檔上傳、reader 照樣顯示，唯一徵兆是字數異常大。
+
+所以 SOP 第 10 步（收工前跑一次對帳）不是形式。另外新增
+`scripts/plato_quality_scan.py` 專抓第三種——「印得出來但內容是模型自語」。
