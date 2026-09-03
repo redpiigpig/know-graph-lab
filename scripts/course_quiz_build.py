@@ -37,7 +37,7 @@ COURSES = {
                 folder='115-1_世界宗教文化導論'),
     'ch': dict(slug='christianity-intro', book_id='CH1', prefix='ch1',
                chapters='chapters', title='基督宗教概論',
-               folder='115-2_基督宗教概論'),
+               folder='115-1_基督宗教概論'),
     'sl': dict(slug='sinographic-literature', book_id='SL1', prefix='sl1',
                chapters='chapters', title='宗教系國文講義',
                folder='宗教系國文講義'),

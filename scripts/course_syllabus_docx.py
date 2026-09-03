@@ -94,7 +94,147 @@ WORLD_RELIGIONS = {
     'course_url': '',   # 留空：不列線上資源
 }
 
-COURSES = {'world-religions-intro': WORLD_RELIGIONS}
+# ── 學期週次表 ──────────────────────────────────────────────────────────────
+# 由「PPA001 首堂 9/20（日）且屬雙週」反推：學期第一週為 9/7–9/13。
+# 九個雙週日（9/20…1/10）與使用者給的日期完全吻合，因此單週六與每週三照同一張表推。
+WED = ['9月9日', '9月16日', '9月23日', '9月30日', '10月7日', '10月14日',
+       '10月21日', '10月28日', '11月4日', '11月11日', '11月18日', '11月25日',
+       '12月2日', '12月9日', '12月16日', '12月23日', '12月30日', '1月6日']
+SAT_ODD = ['9月12日', '9月26日', '10月10日', '10月24日', '11月7日',
+           '11月21日', '12月5日', '12月19日', '1月2日']   # ⚠ 10/10 為國慶日，需確認調課
+
+
+def weekly(chapters, midterm_at=9, exam_tail='，期末考'):
+    """每週兩節、十八週：八章 → 期中考 → 八章 → 期末考。"""
+    rows, ch = [], 1
+    for w in range(1, 19):
+        if w == midterm_at:
+            rows.append((WED[w - 1], '期中考'))
+        elif w == 18:
+            rows.append((WED[w - 1], '期末考'))
+        else:
+            rows.append((WED[w - 1], ch))
+            ch += 1
+    return rows
+
+
+def biweekly_sat(free='自由學習：個別與老師討論自評'):
+    """單週六四節、九次：每次兩章，第九次自由學習（每次佔兩列）。"""
+    rows, ch = [], 1
+    for i, d in enumerate(SAT_ODD):
+        if i == 8:
+            rows += [(d, free), (d, free)]
+        else:
+            rows += [(d, ch), (d, ch + 1)]
+            ch += 2
+    return rows
+
+
+WR_INTRO_DAY = {
+    'folder': '115-1_世界宗教文化導論',
+    'filename': '115.1世界宗教文化導論（BBE275宗教系1A）',
+    'year': '115', 'term': '1',
+    'course_name': '世界宗教文化導論',
+    'course_code': 'BBE275',
+    'klass': '宗教與文化學系1年A班',
+    'elective': '專業必修',
+    'hours': '2', 'credits': '2',
+    'objective': WORLD_RELIGIONS['objective'],
+    'methods_on': WORLD_RELIGIONS['methods_on'],
+    'assessment_on': {'出席': '20%', '課堂參與': '20%',
+                      '期中考-筆試': '30%', '期末考-筆試': '30%'},
+    'chapters_html': 'public/content/works/world-religions-intro/chapters-wr2',
+    'schedule': weekly(None),
+    'foreign_text': '有',
+    'textbooks': WORLD_RELIGIONS['textbooks'],
+    'course_url': '',
+}
+
+CHINESE = {
+    'folder': '宗教系國文講義',
+    'filename': '115.1國文',
+    'year': '115', 'term': '1',
+    'course_name': '國文',
+    'course_code': 'PPA066',
+    'klass': '宗教與文化學系二年制在職專班1年A班',
+    'elective': '通識必修',
+    'hours': '2', 'credits': '2',
+    'objective': (
+        '本課程是宗教與文化學系的大學國文，以「漢字書寫圈」取代民族國家文學史的框架，'
+        '並以宗教為貫穿軸線。授課範圍涵蓋中國、日本、韓半島、越南與臺灣的漢文書寫：'
+        '這些地區共用同一套文字、同一批典故與同一個文本庫，卻各自發展出書寫本地語言的辦法'
+        '（假名、吏讀、諺文、喃字、白話字），只讀其中一國會看不見這個結構。'
+        '課程的第二條線是宗教：現存最早的漢字文獻是占卜紀錄，最早的正典化工程是經學，'
+        '世界史上規模最大的翻譯工程是佛典漢譯，白話文學的源頭是講經與變文，'
+        '戲曲從祭壇長出來，而宗教至今仍是漢文最穩固的使用場所。'
+        '學生除了讀作品，還要學會用一組固定欄位介紹一部作品'
+        '（作者與時代、成書與版本、文體與語言、內容、宗教脈絡、今日何處可讀），'
+        '並追問它「被誰、在什麼場合、用什麼方式使用」——抄、誦、演、考、教。'
+    ),
+    'methods_on': ['講述', '媒體融入教學', '問題導向學習', '合作學習',
+                   '即時互動', '對話教學法', '個別指導', '實地考察/參訪'],
+    'assessment_on': {'出席': '25%', '課堂參與': '25%',
+                      '心得或作業撰寫': '25%', '期末考-筆試': '25%'},
+    'chapters_html': 'public/content/works/sinographic-literature/chapters',
+    'schedule': biweekly_sat(),
+    'foreign_text': '無',
+    'textbooks': [
+        '裘錫圭。《文字學概要》。臺北：萬卷樓，1995。',
+        '郭慶藩輯。《莊子集釋》。北京：中華書局。',
+        '黃征、張涌泉。《敦煌變文校注》。北京：中華書局，1997。',
+        '王國維。《宋元戲曲史》。上海：商務印書館，1915。',
+        '賴永祥。《教會史話》。臺南：人光出版社。',
+        '張妙娟。《開啟心眼——〈臺灣府城教會報〉與長老教會的基督徒教育》。臺南：人光出版社，2005。',
+    ],
+    'course_url': '',
+}
+
+CHRISTIANITY = {
+    'folder': '115-1_基督宗教概論',
+    'filename': '115.1基督宗教概論',
+    'year': '115', 'term': '1',
+    'course_name': '基督宗教概論',
+    'course_code': 'BBE150',
+    'klass': '宗教與文化學系2年A班',
+    'elective': '專業必修',
+    'hours': '2', 'credits': '2',
+    'objective': (
+        '本課程從宗教學而非神學的立場介紹基督宗教：不問「這是不是真的、我該怎麼信」，'
+        '而問「它是怎麼形成的、在人的生活裡怎麼運作」。'
+        '課程先確立四項核心傳統（天主教、東正教、東方正統、新教）與四條分歧軸線'
+        '（權威在哪裡、救恩怎麼運作、教會是什麼、物質能否承載神聖），'
+        '再依序處理拿撒勒人耶穌的史料與處境、初代教會、正典的形成與兩千年的讀法、'
+        '大公會議與教義的成形、教父與東方基督教世界、中世紀西方教會、宗教改革、'
+        '近代的四條回應路線，以及二十世紀的梵二、普世運動與南方基督教。'
+        '課程刻意補上中文教材慣常壓縮的三塊：東方基督教世界（衣索比亞、敘利亞、'
+        '亞美尼亞、景教）、聖行（禮儀、聖事、齋期、喪禮）、以及藝術與物質文化。'
+        '最後兩章回到臺灣的基督宗教與生死觀，'
+        '使學生能用同一組欄位介紹任何一個基督宗教傳統，並指出某個說法漏掉了什麼。'
+    ),
+    'methods_on': ['講述', '媒體融入教學', '問題導向學習', '合作學習',
+                   '即時互動', '對話教學法', '個別指導'],
+    'assessment_on': {'出席': '20%', '課堂參與': '20%',
+                      '期中考-筆試': '30%', '期末考-筆試': '30%'},
+    'chapters_html': 'public/content/works/christianity-intro/chapters',
+    'schedule': weekly(None),
+    'foreign_text': '有',
+    'textbooks': [
+        '陶理（Tim Dowley）主編，李伯明、林牧野譯。《基督教二千年史》。香港：海天書樓，1997。',
+        '大衛‧班特利‧哈特（David Bentley Hart）著，黃恩霖譯。《基督教的故事》。臺中：好讀出版，2013。',
+        '哈維‧寇克斯（Harvey G. Cox）著，孫尚揚譯。《基督宗教》。臺北：麥田出版。',
+        '林鴻信。《基督宗教思想史》。臺北：國立臺灣大學出版中心，2017。',
+        '奧爾森（Roger E. Olson）著，吳瑞誠、徐成德譯。《神學的故事》。臺北：校園書房出版社。',
+        '鄭仰恩。《定根本土的臺灣基督教》。臺南：人光出版社，2005。',
+    ],
+    'course_url': '',
+}
+
+COURSES = {
+    'world-religions-intro': WORLD_RELIGIONS,
+    'world-religions-day': WR_INTRO_DAY,
+    'chinese': CHINESE,
+    'christianity': CHRISTIANITY,
+}
 
 
 # ── 儲存格編輯工具（保留原有格式）────────────────────────────────────────────
@@ -235,6 +375,14 @@ def build(c):
     set_cell(T0.rows[4].cells[1], c['course_name'])
     set_cell(T0.rows[4].cells[5], c['course_code'])
     set_cell(T0.rows[5].cells[1], c['course_name'])
+    if c.get('klass'):
+        set_cell(T0.rows[2].cells[3], c['klass'])
+    if c.get('hours'):
+        set_cell(T0.rows[3].cells[1], c['hours'])
+    if c.get('credits'):
+        set_cell(T0.rows[3].cells[3], c['credits'])
+    if c.get('elective'):
+        set_cell(T0.rows[3].cells[5], c['elective'])
 
     # ── 課程目標 ──
     set_cell(T1.rows[1].cells[0], c['objective'])

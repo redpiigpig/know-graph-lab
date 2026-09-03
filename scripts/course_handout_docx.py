@@ -60,7 +60,7 @@ COURSE_WR2 = {
 COURSE_CH = {
     'slug': 'christianity-intro',
     'chapters_dir': 'chapters',
-    'folder': '115-2_基督宗教概論',
+    'folder': '115-1_基督宗教概論',
     'title': '基督宗教概論',
     'code': 'PPA005',
     'teacher': '張辰瑋',

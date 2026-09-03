@@ -24,7 +24,7 @@ from pathlib import Path
 
 TEACH = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
 FOLDERS = {'wr': '115-1_世界宗教文化導論', 'sl': '宗教系國文講義',
-           'ch': '115-2_基督宗教概論'}
+           'ch': '115-1_基督宗教概論'}
 OUT = TEACH / FOLDERS['wr'] / '簡報' / '圖片'
 MANIFEST = OUT / '_manifest.json'
 UA = 'know-graph-lab-course-slides/1.0 (teaching material; contact via redpiigpig.com)'

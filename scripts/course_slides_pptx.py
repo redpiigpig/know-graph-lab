@@ -27,7 +27,7 @@ DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
 COURSES = {
     'wr': '115-1_世界宗教文化導論',
     'sl': '宗教系國文講義',
-    'ch': '115-2_基督宗教概論',
+    'ch': '115-1_基督宗教概論',
 }
 FOLDER = COURSES['wr']
 IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'

@@ -14,7 +14,7 @@ from pathlib import Path
 import fitz
 
 DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
-FOLDERS = ['115-1_世界宗教文化導論', '115-2_基督宗教概論', '宗教系國文講義']
+FOLDERS = ['115-1_世界宗教文化導論', '115-1_基督宗教概論', '宗教系國文講義']
 
 
 def lines(page):
