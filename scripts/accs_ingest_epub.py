@@ -319,7 +319,12 @@ def main() -> int:
 
 
 def upload(ckpt: Path) -> int:
-    rows = []
+    # 🚨 譯壞的不上線。後備引擎會把自己的思考當譯文交出來（「We need to translate
+    #    the English passage...」），也會在中文句子裡夾德文／波蘭文。那種東西擺在
+    #    讀者面前比留白更糟——先擋下來，跑 accs_epub_retranslate_dirty.py 修好再上。
+    from accs_epub_retranslate_dirty import is_dirty
+
+    rows, skipped = [], 0
     for ln in ckpt.open(encoding='utf-8'):
         try:
             d = json.loads(ln)
@@ -327,26 +332,42 @@ def upload(ckpt: Path) -> int:
             continue
         if not (d.get('body_zh') or '').strip():
             continue
+        if is_dirty(d['body_zh']):
+            skipped += 1
+            continue
         rows.append({
             'book_code': d['book_code'], 'chapter': d['chapter'],
             'verse_start': d['verse_start'], 'verse_end': d['verse_end'],
-            'pericope_order': d['pericope_order'], 'entry_order': 0,
+            'pericope_order': 0, 'entry_order': 0,   # 兩者都在下面依經文範圍重編
             'section_kind': d['kind'], 'heading': d.get('heading_zh') or None,
             'father_name': d.get('father_zh') or None,
             'work_title': d.get('work_zh') or None,
             'body_zh': d['body_zh'], 'source_vol': SOURCE_VOL,
         })
-    # entry_order 依 pericope 內順序重編
+    # 🚨 pericope_order 要**一個經文範圍一組**，不可沿用 EPUB 自己的段落編號。
+    #    /api/scripture/commentary 是按 pericope_order 分組、拿**該組第一列**的
+    #    verse_start/verse_end 當這一組的經文範圍。EPUB 的 pericope_order 是
+    #    「h1 那一大段」（如 Jeremiah 1:1-19），底下還有好幾個 h2 小節範圍；
+    #    直接沿用的話一組裡混著 (2,2)、(6,6)、(11,12) 三種範圍，畫面上就會把
+    #    第 11-12 節的註釋掛在第 2 節底下。掃描本那條線（build_rows）本來就是
+    #    按範圍編的，兩條線要一致。
+    per: dict[tuple, int] = {}
     seq: dict[tuple, int] = {}
     for x in rows:
-        # 🚨 entry_order 的分組鍵一定要跟資料表的唯一鍵一模一樣
-        #    (book_code, chapter, verse_start, verse_end, entry_order)。
-        #    原本用 pericope_order 分組，於是同一個經文範圍分屬兩個段落時
-        #    兩列都拿到 entry_order 0，上傳到一半才被唯一鍵擋下（實測 7 組
-        #    14 列，jer 已寫進 300 列才炸）。
+        # entry_order 的分組鍵一定要跟資料表的唯一鍵一模一樣
+        # (book_code, chapter, verse_start, verse_end, entry_order)。原本用
+        # pericope_order 分組，於是同一個經文範圍分屬兩個段落時兩列都拿到 0，
+        # 上傳到一半才被唯一鍵擋下（實測 7 組 14 列，jer 已寫進 300 列才炸）。
         k = (x['book_code'], x['chapter'], x['verse_start'], x['verse_end'])
+        chap_key = (x['book_code'], x['chapter'])
+        if k not in per:
+            per[k] = sum(1 for kk in per if kk[:2] == chap_key) + 1
+        x['pericope_order'] = per[k]
         x['entry_order'] = seq.get(k, 0)
         seq[k] = x['entry_order'] + 1
+    if skipped:
+        print(f'⚠ 譯文仍不乾淨、暫不上線的 {skipped} 列'
+              f'（跑 accs_epub_retranslate_dirty.py --apply 修好再上）', flush=True)
     print(f'準備上傳 {len(rows)} 列', flush=True)
     for i in range(0, len(rows), 100):
         # 冪等 upsert：中途失敗重跑不會變成兩份
