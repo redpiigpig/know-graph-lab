@@ -144,7 +144,7 @@ def slide_title(slide, title, sub=None):
     put(tf, title, 34, bold=True, color=NAVY, first=True, space_after=2)
     if sub:
         put(tf, sub, 17, color=GRAY, space_after=0)
-    band(slide, GOLD, Cm(1.5), Cm(3.62), Cm(3.0), Cm(0.12))
+    band(slide, GOLD, Cm(1.5), Cm(3.80), Cm(3.0), Cm(0.12))
 
 
 def footer(slide, n, label):
@@ -195,8 +195,8 @@ def s_big(prs, text, sub=None):
 def s_bullets(prs, title, bullets, sub=None):
     s = blank(prs)
     slide_title(s, title, sub)
-    w, h = 30.9, 13.2
-    tf = textbox(s, Cm(1.5), Cm(4.3), Cm(w), Cm(h))
+    w, h = 30.9, 13.1
+    tf = textbox(s, Cm(1.5), Cm(4.45), Cm(w), Cm(h))
     base = {0: 23.0, 1: 19.0, 2: 16.5, 3: 24.0}
     sp = {0: 11, 1: 7, 2: 5, 3: 12}
     k = fit(bullets, w, h * 0.96, base, sp)
@@ -225,13 +225,13 @@ def s_two(prs, title, left, right, sub=None):
     colw = (W - Cm(3.8)) / 2
     for i, (head, items) in enumerate((left, right)):
         x = Cm(1.5) + i * (colw + Cm(0.8))
-        band(s, NAVY if i == 0 else GOLD, x, Cm(4.35), colw, Cm(1.0))
-        tfh = textbox(s, x + Cm(0.35), Cm(4.53), colw - Cm(0.7), Cm(0.8))
+        band(s, NAVY if i == 0 else GOLD, x, Cm(4.5), colw, Cm(1.0))
+        tfh = textbox(s, x + Cm(0.35), Cm(4.68), colw - Cm(0.7), Cm(0.8))
         put(tfh, head, 18, bold=True, color=WHITE, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 18.5, 1: 15.5, 2: 15.5}
         k = max(0.68, fit(items, cw, 13.0, base, {0: 8, 1: 6, 2: 6}))
-        tf = textbox(s, x + Cm(0.35), Cm(5.65), colw - Cm(0.7), H - Cm(7.0))
+        tf = textbox(s, x + Cm(0.35), Cm(5.8), colw - Cm(0.7), H - Cm(7.15))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
             put(tf, ('‧ ' if lvl == 0 else '　－ ') + txt,
@@ -244,7 +244,7 @@ def s_two(prs, title, left, right, sub=None):
 def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
     s = blank(prs)
     slide_title(s, title, sub)
-    top = Cm(4.35)
+    top = Cm(4.5)
     tbl = s.shapes.add_table(len(rows) + 1, len(headers),
                              Cm(1.5), top, W - Cm(3.0), Cm(1.0)).table
     # 列高給最小值，讓 PowerPoint 依內容自動撐開（不要平均攤滿整頁）
@@ -308,7 +308,7 @@ def caption(slide, text, x, y, w):
 def s_photo(prs, title, key, cap=None, sub=None):
     s = blank(prs)
     slide_title(s, title, sub)
-    box_y, box_h = Cm(4.3), H - Cm(6.6)
+    box_y, box_h = Cm(4.45), H - Cm(6.75)
     if not place_image(s, key, Cm(1.5), box_y, W - Cm(3.0), box_h):
         put(textbox(s, Cm(1.5), box_y, W - Cm(3.0), Cm(2)), f'（缺圖：{key}）',
             16, color=GRAY, first=True)
@@ -324,7 +324,7 @@ def s_gallery(prs, title, items, sub=None):
     n = len(items)
     gap = Cm(0.6)
     colw = int((W - Cm(3.0) - gap * (n - 1)) / n)
-    top, boxh = Cm(4.35), H - Cm(7.5)
+    top, boxh = Cm(4.5), H - Cm(7.65)
     for i, (key, label) in enumerate(items):
         x = Cm(1.5) + i * (colw + gap)
         if not place_image(s, key, x, top, colw, boxh):
@@ -344,8 +344,8 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     textw = Cm(tw)
     imgx = Cm(1.5) + textw + Cm(0.7)
     imgw = W - Cm(1.5) - imgx
-    h = 13.2
-    tf = textbox(s, Cm(1.5), Cm(4.3), textw, Cm(h))
+    h = 13.1
+    tf = textbox(s, Cm(1.5), Cm(4.45), textw, Cm(h))
     base = {0: 20.0, 1: 17.0, 2: 14.5, 3: 21.0}
     sp = {0: 10, 1: 7, 2: 5, 3: 11}
     k = fit(bullets, tw, h * 0.96, base, sp)
@@ -363,7 +363,7 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
             indent=min(lvl, 2) if lvl != 3 else 0, line=1.3)
         firstdone = True
     boxh = H - Cm(6.4) if cap else H - Cm(5.4)
-    place_image(s, key, imgx, Cm(4.3), imgw, boxh)
+    place_image(s, key, imgx, Cm(4.45), imgw, boxh)
     if cap:
         caption(s, cap, imgx, H - Cm(2.1), imgw)
     return s
@@ -382,7 +382,7 @@ def s_credits(prs, label):
         s = blank(prs)
         slide_title(s, '圖片出處',
                     '本份簡報用圖均取自維基共享資源，授權為公有領域或 CC')
-        tf = textbox(s, Cm(1.5), Cm(4.3), W - Cm(3.0), H - Cm(6.0))
+        tf = textbox(s, Cm(1.5), Cm(4.45), W - Cm(3.0), H - Cm(6.15))
         for i, k in enumerate(USED[start:start + per]):
             m = MANIFEST.get(k, {})
             name = m.get('title', k)[5:]            # 去掉 'File:'
@@ -467,9 +467,9 @@ def split_long(slides):
     out = []
     for it in slides:
         if it[0] == 'bullets':
-            k = fit(it[2], 30.9, 13.2 * 0.96, base, sp)
+            k = fit(it[2], 30.9, 13.1 * 0.96, base, sp)
         elif it[0] == 'imgbullets':
-            k = fit(it[2], 17.0, 13.2 * 0.96, ibase, isp)
+            k = fit(it[2], 17.0, 13.1 * 0.96, ibase, isp)
         else:
             out.append(it)
             continue
