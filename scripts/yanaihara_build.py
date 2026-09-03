@@ -98,8 +98,25 @@ _JA_HEADING = re.compile(
 
 
 def load_text_sections(slug: str) -> list[dict]:
-    """OCR 純文字 → [{heading, paras}]。青空那條走 load_work_sections，這條走檔案。"""
+    """OCR 純文字 → [{heading, paras}]。青空那條走 load_work_sections，這條走檔案。
+
+    ⚠️ OCR 沒跑完就不給翻。逐節翻譯的快取是用 sec 序號當鍵的，後面補上來的 OCR 會
+    把整份 section 序號往後推，先前翻好的 sec3 就對到別段內容去了——而且不會有任何
+    徵兆（[[feedback_reader_silent_failures]]）。寧可讓佇列跳過這本，下一輪再說。
+    """
     d = Path(REGISTRY[slug]["text_dir"])
+    files = sorted(d.glob("*.txt"))
+    img_dir = d.parent / "img"
+    total_pages = len(list(img_dir.glob("*.jpg"))) if img_dir.is_dir() else 0
+    covered = 0
+    for f in files:
+        try:
+            covered = max(covered, int(f.stem.split("-")[1]))
+        except (IndexError, ValueError):
+            pass
+    if not files or (total_pages and covered < total_pages):
+        raise RuntimeError(
+            f"{slug}: OCR 只到第 {covered}/{total_pages} 頁，先不翻（等 keeper 下一輪）")
     text = "\n\n".join(f.read_text(encoding="utf-8") for f in sorted(d.glob("*.txt")))
     out: list[dict] = []
     heading, buf = "(front)", []
