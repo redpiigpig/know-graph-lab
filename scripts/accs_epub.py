@@ -159,3 +159,126 @@ def parse_chapter(chapter_html: str) -> list[dict]:
                     'pericope_order': pericope})
         out.append(rec)
     return out
+
+# ---------------------------------------------------------------------------
+# Calibre 拆檔式 EPUB（ACCS Vol 9 箴言‧傳道書‧雅歌）
+#
+# 跟 Vol 12 那本的包裝完全不同：整本被 Calibre 打散成三千多個 index_split_NNN.html
+# （絕大多數是註腳），正文只在前十四檔，而且改用 blockNN / text_N 這組 class。
+# 好消息是欄位是「明講」的，不必像 parse_entry 那樣靠正則猜署名與作品名邊界：
+#   <h2 class="block_33">  段落層： 2:8–17 SONGS AT THE BREAK OF SPRING
+#   <p  class="block_32">  概述：  <span class="text_5">Overview:</span> …
+#   <h3 class="block_40">  逐節層： 2:8 The Leaping Lord
+#   <p  class="block_41">  具名註釋：text_5=小標、第一個 text_=教父、最後一個 text_=作品名
+# ---------------------------------------------------------------------------
+
+_SUP_RE = re.compile(r'<sup\b.*?</sup>', re.S)
+_SPAN_RE = re.compile(r'<span\b([^>]*)>(.*?)</span>', re.S)
+
+
+def _join_spans(parts: list[str]) -> str:
+    """概述把教父名放在括號裡、各自獨立成 span，用空白接起來會變成
+    「present already but not yet ( Cyril of Alexandria )」。把括號與標點貼回去。"""
+    s = _clean(' '.join(parts))
+    s = re.sub(r'\(\s+', '(', s)
+    s = re.sub(r'\s+\)', ')', s)
+    return re.sub(r'\s+([,.;:])', r'\1', s)
+
+
+def _drop_footnotes(html: str) -> str:
+    """🚨 註腳是 <sup> 包的數字，直接 strip_tags 會把編號黏進正文
+    （"…in the Jordan.32322 8 Hence the bride says…"）。先整段拿掉。"""
+    return _SUP_RE.sub('', html)
+
+
+def parse_ref_calibre(heading_html: str) -> dict | None:
+    """`2:8–17 SONGS AT…` / `4:9–5:1 THE ENCLOSED GARDEN` → 章節範圍與標題。
+
+    範圍可以跨章（4:9–5:1）。跨章時 verse_end 取結束章的節，chapter 仍記起始章
+    —— 與資料庫既有的做法一致（一則註釋只掛在起始章上）。"""
+    txt = strip_tags(unsmallcaps(_drop_footnotes(heading_html))).strip()
+    m = re.match(r'^(\d+):(\d+)(?:\s*[-–—]\s*(?:(\d+):)?(\d+))?\s*(.*)$', txt)
+    if not m:
+        return None
+    ch, vs = int(m.group(1)), int(m.group(2))
+    ve = int(m.group(4)) if m.group(4) else vs
+    return {'chapter': ch, 'verse_start': vs, 'verse_end': ve,
+            'end_chapter': int(m.group(3)) if m.group(3) else ch,
+            'title': m.group(5).strip()}
+
+
+def parse_entry_calibre(p_html: str) -> dict | None:
+    """一個 <p class="block_32|block_41"> → 一則概述或具名引文。"""
+    html = _drop_footnotes(p_html)
+    spans = [(a, strip_tags(v)) for a, v in _SPAN_RE.findall(html)]
+    if not spans:
+        return None
+    head_i = next((i for i, (a, _) in enumerate(spans) if 'text_5' in a), None)
+    if head_i is None:
+        return None
+    head = spans[head_i][1].strip()
+
+    if head.rstrip(': ').lower() == 'overview':
+        body = _join_spans([v for _, v in spans[head_i + 1:]])
+        return {'kind': 'overview', 'heading': 'Overview', 'father': '',
+                'work': '', 'body': body} if body else None
+
+    # text_5 之後的 text_ span：第一個是教父，最後一個是作品名（只有一個時就是教父）
+    marked = [i for i, (a, _) in enumerate(spans)
+              if i > head_i and 'text_5' not in a and re.search(r'class="[^"]*\btext_\b', a)]
+    # 小標偶爾把句點留在下一個 span（"…in Christ" + ". Bede"），署名前後的
+    # 標點一律削掉，否則詞庫比對會整個對不上。
+    father = spans[marked[0]][1].strip(' .,:;') if marked else ''
+    work = spans[marked[-1]][1].strip() if len(marked) > 1 else ''
+
+    body_parts = []
+    for i, (_, v) in enumerate(spans):
+        if i <= head_i or i in (marked[:1] + marked[-1:] if marked else []):
+            continue
+        body_parts.append(v)
+    body = _join_spans(body_parts).lstrip(': ').strip()
+    # 作品名後面常跟章節號（"Commentary on the Song of Songs 5.3"），併進 work
+    if work:
+        m = re.match(r'^([\d.:,\-–\s]+)(.*)$', body[::-1])
+        del m  # 章節號在 body 尾端不好切，交給下面統一處理
+        mtail = re.search(r'([\d]+(?:[.:][\d]+)*)\s*\.?\s*$', body)
+        if mtail and len(mtail.group(1)) <= 12:
+            work = f'{work} {mtail.group(1)}'.strip()
+            body = body[:mtail.start()].strip()
+    if not body:
+        return None
+    return {'kind': 'comment', 'heading': head.rstrip('. '), 'father': father,
+            'work': work.rstrip('.'), 'body': body}
+
+
+def parse_chapter_calibre(chapter_html: str, book_code: str) -> list[dict]:
+    """一個 index_split_NNN.html → 依序的條目清單。
+
+    book_code 必須由呼叫端指定：這種包裝沒有把卷名寫進正文檔，卷界是靠檔案編號
+    （Vol 9：000–005 箴言、006–007 傳道書、008–011 雅歌）判斷的。
+    """
+    body = re.search(r'<body[^>]*>(.*)</body>', chapter_html, re.S)
+    src = body.group(1) if body else chapter_html
+    scope: dict | None = None
+    out: list[dict] = []
+    pericope = 0
+    for chunk in re.finditer(
+            r'<h2[^>]*class="block_33".*?</h2>|<h3[^>]*class="block_40".*?</h3>'
+            r'|<p[^>]*class="block_3[02]".*?</p>|<p[^>]*class="block_41".*?</p>', src, re.S):
+        frag = chunk.group(0)
+        if frag.startswith('<h2') or frag.startswith('<h3'):
+            ref = parse_ref_calibre(frag)
+            if ref:
+                scope = ref
+                pericope += 1
+            continue
+        rec = parse_entry_calibre(frag)
+        if not rec or not scope:
+            continue
+        rec.update({'book_code': book_code,
+                    'chapter': scope['chapter'],
+                    'verse_start': scope['verse_start'],
+                    'verse_end': scope['verse_end'],
+                    'pericope_order': pericope})
+        out.append(rec)
+    return out

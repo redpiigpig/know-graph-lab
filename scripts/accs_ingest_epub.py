@@ -21,7 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import requests
 import translate_ebook_to_zh as te
-from accs_epub import parse_chapter
+from accs_epub import parse_chapter, parse_chapter_calibre
 
 ACCS_DIR = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\經典對照與註釋'
                 r'\基督教-古代基督徒聖經註釋叢書 ACCS')
@@ -37,6 +37,18 @@ SOURCE_VOL = 'ACCS（耶利米書‧耶利米哀歌）'
 KNOWN_VOLUMES = {
     'jer_lam': ('ACCS_Jeremiah_Lamentations.epub', 'ACCS（耶利米書‧耶利米哀歌）'),
     'pro_ecc_sng': ('ACCS_Proverbs_Ecclesiastes_Song.epub', 'ACCS（箴言‧傳道書‧雅歌）'),
+}
+
+# Vol 9 那本是 Calibre 拆檔式：3,223 個 index_split_NNN.html，其中絕大多數是註腳，
+# 正文只在 000–013，而檔案裡沒有任何卷名標記 —— 卷界只能靠檔號。這份對照是照
+# 各檔首段的經文編號人工判定的（012 是書目、013 是索引，都不收）。
+# 🚨 箴言與傳道書的中文掃描本是完整的，這裡列出來只是為了「解析得出來」，實際要
+#    寫進資料庫的範圍一律由 --only-books / --only-chapters 圈定，不然會用英譯蓋掉
+#    出版社的中文正式譯文。
+CALIBRE_BOOK_FILES = {
+    'pro': [0, 1, 2, 3, 4, 5],
+    'ecc': [6, 7],
+    'sng': [8, 9, 10, 11],
 }
 
 # 不是人，是作品／文獻集。ACCS 把它們當引用來源列在署名位置，中文各卷也這樣
@@ -260,11 +272,19 @@ def main() -> int:
 
     import zipfile
     z = zipfile.ZipFile(epub_path)
-    names = [n for n in z.namelist() if re.search(r'p\dchap\d+\.html$', n)]
-    names.sort(key=lambda n: (n.split('chap')[0], int(re.search(r'chap(\d+)', n).group(1))))
     recs: list[dict] = []
-    for n in names:
-        recs += parse_chapter(z.read(n).decode('utf-8', errors='replace'))
+    if args.volume == 'pro_ecc_sng':
+        # Calibre 拆檔式包裝：三千多個 index_split_NNN.html，正文只在前十四檔，
+        # 而且檔案本身沒寫卷名 —— 卷界只能靠檔號判斷（見 CALIBRE_BOOK_FILES）。
+        for code, idxs in CALIBRE_BOOK_FILES.items():
+            for i in idxs:
+                html = z.read(f'index_split_{i:03d}.html').decode('utf-8', errors='replace')
+                recs += parse_chapter_calibre(html, code)
+    else:
+        names = [n for n in z.namelist() if re.search(r'p\dchap\d+\.html$', n)]
+        names.sort(key=lambda n: (n.split('chap')[0], int(re.search(r'chap(\d+)', n).group(1))))
+        for n in names:
+            recs += parse_chapter(z.read(n).decode('utf-8', errors='replace'))
     print(f'解析出 {len(recs)} 則', flush=True)
 
     if args.only_books:
