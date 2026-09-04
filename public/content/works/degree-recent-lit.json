@@ -1,0 +1,2706 @@
+{
+ "note": "OpenAlex 檢索的近年外文研究，依被引數排序；isOa 為真者可直接取得全文。",
+ "groups": {
+  "mahaprajapati-revolution": {
+   "count": 98,
+   "oa": 55,
+   "since": "2018-01-01",
+   "items": [
+    {
+     "topic": "人間佛教",
+     "title": "Christianity as Model and Analogue in the Formation of the ‘Humanistic’ Buddhism of Tài X? and Hs?ng Yún",
+     "authors": [
+      "Yu-Shuang Yao",
+      "Richard Gombrich"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Buddhist Studies Review",
+     "cited": 22,
+     "doi": "10.1558/bsrv.35392",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2790563041"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Imperfect Accomplishment: The Fo Guang Shan Short-Term Monastic Retreat and Ethical Pedagogy in Humanistic Buddhism",
+     "authors": [
+      "James Laidlaw",
+      "Jonathan Mair"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Cultural Anthropology",
+     "cited": 21,
+     "doi": "10.14506/ca34.3.02",
+     "oaUrl": "https://journal.culanth.org/index.php/ca/article/download/4074/458",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2970995524"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "If You Meet the Buddha on the Road",
+     "authors": [
+      "Michael Jerryson"
+     ],
+     "year": 2018,
+     "type": "book",
+     "venue": "Oxford University Press eBooks",
+     "cited": 17,
+     "doi": "10.1093/oso/9780190683566.001.0001",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2790499481"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Feeling for Fate: Karma and the Senses in Buddhist Nuns' Ordination Narratives",
+     "authors": [
+      "Swenson, Sara Ann",
+      "Robert H.N. Ho Family Foundation Dissertation Fellowship in Buddhist Studies"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "DOAJ (DOAJ: Directory of Open Access Journals)",
+     "cited": 16,
+     "doi": "10.5281/zenodo.4030985",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3104782922"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Mindfulness, Compassion and Skillful Means in Engaged Buddhism",
+     "authors": [
+      "Sallie B. King"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Mindfulness",
+     "cited": 15,
+     "doi": "10.1007/s12671-022-01847-1",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4220786248"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Constancy and Changes in the Distribution of Religious Groups in Contemporary China: Centering on Religion as a Whole, Buddhism, Protestantism and Folk Religion",
+     "authors": [
+      "Feng Li",
+      "Qian Wang"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 10,
+     "doi": "10.3390/rel14030323",
+     "oaUrl": "https://www.mdpi.com/2077-1444/14/3/323/pdf?version=1679904751",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4322741666"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Women and Buddhism in East Asian history: The case of the Blood Bowl Sutra, Part II: Japan",
+     "authors": [
+      "Lori Meeks"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Religion Compass",
+     "cited": 10,
+     "doi": "10.1111/rec3.12335",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3008871713"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Rethinking the history of Buddhism through female Buddhist heritage investigation",
+     "authors": [
+      "Xiaolu Wang"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Cogent Arts and Humanities",
+     "cited": 9,
+     "doi": "10.1080/23311983.2023.2198328",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4362729906"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism (Rensheng Fojiao 人生佛教 / Renjian Fojiao 人間佛教)",
+     "authors": [
+      "Stefania Travagnin"
+     ],
+     "year": 2022,
+     "type": "reference-entry",
+     "venue": "Oxford Research Encyclopedia of Religion",
+     "cited": 9,
+     "doi": "10.1093/acrefore/9780199340378.013.635",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4306679383"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Women and Buddhism in East Asian History: The Case of the Blood Bowl Sutra, Part I: China",
+     "authors": [
+      "Lori Meeks"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Religion Compass",
+     "cited": 9,
+     "doi": "10.1111/rec3.12336",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4229542186"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Chinese Buddhism",
+     "authors": [
+      "Chün-fang Yü"
+     ],
+     "year": 2020,
+     "type": "book",
+     "venue": "University of Hawaii Press eBooks",
+     "cited": 8,
+     "doi": "10.1515/9780824883485",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3036843563"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "The museum is like a temple: the Fo Guang Shan Buddha Museum in Taiwan1",
+     "authors": [
+      "Shu-Li Wang",
+      "Valentina Gamberi"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Asian Anthropology",
+     "cited": 7,
+     "doi": "10.1080/1683478x.2022.2117963",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4298147497"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "The Blooming of the Azure Lotus in the South Seas: A Preliminary Investigation of Chinese Indigenous Scriptures in Buddhist Vegetarian Halls of Southeast Asia",
+     "authors": [
+      "Show Ying Ruo"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 6,
+     "doi": "10.1353/jcr.2020.0013",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4312332104"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "On the Question of “Discipline” (Vinaya) and Nuns in Theravāda Buddhism",
+     "authors": [
+      "Nirmala S. Salgado"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 6,
+     "doi": "10.3390/rel10020098",
+     "oaUrl": "https://www.mdpi.com/2077-1444/10/2/98/pdf?version=1549344224",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2914302484"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Confluences and contestations: gender politics, grassroots Buddhism and Chinese voluntary associations, 1920s–1970s",
+     "authors": [
+      "Ying Ruo Show"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Ethnic and Racial Studies",
+     "cited": 5,
+     "doi": "10.1080/01419870.2024.2363527",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4399675769"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Engaged Buddhism as Human Rights Ethos: the Constructivist Quest for Cosmopolitanism",
+     "authors": [
+      "Alison Brysk"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Human Rights Review",
+     "cited": 5,
+     "doi": "10.1007/s12142-019-00575-9",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2988730162"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Buddhism Without Belonging: Functional and Digital Forms of Religious Engagement Among Chinese Youth",
+     "authors": [
+      "Danna Ouyang",
+      "Jingyi Xie"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 4,
+     "doi": "10.3390/rel16091108",
+     "oaUrl": "https://www.mdpi.com/2077-1444/16/9/1108/pdf?version=1756266310",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4413763875"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Superiority Conceit in Buddhist Traditions: A Historical Perspective",
+     "authors": [
+      "Thomas Calobrisi"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Journal of Global Buddhism",
+     "cited": 4,
+     "doi": "10.26034/lu.jgb.2023.3775",
+     "oaUrl": "https://www.globalbuddhism.org/article/download/3775/3603/6138",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4376137622"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Female Education in a Chan Public Monastery in China: The Jiangxi Dajinshan Buddhist Academy for Nuns",
+     "authors": [
+      "Daniela Campo"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 4,
+     "doi": "10.3390/rel13111020",
+     "oaUrl": "https://www.mdpi.com/2077-1444/13/11/1020/pdf?version=1667527438",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4308722888"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "The making of Buddhism in modern Indonesia: South and Southeast Asian networks and agencies, 1900-1959",
+     "authors": [
+      "Yulianti"
+     ],
+     "year": 2020,
+     "type": "dissertation",
+     "venue": "Leiden Repository (Leiden University)",
+     "cited": 4,
+     "doi": "",
+     "oaUrl": "http://hdl.handle.net/1887/138130",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3124202744"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Gender equality and digital counter-publics in global Buddhism:bhikkhuniordination in the Thai Forest Tradition in Australia",
+     "authors": [
+      "Anna Halafoff",
+      "Emma Tomalin",
+      "Caroline Starkey"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Journal of Contemporary Religion",
+     "cited": 3,
+     "doi": "10.1080/13537903.2021.2020442",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3168731828"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "A Survey of the Japanese Influence on Buddhist Education in Taiwan during the Japanese Colonial Period (1895–1945)",
+     "authors": [
+      "Pei-ying Lin"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 3,
+     "doi": "10.3390/rel11020061",
+     "oaUrl": "https://www.mdpi.com/2077-1444/11/2/61/pdf?version=1582516312",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3003298657"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Sexuality and Buddhism",
+     "authors": [
+      "Jo Nash"
+     ],
+     "year": 2020,
+     "type": "reference-entry",
+     "venue": "",
+     "cited": 3,
+     "doi": "10.1007/978-3-030-24348-7_9090",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3037051410"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Women, Bodily Transformation and Rebirth in the Pure Land in the Writings of Chinese Buddhists in the Eighteenth Century",
+     "authors": [
+      "Hongyu Wu"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Gender & History",
+     "cited": 3,
+     "doi": "10.1111/1468-0424.12451",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3009967788"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Bodhisattva Precepts and Their Compatibility with Vinaya in Contemporary Chinese Buddhism: A Cross-Straits Comparative Study",
+     "authors": [
+      "Tzu-Lung Chiu"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "MPG.PuRe (Max Planck Society)",
+     "cited": 3,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2993646858"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Chen Hailiang’s Vision of Buddhist Family Life: A Preliminary Study",
+     "authors": [
+      "Paul R. Katz"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 3,
+     "doi": "10.1353/jcr.2019.0001",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2962467798"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "The Practices and Networks of Female Yiguan Dao Members in Buddhist Thailand",
+     "authors": [
+      "Lin Yu-Sheng"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Nova Religio The Journal of Alternative and Emergent Religions",
+     "cited": 3,
+     "doi": "10.1525/nr.2019.22.3.84",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2912148374"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism and Climate Change: Propagating the Bodhisattva Ethic of Compassion for People and the Planet",
+     "authors": [
+      "Teresa Zimmerman-Liu"
+     ],
+     "year": 2019,
+     "type": "dissertation",
+     "venue": "eScholarship (California Digital Library)",
+     "cited": 3,
+     "doi": "",
+     "oaUrl": "https://escholarship.org/uc/item/2zm9t8sk",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3199106700"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Pure Land and the Environmental Movement in Humanistic Buddhism",
+     "authors": [
+      "William Yau-nang Ng"
+     ],
+     "year": 2018,
+     "type": "book-chapter",
+     "venue": "Dao companions to Chinese philosophy",
+     "cited": 3,
+     "doi": "10.1007/978-90-481-2939-3_18",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2911311655"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Fasting in Hinduism, Buddhism and Islam: A Comparative Study",
+     "authors": [
+      "Md. Thowhidul Islam"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "MAQOLAT Journal of Islamic Studies",
+     "cited": 2,
+     "doi": "10.58355/maqolat.v2i3.74",
+     "oaUrl": "https://maqolat.com/index.php/i/article/download/74/35",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4402341330"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "The Making of Buddhism in Modern Indonesia",
+     "authors": [
+      "Yulianti"
+     ],
+     "year": 2024,
+     "type": "book",
+     "venue": "Leiden University Press eBooks",
+     "cited": 2,
+     "doi": "10.24415/9789087283940",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4399491938"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Becoming Guanyin: Artistic Devotion of Buddhist Women in Late Imperial China",
+     "authors": [
+      "Megan Bryson"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "The Journal of Asian Studies",
+     "cited": 2,
+     "doi": "10.1215/00219118-10872459",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4389232724"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Buddhist Women and Female Buddhist Education in the South China Sea: A History of the Singapore Girls’ Buddhist Institute",
+     "authors": [
+      "Ruo Lin"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 2,
+     "doi": "10.3390/rel14030392",
+     "oaUrl": "https://www.mdpi.com/2077-1444/14/3/392/pdf?version=1678924509",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4324385652"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Vernacular Modernism: Humanistic Buddhism from Below in Bade, Taiwan",
+     "authors": [
+      "Justin R. Ritzinger"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 2,
+     "doi": "10.1353/jcr.2023.a899644",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4381893247"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Trajectories of East Asian Buddhism in South Africa: a comparative perspective",
+     "authors": [
+      "Ugo Dessì"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Journal of Contemporary Religion",
+     "cited": 2,
+     "doi": "10.1080/13537903.2022.2124684",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4304787168"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Engaged Buddhism, the Six Pāramitās, and Yuanmen’s Collective Social-Charity Practices",
+     "authors": [
+      "Su-Chen Wu"
+     ],
+     "year": 2022,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 2,
+     "doi": "10.1007/978-981-19-0684-8_18",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4292621725"
+    },
+    {
+     "topic": "佛教與性別",
+     "title": "Becoming Guanyin: Artistic Devotion of Buddhist Women in Late Imperial China, written by Yuhang Li",
+     "authors": [
+      "Julia K. Murray"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "NAN Nü",
+     "cited": 2,
+     "doi": "10.1163/15685268-02310017",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3195357390"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Thích Nhất Hạnh in the Context of the Modern Development of Vietnamese Buddhism",
+     "authors": [
+      "Alexander Soucy"
+     ],
+     "year": 2021,
+     "type": "reference-entry",
+     "venue": "Oxford Research Encyclopedia of Religion",
+     "cited": 2,
+     "doi": "10.1093/acrefore/9780199340378.013.944",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3212225425"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "The feminist Buddha : Buddhist nuns in contemporary Chengdu and their nuanced approach to progress, agency, and leadership",
+     "authors": [
+      "Fink, Sarah"
+     ],
+     "year": 2020,
+     "type": "dissertation",
+     "venue": "cIRcle (University of British Columbia)",
+     "cited": 2,
+     "doi": "10.14288/1.0392964",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3082836668"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Masculinity and Femininity: Comparing and Contrasting Two Modern Buddhist Movements in Taiwan, Foguang Shan and Ci Ji",
+     "authors": [
+      "Yu-Shuang Yao",
+      "Academic Publishing"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Alternative Spirituality and Religion Review",
+     "cited": 2,
+     "doi": "10.5840/asrr202011167",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3095712966"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Theravāda Buddhism",
+     "authors": [
+      "Sven Bretfeld"
+     ],
+     "year": 2019,
+     "type": "reference-entry",
+     "venue": "Oxford Research Encyclopedia of Religion",
+     "cited": 2,
+     "doi": "10.1093/acrefore/9780199340378.013.561",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4230503505"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "The Values of Ordination: the bhikkhuni, gender, and Thai society",
+     "authors": [
+      "Kakanang Yavaprabhas"
+     ],
+     "year": 2018,
+     "type": "dissertation",
+     "venue": "UCL Discovery (University College London)",
+     "cited": 2,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2899172399"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "A Study on the Literacy Rate of Buddhist Sangha in the Tang Dynasty",
+     "authors": [
+      "Shaowei Wu"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 1,
+     "doi": "10.3390/rel15030306",
+     "oaUrl": "https://www.mdpi.com/2077-1444/15/3/306/pdf?version=1709198562",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4392285271"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "From laywoman to scholarly nun: A Study on Historical Aspect of Female Buddhists in 19th Century Singapore",
+     "authors": [
+      "Guan Thye Hue",
+      "Juhn Khai Klan Choo",
+      "Weikai Dong",
+      "Kenneth Dean",
+      "Wei Kai Kui",
+      "En Yu Yik"
+     ],
+     "year": 2024,
+     "type": "preprint",
+     "venue": "",
+     "cited": 1,
+     "doi": "10.33774/coe-2024-4mgzs",
+     "oaUrl": "https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/669e7083c9c6a5c07a802b68/original/from-laywoman-to-scholarly-nun-a-study-on-historical-aspect-of-female-buddhists-in-19th-century-singapore.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4401666985"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "A Comparative Perspective of “Engaged Buddhism” and “Renjian Fojiao” (“Humanistic Buddhism”) in Chinese Speaking Discourse: Exclusivism, Inclusivism, or Pragmatism?",
+     "authors": [
+      "Carsten Krause"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 1,
+     "doi": "10.3390/rel15111306",
+     "oaUrl": "https://www.mdpi.com/2077-1444/15/11/1306/pdf?version=1729846389",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4403764287"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Physical Exercise and Sporting Activities in Contemporary Taiwanese and Mainland Chinese Buddhist Monasteries",
+     "authors": [
+      "Tzu-Lung Chiu",
+      "Ann Heirman"
+     ],
+     "year": 2023,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 1,
+     "doi": "10.1163/9789004536876_011",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4379911992"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "Gender Conflicts in Contemporary Korean Buddhism",
+     "authors": [
+      "Eun-su Cho"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 1,
+     "doi": "10.3390/rel14020242",
+     "oaUrl": "https://www.mdpi.com/2077-1444/14/2/242/pdf?version=1676260597",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4320496583"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Family Ethics in Taixu's Humanistic Buddhism: The Wisdom of No-Self and the Action of the Bodhisattva",
+     "authors": [
+      "Wei Wu"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 1,
+     "doi": "10.1353/jcr.2023.a913658",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4389225837"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "A Case of Chinese Commercial Spirit: Humanistic Buddhism in Taiwan, USA and China",
+     "authors": [
+      "Lung-Tan Lu"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "International Journal of Social Science and Human Research",
+     "cited": 1,
+     "doi": "10.47191/ijsshr/v6-i6-07",
+     "oaUrl": "https://ijsshr.in/v6i6/Doc/7.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4379383749"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism: Noble Eightfold Path and Eight Pagodas",
+     "authors": [
+      "Lung-Tan Lu"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY RESEARCH AND ANALYSIS",
+     "cited": 1,
+     "doi": "10.47191/ijmra/v6-i5-22",
+     "oaUrl": "https://www.ijmra.in/v6i5/Doc/22.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4376503586"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Master Hsing Yun: The Pioneering Practitioner of Contemporary Humanistic Buddhism (1927 – 2023)",
+     "authors": [
+      "Lung-Tan Lu"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "International Journal of Social Science and Human Research",
+     "cited": 1,
+     "doi": "10.47191/ijsshr/v6-i2-59",
+     "oaUrl": "https://ijsshr.in/v6i2/Doc/59.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4321500088"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Chinese Buddhism Today: Conservatism, Modernism, Syncretism and Enjoying Life on the Buddha’s Light Mountain",
+     "authors": [
+      "Yu-Shuang Yao",
+      "Richard Gombrich"
+     ],
+     "year": 2022,
+     "type": "book",
+     "venue": "",
+     "cited": 1,
+     "doi": "10.1558/isbn.9781800502338",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4315745368"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Pro-Life or Pro-Choice? Humanistic Buddhists’ Voices Surrounding Abortion in Contemporary Taiwan",
+     "authors": [
+      "Grace Cheng-Ying Lin"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "International Journal of Religion",
+     "cited": 1,
+     "doi": "10.33182/ijor.v2i1.1107",
+     "oaUrl": "https://journals.tplondon.com/ijor/article/download/1107/1239",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3160110705"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Under the Gaze of the Buddha Mega-Statue: Commodification and Humanistic Buddhism in Fo Guang Shan",
+     "authors": [
+      "Edward Irons"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Journal of the Oxford Centre for Buddhist Studies",
+     "cited": 1,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3102973429"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Leaving Buddhism",
+     "authors": [
+      "Monica Lindberg Falk"
+     ],
+     "year": 2019,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 1,
+     "doi": "10.1163/9789004331471_004",
+     "oaUrl": "https://brill.com/downloadpdf/book/edcoll/9789004331471/BP000004.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4249653386"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "SPECIFIC OF BUDDHISM TRANSMISSION IN THE INTERNATIONAL WOMEN'S BUDDHIST MOVEMENT",
+     "authors": [
+      "L. B. Сhetyrova"
+     ],
+     "year": 2018,
+     "type": "book-chapter",
+     "venue": "Buryat Scientific Center of SB RAS Press eBooks",
+     "cited": 1,
+     "doi": "10.31554/978-5-7925-0530-8-2018-202-231",
+     "oaUrl": "http://publisher.bscnet.ru/wp-content/uploads/2018/12/Особенности-трансляции....pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2905661141"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Exploring the role of Buddhist monks/nuns’ engagement in community development as catalysts for social change and sustainable development in Lao People’s Democratic Republic : a case study of Buddhism for Development Project at Ban Bungsanthueng, Nongbok District, Khammouane Province",
+     "authors": [
+      "Toung Eh. Synuanchanh"
+     ],
+     "year": 2018,
+     "type": "dissertation",
+     "venue": "Unitec Research Bank (Unitec Institute of Technology)",
+     "cited": 1,
+     "doi": "",
+     "oaUrl": "https://hdl.handle.net/10652/4499",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2922858278"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Gender and the Vinaya: Role of Bhikkhuni Sangha in Buddhist Monastic Law",
+     "authors": [
+      "Srida Jha"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Dhammacakka Journal of Buddhism and Applied Buddhism",
+     "cited": 0,
+     "doi": "10.3126/djbab.v2i1.99118",
+     "oaUrl": "https://www.nepjol.info/index.php/djbab/article/download/99118/74968",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7204909811"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Labor of the Bhikkhuni Sangha: Communal Work as Female Buddhist Practice",
+     "authors": [
+      "Gisun Kang"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 0,
+     "doi": "10.3390/rel17080979",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7203661748"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "The Eight Garudhammas and the Status of the Bhikṣuṇī Order in Northern Buddhism: From the Dharmaguptaka Vinaya to the Mahāyāna Ideal of Female Buddhahood",
+     "authors": [
+      "Le Hong Linh"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "International Journal of Research Publication and Reviews",
+     "cited": 0,
+     "doi": "10.55248/gengpi.07.0826.2403",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7203568892"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Women, Gender, and Buddhism in Japanese History",
+     "authors": [
+      "Lori Meeks"
+     ],
+     "year": 2026,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.4324/9781003756736-3",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7171526736"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Daily Practice in Chinese Buddhist Monasteries",
+     "authors": [
+      "Kai Sheng"
+     ],
+     "year": 2026,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.1007/978-981-95-9245-6_2",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7162322801"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "The Supreme Court of Sri Lanka’s decision of 16 June 2025: a milestone in the history of buddhism or a legal error?",
+     "authors": [
+      "Vladislav Tolstykh"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Sravnitel noe konstitucionnoe obozrenie",
+     "cited": 0,
+     "doi": "10.21128/1812-7126-2026-2-184-198",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7168268268"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Modern Transformation of the Pure Land Sect A Comparative Study of the Doctrinal Classification Thought of Master Yinguang and Taixu's \"Humanistic Buddhism\"",
+     "authors": [
+      "Miaohong Shi",
+      "Fachan Shi",
+      "Qingyuan Shi",
+      "Nengcheng Shi",
+      "Huibing Shi"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Asia Pacific Buddhist Studies",
+     "cited": 0,
+     "doi": "10.62177/apbs.v1i1.1350",
+     "oaUrl": "https://ojs.apspublisher.com/index.php/apbs/article/download/1350/1120",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7162249567"
+    },
+    {
+     "topic": "佛教動物倫理與社運",
+     "title": "Xingyun’s Buddhist Environmentalism in the Context of The Contemporary Discourse on Fangsheng 放生",
+     "authors": [
+      "Janka Balázs"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Távol-keleti Tanulmányok",
+     "cited": 0,
+     "doi": "10.38144/tkt.2026.1.3",
+     "oaUrl": "https://ojs.elte.hu/tkt/article/download/12232/10275",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7119028585"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Understanding Female Ordination and the Status of Bhikkhunis in Thai Society Through a Sociological Perspective",
+     "authors": [
+      "Tristan Aidan Pennell"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Journal of Arts and Thai Studies",
+     "cited": 0,
+     "doi": "10.69598/artssu.2025.5323.",
+     "oaUrl": "https://so08.tci-thaijo.org/index.php/artssu/article/download/5323/4371",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7117570627"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Legal recognition of Bhikkhunis in Sri Lanka - a case study of Ven. Welimada Dhammadinna Bhikkhuni v. department of registration of persons and others",
+     "authors": [
+      "T. T. Edirisinghe"
+     ],
+     "year": 2025,
+     "type": "conference-abstract",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.65646/3rc20dme2i0981",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7160851981"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "On the Practical Philosophy of the Nuns’ Buddhist Academy at Mount Wutai Through “One-Week Intensive Buddha Retreats”",
+     "authors": [
+      "Yong Li",
+      "Yi Zhang",
+      "Jing Wang"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 0,
+     "doi": "10.3390/rel16101267",
+     "oaUrl": "https://www.mdpi.com/2077-1444/16/10/1267/pdf?version=1759456276",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4414805793"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "The Changing Nature of Buddhism",
+     "authors": [
+      "Jessica Huset Tilton"
+     ],
+     "year": 2025,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.4324/9781003635338-6",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4413427927"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Child Ordination in South and Southeast Asian Buddhism",
+     "authors": [
+      "Liz Wilson"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Religion Compass",
+     "cited": 0,
+     "doi": "10.1111/rec3.70028",
+     "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rec3.70028",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4413419160"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Women in Buddhism and Hinduism: A feminist perspective comparative perspectives on gender roles and spirituality",
+     "authors": [
+      "Bhupendra Pratap Sabar",
+      "Rajani Biswal"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "International Journal of History",
+     "cited": 0,
+     "doi": "10.22271/27069109.2025.v7.i1a.343",
+     "oaUrl": "https://www.historyjournal.net/article/343/7-1-4-224.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4406676526"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Buddhist Classics AI Translation Series Vol.14:Pāli Canon in Tibetan, English, Japanese, Korean Version 1.0",
+     "authors": [
+      "Buddhist Classics AI Translation Series"
+     ],
+     "year": 2025,
+     "type": "dataset",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.17532220",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7104257065"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Buddhist Classics AI Translation Series Vol.14:Pāli Canon in Tibetan, English, Japanese, Korean Version 1.0",
+     "authors": [
+      "Buddhist Classics AI Translation Series"
+     ],
+     "year": 2025,
+     "type": "dataset",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.17532219",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7104287317"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Religious branches of Buddhism: Humanistic Buddhism in Taiwan (China)",
+     "authors": [
+      "G. Adilzhan",
+      "N. Mukan",
+      "U. Kamysbek"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Eurasian Journal of Religious Studies",
+     "cited": 0,
+     "doi": "10.26577//ejrs20254228",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4411578203"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism in Malaysia",
+     "authors": [
+      "Ma Ying",
+      "Lee Kean Yew",
+      "Ching Thing Ho"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Indonesia and the Malay World",
+     "cited": 0,
+     "doi": "10.1080/13639811.2025.2472557",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4408290638"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Non-Duality of Principle and Phenomena and Integration of Doctrinal Teaching and Chan Practice: Formal Continuity of Chinese Buddhist Ontology and Linguistic Conception in Chinese Buddhist Animation in Fujian and Taiwan",
+     "authors": [
+      "Shuchao Chen",
+      "Wenyao Yu",
+      "Mengyi Chen"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Trans/Form/Ação",
+     "cited": 0,
+     "doi": "10.1590/0101-3173.2025.v48.n5.e025234",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7125819175"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Women in Spiritual Practice : Role and Status in Buddhist and Jain Traditions",
+     "authors": [
+      "rajesh, rai"
+     ],
+     "year": 2024,
+     "type": "peer-review",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.19906218",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7158782184"
+    },
+    {
+     "topic": "八敬法與比丘尼戒",
+     "title": "Women in Spiritual Practice : Role and Status in Buddhist and Jain Traditions",
+     "authors": [
+      "rajesh, rai"
+     ],
+     "year": 2024,
+     "type": "peer-review",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.19906217",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7158869926"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "The Buddhist Revolution and Humanistic Buddhism of Taixu in Modern China",
+     "authors": [
+      "대한불교조계종 교육아사리",
+      "Myung-Ho (Ven. Beop-Ji) Kim"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Journal of Seon Studies",
+     "cited": 0,
+     "doi": "10.22253/jss.2024.12.69.229",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4407728135"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Reorientating illusory convention in renewing the tradition: Taixu and Fazun’s humanistic Buddhism",
+     "authors": [
+      "Jingjing Li"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Studies in Chinese Religions",
+     "cited": 0,
+     "doi": "10.1080/23729988.2025.2480988",
+     "oaUrl": "https://www.tandfonline.com/doi/pdf/10.1080/23729988.2025.2480988?needAccess=true",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4409336407"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism: Sammà-sati, Mindfulness, and Zhèngniàn",
+     "authors": [
+      "Lung-Tan Lu"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "International Journal of Social Science and Human Research",
+     "cited": 0,
+     "doi": "10.47191/ijsshr/v7-i05-106",
+     "oaUrl": "https://ijsshr.in/v7i5/Doc/106.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4399188358"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Liberation Buddhology for Postracial Worldmaking",
+     "authors": [
+      "Jessica X. Zu"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Religious Studies Review",
+     "cited": 0,
+     "doi": "10.1111/rsr.17072",
+     "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rsr.17072",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4396558320"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "RESEARCH ON BUDDHISM IN CHINA",
+     "authors": [
+      "A.K. Habdaeva"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "BUDDHIST STUDIES",
+     "cited": 0,
+     "doi": "10.30792/2949-5768-2024-8-47-55",
+     "oaUrl": "https://doi.org/10.30792/2949-5768-2024-8-47-55",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4405822814"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Jiaohua through Humanistic Buddhism: Integrating Transcendence with Worldly Matters",
+     "authors": [
+      "Yu Sang"
+     ],
+     "year": 2024,
+     "type": "book-chapter",
+     "venue": "Chinese Culture",
+     "cited": 0,
+     "doi": "10.1007/978-981-97-9487-4_4",
+     "oaUrl": "https://link.springer.com/content/pdf/10.1007/978-981-97-9487-4_4.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4407146783"
+    },
+    {
+     "topic": "昭慧與弘誓",
+     "title": "Engaging Animals in Taiwanese Buddhism: Two Case Studies",
+     "authors": [
+      "Ling Han",
+      "Chengpang Lee"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Review of Religion and Chinese Society",
+     "cited": 0,
+     "doi": "10.1163/22143955-12340025",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4405037205"
+    },
+    {
+     "topic": "佛教動物倫理與社運",
+     "title": "P.558: Buddhist value-guided organ procurement organization: From compassionate giving to altruism.",
+     "authors": [
+      "Hui-Ling Lai",
+      "Chuan-Hsiu Tsai",
+      "Ming-Che Lee",
+      "Ming-Hui Shih"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Transplantation",
+     "cited": 0,
+     "doi": "10.1097/01.tp.0001068904.51989.2f",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4402799115"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "How Taiwanese Buddhism Responds to the Feminist Movement in Modern Taiwan",
+     "authors": [
+      "Yulu Tian"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Communications in Humanities Research",
+     "cited": 0,
+     "doi": "10.54254/2753-7064/6/20230171",
+     "oaUrl": "https://www.ewadirect.com/proceedings/chr/article/view/4136/pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4386689100"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "A Case of Chinese Commercial Spirit: Humanistic Buddhism in Taiwan, USA and China",
+     "authors": [
+      "Lung-Tan Lu,"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.8001268",
+     "oaUrl": "https://zenodo.org/record/8001268",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4379256116"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism: Noble Eightfold Path and Eight Pagodas",
+     "authors": [
+      "Lung-Tan Lu"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.7928875",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4376209542"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "The reconstruction of Buddhist belief in the modern era, via master Taixu’s humanistic Buddhist thought",
+     "authors": [
+      "Yan Shengying"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "OOO Zhurnal Voprosy Istorii",
+     "cited": 0,
+     "doi": "10.31166/voprosyistorii202304statyi63",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4391858710"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Master Hsing Yun: The Pioneering Practitioner of Contemporary Humanistic Buddhism (1927 – 2023)",
+     "authors": [
+      "Lung-Tan Lu,"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "cited": 0,
+     "doi": "10.5281/zenodo.7659985",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4321475900"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Humanistic Buddhism in China: Contemporary Interpretations and Practices",
+     "authors": [
+      "Li, Yang"
+     ],
+     "year": 2023,
+     "type": "dataset",
+     "venue": "NRCT Data Center",
+     "cited": 0,
+     "doi": "10.14457/rmutk.the.2023.26",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7106131528"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "Gender Roles in Transmitting Vietnamese Buddhism to Taiwan: Two Case-studies of Vietnamese Buddhist Nuns",
+     "authors": [
+      "Wei-Yi Cheng"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Journal of Global Buddhism",
+     "cited": 0,
+     "doi": "10.26034/lu.jgb.2022.1990",
+     "oaUrl": "https://www.globalbuddhism.org/article/download/1990/2804",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4285022625"
+    },
+    {
+     "topic": "人間佛教",
+     "title": "Chinese Buddhism Today: Conservatism, Modernism, Syncretism and Enjoying Life on the Buddha’s Light Mountain",
+     "authors": [
+      "Yu-Shuang Yao",
+      "Richard Gombrich"
+     ],
+     "year": 2022,
+     "type": "book",
+     "venue": "Equinox Publishing eBooks",
+     "cited": 0,
+     "doi": "10.1558/isbn.9781800502314",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4283703152"
+    },
+    {
+     "topic": "佛教動物倫理與社運",
+     "title": "A Study on the Yoga Flaming Mouth Feeding Ritual of Taiwanese Ritual Sangha",
+     "authors": [
+      "陳省身"
+     ],
+     "year": 2020,
+     "type": "dissertation",
+     "venue": "Chinese Culture University Repository",
+     "cited": 0,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7112533252"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "Living Vinaya in the United States: Emerging Female Monastic Sanghas in the West",
+     "authors": [
+      "Ching-ning Wang"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 0,
+     "doi": "10.3390/rel10040248",
+     "oaUrl": "https://www.mdpi.com/2077-1444/10/4/248/pdf?version=1554371860",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2935187533"
+    },
+    {
+     "topic": "佛教動物倫理與社運",
+     "title": "Buddhism and Chinese Culture",
+     "authors": [
+      "Scott Pacey"
+     ],
+     "year": 2019,
+     "type": "other",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.1017/9789048544424.005",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3129068319"
+    },
+    {
+     "topic": "台灣比丘尼與教團",
+     "title": "Buddha Realms",
+     "authors": [
+      "Charles J. Greenberg"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Educational Media Reviews Online",
+     "cited": 0,
+     "doi": "10.59236/emro.v4i12a1704",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7203794962"
+    }
+   ]
+  },
+  "bachelor-evangelical": {
+   "count": 77,
+   "oa": 28,
+   "since": "2018-01-01",
+   "items": [
+    {
+     "topic": "華人福音派",
+     "title": "A History of Christian Conversion",
+     "authors": [
+      "David W. Kling"
+     ],
+     "year": 2020,
+     "type": "book",
+     "venue": "",
+     "cited": 62,
+     "doi": "10.1093/oso/9780195320923.001.0001",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3081427284"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "A Pantheology of Pandemic: Sex, Race, Nature, and the Virus",
+     "authors": [
+      "Mary-Jane Rubenstein"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "American Journal of Theology & Philosophy",
+     "cited": 22,
+     "doi": "10.5406/21564795.43.1.01",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4312982583"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Christianity as Model and Analogue in the Formation of the ‘Humanistic’ Buddhism of Tài X? and Hs?ng Yún",
+     "authors": [
+      "Yu-Shuang Yao",
+      "Richard Gombrich"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Buddhist Studies Review",
+     "cited": 22,
+     "doi": "10.1558/bsrv.35392",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2790563041"
+    },
+    {
+     "topic": "靈恩與五旬節運動",
+     "title": "China and the True Jesus: Charisma and Organization in a Chinese Christian Church",
+     "authors": [
+      "Mark McLeister"
+     ],
+     "year": 2020,
+     "type": "book-review",
+     "venue": "The Asia Pacific Journal of Anthropology",
+     "cited": 19,
+     "doi": "10.1080/14442213.2020.1774968",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3035435506"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Christians in the City of Hong Kong",
+     "authors": [
+      "Tobias Brandner"
+     ],
+     "year": 2023,
+     "type": "book",
+     "venue": "Bloomsbury Publishing Plc eBooks",
+     "cited": 11,
+     "doi": "10.5040/9781350269125",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4386627899"
+    },
+    {
+     "topic": "台灣宗教與政治",
+     "title": "Is Religiosity Related to Environmentally-Protective Behaviors Among Taiwanese Christians? A Structural Equation Modeling Study",
+     "authors": [
+      "Wei-Ta Fang",
+      "Ulas Kaplan",
+      "Yi-Te Chiang",
+      "Chun-Teng Cheng"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Sustainability",
+     "cited": 10,
+     "doi": "10.3390/su12218999",
+     "oaUrl": "https://www.mdpi.com/2071-1050/12/21/8999/pdf?version=1603976693",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3095364860"
+    },
+    {
+     "topic": "台灣宗教與政治",
+     "title": "Christianity in East and Southeast Asia",
+     "authors": [
+      "Kenneth R. Ross",
+      "Francis Alvarez",
+      "Todd M. Johnson"
+     ],
+     "year": 2020,
+     "type": "book",
+     "venue": "Edinburgh University Press eBooks",
+     "cited": 8,
+     "doi": "10.1515/9781474451628",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3158590034"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "“Serving the Lord”: Christianity, Work, and Social Engagement in China",
+     "authors": [
+      "Francis K. G. Lim"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 7,
+     "doi": "10.3390/rel10030196",
+     "oaUrl": "https://www.mdpi.com/2077-1444/10/3/196/pdf?version=1552564500",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2921299966"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Merchants and missionaries: Chinese evangelical networks and the transnational resacralization of European urban spaces",
+     "authors": [
+      "Nanlai Cao"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Global Networks",
+     "cited": 6,
+     "doi": "10.1111/glob.12385",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4284712721"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Crafting Aboriginal Nations in Taiwan: The Presbyterian Church and the Imagination of the Aboriginal National Subject",
+     "authors": [
+      "Ek-hong Ljavakaw Sia"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Asian Studies Review",
+     "cited": 6,
+     "doi": "10.1080/10357823.2018.1444732",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2789656536"
+    },
+    {
+     "topic": "台灣宗教與政治",
+     "title": "Christian Social Activism and Rule of Law in Chinese Societies",
+     "authors": [
+      "Chris White",
+      "Fenggang Yang"
+     ],
+     "year": 2021,
+     "type": "book",
+     "venue": "Lexington Books",
+     "cited": 5,
+     "doi": "10.5771/9781611463248",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4401088900"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Taiwan under Martial Law and Presbyterian Responses",
+     "authors": [
+      "Jonathan A. Seitz"
+     ],
+     "year": 2021,
+     "type": "other",
+     "venue": "",
+     "cited": 4,
+     "doi": "10.5040/9781611463989.ch-2",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4410689167"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "North American experience and British missionary encounters in Africa and the Pacific, c. 1800–50",
+     "authors": [
+      "Andrew Porter"
+     ],
+     "year": 2020,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 4,
+     "doi": "10.4324/9781003076711-17",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3082958942"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Reporting Christian Missions in the Eighteenth Century: Communication, Culture of Knowledge and Regular Publication in a Cross-Confessional Perspective",
+     "authors": [
+      "Jenna M. Gibbs"
+     ],
+     "year": 2019,
+     "type": "article",
+     "venue": "Journal of Moravian History",
+     "cited": 4,
+     "doi": "10.5325/jmorahist.19.1.0123",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4237343929"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Missionary Primitivism and Chinese Modernity",
+     "authors": [
+      "David Woodbridge"
+     ],
+     "year": 2018,
+     "type": "book",
+     "venue": "",
+     "cited": 4,
+     "doi": "10.1163/9789004376106",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W591230799"
+    },
+    {
+     "topic": "台灣宗教與政治",
+     "title": "Internal orientalism on Taiwan: the ROC's Mongolian and Tibetan Affairs Commission and its portrayal of Tibetan Buddhism",
+     "authors": [
+      "Alessandra Ferrer"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Comparative Education",
+     "cited": 3,
+     "doi": "10.1080/03050068.2024.2301825",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4390943182"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Touched by Love: Spiritual Experience in Chinese Christian Conversion Narratives",
+     "authors": [
+      "Glen G. Scorgie",
+      "Kate Scorgie",
+      "Alexander Chow",
+      "Nicholas Hsieh"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Journal of Spiritual Formation and Soul Care",
+     "cited": 3,
+     "doi": "10.1177/19397909221074669",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4214811566"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Thirty Years of Mission in Taiwan: The Case of Presbyterian Missionary George Leslie Mackay",
+     "authors": [
+      "Magdaléna Rychetská"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 3,
+     "doi": "10.3390/rel12030190",
+     "oaUrl": "https://www.mdpi.com/2077-1444/12/3/190/pdf?version=1616733269",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3137740447"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Religious pursuits? Chinese international students encountering Christianity in Britain",
+     "authors": [
+      "Lin Ma"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Journal of Contemporary Religion",
+     "cited": 3,
+     "doi": "10.1080/13537903.2021.1982206",
+     "oaUrl": "https://research-information.bris.ac.uk/files/307279907/Ma_2021_JCR_Religious_Pursuits.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3132503350"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "'The Missing Link': The Recruitment of Women Missionaries in some English Evangelical Missionary Societies in the Nineteenth Century",
+     "authors": [
+      "Peter Williams"
+     ],
+     "year": 2021,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 3,
+     "doi": "10.4324/9781003135128-4",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3130730244"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Opening the Fifth Seal Catholic Martyrs and Forces of Religious Competition",
+     "authors": [
+      "Rachel M. McCleary",
+      "Robert J. Barro"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Journal of Religion and Demography",
+     "cited": 3,
+     "doi": "10.1163/2589742x-12347102",
+     "oaUrl": "https://www.econstor.eu/bitstream/10419/280614/1/aei-ewp2020-01.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3028951354"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Renegotiating religious transnationalism: fractures in transnational Chinese evangelicalism",
+     "authors": [
+      "JONATHAN TAM"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Global Networks",
+     "cited": 3,
+     "doi": "10.1111/glob.12194",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2800413441"
+    },
+    {
+     "topic": "台灣宗教與政治",
+     "title": "The Third Globalization of Catholicism in Greater China",
+     "authors": [
+      "Richard Madsen"
+     ],
+     "year": 2018,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 3,
+     "doi": "10.1007/978-3-319-89369-3_6",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2811484004"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Transformation and Commonality of Spatial Organization of Christian Church by Social Network Analysis",
+     "authors": [
+      "Yi-Chun Huang",
+      "Yun-Shang Chiou"
+     ],
+     "year": 2018,
+     "type": "conference-paper",
+     "venue": "",
+     "cited": 3,
+     "doi": "10.1109/asonam.2018.8508300",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2898213505"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Practical Christianity in Practice: Chinese Youth Culture and the Scouting Movement as Seen by British Missionaries at the Griffith John College, Hankou, 1915–1925",
+     "authors": [
+      "Peter Kwok-Fai Law"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "The Journal of Imperial & Commonwealth History",
+     "cited": 2,
+     "doi": "10.1080/03086534.2023.2268324",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4387640014"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Second-Generation Chinese Evangelical Use of the Bible in Identity Discourse in North America",
+     "authors": [
+      "Timothy Tseng"
+     ],
+     "year": 2023,
+     "type": "book-chapter",
+     "venue": "SBL Press eBooks",
+     "cited": 2,
+     "doi": "10.2307/jj.3816092.18",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4380081933"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "The effect of misunderstanding the St Matthew evangelical message on academic medical practice: The Matthew effect",
+     "authors": [
+      "Donato F. Altomare",
+      "Agnese Dezi",
+      "Arcangelo Picciariello"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "European Journal of Clinical Investigation",
+     "cited": 2,
+     "doi": "10.1111/eci.14005",
+     "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/eci.14005",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4364352058"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Two Approaches by Dutch Missionaries to Communicating the Gospel in Seventeenth-Century Taiwan",
+     "authors": [
+      "Christopher Joby"
+     ],
+     "year": 2023,
+     "type": "article",
+     "venue": "Mission Studies",
+     "cited": 2,
+     "doi": "10.1163/15733831-12341885",
+     "oaUrl": "https://brill.com/downloadpdf/journals/mist/40/1/article-p22_3.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4387383852"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Bringing Chinese Christianity to Southeast Asia: Constructing Transnational Chinese Evangelicalism across China and Southeast Asia, 1930s to 1960s",
+     "authors": [
+      "Daowei (Joshua) Sim"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 2,
+     "doi": "10.3390/rel13090773",
+     "oaUrl": "https://www.mdpi.com/2077-1444/13/9/773/pdf?version=1661432855",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4293222346"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "English teaching as an evangelical tool for two-by-two missionaries",
+     "authors": [
+      "Jennifer Wargo"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "English Teaching Practice & Critique",
+     "cited": 2,
+     "doi": "10.1108/etpc-09-2021-0116",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4224278763"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "COVID-19 Knowledge, attitudes, and practices in the community of the Evangelical University of Cameroon",
+     "authors": [
+      "TALOM Béatrice METCHUM",
+      "TALOM  Alaric TAMUEDJOUN",
+      "Aimé Cesaire MOMO",
+      "WONDEU A. Laure DEUTOU",
+      "Huges Bertrand MEDJEUMOU",
+      "NGANTCHOM Becky NJOKO"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Special Journal of Public Health Nutrition & Dietetics",
+     "cited": 2,
+     "doi": "10.61915/pnd.552146",
+     "oaUrl": "https://sjphealth.spparenet.org/wp-content/uploads/2022/01/01020201922-.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4392621725"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Protestant Anti-Imperialism and the Vindication of the Boxer Rebellion, 1899–1901",
+     "authors": [
+      "Jeffrey Rosario"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Diplomatic History",
+     "cited": 2,
+     "doi": "10.1093/dh/dhab102",
+     "oaUrl": "https://academic.oup.com/dh/article-pdf/46/2/349/43191990/dhab102.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4200262549"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Cecil Polhill: Missionary, Gentleman and Revivalist",
+     "authors": [
+      "John Usher"
+     ],
+     "year": 2020,
+     "type": "book",
+     "venue": "",
+     "cited": 2,
+     "doi": "10.1163/9789004435049",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3014935848"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "The Catholic Four-Character Classic (Tianzhu shengjiao sizi jingwen 天主聖教四字經文): A Confucian Pattern to Spread a Foreign Faith in Late Ming China",
+     "authors": [
+      "Menegon, Eugenio"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "Università del Salento",
+     "cited": 2,
+     "doi": "10.1285/i20380313v30p157",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3171096578"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Encountering China: the evolution of Timothy Richard's missionary thought (1870-1891)",
+     "authors": [
+      "Daryl R. Ireland"
+     ],
+     "year": 2019,
+     "type": "book-review",
+     "venue": "OpenBU (Boston University)",
+     "cited": 2,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3017682064"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "We believe in life before death: the Christian aid movement in Taiwan, 1970-78",
+     "authors": [
+      "Niki Alsford"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Journal of Historical Archaeology & Anthropological Sciences",
+     "cited": 2,
+     "doi": "10.15406/jhaas.2018.03.00098",
+     "oaUrl": "https://medcraveonline.com/JHAAS/JHAAS-03-00098.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2891553738"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Getting saved from illegality and unbelief? Religious asylum, migration dreams, and Christian conversion",
+     "authors": [
+      "Jaeeun Kim"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Migration Studies",
+     "cited": 1,
+     "doi": "10.1093/migration/mnaf041",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4413962156"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "The Emplantation of Catholicism in Pre-modern Korea",
+     "authors": [
+      "Kevin N. Cawley"
+     ],
+     "year": 2025,
+     "type": "book",
+     "venue": "Bloomsbury Publishing Plc eBooks",
+     "cited": 1,
+     "doi": "10.5040/9781350236042",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4414775276"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "A Concert in a Vanished Church: Contextualizing Peace Island's Auditory History with Modern Technology",
+     "authors": [
+      "Tak-Cheung Hui",
+      "Yu-Chia Kuo"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+     "cited": 1,
+     "doi": "10.1145/3664218",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4400813905"
+    },
+    {
+     "topic": "華人福音派",
+     "title": "Drawing the Jewish Propter Nos: Nineteenth-Century Missions and the Making of Race",
+     "authors": [
+      "Rachel Baron-Bloch"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Comparative Studies in Society and History",
+     "cited": 1,
+     "doi": "10.1017/s0010417524000227",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4405194451"
+    },
+    {
+     "topic": "長老教會",
+     "title": "The Presbyterian Church in Taiwan and Its Changing Narrative on Human Rights",
+     "authors": [
+      "Magdaléna Rychetská"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Review of Religion and Chinese Society",
+     "cited": 1,
+     "doi": "10.1163/22143955-08020014",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4214823139"
+    },
+    {
+     "topic": "長老教會",
+     "title": "To Unite as One Body: The Presbyterians and Changing Identities in Taiwan",
+     "authors": [
+      "Magdaléna Rychetská"
+     ],
+     "year": 2021,
+     "type": "other",
+     "venue": "",
+     "cited": 1,
+     "doi": "10.5040/9781611463989.ch-3",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4410689021"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Attuning to 'the oneness' in 'the church in Taiwan' : an historical ethnography",
+     "authors": [
+      "Gareth Paul Breen"
+     ],
+     "year": 2019,
+     "type": "dissertation",
+     "venue": "London School of Economics and Political Science Theses Online (London School of Economics and Political Science)",
+     "cited": 1,
+     "doi": "",
+     "oaUrl": "https://researchonline.lse.ac.uk/id/eprint/135035/1/Breen_Attuning-oneness-church.pdf",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3011924310"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Redefining Heresy and Tolerance: Governance of Muslims and Christians in the Qing Empire Before 1864 , by Hung Tak Wai",
+     "authors": [
+      "Jonathan A. Seitz"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Journal of World Christianity",
+     "cited": 0,
+     "doi": "10.5325/jworlchri.16.2.0235",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7203735597"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Brothers as bridesmaids: migration, meta-masculinity, and the gynocentric god of transnational Sino-Taiwanese Christianity",
+     "authors": [
+      "Gareth Breen"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Gender Place & Culture",
+     "cited": 0,
+     "doi": "10.1080/0966369x.2026.2645553",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7154707371"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Holy Cross of Oleiros, the forgotten history of a church by Miguel Fisac",
+     "authors": [
+      "Esteban Fernández-Cobián"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Revista de Arquitectura",
+     "cited": 0,
+     "doi": "10.14718/revarq.2026.28.5940",
+     "oaUrl": "https://revistadearquitectura.ucatolica.edu.co/article/download/5940/6506",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7154745723"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Wong Man Kong and George Kam Wah Mak (eds). 2025. Christianity and Education in Modern China",
+     "authors": [
+      "Ximian Xu"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Studies in World Christianity",
+     "cited": 0,
+     "doi": "10.3366/swc.2026.0545",
+     "oaUrl": "https://www.euppublishing.com/doi/pdf/10.3366/swc.2026.0545?download=true",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7133228110"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Latecomer time: Theologizing development and population in Cold War Taiwan, 1950-1969",
+     "authors": [
+      "Leo Chu"
+     ],
+     "year": 2026,
+     "type": "article",
+     "venue": "Politics Religion & Ideology",
+     "cited": 0,
+     "doi": "10.1080/21567689.2026.2644275",
+     "oaUrl": "https://www.tandfonline.com/doi/pdf/10.1080/21567689.2026.2644275?needAccess=true",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7139106577"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Sublime Sociality: An (Auto)Ethnographic Theory of Chinese Christianity",
+     "authors": [
+      "Gareth Breen"
+     ],
+     "year": 2026,
+     "type": "book",
+     "venue": "LSE Press eBooks",
+     "cited": 0,
+     "doi": "10.31389/lsepress.sus",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W7130533332"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Taiwan: Missionary and Colonial Adaptations",
+     "authors": [
+      "Tasing Chiu"
+     ],
+     "year": 2026,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.1007/978-3-032-14385-3_9",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7119477081"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Rice-Wafer Eastward: Sacramental Networks in East Asian Catholicism, 1880–1910",
+     "authors": [
+      "Ziyuan Liu",
+      "Xiaowei Ding",
+      "Xiangyi Luo",
+      "Xianglong Hong",
+      "Guihong Wang"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Journal of Asia Social Science Practice",
+     "cited": 0,
+     "doi": "10.71411/jassp.2025.764",
+     "oaUrl": "https://ojs.shiharr.com/index.php/jassp/article/download/764/425",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4417031136"
+    },
+    {
+     "topic": "台灣基督教",
+     "title": "Daniel L.Li and QingheXiao : A Century of Passing on the Flame: Collection of the 100th Anniversary Conference on Watchman Nee's Founding the Flock Church . New Taipei City : Taiwan Christian Literature Council , 2024 ; Pp . Xix + 281.",
+     "authors": [
+      "Feng Yue"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "Journal of Religious History",
+     "cited": 0,
+     "doi": "10.1111/1467-9809.13147",
+     "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1467-9809.13147",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4408320121"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Developmentalism, Christianity, and Population Decline in East Asia",
+     "authors": [
+      "LaCouture, Elizabeth"
+     ],
+     "year": 2025,
+     "type": "article",
+     "venue": "USF Scholarship Repository (University of San Francisco)",
+     "cited": 0,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W7113036476"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Can Christ be Cambodian?: What the International Art Competition of The Church of Jesus Christ of Latter-day Saints Signals about (De)centralization",
+     "authors": [
+      "Jennifer Sebring Harper",
+      "Steven C. Harper"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Journal of Mormon History",
+     "cited": 0,
+     "doi": "10.5406/24736031.51.1.05",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4405360251"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Theology and Politics in Taiwan",
+     "authors": [
+      "Samuel H.H. Chiow"
+     ],
+     "year": 2024,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.4324/9781003380177-12",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4393255522"
+    },
+    {
+     "topic": "長老教會",
+     "title": "‘Your Father the Devil’: Relations between Catholic and Protestant Missionaries in Nineteenth Century Taiwan",
+     "authors": [
+      "Ladislav Charouz"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Mission Studies",
+     "cited": 0,
+     "doi": "10.1163/15733831-12341945",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4392514879"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "The role of women in the history of Christianity: a review of the latest research in english language",
+     "authors": [
+      "Yuliia Rozumna"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "NaUKMA Research Papers Philosophy and Religious Studies",
+     "cited": 0,
+     "doi": "10.18523/2617-1678.2024.14.108-116",
+     "oaUrl": "http://nzpr.ukma.edu.ua/article/download/319954/310519",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4409169171"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "LeopoldLeeb: Parallel Lives, Congenial Visions: Christian Precursors of Modernity in China and Japan. London and New York: Routledge, 2024; pp. xxix +260.",
+     "authors": [
+      "John H. Sagers"
+     ],
+     "year": 2024,
+     "type": "article",
+     "venue": "Journal of Religious History",
+     "cited": 0,
+     "doi": "10.1111/1467-9809.13103",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4402608973"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Mission Dei in Contemporary Taiwan",
+     "authors": [
+      "Mao-Chen Joseph Chang"
+     ],
+     "year": 2023,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.4324/9781003348764-4",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4386091819"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Christianity and Law in Northeast Asia Today",
+     "authors": [
+      "Ambrose Jonghyu Jeong"
+     ],
+     "year": 2023,
+     "type": "book-chapter",
+     "venue": "Oxford University Press eBooks",
+     "cited": 0,
+     "doi": "10.1093/oxfordhb/9780197606759.013.23",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4388833537"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "The Spread of Protestantism in the Siraya Area in Southern Taiwan during the Dutch Era",
+     "authors": [
+      "Pei-Lin Shih"
+     ],
+     "year": 2023,
+     "type": "preprint",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.31219/osf.io/pky8t",
+     "oaUrl": "https://osf.io/pky8t/download",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4367845400"
+    },
+    {
+     "topic": "長老教會",
+     "title": "‘Returning to the faith of our forefathers’: The Role of Historical Consciousness in Shaping Christian Missionary Work in Nineteenth-Century Taiwan",
+     "authors": [
+      "Ladislav Charouz"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Studies in World Christianity",
+     "cited": 0,
+     "doi": "10.3366/swc.2022.0405",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4306984934"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Christian Social Activism and Rule of Law in Chinese Societies, edited by Fenggang Yang and Chris White.",
+     "authors": [
+      "Christie Chui-Shan Chow"
+     ],
+     "year": 2022,
+     "type": "book-review",
+     "venue": "Journal of World Christianity",
+     "cited": 0,
+     "doi": "10.5325/jworlchri.12.2.0305",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4298365328"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Religion, Gender, and Bodies: Women’s Polyvalent Roles and Experiences in the Biopolitics of Taiwan’s Presbyterian Missions",
+     "authors": [
+      "Edgar Zavala-Pelayo",
+      "Hung-Chieh Chang"
+     ],
+     "year": 2022,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 0,
+     "doi": "10.3390/rel13010064",
+     "oaUrl": "https://www.mdpi.com/2077-1444/13/1/64/pdf?version=1642561961",
+     "isOa": true,
+     "openalex": "https://openalex.org/W4205589530"
+    },
+    {
+     "topic": "長老教會",
+     "title": "獨什麼立？：台灣基督長老教會國族認同及其神學理論之分析=Becoming Independent?An Analysis on National Identity and Its Theological Theories in the Presbyterian Church in Taiwan.",
+     "authors": [
+      "楊文豪",
+      "Wen-Hao Yang"
+     ],
+     "year": 2021,
+     "type": "dissertation",
+     "venue": "",
+     "cited": 0,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3196895732"
+    },
+    {
+     "topic": "長老教會",
+     "title": "從美國長老教會退休計劃看台灣基督長老教會傳福制度之安養金發放問題=An Examination of the Issue of the Post–Retirement Stipend of the Ministers’ Welfare Benefits System of the Presbyterian Church in Taiwan by Comparing the Pension Plan of the Presbyterian Church (U.S.A)",
+     "authors": [
+      "林淑慧",
+      "Shu-Hui Lin"
+     ],
+     "year": 2021,
+     "type": "dissertation",
+     "venue": "",
+     "cited": 0,
+     "doi": "",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3198166600"
+    },
+    {
+     "topic": "長老教會",
+     "title": "臺勢教會 The Taiwanese Making of the Canada Presbyterian Mission [PDF, E-Book]",
+     "authors": [],
+     "year": 2021,
+     "type": "book",
+     "venue": "Vernon Press eBooks",
+     "cited": 0,
+     "doi": "10.54094/b-f896c05b83",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4403268974"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "John Song: Modern Chinese Christianity and the Making of a New Man by Daryl R. Ireland",
+     "authors": [
+      "T. H. Barrett"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 0,
+     "doi": "10.1353/jcr.2021.0014",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4313171254"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Surveying Taiwanese Christianity: The Taiwan Christianity Surveys in Conversation with World Christianity",
+     "authors": [
+      "Jonathan Seitz"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Journal of World Christianity",
+     "cited": 0,
+     "doi": "10.5325/jworlchri.11.2.0262",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3189213008"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Orders of Hunger and Heaven: Neoliberalism, Christian Charity and Homelessness in Taiwan",
+     "authors": [
+      "Scott R. Beck"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Religions",
+     "cited": 0,
+     "doi": "10.3390/rel12040239",
+     "oaUrl": "https://www.mdpi.com/2077-1444/12/4/239/pdf?version=1617937723",
+     "isOa": true,
+     "openalex": "https://openalex.org/W3151185625"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Buddhist Responses to Christianity in Postwar Taiwan: Awakening the World by Scott Pacey",
+     "authors": [
+      "C. Julia Huang"
+     ],
+     "year": 2021,
+     "type": "article",
+     "venue": "Harvard Journal of Asiatic Studies",
+     "cited": 0,
+     "doi": "10.1353/jas.2021.0000",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4312361314"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Protestant Christianity in Twentieth-Century Taiwan, with a Focus on the Evangelical Force from 1945 to 1990",
+     "authors": [
+      "Judith C. P. Lin"
+     ],
+     "year": 2020,
+     "type": "book-chapter",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.1007/978-3-030-48084-4_2",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W3041964652"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "My Pilgrimage in Mission",
+     "authors": [
+      "Robert L. Montgomery"
+     ],
+     "year": 2020,
+     "type": "article",
+     "venue": "International Bulletin of Mission Research",
+     "cited": 0,
+     "doi": "10.1177/2396939320937668",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2734444206"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Presbyterians in Asia",
+     "authors": [
+      "Scott W. Sunquist",
+      "Peter Lim"
+     ],
+     "year": 2019,
+     "type": "reference-entry",
+     "venue": "",
+     "cited": 0,
+     "doi": "10.1093/oxfordhb/9780190608392.013.14",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W2977868139"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Unfinished History: Christianity and the Cold War in East Asia, ContactZone: Explorations in Intercultural Theology, edited by Philip L. Wickeri",
+     "authors": [
+      "Thomas W. Seat II"
+     ],
+     "year": 2019,
+     "type": "book-review",
+     "venue": "Journal of World Christianity",
+     "cited": 0,
+     "doi": "10.5325/jworlchri.9.2.0272",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4210730319"
+    },
+    {
+     "topic": "長老教會",
+     "title": "Journey from the Rainbow Bridge Separated Christian Socialities in an Indigenous Truku Village of Taiwan",
+     "authors": [
+      "Chang, Ying-Cheng"
+     ],
+     "year": 2018,
+     "type": "dissertation",
+     "venue": "ANU Open Research (Australian National University)",
+     "cited": 0,
+     "doi": "10.25911/5d5142738bd63",
+     "oaUrl": "",
+     "isOa": true,
+     "openalex": "https://openalex.org/W2901334196"
+    },
+    {
+     "topic": "在台宣教史",
+     "title": "Religion in Taiwan and China: Locality and Transmission ed. by Hsun Chang and Benjamin Penny",
+     "authors": [
+      "Paul R. Katz"
+     ],
+     "year": 2018,
+     "type": "article",
+     "venue": "Journal of Chinese Religions",
+     "cited": 0,
+     "doi": "10.1353/jcr.2018.0013",
+     "oaUrl": "",
+     "isOa": false,
+     "openalex": "https://openalex.org/W4312427464"
+    }
+   ]
+  }
+ }
+}
