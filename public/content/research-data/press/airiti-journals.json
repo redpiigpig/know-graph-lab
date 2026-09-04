@@ -1,0 +1,843 @@
+{
+ "note": "華藝線上圖書館收錄的宗教類期刊。found_by 記這一筆是靠學科分類找到的，還是靠刊名探測補到的——沒被「宗教學」收進來的那些，代表華藝把它歸在別的學科。",
+ "subject": "A00-A03*",
+ "counts": {
+  "宗教學學科": 68,
+  "刊名探測補入": 9,
+  "合計": 77
+ },
+ "probes": [
+  {
+   "keyword": "使者",
+   "hits": 1,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "宇宙光",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "台灣教會公報",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "人生",
+   "hits": 1,
+   "new": 1,
+   "names": [
+    "孔學與人生 / CONFUCIAN AND LIFE"
+   ]
+  },
+  {
+   "keyword": "香光",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "慈濟",
+   "hits": 8,
+   "new": 8,
+   "names": [
+    "人醫心傳－慈濟醫療人文月刊",
+    "慈濟大學人文社會科學學刊 / Tzu-Chi University Journal of the Humanities and Social Science",
+    "慈濟大學教育研究學刊 / Tzu-Chi University Journal of The Educational Research",
+    "慈濟技術學院學報",
+    "慈濟科技大學學報 / Journal of Tzu Chi University of Science and Technology",
+    "慈濟護理雜誌 / Tzu Chi Nursing Journal",
+    "慈濟通識教育學刊",
+    "慈濟醫學雜誌 / TZU CHI Medical Journal"
+   ]
+  },
+  {
+   "keyword": "普門學報",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "圓光佛學學報",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "正觀",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "福嚴",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "海潮音",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "菩提樹",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "獅子吼",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "中華佛學",
+   "hits": 3,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "法光",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "基督教論壇",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "靈糧",
+   "hits": 0,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "校園",
+   "hits": 1,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "神學",
+   "hits": 10,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "佛學",
+   "hits": 9,
+   "new": 0,
+   "names": []
+  },
+  {
+   "keyword": "宗教",
+   "hits": 9,
+   "new": 0,
+   "names": []
+  }
+ ],
+ "items": [
+  {
+   "pid": "19948778",
+   "name": "Fu Jen International Religious Studies / 輔仁國際宗教研究",
+   "publisher": "輔仁大學宗教學系 , 台灣",
+   "status": "停刊",
+   "latest": "8卷1期 （2014/06）",
+   "issn": "1994-8778",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20230308001",
+   "name": "International Journal of Chinese Studies / 中国研究国际期刊",
+   "publisher": "International Centre for Chinese Studies , 斯里蘭卡",
+   "status": "正常發行",
+   "latest": "3卷2期 （2024/12）",
+   "issn": "2820-2236",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20200410001",
+   "name": "Journal of Christian Higher Education / 基督教高等教育期刊",
+   "publisher": "臺北基督學院 , 台灣",
+   "status": "正常發行",
+   "latest": "6期 （2024/12）",
+   "issn": "2617-0043",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20251218001",
+   "name": "Journal of Yogācāra Studies / 瑜伽行派研究",
+   "publisher": "Institute of Pali-Sanskrit-Chinese-Tibetan Buddhist Literature Studies , 斯里蘭卡",
+   "status": "正常發行",
+   "latest": "1卷1期 （2022/12）",
+   "issn": "2820-2252",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250829001",
+   "name": "Journal of the Study on Religion and History / 宗教與歷史研究",
+   "publisher": "Christianity and China Research Center , 中國大陸",
+   "status": "正常發行",
+   "latest": "2期 （2025/12）",
+   "issn": "3068-4803",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20211029001",
+   "name": "中国基督教研究 / Journal of Research for Christianity in China",
+   "publisher": "中国基督教研究 雜誌社 , 美國",
+   "status": "正常發行",
+   "latest": "26期 （2026/06）",
+   "issn": "2325-9914",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20160922002",
+   "name": "中華佛學學報 / Chung-Hwa Buddhist Journal",
+   "publisher": "財團法人中華佛學研究所 , 台灣",
+   "status": "刊名變更",
+   "latest": "26期 （2013/07）",
+   "issn": "1017-7132",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20160922003",
+   "name": "中華佛學學報 / Journal of Chinese Buddhist Studies",
+   "publisher": "財團法人中華佛學研究所 , 台灣",
+   "status": "正常發行",
+   "latest": "39期 （2026/07）",
+   "issn": "2313-2000",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20160922001",
+   "name": "中華佛學研究 / Chung-Hwa Buddhist Studies",
+   "publisher": "財團法人中華佛學研究所 , 台灣",
+   "status": "正常發行",
+   "latest": "26期 （2026/07）",
+   "issn": "1026-969X",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20240502001",
+   "name": "中華神學研究中心　研究季報 / CTRC Quarterly",
+   "publisher": "文化更新研究中心（香港） , 香港",
+   "status": "正常發行",
+   "latest": "24期 （2026/07）",
+   "issn": "3078-4247",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20120808001",
+   "name": "中華禮儀",
+   "publisher": "中華殯葬禮儀協會 , 台灣",
+   "status": "正常發行",
+   "latest": "45期 （2025/09）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20180314001",
+   "name": "人間佛教學報藝文",
+   "publisher": "佛光山人間佛教研究院 , 台灣",
+   "status": "正常發行",
+   "latest": "55期 （2025/01）",
+   "issn": "2414-7478",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20180307006",
+   "name": "人間佛教研究 / Studies in Humanistic Buddhism",
+   "publisher": "香港中文大學人間佛教研究中心 , 香港",
+   "status": "正常發行",
+   "latest": "12期 （2024/01）",
+   "issn": "2223-800X",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20181205001",
+   "name": "佛光學報 / Fo Guang Journal of Buddhist Studies",
+   "publisher": "佛光大學 , 台灣",
+   "status": "正常發行",
+   "latest": "新12卷2期 （2026/07）",
+   "issn": "2414-3006",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20191030002",
+   "name": "佛學研究中心學報 / Journal of the Center for Buddhist Studies",
+   "publisher": "《臺大佛學研究》編輯委員會 , 台灣",
+   "status": "刊名變更",
+   "latest": "13期 （2007/06）",
+   "issn": "1027-1112",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "16072952",
+   "name": "佛學與科學 / Buddhism and Science",
+   "publisher": "財團法人圓覺文教基金會 , 台灣",
+   "status": "停刊",
+   "latest": "23卷2期 （2022/09）",
+   "issn": "1607-2952",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250630002",
+   "name": "公教學術評論 / International Journal of Catholic Studies",
+   "publisher": "香港中文大學天主教研究中心 , 香港",
+   "status": "正常發行",
+   "latest": "18期 （2026/06）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20220209001",
+   "name": "公教神學評論 / Catholic Theological Review",
+   "publisher": "瑪納文化 , 台灣",
+   "status": "停刊",
+   "latest": "5輯 （2024/02）",
+   "issn": "2789-5769",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20140724001",
+   "name": "切膚之愛季刊",
+   "publisher": "彰化基督教醫療財團法人彰化基督教醫院 , 台灣",
+   "status": "停刊",
+   "latest": "42期 （2019/11）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20151015001",
+   "name": "台灣神學論刊 / Taiwan Journal of Theology",
+   "publisher": "台灣神學院 , 台灣",
+   "status": "正常發行",
+   "latest": "52期 （2025/12）",
+   "issn": "2308-2321",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20181217001",
+   "name": "基督教文化學刊 / Journal for the Study of Christian Culture",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "55期 （2026/05）",
+   "issn": "2071-9957",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250417001",
+   "name": "天主教研究學報 / Hong Kong Journal of Catholic Studies",
+   "publisher": "香港中文大學天主教研究中心 , 香港",
+   "status": "刊名變更",
+   "latest": "15期 （2024/12）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250311002",
+   "name": "孔孟學報 / JOURNAL OF CONFUCIUS-MENCIUS SOCIETY Of CHINESE TAIPEI",
+   "publisher": "中華孔孟學會 , 台灣",
+   "status": "正常發行",
+   "latest": "105期 （2025/09）",
+   "issn": "0454-6342",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250311001",
+   "name": "孔孟月刊 / Cong-Meng Monthly",
+   "publisher": "中華孔孟學會 , 台灣",
+   "status": "正常發行",
+   "latest": "761、762期 （2026/02）",
+   "issn": "0257-4861",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20130301003",
+   "name": "宗博季刊",
+   "publisher": "財團法人世界宗教博物館發展基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "121期 （2022/01）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "10277730",
+   "name": "宗教哲學 / Journal of Religious Philosophy",
+   "publisher": "中華民國宗教哲學研究社 , 台灣",
+   "status": "正常發行",
+   "latest": "116期 （2026/06）",
+   "issn": "1027-7730",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20220215001",
+   "name": "建道學刊 / Jian Dao: A Journal of Bible & Theology",
+   "publisher": "建道神學院 , 香港",
+   "status": "正常發行",
+   "latest": "66期 （2026/07）",
+   "issn": "1023-8727",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20121213001",
+   "name": "弘誓雙月刊",
+   "publisher": "財團法人弘誓文教基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "201期 （2026/06）",
+   "issn": "1729-2786",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20260210001",
+   "name": "思道学刊 / Si Dao Journal",
+   "publisher": "北美华人基督教学会 , 美國",
+   "status": "正常發行",
+   "latest": "13輯 （2026/01）",
+   "issn": "2767-407X",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "a0000472",
+   "name": "敦煌學 / Studies on Tun-Huang",
+   "publisher": "南華大學敦煌學研究中心 , 台灣",
+   "status": "正常發行",
+   "latest": "41期 （2025/08）",
+   "issn": "1015-9339",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "16843738",
+   "name": "新世紀宗教研究 / New Century Religious Study",
+   "publisher": "財團法人世界宗教博物館發展基金會附設出版社 , 台灣",
+   "status": "停刊",
+   "latest": "19卷1期 （2021/06）",
+   "issn": "1684-3738",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20171013001",
+   "name": "新亞學報 / New Asia Journal",
+   "publisher": "新亞研究所 , 香港",
+   "status": "正常發行",
+   "latest": "42卷2期 （2025/12）",
+   "issn": "0073-375X",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "a0000496",
+   "name": "新使者",
+   "publisher": "財團法人台灣基督長老教會宣教基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "209期 （2026/08）",
+   "issn": "1027-2399",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20230329001",
+   "name": "景風 / Ching Feng: A Journal on Christianity and Chinese Religion and Culture",
+   "publisher": "基督教中國宗教文化研究社 , 香港",
+   "status": "正常發行",
+   "latest": "23卷 （2025/11）",
+   "issn": "0009-4668",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250214002",
+   "name": "曠野 / Wilderness Magazine",
+   "publisher": "基文社 , 台灣",
+   "status": "停刊",
+   "latest": "254期 （2021/02）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "a0000007",
+   "name": "校園",
+   "publisher": "校園書房出版社 , 台灣",
+   "status": "正常發行",
+   "latest": "68卷2期 （2026/04）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20101110002",
+   "name": "正覺學報（簡體版）",
+   "publisher": "財團法人正覺教育基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "3期 （2011/12）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20101110001",
+   "name": "正覺學報（繁體版）",
+   "publisher": "財團法人正覺教育基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "5期 （2011/12）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20170407001",
+   "name": "比較經學 / Journal of Comparative Scripture",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "5期 （2015/01）",
+   "issn": "2225-6474",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "22241299",
+   "name": "法印學報 / Journal of Dharma Seals",
+   "publisher": "財團法人弘誓文教基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "16期 （2025/12）",
+   "issn": "2224-1299",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20190125001",
+   "name": "法鼓佛學學報 / Dharma Drum Journal of Buddhist Studies",
+   "publisher": "法鼓文理學院 , 台灣",
+   "status": "正常發行",
+   "latest": "38期 （2026/06）",
+   "issn": "1996-8000",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20161102001",
+   "name": "浸神學刊",
+   "publisher": "台灣浸信會神學院 , 台灣",
+   "status": "正常發行",
+   "latest": "2025年24期 （2025/12）",
+   "issn": "2219-5971",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "19902670",
+   "name": "漢語基督教學術論評 / Sino-Christian Studies : An International Journal of Bible, Theology & Philosophy",
+   "publisher": "中原大學宗教研究所 , 台灣",
+   "status": "正常發行",
+   "latest": "39期 （2025/06）",
+   "issn": "1990-2670",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "18133649",
+   "name": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies",
+   "publisher": "玄奘大學 , 台灣",
+   "status": "正常發行",
+   "latest": "45期 （2026/03）",
+   "issn": "1813-3649",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20170410001",
+   "name": "神學美學",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "5期 （2013/11）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20190115001",
+   "name": "神學與教會 / Theology and the Church",
+   "publisher": "南神出版社 , 台灣",
+   "status": "正常發行",
+   "latest": "50卷 （2025/06）",
+   "issn": "1027-7749",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20230411002",
+   "name": "神學論集 / COLLECTANEA THEOLOGICA UNIVERSITATIS FUJEN",
+   "publisher": "天主教輔仁聖博敏神學院 , 台灣",
+   "status": "正常發行",
+   "latest": "227期 （2026/04）",
+   "issn": "1012-9332",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20180416001",
+   "name": "禪與人類文明研究 / International Journal for the Study of CHAN BUDDHISM AND HUMAN CIVILIZATION",
+   "publisher": "香港中文大學禪與人類文明研究中心 , 香港",
+   "status": "正常發行",
+   "latest": "13期 （2023/08）",
+   "issn": "2519-6111",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20241226001",
+   "name": "秉烛：汉语公共神学国际学刊 / Candle-Holding:International Journal of Chinese Public Theology",
+   "publisher": "普世佳音有限公司 , 美國",
+   "status": "正常發行",
+   "latest": "第3卷1期 （2026/07）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20250618001",
+   "name": "聖經年刊",
+   "publisher": "財團法人台灣聖經公會 , 台灣",
+   "status": "停刊",
+   "latest": "10期 （2025/04）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20181218001",
+   "name": "聖經文學研究",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "27輯 （2023/12）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "10271112",
+   "name": "臺大佛學研究 / Taiwan Journal of Buddhist Studies",
+   "publisher": "《臺大佛學研究》編輯委員會 , 台灣",
+   "status": "正常發行",
+   "latest": "49期 （2025/06）",
+   "issn": "1027-1112",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "a0000594",
+   "name": "臺灣宗教研究",
+   "publisher": "台灣宗教學會 , 台灣",
+   "status": "正常發行",
+   "latest": "25卷1期 （2026/06）",
+   "issn": "2076-9458",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "18114520",
+   "name": "臺灣浸信會神學院學術年刊 / Taiwan Baptist Theological Seminary Annual Bulletin",
+   "publisher": "台灣浸信會神學院 , 台灣",
+   "status": "刊名變更",
+   "latest": "2009 （2009/09）",
+   "issn": "1811-4520",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "10269649",
+   "name": "臺灣源流 / Taiwan Heritages",
+   "publisher": "臺灣省姓氏研究學會 , 台灣",
+   "status": "正常發行",
+   "latest": "94&95期 （2021/05）",
+   "issn": "1026-9649",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20170630002",
+   "name": "華人宗教研究 / Studies in Chinese Religions",
+   "publisher": "新文豐出版股份有限公司&政治大學華人宗教研究中心 , 台灣",
+   "status": "正常發行",
+   "latest": "28期 （2026/07）",
+   "issn": "2307-8456",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20160706001",
+   "name": "華嚴學報 / Journal of Huayen Buddhism",
+   "publisher": "社團法人中華民國佛教華嚴學會 , 台灣",
+   "status": "正常發行",
+   "latest": "15期 （2026/06）",
+   "issn": "2222-6885",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20200528001",
+   "name": "華林國際佛學學刊 / Hualin International Journal of Buddhist Studies",
+   "publisher": "World Scholastic Publishers , 新加坡",
+   "status": "正常發行",
+   "latest": "8卷2期 （2025/10）",
+   "issn": "2705-0742",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "18124305",
+   "name": "華梵人文學報 / Huafan Journal of Humanities",
+   "publisher": "華梵大學 , 台灣",
+   "status": "停刊",
+   "latest": "23期 （2015/01）",
+   "issn": "1812-4305",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "19986505",
+   "name": "華神期刊 / China Evangelical Seminary Journal",
+   "publisher": "財團法人基督教中華福音神學基金會 , 台灣",
+   "status": "正常發行",
+   "latest": "16期 （2025/12）",
+   "issn": "1998-6505",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "16820568",
+   "name": "輔仁宗教研究 / Fujen Religious Studies",
+   "publisher": "輔仁大學宗教學系 , 台灣",
+   "status": "正常發行",
+   "latest": "47期 （2023/09）",
+   "issn": "1682-0568",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20260522001",
+   "name": "逻各斯与诸世界：宗教与人文评论 / Logos and the Worlds: A Religion and Humanities Review",
+   "publisher": "中华协同人文研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "創刊號 （2026/05）",
+   "issn": "3106-3470",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20180530001",
+   "name": "道教研究學報：宗教、歷史與社會 / Daoism：Religion, History and Society",
+   "publisher": "香港中文大學道教文化研究中心 & 中文大學出版社 & École française d’ Extrême-Orient , 香港",
+   "status": "正常發行",
+   "latest": "15&16期 （2025/03）",
+   "issn": "2075-2776",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20251222001",
+   "name": "道教義理 / Daoist Doctrines and Teachings",
+   "publisher": "道教義理學研究會 & 台州學院國際道學研究中心 & 崇道公學(國際)道教研究中心 , 香港",
+   "status": "正常發行",
+   "latest": "3期 （2026/06）",
+   "issn": "3080-941X",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "a0000008",
+   "name": "道雜誌",
+   "publisher": "台灣神學雜誌社 , 台灣",
+   "status": "停刊",
+   "latest": "24期 （2005/02）",
+   "issn": "",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20170411002",
+   "name": "道風：基督教文化評論 / Logos & Pneuma: Chinese Journal of Theology",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "正常發行",
+   "latest": "64期 （2026/01）",
+   "issn": "1023-2583",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20181217002",
+   "name": "道風：漢語神學學刊",
+   "publisher": "漢語基督教文化研究所有限公司 , 香港",
+   "status": "刊名變更",
+   "latest": "11期 （1999/07）",
+   "issn": "1023-2583",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20240620001",
+   "name": "關照季刊 / PERIODICAL ABOUT CONCERN",
+   "publisher": "慈佑國際股份有限公司 , 台灣",
+   "status": "正常發行",
+   "latest": "26期 （2026/08）",
+   "issn": "2518-5268",
+   "found_by": "宗教學"
+  },
+  {
+   "pid": "P20141210001",
+   "name": "人醫心傳－慈濟醫療人文月刊",
+   "publisher": "佛教慈濟醫療財團法人 , 台灣",
+   "status": "正常發行",
+   "latest": "272期 （2026/08）",
+   "issn": "2517-9519",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "P20131220001",
+   "name": "孔學與人生 / CONFUCIAN AND LIFE",
+   "publisher": "中國孔學會 , 台灣",
+   "status": "正常發行",
+   "latest": "106期 （2026/03）",
+   "issn": "",
+   "found_by": "刊名探測：人生"
+  },
+  {
+   "pid": "16849760",
+   "name": "慈濟大學人文社會科學學刊 / Tzu-Chi University Journal of the Humanities and Social Science",
+   "publisher": "慈濟學校財團法人慈濟大學 , 台灣",
+   "status": "停刊",
+   "latest": "27期 （2023/06）",
+   "issn": "1684-9760",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "18145205",
+   "name": "慈濟大學教育研究學刊 / Tzu-Chi University Journal of The Educational Research",
+   "publisher": "慈濟學校財團法人慈濟大學 , 台灣",
+   "status": "停刊",
+   "latest": "21期 （2024/07）",
+   "issn": "1814-5205",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "16818814",
+   "name": "慈濟技術學院學報",
+   "publisher": "慈濟學校財團法人慈濟科技大學 , 台灣",
+   "status": "刊名變更",
+   "latest": "24期 （2015/03）",
+   "issn": "1681-8814",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "P20160218001",
+   "name": "慈濟科技大學學報 / Journal of Tzu Chi University of Science and Technology",
+   "publisher": "慈濟學校財團法人慈濟科技大學 , 台灣",
+   "status": "停刊",
+   "latest": "13期=總37 （2024/03）",
+   "issn": "1681-8814",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "a0000250",
+   "name": "慈濟護理雜誌 / Tzu Chi Nursing Journal",
+   "publisher": "慈濟護理雜誌社 , 台灣",
+   "status": "刊名變更",
+   "latest": "4卷4期 （2005/12）",
+   "issn": "1683-1624",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "P20110323001",
+   "name": "慈濟通識教育學刊",
+   "publisher": "慈濟學校財團法人慈濟大學 , 台灣",
+   "status": "停刊",
+   "latest": "15期 （2023/04）",
+   "issn": "1814-5213",
+   "found_by": "刊名探測：慈濟"
+  },
+  {
+   "pid": "10163190",
+   "name": "慈濟醫學雜誌 / TZU CHI Medical Journal",
+   "publisher": "佛教慈濟醫療財團法人 , 台灣",
+   "status": "此刊物暫停授權合作",
+   "latest": "21卷3期 （2009/09）",
+   "issn": "1016-3190",
+   "found_by": "刊名探測：慈濟"
+  }
+ ]
+}

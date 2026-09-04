@@ -1,0 +1,4029 @@
+{
+ "slug": "dao-magazine",
+ "pid": "a0000008",
+ "name": "道雜誌",
+ "publisherID": "66",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=a0000008&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 24,
+  "篇目": 294,
+  "有電子全文": 123
+ },
+ "issues": [
+  {
+   "issueID": "45584",
+   "label": "24期 (2005/02)",
+   "year": "2005",
+   "count": 11
+  },
+  {
+   "issueID": "20513",
+   "label": "23期 (2004/12)",
+   "year": "2004",
+   "count": 10
+  },
+  {
+   "issueID": "19065",
+   "label": "22期 (2004/10)",
+   "year": "2004",
+   "count": 11
+  },
+  {
+   "issueID": "10090",
+   "label": "21期 (2004/08)",
+   "year": "2004",
+   "count": 11
+  },
+  {
+   "issueID": "5736",
+   "label": "20期 (2004/06)",
+   "year": "2004",
+   "count": 12
+  },
+  {
+   "issueID": "6274",
+   "label": "19期 (2004/04)",
+   "year": "2004",
+   "count": 12
+  },
+  {
+   "issueID": "6275",
+   "label": "18期 (2004/02)",
+   "year": "2004",
+   "count": 11
+  },
+  {
+   "issueID": "6276",
+   "label": "17卷 (2003/12)",
+   "year": "2003",
+   "count": 12
+  },
+  {
+   "issueID": "6277",
+   "label": "16期 (2003/10)",
+   "year": "2003",
+   "count": 13
+  },
+  {
+   "issueID": "6278",
+   "label": "15期 (2003/08)",
+   "year": "2003",
+   "count": 12
+  },
+  {
+   "issueID": "1650",
+   "label": "14期 (2003/06)",
+   "year": "2003",
+   "count": 12
+  },
+  {
+   "issueID": "1649",
+   "label": "13期 (2003/04)",
+   "year": "2003",
+   "count": 10
+  },
+  {
+   "issueID": "1648",
+   "label": "12期 (2003/02)",
+   "year": "2003",
+   "count": 12
+  },
+  {
+   "issueID": "1647",
+   "label": "11期 (2002/12)",
+   "year": "2002",
+   "count": 12
+  },
+  {
+   "issueID": "1646",
+   "label": "10期 (2002/10)",
+   "year": "2002",
+   "count": 11
+  },
+  {
+   "issueID": "1645",
+   "label": "9期 (2002/08)",
+   "year": "2002",
+   "count": 12
+  },
+  {
+   "issueID": "1644",
+   "label": "8期 (2002/06)",
+   "year": "2002",
+   "count": 12
+  },
+  {
+   "issueID": "1643",
+   "label": "7期 (2002/04)",
+   "year": "2002",
+   "count": 12
+  },
+  {
+   "issueID": "1642",
+   "label": "6期 (2002/02)",
+   "year": "2002",
+   "count": 12
+  },
+  {
+   "issueID": "1641",
+   "label": "5期 (2001/12)",
+   "year": "2001",
+   "count": 12
+  },
+  {
+   "issueID": "1640",
+   "label": "4期 (2001/10)",
+   "year": "2001",
+   "count": 14
+  },
+  {
+   "issueID": "1639",
+   "label": "3期 (2001/08)",
+   "year": "2001",
+   "count": 16
+  },
+  {
+   "issueID": "1638",
+   "label": "2期 (2001/06)",
+   "year": "2001",
+   "count": 16
+  },
+  {
+   "issueID": "1637",
+   "label": "1期 (2001/04)",
+   "year": "2001",
+   "count": 16
+  }
+ ],
+ "articles": [
+  {
+   "docId": "a0000008-200502-x-24-1-1-a",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-4-13-a",
+   "title": "追求稅制改革落實社會公義",
+   "authors": [
+    "孫一信(I-Shin Shun)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "4-13",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-14-23-a",
+   "title": "生物科技經濟學的省思",
+   "authors": [
+    "陳錦生(C. S. Chen)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "14-23",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-24-41-a",
+   "title": "成功的知識長管理實務",
+   "authors": [
+    "張昭仁(Mike Chang)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "24-41",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-42-52-a",
+   "title": "後基因體時代身體、自我與財產權的再商榷－以冰島“人群生物資料庫”為例",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "42-52",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-53-62-a",
+   "title": "牧會關顧中的婚前輔導（下）",
+   "authors": [
+    "梁景龍(Masegesege Liang)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "53-62",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-63-67-a",
+   "title": "聖餐的本土神學意涵（下）",
+   "authors": [
+    "王崇堯(C. J. Wang)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "63-67",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-68-73-a",
+   "title": "史景遷論宗教信仰和中國的基督教",
+   "authors": [
+    "李弘祺(Thomas Li)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "68-73",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-74-92-a",
+   "title": "多元宗教的世界（下）",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "莊雅棠"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "74-92",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-93-96-a",
+   "title": "本色之探",
+   "authors": [
+    "吳昶興(Chang-Shing Wu)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "93-96",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200502-x-24-97-104-a",
+   "title": "被遣忘的宗教改革交嚮曲和孟德爾遜家三代趣事（下）",
+   "authors": [
+    "潘立中(Leigh Pan)"
+   ],
+   "volIssue": "24期",
+   "date": "2005 / 02",
+   "pages": "97-104",
+   "fulltext": true,
+   "issueLabel": "24期 (2005/02)",
+   "issueID": "45584"
+  },
+  {
+   "docId": "a0000008-200412-x-23-4-13-a",
+   "title": "從大使命到大誡命（下）－基督教宣教在聖經及神學上的典範轉移",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "4-13",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-14-25-a",
+   "title": "基因時代的知情同意原則",
+   "authors": [
+    "陳錦生(C. S. Chen)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "14-25",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-26-33-a",
+   "title": "憂鬱症的靈性關顧（下）",
+   "authors": [
+    "林信男(Shin-Nan Lin)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "26-33",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-34-47-a",
+   "title": "台灣教會醫療史中道德觀的演變",
+   "authors": [
+    "鄭仰恩(Yang-En Cheng)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "34-47",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-48-59-a",
+   "title": "探究生命倫理學的新領域：胚胎幹細胞研究之課題",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "48-59",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-60-67-a",
+   "title": "牧會關顧中的婚前輔導（中）",
+   "authors": [
+    "梁景龍(Masegesege Liang)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "60-67",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-68-75-a",
+   "title": "聖餐的本土神學意涵（上）",
+   "authors": [
+    "王崇堯(C. J. Wang)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "68-75",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-76-85-a",
+   "title": "多元宗教的世界（上）",
+   "authors": [
+    "宋泉盛(C. S Song)",
+    "莊雅棠"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "76-85",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-86-91-a",
+   "title": "成全與廢棄：本色化之探（上）",
+   "authors": [
+    "吳昶興(Chang-Shing Wu)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "86-91",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200412-x-23-92-96-a",
+   "title": "被遺忘的宗教改革交響曲和孟德爾遜家三代趣事（中）",
+   "authors": [
+    "潘立中(Leigh Pan)"
+   ],
+   "volIssue": "23期",
+   "date": "2004 / 12",
+   "pages": "92-96",
+   "fulltext": true,
+   "issueLabel": "23期 (2004/12)",
+   "issueID": "20513"
+  },
+  {
+   "docId": "a0000008-200410-x-22-4-13-a",
+   "title": "從大使命到大誡命－聖經及神學的轉移",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "4-13",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-14-22-a",
+   "title": "人體試驗的倫理議題",
+   "authors": [
+    "陳南州(Nan-Jou Chen)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "14-22",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-23-30-a",
+   "title": "憂鬱症的靈性關顧（上）",
+   "authors": [
+    "林信男(Shin-Nan Lin)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "23-30",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-31-38-a",
+   "title": "醫病關係的建立",
+   "authors": [
+    "黃以文(Yi-Wen Hwang)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "31-38",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-39-49-a",
+   "title": "我是看顧我姐妹的！－性別、醫療與倫理",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "39-49",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-50-53-a",
+   "title": "牧會關顧中的婚前輔導（上）",
+   "authors": [
+    "梁景龍(Masegesege Liang)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "50-53",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-54-59-a",
+   "title": "火燒島受難家屬口述實錄－訪林高雪貞長老（下）",
+   "authors": [
+    "謝大立(Ta-Li Sia)",
+    "廖惠如"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "54-59",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-60-65-a",
+   "title": "意象與象徵意義的世界（下）",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "莊雅棠"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "60-65",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-66-79-a",
+   "title": "宮廷牧師或社會牧師？－周聯華的思想研究（下）",
+   "authors": [
+    "吳昶興(Chang-Shing Wu)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "66-79",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-80-82-a",
+   "title": "書評《婦人王氏之死》",
+   "authors": [
+    "金毓禎(U. J. King)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "80-82",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200410-x-22-83-96-a",
+   "title": "被遺忘的宗教改革交嚮曲和孟德爾遜家三代趣事（上）",
+   "authors": [
+    "潘立中(Leigh Pan)"
+   ],
+   "volIssue": "22期",
+   "date": "2004 / 10",
+   "pages": "83-96",
+   "fulltext": true,
+   "issueLabel": "22期 (2004/10)",
+   "issueID": "19065"
+  },
+  {
+   "docId": "a0000008-200408-x-21-4-13-a",
+   "title": "來自地極（下）",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "4-13",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-14-23-a",
+   "title": "教會與國家的關係：兼論台灣的未來",
+   "authors": [
+    "羅光喜(Kong-Hi Lou)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "14-23",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-24-35-a",
+   "title": "原住民觀點的鄉土神學",
+   "authors": [
+    "那莫赫•逸幸(Namoh Ising)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "24-35",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-36-42-a",
+   "title": "不要讓主權獨立的迷霧，遮避了公平正義的追求",
+   "authors": [
+    "孫一信(I-Hisn Sun)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "36-42",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-43-52-a",
+   "title": "台灣本土神學萌起歷史淺深－從七零年代至八零年代",
+   "authors": [
+    "鄭世璋(Wesley Cheng)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "43-52",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-53-60-a",
+   "title": "普世教協信仰與教制",
+   "authors": [
+    "林瑞隆(Joseph J. Lin)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "53-60",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-68-70-a",
+   "title": "上帝為什麽要造蚊子？",
+   "authors": [
+    "陳錦生(C. S. Chen)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "68-70",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-71-76-a",
+   "title": "文化研究的女詩神－露絲•潘乃德其人其書",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "71-76",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-77-85-a",
+   "title": "意象與象徵意義的世界",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "荘雅棠"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "77-85",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-86-93-a",
+   "title": "宮廷牧師或社會牧師？－周聯華的思想研究",
+   "authors": [
+    "吳昶興(Chang-Shing Wu)"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "86-93",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200408-x-21-94-96-a",
+   "title": "生命的掙扎，以詩歌（下）",
+   "authors": [
+    "那絲崙•丹尼爾(Sr. Nasreen Daniel)",
+    "陳文珊"
+   ],
+   "volIssue": "21期",
+   "date": "2004 / 08",
+   "pages": "94-96",
+   "fulltext": true,
+   "issueLabel": "21期 (2004/08)",
+   "issueID": "10090"
+  },
+  {
+   "docId": "a0000008-200406-x-20-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-4-17-a",
+   "title": "來自地極",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "4-17",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-18-27-a",
+   "title": "在台灣宗教場域中建構具競爭力的神學教育",
+   "authors": [
+    "王榮昌"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "18-27",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-28-36-a",
+   "title": "女性在神學教育的參與",
+   "authors": [
+    "吳富雅"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "28-36",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-37-49-a",
+   "title": "原住民神學教育與宣教",
+   "authors": [
+    "布興大立"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "37-49",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-50-66-a",
+   "title": "從教會歷史觀點看神學教育：兼論臺灣浸神的神學教育",
+   "authors": [
+    "吳昶興"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "50-66",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-67-73-a",
+   "title": "在殖民崩裂的土地上綻放堅忍的生命：誰的歷史誰的自傳—被書寫的謝雪紅",
+   "authors": [
+    "林佩蓉"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "67-73",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-74-78-a",
+   "title": "火燒島受難家屬口述實錄—訪林高雪貞長老（中）",
+   "authors": [
+    "謝大立"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "74-78",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-79-85-a",
+   "title": "意象與象徵意義的世界（中）",
+   "authors": [
+    "宋泉盛",
+    "莊雅棠"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "79-85",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-86-89-a",
+   "title": "為翻譯聖經而殉道的庭德爾：兼談英文聖經的翻譯和英國的宗教改革（下）",
+   "authors": [
+    "潘立中"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "86-89",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-90-94-a",
+   "title": "與芙烈達·卡蘿對談",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "90-94",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200406-x-20-95-96-a",
+   "title": "生命的掙扎，以詩歌（中）",
+   "authors": [
+    "Sr.Nasreen Daniel",
+    "陳文珊"
+   ],
+   "volIssue": "20期",
+   "date": "2004 / 06",
+   "pages": "95-96",
+   "fulltext": true,
+   "issueLabel": "20期 (2004/06)",
+   "issueID": "5736"
+  },
+  {
+   "docId": "a0000008-200404-x-19-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-4-21-a",
+   "title": "是生或死，抉擇在乎你！",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "4-21",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-22-30-a",
+   "title": "從全人醫治的角度看基督教醫院－一個病患的觀點",
+   "authors": [
+    "陳南州(Nan-Jou Chen)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "22-30",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-31-43-a",
+   "title": "教牧關顧的歷史進路－臨床式訓練與堂會式訓練",
+   "authors": [
+    "李定印(Ting-Yin Lee)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "31-43",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-44-54-a",
+   "title": "當家庭不再是避風港的代名詞時…",
+   "authors": [
+    "張盟宜(M. E. Chang)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "44-54",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-55-60-a",
+   "title": "敘事治療於教牧諮商情境之運用",
+   "authors": [
+    "林毓芬(Iok-Hun Lin)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "55-60",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-61-67-a",
+   "title": "三探路得",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "61-67",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-68-72-a",
+   "title": "火燒島受難家屬口述實錄－防林高雪貞長老（上）",
+   "authors": [
+    "謝大立(Ta-Li Sia)",
+    "廖惠如"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "68-72",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-73-84-a",
+   "title": "意象與象徵意義的世界（上）",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "莊雅棠"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "73-84",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-85-92-a",
+   "title": "爲翻譯聖經而殉道的庭德爾：兼談英文聖經的翻譯和英國的宗教改革（上）",
+   "authors": [
+    "潘立中(Leigh Pan)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "85-92",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-93-94-a",
+   "title": "跟上帝的恩典同工",
+   "authors": [
+    "陳其信(Chi-Hsing Chen)"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "93-94",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200404-x-19-95-96-a",
+   "title": "生命的掙紮，以詩歌（上）",
+   "authors": [
+    "Sr. Nasreen Daniel",
+    "陳文珊"
+   ],
+   "volIssue": "19期",
+   "date": "2004 / 04",
+   "pages": "95-96",
+   "fulltext": true,
+   "issueLabel": "19期 (2004/04)",
+   "issueID": "6274"
+  },
+  {
+   "docId": "a0000008-200402-x-18-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-4-15-a",
+   "title": "在日益對立世界中的世界教會運動－21世紀的再建構（下）",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "4-15",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-16-28-a",
+   "title": "上帝的創造與生命樹：從創世紀1-11章探討人與土地的關係",
+   "authors": [
+    "曾宗盛"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "16-28",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-29-39-a",
+   "title": "全球化傳染病－巴別塔新宿命",
+   "authors": [
+    "陳錦生"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "29-39",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-40-49-a",
+   "title": "殖民主義式的暴力宰製與臺灣的生態浩劫",
+   "authors": [
+    "猶浩•彼厚"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "40-49",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-50-58-a",
+   "title": "深層環境運動在臺灣—陳慈美女士與生態神學中心專訪",
+   "authors": [
+    "林彥如",
+    "梁唯真"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "50-58",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-59-61-a",
+   "title": "亞洲教會事工的新異象與新策略（下）",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "59-61",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-62-69-a",
+   "title": "以神為名？－具有悲劇性格的基要主義",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "62-69",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-70-83-a",
+   "title": "基因轉殖作物之商業倫理初探－以孟山都vs.許麥茲案為例",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "70-83",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-84-86-a",
+   "title": "權力是魔戒：絕對的權力，絕對的腐化",
+   "authors": [
+    "邱凱莉"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "84-86",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200402-x-18-87-96-a",
+   "title": "詩數則",
+   "authors": [
+    "宋泉盛"
+   ],
+   "volIssue": "18期",
+   "date": "2004 / 02",
+   "pages": "87-96",
+   "fulltext": true,
+   "issueLabel": "18期 (2004/02)",
+   "issueID": "6275"
+  },
+  {
+   "docId": "a0000008-200312-x-17-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-4-21-a",
+   "title": "在日益對立世界中的世界教會運動－21世紀的再建構（上）",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "4-21",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-22-30-a",
+   "title": "基本教義派(Fundamentalist)－是堅信某些教義或持守某種思考模式？",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "22-30",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-31-38-a",
+   "title": "耶和華大戰達爾文－宗教與科學基要派的戰爭",
+   "authors": [
+    "陳錦生"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "31-38",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-39-50-a",
+   "title": "從宗教場域的形成重新理解“基要主義”",
+   "authors": [
+    "王榮昌"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "39-50",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-51-60-a",
+   "title": "來，比基本教義派更基要吧！一個女性主義的超越之道",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "51-60",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-61-67-a",
+   "title": "亞洲教會事工的新異象與新策略（上）",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "61-67",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-68-74-a",
+   "title": "破碎靈魂的復活－在性暴力陰影中求告神的詩歌：介紹女性神學詩人卡蘿拉•寞思巴哈(Carola Moosbach)",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "68-74",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-75-77-a",
+   "title": "書評：《認同的神學》的評介",
+   "authors": [
+    "鄭世璋"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "75-77",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-78-88-a",
+   "title": "禪修也能融入日常生活",
+   "authors": [
+    "李家伶"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "78-88",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-89-94-a",
+   "title": "不義的管家",
+   "authors": [
+    "金毓禎"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "89-94",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200312-x-17-95-96-a",
+   "title": "新的誡命就是愛",
+   "authors": [
+    "宋泉盛",
+    "陳文珊"
+   ],
+   "volIssue": "17卷",
+   "date": "2003 / 12",
+   "pages": "95-96",
+   "fulltext": true,
+   "issueLabel": "17卷 (2003/12)",
+   "issueID": "6276"
+  },
+  {
+   "docId": "a0000008-200310-x-16-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-4-17-a",
+   "title": "重塑世界歸正教會聯盟，促進信徒普世運動",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "4-17",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-18-28-a",
+   "title": "宗教和民俗活動中的“聯想機制”之探討",
+   "authors": [
+    "呂一中(Yi-Zhong Lu)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "18-28",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-29-36-a",
+   "title": "以心靈和誠實面對禮俗之爭",
+   "authors": [
+    "許承道(Seng-To Khoh)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "29-36",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-37-51-a",
+   "title": "阿美族的文化傳承與傳統教育",
+   "authors": [
+    "吳明義(Namoh Rata)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "37-51",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-52-61-a",
+   "title": "傳統禮俗性別意涵的解神話與再神話",
+   "authors": [
+    "陳文珊(Hannah Chen)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "52-61",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-62-67-a",
+   "title": "學道與傳道",
+   "authors": [
+    "林明貞(Ming-Zheng Lin)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "62-67",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-68-77-a",
+   "title": "後現代的“家庭祭壇”之神學意義",
+   "authors": [
+    "李定印(Ting-Yin Lee)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "68-77",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-78-79-a",
+   "title": "書評：臺灣本土神學的掙扎與努力－評《本土婦女神學面面觀》",
+   "authors": [
+    "李世璋(Wesley Cheng Lee)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "78-79",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-80-86-a",
+   "title": "佛教是否贊成廢止死刑（下）",
+   "authors": [
+    "温金柯(Chin-Koh Wen)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "80-86",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-87-89-a",
+   "title": "其實你不懂我的心",
+   "authors": [
+    "陳錦生(C. S. Chen)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "87-89",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-90-94-a",
+   "title": "女詩人寞思巴哈詩選",
+   "authors": [
+    "王貞文(Jen-Wen Wang)"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "90-94",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200310-x-16-95-96-a",
+   "title": "房子建造在磐石上",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "陳文珊"
+   ],
+   "volIssue": "16期",
+   "date": "2003 / 10",
+   "pages": "95-96",
+   "fulltext": true,
+   "issueLabel": "16期 (2003/10)",
+   "issueID": "6277"
+  },
+  {
+   "docId": "a0000008-200308-x-15-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-4-21-a",
+   "title": "重塑世界歸正教會聯盟，促進信徒普世運動",
+   "authors": [
+    "宋泉盛(Choan-Sen Song)",
+    "陳文珊"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "4-21",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-22-28-a",
+   "title": "靈修的本土神學觀點",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "22-28",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-29-41-a",
+   "title": "女性靈修的東西方靈修傳承",
+   "authors": [
+    "葉寶貴"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "29-41",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-42-51-a",
+   "title": "現代宗教與靈修文化",
+   "authors": [
+    "莊嘉慶"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "42-51",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-52-59-a",
+   "title": "原住民的靈性文化與基督徒靈修",
+   "authors": [
+    "猶浩彼厚"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "52-59",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-60-63-a",
+   "title": "見證921－我的寫作歷程",
+   "authors": [
+    "黃肇新"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "60-63",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-64-72-a",
+   "title": "葛拉斯(Gunter Grass)的小說“蟹行”談記憶的詮釋",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "64-72",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-73-85-a",
+   "title": "民國時期華人基督徒歷史研究取向的評述（下）",
+   "authors": [
+    "吳昶興"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "73-85",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-86-93-a",
+   "title": "佛教是否贊成廢止死刑（上）",
+   "authors": [
+    "溫金柯"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "86-93",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-94-95-a",
+   "title": "哲人其萎－悼念陳炎枝長老之死－",
+   "authors": [
+    "林瑞隆"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "94-95",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200308-x-15-96-96-a",
+   "title": "為受苦的人代禱",
+   "authors": [
+    "成南州"
+   ],
+   "volIssue": "15期",
+   "date": "2003 / 08",
+   "pages": "96-96",
+   "fulltext": true,
+   "issueLabel": "15期 (2003/08)",
+   "issueID": "6278"
+  },
+  {
+   "docId": "a0000008-200306-x-14-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-4-19-a",
+   "title": "天堂與地獄在一念之間",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "4-19",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-20-32-a",
+   "title": "在今日社會重現耶穌的故事",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "20-32",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-33-48-a",
+   "title": "談新世紀原住民的神學教育與宣教的再出發",
+   "authors": [
+    "布興‧大立"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "33-48",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-49-59-a",
+   "title": "台灣宣教再思",
+   "authors": [
+    "林鴻祐"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "49-59",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-60-69-a",
+   "title": "女性的宣教參與和反省",
+   "authors": [
+    "吳富雅"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "60-69",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-70-74-a",
+   "title": "未成年女性性工作者關懷事工－－以勵馨基金會為例（下）",
+   "authors": [
+    "呂又慧"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "70-74",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-75-81-a",
+   "title": "誰是我的鄰舍？",
+   "authors": [
+    "黃伯和",
+    "陳文珊"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "75-81",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-82-87-a",
+   "title": "大自然的愛者：瑞秋‧卡森",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "82-87",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-88-92-a",
+   "title": "民國時期華人基督徒歷史研究取向的評述(上)",
+   "authors": [
+    "吳昶興"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "88-92",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-93-94-a",
+   "title": "「夜奔」與「霸王別姬」中的同志愛戀",
+   "authors": [
+    "林毓芬"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "93-94",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200306-x-14-95-96-a",
+   "title": "春天",
+   "authors": [
+    "金毓禎"
+   ],
+   "volIssue": "14期",
+   "date": "2003 / 06",
+   "pages": "95-96",
+   "fulltext": false,
+   "issueLabel": "14期 (2003/06)",
+   "issueID": "1650"
+  },
+  {
+   "docId": "a0000008-200304-x-13-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-4-23-a",
+   "title": "身心的良藥：全人醫治",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "4-23",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-24-36-a",
+   "title": "回眸過去看未來自決開創新生機－漫談台灣人的歷史觀與世界觀",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "24-36",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-37-48-a",
+   "title": "女性口述歷史－催生台灣教會婦女史",
+   "authors": [
+    "謝大立"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "37-48",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-49-64-a",
+   "title": "挖掘記憶，重塑歷史－從霧社事件口述歷史談起",
+   "authors": [
+    "姑目‧荅芭絲"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "49-64",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-65-71-a",
+   "title": "讓宣教史成為台灣歷史文化精華所在－以淡水為例",
+   "authors": [
+    "蘇文魁"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "65-71",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-72-75-a",
+   "title": "打造「願景教堂」",
+   "authors": [
+    "郭楊義"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "72-75",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-76-84-a",
+   "title": "未成年女性性工作者關懷事工－－以勵馨基金會為例（上）",
+   "authors": [
+    "呂又慧"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "76-84",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-85-91-a",
+   "title": "誰是不肖子？",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "85-91",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200304-x-13-92-96-a",
+   "title": "以父之名",
+   "authors": [
+    "子清"
+   ],
+   "volIssue": "13期",
+   "date": "2003 / 04",
+   "pages": "92-96",
+   "fulltext": false,
+   "issueLabel": "13期 (2003/04)",
+   "issueID": "1649"
+  },
+  {
+   "docId": "a0000008-200302-x-12-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-4-17-a",
+   "title": "身心的良藥：全人醫治",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "4-17",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-18-25-a",
+   "title": "在一個新時代耕耘台灣文學－一個創作者的看法",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "18-25",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-26-34-a",
+   "title": "在寬恕缺席之地",
+   "authors": [
+    "伊誕．巴瓦瓦隆"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "26-34",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-35-43-a",
+   "title": "台灣文學中的救贖",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "35-43",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-44-53-a",
+   "title": "淺論台灣女性文學中的性別救贖意涵",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "44-53",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-54-57-a",
+   "title": "新住民宣教策略初探",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "54-57",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-58-66-a",
+   "title": "從加利利到台南－台南神學院神學教育本土化之個案研究",
+   "authors": [
+    "黃伯和",
+    "陳文珊"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "58-66",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-67-82-a",
+   "title": "廣化信仰，深化信仰：諸水世界的生態神學",
+   "authors": [
+    "文蘭溪",
+    "吳育麟"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "67-82",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-83-87-a",
+   "title": "台灣人民面臨抉擇的時刻",
+   "authors": [
+    "宋泉盛"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "83-87",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-88-91-a",
+   "title": "愛在等待黎明時──為SARS（以及未來的災難）而寫",
+   "authors": [
+    "黃肇新"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "88-91",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200302-x-12-92-96-a",
+   "title": "SARS閉關手記",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "12期",
+   "date": "2003 / 02",
+   "pages": "92-96",
+   "fulltext": false,
+   "issueLabel": "12期 (2003/02)",
+   "issueID": "1648"
+  },
+  {
+   "docId": "a0000008-200212-x-11-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-4-11-a",
+   "title": "罪惡是什麼？之四",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "陳文珊"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "4-11",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-12-21-a",
+   "title": "現代宗教與科技文化",
+   "authors": [
+    "莊嘉慶"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "12-21",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-22-31-a",
+   "title": "「山達基會」教會介紹",
+   "authors": [
+    "呂一中"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "22-31",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-32-42-a",
+   "title": "伊斯蘭的新興教派－先知使徒會的反基督教運動",
+   "authors": [
+    "游謙"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "32-42",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-43-51-a",
+   "title": "簡介佛教現代禪教團及其與基督宗教對話概況",
+   "authors": [
+    "溫金柯"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "43-51",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-52-60-a",
+   "title": "營造共同體 ── 省思台灣基督長老教會921重建事工",
+   "authors": [
+    "張耘"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "52-60",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-61-73-a",
+   "title": "馬告、原住民、社會正義",
+   "authors": [
+    "林益仁"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "61-73",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-74-86-a",
+   "title": "勇於同自己爭戰的人新眼光聖經詮釋範例：創世紀32.22-32",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "74-86",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-87-90-a",
+   "title": "心靈之舞 ── 女性性靈成長的七個舞步",
+   "authors": [
+    "林毓芬"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "87-90",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-91-93-a",
+   "title": "一位原住民的口述歷史談228",
+   "authors": [
+    "基蘊馬撒"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "91-93",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200212-x-11-94-96-a",
+   "title": "新年？新年！",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "11期",
+   "date": "2002 / 12",
+   "pages": "94-96",
+   "fulltext": false,
+   "issueLabel": "11期 (2002/12)",
+   "issueID": "1647"
+  },
+  {
+   "docId": "a0000008-200210-x-10-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-4-15-a",
+   "title": "罪惡是什麼 ? 之三",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "陳文珊"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "4-15",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-16-30-a",
+   "title": "文化的神學語意學",
+   "authors": [
+    "宋泉盛",
+    "莊雅棠"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "16-30",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-31-41-a",
+   "title": "潛藏慾望的召喚 ： 全球化下的消費主義及其對應",
+   "authors": [
+    "葉啟祥"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "31-41",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-42-53-a",
+   "title": "從原住民的經驗談文化的神學意義",
+   "authors": [
+    "林約道"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "42-53",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-54-64-a",
+   "title": "壞女孩、瘋女人和女鬼傳說 ：一個女性主義的文化神學",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "54-64",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-65-70-a",
+   "title": "台灣當代藝術的本土化 ── 由鄭建昌的台灣人圖像談起",
+   "authors": [
+    "呂秉衡"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "65-70",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-71-75-a",
+   "title": "女性不配孤獨 ? ── 女性享受孤獨與選擇獨身的權利",
+   "authors": [
+    "朱麗娟"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "71-75",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-76-88-a",
+   "title": "死亡：生命的解釋",
+   "authors": [
+    "林瑞隆"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "76-88",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-89-92-a",
+   "title": "«被聖靈充滿的耶穌»",
+   "authors": [
+    "莊雅棠"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "89-92",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200210-x-10-93-96-a",
+   "title": "所羅門王與百合花",
+   "authors": [
+    "李孟哲"
+   ],
+   "volIssue": "10期",
+   "date": "2002 / 10",
+   "pages": "93-96",
+   "fulltext": false,
+   "issueLabel": "10期 (2002/10)",
+   "issueID": "1646"
+  },
+  {
+   "docId": "a0000008-200208-x-9-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-4-25-a",
+   "title": "罪惡是什麼？之二",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "4-25",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-26-30-a",
+   "title": "世界教會潮流的轉變",
+   "authors": [
+    "宋泉盛",
+    "陳文珊"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "26-30",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-31-39-a",
+   "title": "從全球化角度看普世運動",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "31-39",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-40-52-a",
+   "title": "在分裂的世中見證信仰普世合一運動的發展簡史及其主要議題",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "40-52",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-53-62-a",
+   "title": "期待一個後普世運動、去性別主義的教會",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "53-62",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-63-68-a",
+   "title": "從文史看新店溪水利：一個獻給上帝的日子",
+   "authors": [
+    "李順仁"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "63-68",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-69-76-a",
+   "title": "六八年學生運動與德國基督新教",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "69-76",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-77-85-a",
+   "title": "生態神學與生命共同體",
+   "authors": [
+    "文蘭溪(Nancy Victorian-Vangerud)"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "77-85",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-86-90-a",
+   "title": "基督宗教婦女典範的遞變─評《基督宗教中的婦女》",
+   "authors": [
+    "金毓禎"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "86-90",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-91-95-a",
+   "title": "美麗心靈的故事",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "91-95",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200208-x-9-96-96-a",
+   "title": "英雄與美人",
+   "authors": [
+    "童貴珊"
+   ],
+   "volIssue": "9期",
+   "date": "2002 / 08",
+   "pages": "96-96",
+   "fulltext": false,
+   "issueLabel": "9期 (2002/08)",
+   "issueID": "1645"
+  },
+  {
+   "docId": "a0000008-200206-x-8-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-4-19-a",
+   "title": "罪惡是什麼？",
+   "authors": [
+    "宋泉盛(C. S. SONG)",
+    "陳文珊"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "4-19",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-20-37-a",
+   "title": "在基督宗教神學脈絡中談生命教育",
+   "authors": [
+    "黃懷秋"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "20-37",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-38-48-a",
+   "title": "生界的生死大課題",
+   "authors": [
+    "鐘丁茂"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "38-48",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-49-59-a",
+   "title": "「生」其實是「死」，「死」才是「生」── 一個基督徒對於生命與死亡的神學省思",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "49-59",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-60-68-a",
+   "title": "生死學－一個泰雅爾族與基督教觀點的探討",
+   "authors": [
+    "猶浩彼厚"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "60-68",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-69-74-a",
+   "title": "開展台灣基督徒學生運動的一些思考",
+   "authors": [
+    "張耘"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "69-74",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-75-80-a",
+   "title": "華人文化與基督徒婦女",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "75-80",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-81-88-a",
+   "title": "生態神學與生命共同體",
+   "authors": [
+    "文蘭溪",
+    "陳慈美"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "81-88",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-89-94-a",
+   "title": "從原住民藝術中得解放",
+   "authors": [
+    "伊誕．巴瓦瓦隆"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "89-94",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-95-95-a",
+   "title": "聖靈的嘆息",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "95-95",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200206-x-8-96-96-a",
+   "title": "本是同根生，相煎何太急",
+   "authors": [
+    "宋泉盛"
+   ],
+   "volIssue": "8期",
+   "date": "2002 / 06",
+   "pages": "96-96",
+   "fulltext": false,
+   "issueLabel": "8期 (2002/06)",
+   "issueID": "1644"
+  },
+  {
+   "docId": "a0000008-200204-x-7-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-4-15-a",
+   "title": "心靈成長入門之三",
+   "authors": [
+    "宋泉盛(C. S. SONG)",
+    "約瑟夫．德斯基(Joseph D. DRISKILL)",
+    "陳文珊"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "4-15",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-16-24-a",
+   "title": "被蒙在鼓裡的母親",
+   "authors": [
+    "宋泉盛"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "16-24",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-25-32-a",
+   "title": "全球化時代的人文教育",
+   "authors": [
+    "魏明德"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "25-32",
+   "fulltext": true,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-33-43-a",
+   "title": "台灣的國家安全與人類安全",
+   "authors": [
+    "林哲夫"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "33-43",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-44-54-a",
+   "title": "戰爭的性別VS.性別的和平",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "44-54",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-55-61-a",
+   "title": "口述歷史與台灣教會史研究 ── 以謝緯歷史製作的經驗為例",
+   "authors": [
+    "謝大立"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "55-61",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-62-69-a",
+   "title": "心靈重建：從台灣族群民歌中尋回台灣魂",
+   "authors": [
+    "駱維道"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "62-69",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-70-82-a",
+   "title": "從勞工運動觀點觀察台灣基督長老教會的階級性格",
+   "authors": [
+    "孫一信"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "70-82",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-83-85-a",
+   "title": "所謂的知識分子",
+   "authors": [
+    "劉清虔"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "83-85",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-86-93-a",
+   "title": "奇士勞斯基如是說：電影、宗教、人生……",
+   "authors": [
+    "劉鎮歐"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "86-93",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200204-x-7-94-96-a",
+   "title": "又聽見，鳳凰木的聲音",
+   "authors": [
+    "金毓禎"
+   ],
+   "volIssue": "7期",
+   "date": "2002 / 04",
+   "pages": "94-96",
+   "fulltext": false,
+   "issueLabel": "7期 (2002/04)",
+   "issueID": "1643"
+  },
+  {
+   "docId": "a0000008-200202-x-6-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-4-19-a",
+   "title": "心靈成長入門之二",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "約瑟夫．德斯基(Joseph D. Driskill)",
+    "陳文珊"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "4-19",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-20-29-a",
+   "title": "報甚麼消息？－2002年新年信息",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "20-29",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-30-43-a",
+   "title": "以新眼光讀聖經",
+   "authors": [
+    "陳南州(Nan-Jou Chen)"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "30-43",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-44-56-a",
+   "title": "經文‧閱讀‧新眼光 對「新眼光讀經運動」的詮釋學探討",
+   "authors": [
+    "鄭仰恩(Yang-En Cheng)"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "44-56",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-57-65-a",
+   "title": "台灣基督長老教會的人民詮釋學",
+   "authors": [
+    "莊雅棠",
+    "陳文珊"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "57-65",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-66-75-a",
+   "title": "引誘者？還是家暴受害者？－在女性情境下重讀「羅得的女兒」",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "66-75",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-76-79-a",
+   "title": "和婦女同行的教會",
+   "authors": [
+    "林明貞"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "76-79",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-80-83-a",
+   "title": "從台灣基督長老教會體制看客家宣教",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "80-83",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-84-90-a",
+   "title": "聖女傳說的反思－從盧貝松的「聖女貞德」談起",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "84-90",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-91-94-a",
+   "title": "謙卑的神學　傲慢的神學者",
+   "authors": [
+    "林瑞隆"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "91-94",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200202-x-6-95-96-a",
+   "title": "經濟曙光的基礎在信心",
+   "authors": [
+    "楊雅惠"
+   ],
+   "volIssue": "6期",
+   "date": "2002 / 02",
+   "pages": "95-96",
+   "fulltext": false,
+   "issueLabel": "6期 (2002/02)",
+   "issueID": "1642"
+  },
+  {
+   "docId": "a0000008-200112-x-5-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-4-19-a",
+   "title": "心靈成長入門之一",
+   "authors": [
+    "宋泉盛(C. S. Song)",
+    "約瑟夫．德斯基(Joseph D. Driskill)",
+    "陳文珊"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "4-19",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-20-33-a",
+   "title": "當代女性神學的兩個面貌",
+   "authors": [
+    "黃懷秋"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "20-33",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-34-46-a",
+   "title": "聖母瑪利亞的千種面貌",
+   "authors": [
+    "葉寶貴"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "34-46",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-47-56-a",
+   "title": "馬利亞，我們的姊妹",
+   "authors": [
+    "吳富雅(Fu-Ya Wu)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "47-56",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-57-66-a",
+   "title": "馬利亞學的顛覆與再顛覆",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "57-66",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-67-70-a",
+   "title": "道在原住民的藝術裡",
+   "authors": [
+    "伊誕．巴瓦瓦隆(Etan Pavavalung)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "67-70",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-71-76-a",
+   "title": "以人為念的經濟學─可持續性與靈性",
+   "authors": [
+    "陳慈美(Nancy Tzu-Mei Chen)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "71-76",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-77-89-a",
+   "title": "認同的神學─基督新教在台灣實況中本土神學的建構",
+   "authors": [
+    "陳南州(Nan-Jou Chen)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "77-89",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-90-91-a",
+   "title": "如何做神學省思？基督徒信仰生活之實踐",
+   "authors": [
+    "林明珠(Ming-Chu Lin)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "90-91",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-92-93-a",
+   "title": "耶穌誕生那一夜……",
+   "authors": [
+    "宋泉盛(C. S. Song)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "92-93",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200112-x-5-94-96-a",
+   "title": "聖誕頌歌，信心之聲",
+   "authors": [
+    "劉鎮歐(Chen-O Liu)"
+   ],
+   "volIssue": "5期",
+   "date": "2001 / 12",
+   "pages": "94-96",
+   "fulltext": false,
+   "issueLabel": "5期 (2001/12)",
+   "issueID": "1641"
+  },
+  {
+   "docId": "a0000008-200110-x-4-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-4-29-a",
+   "title": "基督教會不要再失信於世界",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "陳文珊"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "4-29",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-30-38-a",
+   "title": "全球化與實況神學",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "30-38",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-39-47-a",
+   "title": "新的殖民主義？─試論全球化的危機與挑戰",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "39-47",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-48-56-a",
+   "title": "全球化、宗教與台灣",
+   "authors": [
+    "葉啟祥"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "48-56",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-57-65-a",
+   "title": "台灣福利服務產業勞動條件的社會變遷",
+   "authors": [
+    "孫一信"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "57-65",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-66-69-a",
+   "title": "女性主義者　平凡如你我",
+   "authors": [
+    "朱麗娟"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "66-69",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-70-73-a",
+   "title": "母語與族群文化再生",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "70-73",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-74-82-a",
+   "title": "教會教育實踐採取多元文化宗教教育策略之探討",
+   "authors": [
+    "林明珠"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "74-82",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-83-83-a",
+   "title": "解放者的族母",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "83-83",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-84-90-a",
+   "title": "全地畏懼，默默無言？",
+   "authors": [
+    "宋泉盛(C. S. Song)"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "84-90",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-91-93-a",
+   "title": "給世界的一封公開信",
+   "authors": [
+    "達賴喇嘛(Dalai Lama)",
+    "陳文珊"
+   ],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "91-93",
+   "fulltext": false,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-94-94-o",
+   "title": "給讀者的一封信",
+   "authors": [],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "94-94",
+   "fulltext": true,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200110-x-4-95-95-o",
+   "title": "台灣神學雜誌社《道》雙月刊收支徵信錄",
+   "authors": [],
+   "volIssue": "4期",
+   "date": "2001 / 10",
+   "pages": "95-95",
+   "fulltext": true,
+   "issueLabel": "4期 (2001/10)",
+   "issueID": "1640"
+  },
+  {
+   "docId": "a0000008-200108-x-3-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-4-17-a",
+   "title": "成為萬民的祝福",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "林明貞"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "4-17",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-18-29-a",
+   "title": "免於束縛的心靈自由－後現代世界中的宗教使命",
+   "authors": [
+    "宋泉盛",
+    "陳文珊"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "18-29",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-30-41-a",
+   "title": "與外邦人的接觸－為一個彼此瞭解學習的宣教學請命",
+   "authors": [
+    "提多．遜德麥爾(Theo Sundermeier)",
+    "陳志榮"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "30-41",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-42-50-a",
+   "title": "基督教與道教─ 從「替贖」問題討論基督教與道教對話的幾個可能面向",
+   "authors": [
+    "呂一中"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "42-50",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-51-60-a",
+   "title": "宗教多元下的沈思－一個牧者的獨白",
+   "authors": [
+    "劉清虔"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "51-60",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-61-67-a",
+   "title": "從「人是關係的存在」的觀點來省思醫學倫理的困境",
+   "authors": [
+    "陳南州(Nan-Jou Chen)"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "61-67",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-68-72-a",
+   "title": "電影閱讀初探及其信仰省思",
+   "authors": [
+    "劉鎮歐"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "68-72",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-73-80-a",
+   "title": "李喬「情天無恨」書中的宗教素材與神學反省",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "73-80",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-81-84-a",
+   "title": "婦女牧職的神學論爭",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "81-84",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-85-85-a",
+   "title": "故事講道隨想四則",
+   "authors": [
+    "陳見岳(Gian-Yeh Chen)"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "85-85",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-86-86-a",
+   "title": "等待降生",
+   "authors": [
+    "王貞文(Jen-Wen Wang)"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "86-86",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-87-92-a",
+   "title": "屬靈的導師─亨利．廬雲(Henri J.M. Nouwen)",
+   "authors": [
+    "陳榮爝(Jung-Chueh Chen)"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "87-92",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-93-93-o",
+   "title": "漫畫中的神學",
+   "authors": [
+    "陳義仁(Gi-Jin Chen)"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "93-93",
+   "fulltext": false,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-94-94-o",
+   "title": "給讀者的一封信",
+   "authors": [
+    "台灣神學雜誌社編輯部"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "94-94",
+   "fulltext": true,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200108-x-3-95-95-o",
+   "title": "更正啟示",
+   "authors": [
+    "台灣神學雜誌社編輯部"
+   ],
+   "volIssue": "3期",
+   "date": "2001 / 08",
+   "pages": "95-95",
+   "fulltext": true,
+   "issueLabel": "3期 (2001/08)",
+   "issueID": "1639"
+  },
+  {
+   "docId": "a0000008-200106-x-2-1-1-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-4-23-a",
+   "title": "台灣的民主：其前進之道",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "林明貞"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "4-23",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-24-29-a",
+   "title": "文化與基督教神學",
+   "authors": [
+    "宋泉盛",
+    "陳文珊"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "24-29",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-30-39-a",
+   "title": "實況化神學的意義及其超越一般－台灣本土神學方法論的反思",
+   "authors": [
+    "莊雅棠"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "30-39",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-40-49-a",
+   "title": "迎向台灣本土歷史神學的明天",
+   "authors": [
+    "鄭仰恩"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "40-49",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-50-59-a",
+   "title": "淺談婦女神學的本土化",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "50-59",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-60-65-a",
+   "title": "奔向標竿",
+   "authors": [
+    "劉清虔"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "60-65",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-66-72-a",
+   "title": "台灣生態文史的建構－一以新店溪流域為例",
+   "authors": [
+    "李順仁"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "66-72",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-73-77-a",
+   "title": "馬偕牧師著作中宣教與文化間的衝突之探討",
+   "authors": [
+    "夏文學"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "73-77",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-78-84-a",
+   "title": "用柔情解殘酷歷史--介紹德國當代作家施靈克(BernhardSchlink)的「朗讀者」Ⅱ",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "78-84",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-85-87-a",
+   "title": "奔馳而去的世界",
+   "authors": [
+    "林鴻祐"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "85-87",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-88-89-a",
+   "title": "安居",
+   "authors": [
+    "金毓禎"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "88-89",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-90-91-a",
+   "title": "苦路同主行",
+   "authors": [
+    "牧之祈"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "90-91",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-92-92-a",
+   "title": "聖禮",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "92-92",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-93-93-o",
+   "title": "漫畫中的神學",
+   "authors": [
+    "陳義仁"
+   ],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "93-93",
+   "fulltext": false,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200106-x-2-94-94-o",
+   "title": "交流道──給讀者的一封信",
+   "authors": [],
+   "volIssue": "2期",
+   "date": "2001 / 06",
+   "pages": "94-94",
+   "fulltext": true,
+   "issueLabel": "2期 (2001/06)",
+   "issueID": "1638"
+  },
+  {
+   "docId": "a0000008-200104-x-1-1-1-o",
+   "title": "復刊詞",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "1-1",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-2-3-o",
+   "title": "編者的話",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "2-3",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-6-17-a",
+   "title": "上帝啊！教我們唱新歌--公元2000年的信息",
+   "authors": [
+    "宋泉盛(Choan-Seng Song)",
+    "莊雅棠"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "6-17",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-18-27-a",
+   "title": "耶穌的事工和我們的事工",
+   "authors": [
+    "宋泉盛",
+    "林晚生"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "18-27",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-28-34-a",
+   "title": "反省台灣教會的角色與使命",
+   "authors": [
+    "楊啟壽",
+    "陳文珊"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "28-34",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-35-44-a",
+   "title": "從台灣教會史看台灣本土神學的過去與未來",
+   "authors": [
+    "黃伯和"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "35-44",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-45-54-a",
+   "title": "新世紀台灣神學的走向--宣教面向的省思",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "45-54",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-55-59-a",
+   "title": "談兩性平權的迷思",
+   "authors": [
+    "吳富雅"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "55-59",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-60-64-a",
+   "title": "建立共存共榮的山海文化島國",
+   "authors": [
+    "布興大立"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "60-64",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-65-72-a",
+   "title": "死刑作為處罰犯之一種刑罰的本土神學省思",
+   "authors": [
+    "陳南州"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "65-72",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-73-77-a",
+   "title": "評電影影子大地-一個女性主義者的重讀",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "73-77",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-78-85-a",
+   "title": "用柔情解剖殘酷歷史－介紹德國當代作家施靈克(Bernhard Schlink)的「朗讀者」(Ⅰ)",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "78-85",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-86-87-a",
+   "title": "「神蝕」時代的上帝",
+   "authors": [
+    "劉鎮歐"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "86-87",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-88-91-a",
+   "title": "他們的眼睛忽然開了",
+   "authors": [
+    "宋泉盛"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "88-91",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-92-95-a",
+   "title": "流放：靈魂的遠行與保存",
+   "authors": [
+    "葉啟祥"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "92-95",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  },
+  {
+   "docId": "a0000008-200104-x-1-96-96-o",
+   "title": "漫畫中的神學",
+   "authors": [
+    "陳義仁"
+   ],
+   "volIssue": "1期",
+   "date": "2001 / 04",
+   "pages": "96-96",
+   "fulltext": false,
+   "issueLabel": "1期 (2001/04)",
+   "issueID": "1637"
+  }
+ ]
+}

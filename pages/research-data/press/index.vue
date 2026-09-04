@@ -39,20 +39,27 @@
             <div class="flex flex-wrap items-baseline gap-2 mb-1">
               <h3 class="text-sm font-semibold text-gray-900">{{ p.name }}</h3>
               <span class="text-xs font-bold px-1.5 py-0.5 rounded" :class="tierBadge[p.tier]">{{ TIER_LABEL[p.tier] }}</span>
-              <span class="text-[11px] text-gray-400 font-mono">{{ p.start }}–{{ p.end ?? '' }}</span>
-              <span v-if="p.holdings" class="ml-auto text-xs font-medium text-gray-600">{{ p.holdings }}</span>
+              <span v-if="p.start" class="text-[11px] text-gray-400 font-mono">{{ p.start }}–{{ p.end ?? '' }}</span>
+              <span class="ml-auto text-xs font-medium text-gray-600">{{ p.holdings ?? holdingsOf(p.slug) }}</span>
             </div>
 
             <p v-if="p.aka?.length" class="text-[11px] text-gray-400 mb-1">
               並稱／舊名：{{ p.aka.join('、') }}
             </p>
             <p class="text-[11px] text-gray-400 mb-1.5">{{ p.publisher }}</p>
+            <p v-if="p.coverage || airitiRange(p.slug)" class="text-[11px] text-gray-400 mb-1.5">
+              華藝收錄：{{ p.coverage ?? airitiRange(p.slug) }}（≠ 創刊停刊）
+            </p>
             <p class="text-xs text-gray-600 leading-relaxed break-words">{{ p.note }}</p>
 
             <div class="mt-2 flex flex-wrap gap-3 text-xs">
               <NuxtLink v-if="p.to" :to="p.to" class="text-blue-600 hover:underline no-underline">
                 {{ p.tier === 'full' ? '站內全文' : '站內篇目' }} →
               </NuxtLink>
+              <!-- 全文那份多半沒有卷期頁碼，華藝這份才有；兩個連結不能只留一個 -->
+              <NuxtLink v-if="p.airiti && p.to !== `/research-data/press/${p.slug}`"
+                :to="`/research-data/press/${p.slug}`"
+                class="text-violet-600 hover:underline no-underline">華藝篇目（卷期‧頁碼）→</NuxtLink>
               <a v-if="p.external" :href="p.external.url" target="_blank" rel="noopener"
                 class="text-gray-500 hover:underline no-underline">{{ p.external.label }} ↗</a>
             </div>
@@ -64,10 +71,31 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import { PRESS_GROUPS, TIER_LABEL, TIER_DESC, type PressTier } from '~/data/press';
 
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '期刊與報紙 — 論文資料整理' });
+
+// 各刊的篇目統計另存一份小索引；卷期頁那幾份 JSON 動輒好幾 MB，列表頁不該整份拉
+interface AiritiRow { slug: string; issues: number; articles: number; start: string; end: string }
+const airiti = ref<Record<string, AiritiRow>>({});
+const holdingsOf = (slug: string) => {
+  const r = airiti.value[slug];
+  return r ? `${r.articles.toLocaleString()} 篇 / ${r.issues} 期` : '';
+};
+const airitiRange = (slug: string) => {
+  const r = airiti.value[slug];
+  return r ? (r.start === r.end ? r.start : `${r.start}–${r.end}`) : '';
+};
+
+onMounted(async () => {
+  try {
+    const r = await fetch('/content/research-data/press/airiti-index.json');
+    if (!r.ok) return;
+    airiti.value = Object.fromEntries((await r.json() as AiritiRow[]).map(x => [x.slug, x]));
+  } catch { /* 統計拉不到就讓數字留白，卡片本身照常 */ }
+});
 
 const tierBadge: Record<PressTier, string> = {
   full: 'bg-emerald-100 text-emerald-700',

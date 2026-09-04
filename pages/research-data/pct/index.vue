@@ -71,7 +71,10 @@
 
       <p class="mt-6 text-xs text-gray-400 leading-relaxed">
         待補：事工說明書（同站）。女宣雜誌經評估不收。
-        《使者》（1963–1990，新使者前身）線上無全文典藏。
+        《使者》（1963-02 創刊，1990-12 起易名《新使者》）線上無全文典藏，華藝也沒有；
+        體例與查得到的地方記在<a href="/research-data/press" class="text-blue-600 hover:underline">期刊與報紙</a>。
+        《新使者》的卷期與頁碼另見<a href="/research-data/press/new-messenger" class="text-blue-600 hover:underline">華藝篇目</a>——
+        站內這一份全文沒有頁碼，做註腳要兩份併看。
         《台灣教會公報》1885–2007 掃描檔須向公報社去信索取；2008 至 2010 年間的期別目前無免費線上來源。
       </p>
     </div>
