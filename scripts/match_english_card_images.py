@@ -453,7 +453,6 @@ OVERRIDES: dict[str, str] = {
     "wrong": "cross mark button",             # 錯誤的（與 correct ✅ 成組）
     "excellent": "1st place medal",           # 傑出的
     "ready": "green circle",                  # 準備好的＝綠燈
-    "real": "check mark",                     # 真正的
     "special": "sparkles",                    # 特別的
     "same": "heavy equals sign",              # 相同的（與 equal 等於同義，共用一張）
     "basic": "abacus",                        # 基本的（與 count 計算同一張，都是最基礎的算具）
@@ -616,6 +615,10 @@ ICONIFY_OVERRIDES: dict[str, str] = {
     "pretty": "mdi:flower-tulip",
     "morning": "mdi:weather-sunset-up",
     # ── 第三輪：逐張看樣張抓出來的 ──
+    # 🚨 you 站上配到的 `index pointing at the viewer` 印出來像一顆拳頭——
+    # skill 早就記過這一張，這副卡又踩了一次。
+    "you": "mdi:hand-pointing-right",
+    "real": "mdi:diamond-stone",              # 真正的（原本與 have 有共用同一個 ✔️）
     # 站上那批自動配圖錯得離譜的幾張：body 身體配到骷髏、age 年紀配到 🔞、
     # comic 漫畫配到 💩、summer 夏天配到啤酒、soldier 軍人配到忍者。
     "body": "mdi:human",

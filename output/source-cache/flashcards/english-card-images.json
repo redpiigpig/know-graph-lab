@@ -5,11 +5,11 @@
   "sources": {
     "tile": 56,
     "flag": 19,
-    "override": 324,
+    "override": 323,
     "preset": 366,
     "annotation": 1,
-    "zh_transfer": 53,
-    "iconify": 181,
+    "zh_transfer": 52,
+    "iconify": 183,
     "none": 0
   },
   "images": {
@@ -20,8 +20,8 @@
       "lesson": 1
     },
     "you": {
-      "file": "openmoji-618/1FAF5.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-hand-pointing-right.png",
+      "source": "iconify",
       "glossZh": "你；你們",
       "lesson": 1
     },
@@ -2834,8 +2834,8 @@
       "lesson": 24
     },
     "real": {
-      "file": "openmoji-618/2714.png",
-      "source": "override",
+      "file": "english-icons/mdi-diamond-stone.png",
+      "source": "iconify",
       "glossZh": "真正的",
       "lesson": 24
     },
