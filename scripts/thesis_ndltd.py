@@ -216,7 +216,16 @@ def main():
     ap.add_argument("--search", action="store_true")
     ap.add_argument("--query")
     ap.add_argument("--force", action="store_true", help="已完成的組也重跑")
+    # 給排程用：印 ALL_DONE / PENDING <n>。keeper 是 ASCII-only 的 .ps1，
+    # 不能在那邊比對中文字串（PS 5.1 讀無 BOM 的 .ps1 當 ANSI，中文會被切壞）。
+    ap.add_argument("--check-done", action="store_true")
     args = ap.parse_args()
+    if args.check_done:
+        done = {r.get("query") for r in (json.loads(OUT.read_text(encoding="utf-8"))
+                                         if OUT.exists() else [])}
+        left = [q for q, _ in QUERIES if q not in done]
+        print("ALL_DONE" if not left else f"PENDING {len(left)}")
+        return
     if not args.search:
         ap.print_help()
         return
@@ -226,7 +235,10 @@ def main():
     # 🚨 一次把 14 組丟給 node 會撞逾時，而且**跑完才回傳＝中斷就全部白跑**（踩過一次，
     # 一小時的結果全丟）。改成一組一組跑、每組存檔；已在檔裡的組跳過，可續跑。
     data = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else []
-    done = {d["query"] for d in data if d.get("count")}
+    # 🚨 判準是「檔裡有沒有這一組」，不是「這一組有沒有命中」。抓失敗的組根本不寫檔
+    #    （見下面 g["error"] 那一段），所以有紀錄就是抓成功了。用 count 當判準的話，
+    #    真的 0 筆的組會被永遠重跑，keeper 也就永遠等不到完工、無限空轉。
+    done = {d["query"] for d in data}
     todo = [q for q in qs if q[0] not in done or args.force]
     print(f"待查 {len(todo)} 組（已完成 {len(done)} 組）", flush=True)
     for one in todo:
