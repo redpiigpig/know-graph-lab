@@ -291,10 +291,33 @@ def harvest_toc(s, slug):
 
 # ---------------------------------------------------------------- 全文下載
 
+def issue_html_all(s, pid, publisher_id, year, issue_id, max_pages=40):
+    """把一期的**每一頁**串起來回傳。
+
+    🚨 卷期頁一頁只有 10 筆，而下載鈕（連同各篇自己的 token）就長在該頁上。
+       只抓第一頁的話，第 11 篇之後一律判成「沒有全文下載鈕」——校園 68卷2期
+       剛好成功 10 篇、後面全掛，就是這個。原本的補救寫著「讓 fetch_pdf 自己重抓」，
+       但那支也只抓第一頁，重抓等於再失敗一次。
+    """
+    out, page = [], 1
+    while page <= max_pages:
+        time.sleep(DELAY_META)
+        html = s.get(info_url(pid, issueYear=year, issueID=issue_id,
+                              page=(page if page > 1 else None),
+                              publisherID=publisher_id), timeout=90).text
+        out.append(html)
+        _, has_next = parse_issue_page(html)
+        if not has_next:
+            break
+        page += 1
+    return chr(10).join(out)
+
+
 def fetch_pdf(s, pid, publisher_id, year, issue_id, doc_id, issue_html=None):
     """兩段式下載。回傳 (bytes, 檔名) 或 (None, 錯誤訊息)。"""
     url = info_url(pid, issueYear=year, issueID=issue_id, publisherID=publisher_id)
-    html = issue_html if issue_html is not None else s.get(url, timeout=90).text
+    html = (issue_html if issue_html is not None
+            else issue_html_all(s, pid, publisher_id, year, issue_id))
     tok = next((m.group(4) for m in DL_RE.finditer(html) if m.group(1) == doc_id), None)
     if not tok:
         return None, "此篇在卷期頁上沒有全文下載鈕"
@@ -331,6 +354,24 @@ def safe_name(x, limit=110):
     return SAFE.sub("_", x).strip().rstrip(".")[:limit] or "untitled"
 
 
+def write_with_retry(dest, blob, tries=4):
+    """寫檔失敗要重試，而且不可以讓整輪崩掉。
+
+    🚨 目的地是 Google Drive 的虛擬磁碟，偶爾會回 OSError 22（Invalid argument），
+       過幾秒再寫同一個檔就好了——不是檔名的問題（實測 60 字元的純中文檔名照樣中）。
+       原本沒有任何保護，一次打嗝就把整批 300 篇的迴圈整個帶走。
+    """
+    for i in range(tries):
+        try:
+            dest.write_bytes(blob)
+            return None
+        except OSError as e:                      # noqa: PERF203
+            if i == tries - 1:
+                return str(e)[:60]
+            time.sleep(2 * (i + 1))
+    return None
+
+
 def download(s, slug, limit):
     pid, name = JOURNALS[slug]
     toc = json.loads((TOC_DIR / f"{slug}.json").read_text(encoding="utf-8"))
@@ -352,18 +393,12 @@ def download(s, slug, limit):
             continue
         # 同一期連續下載時，卷期頁重抓一次就夠——token 在整頁裡是逐篇各一份的
         if cached_issue != a["issueID"]:
-            time.sleep(DELAY_META)
-            cached_html = s.get(info_url(pid, issueYear=(a.get("date") or "")[:4],
-                                         issueID=a["issueID"],
-                                         publisherID=toc["publisherID"]), timeout=90).text
+            cached_html = issue_html_all(s, pid, toc["publisherID"],
+                                         (a.get("date") or "")[:4], a["issueID"])
             cached_issue = a["issueID"]
-        if f"'{a['docId']}'" not in cached_html:
-            cached_html = None  # 這篇不在第一頁，讓 fetch_pdf 自己重抓
         time.sleep(DELAY_DL)
         blob, info = fetch_pdf(s, pid, toc["publisherID"], (a.get("date") or "")[:4],
                                a["issueID"], a["docId"], cached_html)
-        if cached_html is None:
-            cached_issue = None
         if blob is None:
             ledger[a["docId"]] = f"fail: {info}"
             fail += 1
@@ -372,7 +407,14 @@ def download(s, slug, limit):
                 print("  ⚠ 中止：華藝已經不認這台機器的機構身分了")
                 break
         else:
-            dest.write_bytes(blob)
+            err = write_with_retry(dest, blob)
+            if err:
+                ledger[a["docId"]] = f"fail: 寫檔失敗 {err}"
+                fail += 1
+                print(f"  ✗ {a['title'][:34]} — 寫檔失敗：{err}", flush=True)
+                ledger_p.write_text(json.dumps(ledger, ensure_ascii=False, indent=1),
+                                    encoding="utf-8")
+                continue
             ledger[a["docId"]] = "ok"
             done += 1
             print(f"  ✓ [{done}] {a['issueLabel']} {a['title'][:34]} "
