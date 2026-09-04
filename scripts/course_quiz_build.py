@@ -13,6 +13,7 @@
   python scripts/course_quiz_build.py            # 全部十六章
   python scripts/course_quiz_build.py 1 2 3
 """
+import hashlib
 import html
 import json
 import re
@@ -85,15 +86,19 @@ def cn(n):
     return CN[n - 1] if n <= 10 else CN[10:][(n - 11) * 2:(n - 11) * 2 + 2]
 
 
-# 出題時容易把正解都寫在同一個位置。這裡以確定性的輪轉把正解均勻攤到 A–D，
-# 輪轉保持選項的相對順序，所以讀起來仍然自然；同一題每次產生的結果都一樣。
-TARGETS = [0, 2, 1, 3, 2, 0, 3, 1, 1, 3, 0, 2, 3, 1, 2, 0]
-
-
+# 出題時容易把正解都寫在同一個位置，所以正解位置由產生器決定，不照題庫裡的順序。
+#
+# 🚨 舊版用的是一張只吃「章號×題號」的輪轉表，於是三門課同一章的正解序列
+# 完全相同（第一章都是 BABADDDDAB），學生不必讀題就能猜。現在改成依
+# md5(課程+章+題號+選項文字) 排序：只跟內容有關，因此
+#   ‧ 同一題每次產生都一樣（線上版、紙本 docx、Kahoot 匯入檔三者才對得起來）
+#   ‧ 不同課程、不同題目各自獨立，看不出規律
+# 選項文字取跳脫後的字串，與線上版 HTML 實際輸出的內容一致。
 def balanced(n, i, opts, ans):
-    target = TARGETS[(n * 7 + i * 3) % len(TARGETS)] % 4
-    shift = (ans - target) % 4
-    return opts[shift:] + opts[:shift], target
+    seed = f'{PREFIX}-ch{n:02d}-{i + 1}'
+    key = lambda t: hashlib.md5(f'{seed}||{html.escape(t)}'.encode('utf-8')).hexdigest()
+    ordered = sorted(opts, key=key)
+    return ordered, ordered.index(opts[ans])
 
 
 # ── 線上版 HTML ─────────────────────────────────────────────────────────────
