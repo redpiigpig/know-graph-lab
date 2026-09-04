@@ -1,0 +1,2023 @@
+{
+ "slug": "huafan-humanities",
+ "pid": "18124305",
+ "name": "華梵人文學報",
+ "publisherID": "U20200720005",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=18124305&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 24,
+  "篇目": 143,
+  "有電子全文": 143
+ },
+ "issues": [
+  {
+   "issueID": "201502050023",
+   "label": "23期 (2015/01)",
+   "year": "2015",
+   "count": 6
+  },
+  {
+   "issueID": "201502050022",
+   "label": "22期 (2014/07)",
+   "year": "2014",
+   "count": 7
+  },
+  {
+   "issueID": "201402180021",
+   "label": "21期 (2014/01)",
+   "year": "2014",
+   "count": 6
+  },
+  {
+   "issueID": "201309040013",
+   "label": "20期 (2013/07)",
+   "year": "2013",
+   "count": 7
+  },
+  {
+   "issueID": "201309270017",
+   "label": "天台學專刊 (2013/05)",
+   "year": "2013",
+   "count": 14
+  },
+  {
+   "issueID": "201303190012",
+   "label": "19期 (2013/01)",
+   "year": "2013",
+   "count": 4
+  },
+  {
+   "issueID": "201210020013",
+   "label": "18期 (2012/07)",
+   "year": "2012",
+   "count": 3
+  },
+  {
+   "issueID": "201203120012",
+   "label": "17期 (2012/01)",
+   "year": "2012",
+   "count": 6
+  },
+  {
+   "issueID": "201108200023",
+   "label": "16期 (2011/07)",
+   "year": "2011",
+   "count": 7
+  },
+  {
+   "issueID": "201103160005",
+   "label": "15期 (2011/01)",
+   "year": "2011",
+   "count": 3
+  },
+  {
+   "issueID": "201101220035",
+   "label": "14期 (2010/06)",
+   "year": "2010",
+   "count": 4
+  },
+  {
+   "issueID": "201003310066",
+   "label": "13期 (2010/01)",
+   "year": "2010",
+   "count": 7
+  },
+  {
+   "issueID": "201003310065",
+   "label": "12期 (2009/06)",
+   "year": "2009",
+   "count": 5
+  },
+  {
+   "issueID": "85149",
+   "label": "11期 (2009/01)",
+   "year": "2009",
+   "count": 4
+  },
+  {
+   "issueID": "72428",
+   "label": "10期 (2008/07)",
+   "year": "2008",
+   "count": 4
+  },
+  {
+   "issueID": "72719",
+   "label": "9期 (2008/01)",
+   "year": "2008",
+   "count": 5
+  },
+  {
+   "issueID": "72718",
+   "label": "8期 (2007/01)",
+   "year": "2007",
+   "count": 4
+  },
+  {
+   "issueID": "72717",
+   "label": "7期 (2006/07)",
+   "year": "2006",
+   "count": 4
+  },
+  {
+   "issueID": "72716",
+   "label": "6期 (2006/01)",
+   "year": "2006",
+   "count": 6
+  },
+  {
+   "issueID": "72715",
+   "label": "5期 (2005/07)",
+   "year": "2005",
+   "count": 5
+  },
+  {
+   "issueID": "72714",
+   "label": "4期 (2005/01)",
+   "year": "2005",
+   "count": 6
+  },
+  {
+   "issueID": "72713",
+   "label": "3期 (2004/06)",
+   "year": "2004",
+   "count": 8
+  },
+  {
+   "issueID": "72712",
+   "label": "2期 (2004/01)",
+   "year": "2004",
+   "count": 7
+  },
+  {
+   "issueID": "201008210066",
+   "label": "1期 (2003/07)",
+   "year": "2003",
+   "count": 11
+  }
+ ],
+ "articles": [
+  {
+   "docId": "18124305-201501-201502050023-201502050023-1-39",
+   "title": "北齊華嚴造像的開展：以華嚴三聖與七處八會為例",
+   "authors": [
+    "陳俊吉(Chun-Chi Chen)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "1-39",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201501-201502050023-201502050023-40-81",
+   "title": "朱子「本性論」探析",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "40-81",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201501-201502050023-201502050023-82-94",
+   "title": "Focus on Form and Focus on Forms: Teaching Issues in Second Language Writing Instruction",
+   "authors": [
+    "劉昱秀(Yu-Hsiu Liu)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "82-94",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201501-201502050023-201502050023-95-122",
+   "title": "祈告先聖－析朱熹「告先聖」行為的特質及影響",
+   "authors": [
+    "張清江(Qing-Jiang Zhang)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "95-122",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201501-201502050023-201502050023-123-146",
+   "title": "The ＂Code＂ in Research Articles: Tenses, Voices and Rhetoric Functions of the Formulaic Expressions",
+   "authors": [
+    "陳玫樺(Mei-Hua Chen)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "123-146",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201501-201502050023-201502050023-147-193",
+   "title": "遍數印痕證虔心－日本的巡禮遍路與御朱印文化",
+   "authors": [
+    "邱怡靜(Yi-Ching Chiu)"
+   ],
+   "volIssue": "23期",
+   "date": "2015 / 01",
+   "pages": "147-193",
+   "fulltext": true,
+   "issueLabel": "23期 (2015/01)",
+   "issueID": "201502050023"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-1-42",
+   "title": "黑格爾論分析認知與綜合認知",
+   "authors": [
+    "劉愛民(Ai-Min Liu)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "1-42",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-43-70",
+   "title": "黑格爾論歷史進程",
+   "authors": [
+    "劉創馥(Chong-Fuk Lau)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "43-70",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-71-105",
+   "title": "元宵與中秋－《紅樓夢》神聖時間的創傷書寫與療癒",
+   "authors": [
+    "林素玟(Su-Wen Lin)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "71-105",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-106-134",
+   "title": "〈人子〉之深層意義探析－從神話及心理學的角度展開",
+   "authors": [
+    "沈素因(Su-Yin Shen)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "106-134",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-135-156",
+   "title": "劉辰翁詩歌負面評點之繹說",
+   "authors": [
+    "鄭宇辰(Yu-Chen Cheng)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "135-156",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-157-189",
+   "title": "唐詩中的生死觀－以時空為切入視角",
+   "authors": [
+    "王正利(Jeng-Li Wang)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "157-189",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201407-201502050022-201502050022-190-219",
+   "title": "《夜窗鬼談》鬼敘述之漢學底蘊",
+   "authors": [
+    "柯混瀚(Hun-Han Ko)"
+   ],
+   "volIssue": "22期",
+   "date": "2014 / 07",
+   "pages": "190-219",
+   "fulltext": true,
+   "issueLabel": "22期 (2014/07)",
+   "issueID": "201502050022"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-1-38",
+   "title": "周代親親倫理思想之承襲－以先秦孔孟為探討",
+   "authors": [
+    "程諾蘭(Noa-Lan Cheng)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "1-38",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-39-77",
+   "title": "Mother-Daughter Relationships and Chinese American Dialectics in Amy Tan’s ＂The Joy Luck Club＂",
+   "authors": [
+    "陳淑玲(Shu-Ling Chen)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "39-77",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-78-140",
+   "title": "《詩經．唐風》詩旨於春秋晉史之研究",
+   "authors": [
+    "劉逸文(Yi-Wen Liu)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "78-140",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-141-163",
+   "title": "歲星與太歲之對應關係－以先秦至西漢為討論範圍",
+   "authors": [
+    "陳峻誌(Chun-Chih Chen)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "141-163",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-164-194",
+   "title": "論皮錫瑞、章太炎、劉師培對於元明經學的看法及其影響",
+   "authors": [
+    "梁右典(You-Dian Liang)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "164-194",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201401-201402180021-201402180021-195-217",
+   "title": "從詩詞看宋代何遜形象的建立過程",
+   "authors": [
+    "林柏堅(Bo-Jian Lin)"
+   ],
+   "volIssue": "21期",
+   "date": "2014 / 01",
+   "pages": "195-217",
+   "fulltext": true,
+   "issueLabel": "21期 (2014/01)",
+   "issueID": "201402180021"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-1-18",
+   "title": "《老子》河上公章句「道」概念形上義涵辨析",
+   "authors": [
+    "馬耘(Yun Ma)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-19-41",
+   "title": "The Construction of Identity through Food and Sex-Transference of Desire in Katherine Min’s ＂Courting a Monk＂",
+   "authors": [
+    "謝瑤玲(Yau-Ling Hsieh)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "19-41",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-43-70",
+   "title": "從范攄《雲谿友議》看中晚唐文人對科舉之觀感及文學想像",
+   "authors": [
+    "李昭鴻(Chao-Hung Lee)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "43-70",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-71-93",
+   "title": "證悟與轉化－試論憨山大師之修行歷程與自我轉化",
+   "authors": [
+    "曾瓊瑤(Chiung-Yao Tseng)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "71-93",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-95-111",
+   "title": "印度哲學關於「無」與「有」的論爭－兼論日本「批判佛教」如來藏觀「有」的邏輯",
+   "authors": [
+    "孫晶(Jing Sun)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "95-111",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-113-133",
+   "title": "論「觀海」意涵－以孟子、曹操、傅抱石為研究對象",
+   "authors": [
+    "余佳燕(Chia-En Shoi)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "113-133",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201307-201309040013-201309040013-135-151",
+   "title": "辨異與玄同的展演：吳冠宏《魏晉玄義與聲論新探》述評",
+   "authors": [
+    "曾敬宗(Jing-Zong Zeng)"
+   ],
+   "volIssue": "20期",
+   "date": "2013 / 07",
+   "pages": "135-151",
+   "fulltext": true,
+   "issueLabel": "20期 (2013/07)",
+   "issueID": "201309040013"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-1-41",
+   "title": "天台學的核心觀念與實踐：對海外的天台學研究的反思",
+   "authors": [
+    "吳汝鈞(Yu-Kwan Ng)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "1-41",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-43-73",
+   "title": "慧思《諸法無諍三昧法門》「止觀所緣轉向」研究",
+   "authors": [
+    "釋性廣(Shing-Kuang Venerable)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "43-73",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-75-96",
+   "title": "法華禪觀與法華圖像之關係－由慧思「法華三昧」禪觀看觀音菩薩「普現色身」形象的義涵",
+   "authors": [
+    "王晴薇(Ching-Wei Wang)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "75-96",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-97-141",
+   "title": "鳩摩羅什《維摩詰經》實相譯語及天台疏釋之研究",
+   "authors": [
+    "程恭讓(Gong-Rang Cheng)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "97-141",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-143-167",
+   "title": "論「五重玄義」的解經體例－再談中國佛教宗派的成立依據",
+   "authors": [
+    "李四龍(Si-Long Li)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "143-167",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-169-199",
+   "title": "天台三觀與華嚴三觀",
+   "authors": [
+    "陳英善(Ying-Shan Chen)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "169-199",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-201-223",
+   "title": "四明知禮論法界圓融",
+   "authors": [
+    "韋漢傑(Hon-Kit Wai)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "201-223",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-225-254",
+   "title": "天台懺法的創新整合模式",
+   "authors": [
+    "黃國清(Kuo-Ching Huang)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "225-254",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-255-279",
+   "title": "天台的圓頓教觀與生活的中道實踐",
+   "authors": [
+    "尤惠貞(Huey-Jen Yu)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "255-279",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-281-310",
+   "title": "《法華五百問論》在日流傳史",
+   "authors": [
+    "釋真定(Zhen-Ding Shih)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "281-310",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-311-356",
+   "title": "The Development of Zhiyi's Theory of the Three Contemplations and its Relation to the Three Truths Theory",
+   "authors": [
+    "Robert F. Rhodes"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "311-356",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-357-405",
+   "title": "Contradiction and Ambiguity in Chinese Buddhist Philosophy",
+   "authors": [
+    "Hans-Rudolf Kantor"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "357-405",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-407-454",
+   "title": "What Does the Law of Non-Contradiction Tell Us, If Anything? Paradox, Parameterization and Truth in Tiantai Buddhism",
+   "authors": [
+    "Brook Ziporyn"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "407-454",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201305-201309270017-201309270017-455-470",
+   "title": "論《摩訶止觀、破法遍》之「一念心」－以「無生門破法」之從假入空破法遍為主",
+   "authors": [
+    "張麗卿(Li-Ching Chang)"
+   ],
+   "volIssue": "天台學專刊",
+   "date": "2013 / 05",
+   "pages": "455-470",
+   "fulltext": true,
+   "issueLabel": "天台學專刊 (2013/05)",
+   "issueID": "201309270017"
+  },
+  {
+   "docId": "18124305-201301-201303190012-201303190012-1-21",
+   "title": "論《存在與時問》第七節中海德格爾對現象學的看法",
+   "authors": [
+    "高樺(Hua Gao)"
+   ],
+   "volIssue": "19期",
+   "date": "2013 / 01",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "19期 (2013/01)",
+   "issueID": "201303190012"
+  },
+  {
+   "docId": "18124305-201301-201303190012-201303190012-23-59",
+   "title": "甲骨文「侑祭」的實質涵義",
+   "authors": [
+    "羅慧君(Hui-Chun Lo)"
+   ],
+   "volIssue": "19期",
+   "date": "2013 / 01",
+   "pages": "23-59",
+   "fulltext": true,
+   "issueLabel": "19期 (2013/01)",
+   "issueID": "201303190012"
+  },
+  {
+   "docId": "18124305-201301-201303190012-201303190012-61-81",
+   "title": "The Significance of Manitous and Animals in Louise Erdrich's \"The Porcupine Year\"",
+   "authors": [
+    "張麗萍(Li-Ping Chang)",
+    "林品君(Pin-Chun Lin)",
+    "湯惠(Hui Tang)"
+   ],
+   "volIssue": "19期",
+   "date": "2013 / 01",
+   "pages": "61-81",
+   "fulltext": true,
+   "issueLabel": "19期 (2013/01)",
+   "issueID": "201303190012"
+  },
+  {
+   "docId": "18124305-201301-201303190012-201303190012-83-123",
+   "title": "朱子「形上」義析論及其反省",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)",
+    "李光泰(Kuang-Tai Li)"
+   ],
+   "volIssue": "19期",
+   "date": "2013 / 01",
+   "pages": "83-123",
+   "fulltext": true,
+   "issueLabel": "19期 (2013/01)",
+   "issueID": "201303190012"
+  },
+  {
+   "docId": "18124305-201207-201210020013-201210020013-1-20",
+   "title": "論朱子「心統性情」的「心」是「本心」還是「氣心」？",
+   "authors": [
+    "陳振崑(Jen-Kuen Chen)"
+   ],
+   "volIssue": "18期",
+   "date": "2012 / 07",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "18期 (2012/07)",
+   "issueID": "201210020013"
+  },
+  {
+   "docId": "18124305-201207-201210020013-201210020013-21-56",
+   "title": "類推適用或禁止《墨子》「罪不在禁，惟害無罪，殆姑」新詮",
+   "authors": [
+    "陳弘學(Houng-Shyue Chen)"
+   ],
+   "volIssue": "18期",
+   "date": "2012 / 07",
+   "pages": "21-56",
+   "fulltext": true,
+   "issueLabel": "18期 (2012/07)",
+   "issueID": "201210020013"
+  },
+  {
+   "docId": "18124305-201207-201210020013-201210020013-57-136",
+   "title": "台灣文學與佛教關係的系譜－從口傳文學、古典文學到現代文學",
+   "authors": [
+    "顧敏耀"
+   ],
+   "volIssue": "18期",
+   "date": "2012 / 07",
+   "pages": "57-136",
+   "fulltext": true,
+   "issueLabel": "18期 (2012/07)",
+   "issueID": "201210020013"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-3-37",
+   "title": "民初《詩經》白話註譯的發展─以疑古思潮解構經典地位的影響為論",
+   "authors": [
+    "朱孟庭(Meng-Ting Chu)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "1-35",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-39-73",
+   "title": "朱子「理」之外在屬性探析",
+   "authors": [
+    "許宗興(Zong-Xing Xu)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "37-71",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-75-112",
+   "title": "世變民劫—勞思光韋齋詩「奮志回天」主題的恆常顧念與儒家情懷",
+   "authors": [
+    "林碧玲(Bi-Ling Lin)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "73-110",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-113-133",
+   "title": "經驗基礎、科學方法與「統一科學」：紐拉特的觀點",
+   "authors": [
+    "戴東源(Dong-Yuan Tai)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "111-131",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-135-160",
+   "title": "真值間隙理論與第三值",
+   "authors": [
+    "傅皓政(Hao-Cheng Fu)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "133-158",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201201-201203120012-201203120012-161-190",
+   "title": "日常生態還是奢華夢想？：論《托斯卡尼豔陽下》的生態文學批評",
+   "authors": [
+    "張雅蘭(Ya-Lan Chang)"
+   ],
+   "volIssue": "17期",
+   "date": "2012 / 01",
+   "pages": "159-188",
+   "fulltext": true,
+   "issueLabel": "17期 (2012/01)",
+   "issueID": "201203120012"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-1-30",
+   "title": "朱子哲學之定位",
+   "authors": [
+    "許宗興(Zong-Xing Xu)",
+    "李光泰(Guang-Tai Li)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "1-30",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-31-77",
+   "title": "《紅樓夢》的病／罪書寫與療癒",
+   "authors": [
+    "林素玟(Su-Wen Lin)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "31-77",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-79-120",
+   "title": "黑格爾「精神」理念與歷史發展的主客辯證－體系思維到精神實踐",
+   "authors": [
+    "程諾蘭(Nuo-Lan Cheng)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "79-120",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-121-146",
+   "title": "「萬物一體」的理想如何可能－以家庭為實踐起點",
+   "authors": [
+    "謝居憲(Ju-Xian Xie)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "121-146",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-147-169",
+   "title": "論吳敬梓《儒林外史》的僧人描寫與宗教理路",
+   "authors": [
+    "李昭鴻(Zhao-Hong Li)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "147-169",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-171-201",
+   "title": "《荀子》知識理論的倫理規範與檢證方式",
+   "authors": [
+    "洪巳軒(Si-Xuan Hong)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "171-201",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201107-201108200023-201108200023-203-238",
+   "title": "佛日契嵩釋儒會通思想探微－以《輔教編•孝論》為中心",
+   "authors": [
+    "曾繁玲(Fan-Ling Ceng)"
+   ],
+   "volIssue": "16期",
+   "date": "2011 / 07",
+   "pages": "203-238",
+   "fulltext": true,
+   "issueLabel": "16期 (2011/07)",
+   "issueID": "201108200023"
+  },
+  {
+   "docId": "18124305-201101-201103160005-201103160005-5-40",
+   "title": "背景知識的分類",
+   "authors": [
+    "冀劍制(Chien-Chih Chi)"
+   ],
+   "volIssue": "15期",
+   "date": "2011 / 01",
+   "pages": "5-40",
+   "fulltext": true,
+   "issueLabel": "15期 (2011/01)",
+   "issueID": "201103160005"
+  },
+  {
+   "docId": "18124305-201101-201103160005-201103160005-41-82",
+   "title": "因文生事－《貫華堂第五才子書水滸傳》敘事類型意識及其法則",
+   "authors": [
+    "楊清惠(Qing-Hui Yong)"
+   ],
+   "volIssue": "15期",
+   "date": "2011 / 01",
+   "pages": "41-82",
+   "fulltext": true,
+   "issueLabel": "15期 (2011/01)",
+   "issueID": "201103160005"
+  },
+  {
+   "docId": "18124305-201101-201103160005-201103160005-83-107",
+   "title": "《荔鏡傳》續考－「陳三五娘」在小說文體的表述手法與基礎意涵考略",
+   "authors": [
+    "黃東陽(Tung-Yang Huang)"
+   ],
+   "volIssue": "15期",
+   "date": "2011 / 01",
+   "pages": "83-107",
+   "fulltext": true,
+   "issueLabel": "15期 (2011/01)",
+   "issueID": "201103160005"
+  },
+  {
+   "docId": "18124305-201006-201101220035-201101220035-5-42",
+   "title": "劉向刪繁《孝經》考辯",
+   "authors": [
+    "莊兵(Bing Zhuang)"
+   ],
+   "volIssue": "14期",
+   "date": "2010 / 06",
+   "pages": "5-42",
+   "fulltext": true,
+   "issueLabel": "14期 (2010/06)",
+   "issueID": "201101220035"
+  },
+  {
+   "docId": "18124305-201006-201101220035-201101220035-43-61",
+   "title": "Existence in Nihilism: Self-Contradicting Awakening in the Trial",
+   "authors": [
+    "戴國平(Kuo-Ping Tai)"
+   ],
+   "volIssue": "14期",
+   "date": "2010 / 06",
+   "pages": "43-61",
+   "fulltext": true,
+   "issueLabel": "14期 (2010/06)",
+   "issueID": "201101220035"
+  },
+  {
+   "docId": "18124305-201006-201101220035-201101220035-63-94",
+   "title": "和辻哲郎的風土論－兼論洪耀勳與貝瑞克的風土觀",
+   "authors": [
+    "廖欽彬(Chin-Ping Liao)"
+   ],
+   "volIssue": "14期",
+   "date": "2010 / 06",
+   "pages": "63-94",
+   "fulltext": true,
+   "issueLabel": "14期 (2010/06)",
+   "issueID": "201101220035"
+  },
+  {
+   "docId": "18124305-201006-201101220035-201101220035-95-124",
+   "title": "檢視黑爾由「後設倫理學」導出「規範倫理學」之嘗試－「可普遍化原則」能否走向效益主義並解決個案爭議",
+   "authors": [
+    "林立(Li Lin)"
+   ],
+   "volIssue": "14期",
+   "date": "2010 / 06",
+   "pages": "95-124",
+   "fulltext": true,
+   "issueLabel": "14期 (2010/06)",
+   "issueID": "201101220035"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-5-42",
+   "title": "論老莊對“禮”的認知與評價",
+   "authors": [
+    "劉振維(Zhen-Wei Liu)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "5-42",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-43-84",
+   "title": "身體的凝視－從莊子到傅柯",
+   "authors": [
+    "林美清(Mei-Qing Lin)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "43-84",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-85-121",
+   "title": "《淮南子》的養生思想",
+   "authors": [
+    "羅因(Yin Luo)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "85-121",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-123-155",
+   "title": "兩漢博士師法、家法探析",
+   "authors": [
+    "姜龍翔(Long-Xiang Jiang)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "123-155",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-157-186",
+   "title": "蘭亭修禊的文化闡釋－本體的探詢與自然的發現",
+   "authors": [
+    "黃偉倫(Wei-Lun Huang)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "157-186",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-187-207",
+   "title": "戴震對於程朱論性的質疑與批評",
+   "authors": [
+    "蔡家和(Chia-He Tsai)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "187-207",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-201001-201003310066-201003310066-209-225",
+   "title": "中文屋論證的錯誤之一",
+   "authors": [
+    "冀劍制(Chien-Chih Chi)"
+   ],
+   "volIssue": "13期",
+   "date": "2010 / 01",
+   "pages": "209-225",
+   "fulltext": true,
+   "issueLabel": "13期 (2010/01)",
+   "issueID": "201003310066"
+  },
+  {
+   "docId": "18124305-200906-201003310065-201003310065-1-24",
+   "title": "《華嚴經》對曉雲法師的影響",
+   "authors": [
+    "陳秀慧(Shiu-Hui Chen)"
+   ],
+   "volIssue": "12期",
+   "date": "2009 / 06",
+   "pages": "1-24",
+   "fulltext": true,
+   "issueLabel": "12期 (2009/06)",
+   "issueID": "201003310065"
+  },
+  {
+   "docId": "18124305-200906-201003310065-201003310065-25-54",
+   "title": "取消唯物論的困局",
+   "authors": [
+    "冀劍制(Chien-Chih Chi)"
+   ],
+   "volIssue": "12期",
+   "date": "2009 / 06",
+   "pages": "25-54",
+   "fulltext": true,
+   "issueLabel": "12期 (2009/06)",
+   "issueID": "201003310065"
+  },
+  {
+   "docId": "18124305-200906-201003310065-201003310065-55-105",
+   "title": "《紅樓夢》“風流公案”的敘事結構及其創造轉化",
+   "authors": [
+    "楊清惠(Qing-Hui Yang)"
+   ],
+   "volIssue": "12期",
+   "date": "2009 / 06",
+   "pages": "55-105",
+   "fulltext": true,
+   "issueLabel": "12期 (2009/06)",
+   "issueID": "201003310065"
+  },
+  {
+   "docId": "18124305-200906-201003310065-201003310065-107-131",
+   "title": "試論《易》學影響下的傳統文藝觀",
+   "authors": [
+    "張鴻愷(Hung-Kai Chang)"
+   ],
+   "volIssue": "12期",
+   "date": "2009 / 06",
+   "pages": "107-131",
+   "fulltext": true,
+   "issueLabel": "12期 (2009/06)",
+   "issueID": "201003310065"
+  },
+  {
+   "docId": "18124305-200906-201003310065-201003310065-133-171",
+   "title": "曉雲法師於宗教行化中對《法華經》的運用",
+   "authors": [
+    "王鳳珠(Feng-Zhu Wang)"
+   ],
+   "volIssue": "12期",
+   "date": "2009 / 06",
+   "pages": "133-171",
+   "fulltext": true,
+   "issueLabel": "12期 (2009/06)",
+   "issueID": "201003310065"
+  },
+  {
+   "docId": "18124305-200901-200907290035-200907290035-1-51",
+   "title": "論康德倫理學三種相關於選擇行動的主體性從謝林之《自由論文》說起",
+   "authors": [
+    "陳士誠(Shih-Chen Chen)"
+   ],
+   "volIssue": "11期",
+   "date": "2009 / 01",
+   "pages": "1-51",
+   "fulltext": true,
+   "issueLabel": "11期 (2009/01)",
+   "issueID": "85149"
+  },
+  {
+   "docId": "18124305-200901-200907290035-200907290035-53-75",
+   "title": "我要說什麼？我該講什麼？－茱利亞•阿爾巴瑞茲《嘉西亞女兒如何失去她們的口音》中的語言交錯與文化驚恐",
+   "authors": [
+    "謝瑤玲(Yau-Ling Hsieh)"
+   ],
+   "volIssue": "11期",
+   "date": "2009 / 01",
+   "pages": "53-75",
+   "fulltext": true,
+   "issueLabel": "11期 (2009/01)",
+   "issueID": "85149"
+  },
+  {
+   "docId": "18124305-200901-200907290035-200907290035-77-115",
+   "title": "貞節與暴力：明代士人與婦女貞節觀之精神側面",
+   "authors": [
+    "劉紹鈴(Shao-Ling Liu)"
+   ],
+   "volIssue": "11期",
+   "date": "2009 / 01",
+   "pages": "77-115",
+   "fulltext": true,
+   "issueLabel": "11期 (2009/01)",
+   "issueID": "85149"
+  },
+  {
+   "docId": "18124305-200901-200907290035-200907290035-117-158",
+   "title": "從《戰爭遊戲》、《死者代言人》與《明日滅亡》的生命救贖及宗教關懷論析科幻小說的深層意義",
+   "authors": [
+    "鄭錠堅(Ting-Kin Cheng)"
+   ],
+   "volIssue": "11期",
+   "date": "2009 / 01",
+   "pages": "117-158",
+   "fulltext": true,
+   "issueLabel": "11期 (2009/01)",
+   "issueID": "85149"
+  },
+  {
+   "docId": "18124305-200806-x-10-1-35-a",
+   "title": "《禮記》神聖空間的審美治療",
+   "authors": [
+    "林素玟(Su-Wen Lin)"
+   ],
+   "volIssue": "10期",
+   "date": "2008 / 07",
+   "pages": "1-35",
+   "fulltext": true,
+   "issueLabel": "10期 (2008/07)",
+   "issueID": "72428"
+  },
+  {
+   "docId": "18124305-200806-x-10-37-86-a",
+   "title": "莊子本性論探微",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "10期",
+   "date": "2008 / 07",
+   "pages": "37-86",
+   "fulltext": true,
+   "issueLabel": "10期 (2008/07)",
+   "issueID": "72428"
+  },
+  {
+   "docId": "18124305-200806-x-10-87-136-a",
+   "title": "廣大和諧的中華文化：方東美先生論王學的機體主義",
+   "authors": [
+    "陳正凡(Cheng-Fan Chen)"
+   ],
+   "volIssue": "10期",
+   "date": "2008 / 07",
+   "pages": "87-136",
+   "fulltext": true,
+   "issueLabel": "10期 (2008/07)",
+   "issueID": "72428"
+  },
+  {
+   "docId": "18124305-200806-x-10-137-174-a",
+   "title": "朱子的太極理氣論與格物工夫之探究",
+   "authors": [
+    "陳佳銘(Chia-Ming Chen)"
+   ],
+   "volIssue": "10期",
+   "date": "2008 / 07",
+   "pages": "137-174",
+   "fulltext": true,
+   "issueLabel": "10期 (2008/07)",
+   "issueID": "72428"
+  },
+  {
+   "docId": "18124305-200801-x-9-1-31-a",
+   "title": "試論韋齋詞的文化心靈與意涵",
+   "authors": [
+    "王隆升(Lung-Sheng Wang)"
+   ],
+   "volIssue": "9期",
+   "date": "2008 / 01",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "9期 (2008/01)",
+   "issueID": "72719"
+  },
+  {
+   "docId": "18124305-200801-x-9-33-57-a",
+   "title": "從“和”觀論《中庸》與《樂記》的關係",
+   "authors": [
+    "吳幸姬(Xing-Ji Wu)"
+   ],
+   "volIssue": "9期",
+   "date": "2008 / 01",
+   "pages": "33-57",
+   "fulltext": true,
+   "issueLabel": "9期 (2008/01)",
+   "issueID": "72719"
+  },
+  {
+   "docId": "18124305-200801-x-9-59-92-a",
+   "title": "孟子“神話向度”檢討",
+   "authors": [
+    "張胤賢(Yin-Hsien Chang)"
+   ],
+   "volIssue": "9期",
+   "date": "2008 / 01",
+   "pages": "59-92",
+   "fulltext": true,
+   "issueLabel": "9期 (2008/01)",
+   "issueID": "72719"
+  },
+  {
+   "docId": "18124305-200801-x-9-93-132-a",
+   "title": "《江湖奇俠傳》(1922)的另類孩童",
+   "authors": [
+    "楊清惠(Ching-Hui Yang)"
+   ],
+   "volIssue": "9期",
+   "date": "2008 / 01",
+   "pages": "93-132",
+   "fulltext": true,
+   "issueLabel": "9期 (2008/01)",
+   "issueID": "72719"
+  },
+  {
+   "docId": "18124305-200801-x-9-133-169-a",
+   "title": "印度佛教史中有與空兩條脈絡之間的關係",
+   "authors": [
+    "釋行平(Thich Hanh Binh)"
+   ],
+   "volIssue": "9期",
+   "date": "2008 / 01",
+   "pages": "133-169",
+   "fulltext": true,
+   "issueLabel": "9期 (2008/01)",
+   "issueID": "72719"
+  },
+  {
+   "docId": "18124305-200701-x-8-1-22-a",
+   "title": "勞思光“情意我”與文化人格的書寫研究",
+   "authors": [
+    "陳旻志(Min-Chih Chen)"
+   ],
+   "volIssue": "8期",
+   "date": "2007 / 01",
+   "pages": "1-22",
+   "fulltext": true,
+   "issueLabel": "8期 (2007/01)",
+   "issueID": "72718"
+  },
+  {
+   "docId": "18124305-200701-x-8-23-51-a",
+   "title": "“言志”母題之驛動與流變－以《昭明文選》“志”類賦爲範疇展衍",
+   "authors": [
+    "鄭柏彰(Bo-Zhang Zheng)"
+   ],
+   "volIssue": "8期",
+   "date": "2007 / 01",
+   "pages": "23-51",
+   "fulltext": true,
+   "issueLabel": "8期 (2007/01)",
+   "issueID": "72718"
+  },
+  {
+   "docId": "18124305-200701-x-8-53-88-a",
+   "title": "“中國生命實踐哲學”的範疇論",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "8期",
+   "date": "2007 / 01",
+   "pages": "53-88",
+   "fulltext": true,
+   "issueLabel": "8期 (2007/01)",
+   "issueID": "72718"
+  },
+  {
+   "docId": "18124305-200701-x-8-89-119-a",
+   "title": "從經學到詩學看“興”義內涵之轉變",
+   "authors": [
+    "張鴻愷(Hong-Kai Jhang)"
+   ],
+   "volIssue": "8期",
+   "date": "2007 / 01",
+   "pages": "89-119",
+   "fulltext": true,
+   "issueLabel": "8期 (2007/01)",
+   "issueID": "72718"
+  },
+  {
+   "docId": "18124305-200607-x-7-1-39-a",
+   "title": "唐君毅的宗教融合思想",
+   "authors": [
+    "陳振崑(Jen-Kuen Chen)"
+   ],
+   "volIssue": "7期",
+   "date": "2006 / 07",
+   "pages": "1-39",
+   "fulltext": true,
+   "issueLabel": "7期 (2006/07)",
+   "issueID": "72717"
+  },
+  {
+   "docId": "18124305-200607-x-7-41-80-a",
+   "title": "思想三律與“我思故我在”的多值邏輯新解",
+   "authors": [
+    "陳啟聖(Chi-Sheng Chen)"
+   ],
+   "volIssue": "7期",
+   "date": "2006 / 07",
+   "pages": "41-80",
+   "fulltext": true,
+   "issueLabel": "7期 (2006/07)",
+   "issueID": "72717"
+  },
+  {
+   "docId": "18124305-200607-x-7-81-101-a",
+   "title": "建構主體認同：試探歐杜邦作品中之荒野保存與國族建構",
+   "authors": [
+    "盧莉茹(Li-Ru Lu)"
+   ],
+   "volIssue": "7期",
+   "date": "2006 / 07",
+   "pages": "81-101",
+   "fulltext": true,
+   "issueLabel": "7期 (2006/07)",
+   "issueID": "72717"
+  },
+  {
+   "docId": "18124305-200607-x-7-103-150-a",
+   "title": "陳寅恪及其史學述評",
+   "authors": [
+    "張鴻愷(Hong-Kai Chang)"
+   ],
+   "volIssue": "7期",
+   "date": "2006 / 07",
+   "pages": "103-150",
+   "fulltext": true,
+   "issueLabel": "7期 (2006/07)",
+   "issueID": "72717"
+  },
+  {
+   "docId": "18124305-200601-x-6-1-31-a",
+   "title": "阮籍〈通易論〉研究",
+   "authors": [
+    "劉謹銘(Chin-Ming Liu)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200601-x-6-33-76-a",
+   "title": "中國“貞節觀”文化對婦女的影響兼論心理特質探討",
+   "authors": [
+    "溫毓詩(Yu-Shy Wen)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "33-76",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200601-x-6-77-121-a",
+   "title": "詮釋學理論在九年一貫社會學習領域能力指標解讀工作上的應用",
+   "authors": [
+    "陳新轉(Shin-Tsuang Chen)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "77-121",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200601-x-6-123-148-a",
+   "title": "曉雲法師教育情懷的開展與映現",
+   "authors": [
+    "陳秀慧(Shiu-Hui Chen)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "123-148",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200601-x-6-149-184-a",
+   "title": "從整體性的觀點與“一體兩用”的思惟理路，重建張橫渠的天人合一論",
+   "authors": [
+    "陳振崑(Jen-Kuen Chen)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "149-184",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200601-x-6-185-224-a",
+   "title": "“韋齋詩研究”的對象之考察－從勞思光先生之《思光詩選》到《韋齋詩存述解新編》擬議",
+   "authors": [
+    "林碧玲(Pi-Lin Lin)"
+   ],
+   "volIssue": "6期",
+   "date": "2006 / 01",
+   "pages": "185-224",
+   "fulltext": true,
+   "issueLabel": "6期 (2006/01)",
+   "issueID": "72716"
+  },
+  {
+   "docId": "18124305-200507-x-5-1-62-a",
+   "title": "“思光詩研究”的價值與文獻之考察",
+   "authors": [
+    "林碧玲(Pi-Lin Lin)"
+   ],
+   "volIssue": "5期",
+   "date": "2005 / 07",
+   "pages": "1-62",
+   "fulltext": true,
+   "issueLabel": "5期 (2005/07)",
+   "issueID": "72715"
+  },
+  {
+   "docId": "18124305-200507-x-5-63-93-a",
+   "title": "從阮籍《詠懷》詩論文學與意義治療",
+   "authors": [
+    "吳幸姬(Xing-Ji Wu)"
+   ],
+   "volIssue": "5期",
+   "date": "2005 / 07",
+   "pages": "63-93",
+   "fulltext": true,
+   "issueLabel": "5期 (2005/07)",
+   "issueID": "72715"
+  },
+  {
+   "docId": "18124305-200507-x-5-95-122-a",
+   "title": "“孟子性善論”的證明",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "5期",
+   "date": "2005 / 07",
+   "pages": "95-122",
+   "fulltext": true,
+   "issueLabel": "5期 (2005/07)",
+   "issueID": "72715"
+  },
+  {
+   "docId": "18124305-200507-x-5-123-162-a",
+   "title": "感性確定性與黑格爾哲學的定性",
+   "authors": [
+    "史偉民(Wei-Min Shi)"
+   ],
+   "volIssue": "5期",
+   "date": "2005 / 07",
+   "pages": "123-162",
+   "fulltext": true,
+   "issueLabel": "5期 (2005/07)",
+   "issueID": "72715"
+  },
+  {
+   "docId": "18124305-200507-x-5-163-200-a",
+   "title": "論謝林哲學中主體性概念的轉變",
+   "authors": [
+    "黃冠閔(Kuan-Min Huang)"
+   ],
+   "volIssue": "5期",
+   "date": "2005 / 07",
+   "pages": "163-200",
+   "fulltext": true,
+   "issueLabel": "5期 (2005/07)",
+   "issueID": "72715"
+  },
+  {
+   "docId": "18124305-200501-x-4-1-29-a",
+   "title": "方苞論《詩》的文學闡釋",
+   "authors": [
+    "朱孟庭(Meng-Ting Chu)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "1-29",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200501-x-4-31-71-a",
+   "title": "“孟子性善論”解析",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "31-71",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200501-x-4-73-112-a",
+   "title": "初期佛教的種姓系譜學－佛教對“種姓起源神話”的考察與改寫",
+   "authors": [
+    "呂凱文(Ke-Vin Lu)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "73-112",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200501-x-4-113-160-a",
+   "title": "從斷裂到再連結：論佟妮•莫莉森《爵士樂》中的遷徙、記憶與文化議題",
+   "authors": [
+    "廖莉雅(Li-Ya Liao)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "113-160",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200501-x-4-161-186-a",
+   "title": "The \"Invention\" of National Park in America: The American Wilderness, Nationalism, and Imperialism",
+   "authors": [
+    "盧莉茹(Li-Ru Lu)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "161-186",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200501-x-4-189-231-a",
+   "title": "論曉雲法師佛教教育理論與實踐",
+   "authors": [
+    "陳秀慧(Shiu-Hui Chen)"
+   ],
+   "volIssue": "4期",
+   "date": "2005 / 01",
+   "pages": "189-231",
+   "fulltext": true,
+   "issueLabel": "4期 (2005/01)",
+   "issueID": "72714"
+  },
+  {
+   "docId": "18124305-200406-x-3-1-33-a",
+   "title": "儀式、審美與治療－論《禮記•樂記》之審美治療",
+   "authors": [
+    "林素玟(Su-Wen Lin)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "1-33",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-35-74-a",
+   "title": "天台智顗“觀心法門”的詮釋學意涵",
+   "authors": [
+    "郭朝順(Chao-Shun Guo)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "35-74",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-75-123-a",
+   "title": "邵雍儒學建構之義理探究",
+   "authors": [
+    "杜保瑞(Bau-Ruei Duh)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "75-123",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-125-164-a",
+   "title": "論熊十力先生的易學思想",
+   "authors": [
+    "鄧秀梅(Shiu-Mei Teng)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "125-164",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-165-193-a",
+   "title": "試論曉雲法師對孔子美學思想的繼承與發展",
+   "authors": [
+    "吳幸姬(Xing-Ji Wu)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "165-193",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-195-226-a",
+   "title": "回小向大－倓虛法師對曉雲法師的影響",
+   "authors": [
+    "陳秀慧(Shiu-Hui Chen)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "195-226",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-227-248-a",
+   "title": "古希臘倫理思想的特色－評包利民《生命與邏各斯－希臘倫理思想史論》一書",
+   "authors": [
+    "徐學庸(Hsei-Yung Hsu)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "227-248",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200406-x-3-249-284-a",
+   "title": "論黑格爾對基督的批判與其“絕對宗教”概念",
+   "authors": [
+    "程諾蘭(Noa-Lan Cheng)"
+   ],
+   "volIssue": "3期",
+   "date": "2004 / 06",
+   "pages": "249-284",
+   "fulltext": true,
+   "issueLabel": "3期 (2004/06)",
+   "issueID": "72713"
+  },
+  {
+   "docId": "18124305-200401-x-2-1-21-a",
+   "title": "從歷史和文化的觀點讀《論語》“子不語怪力亂神”章",
+   "authors": [
+    "周春塘(Chun-Tang Chou)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-23-94-a",
+   "title": "天台宗的“圓極架構”－關於天台宗圓教所統攝之救度學、存有學與語言用法三方面的脈絡線索之探究",
+   "authors": [
+    "魯道夫•康特(Hans-Rudolf Kantor)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "23-94",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-95-125-a",
+   "title": "相反相成的智慧－從黑格爾與老子談起",
+   "authors": [
+    "顏永春(Yu-Chun Yuan)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "95-125",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-127-152-a",
+   "title": "祁陽方言梗攝文白異讀初探",
+   "authors": [
+    "廖湘美(Hsiang-Mei Liao)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "127-152",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-153-177-a",
+   "title": "論龍瑛宗一九四五年的兩篇小說〈青天白日旗〉與〈從汕頭來的男子〉",
+   "authors": [
+    "侯如綺(Ju-Chi Hou)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "153-177",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-179-196-a",
+   "title": "來自邊緣的聲音－《芒果街之屋》中主體性的形成",
+   "authors": [
+    "謝瑤玲(Yau-Ling Hsieh)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "179-196",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200401-x-2-197-214-a",
+   "title": "Arthur Miller's Death of a Salesman: A Tragedy of a Common Man",
+   "authors": [
+    "盧莉茹(Li-Lu Ru)"
+   ],
+   "volIssue": "2期",
+   "date": "2004 / 01",
+   "pages": "197-214",
+   "fulltext": true,
+   "issueLabel": "2期 (2004/01)",
+   "issueID": "72712"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-1-21",
+   "title": "To Kill or Not to Kill, That is the Question: The Enslaved Mother's Remapping of Love and Self in Toni Morrison's Beloved",
+   "authors": [
+    "林熒嬌(Ying-Chiao Lin)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-23-35",
+   "title": "John Muir and His Wilderness Ethic",
+   "authors": [
+    "盧莉茹(Li-Lu Ru)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "23-35",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-37-68",
+   "title": "謝林對存有學論證的批判",
+   "authors": [
+    "黃冠閔(Kuan-Min Huang)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "37-68",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-69-105",
+   "title": "從羅近溪分別「體仁」與「制欲」之工夫進路見心學與理學之不同",
+   "authors": [
+    "蔡家和(Chia-He Tsai)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "69-105",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-106-166",
+   "title": "試由黃宗羲的易學思維揭示「文道合一」的文學思想",
+   "authors": [
+    "陳旻志(Min-Zh Chen)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "106-166",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-167-208",
+   "title": "晚明釋德清與陳乾初對《大學》知行問題之儒佛詮釋",
+   "authors": [
+    "周麗楨(Li-Chen Chou)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "167-208",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-209-241",
+   "title": "《楞伽經》的知識意義探究",
+   "authors": [
+    "杜保瑞(Bau-Ruei Duh)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "209-241",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-243-269",
+   "title": "智顗「四意消文」的解經方法論",
+   "authors": [
+    "郭朝順(Chao-Shun Guo)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "243-269",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-271-293",
+   "title": "《維摩詰經•入不二法門品》「三階論」詮釋架構的商榷",
+   "authors": [
+    "許宗興(Chung-Hsing Hsu)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "271-293",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-295-334",
+   "title": "不應既識西來意，一笑惟拈富貴花－譚嗣同的佛化人生及其佛學思想",
+   "authors": [
+    "陳堅(Jian Chen)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "295-334",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  },
+  {
+   "docId": "18124305-200307-201008210066-201008210066-335-418",
+   "title": "以說一切有部爲主的菩薩思想初探",
+   "authors": [
+    "黃俊威(Chun-Wai Wong)"
+   ],
+   "volIssue": "1期",
+   "date": "2003 / 07",
+   "pages": "335-418",
+   "fulltext": true,
+   "issueLabel": "1期 (2003/07)",
+   "issueID": "201008210066"
+  }
+ ]
+}

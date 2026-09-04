@@ -1,10 +1,512 @@
 {
  "note": "書目點名要的華藝期刊論文，已對到 docID；--batch 會先清這一批再照 PRIORITY 掃。",
  "counts": {
-  "對到 docID": 19,
-  "對不上": 128
+  "對到 docID": 125,
+  "對不上": 22
  },
  "resolved": {
+  "ntu-buddhist-old": [
+   {
+    "docId": "10271112-200212-201409250051-201409250051-354-377",
+    "title": "比丘尼受戒法與傳承之考察",
+    "pages": "354-377",
+    "issueLabel": "4期 (1999/07)",
+    "from": "bajingfa"
+   },
+   {
+    "docId": "10271112-200306-201409250052-201409250052-300-342",
+    "title": "從印順的人間佛教探討新雨社與現代禪的宗教發展",
+    "pages": "300-342",
+    "issueLabel": "5期 (2000/07)",
+    "from": "mahaprajapati-revolution"
+   }
+  ],
+  "hongshi": [
+   {
+    "docId": "P20121213001-200104-201212130001-201212130001-17-30",
+    "title": "新聞焦點：「廢除八敬法」",
+    "pages": "17-30",
+    "issueLabel": "50期 (2001/04)",
+    "from": "bajingfa"
+   },
+   {
+    "docId": "P20121213001-201002-201212130006-201212130006-61-62",
+    "title": "性別倫理的震撼教育",
+    "pages": "61-62",
+    "issueLabel": "103期 (2010/02)",
+    "from": "bajingfa"
+   },
+   {
+    "docId": "P20121213001-201002-201212130006-201212130006-63-65",
+    "title": "2010開春「沉澱日」心靈遊記",
+    "pages": "63-65",
+    "issueLabel": "103期 (2010/02)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-N202408280010-00002",
+    "title": "歷史性的性別與宗教緣聚－「性別友善自在營」浮現的緣起、挑戰、啟發與實踐",
+    "pages": "23-34",
+    "issueLabel": "190期 (2024/08)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-201102-201212130012-201212130012-22-29",
+    "title": "草根和尚—傳道法師與我",
+    "pages": "22-29",
+    "issueLabel": "109期 (2011/02)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200708-201301100005-201301100005-6-23",
+    "title": "論全球入世佛教之發展進路—兼論其涉及公共事務時之政治取向",
+    "pages": "6-23",
+    "issueLabel": "88期 (2007/08)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200710-201301020026-201301020026-4-6",
+    "title": "國際入世佛教協會年會開幕致詞－我從社會運動到內觀修持的經驗分享",
+    "pages": "4-6",
+    "issueLabel": "89期 (2007/10)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200402-201307050001-201307050001-5-12",
+    "title": "只知其一者，一無所知－西方百年比較宗教學研究回顧",
+    "pages": "5-12",
+    "issueLabel": "67期 (2004/02)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-201812-201901020008-201901020008-21-23",
+    "title": "請務必支持「婚姻平權」－性廣法師於燃燈禪修營出堂法談側記",
+    "pages": "21-23",
+    "issueLabel": "156期 (2018/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200210-201305270009-201305270009-3-4",
+    "title": "自我消解與自我完成－「核四公投千里苦行」的文化意義",
+    "pages": "3-4",
+    "issueLabel": "59期 (2002/10)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200610-201301100039-201301100039-6-8",
+    "title": "「同志」豈必承負罪軛？",
+    "pages": "6-8",
+    "issueLabel": "83期 (2006/10)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200904-201212220020-201212220020-4-6",
+    "title": "反賭運動啟示錄—本期專題引言",
+    "pages": "4-6",
+    "issueLabel": "98期 (2009/04)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-201206-201212210030-201212210030-28-38",
+    "title": "從佛家看烈火焚身",
+    "pages": "28-38",
+    "issueLabel": "117期 (2012/06)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-201804-201804230009-201804230009-44-46",
+    "title": "「千江映月」的生命風華－歐陽文風牧師《千江有水千江月》序",
+    "pages": "44-46",
+    "issueLabel": "152期 (2018/04)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200804-201301020028-201301020028-60-62",
+    "title": "冥契經驗的宗教對話—古倫神父蒞院記",
+    "pages": "60-62",
+    "issueLabel": "92期 (2008/04)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20121213001-200010-201312030005-201312030005-18-19",
+    "title": "昭慧法師著《佛教倫理學》：亞洲地區新佛教倫理學說的代表性著作",
+    "pages": "18-19",
+    "issueLabel": "47期 (2000/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200606-201301100037-201301100037-6-9",
+    "title": "緬懷恩澤．以法供養．以文會友—「印順導師與人菩薩行」會議紀實",
+    "pages": "6-9",
+    "issueLabel": "81期 (2006/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200104-201212130001-201212130001-9-16",
+    "title": "第二屆「人間佛教，薪火相傳」學術研討會",
+    "pages": "9-16",
+    "issueLabel": "50期 (2001/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201702-201702170006-201702170006-30-37",
+    "title": "印順佛學與大乘是佛說－二○一六無錫「批印」研討會之回應",
+    "pages": "30-37",
+    "issueLabel": "145期 (2017/02)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-N202408280010-00002",
+    "title": "歷史性的性別與宗教緣聚－「性別友善自在營」浮現的緣起、挑戰、啟發與實踐",
+    "pages": "23-34",
+    "issueLabel": "190期 (2024/08)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-N202412280016-00005",
+    "title": "多元路途上的共願者－弘誓青年會成立紀事",
+    "pages": "43-46",
+    "issueLabel": "192期 (2024/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201806-201806210016-201806210016-28-34",
+    "title": "念佛法門之禪觀－二○一八慈善寺佛七性廣法師開示摘記",
+    "pages": "28-34",
+    "issueLabel": "153期 (2018/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200606-201301100037-201301100037-92-94",
+    "title": "慈悲沒有敵人—聖嚴長老與昭慧法師會談記",
+    "pages": "92-94",
+    "issueLabel": "81期 (2006/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200612-201301100040-201301100040-6-9",
+    "title": "給生命一個機會—為減少墮胎所做的努力",
+    "pages": "6-9",
+    "issueLabel": "84期 (2006/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200708-201301100005-201301100005-6-23",
+    "title": "論全球入世佛教之發展進路—兼論其涉及公共事務時之政治取向",
+    "pages": "6-23",
+    "issueLabel": "88期 (2007/08)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200808-201212260006-201212260006-98-100",
+    "title": "關於玄奘大學宗教學系所評鑑個人之回應",
+    "pages": "98-100",
+    "issueLabel": "94期 (2008/08)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200710-201301020026-201301020026-4-6",
+    "title": "國際入世佛教協會年會開幕致詞－我從社會運動到內觀修持的經驗分享",
+    "pages": "4-6",
+    "issueLabel": "89期 (2007/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-202202-202202240007-202202240007-24-25",
+    "title": "「改變話題」的哲學家－《心靈的交會－山間對話》新書發表會與談錄",
+    "pages": "24-25",
+    "issueLabel": "175期 (2022/02)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200312-201308010023-201308010023-24-41",
+    "title": "印度之旅隨行記",
+    "pages": "24-41",
+    "issueLabel": "66期 (2003/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200402-201307050001-201307050001-5-12",
+    "title": "只知其一者，一無所知－西方百年比較宗教學研究回顧",
+    "pages": "5-12",
+    "issueLabel": "67期 (2004/02)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200104-201212130001-201212130001-17-30",
+    "title": "新聞焦點：「廢除八敬法」",
+    "pages": "17-30",
+    "issueLabel": "50期 (2001/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201812-201901020008-201901020008-21-23",
+    "title": "請務必支持「婚姻平權」－性廣法師於燃燈禪修營出堂法談側記",
+    "pages": "21-23",
+    "issueLabel": "156期 (2018/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201412-201412220019-201412220019-6-10",
+    "title": "回歸乾淨飲食，扭轉食安共業－性廣法師共修開示",
+    "pages": "6-10",
+    "issueLabel": "132期 (2014/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201804-201804230009-201804230009-44-46",
+    "title": "「千江映月」的生命風華－歐陽文風牧師《千江有水千江月》序",
+    "pages": "44-46",
+    "issueLabel": "152期 (2018/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200706-201301100042-201301100042-47-49",
+    "title": "「布施歡喜」的修道典範－憶開果長老尼",
+    "pages": "47-49",
+    "issueLabel": "87期 (2007/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201210-201212210032-201212210032-64-65",
+    "title": "一片晶瑩的冰心，翱翔於光明淨土－悼邱心瑩居士",
+    "pages": "64-65",
+    "issueLabel": "119期 (2012/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200410-201306280017-201306280017-70-72",
+    "title": "入火坑，敲邊鼓－受任本屆宗教諮詢委員感言",
+    "pages": "70-72",
+    "issueLabel": "71期 (2004/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200206-201305210031-201305210031-49-50",
+    "title": "十年建樹嘔心瀝血，到如今已綠蔭成片！－向林蓉芝秘書長致敬",
+    "pages": "49-50",
+    "issueLabel": "57期 (2002/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-202204-202204260005-202204260005-60-64",
+    "title": "壬寅新年南下札記",
+    "pages": "60-64",
+    "issueLabel": "176期 (2022/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200510-201301150027-201301150027-43-44",
+    "title": "生命勇者的最後一程－敬悼慧英師父",
+    "pages": "43-44",
+    "issueLabel": "77期 (2005/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200210-201305270009-201305270009-3-4",
+    "title": "自我消解與自我完成－「核四公投千里苦行」的文化意義",
+    "pages": "3-4",
+    "issueLabel": "59期 (2002/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-199910-201401070009-201401070009-5-7",
+    "title": "佛教弘誓學院建校緣起",
+    "pages": "5-7",
+    "issueLabel": "41期 (1999/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201004-201212130007-201212130007-51-62",
+    "title": "佛誕放假運動始末－運動背景、決策考量、運動過程與運動成效",
+    "pages": "51-62",
+    "issueLabel": "104期 (2010/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200404-201307030009-201307030009-63-64",
+    "title": "宗教界宜自清自省－對中台山的幾點看法",
+    "pages": "63-64",
+    "issueLabel": "68期 (2004/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201002-201212130006-201212130006-16-19",
+    "title": "現行宗教法令的高度規範與不當規範",
+    "pages": "16-19",
+    "issueLabel": "103期 (2010/02)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-N202304190009-00003",
+    "title": "雪中送炭大師風範－緬懷星雲大師",
+    "pages": "14-26",
+    "issueLabel": "182期 (2023/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200804-201301020028-201301020028-4-13",
+    "title": "博學、嚴謹、慈悲、自在的菩薩典範—側寫帕奧禪師",
+    "pages": "4-13",
+    "issueLabel": "92期 (2008/04)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-202206-202207010012-202207010012-44-49",
+    "title": "感伯樂之恩，竟今日之功－敬述了公長老與筆者的十四載法緣",
+    "pages": "44-49",
+    "issueLabel": "177期 (2022/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200606-201301100037-201301100037-88-91",
+    "title": "慈濟現象的活水源頭—《慈濟法髓—慈濟40周年紀念專書》推薦序",
+    "pages": "88-91",
+    "issueLabel": "81期 (2006/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200302-201306040009-201306040009-11-21",
+    "title": "與法相應，求同存異－我對林建德居士與現代禪師友論諍的看法",
+    "pages": "11-21",
+    "issueLabel": "61期 (2003/02)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201212-201212210033-201212210033-9-13",
+    "title": "燃燈禪修營感言－以「法」為尊的堅持",
+    "pages": "9-13",
+    "issueLabel": "120期 (2012/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201612-201612270007-201612270007-26-27",
+    "title": "雙目自將秋水洗，一生不受古人欺！",
+    "pages": "26-27",
+    "issueLabel": "144期 (2016/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201506-201506240003-201506240003-7-12",
+    "title": "操縱「消慈」運動的手",
+    "pages": "7-12",
+    "issueLabel": "135期 (2015/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200208-201305220007-201305220007-62-64",
+    "title": "昭烈有青氣，慧華開素心－教育部《兩性平等教育季刊》專訪昭慧法師",
+    "pages": "62-64",
+    "issueLabel": "58期 (2002/08)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200810-201212260007-201212260007-65-67",
+    "title": "有關「二部受戒」與「不收徒弟」之中道考量－昭慧法師答世友先生側記",
+    "pages": "65-67",
+    "issueLabel": "95期 (2008/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-N202410220004-00001",
+    "title": "通往人生坦途的軌道－113年佛教弘誓學院傳授「在家五戒菩薩戒會」",
+    "pages": "6-13",
+    "issueLabel": "191期 (2024/10)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-202008-202008240011-202008240011-66-74",
+    "title": "秉赤子之心習三藏法教－悟殷法師訪談錄",
+    "pages": "66-74",
+    "issueLabel": "166期 (2020/08)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-200912-201212130005-201212130005-5-12",
+    "title": "正義與慈悲的智慧對談—天主教與佛教「社會正義」座談會側記",
+    "pages": "5-12",
+    "issueLabel": "102期 (2009/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201806-201806210016-201806210016-4-11",
+    "title": "佛教弘誓學院「第二任住持陞座曁文教機構領導交接典禮」紀實",
+    "pages": "4-11",
+    "issueLabel": "153期 (2018/06)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "P20121213001-201112-201212250017-201212250017-58-67",
+    "title": "南投牧心蘭若禪七側記、心得分享",
+    "pages": "58-67",
+    "issueLabel": "114期 (2011/12)",
+    "from": "mahaprajapati-revolution"
+   }
+  ],
+  "chbs-journal-old": [
+   {
+    "docId": "P20160922002-201007-201609260018-201609260018-3-38",
+    "title": "A Tentative Exploration into the Development of Master Sheng Yen's Chan Teachings",
+    "pages": "3-38",
+    "issueLabel": "23期 (2010/07)",
+    "from": "yinshun-shengyan"
+   },
+   {
+    "docId": "P20160922002-199207-201610130026-201610130026-155-177",
+    "title": "印度中觀學的四句邏輯",
+    "pages": "155-177",
+    "issueLabel": "5期 (1992/07)",
+    "from": "genesis-philosophy"
+   },
+   {
+    "docId": "P20160922002-199004-201610130024-201610130024-184-204",
+    "title": "禪的詭論和邏輯",
+    "pages": "184-204",
+    "issueLabel": "3期 (1990/04)",
+    "from": "genesis-philosophy"
+   }
+  ],
+  "ddbj": [
+   {
+    "docId": "P20190125001-201712-201901250026-201901250026-131-180",
+    "title": "試論聖嚴法師對「空性」與「佛性」之詮解與貫通",
+    "pages": "131-180",
+    "issueLabel": "21期 (2017/12)",
+    "from": "yinshun-shengyan"
+   }
+  ],
+  "huafan-humanities": [
+   {
+    "docId": "18124305-201001-201003310066-201003310066-209-225",
+    "title": "中文屋論證的錯誤之一",
+    "pages": "209-225",
+    "issueLabel": "13期 (2010/01)",
+    "from": "genesis-philosophy"
+   }
+  ],
+  "new-century": [
+   {
+    "docId": "16843738-200606-4-4-1-19-a",
+    "title": "論宗教對話的軸心式轉變",
+    "pages": "1-19",
+    "issueLabel": "4卷4期 (2006/06)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "16843738-201512-201601040030-201601040030-27-53",
+    "title": "從生命中心交談概念反思當代宗教交談理論",
+    "pages": "27-53",
+    "issueLabel": "14卷2期 (2015/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "16843738-201806-201808160009-201808160009-177-196",
+    "title": "從海德格生命與苦難的關係反思尼特宗教交談實踐的可能性",
+    "pages": "177-196",
+    "issueLabel": "16卷4期 (2018/06)",
+    "from": "hcu-phd"
+   }
+  ],
   "theology-church": [
    {
     "docId": "P20190115001-201506-201901170023-201901170023-249-273",
@@ -46,6 +548,52 @@
     "title": "鄉土神學「出埃及模式」的反思與再處境化",
     "pages": "387-408",
     "issueLabel": "36卷2期 (2011/06)",
+    "from": "hcu-phd"
+   }
+  ],
+  "religious-philosophy": [
+   {
+    "docId": "10277730-201209-201401140062-201401140062-41-52",
+    "title": "論宗教共同體的建構與消除宗教排他性",
+    "pages": "41-52",
+    "issueLabel": "61期 (2012/09)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "10277730-201209-201401140062-201401140062-65-82",
+    "title": "由與多元他者在公共領域的對話論宗教大同",
+    "pages": "65-82",
+    "issueLabel": "61期 (2012/09)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "10277730-200906-201401230029-201401230029-123-142",
+    "title": "亞洲神學之實況化詮釋學的形成與轉變",
+    "pages": "123-142",
+    "issueLabel": "48期 (2009/06)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "10277730-201206-201401140063-201401140063-67-82",
+    "title": "再思雷蒙．潘尼卡的宗教多元基督論",
+    "pages": "67-82",
+    "issueLabel": "60期 (2012/06)",
+    "from": "hcu-phd"
+   }
+  ],
+  "taiwan-religion": [
+   {
+    "docId": "a0000594-201606-202108170015-202108170015-79-120",
+    "title": "「神聖」的轉化－長老教會在臺灣的「本土化」現象探討",
+    "pages": "79-120",
+    "issueLabel": "15卷1期 (2016/06)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "a0000594-201606-202108170015-202108170015-51-78",
+    "title": "與佛相應、與神相契：臺灣佛教徒與基督徒的祈禱修行體驗",
+    "pages": "51-78",
+    "issueLabel": "15卷1期 (2016/06)",
     "from": "hcu-phd"
    }
   ],
@@ -104,6 +652,217 @@
     "from": "hcu-phd"
    }
   ],
+  "dharma-seals": [
+   {
+    "docId": "22241299-201109-201211230019-201211230019-145-183",
+    "title": "印順法師思想精義之辯證",
+    "pages": "145-183",
+    "issueLabel": "1期 (2011/09)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "22241299-201712-201712260011-201712260011-1-52",
+    "title": "中國大陸2016年「批印事件」評議",
+    "pages": "1-52",
+    "issueLabel": "8期 (2017/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "22241299-N202401060012-00009",
+    "title": "昭慧法師與性廣法師對印順學的傳承與實踐──以經營佛教弘誓學院、參與社運、闡揚人間佛教禪法為例",
+    "pages": "181-204",
+    "issueLabel": "14期 (2023/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "22241299-N202502040003-00009",
+    "title": "從「青年佛教」之精神看印順學派的歷史發展",
+    "pages": "229-252",
+    "issueLabel": "15期 (2024/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "22241299-202112-202201040022-202201040022-195-214",
+    "title": "試論「人間佛教」兩種社會再造方式—以證嚴法師「治心」與昭慧法師「治境」為對比",
+    "pages": "195-214",
+    "issueLabel": "12期 (2021/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "22241299-201712-201712260011-201712260011-1-52",
+    "title": "中國大陸2016年「批印事件」評議",
+    "pages": "1-52",
+    "issueLabel": "8期 (2017/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "22241299-201109-201211230019-201211230019-185-210",
+    "title": "探討印順法師的生平與思想—以《印順法師年譜》、《真實與方便：印順思想研究》為例",
+    "pages": "185-210",
+    "issueLabel": "1期 (2011/09)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "22241299-N202401060012-00009",
+    "title": "昭慧法師與性廣法師對印順學的傳承與實踐──以經營佛教弘誓學院、參與社運、闡揚人間佛教禪法為例",
+    "pages": "181-204",
+    "issueLabel": "14期 (2023/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "22241299-202112-202201040022-202201040022-195-214",
+    "title": "試論「人間佛教」兩種社會再造方式—以證嚴法師「治心」與昭慧法師「治境」為對比",
+    "pages": "195-214",
+    "issueLabel": "12期 (2021/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "22241299-N202301120013-00009",
+    "title": "「印順導師思想之理論與實踐」學術會議二十屆總回顧",
+    "pages": "179-202",
+    "issueLabel": "13期 (2022/12)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "22241299-201109-201211230019-201211230019-119-143",
+    "title": "傳法弘道－傳道法師人間佛教理路",
+    "pages": "119-143",
+    "issueLabel": "1期 (2011/09)",
+    "from": "mahaprajapati-revolution"
+   }
+  ],
+  "hcu-buddhist": [
+   {
+    "docId": "18133649-201203-201204100008-201204100008-95-136",
+    "title": "印順學派與慈濟宗門—試論印順思想對慈濟志業開展之可能啟發",
+    "pages": "93-134",
+    "issueLabel": "17期 (2012/03)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "18133649-201503-201504270001-201504270001-175-195",
+    "title": "動物解放與護生行動：從關懷生命協會的角度來探討",
+    "pages": "175-195",
+    "issueLabel": "23期 (2015/03)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "18133649-200903-201203060009-201203060009-57-88",
+    "title": "社運浪潮中之護教運動—以中國佛教會護教組為探討核心",
+    "pages": "55-86",
+    "issueLabel": "11期 (2009/03)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "18133649-201203-201204100008-201204100008-95-136",
+    "title": "印順學派與慈濟宗門—試論印順思想對慈濟志業開展之可能啟發",
+    "pages": "93-134",
+    "issueLabel": "17期 (2012/03)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201309-201310110005-201310110005-115-137",
+    "title": "佛教中道觀的根源義、普遍義與終極義－從印順導師的觀點進入",
+    "pages": "115-137",
+    "issueLabel": "20期 (2013/09)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-200601-201201050008-201201050008-125-154",
+    "title": "「人間佛教禪法」之實踐—以「結期精進禪觀」教學為例",
+    "pages": "123-152",
+    "issueLabel": "4期 (2006/01)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201603-201610200009-201610200009-129-163",
+    "title": "從「四大」原理談佛教養生法",
+    "pages": "129-163",
+    "issueLabel": "25期 (2016/03)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201903-201906240013-201906240013-193-223",
+    "title": "論身念處「四威儀」養生法－以「風界」特性改善姿勢性疼痛之應用為例",
+    "pages": "193-223",
+    "issueLabel": "31期 (2019/03)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201209-201210260031-201210260031-91-128",
+    "title": "「中道」之根源義與衍生義—依佛教倫理觀點作深層探索",
+    "pages": "91-128",
+    "issueLabel": "18期 (2012/09)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201203-201204100008-201204100008-3-34",
+    "title": "印順學與人間佛教—由「無諍之辯」到「求同存異」",
+    "pages": "1-32",
+    "issueLabel": "17期 (2012/03)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-201709-201710120012-201710120012-51-73",
+    "title": "利己與利他之矛盾與統合",
+    "pages": "51-73",
+    "issueLabel": "28期 (2017/09)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-N202310250005-00001",
+    "title": "從俄烏戰爭事件，省思佛典中的戰爭觀",
+    "pages": "1-43",
+    "issueLabel": "40期 (2023/09)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-200903-201203060009-201203060009-57-88",
+    "title": "社運浪潮中之護教運動—以中國佛教會護教組為探討核心",
+    "pages": "55-86",
+    "issueLabel": "11期 (2009/03)",
+    "from": "mahaprajapati-revolution"
+   }
+  ],
+  "humanistic-buddhism": [
+   {
+    "docId": "P20180307006-201612-201803070027-201803070027-177-212",
+    "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩種立場",
+    "pages": "177-212",
+    "issueLabel": "7期 (2016/12)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20180307006-201612-201803070027-201803070027-177-212",
+    "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩種立場",
+    "pages": "177-212",
+    "issueLabel": "7期 (2016/12)",
+    "from": "mahaprajapati-revolution"
+   }
+  ],
+  "fujen-religious": [
+   {
+    "docId": "16820568-202103-202201250027-202201250027-121-146",
+    "title": "從人民自決到獨立建國：以後殖民觀點分析台灣基督長老教會政治神學解嚴後三十年發展",
+    "pages": "121-146",
+    "issueLabel": "42期 (2021/03)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "16820568-201503-201510220016-201510220016-1-23",
+    "title": "地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生態踐行",
+    "pages": "1-23",
+    "issueLabel": "30期 (2015/03)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "16820568-201303-201304150016-201304150016-91-119",
+    "title": "從佛教反思基督宗教上帝觀：取道保羅．蒂利希的「終極關切」",
+    "pages": "91-119",
+    "issueLabel": "26期 (2013/03)",
+    "from": "hcu-phd"
+   }
+  ],
   "taiwan-theology": [
    {
     "docId": "P20151015001-200803-201511240011-201511240011-157-172",
@@ -151,20 +910,18 @@
     "issueLabel": "47期 (2017/07)",
     "from": "hcu-phd"
    }
+  ],
+  "hbj-arts": [
+   {
+    "docId": "P20180314001-202003-202004100006-202004100006-34-45",
+    "title": "從利他主義的演化看人間佛教與人類的未來",
+    "pages": "34-45",
+    "issueLabel": "26期 (2020/03)",
+    "from": "hcu-phd"
+   }
   ]
  },
  "unresolved": [
-  {
-   "title": "比丘尼受戒法與傳承之考察",
-   "author": "釋惠敏",
-   "venue": "佛學研究中心學報",
-   "year": "1999",
-   "source": "bajingfa",
-   "pid": "P20191030002",
-   "slug": "ntu-buddhist-old",
-   "status": "刊名變更",
-   "why": "佛學研究中心學報 / Journal of the Center for Buddhist Studies：篇目還沒抓（--toc ntu-buddhist-old）"
-  },
   {
    "title": "漢文電子大藏經的製作緣起與作業流程──以「中華電子佛典協會」為例",
    "author": "杜正民",
@@ -174,73 +931,7 @@
    "pid": "P20191030002",
    "slug": "ntu-buddhist-old",
    "status": "刊名變更",
-   "why": "佛學研究中心學報 / Journal of the Center for Buddhist Studies：篇目還沒抓（--toc ntu-buddhist-old）"
-  },
-  {
-   "title": "從印順的人間佛教探討新雨社與現代禪的宗教發展",
-   "author": "楊惠南",
-   "venue": "佛學研究中心學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20191030002",
-   "slug": "ntu-buddhist-old",
-   "status": "刊名變更",
-   "why": "佛學研究中心學報 / Journal of the Center for Buddhist Studies：篇目還沒抓（--toc ntu-buddhist-old）"
-  },
-  {
-   "title": "新聞焦點──廢除八敬法",
-   "author": "釋性廣報導",
-   "venue": "弘誓雙月刊",
-   "year": "2001",
-   "source": "bajingfa",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "性別倫理的震撼教育",
-   "author": "釋傳法",
-   "venue": "弘誓雙月刊",
-   "year": "2010",
-   "source": "bajingfa",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "2010 開春「沉澱日」心靈遊記",
-   "author": "何宗勳",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "歷史性的性別與宗教緣聚——「性別友善自在營」浮現的 緣起、挑戰、啟發與實踐",
-   "author": "高穎超",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "草根和尚—傳道法師與我",
-   "author": "陳玉峯",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
+   "why": "佛學研究中心學報 / Journal of the Center for Buddhist Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "凡塵的美麗彩虹——佛化同志婚禮紀事",
@@ -251,161 +942,7 @@
    "pid": "P20121213001",
    "slug": "hongshi",
    "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "論全球入世佛教之發展進路—兼論其涉及公共事務時之政 治取向",
-   "author": "游祥洲",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "國際入世佛教協會年會開幕致詞——我從社會運動到內觀 修持的經驗分享",
-   "author": "葉菊蘭",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "只知其一者，一無所知——西方百年比較宗教學研究回 顧",
-   "author": "釋性廣",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "請務必支持「婚姻平權」——性廣法師於燃燈禪修營出堂 法談側記",
-   "author": "釋性廣",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "自我消解與自我完成——「核四公投千里苦行」的文化意 義",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "「同志」豈必承負罪軛？",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "反賭運動啟示錄",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "從佛家看烈火焚身",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "「千江映月」的生命風華－歐陽文風牧師《千江有水千江 月》序",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "冥契經驗的宗教對話——古倫神父蒞院記",
-   "author": "釋傳法",
-   "venue": "弘誓雙月 刊",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "昭慧法師著《佛教倫理學》：亞洲地區新佛教倫理學說的代表性著作",
-   "author": "江燦騰",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "緬懷恩澤．以法供養．以文會友——「印順導師與人菩薩行」會議紀實",
-   "author": "呂姝貞",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "第二屆『人間佛教，薪火相傳』學術研討會",
-   "author": "呂姝貞報導",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "印順佛學與大乘是佛說－二○一六無錫「批印」研討會之回應",
-   "author": "林建德",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
+   "why": "弘誓雙月刊：篇名對不上該刊的篇目"
   },
   {
    "title": "千山獨行不寂寞——致昭慧法師談〈入火坑，敲邊鼓",
@@ -416,458 +953,7 @@
    "pid": "P20121213001",
    "slug": "hongshi",
    "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "歷史性的性別與宗教緣聚——「性別友善自在營」浮現的緣起、挑戰、啟發與實踐",
-   "author": "高穎超",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "多元路途上的共願者——弘誓青年會成立紀事",
-   "author": "張辰瑋",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "念佛法門之禪觀——二○一八慈善寺佛七性廣法師開示摘記",
-   "author": "陳俊銘",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "慈悲沒有敵人——聖嚴長老與昭慧法師會談記",
-   "author": "陳悅萱記錄",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "給生命一個機會——為減少墮胎所做的努力",
-   "author": "陳清龍",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "論全球入世佛教之發展進路—兼論其涉及公共事務時之政治取向",
-   "author": "游祥洲",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "關於玄奘大學宗教學系所評鑑個人之回應",
-   "author": "黃運喜",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "國際入世佛教協會年會開幕致詞——我從社會運動到內觀修持的經驗分享",
-   "author": "葉菊蘭",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "「改變話題」的哲學家——《心靈的交會：山間對話》新書發表會與談錄",
-   "author": "謝世民報導",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "印度之旅隨行記",
-   "author": "釋印悅",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "只知其一者，一無所知——西方百年比較宗教學研究回顧",
-   "author": "釋性廣",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "新聞焦點——廢除八敬法",
-   "author": "釋性廣報導",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "請務必支持「婚姻平權」——性廣法師於燃燈禪修營出堂法談側記",
-   "author": "釋性廣講述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "回歸乾淨飲食，扭轉食安共業——性廣法師共修開示",
-   "author": "釋性廣講述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "「千江映月」的生命風華－歐陽文風牧師《千江有水千江月》序",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "「布施歡喜」的修道典範－憶開果長老尼",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "一片晶瑩的冰心，翱翔於光明淨土——悼邱心瑩居士",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "入火坑，敲邊鼓——受任本屆宗教諮詢委員感言",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "十年建樹嘔心瀝血，到如今已綠蔭成片！——向林蓉芝秘書長致敬",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "壬寅新年南下札記",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "生命勇者的最後一程——敬悼慧英師父",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "自我消解與自我完成——「核四公投千里苦行」的文化意義",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "佛教弘誓學院建校緣起",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "佛誕放假運動始末——運動背景、決策考量、運動過程與運動成效",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "宗教界宜自清自省——對中台山的幾點看法",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "現行宗教法令的高度規範與不當規範",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "雪中送炭大師風範——緬懷星雲大師",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "博學、嚴謹、慈悲、自在的菩薩典範—側寫帕奧禪師",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "感伯樂之恩，竟今日之功——敬述了公長老與筆者的十四載法緣",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "慈濟現象的活水源頭——《慈濟法髓——慈濟40 周年紀念專書》推薦序",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "與法相應，求同存異——我對林建德居士與現代禪師友論諍的看法",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "燃燈禪修營感言——以「法」為尊的堅持",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "雙目自將秋水洗，一生不受古人欺！",
-   "author": "釋昭慧",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "操縱「消慈」運動的手",
-   "author": "釋昭慧口述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "昭烈有青氣，慧華開素心——教育部《兩性平等教育季刊》專訪昭慧法師",
-   "author": "釋昭慧口述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "有關「二部受戒」與「不收徒弟」之中道考量——昭慧法師答世友先生側記",
-   "author": "釋昭慧口述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "通往人生坦途的軌道－113 年佛教弘誓學院傳授「在家五戒菩薩戒會」",
-   "author": "釋昭慧講述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "秉赤子之心習三藏法教——悟殷法師訪談錄",
-   "author": "釋悟殷口述",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "正義與慈悲的智慧對談——天主教與佛教「社會正義」座談會側記",
-   "author": "釋淨慧報導",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "佛教弘誓學院「第二任住持陞座曁文教機構領導交接典禮」紀實",
-   "author": "釋傳法、潘鳴珮、許月梅",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "南投牧心蘭若禪七側記、心得分享",
-   "author": "釋傳法、釋印純、釋明一、釋心慈、張莉筠、姚金淑",
-   "venue": "弘誓雙月刊",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20121213001",
-   "slug": "hongshi",
-   "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
+   "why": "弘誓雙月刊：篇名對不上該刊的篇目"
   },
   {
    "title": "104 年在家五戒菩薩戒會側記",
@@ -878,18 +964,7 @@
    "pid": "P20121213001",
    "slug": "hongshi",
    "status": "正常發行",
-   "why": "弘誓雙月刊：篇目還沒抓（--toc hongshi）"
-  },
-  {
-   "title": "A Tentative Exploration into the Development of Master Sheng Yen's Chan Teachings",
-   "author": "Jimmy Yu",
-   "venue": "中華佛學學報",
-   "year": "2010",
-   "source": "yinshun-shengyan",
-   "pid": "P20160922002",
-   "slug": "chbs-journal-old",
-   "status": "刊名變更",
-   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇目還沒抓（--toc chbs-journal-old）"
+   "why": "弘誓雙月刊：篇名對不上該刊的篇目"
   },
   {
    "title": "數位化古籍校勘版本處理技術──以 CBETA 大正藏電子佛典為例",
@@ -900,29 +975,7 @@
    "pid": "P20160922002",
    "slug": "chbs-journal-old",
    "status": "刊名變更",
-   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇目還沒抓（--toc chbs-journal-old）"
-  },
-  {
-   "title": "印度中觀學的四句邏輯",
-   "author": "吳汝鈞",
-   "venue": "中華佛學學報",
-   "year": "1992",
-   "source": "genesis-philosophy",
-   "pid": "P20160922002",
-   "slug": "chbs-journal-old",
-   "status": "刊名變更",
-   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇目還沒抓（--toc chbs-journal-old）"
-  },
-  {
-   "title": "禪的詭論和邏輯",
-   "author": "成中英",
-   "venue": "中華佛學學報",
-   "year": "1990",
-   "source": "genesis-philosophy",
-   "pid": "P20160922002",
-   "slug": "chbs-journal-old",
-   "status": "刊名變更",
-   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇目還沒抓（--toc chbs-journal-old）"
+   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇名對不上該刊的篇目"
   },
   {
    "title": "印順長老的護教思想與現代社會",
@@ -933,62 +986,7 @@
    "pid": "P20160922002",
    "slug": "chbs-journal-old",
    "status": "刊名變更",
-   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇目還沒抓（--toc chbs-journal-old）"
-  },
-  {
-   "title": "試論聖嚴法師對「空性」與「佛性」之詮解與貫通",
-   "author": "林建德",
-   "venue": "法鼓佛學學報",
-   "year": "2017",
-   "source": "yinshun-shengyan",
-   "pid": "P20190125001",
-   "slug": "ddbj",
-   "status": "正常發行",
-   "why": "法鼓佛學學報 / Dharma Drum Journal of Buddhist Studies：篇目還沒抓（--toc ddbj）"
-  },
-  {
-   "title": "中文屋論證的錯誤之一",
-   "author": "冀劍制",
-   "venue": "華梵人文學報",
-   "year": "2010",
-   "source": "genesis-philosophy",
-   "pid": "18124305",
-   "slug": null,
-   "status": "停刊",
-   "why": "華梵人文學報 / Huafan Journal of Humanities：篇目還沒抓（--toc huafan-humanities）"
-  },
-  {
-   "title": "論宗教對話的軸心式轉變",
-   "author": "王志成",
-   "venue": "新世紀宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16843738",
-   "slug": "new-century",
-   "status": "停刊",
-   "why": "新世紀宗教研究 / New Century Religious Study：篇目還沒抓（--toc new-century）"
-  },
-  {
-   "title": "從生命中心交談概念反思當代宗教交談理論",
-   "author": "高榮孝",
-   "venue": "新世紀 宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16843738",
-   "slug": "new-century",
-   "status": "停刊",
-   "why": "新世紀宗教研究 / New Century Religious Study：篇目還沒抓（--toc new-century）"
-  },
-  {
-   "title": "從海德格生命與苦難的關係反思尼特宗教交談實踐的可能 性",
-   "author": "高榮孝",
-   "venue": "新世紀宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16843738",
-   "slug": "new-century",
-   "status": "停刊",
-   "why": "新世紀宗教研究 / New Century Religious Study：篇目還沒抓（--toc new-century）"
+   "why": "中華佛學學報 / Chung-Hwa Buddhist Journal：篇名對不上該刊的篇目"
   },
   {
    "title": "佛教反對死刑：歷史與教理的初步探索",
@@ -999,7 +997,7 @@
    "pid": "16843738",
    "slug": "new-century",
    "status": "停刊",
-   "why": "新世紀宗教研究 / New Century Religious Study：篇目還沒抓（--toc new-century）"
+   "why": "新世紀宗教研究 / New Century Religious Study：華藝沒有這一篇的電子全文"
   },
   {
    "title": "宋泉盛的故事神學",
@@ -1035,61 +1033,6 @@
    "why": "神學與教會 / Theology and the Church：篇名對不上該刊的篇目"
   },
   {
-   "title": "論宗教共同體的建構與消除宗教排他性",
-   "author": "王曉朝",
-   "venue": "宗教哲 學",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "10277730",
-   "slug": "religious-philosophy",
-   "status": "正常發行",
-   "why": "宗教哲學 / Journal of Religious Philosophy：篇目還沒抓（--toc religious-philosophy）"
-  },
-  {
-   "title": "由與多元他者在公共領域的對話論宗教大同",
-   "author": "劉久清",
-   "venue": "宗教哲 學",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "10277730",
-   "slug": "religious-philosophy",
-   "status": "正常發行",
-   "why": "宗教哲學 / Journal of Religious Philosophy：篇目還沒抓（--toc religious-philosophy）"
-  },
-  {
-   "title": "亞洲神學之實況化詮釋學的形成與轉變",
-   "author": "歐力仁",
-   "venue": "宗教哲 學",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "10277730",
-   "slug": "religious-philosophy",
-   "status": "正常發行",
-   "why": "宗教哲學 / Journal of Religious Philosophy：篇目還沒抓（--toc religious-philosophy）"
-  },
-  {
-   "title": "再思雷蒙．潘尼卡的宗教多元基督論",
-   "author": "歐力仁",
-   "venue": "宗教哲學",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "10277730",
-   "slug": "religious-philosophy",
-   "status": "正常發行",
-   "why": "宗教哲學 / Journal of Religious Philosophy：篇目還沒抓（--toc religious-philosophy）"
-  },
-  {
-   "title": "「神聖」的轉化－長老教會在臺灣的「本土化」現象探 討",
-   "author": "王鏡玲",
-   "venue": "臺灣宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "a0000594",
-   "slug": "taiwan-religion",
-   "status": "正常發行",
-   "why": "臺灣宗教研究：篇目還沒抓（--toc taiwan-religion）"
-  },
-  {
    "title": "宗教經驗與其可理解性之追求",
    "author": "蔡怡佳",
    "venue": "臺灣宗教研究",
@@ -1098,18 +1041,7 @@
    "pid": "a0000594",
    "slug": "taiwan-religion",
    "status": "正常發行",
-   "why": "臺灣宗教研究：篇目還沒抓（--toc taiwan-religion）"
-  },
-  {
-   "title": "與佛相應、與神相契：臺灣佛教徒與基督徒的祈禱修行體 驗",
-   "author": "蔡怡佳",
-   "venue": "臺灣宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "a0000594",
-   "slug": "taiwan-religion",
-   "status": "正常發行",
-   "why": "臺灣宗教研究：篇目還沒抓（--toc taiwan-religion）"
+   "why": "臺灣宗教研究：華藝沒有這一篇的電子全文"
   },
   {
    "title": "台灣人民面臨抉擇的時刻",
@@ -1134,17 +1066,6 @@
    "why": "道雜誌：華藝沒有這一篇的電子全文"
   },
   {
-   "title": "印順法師思想精義之辯證",
-   "author": "林建德",
-   "venue": "法印學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
    "title": "戰後台灣佛教正義議題之回顧",
    "author": "侯坤宏",
    "venue": "法印學報",
@@ -1153,106 +1074,7 @@
    "pid": "22241299",
    "slug": "dharma-seals",
    "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "中國大陸 2016 年「批印事件」評議",
-   "author": "侯坤宏",
-   "venue": "法印學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "昭慧法師與性廣法師對印順學的傳承與實踐——以經營佛 教弘誓學院、參與社運、闡揚人間佛教禪法為例",
-   "author": "張辰瑋",
-   "venue": "法印學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "從「青年佛教」之精神看印順學派的歷史發展",
-   "author": "張辰瑋",
-   "venue": "法印 學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "試論「人間佛教」兩種社會再造方式 ——以證嚴法師「治 心」與昭慧法師「治境」為對比",
-   "author": "陳芷蘋",
-   "venue": "法印學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "中國大陸2016 年「批印事件」評議",
-   "author": "侯坤宏",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "探討印順法師的生平與思想——以《印順法師年譜》、《真實與方便：印順思想研究》為例",
-   "author": "侯坤宏",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "昭慧法師與性廣法師對印順學的傳承與實踐——以經營佛教弘誓學院、參與社運、闡揚人間佛教禪法為例",
-   "author": "張辰瑋",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "試論「人間佛教」兩種社會再造方式——以證嚴法師「治心」與昭慧法師「治境」為對比",
-   "author": "陳芷蘋",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "「印順導師思想之理論與實踐」學術會議二十屆總回顧",
-   "author": "陳悅萱",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
+   "why": "法印學報 / Journal of Dharma Seals：篇名對不上該刊的篇目"
   },
   {
    "title": "依住堪能性，能成所作事——談禪修的利益與無相布施的經商境界",
@@ -1263,29 +1085,7 @@
    "pid": "22241299",
    "slug": "dharma-seals",
    "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "傳法弘道——傳道法師人間佛教理路",
-   "author": "闞正宗",
-   "venue": "法印學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇目還沒抓（--toc dharma-seals）"
-  },
-  {
-   "title": "印順學派與慈濟宗門——試論印順思想對慈濟志業開展之 可能啟發",
-   "author": "林建德",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
+   "why": "法印學報 / Journal of Dharma Seals：篇名對不上該刊的篇目"
   },
   {
    "title": "「人類為本」與「眾生平等」――印順法師「人間佛教」 觀點下的動物保護",
@@ -1296,40 +1096,7 @@
    "pid": "18133649",
    "slug": "hcu-buddhist",
    "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "動物解放與護生行動：從關懷生命協會的角度來探討",
-   "author": "林朝成",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "社運浪潮中之護教運動——以中國佛教會護教組 為探討核心",
-   "author": "釋傳法、釋性廣",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "印順學派與慈濟宗門——試論印順思想對慈濟志業開展之可能啟發",
-   "author": "林建德",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
+   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "論「解嚴」前台灣佛教高等教育格局的初步形成",
@@ -1340,139 +1107,7 @@
    "pid": "18133649",
    "slug": "hcu-buddhist",
    "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "佛教中道觀的根源義、普遍義與終極義——從印順導師的觀點進入",
-   "author": "葉海煙",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "「人間佛教禪法」之實踐——以「結期精進禪觀」教學為例",
-   "author": "釋性廣",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "從「四大」原理談佛教養生法",
-   "author": "釋性廣",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "論身念處「四威儀」養生法——以「風界」特性改善姿勢性疼痛之應用為例",
-   "author": "釋性廣",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "「中道」之根源義與衍生義——依佛教倫理觀點作深層探索",
-   "author": "釋昭慧",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "印順學與人間佛教——由「無諍之辯」到「求同存異」",
-   "author": "釋昭慧",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "利己與利他之矛盾與統合",
-   "author": "釋昭慧",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "從俄烏戰爭事件，省思佛典中的戰爭觀",
-   "author": "釋昭慧",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "社運浪潮中之護教運動——以中國佛教會護教組為探討核心",
-   "author": "釋傳法、釋性廣",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇目還沒抓（--toc hcu-buddhist）"
-  },
-  {
-   "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩 種立場",
-   "author": "林建德",
-   "venue": "人間佛教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20180307006",
-   "slug": "humanistic-buddhism",
-   "status": "正常發行",
-   "why": "人間佛教研究 / Studies in Humanistic Buddhism：篇目還沒抓（--toc humanistic-buddhism）"
-  },
-  {
-   "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩種立場",
-   "author": "林建德",
-   "venue": "人間佛教研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20180307006",
-   "slug": "humanistic-buddhism",
-   "status": "正常發行",
-   "why": "人間佛教研究 / Studies in Humanistic Buddhism：篇目還沒抓（--toc humanistic-buddhism）"
-  },
-  {
-   "title": "從人民自決到獨立建國：以後殖民觀點分析台灣基督長老 教會政治神學解嚴後三十年發展",
-   "author": "邱凱莉",
-   "venue": "輔仁宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16820568",
-   "slug": "fujen-religious",
-   "status": "正常發行",
-   "why": "輔仁宗教研究 / Fujen Religious Studies：篇目還沒抓（--toc fujen-religious）"
+   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "保羅‧尼特與宋泉盛之多元宗教神學的批判性比較",
@@ -1483,29 +1118,7 @@
    "pid": "16820568",
    "slug": "fujen-religious",
    "status": "正常發行",
-   "why": "輔仁宗教研究 / Fujen Religious Studies：篇目還沒抓（--toc fujen-religious）"
-  },
-  {
-   "title": "地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生 態踐行",
-   "author": "蔡怡佳",
-   "venue": "輔仁宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16820568",
-   "slug": "fujen-religious",
-   "status": "正常發行",
-   "why": "輔仁宗教研究 / Fujen Religious Studies：篇目還沒抓（--toc fujen-religious）"
-  },
-  {
-   "title": "從佛教反思基督宗教上帝觀：取道保羅．蒂利希的「終極 關切」",
-   "author": "賴品超",
-   "venue": "輔仁宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16820568",
-   "slug": "fujen-religious",
-   "status": "正常發行",
-   "why": "輔仁宗教研究 / Fujen Religious Studies：篇目還沒抓（--toc fujen-religious）"
+   "why": "輔仁宗教研究 / Fujen Religious Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "實況化神學的開展：黃彰輝牧師神學思想的探討",
@@ -1538,7 +1151,7 @@
    "pid": "P20181205001",
    "slug": "fgu-journal",
    "status": "正常發行",
-   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇目還沒抓（--toc fgu-journal）"
+   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "現代台灣佛教與印順法師——五大本山與人間佛教的背景一探",
@@ -1549,18 +1162,7 @@
    "pid": "P20181205001",
    "slug": "fgu-journal",
    "status": "正常發行",
-   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇目還沒抓（--toc fgu-journal）"
-  },
-  {
-   "title": "從利他主義的演化看人間佛教與人類的未來",
-   "author": "賴品超",
-   "venue": "人間佛 教學報藝文",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20180314001",
-   "slug": null,
-   "status": "正常發行",
-   "why": "人間佛教學報藝文：篇目還沒抓（--toc hbj-arts）"
+   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇名對不上該刊的篇目"
   }
  ]
 }

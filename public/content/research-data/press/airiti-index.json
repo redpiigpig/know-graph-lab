@@ -240,6 +240,26 @@
   "end": "2024"
  },
  {
+  "slug": "hbj-arts",
+  "pid": "P20180314001",
+  "name": "人間佛教學報藝文",
+  "issues": 53,
+  "articles": 457,
+  "fulltext": 453,
+  "start": "2016",
+  "end": "2025"
+ },
+ {
+  "slug": "huafan-humanities",
+  "pid": "18124305",
+  "name": "華梵人文學報",
+  "issues": 24,
+  "articles": 143,
+  "fulltext": 143,
+  "start": "2003",
+  "end": "2015"
+ },
+ {
   "slug": "religious-philosophy",
   "pid": "10277730",
   "name": "宗教哲學",
