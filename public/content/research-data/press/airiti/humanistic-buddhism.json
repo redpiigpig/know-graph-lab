@@ -1,0 +1,1486 @@
+{
+ "slug": "humanistic-buddhism",
+ "pid": "P20180307006",
+ "name": "人間佛教研究",
+ "publisherID": "U20220303001",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=P20180307006&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 12,
+  "篇目": 107,
+  "有電子全文": 107
+ },
+ "issues": [
+  {
+   "issueID": "N202404100001",
+   "label": "12期 (2024/01)",
+   "year": "2024",
+   "count": 8
+  },
+  {
+   "issueID": "202103150007",
+   "label": "11期 (2021/01)",
+   "year": "2021",
+   "count": 9
+  },
+  {
+   "issueID": "202101110009",
+   "label": "10期 (2020/05)",
+   "year": "2020",
+   "count": 11
+  },
+  {
+   "issueID": "201906270011",
+   "label": "9期 (2019/01)",
+   "year": "2019",
+   "count": 9
+  },
+  {
+   "issueID": "201906270006",
+   "label": "8期 (2017/12)",
+   "year": "2017",
+   "count": 9
+  },
+  {
+   "issueID": "201803070027",
+   "label": "7期 (2016/12)",
+   "year": "2016",
+   "count": 10
+  },
+  {
+   "issueID": "201803070028",
+   "label": "6期 (2014/12)",
+   "year": "2014",
+   "count": 9
+  },
+  {
+   "issueID": "201805290017",
+   "label": "5期 (2013/12)",
+   "year": "2013",
+   "count": 8
+  },
+  {
+   "issueID": "201805290016",
+   "label": "4期 (2013/12)",
+   "year": "2013",
+   "count": 8
+  },
+  {
+   "issueID": "201805290015",
+   "label": "3期 (2012/12)",
+   "year": "2012",
+   "count": 8
+  },
+  {
+   "issueID": "201805290014",
+   "label": "2期 (2012/12)",
+   "year": "2012",
+   "count": 9
+  },
+  {
+   "issueID": "201805290013",
+   "label": "1期 (2011/12)",
+   "year": "2011",
+   "count": 9
+  }
+ ],
+ "articles": [
+  {
+   "docId": "P20180307006-N202404100001-00001",
+   "title": "楊釗居士「旭日三招」的管理心法",
+   "authors": [
+    "陳劍鍠(CHEN, Chien Huang)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "4-49",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00002",
+   "title": "「人類中心主義」與「非人類中心主義」對生態環保的影響－以基督教、佛教為中心",
+   "authors": [
+    "何方耀(He Fang yao)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "50-68+70-71",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00003",
+   "title": "構建企業家精神：探索宗教的影響機制",
+   "authors": [
+    "朱曉武(Zhu Xiaowu)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "72-99",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00004",
+   "title": "以《六祖壇經．行由品》為借鑒的職業管理研究",
+   "authors": [
+    "宋躍華(Song yuehua)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "100-126",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00005",
+   "title": "佛寺慈悲管理經驗在企業人性化管理中的應用",
+   "authors": [
+    "李棟財(LI, Dong Cai)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "128-161",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00006",
+   "title": "佛教的情緒管理－以人間生活禪實踐為例",
+   "authors": [
+    "陳肯(Chen Ken)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "162-182+184-189",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00007",
+   "title": "從《金剛經》析論企業管理的理念與應用",
+   "authors": [
+    "張博棟(Chang Po-Tung)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "190-212+214-216+218",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-N202404100001-00008",
+   "title": "從佛教思想析論企業「自覺式」管理文化之建構",
+   "authors": [
+    "張仰強(Zhang Yangqiang)"
+   ],
+   "volIssue": "12期",
+   "date": "2024 / 01",
+   "pages": "220-244",
+   "fulltext": true,
+   "issueLabel": "12期 (2024/01)",
+   "issueID": "N202404100001"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-4-36",
+   "title": "佛教慈悲精神與稻盛和夫的慈悲管理",
+   "authors": [
+    "吳有能(NG, Yau Nang)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "4-36",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-38-67",
+   "title": "家族企業傳承中的人間佛教精神－以星雲大師的人間佛教思想為中心",
+   "authors": [
+    "周孜正(ZHOU, Zi Zheng)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "38-67",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-68-102+104-105",
+   "title": "戴季陶「安遠柔邊」思想的佛教實踐－以與九世班禪的政教互動為考察中心（1927－1937）",
+   "authors": [
+    "韓敬山(HAN, Jing Shan)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "68-102+104-105",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-106-141",
+   "title": "佛教與岡倉天心的「亞洲一體論」",
+   "authors": [
+    "盛鈺(SHENG, Yu)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "106-141",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-142-170+172-173",
+   "title": "中國大陸佛教80年代重新認可太虛大師的歷史進程",
+   "authors": [
+    "王佳(WANG, Jia)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "142-170+172-173",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-174-226",
+   "title": "Confucian Morality and Rebirth into the Pure Land of Amitābha: The Compartmentalist Thoughts of Ven. Jingkong",
+   "authors": [
+    "顧頡鋒(Stefan Kukowka)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "174-226",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-228-263",
+   "title": "佛教居士組織參與地方社會生活：以當代西樵為例",
+   "authors": [
+    "程肖力(CHENG, Xiao Li)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "228-263",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-264-295",
+   "title": "「四眾」之外：近代上海佛寺的工役群體與寺院經濟",
+   "authors": [
+    "朱明川(ZHU, Mingchuan)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "264-295",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202101-202103150007-202103150007-296-341",
+   "title": "教會、教育：聖嚴法師早期以基督宗教為鏡像的佛教改革理念",
+   "authors": [
+    "徐鳴謙(XU, Ming Qian)"
+   ],
+   "volIssue": "11期",
+   "date": "2021 / 01",
+   "pages": "296-341",
+   "fulltext": true,
+   "issueLabel": "11期 (2021/01)",
+   "issueID": "202103150007"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-4-18",
+   "title": "佛教化現代的挑戰與機遇",
+   "authors": [
+    "釋覺培(SHI, Jue Pei)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "4-18",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-20-37",
+   "title": "世間與出世之間－探討佛教哲理與現代企業管理學的共融與區分",
+   "authors": [
+    "駱湛才(LOK, Anthony)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "20-37",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-38-60",
+   "title": "人間佛教之財商論綱",
+   "authors": [
+    "段玉明(DUAN, Yumin)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "38-60",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-62-87",
+   "title": "以經營佛教社會企業方式修行佛法",
+   "authors": [
+    "黃運喜(HUANG, Yunshi)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "62-87",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-88-110",
+   "title": "Humanistic Buddhism & Volunteerism - an analysis of Ven. Master Hsing Yun's Teachings",
+   "authors": [
+    "鄭維儀(CHENG, Wei Yi)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "88-110",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-112-129",
+   "title": "佛教「整體主義」環境理念對經濟管理制度的啟示",
+   "authors": [
+    "姚彬彬(YAO, Binbin)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "112-129",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-130-179",
+   "title": "星雲大師的「應用管理」心法",
+   "authors": [
+    "陳劍鍠(CHEN, Chien Huang)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "130-179",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-180-207",
+   "title": "「知識佛教」與馬來西亞華人佛教的轉型",
+   "authors": [
+    "陳秋平(TANG, Chew Peng)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "180-207",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-208-249",
+   "title": "馬祖道一禪法思想之研究－以心性論為中心",
+   "authors": [
+    "釋耀緣(SHI, Sheng yin)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "208-249",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-250-254",
+   "title": "三教關係研究的集大成之作：評牟鐘鑒先生《儒道佛三教關係簡明通史》",
+   "authors": [
+    "韓煥忠",
+    "高亮"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "250-254",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-202005-202101110009-202101110009-256-258",
+   "title": "讀丁建華新著《近現代佛教空有之爭研究》",
+   "authors": [
+    "姚彬彬(YAO, Binbin)"
+   ],
+   "volIssue": "10期",
+   "date": "2020 / 05",
+   "pages": "256-258",
+   "fulltext": true,
+   "issueLabel": "10期 (2020/05)",
+   "issueID": "202101110009"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-1-17",
+   "title": "星雲大師人間佛教書寫之特徵及其詩學要義",
+   "authors": [
+    "高文強(Gao Wenqiang)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "1-17",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-19-43",
+   "title": "以空為有，以眾為我－析論星雲大師的般若觀及其在人間生活禪之應用",
+   "authors": [
+    "蕭愛蓉(Hsiao, Ai-Jung)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "19-43",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-45-71",
+   "title": "「人生佛教」與「人間佛教」辨義－兼論太虛與印順佛教「理性化」思想徑路之同異",
+   "authors": [
+    "姚彬彬(Yao Binbin)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "45-71",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-73-106",
+   "title": "人間佛教之在地化實踐－論新加坡漢傳佛教的「知識化」與「組織化」",
+   "authors": [
+    "許源泰(Hue Guan Thye)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "73-106",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-107-123",
+   "title": "澄清之必要－社會對佛光山人間佛教的評議",
+   "authors": [
+    "簡逸光(Jian Yiguang)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "107-123",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-125-170",
+   "title": "當代雲南傣族上座部佛教的毀滅與重生（上）：國家政權的清洗與改造",
+   "authors": [
+    "劉宇光(Lawrence Y. K. Lau)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "125-170",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-171-195",
+   "title": "從「一葦渡江」到「一葦渡海」－菩提達摩新神化形象探研",
+   "authors": [
+    "白照傑(Bai Zhaojie)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "171-195",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-197-258",
+   "title": "敦煌研究院藏佚本《維摩詰經注》寫卷校錄",
+   "authors": [
+    "陶家駿(Tao Jiajun)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "197-258",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201901-201906270011-201906270011-259-298",
+   "title": "Avalokiteśvara Is the Buddha-to-Be: Intertextual Analyses Between Three Mahāyāna Texts and the Northern Āgamas",
+   "authors": [
+    "張巨岩(Juyan Zhang)"
+   ],
+   "volIssue": "9期",
+   "date": "2019 / 01",
+   "pages": "259-298",
+   "fulltext": true,
+   "issueLabel": "9期 (2019/01)",
+   "issueID": "201906270011"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-1-31",
+   "title": "星雲大師「同體共生」之理念－以平等、慈悲、華嚴法界為線索",
+   "authors": [
+    "陳劍鍠(CHEN, Chien Huang)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-33-69",
+   "title": "星雲大師對彌陀淨土法門的弘傳與行持",
+   "authors": [
+    "李聖俊(LEE, Sheng Chun)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "33-69",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-71-88",
+   "title": "星雲大師文學創作觀探析",
+   "authors": [
+    "高文強(GAO Wenqiang)",
+    "陳舒楠(CHEN Shunan)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "71-88",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-89-135",
+   "title": "星雲大師的人間佛教思想：以《星雲詩偈》為例",
+   "authors": [
+    "李枝憙(LEE Chih-Hsi)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "89-135",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-137-158",
+   "title": "人間佛教對人心的關懷－佛教與中醫調心方法之比較研究",
+   "authors": [
+    "釋永有(Ven. Dr. Yong You)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "137-158",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-159-201",
+   "title": "佛教心理學發展的省思－建議設立符合人間佛教藍圖的「應用佛教心理學」",
+   "authors": [
+    "潘啟聰(Poon Kai Chung)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "159-201",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-203-223",
+   "title": "「白色恐怖」下的辦學與弘法－慈航法師主持「臺灣佛學院」與環島布教（1950－1952）",
+   "authors": [
+    "闞正宗(Cheng-Zong Kan)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "203-223",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-225-265",
+   "title": "湛然的「無情有性」論與「色心不二」觀",
+   "authors": [
+    "唐秀連(Tong Sau Lin)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "225-265",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201712-201906270006-201906270006-267-332",
+   "title": "三種《華嚴》文獻分析",
+   "authors": [
+    "桑大鵬(Sang Dapeng)"
+   ],
+   "volIssue": "8期",
+   "date": "2017 / 12",
+   "pages": "267-332",
+   "fulltext": true,
+   "issueLabel": "8期 (2017/12)",
+   "issueID": "201906270006"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-1-9",
+   "title": "人間佛教三題",
+   "authors": [
+    "黃夏年(Huang Xianian)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-11-65",
+   "title": "契嵩《孝論》的研究",
+   "authors": [
+    "廣興(Guang Xing)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "11-65",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-67-96",
+   "title": "覺浪道盛《原道七論》義蘊試析：從三教會同看近世佛教護國思想",
+   "authors": [
+    "廖肇亨(Chao-heng Liao)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "67-96",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-97-157",
+   "title": "避風港：1949年前後的香港佛教",
+   "authors": [
+    "侯坤宏(Kun-hong Hou)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "97-157",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-159-176",
+   "title": "當代人間佛教傳燈錄‧惟賢學案",
+   "authors": [
+    "鄧子美(Zi-mei Deng)",
+    "楊孝容(Xiao-rong Yang)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "159-176",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-177-212",
+   "title": "「抉擇」與「傳承」：印順和聖嚴對於「中國佛教」的兩種立場",
+   "authors": [
+    "林建德(Chien-Te Lin)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "177-212",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-213-235",
+   "title": "星雲大師對般若智慧的現代詮釋：以其《般若經》著述為中心",
+   "authors": [
+    "黃國清(Kuo-ching Huang)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "213-235",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-237-283",
+   "title": "釋星雲的早期宗教實踐理念與文學創作",
+   "authors": [
+    "吳光正(Guang-zheng Wu)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "237-283",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-285-323",
+   "title": "星雲模式「人間佛教」回應「全球化」時代關聯性之問題論述",
+   "authors": [
+    "釋覺明(Chue Ming)"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "285-323",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201612-201803070027-201803070027-325-335",
+   "title": "Review of Christopher W. Gowans, Buddhist Moral Philosophy: An Introduction, New York: Routledge, 2014.",
+   "authors": [
+    "Kwong-cheong Wong"
+   ],
+   "volIssue": "7期",
+   "date": "2016 / 12",
+   "pages": "325-335",
+   "fulltext": true,
+   "issueLabel": "7期 (2016/12)",
+   "issueID": "201803070027"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-1-33",
+   "title": "《起信論》大意述：和合心法之說與修",
+   "authors": [
+    "金濤(JIN Tao)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "1-33",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-35-51",
+   "title": "關於《中論》緣起思想的幾個問題",
+   "authors": [
+    "李學竹(LI Xuezhu)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "35-51",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-53-76",
+   "title": "論通理大師《金剛禮》的懺悔思想",
+   "authors": [
+    "何則陰(HE Zeyin)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "53-76",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-77-90",
+   "title": "人間佛教之政治倫理視域中的為政之道",
+   "authors": [
+    "董群(DONG Qun)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "77-90",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-91-106",
+   "title": "論「念佛往生」與「信願往生」－以民國時期守培與印光等人的爭論為例",
+   "authors": [
+    "夏金華(XIA Jinhua)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "91-106",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-107-124",
+   "title": "隋文帝建舍利塔與靈隱寺智仙舍利塔考",
+   "authors": [
+    "何孝榮(HE Xiaorong)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "107-124",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-125-138",
+   "title": "泉州《一百大寺看經記碑》研究－兼論元代佛教寺院的地理分佈",
+   "authors": [
+    "張雪松(ZHANG Xuesong)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "125-138",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-139-167",
+   "title": "從太虛大師的新佛教論述看當代中國的人間佛教運動",
+   "authors": [
+    "陳永革(CHEN Yongge)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "139-167",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201412-201803070028-201803070028-169-177",
+   "title": "書評　張文良《「批判佛教」的批判》",
+   "authors": [
+    "謝逸",
+    "韓煥忠"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 12",
+   "pages": "169-177",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/12)",
+   "issueID": "201803070028"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-1-15",
+   "title": "《寶藏論》與中國思想文化傳統",
+   "authors": [
+    "賈晉華(JIA Jinhua)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "1-15",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-17-34",
+   "title": "黑水城出土《佛說無常經》研究",
+   "authors": [
+    "崔紅芬(CUI Hongfen)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "17-34",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-35-70",
+   "title": "法融禪教之安心法門－「一切莫顧，安心無處」的修學義理",
+   "authors": [
+    "陳平坤(CHEN Ping-kun)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "35-70",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-71-104",
+   "title": "印順導師與印光大師的淨土觀點比較－以「契理契機」與「稱名念佛」為核心",
+   "authors": [
+    "陳劍鍠(CHEN Chien-huang)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "71-104",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-105-144",
+   "title": "當代中國佛教外交與政治宣傳",
+   "authors": [
+    "學愚(XUE Yu)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "105-144",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-145-167",
+   "title": "爭吃「唐僧肉」，相煎何日休？－中國當代「消費佛教」現象批判",
+   "authors": [
+    "戴繼誠(DAI Jicheng)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "145-167",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-169-212",
+   "title": "當代佛寺的社會教育功能及影響",
+   "authors": [
+    "李華偉(LI Huawei)",
+    "姜乃菡(JIANG Naihan)",
+    "陳映錦(CHEN Yingjin)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "169-212",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290017-201805290017-213-218",
+   "title": "書評：學愚《佛教、暴力與民族主義－抗日戰爭時期的中國佛教》",
+   "authors": [
+    "韓煥忠"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 12",
+   "pages": "213-218",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/12)",
+   "issueID": "201805290017"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-1-22",
+   "title": "支那內學院佛學教育初探－呂澂的五科佛學思想",
+   "authors": [
+    "何金強(He Jinqiang)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "1-22",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-23-50",
+   "title": "教觀雙美的民初天台佛學教育初探",
+   "authors": [
+    "黃英傑(Huang Ying-chieh)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "23-50",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-51-71",
+   "title": "略論五乘佛教的教育次第",
+   "authors": [
+    "孫勁松(Sun Jinsong)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "51-71",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-73-104",
+   "title": "On the Tradition of Dāna: From Ancient India to Contemporary",
+   "authors": [
+    "釋覺明/柳麗鳳(Shi Chueming/Liu Lifeng)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "73-104",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-105-127",
+   "title": "以人為本、契機創新－佛教戒律精神探討",
+   "authors": [
+    "學愚(Xue Yu)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "105-127",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-129-142",
+   "title": "從《壇經》的自心自性說看佛耶修行理念之差異",
+   "authors": [
+    "李思凡(Li Sifan)",
+    "徐弢(Xu Tao)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "129-142",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-143-173",
+   "title": "智顗所制懺法的整合特質及其當代應用思考",
+   "authors": [
+    "黃國清(Huang Kuo-ching)"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "143-173",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201312-201805290016-201805290016-175-182",
+   "title": "書評：學愚《人間佛教－星雲大師如是說、如是行》",
+   "authors": [
+    "韓煥忠"
+   ],
+   "volIssue": "4期",
+   "date": "2013 / 12",
+   "pages": "175-182",
+   "fulltext": true,
+   "issueLabel": "4期 (2013/12)",
+   "issueID": "201805290016"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-1-17",
+   "title": "Widening Horizons: Issues on life and death from Existentialism to Buddhism",
+   "authors": [
+    "Leni dlR. Garcia"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "1-17",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-19-38",
+   "title": "Theravāda teachings and Buddhist meditation training in Hong Kong",
+   "authors": [
+    "麥文彪(Bill M. Mak)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "19-38",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-39-64",
+   "title": "兩岸人間佛教主要模式特色剖析",
+   "authors": [
+    "鄧子美(Deng Zimei)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "39-64",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-65-95",
+   "title": "慈悲三昧水懺不食肉觀之研究",
+   "authors": [
+    "黃夏年(Huang Xia-nian)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "65-95",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-97-125",
+   "title": "佛教倫理與商品經濟",
+   "authors": [
+    "學愚(Xue Yu)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "97-125",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-127-168",
+   "title": "為甚麼宗教－民族主義及原教旨主義沒有在現代泰國佛教僧團滋長？以兩個案例為線索",
+   "authors": [
+    "劉宇光(Lawrence Y.K. Lau)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "127-168",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-169-198",
+   "title": "三朝僧傳中的亡／遺身高僧及其行動爭議的當代反思",
+   "authors": [
+    "黃敬家(huang jingjia)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "169-198",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290015-201805290015-199-227",
+   "title": "保羅．利科文本詮釋學視野下的《楞嚴經》解讀",
+   "authors": [
+    "謝健(Xie Jian)"
+   ],
+   "volIssue": "3期",
+   "date": "2012 / 12",
+   "pages": "199-227",
+   "fulltext": true,
+   "issueLabel": "3期 (2012/12)",
+   "issueID": "201805290015"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-1-13",
+   "title": "Dialectical Centrism: Buddhist Response to the Contrvoversy between Anthropocentrism and Eco-centrism",
+   "authors": [
+    "學愚(Xue Yu)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "1-13",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-15-34",
+   "title": "A Mahāyāna Bodhisattva's Viewpoint for Pluralism in the Context of Global Citizenship",
+   "authors": [
+    "唐秀連(Tong Sau Lin)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "15-34",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-35-55",
+   "title": "Lexical Ambiguities in the Buddhist Teachings, an Example & Methodology",
+   "authors": [
+    "Bryan Levman"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "35-55",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-57-74",
+   "title": "傳世唐五代禪宗寺規及其對當代人間佛教寺院倫理的啟示意義",
+   "authors": [
+    "賈晉華(Jia Jinhua)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "57-74",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-75-108",
+   "title": "台灣寺院經濟資源的運用問題",
+   "authors": [
+    "鄭志明(Cheng Chih-ming)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "75-108",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-109-132",
+   "title": "佛教經濟倫理芻議－以韋伯命題與方法為中心",
+   "authors": [
+    "聖凱(Sheng Kai)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "109-132",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-133-168",
+   "title": "聖嚴法師所倡「心靈環保」的中華禪精神",
+   "authors": [
+    "陳平坤(Chen Pingkun)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "133-168",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-169-190",
+   "title": "解讀共生－以藏傳佛教三勝獸象徵符號為媒介",
+   "authors": [
+    "孫國柱(Sun Guozhu)"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "169-190",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201212-201805290014-201805290014-191-196",
+   "title": "書評：賈晉華《古典禪研究：中唐至五代禪宗發展新探》",
+   "authors": [
+    "孫昌武"
+   ],
+   "volIssue": "2期",
+   "date": "2012 / 12",
+   "pages": "191-196",
+   "fulltext": true,
+   "issueLabel": "2期 (2012/12)",
+   "issueID": "201805290014"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-1-15",
+   "title": "Unskillful Karma: Environmental Pollution as Ignorance in Action",
+   "authors": [
+    "Frank J. Hoffman"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "1-15",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-17-53",
+   "title": "Humanity and Nature-Buddhist Reply for Contemporary Environmental Crisis",
+   "authors": [
+    "學愚(Xue Yu)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "17-53",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-55-73",
+   "title": "人間佛教概念的釐清與界定",
+   "authors": [
+    "鄧子美(Deng Zimei)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "55-73",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-75-88",
+   "title": "佛教在經濟型社會發展的作用初探",
+   "authors": [
+    "鄭慶雲(Cheng Hingwan)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "75-88",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-89-110",
+   "title": "「佛教社會」及其社會理論芻議",
+   "authors": [
+    "李向平(Li Xiangping)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "89-110",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-111-130",
+   "title": "大乘佛教久住世間的菩薩精神特質",
+   "authors": [
+    "黃國清(Huang Kuoching)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "111-130",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-131-145",
+   "title": "印順的人間佛教思想及其倫理價值探析",
+   "authors": [
+    "劉成有(Liu Chengyou)"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "131-145",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-147-151",
+   "title": "Book Review: David L. McMahan, The Making of Buddhist Modernism Oxford: Oxford University Press, 2008.",
+   "authors": [
+    "Chan Fang Michael"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "147-151",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  },
+  {
+   "docId": "P20180307006-201112-201805290013-201805290013-153-157",
+   "title": "書評：Donald S. Lopez Jr., Buddhism and Science: A Guide for the Perplexed Chicago: University of Chicago Press, 2008.",
+   "authors": [
+    "傅曉"
+   ],
+   "volIssue": "1期",
+   "date": "2011 / 12",
+   "pages": "153-157",
+   "fulltext": true,
+   "issueLabel": "1期 (2011/12)",
+   "issueID": "201805290013"
+  }
+ ]
+}

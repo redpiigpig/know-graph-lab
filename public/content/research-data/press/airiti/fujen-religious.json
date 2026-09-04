@@ -1,0 +1,3184 @@
+{
+ "slug": "fujen-religious",
+ "pid": "16820568",
+ "name": "輔仁宗教研究",
+ "publisherID": "2507",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=16820568&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 33,
+  "篇目": 228,
+  "有電子全文": 227
+ },
+ "issues": [
+  {
+   "issueID": "N202602260009",
+   "label": "47期 (2023/09)",
+   "year": "2023",
+   "count": 5
+  },
+  {
+   "issueID": "N202506140016",
+   "label": "46期 (2023/03)",
+   "year": "2023",
+   "count": 6
+  },
+  {
+   "issueID": "N202404200001",
+   "label": "45期 (2022/09)",
+   "year": "2022",
+   "count": 5
+  },
+  {
+   "issueID": "N202303110003",
+   "label": "44期 (2022/03)",
+   "year": "2022",
+   "count": 5
+  },
+  {
+   "issueID": "202209150014",
+   "label": "43期 (2021/09)",
+   "year": "2021",
+   "count": 7
+  },
+  {
+   "issueID": "202201250027",
+   "label": "42期 (2021/03)",
+   "year": "2021",
+   "count": 7
+  },
+  {
+   "issueID": "202109100009",
+   "label": "41期 (2020/09)",
+   "year": "2020",
+   "count": 5
+  },
+  {
+   "issueID": "202009150010",
+   "label": "40期 (2020/03)",
+   "year": "2020",
+   "count": 5
+  },
+  {
+   "issueID": "202004070023",
+   "label": "39期 (2019/09)",
+   "year": "2019",
+   "count": 5
+  },
+  {
+   "issueID": "202002200008",
+   "label": "38期 (2019/03)",
+   "year": "2019",
+   "count": 6
+  },
+  {
+   "issueID": "201907120016",
+   "label": "37期 (2018/09)",
+   "year": "2018",
+   "count": 6
+  },
+  {
+   "issueID": "201812270019",
+   "label": "36期 (2018/03)",
+   "year": "2018",
+   "count": 7
+  },
+  {
+   "issueID": "201803300014",
+   "label": "35期 (2017/09)",
+   "year": "2017",
+   "count": 5
+  },
+  {
+   "issueID": "201712050009",
+   "label": "34期 (2017/03)",
+   "year": "2017",
+   "count": 7
+  },
+  {
+   "issueID": "201612220030",
+   "label": "33期 (2016/11)",
+   "year": "2016",
+   "count": 8
+  },
+  {
+   "issueID": "201605310017",
+   "label": "32期 (2016/03)",
+   "year": "2016",
+   "count": 7
+  },
+  {
+   "issueID": "201601130011",
+   "label": "31期 (2015/12)",
+   "year": "2015",
+   "count": 7
+  },
+  {
+   "issueID": "201510220016",
+   "label": "30期 (2015/03)",
+   "year": "2015",
+   "count": 7
+  },
+  {
+   "issueID": "201411200008",
+   "label": "29期 (2014/09)",
+   "year": "2014",
+   "count": 7
+  },
+  {
+   "issueID": "201407140008",
+   "label": "28期 (2014/03)",
+   "year": "2014",
+   "count": 10
+  },
+  {
+   "issueID": "201311190033",
+   "label": "27期 (2013/09)",
+   "year": "2013",
+   "count": 8
+  },
+  {
+   "issueID": "201304150016",
+   "label": "26期 (2013/03)",
+   "year": "2013",
+   "count": 7
+  },
+  {
+   "issueID": "201211090030",
+   "label": "25期 (2012/09)",
+   "year": "2012",
+   "count": 8
+  },
+  {
+   "issueID": "201204060018",
+   "label": "24期 (2012/03)",
+   "year": "2012",
+   "count": 8
+  },
+  {
+   "issueID": "201110120011",
+   "label": "23期 (2011/09)",
+   "year": "2011",
+   "count": 8
+  },
+  {
+   "issueID": "201104010024",
+   "label": "22期 (2011/03)",
+   "year": "2011",
+   "count": 6
+  },
+  {
+   "issueID": "201010140006",
+   "label": "21期 (2010/09)",
+   "year": "2010",
+   "count": 8
+  },
+  {
+   "issueID": "201004230002",
+   "label": "20期 (2010/03)",
+   "year": "2010",
+   "count": 7
+  },
+  {
+   "issueID": "89114",
+   "label": "19期 (2009/09)",
+   "year": "2009",
+   "count": 9
+  },
+  {
+   "issueID": "82475",
+   "label": "18期 (2009/03)",
+   "year": "2009",
+   "count": 7
+  },
+  {
+   "issueID": "72429",
+   "label": "17期 (2008/06)",
+   "year": "2008",
+   "count": 9
+  },
+  {
+   "issueID": "64367",
+   "label": "16期 (2007/12)",
+   "year": "2007",
+   "count": 8
+  },
+  {
+   "issueID": "61962",
+   "label": "15期 (2007/06)",
+   "year": "2007",
+   "count": 8
+  }
+ ],
+ "articles": [
+  {
+   "docId": "16820568-N202602260009-00001",
+   "title": "道教之界定：文化交融與處境的觀點",
+   "authors": [
+    "謝世維(HSIEH Shu-wei)"
+   ],
+   "volIssue": "47期",
+   "date": "2023 / 09",
+   "pages": "1-29",
+   "fulltext": true,
+   "issueLabel": "47期 (2023/09)",
+   "issueID": "N202602260009"
+  },
+  {
+   "docId": "16820568-N202602260009-00002",
+   "title": "從張宇初《道門十規》談理想道教的建構",
+   "authors": [
+    "楊士霈(YANG Shih-Pei)"
+   ],
+   "volIssue": "47期",
+   "date": "2023 / 09",
+   "pages": "31-79",
+   "fulltext": true,
+   "issueLabel": "47期 (2023/09)",
+   "issueID": "N202602260009"
+  },
+  {
+   "docId": "16820568-N202602260009-00003",
+   "title": "唐玄宗三經御注〈序〉及其儒道治國理念研究",
+   "authors": [
+    "李龢書(LI He-Shu)"
+   ],
+   "volIssue": "47期",
+   "date": "2023 / 09",
+   "pages": "81-121",
+   "fulltext": true,
+   "issueLabel": "47期 (2023/09)",
+   "issueID": "N202602260009"
+  },
+  {
+   "docId": "16820568-N202602260009-00004",
+   "title": "象徵、跨界、信仰、新生命：以文學和女性主義視角重塑《若望福音》中撒瑪黎雅婦人的形象",
+   "authors": [
+    "陳靜怡(CHEN Ching -Yi)"
+   ],
+   "volIssue": "47期",
+   "date": "2023 / 09",
+   "pages": "123-140",
+   "fulltext": true,
+   "issueLabel": "47期 (2023/09)",
+   "issueID": "N202602260009"
+  },
+  {
+   "docId": "16820568-N202602260009-00005",
+   "title": "How to Write Theology: The Meaning of \"The Lyric Tradition\" of Chinese Literature for the Christian Theology",
+   "authors": [
+    "KIM Seung-Chul(金承哲)"
+   ],
+   "volIssue": "47期",
+   "date": "2023 / 09",
+   "pages": "141-203",
+   "fulltext": true,
+   "issueLabel": "47期 (2023/09)",
+   "issueID": "N202602260009"
+  },
+  {
+   "docId": "16820568-N202506140016-00001",
+   "title": "基隆雷成壇的傳承與發展",
+   "authors": [
+    "楊士霈(YANG Shih-Pei)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "1-39",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202506140016-00002",
+   "title": "臺灣基督教保守反同運動中的外省族群失家因素及多重「家」概念分析",
+   "authors": [
+    "楊鳳麟(YANG Feng -Lin)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "41-73",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202506140016-00003",
+   "title": "傳教士莫安仁與廣學會的編譯出版事業",
+   "authors": [
+    "楊華波(YANG Hua-Bo)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "75-110",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202506140016-00004",
+   "title": "謝扶雅的新實在論宗教哲學",
+   "authors": [
+    "曾慶豹(Chin Ken-Pa)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "111-130",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202506140016-00005",
+   "title": "Eternal Time from Above: The Confluence of Divine Time and Liturgical Time in the Scrolls",
+   "authors": [
+    "CHANG Kai-Hsuan(張楷弦)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "131-158",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202506140016-00006",
+   "title": "趙恩潔著《虔誠相絆：印尼爪哇的穆斯林與基督徒之關係與性別化的日常共作》評介",
+   "authors": [
+    "張美婷(CHANG Mei-Thing)"
+   ],
+   "volIssue": "46期",
+   "date": "2023 / 03",
+   "pages": "159-170",
+   "fulltext": true,
+   "issueLabel": "46期 (2023/03)",
+   "issueID": "N202506140016"
+  },
+  {
+   "docId": "16820568-N202404200001-00001",
+   "title": "新見中國摩尼教《五佛懺》寫本初探",
+   "authors": [
+    "曹凌(Cao Ling)"
+   ],
+   "volIssue": "45期",
+   "date": "2022 / 09",
+   "pages": "1-41",
+   "fulltext": true,
+   "issueLabel": "45期 (2022/09)",
+   "issueID": "N202404200001"
+  },
+  {
+   "docId": "16820568-N202404200001-00002",
+   "title": "CANONICAL OR NONCANONICAL: A STUDY OF THE CONTEXT OF SITUATION IN THE GOSPELS OF MATTHEW, LUKE, AND THOMAS",
+   "authors": [
+    "LIU Chia-En(劉加恩)"
+   ],
+   "volIssue": "45期",
+   "date": "2022 / 09",
+   "pages": "43-88",
+   "fulltext": true,
+   "issueLabel": "45期 (2022/09)",
+   "issueID": "N202404200001"
+  },
+  {
+   "docId": "16820568-N202404200001-00003",
+   "title": "以「做宗教」論《道藏輯要》編纂及重刊原因—兼論全真道與天仙派定位問題",
+   "authors": [
+    "黃頌軒(WONG Chung-Hin)"
+   ],
+   "volIssue": "45期",
+   "date": "2022 / 09",
+   "pages": "89-128",
+   "fulltext": true,
+   "issueLabel": "45期 (2022/09)",
+   "issueID": "N202404200001"
+  },
+  {
+   "docId": "16820568-N202404200001-00004",
+   "title": "從人神相遇探討天主教信徒的寬恕經驗",
+   "authors": [
+    "潘春旭(Francis Chun-Hsu Pan)"
+   ],
+   "volIssue": "45期",
+   "date": "2022 / 09",
+   "pages": "129-163",
+   "fulltext": true,
+   "issueLabel": "45期 (2022/09)",
+   "issueID": "N202404200001"
+  },
+  {
+   "docId": "16820568-N202404200001-00005",
+   "title": "非家傳入道：三位青年道士的學習歷程與臺灣北部道教社會網絡",
+   "authors": [
+    "王兆立(WANG Chao-Li)"
+   ],
+   "volIssue": "45期",
+   "date": "2022 / 09",
+   "pages": "165-195",
+   "fulltext": true,
+   "issueLabel": "45期 (2022/09)",
+   "issueID": "N202404200001"
+  },
+  {
+   "docId": "16820568-N202303110003-00001",
+   "title": "根據卡爾．拉內的「奧秘體驗」談「修行」與「療癒」的意涵",
+   "authors": [
+    "林一納(LIN Yi-Na)"
+   ],
+   "volIssue": "44期",
+   "date": "2022 / 03",
+   "pages": "1-16",
+   "fulltext": true,
+   "issueLabel": "44期 (2022/03)",
+   "issueID": "N202303110003"
+  },
+  {
+   "docId": "16820568-N202303110003-00002",
+   "title": "從宗座勸諭《愛的喜樂》探討基督徒夫婦的靈性培育",
+   "authors": [
+    "黃貴雄(James HUANG Kuei-Hsiung)"
+   ],
+   "volIssue": "44期",
+   "date": "2022 / 03",
+   "pages": "17-51",
+   "fulltext": true,
+   "issueLabel": "44期 (2022/03)",
+   "issueID": "N202303110003"
+  },
+  {
+   "docId": "16820568-N202303110003-00003",
+   "title": "臺灣基督教文化保守主義運動的社會脈絡及其關連性",
+   "authors": [
+    "楊鳳麟(YANG Feng-Lin)"
+   ],
+   "volIssue": "44期",
+   "date": "2022 / 03",
+   "pages": "53-76",
+   "fulltext": true,
+   "issueLabel": "44期 (2022/03)",
+   "issueID": "N202303110003"
+  },
+  {
+   "docId": "16820568-N202303110003-00004",
+   "title": "清末民初河南東正教的傳入（1905－1917）",
+   "authors": [
+    "歐陽剛毅(OU YANG Gang-Yi)"
+   ],
+   "volIssue": "44期",
+   "date": "2022 / 03",
+   "pages": "77-104",
+   "fulltext": true,
+   "issueLabel": "44期 (2022/03)",
+   "issueID": "N202303110003"
+  },
+  {
+   "docId": "16820568-N202303110003-00005",
+   "title": "敦煌寫本「S.567成唯識論釋（擬）」題名再議與思想立場－以《百法决》為線索",
+   "authors": [
+    "劉鐔靖(LIU Tan-Ching)"
+   ],
+   "volIssue": "44期",
+   "date": "2022 / 03",
+   "pages": "105-136",
+   "fulltext": true,
+   "issueLabel": "44期 (2022/03)",
+   "issueID": "N202303110003"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-1-41",
+   "title": "法國本土政教分離政策之歷史沿革",
+   "authors": [
+    "蘇倚德(SU Yii-Der)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "1-41",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-43-66",
+   "title": "試論張星曜《天儒同異考》裡反映的「儒家」圖像",
+   "authors": [
+    "李彥儀(LEE Yen-Yi)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "43-66",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-67-100",
+   "title": "天主教傳教士雷鳴遠對民國政治的觀察與醫療福傳行動（1927-1940年）",
+   "authors": [
+    "陳聰銘(CHEN Tsung-Ming)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "67-100",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-101-143",
+   "title": "中國共產黨對伊斯蘭教的民族化策略初探",
+   "authors": [
+    "馬振瀚(MA Chen-Han)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "101-143",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-145-152",
+   "title": "蔡怡佳著《宗教心理學之人文詮釋》評介",
+   "authors": [
+    "黃應貴(HUANG Ying-Kuei)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "145-152",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-157-161",
+   "title": "賴品超著《宗教都是殊途同歸？宗教研究與漢語神學的視角》評介",
+   "authors": [
+    "黃懷秋(WONG Yai-Chow)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "157-161",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202109-202209150014-202209150014-163-167",
+   "title": "謝國興著《禮祝下鄉：驅瘟逐疫祭典中的王府行儀－臺南、東港、漳州比較研究》評介",
+   "authors": [
+    "梁右典(LIANG Yu-Tien)"
+   ],
+   "volIssue": "43期",
+   "date": "2021 / 09",
+   "pages": "163-167",
+   "fulltext": true,
+   "issueLabel": "43期 (2021/09)",
+   "issueID": "202209150014"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-1-19",
+   "title": "從《聖詠》到《羅馬書》的「公義」思想：以朱熹的「理」學為參照",
+   "authors": [
+    "楊子春(YANG Zih-Chun)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "1-19",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-21-55",
+   "title": "居普良的主教共治精神與教宗方濟各的全教會同行理念",
+   "authors": [
+    "張聖佳(CHANG Sheng-Chia)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "21-55",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-57-87",
+   "title": "從天主教七件聖事論述方濟各教宗《天主聖神》自動諭－法典230條1項的修正案",
+   "authors": [
+    "金毓瑋(Francis KING Yuk-Wai)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "57-87",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-89-119",
+   "title": "華人五旬宗自立運動先驅馬兆瑞及其人際網絡與親屬網絡",
+   "authors": [
+    "葉先秦(IAP Sian-Chin)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "89-119",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-121-146",
+   "title": "從人民自決到獨立建國：以後殖民觀點分析台灣基督長老教會政治神學解嚴後三十年發展",
+   "authors": [
+    "邱凱莉(CHIU Kai-Li)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "121-146",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-147-174",
+   "title": "先知的療傷之旅：從環境心理學視角解讀以西結異象的龐大地景",
+   "authors": [
+    "郭怡君(KUO I-Chun)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "147-174",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202103-202201250027-202201250027-175-191",
+   "title": "Things violent in religion and politics: Some critical remarks on the theology of religious pluralism",
+   "authors": [
+    "金承哲(KIM Seung-Chul)"
+   ],
+   "volIssue": "42期",
+   "date": "2021 / 03",
+   "pages": "175-191",
+   "fulltext": true,
+   "issueLabel": "42期 (2021/03)",
+   "issueID": "202201250027"
+  },
+  {
+   "docId": "16820568-202009-202109100009-202109100009-1-16",
+   "title": "宗教學及其立場－喬納森．Z．史密斯《瓊斯先生心中的魔鬼》的意義",
+   "authors": [
+    "王聖英(WANG Sheng-Ying)"
+   ],
+   "volIssue": "41期",
+   "date": "2020 / 09",
+   "pages": "1-16",
+   "fulltext": true,
+   "issueLabel": "41期 (2020/09)",
+   "issueID": "202109100009"
+  },
+  {
+   "docId": "16820568-202009-202109100009-202109100009-17-38",
+   "title": "信德是未見之事的確證：按聖多瑪斯《若望福音註釋》的哲學理解",
+   "authors": [
+    "蔡慧敏(Florence CHOI Wai-Man)"
+   ],
+   "volIssue": "41期",
+   "date": "2020 / 09",
+   "pages": "17-38",
+   "fulltext": true,
+   "issueLabel": "41期 (2020/09)",
+   "issueID": "202109100009"
+  },
+  {
+   "docId": "16820568-202009-202109100009-202109100009-39-55",
+   "title": "楊廷筠思想中從個體性向主體性轉化之探究",
+   "authors": [
+    "鄭安茱(TEE An-Chu)"
+   ],
+   "volIssue": "41期",
+   "date": "2020 / 09",
+   "pages": "39-55",
+   "fulltext": true,
+   "issueLabel": "41期 (2020/09)",
+   "issueID": "202109100009"
+  },
+  {
+   "docId": "16820568-202009-202109100009-202109100009-57-95",
+   "title": "從慶典形成、儀式實踐到信眾觀念反思：媽祖遇見瑪利亞的宗教對話",
+   "authors": [
+    "陳曉春(CHEN Xiao-Chun)"
+   ],
+   "volIssue": "41期",
+   "date": "2020 / 09",
+   "pages": "57-95",
+   "fulltext": true,
+   "issueLabel": "41期 (2020/09)",
+   "issueID": "202109100009"
+  },
+  {
+   "docId": "16820568-202009-202109100009-202109100009-97-117",
+   "title": "風險中的希望－風險社會理論的宗教學回應",
+   "authors": [
+    "林子淳(Jason Lam)"
+   ],
+   "volIssue": "41期",
+   "date": "2020 / 09",
+   "pages": "97-117",
+   "fulltext": true,
+   "issueLabel": "41期 (2020/09)",
+   "issueID": "202109100009"
+  },
+  {
+   "docId": "16820568-202003-202009150010-202009150010-1-35",
+   "title": "借用當代新學試論《儀禮》尸祭禮意及人祖感通的可能性",
+   "authors": [
+    "彭美玲(PENG Mei-Ling)"
+   ],
+   "volIssue": "40期",
+   "date": "2020 / 03",
+   "pages": "1-35",
+   "fulltext": true,
+   "issueLabel": "40期 (2020/03)",
+   "issueID": "202009150010"
+  },
+  {
+   "docId": "16820568-202003-202009150010-202009150010-37-70",
+   "title": "Some considerations of common approaches in Daoist exorcism: a comparison between the Shenxiao Jinhuo tianding dafa神霄金火天丁大法and the Shangqing Tianpeng fumo dafa上清天蓬伏魔大法",
+   "authors": [
+    "常志靜(Florian C. Reiter)"
+   ],
+   "volIssue": "40期",
+   "date": "2020 / 03",
+   "pages": "37-70",
+   "fulltext": true,
+   "issueLabel": "40期 (2020/03)",
+   "issueID": "202009150010"
+  },
+  {
+   "docId": "16820568-202003-202009150010-202009150010-71-97",
+   "title": "閩中瑜珈法教官將的來源與特質考論",
+   "authors": [
+    "謝聰輝(HSIEH Tsung-Hui)"
+   ],
+   "volIssue": "40期",
+   "date": "2020 / 03",
+   "pages": "71-97",
+   "fulltext": true,
+   "issueLabel": "40期 (2020/03)",
+   "issueID": "202009150010"
+  },
+  {
+   "docId": "16820568-202003-202009150010-202009150010-99-124",
+   "title": "The Devil's Habits and Exorcism in the Catholic Church: Father Amorth's Account",
+   "authors": [
+    "安吉恩(Emanuele Angiola)"
+   ],
+   "volIssue": "40期",
+   "date": "2020 / 03",
+   "pages": "99-124",
+   "fulltext": true,
+   "issueLabel": "40期 (2020/03)",
+   "issueID": "202009150010"
+  },
+  {
+   "docId": "16820568-202003-202009150010-202009150010-125-171",
+   "title": "Building Churches and Fighting for Religious Toleration - The Creation of the Free Church of Scotland and the Issue of Site-refusal, 1843-1847",
+   "authors": [
+    "蔡育潞(TSAI Yu-Lu)"
+   ],
+   "volIssue": "40期",
+   "date": "2020 / 03",
+   "pages": "125-171",
+   "fulltext": true,
+   "issueLabel": "40期 (2020/03)",
+   "issueID": "202009150010"
+  },
+  {
+   "docId": "16820568-201909-202004070023-202004070023-1-15",
+   "title": "「天主聖三」與「整個受造存有界」神性同化的「結合歷程」",
+   "authors": [
+    "鄭維亮(John Cheng Wai-Leung)"
+   ],
+   "volIssue": "39期",
+   "date": "2019 / 09",
+   "pages": "1-15",
+   "fulltext": true,
+   "issueLabel": "39期 (2019/09)",
+   "issueID": "202004070023"
+  },
+  {
+   "docId": "16820568-201909-202004070023-202004070023-17-35",
+   "title": "古代中國「化生觀」之探討－從《山海經》變形神話到莊子氣化論",
+   "authors": [
+    "沈曉柔(SHEN Hsiao-Jou)"
+   ],
+   "volIssue": "39期",
+   "date": "2019 / 09",
+   "pages": "17-35",
+   "fulltext": true,
+   "issueLabel": "39期 (2019/09)",
+   "issueID": "202004070023"
+  },
+  {
+   "docId": "16820568-201909-202004070023-202004070023-37-55",
+   "title": "《天主教會法典》的十項特色",
+   "authors": [
+    "金毓瑋(Francis KING Yuk-Wai)"
+   ],
+   "volIssue": "39期",
+   "date": "2019 / 09",
+   "pages": "37-55",
+   "fulltext": true,
+   "issueLabel": "39期 (2019/09)",
+   "issueID": "202004070023"
+  },
+  {
+   "docId": "16820568-201909-202004070023-202004070023-57-86",
+   "title": "宋元道教清微派儀式框架與醫療：以清微告斗解厄儀為例",
+   "authors": [
+    "謝世維(HSIEH Shu-wei)"
+   ],
+   "volIssue": "39期",
+   "date": "2019 / 09",
+   "pages": "57-86",
+   "fulltext": true,
+   "issueLabel": "39期 (2019/09)",
+   "issueID": "202004070023"
+  },
+  {
+   "docId": "16820568-201909-202004070023-202004070023-87-133",
+   "title": "《勅水禁壇》科儀的詮釋與想像－以台南善化道壇鍾昂翰道長為主",
+   "authors": [
+    "楊秀娟(Yang Hsiu-Chüan)"
+   ],
+   "volIssue": "39期",
+   "date": "2019 / 09",
+   "pages": "87-133",
+   "fulltext": true,
+   "issueLabel": "39期 (2019/09)",
+   "issueID": "202004070023"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-1-18",
+   "title": "宗教改革500年後的聖經詮釋：從泰澤修士對《天主的啟示教義憲章》的理解和《教會內的聖經詮釋》對呂格爾詮釋理論的挪用探索匯合的曙光",
+   "authors": [
+    "張名揚(CHEUNG Ming-Yeung)"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-19-40",
+   "title": "當代亞洲基督徒合一運動所面對的挑戰：後殖民批判．意識形態的對立．公民社會的崛起",
+   "authors": [
+    "鄭仰恩(CHENG Yang-En)"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "19-40",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-41-66",
+   "title": "前近代至現代的哲學、宗教與意識形態：理學以降中國「絕對真理」的演變與影響",
+   "authors": [
+    "王聖英(WANG Sheng-Ying)"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "41-66",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-67-95",
+   "title": "Rethinking the Issues of Religious Education in Haiti from a Post-Colonial Perspective",
+   "authors": [
+    "Virginie MARC"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "67-95",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-97-111",
+   "title": "中華新士林哲學密契論－以「空」探討內在的超越",
+   "authors": [
+    "鄭凱倫(CHENG Kai-Run)"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "97-111",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201903-202002200008-202002200008-113-130",
+   "title": "萬人緣法會－從香港到越南的華人宗教善業",
+   "authors": [
+    "游子安(YAU Chi-On)"
+   ],
+   "volIssue": "38期",
+   "date": "2019 / 03",
+   "pages": "113-130",
+   "fulltext": true,
+   "issueLabel": "38期 (2019/03)",
+   "issueID": "202002200008"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-i-v",
+   "title": "編者的話",
+   "authors": [
+    "張超然(Chang Chao-Jan)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "i-v",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-1-23",
+   "title": "天主教徒病患從患病、受苦、救贖中發展出對「苦」的超自然理解角度之案例研究",
+   "authors": [
+    "賀玉英(HO Yuk-Ying)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-25-41",
+   "title": "攀登七重山－牟敦自我認識的皈依歷程",
+   "authors": [
+    "黃少梅(HUANG Shao-Mei)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "25-41",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-43-64",
+   "title": "田立克的宗教哲學對基督教神學的理解",
+   "authors": [
+    "李麗娟(LI Li-Chuan)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "43-64",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-65-90",
+   "title": "神異與多貌－以宗教神話觀點論哪吒太子形象",
+   "authors": [
+    "劉韋廷(LIU Wei-Ting)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "65-90",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201809-201907120016-201907120016-91-118",
+   "title": "趙宜真傳記書寫中的捨棄資料",
+   "authors": [
+    "許蔚(XU Wei)"
+   ],
+   "volIssue": "37期",
+   "date": "2018 / 09",
+   "pages": "91-118",
+   "fulltext": true,
+   "issueLabel": "37期 (2018/09)",
+   "issueID": "201907120016"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-i-ii",
+   "title": "Editorial",
+   "authors": [
+    "鮑霖(Paulin Batairwa)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "i-ii",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-1-20",
+   "title": "Martin Luther and the Reformation",
+   "authors": [
+    "Angelo Maffeis"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-21-47",
+   "title": "華人基督徒合一路上的諸種障礙",
+   "authors": [
+    "曾慶豹(CHIN Ken-Pa)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "21-47",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-49-68",
+   "title": "Communion Fellowship: The Challenge of Ecumenism",
+   "authors": [
+    "鮑霖(Paulin Batairwa)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "49-68",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-69-95",
+   "title": "從依納爵《神操》的視角省思《願祢受讚頌》通諭中的生態皈依",
+   "authors": [
+    "吳雯菁(WU Wen-Ching)",
+    "劉奇璋(LIU Chi-Chang)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "69-95",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-97-120",
+   "title": "文化載體與神學信仰的區分：從「前漢語神學」到「漢語神學」（廿世紀後）",
+   "authors": [
+    "戴勁(DAI Jin)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "97-120",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201803-201812270019-201812270019-121-124",
+   "title": "休斯頓．史密士（Huston Smith）著《人的宗教》評介",
+   "authors": [
+    "羅涼萍(LO Liang-Ping)"
+   ],
+   "volIssue": "36期",
+   "date": "2018 / 03",
+   "pages": "121-124",
+   "fulltext": true,
+   "issueLabel": "36期 (2018/03)",
+   "issueID": "201812270019"
+  },
+  {
+   "docId": "16820568-201709-201803300014-201803300014-i-vi",
+   "title": "編者的話",
+   "authors": [
+    "張超然(Chang Chao-Jan)"
+   ],
+   "volIssue": "35期",
+   "date": "2017 / 09",
+   "pages": "i-vi",
+   "fulltext": true,
+   "issueLabel": "35期 (2017/09)",
+   "issueID": "201803300014"
+  },
+  {
+   "docId": "16820568-201709-201803300014-201803300014-1-18",
+   "title": "從基督教角度再思史基納之行為主義理論",
+   "authors": [
+    "唐偉權(Waddle W. K. Tong)"
+   ],
+   "volIssue": "35期",
+   "date": "2017 / 09",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "35期 (2017/09)",
+   "issueID": "201803300014"
+  },
+  {
+   "docId": "16820568-201709-201803300014-201803300014-19-33",
+   "title": "從天主教的觀點探討醫療的「普通方法」與「特殊方法」",
+   "authors": [
+    "陳曉峰(CHEN Xiao-Feng)"
+   ],
+   "volIssue": "35期",
+   "date": "2017 / 09",
+   "pages": "19-33",
+   "fulltext": true,
+   "issueLabel": "35期 (2017/09)",
+   "issueID": "201803300014"
+  },
+  {
+   "docId": "16820568-201709-201803300014-201803300014-35-60",
+   "title": "高一志的辯護：Deus漢譯之争新考",
+   "authors": [
+    "段春生(Peter Duan Chunsheng)"
+   ],
+   "volIssue": "35期",
+   "date": "2017 / 09",
+   "pages": "35-60",
+   "fulltext": true,
+   "issueLabel": "35期 (2017/09)",
+   "issueID": "201803300014"
+  },
+  {
+   "docId": "16820568-201709-201803300014-201803300014-61-88",
+   "title": "鸞堂善書之著造－以省躬社聖化堂《普化群迷》為觀察中心",
+   "authors": [
+    "陳淑萍(CHEN Shu-Ping)"
+   ],
+   "volIssue": "35期",
+   "date": "2017 / 09",
+   "pages": "61-88",
+   "fulltext": true,
+   "issueLabel": "35期 (2017/09)",
+   "issueID": "201803300014"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-1-41",
+   "title": "天主教教宗方濟各《願祢受讚頌》通諭的特色與其對臺灣生態問題的啟發",
+   "authors": [
+    "莊慶信(John B. Chuang)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "1-41",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-43-87",
+   "title": "宗教的生態意義：關於「生態與宗教」領域的方法論反思",
+   "authors": [
+    "鄧元尉(TENG Yuan-Wei)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "43-87",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-89-110",
+   "title": "從柏格森論「不可共量」的觀念談人論",
+   "authors": [
+    "李麗娟(LEE, Li- Chuan)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "89-110",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-111-139",
+   "title": "潛能與限制－朗尼根《洞察》第十五章第四節釋義",
+   "authors": [
+    "關永中(Carlo KWAN Wing-Chung)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "111-139",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-141-175",
+   "title": "存思的內景：切近神聖的身體",
+   "authors": [
+    "程樂松(CHENG Lesong)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "141-175",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-177-204",
+   "title": "卡斯培的聖神－基督論：以《耶穌基督》為中心",
+   "authors": [
+    "陳開華(Chen Kaihua)"
+   ],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "177-204",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201703-201712050009-201712050009-205-206",
+   "title": "「宗教與生態」～莊慶信教授榮退學社研討會側寫",
+   "authors": [],
+   "volIssue": "34期",
+   "date": "2017 / 03",
+   "pages": "205-206",
+   "fulltext": true,
+   "issueLabel": "34期 (2017/03)",
+   "issueID": "201712050009"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-1-19",
+   "title": "台灣宗教研究的當代處境與發展前景",
+   "authors": [
+    "蔡彥仁(TSAI Yen-Jen)"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "1-19",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-21-40",
+   "title": "台灣學校教育中的宗教課程",
+   "authors": [
+    "鮑霖(BATAIRWA K. Paulin)"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "21-40",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-41-70",
+   "title": "元代佛道辯諍探微：以《大元至元辯偽錄》為主之討論",
+   "authors": [
+    "劉韋廷(LIU Wei-Ting)"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "41-70",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-71-98",
+   "title": "同歸而殊塗－王船山義理學對於佛道之詞斥與會通",
+   "authors": [
+    "李瑋皓(LEE Wei-Hao)"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "71-98",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-99-125",
+   "title": "博學多聞，慈悲喜捨，盡孝護戒：中國當代第一比丘尼「隆蓮法師」略傳",
+   "authors": [
+    "黃曉星(Ester Bianchi)",
+    "劉韋廷"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "99-125",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-127-144",
+   "title": "從外推策略看第三千禧年天主教本土化",
+   "authors": [
+    "沈清松(Vincent Shen)"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "127-144",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-145-152",
+   "title": "林國平著《籤占與中國文化社會》評介",
+   "authors": [
+    "蘇慶華",
+    "范正義"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "145-152",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201611-201612220030-201612220030-153-156",
+   "title": "Book Review",
+   "authors": [
+    "HSIEH LE-Chih"
+   ],
+   "volIssue": "33期",
+   "date": "2016 / 11",
+   "pages": "153-156",
+   "fulltext": true,
+   "issueLabel": "33期 (2016/11)",
+   "issueID": "201612220030"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-i-x",
+   "title": "編者的話",
+   "authors": [
+    "張超然(Chao-Jan CHANG)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "i-x",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-1-23",
+   "title": "大德蘭與馬斯洛的超越性自我實現",
+   "authors": [
+    "陳美琴(Mei-Ching Chen)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-25-70",
+   "title": "宗教療癒的「情入」與「理入」",
+   "authors": [
+    "盧蕙馨(Hwei-Syin Lu)",
+    "鄺真泉(Paul C. K. Kwong)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "25-70",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-71-101",
+   "title": "略探西方正念課程師資培訓與認證",
+   "authors": [
+    "溫宗堃(Tzung-Kuen Wen)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "71-101",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-103-162",
+   "title": "保生大帝信仰的起源與發展",
+   "authors": [
+    "莊宏誼(Hung-I CHUANG)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "103-162",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-163-193",
+   "title": "季風吹來的新宗教：探究亞歷山大．得路傳教士對越南的影響",
+   "authors": [
+    "阮氏青河(Nguyễn Thị Thanh Hà)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "163-193",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201603-201605310017-201605310017-195-224",
+   "title": "人的位格、愛與正義：高科技時代的倫理基礎與實踐",
+   "authors": [
+    "沈清松(Vincent Shen)"
+   ],
+   "volIssue": "32期",
+   "date": "2016 / 03",
+   "pages": "195-224",
+   "fulltext": true,
+   "issueLabel": "32期 (2016/03)",
+   "issueID": "201605310017"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-i-ix",
+   "title": "編者的話",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "i-ix",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-1-28",
+   "title": "凝視與聖顯：初探聖賀德佳《當知之道》中關於「創造」的神視描繪",
+   "authors": [
+    "黃渼婷(Sonja Mei-Ting Huang)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "1-28",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-29-73",
+   "title": "西方佛教電影視域下的轉世議題表述：以藏傳佛教紀錄片《祖古》（2009）為例",
+   "authors": [
+    "劉婉俐(Wan-Li Liu)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "29-73",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-75-105",
+   "title": "對立或共構？─《生命樹》與《少年Pi的奇幻漂流》中的恩寵性與救贖性意涵探究",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "75-105",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-107-141",
+   "title": "身體、社會參與和靈修",
+   "authors": [
+    "沈清松(Vincent Shen)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "107-141",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-143-170",
+   "title": "全球史視角下的「聖經接受史」—走向「全球基督教史」與「接受史」的整合",
+   "authors": [
+    "王志希(Zhi-Xi Wang)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "143-170",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201512-201601130011-201601130011-171-199",
+   "title": "活出光亮美麗的城堡",
+   "authors": [
+    "李秀華(Shiow-Hwa Lee)"
+   ],
+   "volIssue": "31期",
+   "date": "2015 / 12",
+   "pages": "171-199",
+   "fulltext": true,
+   "issueLabel": "31期 (2015/12)",
+   "issueID": "201601130011"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-i-v",
+   "title": "編者的話",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "i-v",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-1-23",
+   "title": "地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生態踐行",
+   "authors": [
+    "蔡怡佳(Yi-Jia Tsai)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-25-62",
+   "title": "救度靈界－海邊普化儀式的現象描述",
+   "authors": [
+    "王鏡玲(Ching-Ling Wang)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "25-62",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-63-81",
+   "title": "聖賀德佳．馮賓根（St. Hildegard von Bingen, OSB）《醫療學》中的身體觀點",
+   "authors": [
+    "黃渼婷(Sonja Mei-Ting Huang)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "63-81",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-83-109",
+   "title": "羅馬禮、本地語：談彌撒禮儀音樂本地化在台灣的發展",
+   "authors": [
+    "劉鳳娟(Feng-Chuan Liu)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "83-109",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-111-132",
+   "title": "從宗教教育觀點對「宗教文化創意產業」之省思",
+   "authors": [
+    "李茂榮(Mao-Jung Lee)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "111-132",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201503-201510220016-201510220016-133-198",
+   "title": "天主教會現行法典之立法原則、內容與發展初探",
+   "authors": [
+    "金毓瑋(Yuk-Wai King)"
+   ],
+   "volIssue": "30期",
+   "date": "2015 / 03",
+   "pages": "133-198",
+   "fulltext": true,
+   "issueLabel": "30期 (2015/03)",
+   "issueID": "201510220016"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-i-vi",
+   "title": "編者的話",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "i-vi",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-1-15",
+   "title": "宗教與文化創意產業：新港奉天宮與香藝文化園區",
+   "authors": [
+    "張珣(Hsun Chang)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "1-15",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-17-50",
+   "title": "宗教理性、資本主義理性與人類理性－從韋伯的《基督新教倫理與資本主義精神》出發",
+   "authors": [
+    "卓素絹(Shu-Chuan Cho)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "17-50",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-51-70",
+   "title": "生命．宗教．醫生",
+   "authors": [
+    "蕭宏恩(Hung-En Hsiao)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "51-70",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-71-124",
+   "title": "論聖多瑪斯「性體－位格合一」基督論",
+   "authors": [
+    "陳開華(Kai-Hua Chen)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "71-124",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-125-163",
+   "title": "臺灣天主教與本地文化的相遇（1859-1987）",
+   "authors": [
+    "潘春旭(Chun-Hsu Pan)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "125-163",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201409-201411200008-201411200008-165-191",
+   "title": "慶祝聖女大德蘭誕生500週年：回顧加爾默羅聖母聖衣隱修會在台簡史－並從《靈心城堡》淺談聖女大德蘭的靈修精神",
+   "authors": [
+    "楊安仁(An-Jen Yang)"
+   ],
+   "volIssue": "29期",
+   "date": "2014 / 09",
+   "pages": "165-191",
+   "fulltext": true,
+   "issueLabel": "29期 (2014/09)",
+   "issueID": "201411200008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-i-vi",
+   "title": "編者的話",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "i-vi",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-1-30",
+   "title": "宗教學的思路啟蒙",
+   "authors": [
+    "王鏡玲(Ching-Ling Wang)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "1-30",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-31-59",
+   "title": "體系性宗教詮釋學初探",
+   "authors": [
+    "陸敬忠(Jing-Jong Luh)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "31-59",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-61-86",
+   "title": "近代真宗「精神主義」的信仰詮釋－以曾我量深為例",
+   "authors": [
+    "陳敏齡(Miin-Ling Chen)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "61-86",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-87-149",
+   "title": "密教－最後的佛教",
+   "authors": [
+    "許明銀(Ming-Yin Hsu)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "87-149",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-151-188",
+   "title": "彼其充實不可以已－與莊子懇談美與靈修",
+   "authors": [
+    "關永中(Carlo Wing-Chung Kwan)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "151-188",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-189-220",
+   "title": "童女－以賽亞書、七十士譯本和馬太福音用字研究",
+   "authors": [
+    "王維瑩(Janice Wei-Ying Wang)"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "189-220",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-221-222",
+   "title": "「宗教研究諸人文向度：回應與前瞻～武金正教授榮退紀念」學術研討會　紀念研討會－回顧",
+   "authors": [
+    "蔡怡佳"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "221-222",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-223-228",
+   "title": "武金正神父小傳",
+   "authors": [
+    "輔仁宗教研究編輯室"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "223-228",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201403-201407140008-201407140008-229-233",
+   "title": "武金正教授著作一覽表",
+   "authors": [
+    "輔仁宗教研究編輯室"
+   ],
+   "volIssue": "28期",
+   "date": "2014 / 03",
+   "pages": "229-233",
+   "fulltext": true,
+   "issueLabel": "28期 (2014/03)",
+   "issueID": "201407140008"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-I-VI",
+   "title": "編者的話",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "I-VI",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-1-33",
+   "title": "佛道交融視域下的道教身體觀－以重玄學派為中心",
+   "authors": [
+    "林永勝(Yung-Shen Lin)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "1-33",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-35-61",
+   "title": "默觀道之美－「太極聖三論」與「聖三古琴論」的對話",
+   "authors": [
+    "陳德光(Joseph Tak-Kwong Chan)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "35-61",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-63-91",
+   "title": "《道德經》的傳授、誦讀與道教法位階次",
+   "authors": [
+    "張超然(Chao-Jan Chang)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "63-91",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-93-125",
+   "title": "珍貴與神聖的身體：藏傳佛教「道次第」與身體觀",
+   "authors": [
+    "劉婉俐(Wan-Li Liu)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "93-125",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-127-183",
+   "title": "愛與情傷與美的昇華－與聖十字若望懇談詩心",
+   "authors": [
+    "關永中(Carlo Wing-Chung Kwan)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "127-183",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-185-217",
+   "title": "天主教的生態倫理與生態靈修",
+   "authors": [
+    "莊慶信(John B. Chuang)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "185-217",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201309-201311190033-201311190033-219-247",
+   "title": "從「梅瑟舉蛇」的敘事論宗教療癒的心理向度",
+   "authors": [
+    "王維瑩(Janice Wei-Ying Wang)"
+   ],
+   "volIssue": "27期",
+   "date": "2013 / 09",
+   "pages": "219-247",
+   "fulltext": true,
+   "issueLabel": "27期 (2013/09)",
+   "issueID": "201311190033"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-1-23",
+   "title": "卡爾．拉內（Karl Rahner）與若望保祿二世（John Paul II）的身體神學",
+   "authors": [
+    "武金正(Kim-Chinh Vu)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-25-61",
+   "title": "「肉身空間」的顯現—淡水龍山寺普渡祭儀初探",
+   "authors": [
+    "王鏡玲(Ching-Ling Wang)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "25-61",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-63-89",
+   "title": "教宗若望保祿二世思想中的女性身體觀和移民觀—對台灣外勞家庭女看護工個案的省思",
+   "authors": [
+    "魏嘉華(Chia-Hua Wei)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "63-89",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-91-119",
+   "title": "從佛教反思基督宗教上帝觀：取道保羅．蒂利希的「終極關切」",
+   "authors": [
+    "賴品超(Pan-Chiu Lai)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "91-119",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-121-155",
+   "title": "大衛．特雷西的宗教交談理論",
+   "authors": [
+    "黃懷秋(Teresa Yai-Chow Wong)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "121-155",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-157-177",
+   "title": "分配正義與宗教捐獻—從分配正義觀點來反省臺灣宗教捐獻現象",
+   "authors": [
+    "蔡維民(Wei-Min Tsai)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "157-177",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201303-201304150016-201304150016-179-223",
+   "title": "臺灣註生娘娘信仰之研究",
+   "authors": [
+    "鄭素春(Su-Chun Cheng)"
+   ],
+   "volIssue": "26期",
+   "date": "2013 / 03",
+   "pages": "179-223",
+   "fulltext": true,
+   "issueLabel": "26期 (2013/03)",
+   "issueID": "201304150016"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-1-31",
+   "title": "魏晉南北朝佛教講經儀軌制度研究",
+   "authors": [
+    "張雪松(Xue-Song Zhang)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-33-49",
+   "title": "姚□著《三教不齊論》考",
+   "authors": [
+    "張文良(Wen-Liang Zhang)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "33-49",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-51-77",
+   "title": "抵抗與希望：特雷西思想中的解放神學",
+   "authors": [
+    "李茂榮(Mao-Jung Lee)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "51-77",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-79-135",
+   "title": "形上學的定義：郎尼根《洞察》第十四章第二節釋義",
+   "authors": [
+    "關永中(Carlo Wing-Chung Kwan)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "79-135",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-137-168",
+   "title": "全真道祖師王重陽的真性思想與儒、佛會通",
+   "authors": [
+    "鄭素春(Su-Chun Cheng)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "137-168",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-169-194",
+   "title": "來自死者的殃殺：中古天師道喪葬儀式中的驅邪對象",
+   "authors": [
+    "張超然(Chao-Jan Chang)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "169-194",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-195-227",
+   "title": "動畫《風之谷》的敘事分析與其宗教議題的處理",
+   "authors": [
+    "陳子仁(Tzu-Ren Chen)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "195-227",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201209-201211090030-201211090030-229-251",
+   "title": "瑜伽的養生觀及其現代之發展",
+   "authors": [
+    "羅涼萍(Liang-Ping Lo)"
+   ],
+   "volIssue": "25期",
+   "date": "2012 / 09",
+   "pages": "229-251",
+   "fulltext": true,
+   "issueLabel": "25期 (2012/09)",
+   "issueID": "201211090030"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-8-26",
+   "title": "不是後補，而是尊貴的賓客：身心障礙者與耶穌的會遇",
+   "authors": [
+    "龔立人(Lap-Yan Kung)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "1-19",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-27-48",
+   "title": "「吾即吾身」：從莫特曼—溫德的身體神學談障礙處境的體知與啟悟",
+   "authors": [
+    "蔡怡佳(Yi-Jia Tsai)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "21-42",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-49-78",
+   "title": "《洞玄靈寶太上真人問疾經》的化解身心障礙之道",
+   "authors": [
+    "鄭志明(Chi-Ming Cheng)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "43-72",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-79-108",
+   "title": "米滂《吉祥滿願‧幼保儀軌》研究",
+   "authors": [
+    "林純瑜(Shen-Yu Lin)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "73-102",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-109-133",
+   "title": "南朝民眾的佛教地獄信仰研究",
+   "authors": [
+    "張雪松(Xue-Song Zhang)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "103-127",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-134-169",
+   "title": "伊斯蘭蘇非教團、新疆依禪與中國門宦的傳承關係",
+   "authors": [
+    "趙秋蒂(Chiu-Ti Chao)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "129-164",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-170-202",
+   "title": "全真道士丘處機的生命觀與宗教實踐",
+   "authors": [
+    "鄭素春(Su-Chun Cheng)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "165-197",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201203-201204060018-201204060018-203-243",
+   "title": "從拿香到信教：臺灣天主教信徒的宗教身分建構",
+   "authors": [
+    "潘春旭(Chun-Hsu Pan)"
+   ],
+   "volIssue": "24期",
+   "date": "2012 / 03",
+   "pages": "199-239",
+   "fulltext": true,
+   "issueLabel": "24期 (2012/03)",
+   "issueID": "201204060018"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-1-16",
+   "title": "今日社會危機和守望相助的團結－對教宗《在真理中實踐愛德》通諭之探究",
+   "authors": [
+    "武金正(Kim-Chinh S. J. Vu)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "1-16",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-17-40",
+   "title": "從基督教「在」中國到基督教「與」中國－林治平與中國教會史之研究",
+   "authors": [
+    "曾慶豹(Ken-Pa Chin)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "17-40",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-41-68",
+   "title": "大衛•特雷西的經典理論",
+   "authors": [
+    "黃懷秋(Teresa Yai-Chow Wong)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "41-68",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-69-92",
+   "title": "親鸞的聖典觀及現代理解的課題",
+   "authors": [
+    "陳敏齡(Miin-Ling Chen)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "69-92",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-93-108",
+   "title": "閱讀交流的主體性：論主體在宗教敘事與社會實踐之間的辯證塑型",
+   "authors": [
+    "鄭印君(Yin-Chun Cheng)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "93-108",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-109-133",
+   "title": "依納爵靈修精神中的日常修行默觀與行動的整合",
+   "authors": [
+    "胡淑琴(Shu-Chin Hu)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "109-133",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-135-184",
+   "title": "當代臺灣新興宗教領袖的「社會實踐觀」－以社會苦難與社會責任爲例",
+   "authors": [
+    "莊政憲(Cheng-Hsien Chuang)"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "135-184",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201109-201110120011-201110120011-185-213",
+   "title": "2010年台灣地區宗教類期刊篇目索引",
+   "authors": [
+    "王子欣",
+    "輔仁宗教研究編輯室"
+   ],
+   "volIssue": "23期",
+   "date": "2011 / 09",
+   "pages": "185-213",
+   "fulltext": true,
+   "issueLabel": "23期 (2011/09)",
+   "issueID": "201110120011"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-1-28",
+   "title": "《老子河上公章句》的成書時代與基本思想初探",
+   "authors": [
+    "卿希泰(Xi-Tai Qing)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "1-28",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-29-62",
+   "title": "道教靈寶經派度亡經典的形成：從《元始五老赤書玉篇真文天書經》到《洞玄無量度人上品妙經》",
+   "authors": [
+    "張超然(Chao-Jan Chang)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "29-62",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-63-108",
+   "title": "客觀性之義蘊－郎尼根《洞察》第十三章釋義",
+   "authors": [
+    "關永中(Carlo Wing-Chung Kwan)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "63-108",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-109-138",
+   "title": "全真道士尹志平(1169-1251)的宗教實踐",
+   "authors": [
+    "鄭素春(Su-Chun Cheng)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "109-138",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-139-180",
+   "title": "梵天、梵書與梵音：道教靈寶經典中的「梵」觀念",
+   "authors": [
+    "謝世維(Shu-Wei Hsieh)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "139-180",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201103-201104010024-201104010024-181-203",
+   "title": "試論《玄天上帝啓聖錄》之撰成年代及其影響（下）",
+   "authors": [
+    "蕭登福(Teng-Fu Hsiao)"
+   ],
+   "volIssue": "22期",
+   "date": "2011 / 03",
+   "pages": "181-203",
+   "fulltext": true,
+   "issueLabel": "22期 (2011/03)",
+   "issueID": "201104010024"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-1-19",
+   "title": "法海堤防－中國大陸近年傳戒活動的考察",
+   "authors": [
+    "溫金玉(Jin-Yu Wen)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "1-19",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-21-51",
+   "title": "立志爲帝王師－寇謙之的宗教理想與實踐",
+   "authors": [
+    "莊宏誼(Hung-I Chuang)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "21-51",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-53-84",
+   "title": "二十世紀初期香港基督教志願團體與反對蓄婢運動",
+   "authors": [
+    "楊國強(Gustav K. K. Yeung)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "53-84",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-85-105",
+   "title": "依里亞德的儀式理論－兼論其與基督信仰的異與同",
+   "authors": [
+    "黃懷秋(Yai-Chow Wong Teresa)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "85-105",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-107-128",
+   "title": "試論《玄天上帝啟聖錄》之撰成年代及其影響（上）",
+   "authors": [
+    "蕭登福(Teng-Fu Hsiao)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "107-128",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-129-155",
+   "title": "初探輔仁學派使命－從基督宗教終極歷程切入",
+   "authors": [
+    "鄭維亮(John Wai-Leung Cheng)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "129-155",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-157-180",
+   "title": "布特曼的〈真理與確知〉在神學方法論的應用",
+   "authors": [
+    "李麗娟(Christine Lee)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "157-180",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201009-201010140006-201010140006-181-203",
+   "title": "民國佛教懸案－諾那活佛死亡之謎初探",
+   "authors": [
+    "黃英傑(Ying-Chieh Huang)"
+   ],
+   "volIssue": "21期",
+   "date": "2010 / 09",
+   "pages": "181-203",
+   "fulltext": true,
+   "issueLabel": "21期 (2010/09)",
+   "issueID": "201010140006"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-1-25",
+   "title": "與台灣“端午節慶”連結的聖餐禮俗－一個長老教會本土觀點",
+   "authors": [
+    "王崇堯(Chong-Gyiau Wong)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "1-25",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-27-66",
+   "title": "早期道教喪葬儀式的形成",
+   "authors": [
+    "張超然(Chao-Jan Chang)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "27-66",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-67-95",
+   "title": "藏傳佛教對生命禮俗的看法－以天葬爲例",
+   "authors": [
+    "黃英傑(Ying-Chieh Huang)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "67-95",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-95-126",
+   "title": "熾愛與明慧－聖十字若望與聖女大德蘭對默觀的共同體認（下）",
+   "authors": [
+    "關永中(Carlo Kwan Wing Chung)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "95-126",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-127-177",
+   "title": "台灣宗教行政研究的回顧",
+   "authors": [
+    "鄭志明(Chih-Ming Cheng)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "127-177",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-179-203",
+   "title": "《論教會在現代世界牧職憲章》與梵二精神－兼論梵二精神對天主教學術研究的啓示",
+   "authors": [
+    "王濤(Tao Wang)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "179-203",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-201003-201004230002-201004230002-205-231",
+   "title": "教宗本篤十六世的宗教交談",
+   "authors": [
+    "宮高德(John B. Kung)"
+   ],
+   "volIssue": "20期",
+   "date": "2010 / 03",
+   "pages": "205-231",
+   "fulltext": true,
+   "issueLabel": "20期 (2010/03)",
+   "issueID": "201004230002"
+  },
+  {
+   "docId": "16820568-200909-x-19-i-i-a",
+   "title": "編者的話（宗教經驗與倫理）",
+   "authors": [
+    "莊慶信(John B. Chuang)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "i-i",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-1-22-a",
+   "title": "出世心、入世情－艾克哈默觀思想與基督宗教思想傳統",
+   "authors": [
+    "陳德光(Joseph Chan Tak Kwong)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "1-22",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-23-51-a",
+   "title": "熾愛與明慧～聖十字若望與聖女大德蘭對默觀的共同體認（上）",
+   "authors": [
+    "關永中(Carlo Kwan Wing Chung)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "23-51",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-53-86-a",
+   "title": "北大學生對基督宗教的態度：初步調查與分析",
+   "authors": [
+    "孫尚揚(Shang-Yang Sun)",
+    "韓琪(Qi Han)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "53-86",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-87-105-a",
+   "title": "對話學與宗教研究：從巴赫汀的對話主義談起",
+   "authors": [
+    "黃懷秋(Teresa Wong Yai Chow)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "87-105",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-107-126-a",
+   "title": "唐代道士吳筠的仙道思想",
+   "authors": [
+    "莊宏誼(Hung-I Chuang)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "107-126",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-127-150-a",
+   "title": "明清以來中國佛教法緣宗族探析",
+   "authors": [
+    "張雪松(Xue-Song Zhang)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "127-150",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-151-166-a",
+   "title": "文本互涉與聖經詮釋",
+   "authors": [
+    "李麗娟(Christine Lee)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "151-166",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200909-x-19-167-200-a",
+   "title": "上師生命的聖與俗－諾那活佛轉世身份初探",
+   "authors": [
+    "黃英傑(Ying-Chieh Huang)"
+   ],
+   "volIssue": "19期",
+   "date": "2009 / 09",
+   "pages": "167-200",
+   "fulltext": true,
+   "issueLabel": "19期 (2009/09)",
+   "issueID": "89114"
+  },
+  {
+   "docId": "16820568-200903-x-18-i-v-a",
+   "title": "编者的话",
+   "authors": [
+    "荘慶信(John B. Chuang)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "i-v",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-1-18-a",
+   "title": "生命的來源與歸宿－聖經的根本啓示",
+   "authors": [
+    "房志榮(Chih-Jung Fang)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-19-39-a",
+   "title": "生命觀和解放人本論",
+   "authors": [
+    "武金正(Joseph Vu Kim Chinh S. J.)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "19-39",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-41-73-a",
+   "title": "佛教、基督宗教與科學：斯特裏特(Burnett Hillman Streeter)與中西文化交流",
+   "authors": [
+    "賴品超(Pan-Chiu Lai)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "41-73",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-75-115-a",
+   "title": "道教南宗煉養寶典－《悟真篇》的詮釋與應用",
+   "authors": [
+    "鄭素春(Su-Chun Cheng)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "75-115",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-117-148-a",
+   "title": "從開齋節觀察臨夏穆斯林社會的宗派多元化現象",
+   "authors": [
+    "趙秋蒂(Chiu-Ti Chao)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "117-148",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200903-x-18-149-182-a",
+   "title": "先秦儒家殯葬倫理思想",
+   "authors": [
+    "李日斌(Jih-Pin Lee)"
+   ],
+   "volIssue": "18期",
+   "date": "2009 / 03",
+   "pages": "149-182",
+   "fulltext": true,
+   "issueLabel": "18期 (2009/03)",
+   "issueID": "82475"
+  },
+  {
+   "docId": "16820568-200806-x-17-i-i-a",
+   "title": "編者的話",
+   "authors": [
+    "陳德光(Tak-Kwong Chan)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "i-i",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-1-30-a",
+   "title": "全球化和海德格的現象學",
+   "authors": [
+    "武金正(Joseph VU Kim Chinh SJ)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "1-30",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-31-68-a",
+   "title": "基督宗教倫理對全球化趨勢的回應",
+   "authors": [
+    "莊慶信(John B. Chuang)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "31-68",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-69-108-a",
+   "title": "論台灣民間信仰本土化－禮斗儀式爲焦點",
+   "authors": [
+    "張家麟(Chia-Lin Chang)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "69-108",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-109-139-a",
+   "title": "默觀在神祕修行前提下所蘊含的煉淨與結合～聖十字若望的提示",
+   "authors": [
+    "關永中(Wing-Chung Kwan)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "109-139",
+   "fulltext": false,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-141-166-a",
+   "title": "從否定神學的理論看艾克哈特的神學",
+   "authors": [
+    "李麗娟(Christine Lee)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "141-166",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-167-204-a",
+   "title": "經驗與教法：《太平經》“內學”之研究",
+   "authors": [
+    "張超然(Chao-Jan Chang)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "167-204",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-205-237-a",
+   "title": "公共宗教與社會運動：以香港天主教的社群組織活動作為研究個案",
+   "authors": [
+    "羅永亮(Wing-Leung Law)"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "205-237",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200806-x-17-239-243-a",
+   "title": "書評：《內心樂園：愛的三部曲》",
+   "authors": [
+    "郭晏如"
+   ],
+   "volIssue": "17期",
+   "date": "2008 / 06",
+   "pages": "239-243",
+   "fulltext": true,
+   "issueLabel": "17期 (2008/06)",
+   "issueID": "72429"
+  },
+  {
+   "docId": "16820568-200712-x-16-i-v-a",
+   "title": "編者的話（“密契經驗：人－神的溝通”）",
+   "authors": [
+    "陳德光(Joseph Tak-Kwong Chan)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "i-v",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-1-18-a",
+   "title": "神祕意識的動態結構",
+   "authors": [
+    "Bernard McGinn",
+    "鄭維亮"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-19-39-a",
+   "title": "生命教育與生命的誕生－艾克哈大師靈心神學的對話",
+   "authors": [
+    "陳德光(Joseph Tak-Kwong Chan)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "19-39",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-41-63-a",
+   "title": "馬里旦論密契思想",
+   "authors": [
+    "高淩霞(Marian Kao OSU)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "41-63",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-65-85-a",
+   "title": "真言密教之密契經驗",
+   "authors": [
+    "釋惟勵(Wei-Li Śakya)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "65-85",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-87-108-a",
+   "title": "書符與靈驗：天師門下的密契經驗",
+   "authors": [
+    "張智雄(Zhi-Xiong Zhang)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "87-108",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-109-130-a",
+   "title": "道教在現代社會的轉變：以香港嗇色園作爲研究個案",
+   "authors": [
+    "陳慎慶(Shun-Hing Chan)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "109-130",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200712-x-16-131-135-a",
+   "title": "書評：馬基《基督教與創造：基督教信仰的本質及其在諸宗教間的未來，一個系統神學》",
+   "authors": [
+    "王濤(Tao Wang)"
+   ],
+   "volIssue": "16期",
+   "date": "2007 / 12",
+   "pages": "131-135",
+   "fulltext": true,
+   "issueLabel": "16期 (2007/12)",
+   "issueID": "64367"
+  },
+  {
+   "docId": "16820568-200706-x-15-1-12-a",
+   "title": "神秘主義有未來嗎？",
+   "authors": [
+    "威廉•莊士頓(William Johnston S.J.)",
+    "張譯心"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "1-12",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-13-36-a",
+   "title": "魯道夫‧奥托《神國與人子》一書的基督論及其與《論“神聖”》的關係",
+   "authors": [
+    "黃懷秋(Teresa Wong Yai Chow)"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "13-36",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-37-74-a",
+   "title": "保羅•尼特與宋泉盛之多元宗教神學的批判性比較",
+   "authors": [
+    "歐力仁(Li-Jen Ou)"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "37-74",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-75-126-a",
+   "title": "西方人本主義倫理與基督教思想",
+   "authors": [
+    "羅秉祥(Ping-Cheung Lo)"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "75-126",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-127-144-a",
+   "title": "宗教與公共生活：公共神學引論",
+   "authors": [
+    "曾慶豹(Prof. Chin Ken Pa)"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "127-144",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-145-170-a",
+   "title": "清代一炷香教的跪香療法",
+   "authors": [
+    "邱麗娟(Li-Chuan Chiu)"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "145-170",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-171-175-a",
+   "title": "書評：《宇宙－神－人共融的經驗－正在湧現的宗教意識》",
+   "authors": [
+    "曾淑媛"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "171-175",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  },
+  {
+   "docId": "16820568-200706-x-15-177-220-a",
+   "title": "2006年台灣地區宗教期刊篇目索引",
+   "authors": [
+    "林珊如"
+   ],
+   "volIssue": "15期",
+   "date": "2007 / 06",
+   "pages": "177-220",
+   "fulltext": true,
+   "issueLabel": "15期 (2007/06)",
+   "issueID": "61962"
+  }
+ ]
+}

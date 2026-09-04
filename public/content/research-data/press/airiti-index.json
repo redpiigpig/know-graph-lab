@@ -10,6 +10,96 @@
   "end": "2026"
  },
  {
+  "slug": "new-messenger",
+  "pid": "a0000496",
+  "name": "新使者",
+  "issues": 209,
+  "articles": 4970,
+  "fulltext": 4970,
+  "start": "1990",
+  "end": "2026"
+ },
+ {
+  "slug": "wilderness",
+  "pid": "P20250214002",
+  "name": "曠野",
+  "issues": 9,
+  "articles": 59,
+  "fulltext": 59,
+  "start": "2009",
+  "end": "2021"
+ },
+ {
+  "slug": "theology-church",
+  "pid": "P20190115001",
+  "name": "神學與教會",
+  "issues": 22,
+  "articles": 215,
+  "fulltext": 215,
+  "start": "2011",
+  "end": "2025"
+ },
+ {
+  "slug": "taiwan-theology",
+  "pid": "P20151015001",
+  "name": "台灣神學論刊",
+  "issues": 52,
+  "articles": 489,
+  "fulltext": 489,
+  "start": "1979",
+  "end": "2025"
+ },
+ {
+  "slug": "ces-journal",
+  "pid": "19986505",
+  "name": "華神期刊",
+  "issues": 16,
+  "articles": 139,
+  "fulltext": 139,
+  "start": "2008",
+  "end": "2025"
+ },
+ {
+  "slug": "sino-christian",
+  "pid": "19902670",
+  "name": "漢語基督教學術論評",
+  "issues": 39,
+  "articles": 398,
+  "fulltext": 377,
+  "start": "2006",
+  "end": "2025"
+ },
+ {
+  "slug": "logos-pneuma",
+  "pid": "P20170411002",
+  "name": "道風：基督教文化評論",
+  "issues": 55,
+  "articles": 767,
+  "fulltext": 767,
+  "start": "2000",
+  "end": "2026"
+ },
+ {
+  "slug": "jiandao",
+  "pid": "P20220215001",
+  "name": "建道學刊",
+  "issues": 66,
+  "articles": 647,
+  "fulltext": 642,
+  "start": "1994",
+  "end": "2026"
+ },
+ {
+  "slug": "collectanea",
+  "pid": "P20230411002",
+  "name": "神學論集",
+  "issues": 76,
+  "articles": 650,
+  "fulltext": 650,
+  "start": "2005",
+  "end": "2026"
+ },
+ {
   "slug": "dao-magazine",
   "pid": "a0000008",
   "name": "道雜誌",
@@ -18,5 +108,185 @@
   "fulltext": 123,
   "start": "2001",
   "end": "2005"
+ },
+ {
+  "slug": "baptist-annual",
+  "pid": "P20161102001",
+  "name": "浸神學刊",
+  "issues": 17,
+  "articles": 90,
+  "fulltext": 90,
+  "start": "2010",
+  "end": "2025"
+ },
+ {
+  "slug": "chbs-journal",
+  "pid": "P20160922003",
+  "name": "中華佛學學報",
+  "issues": 13,
+  "articles": 67,
+  "fulltext": 67,
+  "start": "2014",
+  "end": "2026"
+ },
+ {
+  "slug": "chbs-journal-old",
+  "pid": "P20160922002",
+  "name": "中華佛學學報（舊刊名）",
+  "issues": 27,
+  "articles": 374,
+  "fulltext": 374,
+  "start": "1987",
+  "end": "2013"
+ },
+ {
+  "slug": "chbs-studies",
+  "pid": "P20160922001",
+  "name": "中華佛學研究",
+  "issues": 26,
+  "articles": 200,
+  "fulltext": 200,
+  "start": "1997",
+  "end": "2026"
+ },
+ {
+  "slug": "ddbj",
+  "pid": "P20190125001",
+  "name": "法鼓佛學學報",
+  "issues": 38,
+  "articles": 152,
+  "fulltext": 152,
+  "start": "2007",
+  "end": "2026"
+ },
+ {
+  "slug": "ntu-buddhist",
+  "pid": "10271112",
+  "name": "臺大佛學研究",
+  "issues": 36,
+  "articles": 131,
+  "fulltext": 131,
+  "start": "2007",
+  "end": "2025"
+ },
+ {
+  "slug": "ntu-buddhist-old",
+  "pid": "P20191030002",
+  "name": "佛學研究中心學報",
+  "issues": 13,
+  "articles": 121,
+  "fulltext": 120,
+  "start": "1996",
+  "end": "2007"
+ },
+ {
+  "slug": "fgu-journal",
+  "pid": "P20181205001",
+  "name": "佛光學報",
+  "issues": 24,
+  "articles": 158,
+  "fulltext": 146,
+  "start": "2015",
+  "end": "2026"
+ },
+ {
+  "slug": "hcu-buddhist",
+  "pid": "18133649",
+  "name": "玄奘佛學研究",
+  "issues": 45,
+  "articles": 291,
+  "fulltext": 291,
+  "start": "2004",
+  "end": "2026"
+ },
+ {
+  "slug": "dharma-seals",
+  "pid": "22241299",
+  "name": "法印學報",
+  "issues": 16,
+  "articles": 127,
+  "fulltext": 127,
+  "start": "2011",
+  "end": "2025"
+ },
+ {
+  "slug": "hongshi",
+  "pid": "P20121213001",
+  "name": "弘誓雙月刊",
+  "issues": 199,
+  "articles": 2226,
+  "fulltext": 2226,
+  "start": "1993",
+  "end": "2026"
+ },
+ {
+  "slug": "huayen",
+  "pid": "P20160706001",
+  "name": "華嚴學報",
+  "issues": 15,
+  "articles": 91,
+  "fulltext": 60,
+  "start": "2011",
+  "end": "2026"
+ },
+ {
+  "slug": "humanistic-buddhism",
+  "pid": "P20180307006",
+  "name": "人間佛教研究",
+  "issues": 12,
+  "articles": 107,
+  "fulltext": 107,
+  "start": "2011",
+  "end": "2024"
+ },
+ {
+  "slug": "religious-philosophy",
+  "pid": "10277730",
+  "name": "宗教哲學",
+  "issues": 115,
+  "articles": 1231,
+  "fulltext": 1231,
+  "start": "1995",
+  "end": "2026"
+ },
+ {
+  "slug": "fujen-religious",
+  "pid": "16820568",
+  "name": "輔仁宗教研究",
+  "issues": 33,
+  "articles": 228,
+  "fulltext": 227,
+  "start": "2007",
+  "end": "2023"
+ },
+ {
+  "slug": "new-century",
+  "pid": "16843738",
+  "name": "新世紀宗教研究",
+  "issues": 71,
+  "articles": 422,
+  "fulltext": 388,
+  "start": "2002",
+  "end": "2021"
+ },
+ {
+  "slug": "taiwan-religion",
+  "pid": "a0000594",
+  "name": "臺灣宗教研究",
+  "issues": 49,
+  "articles": 246,
+  "fulltext": 226,
+  "start": "2000",
+  "end": "2026"
+ },
+ {
+  "slug": "chinese-religions",
+  "pid": "P20170630002",
+  "name": "華人宗教研究",
+  "issues": 28,
+  "articles": 143,
+  "fulltext": 132,
+  "start": "2013",
+  "end": "2026"
  }
 ]
