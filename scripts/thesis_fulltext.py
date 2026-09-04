@@ -65,6 +65,17 @@ MARK = chr(10) + "__CURL_FINAL__"
 #    政大 handle 會 302 到 ah.lib.nccu.edu.tw，PDF 在 /bitstream/（不是 /bitstream2/）
 # 🚨 台大等校即使有 PDF 連結，詳目頁可能寫「全文授權：有償授權　未授權公開取用」，
 #    那種一律跳過不抓。
+# 🚨 **其餘各校不要再花時間找典藏網址了——卡住的不是網址，是授權。**
+#    2026-09-04 實測：
+#      佛光 cloud.ncl.edu.tw/fgu/ 其實就是 NDLTD 本身（國圖代管的分站），
+#        同一套引擎、同一組授權閘，走它一本都不會多拿到。
+#      佛光另有獨立的 DSpace（fguir.fgu.edu.tw:8080，13,446 筆、39% 有全文），
+#        16 本裡嚴格比對得到 6 本，但那 6 本的 bitstream **全是 index.html 佔位檔**，
+#        不是 PDF——那個典藏根本不放學位論文全文，只回連 NDLTD。中國文化大學同樣。
+#      慈濟／真理／中山／東海的 /simple-search 一律 404（不是 DSpace）。
+#      臺灣機構典藏 TAIR（tair.org.tw）還在線上但聚合索引是死的，搜尋恆回 0 筆。
+#    會成功的那四間（南華／政大／臺大／中央）是**自己真的把 PDF 放在校內典藏**，
+#    這是少數而不是通例。
 REPOS = {
     "南華大學":     {"base": "https://nhuir.nhu.edu.tw",     "search": "/simple-search?query="},
     # 🚨 政大 2026 已換新系統：舊的 /simple-search 回 200 但永遠 0 筆，
