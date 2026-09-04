@@ -99,19 +99,36 @@ def build_name_map() -> dict[str, str]:
             break
         off += 1000
     exact: dict[str, str] = {}
-    # 🚨 有生卒／世紀／身分的人先佔鍵。詞庫裡有一些只有名字的殘筆
-    # （如 "Ambrose (Origen's patron)"），它們的括號裸名會蓋掉資料完整的正主。
-    # setdefault 是先到先得，所以順序就是正確性。
-    rows = sorted(rows, key=lambda x: (not (x.get('century') or x.get('role')),))
+    # 先建完整名字的鍵。
     for x in rows:
         for key in ('name_english', 'name_latin_std'):
             v = (x.get(key) or '').strip()
-            if not v:
+            if v:
+                exact.setdefault(v.lower(), x['name_recommended'])
+
+    # 🚨 再處理「括號裸名」，而且只在它不含糊時才建。
+    # 詞庫裡有些只有名字的殘筆（如 "Ambrose (Origen's patron)"），剝掉括號後的
+    # 裸名 "Ambrose" 會被當成一個確定的鍵，蓋掉真正的 "Ambrose of Milan" ——
+    # 2026-09-04 因此有 83 列把米蘭的安波羅修的話掛到俄利根的贊助者名下。
+    # 判準：裸名如果同時是別人完整名字的開頭（Ambrose ⊂ Ambrose of Milan），
+    # 它就是含糊的，不建鍵；交給 resolve_father 的前綴比對去判，那裡遇到多個
+    # 候選會回 unresolved，再由 ALIASES 決定本語料的慣例。
+    full_lower = set(exact)
+    bare_candidates: dict[str, set[str]] = {}
+    for x in rows:
+        for key in ('name_english', 'name_latin_std'):
+            v = (x.get(key) or '').strip()
+            if not v or '(' not in v:
                 continue
-            exact.setdefault(v.lower(), x['name_recommended'])
-            bare = re.sub(r'\s*\(.*?\)', '', v).strip()
+            bare = re.sub(r'\s*\(.*?\)', '', v).strip().lower()
             if bare:
-                exact.setdefault(bare.lower(), x['name_recommended'])
+                bare_candidates.setdefault(bare, set()).add(x['name_recommended'])
+    for bare, picks in bare_candidates.items():
+        if bare in full_lower or len(picks) > 1:
+            continue                      # 已經是別人的完整名，或自己就對到多人
+        if any(f.startswith(bare + ' ') for f in full_lower):
+            continue                      # 是別人完整名字的開頭 → 含糊，不建
+        exact.setdefault(bare, picks.pop())
     return exact
 
 
@@ -440,6 +457,11 @@ def upload(ckpt: Path, source_vol: str = SOURCE_VOL) -> int:
     from accs_epub_retranslate_dirty import is_dirty
 
     rows, skipped = [], 0
+    # 🚨 署名在上傳當下重新查一次詞庫，不要沿用 checkpoint 存的 father_zh。
+    #    checkpoint 是翻譯當時的快照：詞庫後來修好了也傳不進資料庫，而且長時間
+    #    執行的重譯工作會把啟動時讀進記憶體的舊值整檔寫回（lost update）——
+    #    2026-09-04 的安波羅修誤植就是這樣在修好之後又被寫回來 58 列。
+    exact = build_name_map()
     for ln in ckpt.open(encoding='utf-8'):
         try:
             d = json.loads(ln)
@@ -447,6 +469,10 @@ def upload(ckpt: Path, source_vol: str = SOURCE_VOL) -> int:
             continue
         if not (d.get('body_zh') or '').strip():
             continue
+        if (d.get('father') or '').strip():
+            zh, how = resolve_father(d['father'], exact)
+            if how != 'unresolved' and zh:
+                d['father_zh'] = zh
         if is_dirty(d['body_zh']):
             skipped += 1
             continue
