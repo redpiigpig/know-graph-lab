@@ -226,6 +226,147 @@ PAPER2 = dict(
          '答：甲 24 顆、乙 36 顆、丙 24 顆。'),
     ])
 
+# 卷三是完整模擬：照曙光「數理科」一節 70 分鐘、中間 09:15 換科的實況，
+# 數學 16 題、自然 16 題併成一份，全部選擇題、不出非選。
+PAPER3 = dict(
+    no='三', name='數理科完整模擬（數學＋自然）',
+    scope='數學：小五小六全範圍　自然：植物‧水溶液‧力與簡單機械‧電與磁‧'
+          '天文‧天氣‧熱‧聲音‧生態‧燃燒‧水的三態',
+    math=[
+        ('計算（48 － 12）÷ 4 ＋ 7 × 3 ＝ ？',
+         ['30', '39', '16', '66'], 0,
+         '先算括號：48 － 12 ＝ 36；36 ÷ 4 ＝ 9；7 × 3 ＝ 21；9 ＋ 21 ＝ 30。'),
+        ('甲鐘每 6 分鐘響一次、乙鐘每 8 分鐘響一次。兩鐘同時響過之後，'
+         '至少再過幾分鐘會再一次同時響？',
+         ['14 分鐘', '24 分鐘', '48 分鐘', '2 分鐘'], 1,
+         '求最小公倍數。6 ＝ 2×3，8 ＝ 2×2×2，最小公倍數 ＝ 2×2×2×3 ＝ 24 分鐘。'),
+        ('計算 2/3 ＋ 1/6 × 3 ＝ ？',
+         ['1又1/6', '5/6', '2又1/2', '1/2'], 0,
+         '先乘後加：1/6 × 3 ＝ 3/6 ＝ 1/2。2/3 ＋ 1/2 ＝ 4/6 ＋ 3/6 ＝ 7/6 ＝ 1又1/6。'),
+        ('0.75 化成最簡分數是多少？',
+         ['3/4', '7/5', '75/10', '15/2'], 0,
+         '0.75 ＝ 75/100，分子分母同除以 25 ＝ 3/4。'),
+        ('一件商品先漲價 20％，過一陣子再打八折。現在的價格是原價的百分之幾？',
+         ['96％', '100％', '104％', '92％'], 0,
+         '漲價 20％ 是乘 1.2，打八折是乘 0.8。1.2 × 0.8 ＝ 0.96 ＝ 96％。'
+         '（先漲後折並不會回到原價，這是常見的錯覺。）'),
+        ('小明走 1.2 公里花了 15 分鐘，他的時速是多少公里？',
+         ['0.08 公里', '1.8 公里', '4.8 公里', '18 公里'], 2,
+         '15 分鐘 ＝ 15/60 ＝ 0.25 小時。時速 ＝ 1.2 ÷ 0.25 ＝ 4.8 公里。'
+         '（或想成：15 分鐘是 1 小時的 1/4，所以 1.2 × 4 ＝ 4.8。）'),
+        ('一個圓的周長是 31.4 公分，半徑是幾公分？（圓周率取 3.14）',
+         ['5 公分', '10 公分', '15.7 公分', '20 公分'], 0,
+         '周長 ÷ 圓周率 ＝ 直徑：31.4 ÷ 3.14 ＝ 10 公分。'
+         '半徑 ＝ 10 ÷ 2 ＝ 5 公分。（算到直徑就停手是最常見的失分。）'),
+        ('一個平行四邊形的底是 15 公分、高是 8 公分，面積是多少平方公分？',
+         ['60', '120', '23', '46'], 1,
+         '平行四邊形面積 ＝ 底 × 高 ＝ 15 × 8 ＝ 120 平方公分。'
+         '（不必再除以 2，除以 2 的是三角形。）'),
+        ('一個正方體的邊長是 5 公分，體積是多少立方公分？',
+         ['15', '25', '125', '150'], 2,
+         '正方體體積 ＝ 邊長 × 邊長 × 邊長 ＝ 5 × 5 × 5 ＝ 125 立方公分。'
+         '（150 是它的表面積 25 × 6，單位也不同。）'),
+        ('3 公斤蘋果賣 240 元。同樣的蘋果買 5 公斤要多少元？',
+         ['320 元', '400 元', '480 元', '144 元'], 1,
+         '先求 1 公斤：240 ÷ 3 ＝ 80 元。5 公斤 ＝ 80 × 5 ＝ 400 元。'),
+        ('小華四科的平均是 85 分，第五科考了 95 分。五科的平均變成幾分？',
+         ['86 分', '87 分', '88 分', '90 分'], 1,
+         '四科總分 ＝ 85 × 4 ＝ 340。五科總分 ＝ 340 ＋ 95 ＝ 435。'
+         '435 ÷ 5 ＝ 87 分。（不可以拿 85 和 95 直接平均。）'),
+        ('某數的 40％ 是 36，這個數是多少？',
+         ['14.4', '90', '144', '76'], 1,
+         '比較量 ÷ 百分率 ＝ 基準量：36 ÷ 0.4 ＝ 90。'
+         '（驗算：90 × 0.4 ＝ 36。）'),
+        ('一列火車 09:48 出發，行駛 3 小時 25 分後抵達，抵達時是幾點幾分？',
+         ['12:13', '13:13', '13:03', '12:73'], 1,
+         '09:48 ＋ 3 小時 ＝ 12:48。48 ＋ 25 ＝ 73 分 ＝ 1 小時 13 分，'
+         '所以是 13:13。'),
+        ('24 的因數共有幾個？',
+         ['6 個', '8 個', '10 個', '12 個'], 1,
+         '1、2、3、4、6、8、12、24，共 8 個。'
+         '（成對找比較不會漏：1×24、2×12、3×8、4×6。）'),
+        ('一個長方體長 5 公分、寬 4 公分、高 3 公分，表面積是多少平方公分？',
+         ['47', '60', '94', '120'], 2,
+         '三組面各兩個：（5×4 ＋ 5×3 ＋ 4×3）× 2 ＝（20 ＋ 15 ＋ 12）× 2 '
+         '＝ 47 × 2 ＝ 94 平方公分。（60 是體積，單位是立方公分。）'),
+        ('一個數的 3 倍再減 8 等於 25，這個數是多少？',
+         ['11', '9', '17/3', '33'], 0,
+         '列式 3x － 8 ＝ 25。兩邊加 8：3x ＝ 33；兩邊除以 3：x ＝ 11。'),
+    ],
+    science=[
+        ('植物製造養分（行光合作用）的主要場所是哪一個部位？',
+         ['根', '莖', '葉', '花'], 2,
+         '葉子裡有大量葉綠體，是光合作用的主要場所。根負責吸收水分和'
+         '養分、莖負責運送、花負責繁殖。'),
+        ('把紫色高麗菜汁滴進檸檬汁裡，顏色會變成什麼？',
+         ['紅色', '綠色', '藍色', '沒有變化'], 0,
+         '紫色高麗菜汁是天然的酸鹼指示劑。檸檬汁是酸性，會使它變紅；'
+         '遇到鹼性（如小蘇打水）則偏綠或黃。'),
+        ('用同樣多的水溶解方糖，下列哪一種做法會溶解得最慢？',
+         ['敲碎後放入熱水並攪拌', '整塊放入冷水不攪拌',
+          '敲碎後放入冷水並攪拌', '整塊放入熱水並攪拌'], 1,
+         '影響溶解快慢的三個條件是：溫度高、有攪拌、顆粒小。'
+         '三個條件都不利的那一個最慢，就是整塊、冷水、不攪拌。'),
+        ('下列哪一個做法的目的是「減少摩擦力」？',
+         ['鞋底做成凹凸紋路', '腳踏車鏈條上油',
+          '輪胎加裝防滑鏈', '體操選手手上抹止滑粉'], 1,
+         '上油讓兩個接觸面變得滑順，是減少摩擦力。'
+         '其餘三個都是想增加摩擦力，才不會打滑。'),
+        ('下列哪一種工具在使用時，支點位在施力點與抗力點「之間」？',
+         ['剪刀', '開瓶器', '手推車', '鑷子'], 0,
+         '剪刀的軸（支點）在手（施力點）與刀口（抗力點）中間。'
+         '開瓶器和手推車是抗力點在中間，鑷子是施力點在中間。'),
+        ('關於定滑輪，下列敘述何者正確？',
+         ['可以省一半的力', '可以改變施力的方向，但不能省力',
+          '既省力又省距離', '只能用來吊很重的東西'], 1,
+         '定滑輪固定在上方，只改變拉的方向（往下拉比往上舉順手），'
+         '施力大小不變。要省力得用動滑輪。'),
+        ('兩個相同的燈泡接在同一個電池上，下列敘述何者正確？',
+         ['串聯時比較亮', '並聯時比較亮', '兩種接法一樣亮',
+          '串聯時取下一個燈泡，另一個還會亮'], 1,
+         '串聯時兩個燈泡分掉電壓，各自比較暗；並聯時每個燈泡都接到完整'
+         '電壓，所以較亮。串聯只要拿掉一個，電路就斷了，另一個也不會亮。'),
+        ('下列哪一個方法可以讓電磁鐵的磁力變強？',
+         ['減少線圈的圈數', '增加電池的數量',
+          '把鐵釘換成塑膠棒', '把電池的正負極對調'], 1,
+         '增加電池（電流變大）、增加圈數、用鐵芯，都會讓磁力變強。'
+         '換成塑膠棒沒有磁性；正負極對調只改變南北極的方向，強弱不變。'),
+        ('從農曆初一到十五，月亮看起來的形狀是怎麼變化的？',
+         ['由圓變缺', '由缺變圓', '一直保持半圓', '完全沒有變化'], 1,
+         '初一是看不到的新月，之後一天天變胖，到十五前後成為滿月；'
+         '十五之後再一天天變瘦。'),
+        ('在台灣，晴天時一天當中太陽位置的變化是？',
+         ['從西邊升起、東邊落下', '從東邊升起、中午最高、西邊落下',
+          '整天都在正上方', '從北邊升起、南邊落下'], 1,
+         '太陽東升西落，正午時仰角最高、影子最短。'),
+        ('氣象報告說「鋒面即將通過」，接下來的天氣最可能是？',
+         ['轉為晴朗穩定', '雲量增多、容易下雨',
+          '氣溫一定會上升', '風完全停止'], 1,
+         '鋒面是兩種性質不同的空氣相遇的交界，空氣被抬升形成雲，'
+         '所以常帶來雲量增加與降雨。冷鋒過後氣溫下降，暖鋒才會回升。'),
+        ('用鐵湯匙攪拌熱湯，過一會兒湯匙的握柄也變燙了。這是熱的哪一種傳播方式？',
+         ['傳導', '對流', '輻射', '蒸發'], 0,
+         '熱沿著固體本身一路傳過去，叫做傳導。對流發生在液體與氣體的'
+         '流動中，輻射則不需要介質（例如太陽把熱送到地球）。'),
+        ('用同一個鼓，敲得越用力，聲音會有什麼變化？',
+         ['音調變高', '音調變低', '聲音變大', '傳播速度變快'], 2,
+         '敲得用力＝振幅變大＝聲音變大（響度）。音調高低是由振動快慢'
+         '（頻率）決定的，跟用力大小無關。'),
+        ('在「稻子 → 蝗蟲 → 青蛙 → 蛇」這條食物鏈中，如果青蛙大量減少，'
+         '最可能發生什麼事？',
+         ['蝗蟲數量增加', '蝗蟲數量減少', '稻子長得更好', '蛇的數量增加'], 0,
+         '青蛙是吃蝗蟲的。青蛙少了，蝗蟲失去天敵而變多，稻子被吃得更兇；'
+         '蛇少了食物，數量反而會下降。'),
+        ('鍋子起火時用濕棉被蓋住，主要是利用什麼原理滅火？',
+         ['隔絕氧氣', '增加溫度', '提供更多可燃物', '把火吹散'], 0,
+         '燃燒要同時有可燃物、氧氣、達到燃點三個條件。蓋住是切斷氧氣，'
+         '棉被沾濕還能順便降溫。'),
+        ('清晨草葉上出現的露水，是水的哪一種變化形成的？',
+         ['蒸發', '凝結', '凝固', '沸騰'], 1,
+         '空氣中的水蒸氣（氣態）碰到溫度較低的葉面，變成液態的小水滴，'
+         '這個過程叫凝結。凝固是液態變固態（結冰）。'),
+    ])
+
 
 # ── docx 工具 ───────────────────────────────────────────────────────────────
 def run_ea(par, text, font=MING, size=11.0, bold=False, color=None):
@@ -243,28 +384,57 @@ def _h(s):
     return hashlib.md5(s.encode('utf-8')).hexdigest()
 
 
-def targets(spec):
-    """每卷 16 題的正解位置：A、B、C、D 各出現 4 次，順序由卷別雜湊打散。
+def targets(seed, n):
+    """一份題組 n 題的正解位置：A、B、C、D 輪流各佔四分之一，順序由 seed 打散。
 
     純粹靠選項文字的雜湊排序不夠 —— 實測會出現某一卷 8 題正解都在 A、
     一題 D 都沒有。這裡先把「四個字母各四次」的名單洗開當目標位置，
-    再把正解搬過去，分布才真的平均。
+    再把正解搬過去，分布才真的平均。合卷的數學與自然各自算一次。
     """
-    n = len(spec['mc'])
     slots = (list(range(4)) * (n // 4 + 1))[:n]
-    order = sorted(range(n), key=lambda k: _h(f'{spec["no"]}-slot-{k}'))
+    order = sorted(range(n), key=lambda k: _h(f'{seed}-slot-{k}'))
     return [slots[k] for k in order]
 
 
-def shuffled(spec, i, opts, ans):
+def shuffled(seed, n, i, opts, ans):
     """把正解排到 targets() 指定的位置，其餘三個選項依雜湊填滿剩下的格子。"""
-    tgt = targets(spec)[i - 1]
+    tgt = targets(seed, n)[i - 1]
     others = sorted((o for j, o in enumerate(opts) if j != ans),
-                    key=lambda t: _h(f'{spec["no"]}-{i}||{t}'))
+                    key=lambda t: _h(f'{seed}-{i}||{t}'))
     out = []
     for k in range(4):
         out.append(opts[ans] if k == tgt else others.pop(0))
     return out, tgt
+
+
+def answer_row(seed, items):
+    return '　'.join(
+        f'{i}.{OPT[shuffled(seed, len(items), i, q[1], q[2])[1]]}'
+        for i, q in enumerate(items, 1))
+
+
+def render_mc(doc, seed, items, with_answers):
+    """把一組選擇題畫進文件；題目卷與詳解卷共用，順序才不會走鐘。"""
+    for i, (stem, opts, ans, why) in enumerate(items, 1):
+        opts, ans = shuffled(seed, len(items), i, opts, ans)
+        p = para(doc, indent=1.05, hang=1.05, before=6, after=2, spacing=1.3)
+        run_ea(p, f'（{OPT[ans]}）{i}. ' if with_answers else f'（　　）{i}. ',
+               MING, 11, bold=with_answers)
+        run_ea(p, stem, MING, 11)
+        # 短選項四個排一行省紙；長選項排一行會在選項中間硬斷，改成一行一個
+        stacked = sum(len(o) for o in opts) > 26
+        po = None
+        for j, o in enumerate(opts):
+            bold = with_answers and j == ans
+            if stacked or po is None:
+                po = para(doc, indent=1.85, hang=0.8, after=1, spacing=1.25)
+            run_ea(po, f'({OPT[j]}) ', MING, 10.5, bold=bold)
+            run_ea(po, o + ('' if stacked or j == 3 else '　　'),
+                   MING, 10.5, bold=bold)
+        if with_answers:
+            pw = para(doc, indent=1.05, before=2, after=2, spacing=1.25)
+            run_ea(pw, '詳解：', HEI, 9.5, bold=True, color=GRAY)
+            run_ea(pw, why, MING, 9.5, color=GRAY)
 
 
 def new_doc(w_cm, h_cm, margin_cm, base_pt=11):
@@ -324,9 +494,7 @@ def build_paper(spec, with_answers):
         # 答案總表：改卷時先看這一列，不必翻整份
         p = para(doc, after=10, spacing=1.3)
         run_ea(p, '選擇題答案　', HEI, 10, bold=True)
-        run_ea(p, '　'.join(
-            f'{i}.{OPT[shuffled(spec, i, q[1], q[2])[1]]}'
-            for i, q in enumerate(spec['mc'], 1)), MING, 10)
+        run_ea(p, answer_row(spec['no'], spec['mc']), MING, 10)
     else:
         p = para(doc, after=6)
         run_ea(p, '姓名：＿＿＿＿＿＿＿＿　　日期：＿＿＿＿＿＿＿＿　　'
@@ -340,21 +508,7 @@ def build_paper(spec, with_answers):
     p = para(doc, before=2, after=6)
     run_ea(p, '第一部分　選擇題（每題 5 分，共 80 分）', HEI, 11.5, bold=True)
 
-    for i, (stem, opts, ans, why) in enumerate(spec['mc'], 1):
-        opts, ans = shuffled(spec, i, opts, ans)
-        p = para(doc, indent=1.05, hang=1.05, before=6, after=2, spacing=1.3)
-        run_ea(p, f'（{OPT[ans]}）{i}. ' if with_answers else f'（　　）{i}. ',
-               MING, 11, bold=with_answers)
-        run_ea(p, stem, MING, 11)
-        po = para(doc, indent=1.05, after=1, spacing=1.25)
-        for j, o in enumerate(opts):
-            bold = with_answers and j == ans
-            run_ea(po, f'({OPT[j]}) ', MING, 10.5, bold=bold)
-            run_ea(po, o + ('　　' if j < 3 else ''), MING, 10.5, bold=bold)
-        if with_answers:
-            pw = para(doc, indent=1.05, before=2, after=2, spacing=1.25)
-            run_ea(pw, '詳解：', HEI, 9.5, bold=True, color=GRAY)
-            run_ea(pw, why, MING, 9.5, color=GRAY)
+    render_mc(doc, spec['no'], spec['mc'], with_answers)
 
     p = para(doc, before=14, after=6)
     run_ea(p, '第二部分　計算與應用（每題 5 分，共 20 分，須列出算式）',
@@ -381,6 +535,69 @@ def build_paper(spec, with_answers):
         run_ea(p, '※ 寫完先自己檢查一遍再交。不會的題目直接跳過，'
                   '不要卡在同一題上——正式考試 35 分鐘要寫完整張，'
                   '平均一題只有一分多鐘。', MING, 9.5, color=GRAY)
+
+    footer(doc, title + ('　詳解' if with_answers else ''))
+    out = DRIVE / '複習卷' / (
+        f'複習卷（{spec["no"]}）{spec["name"]}' +
+        ('　詳解' if with_answers else '') + '.docx')
+    out.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(out)
+    return out
+
+
+def build_combined(spec, with_answers):
+    """卷三：數學＋自然併成一節的完整模擬，全選擇題、不出非選。"""
+    doc = new_doc(18.2, 25.7, 1.7, base_pt=11)      # JIS B5
+    title = f'私中入學數理科　完整模擬（卷{spec["no"]}）'
+
+    p = para(doc, after=3, align=WD_ALIGN_PARAGRAPH.CENTER)
+    run_ea(p, '私中入學　數理科完整模擬', KAI, 17, bold=True, color=NAVY)
+    p = para(doc, after=8, align=WD_ALIGN_PARAGRAPH.CENTER)
+    run_ea(p, '複習卷（三）　數學＋自然　共 70 分鐘', KAI, 12, color=GRAY)
+
+    if with_answers:
+        p = para(doc, after=6, align=WD_ALIGN_PARAGRAPH.CENTER)
+        run_ea(p, '【教師用‧詳解答案卷】', HEI, 11, bold=True, color=NAVY)
+        p = para(doc, after=6, spacing=1.2)
+        run_ea(p, '範圍：', HEI, 9, bold=True, color=GRAY)
+        run_ea(p, spec['scope'], MING, 9, color=GRAY)
+        for label, key in (('數學', 'math'), ('自然', 'science')):
+            p = para(doc, after=3, spacing=1.3)
+            run_ea(p, f'{label}答案　', HEI, 10, bold=True)
+            run_ea(p, answer_row(f'{spec["no"]}-{key}', spec[key]), MING, 10)
+        para(doc, after=6)
+    else:
+        p = para(doc, after=6)
+        run_ea(p, '姓名：＿＿＿＿＿＿＿＿　　日期：＿＿＿＿＿＿＿＿　　'
+                  '數學：＿＿＿＿　自然：＿＿＿＿', MING, 11)
+        p = para(doc, after=10, spacing=1.25)
+        run_ea(p, '這是照曙光「數理科」那一節的實況出的完整模擬：全長 70 分鐘，'
+                  '中間換科。請自己計時 —— 前 35 分鐘寫數學，時間一到不管寫完'
+                  '沒有都翻到自然，最後 35 分鐘寫自然，不可以回頭補數學'
+                  '（正式考試會收走前一科的題本）。兩科各 16 題、每題 5 分，'
+                  '各 80 分。全部是選擇題，正式考試要劃答案卡。',
+               MING, 9.5, color=GRAY)
+
+    p = para(doc, before=2, after=6)
+    run_ea(p, '第一節　數學（35 分鐘，16 題，每題 5 分，共 80 分）',
+           HEI, 11.5, bold=True)
+    render_mc(doc, f'{spec["no"]}-math', spec['math'], with_answers)
+
+    # 換科分隔：正式考試在這裡換發題本，練習時就是強制停筆的那一刻
+    p = para(doc, before=16, after=4, align=WD_ALIGN_PARAGRAPH.CENTER)
+    run_ea(p, '── 以下換科．數學到此為止，不可以再回頭 ──',
+           HEI, 10, bold=True, color=NAVY)
+
+    p = para(doc, before=4, after=6)
+    run_ea(p, '第二節　自然（35 分鐘，16 題，每題 5 分，共 80 分）',
+           HEI, 11.5, bold=True)
+    render_mc(doc, f'{spec["no"]}-science', spec['science'], with_answers)
+
+    if not with_answers:
+        p = para(doc, before=16, spacing=1.25)
+        run_ea(p, '※ 考完先自己對一次時間：哪一科寫不完？是卡在哪幾題？'
+                  '寫不完通常不是不會，是在某一題上耗掉了三分鐘。',
+               MING, 9.5, color=GRAY)
 
     footer(doc, title + ('　詳解' if with_answers else ''))
     out = DRIVE / '複習卷' / (
@@ -514,6 +731,8 @@ def main():
     for spec in (PAPER1, PAPER2):
         made.append(build_paper(spec, with_answers=False))
         made.append(build_paper(spec, with_answers=True))
+    made.append(build_combined(PAPER3, with_answers=False))
+    made.append(build_combined(PAPER3, with_answers=True))
     made.append(build_guide())
     for f in made:
         print('OK', f)
