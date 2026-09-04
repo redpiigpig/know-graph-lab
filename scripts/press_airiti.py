@@ -592,7 +592,13 @@ def batch(s, budget):
             except Exception as e:                # noqa: BLE001
                 print(f"（書目佇列重算失敗，改用既有的：{e}）")
         wanted = load_wanted()
-        for slug in PRIORITY:
+        # 🚨 清佇列時**不可以只掃 PRIORITY**。PRIORITY 是「整份刊都要收」的名單；
+        #    有些刊只點名幾篇而不整份收（民俗曲藝 479 篇裡只要 16 篇），
+        #    照 PRIORITY 掃會把它整個跳過——佇列上永遠掛著那 16 篇卻永遠不下載，
+        #    而且不會報錯。所以先照 PRIORITY 的序，再把不在名單上的補在後面。
+        order = ([x for x in PRIORITY if x in wanted]
+                 + [x for x in wanted if x not in PRIORITY])
+        for slug in order:
             if spent >= budget:
                 break
             ids = {w["docId"] for w in wanted.get(slug, [])}

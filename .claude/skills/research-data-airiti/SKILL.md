@@ -227,6 +227,13 @@ p = {"q[0].f": "AU", "q[0].i": "鄭仰恩",        # 欄位：* / TI / PTI / AU 
 噴 `TypeError: list indices must be integers`——publisherID 是下載時的必要參數，
 順手一起回傳的。
 
+**10. 書目佇列與 PRIORITY 是兩件事。**
+`PRIORITY` 是「整份刊都要收」的名單；書目點名的佇列（`airiti-wanted.json`）
+可能包含**不在 PRIORITY 裡**的刊——例如《民俗曲藝》479 篇裡只要 16 篇，
+就不該列入全刊掃描。`batch()` 清佇列時若只迭代 `PRIORITY`，那些刊會被整個跳過，
+佇列上永遠掛著卻永遠不下載、也不報錯。正確作法是先照 PRIORITY 的序、
+再把不在名單上的補在後面。
+
 ## 加一份新刊要做的事
 
 1. `--discover` 的 JSON 裡找到 `pid`（或直接開該刊資訊頁看網址的 `publicationID`）。
