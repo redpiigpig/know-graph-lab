@@ -5,16 +5,15 @@
 題目改了重跑就好。成品依 docs/repo-hygiene.md 不進 git，輸出到 Drive：
   G:\\我的雲端硬碟\\資料\\知識圖工作室\\教學\\{課程資料夾}\\Kahoot\\
 
-🚨 選項一律打散。原始題庫的正確選項落在一個固定循環的位置上，而且三門課
-十六章的序列完全相同（BABADDDDAB／CCCBABADDD／…）；紙本小考只是可預測，
-到了比速度的 Kahoot 就會被學生看破。打散用 chapter+題號當種子，因此同一題
-每次重跑都得到同樣的順序（重出檔案不會和已建好的 kahoot 對不起來）。
+選項順序直接沿用題庫，**這裡不再另外打散**——打散已由
+`scripts/course_quiz_shuffle.py` 一次做在題庫原檔上（原本正解位置是固定
+循環，三門課十六章序列完全相同）。兩邊共用同一個順序，紙本與 Kahoot 才
+對得起來；若在這裡再洗一次，兩者就會不一致。
 
 用法：
   python scripts/course_kahoot_xlsx.py                 # 三門課全出
   python scripts/course_kahoot_xlsx.py --course=ch 1 2 # 指定課程與次數
 """
-import random
 import re
 import sys
 from pathlib import Path
@@ -58,13 +57,6 @@ def parse_quiz(path):
     return out
 
 
-def shuffle(opts, correct, seed):
-    """打散選項並回傳新的正解索引；種子固定，故重跑結果一致。"""
-    idx = list(range(len(opts)))
-    random.Random(seed).shuffle(idx)
-    return [opts[i] for i in idx], idx.index(correct)
-
-
 def build(course, lesson):
     folder, slug, prefix, title = COURSES[course]
     chapters = (lesson * 2 - 1, lesson * 2)
@@ -74,7 +66,6 @@ def build(course, lesson):
         if not f.exists():
             continue
         for i, (stem, opts, correct) in enumerate(parse_quiz(f), 1):
-            opts, correct = shuffle(opts, correct, f'{prefix}-{ch}-{i}')
             if len(stem) > Q_MAX:
                 warn.append(f'第{ch}章第{i}題　題幹 {len(stem)} 字')
             for o in opts:
@@ -90,7 +81,7 @@ def build(course, lesson):
     # 下載的範本即可——欄序一樣。
     ws['B1'] = f'{title}　第 {lesson} 次（第 {chapters[0]}、{chapters[1]} 章）Kahoot 題庫'
     ws['B1'].font = Font(bold=True, size=14)
-    ws['B2'] = '由講義章末小考自動轉出（scripts/course_kahoot_xlsx.py）；選項已打散。'
+    ws['B2'] = '由講義章末小考自動轉出（scripts/course_kahoot_xlsx.py）；順序與紙本小考一致。'
     ws['B3'] = f'題幹上限 {Q_MAX} 字、選項上限 {A_MAX} 字、每題 {TIME_LIMIT} 秒。'
     heads = ['', '題目（Question）', '選項 1', '選項 2', '選項 3', '選項 4',
              '秒數（Time limit）', '正解（Correct answer(s)）']
