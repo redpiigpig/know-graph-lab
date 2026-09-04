@@ -32,6 +32,36 @@ COURSES = {
 FOLDER = COURSES['wr']
 IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'
 
+# 參考書目直接讀講義章節，不另抄一份——書目改了簡報就跟著改。
+WORKS = Path(__file__).resolve().parent.parent / 'public' / 'content' / 'works'
+CHAPTER_DIRS = {
+    'wr': WORKS / 'world-religions-intro' / 'chapters-wr2',
+    'sl': WORKS / 'sinographic-literature' / 'chapters',
+    'ch': WORKS / 'christianity-intro' / 'chapters',
+}
+CHAPTERS = CHAPTER_DIRS['wr']
+
+
+def chapter_refs(nums):
+    """讀第 nums 章講義的〈參考資料〉，依序合併並去重。
+
+    一次上課涵蓋兩章，兩章的書目常有重疊；重複列出會讓這一頁變成雜訊。
+    """
+    out, seen = [], set()
+    for n in nums:
+        f = CHAPTERS / f'ch{n:02d}.html'
+        if not f.exists():
+            continue
+        html = f.read_text(encoding='utf-8')
+        m = re.search(r'<h3>參考資料</h3>\s*<ul>(.*?)</ul>', html, re.S)
+        if not m:
+            continue
+        for li in re.findall(r'<li>(.*?)</li>', m.group(1), re.S):
+            t = re.sub(r'<[^>]+>', '', li).strip()
+            if t and t not in seen:
+                seen.add(t)
+                out.append(t)
+    return out
 
 def load_manifest():
     f = IMGDIR / '_manifest.json'
@@ -395,6 +425,71 @@ def s_credits(prs, label):
     return out
 
 
+def s_openers(prs, course, no):
+    """開場互動兩頁：口頭提問五題、手機簡答三題。
+
+    放在封面之後，因為它的作用是在講課之前先把學生既有的認知逼出來——
+    講完再問，得到的多半是覆述。第二頁的作答與抽籤走 ClassPoint 或
+    AhaSlides；QR code 由該工具在播放時疊上，這裡只留位置與說明。
+    """
+    try:
+        from course_slides_openers import OPENERS
+    except ImportError:
+        return []
+    d = OPENERS.get(course, {}).get(no)
+    if not d:
+        return []
+    out = []
+
+    s1 = blank(prs)
+    slide_title(s1, '上課前先想一想',
+                '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
+    tf = textbox(s1, Cm(1.5), Cm(4.6), W - Cm(3.0), H - Cm(6.4))
+    for i, q in enumerate(d['ask']):
+        put(tf, f'{i + 1}　{q}', 21, color=INK, first=(i == 0),
+            space_after=16, line=1.3)
+    out.append(s1)
+
+    s2 = blank(prs)
+    slide_title(s2, '請用手機作答',
+                '掃描畫面上的 QR code 或輸入 PIN 碼加入，作答後抽籤請人詳細說明')
+    tf = textbox(s2, Cm(1.5), Cm(4.6), W - Cm(19.0), H - Cm(6.4))
+    for i, q in enumerate(d['answer']):
+        put(tf, f'{i + 1}　{q}', 20, color=INK, first=(i == 0),
+            space_after=14, line=1.3)
+    put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 15,
+        color=GRAY, space_after=0, line=1.3)
+    band(s2, PALE, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
+    tf2 = textbox(s2, W - Cm(16.1), Cm(5.4), Cm(14.1), H - Cm(8.0),
+                  anchor=MSO_ANCHOR.MIDDLE)
+    put(tf2, 'QR code', 30, bold=True, color=NAVY, first=True, space_after=10,
+        align=PP_ALIGN.CENTER)
+    put(tf2, '（由 ClassPoint／AhaSlides 於播放時疊上）', 15, color=GRAY,
+        space_after=0, align=PP_ALIGN.CENTER)
+    out.append(s2)
+    return out
+
+def s_refs(prs, nums):
+    """課末參考書目頁：本次上課兩章講義的〈參考資料〉。
+
+    學生要能從投影片直接抄到書名，所以字級不壓到看不清；
+    條目多就分頁，寧可多一頁也不要擠。
+    """
+    items = chapter_refs(nums)
+    if not items:
+        return []
+    zh = '、'.join(f'第 {n} 章' for n in nums)
+    per, out = 9, []
+    for start in range(0, len(items), per):
+        s = blank(prs)
+        slide_title(s, '參考書目',
+                    f'{zh}講義所附之參考資料；完整註釋見講義各章末')
+        tf = textbox(s, Cm(1.5), Cm(4.45), W - Cm(3.0), H - Cm(6.15))
+        for i, t in enumerate(items[start:start + per]):
+            put(tf, t, 13, color=INK, first=(i == 0), space_after=8, line=1.25)
+        out.append(s)
+    return out
+
 RENDER = {'cover': s_cover, 'section': s_section, 'big': s_big,
           'bullets': s_bullets, 'two': s_two, 'table': s_table,
           'photo': s_photo, 'gallery': s_gallery, 'imgbullets': s_imgbullets}
@@ -491,19 +586,27 @@ def split_long(slides):
             out.append(('bullets', it[1] + '（續）', items[cut:]))
     return out
 
-def build(deck):
+def build(deck, no=None, course='wr'):
     global USED
     USED = []
     prs = Presentation()
     prs.slide_width, prs.slide_height = W, H
-    for i, item in enumerate(split_long(fold_bigs(deck['slides']))):
+    items = split_long(fold_bigs(deck['slides']))
+    for i, item in enumerate(items):
         kind, args = item[0], list(item[1:])
         kw = args.pop() if args and isinstance(args[-1], dict) and kind != 'cover' else {}
         s = RENDER[kind](prs, *args, **kw)
         if kind not in ('cover', 'section', 'big'):
             footer(s, i, deck['footer'])
+        # 開場兩頁緊接封面，屬前置頁，與封面一樣不編號
+        if i == 0 and kind == 'cover' and no:
+            s_openers(prs, course, no)
     for c in s_credits(prs, deck['footer']):
         footer(c, len(prs.slides._sldIdLst) - 1, deck['footer'])
+    # 每次上課兩章：第 n 次＝第 2n-1、2n 章
+    if no:
+        for r in s_refs(prs, (no * 2 - 1, no * 2)):
+            footer(r, len(prs.slides._sldIdLst) - 1, deck['footer'])
     outdir = DRIVE / FOLDER / '簡報'
     outdir.mkdir(parents=True, exist_ok=True)
     out = outdir / deck['filename']
@@ -519,6 +622,7 @@ if __name__ == '__main__':
         FOLDER = COURSES[course]
         IMGDIR = DRIVE / FOLDER / '簡報' / '圖片'
         MANIFEST = load_manifest()
+        CHAPTERS = CHAPTER_DIRS[course]
     if course in ('sl', 'ch'):
         if course == 'sl':
             from course_slides_data_sl import DECKS_SL as D
@@ -526,7 +630,7 @@ if __name__ == '__main__':
             from course_slides_data_ch import DECKS_CH as D
         DECKS = D
         for n in [a for a in args if not a.startswith('--')] or sorted(DECKS):
-            out, cnt = build(DECKS[int(n)])
+            out, cnt = build(DECKS[int(n)], int(n), course)
             print(f'✔ {out}　（{cnt} 張）')
         raise SystemExit
     from course_slides_data import DECKS
@@ -535,5 +639,5 @@ if __name__ == '__main__':
     from course_slides_data4 import DECKS4
     DECKS = {**DECKS, **DECKS2, **DECKS3, **DECKS4}
     for n in ([a for a in args if not a.startswith('--')] or sorted(DECKS)):
-        out, cnt = build(DECKS[int(n)])
+        out, cnt = build(DECKS[int(n)], int(n), course)
         print(f'✔ {out}　（{cnt} 張）')
