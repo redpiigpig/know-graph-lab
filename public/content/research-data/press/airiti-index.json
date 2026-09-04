@@ -308,5 +308,15 @@
   "fulltext": 132,
   "start": "2013",
   "end": "2026"
+ },
+ {
+  "slug": "folk-arts",
+  "pid": "10251383",
+  "name": "民俗曲藝",
+  "issues": 82,
+  "articles": 479,
+  "fulltext": 479,
+  "start": "2006",
+  "end": "2026"
  }
 ]

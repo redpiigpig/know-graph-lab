@@ -448,6 +448,19 @@ export const RELIGIOUS_STUDIES_JOURNALS: PressTitle[] = [
     to: '/research-data/press/chinese-religions',
     note: '把台灣放回華人宗教場域來看的一份，民間信仰與新興宗教的題目多。',
   },
+  {
+    slug: 'folk-arts',
+    name: '民俗曲藝',
+    side: '一般',
+    publisher: '財團法人施合鄭民俗文化基金會',
+    // 創刊年查不到確切數字（華藝的刊物頁沒寫），照本檔規矩整個留空，不拿收錄起始冒充
+    coverage: '華藝自 151 期（2006 年 3 月）起，至 232 期（2026 年 6 月），82 期 479 篇',
+    tier: 'index',
+    airiti: true,
+    to: '/research-data/press/folk-arts',
+    note: '一貫道、鸞堂與地方祭儀研究的主要園地；鍾雲鶯談國民政府查禁一貫道那篇在 231 期。'
+      + '華藝把它歸在民俗類而非宗教學，所以學科分類的普查掃不到，是按刊名另外找出來的。',
+  },
 ]
 
 /**

@@ -1,0 +1,6798 @@
+{
+ "slug": "folk-arts",
+ "pid": "10251383",
+ "name": "民俗曲藝",
+ "publisherID": "1991",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=10251383&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 82,
+  "篇目": 479,
+  "有電子全文": 479
+ },
+ "issues": [
+  {
+   "issueID": "N202607100005",
+   "label": "232期 (2026/06)",
+   "year": "2026",
+   "count": 6
+  },
+  {
+   "issueID": "N202604160003",
+   "label": "231期 (2026/03)",
+   "year": "2026",
+   "count": 4
+  },
+  {
+   "issueID": "N202512170016",
+   "label": "230期 (2025/12)",
+   "year": "2025",
+   "count": 5
+  },
+  {
+   "issueID": "N202509260003",
+   "label": "229期 (2025/09)",
+   "year": "2025",
+   "count": 5
+  },
+  {
+   "issueID": "N202506250016",
+   "label": "228期 (2025/06)",
+   "year": "2025",
+   "count": 4
+  },
+  {
+   "issueID": "N202503290015",
+   "label": "227期 (2025/03)",
+   "year": "2025",
+   "count": 7
+  },
+  {
+   "issueID": "N202412240007",
+   "label": "226期 (2024/12)",
+   "year": "2024",
+   "count": 7
+  },
+  {
+   "issueID": "N202409210008",
+   "label": "225期 (2024/09)",
+   "year": "2024",
+   "count": 7
+  },
+  {
+   "issueID": "N202406190013",
+   "label": "224期 (2024/06)",
+   "year": "2024",
+   "count": 7
+  },
+  {
+   "issueID": "N202403280014",
+   "label": "223期 (2024/03)",
+   "year": "2024",
+   "count": 6
+  },
+  {
+   "issueID": "N202312230005",
+   "label": "222期 (2023/12)",
+   "year": "2023",
+   "count": 8
+  },
+  {
+   "issueID": "N202309280018",
+   "label": "221期 (2023/09)",
+   "year": "2023",
+   "count": 7
+  },
+  {
+   "issueID": "N202306210008",
+   "label": "220期 (2023/06)",
+   "year": "2023",
+   "count": 7
+  },
+  {
+   "issueID": "N202303300011",
+   "label": "219期 (2023/03)",
+   "year": "2023",
+   "count": 7
+  },
+  {
+   "issueID": "N202301120011",
+   "label": "218期 (2022/12)",
+   "year": "2022",
+   "count": 6
+  },
+  {
+   "issueID": "202209300010",
+   "label": "217期 (2022/09)",
+   "year": "2022",
+   "count": 6
+  },
+  {
+   "issueID": "202207050009",
+   "label": "216期 (2022/06)",
+   "year": "2022",
+   "count": 6
+  },
+  {
+   "issueID": "202204010015",
+   "label": "215期 (2022/03)",
+   "year": "2022",
+   "count": 4
+  },
+  {
+   "issueID": "202201030018",
+   "label": "214期 (2021/12)",
+   "year": "2021",
+   "count": 6
+  },
+  {
+   "issueID": "202110010018",
+   "label": "213期 (2021/09)",
+   "year": "2021",
+   "count": 5
+  },
+  {
+   "issueID": "202107050013",
+   "label": "212期 (2021/06)",
+   "year": "2021",
+   "count": 4
+  },
+  {
+   "issueID": "202103290008",
+   "label": "211期 (2021/03)",
+   "year": "2021",
+   "count": 5
+  },
+  {
+   "issueID": "202101040017",
+   "label": "210期 (2020/12)",
+   "year": "2020",
+   "count": 6
+  },
+  {
+   "issueID": "202010060014",
+   "label": "209期 (2020/09)",
+   "year": "2020",
+   "count": 7
+  },
+  {
+   "issueID": "202007070017",
+   "label": "208期 (2020/06)",
+   "year": "2020",
+   "count": 4
+  },
+  {
+   "issueID": "202003310010",
+   "label": "207期 (2020/03)",
+   "year": "2020",
+   "count": 7
+  },
+  {
+   "issueID": "201912310009",
+   "label": "206期 (2019/12)",
+   "year": "2019",
+   "count": 5
+  },
+  {
+   "issueID": "201909260010",
+   "label": "205期 (2019/09)",
+   "year": "2019",
+   "count": 6
+  },
+  {
+   "issueID": "201906240012",
+   "label": "204期 (2019/06)",
+   "year": "2019",
+   "count": 6
+  },
+  {
+   "issueID": "201904290011",
+   "label": "203期 (2019/03)",
+   "year": "2019",
+   "count": 5
+  },
+  {
+   "issueID": "201812280009",
+   "label": "202期 (2018/12)",
+   "year": "2018",
+   "count": 4
+  },
+  {
+   "issueID": "201809040005",
+   "label": "201期 (2018/09)",
+   "year": "2018",
+   "count": 5
+  },
+  {
+   "issueID": "201807310010",
+   "label": "200期 (2018/06)",
+   "year": "2018",
+   "count": 5
+  },
+  {
+   "issueID": "201803220010",
+   "label": "199期 (2018/03)",
+   "year": "2018",
+   "count": 7
+  },
+  {
+   "issueID": "201712290009",
+   "label": "198期 (2017/12)",
+   "year": "2017",
+   "count": 6
+  },
+  {
+   "issueID": "201709270013",
+   "label": "197期 (2017/09)",
+   "year": "2017",
+   "count": 7
+  },
+  {
+   "issueID": "201707270002",
+   "label": "196期 (2017/06)",
+   "year": "2017",
+   "count": 6
+  },
+  {
+   "issueID": "201704190015",
+   "label": "195期 (2017/03)",
+   "year": "2017",
+   "count": 5
+  },
+  {
+   "issueID": "201701090006",
+   "label": "194期 (2016/12)",
+   "year": "2016",
+   "count": 4
+  },
+  {
+   "issueID": "201610270016",
+   "label": "193期 (2016/09)",
+   "year": "2016",
+   "count": 5
+  },
+  {
+   "issueID": "201608100006",
+   "label": "192期 (2016/06)",
+   "year": "2016",
+   "count": 5
+  },
+  {
+   "issueID": "201604280053",
+   "label": "191期 (2016/03)",
+   "year": "2016",
+   "count": 6
+  },
+  {
+   "issueID": "201601280014",
+   "label": "190期 (2015/12)",
+   "year": "2015",
+   "count": 5
+  },
+  {
+   "issueID": "201511030003",
+   "label": "189期 (2015/09)",
+   "year": "2015",
+   "count": 6
+  },
+  {
+   "issueID": "201508030001",
+   "label": "188期 (2015/06)",
+   "year": "2015",
+   "count": 6
+  },
+  {
+   "issueID": "201505040010",
+   "label": "187期 (2015/03)",
+   "year": "2015",
+   "count": 6
+  },
+  {
+   "issueID": "201501280035",
+   "label": "186期 (2014/12)",
+   "year": "2014",
+   "count": 6
+  },
+  {
+   "issueID": "201410310011",
+   "label": "185期 (2014/09)",
+   "year": "2014",
+   "count": 6
+  },
+  {
+   "issueID": "201408040010",
+   "label": "184期 (2014/06)",
+   "year": "2014",
+   "count": 7
+  },
+  {
+   "issueID": "201404250011",
+   "label": "183期 (2014/03)",
+   "year": "2014",
+   "count": 6
+  },
+  {
+   "issueID": "201402070019",
+   "label": "182期 (2013/12)",
+   "year": "2013",
+   "count": 6
+  },
+  {
+   "issueID": "201311010025",
+   "label": "181期 (2013/09)",
+   "year": "2013",
+   "count": 7
+  },
+  {
+   "issueID": "201307220035",
+   "label": "180期 (2013/06)",
+   "year": "2013",
+   "count": 6
+  },
+  {
+   "issueID": "201305030021",
+   "label": "179期 (2013/03)",
+   "year": "2013",
+   "count": 5
+  },
+  {
+   "issueID": "201302050006",
+   "label": "178期 (2012/12)",
+   "year": "2012",
+   "count": 5
+  },
+  {
+   "issueID": "201211010038",
+   "label": "177期 (2012/09)",
+   "year": "2012",
+   "count": 4
+  },
+  {
+   "issueID": "201208030023",
+   "label": "176期 (2012/06)",
+   "year": "2012",
+   "count": 6
+  },
+  {
+   "issueID": "201204280002",
+   "label": "175期 (2012/03)",
+   "year": "2012",
+   "count": 5
+  },
+  {
+   "issueID": "201203030050",
+   "label": "174期 (2011/12)",
+   "year": "2011",
+   "count": 6
+  },
+  {
+   "issueID": "201110310003",
+   "label": "173期 (2011/09)",
+   "year": "2011",
+   "count": 8
+  },
+  {
+   "issueID": "201107230005",
+   "label": "172期 (2011/06)",
+   "year": "2011",
+   "count": 8
+  },
+  {
+   "issueID": "201105030007",
+   "label": "171期 (2011/03)",
+   "year": "2011",
+   "count": 6
+  },
+  {
+   "issueID": "201101270007",
+   "label": "170期 (2010/12)",
+   "year": "2010",
+   "count": 7
+  },
+  {
+   "issueID": "201010280091",
+   "label": "169期 (2010/09)",
+   "year": "2010",
+   "count": 5
+  },
+  {
+   "issueID": "201007130126",
+   "label": "168期 (2010/06)",
+   "year": "2010",
+   "count": 7
+  },
+  {
+   "issueID": "201005050022",
+   "label": "167期 (2010/03)",
+   "year": "2010",
+   "count": 6
+  },
+  {
+   "issueID": "201002080060",
+   "label": "166期 (2009/12)",
+   "year": "2009",
+   "count": 8
+  },
+  {
+   "issueID": "88457",
+   "label": "165期 (2009/09)",
+   "year": "2009",
+   "count": 5
+  },
+  {
+   "issueID": "200907130045",
+   "label": "164期 (2009/06)",
+   "year": "2009",
+   "count": 6
+  },
+  {
+   "issueID": "81726",
+   "label": "163期 (2009/03)",
+   "year": "2009",
+   "count": 6
+  },
+  {
+   "issueID": "78047",
+   "label": "162期 (2008/12)",
+   "year": "2008",
+   "count": 5
+  },
+  {
+   "issueID": "74461",
+   "label": "161期 (2008/09)",
+   "year": "2008",
+   "count": 6
+  },
+  {
+   "issueID": "70020",
+   "label": "160期 (2008/06)",
+   "year": "2008",
+   "count": 6
+  },
+  {
+   "issueID": "64769",
+   "label": "159期 (2008/03)",
+   "year": "2008",
+   "count": 5
+  },
+  {
+   "issueID": "62478",
+   "label": "158期 (2007/12)",
+   "year": "2007",
+   "count": 5
+  },
+  {
+   "issueID": "58627",
+   "label": "157期 (2007/09)",
+   "year": "2007",
+   "count": 5
+  },
+  {
+   "issueID": "53895",
+   "label": "156期 (2007/06)",
+   "year": "2007",
+   "count": 6
+  },
+  {
+   "issueID": "48193",
+   "label": "155期 (2007/03)",
+   "year": "2007",
+   "count": 8
+  },
+  {
+   "issueID": "43314",
+   "label": "154期 (2006/12)",
+   "year": "2006",
+   "count": 5
+  },
+  {
+   "issueID": "37256",
+   "label": "153期 (2006/09)",
+   "year": "2006",
+   "count": 5
+  },
+  {
+   "issueID": "30376",
+   "label": "152期 (2006/06)",
+   "year": "2006",
+   "count": 7
+  },
+  {
+   "issueID": "26585",
+   "label": "151期 (2006/03)",
+   "year": "2006",
+   "count": 6
+  }
+ ],
+ "articles": [
+  {
+   "docId": "10251383-N202607100005-00001",
+   "title": "文本、物質與實踐：宗教戲曲的跨越性思考專輯－前言",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)",
+    "林智莉(Lin Zhi-li)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "1-6",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202607100005-00002",
+   "title": "洪水與女妖：清代武戲《泗州城》的異質疊合與文化張力",
+   "authors": [
+    "李依卓(Li Yizhuo)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "7-49",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202607100005-00003",
+   "title": "北港媽祖轎前「馬陣吹」的歷史傳承與藝師蘇仁義的宗教實踐",
+   "authors": [
+    "吳佩熏(Wu Pei-hsun)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "51-106",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202607100005-00004",
+   "title": "步下戲臺的肉身神像：新加坡歌仔戲扮仙戲的「不完美複製」與靈媒的介入共演",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "107-159",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202607100005-00005",
+   "title": "搏杯與神意：試探個人和群體介入以廟口為核心的宗教場域現象",
+   "authors": [
+    "傅裕惠(Fu Yu-hui)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "161-197",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202607100005-00006",
+   "title": "流動中的花樣：貴州革一苗族花樣本的圖像學、民族誌與知識傳承",
+   "authors": [
+    "何兆華(Ho Zhaohua)"
+   ],
+   "volIssue": "232期",
+   "date": "2026 / 06",
+   "pages": "199-251",
+   "fulltext": true,
+   "issueLabel": "232期 (2026/06)",
+   "issueID": "N202607100005"
+  },
+  {
+   "docId": "10251383-N202604160003-00001",
+   "title": "尋回金屬盤中的聲音：以未發行錄音重建臺灣古倫美亞流行歌產製過程",
+   "authors": [
+    "王櫻芬(Wang Ying-fen)"
+   ],
+   "volIssue": "231期",
+   "date": "2026 / 03",
+   "pages": "1-59",
+   "fulltext": true,
+   "issueLabel": "231期 (2026/03)",
+   "issueID": "N202604160003"
+  },
+  {
+   "docId": "10251383-N202604160003-00002",
+   "title": "敵偽、附匪與邪教？：從檔案觀察三十年代國民政府在中國取締一貫道之歷程",
+   "authors": [
+    "鍾雲鶯(Chung Yun-ying)"
+   ],
+   "volIssue": "231期",
+   "date": "2026 / 03",
+   "pages": "61-107",
+   "fulltext": true,
+   "issueLabel": "231期 (2026/03)",
+   "issueID": "N202604160003"
+  },
+  {
+   "docId": "10251383-N202604160003-00003",
+   "title": "在文化中學習：鄒族傳統歌謠的世代傳承機制及教育意涵",
+   "authors": [
+    "童信智(Pukiringan．Palivuljung/Tung Hsin-chih)",
+    "洋愷威(Mo'o Yasakie/Yang Kai-wei)"
+   ],
+   "volIssue": "231期",
+   "date": "2026 / 03",
+   "pages": "109-158",
+   "fulltext": true,
+   "issueLabel": "231期 (2026/03)",
+   "issueID": "N202604160003"
+  },
+  {
+   "docId": "10251383-N202604160003-00004",
+   "title": "五股開臺尊王過爐十座駐駕公廟碑文調查與探賾",
+   "authors": [
+    "柯榮三(Ko Jung-san)"
+   ],
+   "volIssue": "231期",
+   "date": "2026 / 03",
+   "pages": "159-212",
+   "fulltext": true,
+   "issueLabel": "231期 (2026/03)",
+   "issueID": "N202604160003"
+  },
+  {
+   "docId": "10251383-N202512170016-00001",
+   "title": "導言：瑤族宗教與文化研究的新典範－跨地域與跨文化的知識轉向",
+   "authors": [
+    "陳玫妏(Chen Meiwen)"
+   ],
+   "volIssue": "230期",
+   "date": "2025 / 12",
+   "pages": "1-27",
+   "fulltext": true,
+   "issueLabel": "230期 (2025/12)",
+   "issueID": "N202512170016"
+  },
+  {
+   "docId": "10251383-N202512170016-00002",
+   "title": "「九州」內外：排瑤生命儀式中的中心與邊地觀",
+   "authors": [
+    "張卓(Zhang Zhuo)"
+   ],
+   "volIssue": "230期",
+   "date": "2025 / 12",
+   "pages": "29-77",
+   "fulltext": true,
+   "issueLabel": "230期 (2025/12)",
+   "issueID": "N202512170016"
+  },
+  {
+   "docId": "10251383-N202512170016-00003",
+   "title": "采借與創造：廣西環岑王老山瑤族墳墓立碑的禮俗研究",
+   "authors": [
+    "韋飛歐(Wei Feiou)",
+    "黃家信(Huang Jiaxin)"
+   ],
+   "volIssue": "230期",
+   "date": "2025 / 12",
+   "pages": "79-128",
+   "fulltext": true,
+   "issueLabel": "230期 (2025/12)",
+   "issueID": "N202512170016"
+  },
+  {
+   "docId": "10251383-N202512170016-00004",
+   "title": "多面黃氏女：一則漢族佛教故事在藍靛瑤文化中的流傳與演變",
+   "authors": [
+    "孫嘉玥(Sun Jiayue)"
+   ],
+   "volIssue": "230期",
+   "date": "2025 / 12",
+   "pages": "129-177",
+   "fulltext": true,
+   "issueLabel": "230期 (2025/12)",
+   "issueID": "N202512170016"
+  },
+  {
+   "docId": "10251383-N202512170016-00005",
+   "title": "冀東南地方社會的功果儀式：以表功師傅為中心",
+   "authors": [
+    "徐天基(Xu Tianji)",
+    "羅丹(Luo Dan)"
+   ],
+   "volIssue": "230期",
+   "date": "2025 / 12",
+   "pages": "179-222",
+   "fulltext": true,
+   "issueLabel": "230期 (2025/12)",
+   "issueID": "N202512170016"
+  },
+  {
+   "docId": "10251383-N202509260003-00001",
+   "title": "導言：瑤族宗教與文化研究的新典範－跨地域與跨文化的知識轉向",
+   "authors": [
+    "陳玫妏(Chen Meiwen)"
+   ],
+   "volIssue": "229期",
+   "date": "2025 / 09",
+   "pages": "1-27",
+   "fulltext": true,
+   "issueLabel": "229期 (2025/09)",
+   "issueID": "N202509260003"
+  },
+  {
+   "docId": "10251383-N202509260003-00002",
+   "title": "德國巴伐利亞州立圖書館藏瑤族手抄本《諸品經》研究",
+   "authors": [
+    "肖習(Xiao Xi)"
+   ],
+   "volIssue": "229期",
+   "date": "2025 / 09",
+   "pages": "29-90",
+   "fulltext": true,
+   "issueLabel": "229期 (2025/09)",
+   "issueID": "N202509260003"
+  },
+  {
+   "docId": "10251383-N202509260003-00003",
+   "title": "法水與符令：勉瑤手抄本記載的治傷法事研究",
+   "authors": [
+    "吳佳芸(Wu Chia-yun)"
+   ],
+   "volIssue": "229期",
+   "date": "2025 / 09",
+   "pages": "91-146",
+   "fulltext": true,
+   "issueLabel": "229期 (2025/09)",
+   "issueID": "N202509260003"
+  },
+  {
+   "docId": "10251383-N202509260003-00004",
+   "title": "桂東北桑江紅瑤與苗人拋牌儀式比較與解讀",
+   "authors": [
+    "趙曉梅(Zhao Xiaomei)"
+   ],
+   "volIssue": "229期",
+   "date": "2025 / 09",
+   "pages": "147-208",
+   "fulltext": true,
+   "issueLabel": "229期 (2025/09)",
+   "issueID": "N202509260003"
+  },
+  {
+   "docId": "10251383-N202509260003-00005",
+   "title": "論《笑府》與《笑林廣記》中「慳吝待客」笑話之流變",
+   "authors": [
+    "謝佳瀅(Hsieh Chia-ying)"
+   ],
+   "volIssue": "229期",
+   "date": "2025 / 09",
+   "pages": "209-232",
+   "fulltext": true,
+   "issueLabel": "229期 (2025/09)",
+   "issueID": "N202509260003"
+  },
+  {
+   "docId": "10251383-N202506250016-00001",
+   "title": "明代選本、曲譜中所見《五倫全備記》考",
+   "authors": [
+    "吳秀卿(Oh Sookyung)",
+    "何鑫(He Xin)"
+   ],
+   "volIssue": "228期",
+   "date": "2025 / 06",
+   "pages": "1-43",
+   "fulltext": true,
+   "issueLabel": "228期 (2025/06)",
+   "issueID": "N202506250016"
+  },
+  {
+   "docId": "10251383-N202506250016-00002",
+   "title": "義子女與爐主：花蓮勝安宮王母信仰的雙重特質",
+   "authors": [
+    "蔡宗平(Tsai Tsung-ping)"
+   ],
+   "volIssue": "228期",
+   "date": "2025 / 06",
+   "pages": "45-99",
+   "fulltext": true,
+   "issueLabel": "228期 (2025/06)",
+   "issueID": "N202506250016"
+  },
+  {
+   "docId": "10251383-N202506250016-00003",
+   "title": "文化復振作為日常生活的社會運動：卡大地布的經驗",
+   "authors": [
+    "陳玉苹(Chen Yu-ping)"
+   ],
+   "volIssue": "228期",
+   "date": "2025 / 06",
+   "pages": "101-153",
+   "fulltext": true,
+   "issueLabel": "228期 (2025/06)",
+   "issueID": "N202506250016"
+  },
+  {
+   "docId": "10251383-N202506250016-00004",
+   "title": "嘉義市釋教壇師承系譜與經營現況初探",
+   "authors": [
+    "楊士賢(Yang Shih-hsien)"
+   ],
+   "volIssue": "228期",
+   "date": "2025 / 06",
+   "pages": "155-206",
+   "fulltext": true,
+   "issueLabel": "228期 (2025/06)",
+   "issueID": "N202506250016"
+  },
+  {
+   "docId": "10251383-N202503290015-00001",
+   "title": "歲時民俗與自然生態專輯：前言",
+   "authors": [
+    "楊玉君(Yang Yujun)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00002",
+   "title": "Empirically Derived Ritual: How Prohibitions on Tree-Cutting Illustrate Relations Between Sacred Cosmology and Empiric Knowledge",
+   "authors": [
+    "Johan Rols(壽酣)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "9-46",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00003",
+   "title": "元宵祈願的弱化與隱喻",
+   "authors": [
+    "楊玉君(Yang Yujun)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "47-87",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00004",
+   "title": "島嶼生態、生計經濟與歲時祭儀：蘭嶼Minganangana（慰勞祭）與Mapasamorang So Piyavean（收穫祭）的民俗變遷",
+   "authors": [
+    "楊政賢(Yang Cheng-hsien)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "89-135",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00005",
+   "title": "濁水溪沖積平原「拜溪」民俗之考察研究",
+   "authors": [
+    "謝瑞隆(Hsieh Jui-long)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "137-184",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00006",
+   "title": "聲景記憶與環境感知：以達悟族的人與非人聆聽為例",
+   "authors": [
+    "范欽慧(Fan Chin-hui)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "185-236",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202503290015-00007",
+   "title": "咒圖：明清以降的家居佛教儀式用具初探",
+   "authors": [
+    "雷天宇(Lei Tianyu)"
+   ],
+   "volIssue": "227期",
+   "date": "2025 / 03",
+   "pages": "237-272",
+   "fulltext": true,
+   "issueLabel": "227期 (2025/03)",
+   "issueID": "N202503290015"
+  },
+  {
+   "docId": "10251383-N202412240007-00001",
+   "title": "明代選本中的戲、曲、文學與文化專輯：前言",
+   "authors": [
+    "汪詩珮(Wang Shih-pe)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00002",
+   "title": "\"Different\" Versions of Kunqu Singing Rules: Comparing Textual Variants in Nanci Yinzheng and Wei Liangfu's Qulü in Late Ming Qu Anthologies",
+   "authors": [
+    "Yang Dan(楊丹)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "7-28",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00003",
+   "title": "Late Ming Wanderings through Space and Time: On the \"Travel\" Volume of the Yuefu Hongshan",
+   "authors": [
+    "Hsu Yung-fang(許詠芳)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "29-78",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00004",
+   "title": "明代「虞初」系列選集對唐代小說的編選和評議",
+   "authors": [
+    "康韻梅(Kang Yun-mei)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "79-134",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00005",
+   "title": "論晚明清初江右文士賀貽孫的泛戲曲評述及其意義",
+   "authors": [
+    "陳志信(Chen Chih-hsin)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "135-167",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00006",
+   "title": "「我們穿得和山神（Yullha）一樣！」：安多熱貢六月會（Lurol）祭祀中的人神關係與服飾意涵",
+   "authors": [
+    "陳乃華(Chen Nai-hua)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "169-216",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202412240007-00007",
+   "title": "「內山師公」的儀式傳統：以安溪老君派為探討對象",
+   "authors": [
+    "葉八方(Yeh Pa-fang)"
+   ],
+   "volIssue": "226期",
+   "date": "2024 / 12",
+   "pages": "217-253",
+   "fulltext": true,
+   "issueLabel": "226期 (2024/12)",
+   "issueID": "N202412240007"
+  },
+  {
+   "docId": "10251383-N202409210008-00001",
+   "title": "明代選本中的戲、曲、文學與文化專輯：前言／附錄：「明代選本中的戲、曲、文學與文化」國際交流工作坊會議紀要",
+   "authors": [
+    "汪詩珮(Wang Shih-pe)",
+    "葉霑",
+    "陳志豪"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "1-16",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00002",
+   "title": "Do the Parts Add Up? Textual Systems and Segments of Sijie Ji (The Four Seasons) in Ming Anthologies",
+   "authors": [
+    "Tan Tian Yuan(陳靝沅)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "17-57",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00003",
+   "title": "晚明曲類選本「三欄併讀」初探：以《琵琶記》、《三國記》選齣為例",
+   "authors": [
+    "汪詩珮(Wang Shih-pe)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "59-124",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00004",
+   "title": "晚明曲選《詞珍雅調》的編刻策略與書籍特色",
+   "authors": [
+    "陳志勇(Chen Zhiyong)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "125-152",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00005",
+   "title": "Linking the World of Performative Texts: The Interplay between Popular Songs and Dramas in Late Ming Qu Anthologies",
+   "authors": [
+    "Chen Jiani(陳佳妮)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "153-190",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00006",
+   "title": "論晚明曲選《怡春錦》之編選理念與時代特色",
+   "authors": [
+    "林芷瑩(Lin Chih-ying)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "191-231",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202409210008-00007",
+   "title": "傳播偏向視角下民俗文化的傳承力量：以「臨水夫人信仰」為例",
+   "authors": [
+    "陳怡蓁(Chen I-chen)"
+   ],
+   "volIssue": "225期",
+   "date": "2024 / 09",
+   "pages": "233-281",
+   "fulltext": true,
+   "issueLabel": "225期 (2024/09)",
+   "issueID": "N202409210008"
+  },
+  {
+   "docId": "10251383-N202406190013-00001",
+   "title": "明清妙善觀音戲的市場需求與敘事變異",
+   "authors": [
+    "林智莉(Lin Zhi-li)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "1-47",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00002",
+   "title": "被搬演的真實：1920年代上海時事戲《槍斃閻瑞生》",
+   "authors": [
+    "程筱媛(Cheng Hsiao-yuan)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "49-89",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00003",
+   "title": "從祖先到神明：近二十年來一個村落女神的文化建構",
+   "authors": [
+    "黃萍瑛(Huang Ping-ying)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "91-139",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00004",
+   "title": "雲林大埤地區的複合式儀式動員網域：反思臺灣民間信仰的圈域研究",
+   "authors": [
+    "齊偉先(Chi Wei-hsian)",
+    "郭應哲(Kuo Yin-zhe)",
+    "張舜斌(Zhang Shun-bin)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "141-194",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00005",
+   "title": "閭山派清壇請神咒講唱敘事研究：以茄萣劉部堂法派心辰壇小法團為例",
+   "authors": [
+    "劉元豪(Liou Yuan-hao)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "195-237",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00006",
+   "title": "臺南市釋教壇師承系譜與經營現況初探",
+   "authors": [
+    "楊士賢(Yang Shih-hsien)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "239-282",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202406190013-00007",
+   "title": "文化資產審議新範例：文化部指定國定古蹟的嘉義城隍廟",
+   "authors": [
+    "褚填正(Chu Tien-cheng)"
+   ],
+   "volIssue": "224期",
+   "date": "2024 / 06",
+   "pages": "283-319",
+   "fulltext": true,
+   "issueLabel": "224期 (2024/06)",
+   "issueID": "N202406190013"
+  },
+  {
+   "docId": "10251383-N202403280014-00001",
+   "title": "調意曲與早期琴調的音樂性質",
+   "authors": [
+    "孫俊彥(Sun Chun-yen)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "1-50",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202403280014-00002",
+   "title": "清代嘉慶年間以來廣東「粵謳」的流變軌跡：詩文日記、唱詞曲譜與聲音材料的綜合性研究",
+   "authors": [
+    "程美寶(Ching May Bo)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "51-104",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202403280014-00003",
+   "title": "閻王、三姑、白蛇傳：戰後地下黨的「工人政治戲劇」（1949-1950s）",
+   "authors": [
+    "林傳凱(Lin Chuan-kai)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "105-151",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202403280014-00004",
+   "title": "異鄉人成神：臺南地區日本人成神的信仰與傳播研究",
+   "authors": [
+    "李淑如(Lee Shu-ju)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "153-214",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202403280014-00005",
+   "title": "張東初與廿世紀越南明師道德濟宗的發展：以人物為中心的探討",
+   "authors": [
+    "鍾雲鶯(Chung Yun-ying)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "215-275",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202403280014-00006",
+   "title": "臺南關大駕初探：以西羅殿與米街忠澤堂大駕為例",
+   "authors": [
+    "阮偉華(Juan Wei-hua)"
+   ],
+   "volIssue": "223期",
+   "date": "2024 / 03",
+   "pages": "277-318",
+   "fulltext": true,
+   "issueLabel": "223期 (2024/03)",
+   "issueID": "N202403280014"
+  },
+  {
+   "docId": "10251383-N202312230005-00001",
+   "title": "民間信仰、宗教經典與地方社會：紀念歐大年教授專輯：前言",
+   "authors": [
+    "趙昕毅(Chao Shin-yi)",
+    "王見川(Wang Chien-chuan)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00002",
+   "title": "Xucun, a Brief History",
+   "authors": [
+    "John Lagerwey(勞格文)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "19-61",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00003",
+   "title": "現存安龍謝土儀式資料中所見的普庵信仰探索：以「化九良」為考察線索",
+   "authors": [
+    "伍小劼(Wu Xiaojie)",
+    "劉芸(Liu Yun)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "63-95",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00004",
+   "title": "「聖地」的塑造：近代青幫組織中的羅教記憶及其空間化",
+   "authors": [
+    "陳明華(Chen Minghua)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "97-134",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00005",
+   "title": "Consuming Rice Cakes, Sailing to Salvation: The Taiwanese Longhuapai Initiation Festival and the Question of Buddhist Orientations among Zhaijiao (Vegetarian Sects)",
+   "authors": [
+    "Nikolas Broy(百可思)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "135-185",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00006",
+   "title": "當代冀東南民間教派的儀式專家：以經卷為中心的研究",
+   "authors": [
+    "徐天基(Xu Tianji)",
+    "羅丹(Luo Dan)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "187-229",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00007",
+   "title": "流動的神譜：以山西洪洞五道將軍為個案",
+   "authors": [
+    "王堯(Wang Yao)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "231-285",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202312230005-00008",
+   "title": "性別與親密：泰山娘娘相關寶卷中的人神關係",
+   "authors": [
+    "馬竹君(Ma Zhujun)"
+   ],
+   "volIssue": "222期",
+   "date": "2023 / 12",
+   "pages": "287-331",
+   "fulltext": true,
+   "issueLabel": "222期 (2023/12)",
+   "issueID": "N202312230005"
+  },
+  {
+   "docId": "10251383-N202309280018-00001",
+   "title": "民間信仰、宗教經典與地方社會：紀念歐大年教授專輯：前言",
+   "authors": [
+    "趙昕毅(Chao Shin-yi)",
+    "王見川(Wang Chien-chuan)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "1-11+13-29",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00002",
+   "title": "「筆籙」鉤沉：明清扶乩的一個子類型",
+   "authors": [
+    "胡劼辰(Hu Jiechen)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "31-80",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00003",
+   "title": "近代江南鄉紳的扶乩結社與地方社會：以川沙道善壇為中心的考察（1895-1945）",
+   "authors": [
+    "張玉清(Zhang Yuqing)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "81-136",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00004",
+   "title": "維新時代的「脫魂術」：近代雲南遊冥類鸞書中的文體、技術和劫運觀",
+   "authors": [
+    "楊春宇(Yang Chunyu)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "137-186",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00005",
+   "title": "《大乘開香作用科文》與《五部六冊》寶卷的流傳",
+   "authors": [
+    "李志鴻(Li Zhihong)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "187-220",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00006",
+   "title": "《通天混海圖》析論",
+   "authors": [
+    "宋軍(Song Jun)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "221-272",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202309280018-00007",
+   "title": "「教派化」與「民間信仰化」之間：戰後淡水行忠堂之變遷與新形態",
+   "authors": [
+    "江趙展(Chiang Chao-chan)"
+   ],
+   "volIssue": "221期",
+   "date": "2023 / 09",
+   "pages": "273-333",
+   "fulltext": true,
+   "issueLabel": "221期 (2023/09)",
+   "issueID": "N202309280018"
+  },
+  {
+   "docId": "10251383-N202306210008-00001",
+   "title": "飲食模式、物性與文化：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "1-10",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00002",
+   "title": "家屋、火塘與共食：四川嘉絨藏人家屋中的飲食與空間分布模式",
+   "authors": [
+    "王廷宇(Wang Tingyu)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "11-62",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00003",
+   "title": "打造「經典客家菜」：飲食敘事、族群政策與臺灣客家意象之建構（2000年迄今）",
+   "authors": [
+    "張正霖(Chang Cheng-lin)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "63-115",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00004",
+   "title": "從身體實踐到社群認同：花蓮大陳女性的日常生活「食」作",
+   "authors": [
+    "莊梓忻(Chuang Tzu-hsin)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "117-166",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00005",
+   "title": "試論「商品、生產及消費的循環」：以「拉麵」發展史爲例",
+   "authors": [
+    "凃燕如(Tu Yen-ju)",
+    "雷頴然(Lui Wing Yin)",
+    "藤岡達磨(Fujioka Tatsuma)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "167-202",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00006",
+   "title": "敕水禁壇比較研究：以贛東北上饒地方道教爲中心",
+   "authors": [
+    "林振源(Lin Chen-yuan)",
+    "呂燁(Lü Ye)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "203-260",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202306210008-00007",
+   "title": "「祠墓合一」的文化景觀：都市化歷程中的新加坡雙龍山五屬義祠之變遷",
+   "authors": [
+    "江柏煒(Chiang Bo-wei)"
+   ],
+   "volIssue": "220期",
+   "date": "2023 / 06",
+   "pages": "261-305",
+   "fulltext": true,
+   "issueLabel": "220期 (2023/06)",
+   "issueID": "N202306210008"
+  },
+  {
+   "docId": "10251383-N202303300011-00001",
+   "title": "飲食模式、物性與文化：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "1-10",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00002",
+   "title": "可食與不可食的分類建構：以荖葉飲食與食安為例",
+   "authors": [
+    "張育銓(Chang Yu-chuan)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "11-67",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00003",
+   "title": "刺激與調和：初探日本飲食中的「辣」",
+   "authors": [
+    "陳建源(Chen Chien-yuan)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "69-116",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00004",
+   "title": "涼茶在民間：香港涼茶的傳承與發展",
+   "authors": [
+    "張展鴻(Cheung Chin Hung Sidney)",
+    "田穎儀(Tin Wing Yee Mia)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "117-143",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00005",
+   "title": "消失又重現於生活中的毛蟹：溪流、人與水生生物的互動關係",
+   "authors": [
+    "鄭肇祺(Cheng Siu-kei Eric)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "145-192",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00006",
+   "title": "近代臺灣柴魚的生產與消費：以臺東為核心",
+   "authors": [
+    "曾齡儀(Tseng Lin-yi)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "193-230",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202303300011-00007",
+   "title": "皇權下的聖道：日治後期中部地區的鸞堂網絡與時代適應—以《皇民奉公經附孝經》為中心",
+   "authors": [
+    "李偉呈(Li Wei-chen)"
+   ],
+   "volIssue": "219期",
+   "date": "2023 / 03",
+   "pages": "231-278",
+   "fulltext": true,
+   "issueLabel": "219期 (2023/03)",
+   "issueID": "N202303300011"
+  },
+  {
+   "docId": "10251383-N202301120011-00001",
+   "title": "從城鎮、國家到世界：戲戲節的美學碰撞與文化政治專輯：前言",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-N202301120011-00002",
+   "title": "藝術節在民間：以「亞洲廣場」藝術節與趙川「草台班」為討論核心",
+   "authors": [
+    "許仁豪(Hsu Jen-hao Walter)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "7-57",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-N202301120011-00003",
+   "title": "《層中隙》滲透臺南藝術節城市舞臺的文化治理與空間政治",
+   "authors": [
+    "厲復平(Lee Fu-ping)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "59-112",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-N202301120011-00004",
+   "title": "歌仔戲現代劇場化的全面演練：試探幾種藝術節機制與場域對新編歌仔戲的影響",
+   "authors": [
+    "傅裕惠(Fu Yu-hui)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "113-159",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-N202301120011-00005",
+   "title": "消逝、轉化與再生產：以日本鹿兒島南薩摩林家媽祖信仰文化為例",
+   "authors": [
+    "劉智豪(Liu Chih-hao)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "161-187",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-N202301120011-00006",
+   "title": "「家將坐炮」魅力的轉向：以八家將團嘉義振祐堂為例",
+   "authors": [
+    "劉祐誠(Liou You-cheng)"
+   ],
+   "volIssue": "218期",
+   "date": "2022 / 12",
+   "pages": "189-231",
+   "fulltext": true,
+   "issueLabel": "218期 (2022/12)",
+   "issueID": "N202301120011"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-1-26",
+   "title": "人觀、歷史與服飾：導論",
+   "authors": [
+    "何兆華(Ho Zhaohua)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "1-26",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-27-65",
+   "title": "織織不倦：烏來泰雅族服的經緯之間",
+   "authors": [
+    "江桂珍(Chiang Kuei-chen)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "27-65",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-67-104",
+   "title": "臺灣刺繡神明衣之流變與人觀",
+   "authors": [
+    "王瀞苡(Wang Ching-yi)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "67-104",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-105-159",
+   "title": "排灣族平織技藝民族誌：以平和（Piyuma）部落及古樓（Kuljaljau）部落為中心",
+   "authors": [
+    "余明旂(Semuenuq Paljaljuman)",
+    "張至善(Chang Chi-shan)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "105-159",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-161-200",
+   "title": "陞壇轉經：道教誦經儀式的形成與發展",
+   "authors": [
+    "張超然(Chang Chao-jan)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "161-200",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202209-202209300010-202209300010-201-249",
+   "title": "先天道在越南的傳承與發展：以明師道南雅堂的文獻為考察核心",
+   "authors": [
+    "鍾雲鶯(Chung Yun-ying)"
+   ],
+   "volIssue": "217期",
+   "date": "2022 / 09",
+   "pages": "201-249",
+   "fulltext": true,
+   "issueLabel": "217期 (2022/09)",
+   "issueID": "202209300010"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-1-26",
+   "title": "人觀、歷史與服飾：導論",
+   "authors": [
+    "何兆華(Ho Zhaohua)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "1-26",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-27-88",
+   "title": "從二十世紀初舊照片中的服飾來談三個四川西北嘉絨貴族家庭的服飾",
+   "authors": [
+    "王廷宇(Wang Tingyu)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "27-88",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-89-108",
+   "title": "《快雪時晴》戲曲服裝設計之符號隱喻及詮釋",
+   "authors": [
+    "王怡美(Wang Yi-meei)",
+    "宋同正(Sung Tung-jung)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "89-108",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-109-139",
+   "title": "晚清戲曲團花圖案的使用與特殊性",
+   "authors": [
+    "郭昭吟(Kuo Chao-yin)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "109-139",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-141-200",
+   "title": "馬來西亞職業歌仔戲戲班在困境中的經營策略與劇種形塑：從「新麒麟」到「筱麒麟」",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "141-200",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202206-202207050009-202207050009-201-254",
+   "title": "上海報刊中的寧波崑班演出記錄查考（1898-1915）",
+   "authors": [
+    "蔣瑜娟(Chiang Yu-chuan)"
+   ],
+   "volIssue": "216期",
+   "date": "2022 / 06",
+   "pages": "201-254",
+   "fulltext": true,
+   "issueLabel": "216期 (2022/06)",
+   "issueID": "202207050009"
+  },
+  {
+   "docId": "10251383-202203-202204010015-202204010015-1-42",
+   "title": "南朝吳興項羽信仰的神蹟文本製作與國家地方之互動",
+   "authors": [
+    "何維剛(Ho Wei-kang)"
+   ],
+   "volIssue": "215期",
+   "date": "2022 / 03",
+   "pages": "1-42",
+   "fulltext": true,
+   "issueLabel": "215期 (2022/03)",
+   "issueID": "202204010015"
+  },
+  {
+   "docId": "10251383-202203-202204010015-202204010015-43-83",
+   "title": "明清二形人的情慾困境與宗教解脫",
+   "authors": [
+    "張琬容(Zhang Wanrong)"
+   ],
+   "volIssue": "215期",
+   "date": "2022 / 03",
+   "pages": "43-83",
+   "fulltext": true,
+   "issueLabel": "215期 (2022/03)",
+   "issueID": "202204010015"
+  },
+  {
+   "docId": "10251383-202203-202204010015-202204010015-85-127",
+   "title": "往生歷程中音聲與影像感知之動態建構與破除：以諾那華藏精舍的中陰共修法會為例",
+   "authors": [
+    "劉延芳(Liou Yanfang)"
+   ],
+   "volIssue": "215期",
+   "date": "2022 / 03",
+   "pages": "85-127",
+   "fulltext": true,
+   "issueLabel": "215期 (2022/03)",
+   "issueID": "202204010015"
+  },
+  {
+   "docId": "10251383-202203-202204010015-202204010015-129-179",
+   "title": "民歌採集運動之餘韻：從1967年中國民歌比賽與全省客家民謠比賽談起",
+   "authors": [
+    "鍾繼儀(Chung Chi-yi)"
+   ],
+   "volIssue": "215期",
+   "date": "2022 / 03",
+   "pages": "129-179",
+   "fulltext": true,
+   "issueLabel": "215期 (2022/03)",
+   "issueID": "202204010015"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-1-13",
+   "title": "SPECIAL ISSUE ON HAKKA RELIGIOUS CULTURE: Introduction",
+   "authors": [
+    "Paul R. Katz"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "1-13",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-15-20",
+   "title": "客家宗教文化專輯：導論",
+   "authors": [
+    "林桂玲(Lin Kuei-ling)"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "15-20",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-21-95",
+   "title": "臺中東勢客家釋教的齋醮傳承：以龍華佛教會瑞德壇為核心",
+   "authors": [
+    "劉懷仁(Liou Huai-ren)"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "21-95",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-97-148",
+   "title": "信仰與族群關係：以馬來西亞仙四師爺信仰為例",
+   "authors": [
+    "張翰璧(Chang Han-pi)",
+    "白偉權(Pek Wee Chuen)",
+    "蔡芬芳(Tsai Fen-fang)"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "97-148",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-149-195",
+   "title": "當信仰超越族群：1907年吉隆坡仙四師爺宮廟產訴訟案與當地華人權力結構的轉變",
+   "authors": [
+    "黃佩雯(Ng Pui Bun)"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "149-195",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202112-202201030018-202201030018-197-271",
+   "title": "清代以來浙南石倉客家移民聚落的象徵世界",
+   "authors": [
+    "巫能昌(Wu Nengchang)"
+   ],
+   "volIssue": "214期",
+   "date": "2021 / 12",
+   "pages": "197-271",
+   "fulltext": true,
+   "issueLabel": "214期 (2021/12)",
+   "issueID": "202201030018"
+  },
+  {
+   "docId": "10251383-202109-202110010018-202110010018-1-47",
+   "title": "界域的文化動能：冷戰前期仰光唐人街的電影跨國網絡及其影響",
+   "authors": [
+    "呂心純(Lu Tasaw Hsin-chun)"
+   ],
+   "volIssue": "213期",
+   "date": "2021 / 09",
+   "pages": "1-47",
+   "fulltext": true,
+   "issueLabel": "213期 (2021/09)",
+   "issueID": "202110010018"
+  },
+  {
+   "docId": "10251383-202109-202110010018-202110010018-49-95",
+   "title": "聲響技術的跨域交纏：臺灣國語流行音樂錄音室研究初探",
+   "authors": [
+    "程明(Cheng Ming)"
+   ],
+   "volIssue": "213期",
+   "date": "2021 / 09",
+   "pages": "49-95",
+   "fulltext": true,
+   "issueLabel": "213期 (2021/09)",
+   "issueID": "202110010018"
+  },
+  {
+   "docId": "10251383-202109-202110010018-202110010018-97-144",
+   "title": "道德與秩序：當代泰國一貫道教團發展的教外張力與教內分歧",
+   "authors": [
+    "林育生(Lin Yu-sheng)"
+   ],
+   "volIssue": "213期",
+   "date": "2021 / 09",
+   "pages": "97-144",
+   "fulltext": true,
+   "issueLabel": "213期 (2021/09)",
+   "issueID": "202110010018"
+  },
+  {
+   "docId": "10251383-202109-202110010018-202110010018-145-175",
+   "title": "臺灣歌仔冊編寫人「歌仔先」梁松林、蔡碖事蹟的考索與調查",
+   "authors": [
+    "柯榮三(Ko Jung-san)"
+   ],
+   "volIssue": "213期",
+   "date": "2021 / 09",
+   "pages": "145-175",
+   "fulltext": true,
+   "issueLabel": "213期 (2021/09)",
+   "issueID": "202110010018"
+  },
+  {
+   "docId": "10251383-202109-202110010018-202110010018-177-226",
+   "title": "江蘇常熟師娘現象的調查報告",
+   "authors": [
+    "陳泳超(Chen Yongchao)"
+   ],
+   "volIssue": "213期",
+   "date": "2021 / 09",
+   "pages": "177-226",
+   "fulltext": true,
+   "issueLabel": "213期 (2021/09)",
+   "issueID": "202110010018"
+  },
+  {
+   "docId": "10251383-202106-202107050013-202107050013-1-42",
+   "title": "甲必丹制度的現代變奏：以柔佛古廟遊神為個案",
+   "authors": [
+    "莊仁傑(Chong Ren Jie Henry)"
+   ],
+   "volIssue": "212期",
+   "date": "2021 / 06",
+   "pages": "1-42",
+   "fulltext": true,
+   "issueLabel": "212期 (2021/06)",
+   "issueID": "202107050013"
+  },
+  {
+   "docId": "10251383-202106-202107050013-202107050013-43-107",
+   "title": "Affiliating to a Communal Temple via the Statue of a Deity: Firecracker Societies in Macau, 1900-1966",
+   "authors": [
+    "朱天舒(Zhu Tianshu)"
+   ],
+   "volIssue": "212期",
+   "date": "2021 / 06",
+   "pages": "43-107",
+   "fulltext": true,
+   "issueLabel": "212期 (2021/06)",
+   "issueID": "202107050013"
+  },
+  {
+   "docId": "10251383-202106-202107050013-202107050013-109-160",
+   "title": "瓊州火雷聖娘信仰探源",
+   "authors": [
+    "鄭翔鵬(Zheng Xiang Peng)",
+    "張曉威(Chong Siou Wei)"
+   ],
+   "volIssue": "212期",
+   "date": "2021 / 06",
+   "pages": "109-160",
+   "fulltext": true,
+   "issueLabel": "212期 (2021/06)",
+   "issueID": "202107050013"
+  },
+  {
+   "docId": "10251383-202106-202107050013-202107050013-161-214",
+   "title": "文化資產與國族想像：臺南府城日治時期古蹟詮釋中的時空再現",
+   "authors": [
+    "姚明俐(Yao Ming-li)"
+   ],
+   "volIssue": "212期",
+   "date": "2021 / 06",
+   "pages": "161-214",
+   "fulltext": true,
+   "issueLabel": "212期 (2021/06)",
+   "issueID": "202107050013"
+  },
+  {
+   "docId": "10251383-202103-202103290008-202103290008-1-8",
+   "title": "製作文化：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "211期",
+   "date": "2021 / 03",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "211期 (2021/03)",
+   "issueID": "202103290008"
+  },
+  {
+   "docId": "10251383-202103-202103290008-202103290008-9-57",
+   "title": "無形文化資產的再生產：以嘉義城隍廟九大柱中元普度為例",
+   "authors": [
+    "江志宏(Chiang Chih-hung)"
+   ],
+   "volIssue": "211期",
+   "date": "2021 / 03",
+   "pages": "9-57",
+   "fulltext": true,
+   "issueLabel": "211期 (2021/03)",
+   "issueID": "202103290008"
+  },
+  {
+   "docId": "10251383-202103-202103290008-202103290008-59-116",
+   "title": "無形文化遺產的永續發展：臺灣客家八音的生態變遷與樂人、制度調節者、機構主事者的遺產化適應",
+   "authors": [
+    "許馨文(Hsu Hsin-wen)"
+   ],
+   "volIssue": "211期",
+   "date": "2021 / 03",
+   "pages": "59-116",
+   "fulltext": true,
+   "issueLabel": "211期 (2021/03)",
+   "issueID": "202103290008"
+  },
+  {
+   "docId": "10251383-202103-202103290008-202103290008-117-165",
+   "title": "誰的「常民」？臺灣竹工藝文化資產的成形及其課題",
+   "authors": [
+    "江明親(Chiang Min-chin Kay)"
+   ],
+   "volIssue": "211期",
+   "date": "2021 / 03",
+   "pages": "117-165",
+   "fulltext": true,
+   "issueLabel": "211期 (2021/03)",
+   "issueID": "202103290008"
+  },
+  {
+   "docId": "10251383-202103-202103290008-202103290008-167-224",
+   "title": "越南民間教派「四恩孝義」經典的產生",
+   "authors": [
+    "鍾雲鶯(Chung Yun-ying)"
+   ],
+   "volIssue": "211期",
+   "date": "2021 / 03",
+   "pages": "167-224",
+   "fulltext": true,
+   "issueLabel": "211期 (2021/03)",
+   "issueID": "202103290008"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-1-8",
+   "title": "製作文化：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-9-63",
+   "title": "祭儀地景的多重記憶與環境偏移：南勢阿美族里漏部落船祭活動變遷與文化製作",
+   "authors": [
+    "李宜澤(Lee Yi-tze)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "9-63",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-65-104",
+   "title": "走上回家的山徑，讓石板家屋升起煙來：由一趟臺東布農社群「尋根之旅」思考「文化資產」的認同與實踐",
+   "authors": [
+    "謝博剛(Hsieh Po-kang)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "65-104",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-105-143",
+   "title": "土氣、洋氣還是接地氣？重新「觀看」時尚伸展臺上的民族服裝與族群服飾",
+   "authors": [
+    "何兆華(Ho Zhaohua)",
+    "王廷宇(Wang Tingyu)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "105-143",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-145-196",
+   "title": "都蘭阿美人的文化再生產：以護衛舞的傘與矛為例",
+   "authors": [
+    "林芳誠(Lin Fang-chen)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "145-196",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202012-202101040017-202101040017-197-263",
+   "title": "【玉連環】五箏譜之演奏及其文本間性探析",
+   "authors": [
+    "張儷瓊(Chang Li-chiung)"
+   ],
+   "volIssue": "210期",
+   "date": "2020 / 12",
+   "pages": "197-263",
+   "fulltext": true,
+   "issueLabel": "210期 (2020/12)",
+   "issueID": "202101040017"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-1-6",
+   "title": "戲曲的傳統再造與當代性專輯：前言",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "1-6",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-7-65",
+   "title": "《王魁負桂英》的當代映象：以京劇、豫劇、歌仔戲編演為例",
+   "authors": [
+    "張啟豐(Chang Chi-feng)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "7-65",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-67-110",
+   "title": "九○年代以來歌仔戲「正典化」的美學現象",
+   "authors": [
+    "傅裕惠(Fu Yu-hui)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "67-110",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-111-129",
+   "title": "電視歌仔戲「新調創作」的傳統、承襲與轉化：以劉文亮作品《天龍傳奇》為例",
+   "authors": [
+    "陳歆翰(Chen Hsin-han)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "111-129",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-131-168",
+   "title": "崑劇與日本傳統戲曲的當代跨劇種展演：以1998年至2018年的日本演出為例",
+   "authors": [
+    "林和君(Lin Ho-chun)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "131-168",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-169-209",
+   "title": "論新編佛教崑劇《未生怨》的阿闍世題材和寺院演出意義",
+   "authors": [
+    "司徒秀英(SI TOU Sau Ieng)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "169-209",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202009-202010060014-202010060014-211-274",
+   "title": "織藝與織憶：花蓮縣卓溪鄉賽德克族Duta群編織技藝與記憶的日常實踐",
+   "authors": [
+    "賴淑娟(Lai Shu-chuan)"
+   ],
+   "volIssue": "209期",
+   "date": "2020 / 09",
+   "pages": "211-274",
+   "fulltext": true,
+   "issueLabel": "209期 (2020/09)",
+   "issueID": "202010060014"
+  },
+  {
+   "docId": "10251383-202006-202007070017-202007070017-1-89",
+   "title": "臺閩地區王爺信仰儀式中的王府行儀初探",
+   "authors": [
+    "謝國興(Hsieh Kuo-hsing)"
+   ],
+   "volIssue": "208期",
+   "date": "2020 / 06",
+   "pages": "1-89",
+   "fulltext": true,
+   "issueLabel": "208期 (2020/06)",
+   "issueID": "202007070017"
+  },
+  {
+   "docId": "10251383-202006-202007070017-202007070017-91-185",
+   "title": "廟會、文本與傳說：近代江南的蠶花神信仰",
+   "authors": [
+    "劉文星(Liu Wenxing)"
+   ],
+   "volIssue": "208期",
+   "date": "2020 / 06",
+   "pages": "91-185",
+   "fulltext": true,
+   "issueLabel": "208期 (2020/06)",
+   "issueID": "202007070017"
+  },
+  {
+   "docId": "10251383-202006-202007070017-202007070017-187-274",
+   "title": "藏族古樂Shon的歷史圖景與當代傳存：基於西藏阿裡地區「古格宣」的人類學考察",
+   "authors": [
+    "任贇娟(Ren Yunjuan)"
+   ],
+   "volIssue": "208期",
+   "date": "2020 / 06",
+   "pages": "187-274",
+   "fulltext": true,
+   "issueLabel": "208期 (2020/06)",
+   "issueID": "202007070017"
+  },
+  {
+   "docId": "10251383-202006-202007070017-202007070017-275-304",
+   "title": "福建佛教音樂「禪和曲」、「福州調」、「本地調」之意涵及其關係研究",
+   "authors": [
+    "周景春(Zhou Jingchun)"
+   ],
+   "volIssue": "208期",
+   "date": "2020 / 06",
+   "pages": "275-304",
+   "fulltext": true,
+   "issueLabel": "208期 (2020/06)",
+   "issueID": "202007070017"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-1-10",
+   "title": "民俗版畫的敘事與傳播專輯：前言",
+   "authors": [
+    "楊玉君(Yang Yujun)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "1-10",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-11-60",
+   "title": "楊柳青民俗版畫中的財富母題意義與轉換",
+   "authors": [
+    "楊玉君(Yang Yujun)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "11-60",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-61-110",
+   "title": "論白蛇戲曲年畫未見於今傳明清傳奇的「劇情」",
+   "authors": [
+    "林芷瑩(Lin Chih-ying)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "61-110",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-111-172",
+   "title": "清代北方版畫貿易網絡",
+   "authors": [
+    "賴惠敏(Lai Hui-min)",
+    "王中奇(Wang Chung-chi)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "111-172",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-173-213",
+   "title": "「照廈門原本改良」：博德利圖書館藏閩南歌仔冊封面圖象及其出版網絡",
+   "authors": [
+    "柯榮三(Ko Jung-san)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "173-213",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-215-253",
+   "title": "紙馬製作技藝及使用習俗的傳承分析",
+   "authors": [
+    "王坤(Wang Kun)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "215-253",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-202003-202003310010-202003310010-255-299",
+   "title": "俄羅斯漢學家阿理克1912年赴華收集的民間宗教文書及圖象",
+   "authors": [
+    "葉可佳(Ekaterina Zavidovskaia)",
+    "波莉娜(Polina Rud)"
+   ],
+   "volIssue": "207期",
+   "date": "2020 / 03",
+   "pages": "255-299",
+   "fulltext": true,
+   "issueLabel": "207期 (2020/03)",
+   "issueID": "202003310010"
+  },
+  {
+   "docId": "10251383-201912-201912310009-201912310009-1-27",
+   "title": "SPECIAL ISSUE ON THE EMERGENCE OF A TEMPLE-CENTRIC SOCIETY: Introduction",
+   "authors": [
+    "勞格文(John Lagerwey)",
+    "楊玉君"
+   ],
+   "volIssue": "206期",
+   "date": "2019 / 12",
+   "pages": "1-27",
+   "fulltext": true,
+   "issueLabel": "206期 (2019/12)",
+   "issueID": "201912310009"
+  },
+  {
+   "docId": "10251383-201912-201912310009-201912310009-29-80",
+   "title": "宋代以來山東的神親結構與地方社會變遷",
+   "authors": [
+    "任雅萱(Ren Yaxuan)"
+   ],
+   "volIssue": "206期",
+   "date": "2019 / 12",
+   "pages": "29-80",
+   "fulltext": true,
+   "issueLabel": "206期 (2019/12)",
+   "issueID": "201912310009"
+  },
+  {
+   "docId": "10251383-201912-201912310009-201912310009-81-114",
+   "title": "經久不衰的「輪祀圈」：閩西山區的一種神明崇拜模式",
+   "authors": [
+    "楊彥杰(Yang Yanjie)"
+   ],
+   "volIssue": "206期",
+   "date": "2019 / 12",
+   "pages": "81-114",
+   "fulltext": true,
+   "issueLabel": "206期 (2019/12)",
+   "issueID": "201912310009"
+  },
+  {
+   "docId": "10251383-201912-201912310009-201912310009-115-175",
+   "title": "Baojuan (Precious Scrolls) and Festivals in the Temples of Local Gods in Changshu, Jiangsu",
+   "authors": [
+    "白若思(Rostislav Berezkin)"
+   ],
+   "volIssue": "206期",
+   "date": "2019 / 12",
+   "pages": "115-175",
+   "fulltext": true,
+   "issueLabel": "206期 (2019/12)",
+   "issueID": "201912310009"
+  },
+  {
+   "docId": "10251383-201912-201912310009-201912310009-177-233",
+   "title": "《董永賣身葬父大孝全集》「上黨本」的發現、整理與研究",
+   "authors": [
+    "蘇航(Su Hang)",
+    "王潞偉(Wang Luwei)"
+   ],
+   "volIssue": "206期",
+   "date": "2019 / 12",
+   "pages": "177-233",
+   "fulltext": true,
+   "issueLabel": "206期 (2019/12)",
+   "issueID": "201912310009"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-1-27",
+   "title": "SPECIAL ISSUE ON THE EMERGENCE OF A TEMPLE-CENTRIC SOCIETY: Introduction",
+   "authors": [
+    "勞格文(John Lagerwey)",
+    "楊玉君"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "1-27",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-29-102",
+   "title": "The Emergence of a Temple-Centric Society",
+   "authors": [
+    "勞格文(John Lagerwey)"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "29-102",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-103-159",
+   "title": "The Rise of a ＂Temple-Centric＂ Society in Putian in the Song and Later Transformations of the Ritual Sphere",
+   "authors": [
+    "丁荷生(Kenneth Dean)",
+    "鄭振滿(Zheng Zhenman)"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "103-159",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-161-213",
+   "title": "The Rise of Northern Chinese Regional Temple Cults: A Case Study of the Worship of King Tang",
+   "authors": [
+    "田海(Barend J. ter Haar)"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "161-213",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-215-264",
+   "title": "隱形的無生老母：新加坡先天道宗教網絡與變遷",
+   "authors": [
+    "戚常卉(Chi Chang-hui)"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "215-264",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201909-201909260010-201909260010-265-312",
+   "title": "霹靂日系布袋戲：《Thunderbolt Fantasy東離劍遊紀》的演藝特質",
+   "authors": [
+    "吳明德(Wu Ming-te)"
+   ],
+   "volIssue": "205期",
+   "date": "2019 / 09",
+   "pages": "265-312",
+   "fulltext": true,
+   "issueLabel": "205期 (2019/09)",
+   "issueID": "201909260010"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-1-20",
+   "title": "SPECIAL ISSUE ON LOCAL RELIGION IN JIANGNAN: Introduction",
+   "authors": [
+    "高萬桑(Vincent Goossaert)",
+    "康豹(Paul R. Katz)",
+    "楊玉君"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-21-49",
+   "title": "宋元以來王江涇的商業、移民與地方信仰",
+   "authors": [
+    "王健(Wang Jian)"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "21-49",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-51-98",
+   "title": "宋元以來江蘇常熟真武崇拜考",
+   "authors": [
+    "巫能昌(Wu Nengchang)"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "51-98",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-99-145",
+   "title": "潘曾沂的信仰與生活世界：兼論清中葉江南的居士佛教",
+   "authors": [
+    "邵佳德(Shao Jiade)"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "99-145",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-147-195",
+   "title": "船與岸：東太湖流域民間信仰中的兩種傳統",
+   "authors": [
+    "朱明川(Zhu Mingchuan)"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "147-195",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201906-201906240012-201906240012-197-250",
+   "title": "張家港地區薦亡法會儀式與宣卷調查報告",
+   "authors": [
+    "李淑如(Lee Shu-ju)"
+   ],
+   "volIssue": "204期",
+   "date": "2019 / 06",
+   "pages": "197-250",
+   "fulltext": true,
+   "issueLabel": "204期 (2019/06)",
+   "issueID": "201906240012"
+  },
+  {
+   "docId": "10251383-201903-201904290011-201904290011-1-33",
+   "title": "學校教育中的傳統音樂和世界音樂：導言",
+   "authors": [
+    "王櫻芬(Wang Ying-fen)"
+   ],
+   "volIssue": "203期",
+   "date": "2019 / 03",
+   "pages": "1-33",
+   "fulltext": true,
+   "issueLabel": "203期 (2019/03)",
+   "issueID": "201904290011"
+  },
+  {
+   "docId": "10251383-201903-201904290011-201904290011-35-72",
+   "title": "A Drum, a Gong, and a Lion: Three Decades of Culturally Diverse Music Education in International and Canadian Schools",
+   "authors": [
+    "珍妮佛．M．瓦爾登(Jennifer M. Walden)"
+   ],
+   "volIssue": "203期",
+   "date": "2019 / 03",
+   "pages": "35-72",
+   "fulltext": true,
+   "issueLabel": "203期 (2019/03)",
+   "issueID": "201904290011"
+  },
+  {
+   "docId": "10251383-201903-201904290011-201904290011-73-110",
+   "title": "Traditional Music and World Music in Japanese School Education",
+   "authors": [
+    "小塩さとみ(Oshio Satomi)"
+   ],
+   "volIssue": "203期",
+   "date": "2019 / 03",
+   "pages": "73-110",
+   "fulltext": true,
+   "issueLabel": "203期 (2019/03)",
+   "issueID": "201904290011"
+  },
+  {
+   "docId": "10251383-201903-201904290011-201904290011-111-162",
+   "title": "高等教育體制下的北管傳習：以國立臺北藝術大學傳統音樂學系北管教學實踐為例",
+   "authors": [
+    "潘汝端(Pan Ju-tuan)"
+   ],
+   "volIssue": "203期",
+   "date": "2019 / 03",
+   "pages": "111-162",
+   "fulltext": true,
+   "issueLabel": "203期 (2019/03)",
+   "issueID": "201904290011"
+  },
+  {
+   "docId": "10251383-201903-201904290011-201904290011-163-197",
+   "title": "結「結」與「解」結：鹿港「送肉粽」儀式的探討",
+   "authors": [
+    "黃萍瑛(Huang Ping-ying)"
+   ],
+   "volIssue": "203期",
+   "date": "2019 / 03",
+   "pages": "163-197",
+   "fulltext": true,
+   "issueLabel": "203期 (2019/03)",
+   "issueID": "201904290011"
+  },
+  {
+   "docId": "10251383-201812-201812280009-201812280009-1-58",
+   "title": "金堂家鄉、玄關自性與歸鄉之道：齋教金堂派的教名、教旨及修持方法考探",
+   "authors": [
+    "蕭進銘(Hsiao Chin-ming)"
+   ],
+   "volIssue": "202期",
+   "date": "2018 / 12",
+   "pages": "1-58",
+   "fulltext": true,
+   "issueLabel": "202期 (2018/12)",
+   "issueID": "201812280009"
+  },
+  {
+   "docId": "10251383-201812-201812280009-201812280009-59-131",
+   "title": "庶民美學的傳遞、轉化與創造：新加坡職業歌仔戲講戲人陳美英的「臺數」編劇",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "202期",
+   "date": "2018 / 12",
+   "pages": "59-131",
+   "fulltext": true,
+   "issueLabel": "202期 (2018/12)",
+   "issueID": "201812280009"
+  },
+  {
+   "docId": "10251383-201812-201812280009-201812280009-133-179",
+   "title": "「南麒北馬」商業競爭之表演藝術策略：以京劇鼎盛期（1917-1938）為例",
+   "authors": [
+    "李湉茵(Lee Tien-yin)"
+   ],
+   "volIssue": "202期",
+   "date": "2018 / 12",
+   "pages": "133-179",
+   "fulltext": true,
+   "issueLabel": "202期 (2018/12)",
+   "issueID": "201812280009"
+  },
+  {
+   "docId": "10251383-201812-201812280009-201812280009-181-219",
+   "title": "海外覓鄉音：檳城福建歌謠調查及其在地記憶",
+   "authors": [
+    "黃文車(Huang Wen-chu)"
+   ],
+   "volIssue": "202期",
+   "date": "2018 / 12",
+   "pages": "181-219",
+   "fulltext": true,
+   "issueLabel": "202期 (2018/12)",
+   "issueID": "201812280009"
+  },
+  {
+   "docId": "10251383-201809-201809040005-201809040005-1-23",
+   "title": "亞太儀式、節慶與社會文化實踐：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "201期",
+   "date": "2018 / 09",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "201期 (2018/09)",
+   "issueID": "201809040005"
+  },
+  {
+   "docId": "10251383-201809-201809040005-201809040005-25-63",
+   "title": "民俗、藝能與文化資產：沖繩竹富島的當代儀式實踐",
+   "authors": [
+    "趙綺芳(Chao Chi-fang)"
+   ],
+   "volIssue": "201期",
+   "date": "2018 / 09",
+   "pages": "25-63",
+   "fulltext": true,
+   "issueLabel": "201期 (2018/09)",
+   "issueID": "201809040005"
+  },
+  {
+   "docId": "10251383-201809-201809040005-201809040005-65-100",
+   "title": "香港潮僑盂蘭勝會的「申儀」與潮屬社群的重建",
+   "authors": [
+    "呂永昇(Lui Wing Sing)"
+   ],
+   "volIssue": "201期",
+   "date": "2018 / 09",
+   "pages": "65-100",
+   "fulltext": true,
+   "issueLabel": "201期 (2018/09)",
+   "issueID": "201809040005"
+  },
+  {
+   "docId": "10251383-201809-201809040005-201809040005-101-167",
+   "title": "神在此間：浙江鄉村醮儀召請科儀本中的空間觀念折衝",
+   "authors": [
+    "屈嘯宇(Qu Xiaoyu)",
+    "彭連生(Peng Liansheng)"
+   ],
+   "volIssue": "201期",
+   "date": "2018 / 09",
+   "pages": "101-167",
+   "fulltext": true,
+   "issueLabel": "201期 (2018/09)",
+   "issueID": "201809040005"
+  },
+  {
+   "docId": "10251383-201809-201809040005-201809040005-169-225",
+   "title": "從《台灣鄉土交響曲》論許石民歌採集與音樂記錄脈絡",
+   "authors": [
+    "徐玫玲(Shyu Mei-ling)"
+   ],
+   "volIssue": "201期",
+   "date": "2018 / 09",
+   "pages": "169-225",
+   "fulltext": true,
+   "issueLabel": "201期 (2018/09)",
+   "issueID": "201809040005"
+  },
+  {
+   "docId": "10251383-201806-201807310010-201807310010-1-23",
+   "title": "亞太儀式、節慶與社會文化實踐：導論",
+   "authors": [
+    "王嵩山(Wang Sung-shan)"
+   ],
+   "volIssue": "200期",
+   "date": "2018 / 06",
+   "pages": "1-23",
+   "fulltext": true,
+   "issueLabel": "200期 (2018/06)",
+   "issueID": "201807310010"
+  },
+  {
+   "docId": "10251383-201806-201807310010-201807310010-25-101",
+   "title": "是傳統還是創新？儀式、性別階序與規範實踐之間的阿美族都蘭婦女組militepuray",
+   "authors": [
+    "羅素玫(Lo Su-mei)"
+   ],
+   "volIssue": "200期",
+   "date": "2018 / 06",
+   "pages": "25-101",
+   "fulltext": true,
+   "issueLabel": "200期 (2018/06)",
+   "issueID": "201807310010"
+  },
+  {
+   "docId": "10251383-201806-201807310010-201807310010-103-136",
+   "title": "聖母意象與無形文化遺產：以都會阿美族「愛的饗宴」和「慶祝聖母升天節」祭典活動為例的分析",
+   "authors": [
+    "葉淑綾(Yeh Shu-ling)"
+   ],
+   "volIssue": "200期",
+   "date": "2018 / 06",
+   "pages": "103-136",
+   "fulltext": true,
+   "issueLabel": "200期 (2018/06)",
+   "issueID": "201807310010"
+  },
+  {
+   "docId": "10251383-201806-201807310010-201807310010-137-200",
+   "title": "文化遺產的束縛或護衛？以阿米斯音樂節的文化實踐與創造能動性為例",
+   "authors": [
+    "林芳誠(Lin Fang-chen)"
+   ],
+   "volIssue": "200期",
+   "date": "2018 / 06",
+   "pages": "137-200",
+   "fulltext": true,
+   "issueLabel": "200期 (2018/06)",
+   "issueID": "201807310010"
+  },
+  {
+   "docId": "10251383-201806-201807310010-201807310010-201-255",
+   "title": "蘇州上方山太姥信仰及儀式文藝的調查報告",
+   "authors": [
+    "陳泳超(Chen Yongchao)"
+   ],
+   "volIssue": "200期",
+   "date": "2018 / 06",
+   "pages": "201-255",
+   "fulltext": true,
+   "issueLabel": "200期 (2018/06)",
+   "issueID": "201807310010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-1-4",
+   "title": "「都市空間、物質文化與戲劇發展」專輯",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "1-4",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-5-76",
+   "title": "奇術縱橫三十年：第一代松旭齋天勝與天勝一座在臺灣的演出",
+   "authors": [
+    "簡秀珍(Jian Hsiu-jen)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "5-76",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-77-126",
+   "title": "商業機制‧區隔策略：臺灣布袋戲商業劇場1946-1960",
+   "authors": [
+    "陳龍廷(Chen Long-ting)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "77-126",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-127-176",
+   "title": "晚清上海演劇文化對北方戲曲生態的影響：以王鐘聲在天津的演出活動軌跡為例",
+   "authors": [
+    "游富凱(Yu Fu-kai)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "127-176",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-177-211",
+   "title": "香港戲曲史上的商業戲園（1865-1910）",
+   "authors": [
+    "容世誠(Yung Sai-shing)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "177-211",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-213-262",
+   "title": "香港摩登：五十年代都市發展與香港粵劇發展脈絡",
+   "authors": [
+    "鄭寧恩(Cheng Ling Yan)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "213-262",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201803-201803220010-201803220010-263-327",
+   "title": "潛跡與明蹤：清中葉《雷峰塔》傳奇演變新論",
+   "authors": [
+    "汪詩珮(Wang Shih-pe)"
+   ],
+   "volIssue": "199期",
+   "date": "2018 / 03",
+   "pages": "263-327",
+   "fulltext": true,
+   "issueLabel": "199期 (2018/03)",
+   "issueID": "201803220010"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-1-62",
+   "title": "目連救母、妙善救父、哪吒大戰李靖：父系社會中兒子與女兒的主體性建構",
+   "authors": [
+    "丁仁傑(Ting Jen-chieh)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "1-62",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-63-126",
+   "title": "混雜與交融的「傳統」想像：馬來西亞在地職業戲班「麒麟」閩劇團歌仔戲劇目及演出觀察",
+   "authors": [
+    "林鶴宜(Lin Ho-yi)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "63-126",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-127-164",
+   "title": "南北交加．東西交響：日治時期北港音樂子弟團的分類與發展",
+   "authors": [
+    "李孟勳(Li Meng-hsun)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "127-164",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-165-218",
+   "title": "遺址時空劇場：西安、羅馬遺址再現的比較研究",
+   "authors": [
+    "薛孟琪(Hsueh Meng-chi)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "165-218",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-219-262",
+   "title": "常民節氣觀",
+   "authors": [
+    "楊玉君(Yang Yujun)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "219-262",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201712-201712290009-201712290009-263-304",
+   "title": "「日光歌劇團」演藝現象述論",
+   "authors": [
+    "蔡欣欣(Tsai Hsin-hsin)"
+   ],
+   "volIssue": "198期",
+   "date": "2017 / 12",
+   "pages": "263-304",
+   "fulltext": true,
+   "issueLabel": "198期 (2017/12)",
+   "issueID": "201712290009"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-1-9",
+   "title": "前言",
+   "authors": [
+    "莊英章(Chuang Ying-chang)",
+    "陳叔倬(Chen Shu-juo)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-11-38",
+   "title": "Interview of Professor Arthur P. Wolf (1932-2015) on Stanford's Human Biology Program",
+   "authors": [
+    "葛希芝(Hill Gates)",
+    "陳叔倬(Chen Shu-juo)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "11-38",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-39-75",
+   "title": "The Prevalence of Smallpox and the Spread of Vaccination in Late Nineteenth Century Taiwan, Evidence from the Household Registers",
+   "authors": [
+    "邵式柏(John R. Shepherd)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "39-75",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-77-106",
+   "title": "日治時期新竹客家街庄招贅婚生子女從姓現象的分析",
+   "authors": [
+    "李俊豪(Li Chun-hao)",
+    "莊英章(Chuang Ying-chang)",
+    "楊文山(Yang Wen-shan)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "77-106",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-107-133",
+   "title": "當纏足遇上天然足：族群融合與社會壓力",
+   "authors": [
+    "葉高華(Yap Ko-hua)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "107-133",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-135-184",
+   "title": "閩客通婚與家戶社經地位關係之研究（1905-1945）：以福爾摩沙歷史職業與社會分層資料庫分析",
+   "authors": [
+    "林嘉琪(Lin Chia-chi)",
+    "楊文山(Yang Wen-shan)",
+    "褚齡霙(Chuu Ling-in)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "135-184",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201709-201709270013-201709270013-185-231",
+   "title": "從墓碑來看「土著化」現象：清代以來臺灣社會祖籍認同的變化",
+   "authors": [
+    "陳緯華(Chen Wei-hua)"
+   ],
+   "volIssue": "197期",
+   "date": "2017 / 09",
+   "pages": "185-231",
+   "fulltext": true,
+   "issueLabel": "197期 (2017/09)",
+   "issueID": "201709270013"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-1-14",
+   "title": "無形文化遺產與傳統表演藝術：導言",
+   "authors": [
+    "王櫻芬(Wang Ying-fen)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "1-14",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-15-83",
+   "title": "法制化體系的保障或切割？以都蘭阿美人的歌舞實踐為例談無形文化遺產法制化體系與原住民文化主體性的展現",
+   "authors": [
+    "林芳誠(Lin Fang-chen)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "15-83",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-85-145",
+   "title": "政府支持與國家認證的民俗節慶新傳統：「金門迎城隍」的重要民俗之路",
+   "authors": [
+    "唐蕙韻(Tang Hui-yun)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "85-145",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-147-217",
+   "title": "中國非物質文化遺產政策下廣西壯族「末倫」（moedlaenz）舞臺化展演的探討與反思",
+   "authors": [
+    "高雅寧(Kao Ya-ning)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "147-217",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-219-235",
+   "title": "陶瓷史上的金屬襯片修補術：從一件以鐵片修補的排灣族古陶壺談起",
+   "authors": [
+    "謝明良(Hsieh Ming-liang)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "219-235",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201706-201707270002-201707270002-237-298",
+   "title": "1920-30年代臺灣民宅彩繪中的當代圖像",
+   "authors": [
+    "蔡雅蕙(Tsai Ya-hui)",
+    "徐明福(Hsu Min-fu)"
+   ],
+   "volIssue": "196期",
+   "date": "2017 / 06",
+   "pages": "237-298",
+   "fulltext": true,
+   "issueLabel": "196期 (2017/06)",
+   "issueID": "201707270002"
+  },
+  {
+   "docId": "10251383-201703-201704190015-201704190015-25-78",
+   "title": "戲劇、宗教儀式與文化傳統：以近代廣西北部「三王」信仰為中心",
+   "authors": [
+    "黃瑜(Huang Yu)"
+   ],
+   "volIssue": "195期",
+   "date": "2017 / 03",
+   "pages": "25-78",
+   "fulltext": true,
+   "issueLabel": "195期 (2017/03)",
+   "issueID": "201704190015"
+  },
+  {
+   "docId": "10251383-201703-201704190015-201704190015-79-140",
+   "title": "山西、河北等地崔府君信仰的當代復興",
+   "authors": [
+    "王華艷(Wang Huayan)"
+   ],
+   "volIssue": "195期",
+   "date": "2017 / 03",
+   "pages": "79-140",
+   "fulltext": true,
+   "issueLabel": "195期 (2017/03)",
+   "issueID": "201704190015"
+  },
+  {
+   "docId": "10251383-201703-201704190015-201704190015-141-206",
+   "title": "清末噶瑪蘭基督徒與漢番社會網絡",
+   "authors": [
+    "王政文(Wang Cheng-wen)"
+   ],
+   "volIssue": "195期",
+   "date": "2017 / 03",
+   "pages": "141-206",
+   "fulltext": true,
+   "issueLabel": "195期 (2017/03)",
+   "issueID": "201704190015"
+  },
+  {
+   "docId": "10251383-201703-201704190015-201704190015-207-246",
+   "title": "自會黨盟誓到就職宣誓：近代華人立誓文化的一個側面",
+   "authors": [
+    "胡學丞(Hu Hsueh-chen)"
+   ],
+   "volIssue": "195期",
+   "date": "2017 / 03",
+   "pages": "207-246",
+   "fulltext": true,
+   "issueLabel": "195期 (2017/03)",
+   "issueID": "201704190015"
+  },
+  {
+   "docId": "10251383-201703-201704190015-201704190015-247-306",
+   "title": "權力、想像與再現：照相對近代中國宗教團體產生的影響",
+   "authors": [
+    "范純武(Fan Chun-wu)"
+   ],
+   "volIssue": "195期",
+   "date": "2017 / 03",
+   "pages": "247-306",
+   "fulltext": true,
+   "issueLabel": "195期 (2017/03)",
+   "issueID": "201704190015"
+  },
+  {
+   "docId": "10251383-201612-201701090006-201701090006-1-51",
+   "title": "1960年代「牡丹桂閩劇團」新加坡演出印記",
+   "authors": [
+    "蔡欣欣(Tsai Hsin-hsin)"
+   ],
+   "volIssue": "194期",
+   "date": "2016 / 12",
+   "pages": "1-51",
+   "fulltext": true,
+   "issueLabel": "194期 (2016/12)",
+   "issueID": "201701090006"
+  },
+  {
+   "docId": "10251383-201612-201701090006-201701090006-53-112",
+   "title": "閩南潮箏曲《出水蓮》的地緣背景及演奏流變：以張學海、饒寧新、林毛根三個演奏版本為例",
+   "authors": [
+    "張儷瓊(Chang Li-chiung)"
+   ],
+   "volIssue": "194期",
+   "date": "2016 / 12",
+   "pages": "53-112",
+   "fulltext": true,
+   "issueLabel": "194期 (2016/12)",
+   "issueID": "201701090006"
+  },
+  {
+   "docId": "10251383-201612-201701090006-201701090006-113-154",
+   "title": "道教的「受生填還」儀式：以四川《廣成儀制》為中心的考察",
+   "authors": [
+    "蔣馥蓁(Chiang Fu-chen)"
+   ],
+   "volIssue": "194期",
+   "date": "2016 / 12",
+   "pages": "113-154",
+   "fulltext": true,
+   "issueLabel": "194期 (2016/12)",
+   "issueID": "201701090006"
+  },
+  {
+   "docId": "10251383-201612-201701090006-201701090006-155-207",
+   "title": "臺灣客家研究中的東南亞視野",
+   "authors": [
+    "劉堉珊(Liu Yu-shan)"
+   ],
+   "volIssue": "194期",
+   "date": "2016 / 12",
+   "pages": "155-207",
+   "fulltext": true,
+   "issueLabel": "194期 (2016/12)",
+   "issueID": "201701090006"
+  },
+  {
+   "docId": "10251383-201609-201610270016-201610270016-1-9",
+   "title": "無形文化遺產與地方社會：導言",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "193期",
+   "date": "2016 / 09",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "193期 (2016/09)",
+   "issueID": "201610270016"
+  },
+  {
+   "docId": "10251383-201609-201610270016-201610270016-11-62",
+   "title": "跨文化表演的研究途徑：臺灣一場緬甸音樂表演的互為主體與多點民族誌研究",
+   "authors": [
+    "呂心純(Tasaw Hsin-Chun Lu)"
+   ],
+   "volIssue": "193期",
+   "date": "2016 / 09",
+   "pages": "11-62",
+   "fulltext": true,
+   "issueLabel": "193期 (2016/09)",
+   "issueID": "201610270016"
+  },
+  {
+   "docId": "10251383-201609-201610270016-201610270016-63-128",
+   "title": "卡那卡那富祭儀與族群共同體之重構",
+   "authors": [
+    "林曜同(Yao-Tung Lin)"
+   ],
+   "volIssue": "193期",
+   "date": "2016 / 09",
+   "pages": "63-128",
+   "fulltext": true,
+   "issueLabel": "193期 (2016/09)",
+   "issueID": "201610270016"
+  },
+  {
+   "docId": "10251383-201609-201610270016-201610270016-129-219",
+   "title": "全球重要農業遺產系統的主體性與真實性建構：臺東池上水圳耕作區與花蓮壽豐河川地種植的案例分析",
+   "authors": [
+    "張育銓(Yu-Chuan Chang)"
+   ],
+   "volIssue": "193期",
+   "date": "2016 / 09",
+   "pages": "129-219",
+   "fulltext": true,
+   "issueLabel": "193期 (2016/09)",
+   "issueID": "201610270016"
+  },
+  {
+   "docId": "10251383-201609-201610270016-201610270016-221-265",
+   "title": "「民俗及有關文物」登錄指定與地方實踐：以「雲林六房媽過爐」為例",
+   "authors": [
+    "徐雨村(Yu-Tsuen Hsu)"
+   ],
+   "volIssue": "193期",
+   "date": "2016 / 09",
+   "pages": "221-265",
+   "fulltext": true,
+   "issueLabel": "193期 (2016/09)",
+   "issueID": "201610270016"
+  },
+  {
+   "docId": "10251383-201606-201608100006-201608100006-1-9",
+   "title": "無形文化遺產與地方社會：導言",
+   "authors": [
+    "王嵩山"
+   ],
+   "volIssue": "192期",
+   "date": "2016 / 06",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "192期 (2016/06)",
+   "issueID": "201608100006"
+  },
+  {
+   "docId": "10251383-201606-201608100006-201608100006-11-46",
+   "title": "傳承的挑戰：排灣古樓巫師傳統的衰微與復振",
+   "authors": [
+    "胡台麗(Tai-Li Hu)"
+   ],
+   "volIssue": "192期",
+   "date": "2016 / 06",
+   "pages": "11-46",
+   "fulltext": true,
+   "issueLabel": "192期 (2016/06)",
+   "issueID": "201608100006"
+  },
+  {
+   "docId": "10251383-201606-201608100006-201608100006-47-95",
+   "title": "遺產化過程中的媽祖進香：儀式變遷與地方賦權的考察",
+   "authors": [
+    "呂玫鍰(Mei-Huan Lu)"
+   ],
+   "volIssue": "192期",
+   "date": "2016 / 06",
+   "pages": "47-95",
+   "fulltext": true,
+   "issueLabel": "192期 (2016/06)",
+   "issueID": "201608100006"
+  },
+  {
+   "docId": "10251383-201606-201608100006-201608100006-97-165",
+   "title": "花樣本：貴州苗族刺繡技藝傳承與地方社會",
+   "authors": [
+    "何兆華(Zhao-Hua Ho)"
+   ],
+   "volIssue": "192期",
+   "date": "2016 / 06",
+   "pages": "97-165",
+   "fulltext": true,
+   "issueLabel": "192期 (2016/06)",
+   "issueID": "201608100006"
+  },
+  {
+   "docId": "10251383-201606-201608100006-201608100006-167-197",
+   "title": "達邦社戰祭歌謠作為口傳音樂文化遺產的研究",
+   "authors": [
+    "呂鈺秀(Yu-Hsiu Lu)"
+   ],
+   "volIssue": "192期",
+   "date": "2016 / 06",
+   "pages": "167-197",
+   "fulltext": true,
+   "issueLabel": "192期 (2016/06)",
+   "issueID": "201608100006"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-1-3",
+   "title": "「流動與創新：戲曲的域外傳播研究」專輯",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-5-70",
+   "title": "從演出劇目看新加坡在地職業劇團對臺灣歌仔戲的接受和創發—以「新賽鳳」為例",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "5-70",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-71-108",
+   "title": "潮州外江戲的傳播組織：新加坡餘娛儒樂社",
+   "authors": [
+    "余淑娟(Sok-Kiang Yee)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "71-108",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-109-151",
+   "title": "中國戲曲在俄羅斯傳播與影響（1788－1990）",
+   "authors": [
+    "白若思(Rostislav Berezkin)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "109-151",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-153-217",
+   "title": "臺灣「觀音佛祖」的身世與崇拜圖式的成立：從艋舺龍山寺談起",
+   "authors": [
+    "方令光(Ling-Kuang Fang)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "153-217",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201603-201604280053-201604280053-219-252",
+   "title": "「王」的禁忌與熱門：Sipsong Panna王國的觀光再生",
+   "authors": [
+    "謝世忠(Shih-Chung Hsieh)"
+   ],
+   "volIssue": "191期",
+   "date": "2016 / 03",
+   "pages": "219-252",
+   "fulltext": true,
+   "issueLabel": "191期 (2016/03)",
+   "issueID": "201604280053"
+  },
+  {
+   "docId": "10251383-201512-201601280014-201601280014-i-i",
+   "title": "更正啟事",
+   "authors": [
+    "吳翠松"
+   ],
+   "volIssue": "190期",
+   "date": "2015 / 12",
+   "pages": "i-i",
+   "fulltext": true,
+   "issueLabel": "190期 (2015/12)",
+   "issueID": "201601280014"
+  },
+  {
+   "docId": "10251383-201512-201601280014-201601280014-1-66",
+   "title": "藝術．商業．政治．紀錄──論「戲曲電影」及其對黃梅調電影的影響",
+   "authors": [
+    "王安祈(An-Chi Wang)"
+   ],
+   "volIssue": "190期",
+   "date": "2015 / 12",
+   "pages": "1-66",
+   "fulltext": true,
+   "issueLabel": "190期 (2015/12)",
+   "issueID": "201601280014"
+  },
+  {
+   "docId": "10251383-201512-201601280014-201601280014-67-127",
+   "title": "越南寶山奇香教派及其傳衍──以「四恩孝義」為探討核心",
+   "authors": [
+    "鍾雲鶯(Yun-Ying Chung)"
+   ],
+   "volIssue": "190期",
+   "date": "2015 / 12",
+   "pages": "67-127",
+   "fulltext": true,
+   "issueLabel": "190期 (2015/12)",
+   "issueID": "201601280014"
+  },
+  {
+   "docId": "10251383-201512-201601280014-201601280014-129-189",
+   "title": "善人．善書．善念──陳江山及其《精神錄》的版本流傳與思想探源",
+   "authors": [
+    "柯榮三(Jung-San Ke)"
+   ],
+   "volIssue": "190期",
+   "date": "2015 / 12",
+   "pages": "129-189",
+   "fulltext": true,
+   "issueLabel": "190期 (2015/12)",
+   "issueID": "201601280014"
+  },
+  {
+   "docId": "10251383-201512-201601280014-201601280014-191-230",
+   "title": "國立中山大學「風俗物品陳列室」舊藏閩南語歌仔冊述論",
+   "authors": [
+    "潘培忠(Pei-Zhong Pan)"
+   ],
+   "volIssue": "190期",
+   "date": "2015 / 12",
+   "pages": "191-230",
+   "fulltext": true,
+   "issueLabel": "190期 (2015/12)",
+   "issueID": "201601280014"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-1-7",
+   "title": "前言",
+   "authors": [
+    "江詩珮(Shih-Pe Wang)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "1-7",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-9-62",
+   "title": "文本詮釋與文化翻譯：元雜劇《老生兒》及其域外傳播",
+   "authors": [
+    "汪詩珮(Shih-Pe Wang)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "9-62",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-63-117",
+   "title": "中國「喜劇」《㑳梅香》在法國的傳譯與改編",
+   "authors": [
+    "羅仕龍(Shih-Lung Lo)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "63-117",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-119-140+152-155",
+   "title": "李漁與江戶文藝：論笠亭仙果的《清談常磐色香》及《美目与利草紙》",
+   "authors": [
+    "蕭涵珍(Han-Chen Shiau)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "119-140+152-155",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-157-215",
+   "title": "演員劇場的消解與重解：從魏海敏的表演藝術探究戲曲的「當代性」",
+   "authors": [
+    "吳岳霖(Yue-Lin Wu)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "157-215",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201509-201511030003-201511030003-217-312",
+   "title": "湘西仙娘調查訪談錄",
+   "authors": [
+    "康詩瑀(Shih-Yu Kang)"
+   ],
+   "volIssue": "189期",
+   "date": "2015 / 09",
+   "pages": "217-312",
+   "fulltext": true,
+   "issueLabel": "189期 (2015/09)",
+   "issueID": "201511030003"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-1-41",
+   "title": "Introduction",
+   "authors": [
+    "康豹(Paul R. Katz)"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "1-41",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-43-54",
+   "title": "導言",
+   "authors": [
+    "康詩瑀"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "43-54",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-55-108",
+   "title": "從廣西西南三縣農曆七月壯族燒衣（pyau ei）儀式論壯族本土宗教儀式專家的傳承",
+   "authors": [
+    "高雅寧(Ya-Ning Kao)"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "55-108",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-109-176",
+   "title": "貴州施洞苗族的儀式專家與歷史",
+   "authors": [
+    "何兆華(Zhao-Hua Ho)"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "109-176",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-177-249",
+   "title": "湖南省藍山縣過山瑤的還家願儀禮與盤王傳承及其歌唱",
+   "authors": [
+    "廣田律子(Hirota Ritsuko)"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "177-249",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201506-201508030001-201508030001-251-294",
+   "title": "民間信仰的地域傳播與人文分化：以明清以降寧國府的汪華、張渤信仰為中心",
+   "authors": [
+    "李甜(Tian Li)"
+   ],
+   "volIssue": "188期",
+   "date": "2015 / 06",
+   "pages": "251-294",
+   "fulltext": true,
+   "issueLabel": "188期 (2015/06)",
+   "issueID": "201508030001"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-1-31",
+   "title": "Introduction",
+   "authors": [
+    "康豹(Paul R. Katz)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-33-44",
+   "title": "導言",
+   "authors": [
+    "康詩瑀(Shih-Yu Kang)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "33-44",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-45-104",
+   "title": "神明，祖先，儀式專家：明以降梅山「家主」與「地主」信仰",
+   "authors": [
+    "呂永昇(Wing-Sing Lui)",
+    "李新吾(Xin-Wu Li)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "45-104",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-105-154",
+   "title": "神靈、龍王與官祀：以雲南大理龍關社會為核心的討論",
+   "authors": [
+    "連瑞枝(Rui-Zhi Lian)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "105-154",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-155-209",
+   "title": "Religion as a Civilizing Process? Rethinking Yao Religious Culture and Ritual Manuscripts",
+   "authors": [
+    "陳玫妏(Mei-Wen Chen)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "155-209",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201503-201505040010-201505040010-211-296",
+   "title": "做醮與地方社會：以埔里兩次醮儀為例",
+   "authors": [
+    "梅慧玉(Hui-Yu Mei)"
+   ],
+   "volIssue": "187期",
+   "date": "2015 / 03",
+   "pages": "211-296",
+   "fulltext": true,
+   "issueLabel": "187期 (2015/03)",
+   "issueID": "201505040010"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-1-10",
+   "title": "文化遺產與記憶：導言",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "1-10",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-11-57",
+   "title": "文化遺產的脈絡、記憶與詮釋：以萬山岩雕為例",
+   "authors": [
+    "王美青(Mei-Ching Wang)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "11-57",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-59-101",
+   "title": "信仰、記憶與建構：談六房媽過爐",
+   "authors": [
+    "黃漢偉(Han-Wei Huang)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "59-101",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-103-179",
+   "title": "臺灣媽祖廟現存「御匾」研究：兼論其所反映的集體記憶與政治神話",
+   "authors": [
+    "李建緯(Chian-Wei Lee)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "103-179",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-181-229",
+   "title": "日治時期大稻埕霞海城隍祭典的組織與審查制度研究",
+   "authors": [
+    "高振宏(Chen-Hung Kao)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "181-229",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201412-201501280035-201501280035-231-302",
+   "title": "消逝的將藝：稻江霞海八將會",
+   "authors": [
+    "鍾秀雋(Shiu-Chun Chung)"
+   ],
+   "volIssue": "186期",
+   "date": "2014 / 12",
+   "pages": "231-302",
+   "fulltext": true,
+   "issueLabel": "186期 (2014/12)",
+   "issueID": "201501280035"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-1-10",
+   "title": "文化遺產與記憶：導言",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "1-10",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-11-49",
+   "title": "朝鮮宗廟祭禮樂的當代保存與記憶",
+   "authors": [
+    "黃心蓉(Patricia Huang)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "11-49",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-51-114",
+   "title": "當「做花」成「做人」：施洞苗族非物質文化遺產之傳承與變遷",
+   "authors": [
+    "何兆華(Zhao-Hua Ho)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "51-114",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-115-166",
+   "title": "創世史詩梅葛的記憶：楚雄彝族歌謠的傳統與再現",
+   "authors": [
+    "黃季平(Chi-Ping Huang)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "115-166",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-167-217",
+   "title": "變婆的巫術指控：抹黑鄰居的社會展演",
+   "authors": [
+    "顏芳姿(Fang-Tzu Yen)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "167-217",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201409-201410310011-201410310011-219-295",
+   "title": "儀式傳承之文本媒介：廣西上林縣壯族師公戒度法事中的唱本分析",
+   "authors": [
+    "覃延佳(Yan-Jia Qin)"
+   ],
+   "volIssue": "185期",
+   "date": "2014 / 09",
+   "pages": "219-295",
+   "fulltext": true,
+   "issueLabel": "185期 (2014/09)",
+   "issueID": "201410310011"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-1-8",
+   "title": "前言：道法複合的地方經驗",
+   "authors": [
+    "李豐楙(Feng-Mao Li)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-9-57",
+   "title": "南臺灣和瘟送船儀式的傳承與其道法析論",
+   "authors": [
+    "謝聰輝(Tsung-Hui Hsieh)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "9-57",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-59-103",
+   "title": "威顯南邦：馬來西亞馬六甲勇全殿的王醮",
+   "authors": [
+    "洪瑩發(Ying-Fa Hong)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "59-103",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-105-153",
+   "title": "湘中「梅山派」的道法淵源及其演變：以新化縣為例",
+   "authors": [
+    "呂永昇(Wing-Sing Lui)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "105-153",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-155-227",
+   "title": "客潮二派箏樂小曲之形質流變",
+   "authors": [
+    "張儷瓊(Li-Chiung Chang)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "155-227",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-229-278",
+   "title": "論京劇武戲之套曲應用及崑班承演",
+   "authors": [
+    "林佳儀(Chia-Yi Lin)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "229-278",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201406-201408040010-201408040010-279-334",
+   "title": "當代埔里鸞生的宗教生活：以育化堂女鸞為考察中心",
+   "authors": [
+    "黃萍瑛(Ping-Ying Huang)"
+   ],
+   "volIssue": "184期",
+   "date": "2014 / 06",
+   "pages": "279-334",
+   "fulltext": true,
+   "issueLabel": "184期 (2014/06)",
+   "issueID": "201408040010"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-1-6",
+   "title": "前言：道法實踐與地方社會",
+   "authors": [
+    "李豐楙(Feng-Mao Li)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "1-6",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-7-69",
+   "title": "社會中的體化實踐：臺南安平乩童濟世成神個案研究",
+   "authors": [
+    "梅慧玉(Hui-Yu Mei)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "7-69",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-71-138",
+   "title": "乩示中的神、靈與儀式、習俗的系統關係：金門中堡威靈殿張公壇乩示紀實",
+   "authors": [
+    "唐蕙韻(Hui-Yun Tang)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "71-138",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-139-189",
+   "title": "地方宗教中的道法關係：以臺南和意堂為核心的考察",
+   "authors": [
+    "謝世維(Shu-Wei Hsieh)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "139-189",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-191-252",
+   "title": "苗人古歌的記音與翻譯：歌師Sangt Jingb的手稿、知識與空間",
+   "authors": [
+    "簡美玲(Mei-Ling Chien)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "191-252",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201403-201404250011-201404250011-253-338",
+   "title": "孤魂的在地化：有應公廟與臺灣社會地緣意識之轉變",
+   "authors": [
+    "陳緯華(Wei-Hua Chen)"
+   ],
+   "volIssue": "183期",
+   "date": "2014 / 03",
+   "pages": "253-338",
+   "fulltext": true,
+   "issueLabel": "183期 (2014/03)",
+   "issueID": "201404250011"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-1-6",
+   "title": "前言",
+   "authors": [
+    "黃蘭翔(Lan-Shiang Huang)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "1-6",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-7-58",
+   "title": "作出臺灣味：日本蓄音器商會臺灣唱片產製策略初探",
+   "authors": [
+    "王櫻芬(Ying-Fen Wang)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "7-58",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-59-98",
+   "title": "從選曲通知書看臺灣古倫美亞唱片公司與日本蓄音器商會之間的訊息傳遞－兼談戰爭期的唱片發行（1930s－1940s）",
+   "authors": [
+    "劉麟玉(Lin-Yu Liou)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "59-98",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-99-148",
+   "title": "鬚髯的能與藝：北海道愛努族的兩性和儀式",
+   "authors": [
+    "謝世忠(Shih-Chung Hsieh)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "99-148",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-149-219",
+   "title": "文化競技：超越前代、媲美西洋的康熙朝清宮畫琺瑯",
+   "authors": [
+    "施靜菲(Ching-Fei Shih)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "149-219",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201312-201402070019-201402070019-221-301",
+   "title": "戰前日本帝國大學之籌組與校園空間的「巴洛克」化：從東京帝國大學到臺北帝國大學",
+   "authors": [
+    "黃蘭翔(Lan-Shiang Huang)"
+   ],
+   "volIssue": "182期",
+   "date": "2013 / 12",
+   "pages": "221-301",
+   "fulltext": true,
+   "issueLabel": "182期 (2013/12)",
+   "issueID": "201402070019"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-223-264",
+   "title": "民俗畫的解讀與誤讀－以俄藏五鬼鬧判圖為例",
+   "authors": [
+    "楊玉君(Yu-Jun Yang)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "223-264",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-1-3",
+   "title": "「民間即興戲劇研究」專輯─前言",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-5-48",
+   "title": "臺灣布袋戲的即興創作及其特質",
+   "authors": [
+    "陳龍廷(Long-Ting Chen)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "5-48",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-49-96",
+   "title": "從「傳仔戲」論臺灣亂彈戲裡的活戲演出",
+   "authors": [
+    "簡秀珍(Hsiu-Jen Jian)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "49-96",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-97-166",
+   "title": "試論奠基歌仔戲活戲養分的「真本歌仔」《山伯英臺》",
+   "authors": [
+    "蔡欣欣(Hsin-Hsin Tsai)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "97-166",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-167-222",
+   "title": "On the Survival of the Traditional Ritualized Performance Art in Modern China: A Case of Telling Scriptures by Yu Dingjun in Shanghu Town Area of Changshu City in Jiangsu Province",
+   "authors": [
+    "白若思(Rostislav Berezkin)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "167-222",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201309-201311010025-201311010025-265-319",
+   "title": "原漢共譜的「山地」戀曲－談〈馬蘭姑娘〉的可能源流與認同想像",
+   "authors": [
+    "孫俊彥(Chun-Yen Sun)"
+   ],
+   "volIssue": "181期",
+   "date": "2013 / 09",
+   "pages": "265-319",
+   "fulltext": true,
+   "issueLabel": "181期 (2013/09)",
+   "issueID": "201311010025"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-1-43",
+   "title": "音樂時間與文化異質性：以1930年代前後《雪梅思君》的不同錄音為例",
+   "authors": [
+    "王育雯(Yuh-Wen Wang)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "1-43",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-45-81",
+   "title": "失落的西安城市史：對唐大明宮（國家遺址公園）歷史想像空間構築的考察",
+   "authors": [
+    "薛孟琪(Meng-Chi Hsueh)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "45-81",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-83-130",
+   "title": "「社官」信仰在廣東蕉嶺與臺灣美濃的比較研究",
+   "authors": [
+    "洪馨蘭(Hsin-Lan Hung)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "83-130",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-131-164",
+   "title": "潮惠兩裔客家人分佈比例與新竹枋寮義民祭祀圈之關係",
+   "authors": [
+    "張正田(Zheng-Tian Zhang)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "131-164",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-165-215",
+   "title": "戰爭、傳說與地方社會之信仰重構：以淡水清水祖師信仰為論述中心",
+   "authors": [
+    "王怡茹(I-Ju Wang)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "165-215",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201306-201307220035-201307220035-217-274",
+   "title": "試探一項平埔族習俗的解讀",
+   "authors": [
+    "簡銘宏(Ming-Hung Chien)"
+   ],
+   "volIssue": "180期",
+   "date": "2013 / 06",
+   "pages": "217-274",
+   "fulltext": true,
+   "issueLabel": "180期 (2013/06)",
+   "issueID": "201307220035"
+  },
+  {
+   "docId": "10251383-201303-201305030021-201305030021-1-74",
+   "title": "鹿港郭氏家族在傳統厝屋彩繪作品之人物圖像來源研究",
+   "authors": [
+    "蔡雅蕙(Ya-Hui Tsai)",
+    "徐明福(Min-Fu Hsu)"
+   ],
+   "volIssue": "179期",
+   "date": "2013 / 03",
+   "pages": "1-74",
+   "fulltext": true,
+   "issueLabel": "179期 (2013/03)",
+   "issueID": "201305030021"
+  },
+  {
+   "docId": "10251383-201303-201305030021-201305030021-75-121",
+   "title": "意象、藝像與商品：蘭嶼達悟族飛魚文化的當代顯像",
+   "authors": [
+    "楊政賢(Cheng-Hsien Yang)"
+   ],
+   "volIssue": "179期",
+   "date": "2013 / 03",
+   "pages": "75-121",
+   "fulltext": true,
+   "issueLabel": "179期 (2013/03)",
+   "issueID": "201305030021"
+  },
+  {
+   "docId": "10251383-201303-201305030021-201305030021-123-184",
+   "title": "中西即興戲劇脈絡中的歌仔戲「做活戲」：藝術定位、研究視野與劇場運用",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "179期",
+   "date": "2013 / 03",
+   "pages": "123-184",
+   "fulltext": true,
+   "issueLabel": "179期 (2013/03)",
+   "issueID": "201305030021"
+  },
+  {
+   "docId": "10251383-201303-201305030021-201305030021-185-222",
+   "title": "番平千萬不通行？－閩南「過番歌」中的歷史記憶與勸世話語",
+   "authors": [
+    "柯榮三(Jung-San Ke)"
+   ],
+   "volIssue": "179期",
+   "date": "2013 / 03",
+   "pages": "185-222",
+   "fulltext": true,
+   "issueLabel": "179期 (2013/03)",
+   "issueID": "201305030021"
+  },
+  {
+   "docId": "10251383-201303-201305030021-201305030021-223-243",
+   "title": "關於七星板",
+   "authors": [
+    "謝明良(Ming-Liang Hsieh)"
+   ],
+   "volIssue": "179期",
+   "date": "2013 / 03",
+   "pages": "223-243",
+   "fulltext": true,
+   "issueLabel": "179期 (2013/03)",
+   "issueID": "201305030021"
+  },
+  {
+   "docId": "10251383-201212-201302050006-201302050006-1-24",
+   "title": "導言：錄音科技與臺灣音樂—近年研究回顧",
+   "authors": [
+    "王櫻芬(Ying-Fen Wang)"
+   ],
+   "volIssue": "178期",
+   "date": "2012 / 12",
+   "pages": "1-24",
+   "fulltext": true,
+   "issueLabel": "178期 (2012/12)",
+   "issueID": "201302050006"
+  },
+  {
+   "docId": "10251383-201212-201302050006-201302050006-25-73",
+   "title": "一九三○年代臺灣南管樂人潘榮枝的跨界與創新",
+   "authors": [
+    "王櫻芬(Ying-Fen Wang)"
+   ],
+   "volIssue": "178期",
+   "date": "2012 / 12",
+   "pages": "25-73",
+   "fulltext": true,
+   "issueLabel": "178期 (2012/12)",
+   "issueID": "201302050006"
+  },
+  {
+   "docId": "10251383-201212-201302050006-201302050006-75-162",
+   "title": "「寶島低音歌王之路」：洪一峰歌唱風格發展",
+   "authors": [
+    "邱婉婷(Wan-Ting Chiu)"
+   ],
+   "volIssue": "178期",
+   "date": "2012 / 12",
+   "pages": "75-162",
+   "fulltext": true,
+   "issueLabel": "178期 (2012/12)",
+   "issueID": "201302050006"
+  },
+  {
+   "docId": "10251383-201212-201302050006-201302050006-163-205",
+   "title": "臺灣「山地音樂工業」與「山地歌曲」發展的軌跡：1960至70年代鈴鈴唱片及群星唱片、心心唱片的產製與競爭",
+   "authors": [
+    "黃國超(Kuo-Chao Huang)"
+   ],
+   "volIssue": "178期",
+   "date": "2012 / 12",
+   "pages": "163-205",
+   "fulltext": true,
+   "issueLabel": "178期 (2012/12)",
+   "issueID": "201302050006"
+  },
+  {
+   "docId": "10251383-201212-201302050006-201302050006-207-271",
+   "title": "「民歌」再思考：從《重返部落》談起",
+   "authors": [
+    "陳俊斌(Chun-Bin Chen)"
+   ],
+   "volIssue": "178期",
+   "date": "2012 / 12",
+   "pages": "207-271",
+   "fulltext": true,
+   "issueLabel": "178期 (2012/12)",
+   "issueID": "201302050006"
+  },
+  {
+   "docId": "10251383-201209-201211010038-201211010038-1-55",
+   "title": "儀式性質與歌舞系統：談馬蘭部落豐年祭歌舞的類型問題",
+   "authors": [
+    "孫俊彥(Chun-Yen Sun)"
+   ],
+   "volIssue": "177期",
+   "date": "2012 / 09",
+   "pages": "1-55",
+   "fulltext": true,
+   "issueLabel": "177期 (2012/09)",
+   "issueID": "201211010038"
+  },
+  {
+   "docId": "10251383-201209-201211010038-201211010038-57-116",
+   "title": "廣澤尊王遊臺灣：漢人民間信仰神明階序的結構與展演",
+   "authors": [
+    "丁仁傑(Jen-Chieh Ting)"
+   ],
+   "volIssue": "177期",
+   "date": "2012 / 09",
+   "pages": "57-116",
+   "fulltext": true,
+   "issueLabel": "177期 (2012/09)",
+   "issueID": "201211010038"
+  },
+  {
+   "docId": "10251383-201209-201211010038-201211010038-117-159",
+   "title": "明清俗曲（小曲）之曲牌名附加語探究",
+   "authors": [
+    "張繼光(Chi-Kuang Chang)"
+   ],
+   "volIssue": "177期",
+   "date": "2012 / 09",
+   "pages": "117-159",
+   "fulltext": true,
+   "issueLabel": "177期 (2012/09)",
+   "issueID": "201211010038"
+  },
+  {
+   "docId": "10251383-201209-201211010038-201211010038-161-221",
+   "title": "施洞苗族剪紙圖像上的戲曲與女性形象",
+   "authors": [
+    "何兆華(Zhao-Hua Ho)"
+   ],
+   "volIssue": "177期",
+   "date": "2012 / 09",
+   "pages": "161-221",
+   "fulltext": true,
+   "issueLabel": "177期 (2012/09)",
+   "issueID": "201211010038"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-1-14",
+   "title": "導論：物、地方知識與空間觀",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "1-14",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-15-65",
+   "title": "物質性、符號與美感所在：陶壺世界的感知詮釋",
+   "authors": [
+    "萬煜瑤(Yuh-Yao Wan)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "15-65",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-67-113",
+   "title": "京都祇園祭宵山的文化展演與空間",
+   "authors": [
+    "黃貞燕(Jan-Yen Huang)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "67-113",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-115-192",
+   "title": "日治時期北港朝天宮建築空間之變遷",
+   "authors": [
+    "蔡侑樺(Yu-Hua Tsai)",
+    "徐明福(Min-Fu Hsu)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "115-192",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-193-231",
+   "title": "遺產做為一種空間識別：花蓮豐田社區的遺產論述",
+   "authors": [
+    "張育銓(Yu-Chuan Chang)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "193-231",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201206-201208030023-201208030023-233-286",
+   "title": "「文化動起來」：賽德克族文化產業的研究",
+   "authors": [
+    "王梅霞(Mei-Hsia Wang)",
+    "伊婉‧貝林(Iwan Pelin)"
+   ],
+   "volIssue": "176期",
+   "date": "2012 / 06",
+   "pages": "233-286",
+   "fulltext": true,
+   "issueLabel": "176期 (2012/06)",
+   "issueID": "201208030023"
+  },
+  {
+   "docId": "10251383-201203-201204280002-201204280002-3-44",
+   "title": "臺灣田都元帥信仰與宋江陣儀式傳統",
+   "authors": [
+    "謝國興(Kuo-Hsing Hsieh)"
+   ],
+   "volIssue": "175期",
+   "date": "2012 / 03",
+   "pages": "1-42",
+   "fulltext": true,
+   "issueLabel": "175期 (2012/03)",
+   "issueID": "201204280002"
+  },
+  {
+   "docId": "10251383-201203-201204280002-201204280002-45-90",
+   "title": "客家「串調」箏曲之研究",
+   "authors": [
+    "張儷瓊(Li-Chiung Chang)"
+   ],
+   "volIssue": "175期",
+   "date": "2012 / 03",
+   "pages": "43-88",
+   "fulltext": true,
+   "issueLabel": "175期 (2012/03)",
+   "issueID": "201204280002"
+  },
+  {
+   "docId": "10251383-201203-201204280002-201204280002-91-108",
+   "title": "中國鬥蟋蟀博戲中的芡草與芡法",
+   "authors": [
+    "陳天嘉(Tian-Jia Chen)",
+    "任定成(Ding-Cheng Ren)"
+   ],
+   "volIssue": "175期",
+   "date": "2012 / 03",
+   "pages": "89-106",
+   "fulltext": true,
+   "issueLabel": "175期 (2012/03)",
+   "issueID": "201204280002"
+  },
+  {
+   "docId": "10251383-201203-201204280002-201204280002-109-177",
+   "title": "臺灣歌仔戲「做活戲」的演員即興表演與劇目創作參與",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "175期",
+   "date": "2012 / 03",
+   "pages": "107-175",
+   "fulltext": true,
+   "issueLabel": "175期 (2012/03)",
+   "issueID": "201204280002"
+  },
+  {
+   "docId": "10251383-201203-201204280002-201204280002-178-215",
+   "title": "櫥窗內的歷史聲音：牛津大學Pitt Rivers博物館臺灣原住民樂器收藏與臺灣音樂研究史料",
+   "authors": [
+    "蔡燦煌(Tsan-Huang Tsai)"
+   ],
+   "volIssue": "175期",
+   "date": "2012 / 03",
+   "pages": "177-214",
+   "fulltext": true,
+   "issueLabel": "175期 (2012/03)",
+   "issueID": "201204280002"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-18-103",
+   "title": "明清以來徽州的保安善會與「五隅」組織",
+   "authors": [
+    "王振忠(Zhen-Zhong Wang)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "17-102",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-104-185",
+   "title": "Spirit-writing Halls and theDevelopment of Local Communities: A Case Study of Puli (Nantou County)",
+   "authors": [
+    "康豹(Paul R. Katz)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "103-184",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-186-258",
+   "title": "「混雜的現代性」：近代金門地方社會的文化想像及其實踐",
+   "authors": [
+    "江柏煒(Chiang Bo-wei)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "185-257",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-259-304",
+   "title": "申遺背後的曹主娘娘信俗研究",
+   "authors": [
+    "譚偉倫(Wai-Lun Tam)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "259-304",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-305-357",
+   "title": "Village Religion in Huizhou: A Preliminary Assessment",
+   "authors": [
+    "勞格文(John Lagerwey)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "305-357",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201112-201203030050-201203030050-358-415",
+   "title": "水利空間與地域建構：社子溪流域的水圳、祭典與儀式社群",
+   "authors": [
+    "傅寶玉(Bao-yu Fu)"
+   ],
+   "volIssue": "174期",
+   "date": "2011 / 12",
+   "pages": "359-416",
+   "fulltext": true,
+   "issueLabel": "174期 (2011/12)",
+   "issueID": "201203030050"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-1-12",
+   "title": "Introduction: Redemptive Societies in Cultural and Historical Contexts",
+   "authors": [
+    "David A. Palmer",
+    "Paul R. Katz",
+    "Chien-Chuan Wang"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "1-12",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-13-21",
+   "title": "導言：關於「救世團體」：「鄉村宗教」或「邪教」？",
+   "authors": [
+    "王見川(Chien-Chuan Wang)",
+    "康豹(Paul R. Katz)",
+    "宗樹人(David A. Palmer)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "13-21",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-23-58",
+   "title": "先天道嶺南道脈的思想和實踐：以廣東清遠飛霞洞爲例",
+   "authors": [
+    "志賀市子(Ichiko Shiga)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "23-58",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-59-99",
+   "title": "先天道的尊孔崇道：香港道德會福慶堂、善慶洞的源流和變遷",
+   "authors": [
+    "游子安(Chi-On Yau)",
+    "危丁明(Ting-Ming Ngai)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "59-99",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-101-128",
+   "title": "Anchoring Guanyin: Appropriative Strategies in a New Phoenix Hall Scripture",
+   "authors": [
+    "柯若樸(Philip Clart)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "101-128",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-129-160",
+   "title": "法輪功的歷史何在？",
+   "authors": [
+    "王大爲(David Ownby)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "129-160",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-161-231",
+   "title": "甘肅省會寧縣丁溝鄉南門村一次喪葬活動的考察及闡釋",
+   "authors": [
+    "徐海波(Hai-Po Xu)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "161-231",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201109-201110310003-201110310003-233-277",
+   "title": "淡水靈寶道壇的功德儀式：以混玄壇爲核心的探討",
+   "authors": [
+    "蕭進銘(Chin-Ming Hsiao)"
+   ],
+   "volIssue": "173期",
+   "date": "2011 / 09",
+   "pages": "233-277",
+   "fulltext": true,
+   "issueLabel": "173期 (2011/09)",
+   "issueID": "201110310003"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-1-12",
+   "title": "Introduction: Redemptive Societies as Confucian NRMs?",
+   "authors": [
+    "David A. Palmer",
+    "Paul R. Katz",
+    "Chien-Chuan Wang"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "1-12",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-13-20",
+   "title": "導言：救世團體研究的回顧",
+   "authors": [
+    "王見川",
+    "康豹",
+    "宗樹人"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "13-20",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-21-72",
+   "title": "Chinese Redemptive Societies and Salvationist Religion: Historical Phenomenon or Sociological Category?",
+   "authors": [
+    "宗樹人(David A. Palmer)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "21-72",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-73-126",
+   "title": "The Salvation of Religion? Public Charity and the New Religions of the Early Republic",
+   "authors": [
+    "杜博思(Thomas David DuBois)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "73-126",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-127-159",
+   "title": "同善社早期的特點及在雲南的發展(1912-1937)：兼談其與「鸞壇」、「儒教」的關係",
+   "authors": [
+    "王見川(Chien-Chuan Wang)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "127-159",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-161-203",
+   "title": "民初儒學的宗教化：段正元與道德學社的個案研究",
+   "authors": [
+    "范純武(Chun-Wu Fan)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "161-203",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-205-230",
+   "title": "海濱扶聖道：戰後臺灣民間儒教結社與活動(1945-1970)",
+   "authors": [
+    "李世偉(Shyh-Wei Li)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "205-230",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201106-201107230005-201107230005-231-277",
+   "title": "文字／電子時代的口傳技藝：一個苗栗客家山歌婚宴表演場域的觀察",
+   "authors": [
+    "吳翠松(Tsui-Sung Wu)"
+   ],
+   "volIssue": "172期",
+   "date": "2011 / 06",
+   "pages": "231-277",
+   "fulltext": true,
+   "issueLabel": "172期 (2011/06)",
+   "issueID": "201107230005"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-11-64",
+   "title": "音樂作爲一種離散社會空間：臺灣中和地區緬甸華僑的音景與族裔空間建構",
+   "authors": [
+    "呂心純(Tasaw Hsin-Chun Lu)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "11-64",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-65-120",
+   "title": "歌謠中的部落、歷史與生活：以三首馬蘭阿美族的現代歌謠爲例",
+   "authors": [
+    "孫俊彥(Chun-Yen Sun)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "65-120",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-121-179",
+   "title": "戰後臺灣客家音樂的建制化歷程：以《中原（苗友）》月刊(1962-1981)的再現爲例",
+   "authors": [
+    "許馨文(Hsin-Wen Hsu)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "121-179",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-181-209",
+   "title": "談《臺灣日日新報音樂資料彙編》對臺灣音樂史研究之價值：以明治時期資料爲分析對象",
+   "authors": [
+    "陳峙維(Szu-Wei Chen)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "181-209",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-211-251",
+   "title": "世界文化遺產中的人物：馬六甲找鄭和",
+   "authors": [
+    "謝世忠(Shih-Chung Hsieh)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "211-251",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201103-201105030007-201105030007-253-290",
+   "title": "臺灣省地方戲劇協進會出版刊物《臺灣地方戲劇》中的戲劇史料",
+   "authors": [
+    "林鋒雄(Fong-Hsiung Lin)"
+   ],
+   "volIssue": "171期",
+   "date": "2011 / 03",
+   "pages": "253-290",
+   "fulltext": true,
+   "issueLabel": "171期 (2011/03)",
+   "issueID": "201105030007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-1-5",
+   "title": "戲曲流播專輯　前言",
+   "authors": [
+    "蔡欣欣(Hsin-Hsin Tsai)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-7-79",
+   "title": "山西上黨賽社演出中的行業變遷與演劇形態",
+   "authors": [
+    "王馗(Kui Wang)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "7-79",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-81-141",
+   "title": "萌生與交疊：臺灣「拋採茶」之歷史景觀、表演套式與源流演化探析",
+   "authors": [
+    "蔡欣欣(Hsin-Hsin Tsai)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "81-141",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-143-176",
+   "title": "從外江到國劇：論臺灣民間京劇傳統的形成與失落",
+   "authors": [
+    "徐亞湘(Ya-Hsiang Hsü)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "143-176",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-177-231",
+   "title": "從「以箏托腔」到「器寫人聲」：論河南箏樂對曲劇音樂之吸收與借鑑",
+   "authors": [
+    "張儷瓊(Li-Chiung Chang)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "177-231",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-233-281",
+   "title": "印尼泗水的「鳳德軒」廟宇布袋戲團發展史",
+   "authors": [
+    "蕭翡斐(Olivia)Fei-Fei Xiao)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "233-281",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201012-201101270007-201101270007-283-335",
+   "title": "祠堂裡的圖像：晚清到民國初年之間潮汕地區的庶民生活和價值觀",
+   "authors": [
+    "黃挺(Ting Huang)"
+   ],
+   "volIssue": "170期",
+   "date": "2010 / 12",
+   "pages": "283-335",
+   "fulltext": true,
+   "issueLabel": "170期 (2010/12)",
+   "issueID": "201101270007"
+  },
+  {
+   "docId": "10251383-201009-201010280091-201010280091-1-44",
+   "title": "中秋社祭與南臺灣的社樹信仰",
+   "authors": [
+    "楊玉君(Yu-Chun Yang)"
+   ],
+   "volIssue": "169期",
+   "date": "2010 / 09",
+   "pages": "1-44",
+   "fulltext": true,
+   "issueLabel": "169期 (2010/09)",
+   "issueID": "201010280091"
+  },
+  {
+   "docId": "10251383-201009-201010280091-201010280091-45-88",
+   "title": "狩獵、山林與部落「產業」：走進一對賽德克父子的生命史",
+   "authors": [
+    "邱韻芳(Yun-Fang Chiu)"
+   ],
+   "volIssue": "169期",
+   "date": "2010 / 09",
+   "pages": "45-88",
+   "fulltext": true,
+   "issueLabel": "169期 (2010/09)",
+   "issueID": "201010280091"
+  },
+  {
+   "docId": "10251383-201009-201010280091-201010280091-89-144",
+   "title": "1910至1930年代臺灣傳統建築彩繪匠司譜系之探討",
+   "authors": [
+    "蔡雅蕙(Ya-Hui Tsai)",
+    "徐明福(Ming-Fu Hsu)"
+   ],
+   "volIssue": "169期",
+   "date": "2010 / 09",
+   "pages": "89-144",
+   "fulltext": true,
+   "issueLabel": "169期 (2010/09)",
+   "issueID": "201010280091"
+  },
+  {
+   "docId": "10251383-201009-201010280091-201010280091-147-182",
+   "title": "主僕與制衡：江西石郵儺的傳衍",
+   "authors": [
+    "王學文(Xue-Wen Wang)"
+   ],
+   "volIssue": "169期",
+   "date": "2010 / 09",
+   "pages": "147-182",
+   "fulltext": true,
+   "issueLabel": "169期 (2010/09)",
+   "issueID": "201010280091"
+  },
+  {
+   "docId": "10251383-201009-201010280091-201010280091-183-247",
+   "title": "江蘇常熟白茆地區宣卷活動調查報告",
+   "authors": [
+    "丘慧瑩(Hui-Yin Chiu)"
+   ],
+   "volIssue": "169期",
+   "date": "2010 / 09",
+   "pages": "183-247",
+   "fulltext": true,
+   "issueLabel": "169期 (2010/09)",
+   "issueID": "201010280091"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-1-20",
+   "title": "Introduction",
+   "authors": [
+    "歐大年(Daniel L. Overmyer)",
+    "楊玉君"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-21-51",
+   "title": "女乩、義女與誦經女：女性在「公寓廟」的活動和地位",
+   "authors": [
+    "辜神徹(Shen-Che Ku)",
+    "林美容(Mei-Rong Lin)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "21-51",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-53-78",
+   "title": "跨越社會界限的女性宗教儀式專家",
+   "authors": [
+    "劉一蓉(Yi-Jung Liu)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "53-78",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-79-109",
+   "title": "Women as Worshippers, Women Worshipped: A Hakka Community in Hong Kong",
+   "authors": [
+    "羅碧詩(Elizabeth Lominska Johnson)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "79-109",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-111-155",
+   "title": "On Women and Chinese Ritual Food Culture in Penang and Singapore",
+   "authors": [
+    "白晉(Jean DeBernardi)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "111-155",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-156-190",
+   "title": "Forming Women's Genealogy: Daoist Monastic Women in Mongolian China",
+   "authors": [
+    "趙昕毅(Shin-Yi Chao)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "156-190",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201006-201007130126-201007130126-191-224",
+   "title": "Humanistic Buddhism and Buddhist Nuns in Taiwan",
+   "authors": [
+    "于君方(Chün-Fang Yü)"
+   ],
+   "volIssue": "168期",
+   "date": "2010 / 06",
+   "pages": "191-224",
+   "fulltext": true,
+   "issueLabel": "168期 (2010/06)",
+   "issueID": "201007130126"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-1-63",
+   "title": "Introduction",
+   "authors": [
+    "丁荷生(Kenneth Dean)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "1-63",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-65-121",
+   "title": "On the Protection of Mariners: A Trajectory in the Cultic Traditions of Southern Fujian from the Early Song to the Early Qing",
+   "authors": [
+    "柯胡(Hugh R. Clark)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "65-121",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-123-150",
+   "title": "湄洲祖廟與度尾龍井宮：興化民間媽祖崇拜的建構",
+   "authors": [
+    "鄭振滿(Zhen-Man Zheng)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "123-150",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-151-188",
+   "title": "正德癸酉平陽堯廟改制考：平陽堯廟〈三聖廟碑〉解讀",
+   "authors": [
+    "劉永華(Yong-Hua Liu)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "151-188",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-189-220",
+   "title": "私人宗教儀式的社會意義：莆田東華「謝恩」儀式的田野考察",
+   "authors": [
+    "鄭莉(Li Zheng)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "189-220",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-201003-201005050022-201005050022-221-270",
+   "title": "文心百變與經典轉化：從《荊釵記》到《比目魚》",
+   "authors": [
+    "汪詩珮(Shih-Pe Wang)"
+   ],
+   "volIssue": "167期",
+   "date": "2010 / 03",
+   "pages": "221-270",
+   "fulltext": true,
+   "issueLabel": "167期 (2010/03)",
+   "issueID": "201005050022"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-1-5",
+   "title": "導論：民俗實踐、物與時間觀",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-7-59",
+   "title": "找吃找穿的時間：貴州施洞苗人曆法實踐中的我群建構",
+   "authors": [
+    "何兆華(Zhao-Hua Ho)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "7-59",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-61-96",
+   "title": "食物符碼與儀式行動：從賽夏社會關係的建構到時間連結的體現",
+   "authors": [
+    "胡家瑜(Chia-Yu Hu)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "61-96",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-97-124",
+   "title": "\"Tradition,\" Internal Debates, and Future Directions: The Concept of Tradition and Its Relation to Time in the Practices of the Chinese Seven-Stringed Zither (Qin)",
+   "authors": [
+    "蔡燦煌(Tsan-Huang Tsai)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "97-124",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-125-140",
+   "title": "賽夏音樂中的時間疊置與延展",
+   "authors": [
+    "呂鈺秀(Yu-Hsiu Lu)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "125-140",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-141-184",
+   "title": "臺南廖枝德司阜落篙程序之研究",
+   "authors": [
+    "林宜君(Yi-Chun Lin)",
+    "吳宗江(Tsung-Chiang Wu)",
+    "徐明福(Ming-Fu Hsu)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "141-184",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-185-314",
+   "title": "形式•變貌：大溪木器形式風格之探索",
+   "authors": [
+    "賴明珠(Ming-Chu Lai)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "185-314",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200912-201002080060-201002080060-315-360",
+   "title": "時空旅行過後的民族學資料：國立臺灣大學人類學系所藏之海南島黎族物像",
+   "authors": [
+    "謝世忠(Shih-Chung Hsieh)"
+   ],
+   "volIssue": "166期",
+   "date": "2009 / 12",
+   "pages": "315-360",
+   "fulltext": true,
+   "issueLabel": "166期 (2009/12)",
+   "issueID": "201002080060"
+  },
+  {
+   "docId": "10251383-200909-x-165-1-3-a",
+   "title": "前言",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "165期",
+   "date": "2009 / 09",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "165期 (2009/09)",
+   "issueID": "88457"
+  },
+  {
+   "docId": "10251383-200909-x-165-5-45-a",
+   "title": "管制下的復甦：臺灣省行政長官公署宣傳委員會的戲曲相關法規分析(1945.11~1947.3)",
+   "authors": [
+    "徐亞湘(Ya-Hsiang Hsü)"
+   ],
+   "volIssue": "165期",
+   "date": "2009 / 09",
+   "pages": "5-45",
+   "fulltext": true,
+   "issueLabel": "165期 (2009/09)",
+   "issueID": "88457"
+  },
+  {
+   "docId": "10251383-200909-x-165-47-88-a",
+   "title": "政治與戲曲：1950年代“戲曲改革”對中國地方戲曲劇種體質的訂製及影響",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "165期",
+   "date": "2009 / 09",
+   "pages": "47-88",
+   "fulltext": true,
+   "issueLabel": "165期 (2009/09)",
+   "issueID": "88457"
+  },
+  {
+   "docId": "10251383-200909-x-165-89-146-a",
+   "title": "主旋律的音量：“國家舞臺藝術精品工程”對大陸戲曲的影響",
+   "authors": [
+    "林幸慧(Hsing-Hui Lin)"
+   ],
+   "volIssue": "165期",
+   "date": "2009 / 09",
+   "pages": "89-146",
+   "fulltext": true,
+   "issueLabel": "165期 (2009/09)",
+   "issueID": "88457"
+  },
+  {
+   "docId": "10251383-200909-x-165-147-217-a",
+   "title": "從事跡與相關文本談廖添丁傳說的演化",
+   "authors": [
+    "施炳華(Ping-Hua Shih)"
+   ],
+   "volIssue": "165期",
+   "date": "2009 / 09",
+   "pages": "147-217",
+   "fulltext": true,
+   "issueLabel": "165期 (2009/09)",
+   "issueID": "88457"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-1-3",
+   "title": "前言",
+   "authors": [
+    "林鶴宜"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-5-43",
+   "title": "從《紅梅閣》的舊瓶看《李慧娘》的新酒：戲曲表演與政治變遷的個案研究",
+   "authors": [
+    "李元皓(Yuan-How Lee)"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "5-43",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-45-95",
+   "title": "從拉魂腔到柳琴戲：一個劇種的歷史傳承與時代變遷",
+   "authors": [
+    "孔培培(Pei-Pei Kong)"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "45-95",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-97-161",
+   "title": "從“秧歌劇”與“戲曲反共抗俄劇”看政治宣傳戲曲的操作",
+   "authors": [
+    "郭澤寬(Tse-kwan Kuo)"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "97-161",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-163-189",
+   "title": "電視布袋戲與政治：1980年代一齣另類的反共抗俄劇",
+   "authors": [
+    "陳龍廷(Long-Ting Chen)"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "163-189",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200906-200907130045-200907130045-191-227",
+   "title": "創作與評獎：以“國家舞臺藝術精品工程”三部入選劇作爲例",
+   "authors": [
+    "王安祈(An-Chi Wang)"
+   ],
+   "volIssue": "164期",
+   "date": "2009 / 06",
+   "pages": "191-227",
+   "fulltext": true,
+   "issueLabel": "164期 (2009/06)",
+   "issueID": "200907130045"
+  },
+  {
+   "docId": "10251383-200903-x-163-1-16-a",
+   "title": "Introduction",
+   "authors": [
+    "康豹(Paul R. Katz)",
+    "楊玉君"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "1-16",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200903-x-163-17-70-a",
+   "title": "國王與村神：雲南大理地區佛教神祠的歷史考察",
+   "authors": [
+    "連瑞枝(Jui-Chih Lien)"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "17-70",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200903-x-163-71-115-a",
+   "title": "從粵北英德的“喃嘸”醮儀看民間佛教",
+   "authors": [
+    "譚偉倫(Wai-Lun Tam)"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "71-115",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200903-x-163-117-159-a",
+   "title": "The Dragon Flower Teachings and the Practice of Ritual",
+   "authors": [
+    "田海(Barend Ter Haar)"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "117-159",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200903-x-163-161-192-a",
+   "title": "Community and the New Buddhism in Taiwan",
+   "authors": [
+    "沙學漢(David C. Schak)"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "161-192",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200903-x-163-193-220-a",
+   "title": "宗教慈善與災害重建：以九二一賑災爲例",
+   "authors": [
+    "安德瑞(André Laliberté)"
+   ],
+   "volIssue": "163期",
+   "date": "2009 / 03",
+   "pages": "193-220",
+   "fulltext": true,
+   "issueLabel": "163期 (2009/03)",
+   "issueID": "81726"
+  },
+  {
+   "docId": "10251383-200812-x-162-1-22-a",
+   "title": "Special Issue on Buddhism and Chinese Communities (Ⅰ) Introduction",
+   "authors": [
+    "康豹(Paul R. Katz)",
+    "楊玉君"
+   ],
+   "volIssue": "162期",
+   "date": "2008 / 12",
+   "pages": "1-22",
+   "fulltext": true,
+   "issueLabel": "162期 (2008/12)",
+   "issueID": "78047"
+  },
+  {
+   "docId": "10251383-200812-x-162-23-83-a",
+   "title": "“接珠”唸佛風俗之性別文化初探：以閩西寧化石壁陳家村爲例",
+   "authors": [
+    "黃萍瑛(Ping-Ying Huang)"
+   ],
+   "volIssue": "162期",
+   "date": "2008 / 12",
+   "pages": "23-83",
+   "fulltext": true,
+   "issueLabel": "162期 (2008/12)",
+   "issueID": "78047"
+  },
+  {
+   "docId": "10251383-200812-x-162-85-138-a",
+   "title": "臺灣閩南釋教“午夜”喪葬拔渡法事調查：以花蓮縣壽豐鄉豐山村慈明壇爲研究對象",
+   "authors": [
+    "楊士賢(Shih-Hsien Yang)"
+   ],
+   "volIssue": "162期",
+   "date": "2008 / 12",
+   "pages": "85-138",
+   "fulltext": true,
+   "issueLabel": "162期 (2008/12)",
+   "issueID": "78047"
+  },
+  {
+   "docId": "10251383-200812-x-162-139-169-a",
+   "title": "清末民初中國的濟公信仰與扶乩團體：兼談中國濟生會的由來",
+   "authors": [
+    "王見川(Chien-Chuan Wang)"
+   ],
+   "volIssue": "162期",
+   "date": "2008 / 12",
+   "pages": "139-169",
+   "fulltext": true,
+   "issueLabel": "162期 (2008/12)",
+   "issueID": "78047"
+  },
+  {
+   "docId": "10251383-200812-x-162-171-215-a",
+   "title": "“嶄新菩薩宜今世、科學歐文都了曉”：試論1930、40年代上海佛教居士扶乩團體“來蘇社”",
+   "authors": [
+    "范純武(Chun-Wu Fan)"
+   ],
+   "volIssue": "162期",
+   "date": "2008 / 12",
+   "pages": "171-215",
+   "fulltext": true,
+   "issueLabel": "162期 (2008/12)",
+   "issueID": "78047"
+  },
+  {
+   "docId": "10251383-200809-x-161-1-6-a",
+   "title": "導論：身體、藝術與社會",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "1-6",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200809-x-161-7-37-a",
+   "title": "身體自主、理性主體與戲劇想像：尼采與亞理斯多德",
+   "authors": [
+    "吳承澤(Cheng-Tse Wu)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "7-37",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200809-x-161-39-81-a",
+   "title": "身體•歷史•性別•權力：舞蹈劇場與臺灣社會，1980s–1990s",
+   "authors": [
+    "陳雅萍(Ya-Ping Chen)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "39-81",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200809-x-161-83-133-a",
+   "title": "浪漫化的瘋癲：戲曲中的大腦疾病",
+   "authors": [
+    "蔡振家(Chen-Gia Tsai)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "83-133",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200809-x-161-135-183-a",
+   "title": "排灣族藝術圖像中“人”的形體與意象分析：從神話與雕刻談起",
+   "authors": [
+    "萬煜瑤(Yuh-Yao Wan)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "135-183",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200809-x-161-185-263-a",
+   "title": "歷史紀念館的展示敘述：身體、紀念與歷史關聯的初步探討",
+   "authors": [
+    "曹欽榮(Chin-Jung Tsao)"
+   ],
+   "volIssue": "161期",
+   "date": "2008 / 09",
+   "pages": "185-263",
+   "fulltext": true,
+   "issueLabel": "161期 (2008/09)",
+   "issueID": "74461"
+  },
+  {
+   "docId": "10251383-200806-x-160-1-4-a",
+   "title": "前言",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "1-4",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200806-x-160-5-74-a",
+   "title": "節慶・戲仿・顚覆的美學：臺灣民間小戲《陳三五娘》“文本”分析",
+   "authors": [
+    "卓玫君(Mei-Chun Tsuo)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "5-74",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200806-x-160-75-121-a",
+   "title": "談歌仔冊中“相褒歌”的名與實",
+   "authors": [
+    "施炳華(Ping-Hua Shih)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "75-121",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200806-x-160-123-168-a",
+   "title": "臺灣戲曲學界對京劇文本創作的影響：由《閻羅夢》的映象說起",
+   "authors": [
+    "林幸慧(Hsing-Hui Lin)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "123-168",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200806-x-160-169-196-a",
+   "title": "聽見臺灣：試論古倫美亞唱片在臺灣音樂史上的意義",
+   "authors": [
+    "王櫻芬(Ying-Fen Wang)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "169-196",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200806-x-160-197-231-a",
+   "title": "“紀念俞大綱先生百歲誕辰戲曲學術研討會”紀要",
+   "authors": [
+    "古嘉齡(Chia-Ling Ku)"
+   ],
+   "volIssue": "160期",
+   "date": "2008 / 06",
+   "pages": "197-231",
+   "fulltext": true,
+   "issueLabel": "160期 (2008/06)",
+   "issueID": "70020"
+  },
+  {
+   "docId": "10251383-200803-x-159-1-5-a",
+   "title": "“文學與文化：臺灣傳統戲曲的文本研究”專輯(Ⅰ)　前言",
+   "authors": [
+    "林鶴宜"
+   ],
+   "volIssue": "159期",
+   "date": "2008 / 03",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "159期 (2008/03)",
+   "issueID": "64769"
+  },
+  {
+   "docId": "10251383-200803-x-159-7-81-a",
+   "title": "“黑暗時期”顯影：“皇民化運動”下的臺灣戲劇(1936.9~1940.11)",
+   "authors": [
+    "石婉舜(Wan-Shun Shih)"
+   ],
+   "volIssue": "159期",
+   "date": "2008 / 03",
+   "pages": "7-81",
+   "fulltext": true,
+   "issueLabel": "159期 (2008/03)",
+   "issueID": "64769"
+  },
+  {
+   "docId": "10251383-200803-x-159-83-169-a",
+   "title": "〈臺省民主歌〉之校證及其作者考索",
+   "authors": [
+    "曾子良(Tzu-Liang Tseng)"
+   ],
+   "volIssue": "159期",
+   "date": "2008 / 03",
+   "pages": "83-169",
+   "fulltext": true,
+   "issueLabel": "159期 (2008/03)",
+   "issueID": "64769"
+  },
+  {
+   "docId": "10251383-200803-x-159-171-204-a",
+   "title": "京劇《金鎖記》對傳統戲曲的繼承與創新",
+   "authors": [
+    "丘慧瑩(Hui-Yin Chiu)"
+   ],
+   "volIssue": "159期",
+   "date": "2008 / 03",
+   "pages": "171-204",
+   "fulltext": true,
+   "issueLabel": "159期 (2008/03)",
+   "issueID": "64769"
+  },
+  {
+   "docId": "10251383-200803-x-159-205-247-a",
+   "title": "文人傳統與女性意識的對話：《青塚前的對話》中的兩種聲音",
+   "authors": [
+    "汪詩珮(Shih-Pe Wang)"
+   ],
+   "volIssue": "159期",
+   "date": "2008 / 03",
+   "pages": "205-247",
+   "fulltext": true,
+   "issueLabel": "159期 (2008/03)",
+   "issueID": "64769"
+  },
+  {
+   "docId": "10251383-200712-x-158-1-7-a",
+   "title": "前言",
+   "authors": [
+    "李豐楙(Feng-Mao Li)"
+   ],
+   "volIssue": "158期",
+   "date": "2007 / 12",
+   "pages": "1-7",
+   "fulltext": true,
+   "issueLabel": "158期 (2007/12)",
+   "issueID": "62478"
+  },
+  {
+   "docId": "10251383-200712-x-158-9-38-a",
+   "title": "進香禮儀的探討：以大甲媽祖爲例",
+   "authors": [
+    "黃敦厚(Dun-Hou Huang)"
+   ],
+   "volIssue": "158期",
+   "date": "2007 / 12",
+   "pages": "9-38",
+   "fulltext": true,
+   "issueLabel": "158期 (2007/12)",
+   "issueID": "62478"
+  },
+  {
+   "docId": "10251383-200712-x-158-39-100-a",
+   "title": "傳統的再製與創新：白沙屯媽祖進香的“行轎”儀式與徒步體驗之分析",
+   "authors": [
+    "呂玫鍰(Mei-Huan Lu)"
+   ],
+   "volIssue": "158期",
+   "date": "2007 / 12",
+   "pages": "39-100",
+   "fulltext": true,
+   "issueLabel": "158期 (2007/12)",
+   "issueID": "62478"
+  },
+  {
+   "docId": "10251383-200712-x-158-101-196-a",
+   "title": "梅州佛教香花的結構、文本與變體",
+   "authors": [
+    "王馗(Kui Wang)"
+   ],
+   "volIssue": "158期",
+   "date": "2007 / 12",
+   "pages": "101-196",
+   "fulltext": true,
+   "issueLabel": "158期 (2007/12)",
+   "issueID": "62478"
+  },
+  {
+   "docId": "10251383-200712-x-158-197-253-a",
+   "title": "閩南客家地區的道教儀式：三朝醮個案",
+   "authors": [
+    "林振源(Chen-Yuan Lin)"
+   ],
+   "volIssue": "158期",
+   "date": "2007 / 12",
+   "pages": "197-253",
+   "fulltext": true,
+   "issueLabel": "158期 (2007/12)",
+   "issueID": "62478"
+  },
+  {
+   "docId": "10251383-200709-x-157-1-9-a",
+   "title": "導論：展示文化",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "157期",
+   "date": "2007 / 09",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "157期 (2007/09)",
+   "issueID": "58627"
+  },
+  {
+   "docId": "10251383-200709-x-157-65-100-a",
+   "title": "形塑茶藝：臺茶博覽會之展示建構與想像",
+   "authors": [
+    "駱鴻捷(Hung-Chieh Luo)"
+   ],
+   "volIssue": "157期",
+   "date": "2007 / 09",
+   "pages": "65-100",
+   "fulltext": true,
+   "issueLabel": "157期 (2007/09)",
+   "issueID": "58627"
+  },
+  {
+   "docId": "10251383-200709-x-157-101-144-a",
+   "title": "文化產業中文化如何展開？",
+   "authors": [
+    "劉大和(Ta-Ho Liu)"
+   ],
+   "volIssue": "157期",
+   "date": "2007 / 09",
+   "pages": "101-144",
+   "fulltext": true,
+   "issueLabel": "157期 (2007/09)",
+   "issueID": "58627"
+  },
+  {
+   "docId": "10251383-200709-x-157-145-183-a",
+   "title": "產業遺址製造與城市形象工程：以魯爾區(Ruhr Area)區域轉型為例",
+   "authors": [
+    "楊凱成(Kai-Cheng Yang)"
+   ],
+   "volIssue": "157期",
+   "date": "2007 / 09",
+   "pages": "145-183",
+   "fulltext": true,
+   "issueLabel": "157期 (2007/09)",
+   "issueID": "58627"
+  },
+  {
+   "docId": "10251383-200709-x-157-185-234-a",
+   "title": "北臺灣客家墓葬文化初步研究：以桃園縣平鎮市為例",
+   "authors": [
+    "黃萍瑛(Ping-Ying Huang)"
+   ],
+   "volIssue": "157期",
+   "date": "2007 / 09",
+   "pages": "185-234",
+   "fulltext": true,
+   "issueLabel": "157期 (2007/09)",
+   "issueID": "58627"
+  },
+  {
+   "docId": "10251383-200706-x-156-1-9-a",
+   "title": "導論：展示文化",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200706-x-156-11-29-a",
+   "title": "達悟落成慶禮中anood的音樂現象及其社會脈絡",
+   "authors": [
+    "呂鈺秀(Yu-Hsiu Lu)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "11-29",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200706-x-156-31-83-a",
+   "title": "Makapahay a calay（美麗之網）：當代都蘭阿美人歌舞的生活實踐",
+   "authors": [
+    "蔡政良(Tsai Futuru C. L.)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "31-83",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200706-x-156-85-155-a",
+   "title": "誰的戰爭歷史？：金門戰史館的國族歷史vs.民間社會的集體記憶",
+   "authors": [
+    "江柏煒(Bo-Wei Chiang)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "85-155",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200706-x-156-157-203-a",
+   "title": "讓吃鼓藏及我們的村子走向世界：地方菁英的敘述與苗的現代性",
+   "authors": [
+    "簡美玲(Mei-Ling Chien)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "157-203",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200706-x-156-205-281-a",
+   "title": "重構臺南平埔“公廨”空間：形式溯源與轉化探討",
+   "authors": [
+    "郭美芳(Mei-Fang Kuo)",
+    "徐明福(Ming-Fu Hsu)"
+   ],
+   "volIssue": "156期",
+   "date": "2007 / 06",
+   "pages": "205-281",
+   "fulltext": true,
+   "issueLabel": "156期 (2007/06)",
+   "issueID": "53895"
+  },
+  {
+   "docId": "10251383-200703-x-155-1-4-a",
+   "title": "前言",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "1-4",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-5-51-a",
+   "title": "從廣東宜人園到宜人京班：一個本地京班的歷史考察－兼論京劇在臺灣之在地化問題",
+   "authors": [
+    "徐亞湘(Ya-Hsiang Hsü)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "5-51",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-53-77-a",
+   "title": "試論豫劇在臺灣的發展與轉化",
+   "authors": [
+    "張啓豐(Chi-Feng Chang)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "53-77",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-79-110-a",
+   "title": "從精緻到胡撇：國族認同下的臺灣歌仔戲論述",
+   "authors": [
+    "謝筱玫(Hsiao-Mei Hsieh)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "79-110",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-111-150-a",
+   "title": "催化與自發：新世紀臺灣歌仔戲的新戲路",
+   "authors": [
+    "蔡欣欣(Hsin-Hsin Tsai)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "111-150",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-151-200-a",
+   "title": "當前兩種庶民休閒行為對歌仔戲的影響：以南、高兩市為觀察場域",
+   "authors": [
+    "林永昌(Yung-Chang Lin)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "151-200",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-201-225-a",
+   "title": "冀東皮影戲戲臺與影人體製流變考述及其現狀調查",
+   "authors": [
+    "鄭劭榮(Shao-Rong Zheng)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "201-225",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200703-x-155-227-264-a",
+   "title": "戲曲贊助與街戲的變遷：以新加坡韭菜芭城隍慶典為例",
+   "authors": [
+    "余淑娟(Yee Sok Kiang)"
+   ],
+   "volIssue": "155期",
+   "date": "2007 / 03",
+   "pages": "227-264",
+   "fulltext": true,
+   "issueLabel": "155期 (2007/03)",
+   "issueID": "48193"
+  },
+  {
+   "docId": "10251383-200612-x-154-1-21-a",
+   "title": "Special Issue on Religious Specialists and Local Communities Part Ⅱ Introduction",
+   "authors": [
+    "康豹(Paul R. Katz)"
+   ],
+   "volIssue": "154期",
+   "date": "2006 / 12",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "154期 (2006/12)",
+   "issueID": "43314"
+  },
+  {
+   "docId": "10251383-200612-x-154-23-76-a",
+   "title": "新加坡閩南籍道士研究：道士行業圈的源流以及其與社群之關係",
+   "authors": [
+    "許思偉(Sze-Wei Koh)"
+   ],
+   "volIssue": "154期",
+   "date": "2006 / 12",
+   "pages": "23-76",
+   "fulltext": true,
+   "issueLabel": "154期 (2006/12)",
+   "issueID": "43314"
+  },
+  {
+   "docId": "10251383-200612-x-154-77-131-a",
+   "title": "社會記憶的書寫與實踐：一個地方版廟誌的產生",
+   "authors": [
+    "梅慧玉(Hui-Yu Mei)"
+   ],
+   "volIssue": "154期",
+   "date": "2006 / 12",
+   "pages": "77-131",
+   "fulltext": true,
+   "issueLabel": "154期 (2006/12)",
+   "issueID": "43314"
+  },
+  {
+   "docId": "10251383-200612-x-154-133-200-a",
+   "title": "臨水夫人信仰的儀式活動：以臺南臨水夫人媽廟為例",
+   "authors": [
+    "康詩瑀(Shih-Yu Kang)"
+   ],
+   "volIssue": "154期",
+   "date": "2006 / 12",
+   "pages": "133-200",
+   "fulltext": true,
+   "issueLabel": "154期 (2006/12)",
+   "issueID": "43314"
+  },
+  {
+   "docId": "10251383-200612-x-154-201-252-a",
+   "title": "城市生理學與雜吧地的“下體”特徵：以近代北京天橋為例",
+   "authors": [
+    "岳永逸(Yong-Yi Yue)"
+   ],
+   "volIssue": "154期",
+   "date": "2006 / 12",
+   "pages": "201-252",
+   "fulltext": true,
+   "issueLabel": "154期 (2006/12)",
+   "issueID": "43314"
+  },
+  {
+   "docId": "10251383-200609-x-153-1-24-a",
+   "title": "Special Issue on Religious Specialists and Local Communities Part ⅠIntroduction",
+   "authors": [
+    "Paul R. Katz",
+    "康豹",
+    "楊玉君"
+   ],
+   "volIssue": "153期",
+   "date": "2006 / 09",
+   "pages": "1-24",
+   "fulltext": true,
+   "issueLabel": "153期 (2006/09)",
+   "issueID": "37256"
+  },
+  {
+   "docId": "10251383-200609-x-153-25-68-a",
+   "title": "Resident Specialists and Temple Managers in Late Imperial China",
+   "authors": [
+    "高萬桑(Vincent Goossaert)"
+   ],
+   "volIssue": "153期",
+   "date": "2006 / 09",
+   "pages": "25-68",
+   "fulltext": true,
+   "issueLabel": "153期 (2006/09)",
+   "issueID": "37256"
+  },
+  {
+   "docId": "10251383-200609-x-153-69-156-a",
+   "title": "湘潭正一道教調查",
+   "authors": [
+    "鄢光潤(Guang-Run Yan)"
+   ],
+   "volIssue": "153期",
+   "date": "2006 / 09",
+   "pages": "69-156",
+   "fulltext": true,
+   "issueLabel": "153期 (2006/09)",
+   "issueID": "37256"
+  },
+  {
+   "docId": "10251383-200609-x-153-157-202-a",
+   "title": "\"Superstition Specialist Households\"? The Household Idiom in Chinese Religious Practices",
+   "authors": [
+    "周越(Adam Yuet Chau)"
+   ],
+   "volIssue": "153期",
+   "date": "2006 / 09",
+   "pages": "157-202",
+   "fulltext": true,
+   "issueLabel": "153期 (2006/09)",
+   "issueID": "37256"
+  },
+  {
+   "docId": "10251383-200609-x-153-203-263-a",
+   "title": "Ritual Leaders in North China Local Communities in the Twentieth Century: A Report on Research in Progress",
+   "authors": [
+    "歐大年(Daniel L. Overmyer)"
+   ],
+   "volIssue": "153期",
+   "date": "2006 / 09",
+   "pages": "203-263",
+   "fulltext": true,
+   "issueLabel": "153期 (2006/09)",
+   "issueID": "37256"
+  },
+  {
+   "docId": "10251383-200606-x-152-1-8-a",
+   "title": "導言－文化遺産與城市生活",
+   "authors": [
+    "王嵩山(Sung-Shan Wang)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-9-84-a",
+   "title": "原型與變異－試論戰前大溪木器產業的源起與開展",
+   "authors": [
+    "賴明珠(Ming-Chu Lai)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "9-84",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-85-137-a",
+   "title": "神聖與凡俗的交錯―臺中市東、西區土地公廟的研究",
+   "authors": [
+    "舒奎翰(Kuei-Han Su)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "85-137",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-139-174-a",
+   "title": "做月內與坐月子中心－舊民俗轉為新產業",
+   "authors": [
+    "黃季平(Chi-Ping Huang)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "139-174",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-175-219-a",
+   "title": "傳統的再生與變異－當代梅州佛教香花的職業化與未來趨向",
+   "authors": [
+    "王馗(Kui Wang)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "175-219",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-221-251-a",
+   "title": "臺中新樂軒與何厝關係之研究",
+   "authors": [
+    "柯孟潔(Meng-Chieh Ko)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "221-251",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200606-x-152-253-297-a",
+   "title": "南管曲目分類系統及其作用",
+   "authors": [
+    "王櫻芬(Ying-Fen Wang)"
+   ],
+   "volIssue": "152期",
+   "date": "2006 / 06",
+   "pages": "253-297",
+   "fulltext": true,
+   "issueLabel": "152期 (2006/06)",
+   "issueID": "30376"
+  },
+  {
+   "docId": "10251383-200603-x-151-1-3-a",
+   "title": "田野調查與劇種研究專輯",
+   "authors": [
+    "林鶴宜(Ho-Yi Lin)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  },
+  {
+   "docId": "10251383-200603-x-151-5-29-a",
+   "title": "馬來西亞的道教拔度儀式與目連戲",
+   "authors": [
+    "余淑娟(Sok-Kiang Yee)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "5-29",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  },
+  {
+   "docId": "10251383-200603-x-151-31-96-a",
+   "title": "長子說書及其戲劇化傾向",
+   "authors": [
+    "張豔琴(Yan-Qin Zhang)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "31-96",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  },
+  {
+   "docId": "10251383-200603-x-151-97-143-a",
+   "title": "上黨古賽儀典考",
+   "authors": [
+    "楊孟衡(Meng-Heng Yang)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "97-143",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  },
+  {
+   "docId": "10251383-200603-x-151-145-184-a",
+   "title": "試論日治時期來臺福州班的劇種問題",
+   "authors": [
+    "陸方龍(Fang-Long Lu)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "145-184",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  },
+  {
+   "docId": "10251383-200603-x-151-185-252-a",
+   "title": "臺灣戰後四年(1945-1949)現代戲劇的發展概況",
+   "authors": [
+    "莊曙綺(Shu-Chi Chuang)"
+   ],
+   "volIssue": "151期",
+   "date": "2006 / 03",
+   "pages": "185-252",
+   "fulltext": true,
+   "issueLabel": "151期 (2006/03)",
+   "issueID": "26585"
+  }
+ ]
+}
