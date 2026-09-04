@@ -23,7 +23,7 @@ from docx.shared import Pt
 BASE = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金")
 NAME, SID, GRADE = "張辰瑋", "DB1153002", "一年級"
 ADVISOR = "釋昭慧"
-TITLE = "從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）"
+TITLE = "從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920–2020）"
 CJK, EN = "標楷體", "Times New Roman"
 
 JOBS = [

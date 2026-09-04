@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""產生整個補助期間的「研究生論文指導紀錄表」——每次討論一張，事先填好固定欄位。
+"""產生整個補助期間的「研究生論文指導紀錄表」——**每次討論一個獨立的 Word 檔**。
+
+表上註 2 寫「每次討論前請列印本表」，所以要一次一個檔案分開帶去印，
+不是一份 21 頁的合訂本。檔名照日期排序，一眼看得出哪一張是哪一次。
 
 《玄奘大學研究生助學金實施辦法》第六條第二款：每月與指導教授討論二次以上，
 次月五日前彙整送研發處。表上註 2 又寫「每次討論前請列印本表，討論後師生簽名」，
@@ -14,7 +17,6 @@
 
   python -X utf8 scripts/fill_advising_log.py
 """
-import copy
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -24,7 +26,7 @@ from docx.shared import Pt
 
 BASE = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金")
 SRC = BASE / "04-研究生論文指導記錄表(docx) (1).docx"
-OUT = BASE / "04-研究生論文指導記錄表（已填‧全學年）.docx"
+OUTDIR = BASE / "04-研究生論文指導記錄表（已填）"
 
 FIRST = date(2026, 9, 16)     # 115 學年度第一學期開學後第一個週三
 LAST = date(2027, 6, 30)      # 助學金補助期間到 2027 年 6 月
@@ -33,7 +35,7 @@ EVERY = 14                    # 雙週
 NAME = "張辰瑋（DB1153002）"
 ADVISOR = "釋昭慧"
 COLLEGE = "社會科學院／宗教與文化學系"
-TITLE = "從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920年代–2020年代）"
+TITLE = "從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920–2020）"
 PLACE = "玄奘大學宗教與文化學系研究室"
 TIME = "14 時 00 分至　15 時 00 分"
 CJK, EN = "標楷體", "Times New Roman"
@@ -89,39 +91,19 @@ def fill(table, d, n):
 
 
 def main():
-    tpl = Document(SRC)
-    out = Document(SRC)
-    body = out.element.body
-    sect = body.find(qn("w:sectPr"))
-    for el in list(body):
-        if el is not sect:
-            body.remove(el)
-
+    OUTDIR.mkdir(parents=True, exist_ok=True)
     ds = dates()
-    # 每學期各自從第 1 次起算。
-    # 🚨 第一學期是 9 月到**隔年 1 月**，不是到 12 月為止；用「年份換了就換學期」
-    #    會把 1 月那兩次算成第二學期的第 1、2 次。
     per_sem = {}
-    for i, d in enumerate(ds):
+    for d in ds:
+        # 🚨 第一學期是 9 月到**隔年 1 月**，不是到 12 月為止；用「年份換了就換學期」
+        #    會把 1 月那兩次算成第二學期的第 1、2 次。
         sem = 1 if (d.month >= 8 or d.month == 1) else 2
         per_sem[sem] = per_sem.get(sem, 0) + 1
-        first_p = None
-        for el in tpl.element.body:
-            if el is tpl.element.body.find(qn("w:sectPr")):
-                continue
-            cp = copy.deepcopy(el)
-            body.insert(len(body) - (1 if sect is not None else 0), cp)
-            if first_p is None and cp.tag == qn("w:p"):
-                first_p = cp
-        # 🚨 不要插「只有分頁符的空段落」：那個段落自己也會佔一頁，21 張會變 41 頁。
-        #    改成在這一份的第一段設 pageBreakBefore。
-        if i and first_p is not None:
-            pPr = first_p.get_or_add_pPr()
-            pPr.append(pPr.makeelement(qn("w:pageBreakBefore"), {}))
-        fill(out.tables[i], d, per_sem[sem])
-
-    out.save(OUT)
-    print(f"{len(ds)} 次討論（{ds[0]} … {ds[-1]}）→ {OUT.name}")
+        doc = Document(SRC)
+        fill(doc.tables[0], d, per_sem[sem])
+        name = (f"指導紀錄_{d:%Y-%m-%d}_115-{sem}第{per_sem[sem]:02d}次.docx")
+        doc.save(OUTDIR / name)
+    print(f"{len(ds)} 個檔（{ds[0]} … {ds[-1]}）→ {OUTDIR.name}/")
 
 
 if __name__ == "__main__":
