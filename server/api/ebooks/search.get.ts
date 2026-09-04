@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
       ? supabase
           .from("ebooks")
           // 圖書館搜尋涵蓋全集（collected-works）與相關書：不再 .is("collection", null)
-          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory, collection")
+          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory, collection, quality_score")
           .ilike("title", `%${safe}%`)
           .order("title")
           .limit(50)
@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
     wantAuthor
       ? supabase
           .from("ebooks")
-          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory, collection")
+          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory, collection, quality_score")
           .ilike("author", `%${safe}%`)
           .order("title")
           .limit(50)
@@ -50,7 +50,7 @@ export default defineEventHandler(async (event) => {
           let req = supabase
             .from("ebook_chunks")
             .select(
-              "id, ebook_id, chunk_index, page_number, chapter_path, content, ebooks!inner(title, author, collection)"
+              "id, ebook_id, chunk_index, page_number, chapter_path, content, ebooks!inner(title, author, collection, quality_score, chunk_count)"
             )
             .ilike("content", `%${safe}%`)
             .limit(40);
@@ -61,14 +61,19 @@ export default defineEventHandler(async (event) => {
       : Promise.resolve({ data: [] as any[], error: null }),
   ]);
 
+  // 品質閘門，與 /api/ebooks 共用 server/utils/ebook-quality-gate.ts 的規則。
+  // 這裡在 JS 端過濾而不寫進查詢：三個查詢各自最多 50 列，成本可以忽略，
+  // 而 PostgREST 的 or(...) 巢狀語法容易寫錯又不會報錯，只會靜靜地漏書。
+  const showAll = String((getQuery(event) as any).quality || "") === "all";
+  const keep = (b: any) => showAll || ebookPassesGate(b);
+
   return {
     query,
     mode,
-    titleMatches: (titleHits.data ?? []).map((b: any) => ({ ...b, matchType: "title" })),
-    authorMatches: (authorHits.data ?? []).map((b: any) => ({ ...b, matchType: "author" })),
-    fulltextMatches: (fulltextHits.data ?? []).map((c: any) => ({
-      ...c,
-      matchType: "fulltext",
-    })),
+    titleMatches: (titleHits.data ?? []).filter(keep).map((b: any) => ({ ...b, matchType: "title" })),
+    authorMatches: (authorHits.data ?? []).filter(keep).map((b: any) => ({ ...b, matchType: "author" })),
+    fulltextMatches: (fulltextHits.data ?? [])
+      .filter((c: any) => keep(c.ebooks))
+      .map((c: any) => ({ ...c, matchType: "fulltext" })),
   };
 });

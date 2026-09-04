@@ -156,7 +156,7 @@
               <span class="text-[11px] font-mono font-semibold text-stone-500">{{ seg.label }}</span>
               <div class="flex-1 h-px bg-stone-100" />
               <button
-                v-if="seg.commentary"
+                v-if="seg.commentary || seg.subs.length"
                 @click="togglePanel(si)"
                 class="text-[11px] text-amber-700 hover:text-amber-900"
               >{{ panelOpen[si] === false ? '展開註釋 ▾' : '收合註釋 ▴' }}</button>
@@ -195,7 +195,7 @@
 
             <!-- commentary panel: 說明（overview）在上、教父註釋（comments）在下，明確分區 -->
             <div
-              v-if="seg.commentary && panelOpen[si] !== false"
+              v-if="(seg.commentary || seg.subs.length) && panelOpen[si] !== false"
               class="mt-2 space-y-2.5"
             >
               <!-- 說明（編者導論） -->
@@ -226,6 +226,32 @@
                     </template>
                     <template v-else>《{{ e.work_title }}》</template>
                   </p>
+                </div>
+              </div>
+
+              <!-- 逐節註釋：ACCS 在段落層底下還有一層掛在單節（或更窄範圍）的引文。
+                   這一層佔全站教父註釋的六成，舊版完全沒渲染出來。 -->
+              <div v-if="seg.subs.length" class="space-y-3 pl-1">
+                <div v-for="(sub, sj) in seg.subs" :key="'s' + sj">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-[11px] font-mono font-semibold text-stone-400">{{ sub.label }}</span>
+                    <div class="flex-1 h-px bg-stone-100" />
+                  </div>
+                  <div class="border-l-2 border-amber-200 pl-3.5 space-y-3">
+                    <div v-for="(e, ei) in sub.entries" :key="'se' + ei">
+                      <p v-if="e.heading" class="text-sm font-semibold text-stone-600 mb-0.5">{{ e.heading }}</p>
+                      <p
+                        class="leading-loose text-stone-800"
+                        :class="e.section_kind === 'overview' ? 'kaiti text-[15px]' : 'text-[15px]'"
+                      >{{ e.body_zh }}</p>
+                      <p v-if="e.father_name || e.work_title" class="text-xs text-amber-800 mt-1 text-right">
+                        <template v-if="e.father_name">
+                          — <span class="font-medium">{{ e.father_name }}</span>{{ e.work_title ? ` 《${e.work_title}》` : '' }}
+                        </template>
+                        <template v-else>《{{ e.work_title }}》</template>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -630,42 +656,69 @@ function commentsOf(seg: { commentary: Pericope | null }): CommentaryEntry[] {
   return seg.commentary?.entries.filter(e => e.section_kind === 'comment') ?? []
 }
 
-// Group chapter verses into ACCS pericopes (經文上 → 註釋下). Verses outside any
-// pericope render as their own commentary-less segment, in verse order.
+// Group chapter verses into ACCS pericopes (經文上 → 註釋下).
+//
+// 🚨 ACCS 是**兩層**結構，不是一串不相交的段落：段落層涵蓋一個經文範圍、帶「概述」
+//    與該段的引文（如 羅 1:1–7，概述 1 則＋註釋 53 則），逐節層再巢狀在它裡面
+//    （羅 1:1 註釋 19 則、羅 1:2 註釋 1 則…）。舊版用單一游標線性走 pericope，
+//    段落層一次吃掉整段經文之後，底下每一組逐節註釋都落進「v.verse > p.verse_end」
+//    而被 pIdx++ 丟掉 —— 全站 13,155 組 pericope 有 9,574 組（72.8%）從未渲染，
+//    等於 33,113 則具名教父註釋裡有 20,187 則（61%）看不到。畫面上只剩概述，
+//    看起來就像「這一卷只有段落簡介沒有教父註釋」。
+//
+//    改法：先把 pericope 依「起始節升冪、範圍大的在前」排序，被前一個段落層完全
+//    包住的就掛成它的子項，否則自己成為新的段落層。經文只在段落層渲染一次，
+//    逐節註釋以子區塊列在底下。
 const segments = computed(() => {
-  const out: { label: string; verses: { verse: number; byVersion: Record<string, string> }[]; commentary: Pericope | null }[] = []
+  type Verse = { verse: number; byVersion: Record<string, string> }
+  const out: {
+    label: string
+    verses: Verse[]
+    commentary: Pericope | null
+    subs: { label: string; entries: CommentaryEntry[] }[]
+  }[] = []
   if (!chapterData.value) return out
-  const pericopes = (commentaryData.value?.pericopes ?? [])
-    .slice()
-    .sort((a, b) => a.verse_start - b.verse_start)
-  const verses = chapterData.value.verses
-  const bookShort = currentBook.value?.name_zh_short || currentBook.value?.name_zh || ''
 
-  let pIdx = 0
-  let i = 0
-  while (i < verses.length) {
-    const v = verses[i]
-    const p = pericopes[pIdx]
-    if (p && v.verse >= p.verse_start && v.verse <= p.verse_end) {
-      // collect all verses within this pericope
-      const grp: typeof verses = []
-      while (i < verses.length && verses[i].verse <= p.verse_end) {
-        grp.push(verses[i]); i++
-      }
-      const label = p.verse_start === p.verse_end
-        ? `${bookShort} ${chapterNum.value}:${p.verse_start}`
-        : `${bookShort} ${chapterNum.value}:${p.verse_start}–${p.verse_end}`
-      out.push({ label, verses: grp, commentary: p })
-      pIdx++
-    } else if (p && v.verse > p.verse_end) {
-      // pericope has no matching verses (gap) — skip it
-      pIdx++
+  const verses = chapterData.value.verses as Verse[]
+  const bookShort = currentBook.value?.name_zh_short || currentBook.value?.name_zh || ''
+  const rangeLabel = (a: number, b: number) => a === b
+    ? `${bookShort} ${chapterNum.value}:${a}`
+    : `${bookShort} ${chapterNum.value}:${a}–${b}`
+
+  // 同一起始節時範圍大的排前面 → 它就是段落層，後面較窄的是掛在它底下的逐節註釋
+  const ps = (commentaryData.value?.pericopes ?? []).slice()
+    .sort((a, b) => a.verse_start - b.verse_start || b.verse_end - a.verse_end)
+
+  const blocks: { p: Pericope; subs: Pericope[] }[] = []
+  for (const p of ps) {
+    const cur = blocks[blocks.length - 1]
+    if (cur && p.verse_start >= cur.p.verse_start && p.verse_end <= cur.p.verse_end) {
+      cur.subs.push(p)
     } else {
-      // verse before next pericope start → standalone, no commentary
-      const label = `${bookShort} ${chapterNum.value}:${v.verse}`
-      out.push({ label, verses: [v], commentary: null })
+      blocks.push({ p, subs: [] })
+    }
+  }
+
+  let i = 0
+  for (const blk of blocks) {
+    // 段落層開始之前、沒有任何註釋涵蓋的經文，單獨成段
+    while (i < verses.length && verses[i].verse < blk.p.verse_start) {
+      out.push({ label: rangeLabel(verses[i].verse, verses[i].verse), verses: [verses[i]], commentary: null, subs: [] })
       i++
     }
+    const grp: Verse[] = []
+    while (i < verses.length && verses[i].verse <= blk.p.verse_end) { grp.push(verses[i]); i++ }
+    out.push({
+      label: rangeLabel(blk.p.verse_start, blk.p.verse_end),
+      verses: grp,
+      commentary: blk.p,
+      subs: blk.subs.map(s => ({ label: rangeLabel(s.verse_start, s.verse_end), entries: s.entries })),
+    })
+  }
+  // 最後一個段落層之後剩下的經文
+  while (i < verses.length) {
+    out.push({ label: rangeLabel(verses[i].verse, verses[i].verse), verses: [verses[i]], commentary: null, subs: [] })
+    i++
   }
   return out
 })

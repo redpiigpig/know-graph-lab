@@ -39,9 +39,15 @@ echo --- ingest_new_books --- >> "%LOGFILE%"
 "%PY%" scripts\ingest_new_books.py run >> "%LOGFILE%" 2>&1
 echo step1 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
-REM Step 2: parse newly-ingested (and any other unparsed) text-extractable books
+REM Step 2: parse newly-ingested (and any other unparsed) text-extractable books.
+REM   --limit was 30, which made no sense: parse is local text extraction, it costs
+REM   zero API quota and averages ~25s/book. Meanwhile 2,950 of the library's 4,600
+REM   books sat unparsed -- at 3 runs x 30 that is a 33-day drain. 150 is about an
+REM   hour per run, so the backlog clears in roughly a week and then this step goes
+REM   back to being a daily no-op. Raise it further only if OCR (step 3) is not being
+REM   starved of wall-clock.
 echo --- parse_worker --- >> "%LOGFILE%"
-"%PY%" scripts\parse_worker.py run --limit 30 >> "%LOGFILE%" 2>&1
+"%PY%" scripts\parse_worker.py run --limit 150 >> "%LOGFILE%" 2>&1
 echo step2 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
 REM Step 3a: pick a Gemini model that is actually alive right now.

@@ -1,12 +1,17 @@
 export default defineEventHandler(async (event) => {
   await requireAdmin(event);
   const supabase = getAdminClient();
-  const { category, subcategory, tagId, collection } = getQuery(event) as {
+  const { category, subcategory, tagId, collection, quality } = getQuery(event) as {
     category?: string;
     subcategory?: string;
     tagId?: string;
     collection?: string; // 未帶=圖書館(排除全集)；'collected-works'=只看全集；'all'=不過濾
+    quality?: string;    // 未帶=只上架過關的；'all'=連沒過關的也列（策展用）
   };
+
+  // 品質閘門（門檻與規則見 server/utils/ebook-quality-gate.ts）。
+  // 只套用在「圖書館」這一支；全集是人工策展的，不受此閘門影響。
+  const gateLibrary = quality !== "all";
 
   // tagId filter: fetch the book_ids for this tag once, then narrow ebooks
   // via books.id IN (...). ebooks isn't tagged directly — its `books` row is.
@@ -39,6 +44,7 @@ export default defineEventHandler(async (event) => {
       q = q.eq("collection", collection);
     } else {
       q = q.is("collection", null);
+      if (gateLibrary) q = q.gte("quality_score", EBOOK_QUALITY_PASS).gt("chunk_count", 0);
     }
     if (category) q = q.eq("category", category);
     if (subcategory) q = q.ilike("subcategory", `${subcategory}%`);

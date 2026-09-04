@@ -39,6 +39,8 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import time
+
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -278,9 +280,18 @@ CHUNK_SELECT = "ebook_id,chunk_type,chapter_path,char_count,content,source_lang"
 
 
 def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
-    """全館分頁掃 ebook_chunks（含 preview），按書分桶。"""
+    """全館分頁掃 ebook_chunks（含 preview），按書分桶。
+
+    🚨 分頁的終止條件不可以是「拿回來的比要求的少」。PostgREST 有 max-rows 硬上限
+    （這個專案是 1000），所以 `limit=10000` 永遠只回 1000 列，`len(c) < step` 第一頁
+    就成立、迴圈立刻 break —— 全館 255,951 個 chunk 只掃到前 1000 個（0.4%）。其餘每
+    一本都變成 n==0，被 harvest_signals 當成 blank/no_toc/tiny 全 100%，一律判 15 分
+    並掛上 BLANK_BODY+NO_TOC+OVER_FRAGMENTED 三個 flag。2026-09-04 之前那份「1,334 本
+    低於 40 分」的全館評分就是這樣來的，不是書真的爛。
+    終止條件改成「這一頁回 0 列」，並用實際回傳筆數推進 offset，跟伺服器上限脫鉤。
+    """
     buckets: dict[str, list[dict]] = defaultdict(list)
-    off, step = 0, 10000
+    off, step = 0, 1000
     if not use_rest:
         id_filter = ""
         if len(book_ids) <= 200:
@@ -292,25 +303,38 @@ def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, lis
             for ch in c:
                 if ch["ebook_id"] in book_ids:
                     buckets[ch["ebook_id"]].append(ch)
-            if len(c) < step:
+            if not c:
                 break
-            off += step
+            off += len(c)
             print(f"  …{off} chunks scanned (mgmt)", flush=True)
         return buckets
     URL, KEY = env["SUPABASE_URL"], env["SUPABASE_SERVICE_ROLE_KEY"]
     H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
     while True:
-        r = requests.get(f"{URL}/rest/v1/ebook_chunks?select={CHUNK_SELECT}"
-                         f"&order=id&offset={off}&limit={step}", headers=H, timeout=180)
-        r.raise_for_status()
+        # 全館要打兩百多次，中間掉一次就整趟白跑（沒有 checkpoint）。這台機器的 DNS
+        # 會間歇性斷（getaddrinfo failed），一斷就是好幾十秒，所以退避要拉到分鐘級，
+        # 不能只等 5 秒 —— 2026-09-04 連兩趟都是死在這裡。
+        for attempt in range(6):
+            try:
+                r = requests.get(f"{URL}/rest/v1/ebook_chunks?select={CHUNK_SELECT}"
+                                 f"&order=id&offset={off}&limit={step}", headers=H, timeout=180)
+                r.raise_for_status()
+                break
+            except requests.exceptions.RequestException as exc:
+                if attempt == 5:
+                    raise
+                wait = (5, 15, 30, 60, 120)[attempt]
+                print(f"  ! offset={off} 連線失敗（{type(exc).__name__}），{wait}s 後重試", flush=True)
+                time.sleep(wait)
         c = r.json()
         for ch in c:
             if ch["ebook_id"] in book_ids:
                 buckets[ch["ebook_id"]].append(ch)
-        if len(c) < step:
+        if not c:
             break
-        off += step
-        print(f"  …{off} chunks scanned", flush=True)
+        off += len(c)
+        if off % 20000 == 0:
+            print(f"  …{off} chunks scanned", flush=True)
     return buckets
 
 

@@ -23,10 +23,21 @@ import requests
 import translate_ebook_to_zh as te
 from accs_epub import parse_chapter
 
-EPUB = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\經典對照與註釋'
-            r'\基督教-古代基督徒聖經註釋叢書 ACCS\ACCS_Jeremiah_Lamentations.epub')
+ACCS_DIR = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\經典對照與註釋'
+                r'\基督教-古代基督徒聖經註釋叢書 ACCS')
+EPUB = ACCS_DIR / 'ACCS_Jeremiah_Lamentations.epub'
 CKPT_DIR = Path('c:/tmp')
 SOURCE_VOL = 'ACCS（耶利米書‧耶利米哀歌）'
+
+# 一本 EPUB 常含數卷（Vol 9 就是箴言＋傳道書＋雅歌）。中文掃描本已經完整覆蓋的卷
+# 絕對不能用英譯蓋掉 —— upsert 的衝突鍵是
+# (book_code, chapter, verse_start, verse_end, entry_order)，跑整本就會把出版社的
+# 中文正式譯文換成機器翻譯。所以補缺口一律要用 --only-books / --only-chapters 圈到
+# 真正缺的範圍。
+KNOWN_VOLUMES = {
+    'jer_lam': ('ACCS_Jeremiah_Lamentations.epub', 'ACCS（耶利米書‧耶利米哀歌）'),
+    'pro_ecc_sng': ('ACCS_Proverbs_Ecclesiastes_Song.epub', 'ACCS（箴言‧傳道書‧雅歌）'),
+}
 
 # 不是人，是作品／文獻集。ACCS 把它們當引用來源列在署名位置，中文各卷也這樣
 # （語料裡就有「使徒憲章」）。這些不進詞庫比對，直接給定譯名。
@@ -229,16 +240,53 @@ def main() -> int:
                     help='一次送幾則進 LLM；對不齊會自動退回逐段')
     ap.add_argument('--names-only', action='store_true',
                     help='只檢查署名對照，不翻譯')
+    ap.add_argument('--volume', choices=sorted(KNOWN_VOLUMES),
+                    help=f'要處理哪一卷（預設 jer_lam）。可選：{", ".join(sorted(KNOWN_VOLUMES))}')
+    ap.add_argument('--only-books',
+                    help='只做這些 book_code（逗號分隔）。一本 EPUB 含數卷時務必指定，'
+                         '否則會用英譯蓋掉中文掃描本已有的卷。')
+    ap.add_argument('--only-chapters',
+                    help='只做這些章，如 3-8 或 3,4,5。搭配 --only-books 用來補缺口。')
     args = ap.parse_args()
 
+    epub_path, source_vol, ckpt_name = EPUB, SOURCE_VOL, 'jer_lam'
+    if args.volume:
+        fn, source_vol = KNOWN_VOLUMES[args.volume]
+        epub_path, ckpt_name = ACCS_DIR / fn, args.volume
+    if not epub_path.exists():
+        print(f'找不到 EPUB: {epub_path}')
+        return 1
+    print(f'來源: {epub_path.name}  →  source_vol={source_vol}', flush=True)
+
     import zipfile
-    z = zipfile.ZipFile(EPUB)
+    z = zipfile.ZipFile(epub_path)
     names = [n for n in z.namelist() if re.search(r'p\dchap\d+\.html$', n)]
     names.sort(key=lambda n: (n.split('chap')[0], int(re.search(r'chap(\d+)', n).group(1))))
     recs: list[dict] = []
     for n in names:
         recs += parse_chapter(z.read(n).decode('utf-8', errors='replace'))
     print(f'解析出 {len(recs)} 則', flush=True)
+
+    if args.only_books:
+        keep = {b.strip() for b in args.only_books.split(',') if b.strip()}
+        before = len(recs)
+        recs = [r for r in recs if r['book_code'] in keep]
+        print(f'  --only-books {sorted(keep)} → 留下 {len(recs)}/{before} 則', flush=True)
+    if args.only_chapters:
+        keep_ch: set[str] = set()
+        for part in args.only_chapters.split(','):
+            part = part.strip()
+            if '-' in part:
+                lo, hi = part.split('-', 1)
+                keep_ch |= {str(c) for c in range(int(lo), int(hi) + 1)}
+            elif part:
+                keep_ch.add(part)
+        before = len(recs)
+        recs = [r for r in recs if str(r['chapter']) in keep_ch]
+        print(f'  --only-chapters {args.only_chapters} → 留下 {len(recs)}/{before} 則', flush=True)
+    if not recs:
+        print('過濾後沒有東西可做，結束')
+        return 0
 
     exact = build_name_map()
     stats: dict[str, int] = {}
@@ -253,7 +301,7 @@ def main() -> int:
     if args.names_only:
         return 0
 
-    ckpt = CKPT_DIR / 'accs_epub_zh_jer_lam.jsonl'
+    ckpt = CKPT_DIR / f'accs_epub_zh_{ckpt_name}.jsonl'
     done: dict[str, dict] = {}
     if ckpt.exists():
         for ln in ckpt.open(encoding='utf-8'):
@@ -342,7 +390,7 @@ def upload(ckpt: Path) -> int:
             'section_kind': d['kind'], 'heading': d.get('heading_zh') or None,
             'father_name': d.get('father_zh') or None,
             'work_title': d.get('work_zh') or None,
-            'body_zh': d['body_zh'], 'source_vol': SOURCE_VOL,
+            'body_zh': d['body_zh'], 'source_vol': source_vol,
         })
     # 🚨 pericope_order 要**一個經文範圍一組**，不可沿用 EPUB 自己的段落編號。
     #    /api/scripture/commentary 是按 pericope_order 分組、拿**該組第一列**的

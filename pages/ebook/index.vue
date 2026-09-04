@@ -233,14 +233,30 @@
             </p>
           </div>
 
+          <!-- 品質閘門切換：預設只列已把關過的書；策展時才把未過關的叫出來 -->
+          <div class="flex items-center justify-end gap-2 mb-3 text-xs">
+            <span class="text-gray-500">{{ showUngraded ? '顯示全部（含未過關）' : '只顯示品質過關的書' }}</span>
+            <button @click="toggleUngraded"
+              class="px-2.5 py-1 rounded-lg border transition"
+              :class="showUngraded
+                ? 'border-amber-700 text-amber-300 hover:border-amber-500'
+                : 'border-gray-700 text-gray-400 hover:border-gray-500'">
+              {{ showUngraded ? '回到已把關' : '顯示未過關' }}
+            </button>
+          </div>
+
           <div v-if="loading" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="i in 6" :key="i" class="bg-gray-900 rounded-xl border border-gray-800 p-5 h-28 animate-pulse"></div>
           </div>
 
           <div v-else-if="ebooks.length === 0" class="text-center py-20 text-gray-500">
             <p class="text-4xl mb-4">📚</p>
-            <p class="text-lg mb-2">{{ activeCategory ? '此分類尚無書籍' : '書架還是空的' }}</p>
-            <p class="text-sm mb-6">上傳 PDF 或 EPUB 開始建立你的電子圖書館</p>
+            <p class="text-lg mb-2">{{ activeCategory ? '此分類尚無已把關的書籍' : '書架還是空的' }}</p>
+            <p v-if="!showUngraded" class="text-sm mb-6">
+              只列出品質過關的書。這一類可能還有未轉錄或待重做的書 ——
+              <button @click="toggleUngraded" class="text-amber-400 hover:text-amber-300 underline">顯示未過關</button>
+            </p>
+            <p v-else class="text-sm mb-6">上傳 PDF 或 EPUB 開始建立你的電子圖書館</p>
             <button @click="showUpload = true" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 rounded-xl text-sm transition">
               上傳第一本書
             </button>
@@ -475,6 +491,13 @@ function selectTag(tagId: string) {
 // ── 資料 ──
 const loading = ref(true);
 const ebooks = ref<any[]>([]);
+// 預設只顯示 quality_score >= 80 的書（見 server/api/ebooks/index.get.ts）。
+// 空殼書出現在書架上比不出現更糟：點進去是一片空白。策展時才切成顯示全部。
+const showUngraded = ref(false);
+function toggleUngraded() {
+  showUngraded.value = !showUngraded.value;
+  loadBooks();
+}
 const searchQ = ref("");
 const searchResultQ = ref("");
 const searching = ref(false);
@@ -565,6 +588,7 @@ async function loadBooks() {
   if (activeCategory.value)    params.set("category",    activeCategory.value);
   if (activeSubcategory.value) params.set("subcategory", activeSubcategory.value);
   if (activeTagId.value)       params.set("tagId",       activeTagId.value);
+  if (showUngraded.value)      params.set("quality",     "all");
   const qs = params.size ? "?" + params.toString() : "";
   ebooks.value = await $fetch<any[]>(`/api/ebooks${qs}`, {
     headers: { Authorization: `Bearer ${token}` },
@@ -576,7 +600,8 @@ async function runSearch() {
   if (!searchQ.value.trim()) return;
   searching.value = true;
   const token = await getToken(); if (!token) { searching.value = false; return; }
-  const url = `/api/ebooks/search?q=${encodeURIComponent(searchQ.value)}&mode=${searchMode.value}`;
+  const url = `/api/ebooks/search?q=${encodeURIComponent(searchQ.value)}&mode=${searchMode.value}`
+    + (showUngraded.value ? "&quality=all" : "");
   const data = await $fetch<any>(url, {
     headers: { Authorization: `Bearer ${token}` },
   }).catch(() => null);
