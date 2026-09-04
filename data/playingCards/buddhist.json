@@ -1,0 +1,96 @@
+{
+  "title": "佛教人物撲克牌",
+  "subtitle": "五十四張・佛陀至當代",
+  "backIcon": "noto-v1:wheel-of-dharma",
+  "backMotto": "諸行無常　諸法無我　涅槃寂靜",
+  "ranks": {
+    "K": { "label": "佛陀", "icon": "noto-v1:wheel-of-dharma" },
+    "Q": { "label": "菩薩", "icon": "lotus" },
+    "J": { "label": "聲聞弟子", "icon": "prayer beads" },
+    "10": { "label": "比丘尼", "icon": "folded hands" },
+    "9": { "label": "在家居士", "icon": "house with garden" },
+    "8": { "label": "護法王者", "icon": "crown" },
+    "7": { "label": "印度論師", "icon": "scroll" },
+    "6": { "label": "譯經三藏", "icon": "writing hand" },
+    "5": { "label": "漢傳祖師", "icon": "person in lotus position" },
+    "4": { "label": "日本祖師", "icon": "map of Japan" },
+    "3": { "label": "藏傳祖師", "icon": "snow-capped mountain" },
+    "2": { "label": "近代復興", "icon": "sunrise" },
+    "A": { "label": "當代弘傳", "icon": "globe showing Asia-Australia" }
+  },
+  "cards": [
+    { "rank": "K", "suit": "spade",   "zh": "釋迦牟尼佛", "orig": "Śākyamuni", "dates": "前563–前483" },
+    { "rank": "K", "suit": "heart",   "zh": "阿彌陀佛",   "orig": "Amitābha",  "dates": "願力所成・無生卒年" },
+    { "rank": "K", "suit": "diamond", "zh": "藥師佛",     "orig": "Bhaiṣajyaguru", "dates": "願力所成・無生卒年" },
+    { "rank": "K", "suit": "club",    "zh": "彌勒佛",     "orig": "Maitreya",  "dates": "未來佛・無生卒年" },
+
+    { "rank": "Q", "suit": "spade",   "zh": "文殊菩薩",   "orig": "Mañjuśrī",       "dates": "大智・無生卒年" },
+    { "rank": "Q", "suit": "heart",   "zh": "觀世音菩薩", "orig": "Avalokiteśvara", "dates": "大悲・無生卒年" },
+    { "rank": "Q", "suit": "diamond", "zh": "普賢菩薩",   "orig": "Samantabhadra",  "dates": "大行・無生卒年" },
+    { "rank": "Q", "suit": "club",    "zh": "地藏菩薩",   "orig": "Kṣitigarbha",    "dates": "大願・無生卒年" },
+
+    { "rank": "J", "suit": "spade",   "zh": "舍利弗尊者", "orig": "Śāriputra",     "dates": "約前568–前484" },
+    { "rank": "J", "suit": "heart",   "zh": "目犍連尊者", "orig": "Maudgalyāyana", "dates": "約前568–前484" },
+    { "rank": "J", "suit": "diamond", "zh": "摩訶迦葉尊者", "orig": "Mahākāśyapa", "dates": "約前556–前484" },
+    { "rank": "J", "suit": "club",    "zh": "阿難尊者",   "orig": "Ānanda",        "dates": "約前563–前463" },
+
+    { "rank": "10", "suit": "spade",   "zh": "大愛道比丘尼", "orig": "Mahāprajāpatī Gautamī", "dates": "前六至前五世紀" },
+    { "rank": "10", "suit": "heart",   "zh": "耶輸陀羅比丘尼", "orig": "Yaśodharā",           "dates": "前六至前五世紀" },
+    { "rank": "10", "suit": "diamond", "zh": "讖摩比丘尼",   "orig": "Khemā",                 "dates": "前六至前五世紀" },
+    { "rank": "10", "suit": "club",    "zh": "蓮華色比丘尼", "orig": "Uppalavaṇṇā",           "dates": "前六至前五世紀" },
+
+    { "rank": "9", "suit": "spade",   "zh": "給孤獨長者", "orig": "Anāthapiṇḍada", "dates": "前六至前五世紀" },
+    { "rank": "9", "suit": "heart",   "zh": "韋提希夫人", "orig": "Vaidehī",       "dates": "前六至前五世紀" },
+    { "rank": "9", "suit": "diamond", "zh": "維摩詰居士", "orig": "Vimalakīrti",   "dates": "經中人物・無生卒年" },
+    { "rank": "9", "suit": "club",    "zh": "勝鬘夫人",   "orig": "Śrīmālādevī",   "dates": "經中人物・無生卒年" },
+
+    { "rank": "8", "suit": "spade",   "zh": "阿闍世王",   "orig": "Ajātaśatru",       "dates": "在位 約前492–前460" },
+    { "rank": "8", "suit": "heart",   "zh": "阿育王",     "orig": "Aśoka",            "dates": "約前304–前232" },
+    { "rank": "8", "suit": "diamond", "zh": "天愛帝須王", "orig": "Devānaṃpiya Tissa","dates": "在位 約前307–前267" },
+    { "rank": "8", "suit": "club",    "zh": "梁武帝蕭衍", "orig": "Emperor Wu of Liang", "dates": "464–549" },
+
+    { "rank": "7", "suit": "spade",   "zh": "馬鳴菩薩", "orig": "Aśvaghoṣa",  "dates": "約80–150" },
+    { "rank": "7", "suit": "heart",   "zh": "龍樹菩薩", "orig": "Nāgārjuna",  "dates": "約150–250" },
+    { "rank": "7", "suit": "diamond", "zh": "無著菩薩", "orig": "Asaṅga",     "dates": "約395–470" },
+    { "rank": "7", "suit": "club",    "zh": "世親菩薩", "orig": "Vasubandhu", "dates": "約400–480" },
+
+    { "rank": "6", "suit": "spade",   "zh": "鳩摩羅什", "orig": "Kumārajīva", "dates": "344–413" },
+    { "rank": "6", "suit": "heart",   "zh": "真諦三藏", "orig": "Paramārtha", "dates": "499–569" },
+    { "rank": "6", "suit": "diamond", "zh": "玄奘三藏", "orig": "Xuanzang",   "dates": "602–664" },
+    { "rank": "6", "suit": "club",    "zh": "義淨三藏", "orig": "Yijing",     "dates": "635–713" },
+
+    { "rank": "5", "suit": "spade",   "zh": "天台智顗", "orig": "Zhiyi",    "dates": "538–597" },
+    { "rank": "5", "suit": "heart",   "zh": "賢首法藏", "orig": "Fazang",   "dates": "643–712" },
+    { "rank": "5", "suit": "diamond", "zh": "曹溪慧能", "orig": "Huineng",  "dates": "638–713" },
+    { "rank": "5", "suit": "club",    "zh": "淨土善導", "orig": "Shandao",  "dates": "613–681" },
+
+    { "rank": "4", "suit": "spade",   "zh": "最澄", "orig": "Saichō",  "dates": "767–822" },
+    { "rank": "4", "suit": "heart",   "zh": "空海", "orig": "Kūkai",   "dates": "774–835" },
+    { "rank": "4", "suit": "diamond", "zh": "道元", "orig": "Dōgen",   "dates": "1200–1253" },
+    { "rank": "4", "suit": "club",    "zh": "親鸞", "orig": "Shinran", "dates": "1173–1263" },
+
+    { "rank": "3", "suit": "spade",   "zh": "蓮花生大士", "orig": "Padmasambhava",   "dates": "約八世紀" },
+    { "rank": "3", "suit": "heart",   "zh": "瑪爾巴譯師", "orig": "Marpa Lotsāwa",   "dates": "1012–1097" },
+    { "rank": "3", "suit": "diamond", "zh": "薩迦班智達", "orig": "Sakya Paṇḍita",   "dates": "1182–1251" },
+    { "rank": "3", "suit": "club",    "zh": "宗喀巴大師", "orig": "Tsongkhapa",      "dates": "1357–1419" },
+
+    { "rank": "2", "suit": "spade",   "zh": "安貝卡博士", "orig": "B. R. Ambedkar",   "dates": "1891–1956" },
+    { "rank": "2", "suit": "heart",   "zh": "太虛大師",   "orig": "Taixu",            "dates": "1890–1947" },
+    { "rank": "2", "suit": "diamond", "zh": "阿難陀彌勒", "orig": "Allan Bennett",    "dates": "1872–1923" },
+    { "rank": "2", "suit": "club",    "zh": "鈴木大拙",   "orig": "Suzuki Daisetsu",  "dates": "1870–1966" },
+
+    { "rank": "A", "suit": "spade",   "zh": "十四世達賴喇嘛", "orig": "Tenzin Gyatso",   "dates": "1935–" },
+    { "rank": "A", "suit": "heart",   "zh": "一行禪師",       "orig": "Thích Nhất Hạnh","dates": "1926–2022" },
+    { "rank": "A", "suit": "diamond", "zh": "印順導師",       "orig": "Yin Shun",        "dates": "1906–2005" },
+    { "rank": "A", "suit": "club",    "zh": "史蒂芬‧巴契勒", "orig": "Stephen Batchelor","dates": "1953–" }
+  ],
+  "jokers": [
+    { "rank": "大鬼", "zh": "魔王波旬", "orig": "Māra",      "dates": "貪欲‧死‧誘惑的象徵", "label": "對治者", "icon": "skull" },
+    { "rank": "小鬼", "zh": "提婆達多", "orig": "Devadatta", "dates": "破和合僧的堂弟",     "label": "對治者", "icon": "broken heart" }
+  ],
+  "sources": [
+    "生卒年採學界通行推定；佛與菩薩屬信仰人物，不繫年。",
+    "印度人物原文名為梵語羅馬轉寫，巴利傳統人物用巴利語轉寫。",
+    "花色不表位階，只作四色分組；點數才是分類軸（K 佛陀…A 當代弘傳）。"
+  ]
+}

@@ -1,0 +1,6017 @@
+{
+  "license": "OpenMoji 17.0.0 CC BY-SA 4.0；game-icons CC BY 3.0；Phosphor MIT；Material Design Icons Apache 2.0；Tabler MIT；數字與曆法圖為本專案自繪",
+  "total": 1000,
+  "matched": 1000,
+  "sources": {
+    "tile": 56,
+    "flag": 19,
+    "override": 324,
+    "preset": 366,
+    "annotation": 1,
+    "zh_transfer": 53,
+    "iconify": 181,
+    "none": 0
+  },
+  "images": {
+    "I": {
+      "file": "openmoji-618/1F64B.png",
+      "source": "zh_transfer",
+      "glossZh": "我",
+      "lesson": 1
+    },
+    "you": {
+      "file": "openmoji-618/1FAF5.png",
+      "source": "zh_transfer",
+      "glossZh": "你；你們",
+      "lesson": 1
+    },
+    "he": {
+      "file": "english-icons/mdi-human-male.png",
+      "source": "iconify",
+      "glossZh": "他",
+      "lesson": 1
+    },
+    "she": {
+      "file": "english-icons/mdi-human-female.png",
+      "source": "iconify",
+      "glossZh": "她",
+      "lesson": 1
+    },
+    "it": {
+      "file": "openmoji-618/1F447.png",
+      "source": "override",
+      "glossZh": "這；那；它",
+      "lesson": 1
+    },
+    "we": {
+      "file": "openmoji-618/1F9D1-200D-1F91D-200D-1F9D1.png",
+      "source": "override",
+      "glossZh": "我們",
+      "lesson": 1
+    },
+    "they": {
+      "file": "openmoji-618/1F46A.png",
+      "source": "override",
+      "glossZh": "她/他/它們",
+      "lesson": 1
+    },
+    "have": {
+      "file": "openmoji-618/2714.png",
+      "source": "zh_transfer",
+      "glossZh": "有",
+      "lesson": 1
+    },
+    "yes/yeah": {
+      "file": "english-icons/mdi-check-bold.png",
+      "source": "iconify",
+      "glossZh": "是的",
+      "lesson": 1
+    },
+    "no": {
+      "file": "openmoji-618/1F6AB.png",
+      "source": "override",
+      "glossZh": "沒有",
+      "lesson": 1
+    },
+    "hello": {
+      "file": "openmoji-618/1F44B.png",
+      "source": "preset",
+      "glossZh": "你好",
+      "lesson": 1
+    },
+    "hi": {
+      "file": "openmoji-618/1F44B.png",
+      "source": "preset",
+      "glossZh": "嗨",
+      "lesson": 1
+    },
+    "OK": {
+      "file": "english-icons/mdi-emoticon-happy.png",
+      "source": "iconify",
+      "glossZh": "可以的",
+      "lesson": 1
+    },
+    "goodbye": {
+      "file": "openmoji-618/1FAC2.png",
+      "source": "preset",
+      "glossZh": "再見",
+      "lesson": 1
+    },
+    "please": {
+      "file": "openmoji-618/1F97A.png",
+      "source": "preset",
+      "glossZh": "請",
+      "lesson": 1
+    },
+    "sorry": {
+      "file": "openmoji-618/1F615.png",
+      "source": "override",
+      "glossZh": "對不起",
+      "lesson": 1
+    },
+    "thank": {
+      "file": "openmoji-618/1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "感謝",
+      "lesson": 1
+    },
+    "welcome": {
+      "file": "openmoji-618/1F450.png",
+      "source": "override",
+      "glossZh": "歡迎",
+      "lesson": 1
+    },
+    "fine": {
+      "file": "openmoji-618/1F44C.png",
+      "source": "override",
+      "glossZh": "好的",
+      "lesson": 1
+    },
+    "sure": {
+      "file": "english-icons/mdi-shield-check.png",
+      "source": "iconify",
+      "glossZh": "確定的",
+      "lesson": 1
+    },
+    "meet": {
+      "file": "openmoji-618/1F91D.png",
+      "source": "override",
+      "glossZh": "遇見",
+      "lesson": 2
+    },
+    "what": {
+      "file": "english-icons/mdi-help-circle.png",
+      "source": "iconify",
+      "glossZh": "什麼",
+      "lesson": 2
+    },
+    "who": {
+      "file": "english-icons/mdi-account-question.png",
+      "source": "iconify",
+      "glossZh": "誰",
+      "lesson": 2
+    },
+    "how": {
+      "file": "english-icons/mdi-head-question.png",
+      "source": "iconify",
+      "glossZh": "如何",
+      "lesson": 2
+    },
+    "where": {
+      "file": "english-icons/mdi-map-marker-question.png",
+      "source": "iconify",
+      "glossZh": "哪裡",
+      "lesson": 2
+    },
+    "when": {
+      "file": "english-icons/mdi-calendar-question.png",
+      "source": "iconify",
+      "glossZh": "何時",
+      "lesson": 2
+    },
+    "why": {
+      "file": "english-icons/mdi-help-rhombus.png",
+      "source": "iconify",
+      "glossZh": "為什麼",
+      "lesson": 2
+    },
+    "which": {
+      "file": "english-icons/mdi-progress-question.png",
+      "source": "iconify",
+      "glossZh": "哪一個",
+      "lesson": 2
+    },
+    "whose": {
+      "file": "english-icons/mdi-account-key.png",
+      "source": "iconify",
+      "glossZh": "誰的",
+      "lesson": 2
+    },
+    "with": {
+      "file": "openmoji-618/1F517.png",
+      "source": "override",
+      "glossZh": "帶著；與…一起",
+      "lesson": 2
+    },
+    "good morning": {
+      "file": "openmoji-618/1F305.png",
+      "source": "override",
+      "glossZh": "早安",
+      "lesson": 2
+    },
+    "good afternoon": {
+      "file": "openmoji-618/2600.png",
+      "source": "override",
+      "glossZh": "午安",
+      "lesson": 2
+    },
+    "good evening": {
+      "file": "openmoji-618/1F307.png",
+      "source": "override",
+      "glossZh": "晚安（傍晚）",
+      "lesson": 2
+    },
+    "good night": {
+      "file": "openmoji-618/1F319.png",
+      "source": "override",
+      "glossZh": "晚安（睡前）",
+      "lesson": 2
+    },
+    "hug": {
+      "file": "openmoji-618/1FAC2.png",
+      "source": "override",
+      "glossZh": "擁抱",
+      "lesson": 2
+    },
+    "wave": {
+      "file": "openmoji-618/1F44B.png",
+      "source": "override",
+      "glossZh": "揮手",
+      "lesson": 2
+    },
+    "bow": {
+      "file": "openmoji-618/1F647.png",
+      "source": "override",
+      "glossZh": "鞠躬",
+      "lesson": 2
+    },
+    "shake hands": {
+      "file": "openmoji-618/1F91A.png",
+      "source": "override",
+      "glossZh": "握手",
+      "lesson": 2
+    },
+    "clap": {
+      "file": "openmoji-618/1F44F.png",
+      "source": "override",
+      "glossZh": "拍手",
+      "lesson": 2
+    },
+    "thumbs up": {
+      "file": "openmoji-618/1F44D.png",
+      "source": "override",
+      "glossZh": "比讚",
+      "lesson": 2
+    },
+    "wink": {
+      "file": "openmoji-618/1F609.png",
+      "source": "override",
+      "glossZh": "眨眼",
+      "lesson": 3
+    },
+    "whisper": {
+      "file": "openmoji-618/1F92B.png",
+      "source": "override",
+      "glossZh": "悄悄說",
+      "lesson": 3
+    },
+    "greeting": {
+      "file": "openmoji-618/1F44B.png",
+      "source": "override",
+      "glossZh": "問候",
+      "lesson": 3
+    },
+    "introduce": {
+      "file": "openmoji-618/1F64B.png",
+      "source": "override",
+      "glossZh": "介紹",
+      "lesson": 3
+    },
+    "nickname": {
+      "file": "openmoji-618/1F4DB.png",
+      "source": "override",
+      "glossZh": "綽號",
+      "lesson": 3
+    },
+    "birthday": {
+      "file": "openmoji-618/1F382.png",
+      "source": "override",
+      "glossZh": "生日",
+      "lesson": 3
+    },
+    "hometown": {
+      "file": "openmoji-618/1F3D8.png",
+      "source": "override",
+      "glossZh": "家鄉",
+      "lesson": 3
+    },
+    "neighbor": {
+      "file": "openmoji-618/1F3DA.png",
+      "source": "override",
+      "glossZh": "鄰居",
+      "lesson": 3
+    },
+    "guest": {
+      "file": "openmoji-618/1F481.png",
+      "source": "override",
+      "glossZh": "客人",
+      "lesson": 3
+    },
+    "lady": {
+      "file": "openmoji-618/1F469.png",
+      "source": "override",
+      "glossZh": "女士",
+      "lesson": 3
+    },
+    "one": {
+      "file": "openmoji-618/0031-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "一",
+      "lesson": 3
+    },
+    "two": {
+      "file": "openmoji-618/0032-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "二",
+      "lesson": 3
+    },
+    "three": {
+      "file": "openmoji-618/0033-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "三",
+      "lesson": 3
+    },
+    "four": {
+      "file": "openmoji-618/0034-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "四",
+      "lesson": 3
+    },
+    "five": {
+      "file": "openmoji-618/0035-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "五",
+      "lesson": 3
+    },
+    "six": {
+      "file": "openmoji-618/0036-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "六",
+      "lesson": 3
+    },
+    "seven": {
+      "file": "openmoji-618/0037-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "七",
+      "lesson": 3
+    },
+    "eight": {
+      "file": "openmoji-618/0038-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "八",
+      "lesson": 3
+    },
+    "nine": {
+      "file": "openmoji-618/0039-FE0F-20E3.png",
+      "source": "zh_transfer",
+      "glossZh": "九",
+      "lesson": 3
+    },
+    "ten": {
+      "file": "openmoji-618/1F51F.png",
+      "source": "zh_transfer",
+      "glossZh": "十",
+      "lesson": 3
+    },
+    "eleven": {
+      "file": "english-tiles/tile-eleven.png",
+      "source": "tile",
+      "glossZh": "十一",
+      "lesson": 4
+    },
+    "twelve": {
+      "file": "english-tiles/tile-twelve.png",
+      "source": "tile",
+      "glossZh": "十二",
+      "lesson": 4
+    },
+    "thirteen": {
+      "file": "english-tiles/tile-thirteen.png",
+      "source": "tile",
+      "glossZh": "十三",
+      "lesson": 4
+    },
+    "fourteen": {
+      "file": "english-tiles/tile-fourteen.png",
+      "source": "tile",
+      "glossZh": "十四",
+      "lesson": 4
+    },
+    "fifteen": {
+      "file": "english-tiles/tile-fifteen.png",
+      "source": "tile",
+      "glossZh": "十五",
+      "lesson": 4
+    },
+    "sixteen": {
+      "file": "english-tiles/tile-sixteen.png",
+      "source": "tile",
+      "glossZh": "十六",
+      "lesson": 4
+    },
+    "seventeen": {
+      "file": "english-tiles/tile-seventeen.png",
+      "source": "tile",
+      "glossZh": "十七",
+      "lesson": 4
+    },
+    "eighteen": {
+      "file": "english-tiles/tile-eighteen.png",
+      "source": "tile",
+      "glossZh": "十八",
+      "lesson": 4
+    },
+    "nineteen": {
+      "file": "english-tiles/tile-nineteen.png",
+      "source": "tile",
+      "glossZh": "十九",
+      "lesson": 4
+    },
+    "twenty": {
+      "file": "english-tiles/tile-twenty.png",
+      "source": "tile",
+      "glossZh": "二十",
+      "lesson": 4
+    },
+    "thirty": {
+      "file": "english-tiles/tile-thirty.png",
+      "source": "tile",
+      "glossZh": "三十",
+      "lesson": 4
+    },
+    "forty": {
+      "file": "english-tiles/tile-forty.png",
+      "source": "tile",
+      "glossZh": "四十",
+      "lesson": 4
+    },
+    "fifty": {
+      "file": "english-tiles/tile-fifty.png",
+      "source": "tile",
+      "glossZh": "五十",
+      "lesson": 4
+    },
+    "sixty": {
+      "file": "english-tiles/tile-sixty.png",
+      "source": "tile",
+      "glossZh": "六十",
+      "lesson": 4
+    },
+    "seventy": {
+      "file": "english-tiles/tile-seventy.png",
+      "source": "tile",
+      "glossZh": "七十",
+      "lesson": 4
+    },
+    "eighty": {
+      "file": "english-tiles/tile-eighty.png",
+      "source": "tile",
+      "glossZh": "八十",
+      "lesson": 4
+    },
+    "ninety": {
+      "file": "english-tiles/tile-ninety.png",
+      "source": "tile",
+      "glossZh": "九十",
+      "lesson": 4
+    },
+    "hundred": {
+      "file": "english-tiles/tile-hundred.png",
+      "source": "tile",
+      "glossZh": "百",
+      "lesson": 4
+    },
+    "thousand": {
+      "file": "english-tiles/tile-thousand.png",
+      "source": "tile",
+      "glossZh": "千",
+      "lesson": 4
+    },
+    "million": {
+      "file": "english-tiles/tile-million.png",
+      "source": "tile",
+      "glossZh": "百萬",
+      "lesson": 4
+    },
+    "count": {
+      "file": "openmoji-618/1F9EE.png",
+      "source": "override",
+      "glossZh": "計算",
+      "lesson": 5
+    },
+    "number": {
+      "file": "openmoji-618/1F522.png",
+      "source": "zh_transfer",
+      "glossZh": "數字；號碼",
+      "lesson": 5
+    },
+    "half": {
+      "file": "english-tiles/tile-half.png",
+      "source": "tile",
+      "glossZh": "一半",
+      "lesson": 5
+    },
+    "dozen": {
+      "file": "english-tiles/tile-dozen.png",
+      "source": "tile",
+      "glossZh": "一打(12個",
+      "lesson": 5
+    },
+    "first": {
+      "file": "english-tiles/tile-first.png",
+      "source": "tile",
+      "glossZh": "第一",
+      "lesson": 5
+    },
+    "second": {
+      "file": "english-tiles/tile-second.png",
+      "source": "tile",
+      "glossZh": "第二",
+      "lesson": 5
+    },
+    "third": {
+      "file": "english-tiles/tile-third.png",
+      "source": "tile",
+      "glossZh": "第三",
+      "lesson": 5
+    },
+    "fourth": {
+      "file": "english-tiles/tile-fourth.png",
+      "source": "tile",
+      "glossZh": "第四",
+      "lesson": 5
+    },
+    "fifth": {
+      "file": "english-tiles/tile-fifth.png",
+      "source": "tile",
+      "glossZh": "第五",
+      "lesson": 5
+    },
+    "sixth": {
+      "file": "english-tiles/tile-sixth.png",
+      "source": "tile",
+      "glossZh": "第六",
+      "lesson": 5
+    },
+    "seventh": {
+      "file": "english-tiles/tile-seventh.png",
+      "source": "tile",
+      "glossZh": "第七",
+      "lesson": 5
+    },
+    "eighth": {
+      "file": "english-tiles/tile-eighth.png",
+      "source": "tile",
+      "glossZh": "第八",
+      "lesson": 5
+    },
+    "ninth": {
+      "file": "english-tiles/tile-ninth.png",
+      "source": "tile",
+      "glossZh": "第九",
+      "lesson": 5
+    },
+    "tenth": {
+      "file": "english-tiles/tile-tenth.png",
+      "source": "tile",
+      "glossZh": "第十",
+      "lesson": 5
+    },
+    "last": {
+      "file": "openmoji-618/1F51A.png",
+      "source": "override",
+      "glossZh": "最後的",
+      "lesson": 5
+    },
+    "zero": {
+      "file": "openmoji-618/0030-FE0F-20E3.png",
+      "source": "override",
+      "glossZh": "零",
+      "lesson": 5
+    },
+    "plus": {
+      "file": "openmoji-618/2795.png",
+      "source": "override",
+      "glossZh": "加",
+      "lesson": 5
+    },
+    "minus": {
+      "file": "openmoji-618/2796.png",
+      "source": "override",
+      "glossZh": "減",
+      "lesson": 5
+    },
+    "add": {
+      "file": "openmoji-618/1F9EE.png",
+      "source": "override",
+      "glossZh": "相加；增加",
+      "lesson": 5
+    },
+    "equal": {
+      "file": "openmoji-618/1F7F0.png",
+      "source": "override",
+      "glossZh": "等於",
+      "lesson": 5
+    },
+    "red": {
+      "file": "openmoji-618/1F534.png",
+      "source": "preset",
+      "glossZh": "紅色",
+      "lesson": 6
+    },
+    "blue": {
+      "file": "openmoji-618/1F535.png",
+      "source": "preset",
+      "glossZh": "藍色",
+      "lesson": 6
+    },
+    "yellow": {
+      "file": "openmoji-618/1F7E1.png",
+      "source": "preset",
+      "glossZh": "黃色",
+      "lesson": 6
+    },
+    "green": {
+      "file": "openmoji-618/1F7E2.png",
+      "source": "preset",
+      "glossZh": "綠色",
+      "lesson": 6
+    },
+    "orange(s)": {
+      "file": "openmoji-618/1F7E0.png",
+      "source": "preset",
+      "glossZh": "橘色；柳橙",
+      "lesson": 6
+    },
+    "purple": {
+      "file": "openmoji-618/1F7E3.png",
+      "source": "preset",
+      "glossZh": "紫色",
+      "lesson": 6
+    },
+    "pink": {
+      "file": "openmoji-618/1FA77.png",
+      "source": "preset",
+      "glossZh": "粉紅色",
+      "lesson": 6
+    },
+    "brown": {
+      "file": "openmoji-618/1F7E4.png",
+      "source": "preset",
+      "glossZh": "棕色",
+      "lesson": 6
+    },
+    "black": {
+      "file": "openmoji-618/1F5A4.png",
+      "source": "override",
+      "glossZh": "黑色",
+      "lesson": 6
+    },
+    "white": {
+      "file": "openmoji-618/1F90D.png",
+      "source": "override",
+      "glossZh": "白色",
+      "lesson": 6
+    },
+    "gray": {
+      "file": "openmoji-618/1FA76.png",
+      "source": "override",
+      "glossZh": "灰色",
+      "lesson": 6
+    },
+    "gold": {
+      "file": "english-icons/game-icons-gold-bar.png",
+      "source": "iconify",
+      "glossZh": "金色",
+      "lesson": 6
+    },
+    "color": {
+      "file": "openmoji-618/1F3A8.png",
+      "source": "preset",
+      "glossZh": "顏色",
+      "lesson": 6
+    },
+    "colorful": {
+      "file": "openmoji-618/1F308.png",
+      "source": "preset",
+      "glossZh": "色彩繽紛的",
+      "lesson": 6
+    },
+    "size": {
+      "file": "english-icons/mdi-resize.png",
+      "source": "iconify",
+      "glossZh": "尺寸",
+      "lesson": 6
+    },
+    "shape": {
+      "file": "english-icons/mdi-shape.png",
+      "source": "iconify",
+      "glossZh": "形狀",
+      "lesson": 6
+    },
+    "circle": {
+      "file": "openmoji-618/2B55.png",
+      "source": "override",
+      "glossZh": "圓圈",
+      "lesson": 6
+    },
+    "line": {
+      "file": "english-icons/mdi-vector-line.png",
+      "source": "iconify",
+      "glossZh": "線",
+      "lesson": 6
+    },
+    "round": {
+      "file": "openmoji-618/26AB.png",
+      "source": "override",
+      "glossZh": "圓的",
+      "lesson": 6
+    },
+    "square": {
+      "file": "openmoji-618/23F9.png",
+      "source": "preset",
+      "glossZh": "正方形",
+      "lesson": 6
+    },
+    "triangle": {
+      "file": "openmoji-618/1F4D0.png",
+      "source": "override",
+      "glossZh": "三角形",
+      "lesson": 7
+    },
+    "diamond": {
+      "file": "openmoji-618/2666.png",
+      "source": "preset",
+      "glossZh": "菱形",
+      "lesson": 7
+    },
+    "rectangle": {
+      "file": "openmoji-618/25AC.png",
+      "source": "override",
+      "glossZh": "長方形",
+      "lesson": 7
+    },
+    "star": {
+      "file": "openmoji-618/2B50.png",
+      "source": "override",
+      "glossZh": "星形",
+      "lesson": 7
+    },
+    "big": {
+      "file": "openmoji-618/1F603.png",
+      "source": "preset",
+      "glossZh": "大的",
+      "lesson": 7
+    },
+    "large": {
+      "file": "english-icons/mdi-arrow-expand.png",
+      "source": "iconify",
+      "glossZh": "大的",
+      "lesson": 7
+    },
+    "medium": {
+      "file": "english-icons/mdi-alpha-m-box.png",
+      "source": "iconify",
+      "glossZh": "中等的",
+      "lesson": 7
+    },
+    "small": {
+      "file": "english-icons/mdi-arrow-collapse.png",
+      "source": "iconify",
+      "glossZh": "小型的",
+      "lesson": 7
+    },
+    "box": {
+      "file": "openmoji-618/1F4E6.png",
+      "source": "override",
+      "glossZh": "箱子",
+      "lesson": 7
+    },
+    "package": {
+      "file": "openmoji-618/1F4E6.png",
+      "source": "preset",
+      "glossZh": "包裹",
+      "lesson": 7
+    },
+    "pack": {
+      "file": "openmoji-618/1F4E6.png",
+      "source": "override",
+      "glossZh": "一包",
+      "lesson": 7
+    },
+    "pair": {
+      "file": "openmoji-618/1F9E6.png",
+      "source": "override",
+      "glossZh": "一雙",
+      "lesson": 7
+    },
+    "part": {
+      "file": "openmoji-618/1F9E9.png",
+      "source": "override",
+      "glossZh": "部分",
+      "lesson": 7
+    },
+    "piece": {
+      "file": "openmoji-618/1F9E9.png",
+      "source": "override",
+      "glossZh": "一片",
+      "lesson": 7
+    },
+    "space": {
+      "file": "openmoji-618/1F30C.png",
+      "source": "override",
+      "glossZh": "空間",
+      "lesson": 7
+    },
+    "balloon": {
+      "file": "openmoji-618/1F388.png",
+      "source": "override",
+      "glossZh": "氣球",
+      "lesson": 7
+    },
+    "ribbon": {
+      "file": "openmoji-618/1F380.png",
+      "source": "override",
+      "glossZh": "緞帶",
+      "lesson": 7
+    },
+    "gem": {
+      "file": "openmoji-618/1F48E.png",
+      "source": "override",
+      "glossZh": "寶石",
+      "lesson": 7
+    },
+    "brick": {
+      "file": "openmoji-618/1F9F1.png",
+      "source": "override",
+      "glossZh": "磚塊",
+      "lesson": 7
+    },
+    "puzzle": {
+      "file": "openmoji-618/1F9E9.png",
+      "source": "override",
+      "glossZh": "拼圖",
+      "lesson": 7
+    },
+    "arrow": {
+      "file": "openmoji-618/27A1.png",
+      "source": "override",
+      "glossZh": "箭頭",
+      "lesson": 8
+    },
+    "heart shape": {
+      "file": "openmoji-618/2764.png",
+      "source": "override",
+      "glossZh": "心形",
+      "lesson": 8
+    },
+    "oval": {
+      "file": "english-icons/mdi-ellipse-outline.png",
+      "source": "iconify",
+      "glossZh": "橢圓形",
+      "lesson": 8
+    },
+    "cube": {
+      "file": "openmoji-618/1F9CA.png",
+      "source": "override",
+      "glossZh": "立方體",
+      "lesson": 8
+    },
+    "dark": {
+      "file": "openmoji-618/1F311.png",
+      "source": "override",
+      "glossZh": "深色的；暗的",
+      "lesson": 8
+    },
+    "silver": {
+      "file": "openmoji-618/1F948.png",
+      "source": "override",
+      "glossZh": "銀色",
+      "lesson": 8
+    },
+    "wide": {
+      "file": "english-icons/mdi-arrow-expand-horizontal.png",
+      "source": "iconify",
+      "glossZh": "寬的",
+      "lesson": 8
+    },
+    "narrow": {
+      "file": "openmoji-618/1F90F.png",
+      "source": "override",
+      "glossZh": "窄的",
+      "lesson": 8
+    },
+    "thick": {
+      "file": "english-icons/mdi-layers-triple.png",
+      "source": "iconify",
+      "glossZh": "厚的；粗的",
+      "lesson": 8
+    },
+    "corner": {
+      "file": "openmoji-618/1F4D0.png",
+      "source": "override",
+      "glossZh": "角落",
+      "lesson": 8
+    },
+    "head": {
+      "file": "openmoji-618/1F9E0.png",
+      "source": "override",
+      "glossZh": "頭",
+      "lesson": 8
+    },
+    "hair": {
+      "file": "openmoji-618/1F471-200D-2640-FE0F.png",
+      "source": "preset",
+      "glossZh": "頭髮",
+      "lesson": 8
+    },
+    "eye(s)": {
+      "file": "openmoji-618/1F441.png",
+      "source": "preset",
+      "glossZh": "眼睛",
+      "lesson": 8
+    },
+    "ear(s)": {
+      "file": "openmoji-618/1F442.png",
+      "source": "preset",
+      "glossZh": "耳朵",
+      "lesson": 8
+    },
+    "nose": {
+      "file": "openmoji-618/1F443.png",
+      "source": "preset",
+      "glossZh": "鼻子",
+      "lesson": 8
+    },
+    "mouth": {
+      "file": "openmoji-618/1F444.png",
+      "source": "preset",
+      "glossZh": "嘴巴",
+      "lesson": 8
+    },
+    "tooth": {
+      "file": "openmoji-618/1F9B7.png",
+      "source": "preset",
+      "glossZh": "牙齒",
+      "lesson": 8
+    },
+    "body": {
+      "file": "english-icons/mdi-human.png",
+      "source": "iconify",
+      "glossZh": "身體",
+      "lesson": 8
+    },
+    "neck": {
+      "file": "openmoji-618/1F9E3.png",
+      "source": "preset",
+      "glossZh": "脖子",
+      "lesson": 8
+    },
+    "shoulder": {
+      "file": "openmoji-618/1F9BE.png",
+      "source": "zh_transfer",
+      "glossZh": "肩膀",
+      "lesson": 8
+    },
+    "arm": {
+      "file": "openmoji-618/1F4AA.png",
+      "source": "preset",
+      "glossZh": "手臂",
+      "lesson": 9
+    },
+    "hand": {
+      "file": "openmoji-618/1F590.png",
+      "source": "override",
+      "glossZh": "手",
+      "lesson": 9
+    },
+    "finger": {
+      "file": "openmoji-618/1F590.png",
+      "source": "preset",
+      "glossZh": "手指",
+      "lesson": 9
+    },
+    "heart": {
+      "file": "openmoji-618/2764.png",
+      "source": "preset",
+      "glossZh": "心臟",
+      "lesson": 9
+    },
+    "stomach": {
+      "file": "openmoji-618/E313.png",
+      "source": "preset",
+      "glossZh": "胃",
+      "lesson": 9
+    },
+    "leg": {
+      "file": "openmoji-618/1F9B5.png",
+      "source": "preset",
+      "glossZh": "腿",
+      "lesson": 9
+    },
+    "knee": {
+      "file": "openmoji-618/1F9B5.png",
+      "source": "preset",
+      "glossZh": "膝蓋",
+      "lesson": 9
+    },
+    "foot": {
+      "file": "openmoji-618/1F9B6.png",
+      "source": "preset",
+      "glossZh": "腳",
+      "lesson": 9
+    },
+    "nod": {
+      "file": "openmoji-618/1F642-200D-2195-FE0F.png",
+      "source": "override",
+      "glossZh": "點頭",
+      "lesson": 9
+    },
+    "see": {
+      "file": "openmoji-618/1F440.png",
+      "source": "preset",
+      "glossZh": "看見",
+      "lesson": 9
+    },
+    "look": {
+      "file": "openmoji-618/1F440.png",
+      "source": "preset",
+      "glossZh": "看起來",
+      "lesson": 9
+    },
+    "hear": {
+      "file": "openmoji-618/1F649.png",
+      "source": "preset",
+      "glossZh": "聽見",
+      "lesson": 9
+    },
+    "listen": {
+      "file": "openmoji-618/1F649.png",
+      "source": "preset",
+      "glossZh": "聆聽",
+      "lesson": 9
+    },
+    "smell": {
+      "file": "openmoji-618/1F443.png",
+      "source": "preset",
+      "glossZh": "聞",
+      "lesson": 9
+    },
+    "say": {
+      "file": "openmoji-618/1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "說",
+      "lesson": 9
+    },
+    "speak": {
+      "file": "english-icons/mdi-account-voice.png",
+      "source": "iconify",
+      "glossZh": "講話",
+      "lesson": 9
+    },
+    "talk": {
+      "file": "openmoji-618/1F4AC.png",
+      "source": "preset",
+      "glossZh": "談話",
+      "lesson": 9
+    },
+    "tell": {
+      "file": "openmoji-618/1F5E3.png",
+      "source": "override",
+      "glossZh": "告訴",
+      "lesson": 9
+    },
+    "touch": {
+      "file": "openmoji-618/1F446.png",
+      "source": "override",
+      "glossZh": "觸碰",
+      "lesson": 9
+    },
+    "walk": {
+      "file": "openmoji-618/1F6B6.png",
+      "source": "preset",
+      "glossZh": "走路",
+      "lesson": 9
+    },
+    "sit": {
+      "file": "openmoji-618/1FA91.png",
+      "source": "preset",
+      "glossZh": "坐",
+      "lesson": 10
+    },
+    "think": {
+      "file": "openmoji-618/1F4AD.png",
+      "source": "preset",
+      "glossZh": "思考",
+      "lesson": 10
+    },
+    "blind": {
+      "file": "openmoji-618/1F9D1-200D-1F9AF.png",
+      "source": "preset",
+      "glossZh": "瞎的",
+      "lesson": 10
+    },
+    "smile": {
+      "file": "openmoji-618/1F600.png",
+      "source": "preset",
+      "glossZh": "微笑",
+      "lesson": 10
+    },
+    "laugh": {
+      "file": "openmoji-618/1F600.png",
+      "source": "preset",
+      "glossZh": "嘲笑",
+      "lesson": 10
+    },
+    "hold": {
+      "file": "openmoji-618/E25A.png",
+      "source": "preset",
+      "glossZh": "握住",
+      "lesson": 10
+    },
+    "pick": {
+      "file": "english-icons/mdi-gesture-tap.png",
+      "source": "iconify",
+      "glossZh": "挑選",
+      "lesson": 10
+    },
+    "point": {
+      "file": "openmoji-618/1F446.png",
+      "source": "override",
+      "glossZh": "指出",
+      "lesson": 10
+    },
+    "brush": {
+      "file": "openmoji-618/1FAA5.png",
+      "source": "preset",
+      "glossZh": "刷牙",
+      "lesson": 10
+    },
+    "voice": {
+      "file": "openmoji-618/1F50A.png",
+      "source": "zh_transfer",
+      "glossZh": "聲音",
+      "lesson": 10
+    },
+    "sound": {
+      "file": "openmoji-618/1F50A.png",
+      "source": "override",
+      "glossZh": "聲音",
+      "lesson": 10
+    },
+    "cut": {
+      "file": "openmoji-618/2702.png",
+      "source": "override",
+      "glossZh": "割",
+      "lesson": 10
+    },
+    "give": {
+      "file": "openmoji-618/1FAF4.png",
+      "source": "override",
+      "glossZh": "給",
+      "lesson": 10
+    },
+    "take": {
+      "file": "openmoji-618/1F450.png",
+      "source": "override",
+      "glossZh": "拿",
+      "lesson": 10
+    },
+    "turn": {
+      "file": "openmoji-618/1F6DE.png",
+      "source": "preset",
+      "glossZh": "轉動",
+      "lesson": 10
+    },
+    "open": {
+      "file": "english-icons/mdi-door-open.png",
+      "source": "iconify",
+      "glossZh": "打開",
+      "lesson": 10
+    },
+    "close": {
+      "file": "english-icons/mdi-door-closed.png",
+      "source": "iconify",
+      "glossZh": "關上",
+      "lesson": 10
+    },
+    "start": {
+      "file": "openmoji-618/25B6.png",
+      "source": "zh_transfer",
+      "glossZh": "開始",
+      "lesson": 10
+    },
+    "stop": {
+      "file": "openmoji-618/1F6D1.png",
+      "source": "override",
+      "glossZh": "停",
+      "lesson": 10
+    },
+    "help": {
+      "file": "english-icons/mdi-hand-extended.png",
+      "source": "iconify",
+      "glossZh": "幫助",
+      "lesson": 10
+    },
+    "family": {
+      "file": "openmoji-618/1F46A.png",
+      "source": "preset",
+      "glossZh": "家庭；家人",
+      "lesson": 11
+    },
+    "father/dad": {
+      "file": "openmoji-618/1F468-200D-1F37C.png",
+      "source": "preset",
+      "glossZh": "爸爸",
+      "lesson": 11
+    },
+    "mother/mom": {
+      "file": "openmoji-618/1F931.png",
+      "source": "preset",
+      "glossZh": "媽媽",
+      "lesson": 11
+    },
+    "son": {
+      "file": "openmoji-618/1F466.png",
+      "source": "preset",
+      "glossZh": "兒子",
+      "lesson": 11
+    },
+    "daughter": {
+      "file": "openmoji-618/1F467.png",
+      "source": "preset",
+      "glossZh": "女兒",
+      "lesson": 11
+    },
+    "grandfather/grandpa": {
+      "file": "openmoji-618/1F474.png",
+      "source": "preset",
+      "glossZh": "爺爺；外公",
+      "lesson": 11
+    },
+    "grandmother/grandma": {
+      "file": "openmoji-618/1F475.png",
+      "source": "preset",
+      "glossZh": "奶奶；外婆",
+      "lesson": 11
+    },
+    "baby": {
+      "file": "openmoji-618/1F476.png",
+      "source": "preset",
+      "glossZh": "嬰兒",
+      "lesson": 11
+    },
+    "kid": {
+      "file": "openmoji-618/1F9D2.png",
+      "source": "preset",
+      "glossZh": "小孩",
+      "lesson": 11
+    },
+    "child": {
+      "file": "openmoji-618/1F9D2.png",
+      "source": "preset",
+      "glossZh": "兒童",
+      "lesson": 11
+    },
+    "parent": {
+      "file": "openmoji-618/1F9D1-200D-1F37C.png",
+      "source": "preset",
+      "glossZh": "父或母親",
+      "lesson": 11
+    },
+    "husband": {
+      "file": "openmoji-618/1F468.png",
+      "source": "override",
+      "glossZh": "丈夫",
+      "lesson": 11
+    },
+    "wife": {
+      "file": "openmoji-618/1F491.png",
+      "source": "zh_transfer",
+      "glossZh": "妻子",
+      "lesson": 11
+    },
+    "brother": {
+      "file": "openmoji-618/1F46C.png",
+      "source": "zh_transfer",
+      "glossZh": "兄弟",
+      "lesson": 11
+    },
+    "sister": {
+      "file": "openmoji-618/1F46D.png",
+      "source": "zh_transfer",
+      "glossZh": "姊妹",
+      "lesson": 11
+    },
+    "age": {
+      "file": "english-icons/mdi-calendar-account.png",
+      "source": "iconify",
+      "glossZh": "年紀",
+      "lesson": 11
+    },
+    "born": {
+      "file": "english-icons/mdi-baby-carriage.png",
+      "source": "iconify",
+      "glossZh": "出生的",
+      "lesson": 11
+    },
+    "married": {
+      "file": "openmoji-618/1F48D.png",
+      "source": "preset",
+      "glossZh": "已婚的婚姻的",
+      "lesson": 11
+    },
+    "care": {
+      "file": "english-icons/mdi-heart-plus.png",
+      "source": "iconify",
+      "glossZh": "關心",
+      "lesson": 11
+    },
+    "important": {
+      "file": "openmoji-618/2757.png",
+      "source": "override",
+      "glossZh": "重要的",
+      "lesson": 11
+    },
+    "wonderful": {
+      "file": "openmoji-618/1F632.png",
+      "source": "zh_transfer",
+      "glossZh": "奇妙的",
+      "lesson": 12
+    },
+    "new": {
+      "file": "english-icons/mdi-new-box.png",
+      "source": "iconify",
+      "glossZh": "新的",
+      "lesson": 12
+    },
+    "uncle": {
+      "file": "openmoji-618/1F9D4-200D-2642-FE0F.png",
+      "source": "override",
+      "glossZh": "伯父；叔父；姑父",
+      "lesson": 12
+    },
+    "aunt": {
+      "file": "openmoji-618/1F9D3.png",
+      "source": "override",
+      "glossZh": "伯母；阿姨；姑姑",
+      "lesson": 12
+    },
+    "cousin": {
+      "file": "english-icons/game-icons-family-tree.png",
+      "source": "iconify",
+      "glossZh": "堂(表)兄弟姊妹",
+      "lesson": 12
+    },
+    "people": {
+      "file": "openmoji-618/1F46F.png",
+      "source": "preset",
+      "glossZh": "人們",
+      "lesson": 12
+    },
+    "boy": {
+      "file": "openmoji-618/1F466.png",
+      "source": "preset",
+      "glossZh": "男孩",
+      "lesson": 12
+    },
+    "girl": {
+      "file": "openmoji-618/1F467.png",
+      "source": "preset",
+      "glossZh": "女孩",
+      "lesson": 12
+    },
+    "man": {
+      "file": "openmoji-618/1F468.png",
+      "source": "preset",
+      "glossZh": "男人",
+      "lesson": 12
+    },
+    "woman": {
+      "file": "openmoji-618/1F469.png",
+      "source": "preset",
+      "glossZh": "女人",
+      "lesson": 12
+    },
+    "friend": {
+      "file": "english-icons/mdi-account-heart.png",
+      "source": "iconify",
+      "glossZh": "朋友",
+      "lesson": 12
+    },
+    "classmate": {
+      "file": "english-icons/mdi-human-male-female-child.png",
+      "source": "iconify",
+      "glossZh": "同班同學",
+      "lesson": 12
+    },
+    "person": {
+      "file": "openmoji-618/1F9D1.png",
+      "source": "preset",
+      "glossZh": "人",
+      "lesson": 12
+    },
+    "Mr.": {
+      "file": "openmoji-618/1F574.png",
+      "source": "override",
+      "glossZh": "先生",
+      "lesson": 12
+    },
+    "Mrs.": {
+      "file": "openmoji-618/1F470-200D-2640-FE0F.png",
+      "source": "override",
+      "glossZh": "太太",
+      "lesson": 12
+    },
+    "Miss": {
+      "file": "english-icons/mdi-face-woman-outline.png",
+      "source": "iconify",
+      "glossZh": "小姐",
+      "lesson": 12
+    },
+    "Ms.": {
+      "file": "openmoji-618/1F9D5.png",
+      "source": "override",
+      "glossZh": "女士",
+      "lesson": 12
+    },
+    "dear": {
+      "file": "openmoji-618/1F496.png",
+      "source": "override",
+      "glossZh": "親愛的",
+      "lesson": 12
+    },
+    "sir": {
+      "file": "openmoji-618/1FAE1.png",
+      "source": "override",
+      "glossZh": "先生長官",
+      "lesson": 12
+    },
+    "teenager": {
+      "file": "english-icons/mdi-account-star.png",
+      "source": "iconify",
+      "glossZh": "十幾歲的青少年",
+      "lesson": 12
+    },
+    "stranger": {
+      "file": "english-icons/mdi-incognito.png",
+      "source": "iconify",
+      "glossZh": "陌生人",
+      "lesson": 13
+    },
+    "foreigner": {
+      "file": "openmoji-618/1F310.png",
+      "source": "override",
+      "glossZh": "外國人",
+      "lesson": 13
+    },
+    "American": {
+      "file": "openmoji-618/1F1FA-1F1F8.png",
+      "source": "flag",
+      "glossZh": "美國人",
+      "lesson": 13
+    },
+    "Chinese": {
+      "file": "openmoji-618/1F1E8-1F1F3.png",
+      "source": "flag",
+      "glossZh": "中國人",
+      "lesson": 13
+    },
+    "anyone/anybody": {
+      "file": "openmoji-618/1F465.png",
+      "source": "override",
+      "glossZh": "任何人",
+      "lesson": 13
+    },
+    "everyone/everybody": {
+      "file": "english-icons/mdi-account-multiple.png",
+      "source": "iconify",
+      "glossZh": "每個人",
+      "lesson": 13
+    },
+    "someone/somebody": {
+      "file": "openmoji-618/1F464.png",
+      "source": "zh_transfer",
+      "glossZh": "某人",
+      "lesson": 13
+    },
+    "nobody": {
+      "file": "english-icons/mdi-account-off.png",
+      "source": "iconify",
+      "glossZh": "沒有人",
+      "lesson": 13
+    },
+    "name": {
+      "file": "openmoji-618/1F4DB.png",
+      "source": "preset",
+      "glossZh": "名字",
+      "lesson": 13
+    },
+    "nephew": {
+      "file": "openmoji-618/1F466.png",
+      "source": "override",
+      "glossZh": "姪子；外甥",
+      "lesson": 13
+    },
+    "animal": {
+      "file": "openmoji-618/1F63A.png",
+      "source": "preset",
+      "glossZh": "動物",
+      "lesson": 13
+    },
+    "bear": {
+      "file": "openmoji-618/1F43B.png",
+      "source": "override",
+      "glossZh": "熊",
+      "lesson": 13
+    },
+    "bee": {
+      "file": "openmoji-618/1F41D.png",
+      "source": "preset",
+      "glossZh": "蜜蜂",
+      "lesson": 13
+    },
+    "elephant": {
+      "file": "openmoji-618/1F418.png",
+      "source": "preset",
+      "glossZh": "大象",
+      "lesson": 13
+    },
+    "lion": {
+      "file": "openmoji-618/1F981.png",
+      "source": "preset",
+      "glossZh": "獅子",
+      "lesson": 13
+    },
+    "monkey": {
+      "file": "openmoji-618/1F435.png",
+      "source": "preset",
+      "glossZh": "猴子",
+      "lesson": 13
+    },
+    "snake": {
+      "file": "openmoji-618/1F40D.png",
+      "source": "preset",
+      "glossZh": "蛇",
+      "lesson": 13
+    },
+    "tiger": {
+      "file": "openmoji-618/1F42F.png",
+      "source": "preset",
+      "glossZh": "老虎",
+      "lesson": 13
+    },
+    "pet": {
+      "file": "openmoji-618/1F436.png",
+      "source": "preset",
+      "glossZh": "寵物",
+      "lesson": 13
+    },
+    "bird": {
+      "file": "openmoji-618/1F426.png",
+      "source": "preset",
+      "glossZh": "鳥",
+      "lesson": 13
+    },
+    "cat": {
+      "file": "openmoji-618/1F431.png",
+      "source": "preset",
+      "glossZh": "貓",
+      "lesson": 14
+    },
+    "dog": {
+      "file": "openmoji-618/1F436.png",
+      "source": "preset",
+      "glossZh": "狗",
+      "lesson": 14
+    },
+    "fish": {
+      "file": "openmoji-618/1F41F.png",
+      "source": "preset",
+      "glossZh": "魚",
+      "lesson": 14
+    },
+    "mouse": {
+      "file": "openmoji-618/1F42D.png",
+      "source": "preset",
+      "glossZh": "老鼠",
+      "lesson": 14
+    },
+    "rabbit": {
+      "file": "openmoji-618/1F430.png",
+      "source": "preset",
+      "glossZh": "兔子",
+      "lesson": 14
+    },
+    "farm": {
+      "file": "english-icons/mdi-barn.png",
+      "source": "iconify",
+      "glossZh": "農場",
+      "lesson": 14
+    },
+    "cow": {
+      "file": "openmoji-618/1F42E.png",
+      "source": "preset",
+      "glossZh": "母牛",
+      "lesson": 14
+    },
+    "goat": {
+      "file": "openmoji-618/1F410.png",
+      "source": "preset",
+      "glossZh": "山羊",
+      "lesson": 14
+    },
+    "horse": {
+      "file": "openmoji-618/1F434.png",
+      "source": "preset",
+      "glossZh": "馬",
+      "lesson": 14
+    },
+    "pig": {
+      "file": "openmoji-618/1F437.png",
+      "source": "preset",
+      "glossZh": "豬",
+      "lesson": 14
+    },
+    "sheep": {
+      "file": "openmoji-618/1F40F.png",
+      "source": "preset",
+      "glossZh": "綿羊",
+      "lesson": 14
+    },
+    "duck": {
+      "file": "openmoji-618/1F986.png",
+      "source": "preset",
+      "glossZh": "鴨",
+      "lesson": 14
+    },
+    "hen": {
+      "file": "openmoji-618/1F414.png",
+      "source": "preset",
+      "glossZh": "母雞",
+      "lesson": 14
+    },
+    "turtle": {
+      "file": "openmoji-618/1F422.png",
+      "source": "preset",
+      "glossZh": "烏龜",
+      "lesson": 14
+    },
+    "kangaroo": {
+      "file": "openmoji-618/1F998.png",
+      "source": "preset",
+      "glossZh": "袋鼠",
+      "lesson": 14
+    },
+    "koala": {
+      "file": "openmoji-618/1F428.png",
+      "source": "preset",
+      "glossZh": "無尾熊",
+      "lesson": 14
+    },
+    "goose": {
+      "file": "openmoji-618/1FABF.png",
+      "source": "preset",
+      "glossZh": "鵝",
+      "lesson": 14
+    },
+    "panda": {
+      "file": "openmoji-618/1F43C.png",
+      "source": "preset",
+      "glossZh": "貓熊",
+      "lesson": 14
+    },
+    "frog": {
+      "file": "openmoji-618/1F438.png",
+      "source": "preset",
+      "glossZh": "青蛙",
+      "lesson": 14
+    },
+    "deer": {
+      "file": "openmoji-618/1F98C.png",
+      "source": "preset",
+      "glossZh": "鹿",
+      "lesson": 14
+    },
+    "fox": {
+      "file": "openmoji-618/1F98A.png",
+      "source": "preset",
+      "glossZh": "狐狸",
+      "lesson": 15
+    },
+    "giraffe": {
+      "file": "openmoji-618/1F992.png",
+      "source": "preset",
+      "glossZh": "長頸鹿",
+      "lesson": 15
+    },
+    "zebra": {
+      "file": "openmoji-618/1F993.png",
+      "source": "preset",
+      "glossZh": "斑馬",
+      "lesson": 15
+    },
+    "hippo": {
+      "file": "openmoji-618/1F99B.png",
+      "source": "preset",
+      "glossZh": "河馬",
+      "lesson": 15
+    },
+    "penguin": {
+      "file": "openmoji-618/1F427.png",
+      "source": "preset",
+      "glossZh": "企鵝",
+      "lesson": 15
+    },
+    "whale": {
+      "file": "openmoji-618/1F40B.png",
+      "source": "preset",
+      "glossZh": "鯨魚",
+      "lesson": 15
+    },
+    "dolphin": {
+      "file": "openmoji-618/1F42C.png",
+      "source": "preset",
+      "glossZh": "海豚",
+      "lesson": 15
+    },
+    "shark": {
+      "file": "openmoji-618/1F988.png",
+      "source": "preset",
+      "glossZh": "鯊魚",
+      "lesson": 15
+    },
+    "crab": {
+      "file": "openmoji-618/1F980.png",
+      "source": "preset",
+      "glossZh": "螃蟹",
+      "lesson": 15
+    },
+    "butterfly": {
+      "file": "openmoji-618/1F98B.png",
+      "source": "preset",
+      "glossZh": "蝴蝶",
+      "lesson": 15
+    },
+    "ant": {
+      "file": "openmoji-618/1F41C.png",
+      "source": "preset",
+      "glossZh": "螞蟻",
+      "lesson": 15
+    },
+    "spider": {
+      "file": "openmoji-618/1F577.png",
+      "source": "preset",
+      "glossZh": "蜘蛛",
+      "lesson": 15
+    },
+    "owl": {
+      "file": "openmoji-618/1F989.png",
+      "source": "preset",
+      "glossZh": "貓頭鷹",
+      "lesson": 15
+    },
+    "eagle": {
+      "file": "openmoji-618/1F985.png",
+      "source": "preset",
+      "glossZh": "老鷹",
+      "lesson": 15
+    },
+    "parrot": {
+      "file": "openmoji-618/1F99C.png",
+      "source": "preset",
+      "glossZh": "鸚鵡",
+      "lesson": 15
+    },
+    "dinosaur": {
+      "file": "openmoji-618/1F995.png",
+      "source": "preset",
+      "glossZh": "恐龍",
+      "lesson": 15
+    },
+    "dragon": {
+      "file": "openmoji-618/1F409.png",
+      "source": "preset",
+      "glossZh": "龍",
+      "lesson": 15
+    },
+    "squirrel": {
+      "file": "openmoji-618/1F43F.png",
+      "source": "preset",
+      "glossZh": "松鼠",
+      "lesson": 15
+    },
+    "crocodile": {
+      "file": "openmoji-618/1F40A.png",
+      "source": "preset",
+      "glossZh": "鱷魚",
+      "lesson": 15
+    },
+    "chick": {
+      "file": "openmoji-618/1F424.png",
+      "source": "preset",
+      "glossZh": "小雞",
+      "lesson": 15
+    },
+    "menu": {
+      "file": "openmoji-618/1F4CB.png",
+      "source": "override",
+      "glossZh": "菜單",
+      "lesson": 16
+    },
+    "food": {
+      "file": "openmoji-618/1F371.png",
+      "source": "override",
+      "glossZh": "食物",
+      "lesson": 16
+    },
+    "meal": {
+      "file": "openmoji-618/1F958.png",
+      "source": "override",
+      "glossZh": "一餐",
+      "lesson": 16
+    },
+    "breakfast": {
+      "file": "openmoji-618/1F950.png",
+      "source": "preset",
+      "glossZh": "早餐",
+      "lesson": 16
+    },
+    "lunch": {
+      "file": "openmoji-618/1F374.png",
+      "source": "preset",
+      "glossZh": "午餐",
+      "lesson": 16
+    },
+    "dinner": {
+      "file": "openmoji-618/1F958.png",
+      "source": "override",
+      "glossZh": "晚餐",
+      "lesson": 16
+    },
+    "noodles": {
+      "file": "openmoji-618/1F35C.png",
+      "source": "override",
+      "glossZh": "麵條",
+      "lesson": 16
+    },
+    "rice": {
+      "file": "openmoji-618/1F35A.png",
+      "source": "preset",
+      "glossZh": "米飯",
+      "lesson": 16
+    },
+    "hamburger": {
+      "file": "openmoji-618/1F354.png",
+      "source": "preset",
+      "glossZh": "漢堡",
+      "lesson": 16
+    },
+    "pie": {
+      "file": "openmoji-618/1F967.png",
+      "source": "preset",
+      "glossZh": "派",
+      "lesson": 16
+    },
+    "pizza": {
+      "file": "openmoji-618/1F355.png",
+      "source": "preset",
+      "glossZh": "披薩",
+      "lesson": 16
+    },
+    "sandwich": {
+      "file": "openmoji-618/1F96A.png",
+      "source": "preset",
+      "glossZh": "三明治",
+      "lesson": 16
+    },
+    "meat": {
+      "file": "openmoji-618/1F356.png",
+      "source": "preset",
+      "glossZh": "肉",
+      "lesson": 16
+    },
+    "beef": {
+      "file": "openmoji-618/1F969.png",
+      "source": "override",
+      "glossZh": "牛肉",
+      "lesson": 16
+    },
+    "chicken": {
+      "file": "openmoji-618/1F357.png",
+      "source": "preset",
+      "glossZh": "雞肉",
+      "lesson": 16
+    },
+    "pork": {
+      "file": "openmoji-618/1F437.png",
+      "source": "preset",
+      "glossZh": "豬肉",
+      "lesson": 16
+    },
+    "steak": {
+      "file": "openmoji-618/1F969.png",
+      "source": "preset",
+      "glossZh": "牛排",
+      "lesson": 16
+    },
+    "hot dog": {
+      "file": "openmoji-618/1F32D.png",
+      "source": "preset",
+      "glossZh": "熱狗",
+      "lesson": 16
+    },
+    "bread": {
+      "file": "openmoji-618/1F35E.png",
+      "source": "preset",
+      "glossZh": "麵包",
+      "lesson": 16
+    },
+    "butter": {
+      "file": "openmoji-618/1F9C8.png",
+      "source": "preset",
+      "glossZh": "奶油",
+      "lesson": 16
+    },
+    "cheese": {
+      "file": "openmoji-618/1F9C0.png",
+      "source": "preset",
+      "glossZh": "起士",
+      "lesson": 17
+    },
+    "egg": {
+      "file": "openmoji-618/1F95A.png",
+      "source": "preset",
+      "glossZh": "雞蛋",
+      "lesson": 17
+    },
+    "ham": {
+      "file": "english-icons/game-icons-ham-shank.png",
+      "source": "iconify",
+      "glossZh": "火腿",
+      "lesson": 17
+    },
+    "salt": {
+      "file": "openmoji-618/1F9C2.png",
+      "source": "preset",
+      "glossZh": "鹽巴",
+      "lesson": 17
+    },
+    "sugar": {
+      "file": "english-icons/game-icons-sugar-cane.png",
+      "source": "iconify",
+      "glossZh": "糖",
+      "lesson": 17
+    },
+    "oil": {
+      "file": "openmoji-618/1F6E2.png",
+      "source": "preset",
+      "glossZh": "油",
+      "lesson": 17
+    },
+    "snack": {
+      "file": "openmoji-618/1F968.png",
+      "source": "override",
+      "glossZh": "點心",
+      "lesson": 17
+    },
+    "cake": {
+      "file": "openmoji-618/1F370.png",
+      "source": "preset",
+      "glossZh": "蛋糕",
+      "lesson": 17
+    },
+    "candy": {
+      "file": "openmoji-618/1F36C.png",
+      "source": "preset",
+      "glossZh": "糖果",
+      "lesson": 17
+    },
+    "chocolate": {
+      "file": "openmoji-618/1FAD5.png",
+      "source": "preset",
+      "glossZh": "巧克力",
+      "lesson": 17
+    },
+    "cookie": {
+      "file": "openmoji-618/1F36A.png",
+      "source": "preset",
+      "glossZh": "餅乾",
+      "lesson": 17
+    },
+    "ice cream": {
+      "file": "openmoji-618/1F368.png",
+      "source": "preset",
+      "glossZh": "冰淇淋",
+      "lesson": 17
+    },
+    "popcorn": {
+      "file": "openmoji-618/1F37F.png",
+      "source": "preset",
+      "glossZh": "爆米花",
+      "lesson": 17
+    },
+    "soup": {
+      "file": "openmoji-618/1F372.png",
+      "source": "preset",
+      "glossZh": "湯",
+      "lesson": 17
+    },
+    "salad": {
+      "file": "openmoji-618/1F96C.png",
+      "source": "preset",
+      "glossZh": "沙拉",
+      "lesson": 17
+    },
+    "vegetable": {
+      "file": "openmoji-618/1F345.png",
+      "source": "preset",
+      "glossZh": "蔬菜",
+      "lesson": 17
+    },
+    "eat": {
+      "file": "english-icons/game-icons-eating.png",
+      "source": "iconify",
+      "glossZh": "吃",
+      "lesson": 17
+    },
+    "cook": {
+      "file": "openmoji-618/1F9D1-200D-1F373.png",
+      "source": "preset",
+      "glossZh": "煮飯；烹飪",
+      "lesson": 17
+    },
+    "order": {
+      "file": "openmoji-618/1F9FE.png",
+      "source": "override",
+      "glossZh": "點餐",
+      "lesson": 17
+    },
+    "taste": {
+      "file": "openmoji-618/1F61D.png",
+      "source": "preset",
+      "glossZh": "嚐起來",
+      "lesson": 17
+    },
+    "bite": {
+      "file": "english-icons/game-icons-tooth.png",
+      "source": "iconify",
+      "glossZh": "咬",
+      "lesson": 18
+    },
+    "hungry": {
+      "file": "english-icons/mdi-stomach.png",
+      "source": "iconify",
+      "glossZh": "飢餓的",
+      "lesson": 18
+    },
+    "full": {
+      "file": "english-icons/mdi-gauge-full.png",
+      "source": "iconify",
+      "glossZh": "吃飽的",
+      "lesson": 18
+    },
+    "thirsty": {
+      "file": "openmoji-618/1F4A6.png",
+      "source": "override",
+      "glossZh": "口渴的",
+      "lesson": 18
+    },
+    "delicious": {
+      "file": "openmoji-618/1F60B.png",
+      "source": "preset",
+      "glossZh": "美味的",
+      "lesson": 18
+    },
+    "fresh": {
+      "file": "english-icons/mdi-leaf.png",
+      "source": "iconify",
+      "glossZh": "新鮮的",
+      "lesson": 18
+    },
+    "sweet": {
+      "file": "openmoji-618/1F36F.png",
+      "source": "override",
+      "glossZh": "甜的",
+      "lesson": 18
+    },
+    "hot": {
+      "file": "openmoji-618/1FAE0.png",
+      "source": "preset",
+      "glossZh": "熱的；辣的",
+      "lesson": 18
+    },
+    "corn": {
+      "file": "openmoji-618/1F33D.png",
+      "source": "preset",
+      "glossZh": "玉米",
+      "lesson": 18
+    },
+    "potato": {
+      "file": "openmoji-618/1F954.png",
+      "source": "preset",
+      "glossZh": "馬鈴薯",
+      "lesson": 18
+    },
+    "drink": {
+      "file": "english-icons/mdi-cup-water.png",
+      "source": "iconify",
+      "glossZh": "飲料",
+      "lesson": 18
+    },
+    "coke": {
+      "file": "english-icons/game-icons-soda-can.png",
+      "source": "iconify",
+      "glossZh": "可口可樂",
+      "lesson": 18
+    },
+    "coffee": {
+      "file": "openmoji-618/2615.png",
+      "source": "preset",
+      "glossZh": "咖啡",
+      "lesson": 18
+    },
+    "juice": {
+      "file": "openmoji-618/1F964.png",
+      "source": "override",
+      "glossZh": "果汁",
+      "lesson": 18
+    },
+    "milk": {
+      "file": "openmoji-618/1F95B.png",
+      "source": "preset",
+      "glossZh": "牛奶",
+      "lesson": 18
+    },
+    "tea": {
+      "file": "openmoji-618/1F375.png",
+      "source": "preset",
+      "glossZh": "茶",
+      "lesson": 18
+    },
+    "water": {
+      "file": "openmoji-618/1F4A7.png",
+      "source": "preset",
+      "glossZh": "水",
+      "lesson": 18
+    },
+    "bottle": {
+      "file": "english-icons/mdi-bottle-soda-classic.png",
+      "source": "iconify",
+      "glossZh": "瓶子",
+      "lesson": 18
+    },
+    "glass": {
+      "file": "openmoji-618/1F95B.png",
+      "source": "preset",
+      "glossZh": "玻璃杯",
+      "lesson": 18
+    },
+    "cup": {
+      "file": "openmoji-618/1F375.png",
+      "source": "preset",
+      "glossZh": "杯子",
+      "lesson": 18
+    },
+    "fruit": {
+      "file": "openmoji-618/1F347.png",
+      "source": "preset",
+      "glossZh": "水果",
+      "lesson": 19
+    },
+    "apple(s)": {
+      "file": "openmoji-618/1F34E.png",
+      "source": "preset",
+      "glossZh": "蘋果",
+      "lesson": 19
+    },
+    "banana(s)": {
+      "file": "openmoji-618/1F34C.png",
+      "source": "preset",
+      "glossZh": "香蕉",
+      "lesson": 19
+    },
+    "lemon(s)": {
+      "file": "openmoji-618/1F34B.png",
+      "source": "preset",
+      "glossZh": "檸檬",
+      "lesson": 19
+    },
+    "tomato(es)": {
+      "file": "openmoji-618/1F345.png",
+      "source": "preset",
+      "glossZh": "番茄",
+      "lesson": 19
+    },
+    "grape(s)": {
+      "file": "openmoji-618/1F347.png",
+      "source": "preset",
+      "glossZh": "葡萄",
+      "lesson": 19
+    },
+    "guava(s)": {
+      "file": "openmoji-618/1F34F.png",
+      "source": "override",
+      "glossZh": "芭樂",
+      "lesson": 19
+    },
+    "papaya(s)": {
+      "file": "openmoji-618/1F96D.png",
+      "source": "override",
+      "glossZh": "木瓜",
+      "lesson": 19
+    },
+    "peach(es)": {
+      "file": "openmoji-618/1F351.png",
+      "source": "preset",
+      "glossZh": "水蜜桃",
+      "lesson": 19
+    },
+    "strawberry": {
+      "file": "openmoji-618/1F353.png",
+      "source": "preset",
+      "glossZh": "草莓",
+      "lesson": 19
+    },
+    "watermelon(s)": {
+      "file": "openmoji-618/1F349.png",
+      "source": "preset",
+      "glossZh": "西瓜",
+      "lesson": 19
+    },
+    "pineapple(s)": {
+      "file": "openmoji-618/1F34D.png",
+      "source": "preset",
+      "glossZh": "鳳梨",
+      "lesson": 19
+    },
+    "kiwi(s)": {
+      "file": "openmoji-618/1F95D.png",
+      "source": "preset",
+      "glossZh": "奇異果",
+      "lesson": 19
+    },
+    "mango(es)": {
+      "file": "openmoji-618/1F96D.png",
+      "source": "preset",
+      "glossZh": "芒果",
+      "lesson": 19
+    },
+    "knife": {
+      "file": "openmoji-618/1F52A.png",
+      "source": "override",
+      "glossZh": "刀",
+      "lesson": 19
+    },
+    "fork": {
+      "file": "openmoji-618/1F374.png",
+      "source": "override",
+      "glossZh": "叉子",
+      "lesson": 19
+    },
+    "spoon": {
+      "file": "openmoji-618/1F944.png",
+      "source": "preset",
+      "glossZh": "湯匙",
+      "lesson": 19
+    },
+    "chopstick(s)": {
+      "file": "openmoji-618/1F962.png",
+      "source": "preset",
+      "glossZh": "一雙筷子",
+      "lesson": 19
+    },
+    "bowl": {
+      "file": "openmoji-618/1F963.png",
+      "source": "preset",
+      "glossZh": "碗",
+      "lesson": 19
+    },
+    "oyster omelet": {
+      "file": "openmoji-618/1F9AA.png",
+      "source": "override",
+      "glossZh": "蚵仔煎",
+      "lesson": 19
+    },
+    "soy milk": {
+      "file": "openmoji-618/1F95B.png",
+      "source": "override",
+      "glossZh": "豆漿",
+      "lesson": 20
+    },
+    "stinky tofu": {
+      "file": "english-icons/game-icons-cube.png",
+      "source": "iconify",
+      "glossZh": "臭豆腐",
+      "lesson": 20
+    },
+    "meatball": {
+      "file": "openmoji-618/1F9C6.png",
+      "source": "preset",
+      "glossZh": "肉圓",
+      "lesson": 20
+    },
+    "egg pancake": {
+      "file": "openmoji-618/1F95E.png",
+      "source": "override",
+      "glossZh": "蛋餅",
+      "lesson": 20
+    },
+    "fried chicken": {
+      "file": "openmoji-618/1F357.png",
+      "source": "override",
+      "glossZh": "炸雞排",
+      "lesson": 20
+    },
+    "pearl milk tea": {
+      "file": "openmoji-618/1F9CB.png",
+      "source": "override",
+      "glossZh": "珍珠奶茶",
+      "lesson": 20
+    },
+    "beef noodle(s)": {
+      "file": "openmoji-618/1F35C.png",
+      "source": "override",
+      "glossZh": "牛肉麵",
+      "lesson": 20
+    },
+    "tofu pudding": {
+      "file": "openmoji-618/1F36E.png",
+      "source": "override",
+      "glossZh": "豆花",
+      "lesson": 20
+    },
+    "congee": {
+      "file": "openmoji-618/1F963.png",
+      "source": "preset",
+      "glossZh": "稀飯",
+      "lesson": 20
+    },
+    "peanut": {
+      "file": "openmoji-618/1F95C.png",
+      "source": "preset",
+      "glossZh": "花生",
+      "lesson": 20
+    },
+    "brown sugar cake": {
+      "file": "english-icons/game-icons-cake-slice.png",
+      "source": "iconify",
+      "glossZh": "黑糖糕",
+      "lesson": 20
+    },
+    "oyster noodle(s)": {
+      "file": "english-icons/mdi-noodles.png",
+      "source": "iconify",
+      "glossZh": "蚵仔麵線",
+      "lesson": 20
+    },
+    "squid soup": {
+      "file": "openmoji-618/1F991.png",
+      "source": "override",
+      "glossZh": "魷魚羮",
+      "lesson": 20
+    },
+    "pickle": {
+      "file": "openmoji-618/1F952.png",
+      "source": "preset",
+      "glossZh": "醬菜",
+      "lesson": 20
+    },
+    "fried bread stick(s)": {
+      "file": "openmoji-618/1F956.png",
+      "source": "override",
+      "glossZh": "油條",
+      "lesson": 20
+    },
+    "handmade noodle(s)": {
+      "file": "openmoji-618/1F35C.png",
+      "source": "override",
+      "glossZh": "手工麵線",
+      "lesson": 20
+    },
+    "squid": {
+      "file": "openmoji-618/1F991.png",
+      "source": "preset",
+      "glossZh": "小管",
+      "lesson": 20
+    },
+    "oyster": {
+      "file": "openmoji-618/1F9AA.png",
+      "source": "preset",
+      "glossZh": "牡蠣",
+      "lesson": 20
+    },
+    "Taiwanese Snacks": {
+      "file": "openmoji-618/1F961.png",
+      "source": "override",
+      "glossZh": "台灣小吃",
+      "lesson": 20
+    },
+    "garbage": {
+      "file": "openmoji-618/1F5D1.png",
+      "source": "preset",
+      "glossZh": "垃圾",
+      "lesson": 20
+    },
+    "school": {
+      "file": "openmoji-618/1F3EB.png",
+      "source": "override",
+      "glossZh": "學校",
+      "lesson": 21
+    },
+    "class": {
+      "file": "english-icons/ph-student.png",
+      "source": "iconify",
+      "glossZh": "班級",
+      "lesson": 21
+    },
+    "classroom": {
+      "file": "english-icons/mdi-google-classroom.png",
+      "source": "iconify",
+      "glossZh": "教室",
+      "lesson": 21
+    },
+    "elementary school": {
+      "file": "english-icons/mdi-school-outline.png",
+      "source": "iconify",
+      "glossZh": "小學",
+      "lesson": 21
+    },
+    "teacher": {
+      "file": "openmoji-618/1F9D1-200D-1F3EB.png",
+      "source": "preset",
+      "glossZh": "老師",
+      "lesson": 21
+    },
+    "playground": {
+      "file": "openmoji-618/1F6DD.png",
+      "source": "preset",
+      "glossZh": "操場",
+      "lesson": 21
+    },
+    "junior high school": {
+      "file": "openmoji-618/1F3EB.png",
+      "source": "override",
+      "glossZh": "國中",
+      "lesson": 21
+    },
+    "lesson": {
+      "file": "english-icons/mdi-book-open-variant.png",
+      "source": "iconify",
+      "glossZh": "一課；課程",
+      "lesson": 21
+    },
+    "program": {
+      "file": "openmoji-618/1F5D2.png",
+      "source": "override",
+      "glossZh": "計劃",
+      "lesson": 21
+    },
+    "senior high school": {
+      "file": "english-icons/mdi-school.png",
+      "source": "iconify",
+      "glossZh": "高中",
+      "lesson": 21
+    },
+    "rule": {
+      "file": "english-icons/mdi-gavel.png",
+      "source": "iconify",
+      "glossZh": "規定",
+      "lesson": 21
+    },
+    "student": {
+      "file": "openmoji-618/1F9D1-200D-1F393.png",
+      "source": "preset",
+      "glossZh": "學生",
+      "lesson": 21
+    },
+    "group": {
+      "file": "english-icons/mdi-account-group.png",
+      "source": "iconify",
+      "glossZh": "團體",
+      "lesson": 21
+    },
+    "blackboard": {
+      "file": "english-icons/mdi-presentation.png",
+      "source": "iconify",
+      "glossZh": "黑板",
+      "lesson": 21
+    },
+    "chalk": {
+      "file": "openmoji-618/270F.png",
+      "source": "override",
+      "glossZh": "粉筆",
+      "lesson": 21
+    },
+    "math/mathematics": {
+      "file": "english-icons/mdi-calculator.png",
+      "source": "iconify",
+      "glossZh": "數學",
+      "lesson": 21
+    },
+    "ruler": {
+      "file": "openmoji-618/1F4CF.png",
+      "source": "override",
+      "glossZh": "尺",
+      "lesson": 21
+    },
+    "eraser": {
+      "file": "english-icons/mdi-eraser.png",
+      "source": "iconify",
+      "glossZh": "橡皮擦；板擦",
+      "lesson": 21
+    },
+    "bell": {
+      "file": "openmoji-618/1F514.png",
+      "source": "preset",
+      "glossZh": "鐘聲",
+      "lesson": 21
+    },
+    "pencil": {
+      "file": "openmoji-618/270F.png",
+      "source": "preset",
+      "glossZh": "鉛筆",
+      "lesson": 21
+    },
+    "paper": {
+      "file": "english-icons/mdi-file-outline.png",
+      "source": "iconify",
+      "glossZh": "紙；考卷",
+      "lesson": 22
+    },
+    "pen": {
+      "file": "openmoji-618/1F58A.png",
+      "source": "override",
+      "glossZh": "原子筆",
+      "lesson": 22
+    },
+    "dictionary": {
+      "file": "openmoji-618/1F4D5.png",
+      "source": "override",
+      "glossZh": "字典",
+      "lesson": 22
+    },
+    "word": {
+      "file": "openmoji-618/1F524.png",
+      "source": "override",
+      "glossZh": "單字",
+      "lesson": 22
+    },
+    "list": {
+      "file": "openmoji-618/1F4CB.png",
+      "source": "preset",
+      "glossZh": "表；名單",
+      "lesson": 22
+    },
+    "homework": {
+      "file": "openmoji-618/1F5D2.png",
+      "source": "override",
+      "glossZh": "家庭作業",
+      "lesson": 22
+    },
+    "knowledge": {
+      "file": "english-icons/ph-lightbulb-filament.png",
+      "source": "iconify",
+      "glossZh": "知識",
+      "lesson": 22
+    },
+    "workbook": {
+      "file": "openmoji-618/1F4D3.png",
+      "source": "override",
+      "glossZh": "習作本",
+      "lesson": 22
+    },
+    "example": {
+      "file": "openmoji-618/1F4D1.png",
+      "source": "override",
+      "glossZh": "例子",
+      "lesson": 22
+    },
+    "English": {
+      "file": "openmoji-618/1F521.png",
+      "source": "override",
+      "glossZh": "英文",
+      "lesson": 22
+    },
+    "sentence": {
+      "file": "openmoji-618/1F4C4.png",
+      "source": "override",
+      "glossZh": "句子",
+      "lesson": 22
+    },
+    "history": {
+      "file": "openmoji-618/231B.png",
+      "source": "override",
+      "glossZh": "歷史",
+      "lesson": 22
+    },
+    "answer": {
+      "file": "english-icons/mdi-comment-check.png",
+      "source": "iconify",
+      "glossZh": "答案",
+      "lesson": 22
+    },
+    "language": {
+      "file": "english-icons/mdi-translate.png",
+      "source": "iconify",
+      "glossZh": "語言",
+      "lesson": 22
+    },
+    "question": {
+      "file": "english-icons/mdi-comment-question.png",
+      "source": "iconify",
+      "glossZh": "疑問",
+      "lesson": 22
+    },
+    "test": {
+      "file": "english-icons/mdi-file-document-edit.png",
+      "source": "iconify",
+      "glossZh": "測驗",
+      "lesson": 22
+    },
+    "notebook": {
+      "file": "openmoji-618/1F4D3.png",
+      "source": "preset",
+      "glossZh": "筆記本；筆記型電腦",
+      "lesson": 22
+    },
+    "grade": {
+      "file": "english-icons/mdi-certificate.png",
+      "source": "iconify",
+      "glossZh": "成績",
+      "lesson": 22
+    },
+    "glue": {
+      "file": "openmoji-618/1FA79.png",
+      "source": "override",
+      "glossZh": "膠水",
+      "lesson": 22
+    },
+    "scissor(s)": {
+      "file": "openmoji-618/2702.png",
+      "source": "preset",
+      "glossZh": "剪刀",
+      "lesson": 22
+    },
+    "crayon": {
+      "file": "openmoji-618/1F58D.png",
+      "source": "preset",
+      "glossZh": "蠟筆",
+      "lesson": 23
+    },
+    "colored pencil": {
+      "file": "openmoji-618/1F58D.png",
+      "source": "override",
+      "glossZh": "色鉛筆",
+      "lesson": 23
+    },
+    "marker": {
+      "file": "english-icons/mdi-marker.png",
+      "source": "iconify",
+      "glossZh": "麥克筆",
+      "lesson": 23
+    },
+    "study": {
+      "file": "openmoji-618/1F4DA.png",
+      "source": "preset",
+      "glossZh": "研讀",
+      "lesson": 23
+    },
+    "read": {
+      "file": "openmoji-618/1F4D6.png",
+      "source": "override",
+      "glossZh": "閱讀",
+      "lesson": 23
+    },
+    "write": {
+      "file": "openmoji-618/270D.png",
+      "source": "preset",
+      "glossZh": "寫",
+      "lesson": 23
+    },
+    "learn": {
+      "file": "openmoji-618/1F393.png",
+      "source": "zh_transfer",
+      "glossZh": "學習",
+      "lesson": 23
+    },
+    "teach": {
+      "file": "openmoji-618/1F9D1-200D-1F3EB.png",
+      "source": "zh_transfer",
+      "glossZh": "教導",
+      "lesson": 23
+    },
+    "spell": {
+      "file": "english-icons/mdi-spellcheck.png",
+      "source": "iconify",
+      "glossZh": "拼單字",
+      "lesson": 23
+    },
+    "pass": {
+      "file": "english-icons/mdi-check-underline.png",
+      "source": "iconify",
+      "glossZh": "考試及格",
+      "lesson": 23
+    },
+    "cheat": {
+      "file": "english-icons/game-icons-spy.png",
+      "source": "iconify",
+      "glossZh": "作弊",
+      "lesson": 23
+    },
+    "check": {
+      "file": "openmoji-618/2705.png",
+      "source": "preset",
+      "glossZh": "檢查",
+      "lesson": 23
+    },
+    "enter": {
+      "file": "english-icons/mdi-location-enter.png",
+      "source": "iconify",
+      "glossZh": "進入",
+      "lesson": 23
+    },
+    "finish": {
+      "file": "openmoji-618/1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成",
+      "lesson": 23
+    },
+    "ask": {
+      "file": "english-icons/mdi-message-question.png",
+      "source": "iconify",
+      "glossZh": "詢問",
+      "lesson": 23
+    },
+    "copy": {
+      "file": "english-icons/mdi-content-copy.png",
+      "source": "iconify",
+      "glossZh": "複製",
+      "lesson": 23
+    },
+    "prepare": {
+      "file": "openmoji-618/1F9F0.png",
+      "source": "override",
+      "glossZh": "準備",
+      "lesson": 23
+    },
+    "know": {
+      "file": "english-icons/mdi-head-check.png",
+      "source": "iconify",
+      "glossZh": "知道",
+      "lesson": 23
+    },
+    "correct": {
+      "file": "openmoji-618/2705.png",
+      "source": "override",
+      "glossZh": "正確的",
+      "lesson": 23
+    },
+    "repeat": {
+      "file": "openmoji-618/1F501.png",
+      "source": "preset",
+      "glossZh": "重複",
+      "lesson": 23
+    },
+    "excuse": {
+      "file": "english-icons/mdi-comment-alert-outline.png",
+      "source": "iconify",
+      "glossZh": "藉口",
+      "lesson": 24
+    },
+    "fact": {
+      "file": "openmoji-618/1F4CC.png",
+      "source": "override",
+      "glossZh": "事實",
+      "lesson": 24
+    },
+    "understand": {
+      "file": "openmoji-618/1F197.png",
+      "source": "override",
+      "glossZh": "了解",
+      "lesson": 24
+    },
+    "mark": {
+      "file": "openmoji-618/1F4AF.png",
+      "source": "override",
+      "glossZh": "打分數",
+      "lesson": 24
+    },
+    "mistake": {
+      "file": "openmoji-618/274C.png",
+      "source": "override",
+      "glossZh": "錯誤",
+      "lesson": 24
+    },
+    "excellent": {
+      "file": "openmoji-618/1F947.png",
+      "source": "override",
+      "glossZh": "傑出的",
+      "lesson": 24
+    },
+    "ready": {
+      "file": "openmoji-618/1F7E2.png",
+      "source": "override",
+      "glossZh": "準備好的",
+      "lesson": 24
+    },
+    "wrong": {
+      "file": "openmoji-618/274E.png",
+      "source": "override",
+      "glossZh": "錯誤的",
+      "lesson": 24
+    },
+    "problem": {
+      "file": "openmoji-618/1FAA8.png",
+      "source": "zh_transfer",
+      "glossZh": "困難；問題",
+      "lesson": 24
+    },
+    "helpful": {
+      "file": "english-icons/mdi-hand-heart.png",
+      "source": "iconify",
+      "glossZh": "有用的",
+      "lesson": 24
+    },
+    "real": {
+      "file": "openmoji-618/2714.png",
+      "source": "override",
+      "glossZh": "真正的",
+      "lesson": 24
+    },
+    "true": {
+      "file": "english-icons/mdi-check-decagram.png",
+      "source": "iconify",
+      "glossZh": "真實的",
+      "lesson": 24
+    },
+    "begin": {
+      "file": "openmoji-618/25B6.png",
+      "source": "zh_transfer",
+      "glossZh": "開始",
+      "lesson": 24
+    },
+    "end": {
+      "file": "openmoji-618/1F51A.png",
+      "source": "override",
+      "glossZh": "最後",
+      "lesson": 24
+    },
+    "borrow": {
+      "file": "openmoji-618/1F4E5.png",
+      "source": "override",
+      "glossZh": "借用",
+      "lesson": 24
+    },
+    "lend": {
+      "file": "openmoji-618/1F4E4.png",
+      "source": "override",
+      "glossZh": "把…借給",
+      "lesson": 24
+    },
+    "join": {
+      "file": "openmoji-618/2795.png",
+      "source": "override",
+      "glossZh": "參加",
+      "lesson": 24
+    },
+    "remember": {
+      "file": "english-icons/mdi-brain.png",
+      "source": "iconify",
+      "glossZh": "記得",
+      "lesson": 24
+    },
+    "forget": {
+      "file": "openmoji-618/1FAE5.png",
+      "source": "zh_transfer",
+      "glossZh": "忘記",
+      "lesson": 24
+    },
+    "common": {
+      "file": "english-icons/mdi-approximately-equal-box.png",
+      "source": "iconify",
+      "glossZh": "普通的",
+      "lesson": 24
+    },
+    "special": {
+      "file": "openmoji-618/2728.png",
+      "source": "override",
+      "glossZh": "特別的",
+      "lesson": 25
+    },
+    "dangerous": {
+      "file": "openmoji-618/1F4A3.png",
+      "source": "preset",
+      "glossZh": "危險的",
+      "lesson": 25
+    },
+    "safe": {
+      "file": "openmoji-618/1F512.png",
+      "source": "zh_transfer",
+      "glossZh": "安全的",
+      "lesson": 25
+    },
+    "different": {
+      "file": "english-icons/mdi-not-equal-variant.png",
+      "source": "iconify",
+      "glossZh": "不同的",
+      "lesson": 25
+    },
+    "same": {
+      "file": "openmoji-618/1F7F0.png",
+      "source": "override",
+      "glossZh": "相同的",
+      "lesson": 25
+    },
+    "difficult": {
+      "file": "english-icons/game-icons-mountain-climbing.png",
+      "source": "iconify",
+      "glossZh": "困難的",
+      "lesson": 25
+    },
+    "easy": {
+      "file": "english-icons/ph-feather.png",
+      "source": "iconify",
+      "glossZh": "簡單的",
+      "lesson": 25
+    },
+    "hard": {
+      "file": "english-icons/game-icons-stone-block.png",
+      "source": "iconify",
+      "glossZh": "硬的",
+      "lesson": 25
+    },
+    "simple": {
+      "file": "openmoji-618/E24C.png",
+      "source": "annotation",
+      "glossZh": "簡單的；單純的",
+      "lesson": 25
+    },
+    "basic": {
+      "file": "openmoji-618/1F9EE.png",
+      "source": "override",
+      "glossZh": "基本的",
+      "lesson": 25
+    },
+    "appear": {
+      "file": "openmoji-618/3030.png",
+      "source": "zh_transfer",
+      "glossZh": "似乎",
+      "lesson": 25
+    },
+    "become": {
+      "file": "openmoji-618/1F503.png",
+      "source": "override",
+      "glossZh": "變成",
+      "lesson": 25
+    },
+    "happen": {
+      "file": "openmoji-618/1F4A5.png",
+      "source": "zh_transfer",
+      "glossZh": "發生",
+      "lesson": 25
+    },
+    "get": {
+      "file": "english-icons/mdi-tray-arrow-down.png",
+      "source": "iconify",
+      "glossZh": "得到",
+      "lesson": 25
+    },
+    "grow": {
+      "file": "openmoji-618/1FAB4.png",
+      "source": "preset",
+      "glossZh": "種植；成長",
+      "lesson": 25
+    },
+    "keep": {
+      "file": "openmoji-618/1F512.png",
+      "source": "override",
+      "glossZh": "保持",
+      "lesson": 25
+    },
+    "stay": {
+      "file": "openmoji-618/2693.png",
+      "source": "zh_transfer",
+      "glossZh": "停留",
+      "lesson": 25
+    },
+    "let": {
+      "file": "openmoji-618/1F513.png",
+      "source": "override",
+      "glossZh": "讓",
+      "lesson": 25
+    },
+    "make": {
+      "file": "english-icons/game-icons-anvil.png",
+      "source": "iconify",
+      "glossZh": "做；製造",
+      "lesson": 25
+    },
+    "want": {
+      "file": "openmoji-618/1F924.png",
+      "source": "override",
+      "glossZh": "要",
+      "lesson": 25
+    },
+    "build": {
+      "file": "openmoji-618/1F3D7.png",
+      "source": "override",
+      "glossZh": "建築",
+      "lesson": 26
+    },
+    "fix": {
+      "file": "openmoji-618/1F527.png",
+      "source": "override",
+      "glossZh": "修理",
+      "lesson": 26
+    },
+    "house": {
+      "file": "openmoji-618/1F3E0.png",
+      "source": "preset",
+      "glossZh": "房子",
+      "lesson": 26
+    },
+    "apartment": {
+      "file": "openmoji-618/1F3E2.png",
+      "source": "override",
+      "glossZh": "公寓",
+      "lesson": 26
+    },
+    "room": {
+      "file": "english-icons/mdi-view-quilt.png",
+      "source": "iconify",
+      "glossZh": "房間",
+      "lesson": 26
+    },
+    "bathroom": {
+      "file": "openmoji-618/1F6BD.png",
+      "source": "preset",
+      "glossZh": "浴室",
+      "lesson": 26
+    },
+    "restroom": {
+      "file": "openmoji-618/1F6BB.png",
+      "source": "preset",
+      "glossZh": "廁所",
+      "lesson": 26
+    },
+    "bedroom": {
+      "file": "openmoji-618/1F6CF.png",
+      "source": "override",
+      "glossZh": "臥房",
+      "lesson": 26
+    },
+    "dining room": {
+      "file": "english-icons/mdi-table-chair.png",
+      "source": "iconify",
+      "glossZh": "飯廳",
+      "lesson": 26
+    },
+    "living room": {
+      "file": "english-icons/mdi-sofa-outline.png",
+      "source": "iconify",
+      "glossZh": "客廳",
+      "lesson": 26
+    },
+    "kitchen": {
+      "file": "english-icons/mdi-countertop.png",
+      "source": "iconify",
+      "glossZh": "廚房",
+      "lesson": 26
+    },
+    "garden": {
+      "file": "english-icons/mdi-flower-outline.png",
+      "source": "iconify",
+      "glossZh": "花園",
+      "lesson": 26
+    },
+    "home": {
+      "file": "english-icons/mdi-home-heart.png",
+      "source": "iconify",
+      "glossZh": "家",
+      "lesson": 26
+    },
+    "floor": {
+      "file": "english-icons/mdi-floor-plan.png",
+      "source": "iconify",
+      "glossZh": "地板",
+      "lesson": 26
+    },
+    "ground": {
+      "file": "english-icons/mdi-terrain.png",
+      "source": "iconify",
+      "glossZh": "地面",
+      "lesson": 26
+    },
+    "door": {
+      "file": "openmoji-618/1F6AA.png",
+      "source": "preset",
+      "glossZh": "門",
+      "lesson": 26
+    },
+    "knock": {
+      "file": "openmoji-618/1F44A.png",
+      "source": "override",
+      "glossZh": "敲打",
+      "lesson": 26
+    },
+    "wall": {
+      "file": "openmoji-618/1F9F1.png",
+      "source": "preset",
+      "glossZh": "牆壁",
+      "lesson": 26
+    },
+    "window": {
+      "file": "openmoji-618/1FA9F.png",
+      "source": "preset",
+      "glossZh": "窗戶",
+      "lesson": 26
+    },
+    "lamp": {
+      "file": "english-icons/mdi-lamp.png",
+      "source": "iconify",
+      "glossZh": "檯燈",
+      "lesson": 26
+    },
+    "light": {
+      "file": "openmoji-618/1F4A1.png",
+      "source": "override",
+      "glossZh": "燈光",
+      "lesson": 27
+    },
+    "bed": {
+      "file": "openmoji-618/1F6CF.png",
+      "source": "preset",
+      "glossZh": "床",
+      "lesson": 27
+    },
+    "bath": {
+      "file": "openmoji-618/1F6C0.png",
+      "source": "preset",
+      "glossZh": "洗澡",
+      "lesson": 27
+    },
+    "towel": {
+      "file": "openmoji-618/1F6C0.png",
+      "source": "override",
+      "glossZh": "毛巾",
+      "lesson": 27
+    },
+    "chair": {
+      "file": "openmoji-618/1FA91.png",
+      "source": "preset",
+      "glossZh": "椅子",
+      "lesson": 27
+    },
+    "sofa": {
+      "file": "openmoji-618/1F6CB.png",
+      "source": "override",
+      "glossZh": "沙發",
+      "lesson": 27
+    },
+    "couch": {
+      "file": "openmoji-618/1F6CB.png",
+      "source": "preset",
+      "glossZh": "睡椅",
+      "lesson": 27
+    },
+    "table": {
+      "file": "openmoji-618/1F37D.png",
+      "source": "override",
+      "glossZh": "桌子",
+      "lesson": 27
+    },
+    "desk": {
+      "file": "openmoji-618/1F5A5.png",
+      "source": "override",
+      "glossZh": "書桌",
+      "lesson": 27
+    },
+    "machine": {
+      "file": "english-icons/mdi-cog.png",
+      "source": "iconify",
+      "glossZh": "機器",
+      "lesson": 27
+    },
+    "telephone": {
+      "file": "openmoji-618/260E.png",
+      "source": "preset",
+      "glossZh": "電話機",
+      "lesson": 27
+    },
+    "call": {
+      "file": "openmoji-618/1F4F1.png",
+      "source": "override",
+      "glossZh": "打電話",
+      "lesson": 27
+    },
+    "television/TV": {
+      "file": "openmoji-618/1F4FA.png",
+      "source": "preset",
+      "glossZh": "電視",
+      "lesson": 27
+    },
+    "news": {
+      "file": "openmoji-618/1F4F0.png",
+      "source": "preset",
+      "glossZh": "新聞",
+      "lesson": 27
+    },
+    "video": {
+      "file": "openmoji-618/1F3A5.png",
+      "source": "override",
+      "glossZh": "錄影機",
+      "lesson": 27
+    },
+    "computer": {
+      "file": "openmoji-618/1F4BB.png",
+      "source": "preset",
+      "glossZh": "電腦",
+      "lesson": 27
+    },
+    "fan": {
+      "file": "openmoji-618/1FAAD.png",
+      "source": "override",
+      "glossZh": "電風扇",
+      "lesson": 27
+    },
+    "piano": {
+      "file": "openmoji-618/1F3B9.png",
+      "source": "preset",
+      "glossZh": "鋼琴",
+      "lesson": 27
+    },
+    "radio": {
+      "file": "openmoji-618/1F4FB.png",
+      "source": "preset",
+      "glossZh": "收音機",
+      "lesson": 27
+    },
+    "refrigerator/fridge": {
+      "file": "english-icons/mdi-fridge.png",
+      "source": "iconify",
+      "glossZh": "冰箱",
+      "lesson": 27
+    },
+    "in": {
+      "file": "openmoji-618/1F4E5.png",
+      "source": "override",
+      "glossZh": "在…裡面；在….期間",
+      "lesson": 28
+    },
+    "on": {
+      "file": "openmoji-618/1F51D.png",
+      "source": "override",
+      "glossZh": "在…之上",
+      "lesson": 28
+    },
+    "under": {
+      "file": "openmoji-618/2B07.png",
+      "source": "override",
+      "glossZh": "在…下方",
+      "lesson": 28
+    },
+    "near": {
+      "file": "openmoji-618/1F4CD.png",
+      "source": "override",
+      "glossZh": "在…附近",
+      "lesson": 28
+    },
+    "behind": {
+      "file": "english-icons/mdi-arrange-send-backward.png",
+      "source": "iconify",
+      "glossZh": "在…後面",
+      "lesson": 28
+    },
+    "beside": {
+      "file": "openmoji-618/2194.png",
+      "source": "override",
+      "glossZh": "在…旁邊",
+      "lesson": 28
+    },
+    "above": {
+      "file": "openmoji-618/2B06.png",
+      "source": "zh_transfer",
+      "glossZh": "在…上面",
+      "lesson": 28
+    },
+    "below": {
+      "file": "openmoji-618/2198.png",
+      "source": "override",
+      "glossZh": "在…下面",
+      "lesson": 28
+    },
+    "here": {
+      "file": "english-icons/mdi-map-marker-radius.png",
+      "source": "iconify",
+      "glossZh": "這裡",
+      "lesson": 28
+    },
+    "there": {
+      "file": "english-icons/mdi-map-marker-distance.png",
+      "source": "iconify",
+      "glossZh": "那裡",
+      "lesson": 28
+    },
+    "time": {
+      "file": "openmoji-618/23F3.png",
+      "source": "override",
+      "glossZh": "時間",
+      "lesson": 28
+    },
+    "minute": {
+      "file": "openmoji-618/23F1.png",
+      "source": "override",
+      "glossZh": "分鐘",
+      "lesson": 28
+    },
+    "hour": {
+      "file": "openmoji-618/1F550.png",
+      "source": "override",
+      "glossZh": "小時",
+      "lesson": 28
+    },
+    "o clock": {
+      "file": "openmoji-618/1F552.png",
+      "source": "override",
+      "glossZh": "點鐘",
+      "lesson": 28
+    },
+    "watch": {
+      "file": "openmoji-618/231A.png",
+      "source": "override",
+      "glossZh": "錶",
+      "lesson": 28
+    },
+    "clock": {
+      "file": "openmoji-618/1F550.png",
+      "source": "preset",
+      "glossZh": "時鐘",
+      "lesson": 28
+    },
+    "a.m.": {
+      "file": "english-tiles/tile-am.png",
+      "source": "tile",
+      "glossZh": "上午",
+      "lesson": 28
+    },
+    "p.m.": {
+      "file": "english-tiles/tile-pm.png",
+      "source": "tile",
+      "glossZh": "下午",
+      "lesson": 28
+    },
+    "morning": {
+      "file": "english-icons/mdi-weather-sunset-up.png",
+      "source": "iconify",
+      "glossZh": "早晨",
+      "lesson": 28
+    },
+    "noon": {
+      "file": "openmoji-618/1F55B.png",
+      "source": "override",
+      "glossZh": "中午",
+      "lesson": 28
+    },
+    "afternoon": {
+      "file": "openmoji-618/26C5.png",
+      "source": "override",
+      "glossZh": "下午",
+      "lesson": 29
+    },
+    "evening": {
+      "file": "openmoji-618/1F306.png",
+      "source": "preset",
+      "glossZh": "傍晚",
+      "lesson": 29
+    },
+    "night": {
+      "file": "english-icons/mdi-weather-night.png",
+      "source": "iconify",
+      "glossZh": "夜晚",
+      "lesson": 29
+    },
+    "tonight": {
+      "file": "openmoji-618/1F303.png",
+      "source": "override",
+      "glossZh": "今晚",
+      "lesson": 29
+    },
+    "eve": {
+      "file": "openmoji-618/1F38A.png",
+      "source": "override",
+      "glossZh": "前夕",
+      "lesson": 29
+    },
+    "Monday": {
+      "file": "english-tiles/tile-monday.png",
+      "source": "tile",
+      "glossZh": "星期一",
+      "lesson": 29
+    },
+    "Tuesday": {
+      "file": "english-tiles/tile-tuesday.png",
+      "source": "tile",
+      "glossZh": "星期二",
+      "lesson": 29
+    },
+    "Wednesday": {
+      "file": "english-tiles/tile-wednesday.png",
+      "source": "tile",
+      "glossZh": "星期三",
+      "lesson": 29
+    },
+    "Thursday": {
+      "file": "english-tiles/tile-thursday.png",
+      "source": "tile",
+      "glossZh": "星期四",
+      "lesson": 29
+    },
+    "Friday": {
+      "file": "english-tiles/tile-friday.png",
+      "source": "tile",
+      "glossZh": "星期五",
+      "lesson": 29
+    },
+    "Saturday": {
+      "file": "english-tiles/tile-saturday.png",
+      "source": "tile",
+      "glossZh": "星期六",
+      "lesson": 29
+    },
+    "Sunday": {
+      "file": "english-tiles/tile-sunday.png",
+      "source": "tile",
+      "glossZh": "星期天",
+      "lesson": 29
+    },
+    "weekend": {
+      "file": "english-tiles/tile-weekend.png",
+      "source": "tile",
+      "glossZh": "週末",
+      "lesson": 29
+    },
+    "today": {
+      "file": "openmoji-618/1F4C5.png",
+      "source": "zh_transfer",
+      "glossZh": "今天",
+      "lesson": 29
+    },
+    "yesterday": {
+      "file": "openmoji-618/1F504.png",
+      "source": "override",
+      "glossZh": "昨天",
+      "lesson": 29
+    },
+    "tomorrow": {
+      "file": "openmoji-618/1F4C5.png",
+      "source": "zh_transfer",
+      "glossZh": "明天",
+      "lesson": 29
+    },
+    "week": {
+      "file": "english-tiles/tile-week.png",
+      "source": "tile",
+      "glossZh": "星期",
+      "lesson": 29
+    },
+    "month": {
+      "file": "english-tiles/tile-month.png",
+      "source": "tile",
+      "glossZh": "月",
+      "lesson": 29
+    },
+    "year": {
+      "file": "openmoji-618/1F5D3.png",
+      "source": "zh_transfer",
+      "glossZh": "年",
+      "lesson": 29
+    },
+    "January": {
+      "file": "english-tiles/tile-january.png",
+      "source": "tile",
+      "glossZh": "一月",
+      "lesson": 29
+    },
+    "February": {
+      "file": "english-tiles/tile-february.png",
+      "source": "tile",
+      "glossZh": "二月",
+      "lesson": 30
+    },
+    "March": {
+      "file": "english-tiles/tile-march.png",
+      "source": "tile",
+      "glossZh": "三月",
+      "lesson": 30
+    },
+    "April": {
+      "file": "english-tiles/tile-april.png",
+      "source": "tile",
+      "glossZh": "四月",
+      "lesson": 30
+    },
+    "June": {
+      "file": "english-tiles/tile-june.png",
+      "source": "tile",
+      "glossZh": "六月",
+      "lesson": 30
+    },
+    "July": {
+      "file": "english-tiles/tile-july.png",
+      "source": "tile",
+      "glossZh": "七月",
+      "lesson": 30
+    },
+    "August": {
+      "file": "english-tiles/tile-august.png",
+      "source": "tile",
+      "glossZh": "八月",
+      "lesson": 30
+    },
+    "September": {
+      "file": "english-tiles/tile-september.png",
+      "source": "tile",
+      "glossZh": "九月",
+      "lesson": 30
+    },
+    "October": {
+      "file": "english-tiles/tile-october.png",
+      "source": "tile",
+      "glossZh": "十月",
+      "lesson": 30
+    },
+    "November": {
+      "file": "english-tiles/tile-november.png",
+      "source": "tile",
+      "glossZh": "十一月",
+      "lesson": 30
+    },
+    "December": {
+      "file": "english-tiles/tile-december.png",
+      "source": "tile",
+      "glossZh": "十二月",
+      "lesson": 30
+    },
+    "now": {
+      "file": "openmoji-618/23F0.png",
+      "source": "zh_transfer",
+      "glossZh": "現在",
+      "lesson": 30
+    },
+    "then": {
+      "file": "openmoji-618/23EE.png",
+      "source": "override",
+      "glossZh": "當時",
+      "lesson": 30
+    },
+    "early": {
+      "file": "english-icons/mdi-clock-fast.png",
+      "source": "iconify",
+      "glossZh": "早",
+      "lesson": 30
+    },
+    "late": {
+      "file": "english-icons/mdi-clock-alert.png",
+      "source": "iconify",
+      "glossZh": "晚",
+      "lesson": 30
+    },
+    "before": {
+      "file": "openmoji-618/23EA.png",
+      "source": "override",
+      "glossZh": "以前",
+      "lesson": 30
+    },
+    "after": {
+      "file": "openmoji-618/23E9.png",
+      "source": "override",
+      "glossZh": "之後",
+      "lesson": 30
+    },
+    "soon": {
+      "file": "openmoji-618/1F51C.png",
+      "source": "override",
+      "glossZh": "不久",
+      "lesson": 30
+    },
+    "always": {
+      "file": "openmoji-618/267E.png",
+      "source": "override",
+      "glossZh": "總是",
+      "lesson": 30
+    },
+    "often": {
+      "file": "openmoji-618/1F501.png",
+      "source": "override",
+      "glossZh": "時常",
+      "lesson": 30
+    },
+    "May": {
+      "file": "english-tiles/tile-may.png",
+      "source": "tile",
+      "glossZh": "五月",
+      "lesson": 30
+    },
+    "season": {
+      "file": "openmoji-618/1F343.png",
+      "source": "override",
+      "glossZh": "季節",
+      "lesson": 31
+    },
+    "spring": {
+      "file": "openmoji-618/1F338.png",
+      "source": "override",
+      "glossZh": "春天",
+      "lesson": 31
+    },
+    "summer": {
+      "file": "openmoji-618/1F33B.png",
+      "source": "override",
+      "glossZh": "夏天",
+      "lesson": 31
+    },
+    "autumn/fall": {
+      "file": "openmoji-618/1F342.png",
+      "source": "preset",
+      "glossZh": "秋天",
+      "lesson": 31
+    },
+    "winter": {
+      "file": "openmoji-618/1FABE.png",
+      "source": "preset",
+      "glossZh": "冬天",
+      "lesson": 31
+    },
+    "weather": {
+      "file": "openmoji-618/1F321.png",
+      "source": "preset",
+      "glossZh": "天氣",
+      "lesson": 31
+    },
+    "rain": {
+      "file": "openmoji-618/1F327.png",
+      "source": "preset",
+      "glossZh": "雨",
+      "lesson": 31
+    },
+    "snow": {
+      "file": "openmoji-618/2744.png",
+      "source": "preset",
+      "glossZh": "雪",
+      "lesson": 31
+    },
+    "wind": {
+      "file": "openmoji-618/1F32C.png",
+      "source": "override",
+      "glossZh": "風",
+      "lesson": 31
+    },
+    "sunny": {
+      "file": "openmoji-618/1F31E.png",
+      "source": "override",
+      "glossZh": "晴天的",
+      "lesson": 31
+    },
+    "rainy": {
+      "file": "openmoji-618/1F327.png",
+      "source": "override",
+      "glossZh": "下雨的",
+      "lesson": 31
+    },
+    "windy": {
+      "file": "openmoji-618/1F343.png",
+      "source": "override",
+      "glossZh": "風大的",
+      "lesson": 31
+    },
+    "cloudy": {
+      "file": "openmoji-618/26C5.png",
+      "source": "preset",
+      "glossZh": "陰天的",
+      "lesson": 31
+    },
+    "cool": {
+      "file": "english-icons/mdi-air-conditioner.png",
+      "source": "iconify",
+      "glossZh": "涼快的",
+      "lesson": 31
+    },
+    "warm": {
+      "file": "openmoji-618/1F975.png",
+      "source": "override",
+      "glossZh": "溫暖的",
+      "lesson": 31
+    },
+    "bright": {
+      "file": "english-icons/mdi-brightness-7.png",
+      "source": "iconify",
+      "glossZh": "晴朗的",
+      "lesson": 31
+    },
+    "clear": {
+      "file": "openmoji-618/1F324.png",
+      "source": "override",
+      "glossZh": "清澈的",
+      "lesson": 31
+    },
+    "typhoon": {
+      "file": "openmoji-618/1F300.png",
+      "source": "preset",
+      "glossZh": "颱風",
+      "lesson": 31
+    },
+    "rainbow": {
+      "file": "openmoji-618/1F308.png",
+      "source": "preset",
+      "glossZh": "彩虹",
+      "lesson": 31
+    },
+    "umbrella": {
+      "file": "openmoji-618/2602.png",
+      "source": "preset",
+      "glossZh": "雨傘",
+      "lesson": 31
+    },
+    "sun": {
+      "file": "openmoji-618/2600.png",
+      "source": "preset",
+      "glossZh": "太陽",
+      "lesson": 32
+    },
+    "sky": {
+      "file": "openmoji-618/1FA75.png",
+      "source": "preset",
+      "glossZh": "天空",
+      "lesson": 32
+    },
+    "moon": {
+      "file": "openmoji-618/1F319.png",
+      "source": "preset",
+      "glossZh": "月亮",
+      "lesson": 32
+    },
+    "beach": {
+      "file": "openmoji-618/1F3D6.png",
+      "source": "override",
+      "glossZh": "海灘",
+      "lesson": 32
+    },
+    "flower": {
+      "file": "openmoji-618/1F33C.png",
+      "source": "preset",
+      "glossZh": "花",
+      "lesson": 32
+    },
+    "grass": {
+      "file": "openmoji-618/1F33F.png",
+      "source": "override",
+      "glossZh": "草地",
+      "lesson": 32
+    },
+    "hill": {
+      "file": "openmoji-618/1F5FB.png",
+      "source": "override",
+      "glossZh": "小山",
+      "lesson": 32
+    },
+    "island": {
+      "file": "openmoji-618/1F3DD.png",
+      "source": "preset",
+      "glossZh": "島",
+      "lesson": 32
+    },
+    "lake": {
+      "file": "english-icons/mdi-waves.png",
+      "source": "iconify",
+      "glossZh": "湖",
+      "lesson": 32
+    },
+    "land": {
+      "file": "openmoji-618/1F5FA.png",
+      "source": "override",
+      "glossZh": "陸地",
+      "lesson": 32
+    },
+    "mountain": {
+      "file": "openmoji-618/26F0.png",
+      "source": "preset",
+      "glossZh": "山",
+      "lesson": 32
+    },
+    "river": {
+      "file": "openmoji-618/1F30A.png",
+      "source": "override",
+      "glossZh": "河流",
+      "lesson": 32
+    },
+    "sea": {
+      "file": "openmoji-618/1F30A.png",
+      "source": "override",
+      "glossZh": "海洋",
+      "lesson": 32
+    },
+    "tree": {
+      "file": "openmoji-618/1F333.png",
+      "source": "preset",
+      "glossZh": "樹",
+      "lesson": 32
+    },
+    "rose": {
+      "file": "openmoji-618/1F339.png",
+      "source": "override",
+      "glossZh": "玫瑰花",
+      "lesson": 32
+    },
+    "air": {
+      "file": "english-icons/ph-wind.png",
+      "source": "iconify",
+      "glossZh": "空氣",
+      "lesson": 32
+    },
+    "earth": {
+      "file": "openmoji-618/1F30D.png",
+      "source": "preset",
+      "glossZh": "地球",
+      "lesson": 32
+    },
+    "fire": {
+      "file": "openmoji-618/1F525.png",
+      "source": "preset",
+      "glossZh": "火",
+      "lesson": 32
+    },
+    "ice": {
+      "file": "openmoji-618/1F9CA.png",
+      "source": "preset",
+      "glossZh": "冰",
+      "lesson": 32
+    },
+    "blow": {
+      "file": "openmoji-618/1F62E-200D-1F4A8.png",
+      "source": "preset",
+      "glossZh": "刮風",
+      "lesson": 32
+    },
+    "burn": {
+      "file": "english-icons/mdi-fire-alert.png",
+      "source": "iconify",
+      "glossZh": "燙傷",
+      "lesson": 33
+    },
+    "heat": {
+      "file": "openmoji-618/1FAE0.png",
+      "source": "preset",
+      "glossZh": "熱氣",
+      "lesson": 33
+    },
+    "change": {
+      "file": "english-icons/mdi-swap-horizontal.png",
+      "source": "iconify",
+      "glossZh": "變化",
+      "lesson": 33
+    },
+    "wet": {
+      "file": "openmoji-618/1F4A6.png",
+      "source": "preset",
+      "glossZh": "潮濕的",
+      "lesson": 33
+    },
+    "dry": {
+      "file": "english-icons/mdi-water-off.png",
+      "source": "iconify",
+      "glossZh": "乾燥的",
+      "lesson": 33
+    },
+    "cold": {
+      "file": "openmoji-618/1F976.png",
+      "source": "override",
+      "glossZh": "冷的",
+      "lesson": 33
+    },
+    "snowy": {
+      "file": "openmoji-618/1F328.png",
+      "source": "override",
+      "glossZh": "下雪的",
+      "lesson": 33
+    },
+    "cloud": {
+      "file": "openmoji-618/2601.png",
+      "source": "preset",
+      "glossZh": "雲",
+      "lesson": 33
+    },
+    "forest": {
+      "file": "english-icons/mdi-forest.png",
+      "source": "iconify",
+      "glossZh": "森林",
+      "lesson": 33
+    },
+    "sand": {
+      "file": "openmoji-618/1F3DC.png",
+      "source": "override",
+      "glossZh": "沙子",
+      "lesson": 33
+    },
+    "clothes": {
+      "file": "openmoji-618/1F97C.png",
+      "source": "preset",
+      "glossZh": "衣服",
+      "lesson": 33
+    },
+    "shirt": {
+      "file": "openmoji-618/1F3BD.png",
+      "source": "preset",
+      "glossZh": "襯衫",
+      "lesson": 33
+    },
+    "t-shirt": {
+      "file": "openmoji-618/1F455.png",
+      "source": "preset",
+      "glossZh": "T恤",
+      "lesson": 33
+    },
+    "pants": {
+      "file": "openmoji-618/1F456.png",
+      "source": "preset",
+      "glossZh": "長褲",
+      "lesson": 33
+    },
+    "shorts": {
+      "file": "openmoji-618/1FA73.png",
+      "source": "preset",
+      "glossZh": "短褲",
+      "lesson": 33
+    },
+    "skirt": {
+      "file": "english-icons/game-icons-skirt.png",
+      "source": "iconify",
+      "glossZh": "裙子",
+      "lesson": 33
+    },
+    "dress": {
+      "file": "openmoji-618/1F457.png",
+      "source": "preset",
+      "glossZh": "洋裝",
+      "lesson": 33
+    },
+    "coat": {
+      "file": "openmoji-618/1F9E5.png",
+      "source": "preset",
+      "glossZh": "外套",
+      "lesson": 33
+    },
+    "jacket": {
+      "file": "openmoji-618/1F97C.png",
+      "source": "preset",
+      "glossZh": "夾克",
+      "lesson": 33
+    },
+    "sweater": {
+      "file": "openmoji-618/1F9E5.png",
+      "source": "preset",
+      "glossZh": "毛衣",
+      "lesson": 33
+    },
+    "hat": {
+      "file": "openmoji-618/1F452.png",
+      "source": "preset",
+      "glossZh": "帽子",
+      "lesson": 34
+    },
+    "cap": {
+      "file": "openmoji-618/1F9E2.png",
+      "source": "preset",
+      "glossZh": "鴨舌帽",
+      "lesson": 34
+    },
+    "shoes": {
+      "file": "openmoji-618/1F45F.png",
+      "source": "preset",
+      "glossZh": "鞋子",
+      "lesson": 34
+    },
+    "socks": {
+      "file": "openmoji-618/1F9E6.png",
+      "source": "preset",
+      "glossZh": "襪子",
+      "lesson": 34
+    },
+    "glove": {
+      "file": "openmoji-618/1F9E4.png",
+      "source": "preset",
+      "glossZh": "手套",
+      "lesson": 34
+    },
+    "scarf": {
+      "file": "openmoji-618/1F9E3.png",
+      "source": "preset",
+      "glossZh": "圍巾",
+      "lesson": 34
+    },
+    "glasses": {
+      "file": "openmoji-618/1F453.png",
+      "source": "preset",
+      "glossZh": "眼鏡",
+      "lesson": 34
+    },
+    "uniform": {
+      "file": "openmoji-618/1F94B.png",
+      "source": "preset",
+      "glossZh": "制服",
+      "lesson": 34
+    },
+    "wear": {
+      "file": "openmoji-618/1F455.png",
+      "source": "zh_transfer",
+      "glossZh": "穿著",
+      "lesson": 34
+    },
+    "button": {
+      "file": "english-icons/game-icons-shirt-button.png",
+      "source": "iconify",
+      "glossZh": "鈕扣",
+      "lesson": 34
+    },
+    "pocket": {
+      "file": "english-icons/mdi-pocket.png",
+      "source": "iconify",
+      "glossZh": "口袋",
+      "lesson": 34
+    },
+    "boots": {
+      "file": "openmoji-618/1F97E.png",
+      "source": "override",
+      "glossZh": "靴子",
+      "lesson": 34
+    },
+    "sandals": {
+      "file": "openmoji-618/1FA74.png",
+      "source": "preset",
+      "glossZh": "涼鞋",
+      "lesson": 34
+    },
+    "slippers": {
+      "file": "openmoji-618/1FA74.png",
+      "source": "override",
+      "glossZh": "拖鞋",
+      "lesson": 34
+    },
+    "belt": {
+      "file": "english-icons/game-icons-belt-buckles.png",
+      "source": "iconify",
+      "glossZh": "皮帶",
+      "lesson": 34
+    },
+    "ring": {
+      "file": "openmoji-618/1F48D.png",
+      "source": "override",
+      "glossZh": "戒指",
+      "lesson": 34
+    },
+    "necklace": {
+      "file": "openmoji-618/1F4FF.png",
+      "source": "preset",
+      "glossZh": "項鍊",
+      "lesson": 34
+    },
+    "bag": {
+      "file": "openmoji-618/1F45C.png",
+      "source": "override",
+      "glossZh": "袋子",
+      "lesson": 34
+    },
+    "backpack": {
+      "file": "openmoji-618/1F392.png",
+      "source": "preset",
+      "glossZh": "背包",
+      "lesson": 34
+    },
+    "raincoat": {
+      "file": "openmoji-618/2614.png",
+      "source": "override",
+      "glossZh": "雨衣",
+      "lesson": 34
+    },
+    "swimsuit": {
+      "file": "openmoji-618/1FA71.png",
+      "source": "override",
+      "glossZh": "泳衣",
+      "lesson": 35
+    },
+    "beautiful": {
+      "file": "openmoji-618/1F60D.png",
+      "source": "override",
+      "glossZh": "美麗的",
+      "lesson": 35
+    },
+    "pretty": {
+      "file": "english-icons/mdi-flower-tulip.png",
+      "source": "iconify",
+      "glossZh": "漂亮的",
+      "lesson": 35
+    },
+    "cute": {
+      "file": "openmoji-618/1FA77.png",
+      "source": "preset",
+      "glossZh": "可愛的",
+      "lesson": 35
+    },
+    "handsome": {
+      "file": "openmoji-618/1F60E.png",
+      "source": "override",
+      "glossZh": "英俊的",
+      "lesson": 35
+    },
+    "old": {
+      "file": "english-icons/mdi-human-cane.png",
+      "source": "iconify",
+      "glossZh": "老的",
+      "lesson": 35
+    },
+    "young": {
+      "file": "openmoji-618/1F476.png",
+      "source": "preset",
+      "glossZh": "年輕的",
+      "lesson": 35
+    },
+    "strong": {
+      "file": "openmoji-618/1F3CB.png",
+      "source": "override",
+      "glossZh": "強壯的",
+      "lesson": 35
+    },
+    "tall": {
+      "file": "openmoji-618/1F992.png",
+      "source": "override",
+      "glossZh": "高大的",
+      "lesson": 35
+    },
+    "short": {
+      "file": "english-icons/mdi-arrow-collapse-vertical.png",
+      "source": "iconify",
+      "glossZh": "矮的",
+      "lesson": 35
+    },
+    "thin": {
+      "file": "openmoji-618/1F90F.png",
+      "source": "override",
+      "glossZh": "瘦的",
+      "lesson": 35
+    },
+    "fat": {
+      "file": "english-icons/game-icons-fat.png",
+      "source": "iconify",
+      "glossZh": "胖的",
+      "lesson": 35
+    },
+    "heavy": {
+      "file": "english-icons/mdi-weight.png",
+      "source": "iconify",
+      "glossZh": "重的",
+      "lesson": 35
+    },
+    "healthy": {
+      "file": "openmoji-618/1F3CB.png",
+      "source": "zh_transfer",
+      "glossZh": "健康的",
+      "lesson": 35
+    },
+    "long": {
+      "file": "english-icons/mdi-tape-measure.png",
+      "source": "iconify",
+      "glossZh": "長的",
+      "lesson": 35
+    },
+    "good": {
+      "file": "openmoji-618/1F44D.png",
+      "source": "override",
+      "glossZh": "好的",
+      "lesson": 35
+    },
+    "bad": {
+      "file": "openmoji-618/1F44E.png",
+      "source": "preset",
+      "glossZh": "不好的",
+      "lesson": 35
+    },
+    "nice": {
+      "file": "openmoji-618/1F600.png",
+      "source": "preset",
+      "glossZh": "好的",
+      "lesson": 35
+    },
+    "friendly": {
+      "file": "openmoji-618/1F917.png",
+      "source": "override",
+      "glossZh": "友善的",
+      "lesson": 35
+    },
+    "kind": {
+      "file": "openmoji-618/1F60A.png",
+      "source": "override",
+      "glossZh": "親切的",
+      "lesson": 35
+    },
+    "afraid": {
+      "file": "openmoji-618/1F628.png",
+      "source": "preset",
+      "glossZh": "害怕的",
+      "lesson": 36
+    },
+    "sad": {
+      "file": "openmoji-618/1F622.png",
+      "source": "preset",
+      "glossZh": "悲傷的",
+      "lesson": 36
+    },
+    "angry": {
+      "file": "openmoji-618/1F620.png",
+      "source": "preset",
+      "glossZh": "生氣的",
+      "lesson": 36
+    },
+    "bored": {
+      "file": "openmoji-618/1F612.png",
+      "source": "preset",
+      "glossZh": "感到無聊的",
+      "lesson": 36
+    },
+    "lonely": {
+      "file": "openmoji-618/1F494.png",
+      "source": "preset",
+      "glossZh": "孤單的",
+      "lesson": 36
+    },
+    "unhappy": {
+      "file": "openmoji-618/1F610.png",
+      "source": "preset",
+      "glossZh": "不高興的",
+      "lesson": 36
+    },
+    "tired": {
+      "file": "openmoji-618/1F62B.png",
+      "source": "preset",
+      "glossZh": "疲倦的",
+      "lesson": 36
+    },
+    "sick": {
+      "file": "openmoji-618/1F912.png",
+      "source": "preset",
+      "glossZh": "生病的",
+      "lesson": 36
+    },
+    "weak": {
+      "file": "openmoji-618/1F940.png",
+      "source": "override",
+      "glossZh": "虛弱的",
+      "lesson": 36
+    },
+    "excited": {
+      "file": "openmoji-618/1F606.png",
+      "source": "override",
+      "glossZh": "感到興奮的",
+      "lesson": 36
+    },
+    "glad": {
+      "file": "openmoji-618/1F60A.png",
+      "source": "preset",
+      "glossZh": "高興的",
+      "lesson": 36
+    },
+    "happy": {
+      "file": "openmoji-618/1F60A.png",
+      "source": "preset",
+      "glossZh": "快樂的",
+      "lesson": 36
+    },
+    "surprised": {
+      "file": "openmoji-618/1F632.png",
+      "source": "preset",
+      "glossZh": "感到驚訝的",
+      "lesson": 36
+    },
+    "great": {
+      "file": "openmoji-618/1F44F.png",
+      "source": "preset",
+      "glossZh": "極好的",
+      "lesson": 36
+    },
+    "free": {
+      "file": "openmoji-618/1F193.png",
+      "source": "preset",
+      "glossZh": "自由的",
+      "lesson": 36
+    },
+    "lucky": {
+      "file": "openmoji-618/1F340.png",
+      "source": "preset",
+      "glossZh": "幸運的",
+      "lesson": 36
+    },
+    "proud": {
+      "file": "english-icons/mdi-emoticon-cool-outline.png",
+      "source": "iconify",
+      "glossZh": "驕傲的",
+      "lesson": 36
+    },
+    "comfortable": {
+      "file": "english-icons/mdi-seat-recline-extra.png",
+      "source": "iconify",
+      "glossZh": "舒適的",
+      "lesson": 36
+    },
+    "feel": {
+      "file": "english-icons/mdi-heart-pulse.png",
+      "source": "iconify",
+      "glossZh": "感覺",
+      "lesson": 36
+    },
+    "notice": {
+      "file": "english-icons/mdi-eye-check.png",
+      "source": "iconify",
+      "glossZh": "注意",
+      "lesson": 36
+    },
+    "try": {
+      "file": "english-icons/game-icons-target-dummy.png",
+      "source": "iconify",
+      "glossZh": "嘗試",
+      "lesson": 37
+    },
+    "enjoy": {
+      "file": "openmoji-618/1F60C.png",
+      "source": "override",
+      "glossZh": "欣賞",
+      "lesson": 37
+    },
+    "love": {
+      "file": "openmoji-618/1F60D.png",
+      "source": "preset",
+      "glossZh": "熱愛",
+      "lesson": 37
+    },
+    "kiss": {
+      "file": "openmoji-618/1F48F.png",
+      "source": "preset",
+      "glossZh": "親吻",
+      "lesson": 37
+    },
+    "hate": {
+      "file": "openmoji-618/1F620.png",
+      "source": "zh_transfer",
+      "glossZh": "恨",
+      "lesson": 37
+    },
+    "cry": {
+      "file": "openmoji-618/1F62D.png",
+      "source": "preset",
+      "glossZh": "哭泣",
+      "lesson": 37
+    },
+    "worry": {
+      "file": "openmoji-618/1F61F.png",
+      "source": "preset",
+      "glossZh": "擔心",
+      "lesson": 37
+    },
+    "agree": {
+      "file": "english-icons/mdi-thumb-up-outline.png",
+      "source": "iconify",
+      "glossZh": "同意",
+      "lesson": 37
+    },
+    "believe": {
+      "file": "english-icons/mdi-hands-pray.png",
+      "source": "iconify",
+      "glossZh": "相信",
+      "lesson": 37
+    },
+    "decide": {
+      "file": "openmoji-618/263A.png",
+      "source": "zh_transfer",
+      "glossZh": "決定",
+      "lesson": 37
+    },
+    "guess": {
+      "file": "openmoji-618/1F937.png",
+      "source": "override",
+      "glossZh": "猜想",
+      "lesson": 37
+    },
+    "hope": {
+      "file": "openmoji-618/1F91E.png",
+      "source": "override",
+      "glossZh": "希望",
+      "lesson": 37
+    },
+    "mean": {
+      "file": "openmoji-618/1F5E8.png",
+      "source": "override",
+      "glossZh": "意思",
+      "lesson": 37
+    },
+    "dream": {
+      "file": "english-icons/mdi-sleep.png",
+      "source": "iconify",
+      "glossZh": "夢想",
+      "lesson": 37
+    },
+    "mind": {
+      "file": "openmoji-618/1F92F.png",
+      "source": "override",
+      "glossZh": "心；精神",
+      "lesson": 37
+    },
+    "need": {
+      "file": "openmoji-618/2757.png",
+      "source": "zh_transfer",
+      "glossZh": "需要",
+      "lesson": 37
+    },
+    "wish": {
+      "file": "openmoji-618/1F932.png",
+      "source": "preset",
+      "glossZh": "希望",
+      "lesson": 37
+    },
+    "belong": {
+      "file": "openmoji-618/1F510.png",
+      "source": "override",
+      "glossZh": "屬於",
+      "lesson": 37
+    },
+    "surprise": {
+      "file": "openmoji-618/1F92D.png",
+      "source": "preset",
+      "glossZh": "驚訝",
+      "lesson": 37
+    },
+    "joy": {
+      "file": "openmoji-618/1F923.png",
+      "source": "override",
+      "glossZh": "歡樂",
+      "lesson": 37
+    },
+    "fun": {
+      "file": "openmoji-618/1F973.png",
+      "source": "override",
+      "glossZh": "樂趣",
+      "lesson": 38
+    },
+    "trouble": {
+      "file": "openmoji-618/1F635-200D-1F4AB.png",
+      "source": "preset",
+      "glossZh": "麻煩",
+      "lesson": 38
+    },
+    "cheer": {
+      "file": "openmoji-618/1F64C.png",
+      "source": "override",
+      "glossZh": "加油",
+      "lesson": 38
+    },
+    "boring": {
+      "file": "openmoji-618/1F971.png",
+      "source": "override",
+      "glossZh": "無聊的",
+      "lesson": 38
+    },
+    "shy": {
+      "file": "openmoji-618/1FAE3.png",
+      "source": "preset",
+      "glossZh": "害羞的",
+      "lesson": 38
+    },
+    "quiet": {
+      "file": "openmoji-618/1FAE2.png",
+      "source": "preset",
+      "glossZh": "安靜的",
+      "lesson": 38
+    },
+    "funny": {
+      "file": "openmoji-618/1F602.png",
+      "source": "override",
+      "glossZh": "有趣的",
+      "lesson": 38
+    },
+    "polite": {
+      "file": "openmoji-618/1F647.png",
+      "source": "override",
+      "glossZh": "有禮貌的",
+      "lesson": 38
+    },
+    "careful": {
+      "file": "openmoji-618/26A0.png",
+      "source": "override",
+      "glossZh": "小心的",
+      "lesson": 38
+    },
+    "nervous": {
+      "file": "openmoji-618/1F62C.png",
+      "source": "override",
+      "glossZh": "緊張的",
+      "lesson": 38
+    },
+    "sport": {
+      "file": "english-icons/mdi-whistle.png",
+      "source": "iconify",
+      "glossZh": "體育活動",
+      "lesson": 38
+    },
+    "exercise": {
+      "file": "openmoji-618/1F646.png",
+      "source": "preset",
+      "glossZh": "運動",
+      "lesson": 38
+    },
+    "hobby": {
+      "file": "english-icons/mdi-heart-circle.png",
+      "source": "iconify",
+      "glossZh": "嗜好",
+      "lesson": 38
+    },
+    "habit": {
+      "file": "openmoji-618/1F501.png",
+      "source": "zh_transfer",
+      "glossZh": "習慣",
+      "lesson": 38
+    },
+    "ball": {
+      "file": "openmoji-618/1F3CC.png",
+      "source": "preset",
+      "glossZh": "球",
+      "lesson": 38
+    },
+    "baseball": {
+      "file": "openmoji-618/26BE.png",
+      "source": "preset",
+      "glossZh": "棒球",
+      "lesson": 38
+    },
+    "basketball": {
+      "file": "openmoji-618/1F3C0.png",
+      "source": "preset",
+      "glossZh": "籃球",
+      "lesson": 38
+    },
+    "tennis": {
+      "file": "openmoji-618/1F3BE.png",
+      "source": "preset",
+      "glossZh": "網球",
+      "lesson": 38
+    },
+    "player": {
+      "file": "openmoji-618/26F9.png",
+      "source": "preset",
+      "glossZh": "運動員",
+      "lesson": 38
+    },
+    "team": {
+      "file": "openmoji-618/1F9D1-200D-1F91D-200D-1F9D1.png",
+      "source": "override",
+      "glossZh": "隊",
+      "lesson": 38
+    },
+    "swim": {
+      "file": "openmoji-618/1F3CA.png",
+      "source": "preset",
+      "glossZh": "游泳",
+      "lesson": 39
+    },
+    "jog": {
+      "file": "openmoji-618/1F3C3.png",
+      "source": "override",
+      "glossZh": "慢跑",
+      "lesson": 39
+    },
+    "art": {
+      "file": "openmoji-618/1F3A8.png",
+      "source": "preset",
+      "glossZh": "藝術",
+      "lesson": 39
+    },
+    "dance": {
+      "file": "openmoji-618/1F483.png",
+      "source": "preset",
+      "glossZh": "跳舞",
+      "lesson": 39
+    },
+    "draw": {
+      "file": "openmoji-618/1F3A8.png",
+      "source": "override",
+      "glossZh": "畫圖",
+      "lesson": 39
+    },
+    "movie": {
+      "file": "openmoji-618/1F3AC.png",
+      "source": "override",
+      "glossZh": "電影",
+      "lesson": 39
+    },
+    "music": {
+      "file": "openmoji-618/1F3B5.png",
+      "source": "preset",
+      "glossZh": "音樂",
+      "lesson": 39
+    },
+    "paint": {
+      "file": "openmoji-618/1FADF.png",
+      "source": "preset",
+      "glossZh": "繪畫",
+      "lesson": 39
+    },
+    "picture": {
+      "file": "openmoji-618/E142.png",
+      "source": "preset",
+      "glossZh": "圖片",
+      "lesson": 39
+    },
+    "picnic": {
+      "file": "openmoji-618/1F9FA.png",
+      "source": "preset",
+      "glossZh": "野餐",
+      "lesson": 39
+    },
+    "basket": {
+      "file": "openmoji-618/1F9FA.png",
+      "source": "preset",
+      "glossZh": "籃",
+      "lesson": 39
+    },
+    "show": {
+      "file": "openmoji-618/1F3AD.png",
+      "source": "override",
+      "glossZh": "表演",
+      "lesson": 39
+    },
+    "sing": {
+      "file": "openmoji-618/1F3A4.png",
+      "source": "preset",
+      "glossZh": "唱歌",
+      "lesson": 39
+    },
+    "band": {
+      "file": "openmoji-618/1F3B8.png",
+      "source": "override",
+      "glossZh": "樂隊",
+      "lesson": 39
+    },
+    "camp": {
+      "file": "openmoji-618/1F3D5.png",
+      "source": "override",
+      "glossZh": "露營",
+      "lesson": 39
+    },
+    "comic": {
+      "file": "english-icons/mdi-book-multiple.png",
+      "source": "iconify",
+      "glossZh": "漫畫",
+      "lesson": 39
+    },
+    "favorite": {
+      "file": "openmoji-618/1F929.png",
+      "source": "override",
+      "glossZh": "最愛的",
+      "lesson": 39
+    },
+    "doll": {
+      "file": "openmoji-618/1F38E.png",
+      "source": "preset",
+      "glossZh": "玩偶",
+      "lesson": 39
+    },
+    "game": {
+      "file": "openmoji-618/1F3AE.png",
+      "source": "override",
+      "glossZh": "遊戲",
+      "lesson": 39
+    },
+    "kite": {
+      "file": "openmoji-618/1FA81.png",
+      "source": "preset",
+      "glossZh": "風箏",
+      "lesson": 39
+    },
+    "magic": {
+      "file": "openmoji-618/1F9D9.png",
+      "source": "preset",
+      "glossZh": "魔術",
+      "lesson": 40
+    },
+    "seat": {
+      "file": "openmoji-618/1F4BA.png",
+      "source": "preset",
+      "glossZh": "座位",
+      "lesson": 40
+    },
+    "song": {
+      "file": "openmoji-618/1F3B6.png",
+      "source": "zh_transfer",
+      "glossZh": "歌曲",
+      "lesson": 40
+    },
+    "noise": {
+      "file": "openmoji-618/1F4E2.png",
+      "source": "override",
+      "glossZh": "噪音",
+      "lesson": 40
+    },
+    "story": {
+      "file": "openmoji-618/1F4DC.png",
+      "source": "override",
+      "glossZh": "故事",
+      "lesson": 40
+    },
+    "interested": {
+      "file": "openmoji-618/1F929.png",
+      "source": "override",
+      "glossZh": "對…感興趣",
+      "lesson": 40
+    },
+    "ticket": {
+      "file": "openmoji-618/1F3AB.png",
+      "source": "preset",
+      "glossZh": "票",
+      "lesson": 40
+    },
+    "toy": {
+      "file": "openmoji-618/1FA80.png",
+      "source": "preset",
+      "glossZh": "玩具",
+      "lesson": 40
+    },
+    "soccer": {
+      "file": "openmoji-618/26BD.png",
+      "source": "preset",
+      "glossZh": "足球",
+      "lesson": 40
+    },
+    "badminton": {
+      "file": "openmoji-618/1F3F8.png",
+      "source": "preset",
+      "glossZh": "羽毛球",
+      "lesson": 40
+    },
+    "dodge ball": {
+      "file": "openmoji-618/1F93E.png",
+      "source": "override",
+      "glossZh": "躲避球",
+      "lesson": 40
+    },
+    "volleyball": {
+      "file": "openmoji-618/1F3D0.png",
+      "source": "preset",
+      "glossZh": "排球",
+      "lesson": 40
+    },
+    "play": {
+      "file": "openmoji-618/1F9F8.png",
+      "source": "override",
+      "glossZh": "玩",
+      "lesson": 40
+    },
+    "run": {
+      "file": "openmoji-618/1F3C3.png",
+      "source": "preset",
+      "glossZh": "跑步",
+      "lesson": 40
+    },
+    "exciting": {
+      "file": "openmoji-618/1F525.png",
+      "source": "override",
+      "glossZh": "刺激的",
+      "lesson": 40
+    },
+    "interesting": {
+      "file": "openmoji-618/1F914.png",
+      "source": "override",
+      "glossZh": "有趣的",
+      "lesson": 40
+    },
+    "fast": {
+      "file": "openmoji-618/1F4A8.png",
+      "source": "override",
+      "glossZh": "快速",
+      "lesson": 40
+    },
+    "loud": {
+      "file": "openmoji-618/1F50A.png",
+      "source": "preset",
+      "glossZh": "大聲的",
+      "lesson": 40
+    },
+    "win": {
+      "file": "openmoji-618/1F3C5.png",
+      "source": "override",
+      "glossZh": "成功",
+      "lesson": 40
+    },
+    "lose": {
+      "file": "openmoji-618/1F622.png",
+      "source": "override",
+      "glossZh": "失去",
+      "lesson": 40
+    },
+    "break": {
+      "file": "openmoji-618/1F494.png",
+      "source": "preset",
+      "glossZh": "打破",
+      "lesson": 41
+    },
+    "climb": {
+      "file": "openmoji-618/1F9D7.png",
+      "source": "preset",
+      "glossZh": "爬",
+      "lesson": 41
+    },
+    "hide": {
+      "file": "openmoji-618/1F648.png",
+      "source": "override",
+      "glossZh": "隱藏",
+      "lesson": 41
+    },
+    "hit": {
+      "file": "openmoji-618/1F3AF.png",
+      "source": "preset",
+      "glossZh": "打擊",
+      "lesson": 41
+    },
+    "jump": {
+      "file": "openmoji-618/1F998.png",
+      "source": "preset",
+      "glossZh": "跳躍",
+      "lesson": 41
+    },
+    "kick": {
+      "file": "openmoji-618/1F9B5.png",
+      "source": "preset",
+      "glossZh": "踢",
+      "lesson": 41
+    },
+    "stand": {
+      "file": "openmoji-618/1F9CD.png",
+      "source": "preset",
+      "glossZh": "站立",
+      "lesson": 41
+    },
+    "collect": {
+      "file": "english-icons/mdi-collage.png",
+      "source": "iconify",
+      "glossZh": "收集",
+      "lesson": 41
+    },
+    "hurt": {
+      "file": "openmoji-618/1F915.png",
+      "source": "preset",
+      "glossZh": "疼痛",
+      "lesson": 41
+    },
+    "lead": {
+      "file": "english-icons/ph-hand-pointing.png",
+      "source": "iconify",
+      "glossZh": "指導",
+      "lesson": 41
+    },
+    "practice": {
+      "file": "english-icons/mdi-dumbbell.png",
+      "source": "iconify",
+      "glossZh": "練習",
+      "lesson": 41
+    },
+    "sleep": {
+      "file": "openmoji-618/1F62A.png",
+      "source": "preset",
+      "glossZh": "睡覺",
+      "lesson": 41
+    },
+    "use": {
+      "file": "openmoji-618/1F6E0.png",
+      "source": "override",
+      "glossZh": "使用",
+      "lesson": 41
+    },
+    "skate": {
+      "file": "openmoji-618/1F6F9.png",
+      "source": "preset",
+      "glossZh": "溜冰",
+      "lesson": 41
+    },
+    "hurry": {
+      "file": "openmoji-618/1F3C3.png",
+      "source": "preset",
+      "glossZh": "匆忙",
+      "lesson": 41
+    },
+    "quick": {
+      "file": "openmoji-618/1F3C3.png",
+      "source": "preset",
+      "glossZh": "迅速地",
+      "lesson": 41
+    },
+    "slow": {
+      "file": "openmoji-618/1F9A5.png",
+      "source": "preset",
+      "glossZh": "慢的",
+      "lesson": 41
+    },
+    "arrive": {
+      "file": "openmoji-618/26F3.png",
+      "source": "zh_transfer",
+      "glossZh": "到達",
+      "lesson": 41
+    },
+    "bring": {
+      "file": "english-icons/mdi-tray-arrow-up.png",
+      "source": "iconify",
+      "glossZh": "帶來",
+      "lesson": 41
+    },
+    "carry": {
+      "file": "openmoji-618/1F6CD.png",
+      "source": "override",
+      "glossZh": "拿",
+      "lesson": 41
+    },
+    "come": {
+      "file": "english-icons/mdi-human-greeting.png",
+      "source": "iconify",
+      "glossZh": "來到",
+      "lesson": 42
+    },
+    "cross": {
+      "file": "openmoji-618/1F6B8.png",
+      "source": "override",
+      "glossZh": "越過",
+      "lesson": 42
+    },
+    "follow": {
+      "file": "openmoji-618/1F463.png",
+      "source": "zh_transfer",
+      "glossZh": "跟隨",
+      "lesson": 42
+    },
+    "go": {
+      "file": "openmoji-618/1F4A8.png",
+      "source": "preset",
+      "glossZh": "走",
+      "lesson": 42
+    },
+    "leave": {
+      "file": "english-icons/mdi-exit-run.png",
+      "source": "iconify",
+      "glossZh": "離開",
+      "lesson": 42
+    },
+    "move": {
+      "file": "openmoji-618/E103.png",
+      "source": "preset",
+      "glossZh": "移動",
+      "lesson": 42
+    },
+    "pull": {
+      "file": "openmoji-618/1FA9D.png",
+      "source": "zh_transfer",
+      "glossZh": "拉",
+      "lesson": 42
+    },
+    "push": {
+      "file": "openmoji-618/1FAF7.png",
+      "source": "preset",
+      "glossZh": "推",
+      "lesson": 42
+    },
+    "put": {
+      "file": "openmoji-618/1FAF3.png",
+      "source": "override",
+      "glossZh": "放",
+      "lesson": 42
+    },
+    "along": {
+      "file": "openmoji-618/2934.png",
+      "source": "override",
+      "glossZh": "沿著",
+      "lesson": 42
+    },
+    "around": {
+      "file": "openmoji-618/1F504.png",
+      "source": "override",
+      "glossZh": "圍繞",
+      "lesson": 42
+    },
+    "up": {
+      "file": "openmoji-618/2B06.png",
+      "source": "override",
+      "glossZh": "往上",
+      "lesson": 42
+    },
+    "down": {
+      "file": "openmoji-618/2B07.png",
+      "source": "override",
+      "glossZh": "往下",
+      "lesson": 42
+    },
+    "left": {
+      "file": "openmoji-618/2B05.png",
+      "source": "override",
+      "glossZh": "左邊",
+      "lesson": 42
+    },
+    "right": {
+      "file": "openmoji-618/27A1.png",
+      "source": "override",
+      "glossZh": "右邊",
+      "lesson": 42
+    },
+    "into": {
+      "file": "english-icons/mdi-location-enter.png",
+      "source": "iconify",
+      "glossZh": "進入",
+      "lesson": 42
+    },
+    "over": {
+      "file": "openmoji-618/1F309.png",
+      "source": "zh_transfer",
+      "glossZh": "越過",
+      "lesson": 42
+    },
+    "out": {
+      "file": "english-icons/mdi-exit-to-app.png",
+      "source": "iconify",
+      "glossZh": "在外",
+      "lesson": 42
+    },
+    "back": {
+      "file": "openmoji-618/1F519.png",
+      "source": "override",
+      "glossZh": "後面的",
+      "lesson": 42
+    },
+    "front": {
+      "file": "english-icons/mdi-arrange-bring-forward.png",
+      "source": "iconify",
+      "glossZh": "前面的",
+      "lesson": 42
+    },
+    "side": {
+      "file": "english-icons/mdi-page-layout-sidebar-right.png",
+      "source": "iconify",
+      "glossZh": "旁邊的",
+      "lesson": 43
+    },
+    "inside": {
+      "file": "english-icons/mdi-home-import-outline.png",
+      "source": "iconify",
+      "glossZh": "裡面的",
+      "lesson": 43
+    },
+    "outside": {
+      "file": "english-icons/mdi-home-export-outline.png",
+      "source": "iconify",
+      "glossZh": "外面的",
+      "lesson": 43
+    },
+    "high": {
+      "file": "openmoji-618/2B06.png",
+      "source": "zh_transfer",
+      "glossZh": "高的",
+      "lesson": 43
+    },
+    "low": {
+      "file": "openmoji-618/2198.png",
+      "source": "override",
+      "glossZh": "低的",
+      "lesson": 43
+    },
+    "east": {
+      "file": "openmoji-618/1F305.png",
+      "source": "override",
+      "glossZh": "東方",
+      "lesson": 43
+    },
+    "west": {
+      "file": "english-icons/mdi-arrow-left-bold-circle.png",
+      "source": "iconify",
+      "glossZh": "西方",
+      "lesson": 43
+    },
+    "north": {
+      "file": "english-icons/mdi-arrow-up-bold-circle.png",
+      "source": "iconify",
+      "glossZh": "北方",
+      "lesson": 43
+    },
+    "find": {
+      "file": "openmoji-618/1F50D.png",
+      "source": "override",
+      "glossZh": "發現",
+      "lesson": 43
+    },
+    "send": {
+      "file": "openmoji-618/1F4E9.png",
+      "source": "preset",
+      "glossZh": "發送",
+      "lesson": 43
+    },
+    "driver": {
+      "file": "openmoji-618/1F470-200D-2642-FE0F.png",
+      "source": "override",
+      "glossZh": "司機",
+      "lesson": 43
+    },
+    "farmer": {
+      "file": "openmoji-618/1F9D1-200D-1F33E.png",
+      "source": "preset",
+      "glossZh": "農夫",
+      "lesson": 43
+    },
+    "leader": {
+      "file": "openmoji-618/1FAC5.png",
+      "source": "override",
+      "glossZh": "領導人",
+      "lesson": 43
+    },
+    "officer": {
+      "file": "english-icons/mdi-account-tie-hat.png",
+      "source": "iconify",
+      "glossZh": "官員",
+      "lesson": 43
+    },
+    "shopkeeper": {
+      "file": "openmoji-618/1F3EA.png",
+      "source": "override",
+      "glossZh": "店主",
+      "lesson": 43
+    },
+    "singer": {
+      "file": "openmoji-618/1F9D1-200D-1F3A4.png",
+      "source": "preset",
+      "glossZh": "歌手",
+      "lesson": 43
+    },
+    "waiter": {
+      "file": "openmoji-618/1F935-200D-2642-FE0F.png",
+      "source": "override",
+      "glossZh": "男服務生",
+      "lesson": 43
+    },
+    "waitress": {
+      "file": "openmoji-618/1F469-200D-1F4BC.png",
+      "source": "override",
+      "glossZh": "女服務生",
+      "lesson": 43
+    },
+    "worker": {
+      "file": "openmoji-618/1F477.png",
+      "source": "override",
+      "glossZh": "工人",
+      "lesson": 43
+    },
+    "doctor": {
+      "file": "openmoji-618/1F468-200D-2695-FE0F.png",
+      "source": "override",
+      "glossZh": "醫生",
+      "lesson": 43
+    },
+    "fisherman": {
+      "file": "openmoji-618/1F3A3.png",
+      "source": "override",
+      "glossZh": "漁夫",
+      "lesson": 44
+    },
+    "writer": {
+      "file": "openmoji-618/270D.png",
+      "source": "override",
+      "glossZh": "作家",
+      "lesson": 44
+    },
+    "nurse": {
+      "file": "openmoji-618/1F469-200D-2695-FE0F.png",
+      "source": "override",
+      "glossZh": "護士",
+      "lesson": 44
+    },
+    "police man": {
+      "file": "openmoji-618/1F46E.png",
+      "source": "override",
+      "glossZh": "警察",
+      "lesson": 44
+    },
+    "boss": {
+      "file": "english-icons/mdi-account-tie.png",
+      "source": "iconify",
+      "glossZh": "老闆",
+      "lesson": 44
+    },
+    "king": {
+      "file": "openmoji-618/1F934.png",
+      "source": "preset",
+      "glossZh": "國王",
+      "lesson": 44
+    },
+    "queen": {
+      "file": "openmoji-618/1F478.png",
+      "source": "preset",
+      "glossZh": "皇后",
+      "lesson": 44
+    },
+    "case": {
+      "file": "english-icons/mdi-folder-account.png",
+      "source": "iconify",
+      "glossZh": "個案",
+      "lesson": 44
+    },
+    "businessman": {
+      "file": "openmoji-618/1F454.png",
+      "source": "override",
+      "glossZh": "商人",
+      "lesson": 44
+    },
+    "business": {
+      "file": "openmoji-618/1F9D1-200D-1F4BC.png",
+      "source": "preset",
+      "glossZh": "商業",
+      "lesson": 44
+    },
+    "experience": {
+      "file": "openmoji-618/1F396.png",
+      "source": "override",
+      "glossZh": "經驗",
+      "lesson": 44
+    },
+    "matter": {
+      "file": "openmoji-618/1F4BC.png",
+      "source": "zh_transfer",
+      "glossZh": "事情",
+      "lesson": 44
+    },
+    "chance": {
+      "file": "openmoji-618/1F3B2.png",
+      "source": "override",
+      "glossZh": "機會",
+      "lesson": 44
+    },
+    "work": {
+      "file": "openmoji-618/1F4BC.png",
+      "source": "override",
+      "glossZh": "工作",
+      "lesson": 44
+    },
+    "idea": {
+      "file": "english-icons/ph-lightbulb.png",
+      "source": "iconify",
+      "glossZh": "主意",
+      "lesson": 44
+    },
+    "job": {
+      "file": "english-icons/mdi-badge-account-horizontal.png",
+      "source": "iconify",
+      "glossZh": "職業",
+      "lesson": 44
+    },
+    "plan": {
+      "file": "openmoji-618/1F5D3.png",
+      "source": "override",
+      "glossZh": "計畫",
+      "lesson": 44
+    },
+    "meeting": {
+      "file": "english-icons/mdi-presentation-play.png",
+      "source": "iconify",
+      "glossZh": "會議",
+      "lesson": 44
+    },
+    "own": {
+      "file": "openmoji-618/1F511.png",
+      "source": "override",
+      "glossZh": "擁有",
+      "lesson": 44
+    },
+    "fireman": {
+      "file": "openmoji-618/1F9D1-200D-1F692.png",
+      "source": "override",
+      "glossZh": "消防員",
+      "lesson": 44
+    },
+    "possible": {
+      "file": "openmoji-618/2754.png",
+      "source": "override",
+      "glossZh": "可能的",
+      "lesson": 45
+    },
+    "soldier": {
+      "file": "english-icons/game-icons-round-shield.png",
+      "source": "iconify",
+      "glossZh": "軍人",
+      "lesson": 45
+    },
+    "salesman": {
+      "file": "openmoji-618/1F6D2.png",
+      "source": "override",
+      "glossZh": "推銷員店員",
+      "lesson": 45
+    },
+    "mailman/mail carrier": {
+      "file": "openmoji-618/1F4EE.png",
+      "source": "override",
+      "glossZh": "郵差",
+      "lesson": 45
+    },
+    "smart": {
+      "file": "openmoji-618/1F913.png",
+      "source": "preset",
+      "glossZh": "聰明的",
+      "lesson": 45
+    },
+    "stupid": {
+      "file": "openmoji-618/1F615.png",
+      "source": "override",
+      "glossZh": "笨的",
+      "lesson": 45
+    },
+    "rich": {
+      "file": "english-icons/mdi-cash-multiple.png",
+      "source": "iconify",
+      "glossZh": "有錢的",
+      "lesson": 45
+    },
+    "poor": {
+      "file": "english-icons/mdi-cash-remove.png",
+      "source": "iconify",
+      "glossZh": "貧窮的；可憐的",
+      "lesson": 45
+    },
+    "successful": {
+      "file": "openmoji-618/1F3C6.png",
+      "source": "override",
+      "glossZh": "成功的",
+      "lesson": 45
+    },
+    "popular": {
+      "file": "english-icons/mdi-heart-multiple.png",
+      "source": "iconify",
+      "glossZh": "受歡迎的",
+      "lesson": 45
+    },
+    "strange": {
+      "file": "openmoji-618/1F47D.png",
+      "source": "override",
+      "glossZh": "奇怪的",
+      "lesson": 45
+    },
+    "able": {
+      "file": "english-icons/mdi-arm-flex.png",
+      "source": "iconify",
+      "glossZh": "能夠的",
+      "lesson": 45
+    },
+    "famous": {
+      "file": "openmoji-618/1F31F.png",
+      "source": "override",
+      "glossZh": "有名的",
+      "lesson": 45
+    },
+    "busy": {
+      "file": "openmoji-618/1F3C3.png",
+      "source": "override",
+      "glossZh": "忙碌的",
+      "lesson": 45
+    },
+    "hard-working": {
+      "file": "english-icons/mdi-account-hard-hat.png",
+      "source": "iconify",
+      "glossZh": "勤勉的",
+      "lesson": 45
+    },
+    "crazy": {
+      "file": "openmoji-618/1F61C.png",
+      "source": "preset",
+      "glossZh": "瘋狂的",
+      "lesson": 45
+    },
+    "lazy": {
+      "file": "openmoji-618/1F9A5.png",
+      "source": "preset",
+      "glossZh": "懶惰的",
+      "lesson": 45
+    },
+    "serious": {
+      "file": "openmoji-618/1F610.png",
+      "source": "override",
+      "glossZh": "嚴肅的",
+      "lesson": 45
+    },
+    "wise": {
+      "file": "english-icons/game-icons-wisdom.png",
+      "source": "iconify",
+      "glossZh": "有智慧的",
+      "lesson": 45
+    },
+    "honest": {
+      "file": "english-icons/mdi-hand-heart-outline.png",
+      "source": "iconify",
+      "glossZh": "誠實的",
+      "lesson": 45
+    },
+    "road": {
+      "file": "openmoji-618/1F6E3.png",
+      "source": "preset",
+      "glossZh": "道路",
+      "lesson": 46
+    },
+    "street": {
+      "file": "english-icons/mdi-road.png",
+      "source": "iconify",
+      "glossZh": "街道",
+      "lesson": 46
+    },
+    "block": {
+      "file": "english-icons/mdi-road-variant.png",
+      "source": "iconify",
+      "glossZh": "街區",
+      "lesson": 46
+    },
+    "town": {
+      "file": "openmoji-618/E203.png",
+      "source": "preset",
+      "glossZh": "市鎮",
+      "lesson": 46
+    },
+    "city": {
+      "file": "openmoji-618/1F3E2.png",
+      "source": "preset",
+      "glossZh": "城市",
+      "lesson": 46
+    },
+    "country": {
+      "file": "english-icons/mdi-flag-variant.png",
+      "source": "iconify",
+      "glossZh": "國家；鄉下的",
+      "lesson": 46
+    },
+    "place": {
+      "file": "english-icons/mdi-map-marker.png",
+      "source": "iconify",
+      "glossZh": "地方",
+      "lesson": 46
+    },
+    "bank": {
+      "file": "openmoji-618/1F3E6.png",
+      "source": "override",
+      "glossZh": "銀行",
+      "lesson": 46
+    },
+    "church": {
+      "file": "openmoji-618/26EA.png",
+      "source": "preset",
+      "glossZh": "教堂",
+      "lesson": 46
+    },
+    "club": {
+      "file": "english-icons/mdi-account-group-outline.png",
+      "source": "iconify",
+      "glossZh": "俱樂部",
+      "lesson": 46
+    },
+    "hotel": {
+      "file": "openmoji-618/1F3E8.png",
+      "source": "preset",
+      "glossZh": "飯店",
+      "lesson": 46
+    },
+    "office": {
+      "file": "openmoji-618/1F9D1-200D-1F4BC.png",
+      "source": "preset",
+      "glossZh": "辦公室",
+      "lesson": 46
+    },
+    "park": {
+      "file": "openmoji-618/1F3DE.png",
+      "source": "override",
+      "glossZh": "公園",
+      "lesson": 46
+    },
+    "party": {
+      "file": "openmoji-618/1F389.png",
+      "source": "override",
+      "glossZh": "派對",
+      "lesson": 46
+    },
+    "post office": {
+      "file": "openmoji-618/1F3E4.png",
+      "source": "preset",
+      "glossZh": "郵局",
+      "lesson": 46
+    },
+    "restaurant": {
+      "file": "english-icons/game-icons-hot-meal.png",
+      "source": "iconify",
+      "glossZh": "餐廳",
+      "lesson": 46
+    },
+    "museum": {
+      "file": "openmoji-618/1F5BC.png",
+      "source": "preset",
+      "glossZh": "博物館",
+      "lesson": 46
+    },
+    "zoo": {
+      "file": "openmoji-618/1F405.png",
+      "source": "preset",
+      "glossZh": "動物園",
+      "lesson": 46
+    },
+    "bakery": {
+      "file": "openmoji-618/1F96F.png",
+      "source": "preset",
+      "glossZh": "麵包店",
+      "lesson": 46
+    },
+    "bookstore": {
+      "file": "openmoji-618/1F4DA.png",
+      "source": "override",
+      "glossZh": "書店",
+      "lesson": 46
+    },
+    "convenient store": {
+      "file": "openmoji-618/1F3EA.png",
+      "source": "override",
+      "glossZh": "便利商店",
+      "lesson": 47
+    },
+    "department store": {
+      "file": "openmoji-618/1F3EC.png",
+      "source": "preset",
+      "glossZh": "百貨公司",
+      "lesson": 47
+    },
+    "library": {
+      "file": "english-icons/mdi-library.png",
+      "source": "iconify",
+      "glossZh": "圖書館",
+      "lesson": 47
+    },
+    "market": {
+      "file": "english-icons/mdi-storefront-outline.png",
+      "source": "iconify",
+      "glossZh": "市場",
+      "lesson": 47
+    },
+    "shop": {
+      "file": "openmoji-618/1F6CD.png",
+      "source": "override",
+      "glossZh": "商店",
+      "lesson": 47
+    },
+    "store": {
+      "file": "english-icons/mdi-store.png",
+      "source": "iconify",
+      "glossZh": "店舖",
+      "lesson": 47
+    },
+    "supermarket": {
+      "file": "openmoji-618/1F6D2.png",
+      "source": "override",
+      "glossZh": "超級市場",
+      "lesson": 47
+    },
+    "theater": {
+      "file": "openmoji-618/1F3AD.png",
+      "source": "preset",
+      "glossZh": "劇院",
+      "lesson": 47
+    },
+    "hospital": {
+      "file": "openmoji-618/1F3E5.png",
+      "source": "preset",
+      "glossZh": "醫院",
+      "lesson": 47
+    },
+    "factory": {
+      "file": "openmoji-618/1F3ED.png",
+      "source": "preset",
+      "glossZh": "工廠",
+      "lesson": 47
+    },
+    "map": {
+      "file": "openmoji-618/1F5FA.png",
+      "source": "preset",
+      "glossZh": "地圖",
+      "lesson": 47
+    },
+    "address": {
+      "file": "english-icons/mdi-home-map-marker.png",
+      "source": "iconify",
+      "glossZh": "地址",
+      "lesson": 47
+    },
+    "Taiwan": {
+      "file": "openmoji-618/1F1F9-1F1FC.png",
+      "source": "flag",
+      "glossZh": "台灣",
+      "lesson": 47
+    },
+    "Taipei": {
+      "file": "openmoji-618/1F3D9.png",
+      "source": "override",
+      "glossZh": "台北",
+      "lesson": 47
+    },
+    "New Taipei": {
+      "file": "openmoji-618/1F3D8.png",
+      "source": "override",
+      "glossZh": "新北",
+      "lesson": 47
+    },
+    "Beitou": {
+      "file": "openmoji-618/2668.png",
+      "source": "override",
+      "glossZh": "北投",
+      "lesson": 47
+    },
+    "Taoyuan": {
+      "file": "openmoji-618/1F351.png",
+      "source": "override",
+      "glossZh": "桃園",
+      "lesson": 47
+    },
+    "Taichung": {
+      "file": "openmoji-618/1F3A1.png",
+      "source": "override",
+      "glossZh": "台中",
+      "lesson": 47
+    },
+    "Tainan": {
+      "file": "openmoji-618/1F3DB.png",
+      "source": "override",
+      "glossZh": "台南",
+      "lesson": 47
+    },
+    "Kaohsiung": {
+      "file": "openmoji-618/1F6A2.png",
+      "source": "override",
+      "glossZh": "高雄",
+      "lesson": 47
+    },
+    "Hualien": {
+      "file": "openmoji-618/1F3D4.png",
+      "source": "override",
+      "glossZh": "花蓮",
+      "lesson": 48
+    },
+    "America": {
+      "file": "openmoji-618/1F1FA-1F1F8.png",
+      "source": "flag",
+      "glossZh": "美國",
+      "lesson": 48
+    },
+    "China": {
+      "file": "openmoji-618/1F1E8-1F1F3.png",
+      "source": "flag",
+      "glossZh": "中國",
+      "lesson": 48
+    },
+    "world": {
+      "file": "openmoji-618/1F30D.png",
+      "source": "preset",
+      "glossZh": "世界",
+      "lesson": 48
+    },
+    "health": {
+      "file": "english-icons/mdi-medical-bag.png",
+      "source": "iconify",
+      "glossZh": "健康",
+      "lesson": 48
+    },
+    "medicine": {
+      "file": "english-icons/mdi-pill.png",
+      "source": "iconify",
+      "glossZh": "藥物",
+      "lesson": 48
+    },
+    "live": {
+      "file": "openmoji-618/1F6B6.png",
+      "source": "zh_transfer",
+      "glossZh": "生活",
+      "lesson": 48
+    },
+    "life": {
+      "file": "english-icons/mdi-sprout.png",
+      "source": "iconify",
+      "glossZh": "生命",
+      "lesson": 48
+    },
+    "sale": {
+      "file": "openmoji-618/1F4B8.png",
+      "source": "override",
+      "glossZh": "拍賣",
+      "lesson": 48
+    },
+    "public": {
+      "file": "english-icons/mdi-city-variant-outline.png",
+      "source": "iconify",
+      "glossZh": "公共的",
+      "lesson": 48
+    },
+    "car": {
+      "file": "openmoji-618/1F697.png",
+      "source": "preset",
+      "glossZh": "汽車",
+      "lesson": 48
+    },
+    "bus": {
+      "file": "openmoji-618/1F68C.png",
+      "source": "preset",
+      "glossZh": "公車",
+      "lesson": 48
+    },
+    "bicycle/bike": {
+      "file": "openmoji-618/1F6B2.png",
+      "source": "preset",
+      "glossZh": "腳踏車",
+      "lesson": 48
+    },
+    "motorcycle": {
+      "file": "openmoji-618/1F3CD.png",
+      "source": "preset",
+      "glossZh": "重型機車",
+      "lesson": 48
+    },
+    "scooter": {
+      "file": "openmoji-618/1F6F5.png",
+      "source": "preset",
+      "glossZh": "輕型機車",
+      "lesson": 48
+    },
+    "ship": {
+      "file": "openmoji-618/1F6A2.png",
+      "source": "preset",
+      "glossZh": "船",
+      "lesson": 48
+    },
+    "boat": {
+      "file": "openmoji-618/26F5.png",
+      "source": "preset",
+      "glossZh": "小船",
+      "lesson": 48
+    },
+    "taxi": {
+      "file": "openmoji-618/1F695.png",
+      "source": "preset",
+      "glossZh": "計程車",
+      "lesson": 48
+    },
+    "train": {
+      "file": "openmoji-618/1F686.png",
+      "source": "override",
+      "glossZh": "火車",
+      "lesson": 48
+    },
+    "truck": {
+      "file": "openmoji-618/1F692.png",
+      "source": "preset",
+      "glossZh": "卡車",
+      "lesson": 48
+    },
+    "airplane/plane": {
+      "file": "openmoji-618/2708.png",
+      "source": "preset",
+      "glossZh": "飛機",
+      "lesson": 49
+    },
+    "MRT": {
+      "file": "openmoji-618/1F687.png",
+      "source": "override",
+      "glossZh": "大眾捷運",
+      "lesson": 49
+    },
+    "station": {
+      "file": "openmoji-618/1F689.png",
+      "source": "preset",
+      "glossZh": "車站",
+      "lesson": 49
+    },
+    "airport": {
+      "file": "openmoji-618/1F6EC.png",
+      "source": "override",
+      "glossZh": "機場",
+      "lesson": 49
+    },
+    "bridge": {
+      "file": "openmoji-618/1F309.png",
+      "source": "preset",
+      "glossZh": "橋",
+      "lesson": 49
+    },
+    "traffic": {
+      "file": "openmoji-618/1F6A5.png",
+      "source": "preset",
+      "glossZh": "交通",
+      "lesson": 49
+    },
+    "way": {
+      "file": "openmoji-618/1F9ED.png",
+      "source": "override",
+      "glossZh": "道路",
+      "lesson": 49
+    },
+    "trip": {
+      "file": "openmoji-618/1F69E.png",
+      "source": "preset",
+      "glossZh": "旅行",
+      "lesson": 49
+    },
+    "visit": {
+      "file": "openmoji-618/1F9F3.png",
+      "source": "override",
+      "glossZh": "拜訪；參觀",
+      "lesson": 49
+    },
+    "drive": {
+      "file": "openmoji-618/1F690.png",
+      "source": "preset",
+      "glossZh": "開車",
+      "lesson": 49
+    },
+    "ride": {
+      "file": "openmoji-618/1F6B2.png",
+      "source": "preset",
+      "glossZh": "搭乘；騎車",
+      "lesson": 49
+    },
+    "fly": {
+      "file": "openmoji-618/1F6EB.png",
+      "source": "override",
+      "glossZh": "飛行",
+      "lesson": 49
+    },
+    "wait": {
+      "file": "english-icons/mdi-human-queue.png",
+      "source": "iconify",
+      "glossZh": "等待",
+      "lesson": 49
+    },
+    "Japan": {
+      "file": "openmoji-618/1F1EF-1F1F5.png",
+      "source": "flag",
+      "glossZh": "日本",
+      "lesson": 49
+    },
+    "Korea": {
+      "file": "openmoji-618/1F1F0-1F1F7.png",
+      "source": "flag",
+      "glossZh": "韓國",
+      "lesson": 49
+    },
+    "Singapore": {
+      "file": "openmoji-618/1F1F8-1F1EC.png",
+      "source": "flag",
+      "glossZh": "新加坡",
+      "lesson": 49
+    },
+    "Hong Kong": {
+      "file": "openmoji-618/1F1ED-1F1F0.png",
+      "source": "flag",
+      "glossZh": "香港",
+      "lesson": 49
+    },
+    "Vietnam": {
+      "file": "openmoji-618/1F1FB-1F1F3.png",
+      "source": "flag",
+      "glossZh": "越南",
+      "lesson": 49
+    },
+    "Thailand": {
+      "file": "openmoji-618/1F1F9-1F1ED.png",
+      "source": "flag",
+      "glossZh": "泰國",
+      "lesson": 49
+    },
+    "the Philippines": {
+      "file": "openmoji-618/1F1F5-1F1ED.png",
+      "source": "flag",
+      "glossZh": "菲律賓",
+      "lesson": 49
+    },
+    "Malaysia": {
+      "file": "openmoji-618/1F1F2-1F1FE.png",
+      "source": "flag",
+      "glossZh": "馬來西亞",
+      "lesson": 50
+    },
+    "Canada": {
+      "file": "openmoji-618/1F1E8-1F1E6.png",
+      "source": "flag",
+      "glossZh": "加拿大",
+      "lesson": 50
+    },
+    "Australia": {
+      "file": "openmoji-618/1F1E6-1F1FA.png",
+      "source": "flag",
+      "glossZh": "澳洲",
+      "lesson": 50
+    },
+    "England": {
+      "file": "openmoji-618/1F3F4-E0067-E0062-E0065-E006E-E0067-E007F.png",
+      "source": "flag",
+      "glossZh": "英國",
+      "lesson": 50
+    },
+    "France": {
+      "file": "openmoji-618/1F1EB-1F1F7.png",
+      "source": "flag",
+      "glossZh": "法國",
+      "lesson": 50
+    },
+    "Germany": {
+      "file": "openmoji-618/1F1E9-1F1EA.png",
+      "source": "flag",
+      "glossZh": "德國",
+      "lesson": 50
+    },
+    "India": {
+      "file": "openmoji-618/1F1EE-1F1F3.png",
+      "source": "flag",
+      "glossZh": "印度",
+      "lesson": 50
+    },
+    "celebrate": {
+      "file": "openmoji-618/1F973.png",
+      "source": "preset",
+      "glossZh": "慶祝",
+      "lesson": 50
+    },
+    "festival": {
+      "file": "openmoji-618/1F386.png",
+      "source": "override",
+      "glossZh": "節慶",
+      "lesson": 50
+    },
+    "gift": {
+      "file": "openmoji-618/1F381.png",
+      "source": "override",
+      "glossZh": "禮物",
+      "lesson": 50
+    },
+    "Chinese New Year": {
+      "file": "openmoji-618/1F3EE.png",
+      "source": "override",
+      "glossZh": "中國新年",
+      "lesson": 50
+    },
+    "red envelope": {
+      "file": "openmoji-618/1F9E7.png",
+      "source": "preset",
+      "glossZh": "紅包",
+      "lesson": 50
+    },
+    "Dragon Boat Festival": {
+      "file": "openmoji-618/1F409.png",
+      "source": "override",
+      "glossZh": "端午節",
+      "lesson": 50
+    },
+    "Moon Festival": {
+      "file": "openmoji-618/1F96E.png",
+      "source": "override",
+      "glossZh": "中秋節",
+      "lesson": 50
+    },
+    "moon cake": {
+      "file": "openmoji-618/1F96E.png",
+      "source": "preset",
+      "glossZh": "月餅",
+      "lesson": 50
+    },
+    "Halloween": {
+      "file": "openmoji-618/1F47B.png",
+      "source": "preset",
+      "glossZh": "萬聖節",
+      "lesson": 50
+    },
+    "pumpkin": {
+      "file": "openmoji-618/1F383.png",
+      "source": "override",
+      "glossZh": "南瓜",
+      "lesson": 50
+    },
+    "Christmas": {
+      "file": "openmoji-618/1F385.png",
+      "source": "preset",
+      "glossZh": "聖誕節",
+      "lesson": 50
+    },
+    "Santa Claus": {
+      "file": "openmoji-618/1F385.png",
+      "source": "preset",
+      "glossZh": "聖誕老人",
+      "lesson": 50
+    },
+    "present": {
+      "file": "openmoji-618/1F381.png",
+      "source": "override",
+      "glossZh": "禮物",
+      "lesson": 50
+    }
+  }
+}

@@ -1,0 +1,9009 @@
+{
+  "language": "en",
+  "title": "國小英語單字卡",
+  "perLesson": 20,
+  "lessons": 50,
+  "note": "由 public/content/english/lessons.json 抽掉純虛詞、同主題補回等量具體詞而成，見 scripts/build_english_vocabulary.py。",
+  "entries": [
+    {
+      "en": "I",
+      "zh": "我",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 1,
+      "lesson": 1
+    },
+    {
+      "en": "you",
+      "zh": "你；你們",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 2,
+      "lesson": 1
+    },
+    {
+      "en": "he",
+      "zh": "他",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 3,
+      "lesson": 1
+    },
+    {
+      "en": "she",
+      "zh": "她",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 4,
+      "lesson": 1
+    },
+    {
+      "en": "it",
+      "zh": "這；那；它",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 5,
+      "lesson": 1
+    },
+    {
+      "en": "we",
+      "zh": "我們",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 6,
+      "lesson": 1
+    },
+    {
+      "en": "they",
+      "zh": "她/他/它們",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 7,
+      "lesson": 1
+    },
+    {
+      "en": "have",
+      "zh": "有",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 8,
+      "lesson": 1
+    },
+    {
+      "en": "yes/yeah",
+      "zh": "是的",
+      "openmoji": "1FAE1",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 9,
+      "lesson": 1
+    },
+    {
+      "en": "no",
+      "zh": "沒有",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 10,
+      "lesson": 1
+    },
+    {
+      "en": "hello",
+      "zh": "你好",
+      "openmoji": "1F44B",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 11,
+      "lesson": 1
+    },
+    {
+      "en": "hi",
+      "zh": "嗨",
+      "openmoji": "1F44B",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 12,
+      "lesson": 1
+    },
+    {
+      "en": "OK",
+      "zh": "可以的",
+      "openmoji": "1FAE1",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 13,
+      "lesson": 1
+    },
+    {
+      "en": "goodbye",
+      "zh": "再見",
+      "openmoji": "1FAC2",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 14,
+      "lesson": 1
+    },
+    {
+      "en": "please",
+      "zh": "請",
+      "openmoji": "1F97A",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 15,
+      "lesson": 1
+    },
+    {
+      "en": "sorry",
+      "zh": "對不起",
+      "openmoji": "1F615",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 16,
+      "lesson": 1
+    },
+    {
+      "en": "thank",
+      "zh": "感謝",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 17,
+      "lesson": 1
+    },
+    {
+      "en": "welcome",
+      "zh": "歡迎",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 18,
+      "lesson": 1
+    },
+    {
+      "en": "fine",
+      "zh": "好的",
+      "openmoji": "1F610",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 19,
+      "lesson": 1
+    },
+    {
+      "en": "sure",
+      "zh": "確定的",
+      "openmoji": "1F615",
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 20,
+      "lesson": 1
+    },
+    {
+      "en": "meet",
+      "zh": "遇見",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 21,
+      "lesson": 2
+    },
+    {
+      "en": "what",
+      "zh": "什麼",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 22,
+      "lesson": 2
+    },
+    {
+      "en": "who",
+      "zh": "誰",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 23,
+      "lesson": 2
+    },
+    {
+      "en": "how",
+      "zh": "如何",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 24,
+      "lesson": 2
+    },
+    {
+      "en": "where",
+      "zh": "哪裡",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 25,
+      "lesson": 2
+    },
+    {
+      "en": "when",
+      "zh": "何時",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 26,
+      "lesson": 2
+    },
+    {
+      "en": "why",
+      "zh": "為什麼",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 27,
+      "lesson": 2
+    },
+    {
+      "en": "which",
+      "zh": "哪一個",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 28,
+      "lesson": 2
+    },
+    {
+      "en": "whose",
+      "zh": "誰的",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 29,
+      "lesson": 2
+    },
+    {
+      "en": "with",
+      "zh": "帶著；與…一起",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 30,
+      "lesson": 2
+    },
+    {
+      "en": "good morning",
+      "zh": "早安",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 31,
+      "lesson": 2
+    },
+    {
+      "en": "good afternoon",
+      "zh": "午安",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 32,
+      "lesson": 2
+    },
+    {
+      "en": "good evening",
+      "zh": "晚安（傍晚）",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 33,
+      "lesson": 2
+    },
+    {
+      "en": "good night",
+      "zh": "晚安（睡前）",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 34,
+      "lesson": 2
+    },
+    {
+      "en": "hug",
+      "zh": "擁抱",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 35,
+      "lesson": 2
+    },
+    {
+      "en": "wave",
+      "zh": "揮手",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 36,
+      "lesson": 2
+    },
+    {
+      "en": "bow",
+      "zh": "鞠躬",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 37,
+      "lesson": 2
+    },
+    {
+      "en": "shake hands",
+      "zh": "握手",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 38,
+      "lesson": 2
+    },
+    {
+      "en": "clap",
+      "zh": "拍手",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 39,
+      "lesson": 2
+    },
+    {
+      "en": "thumbs up",
+      "zh": "比讚",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 40,
+      "lesson": 2
+    },
+    {
+      "en": "wink",
+      "zh": "眨眼",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 41,
+      "lesson": 3
+    },
+    {
+      "en": "whisper",
+      "zh": "悄悄說",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 42,
+      "lesson": 3
+    },
+    {
+      "en": "greeting",
+      "zh": "問候",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 43,
+      "lesson": 3
+    },
+    {
+      "en": "introduce",
+      "zh": "介紹",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 44,
+      "lesson": 3
+    },
+    {
+      "en": "nickname",
+      "zh": "綽號",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 45,
+      "lesson": 3
+    },
+    {
+      "en": "birthday",
+      "zh": "生日",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 46,
+      "lesson": 3
+    },
+    {
+      "en": "hometown",
+      "zh": "家鄉",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 47,
+      "lesson": 3
+    },
+    {
+      "en": "neighbor",
+      "zh": "鄰居",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 48,
+      "lesson": 3
+    },
+    {
+      "en": "guest",
+      "zh": "客人",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 49,
+      "lesson": 3
+    },
+    {
+      "en": "lady",
+      "zh": "女士",
+      "openmoji": null,
+      "theme": "Hello & Me",
+      "themeZh": "問候與自我介紹",
+      "ordinal": 50,
+      "lesson": 3
+    },
+    {
+      "en": "one",
+      "zh": "一",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 51,
+      "lesson": 3
+    },
+    {
+      "en": "two",
+      "zh": "二",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 52,
+      "lesson": 3
+    },
+    {
+      "en": "three",
+      "zh": "三",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 53,
+      "lesson": 3
+    },
+    {
+      "en": "four",
+      "zh": "四",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 54,
+      "lesson": 3
+    },
+    {
+      "en": "five",
+      "zh": "五",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 55,
+      "lesson": 3
+    },
+    {
+      "en": "six",
+      "zh": "六",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 56,
+      "lesson": 3
+    },
+    {
+      "en": "seven",
+      "zh": "七",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 57,
+      "lesson": 3
+    },
+    {
+      "en": "eight",
+      "zh": "八",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 58,
+      "lesson": 3
+    },
+    {
+      "en": "nine",
+      "zh": "九",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 59,
+      "lesson": 3
+    },
+    {
+      "en": "ten",
+      "zh": "十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 60,
+      "lesson": 3
+    },
+    {
+      "en": "eleven",
+      "zh": "十一",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 61,
+      "lesson": 4
+    },
+    {
+      "en": "twelve",
+      "zh": "十二",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 62,
+      "lesson": 4
+    },
+    {
+      "en": "thirteen",
+      "zh": "十三",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 63,
+      "lesson": 4
+    },
+    {
+      "en": "fourteen",
+      "zh": "十四",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 64,
+      "lesson": 4
+    },
+    {
+      "en": "fifteen",
+      "zh": "十五",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 65,
+      "lesson": 4
+    },
+    {
+      "en": "sixteen",
+      "zh": "十六",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 66,
+      "lesson": 4
+    },
+    {
+      "en": "seventeen",
+      "zh": "十七",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 67,
+      "lesson": 4
+    },
+    {
+      "en": "eighteen",
+      "zh": "十八",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 68,
+      "lesson": 4
+    },
+    {
+      "en": "nineteen",
+      "zh": "十九",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 69,
+      "lesson": 4
+    },
+    {
+      "en": "twenty",
+      "zh": "二十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 70,
+      "lesson": 4
+    },
+    {
+      "en": "thirty",
+      "zh": "三十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 71,
+      "lesson": 4
+    },
+    {
+      "en": "forty",
+      "zh": "四十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 72,
+      "lesson": 4
+    },
+    {
+      "en": "fifty",
+      "zh": "五十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 73,
+      "lesson": 4
+    },
+    {
+      "en": "sixty",
+      "zh": "六十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 74,
+      "lesson": 4
+    },
+    {
+      "en": "seventy",
+      "zh": "七十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 75,
+      "lesson": 4
+    },
+    {
+      "en": "eighty",
+      "zh": "八十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 76,
+      "lesson": 4
+    },
+    {
+      "en": "ninety",
+      "zh": "九十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 77,
+      "lesson": 4
+    },
+    {
+      "en": "hundred",
+      "zh": "百",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 78,
+      "lesson": 4
+    },
+    {
+      "en": "thousand",
+      "zh": "千",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 79,
+      "lesson": 4
+    },
+    {
+      "en": "million",
+      "zh": "百萬",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 80,
+      "lesson": 4
+    },
+    {
+      "en": "count",
+      "zh": "計算",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 81,
+      "lesson": 5
+    },
+    {
+      "en": "number",
+      "zh": "數字；號碼",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 82,
+      "lesson": 5
+    },
+    {
+      "en": "half",
+      "zh": "一半",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 83,
+      "lesson": 5
+    },
+    {
+      "en": "dozen",
+      "zh": "一打(12個",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 84,
+      "lesson": 5
+    },
+    {
+      "en": "first",
+      "zh": "第一",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 85,
+      "lesson": 5
+    },
+    {
+      "en": "second",
+      "zh": "第二",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 86,
+      "lesson": 5
+    },
+    {
+      "en": "third",
+      "zh": "第三",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 87,
+      "lesson": 5
+    },
+    {
+      "en": "fourth",
+      "zh": "第四",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 88,
+      "lesson": 5
+    },
+    {
+      "en": "fifth",
+      "zh": "第五",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 89,
+      "lesson": 5
+    },
+    {
+      "en": "sixth",
+      "zh": "第六",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 90,
+      "lesson": 5
+    },
+    {
+      "en": "seventh",
+      "zh": "第七",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 91,
+      "lesson": 5
+    },
+    {
+      "en": "eighth",
+      "zh": "第八",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 92,
+      "lesson": 5
+    },
+    {
+      "en": "ninth",
+      "zh": "第九",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 93,
+      "lesson": 5
+    },
+    {
+      "en": "tenth",
+      "zh": "第十",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 94,
+      "lesson": 5
+    },
+    {
+      "en": "last",
+      "zh": "最後的",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 95,
+      "lesson": 5
+    },
+    {
+      "en": "zero",
+      "zh": "零",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 96,
+      "lesson": 5
+    },
+    {
+      "en": "plus",
+      "zh": "加",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 97,
+      "lesson": 5
+    },
+    {
+      "en": "minus",
+      "zh": "減",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 98,
+      "lesson": 5
+    },
+    {
+      "en": "add",
+      "zh": "相加；增加",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 99,
+      "lesson": 5
+    },
+    {
+      "en": "equal",
+      "zh": "等於",
+      "openmoji": null,
+      "theme": "Numbers & How Many",
+      "themeZh": "數字與數量",
+      "ordinal": 100,
+      "lesson": 5
+    },
+    {
+      "en": "red",
+      "zh": "紅色",
+      "openmoji": "1F534",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 101,
+      "lesson": 6
+    },
+    {
+      "en": "blue",
+      "zh": "藍色",
+      "openmoji": "1F535",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 102,
+      "lesson": 6
+    },
+    {
+      "en": "yellow",
+      "zh": "黃色",
+      "openmoji": "1F7E1",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 103,
+      "lesson": 6
+    },
+    {
+      "en": "green",
+      "zh": "綠色",
+      "openmoji": "1F7E2",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 104,
+      "lesson": 6
+    },
+    {
+      "en": "orange(s)",
+      "zh": "橘色；柳橙",
+      "openmoji": "1F7E0",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 105,
+      "lesson": 6
+    },
+    {
+      "en": "purple",
+      "zh": "紫色",
+      "openmoji": "1F7E3",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 106,
+      "lesson": 6
+    },
+    {
+      "en": "pink",
+      "zh": "粉紅色",
+      "openmoji": "1FA77",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 107,
+      "lesson": 6
+    },
+    {
+      "en": "brown",
+      "zh": "棕色",
+      "openmoji": "1F7E4",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 108,
+      "lesson": 6
+    },
+    {
+      "en": "black",
+      "zh": "黑色",
+      "openmoji": "26AB",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 109,
+      "lesson": 6
+    },
+    {
+      "en": "white",
+      "zh": "白色",
+      "openmoji": "26AA",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 110,
+      "lesson": 6
+    },
+    {
+      "en": "gray",
+      "zh": "灰色",
+      "openmoji": "1F47B",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 111,
+      "lesson": 6
+    },
+    {
+      "en": "gold",
+      "zh": "金色",
+      "openmoji": "1F947",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 112,
+      "lesson": 6
+    },
+    {
+      "en": "color",
+      "zh": "顏色",
+      "openmoji": "1F3A8",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 113,
+      "lesson": 6
+    },
+    {
+      "en": "colorful",
+      "zh": "色彩繽紛的",
+      "openmoji": "1F308",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 114,
+      "lesson": 6
+    },
+    {
+      "en": "size",
+      "zh": "尺寸",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 115,
+      "lesson": 6
+    },
+    {
+      "en": "shape",
+      "zh": "形狀",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 116,
+      "lesson": 6
+    },
+    {
+      "en": "circle",
+      "zh": "圓圈",
+      "openmoji": "1F6DE",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 117,
+      "lesson": 6
+    },
+    {
+      "en": "line",
+      "zh": "線",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 118,
+      "lesson": 6
+    },
+    {
+      "en": "round",
+      "zh": "圓的",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 119,
+      "lesson": 6
+    },
+    {
+      "en": "square",
+      "zh": "正方形",
+      "openmoji": "23F9",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 120,
+      "lesson": 6
+    },
+    {
+      "en": "triangle",
+      "zh": "三角形",
+      "openmoji": "1F4D0",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 121,
+      "lesson": 7
+    },
+    {
+      "en": "diamond",
+      "zh": "菱形",
+      "openmoji": "2666",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 122,
+      "lesson": 7
+    },
+    {
+      "en": "rectangle",
+      "zh": "長方形",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 123,
+      "lesson": 7
+    },
+    {
+      "en": "star",
+      "zh": "星形",
+      "openmoji": "2B50",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 124,
+      "lesson": 7
+    },
+    {
+      "en": "big",
+      "zh": "大的",
+      "openmoji": "1F603",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 125,
+      "lesson": 7
+    },
+    {
+      "en": "large",
+      "zh": "大的",
+      "openmoji": "1F92A",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 126,
+      "lesson": 7
+    },
+    {
+      "en": "medium",
+      "zh": "中等的",
+      "openmoji": "1F3FD",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 127,
+      "lesson": 7
+    },
+    {
+      "en": "small",
+      "zh": "小型的",
+      "openmoji": "1F92A",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 128,
+      "lesson": 7
+    },
+    {
+      "en": "box",
+      "zh": "箱子",
+      "openmoji": "1F371",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 129,
+      "lesson": 7
+    },
+    {
+      "en": "package",
+      "zh": "包裹",
+      "openmoji": "1F4E6",
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 130,
+      "lesson": 7
+    },
+    {
+      "en": "pack",
+      "zh": "一包",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 131,
+      "lesson": 7
+    },
+    {
+      "en": "pair",
+      "zh": "一雙",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 132,
+      "lesson": 7
+    },
+    {
+      "en": "part",
+      "zh": "部分",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 133,
+      "lesson": 7
+    },
+    {
+      "en": "piece",
+      "zh": "一片",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 134,
+      "lesson": 7
+    },
+    {
+      "en": "space",
+      "zh": "空間",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 135,
+      "lesson": 7
+    },
+    {
+      "en": "balloon",
+      "zh": "氣球",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 136,
+      "lesson": 7
+    },
+    {
+      "en": "ribbon",
+      "zh": "緞帶",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 137,
+      "lesson": 7
+    },
+    {
+      "en": "gem",
+      "zh": "寶石",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 138,
+      "lesson": 7
+    },
+    {
+      "en": "brick",
+      "zh": "磚塊",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 139,
+      "lesson": 7
+    },
+    {
+      "en": "puzzle",
+      "zh": "拼圖",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 140,
+      "lesson": 7
+    },
+    {
+      "en": "arrow",
+      "zh": "箭頭",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 141,
+      "lesson": 8
+    },
+    {
+      "en": "heart shape",
+      "zh": "心形",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 142,
+      "lesson": 8
+    },
+    {
+      "en": "oval",
+      "zh": "橢圓形",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 143,
+      "lesson": 8
+    },
+    {
+      "en": "cube",
+      "zh": "立方體",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 144,
+      "lesson": 8
+    },
+    {
+      "en": "dark",
+      "zh": "深色的；暗的",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 145,
+      "lesson": 8
+    },
+    {
+      "en": "silver",
+      "zh": "銀色",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 146,
+      "lesson": 8
+    },
+    {
+      "en": "wide",
+      "zh": "寬的",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 147,
+      "lesson": 8
+    },
+    {
+      "en": "narrow",
+      "zh": "窄的",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 148,
+      "lesson": 8
+    },
+    {
+      "en": "thick",
+      "zh": "厚的；粗的",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 149,
+      "lesson": 8
+    },
+    {
+      "en": "corner",
+      "zh": "角落",
+      "openmoji": null,
+      "theme": "Colors & Shapes",
+      "themeZh": "顏色與形狀",
+      "ordinal": 150,
+      "lesson": 8
+    },
+    {
+      "en": "head",
+      "zh": "頭",
+      "openmoji": "1F636-200D-1F32B-FE0F",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 151,
+      "lesson": 8
+    },
+    {
+      "en": "hair",
+      "zh": "頭髮",
+      "openmoji": "1F471-200D-2640-FE0F",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 152,
+      "lesson": 8
+    },
+    {
+      "en": "eye(s)",
+      "zh": "眼睛",
+      "openmoji": "1F441",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 153,
+      "lesson": 8
+    },
+    {
+      "en": "ear(s)",
+      "zh": "耳朵",
+      "openmoji": "1F442",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 154,
+      "lesson": 8
+    },
+    {
+      "en": "nose",
+      "zh": "鼻子",
+      "openmoji": "1F443",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 155,
+      "lesson": 8
+    },
+    {
+      "en": "mouth",
+      "zh": "嘴巴",
+      "openmoji": "1F444",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 156,
+      "lesson": 8
+    },
+    {
+      "en": "tooth",
+      "zh": "牙齒",
+      "openmoji": "1F9B7",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 157,
+      "lesson": 8
+    },
+    {
+      "en": "body",
+      "zh": "身體",
+      "openmoji": "1F480",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 158,
+      "lesson": 8
+    },
+    {
+      "en": "neck",
+      "zh": "脖子",
+      "openmoji": "1F9E3",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 159,
+      "lesson": 8
+    },
+    {
+      "en": "shoulder",
+      "zh": "肩膀",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 160,
+      "lesson": 8
+    },
+    {
+      "en": "arm",
+      "zh": "手臂",
+      "openmoji": "1F4AA",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 161,
+      "lesson": 9
+    },
+    {
+      "en": "hand",
+      "zh": "手",
+      "openmoji": "270B",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 162,
+      "lesson": 9
+    },
+    {
+      "en": "finger",
+      "zh": "手指",
+      "openmoji": "1F590",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 163,
+      "lesson": 9
+    },
+    {
+      "en": "heart",
+      "zh": "心臟",
+      "openmoji": "2764",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 164,
+      "lesson": 9
+    },
+    {
+      "en": "stomach",
+      "zh": "胃",
+      "openmoji": "E313",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 165,
+      "lesson": 9
+    },
+    {
+      "en": "leg",
+      "zh": "腿",
+      "openmoji": "1F9B5",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 166,
+      "lesson": 9
+    },
+    {
+      "en": "knee",
+      "zh": "膝蓋",
+      "openmoji": "1F9B5",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 167,
+      "lesson": 9
+    },
+    {
+      "en": "foot",
+      "zh": "腳",
+      "openmoji": "1F9B6",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 168,
+      "lesson": 9
+    },
+    {
+      "en": "nod",
+      "zh": "點頭",
+      "openmoji": "1F642-200D-2195-FE0F",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 169,
+      "lesson": 9
+    },
+    {
+      "en": "see",
+      "zh": "看見",
+      "openmoji": "1F440",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 170,
+      "lesson": 9
+    },
+    {
+      "en": "look",
+      "zh": "看起來",
+      "openmoji": "1F440",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 171,
+      "lesson": 9
+    },
+    {
+      "en": "hear",
+      "zh": "聽見",
+      "openmoji": "1F649",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 172,
+      "lesson": 9
+    },
+    {
+      "en": "listen",
+      "zh": "聆聽",
+      "openmoji": "1F649",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 173,
+      "lesson": 9
+    },
+    {
+      "en": "smell",
+      "zh": "聞",
+      "openmoji": "1F443",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 174,
+      "lesson": 9
+    },
+    {
+      "en": "say",
+      "zh": "說",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 175,
+      "lesson": 9
+    },
+    {
+      "en": "speak",
+      "zh": "講話",
+      "openmoji": "1F64A",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 176,
+      "lesson": 9
+    },
+    {
+      "en": "talk",
+      "zh": "談話",
+      "openmoji": "1F4AC",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 177,
+      "lesson": 9
+    },
+    {
+      "en": "tell",
+      "zh": "告訴",
+      "openmoji": "1FAF4",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 178,
+      "lesson": 9
+    },
+    {
+      "en": "touch",
+      "zh": "觸碰",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 179,
+      "lesson": 9
+    },
+    {
+      "en": "walk",
+      "zh": "走路",
+      "openmoji": "1F6B6",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 180,
+      "lesson": 9
+    },
+    {
+      "en": "sit",
+      "zh": "坐",
+      "openmoji": "1FA91",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 181,
+      "lesson": 10
+    },
+    {
+      "en": "think",
+      "zh": "思考",
+      "openmoji": "1F4AD",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 182,
+      "lesson": 10
+    },
+    {
+      "en": "blind",
+      "zh": "瞎的",
+      "openmoji": "1F9D1-200D-1F9AF",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 183,
+      "lesson": 10
+    },
+    {
+      "en": "smile",
+      "zh": "微笑",
+      "openmoji": "1F600",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 184,
+      "lesson": 10
+    },
+    {
+      "en": "laugh",
+      "zh": "嘲笑",
+      "openmoji": "1F600",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 185,
+      "lesson": 10
+    },
+    {
+      "en": "hold",
+      "zh": "握住",
+      "openmoji": "E25A",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 186,
+      "lesson": 10
+    },
+    {
+      "en": "pick",
+      "zh": "挑選",
+      "openmoji": "26CF",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 187,
+      "lesson": 10
+    },
+    {
+      "en": "point",
+      "zh": "指出",
+      "openmoji": "1F4AF",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 188,
+      "lesson": 10
+    },
+    {
+      "en": "brush",
+      "zh": "刷牙",
+      "openmoji": "1FAA5",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 189,
+      "lesson": 10
+    },
+    {
+      "en": "voice",
+      "zh": "聲音",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 190,
+      "lesson": 10
+    },
+    {
+      "en": "sound",
+      "zh": "聲音",
+      "openmoji": "1F442",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 191,
+      "lesson": 10
+    },
+    {
+      "en": "cut",
+      "zh": "割",
+      "openmoji": "1F487",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 192,
+      "lesson": 10
+    },
+    {
+      "en": "give",
+      "zh": "給",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 193,
+      "lesson": 10
+    },
+    {
+      "en": "take",
+      "zh": "拿",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 194,
+      "lesson": 10
+    },
+    {
+      "en": "turn",
+      "zh": "轉動",
+      "openmoji": "1F6DE",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 195,
+      "lesson": 10
+    },
+    {
+      "en": "open",
+      "zh": "打開",
+      "openmoji": "1F603",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 196,
+      "lesson": 10
+    },
+    {
+      "en": "close",
+      "zh": "關上",
+      "openmoji": "E24E",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 197,
+      "lesson": 10
+    },
+    {
+      "en": "start",
+      "zh": "開始",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 198,
+      "lesson": 10
+    },
+    {
+      "en": "stop",
+      "zh": "停",
+      "openmoji": null,
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 199,
+      "lesson": 10
+    },
+    {
+      "en": "help",
+      "zh": "幫助",
+      "openmoji": "1FA7C",
+      "theme": "My Body",
+      "themeZh": "身體與動作",
+      "ordinal": 200,
+      "lesson": 10
+    },
+    {
+      "en": "family",
+      "zh": "家庭；家人",
+      "openmoji": "1F46A",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 201,
+      "lesson": 11
+    },
+    {
+      "en": "father/dad",
+      "zh": "爸爸",
+      "openmoji": "1F468-200D-1F37C",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 202,
+      "lesson": 11
+    },
+    {
+      "en": "mother/mom",
+      "zh": "媽媽",
+      "openmoji": "1F931",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 203,
+      "lesson": 11
+    },
+    {
+      "en": "son",
+      "zh": "兒子",
+      "openmoji": "1F466",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 204,
+      "lesson": 11
+    },
+    {
+      "en": "daughter",
+      "zh": "女兒",
+      "openmoji": "1F467",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 205,
+      "lesson": 11
+    },
+    {
+      "en": "grandfather/grandpa",
+      "zh": "爺爺；外公",
+      "openmoji": "1F474",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 206,
+      "lesson": 11
+    },
+    {
+      "en": "grandmother/grandma",
+      "zh": "奶奶；外婆",
+      "openmoji": "1F475",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 207,
+      "lesson": 11
+    },
+    {
+      "en": "baby",
+      "zh": "嬰兒",
+      "openmoji": "1F476",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 208,
+      "lesson": 11
+    },
+    {
+      "en": "kid",
+      "zh": "小孩",
+      "openmoji": "1F9D2",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 209,
+      "lesson": 11
+    },
+    {
+      "en": "child",
+      "zh": "兒童",
+      "openmoji": "1F9D2",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 210,
+      "lesson": 11
+    },
+    {
+      "en": "parent",
+      "zh": "父或母親",
+      "openmoji": "1F9D1-200D-1F37C",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 211,
+      "lesson": 11
+    },
+    {
+      "en": "husband",
+      "zh": "丈夫",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 212,
+      "lesson": 11
+    },
+    {
+      "en": "wife",
+      "zh": "妻子",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 213,
+      "lesson": 11
+    },
+    {
+      "en": "brother",
+      "zh": "兄弟",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 214,
+      "lesson": 11
+    },
+    {
+      "en": "sister",
+      "zh": "姊妹",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 215,
+      "lesson": 11
+    },
+    {
+      "en": "age",
+      "zh": "年紀",
+      "openmoji": "1F51E",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 216,
+      "lesson": 11
+    },
+    {
+      "en": "born",
+      "zh": "出生的",
+      "openmoji": "1F37C",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 217,
+      "lesson": 11
+    },
+    {
+      "en": "married",
+      "zh": "已婚的婚姻的",
+      "openmoji": "1F48D",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 218,
+      "lesson": 11
+    },
+    {
+      "en": "care",
+      "zh": "關心",
+      "openmoji": "1F485",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 219,
+      "lesson": 11
+    },
+    {
+      "en": "important",
+      "zh": "重要的",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 220,
+      "lesson": 11
+    },
+    {
+      "en": "wonderful",
+      "zh": "奇妙的",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 221,
+      "lesson": 12
+    },
+    {
+      "en": "new",
+      "zh": "新的",
+      "openmoji": "1F5FD",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 222,
+      "lesson": 12
+    },
+    {
+      "en": "uncle",
+      "zh": "伯父；叔父；姑父",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 223,
+      "lesson": 12
+    },
+    {
+      "en": "aunt",
+      "zh": "伯母；阿姨；姑姑",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 224,
+      "lesson": 12
+    },
+    {
+      "en": "cousin",
+      "zh": "堂(表)兄弟姊妹",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 225,
+      "lesson": 12
+    },
+    {
+      "en": "people",
+      "zh": "人們",
+      "openmoji": "1F46F",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 226,
+      "lesson": 12
+    },
+    {
+      "en": "boy",
+      "zh": "男孩",
+      "openmoji": "1F466",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 227,
+      "lesson": 12
+    },
+    {
+      "en": "girl",
+      "zh": "女孩",
+      "openmoji": "1F467",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 228,
+      "lesson": 12
+    },
+    {
+      "en": "man",
+      "zh": "男人",
+      "openmoji": "1F468",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 229,
+      "lesson": 12
+    },
+    {
+      "en": "woman",
+      "zh": "女人",
+      "openmoji": "1F469",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 230,
+      "lesson": 12
+    },
+    {
+      "en": "friend",
+      "zh": "朋友",
+      "openmoji": "1F465",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 231,
+      "lesson": 12
+    },
+    {
+      "en": "classmate",
+      "zh": "同班同學",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 232,
+      "lesson": 12
+    },
+    {
+      "en": "person",
+      "zh": "人",
+      "openmoji": "1F9D1",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 233,
+      "lesson": 12
+    },
+    {
+      "en": "Mr.",
+      "zh": "先生",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 234,
+      "lesson": 12
+    },
+    {
+      "en": "Mrs.",
+      "zh": "太太",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 235,
+      "lesson": 12
+    },
+    {
+      "en": "Miss",
+      "zh": "小姐",
+      "openmoji": "1F618",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 236,
+      "lesson": 12
+    },
+    {
+      "en": "Ms.",
+      "zh": "女士",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 237,
+      "lesson": 12
+    },
+    {
+      "en": "dear",
+      "zh": "親愛的",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 238,
+      "lesson": 12
+    },
+    {
+      "en": "sir",
+      "zh": "先生長官",
+      "openmoji": "1FAE1",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 239,
+      "lesson": 12
+    },
+    {
+      "en": "teenager",
+      "zh": "十幾歲的青少年",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 240,
+      "lesson": 12
+    },
+    {
+      "en": "stranger",
+      "zh": "陌生人",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 241,
+      "lesson": 13
+    },
+    {
+      "en": "foreigner",
+      "zh": "外國人",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 242,
+      "lesson": 13
+    },
+    {
+      "en": "American",
+      "zh": "美國人",
+      "openmoji": "1F3C8",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 243,
+      "lesson": 13
+    },
+    {
+      "en": "Chinese",
+      "zh": "中國人",
+      "openmoji": "1F472",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 244,
+      "lesson": 13
+    },
+    {
+      "en": "anyone/anybody",
+      "zh": "任何人",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 245,
+      "lesson": 13
+    },
+    {
+      "en": "everyone/everybody",
+      "zh": "每個人",
+      "openmoji": "1F465",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 246,
+      "lesson": 13
+    },
+    {
+      "en": "someone/somebody",
+      "zh": "某人",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 247,
+      "lesson": 13
+    },
+    {
+      "en": "nobody",
+      "zh": "沒有人",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 248,
+      "lesson": 13
+    },
+    {
+      "en": "name",
+      "zh": "名字",
+      "openmoji": "1F4DB",
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 249,
+      "lesson": 13
+    },
+    {
+      "en": "nephew",
+      "zh": "姪子；外甥",
+      "openmoji": null,
+      "theme": "My Family & Friends",
+      "themeZh": "家人與朋友",
+      "ordinal": 250,
+      "lesson": 13
+    },
+    {
+      "en": "animal",
+      "zh": "動物",
+      "openmoji": "1F63A",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 251,
+      "lesson": 13
+    },
+    {
+      "en": "bear",
+      "zh": "熊",
+      "openmoji": "1F43B",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 252,
+      "lesson": 13
+    },
+    {
+      "en": "bee",
+      "zh": "蜜蜂",
+      "openmoji": "1F41D",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 253,
+      "lesson": 13
+    },
+    {
+      "en": "elephant",
+      "zh": "大象",
+      "openmoji": "1F418",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 254,
+      "lesson": 13
+    },
+    {
+      "en": "lion",
+      "zh": "獅子",
+      "openmoji": "1F981",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 255,
+      "lesson": 13
+    },
+    {
+      "en": "monkey",
+      "zh": "猴子",
+      "openmoji": "1F435",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 256,
+      "lesson": 13
+    },
+    {
+      "en": "snake",
+      "zh": "蛇",
+      "openmoji": "1F40D",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 257,
+      "lesson": 13
+    },
+    {
+      "en": "tiger",
+      "zh": "老虎",
+      "openmoji": "1F42F",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 258,
+      "lesson": 13
+    },
+    {
+      "en": "pet",
+      "zh": "寵物",
+      "openmoji": "1F436",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 259,
+      "lesson": 13
+    },
+    {
+      "en": "bird",
+      "zh": "鳥",
+      "openmoji": "1F426",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 260,
+      "lesson": 13
+    },
+    {
+      "en": "cat",
+      "zh": "貓",
+      "openmoji": "1F431",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 261,
+      "lesson": 14
+    },
+    {
+      "en": "dog",
+      "zh": "狗",
+      "openmoji": "1F436",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 262,
+      "lesson": 14
+    },
+    {
+      "en": "fish",
+      "zh": "魚",
+      "openmoji": "1F41F",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 263,
+      "lesson": 14
+    },
+    {
+      "en": "mouse",
+      "zh": "老鼠",
+      "openmoji": "1F42D",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 264,
+      "lesson": 14
+    },
+    {
+      "en": "rabbit",
+      "zh": "兔子",
+      "openmoji": "1F430",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 265,
+      "lesson": 14
+    },
+    {
+      "en": "farm",
+      "zh": "農場",
+      "openmoji": "1F434",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 266,
+      "lesson": 14
+    },
+    {
+      "en": "cow",
+      "zh": "母牛",
+      "openmoji": "1F42E",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 267,
+      "lesson": 14
+    },
+    {
+      "en": "goat",
+      "zh": "山羊",
+      "openmoji": "1F410",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 268,
+      "lesson": 14
+    },
+    {
+      "en": "horse",
+      "zh": "馬",
+      "openmoji": "1F434",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 269,
+      "lesson": 14
+    },
+    {
+      "en": "pig",
+      "zh": "豬",
+      "openmoji": "1F437",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 270,
+      "lesson": 14
+    },
+    {
+      "en": "sheep",
+      "zh": "綿羊",
+      "openmoji": "1F40F",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 271,
+      "lesson": 14
+    },
+    {
+      "en": "duck",
+      "zh": "鴨",
+      "openmoji": "1F986",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 272,
+      "lesson": 14
+    },
+    {
+      "en": "hen",
+      "zh": "母雞",
+      "openmoji": "1F414",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 273,
+      "lesson": 14
+    },
+    {
+      "en": "turtle",
+      "zh": "烏龜",
+      "openmoji": "1F422",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 274,
+      "lesson": 14
+    },
+    {
+      "en": "kangaroo",
+      "zh": "袋鼠",
+      "openmoji": "1F998",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 275,
+      "lesson": 14
+    },
+    {
+      "en": "koala",
+      "zh": "無尾熊",
+      "openmoji": "1F428",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 276,
+      "lesson": 14
+    },
+    {
+      "en": "goose",
+      "zh": "鵝",
+      "openmoji": "1FABF",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 277,
+      "lesson": 14
+    },
+    {
+      "en": "panda",
+      "zh": "貓熊",
+      "openmoji": "1F43C",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 278,
+      "lesson": 14
+    },
+    {
+      "en": "frog",
+      "zh": "青蛙",
+      "openmoji": "1F438",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 279,
+      "lesson": 14
+    },
+    {
+      "en": "deer",
+      "zh": "鹿",
+      "openmoji": "1F98C",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 280,
+      "lesson": 14
+    },
+    {
+      "en": "fox",
+      "zh": "狐狸",
+      "openmoji": "1F98A",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 281,
+      "lesson": 15
+    },
+    {
+      "en": "giraffe",
+      "zh": "長頸鹿",
+      "openmoji": "1F992",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 282,
+      "lesson": 15
+    },
+    {
+      "en": "zebra",
+      "zh": "斑馬",
+      "openmoji": "1F993",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 283,
+      "lesson": 15
+    },
+    {
+      "en": "hippo",
+      "zh": "河馬",
+      "openmoji": "1F99B",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 284,
+      "lesson": 15
+    },
+    {
+      "en": "penguin",
+      "zh": "企鵝",
+      "openmoji": "1F427",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 285,
+      "lesson": 15
+    },
+    {
+      "en": "whale",
+      "zh": "鯨魚",
+      "openmoji": "1F40B",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 286,
+      "lesson": 15
+    },
+    {
+      "en": "dolphin",
+      "zh": "海豚",
+      "openmoji": "1F42C",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 287,
+      "lesson": 15
+    },
+    {
+      "en": "shark",
+      "zh": "鯊魚",
+      "openmoji": "1F988",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 288,
+      "lesson": 15
+    },
+    {
+      "en": "crab",
+      "zh": "螃蟹",
+      "openmoji": "1F980",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 289,
+      "lesson": 15
+    },
+    {
+      "en": "butterfly",
+      "zh": "蝴蝶",
+      "openmoji": "1F98B",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 290,
+      "lesson": 15
+    },
+    {
+      "en": "ant",
+      "zh": "螞蟻",
+      "openmoji": "1F41C",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 291,
+      "lesson": 15
+    },
+    {
+      "en": "spider",
+      "zh": "蜘蛛",
+      "openmoji": "1F577",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 292,
+      "lesson": 15
+    },
+    {
+      "en": "owl",
+      "zh": "貓頭鷹",
+      "openmoji": "1F989",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 293,
+      "lesson": 15
+    },
+    {
+      "en": "eagle",
+      "zh": "老鷹",
+      "openmoji": "1F985",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 294,
+      "lesson": 15
+    },
+    {
+      "en": "parrot",
+      "zh": "鸚鵡",
+      "openmoji": "1F99C",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 295,
+      "lesson": 15
+    },
+    {
+      "en": "dinosaur",
+      "zh": "恐龍",
+      "openmoji": "1F995",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 296,
+      "lesson": 15
+    },
+    {
+      "en": "dragon",
+      "zh": "龍",
+      "openmoji": "1F409",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 297,
+      "lesson": 15
+    },
+    {
+      "en": "squirrel",
+      "zh": "松鼠",
+      "openmoji": "1F43F",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 298,
+      "lesson": 15
+    },
+    {
+      "en": "crocodile",
+      "zh": "鱷魚",
+      "openmoji": "1F40A",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 299,
+      "lesson": 15
+    },
+    {
+      "en": "chick",
+      "zh": "小雞",
+      "openmoji": "1F424",
+      "theme": "Animals & Pets",
+      "themeZh": "動物與寵物",
+      "ordinal": 300,
+      "lesson": 15
+    },
+    {
+      "en": "menu",
+      "zh": "菜單",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 301,
+      "lesson": 16
+    },
+    {
+      "en": "food",
+      "zh": "食物",
+      "openmoji": "1F60B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 302,
+      "lesson": 16
+    },
+    {
+      "en": "meal",
+      "zh": "一餐",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 303,
+      "lesson": 16
+    },
+    {
+      "en": "breakfast",
+      "zh": "早餐",
+      "openmoji": "1F950",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 304,
+      "lesson": 16
+    },
+    {
+      "en": "lunch",
+      "zh": "午餐",
+      "openmoji": "1F374",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 305,
+      "lesson": 16
+    },
+    {
+      "en": "dinner",
+      "zh": "晚餐",
+      "openmoji": "1F41F",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 306,
+      "lesson": 16
+    },
+    {
+      "en": "noodles",
+      "zh": "麵條",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 307,
+      "lesson": 16
+    },
+    {
+      "en": "rice",
+      "zh": "米飯",
+      "openmoji": "1F35A",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 308,
+      "lesson": 16
+    },
+    {
+      "en": "hamburger",
+      "zh": "漢堡",
+      "openmoji": "1F354",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 309,
+      "lesson": 16
+    },
+    {
+      "en": "pie",
+      "zh": "派",
+      "openmoji": "1F967",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 310,
+      "lesson": 16
+    },
+    {
+      "en": "pizza",
+      "zh": "披薩",
+      "openmoji": "1F355",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 311,
+      "lesson": 16
+    },
+    {
+      "en": "sandwich",
+      "zh": "三明治",
+      "openmoji": "1F96A",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 312,
+      "lesson": 16
+    },
+    {
+      "en": "meat",
+      "zh": "肉",
+      "openmoji": "1F356",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 313,
+      "lesson": 16
+    },
+    {
+      "en": "beef",
+      "zh": "牛肉",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 314,
+      "lesson": 16
+    },
+    {
+      "en": "chicken",
+      "zh": "雞肉",
+      "openmoji": "1F357",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 315,
+      "lesson": 16
+    },
+    {
+      "en": "pork",
+      "zh": "豬肉",
+      "openmoji": "1F437",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 316,
+      "lesson": 16
+    },
+    {
+      "en": "steak",
+      "zh": "牛排",
+      "openmoji": "1F969",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 317,
+      "lesson": 16
+    },
+    {
+      "en": "hot dog",
+      "zh": "熱狗",
+      "openmoji": "1F32D",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 318,
+      "lesson": 16
+    },
+    {
+      "en": "bread",
+      "zh": "麵包",
+      "openmoji": "1F35E",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 319,
+      "lesson": 16
+    },
+    {
+      "en": "butter",
+      "zh": "奶油",
+      "openmoji": "1F9C8",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 320,
+      "lesson": 16
+    },
+    {
+      "en": "cheese",
+      "zh": "起士",
+      "openmoji": "1F9C0",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 321,
+      "lesson": 17
+    },
+    {
+      "en": "egg",
+      "zh": "雞蛋",
+      "openmoji": "1F95A",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 322,
+      "lesson": 17
+    },
+    {
+      "en": "ham",
+      "zh": "火腿",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 323,
+      "lesson": 17
+    },
+    {
+      "en": "salt",
+      "zh": "鹽巴",
+      "openmoji": "1F9C2",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 324,
+      "lesson": 17
+    },
+    {
+      "en": "sugar",
+      "zh": "糖",
+      "openmoji": "1F9C1",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 325,
+      "lesson": 17
+    },
+    {
+      "en": "oil",
+      "zh": "油",
+      "openmoji": "1F6E2",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 326,
+      "lesson": 17
+    },
+    {
+      "en": "snack",
+      "zh": "點心",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 327,
+      "lesson": 17
+    },
+    {
+      "en": "cake",
+      "zh": "蛋糕",
+      "openmoji": "1F370",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 328,
+      "lesson": 17
+    },
+    {
+      "en": "candy",
+      "zh": "糖果",
+      "openmoji": "1F36C",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 329,
+      "lesson": 17
+    },
+    {
+      "en": "chocolate",
+      "zh": "巧克力",
+      "openmoji": "1FAD5",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 330,
+      "lesson": 17
+    },
+    {
+      "en": "cookie",
+      "zh": "餅乾",
+      "openmoji": "1F36A",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 331,
+      "lesson": 17
+    },
+    {
+      "en": "ice cream",
+      "zh": "冰淇淋",
+      "openmoji": "1F368",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 332,
+      "lesson": 17
+    },
+    {
+      "en": "popcorn",
+      "zh": "爆米花",
+      "openmoji": "1F37F",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 333,
+      "lesson": 17
+    },
+    {
+      "en": "soup",
+      "zh": "湯",
+      "openmoji": "1F372",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 334,
+      "lesson": 17
+    },
+    {
+      "en": "salad",
+      "zh": "沙拉",
+      "openmoji": "1F96C",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 335,
+      "lesson": 17
+    },
+    {
+      "en": "vegetable",
+      "zh": "蔬菜",
+      "openmoji": "1F345",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 336,
+      "lesson": 17
+    },
+    {
+      "en": "eat",
+      "zh": "吃",
+      "openmoji": "1F60B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 337,
+      "lesson": 17
+    },
+    {
+      "en": "cook",
+      "zh": "煮飯；烹飪",
+      "openmoji": "1F9D1-200D-1F373",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 338,
+      "lesson": 17
+    },
+    {
+      "en": "order",
+      "zh": "點餐",
+      "openmoji": "1F981",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 339,
+      "lesson": 17
+    },
+    {
+      "en": "taste",
+      "zh": "嚐起來",
+      "openmoji": "1F61D",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 340,
+      "lesson": 17
+    },
+    {
+      "en": "bite",
+      "zh": "咬",
+      "openmoji": "1FAE6",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 341,
+      "lesson": 18
+    },
+    {
+      "en": "hungry",
+      "zh": "飢餓的",
+      "openmoji": "1F60B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 342,
+      "lesson": 18
+    },
+    {
+      "en": "full",
+      "zh": "吃飽的",
+      "openmoji": "1F60B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 343,
+      "lesson": 18
+    },
+    {
+      "en": "thirsty",
+      "zh": "口渴的",
+      "openmoji": null,
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 344,
+      "lesson": 18
+    },
+    {
+      "en": "delicious",
+      "zh": "美味的",
+      "openmoji": "1F60B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 345,
+      "lesson": 18
+    },
+    {
+      "en": "fresh",
+      "zh": "新鮮的",
+      "openmoji": "1F488",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 346,
+      "lesson": 18
+    },
+    {
+      "en": "sweet",
+      "zh": "甜的",
+      "openmoji": "1F61B",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 347,
+      "lesson": 18
+    },
+    {
+      "en": "hot",
+      "zh": "熱的；辣的",
+      "openmoji": "1FAE0",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 348,
+      "lesson": 18
+    },
+    {
+      "en": "corn",
+      "zh": "玉米",
+      "openmoji": "1F33D",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 349,
+      "lesson": 18
+    },
+    {
+      "en": "potato",
+      "zh": "馬鈴薯",
+      "openmoji": "1F954",
+      "theme": "Food & Meals",
+      "themeZh": "食物與三餐",
+      "ordinal": 350,
+      "lesson": 18
+    },
+    {
+      "en": "drink",
+      "zh": "飲料",
+      "openmoji": "1F37C",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 351,
+      "lesson": 18
+    },
+    {
+      "en": "coke",
+      "zh": "可口可樂",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 352,
+      "lesson": 18
+    },
+    {
+      "en": "coffee",
+      "zh": "咖啡",
+      "openmoji": "2615",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 353,
+      "lesson": 18
+    },
+    {
+      "en": "juice",
+      "zh": "果汁",
+      "openmoji": "1F964",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 354,
+      "lesson": 18
+    },
+    {
+      "en": "milk",
+      "zh": "牛奶",
+      "openmoji": "1F95B",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 355,
+      "lesson": 18
+    },
+    {
+      "en": "tea",
+      "zh": "茶",
+      "openmoji": "1F375",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 356,
+      "lesson": 18
+    },
+    {
+      "en": "water",
+      "zh": "水",
+      "openmoji": "1F4A7",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 357,
+      "lesson": 18
+    },
+    {
+      "en": "bottle",
+      "zh": "瓶子",
+      "openmoji": "1F37C",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 358,
+      "lesson": 18
+    },
+    {
+      "en": "glass",
+      "zh": "玻璃杯",
+      "openmoji": "1F95B",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 359,
+      "lesson": 18
+    },
+    {
+      "en": "cup",
+      "zh": "杯子",
+      "openmoji": "1F375",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 360,
+      "lesson": 18
+    },
+    {
+      "en": "fruit",
+      "zh": "水果",
+      "openmoji": "1F347",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 361,
+      "lesson": 19
+    },
+    {
+      "en": "apple(s)",
+      "zh": "蘋果",
+      "openmoji": "1F34E",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 362,
+      "lesson": 19
+    },
+    {
+      "en": "banana(s)",
+      "zh": "香蕉",
+      "openmoji": "1F34C",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 363,
+      "lesson": 19
+    },
+    {
+      "en": "lemon(s)",
+      "zh": "檸檬",
+      "openmoji": "1F34B",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 364,
+      "lesson": 19
+    },
+    {
+      "en": "tomato(es)",
+      "zh": "番茄",
+      "openmoji": "1F345",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 365,
+      "lesson": 19
+    },
+    {
+      "en": "grape(s)",
+      "zh": "葡萄",
+      "openmoji": "1F347",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 366,
+      "lesson": 19
+    },
+    {
+      "en": "guava(s)",
+      "zh": "芭樂",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 367,
+      "lesson": 19
+    },
+    {
+      "en": "papaya(s)",
+      "zh": "木瓜",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 368,
+      "lesson": 19
+    },
+    {
+      "en": "peach(es)",
+      "zh": "水蜜桃",
+      "openmoji": "1F351",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 369,
+      "lesson": 19
+    },
+    {
+      "en": "strawberry",
+      "zh": "草莓",
+      "openmoji": "1F353",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 370,
+      "lesson": 19
+    },
+    {
+      "en": "watermelon(s)",
+      "zh": "西瓜",
+      "openmoji": "1F349",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 371,
+      "lesson": 19
+    },
+    {
+      "en": "pineapple(s)",
+      "zh": "鳳梨",
+      "openmoji": "1F34D",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 372,
+      "lesson": 19
+    },
+    {
+      "en": "kiwi(s)",
+      "zh": "奇異果",
+      "openmoji": "1F95D",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 373,
+      "lesson": 19
+    },
+    {
+      "en": "mango(es)",
+      "zh": "芒果",
+      "openmoji": "1F96D",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 374,
+      "lesson": 19
+    },
+    {
+      "en": "knife",
+      "zh": "刀",
+      "openmoji": "1F37D",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 375,
+      "lesson": 19
+    },
+    {
+      "en": "fork",
+      "zh": "叉子",
+      "openmoji": "1F37D",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 376,
+      "lesson": 19
+    },
+    {
+      "en": "spoon",
+      "zh": "湯匙",
+      "openmoji": "1F944",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 377,
+      "lesson": 19
+    },
+    {
+      "en": "chopstick(s)",
+      "zh": "一雙筷子",
+      "openmoji": "1F962",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 378,
+      "lesson": 19
+    },
+    {
+      "en": "bowl",
+      "zh": "碗",
+      "openmoji": "1F963",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 379,
+      "lesson": 19
+    },
+    {
+      "en": "oyster omelet",
+      "zh": "蚵仔煎",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 380,
+      "lesson": 19
+    },
+    {
+      "en": "soy milk",
+      "zh": "豆漿",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 381,
+      "lesson": 20
+    },
+    {
+      "en": "stinky tofu",
+      "zh": "臭豆腐",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 382,
+      "lesson": 20
+    },
+    {
+      "en": "meatball",
+      "zh": "肉圓",
+      "openmoji": "1F9C6",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 383,
+      "lesson": 20
+    },
+    {
+      "en": "egg pancake",
+      "zh": "蛋餅",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 384,
+      "lesson": 20
+    },
+    {
+      "en": "fried chicken",
+      "zh": "炸雞排",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 385,
+      "lesson": 20
+    },
+    {
+      "en": "pearl milk tea",
+      "zh": "珍珠奶茶",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 386,
+      "lesson": 20
+    },
+    {
+      "en": "beef noodle(s)",
+      "zh": "牛肉麵",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 387,
+      "lesson": 20
+    },
+    {
+      "en": "tofu pudding",
+      "zh": "豆花",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 388,
+      "lesson": 20
+    },
+    {
+      "en": "congee",
+      "zh": "稀飯",
+      "openmoji": "1F963",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 389,
+      "lesson": 20
+    },
+    {
+      "en": "peanut",
+      "zh": "花生",
+      "openmoji": "1F95C",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 390,
+      "lesson": 20
+    },
+    {
+      "en": "brown sugar cake",
+      "zh": "黑糖糕",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 391,
+      "lesson": 20
+    },
+    {
+      "en": "oyster noodle(s)",
+      "zh": "蚵仔麵線",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 392,
+      "lesson": 20
+    },
+    {
+      "en": "squid soup",
+      "zh": "魷魚羮",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 393,
+      "lesson": 20
+    },
+    {
+      "en": "pickle",
+      "zh": "醬菜",
+      "openmoji": "1F952",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 394,
+      "lesson": 20
+    },
+    {
+      "en": "fried bread stick(s)",
+      "zh": "油條",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 395,
+      "lesson": 20
+    },
+    {
+      "en": "handmade noodle(s)",
+      "zh": "手工麵線",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 396,
+      "lesson": 20
+    },
+    {
+      "en": "squid",
+      "zh": "小管",
+      "openmoji": "1F991",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 397,
+      "lesson": 20
+    },
+    {
+      "en": "oyster",
+      "zh": "牡蠣",
+      "openmoji": "1F9AA",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 398,
+      "lesson": 20
+    },
+    {
+      "en": "Taiwanese Snacks",
+      "zh": "台灣小吃",
+      "openmoji": null,
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 399,
+      "lesson": 20
+    },
+    {
+      "en": "garbage",
+      "zh": "垃圾",
+      "openmoji": "1F5D1",
+      "theme": "Drinks, Fruits & Snacks",
+      "themeZh": "飲料‧水果與小吃",
+      "ordinal": 400,
+      "lesson": 20
+    },
+    {
+      "en": "school",
+      "zh": "學校",
+      "openmoji": "1F3EB",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 401,
+      "lesson": 21
+    },
+    {
+      "en": "class",
+      "zh": "班級",
+      "openmoji": "1F6B2",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 402,
+      "lesson": 21
+    },
+    {
+      "en": "classroom",
+      "zh": "教室",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 403,
+      "lesson": 21
+    },
+    {
+      "en": "elementary school",
+      "zh": "小學",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 404,
+      "lesson": 21
+    },
+    {
+      "en": "teacher",
+      "zh": "老師",
+      "openmoji": "1F9D1-200D-1F3EB",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 405,
+      "lesson": 21
+    },
+    {
+      "en": "playground",
+      "zh": "操場",
+      "openmoji": "1F6DD",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 406,
+      "lesson": 21
+    },
+    {
+      "en": "junior high school",
+      "zh": "國中",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 407,
+      "lesson": 21
+    },
+    {
+      "en": "lesson",
+      "zh": "一課；課程",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 408,
+      "lesson": 21
+    },
+    {
+      "en": "program",
+      "zh": "計劃",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 409,
+      "lesson": 21
+    },
+    {
+      "en": "senior high school",
+      "zh": "高中",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 410,
+      "lesson": 21
+    },
+    {
+      "en": "rule",
+      "zh": "規定",
+      "openmoji": "1F4D0",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 411,
+      "lesson": 21
+    },
+    {
+      "en": "student",
+      "zh": "學生",
+      "openmoji": "1F9D1-200D-1F393",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 412,
+      "lesson": 21
+    },
+    {
+      "en": "group",
+      "zh": "團體",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 413,
+      "lesson": 21
+    },
+    {
+      "en": "blackboard",
+      "zh": "黑板",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 414,
+      "lesson": 21
+    },
+    {
+      "en": "chalk",
+      "zh": "粉筆",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 415,
+      "lesson": 21
+    },
+    {
+      "en": "math/mathematics",
+      "zh": "數學",
+      "openmoji": "1F4CF",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 416,
+      "lesson": 21
+    },
+    {
+      "en": "ruler",
+      "zh": "尺",
+      "openmoji": "1F4CF",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 417,
+      "lesson": 21
+    },
+    {
+      "en": "eraser",
+      "zh": "橡皮擦；板擦",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 418,
+      "lesson": 21
+    },
+    {
+      "en": "bell",
+      "zh": "鐘聲",
+      "openmoji": "1F514",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 419,
+      "lesson": 21
+    },
+    {
+      "en": "pencil",
+      "zh": "鉛筆",
+      "openmoji": "270F",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 420,
+      "lesson": 21
+    },
+    {
+      "en": "paper",
+      "zh": "紙；考卷",
+      "openmoji": "1F3EE",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 421,
+      "lesson": 22
+    },
+    {
+      "en": "pen",
+      "zh": "原子筆",
+      "openmoji": "1F58A",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 422,
+      "lesson": 22
+    },
+    {
+      "en": "dictionary",
+      "zh": "字典",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 423,
+      "lesson": 22
+    },
+    {
+      "en": "word",
+      "zh": "單字",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 424,
+      "lesson": 22
+    },
+    {
+      "en": "list",
+      "zh": "表；名單",
+      "openmoji": "1F4CB",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 425,
+      "lesson": 22
+    },
+    {
+      "en": "homework",
+      "zh": "家庭作業",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 426,
+      "lesson": 22
+    },
+    {
+      "en": "knowledge",
+      "zh": "知識",
+      "openmoji": "1F4D6",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 427,
+      "lesson": 22
+    },
+    {
+      "en": "workbook",
+      "zh": "習作本",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 428,
+      "lesson": 22
+    },
+    {
+      "en": "example",
+      "zh": "例子",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 429,
+      "lesson": 22
+    },
+    {
+      "en": "English",
+      "zh": "英文",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 430,
+      "lesson": 22
+    },
+    {
+      "en": "sentence",
+      "zh": "句子",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 431,
+      "lesson": 22
+    },
+    {
+      "en": "history",
+      "zh": "歷史",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 432,
+      "lesson": 22
+    },
+    {
+      "en": "answer",
+      "zh": "答案",
+      "openmoji": "1F7F0",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 433,
+      "lesson": 22
+    },
+    {
+      "en": "language",
+      "zh": "語言",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 434,
+      "lesson": 22
+    },
+    {
+      "en": "question",
+      "zh": "疑問",
+      "openmoji": "1F64B",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 435,
+      "lesson": 22
+    },
+    {
+      "en": "test",
+      "zh": "測驗",
+      "openmoji": "1F9EA",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 436,
+      "lesson": 22
+    },
+    {
+      "en": "notebook",
+      "zh": "筆記本；筆記型電腦",
+      "openmoji": "1F4D3",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 437,
+      "lesson": 22
+    },
+    {
+      "en": "grade",
+      "zh": "成績",
+      "openmoji": "1F234",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 438,
+      "lesson": 22
+    },
+    {
+      "en": "glue",
+      "zh": "膠水",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 439,
+      "lesson": 22
+    },
+    {
+      "en": "scissor(s)",
+      "zh": "剪刀",
+      "openmoji": "2702",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 440,
+      "lesson": 22
+    },
+    {
+      "en": "crayon",
+      "zh": "蠟筆",
+      "openmoji": "1F58D",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 441,
+      "lesson": 23
+    },
+    {
+      "en": "colored pencil",
+      "zh": "色鉛筆",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 442,
+      "lesson": 23
+    },
+    {
+      "en": "marker",
+      "zh": "麥克筆",
+      "openmoji": "1F4D1",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 443,
+      "lesson": 23
+    },
+    {
+      "en": "study",
+      "zh": "研讀",
+      "openmoji": "1F4DA",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 444,
+      "lesson": 23
+    },
+    {
+      "en": "read",
+      "zh": "閱讀",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 445,
+      "lesson": 23
+    },
+    {
+      "en": "write",
+      "zh": "寫",
+      "openmoji": "270D",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 446,
+      "lesson": 23
+    },
+    {
+      "en": "learn",
+      "zh": "學習",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 447,
+      "lesson": 23
+    },
+    {
+      "en": "teach",
+      "zh": "教導",
+      "openmoji": null,
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 448,
+      "lesson": 23
+    },
+    {
+      "en": "spell",
+      "zh": "拼單字",
+      "openmoji": "1F9D9",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 449,
+      "lesson": 23
+    },
+    {
+      "en": "pass",
+      "zh": "考試及格",
+      "openmoji": "26D4",
+      "theme": "At School",
+      "themeZh": "在學校",
+      "ordinal": 450,
+      "lesson": 23
+    },
+    {
+      "en": "cheat",
+      "zh": "作弊",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 451,
+      "lesson": 23
+    },
+    {
+      "en": "check",
+      "zh": "檢查",
+      "openmoji": "2705",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 452,
+      "lesson": 23
+    },
+    {
+      "en": "enter",
+      "zh": "進入",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 453,
+      "lesson": 23
+    },
+    {
+      "en": "finish",
+      "zh": "完成",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 454,
+      "lesson": 23
+    },
+    {
+      "en": "ask",
+      "zh": "詢問",
+      "openmoji": "1F64F",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 455,
+      "lesson": 23
+    },
+    {
+      "en": "copy",
+      "zh": "複製",
+      "openmoji": "E255",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 456,
+      "lesson": 23
+    },
+    {
+      "en": "prepare",
+      "zh": "準備",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 457,
+      "lesson": 23
+    },
+    {
+      "en": "know",
+      "zh": "知道",
+      "openmoji": "1FAF4",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 458,
+      "lesson": 23
+    },
+    {
+      "en": "correct",
+      "zh": "正確的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 459,
+      "lesson": 23
+    },
+    {
+      "en": "repeat",
+      "zh": "重複",
+      "openmoji": "1F501",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 460,
+      "lesson": 23
+    },
+    {
+      "en": "excuse",
+      "zh": "藉口",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 461,
+      "lesson": 24
+    },
+    {
+      "en": "fact",
+      "zh": "事實",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 462,
+      "lesson": 24
+    },
+    {
+      "en": "understand",
+      "zh": "了解",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 463,
+      "lesson": 24
+    },
+    {
+      "en": "mark",
+      "zh": "打分數",
+      "openmoji": "E240",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 464,
+      "lesson": 24
+    },
+    {
+      "en": "mistake",
+      "zh": "錯誤",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 465,
+      "lesson": 24
+    },
+    {
+      "en": "excellent",
+      "zh": "傑出的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 466,
+      "lesson": 24
+    },
+    {
+      "en": "ready",
+      "zh": "準備好的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 467,
+      "lesson": 24
+    },
+    {
+      "en": "wrong",
+      "zh": "錯誤的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 468,
+      "lesson": 24
+    },
+    {
+      "en": "problem",
+      "zh": "困難；問題",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 469,
+      "lesson": 24
+    },
+    {
+      "en": "helpful",
+      "zh": "有用的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 470,
+      "lesson": 24
+    },
+    {
+      "en": "real",
+      "zh": "真正的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 471,
+      "lesson": 24
+    },
+    {
+      "en": "true",
+      "zh": "真實的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 472,
+      "lesson": 24
+    },
+    {
+      "en": "begin",
+      "zh": "開始",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 473,
+      "lesson": 24
+    },
+    {
+      "en": "end",
+      "zh": "最後",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 474,
+      "lesson": 24
+    },
+    {
+      "en": "borrow",
+      "zh": "借用",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 475,
+      "lesson": 24
+    },
+    {
+      "en": "lend",
+      "zh": "把…借給",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 476,
+      "lesson": 24
+    },
+    {
+      "en": "join",
+      "zh": "參加",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 477,
+      "lesson": 24
+    },
+    {
+      "en": "remember",
+      "zh": "記得",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 478,
+      "lesson": 24
+    },
+    {
+      "en": "forget",
+      "zh": "忘記",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 479,
+      "lesson": 24
+    },
+    {
+      "en": "common",
+      "zh": "普通的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 480,
+      "lesson": 24
+    },
+    {
+      "en": "special",
+      "zh": "特別的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 481,
+      "lesson": 25
+    },
+    {
+      "en": "dangerous",
+      "zh": "危險的",
+      "openmoji": "1F4A3",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 482,
+      "lesson": 25
+    },
+    {
+      "en": "safe",
+      "zh": "安全的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 483,
+      "lesson": 25
+    },
+    {
+      "en": "different",
+      "zh": "不同的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 484,
+      "lesson": 25
+    },
+    {
+      "en": "same",
+      "zh": "相同的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 485,
+      "lesson": 25
+    },
+    {
+      "en": "difficult",
+      "zh": "困難的",
+      "openmoji": "262F",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 486,
+      "lesson": 25
+    },
+    {
+      "en": "easy",
+      "zh": "簡單的",
+      "openmoji": "1F373",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 487,
+      "lesson": 25
+    },
+    {
+      "en": "hard",
+      "zh": "硬的",
+      "openmoji": "1F9BB",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 488,
+      "lesson": 25
+    },
+    {
+      "en": "simple",
+      "zh": "簡單的；單純的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 489,
+      "lesson": 25
+    },
+    {
+      "en": "basic",
+      "zh": "基本的",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 490,
+      "lesson": 25
+    },
+    {
+      "en": "appear",
+      "zh": "似乎",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 491,
+      "lesson": 25
+    },
+    {
+      "en": "become",
+      "zh": "變成",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 492,
+      "lesson": 25
+    },
+    {
+      "en": "happen",
+      "zh": "發生",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 493,
+      "lesson": 25
+    },
+    {
+      "en": "get",
+      "zh": "得到",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 494,
+      "lesson": 25
+    },
+    {
+      "en": "grow",
+      "zh": "種植；成長",
+      "openmoji": "1FAB4",
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 495,
+      "lesson": 25
+    },
+    {
+      "en": "keep",
+      "zh": "保持",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 496,
+      "lesson": 25
+    },
+    {
+      "en": "stay",
+      "zh": "停留",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 497,
+      "lesson": 25
+    },
+    {
+      "en": "let",
+      "zh": "讓",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 498,
+      "lesson": 25
+    },
+    {
+      "en": "make",
+      "zh": "做；製造",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 499,
+      "lesson": 25
+    },
+    {
+      "en": "want",
+      "zh": "要",
+      "openmoji": null,
+      "theme": "Classroom Actions",
+      "themeZh": "課堂上的事",
+      "ordinal": 500,
+      "lesson": 25
+    },
+    {
+      "en": "build",
+      "zh": "建築",
+      "openmoji": "1F477",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 501,
+      "lesson": 26
+    },
+    {
+      "en": "fix",
+      "zh": "修理",
+      "openmoji": "1F477",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 502,
+      "lesson": 26
+    },
+    {
+      "en": "house",
+      "zh": "房子",
+      "openmoji": "1F3E0",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 503,
+      "lesson": 26
+    },
+    {
+      "en": "apartment",
+      "zh": "公寓",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 504,
+      "lesson": 26
+    },
+    {
+      "en": "room",
+      "zh": "房間",
+      "openmoji": "1F9D6",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 505,
+      "lesson": 26
+    },
+    {
+      "en": "bathroom",
+      "zh": "浴室",
+      "openmoji": "1F6BD",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 506,
+      "lesson": 26
+    },
+    {
+      "en": "restroom",
+      "zh": "廁所",
+      "openmoji": "1F6BB",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 507,
+      "lesson": 26
+    },
+    {
+      "en": "bedroom",
+      "zh": "臥房",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 508,
+      "lesson": 26
+    },
+    {
+      "en": "dining room",
+      "zh": "飯廳",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 509,
+      "lesson": 26
+    },
+    {
+      "en": "living room",
+      "zh": "客廳",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 510,
+      "lesson": 26
+    },
+    {
+      "en": "kitchen",
+      "zh": "廚房",
+      "openmoji": "1F52A",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 511,
+      "lesson": 26
+    },
+    {
+      "en": "garden",
+      "zh": "花園",
+      "openmoji": "1F40C",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 512,
+      "lesson": 26
+    },
+    {
+      "en": "home",
+      "zh": "家",
+      "openmoji": "1FAB9",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 513,
+      "lesson": 26
+    },
+    {
+      "en": "floor",
+      "zh": "地板",
+      "openmoji": "1F923",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 514,
+      "lesson": 26
+    },
+    {
+      "en": "ground",
+      "zh": "地面",
+      "openmoji": "26F1",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 515,
+      "lesson": 26
+    },
+    {
+      "en": "door",
+      "zh": "門",
+      "openmoji": "1F6AA",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 516,
+      "lesson": 26
+    },
+    {
+      "en": "knock",
+      "zh": "敲打",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 517,
+      "lesson": 26
+    },
+    {
+      "en": "wall",
+      "zh": "牆壁",
+      "openmoji": "1F9F1",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 518,
+      "lesson": 26
+    },
+    {
+      "en": "window",
+      "zh": "窗戶",
+      "openmoji": "1FA9F",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 519,
+      "lesson": 26
+    },
+    {
+      "en": "lamp",
+      "zh": "檯燈",
+      "openmoji": "1F9DE",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 520,
+      "lesson": 26
+    },
+    {
+      "en": "light",
+      "zh": "燈光",
+      "openmoji": "1FA75",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 521,
+      "lesson": 27
+    },
+    {
+      "en": "bed",
+      "zh": "床",
+      "openmoji": "1F6CF",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 522,
+      "lesson": 27
+    },
+    {
+      "en": "bath",
+      "zh": "洗澡",
+      "openmoji": "1F6C0",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 523,
+      "lesson": 27
+    },
+    {
+      "en": "towel",
+      "zh": "毛巾",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 524,
+      "lesson": 27
+    },
+    {
+      "en": "chair",
+      "zh": "椅子",
+      "openmoji": "1FA91",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 525,
+      "lesson": 27
+    },
+    {
+      "en": "sofa",
+      "zh": "沙發",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 526,
+      "lesson": 27
+    },
+    {
+      "en": "couch",
+      "zh": "睡椅",
+      "openmoji": "1F6CB",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 527,
+      "lesson": 27
+    },
+    {
+      "en": "table",
+      "zh": "桌子",
+      "openmoji": "1F3D3",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 528,
+      "lesson": 27
+    },
+    {
+      "en": "desk",
+      "zh": "書桌",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 529,
+      "lesson": 27
+    },
+    {
+      "en": "machine",
+      "zh": "機器",
+      "openmoji": "1F3B0",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 530,
+      "lesson": 27
+    },
+    {
+      "en": "telephone",
+      "zh": "電話機",
+      "openmoji": "260E",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 531,
+      "lesson": 27
+    },
+    {
+      "en": "call",
+      "zh": "打電話",
+      "openmoji": "1F625",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 532,
+      "lesson": 27
+    },
+    {
+      "en": "television/TV",
+      "zh": "電視",
+      "openmoji": "1F4FA",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 533,
+      "lesson": 27
+    },
+    {
+      "en": "news",
+      "zh": "新聞",
+      "openmoji": "1F4F0",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 534,
+      "lesson": 27
+    },
+    {
+      "en": "video",
+      "zh": "錄影機",
+      "openmoji": "1F3AE",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 535,
+      "lesson": 27
+    },
+    {
+      "en": "computer",
+      "zh": "電腦",
+      "openmoji": "1F4BB",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 536,
+      "lesson": 27
+    },
+    {
+      "en": "fan",
+      "zh": "電風扇",
+      "openmoji": "1FAAD",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 537,
+      "lesson": 27
+    },
+    {
+      "en": "piano",
+      "zh": "鋼琴",
+      "openmoji": "1F3B9",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 538,
+      "lesson": 27
+    },
+    {
+      "en": "radio",
+      "zh": "收音機",
+      "openmoji": "1F4FB",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 539,
+      "lesson": 27
+    },
+    {
+      "en": "refrigerator/fridge",
+      "zh": "冰箱",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 540,
+      "lesson": 27
+    },
+    {
+      "en": "in",
+      "zh": "在…裡面；在….期間",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 541,
+      "lesson": 28
+    },
+    {
+      "en": "on",
+      "zh": "在…之上",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 542,
+      "lesson": 28
+    },
+    {
+      "en": "under",
+      "zh": "在…下方",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 543,
+      "lesson": 28
+    },
+    {
+      "en": "near",
+      "zh": "在…附近",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 544,
+      "lesson": 28
+    },
+    {
+      "en": "behind",
+      "zh": "在…後面",
+      "openmoji": "26C5",
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 545,
+      "lesson": 28
+    },
+    {
+      "en": "beside",
+      "zh": "在…旁邊",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 546,
+      "lesson": 28
+    },
+    {
+      "en": "above",
+      "zh": "在…上面",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 547,
+      "lesson": 28
+    },
+    {
+      "en": "below",
+      "zh": "在…下面",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 548,
+      "lesson": 28
+    },
+    {
+      "en": "here",
+      "zh": "這裡",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 549,
+      "lesson": 28
+    },
+    {
+      "en": "there",
+      "zh": "那裡",
+      "openmoji": null,
+      "theme": "My House",
+      "themeZh": "我的家",
+      "ordinal": 550,
+      "lesson": 28
+    },
+    {
+      "en": "time",
+      "zh": "時間",
+      "openmoji": "1F625",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 551,
+      "lesson": 28
+    },
+    {
+      "en": "minute",
+      "zh": "分鐘",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 552,
+      "lesson": 28
+    },
+    {
+      "en": "hour",
+      "zh": "小時",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 553,
+      "lesson": 28
+    },
+    {
+      "en": "o clock",
+      "zh": "點鐘",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 554,
+      "lesson": 28
+    },
+    {
+      "en": "watch",
+      "zh": "錶",
+      "openmoji": "231A",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 555,
+      "lesson": 28
+    },
+    {
+      "en": "clock",
+      "zh": "時鐘",
+      "openmoji": "1F550",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 556,
+      "lesson": 28
+    },
+    {
+      "en": "a.m.",
+      "zh": "上午",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 557,
+      "lesson": 28
+    },
+    {
+      "en": "p.m.",
+      "zh": "下午",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 558,
+      "lesson": 28
+    },
+    {
+      "en": "morning",
+      "zh": "早晨",
+      "openmoji": "1F496",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 559,
+      "lesson": 28
+    },
+    {
+      "en": "noon",
+      "zh": "中午",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 560,
+      "lesson": 28
+    },
+    {
+      "en": "afternoon",
+      "zh": "下午",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 561,
+      "lesson": 29
+    },
+    {
+      "en": "evening",
+      "zh": "傍晚",
+      "openmoji": "1F306",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 562,
+      "lesson": 29
+    },
+    {
+      "en": "night",
+      "zh": "夜晚",
+      "openmoji": "1F619",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 563,
+      "lesson": 29
+    },
+    {
+      "en": "tonight",
+      "zh": "今晚",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 564,
+      "lesson": 29
+    },
+    {
+      "en": "eve",
+      "zh": "前夕",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 565,
+      "lesson": 29
+    },
+    {
+      "en": "Monday",
+      "zh": "星期一",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 566,
+      "lesson": 29
+    },
+    {
+      "en": "Tuesday",
+      "zh": "星期二",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 567,
+      "lesson": 29
+    },
+    {
+      "en": "Wednesday",
+      "zh": "星期三",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 568,
+      "lesson": 29
+    },
+    {
+      "en": "Thursday",
+      "zh": "星期四",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 569,
+      "lesson": 29
+    },
+    {
+      "en": "Friday",
+      "zh": "星期五",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 570,
+      "lesson": 29
+    },
+    {
+      "en": "Saturday",
+      "zh": "星期六",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 571,
+      "lesson": 29
+    },
+    {
+      "en": "Sunday",
+      "zh": "星期天",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 572,
+      "lesson": 29
+    },
+    {
+      "en": "weekend",
+      "zh": "週末",
+      "openmoji": "1F455",
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 573,
+      "lesson": 29
+    },
+    {
+      "en": "today",
+      "zh": "今天",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 574,
+      "lesson": 29
+    },
+    {
+      "en": "yesterday",
+      "zh": "昨天",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 575,
+      "lesson": 29
+    },
+    {
+      "en": "tomorrow",
+      "zh": "明天",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 576,
+      "lesson": 29
+    },
+    {
+      "en": "week",
+      "zh": "星期",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 577,
+      "lesson": 29
+    },
+    {
+      "en": "month",
+      "zh": "月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 578,
+      "lesson": 29
+    },
+    {
+      "en": "year",
+      "zh": "年",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 579,
+      "lesson": 29
+    },
+    {
+      "en": "January",
+      "zh": "一月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 580,
+      "lesson": 29
+    },
+    {
+      "en": "February",
+      "zh": "二月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 581,
+      "lesson": 30
+    },
+    {
+      "en": "March",
+      "zh": "三月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 582,
+      "lesson": 30
+    },
+    {
+      "en": "April",
+      "zh": "四月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 583,
+      "lesson": 30
+    },
+    {
+      "en": "June",
+      "zh": "六月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 584,
+      "lesson": 30
+    },
+    {
+      "en": "July",
+      "zh": "七月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 585,
+      "lesson": 30
+    },
+    {
+      "en": "August",
+      "zh": "八月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 586,
+      "lesson": 30
+    },
+    {
+      "en": "September",
+      "zh": "九月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 587,
+      "lesson": 30
+    },
+    {
+      "en": "October",
+      "zh": "十月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 588,
+      "lesson": 30
+    },
+    {
+      "en": "November",
+      "zh": "十一月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 589,
+      "lesson": 30
+    },
+    {
+      "en": "December",
+      "zh": "十二月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 590,
+      "lesson": 30
+    },
+    {
+      "en": "now",
+      "zh": "現在",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 591,
+      "lesson": 30
+    },
+    {
+      "en": "then",
+      "zh": "當時",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 592,
+      "lesson": 30
+    },
+    {
+      "en": "early",
+      "zh": "早",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 593,
+      "lesson": 30
+    },
+    {
+      "en": "late",
+      "zh": "晚",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 594,
+      "lesson": 30
+    },
+    {
+      "en": "before",
+      "zh": "以前",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 595,
+      "lesson": 30
+    },
+    {
+      "en": "after",
+      "zh": "之後",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 596,
+      "lesson": 30
+    },
+    {
+      "en": "soon",
+      "zh": "不久",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 597,
+      "lesson": 30
+    },
+    {
+      "en": "always",
+      "zh": "總是",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 598,
+      "lesson": 30
+    },
+    {
+      "en": "often",
+      "zh": "時常",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 599,
+      "lesson": 30
+    },
+    {
+      "en": "May",
+      "zh": "五月",
+      "openmoji": null,
+      "theme": "Days, Months & Time",
+      "themeZh": "日子‧月份與時間",
+      "ordinal": 600,
+      "lesson": 30
+    },
+    {
+      "en": "season",
+      "zh": "季節",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 601,
+      "lesson": 31
+    },
+    {
+      "en": "spring",
+      "zh": "春天",
+      "openmoji": "1F41D",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 602,
+      "lesson": 31
+    },
+    {
+      "en": "summer",
+      "zh": "夏天",
+      "openmoji": "1F37A",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 603,
+      "lesson": 31
+    },
+    {
+      "en": "autumn/fall",
+      "zh": "秋天",
+      "openmoji": "1F342",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 604,
+      "lesson": 31
+    },
+    {
+      "en": "winter",
+      "zh": "冬天",
+      "openmoji": "1FABE",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 605,
+      "lesson": 31
+    },
+    {
+      "en": "weather",
+      "zh": "天氣",
+      "openmoji": "1F321",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 606,
+      "lesson": 31
+    },
+    {
+      "en": "rain",
+      "zh": "雨",
+      "openmoji": "1F327",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 607,
+      "lesson": 31
+    },
+    {
+      "en": "snow",
+      "zh": "雪",
+      "openmoji": "2744",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 608,
+      "lesson": 31
+    },
+    {
+      "en": "wind",
+      "zh": "風",
+      "openmoji": "1F343",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 609,
+      "lesson": 31
+    },
+    {
+      "en": "sunny",
+      "zh": "晴天的",
+      "openmoji": "1F373",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 610,
+      "lesson": 31
+    },
+    {
+      "en": "rainy",
+      "zh": "下雨的",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 611,
+      "lesson": 31
+    },
+    {
+      "en": "windy",
+      "zh": "風大的",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 612,
+      "lesson": 31
+    },
+    {
+      "en": "cloudy",
+      "zh": "陰天的",
+      "openmoji": "26C5",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 613,
+      "lesson": 31
+    },
+    {
+      "en": "cool",
+      "zh": "涼快的",
+      "openmoji": "1F61B",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 614,
+      "lesson": 31
+    },
+    {
+      "en": "warm",
+      "zh": "溫暖的",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 615,
+      "lesson": 31
+    },
+    {
+      "en": "bright",
+      "zh": "晴朗的",
+      "openmoji": "1F60E",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 616,
+      "lesson": 31
+    },
+    {
+      "en": "clear",
+      "zh": "清澈的",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 617,
+      "lesson": 31
+    },
+    {
+      "en": "typhoon",
+      "zh": "颱風",
+      "openmoji": "1F300",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 618,
+      "lesson": 31
+    },
+    {
+      "en": "rainbow",
+      "zh": "彩虹",
+      "openmoji": "1F308",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 619,
+      "lesson": 31
+    },
+    {
+      "en": "umbrella",
+      "zh": "雨傘",
+      "openmoji": "2602",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 620,
+      "lesson": 31
+    },
+    {
+      "en": "sun",
+      "zh": "太陽",
+      "openmoji": "2600",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 621,
+      "lesson": 32
+    },
+    {
+      "en": "sky",
+      "zh": "天空",
+      "openmoji": "1FA75",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 622,
+      "lesson": 32
+    },
+    {
+      "en": "moon",
+      "zh": "月亮",
+      "openmoji": "1F319",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 623,
+      "lesson": 32
+    },
+    {
+      "en": "beach",
+      "zh": "海灘",
+      "openmoji": "1F60E",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 624,
+      "lesson": 32
+    },
+    {
+      "en": "flower",
+      "zh": "花",
+      "openmoji": "1F33C",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 625,
+      "lesson": 32
+    },
+    {
+      "en": "grass",
+      "zh": "草地",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 626,
+      "lesson": 32
+    },
+    {
+      "en": "hill",
+      "zh": "小山",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 627,
+      "lesson": 32
+    },
+    {
+      "en": "island",
+      "zh": "島",
+      "openmoji": "1F3DD",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 628,
+      "lesson": 32
+    },
+    {
+      "en": "lake",
+      "zh": "湖",
+      "openmoji": "1F6A3",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 629,
+      "lesson": 32
+    },
+    {
+      "en": "land",
+      "zh": "陸地",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 630,
+      "lesson": 32
+    },
+    {
+      "en": "mountain",
+      "zh": "山",
+      "openmoji": "26F0",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 631,
+      "lesson": 32
+    },
+    {
+      "en": "river",
+      "zh": "河流",
+      "openmoji": "1F6A3",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 632,
+      "lesson": 32
+    },
+    {
+      "en": "sea",
+      "zh": "海洋",
+      "openmoji": "1F9DC",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 633,
+      "lesson": 32
+    },
+    {
+      "en": "tree",
+      "zh": "樹",
+      "openmoji": "1F333",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 634,
+      "lesson": 32
+    },
+    {
+      "en": "rose",
+      "zh": "玫瑰花",
+      "openmoji": "1F339",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 635,
+      "lesson": 32
+    },
+    {
+      "en": "air",
+      "zh": "空氣",
+      "openmoji": "1FA9F",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 636,
+      "lesson": 32
+    },
+    {
+      "en": "earth",
+      "zh": "地球",
+      "openmoji": "1F30D",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 637,
+      "lesson": 32
+    },
+    {
+      "en": "fire",
+      "zh": "火",
+      "openmoji": "1F525",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 638,
+      "lesson": 32
+    },
+    {
+      "en": "ice",
+      "zh": "冰",
+      "openmoji": "1F9CA",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 639,
+      "lesson": 32
+    },
+    {
+      "en": "blow",
+      "zh": "刮風",
+      "openmoji": "1F62E-200D-1F4A8",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 640,
+      "lesson": 32
+    },
+    {
+      "en": "burn",
+      "zh": "燙傷",
+      "openmoji": "2764-FE0F-200D-1F525",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 641,
+      "lesson": 33
+    },
+    {
+      "en": "heat",
+      "zh": "熱氣",
+      "openmoji": "1FAE0",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 642,
+      "lesson": 33
+    },
+    {
+      "en": "change",
+      "zh": "變化",
+      "openmoji": "1FAB8",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 643,
+      "lesson": 33
+    },
+    {
+      "en": "wet",
+      "zh": "潮濕的",
+      "openmoji": "1F4A6",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 644,
+      "lesson": 33
+    },
+    {
+      "en": "dry",
+      "zh": "乾燥的",
+      "openmoji": "1F6B1",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 645,
+      "lesson": 33
+    },
+    {
+      "en": "cold",
+      "zh": "冷的",
+      "openmoji": "1F605",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 646,
+      "lesson": 33
+    },
+    {
+      "en": "snowy",
+      "zh": "下雪的",
+      "openmoji": null,
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 647,
+      "lesson": 33
+    },
+    {
+      "en": "cloud",
+      "zh": "雲",
+      "openmoji": "2601",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 648,
+      "lesson": 33
+    },
+    {
+      "en": "forest",
+      "zh": "森林",
+      "openmoji": "1FAC8",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 649,
+      "lesson": 33
+    },
+    {
+      "en": "sand",
+      "zh": "沙子",
+      "openmoji": "231B",
+      "theme": "Weather, Seasons & Nature",
+      "themeZh": "天氣‧季節與自然",
+      "ordinal": 650,
+      "lesson": 33
+    },
+    {
+      "en": "clothes",
+      "zh": "衣服",
+      "openmoji": "1F97C",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 651,
+      "lesson": 33
+    },
+    {
+      "en": "shirt",
+      "zh": "襯衫",
+      "openmoji": "1F3BD",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 652,
+      "lesson": 33
+    },
+    {
+      "en": "t-shirt",
+      "zh": "T恤",
+      "openmoji": "1F455",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 653,
+      "lesson": 33
+    },
+    {
+      "en": "pants",
+      "zh": "長褲",
+      "openmoji": "1F456",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 654,
+      "lesson": 33
+    },
+    {
+      "en": "shorts",
+      "zh": "短褲",
+      "openmoji": "1FA73",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 655,
+      "lesson": 33
+    },
+    {
+      "en": "skirt",
+      "zh": "裙子",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 656,
+      "lesson": 33
+    },
+    {
+      "en": "dress",
+      "zh": "洋裝",
+      "openmoji": "1F457",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 657,
+      "lesson": 33
+    },
+    {
+      "en": "coat",
+      "zh": "外套",
+      "openmoji": "1F9E5",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 658,
+      "lesson": 33
+    },
+    {
+      "en": "jacket",
+      "zh": "夾克",
+      "openmoji": "1F97C",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 659,
+      "lesson": 33
+    },
+    {
+      "en": "sweater",
+      "zh": "毛衣",
+      "openmoji": "1F9E5",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 660,
+      "lesson": 33
+    },
+    {
+      "en": "hat",
+      "zh": "帽子",
+      "openmoji": "1F452",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 661,
+      "lesson": 34
+    },
+    {
+      "en": "cap",
+      "zh": "鴨舌帽",
+      "openmoji": "1F9E2",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 662,
+      "lesson": 34
+    },
+    {
+      "en": "shoes",
+      "zh": "鞋子",
+      "openmoji": "1F45F",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 663,
+      "lesson": 34
+    },
+    {
+      "en": "socks",
+      "zh": "襪子",
+      "openmoji": "1F9E6",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 664,
+      "lesson": 34
+    },
+    {
+      "en": "glove",
+      "zh": "手套",
+      "openmoji": "1F9E4",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 665,
+      "lesson": 34
+    },
+    {
+      "en": "scarf",
+      "zh": "圍巾",
+      "openmoji": "1F9E3",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 666,
+      "lesson": 34
+    },
+    {
+      "en": "glasses",
+      "zh": "眼鏡",
+      "openmoji": "1F453",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 667,
+      "lesson": 34
+    },
+    {
+      "en": "uniform",
+      "zh": "制服",
+      "openmoji": "1F94B",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 668,
+      "lesson": 34
+    },
+    {
+      "en": "wear",
+      "zh": "穿著",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 669,
+      "lesson": 34
+    },
+    {
+      "en": "button",
+      "zh": "鈕扣",
+      "openmoji": "1F504",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 670,
+      "lesson": 34
+    },
+    {
+      "en": "pocket",
+      "zh": "口袋",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 671,
+      "lesson": 34
+    },
+    {
+      "en": "boots",
+      "zh": "靴子",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 672,
+      "lesson": 34
+    },
+    {
+      "en": "sandals",
+      "zh": "涼鞋",
+      "openmoji": "1FA74",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 673,
+      "lesson": 34
+    },
+    {
+      "en": "slippers",
+      "zh": "拖鞋",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 674,
+      "lesson": 34
+    },
+    {
+      "en": "belt",
+      "zh": "皮帶",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 675,
+      "lesson": 34
+    },
+    {
+      "en": "ring",
+      "zh": "戒指",
+      "openmoji": "1F48D",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 676,
+      "lesson": 34
+    },
+    {
+      "en": "necklace",
+      "zh": "項鍊",
+      "openmoji": "1F4FF",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 677,
+      "lesson": 34
+    },
+    {
+      "en": "bag",
+      "zh": "袋子",
+      "openmoji": "1F9F3",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 678,
+      "lesson": 34
+    },
+    {
+      "en": "backpack",
+      "zh": "背包",
+      "openmoji": "1F392",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 679,
+      "lesson": 34
+    },
+    {
+      "en": "raincoat",
+      "zh": "雨衣",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 680,
+      "lesson": 34
+    },
+    {
+      "en": "swimsuit",
+      "zh": "泳衣",
+      "openmoji": "1FA71",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 681,
+      "lesson": 35
+    },
+    {
+      "en": "beautiful",
+      "zh": "美麗的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 682,
+      "lesson": 35
+    },
+    {
+      "en": "pretty",
+      "zh": "漂亮的",
+      "openmoji": "1F97A",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 683,
+      "lesson": 35
+    },
+    {
+      "en": "cute",
+      "zh": "可愛的",
+      "openmoji": "1FA77",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 684,
+      "lesson": 35
+    },
+    {
+      "en": "handsome",
+      "zh": "英俊的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 685,
+      "lesson": 35
+    },
+    {
+      "en": "old",
+      "zh": "老的",
+      "openmoji": "1F9D3",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 686,
+      "lesson": 35
+    },
+    {
+      "en": "young",
+      "zh": "年輕的",
+      "openmoji": "1F476",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 687,
+      "lesson": 35
+    },
+    {
+      "en": "strong",
+      "zh": "強壯的",
+      "openmoji": "1F4AA",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 688,
+      "lesson": 35
+    },
+    {
+      "en": "tall",
+      "zh": "高大的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 689,
+      "lesson": 35
+    },
+    {
+      "en": "short",
+      "zh": "矮的",
+      "openmoji": "1FA73",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 690,
+      "lesson": 35
+    },
+    {
+      "en": "thin",
+      "zh": "瘦的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 691,
+      "lesson": 35
+    },
+    {
+      "en": "fat",
+      "zh": "胖的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 692,
+      "lesson": 35
+    },
+    {
+      "en": "heavy",
+      "zh": "重的",
+      "openmoji": "2763",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 693,
+      "lesson": 35
+    },
+    {
+      "en": "healthy",
+      "zh": "健康的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 694,
+      "lesson": 35
+    },
+    {
+      "en": "long",
+      "zh": "長的",
+      "openmoji": "1FA98",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 695,
+      "lesson": 35
+    },
+    {
+      "en": "good",
+      "zh": "好的",
+      "openmoji": "1FAE1",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 696,
+      "lesson": 35
+    },
+    {
+      "en": "bad",
+      "zh": "不好的",
+      "openmoji": "1F44E",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 697,
+      "lesson": 35
+    },
+    {
+      "en": "nice",
+      "zh": "好的",
+      "openmoji": "1F600",
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 698,
+      "lesson": 35
+    },
+    {
+      "en": "friendly",
+      "zh": "友善的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 699,
+      "lesson": 35
+    },
+    {
+      "en": "kind",
+      "zh": "親切的",
+      "openmoji": null,
+      "theme": "Clothes & How I Look",
+      "themeZh": "衣著與外表",
+      "ordinal": 700,
+      "lesson": 35
+    },
+    {
+      "en": "afraid",
+      "zh": "害怕的",
+      "openmoji": "1F628",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 701,
+      "lesson": 36
+    },
+    {
+      "en": "sad",
+      "zh": "悲傷的",
+      "openmoji": "1F622",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 702,
+      "lesson": 36
+    },
+    {
+      "en": "angry",
+      "zh": "生氣的",
+      "openmoji": "1F620",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 703,
+      "lesson": 36
+    },
+    {
+      "en": "bored",
+      "zh": "感到無聊的",
+      "openmoji": "1F612",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 704,
+      "lesson": 36
+    },
+    {
+      "en": "lonely",
+      "zh": "孤單的",
+      "openmoji": "1F494",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 705,
+      "lesson": 36
+    },
+    {
+      "en": "unhappy",
+      "zh": "不高興的",
+      "openmoji": "1F610",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 706,
+      "lesson": 36
+    },
+    {
+      "en": "tired",
+      "zh": "疲倦的",
+      "openmoji": "1F62B",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 707,
+      "lesson": 36
+    },
+    {
+      "en": "sick",
+      "zh": "生病的",
+      "openmoji": "1F912",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 708,
+      "lesson": 36
+    },
+    {
+      "en": "weak",
+      "zh": "虛弱的",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 709,
+      "lesson": 36
+    },
+    {
+      "en": "excited",
+      "zh": "感到興奮的",
+      "openmoji": "1F605",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 710,
+      "lesson": 36
+    },
+    {
+      "en": "glad",
+      "zh": "高興的",
+      "openmoji": "1F60A",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 711,
+      "lesson": 36
+    },
+    {
+      "en": "happy",
+      "zh": "快樂的",
+      "openmoji": "1F60A",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 712,
+      "lesson": 36
+    },
+    {
+      "en": "surprised",
+      "zh": "感到驚訝的",
+      "openmoji": "1F632",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 713,
+      "lesson": 36
+    },
+    {
+      "en": "great",
+      "zh": "極好的",
+      "openmoji": "1F44F",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 714,
+      "lesson": 36
+    },
+    {
+      "en": "free",
+      "zh": "自由的",
+      "openmoji": "1F193",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 715,
+      "lesson": 36
+    },
+    {
+      "en": "lucky",
+      "zh": "幸運的",
+      "openmoji": "1F340",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 716,
+      "lesson": 36
+    },
+    {
+      "en": "proud",
+      "zh": "驕傲的",
+      "openmoji": "1F972",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 717,
+      "lesson": 36
+    },
+    {
+      "en": "comfortable",
+      "zh": "舒適的",
+      "openmoji": "1F458",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 718,
+      "lesson": 36
+    },
+    {
+      "en": "feel",
+      "zh": "感覺",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 719,
+      "lesson": 36
+    },
+    {
+      "en": "notice",
+      "zh": "注意",
+      "openmoji": "1FAA7",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 720,
+      "lesson": 36
+    },
+    {
+      "en": "try",
+      "zh": "嘗試",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 721,
+      "lesson": 37
+    },
+    {
+      "en": "enjoy",
+      "zh": "欣賞",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 722,
+      "lesson": 37
+    },
+    {
+      "en": "love",
+      "zh": "熱愛",
+      "openmoji": "1F60D",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 723,
+      "lesson": 37
+    },
+    {
+      "en": "kiss",
+      "zh": "親吻",
+      "openmoji": "1F48F",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 724,
+      "lesson": 37
+    },
+    {
+      "en": "hate",
+      "zh": "恨",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 725,
+      "lesson": 37
+    },
+    {
+      "en": "cry",
+      "zh": "哭泣",
+      "openmoji": "1F62D",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 726,
+      "lesson": 37
+    },
+    {
+      "en": "worry",
+      "zh": "擔心",
+      "openmoji": "1F61F",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 727,
+      "lesson": 37
+    },
+    {
+      "en": "agree",
+      "zh": "同意",
+      "openmoji": "1F4AF",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 728,
+      "lesson": 37
+    },
+    {
+      "en": "believe",
+      "zh": "相信",
+      "openmoji": "1F62E",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 729,
+      "lesson": 37
+    },
+    {
+      "en": "decide",
+      "zh": "決定",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 730,
+      "lesson": 37
+    },
+    {
+      "en": "guess",
+      "zh": "猜想",
+      "openmoji": "1F937",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 731,
+      "lesson": 37
+    },
+    {
+      "en": "hope",
+      "zh": "希望",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 732,
+      "lesson": 37
+    },
+    {
+      "en": "mean",
+      "zh": "意思",
+      "openmoji": "1F47A",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 733,
+      "lesson": 37
+    },
+    {
+      "en": "dream",
+      "zh": "夢想",
+      "openmoji": "1F4AD",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 734,
+      "lesson": 37
+    },
+    {
+      "en": "mind",
+      "zh": "心；精神",
+      "openmoji": "1F92F",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 735,
+      "lesson": 37
+    },
+    {
+      "en": "need",
+      "zh": "需要",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 736,
+      "lesson": 37
+    },
+    {
+      "en": "wish",
+      "zh": "希望",
+      "openmoji": "1F932",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 737,
+      "lesson": 37
+    },
+    {
+      "en": "belong",
+      "zh": "屬於",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 738,
+      "lesson": 37
+    },
+    {
+      "en": "surprise",
+      "zh": "驚訝",
+      "openmoji": "1F92D",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 739,
+      "lesson": 37
+    },
+    {
+      "en": "joy",
+      "zh": "歡樂",
+      "openmoji": "1F923",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 740,
+      "lesson": 37
+    },
+    {
+      "en": "fun",
+      "zh": "樂趣",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 741,
+      "lesson": 38
+    },
+    {
+      "en": "trouble",
+      "zh": "麻煩",
+      "openmoji": "1F635-200D-1F4AB",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 742,
+      "lesson": 38
+    },
+    {
+      "en": "cheer",
+      "zh": "加油",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 743,
+      "lesson": 38
+    },
+    {
+      "en": "boring",
+      "zh": "無聊的",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 744,
+      "lesson": 38
+    },
+    {
+      "en": "shy",
+      "zh": "害羞的",
+      "openmoji": "1FAE3",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 745,
+      "lesson": 38
+    },
+    {
+      "en": "quiet",
+      "zh": "安靜的",
+      "openmoji": "1FAE2",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 746,
+      "lesson": 38
+    },
+    {
+      "en": "funny",
+      "zh": "有趣的",
+      "openmoji": "1F923",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 747,
+      "lesson": 38
+    },
+    {
+      "en": "polite",
+      "zh": "有禮貌的",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 748,
+      "lesson": 38
+    },
+    {
+      "en": "careful",
+      "zh": "小心的",
+      "openmoji": null,
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 749,
+      "lesson": 38
+    },
+    {
+      "en": "nervous",
+      "zh": "緊張的",
+      "openmoji": "1F605",
+      "theme": "Feelings & Thoughts",
+      "themeZh": "心情與想法",
+      "ordinal": 750,
+      "lesson": 38
+    },
+    {
+      "en": "sport",
+      "zh": "體育活動",
+      "openmoji": "1F3C7",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 751,
+      "lesson": 38
+    },
+    {
+      "en": "exercise",
+      "zh": "運動",
+      "openmoji": "1F646",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 752,
+      "lesson": 38
+    },
+    {
+      "en": "hobby",
+      "zh": "嗜好",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 753,
+      "lesson": 38
+    },
+    {
+      "en": "habit",
+      "zh": "習慣",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 754,
+      "lesson": 38
+    },
+    {
+      "en": "ball",
+      "zh": "球",
+      "openmoji": "1F3CC",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 755,
+      "lesson": 38
+    },
+    {
+      "en": "baseball",
+      "zh": "棒球",
+      "openmoji": "26BE",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 756,
+      "lesson": 38
+    },
+    {
+      "en": "basketball",
+      "zh": "籃球",
+      "openmoji": "1F3C0",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 757,
+      "lesson": 38
+    },
+    {
+      "en": "tennis",
+      "zh": "網球",
+      "openmoji": "1F3BE",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 758,
+      "lesson": 38
+    },
+    {
+      "en": "player",
+      "zh": "運動員",
+      "openmoji": "26F9",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 759,
+      "lesson": 38
+    },
+    {
+      "en": "team",
+      "zh": "隊",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 760,
+      "lesson": 38
+    },
+    {
+      "en": "swim",
+      "zh": "游泳",
+      "openmoji": "1F3CA",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 761,
+      "lesson": 39
+    },
+    {
+      "en": "jog",
+      "zh": "慢跑",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 762,
+      "lesson": 39
+    },
+    {
+      "en": "art",
+      "zh": "藝術",
+      "openmoji": "1F3A8",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 763,
+      "lesson": 39
+    },
+    {
+      "en": "dance",
+      "zh": "跳舞",
+      "openmoji": "1F483",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 764,
+      "lesson": 39
+    },
+    {
+      "en": "draw",
+      "zh": "畫圖",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 765,
+      "lesson": 39
+    },
+    {
+      "en": "movie",
+      "zh": "電影",
+      "openmoji": "1F37F",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 766,
+      "lesson": 39
+    },
+    {
+      "en": "music",
+      "zh": "音樂",
+      "openmoji": "1F3B5",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 767,
+      "lesson": 39
+    },
+    {
+      "en": "paint",
+      "zh": "繪畫",
+      "openmoji": "1FADF",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 768,
+      "lesson": 39
+    },
+    {
+      "en": "picture",
+      "zh": "圖片",
+      "openmoji": "E142",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 769,
+      "lesson": 39
+    },
+    {
+      "en": "picnic",
+      "zh": "野餐",
+      "openmoji": "1F9FA",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 770,
+      "lesson": 39
+    },
+    {
+      "en": "basket",
+      "zh": "籃",
+      "openmoji": "1F9FA",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 771,
+      "lesson": 39
+    },
+    {
+      "en": "show",
+      "zh": "表演",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 772,
+      "lesson": 39
+    },
+    {
+      "en": "sing",
+      "zh": "唱歌",
+      "openmoji": "1F3A4",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 773,
+      "lesson": 39
+    },
+    {
+      "en": "band",
+      "zh": "樂隊",
+      "openmoji": "1FA88",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 774,
+      "lesson": 39
+    },
+    {
+      "en": "camp",
+      "zh": "露營",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 775,
+      "lesson": 39
+    },
+    {
+      "en": "comic",
+      "zh": "漫畫",
+      "openmoji": "1F4A9",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 776,
+      "lesson": 39
+    },
+    {
+      "en": "favorite",
+      "zh": "最愛的",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 777,
+      "lesson": 39
+    },
+    {
+      "en": "doll",
+      "zh": "玩偶",
+      "openmoji": "1F38E",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 778,
+      "lesson": 39
+    },
+    {
+      "en": "game",
+      "zh": "遊戲",
+      "openmoji": "1F3AE",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 779,
+      "lesson": 39
+    },
+    {
+      "en": "kite",
+      "zh": "風箏",
+      "openmoji": "1FA81",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 780,
+      "lesson": 39
+    },
+    {
+      "en": "magic",
+      "zh": "魔術",
+      "openmoji": "1F9D9",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 781,
+      "lesson": 40
+    },
+    {
+      "en": "seat",
+      "zh": "座位",
+      "openmoji": "1F4BA",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 782,
+      "lesson": 40
+    },
+    {
+      "en": "song",
+      "zh": "歌曲",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 783,
+      "lesson": 40
+    },
+    {
+      "en": "noise",
+      "zh": "噪音",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 784,
+      "lesson": 40
+    },
+    {
+      "en": "story",
+      "zh": "故事",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 785,
+      "lesson": 40
+    },
+    {
+      "en": "interested",
+      "zh": "對…感興趣",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 786,
+      "lesson": 40
+    },
+    {
+      "en": "ticket",
+      "zh": "票",
+      "openmoji": "1F3AB",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 787,
+      "lesson": 40
+    },
+    {
+      "en": "toy",
+      "zh": "玩具",
+      "openmoji": "1FA80",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 788,
+      "lesson": 40
+    },
+    {
+      "en": "soccer",
+      "zh": "足球",
+      "openmoji": "26BD",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 789,
+      "lesson": 40
+    },
+    {
+      "en": "badminton",
+      "zh": "羽毛球",
+      "openmoji": "1F3F8",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 790,
+      "lesson": 40
+    },
+    {
+      "en": "dodge ball",
+      "zh": "躲避球",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 791,
+      "lesson": 40
+    },
+    {
+      "en": "volleyball",
+      "zh": "排球",
+      "openmoji": "1F3D0",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 792,
+      "lesson": 40
+    },
+    {
+      "en": "play",
+      "zh": "玩",
+      "openmoji": "1F9D9",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 793,
+      "lesson": 40
+    },
+    {
+      "en": "run",
+      "zh": "跑步",
+      "openmoji": "1F3C3",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 794,
+      "lesson": 40
+    },
+    {
+      "en": "exciting",
+      "zh": "刺激的",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 795,
+      "lesson": 40
+    },
+    {
+      "en": "interesting",
+      "zh": "有趣的",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 796,
+      "lesson": 40
+    },
+    {
+      "en": "fast",
+      "zh": "快速",
+      "openmoji": "1F4A8",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 797,
+      "lesson": 40
+    },
+    {
+      "en": "loud",
+      "zh": "大聲的",
+      "openmoji": "1F50A",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 798,
+      "lesson": 40
+    },
+    {
+      "en": "win",
+      "zh": "成功",
+      "openmoji": "1F60E",
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 799,
+      "lesson": 40
+    },
+    {
+      "en": "lose",
+      "zh": "失去",
+      "openmoji": null,
+      "theme": "Sports & Hobbies",
+      "themeZh": "運動與嗜好",
+      "ordinal": 800,
+      "lesson": 40
+    },
+    {
+      "en": "break",
+      "zh": "打破",
+      "openmoji": "1F494",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 801,
+      "lesson": 41
+    },
+    {
+      "en": "climb",
+      "zh": "爬",
+      "openmoji": "1F9D7",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 802,
+      "lesson": 41
+    },
+    {
+      "en": "hide",
+      "zh": "隱藏",
+      "openmoji": "1FAE3",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 803,
+      "lesson": 41
+    },
+    {
+      "en": "hit",
+      "zh": "打擊",
+      "openmoji": "1F3AF",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 804,
+      "lesson": 41
+    },
+    {
+      "en": "jump",
+      "zh": "跳躍",
+      "openmoji": "1F998",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 805,
+      "lesson": 41
+    },
+    {
+      "en": "kick",
+      "zh": "踢",
+      "openmoji": "1F9B5",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 806,
+      "lesson": 41
+    },
+    {
+      "en": "stand",
+      "zh": "站立",
+      "openmoji": "1F9CD",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 807,
+      "lesson": 41
+    },
+    {
+      "en": "collect",
+      "zh": "收集",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 808,
+      "lesson": 41
+    },
+    {
+      "en": "hurt",
+      "zh": "疼痛",
+      "openmoji": "1F915",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 809,
+      "lesson": 41
+    },
+    {
+      "en": "lead",
+      "zh": "指導",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 810,
+      "lesson": 41
+    },
+    {
+      "en": "practice",
+      "zh": "練習",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 811,
+      "lesson": 41
+    },
+    {
+      "en": "sleep",
+      "zh": "睡覺",
+      "openmoji": "1F62A",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 812,
+      "lesson": 41
+    },
+    {
+      "en": "use",
+      "zh": "使用",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 813,
+      "lesson": 41
+    },
+    {
+      "en": "skate",
+      "zh": "溜冰",
+      "openmoji": "1F6F9",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 814,
+      "lesson": 41
+    },
+    {
+      "en": "hurry",
+      "zh": "匆忙",
+      "openmoji": "1F3C3",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 815,
+      "lesson": 41
+    },
+    {
+      "en": "quick",
+      "zh": "迅速地",
+      "openmoji": "1F3C3",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 816,
+      "lesson": 41
+    },
+    {
+      "en": "slow",
+      "zh": "慢的",
+      "openmoji": "1F9A5",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 817,
+      "lesson": 41
+    },
+    {
+      "en": "arrive",
+      "zh": "到達",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 818,
+      "lesson": 41
+    },
+    {
+      "en": "bring",
+      "zh": "帶來",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 819,
+      "lesson": 41
+    },
+    {
+      "en": "carry",
+      "zh": "拿",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 820,
+      "lesson": 41
+    },
+    {
+      "en": "come",
+      "zh": "來到",
+      "openmoji": "1FAF4",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 821,
+      "lesson": 42
+    },
+    {
+      "en": "cross",
+      "zh": "越過",
+      "openmoji": "1F91E",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 822,
+      "lesson": 42
+    },
+    {
+      "en": "follow",
+      "zh": "跟隨",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 823,
+      "lesson": 42
+    },
+    {
+      "en": "go",
+      "zh": "走",
+      "openmoji": "1F4A8",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 824,
+      "lesson": 42
+    },
+    {
+      "en": "leave",
+      "zh": "離開",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 825,
+      "lesson": 42
+    },
+    {
+      "en": "move",
+      "zh": "移動",
+      "openmoji": "E103",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 826,
+      "lesson": 42
+    },
+    {
+      "en": "pull",
+      "zh": "拉",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 827,
+      "lesson": 42
+    },
+    {
+      "en": "push",
+      "zh": "推",
+      "openmoji": "1FAF7",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 828,
+      "lesson": 42
+    },
+    {
+      "en": "put",
+      "zh": "放",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 829,
+      "lesson": 42
+    },
+    {
+      "en": "along",
+      "zh": "沿著",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 830,
+      "lesson": 42
+    },
+    {
+      "en": "around",
+      "zh": "圍繞",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 831,
+      "lesson": 42
+    },
+    {
+      "en": "up",
+      "zh": "往上",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 832,
+      "lesson": 42
+    },
+    {
+      "en": "down",
+      "zh": "往下",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 833,
+      "lesson": 42
+    },
+    {
+      "en": "left",
+      "zh": "左邊",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 834,
+      "lesson": 42
+    },
+    {
+      "en": "right",
+      "zh": "右邊",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 835,
+      "lesson": 42
+    },
+    {
+      "en": "into",
+      "zh": "進入",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 836,
+      "lesson": 42
+    },
+    {
+      "en": "over",
+      "zh": "越過",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 837,
+      "lesson": 42
+    },
+    {
+      "en": "out",
+      "zh": "在外",
+      "openmoji": "1F635",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 838,
+      "lesson": 42
+    },
+    {
+      "en": "back",
+      "zh": "後面的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 839,
+      "lesson": 42
+    },
+    {
+      "en": "front",
+      "zh": "前面的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 840,
+      "lesson": 42
+    },
+    {
+      "en": "side",
+      "zh": "旁邊的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 841,
+      "lesson": 43
+    },
+    {
+      "en": "inside",
+      "zh": "裡面的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 842,
+      "lesson": 43
+    },
+    {
+      "en": "outside",
+      "zh": "外面的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 843,
+      "lesson": 43
+    },
+    {
+      "en": "high",
+      "zh": "高的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 844,
+      "lesson": 43
+    },
+    {
+      "en": "low",
+      "zh": "低的",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 845,
+      "lesson": 43
+    },
+    {
+      "en": "east",
+      "zh": "東方",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 846,
+      "lesson": 43
+    },
+    {
+      "en": "west",
+      "zh": "西方",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 847,
+      "lesson": 43
+    },
+    {
+      "en": "north",
+      "zh": "北方",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 848,
+      "lesson": 43
+    },
+    {
+      "en": "find",
+      "zh": "發現",
+      "openmoji": null,
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 849,
+      "lesson": 43
+    },
+    {
+      "en": "send",
+      "zh": "發送",
+      "openmoji": "1F4E9",
+      "theme": "Things I Can Do",
+      "themeZh": "我做得到的事",
+      "ordinal": 850,
+      "lesson": 43
+    },
+    {
+      "en": "driver",
+      "zh": "司機",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 851,
+      "lesson": 43
+    },
+    {
+      "en": "farmer",
+      "zh": "農夫",
+      "openmoji": "1F9D1-200D-1F33E",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 852,
+      "lesson": 43
+    },
+    {
+      "en": "leader",
+      "zh": "領導人",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 853,
+      "lesson": 43
+    },
+    {
+      "en": "officer",
+      "zh": "官員",
+      "openmoji": "1F46E",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 854,
+      "lesson": 43
+    },
+    {
+      "en": "shopkeeper",
+      "zh": "店主",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 855,
+      "lesson": 43
+    },
+    {
+      "en": "singer",
+      "zh": "歌手",
+      "openmoji": "1F9D1-200D-1F3A4",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 856,
+      "lesson": 43
+    },
+    {
+      "en": "waiter",
+      "zh": "男服務生",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 857,
+      "lesson": 43
+    },
+    {
+      "en": "waitress",
+      "zh": "女服務生",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 858,
+      "lesson": 43
+    },
+    {
+      "en": "worker",
+      "zh": "工人",
+      "openmoji": "1F9D1-200D-2695-FE0F",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 859,
+      "lesson": 43
+    },
+    {
+      "en": "doctor",
+      "zh": "醫生",
+      "openmoji": "1F637",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 860,
+      "lesson": 43
+    },
+    {
+      "en": "fisherman",
+      "zh": "漁夫",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 861,
+      "lesson": 44
+    },
+    {
+      "en": "writer",
+      "zh": "作家",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 862,
+      "lesson": 44
+    },
+    {
+      "en": "nurse",
+      "zh": "護士",
+      "openmoji": "1F9D1-200D-2695-FE0F",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 863,
+      "lesson": 44
+    },
+    {
+      "en": "police man",
+      "zh": "警察",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 864,
+      "lesson": 44
+    },
+    {
+      "en": "boss",
+      "zh": "老闆",
+      "openmoji": "1F60F",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 865,
+      "lesson": 44
+    },
+    {
+      "en": "king",
+      "zh": "國王",
+      "openmoji": "1F934",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 866,
+      "lesson": 44
+    },
+    {
+      "en": "queen",
+      "zh": "皇后",
+      "openmoji": "1F478",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 867,
+      "lesson": 44
+    },
+    {
+      "en": "case",
+      "zh": "個案",
+      "openmoji": "1F6C4",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 868,
+      "lesson": 44
+    },
+    {
+      "en": "businessman",
+      "zh": "商人",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 869,
+      "lesson": 44
+    },
+    {
+      "en": "business",
+      "zh": "商業",
+      "openmoji": "1F9D1-200D-1F4BC",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 870,
+      "lesson": 44
+    },
+    {
+      "en": "experience",
+      "zh": "經驗",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 871,
+      "lesson": 44
+    },
+    {
+      "en": "matter",
+      "zh": "事情",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 872,
+      "lesson": 44
+    },
+    {
+      "en": "chance",
+      "zh": "機會",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 873,
+      "lesson": 44
+    },
+    {
+      "en": "work",
+      "zh": "工作",
+      "openmoji": "1F4A6",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 874,
+      "lesson": 44
+    },
+    {
+      "en": "idea",
+      "zh": "主意",
+      "openmoji": "1F4AD",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 875,
+      "lesson": 44
+    },
+    {
+      "en": "job",
+      "zh": "職業",
+      "openmoji": "1F44F",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 876,
+      "lesson": 44
+    },
+    {
+      "en": "plan",
+      "zh": "計畫",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 877,
+      "lesson": 44
+    },
+    {
+      "en": "meeting",
+      "zh": "會議",
+      "openmoji": "1F91D",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 878,
+      "lesson": 44
+    },
+    {
+      "en": "own",
+      "zh": "擁有",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 879,
+      "lesson": 44
+    },
+    {
+      "en": "fireman",
+      "zh": "消防員",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 880,
+      "lesson": 44
+    },
+    {
+      "en": "possible",
+      "zh": "可能的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 881,
+      "lesson": 45
+    },
+    {
+      "en": "soldier",
+      "zh": "軍人",
+      "openmoji": "1F977",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 882,
+      "lesson": 45
+    },
+    {
+      "en": "salesman",
+      "zh": "推銷員店員",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 883,
+      "lesson": 45
+    },
+    {
+      "en": "mailman/mail carrier",
+      "zh": "郵差",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 884,
+      "lesson": 45
+    },
+    {
+      "en": "smart",
+      "zh": "聰明的",
+      "openmoji": "1F913",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 885,
+      "lesson": 45
+    },
+    {
+      "en": "stupid",
+      "zh": "笨的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 886,
+      "lesson": 45
+    },
+    {
+      "en": "rich",
+      "zh": "有錢的",
+      "openmoji": "1F9D0",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 887,
+      "lesson": 45
+    },
+    {
+      "en": "poor",
+      "zh": "貧窮的；可憐的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 888,
+      "lesson": 45
+    },
+    {
+      "en": "successful",
+      "zh": "成功的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 889,
+      "lesson": 45
+    },
+    {
+      "en": "popular",
+      "zh": "受歡迎的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 890,
+      "lesson": 45
+    },
+    {
+      "en": "strange",
+      "zh": "奇怪的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 891,
+      "lesson": 45
+    },
+    {
+      "en": "able",
+      "zh": "能夠的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 892,
+      "lesson": 45
+    },
+    {
+      "en": "famous",
+      "zh": "有名的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 893,
+      "lesson": 45
+    },
+    {
+      "en": "busy",
+      "zh": "忙碌的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 894,
+      "lesson": 45
+    },
+    {
+      "en": "hard-working",
+      "zh": "勤勉的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 895,
+      "lesson": 45
+    },
+    {
+      "en": "crazy",
+      "zh": "瘋狂的",
+      "openmoji": "1F61C",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 896,
+      "lesson": 45
+    },
+    {
+      "en": "lazy",
+      "zh": "懶惰的",
+      "openmoji": "1F9A5",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 897,
+      "lesson": 45
+    },
+    {
+      "en": "serious",
+      "zh": "嚴肅的",
+      "openmoji": "1F454",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 898,
+      "lesson": 45
+    },
+    {
+      "en": "wise",
+      "zh": "有智慧的",
+      "openmoji": "1F9D3",
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 899,
+      "lesson": 45
+    },
+    {
+      "en": "honest",
+      "zh": "誠實的",
+      "openmoji": null,
+      "theme": "Jobs & People",
+      "themeZh": "職業與人物",
+      "ordinal": 900,
+      "lesson": 45
+    },
+    {
+      "en": "road",
+      "zh": "道路",
+      "openmoji": "1F6E3",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 901,
+      "lesson": 46
+    },
+    {
+      "en": "street",
+      "zh": "街道",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 902,
+      "lesson": 46
+    },
+    {
+      "en": "block",
+      "zh": "街區",
+      "openmoji": "1FAF7",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 903,
+      "lesson": 46
+    },
+    {
+      "en": "town",
+      "zh": "市鎮",
+      "openmoji": "E203",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 904,
+      "lesson": 46
+    },
+    {
+      "en": "city",
+      "zh": "城市",
+      "openmoji": "1F3E2",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 905,
+      "lesson": 46
+    },
+    {
+      "en": "country",
+      "zh": "國家；鄉下的",
+      "openmoji": "1F3E0",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 906,
+      "lesson": 46
+    },
+    {
+      "en": "place",
+      "zh": "地方",
+      "openmoji": "1F947",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 907,
+      "lesson": 46
+    },
+    {
+      "en": "bank",
+      "zh": "銀行",
+      "openmoji": "1F3E6",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 908,
+      "lesson": 46
+    },
+    {
+      "en": "church",
+      "zh": "教堂",
+      "openmoji": "26EA",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 909,
+      "lesson": 46
+    },
+    {
+      "en": "club",
+      "zh": "俱樂部",
+      "openmoji": "1F377",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 910,
+      "lesson": 46
+    },
+    {
+      "en": "hotel",
+      "zh": "飯店",
+      "openmoji": "1F3E8",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 911,
+      "lesson": 46
+    },
+    {
+      "en": "office",
+      "zh": "辦公室",
+      "openmoji": "1F9D1-200D-1F4BC",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 912,
+      "lesson": 46
+    },
+    {
+      "en": "park",
+      "zh": "公園",
+      "openmoji": "1F3DE",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 913,
+      "lesson": 46
+    },
+    {
+      "en": "party",
+      "zh": "派對",
+      "openmoji": "1F61B",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 914,
+      "lesson": 46
+    },
+    {
+      "en": "post office",
+      "zh": "郵局",
+      "openmoji": "1F3E4",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 915,
+      "lesson": 46
+    },
+    {
+      "en": "restaurant",
+      "zh": "餐廳",
+      "openmoji": "1F35E",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 916,
+      "lesson": 46
+    },
+    {
+      "en": "museum",
+      "zh": "博物館",
+      "openmoji": "1F5BC",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 917,
+      "lesson": 46
+    },
+    {
+      "en": "zoo",
+      "zh": "動物園",
+      "openmoji": "1F405",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 918,
+      "lesson": 46
+    },
+    {
+      "en": "bakery",
+      "zh": "麵包店",
+      "openmoji": "1F96F",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 919,
+      "lesson": 46
+    },
+    {
+      "en": "bookstore",
+      "zh": "書店",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 920,
+      "lesson": 46
+    },
+    {
+      "en": "convenient store",
+      "zh": "便利商店",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 921,
+      "lesson": 47
+    },
+    {
+      "en": "department store",
+      "zh": "百貨公司",
+      "openmoji": "1F3EC",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 922,
+      "lesson": 47
+    },
+    {
+      "en": "library",
+      "zh": "圖書館",
+      "openmoji": "1F4D6",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 923,
+      "lesson": 47
+    },
+    {
+      "en": "market",
+      "zh": "市場",
+      "openmoji": "1F4B9",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 924,
+      "lesson": 47
+    },
+    {
+      "en": "shop",
+      "zh": "商店",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 925,
+      "lesson": 47
+    },
+    {
+      "en": "store",
+      "zh": "店舖",
+      "openmoji": "1FAD9",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 926,
+      "lesson": 47
+    },
+    {
+      "en": "supermarket",
+      "zh": "超級市場",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 927,
+      "lesson": 47
+    },
+    {
+      "en": "theater",
+      "zh": "劇院",
+      "openmoji": "1F3AD",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 928,
+      "lesson": 47
+    },
+    {
+      "en": "hospital",
+      "zh": "醫院",
+      "openmoji": "1F3E5",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 929,
+      "lesson": 47
+    },
+    {
+      "en": "factory",
+      "zh": "工廠",
+      "openmoji": "1F3ED",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 930,
+      "lesson": 47
+    },
+    {
+      "en": "map",
+      "zh": "地圖",
+      "openmoji": "1F5FA",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 931,
+      "lesson": 47
+    },
+    {
+      "en": "address",
+      "zh": "地址",
+      "openmoji": "1F4E2",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 932,
+      "lesson": 47
+    },
+    {
+      "en": "Taiwan",
+      "zh": "台灣",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 933,
+      "lesson": 47
+    },
+    {
+      "en": "Taipei",
+      "zh": "台北",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 934,
+      "lesson": 47
+    },
+    {
+      "en": "New Taipei",
+      "zh": "新北",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 935,
+      "lesson": 47
+    },
+    {
+      "en": "Beitou",
+      "zh": "北投",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 936,
+      "lesson": 47
+    },
+    {
+      "en": "Taoyuan",
+      "zh": "桃園",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 937,
+      "lesson": 47
+    },
+    {
+      "en": "Taichung",
+      "zh": "台中",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 938,
+      "lesson": 47
+    },
+    {
+      "en": "Tainan",
+      "zh": "台南",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 939,
+      "lesson": 47
+    },
+    {
+      "en": "Kaohsiung",
+      "zh": "高雄",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 940,
+      "lesson": 47
+    },
+    {
+      "en": "Hualien",
+      "zh": "花蓮",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 941,
+      "lesson": 48
+    },
+    {
+      "en": "America",
+      "zh": "美國",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 942,
+      "lesson": 48
+    },
+    {
+      "en": "China",
+      "zh": "中國",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 943,
+      "lesson": 48
+    },
+    {
+      "en": "world",
+      "zh": "世界",
+      "openmoji": "1F30D",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 944,
+      "lesson": 48
+    },
+    {
+      "en": "health",
+      "zh": "健康",
+      "openmoji": "1F9D1-200D-2695-FE0F",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 945,
+      "lesson": 48
+    },
+    {
+      "en": "medicine",
+      "zh": "藥物",
+      "openmoji": "1F637",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 946,
+      "lesson": 48
+    },
+    {
+      "en": "live",
+      "zh": "生活",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 947,
+      "lesson": 48
+    },
+    {
+      "en": "life",
+      "zh": "生命",
+      "openmoji": "1FABC",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 948,
+      "lesson": 48
+    },
+    {
+      "en": "sale",
+      "zh": "拍賣",
+      "openmoji": null,
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 949,
+      "lesson": 48
+    },
+    {
+      "en": "public",
+      "zh": "公共的",
+      "openmoji": "1F4E2",
+      "theme": "My Town & Country",
+      "themeZh": "城鎮與國家",
+      "ordinal": 950,
+      "lesson": 48
+    },
+    {
+      "en": "car",
+      "zh": "汽車",
+      "openmoji": "1F697",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 951,
+      "lesson": 48
+    },
+    {
+      "en": "bus",
+      "zh": "公車",
+      "openmoji": "1F68C",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 952,
+      "lesson": 48
+    },
+    {
+      "en": "bicycle/bike",
+      "zh": "腳踏車",
+      "openmoji": "1F6B2",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 953,
+      "lesson": 48
+    },
+    {
+      "en": "motorcycle",
+      "zh": "重型機車",
+      "openmoji": "1F3CD",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 954,
+      "lesson": 48
+    },
+    {
+      "en": "scooter",
+      "zh": "輕型機車",
+      "openmoji": "1F6F5",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 955,
+      "lesson": 48
+    },
+    {
+      "en": "ship",
+      "zh": "船",
+      "openmoji": "1F6A2",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 956,
+      "lesson": 48
+    },
+    {
+      "en": "boat",
+      "zh": "小船",
+      "openmoji": "26F5",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 957,
+      "lesson": 48
+    },
+    {
+      "en": "taxi",
+      "zh": "計程車",
+      "openmoji": "1F695",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 958,
+      "lesson": 48
+    },
+    {
+      "en": "train",
+      "zh": "火車",
+      "openmoji": "1F686",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 959,
+      "lesson": 48
+    },
+    {
+      "en": "truck",
+      "zh": "卡車",
+      "openmoji": "1F692",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 960,
+      "lesson": 48
+    },
+    {
+      "en": "airplane/plane",
+      "zh": "飛機",
+      "openmoji": "2708",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 961,
+      "lesson": 49
+    },
+    {
+      "en": "MRT",
+      "zh": "大眾捷運",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 962,
+      "lesson": 49
+    },
+    {
+      "en": "station",
+      "zh": "車站",
+      "openmoji": "1F689",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 963,
+      "lesson": 49
+    },
+    {
+      "en": "airport",
+      "zh": "機場",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 964,
+      "lesson": 49
+    },
+    {
+      "en": "bridge",
+      "zh": "橋",
+      "openmoji": "1F309",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 965,
+      "lesson": 49
+    },
+    {
+      "en": "traffic",
+      "zh": "交通",
+      "openmoji": "1F6A5",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 966,
+      "lesson": 49
+    },
+    {
+      "en": "way",
+      "zh": "道路",
+      "openmoji": "1F92F",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 967,
+      "lesson": 49
+    },
+    {
+      "en": "trip",
+      "zh": "旅行",
+      "openmoji": "1F69E",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 968,
+      "lesson": 49
+    },
+    {
+      "en": "visit",
+      "zh": "拜訪；參觀",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 969,
+      "lesson": 49
+    },
+    {
+      "en": "drive",
+      "zh": "開車",
+      "openmoji": "1F690",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 970,
+      "lesson": 49
+    },
+    {
+      "en": "ride",
+      "zh": "搭乘；騎車",
+      "openmoji": "1F6B2",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 971,
+      "lesson": 49
+    },
+    {
+      "en": "fly",
+      "zh": "飛行",
+      "openmoji": "1FAB0",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 972,
+      "lesson": 49
+    },
+    {
+      "en": "wait",
+      "zh": "等待",
+      "openmoji": "1FAF7",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 973,
+      "lesson": 49
+    },
+    {
+      "en": "Japan",
+      "zh": "日本",
+      "openmoji": "1F5FE",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 974,
+      "lesson": 49
+    },
+    {
+      "en": "Korea",
+      "zh": "韓國",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 975,
+      "lesson": 49
+    },
+    {
+      "en": "Singapore",
+      "zh": "新加坡",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 976,
+      "lesson": 49
+    },
+    {
+      "en": "Hong Kong",
+      "zh": "香港",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 977,
+      "lesson": 49
+    },
+    {
+      "en": "Vietnam",
+      "zh": "越南",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 978,
+      "lesson": 49
+    },
+    {
+      "en": "Thailand",
+      "zh": "泰國",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 979,
+      "lesson": 49
+    },
+    {
+      "en": "the Philippines",
+      "zh": "菲律賓",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 980,
+      "lesson": 49
+    },
+    {
+      "en": "Malaysia",
+      "zh": "馬來西亞",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 981,
+      "lesson": 50
+    },
+    {
+      "en": "Canada",
+      "zh": "加拿大",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 982,
+      "lesson": 50
+    },
+    {
+      "en": "Australia",
+      "zh": "澳洲",
+      "openmoji": "1F428",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 983,
+      "lesson": 50
+    },
+    {
+      "en": "England",
+      "zh": "英國",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 984,
+      "lesson": 50
+    },
+    {
+      "en": "France",
+      "zh": "法國",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 985,
+      "lesson": 50
+    },
+    {
+      "en": "Germany",
+      "zh": "德國",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 986,
+      "lesson": 50
+    },
+    {
+      "en": "India",
+      "zh": "印度",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 987,
+      "lesson": 50
+    },
+    {
+      "en": "celebrate",
+      "zh": "慶祝",
+      "openmoji": "1F973",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 988,
+      "lesson": 50
+    },
+    {
+      "en": "festival",
+      "zh": "節慶",
+      "openmoji": "1F96E",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 989,
+      "lesson": 50
+    },
+    {
+      "en": "gift",
+      "zh": "禮物",
+      "openmoji": "1F9E7",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 990,
+      "lesson": 50
+    },
+    {
+      "en": "Chinese New Year",
+      "zh": "中國新年",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 991,
+      "lesson": 50
+    },
+    {
+      "en": "red envelope",
+      "zh": "紅包",
+      "openmoji": "1F9E7",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 992,
+      "lesson": 50
+    },
+    {
+      "en": "Dragon Boat Festival",
+      "zh": "端午節",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 993,
+      "lesson": 50
+    },
+    {
+      "en": "Moon Festival",
+      "zh": "中秋節",
+      "openmoji": null,
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 994,
+      "lesson": 50
+    },
+    {
+      "en": "moon cake",
+      "zh": "月餅",
+      "openmoji": "1F96E",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 995,
+      "lesson": 50
+    },
+    {
+      "en": "Halloween",
+      "zh": "萬聖節",
+      "openmoji": "1F47B",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 996,
+      "lesson": 50
+    },
+    {
+      "en": "pumpkin",
+      "zh": "南瓜",
+      "openmoji": "1F967",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 997,
+      "lesson": 50
+    },
+    {
+      "en": "Christmas",
+      "zh": "聖誕節",
+      "openmoji": "1F385",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 998,
+      "lesson": 50
+    },
+    {
+      "en": "Santa Claus",
+      "zh": "聖誕老人",
+      "openmoji": "1F385",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 999,
+      "lesson": 50
+    },
+    {
+      "en": "present",
+      "zh": "禮物",
+      "openmoji": "1F381",
+      "theme": "Travel, Countries & Festivals",
+      "themeZh": "旅行‧國家與節慶",
+      "ordinal": 1000,
+      "lesson": 50
+    }
+  ]
+}

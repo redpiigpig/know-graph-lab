@@ -1,0 +1,96 @@
+{
+  "title": "基督宗教人物撲克牌",
+  "subtitle": "五十四張・耶穌至當代",
+  "backIcon": "latin cross",
+  "backMotto": "我們既有這許多的見證人如同雲彩圍著我們",
+  "ranks": {
+    "K": { "label": "耶穌與家人", "icon": "latin cross" },
+    "Q": { "label": "使徒", "icon": "fish" },
+    "J": { "label": "殉道者與隱修士", "icon": "candle" },
+    "10": { "label": "皇帝與國王", "icon": "crown" },
+    "9": { "label": "正統教父", "icon": "open book" },
+    "8": { "label": "早期宣教士", "icon": "world map" },
+    "7": { "label": "修會創立者", "icon": "prayer beads" },
+    "6": { "label": "中世紀神學家", "icon": "books" },
+    "5": { "label": "宗教改革家", "icon": "hammer" },
+    "4": { "label": "復興運動領袖", "icon": "fire" },
+    "3": { "label": "近代宣教士", "icon": "ship" },
+    "2": { "label": "現代教會領袖", "icon": "loudspeaker" },
+    "A": { "label": "當代神學家", "icon": "balance scale" }
+  },
+  "cards": [
+    { "rank": "K", "suit": "spade",   "zh": "耶穌基督",   "orig": "Jesus Christ",      "dates": "約前4–約30" },
+    { "rank": "K", "suit": "heart",   "zh": "聖母瑪利亞", "orig": "Virgin Mary",       "dates": "一世紀・無確切生卒" },
+    { "rank": "K", "suit": "diamond", "zh": "聖約瑟",     "orig": "Saint Joseph",      "dates": "一世紀・無確切生卒" },
+    { "rank": "K", "suit": "club",    "zh": "施洗約翰",   "orig": "John the Baptist",  "dates": "約前5–約30" },
+
+    { "rank": "Q", "suit": "spade",   "zh": "公義者雅各", "orig": "James the Just", "dates": "約1–約62" },
+    { "rank": "Q", "suit": "heart",   "zh": "使徒彼得",   "orig": "Saint Peter",    "dates": "約1–約64/68" },
+    { "rank": "Q", "suit": "diamond", "zh": "使徒保羅",   "orig": "Apostle Paul",   "dates": "約5–約64/67" },
+    { "rank": "Q", "suit": "club",    "zh": "使徒約翰",   "orig": "Apostle John",   "dates": "約6–約100" },
+
+    { "rank": "J", "suit": "spade",   "zh": "珀佩圖雅與斐莉琪達", "orig": "Perpetua & Felicity", "dates": "？–203" },
+    { "rank": "J", "suit": "heart",   "zh": "埃及的聖安東尼",     "orig": "Anthony of Egypt",    "dates": "251–356" },
+    { "rank": "J", "suit": "diamond", "zh": "聖喬治",             "orig": "Saint George",        "dates": "約275–303" },
+    { "rank": "J", "suit": "club",    "zh": "聖本篤",             "orig": "Benedict of Nursia",  "dates": "約480–547" },
+
+    { "rank": "10", "suit": "spade",   "zh": "君士坦丁大帝",   "orig": "Constantine the Great", "dates": "約272–337" },
+    { "rank": "10", "suit": "heart",   "zh": "阿克蘇姆的埃扎納", "orig": "Ezana of Axum",       "dates": "在位 約320–360" },
+    { "rank": "10", "suit": "diamond", "zh": "弗拉基米爾大公", "orig": "Vladimir the Great",    "dates": "約958–1015" },
+    { "rank": "10", "suit": "club",    "zh": "查理曼",         "orig": "Charlemagne",           "dates": "約747–814" },
+
+    { "rank": "9", "suit": "spade",   "zh": "大聖亞他那修",   "orig": "Athanasius",           "dates": "約296–373" },
+    { "rank": "9", "suit": "heart",   "zh": "亞歷山卓的西里爾", "orig": "Cyril of Alexandria","dates": "約376–444" },
+    { "rank": "9", "suit": "diamond", "zh": "聖奧古斯丁",     "orig": "Augustine of Hippo",   "dates": "354–430" },
+    { "rank": "9", "suit": "club",    "zh": "金口聖若望",     "orig": "John Chrysostom",      "dates": "約347–407" },
+
+    { "rank": "8", "suit": "spade",   "zh": "聖派翠克",       "orig": "Saint Patrick",         "dates": "約385–461" },
+    { "rank": "8", "suit": "heart",   "zh": "阿羅本",         "orig": "Alopen",                "dates": "活躍於635" },
+    { "rank": "8", "suit": "diamond", "zh": "聖波尼法爵",     "orig": "Saint Boniface",        "dates": "約675–754" },
+    { "rank": "8", "suit": "club",    "zh": "西里爾與美多德", "orig": "Cyril & Methodius",     "dates": "827–869／815–885" },
+
+    { "rank": "7", "suit": "spade",   "zh": "亞西西的聖方濟", "orig": "Francis of Assisi",     "dates": "約1182–1226" },
+    { "rank": "7", "suit": "heart",   "zh": "聖道明",         "orig": "Saint Dominic",         "dates": "約1170–1221" },
+    { "rank": "7", "suit": "diamond", "zh": "聖依納爵",       "orig": "Ignatius of Loyola",    "dates": "1491–1556" },
+    { "rank": "7", "suit": "club",    "zh": "聖女大德蘭",     "orig": "Teresa of Ávila",       "dates": "1515–1582" },
+
+    { "rank": "6", "suit": "spade",   "zh": "坎特伯里的安瑟倫", "orig": "Anselm of Canterbury","dates": "1033–1109" },
+    { "rank": "6", "suit": "heart",   "zh": "多瑪斯‧阿奎那", "orig": "Thomas Aquinas",        "dates": "1225–1274" },
+    { "rank": "6", "suit": "diamond", "zh": "艾克哈特大師",   "orig": "Meister Eckhart",       "dates": "約1260–1328" },
+    { "rank": "6", "suit": "club",    "zh": "格列高利‧帕拉馬斯", "orig": "Gregory Palamas",    "dates": "1296–1359" },
+
+    { "rank": "5", "suit": "spade",   "zh": "馬丁‧路德",     "orig": "Martin Luther",   "dates": "1483–1546" },
+    { "rank": "5", "suit": "heart",   "zh": "托馬斯‧克蘭麥", "orig": "Thomas Cranmer",  "dates": "1489–1556" },
+    { "rank": "5", "suit": "diamond", "zh": "門諾‧西門斯",   "orig": "Menno Simons",    "dates": "約1496–1561" },
+    { "rank": "5", "suit": "club",    "zh": "約翰‧加爾文",   "orig": "John Calvin",     "dates": "1509–1564" },
+
+    { "rank": "4", "suit": "spade",   "zh": "蓋恩夫人",         "orig": "Madame Guyon",       "dates": "1648–1717" },
+    { "rank": "4", "suit": "heart",   "zh": "親岑多夫",         "orig": "Nikolaus Zinzendorf","dates": "1700–1760" },
+    { "rank": "4", "suit": "diamond", "zh": "約翰‧衛斯理",     "orig": "John Wesley",         "dates": "1703–1791" },
+    { "rank": "4", "suit": "club",    "zh": "薩羅夫的塞拉芬",   "orig": "Seraphim of Sarov",   "dates": "1754–1833" },
+
+    { "rank": "3", "suit": "spade",   "zh": "利瑪竇",         "orig": "Matteo Ricci",     "dates": "1552–1610" },
+    { "rank": "3", "suit": "heart",   "zh": "約翰‧穆德",     "orig": "John R. Mott",     "dates": "1865–1955" },
+    { "rank": "3", "suit": "diamond", "zh": "馬雅各與馬偕",   "orig": "Maxwell & Mackay", "dates": "1836–1921／1844–1901" },
+    { "rank": "3", "suit": "club",    "zh": "瑪麗‧史萊瑟",   "orig": "Mary Slessor",     "dates": "1848–1915" },
+
+    { "rank": "2", "suit": "spade",   "zh": "倪柝聲",         "orig": "Watchman Nee",     "dates": "1903–1972" },
+    { "rank": "2", "suit": "heart",   "zh": "葛理翰",         "orig": "Billy Graham",     "dates": "1918–2018" },
+    { "rank": "2", "suit": "diamond", "zh": "若望二十三世與若望保祿二世", "orig": "John XXIII & John Paul II", "dates": "1881–1963／1920–2005" },
+    { "rank": "2", "suit": "club",    "zh": "威廉‧西摩",     "orig": "William J. Seymour","dates": "1870–1922" },
+
+    { "rank": "A", "suit": "spade",   "zh": "漢斯‧昆",           "orig": "Hans Küng",             "dates": "1928–2021" },
+    { "rank": "A", "suit": "heart",   "zh": "古斯塔沃‧古鐵雷斯", "orig": "Gustavo Gutiérrez",     "dates": "1928–2024" },
+    { "rank": "A", "suit": "diamond", "zh": "羅絲瑪麗‧蘿特",     "orig": "Rosemary R. Ruether",   "dates": "1936–2022" },
+    { "rank": "A", "suit": "club",    "zh": "馬丁‧路德‧金恩",   "orig": "Martin Luther King Jr.","dates": "1929–1968" }
+  ],
+  "jokers": [
+    { "rank": "大鬼", "zh": "撒但",       "orig": "Satan",           "dates": "試探者・控告者", "label": "背反者", "icon": "smiling face with horns" },
+    { "rank": "小鬼", "zh": "加略人猶大", "orig": "Judas Iscariot",  "dates": "？–約30",        "label": "背反者", "icon": "money bag" }
+  ],
+  "sources": [
+    "生卒年採學界通行推定；瑪利亞與約瑟無可考年代，只繫世紀。",
+    "譯名沿用使用者原稿；亞歷山卓的西里爾與斯拉夫使徒西里爾同名，卡上加地名區分。",
+    "花色不表位階，只作四色分組；點數才是分類軸（K 耶穌與家人…A 當代神學家）。"
+  ]
+}

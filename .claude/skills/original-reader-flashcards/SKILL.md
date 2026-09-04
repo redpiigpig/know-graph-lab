@@ -1,6 +1,6 @@
 ---
 name: original-reader-flashcards
-description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」— A4 橫式每頁 8 張、74.25×94 mm、正面原文背面繁中、雙面長邊翻、不印裁切線，配圖走 OpenMoji。八副：課內詞卡五副（聖經希伯來文 1000、通用希臘文上下冊各 1000、教會拉丁文上下冊各 1000）＋附錄卡三副（專名九類＋數字／親屬／曆法／職分各表）。Use when 要新增／重出某一副卡、要把某副的配圖率往上補、要換掉某張圖、要加第六副（新語言）、要改版面（卡片尺寸／字級／欄序）、頁數莫名變兩倍要 debug、或使用者說「單字卡」「字卡」「配圖」。方法在本檔，逐副現況在讀本 skill 的 references/flashcard-decks.md。
+description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」— A4 橫式每頁 8 張、74.25×94 mm、正面原文背面繁中、雙面長邊翻、不印裁切線，配圖走 OpenMoji。九副：課內詞卡五副（聖經希伯來文 1000、通用希臘文上下冊各 1000、教會拉丁文上下冊各 1000）＋附錄卡三副（專名九類＋數字／親屬／曆法／職分各表）＋國小英語 1000（唯一一副**不留白**的）。Use when 要新增／重出某一副卡、要把某副的配圖率往上補、要換掉某張圖、要加新的一副（新語言）、要改版面（卡片尺寸／字級／欄序）、頁數莫名變兩倍要 debug、或使用者說「單字卡」「字卡」「配圖」。方法在本檔，逐副現況在讀本 skill 的 references/flashcard-decks.md。
 ---
 
 # 原文讀本印刷單字卡
@@ -14,7 +14,9 @@ description: 由原文讀本詞表產出「可裁切的實體印刷單字卡」�
 > 性數狀態（希伯來）：[scripts/hebrew_card_grammar.py](../../../scripts/hebrew_card_grammar.py)
 > 看圖：[scripts/flashcard_contact_sheet.py](../../../scripts/flashcard_contact_sheet.py)
 > 逐副現況與歷史：[skills/build-original-language-reader/references/flashcard-decks.md](../../../skills/build-original-language-reader/references/flashcard-decks.md)
+> 國小英語：詞表 [scripts/build_english_vocabulary.py](../../../scripts/build_english_vocabulary.py)、配圖 [match_english_card_images.py](../../../scripts/match_english_card_images.py)、自繪圖 [english_picture_tiles.py](../../../scripts/english_picture_tiles.py)、審圖 [english_card_sheet.py](../../../scripts/english_card_sheet.py)
 > 2026-08-26：希伯來與希臘三副已 **100% 有圖、0 張缺詞性**；拉丁兩副配圖 46%／35%，是下一個目標。
+> 2026-09-04：國小英語 1000 上線，**100% 有圖**（自繪 56／國旗 19／人工 324／站上 366／繁中轉移 53／Iconify 181）。
 > 🚨 拉丁兩副由**別的 session** 負責；讀它的 map 沒問題（詞義轉移就是要讀），別重跑它的 matcher、別改它的卡檔。
 > 🚨 **希臘補滿之後，拉丁再跑一次 matcher 會自己漲** —— 它上次配圖時希臘只有 50%，而詞義轉移讀的就是希臘的 map。
 
@@ -294,7 +296,121 @@ print(collections.Counter(len(pdf.pages[i].images) for i in range(3, 252, 2)))  
 現在的作法是整行其他部分乾淨時這些異體字個別放行，所以「皇后」「公里」會過、「以后我们」仍然退；
 「号」刻意不放行，那個是真的簡體。**任何寫成往返比對的繁體中文閘都要小心這一類。**
 
-## 加第六副（新語言）時
+## 國小英語 1000：唯一一副不留白的
+
+使用者 2026-09-04：「國小單字卡不能留白」。這一句把整副卡的規則反過來——別副的最後
+一關是「挑不到就空著」，這副的最後一關是**當場報錯**。差別出在用途：別副是給已經在
+讀原文的人查對，留白只是少一條資訊；這副是給小學生看圖記字，**沒有圖的卡在這副裡
+沒有用**。
+
+四件別副沒有的事：
+
+### 一、詞表要先篩過再排
+
+站上 `/english` 那份是 20 課 × 50 字（教育部國中小基本字彙）。使用者要 50 課 × 20 字，
+而且「a the to 這種沒有具體意思的就不要了」。`build_english_vocabulary.py` 抽掉 42 個
+純虛詞（冠詞、對等連接詞、助動詞與情態動詞、指示詞、純數量詞、程度副詞），
+**同主題補回等量的具體詞**，讓每個主題仍是 50 字、全書仍是 1000 字。
+
+代名詞、疑問詞、介系詞與方位詞**留下**——那幾類畫得出來（you 👉、up ⬆️），
+單字卡向來就是「虛詞給符號不給場景」。
+
+一個主題橫跨兩課半（50 ÷ 20），所以卡背同時印課次與主題。
+
+🚨 `may/ might` 那一筆是站上把情態動詞跟五月併在一起了；抽掉情態動詞之後十二個月會
+缺五月，所以補回的是月份 May，不是別的字。
+
+🚨 **大小寫正規化只能壓「首字母大寫、其餘小寫」的普通詞。** `I` 會變成 `i`、`OK` 會
+變成 `oK`，兩個都會原封不動印在卡上，而且看起來只是「有點怪」，不像壞掉。
+
+### 二、數字、星期、月份、上下午要自己畫
+
+`english_picture_tiles.py`，56 張。這批詞任何圖庫都沒有：OpenMoji 的數字鍵帽只到 10，
+Iconify 兩萬五千個圖示名字裡沒有 Monday，而近似的圖是錯的（`eleven o'clock` 是時鐘
+不是十一）。
+
+畫出來的東西**刻意不帶文字語言**，只用數量與位置表達：
+
+| 詞 | 畫什麼 |
+|---|---|
+| 十一 | 十一個點，外加阿拉伯數字 11 |
+| 第九 | 十個圈，第九個塗滿，上面一個箭頭 |
+| 星期三 | 七格的週條，第三格塗滿 |
+| 週末 | 同一條週條，最後兩格塗滿 |
+| 十月 | 三乘四的年曆格，第十格塗滿 |
+| 上午／下午 | 鐘面塗上半圈／下半圈 |
+
+這樣卡背才是一張真的圖：正面英文、背面圖加中文，中間不靠另一種文字轉手。
+
+### 三、站上既有的 559 個 hexcode 不可信
+
+那批是拿英文名自動配的，正是本 skill 一直在防的那種錯，而且錯得很兇：
+
+| 卡 | 站上配到 | 為什麼會這樣 |
+|---|---|---|
+| order 點餐 | 🦁 獅子 | 生物分類的「目」也叫 order |
+| spell 拼單字 | 🧙 巫師 | 咒語也叫 spell |
+| fly 飛行 | 🪰 蒼蠅 | |
+| spring 春天 | 🐝 蜜蜂 | 泉水／彈簧／春天三義 |
+| table 桌子 | 🏓 桌球 | table tennis |
+| cross 越過 | 🤞 交叉手指 | |
+| body 身體 | 💀 骷髏 | |
+| age 年紀 | 🔞 未滿十八禁止 | |
+| comic 漫畫 | 💩 | |
+| summer 夏天 | 🍺 啤酒 | |
+| soldier 軍人 | 🥷 忍者 | |
+| large 大的／small 小型的 | 同一張 🤪 | **語意相對卻共用一張** |
+
+所以人工指名（`OVERRIDES` 與 `ICONIFY_OVERRIDES`）排在站上那層**前面**，蓋掉它們。
+
+🚨 **這一批只有把卡排成樣張逐張看過才抓得到**：
+
+```
+python scripts/english_card_sheet.py --source preset --page 1     # 每頁 80 張，六頁
+python scripts/english_card_sheet.py --source iconify --page 1 --per-page 100
+```
+
+圖旁邊一定要印英文與中文——只看圖示名字看不出錯。2026-09-04 這一輪看完六頁，
+改掉約九十張。
+
+### 四、抽象詞給符號不給場景
+
+understand、ready、basic、real 這種概念，Iconify 兩萬五千個名字裡一個都沒有。
+照虛詞的老規矩處理，而且**讓相關的幾張看得出關係**：
+
+correct ✅／wrong ❎／mistake ❌ 成組、ready 綠燈 🟢、fact 圖釘 📌、
+let 開鎖 🔓 對 keep 上鎖 🔒、excellent 🥇、special ✨。
+符號對抽象詞是誠實的，近似的場景圖不是。
+
+### Iconify 那層要染色
+
+四個線條圖庫抓下來是黑的，全黑線條擺在彩色 emoji 中間像沒畫完。
+`?color=%231E6FD9` 直接在 API 上染，不必自己改 SVG。指名時用**確切的圖示 id**
+（`mdi:library`），不是關鍵詞搜尋——搜尋出來的東西看起來像成功而畫的常是別的。
+`icon_names()` 的索引會被前面的圖庫覆蓋，所以 `mdi:eraser` 查索引會落空，
+但直接抓 API 是通的；要驗名字存不存在就打一次 API，別只查索引。
+
+### 共用同一張圖的檢查一定要跑
+
+```
+python -c "import json,collections; d=json.load(open('output/source-cache/flashcards/english-card-images.json',encoding='utf-8'))['images']; g=collections.defaultdict(list); [g[r['file']].append((w,r['glossZh'])) for w,r in d.items()]; [print(len(v),v) for k,v in g.items() if len(v)>2]"
+```
+
+同義共用是好的（hello／hi／greeting 都用 👋，pet／dog 都用 🐶），
+**語意相對共用就是教錯**：hungry 飢餓的與 full 吃飽的原本共用同一張 😋、
+large 與 small 共用同一張 🤪。每輪補完按圖分組把詞義讀一遍。
+
+### 出片
+
+```
+python scripts/build_english_vocabulary.py          # 詞表（改 DROP／REFILL 才要重跑）
+python scripts/english_picture_tiles.py --probe     # 自繪圖，順便出樣張看一遍
+python scripts/match_english_card_images.py --write # 配圖；還有留白會直接報錯
+python scripts/build_flashcards.py --deck eng
+python scripts/render_and_check_reader_pdfs.py --only english-flashcards-1000
+```
+
+## 加下一副（新語言）時
 
 1. 詞表要先在 [data/originalReaders/vocabulary/](../../../data/originalReaders/vocabulary/) 定案（含繁中詞義與詞性），單字卡不負責補資料層。
 2. 在 `build_flashcards.py` 的 deck 表加一筆（字型、字級梯、封面文案、詞表路徑）。

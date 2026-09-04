@@ -39,8 +39,11 @@ for stem in ("greek-original-reader-vol1", "greek-original-reader-vol2",
 for stem in ("hebrew-flashcards-1000", "greek-flashcards-volume-1",
              "greek-flashcards-volume-2", "latin-flashcards-volume-1",
              "latin-flashcards-volume-2", "hebrew-flashcards-appendix",
-             "greek-flashcards-appendix", "latin-flashcards-appendix"):
+             "greek-flashcards-appendix", "latin-flashcards-appendix",
+             "english-flashcards-1000"):
     TARGETS[stem] = (ROOT / "output/flashcards" / f"{stem}.docx", A4_LANDSCAPE)
+for stem in ("buddhist-playing-cards", "christian-playing-cards"):
+    TARGETS[stem] = (ROOT / "output/playing-cards" / f"{stem}.docx", A4_LANDSCAPE)
 
 MM = 25.4 / 72.0  # PDF 點 -> 毫米
 

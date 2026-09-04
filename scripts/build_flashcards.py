@@ -227,6 +227,25 @@ DECKS: dict[str, dict] = {
             "正面為字典引用形，附詞尾與冠詞。",
         ],
     },
+    "eng": {
+        "title": "國小英語單字卡",
+        "vocab": ROOT / "data/originalReaders/vocabulary/english-1000.json",
+        "images": CACHE / "flashcards/english-card-images.json",
+        "output": "english-flashcards-1000.docx",
+        "font": "Noto Serif",
+        "rtl": False,
+        "headword_pt": 30,
+        "shape": "english",
+        "colorNote": "框色按課次十色輪替：紅橙黃綠藍紫棕粉深灰深綠，第十一課回到紅色。"
+                     "同一課的二十張同色，方便整理與抽考。",
+        "sideNote": "正面：英文與課次。背面：彩圖、繁體中文與所屬主題。"
+                    "這一副**每張都有圖**，沒有留白的卡。",
+        "sources": [
+            "詞表：教育部國中小基本字彙，取自本站 /english 課程的一千字表。",
+            "沒有具體所指的虛詞（a／the／and／will…）不收，同主題補回等量的具體詞。",
+            "數字、星期、月份與上下午的圖為本專案自繪：十一畫十一個點、星期三畫七格週條的第三格。",
+        ],
+    },
     "lat1": {
         "title": "教會拉丁文單字卡・上冊",
         "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
@@ -570,7 +589,15 @@ def frame_shape(cell, color: str, left_mm: float, top_mm: float, shape_id: int) 
     cell.paragraphs[0]._p.append(parse_xml(xml))
 
 
-def framed(cell, lesson: int, place: tuple[int, int, int]):
+def frame_color(key) -> str:
+    """框色：詞卡給課次（十色輪替），撲克牌那類直接給色碼。"""
+
+    if isinstance(key, str):
+        return key
+    return FRAME_COLORS[(key - 1) % len(FRAME_COLORS)]
+
+
+def framed(cell, lesson, place: tuple[int, int, int]):
     """在卡片格內再放一張單格表當卡框，回傳要填內容的那一格。
 
     表格框線畫在格子邊上，所以框要用「內縮一圈的巢狀表格」做，不能直接給外層
@@ -580,7 +607,7 @@ def framed(cell, lesson: int, place: tuple[int, int, int]):
     column, row, shape_id = place
     frame_shape(
         cell,
-        FRAME_COLORS[(lesson - 1) % len(FRAME_COLORS)],
+        frame_color(lesson),
         MARGIN_H_MM + column * CARD_W_MM + FRAME_INSET_MM,
         MARGIN_V_MM + row * CARD_H_MM + FRAME_INSET_MM,
         shape_id,
@@ -825,6 +852,22 @@ def load_cards(deck: dict) -> list[dict]:
             return VARIANT_DIR / record["file"]
         record = images.get(key)
         return IMAGE_DIR / record["file"] if record else None
+
+    if deck.get("shape") == "english":
+        for entry in sorted(entries["entries"], key=lambda item: item["ordinal"]):
+            record = images.get(entry["en"])
+            if record is None:
+                raise SystemExit(f"{entry['en']} 沒有配圖——這一副不留白")
+            cards.append({
+                "key": entry["en"],
+                "headword": entry["en"],
+                "glossZh": entry["zh"],
+                # 一個主題橫跨兩課半，所以課次之外還要印主題，才知道這疊在講什麼。
+                "pos": entry["themeZh"],
+                "lesson": entry["lesson"],
+                "picture": CACHE / "flashcards" / record["file"],
+            })
+        return cards
 
     if "volumeName" in deck:  # Latin
         rows = [item for item in entries["entries"] if item["volume"] == deck["volumeName"]]
