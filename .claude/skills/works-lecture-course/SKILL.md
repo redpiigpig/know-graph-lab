@@ -1,0 +1,154 @@
+---
+name: works-lecture-course
+description: 使用者在玄奘大學開的四本授課講義（/works 的 kind=lecture 分區）從內容到課堂成品的整條線 — 章節 fragment 的註釋與參考書目（含 lecture_footnote_check 兩類靜默錯誤）、每次上課的簡報（course_slides_pptx，固定「開場互動兩頁＋課末參考書目頁」，書目直接讀講義章節不另抄）、章末小考（course_quiz_build 一次產出線上 HTML＋Drive 紙本考卷 docx＋教師解答卷）、以及 Kahoot 匯入檔。含「小考 HTML 是產生物不要直接改」「正解位置改吃內容雜湊、三邊才一致」兩個踩過的坑，和「題目只考簡報講過的」稽核法。Use when 要改講義註釋／書目、重出某一次簡報或 PDF、改小考題、重出紙本考卷、產 Kahoot 題庫、稽核題目與簡報對不對得上，或使用者說「講義要補註釋」「簡報重做」「小考要改」「Kahoot」。
+---
+
+# 授課講義・簡報・小考
+
+使用者是玄奘大學宗教與文化學系的**兼任講師**，同時開四本講義。這個 skill 管的是
+**同一份內容的三種課堂形態**：講義（讀）、簡報（投）、小考（考）。三者必須對得上——
+簡報的參考書目讀講義章節、小考只考簡報講過的東西。
+
+學期行程與課表另見 [[schedule-semester]]；教學大綱由 `course_syllabus_docx.py` 以學校
+原表單為範本替換內容產生（不重畫表格）。
+
+## 四本書
+
+| 代號 | 書 | 章節目錄 | 小考前綴 | Drive 資料夾 |
+|---|---|---|---|---|
+| WR1 | 宗教歷史地理學（17 章） | `world-religions-intro/chapters` | `q`（舊格式，見下） | — |
+| WR2 | 世界宗教文化導論（16 章） | `world-religions-intro/chapters-wr2` | `wr2` | `115-1_世界宗教文化導論` |
+| SL1 | 宗教系國文講義（16 章） | `sinographic-literature/chapters` | `sl1` | `宗教系國文講義` |
+| CH1 | 基督宗教概論（16 章） | `christianity-intro/chapters` | `ch1` | `115-1_基督宗教概論` |
+
+根目錄都在 `public/content/works/{slug}/`；Drive 根是
+`G:\我的雲端硬碟\資料\知識圖工作室\教學\`。**成品（pptx／docx／pdf／xlsx）不進 git**，
+依 `docs/repo-hygiene.md` 一律出到 Drive。
+
+**每次上課＝兩章**，第 n 次＝第 2n−1、2n 章，三門課一致；WR2／SL1／CH1 各八次。
+
+🚨 **WR1 的小考是另一套，不歸下面那條產生線管。** 它是手寫的 9 張
+`quizzes/qNN-NN.html`（兩章一張，第十七章單獨一張），每張含選擇題／名詞解釋／
+簡答與申論三大題型、配分不同，也沒有紙本 docx 流程。改它就是直接編那幾個 HTML。
+`course_quiz_build.py` 只認 `wr2`／`ch`／`sl` 三本，產出的是每章十題純選擇的 `{prefix}-chNN.html`。
+
+## 一、講義章節
+
+章節是 fragment（`_head.html` ＋ `chNN.html`），由
+`node scripts/assemble_lecture_books.mjs` 串成單一書檔供 `/works` 閱讀器讀。
+單次上課的可列印 Word 由 `course_handout_docx.py` 出（`works_series_docx.py` 做整本，
+這支做一次上課的份量，且支援 `<table>`——這幾本大量用對照表）。
+
+### 註釋與書目的寫法
+
+正文註號、章末註釋、章末書目三段固定：
+
+```html
+<sup class="footnote-ref"><a href="#fn-ch08-3" id="fnref-ch08-3">3</a></sup>
+<div class="footnotes">
+  <div class="fn-item" id="fn-ch08-3">…<a href="#fnref-ch08-3" class="footnote-backref">↩</a></div>
+</div>
+<h3>參考資料</h3><ul>…</ul>
+```
+
+🚨 **改完一定要跑 `python scripts/lecture_footnote_check.py`**（省略參數＝四本全查）。
+它抓兩類**不會報錯、只會變成「看起來正常的壞頁面」**的問題：
+
+1. **孤兒註釋**——`fn-item` 有、正文沒有對應註號（或反過來）。
+2. **註號亂序**——marker 不是 1..N 依序。在既有註釋**之間**插入新註最容易踩到。
+
+在中間插註之後用 `python scripts/lecture_footnote_renumber.py <檔案...>` 收尾，
+它會重編註號並同步 backref；手工改號幾乎一定會漏掉 backref，而漏掉的結果是
+讀者按了註號跳不回正文。
+
+現況（2026-09-04）：四本共 **1,098 條註釋／962 筆書目**。
+
+## 二、簡報
+
+```
+python scripts/course_slides_pptx.py --course=wr|sl|ch [次數...]   # 省略次數＝八次全出
+python scripts/office_to_pdf.py "<簡報資料夾>"                      # 走 Windows COM，需本機 PowerPoint
+python scripts/course_slides_audit.py                              # 版面稽核：壓字／字太小／溢出版面
+```
+
+內容資料在 `course_slides_data*.py`（wr 為 `data`＋`data2..4`；sl／ch 的主檔已在內部
+merge 續檔），渲染與版面統一由 `course_slides_pptx.py` 負責。課堂用圖走
+`course_slide_images*.py`，只收 Commons 上授權明確的圖，作者／授權／檔案頁寫進 manifest，
+渲染時自動產「圖片出處」頁。
+
+### 兩個固定區塊（使用者要求）
+
+- **封面後「開場互動」兩頁**（`s_openers()` 讀 `course_slides_openers.py`）：
+  `ask` 五題由教師口頭問全班——目的是在講課**之前**逼出既有認知，講完再問只會得到覆述；
+  `answer` 三題學生用手機簡答，答完抽籤請人詳述，所以題目必須**一兩句話答得完、沒有標準答案**。
+  三門課各八次共 192 題。這兩頁與封面一樣不編頁碼。
+- **課末「參考書目」頁**（`s_refs()` → `chapter_refs()`）：直接讀該次兩章講義的
+  `<h3>參考資料</h3>` 清單並跨章去重，**不另抄一份**——講義書目改了簡報自動跟著改。
+  每頁 9 筆、13pt。
+
+### 課堂互動工具
+
+使用者用 Windows＋PPTX，主推 **ClassPoint**（PowerPoint 外掛，播放時右上角自動出 QR code，
+簡答像便利貼浮在投影片上，工具列內建抽籤且名單就是掃碼進來的學生）。純瀏覽器替代是
+AhaSlides。Kahoot 只做選擇題，但 iOS／Android 全跨平台、學生免註冊免裝 App。
+
+🚨 **開場頁上沒有真的 QR code 與 ID，只有一個佔位方框**。Kahoot 的 Game PIN 每場不同、
+ClassPoint 播放時疊自己的碼，都印不死；唯一能印固定碼的是 AhaSlides 的自訂連結——
+使用者哪天給了碼，才把真 QR 印進簡報。**別自作主張說簡報上有 QR code。**
+
+## 三、小考（線上＋紙本＋Kahoot）
+
+```
+python scripts/course_quiz_build.py --course=wr2|ch|sl [章號...]   # 省略＝十六章全出
+python scripts/office_to_pdf.py "G:\...\教學\{課程}\小考"           # docx → pdf
+python scripts/course_kahoot_xlsx.py [--course=ch] [次數...]        # 每次上課一份 20 題
+```
+
+`course_quiz_build.py` 一次產出**三件**：線上版 HTML（`{slug}/quizzes/{prefix}-chNN.html`
+＋更新 `{slug}-quizzes.json`）、Drive 紙本考卷 docx、教師用解答卷 docx。Kahoot 匯入檔
+從線上版 HTML 轉出，所以自動跟著走。
+
+🚨 **題庫來源是 `scripts/course_quiz_data*.py`，小考 HTML 是產生物，不要直接改。**
+踩過的坑：曾把選項打散做在產生出來的 HTML 上，結果 Drive 上的紙本考卷完全沒動到，
+而且下次有人重跑 build 就會被還原。**所有題目與順序的調整都改在題庫或產生器。**
+改完 docx 記得再跑一次 `office_to_pdf.py`，同資料夾的 PDF 不會自己更新。
+
+🚨 **正解位置由產生器決定，且必須吃內容。** `balanced()` 舊版用一張只吃
+「章號×題號」的輪轉表，於是三門課同一章的正解序列一模一樣（第一章都是 BABADDDDAB），
+學生不必讀題就能猜。現在改成依 `md5(課程+章+題號+跳脫後的選項文字)` 排序：
+只跟內容有關，所以**線上 HTML、紙本 docx、Kahoot 三者必然同序**，重跑也穩定。
+驗算方式是拿 xlsx 的 C–F 欄與正解欄回頭比對題庫 HTML，480 題應全部一致。
+
+Kahoot 的字數上限網路上兩種說法（120/75 與 95/60），取嚴的一組；超長的題目**不截斷**，
+只列出來人工改短——截斷會把題意切壞。資料自第 9 列起，B 題幹、C–F 選項、G 秒數、H 正解；
+匯入器若挑格式，把 B9:H 那塊貼進 Kahoot 自己下載的範本即可，欄序一樣。
+
+### 小考只考簡報講過的
+
+使用者定的：**題目要簡單，只考當次簡報真的講到的東西；跟開場問答重複沒關係，重複反而是學到了。**
+
+稽核法：把 `DECKS[課程][次數]` 遞迴攤平成純文字，逐題檢查正解的片語有沒有落在該次簡報裡。
+🚨 三類會誤判，先排掉再看結果：
+
+1. **「何者『不』屬於」型**——正解是刻意造的假選項，本來就該不在簡報上；要驗的是**另外三個**。
+2. **兩字答案**（先知／形聲／上帝／聖餐／喪禮）——片語下限設 3 字會把它們全判成沒講。
+3. **數字答案**（1919 年）——只抓中文與拉丁字的比對會漏掉。
+
+反過來，把下限放到 2 字又會讓「國立臺灣文學館」靠簡報裡的「臺灣」蒙混過關，所以
+最後一關另跑一次**只看專名**（書名號、機構、年代、拉丁詞）的高精度比對。
+
+2026-09-04 稽核 480 題，真正落空的四題已改寫（印度教名稱來歷去掉波斯／英國殖民行政那層、
+四大目的去掉梵文轉寫、《雲笈七籤》換成道教文學為何被文學史低估、沈光文與《全臺詩》編纂單位
+換成方志碑碣對照與人間佛教新文類）。
+
+## 現況（2026-09-04）
+
+| 成品 | 數量 | 位置 |
+|---|---|---|
+| 講義註釋／書目 | 1,098 條／962 筆 | 四本章節 fragment |
+| 簡報 | 24 份 pptx＋pdf | Drive `教學/{課程}/簡報/` |
+| 開場互動題 | 192 題 | `course_slides_openers.py` |
+| 紙本小考 | 96 份 docx＋96 份 pdf（考卷／解答卷各 16 章×3 課） | Drive `教學/{課程}/小考/` |
+| Kahoot | 24 份 xlsx／480 題 | Drive `教學/{課程}/Kahoot/` |
+
+相關記憶：[[project_two_textbooks]]、[[project_lecture_slides]]、[[feedback_ui_no_text_overflow]]。
