@@ -5,11 +5,11 @@
   "sources": {
     "tile": 56,
     "flag": 19,
-    "override": 323,
+    "override": 319,
     "preset": 366,
-    "annotation": 1,
-    "zh_transfer": 52,
-    "iconify": 183,
+    "annotation": 0,
+    "zh_transfer": 45,
+    "iconify": 195,
     "none": 0
   },
   "images": {
@@ -878,8 +878,8 @@
       "lesson": 8
     },
     "dark": {
-      "file": "openmoji-618/1F311.png",
-      "source": "override",
+      "file": "english-icons/mdi-invert-colors.png",
+      "source": "iconify",
       "glossZh": "深色的；暗的",
       "lesson": 8
     },
@@ -968,8 +968,8 @@
       "lesson": 8
     },
     "shoulder": {
-      "file": "openmoji-618/1F9BE.png",
-      "source": "zh_transfer",
+      "file": "english-icons/game-icons-shoulder-armor.png",
+      "source": "iconify",
       "glossZh": "肩膀",
       "lesson": 8
     },
@@ -1082,8 +1082,8 @@
       "lesson": 9
     },
     "touch": {
-      "file": "openmoji-618/1F446.png",
-      "source": "override",
+      "file": "english-icons/mdi-gesture-tap-hold.png",
+      "source": "iconify",
       "glossZh": "觸碰",
       "lesson": 9
     },
@@ -1826,8 +1826,8 @@
       "lesson": 16
     },
     "meal": {
-      "file": "openmoji-618/1F958.png",
-      "source": "override",
+      "file": "english-icons/mdi-silverware-variant.png",
+      "source": "iconify",
       "glossZh": "一餐",
       "lesson": 16
     },
@@ -2822,8 +2822,8 @@
       "lesson": 24
     },
     "problem": {
-      "file": "openmoji-618/1FAA8.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-alert-circle.png",
+      "source": "iconify",
       "glossZh": "困難；問題",
       "lesson": 24
     },
@@ -2942,8 +2942,8 @@
       "lesson": 25
     },
     "simple": {
-      "file": "openmoji-618/E24C.png",
-      "source": "annotation",
+      "file": "english-icons/ph-feather.png",
+      "source": "iconify",
       "glossZh": "簡單的；單純的",
       "lesson": 25
     },
@@ -2954,8 +2954,8 @@
       "lesson": 25
     },
     "appear": {
-      "file": "openmoji-618/3030.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-eye-plus-outline.png",
+      "source": "iconify",
       "glossZh": "似乎",
       "lesson": 25
     },
@@ -2984,8 +2984,8 @@
       "lesson": 25
     },
     "keep": {
-      "file": "openmoji-618/1F512.png",
-      "source": "override",
+      "file": "english-icons/mdi-content-save.png",
+      "source": "iconify",
       "glossZh": "保持",
       "lesson": 25
     },
@@ -4172,8 +4172,8 @@
       "lesson": 35
     },
     "healthy": {
-      "file": "openmoji-618/1F3CB.png",
-      "source": "zh_transfer",
+      "file": "english-icons/game-icons-health-normal.png",
+      "source": "iconify",
       "glossZh": "健康的",
       "lesson": 35
     },
@@ -4388,8 +4388,8 @@
       "lesson": 37
     },
     "decide": {
-      "file": "openmoji-618/263A.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-call-split.png",
+      "source": "iconify",
       "glossZh": "決定",
       "lesson": 37
     },
@@ -4424,8 +4424,8 @@
       "lesson": 37
     },
     "need": {
-      "file": "openmoji-618/2757.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-priority-high.png",
+      "source": "iconify",
       "glossZh": "需要",
       "lesson": 37
     },
@@ -5240,8 +5240,8 @@
       "lesson": 44
     },
     "matter": {
-      "file": "openmoji-618/1F4BC.png",
-      "source": "zh_transfer",
+      "file": "english-icons/mdi-file-question.png",
+      "source": "iconify",
       "glossZh": "事情",
       "lesson": 44
     },

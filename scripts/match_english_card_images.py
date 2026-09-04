@@ -170,7 +170,6 @@ OVERRIDES: dict[str, str] = {
     "rectangle": "black rectangle",
     "oval": "white circle",
     "cube": "ice",           # 立方體（與 ice 冰塊同一張，OpenMoji 的 🧊 就是方塊冰）
-    "dark": "new moon",
     "silver": "2nd place medal",
     "wide": "left-right arrow",
     "narrow": "pinching hand",
@@ -185,7 +184,6 @@ OVERRIDES: dict[str, str] = {
     "balloon": "balloon",
     "ribbon": "ribbon",
     # ── 身體與動作 ──
-    "touch": "backhand index pointing up",
     "take": "open hands",
     "party": "party popper",
     "sunny": "sun with face",
@@ -250,7 +248,7 @@ OVERRIDES: dict[str, str] = {
     "important": "red exclamation mark",
     # ── 食物 ──
     "menu": "clipboard",
-    "meal": "shallow pan of food",
+    "dinner": "shallow pan of food",
     "noodles": "steaming bowl",
     "beef": "cut of meat",
     "ham": "poultry leg",
@@ -458,7 +456,6 @@ OVERRIDES: dict[str, str] = {
     "basic": "abacus",                        # 基本的（與 count 計算同一張，都是最基礎的算具）
     "become": "clockwise vertical arrows",    # 變成
     "give": "palm up hand",                    # 給
-    "keep": "locked",                         # 保持
     "let": "unlocked",                        # 讓＝放行
     "want": "drooling face",                  # 要
     "east": "sunrise",
@@ -614,6 +611,19 @@ ICONIFY_OVERRIDES: dict[str, str] = {
     "how": "mdi:head-question",
     "pretty": "mdi:flower-tulip",
     "morning": "mdi:weather-sunset-up",
+    # ── 第四輪：繁中詞義轉移那一層看過的 ──
+    "touch": "mdi:gesture-tap-hold",          # 觸碰（原本與 point 指出共用 ☝️）
+    "meal": "mdi:silverware-variant",         # 一餐（原本與 dinner 晚餐共用 🥘）
+    "dark": "mdi:invert-colors",              # 深色的（原本與 round 圓的一樣是個黑圓）
+    "simple": "ph:feather",                   # 簡單的（與 easy 同義，共用一張）
+    "appear": "mdi:eye-plus-outline",         # 似乎（原本是一條波浪線）
+    "problem": "mdi:alert-circle",            # 問題（原本是一顆石頭）
+    "shoulder": "game-icons:shoulder-armor",  # 肩膀（原本是機械手臂）
+    "matter": "mdi:file-question",            # 事情（原本與 work 工作共用公事包）
+    "need": "mdi:priority-high",              # 需要（原本與 important 共用 ❗）
+    "healthy": "game-icons:health-normal",    # 健康的（原本與 strong 共用舉重）
+    "decide": "mdi:call-split",               # 決定（原本與 enjoy 共用 😌）
+    "keep": "mdi:content-save",               # 保持（原本與 safe 安全的共用 🔒）
     # ── 第三輪：逐張看樣張抓出來的 ──
     # 🚨 you 站上配到的 `index pointing at the viewer` 印出來像一顆拳頭——
     # skill 早就記過這一張，這副卡又踩了一次。
