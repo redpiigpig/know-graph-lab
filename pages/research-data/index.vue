@@ -80,6 +80,15 @@
           <span class="tool-badge bg-rose-50 text-rose-600">5 類資料</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/theses" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
+          <div class="tool-icon bg-teal-50 text-teal-600">🎓</div>
+          <div class="flex-1">
+            <h2 class="tool-title">學位論文全文</h2>
+            <p class="tool-desc">各校機構典藏授權公開的相關碩博士論文，逐頁轉錄可全文檢索；本論文的二手研究底盤</p>
+          </div>
+          <span class="tool-badge bg-teal-50 text-teal-600">24 本</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
