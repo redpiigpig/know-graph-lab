@@ -30,6 +30,10 @@ from pathlib import Path
 
 _CJK = re.compile(r"[一-鿿]")
 
+# 使用者本人的著作：書目裡會引到自己的碩論與研討會論文，那些稿子就在手上，
+# 放進獵表只會每天空跑。
+OWN_WORKS_AUTHORS = {"張辰瑋", "Chang Chen-wei", "redpiigpig"}
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
@@ -279,6 +283,13 @@ def held_titles() -> set[str]:
 
 
 def existing_wanted() -> set[str]:
+    """既有獵表的比對鍵。
+
+    🚨 要跳過本支自己產的 bib-* 項目。zlib_wanted.py 會把 bibliography.jsonl
+    併進 output/zlib_wanted_all.jsonl，所以第二次執行時拿總清單來比對，會把自己
+    上一輪的成果全判成「已在獵表」，然後寫出一個空檔把清單清光 —— 沒有任何錯誤
+    訊息，看起來像成功。這支的輸出永遠由這支重新產生，不跟自己比對。
+    """
     p = ROOT / "output" / "zlib_wanted_all.jsonl"
     if not p.exists():
         return set()
@@ -287,6 +298,8 @@ def existing_wanted() -> set[str]:
         if not line.strip():
             continue
         d = json.loads(line)
+        if str(d.get("key", "")).startswith("bib-"):
+            continue
         out.add(norm_key(d.get("expect") or "", d.get("who") or ""))
         out.add(norm_key(d.get("expect") or ""))
     return out
@@ -323,6 +336,9 @@ def main() -> int:
         if author_blacklist.match(x["author"], x["title"]):
             drop["黑名單"] += 1
             continue
+        # 使用者自己的著作不必去書庫找 —— 稿子就在手上
+        if x["author"].strip() in OWN_WORKS_AUTHORS:
+            continue
         # 一本書出兩個目標：中譯本與原文本。使用者的規矩是「有中譯就一起下載，
         # 沒有就只要原文」——語言閘（zlib_fetch.mjs 的 wantLang）會讓找不到中譯的
         # 那一格空手而回，而不是退而抓回同一本原文浪費額度。
@@ -330,6 +346,15 @@ def main() -> int:
         label = f"{x['author']}《{x['title']}》" if x["author"] else x["title"]
         q = f"{x['title']} {x['author']}".strip()
         title_is_zh = bool(_CJK.search(x["title"]))
+        author_is_zh = bool(_CJK.search(x["author"])) if x["author"] else False
+        if title_is_zh and author_is_zh:
+            # 中文作者寫的中文書：沒有「原文 vs 中譯」之分，出兩格等於白燒一格額度。
+            out.append({
+                "key": f"bib-{base}",
+                "query": q, "expect": x["title"], "who": x["author"],
+                "source": x["source"], "zh": label,
+            })
+            continue
         out.append({
             "key": f"bib-{base}-orig",
             "query": q,

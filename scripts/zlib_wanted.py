@@ -37,6 +37,58 @@ HUNT_FILES = [
 ]
 OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
 
+# 一天只抓得到十本，六千多筆照雜湊亂序排等於永遠輪不到正在寫的那幾本。
+# 排序依據是「為什麼現在需要這本書」——有時程壓力的排前面：
+#   10 學位論文（送件有期限）
+#   20 下學期要開的講義（開課前要備齊）
+#   30 正在改寫成期刊論文的稿子
+#   40 書籍寫作（長期，沒有硬期限）
+#   60 主題策展書單（想讀，但不擋任何進度）
+# 數字留空隙，之後插新計畫不必重排。
+PRIORITY = {
+    "biblio-hcu-phd": 10,
+    "biblio-christianity-intro": 20,
+    "biblio-world-religions-intro": 20,
+    "biblio-sinographic-literature": 20,
+    "biblio-yinshun-shengyan": 30,
+    "biblio-bajingfa": 30,
+    "biblio-pong-pastoral-spirituality": 30,
+    "biblio-genesis-philosophy": 40,
+    "biblio-mahaprajapati-revolution": 40,
+    "biblio-theological-studies-manifesto": 40,
+    "biblio-bachelor-evangelical": 50,
+}
+DEFAULT_PRIORITY = 60
+
+
+def prioritize(items: list[dict]) -> list[dict]:
+    """依 PRIORITY 分層，層內在各來源之間輪流取，同一本書中譯排在原文前面。
+
+    層內輪流是刻意的：genesis-philosophy 一家就佔了三分之一，照來源整批排會讓
+    它獨吞好幾個月的額度，其餘計畫全部餓死。
+    中譯排前面是因為使用者讀中文最快；原文那一格晚幾天到不影響。
+    """
+    from collections import defaultdict, deque
+
+    buckets: dict[int, dict[str, deque]] = defaultdict(lambda: defaultdict(deque))
+    for it in items:
+        src = it.get("source", "")
+        # 同一本書的兩格：-zh 先、-orig 後
+        buckets[PRIORITY.get(src, DEFAULT_PRIORITY)][src].append(it)
+    for tier in buckets.values():
+        for src, q in tier.items():
+            ordered = sorted(q, key=lambda x: (0 if x["key"].endswith("-zh") else 1, x["key"]))
+            tier[src] = deque(ordered)
+
+    out: list[dict] = []
+    for lvl in sorted(buckets):
+        srcs = list(buckets[lvl])
+        while any(buckets[lvl][s] for s in srcs):
+            for s in srcs:
+                if buckets[lvl][s]:
+                    out.append(buckets[lvl][s].popleft())
+    return out
+
 _AUTHOR_RE = re.compile(r"^\s*▍\s*(.+?)\s*(?:\((.+?)\))?\s*(?:約?\s*[前\d].*)?$")
 _WANT_RE = re.compile(r"^\s*\[需獵\]\s*《(.+?)》(?:\s*（(.+?)）)?")
 # 基督宗教研究那份是另一種排版：一行一本，[領域] 作者｜《書名》 譯者 / 出版社
@@ -148,6 +200,11 @@ def main() -> None:
 
     if a.stats:
         return
+    merged = prioritize(merged)
+    print("\n排序後前 12 筆（先做的）：")
+    for it in merged[:12]:
+        print(f"  [{it.get('source', '')[:28]:28}] {it.get('zh') or it.get('query', '')[:46]}")
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", encoding="utf-8") as f:
         for it in merged:
