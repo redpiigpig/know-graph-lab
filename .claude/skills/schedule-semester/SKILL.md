@@ -1,6 +1,6 @@
 ---
 name: schedule-semester
-description: 使用者個人的學期行事曆與課表維護 — 把每學期的授課／修課／家教／法會會議／出遊整理成三件互相對齊的成品：Google 日曆「115-1 玄奘教課」、/works 的週課表 artifact、Drive 上的 Word 課表與行事曆。含玄奘大學公開開課查詢（Big5）與台神課表的取源路徑、玄奘與台神兩套節次對照、Google 日曆連接器的三個坑（不能建日曆／全天事件位移一天／參數名不是 timeMin），以及「哪些行程可以進日曆、哪些不行」的使用者規則。Use when 要新增或修改任何一筆行程、改課表、換學期、查某門課的節次、產列印用的 Word 課表，或使用者說「幫我排行事曆」「課表要改」「加一筆行程」。
+description: 使用者個人的學期行事曆與課表維護 — 把每學期的授課／修課／家教／法會會議／出遊整理成三件互相對齊的成品：Google 日曆「115-1 玄奘教課」、/works 的週課表 artifact、Drive 上的彩色 Word 週課表（行事曆不進 Word，只留 Google 日曆）。含玄奘大學公開開課查詢（Big5）與台神課表的取源路徑、玄奘與台神兩套節次對照、Google 日曆連接器的三個坑（不能建日曆／全天事件位移一天／參數名不是 timeMin），以及「哪些行程可以進日曆、哪些不行」的使用者規則。Use when 要新增或修改任何一筆行程、改課表、換學期、查某門課的節次、產列印用的 Word 課表，或使用者說「幫我排行事曆」「課表要改」「加一筆行程」。
 ---
 
 # 學期行事曆與課表
@@ -14,7 +14,7 @@ description: 使用者個人的學期行事曆與課表維護 — 把每學期�
 |---|---|---|
 | Google 日曆 | 日曆 `115-1 玄奘教課`（id 見下） | **只有**假日授課與非每週的外務 |
 | 週課表網頁 | artifact「辰瑋 115-1 週課表」 | 一週七天的完整格線，含每週固定的課與家教 |
-| Word 課表 | `G:\我的雲端硬碟\玄奘\博一\115-1 課表與行事曆.docx` | 第 1 頁週課表、第 2 頁學期行事曆 |
+| Word 課表 | `G:\我的雲端硬碟\玄奘\博一\115-1 週課表.docx`（＋同名 .pdf） | **只有**彩色單頁週課表；行事曆不進 Word |
 
 改任何一筆，**三件都要跟著改**。Word 由 `scripts/semester_schedule_docx.py` 產生，
 artifact 的 `EVENTS` 陣列與該腳本的 `GRID` 是同一份資料的兩種寫法——改一邊記得改另一邊。
@@ -33,6 +33,10 @@ artifact 的 `EVENTS` 陣列與該腳本的 `GRID` 是同一份資料的兩種�
    算出星期幾才知道那天是不是授課日、會不會撞家教。用 `datetime.date.fromisoformat(d).weekday()`。
 5. **「確定沒問題就把撞期的全刪掉」。** 日期修正後原本的衝突註記多半就不成立了，直接清掉，
    不要留著「已解除」之類的痕跡。
+6. **行事曆只在 Google 日曆，Word 不印。**（2026-09-04 定調）使用者要的紙本只有那張**彩色**
+   週課表——教課藍、修課綠、家教橙，配色跟 artifact 同一組。假日授課與外務查手機就好，
+   不要再在 Word 裡多排一頁行事曆。黑白版的表格他不要。
+   `SAT`／`SUN`／`OTHER` 仍留在腳本裡當日曆的對照底本，只有 `--calendar` 才會印出來。
 
 ## 🚨 Google 日曆連接器的三個坑
 
@@ -135,7 +139,7 @@ p = urllib.parse.urlencode({'Years':'115','Term':'1','TeamNo':'00',
 
 | 腳本 | 做什麼 |
 |---|---|
-| `scripts/semester_schedule_docx.py` | 產 Word 課表＋行事曆到 Drive。改課表**先改這支的 `GRID`／`SAT`／`SUN`／`OTHER`** |
+| `scripts/semester_schedule_docx.py` | 產彩色 Word 週課表到 Drive。改課表**先改這支的 `GRID`**；假日授課與外務改 `SAT`／`SUN`／`OTHER`（只餵 `--calendar` 與日曆核對用） |
 | `scripts/weekend_classes_ics.py` | 假日授課 → `.ics`。章節主題從 `public/content/works/*/chapters/ch??.html` 的 `<h2>` 讀 |
 | `scripts/personal_events_ics.py` | 家教／法會會議／出遊 → 三個 `.ics`，`from weekend_classes_ics import esc, fold` |
 
@@ -149,7 +153,7 @@ ics 那兩支是「四個日曆」方案的遺留物。現在走 API 直接寫�
 
 **改日期** → 先算星期幾 → `update_event` → 檢查該日還有沒有別的事 → 順手清掉不再成立的註記。
 
-**改課表** → 改 `semester_schedule_docx.py` 的 `GRID` → 重跑產 Word → 改 artifact 的 `EVENTS`
+**改課表** → 改 `semester_schedule_docx.py` 的 `GRID` → 重跑產 Word（再用 Word COM `ExportAsFixedFormat($dst,17)` 出 PDF）→ 改 artifact 的 `EVENTS`
 → 更新頁首 `tally` 與 `GROUPS` 的門數／學分／場次 → republish → `SendUserFile` 把 docx 送給使用者。
 
 **artifact 的 republish 有前置條件**：必須先用 Read 工具讀過**已發佈版本存檔的每一行**
