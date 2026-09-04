@@ -24,7 +24,7 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 ## 排程
 
 `scripts/run_airiti_batch.bat <篇數>`，Windows 排程四個時段各 50 篇＝一天 200 篇：
-`KGL_Airiti_1` 09:30、`KGL_Airiti_2` 12:00、`KGL_Airiti_3` 14:30、`KGL_Airiti_4` 17:00。
+`KGL_Airiti_1` 09:30、`KGL_Airiti_2` 11:30、`KGL_Airiti_3` 14:30、`KGL_Airiti_4` 16:30。
 log 在 `c:	mpiriti_download.log`。
 
 🚨 **只排 09:00–18:00**。使用者的機器只有在學校時才拿得到玄奘的 IP，
