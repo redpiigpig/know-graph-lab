@@ -6,6 +6,15 @@
 #
 # ASCII-only on purpose: PS 5.1 on a zh-TW box misreads UTF-8-no-BOM scripts.
 $ErrorActionPreference = 'Continue'
+# Two separate encoding bugs used to make this log unreadable, which meant a
+# failed run left no usable evidence (2026-09-04: the run died at the DiamWall
+# and the log said nothing readable about it).
+#   1. PS 5.1 decodes a child process's stdout with Console::OutputEncoding,
+#      which is cp950 on this zh-TW box -- python's UTF-8 output was already
+#      mangled before it reached the file.
+#   2. `*>>` writes UTF-16LE while Add-Content -Encoding utf8 writes UTF-8,
+#      so the file ended up with both encodings interleaved.
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $ROOT = 'c:\Users\user\Desktop\know-graph-lab'
 Set-Location $ROOT
 $log = "$ROOT\scripts\logs\zlib_daily.log"
@@ -21,11 +30,13 @@ $limit = 12
 if ($args.Count -ge 1) { $limit = [int]$args[0] }
 
 Note "start (limit=$limit)"
-& 'C:\Users\user\AppData\Local\Python\bin\python.exe' -X utf8 scripts\zlib_wanted.py *>> $log
+& 'C:\Users\user\AppData\Local\Python\bin\python.exe' -X utf8 scripts\zlib_wanted.py *>&1 |
+    Out-File -FilePath $log -Append -Encoding utf8
 Note "wanted list refreshed"
 
 # The browser has to be visible - z-library's DiamWall rejects headless.
-& node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --limit $limit *>> $log
+& node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --limit $limit *>&1 |
+    Out-File -FilePath $log -Append -Encoding utf8
 Note "fetch exit=$LASTEXITCODE"
 
 $drop = Get-ChildItem "$ROOT\z-lib" -File -ErrorAction SilentlyContinue

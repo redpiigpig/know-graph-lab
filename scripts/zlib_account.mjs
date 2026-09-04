@@ -63,8 +63,21 @@ try {
     console.log('登入後 url:', page.url())
   }
 
-  for (const [label, path] of [['PROFILE', '/profile'], ['DONATE', '/plans.php']]) {
-    const ok = await gotoPastWall(page, HOST + path)
+  // 捐款頁的路徑會改（/plans.php 與 /donate 都已 404），別再寫死 —— 從 profile
+  // 頁把 Donate 連結的實際 href 抓出來再走。
+  await gotoPastWall(page, `${HOST}/profile`)
+  const donateHref = await page.evaluate(() => {
+    const a = [...document.querySelectorAll('a')]
+      .find((x) => /donate|premium|plan|subscri/i.test(x.textContent + ' ' + x.getAttribute('href')))
+    return a ? a.getAttribute('href') : null
+  })
+  console.log('profile 頁上的 Donate 連結:', donateHref)
+
+  const targets = [['PROFILE', '/profile']]
+  if (donateHref) targets.push(['DONATE', donateHref])
+
+  for (const [label, path] of targets) {
+    const ok = await gotoPastWall(page, path.startsWith('http') ? path : HOST + path)
     console.log(`\n===== ${label}  (${path})  wall-passed=${ok} =====`)
     console.log('title:', await page.title())
     const text = await page.evaluate(() => document.body?.innerText || '')

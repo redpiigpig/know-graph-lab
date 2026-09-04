@@ -96,7 +96,7 @@ export function isBlacklisted(...fields) {
   return BLACKLIST.some((n) => hay.includes(n))
 }
 
-export function rank(hit, query = '', expect = '', who = '') {
+export function rank(hit, query = '', expect = '', who = '', wantLang = '') {
   const lang = (hit.language || '').toLowerCase()
   const ext = (hit.extension || '').toLowerCase()
   // 站上有一批「書名就是別人的搜尋字串」的垃圾上傳（多半是 txt/english），
@@ -104,6 +104,11 @@ export function rank(hit, query = '', expect = '', who = '') {
   const title = (hit.title || '').trim()
   // 使用者判定不值得讀的作者（data/author-blacklist.json）——寧可沒命中也別抓回來
   if (isBlacklisted(hit.author, title)) return -100
+  // 語言閘。一本書同時掛「中譯本」與「原文本」兩個目標時，若中譯本根本不存在，
+  // 沒有這道閘就會退而抓回同一本原文 —— 重複下載，還吃掉一天十本裡的一格。
+  // 找不到就讓它空手而回，明天再說。
+  if (wantLang === 'zh' && !lang.includes('chinese')) return -100
+  if (wantLang === 'orig' && lang.includes('chinese')) return -100
   if (['txt', 'rar', 'zip', 'doc'].includes(ext)) return -100
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
   const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
@@ -189,7 +194,7 @@ async function main() {
         await page.waitForTimeout(3000)
         continue
       }
-      const scored = hits.map((h) => [rank(h, w.query, w.expect, w.who), h])
+      const scored = hits.map((h) => [rank(h, w.query, w.expect, w.who, w.lang || ''), h])
       if (DRY) {
         // 只查的時候把被閘擋掉的也列出來，才看得出「是閘太嚴，還是站上真的沒有」
         for (const [r, h] of scored.slice(0, 6)) {
