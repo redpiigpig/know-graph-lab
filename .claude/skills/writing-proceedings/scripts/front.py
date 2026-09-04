@@ -149,6 +149,7 @@ NAME_FIX = {"阿旺赤列": "昂望聽列"}
 ROLE_FIX = {"A03": ("開幕致詞", "開幕式")}          # 場次二主持人已換人
 RANK_FIX = {"A19": "執行長"}                       # 資料庫作「負責人」，議程已更新
 INSERT_BEFORE = {
+    "A03": ("簡紹琦", "玄奘大學／校長", "開幕致詞", "開幕式"),
     "A14": ("光持法師",
             "玄奘大學宗教與文化學系；玄奘大學國際暨兩岸事務處／專任助理教授；國際長",
             "主持人", "場次二：社會、情緒與倫理學習（SEE Learning）"),
@@ -283,9 +284,9 @@ def agenda():
         has_tib = any("ༀ" <= c <= "࿿" for c in txt)
         flat = txt.replace(" ", "").replace("　", "")
         if in_tbl:
-            # 表首的「議程表」與會議日期也是標題，一併置中
-            role = "ccell" if (flat == "議程表" or flat.startswith("中華民國115年")) \
-                else "cell"
+            # 表首的「議程表」與會議日期也是標題，一併置中；跨欄的收尾列同此
+            role = "ccell" if (flat == "議程表" or flat.startswith("中華民國115年")
+                               or flat == "第一天議程圓滿結束") else "cell"
         elif txt.startswith("第三屆臺灣藏傳佛教論壇"):
             role = "ctitle"          # 大會名稱置中
         elif txt.startswith("會議主題"):
