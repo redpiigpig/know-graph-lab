@@ -23,9 +23,26 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 
 ## 排程
 
-`scripts/run_airiti_batch.bat <篇數>`，Windows 排程兩個時段：
-`KGL_Airiti_AM`（10:00）與 `KGL_Airiti_PM`（15:30），各 25 篇＝一天 50 篇。
+`scripts/run_airiti_batch.bat <篇數>`，Windows 排程四個時段各 50 篇＝一天 200 篇：
+`KGL_Airiti_1` 09:30、`KGL_Airiti_2` 12:00、`KGL_Airiti_3` 14:30、`KGL_Airiti_4` 17:00。
 log 在 `c:	mpiriti_download.log`。
+
+🚨 **只排 09:00–18:00**。使用者的機器只有在學校時才拿得到玄奘的 IP，
+不在學校的時段排了也只是每篇都失敗——而失敗的症狀是拿到 JSON 不是 PDF，
+不會有紅字。要改時段先問過，別自己往晚上挪。
+
+### 書目點名的那些篇要排在最前面
+
+`airiti_wanted_from_bibliography.py`（另一支）把寫作計畫的書目對到**刊**；
+`press_airiti.py --resolve-wanted` 再把篇名對到 **docID**，寫成
+`public/content/research-data/press/airiti-wanted.json`。`--batch` 每次跑之前
+會自動重算一次（純讀本機檔、不打網路），所以新抓好的篇目會讓原本
+「篇目還沒抓」的條目自己補進佇列。全部 17,090 篇要跑幾個月，
+論文當下要引的那些排在後面就等於沒下。
+
+篇名比對只去標點與全半形，**不做繁簡轉換也不去虛詞**——那會把不同的兩篇
+折成同一篇，而症狀是「下載到的不是我要的那篇」。破折號要涵蓋六種寫法
+（—— ― ─ – － ‐），少一種就會有篇對不上。`scripts/tests/test_press_airiti.py` 在擋。
 
 `--batch N` 與 `--download <slug> --limit N` 的差別：前者是**整批總共 N 篇**、
 跨刊依 `PRIORITY` 順序取用；後者是**每一刊各 N 篇**。排程要控的是每天對華藝

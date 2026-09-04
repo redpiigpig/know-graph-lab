@@ -1,0 +1,852 @@
+{
+ "slug": "wilderness",
+ "pid": "P20250214002",
+ "name": "曠野",
+ "publisherID": "U20250214002",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=P20250214002&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 9,
+  "篇目": 59,
+  "有電子全文": 59
+ },
+ "issues": [
+  {
+   "issueID": "N202502140026",
+   "label": "254期 (2021/02)",
+   "year": "2021",
+   "count": 12
+  },
+  {
+   "issueID": "N202503060016",
+   "label": "253期 (2021/01)",
+   "year": "2021",
+   "count": 5
+  },
+  {
+   "issueID": "N202503080016",
+   "label": "252期 (2020/12)",
+   "year": "2020",
+   "count": 8
+  },
+  {
+   "issueID": "N202503120009",
+   "label": "251期 (2020/11)",
+   "year": "2020",
+   "count": 5
+  },
+  {
+   "issueID": "N202503140006",
+   "label": "250期 (2020/10)",
+   "year": "2020",
+   "count": 5
+  },
+  {
+   "issueID": "N202503150008",
+   "label": "249期 (2020/09)",
+   "year": "2020",
+   "count": 4
+  },
+  {
+   "issueID": "N202503150007",
+   "label": "248期 (2020/08)",
+   "year": "2020",
+   "count": 5
+  },
+  {
+   "issueID": "N202506050004",
+   "label": "160期 (2009/08)",
+   "year": "2009",
+   "count": 7
+  },
+  {
+   "issueID": "N202506050003",
+   "label": "159期 (2009/06)",
+   "year": "2009",
+   "count": 8
+  }
+ ],
+ "articles": [
+  {
+   "docId": "P20250214002-N202502140026-00001",
+   "title": "文章千古事",
+   "authors": [
+    "彭海瑩"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00002",
+   "title": "曠野走一回",
+   "authors": [
+    "黃肇新"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "2-3",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00003",
+   "title": "小即是美",
+   "authors": [
+    "胡志偉"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "3-3",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00004",
+   "title": "傳承曠野精神",
+   "authors": [
+    "張力揚"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "4-4",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00005",
+   "title": "言人所不敢言",
+   "authors": [
+    "俞一蓁"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "4-4",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00006",
+   "title": "看《曠野》，念蘇哥",
+   "authors": [
+    "邢福增"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "5-5",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00007",
+   "title": "感念蘇哥用心",
+   "authors": [
+    "許博任"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "5-5",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00008",
+   "title": "《曠野》鐸聲",
+   "authors": [
+    "羅民威"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "6-6",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00009",
+   "title": "為南洲的超前佈署感謝上帝！",
+   "authors": [
+    "陳慈美"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "6-6",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00010",
+   "title": "不一樣的基督徒觀點",
+   "authors": [
+    "管中祥"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "7-7",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00011",
+   "title": "超越一般的懷念",
+   "authors": [
+    "楊保羅"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "7-7",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202502140026-00012",
+   "title": "打開天窗",
+   "authors": [
+    "胡忠銘",
+    "曾繼雄",
+    "茒偉正"
+   ],
+   "volIssue": "254期",
+   "date": "2021 / 02",
+   "pages": "8-8",
+   "fulltext": true,
+   "issueLabel": "254期 (2021/02)",
+   "issueID": "N202502140026"
+  },
+  {
+   "docId": "P20250214002-N202503060016-00001",
+   "title": "信仰堅持與政治容忍──從1990平安禮拜的舉辦到2020國家祈禱早餐會的停辦",
+   "authors": [
+    "許牧彥"
+   ],
+   "volIssue": "253期",
+   "date": "2021 / 01",
+   "pages": "1-4",
+   "fulltext": true,
+   "issueLabel": "253期 (2021/01)",
+   "issueID": "N202503060016"
+  },
+  {
+   "docId": "P20250214002-N202503060016-00002",
+   "title": "我們碎裂的朋友圈",
+   "authors": [
+    "郭文般"
+   ],
+   "volIssue": "253期",
+   "date": "2021 / 01",
+   "pages": "5-6",
+   "fulltext": true,
+   "issueLabel": "253期 (2021/01)",
+   "issueID": "N202503060016"
+  },
+  {
+   "docId": "P20250214002-N202503060016-00003",
+   "title": "長夜漫漫待黎明",
+   "authors": [
+    "傑克．海福德(Jack Hayford)",
+    "嚴彩琇"
+   ],
+   "volIssue": "253期",
+   "date": "2021 / 01",
+   "pages": "7-8",
+   "fulltext": true,
+   "issueLabel": "253期 (2021/01)",
+   "issueID": "N202503060016"
+  },
+  {
+   "docId": "P20250214002-N202503060016-00004",
+   "title": "因信仍然說話",
+   "authors": [
+    "談妮"
+   ],
+   "volIssue": "253期",
+   "date": "2021 / 01",
+   "pages": "8-8",
+   "fulltext": true,
+   "issueLabel": "253期 (2021/01)",
+   "issueID": "N202503060016"
+  },
+  {
+   "docId": "P20250214002-N202503060016-00005",
+   "title": "打開天窗",
+   "authors": [
+    "胡志偉",
+    "黃香香",
+    "范大陵"
+   ],
+   "volIssue": "253期",
+   "date": "2021 / 01",
+   "pages": "8-8",
+   "fulltext": true,
+   "issueLabel": "253期 (2021/01)",
+   "issueID": "N202503060016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00001",
+   "title": "淚眼回首憶當年－〈平安禮拜〉三十週年紀念",
+   "authors": [
+    "彭海瑩"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "1-2",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00002",
+   "title": "我們在天家相見！",
+   "authors": [
+    "張玉蟬",
+    "陳惠操"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "2-2",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00003",
+   "title": "二二八事件的和好使者先鋒蘇南洲弟兄",
+   "authors": [
+    "李勝雄"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "3-3",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00004",
+   "title": "和解的開端",
+   "authors": [
+    "王昭文"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "4-4",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00005",
+   "title": "上帝臨在的禮拜",
+   "authors": [
+    "蔡鈴敏"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "5-5",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00006",
+   "title": "三代同堂參與的盛會",
+   "authors": [
+    "陳慈美"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "5-6",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00007",
+   "title": "沒有平安，仍待醫治！",
+   "authors": [
+    "郭清松"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "6-6",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503080016-00008",
+   "title": "疫情中的聖誕默想",
+   "authors": [
+    "蔡貴恆"
+   ],
+   "volIssue": "252期",
+   "date": "2020 / 12",
+   "pages": "7-8",
+   "fulltext": true,
+   "issueLabel": "252期 (2020/12)",
+   "issueID": "N202503080016"
+  },
+  {
+   "docId": "P20250214002-N202503120009-00001",
+   "title": "能源轉型──我們正建立的方舟",
+   "authors": [
+    "王守誠"
+   ],
+   "volIssue": "251期",
+   "date": "2020 / 11",
+   "pages": "1-2",
+   "fulltext": true,
+   "issueLabel": "251期 (2020/11)",
+   "issueID": "N202503120009"
+  },
+  {
+   "docId": "P20250214002-N202503120009-00002",
+   "title": "博才無信與愚昧滿信──愛默生名言解讀",
+   "authors": [
+    "燕鵬"
+   ],
+   "volIssue": "251期",
+   "date": "2020 / 11",
+   "pages": "3-4",
+   "fulltext": true,
+   "issueLabel": "251期 (2020/11)",
+   "issueID": "N202503120009"
+  },
+  {
+   "docId": "P20250214002-N202503120009-00003",
+   "title": "印度教民族主義下的動盪",
+   "authors": [
+    "左亞"
+   ],
+   "volIssue": "251期",
+   "date": "2020 / 11",
+   "pages": "5-6",
+   "fulltext": true,
+   "issueLabel": "251期 (2020/11)",
+   "issueID": "N202503120009"
+  },
+  {
+   "docId": "P20250214002-N202503120009-00004",
+   "title": "我知誰掌管明天",
+   "authors": [
+    "彭海瑩"
+   ],
+   "volIssue": "251期",
+   "date": "2020 / 11",
+   "pages": "7-7",
+   "fulltext": true,
+   "issueLabel": "251期 (2020/11)",
+   "issueID": "N202503120009"
+  },
+  {
+   "docId": "P20250214002-N202503120009-00005",
+   "title": "打開天窗",
+   "authors": [
+    "蔡貴恆",
+    "崔妙姍",
+    "謝娜敏"
+   ],
+   "volIssue": "251期",
+   "date": "2020 / 11",
+   "pages": "8-8",
+   "fulltext": true,
+   "issueLabel": "251期 (2020/11)",
+   "issueID": "N202503120009"
+  },
+  {
+   "docId": "P20250214002-N202503140006-00001",
+   "title": "「後國安法」年代的香港教會",
+   "authors": [
+    "胡志偉"
+   ],
+   "volIssue": "250期",
+   "date": "2020 / 10",
+   "pages": "1-2",
+   "fulltext": true,
+   "issueLabel": "250期 (2020/10)",
+   "issueID": "N202503140006"
+  },
+  {
+   "docId": "P20250214002-N202503140006-00002",
+   "title": "科學與宗教－為年輕人寫的簡介",
+   "authors": [
+    "陳慈美",
+    "羅斯頓(Holmes Rolston III)"
+   ],
+   "volIssue": "250期",
+   "date": "2020 / 10",
+   "pages": "3-4",
+   "fulltext": true,
+   "issueLabel": "250期 (2020/10)",
+   "issueID": "N202503140006"
+  },
+  {
+   "docId": "P20250214002-N202503140006-00003",
+   "title": "《教會》的震撼",
+   "authors": [
+    "林宜瑩"
+   ],
+   "volIssue": "250期",
+   "date": "2020 / 10",
+   "pages": "5-6",
+   "fulltext": true,
+   "issueLabel": "250期 (2020/10)",
+   "issueID": "N202503140006"
+  },
+  {
+   "docId": "P20250214002-N202503140006-00004",
+   "title": "懷念您，巨人",
+   "authors": [
+    "李山地"
+   ],
+   "volIssue": "250期",
+   "date": "2020 / 10",
+   "pages": "7-7",
+   "fulltext": true,
+   "issueLabel": "250期 (2020/10)",
+   "issueID": "N202503140006"
+  },
+  {
+   "docId": "P20250214002-N202503140006-00005",
+   "title": "打開天窗",
+   "authors": [
+    "張景祥",
+    "蔡素真",
+    "朱樂華"
+   ],
+   "volIssue": "250期",
+   "date": "2020 / 10",
+   "pages": "8-8",
+   "fulltext": true,
+   "issueLabel": "250期 (2020/10)",
+   "issueID": "N202503140006"
+  },
+  {
+   "docId": "P20250214002-N202503150008-00001",
+   "title": "「圈地再起」──從「救璞玉公民行動」談台灣新一輪反圈地運動",
+   "authors": [
+    "許博任"
+   ],
+   "volIssue": "249期",
+   "date": "2020 / 09",
+   "pages": "1-2",
+   "fulltext": true,
+   "issueLabel": "249期 (2020/09)",
+   "issueID": "N202503150008"
+  },
+  {
+   "docId": "P20250214002-N202503150008-00002",
+   "title": "瘟疫未艾見人生",
+   "authors": [
+    "董挽華"
+   ],
+   "volIssue": "249期",
+   "date": "2020 / 09",
+   "pages": "3-5",
+   "fulltext": true,
+   "issueLabel": "249期 (2020/09)",
+   "issueID": "N202503150008"
+  },
+  {
+   "docId": "P20250214002-N202503150008-00003",
+   "title": "嚮往進入永恆",
+   "authors": [
+    "李約"
+   ],
+   "volIssue": "249期",
+   "date": "2020 / 09",
+   "pages": "5-6",
+   "fulltext": true,
+   "issueLabel": "249期 (2020/09)",
+   "issueID": "N202503150008"
+  },
+  {
+   "docId": "P20250214002-N202503150008-00004",
+   "title": "在曠野中走出一條道路──憶孤軍奮戰的勇者蘇南洲",
+   "authors": [
+    "曾慶豹"
+   ],
+   "volIssue": "249期",
+   "date": "2020 / 09",
+   "pages": "7-8",
+   "fulltext": true,
+   "issueLabel": "249期 (2020/09)",
+   "issueID": "N202503150008"
+  },
+  {
+   "docId": "P20250214002-N202503150007-00001",
+   "title": "珍惜．振興",
+   "authors": [
+    "蘇昱璇"
+   ],
+   "volIssue": "248期",
+   "date": "2020 / 08",
+   "pages": "1-2",
+   "fulltext": true,
+   "issueLabel": "248期 (2020/08)",
+   "issueID": "N202503150007"
+  },
+  {
+   "docId": "P20250214002-N202503150007-00002",
+   "title": "白線斑蚊的聯想",
+   "authors": [
+    "陳錦生"
+   ],
+   "volIssue": "248期",
+   "date": "2020 / 08",
+   "pages": "3-5",
+   "fulltext": true,
+   "issueLabel": "248期 (2020/08)",
+   "issueID": "N202503150007"
+  },
+  {
+   "docId": "P20250214002-N202503150007-00003",
+   "title": "震驚與懊惱",
+   "authors": [
+    "方儉"
+   ],
+   "volIssue": "248期",
+   "date": "2020 / 08",
+   "pages": "5-5",
+   "fulltext": true,
+   "issueLabel": "248期 (2020/08)",
+   "issueID": "N202503150007"
+  },
+  {
+   "docId": "P20250214002-N202503150007-00004",
+   "title": "評介《財主與窮人──饑饉時代的富有基督徒》",
+   "authors": [
+    "吳榮滁"
+   ],
+   "volIssue": "248期",
+   "date": "2020 / 08",
+   "pages": "6-7",
+   "fulltext": true,
+   "issueLabel": "248期 (2020/08)",
+   "issueID": "N202503150007"
+  },
+  {
+   "docId": "P20250214002-N202503150007-00005",
+   "title": "打開天窗",
+   "authors": [
+    "谷寒松",
+    "丁費宗清",
+    "吳品"
+   ],
+   "volIssue": "248期",
+   "date": "2020 / 08",
+   "pages": "7-8",
+   "fulltext": true,
+   "issueLabel": "248期 (2020/08)",
+   "issueID": "N202503150007"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00001",
+   "title": "路險才知馬力，風雨方見眞情－台灣八八水災省思",
+   "authors": [
+    "蘇南洲"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00002",
+   "title": "眞善美之旅－初訪〈耶穌共融社區〉（The Community of Jesus）",
+   "authors": [
+    "彭海瑩"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "2-5",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00003",
+   "title": "讓我們在基督裡合一－〈耶穌共融社區〉（The Community of Jesus）簡介",
+   "authors": [
+    "曠野編輯室"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "6-7",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00004",
+   "title": "上帝子民的聲音－〈愛俄拿〉（Iona Community）聖歌的精神",
+   "authors": [
+    "陳茂生"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "8-10",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00005",
+   "title": "讀者回應",
+   "authors": [
+    "張景祥"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "11-11",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00006",
+   "title": "台北〈龐畢度中心收藏展〉觀想",
+   "authors": [
+    "劉芬"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "12-13",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050004-00007",
+   "title": "艾利斯島上的天空",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "160期",
+   "date": "2009 / 08",
+   "pages": "14-15",
+   "fulltext": true,
+   "issueLabel": "160期 (2009/08)",
+   "issueID": "N202506050004"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00001",
+   "title": "從ECFA與「識正書簡」談起－馬政府迷航一年小感",
+   "authors": [
+    "蘇南洲"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00002",
+   "title": "美國小姐選美的鬧劇",
+   "authors": [
+    "張國棟"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "2-3",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00003",
+   "title": "綠谷裡的希望",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "4-5",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00004",
+   "title": "走出迷霧－擺脫「有毒信仰」的桎梏",
+   "authors": [
+    "阿特伯恩(Stephen Arterburn)",
+    "周慧芳"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "6-8",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00005",
+   "title": "六四．中國．清明節",
+   "authors": [
+    "余杰"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "9-9",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00006",
+   "title": "聆聽我心",
+   "authors": [
+    "林瑋玲"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "10-11",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00007",
+   "title": "街頭的獨奏者",
+   "authors": [
+    "陳茂生"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "12-14",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  },
+  {
+   "docId": "P20250214002-N202506050003-00008",
+   "title": "Good Will的奇蹟",
+   "authors": [
+    "姜永祐",
+    "王桂珠"
+   ],
+   "volIssue": "159期",
+   "date": "2009 / 06",
+   "pages": "15-15",
+   "fulltext": true,
+   "issueLabel": "159期 (2009/06)",
+   "issueID": "N202506050003"
+  }
+ ]
+}

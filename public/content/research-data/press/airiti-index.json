@@ -1,0 +1,22 @@
+[
+ {
+  "slug": "campus",
+  "pid": "a0000007",
+  "name": "校園",
+  "issues": 126,
+  "articles": 2393,
+  "fulltext": 2364,
+  "start": "2005",
+  "end": "2026"
+ },
+ {
+  "slug": "dao-magazine",
+  "pid": "a0000008",
+  "name": "道雜誌",
+  "issues": 24,
+  "articles": 294,
+  "fulltext": 123,
+  "start": "2001",
+  "end": "2005"
+ }
+]

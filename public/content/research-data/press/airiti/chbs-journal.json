@@ -1,0 +1,974 @@
+{
+ "slug": "chbs-journal",
+ "pid": "P20160922003",
+ "name": "中華佛學學報",
+ "publisherID": "U20160922001",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=P20160922003&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 13,
+  "篇目": 67,
+  "有電子全文": 67
+ },
+ "issues": [
+  {
+   "issueID": "N202608180001",
+   "label": "39期 (2026/07)",
+   "year": "2026",
+   "count": 4
+  },
+  {
+   "issueID": "N202608210003",
+   "label": "38期 (2025/12)",
+   "year": "2025",
+   "count": 7
+  },
+  {
+   "issueID": "N202409200008",
+   "label": "37期 (2024/08)",
+   "year": "2024",
+   "count": 6
+  },
+  {
+   "issueID": "N202309290012",
+   "label": "36期 (2023/08)",
+   "year": "2023",
+   "count": 5
+  },
+  {
+   "issueID": "N202309060002",
+   "label": "35期 (2022/07)",
+   "year": "2022",
+   "count": 5
+  },
+  {
+   "issueID": "202108240008",
+   "label": "34期 (2021/07)",
+   "year": "2021",
+   "count": 5
+  },
+  {
+   "issueID": "202008100006",
+   "label": "33期 (2020/07)",
+   "year": "2020",
+   "count": 6
+  },
+  {
+   "issueID": "201912200007",
+   "label": "32期 (2019/11)",
+   "year": "2019",
+   "count": 3
+  },
+  {
+   "issueID": "201808090012",
+   "label": "31期 (2018/07)",
+   "year": "2018",
+   "count": 5
+  },
+  {
+   "issueID": "201707180003",
+   "label": "30期 (2017/07)",
+   "year": "2017",
+   "count": 5
+  },
+  {
+   "issueID": "201701180003",
+   "label": "29期 (2016/07)",
+   "year": "2016",
+   "count": 5
+  },
+  {
+   "issueID": "201609220042",
+   "label": "28期 (2015/07)",
+   "year": "2015",
+   "count": 6
+  },
+  {
+   "issueID": "201609260021",
+   "label": "27期 (2014/07)",
+   "year": "2014",
+   "count": 5
+  }
+ ],
+ "articles": [
+  {
+   "docId": "P20160922003-N202608180001-00001",
+   "title": "Fleas, Lice, and Bedbugs in Buddhist Monasteries: Moving from India to China",
+   "authors": [
+    "Ann Heirman"
+   ],
+   "volIssue": "39期",
+   "date": "2026 / 07",
+   "pages": "1-24",
+   "fulltext": true,
+   "issueLabel": "39期 (2026/07)",
+   "issueID": "N202608180001"
+  },
+  {
+   "docId": "P20160922003-N202608180001-00002",
+   "title": "Reassessing the Gateway to Meditation: Textual History and Buddhist Medical Thought in Tang-Song China",
+   "authors": [
+    "Dixuan Chen(釋諦玄)"
+   ],
+   "volIssue": "39期",
+   "date": "2026 / 07",
+   "pages": "25-69",
+   "fulltext": true,
+   "issueLabel": "39期 (2026/07)",
+   "issueID": "N202608180001"
+  },
+  {
+   "docId": "P20160922003-N202608180001-00003",
+   "title": "Zhiyi on the \"Six Practices\": The Role of Vipaśyanā in the Sequential Practice of the Dhyānas",
+   "authors": [
+    "David Carpenter"
+   ],
+   "volIssue": "39期",
+   "date": "2026 / 07",
+   "pages": "71-122",
+   "fulltext": true,
+   "issueLabel": "39期 (2026/07)",
+   "issueID": "N202608180001"
+  },
+  {
+   "docId": "P20160922003-N202608180001-00004",
+   "title": "Tzu Chi-Islam Interface: Engaging Diversity through Creative Confrontations",
+   "authors": [
+    "Stefania Travagnin(史芬妮)"
+   ],
+   "volIssue": "39期",
+   "date": "2026 / 07",
+   "pages": "123-166",
+   "fulltext": true,
+   "issueLabel": "39期 (2026/07)",
+   "issueID": "N202608180001"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00001",
+   "title": "Introduction: More than Receptacles: New Perspectives on China-Japan Buddhist Exchange in Text and Image",
+   "authors": [
+    "Akiko Walley",
+    "Asuka Sango"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "1-5",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00002",
+   "title": "Emergence and Development of Bishamonten Imagery",
+   "authors": [
+    "Satō Yukiko(佐藤有希子)",
+    "Akiko Walley"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "7-58",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00003",
+   "title": "The Utilization of Vinaya Master Portrait Paintings and their Ritual Spaces: The Role of Sennyūji in the Kamakura-period Precept Revival Movement",
+   "authors": [
+    "Isao Nishitani(西谷功)",
+    "Eric Haruki Swanson"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "59-124",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00004",
+   "title": "The Redistribution of Wealth in Medieval East Asian Buddhist Monasteries",
+   "authors": [
+    "Xingyi Wang(王星逸)"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "125-170",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00005",
+   "title": "Catalogs and Canonization: The History of the Zhenyuan era Catalog and Its Impact on Hagiography in Medieval Japanese Esoteric Buddhism",
+   "authors": [
+    "George A. Keyworth(紀強)"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "171-227",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00006",
+   "title": "The Past, Present, and Future of Ōbaku Studies: The State of the Field",
+   "authors": [
+    "Jiang Wu(吳疆)",
+    "James Baskind(白傑士)",
+    "Guangzuo Jia(賈光佐)"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "229-279",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202608210003-00007",
+   "title": "The Image of the Kishin 鬼神 under the Heavenly King's Feet: Their Iconographic Development in the East Asian Cultural Sphere",
+   "authors": [
+    "Miki Yamada(山田美季)",
+    "Asuka Sango(三後明日香)"
+   ],
+   "volIssue": "38期",
+   "date": "2025 / 12",
+   "pages": "281-316",
+   "fulltext": true,
+   "issueLabel": "38期 (2025/12)",
+   "issueID": "N202608210003"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00001",
+   "title": "Buddhist Monasteries and (Their) Oxen: Daoxuan's Vinaya Commentaries",
+   "authors": [
+    "Ann Heirman"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "1-43",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00002",
+   "title": "The Case of \"The Woman Emerging from Samādhi\": Gender and Reception History in a Chan Anthology",
+   "authors": [
+    "Tali Hershkovitz(鹿歡)"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "45-88",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00003",
+   "title": "Institutional Adaptation of Chinese Buddhism to the Ming-Qing Transition: Two-Lineage Model of Guangji Monastery in Beijing",
+   "authors": [
+    "Mariia Lepneva(黎培娜)"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "89-155",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00004",
+   "title": "Death, Legacy, and Remembrance: Buddhism in the Mortuary Practices of Palace Eunuchs in the Late Ming",
+   "authors": [
+    "Sherry Pan(潘清悅)"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "157-199",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00005",
+   "title": "The Jeweled Hairpin: Da'aidao biqiuni jing in Sinic Buddhism",
+   "authors": [
+    "Xingyi Wang(王星逸)"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "201-240",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202409200008-00006",
+   "title": "Illusory Substances: Figure Painting and Eulogy in Chan Texts and Monasteries during the Song Dynasty (960-1279)",
+   "authors": [
+    "Yuyu Zhang(張玉瑜)"
+   ],
+   "volIssue": "37期",
+   "date": "2024 / 08",
+   "pages": "241-291",
+   "fulltext": true,
+   "issueLabel": "37期 (2024/08)",
+   "issueID": "N202409200008"
+  },
+  {
+   "docId": "P20160922003-N202309290012-00001",
+   "title": "Contested Visions of the Buddhist Past and the Curious Fate of an Early Medieval Chinese Buddhist Text",
+   "authors": [
+    "Elizabeth Morrison(毛依蓮)"
+   ],
+   "volIssue": "36期",
+   "date": "2023 / 08",
+   "pages": "1-30",
+   "fulltext": true,
+   "issueLabel": "36期 (2023/08)",
+   "issueID": "N202309290012"
+  },
+  {
+   "docId": "P20160922003-N202309290012-00002",
+   "title": "The Polemics of Passivity and Yuanwu's Usage of It",
+   "authors": [
+    "Jimmy Yu(俞永峯)"
+   ],
+   "volIssue": "36期",
+   "date": "2023 / 08",
+   "pages": "31-71",
+   "fulltext": true,
+   "issueLabel": "36期 (2023/08)",
+   "issueID": "N202309290012"
+  },
+  {
+   "docId": "P20160922003-N202309290012-00003",
+   "title": "Unearthing the Cosmos: Possible Scenarios Behind the Lost Lokasthāna-sūtra",
+   "authors": [
+    "Daniel R. Tuzzeo(杜瑞德)"
+   ],
+   "volIssue": "36期",
+   "date": "2023 / 08",
+   "pages": "73-103",
+   "fulltext": true,
+   "issueLabel": "36期 (2023/08)",
+   "issueID": "N202309290012"
+  },
+  {
+   "docId": "P20160922003-N202309290012-00004",
+   "title": "Buddhism and the Social Order: Liang Qichao (1873-1929) and Modernist Buddhism",
+   "authors": [
+    "Douglas M. Gildow(道格拉斯．鳩爾道)"
+   ],
+   "volIssue": "36期",
+   "date": "2023 / 08",
+   "pages": "105-161",
+   "fulltext": true,
+   "issueLabel": "36期 (2023/08)",
+   "issueID": "N202309290012"
+  },
+  {
+   "docId": "P20160922003-N202309290012-00005",
+   "title": "Fusion of Perspectives: Chengguan's Essay on the Nature of Mind and Reality",
+   "authors": [
+    "Mario Poceski"
+   ],
+   "volIssue": "36期",
+   "date": "2023 / 08",
+   "pages": "163-194",
+   "fulltext": true,
+   "issueLabel": "36期 (2023/08)",
+   "issueID": "N202309290012"
+  },
+  {
+   "docId": "P20160922003-N202309060002-00001",
+   "title": "Introduction to the Articles by Nishimura Ryō",
+   "authors": [
+    "Asuka Sango"
+   ],
+   "volIssue": "35期",
+   "date": "2022 / 07",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "35期 (2022/07)",
+   "issueID": "N202309060002"
+  },
+  {
+   "docId": "P20160922003-N202309060002-00002",
+   "title": "The Circuit of the Life Power of Wisdom: Yunqi Zhuhong's Thoughts on Abstention from Killing During the Late-Ming Dynasty",
+   "authors": [
+    "Nishimura Ryō(西村玲)"
+   ],
+   "volIssue": "35期",
+   "date": "2022 / 07",
+   "pages": "5-32",
+   "fulltext": true,
+   "issueLabel": "35期 (2022/07)",
+   "issueID": "N202309060002"
+  },
+  {
+   "docId": "P20160922003-N202309060002-00003",
+   "title": "The Void and God: Chinese Criticisms of Christianity in Late-Ming Buddhism",
+   "authors": [
+    "Nishimura Ryō(西村玲)"
+   ],
+   "volIssue": "35期",
+   "date": "2022 / 07",
+   "pages": "33-58",
+   "fulltext": true,
+   "issueLabel": "35期 (2022/07)",
+   "issueID": "N202309060002"
+  },
+  {
+   "docId": "P20160922003-N202309060002-00004",
+   "title": "Monastic Biography in the Ming and Qing: The Case of Shi Zhenqing 釋真清 (1537-1593)",
+   "authors": [
+    "Marcus Bingenheimer(馬德偉)"
+   ],
+   "volIssue": "35期",
+   "date": "2022 / 07",
+   "pages": "59-107",
+   "fulltext": true,
+   "issueLabel": "35期 (2022/07)",
+   "issueID": "N202309060002"
+  },
+  {
+   "docId": "P20160922003-N202309060002-00005",
+   "title": "Permeable Boundaries Between Ritual and Play: Religious and Ludic Possibilities in a Chinese Buddhist Board Game",
+   "authors": [
+    "Beverley McGuire(傅佩玲)"
+   ],
+   "volIssue": "35期",
+   "date": "2022 / 07",
+   "pages": "109-151",
+   "fulltext": true,
+   "issueLabel": "35期 (2022/07)",
+   "issueID": "N202309060002"
+  },
+  {
+   "docId": "P20160922003-202107-202108240008-202108240008-1-3",
+   "title": "Introduction",
+   "authors": [
+    "Natasha Heller"
+   ],
+   "volIssue": "34期",
+   "date": "2021 / 07",
+   "pages": "1-3",
+   "fulltext": true,
+   "issueLabel": "34期 (2021/07)",
+   "issueID": "202108240008"
+  },
+  {
+   "docId": "P20160922003-202107-202108240008-202108240008-5-26",
+   "title": "Sūtra of the Unsullied Worthy Girl as Spoken by the Buddha",
+   "authors": [
+    "白思芳(Stephanie Balkwill)"
+   ],
+   "volIssue": "34期",
+   "date": "2021 / 07",
+   "pages": "5-26",
+   "fulltext": true,
+   "issueLabel": "34期 (2021/07)",
+   "issueID": "202108240008"
+  },
+  {
+   "docId": "P20160922003-202107-202108240008-202108240008-27-62",
+   "title": "An Excerpt from The Precious Scroll of Liu Xiang",
+   "authors": [
+    "亞天恩(Katherine L. Alexander)"
+   ],
+   "volIssue": "34期",
+   "date": "2021 / 07",
+   "pages": "27-62",
+   "fulltext": true,
+   "issueLabel": "34期 (2021/07)",
+   "issueID": "202108240008"
+  },
+  {
+   "docId": "P20160922003-202107-202108240008-202108240008-63-89",
+   "title": "The Consumption of Garlic: Vinaya Rules",
+   "authors": [
+    "Ann Heirman"
+   ],
+   "volIssue": "34期",
+   "date": "2021 / 07",
+   "pages": "63-89",
+   "fulltext": true,
+   "issueLabel": "34期 (2021/07)",
+   "issueID": "202108240008"
+  },
+  {
+   "docId": "P20160922003-202107-202108240008-202108240008-91-159",
+   "title": "Literati Chan at the Song Dynasty Court: The Role of Yang Yi in the Creation Chan Identity",
+   "authors": [
+    "魏雅博(Albert Welter)"
+   ],
+   "volIssue": "34期",
+   "date": "2021 / 07",
+   "pages": "91-159",
+   "fulltext": true,
+   "issueLabel": "34期 (2021/07)",
+   "issueID": "202108240008"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-1-47",
+   "title": "Building a Pure Land Lineage: A Study of Zhida's Play Guiyuan jing and a Translation of its Three Paratexts",
+   "authors": [
+    "王萌筱(Mengxiao Wang)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "1-47",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-49-75",
+   "title": "Emplacing Dizang Bodhisattva on Mt. Jiuhua with Local Dramas during the Late Imperial and Republican Eras (1368-1949)",
+   "authors": [
+    "歐陽楠(Nan Ouyang)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "49-75",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-77-119",
+   "title": "Metaphorical Imagery and the Fashioning of Caodong Identity in Hongzhi Zhengjue's 宏智正覺 (1091-1157) Commentarial Verses on Old Cases",
+   "authors": [
+    "果幸(Guo Xing (Bhikshuni)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "77-119",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-121-170",
+   "title": "The History of Jin Nikāya in Thailand: A Preliminary Study from a Socio-political Perspective",
+   "authors": [
+    "劉曜憑(Yaoping Liu)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "121-170",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-171-202",
+   "title": "The Puhua si 普華寺: Longing for Trustworthiness and Recognition Transformations in the Religious Identity and Institutional Affiliation of the Chinese Buddhist Temple in Prato",
+   "authors": [
+    "黃曉星(Ester Bianchi)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "171-202",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-202007-202008100006-202008100006-203-232",
+   "title": "Karma, Charisma, and Community: Karmic Storytelling in a Blue-Collar Taiwanese Buddhist Organization",
+   "authors": [
+    "芮哲(Justin R. Ritzinger)"
+   ],
+   "volIssue": "33期",
+   "date": "2020 / 07",
+   "pages": "203-232",
+   "fulltext": true,
+   "issueLabel": "33期 (2020/07)",
+   "issueID": "202008100006"
+  },
+  {
+   "docId": "P20160922003-201911-201912200007-201912200007-1-30",
+   "title": "Xuanzang's Relationship to the Heart Sūtra in Light of the Fangshan Stele",
+   "authors": [
+    "Jayarava Attwood"
+   ],
+   "volIssue": "32期",
+   "date": "2019 / 11",
+   "pages": "1-30",
+   "fulltext": true,
+   "issueLabel": "32期 (2019/11)",
+   "issueID": "201912200007"
+  },
+  {
+   "docId": "P20160922003-201911-201912200007-201912200007-31-95",
+   "title": "The Missing Link: Siṁha Bhikṣu and the Construction of an Indian Chan Lineage, with Special Attention to Zongmi",
+   "authors": [
+    "Peter N. Gregory"
+   ],
+   "volIssue": "32期",
+   "date": "2019 / 11",
+   "pages": "31-95",
+   "fulltext": true,
+   "issueLabel": "32期 (2019/11)",
+   "issueID": "201912200007"
+  },
+  {
+   "docId": "P20160922003-201911-201912200007-201912200007-97-125",
+   "title": "An Old Savior in a New Paradise: Buddha Amitābha in Tang Dayuan's 'New Pure Land'",
+   "authors": [
+    "孫亞柏(Jakub Zamorski)"
+   ],
+   "volIssue": "32期",
+   "date": "2019 / 11",
+   "pages": "97-125",
+   "fulltext": true,
+   "issueLabel": "32期 (2019/11)",
+   "issueID": "201912200007"
+  },
+  {
+   "docId": "P20160922003-201807-201808090012-201808090012-1-37",
+   "title": "Yixing and Pseudo-Yixing: a Misunderstood Astronomer-Monk",
+   "authors": [
+    "康傑夫(Jeffrey Kotyk)"
+   ],
+   "volIssue": "31期",
+   "date": "2018 / 07",
+   "pages": "1-37",
+   "fulltext": true,
+   "issueLabel": "31期 (2018/07)",
+   "issueID": "201808090012"
+  },
+  {
+   "docId": "P20160922003-201807-201808090012-201808090012-39-74",
+   "title": "Bo Juyi's Memorial Inscription for Chan Teacher Weikuan",
+   "authors": [
+    "伯理奧(Mario Poceski)"
+   ],
+   "volIssue": "31期",
+   "date": "2018 / 07",
+   "pages": "39-74",
+   "fulltext": true,
+   "issueLabel": "31期 (2018/07)",
+   "issueID": "201808090012"
+  },
+  {
+   "docId": "P20160922003-201807-201808090012-201808090012-75-115",
+   "title": "Qian Qianyi as a Buddhist in the Ming-Qing Transition",
+   "authors": [
+    "林學儀(Hsüeh-Yi Lin)"
+   ],
+   "volIssue": "31期",
+   "date": "2018 / 07",
+   "pages": "75-115",
+   "fulltext": true,
+   "issueLabel": "31期 (2018/07)",
+   "issueID": "201808090012"
+  },
+  {
+   "docId": "P20160922003-201807-201808090012-201808090012-117-170",
+   "title": "What is Our Shared Sensory World?: Ming Dynasty Debates on Yogācāra versus Huayan Doctrines",
+   "authors": [
+    "白立冰(Ernest Billings Brewster)"
+   ],
+   "volIssue": "31期",
+   "date": "2018 / 07",
+   "pages": "117-170",
+   "fulltext": true,
+   "issueLabel": "31期 (2018/07)",
+   "issueID": "201808090012"
+  },
+  {
+   "docId": "P20160922003-201807-201808090012-201808090012-171-222",
+   "title": "Something for Nothing: Cognitive Metaphors for Emptiness in the *Upadesa (Dàzhìdù lùn)",
+   "authors": [
+    "歐慧峰(Matthew Orsborn)"
+   ],
+   "volIssue": "31期",
+   "date": "2018 / 07",
+   "pages": "171-222",
+   "fulltext": true,
+   "issueLabel": "31期 (2018/07)",
+   "issueID": "201808090012"
+  },
+  {
+   "docId": "P20160922003-201707-201707180003-201707180003-1-31",
+   "title": "On the Ekottarikagama增壹阿含經 T125 as a Wrok of Zhu Fonian竺佛念",
+   "authors": [
+    "Michael Radich"
+   ],
+   "volIssue": "30期",
+   "date": "2017 / 07",
+   "pages": "1-31",
+   "fulltext": true,
+   "issueLabel": "30期 (2017/07)",
+   "issueID": "201707180003"
+  },
+  {
+   "docId": "P20160922003-201707-201707180003-201707180003-33-88",
+   "title": "Astrological Iconography of Planetary Deities in Tang China: Near Eastern and Indian Icons in Chinese Buddhism",
+   "authors": [
+    "康傑夫(Jeffrey Kotyk)"
+   ],
+   "volIssue": "30期",
+   "date": "2017 / 07",
+   "pages": "33-88",
+   "fulltext": true,
+   "issueLabel": "30期 (2017/07)",
+   "issueID": "201707180003"
+  },
+  {
+   "docId": "P20160922003-201707-201707180003-201707180003-89-124",
+   "title": "Bridging the Gap: Zongmi’s Strategies for Reconciling Textual Study and Meditative Practice",
+   "authors": [
+    "Peter N. Gregory"
+   ],
+   "volIssue": "30期",
+   "date": "2017 / 07",
+   "pages": "89-124",
+   "fulltext": true,
+   "issueLabel": "30期 (2017/07)",
+   "issueID": "201707180003"
+  },
+  {
+   "docId": "P20160922003-201707-201707180003-201707180003-125-168",
+   "title": "The Celebration of Congee in East Asian Buddhism",
+   "authors": [
+    "杜若彬(Robban A. J. Toleno)"
+   ],
+   "volIssue": "30期",
+   "date": "2017 / 07",
+   "pages": "125-168",
+   "fulltext": true,
+   "issueLabel": "30期 (2017/07)",
+   "issueID": "201707180003"
+  },
+  {
+   "docId": "P20160922003-201707-201707180003-201707180003-169-210",
+   "title": "Innovation and Continuity in the Pure Lands: Pure Land Discourses and Practices at the Taiwanese Buddhist Order Dharma Drum Mountain",
+   "authors": [
+    "黃穎思(Jens Reinke)"
+   ],
+   "volIssue": "30期",
+   "date": "2017 / 07",
+   "pages": "169-210",
+   "fulltext": true,
+   "issueLabel": "30期 (2017/07)",
+   "issueID": "201707180003"
+  },
+  {
+   "docId": "P20160922003-201607-201701180003-201701180003-1-8",
+   "title": "Introduction: The Creation of Buddhist Sacred Sites in China",
+   "authors": [
+    "Chün-fang Yü"
+   ],
+   "volIssue": "29期",
+   "date": "2016 / 07",
+   "pages": "1-8",
+   "fulltext": true,
+   "issueLabel": "29期 (2016/07)",
+   "issueID": "201701180003"
+  },
+  {
+   "docId": "P20160922003-201607-201701180003-201701180003-9-49",
+   "title": "Meeting the Inhabitants of the Necropolis at Baoshan",
+   "authors": [
+    "韋聞笛(Wendi L. Adamek)"
+   ],
+   "volIssue": "29期",
+   "date": "2016 / 07",
+   "pages": "9-49",
+   "fulltext": true,
+   "issueLabel": "29期 (2016/07)",
+   "issueID": "201701180003"
+  },
+  {
+   "docId": "P20160922003-201607-201701180003-201701180003-51-89",
+   "title": "Monumental Stone Sutra Carvings in China and Indian Pilgrim Sites",
+   "authors": [
+    "溫狄婭(Claudia Wenzel)"
+   ],
+   "volIssue": "29期",
+   "date": "2016 / 07",
+   "pages": "51-89",
+   "fulltext": true,
+   "issueLabel": "29期 (2016/07)",
+   "issueID": "201701180003"
+  },
+  {
+   "docId": "P20160922003-201607-201701180003-201701180003-91-127",
+   "title": "The Temple of the Prince Who Torched His Body and the Making of Mount Wutai",
+   "authors": [
+    "安素珊(Susan Andrews)"
+   ],
+   "volIssue": "29期",
+   "date": "2016 / 07",
+   "pages": "91-127",
+   "fulltext": true,
+   "issueLabel": "29期 (2016/07)",
+   "issueID": "201701180003"
+  },
+  {
+   "docId": "P20160922003-201607-201701180003-201701180003-129-161",
+   "title": "The General and the Bodhisattva: Commander Hou Jigao Travels to Mount Putuo",
+   "authors": [
+    "馬德偉(Marcus Bingenheimer)"
+   ],
+   "volIssue": "29期",
+   "date": "2016 / 07",
+   "pages": "129-161",
+   "fulltext": true,
+   "issueLabel": "29期 (2016/07)",
+   "issueID": "201701180003"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-1-34",
+   "title": "Defining the Chinese Buddhist Canon: Its Origin, Periodization, and Future",
+   "authors": [
+    "方廣錩(Guang-Chang Fang)",
+    "Xin Zi",
+    "Jiang Wu"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "1-34",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-35-66",
+   "title": "Reexamining the Categories and Canons of Chinese Buddhist Healing",
+   "authors": [
+    "皮爾斯．賽爾蓋羅(C. Pierce Salguero)"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "35-66",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-67-116",
+   "title": "Conceptions and Attitudes towards Contemplative Practice within the Early Traditions of Chan Buddhism",
+   "authors": [
+    "Mario Poceski"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "67-116",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-117-152",
+   "title": "Addressing the Mind: Developments in the Culture of Confession in Sui-Tang China",
+   "authors": [
+    "韋聞笛(Wendi L. Adamek)"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "117-152",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-153-188",
+   "title": "Disorienting Medicine: Fayan Wenyi's Ten Admonishments for the Lineage",
+   "authors": [
+    "本博澤(Benjamin Brose)"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "153-188",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201507-201609220042-201609220042-189-234",
+   "title": "A Well-Reasoned Dharma: Buddhist Logic in Republican China",
+   "authors": [
+    "Eyal Aviv"
+   ],
+   "volIssue": "28期",
+   "date": "2015 / 07",
+   "pages": "189-234",
+   "fulltext": true,
+   "issueLabel": "28期 (2015/07)",
+   "issueID": "201609220042"
+  },
+  {
+   "docId": "P20160922003-201407-201609260021-201609260021-1-34",
+   "title": "The Scripture on Saving and Protecting Body and Life: An Introduction and Translation",
+   "authors": [
+    "羅恩(Bryan D. Lowe)"
+   ],
+   "volIssue": "27期",
+   "date": "2014 / 07",
+   "pages": "1-34",
+   "fulltext": true,
+   "issueLabel": "27期 (2014/07)",
+   "issueID": "201609260021"
+  },
+  {
+   "docId": "P20160922003-201407-201609260021-201609260021-35-57",
+   "title": "A Buddhist Critique of Scientism",
+   "authors": [
+    "韓光(Erik Hammerstrom)"
+   ],
+   "volIssue": "27期",
+   "date": "2014 / 07",
+   "pages": "35-57",
+   "fulltext": true,
+   "issueLabel": "27期 (2014/07)",
+   "issueID": "201609260021"
+  },
+  {
+   "docId": "P20160922003-201407-201609260021-201609260021-59-127",
+   "title": "The Chinese Buddhist Ritual Field: Common Public Rituals in PRC Monasteries Today",
+   "authors": [
+    "道格拉斯．鳩爾道(Douglas M. Gildow)"
+   ],
+   "volIssue": "27期",
+   "date": "2014 / 07",
+   "pages": "59-127",
+   "fulltext": true,
+   "issueLabel": "27期 (2014/07)",
+   "issueID": "201609260021"
+  },
+  {
+   "docId": "P20160922003-201407-201609260021-201609260021-129-179",
+   "title": "Realization through Hearing in Chan Literature",
+   "authors": [
+    "釋果鏡(Guo-Jing)",
+    "康傑夫(Jeffrey Kotyk)"
+   ],
+   "volIssue": "27期",
+   "date": "2014 / 07",
+   "pages": "129-179",
+   "fulltext": true,
+   "issueLabel": "27期 (2014/07)",
+   "issueID": "201609260021"
+  },
+  {
+   "docId": "P20160922003-201407-201609260021-201609260021-181-208",
+   "title": "A Study of the Concept of Jieti ＂The Essence of the Precepts＂ in Daoxuan's (596-667) Vinaya Commentaries",
+   "authors": [
+    "Thomas Newhall"
+   ],
+   "volIssue": "27期",
+   "date": "2014 / 07",
+   "pages": "181-208",
+   "fulltext": true,
+   "issueLabel": "27期 (2014/07)",
+   "issueID": "201609260021"
+  }
+ ]
+}

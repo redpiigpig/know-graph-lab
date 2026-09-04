@@ -1,0 +1,2972 @@
+{
+ "slug": "theology-church",
+ "pid": "P20190115001",
+ "name": "神學與教會",
+ "publisherID": "U20190115001",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=P20190115001&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 22,
+  "篇目": 215,
+  "有電子全文": 215
+ },
+ "issues": [
+  {
+   "issueID": "N202511010009",
+   "label": "50卷 (2025/06)",
+   "year": "2025",
+   "count": 10
+  },
+  {
+   "issueID": "N202411210002",
+   "label": "49卷 (2024/06)",
+   "year": "2024",
+   "count": 7
+  },
+  {
+   "issueID": "N202401260002",
+   "label": "48卷 (2023/06)",
+   "year": "2023",
+   "count": 5
+  },
+  {
+   "issueID": "N202302210002",
+   "label": "47卷2期 (2022/06)",
+   "year": "2022",
+   "count": 5
+  },
+  {
+   "issueID": "202206090004",
+   "label": "46卷2期&amp;47卷1期 (2022/01)",
+   "year": "2022",
+   "count": 5
+  },
+  {
+   "issueID": "202103170002",
+   "label": "45卷2期&amp;46卷1期 (2021/01)",
+   "year": "2021",
+   "count": 5
+  },
+  {
+   "issueID": "202003270002",
+   "label": "44卷2期&amp;45卷1期 (2020/01)",
+   "year": "2020",
+   "count": 6
+  },
+  {
+   "issueID": "201903150001",
+   "label": "44卷1期 (2019/01)",
+   "year": "2019",
+   "count": 9
+  },
+  {
+   "issueID": "201901150023",
+   "label": "43卷2期 (2018/06)",
+   "year": "2018",
+   "count": 7
+  },
+  {
+   "issueID": "201901150024",
+   "label": "43卷1期 (2018/01)",
+   "year": "2018",
+   "count": 10
+  },
+  {
+   "issueID": "201901160021",
+   "label": "42卷2期 (2017/06)",
+   "year": "2017",
+   "count": 10
+  },
+  {
+   "issueID": "201901160020",
+   "label": "42卷1期 (2017/01)",
+   "year": "2017",
+   "count": 10
+  },
+  {
+   "issueID": "201901170025",
+   "label": "41卷2期 (2016/06)",
+   "year": "2016",
+   "count": 15
+  },
+  {
+   "issueID": "201901170024",
+   "label": "41卷1期 (2016/01)",
+   "year": "2016",
+   "count": 16
+  },
+  {
+   "issueID": "201901170023",
+   "label": "40卷2期 (2015/06)",
+   "year": "2015",
+   "count": 15
+  },
+  {
+   "issueID": "201901170022",
+   "label": "40卷1期 (2015/01)",
+   "year": "2015",
+   "count": 9
+  },
+  {
+   "issueID": "201901180019",
+   "label": "39卷2期 (2014/06)",
+   "year": "2014",
+   "count": 12
+  },
+  {
+   "issueID": "201901180018",
+   "label": "39卷1期 (2014/01)",
+   "year": "2014",
+   "count": 9
+  },
+  {
+   "issueID": "201901180017",
+   "label": "38卷2期 (2013/06)",
+   "year": "2013",
+   "count": 11
+  },
+  {
+   "issueID": "201901180016",
+   "label": "38卷1期 (2013/01)",
+   "year": "2013",
+   "count": 12
+  },
+  {
+   "issueID": "201901180015",
+   "label": "37卷1&amp;2期 (2012/06)",
+   "year": "2012",
+   "count": 11
+  },
+  {
+   "issueID": "201901170021",
+   "label": "36卷2期 (2011/06)",
+   "year": "2011",
+   "count": 16
+  }
+ ],
+ "articles": [
+  {
+   "docId": "P20190115001-N202511010009-00001",
+   "title": "從經濟全球化的解構到建構",
+   "authors": [
+    "楊順從(Shun Chung Yang)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "3-21",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00002",
+   "title": "衝破所羅門防線：從文學策略看《傳道書》1:12-2:26的自傳體鋪陳",
+   "authors": [
+    "宋宇哲(Ted U Song)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "22-47",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00003",
+   "title": "曾秀鳳：台灣基督長老教會女牧師的先行者",
+   "authors": [
+    "陳美玲(Mei Ling Chen)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "48-69",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00004",
+   "title": "《聖詩》2009年版台灣原住民歌樂藝術——二十一首詩歌之探究",
+   "authors": [
+    "余錦福(Jin Fu Yu)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "70-102",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00005",
+   "title": "表達性藝術治療方案介入對護理之家長者靈性安適之成效研究",
+   "authors": [
+    "陳美婷(Men Ting Chen)",
+    "鐘文君(Wen Chun Chung)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "103-124",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00006",
+   "title": "由國家語言及教育變遷看長老教會之教勢發展",
+   "authors": [
+    "陳宗元(Tsung-yuan Chen)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "127-145",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00007",
+   "title": "現代派與基要派傳教士的末世神學：以司徒雷登與何賡詩的《啟示錄》詮釋為例（1920s至1930s）",
+   "authors": [
+    "倪步曉(Buxiao Ni)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "146-164",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00008",
+   "title": "兒少保護個案靈性關懷歷程之研究",
+   "authors": [
+    "朱玓玟(Di Wen Chu)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "165-180",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00009",
+   "title": "《因愛得醫治：基督徒心理創傷療癒與靈命成長的十六道人生》書評",
+   "authors": [
+    "鄭淑芬(Sue Fen Cheng)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "183-189",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202511010009-00010",
+   "title": "《你能成就的，比想像的更大－內向爆發力的覺醒》書評",
+   "authors": [
+    "鄭淑芬(Sue Fen Cheng)"
+   ],
+   "volIssue": "50卷",
+   "date": "2025 / 06",
+   "pages": "190-195",
+   "fulltext": true,
+   "issueLabel": "50卷 (2025/06)",
+   "issueID": "N202511010009"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00001",
+   "title": "由臺灣最早管風琴搬遷史反思台南神學院管風琴教育之發展與困境",
+   "authors": [
+    "林淑娜(Shu-Na Lin)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "3-44",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00002",
+   "title": "匪諜、台獨及叛亂：從1988年澎湖縣調查站檔案看離島的宗教監控",
+   "authors": [
+    "盧啟明(Chi-Ming Lu)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "45-72",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00003",
+   "title": "Self-Realisation as an Ethical Responsibility: Chiu Thian-lai's 周天來 (1905-75) Search for Social Betterment under Japanese Colonial Rule, 1920s-1930s",
+   "authors": [
+    "Kazue Mino(三野和惠)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "73-93",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00004",
+   "title": "唱出內心的信仰：舒伯特《德文彌撒曲》的宗教信念初探",
+   "authors": [
+    "林淑娜(Shu-Na Lin)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "95-140",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00005",
+   "title": "基督徒社會工作者在教會推動雙福經驗之探討",
+   "authors": [
+    "王愈真(Yu-Chen Wang)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "141-162",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00006",
+   "title": "《樂齡標竿》書評",
+   "authors": [
+    "鄭淑芬(Sue-Fen Cheng)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "165-169",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202411210002-00007",
+   "title": "《樂活銀髮、力要從心》書評",
+   "authors": [
+    "鄭淑芬(Sue-Fen Cheng)"
+   ],
+   "volIssue": "49卷",
+   "date": "2024 / 06",
+   "pages": "171-174",
+   "fulltext": true,
+   "issueLabel": "49卷 (2024/06)",
+   "issueID": "N202411210002"
+  },
+  {
+   "docId": "P20190115001-N202401260002-00001",
+   "title": "管家倫理的解構與建構",
+   "authors": [
+    "楊順從(Shun-Chung Yang)"
+   ],
+   "volIssue": "48卷",
+   "date": "2023 / 06",
+   "pages": "1-18",
+   "fulltext": true,
+   "issueLabel": "48卷 (2023/06)",
+   "issueID": "N202401260002"
+  },
+  {
+   "docId": "P20190115001-N202401260002-00002",
+   "title": "信仰型長期照顧機構在組織治理上的理想與挑戰",
+   "authors": [
+    "王慧琪(Hui-Chi Wang)"
+   ],
+   "volIssue": "48卷",
+   "date": "2023 / 06",
+   "pages": "19-44",
+   "fulltext": true,
+   "issueLabel": "48卷 (2023/06)",
+   "issueID": "N202401260002"
+  },
+  {
+   "docId": "P20190115001-N202401260002-00003",
+   "title": "舊約聖經釋義—以但以理書7：9-14為例：夜觀天上審判之夢的解析",
+   "authors": [
+    "廖志偉(Chih-Wei Liao)"
+   ],
+   "volIssue": "48卷",
+   "date": "2023 / 06",
+   "pages": "45-69",
+   "fulltext": true,
+   "issueLabel": "48卷 (2023/06)",
+   "issueID": "N202401260002"
+  },
+  {
+   "docId": "P20190115001-N202401260002-00004",
+   "title": "台灣基督長老教會主日學教育之發展與其教材之轉變（1945-2015）",
+   "authors": [
+    "盧啟明(Chi-Ming Lu)"
+   ],
+   "volIssue": "48卷",
+   "date": "2023 / 06",
+   "pages": "70-103",
+   "fulltext": true,
+   "issueLabel": "48卷 (2023/06)",
+   "issueID": "N202401260002"
+  },
+  {
+   "docId": "P20190115001-N202401260002-00005",
+   "title": "上帝所差ê通譯官：從吳銅燦牧師探討戰後長老教會ê原住民宣教",
+   "authors": [
+    "劉立仁(Li-Jen Liu)",
+    "吳慈恩(Tsyr-En Wu)"
+   ],
+   "volIssue": "48卷",
+   "date": "2023 / 06",
+   "pages": "104-131",
+   "fulltext": true,
+   "issueLabel": "48卷 (2023/06)",
+   "issueID": "N202401260002"
+  },
+  {
+   "docId": "P20190115001-N202302210002-00001",
+   "title": "生態公義－台灣教會的挑戰和機會",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "47卷2期",
+   "date": "2022 / 06",
+   "pages": "1-25",
+   "fulltext": true,
+   "issueLabel": "47卷2期 (2022/06)",
+   "issueID": "N202302210002"
+  },
+  {
+   "docId": "P20190115001-N202302210002-00002",
+   "title": "身分認同決定神學方法論：以Sexuality為例",
+   "authors": [
+    "鄭世璋(Shih-Chang Wesley, Cheng)"
+   ],
+   "volIssue": "47卷2期",
+   "date": "2022 / 06",
+   "pages": "26-43",
+   "fulltext": true,
+   "issueLabel": "47卷2期 (2022/06)",
+   "issueID": "N202302210002"
+  },
+  {
+   "docId": "P20190115001-N202302210002-00003",
+   "title": "Planetary Entanglement: Unfolding Eco-theology in Wu Ming-yi's The Man with the Compound Eyes",
+   "authors": [
+    "Liu Yu-Wen"
+   ],
+   "volIssue": "47卷2期",
+   "date": "2022 / 06",
+   "pages": "44-64",
+   "fulltext": true,
+   "issueLabel": "47卷2期 (2022/06)",
+   "issueID": "N202302210002"
+  },
+  {
+   "docId": "P20190115001-N202302210002-00004",
+   "title": "情慾神學與現代教牧關顧之應用",
+   "authors": [
+    "朱美妍(Chu, Mei-Yen)",
+    "陳宇嘉(Chen, Yu-Chia)"
+   ],
+   "volIssue": "47卷2期",
+   "date": "2022 / 06",
+   "pages": "65-94",
+   "fulltext": true,
+   "issueLabel": "47卷2期 (2022/06)",
+   "issueID": "N202302210002"
+  },
+  {
+   "docId": "P20190115001-N202302210002-00005",
+   "title": "教會存在的意義：新冠肺炎下的教會論",
+   "authors": [
+    "張恩瑜(Chang En-Yu)"
+   ],
+   "volIssue": "47卷2期",
+   "date": "2022 / 06",
+   "pages": "95-111",
+   "fulltext": true,
+   "issueLabel": "47卷2期 (2022/06)",
+   "issueID": "N202302210002"
+  },
+  {
+   "docId": "P20190115001-202201-202206090004-202206090004-1-21",
+   "title": "基督徒父母對學齡前子女「培」伴之研究",
+   "authors": [
+    "王翠榕(Wang Tsui Jung)"
+   ],
+   "volIssue": "46卷2期&47卷1期",
+   "date": "2022 / 01",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "46卷2期&amp;47卷1期 (2022/01)",
+   "issueID": "202206090004"
+  },
+  {
+   "docId": "P20190115001-202201-202206090004-202206090004-22-47",
+   "title": "模仿自然、虛擬實境與效法基督",
+   "authors": [
+    "莊雅棠(Ya-Tang Chuang)"
+   ],
+   "volIssue": "46卷2期&47卷1期",
+   "date": "2022 / 01",
+   "pages": "22-47",
+   "fulltext": true,
+   "issueLabel": "46卷2期&amp;47卷1期 (2022/01)",
+   "issueID": "202206090004"
+  },
+  {
+   "docId": "P20190115001-202201-202206090004-202206090004-48-78",
+   "title": "牧關臨床教育對牧職效能之探究",
+   "authors": [
+    "陳安祺(An-Chi Chen)",
+    "吳慈恩(Tsyr-En Wu)"
+   ],
+   "volIssue": "46卷2期&47卷1期",
+   "date": "2022 / 01",
+   "pages": "48-78",
+   "fulltext": true,
+   "issueLabel": "46卷2期&amp;47卷1期 (2022/01)",
+   "issueID": "202206090004"
+  },
+  {
+   "docId": "P20190115001-202201-202206090004-202206090004-79-101",
+   "title": "拯救與創造：台灣基督長老教會〈人權宣言〉中「新出埃及」概念之研究",
+   "authors": [
+    "蔡銘偉(Ming-Wei Tsai)"
+   ],
+   "volIssue": "46卷2期&47卷1期",
+   "date": "2022 / 01",
+   "pages": "79-101",
+   "fulltext": true,
+   "issueLabel": "46卷2期&amp;47卷1期 (2022/01)",
+   "issueID": "202206090004"
+  },
+  {
+   "docId": "P20190115001-202201-202206090004-202206090004-102-132",
+   "title": "餐桌團契－上帝國文化的建立和社區重建",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "46卷2期&47卷1期",
+   "date": "2022 / 01",
+   "pages": "102-132",
+   "fulltext": true,
+   "issueLabel": "46卷2期&amp;47卷1期 (2022/01)",
+   "issueID": "202206090004"
+  },
+  {
+   "docId": "P20190115001-202101-202103170002-202103170002-1-36",
+   "title": "The Wayward Son Returns, One More Time",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "45卷2期&46卷1期",
+   "date": "2021 / 01",
+   "pages": "1-36",
+   "fulltext": true,
+   "issueLabel": "45卷2期&amp;46卷1期 (2021/01)",
+   "issueID": "202103170002"
+  },
+  {
+   "docId": "P20190115001-202101-202103170002-202103170002-37-60",
+   "title": "《聖詩》中的客家聲影",
+   "authors": [
+    "鄭君平(Chun-ping Cheng)"
+   ],
+   "volIssue": "45卷2期&46卷1期",
+   "date": "2021 / 01",
+   "pages": "37-60",
+   "fulltext": true,
+   "issueLabel": "45卷2期&amp;46卷1期 (2021/01)",
+   "issueID": "202103170002"
+  },
+  {
+   "docId": "P20190115001-202101-202103170002-202103170002-61-88",
+   "title": "暖化與生態公義",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "45卷2期&46卷1期",
+   "date": "2021 / 01",
+   "pages": "61-88",
+   "fulltext": true,
+   "issueLabel": "45卷2期&amp;46卷1期 (2021/01)",
+   "issueID": "202103170002"
+  },
+  {
+   "docId": "P20190115001-202101-202103170002-202103170002-89-109",
+   "title": "以共餐介入活動對長者情緒表現之行動研究－以台東長老教會社區關懷站為例",
+   "authors": [
+    "陳世堅(Shih-chien Chen)",
+    "黃美雪(Mei-Shiue Huang)"
+   ],
+   "volIssue": "45卷2期&46卷1期",
+   "date": "2021 / 01",
+   "pages": "89-109",
+   "fulltext": true,
+   "issueLabel": "45卷2期&amp;46卷1期 (2021/01)",
+   "issueID": "202103170002"
+  },
+  {
+   "docId": "P20190115001-202101-202103170002-202103170002-110-145",
+   "title": "教牧在臨終關懷的壓力、耗竭與自我照顧之研究－以台灣基督長老教會的教牧為例",
+   "authors": [
+    "鄭明智(Ming-chih Cheng)",
+    "吳慈恩(Tsyr-En Wu)"
+   ],
+   "volIssue": "45卷2期&46卷1期",
+   "date": "2021 / 01",
+   "pages": "110-145",
+   "fulltext": true,
+   "issueLabel": "45卷2期&amp;46卷1期 (2021/01)",
+   "issueID": "202103170002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-1-25",
+   "title": "理性、信仰與啟示：一個田立克式之神學探討",
+   "authors": [
+    "王崇堯(Chong-gyiau Wong)"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "1-25",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-26-52",
+   "title": "探討全球五旬宗／靈恩運動之定義：從台灣基督新教處境出發",
+   "authors": [
+    "石素英(Shu-ying Shih)"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "26-52",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-53-69",
+   "title": "同性戀受迫害史：荷蘭篇",
+   "authors": [
+    "鄭世璋(shih-chang Wesley, Cheng)"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "53-69",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-70-100",
+   "title": "全球暖化所隱藏的道德危機——從新自由主義經濟理論談起",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "70-100",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-101-143",
+   "title": "Proverbs: Slogans or Solutions?",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "101-143",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-202001-202003270002-202003270002-144-167",
+   "title": "Healing Towards Justice and Peace in Asian Context based on the Divine Femininity",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "44卷2期&45卷1期",
+   "date": "2020 / 01",
+   "pages": "144-167",
+   "fulltext": true,
+   "issueLabel": "44卷2期&amp;45卷1期 (2020/01)",
+   "issueID": "202003270002"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-1-1",
+   "title": "Decolonizing Minds: The Search for Alternative Narratives in Theological Education, The Chruch and Preaching",
+   "authors": [
+    "J. Dorcas Gordon"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "1-1",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-3-18",
+   "title": "Lecture 1 The Context of the Presbyterian Church in Canada and the Imperative of New Narratives",
+   "authors": [
+    "J. Dorcas Gordon"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "3-18",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-19-35",
+   "title": "Lecture 2 Decolonial Theory and the Structure of the European Exceptionalism Narrative",
+   "authors": [
+    "J. Dorcas Gordon"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "19-35",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-37-55",
+   "title": "Lecture 3 The Destructive Power of the Eurocentric Exceptionalist Narrative in Palestine and Canada",
+   "authors": [
+    "J. Dorcas Gordon"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "37-55",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-57-73",
+   "title": "Lecture 4 Decolonizing Minds: Disruption Exceptionalist Narratives in Theological Education, the Church and Preaching",
+   "authors": [
+    "J. Dorcas Gordon"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "57-73",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-75-102",
+   "title": "在後現代處境中的台灣本土神學",
+   "authors": [
+    "莊雅棠(Ya-Tang Chuang)"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "75-102",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-103-125",
+   "title": "從電影〈失魂〉探究本土殘障解放神學的出路",
+   "authors": [
+    "陳文珊(Hannah CHEN)"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "103-125",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-127-157",
+   "title": "創世記1:26-28 radah與kabash的彙編與在祭司文件脈絡中的意涵",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "127-157",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201901-201903150001-201903150001-159-186",
+   "title": "The Feast: No Red Envelope Required",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "44卷1期",
+   "date": "2019 / 01",
+   "pages": "159-186",
+   "fulltext": true,
+   "issueLabel": "44卷1期 (2019/01)",
+   "issueID": "201903150001"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-236-252",
+   "title": "Avoiding the Hardship of Preaching",
+   "authors": [
+    "L.E. Ted Siverns"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "236-252",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-253-282",
+   "title": "Mary Poppins & the Bible",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "253-282",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-283-288",
+   "title": "Singing Our Own Damned Song: Taiwan, Taiwan, Teach Us How To Sing!",
+   "authors": [
+    "Juan A. Carmona"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "283-288",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-289-296",
+   "title": "從多元性別認同觀點看台灣基督長老教會新《聖詩》中的性別意識",
+   "authors": [
+    "鄭世璋(Shih-Chang Wesley, Cheng)"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "289-296",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-297-313",
+   "title": "倫理抉擇",
+   "authors": [
+    "楊順從(Shun-Chung Yang)"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "297-313",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-314-335",
+   "title": "In the Beginning Were Stories Not Texts: Story Theology of Choan-Seng Song",
+   "authors": [
+    "王美書(Mei-Shu Wang)"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "314-335",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201806-201901150023-201901150023-336-343",
+   "title": "Horizontal Segmentation for Ecclesia and Theological Education in Taiwan",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "43卷2期",
+   "date": "2018 / 06",
+   "pages": "336-343",
+   "fulltext": true,
+   "issueLabel": "43卷2期 (2018/06)",
+   "issueID": "201901150023"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-1-21",
+   "title": "Debt, Prayer & Parable in Matthew Matthew 6:9-13; 18:23-35",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "1-21",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-22-78",
+   "title": "Table Fellowship and Lukan Missiology: The Challenge to be a Guest",
+   "authors": [
+    "鄧開福(M. C. Dippenaar)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "22-78",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-79-96",
+   "title": "立基母性神性優先的民生經濟",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "79-96",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-97-115",
+   "title": "宗教改革中的自然觀",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "97-115",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-116-144",
+   "title": "「聖神今來重新創造」：宗教改革500週年慶主題詩之創作與分析",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "116-144",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-145-162",
+   "title": "如何來看聖詩，聖詩伴奏、即興演奏方法：複音音樂〈一〉",
+   "authors": [
+    "劉信宏(Hsin-hung Liu)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "145-162",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-163-170",
+   "title": "On Preaching and its Evaluation",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "163-170",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-171-200",
+   "title": "1922年版《SÈNG SI》編輯始末及其聖詩溯源",
+   "authors": [
+    "温兆遠(Jau-yuan, Wen)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "171-200",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-201-213",
+   "title": "臺灣盲人教會與福利之先驅－廖旺（1890-1971）",
+   "authors": [
+    "邱大昕(Toa-Him Khu)"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "201-213",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201801-201901150024-201901150024-214-235",
+   "title": "THE KERNEL OF CHRISTIANITY - A Book Review of John Sanders' ＂The God Who Risks: A Theology of Providence＂",
+   "authors": [
+    "Bing Tang"
+   ],
+   "volIssue": "43卷1期",
+   "date": "2018 / 01",
+   "pages": "214-235",
+   "fulltext": true,
+   "issueLabel": "43卷1期 (2018/01)",
+   "issueID": "201901150024"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-151-170",
+   "title": "Chiang Kai-Shek Meets Gustavo Gutierrez: Latin American Theology and Taiwan's Quest for Sovereignty",
+   "authors": [
+    "Juan A. Carmona"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "151-170",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-171-188",
+   "title": "台灣媽祖信仰的本土化現象",
+   "authors": [
+    "林文哲(Bun-tiat Lim)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "171-188",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-189-193",
+   "title": "Diagnosis of Ecclesial Dysfunction",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "189-193",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-195-213",
+   "title": "神學任務之挑戰",
+   "authors": [
+    "王崇堯(Chong-gyiau Wong)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "195-213",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-214-221",
+   "title": "A Challenge to Taiwan's Traditional Theological Education Patterns",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "214-221",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-222-257",
+   "title": "在〈上帝作咱安全要塞〉歌聲中前進的馬丁路德",
+   "authors": [
+    "林淑娜(Shu-Na Lin)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "222-257",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-258-286",
+   "title": "從基督信仰談「寬恕」在修復式正義的探究與實踐",
+   "authors": [
+    "吳慈恩(Wu, Tsyr-En)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "258-286",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-287-302",
+   "title": "Joy in Pain: Endurance in Revelation",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "287-302",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-304-326",
+   "title": "Apocalypse and Doxology",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "304-326",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201706-201901160021-201901160021-327-355",
+   "title": "概述聖經中建國挑戰上的神僕",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "42卷2期",
+   "date": "2017 / 06",
+   "pages": "327-355",
+   "fulltext": true,
+   "issueLabel": "42卷2期 (2017/06)",
+   "issueID": "201901160021"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-1-9",
+   "title": "The Joy of Finding the Way: A Case Study of the Young Dietrich Bonhoeffer Declicated to the Students of the Bonhoeffer Class at TTCS 2016",
+   "authors": [
+    "陳胡美娜(Bettina Opitz-Chen)"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "1-9",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-10-29",
+   "title": "愛與公義的上帝國－彌賽亞政治與社會",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "10-29",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-30-53",
+   "title": "台灣兩首聖詩「上帝創造天及地」與「真主上帝造天地」之朔源",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "30-53",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-54-64",
+   "title": "Joy of Theological Lex",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "54-64",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-65-80",
+   "title": "從舊約看喜樂",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "65-80",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-81-85",
+   "title": "The European Enlightenment, Christian Awakenings and Overseas Missions",
+   "authors": [
+    "Stewart J. Brown"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "81-85",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-86-101",
+   "title": "Lecture 1 The European Enlightenment, Religion and Moral Values",
+   "authors": [
+    "Stewart J. Brown"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "86-101",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-102-118",
+   "title": "Lecture 2 China and the European Enlightenment",
+   "authors": [
+    "Stewart J. Brown"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "102-118",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-119-134",
+   "title": "Lecture 3 Christian Awakenings in Revolutionary Europe, 1790-1830",
+   "authors": [
+    "Stewart J. Brown"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "119-134",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201701-201901160020-201901160020-135-150",
+   "title": "Lecture 4 Providential Empire? Early Nineteenth-Century British Overseas Missions in Asia",
+   "authors": [
+    "Stewart J. Brown"
+   ],
+   "volIssue": "42卷1期",
+   "date": "2017 / 01",
+   "pages": "135-150",
+   "fulltext": true,
+   "issueLabel": "42卷1期 (2017/01)",
+   "issueID": "201901160020"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-426-461",
+   "title": "台灣原住民音樂對教會合唱樂發展之前瞻性",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "426-461",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-462-481",
+   "title": "社會工作研究與實務的探索－從老人保護社工角度探討暮年生活概況",
+   "authors": [
+    "林娟芬(Chuan-fen Lin)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "462-481",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-482-545",
+   "title": "Taiwanese Christianity and National Identities",
+   "authors": [
+    "羅光喜(Kong-hí Lô)",
+    "Vavauni Ljaljegean"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "482-545",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-546-564",
+   "title": "David vs. Goliath in Theological Education",
+   "authors": [
+    "亞大偉(David Alexander)",
+    "陳慧婉"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "546-564",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-565-610",
+   "title": "邊緣與帝國：從後殖民角度以互為實況法探討馬可福音14:1-9的故事",
+   "authors": [
+    "曾昌發(Chen Chhong-fat)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "565-610",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-611-628",
+   "title": "猶太戰爭：帝國與邊緣的衝突",
+   "authors": [
+    "曾昌發(Chen Chhong-fat)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "611-628",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-629-640",
+   "title": "從新約的角度探討「戰爭、和平與正義」",
+   "authors": [
+    "鄧開福(M. C. Dippenaar)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "629-640",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-641-720",
+   "title": "Table Fellowship and Lukan Theology: God's Invitation to the Banquet",
+   "authors": [
+    "M. C. Dippenaar",
+    "王美書"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "641-720",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-721-753",
+   "title": "Parable as Trojan Horse",
+   "authors": [
+    "L. E. Ted Siverns",
+    "陳慧婉"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "721-753",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-754-795",
+   "title": "Two Parables: The Feisty Widow & The Runaway Leaven (Luke 18:1-8; Luke 13: 20-21)",
+   "authors": [
+    "L.E. Ted Siverns",
+    "林碧堂"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "754-795",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-796-811",
+   "title": "初探初代教會的施洗約翰團體",
+   "authors": [
+    "劉立仁(Li-Jen Liu)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "796-811",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-812-833",
+   "title": "Dragon and Two Beasts Occupy Taiwan: the Contextualization of Symbolic Resistance in Rev.12-13",
+   "authors": [
+    "賴金君(Chin-Chun Lai)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "812-833",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-834-856",
+   "title": "Theology and the End of Doctrine (Lecture at the TTCS on 18 March, 2016)",
+   "authors": [
+    "Christine Helmer",
+    "劉立仁"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "834-856",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-857-872",
+   "title": "上主的沈默",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "857-872",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201606-201901170025-201901170025-873-883",
+   "title": "What is ＂Lived Religion＂? (Lecture of the TTCS on 16 March, 2016)",
+   "authors": [
+    "Robert A. Orsi",
+    "陳主顯"
+   ],
+   "volIssue": "41卷2期",
+   "date": "2016 / 06",
+   "pages": "873-883",
+   "fulltext": true,
+   "issueLabel": "41卷2期 (2016/06)",
+   "issueID": "201901170025"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-1-20",
+   "title": "祭司典人觀之性別觀：創世記1:27之實況化詮釋",
+   "authors": [
+    "羅光喜(Kong-hí Lô)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-21-38",
+   "title": "台灣教會「處境化」神學教育的挑戰及落實",
+   "authors": [
+    "王崇堯(Chong-gyiau Wong)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "21-38",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-39-63",
+   "title": "耶穌的上帝國－烏托邦？",
+   "authors": [
+    "楊順從(Shun-chung Yang)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "39-63",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-64-102",
+   "title": "Species Being: The Anthropological Foundation of Messianic Politics",
+   "authors": [
+    "Theodore W. Jennings",
+    "宋訡瑄"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "64-102",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-103-122",
+   "title": "聖餐中基督真實臨在之初探",
+   "authors": [
+    "潘馨逸(Hiong-ék Phoan)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "103-122",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-123-145",
+   "title": "試述呼召觀的五個要素－以兩位台灣基督徒為例之探察",
+   "authors": [
+    "黃奕偉(Ék-úi Ng)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "123-145",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-146-169",
+   "title": "故事神學的方法、限制與實踐",
+   "authors": [
+    "林碧堂(Phek-tong Lim)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "146-169",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-170-188",
+   "title": "The Bones of 150 Years",
+   "authors": [
+    "L. E. Ted Siverns",
+    "陳慧婉"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "170-188",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-189-216",
+   "title": "南門媽祖宮，西門蘭醫生－台灣俗諺映射的醫病和醫療觀念",
+   "authors": [
+    "陳主顯(Chu-hsien Chen)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "189-216",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-217-257",
+   "title": "The Stormed Fortress of Europe 2015 A Christian Reflection",
+   "authors": [
+    "陳胡美娜(Bettina Opitz-Chen)",
+    "宋宇哲"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "217-257",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-258-282",
+   "title": "「音樂的小世界」：台灣原住民多聲部合唱技巧之鳥瞰",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "258-282",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-283-320",
+   "title": "2009《聖詩》中台灣原住民處境化聖詩之初探",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "283-320",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-321-349",
+   "title": "紐馬克聖詩《你若甘願互上帝引導》的創作背景與靈性意涵",
+   "authors": [
+    "林淑娜(Shu-na Lin)"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "321-349",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-350-399",
+   "title": "The Digital Age: Moments of More and Lives of Less",
+   "authors": [
+    "L. E. Ted Siverns",
+    "宋訡瑄"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "350-399",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-400-413",
+   "title": "Insights from Neuroscience Into Why Theological Education Doesn't Change",
+   "authors": [
+    "亞大偉(David Alexander)",
+    "王美書"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "400-413",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201601-201901170024-201901170024-414-425",
+   "title": "Application of Crossmodal Research to Tainan Theological College's Attraction of New Students",
+   "authors": [
+    "亞大偉(David Alexander)",
+    "宋訡瑄"
+   ],
+   "volIssue": "41卷1期",
+   "date": "2016 / 01",
+   "pages": "414-425",
+   "fulltext": true,
+   "issueLabel": "41卷1期 (2016/01)",
+   "issueID": "201901170024"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-249-273",
+   "title": "台灣南部長老教會150年來宣教反思",
+   "authors": [
+    "王崇堯(Chong-gyiau Wong)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "249-273",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-274-288",
+   "title": "希臘殖民下傳道書與但以理書中的宣教意涵",
+   "authors": [
+    "羅光喜(K. H. Lo)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "274-288",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-289-332",
+   "title": "Job: Will God Fit in a Box? If this is how you treat your friends, it's no wonder you have so few of them",
+   "authors": [
+    "L. E. Ted Siverns",
+    "潘黎如"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "289-332",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-333-352",
+   "title": "宣教與服務VS回顧與展望",
+   "authors": [
+    "林娟芬(Chuan-fen, Lin)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "333-352",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-353-369",
+   "title": "氣候變遷－教會所要面對的挑戰與反省",
+   "authors": [
+    "楊順從(S. C. Yang)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "353-369",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-370-394",
+   "title": "台灣基督長老教會的宣教典範變遷與展望",
+   "authors": [
+    "李孝忠(Hau-tiong Li)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "370-394",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-395-420",
+   "title": "弟子問．長老答－認識台灣民間宗教信仰的智慧路徑",
+   "authors": [
+    "陳主顯(Chu-Hsien Chen)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "395-420",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-421-445",
+   "title": "長老教會所面對的音樂挑戰",
+   "authors": [
+    "林淑娜(Shu-na Lin)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "421-445",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-446-472",
+   "title": "禮拜學之系統整合初探",
+   "authors": [
+    "鄭哲宇(Francisco Cheng)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "446-472",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-473-481",
+   "title": "台灣基督長老教會差派宣教師的模式",
+   "authors": [
+    "蔡南信(N. S. Chhoa)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "473-481",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-482-492",
+   "title": "請幫助我們－來自遙遠西非布吉納法索的微小呼聲",
+   "authors": [
+    "王貞乃(Angel Wong)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "482-492",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-493-506",
+   "title": "台灣基督長老教會宣教之回顧與展望－以曼谷台灣基督長老教會為例",
+   "authors": [
+    "葉健華(K. H. Yap)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "493-506",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-507-536",
+   "title": "An Unmixed View: The Presbyterian Church in Taiwan and Foreign Missionaries",
+   "authors": [
+    "亞大偉(David Alexander)",
+    "陳慧婉"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "507-536",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-537-553",
+   "title": "一個鄉村教會牧者的信仰尋思：嘗試以螺旋模型為基礎建構處境化宣教神學",
+   "authors": [
+    "陳澤胤(Tek-in, Tan)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "537-553",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201506-201901170023-201901170023-554-574",
+   "title": "故事神學的進路",
+   "authors": [
+    "林碧堂(Phek-tong Lim)"
+   ],
+   "volIssue": "40卷2期",
+   "date": "2015 / 06",
+   "pages": "554-574",
+   "fulltext": true,
+   "issueLabel": "40卷2期 (2015/06)",
+   "issueID": "201901170023"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-1-12",
+   "title": "由創造的科學和神學之意涵探討其兩者之關係",
+   "authors": [
+    "楊順從(S. C. Yang)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "1-12",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-13-53",
+   "title": "Disposable Labour: The Predicament of Labour in Capitalist Globalization",
+   "authors": [
+    "M. P. Joseph",
+    "潘黎如"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "13-53",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-54-113",
+   "title": "Rethinking Sovereignty",
+   "authors": [
+    "Theodore W. Jennings",
+    "宋訡瑄"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "54-113",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-114-133",
+   "title": "台灣處境化新聖詩之詞曲初探（二）",
+   "authors": [
+    "駱維道(I-to Loh)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "114-133",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-134-151",
+   "title": "19世紀基督教與他宗教會遇之態度－以莫理斯（Denison Frederick Maurice 1805-1872）與馬偕（George Leslie Mackay 1844-1901）思想為例",
+   "authors": [
+    "王榮昌(E. C. Ong)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "134-151",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-152-191",
+   "title": "台灣鄉村教會的處境化宣教：以路上教會宣教事工為例",
+   "authors": [
+    "陳澤胤(T. E. Tang)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "152-191",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-192-211",
+   "title": "從舊約五經看社會本質與成長目標",
+   "authors": [
+    "羅光喜(K. H. Lo)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "192-211",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-212-230",
+   "title": "從舊約聖經看教會在社會中的祭司角色",
+   "authors": [
+    "羅光喜(K. H. Lo)"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "212-230",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201501-201901170022-201901170022-231-248",
+   "title": "The Translator is Traitor: ＂I wish to resign and cease considering myself a Jew.＂",
+   "authors": [
+    "L. E. Ted Siverns",
+    "王美書"
+   ],
+   "volIssue": "40卷1期",
+   "date": "2015 / 01",
+   "pages": "231-248",
+   "fulltext": true,
+   "issueLabel": "40卷1期 (2015/01)",
+   "issueID": "201901170022"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-140-160",
+   "title": "台灣處境化新聖詩之詞曲初探（一）",
+   "authors": [
+    "駱維道"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "140-160",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-161-212",
+   "title": "巴赫　萊比錫教會清唱劇初探",
+   "authors": [
+    "林淑娜"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "161-212",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-213-228",
+   "title": "馬偕與其他宗教",
+   "authors": [
+    "王榮昌"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "213-228",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-229-244",
+   "title": "從生態觀點探討上主身體的意涵",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "229-244",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-245-259",
+   "title": "Tainan Theological College Online: Attainable!",
+   "authors": [
+    "亞大偉(David Alexander)",
+    "陳慧婉"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "245-259",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-260-299",
+   "title": "台灣鄉村教會的宣教事工之探討－以口埤教會為例",
+   "authors": [
+    "李孝忠"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "260-299",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-300-314",
+   "title": "基督信仰與悲傷療癒－喪親者的經驗初探",
+   "authors": [
+    "蔡佩真"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "300-314",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-315-334",
+   "title": "實況化舊約經文詮釋之翻譯模式",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "315-334",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-335-344",
+   "title": "Interpreting a Parable",
+   "authors": [
+    "L. E. Ted Siverns",
+    "林碧堂"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "335-344",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-345-352",
+   "title": "The 'Yes' and 'No' of Two Sons",
+   "authors": [
+    "L. E. Ted Siverns",
+    "王美書"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "345-352",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-353-383",
+   "title": "Of Dinosaurs and Other Forebears (Creation and Evolution)",
+   "authors": [
+    "安德烈拉寇克(André LaCocque)",
+    "宋訡瑄"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "353-383",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201406-201901180019-201901180019-384-411",
+   "title": "Christianity of The Soil: Early African Theological Initiatives in Malawi",
+   "authors": [
+    "Augustine Chingwala Musopole",
+    "潘黎如"
+   ],
+   "volIssue": "39卷2期",
+   "date": "2014 / 06",
+   "pages": "384-411",
+   "fulltext": true,
+   "issueLabel": "39卷2期 (2014/06)",
+   "issueID": "201901180019"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-1-19",
+   "title": "基督教悲傷輔導模式之探討",
+   "authors": [
+    "林娟芬"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "1-19",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-20-43",
+   "title": "從被綁架的世代談經濟倫理",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "20-43",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-45-51",
+   "title": "Two Parables, One Problem",
+   "authors": [
+    "L. E. Ted Siverns"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "45-51",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-52-66",
+   "title": "寡婦的兩個小錢：稱讚或哀嘆？",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "52-66",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-67-84",
+   "title": "後殖民詮釋創世記之綱要：隱藏式反帝國主義與新國家文化建構",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "67-84",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-85-97",
+   "title": "一九六七年美國長老教會「信仰告白」後之神學發展",
+   "authors": [
+    "王崇堯"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "85-97",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-99-117",
+   "title": "Selfhood of the excluded: Bible, Ethics and faith",
+   "authors": [
+    "M. P. Joseph"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "99-117",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-118-123",
+   "title": "16^(th) Century Anabaptist Hermeneutics and 21^(st) Century Asian Christians",
+   "authors": [
+    "亞大偉(David B. Alexander)"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "118-123",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201401-201901180018-201901180018-124-139",
+   "title": "「信念（非）正確性：由認知科學談宗教研究的基本議題」",
+   "authors": [
+    "王榮昌"
+   ],
+   "volIssue": "39卷1期",
+   "date": "2014 / 01",
+   "pages": "124-139",
+   "fulltext": true,
+   "issueLabel": "39卷1期 (2014/01)",
+   "issueID": "201901180018"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-208-222",
+   "title": "傾聽大地的聲音－以生態眼光探討聖經中有關大地救贖的意涵",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "208-222",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-223-253",
+   "title": "傾聽一群在角落哭泣的聲音－以受暴婦女創傷與復原團體經驗為例",
+   "authors": [
+    "林娟芬"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "223-253",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-254-270",
+   "title": "資本化與世俗化的神學挑戰",
+   "authors": [
+    "王崇堯"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "254-270",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-271-289",
+   "title": "談貧窮的另一張臉孔－殘障經濟正義的神學反思",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "271-289",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-290-299",
+   "title": "從尼布爾的特權階級倫理探討台灣媒體的集中壟斷問題",
+   "authors": [
+    "黃馨蓮"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "290-299",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-300-323",
+   "title": "兩個禱告比喻的跨文本詮釋：堅持到底的寡婦（路18：1-8）及法利賽人和稅吏（18：9-14）",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "300-323",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-324-341",
+   "title": "台灣基督教大型教會形成因素初探",
+   "authors": [
+    "王榮昌"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "324-341",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-342-355",
+   "title": "五旬宗「初步憑據」教義的普世合一基礎與新釋",
+   "authors": [
+    "葉先秦"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "342-355",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-356-374",
+   "title": "The Educational Background of Elihu Doty and John Van Nest Talmage: Pioneers of Pe-Oe-Ji",
+   "authors": [
+    "亞大偉(David Alexander)"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "356-374",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-376-380",
+   "title": "“核”必再發生",
+   "authors": [
+    "劉立仁"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "376-380",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201306-201901180017-201901180017-381-385",
+   "title": "「廢核」是一種「福音」嗎？",
+   "authors": [
+    "賴金君"
+   ],
+   "volIssue": "38卷2期",
+   "date": "2013 / 06",
+   "pages": "381-385",
+   "fulltext": true,
+   "issueLabel": "38卷2期 (2013/06)",
+   "issueID": "201901180017"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-1-20",
+   "title": "舊約中的靈恩運動與以色列國",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "1-20",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-21-38",
+   "title": "使徒行傳的聖靈觀",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "21-38",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-39-45",
+   "title": "靈的意涵",
+   "authors": [
+    "王崇堯"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "39-45",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-46-61",
+   "title": "聖靈臨在的神學意涵",
+   "authors": [
+    "王崇堯"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "46-61",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-62-72",
+   "title": "近代靈恩運動現象之宗教學觀察",
+   "authors": [
+    "林文哲"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "62-72",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-73-90",
+   "title": "一位文學家的靈恩運動觀察－由Per Olov Enquist的《利維的旅程》（Lewi's Journey）看一個靈恩運動的社會影響力",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "73-90",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-91-111",
+   "title": "新管家倫理的探討",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "91-111",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-112-138",
+   "title": "十七世紀北德學派（新教）管風琴音樂發展路向初探",
+   "authors": [
+    "林淑娜"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "112-138",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-139-152",
+   "title": "解開令人困惑的比喻：管家的比喻（路16:1-8）",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "139-152",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-153-171",
+   "title": "從女性神學的觀點看馬可福音五21-43",
+   "authors": [
+    "余心玫"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "153-171",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-172-194",
+   "title": "基督臨在的團契－從潘霍華的基督論探討教會與社會的關係",
+   "authors": [
+    "李弦"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "172-194",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201301-201901180016-201901180016-195-207",
+   "title": "論莫特曼「生死存亡」、「終末審視」的靈修神學",
+   "authors": [
+    "黃馨蓮"
+   ],
+   "volIssue": "38卷1期",
+   "date": "2013 / 01",
+   "pages": "195-207",
+   "fulltext": true,
+   "issueLabel": "38卷1期 (2013/01)",
+   "issueID": "201901180016"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-1-28",
+   "title": "後殖民性舊約經文詮釋之芻議",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "1-28",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-29-53",
+   "title": "試從後殖民角度詮釋好撒瑪利亞人的比喻（路10：25-37）",
+   "authors": [
+    "曾昌發"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "29-53",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-54-67",
+   "title": "後殖民時代裡三一論的新面象",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "54-67",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-68-91",
+   "title": "高齡化社會下教會婦女的處境與因應晚年生活之對策",
+   "authors": [
+    "林娟芬"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "68-91",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-92-109",
+   "title": "社會變遷中婚姻觀的建構",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "92-109",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-110-137",
+   "title": "由莫爾的《宗教課程教學指南》探討公立中學裡的宗教教育",
+   "authors": [
+    "謝鎮群"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "110-137",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-138-160",
+   "title": "淺談移動式管風琴－從可攜式袖珍管風琴（Portativ）到木箱管風琴（Truhenorgel）",
+   "authors": [
+    "林淑娜"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "138-160",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-161-188",
+   "title": "全球的視野與在地的關懷－談NGO推動修復式正義之角色扮演與相關爭議",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "161-188",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-189-209",
+   "title": "淺論日治中期的臺灣基督徒知識分子與「臺灣人運動」",
+   "authors": [
+    "王昭文"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "189-209",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-210-229",
+   "title": "舊約神觀象徵在牧關應用上的芻議",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "210-229",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201206-201901180015-201901180015-231-235",
+   "title": "儀式與公義",
+   "authors": [
+    "王貞文"
+   ],
+   "volIssue": "37卷1&2期",
+   "date": "2012 / 06",
+   "pages": "231-235",
+   "fulltext": true,
+   "issueLabel": "37卷1&amp;2期 (2012/06)",
+   "issueID": "201901180015"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-231-258",
+   "title": "從舊約看台灣基督長老教會時代使命",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "231-258",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-259-267",
+   "title": "後ECFA時代「上帝國」公義的省思",
+   "authors": [
+    "林文哲"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "259-267",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-268-277",
+   "title": "PCT的時代使命：從生態危機談上帝國的實況化宣教",
+   "authors": [
+    "楊順從"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "268-277",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-278-297",
+   "title": "長老教會總是關心政治？－加爾文論教會與政府",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "278-297",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-298-321",
+   "title": "教會發展模式研習成果評估研究報告",
+   "authors": [
+    "林娟芬"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "298-321",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-322-336",
+   "title": "地方教會對社區中身心障礙者服務的作法",
+   "authors": [
+    "張麗珍"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "322-336",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-337-367",
+   "title": "工作整合型社會企業在原住民社區產業之運作－以台東八八希望園區重建中心為例（下）",
+   "authors": [
+    "邱怡薇"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "337-367",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-368-386",
+   "title": "加爾文與莫特曼的神學中關於〈教會論〉的對觀",
+   "authors": [
+    "謝克岳"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "368-386",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-387-408",
+   "title": "鄉土神學「出埃及模式」的反思與再處境化",
+   "authors": [
+    "謝易宏"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "387-408",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-409-434",
+   "title": "從耶穌的死與復活沉思生死價值",
+   "authors": [
+    "莊雅棠"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "409-434",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-435-444",
+   "title": "道教神仙信仰的生命觀",
+   "authors": [
+    "林文哲"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "435-444",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-445-477",
+   "title": "從刑罰正義之倫理基礎論死刑之存廢",
+   "authors": [
+    "陳文珊"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "445-477",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-478-502",
+   "title": "Shofar（羊號角）",
+   "authors": [
+    "林淑娜"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "478-502",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-503-520",
+   "title": "「熊出沒，注意！」：以列王紀下二23-25為例看舊約聖經的「動物奇觀」",
+   "authors": [
+    "廖學銘"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "503-520",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-521-538",
+   "title": "對被擄以色列早期歸回社群之排他性（exclusive）與包容性（inclusive）的研究與反省",
+   "authors": [
+    "鍾平貴"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "521-538",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  },
+  {
+   "docId": "P20190115001-201106-201901170021-201901170021-540-546",
+   "title": "逆風中的神召告白",
+   "authors": [
+    "羅光喜"
+   ],
+   "volIssue": "36卷2期",
+   "date": "2011 / 06",
+   "pages": "540-546",
+   "fulltext": true,
+   "issueLabel": "36卷2期 (2011/06)",
+   "issueID": "201901170021"
+  }
+ ]
+}

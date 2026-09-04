@@ -45,6 +45,7 @@ import argparse
 import json
 import re
 import time
+import unicodedata
 import urllib.parse
 from pathlib import Path
 
@@ -102,6 +103,8 @@ JOURNALS = {
     "hongshi":            ("P20121213001", "弘誓雙月刊"),
     "huayen":             ("P20160706001", "華嚴學報"),
     "humanistic-buddhism": ("P20180307006", "人間佛教研究"),
+    "hbj-arts":           ("P20180314001", "人間佛教學報藝文"),
+    "huafan-humanities":  ("18124305",     "華梵人文學報"),
     # ── 宗教學綜合
     "religious-philosophy": ("10277730",   "宗教哲學"),
     "fujen-religious":    ("16820568",     "輔仁宗教研究"),
@@ -373,7 +376,7 @@ def write_with_retry(dest, blob, tries=4):
     return None
 
 
-def download(s, slug, limit):
+def download(s, slug, limit, only=None):
     pid, name = JOURNALS[slug]
     toc = json.loads((TOC_DIR / f"{slug}.json").read_text(encoding="utf-8"))
     root = DRIVE / safe_name(name)
@@ -381,8 +384,12 @@ def download(s, slug, limit):
     ledger_p = root / "_ledger.json"
     ledger = json.loads(ledger_p.read_text(encoding="utf-8")) if ledger_p.exists() else {}
 
-    todo = [a for a in toc["articles"] if a["fulltext"] and ledger.get(a["docId"]) != "ok"]
-    print(f"{name}：{len(todo)} 篇待下載（本次上限 {limit}）")
+    todo = [a for a in toc["articles"] if a["fulltext"] and ledger.get(a["docId"]) != "ok"
+            and (only is None or a["docId"] in only)]
+    if only is not None and not todo:
+        return 0
+    print(f"{name}：{len(todo)} 篇待下載（本次上限 {limit}"
+          f"{'，只取書目點名的那些' if only is not None else ''}）")
     done = fail = 0
     cached_issue, cached_html = None, None
     for a in todo[:limit]:
@@ -439,11 +446,88 @@ PRIORITY = [
     "new-century", "chinese-religions",
     "chbs-journal", "chbs-journal-old", "chbs-studies", "ddbj",
     "ntu-buddhist", "ntu-buddhist-old", "fgu-journal",
-    "huayen", "humanistic-buddhism",
+    "huayen", "humanistic-buddhism", "hbj-arts", "huafan-humanities",
 ]
 
 LOCK = Path(r"C:/tmp/press_airiti_download.lock")
 LOCK_STALE = 3 * 3600
+
+# 書目點名要的那些篇（不是整刊）。上游是 airiti_wanted_from_bibliography.py，
+# 它只對到「刊」；這裡再把篇名對到華藝的 docID，才真的抓得動。
+WANTED_SRC = Path(r"C:/tmp/airiti_wanted.json")
+WANTED = OUT / "airiti-wanted.json"
+
+# 🚨 破折號在中文書目裡至少六種寫法（—— ― ─ – － ‐），刊名頁與書目常各用各的。
+#    少涵蓋一種，同一篇就會因為一個破折號而對不上，症狀是「這篇華藝明明有卻說找不到」。
+#    連字號與中點一律用 Unicode 範圍掃掉。
+_PUNCT = re.compile(
+    r"[\s　《》〈〉「」『』（）()\[\]【】：:；;，,、。.？?！!"
+    r"‐-―─-┃﹘﹣－\-_~·‧．"
+    r"／/\\|'\"“”‘’]+")
+
+
+def norm_title(t):
+    """篇名比對鍵。書目裡的篇名與華藝的篇名常差在標點與全半形，去掉就好；
+    🚨 但**不要**連字都改（別做繁簡轉換），那會把不同的篇合成一篇。"""
+    return _PUNCT.sub("", unicodedata.normalize("NFKC", t or "")).lower()
+
+
+def resolve_wanted():
+    """把書目點名的篇名對到 docID，寫成排程用的優先佇列。
+
+    對不上的一定要留在輸出裡（`unresolved`）而不是消失——那多半是篇名在書目裡
+    被縮寫或打錯，是要人去看的，不是「華藝沒有」。
+    """
+    if not WANTED_SRC.exists():
+        raise SystemExit(f"找不到 {WANTED_SRC}；"
+                         f"先跑 airiti_wanted_from_bibliography.py --json {WANTED_SRC}")
+    src = json.loads(WANTED_SRC.read_text(encoding="utf-8"))
+    by_pid = {pid: slug for slug, (pid, _) in JOURNALS.items()}
+
+    resolved, unresolved = {}, []
+    for jname, items in src.get("matched", {}).items():
+        slug = items[0].get("slug") or by_pid.get(items[0].get("pid"))
+        toc_f = TOC_DIR / f"{slug}.json" if slug else None
+        if not (toc_f and toc_f.exists()):
+            unresolved += [{**x, "why": f"{jname}：篇目還沒抓（--toc {slug or '?'}）"} for x in items]
+            continue
+        arts = json.loads(toc_f.read_text(encoding="utf-8"))["articles"]
+        idx = {}
+        for a in arts:
+            idx.setdefault(norm_title(a["title"]), a)
+        for x in items:
+            k = norm_title(x["title"])
+            a = idx.get(k)
+            if a is None:                      # 退而求其次：篇名互為前綴（書目常被截斷）
+                a = next((v for kk, v in idx.items()
+                          if kk and (kk.startswith(k) or k.startswith(kk))
+                          and min(len(kk), len(k)) >= 6), None)
+            if a is None:
+                unresolved.append({**x, "why": f"{jname}：篇名對不上該刊的篇目"})
+            elif not a["fulltext"]:
+                unresolved.append({**x, "why": f"{jname}：華藝沒有這一篇的電子全文"})
+            else:
+                resolved.setdefault(slug, []).append(
+                    {"docId": a["docId"], "title": a["title"], "pages": a["pages"],
+                     "issueLabel": a["issueLabel"], "from": x.get("source", "")})
+
+    n = sum(len(v) for v in resolved.values())
+    WANTED.parent.mkdir(parents=True, exist_ok=True)
+    WANTED.write_text(json.dumps(
+        {"note": "書目點名要的華藝期刊論文，已對到 docID；--batch 會先清這一批再照 PRIORITY 掃。",
+         "counts": {"對到 docID": n, "對不上": len(unresolved)},
+         "resolved": resolved, "unresolved": unresolved},
+        ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"書目點名 {n} 篇對到 docID、{len(unresolved)} 篇對不上 → {WANTED}")
+    for u in unresolved[:12]:
+        print(f"  ? {u.get('title', '')[:36]} — {u['why']}")
+    return resolved
+
+
+def load_wanted():
+    if not WANTED.exists():
+        return {}
+    return json.loads(WANTED.read_text(encoding="utf-8")).get("resolved", {})
 
 
 def batch(s, budget):
@@ -462,6 +546,22 @@ def batch(s, budget):
     LOCK.write_text(str(time.time()), encoding="utf-8")
     try:
         spent = 0
+        # 先清書目點名的那些篇。整批 17,090 篇要跑幾個月，論文當下要引的那 147 篇
+        # 排在後面就等於沒下——優先序決定的是「先拿到手的是哪些」。
+        # 每次都重算：新抓好的篇目會讓原本「對不上」的書目條目補進佇列，
+        # 純讀本機檔、不打網路，所以放在這裡不花額度。
+        if WANTED_SRC.exists():
+            try:
+                resolve_wanted()
+            except Exception as e:                # noqa: BLE001
+                print(f"（書目佇列重算失敗，改用既有的：{e}）")
+        wanted = load_wanted()
+        for slug in PRIORITY:
+            if spent >= budget:
+                break
+            ids = {w["docId"] for w in wanted.get(slug, [])}
+            if ids and (TOC_DIR / f"{slug}.json").exists():
+                spent += download(s, slug, budget - spent, only=ids) or 0
         for slug in PRIORITY:
             if spent >= budget:
                 break
@@ -499,6 +599,8 @@ def main():
     ap.add_argument("--toc", help="slug 或 all")
     ap.add_argument("--summarize", action="store_true")
     ap.add_argument("--download", help="slug 或 all")
+    ap.add_argument("--resolve-wanted", action="store_true",
+                    help="把書目點名的篇名對到 docID，寫成 airiti-wanted.json")
     ap.add_argument("--batch", type=int,
                     help="排程用：整批總共下載這麼多篇，跨刊依 PRIORITY 順序取用")
     ap.add_argument("--limit", type=int, default=DL_CAP)
@@ -515,9 +617,12 @@ def main():
     if args.download:
         for slug in ([args.download] if args.download != "all" else list(JOURNALS)):
             download(s, slug, args.limit)
+    if args.resolve_wanted:
+        resolve_wanted()
     if args.batch:
         batch(s, args.batch)
-    if not (args.discover or args.toc or args.summarize or args.download or args.batch):
+    if not (args.discover or args.toc or args.summarize or args.download
+            or args.batch or args.resolve_wanted):
         ap.print_help()
 
 

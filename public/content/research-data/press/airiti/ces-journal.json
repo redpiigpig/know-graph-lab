@@ -1,0 +1,1925 @@
+{
+ "slug": "ces-journal",
+ "pid": "19986505",
+ "name": "華神期刊",
+ "publisherID": "U20121108005",
+ "source": "https://www.airitilibrary.com/Publication/Information?publicationID=19986505&type=%E6%9C%9F%E5%88%8A&tabName=2",
+ "counts": {
+  "卷期": 16,
+  "篇目": 139,
+  "有電子全文": 139
+ },
+ "issues": [
+  {
+   "issueID": "N202601140007",
+   "label": "16期 (2025/12)",
+   "year": "2025",
+   "count": 7
+  },
+  {
+   "issueID": "N202502060018",
+   "label": "15期 (2024/12)",
+   "year": "2024",
+   "count": 5
+  },
+  {
+   "issueID": "N202402230002",
+   "label": "14期 (2023/12)",
+   "year": "2023",
+   "count": 5
+  },
+  {
+   "issueID": "N202303070011",
+   "label": "13期 (2022/12)",
+   "year": "2022",
+   "count": 7
+  },
+  {
+   "issueID": "202203140013",
+   "label": "12期 (2021/12)",
+   "year": "2021",
+   "count": 7
+  },
+  {
+   "issueID": "202111180010",
+   "label": "11期 (2020/12)",
+   "year": "2020",
+   "count": 8
+  },
+  {
+   "issueID": "202002190014",
+   "label": "10期 (2019/12)",
+   "year": "2019",
+   "count": 8
+  },
+  {
+   "issueID": "201904290017",
+   "label": "9期 (2018/12)",
+   "year": "2018",
+   "count": 10
+  },
+  {
+   "issueID": "201712140017",
+   "label": "8期 (2016/11)",
+   "year": "2016",
+   "count": 9
+  },
+  {
+   "issueID": "201611230018",
+   "label": "7期 (2015/11)",
+   "year": "2015",
+   "count": 8
+  },
+  {
+   "issueID": "201511180019",
+   "label": "6期 (2014/11)",
+   "year": "2014",
+   "count": 11
+  },
+  {
+   "issueID": "201410310013",
+   "label": "5期 (2013/10)",
+   "year": "2013",
+   "count": 10
+  },
+  {
+   "issueID": "201312020020",
+   "label": "4期 (2012/10)",
+   "year": "2012",
+   "count": 11
+  },
+  {
+   "issueID": "201211080014",
+   "label": "3期 (2010/10)",
+   "year": "2010",
+   "count": 10
+  },
+  {
+   "issueID": "201211200013",
+   "label": "2期 (2009/10)",
+   "year": "2009",
+   "count": 9
+  },
+  {
+   "issueID": "201211210007",
+   "label": "1期 (2008/06)",
+   "year": "2008",
+   "count": 14
+  }
+ ],
+ "articles": [
+  {
+   "docId": "19986505-N202601140007-00001",
+   "title": "析論〈尼西亞—君士坦丁堡信經〉的背景與該信經的成形理論",
+   "authors": [
+    "張聖佳(Sheng-Chia Chang)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "10-45",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00002",
+   "title": "此時此刻：論周聯華與神學本地化",
+   "authors": [
+    "曾慶豹(Ken-Pa Chin)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "46-80",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00003",
+   "title": "從哥林多前書第一至二章探討使徒保羅講道的運作模式",
+   "authors": [
+    "凃偉文(Wei-Wen Tu)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "81-105",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00004",
+   "title": "救贖與更新：「第三天」在復活語境中的意義",
+   "authors": [
+    "范瑞傑(Andrew Fan)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "106-135",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00005",
+   "title": "愛心融入因信稱義：從篇章分析法解析羅馬書十一章回應基督教錫安主義",
+   "authors": [
+    "徐桂珠(Kuei-Chu Hsu)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "136-158",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00006",
+   "title": "Deliverance and Spiritual Warfare in Discipleship of Believers from Muslim Backgrounds",
+   "authors": [
+    "Mark Durie"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "159-187",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202601140007-00007",
+   "title": "Polycentric Mission Leadership: Toward a New Theoretical Model for Global Leadership",
+   "authors": [
+    "馬天濟(Tianji Ma)"
+   ],
+   "volIssue": "16期",
+   "date": "2025 / 12",
+   "pages": "189-193",
+   "fulltext": true,
+   "issueLabel": "16期 (2025/12)",
+   "issueID": "N202601140007"
+  },
+  {
+   "docId": "19986505-N202502060018-00001",
+   "title": "面向終末的信仰：王明道與滕近輝論天國、苦難及成聖觀",
+   "authors": [
+    "倪步曉(Bu-Xiao Ni)"
+   ],
+   "volIssue": "15期",
+   "date": "2024 / 12",
+   "pages": "12-46",
+   "fulltext": true,
+   "issueLabel": "15期 (2024/12)",
+   "issueID": "N202502060018"
+  },
+  {
+   "docId": "19986505-N202502060018-00002",
+   "title": "從自然神學看李提摩太《喻道要旨》的傳教策略及宗教對話",
+   "authors": [
+    "蔡東城(Choy Tung Shing)"
+   ],
+   "volIssue": "15期",
+   "date": "2024 / 12",
+   "pages": "47-78",
+   "fulltext": true,
+   "issueLabel": "15期 (2024/12)",
+   "issueID": "N202502060018"
+  },
+  {
+   "docId": "19986505-N202502060018-00003",
+   "title": "弗蘭克論對窮人的責任及其實踐",
+   "authors": [
+    "黃丁(Ding Huang)"
+   ],
+   "volIssue": "15期",
+   "date": "2024 / 12",
+   "pages": "79-98",
+   "fulltext": true,
+   "issueLabel": "15期 (2024/12)",
+   "issueID": "N202502060018"
+  },
+  {
+   "docId": "19986505-N202502060018-00004",
+   "title": "「視障」辭彙於「和合本聖經」之漢譯與台灣視障者的接受－以馬太福音為例",
+   "authors": [
+    "王錦心(Chin-Hsin Wang)"
+   ],
+   "volIssue": "15期",
+   "date": "2024 / 12",
+   "pages": "99-123",
+   "fulltext": true,
+   "issueLabel": "15期 (2024/12)",
+   "issueID": "N202502060018"
+  },
+  {
+   "docId": "19986505-N202502060018-00005",
+   "title": "劉小楓漢語神學之罪觀",
+   "authors": [
+    "史倜風(Stephen Shi)"
+   ],
+   "volIssue": "15期",
+   "date": "2024 / 12",
+   "pages": "124-142",
+   "fulltext": true,
+   "issueLabel": "15期 (2024/12)",
+   "issueID": "N202502060018"
+  },
+  {
+   "docId": "19986505-N202402230002-00001",
+   "title": "社會處境中的意義—對韋恩．亞瑟頓．米克斯（Wayne Atherton Meeks）社會科學方法論之研究",
+   "authors": [
+    "劉加恩(Chia-En Liu)"
+   ],
+   "volIssue": "14期",
+   "date": "2023 / 12",
+   "pages": "10-39",
+   "fulltext": true,
+   "issueLabel": "14期 (2023/12)",
+   "issueID": "N202402230002"
+  },
+  {
+   "docId": "19986505-N202402230002-00002",
+   "title": "\"Polychotomy\" and \"The Medium is the Message\": The Secularizing Effects of Departmentalization and Specialization in Modern Christian Higher Education",
+   "authors": [
+    "Clement Yung Wen"
+   ],
+   "volIssue": "14期",
+   "date": "2023 / 12",
+   "pages": "40-68",
+   "fulltext": true,
+   "issueLabel": "14期 (2023/12)",
+   "issueID": "N202402230002"
+  },
+  {
+   "docId": "19986505-N202402230002-00003",
+   "title": "Cultural Distance and Jesus' Messengers of Reconciliation: Exploring the Contribution of Same-, Near-, and Far-Culture Workers",
+   "authors": [
+    "David Greenlee",
+    "Peter T. Lee"
+   ],
+   "volIssue": "14期",
+   "date": "2023 / 12",
+   "pages": "69-101",
+   "fulltext": true,
+   "issueLabel": "14期 (2023/12)",
+   "issueID": "N202402230002"
+  },
+  {
+   "docId": "19986505-N202402230002-00004",
+   "title": "後疫情教會培育事工的挑戰",
+   "authors": [
+    "彭怡珍(Jane Peng)"
+   ],
+   "volIssue": "14期",
+   "date": "2023 / 12",
+   "pages": "102-123",
+   "fulltext": true,
+   "issueLabel": "14期 (2023/12)",
+   "issueID": "N202402230002"
+  },
+  {
+   "docId": "19986505-N202402230002-00005",
+   "title": "《差傳、基要與自立實踐：基督教宣道會華中教區的宗教傳播及其身份建構的探析（1889－1951）》",
+   "authors": [
+    "蔡東城(Choy Tung Shing)"
+   ],
+   "volIssue": "14期",
+   "date": "2023 / 12",
+   "pages": "126-134",
+   "fulltext": true,
+   "issueLabel": "14期 (2023/12)",
+   "issueID": "N202402230002"
+  },
+  {
+   "docId": "19986505-N202303070011-00001",
+   "title": "新自由主義、環保與不平等：從基督教角度討論海耶克政治經濟學",
+   "authors": [
+    "洪子雲(Tsz-Wan Hung)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "10-35",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00002",
+   "title": "道成肉身的上帝：論早期基督教藝術的起源、發展及影響",
+   "authors": [
+    "李曉曼(Liz Lee)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "36-63",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00003",
+   "title": "上下文解經：雅各書第三章13節至第四章17節中的銜接性分析",
+   "authors": [
+    "劉加恩(Chia-En Liu)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "64-84",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00004",
+   "title": "終末即創造：侯活士和平神學的敘事基礎",
+   "authors": [
+    "蕭難(Shalom Li)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "85-115",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00005",
+   "title": "廣西宣道會的最後十年（1948－1958）",
+   "authors": [
+    "陳智衡(Chi-Hang Chan)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "116-155",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00006",
+   "title": "Evangelicals Engaging in Practical Theology: Theology that Impacts Church and World",
+   "authors": [
+    "陳世賢(Steven K. Chen)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "157-170",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-N202303070011-00007",
+   "title": "Response by Dr. Helen Cameron to Review by Steven K. Chen",
+   "authors": [
+    "Helen Cameron",
+    "Steven K. Chen(陳世賢)"
+   ],
+   "volIssue": "13期",
+   "date": "2022 / 12",
+   "pages": "171-173",
+   "fulltext": true,
+   "issueLabel": "13期 (2022/12)",
+   "issueID": "N202303070011"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-10-39",
+   "title": "歷史進入末世：約阿希姆的歷史神學及其「諾斯底性質」的再思",
+   "authors": [
+    "吳國安(Kuo-An Wu)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "10-39",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-40-65",
+   "title": "屬神的聖潔國度：彼得前書二章1至10節中的文本互涉",
+   "authors": [
+    "劉加恩(Joshua Liu)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "40-65",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-66-87",
+   "title": "從基督教角度反思儒家孝道的現代價值",
+   "authors": [
+    "洪子雲(Tsz-Wan Hung)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "66-87",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-88-131",
+   "title": "宣道東漸：宣道運動的衍生及早期在華傳教身份的實踐（1889－1891）",
+   "authors": [
+    "倪步曉(Bu-Xiao Ni)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "88-131",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-132-155",
+   "title": "同一個身子上的不同肢體：整合取向的基督徒輔導和聖經輔導的比較",
+   "authors": [
+    "焦如品(Ju-Ping Chiao)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "132-155",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-157-168",
+   "title": "神國與終末論：評祝熊祥博士的《末後的事》卷二",
+   "authors": [
+    "張略(Luke Cheung)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "157-168",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202112-202203140013-202203140013-169-185",
+   "title": "回應張略博士對卷一的書評：衷心感謝、選要回應",
+   "authors": [
+    "祝熊祥(George Chok)"
+   ],
+   "volIssue": "12期",
+   "date": "2021 / 12",
+   "pages": "169-185",
+   "fulltext": true,
+   "issueLabel": "12期 (2021/12)",
+   "issueID": "202203140013"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-10-29",
+   "title": "帝國主義的「侵略論」－中共史觀下的中國基督教史書寫",
+   "authors": [
+    "曾慶豹(Ken-Pa Chin)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "10-29",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-30-52",
+   "title": "敘述文中的銜接與主題以馬可福音二章1至12節為例",
+   "authors": [
+    "劉加恩(Joshua Liu)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "30-52",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-53-77",
+   "title": "以賽亞書十四章4b至20節與以賽亞書整體的關聯性",
+   "authors": [
+    "黃正人(Jeng-Zen Huang)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "53-77",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-78-101",
+   "title": "從典故來看約瑟敘事對以斯帖記之倫理與神學的影響",
+   "authors": [
+    "曾祖漢(Tsu-Han Tseng)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "78-101",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-103-121",
+   "title": "倡導復和計劃：對香港反逃犯引渡條例的抗爭之神學反思",
+   "authors": [
+    "龔立人(Lap-Yan Kung)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "103-121",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-122-147",
+   "title": "建立門徒與靈命塑造的關係",
+   "authors": [
+    "彭怡珍(Jane Peng)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "122-147",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-149-161",
+   "title": "啟示文學與終末論：評祝熊祥博士的《末後的事》卷一",
+   "authors": [
+    "張略(Luke Cheung)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "149-161",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-202012-202111180010-202111180010-162-171",
+   "title": "The Meaning of Protestant Theology: Luther, Augustine, and the Gospel That Gives us Christ",
+   "authors": [
+    "金振宇(Vincent Kam)"
+   ],
+   "volIssue": "11期",
+   "date": "2020 / 12",
+   "pages": "162-171",
+   "fulltext": true,
+   "issueLabel": "11期 (2020/12)",
+   "issueID": "202111180010"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-10-43",
+   "title": "「基督與文化」抑或「耶穌是主」－尤達的觀點",
+   "authors": [
+    "鄧紹光(Andres SK Tang)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "10-43",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-44-66",
+   "title": "遇上「矛盾」的上帝：路德與加爾文讀亞伯拉罕獻以撒（創廿二1-19）",
+   "authors": [
+    "金振宇(Vincent Kam)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "44-66",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-67-94",
+   "title": "邁向本土化宣教的旅程：馬偕在北台灣宣教的發展模式",
+   "authors": [
+    "謝大立(Ta-Li Hsieh)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "67-94",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-96-113",
+   "title": "永遠是學習者：文化人類學對宣教與門徒訓練的意義",
+   "authors": [
+    "許南盛(Nam-Seng Koh)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "96-113",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-114-140",
+   "title": "台灣教會師母研究初探：「呼召」、「婚姻滿意程度」、「家庭狀況正向程度」與「快樂程度」之關聯",
+   "authors": [
+    "陳世賢(Steven K. Chen)",
+    "李傳恩(Chuan-En Lee)",
+    "蔡珍莉(Lily K. Chua)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "114-140",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-142-147",
+   "title": "Thomas and the Gospels: The Case for Thomas's Familiarity with the Synoptics",
+   "authors": [
+    "劉加恩(Joshua Liu)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "142-147",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-149-176",
+   "title": "托馬斯．奧登的「古代正統主義」對神學教育的意義",
+   "authors": [
+    "張聖佳(Sheng-Chia Chang)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "149-176",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201912-202002190014-202002190014-177-211",
+   "title": "兒童、跨代、家庭：兩文三語教會建造門徒的策略",
+   "authors": [
+    "余惠娥(Hui-Er Yu)"
+   ],
+   "volIssue": "10期",
+   "date": "2019 / 12",
+   "pages": "177-211",
+   "fulltext": true,
+   "issueLabel": "10期 (2019/12)",
+   "issueID": "202002190014"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-10-39",
+   "title": "共圓中國夢－當代中國基督教神學「政主教從」的困局",
+   "authors": [
+    "邢福增(Fuk-Tsang Ying)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "10-39",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-40-72",
+   "title": "威廉俄坎論教會信仰權柄的憑據",
+   "authors": [
+    "張聖佳(Sheng-Chia Chang)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "40-72",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-73-86",
+   "title": "在「做」與「是」之間－戳破老的迷思",
+   "authors": [
+    "許南盛(Nam-Seng Koh)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "73-86",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-87-110",
+   "title": "《女鐸小說集》之女性形象研究－二十世紀三○年代上海女性的婚戀家庭焦慮",
+   "authors": [
+    "曾陽晴(Yang-Qing Zeng)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "87-110",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-112-148",
+   "title": "從馬偕在台宣教的歷程－探討宣教士養成的重要性",
+   "authors": [
+    "謝大立(Ta-Li Hsieh)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "112-148",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-150-159",
+   "title": "書評：Pauline Language and the Pastoral Epistles: A Study of Linguistic Variation in the Corpus Paulinum",
+   "authors": [
+    "劉加恩(Joshua Liu)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "150-159",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-160-176",
+   "title": "書評：《變局中的抉擇》中華全國基督教協進會歷史的終結（1949－1951）",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "160-176",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-178-197",
+   "title": "信徒所需最底限度教育（上篇）：馬丁路德的遺產",
+   "authors": [
+    "蔡珍莉(Lily K. Chua)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "178-197",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-198-218",
+   "title": "信徒所需最底限度教育（下篇）：在台落實的初探",
+   "authors": [
+    "蔡珍莉(Lily K. Chua)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "198-218",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201812-201904290017-201904290017-219-225",
+   "title": "淺談哈佛大學神學院科學宗教與文化課程－2018 Ways of Knowing研討會與跨領域挑戰",
+   "authors": [
+    "郭怡君(I-Chun Kuo)"
+   ],
+   "volIssue": "9期",
+   "date": "2018 / 12",
+   "pages": "219-225",
+   "fulltext": true,
+   "issueLabel": "9期 (2018/12)",
+   "issueID": "201904290017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-10-34",
+   "title": "再思創世記四章七節的涵義該隱故事的另一個角度",
+   "authors": [
+    "黃正人(Jengzen Huang)"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "10-34",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-35-60",
+   "title": "作者歸屬與著作日期之辯論舊約研究歷時性與共時性觀點的起源與發展",
+   "authors": [
+    "蔡玉玲(Daisy Yulin Tsai)"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "35-60",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-61-85",
+   "title": "馬丁路德論世俗政權及戰爭",
+   "authors": [
+    "廖元威(Yuan-wei Liao)"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "61-85",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-86-103",
+   "title": "馬丁路德關於婚姻及家庭的教導之芻議",
+   "authors": [
+    "鄭愛和(Luke Aihe Zheng)"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "86-103",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-104-142",
+   "title": "當代講道學，何去何從？論「新講道學」的崛起和特色",
+   "authors": [
+    "梁美心(Mavis M. Leung)"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "104-142",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-144-155",
+   "title": "書評：《國族神學的民主化》台灣與中國大陸",
+   "authors": [
+    "陶牧群"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "144-155",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-156-159",
+   "title": "書評：The Integrity of 2 Corinthians and Paul's Aggravating Absence",
+   "authors": [
+    "劉加恩"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "156-159",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-162-173",
+   "title": "向保羅學習如何面對福音與文化的衝突",
+   "authors": [
+    "Robert Priest"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "162-173",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201611-201712140017-201712140017-174-179",
+   "title": "傳統價值與世俗時代　第三屆迦密山國際學術論壇紀要",
+   "authors": [
+    "孫志鴻"
+   ],
+   "volIssue": "8期",
+   "date": "2016 / 11",
+   "pages": "174-179",
+   "fulltext": true,
+   "issueLabel": "8期 (2016/11)",
+   "issueID": "201712140017"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-10-36",
+   "title": "律法屬乎神",
+   "authors": [
+    "Sarah Hinlicky Wilson",
+    "陳毓華"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "10-36",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-37-71",
+   "title": "二十世紀前期《使信月刊》呈現的台灣報導及其宣傳面向 以英國長老教會傳教士在台實踐的福音事工及其醫療關懷為主",
+   "authors": [
+    "張勤瑩(Ching-Yin Chang)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "37-71",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-72-99",
+   "title": "論後現代中國基督教的多重身分 從前現代性、現代性趨向後現代性的宣教學反思",
+   "authors": [
+    "李潔人(Jonathan J. R. Li)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "72-99",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-100-132",
+   "title": "作主門徒的實踐 北美華人教會華語青年事工為個案的一個實踐神學探索",
+   "authors": [
+    "董家驊(David Jia-Hwa Doong)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "100-132",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-134-159",
+   "title": "書評－Apocalyptic Paul: Cosmos and Anthropos in Romans 5-8",
+   "authors": [
+    "張楷弦(Kai-Hsuan Chang)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "134-159",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-160-172",
+   "title": "《被遺忘的中國童年》芝罘學校與內地會傳教士子女",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "160-172",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-173-180",
+   "title": "童年史研究的多樣性 回應書評《被遺忘的中國童年》兼論內地會傳教士子女口述史的規劃",
+   "authors": [
+    "張勤瑩(Ching-Yin Chang)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "173-180",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201511-201611230018-201611230018-182-201",
+   "title": "年度聖經文學學會 散發屬靈知識馨香 記2014 ETS、SBL、AAR大會",
+   "authors": [
+    "邱慕天(Mu-Tien Chiou)"
+   ],
+   "volIssue": "7期",
+   "date": "2015 / 11",
+   "pages": "182-201",
+   "fulltext": true,
+   "issueLabel": "7期 (2015/11)",
+   "issueID": "201611230018"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-10-32",
+   "title": "從摩西在金牛犢事件的代求　看先知事奉的典範",
+   "authors": [
+    "胡維華(Wesley Hu)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "10-32",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-33-53",
+   "title": "先知何西阿的婚姻解讀與神學意義",
+   "authors": [
+    "吳獻章(Timothy Wu)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "33-53",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-54-86",
+   "title": "「信心」在巴特稱義論當中的地位－巴特對路德與加爾文的詮釋與應用",
+   "authors": [
+    "曾劭愷(Shao-Kai Tseng)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "54-86",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-87-114",
+   "title": "莫特曼「彌賽亞基督論」的猶太性關注之神學意涵",
+   "authors": [
+    "陳世冠(Kenneth Ting)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "87-114",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-116-125",
+   "title": "Book Review: The Book of James-A New Perpective",
+   "authors": [
+    "劉加恩(Joshua Liu)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "116-125",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-126-140",
+   "title": "書評：《紅旗下的十字架》",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "126-140",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-142-149",
+   "title": "三位一體的物理學比喻",
+   "authors": [
+    "黃穎航(John Wong)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "142-149",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-152-174",
+   "title": "台灣宣教的典範轉移　長老會、浸信會與靈糧堂宣教神學與實踐",
+   "authors": [
+    "柴子高(Tzu-Kao Chai)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "152-174",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-176-196",
+   "title": "保羅新觀之回顧",
+   "authors": [
+    "D. A. Carson",
+    "張奇軍"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "176-196",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-197-217",
+   "title": "同性戀與教會",
+   "authors": [
+    "D. A. Carson"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "197-217",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201411-201511180019-201511180019-218-221",
+   "title": "ATA基督論神學研討會側記",
+   "authors": [
+    "廖元威(Willian Liao)"
+   ],
+   "volIssue": "6期",
+   "date": "2014 / 11",
+   "pages": "218-221",
+   "fulltext": true,
+   "issueLabel": "6期 (2014/11)",
+   "issueID": "201511180019"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-6-8",
+   "title": "主編的話",
+   "authors": [],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "6-8",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-10-31",
+   "title": "「金」的誘惑－啟示錄的黃金世界",
+   "authors": [
+    "梁美心(Mavis M. Leung)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "10-31",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-34-58",
+   "title": "新約希臘文的關身語態－理解其含義的關鍵與重要性",
+   "authors": [
+    "李志秋(Chee-Chiew Lee)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "34-58",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-60-79",
+   "title": "家庭中夫妻主從倫理或教會中規範姊妹的通則？",
+   "authors": [
+    "吳維和(Wei-Ho Wu)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "60-79",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-80-97",
+   "title": "哈沃華芝論智障者身體在教會存在的神學意涵",
+   "authors": [
+    "顏晶晶(Chin-Chin Gan)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "80-97",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-98-128",
+   "title": "上帝，景觀建築師：以西結書中的生態花園城市計畫",
+   "authors": [
+    "郭怡君(I-Chun Kuo)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "98-128",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-130-158",
+   "title": "歌羅西書一章十五節的解經爭論",
+   "authors": [
+    "林柏雄(Luke Po-Hsiung Lin)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "130-158",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-160-177",
+   "title": "《結廬在人境》靈性操練的本質：勞倫斯「與神同在」經歷的現代意義",
+   "authors": [
+    "陳世冠(Kenneth Ting)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "160-177",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-178-198",
+   "title": "《聖經與槍炮－基督教與潮州社會》1860－1900",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "178-198",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201310-201410310013-201410310013-200-219",
+   "title": "從管理的角度看神學院的困境與因應",
+   "authors": [
+    "王貴恆(Cecil Wang)"
+   ],
+   "volIssue": "5期",
+   "date": "2013 / 10",
+   "pages": "200-219",
+   "fulltext": true,
+   "issueLabel": "5期 (2013/10)",
+   "issueID": "201410310013"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-10-41",
+   "title": "聖經底本無誤論：論證的重述與方法的再思",
+   "authors": [
+    "周功和(Peter K. Chow)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "10-41",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-42-75",
+   "title": "聖經無誤的世紀爭議",
+   "authors": [
+    "蔡麗貞(Anne Tsai)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "42-75",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-76-94",
+   "title": "自涉詮釋學：作者、讀者、語境",
+   "authors": [
+    "吳仲誠(Samuel Goh)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "76-94",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-96-119",
+   "title": "論施道比次牧靈神學對青年路德的影響",
+   "authors": [
+    "馬庫斯．費依德(Markus Wriedt)",
+    "張聖佳"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "96-119",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-120-147",
+   "title": "如何詮釋聖經而不導致暴力？－列維納斯的文本詮釋與福音神學",
+   "authors": [
+    "謝木水(Clement Chia-Mook Soo)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "120-147",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-148-165",
+   "title": "其實你不懂我的心－從約拿書一章一至三節談宣教",
+   "authors": [
+    "吳獻章(Timothy Wu)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "148-165",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-166-186",
+   "title": "關於以賽亞書九章六節，基督與父神是同一位麼？",
+   "authors": [
+    "林柏雄(Luke Po-Hsiung Lin)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "166-186",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-194-205",
+   "title": "《基督教與新加坡華人1819－1846》",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "194-205",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-206-221",
+   "title": "《路德神學－當代解讀》",
+   "authors": [
+    "謝龍邑(Ambrose Lung-Yup Tse)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "206-221",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-224-247",
+   "title": "福音與文化：從教牧角度看祭祖的出路",
+   "authors": [
+    "梁家麟(Ka-Lun Liung)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "224-247",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201210-201312020020-201312020020-248-263",
+   "title": "從祭祖到敬祖－基督教孝道神學的反省與敬祖事工的實踐",
+   "authors": [
+    "溫永生(Yung-Sheng Wen)"
+   ],
+   "volIssue": "4期",
+   "date": "2012 / 10",
+   "pages": "248-263",
+   "fulltext": true,
+   "issueLabel": "4期 (2012/10)",
+   "issueID": "201312020020"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-10-33",
+   "title": "學術研究與神學教育—華人世界基督教研究的緊迫性",
+   "authors": [
+    "林鴻信(Hong-Hsin Lin)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "10-33",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-34-62",
+   "title": "海內外神學教育交流的契機與限制",
+   "authors": [
+    "梁家麟(Ka-Lun Leung)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "34-62",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-64-88",
+   "title": "後現代與神學教育",
+   "authors": [
+    "周功和(Peter K. Chow)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "64-88",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-90-118",
+   "title": "探研詩篇的咒詛經文",
+   "authors": [
+    "蔡麗貞(Anne Tsai)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "90-118",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-120-145",
+   "title": "底本說的再思－底本說的發展和式微以及五經研究的典範轉移",
+   "authors": [
+    "施尤禮(Daniel See)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "120-145",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-146-165",
+   "title": "路得記的四幕景",
+   "authors": [
+    "胡維華(Wesley Hu)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "146-165",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-168-176",
+   "title": "《以賽亞書（卷四）》",
+   "authors": [
+    "羅慶才(Hing-Choi Lo)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "168-176",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-178-185",
+   "title": "約翰壹貳參書（卷上、下）",
+   "authors": [
+    "張雲開(Paul W. Cheung)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "178-185",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-186-197",
+   "title": "《革命先驅》—基督徒與晚清中國革命的起源",
+   "authors": [
+    "郭明璋(Ambrose Kuo)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "186-197",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-201010-201211080014-201211080014-200-237",
+   "title": "華神建校四十年 校友事奉現況調查研究報告",
+   "authors": [
+    "蔡麗貞(Anne Tsai)",
+    "卓志錠(Chih-Ting Chuo)"
+   ],
+   "volIssue": "3期",
+   "date": "2010 / 10",
+   "pages": "200-237",
+   "fulltext": true,
+   "issueLabel": "3期 (2010/10)",
+   "issueID": "201211080014"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-10-38",
+   "title": "翻譯的神學－語言、直譯及翻譯策略觀念的改變",
+   "authors": [
+    "唐書禮(Philip H. Towner)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "10-38",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-40-69",
+   "title": "《幽暗意識與民主傳統》闡論",
+   "authors": [
+    "朱曉海(Sherman Chu)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "40-69",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-72-97",
+   "title": "解釋哥林多後書三章六節的典範轉移－馬丁路德的見解已經過時了嗎？",
+   "authors": [
+    "蔡麗貞(Anne Tsai)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "72-97",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-98-117",
+   "title": "敘述文與詩歌體的輪唱：底波拉之歌為例",
+   "authors": [
+    "吳獻章(Timothy Wu)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "98-117",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-118-145",
+   "title": "希伯來文文章的分段藝術－以彌迦書第一章為範例",
+   "authors": [
+    "胡維華(Wesley Hu)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "118-145",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-146-169",
+   "title": "重新發現虔敬主義－從施本爾的敬虔運動談其古典內涵",
+   "authors": [
+    "劉幸枝(Isabel Liu)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "146-169",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-172-182",
+   "title": "書評－《研讀版聖經—新譯本》",
+   "authors": [
+    "吳榮滁"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "172-182",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-184-195",
+   "title": "書評－《為真道爭辯—在華基督新教傳教士基要主義運動（1920-1937）》",
+   "authors": [
+    "郭明璋"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "184-195",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200910-201211200013-201211200013-198-231",
+   "title": "法國泰澤式崇拜－在北京X教會中的應用探索",
+   "authors": [
+    "孫晨薈(Chen-Hui Sun)"
+   ],
+   "volIssue": "2期",
+   "date": "2009 / 10",
+   "pages": "198-231",
+   "fulltext": true,
+   "issueLabel": "2期 (2009/10)",
+   "issueID": "201211200013"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-10-31",
+   "title": "文本互涉：翻譯的失（與得）",
+   "authors": [
+    "唐書禮(Philip H. Towner)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "10-31",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-32-49",
+   "title": "從譯經史論未來中文聖經翻譯之芻議",
+   "authors": [
+    "彭國瑋(Guo-Wei Peng)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "32-49",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-50-77",
+   "title": "白日陞的中文聖經抄本及其對早期新教中文譯經的影響",
+   "authors": [
+    "蔡錦圖(Daniel Kam To Choi)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "50-77",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-78-89",
+   "title": "從以賽亞書看中文聖經翻譯",
+   "authors": [
+    "吳獻章(Timothy Wu)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "78-89",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-90-101",
+   "title": "《和合本》聖經在約翰壹書中幾個待商榷的經文",
+   "authors": [
+    "吳道宗(Daniel Wu)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "90-101",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-104-124",
+   "title": "何謂宗教改革？",
+   "authors": [
+    "廖元威(WilIiarn Y. W. Liao)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "104-124",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-126-144",
+   "title": "從舊約幾處爭議經文看同性戀問題",
+   "authors": [
+    "賴建國(Paul Lai)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "126-144",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-146-166",
+   "title": "聖潔概念在希律聖殿山上的進階脈動",
+   "authors": [
+    "吳存仁(Tsen-Jen Wu)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "146-166",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-168-185",
+   "title": "路德聖餐講章中之「赦罪」教導",
+   "authors": [
+    "陳冠賢(Kuan-Shian Chen)"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "168-185",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-188-194",
+   "title": "書評：《文以載道－奈達對聖經翻譯的貢獻》（Let the words be written - The Lasting Influence of Eugene A. Nida）",
+   "authors": [
+    "蔡麗貞"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "188-194",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-196-205",
+   "title": "書評：《神學詮釋學》（Is There a Meaning in This Text? The Bible, the Reader, and the Morality of Literary Knowledge）",
+   "authors": [
+    "蔡麗貞"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "196-205",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-206-212",
+   "title": "書評：《上帝的人馬－十九世紀在華傳教士的作為》",
+   "authors": [
+    "郭明璋"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "206-212",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-214-223",
+   "title": "書評：《聖經詩歌的藝術》（The Art of Biblical Poetry）",
+   "authors": [
+    "歐陽瑜"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "214-223",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  },
+  {
+   "docId": "19986505-200806-201211210007-201211210007-226-232",
+   "title": "伊拉斯瑪斯譯序",
+   "authors": [
+    "魏仰德"
+   ],
+   "volIssue": "1期",
+   "date": "2008 / 06",
+   "pages": "226-232",
+   "fulltext": true,
+   "issueLabel": "1期 (2008/06)",
+   "issueID": "201211210007"
+  }
+ ]
+}
