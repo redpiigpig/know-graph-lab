@@ -18,7 +18,31 @@ python -X utf8 scripts/press_airiti.py --toc campus      # 單刊篇目
 python -X utf8 scripts/press_airiti.py --toc all         # 全部（很久，過夜跑）
 python -X utf8 scripts/press_airiti.py --summarize       # 列表頁用的小索引
 python -X utf8 scripts/press_airiti.py --download campus --limit 300
+python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批共 25 篇
 ```
+
+## 排程
+
+`scripts/run_airiti_batch.bat <篇數>`，Windows 排程兩個時段：
+`KGL_Airiti_AM`（10:00）與 `KGL_Airiti_PM`（15:30），各 25 篇＝一天 50 篇。
+log 在 `c:	mpiriti_download.log`。
+
+`--batch N` 與 `--download <slug> --limit N` 的差別：前者是**整批總共 N 篇**、
+跨刊依 `PRIORITY` 順序取用；後者是**每一刊各 N 篇**。排程要控的是每天對華藝
+發出多少下載請求，所以排程一律走 `--batch`。
+
+`--batch` 會上鎖（`c:	mp\press_airiti_download.lock`，三小時後視為過期）。
+🚨 這個鎖不是可有可無的：實測發生過兩個 session 同時在下載，那等於把對機構 IP
+的請求速率乘二，而節流的整個意義就在速率。
+
+**體量（2026-09-04 實測）**：29 個刊號共 17,426 篇目、其中 17,090 篇有電子全文，
+以每篇約 2.4 MB 計約 40 GB。一天 50 篇要跑 11 個月；要在一季內下完得拉到
+一天 200 篇上下。改速率就是改兩個排程任務的引數，不必動腳本。
+
+精確篇數怎麼查（一刊一次請求，不必等 `--toc` 跑完）：
+`POST /Article/Query`，`DSF.SearchFileds=[{FieldName:51, SearchKeyWord:<pid>}]`，
+加 `DSF.SearchScope = 1` 就只算有電子全文的那些；結果數在
+`<div class="resultReport">2,393 個查詢結果</div>`。
 
 ## 為什麼要收這一層
 

@@ -39,6 +39,7 @@
   python -X utf8 scripts/press_airiti.py --toc campus
   python -X utf8 scripts/press_airiti.py --toc all
   python -X utf8 scripts/press_airiti.py --download campus [--limit 300]
+  python -X utf8 scripts/press_airiti.py --batch 50      # 排程用：整批共 50 篇
 """
 import argparse
 import json
@@ -423,6 +424,53 @@ def download(s, slug, limit):
     ledger_p.write_text(json.dumps(ledger, ensure_ascii=False, indent=1), encoding="utf-8")
     left = sum(1 for a in toc["articles"] if a["fulltext"] and ledger.get(a["docId"]) != "ok")
     print(f"{name}：本次 {done} 成功 / {fail} 失敗，尚餘 {left} 篇 → {root}")
+    return done
+
+
+# 排程批次的取用順序。前面幾份是論文直接要用的，排在後面的等前面下完再說；
+# 全部 17,090 篇一天下不完，順序就是「先拿到手的是哪些」的實際決定。
+PRIORITY = [
+    "campus", "new-messenger", "wilderness",           # 教會青年刊物（第四、六章）
+    "theology-church", "taiwan-theology", "ces-journal",  # 三間神學院學報
+    "hongshi", "dharma-seals", "hcu-buddhist",         # 弘誓／玄奘（第三章）
+    "sino-christian", "logos-pneuma", "jiandao", "collectanea",
+    "dao-magazine", "baptist-annual",
+    "religious-philosophy", "taiwan-religion", "fujen-religious",
+    "new-century", "chinese-religions",
+    "chbs-journal", "chbs-journal-old", "chbs-studies", "ddbj",
+    "ntu-buddhist", "ntu-buddhist-old", "fgu-journal",
+    "huayen", "humanistic-buddhism",
+]
+
+LOCK = Path(r"C:/tmp/press_airiti_download.lock")
+LOCK_STALE = 3 * 3600
+
+
+def batch(s, budget):
+    """一次跑完 `budget` 篇為止，跨刊依 PRIORITY 順序取用。
+
+    排程用的入口。跟 `--download <slug> --limit N` 的差別是：那個是「每一刊各 N 篇」，
+    這個是「整批總共 N 篇」——排程要控的是每天對華藝發出多少下載請求，不是每刊幾篇。
+
+    🚨 上鎖。同一台機器上可能有別的 session 也在跑下載（實測發生過），
+       兩邊同時跑等於把對機構 IP 的請求速率乘二，而節流的整個意義就在速率。
+    """
+    LOCK.parent.mkdir(parents=True, exist_ok=True)
+    if LOCK.exists() and time.time() - LOCK.stat().st_mtime < LOCK_STALE:
+        print(f"另一輪下載還在跑（{LOCK}，{int(time.time() - LOCK.stat().st_mtime)} 秒前）；這次跳過")
+        return
+    LOCK.write_text(str(time.time()), encoding="utf-8")
+    try:
+        spent = 0
+        for slug in PRIORITY:
+            if spent >= budget:
+                break
+            if not (TOC_DIR / f"{slug}.json").exists():
+                continue          # 篇目還沒抓，跳過而不是報錯
+            spent += download(s, slug, budget - spent) or 0
+        print(f"本批合計下載 {spent} 篇（預算 {budget}）")
+    finally:
+        LOCK.unlink(missing_ok=True)
 
 
 def summarize():
@@ -451,6 +499,8 @@ def main():
     ap.add_argument("--toc", help="slug 或 all")
     ap.add_argument("--summarize", action="store_true")
     ap.add_argument("--download", help="slug 或 all")
+    ap.add_argument("--batch", type=int,
+                    help="排程用：整批總共下載這麼多篇，跨刊依 PRIORITY 順序取用")
     ap.add_argument("--limit", type=int, default=DL_CAP)
     args = ap.parse_args()
     s = session()
@@ -465,7 +515,9 @@ def main():
     if args.download:
         for slug in ([args.download] if args.download != "all" else list(JOURNALS)):
             download(s, slug, args.limit)
-    if not (args.discover or args.toc or args.summarize or args.download):
+    if args.batch:
+        batch(s, args.batch)
+    if not (args.discover or args.toc or args.summarize or args.download or args.batch):
         ap.print_help()
 
 
