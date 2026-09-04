@@ -50,6 +50,24 @@ def test_safe_name_strips_path_separators():
     assert not pa.safe_name("結論...").endswith(".")
 
 
+def test_site_held_skips_only_the_issues_we_have():
+    # 玄奘佛學研究站內 45 期全份，整刊掃描應該全跳過
+    assert pa.already_on_site("hcu-buddhist", "45期 (2026/03)")
+    assert pa.already_on_site("hcu-buddhist", "1期 (2003/07)")
+    # 弘誓站內只有 80–200（缺 85、177–180）；缺的與 80 之前、201 之後都還要下
+    assert pa.already_on_site("hongshi", "120期 (2013/04)")
+    assert not pa.already_on_site("hongshi", "85期 (2007/02)")
+    assert not pa.already_on_site("hongshi", "179期 (2022/10)")
+    assert not pa.already_on_site("hongshi", "12期 (1994/12)")
+    assert not pa.already_on_site("hongshi", "201期 (2026/06)")
+    # 沒登記的刊一律照下，不要因為查表沒中就誤判成「已有」
+    assert not pa.already_on_site("campus", "68卷2期 (2026/04)")
+
+
+def test_site_held_slugs_exist():
+    assert [k for k in pa.SITE_HELD if k not in pa.JOURNALS] == []
+
+
 def test_download_delay_not_lowered():
     # 節流是對機構 IP 的承諾，不是效能參數
     assert pa.DELAY_DL >= 6.0

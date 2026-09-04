@@ -386,10 +386,16 @@ def download(s, slug, limit, only=None):
 
     todo = [a for a in toc["articles"] if a["fulltext"] and ledger.get(a["docId"]) != "ok"
             and (only is None or a["docId"] in only)]
+    # 書目點名的那幾篇照下（要的是華藝切好的單篇 PDF）；整刊掃描才跳過站內已有的期
+    held = 0
+    if only is None:
+        keep = [a for a in todo if not already_on_site(slug, a["issueLabel"])]
+        held, todo = len(todo) - len(keep), keep
     if only is not None and not todo:
         return 0
     print(f"{name}：{len(todo)} 篇待下載（本次上限 {limit}"
-          f"{'，只取書目點名的那些' if only is not None else ''}）")
+          f"{'，只取書目點名的那些' if only is not None else ''}"
+          f"{f'；另有 {held} 篇站內已有全文，略過' if held else ''}）")
     done = fail = 0
     cached_issue, cached_html = None, None
     for a in todo[:limit]:
@@ -451,6 +457,31 @@ PRIORITY = [
 
 LOCK = Path(r"C:/tmp/press_airiti_download.lock")
 LOCK_STALE = 3 * 3600
+
+# 站內已經有全文的期別，不必再向華藝要一次。
+# 🚨 這一層是省下載額度的關鍵，不是可有可無的優化：弘誓與玄奘佛學研究站內早就
+#    從各自的官網抓齊了（見 research-data-hongshi），照 PRIORITY 全掃會白拿
+#    兩千多篇。但**篇目照抓不誤**——華藝的卷期頁碼是站內那兩份沒有的。
+#    值為 "all" 代表整份都有；給集合則是「這些期號站內已有」，其餘照下。
+SITE_HELD = {
+    # 站內 45 期（1–45）／304 篇，華藝 291 篇，完全覆蓋
+    "hcu-buddhist": "all",
+    # 站內 80–200 期（缺 85、177–180）；華藝有 2–201，所以 2–79 那 78 期
+    # 與缺的那 5 期加上 201 期，是華藝才有的
+    "hongshi": set(range(80, 201)) - {85, 177, 178, 179, 180},
+}
+
+_ISSUE_NO = re.compile(r"(\d+)")
+
+
+def already_on_site(slug, issue_label):
+    held = SITE_HELD.get(slug)
+    if held is None:
+        return False
+    if held == "all":
+        return True
+    m = _ISSUE_NO.match(issue_label or "")
+    return bool(m) and int(m.group(1)) in held
 
 # 書目點名要的那些篇（不是整刊）。上游是 airiti_wanted_from_bibliography.py，
 # 它只對到「刊」；這裡再把篇名對到華藝的 docID，才真的抓得動。
