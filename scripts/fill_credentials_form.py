@@ -47,11 +47,22 @@ def write(cell, text, *, size=12):
     run._element.rPr.rFonts.set(qn("w:eastAsia"), CJK)
 
 
-def put_image(cell, path, width=Cm(7.2)):
+COL_CM = 7.2          # 單欄可用寬度
+
+
+def span_of(cell):
+    """這一格跨幾欄。郵局存摺那一列是跨兩欄的合併格（表格框線通到底、中間沒有
+    分隔線），照單欄寬貼圖的話照片只佔一半、看起來縮在中間。"""
+    pr = cell._tc.tcPr
+    gs = pr.find(qn("w:gridSpan")) if pr is not None else None
+    return int(gs.get(qn("w:val"))) if gs is not None else 1
+
+
+def put_image(cell, path):
     cell.text = ""
     par = cell.paragraphs[0]
     par.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    par.add_run().add_picture(str(path), width=width)
+    par.add_run().add_picture(str(path), width=Cm(COL_CM * span_of(cell)))
 
 
 def main():
@@ -81,7 +92,11 @@ def main():
 
     t1 = doc.tables[1]
     for row in t1.rows:
+        seen = []
         for cell in row.cells:
+            if id(cell._tc) in seen:      # 合併格在 row.cells 會重複出現
+                continue
+            seen.append(id(cell._tc))
             label = cell.text.strip()
             for key, path in IMAGES.items():
                 if label.startswith(key) and path.exists():
