@@ -37,7 +37,8 @@ import translate_ebook_to_zh as te   # noqa: E402
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
-CKPT = Path("c:/tmp/accs_epub_zh_jer_lam.jsonl")
+# 一個卷別一個 checkpoint；寫死就只修得到耶利米那本。
+DEFAULT_CKPT = "jer_lam"
 PROMPT = """你是古代基督教教父文獻的專業譯者。把下列英文譯成**繁體中文**。
 
 規則：
@@ -73,8 +74,15 @@ def main() -> int:
     ap.add_argument("--limit", type=int)
     ap.add_argument("--engines", default="gemini,haiku",
                     help="逐則依序試，第一個通過驗證的就採用（預設 gemini,haiku）")
+    ap.add_argument("--volume", default=DEFAULT_CKPT,
+                    help=f"要修哪一卷的 checkpoint（預設 {DEFAULT_CKPT}）")
     a = ap.parse_args()
 
+    CKPT = Path(f"c:/tmp/accs_epub_zh_{a.volume}.jsonl")
+    if not CKPT.exists():
+        print(f"找不到 checkpoint: {CKPT}")
+        return 1
+    print(f"checkpoint: {CKPT.name}", flush=True)
     rows = [json.loads(l) for l in CKPT.read_text(encoding="utf-8").splitlines() if l.strip()]
     dirty = [i for i, r in enumerate(rows) if is_dirty(r.get("body_zh") or "")]
     print(f"{len(rows)} 則裡 {len(dirty)} 則要重譯")

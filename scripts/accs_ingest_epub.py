@@ -67,6 +67,10 @@ NOT_PERSONS = {
 ALIASES = {
     'Clement of Alexandra': 'Clement of Alexandria',   # 原書拼錯
     'Ignatius': 'Ignatius of Antioch',                  # 只寫名，與羅耀拉的依納爵同名
+    # 🚨 ACCS 的 Ambrose 一律是**米蘭的**安波羅修（掃描本用了 1,941 次）。詞庫另有
+    # 兩筆「俄利根的贊助者 Ambrose」，其括號裸名恰好也是 Ambrose，會把正主蓋掉——
+    # 2026-09-04 發現 jer/lam/sng 有 83 列因此把米蘭的安波羅修誤植成另一個人。
+    'Ambrose': 'Ambrose of Milan',
 }
 
 PROMPT = """你是古代基督教教父文獻的專業譯者。把下列英文譯成**繁體中文**。
@@ -86,7 +90,7 @@ def build_name_map() -> dict[str, str]:
     rows, off = [], 0
     while True:
         r = requests.get(f'{te.URL}/rest/v1/theologians'
-                         f'?select=name_english,name_latin_std,name_recommended'
+                         f'?select=name_english,name_latin_std,name_recommended,century,role'
                          f'&offset={off}&limit=1000', headers=te.H_GET, timeout=60)
         r.raise_for_status()
         b = r.json()
@@ -95,6 +99,10 @@ def build_name_map() -> dict[str, str]:
             break
         off += 1000
     exact: dict[str, str] = {}
+    # 🚨 有生卒／世紀／身分的人先佔鍵。詞庫裡有一些只有名字的殘筆
+    # （如 "Ambrose (Origen's patron)"），它們的括號裸名會蓋掉資料完整的正主。
+    # setdefault 是先到先得，所以順序就是正確性。
+    rows = sorted(rows, key=lambda x: (not (x.get('century') or x.get('role')),))
     for x in rows:
         for key in ('name_english', 'name_latin_std'):
             v = (x.get(key) or '').strip()
@@ -186,11 +194,48 @@ def resolve_work(work: str) -> tuple[str, str]:
     return (zh + (' ' + sect if sect else '')).strip(), how
 
 
-def translate(text: str) -> str:
+_META_LEAK = re.compile(
+    r'^\s*(we need to|we should|let me|i will|i need to|here is|the passage|'
+    r'as an ai|okay[,，]|好的[，,]|以下是我?的?翻譯|翻譯如下)', re.I)
+
+
+def looks_like_a_translation(src: str, out: str) -> bool:
+    """譯文看起來是譯文，還是模型把思路吐出來了？
+
+    🚨 這是「看起來像成功的失敗」：腳本會回報 204/204 全數完成，其中卻夾著幾則
+    「We need to translate the given English passage into Traditional Chinese,
+    following rules: ...」——模型（Gemini 乾掉後的 NVIDIA／Haiku 退路）把提示詞
+    覆述了一遍當輸出。特徵很好認：開頭是英文的元敘述，而且長度暴增（原文 707
+    字譯出 19,599 字）。不擋就直接寫進資料庫。
+    """
+    out = (out or '').strip()
+    if not out:
+        return False
+    if _META_LEAK.match(out):
+        return False
+    # 中譯通常比英文原文短（漢字資訊密度高）。超過三倍必是失控。
+    if src and len(out) > max(400, len(src) * 3):
+        return False
+    # 幾乎全是英文字母 → 根本沒翻
+    letters = sum(c.isascii() and c.isalpha() for c in out)
+    return letters <= len(out) * 0.3
+
+
+def translate(text: str, tries: int = 3) -> str:
+    """譯一段，並驗結果真的是譯文；不是就重試，最後仍失敗回空字串。
+
+    回空字串是刻意的：上游會把空的那一則留在待譯清單裡，下次重跑補上，
+    比寫一段垃圾進資料庫好。
+    """
     if not text.strip():
         return ''
     te.PROMPT_TMPL = PROMPT
-    return te.gemini_with_nvidia_fallback(text)
+    for i in range(tries):
+        out = te.gemini_with_nvidia_fallback(text)
+        if looks_like_a_translation(text, out):
+            return out
+        print(f'    ⚠ 譯文不像譯文（第 {i + 1}/{tries} 次），重試', flush=True)
+    return ''
 
 
 
@@ -383,10 +428,12 @@ def main() -> int:
     if not args.upload:
         print('（未加 --upload，僅寫 checkpoint）', flush=True)
         return 0
-    return upload(ckpt)
+    return upload(ckpt, source_vol)
 
 
-def upload(ckpt: Path) -> int:
+def upload(ckpt: Path, source_vol: str = SOURCE_VOL) -> int:
+    """source_vol 必須由呼叫端傳入：一本 EPUB 一個卷名，寫死就會把雅歌那批
+    標成「ACCS（耶利米書‧耶利米哀歌）」。"""
     # 🚨 譯壞的不上線。後備引擎會把自己的思考當譯文交出來（「We need to translate
     #    the English passage...」），也會在中文句子裡夾德文／波蘭文。那種東西擺在
     #    讀者面前比留白更糟——先擋下來，跑 accs_epub_retranslate_dirty.py 修好再上。
