@@ -41,7 +41,7 @@ CJK_FONT = "標楷體"
 STYLE = {"cjk": "標楷體", "side": Cm(3.17), "indent": None}
 
 # 這幾節各自另起一頁（送件文件的基本體例）
-PAGE_BREAK_BEFORE = ("Abstract", "目錄", "前言", "參考書目", "徵引書目", "附錄")
+PAGE_BREAK_BEFORE = ("Abstract", "目錄", "圖表目錄", "前言", "參考書目", "徵引書目", "附錄")
 
 
 def add_run(par, text, *, bold=False, italic=False, size=12):
