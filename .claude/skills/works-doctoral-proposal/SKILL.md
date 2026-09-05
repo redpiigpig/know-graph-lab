@@ -166,3 +166,25 @@ Word 排得也比 LibreOffice 緊，同一份文件 Word 51 頁、LibreOffice 57
 - **法印學報第 1、6、8、14 期**與**弘誓電子報**：要引的篇章在裡面，線上已抓不到，須向學團索取
 - 《法句經講記》第一、二冊出版年（維基兩個條目都沒有）
 - 助學金送件前的簽名
+
+## 🚨 使用者手改過之後：改 .docx，不要從 markdown 重出
+
+2026-09-05 起送件檔的**正本是 Drive 上那份 .docx**，使用者會直接在 Word 裡改（改寫段落、
+換節名、加頁首頁碼、刪節）。要再動它時**不可以從 `hcu-phd-proposal.md` 重新產生**——
+那會把他的手改整個蓋掉。工具是 `c:/tmp/thesis_rewrite/patch_user_docx.py`（就地改 XML）：
+補腳註、補分頁、重算目錄頁碼，正文一字不動。
+
+寫這種腳本的三個坑：
+1. **一定要用 lxml，不能用 xml.etree**。ElementTree 重新序列化會把 document.xml 的
+   命名空間宣告（w14／mc／wp…）打壞，Word 直接報「檔案似乎已毀損」。
+2. **SRC 與 OUT 不能是同一個檔**。repack 一邊讀一邊寫會把 zip 寫成 truncated header。
+3. **`pageBreakBefore` 要插在 `pPr` 的前段**（CT_PPr 的順序是 pStyle→keepNext→keepLines→
+   pageBreakBefore→…），位置錯了 Word 會靜默忽略。
+
+頁碼實測的額外兩個坑（使用者加了頁首頁碼之後才出現）：
+**每頁抽出來的第一行都是純數字**，所以判斷「這頁是不是目錄頁」與比對標題前，
+要先濾掉純數字行；而且「目錄」「圖表目錄」的標題可能落在前一頁頁尾，
+找它們自己的頁碼時要掃全部頁面找「整行剛好等於它」，不能只在目錄頁裡找。
+
+**`public/content/works/hcu-phd-proposal.md` 已與送件檔脫鉤**（停在 2026-09-05 改版版本，
+使用者的手改沒有回寫）。Drive 上的 .md 已依使用者指示刪除，只留 docx＋pdf。
