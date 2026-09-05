@@ -47,7 +47,7 @@ STYLE = {"cjk": "新細明體", "side": Cm(3.17), "indent": Pt(24)}   # 12pt × 
 # 這幾節各自另起一頁（送件文件的基本體例）
 PAGE_BREAK_BEFORE = ("Abstract", "目錄", "圖表目錄", "前言", "參考書目", "徵引書目", "附錄")
 # 附錄一的八張著作表，每張各自起一頁（使用者要求：一個附表一頁，結束後換頁）
-TABLE_PAGE_BREAK = tuple(f"表{n}" for n in "二三四五六七八九")
+TABLE_PAGE_BREAK = tuple(f"表{n}" for n in "一二三四五六七八")
 
 
 def add_run(par, text, *, bold=False, italic=False, size=12, cjk=None):
