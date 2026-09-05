@@ -286,12 +286,36 @@ PPT ep01–ep29 全部已上傳 R2。
 ## 四步
 
 ```
-python scripts/qianmian_sources.py                    # 三源彙整 → output/qianmian/sources/chNN.json
+python scripts/qianmian_sources.py                 # 三源彙整 → output/qianmian/sources/chNN.json
 （研究筆記由人／Claude 寫進 data/qianmian/research/）
-python scripts/qianmian_write.py --chapters 1-28      # Gemini 逐節寫 → output/qianmian/chapters/chNN.md
-python scripts/qianmian_publish.py                    # → public/content/million-masks-book/（站上讀）
-python scripts/qianmian_docx.py                       # → Drive 七卷 .docx（真頁下註）
+python scripts/qianmian_write.py --chapters 1-28   # Gemini 寫 → output/qianmian/chapters/chNN.md
+─── 以下四步是收尾，每一步都可以重跑，看門人會自動跑 ───
+python scripts/qianmian_repair.py                  # 補殘留註記號、註號重排成閱讀順序
+python scripts/qianmian_names.py                   # 拿詞庫掃譯名（先看報告）
+python scripts/qianmian_names.py --fix 蘇美        # 逐個套用（只套同一對象的拼法差異）
+python scripts/qianmian_check.py                   # 七類靜默錯誤稽核
+python scripts/qianmian_publish.py                 # → public/content/million-masks-book/（站上讀）
+python scripts/qianmian_docx.py                    # → Drive 七卷 .docx（真頁下註）
 ```
+
+## 稽核與收尾（這一段是踩出來的，不要省）
+
+`qianmian_check.py` 查七件事：缺節／節名被改寫／殘留 `〔註:E12〕`／註號不連續／
+引用與註文對不上／殘留 markdown／篇幅異常偏短。實際抓到過的：
+
+| 抓到的 | 若沒抓到會怎樣 |
+|---|---|
+| 66 個殘留的多來源記號 `〔註:E92, E107〕` | 書上直接印出內部記號 |
+| 節標題被譯名替換改掉 | 該章對不回目錄，而且頁面完全正常 |
+| 掉了一整節 | 檔案看起來正常，只是少一節 |
+| 沒有 E/R 前綴的壞記號 | 猜編號＝假註釋，比不標更糟 |
+
+**譯名統一**走 `qianmian_names.py`，拿 `/translation-glossary` 的 2,210 個定名當權威
+（[[feedback_glossary_strict_authority]]）。🚨 **不能無差別套用**——詞庫裡有「拜占庭→
+君士坦丁堡」「征服者→穆罕默德二世」「奧古斯丁→希波的奧古斯丁」這種**指涉不同**的對子，
+套下去會毀掉正文。所以三道閘：異名本身也是定名就跳過、一個異名對到兩個定名就不碰、
+`--fix` 只逐個定名套用。另外替換要避開 `## 節標題`（是對回目錄的鍵）與中間點後綴
+（否則馬克斯‧繆勒、馬克斯‧韋伯會被改成馬克思）。
 
 `qianmian_write.py` 一章跑三種呼叫，而且**刻意用三個不同型號**（理由見下一節的額度）：
 
