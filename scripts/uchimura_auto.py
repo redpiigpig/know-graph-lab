@@ -38,7 +38,8 @@ MAX_PARAS_PER_CHUNK = 10
 # 同一套青空文庫 → ja＋繁中的流程，換一位作家只是換 registry 模組（無教會主義群像
 # 之後還有藤井武、塚本虎二…）。模組要提供 REGISTRY/QUEUE/load_work_sections/
 # make_engine 與 AUTHOR_ZH/AUTHOR_EN/CATEGORY/DATA_DIRNAME。
-AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build"}
+AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
+                  "uchimura-en": "uchimura_en_build"}
 
 
 def use_author(name: str) -> None:
@@ -92,6 +93,8 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
         src = list(s["paras"])
         zh = (list(cache.get("zh") or []) + [None] * len(src))[:len(src)]
         title_zh = cache.get("title_zh") or None
+        if title_zh is None:
+            title_zh = s.get("title_zh")
         if title_zh is None:
             if s["heading"] in ("(front)", ""):
                 title_zh = w["title"] if i == 0 else s["heading"]
@@ -173,6 +176,7 @@ def build_chunks(slug: str) -> list[dict]:
         source_order=[], volume=volume, parent_volume=w["parent_volume"],
         chunk_type="cover", page_number=1)]
     secs = ub.load_work_sections(slug)
+    lang = getattr(ub, "SOURCE_LANG", "ja")
     ci = 1
     for i, s in enumerate(secs):
         cp = _sec_path(slug, i)
@@ -192,8 +196,8 @@ def build_chunks(slug: str) -> list[dict]:
             head = src_head if len(groups) == 1 else f"{src_head}（{part}）"
             chunks.append(pb.build_section_chunk(
                 chunk_index=ci, title_zh=title, zh_paras=zg,
-                source_paras={"ja": sg}, source_heads={"ja": head},
-                source_order=["ja"], volume=volume,
+                source_paras={lang: sg}, source_heads={lang: head},
+                source_order=[lang], volume=volume,
                 parent_volume=w["parent_volume"], page_number=ci + 1))
             ci += 1
     return chunks

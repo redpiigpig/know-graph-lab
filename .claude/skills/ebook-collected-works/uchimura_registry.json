@@ -40,5 +40,21 @@
     "original_title": "寡婦の除夜‧寒中の木の芽 ほか短篇六篇",
     "year": 1912,
     "aozora_files": ["1216_19588.html", "1215_9222.html", "1212_19587.html", "1214_19590.html", "1217_19583.html", "1213_19585.html"]
+  },
+  "representative-men": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000007",
+    "title": "代表的日本人",
+    "original_title": "Representative Men of Japan",
+    "year": 1908,
+    "source_lang": "en",
+    "archive_id": "representativeme00uchirich"
+  },
+  "how-i-became": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000008",
+    "title": "我如何成為基督徒",
+    "original_title": "How I Became a Christian: Out of My Diary",
+    "year": 1922,
+    "source_lang": "en",
+    "archive_id": "howibecamechrist00uchi"
   }
 }

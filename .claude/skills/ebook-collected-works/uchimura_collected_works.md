@@ -63,7 +63,7 @@
 - **《聖書之研究》誌／《羅馬書之研究》**：只有掃描 → Gemini OCR（[[ebook-pipeline]]）→ ja＋繁中。工程大、後排。
 - 起手卷建議：**《後世への最大遺物》**（青空文庫全文、篇幅小、最著名的講演）smoke test 日→繁中管線；次選《基督信徒のなぐさめ》（處女作＋「無教會」一詞初出）。英文線起手 **Representative Men of Japan**（台日讀者熟、章節獨立五人傳好切）。
 
-## ✅ 第一波：青空文庫 11 篇（2026-07-17 啟動）
+## ✅ 第一波：青空文庫 11 篇（2026-07-17 啟動，2026-09-06 確認全譯完成 866 段）
 
 **Pipeline 已建成（test-first）**：
 - 解析器 `scripts/uchimura_build.py`（+ `scripts/tests/test_uchimura_build.py` 18 例綠）：青空 XHTML cp932/utf-8 解碼、ruby 注音剝除（保 rb）、`span.notes`［＃…］注記剝除、gaiji img（`U+XXXX` alt→真字元、`※(…)`→※）、`*midashi*` 標題→分節、一行=一段、行首全形空白剝除、底本區塊排除、長段落句界切分（≤1500 字）。
@@ -84,9 +84,57 @@
 
 store `works[]` 六卷已填 `ebookId`＋`status: in-progress`（翻完逐卷改 done）。NVIDIA 輸出偶發 U+FFFD 雜訊字元已在 `_clean` 過濾。
 
+## ✅ 第二波：兩部英文原著（2026-09-06 啟動）
+
+內村三大名著裡有兩部是**他自己用英文寫的**，所以這一波是 en＋繁中，不是 ja＋繁中。
+取源 archive.org djvu 文字層（兩本 metadata 皆 open、無 access-restricted）。
+
+| slug | ebook_id 尾碼 | 卷 | 來源 | 段數 |
+|---|---|---|---|---|
+| representative-men | …0007 | 代表的日本人 | `representativeme00uchirich`（警醒社 1908 增訂版） | 6 節 322 段 |
+| how-i-became | …0008 | 我如何成為基督徒 | `howibecamechrist00uchi`（警醒社 1922 東京版） | 12 節 496 段 |
+
+**《我如何成為基督徒》為什麼取 1922 而不是 1895 初版**：1895 Revell 本
+（`japaneseconvert00uchiuoft`）題名是《The Diary of a Japanese Convert》，
+1922 東京版才是作者親自改題的定本，與 store 的卷名一致；且 1895 那份掃描的斷字
+連字號整個被 OCR 吃掉（"Ameri can"、"As sociation"），無從程式化復原，1922 那份
+連字號完整（"in- vited"）反而好接。
+
+**Pipeline**：`scripts/uchimura_en_build.py`（+ `scripts/tests/test_uchimura_en_build.py`
+13 例綠），reflow 直接沿用 `mueller_build.reflow`（同樣是 archive.org djvu 形狀）。
+translate/build/upload 走既有的 `uchimura_auto.py --author uchimura-en`
+（該檔加了三處通用化：`SOURCE_LANG` 決定原文欄語言、section 可自帶 `title_zh`、
+AUTHOR_MODULES 多一筆）。
+
+**這批 OCR 的三個坑**：
+1. **書眉抓法不要拼字面**。「38 REPRESENTATIVE」「MEN OF JAPAN. 39」被 OCR 成
+   十幾種樣子（KEPKESENTATIVE／BEPEESENTATIVB／MEN OF PA JAN／MEN OB' JAPAN／
+   MEN OF JA<PAN），寫 regex 去追是白費工。改抓它們**唯一共同的特徵：整行沒有
+   小寫字母**——`HEAD_RE = ^[^a-z]*$`。正文行幾乎必有小寫，章名行本來就要丟。
+2. **章名行不一定是大寫**。第一章的 `heathenism.` 被 OCR 成小寫，逃過書眉過濾會
+   變成一個段落，所以那一節的 start 要跳過它（211 而非 207）。同理
+   CHAPTER SECOND／SEVENTH 兩個 heading 整行被 OCR 吃掉，靠章名行（
+   `INTRODUCTION TO CHRISTIANITY.`）定位。
+3. **章首花體大寫字全毀**：`\X7HEN`＝WHEN、`DELIGION`＝RELIGION、`fS`＝IS、
+   `6 6 A GRICULTURE`＝AGRICULTURE、`ifi\X7HAT`＝WHAT。這類 prompt 講清楚就好，
+   模型從上下文推得回來；唯獨**作者自己的署名** `IvAN.25 UCHIMURA`＝KANZO
+   UCHIMURA 推不回來（會譯成「伊凡‧二五」），走 `OCR_FIXES` 硬改。
+   1922 本另有開引號被讀成小寫 u 的通病（`uO just tell us how.”`），
+   `fix_ocr_quotes` 只在 u 後接大寫時才改，才不會誤傷 unusual／U. 這種。
+
+跑法（引擎依使用者指定用 Haiku；免費層 Gemini 額度撐不住這種量）：
+
+    python scripts/uchimura_auto.py --author uchimura-en --list
+    python scripts/uchimura_auto.py --author uchimura-en --run-queue --backend haiku
+
 ## 🚀 新 session 接手清單
 
 1. 看 worker 進度：`python scripts/uchimura_auto.py --list`（或 tail `scripts/logs/uchimura_translate.log`）；斷了就重新分離式啟動 `--run-queue`（checkpoint 自動續傳）。
 2. 每卷翻完（`--list` done=True 且已 upload）→ store `status→done`；reader `/collected-works/uchimura/<ebookId>` 截圖驗證。
-3. 第二波：英文原著兩部（How I Became a Christian／Representative Men of Japan，archive.org djvu 直抽，走穆勒流程 en＋繁中）；青空「作業中」二篇（一日一生／求安録）公開後補。
-4. 商 user：《聖書之研究》357 號全誌是否入 corpus（工程大）或只收全集精華卷。
+3. 第二波跑完（`--author uchimura-en --list` done=True）→ store 兩卷 `status→done`；
+   reader `/collected-works/uchimura/<ebookId>` 截圖驗證。
+4. 青空「作業中」二篇：**2026-09-06 再查仍是作業中**（一日一生 60832／求安録 60471），
+   青空那邊沒動靜。要提前收就只能走 NDL 掃描 OCR，別再空等青空。
+5. 剩下的兩部只有掃描本，工程量級不同，動工前先跟 user 確認：
+   《羅馬書之研究》（向山堂 1924，NDL）與《聖書之研究》357 號全誌
+   （岩波全集精華卷 archive.org 有掃描）——後者是否入 corpus 或只收精華卷。

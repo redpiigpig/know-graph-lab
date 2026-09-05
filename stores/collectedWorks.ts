@@ -2646,8 +2646,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1895,
           category: '信仰三部作',
           languages: ['en'],
-          status: 'planned',
-          note: '英文原著！初版題《The Diary of a Japanese Convert》（Fleming H. Revell 1895）。archive.org 有 1895 初版與 1922 東京版乾淨掃描；日譯本出自門人之手、非作者自譯。',
+          status: 'in-progress',
+          ebookId: 'd0000000-0000-4000-8000-000000000008',
+          note: '英文原著！初版題《The Diary of a Japanese Convert》（Fleming H. Revell 1895）；此處取作者親自改題的警醒社 1922 年東京版。日譯本出自門人之手、非作者自譯。英／繁中逐段對照轉錄中。',
         },
         // 英文著作
         {
@@ -2657,8 +2658,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1894,
           category: '英文著作',
           languages: ['en'],
-          status: 'planned',
-          note: '英文原著！1894《Japan and the Japanese》1908 年增訂改題；西鄉隆盛‧上杉鷹山‧二宮尊德‧中江藤樹‧日蓮五人傳。archive.org 1908 年版掃描已驗證。',
+          status: 'in-progress',
+          ebookId: 'd0000000-0000-4000-8000-000000000007',
+          note: '英文原著！1894《Japan and the Japanese》1908 年增訂改題；西鄉隆盛‧上杉鷹山‧二宮尊德‧中江藤樹‧日蓮五人傳。archive.org 1908 年版掃描已驗證。英／繁中逐段對照轉錄中。',
         },
         // 講演與信仰文集
         {
