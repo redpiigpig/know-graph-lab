@@ -293,7 +293,17 @@ python scripts/qianmian_publish.py                    # → public/content/milli
 python scripts/qianmian_docx.py                       # → Drive 七卷 .docx（真頁下註）
 ```
 
-`qianmian_write.py` 一章分三步：**分配**（只餵書摘標題，把條目分派到各節）→ **逐節寫作**（只餵該節分到的書摘全文＋研究＋作者講法）→ **導言結語**。每節寫完接一道 **校對**（`polish()`）。已有 `chNN.md` 的章直接跳過，所以整支可以無限重跑。
+`qianmian_write.py` 一章跑三種呼叫，而且**刻意用三個不同型號**（理由見下一節的額度）：
+
+| 步驟 | 型號（環境變數可換） | 次數 |
+|---|---|---|
+| 分配（書摘按標題分派到各節） | `QIANMIAN_MODEL_ALLOC`＝gemini-2.5-flash-lite | 1／章 |
+| 寫作（**一章兩次**：前半＋導言、後半＋結語） | `QIANMIAN_MODEL`＝gemini-3-flash-preview | 2／章 |
+| 校對（只改錯字病句） | `QIANMIAN_MODEL_POLISH`＝gemini-3.1-flash-lite | 2／章 |
+
+**寫作為什麼不逐節呼叫**：逐節要 ~15 次／章，排不進日額度；而且同一次生成裡節與節的銜接比較自然。代價是模型會把每節壓縮（七節一次寫只給 10,900 字），所以 prompt 要把「每節都要寫足」講死，`--length` 也要開得比實際目標高（預設 3000–3500 才會落在每章 ~18,000 字）。
+
+已有 `chNN.md` 的章直接跳過，所以整支可以無限重跑。
 
 ## 註釋為什麼掰不出來
 
@@ -312,10 +322,17 @@ python scripts/qianmian_docx.py                       # → Drive 七卷 .docx�
 
 ## Gemini 免費層現況（2026-09-05 實測，七把 key）
 
-- `gemini-3.5-flash` ✅ 七把全通，是寫作用的模型
+🚨 **免費層是「每個型號各自 20 次／天／key」在管，不是每分鐘**。七把 key ＝每個型號 140 次／天，隔天才恢復。這是這條管線所有設計的前提：
+
+- `gemini-3-flash-preview` ✅ 正文用它。三個型號同一節比對下來文筆最好——長度守得住、研究筆記融得自然
+- `gemini-2.5-flash` ✅ 品質也夠（比 3.5-flash 更紮實、少空轉），但同樣 20／天
+- `gemini-3.5-flash`／`3.6-flash` ⚠️ 一樣 20／天，`quotaId` 明寫 `GenerateRequestsPerDayPerProjectPerModel-FreeTier = 20`
 - `gemini-3.1-pro-preview` ❌ 七把全 429（pro 不在免費層）
 - `gemini-2.5-pro` ❌ 404，新帳號已下架
-- **Google Search grounding ❌ 七把全 429** ——所以「查最新研究」這一層**不能交給 Gemini 自動做**，研究筆記是人工／Claude 寫進 `data/qianmian/research/` 的。日後若要自動化，得先確認 grounding 有額度。
+- `gemini-flash-latest`／`3.7`／`3.8-flash` ⚠️ 常 503
+- **Google Search grounding ❌ 七把全 429** ——所以「查最新研究」這一層**不能交給 Gemini 自動做**，研究筆記是人工／Claude 寫進 `data/qianmian/research/` 的。
+
+**因應**：①一章只呼叫兩次寫作 ②把分配與校對分流到別的型號，各吃各的額度。整套書因此是 56＋28＋56 次，三個型號都塞得下。開跑前先發一次探測請求確認型號沒被打爆。見 [[reference_gemini_free_tier_quotas]]。
 
 ## 排程
 

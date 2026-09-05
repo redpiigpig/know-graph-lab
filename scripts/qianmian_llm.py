@@ -25,13 +25,18 @@ import translate_ebook_to_zh as engines  # noqa: E402
 #    七把 key 合起來一天才 140 次，而一章要 ~15 次，整套書排不進一天。
 #    gemini-2.5-flash 是穩定版、額度大得多，整套書要在一夜跑完只能走它。
 #    要換型號設環境變數 QIANMIAN_MODEL。
-MODEL = os.environ.get("QIANMIAN_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("QIANMIAN_MODEL", "gemini-3-flash-preview")
+
+# 額度是「每個型號各自」20/天/key，所以把不同工作分流到不同型號，
+# 正文才吃得到完整的 140/天。分配與校對是機械工作，交給 lite 沒差。
+MODEL_ALLOC = os.environ.get("QIANMIAN_MODEL_ALLOC", "gemini-2.5-flash-lite")
+MODEL_POLISH = os.environ.get("QIANMIAN_MODEL_POLISH", "gemini-3.1-flash-lite")
 URL = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
 
 _index = 0
 
 
-def ask(prompt, *, search=False, temperature=0.85, max_tokens=32768, tries=None):
+def ask(prompt, *, model=None, search=False, temperature=0.85, max_tokens=32768, tries=None):
     """呼叫 Gemini，回 (文字, 出處清單)。出處只有 search=True 時才有東西。"""
     global _index
     keys = engines.GEMINI_KEYS
@@ -50,7 +55,7 @@ def ask(prompt, *, search=False, temperature=0.85, max_tokens=32768, tries=None)
         key = keys[_index % len(keys)]
         _index += 1
         try:
-            r = requests.post(URL.format(m=MODEL), params={"key": key}, json=body, timeout=600)
+            r = requests.post(URL.format(m=model or MODEL), params={"key": key}, json=body, timeout=600)
         except requests.exceptions.RequestException as e:
             last = f"conn {type(e).__name__}"
             continue

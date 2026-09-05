@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
-"""千面上帝：用 Gemini 逐節寫出全書正文。
+"""千面上帝：用 Gemini 把素材寫成全書正文。
 
-一章分三步：
-  1. 分配 ── 把該章的書摘按標題分派到各節（只餵標題，省 token 也比較準）
-  2. 寫作 ── 逐節寫，只餵該節分到的書摘全文＋近年研究＋作者讀書會講法
-  3. 收尾 ── 章導言與章結語
+一章跑三種呼叫，而且**刻意用三個不同型號**——免費層是每個型號各自 20 次/天/key，
+分流之後正文那一層才吃得到完整的額度（見 qianmian_llm 的註解）：
+
+  1. 分配（MODEL_ALLOC）  只餵書摘標題，把條目分派到各節
+  2. 寫作（MODEL）        一章兩次：前半＋導言、後半＋結語
+  3. 校對（MODEL_POLISH） 每次寫作之後接一道，只改錯字病句
+
+寫作不逐節呼叫的原因有兩個：逐節要 ~15 次/章，排不進日額度；而且同一次生成
+裡的節與節之間銜接得比較自然。代價是模型會壓縮篇幅，所以 prompt 要把「每節
+都要寫足」講死，--length 也要開得比實際目標高。
 
 註釋：模型只准標 〔註:E12〕〔註:R3〕這種指回素材編號的記號，不准自己寫參考書目。
 腳本再把編號換成頁下註的流水號，註文由 qianmian_cite 依 DB 書目補成正式體例。
@@ -65,18 +71,21 @@ ALLOC = """以下是一部宗教通史其中一章的節次，以及手上所有
 
 輸出 JSON：{{"1":["E1","E5"],"2":["E2"],…,"棄用":["E9"]}}　只輸出 JSON。"""
 
-WRITE = """你正在替一部七卷本的宗教通史《千面上帝》寫其中一節。
+WRITE = """你正在替一部七卷本的宗教通史《千面上帝》寫其中一章的一部分。
 
 {voice}
 
 【位置】
 {volume}
 第{no}章　{title}：{span}（{period}）
-本節是全章第 {i}／{n} 節：{section}
-上一節：{prev}
-下一節：{next}
 
-【素材一：書摘】（寫作時只能引用這些，編號要對）
+【本章完整節次】（給你掌握全章走向，這一次只寫下面指定的部分）
+{all_sections}
+
+【這一次要寫的】
+{tasks}
+
+【素材一：書摘】（按節分好了，寫作時只能引用這些，編號要對）
 {excerpts}
 
 【素材二：近年研究】
@@ -87,30 +96,21 @@ WRITE = """你正在替一部七卷本的宗教通史《千面上帝》寫其中
 
 {note_rule}
 
-【篇幅】{length} 字。
+【輸出格式】
+每一部分之前用 `## 標題` 標出它是哪一節，標題必須與上面給的**一字不差**。
+導言寫 `## 導言`，結語寫 `## 結語`。除了這些 `##` 標題，全文不要有任何其他標記。
 
-直接輸出正文，不要標題、不要任何說明。"""
+【篇幅與素材覆蓋】這一次要交 {count} 段。每一節寫 {length} 字，導言約 800 字、結語約 600 字。
+**每一節分到的書摘都要用上**——那些材料是作者多年讀書累積下來的，只挑三五條敷衍
+就等於把整章的厚度丟掉。寧可整體長，也不要每節都只寫個大概。
 
-FRAME = """你正在替一部七卷本的宗教通史《千面上帝》寫第{no}章的{kind}。
+直接輸出正文，不要任何說明。"""
 
-{voice}
+INTRO_ASK = """導言：用一個具體的場景、器物或人物開場，把讀者帶進這個時代，點出這一章要處理的
+核心問題，並讓讀者感覺到這一章和前一章的世界是連著的。不要預告「本章將討論」，不要條列各節。"""
 
-【位置】{volume}　第{no}章　{title}：{span}（{period}）
-【本章各節依序是】
-{sections}
-【本章正文的開頭與結尾】
-{peek}
-
-{ask}
-
-【篇幅】{length} 字。直接輸出正文，不要標題、不要說明。"""
-
-INTRO_ASK = """請寫一段導言：用一個具體的場景、器物或人物開場，把讀者帶進這個時代，
-點出本章要處理的核心問題，並且要讓讀者感覺到這一章和前一章的世界是連著的。
-不要預告「本章將討論」，不要條列各節內容。"""
-
-OUTRO_ASK = """請寫一段結語：收束本章的線索，指出這個時代留給後世的東西，
-並且把讀者的目光帶向下一個時代。不要摘要各節，不要用「綜上所述」。"""
+OUTRO_ASK = """結語：收束整章的線索，指出這個時代留給後世的東西，並把讀者的目光帶向下一個時代。
+不要摘要各節，不要用「綜上所述」。"""
 
 
 def meta(ch):
@@ -139,7 +139,7 @@ def allocate(ch):
     prompt = ALLOC.format(sections=secs, topics=topics, **meta(ch))
     for attempt in range(3):
         try:
-            plan = L.ask_json(prompt, temperature=0.2, max_tokens=65536)
+            plan = L.ask_json(prompt, model=L.MODEL_ALLOC, temperature=0.2, max_tokens=65536)
             break
         except (ValueError, TypeError) as e:     # JSON 被截斷或格式跑掉
             print(f"    分配第 {attempt + 1} 次解析失敗（{e}），重試", flush=True)
@@ -153,18 +153,29 @@ def allocate(ch):
     return plan
 
 
-def block_excerpts(ch, ids):
+def ids_of(plan, i):
+    """第 i 節分到的書摘編號（1-based）。"""
     out = []
-    for eid in ids:
+    for eid in plan.get(str(i)) or plan.get(f"第{i}節") or []:
         m = re.fullmatch(r"E(\d+)", str(eid).strip())
-        if not m:
-            continue
-        i = int(m.group(1))
-        if not 1 <= i <= len(ch["excerpts"]):
-            continue
-        e = ch["excerpts"][i - 1]
-        out.append(f"[E{i}]（{e['topic']}｜出處：{e['source'] or '未註明'}）\n{e['text']}")
-    return "\n\n".join(out) or "（本節無指定書摘，請依綱要與近年研究撰寫，註釋只用 R 編號）"
+        if m:
+            out.append(int(m.group(1)))
+    return out
+
+
+def block_excerpts(ch, sections, plan):
+    """把這一批節各自分到的書摘，按節標出來——不分節餵，模型會把材料全倒進第一節。"""
+    out = []
+    for i, name in sections:
+        rows = []
+        for n in ids_of(plan, i):
+            if not 1 <= n <= len(ch["excerpts"]):
+                continue
+            e = ch["excerpts"][n - 1]
+            rows.append(f"[E{n}]（{e['topic']}｜出處：{e['source'] or '未註明'}）\n{e['text']}")
+        out.append(f"〔{name}〕\n" + ("\n\n".join(rows) if rows
+                                    else "（這一節沒有書摘，請依綱要與近年研究撰寫，註釋只用 R 編號）"))
+    return "\n\n".join(out)
 
 
 def block_research(ch):
@@ -180,60 +191,97 @@ def block_talk(ch, limit=6000):
     return (t[:limit] + "…") if t else "（本章沒有讀書會錄音）"
 
 
+def cite_of(tag, ch, citer):
+    """一個素材編號 → 一條註文。查不到回 None。"""
+    tag = tag.upper()
+    if tag.startswith("E"):
+        i = int(tag[1:])
+        if 1 <= i <= len(ch["excerpts"]):
+            return citer.format(ch["excerpts"][i - 1]["source"])
+        return None
+    for r in ch["research"]:
+        if str(r.get("id", "")).upper() == tag:
+            return (r.get("依據") or "").rstrip(" .。") + "。"
+    return None
+
+
+# 模型常把幾個來源塞進同一個記號：〔註:E92, E107〕。一個記號＝一條註，
+# 裡面的來源用「；」併起來，不要拆成兩個註號黏在一起。
+NOTE_MARK = re.compile(r"〔註[:：]\s*([ERer]\s*\d+(?:\s*[,，、]\s*[ERer]\s*\d+)*)\s*〕")
+
+
 def resolve_notes(text, ch, citer, counter, notes, cap=10):
-    """把 〔註:E12〕〔註:R3〕換成頁下註流水號，並累積註文。"""
+    """把 〔註:E12〕〔註:R3, E40〕換成頁下註流水號，並累積註文。"""
     dropped, used = [], [0]
 
     def sub(m):
-        tag = re.sub(r"\s+", "", m.group(1)).upper()
+        tags = [re.sub(r"\s+", "", t) for t in re.split(r"[,，、]", m.group(1))]
         if used[0] >= cap:          # 超過上限的一律拿掉，不進註釋
             return ""
-        used[0] += 1
-        body = None
-        if tag.startswith("E"):
-            i = int(tag[1:])
-            if 1 <= i <= len(ch["excerpts"]):
-                body = citer.format(ch["excerpts"][i - 1]["source"])
-        else:
-            for r in ch["research"]:
-                if str(r.get("id", "")).upper() == tag:
-                    body = (r.get("依據") or "").rstrip(" .。") + "。"
-                    break
-        if not body:
-            dropped.append(tag)
+        bodies = []
+        for t in tags:
+            body = cite_of(t, ch, citer)
+            if body:
+                bodies.append(body.rstrip("。"))
+            else:
+                dropped.append(t)
+        if not bodies:
             return ""
+        used[0] += 1
         counter[0] += 1
-        notes.append((counter[0], body))
+        notes.append((counter[0], "；".join(bodies) + "。"))
         return f"[^{counter[0]}]"
 
-    return re.sub(r"〔註[:：]\s*([ERer]\s*\d+)\s*〕", sub, text), dropped
+    return NOTE_MARK.sub(sub, text), dropped
 
 
 POLISH = """以下是一部宗教通史其中一章的定稿正文。請只做校對，不要改寫。
 
 要改的：錯別字、成語誤用、贅字、語序不順、明顯的病句、簡體字。
-不准動的：內容、論點、段落數、任何 [^數字] 形式的註釋記號（位置與數字都要原樣保留）。
-不要加標題、不要加說明、不要改小標。
+不准動的：內容、論點、段落數、`## 開頭的小標`（一字都不能改）、
+　　　　　以及任何 〔註:E12〕〔註:R3〕 形式的註釋記號（位置與編號都要原樣保留）。
+不要加標題、不要加說明。
 
 直接輸出校對後的全文。
 
 ---
 {text}"""
 
+# 校對時要原樣留住的東西：註釋記號與小標。少一個就退回原稿。
+GUARDS = (NOTE_MARK, re.compile(r"(?m)^##.*$"))
+
 
 def polish(text):
-    """校對一遍。註釋記號少一個就整段退回原稿——寧可有錯字，不能掉註。"""
-    marks = re.findall(r"\[\^\d+\]", text)
+    """校對一遍。註釋記號或小標對不上就整段退回原稿——寧可有錯字，不能掉註、掉節。"""
+    before = [g.findall(text) for g in GUARDS]
     try:
-        out, _ = L.ask(POLISH.replace("{text}", text), temperature=0.2, max_tokens=65536)
+        out, _ = L.ask(POLISH.replace("{text}", text), model=L.MODEL_POLISH,
+                       temperature=0.2, max_tokens=65536)
     except Exception as e:
         print(f"    ⚠ 校對失敗，保留原稿：{e}", flush=True)
         return text
     out = out.strip()
-    if re.findall(r"\[\^\d+\]", out) != marks or len(out) < len(text) * 0.85:
-        print("    ⚠ 校對後註釋記號或篇幅對不上，保留原稿", flush=True)
+    if [g.findall(out) for g in GUARDS] != before or len(out) < len(text) * 0.85:
+        print("    ⚠ 校對後註釋記號、小標或篇幅對不上，保留原稿", flush=True)
         return text
     return out
+
+
+def split_output(text, wanted):
+    """把 `## 標題` 分段的輸出拆回 {標題: 內文}，標題比對容忍空白與全半形差異。"""
+    key = lambda s: re.sub(r"[\s　]+", "", s)
+    index = {key(w): w for w in wanted}
+    out, cur = {}, None
+    for line in text.splitlines():
+        t = line.strip()
+        if t.startswith("##"):
+            cur = index.get(key(t.lstrip("#")))
+            if cur:
+                out[cur] = []
+            continue
+        if cur and t:
+            out[cur].append(t)
+    return {k: "\n".join(v) for k, v in out.items() if v}
 
 
 def write_chapter(no, length):
@@ -245,60 +293,68 @@ def write_chapter(no, length):
     plan = allocate(ch)
     citer, counter, notes, dropped = Citer(), [0], [], []
     secs = ch["sections"]
-    body = []
+    # 一次最多兩節。一次寫四節以上模型就開始壓縮（七節一次只給 10,900 字、
+    # 四節一次 12,900 字），兩節一次才寫得到每節三千字。
+    groups = [list(enumerate(secs, 1))[i:i + 2] for i in range(0, len(secs), 2)]
+    parts = [(g, i == 0, i == len(groups) - 1) for i, g in enumerate(groups)]
 
-    for i, section in enumerate(secs, 1):
-        ids = plan.get(str(i)) or plan.get(f"第{i}節") or []
-        legal = "、".join([f"E{int(re.fullmatch(r'E(\d+)', str(x).strip()).group(1))}"
-                          for x in ids if re.fullmatch(r"E\d+", str(x).strip())]
-                         + [str(r.get("id")) for r in ch["research"]]) or "（無，本節不標註釋）"
+    pieces = {}
+    for sections, with_intro, with_outro in parts:
+        wanted = (["導言"] if with_intro else []) + [n for _, n in sections] \
+            + (["結語"] if with_outro else [])
+        tasks = "\n".join(
+            (["## 導言\n" + INTRO_ASK] if with_intro else [])
+            + [f"## {n}" for _, n in sections]
+            + (["## 結語\n" + OUTRO_ASK] if with_outro else []))
+        legal = "、".join([f"E{n}" for i, _ in sections for n in ids_of(plan, i)]
+                         + [str(r.get("id")) for r in ch["research"]]) or "（無，這一段不標註釋）"
         prompt = WRITE.format(
             voice=VOICE, note_rule=NOTE_RULE.format(legal=legal),
-            i=i, n=len(secs), section=section,
-            prev=secs[i - 2] if i > 1 else "（本章開頭）",
-            next=secs[i] if i < len(secs) else "（本章結尾）",
-            excerpts=block_excerpts(ch, ids), research=block_research(ch),
-            talk=block_talk(ch), length=length, **meta(ch))
-        text, _ = L.ask(prompt, temperature=0.85, max_tokens=16384)
-        text = polish(text.strip())
-        text, drop = resolve_notes(text, ch, citer, counter, notes)
-        dropped += drop
-        body.append((section, text))
-        print(f"    第{i}/{len(secs)}節 {section[:18]} — {len(text)} 字，累計註 {counter[0]}",
-              flush=True)
+            all_sections="\n".join(f"{i}. {n}" for i, n in enumerate(secs, 1)),
+            tasks=tasks, count=len(wanted), excerpts=block_excerpts(ch, sections, plan),
+            research=block_research(ch), talk=block_talk(ch), length=length, **meta(ch))
+        text, _ = L.ask(prompt, temperature=0.85, max_tokens=65536)
+        got = split_output(polish(text.strip()), wanted)
+        missing = [w for w in wanted if w not in got]
+        if missing:
+            print(f"    ⚠ 這一批少了：{missing}", flush=True)
+        for w in wanted:
+            if w in got:
+                body, drop = resolve_notes(got[w], ch, citer, counter, notes,
+                                           cap=12 if w in ("導言", "結語") else 10)
+                pieces[w] = body
+                dropped += drop
+        print(f"    寫完 {len(got)}/{len(wanted)} 段，累計註 {counter[0]}", flush=True)
 
-    peek = (body[0][1][:600] + "\n……\n" + body[-1][1][-600:]) if body else ""
-    frames = {}
-    for kind, ask, ln in (("導言", INTRO_ASK, 800), ("結語", OUTRO_ASK, 600)):
-        t, _ = L.ask(FRAME.format(voice=VOICE, kind=kind, ask=ask, length=ln, peek=peek,
-                                  sections="\n".join(f"- {s}" for s in secs), **meta(ch)),
-                     temperature=0.85, max_tokens=8192)
-        t, drop = resolve_notes(t.strip(), ch, citer, counter, notes)
-        dropped += drop
-        frames[kind] = t
+    if not pieces:
+        raise RuntimeError("整章都沒寫出來")
 
     OUT.mkdir(parents=True, exist_ok=True)
     md = [f"# 第{no}章　{ch['title']}", f"### {ch['span']}（{ch['period']}）", "",
-          f"<!-- {ch['volume']} -->", "", frames["導言"], ""]
-    for section, text in body:
-        md += [f"## {section}", "", text, ""]
-    md += ["## 結語", "", frames["結語"], "", "---", ""]
-    md += [f"[^{n}]: {t}" for n, t in notes]
+          f"<!-- {ch['volume']} -->", ""]
+    if "導言" in pieces:
+        md += [pieces["導言"], ""]
+    for name in secs:
+        if name in pieces:
+            md += [f"## {name}", "", pieces[name], ""]
+    if "結語" in pieces:
+        md += ["## 結語", "", pieces["結語"], ""]
+    md += ["---", ""] + [f"[^{n}]: {t}" for n, t in notes]
     dest.write_text("\n".join(md), encoding="utf-8")
 
-    total = sum(len(t) for _, t in body) + sum(len(v) for v in frames.values())
+    total = sum(len(v) for v in pieces.values())
     print(f"  ✓ 第{no}章 {ch['title']}：{total} 字、{len(notes)} 個頁下註"
           + (f"，丟棄無效註號 {len(dropped)}" if dropped else ""), flush=True)
     if citer.misses:
-        p = BASE / "missing_books.txt"
-        had = set(p.read_text(encoding="utf-8").splitlines()) if p.exists() else set()
-        p.write_text("\n".join(sorted(had | citer.misses)), encoding="utf-8")
+        f = BASE / "missing_books.txt"
+        had = set(f.read_text(encoding="utf-8").splitlines()) if f.exists() else set()
+        f.write_text("\n".join(sorted(had | citer.misses)), encoding="utf-8")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--chapters", default="1-28", help="例 1-28 或 3,5,9")
-    ap.add_argument("--length", default="2200–2800")   # 模型一律超寫，實際會落在 3,200–3,800
+    ap.add_argument("--length", default="3500–4000")   # 模型一律寫不到要求，開高才落在三千上下
     a = ap.parse_args()
     nos = []
     for part in a.chapters.split(","):
