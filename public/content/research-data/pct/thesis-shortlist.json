@@ -1,0 +1,2516 @@
+{
+ "name": "與博士論文相關的碩博士論文清單",
+ "note": "計畫書《從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920–2020）》七章架構。分數只用來排序，不是相關度的絕對值；★＝博士學位＋有電子全文＋題名命中系譜人物或核心概念。🚨「有電子全文」只代表檔案存在，不代表拿得到——分公開取用、校內限閱、有償授權未公開三種，逐本不同，必須一本一本確認。",
+ "counts": {
+  "檢索組數": 15,
+  "書目總筆數": 1167,
+  "去重": 884,
+  "入選": 117,
+  "其中博士": 40,
+  "其中有電子全文": 93,
+  "★優先追": 17
+ },
+ "byAxis": {
+  "第三章　人間佛教在台灣": 84,
+  "第二章　東亞近代宗教變革": 12,
+  "第五章　佛耶對話與議題結盟": 1,
+  "第六章　理論：世俗化與宗教多元": 4,
+  "第四章　台灣本土神學": 16
+ },
+ "truncated": [
+  {
+   "query": "無教會主義",
+   "note": "第二章日本線",
+   "取回": 8,
+   "站上": "（舊版未記錄）"
+  },
+  {
+   "query": "宋泉盛 故事神學",
+   "note": "第四章第三節",
+   "取回": 52,
+   "站上": 53
+  },
+  {
+   "query": "釋昭慧 佛教倫理",
+   "note": "第三章第四節",
+   "取回": 160,
+   "站上": 206
+  },
+  {
+   "query": "印順 人間佛教",
+   "note": "第三章第二節",
+   "取回": 160,
+   "站上": 840
+  },
+  {
+   "query": "佛教 基督教 對話",
+   "note": "第六章",
+   "取回": 160,
+   "站上": 620
+  },
+  {
+   "query": "台灣 佛教 社會運動",
+   "note": "第三章",
+   "取回": 160,
+   "站上": 395
+  }
+ ],
+ "items": [
+  {
+   "kind": "學位論文",
+   "title": "印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣法師為核心",
+   "author": "張辰瑋",
+   "advisor": "侯坤宏／蘇瑞鏘",
+   "school": "國立臺北教育大學",
+   "dept": "台灣文化研究所",
+   "year": "113",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 11,
+   "matched": [
+    "印順",
+    "昭慧",
+    "性廣",
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第三章第一節",
+    "第三章第三節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順人間佛教思想及其主要影響(1989-2023) ：理論視角下的承繼與發展",
+   "author": "陳淑梅(釋禪林)",
+   "advisor": "尉遲淦",
+   "school": "華梵大學",
+   "dept": "東方人文思想研究所",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 9,
+   "matched": [
+    "印順",
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "帝網重重中的太虛法師人間佛教 :一個互為主體的心理傳記研究",
+   "author": "薛榮祥",
+   "advisor": "丁興祥",
+   "school": "輔仁大學",
+   "dept": "心理學系",
+   "year": "105",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 9,
+   "matched": [
+    "太虛",
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛與印順淨土思想之比較研究",
+   "author": "林文堂",
+   "advisor": "黃國清",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "98",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 7,
+   "matched": [
+    "太虛",
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "「人間佛教」的社會實踐──以證嚴法師與昭慧法師為對比探索",
+   "author": "陳芷蘋",
+   "advisor": "林建德",
+   "school": "慈濟大學",
+   "dept": "宗教與人文研究所碩士班",
+   "year": "111",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 7,
+   "matched": [
+    "昭慧",
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "臺南妙心寺對印順「人間佛教」的落實與弘展",
+   "author": "伍麗滿",
+   "advisor": "顏尚文",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士在職專班",
+   "year": "95",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 7,
+   "matched": [
+    "印順",
+    "妙心",
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第三章第三節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "重繪人間佛教的景觀：從「佛教作為一種方法」的視角探析佛光教團的人間佛教",
+   "author": "林佳瑩（釋知如）",
+   "advisor": "萬金川 ／闞正宗",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "113",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章",
+    "第三章第二節",
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師人間佛教的禪思想及其實踐 ──以文本詮釋與《人間福報》文化傳播為研究中心",
+   "author": "韋幼玲（釋妙熙）",
+   "advisor": "張瑋儀 ／賴賢宗",
+   "school": "佛光大學",
+   "dept": "語文學系",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從「一筆書」到「一筆字」：星雲大師法書的人間佛教精神",
+   "author": "黃逸宜",
+   "advisor": "蕭麗華",
+   "school": "佛光大學",
+   "dept": "語文學系",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教生命關懷理論與實踐",
+   "author": "劉麗雲",
+   "advisor": "林明昌",
+   "school": "佛光大學",
+   "dept": "中國文學與應用學系",
+   "year": "113",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師人間佛教文學的理念與實踐",
+   "author": "胡素華",
+   "advisor": "蕭麗華",
+   "school": "佛光大學",
+   "dept": "中國文學與應用學系",
+   "year": "113",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "學問僧的生命書寫──印順法師與聖嚴法師自傳之研究",
+   "author": "廖憶榕",
+   "advisor": "鄭阿財",
+   "school": "國立中正大學",
+   "dept": "中國文學研究所",
+   "year": "105",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "印順"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師人間佛教生命教育思想與實踐研究-以「生命力帶動生命力」為核心",
+   "author": "曾玉芬",
+   "advisor": "林仁昱",
+   "school": "國立中興大學",
+   "dept": "中國文學系所",
+   "year": "113",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "預示「禪淨共修」的人間佛教：《後西遊記》敍事結構與意蘊研究",
+   "author": "王美懿",
+   "advisor": "林淑貞",
+   "school": "國立中興大學",
+   "dept": "中國文學系所",
+   "year": "108",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲法師人間佛教淨土思想體系研究",
+   "author": "李聖俊",
+   "advisor": "林朝成",
+   "school": "國立成功大學",
+   "dept": "中國文學系",
+   "year": "109",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "以星雲人間佛教生態思想反思環境倫理學及其實踐",
+   "author": "戴慶華",
+   "advisor": "吳冠宏",
+   "school": "國立東華大學",
+   "dept": "中國語文學系",
+   "year": "112",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "宗教治理與文化創新：台灣人間佛教的現代性",
+   "author": "劉怡寧",
+   "advisor": "陳東升",
+   "school": "國立臺灣大學",
+   "dept": "社會學研究所",
+   "year": "107",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師的生命觀及其生命教育義蘊",
+   "author": "王秉倫",
+   "advisor": "陳伯璋",
+   "school": "國立臺灣師範大學",
+   "dept": "教育學系",
+   "year": "95",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "印順"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師之《中論》釋義研究",
+   "author": "陳俊潔",
+   "advisor": "高柏園",
+   "school": "華梵大學",
+   "dept": "東方人文思想研究所",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 6,
+   "matched": [
+    "印順"
+   ],
+   "priority": "★",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛的反思批判思想與傳承建設之研究－以「人生佛教」的思想理論與《起信論》比較",
+   "author": "蔡彬晨",
+   "advisor": "釋永東",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "105",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 5,
+   "matched": [
+    "太虛",
+    "人生佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順佛教思想研究",
+   "author": "邱敏捷",
+   "advisor": "楊惠南",
+   "school": "國立中山大學",
+   "dept": "中國文學系研究所",
+   "year": "87",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 5,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "「空」與「解脫」- 印順中觀思想研究",
+   "author": "莊朋",
+   "advisor": "林鎮國",
+   "school": "國立政治大學",
+   "dept": "哲學研究所",
+   "year": "101",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 5,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師傳記書寫及其生命教育意涵",
+   "author": "李芝瑩",
+   "advisor": "彭雅玲",
+   "school": "國立臺中教育大學",
+   "dept": "語文教育學系碩博士班",
+   "year": "98",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 5,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "聞「法」趣入：從印順到弘誓與覺風",
+   "author": "劉晏均",
+   "advisor": "黃運喜",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士班",
+   "year": "103",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 5,
+   "matched": [
+    "印順",
+    "弘誓"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛大師的唯識思想初探",
+   "author": "釋明光(NGUYENMINHCHIEN)",
+   "advisor": "李志夫",
+   "school": "中國文化大學",
+   "dept": "哲學研究所",
+   "year": "95",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從《雜阿含經》探討人間佛教時代下之財富思維與財富管理學",
+   "author": "傅啟晏",
+   "advisor": "釋永東",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "101",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "樂崇輝居士與人間佛教居士行之探討",
+   "author": "王汝正",
+   "advisor": "游祥洲",
+   "school": "佛光大學",
+   "dept": "宗教學系",
+   "year": "100",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教行者：詩僧函可詩禪互涉之儒佛轉化與自我重塑",
+   "author": "駱慧怡",
+   "advisor": "蕭麗華",
+   "school": "佛光大學",
+   "dept": "香港境外佛教學系碩士班",
+   "year": "114",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "羅什譯《維摩詰經》人間佛教意涵之研究── 以〈觀眾生品〉、〈佛道品〉為中心",
+   "author": "鄭怡玟(釋知揚)",
+   "advisor": "郭朝順",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "110",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "唯識思想與星雲人間佛教的心靈淨化",
+   "author": "陳子蕙",
+   "advisor": "陳一標",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "109",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從《法華經．四安樂行》解析星雲大師人間佛教的現代實踐",
+   "author": "洪瑀謙",
+   "advisor": "釋永東",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "105",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "道藝一體之實踐――佛光山人間佛教文化弘法之探討",
+   "author": "吳宜庭",
+   "advisor": "林谷芳",
+   "school": "佛光大學",
+   "dept": "藝術學研究所",
+   "year": "99",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛與僧伽制度之研究",
+   "author": "郭育誠",
+   "advisor": "奧村浩基",
+   "school": "佛光大學",
+   "dept": "生命與宗教學系",
+   "year": "98",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教的社群媒體時代—以佛光山為例",
+   "author": "王盈堯",
+   "advisor": "釋永東",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "108",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲人間佛教「神明聯誼會」之研究",
+   "author": "釋慧宜(溫敏華)",
+   "advisor": "釋永東",
+   "school": "佛光大學",
+   "dept": "佛教學系",
+   "year": "107",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "「人間佛教」在台灣的發展－以佛光山「回歸本來面目」之教育為核心的探討",
+   "author": "陳昱廷",
+   "advisor": "蕭麗華",
+   "school": "南華大學",
+   "dept": "生死學系碩士班",
+   "year": "104",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第三節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "佛光山人間佛教的社會實踐─兼論與原始佛教之關涉",
+   "author": "蔡麗芬",
+   "advisor": "陳美華",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "101",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第三節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師人間佛教「五和」經證及其實踐",
+   "author": "吳素芬（釋柏融）",
+   "advisor": "李芝瑩",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "106",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "無我觀的現代轉向：從《阿含經》到星雲大師人間佛教思想之詮釋",
+   "author": "顏秀佩（釋明怡）",
+   "advisor": "蔡昌雄",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "114",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師《成佛之道》的終極關懷探究",
+   "author": "莊佩儒（釋傳澄）",
+   "advisor": "李芝瑩",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "113",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教理論與個人修行體驗探索之研究",
+   "author": "呂文峰",
+   "advisor": "釋覺明",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "112",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "釋印順如何抉擇佛法—以《印度之佛教》為主要線索",
+   "author": "陳明珠",
+   "advisor": "呂凱文",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "111",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教六度行融入保護性社會工作之探究：一位保護性社會工作人員的自我敘說",
+   "author": "曾錦文",
+   "advisor": "孫智辰",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "110",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節",
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師《在人間自在修行—八識講話》的人間佛教修行觀之探究",
+   "author": "張嘉珈 （釋知芸）",
+   "advisor": "王惠雯／釋妙南",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "109",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教的藝術弘法－以佛光山佛誕展為例",
+   "author": "徐苔珍（釋知建）",
+   "advisor": "釋永東",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "108",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師的中國佛教觀之探究",
+   "author": "顏艷秋（釋禪覺）",
+   "advisor": "黃國清",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "106",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "論人間佛教之善巧方便：以《維摩詰經·方便品》為文本",
+   "author": "蔡敏慧",
+   "advisor": "釋覺培 ／釋覺明",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "106",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教修行生活的食、衣、住、行 四個面向之研究：以佛光山為例",
+   "author": "陳玫玲",
+   "advisor": "釋覺明",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "105",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師人間佛教及其建築實踐－以佛陀紀念館為例",
+   "author": "翁琬君（釋知超）",
+   "advisor": "賴凱慧（釋如常）／李芝瑩",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "105",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "《法華經》的人間佛教實踐：以佛光山為例的探討",
+   "author": "簡秋燕",
+   "advisor": "沈昭吟",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "104",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教淨土思想的開展：以佛光山為研究對象",
+   "author": "杜佳鴻",
+   "advisor": "黃國清",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "104",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師的淨土思想研究",
+   "author": "黃月娥(釋德謙)",
+   "advisor": "鄭阿財",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "100",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "佛教西來南美的分析探討－以佛光山人間佛教在巴西的發展為研究",
+   "author": "朱思薇(釋妙上)",
+   "advisor": "釋永有",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "世俗化時代的宗教教育改革~太虛大師與紐曼主教之研究比較",
+   "author": "康素華",
+   "advisor": "蔡源林",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "92",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教實踐路徑之探究－兼論星雲大師修行觀對現代社會的啟發",
+   "author": "楊芷芸（釋覺元）",
+   "advisor": "釋慧開",
+   "school": "南華大學",
+   "dept": "宗教學研究所",
+   "year": "113",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師的人間佛教思想——以《六祖壇經講話》為核心",
+   "author": "林綉玉",
+   "advisor": "陳劍鍠",
+   "school": "國立屏東大學",
+   "dept": "中國語文學系碩士班",
+   "year": "104",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "南北傳入世佛教在台灣的會遇：以佛教弘誓學院與泰國國際入世佛教協會的交流為例",
+   "author": "劉文芳",
+   "advisor": "蔡怡佳",
+   "school": "國立政治大學",
+   "dept": "宗教研究所",
+   "year": "107",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "弘誓"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第三節",
+    "第三章第四節",
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣佛教優婆夷之性別經驗:以四個人間佛教教團的優婆夷為例",
+   "author": "洪雅惠",
+   "advisor": "黃維憲",
+   "school": "國立政治大學",
+   "dept": "社會學研究所",
+   "year": "91",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "以資源整合觀點探討人間佛教於社會實踐之行銷策略研究",
+   "author": "胡一鳳",
+   "advisor": "朱國光",
+   "school": "國立高雄第一科技大學",
+   "dept": "行銷與流通管理研究所",
+   "year": "102",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從邊緣進到世界的台灣人間佛教--二十世紀以來地緣慈濟宗」的佛儒實踐初探實踐初探",
+   "author": "呂錦淑",
+   "advisor": "林安梧",
+   "school": "慈濟大學",
+   "dept": "宗教與人文研究所碩士班",
+   "year": "113",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節",
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "對話中的佛教:一行禪師與基督宗教和人間佛教之相遇",
+   "author": "陳盈霓",
+   "advisor": "林建德",
+   "school": "慈濟大學",
+   "dept": "宗教與文化研究所",
+   "year": "99",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順導師與妙雲蘭若──兼論「精神典範」對於比丘尼僧團發展之影響",
+   "author": "廖憶榕",
+   "advisor": "盧蕙馨 ／李玉珍",
+   "school": "慈濟大學",
+   "dept": "宗教與文化研究所",
+   "year": "94",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師的佛學思想：新實用主義的詮釋",
+   "author": "釋智諦",
+   "advisor": "鄧偉仁",
+   "school": "法鼓文理學院",
+   "dept": "佛教學系",
+   "year": "107",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師禪觀思想研究",
+   "author": "陳乃腕",
+   "advisor": "邱燮友",
+   "school": "玄奘人文社會學院",
+   "dept": "宗教學研究所",
+   "year": "88",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "「印順學」之形成與展望",
+   "author": "李素英",
+   "advisor": "盧瓊昭／釋昭慧",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士班",
+   "year": "101",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第三節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順導師淨土思想評述之爭議",
+   "author": "王寶萍",
+   "advisor": "釋昭慧 教授",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士在職專班",
+   "year": "102",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "一行禪師「入世佛教」與星雲法師「人間佛教」之研究",
+   "author": "釋福喜",
+   "advisor": "釋慧嚴",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士班",
+   "year": "101",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣地區佛教徒政治參與之研究－以人間佛教為研究焦點",
+   "author": "林俊立",
+   "advisor": "張家麟",
+   "school": "真理大學",
+   "dept": "宗教文化與組織管理學系碩士班",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "入世證菩提：當代臺灣人間佛教思想的爭辯與開展",
+   "author": "陳淑梅(釋禪林)",
+   "advisor": "江燦騰，高柏園",
+   "school": "華梵大學",
+   "dept": "東方人文思想研究所",
+   "year": "107",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教的具體實踐—以基隆極樂寺為例",
+   "author": "陳佳君",
+   "advisor": "陳娟珠",
+   "school": "華梵大學",
+   "dept": "東方人文思想研究所",
+   "year": "103",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 4,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從「信徒的社會階層」探討人間佛教道場的發展—以佛光山台北道場為例",
+   "author": "胡琬苹",
+   "advisor": "姚玉霜",
+   "school": "佛光人文社會學院",
+   "dept": "未來學系",
+   "year": "94",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "星雲大師對「人間佛教」理念的詮釋",
+   "author": "趙淑真",
+   "advisor": "劉國威 ／洪漢鼎",
+   "school": "佛光人文社會學院",
+   "dept": "宗教學研究所",
+   "year": "93",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教「道與藝」之建構關係—以佛光山梵唄讚頌團為例",
+   "author": "葉青香",
+   "advisor": "林谷芳",
+   "school": "佛光大學",
+   "dept": "藝術學研究所",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教的現代性",
+   "author": "曾齡儀",
+   "advisor": "謝劍",
+   "school": "佛光大學",
+   "dept": "社會學系",
+   "year": "95",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "論《維摩詰經》之入世精神－以現代「人間佛教」為說明",
+   "author": "林琦瑄",
+   "advisor": "蕭振邦",
+   "school": "國立中央大學",
+   "dept": "哲學研究所",
+   "year": "88",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "《真現實論》與太虛大師現代中國佛教建設之研究",
+   "author": "李庚道",
+   "advisor": "林文彬",
+   "school": "國立中興大學",
+   "dept": "中國文學系所",
+   "year": "107",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "彌勒淨土中的人間佛教思想",
+   "author": "鄭世東",
+   "advisor": "邱敏捷",
+   "school": "國立臺南大學",
+   "dept": "國語文學系",
+   "year": "95",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛大師法華思想研究─以〈法華講演錄及〈大乘妙法蓮華經懸論〉為中心",
+   "author": "劉豫嬌",
+   "advisor": "蔡輝振 ／王晴薇",
+   "school": "國立雲林科技大學",
+   "dept": "漢學資料整理研究所碩士班",
+   "year": "99",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "「人間佛教」思想的具體實踐――「菩薩僧團」",
+   "author": "郭鎧銘",
+   "advisor": "王樾",
+   "school": "淡江大學",
+   "dept": "歷史學系碩士班",
+   "year": "95",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "聲聞弟子的菩薩行傾向－－印順法師對聲聞弟子的描述",
+   "author": "劉柏卲",
+   "advisor": "陳一標",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士在職專班",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "太虛大師對天台學的融攝與運用",
+   "author": "賴木生",
+   "advisor": "陳一標",
+   "school": "玄奘大學",
+   "dept": "宗教學系碩士班",
+   "year": "98",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "太虛"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "《金光明經．流水長者子品》中的佛教倫理思想—基於護生、環保理念之探究",
+   "author": "謝聖聆（釋真聖）",
+   "advisor": "王惠雯",
+   "school": "華梵大學",
+   "dept": "哲學系碩士班",
+   "year": "111",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "佛教倫理",
+    "護生"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "印順法師的大乘密教觀點之探討",
+   "author": "洪崇仁",
+   "advisor": "王惠雯",
+   "school": "華梵大學",
+   "dept": "東方人文思想研究所",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "印順"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "人間佛教的理論與實踐─以佛光山金光明寺為例",
+   "author": "邱麗卿",
+   "advisor": "徐福全博士",
+   "school": "銘傳大學",
+   "dept": "應用中國文學系碩士在職專班",
+   "year": "99",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第三章　人間佛教在台灣",
+   "score": 3,
+   "matched": [
+    "人間佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "日治時期台灣文化協會新劇運動系譜（1921-1936）",
+   "author": "白春燕",
+   "advisor": "劉柳書琴",
+   "school": "國立清華大學",
+   "dept": "台灣文學研究所",
+   "year": "109",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 5,
+   "matched": [
+    "文化協會",
+    "日治"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "日治時期啟蒙思想的五個面向：台灣殖民地現代性的建立與張深切思想的指標性意義",
+   "author": "簡素琤",
+   "advisor": "劉紀蕙",
+   "school": "輔仁大學",
+   "dept": "比較文學研究所",
+   "year": "95",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 5,
+   "matched": [
+    "日治",
+    "殖民"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章",
+    "第四章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "近代中國社會的印度想像（1895-1949）",
+   "author": "陳建維",
+   "advisor": "張瑞德",
+   "school": "中國文化大學",
+   "dept": "史學系",
+   "year": "109",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "近代"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "帝國之眼凝視下的近代中國：近代日本知識份子的中國旅行文化體驗(1862-1931)",
+   "author": "簡千芮",
+   "advisor": "羅秀美",
+   "school": "國立中興大學",
+   "dept": "中國文學系所",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "近代"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "日治時期台灣基督徒知識分子與社會運動(1920-1930年代)",
+   "author": "王昭文",
+   "advisor": "林瑞明",
+   "school": "國立成功大學",
+   "dept": "歷史學系碩博士班",
+   "year": "97",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "日治"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "近代台灣漢人社會立誓研究",
+   "author": "胡學丞",
+   "advisor": "康豹／劉維開",
+   "school": "國立政治大學",
+   "dept": "歷史學系",
+   "year": "106",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "近代"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "殖民統治與宗教同化的困境---日據時期臺灣新佛教運動得頓挫與轉型",
+   "author": "江燦騰",
+   "advisor": "李永熾",
+   "school": "國立臺灣大學",
+   "dept": "歷史學研究所",
+   "year": "88",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "日據",
+    "殖民"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "近代護生戒殺思想之發展與實踐",
+   "author": "李雅雯",
+   "advisor": "王開府",
+   "school": "國立臺灣師範大學",
+   "dept": "中國文學系研究所",
+   "year": "96",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "近代"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "近代詩僧研究--以有詩集者為主",
+   "author": "黃鶴仁",
+   "advisor": "許清雲教授",
+   "school": "東吳大學",
+   "dept": "中國文學系",
+   "year": "105",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "近代"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "日本殖民地時期台灣佛教之變革與挑戰",
+   "author": "吳明志",
+   "advisor": "黃翠娥",
+   "school": "輔仁大學",
+   "dept": "跨文化研究所比較文學與跨文化研究博士班",
+   "year": "110",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 4,
+   "matched": [
+    "殖民"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第一節",
+    "第三章第三節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "日治時期台灣知識份子對於「世界主義」的實踐：以基督教受容為中心",
+   "author": "鄧慧恩",
+   "advisor": "呂興昌",
+   "school": "國立成功大學",
+   "dept": "台灣文學系碩博士班",
+   "year": "99",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 3,
+   "matched": [
+    "日治"
+   ],
+   "priority": "",
+   "hits": [
+    "第二章日本線"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "林述三暨《南瀛佛教》相關作品研究",
+   "author": "郭貞孜",
+   "advisor": "黃美娥 ／周德良",
+   "school": "淡江大學",
+   "dept": "中國文學學系博士班",
+   "year": "109",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第二章　東亞近代宗教變革",
+   "score": 3,
+   "matched": [
+    "南瀛佛教"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "同性婚姻平權與宗教信仰自由之衝突與權衡—以宗教信徒及團體拒絕服務同性伴侶之憲法爭議為中心",
+   "author": "林冠廷",
+   "advisor": "廖元豪",
+   "school": "國立政治大學",
+   "dept": "法律學系",
+   "year": "109",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第五章　佛耶對話與議題結盟",
+   "score": 3,
+   "matched": [
+    "同性婚姻",
+    "婚姻平權"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從戒嚴到解嚴—中國佛教會在台灣政教關係中的挑戰與發展",
+   "author": "楊書濠",
+   "advisor": "顏尚文",
+   "school": "國立中正大學",
+   "dept": "歷史所",
+   "year": "97",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第六章　理論：世俗化與宗教多元",
+   "score": 4,
+   "matched": [
+    "政教關係"
+   ],
+   "priority": "",
+   "hits": [
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "佛教對祛魅後「世俗化」問題之倫理回應",
+   "author": "藍紹源",
+   "advisor": "嚴瑋泓",
+   "school": "東海大學",
+   "dept": "哲學系",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第六章　理論：世俗化與宗教多元",
+   "score": 4,
+   "matched": [
+    "世俗化"
+   ],
+   "priority": "",
+   "hits": [
+    "第三章第二節",
+    "第三章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "探討托瑪斯∙摩爾公共神學中的德行倫理：從烏托邦到倫敦塔的幽靈",
+   "author": "歐陽剛毅",
+   "advisor": "鄭印君",
+   "school": "輔仁大學",
+   "dept": "宗教學系",
+   "year": "112",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第六章　理論：世俗化與宗教多元",
+   "score": 4,
+   "matched": [
+    "公共神學"
+   ],
+   "priority": "",
+   "hits": [
+    "第六章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "臺灣政教關係之研究(1949-1999)：一種統治觀點之分析",
+   "author": "葉永文",
+   "advisor": "彭懷恩 ／邱榮舉",
+   "school": "國立臺灣大學",
+   "dept": "三民主義研究所",
+   "year": "88",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第六章　理論：世俗化與宗教多元",
+   "score": 3,
+   "matched": [
+    "政教關係"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣本土神學：以宋泉盛為中心之研究",
+   "author": "潘馨逸",
+   "advisor": "黄懷秋",
+   "school": "輔仁大學",
+   "dept": "宗教學系",
+   "year": "109",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 9,
+   "matched": [
+    "宋泉盛",
+    "本土神學"
+   ],
+   "priority": "★",
+   "hits": [
+    "第四章",
+    "第四章第三節",
+    "第四章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "宗教地理學視角下的本土神學-以台灣基督長老教會及韓國長老教會發展之比較",
+   "author": "陳宗元",
+   "advisor": "洪富峰",
+   "school": "國立高雄師範大學",
+   "dept": "地理學系",
+   "year": "114",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 7,
+   "matched": [
+    "本土神學",
+    "長老教會"
+   ],
+   "priority": "★",
+   "hits": [
+    "第四章",
+    "第四章第二節",
+    "第四章第五節",
+    "第四章第四節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣基督長老教會國家認同與其論述轉換之研究(1970~2000)",
+   "author": "鄭睦群",
+   "advisor": "張瑞德",
+   "school": "中國文化大學",
+   "dept": "史學系",
+   "year": "101",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 5,
+   "matched": [
+    "長老教會",
+    "認同"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第一節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "戰後台南神學院本土神學教育的發展",
+   "author": "周學蕙",
+   "advisor": "王崇堯",
+   "school": "國立成功大學",
+   "dept": "歷史學系碩博士班",
+   "year": "97",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 5,
+   "matched": [
+    "本土神學",
+    "台南神學院"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第一節",
+    "第四章第三節",
+    "第四章第二節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "故事在宗教對話中的功能——以宋泉盛的故事神學為例",
+   "author": "張鈞凱",
+   "advisor": "宋泉盛",
+   "school": "國立政治大學",
+   "dept": "宗教研究所",
+   "year": "98",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 5,
+   "matched": [
+    "宋泉盛",
+    "故事神學"
+   ],
+   "priority": "",
+   "hits": [
+    "第六章",
+    "第四章",
+    "第四章第三節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣本土神學之自決精神轉向：在數位宰制狀況中的重建",
+   "author": "陳仰德",
+   "advisor": "黃伯和",
+   "school": "長榮大學",
+   "dept": "神學系碩士班",
+   "year": "107",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 5,
+   "matched": [
+    "本土神學",
+    "自決"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第二節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "亞洲處境中的上帝啟示：論宋泉盛宣教神學及其對傳統範式的挑戰",
+   "author": "林文凱",
+   "advisor": "高井由紀",
+   "school": "台灣基督長老教會南神神學院",
+   "dept": "神學研究所",
+   "year": "114",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 4,
+   "matched": [
+    "宋泉盛"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第三節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "宋泉盛後期對聖經故事之新解詮釋",
+   "author": "郭鳳池",
+   "advisor": "王崇堯",
+   "school": "台灣基督長老教會南神神學院",
+   "dept": "神學研究所",
+   "year": "108",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 4,
+   "matched": [
+    "宋泉盛"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第三節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "以本土神學視角閱讀李喬《V 與身體》",
+   "author": "連以諾",
+   "advisor": "邱凱莉",
+   "school": "台灣神學研究學院",
+   "dept": "神學研究道學碩士班",
+   "year": "112",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 4,
+   "matched": [
+    "本土神學"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第一節",
+    "第四章第三節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台語新約聖經三種版本的台灣社會實況化研究",
+   "author": "梁淑慧",
+   "advisor": "鄭良偉",
+   "school": "國立新竹教育大學",
+   "dept": "臺灣語言與語文教育研究所",
+   "year": "92",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 4,
+   "matched": [
+    "實況化"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第三節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "台灣基督長老教會政治論述之分析—以《台灣教會公報》及《新使者》為對象",
+   "author": "沈游振",
+   "advisor": "李炳南 ／陳顯武",
+   "school": "國立臺灣大學",
+   "dept": "國家發展研究所",
+   "year": "99",
+   "degree": "博士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 4,
+   "matched": [
+    "長老教會"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第一節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "宋泉盛基督論之形塑",
+   "author": "許光璇",
+   "advisor": "歐力仁",
+   "school": "中原大學",
+   "dept": "宗教研究所",
+   "year": "96",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第四章　台灣本土神學",
+   "score": 3,
+   "matched": [
+    "宋泉盛"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第三節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "獨什麼立？：台灣基督長老教會國族認同及其神學理論之分析",
+   "author": "楊文豪",
+   "advisor": "鄭仰恩",
+   "school": "台灣神學研究學院",
+   "dept": "神學研究道學碩士班",
+   "year": "109",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 3,
+   "matched": [
+    "長老教會",
+    "認同"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章",
+    "第四章第一節",
+    "第四章第二節",
+    "第四章第五節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "先知的考驗──戰後台灣基督長老教會之政治認同 (1945-2008)",
+   "author": "許見賢",
+   "advisor": "鄭睦群",
+   "school": "國立政治大學",
+   "dept": "台灣史研究所",
+   "year": "112",
+   "degree": "碩士",
+   "fulltext": true,
+   "axis": "第四章　台灣本土神學",
+   "score": 3,
+   "matched": [
+    "長老教會",
+    "認同"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章第一節"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "從宗教市場理論分析解嚴前後的台灣政教關係-以長老教會與一貫道為例",
+   "author": "王博賢",
+   "advisor": "蔡源林",
+   "school": "國立政治大學",
+   "dept": "宗教研究所",
+   "year": "105",
+   "degree": "博士",
+   "fulltext": false,
+   "axis": "第四章　台灣本土神學",
+   "score": 3,
+   "matched": [
+    "長老教會"
+   ],
+   "priority": "",
+   "hits": [
+    "一貫道：王博賢學位論文",
+    "第三章",
+    "第四章"
+   ]
+  },
+  {
+   "kind": "學位論文",
+   "title": "《自由之心》-藝術與神學的互動 草間彌生與宋泉盛為例",
+   "author": "陳彥儒",
+   "advisor": "宋泉盛",
+   "school": "長榮大學",
+   "dept": "神學系",
+   "year": "104",
+   "degree": "碩士",
+   "fulltext": false,
+   "axis": "第四章　台灣本土神學",
+   "score": 3,
+   "matched": [
+    "宋泉盛"
+   ],
+   "priority": "",
+   "hits": [
+    "第四章第三節"
+   ]
+  }
+ ]
+}
