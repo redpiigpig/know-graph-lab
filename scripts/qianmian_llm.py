@@ -9,6 +9,7 @@
   ask(prompt, search=True) 掛 Google Search grounding，用來查最新研究
 """
 import json
+import os
 import random
 import sys
 import time
@@ -19,7 +20,12 @@ import requests
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import translate_ebook_to_zh as engines  # noqa: E402
 
-MODEL = "gemini-3.5-flash"
+# 🚨 免費層是「每天每把 key 幾次請求」在管，不是每分鐘。2026-09-05 實測：
+#    gemini-3.5-flash / 3.6-flash → GenerateRequestsPerDayPerProjectPerModel-FreeTier = 20
+#    七把 key 合起來一天才 140 次，而一章要 ~15 次，整套書排不進一天。
+#    gemini-2.5-flash 是穩定版、額度大得多，整套書要在一夜跑完只能走它。
+#    要換型號設環境變數 QIANMIAN_MODEL。
+MODEL = os.environ.get("QIANMIAN_MODEL", "gemini-2.5-flash")
 URL = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
 
 _index = 0

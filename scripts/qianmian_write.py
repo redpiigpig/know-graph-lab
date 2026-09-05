@@ -298,7 +298,7 @@ def write_chapter(no, length):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--chapters", default="1-28", help="例 1-28 或 3,5,9")
-    ap.add_argument("--length", default="2500–3200")
+    ap.add_argument("--length", default="2200–2800")   # 模型一律超寫，實際會落在 3,200–3,800
     a = ap.parse_args()
     nos = []
     for part in a.chapters.split(","):

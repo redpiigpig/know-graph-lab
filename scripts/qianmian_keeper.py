@@ -16,7 +16,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent.parent
 CH = ROOT / "output" / "qianmian" / "chapters"
-LANES = ["2-8", "9-15", "16-21", "22-28"]
+LANES = ["1-7", "8-14", "15-21", "22-28"]
 
 
 def running():
