@@ -43,6 +43,7 @@
 """
 import argparse
 import json
+import os
 import re
 import time
 import unicodedata
@@ -460,8 +461,91 @@ PRIORITY = [
     "huayen", "humanistic-buddhism", "hbj-arts", "huafan-humanities",
 ]
 
+# 只收書目點名的那幾篇、不整份掃的刊。
+# 《民俗曲藝》479 篇裡只要 16 篇（一貫道／鸞堂／扶乩那條線），整份收沒有意義。
+# 🚨 這一份名單存在的理由是「刻意不在 PRIORITY 裡」與「忘了加進 PRIORITY」
+#    在行為上完全一樣——都不會被整刊掃描到，也都不會報錯。寫明才分得出來，
+#    測試也才擋得住漏掉的那種。
+WANTED_ONLY = {"folk-arts"}
+
 LOCK = Path(r"C:/tmp/press_airiti_download.lock")
 LOCK_STALE = 3 * 3600
+
+_IP_RE = re.compile(r"IP\s*[:：]\s*([\d.]+)")
+# 認得機構時，頁首的 span.unitEntranceName 會是「您好！ 玄奘大學」；
+# 認不得就整段換成「透過您的圖書館登入」。
+# 🚨 這條正規表示式要拿**當初認證通過時的存檔**驗過才算數——只在現在（認不得）
+#    的頁面上測，寫錯了也一樣回空字串，看起來完全正常。
+_ORG_RE = re.compile(
+    r'unitEntranceName[^>]*>\s*(?:您好！\s*)?([^<]{2,30}?)\s*</')
+
+
+def seen_ip(s):
+    """華藝從它那一端看到的來源 IP。跟自己查 ipify 不同的是，這是它認的那個。"""
+    try:
+        m = _IP_RE.search(s.get(f"{BASE}/", timeout=60).text)
+        return m.group(1) if m else ""
+    except requests.RequestException:
+        return ""
+
+
+def institution(s):
+    """回傳華藝認出來的機構名；認不得就回空字串。
+
+    🚨 這是下載的先決條件，不是附加資訊。認證掉了以後，卷期頁照樣抓得到、
+       下載鈕的 token 照樣在，只有最後那一步的 TextDownloadWindowNew 會回
+       一個 HTTP 200 的 JSON：「請您通過機構登入認證…」。所以症狀出現在最後一步，
+       原因卻在最前面——先驗，錯誤訊息才會指向真正的原因。
+    """
+    try:
+        html = s.get(f"{BASE}/", timeout=60).text
+    except requests.RequestException:
+        return ""
+    m = _ORG_RE.search(html)
+    who = m.group(1).strip() if m else ""
+    # 認不得的時候同一個 span 會寫「透過您的圖書館登入」——那是提示不是機構名，
+    # 直接回傳的話 institution() 就永遠是真值，這道閘等於沒有
+    return "" if (not who or "登入" in who) else who
+
+
+def _alive(pid):
+    if not pid:
+        return False
+    try:
+        import ctypes
+        h = ctypes.windll.kernel32.OpenProcess(0x1000, False, int(pid))
+        if not h:
+            return False
+        ctypes.windll.kernel32.CloseHandle(h)
+        return True
+    except Exception:                             # noqa: BLE001
+        return True                               # 判不出來就當它還活著，寧可少跑一輪
+
+
+def lock_holder():
+    """鎖還有效就回持有者 PID，否則清掉鎖並回 None。
+
+    🚨 只看檔案的時間戳是不夠的：2026-09-05 排程那一輪被砍掉（工作結果
+       0xC000013A），`finally` 沒跑到，鎖就留在那裡，後面三個小時的批次
+       全部被自己的殘骸擋掉——而且擋掉時只印一行「另一輪還在跑」，
+       看起來完全正常。改成記 PID，行程不在就直接清掉。
+    """
+    if not LOCK.exists():
+        return None
+    try:
+        info = json.loads(LOCK.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        info = None
+    if isinstance(info, dict):
+        pid, at = info.get("pid"), info.get("at", 0)
+    else:                                          # 舊格式：檔案裡就一個時間戳
+        pid, at = None, LOCK.stat().st_mtime
+    if pid and _alive(pid):
+        return pid
+    if not pid and time.time() - at < LOCK_STALE:
+        return "?"
+    LOCK.unlink(missing_ok=True)
+    return None
 
 # 站內已經有全文的期別，不必再向華藝要一次。
 # 🚨 這一層是省下載額度的關鍵，不是可有可無的優化：弘誓與玄奘佛學研究站內早就
@@ -576,11 +660,23 @@ def batch(s, budget):
        兩邊同時跑等於把對機構 IP 的請求速率乘二，而節流的整個意義就在速率。
     """
     LOCK.parent.mkdir(parents=True, exist_ok=True)
-    if LOCK.exists() and time.time() - LOCK.stat().st_mtime < LOCK_STALE:
-        print(f"另一輪下載還在跑（{LOCK}，{int(time.time() - LOCK.stat().st_mtime)} 秒前）；這次跳過")
+    holder = lock_holder()
+    if holder:
+        print(f"另一輪下載還在跑（{LOCK}，PID {holder}）；這次跳過")
         return
-    LOCK.write_text(str(time.time()), encoding="utf-8")
+    LOCK.write_text(json.dumps({"pid": os.getpid(), "at": time.time()}), encoding="utf-8")
     try:
+        # 🚨 先驗機構身分，驗不過就整批不跑。
+        #    沒有這道閘的話，認證掉了會變成「每一份刊各失敗一篇才放棄」——
+        #    2026-09-05 實測一次燒掉 18 次請求、log 裡 18 行一模一樣的紅字，
+        #    而真正的原因（人不在學校、對外 IP 是 HiNet 不是 210.60.61.x）
+        #    一個字都沒寫出來。
+        who = institution(s)
+        if not who:
+            print(f"華藝不認這台機器的機構身分（它看到的 IP：{seen_ip(s) or '不明'}）。"
+                  f"人不在學校時本來就下不了，整批跳過，不動帳本。")
+            return
+        print(f"機構身分：{who}")
         spent = 0
         # 先清書目點名的那些篇。整批 17,090 篇要跑幾個月，論文當下要引的那 147 篇
         # 排在後面就等於沒下——優先序決定的是「先拿到手的是哪些」。

@@ -13,9 +13,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import press_airiti as pa  # noqa: E402
 
 
-def test_priority_covers_every_journal():
-    # 沒排進 PRIORITY 的刊，--batch 永遠掃不到——不會報錯，只是那份刊一篇都不會下
-    assert [k for k in pa.JOURNALS if k not in pa.PRIORITY] == []
+def test_every_journal_is_either_swept_or_declared_wanted_only():
+    # 沒排進 PRIORITY 的刊，整刊掃描永遠掃不到——不會報錯，只是那份刊一篇都不會下。
+    # 「刻意只收點名的幾篇」要寫進 WANTED_ONLY，跟「忘了加」區分開來
+    covered = set(pa.PRIORITY) | pa.WANTED_ONLY
+    assert [k for k in pa.JOURNALS if k not in covered] == []
+
+
+def test_wanted_only_slugs_exist_and_are_not_in_priority():
+    assert [k for k in pa.WANTED_ONLY if k not in pa.JOURNALS] == []
+    assert [k for k in pa.WANTED_ONLY if k in pa.PRIORITY] == []
 
 
 def test_priority_has_no_ghost_slug():
@@ -66,6 +73,56 @@ def test_site_held_skips_only_the_issues_we_have():
 
 def test_site_held_slugs_exist():
     assert [k for k in pa.SITE_HELD if k not in pa.JOURNALS] == []
+
+
+class _FakeSession:
+    def __init__(self, html):
+        self.html = html
+
+    def get(self, *a, **k):
+        class R:
+            pass
+        r = R()
+        r.text = self.html
+        return r
+
+
+AUTHED = ('<span class="unitEntranceName" id="_Header_B2B客戶名稱_span">您好！ 玄奘大學</span>'
+          '<span class="ip">IP:210.60.61.249</span>')
+ANON = ('<span class="unitEntranceName">透過您的圖書館登入</span>'
+        '<span class="ip">IP:111.243.162.216</span>')
+
+
+def test_institution_recognised_only_when_authed():
+    # 🚨 兩個方向都要驗。只驗「認不得時回空字串」的話，正規表示式寫壞了也一樣通過
+    assert pa.institution(_FakeSession(AUTHED)) == "玄奘大學"
+    # 認不得時同一個 span 寫的是提示字串，不能當成機構名
+    assert pa.institution(_FakeSession(ANON)) == ""
+
+
+def test_seen_ip_reads_what_airiti_sees():
+    assert pa.seen_ip(_FakeSession(AUTHED)) == "210.60.61.249"
+    assert pa.seen_ip(_FakeSession(ANON)) == "111.243.162.216"
+
+
+def test_lock_holder_clears_a_dead_holder(tmp_path, monkeypatch):
+    import json as _json
+    lock = tmp_path / "dl.lock"
+    monkeypatch.setattr(pa, "LOCK", lock)
+    # 行程早就不在的鎖必須被清掉——排程被砍時 finally 跑不到，殘骸會擋掉後續每一輪
+    lock.write_text(_json.dumps({"pid": 999999999, "at": 0}), encoding="utf-8")
+    assert pa.lock_holder() is None
+    assert not lock.exists()
+
+
+def test_lock_holder_respects_a_live_holder(tmp_path, monkeypatch):
+    import json as _json
+    import os as _os
+    lock = tmp_path / "dl.lock"
+    monkeypatch.setattr(pa, "LOCK", lock)
+    lock.write_text(_json.dumps({"pid": _os.getpid(), "at": 0}), encoding="utf-8")
+    assert pa.lock_holder() == _os.getpid()
+    assert lock.exists()
 
 
 def test_download_delay_not_lowered():
