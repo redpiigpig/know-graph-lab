@@ -215,7 +215,7 @@ playwright 別用 `waitUntil: 'networkidle'`，Nuxt dev 的 HMR 連線讓它永�
 
 ```
 python scripts/build_religion_cards.py
-"C:\Program Files\LibreOffice\program\soffice.exe" --headless --convert-to pdf   --outdir output/teaching-cards output/teaching-cards/world-religion-cards.docx
+"C:\Program Files\LibreOffice\program\soffice.exe" --headless --convert-to pdf --outdir output/teaching-cards output/teaching-cards/world-religion-cards.docx
 ```
 
 名單在 [data/teachingCards/world-religions.json](../../../data/teachingCards/world-religions.json)。
