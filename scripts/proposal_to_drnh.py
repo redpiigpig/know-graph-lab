@@ -27,7 +27,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-SRC = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金/"
+SRC = Path("G:/我的雲端硬碟/玄奘/博一上/獎學金/玄奘助學金/"
            "張辰瑋，博士論文計畫書（原始markdown）.md")
 BIBLIO = REPO / "scripts/data/proposal_drnh_biblio.md"
 

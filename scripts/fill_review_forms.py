@@ -10,6 +10,9 @@
 這裡一律留白，只填學生資料與論文題目。
 
 🚨 合併儲存格在 row.cells 會重複出現同一個 tc，照索引寫會寫到隔壁格去。
+🚨 **有選項的格子要就地勾選，不要用 write() 覆蓋。** write() 先清空整格，
+   多段落的選項欄會被壓成一行、少數選項會整個消失（04 表的「學生與指導教授
+   互動情形」六個項目就是這樣被我刪成一個，而學制欄的「□碩專班」也不見了）。
 🚨 產出檔留 Drive 不進 repo（含學號）。
 
   python -X utf8 scripts/fill_review_forms.py
@@ -20,7 +23,7 @@ from docx import Document
 from docx.oxml.ns import qn
 from docx.shared import Pt
 
-BASE = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金")
+BASE = Path("G:/我的雲端硬碟/玄奘/博一上/獎學金/玄奘助學金")
 NAME, SID, GRADE = "張辰瑋", "DB1153002", "一年級"
 ADVISOR = "釋昭慧"
 TITLE = "從彼岸向此岸的轉向：台灣佛教與基督教公共性之宗教史比較研究（1920–2020）"
@@ -42,6 +45,17 @@ def write(cell, text, *, size=12):
     run.font.size = Pt(size)
     run.font.name = EN
     run._element.rPr.rFonts.set(qn("w:eastAsia"), CJK)
+
+
+def edit_par(par, old, new):
+    """就地把段落裡的 old 換成 new。跨 run 的文字要先併起來再換——
+    Word 常把一行切成好幾個 run，逐 run 比對永遠對不上。"""
+    if old not in par.text or not par.runs:
+        return False
+    par.runs[0].text = par.text.replace(old, new)
+    for r in par.runs[1:]:
+        r.text = ""
+    return True
 
 
 def uniq(row):
@@ -85,13 +99,12 @@ def fill(doc, semester, nth):
                 if label == key and key not in filled and k + 1 < len(cells):
                     write(cells[k + 1], val, size=10 if key == "論文題目" else 12)
                     filled.add(key)
-            if label.startswith("系級"):
-                write(cell, "系級")
-                if k + 1 < len(cells):
-                    write(cells[k + 1], "■博士班　□碩士班")
-            if label.startswith("論文形式"):
-                if k + 1 < len(cells):
-                    write(cells[k + 1], "■學術研究論文研究計畫　　□創作研究計畫")
+            if label.startswith("系級") and k + 1 < len(cells):
+                for par in cells[k + 1].paragraphs:
+                    edit_par(par, "□博士班", "■博士班")
+            if label.startswith("論文形式") and k + 1 < len(cells):
+                for par in cells[k + 1].paragraphs:
+                    edit_par(par, "□學術研究論文研究計畫", "■學術研究論文研究計畫")
 
 
 def main():

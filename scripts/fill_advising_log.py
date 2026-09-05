@@ -13,6 +13,11 @@
 
 🚨 表格有合併儲存格：python-docx 讀合併列時同一個 tc 會在 row.cells 重複出現，
    照索引寫會把同一格寫好幾次、或把值寫到隔壁去。一律用 id(tc) 去重。
+🚨 **多段落的儲存格不可以用 write() 覆蓋。** write() 會先把整格清空，
+   而「學生與指導教授互動情形」那一格有八段共六個項目（定期討論／同時討論人數／
+   兩題五等第／主動提問／上次待修正），整格覆蓋等於把第 2–6 項刪掉，
+   印出來完全正常、只是少了四題。同一列的「□博士班 □碩士班 □碩專班」也是三個選項。
+   這種格子一律用 edit_par() 就地改該行的字，其餘段落不動。
 🚨 產出檔留 Drive，不進 repo（含學號等個資，repo 是公開的）。
 
   python -X utf8 scripts/fill_advising_log.py
@@ -24,7 +29,7 @@ from docx import Document
 from docx.oxml.ns import qn
 from docx.shared import Pt
 
-BASE = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金")
+BASE = Path("G:/我的雲端硬碟/玄奘/博一上/獎學金/玄奘助學金")
 SRC = BASE / "04-研究生論文指導記錄表(docx) (1).docx"
 OUTDIR = BASE / "04-研究生論文指導記錄表（已填）"
 
@@ -57,6 +62,20 @@ def write(cell, text, *, size=12):
     run._element.rPr.rFonts.set(qn("w:eastAsia"), CJK)
 
 
+def edit_par(par, old, new):
+    """就地把段落裡的 old 換成 new，其餘段落與格式不動。
+
+    跨 run 的文字要先併起來再換：Word 常把一行切成好幾個 run，
+    逐 run 比對永遠對不上。併完塞回第一個 run、其餘清空，格式沿用第一個 run 的。
+    """
+    if old not in par.text or not par.runs:
+        return False
+    par.runs[0].text = par.text.replace(old, new)
+    for r in par.runs[1:]:
+        r.text = ""
+    return True
+
+
 def uniq(row):
     """合併格在 row.cells 會重複出現，回傳 (欄索引, cell) 的去重序列。"""
     seen, out = [], []
@@ -84,10 +103,13 @@ def fill(table, d, n):
                     if k + 1 < len(cells):
                         write(cells[k + 1][1], val, size=11 if key == "論文題目" else 12)
             if label.startswith("院"):
-                # 「□博士班」那一格在同一列的最右邊
-                write(cells[-1][1], "■博士班　□碩士班")
+                # 學制那格是「□博士班 □碩士班 □碩專班」三選一，只勾不覆蓋
+                for par in cells[-1][1].paragraphs:
+                    edit_par(par, "□博士班", "■博士班")
             if label.startswith("1.本次為本學期第"):
-                write(cell, f"1.本次為本學期第 {n} 次討論，是否為定期討論？■是 □否")
+                for par in cell.paragraphs:
+                    if edit_par(par, "第    次討論", f"第 {n} 次討論"):
+                        edit_par(par, "是否為定期討論？□是", "是否為定期討論？■是")
 
 
 def main():

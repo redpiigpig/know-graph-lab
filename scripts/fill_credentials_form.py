@@ -16,7 +16,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
-BASE = Path("G:/我的雲端硬碟/玄奘/博一/獎學金/玄奘助學金")
+BASE = Path("G:/我的雲端硬碟/玄奘/博一上/獎學金/玄奘助學金")
 ID = Path("G:/我的雲端硬碟/資料/身分資料")
 SRC = BASE / "03-研究生助學金證件表(docx).docx"
 OUT = BASE / "03-研究生助學金證件表（已填）.docx"
