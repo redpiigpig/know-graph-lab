@@ -164,10 +164,29 @@ def save_jsonl(book_id: str, chunks: list[dict]) -> None:
     tmp.replace(p)          # 原子替換：中途掛掉不會留下半截檔案
 
 
+def _retry(fn, what: str, tries: int = 6):
+    """網路呼叫的退避重試。
+
+    🚨 這支要連續打幾百本書的 DB，中間掉一次連線就整趟停在半路
+    （2026-09-05 跑到第 67 本死於 RemoteDisconnected，前 66 本白等）。
+    這台機器的 DNS 與 Supabase 連線都會間歇性斷，退避要拉到分鐘級。
+    """
+    import time
+    for i in range(tries):
+        try:
+            return fn()
+        except requests.exceptions.RequestException as exc:
+            if i == tries - 1:
+                raise
+            wait = (5, 15, 30, 60, 120)[i]
+            print(f"    ! {what} 連線失敗（{type(exc).__name__}），{wait}s 後重試", flush=True)
+            time.sleep(wait)
+
+
 def push_previews(book_id: str, chunks: list[dict]) -> bool:
     """DB 只存 100 字預覽，全文正本在 Drive。先刪光舊列再整批寫入。"""
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
-                    headers=SB_HEADERS, timeout=60)
+    _retry(lambda: requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}",
+                                   headers=SB_HEADERS, timeout=60), "delete chunks")
     rows = [{
         "ebook_id": book_id,
         "chunk_index": c["chunk_index"],
@@ -178,23 +197,33 @@ def push_previews(book_id: str, chunks: list[dict]) -> bool:
         "char_count": len(c.get("content") or ""),
     } for c in chunks]
     for i in range(0, len(rows), 50):
-        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=SB_HEADERS,
-                          json=rows[i:i + 50], timeout=60)
+        batch = rows[i:i + 50]
+        r = _retry(lambda b=batch: requests.post(f"{URL}/rest/v1/ebook_chunks",
+                                                 headers=SB_HEADERS, json=b, timeout=60),
+                   "insert previews")
         if not r.ok:
             print(f"    ⚠ preview insert 失敗: {r.status_code} {r.text[:120]}", file=sys.stderr)
             return False
-    requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{book_id}", headers=SB_HEADERS,
-                   json={"chunk_count": len(rows),
-                         "total_chars": sum(x["char_count"] for x in rows)}, timeout=30)
+    _retry(lambda: requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{book_id}", headers=SB_HEADERS,
+                                  json={"chunk_count": len(rows),
+                                        "total_chars": sum(x["char_count"] for x in rows)},
+                                  timeout=30), "patch ebook")
     return True
 
 
 def fetch_candidates(limit: int | None = None) -> list[dict]:
-    """所有還沒及格、且有 chunk 的圖書館書。"""
+    """所有有 chunk 的圖書館書。
+
+    🚨 挑選條件是「有沒有巨塊」，不是「分數幾分」——這兩件事不等價。
+    2026-09-04 第一版只掃 quality_score < 80，漏掉 93 本平均每塊超過兩萬字卻
+    仍拿到 80 分以上的書：《文明的衝突與演化(6冊)》掛著 UNDER_SEGMENTED 還是
+    82 分（那個 flag 的扣分不足以把它拉下及格線），最大一塊 2,462,851 字，
+    照樣通過上架閘出現在書架上。分數是規則的近似，巨塊是事實；要修的是事實。
+    """
     rows, off = [], 0
     while True:
-        r = requests.get(f"{URL}/rest/v1/ebooks?collection=is.null&quality_score=not.is.null"
-                         f"&quality_score=lt.80&select=id,title,file_type,quality_score"
+        r = requests.get(f"{URL}/rest/v1/ebooks?collection=is.null&chunk_count=gt.0"
+                         f"&select=id,title,file_type,quality_score"
                          f"&offset={off}&limit=1000", headers=SB_HEADERS, timeout=90)
         r.raise_for_status()
         b = r.json()
@@ -225,7 +254,7 @@ def main() -> int:
         print(__doc__)
         return 1
 
-    need, done, skip = [], 0, 0
+    need, done, skip, failed = [], 0, 0, 0
     for b in books:
         cs = load_jsonl(b["id"])
         if not cs:
@@ -253,8 +282,13 @@ def main() -> int:
         if a.dry_run:
             print("  DRY " + line, flush=True)
             continue
-        save_jsonl(b["id"], new)
-        ok = push_previews(b["id"], new)
+        try:
+            save_jsonl(b["id"], new)
+            ok = push_previews(b["id"], new)
+        except Exception as exc:      # 一本失敗就記下來繼續，別讓整趟停在半路
+            print(f"  FAIL {type(exc).__name__}: {str(exc)[:70]}  " + line, flush=True)
+            failed += 1
+            continue
         print(("  OK  " if ok else "  FAIL ") + line, flush=True)
         done += ok
     print(f"\n完成 {done}/{len(need)}")
