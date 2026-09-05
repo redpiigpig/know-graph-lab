@@ -276,7 +276,8 @@ def fetch_books(env: dict, ids: list[str] | None, recent_days: int | None,
     return rows
 
 
-CHUNK_SELECT = "ebook_id,chunk_type,chapter_path,char_count,content,source_lang"
+# id 是 keyset 分頁的游標，必須選出來（見 fetch_chunks）。
+CHUNK_SELECT = "id,ebook_id,chunk_type,chapter_path,char_count,content,source_lang"
 
 
 def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, list[dict]]:
@@ -310,31 +311,38 @@ def fetch_chunks(env: dict, book_ids: set[str], use_rest: bool) -> dict[str, lis
         return buckets
     URL, KEY = env["SUPABASE_URL"], env["SUPABASE_SERVICE_ROLE_KEY"]
     H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
+    # 🚨 用 keyset 分頁（id > 上一頁最後一筆），不要用 OFFSET。
+    # OFFSET 在 Postgres 是「先數過前 N 列再丟掉」，深度越深越慢；2026-09-05 重分段
+    # 把 chunk 從 25.6 萬變成 45.2 萬之後，翻到 offset=272000 就開始回 500
+    # Internal Server Error —— 那是伺服器端逾時，重試再多次也沒用，因為每次都一樣慢。
+    # keyset 每一頁都走 id 索引，第一頁與第五百頁一樣快，也不怕中途有人插入資料。
+    last_id = ""
+    scanned = 0
     while True:
-        # 全館要打兩百多次，中間掉一次就整趟白跑（沒有 checkpoint）。這台機器的 DNS
-        # 會間歇性斷（getaddrinfo failed），一斷就是好幾十秒，所以退避要拉到分鐘級，
-        # 不能只等 5 秒 —— 2026-09-04 連兩趟都是死在這裡。
+        cursor = f"&id=gt.{last_id}" if last_id else ""
         for attempt in range(6):
             try:
                 r = requests.get(f"{URL}/rest/v1/ebook_chunks?select={CHUNK_SELECT}"
-                                 f"&order=id&offset={off}&limit={step}", headers=H, timeout=180)
+                                 f"&order=id{cursor}&limit={step}", headers=H, timeout=180)
                 r.raise_for_status()
                 break
             except requests.exceptions.RequestException as exc:
                 if attempt == 5:
                     raise
                 wait = (5, 15, 30, 60, 120)[attempt]
-                print(f"  ! offset={off} 連線失敗（{type(exc).__name__}），{wait}s 後重試", flush=True)
+                print(f"  ! 掃到 {scanned} 筆時連線失敗（{type(exc).__name__}），"
+                      f"{wait}s 後重試", flush=True)
                 time.sleep(wait)
         c = r.json()
+        if not c:
+            break
         for ch in c:
             if ch["ebook_id"] in book_ids:
                 buckets[ch["ebook_id"]].append(ch)
-        if not c:
-            break
-        off += len(c)
-        if off % 20000 == 0:
-            print(f"  …{off} chunks scanned", flush=True)
+        last_id = c[-1]["id"]
+        scanned += len(c)
+        if scanned % 20000 < step:
+            print(f"  …{scanned} chunks scanned", flush=True)
     return buckets
 
 
