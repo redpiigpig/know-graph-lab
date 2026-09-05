@@ -211,39 +211,39 @@ python scripts/sync_teaching_folders.py --apply    # 實際複製
 🚨 dev server 8 GB 堆積會 OOM（exit 134），跑這頁要 `--max-old-space-size=12288`；
 playwright 別用 `waitUntil: 'networkidle'`，Nuxt dev 的 HMR 連線讓它永遠等不到。
 
-## 六、世界宗教十六張（印刷宗教卡）
+## 六、世界宗教十五張（比手畫腳卡）
 
 ```
 python scripts/build_religion_cards.py
 "C:\Program Files\LibreOffice\program\soffice.exe" --headless --convert-to pdf --outdir output/teaching-cards output/teaching-cards/world-religion-cards.docx
 ```
 
-名單在 [data/teachingCards/world-religions.json](../../../data/teachingCards/world-religions.json)。
-版面整套沿用單字卡（`build_flashcards`）：A4 橫式、每頁 8 張、71.25×98 mm、雙面長邊翻、
-背面欄序鏡像、不印裁切線——**不要重算任何尺寸**。跟撲克牌的差別是正反面的意義：
-撲克牌背面統一才玩得了，這副是教具，正面問背面答。
+名單在 [data/teachingCards/world-religions.json](../../../data/teachingCards/world-religions.json)，
+成品到 Drive `…/115-1 世界宗教文化導論/卡片/`。版面沿用單字卡（`build_flashcards`）：
+A4 橫式、每頁 8 張、71.25×98 mm、圓角框內縮 3 mm、不印裁切線——**不要重算任何尺寸**。
 
-**四大類各四張**，照講義自己的分類：泛神論（第 5–6 章）、多神論（第 8 章）、
-一神論（第 9–10 章）、實用神論（第 11–12 章）。古代兩河／埃及／希臘／羅馬與
-摩尼教、巴哈伊沒收進來，十六格滿了。
+🚨 **單面、無說明頁。** 這是課堂比手畫腳的題目卡，抽一張看一眼就上台：背面印東西會
+透光被看到，說明頁夾在裡面還要多裁一張。JSON 裡 `category` 以下那些欄位（神觀／起源／
+經典／人數）不上卡，是備課對照——**曾經做成正面問背面答的雙面版，被打回票**。
 
-🚨 **正面不能洩漏答案。** 課堂玩法是先分成四堆再翻背面對，所以正面一律深灰框，
-四色只出現在背面；**講義章次也印在背面**——第十一章就等於實用神論，印在正面就破梗。
-
-🚨 **沒有自己採用的符號就留白**（9 張有、7 張沒有）。原住民三支、儒教、無神論、
-哲學泛神論、漢人民間信仰都沒有，硬配一張鼓或一個原子只是把刻板印象印上去。
-這件事寫在說明頁上，本身是可以講的一課。
+🚨 **沒有自己採用符號的傳統就留白**（10 張有、5 張沒有：原住民族、非洲傳統、
+漢人民間信仰、儒教、無神論）。硬配一張鼓或一個原子只是把刻板印象印上去；
+而且這件事本身是簡報裡的一頁——難比的那幾張正好是物質向度淡的那幾個。
 
 🚨 **整副走同一套繪者的畫法**（`noto-v1:`）。OpenMoji 的 om 與大衛之星畫在紫色方框裡，
-跟其餘留白的圖擺在一起像貼錯——法輪早就因為同樣的理由改用 noto-v1。
-Iconify 的 icon 名不等於 OpenMoji 的名字（`om-symbol` 是 404，正確是 `om`）。
+跟其餘留白的圖擺在一起像貼錯。Iconify 的名字不等於 OpenMoji 的名字（`om-symbol` 是 404，
+正確是 `om`）。emoji 集裡沒有的幾何符號（巴哈伊九角星）走 `draw:` 前綴自繪，
+八角星點數不對不能拿來充數。
 
 🚨 **中文欄位裡別混拉丁重音字。** MingLiU 沒有 Ā，混排會被字型回退切出一個空隙
-（`Āgama` 印成 `Ā gama`）；轉寫要嘛整行走 `Noto Serif`（正面那行就是），要嘛別放。
+（`Āgama` 印成 `Ā gama`）；轉寫要嘛整行走 `Noto Serif`（卡面那行就是），要嘛別放。
 
 🚨 **這一家的 docx，Word 說「檔案似乎已毀損」，LibreOffice 開得起來** ——
-既有的佛教／基督宗教撲克牌也一樣，不是這副的問題。**要印的是 PDF**，
-別繞去 Word 轉檔（`office_to_pdf.py` 需要 pywin32，這台沒有）。
+既有的佛教／基督宗教撲克牌也一樣，不是這副的問題。**要印的是 PDF**；
+別繞去 `office_to_pdf.py`（需要 pywin32，這台沒有），pptx 轉檔也走 LibreOffice。
+
+配套的三頁簡報在 `course_slides_data.py` 的 DECK1（第 48–50 頁）：規則、十五張牌的清單、
+比完之後的討論。清單刻意分成「有符號十張／沒符號五張」兩欄，接的是第二章八向度那一課。
 
 ## 現況（2026-09-04）
 

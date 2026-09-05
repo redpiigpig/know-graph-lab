@@ -1,16 +1,32 @@
 {
-  "title": "世界宗教十六張",
-  "subtitle": "世界宗教文化導論・第五至十二章",
-  "note": "正面只有名字，看不出答案；分類印在背面。可以先發下去讓學生分成四堆，再翻背面對答案。",
+  "title": "世界宗教十五張",
+  "subtitle": "世界宗教文化導論・比手畫腳活動用",
+  "note": "課堂活動（比手畫腳）用的單面卡：只印宗教名與符號，不印說明頁。category 以下的欄位不上卡，是備課用的對照。",
   "categories": {
-    "泛神論": { "colorName": "綠", "color": "1F6B4A", "gloss": "神聖遍在萬物之中，不在世界之外" },
-    "多神論": { "colorName": "藍", "color": "1E6FD9", "gloss": "眾神各有職司，彼此有譜系" },
-    "一神論": { "colorName": "紅", "color": "C8102E", "gloss": "唯一的神在世界之上，與人立約" },
-    "實用神論": { "colorName": "紫", "color": "7B3FA0", "gloss": "不否認神，但重心不在神" }
+    "泛神論": {
+      "colorName": "綠",
+      "color": "1F6B4A",
+      "gloss": "神聖遍在萬物之中，不在世界之外"
+    },
+    "多神論": {
+      "colorName": "藍",
+      "color": "1E6FD9",
+      "gloss": "眾神各有職司，彼此有譜系"
+    },
+    "一神論": {
+      "colorName": "紅",
+      "color": "C8102E",
+      "gloss": "唯一的神在世界之上，與人立約"
+    },
+    "實用神論": {
+      "colorName": "紫",
+      "color": "7B3FA0",
+      "gloss": "不否認神，但重心不在神"
+    }
   },
   "cards": [
     {
-      "name": "臺灣原住民族傳統宗教",
+      "name": "臺灣原住民族信仰",
       "translit": "Taiwanese Indigenous Traditions",
       "icon": null,
       "category": "泛神論",
@@ -21,7 +37,7 @@
       "chapter": 5
     },
     {
-      "name": "非洲傳統宗教",
+      "name": "非洲傳統信仰",
       "translit": "African Traditional Religions",
       "icon": null,
       "category": "泛神論",
@@ -32,26 +48,15 @@
       "chapter": 5
     },
     {
-      "name": "美洲原住民族傳統宗教",
-      "translit": "Native American Traditions",
-      "icon": null,
-      "category": "泛神論",
-      "view": "萬物是親屬，人不在自然之上",
-      "origin": "南北美洲各地，數千年",
-      "scripture": "無文字經典，靠口傳與儀式",
-      "adherents": "難以統計；多與天主教並行",
-      "chapter": 5
-    },
-    {
-      "name": "哲學泛神論",
-      "translit": "Philosophical Pantheism",
-      "icon": null,
-      "category": "泛神論",
-      "view": "神即自然，神不在世界之外",
-      "origin": "17 世紀荷蘭，史賓諾莎",
-      "scripture": "《倫理學》",
-      "adherents": "沒有信眾組織，是一條思想傳統",
-      "chapter": 6
+      "name": "神道教",
+      "translit": "Shintō",
+      "icon": "noto-v1:shinto-shrine",
+      "category": "多神論",
+      "view": "八百萬神遍在山川萬物",
+      "origin": "日本，古代，無創教者",
+      "scripture": "《古事記》《日本書紀》（史書，非教義經典）",
+      "adherents": "日本約 1 億人參與神社活動",
+      "chapter": 8
     },
     {
       "name": "印度教",
@@ -87,15 +92,15 @@
       "chapter": 8
     },
     {
-      "name": "神道",
-      "translit": "Shintō",
-      "icon": "noto-v1:shinto-shrine",
-      "category": "多神論",
-      "view": "八百萬神遍在山川萬物",
-      "origin": "日本，古代，無創教者",
-      "scripture": "《古事記》《日本書紀》（史書，非教義經典）",
-      "adherents": "日本約 1 億人參與神社活動",
-      "chapter": 8
+      "name": "祆教",
+      "translit": "Zoroastrianism",
+      "icon": "noto-v1:fire",
+      "category": "一神論",
+      "view": "善神與惡神對抗，人必須選邊",
+      "origin": "古伊朗，約公元前 1200–600 年",
+      "scripture": "《阿維斯陀》",
+      "adherents": "約 10 萬人，世界觀影響四十多億人",
+      "chapter": 10
     },
     {
       "name": "猶太教",
@@ -109,7 +114,7 @@
       "chapter": 9
     },
     {
-      "name": "基督宗教",
+      "name": "基督教",
       "translit": "Christianity",
       "icon": "noto-v1:latin-cross",
       "category": "一神論",
@@ -120,7 +125,7 @@
       "chapter": 9
     },
     {
-      "name": "伊斯蘭",
+      "name": "伊斯蘭教",
       "translit": "al-Islām",
       "icon": "noto-v1:star-and-crescent",
       "category": "一神論",
@@ -131,15 +136,15 @@
       "chapter": 9
     },
     {
-      "name": "祆教",
-      "translit": "Zoroastrianism",
-      "icon": "noto-v1:fire",
+      "name": "巴哈伊教",
+      "translit": "Bahá'í Faith",
+      "icon": "draw:nine-pointed-star",
       "category": "一神論",
-      "view": "善神與惡神對抗，人必須選邊",
-      "origin": "古伊朗，約公元前 1200–600 年",
-      "scripture": "《阿維斯陀》",
-      "adherents": "約 10 萬人，世界觀影響四十多億人",
-      "chapter": 10
+      "view": "諸教同源，啟示一次次漸進而來",
+      "origin": "波斯／巴格達，19 世紀，巴哈歐拉",
+      "scripture": "《亞格達斯經》",
+      "adherents": "約 800 萬人，分布最廣的新興一神教",
+      "chapter": 9
     },
     {
       "name": "儒教",
@@ -175,11 +180,11 @@
       "chapter": 11
     },
     {
-      "name": "無神論與不可知論",
-      "translit": "Atheism & Agnosticism",
+      "name": "無神論",
+      "translit": "Atheism",
       "icon": null,
       "category": "實用神論",
-      "view": "不主張有神，或主張這件事無法知道",
+      "view": "不主張有神",
       "origin": "古已有之，19 世紀後成規模",
       "scripture": "無",
       "adherents": "約 11 億人無宗教歸屬，最大的一格",
