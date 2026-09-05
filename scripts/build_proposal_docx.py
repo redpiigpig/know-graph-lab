@@ -33,31 +33,37 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from docx_footnotes import Footnotes  # noqa: E402
 
 EN_FONT = "Times New Roman"
-# 送件體例以使用者的《張辰瑋，論文研究計畫》為準（2026-09 量測）：
-#   標楷體、行距 1.5、左右邊界 3.17cm、內文**不縮排**、全篇沒有項目符號；
+# 送件體例（2026-09-05 使用者定調，論文的一般規定）：
+#   🚨 正文一律**新細明體**、**首行縮排兩個字**；只有**引文**才用標楷體。
+#      （原先照《張辰瑋，論文研究計畫》量測而設成整篇標楷體、不縮排，是取錯基準——
+#        那份檔案自己的格式就不一致，多數段落根本沒設字型。）
+#   行距 1.5、左右邊界 3.17cm、全篇沒有項目符號；
 #   封面 18pt（校系／姓名／日期）、15pt（英文機構四行）、20pt（中英題名，不粗體）；
 #   章標「一、」14pt 粗體，節標「（一）」粗體但不放大。
-CJK_FONT = "標楷體"
-STYLE = {"cjk": "標楷體", "side": Cm(3.17), "indent": None}
+CJK_FONT = "新細明體"
+QUOTE_FONT = "標楷體"                     # 引文（markdown 的 > 區塊）專用
+STYLE = {"cjk": "新細明體", "side": Cm(3.17), "indent": Pt(24)}   # 12pt × 2 字
 
 # 這幾節各自另起一頁（送件文件的基本體例）
 PAGE_BREAK_BEFORE = ("Abstract", "目錄", "圖表目錄", "前言", "參考書目", "徵引書目", "附錄")
+# 附錄一的八張著作表，每張各自起一頁（使用者要求：一個附表一頁，結束後換頁）
+TABLE_PAGE_BREAK = tuple(f"表{n}" for n in "二三四五六七八九")
 
 
-def add_run(par, text, *, bold=False, italic=False, size=12):
+def add_run(par, text, *, bold=False, italic=False, size=12, cjk=None):
     run = par.add_run(text)
     run.bold = bold
     run.italic = italic
     run.font.size = Pt(size)
     run.font.name = EN_FONT
-    run._element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    run._element.rPr.rFonts.set(qn("w:eastAsia"), cjk or CJK_FONT)
     return run
 
 
 INLINE = re.compile(r"(\*\*[^*]+\*\*|\*[^*]+\*)")
 
 
-def add_inline(par, text, *, size=12, bold=False, italic=False):
+def add_inline(par, text, *, size=12, bold=False, italic=False, cjk=None):
     """處理 **粗體** 與 *斜體*（西文期刊名、書名要斜體，國史館體例亦然）。
     🚨 斜體一定要一起處理：只認粗體的話，*Journal of Buddhist Ethics* 會把星號
        原樣印出來——表格欄位裡尤其看不出來，因為那裡不會換行。"""
@@ -65,11 +71,11 @@ def add_inline(par, text, *, size=12, bold=False, italic=False):
         if not chunk:
             continue
         if chunk.startswith("**") and chunk.endswith("**"):
-            add_run(par, chunk[2:-2], bold=True, italic=italic, size=size)
+            add_run(par, chunk[2:-2], bold=True, italic=italic, size=size, cjk=cjk)
         elif chunk.startswith("*") and chunk.endswith("*") and len(chunk) > 2:
-            add_run(par, chunk[1:-1], bold=bold, italic=True, size=size)
+            add_run(par, chunk[1:-1], bold=bold, italic=True, size=size, cjk=cjk)
         else:
-            add_run(par, chunk, bold=bold, italic=italic, size=size)
+            add_run(par, chunk, bold=bold, italic=italic, size=size, cjk=cjk)
 
 
 def new_par(doc, *, align=None, space_after=6, first_indent=None, hanging=None):
@@ -208,15 +214,28 @@ def build(md_path: Path, out_path: Path) -> None:
             # 判準是「在中文題名之前的純 ASCII 行」——姓名的英譯在題名之後，是 18pt。
             add_run(par, line, size=15 if (not seen_title and line.isascii()) else 18)
             continue
+        quote = line.startswith("> ")
+        if quote:
+            line = line[2:].strip()
         if in_biblio:
             par = new_par(doc, space_after=4, hanging=Cm(0.85))
+        elif quote:
+            # 引文：標楷體、左右各內縮兩字、首行不再縮排
+            par = new_par(doc, space_after=8)
+            par.paragraph_format.left_indent = Pt(24)
+            par.paragraph_format.right_indent = Pt(24)
+        elif re.fullmatch(r"\*\*表[^*]+\*\*(?:\[\^[^\]]+\])?", line.strip()):
+            # 表題：不縮排；附錄一的八張著作表各自另起一頁
+            par = new_par(doc, space_after=4)
+            cap = re.sub(r"\[\^[^\]]+\]", "", line).strip("* ")
+            par.paragraph_format.page_break_before = cap.startswith(TABLE_PAGE_BREAK)
         else:
             par = new_par(doc, first_indent=STYLE["indent"])
         # 註號要變成真正的 footnote，所以文字必須按 [^n] 切開逐段加
         for k, chunk in enumerate(FN_REF.split(line)):
             if k % 2 == 0:
                 if chunk:
-                    add_inline(par, chunk)
+                    add_inline(par, chunk, cjk=QUOTE_FONT if quote else None)
             elif chunk in notes:
                 fn.add(par, notes[chunk])
             else:
