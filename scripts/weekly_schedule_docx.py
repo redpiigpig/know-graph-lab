@@ -5,7 +5,7 @@
 教課／修課／家教三色以底色區分，單雙週在方塊裡標「單」「雙」。
 
 用法：python scripts/weekly_schedule_docx.py
-輸出：G:\\我的雲端硬碟\\玄奘\\博一\\115-1 週課表.docx
+輸出：G:\\我的雲端硬碟\\玄奘\\博一上\\115-1 週課表.docx
 """
 import sys
 from pathlib import Path
@@ -18,7 +18,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
-OUT = Path(r'G:\我的雲端硬碟\玄奘\博一') / '115-1 週課表.docx'
+OUT = Path(r'G:\我的雲端硬碟\玄奘\博一上') / '115-1 週課表.docx'
 
 KAI, MING, HEI = 'DFKai-SB', 'PMingLiU', 'Microsoft JhengHei'
 INK = RGBColor(0x18, 0x21, 0x2A)

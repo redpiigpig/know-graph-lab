@@ -12,7 +12,7 @@
 日曆上寫錯時間比沒寫更麻煩。DESCRIPTION 會標出與課表相撞的那幾筆。
 
 用法：python scripts/personal_events_ics.py
-輸出：G:\\我的雲端硬碟\\玄奘\\博一\\115-1 家教.ics 等三個檔
+輸出：G:\\我的雲端硬碟\\玄奘\\博一上\\115-1 家教.ics 等三個檔
 """
 import sys
 from datetime import date, timedelta
@@ -20,7 +20,7 @@ from pathlib import Path
 
 from weekend_classes_ics import esc, fold
 
-OUTDIR = Path(r'G:\我的雲端硬碟\玄奘\博一')
+OUTDIR = Path(r'G:\我的雲端硬碟\玄奘\博一上')
 
 # 類別 → (檔名, 日曆名, 顏色)。色碼取 Google 日曆內建色，方便對照著選
 CATS = {

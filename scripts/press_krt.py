@@ -52,7 +52,16 @@ OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/evange
 
 ART_RE = re.compile(r"/(?:article|item)/(\d+)")
 TITLE_TAIL = re.compile(r"\s*[-|｜]\s*國度復興報.*$")
-DELAY = 4.0          # Wayback 是非營利站，而且會擋；放慢到四秒
+DELAY = 15.0         # 見下：4 秒會被連線層擋掉，往上調才是對的方向
+
+# 🚨 **Wayback 限流的表現是「連線被拒」，不是「回應變慢」**（2026-09-02 實測）：
+#    curl: (7) Failed to connect to web.archive.org port 443 — Could not connect
+#    失敗只花 3 秒，所以從「單次測試」看起來一切正常（單獨打一次多半會成功）。
+#    但迴圈裡大部分請求被拒、重試、再被拒，五分鐘只成功 3 篇＝每篇 100 秒。
+#    🚨 這種情況**縮短延遲只會更慢**——被拒頻率更高。方向要相反：延遲往上調。
+#    連抓兩千多篇之後就會開始被擋，這是對方的計量窗口，換工具沒用（與檔案局的
+#    WAF 指紋問題不同類）。
+BLOCK_STREAK = 12    # 連續這麼多次連線失敗就收手，不要空轉
 
 # 🚨 **這批快照沒有可用的發布日期**，三種欄位都驗過（2026-08）：
 #    - 站頭「2012年 08月14日 星期二 天氣：」＝今日天氣小工具，等於**快照當天**
@@ -66,20 +75,35 @@ def clean(s):
     return re.sub(r"\s+", " ", (s or "").replace("\u3000", " ")).strip()
 
 
+_consecutive_fail = 0
+
+
 def get(url, tries=3):
+    """取一頁。連線被拒與內容錯誤要分開看待。
+
+    連線被拒（requests.ConnectionError）＝對方在限流，退避要長；
+    其他錯誤才是這一筆的問題。
+    """
+    global _consecutive_fail
     last = None
     for i in range(tries):
         try:
-            r = requests.get(url, headers=UA, timeout=90)
+            r = requests.get(url, headers=UA, timeout=30)
             if r.status_code == 404:
+                _consecutive_fail = 0
                 return None
             r.raise_for_status()
             r.encoding = "utf-8"     # 站方沒宣告 charset，requests 會猜成 latin-1 而整頁亂碼
+            _consecutive_fail = 0
             return r.text
-        except Exception as e:       # noqa: BLE001
+        except requests.exceptions.ConnectionError as e:
+            last = e
+            time.sleep(30 * (i + 1))          # 被拒就退遠一點，別急著再敲
+        except Exception as e:                # noqa: BLE001
             last = e
             time.sleep(2 ** i * 2)
-    print(f"  ! {url[:80]}：{last}", flush=True)
+    _consecutive_fail += 1
+    print(f"  ! {url[:70]}：{str(last)[:60]}", flush=True)
     return None
 
 
@@ -143,6 +167,14 @@ def process(limit=0):
         html = get(f"https://web.archive.org/web/{r['ts']}id_/{r['url']}")
         if not html:
             fail += 1
+            # 🚨 連續被拒就停。一路空轉重試會「看起來一直在跑」而其實什麼都沒收到，
+            #    那是最難察覺的失敗——進度條在動、實際零產出。
+            if _consecutive_fail >= BLOCK_STREAK:
+                print("")
+                print(f"連續 {_consecutive_fail} 次連線失敗，判定 Wayback 正在限流，停止本輪。", flush=True)
+                print(f"已收 {sum(1 for x in rows if x.get('text'))} 篇；"
+                      f"隔幾小時再跑會從未完成處接續。", flush=True)
+                break
             continue
         title, body = parse_article(html)
         if not body:

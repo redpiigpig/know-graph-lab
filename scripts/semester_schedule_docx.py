@@ -12,7 +12,7 @@ artifact 一致：教課藍、修課綠、家教橙。GRID 與 artifact 的 EVEN
 真的要另出一頁時加 --calendar。
 
 用法：python scripts/semester_schedule_docx.py [--calendar]
-輸出：G:\\我的雲端硬碟\\玄奘\\博一\\115-1 週課表.docx
+輸出：G:\\我的雲端硬碟\\玄奘\\博一上\\115-1 週課表.docx
 """
 import datetime
 import sys
@@ -25,7 +25,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
-OUT = r'G:\我的雲端硬碟\玄奘\博一\115-1 週課表.docx'
+OUT = r'G:\我的雲端硬碟\玄奘\博一上\115-1 週課表.docx'
 
 W = '一二三四五六日'
 PERIODS = [(1, '08:30–09:20'), (2, '09:25–10:15'), (3, '10:25–11:15'), (4, '11:20–12:10'),

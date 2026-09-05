@@ -1,4 +1,4 @@
-"""把教學材料的兩個 Drive 位置對齊：課堂用的 `玄奘\博一\教學` 與網站鏡射用的
+"""把教學材料的兩個 Drive 位置對齊：課堂用的 `玄奘\博一上\教學` 與網站鏡射用的
 `資料\知識圖工作室\教學`。同一份檔兩邊都要有，內容不同時以**修改時間較新**的那份為準。
 
     python scripts/sync_teaching_folders.py            # 只比對，不動檔
@@ -11,7 +11,7 @@ import hashlib
 import shutil
 from pathlib import Path
 
-CLASS_ROOT = Path(r"G:\我的雲端硬碟\玄奘\博一\教學")
+CLASS_ROOT = Path(r"G:\我的雲端硬碟\玄奘\博一上\教學")
 MIRROR_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學")
 
 # 兩邊的資料夾名不一樣（課堂夾用空格、鏡射夾用底線）

@@ -59,7 +59,7 @@ python -X utf8 scripts/build_proposal_docx.py public/content/works/hcu-phd-propo
 # 再用 fitz 逐頁比對「整行等於標題文字」的頁碼（用 startswith 會被目錄頁自己騙到）
 ```
 
-**送件位置**：Drive `玄奘\博一\獎學金\玄奘助學金\`（與六份表格同資料夾），
+**送件位置**：Drive `玄奘\博一上\獎學金\玄奘助學金\`（與六份表格同資料夾），
 放 docx＋pdf＋md 三份。不是「博班申請」——那個資料夾是入學那批文件。
 
 ## 附錄：十個月工作計畫

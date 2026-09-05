@@ -410,6 +410,25 @@ python scripts/build_flashcards.py --deck eng
 python scripts/render_and_check_reader_pdfs.py --only english-flashcards-1000
 ```
 
+### 切成兩副五百（家教實際在用的版本）
+
+整副 1000 張一疊太厚，孩子拿不動也不好抽考。2026-09-04 起另出兩副五百張的，
+不印說明頁（那一頁是給列印的人看的，卡片本身不需要）：
+
+```
+python scripts/build_flashcards.py --deck eng --limit 500 --no-cover \
+    --output english-flashcards-001-500.docx
+python scripts/build_flashcards.py --deck eng --offset 500 --no-cover \
+    --output english-flashcards-501-1000.docx
+```
+
+`--offset` 跳過前 N 張、`--no-cover` 不印說明頁、`--output` 覆寫檔名，三個旗標
+都是為了切分冊加的，對其他副一樣適用。500 這個切點剛好落在第 25／26 課之間，
+所以兩副各是完整的 25 課，不會把同一課切成兩半。每副 63 組雙面 126 頁，
+最後一張只排 4 張卡（500 不是 8 的倍數），背面照樣左右鏡射，對摺仍然對得起來。
+
+🚨 `--no-cover` 時第一張正面前面不可以再插分頁，否則整份多一張空白頁在最前面。
+
 ## 加下一副（新語言）時
 
 1. 詞表要先在 [data/originalReaders/vocabulary/](../../../data/originalReaders/vocabulary/) 定案（含繁中詞義與詞性），單字卡不負責補資料層。

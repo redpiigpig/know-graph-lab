@@ -33,7 +33,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from docx_footnotes import Footnotes  # noqa: E402
 
 EN_FONT = "Times New Roman"
-CJK_FONT = "新細明體"
+# 送件體例以使用者的《張辰瑋，論文研究計畫》為準（2026-09 量測）：
+#   標楷體、行距 1.5、左右邊界 3.17cm、內文**不縮排**、全篇沒有項目符號；
+#   封面 18pt（校系／姓名／日期）、15pt（英文機構四行）、20pt（中英題名，不粗體）；
+#   章標「一、」14pt 粗體，節標「（一）」粗體但不放大。
+CJK_FONT = "標楷體"
+STYLE = {"cjk": "標楷體", "side": Cm(3.17), "indent": None}
 
 # 這幾節各自另起一頁（送件文件的基本體例）
 PAGE_BREAK_BEFORE = ("Abstract", "目錄", "前言", "參考書目", "徵引書目", "附錄")
@@ -118,13 +123,13 @@ def build(md_path: Path, out_path: Path) -> None:
     doc = Document()
     section = doc.sections[0]
     section.page_height, section.page_width = Cm(29.7), Cm(21.0)
-    for side in ("top", "bottom", "left", "right"):
-        setattr(section, f"{side}_margin", Cm(2.54))
+    section.top_margin = section.bottom_margin = Cm(2.54)
+    section.left_margin = section.right_margin = STYLE["side"]
 
     normal = doc.styles["Normal"]
     normal.font.name = EN_FONT
     normal.font.size = Pt(12)
-    normal.element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    normal.element.rPr.rFonts.set(qn("w:eastAsia"), STYLE["cjk"])
 
     notes, lines = collect_footnotes(md_path.read_text(encoding="utf8").splitlines())
     fn = Footnotes(doc)
@@ -133,6 +138,7 @@ def build(md_path: Path, out_path: Path) -> None:
     on_cover = True  # 「摘要」之前都算封面：一律置中、不縮排
     # 沒有「摘要」的短件（如指導規劃）用這行標記封面到哪裡結束
     break_next = False
+    seen_title = False
     i = 0
     while i < len(lines):
         raw = lines[i]
@@ -162,6 +168,8 @@ def build(md_path: Path, out_path: Path) -> None:
         if head:
             level, text = len(head.group(1)), head.group(2)
             page_break = False
+            if level == 1:
+                seen_title = True
             if text.strip() == "摘要":
                 on_cover = False
                 page_break = True             # 封面獨立一頁
@@ -173,29 +181,37 @@ def build(md_path: Path, out_path: Path) -> None:
                 in_biblio = True
             elif level <= 2 and in_biblio and "附錄" in text:
                 in_biblio = False
-            size = {1: 18, 2: 14, 3: 13}.get(level, 12)
+            if on_cover:
+                size, bold = 20, False          # 中英題名
+            else:
+                size = {2: 15 if text in ("摘要", "Abstract") else 14, 3: 12}.get(level, 12)
+                bold = True
             align = WD_ALIGN_PARAGRAPH.CENTER if (level == 1 or on_cover) else None
             par = new_par(doc, align=align, space_after=10)
             par.paragraph_format.space_before = Pt(12 if level <= 2 else 8)
             # 直接設在標題段上，而不是插一個只帶分頁符的空段——後者會留下空行、
             # 在標題剛好落在頁首時還會多出一整頁空白。
             par.paragraph_format.page_break_before = page_break
-            add_inline(par, text, size=size, bold=True)
+            add_inline(par, text, size=size, bold=bold)
             continue
 
         # 整行斜體（英文題名）
         whole_italic = re.fullmatch(r"\*([^*].*[^*])\*", line)
         if whole_italic:
             par = new_par(doc, align=WD_ALIGN_PARAGRAPH.CENTER)
-            add_run(par, whole_italic.group(1), italic=True)
+            add_run(par, whole_italic.group(1), italic=True, size=20 if on_cover else 12)
             continue
 
         if on_cover:
             par = new_par(doc, align=WD_ALIGN_PARAGRAPH.CENTER)
-        elif in_biblio:
+            # 英文機構那四行 15pt，其餘（校系、姓名、指導教授、日期）18pt。
+            # 判準是「在中文題名之前的純 ASCII 行」——姓名的英譯在題名之後，是 18pt。
+            add_run(par, line, size=15 if (not seen_title and line.isascii()) else 18)
+            continue
+        if in_biblio:
             par = new_par(doc, space_after=4, hanging=Cm(0.85))
         else:
-            par = new_par(doc, first_indent=Pt(24))
+            par = new_par(doc, first_indent=STYLE["indent"])
         # 註號要變成真正的 footnote，所以文字必須按 [^n] 切開逐段加
         for k, chunk in enumerate(FN_REF.split(line)):
             if k % 2 == 0:

@@ -927,17 +927,22 @@ def load_cards(deck: dict) -> list[dict]:
     return cards
 
 
-def build(deck: dict, cards: list[dict]) -> Path:
+def build(deck: dict, cards: list[dict], cover: bool = True) -> Path:
     document = Document()
     configure(document)
     sheets = -(-len(cards) // (COLS * ROWS))
     with_picture = sum(1 for card in cards if card["picture"])
-    add_cover(document, deck, len(cards), sheets, with_picture)
+    if cover:
+        add_cover(document, deck, len(cards), sheets, with_picture)
 
+    first = True
     for start in range(0, len(cards), COLS * ROWS):
         page = cards[start : start + COLS * ROWS]
         for side in ("front", "back"):
-            page_break(document)
+            # 沒有說明頁時，第一張正面前面不能再插分頁，否則整份多一張空白頁
+            if cover or not first:
+                page_break(document)
+            first = False
             table = new_grid(document)
             for index, card in enumerate(page):
                 row, column = divmod(index, COLS)
@@ -961,13 +966,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="產生單字卡（A4 橫式、每頁 8 張、雙面）")
     parser.add_argument("--deck", choices=sorted(DECKS), default="hbo")
     parser.add_argument("--limit", type=int, default=0, help="只做前 N 張（試印用）")
+    parser.add_argument("--offset", type=int, default=0, help="跳過前 N 張（配 --limit 切分冊）")
+    parser.add_argument("--no-cover", action="store_true", help="不印說明頁")
+    parser.add_argument("--output", help="覆寫輸出檔名（含 .docx）")
     args = parser.parse_args()
 
     deck = DECKS[args.deck]
     cards = load_cards(deck)
+    if args.offset:
+        cards = cards[args.offset :]
     if args.limit:
         cards = cards[: args.limit]
-    path = build(deck, cards)
+    if args.output:
+        deck = {**deck, "output": args.output}
+    path = build(deck, cards, cover=not args.no_cover)
 
     sheets = -(-len(cards) // (COLS * ROWS))
     with_picture = sum(1 for card in cards if card["picture"])
