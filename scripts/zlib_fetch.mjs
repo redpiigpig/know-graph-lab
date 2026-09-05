@@ -22,7 +22,6 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const HOST = 'https://z-library.sk'
-const STATE = 'c:/tmp/zlib_state.json'
 const DROP = resolve(ROOT, 'z-lib')
 const LEDGER = resolve(ROOT, 'scripts/state/zlib_ledger.jsonl')
 
@@ -33,6 +32,15 @@ const arg = (n, d = null) => {
 }
 const DRY = args.includes('--dry-run')
 const LIMIT = Number(arg('--limit', '8'))
+// 落空不花下載額度，但會花時間與搜尋次數，所以仍要有上限 —— 否則一輪會把
+// 五千多筆清單整個走完。預設給下載目標的六倍。
+const MAX_TRIES = Number(arg('--max-tries', String(Math.max(1, LIMIT) * 6)))
+
+// 每個帳號要有各自的 session state 檔。共用一個的話，換帳號登入會把前一個的
+// cookie 蓋掉，下次跑回原帳號又得重登，而且 DiamWall 對「同一個瀏覽器 profile
+// 反覆換身分」特別敏感。
+const ACCOUNT = arg('--account', '')     // '' = 主帳號；'2'/'3'/'4' = 備用
+const STATE = ACCOUNT ? `c:/tmp/zlib_state_${ACCOUNT}.json` : 'c:/tmp/zlib_state.json'
 
 function env() {
   const out = {}
@@ -145,14 +153,20 @@ async function search(page, q) {
   })
 }
 
+function creds(e) {
+  const suffix = ACCOUNT ? `_${ACCOUNT}` : ''
+  return { email: e[`ZLIB_EMAIL${suffix}`], password: e[`ZLIB_PASSWORD${suffix}`], suffix }
+}
+
 async function login(page, e) {
-  if (!e.ZLIB_EMAIL || !e.ZLIB_PASSWORD) throw new Error('.env 沒有 ZLIB_EMAIL / ZLIB_PASSWORD')
+  const { email, password, suffix } = creds(e)
+  if (!email || !password) throw new Error(`.env 沒有 ZLIB_EMAIL${suffix} / ZLIB_PASSWORD${suffix}`)
   await gotoPastWall(page, `${HOST}/`)
   const loggedIn = await page.locator('a[href*="/logout"], .user-info, [href*="/profile"]').count()
   if (loggedIn) return true
   await gotoPastWall(page, `${HOST}/login`)
-  await page.fill('input[name="email"]', e.ZLIB_EMAIL).catch(() => {})
-  await page.fill('input[name="password"]', e.ZLIB_PASSWORD).catch(() => {})
+  await page.fill('input[name="email"]', email).catch(() => {})
+  await page.fill('input[name="password"]', password).catch(() => {})
   await Promise.all([
     page.waitForLoadState('domcontentloaded').catch(() => {}),
     page.click('button[type="submit"], input[type="submit"]').catch(() => {}),
@@ -167,8 +181,12 @@ async function main() {
   if (!listPath) throw new Error('需要 --list <jsonl>')
   const wanted = readFileSync(listPath, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l))
   const done = doneKeys()
-  const todo = wanted.filter((w) => !done.has(w.key)).slice(0, LIMIT)
-  console.log(`清單 ${wanted.length} 筆，已處理 ${done.size}，本輪 ${todo.length} 筆${DRY ? '（只查）' : ''}`)
+  // 🚨 LIMIT 是「要抓幾本」不是「要試幾筆」。清單裡每本書都有 -zh 與 -orig 兩格，
+  // 而西方近人著作多半沒有中譯，-zh 那格必然落空（語言閘會擋掉英文版，這是對的）。
+  // 若拿 LIMIT 去切待辦清單，一輪十二筆可能全是落空的中譯目標，一本都沒抓到。
+  // 所以這裡不預先切，改在迴圈裡數「成功下載」，抓滿了才收工。
+  const todo = wanted.filter((w) => !done.has(w.key))
+  console.log(`清單 ${wanted.length} 筆，已處理 ${done.size}，本輪目標 ${LIMIT} 本／最多試 ${MAX_TRIES} 筆${DRY ? '（只查）' : ''}`)
   if (!todo.length) return
 
   mkdirSync(DROP, { recursive: true })
@@ -181,12 +199,20 @@ async function main() {
   })
   const page = await context.newPage()
   let downloadFails = 0
+  let downloaded = 0
   try {
     const ok = await login(page, e)
-    console.log(ok ? '✓ 已登入' : '⚠ 登入狀態不明，先試著抓看看')
+    // 只印帳號代號，不印 email 與密碼
+    console.log(`${ok ? '✓ 已登入' : '⚠ 登入狀態不明，先試著抓看看'}（帳號 ${ACCOUNT || '主'}）`)
     await context.storageState({ path: STATE })
 
+    let tried = 0
     for (const w of todo) {
+      if (tried >= MAX_TRIES) {
+        console.log(`  已試 ${tried} 筆（上限 ${MAX_TRIES}），本輪結束`)
+        break
+      }
+      tried += 1
       const hits = await search(page, w.query)
       if (!hits.length) {
         console.log(`  ✗ 查無：${w.query}`)
@@ -228,7 +254,12 @@ async function main() {
         await dl.saveAs(resolve(DROP, name))
         console.log(`     ✓ ${name}`)
         downloadFails = 0
+        downloaded += 1
         note({ key: w.key, query: w.query, status: 'downloaded', file: name, pick: best })
+        if (downloaded >= LIMIT) {
+          console.log(`  已達本輪目標 ${LIMIT} 本，收工`)
+          break
+        }
       } catch (err) {
         const msg = String(err).slice(0, 120)
         console.log(`     ✗ 下載失敗：${msg}`)

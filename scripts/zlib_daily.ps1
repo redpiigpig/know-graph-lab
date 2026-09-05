@@ -27,6 +27,9 @@ function Note($m) {
 # Free tier tops out at 10 downloads a day (measured 2026-09-02); ask for a
 # couple more and the extras just fail, which the fetcher now detects and stops on.
 $limit = 12
+
+# Spare accounts only. Leave the main account out on purpose.
+$ACCOUNTS = @('2', '3', '4')
 if ($args.Count -ge 1) { $limit = [int]$args[0] }
 
 Note "start (limit=$limit)"
@@ -35,9 +38,20 @@ Note "start (limit=$limit)"
 Note "wanted list refreshed"
 
 # The browser has to be visible - z-library's DiamWall rejects headless.
-& node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --limit $limit *>&1 |
-    Out-File -FilePath $log -Append -Encoding utf8
-Note "fetch exit=$LASTEXITCODE"
+#
+# The daily cap is per account (10 on the free tier, confirmed on the account
+# page: 'Daily limit 0/10'). The user registered three spare accounts and asked
+# to work all three, accepting that they may get banned; the main account is
+# deliberately NOT in this list so a ban cannot cost the one that matters.
+# Each account keeps its own session state file - sharing one would overwrite
+# the previous account's cookies on every switch.
+foreach ($acct in $ACCOUNTS) {
+    Note "fetch start (account $acct)"
+    & node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --account $acct --limit $limit *>&1 |
+        Out-File -FilePath $log -Append -Encoding utf8
+    Note "fetch exit=$LASTEXITCODE (account $acct)"
+    Start-Sleep -Seconds 45
+}
 
 $drop = Get-ChildItem "$ROOT\z-lib" -File -ErrorAction SilentlyContinue
 Note ("drop now holds {0} file(s)" -f $drop.Count)
