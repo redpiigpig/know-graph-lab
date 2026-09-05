@@ -200,7 +200,8 @@ UCHIMURA_EN_PROMPT_TMPL = """你是明治—大正時代日本基督教文獻的
 4. 保留 Markdown（`## ` 標題等）。日記體的日期標題（如 March 9, 1879.）譯為「一八七九年三月九日」。
 5. 聖經人名地名書卷名依和合本。神學術語鎖死：Christendom→基督教國、heathen(ism)→異教（徒）、conversion→回心、convert→歸信者、providence→天意、Almighty→全能者、God→神、Christ→基督、the Gospel→福音、Scriptures→聖經、missionary→宣教師、church→教會、sect→宗派、denomination→教派、creed→信條、theology→神學、theologue→神學生、Sabbath→安息日、prayer-meeting→祈禱會、lay-preaching→平信徒講道、Redeemer→救主、grace→恩典、sin→罪。
 6. 日本人名地名還原漢字：Saigo Takamori→西鄉隆盛、Uesugi Yozan→上杉鷹山、Yonezawa→米澤、Ninomiya Sontoku→二宮尊德、Nakae Toju→中江藤樹、Omi→近江、Nichiren→日蓮、Kamakura→鎌倉、Minobu→身延、Ikegami→池上、Sapporo→札幌、Kashiwagi→柏木、Takasaki→高崎、Tokio/Tokyo→東京、Yedo/Edo→江戶、Nippon/Japan→日本、Shinto→神道、Buddhism→佛教、bonze→僧、daimio→大名、samurai→武士、shogun→將軍、Mikado→天皇、sutra→經、Pundarika (Sutra)→《法華經》、Nirvana→涅槃、Tathagata→如來、Jodo→淨土宗、Zen→禪宗、Shingon→真言宗、Ritzu→律宗、Amherst→安默斯特、New England→新英格蘭、Elwyn→艾爾文。
-7. 只輸出翻譯後的繁體中文。
+7. 幕末維新語境的詞不可直譯：**imperialists→勤王派（絕非「帝國主義者」）**、the imperial cause→勤王大義、the Shogunate/Tokugawa government→幕府、Restoration→維新、clan→藩、clansman→藩士、retainer→家臣、feudal lord→藩主、Satsuma→薩摩、Choshu→長州、Aizu→會津、Tokugawa→德川、Kioto→京都、Corea→朝鮮、Formosa→臺灣、Loochoo→琉球。
+8. 只輸出翻譯後的繁體中文。
 
 英文原文：
 {source}"""

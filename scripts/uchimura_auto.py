@@ -149,6 +149,28 @@ def fix_headings(slug: str) -> list[str]:
     return fixed
 
 
+def redo_matching(slug: str, pattern: str) -> int:
+    """清掉已翻好但踩到詞庫地雷的段落（zh 設回 None），下一輪 --run-queue 會用新版
+    PROMPT 重譯。詞庫是事後才補的，沒有這一步就得整卷重跑。"""
+    rx = re.compile(pattern)
+    cleared = 0
+    for i in range(len(ub.load_work_sections(slug))):
+        cp = _sec_path(slug, i)
+        if not cp.exists():
+            continue
+        c = json.loads(cp.read_text(encoding="utf-8"))
+        zh = c.get("zh") or []
+        hit = False
+        for j, z in enumerate(zh):
+            if z and rx.search(z):
+                zh[j] = None
+                cleared += 1
+                hit = True
+        if hit:
+            cp.write_text(json.dumps(c, ensure_ascii=False, indent=1), encoding="utf-8")
+    return cleared
+
+
 def is_done(slug: str) -> bool:
     secs = ub.load_work_sections(slug)
     for i, s in enumerate(secs):
@@ -290,10 +312,19 @@ def main():
     ap.add_argument("--build-only", action="store_true")
     ap.add_argument("--run-queue", action="store_true")
     ap.add_argument("--author", choices=sorted(AUTHOR_MODULES), default="uchimura")
+    ap.add_argument("--redo-matching", type=str, default=None,
+                    help="清掉譯文命中此 regex 的段落，供補完詞庫後重譯")
     ap.add_argument("--fix-headings", action="store_true",
                     help="把寫壞的章名換回原文標題（之後要重建該書）")
     args = ap.parse_args()
     use_author(args.author)
+
+    if args.redo_matching:
+        for slug in ([args.work] if args.work else ub.QUEUE):
+            n = redo_matching(slug, args.redo_matching)
+            print(f"  {slug}: cleared {n} paragraphs")
+        print("done（再跑一次 --run-queue 即會重譯這些段落）")
+        return
 
     if args.fix_headings:
         for slug in ([args.work] if args.work else ub.QUEUE):
