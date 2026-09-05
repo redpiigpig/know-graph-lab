@@ -1,0 +1,259 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>無限黑板</title>
+<style>
+  html, body { margin: 0; background: #0d1512; overflow: hidden; }
+  #viewport { position: relative; width: 1920px; height: 1080px; overflow: hidden;
+    background:
+      radial-gradient(ellipse at 30% 20%, #1d2b25 0%, #131d19 45%, #0b100e 100%);
+  }
+  /* 黑板的粉筆灰與刮痕 */
+  #viewport::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .16;
+    background-image:
+      repeating-linear-gradient(102deg, rgba(255,255,255,.05) 0 2px, transparent 2px 7px),
+      repeating-linear-gradient(9deg, rgba(255,255,255,.035) 0 1px, transparent 1px 11px);
+    mix-blend-mode: screen;
+  }
+  #board { position: absolute; transform-origin: 0 0; will-change: transform; }
+  .node { position: absolute; box-sizing: border-box; padding: 34px 40px 30px;
+    border: 3px solid rgba(232,240,228,.55); border-radius: 26px;
+    color: #eef3e9; opacity: 0;
+    font-family: "標楷體", "DFKai-SB", "Microsoft JhengHei", serif;
+    background: rgba(255,255,255,.018);
+  }
+  .node .ttl { font-size: 62px; letter-spacing: 3px; margin-bottom: 22px;
+    text-shadow: 0 0 14px rgba(255,255,255,.35); }
+  .node ul { margin: 0; padding-left: 46px; }
+  .node li { font-size: 42px; line-height: 1.55; margin-bottom: 10px; opacity: 0;
+    text-shadow: 0 0 9px rgba(255,255,255,.22); }
+  .node img { position: absolute; right: 34px; bottom: 30px; max-width: 42%; max-height: 320px;
+    border-radius: 10px; filter: saturate(.85) contrast(1.05); opacity: .92;
+    box-shadow: 0 0 0 3px rgba(238,243,233,.35); }
+  .node.mascot img { max-height: 260px; max-width: 30%; box-shadow: none; opacity: 1; }
+  .node ul { max-width: 58%; }
+  .node.noimg ul { max-width: 100%; }
+  /* 依類別給不同粉筆色 */
+  .k-intro { border-color: rgba(255,244,200,.6); } .k-intro .ttl { color: #ffeeb0; }
+  .k-scene { border-color: rgba(190,225,255,.55); } .k-scene .ttl { color: #bfe2ff; }
+  .k-hub   { border-color: rgba(255,214,214,.7); border-width: 5px; } .k-hub .ttl { color: #ffd6d6; font-size: 78px; }
+  .k-role  { border-style: dashed; } .k-role .ttl { color: #ffe9c9; }
+  .k-concept { border-color: rgba(198,255,214,.55); } .k-concept .ttl { color: #c6ffd6; }
+  .k-myth  { border-color: rgba(226,205,255,.6); } .k-myth .ttl { color: #e2cdff; }
+  .k-outro { border-color: rgba(255,222,196,.6); } .k-outro .ttl { color: #ffdec4; }
+  #edges { position: absolute; left: 0; top: 0; overflow: visible; }
+  #edges path { fill: none; stroke: rgba(238,243,233,.42); stroke-width: 5;
+    stroke-linecap: round; stroke-dasharray: 18 14; }
+  #edges text { fill: rgba(238,243,233,.66); font-size: 34px;
+    font-family: "標楷體", "DFKai-SB", serif; opacity: 0; }
+  /* 幕名與字幕 */
+  #chapter { position: absolute; left: 72px; top: 56px; font-size: 52px; letter-spacing: 6px;
+    color: #fff6d8; opacity: 0; font-family: "標楷體", "DFKai-SB", serif;
+    text-shadow: 0 0 18px rgba(255,240,190,.5); }
+  #sub { position: absolute; left: 0; right: 0; bottom: 54px; text-align: center;
+    font-size: 46px; line-height: 1.45; color: #f2f6ee; opacity: 0;
+    font-family: "Microsoft JhengHei", "標楷體", sans-serif;
+    text-shadow: 0 3px 16px rgba(0,0,0,.85); padding: 0 140px; }
+  #sub.off { display: none; }
+
+  /* ══ 風格 B：米色手帳筆記 ══ */
+  body.theme-paper #viewport { background: #efe4cc; }
+  body.theme-paper #viewport::after { opacity: .10; mix-blend-mode: multiply;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(120,95,60,.10) 0 1px, transparent 1px 9px),
+      repeating-linear-gradient(24deg, rgba(120,95,60,.07) 0 1px, transparent 1px 13px); }
+  body.theme-paper .node { background: #fffaf0; border: none; border-left: 14px solid #c9a227;
+    border-radius: 8px; color: #2c2723; box-shadow: 10px 14px 0 rgba(90,70,40,.13);
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif; }
+  body.theme-paper .node .ttl { color: #7a4a12; text-shadow: none;
+    font-family: "標楷體", "DFKai-SB", serif; border-bottom: 3px dotted rgba(122,74,18,.35);
+    padding-bottom: 12px; }
+  body.theme-paper .node li { text-shadow: none; color: #38312a; }
+  body.theme-paper .k-intro { border-left-color: #d99a2b; } body.theme-paper .k-intro .ttl { color: #a35f0a; }
+  body.theme-paper .k-scene { border-left-color: #2f7fb5; } body.theme-paper .k-scene .ttl { color: #1c587f; }
+  body.theme-paper .k-hub   { border-left-color: #c0392b; } body.theme-paper .k-hub .ttl { color: #9c2b1e; }
+  body.theme-paper .k-role  { border-left-color: #b06a2c; } body.theme-paper .k-role .ttl { color: #8a4d17; }
+  body.theme-paper .k-concept { border-left-color: #2e8b57; } body.theme-paper .k-concept .ttl { color: #1f6b41; }
+  body.theme-paper .k-myth  { border-left-color: #7b52ab; } body.theme-paper .k-myth .ttl { color: #5b3a86; }
+  body.theme-paper .k-outro { border-left-color: #cf6b3f; } body.theme-paper .k-outro .ttl { color: #a34a20; }
+  body.theme-paper #edges path { stroke: rgba(120,95,60,.55); stroke-dasharray: 22 12; }
+  body.theme-paper #edges text { fill: rgba(90,70,40,.85); }
+  body.theme-paper #chapter { color: #7a4a12; text-shadow: none; }
+  body.theme-paper #sub { color: #241f1a; text-shadow: 0 2px 10px rgba(255,255,255,.9); }
+
+  /* ══ 風格 C：深色知識圖譜霓虹 ══ */
+  body.theme-neon #viewport { background: radial-gradient(ellipse at 50% 40%, #10182b 0%, #080c16 60%, #04060c 100%); }
+  body.theme-neon #viewport::after { opacity: .22; mix-blend-mode: screen;
+    background-image:
+      linear-gradient(rgba(90,200,255,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(90,200,255,.06) 1px, transparent 1px);
+    background-size: 68px 68px; }
+  body.theme-neon .node { background: rgba(16,26,45,.72); border: 2px solid rgba(120,220,255,.5);
+    border-radius: 18px; color: #dcecff; backdrop-filter: blur(2px);
+    box-shadow: 0 0 40px rgba(60,180,255,.18), inset 0 0 30px rgba(60,180,255,.06);
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif; }
+  body.theme-neon .node .ttl { color: #7fe7ff; text-shadow: 0 0 22px rgba(90,220,255,.8);
+    letter-spacing: 4px; }
+  body.theme-neon .node li { color: #cfe2f7; text-shadow: 0 0 10px rgba(90,180,255,.35); }
+  body.theme-neon .k-hub { border-color: rgba(255,120,180,.75); box-shadow: 0 0 60px rgba(255,90,160,.28); }
+  body.theme-neon .k-hub .ttl { color: #ff9ec7; text-shadow: 0 0 26px rgba(255,120,180,.85); }
+  body.theme-neon .k-myth { border-color: rgba(190,140,255,.6); }
+  body.theme-neon .k-myth .ttl { color: #cbb0ff; text-shadow: 0 0 22px rgba(180,130,255,.8); }
+  body.theme-neon .k-concept { border-color: rgba(120,255,200,.55); }
+  body.theme-neon .k-concept .ttl { color: #8dffd0; text-shadow: 0 0 22px rgba(90,255,190,.7); }
+  body.theme-neon .k-outro { border-color: rgba(255,200,120,.6); }
+  body.theme-neon .k-outro .ttl { color: #ffd79a; text-shadow: 0 0 22px rgba(255,190,110,.7); }
+  body.theme-neon #edges path { stroke: rgba(110,215,255,.55); stroke-width: 4; stroke-dasharray: 10 10;
+    filter: drop-shadow(0 0 8px rgba(90,200,255,.75)); }
+  body.theme-neon #edges text { fill: #9fd8ff; }
+  body.theme-neon #chapter { color: #7fe7ff; text-shadow: 0 0 24px rgba(90,220,255,.75); }
+  body.theme-neon #sub { color: #eaf4ff; text-shadow: 0 0 18px rgba(40,120,220,.9), 0 3px 12px rgba(0,0,0,.9); }
+</style>
+<div id="viewport">
+  <div id="board"><svg id="edges"></svg></div>
+  <div id="chapter"></div>
+  <div id="sub"></div>
+</div>
+<script>
+const S = { data: null, nodes: {}, els: {}, edges: [], showSub: true };
+
+function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+function lerp(a, b, u) { return a + (b - a) * u; }
+
+function camFor(node, pad) {
+  pad = pad === undefined ? 250 : pad;
+  const nh = node._h || node.h;          // _h 是排版後量到的真實高度
+  const w = node.w + pad * 2, h = nh + pad * 2;
+  let s = Math.min(1920 / w, 1080 / h);
+  s = Math.max(.11, Math.min(.85, s));
+  return { cx: node.x + node.w / 2, cy: node.y + nh / 2, s: s };
+}
+
+function init(data, opts) {
+  S.data = data;
+  document.body.className = 'theme-' + ((opts && opts.theme) || 'chalk');
+  S.showSub = !(opts && opts.noSub);
+  document.getElementById('sub').className = S.showSub ? '' : 'off';
+  const board = document.getElementById('board');
+  board.style.width = data.board.w + 'px';
+  board.style.height = data.board.h + 'px';
+  const svg = document.getElementById('edges');
+  svg.setAttribute('width', data.board.w);
+  svg.setAttribute('height', data.board.h);
+
+  data.nodes.forEach(n => {
+    S.nodes[n.id] = n;
+    const d = document.createElement('div');
+    d.className = 'node k-' + n.kind;
+    d.style.cssText += `left:${n.x}px;top:${n.y}px;width:${n.w}px;` +
+      `transform:rotate(${(n.id.charCodeAt(2) % 5 - 2) * 0.22}deg)`;
+    const src = (opts && opts.images && opts.images[n.id]) || null;
+    const img = src ? `<img src="${src}">` : '';
+    if (!src) d.classList.add('noimg');
+    if (opts && opts.mascots && opts.mascots.includes(n.id)) d.classList.add('mascot');
+    d.innerHTML = `<div class="ttl">${n.title}</div><ul>` +
+      n.bullets.map(b => `<li>${b}</li>`).join('') + `</ul>` + img;
+    board.appendChild(d);
+    S.els[n.id] = d;
+  });
+
+  // 量真實高度：節點內容多半比規格矮，不量的話鏡頭會對著一大片空白
+  data.nodes.forEach(n => { n._h = Math.max(S.els[n.id].offsetHeight, 240); });
+
+  // 連線：兩端節點都出現後才畫，畫的順序照 cue 出現順序
+  const firstSeen = {};
+  data.cues.forEach(c => { if (firstSeen[c.node] === undefined) firstSeen[c.node] = c.t; });
+  data.edges.forEach(e => {
+    const a = S.nodes[e.a], b = S.nodes[e.b];
+    if (!a || !b) return;
+    const ta = firstSeen[e.a], tb = firstSeen[e.b];
+    if (ta === undefined || tb === undefined) return;
+    const ax = a.x + a.w / 2, ay = a.y + (a._h || a.h) / 2, bx = b.x + b.w / 2, by = b.y + (b._h || b.h) / 2;
+    const mx = (ax + bx) / 2 + (by - ay) * .07, my = (ay + by) / 2 + (ax - bx) * .07;
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p.setAttribute('d', `M ${ax} ${ay} Q ${mx} ${my} ${bx} ${by}`);
+    svg.appendChild(p);
+    const len = p.getTotalLength();
+    p.style.strokeDasharray = `${len}`;
+    p.style.strokeDashoffset = `${len}`;
+    let label = null;
+    if (e.label) {
+      label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('x', mx); label.setAttribute('y', my);
+      label.setAttribute('text-anchor', 'middle');
+      label.textContent = e.label;
+      svg.appendChild(label);
+    }
+    S.edges.push({ el: p, label: label, len: len, t0: Math.max(ta, tb) + .4 });
+  });
+}
+
+function seek(t) {
+  const d = S.data, cues = d.cues;
+  let i = 0;
+  while (i + 1 < cues.length && cues[i + 1].t <= t) i++;
+  const cue = cues[i], prev = i > 0 ? cues[i - 1] : null;
+
+  // 節點與條目：時間軸上累積
+  const shown = {}, reveal = {};
+  for (let j = 0; j <= i; j++) {
+    shown[cues[j].node] = true;
+    reveal[cues[j].node] = Math.max(reveal[cues[j].node] || 0, cues[j].reveal);
+  }
+  for (const id in S.els) {
+    const el = S.els[id];
+    if (!shown[id]) { el.style.opacity = 0; continue; }
+    el.style.opacity = (id === cue.node) ? 1 : .82;
+    const lis = el.querySelectorAll('li');
+    for (let k = 0; k < lis.length; k++) lis[k].style.opacity = k < (reveal[id] || 0) ? 1 : 0;
+  }
+
+  S.edges.forEach(e => {
+    const u = Math.max(0, Math.min(1, (t - e.t0) / .8));
+    e.el.style.strokeDashoffset = `${e.len * (1 - ease(u))}`;
+    if (e.label) e.label.style.opacity = u > .85 ? .66 : 0;
+  });
+
+  // 鏡頭：本 cue 的目標，前段時間從上一個目標飛過來，飛行中略為拉遠
+  const cur = camFor(S.nodes[cue.node]);
+  let cam = cur;
+  const travel = prev && prev.node !== cue.node;
+  const groupJump = prev && d.cues[i - 1].group !== cue.group;
+  const T = travel ? (groupJump ? 1.4 : .95) : .3;
+  const u = Math.max(0, Math.min(1, (t - cue.t) / T));
+  if (prev) {
+    const from = camFor(S.nodes[prev.node]);
+    const e = ease(u);
+    const dip = travel ? (groupJump ? .55 : .78) : 1;
+    const dipK = 1 - (1 - dip) * Math.sin(Math.PI * e);
+    cam = { cx: lerp(from.cx, cur.cx, e), cy: lerp(from.cy, cur.cy, e),
+            s: lerp(from.s, cur.s, e) * dipK };
+  }
+  // 停在目標上時緩慢推近，避免畫面死掉
+  const held = Math.max(0, (t - cue.t - T)) / Math.max(.1, cue.dur - T);
+  const drift = 1 + .022 * Math.min(1, Math.max(0, held));
+  const s = cam.s * drift;
+  const bx = 960 - cam.cx * s, by = 540 - cam.cy * s;
+  document.getElementById('board').style.transform =
+    `translate(${bx.toFixed(2)}px, ${by.toFixed(2)}px) scale(${s.toFixed(5)})`;
+
+  // 幕名：出現 2.6 秒
+  const ch = document.getElementById('chapter');
+  let chap = null, chapT = 0;
+  for (let j = i; j >= 0; j--) if (cues[j].chapter) { chap = cues[j].chapter; chapT = cues[j].t; break; }
+  if (chap && t - chapT < 2.8) {
+    ch.textContent = chap;
+    const a = t - chapT;
+    ch.style.opacity = a < .5 ? a / .5 : (a > 2.3 ? (2.8 - a) / .5 : 1);
+  } else ch.style.opacity = 0;
+
+  // 字幕（配音稿用，正式版可關）
+  if (S.showSub) {
+    const sub = document.getElementById('sub');
+    sub.textContent = cue.text;
+    const a = t - cue.t;
+    sub.style.opacity = a < .18 ? a / .18 : 1;
+  }
+}
+window.init = init; window.seek = seek;
+</script>
