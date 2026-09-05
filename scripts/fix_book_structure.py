@@ -169,6 +169,41 @@ def gemini_json(prompt: str, max_tokens: int = 8192):
     raise RetryLater("gemini: all keys transient")
 
 
+def haiku_json(prompt: str, max_tokens: int = 8192):
+    """與 gemini_json 同契約，改走 Claude Haiku。
+
+    用途是把 Gemini 的配額讓給別的工作（改寫類的 session 很吃 Gemini），
+    這支只是在推章節結構，換誰做都行。
+
+    🚨 刻意不呼叫 translate_ebook_to_zh.haiku_translate：那支會套翻譯用的提示詞
+    範本，並對輸出做翻譯專用的後處理（繁簡轉換、去引號），對 JSON 是破壞性的。
+    這裡只借它的 Anthropic client（含憑證換發），訊息自己送。
+    """
+    import translate_ebook_to_zh as te
+    backoffs = (0, 30, 90, 180, 300, 600)
+    for i, wait in enumerate(backoffs):
+        if wait:
+            time.sleep(wait)
+        try:
+            te._refresh_anthropic_client_if_creds_changed()
+            r = te._anthropic_client.messages.create(
+                model=te.HAIKU_MODEL, max_tokens=max_tokens, temperature=0,
+                messages=[{"role": "user", "content": prompt}])
+            text = "".join(b.text for b in r.content if getattr(b, "text", None))
+            return _parse_json_array(text)
+        except Exception as e:
+            es = str(e)
+            if _is_transient(es):
+                continue          # Max 的滾動視窗 429 值得等，不是硬失敗
+            print(f"    haiku error: {es[:80]}", flush=True)
+            return None
+    raise RetryLater("haiku: transient throughout")
+
+
+ENGINES = {"gemini": gemini_json, "haiku": haiku_json}
+_llm_json = gemini_json          # main() 依 --engine 覆寫
+
+
 def _parse_json_array(text: str) -> list | None:
     text = text.strip()
     if text.startswith("```"):
@@ -298,15 +333,15 @@ def infer_toc(pages: list[dict], header: str | None, rich: bool = False) -> list
     """One book -> merged TOC list. Windows huge books to dodge truncation.
     rich=True surfaces mid-page heading candidates and maps to body start pages
     (for printed-TOC-only books whose chapter starts the plain skeleton misses).
-    RetryLater from gemini_json propagates up and parks the whole book."""
+    RetryLater from the LLM call propagates up and parks the whole book."""
     build = build_skeleton_rich if rich else build_skeleton
     prompt = PROMPT_RICH if rich else PROMPT
     if len(pages) <= WINDOW_PAGES:
-        return gemini_json(prompt.format(skeleton=build(pages, header))) or []
+        return _llm_json(prompt.format(skeleton=build(pages, header))) or []
     merged = []
     for i in range(0, len(pages), WINDOW_PAGES):
         win = pages[i:i + WINDOW_PAGES]
-        toc = gemini_json(prompt.format(skeleton=build(win, header)))
+        toc = _llm_json(prompt.format(skeleton=build(win, header)))
         if toc:
             merged.extend(toc)
     return merged
@@ -644,7 +679,13 @@ def main():
     ap.add_argument("--rich", action="store_true",
                     help="surface mid-page headings + map to body start pages "
                          "(rescue for printed-TOC-only books the plain pass missed)")
+    ap.add_argument("--engine", choices=sorted(ENGINES), default="gemini",
+                    help="推章節結構用哪個模型（預設 gemini）。改寫類的工作很吃 "
+                         "Gemini 配額，要讓出來時用 --engine haiku。")
     args = ap.parse_args()
+    global _llm_json
+    _llm_json = ENGINES[args.engine]
+    print(f"engine: {args.engine}", flush=True)
     ids = [x for x in args.ids.split(",") if x] or None
     if args.mode in ("all", "audit"):
         run_audit()
