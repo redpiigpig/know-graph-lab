@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R1",
+  "主題": "埃利都周邊的早期灌溉地景被完整重建",
+  "新見": "以遙測與地貌分析在埃利都西側找到一整片保存下來的早王朝渠道與田塊系統，因幼發拉底河早早改道而未被後世覆蓋；蘇美最早的城市與神廟就座落在一套人工改造過的水文之上。",
+  "舊說": "兩河下游的早期灌溉只能從文獻推測，地面遺跡已被後世沖積層徹底抹去。",
+  "依據": "Jaafar Jotheri et al., “A preserved Early Dynastic irrigation landscape near Eridu, southern Mesopotamia,” Antiquity 99 (2025).",
+  "年份": 2025
+ },
+ {
+  "id": "R2",
+  "主題": "烏貝德期與烏魯克期的擴張機制根本不同",
+  "新見": "烏貝德期是以神廟與陶器風格為載體的和平擴散，當地社群自願採用並形成新認同；烏魯克期則是設立貿易飛地、帶有殖民性質的介入。兩者不能混為一談。",
+  "舊說": "兩河文明對外的影響是一條連續的、單一性質的「烏魯克擴張」。",
+  "依據": "Gil Stein, Rethinking World-Systems: Diasporas, Colonies, and Interaction in Uruk Mesopotamia (University of Arizona Press, 1999)；並見 Khaled Jayyab 近年對烏貝德北向擴散的修正研究。",
+  "年份": 2020
+ },
+ {
+  "id": "R3",
+  "主題": "文字誕生於記帳而非神諭",
+  "新見": "從九千年前的黏土籌碼（token）到烏魯克四期的泥板，形制與符號一脈相承；近年更把前文字時期圓筒印章上的圖像與最早的原始楔形字符逐一比對成功，證實文字是從商品管理的圖像系統長出來的。",
+  "舊說": "文字是祭司為了記錄神話與祭儀而發明的。",
+  "依據": "Denise Schmandt-Besserat, Before Writing (University of Texas Press, 1992)；Kathryn Kelley & Mattia Cartolano et al., “Seals, sealing and writing,” Antiquity 98 (2024), pp. 1-18.",
+  "年份": 2024
+ },
+ {
+  "id": "R4",
+  "主題": "國家是從穀物開始的，逃離國家的人也一直存在",
+  "新見": "只有可計量、可儲存、可同時成熟的穀物才能被徵稅，早期國家因此都是「穀物國家」；而在國家邊緣，長期存在著刻意不定居、不種穀、以躲避徵稅與徭役為生存策略的人群。",
+  "舊說": "文明的擴張是進步的單向過程，游牧與採集只是尚未被文明照亮的落後狀態。",
+  "依據": "James C. Scott, Against the Grain: A Deep History of the Earliest States (Yale University Press, 2017)。中譯本：詹姆斯‧斯科特，《反穀：穀物是食糧還是政權工具》。",
+  "年份": 2017
+ },
+ {
+  "id": "R5",
+  "主題": "黑海大洪水假說已被沉積學否定",
+  "新見": "黑海岩心的年代序列顯示水位上升是漸進的，沒有公元前五六百年那一場災難性倒灌；洪水神話的來源要回到兩河下游反覆發生的區域性泛濫，而不是一場地質災變。",
+  "舊說": "諾亞洪水的原型是公元前五六○○年地中海衝破博斯普魯斯灌入黑海的巨災。",
+  "依據": "Liviu Giosan et al., “Was the Black Sea catastrophically flooded in the early Holocene?” Quaternary Science Reviews 28 (2009), pp. 1-6.",
+  "年份": 2009
+ },
+ {
+  "id": "R6",
+  "主題": "埃及的統一是漸進的，「美尼斯」是後世的濃縮",
+  "新見": "阿拜多斯 U-j 墓與涅伽達三期的王名序列顯示，上埃及在納爾邁之前已有數代統治者（所謂「零王朝」）逐步向北整合；統一是百餘年的過程，不是一場戰役。",
+  "舊說": "美尼斯以一戰統一上下埃及，開創第一王朝。",
+  "依據": "Toby A. H. Wilkinson, Early Dynastic Egypt (Routledge, 1999)；Günter Dreyer, Umm el-Qaab I (Philipp von Zabern, 1998).",
+  "年份": 1999
+ },
+ {
+  "id": "R7",
+  "主題": "《埃努瑪‧埃利什》不是蘇美的創世神話",
+  "新見": "巴比倫創世史詩的成書遠晚於蘇美城邦時代，它是馬爾杜克躋身眾神之首的政治文件；真正屬於早期兩河的創世敘事另有《埃利都創世記》與《阿特拉哈西斯》一系。",
+  "舊說": "《埃努瑪‧埃利什》就是美索不達米亞自古相傳的創世神話。",
+  "依據": "W. G. Lambert, Babylonian Creation Myths (Eisenbrauns, 2013).",
+  "年份": 2013
+ },
+ {
+  "id": "R8",
+  "主題": "最早的大城不見得有國王",
+  "新見": "烏克蘭特里波里文化的內貝利夫卡等「巨型聚落」規模可達上萬人，卻找不到宮殿、神廟或明顯的階級差異，聚落以同心圓的集會屋組織自身；城市與君權並非天生一體。",
+  "舊說": "城市的出現必然伴隨王權、神廟與祭司階級。",
+  "依據": "John Chapman, Bisserka Gaydarska & Mikhail Videiko, “The Tripillia Culture Mega-Sites,” Journal of World Prehistory 27 (2014), pp. 369-413.",
+  "年份": 2014
+ }
+]

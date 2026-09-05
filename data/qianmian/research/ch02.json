@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R1",
+  "主題": "哥貝克力石陣不是無人居住的純聖所",
+  "新見": "土耳其文化部「石丘」（Taş Tepeler）計畫在鄰近的卡拉罕丘（Karahan Tepe）陸續清出三十餘座半地穴住屋，並在哥貝克力石陣本身找到蓄水設施與大量野生穀物加工痕跡；建造巨石圈的人是住在那裡的，不是遠道而來朝聖的獵人。",
+  "舊說": "哥貝克力石陣是一座沒有人定居的「世界最早神廟」，證明宗教先於定居與農業。",
+  "依據": "Necmi Karul, “Buried Buildings at Pre-Pottery Neolithic Karahantepe,” Türk Arkeoloji ve Etnografya Dergisi 82 (2021), pp. 21-31；Lee Clare, “Göbekli Tepe, Turkey: A Brief Summary of Research at a New World Heritage Site,” e-Forschungsberichte des DAI (2020).",
+  "年份": 2021
+ },
+ {
+  "id": "R2",
+  "主題": "巨石聚會伴隨著大規模的酒與宴饗",
+  "新見": "石灰岩巨槽底部驗出草酸鈣殘留，是穀物發酵的痕跡；巨石圈的建造動力可能來自週期性的大型宴饗與勞力動員，而非抽象的神學。",
+  "舊說": "新石器早期的儀式場所以獻祭與崇拜為核心，飲宴是後起的附屬活動。",
+  "依據": "Oliver Dietrich et al., “The role of cult and feasting in the emergence of Neolithic communities,” Antiquity 86 (2012), pp. 674-695.",
+  "年份": 2012
+ },
+ {
+  "id": "R3",
+  "主題": "馴化不是一場革命而是數千年的緩慢過程",
+  "新見": "各地作物的馴化性狀（不落粒、種子變大）在考古序列中是以千年為尺度逐步累積的，而且在西亞、中國、新幾內亞、美洲多中心平行發生。",
+  "舊說": "農業是肥沃月彎一次性的「新石器革命」，再由此向外傳播。",
+  "依據": "Dorian Q. Fuller, Tim Denham et al., “Convergent evolution and parallelism in plant domestication revealed by an expanding archaeological record,” PNAS 111 (2014), pp. 6147-6152.",
+  "年份": 2014
+ },
+ {
+  "id": "R4",
+  "主題": "農業帶來的貧富差距可以被量化",
+  "新見": "以住屋面積推估的吉尼係數顯示，舊大陸在農業出現後不平等持續擴大，且明顯高於美洲；關鍵變數是可被壟斷的大型役畜與犁耕。",
+  "舊說": "農業社會的階級分化程度只能定性描述，無法比較。",
+  "依據": "Timothy A. Kohler et al., “Greater post-Neolithic wealth disparities in Eurasia than in North America and Mesoamerica,” Nature 551 (2017), pp. 619-622.",
+  "年份": 2017
+ },
+ {
+  "id": "R5",
+  "主題": "加泰土丘沒有大女神，也沒有神殿",
+  "新見": "二十五年的重新發掘顯示，加泰土丘的宗教生活發生在每一戶的家屋裡——牆上的牛頭、地板下的祖先頭骨——沒有專屬的神廟，也沒有支持「母神崇拜」的階層證據。",
+  "舊說": "加泰土丘是新石器大母神信仰的中心，女神像證明了一個和平的母系宗教社會。",
+  "依據": "Ian Hodder ed., Religion at Work in a Neolithic Society: Vital Matters (Cambridge University Press, 2014).",
+  "年份": 2014
+ },
+ {
+  "id": "R6",
+  "主題": "古 DNA 重寫了歐洲宗教的人群底層",
+  "新見": "全基因組資料顯示歐洲人是三波人群疊加的結果：本地採集者、安納托利亞農民，以及約五千年前自草原西進的顏那亞牧民；印歐語與其神譜的擴散有了實體人群的載體。",
+  "舊說": "印歐語的擴散只是文化與語言的傳播，不涉及大規模人群置換。",
+  "依據": "Wolfgang Haak et al., “Massive migration from the steppe was a source for Indo-European languages in Europe,” Nature 522 (2015), pp. 207-211.",
+  "年份": 2015
+ },
+ {
+  "id": "R7",
+  "主題": "歐洲巨石文化源出一地並沿海路傳播",
+  "新見": "以貝氏統計重新處理二千多個碳十四年代，指出巨石墓最早出現在法國西北部，其後循大西洋岸的海路三度擴散，而非各地獨立發明。",
+  "舊說": "巨石建築是各地農業社會各自發展出來的平行現象。",
+  "依據": "Bettina Schulz Paulsson, “Radiocarbon dates and Bayesian modeling support maritime diffusion model for megaliths in Europe,” PNAS 116 (2019), pp. 3460-3465.",
+  "年份": 2019
+ },
+ {
+  "id": "R8",
+  "主題": "農業並不必然通向國家與不平等",
+  "新見": "從烏克蘭的特里波里巨型聚落到北美的卡霍基亞，考古紀錄裡有大量「有農業、有大聚落、卻沒有王與神廟階級」的例子；人類曾長期在不同的政治形態之間反覆實驗。",
+  "舊說": "農業必然帶來剩餘、剩餘必然帶來階級、階級必然帶來祭司與國王。",
+  "依據": "David Graeber & David Wengrow, The Dawn of Everything: A New History of Humanity (Farrar, Straus and Giroux, 2021).",
+  "年份": 2021
+ }
+]

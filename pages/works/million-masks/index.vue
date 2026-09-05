@@ -67,6 +67,48 @@
     <!-- 內容 -->
     <div class="max-w-5xl mx-auto px-6 py-8">
 
+      <!-- 書稿 -->
+      <div v-show="activeTab === 'book'">
+        <div class="mb-6">
+          <h2 class="text-base font-semibold text-gray-900">書稿</h2>
+          <p class="text-xs text-gray-500 mt-0.5">
+            七卷二十八章
+            <template v-if="chapters.length">
+              · 已完成 {{ chapters.length }} 章 · {{ bookChars.toLocaleString() }} 字 · {{ bookNotes.toLocaleString() }} 個註
+            </template>
+          </p>
+        </div>
+
+        <div v-if="bookLoading" class="flex items-center justify-center h-32 text-gray-400 text-sm">載入中⋯</div>
+
+        <div v-else-if="chapters.length === 0" class="flex flex-col items-center justify-center h-40 text-gray-400 text-sm gap-2">
+          <span class="text-3xl">📖</span>
+          <span>書稿撰寫中，請稍後再來</span>
+        </div>
+
+        <div v-else class="space-y-7">
+          <div v-for="v in volumes" :key="v.name">
+            <h3 class="text-sm font-semibold text-amber-800 mb-2.5">{{ v.name }}</h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <NuxtLink v-for="c in v.list" :key="c.no"
+                :to="`/works/million-masks/book/${c.no}`"
+                class="bg-white rounded-xl border border-gray-100 p-4 hover:border-amber-200 hover:shadow-sm transition-all no-underline">
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-sm flex-shrink-0 font-bold">
+                    {{ c.no }}
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-0.5 break-words">{{ c.title }}</h4>
+                    <p class="text-xs text-gray-400 break-words line-clamp-1">{{ c.span }}（{{ c.period }}）</p>
+                    <p class="text-xs text-amber-500 mt-1.5">{{ c.chars.toLocaleString() }} 字 · {{ c.notes }} 註 →</p>
+                  </div>
+                </div>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- 宗教史讀書會 -->
       <div v-show="activeTab === 'reading-club'">
         <div class="mb-6">
@@ -150,14 +192,44 @@ interface Project {
 }
 
 const project = ref<Project | null>(null)
-const activeTab = ref<'reading-club' | 'notes'>('reading-club')
+const activeTab = ref<'book' | 'reading-club' | 'notes'>('book')
 
 const tabs = [
+  { id: 'book' as const, label: '書稿' },
   { id: 'reading-club' as const, label: '宗教史讀書會' },
   { id: 'notes' as const, label: '書摘與構思' },
 ]
 
 const visibleTabs = computed(() => user.value ? tabs : tabs.filter(t => t.id !== 'notes'))
+
+// 書稿（公開）——內容在 public/content/million-masks-book/
+interface ChapterMeta {
+  no: number; volume: string; title: string; span: string; period: string
+  chars: number; notes: number
+}
+const bookLoading = ref(true)
+const chapters = ref<ChapterMeta[]>([])
+
+const volumes = computed(() => {
+  const map = new Map<string, ChapterMeta[]>()
+  for (const c of chapters.value) {
+    if (!map.has(c.volume)) map.set(c.volume, [])
+    map.get(c.volume)!.push(c)
+  }
+  return [...map.entries()].map(([name, list]) => ({ name, list }))
+})
+const bookChars = computed(() => chapters.value.reduce((n, c) => n + c.chars, 0))
+const bookNotes = computed(() => chapters.value.reduce((n, c) => n + c.notes, 0))
+
+async function loadBook() {
+  bookLoading.value = true
+  try {
+    chapters.value = await $fetch<ChapterMeta[]>('/content/million-masks-book/index.json')
+  } catch {
+    chapters.value = []
+  }
+  bookLoading.value = false
+}
 
 // 讀書會 sessions（公開）
 const sessionsLoading = ref(true)
@@ -190,6 +262,7 @@ async function loadProject() {
 }
 
 onMounted(() => {
+  loadBook()
   loadSessions()
   loadProject()
 })

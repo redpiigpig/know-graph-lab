@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R1",
+  "主題": "智人起源的年代與地理被大幅改寫",
+  "新見": "摩洛哥 Jebel Irhoud 出土的頭骨與石器定年到約三十一萬五千年前，遠早於東非的化石，顯示智人不是在單一「伊甸園」誕生，而是全非洲多個族群長期交流下逐漸成形的。",
+  "舊說": "智人約二十萬年前出現於東非高原，再由此擴散全球。",
+  "依據": "Jean-Jacques Hublin et al., “New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens,” Nature 546 (2017), pp. 289-292.",
+  "年份": 2017
+ },
+ {
+  "id": "R2",
+  "主題": "象徵行為不是智人的專利",
+  "新見": "西班牙三處洞穴的紅色線條與手印以鈾釷法定年到六萬四千年前，當時智人尚未抵達歐洲，作畫者只能是尼安德塔人。",
+  "舊說": "抽象符號與洞穴藝術是智人「認知革命」後獨有的能力。",
+  "依據": "Dirk L. Hoffmann et al., “U-Th dating of carbonate crusts reveals Neandertal origin of Iberian cave art,” Science 359 (2018), pp. 912-915.",
+  "年份": 2018
+ },
+ {
+  "id": "R3",
+  "主題": "最早的具象藝術與神話場景出現在東南亞",
+  "新見": "印尼蘇拉威西的獵獸壁畫上有半人半獸的獵者形象，是目前已知最早的敘事性畫面；二○二四年以雷射剝蝕法重新定年後上推到五萬一千二百年前。",
+  "舊說": "舊石器藝術的高峰在法國、西班牙，歐洲是象徵思維的發源地。",
+  "依據": "Maxime Aubert et al., “Earliest hunting scene in prehistoric art,” Nature 576 (2019), pp. 442-445；Adhi Agus Oktaviana et al., Nature 625 (2024), pp. 80-87.",
+  "年份": 2024
+ },
+ {
+  "id": "R4",
+  "主題": "宗教特徵的演化順序被系統性重建",
+  "新見": "以全球狩獵採集社會為樣本做系統發生學分析，宗教最古老的一層是泛靈論，其後依序才出現來世信仰、薩滿、祖先崇拜，最後才是干預人事的高位神。",
+  "舊說": "宗教起源於對死亡的恐懼，或起源於祖先崇拜。",
+  "依據": "Hervey C. Peoples, Pavel Duda & Frank W. Marlowe, “Hunter-Gatherers and the Origins of Religion,” Human Nature 27 (2016), pp. 261-282.",
+  "年份": 2016
+ },
+ {
+  "id": "R5",
+  "主題": "道德性的神明是大型社會的結果而非原因",
+  "新見": "以三百多個政體的歷史資料庫（Seshat）做時序分析，社會複雜度的躍升普遍發生在「懲罰性道德神」出現之前數百年，因果方向與過去的假設相反。",
+  "舊說": "是道德神的信仰讓陌生人願意合作，社會才得以擴大。",
+  "依據": "Harvey Whitehouse et al., “Complex societies precede moralizing gods throughout world history,” Nature 568 (2019), pp. 226-229.",
+  "年份": 2019
+ },
+ {
+  "id": "R6",
+  "主題": "尼安德塔人的死亡處理重新被認真對待",
+  "新見": "沙尼達爾洞穴新出土的「沙尼達爾 Z」個體以現代方法重新發掘，顯示遺體是被刻意安置在特定位置的，儘管當年的「花葬」花粉證據已被判定是齧齒動物帶入。",
+  "舊說": "尼安德塔人沒有喪葬觀念，遺骸的集中只是自然堆積。",
+  "依據": "Emma Pomeroy et al., “New Neanderthal remains associated with the ‘flower burial’ at Shanidar Cave,” Antiquity 94 (2020), pp. 11-26.",
+  "年份": 2020
+ },
+ {
+  "id": "R7",
+  "主題": "「維納斯像」的生育女神解釋受到挑戰",
+  "新見": "以體脂與身體比例分析歐洲各地的女性小雕像，發現雕像的肥瘦與該地距冰緣的遠近相關，指向的是嚴寒下對營養與存活的關切，而不是單一的女神崇拜。",
+  "舊說": "舊石器時代的女性小雕像一律是母神或生育崇拜的偶像。",
+  "依據": "Richard J. Johnson et al., “Upper Paleolithic Figurines Showing Women with Obesity may Represent Survival Symbols of Climatic Change,” Obesity 29 (2021), pp. 11-15.",
+  "年份": 2021
+ },
+ {
+  "id": "R8",
+  "主題": "刻意埋葬的下限被推到腦容量極小的人族",
+  "新見": "南非「新星」洞穴系統中的納萊迪人被主張有刻意埋葬與岩壁刻痕的行為，若成立，象徵行為就不是大腦袋的專利。此說自二○二三年起遭到嚴厲的同儕質疑，至今未定案。",
+  "舊說": "喪葬與象徵刻畫只能出現在腦容量接近現代人的人族身上。",
+  "依據": "Lee R. Berger et al., “Evidence for deliberate burial of the dead by Homo naledi,” eLife 12 (2023), RP89106（附同儕評議與反駁）。",
+  "年份": 2023
+ }
+]
