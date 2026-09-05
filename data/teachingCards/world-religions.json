@@ -158,16 +158,16 @@
       "chapter": 9
     },
     {
-      "name": "摩門教",
-      "translit": "Latter-day Saints",
-      "icon": "noto-v1:trumpet",
+      "name": "天理教",
+      "translit": "Tenrikyō",
+      "icon": "noto-v1:raising-hands",
       "ownSymbol": false,
       "category": "一神論",
-      "view": "啟示至今未停，神仍然對人說話",
-      "origin": "美國紐約州，1830 年，斯密約瑟",
-      "scripture": "聖經、《摩爾門經》、《教義和聖約》",
-      "adherents": "約 1,700 萬人",
-      "chapter": 9
+      "view": "親神天理王命獨一；身體是向神借來的",
+      "origin": "日本大和（今奈良縣天理市），1838 年，中山美伎",
+      "scripture": "《御筆先》《御神樂歌》《御指圖》",
+      "adherents": "約 120 萬人",
+      "chapter": 3
     },
     {
       "name": "儒教",
