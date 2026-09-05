@@ -75,7 +75,17 @@ ALIASES = {
     # 兩筆「俄利根的贊助者 Ambrose」，其括號裸名恰好也是 Ambrose，會把正主蓋掉——
     # 2026-09-04 發現 jer/lam/sng 有 83 列因此把米蘭的安波羅修誤植成另一個人。
     'Ambrose': 'Ambrose of Milan',
+    # 同一人，詞庫用拉丁式寫法；ACCS 用英文式。
+    'Evagrius of Pontus': 'Evagrius Ponticus',
 }
+
+# 🚨 這些**刻意**留著不解析，因為它們本來就不指向單一個人：
+#   Eusebius（裸名）——詞庫有該撒利亞與尼科米底亞兩位。ACCS 引的幾乎必然是
+#     該撒利亞的優西比烏，但「幾乎必然」不是「確定」，而把甲的話掛到乙名下
+#     正是本語料最該防的錯（見 Ambrose 83 列、Paterius 39 列兩起前例）。
+#   Cyril/John of Jerusalem——那是 ACCS 標記「作者歸屬有爭議」的寫法，不是人名。
+# 兩者合計 4 則，留待人工判定。
+DELIBERATELY_UNRESOLVED = {'Eusebius', 'Cyril/John of Jerusalem'}
 
 PROMPT = """你是古代基督教教父文獻的專業譯者。把下列英文譯成**繁體中文**。
 
@@ -144,11 +154,21 @@ def normalize_en(name: str) -> tuple[str, bool]:
     另有 [dub]／[dub.] 存疑標記與 (via 某某) 轉引註記，比對前先摘掉，
     存疑與否另外記著，不要丟失這個訊息。
     """
-    dubious = bool(re.search(r'\[\s*dub\.?\s*\]', name, re.I))
+    dubious = bool(re.search(r'\[\s*dub\.?\s*\]|\(\s*\?\s*\)', name))
     s = re.sub(r'\[[^\]]*\]', ' ', name)          # [dub.]、[sp.] 之類
-    s = re.sub(r'\(via[^)]*\)', ' ', s, flags=re.I)  # (via Ammon)
+    s = re.sub(r'\(\s*\?\s*\)', ' ', s)           # 「Pelagius (?)」＝歸屬存疑
+    s = re.sub(r'\(via[^)]*\)', ' ', s, flags=re.I)  # (via Ammon)、(VIA …)
     s = re.sub(r'(?<=[A-Za-z])[-­](?=[a-z])', '', s)   # 換行連字號接回去
-    return re.sub(r'\s+', ' ', s).strip(), dubious
+    s = re.sub(r'\s+', ' ', s).strip()
+    # 🚨 小標偶爾整段黏在署名前面（"Kosmos. Origen"、"Flesh Indicates the Human
+    #    Being. Athanasius"），因為那一則的小標沒有包在 <b> 裡。句點後若還剩一個
+    #    像人名的短片段，那才是署名；前面的是小標殘餘。只在「後半看起來像名字」
+    #    時才切，免得把 "Ambrose of Milan" 這種本來就含句點的寫法切壞。
+    if '. ' in s:
+        head, _, tail = s.rpartition('. ')
+        if tail and len(tail.split()) <= 4 and tail[:1].isupper() and len(head) > 3:
+            s = tail.strip()
+    return s, dubious
 
 
 def resolve_father(name: str, exact: dict[str, str]) -> tuple[str, str]:

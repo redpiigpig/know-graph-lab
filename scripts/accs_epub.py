@@ -46,6 +46,12 @@ def _clean(text: str) -> str:
     return _WS.sub(' ', _html.unescape(text)).strip()
 
 
+# 小型大寫偶爾掉在 </b> 外面：<b>O</b><small>VERVIEW:</small>
+# 這樣一來首字母與其餘之間隔了個標籤，_SMALLCAPS 比對不到，結果小標只剩「O」、
+# 署名變成「VERVIEW」，整則概述被誤判成引文。先把跨 </b> 的那一組接回去。
+_SMALLCAPS_ACROSS_B = re.compile(r'([A-Za-z’])</b>\s*<small>([^<]*)</small>')
+
+
 def unsmallcaps(fragment: str) -> str:
     """把 `A<small>THANASIUS</small>` 還原成 `Athanasius`。
 
@@ -56,6 +62,9 @@ def unsmallcaps(fragment: str) -> str:
         head, rest = m.group(1), m.group(2)
         trail = ' ' if rest.endswith(' ') else ''
         return head + rest.strip().lower() + trail
+    # 先接回跨 </b> 的那一組，接完再走一般的還原
+    fragment = _SMALLCAPS_ACROSS_B.sub(
+        lambda m: m.group(1) + m.group(2).strip().lower() + '</b>', fragment)
     return _SMALLCAPS.sub(repl, fragment)
 
 
@@ -106,6 +115,13 @@ def parse_entry(p_html: str) -> dict | None:
     引文：<b>小標.</b> 之後是 `教父名: 正文 … 作品名 章節號`。
     """
     inner = re.sub(r'^\s*<p[^>]*>|</p>\s*$', '', p_html.strip())
+    # 🚨 換頁錨點會把單字從中間切開：
+    #     <b>O</b><a id="page_82"/><b><small>VERVIEW: </small></b>
+    #   錨點本身沒有內容，但它一插進來，首字母與其餘就不再相鄰，小型大寫還原
+    #   比對不到，結果小標只剩「O」、署名變成「VERVIEW」，整則概述被誤判成引文。
+    #   先拿掉錨點，再把因此相鄰的 </b><b> 併回去 —— 這兩步對沒有錨點的卷是 no-op。
+    inner = re.sub(r'<a\b[^>]*\bid="page_[^"]*"[^>]*/>', '', inner)
+    inner = re.sub(r'</b>\s*<b>', '', inner)
     text = unsmallcaps(inner)
     # 🚨 卷十五（次經）把小型大寫多包了一層 <span class="mev3/mev4">：
     #     耶利米卷            <b>O<small>VERVIEW:</small></b>
