@@ -18,6 +18,8 @@
    實例：台大〈台灣基督長老教會政治論述之分析〉標有電子全文，詳目頁卻寫
    「全文授權：有償授權　ntu-99-1.pdf 未授權公開取用」——抓不到，而且不該抓。
    本腳本遇到這種一律記下原因跳過，不繞過。
+   （2026-09-05：這一本使用者已另行取得授權，檔案走 `--register` 掛進帳本。
+   **那是授權的例外，不是把它改成可抓的理由**——爬蟲這一段維持不繞過。）
 
 🚨 **DSpace 的 PDF 網址陷阱**：政大是 `/bitstream/`，`/bitstream2/` 會回
    HTML 錯誤頁但狀態碼仍是 200——存下來是 33 KB 的假 PDF。所以下載後一定要
@@ -25,6 +27,7 @@
 
   python -X utf8 scripts/thesis_fulltext.py --id 105NCCU5183008
   python -X utf8 scripts/thesis_fulltext.py --shortlist --limit 5
+  python -X utf8 scripts/thesis_fulltext.py --register "D:/某某.pdf" --title "…"
 """
 import argparse
 import json
@@ -251,14 +254,56 @@ def fetch(tid, by="ti", school=""):
     return {**rec, "id": tid, "status": "OK", "bytes": len(blob), "path": str(path)}
 
 
+def register(led, pdf, title, note):
+    """把「另循管道取得」的 PDF 掛進帳本，讓 thesis_transcribe.py 認得它。
+
+    不是每一本都下載得到：有償授權、校內限閱、到館調閱、去信向作者或系所索取，
+    這幾種都是拿到檔案卻不經過本腳本的下載段。沒有這個入口就只能手改
+    `C:/tmp/thesis_fulltext.json`——手改帳本是遲早會改壞的那種事。
+
+    🚨 `source` 欄一定要寫清楚這一本是怎麼來的。抓來的與另外授權的混在同一本
+       帳本裡，日後沒人分得出來哪些是可以重跑的、哪些是不可以再去抓的。
+    """
+    p = Path(pdf)
+    if not p.exists():
+        raise SystemExit(f"找不到檔案：{p}")
+    blob = p.read_bytes()[:5]
+    if not blob.startswith(b"%PDF"):
+        raise SystemExit(f"{p.name} 不是 PDF（開頭是 {blob!r}）")
+    # 放到跟下載那批同一個資料夾，transcribe 才找得到
+    dest = OUT / p.name
+    OUT.mkdir(parents=True, exist_ok=True)
+    if p.resolve() != dest.resolve():
+        dest.write_bytes(p.read_bytes())
+    old = led.get(title, {})
+    led[title] = {**old, "title": title, "status": "OK",
+                  "bytes": dest.stat().st_size, "path": str(dest),
+                  "source": note or "另循管道取得（非本腳本下載）"}
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(json.dumps(led, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"✔ 已登錄：{title[:40]}")
+    print(f"   {dest}")
+    print(f"   來源：{led[title]['source']}")
+    print("   接著跑：python -X utf8 scripts/thesis_transcribe.py")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--id")
     ap.add_argument("--title")
     ap.add_argument("--shortlist", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--register", metavar="PDF",
+                    help="登錄一份另循管道取得的 PDF（需搭配 --title）")
+    ap.add_argument("--source", help="這一本是怎麼來的，會寫進帳本")
     a = ap.parse_args()
     led = json.loads(LEDGER.read_text(encoding="utf-8")) if LEDGER.exists() else {}
+    if a.register:
+        if not a.title:
+            raise SystemExit("--register 要搭配 --title（題名要跟 shortlist 完全一致，"
+                             "transcribe 是按題名對後設資料的）")
+        register(led, a.register, a.title, a.source)
+        return
     ids = []
     if a.id:
         ids = [a.id]
