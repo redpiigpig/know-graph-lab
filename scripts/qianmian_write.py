@@ -313,11 +313,18 @@ def write_chapter(no, length):
             all_sections="\n".join(f"{i}. {n}" for i, n in enumerate(secs, 1)),
             tasks=tasks, count=len(wanted), excerpts=block_excerpts(ch, sections, plan),
             research=block_research(ch), talk=block_talk(ch), length=length, **meta(ch))
-        text, _ = L.ask(prompt, temperature=0.85, max_tokens=65536)
-        got = split_output(polish(text.strip()), wanted)
-        missing = [w for w in wanted if w not in got]
+        # 整批沒回來是會發生的（模型偶爾回空、或標題全走樣）。只印警告就落檔的話，
+        # 檔案看起來很正常、其實少了半章——第 2 章連續兩次栽在這裡。重試到齊為止。
+        got = {}
+        for attempt in range(3):
+            text, _ = L.ask(prompt, temperature=0.85, max_tokens=65536)
+            got = split_output(polish(text.strip()), wanted)
+            missing = [w for w in wanted if w not in got]
+            if not missing:
+                break
+            print(f"    ⚠ 第 {attempt + 1} 次少了 {len(missing)} 段：{missing}，重試", flush=True)
         if missing:
-            print(f"    ⚠ 這一批少了：{missing}", flush=True)
+            raise RuntimeError(f"這一批三次都缺 {missing}，整章不落檔，留待重跑")
         for w in wanted:
             if w in got:
                 body, drop = resolve_notes(got[w], ch, citer, counter, notes,

@@ -114,8 +114,7 @@ def main():
         total = 0
         for f in sorted(CH.glob("ch*.md")):
             old = f.read_text(encoding="utf-8")
-            lines = old.split("
-")
+            lines = old.split("\n")
             for i, line in enumerate(lines):
                 # `## 節標題` 是對回目錄的鍵，一個字都不能動（稽核就是靠它比對）
                 if line.startswith("##"):
@@ -125,8 +124,7 @@ def main():
                     # 都會被改壞。後面接著中間點的一律跳過。
                     line = re.sub(re.escape(v) + r"(?![‧·・])", rec, line)
                 lines[i] = line
-            text = "
-".join(lines)
+            text = "\n".join(lines)
             if text != old:
                 n = sum(old.count(v) for v in targets)
                 total += n
