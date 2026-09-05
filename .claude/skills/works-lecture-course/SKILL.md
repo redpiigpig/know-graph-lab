@@ -211,6 +211,40 @@ python scripts/sync_teaching_folders.py --apply    # 實際複製
 🚨 dev server 8 GB 堆積會 OOM（exit 134），跑這頁要 `--max-old-space-size=12288`；
 playwright 別用 `waitUntil: 'networkidle'`，Nuxt dev 的 HMR 連線讓它永遠等不到。
 
+## 六、世界宗教十六張（印刷宗教卡）
+
+```
+python scripts/build_religion_cards.py
+"C:\Program Files\LibreOffice\program\soffice.exe" --headless --convert-to pdf   --outdir output/teaching-cards output/teaching-cards/world-religion-cards.docx
+```
+
+名單在 [data/teachingCards/world-religions.json](../../../data/teachingCards/world-religions.json)。
+版面整套沿用單字卡（`build_flashcards`）：A4 橫式、每頁 8 張、71.25×98 mm、雙面長邊翻、
+背面欄序鏡像、不印裁切線——**不要重算任何尺寸**。跟撲克牌的差別是正反面的意義：
+撲克牌背面統一才玩得了，這副是教具，正面問背面答。
+
+**四大類各四張**，照講義自己的分類：泛神論（第 5–6 章）、多神論（第 8 章）、
+一神論（第 9–10 章）、實用神論（第 11–12 章）。古代兩河／埃及／希臘／羅馬與
+摩尼教、巴哈伊沒收進來，十六格滿了。
+
+🚨 **正面不能洩漏答案。** 課堂玩法是先分成四堆再翻背面對，所以正面一律深灰框，
+四色只出現在背面；**講義章次也印在背面**——第十一章就等於實用神論，印在正面就破梗。
+
+🚨 **沒有自己採用的符號就留白**（9 張有、7 張沒有）。原住民三支、儒教、無神論、
+哲學泛神論、漢人民間信仰都沒有，硬配一張鼓或一個原子只是把刻板印象印上去。
+這件事寫在說明頁上，本身是可以講的一課。
+
+🚨 **整副走同一套繪者的畫法**（`noto-v1:`）。OpenMoji 的 om 與大衛之星畫在紫色方框裡，
+跟其餘留白的圖擺在一起像貼錯——法輪早就因為同樣的理由改用 noto-v1。
+Iconify 的 icon 名不等於 OpenMoji 的名字（`om-symbol` 是 404，正確是 `om`）。
+
+🚨 **中文欄位裡別混拉丁重音字。** MingLiU 沒有 Ā，混排會被字型回退切出一個空隙
+（`Āgama` 印成 `Ā gama`）；轉寫要嘛整行走 `Noto Serif`（正面那行就是），要嘛別放。
+
+🚨 **這一家的 docx，Word 說「檔案似乎已毀損」，LibreOffice 開得起來** ——
+既有的佛教／基督宗教撲克牌也一樣，不是這副的問題。**要印的是 PDF**，
+別繞去 Word 轉檔（`office_to_pdf.py` 需要 pywin32，這台沒有）。
+
 ## 現況（2026-09-04）
 
 | 成品 | 數量 | 位置 |
@@ -221,6 +255,7 @@ playwright 別用 `waitUntil: 'networkidle'`，Nuxt dev 的 HMR 連線讓它永�
 | 紙本小考 | 96 份 docx＋96 份 pdf（考卷／解答卷各 16 章×3 課） | Drive `教學/{課程}/小考/` |
 | Kahoot | 24 份 xlsx／480 題 | Drive `教學/{課程}/Kahoot/` |
 | 分組測驗 | 十六型／20 題／8 家族 | `/works/world-religions-intro/personality` |
+| 宗教卡 | 16 張／四大類各 4 張 | Drive `…/115-1 世界宗教文化導論/卡片/` |
 | 點名表 | 3 份 docx（國文 16 人／基督宗教概論 13 人／世界宗教文化導論 49 人） | Drive `玄奘/博一上/教學/115-1 {課程}/` |
 
 相關記憶：[[project_two_textbooks]]、[[project_lecture_slides]]、[[feedback_ui_no_text_overflow]]。

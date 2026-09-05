@@ -1,0 +1,192 @@
+{
+  "title": "世界宗教十六張",
+  "subtitle": "世界宗教文化導論・第五至十二章",
+  "note": "正面只有名字，看不出答案；分類印在背面。可以先發下去讓學生分成四堆，再翻背面對答案。",
+  "categories": {
+    "泛神論": { "colorName": "綠", "color": "1F6B4A", "gloss": "神聖遍在萬物之中，不在世界之外" },
+    "多神論": { "colorName": "藍", "color": "1E6FD9", "gloss": "眾神各有職司，彼此有譜系" },
+    "一神論": { "colorName": "紅", "color": "C8102E", "gloss": "唯一的神在世界之上，與人立約" },
+    "實用神論": { "colorName": "紫", "color": "7B3FA0", "gloss": "不否認神，但重心不在神" }
+  },
+  "cards": [
+    {
+      "name": "臺灣原住民族傳統宗教",
+      "translit": "Taiwanese Indigenous Traditions",
+      "icon": null,
+      "category": "泛神論",
+      "view": "萬物有靈，祖靈與禁忌規範日常",
+      "origin": "臺灣，南島語族數千年",
+      "scripture": "無文字經典，靠口傳與祭儀",
+      "adherents": "原住民族約 60 萬人，多數已入基督宗教，祭儀仍在",
+      "chapter": 5
+    },
+    {
+      "name": "非洲傳統宗教",
+      "translit": "African Traditional Religions",
+      "icon": null,
+      "category": "泛神論",
+      "view": "至高神遙遠，日常靠祖靈與精靈",
+      "origin": "撒哈拉以南非洲，年代不可考",
+      "scripture": "無文字經典，靠口傳",
+      "adherents": "約 1 億人；另有大量與基督宗教、伊斯蘭並行實踐者",
+      "chapter": 5
+    },
+    {
+      "name": "美洲原住民族傳統宗教",
+      "translit": "Native American Traditions",
+      "icon": null,
+      "category": "泛神論",
+      "view": "萬物是親屬，人不在自然之上",
+      "origin": "南北美洲各地，數千年",
+      "scripture": "無文字經典，靠口傳與儀式",
+      "adherents": "難以統計；多與天主教並行",
+      "chapter": 5
+    },
+    {
+      "name": "哲學泛神論",
+      "translit": "Philosophical Pantheism",
+      "icon": null,
+      "category": "泛神論",
+      "view": "神即自然，神不在世界之外",
+      "origin": "17 世紀荷蘭，史賓諾莎",
+      "scripture": "《倫理學》",
+      "adherents": "沒有信眾組織，是一條思想傳統",
+      "chapter": 6
+    },
+    {
+      "name": "印度教",
+      "translit": "Sanātana Dharma",
+      "icon": "noto-v1:om",
+      "category": "多神論",
+      "view": "眾神是同一個梵的不同顯現",
+      "origin": "印度，吠陀信仰約公元前 1500 年起",
+      "scripture": "吠陀、奧義書、薄伽梵歌",
+      "adherents": "約 12 億人",
+      "chapter": 8
+    },
+    {
+      "name": "道教",
+      "translit": "Dàojiào",
+      "icon": "noto-v1:yin-yang",
+      "category": "多神論",
+      "view": "道生萬物，神仙可修可成",
+      "origin": "中國，東漢（2 世紀）成教團",
+      "scripture": "《道德經》、《道藏》",
+      "adherents": "難以統計，華人世界廣泛",
+      "chapter": 8
+    },
+    {
+      "name": "漢人民間信仰",
+      "translit": "Chinese Popular Religion",
+      "icon": null,
+      "category": "多神論",
+      "view": "人可以成神，靈驗決定香火",
+      "origin": "中國，長期積累而成，無創教者",
+      "scripture": "無統一經典，有各神明的經懺",
+      "adherents": "臺灣多數宮廟信眾",
+      "chapter": 8
+    },
+    {
+      "name": "神道",
+      "translit": "Shintō",
+      "icon": "noto-v1:shinto-shrine",
+      "category": "多神論",
+      "view": "八百萬神遍在山川萬物",
+      "origin": "日本，古代，無創教者",
+      "scripture": "《古事記》《日本書紀》（史書，非教義經典）",
+      "adherents": "日本約 1 億人參與神社活動",
+      "chapter": 8
+    },
+    {
+      "name": "猶太教",
+      "translit": "Yahadut",
+      "icon": "noto-v1:star-of-david",
+      "category": "一神論",
+      "view": "唯一的神與一個民族立約",
+      "origin": "迦南／以色列，公元前二千紀",
+      "scripture": "塔納赫、塔木德",
+      "adherents": "約 1,500 萬人",
+      "chapter": 9
+    },
+    {
+      "name": "基督宗教",
+      "translit": "Christianity",
+      "icon": "noto-v1:latin-cross",
+      "category": "一神論",
+      "view": "唯一的神有三個位格，並且道成肉身",
+      "origin": "巴勒斯坦，1 世紀",
+      "scripture": "聖經（舊約、新約）",
+      "adherents": "約 24 億人，世界最大",
+      "chapter": 9
+    },
+    {
+      "name": "伊斯蘭",
+      "translit": "al-Islām",
+      "icon": "noto-v1:star-and-crescent",
+      "category": "一神論",
+      "view": "真主獨一，不生也不被生",
+      "origin": "阿拉伯半島，7 世紀",
+      "scripture": "《古蘭經》、聖訓",
+      "adherents": "約 20 億人，成長最快",
+      "chapter": 9
+    },
+    {
+      "name": "祆教",
+      "translit": "Zoroastrianism",
+      "icon": "noto-v1:fire",
+      "category": "一神論",
+      "view": "善神與惡神對抗，人必須選邊",
+      "origin": "古伊朗，約公元前 1200–600 年",
+      "scripture": "《阿維斯陀》",
+      "adherents": "約 10 萬人，世界觀影響四十多億人",
+      "chapter": 10
+    },
+    {
+      "name": "儒教",
+      "translit": "Rújiào",
+      "icon": null,
+      "category": "實用神論",
+      "view": "敬鬼神而遠之，重心在人倫",
+      "origin": "中國，公元前 6–5 世紀",
+      "scripture": "《論語》與四書五經",
+      "adherents": "難以統計，是東亞的文化底層",
+      "chapter": 11
+    },
+    {
+      "name": "佛教",
+      "translit": "Buddhadharma",
+      "icon": "noto-v1:wheel-of-dharma",
+      "category": "實用神論",
+      "view": "不否認諸天，但解脫不靠神",
+      "origin": "印度北部，公元前 5 世紀",
+      "scripture": "三藏",
+      "adherents": "約 5 億人",
+      "chapter": 11
+    },
+    {
+      "name": "耆那教",
+      "translit": "Jainism",
+      "icon": "noto-v1:raised-hand",
+      "category": "實用神論",
+      "view": "沒有創世神，靠不害與苦行自度",
+      "origin": "印度，公元前 6 世紀（大雄）",
+      "scripture": "耆那《阿含》聖典",
+      "adherents": "約 450 萬人",
+      "chapter": 11
+    },
+    {
+      "name": "無神論與不可知論",
+      "translit": "Atheism & Agnosticism",
+      "icon": null,
+      "category": "實用神論",
+      "view": "不主張有神，或主張這件事無法知道",
+      "origin": "古已有之，19 世紀後成規模",
+      "scripture": "無",
+      "adherents": "約 11 億人無宗教歸屬，最大的一格",
+      "chapter": 12
+    }
+  ],
+  "sources": [
+    "數字與歸類依《世界宗教文化導論》第五至十二章；人口為概數，來源不一，僅供課堂對照。"
+  ]
+}
