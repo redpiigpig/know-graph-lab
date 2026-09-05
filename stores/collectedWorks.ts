@@ -2749,6 +2749,19 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           ebookId: 'd0000000-0000-4000-8000-000000000006',
           note: '青空文庫所收短篇六篇合為一卷：寡婦的除夕／寒冬中的樹芽／時事雜評二三／快樂的生涯／納爾遜傳序／問答二三。日／繁中逐段對照轉錄中。',
         },
+        // 傳記與研究（他人著作，非內村本人作品）
+        {
+          title: '日本的現代先知：內村鑑三 1861–1930',
+          titleOriginal: "Japan's Modern Prophet: Uchimura Kanzō, 1861–1930",
+          year: '2005',
+          yearSort: 2005,
+          category: '傳記與研究（他人著作）',
+          genre: 'narrative',
+          languages: ['en'],
+          status: 'in-progress',
+          ebookId: 'd0000000-0000-4000-8000-000000000009',
+          note: '約翰‧F‧豪斯（John F. Howes, UBC）著，UBC Press 2005；五十年研究的成果，2006 年 Canada-Japan Literary Award 與 Choice 年度優良學術書。內村研究的英文定本，中文世界無譯本。英／繁中逐段對照轉錄中（僅正文序言至結論；尾註、書目、索引不譯）。',
+        },
       ],
     },
 

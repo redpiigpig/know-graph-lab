@@ -39,7 +39,7 @@ MAX_PARAS_PER_CHUNK = 10
 # 之後還有藤井武、塚本虎二…）。模組要提供 REGISTRY/QUEUE/load_work_sections/
 # make_engine 與 AUTHOR_ZH/AUTHOR_EN/CATEGORY/DATA_DIRNAME。
 AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
-                  "uchimura-en": "uchimura_en_build"}
+                  "uchimura-en": "uchimura_en_build", "howes": "howes_build"}
 
 
 def use_author(name: str) -> None:

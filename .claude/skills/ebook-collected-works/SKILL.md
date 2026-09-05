@@ -12,7 +12,7 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - **哲學家（柏拉圖/亞里斯多德）**：`scripts/plato_run_queue.py` 跑 26 部（**NVIDIA**）；21/26 有滿快取，近完成。
 > - **潘尼卡**：7 部完成；**吠陀經驗（義文大部頭 ~1.7 萬段）走 Haiku**，sec3854 進行中。（韋伯已改道：見下）。
 > - **馬克斯韋伯**（宗教社會學，hub 已存在 slug=`max-weber`）：**2026-07-23 改採 REFERENCE 轉錄既有中譯本、不自譯**，引擎 **OpenRouter 免費**（8 key，與主鏈分流；免費 vision 爛只能純文字）。9 本中譯本（李中文/張旺山/康樂簡惠美/閻克文/韓水法/顧忠華…繁簡混）已入 Drive `全集/宗教社會學/韋伯/`；轉錄走 `panikkar_build.py` 型 REFERENCE build。詳見 [[project_weber_collected_works]]。 **2026-09-02 開工**：兩篇志業演講（李中文繁譯 EPUB）已零 LLM 上架（`scripts/weber_build.py`），其餘七本的來源品質盤點與取捨見 [weber_collected_works.md](weber_collected_works.md)。
-> - **內村鑑三**：第一波青空文庫 QUEUE_COMPLETE ✅（`uchimura_auto.py`）。無教會神學區另有矢內原＋七人 hub（[[project_uchimura_yanaihara]]）。
+> - **內村鑑三**：青空文庫 11 篇 ✅ 全譯／英文原著兩部與豪斯評傳翻譯中（`uchimura_auto.py --author uchimura|uchimura-en|howes`）。無教會神學區另有矢內原＋七人 hub（[[project_uchimura_yanaihara]]）。
 > - **東方聖書（sacred-books-east）**：奧義書✅；剩 5 卷（阿維斯陀/古蘭經/法句經/易經/耆那教）`sbe_translate.py --loop --backend haiku`。
 > - **引擎分流**：Gemini→ACCS OCR；NVIDIA→榮格佇列＋哲學佇列＋大愛道；Haiku→潘尼卡吠陀＋SBE。**監管只需 1 個 session**（艦隊靠排程自我修復，多 session 會搶 checkpoint）。
 
@@ -373,7 +373,15 @@ Supabase/R2 偶發 `RemoteDisconnected`/`ConnectionError` → **`--all` 迴圈�
 
 **譜系七位（合併一檔）**：畔上賢造（1884–1938，PD，3 部）／塚本虎二（1885–1973，日版權至 2043，3 部）／黒崎幸吉（1886–1970，至 2040，3 部）／藤井武（1888–1930，**PD**，4 部）／南原繁（1889–1974，至 2044，4 部，唯一有 PD 肖像）／**金教臣**（1901–1945，**PD**，韓國《聖書朝鮮》創刊人，3 部）／咸錫憲（1901–1989，韓版權至 2059，4 部）——金教臣＋咸錫憲是本 portal **首兩個韓文（ko）案例**。受版權者比照榮格前例 `status='copyright'` hub＋書目先行。取捨（政池仁／大塚久雄／高橋三郎落選理由）、版權表（2018 日本改法不溯及）、肖像與來源盤點 → **[mukyokai_collected_works.md](mukyokai_collected_works.md)**。
 
-全文轉錄均待起手（優先序：內村 後世への最大遺物 → 矢內原 帝国主義下の台湾 NDL OCR → 藤井武／畔上／金教臣 PD 線）。
+**內村三波進度（2026-09-06）**：①青空文庫 11 篇→6 卷 866 段 **全譯完成**；
+②兩部英文原著（archive.org djvu）→ `uchimura_en_build.py`，《代表的日本人》322 段完成、
+《我如何成為基督徒》496 段翻譯中；③**傳記**——豪斯《Japan's Modern Prophet》
+（UBC Press 2005，英文學界定本，中文世界無譯本）19 節 1,582 段翻譯中，
+是本 portal 第一本「寫作家的書」，hub 內新開 category「傳記與研究（他人著作）」→
+**[howes_uchimura_biography.md](howes_uchimura_biography.md)**。
+
+矢內原與譜系七位的全文轉錄仍待起手（優先序：矢內原 帝国主義下の台湾 NDL OCR →
+藤井武／畔上／金教臣 PD 線）。
 
 ## C4 佛學：印順‧聖嚴‧星雲（單一語言，pipeline ②）
 
