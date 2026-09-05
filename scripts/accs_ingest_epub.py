@@ -242,6 +242,19 @@ def looks_like_a_translation(src: str, out: str) -> bool:
     return letters <= len(out) * 0.3
 
 
+# 引擎。預設 auto＝Gemini→NVIDIA→Haiku 那條鏈；但 Gemini 整批 503 的時候，
+# 那條鏈會把時間全花在輪七把 key 上（實測一小時只譯出 8 則），這時直接指定
+# --engine haiku 反而快得多。兩個呼叫點都先設好 te.PROMPT_TMPL 才呼叫，
+# 所以走 te 的翻譯函式是安全的（要的正是它的翻譯後處理）。
+ENGINES = {
+    'auto': lambda t: te.gemini_with_nvidia_fallback(t),
+    'haiku': lambda t: te.haiku_translate(t),
+    'nvidia': lambda t: te.nvidia_translate(t),
+    'gemini': lambda t: te.gemini_translate(t),
+}
+_engine = ENGINES['auto']
+
+
 def translate(text: str, tries: int = 3) -> str:
     """譯一段，並驗結果真的是譯文；不是就重試，最後仍失敗回空字串。
 
@@ -252,7 +265,7 @@ def translate(text: str, tries: int = 3) -> str:
         return ''
     te.PROMPT_TMPL = PROMPT
     for i in range(tries):
-        out = te.gemini_with_nvidia_fallback(text)
+        out = _engine(text)
         if looks_like_a_translation(text, out):
             return out
         print(f'    ⚠ 譯文不像譯文（第 {i + 1}/{tries} 次），重試', flush=True)
@@ -291,7 +304,7 @@ def translate_batch(items: list[str]) -> list[str] | None:
         return []
     src = '\n\n'.join(f'<<{i + 1}>> {s}' for i, s in enumerate(items))
     te.PROMPT_TMPL = BATCH_PROMPT
-    out = te.gemini_with_nvidia_fallback(src)
+    out = _engine(src)
     parts: dict[int, str] = {}
     cur, buf = None, []
     for line in out.splitlines():
@@ -325,7 +338,14 @@ def main() -> int:
                          '否則會用英譯蓋掉中文掃描本已有的卷。')
     ap.add_argument('--only-chapters',
                     help='只做這些章，如 3-8 或 3,4,5。搭配 --only-books 用來補缺口。')
+    ap.add_argument('--engine', choices=sorted(ENGINES), default='auto',
+                    help='翻譯引擎（預設 auto＝Gemini→NVIDIA→Haiku 鏈）。Gemini 整批 503 時'
+                         '那條鏈會把時間全花在輪七把 key 上，直接 --engine haiku 反而快。')
     args = ap.parse_args()
+
+    global _engine
+    _engine = ENGINES[args.engine]
+    print(f'引擎: {args.engine}', flush=True)
 
     epub_path, source_vol, ckpt_name = EPUB, SOURCE_VOL, 'jer_lam'
     if args.volume:
