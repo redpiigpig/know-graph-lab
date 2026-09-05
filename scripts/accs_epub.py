@@ -29,7 +29,17 @@ _SMALLCAPS = re.compile(r'([A-Za-z’])<small>([^<]*)</small>')
 _TAG = re.compile(r'<[^>]+>')
 _WS = re.compile(r'[\s ]+')
 
-BOOK_CODES = {'jeremiah': 'jer', 'lamentations': 'lam'}
+# 英文書名 → 站上 bible_books.code。次經那七卷是 ACCS 卷十五的收錄範圍
+# （友弟德傳與瑪加伯上下不在該卷，那是出版社的範圍不是漏收）。
+# 🚨 Song of the Three Young Men 對到 aza：三青年之歌與阿撒里雅禱詞在希臘文
+#    但以理補篇裡是同一段連續文字（達 3:24–90），站上以一個 aza 涵蓋。
+BOOK_CODES = {
+    'jeremiah': 'jer', 'lamentations': 'lam',
+    'sirach': 'sir', 'wisdom': 'wis', 'wisdom of solomon': 'wis',
+    'tobit': 'tob', 'baruch': 'bar', 'susanna': 'sus',
+    'bel and the dragon': 'bel',
+    'song of the three young men': 'aza', 'prayer of azariah': 'aza',
+}
 
 
 def _clean(text: str) -> str:
@@ -59,8 +69,11 @@ def parse_passage_ref(h1_html: str) -> dict | None:
     m = re.search(r'search=([^&"\']+)', h1_html)
     raw = urllib.parse.unquote_plus(m.group(1)) if m else None
     if not raw:
+        # 退路：標題文字。書名清單直接從 BOOK_CODES 長出來，長的排前面才不會讓
+        # 「Wisdom」先吃掉「Wisdom of Solomon」。
         txt = strip_tags(unsmallcaps(h1_html))
-        m2 = re.search(r'((?:Jeremiah|Lamentations)\s+[\d:,\-–\s]+)$', txt, re.I)
+        alt = '|'.join(re.escape(b) for b in sorted(BOOK_CODES, key=len, reverse=True))
+        m2 = re.search(rf'((?:{alt})\s+[\d:,\-–\s]+)$', txt, re.I)
         raw = m2.group(1) if m2 else None
     if not raw:
         return None
@@ -94,7 +107,18 @@ def parse_entry(p_html: str) -> dict | None:
     """
     inner = re.sub(r'^\s*<p[^>]*>|</p>\s*$', '', p_html.strip())
     text = unsmallcaps(inner)
-    bold = re.match(r'\s*<b>(.*?)</b>(.*)$', text, re.S)
+    # 🚨 卷十五（次經）把小型大寫多包了一層 <span class="mev3/mev4">：
+    #     耶利米卷            <b>O<small>VERVIEW:</small></b>
+    #     次經卷  <span class="mev3"><b>O<small>VERVIEW:</small></b></span>
+    #   下面那個 re.match 要求 <b> 在字串開頭，被那層 span 一擋就整段解析不出來
+    #   （實測整卷 221 個章節檔只撈到 3 則，署名還全是碎片）。span 不帶語意，
+    #   unsmallcaps 也已經跑完，直接剝掉；對沒有這層的卷是 no-op。
+    text = re.sub(r'</?span[^>]*>', '', text)
+    # 🚨 小標可能被拆成連續多段 <b>，因為經文引詞用斜體另起一段：
+    #     <b><i>Heaven</i></b><b> AND </b><b><i>Firmament</i></b><b> Are Not the Same. </b>Ambrose: …
+    #   只吃第一段的話，剩下的「AND Firmament Are Not the Same. Ambrose」會整串被
+    #   當成署名（署名是取到第一個冒號為止）。所以要把開頭連續的 bold 段全部吃掉。
+    bold = re.match(r'\s*((?:<b>.*?</b>\s*)+)(.*)$', text, re.S)
     if not bold:
         return None
     head = strip_tags(bold.group(1))
@@ -110,7 +134,9 @@ def parse_entry(p_html: str) -> dict | None:
     if not m:
         return {'kind': 'comment', 'heading': head.rstrip('. '), 'father': '',
                 'work': '', 'body': rest}
-    father, body = m.group(1).strip(), m.group(2).strip()
+    # 小標的收尾標點偶爾會落到署名這一側（"…Are Not the Same." → ". Ambrose"），
+    # 署名不該以標點開頭，一律削掉；不然詞庫比對必然落空。
+    father, body = m.group(1).strip(' .,:;“”"'), m.group(2).strip()
 
     # 出處在最末：作品名（原本是小型大寫）＋可有可無的章節號
     work = ''

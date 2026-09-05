@@ -37,6 +37,10 @@ SOURCE_VOL = 'ACCS（耶利米書‧耶利米哀歌）'
 KNOWN_VOLUMES = {
     'jer_lam': ('ACCS_Jeremiah_Lamentations.epub', 'ACCS（耶利米書‧耶利米哀歌）'),
     'pro_ecc_sng': ('ACCS_Proverbs_Ecclesiastes_Song.epub', 'ACCS（箴言‧傳道書‧雅歌）'),
+    # 卷十五：次經。中文版整套沒有這一卷，所以七卷全部要從英文版翻。
+    # 收錄範圍是德訓篇／智慧篇／多比傳／巴錄書／三青年之歌／比勒與大龍／蘇撒納傳，
+    # 友弟德傳與瑪加伯上下不在本卷 —— 那是出版社的收錄範圍，不是我們漏收。
+    'apocrypha': ('ACCS_Apocrypha.epub', 'ACCS（次經）'),
 }
 
 # Vol 9 那本是 Calibre 拆檔式：3,223 個 index_split_NNN.html，其中絕大多數是註腳，
