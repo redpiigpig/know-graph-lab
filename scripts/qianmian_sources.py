@@ -28,6 +28,18 @@ ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "stores" / "千面上帝"
 OUT = ROOT / "output" / "qianmian" / "sources"
 
+# 🚨 舊目錄的「宇宙城邦的公民」後來被拆成新目錄的第十一、十二兩章，但書摘分頁
+#    沒跟著拆。整頁塞給第十一章的話，孔雀王朝、阿育王石刻、董仲舒、漢武帝、
+#    布匿戰爭、西塞羅、凱撒這些材料就會壓在一個用不到它們的章裡，
+#    而第十二章變成整本書唯一沒素材的一章（第一版只寫出 5,366 字）。
+#    所以分頁指派完之後，再按主題把屬於第十二章的條目撿出來。
+TO_CH12 = ("孔雀", "阿育王", "旃陀羅", "考底利耶", "政事論", "那爛陀",
+           "犍陀羅", "鍵陀螺", "安息", "帕提亞",
+           "稷下", "戰國", "諸子", "法家", "韓非", "商鞅", "黃老",
+           "焚書", "秦始皇", "西漢", "漢武帝", "董仲舒", "儒術", "讖緯", "封禪", "三綱五常",
+           "布匿", "迦太基", "羅馬共和", "西塞羅", "凱撒", "龐培", "格拉古")
+FROM_CHAPTERS = (9, 11)          # 只從這兩章撿，別去動已經寫好的其他章
+
 # 書摘分頁 → 目錄章序。沒列到的分頁按標題自動比對。
 SHEET_MAP = {
     "十一、經書的子民": 9,        # 被擄後猶太教＝第九章的「上帝的究極進化」「尼希米圍牆」
@@ -123,6 +135,21 @@ def main():
             unmatched.append(name)
             continue
         assign.setdefault(no, []).extend(rows)
+
+    # 把誤落在第九、十一章的第十二章材料撿回來
+    moved = 0
+    for src in FROM_CHAPTERS:
+        keep = []
+        for row in assign.get(src, []):
+            head = (row["topic"] or "") + row["text"][:300]
+            if any(k in head for k in TO_CH12):
+                assign.setdefault(12, []).append(row)
+                moved += 1
+            else:
+                keep.append(row)
+        assign[src] = keep
+    if moved:
+        print(f"  第十二章從第 {list(FROM_CHAPTERS)} 章撿回 {moved} 條主題相符的書摘")
 
     # 逐字稿 → 章（用標題比對，不用集數）
     trans = {}

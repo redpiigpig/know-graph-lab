@@ -9,6 +9,7 @@
   4. 註號不連續    ── 引用與註文對不起來
   5. 有引用卻沒註文／有註文卻沒人引用
   6. 殘留 markdown ── ** 或 * 會原樣印進 Word
+  6b. 漏出 prompt 標籤 ── 〔素材三〕這種東西印出去就穿幫了
   7. 篇幅異常      ── 明顯短於同批其他章的，多半是被壓縮或截斷
 
 用法：python scripts/qianmian_check.py
@@ -50,6 +51,11 @@ def check(no):
 
     if "〔註" in body:
         bad.append(f"殘留未解析的註記號 {body.count('〔註')} 個")
+
+    # 模型偶爾把 prompt 裡的段落標籤（〔素材三〕【素材一：書摘】）抄進正文
+    leaked = re.findall(r"〔素材[^〕]{0,8}〕|【素材[^】]{0,12}】|〔書摘[^〕]{0,8}〕", body)
+    if leaked:
+        bad.append(f"漏出 prompt 的內部標籤 {len(leaked)} 處：{leaked[:3]}")
 
     defs = {int(n): t for n, t in FN_DEF.findall(text)}
     refs = [int(n) for n in FN_REF.findall(body)]

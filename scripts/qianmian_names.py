@@ -92,6 +92,9 @@ def build_index(gloss):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fix", metavar="定名", help="把這個定名的所有異名換成定名")
+    ap.add_argument("--replace", metavar="舊=新", action="append", default=[],
+                    help="逐詞替換，給音譯統一用。同一個字在書裡指兩個對象時只能用這個："
+                         "「奧斯曼」既是第三任哈里發也是鄂圖曼土耳其，只能改後者。")
     a = ap.parse_args()
 
     idx = build_index(load_glossary())
@@ -104,6 +107,27 @@ def main():
             n = text.count(variant)
             if n:
                 hits.setdefault(rec, []).append((f.stem, variant, n))
+
+    if a.replace:
+        pairs = [tuple(x.split("=", 1)) for x in a.replace]
+        total = 0
+        for f in sorted(CH.glob("ch*.md")):
+            old = f.read_text(encoding="utf-8")
+            lines = old.split("\n")
+            for i, line in enumerate(lines):
+                if line.startswith("##"):        # 節標題是對回目錄的鍵，不能動
+                    continue
+                for src, dst in pairs:
+                    line = line.replace(src, dst)
+                lines[i] = line
+            text = "\n".join(lines)
+            if text != old:
+                n = sum(old.count(src) for src, _ in pairs)
+                total += n
+                f.write_text(text, encoding="utf-8")
+                print(f"  {f.stem}：{n} 處")
+        print(f"\n共替換 {total} 處")
+        return
 
     if a.fix:
         rec = a.fix
