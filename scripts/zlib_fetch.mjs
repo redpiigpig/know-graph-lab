@@ -121,7 +121,21 @@ export function rank(hit, query = '', expect = '', who = '', wantLang = '') {
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
   const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
   if (expect && !flat(title).includes(flat(expect))) return -100
-  if (who && !flat(`${hit.author} ${title}`).includes(flat(who))) return -100
+  if (who) {
+    const w = flat(who)
+    // 🚨 太短的姓氏不能當子字串比對。實測 who='Tu'（杜維明）配上空的 expect，
+    //    唯一的閘門就只剩「含 tu 的中文書」，結果抓回一本雅思寫作書
+    //    （音譯書名 "Shi tian tu po…" 裡剛好有 tu）。三個字以下的西文姓氏
+    //    改成整詞比對，中日韓姓名本身夠獨特不受此限。
+    const hay = flat(`${hit.author} ${title}`)
+    const isShortLatin = /^[a-z]{1,3}$/.test(w)
+    if (isShortLatin) {
+      const words = `${hit.author} ${title}`.toLowerCase().split(/[^a-z]+/)
+      if (!words.includes(w)) return -100
+    } else if (!hay.includes(w)) {
+      return -100
+    }
+  }
   let s = 0
   if (lang.includes('traditional')) s += 40
   else if (lang.includes('chinese')) s += 25

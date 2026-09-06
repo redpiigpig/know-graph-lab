@@ -366,6 +366,13 @@ def main() -> int:
             "source": x["source"],
             "zh": label + "（原文）",
         })
+        # 🚨 中譯那一格不設書名閘（中譯本的書名我們並不知道），所以唯一的過濾
+        #    就只剩作者。作者若是兩三個字母的西文姓，那等於沒有閘門 —— 實測
+        #    who='Tu'（杜維明，書目原文是 "Tu, W."）配上空的 expect，抓回一本
+        #    《十天突破雅思寫作》，因為音譯書名 "Shi tian tu po…" 裡有 tu。
+        #    這種目標寧可不產生：白佔額度又會把垃圾送進圖書館。
+        if not title_is_zh and len(x["author"]) <= 3 and x["author"].isascii():
+            continue
         out.append({
             "key": f"bib-{base}-zh",
             "query": q,
