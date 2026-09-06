@@ -33,8 +33,29 @@ WORK = Path("c:/tmp/genesis_rewrite")
 LEDGER = WORK / "ledger.jsonl"
 BACKUP = WORK / "backup"
 
-SECTION_RE = re.compile(r'(<section class="chapter">.*?</section>)', re.S)
+SECTION_TAG_RE = re.compile(r"<section\b[^>]*>|</section\s*>")
 H2_RE = re.compile(r"<h2[^>]*>(.*?)</h2>", re.S)
+
+
+def split_chapters(doc: str) -> list[tuple[int, int]]:
+    """回每個最外層 <section class="chapter"> 的 (起, 訖)。
+
+    🚨 不能用 `<section class="chapter">.*?</section>` —— 每一章裡面都還有一個
+    巢狀的 <section class="chapter-recap">（推論鏈那一塊），非貪婪比對會在 recap
+    的 </section> 就收工，於是整章被截斷、後半段永遠不會被改寫，而且看起來完全正常。
+    """
+    spans, depth, start = [], 0, None
+    for m in SECTION_TAG_RE.finditer(doc):
+        if m.group(0).startswith("</"):
+            depth -= 1
+            if depth == 0 and start is not None:
+                spans.append((start, m.end()))
+                start = None
+        else:
+            if depth == 0 and 'class="chapter"' in m.group(0):
+                start = m.start()
+            depth += 1
+    return spans
 TAG_RE = re.compile(r"<[^>]+>")
 FENCE_RE = re.compile(r"^\s*```(?:html)?\s*|\s*```\s*$", re.S)
 
@@ -267,6 +288,16 @@ def top_level_blocks(inner: str) -> list[str]:
     return blocks
 
 
+def blocks_or_die(inner: str) -> list[str]:
+    """切不乾淨就直接失敗。少切了一半內容卻照樣往下跑，是這條管線最危險的失敗模式：
+    產出看起來正常、實際上整章後半沒被改到。"""
+    blocks = top_level_blocks(inner)
+    got, want = sum(len(plain(b)) for b in blocks), len(plain(inner))
+    if want and got < want * 0.98:
+        raise RuntimeError(f"區塊只回收 {got:,}／{want:,} 字，切法對不上這一節的標記")
+    return blocks
+
+
 def chunk_blocks(blocks: list[str], budget: int = 2200) -> list[list[int]]:
     """把可改寫的區塊編組，每組正文不超過 budget 字——輸出上限 8192 token，
     留足餘裕免得中途被截斷。"""
@@ -285,8 +316,12 @@ def chunk_blocks(blocks: list[str], budget: int = 2200) -> list[list[int]]:
 
 def rewrite_section(book, spec, positions, section, idx, name, args):
     """回 (新的 section HTML, 用到的引擎集合)；失敗回 (None, 原因)。"""
-    inner = section[len('<section class="chapter">'):-len('</section>')]
-    blocks = top_level_blocks(inner)
+    head = section[:section.index(">") + 1]
+    inner = section[len(head):-len("</section>")]
+    try:
+        blocks = blocks_or_die(inner)
+    except RuntimeError as e:
+        return None, str(e)
     if not blocks:
         return None, "切不出區塊"
 
@@ -334,7 +369,7 @@ def rewrite_section(book, spec, positions, section, idx, name, args):
         for k, i in enumerate(g):
             blocks[i] = out if k == 0 else ""
 
-    rebuilt = '<section class="chapter">' + "\n".join(b for b in blocks if b) + "</section>"
+    rebuilt = head + "\n".join(b for b in blocks if b) + "</section>"
     if 'data-fable-title' in section and 'data-fable-title' not in rebuilt:
         return None, "章首故事引子掉了"
     if len(plain(rebuilt)) < len(plain(section)) * 0.75:
@@ -355,34 +390,41 @@ def rewrite_book(book: str, spec: dict, positions: str, args) -> None:
 
     done = load_ledger()
     attempted = 0
+    # 🚨 本輪已經試過的節要記下來——失敗的節帳本記 ok=False，若只看帳本就會
+    #    在同一節上無限重試，整卷永遠走不下去。
+    tried_now: set[int] = set()
 
     while True:
-        parts = SECTION_RE.split(path.read_text(encoding="utf-8"))
+        doc = path.read_text(encoding="utf-8")
+        spans = split_chapters(doc)
         todo = None
-        for i, part in enumerate(parts):
-            if not part.startswith('<section class="chapter">'):
+        for n, (s, e) in enumerate(spans):
+            if done.get(f"{book}#{n}", {}).get("ok") or n in tried_now:
                 continue
-            if done.get(f"{book}#{i}", {}).get("ok"):
-                continue
-            todo = i
+            todo = n
             break
         if todo is None:
-            print(f"  · {book} 全節完成")
+            print(f"  · {book} 走完（{len(spans)} 節）")
             return
         if args.limit and attempted >= args.limit:
             return
         attempted += 1
+        tried_now.add(todo)
 
-        part = parts[todo]
+        s, e = spans[todo]
+        part = doc[s:e]
         h2 = H2_RE.search(part)
         name = plain(h2.group(1)).strip() if h2 else "（無標題節）"
         print(f"  → {book} [{todo}] {name[:30]}（原 {len(plain(part)):,} 字）", flush=True)
 
         if args.dry_run:
-            blocks = top_level_blocks(part[len('<section class="chapter">'):-len('</section>')])
-            print(f"      [dry-run] {len(blocks)} 區塊 → "
-                  f"{len(chunk_blocks(blocks))} 塊，未送出")
-            done[f"{book}#{todo}"] = {"ok": True}
+            head = part[:part.index(">") + 1]
+            try:
+                blocks = blocks_or_die(part[len(head):-len("</section>")])
+                print(f"      [dry-run] {len(blocks)} 區塊 → "
+                      f"{len(chunk_blocks(blocks))} 塊，未送出")
+            except RuntimeError as ex:
+                print(f"      [dry-run] ✗ {ex}")
             continue
 
         t0 = time.time()
@@ -396,14 +438,40 @@ def rewrite_book(book: str, spec: dict, positions: str, args) -> None:
             done[f"{book}#{todo}"] = rec
             continue
 
-        parts[todo] = rebuilt
-        path.write_text("".join(parts), encoding="utf-8")
+        path.write_text(doc[:s] + rebuilt + doc[e:], encoding="utf-8")
         rec.update(ok=True, engine=info, chars_before=len(plain(part)),
                    chars_after=len(plain(rebuilt)), secs=round(time.time() - t0, 1))
         append_ledger(rec)
         done[f"{book}#{todo}"] = rec
         print(f"      ✓ {info} · {len(plain(part)):,}→{len(plain(rebuilt)):,} 字 · "
               f"{time.time() - t0:.0f}s", flush=True)
+
+
+LOCK = WORK / "run.lock"
+
+
+def take_lock() -> bool:
+    """排程每半小時叫一次，重疊會讓同一批 key 被兩個行程同時打。
+    🚨 鎖要記 PID：只看時間戳的話，上一輪被砍掉留下的殘骸會把後面每一輪都擋住。"""
+    WORK.mkdir(parents=True, exist_ok=True)
+    if LOCK.exists():
+        try:
+            pid = int(LOCK.read_text(encoding="utf-8").strip())
+        except (ValueError, OSError):
+            pid = -1
+        alive = False
+        if pid > 0:
+            try:
+                out = os.popen(f'tasklist /FI "PID eq {pid}" /NH').read()
+                alive = str(pid) in out
+            except OSError:
+                alive = False
+        if alive:
+            print(f"另一輪還在跑（pid {pid}），這輪跳過。")
+            return False
+        print(f"清掉殘骸鎖（pid {pid} 已不在）")
+    LOCK.write_text(str(os.getpid()), encoding="utf-8")
+    return True
 
 
 def main() -> None:
@@ -423,6 +491,9 @@ def main() -> None:
     print(f"引擎：Gemini {GEMINI_MODEL} × {len(GEMINI_KEYS)} key"
           f"（備援 NVIDIA × {len(NVIDIA_KEYS)}）\n")
 
+    if not args.dry_run and not take_lock():
+        return
+
     positions = (HERE / "positions.md").read_text(encoding="utf-8")
     directives = json.loads((HERE / "directives.json").read_text(encoding="utf-8"))
 
@@ -440,6 +511,10 @@ def main() -> None:
         print(f"【{book}《{spec['title']}》 — {spec['level']}】", flush=True)
         rewrite_book(book, spec, positions, args)
         print()
+
+    if LOCK.exists():
+        LOCK.unlink(missing_ok=True)
+    print("本輪結束。")
 
 
 if __name__ == "__main__":
