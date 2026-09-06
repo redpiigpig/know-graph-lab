@@ -299,8 +299,11 @@ const tocGroups = computed(() => {
     if (e.chunk_type === 'cover') continue
     const vol = e.volume ?? ''
     if (!byVol.has(vol)) { byVol.set(vol, []); order.push(vol) }
-    const label = (e.chapter_path ?? '').split(' · ').slice(-1)[0] || `頁 ${e.page ?? e.page_number}`
-    byVol.get(vol)!.push({ page: e.page ?? (e.chunk_index != null ? e.chunk_index + 1 : 1), short: label })
+    // loadToc 回傳的是 TocEntry（chunk_index / title / level / volume），**沒有**
+    // chapter_path，也沒有 page ——讀錯欄位的話每一條都會退化成「頁 undefined」。
+    // title 本身是 chapter_path 全文（「傳記與研究 · 序言與致謝（1）」），側欄只要末段。
+    const label = String(e.title ?? '').split(' · ').slice(-1)[0] || `第 ${(e.chunk_index ?? 0) + 1} 段`
+    byVol.get(vol)!.push({ page: e.chunk_index != null ? e.chunk_index + 1 : 1, short: label })
   }
   for (const v of order) groups.push({ label: v, items: byVol.get(v)! })
   return groups
