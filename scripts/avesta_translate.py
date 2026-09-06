@@ -6,6 +6,7 @@
     python scripts/avesta_translate.py --all             # 翻全部未譯段落
     python scripts/avesta_translate.py --only vendidad-03
     python scripts/avesta_translate.py --all --limit 40  # 只翻 40 段（試水溫）
+    python scripts/avesta_translate.py --all --engine haiku  # 免費池乾掉時走 Haiku
 
 引擎鏈沿用 hellenika_intro.ask()：Gemini → NVIDIA → OpenRouter → Haiku。
 見 [[feedback_engine_nvidia_no_haiku]]。
@@ -281,6 +282,25 @@ BAD_PATTERNS = [
 ]
 
 
+def normalise_keys(got: object) -> dict[str, str]:
+    """把模型回傳的鍵正規化成純數字字串。
+
+    🚨 各引擎的習慣不同：Gemini／NVIDIA 回 "2"，**Haiku 回 "[2]"**（照抄 prompt
+       裡的段落標記）。只查 "2" 的話，整批譯文全部對不上而一個字都不印——
+       2026-09-06 首次切到 Haiku 就是這樣靜靜空轉了兩輪。
+    """
+    if not isinstance(got, dict):
+        return {}
+    out: dict[str, str] = {}
+    for k, v in got.items():
+        if not isinstance(v, str):
+            continue
+        m = re.search(r"\d+", str(k))
+        if m:
+            out[m.group(0)] = v
+    return out
+
+
 def reject_reason(zh: str, en: str) -> str | None:
     """這一段譯文能不能落地。回 None 表示可以。
 
@@ -357,7 +377,10 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
     name_lines = "\n".join(f"- {k} → {v}" for k, v in sorted(hit.items())) or "（無，依基礎詞庫）"
 
     ok = rejected = 0
-    for chunk in make_batches(todo):
+    batches = make_batches(todo)
+    if not batches:
+        print(f"    ✗ {doc.get('siglum')} 有 {len(todo)} 段待譯卻切不出批次", flush=True)
+    for chunk in batches:
         items = "\n\n".join(
             f"[{idx}]（{s['ref']}）\n英譯：{s['en']}"
             + (f"\n原文轉寫（供參照，不必譯）：{s['orig'][:300]}" if s.get("orig") else "")
@@ -377,8 +400,18 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
         except json.JSONDecodeError:
             print("    ✗ 回傳非 JSON，跳過本批", flush=True)
             continue
+        got = normalise_keys(got)
+        # 🚨 回了合法 JSON 但鍵對不上時，下面的迴圈會一路 continue，
+        #    整批 0 段落地而**一個字都不印**——首次跑 Haiku 就這樣靜靜空轉。
+        #    故先檢查鍵有沒有交集，沒有就把實際拿到的鍵印出來。
+        wanted = {str(idx) for idx, _ in chunk}
+        if not (wanted & set(got)):
+            print(f"    ✗ 回傳鍵對不上：要 {sorted(wanted)[:4]}…，"
+                  f"拿到 {sorted(got)[:4]}…", flush=True)
+            continue
+
         for idx, s in chunk:
-            zh = got.get(str(idx)) or got.get(idx)
+            zh = got.get(str(idx))
             if not isinstance(zh, str):
                 continue
             zh = zh.strip().replace("・", "‧")
@@ -424,7 +457,16 @@ def main() -> int:
     ap.add_argument("--limit", type=int, help="本輪最多翻幾段")
     ap.add_argument("--reset", action="store_true",
                     help="把指定篇章的 zh 清空後重譯（專名表更新後修既有譯文用）")
+    ap.add_argument("--engine", choices=["auto", "haiku"], default="auto",
+                    help="auto＝Gemini→NVIDIA→OpenRouter→Haiku 全鏈；"
+                         "haiku＝直接走 Haiku（Max 方案不另計費，免費池乾掉時用）")
     a = ap.parse_args()
+
+    # ask() 以 HELLENIKA_ENGINE 判斷是否強制走 Haiku（見 hellenika_intro.ask）。
+    # 🚨 Haiku 一律只在使用者明確下令時啟用，見 [[feedback_ocr_strategy]]。
+    if a.engine == "haiku":
+        os.environ["HELLENIKA_ENGINE"] = "haiku"
+        print("引擎：Haiku（使用者指定）", flush=True)
 
     if a.refresh_names:
         refresh_names()

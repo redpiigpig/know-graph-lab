@@ -129,3 +129,27 @@ def test_short_keys_do_not_match_promiscuously():
 
 def test_absent_name_is_not_matched():
     assert not mentions("Anahita", fold("The first of the good lands."))
+
+
+# ───────────────── 回傳鍵正規化（跨引擎）─────────────────
+
+from avesta_translate import normalise_keys  # noqa: E402
+
+
+def test_haiku_bracketed_keys_are_accepted():
+    """Haiku 把鍵回成 "[2]"（照抄 prompt 的段落標記），Gemini／NVIDIA 回 "2"。
+
+    2026-09-06 實測：只查 "2" 的話整批對不上，而腳本一個字都不印，靜靜空轉。
+    """
+    assert normalise_keys({"[2]": "甲", "[6]": "乙"}) == {"2": "甲", "6": "乙"}
+    assert normalise_keys({"2": "甲"}) == {"2": "甲"}
+    assert normalise_keys({2: "甲"}) == {"2": "甲"}
+
+
+def test_non_string_values_are_dropped():
+    assert normalise_keys({"1": None, "2": 3, "3": "丙"}) == {"3": "丙"}
+
+
+def test_non_dict_returns_empty():
+    assert normalise_keys(["甲", "乙"]) == {}
+    assert normalise_keys(None) == {}
