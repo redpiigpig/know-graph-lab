@@ -1,0 +1,446 @@
+# -*- coding: utf-8 -*-
+"""創生哲學十五卷逐章改寫（引擎：Gemini，NVIDIA 備援）。
+
+用法：
+  python -X utf8 scripts/genesis_rewrite/rewrite.py --book V3 --limit 1 --dry-run
+  python -X utf8 scripts/genesis_rewrite/rewrite.py --book V3
+  python -X utf8 scripts/genesis_rewrite/rewrite.py --all
+
+每章一個 API 呼叫，結果寫進帳本後才動檔案；重跑會跳過帳本裡已完成的章，
+所以中斷可以直接續跑。帳本：c:/tmp/genesis_rewrite/ledger.jsonl
+
+🚨 別跑 scripts/assemble_genesis_book.py——那支是 draft→HTML，
+   會拿 c:/tmp 的舊草稿覆蓋掉這裡改好的部署檔。
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import shutil
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+
+ROOT = Path(__file__).resolve().parents[2]
+BOOKS = ROOT / "public" / "content" / "works" / "genesis"
+HERE = Path(__file__).resolve().parent
+WORK = Path("c:/tmp/genesis_rewrite")
+LEDGER = WORK / "ledger.jsonl"
+BACKUP = WORK / "backup"
+
+SECTION_RE = re.compile(r'(<section class="chapter">.*?</section>)', re.S)
+H2_RE = re.compile(r"<h2[^>]*>(.*?)</h2>", re.S)
+TAG_RE = re.compile(r"<[^>]+>")
+FENCE_RE = re.compile(r"^\s*```(?:html)?\s*|\s*```\s*$", re.S)
+
+
+# ---------------------------------------------------------------- 環境與引擎
+
+def _load_env() -> None:
+    """.env 是 KEY=VALUE 一行一筆；python-dotenv 不一定裝著，自己讀。"""
+    f = ROOT / ".env"
+    if not f.exists():
+        return
+    for line in f.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+def _find_keys(bases: tuple[str, ...]) -> list[str]:
+    raw = []
+    for b in bases:
+        if os.environ.get(b):
+            raw.append(os.environ[b])
+    for n in range(1, 11):
+        for b in bases:
+            v = os.environ.get(f"{b}_{n}")
+            if v:
+                raw.append(v)
+                break
+    keys, seen = [], set()
+    for r in raw:
+        for piece in r.split(","):
+            k = piece.strip()
+            if k and k not in seen:
+                seen.add(k)
+                keys.append(k)
+    return keys
+
+
+_g_idx = 0
+_n_idx = 0
+GEMINI_KEYS: list[str] = []
+NVIDIA_KEYS: list[str] = []
+
+# 🚨 gemini-2.5-flash 對新帳號會 404，一律走 gemini-flash-latest
+GEMINI_MODEL = "gemini-flash-latest"
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash-0731"
+_THINK_RE = re.compile(r"<think>.*?</think>", re.S)
+
+
+def gemini_chat(system: str, prompt: str) -> str:
+    """429 是每分鐘速率限制、不是當日耗盡——七把 key 會輪流恢復，所以要繞好幾輪、
+    每輪之間睡久一點，而不是一輪掃完就放棄。"""
+    global _g_idx
+    if not GEMINI_KEYS:
+        raise RuntimeError("no gemini key")
+    body = {
+        "system_instruction": {"parts": [{"text": system}]},
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.6,
+            # 🚨 實測 gemini-flash-latest 這一層：maxOutputTokens 一超過 8192
+            #    就一律回 503（16384/24576/32768 四把 key 全掛），不是 429 也不是模型問題。
+            #    所以整章不可能一次生完，改成分塊改寫（見 chunk_blocks）。
+            "maxOutputTokens": 8192,
+            "thinkingConfig": {"thinkingBudget": 1024},
+        },
+    }
+    base = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    last = ""
+    for rnd, cooldown in enumerate((0, 30, 60, 120, 240), start=1):
+        if cooldown:
+            print(f"      · 全部 key 都在限流，等 {cooldown}s 再繞第 {rnd} 輪", flush=True)
+            time.sleep(cooldown)
+        for _ in range(len(GEMINI_KEYS)):
+            key = GEMINI_KEYS[_g_idx]
+            _g_idx = (_g_idx + 1) % len(GEMINI_KEYS)
+            try:
+                r = requests.post(f"{base}?key={key}", json=body, timeout=900)
+            except requests.exceptions.RequestException as e:
+                last = f"{type(e).__name__}"
+                continue
+            if r.status_code == 200:
+                data = r.json()
+                try:
+                    cand = data["candidates"][0]
+                    txt = "".join(p.get("text", "") for p in cand["content"]["parts"])
+                except (KeyError, IndexError):
+                    last = f"bad resp {json.dumps(data)[:200]}"
+                    continue
+                fr = cand.get("finishReason")
+                if fr not in (None, "STOP"):
+                    last = f"finishReason={fr}"
+                    continue
+                return txt.strip()
+            last = f"HTTP {r.status_code}"
+            if r.status_code not in (429, 500, 502, 503, 504):
+                raise RuntimeError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
+    raise RuntimeError(f"gemini 五輪皆敗，最後一次：{last}")
+
+
+def nvidia_chat(system: str, prompt: str) -> str:
+    global _n_idx
+    if not NVIDIA_KEYS:
+        raise RuntimeError("no nvidia key")
+    tried = 0
+    while tried < len(NVIDIA_KEYS):
+        key = NVIDIA_KEYS[_n_idx]
+        tried += 1
+        try:
+            r = requests.post(
+                NVIDIA_URL,
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                json={"model": NVIDIA_MODEL,
+                      "messages": [{"role": "system", "content": system},
+                                   {"role": "user", "content": prompt}],
+                      "temperature": 0.6, "max_tokens": 16000},
+                timeout=600,
+            )
+        except requests.exceptions.RequestException:
+            _n_idx = (_n_idx + 1) % len(NVIDIA_KEYS)
+            time.sleep(5)
+            continue
+        if r.status_code == 200:
+            msg = r.json()["choices"][0]["message"]
+            # 推理模型有時 content 是 null、正文只在 reasoning_content 裡
+            body = msg.get("content") or msg.get("reasoning_content") or ""
+            body = _THINK_RE.sub("", body).strip()
+            if body:
+                return body
+        _n_idx = (_n_idx + 1) % len(NVIDIA_KEYS)
+        time.sleep(5)
+    raise RuntimeError("all nvidia keys exhausted")
+
+
+def llm(system: str, prompt: str) -> tuple[str, str]:
+    """Gemini 主、NVIDIA 備援。回 (文字, 用了哪個引擎)。"""
+    try:
+        return gemini_chat(system, prompt), "gemini"
+    except Exception as e:  # noqa: BLE001
+        print(f"    ⚠ gemini 失敗（{e}），改用 NVIDIA", flush=True)
+        return nvidia_chat(system, prompt), "nvidia"
+
+
+# ---------------------------------------------------------------- prompt
+
+SYSTEM = (
+    "你是使用者的哲學寫作助手。使用者是台灣的宗教研究學者，正在改寫他自己的原創哲學"
+    "叢書《創生哲學》（十五卷）。你的工作是依他新確立的立場，改寫指定的一章。\n"
+    "鐵則：\n"
+    "1. 一律繁體中文。\n"
+    "2. 一次只改寫使用者指定的那一塊，只輸出那一塊的 HTML 元素（通常是若干個 <p>）。"
+    "不要複述整節、不要加 markdown 圍籬、不要加任何說明文字。\n"
+    "3. 保留原有的 class 名稱與 HTML 結構；每個元素都要正確閉合。\n"
+    "4. 保留哲普文風：可讀、有敘事、不堆術語。這次改的是論證，不是文體。\n"
+    "5. 篇幅不得縮水。原塊多長，改寫後就要多長或更長。不可摘要、不可省略段落。\n"
+    "6. 章名與章次編號不歸你管（<h2> 不會給你），不要自己補標題。\n"
+    "7. 這是使用者自己的哲學，不是介紹別人的學說。用第一人稱的主張語氣，不要寫成綜述。"
+)
+
+TASK = """《{title}》（代號 {book}）這一節是〈{name}〉。
+
+【改寫綱要——全書共用的新地基】
+{positions}
+
+【本卷指令】
+改寫等級：{level}
+{focus}
+
+【本節全文（脈絡用，不要整篇輸出）】
+{context}
+
+【要你改寫的片段——就是上面全文裡的第 {ci}/{ctotal} 塊】
+{chunk}
+
+請只改寫這一塊，並只輸出這一塊的 HTML。凡與新地基牴觸的論證一律改掉；
+未被指令點到但仍與新地基一致的段落，保留原樣或僅作語句層級的順稿。
+輸出必須是完整的 HTML 元素（每個 <p> 都要閉合），數量可以與原塊不同，
+但總篇幅不得少於原塊。不要輸出這一塊以外的內容，不要加 markdown 圍籬。"""
+
+
+# ---------------------------------------------------------------- 帳本
+
+def load_ledger() -> dict[str, dict]:
+    done = {}
+    if LEDGER.exists():
+        for line in LEDGER.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                rec = json.loads(line)
+                done[f"{rec['book']}#{rec['idx']}"] = rec
+    return done
+
+
+def append_ledger(rec: dict) -> None:
+    LEDGER.parent.mkdir(parents=True, exist_ok=True)
+    with LEDGER.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+# ---------------------------------------------------------------- 主流程
+
+def plain(html: str) -> str:
+    return TAG_RE.sub("", html)
+
+
+VOID = {"br", "hr", "img", "input", "meta", "link", "source", "track",
+        "wbr", "col", "area", "base", "embed", "param"}
+TAGPOS_RE = re.compile(r"<(/?)([a-zA-Z0-9]+)[^>]*?(/?)>")
+
+
+def top_level_blocks(inner: str) -> list[str]:
+    """把一節的內容切成最外層的元素（<p>、<h3>、<div class="chapter-fable">…）。
+    用深度計數而非正則配對——章首故事引子是巢狀 div，正則的 .*?</div> 會切錯。"""
+    blocks, depth, start = [], 0, None
+    for m in TAGPOS_RE.finditer(inner):
+        closing, name, selfclose = m.group(1), m.group(2).lower(), m.group(3)
+        if name in VOID or selfclose:
+            continue
+        if not closing:
+            if depth == 0:
+                start = m.start()
+            depth += 1
+        else:
+            depth -= 1
+            if depth == 0 and start is not None:
+                blocks.append(inner[start:m.end()])
+                start = None
+    return blocks
+
+
+def chunk_blocks(blocks: list[str], budget: int = 2200) -> list[list[int]]:
+    """把可改寫的區塊編組，每組正文不超過 budget 字——輸出上限 8192 token，
+    留足餘裕免得中途被截斷。"""
+    groups, cur, size = [], [], 0
+    for i, b in enumerate(blocks):
+        n = len(plain(b))
+        if cur and size + n > budget:
+            groups.append(cur)
+            cur, size = [], 0
+        cur.append(i)
+        size += n
+    if cur:
+        groups.append(cur)
+    return groups
+
+
+def rewrite_section(book, spec, positions, section, idx, name, args):
+    """回 (新的 section HTML, 用到的引擎集合)；失敗回 (None, 原因)。"""
+    inner = section[len('<section class="chapter">'):-len('</section>')]
+    blocks = top_level_blocks(inner)
+    if not blocks:
+        return None, "切不出區塊"
+
+    # h2 與章首故事引子原樣穿過去，不送給模型——七月那批成果不冒險
+    frozen = {i for i, b in enumerate(blocks)
+              if b.lstrip().startswith(('<h2', '<div class="chapter-fable"'))}
+    editable = [i for i in range(len(blocks)) if i not in frozen]
+    groups = chunk_blocks([blocks[i] for i in editable])
+    # groups 的索引是 editable 的位置，換回 blocks 的真索引
+    groups = [[editable[j] for j in g] for g in groups]
+
+    context = plain(inner)[:12000]
+    focus = "\n".join(f"- {x}" for x in spec["focus"])
+    cache = WORK / "chunks"
+    cache.mkdir(parents=True, exist_ok=True)
+    engines = set()
+
+    for ci, g in enumerate(groups, start=1):
+        cf = cache / f"{book}_{idx}_{ci}.html"
+        chunk = "\n".join(blocks[i] for i in g)
+        if cf.exists():
+            out = cf.read_text(encoding="utf-8")
+            print(f"      · 塊 {ci}/{len(groups)} 用快取", flush=True)
+        else:
+            prompt = TASK.format(title=spec["title"], book=book, name=name,
+                                 positions=positions, level=spec["level"], focus=focus,
+                                 context=context, ci=ci, ctotal=len(groups), chunk=chunk)
+            t0 = time.time()
+            try:
+                out, engine = llm(SYSTEM, prompt)
+            except Exception as e:  # noqa: BLE001
+                return None, f"塊 {ci}/{len(groups)}：{e}"
+            engines.add(engine)
+            out = FENCE_RE.sub("", out).strip()
+            if len(plain(out)) < len(plain(chunk)) * 0.7:
+                return None, (f"塊 {ci}/{len(groups)} 縮水到 "
+                              f"{len(plain(out)):,}／{len(plain(chunk)):,} 字")
+            if out.count("<") < 2:
+                return None, f"塊 {ci}/{len(groups)} 不像 HTML"
+            cf.write_text(out, encoding="utf-8")
+            print(f"      · 塊 {ci}/{len(groups)} ✓ {engine} "
+                  f"{len(plain(chunk)):,}→{len(plain(out)):,} 字 {time.time() - t0:.0f}s",
+                  flush=True)
+            time.sleep(4)
+        for k, i in enumerate(g):
+            blocks[i] = out if k == 0 else ""
+
+    rebuilt = '<section class="chapter">' + "\n".join(b for b in blocks if b) + "</section>"
+    if 'data-fable-title' in section and 'data-fable-title' not in rebuilt:
+        return None, "章首故事引子掉了"
+    if len(plain(rebuilt)) < len(plain(section)) * 0.75:
+        return None, (f"整節縮水到 {len(plain(rebuilt)):,}／{len(plain(section)):,} 字")
+    return rebuilt, "+".join(sorted(engines)) or "cache"
+
+
+def rewrite_book(book: str, spec: dict, positions: str, args) -> None:
+    path = BOOKS / f"{book}.html"
+    if not path.exists():
+        print(f"  ✗ 找不到 {path}")
+        return
+
+    BACKUP.mkdir(parents=True, exist_ok=True)
+    bak = BACKUP / f"{book}.html"
+    if not bak.exists():
+        shutil.copy2(path, bak)
+
+    done = load_ledger()
+    attempted = 0
+
+    while True:
+        parts = SECTION_RE.split(path.read_text(encoding="utf-8"))
+        todo = None
+        for i, part in enumerate(parts):
+            if not part.startswith('<section class="chapter">'):
+                continue
+            if done.get(f"{book}#{i}", {}).get("ok"):
+                continue
+            todo = i
+            break
+        if todo is None:
+            print(f"  · {book} 全節完成")
+            return
+        if args.limit and attempted >= args.limit:
+            return
+        attempted += 1
+
+        part = parts[todo]
+        h2 = H2_RE.search(part)
+        name = plain(h2.group(1)).strip() if h2 else "（無標題節）"
+        print(f"  → {book} [{todo}] {name[:30]}（原 {len(plain(part)):,} 字）", flush=True)
+
+        if args.dry_run:
+            blocks = top_level_blocks(part[len('<section class="chapter">'):-len('</section>')])
+            print(f"      [dry-run] {len(blocks)} 區塊 → "
+                  f"{len(chunk_blocks(blocks))} 塊，未送出")
+            done[f"{book}#{todo}"] = {"ok": True}
+            continue
+
+        t0 = time.time()
+        rebuilt, info = rewrite_section(book, spec, positions, part, todo, name, args)
+        rec = {"book": book, "idx": todo, "name": name,
+               "at": datetime.now(timezone.utc).isoformat()}
+        if rebuilt is None:
+            print(f"      ✗ {info}")
+            rec.update(ok=False, err=info[:300])
+            append_ledger(rec)
+            done[f"{book}#{todo}"] = rec
+            continue
+
+        parts[todo] = rebuilt
+        path.write_text("".join(parts), encoding="utf-8")
+        rec.update(ok=True, engine=info, chars_before=len(plain(part)),
+                   chars_after=len(plain(rebuilt)), secs=round(time.time() - t0, 1))
+        append_ledger(rec)
+        done[f"{book}#{todo}"] = rec
+        print(f"      ✓ {info} · {len(plain(part)):,}→{len(plain(rebuilt)):,} 字 · "
+              f"{time.time() - t0:.0f}s", flush=True)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--book", help="只跑這一卷（M1/E2/V3…）")
+    ap.add_argument("--all", action="store_true", help="十五卷全跑")
+    ap.add_argument("--limit", type=int, default=0, help="每卷最多改幾節（0＝不限）")
+    ap.add_argument("--dry-run", action="store_true", help="只組 prompt 不送出")
+    args = ap.parse_args()
+
+    _load_env()
+    global GEMINI_KEYS, NVIDIA_KEYS
+    GEMINI_KEYS = _find_keys(("GEMINI_API_KEY", "Gemini_API_Key", "GOOGLE_API_KEY"))
+    NVIDIA_KEYS = _find_keys(("NVIDIA_API_KEY", "NVIDIA_API_Key", "NVAPI_KEY"))
+    if not args.dry_run and not GEMINI_KEYS:
+        sys.exit("找不到 GEMINI_API_KEY，停。")
+    print(f"引擎：Gemini {GEMINI_MODEL} × {len(GEMINI_KEYS)} key"
+          f"（備援 NVIDIA × {len(NVIDIA_KEYS)}）\n")
+
+    positions = (HERE / "positions.md").read_text(encoding="utf-8")
+    directives = json.loads((HERE / "directives.json").read_text(encoding="utf-8"))
+
+    order = [b for b in directives if not b.startswith("_")]
+    if args.book:
+        order = [args.book]
+    elif not args.all:
+        sys.exit("要嘛 --book <卷>，要嘛 --all。")
+
+    for book in order:
+        spec = directives.get(book)
+        if not spec:
+            print(f"✗ directives.json 沒有 {book}")
+            continue
+        print(f"【{book}《{spec['title']}》 — {spec['level']}】", flush=True)
+        rewrite_book(book, spec, positions, args)
+        print()
+
+
+if __name__ == "__main__":
+    main()
