@@ -111,10 +111,16 @@ def test_doc_type_themes_cover_the_seven_bibliography_sections():
     assert lr.SINOGRAPHIC_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
         | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS | lr.WORLD_RELIGIONS_LABELS)
-    assert lr.SECTION_LABELS == (
+    # 《神學研究宣言》以十二章章目為主題軸，同樣不得與其他家族相撞
+    assert lr.MANIFESTO_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
         | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS
         | lr.WORLD_RELIGIONS_LABELS | lr.SINOGRAPHIC_LABELS)
+    assert len(lr.MANIFESTO_LABELS) == 12
+    assert lr.SECTION_LABELS == (
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+        | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS
+        | lr.WORLD_RELIGIONS_LABELS | lr.SINOGRAPHIC_LABELS | lr.MANIFESTO_LABELS)
 
 
 def test_parse_review_report_assigns_book_survey_section_at_h2_level():

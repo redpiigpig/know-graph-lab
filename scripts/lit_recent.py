@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-"""兩本改寫計畫的「近年中外重要研究」——原論文書目之外要補的那一批。
+"""寫作計畫的「近年中外重要研究」——原有書目之外要補的那一批。
+
+原本只服務兩本改寫計畫（碩論與學士論文），2026-09 加入《神學研究宣言》：那本
+還沒有正文，需要的不是「補書目」而是「照十二章章目各建一座資料庫」，所以它的
+每一組查詢就是一章，topic 直接寫章名，撈回來按 topic 分群即是分章書目。
 
 外文走 OpenAlex（免金鑰、有被引數可排重要性）。
 🚨 不要用 OpenAlex 的 `search=`：那是模糊全文檢索，查「Taiwanese Buddhist nuns」
@@ -39,6 +43,14 @@ ANCHORS = {
          "protestant", "pentecostal", "charismatic christian", "presbyterian",
          "catholic", "gospel", "theolog"],
     ],
+    # 這本談的是學科本身，題材橫跨全部宗教，收窄不到某一傳統或某一地域；
+    # 錨詞只求「題名真的在講宗教／神學這一行」，把生態學的 sacred grove、
+    # 管理學的 ritual 那類同形詞擋掉就夠。
+    "theological-studies-manifesto": [
+        ["theolog", "religio", "sacred", "divine", "interreligious", "interfaith",
+         "god", "spiritual", "faith", "ritual", "myth", "secular", "church",
+         "buddhis", "islam", "christian", "hindu", "pilgrim", "mystic"],
+    ],
 }
 
 # 地域條件：題名不一定寫得出地名，這一項核題名＋摘要
@@ -62,6 +74,33 @@ QUERIES = {
         ("長老教會", "(presbyterian AND taiwan)"),
         ("靈恩與五旬節運動", "((pentecostal OR charismatic) AND (taiwan OR chinese))"),
         ("在台宣教史", "((missionary OR mission) AND taiwan AND christianity)"),
+    ],
+    # 十二組＝十二章。topic 就是章名，之後直接當研究回顧的 theme。
+    "theological-studies-manifesto": [
+        ("一　神學為何需要第二次出發",
+         "(theology AND (discipline OR method OR methodology) AND (crisis OR future OR rethinking OR reimagining))"),
+        ("二　神學、宗教學與公共大學",
+         "(theology AND \"religious studies\" AND (university OR academy OR discipline OR curriculum))"),
+        ("三　「神聖」作為開放而有爭議的研究對象",
+         "((sacred OR sacrality OR holy) AND (category OR concept OR construction OR critique) AND religion)"),
+        ("四　觀看者的旅程：從城邦見證到跨宗教方法",
+         "(religion AND (insider OR outsider OR reflexivity OR positionality OR \"participant observation\") AND (method OR fieldwork))"),
+        ("五　神學現象學：臨在、缺席與不可掌握",
+         "((\"phenomenology of religion\" OR \"theological phenomenology\") OR (apophatic AND theology) OR (theology AND (presence OR absence OR givenness)))"),
+        ("六　神學敘事學：人如何住進神聖故事",
+         "((narrative AND theology) OR (myth AND ritual AND (narrative OR story)) AND religion)"),
+        ("七　神學人類學：從跨文化現象到可修正命題",
+         "((\"anthropology of christianity\" OR \"anthropology of religion\" OR \"ethnographic theology\" OR \"theological anthropology\") AND (method OR comparison OR fieldwork OR ethnography))"),
+        ("八　神學心理學：宗教經驗、療癒與創傷",
+         "((\"psychology of religion\" OR \"religious experience\" OR \"religious trauma\" OR \"spiritual abuse\") AND (conversion OR healing OR trauma OR mystical OR wellbeing))"),
+        ("九　神學社會學：制度、權力與反抗",
+         "(religion AND (institution OR authority OR power OR resistance) AND (sociology OR movement OR politics))"),
+        ("十　比較神學：越界、深讀與回返",
+         "((\"comparative theology\" OR \"interreligious theology\" OR \"theology of religions\" OR \"scriptural reasoning\") AND (method OR dialogue OR learning OR hermeneutic))"),
+        ("十一　世俗、無神論與非人格神傳統中的神學問題",
+         "((atheism OR secularity OR nontheistic OR \"buddhist theology\" OR humanism) AND (theology OR ultimate OR transcendence OR sacred))"),
+        ("十二　神學研究所：課程、田野與公共責任",
+         "((\"theological education\" OR \"religious education\") AND (curriculum OR pedagogy OR \"public theology\" OR interreligious))"),
     ],
 }
 

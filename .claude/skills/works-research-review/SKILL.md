@@ -158,6 +158,48 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **狀態（2026-06-24 結案）**：🎉 **全 15 卷英文＋中文書目皆完成，約 663 筆**——M1/M2/M3、E1/E2/E3、O1/O2/O3、V1/V2/V3、B1/B2/B3 五系列。report 在 `scripts/data/lit_review_genesis_{<BID>}.md`(+`_zh`)，皆 dry-parse `DUP=[]` 過、commit 在 master。**書目層結案**。⚠️ 跨領域同 ref_key 一卷內只留一筆（跨卷重覆＝允許）；作者不確定寧缺。新章/新書代擬內容尚未回填 C-xxxxx。
 - **剩餘＝全文逐段中譯（選配，已交辦 Codex）**：見上「全文層」。2026-06-24 嘗試過夜跑時 Gemini/NVIDIA/Sonnet **三引擎全 429（帳號層級限流）**，故停手改交 Codex 用 `--engine haiku`（Max 獨立池）或限流退去後 `--engine sonnet --resume`。
 
+## 神學研究宣言：分章研究資料庫（book_id=ch01…ch12，2026-09-06）
+
+`/works/theological-studies-manifesto`（《神學研究宣言——跨宗教地研究神聖》，kind=book）
+與創生哲學那套**同型但反向**：創生是「已有正文、補最新研究來改寫」，這本是**正文一字未寫**，
+研究回顧的用途是「照十二章章目先把每一章的底本備齊」。所以：
+
+- **theme＝章目本身**。`lit_review.py` `MANIFESTO_THEMES` 十二筆，label 是「一　神學為何需要第二次出發」
+  這種「中文數字＋全形空格＋章名」；`book_id` 另存 `ch01`…`ch12`，`display_order` 給 `700+章數×10`。
+  /works 專案頁的研究回顧是**按 theme 分組**（不吃 bookId），所以章名放 theme 才看得到分章。
+- **兩批來源分工**：既有 30 篇開放取用論文（已全文中譯，`fulltext_status='translated'`）是「這學科最近在期刊上怎麼吵」，
+  重新歸章即可；新策展的 110 筆專書是「這一章非讀不可的底本」，`--all-unavailable` 只入書目層。
+  🚨 **兩批會撞題但 ref_key 撞不上**（DB 收的題名帶副標、策展寫的沒有 → slug 不同 → 變成兩筆近似重複）。
+  入庫前先按「作者＋年」比對一遍，重複的從 md 拿掉、改去歸章既有那筆，別讓 upsert 把 `translated` 洗成 `pending`。
+- **`立場：` 欄寫「這本書在這一章要幹什麼」**，不是學界評價。寫作時照這一欄就知道該翻哪一本。
+- **🚨 欄位要頂格**。`parse_entry_block` 的正規式是 `^語言：`，寫成 `- 語言：` 會**靜靜落空**——
+  110 筆 language 全變 `other`、`立場`／`摘要` 全空，而 seed 照樣印「✓ upserted 110」。入庫後一定要回查一次
+  language 分佈才看得出來。（已犯：修好重 seed 時 `book_id=''` 又插了一份，得先刪掉語言為 `other` 的舊批再歸章。）
+
+### 🚨 策展書目一律先核實再入庫 —— `scripts/manifesto_biblio_verify.py`
+
+憑領域知識策展的書目，**每一筆的年份、出處、甚至「這本書存不存在」都還沒有外部依據**；
+書目寫錯不像程式會報錯，它會一路安靜長到正文的註腳裡。所以入庫前跑三段查核
+（OpenAlex → Crossref → Open Library，先命中先算），結果分四欄印出交人判讀，不自動改任何一筆：
+
+- **版本年份不同**佔大宗且多半**不是錯**——索引回的是再版、英譯或選集重刊（Otto 1917→2023 重印、
+  涂爾幹 1912→1991 版、韋伯→2014）。首版年以報告為準。
+- **🚨 查詢失敗不可吞成「查無」**。三個庫流量一大就回 429／503，空結果與「這本書不存在」在下游長得一模一樣——
+  第一版就是這樣把 Levinas《Totalité et infini》報成查無此書。`_get()` 現在退避重試，重試完仍失敗就拋
+  `LookupFailed`，那一筆標「查詢失敗」而非「查無」。
+- **🚨 題名比對要剝掉冠詞**。各庫編目慣例不一（Open Library 收「Power of the Sacred」，報告寫「The Power of…」），
+  不剝冠詞前綴比對整條失效，Joas 與 Comte-Sponville 就是這樣被誤判成查無。主標與全題兩式都要試。
+- 真正查無的多半是**非英語原版與古典文獻**（偽狄奧尼修斯、法文／德文初版），屬正常，不必刪。
+
+### 取源與獵書
+
+- **OpenAlex 逐章掃**：`lit_recent.py` 加了 `theological-studies-manifesto` 組，十二個查詢＝十二章，
+  topic 直接寫章名。⚠️ 這種**方法論題目用被引數排序的效果很差**——第十二章整組被印尼 PAI 課程論文洗版，
+  329 筆裡真正可用的不到三成。核心文獻是專書與小眾期刊，撈不到，所以主力還是人工策展。
+- **獵書**：`zlib_wanted_from_bibliography.py` 會把這批書目變成 z-lib 獵表
+  （`biblio-theological-studies-manifesto`，優先序 40＝書籍寫作），交每日排程消化。
+  2026-09-06 實測：策展的 110 本，5,060 本館藏**一本都沒有**，全部要獵。
+
 ## 創生哲學叢書：新增／改章 + 對話出處回填（2026-07-07）
 
 叢書 15 卷正文＝**HTML 檔** `public/content/works/genesis/<BID>.html`（B1/E1/M1/O1/V1…）；書目 index＝`public/content/works/genesis-philosophy-books.json`（groups→books，每本有 `nChapters`）。**reader 目錄由正文 `<h2>` 自動生成**（[pages/works/[slug]/book/[bid].vue](../../../pages/works/) 用 regex 注入 `id` 建 TOC＋TTS 分章）；`nChapters` 只是封面「N 章」標籤。

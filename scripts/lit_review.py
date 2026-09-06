@@ -121,10 +121,31 @@ SINOGRAPHIC_THEMES: list[dict] = [
 ]
 SINOGRAPHIC_LABELS = {t["label"] for t in SINOGRAPHIC_THEMES}
 
+
+# ── 神學研究宣言（book, book_id 'ch01'…'ch12'）：這本還沒有正文，研究回顧不是
+# 「補書目」而是照十二章章目各建一座資料庫，所以主題軸直接就是章目本身。
+# 章名前綴中文數字＋全形空格，讓 display_order 之外還看得出章序。
+MANIFESTO_THEMES: list[dict] = [
+    {"key": "ma_ch01", "label": "一　神學為何需要第二次出發",             "order": 710},
+    {"key": "ma_ch02", "label": "二　神學、宗教學與公共大學",             "order": 720},
+    {"key": "ma_ch03", "label": "三　「神聖」作為開放而有爭議的研究對象", "order": 730},
+    {"key": "ma_ch04", "label": "四　觀看者的旅程：從城邦見證到跨宗教方法", "order": 740},
+    {"key": "ma_ch05", "label": "五　神學現象學：臨在、缺席與不可掌握",   "order": 750},
+    {"key": "ma_ch06", "label": "六　神學敘事學：人如何住進神聖故事",     "order": 760},
+    {"key": "ma_ch07", "label": "七　神學人類學：從跨文化現象到可修正命題", "order": 770},
+    {"key": "ma_ch08", "label": "八　神學心理學：宗教經驗、療癒與創傷",   "order": 780},
+    {"key": "ma_ch09", "label": "九　神學社會學：制度、權力與反抗",       "order": 790},
+    {"key": "ma_ch10", "label": "十　比較神學：越界、深讀與回返",         "order": 800},
+    {"key": "ma_ch11", "label": "十一　世俗、無神論與非人格神傳統中的神學問題", "order": 810},
+    {"key": "ma_ch12", "label": "十二　神學研究所：課程、田野與公共責任", "order": 820},
+]
+MANIFESTO_LABELS = {t["label"] for t in MANIFESTO_THEMES}
+
 # Any header recognised as a section divider (theme assignment).
 SECTION_LABELS = (THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS
                   | BOOK_SURVEY_LABELS | GENESIS_THEME_LABELS
-                  | WORLD_RELIGIONS_LABELS | SINOGRAPHIC_LABELS)
+                  | WORLD_RELIGIONS_LABELS | SINOGRAPHIC_LABELS
+                  | MANIFESTO_LABELS)
 
 
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────
