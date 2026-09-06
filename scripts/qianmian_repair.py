@@ -70,6 +70,10 @@ def repair(no):
     # 模型偶爾把 prompt 的段落標籤抄進正文（〔素材三〕【素材一：書摘】），印出去就穿幫
     body, leaked = re.subn(r"〔素材[^〕]{0,8}〕|【素材[^】]{0,12}】", "", body)
     junk += leaked
+    # 模型偶爾用 markdown 斜體標音譯詞（*Mayim*）。Word 與網站都會原樣印出星號，
+    # 全書只有個位數，直接去掉星號留字。
+    body, stars = re.subn(r"(?<![\w*])\*([^*\n]{1,30})\*(?![\w*])", r"\1", body)
+    junk += stars
     out = body.rstrip() + "\n\n---\n\n" + "\n".join(
         f"[^{i}]: {t}" for i, t in enumerate(notes, 1)) + "\n"
     f.write_text(out, encoding="utf-8")
