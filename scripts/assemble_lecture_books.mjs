@@ -16,7 +16,13 @@ const BOOKS = [
   { slug: 'world-religions-intro', dir: 'chapters-wr2', out: 'WR2.html', n: 16 },
   { slug: 'sinographic-literature', out: 'SL1.html', n: 16 },
   { slug: 'christianity-intro', out: 'CH1.html', n: 16 },
-  { slug: 'dialogical-theology', dir: 'chapters-d1', out: 'D1.html' },   // 卷一 天人論（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d1', out: 'D1.html' },   // 對話神學 卷一（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d2', out: 'D2.html' },   // 對話神學 卷二（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d3', out: 'D3.html' },   // 對話神學 卷三（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d4', out: 'D4.html' },   // 對話神學 卷四（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d5', out: 'D5.html' },   // 對話神學 卷五（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d6', out: 'D6.html' },   // 對話神學 卷六（撰寫中）
+  { slug: 'dialogical-theology', dir: 'chapters-d7', out: 'D7.html' },   // 對話神學 卷七（撰寫中）
 ]
 
 // WR 各章地圖（章號 → 圖檔與圖說）

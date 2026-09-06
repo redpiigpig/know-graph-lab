@@ -6,9 +6,51 @@
   {
    "id": "D1",
    "title": "卷一　天人論",
-   "subtitle": "神觀與人觀是同一個問題的兩面——全十二章規劃：立主張（1）／神這一端及其演化（2–7）／人這一端及其演化（8–11）／收束（12）；目前第一章",
+   "subtitle": "神／人的張力——對應基督教系統神學的上帝論與人論",
    "file": "/content/works/dialogical-theology/D1.html",
-   "nChapters": 1
+   "nChapters": 12
+  },
+  {
+   "id": "D2",
+   "title": "卷二　宇宙論",
+   "subtitle": "物／我的張力——對應創造論",
+   "file": "/content/works/dialogical-theology/D2.html",
+   "nChapters": 12
+  },
+  {
+   "id": "D3",
+   "title": "卷三　真理論",
+   "subtitle": "理／真的張力——對應啟示論",
+   "file": "/content/works/dialogical-theology/D3.html",
+   "nChapters": 12
+  },
+  {
+   "id": "D4",
+   "title": "卷四　聖者論",
+   "subtitle": "聖／俗的張力——對應基督論",
+   "file": "/content/works/dialogical-theology/D4.html",
+   "nChapters": 12
+  },
+  {
+   "id": "D5",
+   "title": "卷五　救度論",
+   "subtitle": "救／度的張力——對應救恩論",
+   "file": "/content/works/dialogical-theology/D5.html",
+   "nChapters": 12
+  },
+  {
+   "id": "D6",
+   "title": "卷六　教團論",
+   "subtitle": "教／社的張力——對應教會論",
+   "file": "/content/works/dialogical-theology/D6.html",
+   "nChapters": 12
+  },
+  {
+   "id": "D7",
+   "title": "卷七　終末論",
+   "subtitle": "生／死的張力——對應終末論",
+   "file": "/content/works/dialogical-theology/D7.html",
+   "nChapters": 12
   }
  ]
 }
