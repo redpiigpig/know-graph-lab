@@ -446,7 +446,7 @@
 
 【Viney, D. & Shields, G.】（2025）〈Process Theism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：一　在場世界論的三角色：重讀「神造人與人造神」
+所屬面向：一　臨在世界論的三角色：重讀「神造人與人造神」
 立場：支持
 摘要：歷程神論承接懷海德與哈茨宏，主張神具「雙極」結構——其「後得本性」隨世界事件而被影響、被改變，神與受造界處於相互生成、彼此構成的關係中，神以勸服而非強制的方式吸引萬有趨向更高和諧。此一「神與世界相互becoming」的圖像，與本節「神人互構」、神以創世者／觀世者／住世者三角色與人共構世界的存有論主張高度同構，是最強盟友。
 > **全文**：[plato.stanford.edu/entries/process-theism](https://plato.stanford.edu/entries/process-theism/)
@@ -712,14 +712,14 @@
 
 【Zank, M. & Braiterman, Z.】（2025）〈Martin Buber〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：一　在場世界論的三角色：重讀「神造人與人造神」
+所屬面向：一　臨在世界論的三角色：重讀「神造人與人造神」
 立場：補充
-摘要：布伯《我與你》把人、物與神還原為「我—你」與「我—它」兩種基本關係，神作為「永恆的你」只在相遇與對話中臨在，永不可被對象化為「它」。此一「神只在關係中在場、不可被佔有」的洞見，旁證本節主體與神在在場世界論中互相成全、神不外於關係而臨在的論點。
+摘要：布伯《我與你》把人、物與神還原為「我—你」與「我—它」兩種基本關係，神作為「永恆的你」只在相遇與對話中臨在，永不可被對象化為「它」。此一「神只在關係中在場、不可被佔有」的洞見，旁證本節主體與神在臨在世界論中互相成全、神不外於關係而臨在的論點。
 > **全文**：[plato.stanford.edu/entries/buber](https://plato.stanford.edu/entries/buber/)
 
 【Gooch, T. & Frederick, B.】（2025）〈Ludwig Andreas Feuerbach〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：一　在場世界論的三角色：重讀「神造人與人造神」
+所屬面向：一　臨在世界論的三角色：重讀「神造人與人造神」
 立場：反例
 摘要：費爾巴哈《基督教的本質》主張神只是人「類本質」的異化投射，把人之完美屬性誤置於一外在神，因而從人自身抽離了這些屬性。此說把「人造神」推到極端的化約——神純為投射、毫無存有論實在，正是本節「神人互構（而非單向投射）」要超越的對立面，構成關鍵反例。
 > **全文**：[plato.stanford.edu/entries/ludwig-feuerbach](https://plato.stanford.edu/entries/ludwig-feuerbach/)

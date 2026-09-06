@@ -1,6 +1,6 @@
 # 創生哲學‧V3《世界理論》參考資料庫
 
-心識、藝術與虛構——世界的生成。依四領域（自然科學／心理學／哲學／宗教與神話）蒐集與本卷各章（在場世界論：潛生界意想界存在界／心為工畫師：唯識心理學與世界生成／藝術與文學作為世界創造／科幻電影動畫：意想界的工程學／結語世界理論在價值論中的位置）相關研究。優先經典／教科書級與公認文獻，前沿納入具代表性者。
+心識、藝術與虛構——世界的生成。依四領域（自然科學／心理學／哲學／宗教與神話）蒐集與本卷各章（臨在世界論：潛生界意想界存在界／心為工畫師：唯識心理學與世界生成／藝術與文學作為世界創造／科幻電影動畫：意想界的工程學／結語世界理論在價值論中的位置）相關研究。優先經典／教科書級與公認文獻，前沿納入具代表性者。
 
 ## 自然科學
 
@@ -13,23 +13,23 @@
 
 【Friston, K.】（2010）〈The free-energy principle: a unified brain theory?〉，《Nature Reviews Neuroscience, 11(2)》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：支持
 摘要：將知覺、學習、行動統一為「最小化變分自由能（預測誤差）」的單一原則，主張腦持續維護一個關於世界的生成模型，並透過行動使世界趨近模型。為本卷「世界由心識生成、心與境互相校準」提供最具雄心的物理—資訊框架。
 > **全文**：[DOI 10.1038/nrn2787](https://doi.org/10.1038/nrn2787)
 
 【Clark, A.】（2013）〈Whatever next? Predictive brains, situated agents, and the future of cognitive science〉，《Behavioral and Brain Sciences, 36(3)》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：支持
-摘要：系統論證大腦本質是「預測機器」，以階層生成模型不斷以自上而下預期去匹配感官輸入，知覺即受控的內在建構。哲學上呼應本卷「在場世界是潛生與意想共構之物」，是預測處理典範最具影響力的綜論。
+摘要：系統論證大腦本質是「預測機器」，以階層生成模型不斷以自上而下預期去匹配感官輸入，知覺即受控的內在建構。哲學上呼應本卷「臨在世界是潛生與意想共構之物」，是預測處理典範最具影響力的綜論。
 > **全文**：[DOI 10.1017/S0140525X12000477](https://doi.org/10.1017/S0140525X12000477)
 
 【Seth, A. K., Suzuki, K. & Critchley, H. D.】（2012）〈An interoceptive predictive coding model of conscious presence〉，《Frontiers in Psychology, 2: 395》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：支持
-摘要：提出「在場感（presence）」源自腦對身體內感（interoception）訊號的預測與校正，知覺乃「受控的幻覺（controlled hallucination）」。直接對應本卷「存在界／在場世界」由心識生成的核心命題，並把自我感也納入建構過程。
+摘要：提出「在場感（presence）」源自腦對身體內感（interoception）訊號的預測與校正，知覺乃「受控的幻覺（controlled hallucination）」。直接對應本卷「存在界／臨在世界」由心識生成的核心命題，並把自我感也納入建構過程。
 > **全文**：[PMC3254200](https://pmc.ncbi.nlm.nih.gov/articles/PMC3254200/)
 
 【Botvinick, M. & Cohen, J.】（1998）〈Rubber hands 'feel' touch that eyes see〉，《Nature, 391(6669)》
@@ -92,14 +92,14 @@
 
 【Singer, J. L.】（1966）〈Daydreaming: An Introduction to the Experimental Study of Inner Experience〉，《Random House》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：補充
 摘要：開創性地把白日夢、幻想與內在意象流帶入實驗心理學，建立內在經驗可被系統研究的方法論。為本卷「意想界」作為一種真實心理場域提供經驗科學奠基。
 > **全文**：[Internet Archive](https://archive.org/details/daydreamingintro0000sing)
 
 【Hobson, J. A. & McCarley, R. W.】（1977）〈The Brain as a Dream State Generator: An Activation-Synthesis Hypothesis of the Dream Process〉，《American Journal of Psychiatry》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：補充
 摘要：提出夢源於 REM 睡眠腦幹活化、由前腦「綜合」成敘事的神經生理模型，首度以神經生物學取代佛洛伊德夢論。為本卷「夢作為心識自發生成世界」提供生理學版本，亦可作對話張力。
 > **全文**：[PubMed 21570](https://pubmed.ncbi.nlm.nih.gov/21570/)
@@ -150,14 +150,14 @@
 
 【Lewis, D.】（1986）〈On the Plurality of Worlds〉，《Blackwell》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：支持
-摘要：路易斯的模態實在論主張一切可能世界皆為與現實世界同等具體實存的整體，可能性即量化於諸世界。此論為本卷「在場世界論」之多層世界（潛生／意想／存在）提供最強形上學參照，把「世界的複數生成」推到實在論極端。
+摘要：路易斯的模態實在論主張一切可能世界皆為與現實世界同等具體實存的整體，可能性即量化於諸世界。此論為本卷「臨在世界論」之多層世界（潛生／意想／存在）提供最強形上學參照，把「世界的複數生成」推到實在論極端。
 > **全文**：[SEP: David Lewis's Metaphysics](https://plato.stanford.edu/entries/lewis-metaphysics/)
 
 【Menzel, C.】（2024）〈Possible Worlds〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：補充
 摘要：系統梳理可能世界從具體實在論到抽象主義（極大一致命題集合、狀態事態）的各種理論光譜。為本卷三界架構提供「世界作為抽象構造 vs 具體存在」的分析框架，補強潛生界與意想界的本體層次區分。
 > **全文**：[SEP: Possible Worlds](https://plato.stanford.edu/entries/possible-worlds/)
@@ -229,9 +229,9 @@
 
 【Vasubandhu（世親）著，Cook, F. 英譯】（4世紀）〈Viṃśatikā: Twenty Verses on Consciousness-Only〉，《Vijñaptimātratāsiddhi》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：支持
-摘要：唯識最簡要的原典，以「三界唯識」開篇，論證夢境與覺時所見同為心識顯現、無待外境。直接支撐本卷「在場世界」由心識構成、潛生與意想界皆非外在實有的論旨。
+摘要：唯識最簡要的原典，以「三界唯識」開篇，論證夢境與覺時所見同為心識顯現、無待外境。直接支撐本卷「臨在世界」由心識構成、潛生與意想界皆非外在實有的論旨。
 > **全文**：[Twenty Verses (英譯 PDF)](https://kokyohenkel.weebly.com/uploads/1/2/7/4/127410773/vasubandhu_-_vimshatika__with_vs_comment___cook_.pdf)
 
 【Hamar, I. & Jones, N.】（2022）〈Huayan Buddhism〉，《Stanford Encyclopedia of Philosophy》
@@ -264,7 +264,7 @@
 
 【Eliade, M.】（1958）〈The Prestige of the Cosmogonic Myth〉，《Diogenes, 6(23)》
 語言：英文
-所屬面向：在場世界論（潛生界、意想界、存在界）
+所屬面向：臨在世界論（潛生界、意想界、存在界）
 立場：補充
 摘要：論證一切神話本質上皆為宇宙創生神話，儀式與述說使人「與創世同代」、重返世界生成的原初時刻。為本卷「世界生成」提供宗教現象學視角：世界並非一次造畢，而是經由神聖敘事不斷重新生成。
 > **全文**：[Sage: Diogenes (DOI)](https://journals.sagepub.com/doi/abs/10.1177/039219215800602301)

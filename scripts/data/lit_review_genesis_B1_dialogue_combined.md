@@ -338,21 +338,21 @@
 
 【Wheeler, M.】（2020）〈Martin Heidegger〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：在場世界論三層：存有者的棲居結構
+所屬面向：臨在世界論三層：存有者的棲居結構
 立場：支持
 摘要：闡釋海德格「在世存有」與上手（ready-to-hand）／在手（present-at-hand）兩種存有模式，主張存有者總在實踐脈絡與居所中被給出。為本節「存有者依其棲居層次（潛生／意想／存在）而有不同存有方式」提供現象學盟友。
 > **全文**：[SEP: Martin Heidegger](https://plato.stanford.edu/entries/heidegger/)
 
 【Thomasson, A. L.】（1999）〈Fiction and Metaphysics〉，《Cambridge University Press》
 語言：英文
-所屬面向：在場世界論三層：存有者的棲居結構
+所屬面向：臨在世界論三層：存有者的棲居結構
 立場：補充
 摘要：提出「人造物理論」，主張虛構角色是依存於作者創作行為與文學作品的抽象人造物，與法律、交響曲同屬社會文化對象。為本節「意想界存有者依存於主體心智而棲居」提供強力旁證。
 > **全文**：[Fiction and Metaphysics (Cambridge)](https://www.cambridge.org/core/books/fiction-and-metaphysics/ACF647650A1EAEEC76274655080A002C)
 
 【Lewis, D.】（1986）〈On the Plurality of Worlds〉，《Blackwell》
 語言：英文
-所屬面向：在場世界論三層：存有者的棲居結構
+所屬面向：臨在世界論三層：存有者的棲居結構
 立場：反例
 摘要：路易斯的模態實在論主張一切可能世界與我們的世界一樣是「具體實在」、彼此時空孤立、地位平等。此「諸世界平權具體實在」觀直接反對本節將世界分為潛生／意想／存在三層、且存有者棲居層次有別的階層架構，構成 foil。
 > **全文**：[On the Plurality of Worlds (Wikipedia 概覽)](https://en.wikipedia.org/wiki/On_the_Plurality_of_Worlds)
