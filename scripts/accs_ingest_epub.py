@@ -221,8 +221,14 @@ def resolve_work(work: str) -> tuple[str, str]:
         # 規則推導；推不出來就保留英文
         for pat, tmpl in ((r'^Homilies? on (?:the )?(.+)$', '{}講道集'),
                           (r'^Commentary on (?:the )?(.+)$', '{}註釋'),
+                          (r'^Commentaries on (?:the )?(.+)$', '{}註釋'),
                           (r'^Sermons? on (?:the )?(.+)$', '{}講道集'),
-                          (r'^Fragments? on (?:the )?(.+)$', '{}殘篇')):
+                          (r'^Tractates? on (?:the )?(.+)$', '{}講義'),
+                          (r'^Explanations? (?:on|of) (?:the )?(.+)$', '{}詮釋'),
+                          (r'^Expositions? (?:on|of) (?:the )?(.+)$', '{}詮釋'),
+                          (r'^Fragments? on (?:the )?(.+)$', '{}殘篇'),
+                          # 「On X」照既有的 On Jeremiah → 論耶利米
+                          (r'^On (?:the )?(.+)$', '論{}')):
             mm = re.match(pat, title, re.I)
             if not mm:
                 continue
