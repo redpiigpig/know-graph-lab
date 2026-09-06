@@ -18,14 +18,8 @@
    否則一段話會連印四五遍。
 """
 import json
-import re
 import sys
 from pathlib import Path
-
-from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
-from docx.oxml.ns import qn
-from docx.shared import Cm, Pt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_proposal_docx import build as md_to_docx  # noqa: E402
@@ -33,7 +27,6 @@ from build_proposal_docx import build as md_to_docx  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "public/content/research-data/yiguandao"
 DEST = Path(r"G:/我的雲端硬碟/玄奘/博一上/研究助理")
-TRANSCRIPTS = Path(r"G:/我的雲端硬碟/資料/知識圖工作室/研究資料/國家檔案調閱/國史館/_轉出文字")
 TMP = ROOT / "output/yiguandao-docx"          # 中繼 markdown，不進版控
 
 COVER = """玄奘大學宗教與文化學系博士班
@@ -173,75 +166,6 @@ def biblio_md() -> str:
     return "\n".join(parts)
 
 
-# ──────────────────────────── 05 檔案全文 ────────────────────────────
-def transcript_docx(src: Path, title: str, meta: list[str]) -> None:
-    """逐字全文 → Word。不走 markdown：這批是公文的表格列，沒有標題階層可言。"""
-    doc = Document()
-    section = doc.sections[0]
-    section.page_height, section.page_width = Cm(29.7), Cm(21.0)
-    section.top_margin = section.bottom_margin = Cm(2.0)
-    section.left_margin = section.right_margin = Cm(2.0)
-    normal = doc.styles["Normal"]
-    normal.font.name = "Times New Roman"
-    normal.font.size = Pt(10.5)
-    normal.element.rPr.rFonts.set(qn("w:eastAsia"), "新細明體")
-
-    def para(text, *, size=10.5, bold=False, align=None, space=4):
-        p = doc.add_paragraph()
-        p.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
-        p.paragraph_format.space_after = Pt(space)
-        if align is not None:
-            p.alignment = align
-        run = p.add_run(text)
-        run.bold = bold
-        run.font.size = Pt(size)
-        run.font.name = "Times New Roman"
-        run._element.rPr.rFonts.set(qn("w:eastAsia"), "新細明體")
-        return p
-
-    para(title, size=16, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space=8)
-    for line in meta:
-        para(line, size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space=2)
-    para("", space=10)
-
-    page = re.compile(r"^0?\d{4,5}$")
-    recent: list[str] = []          # 最近幾列出現過的長段，用來壓跨列重複
-    for raw in src.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        # 🚨 合併儲存格的正文會重複兩次：同一列裡重複（欄位彼此相同），以及
-        #    連續數列都重複（同一份公文橫跨數列，每列都帶著整段正文）。實測
-        #    「據密報榆林一貫道盛行⋯」那一段連著出現五列。兩種都要壓，否則
-        #    一段話印五遍，讀的人根本找不到下一份公文從哪裡開始。
-        #    只壓 30 字以上的長段，短欄位（「由事」「密」「附件」）原樣留著；
-        #    比對範圍限最近 12 列，隔遠了再出現就當成真的重複引用，照印。
-        seen, cells = set(), []
-        for cell in (c.strip() for c in line.split("｜")):
-            if not cell or cell in seen:
-                continue
-            seen.add(cell)
-            if len(cell) >= 30 and cell in recent:
-                continue
-            cells.append(cell)
-        for cell in seen:
-            if len(cell) >= 30:
-                recent.append(cell)
-        del recent[:-60]
-        if not cells:
-            continue
-        text = "｜".join(cells)
-        if page.fullmatch(text):                      # 頁緣戳記自成一行，便於對頁
-            para(f"— {text} —", size=9, align=WD_ALIGN_PARAGRAPH.CENTER, space=6)
-            continue
-        para(text)
-
-    out = DEST / "05_檔案全文" / f"{src.stem}.docx"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    doc.save(out)
-    print(f"  {out.parent.name}/{out.name}")
-
-
 def main() -> None:
     DEST.mkdir(parents=True, exist_ok=True)
     print(f"→ {DEST}")
@@ -265,23 +189,6 @@ def main() -> None:
 
     print("04 引用書目")
     write_docx("04_鍾雲鶯論文引用書目", biblio_md())
-
-    print("05 檔案全文（勿外傳）")
-    transcript_docx(
-        TRANSCRIPTS / "勿外傳 國史館 捕鼠案.txt",
-        "〔勿外傳〕國防部「捕鼠案」逐字轉錄",
-        ["國家發展委員會檔案管理局　檔號 A305000000C/0054/0400/9502-2",
-         "原件標 0054/0400/9502-2（政治）　民國 36 年 9 月起至 54 年 10 月止",
-         "國防部政治作戰局 106 年 7 月 12 日國政保防第 1060006435 號註銷機密等級",
-         "頁緣戳記 02483–02568　供研究使用，不得公開流傳",
-         "※ 合併儲存格造成的重複段落已壓縮；未經壓縮的逐字原文見 Drive 上的 .txt"])
-    transcript_docx(
-        TRANSCRIPTS / "勿外傳 國史館 敵偽.txt",
-        "〔勿外傳〕行政院「敵偽組織及活動案（五）」逐字轉錄",
-        ["國史館　典藏號 014-060300-0073　民國 33 年至 36 年",
-         "行政院秘書長 104 年 1 月 7 日院臺檔字第 1040120288 號註銷機密等級",
-         "供研究使用，不得公開流傳",
-         "※ 合併儲存格造成的重複段落已壓縮；未經壓縮的逐字原文見 Drive 上的 .txt"])
 
 
 if __name__ == "__main__":
