@@ -19,6 +19,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -461,10 +462,16 @@ def take_lock() -> bool:
             pid = -1
         alive = False
         if pid > 0:
+            # 🚨 tasklist 的輸出是系統 ANSI codepage（這台是 Big5），
+            #    os.popen() 會拿 UTF-8 去解而直接 UnicodeDecodeError，
+            #    於是排程每一輪都在這裡崩掉、整批永遠不前進。要自己收 bytes。
             try:
-                out = os.popen(f'tasklist /FI "PID eq {pid}" /NH').read()
+                out = subprocess.run(
+                    ["tasklist", "/FI", f"PID eq {pid}", "/NH"],
+                    capture_output=True, timeout=30,
+                ).stdout.decode("utf-8", "replace")
                 alive = str(pid) in out
-            except OSError:
+            except (OSError, subprocess.SubprocessError):
                 alive = False
         if alive:
             print(f"另一輪還在跑（pid {pid}），這輪跳過。")
