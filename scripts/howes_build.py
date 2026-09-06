@@ -217,9 +217,38 @@ HOWES_PROMPT_TMPL = """你是日本近代基督教史的專業譯者，正在翻
 4. 保留 Markdown：以 `> ` 開頭的是引文區塊，譯完仍以 `> ` 開頭；`## ` 標題照留。
 5. 人名地名一律還原漢字，不音譯：Uchimura Kanzô→內村鑑三（單稱 Kanzô→鑑三、Uchimura→內村）、Nitobe Inazô→新渡戶稻造、Miyabe Kingo→宮部金吾、Niijima Jô→新島襄、Uemura Masahisa→植村正久、Ebina Danjô→海老名彈正、Tokutomi Sohô→德富蘇峰、Yanaihara Tadao→矢內原忠雄、Nanbara Shigeru→南原繁、Tsukamoto Toraji→塚本虎二、Fujii Takeshi→藤井武、Kurosaki Kôkichi→黑崎幸吉、Kanamori Tsûrin→金森通倫、Ônishi Hajime→大西祝、Inoue Tetsujirô→井上哲次郎、Sapporo→札幌、Hakodate→函館、Yokosuka→橫須賀、Yokohama→橫濱、Takasaki→高崎、Kashiwagi→柏木、Kyôto→京都、Ôsaka→大阪、Edo→江戶。
 6. 西方人名依教會史通用譯名：William S. Clark→克拉克、M.C. Harris→哈里斯、Julius H. Seelye→席利、Luther→路德、Calvin→加爾文、Carlyle→卡萊爾、Emerson→愛默生、Amherst (College)→安默斯特（學院）、Hartford→哈特福、New England→新英格蘭、Elwyn→艾爾文。
-7. 專名與術語鎖死：mukyôkai / Non-Church / No-Church→無教會（主義）、Sapporo Agricultural College→札幌農學校、Imperial Rescript on Education→教育敕語、the disrespect incident / lèse-majesté incident→不敬事件、First Higher School→第一高等中學校、Yorozu chôhô→《萬朝報》、Seisho no kenkyû / Biblical Study→《聖書之研究》、Second Coming movement→再臨運動、pacifism / non-war→非戰論、Sino-Japanese War→甲午戰爭、Russo-Japanese War→日俄戰爭、Meiji／Taishô／Shôwa→明治／大正／昭和、Diet→帝國議會、shogunate→幕府、Restoration→維新、han/clan→藩、samurai→武士、daimyô→大名、Christendom→基督教國、conversion→回心、providence→天意、church→教會、denomination→教派、sect→宗派、creed→信條、theology→神學、Bible study meeting→聖經研究會、lay→平信徒。
-8. 聖經人名地名書卷名依和合本；引用聖經的句子譯為和合本語體。
-9. 只輸出翻譯後的繁體中文。
+7. **專名層——一對一，不可改**：mukyôkai / Non-Church / No-Church→無教會（主義）、Sapporo Agricultural College→札幌農學校、Imperial Rescript on Education→教育敕語、the disrespect incident / lèse-majesté incident→不敬事件、First Higher School→第一高等中學校、Yorozu chôhô→《萬朝報》、Seisho no kenkyû / Biblical Study→《聖書之研究》、Second Coming movement→再臨運動、pacifism / non-war→非戰論、Sino-Japanese War→甲午戰爭、Russo-Japanese War→日俄戰爭、Meiji／Taishô／Shôwa→明治／大正／昭和、Diet→帝國議會、shogunate→幕府、Restoration→維新、han / clan→藩、samurai→武士、daimyô→大名、mission board→差會、missionary→宣教士（**不可用「傳教士」，也不可用日式的「宣教師」**）。
+8. **概念層——給你候選，按語境擇一，不要一詞一譯到底**。挑哪一個由「這一句在講什麼」決定，不是由哪個常見決定；同一段裡語意不同就可以用不同譯法：
+   ‧ Christendom→基督教世界（指西方基督教文明、諸基督教國家的整體）／基督教國度（指一個統轄性的政教秩序，尤其與「神的國」對舉時）
+   ‧ church→教會（信仰共同體或機構）／教堂（指建築物）／大公教會（大寫 the Church 指普世教會）
+   ‧ conversion→回心（內心轉變的過程，內村自己的用語）／歸信（改信基督教這件事）；convert (n.)→歸信者／信主的人
+   ‧ providence→天意／神的護理（神學論述中）
+   ‧ grace→恩典／恩寵（天主教語境）
+   ‧ sect→宗派／教派；帶貶義時→小宗派、宗門
+   ‧ denomination→教派／宗派
+   ‧ lay / layman→平信徒／在俗（與聖職相對時）
+   ‧ evangelist→佈道家（以此為業者）／傳福音的人（泛指）
+   ‧ Bible study meeting→聖經研究會（內村柏木聚會這類固定團體）／查經聚會（泛指）
+   ‧ heathen→異教徒／外邦人（聖經語體中）
+   ‧ deshi→弟子／門人／門下（依語氣）；sensei→先生（保留日式稱謂）／老師
+   ‧ the West→西方／西洋（明治語境）
+   ‧ independence→獨立／自立（講經濟上不靠人時）
+9. **日本事物的專有譯法——用錯就是史實錯誤，優先於其他規則**：
+   ‧ 日本君主一律「**天皇**」，**絕不可作「皇帝」**（Emperor Meiji→明治天皇、the Emperor→天皇）。
+     只有中國、羅馬、俄國、德意志等的君主才譯「皇帝」。
+   ‧ Crown Prince→皇太子（不作「太子」）；imperial court→朝廷；imperial household→皇室；
+     imperial portrait→御真影。
+   ‧ 佛教的 temple→**寺院／寺**；神道的 shrine→**神社**。兩者都**不作「廟」「寺廟」「廟宇」**
+     （那是漢人民間信仰的用語，用在日本會失真）。僧侶→僧；住持→住持。
+   ‧ daimyo／feudal lord→**大名**（不作「封建領主」）；藩主家臣之長→**家老**（不作「宰相」）；
+     內閣總理大臣→**首相**（不作「宰相」）。
+   ‧ 日本的**中央部會**才用「省」（文部省／外務省／內務省／農商務省／商工省）；
+     Ministry of Education→**文部省**，不可作「教育省」。日本的**地方行政區是「縣」不是「省」**；
+     provincial town→地方城市（不作「省城」）。
+   ‧ 其他照日本原詞：元老、華族、士族、藩士、廢藩置縣、帝國議會、貴族院、樞密院、
+     大政奉還、王政復古、御雇外國人。
+10. 聖經人名地名書卷名依和合本；引用聖經的句子譯為和合本語體。
+11. 只輸出翻譯後的繁體中文。
 
 英文原文：
 {source}"""

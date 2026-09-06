@@ -98,19 +98,19 @@ REGISTRY: dict[str, dict] = {
             {"title_zh": "第五章　走入世界——感傷的基督教",
              "heading": "CHAPTER FIFTH — OUT INTO THE WORLD. SENTIMENTAL CHRISTIANITY",
              "start": 2981, "end": 3547},
-            {"title_zh": "第六章　對基督教國的初印象",
+            {"title_zh": "第六章　對基督教世界的初印象",
              "heading": "CHAPTER SIXTH — THE FIRST IMPRESSIONS OF CHRISTENDOM",
              "start": 3547, "end": 4106},
-            {"title_zh": "第七章　在基督教國——在慈善家之間",
+            {"title_zh": "第七章　在基督教世界——在慈善家之間",
              "heading": "CHAPTER SEVENTH — IN CHRISTENDOM. AMONG PHILANTHROPISTS",
              "start": 4106, "end": 5031},
-            {"title_zh": "第八章　在基督教國——新英格蘭的大學生活",
+            {"title_zh": "第八章　在基督教世界——新英格蘭的大學生活",
              "heading": "CHAPTER EIGHTH — IN CHRISTENDOM. NEW ENGLAND COLLEGE LIFE",
              "start": 5031, "end": 6011},
-            {"title_zh": "第九章　在基督教國——涉足神學",
+            {"title_zh": "第九章　在基督教世界——涉足神學",
              "heading": "CHAPTER NINTH — IN CHRISTENDOM. A DIP INTO THEOLOGY",
              "start": 6011, "end": 6613},
-            {"title_zh": "第十章　對基督教國的總印象——歸國",
+            {"title_zh": "第十章　對基督教世界的總印象——歸國",
              "heading": "CHAPTER TENTH — THE NET IMPRESSIONS OF CHRISTENDOM. RETURN HOME",
              "start": 6613, "end": 7615},
         ],
@@ -215,10 +215,32 @@ UCHIMURA_EN_PROMPT_TMPL = """你是明治—大正時代日本基督教文獻的
 2. 只翻譯，不要加任何前言、說明、註解或原文回抄。
 3. 語域：典雅而可讀的現代繁體中文書面語；內村英文帶維多利亞時代文風與強烈個人告白語氣，譯文須保留其莊重、熱切與偶爾的自嘲。引文中的聖經句子譯為和合本語體。
 4. 保留 Markdown（`## ` 標題等）。日記體的日期標題（如 March 9, 1879.）譯為「一八七九年三月九日」。
-5. 聖經人名地名書卷名依和合本。神學術語鎖死：Christendom→基督教國、heathen(ism)→異教（徒）、conversion→回心、convert→歸信者、providence→天意、Almighty→全能者、God→神、Christ→基督、the Gospel→福音、Scriptures→聖經、missionary→宣教師、church→教會、sect→宗派、denomination→教派、creed→信條、theology→神學、theologue→神學生、Sabbath→安息日、prayer-meeting→祈禱會、lay-preaching→平信徒講道、Redeemer→救主、grace→恩典、sin→罪。
-6. 日本人名地名還原漢字：Saigo Takamori→西鄉隆盛、Uesugi Yozan→上杉鷹山、Yonezawa→米澤、Ninomiya Sontoku→二宮尊德、Nakae Toju→中江藤樹、Omi→近江、Nichiren→日蓮、Kamakura→鎌倉、Minobu→身延、Ikegami→池上、Sapporo→札幌、Kashiwagi→柏木、Takasaki→高崎、Tokio/Tokyo→東京、Yedo/Edo→江戶、Nippon/Japan→日本、Shinto→神道、Buddhism→佛教、bonze→僧、daimio→大名、samurai→武士、shogun→將軍、Mikado→天皇、sutra→經、Pundarika (Sutra)→《法華經》、Nirvana→涅槃、Tathagata→如來、Jodo→淨土宗、Zen→禪宗、Shingon→真言宗、Ritzu→律宗、Amherst→安默斯特、New England→新英格蘭、Elwyn→艾爾文。
-7. 幕末維新語境的詞不可直譯：**imperialists→勤王派（絕非「帝國主義者」）**、the imperial cause→勤王大義、the Shogunate/Tokugawa government→幕府、Restoration→維新、clan→藩、clansman→藩士、retainer→家臣、feudal lord→藩主、Satsuma→薩摩、Choshu→長州、Aizu→會津、Tokugawa→德川、Kioto→京都、Corea→朝鮮、Formosa→臺灣、Loochoo→琉球。
-8. 只輸出翻譯後的繁體中文。
+5. **專名層——一對一，不可改**：God→神、Christ→基督、the Gospel→福音、Scriptures→聖經、Sabbath→安息日、Redeemer→救主、Almighty→全能者、creed→信條、theology→神學、theologue→神學生、prayer-meeting→祈禱會、lay-preaching→平信徒講道、missionary→宣教士（**不可用「傳教士」，也不可用日式的「宣教師」**）。聖經人名地名書卷名依和合本。
+6. **概念層——給你候選，按語境擇一，不要一詞一譯到底**。挑哪一個由「這一句在講什麼」決定；同一段裡語意不同就可以用不同譯法：
+   ‧ Christendom→基督教世界（西方基督教文明、諸基督教國家的整體）／基督教國度（一個統轄性的政教秩序，尤其與「神的國」對舉時）
+   ‧ heathen(ism)→異教（徒）／外邦（人）（聖經語體中）
+   ‧ conversion→回心（內心轉變的過程）／歸信（改信基督教這件事）；convert (n.)→歸信者／信主的人
+   ‧ church→教會（信仰共同體或機構）／教堂（建築物）
+   ‧ sect→宗派／小宗派（帶貶義時）；denomination→教派／宗派
+   ‧ providence→天意／神的護理；grace→恩典／恩寵
+   ‧ sin→罪／罪愆（文氣需要時）
+7. 日本人名地名還原漢字：Saigo Takamori→西鄉隆盛、Uesugi Yozan→上杉鷹山、Yonezawa→米澤、Ninomiya Sontoku→二宮尊德、Nakae Toju→中江藤樹、Omi→近江、Nichiren→日蓮、Kamakura→鎌倉、Minobu→身延、Ikegami→池上、Sapporo→札幌、Kashiwagi→柏木、Takasaki→高崎、Tokio/Tokyo→東京、Yedo/Edo→江戶、Nippon/Japan→日本、Shinto→神道、Buddhism→佛教、bonze→僧、daimio→大名、samurai→武士、shogun→將軍、Mikado→天皇、sutra→經、Pundarika (Sutra)→《法華經》、Nirvana→涅槃、Tathagata→如來、Jodo→淨土宗、Zen→禪宗、Shingon→真言宗、Ritzu→律宗、Amherst→安默斯特、New England→新英格蘭、Elwyn→艾爾文。
+8. 幕末維新語境的詞不可直譯：**imperialists→勤王派（絕非「帝國主義者」）**、the imperial cause→勤王大義、the Shogunate/Tokugawa government→幕府、Restoration→維新、clan→藩、clansman→藩士、retainer→家臣、feudal lord→藩主、Satsuma→薩摩、Choshu→長州、Aizu→會津、Tokugawa→德川、Kioto→京都、Corea→朝鮮、Formosa→臺灣、Loochoo→琉球。
+9. **日本事物的專有譯法——用錯就是史實錯誤，優先於其他規則**：
+   ‧ 日本君主一律「**天皇**」，**絕不可作「皇帝」**（Emperor Meiji→明治天皇、the Emperor→天皇）。
+     只有中國、羅馬、俄國、德意志等的君主才譯「皇帝」。
+   ‧ Crown Prince→皇太子（不作「太子」）；imperial court→朝廷；imperial household→皇室；
+     imperial portrait→御真影。
+   ‧ 佛教的 temple→**寺院／寺**；神道的 shrine→**神社**。兩者都**不作「廟」「寺廟」「廟宇」**
+     （那是漢人民間信仰的用語，用在日本會失真）。僧侶→僧；住持→住持。
+   ‧ daimyo／feudal lord→**大名**（不作「封建領主」）；藩主家臣之長→**家老**（不作「宰相」）；
+     內閣總理大臣→**首相**（不作「宰相」）。
+   ‧ 日本的**中央部會**才用「省」（文部省／外務省／內務省／農商務省／商工省）；
+     Ministry of Education→**文部省**，不可作「教育省」。日本的**地方行政區是「縣」不是「省」**；
+     provincial town→地方城市（不作「省城」）。
+   ‧ 其他照日本原詞：元老、華族、士族、藩士、廢藩置縣、帝國議會、貴族院、樞密院、
+     大政奉還、王政復古、御雇外國人。
+10. 只輸出翻譯後的繁體中文。
 
 英文原文：
 {source}"""
