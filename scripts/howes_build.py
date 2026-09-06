@@ -107,16 +107,22 @@ QUEUE = ["howes-prophet"]
 # ── PDF line geometry ────────────────────────────────────────────────────────
 BODY_SIZE = 9.0      # 正文
 QUOTE_SIZE = 8.5     # 引文區塊
-INDENT_X = 43.0      # 段落首行縮排門檻（正文 x0≈37，首行 x0≈46）
+# 正文行的 x0 只有三個值：36.7 續行／45.7 段落首行／48.7 編號清單的懸掛縮排續行。
+# 只差 3pt，但意思相反——把 48.7 當成「縮排＝新段落」會把一整段編號清單炸成一行一段
+# （第九章那份 précis 就是這樣壞掉的）。所以是一個區間，不是一個門檻。
+INDENT_LO, INDENT_HI = 43.0, 47.0
 DROP_SIZES = {8.0, 12.0, 18.0}  # 書眉／空白頁註記／章名（章名我們自己給）
 MIN_SPAN_SIZE = 6.5  # 小於此＝上標尾註號
+# 書中六十處裝飾字元在字型裡對到 U+0001，get_text 就原樣吐出來
+_CTRL_RE = re.compile("[\x00-\x1f\x7f]")
 
 
 def spans_to_text(spans: list[dict]) -> str:
     """一行的 spans → 文字，丟掉上標尾註號（flags bit 0＝superscript）。
     註號不丟的話會變成句中的裸數字，翻譯時被當成年份或數量譯出來。"""
-    return "".join(s["text"] for s in spans
-                   if not (s.get("flags", 0) & 1) and s.get("size", 9.0) >= MIN_SPAN_SIZE)
+    return _CTRL_RE.sub("", "".join(
+        s["text"] for s in spans
+        if not (s.get("flags", 0) & 1) and s.get("size", 9.0) >= MIN_SPAN_SIZE))
 
 
 def keep_line(line: dict) -> bool:
@@ -137,7 +143,8 @@ def lines_to_paras(lines: list[dict]) -> list[str]:
             continue
         text = ln["text"].strip()
         quote = _is_quote(ln)
-        starts = (not paras) or quote != prev_quote or (not quote and ln["x0"] >= INDENT_X)
+        indented = INDENT_LO <= ln["x0"] <= INDENT_HI
+        starts = (not paras) or quote != prev_quote or (not quote and indented)
         if starts:
             paras.append([text])
             kinds.append(quote)

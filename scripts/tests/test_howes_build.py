@@ -120,3 +120,25 @@ class TestSplitLong:
         assert all(x.startswith("> ") for x in out)
         joined = "".join(x[2:].replace(" ", "") for x in out)
         assert joined == p[2:].replace(" ", "")
+
+
+class TestHangingIndent:
+    def test_numbered_list_continuation_is_not_a_new_paragraph(self):
+        """懸掛縮排（x0≈48.7）比段落首行縮排（45.7）還深，意思卻相反 —— 是續行。"""
+        out = hb.lines_to_paras([
+            L("1 A religion to assure Japan's independence. Japanese abound in", x0=36.7),
+            L("patriotism. They want such a religion and so seek the power of Chris-", x0=48.7),
+            L("tianity to save their nation.", x0=48.7),
+        ])
+        assert len(out) == 1
+        assert out[0].endswith("Christianity to save their nation.")
+
+    def test_ordinary_first_line_indent_still_starts_a_paragraph(self):
+        out = hb.lines_to_paras([L("First one ends.", x0=36.7), L("Second starts.", x0=45.7)])
+        assert out == ["First one ends.", "Second starts."]
+
+
+class TestControlChars:
+    def test_font_ornament_control_char_stripped(self):
+        assert hb.spans_to_text([{"size": 9.0, "flags": 4,
+                                  "text": "beforeafter"}]) == "beforeafter"

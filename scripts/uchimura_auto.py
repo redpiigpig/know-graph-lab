@@ -171,6 +171,33 @@ def redo_matching(slug: str, pattern: str) -> int:
     return cleared
 
 
+def remap_cache(slug: str) -> tuple[int, int]:
+    """parser 改過之後，段落的編號會整批位移——checkpoint 是按 index 存的，直接重跑
+    會把舊譯文貼到錯的段落上（而且看起來完全正常）。改以「原文字串」為鍵重建：
+    原文沒變的段落留著譯文，變過的清成 None 等重譯。"""
+    old: dict[str, str] = {}
+    for cp in sorted(DATA_ROOT.glob(f"{slug}/sec*.json")):
+        c = json.loads(cp.read_text(encoding="utf-8"))
+        for src, zh in zip(c.get("src") or [], c.get("zh") or []):
+            if src and zh:
+                old.setdefault(src, zh)
+    kept = lost = 0
+    secs = ub.load_work_sections(slug)
+    for i, s in enumerate(secs):
+        cp = _sec_path(slug, i)
+        prev = json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}
+        src = list(s["paras"])
+        zh = [old.get(x) for x in src]
+        kept += sum(1 for z in zh if z)
+        lost += sum(1 for z in zh if not z)
+        cp.write_text(json.dumps({
+            "heading": s["heading"],
+            "title_zh": s.get("title_zh") or prev.get("title_zh"),
+            "src": src, "zh": zh,
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+    return kept, lost
+
+
 def is_done(slug: str) -> bool:
     secs = ub.load_work_sections(slug)
     for i, s in enumerate(secs):
@@ -312,12 +339,21 @@ def main():
     ap.add_argument("--build-only", action="store_true")
     ap.add_argument("--run-queue", action="store_true")
     ap.add_argument("--author", choices=sorted(AUTHOR_MODULES), default="uchimura")
+    ap.add_argument("--remap-cache", action="store_true",
+                    help="parser 改過後，以原文字串為鍵重建 checkpoint（保住沒變的譯文）")
     ap.add_argument("--redo-matching", type=str, default=None,
                     help="清掉譯文命中此 regex 的段落，供補完詞庫後重譯")
     ap.add_argument("--fix-headings", action="store_true",
                     help="把寫壞的章名換回原文標題（之後要重建該書）")
     args = ap.parse_args()
     use_author(args.author)
+
+    if args.remap_cache:
+        for slug in ([args.work] if args.work else ub.QUEUE):
+            kept, lost = remap_cache(slug)
+            print(f"  {slug}: 沿用 {kept} 段，待重譯 {lost} 段")
+        print("done（再跑一次 --run-queue）")
+        return
 
     if args.redo_matching:
         for slug in ([args.work] if args.work else ub.QUEUE):
