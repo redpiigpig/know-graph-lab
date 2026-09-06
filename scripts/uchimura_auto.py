@@ -74,6 +74,17 @@ def heading_zh(heading: str, fallback: str, translate_para) -> str:
     return out
 
 
+def _needs(src: str) -> bool:
+    """作者模組可以宣告「這一段不必翻」（例：日文書裡夾的英／德文詩行、分隔符號）。
+    未宣告就一律要翻。"""
+    return getattr(ub, "needs_translation", lambda _s: True)(src)
+
+
+def _settled(src: list, zh: list) -> int:
+    """已了結的段落數＝有譯文的，加上本來就不必翻的。"""
+    return sum(1 for s, z in zip(src, zh) if z or not _needs(s))
+
+
 def _sec_path(slug: str, idx: int) -> Path:
     d = DATA_ROOT / slug
     d.mkdir(parents=True, exist_ok=True)
@@ -100,7 +111,7 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
                 title_zh = w["title"] if i == 0 else s["heading"]
             else:
                 title_zh = heading_zh(s["heading"], w["title"], translate_para)
-        todo = [j for j in range(len(src)) if not zh[j]]
+        todo = [j for j in range(len(src)) if not zh[j] and _needs(src[j])]
         if maxparas is not None:
             todo = todo[:maxparas]
 
@@ -198,6 +209,20 @@ def remap_cache(slug: str) -> tuple[int, int]:
     return kept, lost
 
 
+def all_filled(slug: str) -> bool:
+    """每一段都有譯文。is_done 的 95% 容差是給「怎麼重試都失敗的段落」用的，拿來當
+    run_queue 的跳過判準會出事：--redo-matching 只清掉少數幾段時仍算 done，那一輪就
+    只重建不重譯，清掉的段落永遠補不回來（而且頁面看起來完全正常）。"""
+    for i, sec in enumerate(ub.load_work_sections(slug)):
+        cp = _sec_path(slug, i)
+        if not cp.exists():
+            return False
+        zh = json.loads(cp.read_text(encoding="utf-8")).get("zh") or []
+        if _settled(sec["paras"], zh) < len(sec["paras"]):
+            return False
+    return True
+
+
 def is_done(slug: str) -> bool:
     secs = ub.load_work_sections(slug)
     for i, s in enumerate(secs):
@@ -206,7 +231,7 @@ def is_done(slug: str) -> bool:
             return False
         zh = (json.loads(cp.read_text(encoding="utf-8")).get("zh") or [])
         n = len(s["paras"])
-        if n and sum(1 for z in zh if z) < max(1, int(n * 0.95)):
+        if n and _settled(s["paras"], zh) < max(1, int(n * 0.95)):
             return False
     return True
 
@@ -318,7 +343,7 @@ def run_work(slug: str, *, do_upload: bool, maxparas=None, backend: str = "auto"
 def run_queue(backend: str = "auto"):
     for slug in ub.QUEUE:
         try:
-            if is_done(slug):
+            if all_filled(slug):
                 print(f"=== {slug}: already done, (re)building ===", flush=True)
                 build_and_upload(slug, do_upload=True)
                 continue

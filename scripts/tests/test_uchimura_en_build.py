@@ -96,3 +96,28 @@ class TestSplitLongParas:
 class TestOcrFixes:
     def test_mangled_author_signature_restored(self):
         assert ue.fix_ocr_quotes("IvAN.25 UCHIMURA.") == "KANZO UCHIMURA."
+
+
+class TestStandaloneQuoteOcr:
+    def test_standalone_u_and_tc_become_open_quotes(self):
+        assert ue.fix_ocr_quotes("u Heart is the centre of Theology ”") == \
+            "“Heart is the centre of Theology ”"
+        assert ue.fix_ocr_quotes("said that tc he who stays in a mountain") == \
+            "said that “he who stays in a mountain"
+
+    def test_real_words_untouched(self):
+        assert ue.fix_ocr_quotes("unusual under us") == "unusual under us"
+
+
+class TestHealQuoteSplits:
+    def test_sentence_continuing_after_a_closing_quote_is_rejoined(self):
+        out = ue.heal_quote_splits([
+            "It was almost a scientific possibility. “Heart is the centre of Theology ”",
+            "said the father of Church History.",
+        ])
+        assert out == ["It was almost a scientific possibility. "
+                       "“Heart is the centre of Theology ” said the father of Church History."]
+
+    def test_new_paragraph_after_a_closing_quote_is_left_alone(self):
+        out = ue.heal_quote_splits(['He answered, “I will not.”', "Then he left the room."])
+        assert len(out) == 2

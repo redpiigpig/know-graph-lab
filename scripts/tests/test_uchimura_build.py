@@ -140,3 +140,19 @@ class TestPieceSections:
         sec = ub.piece_as_section(doc)
         assert sec["heading"] == "問答二三"
         assert sec["paras"] == ["前文。", "## 其一", "答え。"]
+
+
+class TestNeedsTranslation:
+    """內村的日文書裡夾著英／德文詩行與「＊　＊　＊」分隔符；送進日→中 prompt，
+    引擎會正確地回「這不是日文」，那句招呼語就被寫進譯文欄。整段跳過才對。"""
+
+    def test_japanese_prose_is_translated(self):
+        assert ub.needs_translation("我はキリスト信徒なり")
+        assert ub.needs_translation("因に記す、ヨブ記は文学書にあらず")
+
+    def test_foreign_verse_and_ornaments_are_skipped(self):
+        assert not ub.needs_translation("“Life mocks the idle hate")
+        assert not ub.needs_translation("In Deutschland geboren,")
+        assert not ub.needs_translation("＊　　　＊　　　＊　　　＊")
+        assert not ub.needs_translation("└────┴───┴────┴───┘")
+        assert not ub.needs_translation("")

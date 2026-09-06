@@ -249,7 +249,15 @@ UCHIMURA_PROMPT_TMPL = """你是明治—大正時代日本基督教文獻的專
 {source}"""
 
 
-_KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
+_KANA_RE = re.compile(r"[ぁ-ゟ゠-ヿ]")
+# 內村書裡夾著彌爾頓英詩、德文詩句，還有「＊　＊　＊」分隔與表格框線。這些送進
+# 日→中的 prompt，引擎會（正確地）回「這不是日文」——那句招呼語就被寫進譯文欄。
+# 沒有假名也沒有漢字＝不是日文散文，整段跳過；reader 端未填的段落本來就顯示原文。
+_JP_RE = re.compile(r"[ぁ-ゟ゠-ヿ一-鿿]")
+
+
+def needs_translation(src: str) -> bool:
+    return bool(_JP_RE.search(src or ""))
 
 
 def clean_zh_output(out: str) -> str:

@@ -125,10 +125,15 @@ QUEUE = ["representative-men", "how-i-became"]
 # spell out every way the OCR mangled "REPRESENTATIVE".
 HEAD_RE = re.compile(r"^[^a-z]*$")
 
-# In the 1922 Keiseisha scan the opening double quote is read as a lowercase u
-# (uO just tell us how…”). Only fire before a capital, so 'unusual' and the
-# initial 'U.' are left alone.
-_OCR_OPEN_QUOTE_RE = re.compile(r"(?<![A-Za-z0-9])u(?=[A-Z])")
+# 1922 警醒社那份掃描把開引號讀成小寫 u，兩種形態：黏著後字（uO just tell us…）
+# 與獨立成詞（u Heart is the centre…，偶爾是 tc）。英文散文沒有單獨成詞的小寫
+# u／tc，所以獨立形態一律當開引號；unusual、U. 這些不受影響。獨立形態要連同後面
+# 那個空白一起吃掉，不然會變成「“ Heart」。
+_OCR_OPEN_QUOTE_RE = re.compile(r"(?<![A-Za-z0-9])(?:u(?=[A-Z])|(?:u|tc)\s+(?=[A-Za-z]))")
+
+# 句子在收尾引號之後還沒完（…of Theology ” / said the father of Church History），
+# reflow 看到 ” 是句末標點就斷了段。下一段以小寫字母起頭＝那一刀切錯了。
+_CLOSING_QUOTE = ("”", "’", '"', "'")
 
 # Essay subsections ("I.— The Japanese Revolution of 1868.") survive reflow as
 # ordinary paragraphs; promote them to markdown headings for the reader.
@@ -144,6 +149,17 @@ def fix_ocr_quotes(text: str) -> str:
     for bad, good in OCR_FIXES.items():
         text = text.replace(bad, good)
     return _OCR_OPEN_QUOTE_RE.sub("\u201c", text)
+
+
+def heal_quote_splits(paras: list[str]) -> list[str]:
+    """把「上一段以收尾引號結束、下一段以小寫字母起頭」的那一刀接回去。"""
+    out: list[str] = []
+    for p in paras:
+        if (out and p[:1].islower() and out[-1].rstrip().endswith(_CLOSING_QUOTE)):
+            out[-1] = f"{out[-1]} {p}"
+        else:
+            out.append(p)
+    return out
 
 
 def reflow_ocr(lines: list[str]) -> list[str]:
@@ -183,7 +199,8 @@ def load_work_sections(slug: str, cache_dir: Path = CACHE_DIR) -> list[dict]:
     secs = []
     for s in w["sections"]:
         paras = reflow_ocr(lines[s["start"] - 1:s["end"] - 1])
-        paras = split_long_paras_en(mark_subheads([fix_ocr_quotes(p) for p in paras]))
+        paras = heal_quote_splits([fix_ocr_quotes(p) for p in paras])
+        paras = split_long_paras_en(mark_subheads(paras))
         secs.append({"heading": s["heading"], "title_zh": s["title_zh"], "paras": paras})
     return secs
 
