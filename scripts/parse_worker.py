@@ -52,6 +52,42 @@ KEY = ENV['SUPABASE_SERVICE_ROLE_KEY']
 H = {'apikey': KEY, 'Authorization': f'Bearer {KEY}', 'Content-Type': 'application/json'}
 
 
+# ── single-instance lock ───────────────────────────────────────
+LOCKFILE = 'scripts/state/parse_worker.lock'
+
+
+def single_instance():
+    """Refuse to run if another parse_worker is already going.
+
+    Without this, two workers duplicate every chunk of every book they overlap
+    on: cmd_run asks for `parsed_at IS NULL ... order=id`, so both start at the
+    *same* first book, and parsed_at is only written after the chunks are
+    inserted. Both then report success. The scheduled run fires every 3 hours
+    and a manual drain takes longer than that, so the overlap is routine, not
+    a corner case.
+
+    The lock is an OS file lock, not a PID file, precisely because the overnight
+    task keeps dying by hard termination (0xC000013A) -- a PID file would be
+    left behind and would then block every later run. An OS lock is released by
+    the kernel when the process dies, however it dies.
+
+    Returns the open handle; keep a reference alive for the whole run.
+    """
+    os.makedirs(os.path.dirname(LOCKFILE), exist_ok=True)
+    fh = open(LOCKFILE, 'w')
+    try:
+        if sys.platform == 'win32':
+            import msvcrt
+            msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        fh.close()
+        return None
+    return fh
+
+
 # ── DB helpers ─────────────────────────────────────────────────
 def fetch_unparsed_books(limit=None):
     """Return list of {id, title, file_type, file_path} for ebooks where parsed_at IS NULL."""
@@ -309,10 +345,20 @@ def cmd_status():
 
 def cmd_run(limit=None):
     """Process all unparsed pdf/epub books."""
-    # Get all unparsed PDFs and EPUBs
+    lock = single_instance()
+    if lock is None:
+        # Not an error: the overnight chain should carry on to OCR rather than
+        # abort the whole run just because a manual drain is in progress.
+        print("another parse_worker holds the lock; skipping parse this round", file=sys.stderr)
+        return
+
+    # Get all unparsed PDFs and EPUBs.
+    # 🚨 Always pass an explicit limit. PostgREST caps an unbounded select at its
+    # own default (1000) and says nothing about it, so `run` with no --limit was
+    # silently a 1000-book batch, not "the whole queue" -- which is how a 5,000
+    # book backlog looked like it was being drained in one pass.
     params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub)&order=id'
-    if limit:
-        params += f'&limit={limit}'
+    params += f'&limit={limit or 1000}'
     r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
     r.raise_for_status()
     books = r.json()
