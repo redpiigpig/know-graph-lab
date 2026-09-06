@@ -251,6 +251,13 @@ scripts/.aa_probe.mjs
 scripts/.krt_probe.mjs
 
 # 🚨 國史館那兩份標「勿外傳」，repo 是公開的，全文一律走 R2 不進版控。
-# public/content/research-data/yiguandao/guoshiguan.json 只留書目層（無 text）。
 public/content/research-data/**/*-fulltext.json
+
+# 🚨 一貫道那批整個資料夾不進版控（2026-09-06 使用者定調）。
+# 裡面是檔案局目錄的人名，加上「此人被列管 21 年」這類分析——書目在檔案局
+# 網站上本來就查得到，但把分析放進公開 repo 是另一回事。
+# 正本在本機這個資料夾，線上走 R2 `research-private/yiguandao/` ＋
+# 需登入的 `yiguandao-file` 端點；改完內容要跑 scripts/yiguandao_r2_sync.py，
+# 不跑的話線上還是舊的，而且頁面顯示得好好的，看不出來。
+public/content/research-data/yiguandao/
 G:/

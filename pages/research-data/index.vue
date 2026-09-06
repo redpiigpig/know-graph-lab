@@ -47,6 +47,15 @@
           <span class="tool-badge bg-purple-50 text-purple-600">{{ ykdCount ? `${ykdCount} 件` : '…' }}</span>
         </NuxtLink>
 
+        <!-- 三夷教研究資料 -->
+        <NuxtLink to="/research-data/sanyijiao" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">🜂</div>
+          <div class="flex-1">
+            <h2 class="tool-title">三夷教研究資料</h2>
+            <p class="tool-desc">祆教、摩尼教（明教）與景教的二手研究；中古中國最早的一批外來宗教，與一手經典區 /avesta 分工</p>
+          </div>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/press" class="tool-card group border-violet-100 hover:border-violet-300 hover:shadow-violet-100">
           <div class="tool-icon bg-violet-50 text-violet-600">🗞️</div>
           <div class="flex-1">
@@ -100,11 +109,16 @@ import { ref, onMounted } from 'vue';
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '論文資料整理 — Know Graph Lab' });
 
+// badge 只要一個數字，就讀 archives/index.json 這份 521 bytes 的總表。
+// 🚨 原本讀的是 yiguandao/archives-index.json，那一夾已改為不進版控、走
+//    R2＋需登入的端點（見 .gitignore 與 yiguandao-file.get.ts），線上抓不到。
 const ykdCount = ref(0);
 onMounted(async () => {
   try {
-    const r = await fetch('/content/research-data/yiguandao/archives-index.json');
-    if (r.ok) ykdCount.value = (await r.json()).count ?? 0;
+    const r = await fetch('/content/research-data/archives/index.json');
+    if (!r.ok) return;
+    const sections = (await r.json()).sections as { slug: string; count: number }[] | undefined;
+    ykdCount.value = sections?.find(s => s.slug === 'yiguandao')?.count ?? 0;
   } catch { /* 讀不到就讓 badge 留白，不要讓整頁掛掉 */ }
 });
 </script>

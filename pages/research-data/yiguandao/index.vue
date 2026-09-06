@@ -386,24 +386,33 @@ function renderMarkdown(md: string): string {
   return out.join('\n');
 }
 
-onMounted(async () => {
-  const base = '/content/research-data/yiguandao';
+// 🚨 這批資料不在 public/ 裡，也不在 git 裡——它帶著檔案局目錄的人名與列管年數，
+//    而 repo 是公開的。檔案放 R2 `research-private/yiguandao/`，由需登入的
+//    `yiguandao-file` 端點供應（上傳走 scripts/yiguandao_r2_sync.py）。
+async function loadFile<T>(name: string): Promise<T | null> {
   try {
-    const [a, b, g, t, v, r] = await Promise.all([
-      fetch(`${base}/archives-index.json`), fetch(`${base}/biblio-zhong.json`),
-      fetch(`${base}/guoshiguan.json`), fetch(`${base}/timeline.json`),
-      fetch(`${base}/inventory.json`), fetch(`${base}/report.md`)]);
-    if (a.ok) archive.value = await a.json();
-    if (b.ok) biblio.value = await b.json();
-    if (g.ok) gsg.value = await g.json();
-    if (t.ok) timeline.value = await t.json();
-    if (v.ok) inventory.value = await v.json();
-    if (r.ok) {
-      const md = await r.text();
-      // 靜態站找不到檔案時可能回退成 index.html——只認真正的 markdown
-      if (!/^\s*<!doctype html/i.test(md)) reportHtml.value = renderMarkdown(md);
-    }
-  } catch { /* keep empty */ } finally { loaded.value = true; }
+    const r = await authedFetch<{ available: boolean; data?: T }>(
+      '/api/research-data/yiguandao-file', { query: { name } });
+    return r.available ? (r.data ?? null) : null;
+  } catch { return null; }   // 一份讀不到不該讓其他五個分頁一起空掉
+}
+
+onMounted(async () => {
+  const [a, b, g, t, v, r] = await Promise.all([
+    loadFile<typeof archive.value>('archives-index.json'),
+    loadFile<typeof biblio.value>('biblio-zhong.json'),
+    loadFile<typeof gsg.value>('guoshiguan.json'),
+    loadFile<typeof timeline.value>('timeline.json'),
+    loadFile<typeof inventory.value>('inventory.json'),
+    loadFile<string>('report.md'),
+  ]);
+  if (a) archive.value = a;
+  if (b) biblio.value = b;
+  if (g) gsg.value = g;
+  if (t) timeline.value = t;
+  if (v) inventory.value = v;
+  if (r) reportHtml.value = renderMarkdown(r);
+  loaded.value = true;
 });
 </script>
 

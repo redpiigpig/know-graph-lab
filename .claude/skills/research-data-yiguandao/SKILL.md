@@ -17,7 +17,7 @@ description: 一貫道國家檔案專案（中研院社會所委託、與元智�
 
 | 層 | 內容 | 位置 |
 |---|---|---|
-| 書目 | 417 筆（131 可線上閱覽、286 須申請） | `public/content/research-data/archives/yiguandao.json` |
+| 書目 | 417 筆（131 可線上閱覽、286 須申請） | `…/archives/yiguandao.json`（**仍在 git**）＋私有區的 `archives-index.json` |
 | 影像 | 28 案 **3,484 張**（120 個資料夾） | Drive `研究資料/國家檔案調閱/影像/yiguandao/` |
 | 影像清單 | 案／件兩層＋待下載＋年度分佈 | `…/yiguandao/inventory.json`（`scripts/yiguandao_inventory.py` 產） |
 | 解密全文 | 兩份 121,942 字 | Drive `…/國史館/_轉出文字/`；全文上 R2 `research-private/guoshiguan/` |
@@ -27,8 +27,22 @@ description: 一貫道國家檔案專案（中研院社會所委託、與元智�
 | 交件 Word | 00 進度／01 報告／02 年表／03 清單／04 書目 | Drive `玄奘/博一上/研究助理/` |
 | 檔案原件 | 加密 docx 與 PDF（**使用者自備，腳本不要碰**） | Drive `…/研究助理/05_檔案全文/` |
 
-**產檔**：`python -X utf8 scripts/yiguandao_inventory.py` → `python -X utf8 scripts/yiguandao_docx.py`。
+**產檔**：`yiguandao_inventory.py`（盤影像）→ `yiguandao_r2_sync.py`（上 R2）→ `yiguandao_docx.py`（出 Word）。
 Word 排版沿用 `build_proposal_docx.build()`，不要各寫各的。
+
+## 🚨 這個資料夾不進版控
+
+`public/content/research-data/yiguandao/` 整夾在 `.gitignore` 裡（2026-09-06 使用者定調）。
+裡面是檔案局目錄的人名，加上「此人被列管 21 年」這類分析——書目在檔案局網站上本來就查得到，
+但把分析放進**公開** repo 是另一回事。
+
+- **正本在本機那個資料夾**，git 不再保管；沒有第二份備份，別隨手刪。
+- 線上走 R2 `research-private/yiguandao/`（gzip）＋ `server/api/research-data/yiguandao-file.get.ts`
+  （`requireAdmin`），頁面用 `authedFetch`。白名單在腳本與端點各一份，**新增檔案要兩邊都加**。
+- 🚨 **改完內容一定要跑 `python -X utf8 scripts/yiguandao_r2_sync.py`**，否則線上還是舊的，
+  而且頁面顯示得好好的、看不出來是舊資料。
+- 2026-09-01～06 已推上公開 repo 的那幾個 commit 留著不改寫歷史（使用者選擇）；
+  `…/archives/yiguandao.json`（417 筆案由）也仍在 git 裡。這條規則管的是「從現在起」。
 
 ## 二、鍾雲鶯那篇文章是這個專案的座標
 
