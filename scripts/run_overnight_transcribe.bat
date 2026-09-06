@@ -30,10 +30,15 @@ echo --- ingest_new_books --- >> "%LOGFILE%"
 "%PY%" scripts\ingest_new_books.py run >> "%LOGFILE%" 2>&1
 echo step1 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
-REM 2. Parse the whole queue -- deliberately no --limit. Books with no text layer
-REM    get flagged here and fall through to OCR below.
-echo --- parse_worker (whole queue) --- >> "%LOGFILE%"
-"%PY%" scripts\parse_worker.py run >> "%LOGFILE%" 2>&1
+REM 2. Parse a BOUNDED batch -- not the whole queue.
+REM    The first version ran parse with no --limit, meaning to sort the whole
+REM    queue out in one go. With ~1,800 books at ~1.8/min that is 16+ hours,
+REM    while this task fires every 3 hours -- so step 3 (OCR) was never reached
+REM    even once: three overnight runs logged nothing past this line, and no
+REM    page was ever OCRd. A bounded batch means every run gets to OCR; the
+REM    queue still drains, just across more runs.
+echo --- parse_worker (batch) --- >> "%LOGFILE%"
+"%PY%" scripts\parse_worker.py run --limit 120 >> "%LOGFILE%" 2>&1
 echo step2 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
 REM 3. OCR. Probe first: free-tier quota is per-model, so one dead model never
