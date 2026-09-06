@@ -43,6 +43,25 @@ def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").replace("\u3000", " ")).strip()
 
 
+def decode(raw: bytes) -> str:
+    """本站**同時有 Big5 與 UTF-8 兩種頁面**，必須逐頁嗅探。
+
+    🚨 原本這裡寫死 `decode("big5", "replace")`，結果是 UTF-8 那批頁面
+       整頁變亂碼——而 `errors="replace"` 讓它不會拋例外，抓取、寫檔、
+       產索引全都「成功」。實際上 2026-09-06 回頭清點，已收的本土信徒
+       4,221 篇裡有 1,930 篇（45.7%）題名是亂碼。
+       這就是 [[feedback_reader_silent_failures]] 那一類：畫面完全正常、內容全錯。
+
+    嗅探方式是兩種都解、取替換字元少的那個。不要只看 meta charset：
+    `/archives/pj/pj-contents.htm` 根本沒有 meta，卻是帶 BOM 的 UTF-8。
+    """
+    if raw[:3] == b"\xef\xbb\xbf":
+        return raw[3:].decode("utf-8", "replace")
+    cands = [(raw.decode(enc, "replace"), enc) for enc in ("big5", "utf-8")]
+    text, _ = min(cands, key=lambda c: c[0].count("�"))
+    return text
+
+
 def get(url: str):
     """回傳解好碼的 HTML；4xx 視同沒有這一頁回 None。"""
     last = None
@@ -52,7 +71,7 @@ def get(url: str):
             if 400 <= r.status_code < 500:
                 return None
             r.raise_for_status()
-            return r.content.decode("big5", "replace")
+            return decode(r.content)
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(3 * (attempt + 1))
