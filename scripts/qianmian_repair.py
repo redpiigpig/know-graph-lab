@@ -67,6 +67,9 @@ def repair(no):
     # 剩下的都是壞掉的記號：沒有 E/R 前綴、或引到不能當出處的東西（讀書會講法）。
     # 一律拿掉——寧可少一個註，也不能把內部記號印進書裡。猜編號比不標更糟。
     body, junk = re.subn(r"〔註[^〕]{0,60}〕", "", body)
+    # 模型偶爾把 prompt 的段落標籤抄進正文（〔素材三〕【素材一：書摘】），印出去就穿幫
+    body, leaked = re.subn(r"〔素材[^〕]{0,8}〕|【素材[^】]{0,12}】", "", body)
+    junk += leaked
     out = body.rstrip() + "\n\n---\n\n" + "\n".join(
         f"[^{i}]: {t}" for i, t in enumerate(notes, 1)) + "\n"
     f.write_text(out, encoding="utf-8")

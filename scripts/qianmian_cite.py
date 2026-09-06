@@ -49,8 +49,14 @@ class Citer:
         self.misses = set()
 
     def format(self, raw):
-        """出處字串 → 頁下註全文。"""
-        raw = (raw or "").strip().rstrip("。")
+        """出處字串 → 頁下註全文。
+
+        🚨 書摘的出處欄裡有換行（書名在儲存格裡折行）。不先攤平的話，註文會帶著
+           換行寫進 markdown，把一條註裂成兩行——前半成了殘缺的註，後半變成孤兒行，
+           在 Word 裡會被當成正文印在章末。踩過，見 qianmian_repair.py --stitch。
+        """
+        raw = re.sub(r"\s*\n\s*", "", raw or "")
+        raw = re.sub(r"[ \t]+", " ", raw).strip().rstrip("。")
         if not raw:
             return ""
         if raw.startswith("http"):
@@ -70,7 +76,12 @@ class Citer:
         if not title:                       # 沒有作者，整串就是出處
             return raw + ("，" + page if page else "") + "。"
 
-        title = title.strip().strip("《》〈〉")
+        title = title.strip()
+        # 出處欄常常自己就帶了標點：〈篇名〉，《期刊》第N期 這種。再包一層 《》
+        # 會生出「《…〉，《…》》」這種怪東西——ch09、ch14 全毀在這裡。
+        # 已經有書名號／篇名號的就原樣用，不要再包。
+        marked = any(c in title for c in "《》〈〉")
+        title = title if marked else title.strip("《》〈〉")
         book = self.by_title.get(_norm(title))
         if book:
             bits = []
@@ -82,11 +93,11 @@ class Citer:
                 year = f"{book['publish_year']}年" if book.get("publish_year") else ""
                 imprint = "（" + "：".join(x for x in (place, book["publisher"]) if x) + \
                           ("，" + year if year else "") + "）"
-            head = f"{author.strip()}，《{title}》"
+            head = f"{author.strip()}，{title}" if marked else f"{author.strip()}，《{title}》"
             if bits:
                 head += "，" + "，".join(bits)
             out = head + imprint
         else:
             self.misses.add(f"{author.strip()}，{title}")
-            out = f"{author.strip()}，《{title}》"
+            out = f"{author.strip()}，{title}" if marked else f"{author.strip()}，《{title}》"
         return out + ("，" + page if page else "") + "。"
