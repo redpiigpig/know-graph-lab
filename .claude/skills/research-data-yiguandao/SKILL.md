@@ -22,7 +22,7 @@ description: 一貫道國家檔案專案（中研院社會所委託、與元智�
 | 影像清單 | 案／件兩層＋待下載＋年度分佈 | `…/yiguandao/inventory.json`（`scripts/yiguandao_inventory.py` 產） |
 | 解密全文 | 兩份 121,942 字 | Drive `…/國史館/_轉出文字/`；全文上 R2 `research-private/guoshiguan/` |
 | 研究報告 | 材料盤點＋十項發現＋六個方向 | `…/yiguandao/report.md` |
-| 年表 | 七個分期、51 則事件 | `…/yiguandao/timeline.json` |
+| 年表 | 七個分期、57 則事件 | `…/yiguandao/timeline.json` |
 | 每月進度 | markdown 進版控 | `…/yiguandao/progress/YYYY-MM.md` |
 | 交件 Word | 00 進度／01 報告／02 年表／03 清單／04 書目／05 全文 | Drive `玄奘/博一上/研究助理/` |
 
