@@ -100,12 +100,20 @@ def fetch_unparsed_books(limit=None):
 
 
 def fetch_all_books():
-    """Return all ebooks (paginated)."""
+    """Return all ebooks.
+
+    Keyset paging, not OFFSET: `status` is normally run while a parse or an
+    ingest is writing, and OFFSET over a table that is growing under you both
+    repeats and skips rows -- which is how the counts drifted far enough to
+    make `todo` come out negative.
+    """
     out = []
-    offset = 0
     page_size = 1000
+    last_id = ''
     while True:
-        params = f'select=id,title,file_type,file_path,parsed_at,chunk_count,parse_error&order=id&limit={page_size}&offset={offset}'
+        cursor = f'&id=gt.{last_id}' if last_id else ''
+        params = (f'select=id,title,file_type,file_path,parsed_at,chunk_count,parse_error'
+                  f'&order=id{cursor}&limit={page_size}')
         r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
         r.raise_for_status()
         page = r.json()
@@ -114,7 +122,7 @@ def fetch_all_books():
         out.extend(page)
         if len(page) < page_size:
             break
-        offset += page_size
+        last_id = page[-1]['id']
     return out
 
 
@@ -328,19 +336,38 @@ def cmd_init():
 
 
 def cmd_status():
+    """Progress summary.
+
+    The buckets must be mutually exclusive and `todo` must be *counted*, not
+    inferred by subtraction. The old version did `len - parsed - errored -
+    skipped` while the three overlapped freely -- a book that errored once and
+    parsed on a later attempt keeps both columns, and a mobi book can carry a
+    parse_error too -- so every such book was subtracted twice. That is how
+    todo reached -152 while still reporting plausible-looking numbers before
+    it went negative.
+
+    `todo` uses exactly the predicate cmd_run selects on, so the two can never
+    disagree about what is left.
+    """
     books = fetch_all_books()
-    parsed = sum(1 for b in books if b.get('parsed_at'))
-    errored = sum(1 for b in books if b.get('parse_error'))
-    skipped = sum(1 for b in books if b['file_type'] not in ('pdf', 'epub'))
-    todo = len(books) - parsed - errored - skipped
+    parsed = errored = skipped = todo = 0
     total_chunks = 0
     for b in books:
         total_chunks += b.get('chunk_count') or 0
+        if b['file_type'] not in ('pdf', 'epub'):
+            skipped += 1
+        elif b.get('parsed_at'):
+            parsed += 1
+        elif b.get('parse_error'):
+            errored += 1
+        else:
+            todo += 1
     print(f"Total books: {len(books)}")
     print(f"  parsed:  {parsed}  ({total_chunks} chunks total)")
-    print(f"  error:   {errored}")
+    print(f"  error:   {errored}  (retry: clear parse_error to requeue)")
     print(f"  skip:    {skipped}  (mobi/azw3/azw — pure-Python parsing not supported)")
     print(f"  todo:    {todo}")
+    assert parsed + errored + skipped + todo == len(books), "buckets must partition the table"
 
 
 def cmd_run(limit=None):
