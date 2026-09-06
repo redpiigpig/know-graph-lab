@@ -51,6 +51,63 @@ STYLE_REF = BASE / "chapters-d1/ch01.html"
 
 BANNED = re.compile(r"<sup|footnote|參考資料|參考書目|註釋", re.I)
 
+# 🚨 七把 Gemini key 撐不完 84 章。2026-09-06 實測跑到第 41 章時全數 429，而且
+#    qianmian_llm.ask 是直接拋例外——整場就這樣停在半路。所以這裡自備兩層備援，
+#    並且讓單章失敗只算那一章失敗，絕不中斷整場（跑一整晚的東西不能一顆石頭絆倒）。
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+OR_URL = "https://openrouter.ai/api/v1/chat/completions"
+OR_MODEL = "google/gemma-4-26b-a4b-it:free"
+
+
+def _keys(prefix: str) -> list[str]:
+    import os
+    return [os.environ[f"{prefix}{i}"] for i in range(1, 9)
+            if os.environ.get(f"{prefix}{i}")]
+
+
+def _openai_style(url: str, keys: list[str], model: str, prompt: str) -> str:
+    """NVIDIA NIM 與 OpenRouter 都是 OpenAI 相容介面，同一支打完。"""
+    import requests
+    body = {"model": model, "temperature": 0.85, "max_tokens": 16000,
+            "messages": [{"role": "user", "content": prompt}]}
+    last = "?"
+    for off in range(len(keys)):
+        key = keys[off]
+        try:
+            r = requests.post(url, headers={"Authorization": f"Bearer {key}"},
+                              json=body, timeout=600)
+        except Exception as e:                       # noqa: BLE001
+            last = f"conn {type(e).__name__}"
+            continue
+        if r.status_code != 200:
+            last = f"HTTP {r.status_code}"
+            continue
+        try:
+            txt = r.json()["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError):
+            last = "回應沒有 content"
+            continue
+        if txt and txt.strip():
+            return re.sub(r"<think>.*?</think>", "", txt, flags=re.S).strip()
+        last = "空回應"
+    raise RuntimeError(f"{len(keys)} 把 key 全失敗，最後：{last}")
+
+
+def ask_any(prompt: str) -> tuple[str, str]:
+    """Gemini → NVIDIA → OpenRouter，先成功先回。回 (文字, 用了哪個引擎)。"""
+    import translate_ebook_to_zh as engines
+    try:
+        text, _ = llm.ask(prompt, model=MODEL, temperature=0.85, max_tokens=32768)
+        return text, "gemini"
+    except Exception as e:                           # noqa: BLE001
+        print(f"      ⚠ Gemini 不通（{str(e)[:60]}），改走 NVIDIA", flush=True)
+    try:
+        return _openai_style(NVIDIA_URL, engines.NVIDIA_KEYS,
+                             engines.NVIDIA_MODELS[0], prompt), "nvidia"
+    except Exception as e:                           # noqa: BLE001
+        print(f"      ⚠ NVIDIA 不通（{str(e)[:60]}），改走 OpenRouter", flush=True)
+    return _openai_style(OR_URL, _keys("OPENROUTER_API_Key_"), OR_MODEL, prompt), "openrouter"
+
 
 def style_sample() -> str:
     if not STYLE_REF.exists():
@@ -163,8 +220,7 @@ def write_chapter(book, vol, ch, sample, force: bool) -> str:
     prompt = build_prompt(book, vol, ch, sample)
     html = None
     for attempt in (1, 2):
-        text, _ = llm.ask(prompt if attempt == 1 else prompt + _RETRY_NOTE,
-                          model=MODEL, temperature=0.85, max_tokens=32768)
+        text, eng = ask_any(prompt if attempt == 1 else prompt + _RETRY_NOTE)
         cand = clean(text)
         n = body_chars(cand)
         bad = BANNED.search(cand)
@@ -188,8 +244,7 @@ def write_chapter(book, vol, ch, sample, force: bool) -> str:
     if n < EXPAND_BELOW:
         print(f"      ＋ 加厚（現有 {n} 字）", flush=True)
         try:
-            text, _ = llm.ask(_expand_prompt(html, n), model=MODEL,
-                              temperature=0.8, max_tokens=32768)
+            text, _ = ask_any(_expand_prompt(html, n))
             cand = clean(text)
             m = body_chars(cand)
             # 加厚失敗（變短、跑掉格式、混進禁止元素）就保留原稿，不要越改越糟
@@ -269,7 +324,11 @@ def main() -> None:
             if only_c and ch["n"] != only_c:
                 continue
             t0 = time.time()
-            r = write_chapter(book, vol, ch, sample, a.force)
+            try:
+                r = write_chapter(book, vol, ch, sample, a.force)
+            except Exception as e:                   # noqa: BLE001
+                # 跑一整晚的東西不能被一顆石頭絆倒：記下來，換下一章
+                r = f"✗ 例外：{type(e).__name__} {str(e)[:70]}"
             print(f"  第{ch['n']:2d}章 {ch['title'][:26]:26s} {r}　{time.time()-t0:.0f}s",
                   flush=True)
             if r.startswith("✓"):
