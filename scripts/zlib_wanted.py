@@ -62,22 +62,27 @@ DEFAULT_PRIORITY = 60
 
 
 def prioritize(items: list[dict]) -> list[dict]:
-    """依 PRIORITY 分層，層內在各來源之間輪流取，同一本書中譯排在原文前面。
+    """依 PRIORITY 分層，層內在各來源之間輪流取，同一本書原文排在中譯前面。
 
     層內輪流是刻意的：genesis-philosophy 一家就佔了三分之一，照來源整批排會讓
     它獨吞好幾個月的額度，其餘計畫全部餓死。
-    中譯排前面是因為使用者讀中文最快；原文那一格晚幾天到不影響。
+
+    🚨 同一本書的兩格是「原文先、中譯後」，這一點跟直覺相反，是實測改過來的。
+    原本讓中譯排前面（使用者讀中文最快），結果 2026-09-06 那一輪 21 次嘗試只
+    下載 2 本、18 次「沒有對得上的版本」—— 西方近人學術著作多半沒有中譯本，
+    語言閘正確地擋掉英文版而空手回來，於是每日額度全耗在必然落空的目標上。
+    原文先抓，中譯那一格排在後面慢慢碰；晚幾天拿到中譯不影響閱讀，抓不到書才影響。
     """
     from collections import defaultdict, deque
 
     buckets: dict[int, dict[str, deque]] = defaultdict(lambda: defaultdict(deque))
     for it in items:
         src = it.get("source", "")
-        # 同一本書的兩格：-zh 先、-orig 後
+        # 同一本書的兩格：-orig 先、-zh 後（理由見 docstring）
         buckets[PRIORITY.get(src, DEFAULT_PRIORITY)][src].append(it)
     for tier in buckets.values():
         for src, q in tier.items():
-            ordered = sorted(q, key=lambda x: (0 if x["key"].endswith("-zh") else 1, x["key"]))
+            ordered = sorted(q, key=lambda x: (1 if x["key"].endswith("-zh") else 0, x["key"]))
             tier[src] = deque(ordered)
 
     out: list[dict] = []
