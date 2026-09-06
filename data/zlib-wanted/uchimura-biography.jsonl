@@ -1,0 +1,6 @@
+{"key":"uchi-bio-masaike-den","query":"内村鑑三伝 政池仁","expect":"内村鑑三伝","who":"政池","source":"uchimura-biography","zh":"政池仁《內村鑑三傳》（教文館 1977 增訂版；門人所寫、日文最厚的傳記）"}
+{"key":"uchi-bio-suzuki-iwanami","query":"内村鑑三 鈴木範久 岩波新書","expect":"内村鑑三","who":"鈴木","source":"uchimura-biography","zh":"鈴木範久《內村鑑三》（岩波新書 1984；日文最通俗的入門評傳）"}
+{"key":"uchi-bio-suzuki-nichiroku","query":"内村鑑三日録 鈴木範久","expect":"内村鑑三日録","who":"鈴木","source":"uchimura-biography","zh":"鈴木範久《內村鑑三日錄》全 12 卷（編年史料，日本內村研究的基礎工具）"}
+{"key":"uchi-bio-masumoto-1936","query":"内村鑑三伝 益本重雄 藤沢音吉","expect":"内村鑑三伝","who":"益本","source":"uchimura-biography","zh":"益本重雄‧藤澤音吉《內村鑑三傳》（1935–36，最早的全傳；NDL 已數位化但館內限定）"}
+{"key":"uchi-bio-suzuki-toshiro","query":"内村鑑三伝 米国留学まで 鈴木俊郎","expect":"米国留学まで","who":"鈴木","source":"uchimura-biography","zh":"鈴木俊郎《內村鑑三傳‧至留美為止》（岩波 1986）"}
+{"key":"uchi-bio-saito-aruhi","query":"ある日の内村鑑三先生 斉藤宗次郎","expect":"内村鑑三先生","who":"斉藤","source":"uchimura-biography","zh":"齋藤宗次郎《某日的內村鑑三先生》（1964，門人回憶）"}
