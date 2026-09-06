@@ -124,22 +124,22 @@ describe('祆教經典書目', () => {
   it('禮儀單位的數目照薩珊傳統，不得擅改', () => {
     const avestan = CANONS.find(c => c.key === 'avestan')!
     const count = (key: string) => volumeTextCount(avestan.volumes.find(v => v.key === key)!)
-    expect(count('yasna'), '耶斯那 72 章').toBe(72)
-    expect(count('visperad'), '維斯佩拉德 24 章').toBe(24)
-    expect(count('vendidad'), '祓魔法典 22 章').toBe(22)
-    expect(count('yasht'), '耶什特 21 首').toBe(21)
+    expect(count('yasna'), '亞斯納 72 章').toBe(72)
+    expect(count('visperad'), '維斯帕拉德 24 章').toBe(24)
+    expect(count('vendidad'), '萬迪達德 22 章').toBe(22)
+    expect(count('yasht'), '亞什特 21 首').toBe(21)
     expect(count('nask'), '二十一納斯克').toBe(21)
   })
 
-  it('耶斯那的章次連續且無跳號', () => {
+  it('亞斯納的章次連續且無跳號', () => {
     const avestan = CANONS.find(c => c.key === 'avestan')!
     const yasna = avestan.volumes.find(v => v.key === 'yasna')!
     const nums = yasna.divisions.flatMap(d => d.texts).map(t => Number(t.siglum.replace('Y ', '')))
     expect(nums).toEqual(Array.from({ length: 72 }, (_, i) => i + 1))
   })
 
-  it('五組迦薩的章次與傳統一致', () => {
-    // 迦薩＝ Y28–34、43–46、47–50、51、53。錯一章就是動到全教最古的文本。
+  it('五組伽薩的章次與傳統一致', () => {
+    // 伽薩＝ Y28–34、43–46、47–50、51、53。錯一章就是動到全教最古的文本。
     const gathas = allTexts()
       .filter(l => l.division.key.startsWith('y-gatha'))
       .map(l => Number(l.text.siglum.replace('Y ', '')))
@@ -157,7 +157,7 @@ describe('祆教經典書目', () => {
   it('佚失的納斯克標為 lost-summary 並註明轉引出處', () => {
     const nasks = allTexts().filter(l => l.volume.key === 'nask')
     const lost = nasks.filter(l => l.text.status === 'lost-summary')
-    // 二十一部中僅《祓魔法典》完整、《讚頌書》部分傳世，其餘全佚
+    // 二十一部中僅《萬迪達德》完整、《讚頌書》部分傳世，其餘全佚
     expect(lost.length).toBe(19)
     for (const l of lost) {
       expect(l.text.via, `${l.text.slug} 未註明轉引出處`).toBeTruthy()
@@ -180,7 +180,7 @@ describe('祆教經典書目', () => {
   })
 
   it('搜尋可用中文、原文與編號找到同一篇', () => {
-    for (const q of ['迦薩', 'Yasna 30', 'Y 30']) {
+    for (const q of ['伽薩', 'Yasna 30', 'Y 30']) {
       expect(searchTexts(q).length, `搜「${q}」找不到`).toBeGreaterThan(0)
     }
     expect(findText('yasna-30')!.text.title_zh).toContain('兩靈')
@@ -225,7 +225,7 @@ describe('已上架正文與書目的對應', () => {
     }
   })
 
-  it('祓魔法典 22 章全數上架，且每段都有引用式', async () => {
+  it('萬迪達德 22 章全數上架，且每段都有引用式', async () => {
     const { TEXT_REFS, loadText } = await import('~/data/avesta/sources')
     const vd = TEXT_REFS.filter(r => r.slug.startsWith('vendidad-'))
     expect(vd).toHaveLength(22)

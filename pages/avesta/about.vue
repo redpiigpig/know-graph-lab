@@ -18,7 +18,7 @@
           這是本區與姊妹區
           <NuxtLink to="/hellenika" class="text-orange-800 hover:underline">《希臘羅馬大藏經》</NuxtLink>
           最根本的差別。希臘宗教從來沒有正典，那部藏經的廿四卷是編者按文類光譜所立、可以辯論；
-          祆教卻**自己有**一套分部——耶斯那 72 章、維斯佩拉德 24 章、祓魔法典 22 章、耶什特 21 首——
+          祆教卻**自己有**一套分部——亞斯納 72 章、維斯帕拉德 24 章、萬迪達德 22 章、亞什特 21 首——
           那是薩珊祭司傳下來的禮儀單位，伊朗與印度的火廟今天仍照這個數目誦唸。
         </p>
         <p class="text-sm text-gray-600 leading-relaxed break-words mt-2">
@@ -49,7 +49,7 @@
           <b class="text-gray-700">為什麼王室銘文列為附錄而不算經典。</b>
           阿契美尼德銘文是否屬於祆教文獻，學界至今無定論：支持者說大流士獨尊阿胡拉‧馬茲達、
           以「真理對謊言」構築秩序、行王權神授，這套語彙在阿維斯陀裡一一對得上；
-          反對者說銘文從頭到尾沒有出現查拉圖斯特拉、沒有迦薩的專門術語、沒有不朽聖者，
+          反對者說銘文從頭到尾沒有出現查拉圖斯特拉、沒有伽薩的專門術語、沒有不朽聖者，
           而且大流士是土葬的——那正好違反祆教最嚴格的潔淨法。本站的處理是收但不算經，
           理由只有一個而且很強：這是這個信仰世界最早的、有確切紀年與具名作者的文字證據，
           比現存最早的阿維斯陀寫本早了約兩千年。
@@ -59,7 +59,7 @@
       <section>
         <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">三、五級存世狀態</h2>
         <p class="text-sm text-gray-600 leading-relaxed break-words mb-3">
-          祆教的殘缺程度極高：薩珊時代的二十一部納斯克，今日僅《祓魔法典》完整傳世。
+          祆教的殘缺程度極高：薩珊時代的二十一部納斯克，今日僅《萬迪達德》完整傳世。
           殘缺不是元資料，是這些文本的處境本身，故一律在版面上標色標明。
         </p>
         <div class="divide-y divide-gray-100 border border-gray-200 rounded-xl overflow-hidden bg-white">
@@ -96,18 +96,37 @@
             <div class="font-semibold text-gray-900 text-sm mb-1">繁體中文</div>
             <p class="text-xs text-gray-500 leading-relaxed break-words">
               <b class="text-gray-700">這一欄在華語世界近乎空白，全部為本站自譯。</b>
-              既有的中譯僅元文琪譯《阿維斯塔——瑣羅亞斯德教聖書》（商務印書館，2005／2024 新版），
-              而它是伊朗學者杜斯特哈赫的選編本、簡體，且仍在版權內，故不採用。
-              巴列維文獻則無成規模的中譯。本站以公有領域英譯為中介逐段翻譯，
-              無英譯可依據而直接譯自原文轉寫者，會在該篇頁面上以警示色標明——
-              那條路徑的可信度較低，讀者有權知道。
+              既有的中譯僅元文琪譯《阿維斯塔——瑣羅亞斯德教聖書》（商務印書館），
+              而它是伊朗學者杜斯特哈赫的選編本、簡體，且仍在版權內，
+              <b class="text-gray-700">故其譯文不採用</b>。巴列維文獻則無成規模的中譯。
+              本站以公有領域英譯為中介逐段翻譯，無英譯可依據而直接譯自原文轉寫者，
+              會在該篇頁面上以警示色標明——那條路徑的可信度較低，讀者有權知道。
             </p>
           </div>
         </div>
       </section>
 
       <section>
-        <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">五、阿維斯陀字母與拉丁轉寫</h2>
+        <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">五、篇名定譯依中文學界既成譯名</h2>
+        <p class="text-sm text-gray-600 leading-relaxed break-words mb-2">
+          譯文不採用元文琪本，<b class="text-gray-700">但篇名定譯以它為準</b>——這是兩回事。
+          《伽薩》《亞斯納》《亞什特》《萬迪達德》《維斯帕拉德》都依元文琪譯《阿維斯塔》
+          （商務印書館）的卷次篇名，中文維基百科正體版的〈亞斯納〉〈亞扎塔〉〈阿沙‧瓦希什塔〉
+          等條目名亦與之一致。本站曾按音理自擬「迦薩」「耶斯那」「耶什特」「祓魔法典」等，
+          2026-09-06 全數改從學界既成譯名——已有通行譯名者，音理推衍不應凌駕其上。
+        </p>
+        <p class="text-xs text-gray-500 leading-relaxed break-words">
+          少數例外並非疏漏而是刻意：「小阿維斯陀」不從元文琪的音譯《胡爾達‧阿維斯塔》，
+          因意譯透明且與《阿維斯陀》構成名根一致的一組；「三十日誦」同理不從《西魯澤》。
+          亞什特各篇的篇名則沿用元文琪本的<b class="text-gray-700">新波斯語形</b>
+          （阿邦、蒂爾、梅赫爾、法爾瓦爾丁、巴赫拉姆、扎姆亞德），
+          那也是帕西社群今日自己的稱呼。全部定譯見
+          <NuxtLink to="/translation-glossary" class="text-orange-800 hover:underline">翻譯定名</NuxtLink>。
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">六、阿維斯陀字母與拉丁轉寫</h2>
         <p class="text-sm text-gray-600 leading-relaxed break-words mb-2">
           主欄一律是拉丁轉寫，因為學界的引用、檢索與比對都用轉寫。阿維斯陀字母欄是給眼睛看的，
           由轉寫程式轉換而得，<b class="text-gray-700">不是抄本影像</b>，引用請一律以轉寫為準。
@@ -137,7 +156,7 @@
       </section>
 
       <section>
-        <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">六、段號與斷限</h2>
+        <h2 class="text-base font-bold text-gray-900 mb-2 border-b border-orange-200 pb-1.5">七、段號與斷限</h2>
         <p class="text-sm text-gray-600 leading-relaxed break-words">
           <b class="text-gray-700">段號一律沿用經文自身的編號</b>（Y 28.1、Vd 3.24、Yt 10.4、Dk 8.44），
           不自編。轉寫依蓋爾德納校本分節、英譯依達梅斯特或米爾斯分節，兩者偶有出入；

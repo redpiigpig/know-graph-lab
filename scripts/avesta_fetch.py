@@ -5,7 +5,7 @@
 逐節對齊後寫成 data/avesta/sources/text/{slug}.json（reader 直接吃）。
 
 用法：
-    python scripts/avesta_fetch.py vendidad            # 祓魔法典 22 章
+    python scripts/avesta_fetch.py vendidad            # 萬迪達德 22 章
     python scripts/avesta_fetch.py vendidad --only 1 3 # 只抓第 1、3 章
     python scripts/avesta_fetch.py --list              # 列出已實作的書
 
@@ -255,7 +255,7 @@ BOOKS: dict[str, BookSpec] = {
         volume="vendidad",
         slug_prefix="vendidad",
         siglum_prefix="Vd",
-        title_zh="祓魔法典",
+        title_zh="萬迪達德",
         title_en="Vendidad",
         chapters=range(1, 23),
         en_url=f"{BASE}/vendidad/vd{{n}}sbe.htm",

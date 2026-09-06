@@ -3,8 +3,8 @@ import { series } from './types'
 
 // 阿維斯陀（正藏）— 阿維斯陀語原典
 //
-// 🚨 分部一律照薩珊祭司傳下來的禮儀單位，不重編。耶斯那 72 章、維斯佩拉德 24 章、
-//    祓魔法典 22 章、耶什特 21 首，這些數目帕西祭司今天仍照著誦。
+// 🚨 分部一律照薩珊祭司傳下來的禮儀單位，不重編。亞斯納 72 章、維斯帕拉德 24 章、
+//    萬迪達德 22 章、亞什特 21 首，這些數目帕西祭司今天仍照著誦。
 //
 // 🚨 逐章的**英文標題**刻意留空，由 scripts/avesta_fetch.py 連同內文一起帶回填。
 //    avesta.org 的 yasna.htm 目錄裡，米爾斯的章題 caption 掛在**前一個**編號的
@@ -14,12 +14,12 @@ import { series } from './types'
 
 const AE = '阿維斯陀語'
 
-/** 耶斯那 72 章。名稱只在傳統有專名者給專名，其餘作「第 N 章」，待管線回填。 */
+/** 亞斯納 72 章。名稱只在傳統有專名者給專名，其餘作「第 N 章」，待管線回填。 */
 function yasna(from: number, to: number, named: Record<number, [string, string?]> = {}): ZoroText[] {
   const rows: Array<[number, string, string?]> = []
   for (let n = from; n <= to; n++) {
     const hit = named[n]
-    rows.push([n, hit ? hit[0] : `耶斯那 第 ${n} 章`, hit?.[1]])
+    rows.push([n, hit ? hit[0] : `亞斯納 第 ${n} 章`, hit?.[1]])
   }
   return series({ slug: 'yasna', siglum: 'Y', orig: 'Yasna', language: AE }, rows)
 }
@@ -34,11 +34,11 @@ export const AVESTAN_CANON: ZoroCanon = {
   language: '阿維斯陀語（古／新兩層）',
   era: '約前 1500 – 公元 4 世紀（口傳），約 6 世紀寫定',
   summary:
-    '祆教唯一的原典層，以阿維斯陀語傳世。薩珊時代編成二十一部「納斯克」，據《丹卡爾德》所記約有三十四萬五千字；今日僅存約四分之一，且傳世的這一部分之所以能活下來，幾乎全靠它在祭典裡被誦唸——不誦的就佚失了。因此本藏一律按禮儀單位分部，不按主題重編：耶斯那、維斯佩拉德、祓魔法典三者合誦為「長祭典」，耶什特與小阿維斯陀為日常與節期用，殘篇與佚失納斯克另立兩部。全藏最古的一層是查拉圖斯特拉本人的十七首迦薩，語言古於其餘各篇數百年。',
+    '祆教唯一的原典層，以阿維斯陀語傳世。薩珊時代編成二十一部「納斯克」，據《丹卡爾德》所記約有三十四萬五千字；今日僅存約四分之一，且傳世的這一部分之所以能活下來，幾乎全靠它在祭典裡被誦唸——不誦的就佚失了。因此本藏一律按禮儀單位分部，不按主題重編：亞斯納、維斯帕拉德、萬迪達德三者合誦為「長祭典」，亞什特與小阿維斯陀為日常與節期用，殘篇與佚失納斯克另立兩部。全藏最古的一層是查拉圖斯特拉本人的十七首伽薩，語言古於其餘各篇數百年。',
   parts: [
     {
       key: 'p-liturgy', label: '長祭典部', label_en: 'The Long Liturgy',
-      desc: '耶斯那、維斯佩拉德、祓魔法典三書。三者不是三本獨立的書，而是同一場通宵祭典的三層誦本——維斯佩拉德的各章插入耶斯那之間，祓魔法典各章再插入其間。單獨閱讀任何一本都看不出這個結構。',
+      desc: '亞斯納、維斯帕拉德、萬迪達德三書。三者不是三本獨立的書，而是同一場通宵祭典的三層誦本——維斯帕拉德的各章插入亞斯納之間，萬迪達德各章再插入其間。單獨閱讀任何一本都看不出這個結構。',
       volumes: ['yasna', 'visperad', 'vendidad'],
     },
     {
@@ -58,13 +58,13 @@ export const AVESTAN_CANON: ZoroCanon = {
     },
   ],
   volumes: [
-    // ───────────────────────── 耶斯那 ─────────────────────────
+    // ───────────────────────── 亞斯納 ─────────────────────────
     {
-      key: 'yasna', sigil: '耶', name: '耶斯那', name_orig: 'Yasna', name_en: 'Yasna',
+      key: 'yasna', sigil: '耶', name: '亞斯納', name_orig: 'Yasna', name_en: 'Yasna',
       liturgy: '長祭典的主誦本，於晨禱時段（Hāwan Gāh）全本誦唸，約需兩小時',
-      era: '迦薩約前 1500–1000；其餘約前 900–400', extent: '72 章',
+      era: '伽薩約前 1500–1000；其餘約前 900–400', extent: '72 章',
       summary:
-        '「耶斯那」意為「敬拜、獻祭」，是祆教最核心的祭典書，全書 72 章對應祭司腰帶（庫斯提）的 72 縷線。全書以豪麻榨汁禮為軸，中段嵌入全教最古老的兩塊文本——查拉圖斯特拉本人的十七首迦薩，與散文體的七章禱。這兩塊的語言（古阿維斯陀語）比周圍章節古數百年，等於一部祭典書把自己的創教文獻整個包在裡面。',
+        '「亞斯納」意為「敬拜、獻祭」，是祆教最核心的祭典書，全書 72 章對應祭司腰帶（庫斯提）的 72 縷線。全書以豪麻榨汁禮為軸，中段嵌入全教最古老的兩塊文本——查拉圖斯特拉本人的十七首伽薩，與散文體的七章禱。這兩塊的語言（古阿維斯陀語）比周圍章節古數百年，等於一部祭典書把自己的創教文獻整個包在裡面。',
       divisions: [
         {
           key: 'y-open', label: '開祭段（1–8）', label_en: 'Opening of the Sacrifice',
@@ -109,22 +109,22 @@ export const AVESTAN_CANON: ZoroCanon = {
           texts: yasna(22, 27),
         },
         {
-          key: 'y-gatha1', label: '阿胡納瓦提迦薩（28–34）', label_en: 'Ahunavaitī Gāthā',
-          desc: '五組迦薩的第一組，七章。查拉圖斯特拉自述蒙召、詰問阿胡拉‧馬茲達、宣告二元抉擇。第 30 章「兩靈」是全教教義的源頭。',
+          key: 'y-gatha1', label: '阿胡納瓦提伽薩（28–34）', label_en: 'Ahunavaitī Gāthā',
+          desc: '五組伽薩的第一組，七章。查拉圖斯特拉自述蒙召、詰問阿胡拉‧馬茲達、宣告二元抉擇。第 30 章「兩靈」是全教教義的源頭。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(28, 34, {
-            28: ['迦薩‧祈求聆聽', '查拉圖斯特拉舉手祈禱，求見善念之靈。'],
-            29: ['迦薩‧牛魂的哀訴', '被虐待的牛之魂向天控訴，天庭指派查拉圖斯特拉為其牧者。'],
-            30: ['迦薩‧兩靈', '善惡二靈太初自擇其道；祆教二元論的根本文本。'],
-            31: ['迦薩‧道路的詰問'],
-            32: ['迦薩‧斥迭瓦與其祭司'],
-            33: ['迦薩‧先知的獻身'],
-            34: ['迦薩‧求得永生'],
+            28: ['伽薩‧祈求聆聽', '查拉圖斯特拉舉手祈禱，求見善念之靈。'],
+            29: ['伽薩‧牛魂的哀訴', '被虐待的牛之魂向天控訴，天庭指派查拉圖斯特拉為其牧者。'],
+            30: ['伽薩‧兩靈', '善惡二靈太初自擇其道；祆教二元論的根本文本。'],
+            31: ['伽薩‧道路的詰問'],
+            32: ['伽薩‧斥迭瓦與其祭司'],
+            33: ['伽薩‧先知的獻身'],
+            34: ['伽薩‧求得永生'],
           }),
         },
         {
           key: 'y-hapt', label: '七章禱（35–42）', label_en: 'Yasna Haptaŋhāiti',
-          desc: '古阿維斯陀語的散文體祈禱，語言與迦薩同層而文體全異。學界多認為它出自查拉圖斯特拉的直系門徒團體，是現存最古老的祆教集體禮拜文。第 42 章為後補。',
+          desc: '古阿維斯陀語的散文體祈禱，語言與伽薩同層而文體全異。學界多認為它出自查拉圖斯特拉的直系門徒團體，是現存最古老的祆教集體禮拜文。第 42 章為後補。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(35, 42, {
             35: ['七章禱‧讚阿胡拉與不朽聖者'],
@@ -138,32 +138,32 @@ export const AVESTAN_CANON: ZoroCanon = {
           }),
         },
         {
-          key: 'y-gatha2', label: '烏什塔瓦提迦薩（43–46）', label_en: 'Uštavaitī Gāthā',
-          desc: '第二組迦薩，四章。第 44 章連續以「這我要問你，請據實告我，阿胡拉」開頭發問二十次，是宗教文獻裡罕見的詰問體。',
+          key: 'y-gatha2', label: '烏什塔瓦提伽薩（43–46）', label_en: 'Uštavaitī Gāthā',
+          desc: '第二組伽薩，四章。第 44 章連續以「這我要問你，請據實告我，阿胡拉」開頭發問二十次，是宗教文獻裡罕見的詰問體。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(43, 46, {
-            43: ['迦薩‧幸福歸於'],
-            44: ['迦薩‧二十問', '連續二十次「這我要問你，請據實告我」——誰立定大地？誰使日月行走？'],
-            45: ['迦薩‧我要宣講'],
-            46: ['迦薩‧我往何處去', '先知被逐、走投無路的自述：「我往何地去？何處可容我棲身？」'],
+            43: ['伽薩‧幸福歸於'],
+            44: ['伽薩‧二十問', '連續二十次「這我要問你，請據實告我」——誰立定大地？誰使日月行走？'],
+            45: ['伽薩‧我要宣講'],
+            46: ['伽薩‧我往何處去', '先知被逐、走投無路的自述：「我往何地去？何處可容我棲身？」'],
           }),
         },
         {
-          key: 'y-gatha3', label: '斯彭塔‧曼紐迦薩（47–50）', label_en: 'Spəntā.mainyū Gāthā',
-          desc: '第三組迦薩，四章。以「豐饒之靈」（斯彭塔‧曼紐）為名。',
+          key: 'y-gatha3', label: '斯彭塔‧曼紐伽薩（47–50）', label_en: 'Spəntā.mainyū Gāthā',
+          desc: '第三組伽薩，四章。以「豐饒之靈」（斯彭塔‧曼紐）為名。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(47, 50, {
-            47: ['迦薩‧豐饒之靈'],
-            48: ['迦薩‧真理勝虛妄'],
-            49: ['迦薩‧斥敵者'],
-            50: ['迦薩‧我魂何依'],
+            47: ['伽薩‧豐饒之靈'],
+            48: ['伽薩‧真理勝虛妄'],
+            49: ['伽薩‧斥敵者'],
+            50: ['伽薩‧我魂何依'],
           }),
         },
         {
-          key: 'y-gatha4', label: '沃胡‧赫沙特拉迦薩（51）', label_en: 'Vohu.xšaθrā Gāthā',
-          desc: '第四組迦薩，僅一章。以「善的王權」為名。',
+          key: 'y-gatha4', label: '沃胡‧赫沙特拉伽薩（51）', label_en: 'Vohu.xšaθrā Gāthā',
+          desc: '第四組伽薩，僅一章。以「善的王權」為名。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
-          texts: yasna(51, 51, { 51: ['迦薩‧善的王權'] }),
+          texts: yasna(51, 51, { 51: ['伽薩‧善的王權'] }),
         },
         {
           key: 'y-bless', label: '祝聖（52）', label_en: 'A Prayer for Sanctity',
@@ -171,24 +171,24 @@ export const AVESTAN_CANON: ZoroCanon = {
           texts: yasna(52, 52, { 52: ['求聖潔與其果報'] }),
         },
         {
-          key: 'y-gatha5', label: '瓦希什托‧伊什提迦薩（53）', label_en: 'Vahištōišti Gāthā',
-          desc: '第五組迦薩，僅一章，為查拉圖斯特拉之女普魯查絲塔的婚禮致辭。是否出自先知本人，學界有爭議。',
+          key: 'y-gatha5', label: '瓦希什托‧伊什提伽薩（53）', label_en: 'Vahištōišti Gāthā',
+          desc: '第五組伽薩，僅一章，為查拉圖斯特拉之女普魯查絲塔的婚禮致辭。是否出自先知本人，學界有爭議。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
-          texts: yasna(53, 53, { 53: ['迦薩‧最好的願望', '先知幼女的婚禮致辭；祆教的婚姻觀出自此章。'] }),
+          texts: yasna(53, 53, { 53: ['伽薩‧最好的願望', '先知幼女的婚禮致辭；祆教的婚姻觀出自此章。'] }),
         },
         {
           key: 'y-airyaman', label: '艾里亞曼禱（54）', label_en: 'Airyaman Išya',
-          desc: '古阿維斯陀語的第四塊——與迦薩、七章禱同層。全教最有力的驅病與祝福禱詞，末世時將由救世主誦唸以完成復活。',
+          desc: '古阿維斯陀語的第四塊——與伽薩、七章禱同層。全教最有力的驅病與祝福禱詞，末世時將由救世主誦唸以完成復活。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(54, 54, { 54: ['艾里亞曼禱', '古阿維斯陀語四塊之一；末世復活時所誦。'] }),
         },
         {
           key: 'y-staota', label: '讚頌段（55–61）', label_en: 'Staota Yesnya',
-          desc: '迦薩誦畢後的讚頌，含斯勞沙讚與繁盛頌詞。',
+          desc: '伽薩誦畢後的讚頌，含斯勞沙讚與繁盛頌詞。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: yasna(55, 61, {
             56: ['斯勞沙讚前引'],
-            57: ['斯勞沙讚', '獻給聽禱之神斯勞沙；耶什特第 11 首之外的另一篇。'],
+            57: ['斯勞沙讚', '獻給聽禱之神斯勞沙；亞什特第 11 首之外的另一篇。'],
             58: ['繁盛頌詞'],
             59: ['互祝'],
           }),
@@ -216,29 +216,29 @@ export const AVESTAN_CANON: ZoroCanon = {
       ],
     },
 
-    // ───────────────────────── 維斯佩拉德 ─────────────────────────
+    // ───────────────────────── 維斯帕拉德 ─────────────────────────
     {
-      key: 'visperad', sigil: '維', name: '維斯佩拉德', name_orig: 'Visperad', name_en: 'Visperad',
-      liturgy: '不單獨誦唸。其 24 章分插於耶斯那各章之間，僅在六大節期（伽罕巴爾）的擴充祭典中使用',
+      key: 'visperad', sigil: '維', name: '維斯帕拉德', name_orig: 'Visperad', name_en: 'Visperad',
+      liturgy: '不單獨誦唸。其 24 章分插於亞斯納各章之間，僅在六大節期（伽罕巴爾）的擴充祭典中使用',
       era: '約前 500 – 公元 300', extent: '24 章',
       summary:
-        '名稱意為「向一切主宰者」（vīspe ratavō）。本身沒有獨立的敘事或教義，全書是為節期祭典而作的擴充誦段——把耶斯那的呼名對象再擴大一輪，遍及一切等級的「主宰者」。**它不能單獨讀**：脫離耶斯那之後，維斯佩拉德只是一串沒有主體的插入句。本站雖依慣例單列一卷，版面上須標明其插入位置。',
+        '名稱意為「向一切主宰者」（vīspe ratavō）。本身沒有獨立的敘事或教義，全書是為節期祭典而作的擴充誦段——把亞斯納的呼名對象再擴大一輪，遍及一切等級的「主宰者」。**它不能單獨讀**：脫離亞斯納之後，維斯帕拉德只是一串沒有主體的插入句。本站雖依慣例單列一卷，版面上須標明其插入位置。',
       divisions: [
         {
           key: 'vr-all', label: '全書（1–24）', label_en: 'Visperad 1–24',
-          desc: '各章的插入位置依帕西祭司傳統固定，本站於篇首標注其對應的耶斯那章次。',
+          desc: '各章的插入位置依帕西祭司傳統固定，本站於篇首標注其對應的亞斯納章次。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: series(
             { slug: 'visperad', siglum: 'Vr', orig: 'Visperad', language: AE },
-            Array.from({ length: 24 }, (_, i) => [i + 1, `維斯佩拉德 第 ${i + 1} 章`] as [number, string]),
+            Array.from({ length: 24 }, (_, i) => [i + 1, `維斯帕拉德 第 ${i + 1} 章`] as [number, string]),
           ),
         },
       ],
     },
 
-    // ───────────────────────── 祓魔法典 ─────────────────────────
+    // ───────────────────────── 萬迪達德 ─────────────────────────
     {
-      key: 'vendidad', sigil: '祓', name: '祓魔法典', name_orig: 'Vīdēvdād', name_en: 'Vendidad / Videvdad',
+      key: 'vendidad', sigil: '祓', name: '萬迪達德', name_orig: 'Vīdēvdād', name_en: 'Vendidad / Videvdad',
       liturgy: '長祭典的午夜擴充本，於 Ušahin Gāh 誦唸；唯一保存了完整巴列維語逐句註釋（贊德）的納斯克',
       era: '約前 400 – 公元 300（材料更早）', extent: '22 章（法爾迦爾德）',
       summary:
@@ -289,13 +289,13 @@ export const AVESTAN_CANON: ZoroCanon = {
       ],
     },
 
-    // ───────────────────────── 耶什特 ─────────────────────────
+    // ───────────────────────── 亞什特 ─────────────────────────
     {
-      key: 'yasht', sigil: '讚', name: '耶什特', name_orig: 'Yašt', name_en: 'The Yashts',
+      key: 'yasht', sigil: '讚', name: '亞什特', name_orig: 'Yašt', name_en: 'The Yashts',
       liturgy: '按當日所屬的神祇擇誦；節期與還願時另有專誦',
       era: '約前 700 – 公元 100（神話材料遠早）', extent: '21 首',
       summary:
-        '獻給各亞扎塔（值得敬拜者）的讚歌集，共 21 首，篇幅與價值極不平均——第 5、10、13、19 首各長逾百節且保存大量印度－伊朗共有的古神話，其餘數首僅存數節。**這是全阿維斯陀最不「查拉圖斯特拉」的一部分**：密特拉、阿娜希塔、韋雷特拉格納這些神在迦薩裡不見蹤影，卻在耶什特裡佔據中心；它們是先知改革之前的舊神，後來被重新納入體系。要研究前祆教的伊朗宗教，材料幾乎全在這裡。',
+        '獻給各亞扎塔（值得敬拜者）的讚歌集，共 21 首，篇幅與價值極不平均——第 5、10、13、19 首各長逾百節且保存大量印度－伊朗共有的古神話，其餘數首僅存數節。**這是全阿維斯陀最不「查拉圖斯特拉」的一部分**：密特拉、阿娜希塔、韋雷特拉格納這些神在伽薩裡不見蹤影，卻在亞什特裡佔據中心；它們是先知改革之前的舊神，後來被重新納入體系。要研究前祆教的伊朗宗教，材料幾乎全在這裡。',
       divisions: [
         {
           key: 'yt-all', label: '二十一讚', label_en: 'Yashts 1–21',
@@ -321,7 +321,7 @@ export const AVESTAN_CANON: ZoroCanon = {
             [18, '阿什塔德讚'],
             [19, '扎姆亞德讚（王者神光讚）', '長篇。敘「赫瓦雷納」（王者神光）在歷代君王與英雄間的轉移與逃逸——伊朗王權神授觀的根本文本，末段預告救世主的降臨。'],
             [20, '瓦南特讚'],
-            [21, '豪麻讚（耶什特本）'],
+            [21, '豪麻讚（亞什特本）'],
           ]),
         },
       ],
@@ -331,9 +331,9 @@ export const AVESTAN_CANON: ZoroCanon = {
     {
       key: 'khordeh', sigil: '小', name: '小阿維斯陀', name_orig: 'Khordeh Avesta', name_en: 'Khordeh Avesta',
       liturgy: '在家信眾每日五時誦唸；今日帕西社群實際最常用的一部',
-      era: '編成於薩珊末期（材料多取自耶斯那與耶什特）', extent: '約 25 篇',
+      era: '編成於薩珊末期（材料多取自亞斯納與亞什特）', extent: '約 25 篇',
       summary:
-        '「小阿維斯陀」是薩珊祭司阿杜爾巴德‧馬赫拉斯潘丹為在家信眾所編的日課本，內容多半是從耶斯那與耶什特裡摘出的段落，加上一批專為日課而作的短禱。**這一部的宗教生命力遠高於它的原創性**——一個祆教徒一生誦唸最多次的文字都在這裡。今日仍在印刷、仍在使用，各版本收錄篇目略有出入。',
+        '「小阿維斯陀」是薩珊祭司阿杜爾巴德‧馬赫拉斯潘丹為在家信眾所編的日課本，內容多半是從亞斯納與亞什特裡摘出的段落，加上一批專為日課而作的短禱。**這一部的宗教生命力遠高於它的原創性**——一個祆教徒一生誦唸最多次的文字都在這裡。今日仍在印刷、仍在使用，各版本收錄篇目略有出入。',
       divisions: [
         {
           key: 'ka-core', label: '基本禱詞', label_en: 'Core Prayers',
@@ -343,7 +343,7 @@ export const AVESTAN_CANON: ZoroCanon = {
             { slug: 'ahuna-vairya', title_zh: '阿胡納‧瓦伊里亞', title_orig: 'Ahuna Vairya', siglum: 'Y 27.13', language: AE, note: '全教第一禱詞，僅一節；經文稱其在創世之前即已存在。' },
             { slug: 'ashem-vohu', title_zh: '阿舍姆‧沃胡', title_orig: 'Ashem Vohū', siglum: 'Y 27.14', language: AE, note: '讚頌「真理」的三行禱；誦唸次數最多的一句。' },
             { slug: 'yenghe-hatam', title_zh: '燕赫‧哈坦', title_orig: 'Yeŋ́hē Hātąm', siglum: 'Y 27.15', language: AE },
-            { slug: 'kem-na-mazda', title_zh: '克姆‧納‧馬茲達', title_orig: 'Kəm.nā.mazdā', siglum: 'Y 46.7 等', language: AE, note: '驅邪禱，集自迦薩諸句。' },
+            { slug: 'kem-na-mazda', title_zh: '克姆‧納‧馬茲達', title_orig: 'Kəm.nā.mazdā', siglum: 'Y 46.7 等', language: AE, note: '驅邪禱，集自伽薩諸句。' },
             { slug: 'hoshbam', title_zh: '黎明禱', title_orig: 'Hōšbām', siglum: 'KA', language: AE },
           ],
         },
@@ -368,7 +368,7 @@ export const AVESTAN_CANON: ZoroCanon = {
             { slug: 'gah-rapithwin', title_zh: '午時禱', title_orig: 'Rapiθwin Gāh', siglum: 'G 2', language: AE, note: '正午至午後三時；冬季不誦（傳說此時段被寒冬逼入地下）。' },
             { slug: 'gah-uzerin', title_zh: '晡時禱', title_orig: 'Uzayeirin Gāh', siglum: 'G 3', language: AE },
             { slug: 'gah-aiwisruthrem', title_zh: '夜時禱', title_orig: 'Aiwisrūθrima Gāh', siglum: 'G 4', language: AE },
-            { slug: 'gah-ushahin', title_zh: '子時禱', title_orig: 'Ušahin Gāh', siglum: 'G 5', language: AE, note: '午夜至日出；祓魔法典於此時段誦唸。' },
+            { slug: 'gah-ushahin', title_zh: '子時禱', title_orig: 'Ušahin Gāh', siglum: 'G 5', language: AE, note: '午夜至日出；萬迪達德於此時段誦唸。' },
           ],
         },
         {
@@ -386,7 +386,7 @@ export const AVESTAN_CANON: ZoroCanon = {
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
             { slug: 'afrinagan-dahman', title_zh: '善者祝禱', title_orig: 'Āfrīnagān i Dahmān', siglum: 'A 1', language: AE },
-            { slug: 'afrinagan-gatha', title_zh: '迦薩五日祝禱', title_orig: 'Āfrīnagān i Gāhānbār', siglum: 'A 2', language: AE, note: '歲末五日（迦薩日）追念亡者所誦。' },
+            { slug: 'afrinagan-gatha', title_zh: '伽薩五日祝禱', title_orig: 'Āfrīnagān i Gāhānbār', siglum: 'A 2', language: AE, note: '歲末五日（伽薩日）追念亡者所誦。' },
             { slug: 'afrinagan-gahanbar', title_zh: '六節期祝禱', title_orig: 'Āfrīnagān i Gāhānbār', siglum: 'A 3', language: AE },
             { slug: 'afrinagan-rapithwin', title_zh: '午時神祝禱', title_orig: 'Āfrīnagān i Rapiθwin', siglum: 'A 4', language: AE },
           ],
@@ -439,14 +439,14 @@ export const AVESTAN_CANON: ZoroCanon = {
       key: 'nask', sigil: '佚', name: '二十一納斯克', name_orig: 'Nasks', name_en: 'The Twenty-One Nasks',
       era: '薩珊時代編定（材料更早）', extent: '21 部，存 1 部半',
       summary:
-        '薩珊祆教的完整正典目錄，按全教第一禱詞「阿胡納‧瓦伊里亞」的二十一個詞分為二十一部，三組各七部。今日僅《祓魔法典》完整傳世、《讚頌書》大致等同耶斯那的核心段落，其餘十九部全佚——**我們對它們的全部認識來自《丹卡爾德》第八、九卷的逐部撮要**。因此本卷各條的「原文欄」與「英文欄」指的都是丹卡爾德的撮要，不是納斯克本身；版面必須標明這一點，否則讀者會以為讀到了原書。',
+        '薩珊祆教的完整正典目錄，按全教第一禱詞「阿胡納‧瓦伊里亞」的二十一個詞分為二十一部，三組各七部。今日僅《萬迪達德》完整傳世、《讚頌書》大致等同亞斯納的核心段落，其餘十九部全佚——**我們對它們的全部認識來自《丹卡爾德》第八、九卷的逐部撮要**。因此本卷各條的「原文欄」與「英文欄」指的都是丹卡爾德的撮要，不是納斯克本身；版面必須標明這一點，否則讀者會以為讀到了原書。',
       divisions: [
         {
-          key: 'nask-gasanig', label: '迦薩類（1–7）', label_en: 'Gāsānīg Nasks',
-          desc: '教義與靈修類，以迦薩為核心。',
+          key: 'nask-gasanig', label: '伽薩類（1–7）', label_en: 'Gāsānīg Nasks',
+          desc: '教義與靈修類，以伽薩為核心。',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
-            { slug: 'nask-stod-yasn', title_zh: '讚頌書', title_orig: 'Stōd Yasn', siglum: 'Nask 1', status: 'partial', via: '《丹卡爾德》9.1 以下', note: '大致等同今耶斯那的迦薩與讚頌段，是唯一實質傳世的迦薩類納斯克。' },
+            { slug: 'nask-stod-yasn', title_zh: '讚頌書', title_orig: 'Stōd Yasn', siglum: 'Nask 1', status: 'partial', via: '《丹卡爾德》9.1 以下', note: '大致等同今亞斯納的伽薩與讚頌段，是唯一實質傳世的伽薩類納斯克。' },
             { slug: 'nask-sudgar', title_zh: '益世書', title_orig: 'Sūdgar', siglum: 'Nask 2', status: 'lost-summary', via: '《丹卡爾德》9.1–9.23' },
             { slug: 'nask-warshtmansr', title_zh: '聖言功效書', title_orig: 'Warštmānsr', siglum: 'Nask 3', status: 'lost-summary', via: '《丹卡爾德》9.24–9.46' },
             { slug: 'nask-bag', title_zh: '分授書', title_orig: 'Bag', siglum: 'Nask 4', status: 'lost-summary', via: '《丹卡爾德》9.47–9.68' },
@@ -478,9 +478,9 @@ export const AVESTAN_CANON: ZoroCanon = {
             { slug: 'nask-ganaba-sar-nizad', title_zh: '盜賊律', title_orig: 'Ganabā-sar-nizad', siglum: 'Nask 16', status: 'lost-summary', via: '《丹卡爾德》8.21' },
             { slug: 'nask-huspram', title_zh: '胡斯帕拉姆', title_orig: 'Huspāram', siglum: 'Nask 17', status: 'lost-summary', via: '《丹卡爾德》8.28–8.37', seealso: '殘篇卷‧儀軌書、修學書', note: '《儀軌書》與《修學書》原屬本納斯克，是法類僅存的實體殘餘。' },
             { slug: 'nask-sakadum', title_zh: '薩卡杜姆', title_orig: 'Sagādūm', siglum: 'Nask 18', status: 'lost-summary', via: '《丹卡爾德》8.38–8.43' },
-            { slug: 'nask-videvdad', title_zh: '祓魔法典', title_orig: 'Widēwdād', siglum: 'Nask 19', status: 'whole', seealso: '長祭典部‧祓魔法典', note: '二十一納斯克中唯一完整傳世者。' },
+            { slug: 'nask-videvdad', title_zh: '萬迪達德', title_orig: 'Widēwdād', siglum: 'Nask 19', status: 'whole', seealso: '長祭典部‧萬迪達德', note: '二十一納斯克中唯一完整傳世者。' },
             { slug: 'nask-chihrdad', title_zh: '族裔書', title_orig: 'Čihrdād', siglum: 'Nask 20', status: 'lost-summary', via: '《丹卡爾德》8.13', note: '自伽約馬爾特以下的人類世系與伊朗諸族起源；伊朗民族史詩傳統的遠源。' },
-            { slug: 'nask-bagan-yasht', title_zh: '諸神讚', title_orig: 'Bayān Yasn', siglum: 'Nask 21', status: 'lost-summary', via: '《丹卡爾德》8.15', seealso: '讚歌部‧耶什特', note: '今傳耶什特多出於此。' },
+            { slug: 'nask-bagan-yasht', title_zh: '諸神讚', title_orig: 'Bayān Yasn', siglum: 'Nask 21', status: 'lost-summary', via: '《丹卡爾德》8.15', seealso: '讚歌部‧亞什特', note: '今傳亞什特多出於此。' },
           ],
         },
       ],

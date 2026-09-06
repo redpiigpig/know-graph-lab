@@ -15,8 +15,8 @@
           以及波斯兩大王朝的王室石刻（附錄，非經典）。
         </p>
         <p class="text-xs text-gray-400 leading-relaxed mt-2">
-          <b>分部原則</b>：照薩珊祭司傳下來的禮儀單位，本站不另立卷次。耶斯那 72 章、維斯佩拉德 24 章、
-          祓魔法典 22 章、耶什特 21 首——這些數目今天仍在火廟裡被照著誦。
+          <b>分部原則</b>：照薩珊祭司傳下來的禮儀單位，本站不另立卷次。亞斯納 72 章、維斯帕拉德 24 章、
+          萬迪達德 22 章、亞什特 21 首——這些數目今天仍在火廟裡被照著誦。
         </p>
         <p class="text-xs text-gray-400 leading-relaxed mt-1">
           <b>斷限</b>：{{ TERMINUS.from }} 起，<b>{{ TERMINUS.to }}</b>。{{ TERMINUS.note }}

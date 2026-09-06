@@ -88,7 +88,7 @@ export const PAHLAVI_CANON: ZoroCanon = {
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
             { slug: 'denkard-08', title_zh: '丹卡爾德 第八卷', title_orig: 'Dēnkard VIII', siglum: 'Dk 8', language: MP, extent: '46 章', status: 'whole', seealso: '阿維斯陀‧二十一納斯克', note: '逐部撮述二十一納斯克的內容與章數；失傳正典的總目。韋斯特譯本收於 SBE 第 37 卷。' },
-            { slug: 'denkard-09', title_zh: '丹卡爾德 第九卷', title_orig: 'Dēnkard IX', siglum: 'Dk 9', language: MP, extent: '69 章', status: 'whole', seealso: '阿維斯陀‧二十一納斯克', note: '詳解迦薩類三部納斯克（益世書、聖言功效書、分授書），逐章逐節撮要。' },
+            { slug: 'denkard-09', title_zh: '丹卡爾德 第九卷', title_orig: 'Dēnkard IX', siglum: 'Dk 9', language: MP, extent: '69 章', status: 'whole', seealso: '阿維斯陀‧二十一納斯克', note: '詳解伽薩類三部納斯克（益世書、聖言功效書、分授書），逐章逐節撮要。' },
           ],
         },
       ],
@@ -173,7 +173,7 @@ export const PAHLAVI_CANON: ZoroCanon = {
             { slug: 'khweshkarih-i-redagan', title_zh: '幼者的本分', title_orig: 'Xwēškārīh ī Rēdagān', siglum: 'XR', language: MP, status: 'whole' },
             { slug: 'nature-fortunate-man', title_zh: '有福之人的性情與智慧', title_orig: 'Xēm ud Xrad ī Farrox Mard', siglum: 'XXFM', language: MP, status: 'whole' },
             { slug: 'style-of-letters', title_zh: '書信體例', title_orig: 'Abar Ēwēnag ī Nāmag Nibēsišnīh', siglum: 'ENN', language: MP, status: 'whole', note: '公文書寫格式手冊；宗教性極低，但保存了薩珊官制詞彙。' },
-            { slug: 'gasanawa', title_zh: '亡者迦薩誦', title_orig: 'Gāsānawā', siglum: 'Gw', language: MP, status: 'fragment' },
+            { slug: 'gasanawa', title_zh: '亡者伽薩誦', title_orig: 'Gāsānawā', siglum: 'Gw', language: MP, status: 'fragment' },
           ],
         },
       ],
@@ -191,7 +191,7 @@ export const PAHLAVI_CANON: ZoroCanon = {
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
             { slug: 'arda-wiraz-namag', title_zh: '阿爾達‧維拉茲書', title_orig: 'Ardā Wīrāz Nāmag', siglum: 'AWN', language: MP, extent: '101 章', status: 'whole', note: '義人維拉茲飲藥入定七日，魂遊天堂與地獄，逐一目睹各罪的刑罰。', intro: '祆教的天地遊記。祭司會議選出最義的維拉茲，飲下曼陀羅與酒調的藥而神魂出竅七日；他先過裁判之橋，見義人的靈魂由化身少女的「自己的宗教」相迎，再上三重天到無限光明之境，然後下入地獄，逐一目睹背約者、苛待牲畜者、毀壞水火者所受的刑罰。歸來後口述，書記錄之。**與但丁《神曲》的結構相似度極高**，兩者有無傳承關係聚訟未決。文本最晚不遲於十世紀，但材料可能早得多。' },
-            { slug: 'zand-i-wahman-yasn', title_zh: '瓦赫曼耶什特', title_orig: 'Zand ī Wahman Yasn', siglum: 'ZWY', language: MP, extent: '9 章', status: 'whole', note: '四枝（或七枝）金銀鐵鉛之樹的異象，預言各時代的敗壞與外族入侵；祆教啟示文學的代表。韋斯特譯本收於 SBE 第 5 卷。' },
+            { slug: 'zand-i-wahman-yasn', title_zh: '瓦赫曼亞什特', title_orig: 'Zand ī Wahman Yasn', siglum: 'ZWY', language: MP, extent: '9 章', status: 'whole', note: '四枝（或七枝）金銀鐵鉛之樹的異象，預言各時代的敗壞與外族入侵；祆教啟示文學的代表。韋斯特譯本收於 SBE 第 5 卷。' },
             { slug: 'ayadgar-i-jamaspig', title_zh: '賈馬斯普紀念書', title_orig: 'Ayādgār ī Jāmāspīg', siglum: 'AJ', language: '帕贊德／中古波斯語', extent: '17 章', status: 'partial', note: '智者賈馬斯普答維什塔斯帕王問未來之事；含千年周期與救主降臨。' },
             { slug: 'saddar-bundahesh', title_zh: '百門本達希什', title_orig: 'Saddar Bundahiš', siglum: 'SdB', language: '新波斯語', status: 'whole', era: '15 世紀', note: '晚期彙編，末世材料豐富但年代甚晚，引用須格外謹慎。' },
           ],

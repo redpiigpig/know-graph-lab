@@ -21,14 +21,14 @@ data/avesta/sources/names.json（進版控、看得見、可人工改），翻�
 
 ═══════════════════ 這批材料的三個翻譯陷阱 ═══════════════════
 
-一、**祓魔法典是極度公式化的文本。**
+一、**萬迪達德是極度公式化的文本。**
     「O Maker of the material world, thou Holy One!」「Ahura Mazda answered:」
     這兩句在 22 章裡出現數百次。同一個公式若在不同批次被譯成不同說法，
     整本書會讀起來像好幾個人翻的——而逐段對照的版面會把這件事放到最大。
     故 prompt 明列固定譯法，且 batch 內外一律不得改寫。
 
 二、**數字與刑罰額度是這本書的實質內容。**
-    「四百鞭」「三步」「九夜」「一千五百枚銀幣」——祓魔法典的宗教意義幾乎全在
+    「四百鞭」「三步」「九夜」「一千五百枚銀幣」——萬迪達德的宗教意義幾乎全在
     這些量詞上。約略化（「重罰」「數日」）等於把這本書的內容刪掉。
 
 三、**不可潤飾成流暢散文。**
@@ -128,7 +128,7 @@ PLACES_WANTED = {
     "Achaemenid Empire", "Sasanian Empire", "Babylon", "Nineveh", "India",
 }
 
-# 詞庫收的是專名；這些是祓魔法典高頻的**普通名詞**，其定譯同樣不能逐批各譯各的。
+# 詞庫收的是專名；這些是萬迪達德高頻的**普通名詞**，其定譯同樣不能逐批各譯各的。
 EXTRA = {
     "the Holy One": "持阿沙的聖者",
     "Maker of the material world": "物質世界的造主",
@@ -170,7 +170,7 @@ EXTRA = {
     "Chista": "奇斯塔",
     "Vayu": "瓦尤",
 
-    # ── 祓魔法典第 1 章的十六邦國（全書反覆出現，不定死會逐批各譯各的）──
+    # ── 萬迪達德第 1 章的十六邦國（全書反覆出現，不定死會逐批各譯各的）──
     "Sughdha": "蘇格達（粟特）",
     "Mouru": "莫魯（木鹿）",
     "Bakhdhi": "巴赫迪",
@@ -323,7 +323,7 @@ SOLO_CHARS = 700     # 超過這個長度的段落單獨成批
 
 def make_batches(todo: list[tuple[int, dict]]) -> list[list[tuple[int, dict]]]:
     """依字數動態分批。固定段數在長段落上會撐爆回傳長度，整批 JSON 解析失敗
-    就是白跑一趟。祓魔法典第 2、19 章有數段逾千字。"""
+    就是白跑一趟。萬迪達德第 2、19 章有數段逾千字。"""
     out: list[list[tuple[int, dict]]] = []
     cur: list[tuple[int, dict]] = []
     n = 0
@@ -403,7 +403,7 @@ def reject_reason(zh: str, en: str) -> str | None:
         return f"含簡體字 {''.join(sorted(set(bad)))}"
     # 整段幾乎沒有漢字＝根本沒翻（回了英文原樣）
     #
-    # 🚨 例外：**起句引錄**。祓魔法典第 10 章逐條列出該誦幾遍的迦薩詩句，
+    # 🚨 例外：**起句引錄**。萬迪達德第 10 章逐條列出該誦幾遍的伽薩詩句，
     #    英譯就是一串阿維斯陀語起句加經文出處（`ahya yasa ... urvanem (Y28.2)`）。
     #    那些字**本來就該保留轉寫不譯**，漢字自然少——2026-09-06 全書跑完，
     #    僅存的兩段未譯（Vd 10.4、10.8）就是被這條誤殺的。
@@ -627,10 +627,40 @@ def translate_long(seg: dict, name_lines: str, doc: dict) -> str:
             return ""
         time.sleep(1.0)
 
+    def _missing() -> list[int]:
+        return [i for i in range(1, len(pieces) + 1) if not (got.get(str(i)) or "").strip()]
+
+    # 塊數多時模型仍會零星漏塊（十四、五塊的段落每輪漏一兩塊）。
+    # 只把漏掉的那幾塊重問，每次至多三塊，最多兩輪。
+    for _ in range(2):
+        miss = _missing()
+        if not miss:
+            break
+        for k in range(0, len(miss), 3):
+            grp = miss[k:k + 3]
+            items = (chr(10) * 2).join(
+                f"[{i}]（{seg['ref']} 第 {i} 塊，全段共 {len(pieces)} 塊）"
+                f"{chr(10)}英譯：{pieces[i - 1]}" for i in grp)
+            prompt = PROMPT.format(title=doc.get("title_zh") or doc.get("title_en"),
+                                   siglum=doc.get("siglum", ""),
+                                   translator=doc.get("en_translator", ""),
+                                   names=name_lines, items=items)
+            try:
+                raw = ask(prompt)
+            except Exception:  # noqa: BLE001
+                continue
+            raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
+            try:
+                got.update(normalise_keys(json.loads(raw)))
+            except json.JSONDecodeError:
+                continue
+            time.sleep(1.0)
+
     # 🚨 缺塊就整段不落地。少一塊而其餘照常顯示，正是最難發現的漏譯。
-    missing = [str(i) for i in range(1, len(pieces) + 1) if not (got.get(str(i)) or "").strip()]
-    if missing:
-        print(f"    ✗ {seg['ref']} 分譯缺第 {','.join(missing)} 塊（共 {len(pieces)} 塊）", flush=True)
+    miss = _missing()
+    if miss:
+        print(f"    ✗ {seg['ref']} 分譯缺第 {','.join(map(str, miss))} 塊"
+              f"（共 {len(pieces)} 塊，已重試兩輪）", flush=True)
         return ""
     return join_parts(got)
 
