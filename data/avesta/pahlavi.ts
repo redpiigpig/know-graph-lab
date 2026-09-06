@@ -166,7 +166,7 @@ export const PAHLAVI_CANON: ZoroCanon = {
           key: 'an-all', label: '訓誡諸篇', label_en: 'Andarz Texts',
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
-            { slug: 'menog-i-khrad', title_zh: '智慧精神', title_orig: 'Dādestān ī Mēnōg ī Xrad', siglum: 'MX', language: MP, extent: '63 問', status: 'whole', note: '智者向「智慧之靈」發問六十三則的對話體；祆教入門最常被引用的一書。韋斯特譯本收於 SBE 第 24 卷。' },
+            { slug: 'menog-i-khrad', title_zh: '智慧之靈', title_orig: 'Dādestān ī Mēnōg ī Xrad', siglum: 'MX', language: MP, extent: '63 問', status: 'whole', note: '智者向「智慧之靈」發問六十三則的對話體；祆教入門最常被引用的一書。韋斯特譯本收於 SBE 第 24 卷。' },
             { slug: 'chidag-andarz', title_zh: '古聖精選訓誡', title_orig: 'Čīdag Andarz ī Pōryōtkēšān', siglum: 'ČAP', language: MP, status: 'whole', note: '祆教的要理問答：十五歲當知者為何？答曰知我是誰、屬誰、從何而來、往何處去。' },
             { slug: 'andarz-adurbad-1', title_zh: '阿杜爾巴德訓誡', title_orig: 'Andarz ī Ādurbād ī Mahraspandān', siglum: 'AAM', language: MP, status: 'whole', author: '阿杜爾巴德‧馬赫拉斯潘丹（4 世紀祭司長）', note: '傳為受熔銅神判而不傷的那位祭司長所留；祆教格言的最大宗。' },
             { slug: 'andarz-adurbad-2', title_zh: '阿杜爾巴德箴言', title_orig: 'Wāzag ī Ādurbād', siglum: 'WA', language: MP, status: 'whole' },
@@ -191,7 +191,7 @@ export const PAHLAVI_CANON: ZoroCanon = {
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
             { slug: 'arda-wiraz-namag', title_zh: '阿爾達‧維拉茲書', title_orig: 'Ardā Wīrāz Nāmag', siglum: 'AWN', language: MP, extent: '101 章', status: 'whole', note: '義人維拉茲飲藥入定七日，魂遊天堂與地獄，逐一目睹各罪的刑罰。', intro: '祆教的天地遊記。祭司會議選出最義的維拉茲，飲下曼陀羅與酒調的藥而神魂出竅七日；他先過裁判之橋，見義人的靈魂由化身少女的「自己的宗教」相迎，再上三重天到無限光明之境，然後下入地獄，逐一目睹背約者、苛待牲畜者、毀壞水火者所受的刑罰。歸來後口述，書記錄之。**與但丁《神曲》的結構相似度極高**，兩者有無傳承關係聚訟未決。文本最晚不遲於十世紀，但材料可能早得多。' },
-            { slug: 'zand-i-wahman-yasn', title_zh: '巴赫曼耶什特', title_orig: 'Zand ī Wahman Yasn', siglum: 'ZWY', language: MP, extent: '9 章', status: 'whole', note: '四枝（或七枝）金銀鐵鉛之樹的異象，預言各時代的敗壞與外族入侵；祆教啟示文學的代表。韋斯特譯本收於 SBE 第 5 卷。' },
+            { slug: 'zand-i-wahman-yasn', title_zh: '瓦赫曼耶什特', title_orig: 'Zand ī Wahman Yasn', siglum: 'ZWY', language: MP, extent: '9 章', status: 'whole', note: '四枝（或七枝）金銀鐵鉛之樹的異象，預言各時代的敗壞與外族入侵；祆教啟示文學的代表。韋斯特譯本收於 SBE 第 5 卷。' },
             { slug: 'ayadgar-i-jamaspig', title_zh: '賈馬斯普紀念書', title_orig: 'Ayādgār ī Jāmāspīg', siglum: 'AJ', language: '帕贊德／中古波斯語', extent: '17 章', status: 'partial', note: '智者賈馬斯普答維什塔斯帕王問未來之事；含千年周期與救主降臨。' },
             { slug: 'saddar-bundahesh', title_zh: '百門本達希什', title_orig: 'Saddar Bundahiš', siglum: 'SdB', language: '新波斯語', status: 'whole', era: '15 世紀', note: '晚期彙編，末世材料豐富但年代甚晚，引用須格外謹慎。' },
           ],

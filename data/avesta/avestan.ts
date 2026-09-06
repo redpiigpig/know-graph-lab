@@ -399,7 +399,7 @@ export const AVESTAN_CANON: ZoroCanon = {
       key: 'fragment', sigil: '殘', name: '阿維斯陀殘篇', name_orig: 'Avestan Fragments', name_en: 'Avestan Fragments',
       era: '各篇不一', extent: '約 12 種',
       summary:
-        '不屬於上述任何一部傳世祭典書、但確為阿維斯陀語的零散文本。其中兩部（《儀軌書》《師徒書》）篇幅可觀且極重要——它們是薩珊祭司法規僅存的直接證據；其餘多為單葉或引文。這一卷的存在本身說明了一件事：傳世的阿維斯陀不是一部書的殘餘，而是一座圖書館燒剩的幾個書架。',
+        '不屬於上述任何一部傳世祭典書、但確為阿維斯陀語的零散文本。其中兩部（《儀軌書》《修學書》）篇幅可觀且極重要——它們是薩珊祭司法規僅存的直接證據；其餘多為單葉或引文。這一卷的存在本身說明了一件事：傳世的阿維斯陀不是一部書的殘餘，而是一座圖書館燒剩的幾個書架。',
       divisions: [
         {
           key: 'fr-law', label: '祭司法規', label_en: 'Priestly Law',
@@ -407,7 +407,7 @@ export const AVESTAN_CANON: ZoroCanon = {
           columns: { orig: 'available', en: 'available', zh: 'none' },
           texts: [
             { slug: 'nirangistan', title_zh: '儀軌書', title_orig: 'Nīrangistān', title_en: 'Nirangistan', siglum: 'N', language: `${AE}＋中古波斯語註`, status: 'fragment', extent: '約 110 節', note: '祭典執行的細則：誦錯了怎麼辦、誰有資格主祭、器具如何處置。薩珊祭司實務的唯一直接材料。' },
-            { slug: 'herbedestan', title_zh: '師徒書', title_orig: 'Hērbedestān', title_en: 'Herbedestan', siglum: 'H', language: `${AE}＋中古波斯語註`, status: 'fragment', extent: '約 20 節', note: '論宗教教育：誰該去求學、去多久、家業與學業如何權衡。含女性受教的規定。' },
+            { slug: 'herbedestan', title_zh: '修學書', title_orig: 'Hērbedestān', title_en: 'Herbedestan', siglum: 'H', language: `${AE}＋中古波斯語註`, status: 'fragment', extent: '約 20 節', note: '論宗教教育：誰該去求學、去多久、家業與學業如何權衡。含女性受教的規定。' },
             { slug: 'pursishniha', title_zh: '問答書', title_orig: 'Pursišnīhā', siglum: 'P', language: `${AE}＋中古波斯語註`, status: 'fragment', note: '五十九條問答形式的法規殘篇。' },
           ],
         },
@@ -476,7 +476,7 @@ export const AVESTAN_CANON: ZoroCanon = {
           texts: [
             { slug: 'nask-nikadum', title_zh: '尼卡杜姆', title_orig: 'Nīkādūm', siglum: 'Nask 15', status: 'lost-summary', via: '《丹卡爾德》8.16–8.20' },
             { slug: 'nask-ganaba-sar-nizad', title_zh: '盜賊律', title_orig: 'Ganabā-sar-nizad', siglum: 'Nask 16', status: 'lost-summary', via: '《丹卡爾德》8.21' },
-            { slug: 'nask-huspram', title_zh: '胡斯帕拉姆', title_orig: 'Huspāram', siglum: 'Nask 17', status: 'lost-summary', via: '《丹卡爾德》8.28–8.37', seealso: '殘篇卷‧儀軌書、師徒書', note: '《儀軌書》與《師徒書》原屬本納斯克，是法類僅存的實體殘餘。' },
+            { slug: 'nask-huspram', title_zh: '胡斯帕拉姆', title_orig: 'Huspāram', siglum: 'Nask 17', status: 'lost-summary', via: '《丹卡爾德》8.28–8.37', seealso: '殘篇卷‧儀軌書、修學書', note: '《儀軌書》與《修學書》原屬本納斯克，是法類僅存的實體殘餘。' },
             { slug: 'nask-sakadum', title_zh: '薩卡杜姆', title_orig: 'Sagādūm', siglum: 'Nask 18', status: 'lost-summary', via: '《丹卡爾德》8.38–8.43' },
             { slug: 'nask-videvdad', title_zh: '祓魔法典', title_orig: 'Widēwdād', siglum: 'Nask 19', status: 'whole', seealso: '長祭典部‧祓魔法典', note: '二十一納斯克中唯一完整傳世者。' },
             { slug: 'nask-chihrdad', title_zh: '族裔書', title_orig: 'Čihrdād', siglum: 'Nask 20', status: 'lost-summary', via: '《丹卡爾德》8.13', note: '自伽約馬爾特以下的人類世系與伊朗諸族起源；伊朗民族史詩傳統的遠源。' },
