@@ -1,0 +1,20 @@
+{"key": "mani-lin-dongjian", "query": "摩尼教及其東漸 林悟殊", "expect": "摩尼教及其東漸", "who": "林悟殊", "source": "manichaeism-studies", "zh": "林悟殊《摩尼教及其東漸》（中華書局 1987）— 中文摩尼教研究的奠基專著"}
+{"key": "mani-lin-huahua", "query": "摩尼教華化補說 林悟殊", "expect": "摩尼教", "who": "林悟殊", "source": "manichaeism-studies", "zh": "林悟殊《摩尼教華化補說》"}
+{"key": "mani-chen-yuan-ru", "query": "陳垣 摩尼教入中國考", "expect": "摩尼教入中国", "who": "", "source": "manichaeism-studies", "zh": "陳垣〈摩尼教入中國考〉（1923）— 與〈火祆教入中國考〉同年，公有領域"}
+{"key": "mani-rui-dongfang", "query": "東方摩尼教研究 芮傳明", "expect": "方摩尼教研究", "who": "", "source": "manichaeism-studies", "zh": "芮傳明《東方摩尼教研究》"}
+{"key": "mani-yang-huihu", "query": "回鶻摩尼教研究 楊富學", "expect": "鹘摩尼教", "who": "", "source": "manichaeism-studies", "zh": "楊富學《回鶻摩尼教研究》— 摩尼教在回鶻立為國教那一段"}
+{"key": "mani-ma-xiyu", "query": "摩尼教與古代西域史研究 馬小鶴", "expect": "摩尼教与古代西域", "who": "", "source": "manichaeism-studies", "zh": "馬小鶴《摩尼教與古代西域史研究》"}
+{"key": "mani-ma-guangming", "query": "光明的使者 摩尼與摩尼教 馬小鶴", "expect": "光明的使者", "who": "", "source": "manichaeism-studies", "zh": "馬小鶴《光明的使者：摩尼與摩尼教》"}
+{"key": "mani-xiapu-yang", "query": "霞浦摩尼教研究 楊富學", "expect": "霞浦摩尼教", "who": "", "source": "manichaeism-studies", "zh": "楊富學等《霞浦摩尼教研究》— 2008 年福建霞浦文書出土後的新領域"}
+{"key": "mani-xiapu-ma", "query": "霞浦文書研究 馬小鶴", "expect": "霞浦文书", "who": "", "source": "manichaeism-studies", "zh": "馬小鶴《霞浦文書研究》"}
+{"key": "mani-wang-mingjiao", "query": "從摩尼教到明教 王見川", "expect": "摩尼教到明教", "who": "", "source": "manichaeism-studies", "zh": "王見川《從摩尼教到明教》（新文豐 1992）— 台灣出版，明教研究代表作"}
+{"key": "mani-wuhan-damin", "query": "吳晗 明教與大明帝國", "expect": "明教与大明", "who": "", "source": "manichaeism-studies", "zh": "吳晗〈明教與大明帝國〉（《清華學報》13:1，1941）— 主張明朝國號出自明教"}
+{"key": "mani-yangne-bailian", "query": "元代白蓮教研究 楊訥", "expect": "白莲教研究", "who": "", "source": "manichaeism-studies", "zh": "楊訥《元代白蓮教研究》— **反駁吳晗**的一方，與上一條並收才成辯論"}
+{"key": "mani-lieu-roman-china", "query": "Lieu Manichaeism in the Later Roman Empire and Medieval China", "expect": "Manichaeism in the Later Roman Empire", "who": "Lieu", "source": "manichaeism-studies", "zh": "劉南強《晚期羅馬帝國與中古中國的摩尼教》— 橫跨東西兩端的標準著作"}
+{"key": "mani-lieu-central-asia", "query": "Lieu Manichaeism in Central Asia and China", "expect": "Manichaeism in Central Asia", "who": "Lieu", "source": "manichaeism-studies", "zh": "劉南強《中亞與中國的摩尼教》"}
+{"key": "mani-gardner-lieu-texts", "query": "Gardner Lieu Manichaean Texts from the Roman Empire", "expect": "Manichaean Texts", "who": "Gardner", "source": "manichaeism-studies", "zh": "加德納‧劉南強編《羅馬帝國的摩尼教文獻》— 原典英譯選輯"}
+{"key": "mani-klimkeit-silkroad", "query": "Klimkeit Gnosis on the Silk Road Gnostic Texts from Central Asia", "expect": "Gnosis on the Silk Road", "who": "Klimkeit", "source": "manichaeism-studies", "zh": "克林凱特《絲路上的諾斯底》— 中亞摩尼教文獻英譯"}
+{"key": "mani-beduhn-body", "query": "BeDuhn The Manichaean Body in Discipline and Ritual", "expect": "Manichaean Body", "who": "BeDuhn", "source": "manichaeism-studies", "zh": "貝杜恩《摩尼教的身體》— 戒律與儀式研究"}
+{"key": "mani-bakerbrian-ancient", "query": "Baker-Brian Manichaeism An Ancient Faith Rediscovered", "expect": "Manichaeism", "who": "Baker-Brian", "source": "manichaeism-studies", "zh": "貝克布萊恩《摩尼教：一個重見天日的古代信仰》— 最新入門通論"}
+{"key": "mani-tardieu", "query": "Tardieu Manichaeism", "expect": "Manichaeism", "who": "Tardieu", "source": "manichaeism-studies", "zh": "塔迪厄《摩尼教》"}
+{"key": "mani-cmc", "query": "Cologne Mani Codex Concerning the Origin of His Body", "expect": "Mani Codex", "who": "Koenen", "source": "manichaeism-studies", "zh": "《科隆摩尼古卷》— 摩尼生平的一手文獻"}
