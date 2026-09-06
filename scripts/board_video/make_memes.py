@@ -96,7 +96,7 @@ def fetch_paintings():
 
 def make_pig_cards():
     from PIL import Image, ImageDraw, ImageFont
-    pig_path = PROJ / "素材" / "多馬豬" / "多馬豬.png"
+    pig_path = PROJ / "素材" / "多馬豬" / "多馬豬_圓形.png"
     if not pig_path.exists():
         print("  找不到多馬豬，略過梗圖卡")
         return []

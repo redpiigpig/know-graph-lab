@@ -42,9 +42,21 @@ for (const n of data.nodes) {
   const hit = fs.readdirSync(pdDir).find((f) => f.startsWith(key + '_'));
   if (hit) images[n.id] = dataUri(path.join(pdDir, hit));
 }
-const mascot = path.join(PROJ, '素材', '多馬豬', '多馬豬.png');
-const mascots = [];
-if (fs.existsSync(mascot)) { const u = dataUri(mascot); images.N01 = u; images.N73 = u; mascots.push('N01', 'N73'); }
+// 使用者自備的素材優先：這些比公有領域圖對題得多
+const own = {
+  N01: path.join(PROJ, '素材', '劇照', '作者被說毫無人性.jpg'),   // 「毫無人性」那句的出處
+  N02: path.join(PROJ, '素材', '劇照', '電影劇照.webp'),
+  N20: path.join(PROJ, '素材', '劇照', '電影劇照.webp'),
+  N73: path.join(PROJ, '素材', '多馬豬', '多馬豬_卡通.png'),
+};
+const mascots = ['N73'];
+for (const [id, f] of Object.entries(own)) if (fs.existsSync(f)) images[id] = dataUri(f);
+
+const avatar = path.join(PROJ, '素材', '多馬豬', '多馬豬_圓形.png');
+const mascotUrl = fs.existsSync(avatar) ? dataUri(avatar) : null;
+const coverFile = path.join(PROJ, '素材', '封面', '影片封面.png');
+const coverHold = Number(arg('cover', from === 0 ? 3.0 : 0));   // 只有從頭開始才放封面卡
+const coverUrl = coverHold > 0 && fs.existsSync(coverFile) ? dataUri(coverFile) : null;
 
 const ff = spawn('ffmpeg', [
   '-y', '-f', 'image2pipe', '-framerate', String(fps), '-i', '-',
@@ -59,7 +71,7 @@ const browser = await chromium.launch({
 });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
 await page.goto(pathToFileURL(path.join(HERE, 'board.html')).href);
-await page.evaluate(([d, o]) => window.init(d, o), [data, { images, noSub, mascots, theme }]);
+await page.evaluate(([d, o]) => window.init(d, o), [data, { images, noSub, mascots, theme, mascotUrl, coverUrl, coverHold }]);
 await page.waitForTimeout(400);
 
 const total = Math.ceil((to - from) * fps);

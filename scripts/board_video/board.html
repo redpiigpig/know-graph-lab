@@ -53,8 +53,12 @@
   #sub { position: absolute; left: 0; right: 0; bottom: 54px; text-align: center;
     font-size: 46px; line-height: 1.45; color: #f2f6ee; opacity: 0;
     font-family: "Microsoft JhengHei", "標楷體", sans-serif;
-    text-shadow: 0 3px 16px rgba(0,0,0,.85); padding: 0 140px; }
+    text-shadow: 0 3px 16px rgba(0,0,0,.85); padding: 0 140px 0 340px; }
   #sub.off { display: none; }
+  /* 多馬豬：整支片都待在左下角，像主持人坐在鏡頭旁邊 */
+  #mascot { position: absolute; left: 46px; bottom: 150px; width: 240px; opacity: 0; }
+  #cover { position: absolute; inset: 0; width: 1920px; height: 1080px;
+    object-fit: cover; opacity: 0; }
 
   /* ══ 風格 B：米色手帳筆記 ══ */
   body.theme-paper #viewport { background: #efe4cc; }
@@ -112,7 +116,9 @@
 <div id="viewport">
   <div id="board"><svg id="edges"></svg></div>
   <div id="chapter"></div>
+  <img id="mascot" alt="">
   <div id="sub"></div>
+  <img id="cover" alt="">
 </div>
 <script>
 const S = { data: null, nodes: {}, els: {}, edges: [], showSub: true };
@@ -132,6 +138,9 @@ function camFor(node, pad) {
 function init(data, opts) {
   S.data = data;
   document.body.className = 'theme-' + ((opts && opts.theme) || 'chalk');
+  if (opts && opts.mascotUrl) document.getElementById('mascot').src = opts.mascotUrl;
+  if (opts && opts.coverUrl) document.getElementById('cover').src = opts.coverUrl;
+  S.coverHold = (opts && opts.coverHold) || 0;   // 封面卡停留幾秒
   S.showSub = !(opts && opts.noSub);
   document.getElementById('sub').className = S.showSub ? '' : 'off';
   const board = document.getElementById('board');
@@ -246,6 +255,18 @@ function seek(t) {
     const a = t - chapT;
     ch.style.opacity = a < .5 ? a / .5 : (a > 2.3 ? (2.8 - a) / .5 : 1);
   } else ch.style.opacity = 0;
+
+  // 開場封面卡：停留 coverHold 秒後淡出，之後不再出現
+  const cov = document.getElementById('cover');
+  if (S.coverHold > 0) {
+    const fade = 0.8;
+    cov.style.opacity = t < S.coverHold ? 1
+      : (t < S.coverHold + fade ? 1 - (t - S.coverHold) / fade : 0);
+  }
+  // 多馬豬：開場封面退場後才出現
+  const mas = document.getElementById('mascot');
+  const mIn = S.coverHold > 0 ? S.coverHold + 0.8 : 0.5;
+  mas.style.opacity = t < mIn ? 0 : Math.min(1, (t - mIn) / 0.6);
 
   // 字幕（配音稿用，正式版可關）
   if (S.showSub) {
