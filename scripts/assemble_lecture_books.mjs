@@ -1,6 +1,8 @@
 /**
- * 講義書組裝：public/content/works/{slug}/chapters/（_head.html + chNN.html 逐章 fragment）
- * → 串成單一書檔（WR1.html / WR2.html / SL1.html）供 /works 章節閱讀器讀取。
+ * 書稿組裝：public/content/works/{slug}/chapters/（_head.html + chNN.html 逐章 fragment）
+ * → 串成單一書檔（WR1.html / SL1.html / D1.html …）供 /works 章節閱讀器讀取。
+ * 原本只服務三本講義，2026-09 起《諸宗教的對話神學》七卷也走同一條路。
+ * n 省略＝自動數 chNN.html：正在逐章寫的書，章數天天變，寫死在這裡只會忘了改。
  * 同一 slug 底下可放多本書，各自一個 chapters 目錄（BOOKS[].dir）。
  * 宗教歷史地理學（WR1，maps:true）ch06–ch14 於 h2 之後自動插入對應界域地圖 <figure>。
  * 用法：node scripts/assemble_lecture_books.mjs [--split] （--split＝反向：把現有書檔拆成 fragments，僅初始化用）
@@ -14,6 +16,7 @@ const BOOKS = [
   { slug: 'world-religions-intro', dir: 'chapters-wr2', out: 'WR2.html', n: 16 },
   { slug: 'sinographic-literature', out: 'SL1.html', n: 16 },
   { slug: 'christianity-intro', out: 'CH1.html', n: 16 },
+  { slug: 'dialogical-theology', dir: 'chapters-d1', out: 'D1.html' },   // 卷一 天人論（撰寫中）
 ]
 
 // WR 各章地圖（章號 → 圖檔與圖說）
@@ -55,8 +58,11 @@ function split() {
 function assemble() {
   for (const b of BOOKS) {
     const dir = path.join(root, b.slug, b.dir || 'chapters')
+    // n 省略 → 數目錄裡有幾個 chNN.html。正在逐章寫的書章數天天變，寫死在 BOOKS
+    // 裡只會忘了改，而漏掉的章不會報錯，只會安靜地少一章。
+    const n = b.n ?? fs.readdirSync(dir).filter(f => /^ch\d+\.html$/.test(f)).length
     let out = fs.readFileSync(path.join(dir, '_head.html'), 'utf8').trimEnd() + '\n\n'
-    for (let i = 1; i <= b.n; i++) {
+    for (let i = 1; i <= n; i++) {
       const f = path.join(dir, `ch${String(i).padStart(2, '0')}.html`)
       if (!fs.existsSync(f)) { console.warn(`⚠ missing ${f}`); continue }
       let ch = fs.readFileSync(f, 'utf8').trimEnd()
