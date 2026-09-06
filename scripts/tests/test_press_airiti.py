@@ -125,6 +125,30 @@ def test_lock_holder_respects_a_live_holder(tmp_path, monkeypatch):
     assert lock.exists()
 
 
+def test_daily_cap_resets_across_days(tmp_path, monkeypatch):
+    import json as _json
+    import time as _time
+    daily = tmp_path / "daily.json"
+    monkeypatch.setattr(pa, "DAILY", daily)
+    daily.write_text(_json.dumps({"date": "1999-01-01", "count": 999}), encoding="utf-8")
+    # 🚨 跨日不歸零的話，昨天跑滿的上限會把今天整天擋掉，而且只印一行
+    #    「已達上限」——看起來完全正常
+    assert pa.spent_today() == 0
+    pa.add_spent(30)
+    assert pa.spent_today() == 30
+    pa.add_spent(20)
+    assert pa.spent_today() == 50
+    assert _json.loads(daily.read_text(encoding="utf-8"))["date"] == _time.strftime("%Y-%m-%d")
+
+
+def test_daily_cap_survives_a_corrupt_state_file(tmp_path, monkeypatch):
+    daily = tmp_path / "daily.json"
+    monkeypatch.setattr(pa, "DAILY", daily)
+    daily.write_text("{ 壞掉的 json", encoding="utf-8")
+    # 讀不懂就當今天還沒跑過，而不是整個爆掉——這支是排程在跑的，炸掉沒人看得到
+    assert pa.spent_today() == 0
+
+
 def test_download_delay_not_lowered():
     # 節流是對機構 IP 的承諾，不是效能參數
     assert pa.DELAY_DL >= 6.0

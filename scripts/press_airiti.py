@@ -39,7 +39,7 @@
   python -X utf8 scripts/press_airiti.py --toc campus
   python -X utf8 scripts/press_airiti.py --toc all
   python -X utf8 scripts/press_airiti.py --download campus [--limit 300]
-  python -X utf8 scripts/press_airiti.py --batch 50      # 排程用：整批共 50 篇
+  python -X utf8 scripts/press_airiti.py --batch 50 --daily-cap 200   # 排程用
 """
 import argparse
 import json
@@ -650,15 +650,47 @@ def load_wanted():
     return json.loads(WANTED.read_text(encoding="utf-8")).get("resolved", {})
 
 
-def batch(s, budget):
+DAILY = Path(r"C:/tmp/press_airiti_daily.json")
+
+
+def spent_today():
+    """今天已經下了幾篇。跨日自動歸零。"""
+    today = time.strftime("%Y-%m-%d")
+    try:
+        d = json.loads(DAILY.read_text(encoding="utf-8"))
+        return d.get("count", 0) if d.get("date") == today else 0
+    except (OSError, json.JSONDecodeError):
+        return 0
+
+
+def add_spent(n):
+    if n <= 0:
+        return
+    DAILY.parent.mkdir(parents=True, exist_ok=True)
+    DAILY.write_text(json.dumps({"date": time.strftime("%Y-%m-%d"),
+                                 "count": spent_today() + n}), encoding="utf-8")
+
+
+def batch(s, budget, daily_cap=0):
     """一次跑完 `budget` 篇為止，跨刊依 PRIORITY 順序取用。
 
     排程用的入口。跟 `--download <slug> --limit N` 的差別是：那個是「每一刊各 N 篇」，
     這個是「整批總共 N 篇」——排程要控的是每天對華藝發出多少下載請求，不是每刊幾篇。
 
+    `daily_cap` 讓排程可以「高頻探、低量下」：每半小時試一次，人不在學校就一個
+    請求收手，人一到學校就開始下，而一天的總量仍然守在上限。
+    🚨 沒有這個上限的話，高頻排程等於把節流拆掉——一天會跑出十幾批。
+
     🚨 上鎖。同一台機器上可能有別的 session 也在跑下載（實測發生過），
        兩邊同時跑等於把對機構 IP 的請求速率乘二，而節流的整個意義就在速率。
     """
+    if daily_cap:
+        used = spent_today()
+        if used >= daily_cap:
+            print(f"今天已下 {used} 篇，達到上限 {daily_cap}，這次跳過")
+            return
+        budget = min(budget, daily_cap - used)
+
     LOCK.parent.mkdir(parents=True, exist_ok=True)
     holder = lock_holder()
     if holder:
@@ -706,7 +738,10 @@ def batch(s, budget):
             if not (TOC_DIR / f"{slug}.json").exists():
                 continue          # 篇目還沒抓，跳過而不是報錯
             spent += download(s, slug, budget - spent) or 0
-        print(f"本批合計下載 {spent} 篇（預算 {budget}）")
+        add_spent(spent)
+        used = spent_today()
+        print(f"本批合計下載 {spent} 篇（預算 {budget}）"
+              f"{f'；今天累計 {used}/{daily_cap}' if daily_cap else ''}")
     finally:
         LOCK.unlink(missing_ok=True)
 
@@ -741,6 +776,9 @@ def main():
                     help="把書目點名的篇名對到 docID，寫成 airiti-wanted.json")
     ap.add_argument("--batch", type=int,
                     help="排程用：整批總共下載這麼多篇，跨刊依 PRIORITY 順序取用")
+    ap.add_argument("--daily-cap", type=int, default=0,
+                    help="今天最多下這麼多篇；配合高頻排程用（人一到學校就開始下，"
+                         "但一天總量仍守住上限）")
     ap.add_argument("--limit", type=int, default=DL_CAP)
     args = ap.parse_args()
     s = session()
@@ -758,7 +796,7 @@ def main():
     if args.resolve_wanted:
         resolve_wanted()
     if args.batch:
-        batch(s, args.batch)
+        batch(s, args.batch, args.daily_cap)
     if not (args.discover or args.toc or args.summarize or args.download
             or args.batch or args.resolve_wanted):
         ap.print_help()
