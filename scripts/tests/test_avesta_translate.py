@@ -153,3 +153,128 @@ def test_non_string_values_are_dropped():
 def test_non_dict_returns_empty():
     assert normalise_keys(["甲", "乙"]) == {}
     assert normalise_keys(None) == {}
+
+
+# ───────────────── 單段批次：模型把長段拆碎 ─────────────────
+
+from avesta_translate import join_parts  # noqa: E402
+
+
+def test_join_parts_restores_a_split_passage():
+    """單段批次時 Haiku 常不理會段落標記，把長段拆成 1,2,3,4 回來。
+
+    2026-09-06 全書跑完有 18 段卡在這裡：鍵對不上而整段譯不到。
+    整份回應本來就只講這一段，按鍵序併回即可。
+    """
+    got = {"2": "第二塊", "1": "第一塊", "10": "第十塊", "3": "第三塊"}
+    assert join_parts(got) == "第一塊\n第二塊\n第三塊\n第十塊"   # 數值排序，非字典序
+
+
+def test_join_parts_drops_blank_pieces():
+    assert join_parts({"1": "甲", "2": "   ", "3": "乙"}) == "甲\n乙"
+
+
+def test_join_parts_single_piece():
+    assert join_parts({"1": "整段"}) == "整段"
+
+
+# ───────────────── 起句引錄：閘不可誤殺 ─────────────────
+
+from avesta_translate import is_citation_list  # noqa: E402
+
+CITATION_EN = ("Ahura Mazda answered: 'These are the words in the Gathas that are to be "
+               "said twice:- ahya yasa ... urvanem (Y28.2), humatenam ... mahi (Y35.2), "
+               "ashahya aad saire ... ahubya (Y35.8).")
+
+
+def test_citation_list_is_recognised():
+    assert is_citation_list(CITATION_EN)
+
+
+def test_ordinary_prose_is_not_a_citation_list():
+    assert not is_citation_list("The first of the good lands which I, Ahura Mazda, created.")
+    # 只有一個出處、沒有省略號——正文偶爾夾一個出處不算引錄
+    assert not is_citation_list("See the passage (Y28.2) for the wording.")
+
+
+def test_citation_segments_survive_the_han_ratio_gate():
+    """迦薩起句本來就該保留轉寫不譯，漢字自然少。
+
+    2026-09-06 全書跑完僅存的兩段未譯（Vd 10.4、10.8）就是被這條誤殺的。
+    """
+    zh = ("阿胡拉‧馬茲達答道：「以下是迦薩中當誦二遍的詞句，你當高聲誦二遍：──"
+          "ahya yasa ... urvanem（Y28.2）、humatenam ... mahi（Y35.2）、"
+          "ashahya aad saire ... ahubya（Y35.8）。")
+    assert reject_reason(zh, CITATION_EN) is None
+    # 同一段譯文若來源不是引錄，仍應被擋下（門檻只對引錄放寬）
+    assert reject_reason(zh, "The first of the good lands.") is not None
+
+
+def test_english_passthrough_still_rejected_even_for_citations():
+    """放寬門檻不等於放行英文原樣。"""
+    assert reject_reason(CITATION_EN, CITATION_EN) is not None
+
+
+# ───────────────── 截斷閘：長段被摘要 ─────────────────
+
+def test_summarised_long_passage_is_rejected():
+    """模型面對長段落會「講重點」——中文欄有字、讀起來通順，
+    只有跟英譯並排才看得出少了三分之二。
+
+    2026-09-06 全書跑完有 11 段這樣，最慘的英譯 1303 字只剩 47 字。
+    """
+    en = "A" * 800
+    assert reject_reason("阿胡拉‧馬茲達答道：義人停留三十天。", en) is not None
+
+
+def test_full_translation_of_long_passage_passes():
+    en = "A" * 800
+    zh = "阿" * 260          # 比值 0.33，接近全書中位數 0.31
+    assert reject_reason(zh, en) is None
+
+
+def test_short_segments_are_not_subject_to_the_ratio():
+    """短段落的中英字數比波動大，套比值會誤殺。"""
+    assert reject_reason("他答道。", "He answered thus, saying so.") is None
+
+
+# ───────────────── 長段切塊分譯 ─────────────────
+
+from avesta_translate import LONG_CHARS, PIECE_CHARS, split_long_en  # noqa: E402
+
+
+def test_long_passage_is_split_into_manageable_pieces():
+    """合併段（Vd 7.5-8、Vd 12.22-24）英譯有八百到一千六百字，
+    模型面對這種長度一律講重點——即使明令不可摘要也一樣，實測連退三輪不收斂。"""
+    en = "This is a sentence about the corpse. " * 40      # ~1480 字
+    pieces = split_long_en(en)
+    assert len(pieces) > 1
+    assert all(len(p) <= PIECE_CHARS * 1.8 for p in pieces)
+
+
+def test_split_never_breaks_mid_sentence():
+    en = "First one here. Second one here. Third one here. " * 20
+    for p in split_long_en(en):
+        assert p.endswith(".") or p.endswith("here")
+
+
+def test_split_preserves_all_words():
+    """切塊不可掉字——掉了就是漏譯，而併回來的譯文讀起來完全正常。"""
+    en = " ".join(f"word{i}." for i in range(300))
+    joined = " ".join(split_long_en(en))
+    assert set(en.split()) == set(joined.split())
+
+
+def test_short_passage_is_not_split():
+    en = "A short verse."
+    assert split_long_en(en) == [en]
+
+
+def test_paragraph_boundaries_are_respected():
+    en = "First paragraph.\nSecond paragraph.\nThird paragraph."
+    assert split_long_en(en) == ["First paragraph.", "Second paragraph.", "Third paragraph."]
+
+
+def test_long_threshold_is_below_the_truncation_danger_zone():
+    """被摘要的那 11 段英譯都在 621 字以上；門檻須低於此才攔得到。"""
+    assert LONG_CHARS < 621

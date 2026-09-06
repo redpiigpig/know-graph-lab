@@ -137,11 +137,15 @@ EXTRA = {
     "the Good Spirit": "善靈",
     "the Bridge of Judgment": "裁判之橋",
     "Tower of Silence": "寂靜之塔",
-    "corpse-demon": "屍魔納蘇",
+    # 🚨 原本寫「屍魔納蘇」，與詞庫的 druj→德魯格 打架，全書 33 段因此違例。
+    #    詞庫是絕對權威，改依詞庫；Druj Nasu 是專名（屍體女魔），不作意譯。
+    "Druj Nasu": "德魯格‧納蘇",
+    "corpse-demon": "德魯格‧納蘇",
     "clean": "潔淨",
     "unclean": "不潔",
     "purification": "淨禮",
-    "Peshotanu": "佩紹坦努罪",
+    # 兼指該罪與犯此罪者（「整個世界將只剩一個佩紹坦努」），故不綴「罪」
+    "Peshotanu": "佩紹坦努",
     "Tanafuhr": "塔納弗爾罪",
     "Aspahe-astra": "馬鞭",
     "Sraosho-carana": "斯勞沙鞭",
@@ -230,6 +234,79 @@ def mentions(key: str, folded_blob: str) -> bool:
     return False
 
 
+def cites(key: str, folded_blob: str) -> bool:
+    """稽核用的**嚴格**比對：整個鍵須以完整詞出現。
+
+    🚨 與 mentions() 分開是刻意的，兩者的錯誤代價相反：
+       · mentions() 供**塞 prompt** 用——寧可多給，多一條定名無害。
+       · cites() 供**稽核**用——寧可少報，誤報會把人帶去改本來就對的譯文。
+       用 mentions() 稽核會得出荒謬的數字：鍵 "the Good Spirit" 的前兩詞
+       "the good" 命中 "the good lands"，鍵 "Ard" 命中 "toward"，
+       2026-09-06 首次稽核就這樣虛報了數百段。
+    """
+    p = fold(key.split("/")[0]).strip()
+    if len(p) < 4:
+        return False
+    return re.search(rf"(?<![a-z]){re.escape(p)}(?![a-z])", folded_blob) is not None
+
+
+# 稽核時略過的鍵：普通名詞或語義可變，不強制字面對應。
+AUDIT_SKIP = {"clean", "unclean", "purification", "the Holy One", "the Good Spirit",
+              "the Evil Spirit", "Maker of the material world", "corpse-demon",
+              "Hathra", "Vitasti", "the Bountiful Immortals"}
+
+
+def audit() -> int:
+    """全書掃一遍：英譯提到的專名，中譯有沒有照詞庫定名。回違例段次。"""
+    names = load_names()
+    viol: dict[tuple[str, str], list[str]] = {}
+    for f in sorted(glob.glob(os.path.join(TEXT_DIR, "*.json"))):
+        d = json.loads(io.open(f, encoding="utf-8").read())
+        for seg in d["segments"]:
+            en, zh = (seg.get("en") or ""), (seg.get("zh") or "")
+            if not (en and zh):
+                continue
+            # 起句引錄（Vd 10.4、10.8）的專名本來就該保留轉寫不譯，不納入稽核
+            if is_citation_list(en):
+                continue
+            fb = fold(en)
+            for k, v in names.items():
+                if k in AUDIT_SKIP:
+                    continue
+                if cites(k, fb) and v.split("（")[0] not in zh:
+                    viol.setdefault((k, v), []).append(seg["ref"])
+    total = sum(len(r) for r in viol.values())
+    if not total:
+        print("✓ 專名全數照詞庫定名")
+        return 0
+    print(f"專名未照詞庫定名：{total} 段次")
+    for (k, v), refs in sorted(viol.items(), key=lambda x: -len(x[1])):
+        print(f"  {k:28s} 應作「{v}」　{len(refs)} 段　例 {refs[:3]}")
+    return total
+
+
+def audit_refs() -> set[str]:
+    """稽核違例的段落 ref。與 audit() 同一判準，只是回集合供 --refix 用。"""
+    names = load_names()
+    bad: set[str] = set()
+    for f in sorted(glob.glob(os.path.join(TEXT_DIR, "*.json"))):
+        d = json.loads(io.open(f, encoding="utf-8").read())
+        for seg in d["segments"]:
+            en, zh = (seg.get("en") or ""), (seg.get("zh") or "")
+            if not (en and zh):
+                continue
+            if is_citation_list(en):
+                continue
+            fb = fold(en)
+            for k, v in names.items():
+                if k in AUDIT_SKIP:
+                    continue
+                if cites(k, fb) and v.split("（")[0] not in zh:
+                    bad.add(seg["ref"])
+                    break
+    return bad
+
+
 def load_names() -> dict[str, str]:
     if not os.path.exists(NAMES_PATH):
         print("✗ 找不到 names.json，先跑 --refresh-names", file=sys.stderr)
@@ -301,6 +378,12 @@ def normalise_keys(got: object) -> dict[str, str]:
     return out
 
 
+def join_parts(got: dict[str, str]) -> str:
+    """把模型拆碎的一段譯文按鍵序併回。單段批次專用。"""
+    parts = sorted(got.items(), key=lambda kv: int(kv[0]))
+    return "\n".join(v.strip() for _, v in parts if v.strip())
+
+
 def reject_reason(zh: str, en: str) -> str | None:
     """這一段譯文能不能落地。回 None 表示可以。
 
@@ -319,10 +402,40 @@ def reject_reason(zh: str, en: str) -> str | None:
     if bad:
         return f"含簡體字 {''.join(sorted(set(bad)))}"
     # 整段幾乎沒有漢字＝根本沒翻（回了英文原樣）
+    #
+    # 🚨 例外：**起句引錄**。祓魔法典第 10 章逐條列出該誦幾遍的迦薩詩句，
+    #    英譯就是一串阿維斯陀語起句加經文出處（`ahya yasa ... urvanem (Y28.2)`）。
+    #    那些字**本來就該保留轉寫不譯**，漢字自然少——2026-09-06 全書跑完，
+    #    僅存的兩段未譯（Vd 10.4、10.8）就是被這條誤殺的。
+    #    故依「英譯來源本身是不是引錄」放寬，而不是全域調低門檻。
+    ratio = 0.06 if is_citation_list(en) else 0.25
     han = sum(1 for c in z if "一" <= c <= "鿿")
-    if han < max(2, len(z) * 0.25):
+    if han < max(2, len(z) * ratio):
         return "漢字比例過低，疑為未翻譯"
+
+    # 🚨 長段落被摘要掉。模型面對六百字以上的段落會「講重點」而不是逐句譯，
+    #    結果中文欄有字、段數也對、讀起來還很通順——只有跟英譯並排才看得出
+    #    少了三分之二。2026-09-06 全書跑完有 11 段這樣（最慘的 1303 字只剩 47 字）。
+    #    全書長段的中英字數比中位數 0.31，0.20 以下與其上有明顯斷崖，故取 0.20。
+    if len(en) > TRUNCATION_MIN_EN and len(z) < len(en) * TRUNCATION_RATIO:
+        return f"疑為摘要而非全譯（中{len(z)}字／英{len(en)}字＝{len(z) / len(en):.2f}）"
     return None
+
+
+TRUNCATION_MIN_EN = 200    # 短段落的字數比波動大，不適用
+TRUNCATION_RATIO = 0.20
+
+
+CITATION_REF = re.compile(r"\(Y\s?\d+\.\d+\)")
+
+
+def is_citation_list(en: str) -> bool:
+    """這一段的英譯是不是「起句引錄」——一串原文起句加經文出處。
+
+    判準取兩個同時成立的訊號：兩處以上的經文出處標記，且有省略號。
+    只看其中一個會誤放行普通段落（正文也會偶爾夾一個出處）。
+    """
+    return len(CITATION_REF.findall(en)) >= 2 and "..." in en
 
 
 # ─────────────────────── 翻譯 ───────────────────────
@@ -345,6 +458,7 @@ PROMPT = """把下列祆教經典的英譯逐段翻成**繁體中文**。這是�
 5. **英譯裡的圓括號（編者補充）保留為中文全形括號**；方括號〔〕表示原文已缺而由編者補入，若英譯有就保留。
 6. 中間點用「‧」；**全文繁體，不得出現簡體字或日文漢字寫法**。
 7. **不得增補英譯沒有的內容。** 看不懂的專名照音譯，寧可生硬不可臆造；不要加註解、不要加背景說明。
+8. **也不得刪減。長段落必須逐句譯完，不可摘要、不可只譯開頭。** 本書有些段落逾千字且極度重複（同一問答換一個對象問十次），那個重複正是原文的體例；「講重點」等於把內容刪掉。譯文長度應與英譯相當，短於英譯三分之一即為漏譯。
 
 ## 專名定譯（**務必逐字沿用，不得另創**）
 
@@ -358,6 +472,37 @@ PROMPT = """把下列祆教經典的英譯逐段翻成**繁體中文**。這是�
 
 只輸出 JSON 物件，鍵為段落編號（字串），值為該段繁體中文譯文。不要 markdown 圍欄、不要任何說明文字。
 """
+
+
+LONG_CHARS = 500       # 超過此長度改走「切塊分譯再併回」
+PIECE_CHARS = 380      # 每小塊的目標長度
+PIECES_PER_CALL = 6    # 一次呼叫至多幾塊（多了模型會漏塊）
+
+
+def split_long_en(en: str) -> list[str]:
+    """把過長的英譯切成數小塊，供分別翻譯後併回。
+
+    🚨 為什麼要切：合併段（Vd 7.5-8、Vd 12.22-24 一類涵蓋數節者）的英譯有
+       八百到一千六百字，模型面對這種長度一律「講重點」而非逐句譯——
+       即使 prompt 明令不可摘要也一樣，實測連退三輪都不收斂。
+       切成四百字上下的小塊、各自成為一個 JSON 值，模型就會老實譯完。
+
+    先按換行切（原文本來就分節），還太長的再按句號切；不在句中斷開。
+    """
+    out: list[str] = []
+    for para in [p.strip() for p in en.split(chr(10)) if p.strip()]:
+        if len(para) <= PIECE_CHARS * 1.6:
+            out.append(para)
+            continue
+        cur = ""
+        for sent in re.split(r"(?<=[.!?])\s+", para):
+            if cur and len(cur) + len(sent) > PIECE_CHARS:
+                out.append(cur.strip())
+                cur = ""
+            cur += (" " if cur else "") + sent
+        if cur.strip():
+            out.append(cur.strip())
+    return out or [en]
 
 
 def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[int, int]:
@@ -377,8 +522,27 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
     name_lines = "\n".join(f"- {k} → {v}" for k, v in sorted(hit.items())) or "（無，依基礎詞庫）"
 
     ok = rejected = 0
+
+    # 長段先單獨處理：切塊分譯再併回。留在一般批次裡只會一再被摘要退回。
+    long_items = [(i, seg) for i, seg in todo if len(seg.get("en") or "") > LONG_CHARS]
+    for idx, seg in long_items:
+        zh = translate_long(seg, name_lines, doc)
+        if not zh:
+            rejected += 1
+            continue
+        why = reject_reason(zh, seg["en"])
+        if why:
+            print(f"    ⚠ {seg['ref']} 退回（{why}）", flush=True)
+            rejected += 1
+            continue
+        seg["zh"] = zh
+        ok += 1
+        if budget[0] is not None:
+            budget[0] -= 1
+    todo = [(i, seg) for i, seg in todo if len(seg.get("en") or "") <= LONG_CHARS]
+
     batches = make_batches(todo)
-    if not batches:
+    if todo and not batches:
         print(f"    ✗ {doc.get('siglum')} 有 {len(todo)} 段待譯卻切不出批次", flush=True)
     for chunk in batches:
         items = "\n\n".join(
@@ -401,6 +565,11 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
             print("    ✗ 回傳非 JSON，跳過本批", flush=True)
             continue
         got = normalise_keys(got)
+        # 🚨 單段批次（長段落）Haiku 常不理會段落標記，逕自把那一長段拆成
+        #    數小塊回 1,2,3,4 —— 鍵對不上，整段就譯不到。整份回應本來就只講
+        #    這一段，故按鍵序併回同一段。2026-09-06 全書 18 段卡在這裡。
+        if len(chunk) == 1 and got and str(chunk[0][0]) not in got:
+            got = {str(chunk[0][0]): join_parts(got)}
         # 🚨 回了合法 JSON 但鍵對不上時，下面的迴圈會一路 continue，
         #    整批 0 段落地而**一個字都不印**——首次跑 Haiku 就這樣靜靜空轉。
         #    故先檢查鍵有沒有交集，沒有就把實際拿到的鍵印出來。
@@ -426,6 +595,44 @@ def translate_doc(doc: dict, names: dict[str, str], budget: list[int]) -> tuple[
                 budget[0] -= 1
         time.sleep(1.2)
     return ok, rejected
+
+
+def translate_long(seg: dict, name_lines: str, doc: dict) -> str:
+    """長段落：切塊分譯再按序併回。回空字串表示失敗。"""
+    pieces = split_long_en(seg["en"])
+    got: dict[str, str] = {}
+
+    # 🚨 一次送太多塊，模型會漏塊。實測 12 塊漏 4 塊、20 塊漏 4 塊——
+    #    而漏掉的塊若不檢查就會併出一段讀來通順卻少了三分之一的譯文。
+    #    故分多次呼叫，每次至多 PIECES_PER_CALL 塊。
+    for start in range(0, len(pieces), PIECES_PER_CALL):
+        group = list(enumerate(pieces[start:start + PIECES_PER_CALL], start + 1))
+        items = (chr(10) * 2).join(
+            f"[{i}]（{seg['ref']} 第 {i} 塊，全段共 {len(pieces)} 塊）"
+            f"{chr(10)}英譯：{p}" for i, p in group)
+        prompt = PROMPT.format(title=doc.get("title_zh") or doc.get("title_en"),
+                               siglum=doc.get("siglum", ""),
+                               translator=doc.get("en_translator", ""),
+                               names=name_lines, items=items)
+        try:
+            raw = ask(prompt)
+        except Exception as e:  # noqa: BLE001
+            print(f"    ✗ {seg['ref']} 分譯失敗：{e}", flush=True)
+            return ""
+        raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
+        try:
+            got.update(normalise_keys(json.loads(raw)))
+        except json.JSONDecodeError:
+            print(f"    ✗ {seg['ref']} 分譯回傳非 JSON", flush=True)
+            return ""
+        time.sleep(1.0)
+
+    # 🚨 缺塊就整段不落地。少一塊而其餘照常顯示，正是最難發現的漏譯。
+    missing = [str(i) for i in range(1, len(pieces) + 1) if not (got.get(str(i)) or "").strip()]
+    if missing:
+        print(f"    ✗ {seg['ref']} 分譯缺第 {','.join(missing)} 塊（共 {len(pieces)} 塊）", flush=True)
+        return ""
+    return join_parts(got)
 
 
 def process(path: str, names: dict[str, str], budget: list[int]) -> None:
@@ -457,6 +664,10 @@ def main() -> int:
     ap.add_argument("--limit", type=int, help="本輪最多翻幾段")
     ap.add_argument("--reset", action="store_true",
                     help="把指定篇章的 zh 清空後重譯（專名表更新後修既有譯文用）")
+    ap.add_argument("--refix", action="store_true",
+                    help="稽核出違例段落 → 清空 → 以更新後的專名表重譯")
+    ap.add_argument("--audit", action="store_true",
+                    help="掃全書：英譯提到的專名，中譯有沒有照詞庫定名")
     ap.add_argument("--engine", choices=["auto", "haiku"], default="auto",
                     help="auto＝Gemini→NVIDIA→OpenRouter→Haiku 全鏈；"
                          "haiku＝直接走 Haiku（Max 方案不另計費，免費池乾掉時用）")
@@ -470,8 +681,32 @@ def main() -> int:
 
     if a.refresh_names:
         refresh_names()
-        if not (a.all or a.only):
+        if not (a.all or a.only or a.audit):
             return 0
+
+    if a.audit:
+        audit()
+        return 0                       # 稽核只報告，不改動、不當失敗
+
+    if a.refix:
+        bad = audit_refs()
+        if not bad:
+            print("✓ 無違例段落")
+            return 0
+        n = 0
+        for f in sorted(glob.glob(os.path.join(TEXT_DIR, "*.json"))):
+            d = json.loads(io.open(f, encoding="utf-8").read())
+            hit = False
+            for seg in d["segments"]:
+                if seg["ref"] in bad and (seg.get("zh") or "").strip():
+                    seg["zh"] = ""
+                    n += 1
+                    hit = True
+            if hit:
+                io.open(f, "w", encoding="utf-8").write(
+                    json.dumps(d, ensure_ascii=False, indent=2) + "\n")
+        print(f"↻ 清空 {n} 段違例譯文，改以更新後的專名表重譯", flush=True)
+        a.all = True
 
     if not (a.all or a.only):
         ap.print_help()
