@@ -1,0 +1,1090 @@
+{
+ "slug": "ntu-buddhist",
+ "name": "臺大佛學研究",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 134,
+  "本刊實收": 134,
+  "有PDF": 103,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 2007,
+  "max": 2025
+ },
+ "articles": [
+  {
+   "title": "《舍利弗阿毘曇論》入品與相應品關於心所有法的規定:Exploring the Definition of Cetasika based on Chapters Sense Fields and Associations of Shelifu Apitanlun",
+   "author": "張慧芳",
+   "journal": "臺大佛學研究",
+   "vol": "28  2014.12[民103.12]",
+   "page": "頁1-50",
+   "pdf": true
+  },
+  {
+   "title": "《辯中邊論》頌文中的兩種唯識三性說模型:Two Models for the Theory of Three Natures in the Madhyântavibhāga",
+   "author": "耿晴",
+   "journal": "臺大佛學研究",
+   "vol": "28  2014.12[民103.12]",
+   "page": "頁51-104",
+   "pdf": true
+  },
+  {
+   "title": "Medieval Chinese Buddhist Exegesis and Chinese Grammatical Studies:漢傳佛教注疏與中古漢語文法學",
+   "author": "鄧偉仁",
+   "journal": "臺大佛學研究",
+   "vol": "28  2014.12[民103.12]",
+   "page": "頁105-142",
+   "pdf": true
+  },
+  {
+   "title": "晚明義學僧一雨通潤及其稀見著作考述:A Study on Yiyu Tongrun&apos;s Life and Rarely Known Works",
+   "author": "簡凱廷",
+   "journal": "臺大佛學研究",
+   "vol": "28  2014.12[民103.12]",
+   "page": "頁143-189",
+   "pdf": true
+  },
+  {
+   "title": "再議「中國佛教文學史」的建構:Discussion Again on the Constructing of \"The History of Chinese Buddhist Literature\"",
+   "author": "蕭麗華",
+   "journal": "臺大佛學研究",
+   "vol": "28  2014.12[民103.12]",
+   "page": "頁191-221",
+   "pdf": true
+  },
+  {
+   "title": "The Formula \"Non-A Is A\" in Vasubandhu&apos;s Commentary on the Triśatikāyāh Prajñāpāramitāyāh Kārikāsaptatih:《金剛般若論頌》中「非A即A」句型初探",
+   "author": "宗玉媺",
+   "journal": "臺大佛學研究",
+   "vol": "24  2012.12[民101.12]",
+   "page": "頁1-59",
+   "pdf": true
+  },
+  {
+   "title": "法眼文益悟道歷程及其史傳文獻意義考:A Critical Examination of the Biographical Accounts of Fayan Wenyi&apos;s Enlightenment Experience",
+   "author": "黃繹勳",
+   "journal": "臺大佛學研究",
+   "vol": "24  2012.12[民101.12]",
+   "page": "頁61-91",
+   "pdf": true
+  },
+  {
+   "title": "松源崇岳生平及其禪思與禪風:The Life of Chan/Zen Master Songyuan Chongyue, His Chan/Zen Thoughts, and His Chan/Zen Style",
+   "author": "邱敏捷",
+   "journal": "臺大佛學研究",
+   "vol": "24  2012.12[民101.12]",
+   "page": "頁93-121",
+   "pdf": true
+  },
+  {
+   "title": "反工夫的工夫論--以禪宗與陽明學為中心:Anti-Gongfu as a Gongfu Theory--With Special Focus on the Chan/Zen and the Yangming School of Thought",
+   "author": "林永勝",
+   "journal": "臺大佛學研究",
+   "vol": "24  2012.12[民101.12]",
+   "page": "頁123-154",
+   "pdf": true
+  },
+  {
+   "title": "即心是佛、無心是道：唐代黃檗希運禪師之心體觀:Huangbo Xiyun&apos;s View of the Mind",
+   "author": "鄧克銘",
+   "journal": "臺大佛學研究",
+   "vol": "22  2011.12[民100.12]",
+   "page": "頁1-31",
+   "pdf": false
+  },
+  {
+   "title": "日僧俊芿與南宋文人士大夫的交往:The Dissemination of Chinese Buddhism into Japan: The Case of the Japanese Monk, Junreng",
+   "author": "定源",
+   "journal": "臺大佛學研究",
+   "vol": "22  2011.12[民100.12]",
+   "page": "頁32-57",
+   "pdf": false
+  },
+  {
+   "title": "對呂澂《大乘起信論》考證的再審視:A Re-examination of Lü Cheng&apos;s Reasoning That The Awakening of Faith Is a Chinese Fabrication",
+   "author": "于德隆",
+   "journal": "臺大佛學研究",
+   "vol": "22  2011.12[民100.12]",
+   "page": "頁58-105+105_1",
+   "pdf": false
+  },
+  {
+   "title": "敦煌藏文文獻編目整理、出版方面的成果回顧及未來研究趨勢之展望:A Critical Review of Catalogues of Tibetan Materials in the Dunhuang Manuscripts, with a Special Introduction to Recent Publications in Institutes in Gansu Province Research",
+   "author": "才讓",
+   "journal": "臺大佛學研究",
+   "vol": "22  2011.12[民100.12]",
+   "page": "頁106-136",
+   "pdf": false
+  },
+  {
+   "title": "一行慧覺及其《大方廣佛華嚴經海印道場十重行願常徧禮懺儀》:Yixing Huijue and His Huayan Repentance Ritual",
+   "author": "索羅寧",
+   "journal": "臺大佛學研究",
+   "vol": "23  2012.06[民101.06]",
+   "page": "頁1-75",
+   "pdf": true
+  },
+  {
+   "title": "鈴木大拙與東亞大乘觀念的確立--從英譯《大乘起信論》(1900年)到《大乘佛教綱要》(1907年):D. T. Suzuki&apos;s Conception of East Asian Mahayana Buddhism: An Investigation of Rhetoric Implications in His English Works",
+   "author": "龔雋",
+   "journal": "臺大佛學研究",
+   "vol": "23  2012.06[民101.06]",
+   "page": "頁77-120",
+   "pdf": true
+  },
+  {
+   "title": "丁福保及其《六祖壇經箋註》:Ding, Fu-Bao and His Liu Zu Tan Jing Jian Zhu (The Annotation of the Platform Sutra of the Sixth Patriarch)",
+   "author": "趙飛鵬",
+   "journal": "臺大佛學研究",
+   "vol": "23  2012.06[民101.06]",
+   "page": "頁121-159",
+   "pdf": true
+  },
+  {
+   "title": "西夏本《近住八齋戒文》考釋:A Textual Research on the Tangut Version Eight Precepts for Approaching",
+   "author": "聶鴻音",
+   "journal": "臺大佛學研究",
+   "vol": "23  2012.06[民101.06]",
+   "page": "頁161-200",
+   "pdf": true
+  },
+  {
+   "title": "風穴延沼禪師之研究:A Study of Master Fengxue Yazhao",
+   "author": "張國一",
+   "journal": "臺大佛學研究",
+   "vol": "25  2013.06[民102.06]",
+   "page": "頁1-65",
+   "pdf": true
+  },
+  {
+   "title": "山嶽與修行：弘法大師山居詩研究:A Study of Kobo-Daishi&apos;s Mountain Living Poetry",
+   "author": "蕭麗華",
+   "journal": "臺大佛學研究",
+   "vol": "25  2013.06[民102.06]",
+   "page": "頁67-97",
+   "pdf": true
+  },
+  {
+   "title": "The Transmission Discourse of Qixinlun:《起信論》傳承說",
+   "author": "金濤",
+   "journal": "臺大佛學研究",
+   "vol": "25  2013.06[民102.06]",
+   "page": "頁99-177",
+   "pdf": true
+  },
+  {
+   "title": "法身為真如所顯--論《能斷金剛般若波羅蜜多經釋》對於法身的界定:The Dharma-body as the Disclosure of Thusness: On the Characterization of the Dharma-body in the Nengduan jingang banruo boluomi jing shi",
+   "author": "耿晴",
+   "journal": "臺大佛學研究",
+   "vol": "26  2013.12[民102.12]",
+   "page": "頁1-56",
+   "pdf": true
+  },
+  {
+   "title": "法相宗「轉依」之「依」義研究:A Study of the \"Basis\" (Āśraya) in the \"Transformation of the Basis\" (Āśraya-parivŗtti/Āśraya-parāvŗtti) in the Chinese Yogācāra School",
+   "author": "趙東明",
+   "journal": "臺大佛學研究",
+   "vol": "26  2013.12[民102.12]",
+   "page": "頁57-109",
+   "pdf": true
+  },
+  {
+   "title": "唯識學「所知障」概念：譯詞評議、研究檢討、部派溯源及東亞展望:Vijñānavādian Concept of Jñeyāvaraņa: Review, Reframe and Prospection of the Modern Scholarship",
+   "author": "劉宇光",
+   "journal": "臺大佛學研究",
+   "vol": "26  2013.12[民102.12]",
+   "page": "頁111-174",
+   "pdf": true
+  },
+  {
+   "title": "梵本《大乘莊嚴經論》之「八何詞(kāpadeśa)」、「八若詞(yāpadeśa)」研究:A Study on the Instruction by Interrogative Pronuns (kāpadeśa) and by Relative Pronouns (yāpadeśa) in the Sanskrit Text Mahāyānasūtrālaṃkāra",
+   "author": "釋惠敏",
+   "journal": "臺大佛學研究",
+   "vol": "29  2015.06[民104.06]",
+   "page": "頁1-63",
+   "pdf": true
+  },
+  {
+   "title": "寂護與蓮華戒的唯識立場--以《攝真實論疏》(Tattvasaṃgrahapañjikā)〈考察外部對象品〉(Bahirarthaparīkṣā)對妙護（Śubhagupta）的回應為線索:A Study on the Consciousness-only Doctrine of Śāntarakṣita and Kamalaśīla: With Focus on Their Refutations to Śubhagupta in the Bahirarthaparīkṣā of Tattvasaṃgrahapañjikā",
+   "author": "茅宇凡",
+   "journal": "臺大佛學研究",
+   "vol": "29  2015.06[民104.06]",
+   "page": "頁65-117",
+   "pdf": true
+  },
+  {
+   "title": "所知障：在梵文構詞異讀、概念邏輯關係及釋義學的反證之間:Obstruction of Knowledge (Jñeyāvaraṇa): Among Sanskrit Compounding, Logical Analysis of Concept and Hermeneutic Rebuttal",
+   "author": "劉宇光",
+   "journal": "臺大佛學研究",
+   "vol": "29  2015.06[民104.06]",
+   "page": "頁119-184",
+   "pdf": true
+  },
+  {
+   "title": "Life of Pi: A Story of Suffering and Liberation from Buddhist Interpretation:以佛法的觀點詮釋《少年Pi的奇幻漂流》：有關苦難與解脫的故事",
+   "author": "許惠芬",
+   "journal": "臺大佛學研究",
+   "vol": "29  2015.06[民104.06]",
+   "page": "頁185-218",
+   "pdf": true
+  },
+  {
+   "title": "《大乘莊嚴經論》的兩種唯識三性說模型:Two Models for the Theory of Three Natures in the Mahāyānasūtrâlaṃkāra",
+   "author": "耿晴",
+   "journal": "臺大佛學研究",
+   "vol": "30  2015.12[民104.12]",
+   "page": "頁1-63",
+   "pdf": true
+  },
+  {
+   "title": "歷代僧傳「感通夢」的書寫與特色:The Writing and Feature of the \"Dream of Spiritual Resonance\" in the Biographies of Monks through the Ages",
+   "author": "梁麗玲",
+   "journal": "臺大佛學研究",
+   "vol": "30  2015.12[民104.12]",
+   "page": "頁65-104",
+   "pdf": true
+  },
+  {
+   "title": "佛教藝術裏的肉髻僧人形象及其興衰的成因:Images of Monk with Uṣṇīṣa in Buddhist Art and the Reasons of the Rise and Fall of This Iconography",
+   "author": "朱天舒",
+   "journal": "臺大佛學研究",
+   "vol": "30  2015.12[民104.12]",
+   "page": "頁105-160",
+   "pdf": true
+  },
+  {
+   "title": "蘇曼殊文學作品中的佛教思想:Revealing the Buddhist Thoughts in Mandju&apos;s Compositions",
+   "author": "潘啟聰",
+   "journal": "臺大佛學研究",
+   "vol": "30  2015.12[民104.12]",
+   "page": "頁161-218",
+   "pdf": true
+  },
+  {
+   "title": "統略本《淨住子》懺法的引經模式與編撰觀點試論:On the Quotation Model and Viewpoints of Compilation of the Abridged Version of the Repentance Dharma of Jingzhuzi (Ascetic Practitioners)",
+   "author": "紀志昌",
+   "journal": "臺大佛學研究",
+   "vol": "32  2016.12[民105.12]",
+   "page": "頁1-57",
+   "pdf": true
+  },
+  {
+   "title": "道心說前史--兼論中國思想中心體義的展開:Prehistory of the Theory of Tao Mind (Daoxin): With Additional Remarks on the Development of the Idea of Ontological Mind (Xinti) in Chinese Thought",
+   "author": "林永勝",
+   "journal": "臺大佛學研究",
+   "vol": "32  2016.12[民105.12]",
+   "page": "頁59-98",
+   "pdf": true
+  },
+  {
+   "title": "佛教初期寫經坊設置蠡測:A Preliminary Study of Early Buddhist Scribal Workshop",
+   "author": "崔中慧",
+   "journal": "臺大佛學研究",
+   "vol": "32  2016.12[民105.12]",
+   "page": "頁99-134",
+   "pdf": true
+  },
+  {
+   "title": "漢譯《大般涅槃經》思考方式研究:Study on the Meditative Methods in the Chinese Version of the Mahāyāna Mahāparinirvāṇa Sūtra",
+   "author": "涂艷秋",
+   "journal": "臺大佛學研究",
+   "vol": "31  2016.06[民105.06]",
+   "page": "頁1-44",
+   "pdf": true
+  },
+  {
+   "title": "首楞嚴三昧與佛性：以《佛說首楞嚴三昧經》與《大般涅槃經》為主要文獻依據:The Śūraṃgama-samādhi and the Buddha-nature: Based on the Śūraṃgamasamādhisūtra and the  Mahāparinirvāṇasūtra",
+   "author": "釋證真",
+   "journal": "臺大佛學研究",
+   "vol": "31  2016.06[民105.06]",
+   "page": "頁45-99",
+   "pdf": true
+  },
+  {
+   "title": "檢視「空有不二」做為說明佛教「不二中道」之概念:A Critique of the Term \"The Nonduality of Emptiness and Existence\" in Its Elucidation of Buddhist Non-dualistic Middle Path",
+   "author": "王美瑤",
+   "journal": "臺大佛學研究",
+   "vol": "31  2016.06[民105.06]",
+   "page": "頁101-150",
+   "pdf": true
+  },
+  {
+   "title": "六十卷《華嚴經》「始成正覺」的敘事與詮釋的開展:Development of the Narrative and Hermeneutics of the \"Primal Accomplishment of the Right Awakening\" in the Huayan sūtra (60vol. ed.)",
+   "author": "郭朝順",
+   "journal": "臺大佛學研究",
+   "vol": "27  2014.06[民103.06]",
+   "page": "頁1-52",
+   "pdf": true
+  },
+  {
+   "title": "汾陽善昭之文獻、生平、思想研究:A Study of Master Fen Yang Shan Zhao’s Literature, Life and Thought",
+   "author": "張國一",
+   "journal": "臺大佛學研究",
+   "vol": "27  2014.06[民103.06]",
+   "page": "頁53-114",
+   "pdf": true
+  },
+  {
+   "title": "管東溟《續原教論評》析探:An Analysis of Guan Dongming’s Critique of the Supplement to the Treatise in Defence of Buddhism",
+   "author": "吳孟謙",
+   "journal": "臺大佛學研究",
+   "vol": "27  2014.06[民103.06]",
+   "page": "頁115-166",
+   "pdf": true
+  },
+  {
+   "title": "邏輯或解經學--初期大乘瑜伽行派「四種道理」理論性格之探究:Logic or Hermeneutics--On the Theory of \"Four Methods of Reasoning\" in the Early Yogācāra School",
+   "author": "林鎮國",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁1-35",
+   "pdf": false
+  },
+  {
+   "title": "巴利經典文獻中定型文句的一些特徵:Some Characteristics of the Fixed Units of Wording in the Pāli Sutta Literature",
+   "author": "越建東",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁37-75",
+   "pdf": false
+  },
+  {
+   "title": "雪竇重顯禪師生平與雪竇七集之考辨:A Preliminary Study of Chan Master Xuedou&apos;s Life and Works",
+   "author": "黃繹勳",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁77-117",
+   "pdf": false
+  },
+  {
+   "title": "火．爐．土．均--覺浪道盛與無可弘智的統攝之學:The Integrative Symbols of Fire/Furnace by Jue-lang Dao-sheng and Earth/Pottery-wheel by Wu-ke Hong-zhi",
+   "author": "徐聖心",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁119-121+123-157",
+   "pdf": false
+  },
+  {
+   "title": "臺灣人間佛教的兩種淨土觀點--以印順法師與李炳南居士為例:Two Conceptions of Pure Land in Taiwan&apos;s This-worldly Buddhism",
+   "author": "吳有能",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁159-161+163-220",
+   "pdf": false
+  },
+  {
+   "title": "杜永彬博士《更敦群培評傳》：兩點商榷:A Critical Review of Du Yongbing&apos;s Biographical Study on Dge&apos; Dun Chos&apos; Phel",
+   "author": "劉宇光",
+   "journal": "臺大佛學研究",
+   "vol": "14  2007.12[民96.12]",
+   "page": "頁221-252",
+   "pdf": false
+  },
+  {
+   "title": "《婆沙論》三譯本及其成立:The Three Versions of Chinese Translations of the Vibhāsā-Śāstra and Their Formation",
+   "author": "周柔含",
+   "journal": "臺大佛學研究",
+   "vol": "15  2008.06[民97.06]",
+   "page": "頁1-43",
+   "pdf": false
+  },
+  {
+   "title": "從漢譯《中論》的對反詞組析探其思維理路:An Analysis of the Reasoning of Antonyms in the Mūlamadhyamakak ārikā",
+   "author": "林建德",
+   "journal": "臺大佛學研究",
+   "vol": "15  2008.06[民97.06]",
+   "page": "頁45-84",
+   "pdf": false
+  },
+  {
+   "title": "龍樹與休姆對有神論的批判之比較研究:A Comparative Study on Nagarjuna&apos;s and David Hume&apos;s Criticism of Theism",
+   "author": "劉嘉誠",
+   "journal": "臺大佛學研究",
+   "vol": "15  2008.06[民97.06]",
+   "page": "頁85-137",
+   "pdf": false
+  },
+  {
+   "title": "伏獅女禪：祇園之禪教化與性別智:Fu-Shih Female Zen: Zen Education and Gender Wisdom of Qi-yuan",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "15  2008.06[民97.06]",
+   "page": "頁139-204",
+   "pdf": true
+  },
+  {
+   "title": "第四禪「捨念清淨」(Upekkhā-sati-pārisuddhi)一語的重新解讀--兼談早期佛教研究的文獻運用問題:Upekkhā-sati-pārisuddhi of the Fourth Jhāna: A Linguistic Reinterpretation along with a Discussion of the Use of Literatures in Studies of Early Buddhism",
+   "author": "蔡奇林",
+   "journal": "臺大佛學研究",
+   "vol": "16  2008.12[民97.12]",
+   "page": "頁1-59",
+   "pdf": false
+  },
+  {
+   "title": "以菩提道的進展駕馭「感官欲望」所營造的倫理思考：以《大般若經．第十二會．淨戒波羅蜜多分》為依據:Ethical Thinking in Coping with Sensual Desires from the Perspective of Progression on the Path to Enlightenment: Based on the 12th Assembly of the Perfection of Wisdom",
+   "author": "蔡耀明",
+   "journal": "臺大佛學研究",
+   "vol": "16  2008.12[民97.12]",
+   "page": "頁61-126",
+   "pdf": false
+  },
+  {
+   "title": "光宅法雲《法華經義記》的詮釋觀點:The Hermeneutical View of Fayun&apos;s Fahua Yij",
+   "author": "李幸玲",
+   "journal": "臺大佛學研究",
+   "vol": "16  2008.12[民97.12]",
+   "page": "頁127-169",
+   "pdf": false
+  },
+  {
+   "title": "虛假當念之時間構造--以天臺宗及華嚴宗為主:The Temporal Structure of the Delusory Mental Activity according to the Chinese Huayan- and Tiantai-Teaching",
+   "author": "康特",
+   "journal": "臺大佛學研究",
+   "vol": "16  2008.12[民97.12]",
+   "page": "頁171-228",
+   "pdf": false
+  },
+  {
+   "title": "巴壺天對「禪公案」的詮釋:Interpretive Thinking of Ba Hu-Tian on “Zen&apos;s Public Cases”",
+   "author": "邱敏捷",
+   "journal": "臺大佛學研究",
+   "vol": "16  2008.12[民97.12]",
+   "page": "頁229-251",
+   "pdf": false
+  },
+  {
+   "title": "「迦羅」(Kāla)或「三摩耶」(Samaya)？--以「時間」議題論《大智度論》批判實在論的哲學問題:Kāla or Samaya?: On the Philosophical Problems of the Mahāprajñāpāramitopadeśa&apos;s Critique of Realism Regarding the Issue of Time",
+   "author": "嚴瑋泓",
+   "journal": "臺大佛學研究",
+   "vol": "20  2010.12[民99.12]",
+   "page": "頁1-57",
+   "pdf": false
+  },
+  {
+   "title": "幻化之影--唐代狂僧垂跡的形象及其意涵:The Image and Meaning of the Mad Monks in Tang Dynasty",
+   "author": "黃敬家",
+   "journal": "臺大佛學研究",
+   "vol": "20  2010.12[民99.12]",
+   "page": "頁59-98",
+   "pdf": false
+  },
+  {
+   "title": "全唐五代僧人詩格的詩學意義:The Poetics Value of Buddhist Priest&apos;s \"Rules of Poetry\" in Tang and Five Dynasties",
+   "author": "蕭麗華",
+   "journal": "臺大佛學研究",
+   "vol": "20  2010.12[民99.12]",
+   "page": "頁99-129",
+   "pdf": false
+  },
+  {
+   "title": "功夫試探--以初期佛教譯經為線索:The Search on Kung-fu--Citing Examples from Earlier Buddhism&apos;s Translated Scriptures",
+   "author": "林永勝",
+   "journal": "臺大佛學研究",
+   "vol": "21  2011.06[民100.06]",
+   "page": "頁1-33",
+   "pdf": false
+  },
+  {
+   "title": "女性公案：季總禪師之性別智教化:Female Zen Case: Zen Master Ji Xong&apos;s Gender Wisdom Enlightenment",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "21  2011.06[民100.06]",
+   "page": "頁35-82",
+   "pdf": true
+  },
+  {
+   "title": "佛教宗教暴力：問題意識、案例與研究回顧:Religious Violence of Buddhism: Issue, Episode and Literature Survey",
+   "author": "劉宇光",
+   "journal": "臺大佛學研究",
+   "vol": "21  2011.06[民100.06]",
+   "page": "頁83-173",
+   "pdf": false
+  },
+  {
+   "title": "中世紀中國在家菩薩之懺法：對《大通方廣懺悔滅罪莊嚴成佛經》的考察:An Investigation of a Confessional Ceremony in Medieval Chinese Buddhism",
+   "author": "周伯戡",
+   "journal": "臺大佛學研究",
+   "vol": "18  2009.12[民98.12]",
+   "page": "頁1-32",
+   "pdf": false
+  },
+  {
+   "title": "夢即佛法--徹庸周理《雲山夢語摘要》研究:A Study of Cheyongzhouli&apos;s A Summary of Yunshanmengyu",
+   "author": "徐聖心",
+   "journal": "臺大佛學研究",
+   "vol": "18  2009.12[民98.12]",
+   "page": "頁33-73",
+   "pdf": false
+  },
+  {
+   "title": "Allan Wallace「冥想科學」意識研究之檢視:An Investigation on Allan Wallace&apos;s Consciousness Studies of Contemplative Science",
+   "author": "林建德",
+   "journal": "臺大佛學研究",
+   "vol": "18  2009.12[民98.12]",
+   "page": "頁75-114",
+   "pdf": false
+  },
+  {
+   "title": "僧肇的實相哲學--以〈不真空論〉為主要典據的義理論述:Seng-Chao&apos;s Philosophy of Thorough Reality--A Theoretical Discussion Based on \"Bu-Zhen-Kong-Lun\"",
+   "author": "陳平坤",
+   "journal": "臺大佛學研究",
+   "vol": "19  2010.06[民99.06]",
+   "page": "頁1-61",
+   "pdf": false
+  },
+  {
+   "title": "天臺宗圓教法門之詮釋與普及化問題探討:On the Interpretation and Popularization of Practice&apos;s Ways of \"Perfect-Teaching\" in T&apos;ien-Tai Buddhism",
+   "author": "林志欽",
+   "journal": "臺大佛學研究",
+   "vol": "19  2010.06[民99.06]",
+   "page": "頁63-128",
+   "pdf": false
+  },
+  {
+   "title": "從絕對無到空的哲學--從京都學派內部思想談西谷啟治《宗教是什麼》的成立脈絡與立場:From Absolute Nothingness to the Philosophy of Śūnyatā: Exploring the Context and Standpoint of Nishitani Keiji&apos;s Religion and Nothingness from Kyoto School&apos;s Persective",
+   "author": "陳一標",
+   "journal": "臺大佛學研究",
+   "vol": "19  2010.06[民99.06]",
+   "page": "頁129-183",
+   "pdf": false
+  },
+  {
+   "title": "一法界的世界觀、住地考察、包容說：以《不增不減經》為依據的共生同成理念:A Worldview of One Dharma-dhātu, Examination of Abiding-places, and Inclusivism: The Ideas of Co-arising and Mutual Accomplishment in the Anūnatvâpūr□atva-nirdeśa",
+   "author": "蔡耀明",
+   "journal": "臺大佛學研究",
+   "vol": "17  2009.06[民98.06]",
+   "page": "頁1-48",
+   "pdf": false
+  },
+  {
+   "title": "天臺宗教觀思想體系及其對應關係--兼論化法四教之關係:The Ideological System and Its Inside Corresponding Relationship of T&apos;ien-t&apos;ai Buddhism",
+   "author": "林志欽",
+   "journal": "臺大佛學研究",
+   "vol": "17  2009.06[民98.06]",
+   "page": "頁49-117",
+   "pdf": true
+  },
+  {
+   "title": "吉藏解經的基本立場及其主要方法:The Primary Standpoint and Approaches of Chi-Tsang&apos;s Interpretation of the Buddhist Sutras",
+   "author": "簡凱廷",
+   "journal": "臺大佛學研究",
+   "vol": "17  2009.06[民98.06]",
+   "page": "頁119-178",
+   "pdf": false
+  },
+  {
+   "title": "熏奴祥曲《阿毗達磨集論廣釋》在藏傳佛教中觀思想史上的地位:The Position of Gzhon Nu Byang Chub's \"Chos Mngon Pa Kun Las Btus Pa'i Ti Ka\" in the History of Tibetan Buddhism's Madhyamaka Thought",
+   "author": "彭毛才旦",
+   "journal": "臺大佛學研究",
+   "vol": "45  2023.06[民112.06]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "死卵與無明[??]:Mārtāṇḍá and Avijjaṇḍakosa",
+   "author": "劉震",
+   "journal": "臺大佛學研究",
+   "vol": "45  2023.06[民112.06]",
+   "page": "頁31-67",
+   "pdf": true
+  },
+  {
+   "title": "漢語佛典中的「頂生王」及其原語之研究:A Study of Māndhātar (Dingsheng Wang) in Chinese Buddhist Scriptures and the Etymological Explanation of His Name in Underlying Languages",
+   "author": "林辰達",
+   "journal": "臺大佛學研究",
+   "vol": "45  2023.06[民112.06]",
+   "page": "頁69-137",
+   "pdf": true
+  },
+  {
+   "title": "萬曆佛教改革視域下《金陵梵剎志》的編撰旨趣--以首二卷御製文獻的史源探討為中心:The Compilation of Jinling Fancha Zhi from the Perspective of the Wanli Buddhism Reform: Focusing on the Sources of the Emperor's Collected Works in First Two Volumes",
+   "author": "唐玥",
+   "journal": "臺大佛學研究",
+   "vol": "45  2023.06[民112.06]",
+   "page": "頁139-176",
+   "pdf": true
+  },
+  {
+   "title": "北宋禪宗勃興的文學因素--聚焦於雲門宗的討論:Literary Contributions to the Rise of Chan Buddhism in the Northern Song Dynasty: A Focus on the Yunmen Lineage",
+   "author": "黃庭碩",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁51-106",
+   "pdf": true
+  },
+  {
+   "title": "三峰派之懺與禪：論仁山寂震《大般若懺法》:Repentance and Chan Practice of Sanfeng Lineage: Research on Renshan Jizhen's Da-Bo-Re-Chan-Fa",
+   "author": "張雅雯",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁107-166",
+   "pdf": true
+  },
+  {
+   "title": "「衣中寶珠：被遺忘的禪宗史」專題導言:Introduction to the Special Issue",
+   "author": "廖肇亨",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁1-3",
+   "pdf": true
+  },
+  {
+   "title": "韓國佛教詩選集《大東詠選》研究:Research on the Selected Collection of Korean Buddhist Monk Poetry: Focus on Daedong Youngsun",
+   "author": "任洧廷",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁167-210",
+   "pdf": true
+  },
+  {
+   "title": "邏輯與唯識：護法《成唯識寶生論》對因明之使用:Logic and Consciousness-only: Dharmapāla's Application of Hetuvidyā in the Cheng Weishi Baosheng Lun",
+   "author": "胡志強",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁211-255",
+   "pdf": true
+  },
+  {
+   "title": "六、七世紀的習禪世界--以僧實、慧瓚二系為中心:The Picture of Meditation Practices in the 6th and 7th Centuries: Focusing on the Sengshi and Huizan Communities",
+   "author": "曾堯民",
+   "journal": "臺大佛學研究",
+   "vol": "46  2023.12[民112.12]",
+   "page": "頁5-49",
+   "pdf": true
+  },
+  {
+   "title": "建構中的經典及其意義--《成實論》的漢譯、弘傳及其梁代義疏:Constructed Classics and Their Meaning: The Chinese Translation and Transmission of the *Tattvasiddhi and Its Liang Dynasty Commentaries",
+   "author": "李幸玲",
+   "journal": "臺大佛學研究",
+   "vol": "47  2024.06[民113.06]",
+   "page": "頁55-116",
+   "pdf": true
+  },
+  {
+   "title": "朝鮮後期《嘉興大藏經》佛典的刊行與其影響:The Publication and Influence of the Jiaxing Tripitaka Buddhist Text during the Late Joseon Dynasty",
+   "author": "李鍾壽",
+   "journal": "臺大佛學研究",
+   "vol": "47  2024.06[民113.06]",
+   "page": "頁169-229",
+   "pdf": true
+  },
+  {
+   "title": "藏傳佛教辯經傳統的現代表述:Modern Representation of Tibetan Buddhism Debate Tradition",
+   "author": "侯浩生",
+   "journal": "臺大佛學研究",
+   "vol": "47  2024.06[民113.06]",
+   "page": "頁117-167",
+   "pdf": true
+  },
+  {
+   "title": "中國中古時期東亞神佛交涉樣態釐探--兼論中日天臺宗神佛習合觀的關係:Exploring the Patterns of Interaction between Buddhism and Folk Beliefs in Medieval East Asia: Also on the Syncretistic Fusion of Folk Gods and Buddhism of Chinese and Japanese Tiantai School",
+   "author": "林韻柔",
+   "journal": "臺大佛學研究",
+   "vol": "47  2024.06[民113.06]",
+   "page": "頁1-53",
+   "pdf": true
+  },
+  {
+   "title": "「一與二合，數則為三」？--蕭統〈二諦義〉之命意及其與「三諦」思維的交涉研究:Does \"One Plus Two Equal Three\"?: A Study on the Negotiation between the Implied Meaning of Xiao Tong&apos;s \"Philosophy of Two Levels of Truth\" and Ideological Trend of Current \"Triple Truth\"",
+   "author": "紀志昌",
+   "journal": "臺大佛學研究",
+   "vol": "38  2019.12[民108.12]",
+   "page": "頁1-55",
+   "pdf": true
+  },
+  {
+   "title": "元曉的相違決定量及與文軌的互動:Wǒnhyo&apos;s Antinomic Inference and His Debate with Mungwe",
+   "author": "湯銘鈞",
+   "journal": "臺大佛學研究",
+   "vol": "38  2019.12[民108.12]",
+   "page": "頁57-117",
+   "pdf": true
+  },
+  {
+   "title": "龍濟禪寺開山祖傳奇--〈聽經猿記〉的文本策略:The Legend of Founder of Longji Ch&apos;an Temple: The Literary Strategies of \"The Story of an Ape Listening to Sutra\"",
+   "author": "司徒秀英",
+   "journal": "臺大佛學研究",
+   "vol": "38  2019.12[民108.12]",
+   "page": "頁119-165",
+   "pdf": true
+  },
+  {
+   "title": "以「四悉檀」論佛典的性別教化:Discussing the Gender Education of Buddhist Scriptures with \"Four Siddhanta\"",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "39 2020.06[民109.06]",
+   "page": "頁1-50",
+   "pdf": true
+  },
+  {
+   "title": "清辨的二諦之道:Bhāviveka's Way of Two Truths",
+   "author": "林恕安",
+   "journal": "臺大佛學研究",
+   "vol": "39 2020.06[民109.06]",
+   "page": "頁51-91",
+   "pdf": true
+  },
+  {
+   "title": "爐鞴與兵法--晦山戒顯《禪門鍛鍊說》的兩種概念譬喻探析:Furnace and the Art of War: Study of Two Conceptual Metaphors of Hui Shan \"the Book of Zen Exercise\"",
+   "author": "周玟觀",
+   "journal": "臺大佛學研究",
+   "vol": "39 2020.06[民109.06]",
+   "page": "頁93-143",
+   "pdf": true
+  },
+  {
+   "title": "析論偈頌語言現象與唐宋古德詮釋發展的關係--以《華嚴經》放光見佛偈為例:\"The Light Which Lets One See the Buddha\" in the Huayan Sutra: Linguistic Features of the Original Verses and Their Hermeneutical Development by Tang-Song Scholars",
+   "author": "釋堅融",
+   "journal": "臺大佛學研究",
+   "vol": "41  2021.06[民110.06]",
+   "page": "頁1-40",
+   "pdf": true
+  },
+  {
+   "title": "「默默忘言、昭昭現前」--東亞佛教文化視野下的曹洞宗與默照禪:\"Silently and Serenely, Forgetting All Words, Clearly and Vividly, It Appears before You\": Caodong School and Silent Enlightenment from the Perspective of East Asian Buddhism Culture",
+   "author": "釋道禮",
+   "journal": "臺大佛學研究",
+   "vol": "41  2021.06[民110.06]",
+   "page": "頁41-98",
+   "pdf": true
+  },
+  {
+   "title": "「佛陀為本」vs.「聲聞為本」--太虛與印順「判教」思想之對比考察:\"Buddha-based\" versus \"Śrāvaka-based\": A Comparative Study of the Philosophy of Pan Jiao between Taixu and Yinshun",
+   "author": "林建德",
+   "journal": "臺大佛學研究",
+   "vol": "41  2021.06[民110.06]",
+   "page": "頁99-131",
+   "pdf": true
+  },
+  {
+   "title": "當代正念課程批評者的雄辯修辭--來自正念減壓教學者的回應:The Rhetoric of Critics of Contemporary Mindfulness-based Programs: An Response from a MBSR Teacher",
+   "author": "溫宗堃",
+   "journal": "臺大佛學研究",
+   "vol": "41  2021.06[民110.06]",
+   "page": "頁133-190",
+   "pdf": true
+  },
+  {
+   "title": "據《大般若經．第七會．曼殊室利分》建構通向菩提道的愛情觀:Constructing a View on Love Leading to the Path to Enlightenment: Based on the 7th Assembly of the Sutras of the Perfection of Wisdom",
+   "author": "蕭哲沅",
+   "journal": "臺大佛學研究",
+   "vol": "40 2020.12[民109.12]",
+   "page": "頁1-48",
+   "pdf": true
+  },
+  {
+   "title": "近世禪宗清規中的金錢觀:Money in Early Modern Chinese Chan Buddhist Pure Rules",
+   "author": "徐維里",
+   "journal": "臺大佛學研究",
+   "vol": "40 2020.12[民109.12]",
+   "page": "頁49-83",
+   "pdf": true
+  },
+  {
+   "title": "晚明《成唯識論》註釋傳統的重新建構--數位量化人文的視角:How Was the Commentarial Tradition of Cheng Weishi Lun Rebuilt in Late-Ming? The Quantitative Perspective of Digital Humanities",
+   "author": "楊志常",
+   "journal": "臺大佛學研究",
+   "vol": "40 2020.12[民109.12]",
+   "page": "頁85-133",
+   "pdf": true
+  },
+  {
+   "title": "由智顗之「事一心、理一心」論聖嚴之「統一心、無心」--以常行三昧念佛方法為主:From Zhiyi's \"Concentration on Phenomena and Concentration on Principle in One Mind\" to Investigate Shengyen's \"United-mind\" and \"No-mind\"",
+   "author": "釋修優",
+   "journal": "臺大佛學研究",
+   "vol": "40 2020.12[民109.12]",
+   "page": "頁135-184",
+   "pdf": true
+  },
+  {
+   "title": "關於證成唯識之因明論證的幾點看法--回應John Taber所謂的稻草人論證:Some Remarks on the Argument for Vijñaptimātratā: A Reply to John Taber",
+   "author": "胡志強",
+   "journal": "臺大佛學研究",
+   "vol": "44  2022.12[民111.12]",
+   "page": "頁1-35",
+   "pdf": true
+  },
+  {
+   "title": "《大乘起信論》中的大乘論--以法義結構為中心的心識理論:The Philosophy of Mind in the Awakening of Faith in Mahāyāna: A Theory of Mahāyāna Formulated on the Model of \"Fa-yi\"",
+   "author": "金濤",
+   "journal": "臺大佛學研究",
+   "vol": "44  2022.12[民111.12]",
+   "page": "頁37-65",
+   "pdf": true
+  },
+  {
+   "title": "數位人文分析的探索性遠眺--以宋、元、明《楞嚴經》的註釋傳統為例:The Exploratory Overlook from the Perspective of Digital Humanities: Case Study in the Commentarial Tradition of Lengyan Jing in Song, Yuan, Ming Dynasty",
+   "author": "楊志常",
+   "journal": "臺大佛學研究",
+   "vol": "44  2022.12[民111.12]",
+   "page": "頁67-103",
+   "pdf": true
+  },
+  {
+   "title": "雪峰慧空禪師「入世間」偈頌析論:An Analytical Discussion of Chan Master Xuefeng Huikong's \"This-Worldly\" Gāthā",
+   "author": "黃啟江",
+   "journal": "臺大佛學研究",
+   "vol": "43  2022.06[民111.06]",
+   "page": "頁1-85",
+   "pdf": true
+  },
+  {
+   "title": "支謙譯《佛說維摩詰經》呼語語序及其標點:Constituent Order of Vocative Expression and Its Punctuation in Vimalakīrtinirdeśa Sūtra of Zhi Qian's Translation Version",
+   "author": "林家妃",
+   "journal": "臺大佛學研究",
+   "vol": "43  2022.06[民111.06]",
+   "page": "頁87-154",
+   "pdf": true
+  },
+  {
+   "title": "阿母風流出當家：女性公案「城東老母」之啟悟與形象:The Elderly Woman with Ishvara Presenting Wisdom with Liberty: Enlightenment and Image of the Female Chan Buddhist Public Case \"the Elderly Woman Living in the Eastern City\"",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "43  2022.06[民111.06]",
+   "page": "頁155-216",
+   "pdf": true
+  },
+  {
+   "title": "佛教梵語Sparśa-vihāra(觸住／觸安隱住／安樂住)在《雜阿含經》(T99)與《別譯雜阿含經》(T100)之語境用例考察:A Few Examples of Buddhist Sanskrit Sparśa-vihāra (觸住/觸安隱住/安樂住) Which Occur in the Context of Chinese Saṃyukta-āgama (T99, T100)",
+   "author": "釋惠敏",
+   "journal": "臺大佛學研究",
+   "vol": "42  2021.12[民110.12]",
+   "page": "頁1-38",
+   "pdf": true
+  },
+  {
+   "title": "論巴利語論書對「法處」的不同認識:On the Different Understanding of \"Dhammāyatana\" in Pāli Abhidhamma Commentaries",
+   "author": "劉勁松",
+   "journal": "臺大佛學研究",
+   "vol": "42  2021.12[民110.12]",
+   "page": "頁39-66",
+   "pdf": true
+  },
+  {
+   "title": "春花或金屑？--紫柏真可的禪教觀及其背後的反智識主義難題:Flowers as Spring or Gold Dust as Film in the Eyes? Zibo Zhenke's View on the Relationship between Chan and Doctrine and Its Problems on Anti-intellectualism",
+   "author": "林悟石",
+   "journal": "臺大佛學研究",
+   "vol": "42  2021.12[民110.12]",
+   "page": "頁67-119",
+   "pdf": true
+  },
+  {
+   "title": "基於新見文獻的明清因明史重構:A Reconstruction of the History of Buddhist Logic in Ming and Qing China Based on New Materials",
+   "author": "陳帥",
+   "journal": "臺大佛學研究",
+   "vol": "42  2021.12[民110.12]",
+   "page": "頁121-161",
+   "pdf": true
+  },
+  {
+   "title": "漢傳、日本因明學對「合」的理解：Anvaya還是Upanaya？:The Understanding of He in Chinese and Japanese Hetuvidyā: Anvaya or Upanaya?",
+   "author": "陳帥",
+   "journal": "臺大佛學研究",
+   "vol": "34  2017.12[民106.12]",
+   "page": "頁1-28",
+   "pdf": true
+  },
+  {
+   "title": "The Contrast of Late Ming Weishi Commentaries and Edo Weishi Commentaries on Xuanzang&apos;s Guan suoyuanyuan lun:晚明和江戶唯識註釋的比較--以《觀所緣緣論》為例",
+   "author": "楊志常",
+   "journal": "臺大佛學研究",
+   "vol": "34  2017.12[民106.12]",
+   "page": "頁29-85",
+   "pdf": true
+  },
+  {
+   "title": "聖嚴思想融合性之歷史根源與特色:The Synthetic Tendency of the Thought of Master Sheng Yen: Its Historical Origin and Characteristics",
+   "author": "王宣曆",
+   "journal": "臺大佛學研究",
+   "vol": "34  2017.12[民106.12]",
+   "page": "頁87-119",
+   "pdf": true
+  },
+  {
+   "title": "早期佛教經典的模板現象--以含佛陀證悟宣言定型文句經群為例:Textual Templates in Early Buddhist Texts: A Study of Suttas Associated with the Buddha&apos;s Enlightenment Announcement",
+   "author": "釋見勛",
+   "journal": "臺大佛學研究",
+   "vol": "37  2019.06[民108.06]",
+   "page": "頁1-66",
+   "pdf": true
+  },
+  {
+   "title": "《瑜伽師地論．攝事分》之《雜阿含經》摩呾理迦(本母)引用〈聲聞地〉內容考察:Cross-references to the Śrāvakabhūmi in the Saṃyukta-āgama Mātṛkā Transmitted in the Vastusaṃgrahaṇī of the Yogācārabhūmi",
+   "author": "釋惠敏",
+   "journal": "臺大佛學研究",
+   "vol": "37  2019.06[民108.06]",
+   "page": "頁67-107",
+   "pdf": true
+  },
+  {
+   "title": "慧可所傳達摩的安心禪法:Bodhidharma&apos;s Chan Method for Pacifying the Mind as Transmitted by Huike",
+   "author": "陳平坤",
+   "journal": "臺大佛學研究",
+   "vol": "37  2019.06[民108.06]",
+   "page": "頁109-159",
+   "pdf": true
+  },
+  {
+   "title": "佛教的沐浴修行--以佛陀僧團、漢傳禪宗為主:The Bathing Practice in Buddhism: Focusing on Buddhist Sangha and Chinese Zen",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "37  2019.06[民108.06]",
+   "page": "頁161-217",
+   "pdf": true
+  },
+  {
+   "title": "「雖作是說而不如說」之去蔽顯實的語言觀--以《大般若經．第十六會》為依據:\"But Again It Is Not So As One Speaks of It.\" with a View from Language to Remove Mask and Reveal Reality: Based on the 16th Assembly of the Prajñāpāramīta-sūtras",
+   "author": "劉啟霖",
+   "journal": "臺大佛學研究",
+   "vol": "35  2018.06[民107.06]",
+   "page": "頁1-50",
+   "pdf": true
+  },
+  {
+   "title": "楊岐方會生平及禪學探究:A Study of Master Yangqi Fanghuei&apos;s Life and Zen",
+   "author": "張國一",
+   "journal": "臺大佛學研究",
+   "vol": "35  2018.06[民107.06]",
+   "page": "頁51-107",
+   "pdf": true
+  },
+  {
+   "title": "從佛教死亡觀檢視當代腦死判準:Research on the Issue of Brain Death Criteria from the Buddhist View of Death",
+   "author": "凃均翰",
+   "journal": "臺大佛學研究",
+   "vol": "35  2018.06[民107.06]",
+   "page": "頁109-155",
+   "pdf": true
+  },
+  {
+   "title": "《維摩詰經》敦煌藏文寫本殘卷PT610、PT611研究:An Investigation into the Tibetan Dunhuang Manuscripts on Vimalakīrtinirdeśa PT610 and PT611",
+   "author": "林純瑜",
+   "journal": "臺大佛學研究",
+   "vol": "33  2017.06[民106.06]",
+   "page": "頁1-58",
+   "pdf": true
+  },
+  {
+   "title": "化城與邊地：明末憨山的施茶觀與其修弘歷程:Conjured City and Frontier: Hanshan&apos;s Philosophy of Tea Giving and the Course of His Cultivation in the End of Ming Dynasty",
+   "author": "蘇美文",
+   "journal": "臺大佛學研究",
+   "vol": "33  2017.06[民106.06]",
+   "page": "頁59-108",
+   "pdf": true
+  },
+  {
+   "title": "蓮生敘事：比較宗教象徵研究:The Religious Narratives of Lotus-birth: A Comparative Study of Religious Symbol",
+   "author": "吳有能",
+   "journal": "臺大佛學研究",
+   "vol": "33  2017.06[民106.06]",
+   "page": "頁109-144",
+   "pdf": true
+  },
+  {
+   "title": "從使用因明談清辨是否繼承龍樹的精神:Does Bhāviveka Inherit Nāgārjuna?--From the Perspective of the Use of Hetuvidyā",
+   "author": "林恕安",
+   "journal": "臺大佛學研究",
+   "vol": "36  2018.12[民107.12]",
+   "page": "頁1-44",
+   "pdf": true
+  },
+  {
+   "title": "窺基《說無垢稱經疏》中三性注釋特色--以〈序品〉注疏及玄奘「有趣、無趣」譯文為探討:A Study of Kuiji&apos;s Commentary on the Vimalakīrti-nirdeśa--The Distinctive Feature of His Exegesis of Three Natures in the First Chapter and Compared to Xuanzang&apos; Translation of Āgati",
+   "author": "林育民",
+   "journal": "臺大佛學研究",
+   "vol": "36  2018.12[民107.12]",
+   "page": "頁45-98",
+   "pdf": true
+  },
+  {
+   "title": "佛壇後壁背面觀音造像研究--從「施食」的觀點切入:Explaining the Beizuo Guanyin Behind the Back Wall of Buddhist Alter--A Food Bestowing Ritual Perspective",
+   "author": "陳明華",
+   "journal": "臺大佛學研究",
+   "vol": "36  2018.12[民107.12]",
+   "page": "頁99-155",
+   "pdf": true
+  },
+  {
+   "title": "梁漱溟出入儒佛的生命軌跡:Liang Shu-ming&apos;s Track of Life between Confucianism and Buddhism",
+   "author": "黃文樹",
+   "journal": "臺大佛學研究",
+   "vol": "33  2017.06[民106.06]",
+   "page": "頁145-199",
+   "pdf": true
+  },
+  {
+   "title": "宋元禪僧語錄之偈頌所見雲遊活動及其文化意涵:Traveling Activities and Their Cultural Implications as Seen in the Madhyamaka's Quotations of Chan Monks of the Song and Yuan Dynasties",
+   "author": "齊勝利",
+   "journal": "臺大佛學研究",
+   "vol": "49  2025.06[民114.06]",
+   "page": "頁1-60",
+   "pdf": true
+  },
+  {
+   "title": "Vedic Antecedents to Buddhist Mythology: Tvaṣṭṛ's Cup, the Ṛbhus, and the Third Pressing in Comparison to the Several Myths of the Buddha's Bowls:",
+   "author": "Sansone, Claudio",
+   "journal": "臺大佛學研究",
+   "vol": "49  2025.06[民114.06]",
+   "page": "頁123-171",
+   "pdf": true
+  },
+  {
+   "title": "以現代學科方法探究《攝類學》中認識論與多重命題的內涵:Using Modern Disciplinary Methods to Explore the Epistemology and Multiple Propositions in Collected Topics",
+   "author": "侯浩生",
+   "journal": "臺大佛學研究",
+   "vol": "49  2025.06[民114.06]",
+   "page": "頁61-121",
+   "pdf": true
+  },
+  {
+   "title": "關於《般若波羅蜜經》的編撰史問題--多元中心的擴展模式:On the Problem of the Composition of the Prajñāpāramitā: Multiple Central Pivots of Formulation",
+   "author": "宗玉媺",
+   "journal": "臺大佛學研究",
+   "vol": "48  2024.12[民113.12]",
+   "page": "頁1-64",
+   "pdf": true
+  },
+  {
+   "title": "日本院政的佛教供養願文書寫--從宗教與王權的交涉談起:The Writing of Buddhist Dedication Vows in the Insei Period of Japan: Examining the Interaction between Religion and Sovereignty",
+   "author": "郭珮君",
+   "journal": "臺大佛學研究",
+   "vol": "48  2024.12[民113.12]",
+   "page": "頁65-112",
+   "pdf": true
+  },
+  {
+   "title": "The Interpretation of the Vāsanā of Homogeneous Cause and the Vāsanā of Maturation in the Triṃśikābhāṣya and the Chéng Wéi Shì Lùng:等流習氣與異熟習氣--以《唯識三十頌》與《成唯識論》為討論核心",
+   "author": "竇敏慧",
+   "journal": "臺大佛學研究",
+   "vol": "48  2024.12[民113.12]",
+   "page": "頁113-160",
+   "pdf": true
+  },
+  {
+   "title": "Transformation of the Basis from Yogācāra to Platonism:從瑜伽行派到柏拉圖主義的轉依",
+   "author": "埃米爾．亞曆山德羅夫",
+   "journal": "臺大佛學研究",
+   "vol": "50  2025.12[民114.12]",
+   "page": "頁101-168",
+   "pdf": true
+  },
+  {
+   "title": "唐宋「五臺山」佛教聖地的書寫考辨--以《古清涼傳》與《廣清涼傳》為中心:The Writing and Memory of Mount Wutai as a Buddhist Sacred Site during the Tang and Song Dynasties: Centering upon Gu-qingliang-chuan and Guang-qingliang-chuan",
+   "author": "林韻柔",
+   "journal": "臺大佛學研究",
+   "vol": "50  2025.12[民114.12]",
+   "page": "頁1-64",
+   "pdf": true
+  },
+  {
+   "title": "羅睺羅跋陀羅著《法華經讚偈》中梵典《法華經》的引文分析:The Analysis of Citations from the Saddharmapuṇḍarīkasūtra in Rāhulabhadra's Saddharmapuṇḍarīkastava",
+   "author": "白景皓",
+   "journal": "臺大佛學研究",
+   "vol": "50  2025.12[民114.12]",
+   "page": "頁65-100",
+   "pdf": true
+  }
+ ]
+}

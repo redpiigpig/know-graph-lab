@@ -1,0 +1,3498 @@
+{
+ "slug": "new-century",
+ "name": "新世紀宗教研究",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 435,
+  "本刊實收": 435,
+  "有PDF": 312,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 2002,
+  "max": 2021
+ },
+ "articles": [
+  {
+   "title": "新世紀大學中宗教研究及宗教課程的定位:The Place of Religious Studies and Religious Curriculum in Universities of the New Century",
+   "author": "吳梓明",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁2-26",
+   "pdf": true
+  },
+  {
+   "title": "「心性之學」在教育上的運用--儒、道、佛義下的「生活世界」與其相關的「意義治療」:The Theory of Heart-Mind and Its Application to Education",
+   "author": "林安梧",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁27-61",
+   "pdf": false
+  },
+  {
+   "title": "臺灣民間宗教虔信者的「啟蒙神學」:Enlightenment of True Believers of Folk Religion in Taiwan",
+   "author": "余德慧",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁64-94",
+   "pdf": false
+  },
+  {
+   "title": "耶穌「師徒關係」的教育意涵--由「教育倫理學」觀點剖析之:The Educational Implications of the \"Master-Disciple Relationship\" of Jesus Christ: From the Educational Ethics Perspectives",
+   "author": "陳宏模",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁96-130",
+   "pdf": false
+  },
+  {
+   "title": "女子大學與宗教教育--金陵女大、華南女大的比較研究:Religious Education & Woman's College: A Comparative Study of Ginling and Hwa Nan Woman Colleges",
+   "author": "朱峰",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁132-155",
+   "pdf": false
+  },
+  {
+   "title": "關仔嶺碧雲寺--雲深不知處:Somewhere in the Cloudy Mountain: Temple of the Azure Clouds in Guan Tz Ling",
+   "author": "卓克華",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁157-182",
+   "pdf": false
+  },
+  {
+   "title": "宗教與靈修系列(2)--基督宗教的靈修概論:Religion and Spirituality",
+   "author": "谷寒松",
+   "journal": "新世紀宗教研究",
+   "vol": "1:4 2003.06[民92.06]",
+   "page": "頁183-187",
+   "pdf": true
+  },
+  {
+   "title": "宗教作為一種社會文化體系的性質和作用:The Essence and Role of Religion as A Social-cultural System",
+   "author": "呂大吉",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁2-34",
+   "pdf": false
+  },
+  {
+   "title": "基督宗教在當代中國社會的作用及影響:The Function and Influence of Christianity on Contemporary Chinese Society",
+   "author": "卓新平",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁36-54",
+   "pdf": false
+  },
+  {
+   "title": "當代中國大陸宗教政策變遷及其影響--菁英途徑論述:Contemporary Mainland China Religion Policy Change and Influence--Elite Approach Analysis",
+   "author": "張家麟",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁56-107",
+   "pdf": false
+  },
+  {
+   "title": "當代中國政教關係探討--兼論對基督教的發展影響:Church-State Relationship in Contemporary China and Its Impact on the Development of Christianity",
+   "author": "刑福增",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁110-174",
+   "pdf": true
+  },
+  {
+   "title": "日本「政教分離」的思想、演變過程及影響:The Historical Evaluations and Political Effects of the \"Separation of Religion and State\" in Japan",
+   "author": "楊鈞池",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁176-230",
+   "pdf": true
+  },
+  {
+   "title": "鹿港鳳山寺--牧童化成神，信仰遍臺閩:Feng-shan Temple of Lu-gang: A Shepherd Becomes a Deity, Faith around Taiwan & Fukien",
+   "author": "卓克華",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁232-272",
+   "pdf": false
+  },
+  {
+   "title": "宗教與靈修系列(4)--佛教的靈修概論:Religion and Spirituality--A Spiritual Practice Survey of Buddhism",
+   "author": "谷寒松",
+   "journal": "新世紀宗教研究",
+   "vol": "2:2 2003.12[民92.12]",
+   "page": "頁273-280",
+   "pdf": true
+  },
+  {
+   "title": "全球治理--國際非政府組織與宗教發展圖像:Global Governance：International Non-governmental Organization and Religious Development Map",
+   "author": "釋了意",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁1-28",
+   "pdf": false
+  },
+  {
+   "title": "災難、宗教與生命教育:Disaster, Religion and Life-education",
+   "author": "尉遲淦",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁67-86",
+   "pdf": true
+  },
+  {
+   "title": "推動生命教育，克服社會異化:Advancing Life Education, Resolving Social Estrangement",
+   "author": "吳榮鎮",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁87-108",
+   "pdf": false
+  },
+  {
+   "title": "從社會建構論談國人憂鬱與自殺現象的隱憂:A Social Constructionist Perspective on the Problem of Depression and Suicide in Taiwan",
+   "author": "林綺雲",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁109-128",
+   "pdf": true
+  },
+  {
+   "title": "師資生、高中職生與教育工作者對普世道德價值的觀點:Views of Student Teachers, High School Students, and Educators about Universal Moral Values",
+   "author": "陳世佳",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁129-155",
+   "pdf": false
+  },
+  {
+   "title": "評[周裕鍇]《禪宗語言》:",
+   "author": "賴皆興",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2  民91.12",
+   "page": "頁160-162",
+   "pdf": false
+  },
+  {
+   "title": "聖經之婚姻觀念、制度與教導：女性神學的解讀:Marriage in the Bible: A Feminist Interpretation",
+   "author": "黃懷秋",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁1-31",
+   "pdf": true
+  },
+  {
+   "title": "政教關係與兩岸宗教交流：以兩岸媽祖廟團體為焦點:Political Bureaucracy Religion Organizations Relation and Cross Straits: Religion Touch-Focus on Cross Straits Mazu Temples",
+   "author": "張家麟",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁33-76",
+   "pdf": false
+  },
+  {
+   "title": "癌末病房靈異經驗的隱喻:The Metaphor of Mysterious Experience in Dying Process in Ward's Context",
+   "author": "林淑鈴",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁77-142",
+   "pdf": false
+  },
+  {
+   "title": "資訊科技與宗教：迷你的社會學想像:Information Technology and Religion: A Mini Sociological Imagination",
+   "author": "王佳煌",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁143-173",
+   "pdf": true
+  },
+  {
+   "title": "伊朗輸出伊斯蘭革命之分析與評估:The Analyses and Evaluation of Islamic Iran's Export of Revolution",
+   "author": "陳文生",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁175-200",
+   "pdf": false
+  },
+  {
+   "title": "宗教組織與文化生產：以靈鷲山佛教教團的發展為例:Religious Organization and Cultural Production: The Case Study of Lin-Jiou Mountain Buddhist Society",
+   "author": "劉怡寧",
+   "journal": "新世紀宗教研究",
+   "vol": "1:1 2002.09[民91.09]",
+   "page": "頁201-241",
+   "pdf": false
+  },
+  {
+   "title": "全球倫理與臺灣本土化:On Global Ethic and Indigenous Movement in Taiwan",
+   "author": "劉述先",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁1-16",
+   "pdf": true
+  },
+  {
+   "title": "全球化浪潮下的本土生命教育初探:The Construction of Life Education Uunder the Impact of Globalization",
+   "author": "趙星光",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁17-43",
+   "pdf": false
+  },
+  {
+   "title": "從唐君毅「人生之體驗」談儒學的生命教育:From \"Practical Experience of Life\"(Author: Tang, Jiun-Yi)to Life Education of Confucianism",
+   "author": "鄭志明",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁48-78",
+   "pdf": false
+  },
+  {
+   "title": "試論「石音夫醒迷功過格」對儒釋道三教的看法:Comment on the View of \"Shih Yin-fu Advisory Book of Merits and Demerits\" Toward Confucianism, Buddhism and Taoism",
+   "author": "蕭登福",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁79-103",
+   "pdf": false
+  },
+  {
+   "title": "中國大陸村落社會中的象徵體系與權力架構:The Symbol System and Power Framework in Chinese Village Community",
+   "author": "陳重成",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁105-141",
+   "pdf": false
+  },
+  {
+   "title": "新港大興宮笨港滄桑見證者:The Ta-Hsing Temple at Hsin-Kang-Witness to the Great Changes of Poo-Kang",
+   "author": "卓克華",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁143-171",
+   "pdf": false
+  },
+  {
+   "title": "宗教與靈修系列(1)--不同宗教的靈修概論:Religion and Spirituality",
+   "author": "谷寒松",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3 2003.03[民92.03]",
+   "page": "頁172-175",
+   "pdf": true
+  },
+  {
+   "title": "橫跨宗教與哲學邊界上的儒教[評杜維明《儒教》]:",
+   "author": "楊儒賓",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3  民92.03",
+   "page": "頁176-177",
+   "pdf": false
+  },
+  {
+   "title": "悟即是道[評一行禪師著《你可以不生氣》]:",
+   "author": "游祥洲",
+   "journal": "新世紀宗教研究",
+   "vol": "1:3  民92.03",
+   "page": "頁178-180",
+   "pdf": false
+  },
+  {
+   "title": "伊斯蘭的和平觀:The Concept of Peace in Islam",
+   "author": "鄭慧慈",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁2-32",
+   "pdf": true
+  },
+  {
+   "title": "伊斯蘭東傳中國之再探討：中國伊斯蘭發展之歷史背景:Re-examination of How Islam Entered China, A Critical Historical Survey",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁34-70",
+   "pdf": true
+  },
+  {
+   "title": "印尼伊斯蘭教密契主義及其傳統音樂之間的互動：以中爪哇宮廷為例:The Interaction of Islamic Mysticism and Traditional Music in Indonesia: A Case Study of Central Java Court",
+   "author": "蔡宗德",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁72-97",
+   "pdf": true
+  },
+  {
+   "title": "論武裝伊斯蘭主義:On Militant Islamism",
+   "author": "張錫模",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁100-130",
+   "pdf": false
+  },
+  {
+   "title": "伊斯蘭的聖戰政治觀初探:Jihad in Islamic Politics: A Preliminary Study",
+   "author": "高慧玲",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁132-172",
+   "pdf": true
+  },
+  {
+   "title": "靈明堂與巴布派的歷史接觸之初探:A Probe to the Possibility of the Historical Contact between Ling Ming Tang and Bab Sect",
+   "author": "王建平",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁174-199",
+   "pdf": true
+  },
+  {
+   "title": "宗教與靈修系列(3)--伊斯蘭教的靈修概論:",
+   "author": "谷寒松",
+   "journal": "新世紀宗教研究",
+   "vol": "2:1 2003.09[民92.09]",
+   "page": "頁200-209",
+   "pdf": true
+  },
+  {
+   "title": "天臺止關與丹道的跨文化溝通:The Inter-Cultural Communication between T&apos;ien-T&apos;ai Buddhism Meditation and Dandao",
+   "author": "賴賢宗",
+   "journal": "新世紀宗教研究",
+   "vol": "4:3  民95.03",
+   "page": "頁2-53",
+   "pdf": false
+  },
+  {
+   "title": "敢於做夢：亞洲普世運動與女性主義神學的起動:Dare to Dream: Women \"Doing Theology\" with the Asian Ecumenical Movement",
+   "author": "黃慧貞",
+   "journal": "新世紀宗教研究",
+   "vol": "4:3  民95.03",
+   "page": "頁56-91",
+   "pdf": false
+  },
+  {
+   "title": "菩提樹與革命僧：清末民初僧人與革命之探討:Bodhi Tree and the Revolutionary Monks: A Study on Monks and Revolution during the Transitional Period of Qing Dynasty and the Republic of China",
+   "author": "蘇美文",
+   "journal": "新世紀宗教研究",
+   "vol": "4:3  民95.03",
+   "page": "頁94-146",
+   "pdf": true
+  },
+  {
+   "title": "由命定故事檢視唐代命定觀的建構原理:The Study of Predestinarianism of the Tang Dynasty Based on Stories of Predestination",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "4:3  民95.03",
+   "page": "頁148-166",
+   "pdf": true
+  },
+  {
+   "title": "治理與善治：世界宗教發展圖像:Governance and Good Governance: The Image of  World Religions Development",
+   "author": "魏澤民",
+   "journal": "新世紀宗教研究",
+   "vol": "4:3  民95.03",
+   "page": "頁167-172",
+   "pdf": false
+  },
+  {
+   "title": "墳墓形制與風水信仰--福建與琉球(沖繩)的事例:Morphologies of Graves & the Beliefs of Fengshui--Some Cases in Fujian and Okinawa",
+   "author": "陳進國",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁2-54",
+   "pdf": false
+  },
+  {
+   "title": "臺灣宗教組織的社會道德規範：以慈濟功德會為例:Social Moral Standard of Religious Organization in Taiwan--A Case Study of the Buddhist Tzu-Chi Merits Society",
+   "author": "張培新",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁56-92",
+   "pdf": true
+  },
+  {
+   "title": "《西遊記》和《天路歷程》中之心靈之旅：一個禪學闡釋:The Journey to the Mind: Ch&apos;an in the Journey to the West and the Pilgrim&apos;s Progress",
+   "author": "蔣昆宏",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁94-115",
+   "pdf": false
+  },
+  {
+   "title": "從文明衝突到宗教對話:Clash of Civilizations and Interreligious Dialogue",
+   "author": "姜家雄",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁118-146",
+   "pdf": false
+  },
+  {
+   "title": "六朝時期道教神仙思想系譜之建構與接合:The Construction-and-Connection of \"Supernatural Being\" Genealogy in Taoism in Six-Dynasty",
+   "author": "賴皆興",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁148-176",
+   "pdf": true
+  },
+  {
+   "title": "佛經〈梵志吐壺〉故事基型的演變：秘密情人的空間敘事:Secret Lovers in the Gourd: The Original Patterns and Evolution of a Buddhist Story Retold",
+   "author": "丁敏",
+   "journal": "新世紀宗教研究",
+   "vol": "4:1  民94.09",
+   "page": "頁177-190",
+   "pdf": false
+  },
+  {
+   "title": "依利莎伯．凱狄．史丹頓和她的《婦女聖經》:Elizabeth Cady Stanton and The Woman&apos;s Bible",
+   "author": "黃懷秋",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4  民94.06",
+   "page": "頁2-43",
+   "pdf": true
+  },
+  {
+   "title": "佛教文史五考:Five Rectifications of the History and Literature of Buddhism",
+   "author": "林伯謙",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4 2005.06[民94.06]",
+   "page": "頁46-85",
+   "pdf": true
+  },
+  {
+   "title": "六朝觀世音信仰之原理及其特徵--以三種《觀世音應驗記》為線索:The Principle and Characteristics of the Belief in Kuan-Yin During the Six Dynasties Based on the Book Entitled Records of Kuan-yin&apos;s Miraculous Responses and Its Two Sequels",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4  民94.06",
+   "page": "頁88-114",
+   "pdf": true
+  },
+  {
+   "title": "卜辭所見的巫者及其主要職事:The Shamans and Their Duties on the Oracle Inscriptions",
+   "author": "張書豪",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4 2005.06[民94.06]",
+   "page": "頁116-140",
+   "pdf": true
+  },
+  {
+   "title": "從《笑林廣記》中的淫僧色尼考察大眾的狂歡精神:Analyzing the Images of the Monks and Nuns in Xiao-lin-gugn-gji",
+   "author": "趙修霈",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4  民94.06",
+   "page": "頁142-162",
+   "pdf": true
+  },
+  {
+   "title": "佛教文學的文本敘事分析:An Analysis on Chinese Buddhism Literature's Narrative Text",
+   "author": "丁敏",
+   "journal": "新世紀宗教研究",
+   "vol": "3:4 2005.06[民94.06]",
+   "page": "頁163-176",
+   "pdf": true
+  },
+  {
+   "title": "論伊斯蘭Tasawwuf之「近神觀」(Qurbah):On the Doctrine of Qurbah in Islamic Tasawwuf (Sufism)",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁1-59",
+   "pdf": true
+  },
+  {
+   "title": "al-Ghazzali的靈與心救贖：一個靈思心理學的解析:On al-Ghazzali&apos;s Salvation of Soul and Heart: An Analysis of Contemplative Psychology",
+   "author": "楊美芬",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁63-95",
+   "pdf": true
+  },
+  {
+   "title": "Sufism and Interfaith Dialogue: M. Fethullah Güllen&apos;s Approach to World Peace:蘇非主義與宗教對話：法圖拉．菊稜其世界和平之道",
+   "author": "初雅士",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁97-121",
+   "pdf": true
+  },
+  {
+   "title": "從「冥契主義」解讀伊斯蘭之Tasawwuf:Interpretation of Islamic Tasawwuf from Mysticism",
+   "author": "米敬萱",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁125-151",
+   "pdf": true
+  },
+  {
+   "title": "伊本阿拉比倫理觀點之起源：以價值論與自由意志為主題:The Ethical Origins of Ibn Arabi: Axiology and Free Will",
+   "author": "周偉航",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁153-175",
+   "pdf": true
+  },
+  {
+   "title": "Interpreting God&apos;s Charismatic Self-Sharing in Terms of Palamas&apos; Distinction between God&apos;s Essence and Energies:以帕拉瑪斯天主本質與能量的分別來解釋天主在神恩復興運動中的自我分享",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "13:2  2014.12[民103.12]",
+   "page": "頁179-232",
+   "pdf": true
+  },
+  {
+   "title": "論《成唯識論》對原始佛法「十二緣支」之繼承與開展:A Study on the Inheritance and Development of the Original Buddhist Doctrine \"Twelve Angas\" from Ch&apos;eng Wei-Shih Lun",
+   "author": "釋法緣",
+   "journal": "新世紀宗教研究",
+   "vol": "11:2  2012.12[民101.12]",
+   "page": "頁71-110",
+   "pdf": true
+  },
+  {
+   "title": "法然之計數念佛思想裡的日常性初探:The Dailiness in Honen&apos;s Quantitative Buddha-Chanting",
+   "author": "胡瑞月",
+   "journal": "新世紀宗教研究",
+   "vol": "11:2  2012.12[民101.12]",
+   "page": "頁113-140",
+   "pdf": false
+  },
+  {
+   "title": "身體曼荼羅:The Mandala in the Human Body",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "11:2  2012.12[民101.12]",
+   "page": "頁143-163",
+   "pdf": true
+  },
+  {
+   "title": "《伊薩奧義書》釋(下):The Interpretation and Translation of \"Isa Upanisad\"(Ⅱ)",
+   "author": "斯瓦米．洛克斯瓦南達",
+   "journal": "新世紀宗教研究",
+   "vol": "11:2  2012.12[民101.12]",
+   "page": "頁165-185",
+   "pdf": true
+  },
+  {
+   "title": "臺灣伊斯蘭何去何從：現代漢語穆斯林遷徙(Hijrah)之困境:The Dilemma of Han-speaking Muslim Hijrah, the Case of Taiwanese Muslim Community",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "12:1  2013.09[民102.09]",
+   "page": "頁1-54",
+   "pdf": true
+  },
+  {
+   "title": "改宗與族群認同：印尼華裔穆斯林宣教師對華人的宣教策略:Conversion and Ethnic Identity: Chinese-Indonesian Muslim Preachers&apos; Dakwah Strategies toward Ethnic Chinese",
+   "author": "邱炫元",
+   "journal": "新世紀宗教研究",
+   "vol": "12:1  2013.09[民102.09]",
+   "page": "頁57-88",
+   "pdf": true
+  },
+  {
+   "title": "以行為展演與敘事經驗建構身分認同：馬來西亞檳榔嶼與華人穆斯林之個案研究:The Contemporary Discourse of Chinese Muslim Identity in Malaysia: In the Form of Performative Acts an Narratives",
+   "author": "吳佩謙",
+   "journal": "新世紀宗教研究",
+   "vol": "12:1  2013.09[民102.09]",
+   "page": "頁89-117",
+   "pdf": true
+  },
+  {
+   "title": "Hijab下的身體經驗--臺灣穆斯林婦女案例描述:Body Experience under the Hijab: A Case Study of Taiwan Muslim Women&apos;s Dress",
+   "author": "梁紅玉",
+   "journal": "新世紀宗教研究",
+   "vol": "12:1  2013.09[民102.09]",
+   "page": "頁119-153",
+   "pdf": true
+  },
+  {
+   "title": "試評John R. Bowen (約翰．波文)的A New Anthropology of Islam (新伊斯蘭人類學):Reviewing on John R. Bowen&apos;s A New Anthropology of Islam",
+   "author": "周偉航",
+   "journal": "新世紀宗教研究",
+   "vol": "12:1  2013.09[民102.09]",
+   "page": "頁157-160",
+   "pdf": true
+  },
+  {
+   "title": "《三曼陀颰陀羅菩薩經》與《普賢行願品》之比較研究:A Comparative Study between the Samantabhadrabodhisattvasutra and the Aspiration of Bodhisattva Samantabhadra",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁1-47",
+   "pdf": true
+  },
+  {
+   "title": "異質空間與文化治理：以世界宗教博物館為個案的考察:Heterotopias and Cultural Governance: The Case Study of Museum of World Religions",
+   "author": "劉怡寧",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁49-80",
+   "pdf": false
+  },
+  {
+   "title": "舊約中的聖戰觀念：一般和特例:The Ideas of Holy War in the Old Testament: General & Particular Meanings",
+   "author": "彭書穎",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁83-109",
+   "pdf": false
+  },
+  {
+   "title": "華嚴經要義與李通玄的華嚴佛智觀:Essence of the Avataṃsaka Sūtra and Li Tong-xuan&apos;s Huayen Concepts",
+   "author": "孫業成",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁113+115-141",
+   "pdf": false
+  },
+  {
+   "title": "《華嚴經》的精神與旨趣--從佛、菩薩、童子之敘事風格與結構談起:Spirit and Purport in the Avata□saka Sūtra--In Terms of the Narrative Style and Structure of the Buddhas, Bodhisattvas, and Sudhana",
+   "author": "曹郁美",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁143-160",
+   "pdf": true
+  },
+  {
+   "title": "明傳奇「典型宗教劇」之敘事模式及故事結局分析:The Narrative Models of \"Typical Religious Plays\" in Legends of the Ming Dynasty and the Analysis of Story Resolutions",
+   "author": "賴慧玲",
+   "journal": "新世紀宗教研究",
+   "vol": "11:4  2013.06[民102.06]",
+   "page": "頁163+165-182",
+   "pdf": true
+  },
+  {
+   "title": "明傳奇「非典型宗教劇」之敘事模式及故事結局分析:The Narrative Models of \"Atypical Religious Plays\" in Legends of the Ming Dynasty and the Analysis of Story Resolutions",
+   "author": "賴慧玲",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁1-31",
+   "pdf": true
+  },
+  {
+   "title": "天臺宗當地化之探討--以呂格爾敘事哲學看智者大師《次第禪門》融攝之妙:A Study on the Localization of Tiantai--Exploring the Elucidation of the Gradational Approach of the Perfection of Dhyānā by Chih-Chaz Master through the Narrative Philosophy of Paul Ricoeur",
+   "author": "釋道興",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁35-55",
+   "pdf": true
+  },
+  {
+   "title": "從盧雲的《浪子歸家》談靈性生命的通過儀式:Nouwen&apos;s The Return of the Prodigal Son and the Spiritual Rites of Passage",
+   "author": "蔡怡佳",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁59-82",
+   "pdf": true
+  },
+  {
+   "title": "宗教與動畫之互文敘事形塑--以宮崎駿動畫為例:Intertextual Narrative Figuration between Religion and Animation--Take Miyazaki Hayao&apos;s Animation as an Example",
+   "author": "鄭印君",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁83-112",
+   "pdf": true
+  },
+  {
+   "title": "戰後(1945~2011)淡水地區基督宗教團體變遷的軌跡:The Changing Trajectory of Tamsui Christian Religious Groups in the Post-war (1945~2011)",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁115-139",
+   "pdf": true
+  },
+  {
+   "title": "從使徒信心會理解美國五旬宗崇拜之源起及轉變:Understanding the Characteristics of Early Pentecostal Worship from the Case Study of the Apostolic Faith Mission",
+   "author": "陳明麗",
+   "journal": "新世紀宗教研究",
+   "vol": "11:3  2013.03[民102.03]",
+   "page": "頁141-167",
+   "pdf": false
+  },
+  {
+   "title": "兩晉南北朝時期河隴地區佛教寺院考略:A Simple Research of Buddhist Temples of Two Jins Southern and Northern Dynasties Period in He-long Area",
+   "author": "楊發鵬",
+   "journal": "新世紀宗教研究",
+   "vol": "13:3  2015.03[民104.03]",
+   "page": "頁1-28",
+   "pdf": true
+  },
+  {
+   "title": "唐代長安比丘尼的形象塑造與社會活動：以墓誌為主的探討:Social Images and Activities of Buddhist Nuns in Chang&apos;an in Tang Dynasty: A Study of the Epitaphs",
+   "author": "張梅雅",
+   "journal": "新世紀宗教研究",
+   "vol": "13:3  2015.03[民104.03]",
+   "page": "頁29-58",
+   "pdf": true
+  },
+  {
+   "title": "鬼魂崇拜與國家：清代臺灣國家對地方的控制:Ghosts Worship and State: The Control of Locality in Qing Dynasty Taiwan",
+   "author": "陳緯華",
+   "journal": "新世紀宗教研究",
+   "vol": "13:3  2015.03[民104.03]",
+   "page": "頁59-87",
+   "pdf": true
+  },
+  {
+   "title": "Faith Horizon of Taiwanese Lay Catholics:臺灣天主教平信徒的信仰視域",
+   "author": "鮑霖",
+   "journal": "新世紀宗教研究",
+   "vol": "13:3  2015.03[民104.03]",
+   "page": "頁89-118",
+   "pdf": true
+  },
+  {
+   "title": "印度佛教史的時代區分:The Periodization in Indian Buddhism",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "13:3  2015.03[民104.03]",
+   "page": "頁121-135",
+   "pdf": true
+  },
+  {
+   "title": "World Peace and Religion: The Perspective of Pope Benedict XVI:世界和平與宗教：教宗本篤十六世的觀念",
+   "author": "鮑霖",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁1-38",
+   "pdf": true
+  },
+  {
+   "title": "比較會通朱熹「太極」、《管子》四篇「道」及《大般涅槃經》「如來藏」:Comparing Tai Chi by Zhu Xi, Dao in the Four Taoist Chapters of Guangzi and Bhutatathata in the Mahaparinirvanasutra Sūtra",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁39-70",
+   "pdf": true
+  },
+  {
+   "title": "郎尼根之辯證理論為宗教交談開闢一個新的途徑:Lonergan&apos;s Dialectics Opens up a New Way for Interreligious Dialogue",
+   "author": "陳秀蓉",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁71-101",
+   "pdf": true
+  },
+  {
+   "title": "對「空」之闡述的探索--論《不真空》之評破即色宗:Explore the Method to Establish &apos;Sunyata&apos;--On the Criticism upon the School of Jise (Matter-as-Such) in the Treatise on the Unreal-Void",
+   "author": "趙悠",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁105-127",
+   "pdf": false
+  },
+  {
+   "title": "《伊薩奧義書》釋(上):The Interpretation of Isa Upanisad (I)",
+   "author": "斯瓦米．洛克斯瓦南達",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁131-155",
+   "pdf": true
+  },
+  {
+   "title": "西蒙娜．韋伊:Simone Weil",
+   "author": "徐嘉俊",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁157-181",
+   "pdf": false
+  },
+  {
+   "title": "The Chinese Gui 鬼 within the Catholic Faith--A Case Study on the Catholics in Taipei:天主教信仰中對於中國「鬼」的看法：以臺北天主教徒為例",
+   "author": "陳立邦",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁185-195",
+   "pdf": false
+  },
+  {
+   "title": "單國璽樞機與宗教交談:Cardinal Paul Shan Kuo-hsi and Religious Dialogue",
+   "author": "陸達誠",
+   "journal": "新世紀宗教研究",
+   "vol": "11:1  2012.09[民101.09]",
+   "page": "頁199-201",
+   "pdf": false
+  },
+  {
+   "title": "唯識學的現代思路--以唯識實證方法整合佛教思想:A Modern Approach to the Consciousness-only Doctrine: Reintegrate the Buddhist Thought through Yogacara Empiricism",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "11:2  2012.12[民101.12]",
+   "page": "頁1-68",
+   "pdf": true
+  },
+  {
+   "title": "保羅．田立克[Paul Tillich]神學人類學的存有論基礎、應用與評價:The Ontological Ground, Application, and Evaluation of Paul Tillich&apos;s Theological Anthropology",
+   "author": "張哲民",
+   "journal": "新世紀宗教研究",
+   "vol": "10:4  2012.06[民101.06]",
+   "page": "頁1-33",
+   "pdf": true
+  },
+  {
+   "title": "美學中的超越向度：以趙雅博《談美》一書為例:Transcendental Elements Illustrated by Albert Chao&apos;s On Beauty",
+   "author": "何佳瑞",
+   "journal": "新世紀宗教研究",
+   "vol": "12:4  2014.06[民103.06]",
+   "page": "頁1-23",
+   "pdf": true
+  },
+  {
+   "title": "初論《佛性與般若》之中觀思想:A Preliminary Discussion on Madhyamika Philosophy in the Buddha Nature and Prajña Wisdom",
+   "author": "林建德",
+   "journal": "新世紀宗教研究",
+   "vol": "12:4  2014.06[民103.06]",
+   "page": "頁27-46",
+   "pdf": true
+  },
+  {
+   "title": "試析寧瑪派版《中有大聞解脫》:A Critical Analysis of the rNying Ma Pa&apos;s Edition--The Bar do Thos Grol Chen Mo",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "12:4  2014.06[民103.06]",
+   "page": "頁47-63",
+   "pdf": true
+  },
+  {
+   "title": "聶道真之譯經研究:A Research on the Sutras Translated by Nieh, Tao-chen",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "12:4  2014.06[民103.06]",
+   "page": "頁67-107",
+   "pdf": true
+  },
+  {
+   "title": "馬偕臺灣東岸宣教旅行:George Leslie McKay&apos;s Missionary Journey in the East Coast of Taiwan",
+   "author": "陳志榮",
+   "journal": "新世紀宗教研究",
+   "vol": "12:4  2014.06[民103.06]",
+   "page": "頁111-120",
+   "pdf": true
+  },
+  {
+   "title": "正念禪原理與療癒功能之探討--佛教心理學的觀點:A Theoretical Exposition of Mindfulness Meditation and Its Healing Functions: A Buddhist Psychological Perspective",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁1-23",
+   "pdf": true
+  },
+  {
+   "title": "正念減壓的根源與作用機轉：一個佛教學的觀點:The Origins and Mechanisms of Mindfulness-Based Stress Reduction: From a Perspective of Buddhist Studies",
+   "author": "溫宗堃",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁27-48",
+   "pdf": true
+  },
+  {
+   "title": "持誦聖名：日常意識與禪修的邊界:Reciting the Holy Name: The Boundary of Daily Consciousness and Meditation",
+   "author": "溫金柯",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁49-79",
+   "pdf": true
+  },
+  {
+   "title": "從四預流支來看禪修:A Study on Meditation from the Perspective of Four Factors of Stream-Attainment",
+   "author": "林崇安",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁83-85",
+   "pdf": true
+  },
+  {
+   "title": "試論印度宗教哲學家維韋卡南達的行動瑜伽:A Study on the Indian Religious Philosopher Vivekananda&apos;s Karma-yoga",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁89-110",
+   "pdf": true
+  },
+  {
+   "title": "內觀與禪那：簡介《超越觀呼吸》:Vipassana and Jhana: A Brief Introduction to «Beyond Mindfulness in Plain English»",
+   "author": "施郁芬",
+   "journal": "新世紀宗教研究",
+   "vol": "12:2  2013.12[民102.12]",
+   "page": "頁113-118",
+   "pdf": true
+  },
+  {
+   "title": "當代臺灣新興宗教的信仰體系及其「可信性」：五個新興宗教團體的考察:Plausibility for the Belief Systems of New Religions in Contemporary Taiwan: A Comparative Study of Five New Religious Groups",
+   "author": "丁仁傑",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁1-35",
+   "pdf": true
+  },
+  {
+   "title": "聖經詮釋的多樣性--以創世記第三章的蛇為例:The Diversity of Biblical Interpretation through the Example of the Serpent in the Third Chapter of Genesis",
+   "author": "王維瑩",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁39-73",
+   "pdf": true
+  },
+  {
+   "title": "天主教與佛教懺悔思想與實踐之比較初探:A Preliminary Comparative Study of Thought and Praxis of Repentance between Catholicism and Buddhism",
+   "author": "林淑理",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁75-102",
+   "pdf": true
+  },
+  {
+   "title": "一方之師與佛化之母：《佛教女眾》與《覺有情》「婦女學佛號」之佛教女性論述比較分析:A Buddhist Teacher and Carrying Forward Buddhism&apos;s Mother: Comparison and Analysis of the Discourse of Buddhist Women in Buddhist Women and The Bodhisattva--The Special Issue on Women Learning Buddhism",
+   "author": "蘇美文",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁103-135",
+   "pdf": true
+  },
+  {
+   "title": "聶道真錄之研究:A Research on the Nie Dao Zhen Catalogue",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁139-190",
+   "pdf": true
+  },
+  {
+   "title": "試評《宋元禪宗清規研究》:Reviewing on The Study of Monastic Rules for Zen Buddhism in Song and Yuan Dynasties",
+   "author": "吳華",
+   "journal": "新世紀宗教研究",
+   "vol": "12:3  2014.03[民103.03]",
+   "page": "頁193-195",
+   "pdf": true
+  },
+  {
+   "title": "超個人心理學意識研究對佛教佛性觀的啟發--兼論「批判佛教」反佛性論的學理詮釋問題:Buddha-Nature as Seen from Transpersonal Psychology: A Partial Critique on Critical Buddhism",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "3:2 2004.12[民93.12]",
+   "page": "頁2-37",
+   "pdf": false
+  },
+  {
+   "title": "溈仰宗大德資福貞邃禪師宗脈考:On the Genealogy of Weiyang Sect Master Zi Fu",
+   "author": "徐文明",
+   "journal": "新世紀宗教研究",
+   "vol": "3:2 2004.12[民93.12]",
+   "page": "頁40-58",
+   "pdf": false
+  },
+  {
+   "title": "宗教信仰與心理諮商--基督教與佛教的初步比較:Religious and Psychological Counseling--A Tentative Comparison between Christianity and Buddhism",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "3:2 2004.12[民93.12]",
+   "page": "頁60-102",
+   "pdf": false
+  },
+  {
+   "title": "明本禪師嗣法弟子與元代雲南禪宗:Disciples of Master Mingben and Chan Sect of Yunnan in the Yuan Dynasty",
+   "author": "紀華傳",
+   "journal": "新世紀宗教研究",
+   "vol": "3:2 2004.12[民93.12]",
+   "page": "頁104-128",
+   "pdf": false
+  },
+  {
+   "title": "中華信義神學院與現代禪宗教交談個案分析:A Case Study of the Inter-Faith Dialogue between China Lutheran Theological Seminary and Modern Zen",
+   "author": "呂一中",
+   "journal": "新世紀宗教研究",
+   "vol": "3:2 2004.12[民93.12]",
+   "page": "頁130-158",
+   "pdf": true
+  },
+  {
+   "title": "證嚴法師「人間菩薩」的生命觀:Dharma Master Cheng Yen&apos;s Life Views of \"Bodhisattva in This World\"",
+   "author": "盧蕙馨",
+   "journal": "新世紀宗教研究",
+   "vol": "3:1 2004.09[民93.09]",
+   "page": "頁2-36",
+   "pdf": true
+  },
+  {
+   "title": "明代瑜伽教僧的專職化及其經懺活動:Specializing of Yuka&apos;s Monks and the Religious Activities in Ming Dynasty",
+   "author": "陳玉女",
+   "journal": "新世紀宗教研究",
+   "vol": "3:1 2004.09[民93.09]",
+   "page": "頁38-88",
+   "pdf": false
+  },
+  {
+   "title": "佛教反對死刑：歷史與教理的初步探索:Buddhism Rejecting the Death Penalty: A Historical Review and Doctrine Analyses",
+   "author": "溫金柯",
+   "journal": "新世紀宗教研究",
+   "vol": "3:1 2004.09[民93.09]",
+   "page": "頁90-132",
+   "pdf": false
+  },
+  {
+   "title": "從「楞嚴經」論禪悟方法及其原理:The Methods of Chan Enlightenment and its Principles from the Shurangama Sutra",
+   "author": "李治華",
+   "journal": "新世紀宗教研究",
+   "vol": "3:1 2004.09[民93.09]",
+   "page": "頁134-172",
+   "pdf": true
+  },
+  {
+   "title": "宗教敘事的培力--慈濟「善書」的形成分析:The Empowerment of Religious Narratives: Analyzing the Formation of Tzuchi \"Books of Morality\"",
+   "author": "盧蕙馨",
+   "journal": "新世紀宗教研究",
+   "vol": "2:4 2004.06[民93.06]",
+   "page": "頁2-69",
+   "pdf": true
+  },
+  {
+   "title": "從俗智的啟蒙到心性與倫理的建構--以一個慈惠堂虔信徒網絡療癒為例:The Inspiration of Conventional Wisdom for the Ethical/Spiritual Well-Being in Taiwanese Folk Belief System",
+   "author": "余德慧",
+   "journal": "新世紀宗教研究",
+   "vol": "2:4 2004.06[民93.06]",
+   "page": "頁72-117",
+   "pdf": false
+  },
+  {
+   "title": "道在肉身--信徒於臨終前對其信仰之追求探微:Tao in the Body: An Investigation on the Faith of a Terminally-Ill Buddhist Disciple at a Religious Hospital in Eastern Taiwan",
+   "author": "余德慧",
+   "journal": "新世紀宗教研究",
+   "vol": "2:4 2004.06[民93.06]",
+   "page": "頁120-146",
+   "pdf": false
+  },
+  {
+   "title": "在病苦與療癒之間的轉化--萬德佛寺療愈社群的形成:Transformation from Suffering or by Suffering: The Forming Process of a Buddhist Healing Community",
+   "author": "李雪菱",
+   "journal": "新世紀宗教研究",
+   "vol": "2:4 2004.06[民93.06]",
+   "page": "頁148-202",
+   "pdf": true
+  },
+  {
+   "title": "臺灣的民間佛教傳統與「巖仔」的觀音信仰之社會實踐:The Tradition of Folk Buddhism in Taiwan as Revealed in the Kuan-yin Belief in Giam-a (Mountain Temples) and its Social Practice",
+   "author": "林美容",
+   "journal": "新世紀宗教研究",
+   "vol": "2:3 2004.03[民93.03]",
+   "page": "頁2-34",
+   "pdf": false
+  },
+  {
+   "title": "論中國民間宗教及其與佛教的關係--以白蓮教、羅教為例:On Chinese Folk Religions and its Relations with Buddhism--By the Example of the White Lotus Sect and the Luo Sect",
+   "author": "徐小盽",
+   "journal": "新世紀宗教研究",
+   "vol": "2:3  民93.03",
+   "page": "頁36-60",
+   "pdf": false
+  },
+  {
+   "title": "陳靖姑信仰與法派的宗教形態:Chen Jing-gu Belief and the Religious Aspect of Faa Faction",
+   "author": "鄭志明",
+   "journal": "新世紀宗教研究",
+   "vol": "2:3 2004.03[民93.03]",
+   "page": "頁62-97",
+   "pdf": false
+  },
+  {
+   "title": "聖顯與臺灣的石頭崇拜:Hierophany and Stone Worship in Taiwan",
+   "author": "游謙",
+   "journal": "新世紀宗教研究",
+   "vol": "2:3 2004.03[民93.03]",
+   "page": "頁100-128",
+   "pdf": true
+  },
+  {
+   "title": "鹿港金門館--一座清代班兵伙館的新發現:Jin-men Guan of Lu-gang-the New Discovery of a Ban-bing-huo Guan in Qing Dynasty",
+   "author": "卓克華",
+   "journal": "新世紀宗教研究",
+   "vol": "2:3 2004.03[民93.03]",
+   "page": "頁130-181",
+   "pdf": false
+  },
+  {
+   "title": "一個基督徒看奇蹟:Miracle from a Christian Perspective",
+   "author": "黃懷秋",
+   "journal": "新世紀宗教研究",
+   "vol": "3:3 2005.03[民94.03]",
+   "page": "頁2-34",
+   "pdf": true
+  },
+  {
+   "title": "聖與俗的辯證進程：基督宗教人文精神與當代大學教育之發展:The Dialectic Progress of Sacred and Profane: The Christian Humanism and the Development of University Education in Contemporary",
+   "author": "陳重成",
+   "journal": "新世紀宗教研究",
+   "vol": "3:3 2005.03[民94.03]",
+   "page": "頁36-66",
+   "pdf": false
+  },
+  {
+   "title": "流動的宇宙軸心：以亞伯拉罕宗教傳統為例:Dynamic Axis Mundi: The Case Study of Abrahamic Tradition",
+   "author": "吳沛媛",
+   "journal": "新世紀宗教研究",
+   "vol": "3:3 2005.03[民94.03]",
+   "page": "頁68-109",
+   "pdf": false
+  },
+  {
+   "title": "死亡經驗與美感經驗之會通:Connection between Death and Aesthetic Experience",
+   "author": "何佳瑞",
+   "journal": "新世紀宗教研究",
+   "vol": "3:3 2005.03[民94.03]",
+   "page": "頁112-134",
+   "pdf": false
+  },
+  {
+   "title": "雍畤與五行:The Yong-Zhi and the Five Elements",
+   "author": "張書豪",
+   "journal": "新世紀宗教研究",
+   "vol": "3:3 2005.03[民94.03]",
+   "page": "頁136-187",
+   "pdf": true
+  },
+  {
+   "title": "理解《古蘭經》的耶穌：伊斯蘭-基督宗教對話之起點:Understanding the Qur&apos;anic Jesus: A Starting Point of Dialogue between Islam and Christianity",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁1-41",
+   "pdf": true
+  },
+  {
+   "title": "On Fethullah Gülen&apos;s Ideology of Interfaith Dialogue between Muslims and Christians:穆斯林與基督教徒之關係：法圖拉．菊稜(Fethullah Gülen)之跨信仰對話理念",
+   "author": "初雅士",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁45-75",
+   "pdf": true
+  },
+  {
+   "title": "論衝突與對話：以黎巴嫩基督宗教馬龍派和伊斯蘭什葉派之關係為例探討之:Conflict and Dialogue: A Case Study of the Relations between the Maronite Christians and Shi&apos;ite Muslims in Lebanon",
+   "author": "陳迪華",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁77-101",
+   "pdf": true
+  },
+  {
+   "title": "論「基督宗教徒-穆斯林」的宗教對話--以塔里克．拉瑪丹(Tariq Ramadan)與保羅．田立克(Paul Tillich)之理念為例探討之:\"Christian-Muslim\" Dialogue from the Perspectives of Tariq Ramadan and Paul Tillich",
+   "author": "林仁謙",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁105-145",
+   "pdf": true
+  },
+  {
+   "title": "西方皈依研究發展的回顧與評論:A Critical Review of Religious Conversion Research in the West",
+   "author": "林淑理",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁149-190",
+   "pdf": true
+  },
+  {
+   "title": "從意識經驗到道德良知--儒佛觀點的初步思考:Conscious Experience and Moral Conscience: A Preliminary Reflection from the Philosophies of Confucianism and Buddhism",
+   "author": "林建德",
+   "journal": "新世紀宗教研究",
+   "vol": "14:1  2015.09[民104.09]",
+   "page": "頁193-220",
+   "pdf": true
+  },
+  {
+   "title": "The Role of Religious Dialogue and Cooperation in Rebuilding a New Asia:宗教對話與合作在重建新亞洲的角色",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁1-24",
+   "pdf": true
+  },
+  {
+   "title": "從生命中心交談概念反思當代宗教交談理論:Reflection on the Modern Theories of Inter-Religious Dialogue from the Life-centered Idea",
+   "author": "高榮孝",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁27-53",
+   "pdf": true
+  },
+  {
+   "title": "耶穌之愛的政治--丁光訓、福音書處境詮釋與現代中國的耶穌形象:The Politics of Jesus&apos; Love: K. H. Ting, Contextual Interpretation of the Gospels and Images of Jesus in Modern China",
+   "author": "王志希",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁55-77",
+   "pdf": true
+  },
+  {
+   "title": "新羅(67 B.C.~935 A.D.)的占察法會--兼與中土的占察法會比較:A Study on Zhancha Buddhist Mass in Silla: Compared with That of China",
+   "author": "敖英",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁79-105",
+   "pdf": true
+  },
+  {
+   "title": "蔣勳肉身敘事下的義理衍譯與美學詮釋:Jiang Shiun&apos;s Interpretation of Buddhist Doctrine and Esthetics under the Body Narrative",
+   "author": "楊雅儒",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁109-139",
+   "pdf": true
+  },
+  {
+   "title": "金剛乘佛教的宗教思想:The Religious Ideas: Vajrayāna Buddhism",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁143-169",
+   "pdf": true
+  },
+  {
+   "title": "試評《交錯的東亞宗教》[書評：葛兆光，《交錯的東亞宗教》(臺北：中央研究院歷史語言研究所，2015年)]:Reviewing on «Interactive Religions in East Asia»",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "14:2  2015.12[民104.12]",
+   "page": "頁173-175",
+   "pdf": false
+  },
+  {
+   "title": "臺灣靈乩的靈界觀與宗教使命:The Spirit World Outlooks and Religious Missions of Spirit-mediums in Taiwan",
+   "author": "鄭志明",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁1-32",
+   "pdf": true
+  },
+  {
+   "title": "國外「會靈山」旅程的儀式結構與意涵：高雄靈靜宮的案例:The Ritual Journey Structure and Meaning of Converging toward Overseas Spirit-mountains: A Case Study on Kaohsiung Lin-Gin Temple",
+   "author": "郭金芳",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁35-66",
+   "pdf": true
+  },
+  {
+   "title": "通靈展演現象--以「天山老母」進香會靈儀式為例:Ecstatic Phenomena during Ritual Performance--Take the Ritual Performance of Pilgrimage of Meeting Ling of Tianshan Laomu for Example",
+   "author": "王鏡玲",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁67-98",
+   "pdf": true
+  },
+  {
+   "title": "藥師佛本願的精神與契世應機--以「生佛平等」願與「轉女成男」願為論:Spirits and Predestination to Corresponding to the World of the Primal Vow of Bhaisajyaguru (Medicine Master/ Medicine Buddha): A View on the Vows of \"Equality of Beings and Buddhas\" and \"Transferring from Female to Male Figures\"",
+   "author": "蘇美文",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁101-140",
+   "pdf": true
+  },
+  {
+   "title": "彙巨子文章  展仙學精義--《陳攖寧卷》評介[書評：郭武選編，《中國近代思想家文庫--陳攖寧卷》(北京：中國人民大學出版社，2015年)]:The Collection of a Master&apos;s Works That Shows the Essence of Immortality Study--Evaluation of Chen Yingning Volume",
+   "author": "何江濤",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁143-145",
+   "pdf": true
+  },
+  {
+   "title": "「在地」視野的思索--試評[樓宇烈著]《宗教研究方法講記》(北京：北京大學出版社，2013年):Exploration from Local Vision--Reviewing on Lectures on Methodologies of Religious Studies",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "14:3  2016.03[民105.03]",
+   "page": "頁147-150",
+   "pdf": true
+  },
+  {
+   "title": "宗密合會思想的哲學詮釋:A Philosophical Interpretation on Zongmi&apos;s Syncretism",
+   "author": "黃兆民",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "天主教「愛的歷程」與儒家「仁的歷程」之會通:Assimilating the Catholic Process of Love with the Confucian Process of Benevolence",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁31-56",
+   "pdf": true
+  },
+  {
+   "title": "儒道佛三教融通與臺灣現代化的一些思考:Some Reflections on Confucianism, Taoism and Buddhism and the Modernization of Taiwan",
+   "author": "林安梧",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁59-66",
+   "pdf": true
+  },
+  {
+   "title": "《周易》六爻哲學與國學智慧的整合:The Integration of Zhouyi Liu Yao Philosophy and Wisdom of Chinese Culture",
+   "author": "杜保瑞",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁67-76",
+   "pdf": false
+  },
+  {
+   "title": "從儒佛道的「無神」論回歸本體論--《易經》太極本體智慧的啟發:Revert to the Ontology of Ultimate Reality from Atheism of Confucianism, Buddhism and Taoism: Inspirations from the Transcendent Wisdom of Tai Chi in the Book of Changes",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁77-123",
+   "pdf": true
+  },
+  {
+   "title": "從哈伯瑪斯的溝通概念反思海德格宗教意義獲得之可能:Reflecting the Possibilities of Heidegge&apos;s Religious Meaning Acquirements from the Communicative Ideas of Habermas",
+   "author": "高榮孝",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁127-153",
+   "pdf": true
+  },
+  {
+   "title": "試評[王志成、安倫著]《全球化時代宗教的發展與未來》(上海：學林出版社，2011):A Review of The Development and Future of Religion in the Era of Globalization",
+   "author": "李彥儀",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁157-160",
+   "pdf": true
+  },
+  {
+   "title": "試評[洪修平主編]《儒佛道思想家與中國思想文化》(南京：江蘇人民出版社，2015):An Attempt to Review the Confucian, Buddhist, and Taoist Thinkers and Chinese Culture and Ideology",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "14:4  2016.06[民105.06]",
+   "page": "頁161-163",
+   "pdf": true
+  },
+  {
+   "title": "神啟與革命：論伊斯蘭復興改革之理念:Revelation and Revolution, the Ideology of Islamic Reform and Revival Movements",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁1-62",
+   "pdf": true
+  },
+  {
+   "title": "土耳其伊斯蘭復興改革運動：居廉(Fethullah Gülen)思想之論述:Modern Turkish Islamic Revival Movement--A Study on Fethullah Gülen&apos;s Thoughts",
+   "author": "邱智輝",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁65-97",
+   "pdf": true
+  },
+  {
+   "title": "論穆斯林兄弟會Sayyid Qutb之現代伊斯蘭改革運動理念:On Sayyid Qutb&apos;s Ideology of Modern Islamic Reform",
+   "author": "江孟勳",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁99-140",
+   "pdf": true
+  },
+  {
+   "title": "哈馬斯的抵抗理念與實踐:Hamas&apos; Perception of Resistance and Its Practice",
+   "author": "包修平",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁141-178",
+   "pdf": true
+  },
+  {
+   "title": "1979年伊朗革命之中政教關係的回顧與重思:Retrospective and Rethinking of Politics-Religion Relationship in the Iranian Revolution of 1979",
+   "author": "陳立樵",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁181-210",
+   "pdf": true
+  },
+  {
+   "title": "「信仰乃暴力之淵藪？」--評論[Sam Harris著，孔繁鐘譯]《信仰的終結：宗教、恐怖行動及理性的未來》(新北：八旗文化、遠足文化，2016):\"Is Faith the Source of Violence? \"--Review on «The End of Faith: Religion, Terror, and the Future of Reason»",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁213-218",
+   "pdf": true
+  },
+  {
+   "title": "「教」與「主義」的分判--試評[劉義著]《全球化、公共宗教及世俗主義：基督教與伊斯蘭教的比較研究》(上海：上海人民出版社，2013):The Difference between Religions and Ideology--An Attempt to Review Globalization, Public Religions, and Secularism: A Comparative Study of Christianity and Islam",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "15:1  2016.09[民105.09]",
+   "page": "頁219-222",
+   "pdf": true
+  },
+  {
+   "title": "用愛與寬恕為主締造和平--談「蕩子回頭」之父親的啟示:God&apos;s Peacemaker--The Father of the Prodigal Son",
+   "author": "黃冠潔",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁1-34",
+   "pdf": true
+  },
+  {
+   "title": "哪些派別在說一切有部中受持《十誦律》？:Which Sects of Sarvāstivādin Keep and Preach Shi Song Lu?",
+   "author": "奧村浩基",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁35-70",
+   "pdf": true
+  },
+  {
+   "title": "《易經》三義今釋與教化意涵:Modern Interpretations of the Three Meanings of Book of Changes and the Implications for Moral Education",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁73-86",
+   "pdf": true
+  },
+  {
+   "title": "漢傳准提佛母經典之嬗變：以《顯密圓通成佛心要集》之「密教心要」為核心:The Transformation of Chinese Scriptures of Cundī: A Study on \"Essentials of the Esoteric Teaching\" in the Perfect Penetration of the Exoteric and the Esoteric",
+   "author": "謝世維",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁87-119",
+   "pdf": true
+  },
+  {
+   "title": "弘揚淨土：呂碧城(1883~1943)女居士學佛歷程的夢境書寫:Promoting the Pure Land: Dream Writing of Lü, Bi-cheng (1883~1943), the Female Buddhist in the Course of Learning Buddhism",
+   "author": "張晏菁",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁123-152",
+   "pdf": true
+  },
+  {
+   "title": "無垢施與維摩詰問難之比較研究:A Comparative Study of the Queries of Vimaladattā and Vimalakirti",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "13:4  2015.06[民104.06]",
+   "page": "頁1-47",
+   "pdf": true
+  },
+  {
+   "title": "澄觀《華嚴經疏鈔》與易學之交涉:The Relationship between Chengguan&apos;s Huayanjingshuchao and Yi-ology",
+   "author": "釋正持",
+   "journal": "新世紀宗教研究",
+   "vol": "13:4  2015.06[民104.06]",
+   "page": "頁49-76",
+   "pdf": true
+  },
+  {
+   "title": "海德格存有意義下宗教理性與非理性的統一:The Unity of Religious Rationality and Irrationality from the Perspective of Heidegger&apos;s Meaning of Being",
+   "author": "高榮孝",
+   "journal": "新世紀宗教研究",
+   "vol": "13:4  2015.06[民104.06]",
+   "page": "頁77-105",
+   "pdf": true
+  },
+  {
+   "title": "中西冶鑄成一味，梵道圓融終入神--試從《上帝的基因》一書略釋上古吠陀靈知的傳播:Attaining Spiritual Perfection by Integrating the Sinological with the Occidental and by Unifying Brahman and Dao--A Brief Interpretation of the Dissemination of the Vedic Gnosis in Antiquity from the Perspective of The Gene of God",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "13:4  2015.06[民104.06]",
+   "page": "頁109-139",
+   "pdf": true
+  },
+  {
+   "title": "《清代全真道歷史新探》評介:Reviewing on The New Exploration of Quanzhen Taoism in Qing Dynasty",
+   "author": "孫偉傑",
+   "journal": "新世紀宗教研究",
+   "vol": "13:4  2015.06[民104.06]",
+   "page": "頁143-145",
+   "pdf": true
+  },
+  {
+   "title": "「念佛」的宗教現象／心理分析與現代實踐意涵:Religious Phenomenological-Psychological Analysis of Nienfo (Mindfulness of the Buddha) and Its Implications for Modern Praxis",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "13:1  2014.09[民103.09]",
+   "page": "頁1-47",
+   "pdf": true
+  },
+  {
+   "title": "原始佛法中的信與他力探源:A Research on Faith and Other Power in Early Buddhism",
+   "author": "溫金柯",
+   "journal": "新世紀宗教研究",
+   "vol": "13:1  2014.09[民103.09]",
+   "page": "頁51-84",
+   "pdf": true
+  },
+  {
+   "title": "接納死亡是生命解脫與進化的要件--東西方修行大師對生死的慧見:Acceptance of Death is Necessary for Spiritual Liberation and Evolution: Insights from Spiritual Masters East and West",
+   "author": "施鐈湘",
+   "journal": "新世紀宗教研究",
+   "vol": "13:1  2014.09[民103.09]",
+   "page": "頁85-112",
+   "pdf": true
+  },
+  {
+   "title": "蓮宗十三祖印光大師之念佛治病觀:The Thirteenth Patriarch of the Lotus Sect Yinguang&apos;s Idea of Cure by Chanting the Name of Amitābha Buddha",
+   "author": "陳劍鍠",
+   "journal": "新世紀宗教研究",
+   "vol": "13:1  2014.09[民103.09]",
+   "page": "頁115-144",
+   "pdf": true
+  },
+  {
+   "title": "發展的義蘊--郎尼根《洞察》第十五章第六節釋義:The Notion of Development--A Commentary on Lonergan&apos;s Insight, Chapter 15, Section 6",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁1-29",
+   "pdf": true
+  },
+  {
+   "title": "「非物質實體」存在的可能性之分析與探究:An Analysis and Investigation for the Possibility of Immaterial Substance",
+   "author": "冀劍制",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁33-57",
+   "pdf": true
+  },
+  {
+   "title": "淵默之聖域：試詮東西方哲學對於最高主體的追尋:The Sacredness of Silence: A Tentative Interpretation of the Pursuit of Supreme Subject by Oriental and Occidental Philosophies",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁61-78",
+   "pdf": true
+  },
+  {
+   "title": "試論翁葆光《悟真篇．注》的內丹理論--以九轉金液還丹與佛教禪學為討論核心:A Study on Weng Bao-guang&apos;s Theory of Inner Alchemy in Wu Zhen: Nine Transferred Jin Li Dan and Buddhism Zen as the Core of Discussion",
+   "author": "段致成",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁81-117",
+   "pdf": true
+  },
+  {
+   "title": "試探討漢代考古遺跡中可能的「佛教成分」:An Exploration of the Possibilities of the Buddhist Components in the Archaeological Relics of the Han Dynasty",
+   "author": "蘇原裕",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁119-159",
+   "pdf": true
+  },
+  {
+   "title": "書評：佛學與現代心理學交相輝映的力作--評陳兵教授著《佛教心理學》:Book Review: Masterful Comparative Study of Modern Psychology and Buddism--Professor Chen Bing&apos;s «Buddhist Psychology»",
+   "author": "何江濤",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁163-165",
+   "pdf": true
+  },
+  {
+   "title": "試評《地方文化與信仰共同體的生成--人類學與中國基督教研究》[書評：黃劍波，《地方文化與信仰共同體的生成--人類學與中國基督教研究》(北京：知識產權出版社，2013)]:Book Review: An Attempt to Review «The Generation of Local Culture and Faith Communities--Anthropology and Christian Studies in China»",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "15:3  2017.03[民106.03]",
+   "page": "頁167-170",
+   "pdf": true
+  },
+  {
+   "title": "佛教「供佛齋天」儀式的療育意涵探討:A Research on the Therapeutic and Educational Significance of the Buddha and Heavenly Offering",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "7:2  2008.12[民97.12]",
+   "page": "頁1-55",
+   "pdf": false
+  },
+  {
+   "title": "顛狂的真相--《濟公全傳》所呈顯濟公「狂行勸喻」之思維模式及其社會意義:The Real Meaning behind a Lunatic Behavior--Based on the Complete Biography of the Monk Ji to Verify the Model of Thoughts and the Social Significance of His Using Insanity to Admonish People",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "7:2  2008.12[民97.12]",
+   "page": "頁57-101",
+   "pdf": true
+  },
+  {
+   "title": "永嘉玄覺禪法中的懺悔思想:Confession Thought in Yung-Cha Hsuan-Chueh&apos;s Chan Practice",
+   "author": "白金銑",
+   "journal": "新世紀宗教研究",
+   "vol": "7:2  2008.12[民97.12]",
+   "page": "頁103-144",
+   "pdf": true
+  },
+  {
+   "title": "思維密契者的倫理關懷與行為--一個呂格爾式的詮釋:On the Ethics and Ethical Concerns of Mystical Actions--A Ricoeurean Hermeneutics",
+   "author": "釋道興",
+   "journal": "新世紀宗教研究",
+   "vol": "7:2  2008.12[民97.12]",
+   "page": "頁145-171",
+   "pdf": false
+  },
+  {
+   "title": "第二軸心時代的福音書--《室利．羅摩克裏希那言行錄》:The Gospel of Sri Ramakrishna--The Gospel of the Second Axial Age",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "7:2  2008.12[民97.12]",
+   "page": "頁175-186",
+   "pdf": false
+  },
+  {
+   "title": "試論中國佛教心性論一個合宜的理解模式--以「信仰實踐」為進路:A Brief Discussion of a Proper Understanding of the Chinese Buddhist Theory of Mind",
+   "author": "林建德",
+   "journal": "新世紀宗教研究",
+   "vol": "10:1  2011.09[民100.09]",
+   "page": "頁1-21",
+   "pdf": false
+  },
+  {
+   "title": "從《成唯識論》探討前六識的認識性格與特色:A Study on the Cognizing Nature and Distinguishing Feature of the First Six Consciousnesses from Ch&apos;eng Wei-Shih Lun",
+   "author": "釋法緣",
+   "journal": "新世紀宗教研究",
+   "vol": "10:1  2011.09[民100.09]",
+   "page": "頁23-63",
+   "pdf": true
+  },
+  {
+   "title": "對佛教華嚴宗「法界觀」的詮釋--以郎尼根認知理論為主:Lonergan&apos;s Cognitive Theory as Basis for Interpreting the Thought of Dharma Realm of Hua-Yen School of Buddhism",
+   "author": "陳秀蓉",
+   "journal": "新世紀宗教研究",
+   "vol": "10:1  2011.09[民100.09]",
+   "page": "頁65-100",
+   "pdf": false
+  },
+  {
+   "title": "李贄的生死之學:A Study of Life and Death in Li Zhi&apos;s Thought",
+   "author": "劉芝慶",
+   "journal": "新世紀宗教研究",
+   "vol": "10:1  2011.09[民100.09]",
+   "page": "頁101-130",
+   "pdf": false
+  },
+  {
+   "title": "從原始佛教的宇宙觀談現代的環保:A Study of Contemporary Environmental Protection in Terms of Cosmic Discourse in Theravāda Buddhism",
+   "author": "蕭貞貞",
+   "journal": "新世紀宗教研究",
+   "vol": "10:1  2011.09[民100.09]",
+   "page": "頁133-155",
+   "pdf": true
+  },
+  {
+   "title": "神聖的屈從--杜光庭道教小說《錄異記》之聖俗分判及其世俗化傾向:Divinity/Secularity Distinction and the Secular Tendency in Du Guangting&apos;s The Collection of Strange Phenomena",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁1-29",
+   "pdf": true
+  },
+  {
+   "title": "記憶、身體、空間：論丁雲鵬《三教圖》之文化意涵:Memory, Body, Space: A Discussion of the Cultural Meaning of Ting Yun-peng&apos;s Three Religion Painting",
+   "author": "邱偉雲",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁31-58",
+   "pdf": true
+  },
+  {
+   "title": "晚唐道教政教關係研究--以周息元入京為線索:A Study of Taoism and Politics in the Late Tang Dynasty: A Clue of Xi-yuan Zhou Went to Chang&apos;an",
+   "author": "李平",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁59-80",
+   "pdf": true
+  },
+  {
+   "title": "論《金剛經》之定慧修行次第:A Discussion on the Cultivation Order between Concentration and Wisdom of the Diamond sūtra",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁83-125",
+   "pdf": false
+  },
+  {
+   "title": "從《普賢行願品別行疏鈔》的觀點探討普賢十大行願:A Study of Pú-hsien&apos;s Ten Kinds of Devotion from the Perspective of Pú-hsien Hsing-yüan Pim Pieh-hsing Shu Cháo",
+   "author": "楊麗芬",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁129-143",
+   "pdf": true
+  },
+  {
+   "title": "從京都學派看淨土信仰的辯證與轉向(二):Dialectic and Philosophical Turn of Pure Land Belief: A Perspective from Kyoto School (Ⅱ)",
+   "author": "吳汝鈞",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁145-168",
+   "pdf": true
+  },
+  {
+   "title": "試析臺灣廟宇屋頂裝飾的審美文化內涵:A Study of the Culture of Temple Roof Decorations in Taiwan",
+   "author": "王永志",
+   "journal": "新世紀宗教研究",
+   "vol": "9:2  2010.12[民99.12]",
+   "page": "頁171-194",
+   "pdf": true
+  },
+  {
+   "title": "從馬來西亞的「阿拉事件」看宗教衝突與對話:A Study on Religious Conflicts and Dialogues from the \"Allah Event\" in Malaysia",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁1-39",
+   "pdf": true
+  },
+  {
+   "title": "論「身土不二」與深層生態倫理學的建構並探索其多元應用面向--從「不二法門」的觀點切入:A Study on Non-duality of Body and Earth and the In-depth Ecological Ethic Theory:  From the View of Dharma Gate of Non-duality",
+   "author": "游祥洲",
+   "journal": "新世紀宗教研究",
+   "vol": "10:3  2012.03[民101.03]",
+   "page": "頁1-37",
+   "pdf": false
+  },
+  {
+   "title": "Exploring the Charismatic Spectrum of Charismata: From the Catholic Viewpoint:探討神恩復興運動的神恩範圍--以天主教角度切入",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "10:3  2012.03[民101.03]",
+   "page": "頁41-81",
+   "pdf": false
+  },
+  {
+   "title": "馬哈希內觀禪探析:Exploration of Vipassanā Meditation of Mahāsi",
+   "author": "陳秀蓉",
+   "journal": "新世紀宗教研究",
+   "vol": "10:3  2012.03[民101.03]",
+   "page": "頁83-111",
+   "pdf": false
+  },
+  {
+   "title": "由奧托的神聖觀來看善財五十三參之宗教實踐:A Study on the Religious Practice of Sudhana from the Holy View of Rudolf Otto",
+   "author": "胡瑞月",
+   "journal": "新世紀宗教研究",
+   "vol": "10:3  2012.03[民101.03]",
+   "page": "頁115-138",
+   "pdf": false
+  },
+  {
+   "title": "敦煌出土《大智度論》寫卷綴合六則:Six Cases on the Combination of Dunhuang Da Zhi Du Lun Handwriting Copy",
+   "author": "劉顯",
+   "journal": "新世紀宗教研究",
+   "vol": "10:3  2012.03[民101.03]",
+   "page": "頁141-151",
+   "pdf": false
+  },
+  {
+   "title": "從佛教心理學重新探究「無我」教說--兼論印度教「梵我」與「自我」意識之分際:Explore the Buddha&apos;s Teaching of \"No-self\" from the Perspective of Buddhist Psychology: How Different is Atman from Ego-consciousness?",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁1-25",
+   "pdf": true
+  },
+  {
+   "title": "利益算計下的崇奉--由《夷堅志》考述南宋五通信仰之生成及內容:Religious Worship with Calculated Benefits: Investigating the Principle and Contents of Wutong Faith of the Southern Song Dynasty in the Yi Jian Records",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁61-84",
+   "pdf": true
+  },
+  {
+   "title": "傳說、性別與神格--從「大道公風，媽祖婆雨」談起:Legend, Gender, and Godhead--To Discuss from \"the Wind of Bao-sheng-da-di, the Rain of Matsu\"",
+   "author": "謝貴文",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁85-112",
+   "pdf": true
+  },
+  {
+   "title": "敦煌出土《大智度論》寫卷綴合10例:The Cases on the Combination of Dunhuang Da Zhi Du Lun Handwriting Copy",
+   "author": "劉顯",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁115-133",
+   "pdf": true
+  },
+  {
+   "title": "印度智慧的基石--試評《伊薩奧義書》:The Foundation Stone of Indian Wisdom--A Review of the Isa Upanishad",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁137-141",
+   "pdf": true
+  },
+  {
+   "title": "「哈迪斯」概念淺釋:On al-Hadith, a Preliminary Survey",
+   "author": "康有璽",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁41-66",
+   "pdf": true
+  },
+  {
+   "title": "宗教對話與全球責任--當代臺灣新興宗教領袖對宗教倫理論述的分析:Religious Dialogue and Global Responsibility--Analysis of Contemporary Taiwan New Religious Leaders&apos; Discoures on Religious Ethics",
+   "author": "莊政憲",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁67-102",
+   "pdf": true
+  },
+  {
+   "title": "從京都學派看淨土信仰的辯證與轉向(完):Dialectic and Philosophical Turn of Pure Land Belief: A Perspective from Kyoto School (Ⅲ)",
+   "author": "吳汝鈞",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁105-131",
+   "pdf": true
+  },
+  {
+   "title": "臺灣印行流通漢譯古蘭經評介:An Introduction to the Popular Chinese Versions of Koran in Taiwan",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁133-146",
+   "pdf": true
+  },
+  {
+   "title": "斯里蘭卡「臺灣三摩地村」志工改宗之敘說分析:Narrative Analysis of Conversion Experience of Two Volunteers in Taiwan Samadhigama of Sri Lanka",
+   "author": "鄭維儀",
+   "journal": "新世紀宗教研究",
+   "vol": "9:3  2011.03[民100.03]",
+   "page": "頁149-175",
+   "pdf": true
+  },
+  {
+   "title": "三化三省：論佛教面對當前全球宗教「三化」的挑戰，如何創造其可續性發展的優勢:Three Reflections: How does Buddhism Deal with the Challenges of Globalization, Civil Religion and Religious Secularization as a Great Opportunity for Sustainable Development",
+   "author": "游祥洲",
+   "journal": "新世紀宗教研究",
+   "vol": "10:2  2011.12[民100.12]",
+   "page": "頁1-25",
+   "pdf": false
+  },
+  {
+   "title": "《瑜伽經》中的三昧與佛教三昧的比較:A Comparative Study of the Samādhi between Yoga Sūtra and Buddhism",
+   "author": "王慕齡",
+   "journal": "新世紀宗教研究",
+   "vol": "10:2  2011.12[民100.12]",
+   "page": "頁29-73",
+   "pdf": true
+  },
+  {
+   "title": "基督教教會牧執同工資訊素養內涵之研究--以臺中市為例:A Case Study of Information Literacy Connotation for Coworkers of Christian Churches in Taichung",
+   "author": "王文良",
+   "journal": "新世紀宗教研究",
+   "vol": "10:2  2011.12[民100.12]",
+   "page": "頁75-105",
+   "pdf": true
+  },
+  {
+   "title": "基督教與佛教生命觀之比較研究:The Comparative Studies on the Attitudes towards Life between Christianity and Buddhism",
+   "author": "尤惠貞",
+   "journal": "新世紀宗教研究",
+   "vol": "10:2  2011.12[民100.12]",
+   "page": "頁109-138",
+   "pdf": false
+  },
+  {
+   "title": "宋代《禪林寶訓》的叢林論探討:A Study on the Theory of Jungle in the Chan Lin Bao Xun of the Song Dynasty",
+   "author": "許文筆",
+   "journal": "新世紀宗教研究",
+   "vol": "10:2  2011.12[民100.12]",
+   "page": "頁139+141-172",
+   "pdf": true
+  },
+  {
+   "title": "香港漁民基督徒自我認同之「變」與「恆」--以香港鴨脷洲海面傳道會信徒為例:The Changed and the Reserved among Hong Kong Fisherman Christians&apos; Self-identity--A Case Study on Believers of Hong Kong Ap Lei Chau Harbor Missionary Society",
+   "author": "謝健",
+   "journal": "新世紀宗教研究",
+   "vol": "10:4  2012.06[民101.06]",
+   "page": "頁35-62",
+   "pdf": false
+  },
+  {
+   "title": "佛教與基督宗教社會關懷的神聖對話:The Sacred Dialogue of Social Care between Buddhism and Christianity",
+   "author": "鄭志明",
+   "journal": "新世紀宗教研究",
+   "vol": "10:4  2012.06[民101.06]",
+   "page": "頁65-91",
+   "pdf": false
+  },
+  {
+   "title": "西藏佛教的修行方法:Practice Techniques in Tibetan Buddhism",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "10:4  2012.06[民101.06]",
+   "page": "頁93-110",
+   "pdf": true
+  },
+  {
+   "title": "哈達瑜伽：肉身成聖的生命藝術--試評《哈達瑜伽之光》:The Life Art of Sanctifying the Flesh: A Review of Hatha Yoga Pradipika",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "10:4  2012.06[民101.06]",
+   "page": "頁113-121",
+   "pdf": false
+  },
+  {
+   "title": "批判佛教：新的闡釋與反思（下）:Critical Buddhism: A New Exposition and Refection (II)",
+   "author": "吳汝鈞",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁1-47",
+   "pdf": true
+  },
+  {
+   "title": "臺灣基督教創新喪葬儀式之研究--以客家教會「創新喪禮」為例:The Research of Taiwanese Renewed Funeral--For the Example of Hakka Church&apos;s Three Ceremonies of Memory",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁51-94",
+   "pdf": false
+  },
+  {
+   "title": "論禮儀師之助人角色與服務倫理:Discussing the Assisting Role and Working Ethics of the Funeral Director",
+   "author": "許鶴齡",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁95-124",
+   "pdf": true
+  },
+  {
+   "title": "魏晉六朝佛教懺悔的實踐與義蘊:The Practice and Connotation of Buddhism Kşama during Wei Jin Period and the Six Dynasties",
+   "author": "白金銑",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁127-175",
+   "pdf": true
+  },
+  {
+   "title": "Suicide Attack: Asceticism of Militant Theocracy:自殺攻擊者的功夫論",
+   "author": "鮑霖",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁177-210",
+   "pdf": true
+  },
+  {
+   "title": "2007年中國大陸宗教研究綜述:The Religious Studies Review of Mainland China in 2007",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "8:3  2010.03[民99.03]",
+   "page": "頁213-244",
+   "pdf": true
+  },
+  {
+   "title": "明末清初曹洞禪法的華嚴意涵--以圓澄、慧經、元來、元賢、道霈為例:On the Hua-yen Thought in the Chan Method of the Caodong--School during the Late Ming and Early Qing Dynasties",
+   "author": "劉貴傑",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁1-27",
+   "pdf": false
+  },
+  {
+   "title": "禪宗典籍中的華嚴思想--以《祖庭事苑》為中心:Huayan Thought in Chan Texts: with Special Focus on the Zuting Shiyuan",
+   "author": "黃繹勲",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁29-52",
+   "pdf": true
+  },
+  {
+   "title": "布特曼的「解神話」詮釋學以及「敘事神學」的回應:Rudolf Bultmann&apos;s Hermeneutics of Demythologisation and the Response of Narrative Theology",
+   "author": "歐力仁",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁55-82",
+   "pdf": true
+  },
+  {
+   "title": "通向上帝的探問：以郎尼根思想為起點:Quest toward God--The Thoughts of Bernard Lonergan as Starting Point",
+   "author": "陳文祥",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁83-106",
+   "pdf": true
+  },
+  {
+   "title": "2008年中國大陸宗教研究綜述:The Religious Studies Review of Mainland China in 2008",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁109-149",
+   "pdf": true
+  },
+  {
+   "title": "試評諸宗教在全球化時代的某種實踐策略--評安倫《理性信仰之道》:Practice Strategies of Various Religions in the Era of Globalization",
+   "author": "王志成",
+   "journal": "新世紀宗教研究",
+   "vol": "8:4  2010.06[民99.06]",
+   "page": "頁153-159",
+   "pdf": false
+  },
+  {
+   "title": "楊鍔《水陸儀》考:On the Shuilu Ritual Text by Yang Er",
+   "author": "侯沖",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁1-34",
+   "pdf": true
+  },
+  {
+   "title": "一貫道對儒家思想的推廣:The Promotion of Confucianism through I-Kuan-Dao",
+   "author": "林榮澤",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁37-75",
+   "pdf": false
+  },
+  {
+   "title": "Christian Faith Encounters New Age Faith in the Celestine Vision: A Brief Comparison between Two Types of Theology of Energy:基督信仰遇到天國預像：兩種氣神學的比較",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁77-114",
+   "pdf": true
+  },
+  {
+   "title": "淺談列斐伏爾的日常生活批判理論--兼論禪宗的對應觀點:Brief Analysis on Henri Lefebvre&apos;s Critique of Everyday Life--And also on Zen&apos;s Corresponding Point of Views",
+   "author": "吳瑞霞",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁115-164",
+   "pdf": true
+  },
+  {
+   "title": "葛洪《神仙傳》所建構之神聖空間及其進入之法式:The Religious Significance of Space Theory in Ge Hong&apos;s Hagiographies of Immortals: With Emphasis on the \"Sacred Space\"",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁167-190",
+   "pdf": true
+  },
+  {
+   "title": "從京都學派看淨土信仰的辯證與轉向(一):Dialectic and Philosophical Turn of Pure Land Belief: A Perspective from Kyoto School (І)",
+   "author": "吳汝鈞",
+   "journal": "新世紀宗教研究",
+   "vol": "9:1  2010.09[民99.09]",
+   "page": "頁193-212",
+   "pdf": true
+  },
+  {
+   "title": "民間寺廟的醫療儀式與象徵資源--以臺北市保安宮為例:Healing Rituals and Symbolic Resources of Folk Religion--A Case Study of Baoan Temple in Taipei City",
+   "author": "張珣",
+   "journal": "新世紀宗教研究",
+   "vol": "6:1  2007.09[民96.09]",
+   "page": "頁1-27",
+   "pdf": false
+  },
+  {
+   "title": "明成祖與大寶法王交流研究--以宗教畫卷《薦福圖》為例:The Relationship between Ming Chengzu and the 5[90bb] Karmapa--Based on an Illustrated Scroll Entitled Buddhist Ritual Assembly Performed by Karma-pa to Glorify the Departed Ming Taizu",
+   "author": "駱愛麗",
+   "journal": "新世紀宗教研究",
+   "vol": "6:1  2007.09[民96.09]",
+   "page": "頁29-80",
+   "pdf": false
+  },
+  {
+   "title": "伊斯蘭改革運動中的穆斯林女性議題之探究:Muslim Women Issues in Islamic Reform",
+   "author": "劉育成",
+   "journal": "新世紀宗教研究",
+   "vol": "6:1  2007.09[民96.09]",
+   "page": "頁81-129",
+   "pdf": true
+  },
+  {
+   "title": "從傅柯的〈懲罰的溫和方式〉看臺灣的監獄宗教教誨--以佛光山為例:From Michel Foucault&apos;s \"The Gentle Way of Punishment\" to View the Religious Moral Instruction in Taiwan&apos;s Prison--A Case Study of Foguang Shan",
+   "author": "駱政昌",
+   "journal": "新世紀宗教研究",
+   "vol": "6:1  2007.09[民96.09]",
+   "page": "頁131-162",
+   "pdf": true
+  },
+  {
+   "title": "2005年中國大陸宗教研究綜述(上)--宗教原理與佛教:The Religious Studies Report of Mainland China in 2005 (Ⅰ)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "6:1  2007.09[民96.09]",
+   "page": "頁164-184",
+   "pdf": true
+  },
+  {
+   "title": "宇宙生成論與靈魂境界論--新柏拉圖主義神學與老子之對話:The Cycle of the Origin and the Levels of the Soul--The Dialogue between the Theology of Neo-Platonism and Lao-Tzu",
+   "author": "魏嘉華",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "金剛界五方佛壇城的意義及其造像基本原則初探:A Study of the Meaning of the Mandala of Five Dhyāni-Buddhas of Vajradhātu and the Basic Principles of Making Its Image",
+   "author": "楊翼風",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁31-60",
+   "pdf": true
+  },
+  {
+   "title": "北宗神秀及其禪系的懺悔實踐:Shen Hsiu of Northern School of Zen Buddhism and the Practice of K□ama by School of Zen Buddhism",
+   "author": "白金銑",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁61-125",
+   "pdf": true
+  },
+  {
+   "title": "吐蕃佛教判教思想研究:A Study of Differentiation of Buddhist Teaching in Tibetan Buddhism",
+   "author": "何杰峰",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁127-153",
+   "pdf": true
+  },
+  {
+   "title": "儒家論修身與悔過:Confucian Theories of Self-cultivation and Repentance",
+   "author": "林端",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁157-164",
+   "pdf": false
+  },
+  {
+   "title": "懺悔的靈性意義--以道教中元節齋醮儀式為例:The Spiritual Meanings of Repentance: Take Taoist Praying on Ghost Festival as an Example",
+   "author": "李游坤",
+   "journal": "新世紀宗教研究",
+   "vol": "8:1  2009.09[民98.09]",
+   "page": "頁165-170",
+   "pdf": false
+  },
+  {
+   "title": "批判佛教：新的闡釋與反思(上):Critical Buddhism: A New Exposition and Refection (I)",
+   "author": "吳汝鈞",
+   "journal": "新世紀宗教研究",
+   "vol": "8:2  2009.12[民98.12]",
+   "page": "頁1-41",
+   "pdf": true
+  },
+  {
+   "title": "虛雲和尚禪法的當代詮釋:Master Shiu-yun&apos;s Chan-Meditation and Its Contemporary Interpretation",
+   "author": "賴賢宗",
+   "journal": "新世紀宗教研究",
+   "vol": "8:2  2009.12[民98.12]",
+   "page": "頁45-82",
+   "pdf": false
+  },
+  {
+   "title": "論《菩薩受齋經》之生命轉化教育:A Discussion on the Life Transformation Education of the Bodhisattva Fasting Sutra",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "8:2  2009.12[民98.12]",
+   "page": "頁83-121",
+   "pdf": true
+  },
+  {
+   "title": "法眼文益大師的華嚴禪探微:A Study on Hua-yen&apos;s Ch&apos;an (Zen) of Great Master Rev. Fa-yen Wen-yi",
+   "author": "陳榮波",
+   "journal": "新世紀宗教研究",
+   "vol": "8:2  2009.12[民98.12]",
+   "page": "頁125-145",
+   "pdf": false
+  },
+  {
+   "title": "戰後大陸來臺宗教的在地化與全球化--以一貫道為例:The Localization and Globalization of the Religions Coming from Mainland China in the Post-war Period--Take I-Kuan Tao as an Example",
+   "author": "林榮澤",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁2-47",
+   "pdf": false
+  },
+  {
+   "title": "鄉村基督徒群體的社會認同--以對河南省衛輝市某鄉村基督教會的田野調查為例:The Rural Christians&apos; Social Identity--Based on the Field Survey on Rural Christians in Weihui City of Henan Province",
+   "author": "李順華",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁50-110",
+   "pdf": true
+  },
+  {
+   "title": "《梁皇寶懺》懺悔法門的重點與意義:The Imports and Significances of the Dharma-gate of Repentance in Liang Huang Bao Cheng",
+   "author": "釋法緣",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁112-152",
+   "pdf": true
+  },
+  {
+   "title": "記憶、權力、身體--觀看文昌信仰中的文化展演與社會意義:Memory, Power, Body: A Discussion of the Cultural Presentation and Social Effect at the Faith Wenchang Spirit",
+   "author": "邱偉雲",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁154-196",
+   "pdf": true
+  },
+  {
+   "title": "佛教的懺悔及其社會作用:Buddhist Repentance and Its Social Effect",
+   "author": "姚衛群",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁199-210",
+   "pdf": false
+  },
+  {
+   "title": "慈悲水懺的理論特點與現代意義:The Theoretical Features and Modern Meanings of Compassionate Water Repentance",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "7:3  2009.03[民98.03]",
+   "page": "頁211-228",
+   "pdf": true
+  },
+  {
+   "title": "宗教與生態：天主教傳統中的環境關懷及其在臺灣的應用:Religion and Ecology: Environmental Concern in Catholic Traditions and its Implications in Taiwan",
+   "author": "莊慶信",
+   "journal": "新世紀宗教研究",
+   "vol": "4:2  民94.12",
+   "page": "頁2-50",
+   "pdf": true
+  },
+  {
+   "title": "宗教對話的生態轉向：從儒耶對話到耶佛對話:Ecological Turn of Inter-religious Dialogue: From Christian-Confucian Dialogue to Buddhist-Christian Dialogue",
+   "author": "賴品超",
+   "journal": "新世紀宗教研究",
+   "vol": "4:2  民94.12",
+   "page": "頁52-81",
+   "pdf": true
+  },
+  {
+   "title": "伊斯蘭服飾文化:The Culture of Islamic Clothing",
+   "author": "鄭慧慈",
+   "journal": "新世紀宗教研究",
+   "vol": "4:2  民94.12",
+   "page": "頁84-120",
+   "pdf": true
+  },
+  {
+   "title": "海峽兩岸宗教交流 (1989-2004):Religious Communications of the Cross-straits (1989-2004)",
+   "author": "劉勝驥",
+   "journal": "新世紀宗教研究",
+   "vol": "4:2  民94.12",
+   "page": "頁122-167",
+   "pdf": true
+  },
+  {
+   "title": "佛教「專注」故事的注意力向度分析:A Dimensional Analysis on Attentiveness in Buddhist“Concentration”Story",
+   "author": "丁敏",
+   "journal": "新世紀宗教研究",
+   "vol": "4:2  民94.12",
+   "page": "頁169-188",
+   "pdf": false
+  },
+  {
+   "title": "論宗教對話的軸心式轉變:On Models of Religious Dialogue",
+   "author": "王志成",
+   "journal": "新世紀宗教研究",
+   "vol": "4:4  民95.06",
+   "page": "頁1-19",
+   "pdf": true
+  },
+  {
+   "title": "科學與宗教重新會合對佛教的意涵--從宇宙意識到普世倫理的開展:Implications of an Envisioned Rapprochement between Science and Religion for Buddhism--From Cosmic Consciousness to the Unfolding of a New Global Ethics",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "4:4  民95.06",
+   "page": "頁21-49",
+   "pdf": true
+  },
+  {
+   "title": "臨濟義玄與洞山良价的禪法通義:Common Views on Ch&apos;an Buddhism Shared by Linji Yixuan and Dongshan Liangjie",
+   "author": "陳平坤",
+   "journal": "新世紀宗教研究",
+   "vol": "4:4  民95.06",
+   "page": "頁51-94",
+   "pdf": false
+  },
+  {
+   "title": "禪淨合一、萬善同歸--永明延壽與宋代以後漢傳佛教的轉型:The Consistency of Zen and Pure Land, The Myriad Goodness--Yongmingyanshou and the Transformation of Buddhism after Song Dynasty",
+   "author": "楊柳",
+   "journal": "新世紀宗教研究",
+   "vol": "4:4  民95.06",
+   "page": "頁95-132",
+   "pdf": false
+  },
+  {
+   "title": "2004年中國大陸宗教學研究綜述專欄(1)--宗教原理與基督宗教:The Religious Studies Report of Mainland China in 2004 (1)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "4:4  民95.06",
+   "page": "頁133-146",
+   "pdf": true
+  },
+  {
+   "title": "宗教的真偽與正信迷信之差別--從宗教對話的立場所作的思考:Truth and Falsehood in Religion and the Difference between Orthodoxy and Superstition--A Consideration from the Perspective of Religious Dialogue",
+   "author": "黃懷秋",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁2-25",
+   "pdf": true
+  },
+  {
+   "title": "宗教團體人力資源的社會心理基礎--臺北市保安宮志工參與的因素分析:The Social Psychological Basement of Religious Groups&apos; Human Resource--An Analysis on the Factors of Volunteers&apos; Participation of Baoan Temple in Taipei",
+   "author": "張家麟",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁28-61",
+   "pdf": false
+  },
+  {
+   "title": "宗教進入異文化的隱藏、稀釋與更新--以創價學會及統一教會在美國為例:Disguise, Dilution, and Renewal of Religious Transplanting in Other Cultures--Soka Gakkai and Unification Church in America as Examples",
+   "author": "李芝菡",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁64-97",
+   "pdf": false
+  },
+  {
+   "title": "天臺「性具」思想的開展--以智顗和湛然為中心:The Development of \"the Three Thousands in One Instant Thought\" in Tien-tai Centered on Zhi-yi and Zhan-ran",
+   "author": "劉雅婷",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁100-140",
+   "pdf": false
+  },
+  {
+   "title": "2004年中國大陸宗教學研究綜述專欄(2)--佛教與道教:The Religious Studies Report of Mainland China in 2004 (2)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁141-167",
+   "pdf": true
+  },
+  {
+   "title": "《吉檀迦利》第47首:The 47th Poem from Gitanjali: On the Heart Contact with the Divinity",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "5:1  民95.09",
+   "page": "頁168-175",
+   "pdf": false
+  },
+  {
+   "title": "敦煌伯2305號《妙法蓮華經講經文》的講經體例與思想特色:A Study of Dun-Huang Manuscript P2305 a Text of Expounding the Lotus Sutra: Regarding Its Stylistic Rules and Thoughts",
+   "author": "黃國清",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁1-36",
+   "pdf": true
+  },
+  {
+   "title": "佛教禪修經驗與心識學的交涉初探:Buddhist Meditation Experiences and the Study of Mind or Consciousness",
+   "author": "越建東",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁37-66",
+   "pdf": true
+  },
+  {
+   "title": "一念無明法性心--其存有暨意義結構之解析:\"The Heart of One Single Mind Embracing Ignorance and Dharma-nature Simultaneously\": An Analysis on Its Structures of Being and Meaning",
+   "author": "陳平坤",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁67-106",
+   "pdf": false
+  },
+  {
+   "title": "《中陰大聞解脫》卷與死亡研究內容之探討:A Study on the Great Liberation through Hearing in the Bardo and the Contents of Death in Scientific Research",
+   "author": "李函真",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁107-160",
+   "pdf": false
+  },
+  {
+   "title": "從西王母的傳說看民族文化心理:A Study on Ethnic & Cultural Psychology from Legends of Queen Mother of the West",
+   "author": "彭金山",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁161-167",
+   "pdf": false
+  },
+  {
+   "title": "涇川西王母祖祠「十最」:The Ten Superiorities of the Ancestral Shrine of Queen Mother of the West",
+   "author": "張懷群",
+   "journal": "新世紀宗教研究",
+   "vol": "5:3  2007.03[民96.03]",
+   "page": "頁169-182",
+   "pdf": true
+  },
+  {
+   "title": "當代禪宗哲學詮釋體系的辯證發展--以「開悟經驗」的論述為焦點:The Dialectical Development of Hermeneutic Systems in Modern Zen Philosophy--Focused on the Discourses of \"Enlightenment Experience\"",
+   "author": "蔡昌雄",
+   "journal": "新世紀宗教研究",
+   "vol": "6:3  2008.03[民97.03]",
+   "page": "頁1-40",
+   "pdf": true
+  },
+  {
+   "title": "武則天與佛教互動關係之探討:An Exploration of the Interaction between Wu Zetian and Buddhism",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "6:3  2008.03[民97.03]",
+   "page": "頁41-98",
+   "pdf": false
+  },
+  {
+   "title": "六十年來臺灣佛學概論著作之評估:A Critical Review of Introductory Writings on Buddhist Publications in Taiwan over the Last Sixty Years",
+   "author": "張國一",
+   "journal": "新世紀宗教研究",
+   "vol": "6:3  2008.03[民97.03]",
+   "page": "頁99-137",
+   "pdf": true
+  },
+  {
+   "title": "敬虔信仰與教育慈善工作--宗教家弗蘭開:Pietism, Education and Charity Work--August Hermann Francke",
+   "author": "廖婉妤",
+   "journal": "新世紀宗教研究",
+   "vol": "6:3  2008.03[民97.03]",
+   "page": "頁139-166",
+   "pdf": true
+  },
+  {
+   "title": "2006年中國大陸宗教研究回顧(上):The Religious Studies Review of Mainland China in 2006 (I)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "6:3  2008.03[民97.03]",
+   "page": "頁167-191",
+   "pdf": true
+  },
+  {
+   "title": "緣起、護生、中道義--論佛家之終極關懷與生命倫理:Dependent Origination, Protecting Life and the Middle Path--An Investigation of the Buddhist&apos;s View on Ultimate Concern and Life Ethics",
+   "author": "釋昭慧",
+   "journal": "新世紀宗教研究",
+   "vol": "5:2  民95.12",
+   "page": "頁2-24",
+   "pdf": false
+  },
+  {
+   "title": "《古蘭經》中的人性美思想論要:The Main Ideas of Humanistic Beauty in Koran",
+   "author": "王中田",
+   "journal": "新世紀宗教研究",
+   "vol": "5:2  民95.12",
+   "page": "頁26-51",
+   "pdf": true
+  },
+  {
+   "title": "建構佛教心理學的新典範--唯識學八識學說的現代省思:Construct a New Paradigm for Buddhist Psychology--A Modern Critique on the Yogacara Doctrine of Consciousness",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "5:2  民95.12",
+   "page": "頁54-86",
+   "pdf": true
+  },
+  {
+   "title": "涅槃之研究--以漢譯「阿含」經典為範圍:The Study of Nirvāna--Based on the Chinese Translation of the Āgama Scripture",
+   "author": "陳平坤",
+   "journal": "新世紀宗教研究",
+   "vol": "5:2  民95.12",
+   "page": "頁88-122",
+   "pdf": true
+  },
+  {
+   "title": "2004年中國大陸宗教學研究綜述專欄(3)--伊斯蘭教與其他宗教:The Religious Studies Report of Mainland China in 2004 (3)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "5:2  民95.12",
+   "page": "頁123-132",
+   "pdf": false
+  },
+  {
+   "title": "2005年中國大陸佛教會議綜述:The Buddhistic Conference Report of Mainland China in 2005",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁207-218",
+   "pdf": true
+  },
+  {
+   "title": "唐人小說所反映之魂魄義:The Concept of \"Soul and Form\" as Reflected in the Tang Novels",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "民間宗教天書訓文初探:The Beginning Exploration of Spirit Writing in Folk Religions",
+   "author": "林榮澤",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁31-98",
+   "pdf": false
+  },
+  {
+   "title": "[東年著]《地藏菩薩本願寺》主題思想析論--兼論東年的佛學思想:A Thematic Study of the Ksitigarbha-Pranidhana Temple--Discussing Dong Nien&apos;s Thoughts on Buddhism Concurrently",
+   "author": "傅楠梓",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁99-129",
+   "pdf": false
+  },
+  {
+   "title": "觀世音菩薩對婦女「無子之苦」的救度--以天臺智者大師《觀音義疏》為根據:Bodhisāttva Guanyin Rescuses Women Who Suffer From Infertility--Based on Guanyin Yishu of Tiantai Master Zhiyi",
+   "author": "釋大參",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁131-170",
+   "pdf": false
+  },
+  {
+   "title": "「群體的、批判的自我意識」--論史密斯的宗教神學:Corporate, Critical Self-consciousness--On Wilfred Cantwell Smith&apos;s Theology of Religion",
+   "author": "蔡彥仁",
+   "journal": "新世紀宗教研究",
+   "vol": "5:4  2007.06[民96.06]",
+   "page": "頁171-206",
+   "pdf": false
+  },
+  {
+   "title": "論天臺契入實相的相即理論:On Tiantai&apos; System of Penetrating the Ultimate Truth with the Theory of Identification",
+   "author": "沈海燕",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁1-42",
+   "pdf": false
+  },
+  {
+   "title": "巴利《念處經》的「外觀」--當代緬甸毗婆舍那修行傳統之間的一個諍論:“Contemplating Externally” in the Satipatthāna Sutta--A Subject of Debate among Vipassanā Traditions in Modern Burma",
+   "author": "溫宗堃",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁43-80",
+   "pdf": false
+  },
+  {
+   "title": "The Meditating Body--The Affinities Within Taoist and Christian Methods of Meditation:默觀之身：道教與基督教默觀模式的類似性",
+   "author": "鮑霖",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁81-114",
+   "pdf": true
+  },
+  {
+   "title": "從知識論的進路探討人與超越者之相遇、認識與相愛:Encounter, Understanding and Falling in Love with Transcendental Being--An Epistemological Approach",
+   "author": "陳文祥",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁115-144",
+   "pdf": true
+  },
+  {
+   "title": "2005年中國大陸宗教研究綜述道教研究、伊斯蘭教、基督宗教與其他宗教:The Religious Studies Report of Mainland China in 2005(II)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁146-162",
+   "pdf": true
+  },
+  {
+   "title": "但丁：生命就是偉大的朝聖之旅--讀《神曲．序曲》前12行:Dante:Life is the Great Pilgrimage Trip--To Read “Divine Comedy--Overture”, The First 12 Lines",
+   "author": "朱文信",
+   "journal": "新世紀宗教研究",
+   "vol": "6:2  2007.12[民96.12]",
+   "page": "頁163-173",
+   "pdf": false
+  },
+  {
+   "title": "馬祖道一心性論禪法思想探究:A Discussion of Mazu Daoyi&apos;s Chan and Mind-nature Thought",
+   "author": "釋聖因",
+   "journal": "新世紀宗教研究",
+   "vol": "18:2  2019.12[民108.12]",
+   "page": "頁1-27",
+   "pdf": true
+  },
+  {
+   "title": "外澳接天宮之武當朝聖:On the Pilgrimage to Mt. Wudang Made by Waiao Jietian Temple",
+   "author": "盛翠穎",
+   "journal": "新世紀宗教研究",
+   "vol": "18:2  2019.12[民108.12]",
+   "page": "頁29-69",
+   "pdf": true
+  },
+  {
+   "title": "從生命關懷的角度省思我國宗教與殯葬政策的問題與展望:Reflections on the Problems and Prospects of Chinese Religious and Funeral Policy from the Perspective of Life Care",
+   "author": "賴松慶",
+   "journal": "新世紀宗教研究",
+   "vol": "18:2  2019.12[民108.12]",
+   "page": "頁71-99",
+   "pdf": true
+  },
+  {
+   "title": "Report on the Meeting of the European Network of Buddhist Christian Studies--Buddhist-Christian Encounter: A Visionary Approach:佛教與基督教研究歐洲網絡會議報告--佛教與基督教的相遇：未來的展望",
+   "author": "Habito, Maria Reis",
+   "journal": "新世紀宗教研究",
+   "vol": "18:2  2019.12[民108.12]",
+   "page": "頁103-108",
+   "pdf": true
+  },
+  {
+   "title": "愛的禮讚--《雅歌》釋義:A Salute to Love--A Commentary on the Song of Songs",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁1-62",
+   "pdf": true
+  },
+  {
+   "title": "默觀天主聖三愛的奧蹟：一個密契主義的靈性經驗之整合:Contemplating the Mystery of Love in the Holy Trinity: An Integration of Mysticism and Spiritual Experience",
+   "author": "黃貴雄",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁65-95",
+   "pdf": true
+  },
+  {
+   "title": "靈性意識發展：以耶穌禱文為例:Development of Spiritual Consciousness: Taking Jesus&apos; Prayer as an Example",
+   "author": "潘馨逸",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁97-122",
+   "pdf": true
+  },
+  {
+   "title": "本土靈性諮商初步探究:An Initial Research on the Localization of Spiritual Counselling",
+   "author": "蔡宜秀",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁123-156",
+   "pdf": true
+  },
+  {
+   "title": "復原以學致道的文化運動--馬克．赫什森《西元100~350年，拉比文化在古代晚期的嬗變與穩定：來自教化文本與歷史情景的考察》的評介:Searching for the God&apos; Way through Learning: Disclose the Rabbinical Cultural Movement in Late Antiquity--Review on «The Stabilization of Rabbinic Culture, 100 C.E.~350 C.E.: Texts on Education and Their Late Antique Context» by Marc Hirshman",
+   "author": "尚萬里",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁159-161",
+   "pdf": true
+  },
+  {
+   "title": "評介《冥契主義與哲學》:Review on «Mysticism and Philosophy»",
+   "author": "黃立森",
+   "journal": "新世紀宗教研究",
+   "vol": "18:1  2019.09[民108.09]",
+   "page": "頁163-165",
+   "pdf": true
+  },
+  {
+   "title": "佛法果地修行的理路與應用--從華嚴圓教到彌陀淨土之路:Theory and Application of the Buddhist Effect-based Practice: The Path Leading from the Huayen Teachings of Great Harmony to the Pure Land of Amida Buddha",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "16:1  2017.09[民106.09]",
+   "page": "頁1-37",
+   "pdf": true
+  },
+  {
+   "title": "發展一個郎尼根「真我體認」基督真理的基本「歷程形上框架」:Developing a Basic Lonerganian Process-Metaphysics Framework for Self-appropriating Christian Truths",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "16:1  2017.09[民106.09]",
+   "page": "頁41-72",
+   "pdf": true
+  },
+  {
+   "title": "面對外來佛教：佛教全球化對臺灣漢傳佛教僧尼的影響:Facing Foreign Buddhism: The Influence of Globalization on Monks and Nuns of Chinese Buddhism in Taiwan",
+   "author": "陳家倫",
+   "journal": "新世紀宗教研究",
+   "vol": "16:1  2017.09[民106.09]",
+   "page": "頁73-119",
+   "pdf": true
+  },
+  {
+   "title": "略論當代印度「新彌勒信仰」中的風水文化因素:A Discussion on FengShui Cultural Factors of the New Maitreya Belief in India",
+   "author": "體恒",
+   "journal": "新世紀宗教研究",
+   "vol": "16:1  2017.09[民106.09]",
+   "page": "頁121-146",
+   "pdf": true
+  },
+  {
+   "title": "試評《民國時期伊斯蘭教漢文譯著研究》:An Attempt to Review: «Chinese Islamic Literature in Republican China (1912~1949)»",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "16:1  2017.09[民106.09]",
+   "page": "頁149-151",
+   "pdf": true
+  },
+  {
+   "title": "臺灣民間宗教的人文視野--以媽祖信仰為例:The Cultural Perspective of Taiwan&apos;s Folk Religion: A Case Study of Goddess Matsu",
+   "author": "陳齡慧",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁1-21",
+   "pdf": true
+  },
+  {
+   "title": "「廟宇視角」下的「轄境」：從廟宇經營來看廟宇的地域性:\"Jurisdiction of Territory\" in \"Temple Perspective\": Examining the Relationship between Temples and Regions from the View of Temple Management",
+   "author": "陳緯華",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁23-56",
+   "pdf": true
+  },
+  {
+   "title": "鄭氏三世建置媽祖廟新探:A New Study on the Matsu Temples Founded or Rebuilt by Three Generations of the Zheng Family",
+   "author": "石萬壽",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁59-85",
+   "pdf": true
+  },
+  {
+   "title": "太子爺與囝仔公--臺灣囝仔神之研究:Thai-chu-ye and Gin-a-kong: The Study of Child Deities in Taiwan",
+   "author": "林美容",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁87-110",
+   "pdf": true
+  },
+  {
+   "title": "金剛乘佛教的救度方法:The Way of Salvation of Vajrayāna Buddhism",
+   "author": "許明銀",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁113-140",
+   "pdf": true
+  },
+  {
+   "title": "試評《臺灣的社會變遷1985~2005：心理、價值與宗教》:An Attempt to Review «Social Change in Taiwan, 1985~2005: Psychology, Value and Religion»",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "15:4  2017.06[民106.06]",
+   "page": "頁143-145",
+   "pdf": true
+  },
+  {
+   "title": "基督教資源與社區總體營造--以新竹湖口浸信會為例:The Source of Christianity and Community Empowerment/Development--A Case of HsinChu Hukou Baptist Church",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "6:4  2008.06[民97.06]",
+   "page": "頁2-35",
+   "pdf": false
+  },
+  {
+   "title": "歲月易遷，常恐奄謝--唐五代仙境傳說中時間母題之傳承與其命題:As Time Flies, the Fear of Death Is Constant--The Transmission and Proposition of Time Motif in the Fairyland Journey of the Tang and the Five Dynasties",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "6:4  2008.06[民97.06]",
+   "page": "頁38-65",
+   "pdf": true
+  },
+  {
+   "title": "「玄關一竅」：道教生命仙學向民間宗教的轉化:\"Holy Gate\": Transformation from Taoist Immortal Study of Life to Folk Religion",
+   "author": "林榮澤",
+   "journal": "新世紀宗教研究",
+   "vol": "6:4  2008.06[民97.06]",
+   "page": "頁68-110",
+   "pdf": false
+  },
+  {
+   "title": "吳歷與清初中國天主教教會--以《續〈口鐸日抄〉》為中心:Wuli and the Chinese Catholics&apos; Changes during Early Qing--A Case Study on Xu Kouduo Richao",
+   "author": "肖清和",
+   "journal": "新世紀宗教研究",
+   "vol": "6:4  2008.06[民97.06]",
+   "page": "頁112-157",
+   "pdf": true
+  },
+  {
+   "title": "2006年中國大陸宗教研究回顧(下):The Religious Studies Review of Mainland China in 2006 (II)",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "6:4  2008.06[民97.06]",
+   "page": "頁160-177",
+   "pdf": true
+  },
+  {
+   "title": "西方心理學的靈性治療研究--以詹姆斯、榮格與弗蘭克為例:Spiritual Therapy as Studied in Western Psychology--The Cases of William James, Carl Jung and Viktor Frankl",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "7:1  2008.09[民97.09]",
+   "page": "頁2-34",
+   "pdf": true
+  },
+  {
+   "title": "女禪合響：寶持與祖揆之行傳考述:Female Zen Masters&apos; Choir: The Textual Criticism and Explanations of Biographies of Baochi and Zhukuei",
+   "author": "蘇美文",
+   "journal": "新世紀宗教研究",
+   "vol": "7:1  2008.09[民97.09]",
+   "page": "頁36-89",
+   "pdf": true
+  },
+  {
+   "title": "「神道設教」預想下的淑世試驗--紀昀《閱微草堂筆記》對清初靈異傳聞之理論組構與評議法式:The Attempt to Use the Concept of Gods and Ghosts to Educate the Common People--Examining the Discussion on Ghost Stories of the Early Qing Dynasty by Ji Yun in His Yue Wei Thatched House Commentaries",
+   "author": "黃東陽",
+   "journal": "新世紀宗教研究",
+   "vol": "7:1  2008.09[民97.09]",
+   "page": "頁92-121",
+   "pdf": true
+  },
+  {
+   "title": "奧古斯丁時間哲學中的神學思想--以《懺悔錄》卷十一為主:The Theology of Augustine&apos;s Time Philosophy--On Confession Book XI",
+   "author": "吳瑞霞",
+   "journal": "新世紀宗教研究",
+   "vol": "7:1  2008.09[民97.09]",
+   "page": "頁124-159",
+   "pdf": true
+  },
+  {
+   "title": "中國宗教研究前沿報告:The Preceding Report of Religious Studies in Mainland China",
+   "author": "黃夏年",
+   "journal": "新世紀宗教研究",
+   "vol": "7:1  2008.09[民97.09]",
+   "page": "頁162-176",
+   "pdf": true
+  },
+  {
+   "title": "佛教禪修戒毒實例之比較研究:A Comparative Case Study of the Buddhist Meditation to Drug Rehabilitation",
+   "author": "釋永東",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁2-70",
+   "pdf": false
+  },
+  {
+   "title": "茅山道士陶弘景之養生思想探究:The Study of Mao-shan Taoist Tao Hongjing&apos;s &apos;Nurturing Life&apos; (Yangsheng) Philosophy",
+   "author": "許鶴齡",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁72-114",
+   "pdf": true
+  },
+  {
+   "title": "神會無念禪法中的懺悔義蘊:The Implication of K□ama in Shen Hui&apos;s Thoughtlessness Zen Buddhism",
+   "author": "白金銑",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁116-160",
+   "pdf": true
+  },
+  {
+   "title": "由陰入陽的成聖之途--由《西遊記》的「食色」談起:Analysis of the Alimentary/Erotic Images in the Journey to the West",
+   "author": "趙修霈",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁162-188",
+   "pdf": false
+  },
+  {
+   "title": "淨源《首楞嚴壇場修證儀》研究:Study on the Practice&apos;s Ceremony of Surangama-samadhi Mandala of Jingyuan",
+   "author": "聖凱",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁191-206",
+   "pdf": true
+  },
+  {
+   "title": "懺悔的靈性意義：佛教觀點:The Spiritual Meanings of Repentance: A Buddhist Perspective",
+   "author": "楊麗芬",
+   "journal": "新世紀宗教研究",
+   "vol": "7:4  2009.06[民98.06]",
+   "page": "頁207-228",
+   "pdf": true
+  },
+  {
+   "title": "神話與奧祕--郎尼根《洞察》十七章1節所引申的討論:Myth and Mystery--A Discussion Arising from Lonergan&apos;s Insight, Chapter 17, Section 1",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁1-54",
+   "pdf": true
+  },
+  {
+   "title": "認知中華文化無所不在的氣:Realizing the Omnipresent Qi in the Chinese Culture",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁57-94",
+   "pdf": true
+  },
+  {
+   "title": "古印度觀音繪畫藝術表現之初探:A Preliminary Study on the Artistic Expression of Ancient India Avalokiteśvara Paintings",
+   "author": "羅海濤",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁95-126",
+   "pdf": true
+  },
+  {
+   "title": "「番僧」與「蕃僧」解微--旁論「胡僧」、「梵僧」和「西僧」:A Meticulous Analysis of West Monks and Foreign Monks in the History of Chinese Buddhism: Including an In-depth Exploration of Exotic Monks, Pure Monks, and Western Monks",
+   "author": "王璞",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁127-159",
+   "pdf": true
+  },
+  {
+   "title": "論「識種不二」的本體原理與阿賴耶識的進化性--唯識學被忽略的重要課題:A Discourse on \"Dialectical Unity of Emptiness and Karmic Seeds\" as Ontological Matrix and the Evolution of Alayavijnana",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁163-203",
+   "pdf": true
+  },
+  {
+   "title": "生生之機起於何處？評Reuven Hammer的Akiva: Life, Legend, Legacy (Philadephia: The Jewish Publication Society, 2015):Probing into the Essence and Phenomenon of Living Reflections on Reuven Hammer&apos;s «Akiva: Life, Legend, Legacy»",
+   "author": "尚萬里",
+   "journal": "新世紀宗教研究",
+   "vol": "18:3  2020.03[民109.03]",
+   "page": "頁207-212",
+   "pdf": true
+  },
+  {
+   "title": "縱觀穆斯林與基督宗教徒關係：古典、中古時期宗教文化的互動:Cultural and Religious Interactions in the Classical and Medieval Periods: A Critical Survey of Muslim-Christian Relations",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁1-51",
+   "pdf": true
+  },
+  {
+   "title": "西西里島伊斯蘭化的歷程：兼論基督徒與穆斯林之關係:The Relations between Christians and Muslims in the Islamic Sicily--A Preliminary Study",
+   "author": "蘇頤",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁55-80",
+   "pdf": true
+  },
+  {
+   "title": "淺析伊斯蘭初期穆斯林信徒與基督宗教徒的對話經驗:",
+   "author": "林仁謙",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁81-124",
+   "pdf": true
+  },
+  {
+   "title": "基督宗教與伊斯蘭「真理觀」之比較：《平民的基督傳》中的耶穌神子形象與Al-Hallaj密契教義初探:The Concept of \"I Am the Truth\"--A Comparative Study between \"the Image of Jesus in A People's Life of Christ\" and the Teaching of Al-Hallaj",
+   "author": "李新元",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁125-150",
+   "pdf": true
+  },
+  {
+   "title": "再思「La Convivencia」：安達露西亞伊斯蘭時期「穆斯林與非穆斯林關係」初探:Rethinking \"La Convivencia\": A Preliminary Study on the Relations between Muslims and Non-Muslims in the Islamic Andalusia",
+   "author": "吳修廉",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁153-179",
+   "pdf": true
+  },
+  {
+   "title": "耶路撒冷聖地觀：以十字軍東征探討基督宗教與伊斯蘭的關係:The Concept of Holy Jerusalem, the Relations between Christianity and Islam through the Movement of Crusades",
+   "author": "盧耕堯",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁181-205",
+   "pdf": true
+  },
+  {
+   "title": "廣義修辭學下的聖經敘事--《以斯帖記》一章為例:Biblical Narrative from the Perspective of Generalized Rhetoric: Analysis of the Chapter One in the Book of Esther",
+   "author": "曾祖漢",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁209-234",
+   "pdf": true
+  },
+  {
+   "title": "臺灣長老教會禮拜中音樂角色之研究:A Study of Musical Role in the Worship of the Presbyterian Church in Taiwan",
+   "author": "潘馨逸",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁235-257",
+   "pdf": true
+  },
+  {
+   "title": "「消弭敵對」之建言：評介W. M. Watt的Muslim-Christian Encounters: Perception and Misperception (London and New York: Routledge, 1991):Advice on \"Eliminating Hostility\": A Review of «Muslim-Christian Encounters: Perception and Misperception» by W. M. Watt",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁261-267",
+   "pdf": true
+  },
+  {
+   "title": "評介Peter G. Riddell的Malay Court Religion, Culture and Language: Interpreting the Qur'an in 17th Century Aceh (Leiden and Boston: Brill, 2017):Review on Peter G. Riddell's «Malay Court Religion, Culture and Language: Interpreting the Qur'an in 17th Century Aceh»",
+   "author": "江孟勳",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁269-272",
+   "pdf": true
+  },
+  {
+   "title": "評介[卡蘿．希爾布蘭登著，高慧玲譯]《十字軍：伊斯蘭的觀點》(新北：廣場出版，2017):Review on «The Crusades: Islamic Perspectives»",
+   "author": "黃淞郁",
+   "journal": "新世紀宗教研究",
+   "vol": "18:4 2020.06[民109.06]",
+   "page": "頁273-277",
+   "pdf": false
+  },
+  {
+   "title": "大德蘭和十字若望所心儀的《雅歌》:The Song of Songs as Appropriated by St. Teresa of Avila and St. John of the Cross",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁1-66",
+   "pdf": false
+  },
+  {
+   "title": "六群比丘違犯律制之省思--以漢譯「根本說一切有部律」為主:A Reflection of Group-of-six-monks' Monastic Violations: Based on the Chinese Mūlasarvāstivāda-vinaya",
+   "author": "屈大成",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁69-94",
+   "pdf": false
+  },
+  {
+   "title": "電影《和平戰士》中「正念態度」之佛學詮釋:On the \"Mindful Attitude\" of the Film \"Peaceful Warrior\"",
+   "author": "聖因",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁95-121",
+   "pdf": false
+  },
+  {
+   "title": "信仰與斷裂--山中村祭祀圈的變遷與村民的奉祀理解:Belief and Fracture: Changes in the Religious Realms of Mountain Villages and Village Worship",
+   "author": "楊國柱",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁123-174",
+   "pdf": false
+  },
+  {
+   "title": "「無實體」的勝義在般若觀照上的應用--佛理新思維之一:Application of the Transcendent Insight of \"Non-substantiality\" to the Contemplation of Panna",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁177-184",
+   "pdf": false
+  },
+  {
+   "title": "《塔木德》的微言大義--評保羅．索肯主編的《二十一世紀，為何還要讀〈塔木德〉？》(Plymouth: Lexington Books, 2009):The Way of Talmud, Review on Paul Socken, «Why Study Talmud in the Twenty-first Century?»",
+   "author": "尚萬里",
+   "journal": "新世紀宗教研究",
+   "vol": "19:1  2021.06[民110.06]",
+   "page": "頁187-191",
+   "pdf": false
+  },
+  {
+   "title": "由范德雷的現象學視域下之「教會跟窮人站在同一陣線」--以天主教教宗方濟各為例:\"Not Only Pope Francis but Also the Church Helps the Poor Fight Poverty\"--A Case Study Based on Gerardus van der Leeuw&apos;s Typological Phenomenology",
+   "author": "黃冠潔",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁1-41",
+   "pdf": true
+  },
+  {
+   "title": "佛教飲食儀式運用於「飲食教育」之初探--以禪宗《入眾日用》為例:A Study on the Application of Diet Education from Buddhist Diet Ceremony: Take RuZhongRiYong (the Guidelines for Daily Life in Chan Monastery) as an Example",
+   "author": "釋惠敏",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁45-77",
+   "pdf": true
+  },
+  {
+   "title": "自誠明、謂之性--《禮記．中庸》與郎尼根《洞察》(15．7．4)的對話:On Genuineness: A Dialogue between the Confucian Doctrine of the Mean and Lonergan&apos;s Insight, ch.15, §7.4",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁79-133",
+   "pdf": true
+  },
+  {
+   "title": "後大屠殺時代的猶太環境倫理再思:Reflection on Jewish Environmental Ethics in the Post-Holocaust Age",
+   "author": "鄧元尉",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁135-172",
+   "pdf": true
+  },
+  {
+   "title": "論伊斯蘭之環境倫理觀：一個信仰者的論述:Environmental Ethics and Sustainable Development: An Islamic Perspective",
+   "author": "初雅士",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁173-194",
+   "pdf": true
+  },
+  {
+   "title": "末劫解救--從觀音救劫善書探討觀音信仰之民間化:Doomsday Rescue--A Study of Folklorization of Guanyin Belief from the Morality Books of Goddess Bodhisattva on Rescuing Doomsday",
+   "author": "李世偉",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁197-230",
+   "pdf": true
+  },
+  {
+   "title": "Inborn Extraordinary Power: Survey of 200 Taiwan Spirit Mediums:先天神能：臺灣兩百位靈乩之研究報告",
+   "author": "廖仁聖",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁231-260",
+   "pdf": true
+  },
+  {
+   "title": "關於存有的終極思辨--評吉姆．霍爾特著《世界為何存在？》:The Ultimate Speculation on Existence--A Review of Why Does the World Exist? By Jim Holt",
+   "author": "陳信宏",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁263-265",
+   "pdf": true
+  },
+  {
+   "title": "Makkah或Mecca：麥加聖城歷史新解讀--評介Mecca, the Scared City:Makkah or Mecca: A New Interpretation of Mecca History--Review on Ziauddin Sardar, «Mecca: The Sacred City» (London: Bloomsbury, 2014)",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁267-271",
+   "pdf": true
+  },
+  {
+   "title": "宗教歷史與生命體會--哈維．考克斯《信仰的未來》:Religious History and Life Experience--Harvey Cox&apos;s The Future of Faith",
+   "author": "梁右典",
+   "journal": "新世紀宗教研究",
+   "vol": "16:2  2017.12[民106.12]",
+   "page": "頁273-275",
+   "pdf": true
+  },
+  {
+   "title": "有待補足的靈修方塊--馬賽爾與聖女小德蘭的懇談:The Last Piece of Jigsaw Puzzle Required for Fulfillment in Spirituality--A Dialogue between Gabriel Marcel and Saint Theresa of Lisieux",
+   "author": "關永中",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁1-56",
+   "pdf": true
+  },
+  {
+   "title": "論意志的自由：從奧古斯丁與阿奎那的觀點:On the Freedom of the Will: From the Perspectives of Augustine and Aquinas",
+   "author": "張聖佳",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁59-84",
+   "pdf": true
+  },
+  {
+   "title": "聖地再造的宗教實踐初探:An Exploration of Sacred Place Creation Practice",
+   "author": "張譯心",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁85-142",
+   "pdf": true
+  },
+  {
+   "title": "Nostra Aetate: Landmark of Catholic Interaction with Other Religions:《教會對非基督徒態度宣言》：天主教與其他宗教交流的里程碑",
+   "author": "鮑霖",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁143-173",
+   "pdf": true
+  },
+  {
+   "title": "從海德格生命與苦難的關係反思尼特宗教交談實踐的可能性:Talking about the Practical Possibility of the Theory of Inter-religious Dialogue in the Perspective of Paul Knitter from the Viewpoints of Martin Heidegger between Suffering and Life",
+   "author": "高榮孝",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁177-196",
+   "pdf": true
+  },
+  {
+   "title": "「人間佛教」的再思考--兼論心道法師的「人生佛教」理念與實踐:Rethinking of \"Humanistic Buddhism\" and Its Implication to the Ideal and Practice of \"Life Buddhism\" by Master Hsin-tao",
+   "author": "賴皆興",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁197-225",
+   "pdf": true
+  },
+  {
+   "title": "佛教詮釋學的新範疇--從意識原理重釋終極實相「空」諦:A New Scope of Buddhist Hermeneutics: Reinterpret the Ultimate Reality of Emptiness from the Perspective of Consciousness Studies",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "16:4  2018.06[民107.06]",
+   "page": "頁227-263",
+   "pdf": true
+  },
+  {
+   "title": "西方佛教修行與身心靈療癒:Buddhist Practice in the West and Holistic Healing",
+   "author": "陳玉璽",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁1-32",
+   "pdf": true
+  },
+  {
+   "title": "真我體認無作不在的天主神性之氣:True-Self Appropriation of God&apos;s Omnipresent Divine Qi",
+   "author": "鄭維亮",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁35-53",
+   "pdf": true
+  },
+  {
+   "title": "南宋．徑山．大慧宗杲的「看話禪」及其對天童正覺「默照禪」的批判:Dahuizonggao&apos;s \"Investigating a Topic Meditation\" in the Jing Mountain of the Southern Song Dynasty and His Criticism of Hungchichienchue&apos;s \"Silent Illumination Meditation\"",
+   "author": "趙東明",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁57-88",
+   "pdf": true
+  },
+  {
+   "title": "宗教與「非家者」的交集--臺灣宗教性慈善暨社福團體「遊民服務」之現況、瓶頸與展望:Intertwining Relationship between Religion and Homeless Individuals--The Current Situation, Obstacles, and Prospects of the Homeless Service in Faith-based Charity and Social Welfare Organizations across Taiwan",
+   "author": "釋昭慧",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁89-112",
+   "pdf": true
+  },
+  {
+   "title": "天主教神恩復興運動中的通靈醫療：以王敬弘神父在臺灣的經驗為例:Healing Ministry in Catholic Charismatic Renewal: A Study of Fr. Wang Jing Hong and His Experience in Taiwan",
+   "author": "林靜宜",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁113-145",
+   "pdf": true
+  },
+  {
+   "title": "互為他者的中國佛教史論述--八宗綱要對近代宗派佛教詮釋的影響:The Explanations in China and Japan of the Modern Buddhist Schools&apos; Closely Interwove History under the Influence of Bazong-Gangyao",
+   "author": "藍日昌",
+   "journal": "新世紀宗教研究",
+   "vol": "17:2  2018.12[民107.12]",
+   "page": "頁149-173",
+   "pdf": true
+  },
+  {
+   "title": "連結Nusantara與al-Jazīrah al-&apos;Arabiyyah：十七世紀新蘇非主義(neo-Sufism)與馬來世界近代伊斯蘭之發展:Linking Nusantara with al-Jazīrah al-&apos;Arabiyyah: The 17th Century neo-Sufism and Development of Islām in Malay World",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁1-51",
+   "pdf": true
+  },
+  {
+   "title": "Muslim Religious Violence as Political Maneuver in Colonial and Post-war Indonesia: A Critical Overview:綜論殖民時期與二戰後印尼穆斯林宗教暴力在政治訴求活動的使用",
+   "author": "董梵",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁55-72",
+   "pdf": true
+  },
+  {
+   "title": "沈默的社群：寮國穆斯林社群調查報告:A Silent Ummah: Fieldwork Report of Muslim Community in Laos",
+   "author": "林靖諺",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁75-103",
+   "pdf": true
+  },
+  {
+   "title": "Notes on Islamic Education in Singapore:新加坡伊斯蘭教育試論",
+   "author": "Aljunied, Khairudin",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁105-112",
+   "pdf": true
+  },
+  {
+   "title": "評介《華人穆斯林在馬來西亞》:Book Review: «Chinese Muslims in Malaysia»",
+   "author": "毛帝勝",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁115-117",
+   "pdf": true
+  },
+  {
+   "title": "「伊斯蘭」抑或「穆斯林」音樂文化？評介《傳統與現代性：印尼伊斯蘭宗教音樂文化》:Islamic or Muslim Musico-culture?! Review on «Tradition and Modernity of Islamic Music Culture in Indonesia»",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "17:3  2019.03[民108.03]",
+   "page": "頁119-123",
+   "pdf": true
+  },
+  {
+   "title": "女人形塑伊斯蘭？--論穆斯林女權與女性主義之改革:Could Women Shap Islam?--On Muslim Women&apos;s Rights and Feminist Reform",
+   "author": "林長寬",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁1-64",
+   "pdf": true
+  },
+  {
+   "title": "論巴勒斯坦女性主義難題：以薩哈爾．哈利斐的小說《遺產》探討之:Feminist Conundrums in Palestine: Analysis of Sahar Khalifeh&apos;s Novel al-Mirath",
+   "author": "黃樂之",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁67-98",
+   "pdf": false
+  },
+  {
+   "title": "瑪莉嫣與法蒂瑪：一神信仰中女性宗教成聖性的比較:Maryam and Fatima: A Comparative Study on Female Holiness in Abrahamic Monotheism",
+   "author": "林仁謙",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁99-129",
+   "pdf": true
+  },
+  {
+   "title": "試析華人女性穆斯林「頭巾觀」--以臨夏和香港為例探討之:The Concept of Hijab: A Comparison between That of Linxia and Hong Kong Muslimat",
+   "author": "龔方",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁131-149",
+   "pdf": true
+  },
+  {
+   "title": "曹洞宗的宗風、禪法與見地:Ethos, Methods and Insights of the Cao Dong Zen Sect",
+   "author": "蘇懿賢",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁153-173",
+   "pdf": true
+  },
+  {
+   "title": "伊斯蘭女性主義經典回顧(1)：阿米娜．瓦杜德的《古蘭經與女性：從女性觀點重讀神聖經文》:Review of Islamic Feminism Classics Series. On Amina Wadud&apos;s «The Qur&apos;an and Women: Rereading the Sacred Text from a Woman&apos;s Perspective» (Oxford: Oxford University Press, 1999)",
+   "author": "趙恩潔",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁177-180",
+   "pdf": false
+  },
+  {
+   "title": "失焦的至愛--《性別奮鬥之內：伊斯蘭中的女人改革》評介:The Defocused Wadud (Most Loving)--Review on Inside the Gender Jihad: Women&apos;s Reform in Islam",
+   "author": "黃樂之",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁181-183",
+   "pdf": false
+  },
+  {
+   "title": "誰的「頭巾」？誰的「面紗」？誰的「伊斯蘭」？[書評：梁紅玉，《蓋頭掀不掀？--臺灣穆斯林女子的策略與認同》(臺北：女書文化，2012)]:Whose Hijab? Whose Veil? Whose Islam?",
+   "author": "陳明莉",
+   "journal": "新世紀宗教研究",
+   "vol": "16:3  2018.03[民107.03]",
+   "page": "頁185-188",
+   "pdf": true
+  },
+  {
+   "title": "記憶與再造：地方道教的多元型態:Memory and Reconstruction: The Multiple Models of Local Daoism",
+   "author": "謝世維",
+   "journal": "新世紀宗教研究",
+   "vol": "17:4  2019.06[民108.06]",
+   "page": "頁1-31",
+   "pdf": false
+  },
+  {
+   "title": "信仰融攝與崇拜調適--以越南瑤族道經中之九天衛房花王聖母為例:The Mixing of Religion and the Adaptation of Worship Sample as Jiu Tian Wei Fang Hua Wang Sheng Mu (九天衛房花王聖母) in the Daoism Scriptures of Yao in Vietnam",
+   "author": "郭正宜",
+   "journal": "新世紀宗教研究",
+   "vol": "17:4  2019.06[民108.06]",
+   "page": "頁33-72",
+   "pdf": true
+  },
+  {
+   "title": "「關公顯聖」之教化與效果--以毛宗崗的評點為路線:The Education and Effect of \"Guangong&apos;s Sacred Manifestation\"--Taking Mao Zonggang&apos;s Commentary as the Route",
+   "author": "李欣霖",
+   "journal": "新世紀宗教研究",
+   "vol": "17:4  2019.06[民108.06]",
+   "page": "頁73-104",
+   "pdf": true
+  },
+  {
+   "title": "「色蘊」探微--以《阿毘達磨俱舍論》為中心:An Exploration of \"Rūpa-skandha\"--According to Abhidharmakośabhāṣya",
+   "author": "劉勁松",
+   "journal": "新世紀宗教研究",
+   "vol": "17:4  2019.06[民108.06]",
+   "page": "頁107-129",
+   "pdf": true
+  },
+  {
+   "title": "《大般涅槃經．聖行品》所述禪法及相關注疏的詮釋:A Study of Si Nianchu in the Shengxing Chapter of Mahā-parinirvāṇa Sūtra and the Related Exegeses",
+   "author": "趙威維",
+   "journal": "新世紀宗教研究",
+   "vol": "17:4  2019.06[民108.06]",
+   "page": "頁131-162",
+   "pdf": true
+  },
+  {
+   "title": "基督宗教女性研究：回顧與前瞻:Christian Women&apos;s Studies: Retrospect and Prospect",
+   "author": "黃懷秋",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁1-16",
+   "pdf": true
+  },
+  {
+   "title": "夢想、異象、身分：臺灣首位女牧師的早期形塑:Fantasy, Vision and Identity: The Shaping of the First Female Taiwanese Pastor in Her Early Phase",
+   "author": "石素英",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁19-51",
+   "pdf": true
+  },
+  {
+   "title": "探討《聖經》創造敘事中密契關係的元素：女性主義神學觀點的聖經釋義進路:Exploring the Elements of Sacred Union in Genesis: A Biblical Interpretation from Feminist Theological Perspectives",
+   "author": "邱凱莉",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁55-69",
+   "pdf": true
+  },
+  {
+   "title": "談，臺灣基督長老教會內的性別公義經驗:The Experience of Gender Justice Issues in the Presbyterian Church in Taiwan",
+   "author": "蘇貞芳",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁71-79",
+   "pdf": true
+  },
+  {
+   "title": "頭城外澳接天宮玄天上帝信仰之發展與實踐:The Development and Performance of the Belief in Xuantian Shangdi Practiced by Waiao Jietian Temple in Toucheng",
+   "author": "盛翠穎",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁83-122",
+   "pdf": true
+  },
+  {
+   "title": "以卡爾．拉內之人「回歸奧秘」論聖奧斯定之「回歸」:The Holy Mystery Led St. Augustine Back to Him: A Case Study Based on Karl Rahner&apos;s \"Reduction into Mystery\"",
+   "author": "黃冠潔",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁123-146",
+   "pdf": true
+  },
+  {
+   "title": "評介《推倒隔絕的牆：婦女神學家高天香教授的生命篇章》:Reviewing on «Breaking Down the Dividing Wall of Hostility»",
+   "author": "曾宗盛",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁149-153",
+   "pdf": true
+  },
+  {
+   "title": "試評《尋--女性神學的臺灣經驗》:Book Review: «Searching--A Taiwan Experience for Feminist Theology»",
+   "author": "黃伯和",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁155-157",
+   "pdf": true
+  },
+  {
+   "title": "評介《走一趟身體的朝聖之旅》:Review of «A Pilgrimage of the Body: Interpreting Body, Women, Sacredness in Light of the Contemporary Feminist Thought»",
+   "author": "崔國瑜",
+   "journal": "新世紀宗教研究",
+   "vol": "17:1  2018.09[民107.09]",
+   "page": "頁159-163",
+   "pdf": true
+  },
+  {
+   "title": "翻譯、理解與詮釋--關於中國典籍西譯研究的兩本專書[評1.俞森林，《中國道教經籍在十九世紀英語世界的譯介研究》  2.李新德，《明清時期西方傳教士中國儒道釋典籍之翻譯與詮釋》]:Translation, Understanding and Interpretation: Two Books about Western Translation Versions of Chinese Canons",
+   "author": "新世紀宗教研究編輯部",
+   "journal": "新世紀宗教研究",
+   "vol": "15:2  2016.12[民105.12]",
+   "page": "頁155-158",
+   "pdf": true
+  },
+  {
+   "title": "試論船山轉化性詮釋之思維模式：以船山思想與佛學思想轉化為例:A Discussion of the Chuan-Shan&apos;s Transformed Interpretations Thought Pattern: Take the Chuan-Shan&apos;s Thought and the Buddhism Thought Transformation as an Example",
+   "author": "邱偉雲",
+   "journal": "新世紀宗教研究",
+   "vol": "9:4  2011.06[民100.06]",
+   "page": "頁29-60",
+   "pdf": true
+  },
+  {
+   "title": "全球化趨勢下臺灣佛教之回應:How to Face the Tendency Toward Globalization：The Response of Taiwan Buddhist",
+   "author": "蔡維民",
+   "journal": "新世紀宗教研究",
+   "vol": "1:2 2002.12[民91.12]",
+   "page": "頁29-65",
+   "pdf": false
+  }
+ ]
+}

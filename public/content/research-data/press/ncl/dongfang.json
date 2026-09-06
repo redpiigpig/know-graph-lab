@@ -1,0 +1,666 @@
+{
+ "slug": "dongfang",
+ "name": "東方宗教研究",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 81,
+  "本刊實收": 81,
+  "有PDF": 0,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 1987,
+  "max": 1996
+ },
+ "articles": [
+  {
+   "title": "論「氣的感通」與「連續型理性」--血緣性縱貫軸下「宗法國家」的宗教與理性:A Discussion of \"the Flow of Qi\" and \"Continuous Rationality\"--Religion and Rationality in the Linear Structure of Blood-Relationship of the \"Patriarchal State\"",
+   "author": "林安梧",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁7-20",
+   "pdf": false
+  },
+  {
+   "title": "清辨「中觀心論」及其「思擇炎」對瑜伽行派三性思想之批判:The Mdhyamaku-Hrdaya-Karika and Turkuivala by Bhavaviveka and His Critique on the Sanxing Philosophy of the Yogacara School",
+   "author": "曹志成",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁21-69",
+   "pdf": false
+  },
+  {
+   "title": "戒律之原理--以不殺生戒為例:The Principle of the Monastic Precepts--Taking the Precept of \"No Killing\" as an Example",
+   "author": "釋昭慧",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁71-93",
+   "pdf": false
+  },
+  {
+   "title": "關河的禪法--中國大乘禪法的肇始:Chan Buddhism from the Kansu Corridor the Beginning of Chinese Mahayana Buddhism",
+   "author": "賴鵬舉",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁95-113",
+   "pdf": false
+  },
+  {
+   "title": "以羅祖為例管窺其對晚明佛教之衝擊:Patriarch Luo and His Attack on Buddhism of the Late Ming Dynasty",
+   "author": "釋見曄",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁115-135",
+   "pdf": false
+  },
+  {
+   "title": "六朝道教的度救觀--真君、種民與度世:The View of Salvation in the Taoism of the Six Dynasties--Zhenjun(Messiatic Emperor)、the Selected People, and Salvation",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁137-160",
+   "pdf": false
+  },
+  {
+   "title": "金代太一教興起的背景分析:An Analysis of the Rising Background of the T&apos;ai-Yi Sect of the Chin Dynasty",
+   "author": "胡其德",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁161-180",
+   "pdf": false
+  },
+  {
+   "title": "《朝元圖》之宗教意涵初探:The Iconology and Religious Interpretation of Taoist \"Chao Yuan Tu\"",
+   "author": "謝世維",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁181-196",
+   "pdf": false
+  },
+  {
+   "title": "明王信仰之再考察:A Reconsideration of \"Ming Wang\" Belief",
+   "author": "柯毓賢",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁197-211",
+   "pdf": false
+  },
+  {
+   "title": "臺灣善書研究的回顧:A Review of Research on Morality Books(Sanshu) from Taiwan",
+   "author": "鄭志明",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁213-231",
+   "pdf": false
+  },
+  {
+   "title": "一貫道大專學生伙食團之研究--以發一崇德「臺北學界」為例:A Study of the Dining Societies of College Student Members of Yi-Kuan-Tao--A Case Study of the “Taibei Student Circle” of the Fa-Yi Chong-De Branch",
+   "author": "林榮澤",
+   "journal": "東方宗教研究",
+   "vol": "新5=7  民85.10",
+   "page": "頁233-256",
+   "pdf": false
+  },
+  {
+   "title": "後現代化社會與宗教現象:The Postmodern Society and Religious Phenomenon",
+   "author": "吳寧遠",
+   "journal": "東方宗教研究",
+   "vol": "新5=7 1996.10[民85.10]",
+   "page": "頁257-269",
+   "pdf": false
+  },
+  {
+   "title": "真諦的「三性」思想--以「轉識論」為中心:",
+   "author": "陳一標",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁9-45",
+   "pdf": false
+  },
+  {
+   "title": "曇鸞的淨土思想--兼論北魏金石碑銘所見的淨土:",
+   "author": "陳敏齡",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁47-66",
+   "pdf": false
+  },
+  {
+   "title": "明太祖的佛教政策及其因由之探討:",
+   "author": "釋見曄",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁67-102",
+   "pdf": false
+  },
+  {
+   "title": "戒律與政治、法律原理之同異:",
+   "author": "釋昭慧",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁103-115",
+   "pdf": false
+  },
+  {
+   "title": "批判理論早期宗教思想:",
+   "author": "吳寧遠",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁117-130",
+   "pdf": false
+  },
+  {
+   "title": "六朝「真誥」降真詩研究:",
+   "author": "林帥月",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁131-147",
+   "pdf": false
+  },
+  {
+   "title": "《周氏冥通記》初探:",
+   "author": "許麗玲",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁149-164",
+   "pdf": false
+  },
+  {
+   "title": "澎湖宮廟小法的普唵祖師之探源:",
+   "author": "吳永猛",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁165-181",
+   "pdf": false
+  },
+  {
+   "title": "從成人之道到成神之道:一個臺灣民間信仰的結構性思考:",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁183-207+209",
+   "pdf": false
+  },
+  {
+   "title": "祖師傳承說的石刻例證--龍門看經寺洞羅漢群像考:",
+   "author": "陳清香",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁211-231",
+   "pdf": false
+  },
+  {
+   "title": "關河的三世學與河西的千佛思想:",
+   "author": "賴鵬舉",
+   "journal": "東方宗教研究",
+   "vol": "新4 1994.10[民83.10]",
+   "page": "頁233-259",
+   "pdf": false
+  },
+  {
+   "title": "「大智度論」之作者及其翻譯:",
+   "author": "釋印順",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁9-70",
+   "pdf": false
+  },
+  {
+   "title": "「樂記」的禮樂合論:",
+   "author": "蔣義斌",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁71-108",
+   "pdf": false
+  },
+  {
+   "title": "聲聞律之制訂意義:",
+   "author": "釋昭慧",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁109-129",
+   "pdf": false
+  },
+  {
+   "title": "《洞淵神咒經》的神魔觀及其剋治說:",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁131-155",
+   "pdf": false
+  },
+  {
+   "title": "炳靈寺169 窟無量壽佛龕所涉之義學與禪學:",
+   "author": "賴鵬舉",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁157-182",
+   "pdf": false
+  },
+  {
+   "title": "晚明「物不遷論」的諍辯研究--諸家的意見與空印鎮澄的答辯:",
+   "author": "江燦鵬",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁183-227",
+   "pdf": false
+  },
+  {
+   "title": "彭際清與戴震的儒佛論辯:",
+   "author": "釋慧嚴",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁229-252",
+   "pdf": false
+  },
+  {
+   "title": "國立故宮博物院典藏「大藏經」滿文譯本研究:",
+   "author": "莊吉發",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁253-319",
+   "pdf": false
+  },
+  {
+   "title": "論熊十力對於佛家空宗的批評與融攝 : 從平鋪的真如到縱貫的創生--以「新唯識論」「功能章 (上)」為核心的展開:",
+   "author": "林安梧",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁321-342",
+   "pdf": false
+  },
+  {
+   "title": "臺灣區域性宗教組織的社會文化基礎:",
+   "author": "林美容",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁343+345-364",
+   "pdf": false
+  },
+  {
+   "title": "Folk Religion in Taiwan:臺灣民間宗教",
+   "author": "吳寧遠",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁365+367-393",
+   "pdf": false
+  },
+  {
+   "title": "智軍的「見差別」蕃本試譯:",
+   "author": "許明銀",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁395-435",
+   "pdf": false
+  },
+  {
+   "title": "中國思想與大乘佛教:",
+   "author": "許洋主",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁437+439-455",
+   "pdf": false
+  },
+  {
+   "title": "評任繼愈主編的《中國佛教史》:",
+   "author": "周伯戡",
+   "journal": "東方宗教研究",
+   "vol": "新2 1991.10[民80.10]",
+   "page": "頁457-464",
+   "pdf": false
+  },
+  {
+   "title": "太一與三一:",
+   "author": "胡其德",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁77-96",
+   "pdf": false
+  },
+  {
+   "title": "「明王」與「羅平王」--以「轉天圖經」為中心之考察:",
+   "author": "柯毓賢",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁97-105",
+   "pdf": false
+  },
+  {
+   "title": "粵東三山國王信仰的分布與信仰的族群--從三山國王是臺灣客屬的特有信仰論起:",
+   "author": "邱彥貴",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁107+109-146",
+   "pdf": false
+  },
+  {
+   "title": "福建省南部現存道教初探:",
+   "author": "呂錘寬",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁147-169",
+   "pdf": false
+  },
+  {
+   "title": "浙江省蒼南地區的道教文化:",
+   "author": "呂錘寬",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁171-199",
+   "pdf": false
+  },
+  {
+   "title": "清末臺灣英國長老教會的漢族信徒:",
+   "author": "陳梅卿",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁201-225",
+   "pdf": false
+  },
+  {
+   "title": "東港王船和瘟與送王習俗之研究:",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁227+229-265",
+   "pdf": false
+  },
+  {
+   "title": "一貫道「發一靈隱」--一個臺灣一貫道組織的發展史:",
+   "author": "林榮澤",
+   "journal": "東方宗教研究",
+   "vol": "新3  民82.10",
+   "page": "頁267+269-296",
+   "pdf": false
+  },
+  {
+   "title": "智軍的「見差別」蕃本試譯:",
+   "author": "許明銀",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁297-332",
+   "pdf": false
+  },
+  {
+   "title": "遠離邪命非法:「阿含經」裡釋迦牟尼佛對出家眾所示占相、咒術的態度--兼論他對神通的看法:",
+   "author": "羅正心",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁9-27",
+   "pdf": false
+  },
+  {
+   "title": "東晉慧遠法師「法性論」義學的還原:",
+   "author": "賴鵬舉",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁29-55",
+   "pdf": false
+  },
+  {
+   "title": "清辨對瑜珈行派的三性思想之批判的探討--試以「般若燈論」第二十五章有關唯識學的附錄部分為解釋線索:",
+   "author": "曹志成",
+   "journal": "東方宗教研究",
+   "vol": "新3 1993.10[民82.10]",
+   "page": "頁57-76",
+   "pdf": false
+  },
+  {
+   "title": "東魏武定元年銘石造釋迦五尊立像略考--造像記文的造像像主與造像對象試析:",
+   "author": "林保堯",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁13-39",
+   "pdf": false
+  },
+  {
+   "title": "梁武帝受菩薩戒及捨身同泰寺與「皇帝菩薩」地位的建立:",
+   "author": "顏尚文",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁41-89",
+   "pdf": false
+  },
+  {
+   "title": "從「歷代三寶記」論費長房的史學特質及意義:",
+   "author": "阮忠仁",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁91-129",
+   "pdf": false
+  },
+  {
+   "title": "唐代道教易學初探:",
+   "author": "華瀾",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁131-148",
+   "pdf": false
+  },
+  {
+   "title": "老子「想爾注」的形成及其道教思想:",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁149-180",
+   "pdf": false
+  },
+  {
+   "title": "南宋初年王法恩之亂及其與轉天圖經之關係:",
+   "author": "柯毓賢",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁181-195",
+   "pdf": false
+  },
+  {
+   "title": "因道以立教--以王鳳儀「十二字薪傳」為核心的哲學考察:",
+   "author": "林安梧",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁197-215",
+   "pdf": false
+  },
+  {
+   "title": "晚近歐美宗教研究方法學評介:",
+   "author": "蔡彥仁",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁263-289",
+   "pdf": false
+  },
+  {
+   "title": "臺灣地區光復後佛教出版刊物的內容分析--佛教文化思想變遷初探:",
+   "author": "姚麗香",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁291-313",
+   "pdf": false
+  },
+  {
+   "title": "當代臺灣佛教「出世」性格的分析:",
+   "author": "楊惠南",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁315-343",
+   "pdf": false
+  },
+  {
+   "title": "功能論在宗教方面的研究之困境與解決:",
+   "author": "吳寧遠",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁345-365",
+   "pdf": false
+  },
+  {
+   "title": "佛教諸種道德之現代詮釋:",
+   "author": "鄭學禮",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁367-381",
+   "pdf": false
+  },
+  {
+   "title": "分別說部之思想:",
+   "author": "郭忠生",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁383-401",
+   "pdf": false
+  },
+  {
+   "title": "般舟三昧經的阿隬陀佛觀:",
+   "author": "陳敏齡",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁1+3-15",
+   "pdf": false
+  },
+  {
+   "title": "三法度論初探:",
+   "author": "周伯戡",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁17+19-30",
+   "pdf": false
+  },
+  {
+   "title": "僧肇之「有無同義」思想:",
+   "author": "余崇生",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁31+33-41",
+   "pdf": false
+  },
+  {
+   "title": "中日古代文化交流的--考察：黃泉國神話與六朝志怪小說的死生觀比較:",
+   "author": "林保堯",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁43-66",
+   "pdf": false
+  },
+  {
+   "title": "西王母五女傳說的形成及其演變--西王母研究之一:",
+   "author": "李豐楙",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁67+69-88",
+   "pdf": false
+  },
+  {
+   "title": "論禪宗公案中的矛盾與不可說:The Contradiction and Inexpressibility in Ch'an Kung-an(Koan)",
+   "author": "楊惠南",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁89+91-105",
+   "pdf": false
+  },
+  {
+   "title": "宋代政府對於寺院的管理政策:",
+   "author": "黃敏枝",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁107+109-141",
+   "pdf": false
+  },
+  {
+   "title": "朱熹排佛與參究中和的經過:",
+   "author": "蔣義斌",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁143+145-167",
+   "pdf": false
+  },
+  {
+   "title": "象山心學義理規模下的「本體詮釋學」:",
+   "author": "林安梧",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁169-187",
+   "pdf": false
+  },
+  {
+   "title": "晚明佛教復興運動背景的考察--以憨山德清在金陵大報恩寺的磨鍊為例:",
+   "author": "江燦騰",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁189-202",
+   "pdf": false
+  },
+  {
+   "title": "臺灣先天道的宗教本旨研究:",
+   "author": "鄭志明",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁203+205-226",
+   "pdf": false
+  },
+  {
+   "title": "西來庵事件之宗教信仰及其與轉天圖經之關係:",
+   "author": "柯毓賢",
+   "journal": "東方宗教研究",
+   "vol": "1 1987.09[民76.09]",
+   "page": "頁227+229-238",
+   "pdf": false
+  },
+  {
+   "title": "東魏武定元年銘石造釋迦五尊立像略考--造像記文的用語、紀年、意旨試析:An Analysis of the Style and Its Chronlogical Development of the Stone Inscription of Eastern Dynasties&apos; Buddhist Statues",
+   "author": "林保堯",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁3-52",
+   "pdf": false
+  },
+  {
+   "title": "王政與佛法--北朝至隋代帝王統治與彌勒信仰:Dharma and Sovereignity: Belief in Matriya and Emperial Reigns from Northern Dynasties to the Sui Dynasty",
+   "author": "陳華",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁53-70",
+   "pdf": false
+  },
+  {
+   "title": "西方淨土變相的源流及發展:Origin and Development of Western Paradise",
+   "author": "陳清香",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁71-97",
+   "pdf": false
+  },
+  {
+   "title": "道信與神秀之禪法的比較--兼論惠能所批判之看心，看淨的禪法:Shen Hsiu&apos;s and Tao Hsin&apos;s Way of Ch&apos;an: A Comparsion",
+   "author": "楊惠南",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁99-116",
+   "pdf": false
+  },
+  {
+   "title": "五公菩薩源流與觀音信仰--以《轉天圖經》為中心之考察:An Examinatino of Wu Kun Boddhisattva and Kuan Yin in the Chuan Tien Tu Ching",
+   "author": "柯毓賢",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁117-137",
+   "pdf": false
+  },
+  {
+   "title": "臺灣當代淨土思想的新動向--思想史的探討:A New Tread of Pure Land Sect in Contemporary Taiwan",
+   "author": "江燦騰",
+   "journal": "東方宗教研究",
+   "vol": "2  民77.09",
+   "page": "頁163-184",
+   "pdf": false
+  },
+  {
+   "title": "呂澂與熊十力論學函稿評議:",
+   "author": "江燦騰",
+   "journal": "東方宗教研究",
+   "vol": "新1 1990.10[民79.10]",
+   "page": "頁217-261",
+   "pdf": false
+  }
+ ]
+}

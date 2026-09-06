@@ -1,0 +1,1082 @@
+{
+ "slug": "ces-journal",
+ "name": "華神期刊",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 133,
+  "本刊實收": 133,
+  "有PDF": 0,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 2008,
+  "max": 2025
+ },
+ "articles": [
+  {
+   "title": "從摩西在金牛犢事件的代求--看先知事奉的典範:A Prophetic Paradigm--Moses&apos; Intercession after the Golden Calf Incident",
+   "author": "胡維華",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁10-32",
+   "pdf": false
+  },
+  {
+   "title": "先知何西阿的婚姻解讀--與神學意義:The Marriage and Message of Hosea--When are You Coming Home?",
+   "author": "吳獻章",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁33-53",
+   "pdf": false
+  },
+  {
+   "title": "「信心」在巴特稱義論當中的地位--巴特對路德與加爾文的詮釋與應用:The Role of Faith in Justification: Karl Barth&apos;s Interpretation and Reappropriation of Luther and Calvin",
+   "author": "曾劭愷",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁54-86",
+   "pdf": false
+  },
+  {
+   "title": "莫特曼「彌賽亞基督論」的猶太性關注之神學意涵:The Theological Significance of Jewishness Motif in J. Moltmann&apos;s Messianic Christology",
+   "author": "陳世冠",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁87-114",
+   "pdf": false
+  },
+  {
+   "title": "The Book of James--A New Perspective a Linguistic Commentary Applying Discourse Analysis:",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁116-125",
+   "pdf": false
+  },
+  {
+   "title": "《紅旗下的十字架》新中國成立初期中共對基督教、天主教的政策演變及其影響(1949~1955):The Cross under the Red Flag",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁126-140",
+   "pdf": false
+  },
+  {
+   "title": "三位一體的物理學比喻:A Physical Imagery of Holy Trinity",
+   "author": "黄穎航",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁142-149",
+   "pdf": false
+  },
+  {
+   "title": "臺灣宣教的典範轉移：長老會、浸信會與靈糧堂宣教神學與實踐:Paradigm Shifts in Theology of Mission in Taiwan: Using Presbyterians, Baptists and Bread of Life Church as three Paradigms",
+   "author": "柴子高",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁152-174",
+   "pdf": false
+  },
+  {
+   "title": "保羅新觀之回顧:The New Perspective on Paul",
+   "author": "張奇軍",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁176-196",
+   "pdf": false
+  },
+  {
+   "title": "同性戀與教會:Reflection on Homosexuality",
+   "author": "Carson, D. A.",
+   "journal": "華神期刊",
+   "vol": "6  2014.11[民103.11]",
+   "page": "頁197-217",
+   "pdf": false
+  },
+  {
+   "title": "聖經底本無誤論：論證的重述與方法的再思:Inerrancy of Biblical Autographs: Restatement of Argument and Reflection on Methodology",
+   "author": "周功和",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁10-41",
+   "pdf": false
+  },
+  {
+   "title": "聖經無誤的世紀爭議:The Controversies of Biblical Inerrancy over Centuries",
+   "author": "蔡麗貞",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁42-75",
+   "pdf": false
+  },
+  {
+   "title": "自涉詮釋學：作者、讀者、語境:The Hermeneutics of Self-Involvement: Author, Reader and Context",
+   "author": "吳仲誠",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁76-94",
+   "pdf": false
+  },
+  {
+   "title": "論施道比次牧靈神學對青年路德的影響:Zur Bedutung der Seelsorgerlichen Theologie Johann&apos;s von Staupitz für den Jungen Martin Luther",
+   "author": "馬庫斯．費依德",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁96-119",
+   "pdf": false
+  },
+  {
+   "title": "如何詮釋聖經而不導致暴力？列維納斯的文本詮釋與福音神學:How to Read the Bible without Imposing Violence on Others? Levinas&apos;s Textual Hermeneutics and Evangelical Theology",
+   "author": "謝木水",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁120-147",
+   "pdf": false
+  },
+  {
+   "title": "其實你不懂我的心--從約拿書一章一至三節談宣教:Missio Dei from Jonah 1:1-3--You Do Not Really Understand Me",
+   "author": "吳獻章",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁148-165",
+   "pdf": false
+  },
+  {
+   "title": "關於以賽亞書九章六節，基督與父神是同一位嗎？:Concerning Isaiah 9:6-7, Are Christ and God the Father the Same One?",
+   "author": "林柏雄",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁166-191",
+   "pdf": false
+  },
+  {
+   "title": "書評：[蘇精著]《基督教與新加坡華人1819~1846》[新竹市：清大出版社，2010]:Book Review：Christianity and Singapore Chinese 1819~1846",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁194-205",
+   "pdf": false
+  },
+  {
+   "title": "書評：[Oswald Bayer, 鄧肇明譯]《路德神學:當代解讀》[香港：道聲出版社，2011]:Book Review：Martin Luther&apos;s Theology: A Contemporary Interpretation",
+   "author": "謝龍邑",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁206-221",
+   "pdf": false
+  },
+  {
+   "title": "福音與文化：從教牧角度看祭祖的出路:Christianity and Culture: A Way Forward Regarding Ancestral Practices from a Pastoral Perspective",
+   "author": "梁家麟",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁224-247",
+   "pdf": false
+  },
+  {
+   "title": "從祭祖到敬祖--基督教孝道神學的反省與敬祖事工的實踐:From Ancestor Worship to Ancestor Respect--Christian Reflection on a Theology of Filial Piety and Ancestral Practices",
+   "author": "溫永生",
+   "journal": "華神期刊",
+   "vol": "4  2012.10[民101.10]",
+   "page": "頁248-263",
+   "pdf": false
+  },
+  {
+   "title": "「金」的誘惑--啟示錄的黃金世界:The “Gold” Motif in the Book of Revelation",
+   "author": "梁美心",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁10-32",
+   "pdf": false
+  },
+  {
+   "title": "新約希臘文的關身語態：理解其含義的關鍵與重要性:The Key to Understanding the New Testament Greek Middle Voice and Its Exegetical Implications",
+   "author": "李志秋",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁34-58",
+   "pdf": false
+  },
+  {
+   "title": "家庭中夫妻主從倫理或教會中規範姊妹的通則？:An Ethics of Authority for Husband and Wife at Home or a General Principle of Supporting Sisters&apos; Ministry at Church?",
+   "author": "吳維和",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁60-79",
+   "pdf": false
+  },
+  {
+   "title": "哈沃華芝論智障者身體在教會存在的神學意涵:The Bodily Presence fo the Mentally Disabled in the Church: A Theological Reflection with Stanley Hauerwas",
+   "author": "顏晶晶",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁80-97",
+   "pdf": false
+  },
+  {
+   "title": "上帝，景觀建築師：以西結書中的生態花園城市計畫:God, the Landscace Architect: An Eco-Garden City Project in the Book of Ezekiel",
+   "author": "郭怡君",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁98-128",
+   "pdf": false
+  },
+  {
+   "title": "歌羅西書一章十五節的解經爭論:Concerning Colossians 1:15, Was Christ the First Created Being?",
+   "author": "林柏雄",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁130-158",
+   "pdf": false
+  },
+  {
+   "title": "書評：《結籚在人境》靈性操練的本質--勞倫斯「與神同在」經歷的現代意義:Book Reviews: The Practice of the Presence of God",
+   "author": "陳世冠",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁160-177",
+   "pdf": false
+  },
+  {
+   "title": "書評：《聖經與槍炮--基督教與潮州社會》1860~1900:Book Reviews: The Bible and the Gun: Christianity in South China, 1860~1900",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁178-198",
+   "pdf": false
+  },
+  {
+   "title": "從管理的角度看神學院的困境與因應:Management&apos;s Perspective on Challenges and Solutions for Seminaries",
+   "author": "王貴恆",
+   "journal": "華神期刊",
+   "vol": "5  2013.10[民102.10]",
+   "page": "頁200-219",
+   "pdf": false
+  },
+  {
+   "title": "律法屬乎神:The Law of God",
+   "author": "陳毓華",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁10-36",
+   "pdf": false
+  },
+  {
+   "title": "二十世紀前期《使信月刊》呈現的臺灣報導及其宣傳面向--以英國長老教會傳教士在臺實踐的福音事工及其醫療關懷為主:Visualizing Formosa from the Perspective of Mission Journal, the Messenger--A Study in Missionaries of Presbyterian Church of England",
+   "author": "張勤瑩",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁37-71",
+   "pdf": false
+  },
+  {
+   "title": "論後現代中國基督教的多重身分：從前現代性、現代性趨向後現代性的宣教學反思:Multi-Identity of Chinese Christianity in Postmondern China: A Missiological Reflection of Premodernity, Modernity towards Postmodernity",
+   "author": "李潔人",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁72-99",
+   "pdf": false
+  },
+  {
+   "title": "作主門徒的實踐：北美華人教會華語青年事工為個案的一個實踐神學探索:Practices on Discipleship: A Case Study on the Emerging Adults Ministry in Chinese American Churches",
+   "author": "董家驊",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁100-132",
+   "pdf": false
+  },
+  {
+   "title": "Book Review: Beverly R. Gaventa ed., «Apocalyptic Paul: Cosmos and Anthropos in Romans 5-8» (Waco, Texas: Baylor University Press, 2013):",
+   "author": "張楷弦",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁134-159",
+   "pdf": false
+  },
+  {
+   "title": "書評：張勤瑩，《被遺忘的中國童年》--芝罘學校與內地會傳教士子女(新北市：臺灣基督教文藝出版社，2014年):Book Review: «An Unforgettable Childhood in China: The Chefoo Schools and the Missionary Children of the China Inland Mission»",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁160-172",
+   "pdf": false
+  },
+  {
+   "title": "童年史研究的多樣性：回應書評《被遺忘的中國童年》兼論內地會傳教士子女口述史的規劃:The Multiple Approaches on the Research of the Children&apos;s History",
+   "author": "張勤瑩",
+   "journal": "華神期刊",
+   "vol": "7  2015.11[民104.11]",
+   "page": "頁173-180",
+   "pdf": false
+  },
+  {
+   "title": "學術研究與神學教育--華人世界基督教研究的緊迫性:Academic Studies and Theological Education--The Urgency of Christianity Studies in Chinese Areas",
+   "author": "林鴻信",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁10-33",
+   "pdf": false
+  },
+  {
+   "title": "海內外神學教育交流的契機與限制:Opportunities and Limitations for the Exchange of Theological Education at Home and Abroad",
+   "author": "梁家麟",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁34-62",
+   "pdf": false
+  },
+  {
+   "title": "後現代與神學教育:Postmodernism and Theological Education",
+   "author": "周功和",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁64-88",
+   "pdf": false
+  },
+  {
+   "title": "探研詩篇的咒詛經文:Interpreting the Imprecatory Passages of the Psalms",
+   "author": "蔡麗貞",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁90-118",
+   "pdf": false
+  },
+  {
+   "title": "底本說的再思--底本說的發展和式微以及五經研究的典範轉移:Rethinking the Documentary Hypothesis--Its Growth, Decline and the Paradigm Shift in Pentateuchal Studies",
+   "author": "施尤禮",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁120-145",
+   "pdf": false
+  },
+  {
+   "title": "路得記四幕景:The Four Scenes in the Book of Ruth",
+   "author": "胡維華",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁146-165",
+   "pdf": false
+  },
+  {
+   "title": "《以賽亞書(卷四)》[吳獻章著]:The Dao Bible Commentary: Isaiah (Ⅳ)",
+   "author": "羅慶才",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁168-176",
+   "pdf": false
+  },
+  {
+   "title": "約翰壹貳參書(卷上、下)[吳道宗著]:Tien Dao Bible Commentary: 1,2,3 John",
+   "author": "張雲開",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁178-185",
+   "pdf": false
+  },
+  {
+   "title": "革命先驅--基督徒與晚清中國革命的起源[梁壽華著]:Pioneers of the Chinese Revolution: Christian and the Origins of the Late China Revolution",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "3  2010.10[民99.10]",
+   "page": "頁186-197",
+   "pdf": false
+  },
+  {
+   "title": "文本互涉：翻譯的失(與得):Intertextuality: Lost (and Found) in Translation",
+   "author": "唐書禮",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁10-31",
+   "pdf": false
+  },
+  {
+   "title": "從譯經史論未來中文聖經翻譯之芻議:Looking at the Direction of Future Chinese Bible Translation from Past Translation History",
+   "author": "彭國瑋",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁32-49",
+   "pdf": false
+  },
+  {
+   "title": "白日陞的中文聖經抄本及其對早期新教中文譯經的影響:The Chinese Bible Manuscript of Jean Basset and Its Influence on the Early Protestant Chinese Bible Translation",
+   "author": "蔡錦圖",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁50-77",
+   "pdf": false
+  },
+  {
+   "title": "從以賽亞書看中文聖經翻譯:Looking at Chinese Bible Translation from the Book of Isaiah",
+   "author": "吳獻章",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁78-89",
+   "pdf": false
+  },
+  {
+   "title": "《和合本》聖經在約翰壹書中幾個待商榷的經文:Translations of I John in CUV Reconsidered",
+   "author": "吳道宗",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁90-101",
+   "pdf": false
+  },
+  {
+   "title": "何謂宗教改革？:What Is Reformation?",
+   "author": "廖元威",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁104-124",
+   "pdf": false
+  },
+  {
+   "title": "從舊約幾處爭議經文看同性戀問題:Old Testament Exegesis and Homosexuality",
+   "author": "賴建國",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁126-144",
+   "pdf": false
+  },
+  {
+   "title": "聖潔概念在希律聖殿山上的進階脈動:Gradation of Holiness on the Herodian Temple Mount",
+   "author": "吳存仁",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁146-166",
+   "pdf": false
+  },
+  {
+   "title": "路德聖餐講章中之「赦罪」教導:Teaching on “Forgiveness” in the Luther&apos;s Eucharistic Sermon",
+   "author": "陳冠賢",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁168-185",
+   "pdf": false
+  },
+  {
+   "title": "《文以載道--奈達對聖經翻譯的貢獻》[by Philip C. Stein]:Let the Words be Written--The Lasting Influence of Eugene A. Nida",
+   "author": "蔡麗貞",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁188-194",
+   "pdf": false
+  },
+  {
+   "title": "《神學詮釋學》[by Kevin J. Vanhoozer]:Is There a Meaning in This Text?--The Bible, the Reader, and the Morality of Literary Knowledge",
+   "author": "蔡麗貞",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁196-205",
+   "pdf": false
+  },
+  {
+   "title": "[評蘇精著]《上帝的人馬--十九世紀在華傳教士的作為》:Under God&apos;s Command--Papers of Early Protestant Missionaries in China",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁206-212",
+   "pdf": false
+  },
+  {
+   "title": "聖經詩歌的藝術[by Robert Alter]:The Art of Biblical Poetry",
+   "author": "歐陽瑜",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁214-223",
+   "pdf": false
+  },
+  {
+   "title": "伊拉斯瑪斯譯序[Christian Humanism and the Reformation: Selected Writings by John C. Olin]:Erasmus&apos; Translation Sequence",
+   "author": "魏仰德",
+   "journal": "華神期刊",
+   "vol": "1  2008.06[民97.06]",
+   "page": "頁226-232",
+   "pdf": false
+  },
+  {
+   "title": "《幽暗意識與民主傳統》闡論:On Consciousness of Darkness and Democratic Tradition",
+   "author": "朱曉海",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁40-69",
+   "pdf": false
+  },
+  {
+   "title": "解釋哥林多後書三章六節的典範轉移--馬丁路德的見解已經過時了嗎？:The Paradigm Shift of the Interpretation on 2 Cor. 3:6--Is Luther&apos;s View out of Date?",
+   "author": "蔡麗貞",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁72-97",
+   "pdf": false
+  },
+  {
+   "title": "敘述文與詩歌體的輪唱：底波拉之歌為例:Melodic Round between Prose and Poetry: Viewed from Song of Deborah",
+   "author": "吳獻章",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁98-117",
+   "pdf": false
+  },
+  {
+   "title": "希伯來文文章的分段藝術：以彌迦書第一章為範例:Unit Delimitation of Biblical Hebrew Texts: A Textlinguistic Approach to Micah 1",
+   "author": "胡維華",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁118-145",
+   "pdf": false
+  },
+  {
+   "title": "重新發現敬虔主義--從施本爾的敬虔運動談其古典內涵:What is Pietism?--Toward an Understanding of Its Classical Connotation from the Perspective of Spener&apos;s Pietist Movement",
+   "author": "劉幸枝",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁146-169",
+   "pdf": false
+  },
+  {
+   "title": "《研讀版聖經--新譯本》:NIV Spirit of the Reformation Study Bible",
+   "author": "吳榮滁",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁172-182",
+   "pdf": false
+  },
+  {
+   "title": "為真道爭辯：在華基督新教傳教士基要主義運動(1920-1937)[姚西伊著]:Contend for the Truth: Fundamentalist Movement of Protestant Missionaries in China (1920-1937)",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁184-195",
+   "pdf": false
+  },
+  {
+   "title": "翻譯的神學：語言、直譯及翻譯策略觀念的改變:Theology in Translation: Language, Literalism and Changing Views of Translation Strategies",
+   "author": "唐書禮",
+   "journal": "華神期刊",
+   "vol": "2  2009.10[民98.10]",
+   "page": "頁10-38",
+   "pdf": false
+  },
+  {
+   "title": "「基督與文化」抑或「耶穌是主」--尤達的觀點:\"Christ and Culture\" or \"Jesus Is Lord\": The Perspective of John Howard Yoder",
+   "author": "鄧紹光",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁10-43",
+   "pdf": false
+  },
+  {
+   "title": "遇上「矛盾」的上帝：路德與加爾文讀亞伯拉罕獻以撒(創廿二1-19):Confronting the Contradictoriness of God: Luther and Calvin on Abraham&apos;s Trial (Genesis 22:1-19)",
+   "author": "金振宇",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁44-66",
+   "pdf": false
+  },
+  {
+   "title": "邁向本土化宣教的旅程：馬偕在北臺灣宣教的發展模式:A Journey of Inculturation: Mackay&apos;s Mission Model in Formosa",
+   "author": "謝大立",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁67-94",
+   "pdf": false
+  },
+  {
+   "title": "永遠是學習者：文化人類學對宣教與門徒訓練的意義:Always a Learner: The Significance of Cultural Anthropology to Mission and Discipleship",
+   "author": "許南盛",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁96-113",
+   "pdf": false
+  },
+  {
+   "title": "臺灣教會師母研究初探：「呼召」、「婚姻滿意程度」、「家庭狀況正向程度」與「快樂程度」之關聯:A Preliminary Study of Taiwanese Pastors&apos; Wives: Relationships between Ministerial Calling, Marriage Satisfaction, Family Life Satisfaction and Happiness",
+   "author": "陳世賢",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁114-140",
+   "pdf": false
+  },
+  {
+   "title": "評Mark Goodacre, «Thomas and the Gospels: The Case for Thomas&apos;s Familiarity with the Synoptics» (Grand Rapids: W. B. Eerdmans Pub, 2012):",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁142-147",
+   "pdf": false
+  },
+  {
+   "title": "托馬斯．奧登的「古代正統主義」對神學教育的意義:Thomas Oden&apos;s Paleo-orthodoxy: Its Significance for the Theological Education",
+   "author": "張聖佳",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁149-176",
+   "pdf": false
+  },
+  {
+   "title": "兒童、跨代、家庭：兩文三語教會建造門徒的策略:Children, Intergeneration, Family Strategies for Building Disciples in Churches with Bi-literacy and Tri-lingualism",
+   "author": "余惠娥",
+   "journal": "華神期刊",
+   "vol": "10  2019.12[民108.12]",
+   "page": "頁177-211",
+   "pdf": false
+  },
+  {
+   "title": "社會處境中的意義--對韋恩．亞瑟頓．米克斯(Wayne Atherton Meeks)社會科學方法論之研究:Meaning in Context: A Study of Wayne Atherton Meeks' Contribution to the New Testament Interpretation",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "14  2023.12[民112.12]",
+   "page": "頁10-39",
+   "pdf": false
+  },
+  {
+   "title": "後疫情教會培育事工的挑戰:Challenges in Post-Covid 19 Church Educational Ministries",
+   "author": "彭怡珍",
+   "journal": "華神期刊",
+   "vol": "14  2023.12[民112.12]",
+   "page": "頁102-123",
+   "pdf": false
+  },
+  {
+   "title": "\"Polychotomy\" and \"the Medium Is the Message\": The Secularizing Effects of Departmentalization and Specialization in Modern Christian Higher Education:",
+   "author": "溫永勖",
+   "journal": "華神期刊",
+   "vol": "14  2023.12[民112.12]",
+   "page": "頁40-68",
+   "pdf": false
+  },
+  {
+   "title": "Cultural Distance and Jesus' Messengers of Reconciliation: Exploring the Contribution of Same-, Near-, and Far-Culture Workers:",
+   "author": "Greenlee, David",
+   "journal": "華神期刊",
+   "vol": "14  2023.12[民112.12]",
+   "page": "頁69-101",
+   "pdf": false
+  },
+  {
+   "title": "書評：倪步曉，《差傳、基要與自立實踐：基督教宣道會華中教區的宗教傳播及其身份建構的探析(1889~1951)》 (香港：建道神學院，2022):",
+   "author": "蔡東城",
+   "journal": "華神期刊",
+   "vol": "14  2023.12[民112.12]",
+   "page": "頁126-134",
+   "pdf": false
+  },
+  {
+   "title": "歷史進入末世：約阿希姆的歷史神學及其「諾斯底性質」的再思:History Entering the Eschaton: Joachim's Theology of History and a Reconsideration of Its \"Gnosticism\"",
+   "author": "吳國安",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁10-39",
+   "pdf": false
+  },
+  {
+   "title": "屬神的聖潔國度：彼得前書二章1至10節中的文本互涉:The People of God in the Old and New Testaments: A Study of Intertextual Relationship on 1 Peter 2:1-10",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁40-65",
+   "pdf": false
+  },
+  {
+   "title": "從基督教角度反思儒家孝道的現代價值:Rethinking the Modern Value of Confucian Filial Piety from the Perspective of Christianity",
+   "author": "洪子雲",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁66-87",
+   "pdf": false
+  },
+  {
+   "title": "宣道東漸：宣道運動的衍生及早期在華傳教身份的實踐(1889~1891):Christianity Comes to China: The Development of Christian and Missionary Alliance Movement and Its Early Missionary Practice in China (1889~1891)",
+   "author": "倪步曉",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁88-131",
+   "pdf": false
+  },
+  {
+   "title": "同一個身子上的不同肢體：整合取向的基督徒輔導和聖經輔導的比較:Different Members of One Body: A Comparison of Integrative Christian Counseling and Biblical Counseling",
+   "author": "焦如品",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁132-155",
+   "pdf": false
+  },
+  {
+   "title": "神國與終末論：評祝熊祥博士的《末後的事》卷二 (臺北市：中華福音神學院，2019):",
+   "author": "張略",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁157-168",
+   "pdf": false
+  },
+  {
+   "title": "回應張略博士對卷一的書評：衷心感謝、選要回應:",
+   "author": "祝熊祥",
+   "journal": "華神期刊",
+   "vol": "12  2021.12[民110.12]",
+   "page": "頁169-185",
+   "pdf": false
+  },
+  {
+   "title": "帝國主義的「侵略論」--中共史觀下的中國基督教史書寫:Christianity as a Form of Imperialist Cultural Invasion--The Historiography of Chinese Christianity under the CCP's Perspecttive",
+   "author": "曾慶豹",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁10-29",
+   "pdf": false
+  },
+  {
+   "title": "敘述文中的銜接與主題：以馬可福音二章1至12節為例:What a Story Is about: Cohesion Analysis to Narrative Topic in Mark 2:1-12",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁30-52",
+   "pdf": false
+  },
+  {
+   "title": "以賽亞書十四章4b至20節與以賽亞書整體的關聯性:Assessing of the Concept of Kingship within the Book of Isaiah Based on Isaiah 14:4-20 and Its Connections to the Proclamation of the Servant",
+   "author": "黃正人",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁53-77",
+   "pdf": false
+  },
+  {
+   "title": "從典故來看約瑟敘事對以斯帖記之倫理與神學的影響:How Joseph's Narrative Affects Ethics and Theology in the Book of Esther from the Perspective of Allusion",
+   "author": "曾祖漢",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁78-101",
+   "pdf": false
+  },
+  {
+   "title": "倡導復和計劃：對香港反逃犯引渡條例的抗爭之神學反思:Peace Initiatives: A Theological Reflection on Hong Kong Anti-extradition Bill Protest",
+   "author": "龔立人",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁103-121",
+   "pdf": false
+  },
+  {
+   "title": "建立門徒與靈命塑造的關係:Discipleship and Spiritual Formation",
+   "author": "彭怡珍",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁122-147",
+   "pdf": false
+  },
+  {
+   "title": "啟示文學與終末論：評祝熊祥博士的《末後的事》卷一(臺北市：中華福音神學院，2018):",
+   "author": "張略",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁149-161",
+   "pdf": false
+  },
+  {
+   "title": "Book Review: Phillip Cary, «The Meaning of Protestant Theology: Luther, Augustine, and the Gospel That Gives Us Christ» (Grand Rapids, MI: Baker Academic, 2019):",
+   "author": "金振宇",
+   "journal": "華神期刊",
+   "vol": "11 2020.12[民109.12]",
+   "page": "頁162-171",
+   "pdf": false
+  },
+  {
+   "title": "再思創世記四章七節的涵義--該隱故事的另一個角度:Making a New Sense out of Genesis 4:7 with a Revised Understanding of the Story of Cain",
+   "author": "黃正人",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁10-34",
+   "pdf": false
+  },
+  {
+   "title": "作者歸屬與著作日期之辯：論舊約研究歷時性與共時性觀點的起源與發展:The Debate of Authorship and Date: On the Origin and Development of Diachronic and Synchronic Approaches in Old Testament Study",
+   "author": "蔡玉玲",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁35-60",
+   "pdf": false
+  },
+  {
+   "title": "馬丁路德論世俗政權及戰爭:Martin Luther's View on Temporal Authority and War",
+   "author": "廖元威",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁61-85",
+   "pdf": false
+  },
+  {
+   "title": "馬丁路德關於婚姻及家庭的教導之芻議:Luther's Teachings on Marriage and Family",
+   "author": "鄭愛和",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁86-103",
+   "pdf": false
+  },
+  {
+   "title": "當代講道學，何去何從？論「新講道學」的崛起和特色:A Study of the Rise and the Characteristics of the \"New Homiletic\" in North America",
+   "author": "梁美心",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁104-142",
+   "pdf": false
+  },
+  {
+   "title": "書評：郭承天，《國族神學的民主化--臺灣與中國大陸》(臺北市：政大出版社，2014):",
+   "author": "陶牧群",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁144-155",
+   "pdf": false
+  },
+  {
+   "title": "書評：Christopher D. Land (克里斯多弗．蘭德), «The Integrity of 2 Corinthians and Paul's Aggravating Absence» (Sheffield Press, 2015):",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁156-159",
+   "pdf": false
+  },
+  {
+   "title": "向保羅學習如何面對福音與文化的衝突:Learning from the Apostle Paul's Missionary Engagement with Culture",
+   "author": "Priest, Robert",
+   "journal": "華神期刊",
+   "vol": "8 2016.11[民105.11]",
+   "page": "頁162-173",
+   "pdf": false
+  },
+  {
+   "title": "新自由主義、環保與不平等：從基督教角度討論海耶克政治經濟學:Neoliberalism, Environmental Protection and Inequality: The Exploration of Hayek's Political Economy from a Christian Perspective",
+   "author": "洪子雲",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁10-35",
+   "pdf": false
+  },
+  {
+   "title": "道成肉身的上帝：論早期基督教藝術的起源、發展及影響:The Origin, Development and Influence of Christian Art from the Perspective of Early Christian Murals and Catacombs Art",
+   "author": "李曉曼",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁36-63",
+   "pdf": false
+  },
+  {
+   "title": "上下文解經：雅各書第三章13節至第四章17節中的銜接性分析:Context Matters: An Analysis of Cohesion in James 3:13~4:17",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁64-84",
+   "pdf": false
+  },
+  {
+   "title": "終末即創造：侯活士和平神學的敘事基礎:The End Is in the Beginning: The Narrative Basis of Hauerwas' Theology of Peace",
+   "author": "蕭難",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁85-115",
+   "pdf": false
+  },
+  {
+   "title": "廣西宣道會的最後十年(1948~1958):The Final Ten Years of the C&MA of Guangxi",
+   "author": "陳智衡",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁116-155",
+   "pdf": false
+  },
+  {
+   "title": "Response by Dr. Helen Cameron to Review by Steven K. Chen:",
+   "author": "Cameron, Helen",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁171-173",
+   "pdf": false
+  },
+  {
+   "title": "共圓中國夢--當代中國基督教神學「政主教從」的困局:Realizing a Common Chinese Dream? The Dilemma of Theological Construction in Contemporary China",
+   "author": "邢福增",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁10-39",
+   "pdf": false
+  },
+  {
+   "title": "威廉俄坎論教會信仰權柄的憑據:William Ockham on the Foundation of Christian Authority",
+   "author": "張聖佳",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁40-72",
+   "pdf": false
+  },
+  {
+   "title": "在「做」與「是」之間--戳破老的迷思:In between \"Doing\" and \"Being,\" Exposing the Myth of Aging",
+   "author": "許南盛",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁73-86",
+   "pdf": false
+  },
+  {
+   "title": "從馬偕在臺宣教的歷程--探討宣教士養成的重要性:Exploring the Importance of the Formation of Missionaries from Mackay&apos;s Mission in Taiwan",
+   "author": "謝大立",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁112-148",
+   "pdf": false
+  },
+  {
+   "title": "Book Review: Jermo van Nes, «Pauline Language and the Pastoral Epistles: A Study of Linguistic Variation in the Corpus Paulinum» (Leiden: Brill, Woodlands: Kress Biblical Resources, 2018):",
+   "author": "劉加恩",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁150-159",
+   "pdf": false
+  },
+  {
+   "title": "書評：宋軍，《變局中的抉擇：中華全國基督教協進會歷史的終結(1949~1951)》(香港：基督教中國宗教文化研究社，2017年):",
+   "author": "郭明璋",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁160-176",
+   "pdf": false
+  },
+  {
+   "title": "信徒所需最底限度教育(上篇)：馬丁路德的遺產:",
+   "author": "蔡珍莉",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁178-197",
+   "pdf": false
+  },
+  {
+   "title": "信徒所需最底限度教育(下篇)：在臺落實的初探:",
+   "author": "蔡珍莉",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁198-218",
+   "pdf": false
+  },
+  {
+   "title": "淺談哈佛大學神學院科學宗教與文化學程--2018 Ways of Knowing研討會與跨領域挑戰:",
+   "author": "郭怡君",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁219-225",
+   "pdf": false
+  },
+  {
+   "title": "面向終末的信仰：王明道與滕近輝論天國、苦難及成聖觀:Faith Before the Last Things: Kingdom of God, Suffering and Sanctification in the Works of Wang Mingdao and Philip Teng",
+   "author": "倪步曉",
+   "journal": "華神期刊",
+   "vol": "15  2024.12[民113.12]",
+   "page": "頁12-46",
+   "pdf": false
+  },
+  {
+   "title": "「視障」辭彙於「和合本聖經」之漢譯與臺灣視障者的接受--以馬太福音為例:The Translation of the Vocabulary of Visual Impairment in Chinese Union Version Bible and Reception from the People with Visual Impairment in Taiwan--The Gospel of Matthew as Example",
+   "author": "王錦心",
+   "journal": "華神期刊",
+   "vol": "15  2024.12[民113.12]",
+   "page": "頁99-123",
+   "pdf": false
+  },
+  {
+   "title": "弗蘭克論對窮人的責任及其實踐:August Hermann Francke on the Responsibility to the Poor and His Practice",
+   "author": "黃丁",
+   "journal": "華神期刊",
+   "vol": "15  2024.12[民113.12]",
+   "page": "頁79-98",
+   "pdf": false
+  },
+  {
+   "title": "從自然神學看李提摩太《喻道要旨》的傳教策略及宗教對話:The Missionary Strategies and Dialogues of Religions of Timothy Richard's Yu Dao Yao Zhi from the Perspective of Natural Theology",
+   "author": "蔡東城",
+   "journal": "華神期刊",
+   "vol": "15  2024.12[民113.12]",
+   "page": "頁47-78",
+   "pdf": false
+  },
+  {
+   "title": "劉小楓漢語神學之罪觀:Liu Xiaofeng's Sino-Christian Theological View on the Sin",
+   "author": "史倜風",
+   "journal": "華神期刊",
+   "vol": "15  2024.12[民113.12]",
+   "page": "頁124-142",
+   "pdf": false
+  },
+  {
+   "title": "《女鐸小說集》之女性形象研究--二十世紀三○年代上海女性的婚戀家庭焦慮:The Study of Female Image in \"Short Stories for Young People\"",
+   "author": "曾陽晴",
+   "journal": "華神期刊",
+   "vol": "9  2018.12[民107.12]",
+   "page": "頁87-110",
+   "pdf": false
+  },
+  {
+   "title": "從哥林多前書第一至二章探討使徒保羅講道的運作模式:Exploring the Modus Operandi of Apostle Paul's Preaching in 1 Corinthians 1-2",
+   "author": "凃偉文",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁81-105",
+   "pdf": false
+  },
+  {
+   "title": "析論〈尼西亞--君士坦丁堡信經〉的背景與該信經的成形理論:A Critical Analysis of the Historical Background and the Formative Theories behind the Niceno-Constantinopolitan Creed",
+   "author": "張聖佳",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁10-45",
+   "pdf": false
+  },
+  {
+   "title": "此時此刻：論周聯華與神學本地化:Chow Lien-Hwa on the Indigenization of Theology",
+   "author": "曾慶豹",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁46-80",
+   "pdf": false
+  },
+  {
+   "title": "救贖與更新：「第三天」在復活語境中的意義:Redemption and Restoration: The Significance of \"On the Third Day\" in Resurrection Context",
+   "author": "范瑞傑",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁106-135",
+   "pdf": false
+  },
+  {
+   "title": "愛心融入因信稱義：從篇章分析法解析羅馬書十一章回應基督教錫安主義:Love Blends into Justification by Faith: Analyzing Romans 11 Using Discourse Analysis to View Christian Zionism",
+   "author": "徐桂珠",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁136-158",
+   "pdf": false
+  },
+  {
+   "title": "書評：Joseph W. Handley Jr., «Polycentric Mission Leadership: Toward a New Theoretical Model for Global Leadership» (多中心宣教領導力：邁向全球領導力新理論模型) (United Kingdom: Regnum Books, 2022):",
+   "author": "馬天濟",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁189-193",
+   "pdf": false
+  },
+  {
+   "title": "Deliverance and Spiritual Warfare in Discipleship of Believers from Muslim Backgrounds:",
+   "author": "Durie, Mark",
+   "journal": "華神期刊",
+   "vol": "16  2025.12[民114.12]",
+   "page": "頁159-187",
+   "pdf": false
+  },
+  {
+   "title": "Book Review: Helen Morris and Helen Cameron, «Evangelicals Engaging in Practical Theology: Theology that Impacts Church and World» (United Kingdom: Routledge, 2022):",
+   "author": "陳世賢",
+   "journal": "華神期刊",
+   "vol": "13  2022.12[民111.12]",
+   "page": "頁157-170",
+   "pdf": false
+  }
+ ]
+}

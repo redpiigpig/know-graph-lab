@@ -1,0 +1,3554 @@
+{
+ "slug": "chbs-journal",
+ "name": "中華佛學學報",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 442,
+  "本刊實收": 442,
+  "有PDF": 442,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 1987,
+  "max": 2026
+ },
+ "articles": [
+  {
+   "title": "中國佛教建築--佛教建築設計發展國際研討會主題演講:The Buddhist Architecture in China",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁1-8",
+   "pdf": true
+  },
+  {
+   "title": "瑜伽菩薩戒本之心理與倫理觀:The Psychology and Ethics of the Yogacara Bodhisattva Precepts",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁9-48",
+   "pdf": true
+  },
+  {
+   "title": "正法與三十七菩提分法的實踐:Practice of Dharma and 37 Bodhipaksiyadharma",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁49-72",
+   "pdf": true
+  },
+  {
+   "title": "四至六世紀中亞天山南麓的華嚴義學與盧舍那造像:The Study of Hwa-yen Teaching and the Image of Vairocana Buddha on the Southern Side of Mt. Tien-shan during Fourth to Sixth Century",
+   "author": "賴鵬舉",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁73-102",
+   "pdf": true
+  },
+  {
+   "title": "佛教對中日文化影響之比較:A Comparison of the Buddhist Influence on Chinese and Japanese Culture",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁103-117",
+   "pdf": true
+  },
+  {
+   "title": "日本曹洞宗與臺灣佛教僧侶的互動:The Interaction between Monks of Soto Zen in Japan and Buddhist Monks in Taiwan",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁119-153",
+   "pdf": true
+  },
+  {
+   "title": "慧思與智者心意識說之探討:A Study of the Theories of Citta, Manas and Vijnana by Hui-shih and Chih-yih",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁155-179",
+   "pdf": true
+  },
+  {
+   "title": "漢月法藏之禪法研究:Han-yueh Fa-tsang's Teachings on Ch'an",
+   "author": "釋見一",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁181-225",
+   "pdf": true
+  },
+  {
+   "title": "「人間佛教」的遠見與願景--佛教與社會福利的對話:The Vision and the Image of the Humanistic Buddhism: The Dialogue between the Buddhism and Social Welfare",
+   "author": "王順民",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁227-253",
+   "pdf": true
+  },
+  {
+   "title": "古典西藏語文法簡介暨佛典解讀實例--蓮花戒阿闍黎「入修瑜伽」:A Brief Introduction of the Classical Tibetan Grammar and an Example of the Interpretation of Buddhist Sastra--γNal-byor Sgom-pa-la 'Jug-pa by Kamalasila",
+   "author": "廖本聖",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁255-310",
+   "pdf": true
+  },
+  {
+   "title": "解讀「比丘尼」在西方人眼中的隱含:Deciphering \"Buddhist Nuns\": The Implications in Western Eyes",
+   "author": "陳美華",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁311-327",
+   "pdf": true
+  },
+  {
+   "title": "Gotama Becomes the Buddha--Reconstruction of the Nikaya Account of the Path:喬答摩成佛--「尼柯耶」(Nikaya)成佛之道的重構",
+   "author": "穆克紀",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁329-364",
+   "pdf": true
+  },
+  {
+   "title": "Tangut Chan Buddhism and Guifeng Zong-mi:西夏禪宗與圭峰宗密",
+   "author": "Solonin,K. J.",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁365-424",
+   "pdf": true
+  },
+  {
+   "title": "Miracle Tales and the Domestication of Kuan-yin:觀音靈驗故事",
+   "author": "于君方",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁425-481",
+   "pdf": true
+  },
+  {
+   "title": "Consecrating the Buddha: Legend, Lore, and History of the Imperial Relic-Veneration Ritual in the T'ang Dynasty:奉獻佛陀--唐代帝王奉迎佛舍利的傳說、民俗、與歷史",
+   "author": "黃啟江",
+   "journal": "中華佛學學報",
+   "vol": "11 1998.07[民87.07]",
+   "page": "頁483-533",
+   "pdf": true
+  },
+  {
+   "title": "對《妙法蓮華經玄義研究》的看法:[Book Reviews] Some Thoughts on a Study on Hsuan-yi of Lotus Sutra",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "11  民87.07",
+   "page": "頁535-538",
+   "pdf": true
+  },
+  {
+   "title": "佛教對於東方文化的影響--海峽兩岸佛教學術研討會議主題演說:Buddhist Impact on Oriental Culture",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁1-9",
+   "pdf": true
+  },
+  {
+   "title": "漢傳佛教與東方文化:Chinese Buddhism and Eastern Culture",
+   "author": "任繼愈",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁11-16",
+   "pdf": true
+  },
+  {
+   "title": "十二字門考論:A Discussion of the 42 Syllabary",
+   "author": "王邦維",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁17-24",
+   "pdf": true
+  },
+  {
+   "title": "佛教辯證思維略析:A Brief Analysis of Dialectic Thought in Buddhism",
+   "author": "呂有祥",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁25-33",
+   "pdf": true
+  },
+  {
+   "title": "「弘明集」所反映的佛教觀念:Buddhist Concept Reflected in the Hung-ming Chi",
+   "author": "宋立道",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁35-51",
+   "pdf": true
+  },
+  {
+   "title": "讀慧海「頓悟入道要門論」隨記:An Essay on Reading Hui-hai's Gateway to The Sudden Enlightenment to Truth",
+   "author": "樓宇烈",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁53-68",
+   "pdf": true
+  },
+  {
+   "title": "變文六議:Six Issues Concerning Bianwen",
+   "author": "薛克翹",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁69-78",
+   "pdf": true
+  },
+  {
+   "title": "「淨度三昧經」與人天教:Ching-tu San-mei Ching and the Teaching for Men and Devas",
+   "author": "姚長壽",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁79-95",
+   "pdf": true
+  },
+  {
+   "title": "佛教典籍的傳譯與中國佛教宗派:The Translation of Buddhist Scriptures and the Schools of Chinese Buddhism",
+   "author": "李富華",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁97-112",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教的譯場組織與沙門的外學修養--大乘佛教奠基於東亞的兩大要素:The Organization of Buddhist Translation Centres and the Achievement of Sramanas' Secular Learnings--Two Major Factors that Relate to the Long-lasting Popularity of Mahayana Buddhism after She Penetrated into East Asia",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁113-129",
+   "pdf": true
+  },
+  {
+   "title": "中國律學源流:The Origin of Chinese Vinaya",
+   "author": "溫金玉",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁131-144",
+   "pdf": true
+  },
+  {
+   "title": "道安避難行狀考:Tao-an's Life as a Refugee: A Study",
+   "author": "方廣錩",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁145-174",
+   "pdf": true
+  },
+  {
+   "title": "攝論師的師承及其哲理:The Tradition of Teachers Transmitting the She-lun (Mahayanasamgraha) and Their Teachings",
+   "author": "韓廷杰",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁175-190",
+   "pdf": true
+  },
+  {
+   "title": "日嚴寺考--兼論隋代南方佛教義學的北傳:A Study on Riyan Temple--And also on the North Spread of Southern Buddhist Doctrine in Sui Danasty",
+   "author": "王亞榮",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁191-203",
+   "pdf": true
+  },
+  {
+   "title": "道教與密教:Taoism and Tantrism",
+   "author": "黃心川",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁205-218",
+   "pdf": true
+  },
+  {
+   "title": "唐代宗密及其禪教會通論:The T'ang Monk Tsung-mi and His Concept of Harmonization of Meditation and Doctrine",
+   "author": "楊曾文",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁219-235",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教之歷史發展的宏觀式考察:A Macroscopic Study of Taiwanese Buddhist History",
+   "author": "藍吉富",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁237-248",
+   "pdf": true
+  },
+  {
+   "title": "從臺閩日佛教的互動看尼僧在臺灣的發展:The Development of the Nuns Order in Taiwan: An Overview from the Perspective of Taiwanese-Hokkien-Japanese Buddhist Interaction",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁249-274",
+   "pdf": true
+  },
+  {
+   "title": "煮雲法師的佛教經驗與佛教事業--1949年大陸來臺青年僧侶個案研究:The Experience and Buddhist Activities of Chu-yun--A Study of a Monk Who Arrived in Taiwan from the Mainland in 1949 as a Young Man",
+   "author": "丁敏",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁275-302",
+   "pdf": true
+  },
+  {
+   "title": "論漢地佛教的方術靈神化、儒學化與老莊玄學化--從思想理論的層面看佛教的中國化:On the Sinicization of Buddhism",
+   "author": "洪修平",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁303-315",
+   "pdf": true
+  },
+  {
+   "title": "大乘菩薩道與儒家倫理:The Mahayana Bodhisattva Path and Confucian Ethics",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁317-337",
+   "pdf": true
+  },
+  {
+   "title": "泛說佛教毗曇學與玄學崇有派:The Buddhist Abhidharma and the Taoist \"Spirit-being\" School",
+   "author": "杜繼文",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁339-351",
+   "pdf": true
+  },
+  {
+   "title": "智者之圓教義及其形成之探討:Chih-i's \"Perfect Doctrine\" and Its Formation",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁353-363",
+   "pdf": true
+  },
+  {
+   "title": "從華嚴經學到華嚴宗學:The Study of the Hua-yen Ching and the Development of the Hua-yen School",
+   "author": "魏道儒",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁365-376",
+   "pdf": true
+  },
+  {
+   "title": "李通玄的東方智慧論--「新華嚴經論」札記:Lee Tung-hsuan's Theory on Oriental Wisdom--Notes on New Commentary on Avatamsaka Sutra",
+   "author": "潘桂明",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁377-391",
+   "pdf": true
+  },
+  {
+   "title": "小乘實有論或大乘實相論？--分析明末三大師的「物不遷論」解釋立場:Hinayana or Mahayana?--Analyzing the Interpretive Positions of the Three Masters of the Late Ming on Things Do Not Move",
+   "author": "黃國清",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁393-409",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教與倫理建設:Chinese Buddhist Ethics and Their Modern Value",
+   "author": "方立天",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁411-423",
+   "pdf": true
+  },
+  {
+   "title": "安寧療護的佛教用語與模式:Buddhist Terms and Models for Hospices",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁425-442",
+   "pdf": true
+  },
+  {
+   "title": "達摩事蹟與達摩圖像:Bodhidharma: Historical Facts and Artistic Representation",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁443-478",
+   "pdf": true
+  },
+  {
+   "title": "佛教最初傳入吐蕃之探討:A Study of the Earliest Dissemination of Buddhism in Tibet",
+   "author": "尕藏加",
+   "journal": "中華佛學學報",
+   "vol": "12 1999.07[民88.07]",
+   "page": "頁479-492",
+   "pdf": true
+  },
+  {
+   "title": "印順長老著述中的真常唯心論--以「大乘起信論講記」為主:The True-Eternalism and Mind-Only Theory in Master Yinshun's Work: With Special Reference to Discourses on the Sastra on the Awakening of Faith in Mahayana",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁1-12",
+   "pdf": true
+  },
+  {
+   "title": "論阿富汗新發現的佉盧文佛教經卷:Buddhist Kharosthi Manuscripts Recently Discovered in Afghanistan",
+   "author": "王邦維",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁13-20",
+   "pdf": true
+  },
+  {
+   "title": "回鶻彌勒信仰考:Maitreya Worship among the Uighurs",
+   "author": "楊富學",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁21-32",
+   "pdf": true
+  },
+  {
+   "title": "戒從心生:Sila Originates in the Mind",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁33-51",
+   "pdf": true
+  },
+  {
+   "title": "內觀禪修的探討:A Study of Vipasyana Meditation",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁53-67",
+   "pdf": true
+  },
+  {
+   "title": "從「佛說善生經」看佛教的家庭倫理觀:The Buddhist View of Family Ethics from the Perspective of the Sujata Sutra",
+   "author": "業露華",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁69-82",
+   "pdf": true
+  },
+  {
+   "title": "西方淨土的宗教學詮釋:Sukhavati Interpretated from the Standpoint of Western Religious Studies",
+   "author": "陳敏齡",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁83-103",
+   "pdf": true
+  },
+  {
+   "title": "阿賴耶識之「無明、愛結、有識之身」經證考察:An Inquiry in the Canonical Statement between \"Alayavijnana\" and \"Ignorance, Craving, Vijnana-Body\"",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁105-122",
+   "pdf": true
+  },
+  {
+   "title": "陳那的三性思想--在「佛母般若波羅蜜多圓集要義論」中的理解:Dinnaga's Thought of Three Natures: The Understanding in his Prajnaparamita-pindarthasamgraha",
+   "author": "陳宗元",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁123-136",
+   "pdf": true
+  },
+  {
+   "title": "再論「妙法蓮華經」之「十如是」譯文:Another Look at the Translation \"Ten Such-Likes\" in the Lotus Sutra",
+   "author": "黃國清",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁137-154",
+   "pdf": true
+  },
+  {
+   "title": "「大智度論」略譯初探:A Preliminary Study of the Abbreviated Translation of the Da zhidu lun",
+   "author": "周伯戡",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁155-165",
+   "pdf": true
+  },
+  {
+   "title": "刊本大藏經之入藏問題初探:A Preliminary Study on the Question of which Texts were Incorporated in the Blockprint Editions of the Tripitaka",
+   "author": "藍吉富",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁167-178",
+   "pdf": true
+  },
+  {
+   "title": "楊文會的編藏思想:Yang Wenhui's Concepts of Compiling a Tripitaka",
+   "author": "方廣錩",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁179-205",
+   "pdf": true
+  },
+  {
+   "title": "西秦佛教述論:Buddhism in the Western Qin Dynasty",
+   "author": "杜斗城",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁207-226",
+   "pdf": true
+  },
+  {
+   "title": "北涼佛教與北魏太武帝發展佛教意識形態的歷程:Buddhist Political Ideology of the Northern Liang and Emperor Taiwu of the Northern Wei",
+   "author": "古正美",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁227-266",
+   "pdf": true
+  },
+  {
+   "title": "「一葦渡江」與「喫肉邊菜」--兩個著名禪宗故事的歷史探究:\"Using a Stalk of Reed as a Boat to Sail across the Yangzi River\" and \"Eating Only Vegetable that Cooked with Meat\": A Historical Survey on Two Well-known Stories of Chan Buddhism",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁267-280",
+   "pdf": true
+  },
+  {
+   "title": "審視傳承--陳述禪宗的另一種方式:Looking at Lineage: A Different Way of Presenting Chan Buddhism",
+   "author": "McRae,John R.",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁281-298",
+   "pdf": true
+  },
+  {
+   "title": "宗教融合與教化功能--以宋代兩種華嚴淨土信仰為例:Religious Syncretism and the Function of Conversion: Two Types of Belief in a Huayan Pure Land",
+   "author": "魏道儒",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁299-305",
+   "pdf": true
+  },
+  {
+   "title": "大溪齋明寺的傳承宗風:The Tradition of Zhaiming Monastery in Daxi",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁307-322",
+   "pdf": true
+  },
+  {
+   "title": "從數息觀論中國佛教早期禪法:The Meditation Methods of Early Chinese Buddhism: From the Perspective of Anapanasati",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁323-348",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教義學的形成--東晉外國羅什「般若」與本土慧遠「涅槃」之爭:The Formation of Chinese Buddhology in the Eastern Jin Dynasty: The Clash between the Prajnaparamita Thought Imported by Kumarajiva and Huiyuan's Native Nirvana Concepts",
+   "author": "賴鵬舉",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁349-391",
+   "pdf": true
+  },
+  {
+   "title": "魏晉佛學思想之開展:The Development of Buddhist Thought during the Wei and Jin Dynasties",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁393-417",
+   "pdf": true
+  },
+  {
+   "title": "論中國佛教核心思想的建立:The Formation of the Central Philosophy of Chinese Buddhism",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁419-429",
+   "pdf": true
+  },
+  {
+   "title": "法眼文益的禪教思想:To Unify the Zen and Sutra Discourse in Fayan Wenyi's Thought",
+   "author": "蔣義斌",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁431-456",
+   "pdf": true
+  },
+  {
+   "title": "永明延壽的心性論:The Mind-Nature Theory of Yongming Yanshou",
+   "author": "楊曾文",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁457-477",
+   "pdf": true
+  },
+  {
+   "title": "「人間佛教」的經典詮釋--是「援儒入佛」或是回歸印度？:Scriptural Interpretation of \"Buddhism for this World\": Is it \"Applying Confucianism into Buddhism\" or Returning to Indian Buddhism?",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁479-504",
+   "pdf": true
+  },
+  {
+   "title": "當前東亞佛教的復興情況及其對社會經濟的影響:The Revival of Buddhism in Present Day East Asia and Its Influence on Society and Economy",
+   "author": "黃心川",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁505-512",
+   "pdf": true
+  },
+  {
+   "title": "聖嚴法師佛學著述簡介:Introduction to Ven. Sheng-yen&apos;s Buddhological Works",
+   "author": "高振農",
+   "journal": "中華佛學學報",
+   "vol": "13(上)  民89.05",
+   "page": "頁513-529",
+   "pdf": true
+  },
+  {
+   "title": "An Assessment of the Highlights in the Milindapanha:「彌蘭陀王問經」重點評析",
+   "author": "Pachow,W.",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁1-27",
+   "pdf": true
+  },
+  {
+   "title": "How to Will Backwards: Time, Forgetting and Repetition in the Lotus Sutra:如何逆流往過去立志--「妙法蓮華經」重覆觀、忘記觀、時間觀",
+   "author": "Ziporyn,Brook",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁29-62",
+   "pdf": true
+  },
+  {
+   "title": "Language and Logic in the Lotus Sutra: A Hermeneutical Exploration of Philosophical Underpinnings:「法華經」中的語言與邏輯--在哲學基礎下的詮釋學探究",
+   "author": "Wawrytko,Sandra A.",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁63-95",
+   "pdf": true
+  },
+  {
+   "title": "On the Earliest Path to the Tathagatahood: A Study in Nikaya Traditions:在最早的成佛之道上--對南傳藏經傳統的研究",
+   "author": "Mukherjee,Biswadeb",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁97-155",
+   "pdf": true
+  },
+  {
+   "title": "Manjusri and the Cult of the Celestial Bodhisattvas:文殊師利與神聖菩薩崇拜",
+   "author": "Harrison,Paul M.",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁157-193",
+   "pdf": true
+  },
+  {
+   "title": "Buddha's Love and Human Love:佛陀之愛與人類之愛",
+   "author": "市村承秉",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁195-254",
+   "pdf": true
+  },
+  {
+   "title": "The Nature of Emptiness and Buddhist Ethics:空的本質與佛教倫理",
+   "author": "稻田龜男",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁255-275",
+   "pdf": true
+  },
+  {
+   "title": "The Taoist Influence on Hua-yen Buddhism: A Case of the Sinicization of Buddhism in China:道家對華嚴宗的影響--中國佛教漢化的一例",
+   "author": "吳剛男",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁277-297",
+   "pdf": true
+  },
+  {
+   "title": "The Kasaya Robe of the Past Buddha Kasyapa in the Miraculous Instruction Given to the Vinaya Master Daoxuan (596∼667):道宣律師所感通的迦葉佛袈裟",
+   "author": "篠原亨一",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁299-367",
+   "pdf": true
+  },
+  {
+   "title": "A Monk's Literary Education: Dahui's Friendship with Juefan Huihong:一個禪師的文學養成教育--大慧與覺範慧洪的友誼",
+   "author": "Levering,Miriam",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁369-384",
+   "pdf": true
+  },
+  {
+   "title": "Pure Land Hermeneutics in the Song Dynasty: the Case of Zhanran Yuanzhao (1048∼1116):宋代淨土詮釋初探--以湛然元照(1048∼1116)為例",
+   "author": "黃啟江",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁385-429",
+   "pdf": true
+  },
+  {
+   "title": "The Role and Significance of Korean Son in the Study of East Asian Buddhism:韓國禪在東亞佛教研究裡的角色與地位",
+   "author": "Lancaster,Lewis R.",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁431-460",
+   "pdf": true
+  },
+  {
+   "title": "Buddhist Studies in the Digital Age:數位化時代的佛學研究",
+   "author": "Wittern,Christian",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁461-501",
+   "pdf": true
+  },
+  {
+   "title": "Lineage and Transmission: Integrating the Chinese and Tibetan Orders of Buddhist Nuns:傳統與繼承--中國與西藏比丘尼傳承之薪火相傳",
+   "author": "釋恆清",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁503-548",
+   "pdf": true
+  },
+  {
+   "title": "The Place of Chan in Post-Modern Europe:中國禪在後現代歐洲的地位",
+   "author": "Crook,John H.",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁549-584",
+   "pdf": true
+  },
+  {
+   "title": "Onto-Epistemology of Sudden Enlightenment in Chan Buddhism:本體知識論與禪學中的頓悟",
+   "author": "成中英",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁585-611",
+   "pdf": true
+  },
+  {
+   "title": "The Development of Peace Through the Process of Morality:經由道德進程開展和平",
+   "author": "Pupatana,Somsuda",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁613-634",
+   "pdf": true
+  },
+  {
+   "title": "大乘起源與開展之心理動力--永恆懷念是大乘起源與開展的動力嗎？:The Psychological Force behind the Origin and Development of the Mahayana: Is \"Remembering Forever\" the Original Force throuch which the Great Vehicle Came into Being and Grew?",
+   "author": "釋如石",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁1-42",
+   "pdf": true
+  },
+  {
+   "title": "漢文電子佛典製作與運用之研究--以「瑜伽師地論」為例:A Study on Creation and Application of Electronic Chinese Buddhist Texts: With the Yogacarabhumi as a Case Study",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁43-53",
+   "pdf": true
+  },
+  {
+   "title": "大足石篆山石門山妙高山宋代石窟與文氏鐫匠世家的關係研究:The Song Dynasty Stone Grottos in Mt. Shizhuan, Mt. Shimen, and Mt. Maogao of Dazu in Relationship to Several Generations of Engravers of the Wen Clan",
+   "author": "胡文和",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁55-90",
+   "pdf": true
+  },
+  {
+   "title": "日本帝國在臺殖民統治初期的宗教政策與法制化的確立:The Establishment of the Religious Policy and Its Legalization in the Early Period of the Japanese Colonialization",
+   "author": "江燦騰",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁91-134",
+   "pdf": true
+  },
+  {
+   "title": "僧肇思想辯證--「肇論」與道、玄關係的再審查:New Discourse of the Relationship between Seng-chao's Philosophy and Taoism, New Taoism",
+   "author": "龔雋",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁135-158",
+   "pdf": true
+  },
+  {
+   "title": "彌陀淨土信仰對漢儒內心世界的影響:The Influence of Belief in Amitabha's Pure Land on the Inner World of Chinese Literati",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁159-183",
+   "pdf": true
+  },
+  {
+   "title": "「金剛經」的詮釋與流傳:The Interpretation and Transmittal of the Diamond Sutra (Vajracchedika-prajna-paramita-sutra)",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁185-230",
+   "pdf": true
+  },
+  {
+   "title": "敦煌寫卷中土造經的救贖思想--以「大正藏」第85冊為例:The Essence of Salvation in the Tun-huang Manuscripts--The Chinese Forged Sutra: Taking Ta Cheng Tsang Vol.85 as an Example",
+   "author": "劉滌凡",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁231-266",
+   "pdf": true
+  },
+  {
+   "title": "法藏「大乘起信論義記」及元曉與見登的相關述記關於一心開二門的闡釋:Fa-Tzang's Interpretation of the Interweaving between Tathagatagarbha and Vijnaptimatra in his Commentary on Mahayanasraddhotpada",
+   "author": "賴賢宗",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁267-292",
+   "pdf": true
+  },
+  {
+   "title": "從「開權顯實」論法華之妙:The Wonderful Qualities of the Lotus Sutra Discussed from the Viewpoint of \"Display of the Provisional and Manifestation of the Ultimate\"",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁293-308",
+   "pdf": true
+  },
+  {
+   "title": "淨土詮釋傳統中的宗門意識--論宋天臺義學者對元照「觀無量壽經義疏」之批判及其所造成之反響:Sectarianism in the Pure Land Hermeneutic Tradition: On T'ien-t'ai Exegetes' Critique of Yuan-chao's Commentary on the Contemplation Sutra and the Repercussions of the Critique",
+   "author": "黃啟江",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁309-352",
+   "pdf": true
+  },
+  {
+   "title": "「教觀綱宗」緒論:Preface to The Essence of Teaching and Meditation",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁353-359",
+   "pdf": true
+  },
+  {
+   "title": "Bibliotheca Sacra Birmanica in Taipei--The Chung-Hwa Institute of Buddhist Studies Manuscript Collection Summary Catalogue:一批收藏於臺北的緬甸聖典--中華佛學研究所寫本典藏簡明目錄",
+   "author": "Filliozat,Jacqueline",
+   "journal": "中華佛學學報",
+   "vol": "14 2001.09[民90.09]",
+   "page": "頁361-472",
+   "pdf": true
+  },
+  {
+   "title": "戒律與人間淨土的建立:A Pure Land in Contemporary Society through Vinaya Practice",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁1-23",
+   "pdf": true
+  },
+  {
+   "title": "「心淨則佛土淨」之考察:On \"To the Extent that the Mind of a Bodhisattva is Pure is His Buddha-land Purified\"",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁25-44",
+   "pdf": true
+  },
+  {
+   "title": "「入菩薩行」初品補注:Added Annotation to the First Chapter of Bodhicaryavatara",
+   "author": "釋如石",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁45-82",
+   "pdf": true
+  },
+  {
+   "title": "蓮花戒「般若波羅蜜多心經釋」之譯注研究:Kamalasila's Heart Sutra Commentary: An Annotated Translation",
+   "author": "廖本聖",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁83-123",
+   "pdf": true
+  },
+  {
+   "title": "釋尊時期止觀法門的實踐:Practice of Samatha and Vipasyana during the Time of Gotama, the Buddha",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁125-146",
+   "pdf": true
+  },
+  {
+   "title": "佛法的人間性與現實性:The \"Earthliness\" and \"Pragmatism\" of Buddha Dharma",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁147-172",
+   "pdf": true
+  },
+  {
+   "title": "「中觀論頌．24.7」在解讀上的幾個問題:Nagarjuna's Concept of Sunyata: As in the Seventh Poem of the 24th Chapter of Mulamadhyamakakarika",
+   "author": "萬金川",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁173-209",
+   "pdf": true
+  },
+  {
+   "title": "敦煌遺書中的「妙法蓮華經」及有關文獻:The Lotus Sutra and Related Texts among the Dunhuang Documents",
+   "author": "方廣錩",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁211-232",
+   "pdf": true
+  },
+  {
+   "title": "法華思想與佛教社區共同體--以東魏「李氏合邑造像碑」為例:The Teachings of the Lotus Sutra and Local Buddhist Communities: The Example of The Li Clan Society Creating Images Stele Inscription Dating from the Eastern Wei Dynasty",
+   "author": "顏尚文",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁233-247",
+   "pdf": true
+  },
+  {
+   "title": "淺論中國求法僧俗出國前、後學習域外語文的機緣:A Survey on How the Chinese Buddhist Pilgrims to Learn Sanskrit before and after Their Departure to Go to India",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁249-265",
+   "pdf": true
+  },
+  {
+   "title": "圓仁和日本天臺宗:En-nin and the Japanese Tendai School",
+   "author": "楊曾文",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁267-278",
+   "pdf": true
+  },
+  {
+   "title": "西來庵事件前後臺灣佛教的動向--以曹洞宗為中心:The Hsi-lai-an Incident and the Development of Taiwanese Buddhism with Special Reference to the Soto School",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁279-310",
+   "pdf": true
+  },
+  {
+   "title": "天臺三大部所反映智者大師的心靈哲學:Master Chih-i's Mind Philosophy as Reflected in the Three Main Treatises of the T'ien-t'ai Sect",
+   "author": "吳汝鈞",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁311-340",
+   "pdf": true
+  },
+  {
+   "title": "依「一心開二門」之思想架構看天臺宗「一念無明法性心」之特殊涵義:The Significances of \"The One Single Mind Embracing Ignorance and Dharma-nature Simultaneously\" in T'ien-t'ai Buddhism --Examined from the Expositional Framework of \"Two-Gates-in-One-Mind\"",
+   "author": "尤惠貞",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁341-361",
+   "pdf": true
+  },
+  {
+   "title": "由「相互主體性」的立場論天臺宗幾個基本關鍵觀念以及山家與山外之爭:What is the Buddha Looking at?--The Importance of Intersubjectivity in the T'ien-t'ai Tradition as Understood by Ssu-Ming Chih-li (960-1028)",
+   "author": "任博克",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁363-382",
+   "pdf": true
+  },
+  {
+   "title": "從中觀的二諦中道到後中觀的臺賢二宗思想對立--兼論中國天臺的特質與思維限制:From the \"Middle Way of the Two Truths\" in Madhyamika to the Confrontation between T'ien-t'ai and Hua-yen Thought in Post-Madhyamika Discourse--With Discussion of the Characteristics of T'ien-t'ai Thought and Its Limitations",
+   "author": "傅偉勳",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁383-395",
+   "pdf": true
+  },
+  {
+   "title": "Some Observations on the Chung-hsu-mo-ho-ti-ching:「眾許摩訶帝經」的幾點考察",
+   "author": "穆克紀",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁397-408",
+   "pdf": true
+  },
+  {
+   "title": "Ambiguity of Avalokitesvara and the Scriptural Sources for the Cult of Kuan-yin in China:觀音菩薩的經典依據及其名號和其他一些不明問題",
+   "author": "于君方",
+   "journal": "中華佛學學報",
+   "vol": "10 1997.07[民86.07]",
+   "page": "頁409-464",
+   "pdf": true
+  },
+  {
+   "title": "緣起之「此緣性(Idappaccayata)」:\"Idappaccayata\" in Dependent Origination",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁1-34",
+   "pdf": true
+  },
+  {
+   "title": "受念住的研究:A Study of Vedana-Smrty-Upasthana",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁35-48",
+   "pdf": true
+  },
+  {
+   "title": "竺法護的翻譯初探:A Tentative Study of the Translation Works of Master Dharmaraksha",
+   "author": "梅廼文",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁49-64",
+   "pdf": true
+  },
+  {
+   "title": "漢傳「受戒法」之考察:An Inquiry into the Chinese Tradition of Receiving the Precepts",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁65-82",
+   "pdf": true
+  },
+  {
+   "title": "論佛教受中土道教的影響及佛經真偽:The Taoist Impact on Chinese Buddhism and the Authenticity of Buddhist Sutras",
+   "author": "蕭登福",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁83-98",
+   "pdf": true
+  },
+  {
+   "title": "太子晃與文成帝--英年早逝的天才父子政治家大力推廣佛教於北魏的功勳及其政治目的:Crown Prince Huang and Emperor Wen-Ch'eng--A Study on the Promulgation of Buddhism in the Northern Wei Dynasty by These Young-died Royal Father and Son Genius Statesmen and Their Political Aim",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁99-121",
+   "pdf": true
+  },
+  {
+   "title": "張商英護法的歷史意義:The Historical Significance of Chang Shang-Ying's Defense of Buddhism",
+   "author": "黃啟江",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁123-166",
+   "pdf": true
+  },
+  {
+   "title": "漢月法藏(1573-1635)與晚明三峰宗派的建立:Han-yueh Fa-tzang (1573-1635) and the San Fong School in Late Ming Dynasty",
+   "author": "連瑞枝",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁167-208",
+   "pdf": true
+  },
+  {
+   "title": "明末清初閩臺佛教的互動:The Interaction of Fukien's and Taiwanese Buddhism in Late Ming and Early Ch'ing Dynasty",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁209-242",
+   "pdf": true
+  },
+  {
+   "title": "法藏之心識觀的特色:The Characteristics of Fa-Tsang's View of Mind and Consciousness",
+   "author": "鄧克銘",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁243-259",
+   "pdf": true
+  },
+  {
+   "title": "從湛然「十不二門」論天臺思想之發展演變:On the Development and Evolution of the thoughts of Tien-tai School--From the Perspective of Chan-Jan's Ten Non-dual Doors",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁261-290",
+   "pdf": true
+  },
+  {
+   "title": "從佛教之倫理精神對中國當代社會之反省:A Reflection on the Contemporary Society of China--From the Perspective of Buddhist Ethics",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁291-308",
+   "pdf": true
+  },
+  {
+   "title": "A Pre-Buddhist Meditation System and Its Early Modifications by Gotama the Bodhisattva (Ⅱ):論四禪--喬達摩菩薩如何改定此一佛教前已有的法門",
+   "author": "穆克紀",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁309-339",
+   "pdf": true
+  },
+  {
+   "title": "Ch'eng-Kuan on the Hua-Yen Trinity:澄觀的華嚴三聖觀",
+   "author": "Gimello,Robert M.",
+   "journal": "中華佛學學報",
+   "vol": "9 1996.07[民85.07]",
+   "page": "頁341-411",
+   "pdf": true
+  },
+  {
+   "title": "佛教在二十一世紀的社會功能及其修行觀念--第四屆中華國際佛學會議開幕典禮主題演說:Buddhism in the 21眫 Century: Its Social Function and View of Practice--Keynote Address for the Opening Ceremony of the Fourth Chung-Hwa International Conference on Buddhism",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁1-28",
+   "pdf": true
+  },
+  {
+   "title": "藏本調伏天「唯識二十論釋疏」譯注研究:Translating and Research on Vinitadeva's Commentary (Tibetan Version) of Vasubandhu's Treatise in Twenty Verses on Mind-only",
+   "author": "廖本聖",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁29-92",
+   "pdf": true
+  },
+  {
+   "title": "「轉依」二義之研究:The Two Meanings of \"Fundamental Transformation\"",
+   "author": "賴賢宗",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁93-113",
+   "pdf": true
+  },
+  {
+   "title": "對大足寶頂「父母恩重經變」重新研究:A Re-study of the Stone Carving of Parental Love at Paoding, Dazu",
+   "author": "胡文和",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁115-140",
+   "pdf": true
+  },
+  {
+   "title": "新疆佛教寺院遺址研究概況:A General Report on Archeological Research of Buddhist Sites in Xinjiang",
+   "author": "賈應逸",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁141-153",
+   "pdf": true
+  },
+  {
+   "title": "淺論華夏俗世婦女的觀世音信仰--兼論這位菩薩的性別問題:A Survey on Why the Chinese Females Taking Refugee in Avalokitesvara--And on the \"Sex\" of this Buddhist Bodhisattva",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁155-175",
+   "pdf": true
+  },
+  {
+   "title": "淨影寺慧遠的行持、著述及其顯實宗:Jing-ying Huiyuan's Life, Works and His Xian-shi School",
+   "author": "馮煥珍",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁177-218",
+   "pdf": true
+  },
+  {
+   "title": "汾陽善昭及其禪法:Chan Master Fenyang Shanzhao",
+   "author": "楊曾文",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁219-253",
+   "pdf": true
+  },
+  {
+   "title": "日據時期臺灣新佛教運動的先驅--「臺灣佛教馬丁路德」林德林的個案研究:A Pioneer of the New Buddhist Movement in Taiwan during the Period of Japanese Occupation--Lin Te-lin: The \"Martin Luther of Taiwanese Buddhism\"",
+   "author": "江燦騰",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁255-303",
+   "pdf": true
+  },
+  {
+   "title": "天臺圓頓止觀之修證--就十乘觀法而論:The Practice and Realization of the Perfect and Sudden Calming and Contemplation in Tiantai Buddhism: In Relation to the Ten Vehicles of Contemplation",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁305-333",
+   "pdf": true
+  },
+  {
+   "title": "懷感的往生論:Huaigan's Exposition of the Pure Land Teaching of Rebirth",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁335-366",
+   "pdf": true
+  },
+  {
+   "title": "「彰所知論」傳承過程及「情世界品」補訂:The Transmission of the Shes-bya Rab-tu-gsal by vPhags-pa and Its Supplementations",
+   "author": "王啟龍",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁367-397",
+   "pdf": true
+  },
+  {
+   "title": "宗喀巴「現觀莊嚴論金鬘疏」「教授修行及諸諦」釋義:An Exposition of the \"Advice on Practice and the Truths\" in Tsongkhapa's Golden Rosary, Extensive Explanation of the Ornament for Clear Realization",
+   "author": "釋如石",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁399-425",
+   "pdf": true
+  },
+  {
+   "title": "個人、歷史與宗教--印順法師、「人間佛教」與其思想源流:Individual, History and Religion: Shi Yinshun's \"Humanistic Buddhism\" and Its Origins",
+   "author": "陳美華",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁427-456",
+   "pdf": true
+  },
+  {
+   "title": "佛教之生命倫理觀--以「複製人」與「胚胎幹細胞」為例:Buddhist Bioethics: The Case of Human Cloning and Embryo Stem Cell Research",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁457-470",
+   "pdf": true
+  },
+  {
+   "title": "由尼柯耶論喬達摩成佛之道:Gotama Becomes the Buddha: A Study in Nikaya Traditions",
+   "author": "穆克紀",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁471-493",
+   "pdf": true
+  },
+  {
+   "title": "Chih-i's System of Sign Interpretation:智者大師之符號詮釋體系",
+   "author": "沈海燕",
+   "journal": "中華佛學學報",
+   "vol": "15 2002.07[民91.07]",
+   "page": "頁495-584",
+   "pdf": true
+  },
+  {
+   "title": "初期佛教之「我」論:The Theory of Self in Early Buddhism",
+   "author": "王開府",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁1-22",
+   "pdf": true
+  },
+  {
+   "title": "佛教的婚姻觀--以「阿含經」為主論:The Buddhist Concepts of Marriage: Based on the Perspective of the Agama Sutras",
+   "author": "陳美華",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁23-66",
+   "pdf": true
+  },
+  {
+   "title": "「阿含辭典」編輯體例說明:An Explanation of the Principles Used in Compiling the Agama Dictionary",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁67-108",
+   "pdf": true
+  },
+  {
+   "title": "「獦獠作佛」公案與東山禪法南傳--讀敦煌寫本「六祖壇經」劄記:The \"Geliao Becomes a Buddha\" gongan and the southward Spread of the Dongshan Lineage: Notes on the Dunhuang Version of the Platform Sutra",
+   "author": "張新民",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁109-131",
+   "pdf": true
+  },
+  {
+   "title": "愛國僧人釋熙仲和他的佛教編年史「釋氏資鑑」:Monk-Patriot Shi Xizhong and His Buddhist Chronicle Shishi Zijian",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁133-146",
+   "pdf": true
+  },
+  {
+   "title": "虛雲和尚長時住定經驗之探索:An Inquiry into Maxster Xuyun's Experience of Staying in Meditative Absorption for Extended Periods of Time",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁147-167",
+   "pdf": true
+  },
+  {
+   "title": "再檢視日治時代臺灣佛教界從事的教育事業:A Further Look at Buddhist Education in Taiwan during the Period of Japanese Rule",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁169-210",
+   "pdf": true
+  },
+  {
+   "title": "日治時期高雄佛教發展與東海宜誠:Gisei Higashiumi and the Development of Buddhism in Gaoxiong during the Period of Japanese Rule",
+   "author": "江燦騰",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁211-231",
+   "pdf": true
+  },
+  {
+   "title": "佛教因果論的中國化:The Sinification of Buddhist Causation Theory",
+   "author": "黃啟江",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁233-261",
+   "pdf": true
+  },
+  {
+   "title": "宗密之援易說佛及其易學圓相圖式述考:A Critical Study of Zongmi's Use of the Yijing in the Explanation of Buddhism",
+   "author": "王仲堯",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁263-287",
+   "pdf": true
+  },
+  {
+   "title": "當代臺灣如來藏思想的諍議與回應--印順之後的如來藏學諍議之評議:Controversies and Responses Regarding Tathagatagarbha Thought in Contemporary Taiwan: A Critical Evaluation of Controversies Regarding Tathagatagarbha Studies after Yinshun",
+   "author": "賴賢宗",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁289-323",
+   "pdf": true
+  },
+  {
+   "title": "齋明寺舊藏捲軸佛畫--以三寶佛畫為例:Old Buddhist Scroll Paintings at Zhaiming Temple: The Case of the \"Three Buddhas\"",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁325-346",
+   "pdf": true
+  },
+  {
+   "title": "「現觀莊嚴論」綱要書--「八事七十義」之譯注研究:An Annotated Translation of Eight Topics and Their Seventy Subtopics: An Outline of the Aphisamayalamkara",
+   "author": "廖本聖",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁347-399",
+   "pdf": true
+  },
+  {
+   "title": "突厥佛教雜考:Miscellaneous Notes on Buddhism among the Turks",
+   "author": "楊富學",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁401-415",
+   "pdf": true
+  },
+  {
+   "title": "證空的淨土教學研究序說:A Preliminary Study of Shoku's Pure Land Teachings",
+   "author": "凃玉盞",
+   "journal": "中華佛學學報",
+   "vol": "16 2003.07[民92.07]",
+   "page": "頁417-455",
+   "pdf": true
+  },
+  {
+   "title": "A Short Introduction to the Life of Ven. Sheng-yen:聖嚴法師行誼簡介",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "13(下)  民89.05",
+   "page": "頁635-651",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教以「法華經」為基礎的修行方法:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁1-16",
+   "pdf": true
+  },
+  {
+   "title": "\"聲聞地\"中「唯」之用例考察:",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁17-40",
+   "pdf": true
+  },
+  {
+   "title": "\"入中論釋\"「初品」譯注:",
+   "author": "釋如石",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁41-72",
+   "pdf": true
+  },
+  {
+   "title": "論所謂的「喀什本梵文\"法華經\"寫卷」:",
+   "author": "楊富學",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁73-95",
+   "pdf": true
+  },
+  {
+   "title": "「唐故招聖寺大德慧堅禪師碑」考:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁97-120",
+   "pdf": true
+  },
+  {
+   "title": "地論師、攝論師的判教學說:",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁121-148",
+   "pdf": true
+  },
+  {
+   "title": "護法在「成唯識論」的立場之研究:",
+   "author": "陳宗元",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁149-166",
+   "pdf": true
+  },
+  {
+   "title": "玄奘大師在印度境內遊學與善財童子參學有關地理、路線及其意義之探討:",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁167-189",
+   "pdf": true
+  },
+  {
+   "title": "看話禪和南宋主戰派之間的交涉:",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁191-212",
+   "pdf": true
+  },
+  {
+   "title": "中國禪宗在西藏:",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁213-261",
+   "pdf": true
+  },
+  {
+   "title": "從禪悟的觀點論海德格[Martin Heidegger]、道元與慧能:",
+   "author": "成中英",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁263-286",
+   "pdf": true
+  },
+  {
+   "title": "從「真如緣起」到「法界緣起」的進路--「一心」觀念的確立:",
+   "author": "黃俊威",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁287-314",
+   "pdf": true
+  },
+  {
+   "title": "錢謙益的佛教生涯與理念:",
+   "author": "連瑞枝",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁315-371",
+   "pdf": true
+  },
+  {
+   "title": "「菩薩所行方便境界遊戲神通說」佛身光喻索隱:",
+   "author": "高明道",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁373-447",
+   "pdf": true
+  },
+  {
+   "title": "The Riddle of the First Buddhist Council--A Retrospection:佛教第一結集的難題--一個回顧",
+   "author": "Mukherjee,Biswadeb",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁449-475",
+   "pdf": true
+  },
+  {
+   "title": "Biographies of Eminent Monks in a Comparative Perspective: The Function of the Holy in Medieval Chinese Buddhism:「高僧傳」的比較研究:中古中國佛教聖僧的功能",
+   "author": "篠原亨一",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁477-500",
+   "pdf": true
+  },
+  {
+   "title": "Wu-t'ai Shan 五臺山 during the Early Chin Dynasty 金朝: The Testimony of Chu Pien朱弁:朱弁筆下的金國初期的五臺山情況",
+   "author": "Gimello,Robert M.",
+   "journal": "中華佛學學報",
+   "vol": "7 1994.07[民83.07]",
+   "page": "頁501-612",
+   "pdf": true
+  },
+  {
+   "title": "印順長老的護教思想與現代社會:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁左7-10",
+   "pdf": true
+  },
+  {
+   "title": "阿含經集成與大乘經典源流的研究:",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁1-28",
+   "pdf": true
+  },
+  {
+   "title": "蟻垤經初探:",
+   "author": "高明道",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁29-74",
+   "pdf": true
+  },
+  {
+   "title": "譬喻佛典之研究﹣﹣撰集百緣經､賢愚經､雜寶藏經､大莊嚴論經:",
+   "author": "丁敏",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁75-120",
+   "pdf": true
+  },
+  {
+   "title": "初期佛教空之法說及義說:",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁121-167",
+   "pdf": true
+  },
+  {
+   "title": "關於緣起思想形成與發展的詮釋學考察:",
+   "author": "傅偉勳",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁169-199",
+   "pdf": true
+  },
+  {
+   "title": "「大藏目錄」與「藍本入藏目錄」比較分析:",
+   "author": "釋成觀",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁201-233",
+   "pdf": true
+  },
+  {
+   "title": "東晉道安思想析論:",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁235-285",
+   "pdf": true
+  },
+  {
+   "title": "唐代彌勒信仰與政治關係的一側面﹣﹣唐朝皇室對彌勒信仰的態度:",
+   "author": "汪娟",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁287-296",
+   "pdf": true
+  },
+  {
+   "title": "延壽的戒律思想初探:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁297-311",
+   "pdf": true
+  },
+  {
+   "title": "十牛圖頌所展示的禪的實踐與終極關懷:",
+   "author": "吳汝鈞",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁313-340",
+   "pdf": true
+  },
+  {
+   "title": "「菩提道燈難處釋」探微:",
+   "author": "陳玉蛟",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁341-359",
+   "pdf": true
+  },
+  {
+   "title": "A Review of Metaphysics: East & West:東西方形上學的評論",
+   "author": "稻田龜男",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁361-378",
+   "pdf": true
+  },
+  {
+   "title": "Zen and Western Psychotherapy: Nirvanic Transcendence and Samsaric Fixation:禪與西方精神治療﹣﹣涅槃超脫與生死固執",
+   "author": "Wawrytko,Sandra A.",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁451-495",
+   "pdf": true
+  },
+  {
+   "title": "「起信論」與扶南大乘:",
+   "author": "印順",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁1-16",
+   "pdf": true
+  },
+  {
+   "title": "十善業道是菩薩戒的共軌論:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁17-40",
+   "pdf": true
+  },
+  {
+   "title": "梵本「因明入正理論」--因三相的梵語原文和玄奘的漢譯:",
+   "author": "巫白慧",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁41-57",
+   "pdf": true
+  },
+  {
+   "title": "禪宗「見性」思想的發展與定型:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁59-73",
+   "pdf": true
+  },
+  {
+   "title": "佛教中國化過程之研究:",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁75-95",
+   "pdf": true
+  },
+  {
+   "title": "「偽經」與觀音信仰:",
+   "author": "于君方",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁97-135",
+   "pdf": true
+  },
+  {
+   "title": "「障道法」探源:",
+   "author": "高明道",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁137-242",
+   "pdf": true
+  },
+  {
+   "title": "支道林生平事蹟考:",
+   "author": "王曉毅",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁243-271",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教史前期:",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁273-314",
+   "pdf": true
+  },
+  {
+   "title": "當代臺灣佛教變遷之考察:",
+   "author": "王順民",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁315-343",
+   "pdf": true
+  },
+  {
+   "title": "淨影寺慧遠的淨土思想:",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁345-371",
+   "pdf": true
+  },
+  {
+   "title": "就「華嚴法界觀門」論華嚴思想之演變:",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁373-396",
+   "pdf": true
+  },
+  {
+   "title": "百年來中國因明學的研究概況:",
+   "author": "姚南強",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁397-415",
+   "pdf": true
+  },
+  {
+   "title": "美國「禪定與教育」博士論文之簡析:",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁417-453",
+   "pdf": true
+  },
+  {
+   "title": "A Pre-Buddhist Meditation System and its Early Modifications by Gotama the Bodhisattva (Ⅰ):論四禪--喬達摩菩薩如何改定此一佛教前已有的法門",
+   "author": "Mukherjee,Biswadeb",
+   "journal": "中華佛學學報",
+   "vol": "8 1995.07[民84.07]",
+   "page": "頁455-481",
+   "pdf": true
+  },
+  {
+   "title": "智者的圓頓思想:",
+   "author": "郭朝順",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁121-147",
+   "pdf": true
+  },
+  {
+   "title": "印度中觀學的四句邏輯:",
+   "author": "吳汝鈞",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁149-172",
+   "pdf": true
+  },
+  {
+   "title": "「觀音玄義」性惡問題之探討:",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁173-191",
+   "pdf": true
+  },
+  {
+   "title": "唐代彌勒信仰與佛教諸宗派的關係:",
+   "author": "汪娟",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁193-231",
+   "pdf": true
+  },
+  {
+   "title": "道世與「法苑珠林」:",
+   "author": "陳昱珍",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁233-261",
+   "pdf": true
+  },
+  {
+   "title": "「維摩詰經」與中國文人､文學､藝術:",
+   "author": "王志楣",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁263-297",
+   "pdf": true
+  },
+  {
+   "title": "西遊記若干情節的本源十一探:",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁299-317",
+   "pdf": true
+  },
+  {
+   "title": "The Platfrom Sutra of the Sixth Patriarch:六祖壇經的思想",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁319-340",
+   "pdf": true
+  },
+  {
+   "title": "The Poetics of Ch'an: Upayic Poetry and its Taoist Enrichment:禪詩論﹣﹣方便善巧的禪詩偈頌及其道家豐富蘊蓄",
+   "author": "Wawrytko,Sandra A.",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁341-378",
+   "pdf": true
+  },
+  {
+   "title": "再談「浮屠」與「佛」:",
+   "author": "季羨林",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁19-30",
+   "pdf": true
+  },
+  {
+   "title": "佛教中的「多聞」概念--佛學與學佛問題的展開:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁31-48",
+   "pdf": true
+  },
+  {
+   "title": "緣起不能破﹣﹣宗喀巴對中觀緣起學說的肯定:",
+   "author": "王堯",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁49-66",
+   "pdf": true
+  },
+  {
+   "title": "初期佛教「空之法說及義說」:",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁67-107",
+   "pdf": true
+  },
+  {
+   "title": "宋元時期佛儒交融思想探微:",
+   "author": "賴永海",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁109-119",
+   "pdf": true
+  },
+  {
+   "title": "現代臺灣佛教的學術研究:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "5 1992.07[民81.07]",
+   "page": "頁1-18",
+   "pdf": true
+  },
+  {
+   "title": "從「三聚淨戒」論菩薩戒的時空適應:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "戒律與禪定:",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁31-54",
+   "pdf": true
+  },
+  {
+   "title": "從歷史與文化背景看佛教戒律在華消沈的原因:",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁55-71",
+   "pdf": true
+  },
+  {
+   "title": "大小兼受戒、單受菩薩戒與無戒之戒--中日佛教戒律觀的評較考察:",
+   "author": "傅偉勳",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁73-101",
+   "pdf": true
+  },
+  {
+   "title": "略論大乘「大般涅槃經」的傳譯:",
+   "author": "王邦雄",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁103-127",
+   "pdf": true
+  },
+  {
+   "title": "「頻申欠呿」略考:",
+   "author": "高明道",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁129-185",
+   "pdf": true
+  },
+  {
+   "title": "「正理門論」探微:",
+   "author": "姚南強",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁187-205",
+   "pdf": true
+  },
+  {
+   "title": "漢魏佛教與何晏玄學關係之探索:",
+   "author": "王曉毅",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁207-217",
+   "pdf": true
+  },
+  {
+   "title": "淨影寺慧遠的判教學說:",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁219-235",
+   "pdf": true
+  },
+  {
+   "title": "淨覺及其「『注』般若波羅蜜多心經」與其校本:",
+   "author": "楊曾文",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁237-261",
+   "pdf": true
+  },
+  {
+   "title": "胡適與印度友人師覺月:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁263-278",
+   "pdf": true
+  },
+  {
+   "title": "湛然理具思想之探討:",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁279-301",
+   "pdf": true
+  },
+  {
+   "title": "「法苑珠林」所引外典之研究:",
+   "author": "陳昱珍",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁303-328",
+   "pdf": true
+  },
+  {
+   "title": "阿底峽「菩提道燈」內容研究:",
+   "author": "張福成",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁329-349",
+   "pdf": true
+  },
+  {
+   "title": "談戒與持戒:Talking about precepts and Practicing precepts",
+   "author": "鄭振煌",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁351-389",
+   "pdf": true
+  },
+  {
+   "title": "Atta, Niratta, and Anatta in the early Buddhist literature:初期佛教文獻的Atta、Niratta 和Anatta",
+   "author": "Mukherjee,Biswadeb",
+   "journal": "中華佛學學報",
+   "vol": "6 1993.07[民82.07]",
+   "page": "頁391-424",
+   "pdf": true
+  },
+  {
+   "title": "南､北傳「十八愛行」之法說及義說:",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁1-23",
+   "pdf": true
+  },
+  {
+   "title": "印度部派佛教的分立與師資傳承的研究:",
+   "author": "林崇安",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁25-46",
+   "pdf": true
+  },
+  {
+   "title": "試論「俱舍論」在佛教思想史中之價值:",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁47-67",
+   "pdf": true
+  },
+  {
+   "title": "「聲聞地」之「資糧論」的三重結構:",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁69-82",
+   "pdf": true
+  },
+  {
+   "title": "大乘二十二問:",
+   "author": "曇曠",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁83-116",
+   "pdf": true
+  },
+  {
+   "title": "「大乘起信論」義理新探:",
+   "author": "傅偉勳",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁117-147",
+   "pdf": true
+  },
+  {
+   "title": "六祖壇經的思想:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁149-164",
+   "pdf": true
+  },
+  {
+   "title": "從智顗的「摩訶止觀」看中華佛教對印度禪學的吸收與改造模式:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁165-184",
+   "pdf": true
+  },
+  {
+   "title": "禪的詭論和邏輯:",
+   "author": "成中英",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁185-207",
+   "pdf": true
+  },
+  {
+   "title": "「發心」在漢藏佛學中之意義及其在宗教實踐上之心理功能:",
+   "author": "陳玉蛟",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁209-235",
+   "pdf": true
+  },
+  {
+   "title": "僧叡思想研究:",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁237-260",
+   "pdf": true
+  },
+  {
+   "title": "論陳垣《中國佛教史籍概論》:",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁261-300",
+   "pdf": true
+  },
+  {
+   "title": "The Unifying of Rozogs Pa Chen Po and Ch'an:西藏大圓滿教義跟中國禪法的融合",
+   "author": "Barber,A. W.",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁301-318",
+   "pdf": true
+  },
+  {
+   "title": "Dao-xuan's Collection of Miracle Stories about Supernatural Monks (Shen-Seng gan-Tong lu): An Analysis of its Sources:道宣神僧感通錄資料來源分析",
+   "author": "笐原亨一",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁319-379",
+   "pdf": true
+  },
+  {
+   "title": "The Problems of the \"Atyantika\" in Kuei-chi's PPHV (Prajnapara mita-hrdaya-sutra-vyakhyana):窺基所著「心經幽贊」中的「阿顛底迦」的諸問題",
+   "author": "葉阿月",
+   "journal": "中華佛學學報",
+   "vol": "3 1990.04[民79.04]",
+   "page": "頁381-401",
+   "pdf": true
+  },
+  {
+   "title": "明末的唯識學者及其思想:",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁1-41",
+   "pdf": true
+  },
+  {
+   "title": "宗密傳法世系的再檢討:",
+   "author": "冉雲華",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁43-57",
+   "pdf": true
+  },
+  {
+   "title": "觀音菩薩與亞洲佛教:",
+   "author": "巴宙",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁59-79",
+   "pdf": true
+  },
+  {
+   "title": "僧肇思想之背景及其淵源:",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁81-121",
+   "pdf": true
+  },
+  {
+   "title": "印度大乘佛教思想的特色:",
+   "author": "吳汝鈞",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁123-135",
+   "pdf": true
+  },
+  {
+   "title": "壇經與六祖禪畫:",
+   "author": "吳永猛",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁137-152",
+   "pdf": true
+  },
+  {
+   "title": "中國古代佛教寺院的順俗政策:",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁153-180",
+   "pdf": true
+  },
+  {
+   "title": "宗喀巴「現觀莊嚴論金鬘疏」「大乘廿僧」釋義:",
+   "author": "陳玉蛟",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁181-228",
+   "pdf": true
+  },
+  {
+   "title": "禪宗的體用研究:",
+   "author": "杜松柏",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁229-243",
+   "pdf": true
+  },
+  {
+   "title": "試分析印度「六師」之思想:",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁245-279",
+   "pdf": true
+  },
+  {
+   "title": "大慧宗杲禪師禪法之特色:",
+   "author": "鄧克銘",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁281-293",
+   "pdf": true
+  },
+  {
+   "title": "湼槃變相研究:",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁295-326",
+   "pdf": true
+  },
+  {
+   "title": "Understanding Religion from the Outside:從客觀的立場理解宗教",
+   "author": "Swain,Charles W.",
+   "journal": "中華佛學學報",
+   "vol": "1 1987.03[民76.03]",
+   "page": "頁352-339+327",
+   "pdf": true
+  },
+  {
+   "title": "龍樹「迴諍論」中「量」之理論的研究:",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁111-142",
+   "pdf": true
+  },
+  {
+   "title": "「現觀莊嚴論」初探:",
+   "author": "陳玉蛟",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁157-212",
+   "pdf": true
+  },
+  {
+   "title": "TSO-CH'AN:坐禪",
+   "author": "釋聖嚴",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁359-387",
+   "pdf": true
+  },
+  {
+   "title": "契嵩思想研究:佛教思想與儒家學說之交涉:",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁213-240",
+   "pdf": true
+  },
+  {
+   "title": "The Emergence of Ch'an Buddhism (A Revisionist Perspective):禪宗起源新探",
+   "author": "Swain,Charles W.",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁389-399",
+   "pdf": true
+  },
+  {
+   "title": "僧史所載中國沙門堅守戒規或天竺傳統的各類實例:",
+   "author": "曹仕邦",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁325-357",
+   "pdf": true
+  },
+  {
+   "title": "李卓吾的生平與佛教思想:",
+   "author": "江燦騰",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁267-323",
+   "pdf": true
+  },
+  {
+   "title": "李唐名相姚崇與佛教:",
+   "author": "陳祚龍",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁241-265",
+   "pdf": true
+  },
+  {
+   "title": "「月喻經」的研究:以「瑜伽師地論」有關部分為主:",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁143-155",
+   "pdf": true
+  },
+  {
+   "title": "大乘二十二問之研究:",
+   "author": "巴宙",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁65-110",
+   "pdf": true
+  },
+  {
+   "title": "以四部阿含經為主綜論原始佛教之我與無我:",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "2 1988.10[民77.10]",
+   "page": "頁1-63",
+   "pdf": true
+  },
+  {
+   "title": "Beyond Lineage Orthodoxy: Yongming Yanshou&apos;s Model of Chan as Bodhisattva Cultivation:超越法脈傳承之正統性--永明延壽所提倡的「菩薩行之禪風」範例",
+   "author": "魏雅博",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁1-31",
+   "pdf": true
+  },
+  {
+   "title": "Rebirth in the Lotus: Song Dynasty Lotus Sūtra Devotion and Pure Land Aspiration in Zongxiao&apos;s Fahua Jing Xianying Lu:法華信仰中的淨土往生--宗曉《法華經顯應錄》的法華信仰與往生淨土",
+   "author": "高澤民",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁33-65",
+   "pdf": true
+  },
+  {
+   "title": "Zongfeng Mingben and the Case of the Disappearing Laywomen:中峰明本與女居士的難題",
+   "author": "賀耐嫻",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁67-88",
+   "pdf": true
+  },
+  {
+   "title": "Dependent Co-evolution: Kropotkin&apos;s Theory of Mutual Aid and Its Appropriation by Chinese Buddhists:互助緣起--論民國佛教界對克魯泡特金之互助論的轉用",
+   "author": "芮哲",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁89-112",
+   "pdf": true
+  },
+  {
+   "title": "Revisiting the Notion of Zong: Contextualizing the Dharma Drum Lineage of Modern Chan Buddhism:再訪「宗」的概念--現代禪佛教的法鼓宗",
+   "author": "俞永峯",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁113-151",
+   "pdf": true
+  },
+  {
+   "title": "Humanizing the Study of Late Ming Buddhism:明末佛教研究的人性化",
+   "author": "艾靜文",
+   "journal": "中華佛學學報",
+   "vol": "26  2013.07[民102.07]",
+   "page": "頁153-185",
+   "pdf": true
+  },
+  {
+   "title": "人本的佛法與人本為中心的佛教--論印順導師「人間佛教」之本懷:Buddhadharma for People and Human-oriented Buddhism: A Discussion of the Original Concerns of Ven. Yinshun's \"Humanistic Buddhism\"",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁1-18",
+   "pdf": true
+  },
+  {
+   "title": "印順導師之部派佛教思想論(1)--三世有與現在有:Ven. Yinshun's Theory of Sectarian Buddhist Thought (Ⅰ): Existence in the Three Periods and Existence in the Present",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁19-47",
+   "pdf": true
+  },
+  {
+   "title": "「大般若經．第十五會．靜慮波羅蜜多分」的禪修教授--做為佛典「摘要寫作」的一個練習:Meditative Practices of the 15th Assembly of the Prajnaparamita-Sutras",
+   "author": "蔡耀明",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁49-93",
+   "pdf": true
+  },
+  {
+   "title": "敦煌石室「心經」音寫抄本校釋序說:The Annotation of a Phonetic Transcription Manuscript of the Heart Sutra from Dunhuang",
+   "author": "萬金川",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁95-121",
+   "pdf": true
+  },
+  {
+   "title": "吳越諸王(893-978)與佛教:The Kings of Wuyue (893-978) and Buddhism",
+   "author": "黃繹勳",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁123-147",
+   "pdf": true
+  },
+  {
+   "title": "神通寺四門塔探源:A Study of the Origins of the Four Gate Pagoda of Shentong Monastery",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁149-172",
+   "pdf": true
+  },
+  {
+   "title": "論「五味半滿相成」所建構的天臺判教體系:A Discussion of the Tiantai Doctrinal Classification System as Constructed by the \"Five Flavors: Mutual Achievement of the Partial and Complete\"",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁173-213",
+   "pdf": true
+  },
+  {
+   "title": "太虛、圓瑛二大師與臺灣佛教界:Taiwan Buddhism: Taixu and Yuanying",
+   "author": "釋慧嚴",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁215-242",
+   "pdf": true
+  },
+  {
+   "title": "In-laws of the Buddha as Depicted in Pali Sources:巴利典籍所述佛陀之姻親",
+   "author": "Sarao,K. T. S.",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁243-266",
+   "pdf": true
+  },
+  {
+   "title": "Expressing the Fallacy from the Viewpoint of a Pervader: Nagarjuna and the Putative Consequences of Svabhava:從能遍的觀點論證錯誤認知的思維方式--龍樹和虛設自性的後果",
+   "author": "Magee,William",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁267-303",
+   "pdf": true
+  },
+  {
+   "title": "擺脫文化束縛的佛教宗教性之傳達--由東南及東亞到全球時代的轉換:Culture-Free Transmission of Buddhistic Spirituality: Global-Era Transformations from Southeast and East Asia",
+   "author": "市村承秉",
+   "journal": "中華佛學學報",
+   "vol": "17 2004.07[民93.07]",
+   "page": "頁305-338",
+   "pdf": true
+  },
+  {
+   "title": "Defining the Chinese Buddhist Canon: Its Origin, Periodization, and Future:關於漢文大藏經的幾個問題",
+   "author": "方廣錩",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁1-34",
+   "pdf": true
+  },
+  {
+   "title": "Reexamining the Categories and Canons of Chinese Buddhist Healing:重新審視中國佛教醫療的類別與文獻",
+   "author": "皮爾斯‧塞爾蓋羅",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁35-66",
+   "pdf": true
+  },
+  {
+   "title": "Conceptions and Attitudes towards Contemplative Practice within the Early Traditions of Chan Buddhism:初期禪宗對於修觀的概念及態度",
+   "author": "Poceski, Mario",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁67-116",
+   "pdf": true
+  },
+  {
+   "title": "Addressing the Mind: Developments in the Culture of Confession in Sui-Tang China:針對心靈--中國隋唐懺悔文化的發展",
+   "author": "韋聞笛",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁117-152",
+   "pdf": true
+  },
+  {
+   "title": "Disorienting Medicine: Fayan Wenyi&apos;s Ten Admonishments for the Lineage:瞑眩--法眼文益之《宗門十規論》",
+   "author": "本博澤",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁153-188",
+   "pdf": true
+  },
+  {
+   "title": "A Well-Reasoned Dharma: Buddhist Logic in Republican China:理性的法--民國時期的佛教邏輯",
+   "author": "Aviv, Eyal",
+   "journal": "中華佛學學報",
+   "vol": "28  2015.07[民104.07]",
+   "page": "頁189-234",
+   "pdf": true
+  },
+  {
+   "title": "Introduction: The Creation of Buddhist Sacred Sites in China:",
+   "author": "Yü, Chün-fang",
+   "journal": "中華佛學學報",
+   "vol": "29  2016.07[民105.07]",
+   "page": "頁1-8",
+   "pdf": true
+  },
+  {
+   "title": "Meeting the Inhabitants of the Necropolis at Baoshan:認識寶山塔林的居民",
+   "author": "韋聞笛",
+   "journal": "中華佛學學報",
+   "vol": "29  2016.07[民105.07]",
+   "page": "頁9-49",
+   "pdf": true
+  },
+  {
+   "title": "Monumental Stone Sūtra Carvings in China and Indian Pilgrim Sites:中國與印度聖地的刻經石",
+   "author": "溫狄婭",
+   "journal": "中華佛學學報",
+   "vol": "29  2016.07[民105.07]",
+   "page": "頁51-89",
+   "pdf": true
+  },
+  {
+   "title": "The Temple of the Prince Who Torched His Body and the Making of Mount Wutai:王子燒身寺與五臺山的形成",
+   "author": "安素珊",
+   "journal": "中華佛學學報",
+   "vol": "29  2016.07[民105.07]",
+   "page": "頁91-127",
+   "pdf": true
+  },
+  {
+   "title": "The General and the Bodhisattva: Commander Hou Jigao Travels to Mount Putuo:將軍與菩薩--侯繼高總兵遊普陀山",
+   "author": "馬德偉",
+   "journal": "中華佛學學報",
+   "vol": "29  2016.07[民105.07]",
+   "page": "頁129-161",
+   "pdf": true
+  },
+  {
+   "title": "The Scripture on Saving and Protecting Body and Life: An Introduction and Translation:《救護身命經》之介紹與英譯",
+   "author": "羅恩",
+   "journal": "中華佛學學報",
+   "vol": "27  2014.07[民103.07]",
+   "page": "頁1-34",
+   "pdf": true
+  },
+  {
+   "title": "A Buddhist Critique of Scientism:佛教的唯科學主義批判",
+   "author": "韓光",
+   "journal": "中華佛學學報",
+   "vol": "27  2014.07[民103.07]",
+   "page": "頁35-57",
+   "pdf": true
+  },
+  {
+   "title": "The Chinese Buddhist Ritual Field: Common Public Rituals in PRC Monasteries Today:中國的佛事場域--中華人民共和國佛寺常見的大眾儀式",
+   "author": "道格拉斯．鳩爾道",
+   "journal": "中華佛學學報",
+   "vol": "27  2014.07[民103.07]",
+   "page": "頁59-127",
+   "pdf": true
+  },
+  {
+   "title": "Realization through Hearing in Chan Literature:禪宗語錄公案中耳根圓通及其應用",
+   "author": "釋果鏡",
+   "journal": "中華佛學學報",
+   "vol": "27  2014.07[民103.07]",
+   "page": "頁129-179",
+   "pdf": true
+  },
+  {
+   "title": "A Study of the Concept of Jieti \"The Essence of the Precepts\" in Daoxuan&apos;s (596~667) Vinaya",
+   "author": "Newhall, Thomas",
+   "journal": "中華佛學學報",
+   "vol": "27  2014.07[民103.07]",
+   "page": "頁181-208",
+   "pdf": true
+  },
+  {
+   "title": "印度中期中觀思想家的佛身倫--以月稱和清辨為中心:Theories of the Buddha Body Held by Middle Period Madhyamika Thinkers: Candrakirti and Bhaviveka",
+   "author": "釋見弘",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁1-29",
+   "pdf": true
+  },
+  {
+   "title": "初唐時期佛性論爭的兩個相關論題--定性二乘和變易生死:Two Controversial Topics in the Buddha-Nature Debates of Early Tang:\"Two Vehicles of Determinate Lineage\" and \" Existence Qua Transformantion\"",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁31-73",
+   "pdf": true
+  },
+  {
+   "title": "麥積山133窟10號造像碑的圖像源流與宗教內涵:Pictorial Origins and Religious Content of Maiji Shan Carved Tablet No.10, Cave 133",
+   "author": "陳清香",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁75-104",
+   "pdf": true
+  },
+  {
+   "title": "《傳燈玉英集》卷十四補闕和研究--宋士大夫王隨刪節《景德傳燈錄》之探討:A Study of the Fourteenth Fascicle of the Chuandeng Yuying Ji",
+   "author": "黃繹勳",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁105-137",
+   "pdf": true
+  },
+  {
+   "title": "清代臺灣傳統佛教伽藍建築在日治時期的延續:Traditional Buddhist Monasteries in Taiwan during the Qing Dynasty and Their Transformation under Japanese Colonialism",
+   "author": "黃蘭翔",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁139-206",
+   "pdf": true
+  },
+  {
+   "title": "A Controversy Unveiled: How Many Sutra Passages are Indicated as Requiring Interpretation in Candrakirti's Madhyamakavatarabhasya?:爭議之揭示--月稱「入中論自釋」中有幾種不了義之經教？",
+   "author": "Magee,William",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁207-272",
+   "pdf": true
+  },
+  {
+   "title": "Perception, Conceptual Construction and Yogic Cognition According to Kamalasila's Epistemology:蓮華戒認識論中的直接知覺、概念作用和瑜伽行者的認識",
+   "author": "船山徹",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁273-297",
+   "pdf": true
+  },
+  {
+   "title": "Techniques for Collating Multiple Text Versions in the Digitization of Classical Texts: The CBETA Taisho Buddhist Canon as an Example:數位化古籍校勘版本處理技術--以CBETA大正藏電子佛典為例",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁299-325",
+   "pdf": true
+  },
+  {
+   "title": "羅什及び玄奘三□の訳した『般若心秓』とその文化的影響:羅什及玄奘所譯之《般若心經》與其文化方面的影響=The Heart Sutra as Translated by Kumarajiva and Hsuan-Tsang and Its Cultural Influences",
+   "author": "市村承秉",
+   "journal": "中華佛學學報",
+   "vol": "18 2005.07[民94.07]",
+   "page": "頁327-362",
+   "pdf": true
+  },
+  {
+   "title": "Chos sbyin gyi mdo--Bhik□u□ī Dharmadinnā Proves Her Wisdom:法布施的教說--比丘尼達摩提那的智慧",
+   "author": "無著比丘",
+   "journal": "中華佛學學報",
+   "vol": "24  2011.07[民100.07]",
+   "page": "頁3-33",
+   "pdf": true
+  },
+  {
+   "title": "The Historical Relationship between the Two Chinese Sa□yuktāgama Translations:《雜阿含經》和《別譯雜阿含經》的歷史關係",
+   "author": "Bucknell, Roderick S.",
+   "journal": "中華佛學學報",
+   "vol": "24  2011.07[民100.07]",
+   "page": "頁35-70",
+   "pdf": true
+  },
+  {
+   "title": "Chinese Tiantai Doctrine on Insentient Things&apos; Buddha-Nature:天臺宗無情佛性思想",
+   "author": "釋見額",
+   "journal": "中華佛學學報",
+   "vol": "24  2011.07[民100.07]",
+   "page": "頁71-104",
+   "pdf": true
+  },
+  {
+   "title": "Chan-Pure Land: An Interpretation of Xu Yun&apos;s (1840~1959) Oral Instructions:禪與淨土：虛雲言教之詮釋",
+   "author": "Gauci, Damian John",
+   "journal": "中華佛學學報",
+   "vol": "24  2011.07[民100.07]",
+   "page": "頁105-119",
+   "pdf": true
+  },
+  {
+   "title": "Mahāmaitrī in a Mahāyāna Sūtra in Khotanese--Continuity and Innovation in Buddhist Meditation:由于闐之大乘經典談大慈--佛教禪修的延續與創新",
+   "author": "Martini, Giuliana",
+   "journal": "中華佛學學報",
+   "vol": "24  2011.07[民100.07]",
+   "page": "頁121-193",
+   "pdf": true
+  },
+  {
+   "title": "Some Reflections on the Mark-up and Analysis of Dūnhuáng Manuscripts: Exemplified by the Platform Sūtra:檢視敦煌寫本的標記與分析--以六祖壇經為例",
+   "author": "Anderl, Christoph",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁7-50",
+   "pdf": true
+  },
+  {
+   "title": "Bibliographical Notes on Buddhist Temple Gazetteers, Their Prefaces and Their Relationship to the Buddhist Canon:書目註記--佛寺志及其序言與之於佛教藏經的關係",
+   "author": "馬德偉",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁51-86",
+   "pdf": true
+  },
+  {
+   "title": "The Corpus Search and Results Handling System Glossa--A Description:語料庫搜尋與結果處理系統Glossa之說明",
+   "author": "Johannessen, Janne Bondi",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁87-104",
+   "pdf": true
+  },
+  {
+   "title": "The XML-Based DDB: The DDB Document Structure and the P5 Dictionary Module; New Developments of DDB Interoperation and Access:以可擴展標記語言(XML)為基礎的電子佛教字典(DDB)：DDB文件結構與P5字典模組；DDB相互操作與取用技術的新發展",
+   "author": "永崎研宣",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁105-128",
+   "pdf": true
+  },
+  {
+   "title": "Verb Semantics and Argument Realization in Pre-modern Japanese: A Corpus Based Study:前現代日語的動詞語意與論元體現：以語料庫為基礎的研究",
+   "author": "Russell, Kerri L",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁129-148",
+   "pdf": true
+  },
+  {
+   "title": "A Relational Database for Text-Critical Studies:經文鑑別研究之關係資料庫",
+   "author": "Simson, Wojciech",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁149-166",
+   "pdf": true
+  },
+  {
+   "title": "Digital Editions of Premodern Chinese Texts: Methods and Problems--Exemplified Using the Daozang Jiyao道藏輯要:前現代漢語文本的數位版本：方法與問題--以《道藏輯要》為例",
+   "author": "維習安",
+   "journal": "中華佛學學報",
+   "vol": "25  2012.07[民101.07]",
+   "page": "頁167-193",
+   "pdf": true
+  },
+  {
+   "title": "A Tentative Exploration into the Development of Master Sheng Yen&apos;s Chan Teachings:初探聖嚴法師禪法之演化",
+   "author": "俞永峰",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁3-38",
+   "pdf": true
+  },
+  {
+   "title": "Saccaka&apos;s Challenge--A Study of the Sa□yukta-āgama Parallel to the Cūļasaccaka-sutta in Relation to the Notion of Merit Transfer:薩遮迦的質疑--由《雜阿含經》與《中部尼柯耶．薩遮迦小經》的平行研究談福德轉化的意義",
+   "author": "無著比丘",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁39-69",
+   "pdf": true
+  },
+  {
+   "title": "The Expression \"The Myriad Dharmas are Only Consciousness\" in Early 20□ Century Chinese Buddhism:二十世紀初期中國佛教對萬法唯識之表述",
+   "author": "Hammerstrom, Erik J.",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁71-92",
+   "pdf": true
+  },
+  {
+   "title": "Facets of the Intellectual History in India and Tibet Concerning Meditating on a Mere Absence:印度與西藏對於禪修「唯遮」的思想歷史面向",
+   "author": "Hopkins, Jeffrey",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁93-115",
+   "pdf": true
+  },
+  {
+   "title": "A Study of the Development of Yongjia Xuanjue&apos;s Biographies: With a Focus on Their Relationship to the Concept of School (Zong 宗) in Chinese Buddhism:永嘉玄覺傳記之研究--兼談其傳記中之宗派思想",
+   "author": "黃繹勳",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁117-129",
+   "pdf": true
+  },
+  {
+   "title": "The Yoga Tantras and the Social Context of Their Transmission to Tibet:瑜伽密續與其傳播至西藏的社會背景",
+   "author": "Weinberger, Steven",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁131-166",
+   "pdf": true
+  },
+  {
+   "title": "Developing a Neum Scribe for Sino-Japanese Buddhist Musical Notations:為中國日本佛教樂譜創立紐姆紀譜法",
+   "author": "馬塋璠",
+   "journal": "中華佛學學報",
+   "vol": "23  2010.07[民99.07]",
+   "page": "頁167-181",
+   "pdf": true
+  },
+  {
+   "title": "&apos;分別&apos;>&apos;分別&apos;>&apos;無分別&apos; &apos;無分別&apos;:Discrimination and Non-discrimination: Non-discrimination>Discrimination>Discrimination>Non-discrimination, Non-discrimination\"",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁27-46",
+   "pdf": true
+  },
+  {
+   "title": "關於禪宗牧牛圖的兩個問題--從《增一阿含經》〈牧牛品〉說起:Two Issues with Regard to the Chan Ox-herding Pictures: Beginning with the \"Ox-herding\" Chapter in the Āgamas",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁47-71",
+   "pdf": true
+  },
+  {
+   "title": "資訊時代的阿含研究--以《阿含辭典》數位化研究為例:Āgama Research in the Information Age: The Digitization of the Āgama Dictionary",
+   "author": "杜正民",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁73-105",
+   "pdf": true
+  },
+  {
+   "title": "巴利數位文獻資源現況評述與未來展望--兼談「初期佛教聖典多語多本平行語料庫」的幾點構想:A Discussion of the Present Situation and Future Prospects of Pāli Digital Resources: With Some Remarks on the \"Multilingual Parallel Corpus of Early Buddhist Texts\"",
+   "author": "蔡奇林",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁107-146",
+   "pdf": true
+  },
+  {
+   "title": "早期佛教文獻中所載一個典型佛教修行道架構及其來源之探討--以漢譯四《阿含經》和巴利四尼柯耶為代表:A Stereotyped Structure of the Path in Early Buddhist Literature: A Comparative Study of the Four Pāli Nikāyas and Four Chinese Āgamas",
+   "author": "越建東",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁147-178",
+   "pdf": true
+  },
+  {
+   "title": "當佛教遇見耆那教--初期佛教聖典中的宗教競爭與詮釋效應:Buddhism&apos;s Encounter with Jainism: Religious Competition and Hermeneutic Effect",
+   "author": "呂凱文",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁179-207",
+   "pdf": true
+  },
+  {
+   "title": "孤山智圓《金剛錍顯性錄》中的山外主張--色不具三千:Gushan Zhiyuan&apos;s Off-Mountain Position in His Jin&apos;gang Pi Xianxing Lu: Rūpa does not Contain the Three Thousand",
+   "author": "楊惠南",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁209-231",
+   "pdf": true
+  },
+  {
+   "title": "孤山智圓與其時代--佛教與宋朝新王道的關係:Zhiyuan and His Times: The Relationship between Buddhism and Benevolent Government in the Song",
+   "author": "蔣義斌",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁233-270",
+   "pdf": true
+  },
+  {
+   "title": "天臺五停心觀之探討:A Discussion of the Five Types of Calming Meditation in Tiantai Buddhism",
+   "author": "陳英善",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁271-292",
+   "pdf": true
+  },
+  {
+   "title": "關於Candrakīrti的二諦說中的幾個問題(上):Several Issues Regarding Candrakīrti&apos;s Theory of Two Truths (Ⅰ)",
+   "author": "釋見弘",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁293-324",
+   "pdf": true
+  },
+  {
+   "title": "佛教心心所與現代心理學:The Mind and Mental Concomitants in Buddhism and Modern Psychology",
+   "author": "蔡伯郎",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁325-349",
+   "pdf": true
+  },
+  {
+   "title": "雲岡石窟題材內容和造型風格的源流探索--以佛傳本生因緣故事為例:A Study of the the Artistic Styles in the Yungang Grottoes and Their Subject Matter: Biographies of the Buddha, Jātaka Tales, and Nidāna Tales",
+   "author": "胡文和",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁351-404",
+   "pdf": true
+  },
+  {
+   "title": "川密造像藝術初探:A Preliminary Study of Sculptural Art Relating to Sichuan Esoteric Buddhism",
+   "author": "李巳生",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁405-443",
+   "pdf": true
+  },
+  {
+   "title": "A Tree in the West: Competing Tathāgatagarbha Theories in Tibet:西方之樹--西藏如來藏理論之爭",
+   "author": "Magee, William",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁445-511",
+   "pdf": true
+  },
+  {
+   "title": "序《楊郁文教授七秩紀念集》:Preface to the Commemorative Volume in Honor of Professor Yang Yuwen&apos;s Seventieth Birthday",
+   "author": "李志夫",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁1-2",
+   "pdf": true
+  },
+  {
+   "title": "巴、漢〈入出息念相應〉經群比較:A Comparative Study of the Ānāpānasati Text Clusters in Pāli and Chinese",
+   "author": "王常蒞",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁1-39",
+   "pdf": true
+  },
+  {
+   "title": "從巴赫特窣堵波浮雕圖像探討佛塔建築式樣:A Study of Buddhist Stupa Architectural Styles Based on Carvings of the Bharhut Stupa",
+   "author": "盧惠敏",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁41-64",
+   "pdf": true
+  },
+  {
+   "title": "《佛說無常經》的傳譯與喪葬禮儀:The Translation of the Sutra of Impermanence as Told by the Buddha and its Relation to Funeral Rituals",
+   "author": "白金銑",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁65-103",
+   "pdf": true
+  },
+  {
+   "title": "南北朝時代的佛性學說--中國佛性思想的濫觴:Formation of the Buddha-nature Teaching in China Chinese Buddha-nature Theories of the Fifth and Sixth Centuries",
+   "author": "廖明活",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁105-137",
+   "pdf": true
+  },
+  {
+   "title": "天臺止觀的「持息念」法門及其在天臺佛教中的演變與轉化:Ānāpāna-sm□ti in Tiantai Meditation and its Development and Transformation in Tiantai Buddhism",
+   "author": "賴賢宗",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁139-172",
+   "pdf": true
+  },
+  {
+   "title": "天臺觀音感應論--以《法華玄義》的「感應妙」為中心:The Tiantai Theory of Sympathetic Resonance and Guanyin--The \"Profundity in Sympathetic Resonance\" Chapter of the Fahua Xuanyi",
+   "author": "釋大參",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁173-204",
+   "pdf": true
+  },
+  {
+   "title": "華嚴判教論辨微:A Discussion of Huayan Doctrinal Classification",
+   "author": "吳可為",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁205-225",
+   "pdf": true
+  },
+  {
+   "title": "清初華嚴念佛思想試析--以續法與彭紹升為例:On the Synthesis of Huayan Thought and Pure Land Practice by Early Qing Dynasty Buddhist Scholars",
+   "author": "劉貴傑",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁227-250",
+   "pdf": true
+  },
+  {
+   "title": "《大乘要道密集》與西夏、元朝所傳西藏密法--《大乘要道密集》系列研究導論:Research Series on the Dasheng Yaodao Miji: The Dasheng Yaodao Miji and Tibetan Esoteric Buddhism under the Xixia and Yuan",
+   "author": "沈衛榮",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁251-303",
+   "pdf": true
+  },
+  {
+   "title": "臺南重慶寺的發展歷程與南臺灣藏傳佛教發展關係研究:A Study of the Development of Chongqing Temple in Tainan and its Relationship to the Development of Tibetan Buddhism in Southern Taiwan",
+   "author": "羅娓淑",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁305-330",
+   "pdf": true
+  },
+  {
+   "title": "The Relationship of Buddhist Studies and Area Studies: New Perspectives from Humanities Computing:佛學研究和區域研究的關係--從人文科學電腦應用而來的新觀點",
+   "author": "Germano, David",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁331-348",
+   "pdf": true
+  },
+  {
+   "title": "The Theravāda Tradition and Modern Pāli Scholarship: A Case of \"Lost\" Manuscripts Mentioned in Old Pāli Bibliographical Sources:上座部傳統與當代巴利學界--古老巴利書誌所述及的「已佚失」寫本之個案",
+   "author": "Pecenko, Primoz",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁349-378",
+   "pdf": true
+  },
+  {
+   "title": "Transmission and Enlightenment in Chan Buddhism Seen Through the Platform Sūtra (Liuzu Tanjing六祖壇經):《六祖壇經》所見禪宗之傳法與證悟",
+   "author": "Schlütter, Morten",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁379-410",
+   "pdf": true
+  },
+  {
+   "title": "Entrance Through the Scriptures: Catalogues and Electronic Text as a New Gate to the Buddhist Tradition:佛教研究的新入口--佛教經目與電子全文",
+   "author": "維習安",
+   "journal": "中華佛學學報",
+   "vol": "20  2007.07[民96.07]",
+   "page": "頁411-429",
+   "pdf": true
+  },
+  {
+   "title": "無分別與二諦說:Non-discrimination and the Two Truths",
+   "author": "楊郁文",
+   "journal": "中華佛學學報",
+   "vol": "19  民95.07",
+   "page": "頁3-25",
+   "pdf": true
+  },
+  {
+   "title": "Reflections on Comparative Āgama Studies:關於阿含經比對研究的省思",
+   "author": "無著比丘",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁3-21",
+   "pdf": true
+  },
+  {
+   "title": "The Two Versions of the Other Translation of Sa□yuktāgama:《別譯雜阿含經》之兩個版本",
+   "author": "Bucknell, Roderick S.",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁23-54",
+   "pdf": true
+  },
+  {
+   "title": "Duplicitous Thieves: Ouyi Zhixu&apos;s Criticism of Jesuit Missionaries in Late Imperial China:狡辯的小偷：蕅益智旭在帝制中國晚期對基督徒的批評",
+   "author": "Foulks, Beverley",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁55-75",
+   "pdf": true
+  },
+  {
+   "title": "Taixu&apos;s Youth and Years of Romantic Idealism, 1890-1914:太虛法師早年時期的生平與理想",
+   "author": "郭瑞",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁77-121",
+   "pdf": true
+  },
+  {
+   "title": "The Textual Formation of the Newly Discovered Anban Shouyi Jing:《安般守意經》格義上的新發現",
+   "author": "釋果暉",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁123-143",
+   "pdf": true
+  },
+  {
+   "title": "Yijing&apos;s View on the Bhik□unīs&apos; Standard Robes:義淨對比丘尼制衣的看法",
+   "author": "Heirman, Ann",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁145-158",
+   "pdf": true
+  },
+  {
+   "title": "Jung&apos;s Warnings Against Inflation:榮格對自大的警告",
+   "author": "Hopkins, Jeffrey",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁159-174",
+   "pdf": true
+  },
+  {
+   "title": "Was Lushan Huiyuan a Pure Land Buddhist?--Evidence from His Correspondence with Kumārajīva about Nianfo Practice:廬山慧遠是淨土信仰者嗎？--以慧遠與鳩摩羅什對念佛修行的書信問答為論據",
+   "author": "周文廣",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁175-191",
+   "pdf": true
+  },
+  {
+   "title": "The Tibetan Buddhist Syllogistic Form:藏傳佛教之因明論式",
+   "author": "Perdue, Daniel",
+   "journal": "中華佛學學報",
+   "vol": "21  2008.07[民97.07]",
+   "page": "頁193-211",
+   "pdf": true
+  },
+  {
+   "title": "Literati Chan at the Song Dynasty Court: The Role of Yang Yi in the Creation Chan Identity:宋朝朝廷的文人襌：楊億在襌宗的獨特性之開創中所扮演的重要角色",
+   "author": "魏雅博",
+   "journal": "中華佛學學報",
+   "vol": "34  2021.07[民110.07]",
+   "page": "頁91-159",
+   "pdf": true
+  },
+  {
+   "title": "The Lion&apos;s Roar in Early Buddhism--A Study Based on the Ekottarika-āgama Parallel to the Cū□asīhanāda-sutta:早期佛教之「獅子吼」--《增壹阿含經》與相應於《獅子吼小經》之研究",
+   "author": "無著比丘",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁3-23",
+   "pdf": true
+  },
+  {
+   "title": "“That the Powers of the Buddha Are Common to Disciples...”:聲聞弟子與佛陀的相同之力",
+   "author": "Dessein, Bart",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁25-44",
+   "pdf": true
+  },
+  {
+   "title": "An Inquiry into Master Xuyun&apos;s Experiences of Long-dwelling in Samādhi:虛雲和尚長時住定經驗之探索",
+   "author": "釋惠敏",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁45-67",
+   "pdf": true
+  },
+  {
+   "title": "Chan Master Xuedou and His Remarks on Old Cases in the Record of Master Xuedou at Dongting: A Preliminary Study:《雪竇和尚住洞庭語錄》之「拈古」略探",
+   "author": "黃繹勳",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁69-95",
+   "pdf": true
+  },
+  {
+   "title": "Comparing East Asian and Southeast Asian Buddhism: Looking at Traditional China from the Margins:東亞與東南亞佛教之比較--從邊緣看傳統中國",
+   "author": "馬克瑞",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁97-123",
+   "pdf": true
+  },
+  {
+   "title": "Why Practicing Virtue is Better than Working out: Bodies and Ethics in Indian Buddhism:為何修習道德更勝於理解：印度佛教之身行與倫理",
+   "author": "Powers, John",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁125-152",
+   "pdf": true
+  },
+  {
+   "title": "The Practice of Mahāyāna Si Nianchu in Sixth Century China: Huisi&apos;s Interpretation and Practice of Si Nianchu in His Sui Ziyi Sanmei:中國六世紀的大乘四念處禪法--慧思在《隨自意三昧》中對四念處之詮釋與修法",
+   "author": "王晴薇",
+   "journal": "中華佛學學報",
+   "vol": "22  2009.07[民98.07]",
+   "page": "頁153-177",
+   "pdf": true
+  },
+  {
+   "title": "On the Ekottarikāgama 增壹阿含經 T125 as a Wrok of Zhu Fonian 竺佛念:論《增壹阿含經》的譯者應是竺佛念",
+   "author": "Radich, Michael",
+   "journal": "中華佛學學報",
+   "vol": "30  2017.07[民106.07]",
+   "page": "頁1-31",
+   "pdf": true
+  },
+  {
+   "title": "Astrological Iconography of Planetary Deities in Tang China: Near Eastern and Indian Icons in Chinese Buddhism:唐代中國星曜神祇的占星術圖像--中國佛教中的近東與印度圖像",
+   "author": "康傑夫",
+   "journal": "中華佛學學報",
+   "vol": "30  2017.07[民106.07]",
+   "page": "頁33-88",
+   "pdf": true
+  },
+  {
+   "title": "Bridging the Gap: Zongmi&apos;s Strategies for Reconciling Textual Study and Meditative Practice:會通禪教--宗密融合研教與習禪的策略",
+   "author": "Gregory, Peter N.",
+   "journal": "中華佛學學報",
+   "vol": "30  2017.07[民106.07]",
+   "page": "頁89-124",
+   "pdf": true
+  },
+  {
+   "title": "The Celebration of Congee in East Asian Buddhism:東亞佛教中崇尚粥糜的飲食文化",
+   "author": "杜若彬",
+   "journal": "中華佛學學報",
+   "vol": "30  2017.07[民106.07]",
+   "page": "頁125-168",
+   "pdf": true
+  },
+  {
+   "title": "Innovation and Continuity in the Pure Lands: Pure Land Discourses and Practices at the Taiwanese Buddhist Order Dharma Drum Mountain:淨土的承先與啟後--臺灣法鼓山的淨土主張與修行",
+   "author": "黃穎思",
+   "journal": "中華佛學學報",
+   "vol": "30  2017.07[民106.07]",
+   "page": "頁169-210",
+   "pdf": true
+  },
+  {
+   "title": "\"Structure\" and \"Communitas\" in Po Chu-yi's Tomb Inscription:白居易墓誌銘中的「結構」和「群體」",
+   "author": "笐原亨一",
+   "journal": "中華佛學學報",
+   "vol": "4 1991.07[民80.07]",
+   "page": "頁379-450",
+   "pdf": true
+  },
+  {
+   "title": "Institutional Adaptation of Chinese Buddhism to the Ming-Qing Transition: Two-Lineage Model of Guangji Monastery in Beijing:漢傳佛教對明清變遷的制度性適應--北京廣濟寺的雙宗派模式",
+   "author": "黎培娜",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁89-155",
+   "pdf": true
+  },
+  {
+   "title": "Death, Legacy, and Remembrance: Buddhism in the Mortuary Practices of Palace Eunuchs in the Late Ming:死亡、遺產與紀念--晚明宮廷宦官喪葬中的佛教",
+   "author": "潘清悅",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁157-199",
+   "pdf": true
+  },
+  {
+   "title": "The Jeweled Hairpin: Da'aidao Biqiuni Jing in Sinic Buddhism:步瑤--漢傳佛教中的大愛道比丘尼經",
+   "author": "王星逸",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁201-240",
+   "pdf": true
+  },
+  {
+   "title": "Illusory Substances: Figure Painting and Eulogy in Chan Texts and Monasteries during the Song Dynasty (960~1279):虛幻的實體--宋代禪宗文本和寺廟生活中的人物畫及人物畫讚",
+   "author": "張玉瑜",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁241-291",
+   "pdf": true
+  },
+  {
+   "title": "The Case of \"The Woman Emerging from Samādhi\": Gender and Reception History in a Chan Anthology:出得出不得--禪宗「女子出定」公案的文本起源及宋代的接受史",
+   "author": "鹿歡",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁45-88",
+   "pdf": true
+  },
+  {
+   "title": "Buddhist Monasteries and (Their) Oxen: Daoxuan's Vinaya Commentaries:佛教寺院及(其)牛--道宣的律藏注釋",
+   "author": "Heirman, Ann",
+   "journal": "中華佛學學報",
+   "vol": "37  2024.08[民113.08]",
+   "page": "頁1-43",
+   "pdf": true
+  },
+  {
+   "title": "Xuanzang&apos;s Relationship to the Heart Sūtra in Light of the Fangshan Stele:從房山石碑看玄奘與《心經》的關係",
+   "author": "Attwood, Jayarava",
+   "journal": "中華佛學學報",
+   "vol": "32  2019.11[民108.11]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "The Missing Link: Siṁha Bhikṣu and the Construction of an Indian Chan Lineage, with Special Attention to Zongmi:缺少的環節--師子尊者與宗密對禪宗印度祖師系譜的建構",
+   "author": "Gregory, Peter N.",
+   "journal": "中華佛學學報",
+   "vol": "32  2019.11[民108.11]",
+   "page": "頁31-95",
+   "pdf": true
+  },
+  {
+   "title": "An Old Savior in a New Paradise: Buddha Amitābha in Tang Dayuan&apos;s &apos;New Pure Land&apos;:「新淨土」中的舊拯救者--論唐大圓對阿彌陀佛的詮釋",
+   "author": "孫亞柏",
+   "journal": "中華佛學學報",
+   "vol": "32  2019.11[民108.11]",
+   "page": "頁97-125",
+   "pdf": true
+  },
+  {
+   "title": "Building a Pure Land Lineage: A Study of Zhida&apos;s Play Guiyuan Jing and a Translation of Its Three Paratexts:構建淨土傳燈譜系--智達劇作《歸元鏡》及其副文本譯介",
+   "author": "王萌筱",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁1-47",
+   "pdf": true
+  },
+  {
+   "title": "Emplacing Dizang Bodhisattva on Mt. Jiuhua with Local Dramas during the Late Imperial and Republican Eras (1368~1949):明清至民國時期(1368~1949)地方戲曲中的地藏菩薩與九華山",
+   "author": "歐陽楠",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁49-75",
+   "pdf": true
+  },
+  {
+   "title": "Metaphorical Imagery and the Fashioning of Caodong Identity in Hongzhi Zhengjue&apos;s 宏智正覺 (1091~1157) Commentarial Verses on Old Cases:宏智正覺頌古中隱喻意象與曹洞宗風之形塑",
+   "author": "果幸",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁77-119",
+   "pdf": true
+  },
+  {
+   "title": "The History of Jin Nikāya in Thailand: A Preliminary Study from a Socio-political Perspective:泰國佛教「華宗」之歷史初探--從社會政治學視角",
+   "author": "劉曜憑",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁121-170",
+   "pdf": true
+  },
+  {
+   "title": "The Puhua Si 普華寺: Longing for Trustworthiness and Recognition--Transformations in the Religious Identity and Institutional Affiliation of the Chinese Buddhist Temple in Prato:尋求信賴與認同當中的普華寺--普拉托中國佛寺的宗教身份及其隸屬關係的轉變",
+   "author": "黃曉星",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁171-202",
+   "pdf": true
+  },
+  {
+   "title": "Karma, Charisma, and Community: Karmic Storytelling in a Blue-collar Taiwanese Buddhist Organization:因果、魅力與群體--臺灣藍領居士團體講因果故事方式的個案研究",
+   "author": "芮哲",
+   "journal": "中華佛學學報",
+   "vol": "33  2020.07[民109.07]",
+   "page": "頁203-232",
+   "pdf": true
+  },
+  {
+   "title": "Sūtra of the Unsullied Worthy Girl as Spoken by the Buddha:佛說無垢賢女經",
+   "author": "白思芳",
+   "journal": "中華佛學學報",
+   "vol": "34  2021.07[民110.07]",
+   "page": "頁5-26",
+   "pdf": true
+  },
+  {
+   "title": "An Excerpt from The Precious Scroll of Liu Xiang:《劉香寶卷》節略",
+   "author": "亞天恩",
+   "journal": "中華佛學學報",
+   "vol": "34  2021.07[民110.07]",
+   "page": "頁27-62",
+   "pdf": true
+  },
+  {
+   "title": "The Consumption of Garlic: Vinaya Rules:戒律中之(禁)食用大蒜",
+   "author": "Heirman, Ann",
+   "journal": "中華佛學學報",
+   "vol": "34  2021.07[民110.07]",
+   "page": "頁63-89",
+   "pdf": true
+  },
+  {
+   "title": "The Circuit of the Life Power of Wisdom: Yunqi Zhuhong's Thoughts on Abstention from Killing during the Late-Ming Dynasty:慧命的回路--明末雲棲株宏的不殺生思想",
+   "author": "西村玲",
+   "journal": "中華佛學學報",
+   "vol": "35  2022.07[民111.07]",
+   "page": "頁5-32",
+   "pdf": true
+  },
+  {
+   "title": "The Void and God: Chinese Criticisms of Christianity in Late-Ming Buddhism:虛空與天主--中國明末佛教的基督教批判",
+   "author": "西村玲",
+   "journal": "中華佛學學報",
+   "vol": "35  2022.07[民111.07]",
+   "page": "頁33-58",
+   "pdf": true
+  },
+  {
+   "title": "Monastic Biography in the Ming and Qing: The Case of Shi Zhenging 釋真清(1537~1593):明清佛教傳記與塔銘--以釋真清(1537~1593)為例",
+   "author": "馬德偉",
+   "journal": "中華佛學學報",
+   "vol": "35  2022.07[民111.07]",
+   "page": "頁59-107",
+   "pdf": true
+  },
+  {
+   "title": "Permeable Boundaries between Ritual and Play: Religious and Ludic Possibilities in a Chinese Buddhist Board Game:悠遊穿梭於儀式與玩樂之間--中國佛教紙板遊戲中的宗教與娛樂之發展性",
+   "author": "傅佩玲",
+   "journal": "中華佛學學報",
+   "vol": "35  2022.07[民111.07]",
+   "page": "頁109-151",
+   "pdf": true
+  },
+  {
+   "title": "Contested Visions of the Buddhist Past and the Curious Fate of an Early Medieval Chinese Buddhist Text:佛教歷史的爭議與中世紀早期中國佛教文本的奇妙命運",
+   "author": "毛依蓮",
+   "journal": "中華佛學學報",
+   "vol": "36  2023.08[民112.08]",
+   "page": "頁1-30",
+   "pdf": true
+  },
+  {
+   "title": "The Polemics of Passivity and Yuanwu's Usage of It:負面詞彙的論辯及圓悟禪師對此詞彙的運用",
+   "author": "俞永峯",
+   "journal": "中華佛學學報",
+   "vol": "36  2023.08[民112.08]",
+   "page": "頁31-71",
+   "pdf": true
+  },
+  {
+   "title": "Unearthing the Cosmos: Possible Scenarios behind the Lost Lokasthāna-sūtra:發掘三界--丟失的《樓炭經》可能的情境",
+   "author": "杜瑞德",
+   "journal": "中華佛學學報",
+   "vol": "36  2023.08[民112.08]",
+   "page": "頁73-103",
+   "pdf": true
+  },
+  {
+   "title": "Buddhism and the Social Order: Liang Qichao (1873~1929) and Modernist Buddhism:佛教與社會秩序--梁啟超(1873~1929)與現代主義佛教",
+   "author": "道格拉斯．鳩爾道",
+   "journal": "中華佛學學報",
+   "vol": "36  2023.08[民112.08]",
+   "page": "頁105-161",
+   "pdf": true
+  },
+  {
+   "title": "Fusion of Perspectives: Chengguan's Essay on the Nature of Mind and Reality:圓融的視域--澄觀教言中的心性與真實",
+   "author": "Poceski, Mario",
+   "journal": "中華佛學學報",
+   "vol": "36  2023.08[民112.08]",
+   "page": "頁163-194",
+   "pdf": true
+  },
+  {
+   "title": "Yixing and Pseudo-Yixing: A Misunderstood Astronomer-Monk:一行抑或假託一行--被曲解的星學家僧人",
+   "author": "康傑夫",
+   "journal": "中華佛學學報",
+   "vol": "31  2018.07[民107.07]",
+   "page": "頁1-37",
+   "pdf": true
+  },
+  {
+   "title": "Bo Juyi&apos;s Memorial Inscription for Chan Teacher Weikuan:白居易為惟寬禪師所寫的碑銘",
+   "author": "伯里奧",
+   "journal": "中華佛學學報",
+   "vol": "31  2018.07[民107.07]",
+   "page": "頁39-74",
+   "pdf": true
+  },
+  {
+   "title": "Qian Qianyi as a Buddhist in the Ming-Qing Transition:明清之際的佛弟子錢謙益",
+   "author": "林學儀",
+   "journal": "中華佛學學報",
+   "vol": "31  2018.07[民107.07]",
+   "page": "頁75-115",
+   "pdf": true
+  },
+  {
+   "title": "What Is Our Shared Sensory World?: Ming Dynasty Debates on Yogācāra versus Huayan Doctrines:何謂「器世間」？--明末唯識與華嚴學家之爭論",
+   "author": "白立冰",
+   "journal": "中華佛學學報",
+   "vol": "31  2018.07[民107.07]",
+   "page": "頁117-170",
+   "pdf": true
+  },
+  {
+   "title": "Something for Nothing: Cognitive Metaphors for Emptiness in the Upadeśa (Dàzhìdù lùn):以有為無--《大智度論》之空性認知隱喻",
+   "author": "歐慧峰",
+   "journal": "中華佛學學報",
+   "vol": "31  2018.07[民107.07]",
+   "page": "頁171-222",
+   "pdf": true
+  },
+  {
+   "title": "Catalogs and Canonization: The History of the Zhenyuan era Catalog and Its Impact on Hagiography in Medieval Japanese Esoteric Buddhism:目錄與典籍--《貞元目錄》的歷史及其對中世紀日本密教聖徒傳的影響",
+   "author": "紀強",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁171-227",
+   "pdf": true
+  },
+  {
+   "title": "More than Receptacles: New Perspectives on China-Japan Buddhist Exchange in Text and Image:",
+   "author": "Walley, Akiko",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁1-5",
+   "pdf": true
+  },
+  {
+   "title": "The Utilization of Vinaya Master Portrait Paintings and Their Ritual Spaces: The Role of Sennyūji in the Kamakura-period Precept Revival Movement:律宗祖師肖像畫及其儀式空間之運用--泉涌寺在鎌倉時代戒律復興運動中的角色",
+   "author": "西谷功",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁59-124",
+   "pdf": true
+  },
+  {
+   "title": "The Image of the Kishin 鬼神 under the Heavenly King's Feet: Their Iconographic Development in the East Asian Cultural Sphere:天王足下的鬼神形象--其在東亞文化圈的圖像學發展",
+   "author": "山田美季",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁281-316",
+   "pdf": true
+  },
+  {
+   "title": "The Past, Present, and Future of Ōbaku Studies: The State of the Field:黃檗研究的過去、現在和未來--對該學術領域現狀的考察",
+   "author": "吳疆",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁229-279",
+   "pdf": true
+  },
+  {
+   "title": "The Redistribution of Wealth in Medieval East Asian Buddhist Monasteries:中世東亞佛教寺廟中的財產分配",
+   "author": "王星逸",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁125-170",
+   "pdf": true
+  },
+  {
+   "title": "Emergence and Development of Bishamonten Imagery:毘沙門天造像的興起與發展",
+   "author": "佐藤有希子",
+   "journal": "中華佛學學報",
+   "vol": "38  2025.12[民114.12]",
+   "page": "頁7-58",
+   "pdf": true
+  },
+  {
+   "title": "Reassessing the Gateway to Meditation: Textual History and Buddhist Medical Thought in Tang-Song China:重新審視《禪門口訣》--文本歷史與唐宋時期佛教醫療思想",
+   "author": "釋諦玄",
+   "journal": "中華佛學學報",
+   "vol": "39  2026.07[民115.07]",
+   "page": "頁25-69",
+   "pdf": true
+  },
+  {
+   "title": "Fleas, Lice, and Bedbugs in Buddhist Monasteries: Moving from India to China:佛教寺院中的跳蚤、虱子與床蝨--從印度到中國的遷徙軌跡",
+   "author": "Heirman, Ann",
+   "journal": "中華佛學學報",
+   "vol": "39  2026.07[民115.07]",
+   "page": "頁1-24",
+   "pdf": true
+  },
+  {
+   "title": "Zhiyi on the \"Six Practices\": The Role of Vipaśyanā in the Sequential Practice of the Dhyānas:智顗論「六行」--毘婆舍那在禪定次第修行的作用",
+   "author": "Carpenter, David",
+   "journal": "中華佛學學報",
+   "vol": "39  2026.07[民115.07]",
+   "page": "頁71-122",
+   "pdf": true
+  },
+  {
+   "title": "Tzu Chi-Islam Interface: Engaging Diversity through Creative Confrontations:重慈濟與伊斯蘭教的互動--探索適應、融合和識別的模式",
+   "author": "史芬妮",
+   "journal": "中華佛學學報",
+   "vol": "39  2026.07[民115.07]",
+   "page": "頁123-166",
+   "pdf": true
+  }
+ ]
+}

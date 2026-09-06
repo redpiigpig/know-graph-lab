@@ -1,0 +1,466 @@
+{
+ "slug": "faguang",
+ "name": "法光學壇",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 56,
+  "本刊實收": 56,
+  "有PDF": 0,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 1996,
+  "max": 2004
+ },
+ "articles": [
+  {
+   "title": "宗密所述北宗及洪州宗教說的探討:A Study on the Teachings of the Northern School and the Hongzhou School as Described by Zongmi",
+   "author": "黃繹勳",
+   "journal": "法光學壇",
+   "vol": "2 1998[民87.]",
+   "page": "頁75-92",
+   "pdf": false
+  },
+  {
+   "title": "從天臺判教的立場試論法藏「五教章」中對法華的批判:Fa-Tsang's Critique on the Lotus Sutra Contained in His Treatise on the Five Teachings: A Discussion from the Viewpoint of T'ien-T'ai Doxology",
+   "author": "莊崑木",
+   "journal": "法光學壇",
+   "vol": "2 1998[民87.]",
+   "page": "頁93-103",
+   "pdf": false
+  },
+  {
+   "title": "毗尼研究方法舉隅--個人研律經驗談:How to Study the Vinaya: A Few Personal Experiences in Doing Vinaya Research",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "3 1999[民88.]",
+   "page": "頁22-56",
+   "pdf": false
+  },
+  {
+   "title": "島地默雷信教自由論的研究:A Study on Shimaji Mokurai's Theory of Religious Freedom",
+   "author": "陳宗元",
+   "journal": "法光學壇",
+   "vol": "3 1999[民88.]",
+   "page": "頁57-71",
+   "pdf": false
+  },
+  {
+   "title": "因明與比量--關於量論的現象學考察:Hetuvidya and Anumana-pramana: A Phenomenological Study on the Lore of Valid Cognition",
+   "author": "蔡瑞霖",
+   "journal": "法光學壇",
+   "vol": "3 1999[民88.]",
+   "page": "頁72-90",
+   "pdf": false
+  },
+  {
+   "title": "「因緣心論頌並釋」三譯校勘會編:A Critical Edition of the Three Translations of the Heart of Dependent Origination, Verses-cum-Commentary",
+   "author": "趙國森",
+   "journal": "法光學壇",
+   "vol": "3 1999[民88.]",
+   "page": "頁91-112",
+   "pdf": false
+  },
+  {
+   "title": "禪宗之理的概念與心的關係:The Ch'an School Concept of li and its Connection to Mind",
+   "author": "鄧克銘",
+   "journal": "法光學壇",
+   "vol": "3 1999[民88.]",
+   "page": "頁113-125",
+   "pdf": false
+  },
+  {
+   "title": "研究佛法的立場與方法:Studying Buddhadharma in Depth: On Attitude and Method",
+   "author": "印順",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁1-24",
+   "pdf": false
+  },
+  {
+   "title": "撰寫「佛教倫理學」的「教證」與「理證」--以拙著「佛教倫理學」為例:Scriptural Proof and Logical Reason for the Composition of Buddhist Ethics: The Example of My Buddhist Ethics",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁25-44",
+   "pdf": false
+  },
+  {
+   "title": "《西藏度亡經》略究:A Brief Study on The Tibetan Book of Living and Dying",
+   "author": "釋如石",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁45-57",
+   "pdf": false
+  },
+  {
+   "title": "永明延壽傳記研究:A Study on the Biography of Yung-ming Yen-shou",
+   "author": "釋智學",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁58-82",
+   "pdf": false
+  },
+  {
+   "title": "「獼猴弄黐膠」覓跡:Tracing the Monkey Who Plays with Glue",
+   "author": "高明道",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁83-140",
+   "pdf": false
+  },
+  {
+   "title": "緣起--傳統的詮釋是錯的嗎﹖:Dependent Origination: Is the Traditional Exegesis Mistaken?",
+   "author": "莊國彬",
+   "journal": "法光學壇",
+   "vol": "5 2001[民90.]",
+   "page": "頁141-163",
+   "pdf": false
+  },
+  {
+   "title": "論佛學的修學:Cultivating the Study of Buddhism",
+   "author": "印順",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁3-18",
+   "pdf": false
+  },
+  {
+   "title": "有關受具前階規制之種種--沙彌(尼)、式叉摩那與「異學四月共住」規制之研究:On the Regulations Pertaining to the Period before Full Ordination: A Study on the Regulations Regarding Novices, Female Trainees, and Practitioners of Other Creeds Who Have to Live Together for Four Months",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁19-39",
+   "pdf": false
+  },
+  {
+   "title": "Miua xmauh管窺:A Look at Miua xmauh",
+   "author": "高明道",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁40-56",
+   "pdf": false
+  },
+  {
+   "title": "略論《維摩經》漢譯與收錄:A Brief Study on the Chinese Translations of the Vimalakirtinirdesa and the Relevant Records in the Catalogues of Canonical Literature",
+   "author": "蔣武雄",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁57-78",
+   "pdf": false
+  },
+  {
+   "title": "試評吉藏的二諦論:A Critical Study on Chi-tsang's Theory of the Two Truths",
+   "author": "劉嘉誠",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁79-103",
+   "pdf": false
+  },
+  {
+   "title": "《比丘尼傳》研究:A Study on the Bhikshuni Biographies",
+   "author": "吳季霏",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁105-123",
+   "pdf": false
+  },
+  {
+   "title": "華嚴教學上的「華嚴經」--以「華嚴經探玄記」為中心:\"Hua-yen Sutra\" in the Hua-yen School Tradition with Special Emphasis on the Hua-yen Ching T'an-hsuan Chi",
+   "author": "釋證光",
+   "journal": "法光學壇",
+   "vol": "4 2000[民89.]",
+   "page": "頁124-137",
+   "pdf": false
+  },
+  {
+   "title": "結戒原委與制戒原理:The Facts of the Establishment of the Vinaya and the Principles Behind Setting the Rules",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁11-23",
+   "pdf": false
+  },
+  {
+   "title": "試析數息法中的「六妙門」:“The Six Marvellous Doors” of Breathing Meditation--An Attempt at Analysis",
+   "author": "林昭益",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁24-35",
+   "pdf": false
+  },
+  {
+   "title": "有關「慈悲」的諸問題:Problems Related to Compassion",
+   "author": "趙淑華",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁36-44",
+   "pdf": false
+  },
+  {
+   "title": "漢譯《健拏驃訶》中仙人名試析:The Rsi&apos;s Name in the Chinese Gandavyuha Translations: An Attempt at Analysis",
+   "author": "高明道",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁45-60",
+   "pdf": false
+  },
+  {
+   "title": "《寶如來經》和《菩薩十住經》譯者略考:A Short Note on the Translator of the Bao Ju Lai Ching and the P&apos;u Sa Shih Chu Ching",
+   "author": "釋繼彥",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁61-72",
+   "pdf": false
+  },
+  {
+   "title": "羅什入關以前中國的淨土思想:Pure Land Thought Prior to Kumarajiva&apos;s Arrival in China",
+   "author": "賴鵬舉",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁73-78",
+   "pdf": false
+  },
+  {
+   "title": "略論華嚴別教一乘與同教一乖之異同:A Short Note on the Differences between the Distinct Teaching One Vehicle of the Hua Yen Ching and the Common Teaching One Vehicle",
+   "author": "莊崑木",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁79-88",
+   "pdf": false
+  },
+  {
+   "title": "試窺印順法師的思想大要(上):Peeking at the Gist of Master Yin-Shun&apos;s Rhilosophy: The Red Thread of Dependent Origination(1)",
+   "author": "陳水淵",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁89-101",
+   "pdf": false
+  },
+  {
+   "title": "陳那唯識理論的初探--以「集量論Pramanasamuccaya．現量章」為中心:A Prelimianry Study on Dignaga&apos;s Mind-Only Theory Centering on the Pratyaksapariccheda of the Pramanasamuccaya",
+   "author": "陳宗元",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁102-118",
+   "pdf": false
+  },
+  {
+   "title": "「護法-玄奘」一系與真諦一系唯識學的「聞熏習」理論的思想意涵之探討:The Teaching on the Practice of Hearing in the Mind-Only Systms of Dharmapala/Hsuan-Tsang and Paramartha: A Study in Meaning",
+   "author": "曹志成",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁119-129",
+   "pdf": false
+  },
+  {
+   "title": "由抽象繪畫與禪畫試論東、西藝術的差異:A Study on the Differences in the Oriental Art and the Western Art by the Abtract Painting and the Zen Painting",
+   "author": "潘襎",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁130-140",
+   "pdf": false
+  },
+  {
+   "title": "努欽．佛智著《禪定目炬》漢譯(第一章):",
+   "author": "許明銀",
+   "journal": "法光學壇",
+   "vol": "1 1997[民86.]",
+   "page": "頁141-151",
+   "pdf": false
+  },
+  {
+   "title": "唯識說中的法與瑜伽行:",
+   "author": "小谷信千代",
+   "journal": "法光學壇",
+   "vol": "創刊號  民85.06",
+   "page": "頁5-22",
+   "pdf": false
+  },
+  {
+   "title": "「中論」註釋書中有關「緣起」的語義解釋:",
+   "author": "江島惠教",
+   "journal": "法光學壇",
+   "vol": "創刊號  民85.06",
+   "page": "頁23-41",
+   "pdf": false
+  },
+  {
+   "title": "從戒律所見的佛教真理觀:",
+   "author": "平川彰",
+   "journal": "法光學壇",
+   "vol": "創刊號  民85.06",
+   "page": "頁42-63",
+   "pdf": false
+  },
+  {
+   "title": "出家道與在家道中真理觀之相異:",
+   "author": "舟橋一哉",
+   "journal": "法光學壇",
+   "vol": "創刊號  民85.06",
+   "page": "頁64-80",
+   "pdf": false
+  },
+  {
+   "title": "宗教倫理學的基本原理與中層原則--以基督宗教與佛教為主軸的一個探索:The Basic Principle of the Mid-Level Rules of Religious Ethics--An Exploration Centering around Christianity and Buddhism",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁1-36",
+   "pdf": false
+  },
+  {
+   "title": "「往生淨土」的科學玄談:\"Rebirth in a Pure Land\"--An In-Depth Discussion from the Scientific Point of View",
+   "author": "釋如石",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁37-58",
+   "pdf": false
+  },
+  {
+   "title": "「瑜伽師地論」和「顯揚聖教論」的內容架構及其編成:The Structure and Composition of the Yogacaryabhumi and Hsien-yang sheng-chiao lun",
+   "author": "林崇安",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁59-73",
+   "pdf": false
+  },
+  {
+   "title": "西藏學的誕生--兼述基督教徒所看的西藏佛教:The Birth of Tibetology and Tibetan Buddhism as Christians Saw It",
+   "author": "許明銀",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁74-101",
+   "pdf": false
+  },
+  {
+   "title": "臺灣藏傳佛教發展管窺:A Personal Look at the Development of Tibetan Buddhism in Taiwan",
+   "author": "蕭金松",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁102-116",
+   "pdf": false
+  },
+  {
+   "title": "西夏文刊本「金光明最勝王經」的兩幅扉畫:Two Frontispieces in the Tangut Blockprint of the Sutra of Golden Light",
+   "author": "胡進杉",
+   "journal": "法光學壇",
+   "vol": "6 2002[民91.]",
+   "page": "頁117-147",
+   "pdf": false
+  },
+  {
+   "title": "佛教慈善事業的一個範例--慈濟整治印尼紅溪河之成效與意義:One Example of Buddhist Charitable Organizations: The Success and Meaning of T'zu-chi's Work in Indonesia",
+   "author": "釋昭慧",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁1-26",
+   "pdf": false
+  },
+  {
+   "title": "「長阿含經」和「長部」的核心教導:The Core Teaching of the Chang Ahan and the Dighanikaya",
+   "author": "林崇安",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁27-46",
+   "pdf": false
+  },
+  {
+   "title": "國立故宮所藏「善逝寶經廣示日光目錄」述要:General Remarks on \"The Precious Scriptures of the Sugata, Rays of the Sun Illuminating Widely\" Catalogue Kept at the Palace Museum in Taipei",
+   "author": "胡進杉",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁47-76",
+   "pdf": false
+  },
+  {
+   "title": "明代上天竺講寺觀音信仰之研究:A Study on the Avalokitesvara of the Upper T'ien-chu Monastery during thue Ming Dynasty",
+   "author": "徐一智",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁77-118",
+   "pdf": false
+  },
+  {
+   "title": "西魯考:A Study on Xilu(西魯)",
+   "author": "隋皓昀",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁119-143",
+   "pdf": false
+  },
+  {
+   "title": "意象多重奏--「佛經附圖：藏-漢藝術小品」多媒體光碟的設計理念:A Symphony of Imagery: The Concept behind the Development of the \"Convergence of Radiance: Tibeto-Chinese Buddhist Scripture Illustrations\" Multimedia DVD",
+   "author": "葛婉章",
+   "journal": "法光學壇",
+   "vol": "7 2003[民92.]",
+   "page": "頁144-172",
+   "pdf": false
+  },
+  {
+   "title": "佛教的心性論及其特色:The Buddhist Theory of the Nature of the Mind and Its Special Features",
+   "author": "林崇安",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁1-19",
+   "pdf": false
+  },
+  {
+   "title": "滿文《聖除盡一切惡趣頂髻尊勝佛母平安陀羅尼經》譯註:Annotated Translation of the Manchu Enduringge Eiten Ehe Banjin Be Biretei Geterembure Giyolongnggo Umesi Etehe Eme Gebungge Toktobun Tarni",
+   "author": "胡進杉",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁21-52",
+   "pdf": false
+  },
+  {
+   "title": "章嘉宗義書〈中觀派章〉漢譯:A Chinese Translation (Part One) of the Madhyamaka Chapter of 1Cang Skya&apos;s Grub Mtha",
+   "author": "許明銀",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁53-92",
+   "pdf": false
+  },
+  {
+   "title": "格魯派《現觀莊嚴論》注解的傳承與創新--從「彌勒是佛或菩薩之諍」的溯源觀察:Tracing the Source of the Dispute Whether Maitreya is a Buddha or a Bodhisattva: An Observation on Tradition and Innovation in the Gelug Commentaries on the Abhisamayālamkāra",
+   "author": "釋永明",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁93-139",
+   "pdf": false
+  },
+  {
+   "title": "《辨別正見--勝乘要義月光》的他空見批判研究與譯註:An Annotated Translation and Study of the Criticism of Other Emptiness in Discernment of Right View, Essential Meaning of the Excellent Vehicle, Moon Light",
+   "author": "黃英傑",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁141-172",
+   "pdf": false
+  },
+  {
+   "title": "俄藏敦煌寫卷「Φ142《佛說雜寶藏經》」略考:A Brief Note on the Dunhuang MS Φ142",
+   "author": "釋章慧",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁173-190",
+   "pdf": false
+  },
+  {
+   "title": "陳進〈釋迦行誼圖〉之研究:A Study of Chen Chin&apos;s the Buddha&apos;s Work",
+   "author": "徐一智",
+   "journal": "法光學壇",
+   "vol": "8  民93",
+   "page": "頁191-230",
+   "pdf": false
+  },
+  {
+   "title": "試窺印順法師的思想大要 (下):Peeking at the Gist of Master Yin-Shun's Philosophy: The Red Thread of Dependent Origination",
+   "author": "陳水淵",
+   "journal": "法光學壇",
+   "vol": "2 1998[民87.]",
+   "page": "頁39-49",
+   "pdf": false
+  }
+ ]
+}

@@ -1,0 +1,210 @@
+[
+ {
+  "slug": "haichaoyin",
+  "name": "海潮音",
+  "articles": 4995,
+  "pdf": 5,
+  "start": 1921,
+  "end": 2026
+ },
+ {
+  "slug": "rensheng",
+  "name": "人生",
+  "articles": 4673,
+  "pdf": 0,
+  "start": 1966,
+  "end": 2009
+ },
+ {
+  "slug": "folk-arts",
+  "name": "民俗曲藝",
+  "articles": 1667,
+  "pdf": 0,
+  "start": 1980,
+  "end": 2026
+ },
+ {
+  "slug": "shizihou",
+  "name": "獅子吼",
+  "articles": 1417,
+  "pdf": 0,
+  "start": 1962,
+  "end": 1994
+ },
+ {
+  "slug": "xiangguang",
+  "name": "香光莊嚴",
+  "articles": 1282,
+  "pdf": 0,
+  "start": 1992,
+  "end": 2009
+ },
+ {
+  "slug": "putishu",
+  "name": "菩提樹",
+  "articles": 1250,
+  "pdf": 0,
+  "start": 1952,
+  "end": 1996
+ },
+ {
+  "slug": "religious-philosophy",
+  "name": "宗教哲學",
+  "articles": 1207,
+  "pdf": 6,
+  "start": 1995,
+  "end": 2026
+ },
+ {
+  "slug": "pumen",
+  "name": "普門學報",
+  "articles": 1163,
+  "pdf": 13,
+  "start": 2001,
+  "end": 2010
+ },
+ {
+  "slug": "theology-church",
+  "name": "神學與教會",
+  "articles": 638,
+  "pdf": 1,
+  "start": 1969,
+  "end": 2025
+ },
+ {
+  "slug": "chbs-journal",
+  "name": "中華佛學學報",
+  "articles": 442,
+  "pdf": 442,
+  "start": 1987,
+  "end": 2026
+ },
+ {
+  "slug": "new-century",
+  "name": "新世紀宗教研究",
+  "articles": 435,
+  "pdf": 312,
+  "start": 2002,
+  "end": 2021
+ },
+ {
+  "slug": "zhengguan",
+  "name": "正觀",
+  "articles": 399,
+  "pdf": 379,
+  "start": 1997,
+  "end": 2026
+ },
+ {
+  "slug": "taiwan-theology",
+  "name": "臺灣神學論刊",
+  "articles": 398,
+  "pdf": 79,
+  "start": 1979,
+  "end": 2025
+ },
+ {
+  "slug": "fujen-religious",
+  "name": "輔仁宗教研究",
+  "articles": 336,
+  "pdf": 282,
+  "start": 2000,
+  "end": 2023
+ },
+ {
+  "slug": "yuanguang",
+  "name": "圓光佛學學報",
+  "articles": 285,
+  "pdf": 0,
+  "start": 1993,
+  "end": 2026
+ },
+ {
+  "slug": "yushan",
+  "name": "玉山神學院學報",
+  "articles": 266,
+  "pdf": 116,
+  "start": 1992,
+  "end": 2024
+ },
+ {
+  "slug": "fuyan",
+  "name": "福嚴會訊",
+  "articles": 241,
+  "pdf": 0,
+  "start": 2004,
+  "end": 2025
+ },
+ {
+  "slug": "taiwan-religion",
+  "name": "臺灣宗教研究",
+  "articles": 240,
+  "pdf": 3,
+  "start": 2000,
+  "end": 2025
+ },
+ {
+  "slug": "chbs-studies",
+  "name": "中華佛學研究",
+  "articles": 201,
+  "pdf": 201,
+  "start": 1997,
+  "end": 2026
+ },
+ {
+  "slug": "ddbj",
+  "name": "法鼓佛學學報",
+  "articles": 146,
+  "pdf": 139,
+  "start": 2007,
+  "end": 2025
+ },
+ {
+  "slug": "chinese-religions",
+  "name": "華人宗教研究",
+  "articles": 146,
+  "pdf": 0,
+  "start": 2013,
+  "end": 2026
+ },
+ {
+  "slug": "ntu-buddhist",
+  "name": "臺大佛學研究",
+  "articles": 134,
+  "pdf": 103,
+  "start": 2007,
+  "end": 2025
+ },
+ {
+  "slug": "ces-journal",
+  "name": "華神期刊",
+  "articles": 133,
+  "pdf": 0,
+  "start": 2008,
+  "end": 2025
+ },
+ {
+  "slug": "diguan",
+  "name": "諦觀",
+  "articles": 114,
+  "pdf": 0,
+  "start": 1991,
+  "end": 1996
+ },
+ {
+  "slug": "dongfang",
+  "name": "東方宗教研究",
+  "articles": 81,
+  "pdf": 0,
+  "start": 1987,
+  "end": 1996
+ },
+ {
+  "slug": "faguang",
+  "name": "法光學壇",
+  "articles": 56,
+  "pdf": 0,
+  "start": 1996,
+  "end": 2004
+ }
+]

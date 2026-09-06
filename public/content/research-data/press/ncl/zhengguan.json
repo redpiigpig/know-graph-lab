@@ -1,0 +1,3210 @@
+{
+ "slug": "zhengguan",
+ "name": "正觀",
+ "source": "https://tpl.ncl.edu.tw/NclService/JournalQuery",
+ "counts": {
+  "站上子字串命中": 399,
+  "本刊實收": 399,
+  "有PDF": 379,
+  "缺卷期": 0,
+  "缺頁次": 0
+ },
+ "years": {
+  "min": 1997,
+  "max": 2026
+ },
+ "articles": [
+  {
+   "title": "菩提達摩生平研究:",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "7 1998.12[民87.12]",
+   "page": "頁7+9-62",
+   "pdf": true
+  },
+  {
+   "title": "法隨法行(Dharmanudharmapratipatti)詞義之探討:",
+   "author": "釋善音",
+   "journal": "正觀",
+   "vol": "7 1998.12[民87.12]",
+   "page": "頁63+65-85",
+   "pdf": true
+  },
+  {
+   "title": "五臺山的「聖山化」與文殊菩薩道場的確立:",
+   "author": "王俊中",
+   "journal": "正觀",
+   "vol": "7 1998.12[民87.12]",
+   "page": "頁87+89-113",
+   "pdf": true
+  },
+  {
+   "title": "有關唐初惠恭禪師的若干史實:",
+   "author": "沈海波",
+   "journal": "正觀",
+   "vol": "7 1998.12[民87.12]",
+   "page": "頁115+117-126",
+   "pdf": true
+  },
+  {
+   "title": "「大智度論」之本文相互索引:",
+   "author": "釋厚觀",
+   "journal": "正觀",
+   "vol": "6 1998.09[民87.09]",
+   "page": "頁5-321",
+   "pdf": true
+  },
+  {
+   "title": "「遮羅迦本集」的邏輯學說:",
+   "author": "沈劍英",
+   "journal": "正觀",
+   "vol": "8 1999.03[民88.03]",
+   "page": "頁7+9-79",
+   "pdf": true
+  },
+  {
+   "title": "佛教哲學中的語言型態之探索:",
+   "author": "李治華",
+   "journal": "正觀",
+   "vol": "8 1999.03[民88.03]",
+   "page": "頁81+83-107",
+   "pdf": true
+  },
+  {
+   "title": "「思益經」在漢譯經錄的探討:",
+   "author": "釋宗禪",
+   "journal": "正觀",
+   "vol": "8 1999.03[民88.03]",
+   "page": "頁109+111-135",
+   "pdf": true
+  },
+  {
+   "title": "佉留文字與四十二字門:",
+   "author": "徐真友",
+   "journal": "正觀",
+   "vol": "9 1999.06[民88.06]",
+   "page": "頁7-21",
+   "pdf": true
+  },
+  {
+   "title": "當代儒佛論爭關鍵議題之釐清--以「唯識學概論」與「新唯識論」之對比理解為主:",
+   "author": "裴春苓",
+   "journal": "正觀",
+   "vol": "9 1999.06[民88.06]",
+   "page": "頁23+25-84",
+   "pdf": true
+  },
+  {
+   "title": "說一切有部之中有觀--以有無和轉變為主:",
+   "author": "釋宗平",
+   "journal": "正觀",
+   "vol": "9 1999.06[民88.06]",
+   "page": "頁85+87-119",
+   "pdf": true
+  },
+  {
+   "title": "六祖壇經之研究:",
+   "author": "許勝雄",
+   "journal": "正觀",
+   "vol": "9 1999.06[民88.06]",
+   "page": "頁121+123-168",
+   "pdf": true
+  },
+  {
+   "title": "「寶性論」及相關論典論佛性與信：論早期如來藏說的基本模型及如來藏說與唯識思想的交涉中三種佛性與信之三義之交涉:",
+   "author": "賴賢宗",
+   "journal": "正觀",
+   "vol": "11 1999.12[民88.12]",
+   "page": "頁7+9-70",
+   "pdf": true
+  },
+  {
+   "title": "圓融與還原--晚明佛教復興的思想主題及其特質:Synthesis and Reduction：The Topics and Characteristics of Buddhism Renewal in Late Ming Dynasty",
+   "author": "陳永革",
+   "journal": "正觀",
+   "vol": "11 1999.12[民88.12]",
+   "page": "頁71+73-113",
+   "pdf": true
+  },
+  {
+   "title": "「解脫道論」九心輪與「清淨道論」十四作用之比較:",
+   "author": "羅耀明",
+   "journal": "正觀",
+   "vol": "11 1999.12[民88.12]",
+   "page": "頁115+117-149",
+   "pdf": true
+  },
+  {
+   "title": "藏傳佛教格魯派的發展與傳教蒙古--五世達賴喇嘛在西藏掌權的前夜:",
+   "author": "王俊中",
+   "journal": "正觀",
+   "vol": "11 1999.12[民88.12]",
+   "page": "頁151+153-194",
+   "pdf": true
+  },
+  {
+   "title": "當代日本「批判佛教」思潮:",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "10 1999.09[民88.09]",
+   "page": "頁7+9-44",
+   "pdf": true
+  },
+  {
+   "title": "真如遍在與生佛互具--天臺宗心性本體論的邏輯推展:",
+   "author": "楊維中",
+   "journal": "正觀",
+   "vol": "10 1999.09[民88.09]",
+   "page": "頁45-66",
+   "pdf": true
+  },
+  {
+   "title": "吉藏對說一切有部學說之評破:",
+   "author": "陳世賢",
+   "journal": "正觀",
+   "vol": "10 1999.09[民88.09]",
+   "page": "頁67+69-107",
+   "pdf": true
+  },
+  {
+   "title": "藏傳佛教格魯派的發展與傳教蒙古--五世達賴喇嘛在西藏掌權的前夜(上篇):",
+   "author": "王俊中",
+   "journal": "正觀",
+   "vol": "10 1999.09[民88.09]",
+   "page": "頁109+111-161",
+   "pdf": true
+  },
+  {
+   "title": "美難陀．第XV章諸尋思之捨斷--譯註:",
+   "author": "越建東",
+   "journal": "正觀",
+   "vol": "5 1998.06[民87.06]",
+   "page": "頁7-57",
+   "pdf": true
+  },
+  {
+   "title": "吉藏對三論學之轉化--以吉藏之佛性思想為中心:",
+   "author": "陳世賢",
+   "journal": "正觀",
+   "vol": "5 1998.06[民87.06]",
+   "page": "頁59-84",
+   "pdf": true
+  },
+  {
+   "title": "唐初三階教大德惠恭行歷及其佛學思想--「法門惠恭大德之碑」考釋:",
+   "author": "楊維中",
+   "journal": "正觀",
+   "vol": "5 1998.06[民87.06]",
+   "page": "頁85-120",
+   "pdf": true
+  },
+  {
+   "title": "章太炎與因明學:",
+   "author": "沈海波",
+   "journal": "正觀",
+   "vol": "5 1998.06[民87.06]",
+   "page": "頁121+123-136",
+   "pdf": true
+  },
+  {
+   "title": "試論吉藏二諦論與天臺二諦論之異同:",
+   "author": "莊崑木",
+   "journal": "正觀",
+   "vol": "5 1998.06[民87.06]",
+   "page": "頁137-156",
+   "pdf": true
+  },
+  {
+   "title": "宗教傳播與語文變遷--漢譯佛典研究的語言學轉向所顯示的意義:",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "19 2001.12[民90.12]",
+   "page": "頁5-52",
+   "pdf": true
+  },
+  {
+   "title": "敦煌寫本「佛說現報當受經」初探:",
+   "author": "釋長梵",
+   "journal": "正觀",
+   "vol": "19 2001.12[民90.12]",
+   "page": "頁53-94",
+   "pdf": true
+  },
+  {
+   "title": "巴利語與異教語言:Pali and the Language of the Heretics",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "19 2001.12[民90.12]",
+   "page": "頁95-114",
+   "pdf": true
+  },
+  {
+   "title": "清辨對「勝義諦」之解釋的研究:",
+   "author": "曹志成",
+   "journal": "正觀",
+   "vol": "12 2000.03[民89.03]",
+   "page": "頁7+9-52",
+   "pdf": true
+  },
+  {
+   "title": "廬山慧遠的禪觀:",
+   "author": "李幸玲",
+   "journal": "正觀",
+   "vol": "12 2000.03[民89.03]",
+   "page": "頁53+55-102",
+   "pdf": true
+  },
+  {
+   "title": "智者大師著作中數字的重要意義:",
+   "author": "沈海燕",
+   "journal": "正觀",
+   "vol": "12 2000.03[民89.03]",
+   "page": "頁103+105-123",
+   "pdf": true
+  },
+  {
+   "title": "「大寶積經．淨居天子會」「毀呰」一詞的探討:",
+   "author": "釋善音",
+   "journal": "正觀",
+   "vol": "12 2000.03[民89.03]",
+   "page": "頁125+127-144",
+   "pdf": true
+  },
+  {
+   "title": "關於「法門惠恭大德之碑」的若干問題--復沈海波先生:",
+   "author": "楊維中",
+   "journal": "正觀",
+   "vol": "12 2000.03[民89.03]",
+   "page": "頁145+147-158",
+   "pdf": true
+  },
+  {
+   "title": "「楞嚴經」「七番破處」的論辯過程與判教旨趣:",
+   "author": "李治華",
+   "journal": "正觀",
+   "vol": "14 2000.09[民89.09]",
+   "page": "頁3+5-27",
+   "pdf": true
+  },
+  {
+   "title": "女身受記:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "14 2000.09[民89.09]",
+   "page": "頁29+31-167",
+   "pdf": true
+  },
+  {
+   "title": "再論「清辨與月稱對於\"人法二無法\"之見解」:",
+   "author": "釋會晟",
+   "journal": "正觀",
+   "vol": "15 2000.12[民89.12]",
+   "page": "頁3+5-29",
+   "pdf": true
+  },
+  {
+   "title": "禪宗的藏識思想與體用論:",
+   "author": "劉嘉誠",
+   "journal": "正觀",
+   "vol": "15 2000.12[民89.12]",
+   "page": "頁31+33-59",
+   "pdf": true
+  },
+  {
+   "title": "「成實論」之認識理論研究:",
+   "author": "陳世賢",
+   "journal": "正觀",
+   "vol": "15 2000.12[民89.12]",
+   "page": "頁61+63-100",
+   "pdf": true
+  },
+  {
+   "title": "智周因明思想略介:",
+   "author": "姚南強",
+   "journal": "正觀",
+   "vol": "15 2000.12[民89.12]",
+   "page": "頁101-109",
+   "pdf": true
+  },
+  {
+   "title": "以禪修來趣入佛法：評介«Being, Nobody, Going Nowhere: Meditations on the Buddhist Path» by Ayya Khema:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "15  民89.12",
+   "page": "頁111-117",
+   "pdf": true
+  },
+  {
+   "title": "印度之旅掛明燈：評介歐塔微歐．帕茲(Octavio Paz)著，《在印度的微光中：諾貝爾桂冠詩人帕茲的心靈之旅》（In Light of India）:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "15  民89.12",
+   "page": "頁118-123",
+   "pdf": true
+  },
+  {
+   "title": "吉爾吉特(Gilgit)梵文佛典寫本的出土與佛教研究:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "13 2000.06[民89.06]",
+   "page": "頁1+3-126",
+   "pdf": true
+  },
+  {
+   "title": "佛教哲學的基本型態與論述方法:",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "16 2001.03[民90.03]",
+   "page": "頁3-28",
+   "pdf": true
+  },
+  {
+   "title": "禪宗佛性本體論的特質與根本見地關係之探討:",
+   "author": "黃連忠",
+   "journal": "正觀",
+   "vol": "16 2001.03[民90.03]",
+   "page": "頁29-75",
+   "pdf": true
+  },
+  {
+   "title": "再論唐初慧恭禪師的相關史實--答楊維中先生:",
+   "author": "沈海波",
+   "journal": "正觀",
+   "vol": "16 2001.03[民90.03]",
+   "page": "頁77-92",
+   "pdf": true
+  },
+  {
+   "title": "四無量心初探:",
+   "author": "周柔含",
+   "journal": "正觀",
+   "vol": "16 2001.03[民90.03]",
+   "page": "頁93-127",
+   "pdf": true
+  },
+  {
+   "title": "安慧識轉變思想的哲學性詮釋:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "18 2001.09[民90.09]",
+   "page": "頁3-42",
+   "pdf": true
+  },
+  {
+   "title": "後佛教世紀:",
+   "author": "周慶華",
+   "journal": "正觀",
+   "vol": "18 2001.09[民90.09]",
+   "page": "頁43-77",
+   "pdf": true
+  },
+  {
+   "title": "古奧義書（Upanisads）與初期佛學關於理想生活概念之比較與評論:",
+   "author": "林煌洲",
+   "journal": "正觀",
+   "vol": "18 2001.09[民90.09]",
+   "page": "頁79-127",
+   "pdf": true
+  },
+  {
+   "title": "略探「勝天王般若波羅蜜經」之史料及相關問題:",
+   "author": "李偉穎",
+   "journal": "正觀",
+   "vol": "18 2001.09[民90.09]",
+   "page": "頁129-170",
+   "pdf": true
+  },
+  {
+   "title": "巴利學的現況與未來任務:",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "18 2001.09[民90.09]",
+   "page": "頁171-209",
+   "pdf": true
+  },
+  {
+   "title": "陳那論感官知覺及其對象:",
+   "author": "何建興",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁3-31",
+   "pdf": true
+  },
+  {
+   "title": "禪門中的頓漸新論--以早期禪為中心的若干問題研究:",
+   "author": "龔雋",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁33-93",
+   "pdf": false
+  },
+  {
+   "title": "也談古代印度漢名:",
+   "author": "徐真友",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁95-103",
+   "pdf": true
+  },
+  {
+   "title": "「大名聲」(vighusta-&apos;sabda)與「離覆障」(vivatta-chadda)--兼談注釋家與文法家對巴利文獻的影響:",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁105-137",
+   "pdf": true
+  },
+  {
+   "title": "慈悲三昧水懺淵源考:",
+   "author": "釋道昱",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁139-151",
+   "pdf": true
+  },
+  {
+   "title": "The Four Satipatthanas in Early Buddhism:初期佛教之四念處",
+   "author": "關則富",
+   "journal": "正觀",
+   "vol": "17 2001.06[民90.06]",
+   "page": "頁153-209",
+   "pdf": true
+  },
+  {
+   "title": "宗教傳播與語文變遷--漢譯佛典研究的語言學轉向所顯示的意義:",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "20 2002.03[民91.03]",
+   "page": "頁5-82",
+   "pdf": true
+  },
+  {
+   "title": "「阿含經」的禪修在解脫道的多重功能--附記「色界四禪」的述句與禪定支:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "20 2002.03[民91.03]",
+   "page": "頁83-140",
+   "pdf": true
+  },
+  {
+   "title": "中國早期的彌勒信仰--以道安為主的探討:",
+   "author": "釋道昱",
+   "journal": "正觀",
+   "vol": "20 2002.03[民91.03]",
+   "page": "頁141-226",
+   "pdf": true
+  },
+  {
+   "title": "巴利學研究紀要：1995-2001:",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "20 2002.03[民91.03]",
+   "page": "頁227-281",
+   "pdf": true
+  },
+  {
+   "title": "對中村元「東洋人の思惟方法」中有關思惟模式和中國佛教之析判:",
+   "author": "陳英善",
+   "journal": "正觀",
+   "vol": "2 1997.09[民86.09]",
+   "page": "頁7-61",
+   "pdf": false
+  },
+  {
+   "title": "試論「大智度論」中的「對談者」:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "2 1997.09[民86.09]",
+   "page": "頁63-177",
+   "pdf": true
+  },
+  {
+   "title": "攝大乘論「聞熏習」與「如來藏說」關係之探究:",
+   "author": "釋如覺",
+   "journal": "正觀",
+   "vol": "2 1997.09[民86.09]",
+   "page": "頁179-202",
+   "pdf": true
+  },
+  {
+   "title": "淨影寺慧遠的涅槃觀:",
+   "author": "廖明活",
+   "journal": "正觀",
+   "vol": "2 1997.09[民86.09]",
+   "page": "頁203-230",
+   "pdf": true
+  },
+  {
+   "title": "評藍吉富《佛教史料學》:",
+   "author": "周伯戡",
+   "journal": "正觀",
+   "vol": "2 1997.09[民86.09]",
+   "page": "頁231-233",
+   "pdf": true
+  },
+  {
+   "title": "智顗的「五時八教」判:",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "3 1997.12[民86.12]",
+   "page": "頁7-93",
+   "pdf": true
+  },
+  {
+   "title": "澄觀的生平及著作:",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "3 1997.12[民86.12]",
+   "page": "頁95-118",
+   "pdf": true
+  },
+  {
+   "title": "「中論」第十八品人法二無我之詮釋--以吉藏「中觀論疏」與月稱「明句論」為中心:",
+   "author": "黃國清",
+   "journal": "正觀",
+   "vol": "3 1997.12[民86.12]",
+   "page": "頁119-148",
+   "pdf": true
+  },
+  {
+   "title": "經量部的業思想研究--試析在「中論」及「業品」中的種子譬喻和細心相續、業力因果之間的關聯性和矛盾性:",
+   "author": "黃雪梅",
+   "journal": "正觀",
+   "vol": "3 1997.12[民86.12]",
+   "page": "頁149-167",
+   "pdf": true
+  },
+  {
+   "title": "僧肇之二諦義及其影響--以「不真空論」為中心:",
+   "author": "元弼聖",
+   "journal": "正觀",
+   "vol": "3 1997.12[民86.12]",
+   "page": "頁169+171-207",
+   "pdf": true
+  },
+  {
+   "title": "「中論」第廿四品．第七頌之「空性三義」的初探--以月稱、清辨及相關註釋為中心:",
+   "author": "釋心宏",
+   "journal": "正觀",
+   "vol": "4 1998.03[民87.03]",
+   "page": "頁7+9-42",
+   "pdf": false
+  },
+  {
+   "title": "唯識之三性與真實--以「中邊分別論」為中心:",
+   "author": "蔡伯郎",
+   "journal": "正觀",
+   "vol": "4 1998.03[民87.03]",
+   "page": "頁43+45-64",
+   "pdf": true
+  },
+  {
+   "title": "「菩薩夢經」「懺悔」 之探討:",
+   "author": "釋繼坤",
+   "journal": "正觀",
+   "vol": "4 1998.03[民87.03]",
+   "page": "頁65+67-99",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教善惡報應論初探:",
+   "author": "王月清",
+   "journal": "正觀",
+   "vol": "4 1998.03[民87.03]",
+   "page": "頁101+103-120",
+   "pdf": false
+  },
+  {
+   "title": "多音與介入:當代歐美佛學研究方法之省察:",
+   "author": "林鎮國",
+   "journal": "正觀",
+   "vol": "1 1997.06[民86.06]",
+   "page": "頁1-27",
+   "pdf": true
+  },
+  {
+   "title": "對古典語文獻學在當代華人佛學研究中的角色問題之省思:",
+   "author": "劉宇光",
+   "journal": "正觀",
+   "vol": "1 1997.06[民86.06]",
+   "page": "頁28-44",
+   "pdf": true
+  },
+  {
+   "title": "宋濂與佛教:",
+   "author": "龔顯宗",
+   "journal": "正觀",
+   "vol": "1 1997.06[民86.06]",
+   "page": "頁45-67",
+   "pdf": true
+  },
+  {
+   "title": "關於佛典語言的一些研究:",
+   "author": "徐真友",
+   "journal": "正觀",
+   "vol": "1 1997.06[民86.06]",
+   "page": "頁68-83",
+   "pdf": true
+  },
+  {
+   "title": "羅什前「維摩經」之流行與文獻再探:",
+   "author": "釋果樸",
+   "journal": "正觀",
+   "vol": "1 1997.06[民86.06]",
+   "page": "頁84-112",
+   "pdf": true
+  },
+  {
+   "title": "「式叉摩那」考:",
+   "author": "釋若學",
+   "journal": "正觀",
+   "vol": "25 2003.06[民92.06]",
+   "page": "頁5-70",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "25 2003.06[民92.06]",
+   "page": "頁71-165",
+   "pdf": true
+  },
+  {
+   "title": "僧叡慧叡非一人辯:",
+   "author": "徐文明",
+   "journal": "正觀",
+   "vol": "25 2003.06[民92.06]",
+   "page": "頁167-180",
+   "pdf": true
+  },
+  {
+   "title": "後佛教倫理學:",
+   "author": "周慶華",
+   "journal": "正觀",
+   "vol": "25 2003.06[民92.06]",
+   "page": "頁181-199",
+   "pdf": true
+  },
+  {
+   "title": "佛教研究的進展程序在操作步驟的釐定:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "25 2003.06[民92.06]",
+   "page": "頁201-209",
+   "pdf": true
+  },
+  {
+   "title": "東西哲學對話：語言的界限:",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "27 2003.12[民92.12]",
+   "page": "頁7-12",
+   "pdf": true
+  },
+  {
+   "title": "天臺宗的可說與不可說--天臺宗的語言用法及其對語言界限的觀點:The Expressible and Inexpressible in Tiantai Buddhism: Usage of Language in Tiantai Buddhism and Its Viewpoint about Limits of Verbal Articulation",
+   "author": "Kantor,Hans-Rudolf",
+   "journal": "正觀",
+   "vol": "27 2003.12[民92.12]",
+   "page": "頁13-84",
+   "pdf": false
+  },
+  {
+   "title": "華嚴宗的可說與不可說:The Expressible and Inexpressible in Huayen Buddhism",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "27 2003.12[民92.12]",
+   "page": "頁85-133",
+   "pdf": false
+  },
+  {
+   "title": "維根斯坦論可說與不可說:Wittgenstein on What Can and Cannot Be Said",
+   "author": "米建國",
+   "journal": "正觀",
+   "vol": "27 2003.12[民92.12]",
+   "page": "頁135-169",
+   "pdf": false
+  },
+  {
+   "title": "東西哲學對話:",
+   "author": "陳秀娃",
+   "journal": "正觀",
+   "vol": "27 2003.12[民92.12]",
+   "page": "頁171-204",
+   "pdf": false
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "24 2003.03[民92.03]",
+   "page": "頁5-89",
+   "pdf": true
+  },
+  {
+   "title": "佛學研究一般方法論:",
+   "author": "蕭振邦",
+   "journal": "正觀",
+   "vol": "24 2003.03[民92.03]",
+   "page": "頁91-137",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "23 2002.12[民91.12]",
+   "page": "頁5-166",
+   "pdf": true
+  },
+  {
+   "title": "「涅槃無名論」及其背景:",
+   "author": "橫超慧日",
+   "journal": "正觀",
+   "vol": "23 2002.12[民91.12]",
+   "page": "頁167-224",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "21 2002.06[民91.06]",
+   "page": "頁5-184",
+   "pdf": true
+  },
+  {
+   "title": "中國判教思想的濫殤:",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "21 2002.06[民91.06]",
+   "page": "頁185-196",
+   "pdf": true
+  },
+  {
+   "title": "關於宗教對話問題:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "22 2002.09[民91.09]",
+   "page": "頁5-21",
+   "pdf": true
+  },
+  {
+   "title": "禪觀法門對南北朝佛教的影響:",
+   "author": "釋道昱",
+   "journal": "正觀",
+   "vol": "22 2002.09[民91.09]",
+   "page": "頁23-110",
+   "pdf": true
+  },
+  {
+   "title": "為霖道霈禪師的生平與著作:",
+   "author": "莊崑木",
+   "journal": "正觀",
+   "vol": "22 2002.09[民91.09]",
+   "page": "頁111-193",
+   "pdf": true
+  },
+  {
+   "title": "漢譯《阿含經》與阿毘達磨論書中的「慧解脫」--以「雜阿含．須深經」為中心:",
+   "author": "溫宗堃",
+   "journal": "正觀",
+   "vol": "26 2003.09[民92.09]",
+   "page": "頁5-51",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "26 2003.09[民92.09]",
+   "page": "頁53-111",
+   "pdf": true
+  },
+  {
+   "title": "日本京都哲學與佛學之旅與三木清的構想力的邏輯:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "26 2003.09[民92.09]",
+   "page": "頁113-156",
+   "pdf": true
+  },
+  {
+   "title": "僧肇與老莊思想--郭象與僧肇:",
+   "author": "福永光司",
+   "journal": "正觀",
+   "vol": "26 2003.09[民92.09]",
+   "page": "頁157-194",
+   "pdf": true
+  },
+  {
+   "title": "至尊．法幢吉祥賢著「宗義建立」之譯注研究:",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "32 2005.03[民94.03]",
+   "page": "頁5-160",
+   "pdf": true
+  },
+  {
+   "title": "「成實論」「三心」與「攝大乘論」「三性」思想之比較:",
+   "author": "陳世賢",
+   "journal": "正觀",
+   "vol": "32 2005.03[民94.03]",
+   "page": "頁161-190",
+   "pdf": true
+  },
+  {
+   "title": "Sanna and Sati:想與念",
+   "author": "關則富",
+   "journal": "正觀",
+   "vol": "32 2005.03[民94.03]",
+   "page": "頁191-224",
+   "pdf": true
+  },
+  {
+   "title": "馬鳴在「美難陀」中對「瑜珈」（yoga）及其相關詞的用例:",
+   "author": "越建東",
+   "journal": "正觀",
+   "vol": "28 2004.03[民93.03]",
+   "page": "頁5-24",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "28 2004.03[民93.03]",
+   "page": "頁25-104",
+   "pdf": true
+  },
+  {
+   "title": "西藏心類學簡介及譯注:",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "28 2004.03[民93.03]",
+   "page": "頁105-167",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "29 2004.06[民93.06]",
+   "page": "頁5-83",
+   "pdf": true
+  },
+  {
+   "title": "與京都哲學的對話：西谷啟治論宗教、道德問題與我的回應:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "29 2004.06[民93.06]",
+   "page": "頁85-136",
+   "pdf": true
+  },
+  {
+   "title": "王門弟子與佛教:",
+   "author": "黃文樹",
+   "journal": "正觀",
+   "vol": "29 2004.06[民93.06]",
+   "page": "頁137-214",
+   "pdf": true
+  },
+  {
+   "title": "對比、詮釋與典範轉移(2)：以兩種《善生經》探究佛教倫理的詮釋學轉向問題:",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "35  民94.12",
+   "page": "頁5-64",
+   "pdf": true
+  },
+  {
+   "title": "佛教《六方禮經》之倫理觀探析:Explorative Analysis on Ethics of Buddhist 6-Aspect Rites Scriptures",
+   "author": "邱敏捷",
+   "journal": "正觀",
+   "vol": "35  民94.12",
+   "page": "頁65-100",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "35  民94.12",
+   "page": "頁101-216",
+   "pdf": true
+  },
+  {
+   "title": "對比、詮釋與典範轉移(1)：兩種佛教典範下的郁伽長者:",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "34  民94.09",
+   "page": "頁5-57",
+   "pdf": true
+  },
+  {
+   "title": "吉藏《金剛般若疏》之初探:",
+   "author": "釋長清",
+   "journal": "正觀",
+   "vol": "34  民94.09",
+   "page": "頁59-92",
+   "pdf": true
+  },
+  {
+   "title": "文獻學方法及其在佛教研究的若干成果與反思:",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "34  民94.09",
+   "page": "頁93-236",
+   "pdf": true
+  },
+  {
+   "title": "「自然界」之研究--中國佛教律家詮釋律制一例:\"Natural Boundary\"--A Case Study on the Interpretation of Vinaya from the Perspective of Chinese Buddhist Masters",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "71  2014.12[民103.12]",
+   "page": "頁5-37",
+   "pdf": true
+  },
+  {
+   "title": "《四分律》知而妄語戒內涵及其法理分析--現代法律體系參照下的對比研究:The Content and Jurisprudential Analysis of the Precept Against Deliberately False Speech in Dharmagupta-vinaya--A Comparative Study Referencing the Modern Legal System",
+   "author": "陳弘學",
+   "journal": "正觀",
+   "vol": "71  2014.12[民103.12]",
+   "page": "頁39-80",
+   "pdf": true
+  },
+  {
+   "title": "法稱的知識論研究(下):A Study of the Epistemology of Dharmakīrti (2)",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "71  2014.12[民103.12]",
+   "page": "頁83-154",
+   "pdf": true
+  },
+  {
+   "title": "兜率天與諸佛出世(上):Tusita and the Births of the Buddha",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "63  2012.12[民101.12]",
+   "page": "頁5-189",
+   "pdf": true
+  },
+  {
+   "title": "Sangs Rgyas Gling Pa (1341~1396) & His Longevity Teachings:桑傑林巴(1341~1396)及其長壽教法",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "63  2012.12[民101.12]",
+   "page": "頁191-226",
+   "pdf": true
+  },
+  {
+   "title": "「應無所住而生其心」--從梵文原義到禪學新詮:\"Should Non-abidingly Exercise the Mind\"--From Sanskrit Original Meaning to Zen Interpretation",
+   "author": "蕭玫",
+   "journal": "正觀",
+   "vol": "68  2014.03[民103.03]",
+   "page": "頁5-37",
+   "pdf": true
+  },
+  {
+   "title": "印度後期佛教有、無相派爭論之近代研究回顧與短評:On the Recent Scholarship of Sākāra, Nirākāra-vāda",
+   "author": "徐鳴謙",
+   "journal": "正觀",
+   "vol": "68  2014.03[民103.03]",
+   "page": "頁39-74",
+   "pdf": true
+  },
+  {
+   "title": "從澄觀「心」與「法界」的鏡映性論佛教的人文主義:On Buddhist Humanism--Based on Reflectivity between \"Mind\" and \"Dharma Realm\" According to Cheng-Guan",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "68  2014.03[民103.03]",
+   "page": "頁77-115",
+   "pdf": true
+  },
+  {
+   "title": "從《長阿含經》及《長部》經群檢視四禪是否外道之說:Was Four Jhānas Non-Buddhist&apos;s Initiative? Examination from the Dīgha Nikāya and Dīrgha Āgama Group Texts",
+   "author": "越建東",
+   "journal": "正觀",
+   "vol": "66  2013.09[民102.09]",
+   "page": "頁5-38",
+   "pdf": true
+  },
+  {
+   "title": "漢譯佛典新式標點舉例:Examples and Methods about the Modern Punctuation for Chinese Buddhist Canonical Documents",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "66  2013.09[民102.09]",
+   "page": "頁39-112",
+   "pdf": true
+  },
+  {
+   "title": "弗洛伊德的精神分析與佛教唯識學的比較研究--以潛意識和阿賴耶識為中心(上):Psycho-analysis and Buddhist Vijñāna-vāda (1)",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "66  2013.09[民102.09]",
+   "page": "頁113-200",
+   "pdf": true
+  },
+  {
+   "title": "《般若經》的般若波羅蜜多教學的有情觀與有情轉化:Perspectives on and Transformation of Sentient Beings from the Teachings of Prajñāpāramitā in the Prajñāpāramitā-sūtras",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "64  2013.03[民102.03]",
+   "page": "頁5-29",
+   "pdf": true
+  },
+  {
+   "title": "梵語成為印度佛教經典語言之探討:The Problem of Sanskrit as the Canonical Language in Buddhism",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "64  2013.03[民102.03]",
+   "page": "頁31-53",
+   "pdf": true
+  },
+  {
+   "title": "《入中論釋疏》第6章vers. 29-33譯注:An Annotated Translation on the Verses 29-33 in the Sixth Chapter of Madhyamakāvatāra-tīkā",
+   "author": "釋見弘",
+   "journal": "正觀",
+   "vol": "64  2013.03[民102.03]",
+   "page": "頁55-130",
+   "pdf": false
+  },
+  {
+   "title": "宋代文本刊印對禪學發展之影響:The Influence of Text Printing and Binding in the Sung on the Development of Ch&apos;an",
+   "author": "徐銘謙",
+   "journal": "正觀",
+   "vol": "72  2015.03[民104.03]",
+   "page": "頁5-37",
+   "pdf": true
+  },
+  {
+   "title": "《法句經》「三言」偈頌的標點與試譯:The Punctuation and Translation Proposal for the &apos;Trisyllabic Verses&apos; in the Faju Jing (T210)",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "72  2015.03[民104.03]",
+   "page": "頁39-88",
+   "pdf": true
+  },
+  {
+   "title": "西藏佛教之「決斷法」初探:Primary Study on the gCod yul Teachings of Tibetan Buddhism",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "72  2015.03[民104.03]",
+   "page": "頁91-133",
+   "pdf": true
+  },
+  {
+   "title": "梵本《大乘莊嚴經論》之研究百年簡史與未來展望:Introduction and Literary Study of the Sanskrit Text of the Scripture of Adorning the Great Vehicle (Mahāyānasūtrālamkāra)",
+   "author": "釋惠敏",
+   "journal": "正觀",
+   "vol": "62  2012.09[民101.09]",
+   "page": "頁5-97",
+   "pdf": true
+  },
+  {
+   "title": "《七處三觀經》的結構與譯者--兼對Paul Harrison論文(1997)的回應:The Structure and Translator of the \"Qi-Chu-San-Guan-Jing\" (T150A)--With Responses to an Article by Paul Harrison (1997)",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "62  2012.09[民101.09]",
+   "page": "頁99-192",
+   "pdf": true
+  },
+  {
+   "title": "「正法眼藏」與「拈花微笑」公案史料再考:A Re-examination of the Historical Records of the Zheng-fayan-zang (正法眼藏) and the Nianhua-weixiao (拈花微笑) Gong-an",
+   "author": "釋惠敏",
+   "journal": "正觀",
+   "vol": "65  2013.06[民102.06]",
+   "page": "頁5-60",
+   "pdf": true
+  },
+  {
+   "title": "兜率天與諸佛出世(下):Tusita and the Births of the Buddha (2)",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "65  2013.06[民102.06]",
+   "page": "頁61-222",
+   "pdf": true
+  },
+  {
+   "title": "睡眠與圓滿生命：佛教與印度阿育吠陀對睡眠看法的比較研究:Sleep and a Perfect Life: A Comparative Study of the Views on Sleep between Buddhism and India&apos;s Āyurveda",
+   "author": "梁國超",
+   "journal": "正觀",
+   "vol": "61  2012.06[民101.06]",
+   "page": "頁55-121",
+   "pdf": true
+  },
+  {
+   "title": "不可湮沒的一代高僧--北宋演化大師可政考述:Research on Ke Zheng: A Memorable and Important Buddhist Monk of Northern-Song Dynasty",
+   "author": "祁海寧",
+   "journal": "正觀",
+   "vol": "61  2012.06[民101.06]",
+   "page": "頁123-173",
+   "pdf": true
+  },
+  {
+   "title": "《楞伽經》中〈自內證智〉(pratyātmagati-)的構造:The Structure of \"Pratyātmagati-\" in Lankāvatāra-sūtra",
+   "author": "郭瓊瑤",
+   "journal": "正觀",
+   "vol": "67  2013.12[民102.12]",
+   "page": "頁5-60",
+   "pdf": true
+  },
+  {
+   "title": "關於na śūnyatayā śūnya的爭論:On the Interpretation of na śūnyatayā śūnya",
+   "author": "宗玉媺",
+   "journal": "正觀",
+   "vol": "67  2013.12[民102.12]",
+   "page": "頁61-104",
+   "pdf": true
+  },
+  {
+   "title": "弗洛伊德的精神分析與佛教唯識學的比較研究--以潛意識和阿賴耶識為中心(下):Psycho-analysis and Buddhist Vijñāna-vāda (2)",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "67  2013.12[民102.12]",
+   "page": "頁105-188",
+   "pdf": true
+  },
+  {
+   "title": "法上「正理滴論廣釋．現量品」譯註:",
+   "author": "何建興",
+   "journal": "正觀",
+   "vol": "31 2004.12[民93.12]",
+   "page": "頁5-76",
+   "pdf": true
+  },
+  {
+   "title": "淨眼論因明之能立:",
+   "author": "沈劍英",
+   "journal": "正觀",
+   "vol": "31 2004.12[民93.12]",
+   "page": "頁77-130",
+   "pdf": true
+  },
+  {
+   "title": "我與梶山雄一教授：一點關係與哀思:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "31 2004.12[民93.12]",
+   "page": "頁131-145",
+   "pdf": true
+  },
+  {
+   "title": "Remarks on Buddhist Meditation Formulas Occurring in Various Versions of Early Canonical Texts:早期佛典禪修公式在不同文本中所呈現之特質",
+   "author": "越建東",
+   "journal": "正觀",
+   "vol": "31 2004.12[民93.12]",
+   "page": "頁147-199",
+   "pdf": true
+  },
+  {
+   "title": "釋尊之超越彌勒九劫--試論彌勒信仰與菩薩思想發展的幾個面相:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "30 2004.09[民93.09]",
+   "page": "頁5-99",
+   "pdf": true
+  },
+  {
+   "title": "與京都哲學的對話：西谷啟治論宗教、道德問題與我的回應:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "30 2004.09[民93.09]",
+   "page": "頁101-151",
+   "pdf": true
+  },
+  {
+   "title": "西藏佛教研究的意義:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "30 2004.09[民93.09]",
+   "page": "頁153-163",
+   "pdf": true
+  },
+  {
+   "title": "內觀修行的起源:",
+   "author": "溫宗堃",
+   "journal": "正觀",
+   "vol": "30 2004.09[民93.09]",
+   "page": "頁165-213",
+   "pdf": true
+  },
+  {
+   "title": "襌學之道:The Way of Chan",
+   "author": "王開府",
+   "journal": "正觀",
+   "vol": "75  2015.12[民104.12]",
+   "page": "頁5-72",
+   "pdf": true
+  },
+  {
+   "title": "西藏佛教施身供養的互文分析:Inter-textual Analysis on Bodily Offering in Tibetan Buddhism",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "76  2016.03[民105.03]",
+   "page": "頁5-55",
+   "pdf": true
+  },
+  {
+   "title": "澄觀《華嚴經疏鈔》與老學之交涉:The Relationship between Chengguan&apos;s Huayanjingshuchao and Lao-ology",
+   "author": "釋正持",
+   "journal": "正觀",
+   "vol": "76  2016.03[民105.03]",
+   "page": "頁57-104",
+   "pdf": true
+  },
+  {
+   "title": "試論對照目錄的「對應經典」與「參考經典」--以《中阿含》為例:Notes on &apos;Parallel&apos; and &apos;Partial Parallel&apos; Used in Comparative Catalogues--With Examples from the Madhyama Āgama",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "76  2016.03[民105.03]",
+   "page": "頁105-196",
+   "pdf": true
+  },
+  {
+   "title": "無畏山(Abhyagiri)派之五蘊、十二處、十八界--《有為無為抉擇》第13章:The Aggregates, Bases and Elements According to the Abhayagirivāsins: A Japanese Translation of the Saṃskṛtāsaṃskṛtaviniścaya, Chapter 13",
+   "author": "林隆嗣",
+   "journal": "正觀",
+   "vol": "77  2016.06[民105.06]",
+   "page": "頁5-62",
+   "pdf": true
+  },
+  {
+   "title": "無畏山(Abhyagiri)派的十二緣起--《有為無為抉擇》第14章:The Dependent Origination According to the Abhayagirivāsins: A Japanese Translation of the Saṃskṛtāsaṃskṛtaviniścaya, Chapter 14",
+   "author": "林隆嗣",
+   "journal": "正觀",
+   "vol": "77  2016.06[民105.06]",
+   "page": "頁63-112",
+   "pdf": true
+  },
+  {
+   "title": "Is \"Vijñaptimātra\" Ontological or Epistemological Idealism?:「唯識」是本體論的唯心主張或是認識論的唯心主張？",
+   "author": "楊志常",
+   "journal": "正觀",
+   "vol": "77  2016.06[民105.06]",
+   "page": "頁113-166",
+   "pdf": true
+  },
+  {
+   "title": "藏譯本《阿毘達磨俱舍論》「破執我品第九」中「別破某學派」之譯注與考察:An Annotated Translation and Study of the Theory of Certain School in the \"Chapter IX: Refutation of the Pudgala\" from the Tibetan Abhidharmakośabhāṣya",
+   "author": "吳宛真",
+   "journal": "正觀",
+   "vol": "79  2016.12[民105.12]",
+   "page": "頁5-97",
+   "pdf": true
+  },
+  {
+   "title": "《法集要頌經》(T213)的翻譯議題:Translation Issues of the Faji Yaosong Jing (T213)",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "79  2016.12[民105.12]",
+   "page": "頁99-171",
+   "pdf": true
+  },
+  {
+   "title": "佛教對初期耆那教業論的批判--從漢譯佛典看:Buddhist Critique on Karmic Theory in Early Jainism: From the Perspective of Chinese Buddhist Translations",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "79  2016.12[民105.12]",
+   "page": "頁173-201",
+   "pdf": true
+  },
+  {
+   "title": "徳一と最澄との「三一権実論争」:The Controversies of Ekayāna and Triyāna",
+   "author": "郭瓊瑤",
+   "journal": "正觀",
+   "vol": "75  2015.12[民104.12]",
+   "page": "頁75-105",
+   "pdf": true
+  },
+  {
+   "title": "四無量心於說一切有部解脫道的功用與關係--以三本漢譯《婆沙論》為主:The Function and Relationship of the Four",
+   "author": "釋覺宏",
+   "journal": "正觀",
+   "vol": "75  2015.12[民104.12]",
+   "page": "頁107-162",
+   "pdf": true
+  },
+  {
+   "title": "探究文化間際概念與哲學思考的關聯:Exploring the Idea of Interculturality and Its",
+   "author": "陳學毅",
+   "journal": "正觀",
+   "vol": "73  2015.06[民104.06]",
+   "page": "頁11-40",
+   "pdf": true
+  },
+  {
+   "title": "燃燈佛授記本生敘事與呂格爾詮釋學的對話:A Dialogue between Ricoeur&apos;s Hermeneutics and the",
+   "author": "李幸玲",
+   "journal": "正觀",
+   "vol": "73  2015.06[民104.06]",
+   "page": "頁41-75",
+   "pdf": true
+  },
+  {
+   "title": "「時間」與「敘事」之視域融合：以呂格爾「三重再現」及法藏「新十玄門」為線索:A Fusion Horizon of \"Time\" and \"Narrative\": According to P. Ricoeur&apos;s \"Threefold Mimesis\" and",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "73  2015.06[民104.06]",
+   "page": "頁77-125",
+   "pdf": true
+  },
+  {
+   "title": "襌與空之喻--由呂格爾詮釋學看「襌與空」之隱喻進路:The Metaphor between Chan and Emptiness: The",
+   "author": "黃筱慧",
+   "journal": "正觀",
+   "vol": "73  2015.06[民104.06]",
+   "page": "頁127-153",
+   "pdf": true
+  },
+  {
+   "title": "《入菩提行論難語釋》〈般若波羅蜜多章〉譯注(偈頌1注釋):The Translation & Annotation of the \"Prajñāpāramitā Chapter\" (Verse 1 & Commentary) of Bodhicaryāvatāra-pañjikā",
+   "author": "釋見弘",
+   "journal": "正觀",
+   "vol": "74  2015.09[民104.09]",
+   "page": "頁5-47",
+   "pdf": true
+  },
+  {
+   "title": "僧肇的聖人觀與吳汝鈞的純粹力動觀:A Comparative Study of Seng-chao&apos;s Concept of the",
+   "author": "陳森田",
+   "journal": "正觀",
+   "vol": "74  2015.09[民104.09]",
+   "page": "頁49-105",
+   "pdf": true
+  },
+  {
+   "title": "印順《中國襌宗史》總體評價:The Overall Assessment of Yinshun&apos;s Chinese Zen",
+   "author": "米進忠",
+   "journal": "正觀",
+   "vol": "74  2015.09[民104.09]",
+   "page": "頁107-154",
+   "pdf": true
+  },
+  {
+   "title": "談「所以者何」:On the Chinese Buddhist Translation \"Suo-Yi Zhe He\" (所以者何)",
+   "author": "趙淑華",
+   "journal": "正觀",
+   "vol": "70  2014.09[民103.09]",
+   "page": "頁5-76",
+   "pdf": true
+  },
+  {
+   "title": "〈法句序〉與《法句經》重譯偈頌:&apos;Faju Xu&apos; (法句序 The Preface for the Dhammapada) and the Duplicated Verses Translated in Chinese Dharmapada (法句經，Taishō 210)",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "70  2014.09[民103.09]",
+   "page": "頁77-132",
+   "pdf": true
+  },
+  {
+   "title": "法稱的知識論研究(上):A Study of the Epistemology of Dharmakīrti (1)",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "70  2014.09[民103.09]",
+   "page": "頁133-216",
+   "pdf": true
+  },
+  {
+   "title": "文本對勘與漢譯佛典的語言研究--以《維摩經》為例:Textual Criticism and the Study of Buddhist Texts in Chinese Translation",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "69  2014.06[民103.06]",
+   "page": "頁5-59",
+   "pdf": true
+  },
+  {
+   "title": "佛性說的中國化問題--吉藏到法融的無情有性說之轉向:On the Sinification of Buddha Nature Theory?--A Doctrinal Shift of \"Non-sentient Beings Possess Buddha Nature&apos; from Jicang to Farong",
+   "author": "林悟石",
+   "journal": "正觀",
+   "vol": "69  2014.06[民103.06]",
+   "page": "頁61-117",
+   "pdf": true
+  },
+  {
+   "title": "願曉《因明義骨》鉤沉及箋注:Exploration and Annotation on the Gist of Hetuvidya",
+   "author": "沈海波",
+   "journal": "正觀",
+   "vol": "69  2014.06[民103.06]",
+   "page": "頁119-164",
+   "pdf": true
+  },
+  {
+   "title": "梵本《大乘莊嚴經論》供養、師事(17品．第1-16偈)譯注與考察:An Exegesis and Inquiry of Verses 1-16-about Worsghip, Service-in Chapter 17 of the Sanskrit Text Mahāyānasūtrālaṃkāra",
+   "author": "釋惠敏",
+   "journal": "正觀",
+   "vol": "78  2016.09[民105.09]",
+   "page": "頁5-69",
+   "pdf": true
+  },
+  {
+   "title": "菩薩與救度--從觀自在之興起看佛教與印度教之互動:Bodhisattva and Delivery: Avalokiteśvara and Mahayana&apos;s Interaction with Hinduism",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "78  2016.09[民105.09]",
+   "page": "頁71-112",
+   "pdf": true
+  },
+  {
+   "title": "A Study of the Authorship of the Second Part of Dunhuang Manuscript S 4221:敦煌文獻斯坦因第4221號後半部作者身份之研究",
+   "author": "釋果暉",
+   "journal": "正觀",
+   "vol": "78  2016.09[民105.09]",
+   "page": "頁113-143",
+   "pdf": true
+  },
+  {
+   "title": "真諦三藏「九識說」產生的思想背景之考察--重新檢討勝又俊教之觀點:The Study of the Ideological Background from Theory of Nine Consciousnesses by Paramārtha--Review Katsumata-Shunkyo&apos;s Point of View",
+   "author": "釋如定",
+   "journal": "正觀",
+   "vol": "58  2011.09[民100.09]",
+   "page": "頁5-41",
+   "pdf": true
+  },
+  {
+   "title": "龍樹《迴諍論》中陽炎喻之研究:A Study of the Simile of the Mirage in Nāgārjuna&apos;s Vigraha-vyāvartanī",
+   "author": "釋滿庭",
+   "journal": "正觀",
+   "vol": "58  2011.09[民100.09]",
+   "page": "頁43-78",
+   "pdf": true
+  },
+  {
+   "title": "《瑜伽師地論》中的阿賴耶識說:A Study of the Doctrine of Ālaya-vijñāna Presented in the Yogācāra-bhūmi",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "58  2011.09[民100.09]",
+   "page": "頁79-158",
+   "pdf": true
+  },
+  {
+   "title": "青色青光、黃色黃光--蓮花放光的梵語學考察:Do the Lotus Themselves Really Shine?: Sanskrit Investigation on Sukhāvatīvyūha",
+   "author": "郭瓊瑤",
+   "journal": "正觀",
+   "vol": "57  2011.06[民100.06]",
+   "page": "頁5-36",
+   "pdf": true
+  },
+  {
+   "title": "五十卷本《雜阿含經》字句斠勘:An Approach to Collate the Ambiguous Word(s) of Chinese Za-A-Han-Jing (T99, Sa□yukta Āgama)",
+   "author": "溫宗堃",
+   "journal": "正觀",
+   "vol": "57  2011.06[民100.06]",
+   "page": "頁37-117",
+   "pdf": true
+  },
+  {
+   "title": "「確實安住」如何可能置基於「無住」？--以《說無垢稱經》為主要依據的「安住」之哲學探究:How Is \"Real Abiding\" Possibly Founded on Non-abiding?: A Philosophical Inquiry Mainly Based on the Vimalakīrti-nirdeśa",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "57  2011.06[民100.06]",
+   "page": "頁119-168",
+   "pdf": true
+  },
+  {
+   "title": "從後說絕--單卷本《雜阿含經》是否將偈頌譯成長行:\"Cong-Hou-Shuo-Jue\"--Are Gāthās Rendered in Prose for T101 (Za-A-Han-Jing, Single Fascicle)?",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "55  2010.12[民99.12]",
+   "page": "頁5-104",
+   "pdf": true
+  },
+  {
+   "title": "關於《阿含經》與《尼柯耶》的對讀:The Comparison of Āgama and Nikāya",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "55  2010.12[民99.12]",
+   "page": "頁105-292",
+   "pdf": true
+  },
+  {
+   "title": "勝喜《入中論釋疏》注釋風格之考察--以《入中論釋疏》ad.《入中論注》Ⅵ vers. 22-33為主:The Approach of Jayānanda&apos;s Annotation and Commentaries Characteristics on vers. 22-33 in the Sixth Chapter of Madhyamakāvatāra-tīkā",
+   "author": "釋見弘",
+   "journal": "正觀",
+   "vol": "60  2012.03[民101.03]",
+   "page": "頁5-60",
+   "pdf": true
+  },
+  {
+   "title": "蔣央協巴《宗義理論》藏本譯注：毘婆沙宗與經部宗:An Annotated Translation of &apos;Jam dbyangs bzhad pa&apos;s Presentation of Tenets: Vaibhāsika and Sautrāntika",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "60  2012.03[民101.03]",
+   "page": "頁61-119",
+   "pdf": true
+  },
+  {
+   "title": "《唯識三十頌》與《成唯識論》的阿賴耶識思想:The Theory of ālaya-vijñāna as Presented in the Trimśikavijñaptikārikā and the Vijñaptimātratāsiddhi-śāstra",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "60  2012.03[民101.03]",
+   "page": "頁121-190",
+   "pdf": true
+  },
+  {
+   "title": "絕對無與哲學觀念的典範:Absolute Nothingness and the Paradigms of Philosophical Concepts",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "56  2011.03[民100.03]",
+   "page": "頁5-28",
+   "pdf": true
+  },
+  {
+   "title": "勝喜《入中論釋疏》VI Verses 22-33譯注與注釋風格略探(上):A Brief Discussion of Jayānanda&apos;s Approach to Annotation and Commentaries and an Annotated Translation on the Madhyamakāvatāra-□īkā VI Verses 22-33 (1)",
+   "author": "釋見弘",
+   "journal": "正觀",
+   "vol": "56  2011.03[民100.03]",
+   "page": "頁29-126",
+   "pdf": false
+  },
+  {
+   "title": "章嘉宗義書〈中觀派章〉漢譯(5):A Translation of Cang Skya Rol Pa&apos;i Rdo Rje&apos;s Grub Mtha&apos;--Rang Rgyud Pa(Svātantrika) (5)",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "56  2011.03[民100.03]",
+   "page": "頁127-215",
+   "pdf": true
+  },
+  {
+   "title": "明末憨山德清的《法華經》思想詮釋:The Thought of the Lotus Sūtra Interpreted by Han-shan De-qing in Late Ming China",
+   "author": "黃國清",
+   "journal": "正觀",
+   "vol": "59  2011.12[民100.12]",
+   "page": "頁5-55",
+   "pdf": true
+  },
+  {
+   "title": "Bhāvaviveka&apos;s Syllogism as an Initial Step to Enlightenment:清辯的邏輯論證--作為通往覺悟的第一步",
+   "author": "釋如源",
+   "journal": "正觀",
+   "vol": "59  2011.12[民100.12]",
+   "page": "頁57-92",
+   "pdf": true
+  },
+  {
+   "title": "釋迦菩薩「三祇百劫成佛」與「始願佛道」(1):Boddhisattva Śākyamuni&apos;s Three Asamkhyeyas and 100 Kalpas&apos; Career for Buddha and His Primordial Vow",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "59  2011.12[民100.12]",
+   "page": "頁93-262",
+   "pdf": true
+  },
+  {
+   "title": "梵行為何必要：論佛教興起時代之宗教倫理思想:Why Is Brahmacariya Necessary for the Buddha?",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "61  2012.06[民101.06]",
+   "page": "頁5-54",
+   "pdf": true
+  },
+  {
+   "title": "《央掘魔羅經》說法策略分析:",
+   "author": "蕭玫",
+   "journal": "正觀",
+   "vol": "53  2010.06[民99.06]",
+   "page": "頁5-35",
+   "pdf": true
+  },
+  {
+   "title": "蔣央協巴《宗義理論：斷謬獅吼．闡明遍智善道寶燈》藏本譯注：非佛教篇:",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "53  2010.06[民99.06]",
+   "page": "頁37-66",
+   "pdf": true
+  },
+  {
+   "title": "西田哲學的絕對無與絕對矛盾的自我同一:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "53  2010.06[民99.06]",
+   "page": "頁67-161",
+   "pdf": true
+  },
+  {
+   "title": "再探漢巴文獻的〈比丘尼相應〉--馬德偉教授〈《別譯雜阿含經》的比丘尼相應〉一文的回應:",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "51  2009.12[民98.12]",
+   "page": "頁5-34",
+   "pdf": true
+  },
+  {
+   "title": "阿南巴達《論理學綱要》譯註:",
+   "author": "郭瓊瑤",
+   "journal": "正觀",
+   "vol": "51  2009.12[民98.12]",
+   "page": "頁35-77",
+   "pdf": true
+  },
+  {
+   "title": "章嘉宗義書〈中觀派章〉漢譯:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "51  2009.12[民98.12]",
+   "page": "頁79-142",
+   "pdf": true
+  },
+  {
+   "title": "梵本《維摩經》的發現與文本對勘研究的文化與思想轉向:",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "51  2009.12[民98.12]",
+   "page": "頁143-203",
+   "pdf": true
+  },
+  {
+   "title": "我對於禪的研習與體驗的心路歷程:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "51  2009.12[民98.12]",
+   "page": "頁205-259",
+   "pdf": true
+  },
+  {
+   "title": "晝日住、入晝正受與宴默:",
+   "author": "郭忠生",
+   "journal": "正觀",
+   "vol": "52  2010.03[民99.03]",
+   "page": "頁5-112",
+   "pdf": true
+  },
+  {
+   "title": "《入楞伽經》「無我如來之藏」的三段辯證:",
+   "author": "蕭玫",
+   "journal": "正觀",
+   "vol": "52  2010.03[民99.03]",
+   "page": "頁113-151",
+   "pdf": true
+  },
+  {
+   "title": "《大般涅槃經》中的生死學：一個佛教文化哲學觀點的解讀:",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "52  2010.03[民99.03]",
+   "page": "頁153-188",
+   "pdf": true
+  },
+  {
+   "title": "勉懺悔者，實自訟之深者--孤山智圓的儒釋整合與宋初天臺佛教思想形態的整體化:",
+   "author": "吳忠偉",
+   "journal": "正觀",
+   "vol": "52  2010.03[民99.03]",
+   "page": "頁189-207",
+   "pdf": true
+  },
+  {
+   "title": "巴利註釋文獻裡的乾觀者:",
+   "author": "溫宗堃",
+   "journal": "正觀",
+   "vol": "33 2005.06[民94.06]",
+   "page": "頁5-90",
+   "pdf": true
+  },
+  {
+   "title": "宗教義自我的現象學導向與我對佛教的教相判釋:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "33 2005.06[民94.06]",
+   "page": "頁91-157",
+   "pdf": true
+  },
+  {
+   "title": "佛教徒宗教交流．對話管見:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "33 2005.06[民94.06]",
+   "page": "頁159-168",
+   "pdf": true
+  },
+  {
+   "title": "佛教住地學說在心身安頓的學理基礎:A Buddhist Doctrine of Abiding-Places in Terms of a Theoretical Foundation for the Abiding of the Mind-Body Complex",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "54  2010.09[民99.09]",
+   "page": "頁5-48",
+   "pdf": true
+  },
+  {
+   "title": "蔣央協巴《宗義理論：斷謬獅吼．闡明遍智善道寶燈》藏本譯注：非佛教篇:An Annotated Translation of &apos;Jam dbyangs bzhad pa&apos;s Presentation of Tenets: Lion&apos;s Roar Eradicating Error, Precious Lamp Illuminating the Genuine Path to Omniscience: Non-Buddhist School of Tenets(3)",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "54  2010.09[民99.09]",
+   "page": "頁49-154",
+   "pdf": true
+  },
+  {
+   "title": "The Deconstructionist Interpretation of Nāgārjuna&apos;s Catu□koti:龍樹四句的解構詮釋",
+   "author": "釋如源",
+   "journal": "正觀",
+   "vol": "54  2010.09[民99.09]",
+   "page": "頁155-180",
+   "pdf": true
+  },
+  {
+   "title": "《別譯雜阿含經》攝頌的特點:Some Characteristics of the Uddānas of Bie-Yi-Za-A-Han-Jing (T 100)",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "45  2008.06[民97.06]",
+   "page": "頁5-80",
+   "pdf": true
+  },
+  {
+   "title": "佛性偏覺與佛性圓覺:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "45  2008.06[民97.06]",
+   "page": "頁81-186",
+   "pdf": true
+  },
+  {
+   "title": "《水懺》與〈水懺序〉之關係三論:The Triple Discussions on the Relationship between “Buddhist Water-confession Ritual” and “the Preface of Buddhist Water-confession Ritual”",
+   "author": "白金銑",
+   "journal": "正觀",
+   "vol": "45  2008.06[民97.06]",
+   "page": "頁187-235",
+   "pdf": true
+  },
+  {
+   "title": "《大般泥洹經》一闡提思想研究之評析:",
+   "author": "蔡伯郎",
+   "journal": "正觀",
+   "vol": "50  2009.09[民98.09]",
+   "page": "頁5-31",
+   "pdf": true
+  },
+  {
+   "title": "《法華經》的久遠釋迦佛與天臺智顗的佛身觀:",
+   "author": "元弼聖",
+   "journal": "正觀",
+   "vol": "50  2009.09[民98.09]",
+   "page": "頁33-63",
+   "pdf": true
+  },
+  {
+   "title": "論「有無」並非適任的形上學概念：以《密嚴經》和《入楞伽經》為主要依據:On \"Existence/ Non-existence\" as Unqualified Metaphysical Concepts: Mainly Based on the Ghana-vyūha-sūtra and La□kāvatāra-sūtra",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "50  2009.09[民98.09]",
+   "page": "頁65-103",
+   "pdf": true
+  },
+  {
+   "title": "蔣央協巴《宗義理論：斷謬獅吼．闡明遍智善道寶燈》藏本譯注：非佛教篇:",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "50  2009.09[民98.09]",
+   "page": "頁105-160",
+   "pdf": true
+  },
+  {
+   "title": "我對於禪的研習與體驗的心路歷程:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "50  2009.09[民98.09]",
+   "page": "頁161-212",
+   "pdf": true
+  },
+  {
+   "title": "註釋書對阿含經文的影響:The Influence of Commentarial Exegesis on the Transmission of Āgama Literature",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁9-47",
+   "pdf": true
+  },
+  {
+   "title": "《佛陀的話語：巴利經典選集》總導讀:",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁49-67",
+   "pdf": true
+  },
+  {
+   "title": "《雪山夜叉經》--巴利經典與漢譯經典對照閱讀:",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁69-142",
+   "pdf": true
+  },
+  {
+   "title": "《大乘起信論》之止觀修持--依「修行信心分」之「止觀門」:",
+   "author": "釋如恒",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁143-156",
+   "pdf": true
+  },
+  {
+   "title": "中國佛教的懺悔觀--以永明延壽為中心:",
+   "author": "釋智學",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁157-203",
+   "pdf": true
+  },
+  {
+   "title": "《付法藏因緣傳》眞偽的疑問:",
+   "author": "曹仕邦",
+   "journal": "正觀",
+   "vol": "48  2009.03[民98.03]",
+   "page": "頁205-212",
+   "pdf": true
+  },
+  {
+   "title": "唯識學「行相」(ākāra)之研究:",
+   "author": "陳一標",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁5-21",
+   "pdf": true
+  },
+  {
+   "title": "他山之石可以攻錯--藉助四阿含解讀巴利經典:",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁23-42",
+   "pdf": true
+  },
+  {
+   "title": "章嘉宗義書《中觀派章》漢譯:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁43-90",
+   "pdf": true
+  },
+  {
+   "title": "窺基法華思想與唯識學說的交涉:",
+   "author": "黃國清",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁91-118",
+   "pdf": true
+  },
+  {
+   "title": "永明延壽著作綜論:",
+   "author": "釋智學",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁119-174",
+   "pdf": true
+  },
+  {
+   "title": "《因明入正理論後疏》研究--淨眼論現量與比量:",
+   "author": "沈劍英",
+   "journal": "正觀",
+   "vol": "43  2007.12[民96.12]",
+   "page": "頁175-247",
+   "pdf": true
+  },
+  {
+   "title": "淨眼關於因明過失的論議:",
+   "author": "沈劍英",
+   "journal": "正觀",
+   "vol": "37  民95.06",
+   "page": "頁5-70",
+   "pdf": true
+  },
+  {
+   "title": "南傳阿毗達磨關於有分心與輪迴再生的學說:",
+   "author": "林倩",
+   "journal": "正觀",
+   "vol": "37  民95.06",
+   "page": "頁71-106",
+   "pdf": true
+  },
+  {
+   "title": "二諦義理的建立:",
+   "author": "釋長清",
+   "journal": "正觀",
+   "vol": "37  民95.06",
+   "page": "頁107-137",
+   "pdf": true
+  },
+  {
+   "title": "從天臺宗《法華玄義》「本跡」詮釋方法上探討「指涉」的宗教哲學問題:The Issue of‘Reference’in Religious Philosophy Reflected by the Hermeneutical Method of‘Root and Traces’in the Profound Commentary on the Lotus Sutra",
+   "author": "漢斯．康特",
+   "journal": "正觀",
+   "vol": "36  民95.03",
+   "page": "頁5-44",
+   "pdf": true
+  },
+  {
+   "title": "吉藏二諦思想的來源:",
+   "author": "釋長清",
+   "journal": "正觀",
+   "vol": "36  民95.03",
+   "page": "頁45-93",
+   "pdf": true
+  },
+  {
+   "title": "宗教義自我的現象學導向與我對佛教的教相判釋:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "36  民95.03",
+   "page": "頁95-212",
+   "pdf": true
+  },
+  {
+   "title": "他詮釋了什麼：賴賢宗《佛教詮釋學》的討論:",
+   "author": "周慶華",
+   "journal": "正觀",
+   "vol": "36  民95.03",
+   "page": "頁213-228",
+   "pdf": true
+  },
+  {
+   "title": "《攝大乘論》(Mahāyānasamgraha)中的阿賴耶識(Ālaya-vijñāna)思想之研究:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "38  民95.09",
+   "page": "頁5-98",
+   "pdf": true
+  },
+  {
+   "title": "略談《摩訶僧祇律》的語料價值:",
+   "author": "朱冠明",
+   "journal": "正觀",
+   "vol": "38  民95.09",
+   "page": "頁99-113",
+   "pdf": true
+  },
+  {
+   "title": "《長阿含經》原語研究:",
+   "author": "辛嶋靜志",
+   "journal": "正觀",
+   "vol": "38  民95.09",
+   "page": "頁115-136",
+   "pdf": true
+  },
+  {
+   "title": "再訪「井水喻」--探索SN 12.68 Kosambī《拘睒彌經》的詮釋:",
+   "author": "Ven. Bhikkhu Bodhi",
+   "journal": "正觀",
+   "vol": "38  民95.09",
+   "page": "頁137-169",
+   "pdf": true
+  },
+  {
+   "title": "二諦的定義與區分:",
+   "author": "釋長清",
+   "journal": "正觀",
+   "vol": "38  民95.09",
+   "page": "頁171-208",
+   "pdf": true
+  },
+  {
+   "title": "我的判教基準與早期佛教：捨邊中道與法有我無:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "39  民95.12",
+   "page": "頁5-84",
+   "pdf": true
+  },
+  {
+   "title": "石壁傳奧--高僧補敘之一:Shibi-Chuanao",
+   "author": "釋智學",
+   "journal": "正觀",
+   "vol": "39  民95.12",
+   "page": "頁85-143",
+   "pdf": true
+  },
+  {
+   "title": "佛教形上語言隱含的難題及其化解途徑:",
+   "author": "周慶華",
+   "journal": "正觀",
+   "vol": "39  民95.12",
+   "page": "頁145-162",
+   "pdf": true
+  },
+  {
+   "title": "二諦之間的關係:",
+   "author": "釋長清",
+   "journal": "正觀",
+   "vol": "39  民95.12",
+   "page": "頁163-200",
+   "pdf": true
+  },
+  {
+   "title": "《入楞伽經》之「成自性如來藏心」--論唯識思想影響如來藏之一端:",
+   "author": "蕭玫",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁5-33",
+   "pdf": true
+  },
+  {
+   "title": "佛性偏覺與佛性圓覺:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁35-101",
+   "pdf": true
+  },
+  {
+   "title": "佛典漢譯流程裡「過渡性文本」的語言景觀【第一部】--譯經文體、譯場組織與譯經流程:",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁103-142",
+   "pdf": true
+  },
+  {
+   "title": "《因明入正理論後疏》研究--淨眼論現量與比量:",
+   "author": "沈劍英",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁143-187",
+   "pdf": true
+  },
+  {
+   "title": "《紅史》考述二則:",
+   "author": "王璞",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁189-203",
+   "pdf": true
+  },
+  {
+   "title": "生命哲學之課題範疇與論題舉隅：由形上學、心態哲學、和知識學的取角所形成的課題範疇:Categories of Topics and Examples of Questions Concerning Philosophy of Life: From Multiple Perspectives of Metaphysics, Philosophy of Mind, and Epistemology",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "44  2008.03[民97.03]",
+   "page": "頁205-263",
+   "pdf": true
+  },
+  {
+   "title": "初期佛教梵行思想之研究:The Early Buddhist Understanding of Brahmacariya and Brahmacārin",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁5-70",
+   "pdf": true
+  },
+  {
+   "title": "中國疑偽佛典研究(1)--永明延壽與疑偽佛典:",
+   "author": "釋智學",
+   "journal": "正觀",
+   "vol": "40  2007.03[民96.03]",
+   "page": "頁5-109",
+   "pdf": true
+  },
+  {
+   "title": "章嘉宗義書〈中觀派章〉漢譯:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "40  2007.03[民96.03]",
+   "page": "頁111-187",
+   "pdf": true
+  },
+  {
+   "title": "佛教戒律的方便精神:",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "40  2007.03[民96.03]",
+   "page": "頁189-208",
+   "pdf": true
+  },
+  {
+   "title": "從佛教對經驗世界的分析探討念身與四念處的理論基礎及一致性:",
+   "author": "關則富",
+   "journal": "正觀",
+   "vol": "41  2007.06[民96.06]",
+   "page": "頁5-32",
+   "pdf": true
+  },
+  {
+   "title": "以兩類《大般涅槃經》論兩種佛教典範之判教原則的詮釋學轉向問題:",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "41  2007.06[民96.06]",
+   "page": "頁33-64",
+   "pdf": true
+  },
+  {
+   "title": "佛教空有兩大宗的判釋:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "41  2007.06[民96.06]",
+   "page": "頁65-184",
+   "pdf": true
+  },
+  {
+   "title": "僧肇中觀哲學的形態:",
+   "author": "梶山雄一",
+   "journal": "正觀",
+   "vol": "41  2007.06[民96.06]",
+   "page": "頁185-216",
+   "pdf": true
+  },
+  {
+   "title": "見達磨則見諸法：早期佛教“法”之意義考察:",
+   "author": "林明強",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁71-113",
+   "pdf": false
+  },
+  {
+   "title": "他山之石可以攻錯--藉助四阿含解讀巴利經典:",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁115-134",
+   "pdf": true
+  },
+  {
+   "title": "世親、眾賢對「三世實有」思想所據「認識條件」的論辯:",
+   "author": "陳世賢",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁135-187",
+   "pdf": true
+  },
+  {
+   "title": "章安灌頂對《大般涅槃經》的詮釋--以《大般涅槃經玄義》為中心:",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁189-221",
+   "pdf": true
+  },
+  {
+   "title": "對真如的認識與言說--天臺宗、三論宗與慈恩宗二諦論的詮釋:",
+   "author": "湯銘鈞",
+   "journal": "正觀",
+   "vol": "42  2007.09[民96.09]",
+   "page": "頁223-257",
+   "pdf": true
+  },
+  {
+   "title": "《楞伽經》中「自性」的正面與負面意義:The Transformation of the Svabhāva and Naiḥsvabhāva: An Analysis of Laṅkāvatāra-sūtra",
+   "author": "郭瓊瑤",
+   "journal": "正觀",
+   "vol": "80  2017.03[民106.03]",
+   "page": "頁5-61",
+   "pdf": true
+  },
+  {
+   "title": "碧巖崖下：武帝問達磨:In the Blue Cliff: Emperor Wu Asks Master Bodhidharma",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "80  2017.03[民106.03]",
+   "page": "頁63-111",
+   "pdf": true
+  },
+  {
+   "title": "談“Śakra”的藏譯“Brgya Byin”--一個重要的佛經翻譯現象:On the Tibetan Translation \"Brgya Byin\" of Śakra",
+   "author": "趙淑華",
+   "journal": "正觀",
+   "vol": "80  2017.03[民106.03]",
+   "page": "頁113-158",
+   "pdf": true
+  },
+  {
+   "title": "從真理的「如實性」與「無顛倒性」看瑜伽行派三種勝義的成立脈絡與內涵:Looking at the Lines of Development and Content of Yogācāra Three Kinds of Ultimate Truth from the Truths of 'Reality' and 'Non-inversion'",
+   "author": "陳一標",
+   "journal": "正觀",
+   "vol": "97  2021.06[民110.06]",
+   "page": "頁5-78",
+   "pdf": true
+  },
+  {
+   "title": "《大正藏》頁底註的訛誤--以第一、二冊為主:On Errors Ascribed to the Editor's Notes of Taishō Tripitaka: Examples Enumerated from Volume I & II",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "97  2021.06[民110.06]",
+   "page": "頁79-109",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第171首-第200首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(6)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "97  2021.06[民110.06]",
+   "page": "頁111-160",
+   "pdf": true
+  },
+  {
+   "title": "從「虛空粉碎」論聖嚴禪法與泰國森林傳統的「開悟經驗」:A Discussion on the Enlightening Experience of Sheng Yen's Chan and Thai Forest Meditation Tradition, in Term of \"the Space Shattering\"",
+   "author": "釋覺心",
+   "journal": "正觀",
+   "vol": "100  2022.03[民111.03]",
+   "page": "頁5-61",
+   "pdf": true
+  },
+  {
+   "title": "正知與念:Clear Knowing and Mindfulness",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "100  2022.03[民111.03]",
+   "page": "頁63-90",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第241首~第270首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (9)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "100  2022.03[民111.03]",
+   "page": "頁91-128",
+   "pdf": true
+  },
+  {
+   "title": "達至「心清淨」：帕奧禪師的「入出息念」教禪文本之引導解析:A Guideline for Achieving \"Purification of Consciousness\": The Interpretation of Master Pa-Auk's Teaching Text of Mindfulness-of-Breathing",
+   "author": "陳法菱",
+   "journal": "正觀",
+   "vol": "107  2023.12[民112.12]",
+   "page": "頁67-126",
+   "pdf": true
+  },
+  {
+   "title": "巴利語佛經譯注：《中部》譯選(3)．第82, 86, 87經:Selections from the Annotated Translation of Majjhima Nikāya (3): Discourses 82, 86, 87",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "107  2023.12[民112.12]",
+   "page": "頁5-66",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第401首~第410首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (16)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "107  2023.12[民112.12]",
+   "page": "頁127-146",
+   "pdf": true
+  },
+  {
+   "title": "真諦的阿摩羅識義與《九識章》的一些問題:A Study on Paramārtha&apos;s Concept of Amala-vijñāna and the Author of Jiu shi zhang",
+   "author": "蔡伯郎",
+   "journal": "正觀",
+   "vol": "81  2017.06[民106.06]",
+   "page": "頁5-52",
+   "pdf": true
+  },
+  {
+   "title": "「證智」(abhiññā)在尼柯耶與阿含經中的用例:Significant Explanation of Abhiññā in the Nikāyas and the Āgamas",
+   "author": "越建東",
+   "journal": "正觀",
+   "vol": "81  2017.06[民106.06]",
+   "page": "頁53-102",
+   "pdf": true
+  },
+  {
+   "title": "碧嚴崖下：趙州至道無難與馬大師不安:In the Blue Cliff: Master Chao Chou&apos;s the Supreme Path Is Without Difficulty & Master Ma Is Unwell",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "81  2017.06[民106.06]",
+   "page": "頁103-143",
+   "pdf": true
+  },
+  {
+   "title": "如來藏三經一論的的自性清淨說：以他空中觀二諦觀點詮解:The Pure Self-nature of the Tathagata's Three Sūtras and One Śāstra--Interpretation from \"Other-emptiness\" of Two Truths on the Middle Way",
+   "author": "廖雅嫻",
+   "journal": "正觀",
+   "vol": "108  2024.03[民113.03]",
+   "page": "頁51-111",
+   "pdf": true
+  },
+  {
+   "title": "慈雲遵式的天臺教觀思想研究:A Resaerch on Ci-yun Zun-shi's Thought of Tien-tai Teaching and Meditation",
+   "author": "黃國清",
+   "journal": "正觀",
+   "vol": "108  2024.03[民113.03]",
+   "page": "頁5-49",
+   "pdf": true
+  },
+  {
+   "title": "本母：記憶，正念，數目表列:The Mātikās: Memorization, Mindfulness, and the List",
+   "author": "李玉涵",
+   "journal": "正觀",
+   "vol": "108  2024.03[民113.03]",
+   "page": "頁113-152",
+   "pdf": true
+  },
+  {
+   "title": "誰說的法、誰說的話--巴利與漢譯經典關於說者的差異:",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "47  2008.12[民97.12]",
+   "page": "頁5-27",
+   "pdf": true
+  },
+  {
+   "title": "重讀佛教「王舍城結集」:",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "47  2008.12[民97.12]",
+   "page": "頁29-60",
+   "pdf": true
+  },
+  {
+   "title": "章嘉宗義書〈中觀派章〉漢譯:",
+   "author": "許明銀",
+   "journal": "正觀",
+   "vol": "47  2008.12[民97.12]",
+   "page": "頁61-101",
+   "pdf": true
+  },
+  {
+   "title": "上海博物館藏支謙譯《佛說維摩詰經．卷上》寫本殘卷的研究意義:",
+   "author": "孫致文",
+   "journal": "正觀",
+   "vol": "47  2008.12[民97.12]",
+   "page": "頁103-135",
+   "pdf": true
+  },
+  {
+   "title": "支謙譯《佛說維摩詰經．諸法言品第五》上博寫卷校注:",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "47  2008.12[民97.12]",
+   "page": "頁137-186",
+   "pdf": true
+  },
+  {
+   "title": "就《如來藏經》試析「如來藏」之原始義蘊:",
+   "author": "蕭玫",
+   "journal": "正觀",
+   "vol": "49  2009.06[民98.06]",
+   "page": "頁5-53",
+   "pdf": true
+  },
+  {
+   "title": "陳那的知識論研究:",
+   "author": "吳汝鈞",
+   "journal": "正觀",
+   "vol": "49  2009.06[民98.06]",
+   "page": "頁55-135",
+   "pdf": true
+  },
+  {
+   "title": "道宣《四分律行事鈔》及其受戒法:",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "49  2009.06[民98.06]",
+   "page": "頁137-177",
+   "pdf": true
+  },
+  {
+   "title": "印順導師對唯識學派「假必依實」之二諦解讀:",
+   "author": "釋德涵",
+   "journal": "正觀",
+   "vol": "49  2009.06[民98.06]",
+   "page": "頁179-205",
+   "pdf": true
+  },
+  {
+   "title": "聖樂(Ariya-sukha)之研究:",
+   "author": "黃纓淇",
+   "journal": "正觀",
+   "vol": "46  2008.09[民97.09]",
+   "page": "頁5-38",
+   "pdf": true
+  },
+  {
+   "title": "中觀學的時間觀--以《中論》與《肇論》為主:",
+   "author": "康特",
+   "journal": "正觀",
+   "vol": "46  2008.09[民97.09]",
+   "page": "頁39-79",
+   "pdf": true
+  },
+  {
+   "title": "《法華玄義》的成就:",
+   "author": "沈海燕",
+   "journal": "正觀",
+   "vol": "46  2008.09[民97.09]",
+   "page": "頁81-126",
+   "pdf": true
+  },
+  {
+   "title": "藏傳佛教他空見研究小史--中英文等資料的勘察:",
+   "author": "黃英傑",
+   "journal": "正觀",
+   "vol": "46  2008.09[民97.09]",
+   "page": "頁127-174",
+   "pdf": true
+  },
+  {
+   "title": "《大乘莊嚴經論》漢譯作「相」的Lakṣaṇa和Nimitta的研究--以三性說和幻喻為中心:A Study of the Meaning of Lakṣaṇa and Nimitta Translated into the Chinese Character \"Xiang\" (相) in Mahāyānasūtrālaṃkāra--Based on the Theory of Three Natures and the Metaphor of Phantom",
+   "author": "陳一標",
+   "journal": "正觀",
+   "vol": "99  2021.12[民110.12]",
+   "page": "頁5-62",
+   "pdf": true
+  },
+  {
+   "title": "反思辛島靜志〈說一切有部法義「篡入」法藏部《長阿含經》的漢譯《十上經》〉一文的論點:Notes on Karashima Seishi's 'The Sarvāstivādins \"Encroachment\" into the Chinese Translation of the Daśottara-sūtra in the Dīrgha-āgama of the Dharmaguptakas'",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "99  2021.12[民110.12]",
+   "page": "頁63-126",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第221首~第240首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(8)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "99  2021.12[民110.12]",
+   "page": "頁127-157",
+   "pdf": true
+  },
+  {
+   "title": "從佛教的語言觀論詮釋現象心理學所預設的語言存有論:On the Presupposition of Linguistic Ontology in Hermeneutic Phenomenological Psychology from Buddhist Linguistic Theory",
+   "author": "郭朝順",
+   "journal": "正觀",
+   "vol": "109  2024.06[民113.06]",
+   "page": "頁9-50",
+   "pdf": true
+  },
+  {
+   "title": "禪修進境量表：以佛教九住心為參考:Buddhist Meditation Progress Inventory: From the Perspective of Buddhist Nine-stages of Mindfulness",
+   "author": "林緯倫",
+   "journal": "正觀",
+   "vol": "109  2024.06[民113.06]",
+   "page": "頁51-85",
+   "pdf": true
+  },
+  {
+   "title": "佛教徒伴侶關係煩惱之觀察與調伏：以薩提爾冰山系統為方法:Observation and Transformation in the Relationship Distress of Buddhist Couples: Using the Satir Iceberg System as a Method",
+   "author": "謝欣惠",
+   "journal": "正觀",
+   "vol": "109  2024.06[民113.06]",
+   "page": "頁143-211",
+   "pdf": true
+  },
+  {
+   "title": "以馬斯洛的動機理論說明《菩薩地持經》的發心與動機問題:A Discussion of Faxin and Motivation of the Bodhisattvabhūmi-sūtra with an Explanation of Abraham H. Maslow's Theory of Motivation",
+   "author": "曾稚棉",
+   "journal": "正觀",
+   "vol": "109  2024.06[民113.06]",
+   "page": "頁87-141",
+   "pdf": true
+  },
+  {
+   "title": "《金藏》興國院本與廣勝寺本《毗沙門天王經》對勘:Textual Study on the Píshāmén Tiānwáng Jiang of the Jurchen Zhaocheng Tripiaka",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "91  2019.12[民108.12]",
+   "page": "頁5-22",
+   "pdf": true
+  },
+  {
+   "title": "《中部》後置式關係句的形式、功能與漢譯現象:An Analytical Description of the Post-head Relative Clauses in the Majjhima-Nikāya and Their Chinese Parallels",
+   "author": "釋堅融",
+   "journal": "正觀",
+   "vol": "91  2019.12[民108.12]",
+   "page": "頁23-79",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第50首-第100首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "91  2019.12[民108.12]",
+   "page": "頁81-155",
+   "pdf": true
+  },
+  {
+   "title": "《大智度論》無生法忍之探究:A Study of the Anutpattikadharmakṣānti in the Da Zhidu Lun",
+   "author": "釋厚觀",
+   "journal": "正觀",
+   "vol": "90  2019.09[民108.09]",
+   "page": "頁5-107",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：從明鄭到日治時期第1首-第20首:Selections of Taiwanese Buddhist Poetry from 1661 through 1911",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "90  2019.09[民108.09]",
+   "page": "頁109-138",
+   "pdf": true
+  },
+  {
+   "title": "On the Six Sense-spheres (3)--A Translation of Saṃyukta-āgama Discourses 250 to 255:〈六根品〉(3)--漢譯《雜阿含經》250至255經英文譯注",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "90  2019.09[民108.09]",
+   "page": "頁139-188",
+   "pdf": true
+  },
+  {
+   "title": "未生冤已成：當為政治與宗教隱喻之阿闍世:Animosity Even before Birth: Ajātasattu as a Political-cum-religious Metaphor",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "92  2020.03[民109.03]",
+   "page": "頁5-48",
+   "pdf": true
+  },
+  {
+   "title": "從漢譯「根有部律」看古印度佛寺的建築與布局:Buildings and Layout of the Ancient Indian Buddhist Monastery as Revealed in Chinese Mūlasarvāstivāda-Vinaya",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "92  2020.03[民109.03]",
+   "page": "頁49-112",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第101首-第120首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (2)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "92  2020.03[民109.03]",
+   "page": "頁113-143",
+   "pdf": true
+  },
+  {
+   "title": "註釋傳統重建的多重面相--以晚明《成唯識論》註釋傳統的重新建構為例:Many Faces of Commentarial Tradition Rebuilding--Case Studies in How the Commentarial Tradition of Cheng Weishi Lun Was Rebuilt in Late-Ming",
+   "author": "楊志常",
+   "journal": "正觀",
+   "vol": "93  2020.06[民109.06]",
+   "page": "頁37-91",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第121首-第134首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(3)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "93  2020.06[民109.06]",
+   "page": "頁93-121",
+   "pdf": true
+  },
+  {
+   "title": "《中論．觀時品》時間哲學之研究:A Philosophical Study of Time Based on the \"Chapter on the Examination of Time\" of the Mūla-madhyamaka-kārikā",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "93  2020.06[民109.06]",
+   "page": "頁5-36",
+   "pdf": true
+  },
+  {
+   "title": "《可洪音義》所出〈《出曜經．念品》音義〉之校勘:Textual Criticism on Priyavarga of Chinese Udānavarga against the Ke-hong-yin-yi",
+   "author": "釋知如",
+   "journal": "正觀",
+   "vol": "95 2020.12[民109.12]",
+   "page": "頁13-96",
+   "pdf": true
+  },
+  {
+   "title": "《四分律》尼戒前二篇校勘及異文類型分析--以可洪《新集藏經音義隨函錄》所出詞條為主:Textual Criticism on the First Two Sections of Bhikṣuṇīvibhaṅga in Dharmaguptakavinaya against the Ke-hong-yin-yi",
+   "author": "釋慧法",
+   "journal": "正觀",
+   "vol": "95 2020.12[民109.12]",
+   "page": "頁97-167",
+   "pdf": true
+  },
+  {
+   "title": "《本事經》〈卷三〉之校勘--以初金再思磧新諸藏經版本暨可洪、慧琳音義等之考察:Textual Criticism on the Third Fascicle of the Chinese Itivṛttaka against the Ke-hong-yin-yi",
+   "author": "林恒卉",
+   "journal": "正觀",
+   "vol": "95 2020.12[民109.12]",
+   "page": "頁169-254",
+   "pdf": true
+  },
+  {
+   "title": "「為佛教，為眾生」：試探印順法師與證嚴法師之師徒因緣及其傳承意義:For Buddhism, for All Sentient Beings: The Master-disciple Relationship and the Significance of Transmission between Master Yinshun and Master Cheng Yen",
+   "author": "廖憶榕",
+   "journal": "正觀",
+   "vol": "98  2021.09[民110.09]",
+   "page": "頁5-58",
+   "pdf": true
+  },
+  {
+   "title": "佛教經典之「大般涅槃」義理研究:The Doctrine of Mahāparinirvāṇa in the Buddhist Scriptures",
+   "author": "萬伶芳",
+   "journal": "正觀",
+   "vol": "98  2021.09[民110.09]",
+   "page": "頁59-98",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第201首～220首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(7)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "98  2021.09[民110.09]",
+   "page": "頁99-125",
+   "pdf": true
+  },
+  {
+   "title": "從佛教觀點看神經語言程式學:Essay on Neurolinguistic Programming from Buddhist Perspectives",
+   "author": "呂凱文",
+   "journal": "正觀",
+   "vol": "96 2021.03[民110.03]",
+   "page": "頁5-54",
+   "pdf": true
+  },
+  {
+   "title": "藏譯佛典譯語初探--以藏文《心經》為中心:An Attempt to Investigate the Language Evolution of Tibetan Translation of  Buddhist Scriptures--With an Emphasis on the Tibetan Translation of the \"Heart Sutra\"",
+   "author": "蘇南望傑",
+   "journal": "正觀",
+   "vol": "96 2021.03[民110.03]",
+   "page": "頁55-154",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第151首~第170首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(5)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "96 2021.03[民110.03]",
+   "page": "頁155-189",
+   "pdf": true
+  },
+  {
+   "title": "修持與療癒之間：六朝隋唐之佛教醫療實踐初探:In between Spiritual Cultivation and Healing: Preliminary Studies on the Healing Practices of Chinese Buddhism from the Six Dynasties to the Tang",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "94  2020.09[民109.09]",
+   "page": "頁5-67",
+   "pdf": true
+  },
+  {
+   "title": "六群比丘再評價：以漢譯「根有部律」為基本資料:A Reappraisal of Ṣaḍvārgika Monks: Based on the Chinese Mūlasarvāstivāda-vinaya",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "94  2020.09[民109.09]",
+   "page": "頁69-117",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第135首~第150首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(4)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "94  2020.09[民109.09]",
+   "page": "頁119-146",
+   "pdf": true
+  },
+  {
+   "title": "Rnying ma'i rgyud 'bum, an Ancient Tibetan Buddhist Canon:古老的藏文大藏經《寧瑪十萬續》",
+   "author": "谷有量",
+   "journal": "正觀",
+   "vol": "104  2023.03[民112.03]",
+   "page": "頁5-38",
+   "pdf": true
+  },
+  {
+   "title": "巴利語佛經譯注：《中部》譯選(2)．第21~23經:Selections from the Annotated Translation of Majjhima Nikāya (2): Discourses 21 to 23",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "104  2023.03[民112.03]",
+   "page": "頁39-99",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第341首~第360首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(13)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "104  2023.03[民112.03]",
+   "page": "頁101-127",
+   "pdf": true
+  },
+  {
+   "title": "體驗修辭與宗教研究:The Rhetoric of Experience and the Study of Religion",
+   "author": "羅伯特．H．夏夫",
+   "journal": "正觀",
+   "vol": "103  2022.12[民111.12]",
+   "page": "頁5-95",
+   "pdf": true
+  },
+  {
+   "title": "未竟的革命：阿育王正法與婆羅門正統之重建:Unsuccessful Revolution: Aśokan Dhamma and the Reconstruction of Brahmanical Orthodoxy",
+   "author": "黃柏棋",
+   "journal": "正觀",
+   "vol": "103  2022.12[民111.12]",
+   "page": "頁97-148",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第321首~第340首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945(12)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "103  2022.12[民111.12]",
+   "page": "頁149-177",
+   "pdf": true
+  },
+  {
+   "title": "優婆塞(夷)的資格及其論爭：從漢譯佛典看:Being an Upāsaka/Upāsika and Its Debate: Based on the Chinese Buddhist Translations",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "106  2023.09[民112.09]",
+   "page": "頁5-85",
+   "pdf": true
+  },
+  {
+   "title": "幽溪傳燈之觀音耳根圓通見解:Annotating upon the Organ of Ear of Avalokiteśvara's Perfect Enlightenment by Yōuxī Chuándēng",
+   "author": "釋自孝",
+   "journal": "正觀",
+   "vol": "106  2023.09[民112.09]",
+   "page": "頁87-131",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第381首~第400首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (15)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "106  2023.09[民112.09]",
+   "page": "頁133-163",
+   "pdf": true
+  },
+  {
+   "title": "早期漢譯佛經的改譯現象：以支謙《太子瑞應本起經》改譯《中本起經》為例:The Revision Phenomenon in Early Chinese Buddhist Translations: A Case Study of the Taizi Ruiying Benqi Jing and the Zhong Benqi Jing",
+   "author": "李周淵",
+   "journal": "正觀",
+   "vol": "105  2023.06[民112.06]",
+   "page": "頁5-75",
+   "pdf": true
+  },
+  {
+   "title": "日本正倉院《聖語藏》顯示的異讀:Variants Identified in Taishō Tripitaka as Words from Scriptures in Shogozō at Shōsōin, Japan",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "105  2023.06[民112.06]",
+   "page": "頁77-106",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第361首~第380首:Selections of Taiwanese Buddist Poetry from 1895 through 1945 (14)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "105  2023.06[民112.06]",
+   "page": "頁107-135",
+   "pdf": true
+  },
+  {
+   "title": "敦煌寫本S.4221全文校勘及相關問題研究:Textual Criticism of Dunhuang Manuscript S.4221 and Studies of Related Issues",
+   "author": "釋果暉",
+   "journal": "正觀",
+   "vol": "102  2022.09[民111.09]",
+   "page": "頁5-81",
+   "pdf": true
+  },
+  {
+   "title": "巴利語佛經譯注：《中部》譯選(1)．第1~4經:Selections from the Annotated Translation of Majjhima Nikāya (1): Discourses 1 to 4",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "102  2022.09[民111.09]",
+   "page": "頁83-152",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第301首～第320首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (11)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "102  2022.09[民111.09]",
+   "page": "頁153-178",
+   "pdf": true
+  },
+  {
+   "title": "佛教時空視角的生死洞察:Insights into Life and Death from the Perspective of Buddhist Philosophy of Time and Space",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "101  2022.06[民111.06]",
+   "page": "頁5-43",
+   "pdf": true
+  },
+  {
+   "title": "由《沙門果經》與《薄伽梵歌》探討剎帝利之罪惡與救度:The Justification of Killing by Kṣatriya and the Discourse of Soteriology in Sāmaññaphala Sutta and Bhagavad Gītā",
+   "author": "吳芬錦",
+   "journal": "正觀",
+   "vol": "101  2022.06[民111.06]",
+   "page": "頁45-78",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第271首～第300首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (10)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "101  2022.06[民111.06]",
+   "page": "頁79-126",
+   "pdf": true
+  },
+  {
+   "title": "《南瀛佛教》中的淨土思想:Pure-Land Thought as Seen from among The Nan-Ying Buddhism",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "84  2018.03[民107.03]",
+   "page": "頁5-99",
+   "pdf": true
+  },
+  {
+   "title": "一切智者與所知之考察--以《真實綱要難語釋》3627偈注釋為主:On the \"All-knowing\" (sarvajña) and \"the Knowable\" (jñeyā)--Some Examinations and Annotatios on Tattvasaṃgrabapañjikā Commenting Tattvasaṃgraba ver. 3627",
+   "author": "釋見弘",
+   "journal": "正觀",
+   "vol": "84  2018.03[民107.03]",
+   "page": "頁101-152",
+   "pdf": true
+  },
+  {
+   "title": "西藏寧瑪派伏藏文獻之長壽、療癒與解脫:Longevity, Healing and Liberation in Treasure Literature of the rNying ma School in Tibet",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "84  2018.03[民107.03]",
+   "page": "頁153-203",
+   "pdf": true
+  },
+  {
+   "title": "正性離生、菩薩位之探究:The Bodhisattva-nyāma in Kumarajiva&apos;s Translations of the Large Sūtra on Perfect Wisdom and It&apos;s Commentary",
+   "author": "釋厚觀",
+   "journal": "正觀",
+   "vol": "88  2019.03[民108.03]",
+   "page": "頁5-74",
+   "pdf": true
+  },
+  {
+   "title": "On the Six Sense-spheres (2)--A Translation of Saṃyukta-āgama Discourses 230 to 249:〈六根品〉(2)--漢譯《雜阿含經》230至249經英文譯注",
+   "author": "無著比丘",
+   "journal": "正觀",
+   "vol": "88  2019.03[民108.03]",
+   "page": "頁75-132",
+   "pdf": true
+  },
+  {
+   "title": "上座部大寺派與無畏山派裡頭陀支的解釋--關於《解脫道論》的所屬部派:The Meaning of Dhutaguna in Mahāvihāravāsin and Abhayagirivāsin: Sectarian Affiliation of Vimuttimagga",
+   "author": "林隆嗣",
+   "journal": "正觀",
+   "vol": "88  2019.03[民108.03]",
+   "page": "頁133-162",
+   "pdf": true
+  },
+  {
+   "title": "天臺漸次止觀判攝問題之研究:The Nature of Gradual-Successive Meditation in T&apos;ien-t&apos;ai Philosophy",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "82  2017.09[民106.09]",
+   "page": "頁5-37",
+   "pdf": true
+  },
+  {
+   "title": "西藏寧瑪派之禪觀--《禪定目炬》評介:Meditation Tradition of rNying ma pa School in Tibetan Buddhism: A Review on bSam gtan mig gron",
+   "author": "梅靜軒",
+   "journal": "正觀",
+   "vol": "82  2017.09[民106.09]",
+   "page": "頁39-80",
+   "pdf": true
+  },
+  {
+   "title": "唯識無境在倫理學上的意涵:The Ethical Complications of the Term \"Mind-only and Non-object\"",
+   "author": "蔡伯郎",
+   "journal": "正觀",
+   "vol": "82  2017.09[民106.09]",
+   "page": "頁81-113",
+   "pdf": true
+  },
+  {
+   "title": "建立天臺宗的深層生態學--以湛然《金剛錍》的「無情有性」為中心:Establishing Deep Ecology Based Upon T&apos;ine-t&apos;ai Philosophy",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "83  2017.12[民106.12]",
+   "page": "頁5-42",
+   "pdf": true
+  },
+  {
+   "title": "佛教的現代主義與禪定體驗的修辭:Buddhist Modernism and the Rhetoric of Meditative Experience",
+   "author": "萬金川",
+   "journal": "正觀",
+   "vol": "83  2017.12[民106.12]",
+   "page": "頁43-161",
+   "pdf": true
+  },
+  {
+   "title": "無畏山派的色法與睡眠色:Materiality and Torpor (Middha) in the Abhayagirivasns",
+   "author": "林隆嗣",
+   "journal": "正觀",
+   "vol": "83  2017.12[民106.12]",
+   "page": "頁163-191",
+   "pdf": true
+  },
+  {
+   "title": "「根本說一切有部律」研究史回顧--以成書年代為中心:An Introduction on the Study of Mūlasarvāstivāda-vinaya: With a Focus on the Date of Compilation",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "86  2018.09[民107.09]",
+   "page": "頁111-150",
+   "pdf": true
+  },
+  {
+   "title": "在巴利註釋文獻裡Sacca的分類--與《解脫道論》之比較:Classifications of Sacca (Truth) According to the Pali Commentaries: In Comparison with the Vimuttimagga",
+   "author": "林隆嗣",
+   "journal": "正觀",
+   "vol": "86  2018.09[民107.09]",
+   "page": "頁151-163",
+   "pdf": true
+  },
+  {
+   "title": "從《大智度論》看〈發趣品〉的十地思想:The Ten Bhumis in Kumarajiva&apos;s Translations of The Large Sutra on Perfect Wisdom and Its&apos; Commentary",
+   "author": "釋厚觀",
+   "journal": "正觀",
+   "vol": "86  2018.09[民107.09]",
+   "page": "頁5-109",
+   "pdf": true
+  },
+  {
+   "title": "意識如何緣取不存在的對象？--以經量部上座的理論與說一切有部眾賢的批評為中心:How Does the Mental Consciousness Cognize Nonexistent Objects?--Focusing on the Theory of the Sautrāntika Master Śrīlāta and the Criticism Thereof from the Sarvāstivāda Master Saṃghabhadra",
+   "author": "耿晴",
+   "journal": "正觀",
+   "vol": "89  2019.06[民108.06]",
+   "page": "頁31-69",
+   "pdf": true
+  },
+  {
+   "title": "護法《成唯識寶生論》論知覺及其所緣：兼與當代理論之交涉:Dharmapāla on Perception and Ālambana in the Cheng Weishi Baosheng Lun: Engaging with Contemporary Philosophy of Perception",
+   "author": "胡志強",
+   "journal": "正觀",
+   "vol": "89  2019.06[民108.06]",
+   "page": "頁71-135",
+   "pdf": true
+  },
+  {
+   "title": "從三性的批判談清辨對無分別智的主張:Interpreting the Non-Conceptual Wisdom from Bhāviveka&apos;s Criticism of the Theory of Three Natures",
+   "author": "林恕安",
+   "journal": "正觀",
+   "vol": "89  2019.06[民108.06]",
+   "page": "頁137-179",
+   "pdf": true
+  },
+  {
+   "title": "明清時期臺灣佛寺詩詞的幾個類型:",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "85  2018.06[民107.06]",
+   "page": "頁5-43",
+   "pdf": true
+  },
+  {
+   "title": "安世高譯經造詞述要--以《陰持入經》“色”字造詞為中心:A Summary of Word-creating in an Shigao&apos;s Translation of Buddhist Scriptures--Using the Words Containing \"Se (色)\" in the Yin Chi Ru Jing as an Example",
+   "author": "劉勁松",
+   "journal": "正觀",
+   "vol": "85  2018.06[民107.06]",
+   "page": "頁45-90",
+   "pdf": true
+  },
+  {
+   "title": "梵漢藏三本《瑜伽師地論》〈本地分〉中〈五識身相應地第一〉及〈意地第二〉之對勘研究:A Comparative Study of Pañcavijñānakāyasamprayuktā Bhūmiḥ and Manobhūmiḥ of Bahubhūmikavastu in the Yogācārabhūmi with Both of the Chinese and Tibetan Versions",
+   "author": "廖本聖",
+   "journal": "正觀",
+   "vol": "85  2018.06[民107.06]",
+   "page": "頁91-185",
+   "pdf": true
+  },
+  {
+   "title": "觀世音菩薩之當代繼承與闡揚：以時空向度與宗教文化遺產為視角:Contemporary Inheritance and Propagation of Bodhisattva Avalokiteśvara: From the Perspective of Space-Time and Religio-cultural Heritage",
+   "author": "蔡耀明",
+   "journal": "正觀",
+   "vol": "87  2018.12[民107.12]",
+   "page": "頁5-46",
+   "pdf": true
+  },
+  {
+   "title": "《阿彌陀三耶三佛薩樓佛檀過度人道經》經題考:A Study on the Title of Amituo Sanyesanfo Sa Lou Fo Tan Guodu Rendao Jing (阿彌陀三耶三佛薩樓佛檀過度人道經)",
+   "author": "李周淵",
+   "journal": "正觀",
+   "vol": "87  2018.12[民107.12]",
+   "page": "頁47-87",
+   "pdf": true
+  },
+  {
+   "title": "《法句經》(T210)的詮釋與翻譯：以法光法師《法句經之英譯及研究》為例:An Introduction and Comments to The Chinese Version of Dhammapada, Translated with Introduction and Annotation (by Bhikkhu Dhammajoti (1995))",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "87  2018.12[民107.12]",
+   "page": "頁89-161",
+   "pdf": true
+  },
+  {
+   "title": "Discourses to the Bereaved in the Four Pāli Nikāyas:巴利四部《尼柯耶》中對喪親者的教說",
+   "author": "陳紹韻",
+   "journal": "正觀",
+   "vol": "110  2024.09[民113.09]",
+   "page": "頁63-115",
+   "pdf": true
+  },
+  {
+   "title": "六群比丘考:A Textual Study of Group-of-six-monks",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "110  2024.09[民113.09]",
+   "page": "頁5-61",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第411首~第430首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (17)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "110  2024.09[民113.09]",
+   "page": "頁117-142",
+   "pdf": true
+  },
+  {
+   "title": "《藏文大藏經》概述：其歷史、系譜及研究資源彙整:Tibetan Buddhist Canon: Its History, Genealogy, and Research Resources",
+   "author": "谷有量",
+   "journal": "正觀",
+   "vol": "113  2025.06[民114.06]",
+   "page": "頁49-130",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第471首~第486首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (20)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "113  2025.06[民114.06]",
+   "page": "頁131-150",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第451首~第470首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (19)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "112  2025.03[民114.03]",
+   "page": "頁123-146",
+   "pdf": true
+  },
+  {
+   "title": "分別知在瞑想實踐中的意義：蓮華戒的場合:Significance of Conceptual Congnition in the Practice of Meditation: The Case of Kamalaśīla、瞑想の實踐における分別知の意義--カマラシーラの場合",
+   "author": "船山徹",
+   "journal": "正觀",
+   "vol": "112  2025.03[民114.03]",
+   "page": "頁91-122",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第487首~第500首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (21)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "114  2025.09[民114.09]",
+   "page": "頁123-145",
+   "pdf": true
+  },
+  {
+   "title": "巴利語佛經譯注：《中部》譯選(5)．第11，12，19經:Selections from the Annotated Translation of Majjhima Nikāya (5): Discourses 11, 12, 19",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "114  2025.09[民114.09]",
+   "page": "頁45-122",
+   "pdf": true
+  },
+  {
+   "title": "《佛教百科全書》的「雜阿含經」詞條評介:The Entries of 'Za A-han Jing 雜阿含經' and 'Saṃyuktāgama' of Contemporary Buddhist Encyclopaedias",
+   "author": "蘇錦坤",
+   "journal": "正觀",
+   "vol": "114  2025.09[民114.09]",
+   "page": "頁5-43",
+   "pdf": true
+  },
+  {
+   "title": "巴利語佛經譯注：《中部》譯選(4)．第58, 76, 98經:Selections from the Annotated Translation of Majjhima Nikāya (4): Discourses 58, 76, 98",
+   "author": "蔡奇林",
+   "journal": "正觀",
+   "vol": "111  2024.12[民113.12]",
+   "page": "頁63-128",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第431首~第450首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (18)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "111  2024.12[民113.12]",
+   "page": "頁129-156",
+   "pdf": true
+  },
+  {
+   "title": "那體慧〈支謙兩首先前未證實來源的「法句偈頌」〉評介:Notes on \"On Two Previously Unidentified Verses in Zhi Qian's Hybrid Dharmapada\" by Jan Nattier",
+   "author": "張譯仁",
+   "journal": "正觀",
+   "vol": "111  2024.12[民113.12]",
+   "page": "頁5-62",
+   "pdf": true
+  },
+  {
+   "title": "入無相方便相之譯註考察：安慧《三十唯識釋》、調伏天《三十唯識釋疏》K.26-30:An Annotated Translation for \"Asallakṣaṇānupraveśopāyalakṣaṇa\": K.26-30 of Sthiramati's Triṃśikāvijñaptibhāṣya and Vinītadeva's Triṃśikāṭīkā",
+   "author": "許恬智",
+   "journal": "正觀",
+   "vol": "112  2025.03[民114.03]",
+   "page": "頁5-90",
+   "pdf": true
+  },
+  {
+   "title": "龍樹之《中論》究竟肯定或否定了甚麼？--由一場近代哲學爭論談起:Affirmation or Negation in Nāgārjuna's Mūlamadhyamakakārikā: A Perspective from Modern Philosophical Debates",
+   "author": "劉千猷",
+   "journal": "正觀",
+   "vol": "116  2026.03[民115.03]",
+   "page": "頁85-121",
+   "pdf": false
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第521首~第535首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (23)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "116  2026.03[民115.03]",
+   "page": "頁123-144",
+   "pdf": false
+  },
+  {
+   "title": "人間佛教研究進路的再思考--以末木「作為方法的佛教」為借鑑:Rethinking the Studies of Humanistic Buddhism (Renjian Fojiao): Reflecting on Sueki's Approach of \"Buddhism as a Method\"",
+   "author": "釋知如",
+   "journal": "正觀",
+   "vol": "116  2026.03[民115.03]",
+   "page": "頁5-83",
+   "pdf": false
+  },
+  {
+   "title": "Nissāraṇīya(應驅出)：巴利比丘尼律發展史上的拐點:Nissāraṇīya: A Codified Term Updating the Development of the Pāli Vinaya",
+   "author": "釋若學",
+   "journal": "正觀",
+   "vol": "113  2025.06[民114.06]",
+   "page": "頁5-48",
+   "pdf": true
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第501首~第520首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (22)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "115  2025.12[民114.12]",
+   "page": "頁119-141",
+   "pdf": false
+  },
+  {
+   "title": "陳那《般若波羅蜜多圓集要義論》分別心散亂之研究--以無的分別與有的分別為中心:Study on Distractions of Mental-Discrimination in Dignāga's Prajñāpāramitāpiṇḍārthaḥsaṃgraha--Centered on the Mental-Discrimination on Non-Existence (Abhāva-vikalpa) and the Mental-Discrimination on Existence (Bhāva-vikalpa)",
+   "author": "釋見心",
+   "journal": "正觀",
+   "vol": "115  2025.12[民114.12]",
+   "page": "頁5-55",
+   "pdf": false
+  },
+  {
+   "title": "園民考：以漢譯律典為基本資料:A Study of Monastery Attendants(Yuanmin 園民)--Based on the Chinese Translation of Buddhist Vinayas",
+   "author": "屈大成",
+   "journal": "正觀",
+   "vol": "115  2025.12[民114.12]",
+   "page": "頁57-117",
+   "pdf": false
+  },
+  {
+   "title": "從古梵網經類文獻探《大正藏》本《梵網經》之編輯歷程:Tracing the Editorial History of Fanwang Sūtra in Taishō Tripiṭaka through Related Dunhuang Manuscripts",
+   "author": "釋知文",
+   "journal": "正觀",
+   "vol": "117  2026.06[民115.06]",
+   "page": "頁5-130",
+   "pdf": false
+  },
+  {
+   "title": "月稱《入中論》第一品譯註:An Annotated Translation of the First Chapter of Candrakīrti's Madhyamakāvatāra",
+   "author": "王俊淇",
+   "journal": "正觀",
+   "vol": "117  2026.06[民115.06]",
+   "page": "頁131-207",
+   "pdf": false
+  },
+  {
+   "title": "臺灣佛教古詩選輯：日治時期第536首~第545首:Selections of Taiwanese Buddhist Poetry from 1895 through 1945 (24)",
+   "author": "楊惠南",
+   "journal": "正觀",
+   "vol": "117  2026.06[民115.06]",
+   "page": "頁209-224",
+   "pdf": false
+  }
+ ]
+}
