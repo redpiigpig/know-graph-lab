@@ -1,0 +1,365 @@
+{
+  "slug": "vendidad-03",
+  "siglum": "Vd 3",
+  "title_zh": "祓魔法典 第 3 章‧大地的悅與不悅",
+  "title_en": "Vendidad 3",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd3sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 3,
+      "verse": 1,
+      "ref": "Vd 3.1",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum,\nkva paoirîm ainghå zemô shâishtem, âat\nmraot ahurô mazdå, ýat bâ paiti nâ\nashava frayat spitama zarathushtra aêsmô-zastô\nbaresmô-zastô gao-zastô hâvanô-zastô\nâxshtaêdha daênaya vaca framrû mithremca\nvouru-gaoyaoitîm jaidhyã râmaca hvâstrem.",
+      "en": "O Maker of the material world, thou Holy\none! Which is the first place where the Earth \nfeels most happy?\nAhura Mazda answered: 'It is the place whereon\none of the faithful steps forward, O Spitama Zarathushtra!\nwith the log in his hand , the Baresma in\nhis hand, the milk in his hand, the mortar in his\nhand, lifting up his voice in good accord with religion,\nand beseeching Mithra , the lord of the rolling\ncountry-side, and Rama Hvastra .'\n2,3. O Maker of the material world, thou Holy one! Which is the\nsecond place where the Earth feels most happy? Ahura Mazda answered:\n'It is the place whereon one of the faithful erects a house with\na priest within, with cattle, with a wife, with children, and\ngood herds within; and wherein afterwards the cattle continue\nto thrive, virtue to thrive, fodder to thrive, the dog to thrive,\nthe wife to thrive, the child to thrive, the fire to thrive, and\nevery blessing of life to thrive.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 2,
+      "ref": "Vd 3.2",
+      "orig": "dâtare ... ashâum, kva bitîm ainghå\nzemô shâishtem, âat mraot ahurô mazdå,\nýat bâ paiti nâ ashava nmânem uzdasta\nâthravat gaomavat nâirivat puthravat hvãthwavat.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 3,
+      "ref": "Vd 3.3",
+      "orig": "âat pascaêta ahe nmânahe frapithwô\ngâush frapithwô ashem frapithwô vastrem frapithwô\nspâ frapithwô nâirika frapithwô aperenâyûkô\nfrapithwô âtarsh frapithwô vîspãm\nhujyâitish.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 4,
+      "ref": "Vd 3.4",
+      "orig": "dâtare ... ashâum, kva thritîm ainghå\nzemô shâishtem, âat mraot ahurô mazdå,\nýat bâ paiti fraêshtem kârayeiti spitama\nzarathushtra ýavanãmca vâstranãmca\nurvaranãmca hvarethô-bairyanãm ýat\nvâ anâpem âi âpem kerenaoiti ýat\nvâ âpem âi anâpem kerenaoiti.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nthird place where the Earth feels most happy? Ahura Mazda answered:\n'It is the place where one of the faithful sows most corn, grass,\nand fruit, O Spitama Zarathushtra! where he waters ground that\nis dry, or drains ground that is too wet.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 5,
+      "ref": "Vd 3.5",
+      "orig": "dâtare ... ashâum, kva tûirîm ainghå\nzemô shâishtem, âat mraot ahurô mazdå,\nýat bâ paiti fraêshtem us-zîzeñti\npasvasca staorâca.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nfourth place where the Earth feels most happy? Ahura Mazda answered:\n'It is the place where there is most increase of flocks and herds.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 6,
+      "ref": "Vd 3.6",
+      "orig": "dâtare ... ashâum, kva puxdhem ainghå zemô\nshâishtem, âat mraot ahurô mazdå, ýat\nbâ paiti fraêshtem maêzeñti pasvasca\nstaorâca.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nfifth place where the Earth feels most happy? Ahura Mazda answered:\n'It is the place where flocks and herds yield most dung.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 7,
+      "ref": "Vd 3.7",
+      "orig": "dâtare ... ashâum, kva paoirîm ainghå\nzemô ashâishtem, âat mraot ahurô mazdå,\nýat arezûrahe grîvaya spitama zarathushtra\nýat ahmya daêva hañdvareñti drujô\nhaca geredhâdha.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nfirst place where the Earth feels sorest grief? Ahura Mazda answered:\n'It is the neck of Arezura, whereon the hosts of fiends rush forth\nfrom the burrow of the Druj.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 8,
+      "ref": "Vd 3.8",
+      "orig": "dâtare ... ashâum, kva bitîm ainghå\nzemô ashâishtem, âat mraot ahurô mazdå,\nýat bâ paiti fraêshtem sairi nikañte\nspânasca irista naraêca irista.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nsecond place where the Earth feels sorest grief? Ahura Mazda answered:\n'It is the place wherein most corpses of dogs and of men lie buried.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 9,
+      "ref": "Vd 3.9",
+      "orig": "dâtare ... ashâum, kva thritîm ainghå\nzemô ashâishtem, âat mraot ahurô mazdå,\nýat bâ paiti fraêshtem daxma uzdaêza\nkiryeiñte ýahmya narô irista nidhayeiñte.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nthird place where the Earth feels sorest grief? Ahura Mazda answered:\n'It is the place whereon stand most of those Dakhmas on which\nthe corpses of men are deposited.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 10,
+      "ref": "Vd 3.10",
+      "orig": "dâtare ... ashâum, kva tûirîm ainghå\nzemô ashâishtem, âat mraot ahurô mazdå,\nýat bâ paiti fraêshtem bavaiñti angrô-\nmainyavanãm geredhãm.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nfourth place where the Earth feels sorest grief? Ahura Mazda answered:\n'It is the place wherein are most burrows of the creatures of\nAngra Mainyu.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 11,
+      "ref": "Vd 3.11",
+      "orig": "dâtare ... ashâum, kva puxdhem ainghå zemô\nashâishtem, âat mraot ahurô mazdå, ýat\nbâ paiti narsh ashaonô spitama zarathushtra nâirikaca\naperenâyûkasca varaithîm pañtãm\nazôit pãsnvånghem hikvånghem jarezîm\nbaraiti vâcim.",
+      "en": "O Maker of the material world, thou Holy one! Which is the\nfifth place where the Earth feels sorest grief? Ahura Mazda answered:\n'It is the place whereon\nthe wife and children of one of the faithful,\nO Spitama Zarathushtra! are driven along the way of captivity,\nthe dry, the dusty way, and lift up a voice of wailing.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 12,
+      "ref": "Vd 3.12",
+      "orig": "dâtare ... ashâum, kô paoirîm imãm\nzãm mazishta xshnaoma xshnâvayeiti, âat mraot\nahurô mazdå, ýat bâ paiti fraêshtem\nuskeñti ýahmya sairi nikañte spânasca\nirista naraêca irista.",
+      "en": "O Maker of the material world, thou Holy one! Who is the first\nthat rejoices the Earth with greatest joy? Ahura Mazda answered:\n'It is he who digs out of it most corpses of dogs and men .'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 13,
+      "ref": "Vd 3.13",
+      "orig": "dâtare ... ashâum kô bitîm imãm\nzãm mazishta xshnaoma xshnâvayeiti, âat mraot\nahurô mazdå, ýat bâ paiti fraêshtem\ndaxma uzdaêza vîkañti ýahmya narô\nirista nidhayeiñte!",
+      "en": "O Maker of the material world, thou Holy one! Who is the second\nthat rejoices the Earth with greatest joy? Ahura Mazda answered:\n'It is he who pulls down most of those Dakhmas on which the corpses\nof men are deposited.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 14,
+      "ref": "Vd 3.14",
+      "orig": "mâ-cish barô aêvô ýat iristem,\nâat ýezi-shê barât aêvô ýat\niristem upa vâ nasush raêthwât nånghanat\nhaca cashmanat haca hizumat haca paitish-hvarenâdha fravâxshat\nhaca frashumakat haca tê, aêshãm paiti sruye\naêsha druxsh ýâ nasush upa-dvãsaiti,\nayaozhdya pascaêta bavaiñti ýavaêca\nýavaêtâtaêca.",
+      "en": "Let no man alone by himself carry a corpse.\nIf a man alone by himself carry a corpse,\nthe Nasu rushes upon him, to defile\nhim, from the nose of the dead, from the eye, from the tongue,\nfrom the jaws, from the sexual organs, from the hinder parts.\nThis Druj Nasu falls upon him, [stains him] even to the end of\nthe nails, and he is unclean, thenceforth, for ever and ever.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 15,
+      "ref": "Vd 3.15",
+      "orig": "dâtare ... ashâum kva aêtahe narsh gâtush\nanghat ýat iristô-kashahe, âat mraot ahurô\nmazdå, ýat anghat ainghå zemô vî-âpô-tememca\nvî-urvarô-tememca ýaozhdâtô-zemôtememca\nhushô-zemôtememca kambishtemca aête pathå\nfrayãn pasvasca staorâca âtremca ahurahe mazdå\nbaresmaca ashaya frastaretem naremca ýim ashavanem.",
+      "en": "O Maker of the material world, thou Holy one! What shall be\nthe place of that man who has carried a corpse [alone]? Ahura\nMazda answered: 'It shall be the place on this earth wherein is\nleast water and fewest plants, whereof the ground is the cleanest\nand the dryest and the least passed through by flocks and herds,\nby the fire of Ahura Mazda, by the consecrated bundles of Baresma,\nand by the faithful.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 16,
+      "ref": "Vd 3.16",
+      "orig": "dâtare ... ashâum cvat drâjô haca\nâthrat cvat drâjô haca apat cvat drâjô\nhaca baresmen frastairyât cvat drâjô haca nerebyô\nashavabyô.",
+      "en": "O Maker of the material world, thou Holy one! How far from\nthe fire? How far from the water? How far from the consecrated\nbundles of Baresma? How far from the faithful?",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 17,
+      "ref": "Vd 3.17",
+      "orig": "âat mraot ahurô mazdå, thrisata-gâim\nhaca âthrat thrisata-gâim haca apat thrisata- gâim\nhaca baresmen frastairyât thrigâim haca nerebyô\nashavabyô.",
+      "en": "Ahura Mazda answered: 'Thirty paces from the fire, thirty\npaces from the water, thirty paces from the consecrated bundles\nof Baresma, three paces from the faithful.\n18,19. 'There, on that place, shall the worshippers of Mazda erect\nan enclosure, and therein shall they establish him with food,\ntherein shall they establish him with clothes, with the coarsest\nfood and with the most worn-out clothes. That food he shall live\non, those clothes he shall wear, and thus shall they let him live,\nuntil he has grown to the age of a Hana, or of a Zaurura, or of\na Pairishta-khshudra.\n20,21. 'And when he has grown to the age of a Hana, or of a Zaurura,\nor of a Pairishta-khshudra, then the worshippers of Mazda shall\norder a man strong, vigorous, and skilful, to cut the head\noff his neck, in his enclosure on the top of the mountain: and\nthey shall deliver his corpse unto the greediest of the corpse-eating\ncreatures made by the beneficent Spirit, unto the vultures, with\nthese words: \"The man here has repented of all his evil thoughts,\nwords, and deeds. If he has committed any other evil deed, it\nis remitted by his repentance: if he has committed no other evil\ndeed, he is absolved by his repentance, for ever and ever.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 18,
+      "ref": "Vd 3.18",
+      "orig": "aêtadha hê aête mazdayasna ainghå\nzemô pairi-daêzãn pairi-daêzayãn,\nhvarethaêibyô pascaêta âstayañta\naête ýôi mazdayasna vastraêibyô\npascaêta âstayañta aête ýôi\nmazdayasna.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 19,
+      "ref": "Vd 3.19",
+      "orig": "draêjishtôtemaêshvaca niuruzdôtemaêshvaca\naêtå hvarethå hvaratu aêtå vastrå\nvanghatu vîspem â ahmât ýat hanô\nvâ zaururô vâ pairishtâ-xshudrô\nvâ bavât.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 20,
+      "ref": "Vd 3.20",
+      "orig": "âat ýat hanô vâ zaururô vâ\npairishtâ-xshudrô vâ bavât aojishtemca\ndim pascaêta mazdayasna tañcishtemca vaêdhyôtememca\nupa-maitîm barezanghãm pãstô-frathanghem\nhê kameredhem vînâthayen ash-hvaretemaêibyô\nspeñtô-mainyavanãm dâmanãm kerefsh-hvârãm\nkerefsh paiti nisrinuyât vayãm kahrkâsãm\nuityaojanô, avå hîm paiti mithnâiti vîspem\ndushmatemca duzhûxtemca duzhvarshtemca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 21,
+      "ref": "Vd 3.21",
+      "orig": "ýezica hê anya akha shyaothna fravarshta paitita\nhê citha âat ýezi-shê anya akha shyaothna\nnôit fravarshta paititem ahe narsh ýavaêca\nýavaêtâtaêca!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 22,
+      "ref": "Vd 3.22",
+      "orig": "dâtare ... ashâum kô thritîm imãm\nzãm mazishta xshnaoma xshnâvayeiti, âat mraot\nahurô mazdå, ýat bâ paiti fraêshtem\nvîkeñte angrô- mainyavanãm geredhãm.",
+      "en": "O Maker of the material world, thou Holy one! Who is the third\nthat rejoices the Earth with greatest joy? Ahura Mazda answered:\n'It is he who fills up most burrows of the creatures of Angra\nMainyu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 23,
+      "ref": "Vd 3.23",
+      "orig": "dâtare ... ashâum kô tûirîm\nimãm zãm mazishta xshnaoma xshnâvayeiti, âat\nmraot ahurô mazdå, ýat bâ paiti fraêshtem\nkârayeiti spitama zarathushtra ýavanãmca vâstranãmca\nurvaranãmca hvarethôbairyanãm ýat vâ\nanâpem âi âpem kerenaoiti ýat vâ\nâpem âi anâpem kerenaoiti.",
+      "en": "O Maker of the material world, thou Holy one! Who is the fourth\nthat rejoices the Earth with greatest joy? Ahura Mazda answered:\n'It is he who sows most corn, grass, and fruit, O Spitama Zarathushtra!\nwho waters ground that is dry, or drains ground that is too wet.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 24,
+      "ref": "Vd 3.24",
+      "orig": "nôit zî îm zå shå ýâ\ndarekha akarshta saêta ýâ karshya karshivata\naibish tat vanghêush aiwi-shôithna\nidha carâiti huraodha\nýâ darekha aputhra aêti\naibish tat vanghêush arshânô.",
+      "en": "'Unhappy is the land that has long lain unsown with the seed\nof the sower and wants a good husbandman, like a well-shapen maiden\nwho has long gone childless and wants a good husband.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 25,
+      "ref": "Vd 3.25",
+      "orig": "ýô imãm zãm aiwi-verezyeiti spitama\nzarathushtra\nhâvôya bâzvô dashinaca\ndashina bâzvô haoyaca\nupa hê gaonem baraiti mãnayen ahe ýatha-nâ\nfryô fryâi vañtaoe stareta gâtush sayamanô\nputhrem vâ gaonem vâ avi ava-baraiti.",
+      "en": "'He who would till the earth, O Spitama Zarathushtra! with\nthe left arm and the right, with the right arm and the left, unto\nhim will she bring forth plenty of fruit: even as it were a lover\nsleeping with his bride on her bed; the bride will bring forth\nchildren, (the earth will bring forth) plenty of fruit.\n26,27. 'He who would till the earth, O Spitama Zarathushtra! with\nthe left arm and the right, with the right arm and the left, unto\nhim thus says the Earth: \"O thou man! who dost till me with\nthe left arm and the right, with the right arm and the left, here\nshall I ever go on bearing, bringing\nforth all manner of food, bringing corn first to thee.\"\n28,29. 'He who does not till the earth, O Spitama Zarathushtra!\nwith the left arm and the right, with the right arm and the left,\nunto him thus says the Earth: \"O thou man! who dost not till\nme with the left arm and the right, with the right arm and the\nleft, ever shalt thou stand at the door of the stranger, among\nthose who beg for bread; the refuse and the crumbs of the bread\nare brought unto thee, brought by those who have profusion\nof wealth.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 26,
+      "ref": "Vd 3.26",
+      "orig": "ýô imãm zãm aiwi-verezyeiti spitama\nzarathushtra hâvôya bâzvô dashinaca dashina\nbâzvô haoyaca\nâat aoxta îm zå, nara\nýô mãm aiwi-verezyeihi\nhâvôya bâzvô dashinaca\ndashina bâzvô haoyaca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 27,
+      "ref": "Vd 3.27",
+      "orig": "bâdha idha âfrasâne danghubyô\nbâdha idha aêni berethi\nvîspå hvareñtîsh para-barãn\nhãmberethwãm parô ýavahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 28,
+      "ref": "Vd 3.28",
+      "orig": "ýô imãm zãm nôit aiwi-verezyeiti\nspitama zarathushtra hâvôya bâzvô dashinaca\ndashina bâzvô haoyaca\nâat aoxta îm zå, nara\nýô mãm nôit aiwi-verezyeihi\nhâvôya bâzvô dashinaca\ndashina bâzvô haoyaca",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 29,
+      "ref": "Vd 3.29",
+      "orig": "bâdha idha hishtahe anyehe dvare srayanô hvareñtîsh\nperesemnaêshuca,\nbâdha thwãm tarasca ånghânô\nsrasciñtîsh hvarethå bairyeiñte tê\nâbya bairyeiñte\nýaêshãm dim frâyô vohunãm.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 30,
+      "ref": "Vd 3.30",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\nkat asti daênayå mâzdayasnôish uruthware,\nâat mraot ahurô mazdå, ýat ukhrem paiti\nýaokarshti spitama zarathushtra.",
+      "en": "O Maker of the material world, thou\nHoly one! What is the food that fills the Religion\nof Mazda? Ahura Mazda answered: 'It is sowing corn again\nand again, O Spitama Zarathushtra!",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 31,
+      "ref": "Vd 3.31",
+      "orig": "ýô ýaom kârayeiti hô ashem\nkârayeiti, hô daênãm mâzdayasnîm\nfravâza vazaite, hô imãm daênãm\nmâzdayasnîm frapinaoiti satem paitishtanãm\nhazangrem paiti-daranãm baêvare paiti ýasnô-kereitinãm.",
+      "en": "'He who sows corn, sows righteousness: he makes the Religion\nof Mazda walk, he suckles the Religion of Mazda; as well as he\ncould do with a hundred man's feet, with a thousand woman's breasts,\nwith ten thousand sacrificial formulas.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 32,
+      "ref": "Vd 3.32",
+      "orig": "ýat ýavô dayât âat daêva\nhvîsen ýat sudhush dayât âat daêva\ntusen ýat pishtrô dayât âat daêva\nuruthen ýat guñdô dayât âat daêva\nperedhen, idha mithnât daêva aipi-jaiñti nmâne\nainghâi guñdayâi\nzafare tafsãn aya masô\nhãm-urvîsvånghô sadayeiti\nýat ýavô pourush bavât.",
+      "en": "'When barley was created, the Daevas\nstarted up; when it grew, then fainted the Daevas'\nhearts; when the knots came, the Daevas groaned;\nwhen the ear came, the Daevas flew away. In that\nhouse the Daevas stay, wherein wheat perishes. It is\nas though red hot iron were turned about in their throats, when\nthere is plenty of corn.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 33,
+      "ref": "Vd 3.33",
+      "orig": "adha mãthrem tadha mairyât,\nnaêcish ahvareñtãm tva nôit ukhrãm\nashayãm nôit ukhrãm vâstryãm\nnôit ukhrãm puthrôishtîm, hvâshaya\nzî vîspô anghush astvå jvaiñti\nahvâshe framiryeite!",
+      "en": "'Then let people learn by heart this holy\nsaying [manthra -JHP]: \"No one who does not eat, has strength to\ndo heavy works of holiness, strength to\ndo works of husbandry, strength to beget children.\nBy eating every material creature lives, by not eating it dies\naway.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 34,
+      "ref": "Vd 3.34",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\nkô puxdhem imãm zãm mazishta xshnaoma xshnâvayeiti,\nâat mraot ahurô mazdå, ýat bâ paiti\nspitama zarathushtra ainghå zemô naire ashaone verezyât\nashaya dadhâiti.",
+      "en": "O Maker of the material world, thou Holy one! Who is the fifth\nthat rejoices the Earth with greatest joy?\nAhura Mazda answered: '[It is he who kindly and piously gives\nto one of the faithful who tills the earth,] O Spitama Zarathushtra!",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 35,
+      "ref": "Vd 3.35",
+      "orig": "ýat bâ paiti spitama zarathushtra ainghå\nzemô naire ashaone verezyât ashaya vanghuya nôit\ndadhâiti avi tem spayât speñtayå ârmatôish\ntemô âca vaêshô âca acishtem âca\nahûm â vîspaca avi tikhra nimata!",
+      "en": "'He who would not kindly and piously\ngive to one of the faithful who tills the earth, O\nSpitama Zarathushtra! Spenta Armaiti will\nthrow him down into darkness, down into the world of woe, the\nworld of hell, down into the deep abyss.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 36,
+      "ref": "Vd 3.36",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\nýat ainghå zemô nikañte spânasca\nirista naraêca irista naêmem ýâre- drâjô\nanuskañte kâ-hê asti citha, âat mraot\nahurô mazdå, pañca sata upâzananãm\nupâzôit aspahe ashtraya pañca sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy one! If a man shall\nbury in the earth either the corpse of a dog or the corpse of\na man, and if he shall not disinter it within half a year, what\nis the penalty that he shall pay?\nAhura Mazda answered: 'Five hundred stripes with the Aspahe-ashtra,\nfive hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 37,
+      "ref": "Vd 3.37",
+      "orig": "dâtare ... ashâum ýat ainghå zemô\nnikañte spânasca irista naraêca irista ýâre-drâjô\nanuskañte kâ hê asti citha, âat mraot\nahurô mazdå, hazangrem upâzananãm upâzôit\naspahe ashtraya hazangrem sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy one! If a man shall\nbury in the earth either the corpse of a dog or the corpse of\na man, and if he shall not disinter it within a year, what is\nthe penalty that he shall pay? \nAhura Mazda answered: 'A thousand stripes with the Aspahe-ashtra,\na thousand stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 38,
+      "ref": "Vd 3.38",
+      "orig": "dâtare ... ashâum ýat ainghå zemô\nnikañte spânasca irista naraêca irista byâre-drâjô\nanuskañte kâ hê asti citha kâ-hê\nasti âperetish kat hê asti ýaozhdâthrem.",
+      "en": "O Maker of the material world, thou Holy one! If a man shall\nbury in the earth either the corpse of a dog or the corpse of\na man, and if he shall not disinter it within the second year,\nwhat is the penalty for it? What is the atonement for it? What\nis the cleansing from it?",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 39,
+      "ref": "Vd 3.39",
+      "orig": "âat mraot ahurô mazdå, nava-hê asti\ncitha nava-hê asti âperetish nôit hê asti\nýaozhdâthrem anâperetha haca shyaothna ýavaêca\nýavaêtâtaêca.",
+      "en": "Ahura Mazda answered: 'For that deed there is nothing that\ncan pay, nothing that can atone, nothing that can cleanse from\nit; it is a trespass for which there is no atonement, for ever\nand ever.'",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 40,
+      "ref": "Vd 3.40",
+      "orig": "kva aêva, ýezi anghat âstûtô\nvâ aiwi-sravanô vâ daênãm mâzdayasnîm\nâat ýezi anghat anâstûtô vâ\nanaiwi-sravanô vâ daênãm mâzdayasnîm,\naêtâcit aêibyô spånghaite âstavanaêibyô\ndaênãm mâzdayasnîm everezenbyô\npascaêta arathwya shyaothna.",
+      "en": "When is it so? \n'It is so, if the sinner be a professor of the\nReligion of Mazda, or one who has been taught\nin it.\n'But if he be not a professor of the Religion of Mazda, nor one\nwho has been taught in it, then his sin is taken from him, if\nhe makes confession of the Religion of Mazda and resolves never\nto commit again such forbidden deeds.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 41,
+      "ref": "Vd 3.41",
+      "orig": "spayeite zî spitama zarathushtra daêna mâzdayasnish\nnarsh âstavanahe bañdem spayeite draoshem spayeite\nashavakhnîm spayeite nasuspaêm spayeite anâperethem\nshyaothnem spayeite derezânô-peretem pârem spayeite\nvîspa tâ shyaothna ýâ-cica verezyeiti.",
+      "en": "'The Religion of Mazda indeed, O\nSpitama Zarathushtra! takes away from him who\nmakes confession of it the bonds of his sin; it takes\naway (the sin of) breach of trust; it takes away (the\nsin of) murdering one of the faithful; it takes away\n(the sin of) burying a corpse; it takes away (the\nsin of) deeds for which there is no atonement; it\ntakes away the worst sin of usury; it takes away\nany sin that may be sinned.",
+      "zh": ""
+    },
+    {
+      "chapter": 3,
+      "verse": 42,
+      "ref": "Vd 3.42",
+      "orig": "mãnayen ahe spitama zarathushtra daêna mâzdayasnish\nnarsh ashaonô framerezaiti vîspem dushmatemca duzhûxtemca\nduzhvarshtemca ýatha vâtô derezi-takathrô\nthwâshem dashinât pairi framerezôit, [vohu idha\nzarathushtra hvarshtem shyaothnem verezimnem vanguhi daêna\nmâzdayasnish perenâyush cithãm thweresaiti]!\nashem vohû...!!",
+      "en": "'In the same way the Religion of Mazda, O Spitama Zarathushtra!\ncleanses the faithful from every evil thought, word, and deed,\nas a swift-rushing mighty wind cleanses the plain.\n'So let all the deeds he doeth be henceforth good, O Zarathushtra!\na full atonement for his sin is effected by means of the Religion\nof Mazda.'",
+      "zh": ""
+    }
+  ]
+}

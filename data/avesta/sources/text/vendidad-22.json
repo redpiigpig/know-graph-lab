@@ -1,0 +1,149 @@
+{
+  "slug": "vendidad-22",
+  "siglum": "Vd 22",
+  "title_zh": "祓魔法典 第 22 章‧阿胡拉求治於曼特拉‧斯彭塔",
+  "title_en": "Vendidad 22",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd22sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 22,
+      "verse": 1,
+      "ref": "Vd 22.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\nazem ýô ahurô mazdå\nazem ýô dâta vanghvãm\nýase-tat nmânem âkerenem srîrem raoxshnem\nfrâderesrem\nuzayeni pârayeni.",
+      "en": "Ahura Mazda spake unto Spitama Zarathushtra, saying: 'I,\nAhura Mazda, the Maker of all good things, when I made this\nmansion, the beautiful, the shining, seen afar (there may I go\nup, there may I arrive!)",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 2,
+      "ref": "Vd 22.2",
+      "orig": "âat mãm mairyô âkasat\nâat mãm mairyô frâkerenaot\nangrô mainyush pouru-mahrkô navaca ýaskê\nnavaitishca navaca sata navaca hazangra navasêsca baêvãn\nâat mãm tûm bishazyôish mãthrô\nspeñtô ýô ash-hvarenå.",
+      "en": "'Then the ruffian looked at me; the ruffian Angra Mainyu,\nthe deadly, wrought against me nine diseases, and ninety, and\nnine hundred, and nine thousand, and nine times ten thousand\ndiseases. So mayst thou heal me, thou most glorious Manthra\nSpenta!",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 3,
+      "ref": "Vd 22.3",
+      "orig": "dathâni tê aêtahe paiti hakat hazangrem\naspanãm aurvatô derezi-takanãm ýazâi\nsaoka vanguhi mazdadhâta ashaoni, dathâni tê\naêtahe paiti hakat hazangrem ushtranãm urvatô\nsaêni-kaofanãm ýazâi saoka vanguhi mazdadhâta\nashaoni.",
+      "en": "'Unto thee will I give in return a thousand fleet,\nswift-running steeds; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy.\n'Unto thee will I give in return a thousand fleet,\nhigh-humped camels; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 4,
+      "ref": "Vd 22.4",
+      "orig": "dathâni tê aêtahe paiti hakat hazangrem\ngavãm axshaênanãm aperetô-tanunãm\nýazâi saoka vanguhi mazdadhâta ashaoni, dathâni\ntê aêtahe paiti hakat hazangrem anumayanãm\nharetô vîspô-gaonanãm ýazâi\nsaoka vanguhi mazdadhâta ashaoni.",
+      "en": "'Unto thee will I give in return a thousand brown oxen that\ndo not push; I offer thee up a sacrifice, O good Saoka, made by\nMazda and holy.\n'Unto thee will I give in return a thousand females big with\nyoung, of all species of small cattle; I offer thee up a\nsacrifice, O good Saoka, made by Mazda and holy.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 5,
+      "ref": "Vd 22.5",
+      "orig": "uta tê azem âfrînâni srîra dahma\nâfriti fritha dahma âfriti\nýâ ûnem perenem kerenaoiti\nperenemcit vîkhzhârayeiti\navañtemcit bañdayeiti\nbañtemca drûm kerenaoiti.",
+      "en": "'And I will bless thee with the fair blessing-spell of the\nrighteous, the friendly blessing-spell of the righteous, that\nmakes the empty swell to fulness and the full to overflowing,\nthat comes to help him who was sickening, and makes the sick man\nsound again.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 6,
+      "ref": "Vd 22.6",
+      "orig": "paiti ahmâi avashata\nmãthrô speñtô ýô ash-hvarenå,\nkutha tê azem bishazâni kutha tê azem apa-varâni\nnavaca ýaskê navaitishca navaca sata navaca hazangra\nnavasêsca baêvãn.",
+      "en": "'Manthra Spenta, the all-glorious, replied unto me: \"How\nshall I heal thee? How shall I drive away from thee those nine\ndiseases, and those ninety, those nine hundred, those nine\nthousand, and those nine times ten thousand diseases?\"'\n \n II.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 7,
+      "ref": "Vd 22.7",
+      "orig": "nairyô sanghô aocayata\nýô dadhvå ahurô mazdå,\nnairya sangha vyâxana\npara-âidhi upa-vazanguha\navi nmânem airyamaini\nimat sanghôish airyamanâi,",
+      "en": "The Maker Ahura Mazda called for\nNairyo-sangha: Go thou, Nairyo-sangha, the herald, and drive\ntowards the mansion of Airyaman, and speak thus unto him:",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 8,
+      "ref": "Vd 22.8",
+      "orig": "imat tê sanghat ahurô mazdå ashava, azem\nýô ahurô mazdå azem ýô dâta\nvanghvãm ýase-tat nmânem âkerenem srîrem\nraoxshnem frâderesrem uzayeni pârayeni,",
+      "en": "Thus speaks Ahura Mazda, the Holy One, unto thee:\n'I, Ahura Mazda, the Maker of all good things, when I made\nthis mansion, the beautiful, the shining, seen afar (there may I\nascend, there may I arrive!)",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 9,
+      "ref": "Vd 22.9",
+      "orig": "âat mãm mairyô âkasat âat mãm\nmairyô frâkerenaot angrô mainyush pouru-mahrkô\nnavaca ýaskê navaitishca navaca sata navaca hazangra\nnavasêsca baêvãn âat mãm tûm\nbishazyôish airyama ýô ishyô.",
+      "en": "'Then the ruffian looked at me; the ruffian Angra Mainyu,\nthe deadly, wrought against me nine diseases, and ninety, and\nnine hundred, and nine thousand, and nine times ten thousand\ndiseases. So mayst thou heal me, O Airyaman, the vow-fulfiller!",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": "10-12",
+      "ref": "Vd 22.10-12",
+      "orig": "dathâni ... kerenaoiti.",
+      "en": "'Unto thee will I give in return a thousand fleet,\nswift-running steeds; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy,\n'Unto thee will I give in return a thousand fleet,\nhigh-humped camels; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy,\n'Unto thee will I give in return a thousand brown oxen that\ndo not push; I offer thee up a sacrifice, O good Saoka, made by\nMazda and holy.\n'Unto thee will I give in return a thousand females big with\nyoung, of all species of small cattle. I offer thee up a\nsacrifice, O good Saoka, made by Mazda and holy.\n'And I will bless thee with the fair blessing-spell of the\nrighteous, the friendly blessing-spell of the righteous, that\nmake, the empty swell to fulness and the full to overflowing,\nthat comes to help him who was sickening, and makes the sick man\nsound again.'\n \n III.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 13,
+      "ref": "Vd 22.13",
+      "orig": "ahe vacô paityesti\npara-âidhi upa-vazata\nnairyô sanghô vyâxanô\navi nmânem airyamaini\nimat sanghat airyamanâi,",
+      "en": "In obedience to Ahura's words he went, Nairyo-sangha, the\nherald; he drove towards the mansion of Airyaman, he spake unto\nAiryaman, saying:",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": "14-18",
+      "ref": "Vd 22.14-18",
+      "orig": "imat tê sanghat ahurô mazdå ashava, azem\nýô ahurô mazdå ... kerenaoiti.",
+      "en": "Thus speaks Ahura Mazda, the Holy One, unto thee: 'I, Ahura\nMazda, the Maker of all good things, when I made this mansion,\nthe beautiful, the shining, seen afar (there may I go up, there\nmay I arrive!)\n'Then the ruffian looked at me; the ruffian Angra Mainyu,\nthe deadly, wrought against me nine diseases, and ninety, and\nnine hundred, and nine thousand, and nine times ten thousand\ndiseases. So mayst thou heal me, O Airyaman, the vow-fulfiller!\n'Unto thee will I give in return a thousand fleet,\nswift-running steeds ; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy.\n'Unto thee will I give in return a thousand fleet,\nhigh-humped camels; I offer thee up a sacrifice, O good Saoka,\nmade by Mazda and holy.\n'Unto thee will I give in return a thousand brown oxen that\ndo not push; I offer thee up a sacrifice, O good Saoka, made by\nMazda and holy.\n'Unto thee will I give in return a thousand females, big\nwith young, of all species of small cattle; I offer thee up a\nsacrifice, O good Saoka, made by Mazda and holy.\n'And I will bless thee with the fair blessing-spell of the\nrighteous, the friendly blessing-spell of the righteous, that\nmakes the empty swell to fulness and the full to overflowing,\nthat comes to help him who was sickening, and makes the sick man\nsound again.'\n \n IV.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 19,
+      "ref": "Vd 22.19",
+      "orig": "moshu tat âs nôit darekhem ýat frâyatayat\nthwaxshemnô airyama ýô ishyô\ngairîm avi speñtô-frasnå\nvareshem avi speñtô-frasnå.",
+      "en": "Quickly was it done, nor was it long, eagerly set off the\nvow-fulfilling Airyaman, towards the mountain of the holy\nQuestions, towards the forest of the holy Questions.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": 20,
+      "ref": "Vd 22.20",
+      "orig": "navanãm aspanãm arshnãm gaonem barat\nairyama ýô ishyô navanãm ushtranãm\narshnãm gaonem barat airyama ýô ishyô\nnavanãm gavãm arshnãm gaonem barat airyama\nýô ishyô navanãm anumayanãm arshnãm\ngaonem barat airyama ýô ishyô nava vaêtayô\nbarat nava karshå frakârayat.",
+      "en": "Nine kinds of stallions brought he with him, the\nvow-fulfilling Airyaman.\nNine kinds of camels brought he with him, the vow-fulfilling\nAiryaman.\nNine kinds of bulls brought he with him, the vow-fulfilling\nAiryaman.\nNine kinds of small cattle brought he with him, the\nvow-fulfilling Airyaman.\nHe brought with him the nine twigs; he drew along nine\nfurrows.\n[21. 'I drive away Ishire and I drive away Aghuire; I drive away\nAghra and I drive away Ughra; I drive away sickness and I drive\naway death; I drive away pain and I drive away fever; I drive\naway Sarana and I drive away Sarastya; I drive away Azhana and I\ndrive away Azhahva; I drive away Kurugha and I drive away\nAzhivaka; I drive away Duruka and I drive away Astairya. I drive\naway the evil eye, rottenness, and infection which Angra Mainyu\nhas created against the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 22,
+      "verse": "21-26",
+      "ref": "Vd 22.21-26",
+      "orig": "paiti-perene ashire ... ashahe!\nashem vohû...!!\n!---!---!---!---! nâismî daêvô, aêvô\npañtå ýô ashahe vîspe anyaêshãm\napeñtãm!\n---!-------!\n-------!",
+      "en": "'I drive away all manner of sickness and death, all the\nYatus and Pairikas, and all the wicked Jainis.\n' A Airyema Ishyo :-\nMay the vow-fulfilling Airyaman come here, for the men and\nwomen of Zarathushtra to rejoice, for Vohu-mano to rejoice; with\nthe desirable reward that Religion deserves. I solicit for\nholiness that boon that is vouchsafed by Ahura.\n'May the vow-fulfilling Airyaman smite all manner of\nsickness and death, all the Yatus and Pairikas, and all the\nwicked Jainis.\n' Yatha ahu vairyo :-\nThe will of the Lord is the law of\nrighteousness. The gifts of Vohu-mano to the deeds done in this\nworld for Mazda. He who relieves the poor makes Ahura king.\n' Kem-na mazda :-\nWhat protector hast thou given unto me O\nMazda! while the hate of the wicked encompasses me? Whom but\nthy Atar and Vohu-mano, through whose work I keep on the world of\nrighteousness? Reveal therefore to me thy Religion as thy rule!\n'Ke verethrem-ja:- Who is the victorious who will protect\nthy teaching? Make it clear that I am the guide for both worlds. \nMay Sraosha come with Vohu-mano and help whomsoever thou\npleasest, O Mazda!\n'Keep us from our hater, O Mazda and Armaiti Spenta! Perish,\nO fiendish Druj! Perish, O brood of the fiend! Perish, O world\nof the fiend! Perish away, O Druj! Perish away to the regions of\nthe north, never more to give unto death the living world of\nRighteousness!']",
+      "zh": ""
+    }
+  ]
+}

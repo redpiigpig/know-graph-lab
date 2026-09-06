@@ -1,0 +1,525 @@
+{
+  "slug": "vendidad-07",
+  "siglum": "Vd 7",
+  "title_zh": "祓魔法典 第 7 章‧屍體污染（三）與醫者",
+  "title_en": "Vendidad 7",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd7sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 7,
+      "verse": 1,
+      "ref": "Vd 7.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm, ahura mazda\nmainyô spênishta dâtare gaêthanãm\nastvaitinãm ashâum kat tâ nara irista aêsha\ndruxsh ýâ nasush upa- dvãsaiti.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Ahura Mazda, most beneficent\nSpirit, Maker of the material world, thou Holy One! When a man\ndies, at what moment does the Druj Nasu rush upon him?'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 2,
+      "ref": "Vd 7.2",
+      "orig": "âat mraot ahurô mazdå, ishare pasca para-iristîm\nspitama zarathushtra us haca baodhô ayât aêsha\ndruxsh ýâ nasush upa-dvãsaiti apâxedhraêibyô\nnaêmaêibyô maxshi kehrpa erekhaitya frashnaosh\napazadhanghô akaranem driwyå ýatha zôizhdishtâish\nxrafstrâish.",
+      "en": "Ahura Mazda answered: 'Directly after death, as soon as the\nsoul has left the body, O Spitama Zarathushtra! the Druj Nasu\ncomes and rushes upon him, from the regions of the north, in the\nshape of a raging fly, with knees and tail sticking out, droning\nwithout end, and like unto the foulest Khrafstras.\n[3. 'On him she stays until the dog has seen the\ncorpse or eaten it up, or until the flesh-eating birds\nhave taken flight towards it. When the dog has seen it or eaten it up, or when the flesh-eating\nbirds have taken flight towards it, then the Druj Nasu rushes\naway to the regions of the north in the shape of a raging fly,\nwith knees and tail sticking out, droning without end, and like\nunto the foulest Khrafstras.']",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 3,
+      "ref": "Vd 7.3",
+      "orig": "dâtare ... ashâum âat ýat aête\nýâ spô-jataca vehrkô-jataca ýâtu-jataca\ntbaêshô-jataca vaêmô-jataca mashyô-jataca\nzûrô-jataca ãzô-jataca cvañtem\npascaêta zrvânem aêsha druxsh ýâ\nnasush upa-dvãsaiti.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 4,
+      "ref": "Vd 7.4",
+      "orig": "âat mraot ahurô mazdå, asnyehe pascaêta\nanyehe rathwô aêsha druxsh ýâ nasush\nupa-dvãsaiti!",
+      "en": "O Maker of the material world, thou Holy One! If the man has\nbeen killed by a dog, or by a wolf, or by witchcraft, or by the\nartifices of hatred, or by falling down a precipice, or by the\nlaw, or by calumny, or by the noose,\nhow long after death does the Druj Nasu come and rush upon the dead?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": "5-8",
+      "ref": "Vd 7.5-8",
+      "orig": "dâtare ... ashâum ýô narô hâmô-gâtvô\n... ýezi puxdhem frâshnaoiti tûirîm paiti-raêthwayeiti,\naêtadha aêtahe âste stairishca barezishca hãm-\nverenåñte.",
+      "en": "Ahura Mazda answered: 'At the next watch after death, the Druj\nNasu comes and rushes upon the dead, from the regions of the north,\nin the shape of a raging fly, with knees and tail sticking out,\ndroning without end, and like unto the foulest Khrafstras.'\nO Maker of the material world, thou Holy One! If there be a\nnumber of men resting in the same place, on the same carpet, on\nthe same pillows, be there two men near one another, or five,\nor fifty, or a hundred, close by one another; and of those people\none happens to die; how many of them does the Druj Nasu envelope\nwith corruption, infection, and pollution?\nAhura Mazda answered:\n'If the dead one be a priest, the Druj Nasu rushes forth, O Spitama\nZarathushtra! she goes as far as the eleventh and defiles the\nten.\n'If the dead one he a warrior, the Druj Nasu rushes forth, O Spitama\nZarathushtra! she goes as far as the tenth and defiles the nine.\n'If the dead one be a husbandman, the Druj Nasu rushes forth,\nO Spitama Zarathushtra! she goes as far as the ninth and defiles\nthe eight.\n'If it be a shepherd's dog, the Druj Nasu rushes forth, O Spitama\nZarathushtra! she goes as far as the eighth and defiles the seven.\n'If it be a house dog, the Druj Nasu rushes forth, O Spitama Zarathushtra!\nshe goes as far as the seventh and defiles the six.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 9,
+      "ref": "Vd 7.9",
+      "orig": "dâtare ... ashâum cvat aête stairishca barezishca\naêsha druxsh ýâ nasush axtica pivatica âhitica\nfrâshnaoiti.",
+      "en": "'If it he a Vohunazga dog, the Druj Nasu rushes forth, O Spitama Zarathushtra!\nshe goes as far as the sixth and defiles the five.\n'If it be a Tauruna dog, the Druj Nasu rushes forth, O Spitama\nZarathushtra! she goes as far as the fifth and defiles the four.'\n. . . 'Those clothes shall serve for their coverings and for their\nsheets.'. . .",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 10,
+      "ref": "Vd 7.10",
+      "orig": "âat mraot ahurô mazdå, upema aête\nstairishca añtema aiwi-varena aêsha druxsh ýâ\nnasush axtica pivatica âhitica frâshnaoiti!",
+      "en": "O Maker of the material world, thou Holy One! What part of\nhis bedding and pillow does the Druj Nasu defile with corruption,\ninfection, and pollution?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 11,
+      "ref": "Vd 7.11",
+      "orig": "dâtare ... ashâum kat tâ vastra ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-bereta\nsûnô vâ para- iristahe mashyehe vâ.",
+      "en": "Ahura Mazda answered: 'The Druj Nasu defiles with corruption,\ninfection, and pollution the upper sheet and the inner garment.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 12,
+      "ref": "Vd 7.12",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\nanghat upaêtem vâ aiwi-naptîm vâ aiwi-\niritîm vâ aiwi-vañtîm vâ aêtadha\nhê aête mazdayasna aêtå vastrå fraca\nkereñten nica kanayen.",
+      "en": "O Maker of the material world, thou Holy One! Can that garment\nbe made clean, O holy Ahura Mazda! that has been touched by the\ncarcass of a dog or the corpse of a man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 13,
+      "ref": "Vd 7.13",
+      "orig": "âat ýezi nôit anghat upaêtem vâ\naiwi-naptîm vâ aiwi-iritîm vâ aiwi-vañtîm\nvâ aêtadha hê aête mazdayasna aêtå\nvastrå frasnâdhayen maêsmana gêush.",
+      "en": "Ahura Mazda answered: 'It can, O holy Zarathushtra!'\nHow so?\n'If there be on the garment seed, or blood, or dirt, or vomit,\nthe worshippers of Mazda shall rend it to pieces, and bury it\nunder the ground.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 14,
+      "ref": "Vd 7.14",
+      "orig": "ýezi anghat izaênish thrish frasnâdhayen\nmaêsmana gêush thrish zemô hañkanayen\nthrish âpô frasnâdhayen thrish månghô\nupa-baodhayãn raocanem paiti nmânahe.",
+      "en": "'But if there be no seed [on the garment], nor blood, nor\ndirt, nor vomit, then the worshippers of Mazda shall wash it with\ngomez.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 15,
+      "ref": "Vd 7.15",
+      "orig": "âat ýezi anghat ubdaênish xshvash frasnâdhayen\nmaêsmana gêush xshvash zemô hañkanayen\nxshvash âpô frasnâdhayen xshvash månghô\nupa-baodhayãn raocanem paiti nmânahe.",
+      "en": "'If it be leather, they shall wash it with gomez three times,\nthey shall rub it with earth three times, they shall wash it with\nwater three times, and afterwards they shall expose it to the\nair for three months at the window of the house.\n'If it be woven cloth, they shall wash it with gomez six times,\nthey shall rub it with earth six times, they shall wash it with\nwater six times, and afterwards they shall expose it to the air\nfor six months at the window of the house.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 16,
+      "ref": "Vd 7.16",
+      "orig": "aredvî nãma âpa spitama zarathushtra hâ\nmê âpô ýaozhdadhâiti hâ arshnãm\nxshudrå hâ xshathrinãm garewã hâ\nxshathrinãm paêma.",
+      "en": "'The spring named Ardvi Sura, O Spitama Zarathushtra! that\nspring of mine, purifies the seed of males, the womb of females,\nthe milk of females.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": "17-22",
+      "ref": "Vd 7.17-22",
+      "orig": "dâtare ... ashâum kat tâ vastra hãm-\nýûta ... acishtâi anguhe.",
+      "en": "O Maker of the material world, thou Holy One! Can those clothes,\nwhen once washed and cleansed, ever be used either by a Zaotar,\nor by a Havanan, or by an Atare-vakhsha, or by a Frabaretar, or\nby an Abered, or by an Asnatar, or by a Rathwiskar, or by a Sraosha-varez,\nor by any priest, warrior, or husbandman?\nAhura Mazda answered: 'Never can those clothes, even when\nwashed and cleansed, be used either by a Zaotar, or by a Havanan,\nor by an Atare-vakhsha, or by a Frabaretar, or by an Abered, or\nby an Asnatar, or by a Rathwiskar, or by a Sraosha-varez, or by\nany priest, warrior, or husbandman.\n'But if there be in a Mazdean house a woman who is in her\nsickness, or a man who has become unfit for work, and who must\nsit in the place of infirmity, those clothes shall serve for their\ncoverings and for their sheets, until they can withdraw their\nhands for prayer.\n'Ahura Mazda, indeed, does not allow us to waste anything\nof value that we may have, not even so much as an Asperena's weight\nof thread, not even so much as a maid lets fall in spinning.\n'Whosoever throws any clothing on a dead body, even so much\nas a maid lets fall in spinning, is not a pious man whilst alive,\nnor shall he, when dead, have a place in Paradise.\n'He makes himself a viaticum unto the world of the wicked,\ninto that world, made of darkness, the offspring of darkness,\nwhich is Darkness' self. To that world, to the world of Hell,\nyou are delivered by your own doings, by your own religion, O\nsinners!'\n \n IV.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 23,
+      "ref": "Vd 7.23",
+      "orig": "dâtare ... ashâum kat tâ nara ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum franguharât\nsûnô vâ para-iristahe mashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can he be clean\nagain who has eaten of the carcass of a dog or of the corpse of\na man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 24,
+      "ref": "Vd 7.24",
+      "orig": "âat mraot ahurô mazdå, ayaozhdayãn\nanghen ashâum zarathushtra, taêca narô geredhô-keretåsca\nzeredhô- keretåsca taêca narô spiti-dôithra\ncashmanat haca nizhbareñti tê aêshãm\npaiti srvê aêsha druxsh ýâ nasush upa-dvãsaiti,\nayaozhdya pascaêta bavaiñti ýavaêca\nýavaêtâtaêca.",
+      "en": "Ahura Mazda answered: 'He cannot, O holy Zarathushtra! His\nburrow shall be dug out, his heart shall be torn out, his bright\neyes shall be put out; the Druj Nasu falls upon him, takes hold\nof him even to the end of the nails, and he is unclean thenceforth,\nfor ever and ever.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 25,
+      "ref": "Vd 7.25",
+      "orig": "dâtare ... ashâum kat tâ nara ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum mat-gûthãm\nâpem â vâ âtrem â vâ ayaozhdya\nfrabareñti.",
+      "en": "O Maker of the material world, thou Holy One! Can he be clean\nagain, O holy Ahura Mazda! who has brought a corpse with filth\ninto the waters, or unto the fire, and made either unclean?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 26,
+      "ref": "Vd 7.26",
+      "orig": "âat mraot ahurô mazdå, ayaozhdayãn\nanghen ashâum zarathushtra,\ntê sûnô madhaxayåsca\naogazdastema bavaiñti\nýôi nasu-kereta drvañtô\ntê haêcanghô avâstrahe\naogazdastema bavaiñti\nýôi nasu-kereta drvañtô,",
+      "en": "Ahura Mazda answered: 'He cannot, O holy Zarathushtra! Those\nwicked ones it is, those Nasu-cutters, that most increase spiders\nand locusts; those wicked ones it is, those Nasu-cutters, that\nmost increase the grass-destroying drought.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 27,
+      "ref": "Vd 7.27",
+      "orig": "tê zemô daêvô-dâtahe\ngaojanô jaiwi-vafrahe\nupa-srvatô xrûtahe\nakhavatô duzhdånghahe\naogazdastema bavaiñti\nýôi nasu-kereta drvañtô, tê aêshãm\npaiti srvê aêsha druxsh ýâ nasush upa-dvãsaiti,\nayaozhdya pascaêta bavaiñti ýavaêca\nýavaêtâtaêca.",
+      "en": "'Those wicked ones it is, those Nasu-cutters, that increase\nmost the power of the winter, produced by the fiends, the cattle-killing,\nthick- snowing, overflowing, the piercing, fierce, mischievous\nwinter. Upon them comes and rushes the Druj Nasu she takes hold\nof them even to the end of the nails, and they are unclean, thenceforth,\nfor ever and ever.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 28,
+      "ref": "Vd 7.28",
+      "orig": "dâtare ... ashâum kat tâ aêsma ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-bereta\nsûnô vâ para- iristahe mashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the wood\nbe made clean, O holy Ahura Mazda! whereunto Nasu has been brought\nfrom a dead dog, or from a dead man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 29,
+      "ref": "Vd 7.29",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\naêsha nasush anaiwi-khnixta sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô vîtasti-drâjô\nýat hushanãm frârâthni-drâjô\nýat naptanãm ainghå zemô nidaithyãn\nkemcit paiti cathrushanãm hakeret âpô vîsrascayen\natha ýaozhdayãn.",
+      "en": "Ahura Mazda answered: 'It can, O holy Zarathushtra!'\nHow so?\n'If the Nasu has not yet been expelled by the corpse-eating dogs,\nor by the corpse-eating birds, they shall lay down, apart on the\nground, all the wood on a Vitasti a all around, if the wood be\ndry; on a Frarathni all around, if it be wet; then they shall\nsprinkle it once over with water, and it shall be clean.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 30,
+      "ref": "Vd 7.30",
+      "orig": "âat ýezi nasush aiwi-khnixta sûnô\nvâ kerefsh-hvarô vayô vâ kerefsh-hvarô\nfrârâthni-drâjô ýat hushanãm\nfrabâzu-drâjô ýat naptanãm ainghå\nzemô nidaithyãn kemcit paiti cathrushanãm\nhakeret âpô vîsrascayen atha ýaozhdayãn.",
+      "en": "'But if the Nasu has already been expelled by the corpse-eating\ndogs, or by the corpse-eating birds, they shall lay down, apart\non the ground, all the wood on a Frarathni all around, if the\nwood be dry; on a Frabazu all around, if it be wet; then they\nshall sprinkle it once over with water, and it shall be clean.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 31,
+      "ref": "Vd 7.31",
+      "orig": "aêtavat hushanãm aêsmanãm aêtavat\nnaptanãm aêtavat xraozhdvanãm aêtavat\nvaredvanãm ainghå zemô nidaithyãn kemcit\npaiti cathrushanãm hakeret âpô vîsrascayen\natha ýaozhdayãn.",
+      "en": "'Thus much of the wood around the dead shall they lay down,\napart on the ground, according as the wood is dry or wet; as it\nis hard or soft; they shall sprinkle it once over with water,\nand it shall be clean.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 32,
+      "ref": "Vd 7.32",
+      "orig": "dâtare ... ashâum kat tâ ýavaca vâstraca\nýaozhdayãn anghen ashâum ahura mazda ýâ\nnasâum ava-bereta sûnô vâ para-iristahe\nmashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the corn\nor the fodder be made clean O holy Ahura Mazda! whereunto Nasu\nhas been brought from a dead dog, or from a dead man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 33,
+      "ref": "Vd 7.33",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\naêsha nasush anaiwi-khnixta sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô frârâthni-drâjô\nýat hushanãm frabâzu-drâjô ýat\nnaptanãm ainghå zemô nidaithyãn kemcit\npaiti cathrushanãm hakeret âpô vîsrascayen\natha ýaozhdayãn.",
+      "en": "Ahura Mazda answered: 'It can, O holy Zarathushtra!' How so?\n'If the Nasu has not yet been expelled by the corpse-eating dogs,\nor by the corpse-eating birds they shall lay down, apart on the\nground, all the corn on a Frarathni all around, if the corn be\ndry on a Frabazu all around, if it be wet; then they shall sprinkle\nit once over with water, and it shall be clean.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 34,
+      "ref": "Vd 7.34",
+      "orig": "âat ýezi nasush aiwi-khnixta sûnô\nvâ kerefsh-hvarô vayô vâ kerefsh-hvarô\nfrabâzu-drâjô ýat hushanãm vîbâzu-drâjô\nýat naptanãm ainghå zemô nidaithyãn\nkemcit paiti cathrushanãm hakeret âpô vîsrascayen\natha ýaozhdayãn.",
+      "en": "'But if the Nasu has already been expelled by the corpse-eating\ndogs, or by the corpse-eating birds, they shall lay down, apart\non the ground, all the corn on a Frabazu all around, if the corn\nbe dry; on a Vibazu all around, if it be wet then they shall sprinkle\nit once over with water, and it shall be clean.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 35,
+      "ref": "Vd 7.35",
+      "orig": "aêtavat hushanãm ýavanãm aêtavat\nnaptanãm aêtavat karshtanãm aêtavat\nakarshtanãm aêtavat deretanãm aêtavat\naderetanãm aêtavat hvastanãm aêtavat\nahvastanãm aêtavat batanãm aêtavat abatanãm\naêtavat ashanãm aêtavat anashanãm aêtavat\nathreñtãm ýavanãm ainghå zemô\nnidaithyãn kemcit paiti cathrushanãm hakeret âpô\nvîsrascayen atha ýaozhdayãn!",
+      "en": "'Thus much of the corn around the dead shall they lay down,\napart on the ground, according as the corn is dry or wet; as it\nis sown or not sown; as it is reaped or not reaped; [as it is\nbeaten or not beaten]; as it is winnowed or not winnowed; [as\nit is ground or not ground]; as it is kneaded [or not kneaded];\nthey shall sprinkle it once over with water, and it shall be clean.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 36,
+      "ref": "Vd 7.36",
+      "orig": "dâtare ... ashâum ýat aête ýôi\nmazdayasna baêshazâi fravazåñte katârô\npaurvô âmayåñte mazdayasnaêibyô\nvâ daêvayasnaêibyô vâ.",
+      "en": "O Maker of the material world, thou Holy One! If a worshipper\nof Mazda want to practice the art of healing, on whom shall he\nfirst prove his skill? on worshippers of Mazda or on worshippers\nof the Daevas?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 37,
+      "ref": "Vd 7.37",
+      "orig": "âat mraot ahurô mazdå, daêvayasnaêibyô\npaurvô âmayayañta ýatha mazdayasnaêibyascit,\nýat paoirîm daêvayasnô kereñtât\nava hô miryâite ýat bitîm daêvayasnô\nkereñtât ava hô miryâite ýat thritîm\ndaêvayasnô kereñtât ava hô miryâite\nanâmâtô zî aêshô ýavaêca\nýavaêtâtaêca.",
+      "en": "Ahura Mazda answered: 'On worshippers of the Daevas shall\nhe first prove himself, rather than on worshippers of Mazda. If\nhe treat with the knife a worshipper of the Daevas and he die;\nif he treat with the knife a second worshipper of the Daevas and\nhe die; if he treat with the knife for the third time a worshipper\nof the Daevas and he die, he is unfit for ever and ever.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 38,
+      "ref": "Vd 7.38",
+      "orig": "mâca pascaêta mazdayasna vîmâdhascit\nvîmâdhayañta mâca kereñtu mazdayasna\nmâca keretu irishyât, ýezi pascaêta mazdayasna\nvîmâdhascit vîmâdhayåñte\nýezi kereñte mazdayasna ýezi keretu irishyât\npara hê irisheñtô raêshem cikayat baodhô-varshtahe\ncithaya.",
+      "en": "'Let him therefore never attend any worshipper of Mazda; let\nhim never treat with the knife and worshipper of Mazda, nor wound\nhim with the knife. If he shall ever attend any worshipper of\nMazda, if he shall ever treat with the knife any worshipper of\nMazda, and wound him with the knife, he shall pay for his wound\nthe penalty for willful murder.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 39,
+      "ref": "Vd 7.39",
+      "orig": "ýat paoirîm daêvayasnô kereñtât\napa hô jasât ýat bitîm daêvayasnô\nkereñtât apa hô jasât ýat thritîm\ndaêvayasnô kereñtât apa hô jasât\nâmâtô zî aêshô ýavaêca\nýavaêtâtaêca.",
+      "en": "'If he treat with the knife a worshipper of the Daevas and\nhe recover; if he treat with the knife a second worshipper of\nthe Daevas and he recover; if for the third time he treat with\nthe knife a worshipper of the Daevas and he recover; then he is\nfit for ever and ever.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 40,
+      "ref": "Vd 7.40",
+      "orig": "vasô pascaêta mazdayasna vîmâdhascit\nvîmâdhayañta vasô kereñtu mazdayasna\nvasô keretu bishazyât.",
+      "en": "'He may henceforth at his will attend worshippers of Mazda;\nhe may at his will treat with the knife worshippers of Mazda,\nand heal them with the knife.\n \n VIIb.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 41,
+      "ref": "Vd 7.41",
+      "orig": "âthravanem bishazyât dahmayât parô\nâfritôit nmânahe nmânô-paitîm\nbishazyât nitemem staorem arejô vîsô vîspaitîm\nbishazyât madhemem staorem arejô zañtêush\nzañtupaitîm bishazyât akhrîm staorem\narejô dainghêush dainghupaitîm bishazyât\nvâshem cathru-ýuxtem arejô.",
+      "en": "'A healer shall heal a priest for a blessing of the just;\nhe shall heal the master of a house for the value of an ox of\nlow value; he shall heal the lord of a borough for the value of\nan ox of average value; he shall heal the lord of a town for the\nvalue of an ox of high value; he shall heal the lord of a province\nfor the value of a chariot and four.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 42,
+      "ref": "Vd 7.42",
+      "orig": "ýat paoirîm nmânahe nmânô-\npaitîm nâirikãm bishazyât kathwa daênu\narejô vîsô vîspaitîm nâirikãm\nbishazyât gava daênu arejô zañtêush\nzañtupaitîm nâirikãm bishazyât\naspa daênu arejô dainghêush dainghupaitîm\nnâirikãm bishazyât ushtra daênu arejô.",
+      "en": "'He shall heal the wife of the master of a house for the value\nof a she-ass; he shall heal the wife of the lord of a borough\nfor the value of a cow; he shall heal the wife of the lord of\na town for the value of a mare; he shall heal the wife of the\nlord of a province for the value of a she-camel.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 43,
+      "ref": "Vd 7.43",
+      "orig": "vîsô puthrem bishazyât akhrîm staorem\narejô akhrîm staorem bishazyât madhemem staorem\narejô madhemem staorem bishazyât nitemem staorem arejô\nnitemem staorem bishazyât anumaêm arejô anumaêm\nbishazyât gêush hvarethahe arejô.",
+      "en": "'He shall heal the heir of a great house for the value of\nan ox of high value; he shall heal an ox of high value for the\nvalue of an ox of aver- age value; he shall heal an ox of average\nvalue for the value of an ox of low value; he shall heal an ox\nof low value for the value of a sheep; he shall heal a sheep for\nthe value of a piece of meat.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 44,
+      "ref": "Vd 7.44",
+      "orig": "ýat pouru-baêshaza hañjasåñte\nspitama zarathushtra karetô-baêshazêsca urvarô-baêshazêsca\nmãthrô-baêshazêsca tem ithra hañjasåñte\nýat mãthrem speñtem baêshazem, aêshô\nzî asti baêshazanãm baêshazyôtemô\nýat mãthrem speñtem baêshazyô\nýô narsh ashaonô haca uruthwãn bishazyât!",
+      "en": "'If several healers offer themselves together, O Spitama Zarathushtra!\nnamely, one who heals with the knife, one who heals with herbs,\nand one who heals with the Holy Word [manthra], let one apply to the healing\nby the Holy Word: for this one is the best-healing of all healers\nwho heals with the Holy Word; he will best drive away sickness\nfrom the body of the faithful.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 45,
+      "ref": "Vd 7.45",
+      "orig": "dâtare ... ashâum cvañtem drâjô\nzrvânem sairi mashya iriste zemê nidhâite raocå\naiwi-varena hvare-daresya zemô bavaiñti.",
+      "en": "O Maker of the material world, thou Holy One! How long after\nthe corpse of a dead man has been laid down on the ground, clothed\nwith the light of heaven and beholding the sun, is the ground\nclean again?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 46,
+      "ref": "Vd 7.46",
+      "orig": "âat mraot ahurô mazdå, ýâre-drâjô\nashâum zarathushtra sairi mashya iriste zemê nidhâite\nraocå aiwi-varena hvare-daresya zemô bavaiñti.",
+      "en": "Ahura Mazda answered: 'When the corpse of a dead man has lain\non the ground for a year, clothed with the light of heaven, and\nbeholding the sun, then the ground is clean again, O holy Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 47,
+      "ref": "Vd 7.47",
+      "orig": "dâtare ... ashâum cvañtem drâjô\nzrvânem sairi mashya iriste zemê nikañte havat-zemô\nbavaiñti.",
+      "en": "O Maker of the material world, thou Holy One! How long after\nthe corpse of a dead man has been buried in the earth, is the\nearth clean again?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 48,
+      "ref": "Vd 7.48",
+      "orig": "âat mraot ahurô mazdå, pasca pañcâsatem\nsaredhãm spitama zarathushtra sairi mashya iriste zemê\nnikañte havat-zemô bavaiñti.",
+      "en": "Ahura Mazda answered: 'When the corpse of a dead man has lain\nburied in the earth for fifty years, O Spitama Zarathushtra! then\nthe earth is clean again.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 49,
+      "ref": "Vd 7.49",
+      "orig": "dâtare ... ashâum cvañtem drâjô\nzrvânem sairi mashya iriste daxme nidhâite havat-zemô\nbavaiñti.",
+      "en": "O Maker of the material world, thou Holy One! How long after\nthe corpse of a dead man has been laid down on a Dakhma, is the\nground, whereon the Dakhma stands, clean again?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 50,
+      "ref": "Vd 7.50",
+      "orig": "âat mraot ahurô mazdå, nôit nû\npara ahmât spitama zarathushtra ýat aêsha pãsnu\nraêthwât, haxshaêsha spitama zarathushtra kemcit\nanghêush astvatô aêtaêshva daxmaêshva\nvî-kañtêe.",
+      "en": "Ahura Mazda answered: 'Not until the dust of the corpse, O\nSpitama Zarathushtra! has mingled with the dust of the earth.\nUrge every one in the material world, O Spitama Zarathushtra!\nto pull down Dakhmas.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 51,
+      "ref": "Vd 7.51",
+      "orig": "ýasca mê aêtaêshãm ýat\ndaxmanãm avavañtem mazô vîkânayât\nýatha hê tanush anghat patitem hê manô\nanghat patitem vacô patitem shyaothnem uzvarshtem hê\nmanô anghat uzvarshtem vacô uzvarshtem shyaothnem.",
+      "en": "'He who should pull down Dakhmas, even so much thereof as\nthe size of his own body, his sins in thought, word, and deed\nare remitted as they would be by a Patet; his sins in thought,\nword, and deed are undone.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 52,
+      "ref": "Vd 7.52",
+      "orig": "nôit zî ahmi paiti nairi dva mainyû rêna\nava-stånghat, frasha fraya vahishtem â ahûm,\nberejayåñti-shê zarathushtra strêshca\nmånghemca hvareca azemca hê berejaêm ýô\ndadhvå ahurô mazdå, ushta itha tê nare\nýô ithyejanghatat haca anghaot aithyejanghem ahûm\nâ frafrå!",
+      "en": "'Not for his soul shall the two spirits wage war with one\nanother; and when he enters Paradise, the stars, the moon, and\nthe sun shall rejoice in him; and I, Ahura Mazda, shall rejoice\nin him, saying: \" Hail, O man! thou who hast just passed\nfrom the decaying world into the undecaying one!\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 53,
+      "ref": "Vd 7.53",
+      "orig": "dâtare ... ashâum kva asti daêvô kva\ndaêvayâzô kva daêvanãm hañdvarenô\nkva daêvanãm hãm-patanô kva daêva\nhañdvareñti pañcasakhnâi satakhnâishca\nsatakhnâi hazangrakhnâishca hazangrakhnâi baêvarekhnâishca\nbaêvarekhnâi ahãshtakhnâishca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 54,
+      "ref": "Vd 7.54",
+      "orig": "âat mraot ahurô mazdå, aêtaêshva\ndaxmaêshva spitama zarathushtra ýôi paiti âya\nzemâ bavaiñti uzdaêza uzdishta ýahmya\nnarô irista nidhayeiñte hâu asti daêvô\nhâu daêvayâzô hâu daêvanãm\nhañdvarenô hâu daêvanãm hãm-\npatanô avat daêva hañdvareñti pañcasakhnâi\nsatakhnâishca satakhnâi hazangrakhnâishca hazangrakhnâi\nbaêvarekhnâishca baêvarekhnâi ahãshtakhnâishca.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 55,
+      "ref": "Vd 7.55",
+      "orig": "mãnayen bâ spitama zarathushtra aête ýôi\ndaêva aêtaêshva daxmaêshva gangheñti\napâca vaêpeñti ýatha aêtahmi anghvô\nýat astvaiñti ýûzhem ýôi\nmashyâka hvaretha hvâsta huyâresh gãmca\nhvâstem hvaraiti nâuiti hâ aête ýôi\nmashyâka hvareñti framanyete.",
+      "en": "O Maker of the material world, thou Holy One! Where are there\nDaevas: Where is it they offer worship to the Daevas: What is\nthe place whereon troops of Daevas rush together, whereon troops\nof Daevas come rushing along? What is the place whereon they rush\ntogether to kill their fifties and their hundreds, their hundreds\nand their thousands, their thousands and their tens of thousands,\ntheir tens of thousands and their myriads of myriads?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 56,
+      "ref": "Vd 7.56",
+      "orig": "aêshô zî asti daêvanãm rapakô\nvîspem â ahmât ýat aêsha gañtish\nupanghacaiti.",
+      "en": "Ahura Mazda answered: 'Those Dakhmas that are built upon the\nface of the earth, O Spitama Zarathushtra! and whereon are laid\nthe corpses of dead men, that is the place where there are Daevas,\nthat is the place whereon troops of Daevas rush together; whereon\ntroops of Daevas come rushing along; whereon they rush together\nto kill their fifties and their hundreds, their hundreds and their\nthousands, their thousands and their tens of thousands, their\ntens of thousands and their myriads of myriads.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 57,
+      "ref": "Vd 7.57",
+      "orig": "aêtaêshva daxmaêshva hãm-bavaiñti\naxtishca garenushca tafnushca naêzasca sârastishca\nakhôstishca pourushu asti varsô.",
+      "en": "'On those Dakhmas, O Spitama Zarathushtra! those Daevas take\nfood and void filth. As you, men, in the material world, you cook\nmeal and eat cooked meat, so do they. It is, as it were, the smell\nof their feeding that you smell there, O men!",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 58,
+      "ref": "Vd 7.58",
+      "orig": "aêtaêshva daxmaêshva mashya hãm mereñcyãstema\nbavaiñti pasca hû frâshmô-dâitîm.",
+      "en": "'For thus they go on reveling, until that stench is rooted\nin the Dakhmas. In those Dakhmas arise the infection of diseases,\nitch, hot fever, naeza, cold fever, rickets, and hair untimely\nwhite. On those Dakhmas meet the worst murderers, from the hour\nwhen the sun is down.",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 59,
+      "ref": "Vd 7.59",
+      "orig": "taêca ýâ kasu-xratush masyô-xrathwãm\nnôit paitishaiti thrishum aêtaêshãm axtinãm\njãnayô dreñjaiti aoshtaca paiti dumnaca thrivataca\ngaêsush!",
+      "en": "'And people of small understanding who do not seek for better\nunderstanding, the Jainis make those diseases\ngrow stronger by a third, on their thighs, on their hands,\non their three-plaited hair.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": "60-69",
+      "ref": "Vd 7.60-69",
+      "orig": "dâtare ... ashâum ýat ahmi nmâne\nýat mâzdayasnôish nâirika upas-puthrîm\njasât ... apâca nava upa makhem paiti avatha ýaozhdayãn.",
+      "en": "O Maker of the material world, thou Holy One! If in the house\nof a worshipper of Mazda there be a woman with child, and if being\na month gone, or two, or three, or four, or five, or six, or seven,\nor eight, or nine, or ten months gone, she bring forth a still-born\nchild, what shall the worshippers of Mazda do?\nAhura Mazda answered: 'The place in that Mazdean house whereof\nthe ground is the cleanest and the driest, and the least passed\nthrough by flocks and herds, by the fire of Ahura Mazda, by the\nconsecrated bundles of baresma, and by the faithful;'\nO Maker of the material world, thou Holy One! How far from\nthe fire? How far from the water? How far from the consecrated\nbundles of baresma? How far from the faithful?\nAhura Mazda answered: 'Thirty paces from the fire; thirty\npaces from the water; thirty paces from the consecrated bundles\nof Baresma; three paces from the faithful;-\n'On that place shall the worshippers of Mazda erect an enclosure,\nand therein shall they establish her with food, therein shall\nthey establish her with clothes.'\nO Maker of the material word, thou Holy One! What is the food\nthat the woman shall first take?\nAhura Mazda answered: 'Gomez mixed with ashes, three draughts\nof it, or six, or nine, to send down the Dakhma within her womb.\n'Afterwards she may drink boiling milk of mares, cows, sheep,\nor goats, with pap or without pap; she may take cooked milk without\nwater, meal without water, and wine without water.' 68. O Maker\nof the material world, thou Holy One! How long shall she remain\nso? How long shall she live thus on milk, meal, and wine?\nAhura Mazda answered: 'Three nights long shall she remain\nso; three nights long shall she live thus on milk, meal, and wine.\nThen, when three nights have passed, she shall wash her body,\nshe shall wash her clothes, with gomez and water, by the nine\nholes, and thus shall she be clean.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 70,
+      "ref": "Vd 7.70",
+      "orig": "dâtare ... ashâum ýezica hê hãm\ntafnô jasât avi tanuye zôishnuye ýezica\nhê dva ýaska avi acishtô âjasât\nýasca shudhô ýasca tarshnô hvarât\naêsha nâirika âpem.",
+      "en": "O Maker of the material world, thou Holy One! But if fever\nbefall her unclean body, if these two worst pains, hunger and\nthirst, befall her, may she be allowed to drink water?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 71,
+      "ref": "Vd 7.71",
+      "orig": "âat mraot ahurô mazdå, hvarât avat\nhê asti masyô arethem ýat ushtânem buñjayât\npara kahmâicit dahmanãm dahmâhu vaêthâhu\ndahmaca ashavanasca, adha aêsha nâirika zastô-maiti\nâpem franguharât, âat vô ýûzhem\nýôi mazdayasna cithãm frâthweresaêta\naoxtô ratush aoxtô sraoshâvarezô cithãm\nfrâthweresaiti.",
+      "en": "Ahura Mazda answered: 'She may; the first thing for her is\nto have her life saved. From the hands of one of the holy men,\na holy faithful man, who knows the holy knowledge, she shall drink\nof the strength-giving water. But you, worshippers of Mazda, fix\nye the penalty for it. The Ratu being applied to, the Sraosha-varez\nbeing applied to, shall prescribe the penalty to be paid.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 72,
+      "ref": "Vd 7.72",
+      "orig": "kâ-hê asti citha, âat mraot ahurô\nmazdå, aêtahe paiti peshô-tanuye duye saite\nupâzananãm upâzôit aspahe ashtraya duye\nsaite sraoshô-caranaya!",
+      "en": "What is the penalty to be paid?\nAhura Mazda answered: 'The deed is that of a Peshotanu: two hundred\nstripes with the Aspahe-astra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 73,
+      "ref": "Vd 7.73",
+      "orig": "dâtare ... ashâum kat tâ tashta ånguharena\nýaozhdayãn anghen ashâum ahura mazda ýâ\nnasâum ava-bereta sûnô vâ para-iristahe\nmashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the eating-vessels\nbe made clean that have been touched by Nasu from a dog, or Nasu\nfrom a man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 74,
+      "ref": "Vd 7.74",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\nanghat zarenaênish hakeret frasnâdhayen maêsmana\ngêush hakeret zemô uzdâthayen hakeret âpô\nfrasnâdhayen atha ýaozhdayãn.",
+      "en": "Ahura Mazda answered: 'They can, O holy Zarathushtra!'\nHow so?\n'If they be of gold, you shall wash them once with gomez, you\nshall rub them once with earth, you shall wash them once with\nwater, and they shall be clean.\n'If they be of silver, you shall wash them twice with gomez, you\nshall rub them twice with earth, you shall wash them twice with\nwater, and they shall be clean.\n[75. 'If they be of iron, you shall wash them thrice with gomez,\nyou shall rub them thrice with earth, you shall wash them thrice\nwith water, and they shall be clean.\n'If they be of steel, you shall wash them four times with gomez,\nyou shall rub them four times with earth, you shall wash them\nfour times with water, and they shall be clean.\n'If they be of stone, you shall wash them six times with gomez,\nyou shall rub them six times with earth, you shall wash them six\ntimes with water, and they shall be clean.]\n'If they be of earth, of wood, or of clay, they are unclean for\never and ever.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 75,
+      "ref": "Vd 7.75",
+      "orig": "âat ýezi anghat erezataênish bish frasnâdhayen\nmaêsmana gêush bish zemô uzdâthayen bish\nâpô frasnâdhayen atha ýaozhdayãn,\nâat ýezi anghat ayanghaênish thrish frasnâdhayen\nmaêsmana gêush thrish zemô uzdâthayen\nthrish âpô frasnâdhayen atha ýaozhdayãn,\nâat ýezi anghat haosafnaênish cathrush frasnâdhayen\nmaêsmana gêush cathrush zemô uzdâthayen\ncathrush âpô frasnâdhayen atha ýaozhdayãn,\nâat ýezi anghat zarshtvaênish xshvash frasnâdhayen\nmaêsmana gêush xshvash zemô uzdâthayen\nxshvash âpô frasnâdhayen atha ýaozhdayãn,\nâat ýezi anghat zemaênish drvaênish fravâxshaênish\nýavaêtâite ayaozhdya.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 76,
+      "ref": "Vd 7.76",
+      "orig": "dâtare ... ashâum kat tâ gêush ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum franguharât\nsûnô vâ para-iristahe mashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the cow\nbe made clean that has eaten of the carcass of a dog, or of the\ncorpse of a man?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 77,
+      "ref": "Vd 7.77",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, nôit payô fshuta\nzaothre nôit gêush zaothre baresmaine paiti-baire\nañtarât naêmât ýâre-drâjô\nâat pasca ýâre-drâjô vasô\nhvarethå anghen nerebyô ashavabyô hamatha ýatha\nparacit.",
+      "en": "Ahura Mazda answered: 'She can, O holy Zarathushtra! The priest\nshall not, within a year, take from her either milk or cheese\nfor the libation, nor meat for the libation and the Baresma. When\na year has passed, then the faithful may eat of her as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 78,
+      "ref": "Vd 7.78",
+      "orig": "kô hô anghat ahura mazda ýô ashem\nmainimnô ashem isemnô ashem aparaodhayeite ashemca\nmainimnô drujimca vînasti.",
+      "en": "Who is he, O holy Ahura Mazda! who, meaning well and desiring\nrighteousness, prevents righteousness? Who is he who, meaning\nwell, falls into the ways of the Druj?",
+      "zh": ""
+    },
+    {
+      "chapter": 7,
+      "verse": 79,
+      "ref": "Vd 7.79",
+      "orig": "âat mraot ahurô mazdå, hô bâ\nanghat ashâum zarathushtra ýô ashem mainimnô\nashem isemnô ashem aparaodhayeite ashemca mainimnô\ndrujimca vînasti ýô nasumaitîm âpem\nvîzaothrãm frabaraiti ýô upa-naxturushu\ntãthraêshu vîzaothrãm frabaraiti!",
+      "en": "Ahura Mazda answered: 'This one, meaning well and desiring\nrighteousness, prevents righteousness; this one, meaning well,\nfalls into the ways of the Druj, who offers up water defiled by\nthe dead and unfit for libation; or who offers up in the dead\nof the night water unfit for libation.'",
+      "zh": ""
+    }
+  ]
+}

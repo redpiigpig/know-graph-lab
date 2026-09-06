@@ -1,0 +1,405 @@
+{
+  "slug": "vendidad-19",
+  "siglum": "Vd 19",
+  "title_zh": "祓魔法典 第 19 章‧誘惑查拉圖斯特拉",
+  "title_en": "Vendidad 19",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd19sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 19,
+      "verse": 1,
+      "ref": "Vd 19.1",
+      "orig": "apâxtarat haca naêmât apâxtaraêibyô\nhaca naêmaêibyô fradvarat angrô mainyush\npouru-mahrkô daêvanãm daêvô, uiti\ndavata hô ýô duzhdå angrô mainyush\npouru- mahrkô, druxsh upa-dvâra mereñcanguha\nashâum zarathushtra, druxsh hê pairi-dvarat bûiti\ndaêvô ithyejô marshaonem davazhå.",
+      "en": "From the region of the north, from the regions\nof the north , forth rushed Angra Mainyu, the deadly,\nthe Daeva of the Daevas . And thus spake the\nevil-doer Angra Mainyu, the deadly: 'Druj, rush\ndown and kill him,' O holy Zarathushtra! The\nDruj came rushing along, the demon Buiti , who\nis deceiving, unseen death .",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 2,
+      "ref": "Vd 19.2",
+      "orig": "zarathushtrô ahunem vairîm frasrâvayat,\nýathâ ahû vairyô ... vâstârem,\nâpô vanguhîsh frâyazaêta vanghuyå\ndâityayå daênãm mâzdayasnîm\nfraorenaêta, druxsh hê steretô apa dvarat bûiti\ndaêvô ithyejô marshaonem davazhå.",
+      "en": "Zarathushtra chanted aloud the Ahuna-Vairya :\n'The will of the Lord is the law of righteousness. The gifts of Vohu-mano to\nthe deeds done in this world for Mazda. He who relieves the poor\nmakes Ahura king.'\nHe offered the sacrifice to the good waters of the good\nDaitya ! He recited the profession of the worshippers of\nMazda !\nThe Druj dismayed, rushed away, the demon Buiti, who is\ndeceiving, unseen death.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 3,
+      "ref": "Vd 19.3",
+      "orig": "druxsh hê paiti-davata, skutara angra mainyô nôit\nhê aoshô pairi- vaênâmi spitamâi\nzarathushtrâi pouru-hvarenanghô ashava zarathushtrô,\nzarathushtrô mananghô pairi-vaênât, daêva\nmê drvañtô duzhdånghô aoshem hãm-pereseñte.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 4,
+      "ref": "Vd 19.4",
+      "orig": "usehishtat zarathushtrô frashûsat zarathushtrô\nasaretô aka manangha xrûzhdya tbaêshô-parshtanãm\nasânô zasta drazhimnô katô-masanghô\nheñti ashava zarathushtrô viñdemnô dathushô\nahurâi mazdâi, kva hê drazhahe ainghå\nzemô ýat pathanayå skarenayå dûraêpârayå\ndrejya paiti zbarahi nmânahe pourushaspahe.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 5,
+      "ref": "Vd 19.5",
+      "orig": "uzvaêdhayat zarathushtrô angrem mainyûm,\nduzhda angra mainyô janâni dãma daêvô-\ndâtem janâni nasush daêvô-dâtem\njanâni pairikãm ýãm xnãthaiti\nýahmâi us-zayâite saoshyãs verethraja\nhaca apat kãsaoyât ushastarat haca naêmât\nushastaraêibyô haca naêmaêibyô.",
+      "en": "[i.e. Ahunwar ], a prayer in frequent use, and considered of great efficacy.\nIt was by reciting it that Ohrmazd in his first conflict with Ahriman drove\nhim back to hell ( Bund 1 ).",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 6,
+      "ref": "Vd 19.6",
+      "orig": "paiti ahmâi adavata duzhdâmô angrô\nmainyush, mâ mê dãma mereñcanguha ashâum\nzarathushtra, tûm ahi pourushaspahe puthrô barethryât\nhaca zâvishi apa-stavanguha vanguhîm daênãm\nmâzdayasnîm viñdâi ýânem\nýatha viñdat vadhakhanô dainghupaitish.",
+      "en": "The river in Eranwej; see Vd1.3 .",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 7,
+      "ref": "Vd 19.7",
+      "orig": "paiti ahmâi avashata ýô spitâmô\nzarathushtrô, nôit hê apa-stavâne vanguhîm\ndaênãm mâzdayasnîm nôit astaca\nnôit ushtânemca nôit baodhasca vîurvîsyât.",
+      "en": "The Fravarane ( Y11.16 ). 3. And the Druj said unto Angra Mainyu:\n'Thou, tormenter, Angra Mainyu! I see no way to\nkill Spitama Zarathushtra, so great is the glory of\nthe holy Zarathushtra.'\nZarathushtra saw (all this) within his soul: 'The\nwicked, the evil-doing Daevas (thought he) take\ncounsel together for my death.'\n \n I a. 4. Up started Zarathushtra, forward went Zarathushtra, unabated\nby Akem-mano , by the hardness of his malignant riddles ; he went\nswinging stones in his hand, stones as big as a house , which he\nobtained from the Maker, Ahura Mazda, he the holy Zarathushtra.\n'Whereat on this wide, round earth, whose ends\nlie afar, whereat dost thou swing (those stones),\nthou who standest by the upper bank of the river\nDareja , in the mansion of Pourushaspa ?' 5. Thus Zarathushtra answered Angra Mainyu: 'O evil-doer, Angra\nMainyu! I will smite the creation of the Daeva; I will smite the\nNasu, a creature of the Daeva; I will smite the Pairika\nKnathaiti , till the victorious Saoshyant come up to life out of\nthe lake Kasava [Kasaoya] , from the region of the dawn, from the regions\nof the dawn.' 6. Again to him said the Maker of the evil world, Angra Mainyu:\n'Do not destroy my creatures, O holy Zarathushtra! Thou art the\nson of Pourushaspa; by thy mother I was invoked. Renounce the\ngood Religion of the worshippers of Mazda, and thou shalt gain\nsuch a boon as Vadhaghna gained, the ruler of the nations.' 7. Spitama Zarathushtra said in answer: 'No!\nnever will I renounce the good Religion of the worshippers\nof Mazda, either for body or life, though\nthey should tear away the breath!'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 8,
+      "ref": "Vd 19.8",
+      "orig": "paiti ahmâi adavata duzhdâmô angrô\nmainyush, kahe vaca vanâi kahe vaca apa-ýasâi\nkana zaya hukeretånghô mana dãma angrô-mainyush.",
+      "en": "Again to him said the Maker of the evil\nworld, Angra Mainyu: 'By whose Word wilt thou\nstrike, by whose Word wilt thou repel, by whose\nweapon will the good creatures (strike and repel)\nmy creation, who am Angra Mainyu?'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 9,
+      "ref": "Vd 19.9",
+      "orig": "paiti ahmâi avashata ýô spitâmô\nzarathushtrô, hâvanaca tashtaca haomaca vaca mazdô-fraoxta\nmana zaya asti vahishtem ana vaca vanâni ana vaca apa-ýasâne\nana zaya hukeretånghô âi duzhda angra mainyô,\ndathat speñtô mainyush dathat zrûne akarane\nfradathen ameshå speñta huxshathra hudhånghô.",
+      "en": "Spitama Zarathushtra said in answer: 'The\nsacred mortar, the sacred cups, the Haoma, the\nWord taught by Mazda, these are my weapons,\nmy best weapons! By this Word will I strike,\nby this Word will I repel, by this weapon will the\ngood creatures (strike and repel thee), O evil-doer,\nAngra Mainyu! The Good Spirit [Spenta Mainyu -JHP] made the creation ;\nhe made it in the boundless Time. The\nAmesha-Spentas made the creation, the good, the wise Sovereigns.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 10,
+      "ref": "Vd 19.10",
+      "orig": "zarathushtrô ahunem vairîm frasrâvayat,\nýathâ ahû vairyô ... vâstârem,\nfrâmraot ashava zarathushtrô, tat thwâ peresâ\narsh mê vaoca ahura.",
+      "en": "Zarathushtra chanted aloud the Ahuna-Vairya.\nThe holy Zarathushtra said aloud: 'This I ask thee: teach me\nthe truth, O Lord ! ...'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 11,
+      "ref": "Vd 19.11",
+      "orig": "peresat zarathushtrô ... ashâum drejya paiti zbarahe\nahurâi mazdâi vanghave vohu-maite ånghânô\nashâi vahishtâi xshathrâi vairyâi speñtayâi\nârmatêe.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O\nAhura Mazda, most beneficent spirit, Maker of the\nmaterial world, thou Holy One! [he was sitting by\nthe upper bank of the Dareja , before Ahura Mazda,\nbefore the good Vohu-mana, before Asha Vahishta,\nKhshathra Vairya, and Spenta Armaiti;]",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 12,
+      "ref": "Vd 19.12",
+      "orig": "kutha hîsh azem kerenavâni haca avanghât\ndrujat haca duzhda angra mainyô kutha hãm-raêthwem\nkutha paiti-raêthwem kutha nasush apayasâne haca avanghât\nvîsat ýat mâzdayasnôit kutha narem ashavanem\nýaozhdathâni kutha nâirikãm ashaonîm\nýaozhdâthrem barâni.",
+      "en": "'How shall I free the world from that\nDruj, from that evil-doer, Angra Mainyu? How\nshall I drive away direct defilement? How indirect\ndefilement? How shall I drive the Nasu from the\nhouse of the worshippers of Mazda? How shall\nI cleanse the faithful man? How shall I cleanse\nthe faithful woman?'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 13,
+      "ref": "Vd 19.13",
+      "orig": "âat mraot ahurô mazdå, nizbayanguha tû\nzarathushtra vanguhîm daênãm mâzdayasnîm\nnizbayanguha tû zarathushtra avaên ameshå speñta\navi haptô- karshvairîm zãm nizbayanguha tû\nzarathushtra thwâshahe hvadhâtahe zrvânahe akaranahe\nvayaosh uparô-kairyehe nizbayanguha tû zarathushtra\nvâtô taxmô mazdadhâtô speñta\nsrîra dukhdha ahurahe mazdå,",
+      "en": "Ahura Mazda answered: 'Invoke, O\nZarathushtra! the good Religion of Mazda.\n'Invoke, O Zarathushtra! though thou see them\nnot, the Amesha-Spentas who rule over the seven\nKarshvares of the earth .\n'Invoke, O Zarathushtra! the sovereign Heaven,\nthe boundless Time , and Vayu , whose action is\nmost high.\n'Invoke, O Zarathushtra! the powerful Wind,\nmade by Mazda; and Spenta [Armaiti], the fair\ndaughter of Ahura Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 14,
+      "ref": "Vd 19.14",
+      "orig": "nizbayanguha tû zarathushtra fravashish mana ýat\nahurahe mazdå avãm ýãm mazishtãmca\nvahishtãmca sraêshtãmca xraozhdishtãmca\nxrathwishtãmca hukereptemãmca ashât apanôtemãmca\nýenghe urva mãthrô speñtô, hvatô\nnizbayanguha zarathushtra imat dãma ýat ahurahe\nmazdå.",
+      "en": "'Invoke, O Zarathushtra! my Fravashi ,\nwho am Ahura Mazda, the greatest, the best, the\nfairest of all beings, the most solid, the most intelligent,\nthe best shapen, the highest in holiness, and\nwhose soul is the holy Word [manthra spenta]!\n'Invoke, O Zarathushtra! this creation of mine, who am Ahura\nMazda.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 15,
+      "ref": "Vd 19.15",
+      "orig": "vaxshem mê asãsat zarathushtrô, nizbayemi\nahurô mazdå ashava dãma dâtem nizbayemi\nmithrem vouru-gaoyaoitîm huzaênem hvarenanguhastemem\nzayanãm verethravastemem zayanãm nizbayemi sraoshem\nashîm huraodhem snaithish zastaya drazhimnô kameredhe\npaiti daêvanãm.",
+      "en": "Zarathushtra imitated my words from me,\n(and said): 'I invoke the holy creation of Ahura\nMazda.\n'I invoke Mithra , the lord of the rolling countryside,\na god armed with beautiful weapons, with the\nmost glorious of all weapons, with the most victorious\nof all weapons.\n'I invoke the holy, well-formed Sraosha , who\nwields a club in his hand, to bear upon the heads\nof the fiends .",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 16,
+      "ref": "Vd 19.16",
+      "orig": "nizbayemi mãthrô speñtô ýô\nash-hvarenå nizbayemi thwâshahe hvadhâtahe zrvânahe\nakaranahe vayaosh uparô-kairyehe nizbayemi vâtô\ntaxmô mazdadhâtô speñta srîra dukhdha\nahurahe mazdå nizbayemi vanguhîm daênãm\nmâzdayasnîm dâtem vîdôyûm\nzarathushtra!",
+      "en": "'I invoke the most glorious Holy Word [manthra spenta].\n'I invoke the sovereign Heaven, the boundless Time, and\nVayu, whose action is most high.\n'I invoke the mighty Wind, made by Mazda, and Spenta\n(Armaiti), the fair daughter of Ahura Mazda.\n'I invoke the good Religion of Mazda, the fiend-destroying\nLaw of Zarathushtra.'\n \n III.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 17,
+      "ref": "Vd 19.17",
+      "orig": "peresat zarathushtrô ahurem mazdãm, dâtô\nvanghen ahura mazda kana ýasna ýazâne kana\nýasna frâyazâne imat dãma ýat\nahurahe mazdå.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Maker of the good world,\nAhura Mazda! With what manner of sacrifice shall I worship, with\nwhat manner of sacrifice shall I make people worship this\ncreation of Ahura Mazda?'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 18,
+      "ref": "Vd 19.18",
+      "orig": "âat mraot ahurô mazdå, urvaranãm\nuruthmyanãm ava-jasâhi spitama zarathushtra srîra\nurusta amavaiti imat vacô framrû, nemô urvaire\nvanguhi mazdadhâte ashaone ashem vohû vahishtem astî...(1).",
+      "en": "Ahura Mazda answered: 'Go, O Spitama\nZarathushtra! towards the high-growing trees , and before one of them that is\nbeautiful, high-growing, and mighty, say thou these words: \"Hail\nto thee! O good, holy tree, made by Mazda! Ashem vohu!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 19,
+      "ref": "Vd 19.19",
+      "orig": "baresma hê uzbârayat aêshô-drâjô\nýavô-frathô mâ hê baresma pairi-keretem\npairi-kereñtîsh narô anghen ashavanô\nhâvôya zasta nyâsemnô ýazemnô\nahurem mazdãm ýazemnô ameshê speñtê\nhaomasca zâirish berezô srîråsca vohu\nmanô râtaca vanguhi mazdadhâta ashaone vahishtô.",
+      "en": "'[The priest] shall cut off a twig of\nBaresma, long as an aesha, thick as a yava.\nThe faithful one, holding it in his left\nhand, shall keep his eyes upon it without ceasing, whilst he is\noffering up to Ahura Mazda and to the Amesha-Spentas, the high\nand beautiful golden Haomas, and Good Thought and the good Rata,\nmade by Mazda, holy and excellent.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 20,
+      "ref": "Vd 19.20",
+      "orig": "peresat zarathushtrô ahurem mazdãm, vîspô-vîdhvå\nahura mazda ahvafnô ahi abanghô tûm ýô\nahurô mazdå, vohu manô hãm-raêthwayeiti\nvohu manô paiti- raêthwayeiti haca avanghât\ntanvat ýat daêvô-jatayå daêva hãm-raêthwayeiti\nbvat vohu manô ýaozhdâtô.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O thou,\nall-knowing Ahura Mazda! thou art never asleep,\nnever intoxicated, thou Ahura Mazda! Vohu-mano\ngets directly defiled: Vohu-mano gets indirectly\ndefiled; the Daevas defile him from the bodies\nsmitten by the Daevas: let Vohu-mano be made\nclean.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 21,
+      "ref": "Vd 19.21",
+      "orig": "âat mraot ahurô mazdå, gaomaêzem ayasôit\nzarathushtra gaom pairi uxshânem bixedhrem dâityô-keretem\nýaozhdâta frabarôish zãm paiti ahuradhâtãm\npairi-karshem pairi-karshôit aêshô nâ\nýô ýaozhdâthryô.",
+      "en": "Ahura Mazda answered: 'Thou shalt\ntake some gomez from a bull ungelded and such as\nthe law requires it. Thou shalt take\nthe man who is to be cleansed to the field made by Ahura, and\nthe man that is to cleanse him shall draw the furrows.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 22,
+      "ref": "Vd 19.22",
+      "orig": "satem ashô-stûitinãm upastvôish bizhvat\nahunem vairîm frasrâvayôish, catura frasnana\nfrasnayôit gaomaêzem gava dâtayå bish\nâpem mazdadhâtayå.",
+      "en": "'He shall recite a hundred Ashem vohu: \"Holiness is the best\nof all good: it is also happiness. Happy the man who is holy\nwith perfect holiness!\"\n'He shall chant two hundred Ahuna-Vairya: \"The will of the\nLord is the law of righteousness. The gifts of Vohu-mano to the\ndeeds done in this world for Mazda! He who relieves the poor\nmakes Ahura king.\"\n'He shall wash himself four times with the\ngomez from the ox, and twice with the water made\nby Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 23,
+      "ref": "Vd 19.23",
+      "orig": "ýaozhdâta bun vohu manô ýaozhdâta\nbun mashyô uzgeurvayât vohu manô hâvôya\nbâzvô dashinaca dashina bâzvô hâvayaca,\nâat vohu manô nidaidhîsh sûrô-thwarshtanãm\nraocanghãm ýat hê stârãm bakhô-dâtanãm\naiwi raocayåñte vîspem â ahmât\nýat hê nava xshafna sacåñte.",
+      "en": "'Thus Vohu-mano shall be made clean, and clean shall be the\nman. The man shall take up Vohu-mano with the left arm and the\nright, with the right arm and the left: and thou shalt lay down\nVohu-mano under the mighty light of the heavens by the light of\nthe stars made by the gods, until nine nights have passed away.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 24,
+      "ref": "Vd 19.24",
+      "orig": "âat pasca nava-xshaparât âthre zaothrå\nfrabarôish xrûzhdranãm aêsmanãm\nâthre frabarôish vohu-gaonanãm baoidhinãm\nâthre frabarôish vohu manô â-baodhayaêta.",
+      "en": "'When nine nights have passed away,\nthou shalt bring libations unto the fire, thou shalt\nbring hard wood unto the fire, thou shalt bring\nincense of Vohu-gaona unto the fire, and thou\nshalt perfume Vohu-mano therewith.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 25,
+      "ref": "Vd 19.25",
+      "orig": "ýaozhdâta bun vohu manô ýaozhdâta\nbun mashyô uzgeurvayât vohu manô hâvôya\nbâzvô dashinaca dashina bâzvô haoyaca\nfravaocat vohu manô, nemô ahurâi mazdâi\nnemô ameshaêibyô speñtaêibyô\nnemô anyaêshãm ashaonãm!",
+      "en": "'Thus shall Vohu-mano be made clean,\nand clean shall be the man. He shall take up\nVohu-mano with the right arm and the left, with\nthe left arm and the right, and Vohu-mano shall\nsay aloud: \"Glory be to Ahura Mazda! Glory be\nto the Amesha-Spentas! Glory be to all the other\nholy beings.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 26,
+      "ref": "Vd 19.26",
+      "orig": "peresat zarathushtrô ahurem mazdãm, vîspô-vîdhvå\nahura mazda haxshâne narem ashavanem haxshâne nâirikãm\nashaonîm haxshâne drvatãm daêvayasnanãm\nmerezujîtîm mashyânãm zãm ahuradhâtãm\nnipârayañta âpem taciñtãm ýavanãm\nuruthmãm anyãm hê avaretãm nipârayañta,\nâat mraot ahurô mazdå, haxshaêsha ashâum\nzarathushtra.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O\nthou all-knowing Ahura Mazda: Should I urge\nupon the godly man, should I urge upon the godly\nwoman, should I urge upon the wicked Daeva-worshipper\nwho lives in sin, to give the earth\nmade by Ahura, the water that runs, the corn\nthat grows, and all the rest of their wealth?'\nAhura Mazda answered: 'Thou shouldst, O holy Zarathushtra.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 27,
+      "ref": "Vd 19.27",
+      "orig": "dâtare ... dva tâ dâthra bavaiñti\ndva tâ dâthra pârayeiñti dva tâ\ndâthra pairi-bavaiñti dva tâ dâthra paiti\nhañjaseñti mashyô astvaiñti anghvô\nhavâi urune para-daidhyât.",
+      "en": "O Maker of the material world, thou Holy One! Where are the\nrewards given? Where does the rewarding take place? Where is\nthe rewarding fulfilled? Whereto do men come to take the reward\nthat, during their life in the material world, they have won for\ntheir souls?",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 28,
+      "ref": "Vd 19.28",
+      "orig": "âat mraot ahurô mazdå, pasca para-iristahe\nmashyehe pasca frasaxtahe mashyehe pasca pairithnem dereniñti\ndaêva drvañtô duzhdånghô, thrityå\nxshapô vîusaiti ushi raocaiti bâmya gairinãm\nashahvâthranãm âsenaoiti mithrem huzaênem\nhvarexshaêtem uzyôraiti,",
+      "en": "Ahura Mazda answered: 'When the man is dead, when his time\nis over, then the wicked, evil-doing Daevas cut off his eyesight.\nOn the third night, when the dawn appears and brightens up, when\nMithra, the god with beautiful weapons, reaches the all-happy\nmountains, and the sun is rising:",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 29,
+      "ref": "Vd 19.29",
+      "orig": "vîzareshô daêvô nãma spitama\nzarathushtra urvânem bastem vâdhayeiti drvatãm\ndaêvayasnanãm merezujîtîm mashyânãm,\npathãm zrvô-dâtanãm jasaiti ýasca\ndrvaite ýasca ashaone cinvat-peretûm mazdadhâtãm\nbaodhasca urvânemca ýâtem gaêthanãm\npaiti-jaidhyeiñti dâtem astvaiñti anghvô.",
+      "en": "'Then the fiend, named Vizaresha,\nO Spitama Zarathushtra, carries off in bonds the\nsouls of the wicked Daeva-worshippers who live\nin sin. The soul enters the way made by Time,\nand open both to the wicked and to the righteous.\nAt the head of the Chinwad bridge, the holy bridge\nmade by Mazda, they ask for their spirits and souls\nthe reward for the worldly goods which they gave\naway here below.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 30,
+      "ref": "Vd 19.30",
+      "orig": "hâu srîra kereta taxma huraodha jasaiti spânavaiti\nnivavaiti pasvaiti ýaoxshtavaiti hunaravaiti, [hâ\ndrvatãm akhem urvânô temô-hva nizarshaite,]\nhâ ashâunãm urvânô tarasca harãm\nberezaitîm âsenaoiti tarô cinvatô peretûm\nvîdhârayeiti haêtô mainyavanãm\nýazatanãm.",
+      "en": "'Then comes the beautiful, well-shapen,\nstrong and well-formed maid, with the dogs at her\nsides, one who can distinguish, who has many\nchildren, happy, and of high understanding.\n'She makes the soul of the righteous one go\nup above the Hara-berezaiti; above the Chinwad\nbridge she places it in the presence of the heavenly gods themselves.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 31,
+      "ref": "Vd 19.31",
+      "orig": "usehishtat vohu manô haca gâtvô zaranyô-\nkeretô fravaocat vohu manô, kadha-nô idha ashâum\nagatô ithyejanghatat haca anghaot aithyajanghem ahûm\nâ.",
+      "en": "'Up rises Vohu-mano from his golden\nseat; Vohu-mano exclaims: \"How hast thou come\nto us, thou Holy One, from that decaying world into\nthis undecaying one?\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 32,
+      "ref": "Vd 19.32",
+      "orig": "xshnûtô ashaonãm urvânô pârayeiñti\navi ahurahe mazdå avi ameshanãm speñtanãm\navi gâtvô zaranyô- keretô avi garô\nnmânem maêthanem ahurahe mazdå maêthanem\nameshanãm speñtanãm maêthanem anyaêshãm\nashaonãm.",
+      "en": "'Gladly pass the souls of the righteous\nto the golden seat of Ahura Mazda, to the golden\nseat of the Amesha-Spentas, to the Garo-nmanem,\nthe abode of Ahura Mazda, the abode of the\nAmesha-Spentas, the abode of all the other holy beings.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 33,
+      "ref": "Vd 19.33",
+      "orig": "ýaozhdâthryô ashava pasca para-iristîm\ndaêva drvañtô duzhdånghô baodhem\navatha fratereseñti ýatha maêshi vehrkavaiti\nvehrkat haca frataresaiti.",
+      "en": "'As to the godly man that has been cleansed, the wicked\nevil-doing Daevas tremble at the perfume of his soul after death,\nas doth a sheep on which a wolf is pouncing.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 34,
+      "ref": "Vd 19.34",
+      "orig": "narô ashavanô hãm-bavaiñti nairyô\nsanghô hãm-bavaiti ashtô mazdå ahurahe\nmrûidhi nairyô sanghô, hvatô nizbayanguha\nzarathushtra imat dãma ýat ahurahe mazdå.",
+      "en": "'The souls of the righteous are gathered together there:\nNairyo-sangha is with them; a messenger of Ahura Mazda is\nNairyo-sangha.\nIla. \n'Invoke, O Zarathushtra! this very creation of Ahura Mazda.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 35,
+      "ref": "Vd 19.35",
+      "orig": "vaxshem mê asãsat zarathushtrô, nizbayemi\nahurô mazdå ashava dâmi-dâtem nizbayemi\nzãm ahuradhâtãm âpem mazdadhâtãm\nurvarãm ashaonîm nizbayemi zrayô vourukashem\nnizbayemi asmanem hvanvañtem nizbayemi anakhra raocå\nhvadhâtå.",
+      "en": "Zarathushtra imitated those words of\nmine: 'I invoke the holy world, made by Ahura Mazda.\n'I invoke the earth made by Ahura, the water made by Mazda,\nthe holy trees.\n'I invoke the sea Vouru-kasha.\n'I invoke the beautiful Heaven.\n'I invoke the endless and sovereign Light.'",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 36,
+      "ref": "Vd 19.36",
+      "orig": "nizbayemi vahishtem ahûm ashaonãm raocanghem\nvîspô-hvâthrem nizbayemi garô nmânem\nmaêthanem ahurahe mazdå maêthanem ameshanãm\nspeñtanãm maêthanem anyaêshãm\nashaonãm nizbayemi misvânahe gâtvahe hvadhâtahe\ncinvat-peretûm mazdadhâtãm.",
+      "en": "'I invoke the bright, blissful Paradise of the Holy Ones.\n'I invoke the Garo-nmanem, the abode of Ahura Mazda, the\nabode of the Amesha-Spentas, the abode of all the other holy\nbeings.\n'I invoke the sovereign Place of Eternal Weal,\nand the Chinwad bridge made by Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 37,
+      "ref": "Vd 19.37",
+      "orig": "nizbayemi saokãm vanguhîm vouru-dôithrãm\nnizbayemi ukhrå ashâunãm fravashayô vîspå\ndâmãn savanguhaitish nizbayemi verethrakhnem ahuradhâtem\nbarô-hvarenô mazdadhâtem nizbayemi tishtrîm\nstârem raêvañtem hvarenanguhañtem gêush\nkehrpa zaranyô-sravahe.",
+      "en": "'I invoke the good Saoka, who has the good eye.\n'I invoke the whole creation of weal.\n'I invoke the mighty Fravashis of the righteous.\n'I invoke Verethraghna, made by Ahura, who\nwears the Glory made by Mazda.\n'I invoke Tishtrya, the bright and glorious star,\nin the shape of a golden-horned bull.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 38,
+      "ref": "Vd 19.38",
+      "orig": "nizbayemi gâthâbyô speñtâbyô\nratuxshathrâbyô ashaonibyô nizbayemi ahunavaityå\ngâthayå nizbayemi ushtavaityå gâthayå\nnizbayemi speñtâ-mainyêush gâthayå\nnizbayemi vohuxshathrayå gâthayå nizbayemi vahishtôishtôish\ngâthayå.",
+      "en": "'I invoke the holy, beneficent Gathas,\nwho rule over the Ratus:\n'I invoke the Ahunavaiti Gatha;\n'I invoke the Ustavaiti Gatha;\n'I invoke the Spentamainyush Gatha;\n'I invoke the Vohukhshathra Gatha;\n'I invoke the Vahishtoishti Gatha.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 39,
+      "ref": "Vd 19.39",
+      "orig": "nizbayemi avat karshvare ýat arezahe savahe nizbayemi\navat karshvare ýat fradadhafshu vîdadhafshu nizbayemi\navat karshvare ýat vouru-bareshti vouru-jareshti nizbayemi\nimat karshvare ýat hvanirathem bâmîm nizbayemi\nhaêtumeñtem raêvañtem hvarenanguhañtem\nnizbayemi ashôish vanghuyå [cistôish vanghuyå]\nnizbayemi razishtayå cistayå nizbayemi hvarenô\nairyanãm dah'yunãm nizbayemi hvarenô ýimâi\nxshaêtâi hvãthwâi.",
+      "en": "'I invoke the Karshvares of Arzahe and Savahe;\n'I invoke the Karshvares of Fradadhafshu and Vidadhafshu;\n'I invoke the Karshvares of Vourubaresti and Vouruzaresti;\n'I invoke the bright Hvaniratha;\n'I invoke the bright, glorious Haetumant;\n'I invoke the good Ashi;\n['I invoke the good Chisti;]\n'I invoke the most pure Chista;\n'I invoke the Glory of the Aryan regions;\n'I invoke the Glory of the bright Yima, the good shepherd.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 40,
+      "ref": "Vd 19.40",
+      "orig": "ýashtô xshnûtô frithô paiti-\nzañtô sraoshô ashyô huraodhô verethraja\nsraoshô ashyô, âthre zaothrå frabarôish\nxrûzhdranãm aêsmanãm âthre frabarôish\nvohu-gaonanãm baoidhinãm âthre frabarôish\nâtrem vâzishtem frâyazaêsha daêum\njanem speñjakhrîm, hvâsta hvarethå frabarôish\nperenãm vikhzhârayeiñtîm.",
+      "en": "'Let him be worshipped with sacrifice,\nlet him be gladdened, gratified, and satisfied, the\nholy Sraosha, the well-formed, victorious, holy\nSraosha.\n'Bring libations unto the Fire, bring hard wood\nunto the Fire, bring incense of Vohu-gaona unto\nthe Fire.\n'Offer up the sacrifice to the Vazishta fire, which smites\nthe fiend Spenjaghra: bring unto it the\ncooked meat and full overflowing libations.",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 41,
+      "ref": "Vd 19.41",
+      "orig": "sraoshô ashyô frâyazaêsha, sraoshô\nashyô daêum kuñdem banghem vîbanghem\nava-janyât drujaskanãm hãm-pataiti drvatãm\ndaêvayasnanãm merezujîtîm mashyânãm\n[nazdishtå dainghâvô ýaozhdâthryât\nhaca frakaire frakerenaot vâstre verezyôit pasush-hvarethem\ngave hvarethem].",
+      "en": "'Offer up the sacrifice to the holy\nSraosha, that the holy Sraosha may smite down\nthe fiend Kunda, who is drunken without drinking,\nand throws down into the Hell of the Druj the\nwicked Daeva-worshippers, who live in sin.\n[42. 'I invoke the Kara fish\n, who lives beneath\nwaters in the bottom of the deep lakes.\n'I invoke the ancient and sovereign Merezu, the\nmost warlike of the creatures of the two Spirits.\n'I invoke the seven bright Sru ...']",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 42,
+      "ref": "Vd 19.42",
+      "orig": "nizbayemi karô masyô upâpô bûne\njafranãm vairyanãm nizbayemi merezu pourvô-hvadhâtô\nýûidhishtô mainivå dâmãn\nnizbayemi hapta sravô bâmya hvånghô puthrånghô\npusånghô bavaiñti.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 43,
+      "ref": "Vd 19.43",
+      "orig": "fradavata vîdavata\nframanyata vîmanyata\nangrô mainyush pouru-mahrkô daêvanãm\ndaêvô iñdrô daêvô saoru daêvô\nnånghaithem daêvô taurvi zairica aêshemem\nxrvî-drûm akatashem daêum zyãm daêvô-dâtem\nithyejô marshaonem zaurva duzhdãfedhrô kerenaoiti,\nbûiti daêvô driwish daêvô daiwish\ndaêvô kasvîsh daêvô paitishô\ndaêvô daêvanãm daêvôtemô.",
+      "en": "'They cried about, their minds wavered to\nand fro, Angra Mainyu the deadly, the Daeva of\nthe Daevas; Indra the Daeva, Sauru the Daeva,\nNaunghaithya the Daeva, Taurvi and Zairi;\nAeshma of the murderous spear; Akatasha the\nDaeva; Winter, made by the Daevas; the deceiving,\nunseen Death; Zaurva, baneful to the\nfathers; Buiti the Daeva; Driwi the Daeva;\nDaiwi the Daeva; Kasvi the Daeva;\nPaitisha the most Daeva-like amongst the Daevas.]",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 44,
+      "ref": "Vd 19.44",
+      "orig": "daêvô uiti davata hô ýô duzhdå\nangrô mainyush pouru-mahrkô, cim hãm-beretha\nhãm-bârayama daêva drvañtô duzhdånghô\narezûrahe paiti kameredhem.",
+      "en": "'And the evil-doing Daeva, Angra\nMainyu, the deadly, said: \"'What! let the wicked,\nevil-doing Daevas gather together at the head of\nArezura!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 45,
+      "ref": "Vd 19.45",
+      "orig": "advareñta adâuñta\ndaêva drvañtô duzhdånghô\nurutheñta adâuñta\ndaêva drvañtô duzhdånghô\nakhãm daothrîm dâuñta\ndaêva drvañtô duzhdånghô, imem\nnô hãm-beretha hãm-bârayama arezûrahe\npaiti kameredhem.",
+      "en": "'They rush away shouting, the wicked,\nevil-doing Daevas; they run away shouting, the\nwicked, evil-doing Daevas; they run away casting\nthe Evil Eye, the wicked, evil-doing Daevas: \"Let\nus gather together at the head of Arezura!",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 46,
+      "ref": "Vd 19.46",
+      "orig": "zâtô bê ýô ashava zarathushtrô\nnmânahe pourushaspahe kva hê aoshô viñdâma\nhâu daêvanãm snathô hâu daêvanãm\npaityârô hâu druxsh vîdruxsh, nyåñcô\ndaêvayâzô nasush daêvô-dâtô\ndraogô mithaoxtô.",
+      "en": "'\"For he is just born the holy Zarathushtra,\nin the house of Pourushaspa. How can we\nprocure his death? He is the weapon that fells the\nfiends: he is a counter-fiend to the fiends; he is\na Druj to the Druj. Vanished are the Daeva-worshippers,\nthe Nasu made by the Daeva, the\nfalse-speaking Lie!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 19,
+      "verse": 47,
+      "ref": "Vd 19.47",
+      "orig": "adâuñta advareñta daêva drvañtô\nduzhdånghô bûnem anghêush temanghahe ýat\nerekhatô daozhanguhahe!\nashem vohû...!!",
+      "en": "'They rush away shouting, the wicked,\nevil-doing Daevas, into the depths of the dark,\nraging world of hell.\n'Ashem vohu: Holiness is the best of all good.'",
+      "zh": ""
+    }
+  ]
+}

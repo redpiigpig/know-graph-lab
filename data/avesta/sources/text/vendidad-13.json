@@ -1,0 +1,477 @@
+{
+  "slug": "vendidad-13",
+  "siglum": "Vd 13",
+  "title_zh": "祓魔法典 第 13 章‧犬（上）",
+  "title_en": "Vendidad 13",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd13sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 13,
+      "verse": 1,
+      "ref": "Vd 13.1",
+      "orig": "kat tat dãma speñtô-mainyava aêtanghãm\ndâmanãm ýôi heñti speñtahe\nmainyêush dãma dâtem vîspem paiti ushånghem\nâ hû vaxshat hazangraja angrô mainyush paiti-jasaiti.",
+      "en": "Which is the good creature among the creatures of the Good\nSpirit that from midnight till the sun is up goes and kills\nthousands of the creatures of the Evil Spirit?",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 2,
+      "ref": "Vd 13.2",
+      "orig": "âat mraot ahurô mazdå spânem sîzhdrem\nurvîsarem ýim vanghâparem ýim mashyâka\navi duzhvacanghô duzhakem nãma aojaite, aêtat\ntat dãma speñtô-mainyava aêtanghãm\ndâmanãm ýôi heñti speñtahe\nmainyêush dãma dâtem vîspem paiti ushånghem\nâ hû vaxshat hazangraja angrô-mainyush paiti-jasaiti.",
+      "en": "Ahura Mazda answered: 'The dog with the prickly back, with\nthe long and thin muzzle, the dog Vanghapara, which\nevil-speaking people call the Duzaka; this is the good creature\namong the creatures of the Good Spirit [Spenta Mainyu -JHP] that from midnight till\nthe sun is up goes and kills thousands of the creatures of the\nEvil Spirit.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 3,
+      "ref": "Vd 13.3",
+      "orig": "ýasca dim janat spitama zarathushtra spânem sîzhdrem\nurvîsarem ýim vanghâparem ýim mashyâka\navi duzhvacanghô duzhakem nãma aojaite nava-naptyaêcit\nhê urvânem para-mereñcaite ýaêshãm\nanghat duzhâpîm cinvat-peretûm ýô\nnôit jvô sraoshyãm uzverezyeiti.",
+      "en": "'And whosoever, O Zarathushtra! shall kill the dog with the\nprickly back, with the long and thin muzzle, the dog Vanghapara,\nwhich evil-speaking people call the Duzaka, kills his own soul\nfor nine generations, nor shall he find a way over the Chinwad\nbridge, unless he has, while alive, atoned for his sin.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 4,
+      "ref": "Vd 13.4",
+      "orig": "dâtare ... ýô janat spânem sîzhdrem\nurvîsarem ýim vanghâparem ýim mashyâka\navi duzhvacanghô duzhakem nãma aojaite kâ hê\nasti citha, âat mraot ahurô mazdå, hazangrem\nupâzananãm upâzôit aspahe ashtraya hazangrem\nsraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man kill\nthe dog with the prickly back, with the long and thin muzzle, the\ndog Vanghapara, which evil-speaking people call the Duzaka, what\nis the penalty that he shall pay?\nAhura Mazda answered: 'A thousand stripes with the\nAspahe-astra, a thousand stripes with the Sraosho-charana.\n \n Ib.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 5,
+      "ref": "Vd 13.5",
+      "orig": "kat tat dãma angrô-mainyava aêtanghãm\ndâmanãm ýôi heñti angrahe mainyêush\ndãma dâtem vîspem paiti ushånghem â\nhû vaxshat hazangraja speñtô-mainyûm\npaiti-jasaiti.",
+      "en": "Which is the evil creature among the creatures of the Evil\nSpirit that from midnight till the sun is up goes and kills\nthousands of the creatures of the Good Spirit [Spenta Mainyu -JHP]?",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 6,
+      "ref": "Vd 13.6",
+      "orig": "âat mraot ahurô mazdå, daêum ýim\nzairimyangurem nãma spitama zarathushtra ýim mashyâka\navi duzhvacanghô zairimyâkem nãma aojaite,\naêtat tat dãma angrô-mainyava aêtanghãm\ndâmanãm ýôi heñti angrahe mainyêush\ndãma dâtem vîspem paiti ushånghem â\nhû vaxshat hazangraja speñtô-mainyûm\npaiti-jasaiti.",
+      "en": "Ahura Mazda answered: 'The daeva Zairimyangura, which\nevil-speaking people call the Zairimyaka, this is the evil\ncreature among the creatures of the Evil Spirit that from\nmidnight till the sun is up goes and kills thousands of the\ncreatures of the Good Spirit [Spenta Mainyu -JHP].",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 7,
+      "ref": "Vd 13.7",
+      "orig": "ýasca dim janat spitama zarathushtra daêum ýim\nzairimyangurem ýim mashyâka avi duzhvacanghô\nzairimyâkem nãma aojaite patitem hê manô\nanghat patitem vacô patitem shyaothnem uzvarshtem hê\nmanô anghat uzvarshtem vacô uzvarshtem shyaothnem!",
+      "en": "'And whosoever, O Zarathushtra! shall kill the daeva\nZairimyangura, which evil-speaking people call the Zairimyaka,\nhis sins in thought, word, and deed are redeemed as they would be\nby a Patet; his sins in thought, word, and deed are atoned for.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 8,
+      "ref": "Vd 13.8",
+      "orig": "ýô aêtaêshãm sûnãm\njaiñti ýim pasush-haurvãmca vishhaurvãmca\nvohunazgãmca draxtô-hunaranãmca xraosyô-taraca\nnô ahmât voyô-taraca hvô urva parâiti\nparô-asnâi anguhe\nýatha vehrkô vayôi tûite\ndramne barezishte razûire.",
+      "en": "'Whosoever shall smite either a shepherd's dog, or a\nhouse-dog, or a Vohunazga dog, or a trained dog,\nhis soul when passing to the other world, shall fly\nhowling louder and more sorely grieved than the sheep does in the\nlofty forest where the wolf ranges.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 9,
+      "ref": "Vd 13.9",
+      "orig": "nôit hê anyô urva haom urvânem paiti\nirista bãzaiti xraosyâca voyaca anguhe naêdha\nspâna peshu-pâna paiti irista bãzaiti xraosyâca\nvoyaca anguhe.",
+      "en": "'No soul will come and meet his departing soul and help it,\nhowling and grieved in the other world; nor will the dogs that\nkeep the [Chinwad] bridge help his departing soul howling and\ngrieved in the other world.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 10,
+      "ref": "Vd 13.10",
+      "orig": "ýô sûne pishtrem jaiñti ýim\npasush-haurve us vâ hê gaoshem thweresaiti apa vâ\nhê paidhyãm kereñtaiti ýase-tat paiti\navå gaêthå tâyush vâ vehrkô\nvâ apaiti-busti haca gaêthâbyô para-baraiti\ndasa adhât paiti afshê cikayat, cikayat sûnahe\nraêshô baodhô-varshtahe cithaya.",
+      "en": "'If a man shall smite a shepherd's dog so that it becomes\nunfit for work, if he shall cut off its ear or its paw, and\nthereupon a thief or a wolf break in and carry away [sheep] from\nthe fold, without the dog giving any warning, the man shall pay\nfor the loss, and he shall pay for the wound of the dog as for\nwilful wounding.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 11,
+      "ref": "Vd 13.11",
+      "orig": "ýô sûne pishtrem jaiñti ýim\nvîsh-haurve us vâ hê gaoshem thweresaiti apa\nvâ hê paidhyãm kereñtaiti ýase-tat\npaiti avå vîsô tâyush vâ vehrkô\nvâ apaiti-busti haca vîzhibyô para-baraiti dasa\nadhât paiti afshê cikayat, cikayat sûnahe raêshô\nbaodhô-varshtahe cithaya.",
+      "en": "'If a man shall smite a house-dog so that it becomes unfit\nfor work, if he shall cut off its ear or its paw, and thereupon a\nthief or a wolf break in and carry away [anything] from the\nhouse, without the dog giving any warning, the man shall pay for\nthe loss, and he shall pay for the wound of the dog as for wilful\nwounding.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 12,
+      "ref": "Vd 13.12",
+      "orig": "dâtare ... ýô spânem jaiñti\nýim pasush-haurum frazâbaodhanghem snathem vîkeret-ushtânem\nkâ hê asti citha, âat mraot ahurô mazdå,\nashta sata upâzananãm upâzôit aspahe\nashtraya ashta sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall smite a shepherd's dog, so that it gives up the ghost and\nthe soul parts from the body, what is the penalty that he shall\npay?\nAhura Mazda answered: 'Eight hundred stripes with the\nAspahe-astra, eight hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 13,
+      "ref": "Vd 13.13",
+      "orig": "dâtare ... ýô spânem jaiñti\nýim vish-haurum frazâbaodhanghem snathem vîkeret-ushtânem\nkâ hê asti citha, âat mraot ahurô mazdå,\nhapta sata upâzananãm upâzôit aspahe\nashtraya hapta sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall smite a house-dog so that it gives up the ghost and the\nsoul parts from the body, what is the penalty that he shall pay?\nAhura Mazda answered; 'Seven hundred stripes with the\nAspahe-astra, seven hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 14,
+      "ref": "Vd 13.14",
+      "orig": "dâtare ... ýô spânem jaiñti\nýim vohunazgem frazâbaodhanghem snathem vîkeret-ushtânem\nkâ hê asti citha, âat mraot ahurô mazdå,\nxshvash sata....",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall smite a Vohunazga dog so that it gives up the ghost and\nthe soul parts from the body, what is the penalty that he shall\npay?\nAhura Mazda answered: 'Six hundred stripes with the\nAspahe-astra, six hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 15,
+      "ref": "Vd 13.15",
+      "orig": "dâtare ... ýô spânem jaiñti\nýim taurunem frazâbaodhanghem snathem vîkeret-ushtânem\nkâ hê asti citha, âat mraot ahurô mazdå,\npañca sata....",
+      "en": "O Maker of tlie material world, thou Holy One! If a man\nshall smite a Tauruna dog so that it gives up the ghost and the\nsoul parts from the body, what is the penalty that he shall pay?\nAhura Mazda answered: 'Five hundred stripes with the\nAspahe-astra, five hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 16,
+      "ref": "Vd 13.16",
+      "orig": "hâu jazhâush hâu vîzâush hâu\nsukurenahe hâu urupish tizhi-dâtahe hâu raopish\nýaonô-hvatahe hâu vîspanãm speñtô-mainyavanãm\nspacithranãm anya udra upâpa!",
+      "en": "'This is the penalty for the murder of a\nJazhu dog, of a Vizu dog, of a porcupine dog,\nof a sharptoothed weasel, of a swift-running fox; this\nis the penalty for the murder of any of the creatures\nof the Good Spirit [Spenta Mainyu] belonging to the dog kind,\nexcept the water-dog.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 17,
+      "ref": "Vd 13.17",
+      "orig": "dâtare ... dva asti spâ pasush-haurvô dâityô-gâtush,\nâat mraot ahurô mazdå, ýô ýûjyastîm\nhaca gaêthâbyô parâiti sraêshemnô\ntâyûsh vehrkemca.",
+      "en": "O Maker of the material world, thou Holy One! What is the\nplace of the shepherd's dog?\nAhura Mazda answered: 'He comes and goes a Yujyesti round\nabout the fold, watching for the thief and the wolf.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 18,
+      "ref": "Vd 13.18",
+      "orig": "dâtare ... kva asti spâ vish-haurvô dâityô-gâtush,\nâat mraot ahurô mazdå, ýô hâthrô-masanghem\nadhwanem haca vîzhibyô parâiti sraêshemnô\ntâyûsh vehrkemca.",
+      "en": "O Maker of the material world, thou Holy One! What is the\nplace of the house-dog?\nAhura Mazda answered: 'He comes and goes a Hathra round\nabout the house, watching for the thief and the wolf.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 19,
+      "ref": "Vd 13.19",
+      "orig": "dâtare ... kva asti spâ vohunazgô dâityô-gâtush,\nâat mraot ahurô mazdå, ýô naêcim\nisaiti hunaranãm tanuye isaite thrâthrem!",
+      "en": "O Maker of the material world, thou Holy One! What is the\nplace of the Vohunazga dog?.\nAhura Mazda answered: 'He claims none of those talents, and\nonly seeks for his subsistence.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 20,
+      "ref": "Vd 13.20",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim pasush-haurum cvat aêtaêshãm\nshyaothnanãm âstâraiti, âat mraot ahurô\nmazdå, ýatha aêtahmi anghvô ýat\nastvaiñti fratemô-nmânahe nmânô-paitîm\npaiti tarô-pithwem daithyât atha âstryeiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man give\nbad food to a shepherd's dog, of what sin does he make himself\nguilty?\nAhura Mazda answered: 'He makes himself guilty of the same\nguilt as though he should serve bad food to a master of a house\nof the first rank.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 21,
+      "ref": "Vd 13.21",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim vishhaurum cvat aêtaêshãm\nshyaothnanãm âstâraiti, âat mraot ahurô\nmazdå, ýatha aêtahmi anghvô ýat\nastvaiñti madhemô-nmânahe nmânô-paitîm\npaiti tarô-pithwem daithyât atha âstryeiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man give\nbad food to a house-dog, of what sin does he make himself guilty?\nAhura Mazda answered: 'He makes himself guilty of the same\nguilt as though he should serve bad food to a master of a house\nof middle rank.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 22,
+      "ref": "Vd 13.22",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim vohunazgem cvat aêtaêshãm\nshyaothnanãm âstâraiti, âat mraot ahurô\nmazdå, narem bôit idha ashavanem jaseñti ahmya\nnmâne mat avabyô daxshtâbyô ýatha\nâthrava paiti tarô-pithwem daithyât atha âstryeiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man give\nbad food to a Vohunazga dog, of what sin does he make himself\nguilty?\nAhura Mazda answered: 'He makes himself guilty of the same\nguilt as though he should serve bad food to a holy man, who\nshould come to his house in the character of a priest.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 23,
+      "ref": "Vd 13.23",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim taurunem cvat aêtaêshãm shyaothnanãm\nâstâraiti, âat mraot ahurô mazdå,\nýatha aêtahmi anghvô ýat astvaiñti\naperenâyûkem dahmô-keretem shyaothnâvarezem\nverezyât shyaothnem paiti tarô-pithwem daithyât\natha âstryeiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man give\nbad food to a Tauruna dog, of what sin does he make himself\nguilty?\nAhura Mazda answered: 'He makes himself guilty of the same\nguilt as though he should serve bad food to a young man, born of\npious parents, and who can already answer for his deeds.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 24,
+      "ref": "Vd 13.24",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim pasush-haurum kâ hê asti citha, âat\nmraot ahurô mazdå, aêtahe paiti peshô-tanuye\nduye saite upâzananãm upâzôit aspahe\nashtraya duye saite sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall give bad food to a shepherd's dog, what is the penalty that\nhe shall pay?\nAhura Mazda answered: 'He is a Peshotanu: two hundred\nstripes with the Aspahe-astra, two hundred stripes with the\nSraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 25,
+      "ref": "Vd 13.25",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim vishhaurum kâ hê asti citha, âat\nmraot ahurô mazdå, navaitîm upâzananãm\nupâzôit aspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall give bad food to a house-dog, what is the penalty that he\nshall pay?\nAhura Mazda answered: 'Ninety stripes with the Aspahe-astra,\nninety stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 26,
+      "ref": "Vd 13.26",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim vohunazgem kâ hê asti citha, âat\nmraot ahurô mazdå, haptâitîm upâzananãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall give bad food to a Vohunazga dog, what is the penalty that\nhe shall pay?\nAhura Mazda answered: 'Seventy stripes with the\nAspahe-astra, seventy stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 27,
+      "ref": "Vd 13.27",
+      "orig": "dâtare ... ýô spânem tarô-pithwem\ndaste ýim taurunem kâ hê asti citha, âat\nmraot ahurô mazdå, pañcâsatem upâzananãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall give bad food to a Tauruna dog, what is the penalty that he\nshall pay?\nAhura Mazda ansvvered: 'Fifty stripes with the Aspahe-astra,\nfifty stripes with the Sraosho-charana.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 28,
+      "ref": "Vd 13.28",
+      "orig": "aêtem zî aêtahmi anghvô ýat\nastvaiñti spitama zarathushtra speñtahe mainyêush\ndâmanãm âsishtem zaurvânem upâiti\nýat spânô ýôi hishteñte\nahvarô upa hvareñtem parô spasânô\neviñdânô parô xshvisca âzûitishca\ngêush mat baratu hvarethanãm sûnahe aêvahe\ndâityô-pithwem.",
+      "en": "'For in this material world, O Spitama Zarathushtra! it is\nthe dog, of all the creatures of the Good Spirit [Spenta Mainyu], that most\nquickly decays into age, while not eating near eating people, and\nwatching goods none of which it receives. Bring ye unto him milk\nand fat with meat; this is the right food for the dog.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 29,
+      "ref": "Vd 13.29",
+      "orig": "dâtare ... ýat ahmi nmâne ýat mâzdayasnôish\nspâ avacå vâ bavat adhâityô-xratush\nkutha tê verezyãn aête ýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If there be\nin the house of a worshipper of Mazda a mad dog that bites\nwithout barking, what shall the worshippers of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 30,
+      "ref": "Vd 13.30",
+      "orig": "âat mraot ahurô mazdå, ava hê barayen\ntâshtem dâuru upa-tãm manaothrîm stamanem\nhê adhât nyâzayen ishti-masô xraozhdvahe\nbish aêtavatô varedvahe.",
+      "en": "Ahura Mazda answered: 'They shall put a wooden collar around\nhis neck, and they shall tie thereto a muzzle, an asti thick if\nthe wood be hard, two astis thick if it be soft. To that collar\nthey shall tie it; by the two sides of the collar they shall tie\nit.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 31,
+      "ref": "Vd 13.31",
+      "orig": "aêtahmâtcit nidarezayen frâ-hîmcit\nnidarezayen ýezi nôit spâ avacå vâ\nadhâityô-xratush pasûm vâ narem vâ\nraêshyât para hê irishiñtô raêshem\ncikayat baodhô-varshtahe cithaya.",
+      "en": "'If they shall not do so, and the mad dog that bites without\nbarking, smite a sheep or wound a man, the dog shall pay for the\nwound of the wounded as for wilful murder.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 32,
+      "ref": "Vd 13.32",
+      "orig": "paoirîm pasûm avakhnât paoirîm narem\nraêshyât dashinem hê gaoshem upa-thweresayen\nbitîm pasûm avakhnât bitîm narem raêshyât\nhôyum hê gaoshem upa-thweresayen.",
+      "en": "'If the dog shall smite a sheep or wound a man, they shall\ncut off his right ear.\n'If he shall smite another sheep or wound another man, they\nshall cut off his left ear.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 33,
+      "ref": "Vd 13.33",
+      "orig": "thritîm pasûm avakhnât thritîm narem\nraêshyât dashinem hê paidhyãm upa-kereñtayen\ntûirîm pasûm avakhnât tûirîm\nnarem raêshyât haoyãm hê paidhyãm\nupa-kereñtayen.",
+      "en": "'If he shall smite a third sheep or wound a third man, they\nshall make a cut in his right foot. If he shall smite a fourth\nsheep or wound a fourth man, they shall make a cut in his left\nfoot.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 34,
+      "ref": "Vd 13.34",
+      "orig": "puxdhem pasûm avakhnât puxdhem narem raêshyât\ndumemcit hê upa-thweresayen, aêtahmâtcit nidarezayen\n... cithaya.",
+      "en": "'If he shall for the fifth time smite a sheep or wound a\nman, they shall cut off his tail.\n'Therefore they shall tie a muzzle to the collar; by the two\nsides of the collar they shall tie it. If they shall not do so,\nand the mad dog that bites without barking, smite a sheep or\nwound a man, he shall pay for the wound of the wounded as for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 35,
+      "ref": "Vd 13.35",
+      "orig": "dâtare ... ýat ahmi nmâne ýat mâzdayasnôish\nspâ ahãm-baodhemnô vâ bavat adhâityô-xratush\nkutha tê verezyãn aête ýôi mazdayasna,\nâat mraot ahurô mazdå, avatha hê baêshazem\nupôisayen ýatha dahmâicit ashaone.",
+      "en": "O Maker of the material world, thou Holy One! If there be\nin the house of a worshipper of Mazda a mad dog, who has no\nscent, what shall the worshippers of Mazda do?\nAhura Mazda answered: 'They shall attend him to heal him, in\nthe same manner as they would do for one of the faithful.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 36,
+      "ref": "Vd 13.36",
+      "orig": "dâtare ... ýezi isemnô nôit viñdâite\nkutha tê verezyãn aête ýôi mazdayasna.",
+      "en": "O Maker oi the material world, thou Holy One! If they try\nto heal him and fail, what shall the worshippers of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 37,
+      "ref": "Vd 13.37",
+      "orig": "âat mraot ahurô mazdå, ava hê barayen\n... frâ-hîmcit nidarezayen ýezi nôit\nspâ ahãm-baodhemnô maêkhe vâ câiti\nvâ vaêmi vâ urûidhi vâ apô\nvâ nâvayå paidhyâite ahmat haca irishyât,",
+      "en": "Ahura Mazda answered: 'They shall put a wooden collar around\nhis neck, and they shall tie thereto a muzzle, an asti thick if\nthe wood be hard, two astis thick if it be soft. To that collar\nthey shall tie it; by the two sides of the collar they shall tie\nit.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 38,
+      "ref": "Vd 13.38",
+      "orig": "ýezi tat paiti irishyeiti ainghat haca shyaothnâvareza\natha bavaiñti peshô-tanvô!",
+      "en": "'If they shall not do so, the scentless dog may fall into a\nhole, or a well, or a precipice, or a river, or a canal, and come\nto grief: if he come to grief so, they shall be therefore\nPeshotanus.\n \n VI.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 39,
+      "ref": "Vd 13.39",
+      "orig": "spânem dathem zarathushtra\nazem ýô ahurô mazdå\nhvâvastrem hvâ-aothrem\nzaêni-budhrem tizhi-dãsurem vîrô-draonanghem\ngaêthanãm harethrâi, adha azem ýô\nahurô mazdå spânem nidathem ýat dim mazaosh\nkehrpô tûrahe ýezi asta asha xrathwa ýezi\nasta gaêthâbyô.",
+      "en": "'The dog, O Spitama Zarathushtra! I, Ahura Mazda, have made\nself-clothed and self-shod; watchful and wakeful; and\nsharp-toothed; born to take his food from man and to watch over\nman's goods. I, Ahura Mazda, have made the dog strong of body\nagainst the evil-doer, when sound of mind and watchful over your\ngoods.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 40,
+      "ref": "Vd 13.40",
+      "orig": "ýasca hê spitama zarathushtra vâcim paiti\nzaênish anghat nôit hê tå vîspô\ntâyush vâ vehrkô vâ apaiti-busti haca\nvîzhibyô para-baraiti, jãthwa vehrka scãthwa\nvehrka pôithwa vehrka snaêzhana!",
+      "en": "'And whosoever shall awake at his voice, O Spitama\nZarathushtra! neither shall the thief nor the wolf carry anything\nfrom his house, without his being warned; the wolf shall be\nsmitten and torn to pieces; he is driven away, he melts away like\nsnow.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 41,
+      "ref": "Vd 13.41",
+      "orig": "dâtare ... katârô zî ayå vehrkayå\njãthwô-tarô anghen ashâum ahura mazda\nýatha spâ vehrkahe kerenaoiti ýatha ýat\nvehrkô spâ, âat mraot ahurô mazdå,\naêshô zî aêtayå vehrkayå jãthwô-tarô\nanghen ashâum zarathushtra ýatha spâ vehrkahe\nkerenaoiti ýatha ýat vehrkô spâ.",
+      "en": "O Maker of the material world, thou Holy One! Which of the\ntwo wolves deserves more to be killed, the one that a he-dog\nbegets of a she-wolf, or the one that a he-wolf begets of a\nshe-dog?\nAhura Mazda answered: 'Of these two wolves, the one that a\nhe-dog begets of a she-wolf deserves more to be killed than the\none that a he-wolf begets of a she-dog.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 42,
+      "ref": "Vd 13.42",
+      "orig": "ustâcit spâna pateñti pasush-haurvãmca\nvish-haurvãmca vohunazgãmca draxtô-hunaranãmca\nýatha-khnyô gaêthâbyô taêcit\nýå bavaiñti aoshô-tarasca duzhitô-tarasca\ngaêthô- jatarasca ýatha anya spâ.",
+      "en": "'For the dogs born therefrom fall on the shepherd's dog, on\nthe house-dog, on the Vohu-nazga dog, on the trained dog, and\ndestroy the folds; such dogs are more murderous, more\nmischievous, more destructive to the folds than any other dogs.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 43,
+      "ref": "Vd 13.43",
+      "orig": "ustâcit vehrka pateñti khnyô gaêthâbyô\ntaêcit ýå bavaiñti aoshô-tarasca\nduzhitô-tarasca gaêthô-jatarasca ýatha\nanya vehrka!",
+      "en": "'And the wolves born therefrom fall on the shepherd's dog,\non the house-dog, on the Vohunazga dog, on the trained dog, and\ndestroy the folds; such wolves are more murderous, more\nmischievous, more destructive to the folds than any other wolves.\n \n VIII.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 44,
+      "ref": "Vd 13.44",
+      "orig": "sûnahe aêvahe ashtâ bifrem, asti shê\nhaêm ýatha athaurune asti-shê haêm ýatha\nrathaêshtârahe asti-shê haêm ýatha\nvâstryehe fshuyañtô asti-shê haêm\nýatha vaêsâush asti shê haêm ýatha\ntâyaosh asti-shê haêm ýatha disaosh asti-shê\nhaêm ýatha jahikayå asti-shê haêm\nýatha aperenâyûkahe.",
+      "en": "'A dog has the characters of eight sorts of people:-\n'He has the character of a priest,\n'He has the character of a warrior,\n'He has the character of a husbandman,\n'He has the character of a strolling singer,\n'He has the character of a thief,\n'He has the character of a disu,\n'He has the character of a courtezan,\n'He has the character of a child.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 45,
+      "ref": "Vd 13.45",
+      "orig": "paiti hvaretha hvaraiti ýatha âthrava huxshnaothrô\nýatha âthrava hvâzârô ýatha\nâthrava aêshô kasu draonô ýatha\nâthrava aiti-shê haêm ýatha athaurune,\nraptô paurvaêibya ýatha rathaêshtå\naipi- jatô gãm hudhånghem ýatha rathaêshtå\nparô pasca nmânahe ýatha rathaêshtå\naiti shê haêm ýatha rathaêshtârahe.",
+      "en": "'He eats the refuse, like a priest; he is easily\nsatisfied, like a priest; he is patient, like a priest; he wants\nonly a small piece of bread, like a priest; in these things he is\nlike unto a priest.\n'He marches in front, like a warrior; he fights for the\nbeneficent cow, like a warrior; he goes first out of the house,\nlike a warrior; in these things he is like unto a warrior.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 46,
+      "ref": "Vd 13.46",
+      "orig": "zaênangha evîspô-hvafna ýatha vâstryô\nfshuyãs parô pasca nmânahe ýatha vâstryô\nfshuyãs pasca parô nmânahe ýatha vâstryô\nfshuyãs aiti-shê haêm ýatha vâstryehe\nfshuyañtô, hvañdrakarô ýatha\nvaêsô asnaêraêshô ýatha vaêsô\nzairimyafsma thryafsma ýatha vaêsô aiti shê\nhaêm ýatha vaêsâush.",
+      "en": "'He is watchful and sleeps lightly, like a husbandman; he\ngoes first out of the house, like a husbandman; he returns last\ninto the house, like a husbandman; in these things he is like\nunto a husbandman.\n'He is fond of singing, like a strolling singer; he wounds\nhim who gets too near, like a strolling singer; he is\nill-trained, like a strolling singer; he is changeful, like a\nstrolling singer; in these things he is like unto a strolling\nsinger.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 47,
+      "ref": "Vd 13.47",
+      "orig": "tãthrô-cinô ýatha tâyush xshapâyaonô\nýatha tâyush apishma-hvarô ýatha tâyush\nathaca duzhnidhâtô ýatha tâyush aiti-\nshê haêm ýatha tâyaosh, tãthrô-cinô\nýatha disush xshapâyaonô ýatha disush\napishma-hvarô ýatha disush athaca duzhnidhâtô\nýatha disush aiti-shê haêm ýatha disâush.",
+      "en": "'He is fond of darkness, like a thief; he prowls about in\ndarkness, like a thief; he is a shameless eater, like a thief; he\nis therefore an unfaithful keeper, like a thief; in these things\nhe is like unto a thief.\n'He is fond of darkness, like a disu; he prowls about in\ndarkness, like a disu; he is a shameless eater, like a disu; he\nis therefore an unfaithful keeper, like a disu; in these things\nhe is like unto a disu.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 48,
+      "ref": "Vd 13.48",
+      "orig": "hvañdrakarô ýatha jahika asnaêraêshô\nýatha jahika airitô pañtânem ýatha\njahika zairimyafsma thryafsma ýatha jahika aiti-shê\nhaêm ýatha jahikayå, hvafnô ýatha\naperenâyush snaêzhanô ýatha aperenâyush\nhizu-drâjô ýatha aperenâyush pairi-taxtô\npaurvaêibya ýatha aperenâyush aiti-shê\nhaêm ýatha aperenâyûkahe.",
+      "en": "'He is fond of singing, like a courtezan; he wounds him who\ngets too near, like a courtezan; he roams along the roads, like a\ncourtezan; he is ill-trained, like a courtezan; he is changeful,\nlike a courtezan; in these things he is like unto a courtezan.\n'He is fond of sleep, like a child; he is tender like snow,\nlike a child; he is full of tongue, like a child; he digs the\nearth with his paws, like a child; in these things he is like\nunto a child.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 49,
+      "ref": "Vd 13.49",
+      "orig": "ýat mê aêshãmcit nmânanãmca\ncaratô dva mâ apa-raodhayaêta ýasca spâ\npasush-haurvô ýasca spâ vish- haurvô,\nnôit mê nmânem vîdhâtô hishteñti\nzãm paiti ahuradhâtãm ýezi mê\nnôit ånghât spâ pasush-haurvô vâ\nvishhaurvô vâ!",
+      "en": "'If those two dogs of mine, the shepherd's dog and the\nhouse-dog, pass by any of my houses, let them never be kept away\nfrom it.\n'For no house could subsist on the earth made by Ahura, but\nfor those two dogs of mine, the shepherd's dog and the\nhouse-dog.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 50,
+      "ref": "Vd 13.50",
+      "orig": "dâtare ... ýat sûnîsh para-irithyeiti\nnishtâ-zemanasca pairishtâ-xshudrasca kutha aêshãm\nbaodhô jasaiti.",
+      "en": "O Maker of the material world, thou Holy One! When a dog\ndies, with marrow and seed dried up, whereto does his ghost go?",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 51,
+      "ref": "Vd 13.51",
+      "orig": "âat mraot ahurô mazdå, xå paiti apãm\nparâiti spitama zarathushtra athra ånghãm hãm-bavaiñti\ndva udra upâpa hazangrâish sûnîsh strî-\nnâmanô hazangrâish sûnîsh nairyô-nâmanô\nmithwana strica nairyasca, udrahe avakhnânô haêcô\nkerenaoiti ýat avâstrem.",
+      "en": "Ahura Mazda answered: 'It passes to the spring of the\nwaters, O Spitama Zarathushtra! and there out of them two\nwater-dogs are formed: out of every thousand dogs and every\nthousand she-dogs, a couple is formed, a water-dog and a water\nshe-dog.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 52,
+      "ref": "Vd 13.52",
+      "orig": "para nû ahmât haca asanghatca shôithrâatca\naxshtat spitama zarathushtra izhâca âzûitishca\npara dasvareca baêshazemca para fradathemca varedathemca\nvaxshathemca para ýavanãmca vâstranãmca\nuruthem.",
+      "en": "'He who kills a water-dog brings about a drought that dries\nup pastures.\n'Until then, O Spitama Zarathushtra! sweetness and fatness\nwould flow out from that land and from those fields, with health\nand healing, with fulness and increase and growth, and a growing\nof corn and grass.'",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 53,
+      "ref": "Vd 13.53",
+      "orig": "dâtare ... kadha-nô ahmâi asanghaêca\nshôithraêca paiti-jasâtô izhâca\nâzûitishca kadha dasvareca baêshazemca kadha\nfradathemca varedathemca vaxshathemca kadha ýavanãmca\nvâstranãmca uruthem.",
+      "en": "O Maker of the material world, thou Holy One! When are\nsweetness and fatness to come back again to that land and to\nthose fields, with health and healing, with fulness and increase\nand growth, and a growing of corn and grass?\n54, 55. Ahura Mazda answered: 'Sweetness and fatness will never\ncome back again to that land and to those fields, with health and\nhealing, with fulness and increase and growth, and a growing of\ncorn and grass, until the murderer of the water-dog has been\nsmitten to death on the spot, and the holy soul of the dog has\nbeen offered up a sacrifice, for three days and three nights,\nwith fire blazing, with Baresma tied up, and with Haoma\nprepared.",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 54,
+      "ref": "Vd 13.54",
+      "orig": "âat mraot ahurô mazdå, nôit nû\npara ahmât spitama zarathushtra asanghaêca shôithrâica\npaiti-jasâtô izhâca âzûitishca nôit\ndasvareca baêshazemca nôit fradathemca varedathemca\nvaxshathemca nôit ýavanãmca vâstranãmca\nuruthem.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 55,
+      "ref": "Vd 13.55",
+      "orig": "para ahmât ýat idha udra-janô hathra jatô\nnijanâite ýat vâ aêtahe udrahe upa dahmem\nurvânem frâyazåñte thri-ayarem thri-xshaparem\nsaociñtat paiti âthrat frasteretât paiti baresmen\nuzdâtât paiti haomât.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 13,
+      "verse": 56,
+      "ref": "Vd 13.56",
+      "orig": "pascaêta ahmâi asanghaêca shôithraêca\npaiti-jasâtô izhâca âzûitishca pascaêta\ndasvareca baêshazemca pascaêta fradathemca varedathemca\nvaxshathemca pascaêta ýavanãmca vâstranãmca\nuruthem! ashem vohû...!!",
+      "en": "['Then sweetness and fatness will come back again to that\nland and to those fields, with health and healing, with fulness\nand increase and growth, and a growing of corn and grass.']",
+      "zh": ""
+    }
+  ]
+}

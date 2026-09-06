@@ -1,0 +1,181 @@
+{
+  "slug": "vendidad-11",
+  "siglum": "Vd 11",
+  "title_zh": "祓魔法典 第 11 章‧各處所的潔淨",
+  "title_en": "Vendidad 11",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd11sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 11,
+      "verse": 1,
+      "ref": "Vd 11.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm, ahura mazda\n... ashâum kutha nmânem ýaozhdathâni\nkutha âtrem kutha âpem kutha zãm kutha gãm\nkutha urvarãm kutha narem ashavanem kutha nâirikãm\nashaonîm kutha strêsh kutha månghem kutha hvare\nkutha anakhra raocå kutha vîspa vohu mazdadhâta\nashacithra.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Ahura Mazda! most beneficent\nspirit, Maker of the material world, thou Holy One! How shall\nI cleanse the house? how the fire? how the water? how the earth?\nhow the cow? how the tree? how the faithful man and the faithful\nwoman : how the stars? how the moon? how the sun? how the boundless\nlight? how all good things, made by Mazda, the offspring of the\nholy principle?'",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 2,
+      "ref": "Vd 11.2",
+      "orig": "âat mraot ahurô mazdå, ýaozhdâthrem\nsrâvayôish zarathushtra ýaozhdâta pascaêta\nbun nmâna ýaozhdâta âtrem ýaozhdâta\nâpem ýaozhdâta zãm ýaozhdâta\ngãm ýaozhdâta urvarãm ýaozhdâta\nnarem ashavanem ýaozhdâta nâirikãm ashaonîm\nýaozhdâta strêsh ýaozhdâta månghem\nýaozhdâta hvare ýaozhdâta anakhra raocå\nýaozhdâta vîspa vohu mazdadhâta ashacithra.",
+      "en": "Ahura Mazda answered: 'Thou shalt chant the cleansing words,\nand the house shall be clean; clean shall be the fire, clean the\nwater, clean the earth, clean the cow, clean the tree, clean the\nfaithful man and the faithful woman, clean the stars, clean the\nmoon, clean the sun, clean the boundless light, clean all good\nthings, made by Mazda, the offspring of the holy principle.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 3,
+      "ref": "Vd 11.3",
+      "orig": "atha imã vacô dreñjayôish ýôi\nanghen vârethrakhnyôtememca baêshazyôtememca\npañca ahuna vairya frasrâvayôish, ýathâ\nahû vairyô...(5), ahunem vairîm tanûm\npâiti, ýathâ ahû vairyô ... kêm-nâ\nmazdâ ... ashahe.",
+      "en": "['So thou shalt say these victorious, most healing words];\nthou shalt chant the Ahuna-Vairya five times: \"The will of\nthe Lord is the law of righteousness,\" &c.\n'The Ahuna-Vairya preserves the person of man:\n'\" Yatha ahu vairyo : - The will of the Lord is the law of\nrighteousness,\" &c.\n'\" Kem-na mazda : - What protector hast thou given unto me,\nO Mazda! while the hate of the wicked encompasses me?\" &c.\n'\"Ke verethrem-ja: - Who is the victorious who will protect\nthy teaching?\" &c.\n'\"Keep us from our hater, O Mazda and Armaiti Spenta!\"\n&c.1",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 4,
+      "ref": "Vd 11.4",
+      "orig": "imat nmânem ýaozhdathâne imã adha\nvacô framrva, at mâ ýavâ beñdvô\npafre mazishtô, imat âtrem ýaozhdathâne\nimã adha vacô framrva, ahe thwâ âthrô\nverezâna paoirye pairijasâmaide mazda ahurâ.",
+      "en": "'If thou wantest to cleanse the house, say these words aloud:\n\"As long as the sickness lasts my great protector [is he\nwho teaches virtue to the perverse].\"\n'If thou wantest to cleanse the fire, say these words aloud: \"Thy\nfire, first of all, do we approach with worship, O Ahura Mazda!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 5,
+      "ref": "Vd 11.5",
+      "orig": "imat âpem ýaozhdathâne imã adha\nvacô framrva, apô at ýazamaide maêkaiñtîshcâ\nhêbvañtîshcâ fravazanghô, imat\nzãm ýaozhdathâne imã adha vacô\nframrva, imãm âat zãm genâbîsh\nhathrâ ýazamaide.",
+      "en": "'If thou wantest to cleanse the water, say these words aloud:\n\" Waters we worship, the Maekainti waters, the Hebvainti\nwaters, the Fravazah waters.\"\n'If thou wantest to cleanse the earth, say these words aloud:\n\"This earth we worship, this earth with the women, this earth\nwhich bears us and those women who are thine, O Ahura!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 6,
+      "ref": "Vd 11.6",
+      "orig": "imãm gãm ýaozhdathâne imã\nadha vacô framrva, gave adhâish tâish shyaothnâish\nýâish vahishtâish fraêshyâmahî,\nimat urvarãm ýaozhdathâne imã adha\nvacô framrva, at ah'yâi ashâ mazdå urvarå\nvaxshat.",
+      "en": "'If thou wantest to cleanse the cow, say these words aloud:\n\"The best of all works we will fulfil while we order both\nthe learned and the unlearned, both masters and servants to secure\nfor the cattle a good resting-place and fodder.\"\n'If thou wantest to cleanse the trees, say these words aloud:\n\"For him, as a reward, Mazda made the plants\ngrow up.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 7,
+      "ref": "Vd 11.7",
+      "orig": "imat narem ashavanem ýaozhdathâne imat nâirikãm\nashaonîm ýaozhdathâne imã adha vacô\nframrva, â airyêmâ ishyô rafedhrâi\njañtû nerebyascâ nâiribyascâ zarathushtrahe\nvanghêush rafedhrâi mananghô ýâ\ndaênâ vairîm hanât mîzhdem ashahyâ\nýâsâ ashîm ýãm ishyãm\nahurô masatâ mazdå.",
+      "en": "'If thou wantest to cleanse the faithful man or the faithful\nwoman, say these words aloud: \"May the vow-fulfilling Airyaman\ncome hither, for the men and women of Zarathushtra to rejoice,\nfor Vohu-mano to rejoice; with the desirable reward that Religion\ndeserves. I solicit for holiness that boon that is vouchsafed\nby Ahura!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 8,
+      "ref": "Vd 11.8",
+      "orig": "atha imã vacô ... ashta ahuna vairya frasrâvayôish,\nýathâ ahû vairyô...(8). kêm-nâ\nmazdâ ... ashahe.",
+      "en": "'Then thou shalt say these victorious, most healing words.\nThou shalt chant the Ahuna-Vairya eight times:-\n'\"Yatha ahu vairya:- The will of the Lord is the law of righteousness,\"\n&c.\n'\"Kem-na mazda:- Whom hast thou placed to protect me, O Mazda?\"\n&c.\n'\"Ke verethrem-ga:- What protector hast thou given unto me?\"\n&c.\n'\"Who is the victorious?\" &c.\n'\"Keep us from our hater, O Mazda!\" &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 9,
+      "ref": "Vd 11.9",
+      "orig": "perene aêshmem perene nasûm perene hãm-\nraêthwem perene paiti-raêthwem perene xrû perene\nxrvikhni perene bûidhi perene bûidhizha perene kuñdi\nperene kuñdizha perene bûshyãsta ýâ\nzairina perene bûshyãsta ýâ darekhô-gava\nperene mûidhi perene kapastish perene pairikãm ýâ\nâiti âtrem âpem zãm gãm urvarãm\nperene âhitîm ýâ âiti âtrem\nâpem zãm gãm urvarå.",
+      "en": "'I drive away Aeshma, I drive away the Nasu, I drive away\ndirect defilement, I drive away indirect defilement.\n['I drive away Khru, I drive away Khruighni.\n'I drive away Buidhi, I drive away the offspring of Buidhi.\n'I drive away Kundi, I drive away tle offspring of Kundi.]\n'I drive away the gaunt Bushyasta, I drive away the long-handed\nBushyasta; [I drive away Muidhi,\nI drive away Kapasti.]\n'I drive away the Pairika that comes upon the fire, upon the\nwater, upon the earth, upon the cow, upon the tree. I drive away\nthe uncleanness that comes upon the fire, upon the water, upon\nthe earth, upon the cow, upon the tree.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 10,
+      "ref": "Vd 11.10",
+      "orig": "perene thwâ duzhda angra mainyô haca nmânat\nhaca âthrat haca apat haca zemat haca gaot haca urvarayât\nhaca narem ashavanem haca nâirikãm ashaonîm\nhaca strêsh haca månghem haca hvare haca anakhra raocå\nhaca vîspa vohu mazdadhâta ashacithra.",
+      "en": "'I drive thee away, O mischievous Angra Mainyu! from the fire,\nfrom the water, from the earth, from the cow, from the tree, from\nthe faithful man and from the faithful woman, from the stars,\nfrom the moon, from the sun, from the boundless light, from all\ngood things, made by Mazda, the offspring of the holy principle.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 11,
+      "ref": "Vd 11.11",
+      "orig": "atha imã vacô ... cathwârô ahuna\nvairya frasrâvayôish, ýathâ ahû\nvairyô...(4), kêm-nâ mazdâ ... ashahe.",
+      "en": "'Then thou shalt say these victorious, most healing words;\nthou shalt chant four Ahuna-Vairyas :-\n'\"Yatha aha vairyo:- The will of the Lord is the law of righteousness,\"\n&c.\n'\" Kem-na mazda :- What protector\nhast thou given unto me?\" &c.\n'\"Ke verethrem-ja:- Who is the victorious?\" &c.\n'\"Keep us from our hater, O Mazda!\" &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 12,
+      "ref": "Vd 11.12",
+      "orig": "parshta aêshmem parshta nasûm parshta hãm-\nraêthwem parshta paiti-raêthwem parshta xrû\nparshta xrvikhni parshta bûidhi parshta bûidhizha\nparshta kuñdi parshta kuñdizha parshta bûshyãsta\nýâ zairina parshta bûshyãsta ýâ\ndarekhô-gava parshta mûidhi parshta kapastish parshta\npairikãm ýâ âiti âtrem âpem\nzãm gãm urvarãm parshta âhitîm\nýâ âiti âtrem âpem zãm gãm\nurvarå",
+      "en": "'Aeshma is driven away; away the Nasu; away direct defilement,\naway indirect defilement.\n['Khru is driven away, away Khruighni; away Buidhi, away the offspring\nof Buidhi; away Kundi, away the offspring of Kundi.]\n'The gaunt Bushyasta is driven away; away Bushyasta, the long-handed;\n[away Muidhi, away Kapasti.]\n'The Pairika is driven away that comes upon the fire, upon the\nwater, upon the earth, upon the cow, upon the tree. The uncleanness\nis driven away that comes upon the fire, upon the water, upon\nthe earth, upon the cow, upon the tree.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 13,
+      "ref": "Vd 11.13",
+      "orig": "parshta thwâ duzhda angra mainyô haca nmânat\nhaca âthrat haca apat haca zemat haca gaot haca urvarayât\nhaca narem ashavanem haca nâirikãm ashaonîm\nhaca strêsh haca månghem haca hvare haca anakhra raocå\nhaca vîspa vohu mazdadhâta ashacithra.",
+      "en": "'Thou art driven away, O mischievous Angra Mainyu! from the\nfire, from the water, from the earth, from the cow, from the tree,\nfrom the faithful man and from the faithful woman, from the stars,\nfrom the moon, from the sun, from the boundless light, from all\ngood things, made by Mazda, the offspring of the holy principle.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 14,
+      "ref": "Vd 11.14",
+      "orig": "atha imã vacô ... cathwârô mazdâ\nat môi frasrâvayôish, mazdâ at môi...(4).",
+      "en": "'Then thou shalt say these victorious, most healing words;\nthou shalt chant \"Mazda ad moi\" four times: \"O\nMazda! say unto me the excellent words and the excellent works,\nthat through the good thought and the holiness of him who offers\nthee the due meed of praise, thou mayest, O Lord! make the world\nof Resurrection appear, at thy will, under thy sovereign rule.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": "15-16",
+      "ref": "Vd 11.15-16",
+      "orig": "perene aêshmem....",
+      "en": "'I drive away Aeshma, I drive away the Nasu,' &c.\n'I drive thee away, O mischievous Angra Mainyu! from the fire,\nfrom the water,' &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 17,
+      "ref": "Vd 11.17",
+      "orig": "atha imã vacô ... pañca ahuna vairya frasrâvayôish,\nýathâ ahû vairyô...(5), kêm-nâ\nmazdâ ... ashahe! ashem vohû...!!",
+      "en": "'Then thou shalt say these victorious, most healing words;\nthou shalt chant the Airyama Ishyo four times: \"May the vow-fulfilling\nAiryaman come hither!\"'&c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 18,
+      "ref": "Vd 11.18",
+      "orig": "",
+      "en": "'Aeshma is driven away; away the Nasu,' &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 19,
+      "ref": "Vd 11.19",
+      "orig": "",
+      "en": "'Thou art driven away, O mischievous Angra Mainyu! from the\nfire, from the water,' &c.",
+      "zh": ""
+    },
+    {
+      "chapter": 11,
+      "verse": 20,
+      "ref": "Vd 11.20",
+      "orig": "",
+      "en": "'Then thou shalt say these victorious, most healing words;\nthou shalt chant five Ahuna-Vairyas:-\n'\"Yatha ahu vairyo:- The will of the Lord is the law of righteousness,\"\n&c.\n'\"Kem-na mazda:- Whom hast thou placed to protect me?\"\n&c.\n'\"Ke verethrem-ja:- Who is he who will smite the fiend?\"\n&c.\n'\"Keep us from our hater, O Mazda and Armaiti Spenta! Perish,\nO fiendish Druj! Perish, O brood of the fiend! Perish, O world\nof the fiend! Perish away, O Druj! Rush away, O Druj! Perish away,\nO Druj! Perish away to the regions of the north, never more to\ngive unto death the living world of Righteousness!\"'",
+      "zh": ""
+    }
+  ]
+}

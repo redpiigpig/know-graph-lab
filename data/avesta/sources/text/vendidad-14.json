@@ -1,0 +1,173 @@
+{
+  "slug": "vendidad-14",
+  "siglum": "Vd 14",
+  "title_zh": "祓魔法典 第 14 章‧犬（下）與贖罪",
+  "title_en": "Vendidad 14",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd14sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 14,
+      "verse": 1,
+      "ref": "Vd 14.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm, ahura mazda\nmainyô spênishta dâtare gaêthanãm\nastvaitinãm ashâum ýô udrem jaiñti\nýim upâpem hazangrâishsûnîsh strî-nâmanô\nhazangrâish sûnîsh nairyô-nâmanô\nfrazâbaodhanghem snathem vîkeret-ushtânem kâ\nhê asti citha.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Ahura Mazda, most\nbeneficent Spirit, Maker of the material world, thou Holy One! \nHe who smites one of those water-dogs that are born one from a\nthousand dogs and a thousand she-dogs, so that he gives up the\nghost and the soul parts from the body, what is the penalty that\nhe shall pay?'",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "ref": "Vd 14.2",
+      "orig": "âat mraot ahurô mazdå, baêvare upâzananãm\nupâzôit aspahe ashtraya baêvare sraoshô-caranaya\nbaêvare vazyanãm aêsmanãm xraozhdvanãm\nhushatãm pairîshtanãm âthre ahurahe\nmazdå ashaya vanghuya urune cithîm nisirinuyât.",
+      "en": "Ahura Mazda answered: 'He shall pay ten thousand stripes\nwith the Aspahe-astra, ten thousand stripes with the\nSraosho-charana.\n'He shall godly and piously bring unto the fire of Ahura\nMazda ten thousand loads of hard, well dried, well examined\nwood, to redeem his own soul.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 3,
+      "ref": "Vd 14.3",
+      "orig": "baêvare vazyanãm aêsmanãm varedvanãm\nurvâsnayå vâ vohu-gaonahe vâ vohu-keretôish\nvâ hadhânaêpatayå vâ kãmcit\nvâ hubaoidhitemanãm urvaranãm âthre\nahurahe mazdå ashaya vanghuya urune cithîm nisirinuyât.",
+      "en": "'He shall godly and piously, bring unto the fire of Ahura\nMazda ten thousand loads of soft wood, of Urvasna, Vohu-gaona,\nVohu-kereti, Hadha-naepata, or any sweet-scented plant, to\nredeem his own soul.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 4,
+      "ref": "Vd 14.4",
+      "orig": "baêvare frasteretanãm baresmaine frastairyât\nbaêvare zaothranãm haomavaitinãm gaomavaitinãm\nýaozhdâtanãm pairi-angharshtanãm dahmô-ýaozhdâtanãm\ndahmô-pairi-angharshtanãm hãm-irista aêtayå\nurvarayå ýâ vaoce hadhânaêpâta\naiwyô vanguhibyô ashaya vanghuya urune cithîm\nnisirinuyât.",
+      "en": "'He shall godly and piously tie ten thousand bundles of\nBaresma, to redeem his own soul.\n'He shall offer up to the Good Waters ten thousand Zaothra\nlibations with the Haoma and the milk, cleanly prepared and well\nstrained, cleanly prepared and well strained by a pious man, and\nmixed with the roots of the tree known as Hadha-naepata, to\nredeem his own soul.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 5,
+      "ref": "Vd 14.5",
+      "orig": "baêvare azhinãm udarô-thrãsanãm\nava-janyât baêvare azhinãm spakanãm\nkahrpunanãm ava-janyât baêvare kasyapanãm\nava-janyât baêvare vazakhanãm dâdhmainyanãm\nava-janyât baêvare vazakhanãm upâpanãm\nava-janyât baêvare maoirinãm dânô-karshanãm\nava-janyât baêvare maoirinãm araêkanãm\nkutakanãm duzhaininãm ava-janyât.",
+      "en": "'He shall kill ten thousand snakes of those that go upon the\nbelly. He shall kill ten thousand Kahrpus, who are snakes with\nthe shape of a dog. He shall hill ten thousand tortoises. He\nshall kill ten thousand land-frogs; he shall kill ten thousand\nwater-frogs. He shall kill ten thousand corn-carrying ants; he\nshall kill ten thousand ants of the small, venomous mischievous\nkind.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 6,
+      "ref": "Vd 14.6",
+      "orig": "baêvare pazdunãm gûthô-varetanãm\nava-janyât baêvare maxshinãm erekhaitinãm\nava-janyât baêvare makhanãm irimaitinãm\nainghå zemô aipi-kanyât bish hapta âthrô\ndaxshtem nerebyô ashavabyô ashaya vanghuya urune cithîm\nnisirinuyât.",
+      "en": "'He shall kill ten thousand worms of those that live on\ndirt; he shall kill ten thousand raging flies.\n'He shall fill up ten thousand holes for the unclean.\n'He shall godly and piously give to godly men twice the set\nof seven implements for the fire, to redeem his own soul,\nnamely:-",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 7,
+      "ref": "Vd 14.7",
+      "orig": "âtre-carana pairish-hanâna ýaozhdâni\ngaremô-skarana âtre-vazanem hikaranem vîkusrem\nadharât naêmât hañkusrem uparât\nnaêmât tashem tizhi-dârem tizhi-zhnûtem\nvadem tizhi- bârem tizhi-zhnûtem nerebyô ashavabyô\nashaya vanghuya urune cithîm nisirinuyât ýaêibyô\naête mazdayasna âthre ahurahe mazdå aêsmã\npairisheñte.",
+      "en": "'The two answering implements for fire; a broom; a pair of\ntongs; a pair of round bellows extended at the bottom, contracted\nat the top; a sharp-edged sharp-pointed adze; a sharp-toothed\nsharp-pointed saw; by means of which the worshippers of Mazda\nprocure wood for the fire of Ahura Mazda.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 8,
+      "ref": "Vd 14.8",
+      "orig": "vîspe zaya athaurune nerebyô ashavabyô ashaya\nvanghuya urune cithîm nisirinuyât ýaêshãm\nzayanãm athaurune ashtra gaoidhi paiti-dânô\nxrafstrakhnem sraoshô-caranaya urunya raêthwish-bajina\nhavana dâityô-kereta tashta haomya baresmaca.",
+      "en": "'He shall godly and piously give to godly men a set of the\npriestly instruments of which the priests make use, to redeem his\nown soul, namely: The Astra; the meat-vessel; the Paitidana;\nthe Khrafstraghna; the Sraosho-charana; the cup for the\nMyazda; the cups for mixing and dividing;\nthe regular mortar; the Haoma cups; and the Baresma.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 9,
+      "ref": "Vd 14.9",
+      "orig": "vîspe zaya rathôishti nerebyô ashavabyô\nashaya vanghuya urune cithîm nisirinuyât ýaêshãm\nzayanãm rathôishti paoiryô arshtish bityô\nkaretô thrityô vazrô tûirya thanvare puxdha\nzaênâush mat akana mat thrisãs ayô-akhrâish\nxshtvî fradaxshana snâvare-bâzura mat thrisãs\nfradaxshanyâish haptathô zrâdhô ashtemô\nkûiris nâumô paiti-dânô dasemô\nsâravârô aêvañdasô kamara\ndvadasô rânapô.",
+      "en": "'He shall godly and piously give to godly\nmen a set of all the war implements of which the\nwarriors make use, to redeem his own soul;\n'The first being a javelin, the second a sword, the\nthird a club, the fourth a bow, the fifth a saddle with\na quiver and thirty iron-headed arrows, the sixth a\nsling with arm-string and with thirty sling stones;\n'The seventh a cuirass, the eighth a hauberk, the\nninth a tunic, the tenth a helmet, the eleventh a\ngirdle, the twelfth a pair of greaves.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 10,
+      "ref": "Vd 14.10",
+      "orig": "vîspe zaya vâstryô fshuyãs nerebyô\nashavabyô ashaya vanghuya urune cithîm nisirinuyât\nýaêshãm zayanãm vâstryehe fshuyañtô\naêsha ýuyô-semi ayazhâna paiti-darezâna\ngavâzishta gavâzô asmana hâvana ýâvarenem\nzgeresnô-vakhdhanem",
+      "en": "'He shall godly and piously give to godly men a set of all\nthe implements of which the husbandmen make use, to redeem his\nown soul, namely: A plough with yoke and ...; a goad for ox; a\nmortar of stone; a round-headed hand-mill for grinding corn;",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 11,
+      "ref": "Vd 14.11",
+      "orig": "kãstrem paitish-herezem verezayañtem hakeret\nerezatem hakeret zaranim, dâtare ... cvat ýavat erezatem,\nâat mraot ahurô mazdå, ýatha aspahe arshnô\npereska, dâtare ... cvat ýavat zaranim, âat\nmraot ahurô mazdå, ýatha ushtrahe arshnô\npereska.",
+      "en": "'A spade for digging and tilling; one measure of silver and\none measure of gold.'\nO Maker of the material world, thou Holy One! How much\nsilver?\nAhura Mazda answered: 'The price of a stallion.'\nO Maker of the material world, thou Holy One! How much gold?\nAhura Mazda answered: 'The price of a he-camel.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 12,
+      "ref": "Vd 14.12",
+      "orig": "vaidhîm taci-apãm nerebyô ashavabyô\nashaya vanghuya urune cithîm nisirinuyât, dâtare\n... cvat ýavat vaidhîm, âat mraot ahurô\nmazdå, spâ-barezem spâ-frathem.",
+      "en": "'He shall godly and piously procure a rill of running water\nfor godly husbandmen, to redeem his own soul.'\nO Maker of the material world, thou Holy One! How large is\nthe rill?\nAhura Mazda answered: 'The depth of a dog, and the breadth\nof a dog.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 13,
+      "ref": "Vd 14.13",
+      "orig": "zãm karshyãm raodhayãm nerebyô\nashavabyô ashaya vanghuya urune cithîm nisirinuyât,\ndâtare ... cvat ýavat zå, âat mraot ahurô\nmazdå, ýavat aêsha âfsh byârixti\nupa-thwarshti frabavât.",
+      "en": "'He shall godly and piously give a piece of arable land to\ngodly men, to redeem his own soul.'\nO Maker of the material world, thou Holy One! How large is\nthe piece of land?\nAhura Mazda answered: 'As much as can be watered with such a\nrill divided into two canals.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 14,
+      "ref": "Vd 14.14",
+      "orig": "nmânem gâvayanem nava-hâthrem nava-nematem\nnerebyô ashavabyô ashaya vanghuya urune cithîm\nnisirinuyât, dâtare ... cvat ýavat nmânem,\nâat mraot ahurô mazdå, dvadasa vîtâra\nupema nava vîtâra madhema xshvash vîtâra\nnitema gâtu hvaini staretu mat barezisha nerebyô ashavabyô\nashaya vanghuya urune cithîm nisirinuyât.",
+      "en": "'He shall godly and piously procure for godly men a stable\nfor oxen, with nine hathras and nine nematas, to\nredeem his own soul.'\nO Maker of the material world, thou Holy One! How large is\nthe stable?\nAhura Mazda answered: 'It shall have twelve alleys in the\nlargest part of the house, nine alleys in the middle part, six\nalleys in the smallest part.\n'He shall godly and piously give to godly men goodly beds\nwith Sheets and cushions, to redeem his own soul.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 15,
+      "ref": "Vd 14.15",
+      "orig": "kanyãm askeñdãm anupayatãm nerebyô\nashavabyô ashaya vanghuya urune cithîm nisirinuyât,\ndâtare ... kâ ýâ kaine, âat mraot\nahurô mazdå, hvangha vâ dukhdha vâ nâmêni\nmat gaoshâvare pasca pañca-dasîm saredhem nerebyô\nashavabyô nâirithwana upa-vâdhayaêta.",
+      "en": "'He shall godly and piously give in marriage to a godly man\na virgin maid, whom no man has known, to redeem his own soul.'\nO Maker of the material world, thou Holy One! What sort of\nmaid?\nAhura Mazda answered: 'A sister or a daughter of his, at the\nage of puberty, with ear-rings in her ears and past her fifteenth\nyear.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 16,
+      "ref": "Vd 14.16",
+      "orig": "bish hapta pasvô anumaya nerebyô ashavabyô\nashaya vanghuya urune cithîm nisirinuyât, bish hapta\nputhrãm gadhwãm uzjâmôit bish hapta\npeshavô fraoirisyôit tarasca âpô nâvayå.",
+      "en": "'He shall godly and piously give to holy men twice seven\nhead of small cattle, to redeem his own soul.'\n'He shall bring up twice seven whelps.\n'He shall throw twice seven bridges over canal.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 17,
+      "ref": "Vd 14.17",
+      "orig": "duye navaiti astanãm adhâityô- angharethranãm\ndâitîm ahmâicit harethrem kerenuyât duye\nnavaiti gadhwãm pairi- ýaozhdaithîta stiptibyasca\nanâiritibyasca vyanguraêibyasca vîspaêibyasca\npairi acishtaêibyô ýôi gadhwãm\npairi-bavaiti, duye navaiti narãm ashaonãm vâstryaêta\ngêush vâ hvarethahe vâ hurayå vâ\nmadhush vâ.",
+      "en": "'He shall put into repair twice nine stables that are out\nof repair.\n'He shall cleanse twice nine dogs from stipti, anairiti, and\nvyangura, and all the diseases that are produced on the body of\na dog.\n'He shall treat twice nine godly men to their fill of meat,\nbread, strong drink, and wine.",
+      "zh": ""
+    },
+    {
+      "chapter": 14,
+      "verse": 18,
+      "ref": "Vd 14.18",
+      "orig": "hâ hê asti citha hâ hê asti âperetish\naipi-pâremnâi idha ashaone nôit anaipi-pâremnâi\ndrujô nmâne haithyâ anghen astayô! ashem\nvohû...!!",
+      "en": "'This is the penalty, this is the atonement which saves the\nfaithful man who submits to it not him who does not submit to it. \nSuch a one shall surely be an inhabitant in the mansion of the\nDruj.'",
+      "zh": ""
+    }
+  ]
+}

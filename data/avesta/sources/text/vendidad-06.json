@@ -1,0 +1,429 @@
+{
+  "slug": "vendidad-06",
+  "siglum": "Vd 6",
+  "title_zh": "祓魔法典 第 6 章‧屍體污染（二）與寂靜之塔",
+  "title_en": "Vendidad 6",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd6sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 6,
+      "verse": 1,
+      "ref": "Vd 6.1",
+      "orig": "cvañtem drâjô zrvânem ainghå\nzemô anaidhya ýat ahmi spânasca narasca para-irithiñti,\nâat mraot ahurô mazdå, ýâre-drâjô\nashâum zarathushtra ainghå zemô anaidhya ýat\nahmi spânasca narasca para-irithiñti,",
+      "en": "How long shall the piece of ground he fallow whereon dogs\nor men have died? Ahura Mazda answered: 'A year long shall the\npiece of ground he fallow whereon dogs or men have died, O holy\nZarathustra!",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 2,
+      "ref": "Vd 6.2",
+      "orig": "mâca pascaêta mazdayasna tãm zãm\nkârayen mâ âpô herezayen ýat ahmi\nspânasca narasca para-irithiñti añtarât\nnaêmât ýâre-drâjô vasô\npascaêta mazdayasna tãm anyãm zãm kârayen\nvasô âpô herezayen.",
+      "en": "'A year long shall no worshipper of Mazda sow or water that\npiece of ground whereon dogs or men have died; he may sow as he\nlikes the rest of the ground; he may water it as he likes.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 3,
+      "ref": "Vd 6.3",
+      "orig": "ýezi mazdayasna tãm zãm kârayen\nýezi âpô herezayen ýat ahmi spânasca\nnarasca para-irithiñti añtarât naêmât\nýâre-drâjô nasuspaêm pascaêta\nâstryåñte aête ýôi mazdayasna\napasca zemasca urvarayåsca.",
+      "en": "'If within the year they shall sow or water the piece of ground\nwhereon dogs or men have died, they are guilty of the sin of \"burying\nthe dead\" towards the water, towards the earth, and towards\nthe plants.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 4,
+      "ref": "Vd 6.4",
+      "orig": "dâtare ... ashâum ýezi mazdayasna tãm\nzãm kârayen ýezi âpô herezayen\nýat ahmi spânasca narasca para-irithiñti añtarât\nnaêmât ýâre-drâjô kâ-hê\nasti citha.",
+      "en": "O Maker of the material world, thou Holy One! If worshippers\nof Mazda shall sow or water, within the year, the piece of ground\nwhereon dogs or men have died, what is the penalty that they shall\npay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 5,
+      "ref": "Vd 6.5",
+      "orig": "âat mraot ahurô mazdå, aêtahe paiti\npeshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'They are Peshotanus: two hundred stripes\nwith the Aspahe-astra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 6,
+      "ref": "Vd 6.6",
+      "orig": "dâtare ... ashâum ýezi vasen mazdayasna\nzãm raodhayãm hixtayaêca karshtayaêca\nparakañtayaêca kutha tê verezyãn aête\nýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If worshippers\nof Mazda want to till that piece of ground again, to water it,\nto sow it, and to plough it, what shall they do?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 7,
+      "ref": "Vd 6.7",
+      "orig": "âat mraot ahurô mazdå, aêtadha hê\naête mazdayasna ainghå zemô pairishayañta\naêtanghãm astãmca varesãmca spâmãmca\nmûthrãmca vanghutâtãmca.",
+      "en": "Ahura Mazda answered: 'They shall look on the ground for any\nbones, hair, dung, urine, or blood that may be there.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 8,
+      "ref": "Vd 6.8",
+      "orig": "dâtare ... ashâum ýezi nôit pairishåñte\naêtanghãm astãmca varesãmca spâmãmca\nmûthrãmca vanghutâtãmca kâ-hê\nasti citha.",
+      "en": "O Maker of the material world, thou Holy One! If they shall\nnot look on the ground for any bones, hair, dung, urine, or blood\nthat may be there, what is the penalty that they shall pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 9,
+      "ref": "Vd 6.9",
+      "orig": "âat mraot ahurô mazdå, aêtahe paiti\npeshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'They are Peshotanus: two hundred stripes\nwith the Aspahe-astra, two hundred stripes with the Sraosho-charana.'\n \n II.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 10,
+      "ref": "Vd 6.10",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ avavat\naipi ýatha kasishtahe erezvô fratemem tbishish ýezi\nahmya irithyeiti ûthem vâ ûthô-tâs\nvâ kâ-hê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as the top joint of the little finger, and if grease or\nmarrow flow from it on to the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 11,
+      "ref": "Vd 6.11",
+      "orig": "âat mraot ahurô mazdå, thrisatem upâzananãm\nupâzôit aspahe ashtraya thrisatem sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Thirty stripes with the Aspahe-astra,\nthirty stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 12,
+      "ref": "Vd 6.12",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ avavat\naipi ýatha madhemahe erezvô fratemem tbishish ýezi\nahmya irithyeiti ûthem vâ ûthô-tâs\nvâ kâ-hê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as the top joint of the fore-finger, and if grease or marrow\nflow from it on to the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 13,
+      "ref": "Vd 6.13",
+      "orig": "âat mraot ahurô mazdå, pañcâsatem\nupâzananãm upâzôit aspahe ashtraya pañcâsatem\nsraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Fifty stripes with the Aspahe-astra,\nfifty stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 14,
+      "ref": "Vd 6.14",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ avavat\naipi ýatha masishtahe erezvô fratemem tbishish ýezi\nahmya irithyeiti ûthem vâ ûthô-tâs\nvâ kâ-hê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as the top joint of the middle finger, and if grease or\nmarrow flow from it on to the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 15,
+      "ref": "Vd 6.15",
+      "orig": "âat mraot ahurô mazdå, haptâitîm\nupâzananãm upâzôit aspahe ashtraya haptâitîm\nsraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Seventy stripes with the Aspahe-astra,\nseventy stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 16,
+      "ref": "Vd 6.16",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ erezu-stavanghem\nvâ peresu-masanghem vâ ýezi ahmya irithyeiti\nûthem vâ ûthô-tâs vâ kâ-\nhê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as a finger or as a rib, and if grease or marrow flow from\nit on to the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 17,
+      "ref": "Vd 6.17",
+      "orig": "âat mraot ahurô mazdå, navaitîm upâzananãm\nupâzôit aspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Ninety stripes with the Aspahe-astra,\nninety stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 18,
+      "ref": "Vd 6.18",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ baêerezu-stavanghem\nvâ biperesu-masanghem vâ ýezi ahmya irithyeiti\nûthem vâ ûthô-tâs vâ kâ-\nhê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as two fingers or as two ribs, and if grease or marrow flow\nfrom it on the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 19,
+      "ref": "Vd 6.19",
+      "orig": "âat mraot ahurô mazdå, aêtahe paiti\npeshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'He is Peshotanu: two hundred stripes\nwith the Aspahe-ashtra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 20,
+      "ref": "Vd 6.20",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ bâzu-stavanghem\nvâ sraoni-masanghem vâ ýezi ahmya irithyeiti\nûthem vâ ûthô-tâs vâ kâ-\nhê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as an arm-bone or as a thigh-bone, and if grease or marrow\nflow from it on the ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 21,
+      "ref": "Vd 6.21",
+      "orig": "âat mraot ahurô mazdå, cathwârô\nsata upâzananãm upâzôit aspahe ashtraya\ncathwârô sata sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Four hundred stripes with the Aspahe-ashtra,\nfour hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 22,
+      "ref": "Vd 6.22",
+      "orig": "dâtare ... ashâum ýô astem upangharezaiti\nsûnô vâ para-iristahe mashyehe vâ avavat\naipi ýatha narsh vakhdhanem ýezi ahmya irithyeiti\nûthem vâ ûthô-tâs vâ kâ-hê\nasti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground a bone of a dead dog, or of a dead man, as\nlarge as a man's skull, and if grease or marrow flow from it on\nthe ground, what penalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 23,
+      "ref": "Vd 6.23",
+      "orig": "âat mraot ahurô mazdå, xshvash sata upâzananãm\nupâzôit aspahe ashtraya xshvash sata sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Six hundred stripes with the Aspahe-ashtra,\nsix hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 24,
+      "ref": "Vd 6.24",
+      "orig": "dâtare ... ashâum ýô vîspãm\nhaurvãm tanûm upangharezaiti sûnô vâ\npara-iristahe mashyehe vâ ýezi ahmya irithyeiti ûthem\nvâ ûthô-tâs vâ kâ-hê\nasti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow on the ground the whole body of a dead dog, or of a dead\nman, and if grease or marrow flow from it on the ground, what\npenalty shall he pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 25,
+      "ref": "Vd 6.25",
+      "orig": "âat mraot ahurô mazdå, hazangrem upâzananãm\nupâzôit aspahe ashtraya hazangrem sraoshô-caranaya!",
+      "en": "Ahura Mazda answered: 'A thousand stripes with the Aspahe-ashtra,\na thousand stripes with the Sraosho-charana.'\n \n III.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 26,
+      "ref": "Vd 6.26",
+      "orig": "dâtare ... ashâum ýat aête ýôi\nmazdayasna pâdha ayañtem vâ taciñtem\nvâ baremnem vâ vazemnem vâ taci-apaya nasâum\nfrajasãn kutha tê verezyãn aête ýôi\nmazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If a worshipper\nof Mazda, walking, or running, or riding, or driving, come upon\na corpse in a stream of running water, what shall he do?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 27,
+      "ref": "Vd 6.27",
+      "orig": "âat mraot ahurô mazdå, mat aothranãm\nframuxti mat vastranãm nidhâiti upa- mãnayen\nzarathushtra frasha frayôit iristem uzbarôit âpô\nzarathushtra â-zañgaêibyascit âpô\nâ-zhnubyascit âpô â-maidhyãnascit\nâpô â-nereberezascit âpô vîspem\nâ ahmât ýadhôit upa-jasôit iristãm\ntanûm.",
+      "en": "Ahura Mazda answered: 'Taking off his shoes, putting off his\nclothes, while the others wait, O Zarathushtra! he shall enter\nthe river, and take the dead out of the water; he shall go down\ninto the water ankle-deep, knee-deep, waist-deep, or a man's full\ndepth, till he can reach the dead body.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 28,
+      "ref": "Vd 6.28",
+      "orig": "dâtare ... ashâum ýezica aête nasâvô\nfrithyeitica puyetica kutha tê verezyãn aête\nýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If, however,\nthe body be already falling to pieces and rotting, what shall\nthe worshipper of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 29,
+      "ref": "Vd 6.29",
+      "orig": "âat mraot ahurô mazdå, ýavat cvatca\nhê zastaêibya hañgeurvayãn aêtavat\napat haca nizhbârayen hushe zeme nidaithyãn nôit\nastãm nôit varsãm nôit spâmãm\nnôit mûthrãm nôit vanghutâtãm\npairi- spâiti apãm âstryåñte.",
+      "en": "Ahura Mazda answered: 'He shall draw out of the water as much\nof the corpse as he can grasp with both hands, and he shall lay\nit down on the dry ground; no sin attaches to him for any bone,\nhair, grease, dung, urine, or blood that may drop back into the\nwater.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 30,
+      "ref": "Vd 6.30",
+      "orig": "dâtare ... ashâum cvat aêtanghå âpô\nýat armaêshtayå aêsha druxsh ýâ\nnasush axtica pivatica âhitica frâshnaoiti.",
+      "en": "O Maker of the material world, thou Holy One! What part of\nthe water in a pond does the Druj Nasu defile with corruption,\ninfection, and pollution?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 31,
+      "ref": "Vd 6.31",
+      "orig": "âat mraot ahurô mazdå, xshvash-gâim\nkemcit paiti cathrushanãm vîspem â ahmât\naêsha âfsh ayaozhdya anaiwish-hvaretha ýavat\naêsha nasush nizhbereta, us haca nasâvô aêtavat\napat haca nizhbârayen hushe zeme nidaithyãn.",
+      "en": "Ahura Mazda answered: 'Six steps on each of the four sides.\nAs long as the corpse has not been taken out of the water, so\nlong shall that water be unclean and unfit to drink. They shall,\ntherefore, take the corpse out of the pond, and lay it down on\nthe dry ground.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 32,
+      "ref": "Vd 6.32",
+      "orig": "ainghå âpô para-hiñcayen ýat\nvâ naêmem ýat vâ thrishum ýat\nvâ cathrushum ýat vâ pangtanghum ýezi\ntûtava navât tûtava, pasca nasâvô\nnizhberethi pasca âpô para-hixti aêsha âfsh\nýaozhdya bavaiti vasô aiwish-hvaretha pasubya vîraêibya\nhamatha ýatha paracit.",
+      "en": "'And of the water they shall draw off the half, or the third,\nor the fourth, or the fifth part, according as they are able or\nnot; and after the corpse has been taken out and the water has\nbeen drawn off, the rest of the water is clean, and both cattle\nand men may drink of it at their pleasure, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 33,
+      "ref": "Vd 6.33",
+      "orig": "dâtare ... ashâum cvat aêtanghå âpô\nýat câtayå uzuityåsca aêsha druxsh\nýâ nasush axtica pivatica âhitica frâshnaoiti.",
+      "en": "O Maker of the material world, thou Holy One! What part of\nthe water in a well does the Druj Nasu defile with corruption,\ninfection, and pollution?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": "34-35",
+      "ref": "Vd 6.34-35",
+      "orig": "âat mraot ahurô mazdå, vîspem â\nahmât aêsha âfsh ayaozhdya anaiwish- hvaretha\nýavat aêsha nasush nizhbereta, us haca ... ýatha\nparacit.",
+      "en": "Ahura Mazda answered: 'As long as the corpse has not been\ntaken out of the water, so long shall that water be unclean and\nunfit to drink. They shall, therefore, take the corpse out of\nthe well, and lay it down on the dry ground.\n'And of the water in the well they shall draw off the half,\nor the third, or the fourth, or the fifth part, according as they\nare able or not; and after the corpse has been taken out and the\nwater has been drawn off, the rest of the water is clean, and\nboth cattle and men may drink of it at their pleasure, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 36,
+      "ref": "Vd 6.36",
+      "orig": "dâtare ... ashâum cvat aêtanghå âpô\nýat snaêzhiñtyâica srasciñtyâica\naêsha druxsh ýâ nasush axtica pivatica âhitica\nfrâshnaoiti.",
+      "en": "O Maker of the material world, thou Holy One! What part of\na sheet of snow or hail does the Druj Nasu defile with corruption,\ninfection, and pollution?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 37,
+      "ref": "Vd 6.37",
+      "orig": "âat mraot ahurô mazdå, thrigâim kemcit\npaiti cathrushanãm vîspem â ahmât aêsha\nâfsh ayaozhdya anaiwish-hvaretha ýavat aêsha\nnasush nizhbereta, us haca nasâvô aêtavat apat\nhaca nizhbârayen hushe zeme nidaithyãn.",
+      "en": "Ahura Mazda answered: 'Three steps\non each of the four sides.\nAs long as the corpse has not been taken out of the water, so\nlong shall that water be unclean and unfit to drink. They shall,\ntherefore, take the corpse out of the pond, and lay it down on\nthe dry ground.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 38,
+      "ref": "Vd 6.38",
+      "orig": "pasca nasâvô nizhberethi pasca âpô\nvîtaxti aêsha âfsh ýaozhdya bavaiti vasô\naiwish-hvaretha pasubya vîraêibya hamatha ýatha\nparacit.",
+      "en": "'After the corpse has been taken out, and the snow or the\nhail has melted, the water is clean, and both cattle and men may\ndrink of it at their pleasure, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 39,
+      "ref": "Vd 6.39",
+      "orig": "dâtare ... ashâum cvat aêtanghå âpô\nýat frâtat-caretayå aêsha druxsh ýâ\nnasush axtica pivatica âhitica frâshnaoiti.",
+      "en": "O Maker of the material world, thou Holy One! What part of\nthe water of a running stream does the Druj Nasu defile with corruption,\ninfection, and pollution?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 40,
+      "ref": "Vd 6.40",
+      "orig": "âat mraot ahurô mazdå, thrigâim nyâpem\nnava-gâim paityâpem xshvash-gâim anaidhîm\nvîspem â ahmât ... nidaithyãn.",
+      "en": "Ahura Mazda answered: 'Three steps down the stream, nine steps\nup the stream, six steps across. As long as the corpse has not\nbeen taken out of the water, so long shall that water be unclean\nand unfit to drink. They shall, therefore, take the corpse out\nof the pond, and lay it down on the dry ground.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 41,
+      "ref": "Vd 6.41",
+      "orig": "pasca nasâvô nizhberethi pasca âthritîm\naiwi-varaiti aêsha âfsh ýaozhdya bavaiti vasô\naiwish-hvaretha pasubya vîraêibya hamatha ýatha\nparacit!",
+      "en": "'After the corpse has been taken out and\nthe stream has flowed three times, the water is\nclean, and both cattle and men may drink\nof it at their pleasure, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 42,
+      "ref": "Vd 6.42",
+      "orig": "dâtare ... ashâum kat tâ haoma ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-bereta\nsûnô vâ para- iristahe mashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the Haoma\nthat has been touched with Nasu from a dead dog, or from a dead\nman, be made clean again?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 43,
+      "ref": "Vd 6.43",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra nôit haomô hutô\naxtish nôit mahrkô nôit nasush ava-beretô\nava aête ahuta ýatha cathwârô erezvô\naêtaêshãmca zemô nidaithyãn añtare\naredhem nmânahe vîspem â ahmât ýat\nhê ýâre-drâjô sacâite, âat\npasca ýâre-drâjô vasô hvarethå\nanghen nerebyô ashavabyô hamatha ýatha paracit!",
+      "en": "Ahura Mazda answered: 'It can, O holy Zarathushtra! If it\nhas been prepared for the\nsacrifice, there is to it no corruption, no death, no\ntouch of any Nasu. If it has not been prepared\nfor the sacrifice, [the stem] is defiled the length of\nfour fingers: it shall be laid down on the ground,\nin the middle of the house, for a year long. When\n the year is passed, the faithful may drink of its juice\nat their pleasure, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 44,
+      "ref": "Vd 6.44",
+      "orig": "dâtare ... ashâum kva narãm iristanãm\ntanûm barâma ahura mazda kva nidathâma.",
+      "en": "O Maker of the material world, thou holy One! Whither shall\nwe bring, where shall we lay the bodies of the dead, O Ahura Mazda?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 45,
+      "ref": "Vd 6.45",
+      "orig": "âat mraot ahurô mazdå, barezishtaêshvaca\npaiti gâtushva spitama zarathushtra ýadhôit\ndim bâidhishtem avazanãm sûnô vâ\nkerefsh- hvarô vayô vâ kerefsh-hvarô.",
+      "en": "Ahura Mazda answered: 'On the highest summits, where they\nknow there are always corpse-eating dogs and corpse-eating birds,\nO holy Zarathushtra!",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 46,
+      "ref": "Vd 6.46",
+      "orig": "aêtadha hê aête mazdayasna aêtem iristem\nnidarezayen havaêibya pâdhaêibya hvaêpathyâca\nvarsa ayanghaênem vâ zarshtvaênem vâ fravâxshaênem\nvâ ýezi nôit sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô aêtanghãm\nastãm avi apãmca urvaranãmca bareñtem\nfrajasãn.",
+      "en": "'There shall the worshippers of Mazda fasten the corpse, by\nthe feet and by the hair, with iron, stones, or clay, lest the\ncorpse-eating dogs and the corpse-eating birds shall go and carry\nthe bones to the water and to the trees.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 47,
+      "ref": "Vd 6.47",
+      "orig": "dâtare ... ashâum ýezi nôit nidarezyåñte\naêtadha hê aête sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô aêtanghãm\nastãm avi apãmca urvaranãmca bareñtem\nfrajasât kâ-hê asti citha.",
+      "en": "'If they shall not fasten the corpse, so that the corpse-eating\ndogs and the corpse-eating birds may go and carry the bones to\nthe water and to the trees, what is the penalty that they shall\npay?'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 48,
+      "ref": "Vd 6.48",
+      "orig": "âat mraot ahurô mazdå, aêtahe paiti\npeshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'They shall be Peshotanus: two hundred\nstripes with the Aspahe-ashtra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 49,
+      "ref": "Vd 6.49",
+      "orig": "dâtare ... ashâum kva narãm iristanãm\nazdibîsh barâma ahura mazda kva nidathâma.",
+      "en": "O Maker of the material world, thou Holy One! Whither shall\nwe bring, where shall we lay the bones of the dead, O Ahura Mazda?",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 50,
+      "ref": "Vd 6.50",
+      "orig": "âat mraot ahurô mazdå, uzhdânem hê\nadhât kerenaot upairi spânem upairi raozhem upairi\nvehrkem anaiwi-vareñtîm upara-naêmât\napô ýat vairyayå",
+      "en": "Ahura Mazda answered: 'The worshippers\nof Mazda shall make a receptacle out of\nthe reach of the dog, of the fox, and of the\nwolf, and wherein rain-water cannot stay.",
+      "zh": ""
+    },
+    {
+      "chapter": 6,
+      "verse": 51,
+      "ref": "Vd 6.51",
+      "orig": "ýezi tavãn aête mazdayasna ýezi\nasânaêshva ýezi vîcicaêshva ýezi\ntûtuxshva, ýezi nôit tavãn aête\nmazdayasna hvâ-stairish hvâ-barezish raocå aiwi-varena\nhvare-daresya hê zeme paiti nidaithîta! ashem vohû...!!",
+      "en": "'They shall make it, if they can afford\nit, with stones, plaster, or earth; if they cannot\nafford it, they shall lay down the dead man on the\nground, on his carpet and his pillow, clothed with\nthe light of heaven, and beholding the sun.'",
+      "zh": ""
+    }
+  ]
+}

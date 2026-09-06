@@ -1,0 +1,821 @@
+{
+  "slug": "vendidad-08",
+  "siglum": "Vd 8",
+  "title_zh": "祓魔法典 第 8 章‧屍體的搬運與淨火",
+  "title_en": "Vendidad 8",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd8sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 8,
+      "verse": 1,
+      "ref": "Vd 8.1",
+      "orig": "âat ýat dâuru upa-darane vâ nimatô\naiwi-varane vâ spâ vâ nâ vâ irithyât\nkutha tê verezyãn aête ýôi mazdayasna.",
+      "en": "If a dog or a man die under a hut of wood or a hut of felt\nwhat shall the worshippers of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 2,
+      "ref": "Vd 8.2",
+      "orig": "âat mraot ahurô mazdå, upairi daxma aêshayãn\nvî daxma caêshayãn, ýezi aêtem\niristem upa-berethwôtarem ava-zanãn ava aêtem\niristem barayen avatha nmânem herezayen upa aêtem\nnmânem baodhayãn urvâsnayå vâ vohu-gaonahe\nvâ vohu-keretôish vâ hadhânaêpatayå\nvâ kãmcit vâ hubaoidhitemanãm urvaranãm.",
+      "en": "Ahura Mazda answered: 'They shall search for a Dakhma, they\nshall look for a Dakhma all around. If they find it easier to\nremove the dead, they shall take out the dead, they shall let\nthe house stand, and shall perfume it with Urvasna or Vohu-gaona,\nor Vohu-kereti, or Hadha-naepata, or any other sweet-smelling\nplant.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 3,
+      "ref": "Vd 8.3",
+      "orig": "ýezi aêtem nmânem upa-berethwôtarem\nava- zanãn ava aêtem nmânem barayen avatha\niristem herezayen upa aêtem nmânem baodhayãn\nurvâsnayå vâ ... urvaranãm.",
+      "en": "'If they find it easier to remove the house, they shall take\naway the house, they shall let the dead lie on the spot, and shall\nperfume the house with Urvasna, or Vohu-gaona, or Vohu-kereti,\nor Hadha-naepata, or any other sweet-smelling plant.'\n \n II",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 4,
+      "ref": "Vd 8.4",
+      "orig": "dâtare ... ashâum ýat ahmi nmâne\nýat mâzdayasnôish spâ vâ nâ\nvâ irithyât vâreñti vâ snaêzhiñti\nvâ bareñti vâ temanghãm vâ aiwi-gâtô\nayãn vâ varetafshô varetô-vîre\njaseñti kutha tê verezyãn aête ýôi\nmazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If in the house\nof a worshipper of Mazda a dog or a man happens to die, and it\nis raining, or snowing, or blowing, or\nit is dark, or the day is at its end, when flocks and men lose\ntheir way, what shall the worshippers of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "5-7",
+      "ref": "Vd 8.5-7",
+      "orig": "âat mraot ahurô mazdå, ýat ahmi nmâne\nýat mâzdayasnôish fraêshtem ... thrigâim\nhaca nerebyô ashavabyô.",
+      "en": "Ahura Mazda answered: 'The place in that house whereof the\nground is the cleanest and the driest, and the least passed through\nby flocks and herds, by the fire of Ahura Mazda, by the consecrated\nbundles of Baresma, and by the faithful;'-\nO Maker of the material world, thou Holy One! How far from\nthe fire? How far from the water? How far from the consecrated\nbundles of Baresma? How far from the faithful?\nAhura Mazda answered: 'Thirty paces from the fire; thirty\npaces from the water; thirty paces from the consecrated bundles\nof Baresma; three paces from the faithful;-",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 8,
+      "ref": "Vd 8.8",
+      "orig": "aêtadha hê aête mazdayasna ainghå\nzemô ava-kanem ava-kanayen maidhyôi paitishtâne\nxrûzhdisme maidhyôi narsh varedusme ava hê gâtûm\nbarayen âtryehe vâ sairyehe vâ ava hê\nuparât naêmât barayen ishtyehe vâ zarshtvahe\nvâ hushô-zemanãm vâ pãsnûm.",
+      "en": "'On that place they shall dig a grave, half a foot deep if\nthe earth be hard, half the height of a man if it be soft; [they\nshall cover the surface of the grave with ashes or cowdung]; they\nshall cover the surface of it with dust of bricks, of stones,\nor of dry earth.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 9,
+      "ref": "Vd 8.9",
+      "orig": "aêtadha hê uzbaodhãm tanûm nidaithyãn\nbixshaparem vâ thrixshaparem vâ mâzdrâjahîm\nvâ vîspem â ahmât ýat frâ\nvayô patãn frâ urvara uxshyãn nyåñcô\napa-tacin us vâtô zãm haêcayât.",
+      "en": "'And they shall let the lifeless body lie there, for two nights,\nor three nights, or a month long, until the birds begin to fly,\nthe plants to grow, the hidden floods to flow, and the wind to\ndry up the earth.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 10,
+      "ref": "Vd 8.10",
+      "orig": "âat ýat hîsh frâ vayô patãn\nfrâ urvara uxshyãn nyåñcô apa-tacin\nus vâtô zãm haêcayât aêtadha\nhê aête mazdayasna ahe nmânahe upa-thweresãn\nupa-thweresayãn, dva dim nara isôithe vîzôishtãm\nvîzvâreñtãm makhna anaiwi-vastra zemôishtve\nvâ zarshtve vâ upa-skañbem vîcicaêshva\ndim paiti ainghå zemô nidaithyãn ýadhôit\ndim bâidhishtem avazanãn sûnô vâ\nkerefsh-hvarô vayô vâ kerefsh-hvarô.",
+      "en": "'And when the birds begin to fly, the plants to grow, the\nhidden floods to flow, and the wind to dry up the earth, then\nthe worshippers of Mazda shall make a breach in the wall of the\nhouse, and two men, strong and skillful,\nhaving stripped their clothes off, shall take up the body from the\nclay or the stones, or from the plastered house,\nand they shall lay it down on a place where they\nknow there are always corpse-eating dogs and corpse-eating\nbirds.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 11,
+      "ref": "Vd 8.11",
+      "orig": "aêtadha aête nasukasha nishhidhaêta avavat\nhaca iristaêibyô ýatha thrigâim, âat\nvaocât ratush ashava mazdayasnaêibyô, mazdayasna\nhãm aête maêsma barayen ýaêibyô\naête nasukasha frasnyåñte varesåsca tanûmca.",
+      "en": "'Afterwards the corpse-bearers shall sit down, three paces\nfrom the dead, and the holy Ratu shall proclaim to the worshippers\nof Mazda thus: \"Worshippers of Mazda, let the urine be brought\nhere wherewith the corpse-bearers there shall wash their hair\nand their bodies!\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 12,
+      "ref": "Vd 8.12",
+      "orig": "dâtare ... ashâum cayô âat aête\nmaêsma anghen ashâum ahura mazda ýaêibyô\naête nasukasha frasnyåñte varesåsca tanûmca\npasvãm vâ staorãm vâ narãm vâ\nnâirinãm vâ.",
+      "en": "O Maker of the material world, thou Holy One! Which is the\nurine wherewith the corpse-bearers shall wash their hair and their\nbodies? Is it of sheep or of oxen? Is it of man or of woman?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 13,
+      "ref": "Vd 8.13",
+      "orig": "âat mraot ahurô mazdå, pasvãm vâ\nstaorãm vâ nôit narãm nôit nâirinãm\nparaget dvaêibya ýôi anghen hvaêtvadathasca\nhvaêtvadaithîshca aête maêsma maêzayañta\nýaêibyô aête nasukasha frasnyåñte\nvaresåsca tanûmca.",
+      "en": "Ahura Mazda answered: 'It is of sheep or of oxen; not of man\nnor of woman, except a man or a woman who has married the next-of-kin:\nthese shall therefore procure the urine wherewith the corpse-bearers\nshall wash their hair and their bodies.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 14,
+      "ref": "Vd 8.14",
+      "orig": "dâtare ... ashâum ýôi patha uzbareñte\nspânasca irista naraêca irista kat tå pathå\nfrayãn pasvãm vâ staorãm vâ narãm\nvâ nâirinãm vâ âtrem vâ ahurahe\nmazdå puthrem baresma vâ ashaya frastaretem.",
+      "en": "O Maker of the material world, thou Holy One! Can the way,\nwhereon the carcasses of dogs or corpses of men have been carried,\nbe passed through again by flocks and herds, by men and women,\nby the fire of Ahura Mazda, by the consecrated bundles of Baresma,\nand by the faithful?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 15,
+      "ref": "Vd 8.15",
+      "orig": "âat mraot ahurô mazdå, nôit tå\npathå frayãn pasvãm nôit staorãm\nnôit narãm nôit nâirinãm nôit\nâtrem ahurahe mazdå puthrem nôit baresma ashaya\nfrastaretem.",
+      "en": "Ahura Mazda answered: 'It cannot be passed through again by\nflocks and herds, nor by men and women, nor by the fire of Ahura\nMazda, nor by the consecrated bundles of Baresma, nor by the faithful.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 16,
+      "ref": "Vd 8.16",
+      "orig": "spânem zairitem cathru-cashmem spaêtem zairi-gaoshem\nâthritîm tadha aêtå pathå vîvâdhayañtu,\naiwi-niticit spitama zarathushtra spânem zairitem cathru-cashmem\nspaêtem zairi-gaoshem aêsha druxsh ýâ\nnasush apa- dvãsaiti apâxedhraêibyô naêmaêibyô.",
+      "en": "'They shall therefore cause a yellow dog with four eyes, or\na white dog with yellow ears, to go three times through that way.\nWhen either the yellow dog with four eyes, or the white dog with\nyellow ears, is brought there, then the Druj Nasu flies away to\nthe regions of the north, [in the shape of a raging fly, with\nknees and tail sticking out, droning without end, and like unto\nthe foulest Khrafstras.]",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 17,
+      "ref": "Vd 8.17",
+      "orig": "ýezi nôit upa vî spitama zarathushtra spânem\nzairitem cathru-cashmem nôit spaêtem zairi-gaoshem\nxshvazhayacit tadha aêtå pathå vîvâdhayañtu,\naiwi-niticit spitama zarathushtra spânem zairitem cathru-cashmem\nspaêtem zairi-gaoshem aêsha druxsh ýâ\nnasush apa-dvãsaiti apâxedhraêibyô naêmaêibyô.",
+      "en": "'If the dog goes unwillingly, O Spitama Zarathushtra, they\nshall cause the yellow dog with four eyes, or the white dog with\nyellow ears, to go six times through that way. When either the\nyellow dog with four eyes, or the white dog with yellow ears,\nis brought there, then the Druj Nasu flies away to the regions\nof the north, [in the shape of a raging fly, with knees and tail\nsticking out, droning without end, and like unto the foulest Khrafstras.]",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 18,
+      "ref": "Vd 8.18",
+      "orig": "ýezi nôit upa-vî spitama zarathushtra spânem\nzairitem cathru-cashmem nôit spaêtem zairi-gaoshem\nnâumayâcit tadha aêtå pathå vîvâdhayañtu,\naiwi-niticit spitama zarathushtra spânem zairitem cathru-cashmem\nspaêtem zairi-gaoshem aêsha druxsh ýâ\nnasush apa-dvãsaiti apâxedhraêibyô naêmaêibyô.",
+      "en": "'If the dog goes unwillingly, they shall cause the yellow\ndog with four eyes, or the white dog with yellow ears, to go nine\ntimes through that way. When either the yellow dog with four eyes,\nor the white dog with yellow ears, has been brought there, then\nthe Druj Nasu flies away to the regions of the north, [in the\nshape of a raging fly, with knees and tail sticking out, droning\nwithout end, and like unto the foulest Khrafstras.]",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 19,
+      "ref": "Vd 8.19",
+      "orig": "ýezi nôit ... zairi-gaoshem âthrava paoirîm\naêtå pathå frayañtu vârethrakhnîsh\nvacô framrû, ýathâ ahû vairyô\n... vâstârem.",
+      "en": "'An Athravan shall first go along the way and shall say aloud\nthese victorious words: \" Yatha aha vairyo : - The will of\nthe Lord is the law of righteousness.\n'\"The gifts of Vohu-mano to the deeds done in this world\nfor Mazda.\n'\"He who relieves the poor makes Ahura king.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 20,
+      "ref": "Vd 8.20",
+      "orig": "kêm-nâ mazdâ ... frâvaocâ, kê\nverethrem jâ ... kahmâicît.",
+      "en": "'\" Kem-na mazda :\n- What protector hast thou given unto\nme, O Mazda! while the hate of the wicked encompasses me? Whom\nbut thy Atar and Vohu-mano, through whose work I keep on the world\nof righteousness? Reveal therefore to me thy Religion as thy rule!\n'\"Ke verethrem-ja: - Who is the victorious who will protect\nthy teaching? Make it clear that I am the guide for both worlds.\nMay Sraosha come with Vohu-mano and help whomsoever thou pleasest,\nO Mazda!",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 21,
+      "ref": "Vd 8.21",
+      "orig": "pâta-nô tbishyañtat pairi mazdåsca\nârmaitishca speñtasca, nase daêvî druxsh\nnase daêvô-cithre nase daêvô-frakarshte\nnase daêvô-fradâiti apa druxsh nase apa druxsh\ndvâra apa druxsh vînase apâxedhre apa-nasyehe\nmâmereñcainîsh gaêthå astvaitîsh\nashahe.",
+      "en": "'\"Keep us from our hater, O Mazda and Armaiti Spenta!\nPerish, O fiendish Druj! Perish, O brood of the fiend! Perish,\nO creation of the fiend! Perish, O world of the fiend! Perish\naway, O Druj! Rush away, O Druj! Perish away, O Druj! Perish away\nto the regions of the north, never more to give unto death the\nliving world of Righteousness!\"",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 22,
+      "ref": "Vd 8.22",
+      "orig": "vasô pascaêta mazdayasna aêtå pathå\nfrayãn pasvãm vâ staorãm vâ narãm\nvâ nâirinãm vâ âtrem vâ ahurahe\nmazdå puthrem baresma vâ ashaya frastaretem, vasô\npascaêta mazdayasna ahe nmânahe myazdem daithyâresh\ngaomeñtem madhumañtem ýaozhdayãn anâsteretem\nhamatha ýatha paracit!",
+      "en": "'Then the worshippers of Mazda may at their will bring by\nthose ways sheep and oxen, men and women, and Fire, the son of\nAhura Mazda, the consecrated bundles of Baresma, and the faithful.\n'The worshippers of Mazda may afterwards prepare meals with meat\nand wine in that house; it shall be clean, and there will be no\nsin, as before.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 23,
+      "ref": "Vd 8.23",
+      "orig": "dâtare ... ashâum ýô vastrem upangharezaiti\nupairi aêtem iristem ubdaênem vâ îzaênem\nvâ avavat aipi ýatha narsh aothravana kâ hê\nasti citha, âat mraot ahurô mazdå, cathwârô\nsata upâzananãm upâzôit aspahe ashtraya\ncathwârô sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow clothes, either of skin or woven, upon a dead body, enough\nto cover the feet, what is the penalty that he shall pay? Ahura\nMazda answered: 'Four hundred stripes with the Aspahe-astra, four\nhundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 24,
+      "ref": "Vd 8.24",
+      "orig": "dâtare ... ashâum ýô vastrem upangharezaiti\nupairi aêtem iristem ubdaênem vâ îzaênem\nvâ avavat aipi ýatha karanem vayô-gravanem\nkâ hê asti citha, âat mraot ahurô mazdå,\nxshvash sata upâzananãm upâzôit aspahe\nashtraya xshvash sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow clothes, either of skin or woven, upon a dead body, enough\nto cover both legs, what is the penalty that he shall pay? Ahura\nMazda answered: 'Six hundred stripes with the Aspahe-astra, six\nhundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 25,
+      "ref": "Vd 8.25",
+      "orig": "dâtare ... ashâum ýô vastrem upangharezaiti\nupairi aêtem iristem ubdaênem vâ îzaênem\nvâ avavat aipi ýatha ôyum vîrô-vastrem\nkâ hê asti citha, âat mraot ahurô mazdå,\nhazangrem upâzananãm upâzôit aspahe ashtraya\nhazangrem sraoshô-caranaya!",
+      "en": "O Maker of the material world, thou Holy One! If a man shall\nthrow clothes, either of skin or woven, upon a dead body, enough\nto cover the whole body, what is the penalty that he shall pay?\nAhura Mazda answered: 'A thousand stripes with the Aspahe-astra,\na thousand stripes with the Sraosho-charana.'\n \n V",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 26,
+      "ref": "Vd 8.26",
+      "orig": "dâtare ... ashâum ýat anusô vifyeiti\nvifyeitica kâ hê asti citha, âat mraot ahurô\nmazdå, ashta sata upâzananãm upâzôit\naspahe ashtraya ashta sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man, by\nforce, commits the unnatural sin [sodomy], what is the penalty that he\nshall pay?\nAhura Mazda answered: 'Eight hundred stripes with the Aspahe-astra,\neight hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 27,
+      "ref": "Vd 8.27",
+      "orig": "dâtare ... ashâum ýat usô vifyeiti\nvifyeitica kâ hê asti citha kâ hê asti\nâperetish kat hê asti ýaozhdâthrem, âat\nmraot ahurô mazdå, nava hê asti citha nava hê\nasti âperetish nôit hê asti ýaozhdâthrem\nanâperetha haca shyaothna ýavaêca ýavaêtâtaêca.",
+      "en": "O Maker of the material world, thou Holy One! If a man voluntarily\ncommits the unnatural sin, what is the penalty for it? What is\nthe atonement for it? What is the cleansing from it?\nAhura Mazda answered: 'For that deed there is nothing that can\npay, nothing that can atone, nothing that can cleanse from it;\nit is a trespass for which there is no atonement, for ever and\never.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "28-30",
+      "ref": "Vd 8.28-30",
+      "orig": "kva aêva ... perenâyush cithãm thweresaiti.",
+      "en": "When is it so?\n'It is so if the sinner be a professor of the Religion of Mazda,\nor one who has been taught in it.\n'But if he be not a professor of the Religion of Mazda, nor one\nwho has been taught in it, then his sin is taken from him, if\nhe makes confession of the Religion of Mazda and resolves never\nto commit again such forbidden deeds.\n'The Religion of Mazda indeed, O Spitama Zarathushtra! takes\naway from him who makes confession of it the bonds of his sin;\nit takes away (the sin of) breach of trust; it takes away (the\nsin of) murdering one of the faithful; it takes away (the sin\nof) burying a corpse; it takes away (the sin of) deeds for which\nthere is no atonement; it takes away the worst sin of usury; it\ntakes away any sin that may be sinned.\nIn the same way the Religion of Mazda, O Spitama Zarathushtra!\ncleanses the faithful from every evil thought, word, and deed,\nas a swift-rushing mighty wind cleanses the plain.\n'So let all the deeds he doeth be henceforth good, O Zarathushtra!\na full atonement for his sin is effected by means of the Religion\nof Mazda.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 31,
+      "ref": "Vd 8.31",
+      "orig": "dâtare ... ashâum kô asti daêvô\nkô daêvayâzô kô daêvanãm\nxawzô kô daêvanãm xumbô kô\ndaêvanãm kû-nâirîsh kô havãs\ndaêvô kô vîspô daêvô\nkô para meretô daêvô kô pasca meretô\nmainyava daêva frabavaiñti.",
+      "en": "O Maker of the material world, thou Holy One! Who is the man\nthat is a Daeva? Who is he that is a worshipper of the Daevas?\nthat is a male paramour of the Daevas? that is a female paramour\nof the Daevas? that is a wife to the Daeva? that is as bad as\na Daeva: that is in his whole being a Daeva? Who is he that is\na Daeva before he dies, and becomes one of the unseen Daevas after\ndeath?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 32,
+      "ref": "Vd 8.32",
+      "orig": "âat mraot ahurô mazdå, arshaca vîptô\narshaca vaêpayô spitama zarathushtra hâu asti\ndaêvô hâu daêvayâzô hâu\ndaêvanãm xawzô hâu daêvanãm\nxumbô hâu daêvanãm kû-nâirîsh\nhâu havãs daêvô hâu vîspô\ndaêvô hô para meretô daêvô\nhô pasca meretô mainyava daêva frabavaiñti\nýat mashyô mashîm xshudrå avi frangherezaiti\nýat vâ mashyô mashyânãm xshudranãm\npara-geurvayeiti!",
+      "en": "Ahura Mazda answered: 'The man that lies with mankind as man\nlies with womankind, or as woman lies with mankind, is the man\nthat is a Daeva; this one is the man that is a worshipper of the\nDaevas, that is a male paramour of the Daevas, that is a female\nparamour of the Daevas, that is a wife to the Daeva; this is the\nman that is as bad as a Daeva, that is in his whole being a Daeva;\nthis is the man that is a Daeva before he dies, and becomes one\nof the unseen Daevas after death: so is he, whether he has lain\nwith mankind as mankind, or as womankind.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 33,
+      "ref": "Vd 8.33",
+      "orig": "dâtare ... ashâum kat tâ nara ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-hishtât\nhishunãm tarô ýâre meretanãm.",
+      "en": "O Maker of the material world, thou Holy One! Shall the man\nbe clean who has touched a corpse that has been dried up and dead\nmore than a year?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 34,
+      "ref": "Vd 8.34",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, nôit hushô hishvâi\nsraêshyeiti, ýezi hushô hishvâi sraêshyeiñtîm\nånghât ishareshtâitya mê vîspô\nanghush astvå ishasem jit-ashem xraodat-urva peshô-tanush\nfrêna ånghãm nasunãm ýå\npaiti âya zemâ irîrithare.",
+      "en": "Ahura Mazda answered: 'He shall. The dry mingles not with\nthe dry. Should the dry mingle with the dry, how soon all this\nmaterial world of mine would be only one Peshotanu, bent on the\ndestruction of righteousness, and whose soul will cry and wail!\nso numberless are the beings that die upon the face of the earth.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 35,
+      "ref": "Vd 8.35",
+      "orig": "dâtare ... ashâum kat tâ nara ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-bereta\nsûnô vâ para-iristahe mashyehe vâ.",
+      "en": "O Maker of the material world, thou Holy One! Can the man\nbe made clean that has touched the corpse of a dog or the corpse\nof a man?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 36,
+      "ref": "Vd 8.36",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\naêsha nasush aiwi-khnixta sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô âat hvãm\ntanûm pairi-ýaozhdaithîta gêush maêsmana\napâca paiti avatha ýaozhdayãn.",
+      "en": "Ahura Mazda answered: 'He can, O holy Zarathushtra!'\nHow so?\n'If the Nasu has already been expelled by the corpse-eating dogs,\nor by the corpse-eating birds, he shall cleanse his body with\ngomez and water, and he shall be clean.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 37,
+      "ref": "Vd 8.37",
+      "orig": "âat ýezi nasush anaiwi-khnixta sûnô\nvâ kerefsh-hvarô vayô vâ kerefsh-hvarô\npaoirîm tadha dim mazdayasna ainghå zemô thrish\nmakhem ava-kanayen âat hvãm tanûm pairi-ýaozhdaithîta\ngêush maêsmana nôit âpô, frâ-mê\ngadhwa zazayãn nizhbereta nôit ainizhbereta nizhberetât\nhaca paourvaêibya.",
+      "en": "'If the Nasu has not yet been expelled by the corpse-eating\ndogs, or by the corpse-eating birds, then the worshippers of Mazda\nshall dig three holes in the ground, and he shall thereupon wash\nhis body with gomez, not with water. They shall then lift and\nbring my dog, they shall bring him (thus shall it be done and\nnot otherwise) in front [of the man].",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 38,
+      "ref": "Vd 8.38",
+      "orig": "bitîm tadha dim mazdayasna ainghå zemô thrish\nmakhem ava-kanayen âat hvãm tanûm pairi-ýaozhdaithîta\ngêush maêsmana nôit âpô, frâ-mê\ngadhwa zazayãn nizhbereta nôit ainizhbereta nizhberetât\nhaca paourvaêibya, vîspem â ahmât upa-mãnayen\nýat hê upemem paiti vakhdhanahe upemât varsa\nhiku bavât.",
+      "en": "'The worshippers of Mazda shall dig three other holes in the\nground, and he shall thereupon wash his body with gomez, not with\nwater. They shall then lift and bring my dog, they shall bring\nhim (thus shall it be done and not otherwise) in front [of the\nman]. Then shall they wait until he is dried even to the last\nhair on the top of his head.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 39,
+      "ref": "Vd 8.39",
+      "orig": "thritîm tadha dim mazdayasna ainghå zemô\nthrish makhem ava-kanayen avavat haca paourvaêibya ýatha\nthrigâim, âat hvãm tanûm pairi-ýaozhdaithîta\nâpô nôit maêsmana.",
+      "en": "'They shall dig three more holes in the ground, three paces\naway from the preceding, and he shall thereupon wash his body\nwith water, not with gomez.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 40,
+      "ref": "Vd 8.40",
+      "orig": "zasta hê paoirîm frasnâdhayen, âat\nýat hê zasta nôit frasnâta âat\nvîspãm hvãm tanûm ayaozhdâta kerenaoiti,\nâat ýat hê zasta frasnâta âthritîm\npasca frasnâtaêibya zastaêibya bareshnûm\nhê vakhdhanem pourum paiti-hiñcôish.",
+      "en": "'He shall first wash his hands; if his hands be not first\nwashed, he makes the whole of his body unclean. When he has washed\nhis hands three times, after his hands have been washed, thou\nshalt sprinkle with water the forepart of his skull.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 41,
+      "ref": "Vd 8.41",
+      "orig": "dâtare ... ashâum ýezica âpô\nvanguhîsh bareshnûm vakhdhanem pourum paiti-jasaiti\nkva aêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti, âat mraot ahurô mazdå,\npaitisha hê hô-nâ añtarât naêmât\nbrvat-byãm aêshãm aêsha druxsh ýâ\nnasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the forepart of the skull, whereon does the Druj\nNasu rush?\nAhura Mazda answered: 'In front, between the brows, the Druj Nasu\nrushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 42,
+      "ref": "Vd 8.42",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\npaitisha hê hô-nâ añtarât naêmât\nbrvat-byãm paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa-dvãsaiti, âat mraot\nahurô mazdå, pasca hê vakhdhanem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach in front, between the brows, whereon does the Druj\nNasu rush?\nAhura Mazda answered: 'On the back part of the skull the Druj\nNasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 43,
+      "ref": "Vd 8.43",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\npasca vakhdhanem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, paitisha hê paitish-hvarenem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the back part of the skull, whereon does the Druj\nNasu rush?\nAhura Mazda answered: 'In front, on the jaws, the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 44,
+      "ref": "Vd 8.44",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\npaitisha paitish-hvarenem paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê gaoshem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach in front, on the jaws, whereon does the Druj Nasu\nrush?\nAhura Mazda answered: 'Upon the right ear the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 45,
+      "ref": "Vd 8.45",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem gaoshem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê gaoshem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right ear, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left ear the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 46,
+      "ref": "Vd 8.46",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum gaoshem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, dashinem hê suptîm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left ear, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right shoulder the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 47,
+      "ref": "Vd 8.47",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem suptîm paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, haoyãm hê suptîm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right shoulder, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left shoulder the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 48,
+      "ref": "Vd 8.48",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhaoyãm suptîm paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê kashem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left shoulder, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right arm-pit the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 49,
+      "ref": "Vd 8.49",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem kashem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê kashem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right arm-pit, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left arm-pit the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 50,
+      "ref": "Vd 8.50",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum kashem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, paitisha hê paitivarem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left arm-pit, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'In front, upon the chest, the Druj Nasu\nrushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 51,
+      "ref": "Vd 8.51",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\npaitisha paitivarem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, parshti hê aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the chest in front, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the back the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 52,
+      "ref": "Vd 8.52",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nparshti paiti-jasaiti kva aêshãm aêsha druxsh\nýâ nasush upa-dvãsaiti, âat mraot ahurô\nmazdå, dashinem hê fshtânem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the back, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right nipple the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 53,
+      "ref": "Vd 8.53",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem fshtânem paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, hôyum hê\nfshtânem aêshãm aêsha druxsh ýâ\nnasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right nipple, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left nipple the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 54,
+      "ref": "Vd 8.54",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum fshtânem paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê peresâum\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left nipple, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right rib the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 55,
+      "ref": "Vd 8.55",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem peresâum paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, hôyum hê\nperesâum aêshãm aêsha druxsh ýâ\nnasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right rib, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left rib the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 56,
+      "ref": "Vd 8.56",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum peresâum paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê sraonîm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left rib, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right hip the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 57,
+      "ref": "Vd 8.57",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem sraonîm paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, haoyãm hê sraonîm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right hip, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left hip the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 58,
+      "ref": "Vd 8.58",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhaoyãm sraonîm paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, haxti hê aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti,\nýezi nairyô anghat pasca hê pourum paiti- hiñcôish\npaitisha aparem ýezi strî anghat paitisha hê\npourum paiti- hiñcôish pasca aparem.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left hip, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the sexual parts the Druj Nasu rushes.\nIf the unclean one be a man, thou shalt sprinkle him first behind,\nthen before; if the unclean one be a woman, thou shalt sprinkle\nher first before, then behind.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 59,
+      "ref": "Vd 8.59",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhaxti paiti-jasaiti kva aêshãm aêsha druxsh\nýâ nasush upa-dvãsaiti, âat mraot ahurô\nmazdå, dashinem hê rânem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the sexual parts, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right thigh the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 60,
+      "ref": "Vd 8.60",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem rânem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê rânem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right thigh, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left thigh the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 61,
+      "ref": "Vd 8.61",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum rânem paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê zhnûm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left thigh, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right knee the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 62,
+      "ref": "Vd 8.62",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem zhnûm paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê zhnûm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right knee, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left knee the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 63,
+      "ref": "Vd 8.63",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum zhnûm paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê ascûm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left knee, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right leg the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 64,
+      "ref": "Vd 8.64",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem ascûm paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê ascûm\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right leg, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left leg the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 65,
+      "ref": "Vd 8.65",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum ascûm paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê zañgem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left leg, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right ankle the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 66,
+      "ref": "Vd 8.66",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem zañgem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê zañgem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right ankle, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left ankle the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 67,
+      "ref": "Vd 8.67",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum zañgem paiti-jasaiti kva aêshãm\naêsha druxsh ýâ nasush upa- dvãsaiti,\nâat mraot ahurô mazdå, dashinem hê frabdem\naêshãm aêsha druxsh ýâ nasush\nupa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left ankle, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the right instep the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 68,
+      "ref": "Vd 8.68",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\ndashinem frabdem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, hôyum hê frabdem aêshãm\naêsha druxsh ýâ nasush upa-dvãsaiti.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the right instep, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'Upon the left instep the Druj Nasu rushes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 69,
+      "ref": "Vd 8.69",
+      "orig": "dâtare ... ýezica âpô vanguhîsh\nhôyum frabdem paiti-jasaiti kva aêshãm aêsha\ndruxsh ýâ nasush upa- dvãsaiti, âat\nmraot ahurô mazdå, adhairi haxem nivôiryete\nmãnayen ahe ýatha maxshyå parenem.",
+      "en": "O Maker of the material world, thou Holy One! When the good\nwaters reach the left instep, whereon does the Druj Nasu rush?\nAhura Mazda answered: 'She turns round under the sole of the foot;\nit looks like the wing of a fly.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 70,
+      "ref": "Vd 8.70",
+      "orig": "hakat nigereptaêibya añgushtaêibya uzgereptaêibya\npâshnaêibya dashinem hê haxem paiti-hiñcôish\nâat hâ druxsh ýâ nasush hôyum haxem\nupa-dvãsaiti, hôyum hê haxem paiti-hiñcôish\nâat hâ druxsh ýâ nasush adhairi añgushta\nnivôiryete mãnayen ahe ýatha maxshyå\nparenem.",
+      "en": "'He shall press his toes upon the ground, and shall raise\nup his heels; thou shalt sprinkle his right sole with water; then\nthe Druj Nasu rushes upon the left sole. Thou shalt sprinkle the\nleft sole with water; then the Druj Nasu turns round under the\ntoes; it looks like the wing of a fly.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 71,
+      "ref": "Vd 8.71",
+      "orig": "hakat nigereptaêibya pâshnaêibya uzgereptaêibya\nañgushtaêibya dashinãm hê añgushtãm\npaiti-hiñcôish, âat hâ druxsh ýâ\nnasush haoyãm añgushtãm upa-dvãsaiti,\nhaoyãm hê añgushtãm paiti-hiñcôish",
+      "en": "'He shall press his heels upon the ground, and shall raise\nup his toes; thou shalt sprinkle his right toe with water; then\nthe Druj Nasu rushes upon the left toe. Thou shalt sprinkle the\nleft toe with water; then the Druj Nasu flies away to the regions\nof the north, in the shape of a raging fly, with knees and tail\nsticking out, droning without end, and like unto the foulest Khrafstras.\n[72. 'And thou shalt say aloud these victorious, most healing words:\n'\" The will of the Lord is the law of holiness,\" etc. \n[( Exorcism: )]\n'\"What protector hast thou given unto me, O Mazda! while\nthe hate of the wicked encompasses me?\" &c.\n'\"Who is the victorious who will protect thy teaching?\"\n&c.\n'\"Keep us from our hater, O Mazda and Armaiti Spenta!\nPerish, O fiendish Druj! Perish, O brood of the fiend! Perish,\nO creation of the fiend! Perish O world of the fiend! Perish away,\nO Druj! Rush away, O Druj! Perish away, O Druj! Perish away to\nthe regions of the north, never more to give unto death the living\nworld of Righteousness!\"']",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 72,
+      "ref": "Vd 8.72",
+      "orig": "âat hâ druxsh ýâ nasush nivôiryete...!",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 73,
+      "ref": "Vd 8.73",
+      "orig": "dâtare ... ashâum ýat aête ýôi\nmazdayasna pâdha ayañtem vâ taciñtem\nvâ baremnem vâ vazemnem vâ âtrem nasupâkem\nfrajasãn nasûm hãm-pacãn nasûm\nhâvayãn kutha tê verezyãn aête\nýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If worshippers\nof Mazda, walking, or running, or riding, or driving, come upon\na Nasu-burning fire, whereon Nasu is being burnt or cooked, what\nshall they do?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 74,
+      "ref": "Vd 8.74",
+      "orig": "âat mraot ahurô mazdå, ava aêtem nasupâkem\njanaêta ava hê janayen apa aêtãm dishtãm\nbarayen apa aêtem uzdânem barayen.",
+      "en": "Ahura Mazda answered: 'They shall kill the man that cooks\nthe Nasu; surely they shall kill him. They shall take off the\ncauldron, they shall take off the tripod.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 75,
+      "ref": "Vd 8.75",
+      "orig": "âthrat haca bânuwe aêsmã frasaocayâhi\nýat vâ aêtanghãm urvaranãm ýat\nâtre-cithranãm ýat vâ aêtem âtrem\nuzdareza aêtayå urvarayå âtarecaresh vîca\nbarôit vîca shâvayôit ýatha âsishtem\nfrâvayôit.",
+      "en": "'Then they shall kindle wood from that fire; either wood of\nthose trees that have the seed of fire in them, or bundles of\nthe very wood that was prepared for that fire; then they shall\ntake it farther and disperse it, that it may die out the sooner.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 76,
+      "ref": "Vd 8.76",
+      "orig": "ýatha tadha paoirîm hañdareza zemê\naêtat paiti nidaithîta avavat haca âthrat nasupakât\nýatha fratare-vîtastish vîca barôit vîca\nshâvayôit ýatha âsishtem frâvayôit.",
+      "en": "'Thus they shall lay a first bundle on the ground, a Vitasti\naway from the Nasu-burning fire; then they shall take it farther\nand disperse it, that it may die out the sooner.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 77,
+      "ref": "Vd 8.77",
+      "orig": "ýatha tadha bitîm hañdareza ... ýatha\ntadha thritîm hañdareza ... ýatha tadha tûirîm\nhañdareza ... ýatha tadha puxdhem hañdareza\n... ýatha tadha xshtûm hañdareza ... ýatha\ntadha haptathem hañdareza ... ýatha tadha ashtemem\nhañdareza....",
+      "en": "'They shall lay down a second bundle on the ground, a Vitasti\naway from the Nasu-burning fire: then they shall take it farther\nand disperse it, that it may die out the sooner.\n'They shall lay down a third bundle on the ground, a Vitasti away\nfrom the Nasu-burning fire; then they shall take it farther and\ndisperse it, that it may die out the sooner.\n'They shall lay down a fourth bundle on the ground, a Vitasti\naway from the Nasu-burning fire; then they shall take it farther\nand disperse it, that it may die out the sooner.\n'They shall lay down a fifth bundle on the ground, a Vitasti away\nfrom the Nasu-burning fire; then they shall take it farther and\ndisperse it, that it may die out the sooner.\n'They shall lay down a sixth bundle on the ground, a Vitasti away\nfrom the Nasu-burning fire; then they shall take it farther and\ndisperse it, that it may die out the sooner.\n'They shall lay down a seventh bundle on the ground, a Vitasti\naway from the Nasu-burning fire; then they shall take it farther\nand disperse it, that it may die out the sooner.\nThey shall lay down an eighth bundle on the ground, a Vitasti\naway from the Nasu-burning fire; then they shall take it farther\nand disperse it, that it may die out the sooner.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 78,
+      "ref": "Vd 8.78",
+      "orig": "ýatha tadha nâumem hañdareza zemê\naêtat paiti nidaithîta avavat haca âthrat nasupakât\nýatha fratare-vîtastish,",
+      "en": "'They shall lay down a ninth bundle on the ground, a Vitasti\naway from the Nasu-burning fire; then they shall take it farther\nand disperse it, that it may die out the sooner.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 79,
+      "ref": "Vd 8.79",
+      "orig": "ýô aêsmô ashaya barat spitama zarathushtra\nurvâsnayå vâ vohu-gaonahe vâ vohu-keretôish\nvâ hadhânaêpatayå vâ kãmcit\nvâ hubaoidhitemanãm urvaranãm",
+      "en": "'If a man shall then piously bring unto the fire, O Spitama\nZarathushtra! wood of Urvasna, or Vohu-gaona, or Vohu-kereti,\nor Hadha-naepata, or any other sweet-smelling wood;",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 80,
+      "ref": "Vd 8.80",
+      "orig": "ýahmât kahmâicit naêmanãm\nvâtô âthrô baoidhîm vîbaraiti\nahmât kahmâicit naêmanãm hazangrakhna\npaiti-jasaiti âtarsh mazdå ahurahe daêvanãm\nmainyavanãm temascithranãm drvatãm bizhvat\nýâtunãmca pairikanãmca.",
+      "en": "'Wheresoever the wind shall bring the perfume of the fire,\nthereunto the fire of Ahura Mazda shall go and kill thousands\nof unseen Daevas, thousands of fiends, the brood of darkness,\nthousands of couples of Yatus and Pairikas.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 81,
+      "ref": "Vd 8.81",
+      "orig": "dâtare ... ashâum ýô âtrem\nnasupâkem dâitîm gâtûm avi ava-baraiti\ncvat ahmâi naire mizhdem anghat pasca astasca baodhanghasca\nvî-urvîshtîm, âat mraot ahurô mazdå,\nýatha aêtahmi anghvô ýat astvaiñti\nbaêvare âtre-saokanãm dâitîm gâtûm\navi ava-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\na Nasu-burning fire to the Daityo-gatu, what shall be his reward\nwhen his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought ten thousand fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 82,
+      "ref": "Vd 8.82",
+      "orig": "dâtare ... ýô âtrem uruzdipâkem\n... cvat ahmâi naire mizhdem anghat pasca astasca baodhanghasca\nvî-urvîshtîm, âat mraot ahurô mazdå,\nýatha aêtahmi anghvô ýat astvaiñti\nhazangrem âtre-saokanãm dâitîm gâtûm\navi ava-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire wherein impure liquid has been burnt,\nwhat shall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought a thousand fire-brands to the Daityo-gatu.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 83,
+      "ref": "Vd 8.83",
+      "orig": "... ýô âtrem saire-hyat haca ... ýatha\naêtahmi anghvô ýat astvaiñti pañca\nsata âtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire wherein dung has been burnt, what\nshall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought five hundred fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 84,
+      "ref": "Vd 8.84",
+      "orig": "... ýô âtrem xumbat haca zemaini-pacikât\n... cathwârô sata âtre-saokanãm dâitîm\ngâtûm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from the kiln of a potter, what shall\nbe his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought four hundred fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 85,
+      "ref": "Vd 8.85",
+      "orig": "... ýô âtrem xumbat haca ýâmô-pacikât\n... âat mraot ahurô mazdå, ýavat ahmâi\nýamanãm paitinãm sairinãm aêtavat\nâtre-saokanãm hãm-bereta dâitîm\ngâtûm avi ava-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from a glazier's kiln, what shall\nbe his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought to the Daityo-gatu as many fire-brands as\nthere were glasses [brought to that fire].'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 86,
+      "ref": "Vd 8.86",
+      "orig": "... ýô âtrem aonyat haca parô- berejyât\n... âat mraot ahurô mazdå, ýavat ahmâi\npaitinãm urvaranãm aêtavat âtre-saokanãm\nhãm-bereta dâitîm gâtûm avi ava-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from the aonya paro-berejya, what\nshall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought to the Daityo-gatu as many fire-brands as\nthere were plants.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 87,
+      "ref": "Vd 8.87",
+      "orig": "... ýô âtrem pisrat haca zaranyô-\nsaêpât ... satem âtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from under the puncheon of a goldsmith,\nwhat shall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought a hundred fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 88,
+      "ref": "Vd 8.88",
+      "orig": "... ýô âtrem pisrat haca erezatô-\nsaêpât ... navaitîm âtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from under the puncheon of a silversmith,\nwhat shall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought ninety fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 89,
+      "ref": "Vd 8.89",
+      "orig": "... ýô âtrem pisrat haca ayô- saêpât\n... ashtâitîm âtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from under the puncheon of a blacksmith,\nwhat shall be his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought eighty fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 90,
+      "ref": "Vd 8.90",
+      "orig": "... ýô âtrem pisrat haca haosafnaênô-saêpât\n... haptâitîm âtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! It a man bring\nto the Daityo-gatu the fire from under the puncheon of a worker\nin steel, what shall be his reward when his soul has parted with\nhis body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought seventy fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "91-94",
+      "ref": "Vd 8.91-94",
+      "orig": "ýô âtrem tanurat haca ... xshvashtîm\nâtre-saokanãm.... ... ýô âtrem\ndishtat haca ... pañcâsatem âtre-saokanãm....\n... ýô âtrem aonyat haca taxairyât ...\ncathwaresatem âtre-saokanãm.... ... ýô\nâtrem pañtat haca staorô-payât ... thrisatem\nâtre-saokanãm....",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire of an oven, what shall be his reward\nwhen his soul has parted from his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought sixty fire-brands to the Daityo-gatu.'\nO Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from under a cauldron, what shall\nbe his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as it he had,\nhere below, brought fifty fire-brands to the Daityo-gatu.'\nO Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire from an aonya takhairya, what shall\nbe his reward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought forty fire-brands to the Daityo-gatu.'\nO Maker of the material world, thou Holy One! If a man bring\na herdsman's fire to the Daityo-gatu, what shall be his reward\nwhen his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought thirty fire-brands to the Daityo-gatu.'\n[95. O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire of the field, what shall be his reward\nwhen his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought twenty fire-brands to the Daityo-gatu.']",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": "95-96",
+      "ref": "Vd 8.95-96",
+      "orig": "ýô âtrem skairyat haca ... vîsaiti\nâtre-saokanãm.... ... ýô âtrem\nnazdishtat haca ... âat mraot ahurô mazdå, ýatha\naêtahmi anghvô ýat astvaiñti dasa âtre-saokanãm\ndâitîm gâtûm avi ava-baraiti!",
+      "en": "O Maker of the material world, thou Holy One! If a man bring\nto the Daityo-gatu the fire of his own hearth, what shall be his\nreward when his soul has parted with his body?\nAhura Mazda answered: 'His reward shall be the same as if he had,\nhere below, brought ten fire-brands to the Daityo-gatu.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 97,
+      "ref": "Vd 8.97",
+      "orig": "dâtare ... ashâum kat tâ nara ýaozhdayãn\nanghen ashâum ahura mazda ýâ nasâum ava-hishta\ndûire asahi razanghãm.",
+      "en": "O Maker of the material world, thou Holy One! Can a man be\nmade clean, O holy Ahura Mazda! who has touched a corpse in a\ndistant place in the wilderness?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 98,
+      "ref": "Vd 8.98",
+      "orig": "âat mraot ahurô mazdå, ýaozhdayãn\nanghen ashâum zarathushtra, kva aêva, ýezi\naêsha nasush aiwi-khnixta sûnô vâ kerefsh-hvarô\nvayô vâ kerefsh-hvarô âat hvãm\ntanûm pairi- ýaozhdaithîta gêush maêsmana\nthrisatathwem frasnâtêe thrisatathwem upa-snâtêe\nakhryãm paiti usnâitîm.",
+      "en": "Ahura Mazda answered: 'He can, O holy Zarathushtra.'\nHow so?\n'If the Nasu has already been expelled by the corpse-eating dogs\nor the corpse-eating birds, he shall wash his body with gomez;\nhe shall wash it thirty times, he shall rub it dry with the hand\nthirty times, beginning every time with the head.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 99,
+      "ref": "Vd 8.99",
+      "orig": "âat ýezi nasush anaiwi-khnixta sûnô\nvâ kerefsh-hvarô vayô vâ kerefsh-hvarô\npañca-dasa frasnâtêe pañca-dasa upasnâtêe.",
+      "en": "'If the Nasu has not yet been expelled by the corpse-eating\ndogs or the corpse-eating birds, he shall wash his body with gomez;\nhe shall wash it fifteen times, he shall rub it dry with the hand\nfifteen times.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 100,
+      "ref": "Vd 8.100",
+      "orig": "tacat paoirîm hâthrem frasha adhât tacôit\nýat dim kascit anghêush astvatô aêtadha\npaiti ava-hishtêe berezyaoget vacô râzayãn,\nidha iristahe tanûm ava-hishta anaêshem manô\nanaêshem vacô anaêshem shyaothnem isaêta\nmê ýaozhdâitîm, tacat paoirîm upâiti\nýezi dim nôit ýaozhdatheñte thrishûm\naêtahe shyaothnahe baxsheñti.",
+      "en": "'Then he shall run a distance of a Hathra. He shall run until\nhe meets some man on his way, and he shall cry out aloud: \"Here\nam I, one who has touched the corpse of a man, and who is powerless\nin mind, powerless in tongue, powerless in hand. Do make me clean.\"\nThus shall he run until he overtakes the man. If the man will\nnot cleanse him, he remits him the third of his trespass.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 101,
+      "ref": "Vd 8.101",
+      "orig": "tacat bitîm hâthrem ... bitîm upâiti,\nýezi dim nôit ýaozhdatheñte naêmem\naêtahe shyaothnahe baxsheñti.",
+      "en": "'Then he shall run another Hathra, he shall run off again\nuntil he overtakes a man; if the man will not cleanse him, he\nremits him the half of his trespass.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 102,
+      "ref": "Vd 8.102",
+      "orig": "tacat thritîm hâthrem ... thritîm upâiti,\nýezi dim nôit ýaozhdatheñte vîspem\naêtahe shyaothnahe baxsheñti.",
+      "en": "'Then he shall run a third Hathra, he shall run off a third\ntime until he overtakes a man; if the man will not cleanse him,\nhe remits him the whole of his trespass.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 103,
+      "ref": "Vd 8.103",
+      "orig": "frasha adhât tacôit ýat dim nazdishtem\navi nmânemca vîsemca zañtûmca dah'yûmca\naêtadha paiti ava-hishtêe berezyaoget vacô râzayãn,\nidha iristahe tanûm ava-hishta anaêshem manô\nanaêshem vacô anaêshem shyaothnem isaêta\nmê ýaozhdâitîm, ýezi dim nôit\nýaozhdatheñte âat hvãm tanûm\npairi-ýaozhdaithîta gêush maêsmana apâca\npaiti avatha ýaozhdayãn.",
+      "en": "'Thus shall he run forwards until he comes near a house, a\nborough, a town, an inhabited district, and he shall cry out with\na loud voice: \"Here am I, one who has touched the corpse\nof a man, and who is powerless in mind, powerless in tongue, powerless\nin hand. Do make me clean.\" If they will not cleanse him,\nhe shall cleanse his body with gomez and water; thus shall he\nbe clean.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 104,
+      "ref": "Vd 8.104",
+      "orig": "dâtare ... âat ýezi anghat âfsh añtarât\nnaêmât aête patha âfsh cithãm fraorisaiti\nkâ hê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If he find water\non his way and the water make him subject to a penalty, what is\nthe penalty that he shall pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 105,
+      "ref": "Vd 8.105",
+      "orig": "âat mraot ahurô mazdå, cathwârô\nsata upâzananãm upâzôit aspahe ashtraya\ncathwârô sata sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Four hundred stripes with the Aspahe-astra,\nfour hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 106,
+      "ref": "Vd 8.106",
+      "orig": "dâtare ... âat ýezi anghat urvara añtarât\nnaêmât aête patha âtarsh cithãm\nfraorisaiti kâ hê asti citha.",
+      "en": "O Maker of the material world, thou Holy One! If he find trees\non his way and the fire make him subject to a penalty, what is\nthe penalty that he shall pay?\nAhura Mazda answered: 'Four hundred stripes with the Aspahe-astra,\nfour hundred stripes with the Sraosho-charana.",
+      "zh": ""
+    },
+    {
+      "chapter": 8,
+      "verse": 107,
+      "ref": "Vd 8.107",
+      "orig": "âat mraot ahurô mazdå, cathwârô\n... sraoshô-caranaya, hâ hê asti citha hâ\nhê asti âperetish aipi- pâremnâi idha\nashaone nôit anaipi-pâremnâi drujô nmâne\nhaithyâ anghen astayô!\nashem vohû...!!",
+      "en": "'This is the penalty, this is the atonement which saves the\nfaithful man who submits to it, not him who does not submit to\nit.\nSuch a one shall surely be an inhabitant in the mansion of the\nDruj.'",
+      "zh": ""
+    }
+  ]
+}

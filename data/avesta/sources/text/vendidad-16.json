@@ -1,0 +1,173 @@
+{
+  "slug": "vendidad-16",
+  "siglum": "Vd 16",
+  "title_zh": "祓魔法典 第 16 章‧經期婦女",
+  "title_en": "Vendidad 16",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd16sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 16,
+      "verse": 1,
+      "ref": "Vd 16.1",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\nýat ahmi nmâne ýat mâzdayasnôish\nnâirika cithravaiti daxshtavaiti vohunavaiti nishhidhât\nkutha tê verezyãn aête ýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If there be\nin the house of a worshipper of Mazda a woman who has the whites\nor sees blood, what shall the worshippers of Mazda do?",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "ref": "Vd 16.2",
+      "orig": "âat mraot ahurô mazdå, aêtadha hê\naête mazdayasna pañta vîcinaêta pairi\nurvarâbyasca varedhâbyasca aêsmaêibyô\nhiku pãsnu gâtu nidhayaêta fratara haca nmâna\nverezyãn ýat vâ naêmem ýat vâ\nthrishum ýat vâ cathrushum ýat vâ pangtanghum\nýezi nôit nâirika âtrem aiwi- vaênât\nýezi nôit nâirika âthre raoxshnãn\npaiti-didhyât.",
+      "en": "Ahura Mazda answered: 'They shall clear the way of the wood\nthere, both plants and trees; they shall strew dry dust on the\nground; and they shall isolate a half, or a third, or a fourth,\nor a fifth part of the house, lest her look should fall upon the\nfire.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "ref": "Vd 16.3",
+      "orig": "dâtare ... cvat drâjô haca âthrat\ncvat drâjô haca apat cvat drâjô haca baresmen\nfrastairyât cvat drâjô haca nerebyô ashavabyô.",
+      "en": "O Maker of the material world, thou Holy One! How far from\nthe fire? How far from the water? How far from the consecrated\nbundles of Baresma? How far from the faithful?",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 4,
+      "ref": "Vd 16.4",
+      "orig": "âat mraot ahurô mazdå, pañca-dasa-gâim\nhaca âthrat pañca-dasa-gâim haca apat pañca-dasa-gâim\nhaca baresmen frastairyât thrigâim haca nerebyô\nashavabyô.",
+      "en": "Ahura Mazda answered: 'Fifteen paces from the fire, fifteen\npaces from the water, fifteen paces from the consecrated bundles\nof Baresma, three paces from the faithful.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "ref": "Vd 16.5",
+      "orig": "dâtare ... cvat drâjô ava-hishtât\naêsha ýô nâirikayå cithravaityå\ndaxshtavaityå vohunavaityå hvarethem frabarât.",
+      "en": "O Maker of the material world, thou Holy One! How far from\nher shall he stay, who brings food to a woman who has the whites\nor sees the blood?",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 6,
+      "ref": "Vd 16.6",
+      "orig": "âat mraot ahurô mazdå, thrigâim ava-hishtât\naêsha ýô nâirikayå cithravaityå\ndaxshtavaityå vohunavaityå hvarethem frabarât\ncinem hvarethem frabarât cinem ýaom frabarât\nayanghaênem vâ srum vâ nitema xshathra vairya.",
+      "en": "Ahura Mazda answered: 'Three paces from her shall he stay,\nwho brings food to a woman who has the whites or sees the blood.'\nIn what kind of vessels shall he bring her bread? In what\nkind of vessels shall he bring her barley-drink?\n'In vessels of iron, or of lead, or of any common metal.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 7,
+      "ref": "Vd 16.7",
+      "orig": "cvat hvarethem frabarât cvat ýaom frabarât,\ndva danare tâyûirinãm aêva danare xshaodrinãm\nýezi nôit nâirika niuruidhyât, ýezi\naperenâyûkô frâshnavât zasta hê\npaoirîm frasnâdhayen aêtahe ýat aperenâyûkahe\nahe havayåse tanvô.",
+      "en": "How much bread shall he bring to her? How much barley-drink\nshall he bring?\n'Two danares of dry bread, and one danare of liquor, lest\nshe should get too weak.\n'If a child has just touched her, they shall first wash his\nhands and then his body.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 8,
+      "ref": "Vd 16.8",
+      "orig": "ýezi nâirika vohunîsh aiwi-vaênât\nýat hê thrâyô xshafna sacåñte\nairime gâtûm hê nishhidhaêta vîspem\nâ ahmât ýat hê cathwârô xshafna\nsacåñte, ýezi nâirika vohunîsh\naiwi-vaênât ýat hê cathwârô\nxshafna sacåñte airime gâtûm hê\nnishhidhaêta vîspem â ahmât ýat\nhê pañca xshafna sacåñte.",
+      "en": "'If she still see blood after three nights have passed, she\nshall sit in the place of infirmity until four nights have\npassed.\n'If she still see blood after four nights have passed, she\nshall sit in the place of infirmity until five nights have\npassed.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 9,
+      "ref": "Vd 16.9",
+      "orig": "ýezi nâirika vohunîsh aiwi-vaênât\nýat hê pañca xshafna sacåñte\nairime gâtûm hê nishhidhaêta vîspem\nâ ahmât ýat hê xshvash xshafna sacåñte,\nýezi nâirika vohunîsh aiwi-vaênât\nýat hê xshvash xshafna sacåñte airime\ngâtûm hê nishhidhaêta vîspem â\nahmât ýat hê hapta xshafna sacåñte.",
+      "en": "'If she still see blood after five nights have passed, she\nshall sit in the place of infirmity until six nights have passed.\n'If she still see blood after six nights have passed, she\nshall sit in the place of infirmity until seven nights have\npassed.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 10,
+      "ref": "Vd 16.10",
+      "orig": "ýezi nâirika vohunîsh aiwi-vaênât\nýat hê hapta xshafna sacåñte airime\ngâtûm hê nishhidhaêta vîspem â\nahmât ýat hê ashta xshafna sacåñte,\nýezi nâirika vohunîsh aiwi-vaênât\nýat hê ashta xshafna sacåñte airime\ngâtûm hê nishhidhaêta vîspem â\nahmât ýat hê nava xshafna sacåñte.",
+      "en": "'If she still see blood after seven nights have passed, she\nshall sit in the place of infirmity until eight nights have\npassed.\n'If she still see blood after eight nights have passed, she\nshall sit in the place of infirmity until nine nights have\npassed.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 11,
+      "ref": "Vd 16.11",
+      "orig": "ýezi nâirika vohunîsh aiwi-vaênât\nýat hê nava xshafna sacåñte âat\nhê paityârem ava-bareñti daêva daêvanãm\nýasnâica vahmâica, aêtadha hê aête\nmazdayasna pañta vîcinaêta pairi urvarâbyasca\nvaredhâbyasca aêsmaêibyô.",
+      "en": "'If she still see blood after nine nights have passed, this\nis a work of the Daevas which they have performed for the worship\nand glorification of the Daevas.\n'The worshippers of Mazda shall clear the way of the wood\nthere, both plants and trees;",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 12,
+      "ref": "Vd 16.12",
+      "orig": "aêtadha hê aête mazdayasna ainghå\nzemô thrish makhem ava-kanayen dva makha frasnâdhayen\nmaêsmana gêush ôyum âpô xrafstrem\nava-janaêta maoirîm dânô-karshem ýat\nvâ hama duye saite kahyâcit angrô-mainyavanãm\nxrafstranãm ava-janyât ýat vâ aête\nzaêna.",
+      "en": "'They shall dig three holes in the earth, and they shall\nwash the woman with gomez by two of those holes and with water by\nthe third.\n'They shall kill Khrafstras, to wit: two hundred\ncorn-carrying ants, if it be summer; two hundred of any other\nsort of the Khrafstras made by Angra Mainyu, if it be winter.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 13,
+      "ref": "Vd 16.13",
+      "orig": "aêtahe ýat mazdayasnahe aêtayå nâirikayå\ncithravaityå daxshtavaityå vohunavaityå daxshtem\nuzverezyât kâ hê asti citha, âat mraot\nahurô mazdå, aêtahe paiti peshô-tanuye\nduye saite upâzananãm upâzôit aspahe\nashtraya duye saite sraoshô-caranaya.",
+      "en": "If a worshipper of Mazda shall suppress the issue of a woman\nwho has the whites or sees blood, what is the penalty that he\nshall pay?\nAhura Mazda answered: 'He is a Peshotanu: two hundred\nstripes with the Aspahe-astra, two hundred stripes with the\nSraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 14,
+      "ref": "Vd 16.14",
+      "orig": "dâtare ... ýô nâirikayå cithravaityå\ndaxshtavaityå vohunavaityå paurvô vasna shyaothna\ntanûm irithyât ýat hê cithra daxshtem\nbavaiti ýat hê daxshta cithrem bavaiti kâ hê\nasti citha.",
+      "en": "O Maker of the material world, thou Holy One! If a man\nshall again and again lasciviously touch the body of a woman who\nhas the whites or sees blood, so that the wlutes turn to the\nblood or the blood turns to the whites, what is the penalty that\nhe shall pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 15,
+      "ref": "Vd 16.15",
+      "orig": "âat mraot ahurô mazdå, paoiryâi upaêta\npaoiryâi nishasta thrisatem upâzananãm upâzôit\naspahe ashtraya thrisatem sraoshô-caranaya, bityâi\nupaêta bityâi nishasta pañcâsatem upâzananãm\nupâzôit aspahe ashtraya pañcâsatem sraoshô-caranaya,\nthrityâi upaêta thrityâi nishasta haptâitîm\nupâzananãm upâzôit aspahe ashtraya haptâitîm\nsraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'For the first time he comes near unto\nher, for the first time he lies by her, thirty stripes with the\nAspahe-astra, thirty stripes with the Sraosho-charana.\n'For the second time he comes near unto her, for the second\ntime he lies by her, fifty stripes with the Aspahe-astra, fifty\nstripes with the Sraosho-charana.\n'For the third time he comes near unto her, for the third\ntime he lies by her, seventy stripes with the Aspahe-astra,\nseventy stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 16,
+      "ref": "Vd 16.16",
+      "orig": "[tûiryâi upaêta tûiryâi nishasta\nýim añtare vastrem frajasât ýim añtare\nâhitem rânem frajasât afrangharezât pairi\nxshudrât kâ hê asti citha, âat mraot ahurô\nmazdå, navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.]",
+      "en": "For the fourth time he comes near unto her, for the fourth\ntime he lies by her, if he shall press the body under her\nclothes, if he shall go in between the unclean thighs, but\nwithout sexual intercourse, what is the penalty that he shall\npay?\nAhura Mazda answered: 'Ninety stripes with the Aspahe-astra,\nninety stripes with the Sraosho-charana.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 17,
+      "ref": "Vd 16.17",
+      "orig": "ýô nâirikãm cithravaitîm daxshtavaitîm\nvohunavaitîm xshudrå avi frangherezaiti nôit\nvanghô ahmât shyaothnem verezyeiti ýadhôit\nputhrahe hvâzâtahe frâ naêzem nasûm\npacât paiti ûthem barât.",
+      "en": "'Whosover shall lie in sexual intercourse with a woman who\nhas the whites or sees blood does no better deed than if he\nshould burn the corpse of his own son, born of his own body and\ndead of naeza, and drop its fat into the fire.",
+      "zh": ""
+    },
+    {
+      "chapter": 16,
+      "verse": 18,
+      "ref": "Vd 16.18",
+      "orig": "vîspe drvañtô tanu-drujô ýô\naderetô tkaêshô vîspe aderetô-tkaêshô\nýô asraoshô vîspe asraoshô ýô\nanashavanô vîspe anashavanô ýô\ntanu-perethô! ashem vohû...!!",
+      "en": "'All wicked, embodiments of the Druj, are scorners of the\njudge: all scorners of the judge are rebels against the\nSovereign: all rebels against the Sovereign are ungodly men; and\nall ungodly men are worthy of death.'",
+      "zh": ""
+    }
+  ]
+}

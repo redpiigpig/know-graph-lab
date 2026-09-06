@@ -1,0 +1,357 @@
+{
+  "slug": "vendidad-02",
+  "siglum": "Vd 2",
+  "title_zh": "祓魔法典 第 2 章‧伊瑪的地窖",
+  "title_en": "Vendidad 2",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd2sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 2,
+      "verse": 1,
+      "ref": "Vd 2.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm,\nahura mazda mainyô\nspênishta dâtare gaêthanãm\nastvaitinãm ashâum kahmâi paoiryô mashyânãm\naperese-tûm ýô ahurô mazdå anyô\nmana ýat zarathushtrâi,\nkahmâi fradaêsayô daênãm\nýãm âhûirîm zarathushtrîm.",
+      "en": "Zarathushtra asked Ahura Mazda:\nO Ahura Mazda, most beneficent Spirit, Maker\nof the material world, thou Holy One!\nWho was the first mortal, before myself, Zarathushtra,\nwith whom thou, Ahura Mazda, didst\nconverse, whom thou didst teach the Religion of Ahura,\nthe Religion of Zarathushtra?",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 2,
+      "ref": "Vd 2.2",
+      "orig": "âat mraot ahurô mazdå, ýimâi\nsrîrâi hvãthwâi ashâum zarathushtra\nahmâi paoiryô mashyânãm\naperese azem ýô ahurô mazdå\nanyô thwat ýat zarathushtrât,\nahmâi fradaêsaêm daênãm\nýãm âhûirîm zarathushtrîm.",
+      "en": "Ahura Mazda answered:\nThe fair Yima, the good shepherd, O holy Zarathushtra!\nhe was the first\nmortal, before thee, Zarathushtra, with whom I, Ahura Mazda, did\nconverse, whom I taught the Religion of Ahura, the Religion of\nZarathushtra. 3. Unto him, O Zarathushtra, I, Ahura Mazda, spake,\nsaying: 'Well, fair Yima, son of Vivanghat, be thou the preacher\nand the bearer of my Religion!' And the fair Yima, O Zarathushtra,\nreplied unto me, saying: 'I was not born, I was not taught to\nbe the preacher and the bearer of thy Religion.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 3,
+      "ref": "Vd 2.3",
+      "orig": "âat hê mraot zarathushtra\nazem ýô ahurô mazdå,\nvîsangha mê ýima srîra vîvanghana\nmeretô beretaca daênayâi,\nâat mê aêm paityaoxta\nýimô srîrô zarathushtra,\nnôit dâtô ahmi nôit cistô\nmeretô beretaca daênayâi.",
+      "en": "",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 4,
+      "ref": "Vd 2.4",
+      "orig": "âat hê mraom zarathushtra\nazem ýô ahurô mazdå,\nýezi mê ýima nôit vîvîse\nmeretô beretaca daênayâi âat mê\ngaêthå frâdhaya âat mê gaêthå\nvaredhaya âat mê vîsâi gaêthanãm\nthrâtâca haretâca aiwyâxshtaca.",
+      "en": "Then I, Ahura Mazda, said thus unto him, O Zarathushtra: 'Since\nthou dost not consent to be the preacher and the bearer of my\nReligion, then make thou my world increase, make my world grow:\nconsent thou to nourish, to rule, and to watch over my world.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 5,
+      "ref": "Vd 2.5",
+      "orig": "âat mê aêm paityaoxta\nýimô srîrô zarathushtra, azem tê\ngaêthå frâdhayeni azem tê gaêthå\nvaredhayeni azem tê vîsâne gaêthanãm\nthrâtâca haretâca aiwyâxshtaca, nôit\nmana xshathre bvat aotô vâtô nôit garemô\nnôit axtish nôit mahrkô.",
+      "en": "And the fair Yima replied unto me, O Zarathushtra, saying:\n'Yes! I will make thy world increase, I will make thy world grow.\nYes! I will nourish, and rule, and watch over thy world. There\nshall be, while I am king, neither cold wind not hot wind, neither\ndisease nor death.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 6,
+      "ref": "Vd 2.6",
+      "orig": "âat hê zaya frabarem\nazem ýô ahurô mazdå suwrãm zaranaênîm\nashtrãmca zaranyô- paêsîm.",
+      "en": "Then I, Ahura Mazda, brought two implements unto him: a\ngolden seal and a poniard inlaid with gold. Behold, here Yima\nbears the royal sway!",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 7,
+      "ref": "Vd 2.7",
+      "orig": "ýimô asti berethe xshathrayå.",
+      "en": "[Obscure.]",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 8,
+      "ref": "Vd 2.8",
+      "orig": "âat ýimâi xshathrâi thrisatô-zima\nhañjaseñti,\nâat hê îm zå bvat perene\npasvãmca staoranãmca\nmashyânãmca sûnãmca vayãmca\nâthrãmca suxrãm saociñtãm\nnôit hîm gâtvô viñden\npasvasca staorâca mashyâca.",
+      "en": "Thus, under the sway of Yima, three hundred winters passed\naway, and the earth was replenished with flocks and herds, with\nmen and dogs and birds and with red blazing fires, and there was\nroom no more for flocks, herds, and men.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 9,
+      "ref": "Vd 2.9",
+      "orig": "âat ýimâi paiti-vaêdhaêm,\nýima srîra vîvanghana\nperene îm zå hañgata\npasvãmca staoranãmca\nmashyânãmca sûnãmca vayãmca\nâthrãmca suxrãm saociñtãm\nnôit hîm gâtvô viñdeñti\npasvasca staorâca mashyâca.",
+      "en": "Then I warned the fair Yima, saying: 'O fair Yima, son of Vivanghat,\nthe earth has become full of flocks and herds, of men and dogs\nand birds and of red blazing fires, and there is room no more\nfor flocks, herds, and men.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 10,
+      "ref": "Vd 2.10",
+      "orig": "âat ýimô frashûsat raocå â\nupa rapithwãm hû paiti adhwanem,\nhô imãm zãm aiwishvat\nsuwrya zaranaênya\navi dim sifat ashtraya uityaojanô,\nfritha speñta ârmaite\nfraca shva vîca nemangha barethre pasvãmca staoranãmca\nmashyânãmca.",
+      "en": "Then Yima stepped forward, in light, southwards,\non the way of the sun, and (afterwards) he\npressed the earth with the golden seal, and bored it\nwith the poniard, speaking thus: 'O Spenta Armaiti,\nkindly open asunder and stretch thyself afar, to\nbear flocks and herds and men.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 11,
+      "ref": "Vd 2.11",
+      "orig": "âat ýimô imãm zãm vîshâvayat\naêva thrishva ahmât masyehîm ýatha para\nahmât as, tem ithra fracareñta pasvasca staorâca\nmashyâca\nhvãm anu ushtîm zaoshemca\nýatha kathaca hê zaoshô.",
+      "en": "And Yima made the earth grow larger by one-third than it was\nbefore, and there came flocks and herds and men, at their will\nand wish, as many as he wished.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": "12-14",
+      "ref": "Vd 2.12-14",
+      "orig": "âat ýimâi xshathrâi xshvash-satô-zima\nhañjaseñti, âat hê îm zå\nbvat perene ... mashyânãmca.",
+      "en": "Thus, under the sway of Yima, six hundred winters passed away,\nand the earth was replenished with flocks and herds, with men\nand dogs and birds and with red blazing fires, and there was room\nno more for flocks, herds, and men.\nAnd I warned the fair Yima, saying: 'O fair Yima, son of Vivanghat,\nthe earth has become full of flocks and herds, of men and dogs\nand birds and of red blazing fires, and there is room no more\nfor flocks, herds, and men.'\nThen Yima stepped forward, in light,\nsouthwards, on the way of the sun, and (afterwards) he\npressed the earth with the golden seal, and bored it\nwith the poniard, speaking thus: 'O Spenta Armaiti, kindly)\nopen asunder and stretch thyself afar, to bear\nflocks and herds and men.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 15,
+      "ref": "Vd 2.15",
+      "orig": "âat ýimô imãm zãm vîshâvayat\ndva thrishva ahmât masyehîm ýatha para ahmât\nas, tem ithra fracareñta pasvasca staorâca mashyâca\nhvãm anu ushtîm zaoshemca ýatha kathaca hê\nzaoshô.",
+      "en": "And Yima made the earth grow larger by two-thirds than it\nwas before, and there came flocks and herds and men, at their\nwill and wish, as many as he wished.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 16,
+      "ref": "Vd 2.16",
+      "orig": "âat ýimâi xshathrâi nava-satô-zima\nhañjaseñti, âat hê îm zå\nbvat perene pasvãmca staoranãmca mashyânãmca\nsûnãmca vayãmca âthrãmca suxrãm\nsaociñtãm, nôit hîm gâtvô\nviñden pasvasca staorâca mashyâca.",
+      "en": "Thus, under the sway of Yima, nine\nhundred winters passed away, and the earth was\nreplenished with flocks and herds, with men and\ndogs and birds and with red blazing fires, and there was\nroom no more for flocks, herds, and men.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 17,
+      "ref": "Vd 2.17",
+      "orig": "âat ýimâi paiti-vaêdhaêm, ýima\nsrîra vîvanghana perene îm zå hañgata\npasvãmca staoranãmca mashyânãmca sûnãmca\nvayãmca âthrãmca suxrãm saociñtãm,\nnôit hîm gâtvô viñdeñti\npasvasca staorâca mashyâca.",
+      "en": "And I warned the fair Yima, saying: 'O fair Yima, son of Vivanghat,\nthe earth has become full of flocks and herds, of men and dogs\nand birds and of red blazing fires, and there is room no more\nfor flocks, herds, and men.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 18,
+      "ref": "Vd 2.18",
+      "orig": "âat ýimô frashûsat raocå â\nupa rapithwãm hû paiti adhwanem, hô imãm\nzãm aiwishvat suwrya zaranaênya avi dim sifat ashtraya\nuityaojanô, fritha speñta ârmaite fraca shva\nvîca nemangha barethre pasvãmca staoranãmca\nmashyânãmca.",
+      "en": "Then Yima stepped forward, in light, southwards, on the way\nof the sun, and (afterwards) he pressed the earth with the golden\nseal, and bored it with the poniard, speaking thus: 'O Spenta\nArmaiti, kindly) open asunder and stretch thyself afar, to bear\nflocks and herds and men.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 19,
+      "ref": "Vd 2.19",
+      "orig": "âat ýimô imãm zãm vîshâvayat\nthribyô thrishvaêibyô ahmât masyehîm\nýatha para ahmât as, tem ithra fracareñta\npasvasca staorâca mashyâca hvãm anu ushtîm\nzaoshemca ýatha kathaca hê zaoshô!",
+      "en": "And Yima made the earth grow larger\nby two-thirds than it was before, and there came\nflocks and herds and men, at their will and wish,\nas many as he wished.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 20,
+      "ref": "Vd 2.20",
+      "orig": "hañjamanem frabarata ýô dadhvå ahurô\nmazdå hathra mainyaoibyô ýazataêibyô\nsrûtô airyene vaêjahi vanghuyå dâityayå,\nhañjamanem frabarata ýô ýimô\nxshaêtô hvãthwô hathra vahishtaêibyô\nmashyâkaêibyô srûtô airyene vaêjahi\nvanghuyå dâityayå.",
+      "en": "The Maker, Ahura Mazda, called together a meeting of the celestial\nYazatas in the Airyana Vaejo of high renown, by the Vanguhi Daitya.\nThe fair Yima, the good shepherd, called together\na meeting of the best of the mortals, in the Airyana\nVaejo of high renown, by the Vanguhi Daitya.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 21,
+      "ref": "Vd 2.21",
+      "orig": "â-tat hañjamanem paiti-jasat ýô\ndadhvå ahurô mazdå hathra mainyaoibyô\nýazataêibyô srûtô airyene vaêjahi\nvanghuyå dâityayå, â-tat hañjamanem\npaiti-jasât ýô ýimô xshaêtô\nhvãthwô hathra vahishtaêibyô mashyâkaêibyô\nsrûtô airyene vaêjahi vanghuyå dâityayå.",
+      "en": "To that meeting came Ahura Mazda, in the Airyana Vaejo of\nhigh renown, by the Vanguhi Daitya; he came together with the\ncelestial Yazatas.\nTo that meeting came the fair Yima, the good shepherd, in the\nAiryana Vaejo of high renown, by the Vanguhi Daitya; he came together\nwith the best of the mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 22,
+      "ref": "Vd 2.22",
+      "orig": "âat aoxta ahurô mazdå ýimâi,\nýima srîra vîvanghana avi ahûm astvañtem\nakhem zimô jangheñtu ýahmat haca staxrô\nmrûrô zyå, avi ahûm astvañtem akhem\nzimô jangheñtu ýahmat haca paurvô snaodhô\nvafra snaêzhât barezishtaêibyô gairibyô\nbãshnubyô areduyå.",
+      "en": "And Ahura Mazda spake unto Yima, saying:\n'O fair Yima, son of Vivanghat! Upon the material\nworld the evil winters are about to fall, that shall\nbring the fierce, deadly frost; upon the material\nworld the evil winters are about to fall, that shall\nmake snow-flakes fall thick, even an aredvi deep on\nthe highest tops of mountains.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 23,
+      "ref": "Vd 2.23",
+      "orig": "thrizhatca idha ýima gêush apa-jasat ýatca\nanghat thwyãstemaêshu asanghãm ýatca\nanghat bareshnush paiti gairinãm ýatca jãfnushva\nraonãm paxrumaêshu nmânaêshu.",
+      "en": "'And the beasts that live in the wilderness, and those\nthat live on the tops of the mountains, and those that live\nin the bosom of the dale shall take shelter in underground\nabodes.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 24,
+      "ref": "Vd 2.24",
+      "orig": "parô zimô aêtanghå\ndanghush anghat beretô vâstrem\ntem âfsh paurva vazaidhyâi\npasca vîtaxti vafrahe abdaca idha ýima anguhe astvaite\nsadayât ýat idha pasêush anumayehe padhem vaênâite.",
+      "en": "'Before that winter, the country would bear plenty of grass\nfor cattle, before the waters had flooded it. Now after the melting\nof the snow, O Yima, a place wherein the footprint of a sheep\nmay be seen will be a wonder in the world.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 25,
+      "ref": "Vd 2.25",
+      "orig": "âat tem varem kerenava caretu-drâjô kemcit\npaiti cathrushanãm hathra taoxma upa-bara pasvãmca\nstaoranãmca mashyânãmca sûnãmca\nvayãmca âthrãmca suxrãm saociñtãm,\nâat tem varem kerenava caretu-drâjô kemcit paiti\ncathrushanãm narãm aiwi-xshôithne caretu-drâjô\nkemcit paiti cathrushanãm gavãm gâvayanem.",
+      "en": "'Therefore make thee a Vara, long as a riding-ground on every\nside of the square, and thither bring the seeds of sheep and\noxen, of men, of dogs, of birds, and of red blazing fires. Therefore\nmake thee a Vara, long as a riding-ground on every side of the\nsquare, to be an abode for man; a Vara, long as a riding-ground\non every side of the square, for oxen and sheep.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 26,
+      "ref": "Vd 2.26",
+      "orig": "hathra âpem frâtat-caya\nhâthrô-masanghem adhwanem\nhathra marekhå avastaya, avi mat zairi-gaonem mat hvairyeite\najyamnem,\nhathra nmânå avastaya katemca fraskembemca fravâremca\npairi-vâremca.",
+      "en": "'There thou shalt make waters flow in a bed a hathra long;\nthere thou shalt settle birds, on the green that never fades,\nwith food that never fails. There thou shalt establish dwelling-places,\nconsisting of a house with a balcony, a courtyard, and as gallery.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 27,
+      "ref": "Vd 2.27",
+      "orig": "hathra vîspanãm narãm nâirinãmca\ntaoxma upa-bara ýôi heñti ainghå zemô\nmazishtaca vahishtaca sraêshtaca, hathra vîspanãm\ngêush saredhanãm taoxma upa-bara ýôi\nheñti ainghå zemô mazishtaca vahishtaca sraêshtaca.",
+      "en": "'Thither thou shalt bring the seeds of men and women, of the\ngreatest, best, and finest on this earth; thither thou shalt bring\nthe seeds of every kind of cattle, of the greatest, best, and\nfinest on this earth.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 28,
+      "ref": "Vd 2.28",
+      "orig": "hathra vîspanãm urvaranãm taoxma upa-bara\nýôi heñti ainghå zemô barezishtaca\nhubaoidhitemaca, hathra vîspanãm hvarethanãm\ntaoxma upa-bara ýôi heñti ainghå zemô\nhvarezishtaca hubaoidhitemaca, tê kerenava mithwaire ajyamnem\nvîspem â ahmât ýat aête narô\nvarefshva anghen.",
+      "en": "'Thither thou shalt bring the seeds of every kind of tree,\nof the highest of size and sweetest of odour on this earth;\nthither thou shalt bring the seeds of every kind of fruit, the\nbest of savour and sweetest of odour. All those seeds shalt\nthou bring, two of every kind, to be kept inexhaustible there,\nso long as those men shall stay in the Vara.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 29,
+      "ref": "Vd 2.29",
+      "orig": "mâ athra frakavô mâ apakavô mâ\napâvayô mâ haredhish mâ driwish mâ\ndaiwish mâ kasvîsh mâ vîzbârish\nmâ vîmîtô-dañtânô mâ\npaêsô ýô vîteretô-tanush\nmâdha-cim anyãm daxshtanãm ýôi\nheñti angrahe mainyêush daxshtem mashyâishca\npaiti nidhâtem.",
+      "en": "'There shall be no humpbacked, none\nbulged forward there; no impotent, no lunatic;\nno malicious, no liar; no one spiteful, none jealous; no one with\ndecayed tooth, no leprous to be pent up, nor any of the brands\nwherewith Angra Mainyu stamps the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 30,
+      "ref": "Vd 2.30",
+      "orig": "fratemem dainghêush nava perethwô kerenava madhemô\nxshvash nitemô tishrô, fratemem perethwô hazangrem\nnarãm nâirinãmca taoxma upa-bara madhemô\nxshvash sata nitemô tishrô sata, aiwica tê varefshva\nsuwrya zaranaênya\napica tem varem mareza dvarem raocanem hvâraoxshnem añtare-naêmât.",
+      "en": "'In the largest part of the place thou\nshalt make nine streets, six in the middle part, three\nin the smallest. To the streets of the largest part\nthou shalt bring a thousand seeds of men and\nwomen; to the streets of the middle part, six hundred;\nto the streets of the smallest part, three\nhundred. That Vara thou shalt\nseal up with thy golden seal, and thou shalt make a door, and\na window self-shining within.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 31,
+      "ref": "Vd 2.31",
+      "orig": "âat mãsta ýimô, kutha tê\nazem varem kerenavâne ýâ mê aoxta ahurô\nmazdå, âat aoxta ahurô mazdå ýimâi,\nýima srîra vîvanghana ainghå zemô\npâshnâbya vîspara zastaêibya vîxadha\nmãnayen ahe ýatha nû mashyâka xshivisti\nzemê vîshâvayeiñte.",
+      "en": "Then Yima said within himself: 'How shall I manage to make\nthat Vara which Ahura Mazda has commanded me to make?' And Ahura\nMazda said unto Yima: 'O fair Yima, son of Vivanghat! Crush the\nearth with a stamp of thy heel, and then knead it with thy hands,\nas the potter does when kneading the potter's clay.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 32,
+      "ref": "Vd 2.32",
+      "orig": "âat ýimô avatha kerenaot ýatha dim\nishat ahurô mazdå ainghå zemô pâshnâbya\nvîsparat zastaêibya vîxadhat mãnayen\nahe ýatha nû mashyâka xshivisti zemê\nvîshâvayeiñte.",
+      "en": "[And Yima did as Ahura Mazda wished; he crushed the earth\nwith a stamp of his heel, he kneaded it with his hands, as the\npotter does when kneading the potter's clay.]",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 33,
+      "ref": "Vd 2.33",
+      "orig": "âat ýimô varem kerenaot caretu-drâjô\nkemcit paiti cathrushanãm, hathra taoxma upa-barat pasvãmca\nstaoranãmca mashyânãmca sûnãmca\nvayãmca âthrãmca suxrãm saociñtãm,\nâat ýimô varem kerenaot caretu-drâjô\nkemcit paiti cathrushanãm narãm aiwi-xshôithne\ncaretu-drâjô kemcit paiti cathrushanãm gavãm\ngâvayanem.",
+      "en": "And Yima made a Vara, long as a riding-ground on every side\nof the square. There he brought the seeds of sheep and oxen, of\nmen, of dogs, of birds, and of red blazing fires. He made a Vara,\nlong as a riding-ground on every side of the square, to be an\nabode for men; a Vara, long as a riding-ground on every side of\nthe square, for oxen and sheep.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 34,
+      "ref": "Vd 2.34",
+      "orig": "hathra âpem frâtat-cayat\nhâthrô-masanghem adhwanem\nhathra marekhå avastayat avi mat zairi-gaonem mat hvairyeite\najyamnem,\nhathra nmânå avastayat katemca fraskembemca fravâremca\npairi-vâremca.",
+      "en": "There he made waters flow in a bed\na hathra long; there he settled birds, on the green\nthat never fades, with food that never fails. There\nhe established dwelling-places, consisting of a house\nwith a balcony, a courtyard, and a gallery.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 35,
+      "ref": "Vd 2.35",
+      "orig": "hathra vîspanãm narãm nâirinãmca\ntaoxma upa-barat ýôi heñti ainghå zemô\nmazishtaca vahishtaca sraêshtaca, hathra vîspanãm\ngêush saredhanãm taoxma upa-barat ýôi\nheñti ainghå zemô mazishtaca vahishtaca sraêshtaca.",
+      "en": "There he brought the seeds of men and women, of the greatest,\nbest, and finest on this earth; there he brought the seeds of\nevery kind of cattle, of the greatest, best, and finest on this\nearth.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 36,
+      "ref": "Vd 2.36",
+      "orig": "hathra vîspanãm urvaranãm taoxma upa-barat\nýôi heñti ainghå zemô barezishtaca\nhubaoidhitemaca, hathra vîspanãm hvarethanãm\ntaoxma upa-barat ýôi heñti ainghå zemô\nhvarezishtaca hubaoidhitemaca, tê kerenaot mithwaire ajyamnem\nvîspem â ahmât ýat aête narô\nvarefshva anghen.",
+      "en": "There he brought the seeds of every kind of tree, of the highest\nof size and sweetest of odour on this earth; there he brought\nthe seeds of every kind of fruit, the best of savour and sweetest\nof odour. All those seeds he brought, two of every kind, to be\nkept inexhaustible there, so long as those men shall stay in the\nVara.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 37,
+      "ref": "Vd 2.37",
+      "orig": "nôit athra frakavô nôit apakavô nôit\napâvayô nôit haredhish nôit driwish nôit\ndaiwish nôit kasvîsh nôit vîzbârish\nnôit vîmîtô-dañtânô\nnôit paêsô ýô vîteretô-tanush\nnaêdha-cim anyãm daxshtanãm ýôi\nheñti angrahe mainyêush daxshtem mashyâishca\npaiti nidhâtem.",
+      "en": "And there were no humpbacked, none bulged forward there; no\nimpotent, no lunatic; no one malicious, no liar; no one spiteful,\nnone jealous; no one with decayed tooth, no leprous to be pent\nup, nor any of the brands wherewith Angra Mainyu stamps the bodies\nof mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 38,
+      "ref": "Vd 2.38",
+      "orig": "fratemem dainghêush nava perethwô kerenaot madhemô\nxshvash nitemô tishrô fratemem perethwô hazangrem\nnarãm nâirinãmca taoxma upa-barat madhemô\nxshvash sata nitemô tishrô sata, aiwica hô varefshva\nsuwrya zaranaênya\napica hô varem marezat dvarem raocanem hvâraoxshnem\nañtare-naêmât.",
+      "en": "In the largest part of the place he made nine streets, six\nin the middle part, three in the smallest. To the streets of the\nlargest part he brought a thousand seeds of men and women; to\nthe streets of the middle part, six hundred; to the streets of\nthe smallest part, three hundred. That Vara he sealed up with\nthe golden ring, and he made a door, and a window self-shining\nwithin.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 39,
+      "ref": "Vd 2.39",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\ncayô âat aête raocå anghen ashâum\nahura mazda ýô avatha â-raocayeite aêtaêshva\nvarefshva ýô ýimô kerenaot.",
+      "en": "O Maker of the material world, thou Holy One! What are the\nlights that give light in the Vara which Yima made?",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 40,
+      "ref": "Vd 2.40",
+      "orig": "âat aoxta ahurô mazdå, hvadhâtaca\nraocå stidhâtaca, hakeret zî irixtahe sadhayaca\nvaênaite starasca måsca hvareca.",
+      "en": "Ahura Mazda answered: 'There are\nuncreated lights and created lights. The one\nthing missed there is the sight of the stars,\nthe moon, and the sun, and a year seems only as a day.",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 41,
+      "ref": "Vd 2.41",
+      "orig": "taêca ayare mainyeñte ýat ýâre,\ncathwaresatem aiwi-gâmanãm dvaêibya haca nerebya\ndva nara us-zayeiñte mithwana strica nairyasca atha aêtaêshãm\nýôi gêush saredhanãm, taêca narô\nsraêshta gaya jvaiñti aêtaêshva varefshva\nýô ýimô kerenaot.",
+      "en": "'Every fortieth year, to every couple\ntwo are born, a male and a female. And thus it\nis for every sort of cattle. And the men in the\nVara which Yima made live the happiest life.'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 42,
+      "ref": "Vd 2.42",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum,\nkô avatha daênãm mâzdayasnîm vî-barat\naêtaêshva varefshva ýô ýimô\nkerenaot, âat aoxta ahurô mazdå, vîsh\nkarshipta spitama zarathushtra.",
+      "en": "O Maker of the material world, thou Holy One! Who is he who\nbrought the Religion of Mazda into the Vara which Yima made? Ahura\nMazda answered: 'It was the bird Karshipta, O holy Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 2,
+      "verse": 43,
+      "ref": "Vd 2.43",
+      "orig": "dâtare ... ashâum, kô aêshãm\nasti anghuca ratushca, âat mraot ahurô mazdå,\nurvatat-narô zarathushtra tûmca ýô zarathushtrô!\nashem vohû...!!",
+      "en": "O Maker of the material world, thou Holy One! Who are the\nLord and the Master there? Ahura Mazda answered: 'Urvatat-nara,\nO Zarathushtra! and thyself, Zarathushtra.'",
+      "zh": ""
+    }
+  ]
+}

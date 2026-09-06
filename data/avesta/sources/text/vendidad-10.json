@@ -1,0 +1,189 @@
+{
+  "slug": "vendidad-10",
+  "siglum": "Vd 10",
+  "title_zh": "祓魔法典 第 10 章‧驅魔誦詞",
+  "title_en": "Vendidad 10",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd10sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 10,
+      "verse": 1,
+      "ref": "Vd 10.1",
+      "orig": "peresat zarathushtrô ahurem mazdãm, ahura mazda\nmainyô spênishta dâtare gaêthanãm\nastvaitinãm ashâum kutha aêtat druxsh perenâne\nýâ haca irista upa jvañtem upa-dvãsaiti\nkutha aêtat nasush perenâne ýâ haca irista\nupa jvañtem upa-raêthwaiti.",
+      "en": "Zarathushtra asked Ahura Mazda: 'O Ahura Mazda! most beneficent\nSpirit, Maker of the material world, thou Holy One! How shall\nI fight against that Druj who from the dead rushes upon the living?\nHow shall I fight against that Druj who from the dead defiles\nthe living?'",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 2,
+      "ref": "Vd 10.2",
+      "orig": "âat mraot ahurô mazdå, ime vaca framrva\nýôi heñti gâthâhva bishâmrûta\nime vaca framrva ýôi heñti gâthâhva\nthrishâmrûta ime vaca framrva ýôi heñti\ngâthâhva cathrushâmrûta ime vaca framrva\nýôi heñti gâthâhva bishâmrûtaca\nthrishâmrûtaca cathrushâmrûtaca.",
+      "en": "Ahura Mazda answered: 'Say aloud those words in the Gathas\nthat are to be said twice .\n'Say aloud those words in the Gathas that are to be said thrice.\n'Say aloud those words in the Gathas that are to be said four\ntimes.'",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 3,
+      "ref": "Vd 10.3",
+      "orig": "dâtare ... kaya aête vaca ýôi heñti\ngâthâhva bishâmrûta, âat mraot ahurô\nmazdå, ime aête vaca ýôi heñti\ngâthâhva bishâmrûta ime vaca âdhbitîm\nframrva,",
+      "en": "O Maker of the material world, thou Holy One! Which are those\nwords in the Gathas that are to be said twice?",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 4,
+      "ref": "Vd 10.4",
+      "orig": "ahyâ ýâsâ ... humatanãm ...\nashahyâ âat sairî ... ýathâ tû-î\n... humâîm thwâ îzhîm ... thwôi\nstaotarascâ ... ushtâ ahmâi ... speñtâ\nmainyû ... vohû xshathrem ... vahishtâ îshtish....",
+      "en": "Ahura Mazda answered: 'These are the words in the Gathas that\nare to be said twice, and thou shalt twice say them aloud:-\nahya yasa ... urvanem (Y28.2).\n-----\nhumatenam ... mahi (Y35.2),\nashahya aad saire ... ahubya (Y35.8),\nyatha tu i ... ahura (Y39.4),\nhumaim thwa ... hudaustema (Y41.3),\nthwoi staotaraska ... ahura (Y41.5).\n-----\nusta ahmai ... manangho (Y43.1),\nspenta mainyu ... ahuro (Y47.1),\nvohu khshathrem ... vareshane (Y51.1),\nvahista istis ... skyaothanaka (Y53.1).",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 5,
+      "ref": "Vd 10.5",
+      "orig": "âat pasca bishâmrûta vaca ime vaca framrva\nvârethrakhne baêshazya, paiti-perene angrem mainyûm\nhaca nmâna haca vîsa haca zañtu haca dainghu\nhaca havayåse-tanvô haca nâ paiti-iristô\nhaca nâirika paiti-iriste haca nmânahe nmânô-patôish\nhaca vîsô vîspatôish haca zañtêush\nzañtupatôish haca dainghêush dainghupatôish\nhaca vîspayå ashaonô stôish.",
+      "en": "'And after thou hast twice said those Bis-amrutas, thou shalt\nsay aloud these victorious, most healing words:-\n'\"I drive away Angra Mainyu from this house, from this borough,\nfrom this town, from this land; from the very body of the man\ndefiled by the dead, from the very body of the woman defiled by\nthe dead; from the master of the house, from the lord of the borough,\nfrom the lord of the town, from the lord of the land; from the\nwhole of the world of Righteousness.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 6,
+      "ref": "Vd 10.6",
+      "orig": "paiti-perene nasûm paiti-perene hãm-raêthwem\npaiti-perene paiti-raêthwem haca nmâna haca vîsa\nhaca zañtu haca dainghu haca havayåse-tanvô\nhaca nâ paiti-iristô haca nâirika paiti-iriste\nhaca nmânahe nmânô-patôish haca vîsô\nvîspatôish haca zañtêush zañtupatôish\nhaca dainghêush dainghupatôish haca vîspayå\nashaonô stôish.",
+      "en": "'\"I drive away the Nasu, I drive away direct defilement,\nI drive away indirect defilement, from this house, from this borough,\nfrom this town, from this land; from the very body of the man\ndefiled by the dead, from the very body of the woman defiled by\nthe dead; from the master of the house, from the lord of the borough,\nfrom the lord of the town, from the lord of the land; from the\nwhole of the world of Righteousness.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 7,
+      "ref": "Vd 10.7",
+      "orig": "dâtare ... kaya aête vaca ýôi heñti\ngâthâhva thrishâmrûta, âat mraot\nahurô mazdå, ime aête vaca ýôi\nheñti gâthâhva thrishâmrûta ime\nvaca âthritîm framrva,",
+      "en": "O Maker of the material world, thou Holy One! Which are those\nwords in the Gathas that are to be said thrice?",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 8,
+      "ref": "Vd 10.8",
+      "orig": "ashem vohû ... ýê sevishtô ... huxshathrôtemâi\n... duzhvarenâish....",
+      "en": "Ahura Mazda answered: 'These are the words in the Gathas that\nare to be said thrice, and thou shalt thrice say them aloud:-\nashem vohu ... (Y27.14),\nye sevisto ... paitî (Y33.11),\nhukhshathrotemai ... vahistai (Y35.5),\nduzvarenais ... vahyo (Y53.9).",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 9,
+      "ref": "Vd 10.9",
+      "orig": "âat pasca thrishâmrûta vaca ime vaca framrva\nvârethrakhne baêshazya, paiti-perene iñdrem\npaiti-perene saurum paiti-perene nånghaithîm daêum\nhaca nmâna haca vîsa haca zañtu haca dainghu.",
+      "en": "'After thou hast thrice said those Thris-amrutas, thou shalt\nsay aloud these victorious, most healing words:-\n'\"I drive away Indra, I drive away Sauru, I drive away \nthe daeva Naunghaithya, from this house, from this borough, from\nthis town, from this land; from the very body of the man defiled\nby the dead, from the very body of the woman defiled by the dead;\nfrom the master of the house, from the lord of the borough, from\nthe lord of the town, from the lord of the land; from the whole\nof the world of Righteousness.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 10,
+      "ref": "Vd 10.10",
+      "orig": "paiti-perene tauru paiti-perene zairica haca nmâna haca\nvîsa haca zañtu haca dainghu.",
+      "en": "'\"I drive away Tauru , I drive away Zairi, from this\nhouse, from this borough, from this town, from this land; from\nthe very body of the man defiled by the dead, from the very body\nof the woman defiled by the dead; from the master of the house,\nfrom the lord of the borough, from the lord of the town, from\nthe lord of the land; from the whole of the holy world.\"'",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 11,
+      "ref": "Vd 10.11",
+      "orig": "dâtare ... kaya aête vaca ýôi heñti\ngâthâhva cathrushâmrûta, âat mraot\nahurô mazdå, ime aête vaca ýôi\nheñti gâthâhva cathrushâmrûta ime\nvaca âxtûirîm framrva,",
+      "en": "O Maker of the material world, thou Holy One! Which are those\nwords in the Gathas that are to be said four times?",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 12,
+      "ref": "Vd 10.12",
+      "orig": "ýathâ ahû vairyô ... mazdâ\nat môi ... â airyêmâ ishyô....",
+      "en": "Ahura Mazda answered: 'These are the words in the Gathas that\nare to be said four times, and thou shalt four times say them\naloud:-\nyatha ahu vairyo ... (Y27.13),\nmazda ad moi ... dau ahum (Y34.15),\na airyama ishyo ... masata mazdau (Y54.1).",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 13,
+      "ref": "Vd 10.13",
+      "orig": "âat pasca cathrushâmrûta vaca ime vaca framrva\nvârethrakhne baêshazya, paiti-perene aêshmem\nxrvîm-drûm paiti-perene akatashem daêum haca\nnmâna haca vîsa haca zañtu haca dainghu.",
+      "en": "'After thou hast said those Chathrus-amrutas four times, thou\nshalt say aloud these victorious, most healing words:-\n'\"I drive away Aeshma, the fiend of the murderous spear,\nI drive away the daeva Akatasha, from this house, from this borough,\nfrom this town, from this land; from the very body of the man\ndefiled by the dead, from the very body of the woman defiled by\nthe dead; from the master of the house, from the lord of the borough,\nfrom the lord of the town, from the lord of the land; from the\nwhole of the world of Righteousness.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 14,
+      "ref": "Vd 10.14",
+      "orig": "paiti-perene varenya daêvô paiti-perene vâtîm\ndaêvô haca nmâna haca vîsa haca zañtu\nhaca dainghu.",
+      "en": "'\"I drive away the Varenya daevas, I drive away the\nwind-daeva, from this house, from this borough, from this town,\nfrom this land; from the very body of the man defiled by the dead,\nfrom the very body of the woman defiled by the dead; from the\nmaster of the house, from the lord of the borough, from the lord\nof the town, from the lord of the land; from the whole of the\nworld of Righteousness.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 15,
+      "ref": "Vd 10.15",
+      "orig": "ime aête vaca ýôi heñti gâthâhva\nbishâmrûta ime aête vaca ýôi heñti\ngâthâhva thrishâmrûta ime aête vaca\nýôi heñti gâthâhva cathrushâmrûta.",
+      "en": "'These are the words in the Gathas that are to be said twice;\nthese are the words in the Gathas that are to be said thrice;\nthese are the words in the Gathas that are to be said four times.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 16,
+      "ref": "Vd 10.16",
+      "orig": "ime aête vaca ýôi heñti angrahe\nmainyêush snathem ime aête vaca ýôi heñti\naêshmahe xrvîm-draosh snathem ime aête vaca\nýôi heñti mâzainyanãm daêvanãm\nsnathem ime aête vaca ýôi heñti vîspanãm\ndaêvanãm snathem.",
+      "en": "'These are the words that smite down Angra Mainyu; these are\nthe words that smite down Aeshma, the fiend of the murderous spear;\nthese are the words that smite down the daevas of Mazana; these\nare the words that smite down all the daevas.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 17,
+      "ref": "Vd 10.17",
+      "orig": "ime aête vaca ýôi heñti avainghå\ndrujô avainghå nasâvô hamaêstârem\nýâ haca irista upa jvañtem upa- dvãsaiti\nime aête vaca ýôi heñti avainghå\ndrujô avainghå nasâvô hamaêstârem\nýâ haca irista upa jvañtem upa-raêthwaiti.",
+      "en": "'These are the words that stand, against that Druj, against\nthat Nasu, who from the dead rushes upon the living, who from\nthe dead defiles the living.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 18,
+      "ref": "Vd 10.18",
+      "orig": "âat tûm zarathushtra nava makha nithweresôish\nýat anghat ainghå zemô vî-âpôtememca\nvî-urvarô-tememca ana- hvaretha pasu-vîra, ýaozhdå\nmashyâi aipi zãthem vahishta hâ ýaozhdå\nzarathushtra ýâ daêna mâzdayasnish ýô\nhvãm daênãm ýaozhdâite humatâishca\nhûxtâishca hvarshtâishca.",
+      "en": "'Therefore, O Zarathushtra! thou shalt dig nine holes in\nthe part of the ground where there is least water and where there\nare fewest trees; where there is nothing that may be food either\nfor man or beast; \"for purity is for man, next to life, the,\ngreatest good, that purity, O Zarathushtra, that is in the Religion\nof Mazda for him who cleanses his own self with good thoughts,\nwords, and deeds.\"",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 19,
+      "ref": "Vd 10.19",
+      "orig": "daênãm erezvô ýaozhdaithîsha\natha zî ainghå asti ýaozhdâitish kahmâicit\nanghêush astvatô havayå erezvô daênayå\nýô hvãm daênãm ýaozhdâite\nhumatâishca hûxtâishca hvarshtâishca.",
+      "en": "'Make thy own self pure, O righteous man! any one in the world\nhere below can win purity for his own self, namely, when he cleanses\nhis own self with good thoughts, words, and deeds.",
+      "zh": ""
+    },
+    {
+      "chapter": 10,
+      "verse": 20,
+      "ref": "Vd 10.20",
+      "orig": "ýathâ ahû vairyô ... kêm-nâ\nmazdâ ... mâmereñcainîsh gaêthå\nastvaitîsh ashahe! ashem vohû...!!",
+      "en": "'\"Yatha ahu vairyo: - The will of the Lord is the law\nof righteousness,\" &c.\n'\"Kem-na mazda: - What protector hast thou given unto me,\nO Mazda! while the hate of the wicked encompasses me?\" &c.\n'\"Ke verethrem-ja: - Who is the victorious who will protect\nthy teaching?\" &c.\n'\"Keep us from our hater, O Mazda and Armaiti Spenta! Perish,\nO fiendish Druj! ... Perish away to the regions of the north,\nnever more to give unto death the living world of Righteousness!\"'",
+      "zh": ""
+    }
+  ]
+}

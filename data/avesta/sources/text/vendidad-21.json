@@ -1,0 +1,173 @@
+{
+  "slug": "vendidad-21",
+  "siglum": "Vd 21",
+  "title_zh": "祓魔法典 第 21 章‧雲、雨與諸水",
+  "title_en": "Vendidad 21",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd21sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 21,
+      "verse": 1,
+      "ref": "Vd 21.1",
+      "orig": "nemase-tê gaospeñta nemase-tê gaosh hudå\nnemase-tê frâdheñte nemase-tê varedheñte\nnemase-tê dâthrô baxtem vahishtâi ashaone\nanazãthâi ashaone ýâ jahi mereñcaite\nashemaokhô anashava mashyasca drvå sâsta.",
+      "en": "Hail, bounteous bull! Hail to thee, beneficent bull! Hail\nto thee, who makest increase! Hail to thee, who makest growth! \nHail to thee, who dost bestow his part upon the righteous\nfaithful, and wilt bestow it on the faithful yet unborn! Hail to\nthee, whom the Jahi kills, and the ungodly Ashemaogha, and the\nwicked tyrant.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 2,
+      "ref": "Vd 21.2",
+      "orig": "ýayata dunma ýayata frâ-âpem nyâpem\nupa-âpem hazangrô-vârayô baêvare-vârascit\nmruyå ashâum zarathushtra, ýaskahe apanashtahe\nmahrkahe apanashtahe jaini-ýaskahe apanashtahe jaini-mahrkahe\napanashtahe gadhahe apa-gadhahe apanashtahe.",
+      "en": "'Come, come on, O clouds, from up above, down on the earth,\nby thousands of drops, by myriads of drops:' thus say, O holy\nZarathushtra! 'to destroy sickness, to destroy death, to destroy\nthe sickness that kills, to destroy death that kills, to destroy\nGadha and Apagadha.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 3,
+      "ref": "Vd 21.3",
+      "orig": "ýezi uzîrô-hva mereñcaite arezahva\nbishazyât ýezi arezahva mereñcaite xshapô-hva\nbishazyât ýezi xshapô- hva mereñcaite\nushahva bishazyât vî-vâreñti vî-vârâhu\nnava âfsh nava zå nava urvarå nava baêshazå\nnavata baêshaza-kesha.",
+      "en": "'If death come after noon, may healing come at eve!\n'If death come at eve, may healing come at night!\n'If death come at night, may healing come at dawn!\n'And showers shower down new water, new earth, new plants,\nnew healing powers, and new healing.\n \n IIIa.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 4,
+      "ref": "Vd 21.4",
+      "orig": "ýatha zrayô vouru-kashem apô asti hañjakhmanem\nusihishta hãm-ýaêtånghô ýaonemca\navi zãmca zãmca avi ýaonemca usihishta pâiri-haêzanguha\nýehe zãthaêca vaxshaêca ýaonem\ndadhât ahurô mazdå!",
+      "en": "'As the sea Vouru-kasha is the gathering place of the\nwaters, rising up and going down, up the aerial way and down the\nearth, down the earth and up the aerial way: thus rise up and\nroll along! thou in whose rising and growing Ahura Mazda made the\naerial way.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 5,
+      "ref": "Vd 21.5",
+      "orig": "uzayara uzîra hvarexshaêta aurvat-aspa tarasca\nharãm berezaitîm raoxshnem kerenavâhi dâmahva\ntemcit uzîra\nýezi ahi garô deretem\nmazdadhâtem paiti pañtãm\nbakhô-baxtem paiti ýaonem\nfrathwarshtem paiti âfeñtem.",
+      "en": "'Up! rise up and roll along! thou swift-horsed Sun, above\nHara Berezaiti, and produce light for the world (and mayst thou\n[O man!] rise up there, if thou art to abide in Garo-nmanem),\nalong the path made by Mazda, along the way made by the gods, the\nwatery way they opened.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 6,
+      "ref": "Vd 21.6",
+      "orig": "[âat ana parô dush-kereta] âat ana parô\nmãthrô speñtô, frâ-tê zãthemca\nvaxshathemca azem idha frasnayeni frâ tê kehrpemca\ntevîshîmca ýaozhdathâni kerenaomi thwãm\nhacat-puthrãm hacat-paêmanyãm.",
+      "en": "'And the Holy Word [manthra spenta] shall keep away the evil: Of thee [O\nchild!] I will cleanse the birth and growth; of thee [O woman!] I\nwill make the body and the strength pure; I make thee rich in\nchildren and rich in milk;",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 7,
+      "ref": "Vd 21.7",
+      "orig": "kâravaiti paêmavaiti xshviptavaiti raokhnavaiti\nmazgavaiti frazaiñtivaiti frâ-tê hazangrem\nxãm azem idha frasnayeni gaodhanem avi hañtacinå\nýat asti puthrahe thrimô.",
+      "en": "'Rich in seed, in milk, in fat, in marrow, and in\noffspring. I shall bring to thee a thousand pure springs,\nrunning towards the pastures that give food to the child.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 8,
+      "ref": "Vd 21.8",
+      "orig": "ýatha zrayô ... ýehe zãthaêca\nvaxshaêca zãm dadhât ahurô mazdå!",
+      "en": "'As the sea Vouru-kasha is the gathering place of the\nwaters, rising up and going down, up the aerial way and down the\nearth, down the earth and up the aerial way:\n'Thus rise up and roll along! thou in whose rising and\ngrowing Ahura Mazda made the earth.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 9,
+      "ref": "Vd 21.9",
+      "orig": "uzayara uzîra mångha gaocithra tarasca harãm\nberezaitîm raoxshnem kerenavâhi dâmahva temcit\nuzîra ýezi ahi garô deretem mazdadhâtem\npaiti pañtãm bakhô-baxtem paiti ýaonem\nfrathwarshtem paiti âfeñtem.",
+      "en": "'Up! rise up, thou Moon, that dost keep in thee the seed of\nthe bull;\n'Rise up above Hara Berezaiti, and produce light for the\nworld (and mayst thou [O man!] rise up there, if thou art to\nabide in Garo-nmanem), along the path made by Mazda, along the\nway made by the gods, the watery way they opened.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 10,
+      "ref": "Vd 21.10",
+      "orig": "[âat ana parô dush-kereta] âat ana parô\nmãthrô speñtô, frâ-tê zãthemca\nvaxshathemca azem idha frasnayeni frâ-tê kehrpemca\ntevîshîmca ýaozhdathâni kerenaomi thwãm\nhacat-puthrãm hacat-paêmanyãm.",
+      "en": "'And the Holy Word [manthra spenta] shall keep away the evil: Of thee [O\nchild!] I will cleanse the birth and growth; of thee [O woman!] I\nwill make the body and the strength pure; I make thee rich in\nchildren and rich in milk;",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 11,
+      "ref": "Vd 21.11",
+      "orig": "kâravaiti paêmavaiti xshviptavaiti raokhnavaiti\nmazgavaiti frazaiñtivaiti frâ-tê hazangrem\nxãm azem idha frasnayeni gaodhanem avi hañtacinå\nýat asti puthrahe thrimô.",
+      "en": "'Rich in seed, in milk, in fat, in marrow, and in offspring. \nI shall bring to thee a thousand pure springs, running towards\nthe pastures that give food to the child.\n \n IIIc.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 12,
+      "ref": "Vd 21.12",
+      "orig": "ýatha zrayô vourukashem apô asti hañjakhmanem\nusihishta hãm-ýaêtånghô ýaonemca\navi zãmca zãmca avi ýaonemca usihishta pâiri-haêzanguha\nýehe zãthaêca vaxshaêca vaxshem dadhât\nahurô mazdå.",
+      "en": "'As the sea Vouru-kasha is the gathering place of the\nwaters, rising up and going down, up the aerial way and down the\nearth, down the earth and up the aerial way:\n'Thus rise up and roll along! thou in whose rising and\ngrowing Ahura Mazda made everything that grows.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 13,
+      "ref": "Vd 21.13",
+      "orig": "uzayara uzîra stâra gufra afshcithrånghô\ntarasca harãm berezaitîm raoxshnem kerenavâhi\ndâmahva temcit uzîra ýezi ahi garô deretem\nmazdadhâtem paiti pañtãm bakhô-baxtem\npaiti ýaonem frathwarshtem paiti âfeñtem.",
+      "en": "'Up! rise up, ye deep Stars, that have in you the seed of\nwaters;\n'Rise up above Hara Berezaiti and produce light for the\nworld (and mayst thou [O man!] rise up there, if thou art to\nabide in Gara-nmanem), along the path made by Mazda. along the\nway made by the gods, the watery way they opened.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 14,
+      "ref": "Vd 21.14",
+      "orig": "[âat ana parô dush-kereta] âat ana parô\nmãthrô speñtô, frâ-tê zãthemca\nvaxshathemca azem idha frasnayeni frâ-tê kehrpemca\ntevîshîmca ýaozhdathâni kerenaomi thwãm\nhacat-puthrãm hacat-paêmanyãm.",
+      "en": "'And the Holy Word [manthra spenta] shall keep away the evil: Of thee [O\nchild!] I will cleanse the birth and growth; of thee [O woman!] I\nwill make the body and the strength pure; I make thee rich in\nchildren and rich in milk;",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 15,
+      "ref": "Vd 21.15",
+      "orig": "kâravaiti paêmavaiti xshviptavaiti raokhnavaiti\nmazgavaiti frazaiñtivaiti frâ-tê hazangrem\nxãm azem idha frasnayeni gaodhanem avi hañtacinå\nýat asti puthrahe thrimô.",
+      "en": "'Rich in seed, in milk, in fat, in marrow, and in offspring. \nI shall bring to thee a thousand pure springs, running towards\nthe pastures that will give food to the child.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 16,
+      "ref": "Vd 21.16",
+      "orig": "ýatha zrayô vourukashem apô asti hañjakhmanem\nusihishta hãm-ýaêtånghô ýaonemca\navi zãmca zãmca avi ýaonemca usihishta pâiri-haêzanguha\nýehe zãthaêca vaxshaêca uzayarem dadhât\nahurô mazdå!",
+      "en": "'As the sea Vouru-kasha is the gathering place of the\nwaters, rising up and going down, up the aerial way and down the\nearth, down the earth and up the aerial way:\n'Thus rise up and roll along! ye in whose rising and growing\nAhura Mazda made everything that rises.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": 17,
+      "ref": "Vd 21.17",
+      "orig": "uzayara uzîra paxrushta hî kaxuzhi paxrushta hî\nayehye paxrushta hî ýâtumaiti jahi.",
+      "en": "'In your rising away will the Kahvuzi fly and cry, away\nwill the Ayehi fly and cry, away will the Jahi who follows the\nYatu, fly and cry.\n[18. 'I drive away Ishire and I drive away Aghuire; I drive away\nAghra and I drive away Ughra; I drive away sickness and I drive\naway death; I drive away pain and I drive away fever; I drive\naway Sarana and I drive away Sarastya. I drive away Azana and I\ndrive away Azahva; I drive away Kurugha and I drive away\nAzhivaka; l drive away Duruka and I drive away Astairya; I drive\naway the evil eye, rottenness, and infection which Angra Mainyu\nhas created against the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 21,
+      "verse": "18-23",
+      "ref": "Vd 21.18-23",
+      "orig": "paiti-perene ashire ... astvaitîsh ashahe!\nashem vohû...!!",
+      "en": "'I drive away all manner of sickness and death, all the\nYatus and Pairikas, and all the wicked Jainis.\n' A Airyema ishyo :-\nMay the vow-fulfilling Airyaman come\nhere, for the men and women of Zarathushtra to rejoice, for\nVohu-mano to rejoice; with the desirable reward that Religion\ndeserves. I solicit for holiness that boon that is vouchsafed by\nAhura!\n'May the vow-fulfilling Airyaman smite all manner of\nsickness and death, all the Yatus and Pairikas, and all the\nwicked Jainis.\n' Yatha ahu vairyo :-\nThe will of the Lord is the law of righteousness!\n' Kem-na mazda :-\nWhat protector hast thou given unto me ... ?\n'Ke verethrem-ja:- Who is the victorious who will protect\nthy teaching ... ?\n'Keep us from our hater, O Mazda and Armaiti Spenta! \nPerish, O fiendish Druj! Perish, O brood of the fiend! Perish,\nO world of the fiend! Perish away, O Druj! Perish away to the\nregions of the north, never more to give unto death the living\nworld of Righteousness!]",
+      "zh": ""
+    }
+  ]
+}

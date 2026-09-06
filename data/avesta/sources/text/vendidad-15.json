@@ -1,0 +1,397 @@
+{
+  "slug": "vendidad-15",
+  "siglum": "Vd 15",
+  "title_zh": "祓魔法典 第 15 章‧重罪與棄嬰",
+  "title_en": "Vendidad 15",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd15sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 15,
+      "verse": 1,
+      "ref": "Vd 15.1",
+      "orig": "caiti tâ shyaothna varshta ýâ anghush astvå\nverezyeiti fraêta apatita anuzvarshta ainghat haca shyaothnâvareza\natha bavaiñti peshô-tanva.",
+      "en": "How many are the sins that men commit and that, being committed\nand not confessed, nor atoned for, make their committer a Peshotanu?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 2,
+      "ref": "Vd 15.2",
+      "orig": "âat mraot ahurô mazdå, pañca ashâum\nzarathushtra, paoirîm aêtaêshãm shyaothnanãm\nýôi vereziñti mashyâka ýô\nnarem ashavanem anyô-varenâi vâ anyô-tkaêshâi\nvâ kasyanghe sanghâi dadhâiti vîdhvå\navat hava xrathwa parâiti ainghat haca shyaothnâvareza\natha bavaiñti peshô-tanva.",
+      "en": "Ahura Mazda answered: 'There are five such sins, O holy Zarathushtra!\nIt is the first of these sins that men commit when a man teaches\none of the faithful another faith, another law, a lower doctrine,\nand he leads him astray with a full knowledge and conscience of\nthe sin: the man who has done the deed becomes a Peshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 3,
+      "ref": "Vd 15.3",
+      "orig": "bitîm aêtaêshãm shyaothnanãm\nýôi vereziñti mashyâka ýô\nsûne ýim pasush-haurve vâ vish-haurve vâ\nastanãm ahmarshtanãm dadhâiti garemanãm\nvâ hvarethanãm,",
+      "en": "'It is the second of these sins when a man gives bones too\nhard or food too hot to a shepherd's dog or to a house-dog;",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 4,
+      "ref": "Vd 15.4",
+      "orig": "ýezica aête asti dâtâhva aråñte\ngaremôhva vîdhåñte ýat vâ\naête garema hvaretha stamanem vâ hizvãm vâ\napa-dazhat ahmat haca irishyât ýezi tat paiti irishyeiti\nainghat haca shyaothnâvareza atha bavaiñti peshô-tanva.",
+      "en": "'If the bones stick in the dog's teeth or stop in his throat;\nor if the food too hot burn his mouth or his tongue, he may come\nto grief thereby; if he come to grief thereby, the man who has\ndone the deed becomes a Peshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 5,
+      "ref": "Vd 15.5",
+      "orig": "thritîm aêtaêshãm shyaothnanãm\nýôi vereziñti mashyâka ýô\ngadhwãm ýãm aputhrãm janaiti vâ\nvayeiti vâ xraosyeiti vâ pazdayeiti vâ.",
+      "en": "'It is the third of these sins when a man smites a bitch big\nwith young or affrights her by running after her, or shouting\nor clapping with the hands;",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 6,
+      "ref": "Vd 15.6",
+      "orig": "ýezica aêsha gadhwa maêkhe vâ câiti\nvâ vaêmi vâ urûidhi vâ apô\nvâ nâvayå paidhyâite ahmat haca irishyât\nýezi tat paiti irishyeiti ainghat haca shyaothnâvareza\natha bavaiñti peshô-tanva.",
+      "en": "'If the bitch fall into a hole, or a well, or a precipice,\nor a river, or a canal, she may come to grief thereby; if she\ncome to grief thereby, the man who has done the deed becomes a\nPeshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 7,
+      "ref": "Vd 15.7",
+      "orig": "tûirîm aêtaêshãm shyaothnanãm\nýôi vereziñti mashyâka ýô\nnâirikãm cithravaitîm daxshtavaitîm vohunavaitîm\nxshudrå avi frangherezaiti ainghat haca shyaothnâvareza\natha bavaiñti peshô-tanva.",
+      "en": "'It is the fourth of these sins when a man has intercourse\nwith a woman who has the whites or sees the blood, the man that\nhas done the deed becomes a Peshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 8,
+      "ref": "Vd 15.8",
+      "orig": "puxdhem aêtaêshãm shyaothnanãm ýôi\nvereziñti mashyâka ýô nâirikãm\nýãm aputhrãm pipyûshîm vâ\napipyûshîm vâ anasaxtãm para xshudrå\navi frangherezaiti ahmat haca irishyât ýezi tat paiti\nirishyeiti ainghat haca shyaothnâvareza atha bavaiñti\npeshô-tanva!",
+      "en": "'It is the fifth of these sins when a man has intercourse\nwith a woman quick with child, whether the milk has already come\nto her breasts or has not yet come: she may come to grief thereby;\nif she come to grief thereby, the man who has done the deed becomes\na Peshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 9,
+      "ref": "Vd 15.9",
+      "orig": "ýô kainînem upâiti stâtô-\nratûm vâ astâtô-ratûm vâ paradâtãm\nvâ aparadâtãm vâ puthrãmca hê\ndadhâiti mâ-nô aêsha ýâ kaine\nmashyânãm parô fsharemât tarô daxshtem\npârayât tarô apemca urvarãmca.",
+      "en": "'If a man come near unto a damsel, either dependent on the\nchief of the family or not dependent, either delivered [unto a\nhusband] or not delivered, and she conceives by him, let her\nnot, being ashamed of the people, produce in herself the menses,\nagainst the course of nature, by means of water and plants.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 10,
+      "ref": "Vd 15.10",
+      "orig": "ýezica aêsha ýâ kaine mashyânãm\nparô fsharemât tarô daxshtem parâiti tarô\napemca urvarãmca aêtahmâyush paiti varshta\nshyaothna.",
+      "en": "'And if the damsel, being ashamed of the people, shall produce\nin herself the menses gainst the course of nature, by means of\nwater and plants, it is a fresh sin as heavy [as the first].",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 11,
+      "ref": "Vd 15.11",
+      "orig": "ýô kainînem upâiti stâtô-\nratûm vâ astâtô-ratûm vâ paradâtãm\nvâ aparadâtãm vâ puthrãmca hê\ndadhâiti mâ-nô aêsha ýâ kaine\nmashyânãm parô fsharemât hvatô\ngarewem raêshayât.",
+      "en": "'If a man come near unto a damsel, either dependent on the\nchief of the family or not dependent, either delivered [unto a\nhusband] or not delivered, and she conceives by him, let her not,\nbeing ashamed of the people, destroy the fruit in her womb.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 12,
+      "ref": "Vd 15.12",
+      "orig": "ýezica aêsha ýâ kaine mashyânãm\nparô fsharemât hvatô garewem irishyeiti pterebyô\nâstryeiti pterebyô irishyeiti pterebyô irishiñtãm\nraêshê cikaên baodhô- varshtahe cithaya.",
+      "en": "'And if the damsel, being ashamed of the people, shall destroy\nthe fruit in her womb, the sin is on both the father and herself,\nthe murder is on both the father and herself; both the father\nand herself shall pay the penalty for wilful murder.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 13,
+      "ref": "Vd 15.13",
+      "orig": "ýô kainînem upâiti stâtô-\nratûm vâ astâtô-ratûm vâ paradâtãm\nvâ aparadâtãm vâ puthrãmca hê\ndadhâiti ýezica vaocât aêsha ýâ\nkaine, puthrem aêm narô varshta ýezica vaocât\naêshô nâ hanãm aêtaêshãm\njîjishanguha peresanguha",
+      "en": "'If a man come near unto a damsel, either dependent on the\nchief of the family or not dependent, either delivered [unto a\nhusband] or not delivered, and she conceives by him, and she says,\n\"I have conceived by thee;\" and he replies, \"Go\nthen to the old woman and apply to her for one of her drugs,\nthat she may procure thee miscarriage;\"",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 14,
+      "ref": "Vd 15.14",
+      "orig": "aêtadha aêsha ýâ kaine hanãm\naêtaêshãm jîjishâiti peresâiti\naêsha hana frabaraiti banghem vâ shaêtem vâ\nkhnânem vâ fraspâtem vâ kãmcit\nvâ vîtâcinanãm urvaranãm, aêtahmât\nputhrât mimarexshanguha aêtadha aêsha ýâ\nkaine aêtahmât puthrât mimarxshâite havañta\naêtahe shyaothnahe verezyãn nâca kainica hanâca.",
+      "en": "'And the damsel goes to the old woman and applies to her for\none of her drugs, that she may procure her miscarriage; and the\nold woman brings her some Banga, or Shaeta, a drug that kills\nin the womb or one that expels out of the womb, or some other\nof the drugs that produce miscarriage and [the man says], \"Cause\nthy fruit to perish!\" and she causes her fruit to perish;\nthe sin is on the head of all three, the man, the damsel, and\nthe old woman.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 15,
+      "ref": "Vd 15.15",
+      "orig": "ýô kainînem upâiti stâtô-\nratûm vâ astâtô-ratûm vâ paradâtãm\nvâ aparadâtãm vâ puthrãmca hê\ndadhâiti vîspem â ahmât thrâthrem\nkerenavât ýat aêsha ýô aperenâyûkô\nuzjasât.",
+      "en": "'If a man come near unto a damsel, either dependent on the\nchief of the family or not dependent, either delivered [unto a\nhusband] or not delivered, and she conceives by him, so long shall\nhe support her, until the child be born.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 16,
+      "ref": "Vd 15.16",
+      "orig": "ýezi nôit harethrem baraiti aêtadha aêsha\nýô aperenâyûkô adhâityô-angharethrem\nirishyât para hê irishiñtô raêshem\ncikayat baodhô-varshtahe cithaya.",
+      "en": "'If he shall not support her, so that the child comes to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 17,
+      "ref": "Vd 15.17",
+      "orig": "dâtare ... ýezi tat frajasât añtare\nsairi varezâne kahmât mazdayasnanãm harethrem\nbarât,",
+      "en": "O Maker of the material world, thou Holy One! If she be near\nher time, which is the worshipper of Mazda that shall support\nher?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 18,
+      "ref": "Vd 15.18",
+      "orig": "âat mraot ahurô mazdå, ýô kainînem\nupâiti stâtô-ratûm vâ astâtô-ratûm\nvâ paradâtãm vâ aparadâtãm\nvâ vîspem â ahmât thrâthrem kerenavât\nýat aêsha ýô aperenâyûkô\nuzjasât.",
+      "en": "Ahura Mazda answered: 'If a man come near unto a damsel, either\ndependent on the chief of the family or not dependent, either\ndelivered [unto a husband] or not delivered, and she conceives\nby him, so long shall he support her, until the child be born.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 19,
+      "ref": "Vd 15.19",
+      "orig": "ýezi nôit harethrem baraiti aêtadha hê\nvîspå hâirishîsh frâshnaoiti bipaitishtanaca\ncathware-paitishtanaca [aêsha bipaitishtâna ýâ\nkaine aêsha cathware- paitishtâna ýâ\ngadhwa.]",
+      "en": "'If he shall not support her ....\n'It lies with the faithful to look in the same way after every\npregnant female, either two-footed or four-footed, two-footed\nwoman or four-footed bitch.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 20,
+      "ref": "Vd 15.20",
+      "orig": "dâtare ... ýezi tat frajasât añtare\nsairi varezâne kahmât mazdayasnanãm harethrem\nbarât.",
+      "en": "O Maker of the material world, thou Holy One! If (a bitch)\nbe near her time, which is the worshipper of Mazda that shall\nsupport her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 21,
+      "ref": "Vd 15.21",
+      "orig": "âat mraot ahurô mazdå, ýô hê\nanghat nazdishtem nmânem uzdasta aêtahmâyush\npaiti harethrem vîspem â ahmât thrâthrem\nkerenavât ýat aête ýôi spâna\nuzjasãn.",
+      "en": "Ahura Mazda answered: 'He whose house stands nearest, the\ncare of supporting her is his; so long shall he support her,\nuntil the whelps be born.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 22,
+      "ref": "Vd 15.22",
+      "orig": "ýezi nôit harethrem baraiti aêtadha aête\nýôi spâna adhâityô-angharethrem\nirishyãn para aêshãm irishiñtãm\nraêshê cikaên baodhô-varshtahe cithaya.",
+      "en": "'If he shall not support her, so that the whelps come to grief,\nfor want of proper support; he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 23,
+      "ref": "Vd 15.23",
+      "orig": "dâtare ... ýezica aêsha gadhwa ushtrô-\nstânaêshva frajasât kahmât mazdayasnanãm\nharethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in a stable for camels, which is the\nworshipper of Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "24-25",
+      "ref": "Vd 15.24-25",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\nushtrô-stânem uzdasta ýenghå vô\naêshô ushtrô-stânish anghat aêtahmâyush\npaiti harethrem vîspem â ahmât....",
+      "en": "Ahura Mazda answered: 'He who built the stable for camels\nor whoso holds it, the care of supporting her is his; so long\nshall he support her, until the whelps be born.\n'If he shall not support her, so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 26,
+      "ref": "Vd 15.26",
+      "orig": "dâtare ... ýezica aêsha gadhwa aspô-\nstânaêshva frajasât kahmât mazdayasnanãm\nharethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in a stable for horses, which is the\nworshipper of Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "27-28",
+      "ref": "Vd 15.27-28",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\naspô-stânem uzdasta ýenghå vô aêshô\naspô-stânish anghat aêtahmâyush paiti\nharethrem vîspem â ahmât....",
+      "en": "Ahura Mazda answered: 'He who built the stable for horses\nor whoso holds it, the care of supporting her is his; so long\nshall he support her, until the whelps be born.\n'If he shall not support her, so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 29,
+      "ref": "Vd 15.29",
+      "orig": "dâtare ... ýezica aêsha gadhwa gavô-\nstânaêshva frajasât kahmât mazdayasnanãm\nharethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in a stable for oxen, which is the\nworshipper of Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "30-31",
+      "ref": "Vd 15.30-31",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\ngavô-stânem uzdasta ýenghå vô aêshô\ngavô-stânish anghat aêtahmâyush paiti\nharethrem vîspem â ahmât....",
+      "en": "Ahura Mazda answered: 'He who built the stable for oxen or\nwhoso holds it, the care of supporting her is his; so long shall\nhe support her, until the whelps be born.\n'If he shall not support her, so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 32,
+      "ref": "Vd 15.32",
+      "orig": "dâtare ... ýezica aêsha gadhwa pasush-\nhastaêshva frajasât kahmât mazdayasnanãm\nharethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in a sheep-fold, which is the worshipper\nof Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "33-34",
+      "ref": "Vd 15.33-34",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\npasush-hastem uzdasta ýenghå vô aêshô\npasush-hastish anghat aêtahmâyush paiti harethrem\nvîspem â ahmât....",
+      "en": "Ahura Mazda answered: 'He who built the sheepfold or whoso\nholds it, the care of supporting her is his; so long shall he\nsupport her, until the whelps be born.\n'If he shall not support her so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 35,
+      "ref": "Vd 15.35",
+      "orig": "dâtare ... ýezica aêsha gadhwa uzdaêzaêshva\nfrajasât kahmât mazdayasnanãm harethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying on the earth-wall,\nwhich is the worshipper of Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": "36-37",
+      "ref": "Vd 15.36-37",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\nuzdaêzem uzdishta ýenghå vô aêshô\nuzdaêzish anghat aêtahmâyush paiti harethrem\nvîspem â ahmât....",
+      "en": "Ahura Mazda answered: 'He who erected the wall or whoso holds\nit, the care of supporting her is his; so long shall he support\nher, until the whelps be born.\n'If he shall not support her, so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 38,
+      "ref": "Vd 15.38",
+      "orig": "dâtare ... ýezica aêsha gadhwa avakañtaêshva\nfrajasât kahmât mazdayasnanãm harethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in the moat, which is the worshipper\nof Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 39,
+      "ref": "Vd 15.39",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\navakanem avakañta ýenghå vô aêshô\navakanish anghat aêtahmâyush paiti harethrem vîspem\nâ ahmât thrâthrem kerenavât ýat\naête ýôi spâna uzjasãn.",
+      "en": "Ahura Mazda answered: 'He who dug the moat or whoso holds\nit, the care of supporting her is his; so long shall he support\nher, until the whelps be born.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 40,
+      "ref": "Vd 15.40",
+      "orig": "ýezi nôit harethrem baraiti aêtadha aête\nýôi spâna adhâityô-angharethrem\nirishyãn para aêshãm irishiñtãm\nraêshê cikaên baodhô-varshtahe cithaya.",
+      "en": "'If he shall not support her, so that the whelps come to grief,\nfor want of proper support, he shall pay for it the penalty for\nwilful murder.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 41,
+      "ref": "Vd 15.41",
+      "orig": "dâtare ... ýezica aêsha gadhwa avi madheme\nvâ vâstre vâ frajasât kahmât mazdayasnanãm\nharethrem barât.",
+      "en": "O Maker of the material world, thou Holy One! If a bitch be\nnear her time and be lying in the middle of a pasture-field, which\nis the worshipper of Mazda that shall support her?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 42,
+      "ref": "Vd 15.42",
+      "orig": "âat mraot ahurô mazdå, ýô aêtem\nvâstri uzdasta ýenghå vô aêshô\nvâstrish anghat aêtahmâyush paiti harethrem,",
+      "en": "Ahura Mazda answered: 'He who sowed the pasture-field or whoso\nholds it, the care of supporting her is his; [so long shall he\nsupport her, until the whelps be bo If he shall not support her,\nso that the whelps come to grief, for want of proper support,\nhe shall pay for it the penalty for wilful murder.]",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 43,
+      "ref": "Vd 15.43",
+      "orig": "upâca hê gâtûm barayen nemô\nvañtâhva kãmcit vâ staretaêshinãm\nvîspem â ahmât thrâthrem kerenavât\nýat aête ýôi spâna hvâ-zaênem\nhvâ-draonem bavãn.",
+      "en": "'He shall take her to rest upon a litter of nemovanta or of\nany foliage fit for a litter; so long shall he support her, until\nthe young dogs are capable of self-defence and self-subsistence.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 44,
+      "ref": "Vd 15.44",
+      "orig": "dâtare ... katha aête spâna hvâ-zaênem\nhvâ-draonem bavãn.",
+      "en": "O Maker of the material world, thou Holy One! When are the\ndogs capable of self-defence and self-subsistence?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 45,
+      "ref": "Vd 15.45",
+      "orig": "âat mraot ahurô mazdå, ýavat aête\nspâna bish hapta nmâna pairi tacahi bavãn,\nvasô pascaêta fraxshtâite aiwi-gâme itha\nhama, xshvash månghô sûnô thrâthrem\nhapta saredha aperenâyûkahe âthrô ahurahe\nmazdå puthrem avatha nâirikayâi!",
+      "en": "Ahura Mazda answered: 'When they\nare able to run about in a circuit of twice seven\nhouses around. Then they may be let loose,\nwhether it be winter or summer.\n'Young dogs ought to be supported for six\nmonths, children for seven years.\n'Atar, the son of Ahura Mazda, watches as well\n(over a pregnant bitch) as he does over a woman.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 46,
+      "ref": "Vd 15.46",
+      "orig": "dâtare ... ashâum ýezi vasen mazdayasna\njvô-daxshtem maêthmanem kutha tê verezyãn\naête ýôi mazdayasna.",
+      "en": "O Maker of the material world, thou Holy One! If worshippers\nof Mazda want to have a bitch so covered that the offspring shall\nbe one of a strong nature, what shall they do?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 47,
+      "ref": "Vd 15.47",
+      "orig": "âat mraot ahurô mazdå, aêtadha hê\naête mazdayasna ainghå zemô ava-kanem ava-kanayen\nmaidhyôi pasush-hastaêshva maidhyôi paitishtâne\nxrûzhdisme maidhyôi narsh varedusme.",
+      "en": "Ahura Mazda answered: 'They shall dig a hole in the earth,\nin the middle of the fold half a foot deep if the earth be hard,\nhalf the height of a man if the earth be soft.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 48,
+      "ref": "Vd 15.48",
+      "orig": "paoiryâi nidarezayen aperenâyûkem avatha\nâtrem ahurahe mazdå puthrem vîspem â ahmât\nthrâthrem kerenavât ýavat aêshô\nspâ anya jasô aiwica aparem patica aparem apâca\npaurvaêibya nôit dim avatha irishyãn.",
+      "en": "'They shall first tie up [the bitch] there, far from children\nand from the Fire, the son of Ahura Mazda, and they shall watch\nby her until a dog comes there from anywhere; then another again,\nand then a third again, each being kept apart from the former,\nlest they should assail one another.",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 49,
+      "ref": "Vd 15.49",
+      "orig": "ýô gadhwãm ýãm aputhrãm\nthrayãm bâuzdri barethrica puthrâca paêmainica\nayatâca taêca aêtadhaca puthrem baraiti sûnãm\nbâuzdri.",
+      "en": "'The bitch being thus covered by three dogs, grows big with\nyoung, and the milk comes to her teats and she brings forth a\nyoung one that is born from several dogs.'",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 50,
+      "ref": "Vd 15.50",
+      "orig": "dâtare ... ýô gadhwãm jaiñti\nýãm aputhrãm thrayãm bâuzdri\nbarethrica puthrâca paêmainica ayatâca taêca\naêtadhaca puthrem baraiti sûnãm bâuzdri\nkâ hê asti citha.",
+      "en": "If a man smite a bitch who has been covered by three dogs,\nand who has already milk, and who shall bring forth a young one\nborn from several dogs, what is the penalty that he shall pay?",
+      "zh": ""
+    },
+    {
+      "chapter": 15,
+      "verse": 51,
+      "ref": "Vd 15.51",
+      "orig": "âat mraot ahurô mazdå, hapta sata upâzananãm\nupâzôit aspahe ashtraya hapta sata sraoshô-caranaya!\nashem vohû...!!",
+      "en": "Ahura Mazda answered: 'Seven hundred stripes with the Aspahe-astra,\nseven hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "vendidad-20",
+  "siglum": "Vd 20",
+  "title_zh": "祓魔法典 第 20 章‧特里塔與醫術之始",
+  "title_en": "Vendidad 20",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd20sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 20,
+      "verse": 1,
+      "ref": "Vd 20.1",
+      "orig": "peresat zarathushtrô ... ashâum kô paoiryô\nmashyânãm thamnanguhatãm varecanguhatãm\nýaoxshtivatãm ýâtumatãm raêvatãm\ntaxmanãm paradhâtãm ýaskem ýaskâi\ndârayat mahrkem mahrkâi dârayat vazemnô-arshti\ndârayat âthrô tafnush dârayat tanaot haca\nmashyehe.",
+      "en": "Zarathushtra asked Ahura Mazda: 'Ahura Mazda, most\nbeneficent Spirit, Maker of the material world, thou Holy One! \nWho was he who first of the healers, of the wise, the happy, the\nwealthy, the glorious, the strong, the Paradhatas, drove back\nsickness to sickness, drove back death to death; and first\nturned away the point of the sword and the fire of fever from the\nbodies of mortals?'",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "ref": "Vd 20.2",
+      "orig": "âat mraot ahurô mazdå, thritô paoiryô\nspitama zarathushtra mashyânãm thamnanguhatãm\nvarecanguhatãm ýaoxshtivatãm ýâtumatãm\nraêvatãm taxmanãm paradhâtãm\nýaskem ýaskâi dârayat mahrkem mahrkâi\ndârayat vazemnô-arshti dârayat âthrô\ntafnush dârayat tanaot haca mashyehe.",
+      "en": "Ahura Mazda answered: 'Thrita it was who first of the\nhealers, of the wise, the happy, the wealthy, the glorious, the\nstrong, the Paradhatas, drove back sickness to sickness, drove\nback death to death, and first turned away the point of the sword\nand the fire of fever from the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "ref": "Vd 20.3",
+      "orig": "vishcithrem dim ayasata\nâyapta xshathra vairya paitishtâtêe ýaskahe\npaitishtâtêe mahrkahe paitishtâtêe dâzhu\npaitishtâtêe tafnu paitishtâtêe sâranahe\npaitishtâtêe sârastyehe paitishtâtêe\nazhanahe paitishtâtêe azhahvahe paitishtâtêe\nkurukhahe paitishtâtêe azhivâkahe paitishtâtêe\ndrukahe paitishtâtêe astairyehe paitishtâtêe\nakhashyå pûityå âhityå ýâ\nangrô mainyush frâkereñtat avi imãm\ntanûm ýãm mashyânãm.",
+      "en": "'He asked for a source of remedies; he obtained it from\nKhshathra-Vairya, to withstand sickness and to withstand death;\nto withstand pain and to withstand fever; to withstand Sarana and\nto withstand Sarastya; to withstand Azana and to withstand\nAzahva; to withstand Kurugha and. to withstand Azivaka; to\nwithstand Duruka and to 'withstand Astairya; to withstand the\nevil eye, rottenness, and infection which Angra Mainyu had\ncreated against the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 4,
+      "ref": "Vd 20.4",
+      "orig": "adha azem ýô ahurô mazdå urvarå\nbaêshazyå uzbarem paoirîsh pouru-satå\npaoirîsh pouru-hazangrå paoirîsh pouru- baêvanô\nôyum gaokerenem pairi.",
+      "en": "'And I Ahura Mazda brought down the healing plants that, by\nmany hundreds, by many thousands, by many myriads, grow up all\naround the one Gaokerena.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 5,
+      "ref": "Vd 20.5",
+      "orig": "tat vîspem frînâmahi tat vîspem fraêshyâmahi\ntat vîspem nemah'yâmahi avi imãm tanûm\nýãm mashyânãm",
+      "en": "'All this do we achieve; all this do we order; all these\nprayers do we utter, for the benefit of the bodies of mortals;",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 6,
+      "ref": "Vd 20.6",
+      "orig": "paitishtâtêe ýaskahe paitishtâtêe\nmahrkahe paitishtâtêe dâzhu paitishtâtêe\ntafnu paitishtâtêe sâranahe paitishtâtêe\nsârastyehe paitishtâtêe azhanahe paitishtâtêe\nazhahvahe paitishtâtêe kurukhahe paitishtâtêe\nazhivâkahe paitishtâtêe drukahe paitishtâtêe\nastairyehe paitishtâtêe akhashyå pûityå\nâhityå ýâ angrô mainyush frâkereñtat\navi imãm tanûm ýãm mashyânãm.",
+      "en": "'To withstand sickness and to withstand death; to withstand\npain and to withstand fever; to withstand Sarana and to withstand\nSarastya; to withstand Azana and to withstand Azahva; to\nwithstand Kurugha and to withstand Azivaka; to withstand Duruka\nand to withstand Astairya; to withstand the evil eye, rottenness,\nand infection which Angra Mainyu has created against the bodies\nof mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 7,
+      "ref": "Vd 20.7",
+      "orig": "ýaskem thwãm paiti-sanghâmi mahrkem thwãm\npaiti-sanghâmi dâzhu thwãm paiti-sanghâmi\ntafnu thwãm paiti-sanghâmi sâranahe thwãm\npaiti-sanghâmi sârastyehe thwãm paiti-sanghâmi\nazhanahe thwãm paiti-sanghâmi azhahvahe thwãm\npaiti-sanghâmi kurukhahe thwãm paiti-sanghâmi\nazhivâkahe thwãm paiti-sanghâmi drukahe thwãm\npaiti-sanghâmi astairyehe thwãm paiti-sanghâmi\nakhashe thwãm paiti-sanghâmi.",
+      "en": "'To thee, O Sickness, I say avaunt! to thee, O Death, I say\navaunt! to thee, O Pain, I say avaunt! to thee, O Fever, I say\navaunt! to thee, O Evil Eye, I say avaunt! to thee, O Sarana, I\nsay avaunt! and to thee, O Sarastya, I say avaunt! to thee, O\nAzana, I say avaunt! and to thee, O Azahva, I say avaunt! to\nthee, O Kurugha, I say avaunt! and to thee, O Azivaka, I say\navaunt! to thee, O Duruka, I say avaunt! and to thee, O Astairya,\nI say avaunt!",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 8,
+      "ref": "Vd 20.8",
+      "orig": "ýenghe vareda vanaêma drujim druje vareda vanaêma\nýenghe xshathrem aojonghvat maibyô ahura.",
+      "en": "'Give us, O Ahura, that powerful sovereignty, by the\nstrength of which we may smite down the Druj! By its might may\nwe smite the Druj!",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 9,
+      "ref": "Vd 20.9",
+      "orig": "paiti-perene ashire paiti-perene akhûire paiti-perene\nakhrãm paiti-perene ukhrãm paiti-perene ýaskahe\npaiti-perene mahrkahe paiti-perene dâzhu paiti-perene tafnu\npaiti-perene sâranahe paiti-perene sârastyehe paiti-perene\nazhanahe paiti-perene azhahvahe paiti-perene kurukhahe paiti-perene\nazhivâkahe paiti-perene drukahe paiti-perene astairyehe\npaiti-perene akhashyå pûityå âhityå\nýâ angrô mainyush frâkereñtat\navi imãm tanûm ýãm mashyânãm.",
+      "en": "'I drive away Ishire and I drive away Aghuire; I drive away\nAghra and I drive away Ughra; I drive away sickness and I drive\naway death; I drive away pain and I drive away fever; I drive\naway Sarana and I drive away Sarastya; I drive away Azana and I\ndrive away Azahva; I drive away Kurugha and I drive away Azivaka;\nI drive away Duruka and I drive away Astairya; I drive away the\nevil eye, rottenness, and infection which Angra Mainyu has\ncreated against the bodies of mortals.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 10,
+      "ref": "Vd 20.10",
+      "orig": "paiti-perene vîspem ýaskemca mahrkemca vîspe\nýâtavô pairikåsca vîspå janyô\nýå drvaitîsh.",
+      "en": "'I drive away all manner of sickness and death, all the\nYatus and Pairikas, and all the wicked Jainis.",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 11,
+      "ref": "Vd 20.11",
+      "orig": "â airyêmâ ishyô rafedhrâi jañtû\nnerebyascâ nâiribyascâ zarathushtrahe vanghêush\nrafedhrâi mananghô ýâ daênâ\nvairîm hanât mîzhdem ashahyâ ýâsâ\nashîm ýãm ishyãm ahurô masatâ\nmazdå.",
+      "en": "' A Airyema ishyo .\nMay the vow-fulfilling Airyaman come\nhere, for the men and women of Zarathushtra to rejoice, for\nVohu-mano to rejoice; with the desirable reward that Religion\ndeserves. I solicit for holiness that boon that is vouchsafed by\nAhura!",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": 12,
+      "ref": "Vd 20.12",
+      "orig": "jañtu â-airyêmâ-ishyô vîspem\nýaskemca mahrkemca vîspe ýâtavô\npairikåsca vîspå janyô ýå\ndrvaitîsh.",
+      "en": "'May the vow-fulfilling Airyaman smite all manner of\nsickness and death, all the Yatus and Pairikas, and all the\nwicked Jainis.'\n[13. Yatha ahu vairyo:- The will of the Lord is the law of\nrighteousness.\nThe gifts of Vohu-mano to the deeds done in this world for\nMazda. He who relieves the poor makes Ahura king.\n Kem-na mazda :- What protector hast thou given unto me, O\nMazda! while the hate of the wicked encompasses me? Whom but thy\nAtar and Vohu-mano, through whose work I keep on the world of\nRighteousness? Reveal therefore to me thy Religion as thy rule!\nKe verethrem-ja:- Who is the victorious who will protect thy\nteaching? Make it clear that I am the guide for both worlds. \nMay Sraosha come with Vohu-mano and help whomsoever thou\npleasest, O Mazda!\nKeep us from our hater, O Mazda and Armaiti Spenta! Perish,\nO fiendish Druj! Perish, O brood of the fiend! Perish, O world\nof the fiend! Perish away, O Druj! Perish away to the regions of\nthe north, never more to give unto death the living world of\nRighteousness!]",
+      "zh": ""
+    },
+    {
+      "chapter": 20,
+      "verse": "13-14",
+      "ref": "Vd 20.13-14",
+      "orig": "ýathâ ahû vairyô ... mâmereñcainîsh\ngaêthå astvaitîsh ashahe! ashem vohû...!!",
+      "en": "",
+      "zh": ""
+    }
+  ]
+}

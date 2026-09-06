@@ -1,0 +1,133 @@
+{
+  "slug": "vendidad-12",
+  "siglum": "Vd 12",
+  "title_zh": "祓魔法典 第 12 章‧喪期",
+  "title_en": "Vendidad 12",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd12sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 12,
+      "verse": 1,
+      "ref": "Vd 12.1",
+      "orig": "[âat ýat pitô para-irithyeiti mâta\nvâ para-irithyeiti cvat aêshãm upa-mãnayen\nputhrô haca pitarem dukhdha haca mâtarem cvat dahmanãm\ncvat tanu-perethanãm, âat mraot ahurô mazdå,\nthrisatem dahmanãm xshvashtîm tanu-perethanãm.",
+      "en": "If one's father or mother dies, how long shall they stay [in\nmourning], the son for his father, the daughter for her mother? \nHow long for the righeous? How long for the sinners?\nAhura Mazda answered: 'They shall stay thirty days for the\nrighteous, sixty days for the sinners.'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 2,
+      "ref": "Vd 12.2",
+      "orig": "dâtare ... kutha nmânem ýaozhdathâmi\nkutha bun ýaozhdâta, âat mraot ahurô\nmazdå, thrish frasnâiti tanunãm thrish frasnâiti\nvastranãm thrish frasrûiti gâthanãm\nimå nô âtrem ýazaêta baresma sterenaêta\naiwyô vanguhibyô zaothrå baraêta, ýaozhdâta\npascaêta bun nmâna vasô upâiti apãm\nvasô upâiti urvaranãm vasô upâiti\nameshanãm speñtanãm spitama zarathushtra.",
+      "en": "O Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "3-4",
+      "ref": "Vd 12.3-4",
+      "orig": "âat ýat puthrô para-irithyeiti dukhdha\nvâ para- irithyeiti cvat aêshãm upa-mãnayen\npita haca puthrem mâta haca dukhdharem cvat dahmanãm\ncvat tanu-perethanãm, âat mraot ahurô mazdå,\nthrisatem dahmanãm xshvashtîm tanu-perethanãm.\ndâtare....",
+      "en": "If one's son or daughter dies, how long shall they stay, the\nfather for his son, the mother for her daughter? How long for\nthe righteous? How long for the sinners?\nAhura Mazda answered: 'They shall stay thirty days for the\nrighteous, sixty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "5-6",
+      "ref": "Vd 12.5-6",
+      "orig": "âat ýat brâta para-irithyeiti hvangha vâ\npara- irithyeiti cvat aêshãm upa-mãnayen brâta\nhaca hvangharem hvangha haca brâtarem cvat dahmanãm\ncvat tanu-perethanãm, âat mraot ahurô mazdå,\nthrisatem dahmanãm xshvashtîm tanu-perethanãm.\ndâtare....",
+      "en": "If one's brother or sister dies, how long shall they stay,\nthe brother for his brother, the sister for her sister? How long\nfor the righteous? How long for the sinners?\nAhura Mazda answered: 'They shall stay thirty days for the\nrighteous, sixty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again? Ahura Mazda\nanswered: 'You shall wash your bodies three times, you shall wash\nyour clothes three times, you shall chant the Gathas three times;\nyou shall offer up a sacrifice to my Fire, you shall bind up the\nbundles of Baresma, you shall bring libations to the good waters;\nthen the house shall be clean, and then the waters may enter,\nthen the fire may enter, and then the Amesha-Spentas may enter, O\nSpitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "7-8",
+      "ref": "Vd 12.7-8",
+      "orig": "âat ýat nmânô-paitish para-irithyeiti\nnmânô-pathni vâ para-irithyeiti cvat aêshãm\nupa-mãnayen cvat dahmanãm cvat tanu-perethanãm,\nâat mraot ahurô mazdå, xshvash månghô\ndahmanãm dvadasa tanu-perethanãm kainînô\nhvatô puthrem. dâtare....",
+      "en": "If the master of the house dies, or if the mistress of the\nhouse dies, how long shall they stay? How long for the righteous? \nHow long for the sinners?\nAhura Mazda answered: 'They shall stay six months for the\nrighteous, a year for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'you shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "9-10",
+      "ref": "Vd 12.9-10",
+      "orig": "âat ýat nyâkô para-irithyeiti nyâke\nvâ para-irithyeiti cvat aêshãm upa-mãnayen\nnapô haca nyâkô napti haca nyâke cvat\ndahmanãm cvat tanu-perethanãm, âat mraot ahurô\nmazdå, pañcâca vîsatica dahmanãm\npañcâsatem tanu-perethanãm. dâtare....",
+      "en": "If one's grandfather or grandmother dies, how long shall\nthey stay, the grandson for his grandfather, the granddaughter\nfor her grandmother? How long for the righteous? How long for\nthe sinners?\nAhura Mazda answered: 'They shall stay twenty-five days for\nthe righteous, fifty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "11-12",
+      "ref": "Vd 12.11-12",
+      "orig": "âat ýat napô para-irithyeiti napti vâ\npara- irithyeiti cvat aêshãm upa-mãnayen nyâkô\nhaca naptô nyâke haca napti cvat dahmanãm cvat\ntanu-perethanãm, âat mraot ahurô mazdå,\npañcâca vîsatica dahmanãm pañcâsatem\ntanu-perethanãm. dâtare....",
+      "en": "If one's grandson or granddaughter dies, how long shall they\nstay, the grandfather for his grandson, the grandmother for her\ngranddaughter? How long for the righteous? How long for the\nsinners?\nAhura Mazda answered: 'They shall stay twenty-five days for\nthe righteous, fifty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "13-14",
+      "ref": "Vd 12.13-14",
+      "orig": "âat ýat brâtruyô para-irithyeiti\nbrâtruye vâ para-irithyeiti cvat aêshãm\nupa-mãnayen cvat dahmanãm cvat tanu- perethanãm,\nâat mraot ahurô mazdå, vîsaiti dahmanãm\ncathwaresatem tanu-perethanãm. dâtare....",
+      "en": "If one's uncle or aunt dies, how long shall they stay, the\nnephew for his uncle, the niece for her aunt? How long for the\nrighteous? How long for the sinners?\nAhura Mazda answered: 'They shall stay twenty days for the\nrighteous, forty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "15-16",
+      "ref": "Vd 12.15-16",
+      "orig": "âat ýat tûiryô para-irithyeiti tûirya\nvâ para-irithyeiti cvat aêshãm upa-mãnayen\ncvat dahmanãm cvat tanu- perethanãm, âat mraot\nahurô mazdå, pañca-dasa dahmanãm thrisatem\ntanu-perethanãm. dâtare....",
+      "en": "If one's male cousin or female cousin dies, how long shall\nthey stay? How long for the righteous? How long for the\nsinners?\nAhura Mazda answered: 'They shall stay fifteen days for the\nrighteous, thirty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "17-18",
+      "ref": "Vd 12.17-18",
+      "orig": "âat ýat tûiryô puthrô para-irithyeiti\ntûirya dukhdha vâ para-irithyeiti cvat aêshãm\nupa-mãnayen cvat dahmanãm cvat tanu-perethanãm,\nâat mraot ahurô mazdå, dasa dahmanãm\nvîsaiti tanu-perethanãm. dâtare....",
+      "en": "If the son or the daughter of a cousin dies, how long shall\nthey stay? How long for the righteous: How long for the\nsinners?\nAhura Mazda answered: 'They shall stay ten days for the\nrighteous, twenty days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may enter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "19-20",
+      "ref": "Vd 12.19-20",
+      "orig": "âat ýat tûirya puthrô vâ puthrô\npara-irithyeiti tûirya dukhdhairi cvat aêshãm\nupa-mãnayen cvat dahmanãm cvat tanu-perethanãm,\nâat mraot ahurô mazdå, pañca dahmanãm\ndasa tanu-perethanãm. dâtare....",
+      "en": "If the grandson of a cousin or the granddaughter of a cousin\ndies, how long shall they stay? How long for the righteous? How\nlong for the sinners?\nAhura Mazda answered: 'They shall stay five days for the\nrighteous, ten days for the sinners.'\nO Maker of the material world, thou Holy One! How shall I\ncleanse the house? How shall it be clean again?\nAhura Mazda answered: 'You shall wash your bodies three\ntimes, you shall wash your clothes three times, you shall chant\nthe Gathas three times; you shall offer up a sacrifice to my\nFire, you shall bind up the bundles of Baresma, you shall bring\nlibations to the good waters; then the house shall be clean, and\nthen the waters may enter, then the fire may euter, and then the\nAmesha-Spentas may enter, O Spitama Zarathushtra!'",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": 21,
+      "ref": "Vd 12.21",
+      "orig": "âat ýat kãmcit vâ taoxmanãm\npara- irithyeiti ýatha ainyô-varena ainyô-tkaêsha\ncvat speñtahe mainyêush dâmanãm hãm-raêthwayeiti\ncvat paiti-raêthwayeiti.",
+      "en": "If a man dies, of whatever race he is, who does not belong\nto the true faith, or the true law, what part of the creation of\nthe good spirit [Spenta Mainyu -JHP] does he directly defile? What part does he\nindirectly defile?",
+      "zh": ""
+    },
+    {
+      "chapter": 12,
+      "verse": "22-24",
+      "ref": "Vd 12.22-24",
+      "orig": "âat mraot ahurô mazdå, ýatha vazakhacit\n... nôit avatha meretô!\nashem vohû...!!]",
+      "en": "Ahura Mazda answered: 'No more than a frog does whose venom\nis dried up, and that has been dead more than a year. Whilst\nalive, indeed, O Spitama Zarathushtra! such wicked, two-legged\nruffian as an ungodly Ashemaogha, directly defiles the creatures\nof the Good Spirit [Spenta Mainyu -JHP], and indirectly defiles them.\n'Whilst alive he smites the water; whilst alive he blows out\nthe fire; whilst alive he carries off the cow; whilst alive he\nsmites the faithful man with a deadly blow, that parts the soul\nfrom the body; not so will he do when dead.\n'Whilst alive, indeed, O Spitama Zarathushtra! such wicked,\ntwo-legged ruffian as an ungodly Ashemaogha, robs the faithful\nman of the full possession of his food, of his clothing, of his\nwood, of his bed, of his vessels; not so will he do when dead.'",
+      "zh": ""
+    }
+  ]
+}

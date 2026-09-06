@@ -1,0 +1,469 @@
+{
+  "slug": "vendidad-04",
+  "siglum": "Vd 4",
+  "title_zh": "祓魔法典 第 4 章‧契約與傷害",
+  "title_en": "Vendidad 4",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd4sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 4,
+      "verse": 1,
+      "ref": "Vd 4.1",
+      "orig": "ýô naire nemangheñte\nnôit nemô paiti-baraiti\ntâyush nemanghô bavaiti\nhazangha nemô-barahe aêshãmcit ithra vâ\nasni ithra vâ xshafne maêthanahe hvâi pairi-geurvayeite!",
+      "en": "He that does not restore a loan to the man who lent it, steals\nthe thing and robs the man.\nThis he doeth every day, every night, as long as he keep in his\nhouse his neighbour's property, as though it were his own.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 2,
+      "ref": "Vd 4.2",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\ncaiti aête mithra tava ýat ahurahe mazdå, âat\nmraot ahurô mazdå, xshvash ashâum zarathushtra\npaoiryô vacahinô bityô zastâ-marshtô\nthrityô pasu-mazô tûiryô staorô-mazô\npuxdhô vîrô-mazô xshtvô dainghu-mazô,\n[ýô dainghave hu-vaxshâi fradhemnahe varedhemnahe\nxrathwemnahe suyamnahe].",
+      "en": "O Maker of the material world, thou Holy\nOne! How many in number are thy contracts, O\nAhura Mazda?\nAhura Mazda answered: 'They are six in number,\nO holy Zarathushtra. The first is the word-contract;\nthe second is the hand-contract;\nthe third is the contract to the amount of a sheep; the\nfourth is the contract to the amount of an ox; the\nfifth is the contract to the amount of a man [person]; the\nsixth is the contract to the amount of a field, a field\nin good land, a fruitful one, in good bearing.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 3,
+      "ref": "Vd 4.3",
+      "orig": "vacô paoirîm mithrem kerenaoiti zastô-masô\nadhât framarezaiti zastô-masô adhât añtare\nurvaitya fradathaiti, pasu-zamô adhât framarezaiti\npasu-zamô adhât añtare urvaitya fradathaiti.",
+      "en": "The word-contract is fulfilled by words of mouth. It is cancelled\nby the hand-contracct; he shall give as damages the amount of\nthe hand-contract.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 4,
+      "ref": "Vd 4.4",
+      "orig": "staorô-mazô adhât framarezaiti staorô-\nmazô adhât añtare urvaitya fradathaiti, vîrô-mazô\nadhât framarezaiti vîrô- mazô adhât\nañtare urvaitya fradathaiti, dainghu-mazô adhât\nframarezaiti dainghu-mazô adhât añtare urvaitya\nfradathaiti.",
+      "en": "The hand-contract is cancelled by the sheep-contract; he shall\ngive as damages the amount of the sheep-contract. The sheep-contract\nis cancelled by the ox-contract; he shall give as damages the\namount of the ox-contract. The ox-contract is cancelled by the\nman-contract; he shall give as damages the amount of the man-contract.\nThe man-contract is cancelled by the field-contract; he shall\ngive as damages the amount of the field-contract.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 5,
+      "ref": "Vd 4.5",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô vacahinô,\nâat mraot ahurô mazdå, thrish satâish\nhadha-cithanãm narãm nabânazdishtanãm\npara-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe word-contract, how many are involved in his sin?\nAhura Mazda answered: 'His sin makes his\nNabanazdishtas answerable for three hundred\n(years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 6,
+      "ref": "Vd 4.6",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô zastâ-marshtô,\nâat mraot ahurô mazdå, xshvash satâish\nhadha-cithanãm narãm nabânazdishtanãm\npara-baraiti.",
+      "en": "O Maker of the material world, thou Holy\nOne! If a man break the hand-contract, how many\nare involved in his sin?\nAhura Mazda answered: 'His sin makes his\nNabanazdishtas answerable for six hundred (years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 7,
+      "ref": "Vd 4.7",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô pasu-mazô,\nâat mraot ahurô mazdå, hapta satâish hadha-cithanãm\nnarãm nabânazdishtanãm para-baraiti.",
+      "en": "O Maker of the material world, thou Holy\nOne! If a man break the sheep-contract, how many\nare involved in his sin?\nAhura Mazda answered: 'His sin makes his Nabanazdishtas\nanswerable for seven hundred (years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 8,
+      "ref": "Vd 4.8",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô staorô-mazô,\nâat mraot ahurô mazdå, ashta satâish hadha-cithanãm\nnarãm nabânazdishtanãm para-baraiti.",
+      "en": "O Maker of the material world, thou Holy\nOne! If a man break the ox-contract, how many\nare involved in his sin?\nAhura Mazda answered: 'His sin makes his Nabanazdishtas\nanswerable for eight hundred (years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 9,
+      "ref": "Vd 4.9",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô vîrô-mazô,\nâat mraot ahurô mazdå, nava satâish hadha-cithanãm\nnarãm nabânazdishtanãm para-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe man-contract, how many are involved in his sin? Ahura Mazda\nanswered: 'His sin makes his Nabanazdishtas answerable for nine\nhundred (years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 10,
+      "ref": "Vd 4.10",
+      "orig": "dâtare ... ashâum cvat aêshô mithrô\naiwi-druxtô âstâraiti ýô dainghu-mazô,\nâat mraot ahurô mazdå, hazangrem hadha-cithanãm\nnarãm nabânazdishtanãm para-baraiti.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe field-contract, how many are involved in his sin? Ahura Mazda\nanswered: 'His sin makes his Nabanazdishtas answerable for a thousand\n(years).'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 11,
+      "ref": "Vd 4.11",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim vacahinem kâ-hê asti citha, âat mraot\nahurô mazdå, tishrô sata upâzananãm\nupâzôit aspahe ashtraya tishrô sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe word-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'Three hundred stripes with the Aspahe-ashtra,\nthree hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 12,
+      "ref": "Vd 4.12",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim zastâ-marshtem kâ-hê asti citha,\nâat mraot ahurô mazdå, xshvash sata upâzananãm\nupâzôit aspahe ashtraya xshvash sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe hand-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'Six hundred stripes with the Aspahe-ashtra, six\nhundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 13,
+      "ref": "Vd 4.13",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim pasu-mazem kâ-hê asti citha, âat\nmraot ahurô mazdå, hapta sata upâzananãm\nupâzôit aspahe ashtraya hapta sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe sheep-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'Seven hundred stripes with the Aspahe-ashtra,\nseven hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 14,
+      "ref": "Vd 4.14",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim staorô-mazem kâ-hê asti citha, âat\nmraot ahurô mazdå, ashta sata upâzananãm\nupâzôit aspahe ashtraya ashta sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe ox-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'Eight hundred stripes with the Aspahe-ashtra,\neight hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 15,
+      "ref": "Vd 4.15",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim vîrô-mazem kâ-hê asti citha,\nâat mraot ahurô mazdå, nava sata upâzananãm\nupâzôit aspahe ashtraya nava sata sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe man-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'Nine hundred stripes with the Aspahe-ashtra,\nNine hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 16,
+      "ref": "Vd 4.16",
+      "orig": "dâtare ... ashâum ýô mithrem aiwi-druzhaiti\nýim dainghu-mazem kâ-hê asti citha, âat\nmraot ahurô mazdå, hazangrem upâzananãm\nupâzôit aspahe ashtraya hazangrem sraoshô-caranaya!",
+      "en": "O Maker of the material world, thou Holy One! If a man break\nthe field-contract, what is the penalty that he shall pay? Ahura\nMazda answered: 'A thousand stripes with the Aspahe-ashtra, a\nthousand stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 17,
+      "ref": "Vd 4.17",
+      "orig": "ýô narsh snathem usehishtaiti aêtat hê\nâgereptem ýat frashusaiti aêtat hê avaoirishtem\nýat dim aênô-manangha paiti-ashnaoiti aêtat\nhê aredush, puxdhemcit nâ aredushãm tanûm\npiryeite.",
+      "en": "If a man rise up with a weapon in his\nhand, it is an Agerepta. If he brandish it, it is\nan Avaoirishta. If he actually smite\na man with malicious aforethought, it is an Aredush. Upon the\nfifth Aredush he becomes a Peshotanu.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 18,
+      "ref": "Vd 4.18",
+      "orig": "dâtare gaêthanãm astvaitinãm ashâum\nýô narem âgereptem âgeurvayeiti kâ-hê\nasti citha, âat mraot ahurô mazdå, pañca\nupâzana aspahe ashtraya pañca sraoshô-caranaya\nbitîm dasa upâzana aspahe ashtraya dasa sraoshô-caranaya\nthritîm pañca-dasa upâzana aspahe ashtraya\npañca-dasa sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! He that committeth\nan Agerepta, what penalty shall he pay? Ahura Mazda answered:\n'Five stripes with the Aspahe-ashtra, five stripes with the Sraosho-charana;\n'On the second Agerepta, ten stripes with the Aspahe-ashtra, ten\nstripes with the Sraosho-charana;\n'On the third, fifteeen stripes with the Aspahe-ashtra, fifteen\nstripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 19,
+      "ref": "Vd 4.19",
+      "orig": "tûirîm thrisatem upâzananãm upâzôit\naspahe ashtraya thrisatem sraoshô-caranaya puxdhem pañcâsatem\nupâzananãm upâzôit aspahe ashtraya pañcâsatem\nsraoshô-caranaya xshtûm haptâitîm upâzananãm\nupâzôit aspahe ashtraya haptâitîm sraoshô-\ncaranaya haptathem navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "'On the fourth, thirty stripes with the Aspahe-ashtra, thirty\nstripes with the Sraosho-charana;\n'On the fifth, fifty stripes with the Aspahe-ashtra, fifty stripes\nwith the Sraosho-charana;\n'On the sixth, sixty stripes with the Aspahe-ashtra, sixty stripes\nwith the Sraosho-charana;\n'On the seventh, ninety stripes with the Aspahe-ashtra, ninety\nstripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 20,
+      "ref": "Vd 4.20",
+      "orig": "ashtemem aêtaêshãm shyaothenanãm\nverezimnem anuzvarshtât paiti paurvât kâ-hê\nasti citha, âat mraot ahurô mazdå, aêtahe\npaiti peshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "If a man commit an Agerepta for the eighth time, without having\natoned for the preceding, what penalty shall he pay?\nAhura Mazda answered: 'He is a Peshotanu: two hundred stripes\nwith the Aspahe-ashtra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 21,
+      "ref": "Vd 4.21",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem âgereptem âgeurvayeiti kâ-hê\nasti citha, âat mraot ahurô mazdå, aêtahe\npaiti peshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "If a man commit an Agerepta, and refuse\nto atone for it, what penalty shall he pay?\nAhura Mazda answered: 'He is a Peshotanu:\ntwo hundred stripes with the Aspahe-ashtra, two hundred stripes\nwith the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 22,
+      "ref": "Vd 4.22",
+      "orig": "dâtare ... ashâum ýô narem avaoirishtem\navaourvaêsaite kâ-hê asti citha, âat mraot\nahurô mazdå, dasa upâzana aspahe ashtraya dasa\nsraoshô-caranaya bitîm pañca-dasa upâzana\naspahe ashtraya pañca-dasa sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Avaoirishta, what penalty shall he pay? Ahura Mazda answered:\n'Ten stripes with the Aspahe-ashtra, ten stripes with the Sraosho-charana;\n'On the second Avaoirishta, fifteen stripes with the Aspahe-ashtra,\nfifteen stripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 23,
+      "ref": "Vd 4.23",
+      "orig": "thritîm thrisatem upâzananãm upâzôit\naspahe ashtraya thrisatem sraoshô-caranaya tûirîm\npañcâsatem upâzananãm upâzôit\naspahe ashtraya pañcâsatem sraoshô-caranaya\npuxdhem haptâitîm upâzananãm upâzôit\naspahe ashtraya haptâitîm sraoshô- caranaya\nxshtûm navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "'On the third, thirty stripes with the Aspahe-ashtra, thirty\nstripes with the Sraosho-charana;\n'On the fourth, fifty stripes with the Aspahe-ashtra, fifty stripes\nwith the Sraosho-charana;\n'On the fifth, seventy stripes with the Aspahe-ashtra, seventy\nstripes with the Sraosho-charana;\n'On the sixth, ninety stripes with the Aspahe-ashtra, ninety stripes\nwith the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 24,
+      "ref": "Vd 4.24",
+      "orig": "haptathem aêtaêshãm shyaothenanãm\nverezimnem anuzvarshtât paiti paurvât kâ-hê\nasti citha, âat mraot ahurô mazdå, aêtahe\npaiti peshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Avaoirishta for the seventh time, without having atoned for\nthe preceding, what penalty shall he pay? Ahura Mazda answered:\n'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 25,
+      "ref": "Vd 4.25",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem avaoirishtem avaourvaêsaite kâ-hê\nasti citha, âat mraot ahurô mazdå, aêtahe\npaiti peshô-tanuye duye saite upâzananãm upâzôit\naspahe ashtraya duye saite sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Avaoirishta, and refuse to atone for it, what penalty shall\nhe pay?\nAhura Mazda answered: 'He is a Peshotanu: two hundred\nstripes with the Aspahe-ashtra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 26,
+      "ref": "Vd 4.26",
+      "orig": "dâtare ... ashâum ýô narem aredusha\nsnatha jaiñti kâ-hê asti citha, âat mraot\nahurô mazdå, pañca-dasa upâzana aspahe\nashtraya pañca-dasa sraoshô-caranaya",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Aredush, what penalty shall he pay? Ahura Mazda answered: 'Fifteen\nstripes with the Aspahe-ashtra, fifteen stripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 27,
+      "ref": "Vd 4.27",
+      "orig": "bitîm thrisatem upâzananãm upâzôit\naspahe ashtraya thrisatem sraoshô-caranaya thritîm\npañcâsatem upâzananãm upâzôit\naspahe ashtraya pañcâsatem sraoshô-caranaya\ntûirîm haptâitîm upâzananãm\nupâzôit aspahe ashtraya haptâitîm sraoshô-\ncaranaya puxdhem navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "'On the second Aredush, thirty stripes with the Aspahe-ashtra,\nthirty stripes with the Sraosho-charana;\n'On the third, fifty stripes with the Aspahe-ashtra, fifty stripes\nwith the Sraosho-charana;\n'On the fourth, seventy stripes with the Aspahe-ashtra, seventy\nstripes with the Sraosho-charana;\n'On the fifth, ninety stripes with the Aspahe-ashtra, ninety stripes\nwith the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 28,
+      "ref": "Vd 4.28",
+      "orig": "xshtûm aêtaêshãm shyaothenanãm\n... sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Aredush for the sixth time, without having atoned for the preceding,\nwhat penalty shall he pay? Ahura Mazda answered: 'He is a Peshotanu:\ntwo hundred stripes with the Aspahe-ashtra, two hundred stripes\nwith the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 29,
+      "ref": "Vd 4.29",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem aredusha snatha jaiñti kâ-hê\nasti citha, âat mraot ahurô mazdå ... sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man commit\nan Aredush, and refuse to atone for it, what penalty shall he\npay? Ahura Mazda answered: 'He is a Peshotanu: two hundred stripes\nwith the Aspahe-ashtra, two hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 30,
+      "ref": "Vd 4.30",
+      "orig": "dâtare ... ashâum ýô narem vîxrûmeñtem\nhvarem jaiñti kâ-hê asti citha, âat mraot\nahurô mazdå,",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother and hurt him sorely, what is the penalty that he shall\npay?",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 31,
+      "ref": "Vd 4.31",
+      "orig": "thrisatem upâzananãm upâzôit aspahe\nashtraya thrisatem sraoshô-caranaya bitîm pañcâsatem\nupâzananãm upâzôit aspahe ashtraya pañcâsatem\nsraoshô-caranaya thritîm haptâitîm upâzananãm\nupâzôit aspahe ashtraya haptâitîm sraoshô-\ncaranaya tûirîm navaitîm upâzananãm\nupâzôit aspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "Ahura Mazda answered: 'Thirty stripes\nwith the Aspahe-ashtra,\nthirty stripes with the Sraosho-charana;\n'The second time, fifty stripes with the Aspahe-ashtra, fifty\nstripes with the Sraosho-charana;\n'The third time, seventy stripes with the Aspahe-ashtra, seventy\nstripes with the Sraosho-charana;\n'The fourth time, ninety stripes with the Aspahe-ashtra, ninety\nstripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 32,
+      "ref": "Vd 4.32",
+      "orig": "puxdhem aêtaêshãm shyaothenanãm\n... sraoshô-caranaya.",
+      "en": "If a man commit that deed for the fifth time, without having\natoned for the preceding, what penalty shall he pay? Ahura Mazda\nanswered: 'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 33,
+      "ref": "Vd 4.33",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem vîxrûmeñtem hvarem jaiñti\nkâ-hê asti citha, âat mraot ahurô mazdå\n... sraoshô-caranaya.",
+      "en": "If a man commit that deed and refuse to atone for it, what\npenalty shall he pay? Ahura Mazda answered: 'He is a Peshotanu:\ntwo hundred stripes with the Aspahe-ashtra, two hundred stripes\nwith the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 34,
+      "ref": "Vd 4.34",
+      "orig": "dâtare ... ashâum ýô narem tacat-\nvohunîm hvarem jaiñti kâ-hê asti citha,\nâat mraot ahurô mazdå, pañcâsatem\nupâzananãm upâzôit aspahe ashtraya pañcâsatem\nsraoshô-caranaya bitîm haptâitîm upâzananãm\nupâzôit aspahe ashtraya haptâitîm sraoshô-caranaya\nthritîm navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that the blood come, what is the penalty that he shall\npay? Ahura Mazda answered: 'Fifty stripes with the Aspahe-ashtra,\nfifty stripes with the Sraosho-charana;\n'The second time, seventy stripes with the Aspahe-ashtra, seventy\nstripes with the Sraosho-charana;\n'The third time, ninety stripes with the Aspahe-ashtra, ninety\nstripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 35,
+      "ref": "Vd 4.35",
+      "orig": "tûirîm aêtaêshãm shyaothenanãm\n... sraoshô-caranaya.",
+      "en": "If a man commit that deed for the fourth time, without having\natoned for the preceding, what penalty shall he pay? Ahura Mazda\nanswered: 'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 36,
+      "ref": "Vd 4.36",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem tacat-vohunîm hvarem jaiñti\nkâ-hê asti citha, âat mraot ahurô mazdå\n... sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that the blood come, and if he refuse to atone for\nit, what penalty shall he pay? Ahura Mazda answered: 'He is a\nPeshotanu: two hundred stripes with the Aspahe-ashtra, two hundred\nstripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 37,
+      "ref": "Vd 4.37",
+      "orig": "dâtare ... ashâum ýô narem astô-\nbidhem hvarem jaiñti kâ-hê asti citha, âat\nmraot ahurô mazdå, haptâitîm upâzananãm\nupâzôit aspahe ashtraya haptâitîm sraoshô-caranaya\nbitîm navaitîm upâzananãm upâzôit\naspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that he break a bone, what is the penalty that he shall\npay? Ahura Mazda answered: 'Seventy stripes with the Aspahe-ashtra,\nseventy stripes with the Sraosho-charana;\n'The second time, ninety stripes with the Aspahe-ashtra, ninety\nstripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 38,
+      "ref": "Vd 4.38",
+      "orig": "thritîm aêtaêshãm shyaothenanãm\n... sraoshô-caranaya.",
+      "en": "If he commit that deed for the third time, without having\natoned for the preceding, what penalty shall he pay? Ahura Mazda\nanswered: 'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 39,
+      "ref": "Vd 4.39",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem astô-bidhem hvarem jaiñti kâ-hê\nasti citha, âat mraot ahurô mazdå ... sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that he break a bone, and if he refuse to atone for\nit, what is the penalty he shall pay? Ahura Mazda answered: 'He\nis a Peshotanu: two hundred stripes with the Aspahe-ashtra, two\nhundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 40,
+      "ref": "Vd 4.40",
+      "orig": "dâtare ... ashâum ýô narem frazâbaodhanghem\nsnathem jaiñti kâ-hê asti citha, âat\nmraot ahurô mazdå, navaitîm upâzananãm\nupâzôit aspahe ashtraya navaitîm sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that he give up the ghost, what is the penalty that\nhe shall pay? Ahura Mazda answered: 'Ninety stripes with the Aspahe-ashtra,\nseventy stripes with the Sraosho-charana;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 41,
+      "ref": "Vd 4.41",
+      "orig": "bitîm aêtaêshãm shyaothenanãm\n... sraoshô-caranaya.",
+      "en": "If he commit that deed again, without having atoned for the\npreceding, what is the penalty that he shall pay? Ahura Mazda\nanswered: 'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 42,
+      "ref": "Vd 4.42",
+      "orig": "dâtare ... ashâum ýezi nôit uzvarezyât\nýô narem frazâbaodhanghem snathem jaiñti\nkâ-hê asti citha, âat mraot ahurô mazdå\n... sraoshô-caranaya.",
+      "en": "O Maker of the material world, thou Holy One! If a man smite\nanother so that he give up the ghost, and if he refuse to atone\nfor it, what is the penalty he shall pay? Ahura Mazda answered:\n'He is a Peshotanu: two hundred stripes with the Aspahe-ashtra,\ntwo hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 43,
+      "ref": "Vd 4.43",
+      "orig": "hâmô-shyaothna tê pascaêta bavaiñti\nashahe paiti pañtãm ashahe paiti mãthrem\nashahe paiti frasastîm!",
+      "en": "And they shall thenceforth in their doings walk after the\nway of holiness, after the word [manthra] of holiness, after the ordinance\nof holiness.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 44,
+      "ref": "Vd 4.44",
+      "orig": "ýaêca idha narô hâmô-daêna\njasãn brâthra vâ haxaya vâ shaêtô-cinanghô\nvâ nâiri-cinanghô vâ xratu-cinanghô\nvâ ýezi shaêtô-cinanghô jasãn\nhãm idha shaêtem hãm-bârayen ýezi\nnâiri-cinanghô jasãn upa vâ nâirikãm\nvâdhayaêta.",
+      "en": "If men of the same faith, either friends or brothers, come\nto an agreement together, that one may obtain from the other,\neither goods, or a wife, or knowledge,\nlet him who desires goods\nhave them delivered to him; let him who desires a wife receive\nand wed her; let him who desires knowledge be taught the holy\nword [manthra spenta],",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 45,
+      "ref": "Vd 4.45",
+      "orig": "ýezi xratu-cinanghô jasãn upa vâ\nmãthrem speñtem maraêta pourumca naême\nasne aparemca pourumca naême xshafne aparemca uxshne xrathwe\nvîdrvânahe ashât ashica nemanghâna uxshne\nxrathwe ýaonem âste, maidhyâi asnãmca\nxshafnãmca avanghabdaêta paiti asne paiti xshafne\nvîspem â ahmât ýat tå sravå\ndreñjayãn ýå paourva aêthrapatayô\ndreñjayãn!",
+      "en": "during the first part of the day and the last, during the\nfirst part of the night and the last, that his mind may be increased\nin intelligence and wax strong in holiness. So shall he sit up,\nin devotion and prayers, that he may be increased in intelligence:\nhe shall rest during the middle part of the day, during the middle\npart of the night, and thus shall he continue until he can say\nall the words which former Aethrapaitis have said.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 46,
+      "ref": "Vd 4.46",
+      "orig": "hãm-taptibyô aiwyô câxrare nerebyô\nzarathushtra, mâ gêush mâ vastrahe hatô\nadhâitîm vaocôit.",
+      "en": "Before the boiling water publicly prepared,\nO Spitama Zarathushtra! let no one make bold to deny having received\n[from his neighbour] the ox or the garment in his possession.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 47,
+      "ref": "Vd 4.47",
+      "orig": "adhaêca uiti nâirivaite zî-tê ahmât\npourum framraomi spitama zarathushtra ýatha makhavô\nfravâxshôit vîsâne ahmât ýatha\nevîsâi puthrâne ahmât ýatha aputhrâi\nshaêtavatô ahmât ýatha ashaêtâi.",
+      "en": "Verily I say it unto thee, O Spitama Zarathushtra! the man\nwho has a wife is far above him who lives in continence; he who\nkeeps a house is far above him who has none; he who has\nchildren is far above the childless man; he who has riches is far above\nhim who has none.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 48,
+      "ref": "Vd 4.48",
+      "orig": "hâuca ayå narå vohu manô jâgerebushtarô\nanghat ýô gêush uruthware hãm-pâfrâiti\nýatha hâu ýô nôit itha hô\nupa-meretô hâu asperenô-mazô hâu\nanumayô-mazô hâu staorô-mazô hâu\nvîrô-mazô.",
+      "en": "And of two men, he who fills himself with meat receives in\nhim Vohu Mano much better than he who does not do so;\nthe latter is all but dead; the former is above him by the worth of an\nAsperena, by the worth of a sheep, by the worth of\nan ox, by the worth of a man.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 49,
+      "ref": "Vd 4.49",
+      "orig": "aêshô zî narô paityeiñti astô\nvîdhôtush peshanaiti ýasca ishush hvâthaxtô\npeshanaiti ýasca zemakô peshanaiti kamnem vaste vanghanem\nýasca mashîm drvañtem sâstârem\nkameredhaja peshanaiti ýasca ashemaokhem anashavanem anguharestâtem\npeshanaiti.",
+      "en": "This man can strive against the onsets\nof Asto-vidhotu; he can strive against the well-darted\narrow; he can strive against the winter\nfiend, with thinnest garment on; he can strive against\nthe wicked tyrant and smite him on the head; he can strive against\nthe ungodly fasting Ashemaogha.\n49 (bis). On the very first time when that deed has been done,\nwithout waiting until it is done again,",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 50,
+      "ref": "Vd 4.50",
+      "orig": "paoirîm aêtaêshãm shyaothenanãm\nverezimnem nôit bitîm, avadha aêtadha aêtahe\nshyaothnahe ýatha vaêtheñti ýatha aêtahmi\nanghvô ýat astvaiñti ayanghaênâish\nkaretâish azdibîsh paiti ava-kerethyât aoshanghaithyåse-tanvô\nmasyô vâ ahmâtcit.",
+      "en": "down there the pain for\nthat deed shall be as hard as any in this world: even as if one\nshould cut off the limbs from his perishable body with knives\nof iron, or still worse;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 51,
+      "ref": "Vd 4.51",
+      "orig": "avadha aêtadha aêtahe shyaothnahe ýatha\nvaêtheñti ýatha aêtahmi anghvô\nýat astvaiñti ayanghaênâish fshêbîsh\nazdibîsh paiti ava-pashât aoshanghaithyåse-tanvô\nmasyô vâ ahmâtcit.",
+      "en": "down there the pain for that deed shall be as hard as any\nin this world: even as if one should nail\nhis perishable body with nails of iron, or still worse;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 52,
+      "ref": "Vd 4.52",
+      "orig": "avadha aêtadha aêtahe shyaothnahe ýatha\nvaêtheñti ýatha aêtahmi anghvô\nýat astvaiñti satô-vîrem vaêmem\nanusô paidhyâite aoshanghaithyåse-tanvô\nmasyô vâ ahmâtcit.",
+      "en": "down there the pain for that deed shall be as hard as any\nin this world: even as if one should by force throw his perishable\nbody headlong down a precipice a hundred times the height of a\nman, or still worse;",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 53,
+      "ref": "Vd 4.53",
+      "orig": "avadha aêtadha aêtahe shyaothnahe ýatha\nvaêtheñti ýatha aêtahmi anghvô\nýat astvaiñti anusô pârem marezem ava-\nhishtât.",
+      "en": "down there the pain for that deed shall be as hard as any\nin this world: even as if one should by force impale\nhis perishable body, or still worse.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 54,
+      "ref": "Vd 4.54",
+      "orig": "avadha aêtadha aêtahe shyaothnahe ýatha\nvaêtheñti ýatha aêtahmi anghvô\nýat astvaiñti âpem saokeñtavaitîm\nzaranyâvaitîm vîthushavaitîm draogem vîthush\napâithish rashnaoshca paiti-sanghem mithraheca aiwi-druxtem.",
+      "en": "Down there the pain for that deed shall\nbe as hard as any in this world: to wit, the deed of\na man, who knowingly lying, confronts the brimstoned,\ngolden, truth-knowing water with an\nappeal unto Rashnu and a lie unto Mithra.",
+      "zh": ""
+    },
+    {
+      "chapter": 4,
+      "verse": 55,
+      "ref": "Vd 4.55",
+      "orig": "dâtare ... ashâum ýô âpem saokeñtavaitîm\nzaranyâvaitîm vîthushavaitîm draogem vîthush\napâithish rashnaoshca paiti-sanghem mithraheca aiwi-druxtem\nkâ-hê asti citha, âat mraot ahurô mazdå,\nhapta sata upâzananãm upâzôit aspahe\nashtraya hapta sata sraoshô-caranaya! ashem vohû...!!",
+      "en": "O Maker of the material world, thou Holy One! He who, knowingly\nlying, confronts the brimstoned, golden, truth-knowing water with\nan appeal unto Rashnu and a lie unto Mithra, what is the penalty\nthat he shall pay? Ahura\nMazda answered: 'Seven hundred stripes with the Aspahe-ashtra,\nseven hundred stripes with the Sraosho-charana.'",
+      "zh": ""
+    }
+  ]
+}

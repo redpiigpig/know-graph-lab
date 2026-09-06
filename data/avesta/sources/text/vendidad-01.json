@@ -1,0 +1,189 @@
+{
+  "slug": "vendidad-01",
+  "siglum": "Vd 1",
+  "title_zh": "祓魔法典 第 1 章‧十六邦國",
+  "title_en": "Vendidad 1",
+  "canon": "avestan",
+  "volume": "vendidad",
+  "orig_scheme": "geldner-roman",
+  "orig_source": "avesta.org，蓋爾德納校本轉寫（舊式羅馬轉寫）",
+  "orig_url": "https://www.avesta.org/vendidad/vd.htm",
+  "en_source": "《東方聖書》第 4 卷，1880／美國版 1898；公有領域",
+  "en_translator": "達梅斯特（James Darmesteter）",
+  "en_url": "https://www.avesta.org/vendidad/vd1sbe.htm",
+  "licence": "原文轉寫與英譯均取自 avesta.org（Joseph H. Peterson 編）；英譯為《東方聖書》舊譯，已入公有領域。繁中為本站自譯。",
+  "pivot": "sbe-eng",
+  "pivot_note": null,
+  "names": {
+    "Ahura Mazda": "阿胡拉‧馬茲達",
+    "Angra Mainyu": "安格拉‧曼紐",
+    "Zarathushtra": "查拉圖斯特拉",
+    "Spitama": "斯皮塔瑪",
+    "Airyana Vaeja": "艾里亞納‧瓦埃賈",
+    "Yima": "伊瑪",
+    "Nasu": "納蘇",
+    "daeva": "迭瓦"
+  },
+  "segments": [
+    {
+      "chapter": 1,
+      "verse": 1,
+      "ref": "Vd 1.1",
+      "orig": "mraot ahurô mazdå spitamâi zarathushtrâi,\nazem dadhãm spitama zarathushtra asô râmô-\ndâitîm nôit kudat shâitîm, ýeidhi-zî\nazem nôit daidhyãm spitama zarathushtra asô\nrâmô-dâitîm nôit kudat shâitîm\nvîspô anghush astvå airyanem vaêjô\nfrâshnvât.",
+      "en": "Ahura Mazda spake unto Spitama Zarathushtra,\nsaying:\nI have made every land dear (to its people),\neven though it had no charms whatever in it: had\nI not made every land dear (to its people), even\nthough it had no charms whatever in it, then the\nwhole living world would have invaded the Airyana\nVaeja.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 2,
+      "ref": "Vd 1.2",
+      "orig": "paoirîm asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå airyanem vaêjô vanghuyå dâityayå.\nâat ahe paityârem frâkereñtat angrô\nmainyush pouru-mahrkô azhimca ýim raoidhitem zyãmca\ndaêvô-dâtem,",
+      "en": "The first of the good lands and countries\nwhich I, Ahura Mazda, created, was the Airyana\nVaeja, by the Vanguhi Daitya.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created the serpent in the river and\nWinter, a work of the Daevas.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 3,
+      "ref": "Vd 1.3",
+      "orig": "dasa avathra månghô zayana dva hãmina taêca\nheñti sareta âpô sareta zemô sareta urvarayå\nadha zimahe maidhim adha zimahe zaredhaêm adha zyåscit\npairi-pataiti adha fraêshtem vôikhnanãm.",
+      "en": "There are ten winter months there, two\nsummer months; and those are cold for the waters,\ncold for the earth, cold for the trees. Winter falls\nthere, the worst of all plagues. [Hum 35: \"Ten are there the winter\nmonths, two the summer months, and even then [in summer] the waters are\nfreezing, the earth is freezing, the plants are freezing; there is the\ncenter of winter, there is the heart of winter, there winter rushes\naround, there (occur) most damages caused by storm.\"]",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 4,
+      "ref": "Vd 1.4",
+      "orig": "bitîm asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\ngâum ýim sukhdhô-shayanem, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nskaitîm ýãm gavaca dayaca pouru-mahrkem.",
+      "en": "The second of the good lands and\ncountries which I, Ahura Mazda, created, was the\nplain which the Sughdhas inhabit.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created the locust, which brings\ndeath unto cattle and plants.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 5,
+      "ref": "Vd 1.5",
+      "orig": "thritîm asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå\nmôurum sûrem ashavanem, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nmaredhãmca vîthushãmca.",
+      "en": "The third of the good lands and countries\nwhich I, Ahura Mazda, created, was the strong, holy\nMouru.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created plunder and sin.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 6,
+      "ref": "Vd 1.6",
+      "orig": "tûirîm asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå\nbâxdhîm srîrãm eredhwô-drafshãm,\nâat ahe paityârem frâkereñtat angrô\nmainyush pouru-mahrkô bravaremca usadhasca.",
+      "en": "The fourth of the good lands and countries\nwhich I, Ahura Mazda, created, was the beautiful\nBakhdhi with high-lifted banner.\nThereupon came Angra Mainyu, who is all death, and he counter-created\nthe ants and the ant-hills.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 7,
+      "ref": "Vd 1.7",
+      "orig": "puxdhem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nnisâim ýim añtare môurumca bâxdhîmca,\nâat ahe paityârem frâkereñtat angrô\nmainyush pouru-mahrkô akhemca vîmanô-hîm.",
+      "en": "The fifth of the good lands and countries\nwhich I, Ahura Mazda, created, was Nisaya, that\nlies between the Mouru and Bakhdhi.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created the sin of unbelief.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 8,
+      "ref": "Vd 1.8",
+      "orig": "xshtûm asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå\nharôyûm ýim vish-harezanem, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nsaraskemca driwikâca.",
+      "en": "The sixth of the good lands and countries\nwhich I, Ahura Mazda, created, was the house-deserting\nHaroyu.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created tears and wailing.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 9,
+      "ref": "Vd 1.9",
+      "orig": "haptathem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nvaêkeretem ýim dûzhakô- sayanem, âat\nahe paityârem frâkereñtat angrô mainyush\npouru-mahrkô pairikãm ýãm xnãthaite\nýâ upanghacat keresâspem.",
+      "en": "The seventh of the good lands and\ncountries which I, Ahura Mazda, created, was\nVaekereta, of the evil shadows.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created the Pairika Knathaiti, who\nclaves unto Keresaspa.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 10,
+      "ref": "Vd 1.10",
+      "orig": "ashtemem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nurvãm pouru-vâstrãm, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nakha aiwishtâra.",
+      "en": "The eighth of the good lands and\ncountries which I, Ahura Mazda, created, was Urva\nof the rich pastures.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created the sin of pride.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 11,
+      "ref": "Vd 1.11",
+      "orig": "nâumem asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå xneñtem ýim vehrkânô- shayanem,\nâat ahe paityârem frâkereñtat angrô\nmainyush pouru-mahrkô akha anâperetha shyaothna ýâ\nnarô-vaêpaya.",
+      "en": "The ninth of the good lands and countries\nwhich I, Ahura Mazda, created, was Khnenta which\nthe Vehrkanas inhabit.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created a sin for which there is no\natonement, the unnatural sin.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 12,
+      "ref": "Vd 1.12",
+      "orig": "dasemem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nharahvaitîm srîrãm, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nakha anâperetha shyaothna ýâ nasuspaya.",
+      "en": "The tenth of the good lands and\ncountries which I, Ahura Mazda, created, was the\nbeautiful Harahvaiti.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created a sin for which there is no\natonement, the burying of the dead.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 13,
+      "ref": "Vd 1.13",
+      "orig": "aêvañdasem asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå haêtumañtem raêvañtem hvarenanguhañtem,\nâat ahe paityârem frâkereñtat angrô\nmainyush pouru-mahrkô akha ýâtava,",
+      "en": "The eleventh of the good lands and\ncountries which I, Ahura Mazda, created, was the\nbright, glorious Haetumant.\nThereupon came Angra Mainyu, who is all\ndeath, and he counter-created the evil work of witchcraft.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 14,
+      "ref": "Vd 1.14",
+      "orig": "aêmca ahe cithrô daxshtô anghat aêm\ncithrô-paiti-dayô ýatha kavacit jasen zaoyehe\nýâtumeñtem adha heñti ýâtumastema\nadha taêcit uzjaseñti ýâ mereñcyâica\nzaradhakhnyâica xshtãmicatca madhaxaheca.",
+      "en": "And this is the sign by which it is known,\nthis is that by which it is seen at once: wheresoever\nthey may go and raise a cry of sorcery, there the\nworst works of witchcraft go forth. From there they\ncome to kill and strike at heart, and they bring\nlocusts as many as they want.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 15,
+      "ref": "Vd 1.15",
+      "orig": "dvadasem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nrakhãm thrizañtûm, âat ahe paityârem\nfrâkereñtat angrô mainyush pouru-mahrkô\nakhemca uparô-vîmanô-hîm.",
+      "en": "The twelfth of the good lands and\ncountries which I, Ahura Mazda, created, was\nRagha of the three races.\nThereupon came Angra Mainyu, who is all death, and he counter-created\nthe sin of utter unbelief.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 16,
+      "ref": "Vd 1.16",
+      "orig": "thridasem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\ncaxrem sûrem ashavanem, âat ahe paityârem frâkereñtat\nangrô mainyush pouru-mahrkô akha anâperetha\nshyaothna ýâ nasuspacya.",
+      "en": "The thirteenth of the good lands and\ncountries which I, Ahura Mazda, created, was the\nstrong, holy Chakhra.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created a sin for which there is no\natonement, the cooking of corpses.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 17,
+      "ref": "Vd 1.17",
+      "orig": "cathrudasem asanghãmca shôithranãmca vahishtem\nfrâthweresem azem ýô ahurô mazdå\nvarenem ýim cathru-gaoshem ýahmâi zayata thraêtaonô\njañta azhôish dahâkâi, âat ahe\npaityârem frâkereñtat angrô mainyush\npouru-mahrkô arathwyâca daxshta anairyâca dainghush-aiwishtâra.",
+      "en": "The fourteenth of the good lands and\ncountries which I, Ahura Mazda, created, was the\nfour-cornered Varena, for which was born\nThraetaona, who smote Azi Dahaka [Zohak].\nThereupon came Angra Mainyu, who is all death,\nand he counter-created abnormal issues in women,\nand barbarian oppression.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 18,
+      "ref": "Vd 1.18",
+      "orig": "pañcadasem asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå ýô hapta heñdu, âat ahe\npaityârem frâkereñtat angrô mainyush\npouru-mahrkô arathwyâca daxshta arathwîmca garemâum.",
+      "en": "The fifteenth of the good lands and\ncountries which I, Ahura Mazda, created, was the\nSeven Rivers.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created abnormal issues in women,\nand excessive heat.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 19,
+      "ref": "Vd 1.19",
+      "orig": "xshvash-dasem asanghãmca shôithranãmca\nvahishtem frâthweresem azem ýô ahurô\nmazdå upa aodhaêshu ranghayå ýô\nasârô aiwyâxshayeiñti, âat ahe\npaityârem frâkereñtat angrô mainyush\npouru-mahrkô zyãmca daêvô-dâtem\ntaozhyâca dainghush-aiwishtâra.",
+      "en": "The sixteenth of the good lands and\ncountries which I, Ahura Mazda, created, was the\nland by the sources (?) of the Rangha, where people\nlive who have no chiefs.\nThereupon came Angra Mainyu, who is all death,\nand he counter-created Winter, a work of the\nDaevas.",
+      "zh": ""
+    },
+    {
+      "chapter": 1,
+      "verse": 20,
+      "ref": "Vd 1.20",
+      "orig": "heñti anyåscit asåsca shôithråsca\nsrîråsca gufråsca berexdhåsca frashåsca\nbâmyåsca!\nashem vohû...!!",
+      "en": "There are still other lands and countries,\nbeautiful and deep, longing and asking for the good,\nand bright. [Hum2 54: lands and regions, beautiful,­deep, esteemed, brilliant and bright.]",
+      "zh": ""
+    }
+  ]
+}
