@@ -223,6 +223,36 @@ rows = parse_publications(pub_query(
 但華藝從第 2 期收起，前 78 期站內完全沒有——整刊跳過就會漏掉那一段。
 所以 `SITE_HELD` 的值可以是 `"all"`，也可以是一組期號。
 
+## 華藝之外：臺大佛學數位圖書館（開放取用，2026-09-06 實測）
+
+華藝完全沒有的那批佛教老雜誌，臺大佛圖有，而且**不需要機構認證**。
+
+🚨 **它的檢索是 Solr，直接打就好，不要去爬 JSP。** 網頁 `search/default.jsp`
+的結果是 JS 填的：純 HTTP 抓回來的 HTML 裡永遠是 `<span id="Doct">0</span>`
+（`display:none` 的樣板），看起來就像「查無資料」。真正的資料在：
+
+```
+GET https://dlbs.liberal.ntu.edu.tw/solr/mit/select
+    ?q=SOURCETOPIC:"海潮音" AND BFULLTEXT:1&wt=json&rows=50&start=0
+```
+
+欄位：`TOPIC` 篇名／`AUTHOR`／`SOURCETOPIC` 刊名（值長這樣「菩提樹=Bodhedrum」）／
+`ARCHIVE` 卷期／`PAGE` 起訖頁／`PRESSTIME` 出版日／`BFULLTEXT` 0|1／`FULLTEXTPATH`。
+
+實測筆數（篇目 / 其中有全文）：
+海潮音 26,220/1,141、人生 8,581/1,074、菩提樹 3,215/2,529、香光莊嚴 2,845/2,806、
+弘誓 1,949/1,909、獅子吼 1,557/**4**、普門學報 1,287/564、福嚴會訊 708/692、
+正觀 395/391、諦觀 388/**0**、圓光佛學學報 281/273、中華佛學學報 438/435。
+
+🚨 三個坑：
+1. `FULLTEXTPATH` **有時絕對（`http://buddhism.lib.ntu.edu.tw/FULLTEXT/…`）
+   有時相對（`/FULLTEXT/…`）**，兩種都要處理。
+2. **舊雜誌的 PDF 是掃描版、沒有文字層**（1953 年《菩提樹》那篇：3 頁 1.9 MB，
+   `get_text()` 回空字串）。近年的學報才是原生數位（2008《中華佛學學報》32 頁 8 萬字）。
+   所以「有全文」不等於「可全文檢索」，要 OCR 的那一批得另外算成本。
+3. 有些 `FULLTEXTPATH` 指到的不是 PDF（法鼓佛學學報那筆回 35 KB 的 HTML）。
+   一律驗 `%PDF` 開頭。
+
 ## 查證一筆引註存不存在
 
 華藝查不到**不等於**不存在——各刊的收錄起始差很多（《神學與教會》從 2011 才收，
