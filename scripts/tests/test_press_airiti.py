@@ -43,11 +43,35 @@ def test_norm_title_ignores_punctuation_and_width(a, b):
     assert pa.norm_title(a) == pa.norm_title(b)
 
 
+@pytest.mark.parametrize("a,b", [
+    # 正繁異體：華藝寫「臺」，書目多半寫「台」——只差這一個字就整篇對不上
+    ("現代台灣佛教與印順法師——五大本山與人間佛教的背景一探",
+     "現代臺灣佛教與印順法師－五大本山與人間佛教的背景一探"),
+    ("戰後台灣佛教正義議題之回顧", "戰後臺灣佛教正義議題之回顧"),
+    ("「人類為本」與「眾生平等」", "「人類為本」與「衆生平等」"),
+    # 中點：書目用 U+2027，華藝用 U+2022
+    ("保羅‧尼特與宋泉盛之多元宗教神學的批判性比較",
+     "保羅•尼特與宋泉盛之多元宗教神學的批判性比較"),
+])
+def test_norm_title_folds_orthographic_variants(a, b):
+    assert pa.norm_title(a) == pa.norm_title(b)
+
+
 def test_norm_title_does_not_merge_different_articles():
-    # 🚨 正規化只能去標點與全半形。若哪天有人加上繁簡轉換或去掉虛詞，
-    #    不同的兩篇就會被折成同一篇，而症狀是「下載到的不是我要的那篇」
+    # 🚨 正規化只能去標點、全半形與**明列的**正繁異體。若哪天有人加上繁簡轉換
+    #    或去掉虛詞，不同的兩篇就會被折成同一篇，症狀是「下載到的不是我要的那篇」
     assert pa.norm_title("人間佛教的當代實踐") != pa.norm_title("人间佛教的当代实践")
     assert pa.norm_title("印順的人間佛教") != pa.norm_title("太虛的人間佛教")
+    # 異體字表只准收「同一個字的兩種寫法」。這幾組是不同的字，折掉就是把不同的
+    # 兩篇合成一篇——加字進 _VARIANTS 之前先確認不會踩到這一類
+    assert pa.norm_title("製作緣起") != pa.norm_title("製作源起")
+    assert pa.norm_title("後設倫理") != pa.norm_title("複製倫理")
+
+
+def test_variant_table_stays_a_short_explicit_list():
+    # 🚨 這張表一旦長起來就等於偷偷做了繁簡轉換。要加字得先過上面那條測試，
+    #    並在 _VARIANTS 的註解裡寫清楚是哪一篇書目踩到的
+    assert len(pa._VARIANTS) <= 6
 
 
 def test_safe_name_strips_path_separators():

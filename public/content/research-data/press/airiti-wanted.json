@@ -1,8 +1,8 @@
 {
  "note": "書目點名要的華藝期刊論文，已對到 docID；--batch 會先清這一批再照 PRIORITY 掃。",
  "counts": {
-  "對到 docID": 141,
-  "對不上": 22
+  "對到 docID": 147,
+  "對不上": 16
  },
  "resolved": {
   "ntu-buddhist-old": [
@@ -661,6 +661,13 @@
     "from": "hcu-phd"
    },
    {
+    "docId": "22241299-201604-201604280055-201604280055-103-148",
+    "title": "戰後臺灣佛教正義議題之回顧",
+    "pages": "103-148",
+    "issueLabel": "6期 (2016/04)",
+    "from": "hcu-phd"
+   },
+   {
     "docId": "22241299-201712-201712260011-201712260011-1-52",
     "title": "中國大陸2016年「批印事件」評議",
     "pages": "1-52",
@@ -740,6 +747,13 @@
     "from": "hcu-phd"
    },
    {
+    "docId": "18133649-201503-201504270001-201504270001-197-222",
+    "title": "「人類為本」與「衆生平等」－印順法師「人間佛教」觀點下的動物保護",
+    "pages": "197-222",
+    "issueLabel": "23期 (2015/03)",
+    "from": "hcu-phd"
+   },
+   {
     "docId": "18133649-201503-201504270001-201504270001-175-195",
     "title": "動物解放與護生行動：從關懷生命協會的角度來探討",
     "pages": "175-195",
@@ -758,6 +772,13 @@
     "title": "印順學派與慈濟宗門—試論印順思想對慈濟志業開展之可能啟發",
     "pages": "93-134",
     "issueLabel": "17期 (2012/03)",
+    "from": "mahaprajapati-revolution"
+   },
+   {
+    "docId": "18133649-202009-202011030006-202011030006-1-34",
+    "title": "論「解嚴」前臺灣佛教高等教育格局的初步形成",
+    "pages": "1-34",
+    "issueLabel": "34期 (2020/09)",
     "from": "mahaprajapati-revolution"
    },
    {
@@ -849,6 +870,13 @@
     "from": "hcu-phd"
    },
    {
+    "docId": "16820568-200706-x-15-37-74-a",
+    "title": "保羅•尼特與宋泉盛之多元宗教神學的批判性比較",
+    "pages": "37-74",
+    "issueLabel": "15期 (2007/06)",
+    "from": "hcu-phd"
+   },
+   {
     "docId": "16820568-201503-201510220016-201510220016-1-23",
     "title": "地球朝聖：薩提斯．庫瑪（Satish Kumar）的宗教靈修與生態踐行",
     "pages": "1-23",
@@ -870,6 +898,22 @@
     "pages": "157-172",
     "issueLabel": "30期 (2008/03)",
     "from": "hcu-phd"
+   }
+  ],
+  "fgu-journal": [
+   {
+    "docId": "P20181205001-201607-201812210020-201812210020-31-53",
+    "title": "現代臺灣佛教與印順法師－五大本山與人間佛教的背景一探",
+    "pages": "31-53",
+    "issueLabel": "新2卷2期 (2016/07)",
+    "from": "hcu-phd"
+   },
+   {
+    "docId": "P20181205001-201607-201812210020-201812210020-31-53",
+    "title": "現代臺灣佛教與印順法師－五大本山與人間佛教的背景一探",
+    "pages": "31-53",
+    "issueLabel": "新2卷2期 (2016/07)",
+    "from": "mahaprajapati-revolution"
    }
   ],
   "sino-christian": [
@@ -1180,17 +1224,6 @@
    "why": "道雜誌：華藝沒有這一篇的電子全文"
   },
   {
-   "title": "戰後台灣佛教正義議題之回顧",
-   "author": "侯坤宏",
-   "venue": "法印學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "22241299",
-   "slug": "dharma-seals",
-   "status": "正常發行",
-   "why": "法印學報 / Journal of Dharma Seals：篇名對不上該刊的篇目"
-  },
-  {
    "title": "依住堪能性，能成所作事——談禪修的利益與無相布施的經商境界",
    "author": "釋性廣",
    "venue": "法印學報",
@@ -1200,39 +1233,6 @@
    "slug": "dharma-seals",
    "status": "正常發行",
    "why": "法印學報 / Journal of Dharma Seals：篇名對不上該刊的篇目"
-  },
-  {
-   "title": "「人類為本」與「眾生平等」――印順法師「人間佛教」 觀點下的動物保護",
-   "author": "林建德",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇名對不上該刊的篇目"
-  },
-  {
-   "title": "論「解嚴」前台灣佛教高等教育格局的初步形成",
-   "author": "張雪松",
-   "venue": "玄奘佛學研究",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "18133649",
-   "slug": "hcu-buddhist",
-   "status": "正常發行",
-   "why": "玄奘佛學研究 / Hsuan Chuang Journal of Buddhism Studies：篇名對不上該刊的篇目"
-  },
-  {
-   "title": "保羅‧尼特與宋泉盛之多元宗教神學的批判性比較",
-   "author": "歐力仁",
-   "venue": "輔仁宗教研究",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "16820568",
-   "slug": "fujen-religious",
-   "status": "正常發行",
-   "why": "輔仁宗教研究 / Fujen Religious Studies：篇名對不上該刊的篇目"
   },
   {
    "title": "實況化神學的開展：黃彰輝牧師神學思想的探討",
@@ -1255,28 +1255,6 @@
    "slug": "taiwan-theology",
    "status": "正常發行",
    "why": "台灣神學論刊 / Taiwan Journal of Theology：篇名對不上該刊的篇目"
-  },
-  {
-   "title": "現代台灣佛教與印順法師——五大本山與人間佛教的背 景一探",
-   "author": "蓑輪顕量",
-   "venue": "佛光學報",
-   "year": "",
-   "source": "hcu-phd",
-   "pid": "P20181205001",
-   "slug": "fgu-journal",
-   "status": "正常發行",
-   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇名對不上該刊的篇目"
-  },
-  {
-   "title": "現代台灣佛教與印順法師——五大本山與人間佛教的背景一探",
-   "author": "蓑輪顕量",
-   "venue": "佛光學報",
-   "year": "",
-   "source": "mahaprajapati-revolution",
-   "pid": "P20181205001",
-   "slug": "fgu-journal",
-   "status": "正常發行",
-   "why": "佛光學報 / Fo Guang Journal of Buddhist Studies：篇名對不上該刊的篇目"
   }
  ]
 }
