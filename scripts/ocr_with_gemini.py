@@ -35,7 +35,7 @@ import sys
 import tempfile
 import time
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 try:
     import json_repair as _json_repair
@@ -266,11 +266,48 @@ def insert_chunk_previews(book_id, chunks):
             raise RuntimeError(f"chunk insert failed at batch_size=1, row {i}")
 
 
-# ── Gemini 6h cooldown（跨次執行持久化）─────────────────────────
-# translate_ebook_to_zh.py 的 2-strike 規則移植：全部 key 耗盡 → 寫 cooldown 檔，
-# 6 小時內的後續排程 run 不再白打 Gemini、直接走 Haiku（一次一本）。
+# ── Gemini cooldown：對齊額度真正重置的時刻 ─────────────────────
+# 全部 key 耗盡 → 寫 cooldown 檔，之後的排程 run 不再白打 Gemini、直接走 Haiku。
+#
+# 🚨 這裡原本是「固定 6 小時」，而 Gemini 免費層是**每日**額度、在美西午夜重置
+#    （台灣時間 15:00）。固定 6 小時跟那個邊界對不上，兩個方向都會虧：
+#      2026-09-06 14:27 耗盡 → 擋到 20:27，但額度 15:00 就回來了，17:31 那輪
+#      明明有額度卻被自己擋掉、整輪退去 Haiku。
+#      2026-09-07 08:05 耗盡 → 擋到 14:05，14:05–15:00 之間又會再白打一輪。
+#    改成一律擋到「下一個美西午夜」。
+#
+# 時區得自己算：Windows 沒有 IANA tzdata，zoneinfo 對 America/Los_Angeles 直接
+# 丟 ZoneInfoNotFoundError，所以不能用。美國 DST 規則（2007 起）是確定的，
+# 用 UTC 表示的邊界剛好落在整點上：三月第二個週日 10:00 UTC 進入 PDT，
+# 十一月第一個週日 09:00 UTC 回到 PST。
+#
+# 差一小時的代價不對稱，所以寧可算準：算早了，腳本會在額度還沒回來時試一次、
+# 失敗後把 cooldown 重寫到「再下一個午夜」—— 直接跳掉一整天。
 _COOLDOWN_FILE = Path(__file__).parent / "state" / "ocr_gemini_cooldown.json"
-GEMINI_COOLDOWN_SECONDS = 6 * 3600
+
+
+def _nth_weekday_utc(year: int, month: int, weekday: int, n: int, hour: int) -> float:
+    """該年月第 n 個 weekday（0=週一）的 UTC 時戳。"""
+    d = datetime(year, month, 1, hour, tzinfo=timezone.utc)
+    d += timedelta(days=(weekday - d.weekday()) % 7 + 7 * (n - 1))
+    return d.timestamp()
+
+
+def _pacific_utc_offset(ts: float) -> int:
+    """該時刻美西與 UTC 的時差（小時，正數）：PDT 7、PST 8。"""
+    y = datetime.fromtimestamp(ts, timezone.utc).year
+    dst_start = _nth_weekday_utc(y, 3, 6, 2, 10)   # 三月第二個週日 10:00 UTC
+    dst_end = _nth_weekday_utc(y, 11, 6, 1, 9)     # 十一月第一個週日 09:00 UTC
+    return 7 if dst_start <= ts < dst_end else 8
+
+
+def _next_quota_reset(now: float) -> float:
+    """下一個美西午夜（Gemini 免費層每日額度的重置點）的 UTC 時戳。"""
+    off = _pacific_utc_offset(now)
+    pacific_now = datetime.fromtimestamp(now - off * 3600, timezone.utc)
+    midnight = (pacific_now + timedelta(days=1)).replace(
+        hour=0, minute=0, second=0, microsecond=0)
+    return midnight.timestamp() + off * 3600
 
 
 def _gemini_cooldown_until() -> float:
@@ -282,7 +319,7 @@ def _gemini_cooldown_until() -> float:
 
 def _set_gemini_cooldown() -> None:
     _COOLDOWN_FILE.parent.mkdir(parents=True, exist_ok=True)
-    until = time.time() + GEMINI_COOLDOWN_SECONDS
+    until = _next_quota_reset(time.time())
     _COOLDOWN_FILE.write_text(json.dumps(
         {"until": until, "until_str": time.strftime("%Y-%m-%d %H:%M", time.localtime(until))}),
         encoding="utf-8")
@@ -1193,7 +1230,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
     if limit:
         targets = targets[:limit]
 
-    # 6h cooldown（跨排程持久化）：上一輪全部 Gemini key 耗盡 → 這輪直接 Haiku 主引擎
+    # cooldown（跨排程持久化）：上一輪全部 Gemini key 耗盡 → 這輪直接 Haiku 主引擎
     if engine == "gemini":
         cd_until = _gemini_cooldown_until()
         if time.time() < cd_until:
@@ -1357,9 +1394,9 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
 
         if quota_hit:
             # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
-            # 寫 6h cooldown 檔：之後 6 小時內的排程 run 不再白打 Gemini。
+            # 寫 cooldown 檔：擋到美西午夜額度重置為止，中間的排程 run 不再白打 Gemini。
             _set_gemini_cooldown()
-            print(f"\n⚠ All Gemini keys exhausted（已寫 6h cooldown）. "
+            print(f"\n⚠ All Gemini keys exhausted（cooldown 至額度重置）. "
                   f"Switching to Haiku fallback (one book at a time).")
             if not _HAS_ANTHROPIC or not _HAS_FITZ:
                 missing = []
