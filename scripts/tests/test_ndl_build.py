@@ -152,3 +152,59 @@ class TestEmptyBuildGate:
         secs = [{"title": "第一", "start": 3, "end": 4},
                 {"title": "第二", "start": 4, "end": 5}]
         assert nb.refuse_empty_build(secs, {3: "無教會主義は教派ではない。"}) is False
+
+
+class TestSpread:
+    """NDL 的掃描是**兩頁合成一張**（橫幅）。整張丟給 OCR 等於每頁只剩一半解析度，
+    密排直書舊字讀不動，模型就開始編 —— 第一次試跑就編出一份完全不存在的目次。
+    """
+
+    def test_landscape_is_a_spread(self):
+        assert nb.is_spread(3575, 2787) is True
+
+    def test_portrait_is_a_single_page(self):
+        assert nb.is_spread(1200, 1900) is False
+
+    def test_right_half_comes_first(self):
+        """日文直書右起：右半頁是前一頁，必須先讀。順序反了整本文意就倒著接。"""
+        boxes = nb.split_spread_boxes(1000, 800)
+        assert boxes == [(500, 0, 1000, 800), (0, 0, 500, 800)]
+
+    def test_odd_width_loses_no_column(self):
+        boxes = nb.split_spread_boxes(1001, 800)
+        right, left = boxes
+        assert left[0] == 0 and right[2] == 1001
+        assert left[2] == right[0]      # 中線一致，不重疊也不漏
+
+
+class TestTocCanary:
+    """幻覺偵測：拿 NDL 目次 API 當獨立真值，去驗 OCR 到底有沒有在讀圖。
+
+    這批材料（直排舊字舊假名）最危險的失敗不是讀不出來，而是**部分錨定的編造**
+    —— 模型讀到零星字詞，再用通順日文把中間補起來，整頁看起來毫無異狀。
+    唯一能自動抓到的辦法，是我們剛好有一頁的內容是已知的：目次頁。
+    """
+
+    TITLES = ["第一　教派ではない", "第二　起源", "第三　現状", "第四　教會に對する抗議"]
+
+    def test_real_toc_page_passes(self):
+        ocr = "目次 第一　教派ではない…一 第二　起源…二 第三　現状…四 第四　教會に對する抗議…六"
+        assert nb.toc_match_ratio(ocr, self.TITLES) == 1.0
+
+    def test_hallucinated_toc_is_caught(self):
+        """實際踩到的那次：OCR 吐出一份完全不存在的目次。"""
+        ocr = ("目次 第一　無教會主義の本質…一 第二　信仰的基礎としての無教會主義…三〇 "
+               "第三　無教會主義の組織法…五九")
+        assert nb.toc_match_ratio(ocr, self.TITLES) == 0.0
+
+    def test_partial_match_is_measured(self):
+        ocr = "第一　教派ではない と 第二　起源 だけ読めた"
+        assert nb.toc_match_ratio(ocr, self.TITLES) == 0.5
+
+    def test_whitespace_and_dot_leaders_ignored(self):
+        """目次的點線與空白不該影響比對。"""
+        ocr = "第一 教派ではない......一\n第二 起源...二\n第三 現状...四\n第四 教會に對する抗議...六"
+        assert nb.toc_match_ratio(ocr, self.TITLES) == 1.0
+
+    def test_no_titles_is_not_a_pass(self):
+        assert nb.toc_match_ratio("なんらかの文章", []) == 0.0

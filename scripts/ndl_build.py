@@ -25,6 +25,7 @@ scripts/tests/test_ndl_build.py。
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
@@ -132,6 +133,37 @@ def section_payload(section: dict, pages: dict) -> dict:
         "src": paragraphs_from_pages(texts),
         "zh": [],
     }
+
+
+def is_spread(width: int, height: int) -> bool:
+    """橫幅＝兩頁合成一張（見開き）。NDL 的掃描幾乎都是這種。"""
+    return width > height
+
+
+def split_spread_boxes(width: int, height: int) -> list:
+    """跨頁 → [右半頁 box, 左半頁 box]，PIL crop 用的 (l, t, r, b)。
+
+    🚨 **右半頁先讀**：日文直書右起，右半頁是前一頁。順序反了整本的文意會倒著接，
+    而且每一頁單獨看都很正常 —— 這種錯不會有任何東西報警。
+    """
+    mid = width // 2
+    return [(mid, 0, width, height), (0, 0, mid, height)]
+
+
+def toc_match_ratio(ocr_text: str, titles: list) -> float:
+    """OCR 出來的目次頁，對得上幾成 NDL 目次 API 給的章名（0.0–1.0）。
+
+    這是**幻覺偵測的錨**：這批直排舊字材料最危險的失敗不是讀不出來，而是
+    部分錨定的編造 —— 模型讀到零星字詞，再用通順日文把中間補起來，整頁毫無異狀。
+    唯一能自動抓的辦法，是我們剛好有一頁的內容是已知的（目次頁），
+    拿它當 canary：連已知答案都對不上，其餘各頁的內容一個字都不能信。
+    """
+    if not titles:
+        return 0.0
+    squash = re.compile(r"[\s　.．・…‥]+")
+    hay = squash.sub("", ocr_text or "")
+    hit = sum(1 for t in titles if squash.sub("", t) in hay)
+    return hit / len(titles)
 
 
 def refuse_empty_build(sections: list, pages: dict) -> bool:
@@ -259,12 +291,74 @@ def ocr_page(jpg_bytes: bytes, model: str = "gemini-2.5-flash") -> str:
     raise RuntimeError("全 key 失敗: %s" % last_err)
 
 
+def ocr_page_haiku(jpg_bytes: bytes, model: str = "claude-haiku-4-5-20251001") -> str:
+    """一頁影像 → 文字（Haiku Vision）。
+
+    依 [[feedback_ocr_strategy]]，Haiku **只在使用者明確下令時**啟用、嚴格一次一本。
+    這條路是 Gemini 免費層額度用盡時的救急，不是預設。
+    """
+    import base64
+    import time
+    # 🚨 不要自己 Anthropic()：本機沒有 ANTHROPIC_API_KEY，走的是 Claude Code 的
+    # OAuth 憑證（~/.claude/.credentials.json）。翻譯那邊已經有處理好的建構式
+    # （含 401 時重讀憑證），直接重用，別再寫第二套。
+    sys.path.insert(0, str(SCRIPT_DIR))
+    from translate_ebook_to_zh import _make_anthropic_client  # type: ignore
+
+    client = _make_anthropic_client()
+    b64 = base64.standard_b64encode(jpg_bytes).decode("utf-8")
+
+    quota_hits = 0
+    for _ in range(3):
+        try:
+            resp = client.messages.create(
+                model=model,
+                max_tokens=4000,
+                system=OCR_PROMPT,
+                messages=[{"role": "user", "content": [
+                    {"type": "image", "source": {"type": "base64",
+                                                 "media_type": "image/jpeg", "data": b64}},
+                    {"type": "text", "text": "このページの本文を文字起こししてください。"},
+                ]}],
+            )
+        except Exception as e:
+            msg = str(e).lower()
+            if "429" in msg or "quota" in msg or "rate" in msg:
+                quota_hits += 1
+                if quota_hits >= 2:
+                    raise RuntimeError("連 2 次 429 quota，依規範退出") from e
+                time.sleep(5)
+                continue
+            if "overload" in msg or "529" in msg or "500" in msg:
+                time.sleep(5)
+                continue
+            raise
+        text = (resp.content[0].text if resp.content else "").strip()
+        if text == "# NO_TEXT":
+            return ""
+        text = re.sub(r"^```[a-z]*\n", "", text)
+        text = re.sub(r"\n```$", "", text)
+        return clean_ocr_text(text.strip())
+    raise RuntimeError("Haiku 連續失敗")
+
+
 def ocr_book(pid: str, model: str = "gemini-2.5-flash",
-             cache_dir: Path = CACHE_DIR) -> dict:
+             cache_dir: Path = CACHE_DIR, backend: str = "gemini") -> dict:
     """快取裡的影像逐頁 OCR，一頁一個 checkpoint 檔；已有的跳過。回傳 {影像號: 文字}。"""
+    import io as _io
+    from PIL import Image
+
     src_dir = cache_dir / pid
-    out_dir = src_dir / "ocr"
+    # 🚨 checkpoint 依引擎分目錄：不分的話換引擎重跑會沿用上一個引擎的結果，
+    #    Haiku 編造出來的那批會被 Gemini 那輪當成「已完成」直接跳過。
+    out_dir = src_dir / ("ocr-" + backend)
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    def _one(img_bytes: bytes) -> str:
+        if backend == "haiku":
+            return ocr_page_haiku(img_bytes)
+        return ocr_page(img_bytes, model=model)
+
     pages: dict = {}
     for jpg in sorted(src_dir.glob("*.jpg")):
         idx = int(jpg.stem)
@@ -272,21 +366,44 @@ def ocr_book(pid: str, model: str = "gemini-2.5-flash",
         if txt.exists():
             pages[idx] = txt.read_text(encoding="utf-8")
             continue
-        text = ocr_page(jpg.read_bytes(), model=model)
+        raw = jpg.read_bytes()
+        im = Image.open(_io.BytesIO(raw))
+        if is_spread(*im.size):
+            # 跨頁分兩半各自 OCR，右半頁先（日文直書右起）
+            parts = []
+            for box in split_spread_boxes(*im.size):
+                buf = _io.BytesIO()
+                im.crop(box).save(buf, format="JPEG", quality=92)
+                parts.append(_one(buf.getvalue()))
+            text = (chr(10) * 2).join(p for p in parts if p.strip())
+        else:
+            text = _one(raw)
         txt.write_text(text, encoding="utf-8")
         pages[idx] = text
-        print("  OCR %07d  %d 字" % (idx, len(text)))
+        print("  OCR %07d  %d 字%s" % (idx, len(text), "（跨頁分兩半）" if is_spread(*im.size) else ""))
     return pages
 
 
-def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR) -> Path:
+def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
+                   backend: str = "gemini") -> Path:
     """目次分章＋OCR 文字 → secN.json（與其他作者同形），回傳輸出目錄。"""
     import json
     book = fetch_book(pid)
     secs = sections_from_index(book["index"], book["pages"], book["title"])
     pages = {}
-    for txt in sorted((cache_dir / pid / "ocr").glob("*.txt")):
+    for txt in sorted((cache_dir / pid / ("ocr-" + backend)).glob("*.txt")):
         pages[int(txt.stem)] = txt.read_text(encoding="utf-8")
+    # 幻覺閘：目次頁的內容我們已經從 NDL API 知道了，拿它驗 OCR 有沒有在讀圖
+    toc_imgs = [e["image"] for e in
+                (parse_toc_entry(l) for l in book["index"]) if e and e["title"] in ("目次", "目 次")]
+    if toc_imgs and pages.get(toc_imgs[0]):
+        ratio = toc_match_ratio(pages[toc_imgs[0]], [s0["title"] for s0 in secs])
+        print("  目次 canary：影像 %d 對上 %.0f%% 章名" % (toc_imgs[0], ratio * 100))
+        if ratio < 0.5:
+            raise RuntimeError(
+                "目次頁只對上 %.0f%% 的已知章名 —— OCR 在編造內容，拒絕產出。"
+                "  這一頁的答案我們本來就知道（NDL 目次 API），連它都對不上，"
+                "其餘各頁一個字都不能信。" % (ratio * 100))
     if refuse_empty_build(secs, pages):
         raise RuntimeError(
             "每一章都沒有正文——OCR 沒跑或全失敗，拒絕寫出空的 secN.json。"
@@ -310,7 +427,10 @@ def main():
     ap.add_argument("--build", type=str, help="pid：OCR 文字 → secN.json（需 --slug）")
     ap.add_argument("--slug", type=str, help="--build 的輸出目錄名")
     ap.add_argument("--model", type=str, default="gemini-2.5-flash")
-    ap.add_argument("--width", type=int, default=1800)
+    ap.add_argument("--backend", choices=["gemini", "haiku"], default="gemini",
+                    help="OCR 引擎。haiku 需使用者明確下令（feedback_ocr_strategy）")
+    ap.add_argument("--width", type=int, default=0,
+                    help="0＝全解析度。🚨 跨頁掃描降尺寸會讓 OCR 開始編造內容")
     args = ap.parse_args()
     pid = args.probe or args.fetch or args.ocr or args.build
     if not pid:
@@ -326,15 +446,15 @@ def main():
     for s in secs:
         print(f"   {s['start']:>4}–{s['end'] - 1:<4} {s['title'][:44]}")
     if args.fetch:
-        got = fetch_images(pid, 1, b["pages"] + 1, width=args.width)
+        got = fetch_images(pid, 1, b["pages"] + 1, width=(args.width or None))
         print(f"下載完成 {len(got)} 張 → {CACHE_DIR / pid}")
     if args.ocr:
-        pages = ocr_book(pid, model=args.model)
+        pages = ocr_book(pid, model=args.model, backend=args.backend)
         chars = sum(len(v) for v in pages.values())
         empty = [k for k, v in pages.items() if not v.strip()]
         print(f"OCR 完成 {len(pages)} 頁／{chars} 字；無正文 {len(empty)} 頁 {empty}")
     if args.build:
-        out = build_sections(pid, args.slug)
+        out = build_sections(pid, args.slug, backend=args.backend)
         print(f"→ {out}")
 
 
