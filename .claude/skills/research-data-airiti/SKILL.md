@@ -23,8 +23,32 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 
 ## 排程：探到機構身分才下
 
-單一排程 `KGL_Airiti_Poll`，`scripts/run_airiti_batch.bat 50 200`，
-08:00 起每 30 分鐘一次、持續 12 小時。log 在 `c:\tmp\airiti_download.log`。
+單一排程 `KGL_Airiti_Poll`，`scripts/run_airiti_batch.bat 100 500`（每輪最多 100 篇、
+一天最多 500），**每日** 08:00 起每 30 分鐘一次、持續 12 小時。
+log 在 `c:\tmp\airiti_download.log`。
+
+🚨 **觸發器一定要是 Daily（`MSFT_TaskDailyTrigger`），不能是 Once＋重複。**
+2026-09-06 建的那次用的是一次性觸發（`StartBoundary 2026-09-06T08:00`、每 30 分、
+持續 12 小時），當天 20:00 重複期間用盡之後就**再也不會觸發**——而工作管理員裡
+`State` 是 Ready、`LastTaskResult` 是 0、工作好端端地在那裡，唯一的徵兆是
+`NextRunTime` 空白。隔天完全靜悄悄，看起來像「人沒到學校所以沒下載」。
+檢查方式：
+
+```powershell
+(Get-ScheduledTaskInfo -TaskName 'KGL_Airiti_Poll').NextRunTime   # 空白＝已死
+(Get-ScheduledTask     -TaskName 'KGL_Airiti_Poll').Triggers[0].CimClass.CimClassName
+```
+
+重建（`New-ScheduledTaskTrigger -Daily` 不吃 `-RepetitionInterval`，要借一個
+`-Once` 觸發器的 `.Repetition` 貼過去）：
+
+```powershell
+$d = New-ScheduledTaskTrigger -Daily -At 8:00am
+$d.Repetition = (New-ScheduledTaskTrigger -Once -At 8:00am `
+    -RepetitionInterval (New-TimeSpan -Minutes 30) `
+    -RepetitionDuration (New-TimeSpan -Hours 12)).Repetition
+Set-ScheduledTask -TaskName 'KGL_Airiti_Poll' -Trigger $d
+```
 
 為什麼是高頻輪詢而不是固定四個時段：**下載只有在人到學校時才可能成功**
 （機構 IP 綁玄奘校內網段）。固定時段的問題是機器那時可能睡著或人不在，
@@ -33,9 +57,18 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 改成每半小時探一次：人不在學校，腳本驗完機構身分就收手（一個請求），
 人一到學校就開始下。**高頻不等於高流量**。
 
-一天的總量由 `--daily-cap 200` 守住，不是由排程次數守住
+一天的總量由 `--daily-cap` 守住，不是由排程次數守住
 （帳在 `c:\tmp\press_airiti_daily.json`，跨日自動歸零）。
 🚨 沒有這個上限的話，高頻排程等於把節流拆掉——一天會跑出十幾批。
+
+要改速率就改排程的兩個引數，不必動腳本。**能動的是每日總量，不是 `DELAY_DL`**——
+6 秒那個是不被停權的底線（2026-09-07 使用者定調每日 500）。
+
+🚨 **帳本是批次結束時才一次寫入**（`add_spent(spent)` 在下載迴圈之後）。
+所以中途被 Ctrl+C 或關機的那一輪，檔案已經下到了卻不會計入當天額度——
+下一輪會以為今天還沒下過，當天實際總量就可能超過上限。
+昨天 15:30 那一輪的 log 尾巴只有一個 `^C`，就是這個情形。
+手動中斷過的當天，要嘛自己補帳，要嘛就當那天的上限已經用掉了。
 
 ### 書目點名的那些篇要排在最前面
 
@@ -63,8 +96,8 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 的請求速率乘二，而節流的整個意義就在速率。
 
 **體量（2026-09-04 實測）**：29 個刊號共 17,426 篇目、其中 17,090 篇有電子全文，
-以每篇約 2.4 MB 計約 40 GB。一天 50 篇要跑 11 個月；要在一季內下完得拉到
-一天 200 篇上下。改速率就是改兩個排程任務的引數，不必動腳本。
+以每篇約 2.4 MB 計約 40 GB。**分母是「人在學校的日子」不是日曆天**——
+一天 500 篇要 34 個到校日，一天 200 篇要 85 個。改速率就是改排程的引數，不必動腳本。
 
 精確篇數怎麼查（一刊一次請求，不必等 `--toc` 跑完）：
 `POST /Article/Query`，`DSF.SearchFileds=[{FieldName:51, SearchKeyWord:<pid>}]`，
