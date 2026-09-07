@@ -58,6 +58,27 @@ def _load_detector():
     return m
 
 
+def requeue_blocked(b: dict) -> str:
+    """這本書能不能退回 OCR 佇列？回傳擋下來的理由，空字串表示可以。
+
+    兩種書偵測得到重複、卻不該用這條路修：
+
+      **非 PDF**。ocr_with_gemini 的對象是掃描 PDF；EPUB 的文字本來就抽得出來，
+      它的重複是解析或重複入庫的問題，不是 OCR 幻覺。把 EPUB 標成「待 OCR」只會
+      讓它卡在一條永遠處理不到它的佇列裡。
+
+      **全集（collection 非 null）**。那是人工策展的，上架閘門本來就豁免它，
+      而重跑會刪掉 chunk、把書從 /collected-works 的 reader 上拿掉。
+
+    2026-09-07 那批 83 本裡，兩個條件都命中同一本《佛光祈願文》（EPUB＋全集）。
+    """
+    if (b.get("file_type") or "").lower() != "pdf":
+        return f"非 PDF（{b.get('file_type')}）"
+    if b.get("collection"):
+        return f"全集（{b.get('collection')}）"
+    return ""
+
+
 def fetch_parsed_books(limit: int | None) -> list[dict]:
     """已 parse 的書，keyset 分頁（🚨 不帶 limit 的 select 會被 PostgREST 靜默
     截在 1000 筆，這個坑在本 repo 咬過三次）。"""
@@ -66,7 +87,7 @@ def fetch_parsed_books(limit: int | None) -> list[dict]:
     while True:
         cur = f"&id=gt.{last}" if last else ""
         r = requests.get(
-            f"{URL}/rest/v1/ebooks?select=id,title,chunk_count"
+            f"{URL}/rest/v1/ebooks?select=id,title,chunk_count,file_type,collection"
             f"&parsed_at=not.is.null&order=id{cur}&limit=1000",
             headers=H, timeout=90)
         r.raise_for_status()
@@ -133,7 +154,8 @@ def main() -> int:
         scanned += 1
         ok, why = O.repetition_verdict(pages)
         if not ok:
-            bad.append({"id": b["id"], "title": b["title"], "pages": len(pages), "why": why})
+            bad.append({"id": b["id"], "title": b["title"], "pages": len(pages),
+                        "why": why, "blocked": requeue_blocked(b)})
             print(f"  ✗ {b['title'][:44]}\n      {why}", flush=True)
         if n % 500 == 0:
             print(f"  …{n:,}/{len(books):,}（不合格 {len(bad)}）", flush=True)
@@ -147,8 +169,14 @@ def main() -> int:
         print("\n（只報告；要退回 OCR 佇列請加 --apply）")
         return 0
 
-    done = sum(requeue(x["id"]) for x in bad)
-    print(f"已退回佇列 {done}/{len(bad)} 本（原始輸出留在 .jsonl.bad-repetition）")
+    todo = [x for x in bad if not x["blocked"]]
+    held = [x for x in bad if x["blocked"]]
+    if held:
+        print(f"\n不退回佇列的 {len(held)} 本（理由見 requeue_blocked）：")
+        for x in held:
+            print(f"  [{x['blocked']}] {x['title'][:44]}")
+    done = sum(requeue(x["id"]) for x in todo)
+    print(f"已退回佇列 {done}/{len(todo)} 本（原始輸出留在 .jsonl.bad-repetition）")
     return 0
 
 
