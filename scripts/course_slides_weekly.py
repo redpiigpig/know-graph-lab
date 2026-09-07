@@ -23,6 +23,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import course_schedule as CS          # noqa: E402
 import course_slides_pptx as R        # noqa: E402
 
+# 一份簡報的「內容頁」張數上限（使用者 2026-09-07 定）。
+# 封面、開場互動兩頁、自我介紹、演講行程頁、參考書目、圖片出處都不算在內——
+# 那些不是要講的內容。平日班一節 100 分鐘、假日班一次四小時，所以差一倍。
+CAP = {'wr-day': 30, 'christianity': 30, 'chinese': 50, 'wr-weekend': 50}
+
+# 壓張數的階梯：(SPLIT_AT, FIT_FLOOR)。往下走＝密的頁改「縮字」不「拆頁」。
+LADDER = [(0.78, 0.72), (0.74, 0.68), (0.70, 0.64),
+          (0.66, 0.60), (0.62, 0.56), (0.58, 0.52)]
+
 # course_schedule 的鍵 →（簡報內容來源代號, Drive 資料夾）
 SOURCE = {
     'wr-day': ('wr', '115-1_世界宗教文化導論'),
@@ -237,6 +246,16 @@ def build_course(key, only=None):
                        + ([intro_slide(c)] if i == 1 else [])
                        + [g for g in [guest_slide(c, label)] if g] + slides),
         }
+        # 內容頁超過上限就一階一階調降，讓密的頁改用縮字而不是再拆一頁。
+        cap = CAP[key]
+        for split_at, floor in LADDER:
+            R.SPLIT_AT, R.FIT_FLOOR = split_at, floor
+            n = len(R.split_long(R.fold_bigs(slides)))
+            if n <= cap:
+                break
+        if n > cap:
+            print(f'　（{label} 壓到 {n} 張仍超過 {cap}，內容本身就偏多）')
+
         # 🚨 開場互動題庫是按「八次上課×兩章」編的，索引不是週次。
         # 週次化之後要用本單元頭一章回推：第 n 次＝第 2n−1、2n 章。
         opener_no = (min(chs) + 1) // 2

@@ -147,8 +147,15 @@ def put(tf, text, size, font=HEI, bold=False, color=INK, space_after=6,
 CM_PT = 28.35
 
 
+# 一份簡報要出幾張，由這兩個數字決定，course_slides_weekly 會逐份調降來壓張數：
+# FIT_FLOOR＝字最多縮到幾成；SPLIT_AT＝縮過頭就改拆成兩頁的門檻。
+# 兩個一起往下調＝密的頁改「縮一點字」而不是「拆一頁」，張數就下來了。
+FIT_FLOOR = 0.72
+SPLIT_AT = 0.78
+
+
 def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 1.6)):
-    """估算這批條目實際佔幾行，回傳縮放係數（最小 0.72）。
+    """估算這批條目實際佔幾行，回傳縮放係數（最小 FIT_FLOOR）。
 
     中日文一個字約等於一個字級的寬度，因此每行字數 ≈ 可用寬度 ÷ 字級。
     只縮小、不放大——版面預設就是給內容少的頁看的。
@@ -166,7 +173,7 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
         per = max(8, int(avail / sizes[lvl]))
         rows = -(-(len(txt) + 2) // per)          # ＋2 是行首的項目符號
         total += rows * sizes[lvl] * LINE + spaces[lvl]
-    return min(1.0, max(0.72, height_cm * CM_PT / total)) if total else 1.0
+    return min(1.0, max(FIT_FLOOR, height_cm * CM_PT / total)) if total else 1.0
 
 
 def band(slide, color, x, y, w, h):
@@ -593,7 +600,7 @@ def split_long(slides):
         else:
             out.append(it)
             continue
-        if k >= 0.78:
+        if k >= SPLIT_AT:
             out.append(it)
             continue
         items = list(it[2])
