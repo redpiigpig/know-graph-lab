@@ -11,13 +11,8 @@
 {"key": "zoro-yuan-eryuan", "query": "二元神論 古波斯宗教神話研究 元文琪", "expect": "二元神论", "who": "元文琪", "source": "zoroastrian-studies", "zh": "元文琪《二元神論：古波斯宗教神話研究》"}
 {"key": "zoro-anjia-tomb", "query": "西安北周安伽墓 陝西省考古研究所", "expect": "安伽墓", "who": "", "source": "zoroastrian-studies", "zh": "《西安北周安伽墓》（文物 2003）"}
 {"key": "zoro-yuhong-tomb", "query": "太原隋虞弘墓 山西省考古研究所", "expect": "虞弘墓", "who": "", "source": "zoroastrian-studies", "zh": "《太原隋虞弘墓》（文物 2005）"}
-{"key": "zoro-boyce-history1", "query": "Boyce A History of Zoroastrianism Early Period", "expect": "History of Zoroastrianism", "who": "Boyce", "source": "zoroastrian-studies", "zh": "博伊斯《祆教史》第一卷"}
-{"key": "zoro-boyce-history2", "query": "Boyce A History of Zoroastrianism Under the Achaemenians", "expect": "History of Zoroastrianism", "who": "Boyce", "source": "zoroastrian-studies", "zh": "博伊斯《祆教史》第二卷"}
-{"key": "zoro-boyce-zoroastrians", "query": "Boyce Zoroastrians Their Religious Beliefs and Practices", "expect": "Zoroastrians", "who": "Boyce", "source": "zoroastrian-studies", "zh": "博伊斯《祆教徒：信仰與實踐》"}
 {"key": "zoro-boyce-textual", "query": "Boyce Textual Sources for the Study of Zoroastrianism", "expect": "Textual Sources", "who": "Boyce", "source": "zoroastrian-studies", "zh": "博伊斯《祆教研究文獻選輯》"}
 {"key": "zoro-dejong-magi", "query": "de Jong Traditions of the Magi Zoroastrianism in Greek and Latin Literature", "expect": "Traditions of the Magi", "who": "de Jong", "source": "zoroastrian-studies", "zh": "德永《麻葛的傳統》"}
 {"key": "zoro-shaked-dualism", "query": "Shaked Dualism in Transformation Sasanian Iran", "expect": "Dualism in Transformation", "who": "Shaked", "source": "zoroastrian-studies", "zh": "沙克德《轉化中的二元論》"}
-{"key": "zoro-skjaervo-spirit", "query": "Skjaervo The Spirit of Zoroastrianism", "expect": "Spirit of Zoroastrianism", "who": "Skjaervo", "source": "zoroastrian-studies", "zh": "斯克耶沃《祆教的精神》"}
-{"key": "zoro-stausberg-companion", "query": "Stausberg Wiley Blackwell Companion to Zoroastrianism", "expect": "Companion to Zoroastrianism", "who": "Stausberg", "source": "zoroastrian-studies", "zh": "《祆教研究指南》"}
 {"key": "zoro-hinnells-diaspora", "query": "Hinnells The Zoroastrian Diaspora Religion and Migration", "expect": "Zoroastrian Diaspora", "who": "Hinnells", "source": "zoroastrian-studies", "zh": "辛內爾斯《祆教的流散》"}
 {"key": "zoro-west-pahlavi", "query": "West Pahlavi Texts Sacred Books of the East", "expect": "Pahlavi Texts", "who": "West", "source": "zoroastrian-studies", "zh": "韋斯特《巴列維文獻》SBE 5/18/24/37/47"}
