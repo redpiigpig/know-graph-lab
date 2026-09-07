@@ -96,3 +96,68 @@ def test_empty_bucket_still_means_no_content():
     s = quality_sweep.harvest_signals({"standardized_at": "2026-01-01"}, [])
     assert s.n_chunks == 0
     assert s.blank_rate == 1.0
+
+
+def test_a_small_id_set_filters_server_side(monkeypatch):
+    """事故三（2026-09-07）：`--ids` 只評 83 本，卻要掃完整張表才回得來。
+
+    REST 路徑原本無論如何都是全表掃描，book_ids 只用在客戶端過濾。全館 91.5 萬個
+    chunk ÷ 每頁 1000 = 915 次請求，實測跑十分鐘都還沒有第一行輸出 —— 不會出錯，
+    只是慢到不能用，於是「重評幾本書」這件事實際上做不了。
+    → 書目少就把 in.() 下給伺服器。
+    """
+    urls = []
+    orig = make_fake_get(2500, 1000, [])
+
+    def spy(url, **kwargs):
+        urls.append(url)
+        return orig(url, **kwargs)
+
+    monkeypatch.setattr(quality_sweep.requests, "get", spy)
+    quality_sweep.fetch_chunks(
+        {"SUPABASE_URL": "http://x", "SUPABASE_SERVICE_ROLE_KEY": "k"},
+        {"book-1", "book-2"}, use_rest=True)
+    assert urls, "沒有發出任何請求"
+    assert all("ebook_id=in.(" in u for u in urls), \
+        "書目少的時候必須讓伺服器過濾，不可以全表掃描"
+
+
+def test_a_large_id_set_still_scans_the_whole_table(monkeypatch):
+    """反過來：全館掃描時 in.() 只會讓網址爆掉，該維持整表分頁。"""
+    urls = []
+    orig = make_fake_get(2500, 1000, [])
+
+    def spy(url, **kwargs):
+        urls.append(url)
+        return orig(url, **kwargs)
+
+    monkeypatch.setattr(quality_sweep.requests, "get", spy)
+    quality_sweep.fetch_chunks(
+        {"SUPABASE_URL": "http://x", "SUPABASE_SERVICE_ROLE_KEY": "k"},
+        {f"book-{i}" for i in range(250)}, use_rest=True)
+    assert not any("ebook_id=in.(" in u for u in urls)
+
+
+def test_scoped_queries_are_split_into_small_batches(monkeypatch):
+    """in.() 塞太多 uuid 伺服器會回 500（實測 30 個可以、40 個不行）。
+
+    而 500 走的是連線重試那條路 —— 退避 5/15/30/60/120 秒重試五次都是同一個
+    500，白等四分鐘才拋例外。所以寧可多發幾次請求，也不要讓單一請求超長。
+    """
+    urls = []
+    orig = make_fake_get(2500, 1000, [])
+
+    def spy(url, **kwargs):
+        urls.append(url)
+        return orig(url, **kwargs)
+
+    monkeypatch.setattr(quality_sweep.requests, "get", spy)
+    quality_sweep.fetch_chunks(
+        {"SUPABASE_URL": "http://x", "SUPABASE_SERVICE_ROLE_KEY": "k"},
+        {f"book-{i}" for i in range(60)}, use_rest=True)
+
+    scoped = [u for u in urls if "ebook_id=in.(" in u]
+    assert scoped, "60 本應該走 scoped 路徑"
+    for u in scoped:
+        n = u.split("ebook_id=in.(")[1].split(")")[0].count(",") + 1
+        assert n <= 25, f"單一請求塞了 {n} 個 id，伺服器會回 500"
