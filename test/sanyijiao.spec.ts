@@ -53,11 +53,22 @@ describe('三夷教研究資料書目', () => {
     expect(mani).toContain('lin-wushu-sanyijiao')
   })
 
-  it('兩教都有實質收錄', () => {
+  it('四教都有收錄', () => {
     const t = tallyReligion()
     expect(t.zoroastrian ?? 0).toBeGreaterThan(15)
     expect(t.manichaean ?? 0).toBeGreaterThan(10)
     expect(t.cross ?? 0).toBeGreaterThan(0)
+    expect(t.nestorian ?? 0).toBeGreaterThan(0)   // 2026-09-07 由 Drive 館藏開出
+  })
+
+  it('資訊不足的條目誠實留白，不臆造作者與年份', () => {
+    // 《中國景教》《漢語景教文典詮釋》的版權頁尚未核對——寧可標「待補」也不編。
+    for (const e of ENTRIES) {
+      if (e.authors.includes('待補')) {
+        // 標了待補就得交代為什麼、要去哪裡核對——否則日後沒人知道缺的是什麼
+        expect(e.note, `${e.ref} 標了待補卻沒交代如何核對`).toMatch(/核對|版權頁/)
+      }
+    }
   })
 })
 

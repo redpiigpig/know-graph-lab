@@ -34,13 +34,13 @@
           >{{ FULLTEXT_LABEL[k].zh }} {{ tally[k] }}</span>
         </div>
         <p class="text-[11px] text-gray-500 leading-relaxed break-words">
-          「需館藏」多數已列入 z-lib 獵表，由每日排程逐步取得；
+          「館藏已有」指書已在 Drive 電子圖書館、尚未轉錄切段；「需館藏」多數已列入 z-lib 獵表，由每日排程逐步取得；
           <b class="text-gray-600">說的是「拿不拿得到」，不是「本站有沒有」</b>。
         </p>
       </div>
 
       <!-- 依宗教分區 -->
-      <section v-for="rel in RELIGION_ORDER" :key="rel" class="mb-10">
+      <section v-for="rel in RELIGION_ORDER.filter(r => byReligion(r).length)" :key="rel" class="mb-10">
         <div class="flex items-center gap-2.5 mb-1.5 border-b border-stone-300 pb-2">
           <span class="text-2xl">{{ RELIGION_META[rel].glyph }}</span>
           <h2 class="text-lg font-bold text-gray-900">{{ RELIGION_META[rel].label }}</h2>
@@ -106,10 +106,10 @@ import type { ZsFulltext, ZsReligion, ZsTheme } from '~/data/sanyijiao'
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '三夷教研究資料 — Know Graph Lab' })
 
-// 景教尚未收錄，不出空區
-const RELIGION_ORDER: ZsReligion[] = ['zoroastrian', 'manichaean', 'cross']
+// 四教。空的那一區由 themesIn() 自動不出，不必在此手動排除。
+const RELIGION_ORDER: ZsReligion[] = ['zoroastrian', 'manichaean', 'nestorian', 'cross']
 const THEME_ORDER: ZsTheme[] = ['scripture', 'homeland', 'china', 'modern']
-const FULLTEXT_ORDER: ZsFulltext[] = ['ready', 'open', 'library', 'print', 'none']
+const FULLTEXT_ORDER: ZsFulltext[] = ['ready', 'held', 'open', 'library', 'print', 'none']
 
 const tally = tallyFulltext()
 

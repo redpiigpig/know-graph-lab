@@ -63,7 +63,8 @@ export const KIND_LABEL: Record<ZsKind, string> = {
 
 /** 全文取得狀態。與 /avesta 的三欄現況同一種誠實：說的是「拿不拿得到」。 */
 export type ZsFulltext =
-  | 'ready' // 已入庫並逐段對照
+  | 'ready' // 已入庫並逐段對照，站上可讀
+  | 'held' // **書已在 Drive 電子圖書館**，尚未轉錄切段
   | 'open' // 開放取用，待抓
   | 'library' // 需館藏／付費資料庫（華藝、CNKI、JSTOR）
   | 'print' // 僅紙本
@@ -71,6 +72,7 @@ export type ZsFulltext =
 
 export const FULLTEXT_LABEL: Record<ZsFulltext, { zh: string; cls: string }> = {
   ready: { zh: '已上架', cls: 'bg-emerald-100 text-emerald-800' },
+  held: { zh: '館藏已有', cls: 'bg-teal-100 text-teal-800' },
   open: { zh: '開放取用', cls: 'bg-sky-100 text-sky-800' },
   library: { zh: '需館藏', cls: 'bg-amber-100 text-amber-800' },
   print: { zh: '僅紙本', cls: 'bg-stone-100 text-stone-700' },
@@ -159,7 +161,7 @@ export const ENTRIES: ZsEntry[] = [
     title: '阿維斯塔——瑣羅亞斯德教聖書',
     authors: '賈利爾‧杜斯特哈赫 選編；元文琪 譯',
     year: 2010, venue: '商務印書館', lang: 'zh', kind: 'book',
-    theme: 'scripture', fulltext: 'library',
+    theme: 'scripture', fulltext: 'held',
     note: '中文世界唯一成規模的《阿維斯陀》譯本，自波斯文選編本轉譯。'
       + '**本站經典區的篇名定譯即以此書為準**（伽薩／亞斯納／亞什特／萬迪達德／維斯帕拉德）；'
       + '但其譯文為選編、簡體且在版權內，故不作對照欄底本。',
@@ -170,7 +172,7 @@ export const ENTRIES: ZsEntry[] = [
     title: '二元神論：古波斯宗教神話研究',
     authors: '元文琪',
     year: 1997, venue: '中國社會科學出版社', lang: 'zh', kind: 'book',
-    theme: 'scripture', fulltext: 'library',
+    theme: 'scripture', fulltext: 'held',
     note: '譯者本人的研究專著，與其《阿維斯塔》譯本互為表裡。',
   },
   {
@@ -191,7 +193,7 @@ export const ENTRIES: ZsEntry[] = [
     title_zh: '祆教的精神',
     authors: 'Prods Oktor Skjærvø',
     year: 2011, venue: 'Yale University Press', lang: 'en', kind: 'book',
-    theme: 'scripture', fulltext: 'library',
+    theme: 'scripture', fulltext: 'held',
     note: '當代阿維斯陀語文獻學第一人的選譯與導讀；其譯文常與達梅斯特舊譯出入甚大，'
       + '可用來檢驗本站以《東方聖書》為底本的譯文哪些地方已經過時。',
   },
@@ -227,7 +229,7 @@ export const ENTRIES: ZsEntry[] = [
     title: '祆教史',
     authors: '龔方震、晏可佳',
     year: 1998, venue: '上海社會科學院出版社', lang: 'zh', kind: 'book',
-    theme: 'homeland', fulltext: 'library',
+    theme: 'homeland', fulltext: 'held',
     note: '中文世界第一部通論性的祆教通史，自古伊朗宗教寫到近現代帕西社群，'
       + '中文學界的術語（阿胡拉‧馬茲達、安格拉‧曼紐、阿赫里曼）大半由此定型。',
   },
@@ -238,7 +240,7 @@ export const ENTRIES: ZsEntry[] = [
     title_zh: '祆教史 第一卷：早期',
     authors: 'Mary Boyce',
     year: 1975, venue: 'Brill', lang: 'en', kind: 'book',
-    theme: 'homeland', fulltext: 'library',
+    theme: 'homeland', fulltext: 'held',
     note: '本領域最重要的通史三卷本的第一卷。博伊斯主張祆教的連續性遠比一般設想的長，'
       + '此說至今仍是各家立論的基準點，即使反對者也須先處理她的論證。',
   },
@@ -249,7 +251,7 @@ export const ENTRIES: ZsEntry[] = [
     title_zh: '祆教史 第二卷：阿契美尼德時期',
     authors: 'Mary Boyce',
     year: 1982, venue: 'Brill', lang: 'en', kind: 'book',
-    theme: 'homeland', fulltext: 'library',
+    theme: 'homeland', fulltext: 'held',
     note: '本站《王室銘文》一藏「阿契美尼德算不算祆教」的爭議，主要材料出自此卷。',
   },
   {
@@ -259,7 +261,7 @@ export const ENTRIES: ZsEntry[] = [
     title_zh: '祆教徒：信仰與實踐',
     authors: 'Mary Boyce',
     year: 1979, venue: 'Routledge', lang: 'en', kind: 'book',
-    theme: 'homeland', fulltext: 'open',
+    theme: 'homeland', fulltext: 'held',
     url: 'https://archive.org/details/zoroastriansthei0000boyc',
     note: '單卷本通論，比三卷本易讀，是英語世界最通行的入門書。Internet Archive 可借閱。',
   },
@@ -325,7 +327,7 @@ export const ENTRIES: ZsEntry[] = [
     title: '波斯拜火教與古代中國',
     authors: '林悟殊',
     year: 1995, venue: '新文豐出版公司（台北）', lang: 'zh', kind: 'book',
-    theme: 'china', fulltext: 'library',
+    theme: 'china', fulltext: 'held',
     note: '654 頁。台灣出版的祆教研究代表作，與摩尼教、景教合觀「三夷教」入華。',
   },
   {
@@ -334,7 +336,7 @@ export const ENTRIES: ZsEntry[] = [
     title: '中古三夷教辨證',
     authors: '林悟殊',
     year: 2005, venue: '中華書局', lang: 'zh', kind: 'book',
-    theme: 'china', fulltext: 'library',
+    theme: 'china', fulltext: 'held',
     note: '祆教、摩尼教、景教三教入華的辨偽與考證；對敦煌文書真偽的判斷尤為關鍵。',
   },
   {
@@ -442,7 +444,7 @@ export const ENTRIES: ZsEntry[] = [
     title_zh: '祆教研究指南',
     authors: 'Michael Stausberg & Yuhan Sohrab-Dinshaw Vevaina (eds.)',
     year: 2015, venue: 'Wiley Blackwell', lang: 'en', kind: 'book',
-    theme: 'modern', fulltext: 'library',
+    theme: 'modern', fulltext: 'held',
     note: '最新的綜合性研究指南，四十餘章分別由各題目的專家撰寫，'
       + '是判斷「某個題目現在的定論是什麼」最快的一本。',
   },
@@ -459,7 +461,9 @@ export const ENTRIES: ZsEntry[] = [
     year: 2004, venue: 'Cambridge University Press', lang: 'en', kind: 'book',
     theme: 'scripture', fulltext: 'library',
     note: '把科普特文、希臘文、拉丁文的摩尼教原典譯成英文編為一冊。'
-      + '**摩尼教研究最麻煩的地方是原典散在六七種語言裡**，這種選輯因此格外要緊。',
+      + '**摩尼教研究最麻煩的地方是原典散在六七種語言裡**，這種選輯因此格外要緊。'
+      + '其中拉丁部分大宗即出自奧古斯丁的駁論，故與該卷互見。',
+    seealso: 'augustine-against-manichaeans',
   },
   {
     ref: 'klimkeit-silkroad',
@@ -625,6 +629,144 @@ export const ENTRIES: ZsEntry[] = [
     authors: '馬小鶴',
     year: '', venue: '', lang: 'zh', kind: 'book',
     theme: 'china', fulltext: 'library',
+  },
+
+  // ══════════════ 以下為 Drive 電子圖書館原有館藏（2026-09-07 盤點補登）══════════════
+
+  {
+    ref: 'boyce-history-3',
+    religion: 'zoroastrian',
+    title: 'A History of Zoroastrianism, Vol. III: Zoroastrianism under Macedonian and Roman Rule',
+    title_zh: '祆教史 第三卷：馬其頓與羅馬統治下的祆教',
+    authors: 'Mary Boyce & Frantz Grenet',
+    year: 1991, venue: 'Brill', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '三卷本的完結卷，接續第二卷寫到希臘化與羅馬時期。'
+      + '本站《王室銘文》一藏所收的薩珊材料，其歷史脈絡在此卷。',
+  },
+  {
+    ref: 'dhalla-history',
+    religion: 'zoroastrian',
+    title: 'History of Zoroastrianism',
+    title_zh: '祆教史',
+    authors: 'Maneckji Nusservanji Dhalla',
+    year: 1938, venue: 'Oxford University Press', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '**由帕西祭司長本人所寫的祆教通史**，與外部學者的著作性質不同：'
+      + '它同時是史著與教內自我理解的紀錄。已入公有領域，avesta.org 有全文。',
+  },
+  {
+    ref: 'nariman-inner-fire',
+    religion: 'zoroastrian',
+    title: 'The Inner Fire: Faith, Choice, and Modern-Day Living in Zoroastrianism',
+    title_zh: '內在之火：祆教的信仰、抉擇與當代生活',
+    authors: 'Rohinton F. Nariman',
+    year: 2016, venue: 'Hay House India', lang: 'en', kind: 'book',
+    theme: 'modern', fulltext: 'held',
+    note: '作者是印度最高法院法官、帕西祭司。當代信徒對自身傳統的陳述，'
+      + '與學術著作互為對照——研究一個活的宗教，教內的自我理解本身就是材料。',
+  },
+  {
+    ref: 'zhang-xiaogui-kaolun',
+    religion: 'zoroastrian',
+    title: '祆教史考論與述評',
+    authors: '張小貴',
+    year: '', venue: '', lang: 'zh', kind: 'book',
+    theme: 'china', fulltext: 'held',
+    note: '對國際祆教研究的評述與考辨；中文讀者掌握西方研究現況最便捷的一本。',
+  },
+  {
+    ref: 'jany-legal-traditions',
+    religion: 'zoroastrian',
+    title: 'Judging in the Islamic, Jewish and Zoroastrian Legal Traditions',
+    title_zh: '伊斯蘭、猶太與祆教法律傳統中的審判',
+    authors: 'János Jany',
+    year: 2012, venue: 'Ashgate', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '三大法律傳統的比較。祆教這一側的材料主要是《宗教判例》與《儀軌書》——'
+      + '也就是本站巴列維文獻一藏的法規部。',
+  },
+  {
+    ref: 'payne-state-of-mixture',
+    religion: 'zoroastrian',
+    title: 'A State of Mixture: Christians, Zoroastrians, and Iranian Political Culture in Late Antiquity',
+    title_zh: '混合之邦：晚期古代的基督徒、祆教徒與伊朗政治文化',
+    authors: 'Richard E. Payne',
+    year: 2015, venue: 'University of California Press', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '推翻「薩珊迫害基督徒」的舊敘事，主張兩教在伊朗長期共存並各有位置。'
+      + '與卡爾提爾銘文（本站王室銘文一藏）自陳打擊各教的說法恰成張力，宜並讀。',
+  },
+  {
+    ref: 'hoyland-seeing-islam',
+    religion: 'zoroastrian',
+    title: 'Seeing Islam as Others Saw It',
+    title_zh: '他者眼中的伊斯蘭',
+    authors: 'Robert G. Hoyland',
+    year: 1997, venue: 'Darwin Press', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '彙集基督徒、猶太人與**祆教徒**對早期伊斯蘭的記述。'
+      + '祆教這一側的末世文獻（《巴赫曼耶什特》一類）正是在伊斯蘭征服的衝擊下寫成的。',
+  },
+  {
+    ref: 'rong-xinjiang-sute',
+    religion: 'cross',
+    title: '中古中國與粟特文明',
+    authors: '榮新江',
+    year: '', venue: '三聯書店', lang: 'zh', kind: 'book',
+    theme: 'china', fulltext: 'held',
+    note: '🚨 與同作者《中古中國與外來文明》**是兩本書**，勿混。'
+      + '粟特商旅是祆教與摩尼教入華的共同載體，故列為跨教。',
+  },
+  {
+    ref: 'augustine-against-manichaeans',
+    religion: 'manichaean',
+    title: 'The Writings Against the Manichaeans and Against the Donatists (NPNF1-04)',
+    title_zh: '駁摩尼教徒與駁多納圖派文集',
+    authors: 'Augustine of Hippo',
+    year: 1887, venue: 'Nicene and Post-Nicene Fathers, Series 1, Vol. 4', lang: 'en', kind: 'book',
+    theme: 'scripture', fulltext: 'held',
+    note: '**奧古斯丁本人做過九年摩尼教聽者**，其駁論因此是內行人的證詞，'
+      + '也是拉丁世界摩尼教原典僅存的大宗引文來源——與《希臘羅馬大藏經》處理「敵證」'
+      + '的情形完全相同：靠敵人保存下來的教義，引用時必須標明敘述框架受敵手支配。'
+      + '本卷同時收在本站 /fathers。',
+    seealso: 'gardner-lieu-texts',
+  },
+
+  // ────────── 景教（Drive 已有三種，本區由此開出）──────────
+  {
+    ref: 'vine-nestorian-churches',
+    religion: 'nestorian',
+    title: 'The Nestorian Churches: A Concise History of Nestorian Christianity in Asia',
+    title_zh: '景教諸教會：亞洲景教簡史',
+    authors: 'Aubrey R. Vine',
+    year: 1937, venue: 'Independent Press', lang: 'en', kind: 'book',
+    theme: 'homeland', fulltext: 'held',
+    note: '自聶斯多留爭議寫到亞洲各地的東方教會。'
+      + '🚨 詞庫定名「景教」（東方亞述教會），教義爭議層的「聶斯多留主義」另為一詞，勿混用。',
+  },
+  {
+    ref: 'zhongguo-jingjiao',
+    religion: 'nestorian',
+    title: '中國景教',
+    authors: '朱謙之',
+    year: 1993, venue: '東方出版社', lang: 'zh', kind: 'book',
+    theme: 'china', fulltext: 'held',
+    note: '**作於 1966 年，遲至 1993 年才出版**；同年人民出版社亦作為哲學史家文庫之一再版。'
+      + '朱謙之是哲學史家，本書自漢文碑刻與敦煌文書考景教在華始末，'
+      + '與陳垣〈火祆教入中國考〉同屬中文三夷教研究的第一代成果。',
+  },
+  {
+    ref: 'hanyu-jingjiao-wendian',
+    religion: 'nestorian',
+    title: '漢語景教文典詮釋',
+    authors: '翁紹軍 校勘註釋',
+    year: 1996, venue: '三聯書店（北京）', lang: 'zh', kind: 'book',
+    theme: 'scripture', fulltext: 'held',
+    note: '唐代漢文景教文獻（《大秦景教流行中國碑》《序聽迷詩所經》《一神論》'
+      + '《志玄安樂經》等）的校勘與註釋。**這是景教經典區日後的取源底本**，'
+      + '地位相當於祆教那一側的元文琪譯本——差別在它是校註本而非翻譯，'
+      + '原文本來就是漢文，故日後那一區不生翻譯問題。',
   },
 ]
 

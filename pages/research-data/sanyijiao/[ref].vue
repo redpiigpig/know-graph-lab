@@ -173,6 +173,7 @@ const gridCls = computed(() => ({
 
 const PENDING_NOTE: Record<ZsFulltext, string> = {
   ready: '已上架但載入不到——這代表全文檔的檔名與書目的 ref 對不上，請檢查。',
+  held: '**書已在 Drive 電子圖書館**，尚未轉錄切段。轉錄後即成逐段對照。',
   open: '網路有開放取用的全文，尚未抓取。',
   library: '需館藏或付費資料庫。多數已列入 z-lib 獵表，由每日排程逐步取得；取得後轉為逐段對照。',
   print: '僅有紙本，須掃描後 OCR。',
