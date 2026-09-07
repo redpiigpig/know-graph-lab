@@ -3011,6 +3011,18 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       ],
       works: [
         {
+          title: '無教會主義',
+          titleOriginal: '無教會主義',
+          year: '1934',
+          yearSort: 1934,
+          category: '無教會主義論',
+          genre: 'treatise',
+          languages: ['ja', 'zh'],
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000001',
+          note: '東方書院 1934。NDL 掃描本（pid 1099766，インターネット公開）→ Gemini Vision OCR → 日文原文＋繁中逐段對照，全 9 章 53 段。本 portal 第一部走 NDL 取源的書。',
+        },
+        {
           title: '宗教詩人白朗寧',
           titleOriginal: '宗教詩人としてのブラウニング',
           year: '大正期',
