@@ -49,6 +49,10 @@ from audit_book_structure import (  # noqa: E402
     TINY, HEADING_MIN, BENIGN_PARSE_ERRORS, OCR_MARKERS, PATH_MARKERS, load_env,
 )
 import structure_audit  # noqa: E402  (S2-S6 mess_score)
+# 判準與 ocr_with_gemini 寫入端同一份，見 ocr_repetition 的模組說明。
+from ocr_repetition import (  # noqa: E402
+    detect_repeated_pages, looks_looping, repetition_rate, repetition_verdict,
+)
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
@@ -67,6 +71,38 @@ TIER_GOOD = "GOOD"
 TIER_FAIR = "FAIR"
 
 TIERS_OUT = Path("c:/tmp/quality_tiers.json")
+# 全文正本。DB 只存 100 字 preview，而「整塊重吐上一塊」的重複多半落在頁的尾段，
+# preview 看不到 —— 要判那一種只能讀這裡。
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
+
+
+def drive_repetition_check(book_id: str) -> tuple[bool, str]:
+    """拿 Drive 全文再確認一次。回傳 (是否通過, 說明)；讀不到檔案一律當通過。
+
+    為什麼非讀 Drive 不可：preview 版的 repetition_rate 系統性低估。實測
+    《性與宗教》Drive 全文判 70% 的頁是前一頁的複述，preview 卻低到連 flag
+    都不掛、拿 96 分照樣上架。同一批還有《中國中古時代的禮儀、宗教與制度》
+    （52%，剛好 80 分過關）與 ACCS 林前後（24%，83 分）。
+
+    讀不到檔案不扣分：那是「不知道」，不是「不好」——絕不因為拿不到證據而定罪。
+    """
+    p = CHUNKS_DIR / f"{book_id}.jsonl"
+    if not p.exists():
+        return True, ""
+    rows = []
+    try:
+        with p.open(encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    try:
+                        r = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    rows.append({"page": r.get("page_number"),
+                                 "text": r.get("content") or ""})
+    except OSError:
+        return True, ""
+    return repetition_verdict(rows)
 
 
 @dataclass
@@ -86,48 +122,6 @@ class BookSignals:
     page_coverage: float | None = None
     # 退化迴圈／整塊重吐的 chunk 佔比。結構訊號一個都抓不到這種書。
     repeat_rate: float = 0.0
-
-
-def looks_looping(text: str, min_reps: int = 3) -> bool:
-    """這段文字是不是「同一小段反覆貼成的」——LLM 視覺 OCR 的退化迴圈。
-
-    模型讀不動某一頁時會卡在一句話上一直重印。實例（2026-09-07 稽核抓到，
-    《東方化革命》page 77 連續 11 個 chunk）：
-
-        髒卜術的詞源和詞形變化也與兩河流域的術語有相似之處。髒卜術的詞源和詞
-        形變化也與兩河流域的術語有相似之處。髒卜術的詞源和詞形變化也與…
-
-    這種書結構完美（chunk 數對、目錄齊、頁面覆蓋率足），所以純結構評分給它
-    98 分、閘門直接放行上線。內容是廢的，讀者卻分辨不出來。
-
-    只看 DB 那份 100 字 preview 就夠——迴圈的週期遠短於 100 字，preview 裡
-    就看得到好幾輪。
-    """
-    s = (text or "").strip()
-    if len(s) < 40:
-        return False
-    for p in range(4, len(s) // min_reps + 1):
-        reps = len(s) // p
-        if reps >= min_reps and s[:p] * reps == s[:p * reps]:
-            return True
-    return False
-
-
-def repetition_rate(chunks: list[dict]) -> float:
-    """壞掉的 chunk 佔比：本身是退化迴圈，或與前一個 chunk 一字不差。
-
-    後者是同一種故障的另一個面貌——模型不是在一個 chunk 內繞圈，而是整塊
-    重吐上一塊。兩者都算。
-    """
-    if not chunks:
-        return 0.0
-    bad, prev = 0, None
-    for c in chunks:
-        t = (c.get("content") or "").strip()
-        if looks_looping(t) or (prev and t and t == prev):
-            bad += 1
-        prev = t
-    return bad / len(chunks)
 
 
 def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
@@ -462,6 +456,8 @@ def main() -> None:
     g.add_argument("--recent", type=int, metavar="N", help="最近 N 天 parse/standardize 過的書")
     ap.add_argument("--limit", type=int, help="只處理前 N 本（抽查用）")
     ap.add_argument("--dry-run", action="store_true", help="不寫 DB，只出報告")
+    ap.add_argument("--no-drive-check", action="store_true",
+                    help="跳過 Drive 全文複核（Drive 掛掉或只想快速估分時用）")
     args = ap.parse_args()
 
     env = load_env()
@@ -487,6 +483,19 @@ def main() -> None:
         pe = b.get("parse_error") or ""
         if any(m in pe for m in BENIGN_PARSE_ERRORS):
             flags.append("SET_CHILD")   # 套書子卷：requeue 不重 standardize
+        # 只有「即將放行上架」的書才去讀 Drive 全文複核 —— 成本因此有界（全館
+        # 約一千多本會走到這裡），而風險正好都集中在這一批：擋下來的書本來就
+        # 不會被讀者看到，複不複核沒差。
+        if score >= 80 and s.n_chunks and not args.no_drive_check:
+            ok, why = drive_repetition_check(b["id"])
+            if not ok:
+                score = min(score, 50)
+                if "REPETITION_LOOP" not in flags:
+                    flags.append("REPETITION_LOOP")
+                tier = TIER_RESTANDARDIZE
+                print(f"  ✗ Drive 全文複核不過：{str(b.get('title'))[:34]} — {why}",
+                      flush=True)
+
         r = {"id": b["id"], "title": b.get("title"), "collection": b.get("collection"),
              "score": score, "flags": flags, "tier": tier,
              "n_chunks": s.n_chunks, "blank_rate": round(s.blank_rate, 3)}
