@@ -150,6 +150,12 @@ def split_spread_boxes(width: int, height: int) -> list:
     return [(mid, 0, width, height), (0, 0, mid, height)]
 
 
+def is_quota_error(msg: str) -> bool:
+    """這個錯誤是不是「額度用盡」（而非連線／授權問題）。"""
+    m = (msg or "").lower()
+    return "429" in m or "resource_exhausted" in m or "quota" in m
+
+
 def toc_match_ratio(ocr_text: str, titles: list) -> float:
     """OCR 出來的目次頁，對得上幾成 NDL 目次 API 給的章名（0.0–1.0）。
 
@@ -245,7 +251,14 @@ def _client_for(key: str, genai):
 
 
 def ocr_page(jpg_bytes: bytes, model: str = "gemini-2.5-flash") -> str:
-    """一頁影像 → 文字。連 2 次 429 就退（[[feedback_ocr_two_strike_quota]]）。"""
+    """一頁影像 → 文字。
+
+    🚨 「兩次連續 429 就退」（[[feedback_ocr_two_strike_quota]]）的本意是
+    **池子乾了就別再捶**，不是「試兩把 key 就放棄」。舊寫法在第二把 429 時直接
+    raise，本機另外 5 把 key 從沒被試過 —— 我因此誤判成「今天沒額度了」，
+    白繞一大圈去試 Haiku Vision（結果它會編造內容）。
+    正確語意：**全部 key 都額度用盡才算乾**，那時才退。
+    """
     import time
     sys.path.insert(0, str(SCRIPT_DIR))
     from ocr_with_gemini import _find_gemini_keys  # type: ignore
@@ -279,15 +292,16 @@ def ocr_page(jpg_bytes: bytes, model: str = "gemini-2.5-flash") -> str:
         except Exception as e:
             msg = str(e)
             last_err = e
-            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower():
+            if is_quota_error(msg):
                 quota_hits += 1
-                if quota_hits >= 2:
-                    raise RuntimeError("連 2 次 429 quota，依規範退出") from e
-                continue
+                continue          # 換下一把 key，不要在這裡就放棄
             if "503" in msg or "UNAVAILABLE" in msg:
                 time.sleep(3)
                 continue
             raise
+    if quota_hits >= len(keys):
+        raise RuntimeError(
+            "全部 %d 把 key 都額度用盡，依規範退出（%s）" % (len(keys), last_err)) from last_err
     raise RuntimeError("全 key 失敗: %s" % last_err)
 
 

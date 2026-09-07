@@ -208,3 +208,26 @@ class TestTocCanary:
 
     def test_no_titles_is_not_a_pass(self):
         assert nb.toc_match_ratio("なんらかの文章", []) == 0.0
+
+
+class TestQuotaClassifier:
+    """🚨 兩次連續 429 就退（[[feedback_ocr_two_strike_quota]]）這條規矩的本意是
+    「池子乾了就別再捶」，不是「試兩把就放棄」。本機有 7 把 key，舊寫法在第二把
+    429 時就 raise，另外 5 把從沒試過 —— 這個 bug 讓我誤判成「今天沒額度了」，
+    白繞一大圈去試 Haiku。**要全部試完才算乾**。
+    """
+
+    def test_429_is_quota(self):
+        assert nb.is_quota_error("429 RESOURCE_EXHAUSTED") is True
+
+    def test_resource_exhausted_is_quota(self):
+        assert nb.is_quota_error("RESOURCE_EXHAUSTED: quota") is True
+
+    def test_quota_word_is_quota(self):
+        assert nb.is_quota_error("You exceeded your current Quota") is True
+
+    def test_503_is_not_quota(self):
+        assert nb.is_quota_error("503 UNAVAILABLE") is False
+
+    def test_auth_error_is_not_quota(self):
+        assert nb.is_quota_error("401 unauthorized") is False
