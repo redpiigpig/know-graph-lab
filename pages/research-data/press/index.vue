@@ -13,6 +13,20 @@
         </p>
       </div>
 
+      <!-- 華藝以外還有兩個來源，且三邊互補不重複；入口放在最上面，
+           不然使用者會以為站上只有華藝那一份 -->
+      <NuxtLink to="/research-data/press/sources"
+        class="mb-8 flex items-start gap-4 p-5 rounded-2xl bg-white border-2 border-emerald-100 hover:border-emerald-300 hover:shadow-lg transition-all no-underline">
+        <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl flex-shrink-0">🔀</div>
+        <div class="flex-1">
+          <h2 class="text-sm font-semibold text-gray-900 mb-0.5">跨來源刊物對照</h2>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            430 份刊在華藝／國圖／臺大佛圖各收多少篇目，並排比較。
+            三邊互補而不是重複：華藝有全文但綁機構 IP、國圖卷期頁碼零缺漏、臺大量最大。
+          </p>
+        </div>
+      </NuxtLink>
+
       <!-- 三級的差別很大，講在最前面：不標的話「N 篇」看起來會像全文都在 -->
       <div class="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div v-for="t in (['full', 'index', 'guide'] as PressTier[])" :key="t"

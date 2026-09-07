@@ -1,0 +1,8054 @@
+{
+ "note": "同一份刊在華藝／國圖／臺大佛圖各收多少篇目。三邊互補而不是重複：華藝有全文但綁機構 IP、國圖卷期頁碼零缺漏、臺大量最大。yearOutliers 是來源端的年份筆誤，**沒有修改原始資料**，標出來是為了不讓逐年詞頻被一筆髒資料把橫軸拉長。",
+ "counts": {
+  "刊（去重後）": 430,
+  "三邊都有": 3,
+  "只有一邊": 406,
+  "篇目合計（未跨來源去重）": 371051
+ },
+ "yearOutliers": [
+  {
+   "journal": "Bulletin of the School of Oriental and African Studies",
+   "source": "dlbs",
+   "indexStart": 1921,
+   "realStart": 1943,
+   "outlierYears": {
+    "1921": 1
+   }
+  },
+  {
+   "journal": "Journal of the American Oriental Society",
+   "source": "dlbs",
+   "indexStart": 1844,
+   "realStart": 1844,
+   "outlierYears": {
+    "1847": 1
+   }
+  },
+  {
+   "journal": "Orientations Magazine",
+   "source": "dlbs",
+   "indexStart": 1933,
+   "realStart": 1977,
+   "outlierYears": {
+    "1933": 1
+   }
+  },
+  {
+   "journal": "Religions",
+   "source": "dlbs",
+   "indexStart": 1942,
+   "realStart": 2012,
+   "outlierYears": {
+    "1942": 1
+   }
+  },
+  {
+   "journal": "The Journal of Religion",
+   "source": "dlbs",
+   "indexStart": 1921,
+   "realStart": 1921,
+   "outlierYears": {
+    "1937": 1
+   }
+  },
+  {
+   "journal": "Tricycle: the Buddhist review",
+   "source": "dlbs",
+   "indexStart": 1909,
+   "realStart": 1909,
+   "outlierYears": {
+    "1910": 2
+   }
+  },
+  {
+   "journal": "中國佛學",
+   "source": "dlbs",
+   "indexStart": 1928,
+   "realStart": 1928,
+   "outlierYears": {
+    "1966": 1
+   }
+  },
+  {
+   "journal": "人生",
+   "source": "dlbs",
+   "indexStart": 1858,
+   "realStart": 1935,
+   "outlierYears": {
+    "1858": 1,
+    "1969": 1
+   }
+  },
+  {
+   "journal": "宗教學研究",
+   "source": "dlbs",
+   "indexStart": 1,
+   "realStart": 1984,
+   "outlierYears": {
+    "1": 1
+   }
+  },
+  {
+   "journal": "故宮博物院院刊",
+   "source": "dlbs",
+   "indexStart": 4,
+   "realStart": 1984,
+   "outlierYears": {
+    "4": 1,
+    "1960": 1
+   }
+  },
+  {
+   "journal": "獅子吼",
+   "source": "dlbs",
+   "indexStart": 1913,
+   "realStart": 1913,
+   "outlierYears": {
+    "1917": 1
+   }
+  }
+ ],
+ "journals": [
+  {
+   "key": "海潮音",
+   "name": "海潮音",
+   "sources": {
+    "ncl": {
+     "name": "海潮音",
+     "articles": 4995,
+     "fulltext": 5,
+     "start": 1921,
+     "end": 2026,
+     "slug": "haichaoyin"
+    },
+    "dlbs": {
+     "name": "海潮音",
+     "articles": 26220,
+     "fulltext": 1141,
+     "start": 1920,
+     "end": 2025,
+     "slug": "haichaoyin",
+     "key": "research-private/dlbs/haichaoyin.jsonl.gz",
+     "missingPage": 4555
+    }
+   },
+   "total": 31215,
+   "inSources": 2
+  },
+  {
+   "key": "佛學半月刊",
+   "name": "佛學半月刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛學半月刊",
+     "articles": 20472,
+     "fulltext": 0,
+     "start": 1924,
+     "end": 1944,
+     "slug": "foxue-banyuekan",
+     "key": "research-private/dlbs/foxue-banyuekan.jsonl.gz",
+     "missingPage": 2679
+    }
+   },
+   "total": 20472,
+   "inSources": 1
+  },
+  {
+   "key": "印度學佛教學研究",
+   "name": "印度學佛教學研究",
+   "sources": {
+    "dlbs": {
+     "name": "印度學佛教學研究",
+     "articles": 14715,
+     "fulltext": 14650,
+     "start": 1952,
+     "end": 2024,
+     "slug": "c2cf912a",
+     "key": "research-private/dlbs/c2cf912a.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 14715,
+   "inSources": 1
+  },
+  {
+   "key": "人生",
+   "name": "人生",
+   "sources": {
+    "ncl": {
+     "name": "人生",
+     "articles": 4673,
+     "fulltext": 0,
+     "start": 1966,
+     "end": 2009,
+     "slug": "rensheng"
+    },
+    "dlbs": {
+     "name": "人生",
+     "articles": 8479,
+     "fulltext": 1042,
+     "start": 1858,
+     "end": 2023,
+     "slug": "rensheng",
+     "key": "research-private/dlbs/rensheng.jsonl.gz",
+     "missingPage": 84,
+     "realStart": 1935,
+     "yearOutliers": {
+      "1858": 1,
+      "1969": 1
+     }
+    }
+   },
+   "total": 13152,
+   "inSources": 2
+  },
+  {
+   "key": "南瀛佛教",
+   "name": "南瀛佛教",
+   "sources": {
+    "dlbs": {
+     "name": "南瀛佛教",
+     "articles": 10151,
+     "fulltext": 9967,
+     "start": 1912,
+     "end": 1970,
+     "slug": "nanying",
+     "key": "research-private/dlbs/nanying.jsonl.gz",
+     "missingPage": 436
+    }
+   },
+   "total": 10151,
+   "inSources": 1
+  },
+  {
+   "key": "法華",
+   "name": "法華",
+   "sources": {
+    "dlbs": {
+     "name": "法華",
+     "articles": 7310,
+     "fulltext": 2,
+     "start": 1914,
+     "end": 2025,
+     "slug": "126b148f",
+     "key": "research-private/dlbs/126b148f.jsonl.gz",
+     "missingPage": 475
+    }
+   },
+   "total": 7310,
+   "inSources": 1
+  },
+  {
+   "key": "覺有情",
+   "name": "覺有情",
+   "sources": {
+    "dlbs": {
+     "name": "覺有情",
+     "articles": 6157,
+     "fulltext": 0,
+     "start": 1939,
+     "end": 1953,
+     "slug": "jueyouqing",
+     "key": "research-private/dlbs/jueyouqing.jsonl.gz",
+     "missingPage": 389
+    }
+   },
+   "total": 6157,
+   "inSources": 1
+  },
+  {
+   "key": "弘化月刊",
+   "name": "弘化月刊",
+   "sources": {
+    "dlbs": {
+     "name": "弘化月刊",
+     "articles": 5949,
+     "fulltext": 1252,
+     "start": 1913,
+     "end": 2013,
+     "slug": "honghua",
+     "key": "research-private/dlbs/honghua.jsonl.gz",
+     "missingPage": 406
+    }
+   },
+   "total": 5949,
+   "inSources": 1
+  },
+  {
+   "key": "正信",
+   "name": "正信",
+   "sources": {
+    "dlbs": {
+     "name": "正信",
+     "articles": 5388,
+     "fulltext": 1,
+     "start": 1932,
+     "end": 1949,
+     "slug": "zhengxin",
+     "key": "research-private/dlbs/zhengxin.jsonl.gz",
+     "missingPage": 183
+    }
+   },
+   "total": 5388,
+   "inSources": 1
+  },
+  {
+   "key": "新使者",
+   "name": "新使者",
+   "sources": {
+    "airiti": {
+     "name": "新使者",
+     "articles": 4970,
+     "fulltext": 4970,
+     "start": "1990",
+     "end": "2026",
+     "to": "/research-data/press/new-messenger"
+    }
+   },
+   "total": 4970,
+   "inSources": 1
+  },
+  {
+   "key": "菩提樹",
+   "name": "菩提樹",
+   "sources": {
+    "ncl": {
+     "name": "菩提樹",
+     "articles": 1250,
+     "fulltext": 0,
+     "start": 1952,
+     "end": 1996,
+     "slug": "putishu"
+    },
+    "dlbs": {
+     "name": "菩提樹",
+     "articles": 3215,
+     "fulltext": 2529,
+     "start": 1952,
+     "end": 1996,
+     "slug": "putishu",
+     "key": "research-private/dlbs/putishu.jsonl.gz",
+     "missingPage": 226
+    }
+   },
+   "total": 4465,
+   "inSources": 2
+  },
+  {
+   "key": "香光莊嚴",
+   "name": "香光莊嚴",
+   "sources": {
+    "ncl": {
+     "name": "香光莊嚴",
+     "articles": 1282,
+     "fulltext": 0,
+     "start": 1992,
+     "end": 2009,
+     "slug": "xiangguang"
+    },
+    "dlbs": {
+     "name": "香光莊嚴",
+     "articles": 2845,
+     "fulltext": 2806,
+     "start": 1985,
+     "end": 2025,
+     "slug": "xiangguang",
+     "key": "research-private/dlbs/xiangguang.jsonl.gz",
+     "missingPage": 202
+    }
+   },
+   "total": 4127,
+   "inSources": 2
+  },
+  {
+   "key": "中國佛教",
+   "name": "中國佛教",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛教",
+     "articles": 3861,
+     "fulltext": 28,
+     "start": 1943,
+     "end": 2020,
+     "slug": "zhongguo-fojiao",
+     "key": "research-private/dlbs/zhongguo-fojiao.jsonl.gz",
+     "missingPage": 844
+    }
+   },
+   "total": 3861,
+   "inSources": 1
+  },
+  {
+   "key": "世界佛教居士林林刊",
+   "name": "世界佛教居士林林刊",
+   "sources": {
+    "dlbs": {
+     "name": "世界佛教居士林林刊",
+     "articles": 3826,
+     "fulltext": 0,
+     "start": 1923,
+     "end": 1936,
+     "slug": "jushilin",
+     "key": "research-private/dlbs/jushilin.jsonl.gz",
+     "missingPage": 285
+    }
+   },
+   "total": 3826,
+   "inSources": 1
+  },
+  {
+   "key": "弘法社刊",
+   "name": "弘法社刊",
+   "sources": {
+    "dlbs": {
+     "name": "弘法社刊",
+     "articles": 3424,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1936,
+     "slug": "hongfashe",
+     "key": "research-private/dlbs/hongfashe.jsonl.gz",
+     "missingPage": 402
+    }
+   },
+   "total": 3424,
+   "inSources": 1
+  },
+  {
+   "key": "覺訊月刊",
+   "name": "覺訊月刊",
+   "sources": {
+    "dlbs": {
+     "name": "覺訊月刊",
+     "articles": 3230,
+     "fulltext": 0,
+     "start": 1947,
+     "end": 1955,
+     "slug": "juexun",
+     "key": "research-private/dlbs/juexun.jsonl.gz",
+     "missingPage": 75
+    }
+   },
+   "total": 3230,
+   "inSources": 1
+  },
+  {
+   "key": "宗教研究",
+   "name": "宗教研究",
+   "sources": {
+    "dlbs": {
+     "name": "宗教研究",
+     "articles": 3187,
+     "fulltext": 2080,
+     "start": 1926,
+     "end": 2025,
+     "slug": "bea36b87",
+     "key": "research-private/dlbs/bea36b87.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 3187,
+   "inSources": 1
+  },
+  {
+   "key": "獅子吼",
+   "name": "獅子吼",
+   "sources": {
+    "ncl": {
+     "name": "獅子吼",
+     "articles": 1417,
+     "fulltext": 0,
+     "start": 1962,
+     "end": 1994,
+     "slug": "shizihou"
+    },
+    "dlbs": {
+     "name": "獅子吼",
+     "articles": 1557,
+     "fulltext": 4,
+     "start": 1913,
+     "end": 1994,
+     "slug": "shizihou",
+     "key": "research-private/dlbs/shizihou.jsonl.gz",
+     "missingPage": 405,
+     "realStart": 1913,
+     "yearOutliers": {
+      "1917": 1
+     }
+    }
+   },
+   "total": 2974,
+   "inSources": 2
+  },
+  {
+   "key": "慧炬",
+   "name": "慧炬",
+   "sources": {
+    "dlbs": {
+     "name": "慧炬",
+     "articles": 2769,
+     "fulltext": 2631,
+     "start": 1963,
+     "end": 2023,
+     "slug": "huiju",
+     "key": "research-private/dlbs/huiju.jsonl.gz",
+     "missingPage": 145
+    }
+   },
+   "total": 2769,
+   "inSources": 1
+  },
+  {
+   "key": "四川佛教月刊",
+   "name": "四川佛教月刊",
+   "sources": {
+    "dlbs": {
+     "name": "四川佛教月刊",
+     "articles": 2600,
+     "fulltext": 0,
+     "start": 1932,
+     "end": 1942,
+     "slug": "sichuan",
+     "key": "research-private/dlbs/sichuan.jsonl.gz",
+     "missingPage": 1128
+    }
+   },
+   "total": 2600,
+   "inSources": 1
+  },
+  {
+   "key": "普門學報",
+   "name": "普門學報",
+   "sources": {
+    "ncl": {
+     "name": "普門學報",
+     "articles": 1163,
+     "fulltext": 13,
+     "start": 2001,
+     "end": 2010,
+     "slug": "pumen"
+    },
+    "dlbs": {
+     "name": "普門學報",
+     "articles": 1287,
+     "fulltext": 564,
+     "start": 2001,
+     "end": 2010,
+     "slug": "pumen",
+     "key": "research-private/dlbs/pumen.jsonl.gz",
+     "missingPage": 68
+    }
+   },
+   "total": 2450,
+   "inSources": 2
+  },
+  {
+   "key": "宗教哲學",
+   "name": "宗教哲學",
+   "sources": {
+    "airiti": {
+     "name": "宗教哲學",
+     "articles": 1231,
+     "fulltext": 1231,
+     "start": "1995",
+     "end": "2026",
+     "to": "/research-data/press/religious-philosophy"
+    },
+    "ncl": {
+     "name": "宗教哲學",
+     "articles": 1207,
+     "fulltext": 6,
+     "start": 1995,
+     "end": 2026,
+     "slug": "religious-philosophy"
+    }
+   },
+   "total": 2438,
+   "inSources": 2
+  },
+  {
+   "key": "校園",
+   "name": "校園",
+   "sources": {
+    "airiti": {
+     "name": "校園",
+     "articles": 2393,
+     "fulltext": 2364,
+     "start": "2005",
+     "end": "2026",
+     "to": "/research-data/press/campus"
+    }
+   },
+   "total": 2393,
+   "inSources": 1
+  },
+  {
+   "key": "敦煌研究",
+   "name": "敦煌研究",
+   "sources": {
+    "dlbs": {
+     "name": "敦煌研究",
+     "articles": 2333,
+     "fulltext": 2221,
+     "start": 1982,
+     "end": 2024,
+     "slug": "07a8aed2",
+     "key": "research-private/dlbs/07a8aed2.jsonl.gz",
+     "missingPage": 9
+    }
+   },
+   "total": 2333,
+   "inSources": 1
+  },
+  {
+   "key": "內明",
+   "name": "內明",
+   "sources": {
+    "dlbs": {
+     "name": "內明",
+     "articles": 2265,
+     "fulltext": 2245,
+     "start": 1972,
+     "end": 1997,
+     "slug": "neiming",
+     "key": "research-private/dlbs/neiming.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 2265,
+   "inSources": 1
+  },
+  {
+   "key": "佛教文化",
+   "name": "佛教文化",
+   "sources": {
+    "dlbs": {
+     "name": "佛教文化",
+     "articles": 2256,
+     "fulltext": 1838,
+     "start": 1965,
+     "end": 2023,
+     "slug": "80bff2e1",
+     "key": "research-private/dlbs/80bff2e1.jsonl.gz",
+     "missingPage": 104
+    }
+   },
+   "total": 2256,
+   "inSources": 1
+  },
+  {
+   "key": "弘誓雙月刊",
+   "name": "弘誓雙月刊",
+   "sources": {
+    "airiti": {
+     "name": "弘誓雙月刊",
+     "articles": 2226,
+     "fulltext": 2226,
+     "start": "1993",
+     "end": "2026",
+     "to": "/research-data/press/hongshi"
+    }
+   },
+   "total": 2226,
+   "inSources": 1
+  },
+  {
+   "key": "佛敎藝術",
+   "name": "佛敎藝術",
+   "sources": {
+    "dlbs": {
+     "name": "佛敎藝術",
+     "articles": 2147,
+     "fulltext": 0,
+     "start": 1948,
+     "end": 2017,
+     "slug": "6719011f",
+     "key": "research-private/dlbs/6719011f.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 2147,
+   "inSources": 1
+  },
+  {
+   "key": "民俗曲藝",
+   "name": "民俗曲藝",
+   "sources": {
+    "airiti": {
+     "name": "民俗曲藝",
+     "articles": 479,
+     "fulltext": 479,
+     "start": "2006",
+     "end": "2026",
+     "to": "/research-data/press/folk-arts"
+    },
+    "ncl": {
+     "name": "民俗曲藝",
+     "articles": 1667,
+     "fulltext": 0,
+     "start": 1980,
+     "end": 2026,
+     "slug": "folk-arts"
+    }
+   },
+   "total": 2146,
+   "inSources": 2
+  },
+  {
+   "key": "中國佛教會報",
+   "name": "中國佛教會報",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛教會報",
+     "articles": 2123,
+     "fulltext": 0,
+     "start": 1931,
+     "end": 1931,
+     "slug": "zhongguo-fjh",
+     "key": "research-private/dlbs/zhongguo-fjh.jsonl.gz",
+     "missingPage": 104
+    }
+   },
+   "total": 2123,
+   "inSources": 1
+  },
+  {
+   "key": "臺灣佛教",
+   "name": "臺灣佛教",
+   "sources": {
+    "dlbs": {
+     "name": "臺灣佛教",
+     "articles": 2102,
+     "fulltext": 778,
+     "start": 1913,
+     "end": 1971,
+     "slug": "taiwan-fojiao",
+     "key": "research-private/dlbs/taiwan-fojiao.jsonl.gz",
+     "missingPage": 630
+    }
+   },
+   "total": 2102,
+   "inSources": 1
+  },
+  {
+   "key": "佛教論叢",
+   "name": "佛教論叢",
+   "sources": {
+    "dlbs": {
+     "name": "佛教論叢",
+     "articles": 2048,
+     "fulltext": 449,
+     "start": 1935,
+     "end": 2024,
+     "slug": "97f62019",
+     "key": "research-private/dlbs/97f62019.jsonl.gz",
+     "missingPage": 35
+    }
+   },
+   "total": 2048,
+   "inSources": 1
+  },
+  {
+   "key": "香港佛教",
+   "name": "香港佛教",
+   "sources": {
+    "dlbs": {
+     "name": "香港佛教",
+     "articles": 2018,
+     "fulltext": 74,
+     "start": 1960,
+     "end": 2008,
+     "slug": "9734c63a",
+     "key": "research-private/dlbs/9734c63a.jsonl.gz",
+     "missingPage": 219
+    }
+   },
+   "total": 2018,
+   "inSources": 1
+  },
+  {
+   "key": "六条学報",
+   "name": "六条学報",
+   "sources": {
+    "dlbs": {
+     "name": "六条学報",
+     "articles": 2013,
+     "fulltext": 0,
+     "start": 1901,
+     "end": 1921,
+     "slug": "9da462b5",
+     "key": "research-private/dlbs/9da462b5.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 2013,
+   "inSources": 1
+  },
+  {
+   "key": "法音",
+   "name": "法音",
+   "sources": {
+    "dlbs": {
+     "name": "法音",
+     "articles": 1991,
+     "fulltext": 1778,
+     "start": 1946,
+     "end": 2019,
+     "slug": "82f37696",
+     "key": "research-private/dlbs/82f37696.jsonl.gz",
+     "missingPage": 85
+    }
+   },
+   "total": 1991,
+   "inSources": 1
+  },
+  {
+   "key": "弘誓",
+   "name": "弘誓",
+   "sources": {
+    "dlbs": {
+     "name": "弘誓",
+     "articles": 1949,
+     "fulltext": 1909,
+     "start": 1993,
+     "end": 2023,
+     "slug": "hongshi",
+     "key": "research-private/dlbs/hongshi.jsonl.gz",
+     "missingPage": 99
+    }
+   },
+   "total": 1949,
+   "inSources": 1
+  },
+  {
+   "key": "人海燈",
+   "name": "人海燈",
+   "sources": {
+    "dlbs": {
+     "name": "人海燈",
+     "articles": 1925,
+     "fulltext": 579,
+     "start": 1933,
+     "end": 2008,
+     "slug": "renhaideng",
+     "key": "research-private/dlbs/renhaideng.jsonl.gz",
+     "missingPage": 840
+    }
+   },
+   "total": 1925,
+   "inSources": 1
+  },
+  {
+   "key": "宗学研究",
+   "name": "宗学研究",
+   "sources": {
+    "dlbs": {
+     "name": "宗学研究",
+     "articles": 1906,
+     "fulltext": 0,
+     "start": 1956,
+     "end": 2009,
+     "slug": "d66ec533",
+     "key": "research-private/dlbs/d66ec533.jsonl.gz",
+     "missingPage": 4
+    }
+   },
+   "total": 1906,
+   "inSources": 1
+  },
+  {
+   "key": "日本佛敎學會年報",
+   "name": "日本佛敎學會年報",
+   "sources": {
+    "dlbs": {
+     "name": "日本佛敎學會年報",
+     "articles": 1881,
+     "fulltext": 190,
+     "start": 1929,
+     "end": 2020,
+     "slug": "a0973336",
+     "key": "research-private/dlbs/a0973336.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 1881,
+   "inSources": 1
+  },
+  {
+   "key": "南瀛佛教會會報",
+   "name": "南瀛佛教會會報",
+   "sources": {
+    "dlbs": {
+     "name": "南瀛佛教會會報",
+     "articles": 1877,
+     "fulltext": 1877,
+     "start": 1923,
+     "end": 1926,
+     "slug": "nanying-hui",
+     "key": "research-private/dlbs/nanying-hui.jsonl.gz",
+     "missingPage": 21
+    }
+   },
+   "total": 1877,
+   "inSources": 1
+  },
+  {
+   "key": "佛教居士林特刊",
+   "name": "佛教居士林特刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛教居士林特刊",
+     "articles": 1580,
+     "fulltext": 0,
+     "start": 1933,
+     "end": 1937,
+     "slug": "70d3061e",
+     "key": "research-private/dlbs/70d3061e.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 1580,
+   "inSources": 1
+  },
+  {
+   "key": "원불교사상과종교문화",
+   "name": "원불교사상과 종교문화",
+   "sources": {
+    "dlbs": {
+     "name": "원불교사상과 종교문화",
+     "articles": 1569,
+     "fulltext": 1569,
+     "start": 1975,
+     "end": 2024,
+     "slug": "264fbf79",
+     "key": "research-private/dlbs/264fbf79.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 1569,
+   "inSources": 1
+  },
+  {
+   "key": "覺群週報",
+   "name": "覺群週報",
+   "sources": {
+    "dlbs": {
+     "name": "覺群週報",
+     "articles": 1546,
+     "fulltext": 0,
+     "start": 1946,
+     "end": 1947,
+     "slug": "juequn",
+     "key": "research-private/dlbs/juequn.jsonl.gz",
+     "missingPage": 46
+    }
+   },
+   "total": 1546,
+   "inSources": 1
+  },
+  {
+   "key": "大乘",
+   "name": "大乘",
+   "sources": {
+    "dlbs": {
+     "name": "大乘",
+     "articles": 1500,
+     "fulltext": 0,
+     "start": 1954,
+     "end": 2004,
+     "slug": "dasheng",
+     "key": "research-private/dlbs/dasheng.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1500,
+   "inSources": 1
+  },
+  {
+   "key": "大雲",
+   "name": "大雲",
+   "sources": {
+    "dlbs": {
+     "name": "大雲",
+     "articles": 1496,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1927,
+     "slug": "dayun",
+     "key": "research-private/dlbs/dayun.jsonl.gz",
+     "missingPage": 147
+    }
+   },
+   "total": 1496,
+   "inSources": 1
+  },
+  {
+   "key": "佛學研究",
+   "name": "佛學研究",
+   "sources": {
+    "dlbs": {
+     "name": "佛學研究",
+     "articles": 1427,
+     "fulltext": 1078,
+     "start": 1992,
+     "end": 2024,
+     "slug": "0959ba31",
+     "key": "research-private/dlbs/0959ba31.jsonl.gz",
+     "missingPage": 107
+    }
+   },
+   "total": 1427,
+   "inSources": 1
+  },
+  {
+   "key": "佛學月刊",
+   "name": "佛學月刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛學月刊",
+     "articles": 1362,
+     "fulltext": 0,
+     "start": 1921,
+     "end": 1947,
+     "slug": "dcc5bae4",
+     "key": "research-private/dlbs/dcc5bae4.jsonl.gz",
+     "missingPage": 124
+    }
+   },
+   "total": 1362,
+   "inSources": 1
+  },
+  {
+   "key": "天台学報",
+   "name": "天台学報",
+   "sources": {
+    "dlbs": {
+     "name": "天台学報",
+     "articles": 1352,
+     "fulltext": 1,
+     "start": 1960,
+     "end": 2022,
+     "slug": "457e509b",
+     "key": "research-private/dlbs/457e509b.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1352,
+   "inSources": 1
+  },
+  {
+   "key": "佛教公論",
+   "name": "佛教公論",
+   "sources": {
+    "dlbs": {
+     "name": "佛教公論",
+     "articles": 1342,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1948,
+     "slug": "fojiao-gonglun",
+     "key": "research-private/dlbs/fojiao-gonglun.jsonl.gz",
+     "missingPage": 264
+    }
+   },
+   "total": 1342,
+   "inSources": 1
+  },
+  {
+   "key": "五臺山研究",
+   "name": "五臺山研究",
+   "sources": {
+    "dlbs": {
+     "name": "五臺山研究",
+     "articles": 1337,
+     "fulltext": 1336,
+     "start": 1985,
+     "end": 2024,
+     "slug": "5891826a",
+     "key": "research-private/dlbs/5891826a.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 1337,
+   "inSources": 1
+  },
+  {
+   "key": "法光",
+   "name": "法光",
+   "sources": {
+    "dlbs": {
+     "name": "法光",
+     "articles": 1319,
+     "fulltext": 789,
+     "start": 1989,
+     "end": 2023,
+     "slug": "faguang",
+     "key": "research-private/dlbs/faguang.jsonl.gz",
+     "missingPage": 875
+    }
+   },
+   "total": 1319,
+   "inSources": 1
+  },
+  {
+   "key": "西陲宣化使公署月刊",
+   "name": "西陲宣化使公署月刊",
+   "sources": {
+    "dlbs": {
+     "name": "西陲宣化使公署月刊",
+     "articles": 1245,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1936,
+     "slug": "d48b7b93",
+     "key": "research-private/dlbs/d48b7b93.jsonl.gz",
+     "missingPage": 148
+    }
+   },
+   "total": 1245,
+   "inSources": 1
+  },
+  {
+   "key": "불교학보",
+   "name": "불교학보",
+   "sources": {
+    "dlbs": {
+     "name": "불교학보",
+     "articles": 1242,
+     "fulltext": 1235,
+     "start": 1963,
+     "end": 2023,
+     "slug": "f4ec98ea",
+     "key": "research-private/dlbs/f4ec98ea.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1242,
+   "inSources": 1
+  },
+  {
+   "key": "大法輪",
+   "name": "大法輪",
+   "sources": {
+    "dlbs": {
+     "name": "大法輪",
+     "articles": 1189,
+     "fulltext": 0,
+     "start": 1951,
+     "end": 2010,
+     "slug": "0e967eb6",
+     "key": "research-private/dlbs/0e967eb6.jsonl.gz",
+     "missingPage": 14
+    }
+   },
+   "total": 1189,
+   "inSources": 1
+  },
+  {
+   "key": "BuddhistChristianStudies",
+   "name": "Buddhist-Christian Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Buddhist-Christian Studies",
+     "articles": 1188,
+     "fulltext": 778,
+     "start": 1981,
+     "end": 2024,
+     "slug": "buddhist-christian-studi-bdb7cd3f",
+     "key": "research-private/dlbs/buddhist-christian-studi-bdb7cd3f.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 1188,
+   "inSources": 1
+  },
+  {
+   "key": "威音",
+   "name": "威音",
+   "sources": {
+    "dlbs": {
+     "name": "威音",
+     "articles": 1181,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1937,
+     "slug": "weiyin",
+     "key": "research-private/dlbs/weiyin.jsonl.gz",
+     "missingPage": 97
+    }
+   },
+   "total": 1181,
+   "inSources": 1
+  },
+  {
+   "key": "宏善彙報",
+   "name": "宏善彙報",
+   "sources": {
+    "dlbs": {
+     "name": "宏善彙報",
+     "articles": 1175,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1937,
+     "slug": "217a9af9",
+     "key": "research-private/dlbs/217a9af9.jsonl.gz",
+     "missingPage": 34
+    }
+   },
+   "total": 1175,
+   "inSources": 1
+  },
+  {
+   "key": "PhilosophyEastandWest",
+   "name": "Philosophy East and West",
+   "sources": {
+    "dlbs": {
+     "name": "Philosophy East and West",
+     "articles": 1170,
+     "fulltext": 1169,
+     "start": 1951,
+     "end": 2023,
+     "slug": "pew",
+     "key": "research-private/dlbs/pew.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 1170,
+   "inSources": 1
+  },
+  {
+   "key": "TheEasternBuddhist",
+   "name": "The Eastern Buddhist",
+   "sources": {
+    "dlbs": {
+     "name": "The Eastern Buddhist",
+     "articles": 1148,
+     "fulltext": 381,
+     "start": 1921,
+     "end": 2018,
+     "slug": "the-eastern-buddhist-cd528142",
+     "key": "research-private/dlbs/the-eastern-buddhist-cd528142.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 1148,
+   "inSources": 1
+  },
+  {
+   "key": "羅漢菜",
+   "name": "羅漢菜",
+   "sources": {
+    "dlbs": {
+     "name": "羅漢菜",
+     "articles": 1134,
+     "fulltext": 0,
+     "start": 1941,
+     "end": 1945,
+     "slug": "aa3f059c",
+     "key": "research-private/dlbs/aa3f059c.jsonl.gz",
+     "missingPage": 287
+    }
+   },
+   "total": 1134,
+   "inSources": 1
+  },
+  {
+   "key": "人間佛教學報藝文",
+   "name": "人間佛教學報‧藝文",
+   "sources": {
+    "airiti": {
+     "name": "人間佛教學報藝文",
+     "articles": 457,
+     "fulltext": 453,
+     "start": "2016",
+     "end": "2025",
+     "to": "/research-data/press/hbj-arts"
+    },
+    "dlbs": {
+     "name": "人間佛教學報‧藝文",
+     "articles": 664,
+     "fulltext": 663,
+     "start": 2016,
+     "end": 2026,
+     "slug": "736df975",
+     "key": "research-private/dlbs/736df975.jsonl.gz",
+     "missingPage": 68
+    }
+   },
+   "total": 1121,
+   "inSources": 2
+  },
+  {
+   "key": "同願",
+   "name": "同願",
+   "sources": {
+    "dlbs": {
+     "name": "同願",
+     "articles": 1119,
+     "fulltext": 0,
+     "start": 1940,
+     "end": 1943,
+     "slug": "fbfcb443",
+     "key": "research-private/dlbs/fbfcb443.jsonl.gz",
+     "missingPage": 159
+    }
+   },
+   "total": 1119,
+   "inSources": 1
+  },
+  {
+   "key": "智山学報",
+   "name": "智山学報",
+   "sources": {
+    "dlbs": {
+     "name": "智山学報",
+     "articles": 1114,
+     "fulltext": 1107,
+     "start": 1914,
+     "end": 2022,
+     "slug": "ded5cb81",
+     "key": "research-private/dlbs/ded5cb81.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1114,
+   "inSources": 1
+  },
+  {
+   "key": "佛化新青年",
+   "name": "佛化新青年",
+   "sources": {
+    "dlbs": {
+     "name": "佛化新青年",
+     "articles": 1103,
+     "fulltext": 0,
+     "start": 1923,
+     "end": 1924,
+     "slug": "fohua-xinqingnian",
+     "key": "research-private/dlbs/fohua-xinqingnian.jsonl.gz",
+     "missingPage": 111
+    }
+   },
+   "total": 1103,
+   "inSources": 1
+  },
+  {
+   "key": "中國宗教",
+   "name": "中國宗教",
+   "sources": {
+    "dlbs": {
+     "name": "中國宗教",
+     "articles": 1093,
+     "fulltext": 1087,
+     "start": 1995,
+     "end": 2024,
+     "slug": "d2cb6c9f",
+     "key": "research-private/dlbs/d2cb6c9f.jsonl.gz",
+     "missingPage": 96
+    }
+   },
+   "total": 1093,
+   "inSources": 1
+  },
+  {
+   "key": "駒澤大学佛教学部論集",
+   "name": "駒澤大学佛教学部論集",
+   "sources": {
+    "dlbs": {
+     "name": "駒澤大学佛教学部論集",
+     "articles": 1090,
+     "fulltext": 1089,
+     "start": 1971,
+     "end": 2022,
+     "slug": "9d5ec897",
+     "key": "research-private/dlbs/9d5ec897.jsonl.gz",
+     "missingPage": 367
+    }
+   },
+   "total": 1090,
+   "inSources": 1
+  },
+  {
+   "key": "한국불교학",
+   "name": "한국불교학",
+   "sources": {
+    "dlbs": {
+     "name": "한국불교학",
+     "articles": 1072,
+     "fulltext": 1071,
+     "start": 2001,
+     "end": 2025,
+     "slug": "c48dcaad",
+     "key": "research-private/dlbs/c48dcaad.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 1072,
+   "inSources": 1
+  },
+  {
+   "key": "世界宗教研究",
+   "name": "世界宗教研究",
+   "sources": {
+    "dlbs": {
+     "name": "世界宗教研究",
+     "articles": 1045,
+     "fulltext": 733,
+     "start": 1979,
+     "end": 2023,
+     "slug": "546c2792",
+     "key": "research-private/dlbs/546c2792.jsonl.gz",
+     "missingPage": 279
+    }
+   },
+   "total": 1045,
+   "inSources": 1
+  },
+  {
+   "key": "敦煌學輯刊",
+   "name": "敦煌學輯刊",
+   "sources": {
+    "dlbs": {
+     "name": "敦煌學輯刊",
+     "articles": 1035,
+     "fulltext": 1008,
+     "start": 1980,
+     "end": 2024,
+     "slug": "5c1eaa2f",
+     "key": "research-private/dlbs/5c1eaa2f.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 1035,
+   "inSources": 1
+  },
+  {
+   "key": "新世紀宗教研究",
+   "name": "新世紀宗教研究",
+   "sources": {
+    "airiti": {
+     "name": "新世紀宗教研究",
+     "articles": 422,
+     "fulltext": 388,
+     "start": "2002",
+     "end": "2021",
+     "to": "/research-data/press/new-century"
+    },
+    "ncl": {
+     "name": "新世紀宗教研究",
+     "articles": 435,
+     "fulltext": 312,
+     "start": 2002,
+     "end": 2021,
+     "slug": "new-century"
+    },
+    "dlbs": {
+     "name": "新世紀宗教研究",
+     "articles": 164,
+     "fulltext": 110,
+     "start": 2002,
+     "end": 2021,
+     "slug": "d426b88e",
+     "key": "research-private/dlbs/d426b88e.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1021,
+   "inSources": 3
+  },
+  {
+   "key": "四川佛教旬刊",
+   "name": "四川佛教旬刊",
+   "sources": {
+    "dlbs": {
+     "name": "四川佛教旬刊",
+     "articles": 1010,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "9cfc7102",
+     "key": "research-private/dlbs/9cfc7102.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 1010,
+   "inSources": 1
+  },
+  {
+   "key": "密教文化",
+   "name": "密教文化",
+   "sources": {
+    "dlbs": {
+     "name": "密教文化",
+     "articles": 1004,
+     "fulltext": 922,
+     "start": 1947,
+     "end": 2020,
+     "slug": "a20fadab",
+     "key": "research-private/dlbs/a20fadab.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 1004,
+   "inSources": 1
+  },
+  {
+   "key": "中道",
+   "name": "中道",
+   "sources": {
+    "dlbs": {
+     "name": "中道",
+     "articles": 1003,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "7081ad19",
+     "key": "research-private/dlbs/7081ad19.jsonl.gz",
+     "missingPage": 21
+    }
+   },
+   "total": 1003,
+   "inSources": 1
+  },
+  {
+   "key": "仏教",
+   "name": "仏教",
+   "sources": {
+    "dlbs": {
+     "name": "仏教",
+     "articles": 974,
+     "fulltext": 0,
+     "start": 1987,
+     "end": 2001,
+     "slug": "ed4231fb",
+     "key": "research-private/dlbs/ed4231fb.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 974,
+   "inSources": 1
+  },
+  {
+   "key": "福嚴會訊",
+   "name": "福嚴會訊",
+   "sources": {
+    "ncl": {
+     "name": "福嚴會訊",
+     "articles": 241,
+     "fulltext": 0,
+     "start": 2004,
+     "end": 2025,
+     "slug": "fuyan"
+    },
+    "dlbs": {
+     "name": "福嚴會訊",
+     "articles": 708,
+     "fulltext": 692,
+     "start": 2004,
+     "end": 2023,
+     "slug": "a5aa170f",
+     "key": "research-private/dlbs/a5aa170f.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 949,
+   "inSources": 2
+  },
+  {
+   "key": "現代佛學",
+   "name": "現代佛學",
+   "sources": {
+    "dlbs": {
+     "name": "現代佛學",
+     "articles": 910,
+     "fulltext": 897,
+     "start": 1950,
+     "end": 2003,
+     "slug": "81267d83",
+     "key": "research-private/dlbs/81267d83.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 910,
+   "inSources": 1
+  },
+  {
+   "key": "TheJournalofAsianStudies",
+   "name": "The Journal of Asian Studies",
+   "sources": {
+    "dlbs": {
+     "name": "The Journal of Asian Studies",
+     "articles": 904,
+     "fulltext": 903,
+     "start": 1951,
+     "end": 2022,
+     "slug": "the-journal-of-asian-stu-cbe69e89",
+     "key": "research-private/dlbs/the-journal-of-asian-stu-cbe69e89.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 904,
+   "inSources": 1
+  },
+  {
+   "key": "文物",
+   "name": "文物",
+   "sources": {
+    "dlbs": {
+     "name": "文物",
+     "articles": 896,
+     "fulltext": 261,
+     "start": 1951,
+     "end": 2022,
+     "slug": "a4c05c83",
+     "key": "research-private/dlbs/a4c05c83.jsonl.gz",
+     "missingPage": 75
+    }
+   },
+   "total": 896,
+   "inSources": 1
+  },
+  {
+   "key": "眞宗研究眞宗連合學會研究紀要",
+   "name": "眞宗研究 : 眞宗連合學會研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "眞宗研究 : 眞宗連合學會研究紀要",
+     "articles": 885,
+     "fulltext": 2,
+     "start": 1955,
+     "end": 2022,
+     "slug": "20f94bd1",
+     "key": "research-private/dlbs/20f94bd1.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 885,
+   "inSources": 1
+  },
+  {
+   "key": "佛教月報",
+   "name": "佛教月報",
+   "sources": {
+    "dlbs": {
+     "name": "佛教月報",
+     "articles": 880,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1939,
+     "slug": "7b256047",
+     "key": "research-private/dlbs/7b256047.jsonl.gz",
+     "missingPage": 169
+    }
+   },
+   "total": 880,
+   "inSources": 1
+  },
+  {
+   "key": "佛海燈",
+   "name": "佛海燈",
+   "sources": {
+    "dlbs": {
+     "name": "佛海燈",
+     "articles": 879,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1937,
+     "slug": "fc58c422",
+     "key": "research-private/dlbs/fc58c422.jsonl.gz",
+     "missingPage": 262
+    }
+   },
+   "total": 879,
+   "inSources": 1
+  },
+  {
+   "key": "TheTibetJournal",
+   "name": "The Tibet Journal",
+   "sources": {
+    "dlbs": {
+     "name": "The Tibet Journal",
+     "articles": 877,
+     "fulltext": 876,
+     "start": 1975,
+     "end": 2022,
+     "slug": "the-tibet-journal-320afbb0",
+     "key": "research-private/dlbs/the-tibet-journal-320afbb0.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 877,
+   "inSources": 1
+  },
+  {
+   "key": "覺音",
+   "name": "覺音",
+   "sources": {
+    "dlbs": {
+     "name": "覺音",
+     "articles": 870,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1946,
+     "slug": "a2105ece",
+     "key": "research-private/dlbs/a2105ece.jsonl.gz",
+     "missingPage": 21
+    }
+   },
+   "total": 870,
+   "inSources": 1
+  },
+  {
+   "key": "北平佛教會月刊",
+   "name": "北平佛教會月刊",
+   "sources": {
+    "dlbs": {
+     "name": "北平佛教會月刊",
+     "articles": 864,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "f0a734cc",
+     "key": "research-private/dlbs/f0a734cc.jsonl.gz",
+     "missingPage": 113
+    }
+   },
+   "total": 864,
+   "inSources": 1
+  },
+  {
+   "key": "親鸞教学",
+   "name": "親鸞教学",
+   "sources": {
+    "dlbs": {
+     "name": "親鸞教学",
+     "articles": 863,
+     "fulltext": 846,
+     "start": 1962,
+     "end": 2022,
+     "slug": "ac96f586",
+     "key": "research-private/dlbs/ac96f586.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 863,
+   "inSources": 1
+  },
+  {
+   "key": "佛化新聞",
+   "name": "佛化新聞",
+   "sources": {
+    "dlbs": {
+     "name": "佛化新聞",
+     "articles": 856,
+     "fulltext": 0,
+     "start": 1942,
+     "end": 1944,
+     "slug": "82c8d6f8",
+     "key": "research-private/dlbs/82c8d6f8.jsonl.gz",
+     "missingPage": 856
+    }
+   },
+   "total": 856,
+   "inSources": 1
+  },
+  {
+   "key": "南洋佛教",
+   "name": "南洋佛教",
+   "sources": {
+    "dlbs": {
+     "name": "南洋佛教",
+     "articles": 855,
+     "fulltext": 2,
+     "start": 1969,
+     "end": 2004,
+     "slug": "e45ccb2c",
+     "key": "research-private/dlbs/e45ccb2c.jsonl.gz",
+     "missingPage": 100
+    }
+   },
+   "total": 855,
+   "inSources": 1
+  },
+  {
+   "key": "神學與教會",
+   "name": "神學與教會",
+   "sources": {
+    "airiti": {
+     "name": "神學與教會",
+     "articles": 215,
+     "fulltext": 215,
+     "start": "2011",
+     "end": "2025",
+     "to": "/research-data/press/theology-church"
+    },
+    "ncl": {
+     "name": "神學與教會",
+     "articles": 638,
+     "fulltext": 1,
+     "start": 1969,
+     "end": 2025,
+     "slug": "theology-church"
+    }
+   },
+   "total": 853,
+   "inSources": 2
+  },
+  {
+   "key": "中華佛學學報",
+   "name": "中華佛學學報",
+   "sources": {
+    "airiti": {
+     "name": "中華佛學學報",
+     "articles": 67,
+     "fulltext": 67,
+     "start": "2014",
+     "end": "2026",
+     "to": "/research-data/press/chbs-journal"
+    },
+    "ncl": {
+     "name": "中華佛學學報",
+     "articles": 442,
+     "fulltext": 442,
+     "start": 1987,
+     "end": 2026,
+     "slug": "chbs-journal"
+    },
+    "dlbs": {
+     "name": "中華佛學學報",
+     "articles": 342,
+     "fulltext": 339,
+     "start": 1987,
+     "end": 2007,
+     "slug": "9726f22f",
+     "key": "research-private/dlbs/9726f22f.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 851,
+   "inSources": 3
+  },
+  {
+   "key": "蘇城隱貧會旬刊",
+   "name": "蘇城隱貧會旬刊",
+   "sources": {
+    "dlbs": {
+     "name": "蘇城隱貧會旬刊",
+     "articles": 851,
+     "fulltext": 0,
+     "start": 1925,
+     "end": 1927,
+     "slug": "80c3c7dd",
+     "key": "research-private/dlbs/80c3c7dd.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 851,
+   "inSources": 1
+  },
+  {
+   "key": "大谷學報",
+   "name": "大谷學報",
+   "sources": {
+    "dlbs": {
+     "name": "大谷學報",
+     "articles": 849,
+     "fulltext": 263,
+     "start": 1928,
+     "end": 2008,
+     "slug": "be1fad84",
+     "key": "research-private/dlbs/be1fad84.jsonl.gz",
+     "missingPage": 41
+    }
+   },
+   "total": 849,
+   "inSources": 1
+  },
+  {
+   "key": "佛化旬刊",
+   "name": "佛化旬刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛化旬刊",
+     "articles": 844,
+     "fulltext": 0,
+     "start": 1921,
+     "end": 1928,
+     "slug": "b2fb7e53",
+     "key": "research-private/dlbs/b2fb7e53.jsonl.gz",
+     "missingPage": 9
+    }
+   },
+   "total": 844,
+   "inSources": 1
+  },
+  {
+   "key": "大崎學報",
+   "name": "大崎學報",
+   "sources": {
+    "dlbs": {
+     "name": "大崎學報",
+     "articles": 844,
+     "fulltext": 31,
+     "start": 1950,
+     "end": 2019,
+     "slug": "19241af2",
+     "key": "research-private/dlbs/19241af2.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 844,
+   "inSources": 1
+  },
+  {
+   "key": "淨業月刊",
+   "name": "淨業月刊",
+   "sources": {
+    "dlbs": {
+     "name": "淨業月刊",
+     "articles": 842,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "e712d97e",
+     "key": "research-private/dlbs/e712d97e.jsonl.gz",
+     "missingPage": 85
+    }
+   },
+   "total": 842,
+   "inSources": 1
+  },
+  {
+   "key": "JapaneseJournalofReligiousStudies",
+   "name": "Japanese Journal of Religious Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Japanese Journal of Religious Studies",
+     "articles": 826,
+     "fulltext": 826,
+     "start": 1974,
+     "end": 2023,
+     "slug": "japanese-journal-of-reli-7fabfefb",
+     "key": "research-private/dlbs/japanese-journal-of-reli-7fabfefb.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 826,
+   "inSources": 1
+  },
+  {
+   "key": "佛學叢報",
+   "name": "佛學叢報",
+   "sources": {
+    "dlbs": {
+     "name": "佛學叢報",
+     "articles": 824,
+     "fulltext": 0,
+     "start": 1912,
+     "end": 1969,
+     "slug": "2d5520b3",
+     "key": "research-private/dlbs/2d5520b3.jsonl.gz",
+     "missingPage": 301
+    }
+   },
+   "total": 824,
+   "inSources": 1
+  },
+  {
+   "key": "世界宗教文化",
+   "name": "世界宗教文化",
+   "sources": {
+    "dlbs": {
+     "name": "世界宗教文化",
+     "articles": 815,
+     "fulltext": 815,
+     "start": 1995,
+     "end": 2023,
+     "slug": "3b96b778",
+     "key": "research-private/dlbs/3b96b778.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 815,
+   "inSources": 1
+  },
+  {
+   "key": "佛教学セミナー",
+   "name": "佛教学セミナー",
+   "sources": {
+    "dlbs": {
+     "name": "佛教学セミナー",
+     "articles": 802,
+     "fulltext": 795,
+     "start": 1965,
+     "end": 2023,
+     "slug": "9ae6ef1c",
+     "key": "research-private/dlbs/9ae6ef1c.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 802,
+   "inSources": 1
+  },
+  {
+   "key": "龍谷大学仏教文化研究所紀要",
+   "name": "龍谷大学仏教文化研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "龍谷大学仏教文化研究所紀要",
+     "articles": 798,
+     "fulltext": 146,
+     "start": 1962,
+     "end": 2018,
+     "slug": "e5981817",
+     "key": "research-private/dlbs/e5981817.jsonl.gz",
+     "missingPage": 11
+    }
+   },
+   "total": 798,
+   "inSources": 1
+  },
+  {
+   "key": "불교학연구",
+   "name": "불교학연구",
+   "sources": {
+    "dlbs": {
+     "name": "불교학연구",
+     "articles": 795,
+     "fulltext": 788,
+     "start": 2000,
+     "end": 2025,
+     "slug": "e0cc1dfa",
+     "key": "research-private/dlbs/e0cc1dfa.jsonl.gz",
+     "missingPage": 7
+    }
+   },
+   "total": 795,
+   "inSources": 1
+  },
+  {
+   "key": "동아시아불교문화",
+   "name": "동아시아불교문화",
+   "sources": {
+    "dlbs": {
+     "name": "동아시아불교문화",
+     "articles": 788,
+     "fulltext": 784,
+     "start": 2007,
+     "end": 2023,
+     "slug": "fa966608",
+     "key": "research-private/dlbs/fa966608.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 788,
+   "inSources": 1
+  },
+  {
+   "key": "宗教學研究",
+   "name": "宗教學研究",
+   "sources": {
+    "dlbs": {
+     "name": "宗教學研究",
+     "articles": 782,
+     "fulltext": 781,
+     "start": 1,
+     "end": 2025,
+     "slug": "937d490f",
+     "key": "research-private/dlbs/937d490f.jsonl.gz",
+     "missingPage": 1,
+     "realStart": 1984,
+     "yearOutliers": {
+      "1": 1
+     }
+    }
+   },
+   "total": 782,
+   "inSources": 1
+  },
+  {
+   "key": "真宗学",
+   "name": "真宗学",
+   "sources": {
+    "dlbs": {
+     "name": "真宗学",
+     "articles": 772,
+     "fulltext": 1,
+     "start": 1949,
+     "end": 2022,
+     "slug": "9215179b",
+     "key": "research-private/dlbs/9215179b.jsonl.gz",
+     "missingPage": 123
+    }
+   },
+   "total": 772,
+   "inSources": 1
+  },
+  {
+   "key": "大崎学報",
+   "name": "大崎学報",
+   "sources": {
+    "dlbs": {
+     "name": "大崎学報",
+     "articles": 768,
+     "fulltext": 0,
+     "start": 1904,
+     "end": 1941,
+     "slug": "27575730",
+     "key": "research-private/dlbs/27575730.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 768,
+   "inSources": 1
+  },
+  {
+   "key": "道風基督教文化評論",
+   "name": "道風：基督教文化評論",
+   "sources": {
+    "airiti": {
+     "name": "道風：基督教文化評論",
+     "articles": 767,
+     "fulltext": 767,
+     "start": "2000",
+     "end": "2026",
+     "to": "/research-data/press/logos-pneuma"
+    }
+   },
+   "total": 767,
+   "inSources": 1
+  },
+  {
+   "key": "現代宗教研究",
+   "name": "現代宗教研究",
+   "sources": {
+    "dlbs": {
+     "name": "現代宗教研究",
+     "articles": 730,
+     "fulltext": 722,
+     "start": 1972,
+     "end": 2020,
+     "slug": "85cd091e",
+     "key": "research-private/dlbs/85cd091e.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 730,
+   "inSources": 1
+  },
+  {
+   "key": "妙林",
+   "name": "妙林",
+   "sources": {
+    "dlbs": {
+     "name": "妙林",
+     "articles": 726,
+     "fulltext": 423,
+     "start": 1989,
+     "end": 2023,
+     "slug": "b945172b",
+     "key": "research-private/dlbs/b945172b.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 726,
+   "inSources": 1
+  },
+  {
+   "key": "佛教人間",
+   "name": "佛教人間",
+   "sources": {
+    "dlbs": {
+     "name": "佛教人間",
+     "articles": 716,
+     "fulltext": 0,
+     "start": 1947,
+     "end": 1951,
+     "slug": "ece4460d",
+     "key": "research-private/dlbs/ece4460d.jsonl.gz",
+     "missingPage": 684
+    }
+   },
+   "total": 716,
+   "inSources": 1
+  },
+  {
+   "key": "禅学研究",
+   "name": "禅学研究",
+   "sources": {
+    "dlbs": {
+     "name": "禅学研究",
+     "articles": 711,
+     "fulltext": 690,
+     "start": 1925,
+     "end": 2024,
+     "slug": "7f18fc0c",
+     "key": "research-private/dlbs/7f18fc0c.jsonl.gz",
+     "missingPage": 7
+    }
+   },
+   "total": 711,
+   "inSources": 1
+  },
+  {
+   "key": "大正大学綜合佛教研究所年報",
+   "name": "大正大学綜合佛教研究所年報",
+   "sources": {
+    "dlbs": {
+     "name": "大正大学綜合佛教研究所年報",
+     "articles": 688,
+     "fulltext": 172,
+     "start": 1979,
+     "end": 2023,
+     "slug": "874f0f8b",
+     "key": "research-private/dlbs/874f0f8b.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 688,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofBuddhistEthics",
+   "name": "Journal of Buddhist Ethics",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Buddhist Ethics",
+     "articles": 672,
+     "fulltext": 653,
+     "start": 1994,
+     "end": 2025,
+     "slug": "journal-of-buddhist-ethi-54b09746",
+     "key": "research-private/dlbs/journal-of-buddhist-ethi-54b09746.jsonl.gz",
+     "missingPage": 46
+    }
+   },
+   "total": 672,
+   "inSources": 1
+  },
+  {
+   "key": "佛教與佛學",
+   "name": "佛教與佛學",
+   "sources": {
+    "dlbs": {
+     "name": "佛教與佛學",
+     "articles": 671,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1937,
+     "slug": "004cef5a",
+     "key": "research-private/dlbs/004cef5a.jsonl.gz",
+     "missingPage": 165
+    }
+   },
+   "total": 671,
+   "inSources": 1
+  },
+  {
+   "key": "密教学研究",
+   "name": "密教学研究",
+   "sources": {
+    "dlbs": {
+     "name": "密教学研究",
+     "articles": 670,
+     "fulltext": 0,
+     "start": 1969,
+     "end": 2020,
+     "slug": "8a8d23c6",
+     "key": "research-private/dlbs/8a8d23c6.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 670,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofIndianPhilosophy",
+   "name": "Journal of Indian Philosophy",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Indian Philosophy",
+     "articles": 657,
+     "fulltext": 655,
+     "start": 1970,
+     "end": 2024,
+     "slug": "journal-of-indian-philos-85b97efa",
+     "key": "research-private/dlbs/journal-of-indian-philos-85b97efa.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 657,
+   "inSources": 1
+  },
+  {
+   "key": "佛學叢刊",
+   "name": "佛學叢刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛學叢刊",
+     "articles": 657,
+     "fulltext": 0,
+     "start": 1912,
+     "end": 1912,
+     "slug": "00023472",
+     "key": "research-private/dlbs/00023472.jsonl.gz",
+     "missingPage": 9
+    }
+   },
+   "total": 657,
+   "inSources": 1
+  },
+  {
+   "key": "僧伽醫護",
+   "name": "僧伽醫護",
+   "sources": {
+    "dlbs": {
+     "name": "僧伽醫護",
+     "articles": 655,
+     "fulltext": 655,
+     "start": 1999,
+     "end": 2021,
+     "slug": "084c5d73",
+     "key": "research-private/dlbs/084c5d73.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 655,
+   "inSources": 1
+  },
+  {
+   "key": "佛教文化研究",
+   "name": "佛教文化研究",
+   "sources": {
+    "dlbs": {
+     "name": "佛教文化研究",
+     "articles": 653,
+     "fulltext": 638,
+     "start": 1951,
+     "end": 2022,
+     "slug": "5a6a082e",
+     "key": "research-private/dlbs/5a6a082e.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 653,
+   "inSources": 1
+  },
+  {
+   "key": "豊山教学大会紀要",
+   "name": "豊山教学大会紀要",
+   "sources": {
+    "dlbs": {
+     "name": "豊山教学大会紀要",
+     "articles": 652,
+     "fulltext": 20,
+     "start": 1973,
+     "end": 2022,
+     "slug": "da03e6a0",
+     "key": "research-private/dlbs/da03e6a0.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 652,
+   "inSources": 1
+  },
+  {
+   "key": "神學論集",
+   "name": "神學論集",
+   "sources": {
+    "airiti": {
+     "name": "神學論集",
+     "articles": 650,
+     "fulltext": 650,
+     "start": "2005",
+     "end": "2026",
+     "to": "/research-data/press/collectanea"
+    }
+   },
+   "total": 650,
+   "inSources": 1
+  },
+  {
+   "key": "駒沢大学大学院仏教学研究会年報",
+   "name": "駒沢大学大学院仏教学研究会年報",
+   "sources": {
+    "dlbs": {
+     "name": "駒沢大学大学院仏教学研究会年報",
+     "articles": 649,
+     "fulltext": 0,
+     "start": 1967,
+     "end": 2022,
+     "slug": "1fb4a65b",
+     "key": "research-private/dlbs/1fb4a65b.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 649,
+   "inSources": 1
+  },
+  {
+   "key": "建道學刊",
+   "name": "建道學刊",
+   "sources": {
+    "airiti": {
+     "name": "建道學刊",
+     "articles": 647,
+     "fulltext": 642,
+     "start": "1994",
+     "end": "2026",
+     "to": "/research-data/press/jiandao"
+    }
+   },
+   "total": 647,
+   "inSources": 1
+  },
+  {
+   "key": "선학",
+   "name": "선학",
+   "sources": {
+    "dlbs": {
+     "name": "선학",
+     "articles": 644,
+     "fulltext": 642,
+     "start": 2001,
+     "end": 2023,
+     "slug": "3dc629f0",
+     "key": "research-private/dlbs/3dc629f0.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 644,
+   "inSources": 1
+  },
+  {
+   "key": "印度哲学仏教学",
+   "name": "印度哲学仏教学",
+   "sources": {
+    "dlbs": {
+     "name": "印度哲学仏教学",
+     "articles": 639,
+     "fulltext": 0,
+     "start": 1986,
+     "end": 2010,
+     "slug": "92def509",
+     "key": "research-private/dlbs/92def509.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 639,
+   "inSources": 1
+  },
+  {
+   "key": "보조사상",
+   "name": "보조사상",
+   "sources": {
+    "dlbs": {
+     "name": "보조사상",
+     "articles": 639,
+     "fulltext": 608,
+     "start": 1987,
+     "end": 2025,
+     "slug": "a59ab506",
+     "key": "research-private/dlbs/a59ab506.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 639,
+   "inSources": 1
+  },
+  {
+   "key": "人間覺",
+   "name": "人間覺",
+   "sources": {
+    "dlbs": {
+     "name": "人間覺",
+     "articles": 638,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1937,
+     "slug": "ed17c642",
+     "key": "research-private/dlbs/ed17c642.jsonl.gz",
+     "missingPage": 108
+    }
+   },
+   "total": 638,
+   "inSources": 1
+  },
+  {
+   "key": "普門",
+   "name": "普門",
+   "sources": {
+    "dlbs": {
+     "name": "普門",
+     "articles": 634,
+     "fulltext": 121,
+     "start": 1979,
+     "end": 2023,
+     "slug": "e12f4a1c",
+     "key": "research-private/dlbs/e12f4a1c.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 634,
+   "inSources": 1
+  },
+  {
+   "key": "인도철학",
+   "name": "인도철학",
+   "sources": {
+    "dlbs": {
+     "name": "인도철학",
+     "articles": 633,
+     "fulltext": 633,
+     "start": 1989,
+     "end": 2025,
+     "slug": "5a19d2d2",
+     "key": "research-private/dlbs/5a19d2d2.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 633,
+   "inSources": 1
+  },
+  {
+   "key": "靈泉通信",
+   "name": "靈泉通信",
+   "sources": {
+    "dlbs": {
+     "name": "靈泉通信",
+     "articles": 632,
+     "fulltext": 0,
+     "start": 1934,
+     "end": 1934,
+     "slug": "b473d9f0",
+     "key": "research-private/dlbs/b473d9f0.jsonl.gz",
+     "missingPage": 55
+    }
+   },
+   "total": 632,
+   "inSources": 1
+  },
+  {
+   "key": "TheMiddleWayJournaloftheBuddhistSociety",
+   "name": "The Middle Way: Journal of the Buddhist Society",
+   "sources": {
+    "dlbs": {
+     "name": "The Middle Way: Journal of the Buddhist Society",
+     "articles": 625,
+     "fulltext": 16,
+     "start": 1933,
+     "end": 2013,
+     "slug": "the-middle-way-journal-o-b7c80a34",
+     "key": "research-private/dlbs/the-middle-way-journal-o-b7c80a34.jsonl.gz",
+     "missingPage": 66
+    }
+   },
+   "total": 625,
+   "inSources": 1
+  },
+  {
+   "key": "佛化隨刊",
+   "name": "佛化隨刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛化隨刊",
+     "articles": 625,
+     "fulltext": 0,
+     "start": 1927,
+     "end": 1940,
+     "slug": "15defcb6",
+     "key": "research-private/dlbs/15defcb6.jsonl.gz",
+     "missingPage": 41
+    }
+   },
+   "total": 625,
+   "inSources": 1
+  },
+  {
+   "key": "仏教史学研究",
+   "name": "仏教史学研究",
+   "sources": {
+    "dlbs": {
+     "name": "仏教史学研究",
+     "articles": 622,
+     "fulltext": 0,
+     "start": 1974,
+     "end": 2019,
+     "slug": "ac360091",
+     "key": "research-private/dlbs/ac360091.jsonl.gz",
+     "missingPage": 18
+    }
+   },
+   "total": 622,
+   "inSources": 1
+  },
+  {
+   "key": "教化研究",
+   "name": "教化研究",
+   "sources": {
+    "dlbs": {
+     "name": "教化研究",
+     "articles": 619,
+     "fulltext": 616,
+     "start": 1986,
+     "end": 2021,
+     "slug": "bf5f8984",
+     "key": "research-private/dlbs/bf5f8984.jsonl.gz",
+     "missingPage": 87
+    }
+   },
+   "total": 619,
+   "inSources": 1
+  },
+  {
+   "key": "JournaloftheInternationalAssociationofBuddhistStudies",
+   "name": "Journal of the International Association of Buddhist Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the International Association of Buddhist Studies",
+     "articles": 617,
+     "fulltext": 548,
+     "start": 1978,
+     "end": 2024,
+     "slug": "journal-of-the-internati-cd76915d",
+     "key": "research-private/dlbs/journal-of-the-internati-cd76915d.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 617,
+   "inSources": 1
+  },
+  {
+   "key": "駒沢大学仏教学部研究紀要",
+   "name": "駒沢大学仏教学部研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "駒沢大学仏教学部研究紀要",
+     "articles": 612,
+     "fulltext": 612,
+     "start": 1961,
+     "end": 2023,
+     "slug": "1841037d",
+     "key": "research-private/dlbs/1841037d.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 612,
+   "inSources": 1
+  },
+  {
+   "key": "佛音",
+   "name": "佛音",
+   "sources": {
+    "dlbs": {
+     "name": "佛音",
+     "articles": 608,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1926,
+     "slug": "cf1a8711",
+     "key": "research-private/dlbs/cf1a8711.jsonl.gz",
+     "missingPage": 96
+    }
+   },
+   "total": 608,
+   "inSources": 1
+  },
+  {
+   "key": "中華佛學研究",
+   "name": "中華佛學研究",
+   "sources": {
+    "airiti": {
+     "name": "中華佛學研究",
+     "articles": 200,
+     "fulltext": 200,
+     "start": "1997",
+     "end": "2026",
+     "to": "/research-data/press/chbs-studies"
+    },
+    "ncl": {
+     "name": "中華佛學研究",
+     "articles": 201,
+     "fulltext": 201,
+     "start": 1997,
+     "end": 2026,
+     "slug": "chbs-studies"
+    },
+    "dlbs": {
+     "name": "中華佛學研究",
+     "articles": 200,
+     "fulltext": 200,
+     "start": 1997,
+     "end": 2024,
+     "slug": "0bb6c41e",
+     "key": "research-private/dlbs/0bb6c41e.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 601,
+   "inSources": 3
+  },
+  {
+   "key": "仏教経済研究",
+   "name": "仏教経済研究",
+   "sources": {
+    "dlbs": {
+     "name": "仏教経済研究",
+     "articles": 588,
+     "fulltext": 135,
+     "start": 1968,
+     "end": 2021,
+     "slug": "4527c90f",
+     "key": "research-private/dlbs/4527c90f.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 588,
+   "inSources": 1
+  },
+  {
+   "key": "南都仏教",
+   "name": "南都仏教",
+   "sources": {
+    "dlbs": {
+     "name": "南都仏教",
+     "articles": 587,
+     "fulltext": 2,
+     "start": 1954,
+     "end": 2022,
+     "slug": "87798308",
+     "key": "research-private/dlbs/87798308.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 587,
+   "inSources": 1
+  },
+  {
+   "key": "玄奘佛學研究",
+   "name": "玄奘佛學研究",
+   "sources": {
+    "airiti": {
+     "name": "玄奘佛學研究",
+     "articles": 291,
+     "fulltext": 291,
+     "start": "2004",
+     "end": "2026",
+     "to": "/research-data/press/hcu-buddhist"
+    },
+    "dlbs": {
+     "name": "玄奘佛學研究",
+     "articles": 294,
+     "fulltext": 294,
+     "start": 2004,
+     "end": 2025,
+     "slug": "9bf47769",
+     "key": "research-private/dlbs/9bf47769.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 585,
+   "inSources": 2
+  },
+  {
+   "key": "現代僧伽",
+   "name": "現代僧伽",
+   "sources": {
+    "dlbs": {
+     "name": "現代僧伽",
+     "articles": 580,
+     "fulltext": 0,
+     "start": 1928,
+     "end": 1931,
+     "slug": "d8697dab",
+     "key": "research-private/dlbs/d8697dab.jsonl.gz",
+     "missingPage": 296
+    }
+   },
+   "total": 580,
+   "inSources": 1
+  },
+  {
+   "key": "佛寶旬刊",
+   "name": "佛寶旬刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛寶旬刊",
+     "articles": 578,
+     "fulltext": 0,
+     "start": 1928,
+     "end": 1929,
+     "slug": "1a3518b8",
+     "key": "research-private/dlbs/1a3518b8.jsonl.gz",
+     "missingPage": 7
+    }
+   },
+   "total": 578,
+   "inSources": 1
+  },
+  {
+   "key": "棲神研究紀要",
+   "name": "棲神 : 研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "棲神 : 研究紀要",
+     "articles": 577,
+     "fulltext": 576,
+     "start": 1940,
+     "end": 1995,
+     "slug": "8519d088",
+     "key": "research-private/dlbs/8519d088.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 577,
+   "inSources": 1
+  },
+  {
+   "key": "BuddhistStudiesReview",
+   "name": "Buddhist Studies Review",
+   "sources": {
+    "dlbs": {
+     "name": "Buddhist Studies Review",
+     "articles": 576,
+     "fulltext": 529,
+     "start": 1983,
+     "end": 2023,
+     "slug": "buddhist-studies-review-6db40130",
+     "key": "research-private/dlbs/buddhist-studies-review-6db40130.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 576,
+   "inSources": 1
+  },
+  {
+   "key": "密教研究",
+   "name": "密教研究",
+   "sources": {
+    "dlbs": {
+     "name": "密教研究",
+     "articles": 569,
+     "fulltext": 569,
+     "start": 1918,
+     "end": 1944,
+     "slug": "238325be",
+     "key": "research-private/dlbs/238325be.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 569,
+   "inSources": 1
+  },
+  {
+   "key": "圓光佛學學報",
+   "name": "圓光佛學學報",
+   "sources": {
+    "ncl": {
+     "name": "圓光佛學學報",
+     "articles": 285,
+     "fulltext": 0,
+     "start": 1993,
+     "end": 2026,
+     "slug": "yuanguang"
+    },
+    "dlbs": {
+     "name": "圓光佛學學報",
+     "articles": 281,
+     "fulltext": 273,
+     "start": 1993,
+     "end": 2025,
+     "slug": "eed3302e",
+     "key": "research-private/dlbs/eed3302e.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 566,
+   "inSources": 2
+  },
+  {
+   "key": "輔仁宗教研究",
+   "name": "輔仁宗教研究",
+   "sources": {
+    "airiti": {
+     "name": "輔仁宗教研究",
+     "articles": 228,
+     "fulltext": 227,
+     "start": "2007",
+     "end": "2023",
+     "to": "/research-data/press/fujen-religious"
+    },
+    "ncl": {
+     "name": "輔仁宗教研究",
+     "articles": 336,
+     "fulltext": 282,
+     "start": 2000,
+     "end": 2023,
+     "slug": "fujen-religious"
+    }
+   },
+   "total": 564,
+   "inSources": 2
+  },
+  {
+   "key": "中國佛學",
+   "name": "中國佛學",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛學",
+     "articles": 562,
+     "fulltext": 430,
+     "start": 1928,
+     "end": 2023,
+     "slug": "469bb81c",
+     "key": "research-private/dlbs/469bb81c.jsonl.gz",
+     "missingPage": 35,
+     "realStart": 1928,
+     "yearOutliers": {
+      "1966": 1
+     }
+    }
+   },
+   "total": 562,
+   "inSources": 1
+  },
+  {
+   "key": "人間佛教",
+   "name": "人間佛教",
+   "sources": {
+    "dlbs": {
+     "name": "人間佛教",
+     "articles": 558,
+     "fulltext": 0,
+     "start": 1940,
+     "end": 1947,
+     "slug": "0827a9c4",
+     "key": "research-private/dlbs/0827a9c4.jsonl.gz",
+     "missingPage": 343
+    }
+   },
+   "total": 558,
+   "inSources": 1
+  },
+  {
+   "key": "仏教学研究",
+   "name": "仏教学研究",
+   "sources": {
+    "dlbs": {
+     "name": "仏教学研究",
+     "articles": 555,
+     "fulltext": 99,
+     "start": 1949,
+     "end": 2022,
+     "slug": "fff5b902",
+     "key": "research-private/dlbs/fff5b902.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 555,
+   "inSources": 1
+  },
+  {
+   "key": "日蓮教学研究所紀要",
+   "name": "日蓮教学研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "日蓮教学研究所紀要",
+     "articles": 554,
+     "fulltext": 311,
+     "start": 1974,
+     "end": 2020,
+     "slug": "246e9d21",
+     "key": "research-private/dlbs/246e9d21.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 554,
+   "inSources": 1
+  },
+  {
+   "key": "大生報",
+   "name": "大生報",
+   "sources": {
+    "dlbs": {
+     "name": "大生報",
+     "articles": 551,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1936,
+     "slug": "139c68d2",
+     "key": "research-private/dlbs/139c68d2.jsonl.gz",
+     "missingPage": 45
+    }
+   },
+   "total": 551,
+   "inSources": 1
+  },
+  {
+   "key": "ReligiousStudiesReview",
+   "name": "Religious Studies Review",
+   "sources": {
+    "dlbs": {
+     "name": "Religious Studies Review",
+     "articles": 547,
+     "fulltext": 547,
+     "start": 1979,
+     "end": 2023,
+     "slug": "religious-studies-review-8f78a000",
+     "key": "research-private/dlbs/religious-studies-review-8f78a000.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 547,
+   "inSources": 1
+  },
+  {
+   "key": "佛光社社刊",
+   "name": "佛光社社刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛光社社刊",
+     "articles": 544,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "5c7f2d39",
+     "key": "research-private/dlbs/5c7f2d39.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 544,
+   "inSources": 1
+  },
+  {
+   "key": "妙法輪",
+   "name": "妙法輪",
+   "sources": {
+    "dlbs": {
+     "name": "妙法輪",
+     "articles": 543,
+     "fulltext": 0,
+     "start": 1943,
+     "end": 1945,
+     "slug": "658f2aa5",
+     "key": "research-private/dlbs/658f2aa5.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 543,
+   "inSources": 1
+  },
+  {
+   "key": "불교연구",
+   "name": "불교연구",
+   "sources": {
+    "dlbs": {
+     "name": "불교연구",
+     "articles": 537,
+     "fulltext": 535,
+     "start": 1985,
+     "end": 2025,
+     "slug": "9a788115",
+     "key": "research-private/dlbs/9a788115.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 537,
+   "inSources": 1
+  },
+  {
+   "key": "中國佛教會月刊",
+   "name": "中國佛教會月刊",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛教會月刊",
+     "articles": 529,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "5c4eb470",
+     "key": "research-private/dlbs/5c4eb470.jsonl.gz",
+     "missingPage": 29
+    }
+   },
+   "total": 529,
+   "inSources": 1
+  },
+  {
+   "key": "在家仏教",
+   "name": "在家仏教",
+   "sources": {
+    "dlbs": {
+     "name": "在家仏教",
+     "articles": 527,
+     "fulltext": 0,
+     "start": 1954,
+     "end": 2008,
+     "slug": "0198181f",
+     "key": "research-private/dlbs/0198181f.jsonl.gz",
+     "missingPage": 347
+    }
+   },
+   "total": 527,
+   "inSources": 1
+  },
+  {
+   "key": "DissertationAbstractsInternational",
+   "name": "Dissertation Abstracts International",
+   "sources": {
+    "dlbs": {
+     "name": "Dissertation Abstracts International",
+     "articles": 526,
+     "fulltext": 510,
+     "start": 1973,
+     "end": 2009,
+     "slug": "dissertation-abstracts-i-f410698b",
+     "key": "research-private/dlbs/dissertation-abstracts-i-f410698b.jsonl.gz",
+     "missingPage": 414
+    }
+   },
+   "total": 526,
+   "inSources": 1
+  },
+  {
+   "key": "密教学会報",
+   "name": "密教学会報",
+   "sources": {
+    "dlbs": {
+     "name": "密教学会報",
+     "articles": 524,
+     "fulltext": 6,
+     "start": 1957,
+     "end": 2013,
+     "slug": "6d36fa87",
+     "key": "research-private/dlbs/6d36fa87.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 524,
+   "inSources": 1
+  },
+  {
+   "key": "浄土学TheJournalofPureLandStudies",
+   "name": "浄土学 : The Journal of Pure Land Studies",
+   "sources": {
+    "dlbs": {
+     "name": "浄土学 : The Journal of Pure Land Studies",
+     "articles": 522,
+     "fulltext": 4,
+     "start": 1930,
+     "end": 2023,
+     "slug": "the-journal-of-pure-land-7ccad0ea",
+     "key": "research-private/dlbs/the-journal-of-pure-land-7ccad0ea.jsonl.gz",
+     "missingPage": 11
+    }
+   },
+   "total": 522,
+   "inSources": 1
+  },
+  {
+   "key": "日本仏教教育学研究",
+   "name": "日本仏教教育学研究",
+   "sources": {
+    "dlbs": {
+     "name": "日本仏教教育学研究",
+     "articles": 514,
+     "fulltext": 1,
+     "start": 1993,
+     "end": 2020,
+     "slug": "4785b85a",
+     "key": "research-private/dlbs/4785b85a.jsonl.gz",
+     "missingPage": 28
+    }
+   },
+   "total": 514,
+   "inSources": 1
+  },
+  {
+   "key": "西藏研究",
+   "name": "西藏研究",
+   "sources": {
+    "dlbs": {
+     "name": "西藏研究",
+     "articles": 506,
+     "fulltext": 503,
+     "start": 1981,
+     "end": 2024,
+     "slug": "7ecc9db4",
+     "key": "research-private/dlbs/7ecc9db4.jsonl.gz",
+     "missingPage": 22
+    }
+   },
+   "total": 506,
+   "inSources": 1
+  },
+  {
+   "key": "淨宗月刊",
+   "name": "淨宗月刊",
+   "sources": {
+    "dlbs": {
+     "name": "淨宗月刊",
+     "articles": 504,
+     "fulltext": 0,
+     "start": 1948,
+     "end": 1951,
+     "slug": "ce010a22",
+     "key": "research-private/dlbs/ce010a22.jsonl.gz",
+     "missingPage": 474
+    }
+   },
+   "total": 504,
+   "inSources": 1
+  },
+  {
+   "key": "諦觀",
+   "name": "諦觀",
+   "sources": {
+    "ncl": {
+     "name": "諦觀",
+     "articles": 114,
+     "fulltext": 0,
+     "start": 1991,
+     "end": 1996,
+     "slug": "diguan"
+    },
+    "dlbs": {
+     "name": "諦觀",
+     "articles": 388,
+     "fulltext": 0,
+     "start": 1983,
+     "end": 1996,
+     "slug": "fa15b4e0",
+     "key": "research-private/dlbs/fa15b4e0.jsonl.gz",
+     "missingPage": 184
+    }
+   },
+   "total": 502,
+   "inSources": 2
+  },
+  {
+   "key": "Revuedelhistoiredesreligions",
+   "name": "Revue de l'histoire des religions",
+   "sources": {
+    "dlbs": {
+     "name": "Revue de l'histoire des religions",
+     "articles": 501,
+     "fulltext": 501,
+     "start": 1880,
+     "end": 2022,
+     "slug": "revue-de-l-histoire-des--042c8bfc",
+     "key": "research-private/dlbs/revue-de-l-histoire-des--042c8bfc.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 501,
+   "inSources": 1
+  },
+  {
+   "key": "現代佛教",
+   "name": "現代佛教",
+   "sources": {
+    "dlbs": {
+     "name": "現代佛教",
+     "articles": 500,
+     "fulltext": 0,
+     "start": 1931,
+     "end": 1981,
+     "slug": "5e763b15",
+     "key": "research-private/dlbs/5e763b15.jsonl.gz",
+     "missingPage": 469
+    }
+   },
+   "total": 500,
+   "inSources": 1
+  },
+  {
+   "key": "廣東佛教",
+   "name": "廣東佛教",
+   "sources": {
+    "dlbs": {
+     "name": "廣東佛教",
+     "articles": 496,
+     "fulltext": 2,
+     "start": 1988,
+     "end": 2007,
+     "slug": "c01dbf41",
+     "key": "research-private/dlbs/c01dbf41.jsonl.gz",
+     "missingPage": 330
+    }
+   },
+   "total": 496,
+   "inSources": 1
+  },
+  {
+   "key": "浄土宗学研究",
+   "name": "浄土宗学研究",
+   "sources": {
+    "dlbs": {
+     "name": "浄土宗学研究",
+     "articles": 494,
+     "fulltext": 3,
+     "start": 1966,
+     "end": 2024,
+     "slug": "ffd206c1",
+     "key": "research-private/dlbs/ffd206c1.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 494,
+   "inSources": 1
+  },
+  {
+   "key": "台灣神學論刊",
+   "name": "台灣神學論刊",
+   "sources": {
+    "airiti": {
+     "name": "台灣神學論刊",
+     "articles": 489,
+     "fulltext": 489,
+     "start": "1979",
+     "end": "2025",
+     "to": "/research-data/press/taiwan-theology"
+    }
+   },
+   "total": 489,
+   "inSources": 1
+  },
+  {
+   "key": "臺灣宗教研究",
+   "name": "臺灣宗教研究",
+   "sources": {
+    "airiti": {
+     "name": "臺灣宗教研究",
+     "articles": 246,
+     "fulltext": 226,
+     "start": "2000",
+     "end": "2026",
+     "to": "/research-data/press/taiwan-religion"
+    },
+    "ncl": {
+     "name": "臺灣宗教研究",
+     "articles": 240,
+     "fulltext": 3,
+     "start": 2000,
+     "end": 2025,
+     "slug": "taiwan-religion"
+    }
+   },
+   "total": 486,
+   "inSources": 2
+  },
+  {
+   "key": "JapaneseReligions",
+   "name": "Japanese Religions",
+   "sources": {
+    "dlbs": {
+     "name": "Japanese Religions",
+     "articles": 484,
+     "fulltext": 104,
+     "start": 1959,
+     "end": 2023,
+     "slug": "japanese-religions-2426c073",
+     "key": "research-private/dlbs/japanese-religions-2426c073.jsonl.gz",
+     "missingPage": 141
+    }
+   },
+   "total": 484,
+   "inSources": 1
+  },
+  {
+   "key": "禅研究所紀要",
+   "name": "禅研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "禅研究所紀要",
+     "articles": 482,
+     "fulltext": 447,
+     "start": 1971,
+     "end": 2023,
+     "slug": "51477ad7",
+     "key": "research-private/dlbs/51477ad7.jsonl.gz",
+     "missingPage": 43
+    }
+   },
+   "total": 482,
+   "inSources": 1
+  },
+  {
+   "key": "BulletinoftheSchoolofOrientalandAfricanStudies",
+   "name": "Bulletin of the School of Oriental and African Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Bulletin of the School of Oriental and African Studies",
+     "articles": 479,
+     "fulltext": 346,
+     "start": 1921,
+     "end": 2023,
+     "slug": "bulletin-of-the-school-o-00861245",
+     "key": "research-private/dlbs/bulletin-of-the-school-o-00861245.jsonl.gz",
+     "missingPage": 1,
+     "realStart": 1943,
+     "yearOutliers": {
+      "1921": 1
+     }
+    }
+   },
+   "total": 479,
+   "inSources": 1
+  },
+  {
+   "key": "PacificWorldJournaloftheInstituteofBuddhistStudies",
+   "name": "Pacific World: Journal of the Institute of Buddhist Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Pacific World: Journal of the Institute of Buddhist Studies",
+     "articles": 478,
+     "fulltext": 478,
+     "start": 1982,
+     "end": 2024,
+     "slug": "pacific-world-journal-of-478606c1",
+     "key": "research-private/dlbs/pacific-world-journal-of-478606c1.jsonl.gz",
+     "missingPage": 95
+    }
+   },
+   "total": 478,
+   "inSources": 1
+  },
+  {
+   "key": "西藏的天空",
+   "name": "西藏的天空",
+   "sources": {
+    "dlbs": {
+     "name": "西藏的天空",
+     "articles": 478,
+     "fulltext": 336,
+     "start": 2010,
+     "end": 2022,
+     "slug": "f93c127d",
+     "key": "research-private/dlbs/f93c127d.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 478,
+   "inSources": 1
+  },
+  {
+   "key": "護生報",
+   "name": "護生報",
+   "sources": {
+    "dlbs": {
+     "name": "護生報",
+     "articles": 476,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1936,
+     "slug": "cb6ca3d7",
+     "key": "research-private/dlbs/cb6ca3d7.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 476,
+   "inSources": 1
+  },
+  {
+   "key": "龍谷大学論集",
+   "name": "龍谷大学論集",
+   "sources": {
+    "dlbs": {
+     "name": "龍谷大学論集",
+     "articles": 471,
+     "fulltext": 0,
+     "start": 1949,
+     "end": 2005,
+     "slug": "05439d38",
+     "key": "research-private/dlbs/05439d38.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 471,
+   "inSources": 1
+  },
+  {
+   "key": "真宗教学研究",
+   "name": "真宗教学研究",
+   "sources": {
+    "dlbs": {
+     "name": "真宗教学研究",
+     "articles": 465,
+     "fulltext": 2,
+     "start": 1977,
+     "end": 2023,
+     "slug": "624c5e2b",
+     "key": "research-private/dlbs/624c5e2b.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 465,
+   "inSources": 1
+  },
+  {
+   "key": "中流",
+   "name": "中流",
+   "sources": {
+    "dlbs": {
+     "name": "中流",
+     "articles": 461,
+     "fulltext": 0,
+     "start": 1943,
+     "end": 1945,
+     "slug": "319dfaf2",
+     "key": "research-private/dlbs/319dfaf2.jsonl.gz",
+     "missingPage": 13
+    }
+   },
+   "total": 461,
+   "inSources": 1
+  },
+  {
+   "key": "創価大学国際仏教学高等研究所年報",
+   "name": "創価大学国際仏教学高等研究所年報",
+   "sources": {
+    "dlbs": {
+     "name": "創価大学国際仏教学高等研究所年報",
+     "articles": 461,
+     "fulltext": 441,
+     "start": 1998,
+     "end": 2024,
+     "slug": "31af55b5",
+     "key": "research-private/dlbs/31af55b5.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 461,
+   "inSources": 1
+  },
+  {
+   "key": "佛教文學",
+   "name": "佛教文學",
+   "sources": {
+    "dlbs": {
+     "name": "佛教文學",
+     "articles": 460,
+     "fulltext": 0,
+     "start": 1981,
+     "end": 2022,
+     "slug": "172747e7",
+     "key": "research-private/dlbs/172747e7.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 460,
+   "inSources": 1
+  },
+  {
+   "key": "淨土宗月刊",
+   "name": "淨土宗月刊",
+   "sources": {
+    "dlbs": {
+     "name": "淨土宗月刊",
+     "articles": 441,
+     "fulltext": 0,
+     "start": 1934,
+     "end": 1937,
+     "slug": "6ce56f97",
+     "key": "research-private/dlbs/6ce56f97.jsonl.gz",
+     "missingPage": 44
+    }
+   },
+   "total": 441,
+   "inSources": 1
+  },
+  {
+   "key": "現代密教",
+   "name": "現代密教",
+   "sources": {
+    "dlbs": {
+     "name": "現代密教",
+     "articles": 439,
+     "fulltext": 373,
+     "start": 1988,
+     "end": 2023,
+     "slug": "99ca3590",
+     "key": "research-private/dlbs/99ca3590.jsonl.gz",
+     "missingPage": 86
+    }
+   },
+   "total": 439,
+   "inSources": 1
+  },
+  {
+   "key": "台州佛教通讯",
+   "name": "台州佛教通讯",
+   "sources": {
+    "dlbs": {
+     "name": "台州佛教通讯",
+     "articles": 434,
+     "fulltext": 0,
+     "start": 1990,
+     "end": 1992,
+     "slug": "2f7d329b",
+     "key": "research-private/dlbs/2f7d329b.jsonl.gz",
+     "missingPage": 434
+    }
+   },
+   "total": 434,
+   "inSources": 1
+  },
+  {
+   "key": "宗学院論集",
+   "name": "宗学院論集",
+   "sources": {
+    "dlbs": {
+     "name": "宗学院論集",
+     "articles": 430,
+     "fulltext": 15,
+     "start": 1965,
+     "end": 2021,
+     "slug": "fe17c919",
+     "key": "research-private/dlbs/fe17c919.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 430,
+   "inSources": 1
+  },
+  {
+   "key": "叡山学院研究紀要",
+   "name": "叡山学院研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "叡山学院研究紀要",
+     "articles": 428,
+     "fulltext": 0,
+     "start": 1978,
+     "end": 2022,
+     "slug": "f8e3e583",
+     "key": "research-private/dlbs/f8e3e583.jsonl.gz",
+     "missingPage": 4
+    }
+   },
+   "total": 428,
+   "inSources": 1
+  },
+  {
+   "key": "成田山仏教研究所紀要",
+   "name": "成田山仏教研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "成田山仏教研究所紀要",
+     "articles": 426,
+     "fulltext": 64,
+     "start": 1976,
+     "end": 2024,
+     "slug": "e43459a5",
+     "key": "research-private/dlbs/e43459a5.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 426,
+   "inSources": 1
+  },
+  {
+   "key": "佛學旬刊",
+   "name": "佛學旬刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛學旬刊",
+     "articles": 419,
+     "fulltext": 0,
+     "start": 1922,
+     "end": 1923,
+     "slug": "624d7780",
+     "key": "research-private/dlbs/624d7780.jsonl.gz",
+     "missingPage": 193
+    }
+   },
+   "total": 419,
+   "inSources": 1
+  },
+  {
+   "key": "ContemporaryBuddhismAnInterdisciplinaryJournal",
+   "name": "Contemporary Buddhism: An Interdisciplinary Journal",
+   "sources": {
+    "dlbs": {
+     "name": "Contemporary Buddhism: An Interdisciplinary Journal",
+     "articles": 411,
+     "fulltext": 337,
+     "start": 2000,
+     "end": 2022,
+     "slug": "contemporary-buddhism-an-95fffdfc",
+     "key": "research-private/dlbs/contemporary-buddhism-an-95fffdfc.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 411,
+   "inSources": 1
+  },
+  {
+   "key": "仏教文化学会紀要",
+   "name": "仏教文化学会紀要",
+   "sources": {
+    "dlbs": {
+     "name": "仏教文化学会紀要",
+     "articles": 411,
+     "fulltext": 411,
+     "start": 1992,
+     "end": 2023,
+     "slug": "72759725",
+     "key": "research-private/dlbs/72759725.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 411,
+   "inSources": 1
+  },
+  {
+   "key": "佛教文摘",
+   "name": "佛教文摘",
+   "sources": {
+    "dlbs": {
+     "name": "佛教文摘",
+     "articles": 405,
+     "fulltext": 0,
+     "start": 1947,
+     "end": 1948,
+     "slug": "0d6feb7f",
+     "key": "research-private/dlbs/0d6feb7f.jsonl.gz",
+     "missingPage": 32
+    }
+   },
+   "total": 405,
+   "inSources": 1
+  },
+  {
+   "key": "日本仏教",
+   "name": "日本仏教",
+   "sources": {
+    "dlbs": {
+     "name": "日本仏教",
+     "articles": 404,
+     "fulltext": 0,
+     "start": 1958,
+     "end": 1984,
+     "slug": "ac74b717",
+     "key": "research-private/dlbs/ac74b717.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 404,
+   "inSources": 1
+  },
+  {
+   "key": "JournaloftheAmericanOrientalSociety",
+   "name": "Journal of the American Oriental Society",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the American Oriental Society",
+     "articles": 403,
+     "fulltext": 402,
+     "start": 1844,
+     "end": 2024,
+     "slug": "journal-of-the-american--1aed41ad",
+     "key": "research-private/dlbs/journal-of-the-american--1aed41ad.jsonl.gz",
+     "missingPage": 1,
+     "realStart": 1844,
+     "yearOutliers": {
+      "1847": 1
+     }
+    }
+   },
+   "total": 403,
+   "inSources": 1
+  },
+  {
+   "key": "浙江佛教",
+   "name": "浙江佛教",
+   "sources": {
+    "dlbs": {
+     "name": "浙江佛教",
+     "articles": 403,
+     "fulltext": 0,
+     "start": 1993,
+     "end": 2005,
+     "slug": "7467dce7",
+     "key": "research-private/dlbs/7467dce7.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 403,
+   "inSources": 1
+  },
+  {
+   "key": "HistoryofReligions",
+   "name": "History of Religions",
+   "sources": {
+    "dlbs": {
+     "name": "History of Religions",
+     "articles": 402,
+     "fulltext": 402,
+     "start": 1961,
+     "end": 2024,
+     "slug": "history-of-religions-fee5bc60",
+     "key": "research-private/dlbs/history-of-religions-fee5bc60.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 402,
+   "inSources": 1
+  },
+  {
+   "key": "RevuedEtudesTibétaines",
+   "name": "Revue d'Etudes Tibétaines",
+   "sources": {
+    "dlbs": {
+     "name": "Revue d'Etudes Tibétaines",
+     "articles": 402,
+     "fulltext": 396,
+     "start": 2002,
+     "end": 2024,
+     "slug": "revue-d-etudes-tib-taine-5c3ff9a5",
+     "key": "research-private/dlbs/revue-d-etudes-tib-taine-5c3ff9a5.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 402,
+   "inSources": 1
+  },
+  {
+   "key": "東海佛教",
+   "name": "東海佛教",
+   "sources": {
+    "dlbs": {
+     "name": "東海佛教",
+     "articles": 402,
+     "fulltext": 2,
+     "start": 1955,
+     "end": 2020,
+     "slug": "b6c530c8",
+     "key": "research-private/dlbs/b6c530c8.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 402,
+   "inSources": 1
+  },
+  {
+   "key": "大正大学大学院研究論集",
+   "name": "大正大学大学院研究論集",
+   "sources": {
+    "dlbs": {
+     "name": "大正大学大学院研究論集",
+     "articles": 400,
+     "fulltext": 126,
+     "start": 1977,
+     "end": 2020,
+     "slug": "0b207de4",
+     "key": "research-private/dlbs/0b207de4.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 400,
+   "inSources": 1
+  },
+  {
+   "key": "正觀",
+   "name": "正觀",
+   "sources": {
+    "ncl": {
+     "name": "正觀",
+     "articles": 399,
+     "fulltext": 379,
+     "start": 1997,
+     "end": 2026,
+     "slug": "zhengguan"
+    }
+   },
+   "total": 399,
+   "inSources": 1
+  },
+  {
+   "key": "漢語基督教學術論評",
+   "name": "漢語基督教學術論評",
+   "sources": {
+    "airiti": {
+     "name": "漢語基督教學術論評",
+     "articles": 398,
+     "fulltext": 377,
+     "start": "2006",
+     "end": "2025",
+     "to": "/research-data/press/sino-christian"
+    }
+   },
+   "total": 398,
+   "inSources": 1
+  },
+  {
+   "key": "臺灣神學論刊",
+   "name": "臺灣神學論刊",
+   "sources": {
+    "ncl": {
+     "name": "臺灣神學論刊",
+     "articles": 398,
+     "fulltext": 79,
+     "start": 1979,
+     "end": 2025,
+     "slug": "taiwan-theology"
+    }
+   },
+   "total": 398,
+   "inSources": 1
+  },
+  {
+   "key": "禅文化",
+   "name": "禅文化",
+   "sources": {
+    "dlbs": {
+     "name": "禅文化",
+     "articles": 397,
+     "fulltext": 0,
+     "start": 1955,
+     "end": 2009,
+     "slug": "3883f416",
+     "key": "research-private/dlbs/3883f416.jsonl.gz",
+     "missingPage": 13
+    }
+   },
+   "total": 397,
+   "inSources": 1
+  },
+  {
+   "key": "正觀雜誌",
+   "name": "正觀雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "正觀雜誌",
+     "articles": 395,
+     "fulltext": 391,
+     "start": 1997,
+     "end": 2025,
+     "slug": "ceba3441",
+     "key": "research-private/dlbs/ceba3441.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 395,
+   "inSources": 1
+  },
+  {
+   "key": "InternationalJournalofBuddhistThought&Culture",
+   "name": "International Journal of Buddhist Thought & Culture",
+   "sources": {
+    "dlbs": {
+     "name": "International Journal of Buddhist Thought & Culture",
+     "articles": 393,
+     "fulltext": 336,
+     "start": 2002,
+     "end": 2024,
+     "slug": "international-journal-of-decb00b1",
+     "key": "research-private/dlbs/international-journal-of-decb00b1.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 393,
+   "inSources": 1
+  },
+  {
+   "key": "豊山学報",
+   "name": "豊山学報",
+   "sources": {
+    "dlbs": {
+     "name": "豊山学報",
+     "articles": 393,
+     "fulltext": 26,
+     "start": 1954,
+     "end": 2022,
+     "slug": "79a47dab",
+     "key": "research-private/dlbs/79a47dab.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 393,
+   "inSources": 1
+  },
+  {
+   "key": "夢殿",
+   "name": "夢殿",
+   "sources": {
+    "dlbs": {
+     "name": "夢殿",
+     "articles": 392,
+     "fulltext": 0,
+     "start": 1930,
+     "end": 1939,
+     "slug": "911dcd51",
+     "key": "research-private/dlbs/911dcd51.jsonl.gz",
+     "missingPage": 166
+    }
+   },
+   "total": 392,
+   "inSources": 1
+  },
+  {
+   "key": "仏教史研究",
+   "name": "仏教史研究",
+   "sources": {
+    "dlbs": {
+     "name": "仏教史研究",
+     "articles": 386,
+     "fulltext": 0,
+     "start": 1949,
+     "end": 2023,
+     "slug": "cfb395e4",
+     "key": "research-private/dlbs/cfb395e4.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 386,
+   "inSources": 1
+  },
+  {
+   "key": "佛光學報",
+   "name": "佛光學報",
+   "sources": {
+    "airiti": {
+     "name": "佛光學報",
+     "articles": 158,
+     "fulltext": 146,
+     "start": "2015",
+     "end": "2026",
+     "to": "/research-data/press/fgu-journal"
+    },
+    "dlbs": {
+     "name": "佛光學報",
+     "articles": 227,
+     "fulltext": 227,
+     "start": 1976,
+     "end": 2026,
+     "slug": "a4770011",
+     "key": "research-private/dlbs/a4770011.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 385,
+   "inSources": 2
+  },
+  {
+   "key": "星洲中國佛學",
+   "name": "星洲中國佛學",
+   "sources": {
+    "dlbs": {
+     "name": "星洲中國佛學",
+     "articles": 382,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "a53791d3",
+     "key": "research-private/dlbs/a53791d3.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 382,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofthePaliTextSociety",
+   "name": "Journal of the Pali Text Society",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the Pali Text Society",
+     "articles": 381,
+     "fulltext": 360,
+     "start": 1882,
+     "end": 2021,
+     "slug": "journal-of-the-pali-text-47586889",
+     "key": "research-private/dlbs/journal-of-the-pali-text-47586889.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 381,
+   "inSources": 1
+  },
+  {
+   "key": "香海佛化刊",
+   "name": "香海佛化刊",
+   "sources": {
+    "dlbs": {
+     "name": "香海佛化刊",
+     "articles": 378,
+     "fulltext": 0,
+     "start": 1932,
+     "end": 1942,
+     "slug": "3e42edca",
+     "key": "research-private/dlbs/3e42edca.jsonl.gz",
+     "missingPage": 82
+    }
+   },
+   "total": 378,
+   "inSources": 1
+  },
+  {
+   "key": "中華佛學學報舊刊名",
+   "name": "中華佛學學報（舊刊名）",
+   "sources": {
+    "airiti": {
+     "name": "中華佛學學報（舊刊名）",
+     "articles": 374,
+     "fulltext": 374,
+     "start": "1987",
+     "end": "2013",
+     "to": "/research-data/press/chbs-journal-old"
+    }
+   },
+   "total": 374,
+   "inSources": 1
+  },
+  {
+   "key": "密教學",
+   "name": "密教學",
+   "sources": {
+    "dlbs": {
+     "name": "密教學",
+     "articles": 370,
+     "fulltext": 0,
+     "start": 1965,
+     "end": 2022,
+     "slug": "0813abbe",
+     "key": "research-private/dlbs/0813abbe.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 370,
+   "inSources": 1
+  },
+  {
+   "key": "仏教文化",
+   "name": "仏教文化",
+   "sources": {
+    "dlbs": {
+     "name": "仏教文化",
+     "articles": 369,
+     "fulltext": 6,
+     "start": 1951,
+     "end": 2021,
+     "slug": "bbc8987a",
+     "key": "research-private/dlbs/bbc8987a.jsonl.gz",
+     "missingPage": 304
+    }
+   },
+   "total": 369,
+   "inSources": 1
+  },
+  {
+   "key": "北平佛化月刊",
+   "name": "北平佛化月刊",
+   "sources": {
+    "dlbs": {
+     "name": "北平佛化月刊",
+     "articles": 367,
+     "fulltext": 0,
+     "start": 1933,
+     "end": 1937,
+     "slug": "74bb403d",
+     "key": "research-private/dlbs/74bb403d.jsonl.gz",
+     "missingPage": 4
+    }
+   },
+   "total": 367,
+   "inSources": 1
+  },
+  {
+   "key": "大眾日報",
+   "name": "大眾日報",
+   "sources": {
+    "dlbs": {
+     "name": "大眾日報",
+     "articles": 366,
+     "fulltext": 0,
+     "start": 1968,
+     "end": 1971,
+     "slug": "63db9132",
+     "key": "research-private/dlbs/63db9132.jsonl.gz",
+     "missingPage": 366
+    }
+   },
+   "total": 366,
+   "inSources": 1
+  },
+  {
+   "key": "정토학연구",
+   "name": "정토학연구",
+   "sources": {
+    "dlbs": {
+     "name": "정토학연구",
+     "articles": 363,
+     "fulltext": 359,
+     "start": 1998,
+     "end": 2024,
+     "slug": "b3bd771f",
+     "key": "research-private/dlbs/b3bd771f.jsonl.gz",
+     "missingPage": 101
+    }
+   },
+   "total": 363,
+   "inSources": 1
+  },
+  {
+   "key": "心燈",
+   "name": "心燈",
+   "sources": {
+    "dlbs": {
+     "name": "心燈",
+     "articles": 359,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1927,
+     "slug": "eeda433a",
+     "key": "research-private/dlbs/eeda433a.jsonl.gz",
+     "missingPage": 80
+    }
+   },
+   "total": 359,
+   "inSources": 1
+  },
+  {
+   "key": "禅文化研究所紀要",
+   "name": "禅文化研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "禅文化研究所紀要",
+     "articles": 358,
+     "fulltext": 14,
+     "start": 1969,
+     "end": 2021,
+     "slug": "c041fff1",
+     "key": "research-private/dlbs/c041fff1.jsonl.gz",
+     "missingPage": 61
+    }
+   },
+   "total": 358,
+   "inSources": 1
+  },
+  {
+   "key": "대각사상",
+   "name": "대각사상",
+   "sources": {
+    "dlbs": {
+     "name": "대각사상",
+     "articles": 358,
+     "fulltext": 358,
+     "start": 1998,
+     "end": 2023,
+     "slug": "779b1278",
+     "key": "research-private/dlbs/779b1278.jsonl.gz",
+     "missingPage": 23
+    }
+   },
+   "total": 358,
+   "inSources": 1
+  },
+  {
+   "key": "真言宗豊山派総合研究院紀要",
+   "name": "真言宗豊山派総合研究院紀要",
+   "sources": {
+    "dlbs": {
+     "name": "真言宗豊山派総合研究院紀要",
+     "articles": 357,
+     "fulltext": 0,
+     "start": 2001,
+     "end": 2023,
+     "slug": "fc7c1a03",
+     "key": "research-private/dlbs/fc7c1a03.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 357,
+   "inSources": 1
+  },
+  {
+   "key": "東方文化",
+   "name": "東方文化",
+   "sources": {
+    "dlbs": {
+     "name": "東方文化",
+     "articles": 351,
+     "fulltext": 0,
+     "start": 1930,
+     "end": 1996,
+     "slug": "8229854a",
+     "key": "research-private/dlbs/8229854a.jsonl.gz",
+     "missingPage": 46
+    }
+   },
+   "total": 351,
+   "inSources": 1
+  },
+  {
+   "key": "四川文物",
+   "name": "四川文物",
+   "sources": {
+    "dlbs": {
+     "name": "四川文物",
+     "articles": 340,
+     "fulltext": 340,
+     "start": 1984,
+     "end": 2016,
+     "slug": "da028c26",
+     "key": "research-private/dlbs/da028c26.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 340,
+   "inSources": 1
+  },
+  {
+   "key": "微妙聲月刊",
+   "name": "微妙聲月刊",
+   "sources": {
+    "dlbs": {
+     "name": "微妙聲月刊",
+     "articles": 339,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1940,
+     "slug": "bc011961",
+     "key": "research-private/dlbs/bc011961.jsonl.gz",
+     "missingPage": 94
+    }
+   },
+   "total": 339,
+   "inSources": 1
+  },
+  {
+   "key": "近代仏教",
+   "name": "近代仏教",
+   "sources": {
+    "dlbs": {
+     "name": "近代仏教",
+     "articles": 339,
+     "fulltext": 3,
+     "start": 1998,
+     "end": 2023,
+     "slug": "63355cf0",
+     "key": "research-private/dlbs/63355cf0.jsonl.gz",
+     "missingPage": 9
+    }
+   },
+   "total": 339,
+   "inSources": 1
+  },
+  {
+   "key": "仏教史学",
+   "name": "仏教史学",
+   "sources": {
+    "dlbs": {
+     "name": "仏教史学",
+     "articles": 336,
+     "fulltext": 0,
+     "start": 1949,
+     "end": 1981,
+     "slug": "ee49e999",
+     "key": "research-private/dlbs/ee49e999.jsonl.gz",
+     "missingPage": 107
+    }
+   },
+   "total": 336,
+   "inSources": 1
+  },
+  {
+   "key": "BulletinofTibetology",
+   "name": "Bulletin of Tibetology",
+   "sources": {
+    "dlbs": {
+     "name": "Bulletin of Tibetology",
+     "articles": 333,
+     "fulltext": 332,
+     "start": 1964,
+     "end": 2013,
+     "slug": "bulletin-of-tibetology-b48828a5",
+     "key": "research-private/dlbs/bulletin-of-tibetology-b48828a5.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 333,
+   "inSources": 1
+  },
+  {
+   "key": "同朋仏教",
+   "name": "同朋仏教",
+   "sources": {
+    "dlbs": {
+     "name": "同朋仏教",
+     "articles": 333,
+     "fulltext": 107,
+     "start": 1970,
+     "end": 2022,
+     "slug": "112efe19",
+     "key": "research-private/dlbs/112efe19.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 333,
+   "inSources": 1
+  },
+  {
+   "key": "曹洞宗研究員研究紀要",
+   "name": "曹洞宗研究員研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "曹洞宗研究員研究紀要",
+     "articles": 332,
+     "fulltext": 1,
+     "start": 1987,
+     "end": 2021,
+     "slug": "93b29e0f",
+     "key": "research-private/dlbs/93b29e0f.jsonl.gz",
+     "missingPage": 48
+    }
+   },
+   "total": 332,
+   "inSources": 1
+  },
+  {
+   "key": "中國藏學",
+   "name": "中國藏學",
+   "sources": {
+    "dlbs": {
+     "name": "中國藏學",
+     "articles": 330,
+     "fulltext": 326,
+     "start": 1988,
+     "end": 2024,
+     "slug": "2cbbf86c",
+     "key": "research-private/dlbs/2cbbf86c.jsonl.gz",
+     "missingPage": 16
+    }
+   },
+   "total": 330,
+   "inSources": 1
+  },
+  {
+   "key": "閩南佛學院學報",
+   "name": "閩南佛學院學報",
+   "sources": {
+    "dlbs": {
+     "name": "閩南佛學院學報",
+     "articles": 330,
+     "fulltext": 167,
+     "start": 1989,
+     "end": 2001,
+     "slug": "dbcfa034",
+     "key": "research-private/dlbs/dbcfa034.jsonl.gz",
+     "missingPage": 157
+    }
+   },
+   "total": 330,
+   "inSources": 1
+  },
+  {
+   "key": "勸世文刊",
+   "name": "勸世文刊",
+   "sources": {
+    "dlbs": {
+     "name": "勸世文刊",
+     "articles": 328,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1937,
+     "slug": "8c229fe3",
+     "key": "research-private/dlbs/8c229fe3.jsonl.gz",
+     "missingPage": 54
+    }
+   },
+   "total": 328,
+   "inSources": 1
+  },
+  {
+   "key": "ArtibusAsiae",
+   "name": "Artibus Asiae",
+   "sources": {
+    "dlbs": {
+     "name": "Artibus Asiae",
+     "articles": 325,
+     "fulltext": 324,
+     "start": 1925,
+     "end": 2023,
+     "slug": "artibus-asiae-d17d2bfd",
+     "key": "research-private/dlbs/artibus-asiae-d17d2bfd.jsonl.gz",
+     "missingPage": 4
+    }
+   },
+   "total": 325,
+   "inSources": 1
+  },
+  {
+   "key": "Religions",
+   "name": "Religions",
+   "sources": {
+    "dlbs": {
+     "name": "Religions",
+     "articles": 325,
+     "fulltext": 324,
+     "start": 1942,
+     "end": 2023,
+     "slug": "religions-247227b5",
+     "key": "research-private/dlbs/religions-247227b5.jsonl.gz",
+     "missingPage": 127,
+     "realStart": 2012,
+     "yearOutliers": {
+      "1942": 1
+     }
+    }
+   },
+   "total": 325,
+   "inSources": 1
+  },
+  {
+   "key": "世界佛教論壇論文集第2屆",
+   "name": "世界佛教論壇論文集（第2屆）",
+   "sources": {
+    "dlbs": {
+     "name": "世界佛教論壇論文集（第2屆）",
+     "articles": 324,
+     "fulltext": 257,
+     "start": 2009,
+     "end": 2009,
+     "slug": "2-38890bb7",
+     "key": "research-private/dlbs/2-38890bb7.jsonl.gz",
+     "missingPage": 94
+    }
+   },
+   "total": 324,
+   "inSources": 1
+  },
+  {
+   "key": "鈴木学術財団研究年報",
+   "name": "鈴木学術財団研究年報",
+   "sources": {
+    "dlbs": {
+     "name": "鈴木学術財団研究年報",
+     "articles": 324,
+     "fulltext": 2,
+     "start": 1965,
+     "end": 1978,
+     "slug": "7ee951ea",
+     "key": "research-private/dlbs/7ee951ea.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 324,
+   "inSources": 1
+  },
+  {
+   "key": "佛教學",
+   "name": "佛教學",
+   "sources": {
+    "dlbs": {
+     "name": "佛教學",
+     "articles": 323,
+     "fulltext": 0,
+     "start": 1934,
+     "end": 2008,
+     "slug": "1989d676",
+     "key": "research-private/dlbs/1989d676.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 323,
+   "inSources": 1
+  },
+  {
+   "key": "法海波瀾",
+   "name": "法海波瀾",
+   "sources": {
+    "dlbs": {
+     "name": "法海波瀾",
+     "articles": 322,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "5aa69844",
+     "key": "research-private/dlbs/5aa69844.jsonl.gz",
+     "missingPage": 20
+    }
+   },
+   "total": 322,
+   "inSources": 1
+  },
+  {
+   "key": "現代佛學學術論文分類索引",
+   "name": "現代佛學學術論文分類索引",
+   "sources": {
+    "dlbs": {
+     "name": "現代佛學學術論文分類索引",
+     "articles": 319,
+     "fulltext": 0,
+     "start": 1950,
+     "end": 1974,
+     "slug": "b797c117",
+     "key": "research-private/dlbs/b797c117.jsonl.gz",
+     "missingPage": 7
+    }
+   },
+   "total": 319,
+   "inSources": 1
+  },
+  {
+   "key": "研究紀要",
+   "name": "研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "研究紀要",
+     "articles": 319,
+     "fulltext": 71,
+     "start": 1964,
+     "end": 2020,
+     "slug": "c3b9c209",
+     "key": "research-private/dlbs/c3b9c209.jsonl.gz",
+     "missingPage": 24
+    }
+   },
+   "total": 319,
+   "inSources": 1
+  },
+  {
+   "key": "弘慈佛學院年刊",
+   "name": "弘慈佛學院年刊",
+   "sources": {
+    "dlbs": {
+     "name": "弘慈佛學院年刊",
+     "articles": 318,
+     "fulltext": 0,
+     "start": 1930,
+     "end": 1931,
+     "slug": "4ec0d639",
+     "key": "research-private/dlbs/4ec0d639.jsonl.gz",
+     "missingPage": 15
+    }
+   },
+   "total": 318,
+   "inSources": 1
+  },
+  {
+   "key": "無錫佛教淨業社年刊",
+   "name": "無錫佛教淨業社年刊",
+   "sources": {
+    "dlbs": {
+     "name": "無錫佛教淨業社年刊",
+     "articles": 315,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "779bda10",
+     "key": "research-private/dlbs/779bda10.jsonl.gz",
+     "missingPage": 24
+    }
+   },
+   "total": 315,
+   "inSources": 1
+  },
+  {
+   "key": "BuddhismusHeute",
+   "name": "Buddhismus Heute",
+   "sources": {
+    "dlbs": {
+     "name": "Buddhismus Heute",
+     "articles": 314,
+     "fulltext": 223,
+     "start": 1989,
+     "end": 2011,
+     "slug": "buddhismus-heute-b54bbe5f",
+     "key": "research-private/dlbs/buddhismus-heute-b54bbe5f.jsonl.gz",
+     "missingPage": 314
+    }
+   },
+   "total": 314,
+   "inSources": 1
+  },
+  {
+   "key": "現代と親鸞",
+   "name": "現代と親鸞",
+   "sources": {
+    "dlbs": {
+     "name": "現代と親鸞",
+     "articles": 312,
+     "fulltext": 46,
+     "start": 2002,
+     "end": 2023,
+     "slug": "da74c69d",
+     "key": "research-private/dlbs/da74c69d.jsonl.gz",
+     "missingPage": 20
+    }
+   },
+   "total": 312,
+   "inSources": 1
+  },
+  {
+   "key": "覺社叢書",
+   "name": "覺社叢書",
+   "sources": {
+    "dlbs": {
+     "name": "覺社叢書",
+     "articles": 311,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "6f43e4b5",
+     "key": "research-private/dlbs/6f43e4b5.jsonl.gz",
+     "missingPage": 58
+    }
+   },
+   "total": 311,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofBuddhistStudiesChulalongkornUniversity",
+   "name": "Journal of Buddhist Studies Chulalongkorn University",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Buddhist Studies Chulalongkorn University",
+     "articles": 310,
+     "fulltext": 308,
+     "start": 1994,
+     "end": 2023,
+     "slug": "journal-of-buddhist-stud-ef1d85a4",
+     "key": "research-private/dlbs/journal-of-buddhist-stud-ef1d85a4.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 310,
+   "inSources": 1
+  },
+  {
+   "key": "故宮文物月刊",
+   "name": "故宮文物月刊",
+   "sources": {
+    "dlbs": {
+     "name": "故宮文物月刊",
+     "articles": 308,
+     "fulltext": 150,
+     "start": 1983,
+     "end": 2022,
+     "slug": "fb9b27cb",
+     "key": "research-private/dlbs/fb9b27cb.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 308,
+   "inSources": 1
+  },
+  {
+   "key": "藝術家",
+   "name": "藝術家",
+   "sources": {
+    "dlbs": {
+     "name": "藝術家",
+     "articles": 306,
+     "fulltext": 2,
+     "start": 1977,
+     "end": 2011,
+     "slug": "3925f23c",
+     "key": "research-private/dlbs/3925f23c.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 306,
+   "inSources": 1
+  },
+  {
+   "key": "佛教圖書館館刊",
+   "name": "佛教圖書館館刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛教圖書館館刊",
+     "articles": 304,
+     "fulltext": 298,
+     "start": 2005,
+     "end": 2024,
+     "slug": "2906c35c",
+     "key": "research-private/dlbs/2906c35c.jsonl.gz",
+     "missingPage": 12
+    }
+   },
+   "total": 304,
+   "inSources": 1
+  },
+  {
+   "key": "佛教雜誌",
+   "name": "佛教雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "佛教雜誌",
+     "articles": 298,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1935,
+     "slug": "ecb7cd33",
+     "key": "research-private/dlbs/ecb7cd33.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 298,
+   "inSources": 1
+  },
+  {
+   "key": "敬佛月刊",
+   "name": "敬佛月刊",
+   "sources": {
+    "dlbs": {
+     "name": "敬佛月刊",
+     "articles": 298,
+     "fulltext": 0,
+     "start": 1936,
+     "end": 1936,
+     "slug": "4b9d4e2d",
+     "key": "research-private/dlbs/4b9d4e2d.jsonl.gz",
+     "missingPage": 26
+    }
+   },
+   "total": 298,
+   "inSources": 1
+  },
+  {
+   "key": "法鼓佛學學報",
+   "name": "法鼓佛學學報",
+   "sources": {
+    "airiti": {
+     "name": "法鼓佛學學報",
+     "articles": 152,
+     "fulltext": 152,
+     "start": "2007",
+     "end": "2026",
+     "to": "/research-data/press/ddbj"
+    },
+    "ncl": {
+     "name": "法鼓佛學學報",
+     "articles": 146,
+     "fulltext": 139,
+     "start": 2007,
+     "end": 2025,
+     "slug": "ddbj"
+    }
+   },
+   "total": 298,
+   "inSources": 2
+  },
+  {
+   "key": "駒澤大学禅研究所年報",
+   "name": "駒澤大学禅研究所年報",
+   "sources": {
+    "dlbs": {
+     "name": "駒澤大学禅研究所年報",
+     "articles": 298,
+     "fulltext": 128,
+     "start": 1990,
+     "end": 2022,
+     "slug": "5c2230dd",
+     "key": "research-private/dlbs/5c2230dd.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 298,
+   "inSources": 1
+  },
+  {
+   "key": "因明",
+   "name": "因明",
+   "sources": {
+    "dlbs": {
+     "name": "因明",
+     "articles": 296,
+     "fulltext": 12,
+     "start": 1978,
+     "end": 1986,
+     "slug": "2db44279",
+     "key": "research-private/dlbs/2db44279.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 296,
+   "inSources": 1
+  },
+  {
+   "key": "道雜誌",
+   "name": "道雜誌",
+   "sources": {
+    "airiti": {
+     "name": "道雜誌",
+     "articles": 294,
+     "fulltext": 123,
+     "start": "2001",
+     "end": "2005",
+     "to": "/research-data/press/dao-magazine"
+    }
+   },
+   "total": 294,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofGlobalBuddhism",
+   "name": "Journal of Global Buddhism",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Global Buddhism",
+     "articles": 293,
+     "fulltext": 293,
+     "start": 2000,
+     "end": 2024,
+     "slug": "journal-of-global-buddhi-46ebb222",
+     "key": "research-private/dlbs/journal-of-global-buddhi-46ebb222.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 293,
+   "inSources": 1
+  },
+  {
+   "key": "蓮池會聞",
+   "name": "蓮池會聞",
+   "sources": {
+    "dlbs": {
+     "name": "蓮池會聞",
+     "articles": 293,
+     "fulltext": 0,
+     "start": 1941,
+     "end": 1944,
+     "slug": "688d8089",
+     "key": "research-private/dlbs/688d8089.jsonl.gz",
+     "missingPage": 217
+    }
+   },
+   "total": 293,
+   "inSources": 1
+  },
+  {
+   "key": "パーリ学仏教文化学",
+   "name": "パーリ学仏教文化学",
+   "sources": {
+    "dlbs": {
+     "name": "パーリ学仏教文化学",
+     "articles": 292,
+     "fulltext": 280,
+     "start": 1988,
+     "end": 2021,
+     "slug": "951839cf",
+     "key": "research-private/dlbs/951839cf.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 292,
+   "inSources": 1
+  },
+  {
+   "key": "MandalaMagazine",
+   "name": "Mandala Magazine",
+   "sources": {
+    "dlbs": {
+     "name": "Mandala Magazine",
+     "articles": 289,
+     "fulltext": 184,
+     "start": 1996,
+     "end": 2009,
+     "slug": "mandala-magazine-87f55720",
+     "key": "research-private/dlbs/mandala-magazine-87f55720.jsonl.gz",
+     "missingPage": 189
+    }
+   },
+   "total": 289,
+   "inSources": 1
+  },
+  {
+   "key": "華人宗教研究",
+   "name": "華人宗教研究",
+   "sources": {
+    "airiti": {
+     "name": "華人宗教研究",
+     "articles": 143,
+     "fulltext": 132,
+     "start": "2013",
+     "end": "2026",
+     "to": "/research-data/press/chinese-religions"
+    },
+    "ncl": {
+     "name": "華人宗教研究",
+     "articles": 146,
+     "fulltext": 0,
+     "start": 2013,
+     "end": 2026,
+     "slug": "chinese-religions"
+    }
+   },
+   "total": 289,
+   "inSources": 2
+  },
+  {
+   "key": "佛教圖書館館訊",
+   "name": "佛教圖書館館訊",
+   "sources": {
+    "dlbs": {
+     "name": "佛教圖書館館訊",
+     "articles": 288,
+     "fulltext": 287,
+     "start": 1995,
+     "end": 2004,
+     "slug": "644e6729",
+     "key": "research-private/dlbs/644e6729.jsonl.gz",
+     "missingPage": 39
+    }
+   },
+   "total": 288,
+   "inSources": 1
+  },
+  {
+   "key": "法華経の思想と展開",
+   "name": "法華経の思想と展開",
+   "sources": {
+    "dlbs": {
+     "name": "法華経の思想と展開",
+     "articles": 287,
+     "fulltext": 0,
+     "start": 1965,
+     "end": 2001,
+     "slug": "b71f6054",
+     "key": "research-private/dlbs/b71f6054.jsonl.gz",
+     "missingPage": 144
+    }
+   },
+   "total": 287,
+   "inSources": 1
+  },
+  {
+   "key": "仏教研究",
+   "name": "仏教研究",
+   "sources": {
+    "dlbs": {
+     "name": "仏教研究",
+     "articles": 286,
+     "fulltext": 0,
+     "start": 1940,
+     "end": 2012,
+     "slug": "36bef062",
+     "key": "research-private/dlbs/36bef062.jsonl.gz",
+     "missingPage": 18
+    }
+   },
+   "total": 286,
+   "inSources": 1
+  },
+  {
+   "key": "文博",
+   "name": "文博",
+   "sources": {
+    "dlbs": {
+     "name": "文博",
+     "articles": 284,
+     "fulltext": 280,
+     "start": 1984,
+     "end": 2020,
+     "slug": "aace8fd5",
+     "key": "research-private/dlbs/aace8fd5.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 284,
+   "inSources": 1
+  },
+  {
+   "key": "東洋学術研究",
+   "name": "東洋学術研究",
+   "sources": {
+    "dlbs": {
+     "name": "東洋学術研究",
+     "articles": 284,
+     "fulltext": 0,
+     "start": 1964,
+     "end": 2008,
+     "slug": "83abc270",
+     "key": "research-private/dlbs/83abc270.jsonl.gz",
+     "missingPage": 71
+    }
+   },
+   "total": 284,
+   "inSources": 1
+  },
+  {
+   "key": "西山学報",
+   "name": "西山学報",
+   "sources": {
+    "dlbs": {
+     "name": "西山学報",
+     "articles": 284,
+     "fulltext": 8,
+     "start": 1927,
+     "end": 2005,
+     "slug": "8298f51a",
+     "key": "research-private/dlbs/8298f51a.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 284,
+   "inSources": 1
+  },
+  {
+   "key": "龍谷教学",
+   "name": "龍谷教学",
+   "sources": {
+    "dlbs": {
+     "name": "龍谷教学",
+     "articles": 284,
+     "fulltext": 1,
+     "start": 1966,
+     "end": 2017,
+     "slug": "d9d2d5e7",
+     "key": "research-private/dlbs/d9d2d5e7.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 284,
+   "inSources": 1
+  },
+  {
+   "key": "天津佛教居士林林刊",
+   "name": "天津佛教居士林林刊",
+   "sources": {
+    "dlbs": {
+     "name": "天津佛教居士林林刊",
+     "articles": 282,
+     "fulltext": 0,
+     "start": 1927,
+     "end": 1928,
+     "slug": "44f8a8ca",
+     "key": "research-private/dlbs/44f8a8ca.jsonl.gz",
+     "missingPage": 26
+    }
+   },
+   "total": 282,
+   "inSources": 1
+  },
+  {
+   "key": "眞宗研究會紀要",
+   "name": "眞宗研究會紀要",
+   "sources": {
+    "dlbs": {
+     "name": "眞宗研究會紀要",
+     "articles": 282,
+     "fulltext": 0,
+     "start": 1969,
+     "end": 2019,
+     "slug": "e4a99817",
+     "key": "research-private/dlbs/e4a99817.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 282,
+   "inSources": 1
+  },
+  {
+   "key": "東洋学報",
+   "name": "東洋学報",
+   "sources": {
+    "dlbs": {
+     "name": "東洋学報",
+     "articles": 281,
+     "fulltext": 280,
+     "start": 1911,
+     "end": 2007,
+     "slug": "f52eaf74",
+     "key": "research-private/dlbs/f52eaf74.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 281,
+   "inSources": 1
+  },
+  {
+   "key": "楞嚴特刊",
+   "name": "楞嚴特刊",
+   "sources": {
+    "dlbs": {
+     "name": "楞嚴特刊",
+     "articles": 281,
+     "fulltext": 0,
+     "start": 1926,
+     "end": 1926,
+     "slug": "426602ca",
+     "key": "research-private/dlbs/426602ca.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 281,
+   "inSources": 1
+  },
+  {
+   "key": "OrientationsMagazine",
+   "name": "Orientations Magazine",
+   "sources": {
+    "dlbs": {
+     "name": "Orientations Magazine",
+     "articles": 280,
+     "fulltext": 2,
+     "start": 1933,
+     "end": 2019,
+     "slug": "orientations-magazine-31558e78",
+     "key": "research-private/dlbs/orientations-magazine-31558e78.jsonl.gz",
+     "missingPage": 19,
+     "realStart": 1977,
+     "yearOutliers": {
+      "1933": 1
+     }
+    }
+   },
+   "total": 280,
+   "inSources": 1
+  },
+  {
+   "key": "中國佛教季刊",
+   "name": "中國佛教季刊",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛教季刊",
+     "articles": 279,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "865c38f1",
+     "key": "research-private/dlbs/865c38f1.jsonl.gz",
+     "missingPage": 22
+    }
+   },
+   "total": 279,
+   "inSources": 1
+  },
+  {
+   "key": "東アジア仏教学術論集",
+   "name": "東アジア仏教学術論集",
+   "sources": {
+    "dlbs": {
+     "name": "東アジア仏教学術論集",
+     "articles": 278,
+     "fulltext": 278,
+     "start": 2013,
+     "end": 2023,
+     "slug": "c51fcda0",
+     "key": "research-private/dlbs/c51fcda0.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 278,
+   "inSources": 1
+  },
+  {
+   "key": "覺社年刊",
+   "name": "覺社年刊",
+   "sources": {
+    "dlbs": {
+     "name": "覺社年刊",
+     "articles": 274,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "5ecf276f",
+     "key": "research-private/dlbs/5ecf276f.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 274,
+   "inSources": 1
+  },
+  {
+   "key": "國華",
+   "name": "國華",
+   "sources": {
+    "dlbs": {
+     "name": "國華",
+     "articles": 273,
+     "fulltext": 0,
+     "start": 1894,
+     "end": 2010,
+     "slug": "0e25d4f8",
+     "key": "research-private/dlbs/0e25d4f8.jsonl.gz",
+     "missingPage": 49
+    }
+   },
+   "total": 273,
+   "inSources": 1
+  },
+  {
+   "key": "華神期刊",
+   "name": "華神期刊",
+   "sources": {
+    "airiti": {
+     "name": "華神期刊",
+     "articles": 139,
+     "fulltext": 139,
+     "start": "2008",
+     "end": "2025",
+     "to": "/research-data/press/ces-journal"
+    },
+    "ncl": {
+     "name": "華神期刊",
+     "articles": 133,
+     "fulltext": 0,
+     "start": 2008,
+     "end": 2025,
+     "slug": "ces-journal"
+    }
+   },
+   "total": 272,
+   "inSources": 2
+  },
+  {
+   "key": "行信学報",
+   "name": "行信学報",
+   "sources": {
+    "dlbs": {
+     "name": "行信学報",
+     "articles": 271,
+     "fulltext": 0,
+     "start": 1951,
+     "end": 2019,
+     "slug": "a49a2dd8",
+     "key": "research-private/dlbs/a49a2dd8.jsonl.gz",
+     "missingPage": 19
+    }
+   },
+   "total": 271,
+   "inSources": 1
+  },
+  {
+   "key": "大雄",
+   "name": "大雄",
+   "sources": {
+    "dlbs": {
+     "name": "大雄",
+     "articles": 270,
+     "fulltext": 0,
+     "start": 1942,
+     "end": 1942,
+     "slug": "7b630f06",
+     "key": "research-private/dlbs/7b630f06.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 270,
+   "inSources": 1
+  },
+  {
+   "key": "寧樂",
+   "name": "寧樂",
+   "sources": {
+    "dlbs": {
+     "name": "寧樂",
+     "articles": 267,
+     "fulltext": 0,
+     "start": 1924,
+     "end": 1932,
+     "slug": "07a3226d",
+     "key": "research-private/dlbs/07a3226d.jsonl.gz",
+     "missingPage": 44
+    }
+   },
+   "total": 267,
+   "inSources": 1
+  },
+  {
+   "key": "玉山神學院學報",
+   "name": "玉山神學院學報",
+   "sources": {
+    "ncl": {
+     "name": "玉山神學院學報",
+     "articles": 266,
+     "fulltext": 116,
+     "start": 1992,
+     "end": 2024,
+     "slug": "yushan"
+    }
+   },
+   "total": 266,
+   "inSources": 1
+  },
+  {
+   "key": "十方",
+   "name": "十方",
+   "sources": {
+    "dlbs": {
+     "name": "十方",
+     "articles": 265,
+     "fulltext": 0,
+     "start": 1982,
+     "end": 1998,
+     "slug": "b6faca39",
+     "key": "research-private/dlbs/b6faca39.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 265,
+   "inSources": 1
+  },
+  {
+   "key": "文教叢刊",
+   "name": "文教叢刊",
+   "sources": {
+    "dlbs": {
+     "name": "文教叢刊",
+     "articles": 265,
+     "fulltext": 0,
+     "start": 1945,
+     "end": 1945,
+     "slug": "ef2d7342",
+     "key": "research-private/dlbs/ef2d7342.jsonl.gz",
+     "missingPage": 36
+    }
+   },
+   "total": 265,
+   "inSources": 1
+  },
+  {
+   "key": "臺大佛學研究",
+   "name": "臺大佛學研究",
+   "sources": {
+    "airiti": {
+     "name": "臺大佛學研究",
+     "articles": 131,
+     "fulltext": 131,
+     "start": "2007",
+     "end": "2025",
+     "to": "/research-data/press/ntu-buddhist"
+    },
+    "ncl": {
+     "name": "臺大佛學研究",
+     "articles": 134,
+     "fulltext": 103,
+     "start": 2007,
+     "end": 2025,
+     "slug": "ntu-buddhist"
+    }
+   },
+   "total": 265,
+   "inSources": 2
+  },
+  {
+   "key": "JournaloftheAmericanAcademyofReligion",
+   "name": "Journal of the American Academy of Religion",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the American Academy of Religion",
+     "articles": 264,
+     "fulltext": 248,
+     "start": 1968,
+     "end": 2022,
+     "slug": "journal-of-the-american--949e8b0e",
+     "key": "research-private/dlbs/journal-of-the-american--949e8b0e.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 264,
+   "inSources": 1
+  },
+  {
+   "key": "中央学術研究所紀要",
+   "name": "中央学術研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "中央学術研究所紀要",
+     "articles": 264,
+     "fulltext": 4,
+     "start": 1971,
+     "end": 2015,
+     "slug": "1cea19d7",
+     "key": "research-private/dlbs/1cea19d7.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 264,
+   "inSources": 1
+  },
+  {
+   "key": "西藏班禪駐京辦公處月刊",
+   "name": "西藏班禪駐京辦公處月刊",
+   "sources": {
+    "dlbs": {
+     "name": "西藏班禪駐京辦公處月刊",
+     "articles": 264,
+     "fulltext": 0,
+     "start": 1929,
+     "end": 1930,
+     "slug": "dcac638d",
+     "key": "research-private/dlbs/dcac638d.jsonl.gz",
+     "missingPage": 223
+    }
+   },
+   "total": 264,
+   "inSources": 1
+  },
+  {
+   "key": "TheJournaloftheInternationalAssociationofBuddhistUniversities",
+   "name": "The Journal of the International Association of Buddhist Universities",
+   "sources": {
+    "dlbs": {
+     "name": "The Journal of the International Association of Buddhist Universities",
+     "articles": 263,
+     "fulltext": 260,
+     "start": 2008,
+     "end": 2019,
+     "slug": "the-journal-of-the-inter-68c7b0ee",
+     "key": "research-private/dlbs/the-journal-of-the-inter-68c7b0ee.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 263,
+   "inSources": 1
+  },
+  {
+   "key": "佛光",
+   "name": "佛光",
+   "sources": {
+    "dlbs": {
+     "name": "佛光",
+     "articles": 263,
+     "fulltext": 0,
+     "start": 1923,
+     "end": 1923,
+     "slug": "64962324",
+     "key": "research-private/dlbs/64962324.jsonl.gz",
+     "missingPage": 38
+    }
+   },
+   "total": 263,
+   "inSources": 1
+  },
+  {
+   "key": "東方",
+   "name": "東方",
+   "sources": {
+    "dlbs": {
+     "name": "東方",
+     "articles": 263,
+     "fulltext": 0,
+     "start": 1985,
+     "end": 2009,
+     "slug": "07d249bc",
+     "key": "research-private/dlbs/07d249bc.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 263,
+   "inSources": 1
+  },
+  {
+   "key": "宗学院論輯",
+   "name": "宗学院論輯",
+   "sources": {
+    "dlbs": {
+     "name": "宗学院論輯",
+     "articles": 262,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1976,
+     "slug": "7393adaa",
+     "key": "research-private/dlbs/7393adaa.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 262,
+   "inSources": 1
+  },
+  {
+   "key": "密教図像",
+   "name": "密教図像",
+   "sources": {
+    "dlbs": {
+     "name": "密教図像",
+     "articles": 262,
+     "fulltext": 2,
+     "start": 1982,
+     "end": 2022,
+     "slug": "2c607430",
+     "key": "research-private/dlbs/2c607430.jsonl.gz",
+     "missingPage": 15
+    }
+   },
+   "total": 262,
+   "inSources": 1
+  },
+  {
+   "key": "TheJournalofReligion",
+   "name": "The Journal of Religion",
+   "sources": {
+    "dlbs": {
+     "name": "The Journal of Religion",
+     "articles": 260,
+     "fulltext": 121,
+     "start": 1921,
+     "end": 2023,
+     "slug": "the-journal-of-religion-8babc15e",
+     "key": "research-private/dlbs/the-journal-of-religion-8babc15e.jsonl.gz",
+     "missingPage": 0,
+     "realStart": 1921,
+     "yearOutliers": {
+      "1937": 1
+     }
+    }
+   },
+   "total": 260,
+   "inSources": 1
+  },
+  {
+   "key": "圓音月刊",
+   "name": "圓音月刊",
+   "sources": {
+    "dlbs": {
+     "name": "圓音月刊",
+     "articles": 260,
+     "fulltext": 0,
+     "start": 1947,
+     "end": 1950,
+     "slug": "096be1bb",
+     "key": "research-private/dlbs/096be1bb.jsonl.gz",
+     "missingPage": 45
+    }
+   },
+   "total": 260,
+   "inSources": 1
+  },
+  {
+   "key": "鄞縣佛教會會刊",
+   "name": "鄞縣佛教會會刊",
+   "sources": {
+    "dlbs": {
+     "name": "鄞縣佛教會會刊",
+     "articles": 258,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "7c5b296d",
+     "key": "research-private/dlbs/7c5b296d.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 258,
+   "inSources": 1
+  },
+  {
+   "key": "한국교수불자연합학회지",
+   "name": "한국교수불자연합학회지",
+   "sources": {
+    "dlbs": {
+     "name": "한국교수불자연합학회지",
+     "articles": 257,
+     "fulltext": 257,
+     "start": 2010,
+     "end": 2024,
+     "slug": "a8826ad6",
+     "key": "research-private/dlbs/a8826ad6.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 257,
+   "inSources": 1
+  },
+  {
+   "key": "內觀雜誌",
+   "name": "內觀雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "內觀雜誌",
+     "articles": 256,
+     "fulltext": 244,
+     "start": 1995,
+     "end": 2016,
+     "slug": "2296012c",
+     "key": "research-private/dlbs/2296012c.jsonl.gz",
+     "missingPage": 14
+    }
+   },
+   "total": 256,
+   "inSources": 1
+  },
+  {
+   "key": "哲學與文化",
+   "name": "哲學與文化",
+   "sources": {
+    "dlbs": {
+     "name": "哲學與文化",
+     "articles": 256,
+     "fulltext": 71,
+     "start": 1974,
+     "end": 2026,
+     "slug": "56f57542",
+     "key": "research-private/dlbs/56f57542.jsonl.gz",
+     "missingPage": 14
+    }
+   },
+   "total": 256,
+   "inSources": 1
+  },
+  {
+   "key": "中原文物",
+   "name": "中原文物",
+   "sources": {
+    "dlbs": {
+     "name": "中原文物",
+     "articles": 252,
+     "fulltext": 226,
+     "start": 1981,
+     "end": 2025,
+     "slug": "40a09277",
+     "key": "research-private/dlbs/40a09277.jsonl.gz",
+     "missingPage": 11
+    }
+   },
+   "total": 252,
+   "inSources": 1
+  },
+  {
+   "key": "佛教文藝",
+   "name": "佛教文藝",
+   "sources": {
+    "dlbs": {
+     "name": "佛教文藝",
+     "articles": 251,
+     "fulltext": 0,
+     "start": 1943,
+     "end": 1944,
+     "slug": "68503470",
+     "key": "research-private/dlbs/68503470.jsonl.gz",
+     "missingPage": 20
+    }
+   },
+   "total": 251,
+   "inSources": 1
+  },
+  {
+   "key": "불교학리뷰",
+   "name": "불교학리뷰",
+   "sources": {
+    "dlbs": {
+     "name": "불교학리뷰",
+     "articles": 250,
+     "fulltext": 249,
+     "start": 2006,
+     "end": 2025,
+     "slug": "31b3d154",
+     "key": "research-private/dlbs/31b3d154.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 250,
+   "inSources": 1
+  },
+  {
+   "key": "護生報觀音專刊",
+   "name": "護生報(觀音專刊)",
+   "sources": {
+    "dlbs": {
+     "name": "護生報(觀音專刊)",
+     "articles": 249,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1936,
+     "slug": "753191d9",
+     "key": "research-private/dlbs/753191d9.jsonl.gz",
+     "missingPage": 13
+    }
+   },
+   "total": 249,
+   "inSources": 1
+  },
+  {
+   "key": "新覺生",
+   "name": "新覺生",
+   "sources": {
+    "dlbs": {
+     "name": "新覺生",
+     "articles": 247,
+     "fulltext": 0,
+     "start": 1961,
+     "end": 1985,
+     "slug": "7ce992a6",
+     "key": "research-private/dlbs/7ce992a6.jsonl.gz",
+     "missingPage": 124
+    }
+   },
+   "total": 247,
+   "inSources": 1
+  },
+  {
+   "key": "文物春秋",
+   "name": "文物春秋",
+   "sources": {
+    "dlbs": {
+     "name": "文物春秋",
+     "articles": 246,
+     "fulltext": 2,
+     "start": 1989,
+     "end": 2013,
+     "slug": "f6556b34",
+     "key": "research-private/dlbs/f6556b34.jsonl.gz",
+     "missingPage": 28
+    }
+   },
+   "total": 246,
+   "inSources": 1
+  },
+  {
+   "key": "叡山宗教",
+   "name": "叡山宗教",
+   "sources": {
+    "dlbs": {
+     "name": "叡山宗教",
+     "articles": 245,
+     "fulltext": 0,
+     "start": 1920,
+     "end": 1924,
+     "slug": "579ff6e9",
+     "key": "research-private/dlbs/579ff6e9.jsonl.gz",
+     "missingPage": 245
+    }
+   },
+   "total": 245,
+   "inSources": 1
+  },
+  {
+   "key": "佛學與科學",
+   "name": "佛學與科學",
+   "sources": {
+    "dlbs": {
+     "name": "佛學與科學",
+     "articles": 244,
+     "fulltext": 232,
+     "start": 2000,
+     "end": 2023,
+     "slug": "fc3515a9",
+     "key": "research-private/dlbs/fc3515a9.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 244,
+   "inSources": 1
+  },
+  {
+   "key": "선문화연구",
+   "name": "선문화연구",
+   "sources": {
+    "dlbs": {
+     "name": "선문화연구",
+     "articles": 243,
+     "fulltext": 243,
+     "start": 2006,
+     "end": 2021,
+     "slug": "1725f2e8",
+     "key": "research-private/dlbs/1725f2e8.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 243,
+   "inSources": 1
+  },
+  {
+   "key": "TheIndianInternationalJournalofBuddhistStudies",
+   "name": "The Indian International Journal of Buddhist Studies",
+   "sources": {
+    "dlbs": {
+     "name": "The Indian International Journal of Buddhist Studies",
+     "articles": 241,
+     "fulltext": 31,
+     "start": 1999,
+     "end": 2024,
+     "slug": "the-indian-international-1477e5dc",
+     "key": "research-private/dlbs/the-indian-international-1477e5dc.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 241,
+   "inSources": 1
+  },
+  {
+   "key": "仏教学論集",
+   "name": "仏教学論集",
+   "sources": {
+    "dlbs": {
+     "name": "仏教学論集",
+     "articles": 241,
+     "fulltext": 5,
+     "start": 1964,
+     "end": 2013,
+     "slug": "0b30b689",
+     "key": "research-private/dlbs/0b30b689.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 241,
+   "inSources": 1
+  },
+  {
+   "key": "晨鐘特刊",
+   "name": "晨鐘特刊",
+   "sources": {
+    "dlbs": {
+     "name": "晨鐘特刊",
+     "articles": 241,
+     "fulltext": 0,
+     "start": 1927,
+     "end": 1927,
+     "slug": "5b3c0e9d",
+     "key": "research-private/dlbs/5b3c0e9d.jsonl.gz",
+     "missingPage": 27
+    }
+   },
+   "total": 241,
+   "inSources": 1
+  },
+  {
+   "key": "福田",
+   "name": "福田",
+   "sources": {
+    "dlbs": {
+     "name": "福田",
+     "articles": 241,
+     "fulltext": 0,
+     "start": 1998,
+     "end": 2007,
+     "slug": "b0e3872c",
+     "key": "research-private/dlbs/b0e3872c.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 241,
+   "inSources": 1
+  },
+  {
+   "key": "佛教青年",
+   "name": "佛教青年",
+   "sources": {
+    "dlbs": {
+     "name": "佛教青年",
+     "articles": 240,
+     "fulltext": 0,
+     "start": 1954,
+     "end": 1958,
+     "slug": "22022eea",
+     "key": "research-private/dlbs/22022eea.jsonl.gz",
+     "missingPage": 240
+    }
+   },
+   "total": 240,
+   "inSources": 1
+  },
+  {
+   "key": "ReligiousStudies",
+   "name": "Religious Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Religious Studies",
+     "articles": 239,
+     "fulltext": 216,
+     "start": 1965,
+     "end": 2023,
+     "slug": "religious-studies-abcc8446",
+     "key": "research-private/dlbs/religious-studies-abcc8446.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 239,
+   "inSources": 1
+  },
+  {
+   "key": "西北佛教週報",
+   "name": "西北佛教週報",
+   "sources": {
+    "dlbs": {
+     "name": "西北佛教週報",
+     "articles": 239,
+     "fulltext": 0,
+     "start": 1940,
+     "end": 1941,
+     "slug": "79a9a956",
+     "key": "research-private/dlbs/79a9a956.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 239,
+   "inSources": 1
+  },
+  {
+   "key": "NagoyaStudiesinIndianCultureandBuddhismSaṃbhāṣā",
+   "name": "Nagoya Studies in Indian Culture and Buddhism: Saṃbhāṣā",
+   "sources": {
+    "dlbs": {
+     "name": "Nagoya Studies in Indian Culture and Buddhism: Saṃbhāṣā",
+     "articles": 237,
+     "fulltext": 235,
+     "start": 1979,
+     "end": 2022,
+     "slug": "nagoya-studies-in-indian-77fdc034",
+     "key": "research-private/dlbs/nagoya-studies-in-indian-77fdc034.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 237,
+   "inSources": 1
+  },
+  {
+   "key": "佛教美術",
+   "name": "佛教美術",
+   "sources": {
+    "dlbs": {
+     "name": "佛教美術",
+     "articles": 234,
+     "fulltext": 2,
+     "start": 1924,
+     "end": 1935,
+     "slug": "a6d18a07",
+     "key": "research-private/dlbs/a6d18a07.jsonl.gz",
+     "missingPage": 50
+    }
+   },
+   "total": 234,
+   "inSources": 1
+  },
+  {
+   "key": "宗教研究別冊",
+   "name": "宗教研究. 別冊",
+   "sources": {
+    "dlbs": {
+     "name": "宗教研究. 別冊",
+     "articles": 233,
+     "fulltext": 232,
+     "start": 2014,
+     "end": 2021,
+     "slug": "4aeb2ac3",
+     "key": "research-private/dlbs/4aeb2ac3.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 233,
+   "inSources": 1
+  },
+  {
+   "key": "無盡燈",
+   "name": "無盡燈",
+   "sources": {
+    "dlbs": {
+     "name": "無盡燈",
+     "articles": 233,
+     "fulltext": 0,
+     "start": 1951,
+     "end": 2007,
+     "slug": "167d6d79",
+     "key": "research-private/dlbs/167d6d79.jsonl.gz",
+     "missingPage": 186
+    }
+   },
+   "total": 233,
+   "inSources": 1
+  },
+  {
+   "key": "上海佛教通訊",
+   "name": "上海佛教通訊",
+   "sources": {
+    "dlbs": {
+     "name": "上海佛教通訊",
+     "articles": 232,
+     "fulltext": 0,
+     "start": 1986,
+     "end": 1999,
+     "slug": "72a6cf77",
+     "key": "research-private/dlbs/72a6cf77.jsonl.gz",
+     "missingPage": 194
+    }
+   },
+   "total": 232,
+   "inSources": 1
+  },
+  {
+   "key": "學僧天地",
+   "name": "學僧天地",
+   "sources": {
+    "dlbs": {
+     "name": "學僧天地",
+     "articles": 231,
+     "fulltext": 0,
+     "start": 1948,
+     "end": 1948,
+     "slug": "6501ce46",
+     "key": "research-private/dlbs/6501ce46.jsonl.gz",
+     "missingPage": 38
+    }
+   },
+   "total": 231,
+   "inSources": 1
+  },
+  {
+   "key": "日本仏教史学",
+   "name": "日本仏教史学",
+   "sources": {
+    "dlbs": {
+     "name": "日本仏教史学",
+     "articles": 230,
+     "fulltext": 0,
+     "start": 1941,
+     "end": 1992,
+     "slug": "a93bd2e7",
+     "key": "research-private/dlbs/a93bd2e7.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 230,
+   "inSources": 1
+  },
+  {
+   "key": "불교문예연구",
+   "name": "불교문예연구",
+   "sources": {
+    "dlbs": {
+     "name": "불교문예연구",
+     "articles": 230,
+     "fulltext": 230,
+     "start": 2013,
+     "end": 2023,
+     "slug": "04663e7e",
+     "key": "research-private/dlbs/04663e7e.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 230,
+   "inSources": 1
+  },
+  {
+   "key": "中國佛教會公報",
+   "name": "中國佛教會公報",
+   "sources": {
+    "dlbs": {
+     "name": "中國佛教會公報",
+     "articles": 229,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "4f976eca",
+     "key": "research-private/dlbs/4f976eca.jsonl.gz",
+     "missingPage": 6
+    }
+   },
+   "total": 229,
+   "inSources": 1
+  },
+  {
+   "key": "宗学研究紀要",
+   "name": "宗学研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "宗学研究紀要",
+     "articles": 229,
+     "fulltext": 27,
+     "start": 2000,
+     "end": 2023,
+     "slug": "496fbe8c",
+     "key": "research-private/dlbs/496fbe8c.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 229,
+   "inSources": 1
+  },
+  {
+   "key": "南行",
+   "name": "南行",
+   "sources": {
+    "dlbs": {
+     "name": "南行",
+     "articles": 228,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "36cedb30",
+     "key": "research-private/dlbs/36cedb30.jsonl.gz",
+     "missingPage": 19
+    }
+   },
+   "total": 228,
+   "inSources": 1
+  },
+  {
+   "key": "正覺",
+   "name": "正覺",
+   "sources": {
+    "dlbs": {
+     "name": "正覺",
+     "articles": 228,
+     "fulltext": 0,
+     "start": 1930,
+     "end": 1931,
+     "slug": "a50faa29",
+     "key": "research-private/dlbs/a50faa29.jsonl.gz",
+     "missingPage": 37
+    }
+   },
+   "total": 228,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofChinesePhilosophy",
+   "name": "Journal of Chinese Philosophy",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Chinese Philosophy",
+     "articles": 226,
+     "fulltext": 224,
+     "start": 1973,
+     "end": 2023,
+     "slug": "journal-of-chinese-philo-29dc3ca1",
+     "key": "research-private/dlbs/journal-of-chinese-philo-29dc3ca1.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 226,
+   "inSources": 1
+  },
+  {
+   "key": "文物世界",
+   "name": "文物世界",
+   "sources": {
+    "dlbs": {
+     "name": "文物世界",
+     "articles": 226,
+     "fulltext": 213,
+     "start": 1989,
+     "end": 2013,
+     "slug": "eb52ec0d",
+     "key": "research-private/dlbs/eb52ec0d.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 226,
+   "inSources": 1
+  },
+  {
+   "key": "大正大學々報",
+   "name": "大正大學々報",
+   "sources": {
+    "dlbs": {
+     "name": "大正大學々報",
+     "articles": 225,
+     "fulltext": 0,
+     "start": 1927,
+     "end": 1952,
+     "slug": "7ba1ae51",
+     "key": "research-private/dlbs/7ba1ae51.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 225,
+   "inSources": 1
+  },
+  {
+   "key": "鵝湖月刊",
+   "name": "鵝湖月刊",
+   "sources": {
+    "dlbs": {
+     "name": "鵝湖月刊",
+     "articles": 222,
+     "fulltext": 217,
+     "start": 1975,
+     "end": 2022,
+     "slug": "81f41687",
+     "key": "research-private/dlbs/81f41687.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 222,
+   "inSources": 1
+  },
+  {
+   "key": "IndoIranianJournal",
+   "name": "Indo-Iranian Journal",
+   "sources": {
+    "dlbs": {
+     "name": "Indo-Iranian Journal",
+     "articles": 221,
+     "fulltext": 219,
+     "start": 1957,
+     "end": 2023,
+     "slug": "indo-iranian-journal-f75626e4",
+     "key": "research-private/dlbs/indo-iranian-journal-f75626e4.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 221,
+   "inSources": 1
+  },
+  {
+   "key": "喜報",
+   "name": "喜報",
+   "sources": {
+    "dlbs": {
+     "name": "喜報",
+     "articles": 221,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "34194562",
+     "key": "research-private/dlbs/34194562.jsonl.gz",
+     "missingPage": 221
+    }
+   },
+   "total": 221,
+   "inSources": 1
+  },
+  {
+   "key": "佛化周刊",
+   "name": "佛化周刊",
+   "sources": {
+    "dlbs": {
+     "name": "佛化周刊",
+     "articles": 220,
+     "fulltext": 0,
+     "start": 1928,
+     "end": 1930,
+     "slug": "370f2f2f",
+     "key": "research-private/dlbs/370f2f2f.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 220,
+   "inSources": 1
+  },
+  {
+   "key": "今日佛教",
+   "name": "今日佛教",
+   "sources": {
+    "dlbs": {
+     "name": "今日佛教",
+     "articles": 219,
+     "fulltext": 0,
+     "start": 1957,
+     "end": 1960,
+     "slug": "54b7fdac",
+     "key": "research-private/dlbs/54b7fdac.jsonl.gz",
+     "missingPage": 218
+    }
+   },
+   "total": 219,
+   "inSources": 1
+  },
+  {
+   "key": "禪",
+   "name": "禪",
+   "sources": {
+    "dlbs": {
+     "name": "禪",
+     "articles": 217,
+     "fulltext": 122,
+     "start": 1989,
+     "end": 2002,
+     "slug": "85518d0e",
+     "key": "research-private/dlbs/85518d0e.jsonl.gz",
+     "missingPage": 103
+    }
+   },
+   "total": 217,
+   "inSources": 1
+  },
+  {
+   "key": "覺生",
+   "name": "覺生",
+   "sources": {
+    "dlbs": {
+     "name": "覺生",
+     "articles": 217,
+     "fulltext": 2,
+     "start": 1950,
+     "end": 1962,
+     "slug": "98739599",
+     "key": "research-private/dlbs/98739599.jsonl.gz",
+     "missingPage": 216
+    }
+   },
+   "total": 217,
+   "inSources": 1
+  },
+  {
+   "key": "鶴見大学仏教文化研究所紀要",
+   "name": "鶴見大学仏教文化研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "鶴見大学仏教文化研究所紀要",
+     "articles": 217,
+     "fulltext": 147,
+     "start": 1996,
+     "end": 2023,
+     "slug": "c18a4862",
+     "key": "research-private/dlbs/c18a4862.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 217,
+   "inSources": 1
+  },
+  {
+   "key": "敦煌學",
+   "name": "敦煌學",
+   "sources": {
+    "dlbs": {
+     "name": "敦煌學",
+     "articles": 216,
+     "fulltext": 208,
+     "start": 1974,
+     "end": 2025,
+     "slug": "68652bed",
+     "key": "research-private/dlbs/68652bed.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 216,
+   "inSources": 1
+  },
+  {
+   "key": "鴻嗷輯",
+   "name": "鴻嗷輯",
+   "sources": {
+    "dlbs": {
+     "name": "鴻嗷輯",
+     "articles": 216,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "b25afc6e",
+     "key": "research-private/dlbs/b25afc6e.jsonl.gz",
+     "missingPage": 8
+    }
+   },
+   "total": 216,
+   "inSources": 1
+  },
+  {
+   "key": "法華文化研究",
+   "name": "法華文化研究",
+   "sources": {
+    "dlbs": {
+     "name": "法華文化研究",
+     "articles": 214,
+     "fulltext": 54,
+     "start": 1975,
+     "end": 2023,
+     "slug": "7ed40281",
+     "key": "research-private/dlbs/7ed40281.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 214,
+   "inSources": 1
+  },
+  {
+   "key": "CanadianJournalofBuddhistStudies",
+   "name": "Canadian Journal of Buddhist Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Canadian Journal of Buddhist Studies",
+     "articles": 212,
+     "fulltext": 212,
+     "start": 2005,
+     "end": 2023,
+     "slug": "canadian-journal-of-budd-d75095f3",
+     "key": "research-private/dlbs/canadian-journal-of-budd-d75095f3.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 212,
+   "inSources": 1
+  },
+  {
+   "key": "Religion",
+   "name": "Religion",
+   "sources": {
+    "dlbs": {
+     "name": "Religion",
+     "articles": 212,
+     "fulltext": 148,
+     "start": 1971,
+     "end": 2023,
+     "slug": "religion-b04d58c6",
+     "key": "research-private/dlbs/religion-b04d58c6.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 212,
+   "inSources": 1
+  },
+  {
+   "key": "美佛慧訊",
+   "name": "美佛慧訊",
+   "sources": {
+    "dlbs": {
+     "name": "美佛慧訊",
+     "articles": 210,
+     "fulltext": 210,
+     "start": 1999,
+     "end": 2022,
+     "slug": "4543b256",
+     "key": "research-private/dlbs/4543b256.jsonl.gz",
+     "missingPage": 203
+    }
+   },
+   "total": 210,
+   "inSources": 1
+  },
+  {
+   "key": "TricycletheBuddhistreview",
+   "name": "Tricycle: the Buddhist review",
+   "sources": {
+    "dlbs": {
+     "name": "Tricycle: the Buddhist review",
+     "articles": 208,
+     "fulltext": 7,
+     "start": 1909,
+     "end": 2023,
+     "slug": "tricycle-the-buddhist-re-e1d1f23f",
+     "key": "research-private/dlbs/tricycle-the-buddhist-re-e1d1f23f.jsonl.gz",
+     "missingPage": 11,
+     "realStart": 1909,
+     "yearOutliers": {
+      "1910": 2
+     }
+    }
+   },
+   "total": 208,
+   "inSources": 1
+  },
+  {
+   "key": "慈航月刊",
+   "name": "慈航月刊",
+   "sources": {
+    "dlbs": {
+     "name": "慈航月刊",
+     "articles": 207,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "3c3f182a",
+     "key": "research-private/dlbs/3c3f182a.jsonl.gz",
+     "missingPage": 16
+    }
+   },
+   "total": 207,
+   "inSources": 1
+  },
+  {
+   "key": "東南文化",
+   "name": "東南文化",
+   "sources": {
+    "dlbs": {
+     "name": "東南文化",
+     "articles": 205,
+     "fulltext": 202,
+     "start": 1985,
+     "end": 2012,
+     "slug": "52f117ce",
+     "key": "research-private/dlbs/52f117ce.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 205,
+   "inSources": 1
+  },
+  {
+   "key": "覺風季刊",
+   "name": "覺風季刊",
+   "sources": {
+    "dlbs": {
+     "name": "覺風季刊",
+     "articles": 205,
+     "fulltext": 203,
+     "start": 1992,
+     "end": 2013,
+     "slug": "c065b4b6",
+     "key": "research-private/dlbs/c065b4b6.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 205,
+   "inSources": 1
+  },
+  {
+   "key": "佛教研究",
+   "name": "佛教研究",
+   "sources": {
+    "dlbs": {
+     "name": "佛教研究",
+     "articles": 204,
+     "fulltext": 202,
+     "start": 1920,
+     "end": 1927,
+     "slug": "3375f3f7",
+     "key": "research-private/dlbs/3375f3f7.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 204,
+   "inSources": 1
+  },
+  {
+   "key": "ToyoUniversityAsianstudies",
+   "name": "Toyo University Asian studies",
+   "sources": {
+    "dlbs": {
+     "name": "Toyo University Asian studies",
+     "articles": 202,
+     "fulltext": 0,
+     "start": 1961,
+     "end": 2008,
+     "slug": "toyo-university-asian-st-3c6c05da",
+     "key": "research-private/dlbs/toyo-university-asian-st-3c6c05da.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 202,
+   "inSources": 1
+  },
+  {
+   "key": "三康文化研究所年報",
+   "name": "三康文化研究所年報",
+   "sources": {
+    "dlbs": {
+     "name": "三康文化研究所年報",
+     "articles": 201,
+     "fulltext": 0,
+     "start": 1966,
+     "end": 2022,
+     "slug": "c16e7e7f",
+     "key": "research-private/dlbs/c16e7e7f.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 201,
+   "inSources": 1
+  },
+  {
+   "key": "文物參考資料",
+   "name": "文物參考資料",
+   "sources": {
+    "dlbs": {
+     "name": "文物參考資料",
+     "articles": 201,
+     "fulltext": 0,
+     "start": 1950,
+     "end": 1962,
+     "slug": "c70f7ddb",
+     "key": "research-private/dlbs/c70f7ddb.jsonl.gz",
+     "missingPage": 25
+    }
+   },
+   "total": 201,
+   "inSources": 1
+  },
+  {
+   "key": "西域研究",
+   "name": "西域研究",
+   "sources": {
+    "dlbs": {
+     "name": "西域研究",
+     "articles": 201,
+     "fulltext": 199,
+     "start": 1991,
+     "end": 2023,
+     "slug": "b8f420fd",
+     "key": "research-private/dlbs/b8f420fd.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 201,
+   "inSources": 1
+  },
+  {
+   "key": "仏教別冊",
+   "name": "仏教‧別冊",
+   "sources": {
+    "dlbs": {
+     "name": "仏教‧別冊",
+     "articles": 198,
+     "fulltext": 0,
+     "start": 1988,
+     "end": 1996,
+     "slug": "cc7cc911",
+     "key": "research-private/dlbs/cc7cc911.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 198,
+   "inSources": 1
+  },
+  {
+   "key": "東方学",
+   "name": "東方学",
+   "sources": {
+    "dlbs": {
+     "name": "東方学",
+     "articles": 198,
+     "fulltext": 0,
+     "start": 1951,
+     "end": 2014,
+     "slug": "5093a5c2",
+     "key": "research-private/dlbs/5093a5c2.jsonl.gz",
+     "missingPage": 21
+    }
+   },
+   "total": 198,
+   "inSources": 1
+  },
+  {
+   "key": "佛教大学仏教学会紀要",
+   "name": "佛教大学仏教学会紀要",
+   "sources": {
+    "dlbs": {
+     "name": "佛教大学仏教学会紀要",
+     "articles": 197,
+     "fulltext": 182,
+     "start": 1993,
+     "end": 2023,
+     "slug": "202fb3c4",
+     "key": "research-private/dlbs/202fb3c4.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 197,
+   "inSources": 1
+  },
+  {
+   "key": "袈裟週刊",
+   "name": "袈裟週刊",
+   "sources": {
+    "dlbs": {
+     "name": "袈裟週刊",
+     "articles": 197,
+     "fulltext": 0,
+     "start": 1935,
+     "end": 1936,
+     "slug": "81897ccf",
+     "key": "research-private/dlbs/81897ccf.jsonl.gz",
+     "missingPage": 48
+    }
+   },
+   "total": 197,
+   "inSources": 1
+  },
+  {
+   "key": "日本西蔵学会会報",
+   "name": "日本西蔵学会会報",
+   "sources": {
+    "dlbs": {
+     "name": "日本西蔵学会会報",
+     "articles": 196,
+     "fulltext": 190,
+     "start": 1954,
+     "end": 2013,
+     "slug": "4977586d",
+     "key": "research-private/dlbs/4977586d.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 196,
+   "inSources": 1
+  },
+  {
+   "key": "TheJournalofOrientalStudies",
+   "name": "The Journal of Oriental Studies",
+   "sources": {
+    "dlbs": {
+     "name": "The Journal of Oriental Studies",
+     "articles": 195,
+     "fulltext": 186,
+     "start": 1999,
+     "end": 2023,
+     "slug": "the-journal-of-oriental--bb8efc69",
+     "key": "research-private/dlbs/the-journal-of-oriental--bb8efc69.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 195,
+   "inSources": 1
+  },
+  {
+   "key": "史林",
+   "name": "史林",
+   "sources": {
+    "dlbs": {
+     "name": "史林",
+     "articles": 195,
+     "fulltext": 192,
+     "start": 1916,
+     "end": 2024,
+     "slug": "6512a1fb",
+     "key": "research-private/dlbs/6512a1fb.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 195,
+   "inSources": 1
+  },
+  {
+   "key": "絲綢之路",
+   "name": "絲綢之路",
+   "sources": {
+    "dlbs": {
+     "name": "絲綢之路",
+     "articles": 195,
+     "fulltext": 193,
+     "start": 1995,
+     "end": 2013,
+     "slug": "6c4dfd5f",
+     "key": "research-private/dlbs/6c4dfd5f.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 195,
+   "inSources": 1
+  },
+  {
+   "key": "JournaloftheRoyalAsiaticSocietyofGreatBritainandIreland",
+   "name": "Journal of the Royal Asiatic Society of Great Britain and Ireland",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the Royal Asiatic Society of Great Britain and Ireland",
+     "articles": 194,
+     "fulltext": 53,
+     "start": 1836,
+     "end": 1990,
+     "slug": "journal-of-the-royal-asi-1ec6c713",
+     "key": "research-private/dlbs/journal-of-the-royal-asi-1ec6c713.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 194,
+   "inSources": 1
+  },
+  {
+   "key": "JournaloftheOxfordCentreforBuddhistStudies",
+   "name": "Journal of the Oxford Centre for Buddhist Studies",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the Oxford Centre for Buddhist Studies",
+     "articles": 193,
+     "fulltext": 192,
+     "start": 2011,
+     "end": 2023,
+     "slug": "journal-of-the-oxford-ce-fd016e13",
+     "key": "research-private/dlbs/journal-of-the-oxford-ce-fd016e13.jsonl.gz",
+     "missingPage": 15
+    }
+   },
+   "total": 193,
+   "inSources": 1
+  },
+  {
+   "key": "ProceedingsoftheIndianHistoryCongress",
+   "name": "Proceedings of the Indian History Congress",
+   "sources": {
+    "dlbs": {
+     "name": "Proceedings of the Indian History Congress",
+     "articles": 191,
+     "fulltext": 191,
+     "start": 1939,
+     "end": 2019,
+     "slug": "proceedings-of-the-india-5eb7714d",
+     "key": "research-private/dlbs/proceedings-of-the-india-5eb7714d.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 191,
+   "inSources": 1
+  },
+  {
+   "key": "華南覺音",
+   "name": "華南覺音",
+   "sources": {
+    "dlbs": {
+     "name": "華南覺音",
+     "articles": 191,
+     "fulltext": 0,
+     "start": 1938,
+     "end": 1939,
+     "slug": "1118bcc4",
+     "key": "research-private/dlbs/1118bcc4.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 191,
+   "inSources": 1
+  },
+  {
+   "key": "龍谷学報",
+   "name": "龍谷学報",
+   "sources": {
+    "dlbs": {
+     "name": "龍谷学報",
+     "articles": 191,
+     "fulltext": 0,
+     "start": 1933,
+     "end": 1943,
+     "slug": "92b2b5f9",
+     "key": "research-private/dlbs/92b2b5f9.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 191,
+   "inSources": 1
+  },
+  {
+   "key": "IndianPhilosophicalQuarterly",
+   "name": "Indian Philosophical Quarterly",
+   "sources": {
+    "dlbs": {
+     "name": "Indian Philosophical Quarterly",
+     "articles": 188,
+     "fulltext": 188,
+     "start": 1973,
+     "end": 2004,
+     "slug": "indian-philosophical-qua-4fa484a2",
+     "key": "research-private/dlbs/indian-philosophical-qua-4fa484a2.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 188,
+   "inSources": 1
+  },
+  {
+   "key": "EncyclopediaofReligion",
+   "name": "Encyclopedia of Religion",
+   "sources": {
+    "dlbs": {
+     "name": "Encyclopedia of Religion",
+     "articles": 187,
+     "fulltext": 0,
+     "start": 1986,
+     "end": 2005,
+     "slug": "encyclopedia-of-religion-f9b08875",
+     "key": "research-private/dlbs/encyclopedia-of-religion-f9b08875.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 187,
+   "inSources": 1
+  },
+  {
+   "key": "HsiLaiJournalofHumanisticBuddhism",
+   "name": "Hsi Lai Journal of Humanistic Buddhism",
+   "sources": {
+    "dlbs": {
+     "name": "Hsi Lai Journal of Humanistic Buddhism",
+     "articles": 187,
+     "fulltext": 110,
+     "start": 2000,
+     "end": 2007,
+     "slug": "hsi-lai-journal-of-human-abfb374a",
+     "key": "research-private/dlbs/hsi-lai-journal-of-human-abfb374a.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 187,
+   "inSources": 1
+  },
+  {
+   "key": "教化研修",
+   "name": "教化研修",
+   "sources": {
+    "dlbs": {
+     "name": "教化研修",
+     "articles": 187,
+     "fulltext": 0,
+     "start": 1969,
+     "end": 2008,
+     "slug": "8f0e5481",
+     "key": "research-private/dlbs/8f0e5481.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 187,
+   "inSources": 1
+  },
+  {
+   "key": "宗教学論集",
+   "name": "宗教学論集",
+   "sources": {
+    "dlbs": {
+     "name": "宗教学論集",
+     "articles": 186,
+     "fulltext": 10,
+     "start": 1967,
+     "end": 2023,
+     "slug": "45e147c3",
+     "key": "research-private/dlbs/45e147c3.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 186,
+   "inSources": 1
+  },
+  {
+   "key": "国際仏教学大学院大学研究紀要",
+   "name": "国際仏教学大学院大学研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "国際仏教学大学院大学研究紀要",
+     "articles": 185,
+     "fulltext": 175,
+     "start": 1998,
+     "end": 2023,
+     "slug": "6cacc6c4",
+     "key": "research-private/dlbs/6cacc6c4.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 185,
+   "inSources": 1
+  },
+  {
+   "key": "高野山大学密教文化研究所紀要",
+   "name": "高野山大学密教文化研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "高野山大学密教文化研究所紀要",
+     "articles": 183,
+     "fulltext": 130,
+     "start": 1984,
+     "end": 2023,
+     "slug": "8ce95d07",
+     "key": "research-private/dlbs/8ce95d07.jsonl.gz",
+     "missingPage": 9
+    }
+   },
+   "total": 183,
+   "inSources": 1
+  },
+  {
+   "key": "JournaloftheCentreforBuddhistStudiesSriLanka",
+   "name": "Journal of the Centre for Buddhist Studies, Sri Lanka",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of the Centre for Buddhist Studies, Sri Lanka",
+     "articles": 182,
+     "fulltext": 43,
+     "start": 2003,
+     "end": 2023,
+     "slug": "journal-of-the-centre-fo-fb942f10",
+     "key": "research-private/dlbs/journal-of-the-centre-fo-fb942f10.jsonl.gz",
+     "missingPage": 39
+    }
+   },
+   "total": 182,
+   "inSources": 1
+  },
+  {
+   "key": "慧燈月刊",
+   "name": "慧燈月刊",
+   "sources": {
+    "dlbs": {
+     "name": "慧燈月刊",
+     "articles": 182,
+     "fulltext": 0,
+     "start": 1941,
+     "end": 1943,
+     "slug": "b8e63af6",
+     "key": "research-private/dlbs/b8e63af6.jsonl.gz",
+     "missingPage": 36
+    }
+   },
+   "total": 182,
+   "inSources": 1
+  },
+  {
+   "key": "千佛山雜誌",
+   "name": "千佛山雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "千佛山雜誌",
+     "articles": 181,
+     "fulltext": 180,
+     "start": 2000,
+     "end": 2009,
+     "slug": "d2eb4a95",
+     "key": "research-private/dlbs/d2eb4a95.jsonl.gz",
+     "missingPage": 180
+    }
+   },
+   "total": 181,
+   "inSources": 1
+  },
+  {
+   "key": "故宮博物院院刊",
+   "name": "故宮博物院院刊",
+   "sources": {
+    "dlbs": {
+     "name": "故宮博物院院刊",
+     "articles": 180,
+     "fulltext": 170,
+     "start": 4,
+     "end": 2024,
+     "slug": "6c1dd166",
+     "key": "research-private/dlbs/6c1dd166.jsonl.gz",
+     "missingPage": 26,
+     "realStart": 1984,
+     "yearOutliers": {
+      "4": 1,
+      "1960": 1
+     }
+    }
+   },
+   "total": 180,
+   "inSources": 1
+  },
+  {
+   "key": "淨宗隨刊",
+   "name": "淨宗隨刊",
+   "sources": {
+    "dlbs": {
+     "name": "淨宗隨刊",
+     "articles": 180,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "ca558c08",
+     "key": "research-private/dlbs/ca558c08.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 180,
+   "inSources": 1
+  },
+  {
+   "key": "蘇城隱貧會旬刊彙編",
+   "name": "蘇城隱貧會旬刊彙編",
+   "sources": {
+    "dlbs": {
+     "name": "蘇城隱貧會旬刊彙編",
+     "articles": 179,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "fdeb8242",
+     "key": "research-private/dlbs/fdeb8242.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 179,
+   "inSources": 1
+  },
+  {
+   "key": "仏教学会報",
+   "name": "仏教学会報",
+   "sources": {
+    "dlbs": {
+     "name": "仏教学会報",
+     "articles": 178,
+     "fulltext": 0,
+     "start": 1968,
+     "end": 2001,
+     "slug": "e39a101a",
+     "key": "research-private/dlbs/e39a101a.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 178,
+   "inSources": 1
+  },
+  {
+   "key": "東洋大学大学院紀要",
+   "name": "東洋大学大学院紀要",
+   "sources": {
+    "dlbs": {
+     "name": "東洋大学大学院紀要",
+     "articles": 178,
+     "fulltext": 0,
+     "start": 1964,
+     "end": 2007,
+     "slug": "d53aba19",
+     "key": "research-private/dlbs/d53aba19.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 178,
+   "inSources": 1
+  },
+  {
+   "key": "同朋大学佛教文化研究所紀要",
+   "name": "同朋大学佛教文化研究所紀要",
+   "sources": {
+    "dlbs": {
+     "name": "同朋大学佛教文化研究所紀要",
+     "articles": 177,
+     "fulltext": 171,
+     "start": 1994,
+     "end": 2024,
+     "slug": "215447e3",
+     "key": "research-private/dlbs/215447e3.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 177,
+   "inSources": 1
+  },
+  {
+   "key": "美術研究",
+   "name": "美術研究",
+   "sources": {
+    "dlbs": {
+     "name": "美術研究",
+     "articles": 177,
+     "fulltext": 89,
+     "start": 1934,
+     "end": 2019,
+     "slug": "7988cecb",
+     "key": "research-private/dlbs/7988cecb.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 177,
+   "inSources": 1
+  },
+  {
+   "key": "PacificAffairs",
+   "name": "Pacific Affairs",
+   "sources": {
+    "dlbs": {
+     "name": "Pacific Affairs",
+     "articles": 176,
+     "fulltext": 160,
+     "start": 1928,
+     "end": 2019,
+     "slug": "pacific-affairs-2111bc1b",
+     "key": "research-private/dlbs/pacific-affairs-2111bc1b.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 176,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofInternationalBuddhistStudiesJIBS",
+   "name": "Journal of International Buddhist Studies (JIBS)",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of International Buddhist Studies (JIBS)",
+     "articles": 173,
+     "fulltext": 173,
+     "start": 2015,
+     "end": 2024,
+     "slug": "journal-of-international-df329b09",
+     "key": "research-private/dlbs/journal-of-international-df329b09.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 173,
+   "inSources": 1
+  },
+  {
+   "key": "MonumentaNipponica",
+   "name": "Monumenta Nipponica",
+   "sources": {
+    "dlbs": {
+     "name": "Monumenta Nipponica",
+     "articles": 173,
+     "fulltext": 173,
+     "start": 1938,
+     "end": 2022,
+     "slug": "monumenta-nipponica-2e075d1b",
+     "key": "research-private/dlbs/monumenta-nipponica-2e075d1b.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 173,
+   "inSources": 1
+  },
+  {
+   "key": "慈明",
+   "name": "慈明",
+   "sources": {
+    "dlbs": {
+     "name": "慈明",
+     "articles": 173,
+     "fulltext": 0,
+     "start": 1961,
+     "end": 1968,
+     "slug": "57a1f94c",
+     "key": "research-private/dlbs/57a1f94c.jsonl.gz",
+     "missingPage": 173
+    }
+   },
+   "total": 173,
+   "inSources": 1
+  },
+  {
+   "key": "考古與文物",
+   "name": "考古與文物",
+   "sources": {
+    "dlbs": {
+     "name": "考古與文物",
+     "articles": 173,
+     "fulltext": 113,
+     "start": 1980,
+     "end": 2024,
+     "slug": "1fb6a1e3",
+     "key": "research-private/dlbs/1fb6a1e3.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 173,
+   "inSources": 1
+  },
+  {
+   "key": "インド哲学仏教学研究",
+   "name": "インド哲学仏教学研究",
+   "sources": {
+    "dlbs": {
+     "name": "インド哲学仏教学研究",
+     "articles": 172,
+     "fulltext": 143,
+     "start": 1993,
+     "end": 2024,
+     "slug": "717c61b4",
+     "key": "research-private/dlbs/717c61b4.jsonl.gz",
+     "missingPage": 7
+    }
+   },
+   "total": 172,
+   "inSources": 1
+  },
+  {
+   "key": "佛教評論",
+   "name": "佛教評論",
+   "sources": {
+    "dlbs": {
+     "name": "佛教評論",
+     "articles": 172,
+     "fulltext": 0,
+     "start": 1931,
+     "end": 1931,
+     "slug": "6790b1c6",
+     "key": "research-private/dlbs/6790b1c6.jsonl.gz",
+     "missingPage": 30
+    }
+   },
+   "total": 172,
+   "inSources": 1
+  },
+  {
+   "key": "佛陀教育雜誌",
+   "name": "佛陀教育雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "佛陀教育雜誌",
+     "articles": 171,
+     "fulltext": 164,
+     "start": 2004,
+     "end": 2013,
+     "slug": "72730f57",
+     "key": "research-private/dlbs/72730f57.jsonl.gz",
+     "missingPage": 165
+    }
+   },
+   "total": 171,
+   "inSources": 1
+  },
+  {
+   "key": "山家学報新",
+   "name": "山家学報‧新",
+   "sources": {
+    "dlbs": {
+     "name": "山家学報‧新",
+     "articles": 169,
+     "fulltext": 0,
+     "start": 1916,
+     "end": 1940,
+     "slug": "a346327e",
+     "key": "research-private/dlbs/a346327e.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 169,
+   "inSources": 1
+  },
+  {
+   "key": "ArtsofAsia",
+   "name": "Arts of Asia",
+   "sources": {
+    "dlbs": {
+     "name": "Arts of Asia",
+     "articles": 166,
+     "fulltext": 4,
+     "start": 1972,
+     "end": 2023,
+     "slug": "arts-of-asia-56292512",
+     "key": "research-private/dlbs/arts-of-asia-56292512.jsonl.gz",
+     "missingPage": 31
+    }
+   },
+   "total": 166,
+   "inSources": 1
+  },
+  {
+   "key": "湖南佛教居士林林刊",
+   "name": "湖南佛教居士林林刊",
+   "sources": {
+    "dlbs": {
+     "name": "湖南佛教居士林林刊",
+     "articles": 166,
+     "fulltext": 0,
+     "start": 1933,
+     "end": 1937,
+     "slug": "ceadbbd8",
+     "key": "research-private/dlbs/ceadbbd8.jsonl.gz",
+     "missingPage": 27
+    }
+   },
+   "total": 166,
+   "inSources": 1
+  },
+  {
+   "key": "EastandWest",
+   "name": "East and West",
+   "sources": {
+    "dlbs": {
+     "name": "East and West",
+     "articles": 165,
+     "fulltext": 163,
+     "start": 1950,
+     "end": 2022,
+     "slug": "east-and-west-d56bd221",
+     "key": "research-private/dlbs/east-and-west-d56bd221.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 165,
+   "inSources": 1
+  },
+  {
+   "key": "東アジア仏教研究",
+   "name": "東アジア仏教研究",
+   "sources": {
+    "dlbs": {
+     "name": "東アジア仏教研究",
+     "articles": 165,
+     "fulltext": 3,
+     "start": 2003,
+     "end": 2024,
+     "slug": "feb3dba0",
+     "key": "research-private/dlbs/feb3dba0.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 165,
+   "inSources": 1
+  },
+  {
+   "key": "善通寺教学振興会紀要",
+   "name": "善通寺教学振興会紀要",
+   "sources": {
+    "dlbs": {
+     "name": "善通寺教学振興会紀要",
+     "articles": 164,
+     "fulltext": 1,
+     "start": 1994,
+     "end": 2019,
+     "slug": "6b63fecc",
+     "key": "research-private/dlbs/6b63fecc.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 164,
+   "inSources": 1
+  },
+  {
+   "key": "廣長舌",
+   "name": "廣長舌",
+   "sources": {
+    "dlbs": {
+     "name": "廣長舌",
+     "articles": 164,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "305e2c8b",
+     "key": "research-private/dlbs/305e2c8b.jsonl.gz",
+     "missingPage": 55
+    }
+   },
+   "total": 164,
+   "inSources": 1
+  },
+  {
+   "key": "考古",
+   "name": "考古",
+   "sources": {
+    "dlbs": {
+     "name": "考古",
+     "articles": 164,
+     "fulltext": 18,
+     "start": 1936,
+     "end": 2022,
+     "slug": "82cd994d",
+     "key": "research-private/dlbs/82cd994d.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 164,
+   "inSources": 1
+  },
+  {
+   "key": "西山禅林学報",
+   "name": "西山禅林学報",
+   "sources": {
+    "dlbs": {
+     "name": "西山禅林学報",
+     "articles": 164,
+     "fulltext": 0,
+     "start": 1955,
+     "end": 2004,
+     "slug": "ee058220",
+     "key": "research-private/dlbs/ee058220.jsonl.gz",
+     "missingPage": 2
+    }
+   },
+   "total": 164,
+   "inSources": 1
+  },
+  {
+   "key": "花園大学国際禅学研究所論叢",
+   "name": "花園大学国際禅学研究所論叢",
+   "sources": {
+    "dlbs": {
+     "name": "花園大学国際禅学研究所論叢",
+     "articles": 162,
+     "fulltext": 159,
+     "start": 2006,
+     "end": 2023,
+     "slug": "5b691396",
+     "key": "research-private/dlbs/5b691396.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 162,
+   "inSources": 1
+  },
+  {
+   "key": "世間解",
+   "name": "世間解",
+   "sources": {
+    "dlbs": {
+     "name": "世間解",
+     "articles": 161,
+     "fulltext": 0,
+     "start": 1947,
+     "end": 1948,
+     "slug": "8b6802e5",
+     "key": "research-private/dlbs/8b6802e5.jsonl.gz",
+     "missingPage": 27
+    }
+   },
+   "total": 161,
+   "inSources": 1
+  },
+  {
+   "key": "佛學出版界",
+   "name": "佛學出版界",
+   "sources": {
+    "dlbs": {
+     "name": "佛學出版界",
+     "articles": 161,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "70d53ada",
+     "key": "research-private/dlbs/70d53ada.jsonl.gz",
+     "missingPage": 22
+    }
+   },
+   "total": 161,
+   "inSources": 1
+  },
+  {
+   "key": "真宗文化真宗文化研究所年報",
+   "name": "真宗文化 : 真宗文化研究所年報",
+   "sources": {
+    "dlbs": {
+     "name": "真宗文化 : 真宗文化研究所年報",
+     "articles": 161,
+     "fulltext": 83,
+     "start": 1992,
+     "end": 2021,
+     "slug": "01345d77",
+     "key": "research-private/dlbs/01345d77.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 161,
+   "inSources": 1
+  },
+  {
+   "key": "西南和平法會特刊",
+   "name": "西南和平法會特刊",
+   "sources": {
+    "dlbs": {
+     "name": "西南和平法會特刊",
+     "articles": 161,
+     "fulltext": 0,
+     "start": 1931,
+     "end": 1931,
+     "slug": "440f59a9",
+     "key": "research-private/dlbs/440f59a9.jsonl.gz",
+     "missingPage": 29
+    }
+   },
+   "total": 161,
+   "inSources": 1
+  },
+  {
+   "key": "身延論叢",
+   "name": "身延論叢",
+   "sources": {
+    "dlbs": {
+     "name": "身延論叢",
+     "articles": 161,
+     "fulltext": 161,
+     "start": 1996,
+     "end": 2023,
+     "slug": "89fa72e1",
+     "key": "research-private/dlbs/89fa72e1.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 161,
+   "inSources": 1
+  },
+  {
+   "key": "大和志",
+   "name": "大和志",
+   "sources": {
+    "dlbs": {
+     "name": "大和志",
+     "articles": 160,
+     "fulltext": 0,
+     "start": 1934,
+     "end": 1944,
+     "slug": "8a58aee0",
+     "key": "research-private/dlbs/8a58aee0.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 160,
+   "inSources": 1
+  },
+  {
+   "key": "PATIPADÂ",
+   "name": "PATIPADÂ",
+   "sources": {
+    "dlbs": {
+     "name": "PATIPADÂ",
+     "articles": 158,
+     "fulltext": 5,
+     "start": 2008,
+     "end": 2009,
+     "slug": "patipad-4de4af03",
+     "key": "research-private/dlbs/patipad-4de4af03.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 158,
+   "inSources": 1
+  },
+  {
+   "key": "中華文化論壇",
+   "name": "中華文化論壇",
+   "sources": {
+    "dlbs": {
+     "name": "中華文化論壇",
+     "articles": 158,
+     "fulltext": 158,
+     "start": 1994,
+     "end": 2025,
+     "slug": "184e0da0",
+     "key": "research-private/dlbs/184e0da0.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 158,
+   "inSources": 1
+  },
+  {
+   "key": "大正大学浄土学研究室大学院研究紀要",
+   "name": "大正大学浄土学研究室大学院研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "大正大学浄土学研究室大学院研究紀要",
+     "articles": 158,
+     "fulltext": 0,
+     "start": 1975,
+     "end": 1983,
+     "slug": "ede19f42",
+     "key": "research-private/dlbs/ede19f42.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 158,
+   "inSources": 1
+  },
+  {
+   "key": "AsianPhilosophyAnInternationalJournalofthePhilosophicalTraditionsoftheEast",
+   "name": "Asian Philosophy: An International Journal of the Philosophical Traditions of the East",
+   "sources": {
+    "dlbs": {
+     "name": "Asian Philosophy: An International Journal of the Philosophical Traditions of the East",
+     "articles": 157,
+     "fulltext": 129,
+     "start": 1991,
+     "end": 2023,
+     "slug": "asian-philosophy-an-inte-81ff99c4",
+     "key": "research-private/dlbs/asian-philosophy-an-inte-81ff99c4.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 157,
+   "inSources": 1
+  },
+  {
+   "key": "佛教學雜誌",
+   "name": "佛教學雜誌",
+   "sources": {
+    "dlbs": {
+     "name": "佛教學雜誌",
+     "articles": 156,
+     "fulltext": 0,
+     "start": 1920,
+     "end": 1922,
+     "slug": "4f602377",
+     "key": "research-private/dlbs/4f602377.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 156,
+   "inSources": 1
+  },
+  {
+   "key": "大倉山論集",
+   "name": "大倉山論集",
+   "sources": {
+    "dlbs": {
+     "name": "大倉山論集",
+     "articles": 156,
+     "fulltext": 0,
+     "start": 1952,
+     "end": 2004,
+     "slug": "a8c52975",
+     "key": "research-private/dlbs/a8c52975.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 156,
+   "inSources": 1
+  },
+  {
+   "key": "佛教大學研究紀要",
+   "name": "佛教大學研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "佛教大學研究紀要",
+     "articles": 155,
+     "fulltext": 69,
+     "start": 1956,
+     "end": 1991,
+     "slug": "c0e7b0fa",
+     "key": "research-private/dlbs/c0e7b0fa.jsonl.gz",
+     "missingPage": 1
+    }
+   },
+   "total": 155,
+   "inSources": 1
+  },
+  {
+   "key": "StudiesinChineseReligions",
+   "name": "Studies in Chinese Religions",
+   "sources": {
+    "dlbs": {
+     "name": "Studies in Chinese Religions",
+     "articles": 154,
+     "fulltext": 154,
+     "start": 2015,
+     "end": 2023,
+     "slug": "studies-in-chinese-relig-ec8df329",
+     "key": "research-private/dlbs/studies-in-chinese-relig-ec8df329.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 154,
+   "inSources": 1
+  },
+  {
+   "key": "大谷大学真宗総合研究所研究紀要",
+   "name": "大谷大学真宗総合研究所研究紀要",
+   "sources": {
+    "dlbs": {
+     "name": "大谷大学真宗総合研究所研究紀要",
+     "articles": 154,
+     "fulltext": 154,
+     "start": 1993,
+     "end": 2017,
+     "slug": "ef25fcfc",
+     "key": "research-private/dlbs/ef25fcfc.jsonl.gz",
+     "missingPage": 5
+    }
+   },
+   "total": 154,
+   "inSources": 1
+  },
+  {
+   "key": "駒澤短期大學佛教論集",
+   "name": "駒澤短期大學佛教論集",
+   "sources": {
+    "dlbs": {
+     "name": "駒澤短期大學佛教論集",
+     "articles": 154,
+     "fulltext": 154,
+     "start": 1995,
+     "end": 2006,
+     "slug": "c3ffb554",
+     "key": "research-private/dlbs/c3ffb554.jsonl.gz",
+     "missingPage": 3
+    }
+   },
+   "total": 154,
+   "inSources": 1
+  },
+  {
+   "key": "思想",
+   "name": "思想",
+   "sources": {
+    "dlbs": {
+     "name": "思想",
+     "articles": 153,
+     "fulltext": 0,
+     "start": 1922,
+     "end": 2006,
+     "slug": "d6f295a6",
+     "key": "research-private/dlbs/d6f295a6.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 153,
+   "inSources": 1
+  },
+  {
+   "key": "頻伽音隨刊",
+   "name": "頻伽音隨刊",
+   "sources": {
+    "dlbs": {
+     "name": "頻伽音隨刊",
+     "articles": 152,
+     "fulltext": 0,
+     "start": null,
+     "end": null,
+     "slug": "ecd5c4c6",
+     "key": "research-private/dlbs/ecd5c4c6.jsonl.gz",
+     "missingPage": 12
+    }
+   },
+   "total": 152,
+   "inSources": 1
+  },
+  {
+   "key": "JournalofDharmaStudiesAsianandTransculturalReligionPhilosophy&Ethics",
+   "name": "Journal of Dharma Studies: Asian and Transcultural Religion, Philosophy, & Ethics",
+   "sources": {
+    "dlbs": {
+     "name": "Journal of Dharma Studies: Asian and Transcultural Religion, Philosophy, & Ethics",
+     "articles": 150,
+     "fulltext": 150,
+     "start": 2018,
+     "end": 2024,
+     "slug": "journal-of-dharma-studie-352a6508",
+     "key": "research-private/dlbs/journal-of-dharma-studie-352a6508.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 150,
+   "inSources": 1
+  },
+  {
+   "key": "大和文華",
+   "name": "大和文華",
+   "sources": {
+    "dlbs": {
+     "name": "大和文華",
+     "articles": 150,
+     "fulltext": 0,
+     "start": 1951,
+     "end": 2019,
+     "slug": "45389c99",
+     "key": "research-private/dlbs/45389c99.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 150,
+   "inSources": 1
+  },
+  {
+   "key": "高田学報",
+   "name": "高田学報",
+   "sources": {
+    "dlbs": {
+     "name": "高田学報",
+     "articles": 150,
+     "fulltext": 1,
+     "start": 1958,
+     "end": 2022,
+     "slug": "82808264",
+     "key": "research-private/dlbs/82808264.jsonl.gz",
+     "missingPage": 0
+    }
+   },
+   "total": 150,
+   "inSources": 1
+  },
+  {
+   "key": "華梵人文學報",
+   "name": "華梵人文學報",
+   "sources": {
+    "airiti": {
+     "name": "華梵人文學報",
+     "articles": 143,
+     "fulltext": 143,
+     "start": "2003",
+     "end": "2015",
+     "to": "/research-data/press/huafan-humanities"
+    }
+   },
+   "total": 143,
+   "inSources": 1
+  },
+  {
+   "key": "法印學報",
+   "name": "法印學報",
+   "sources": {
+    "airiti": {
+     "name": "法印學報",
+     "articles": 127,
+     "fulltext": 127,
+     "start": "2011",
+     "end": "2025",
+     "to": "/research-data/press/dharma-seals"
+    }
+   },
+   "total": 127,
+   "inSources": 1
+  },
+  {
+   "key": "佛學研究中心學報",
+   "name": "佛學研究中心學報",
+   "sources": {
+    "airiti": {
+     "name": "佛學研究中心學報",
+     "articles": 121,
+     "fulltext": 120,
+     "start": "1996",
+     "end": "2007",
+     "to": "/research-data/press/ntu-buddhist-old"
+    }
+   },
+   "total": 121,
+   "inSources": 1
+  },
+  {
+   "key": "人間佛教研究",
+   "name": "人間佛教研究",
+   "sources": {
+    "airiti": {
+     "name": "人間佛教研究",
+     "articles": 107,
+     "fulltext": 107,
+     "start": "2011",
+     "end": "2024",
+     "to": "/research-data/press/humanistic-buddhism"
+    }
+   },
+   "total": 107,
+   "inSources": 1
+  },
+  {
+   "key": "華嚴學報",
+   "name": "華嚴學報",
+   "sources": {
+    "airiti": {
+     "name": "華嚴學報",
+     "articles": 91,
+     "fulltext": 60,
+     "start": "2011",
+     "end": "2026",
+     "to": "/research-data/press/huayen"
+    }
+   },
+   "total": 91,
+   "inSources": 1
+  },
+  {
+   "key": "浸神學刊",
+   "name": "浸神學刊",
+   "sources": {
+    "airiti": {
+     "name": "浸神學刊",
+     "articles": 90,
+     "fulltext": 90,
+     "start": "2010",
+     "end": "2025",
+     "to": "/research-data/press/baptist-annual"
+    }
+   },
+   "total": 90,
+   "inSources": 1
+  },
+  {
+   "key": "東方宗教研究",
+   "name": "東方宗教研究",
+   "sources": {
+    "ncl": {
+     "name": "東方宗教研究",
+     "articles": 81,
+     "fulltext": 0,
+     "start": 1987,
+     "end": 1996,
+     "slug": "dongfang"
+    }
+   },
+   "total": 81,
+   "inSources": 1
+  },
+  {
+   "key": "曠野",
+   "name": "曠野",
+   "sources": {
+    "airiti": {
+     "name": "曠野",
+     "articles": 59,
+     "fulltext": 59,
+     "start": "2009",
+     "end": "2021",
+     "to": "/research-data/press/wilderness"
+    }
+   },
+   "total": 59,
+   "inSources": 1
+  },
+  {
+   "key": "法光學壇",
+   "name": "法光學壇",
+   "sources": {
+    "ncl": {
+     "name": "法光學壇",
+     "articles": 56,
+     "fulltext": 0,
+     "start": 1996,
+     "end": 2004,
+     "slug": "faguang"
+    }
+   },
+   "total": 56,
+   "inSources": 1
+  }
+ ]
+}
