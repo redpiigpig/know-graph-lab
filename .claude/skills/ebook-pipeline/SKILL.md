@@ -373,6 +373,15 @@ G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/神學/
 - **No Supabase Storage bucket** — user explicitly forbade it. Local files only.
 - **Service-role key in `.env`** — never hardcode.
 - **PostgREST 1000-row default cap** — server endpoints that list ebooks use `.range(0, 1999)`.
+- **🚨 OCR 重複幻覺：結構完美、內容胡謅的書** — 視覺模型讀不動某一頁時不見得回空白，
+  可能把上一頁再吐一次，或卡在一句話上一直重印。這種書 chunk 數對、目錄齊、頁面覆蓋率足，
+  **純結構評分給到 90 分以上、直接通過上架閘門**。2026-09-07 全館稽核：3,991 本裡 83 本
+  中鏢（2.1%），其中 77 本當時是上線可讀的（《儒家神學新議》98% 的頁是複述、分數 96；
+  Septuagint 95%、分數 96）。判準集中在 `scripts/ocr_repetition.py`，三處共用：
+  寫入前擋（`ocr_with_gemini`）、上架前擋（`quality_sweep` 讀 Drive 全文複核）、
+  回頭稽核（`audit_ocr_repetition.py`）。
+  **DB 那份 100 字 preview 判不了這件事** —— 重複多半在頁的尾段，preview 只看得到開頭，
+  實測系統性低估（《性與宗教》Drive 判 70%、preview 判到連 flag 都不掛）。
 
 ---
 
