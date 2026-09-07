@@ -31,11 +31,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dadaodao_fulltext as df  # noqa: E402
 
 INDEX_URL = "http://www.laijohn.com/archives/pc-contents.htm"
-UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
+# 這是一位長老義務維護的個人史料庫，站方沒有 robots.txt，也就是說禮貌完全靠自律。
+# 用可辨識的 UA 而不是假扮 Chrome：對方若覺得流量礙事，至少找得到人。
+UA = {"User-Agent": "KnowGraphLab-research/1.0 (+redpiigpig@gmail.com)"}
 HARVEST = Path(r"C:/tmp/laijohn_pc.json")
 R2_TXT = "pct-fulltext/laijohn"
 INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/pct/laijohn-index.json"
-DELAY = 0.5           # 義務維護的個人站，放慢一點
+DELAY = 2.0           # 義務維護的個人站；每秒兩次太快了，2 秒才是合宜的速率
 MIN_CHARS = 150
 
 
@@ -52,14 +54,20 @@ def decode(raw: bytes) -> str:
        4,221 篇裡有 1,930 篇（45.7%）題名是亂碼。
        這就是 [[feedback_reader_silent_failures]] 那一類：畫面完全正常、內容全錯。
 
-    嗅探方式是兩種都解、取替換字元少的那個。不要只看 meta charset：
-    `/archives/pj/pj-contents.htm` 根本沒有 meta，卻是帶 BOM 的 UTF-8。
+    不要只看 meta charset：`/archives/pj/pj-contents.htm` 根本沒有 meta，
+    卻是帶 BOM 的 UTF-8。
+
+    🚨 **也不要用「比較替換字元數量」來猜**。第一版改成那樣，重抓完仍有 246 篇
+       是亂碼：Big5 幾乎接受任何位元組對，所以 UTF-8 的內容被 Big5 解時**不會**
+       產生替換字元，比大小就會一路倒向 Big5。
+       正解是 **UTF-8 自我驗證**：strict 解得開就一定是 UTF-8，解不開才是 Big5。
     """
     if raw[:3] == b"\xef\xbb\xbf":
-        return raw[3:].decode("utf-8", "replace")
-    cands = [(raw.decode(enc, "replace"), enc) for enc in ("big5", "utf-8")]
-    text, _ = min(cands, key=lambda c: c[0].count("�"))
-    return text
+        raw = raw[3:]
+    try:
+        return raw.decode("utf-8")            # strict：過了就確定是 UTF-8
+    except UnicodeDecodeError:
+        return raw.decode("big5", "replace")
 
 
 def get(url: str):
@@ -122,11 +130,42 @@ def page_text(html: str):
     return title, "\n".join(lines)
 
 
-def process(limit=0):
+MOJIBAKE = ("�", "�", "嚗", "蝢", "瘣", "�")
+
+
+def looks_mojibake(s):
+    """題名裡出現替換字元、或 Big5 誤解 UTF-8 時特有的那幾個字，就當它壞了。
+
+    這幾個字（嚗蝢瘣）不是罕見字，是 UTF-8 位元組被 Big5 解出來的典型產物；
+    正常的台灣人名地名幾乎不會用到。
+    """
+    t = s or ""
+    return any(m in t for m in MOJIBAKE)
+
+
+def process(limit=0, redo=False, repair=False):
+    """redo=True 時忽略 R2 既有、整批重抓。
+
+    🚨 2026-09-06 需要這個旗標的理由：`get()` 原本寫死 decode("big5")，而站上
+       同時有 UTF-8 的頁面，於是已收的 4,221 篇裡 1,930 篇（45.7%）題名是亂碼。
+       編碼修好了，但**舊資料不會自己好**——R2 上那批仍是當初解錯碼存進去的。
+       沒有這個旗標的話，「已經抓過就跳過」會讓修正永遠套不到既有資料上。
+    """
     rows = json.loads(HARVEST.read_text(encoding="utf-8"))
-    have = df.r2_existing_keys(R2_TXT)
+    have = set() if redo else df.r2_existing_keys(R2_TXT)
+    # 🚨 `rows` 是**整本帳本**，結尾會原樣寫回檔案。所以要縮小處理範圍時，
+    #    只能另外開一個 `targets`，**絕對不可以把 `rows` 換成過濾後的子集**——
+    #    第一版那樣寫，補抓 146 篇之後帳本就從 4,234 筆被覆寫成 146 筆，
+    #    其餘 4,088 筆的題名與字數全沒了，而過程一句錯誤訊息都沒有。
+    targets = rows
+    if repair:
+        # 只補抓題名壞掉的那些。整批重跑要 2.3 小時、四千多次請求打在一個
+        # 義務維護的個人站上，為了兩百多篇不值得。
+        targets = [r for r in rows if looks_mojibake(r.get("title"))]
+        have = set()
+        print(f"補抓模式：題名疑似亂碼的 {len(targets)} 篇", flush=True)
     done = skip = fail = 0
-    for r in rows:
+    for r in targets:
         key = f"{R2_TXT}/{slug_for(r['url'])}.txt"
         if key in have:
             skip += 1
@@ -185,11 +224,15 @@ def main():
     ap.add_argument("--process", action="store_true")
     ap.add_argument("--publish", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--redo", action="store_true",
+                    help="忽略 R2 既有、整批重抓（編碼修正後要用）")
+    ap.add_argument("--repair", action="store_true",
+                    help="只補抓題名仍是亂碼的那些")
     args = ap.parse_args()
     if args.harvest:
         harvest()
     if args.process:
-        process(args.limit)
+        process(args.limit, args.redo, args.repair)
     if args.publish:
         publish()
     if not (args.harvest or args.process or args.publish):
