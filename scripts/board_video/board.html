@@ -3,6 +3,7 @@
 <title>無限黑板</title>
 <style>
   html, body { margin: 0; background: #0d1512; overflow: hidden; }
+  :root { --ink: #eef3e9; }
   #viewport { position: relative; width: 1920px; height: 1080px; overflow: hidden;
     background:
       radial-gradient(ellipse at 30% 20%, #1d2b25 0%, #131d19 45%, #0b100e 100%);
@@ -16,23 +17,31 @@
     mix-blend-mode: screen;
   }
   #board { position: absolute; transform-origin: 0 0; will-change: transform; }
-  .node { position: absolute; box-sizing: border-box; padding: 34px 40px 30px;
+  .node { position: absolute; box-sizing: border-box; padding: 30px 36px 26px;
+    display: flex; gap: 26px; align-items: flex-start; width: max-content;
     border: 3px solid rgba(232,240,228,.55); border-radius: 26px;
     color: #eef3e9; opacity: 0;
     font-family: "標楷體", "DFKai-SB", "Microsoft JhengHei", serif;
     background: rgba(255,255,255,.018);
   }
-  .node .ttl { font-size: 62px; letter-spacing: 3px; margin-bottom: 22px;
+  .node .ttl { font-size: 58px; white-space: nowrap; letter-spacing: 3px; margin-bottom: 22px;
     text-shadow: 0 0 14px rgba(255,255,255,.35); }
   .node ul { margin: 0; padding-left: 46px; }
-  .node li { font-size: 42px; line-height: 1.55; margin-bottom: 10px; opacity: 0;
+  .node li { font-size: 40px; line-height: 1.5; margin-bottom: 8px; opacity: 0; white-space: nowrap;
     text-shadow: 0 0 9px rgba(255,255,255,.22); }
-  .node img { position: absolute; right: 34px; bottom: 30px; max-width: 42%; max-height: 320px;
+  .node img { flex: 0 0 auto; width: 300px; max-height: 300px; object-fit: cover; align-self: center;
     border-radius: 10px; filter: saturate(.85) contrast(1.05); opacity: .92;
     box-shadow: 0 0 0 3px rgba(238,243,233,.35); }
-  .node.mascot img { max-height: 260px; max-width: 30%; box-shadow: none; opacity: 1; }
-  .node ul { max-width: 58%; }
-  .node.noimg ul { max-width: 100%; }
+  .node.mascot img { width: 240px; box-shadow: none; opacity: 1; object-fit: contain; }
+  .node .txt { flex: 1 1 auto; min-width: 0; }
+  .node .icon { flex: 0 0 auto; width: 300px; height: 300px; align-self: center; }
+  .node .icon svg { width: 100%; height: 100%; overflow: visible; }
+  .node .icon svg * { stroke: var(--ink, #eef3e9) !important; fill: none !important; stroke-width: 2.4; }
+  .rv { display: inline-block; clip-path: inset(0 100% 0 0); }
+  #hand { position: absolute; width: 210px; pointer-events: none; opacity: 0;
+    transform-origin: 6% 6%; z-index: 6; }
+  #wipe { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    background: linear-gradient(100deg, transparent 0 38%, rgba(255,255,255,.42) 45% 55%, transparent 62% 100%); }
   /* 依類別給不同粉筆色 */
   .k-intro { border-color: rgba(255,244,200,.6); } .k-intro .ttl { color: #ffeeb0; }
   .k-scene { border-color: rgba(190,225,255,.55); } .k-scene .ttl { color: #bfe2ff; }
@@ -61,6 +70,7 @@
     object-fit: cover; opacity: 0; }
 
   /* ══ 風格 B：米色手帳筆記 ══ */
+  body.theme-paper { --ink: #2c2723; }
   body.theme-paper #viewport { background: #efe4cc; }
   body.theme-paper #viewport::after { opacity: .10; mix-blend-mode: multiply;
     background-image:
@@ -86,6 +96,7 @@
   body.theme-paper #sub { color: #241f1a; text-shadow: 0 2px 10px rgba(255,255,255,.9); }
 
   /* ══ 風格 C：深色知識圖譜霓虹 ══ */
+  body.theme-neon { --ink: #9fe8ff; }
   body.theme-neon #viewport { background: radial-gradient(ellipse at 50% 40%, #10182b 0%, #080c16 60%, #04060c 100%); }
   body.theme-neon #viewport::after { opacity: .22; mix-blend-mode: screen;
     background-image:
@@ -117,21 +128,24 @@
   <div id="board"><svg id="edges"></svg></div>
   <div id="chapter"></div>
   <img id="mascot" alt="">
+  <img id="hand" alt="">
+  <div id="wipe"></div>
   <div id="sub"></div>
   <img id="cover" alt="">
 </div>
 <script>
-const S = { data: null, nodes: {}, els: {}, edges: [], showSub: true };
+const S = { data: null, nodes: {}, els: {}, edges: [], showSub: true, writes: [], strokes: [] };
 
 function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
 function lerp(a, b, u) { return a + (b - a) * u; }
 
 function camFor(node, pad) {
-  pad = pad === undefined ? 250 : pad;
+  pad = pad === undefined ? 140 : pad;
   const nh = node._h || node.h;          // _h 是排版後量到的真實高度
-  const w = node.w + pad * 2, h = nh + pad * 2;
-  let s = Math.min(1920 / w, 1080 / h);
-  s = Math.max(.11, Math.min(.85, s));
+  const w = (node._w || node.w) + pad * 2, h = nh + pad * 2;
+  // 底下那條字幕帶不算進可用高度，卡片才不會被壓到
+  let s = Math.min(1760 / w, 820 / h);
+  s = Math.max(.11, Math.min(1.5, s));
   return { cx: node.x + node.w / 2, cy: node.y + nh / 2, s: s };
 }
 
@@ -139,6 +153,7 @@ function init(data, opts) {
   S.data = data;
   document.body.className = 'theme-' + ((opts && opts.theme) || 'chalk');
   if (opts && opts.mascotUrl) document.getElementById('mascot').src = opts.mascotUrl;
+  if (opts && opts.handUrl) document.getElementById('hand').src = opts.handUrl;
   if (opts && opts.coverUrl) document.getElementById('cover').src = opts.coverUrl;
   S.coverHold = (opts && opts.coverHold) || 0;   // 封面卡停留幾秒
   S.showSub = !(opts && opts.noSub);
@@ -154,20 +169,59 @@ function init(data, opts) {
     S.nodes[n.id] = n;
     const d = document.createElement('div');
     d.className = 'node k-' + n.kind;
-    d.style.cssText += `left:${n.x}px;top:${n.y}px;width:${n.w}px;` +
+    d.style.cssText += `left:${n.x}px;top:${n.y}px;max-width:${n.w}px;` +
       `transform:rotate(${(n.id.charCodeAt(2) % 5 - 2) * 0.22}deg)`;
     const src = (opts && opts.images && opts.images[n.id]) || null;
     const img = src ? `<img src="${src}">` : '';
     if (!src) d.classList.add('noimg');
     if (opts && opts.mascots && opts.mascots.includes(n.id)) d.classList.add('mascot');
-    d.innerHTML = `<div class="ttl">${n.title}</div><ul>` +
-      n.bullets.map(b => `<li>${b}</li>`).join('') + `</ul>` + img;
+    const icon = (opts && opts.icons && opts.icons[n.id])
+      ? `<div class="icon">${opts.icons[n.id]}</div>` : '';
+    d.innerHTML = `<div class="txt"><div class="ttl"><span class="rv">${n.title}</span></div><ul>` +
+      n.bullets.map(b => `<li><span class="rv">${b}</span></li>`).join('') + `</ul></div>` + icon + img;
     board.appendChild(d);
     S.els[n.id] = d;
   });
 
+  // 書寫時間表：節點第一次被講到時寫標題，每個條目在它被 reveal 的那一刻寫出來
+  const firstCue = {};
+  data.cues.forEach((c, i) => { if (firstCue[c.node] === undefined) firstCue[c.node] = c; });
+  data.nodes.forEach(n => {
+    const el = S.els[n.id];
+    if (!el) return;
+    const f = firstCue[n.id];
+    if (!f) return;
+    const items = [];
+    items.push({ el: el.querySelector('.ttl .rv'), t: f.t, dur: Math.min(1.1, 0.16 + n.title.length * 0.07) });
+    const lis = el.querySelectorAll('li .rv');
+    n.bullets.forEach((b, k) => {
+      const c = data.cues.find(c => c.node === n.id && c.reveal > k);
+      if (c && lis[k]) items.push({ el: lis[k], t: c.t, dur: Math.min(1.2, 0.18 + b.length * 0.06) });
+    });
+    S.writes.push(...items);
+    // 線稿：跟著標題之後一筆一筆畫
+    const svg = el.querySelector('.icon svg');
+    if (svg) {
+      const paths = [...svg.querySelectorAll('path, line, polyline, polygon, circle, ellipse, rect')];
+      let acc = f.t + 0.9;
+      paths.forEach(pt => {
+        let len = 0;
+        try { len = pt.getTotalLength ? pt.getTotalLength() : 0; } catch (e) { len = 0; }
+        if (!len) { len = 120; }
+        pt.style.strokeDasharray = len;
+        pt.style.strokeDashoffset = len;
+        const dur = Math.max(0.18, Math.min(0.85, len / 260));
+        S.strokes.push({ el: pt, len: len, t: acc, dur: dur });
+        acc += dur * 0.72;
+      });
+    }
+  });
+
   // 量真實高度：節點內容多半比規格矮，不量的話鏡頭會對著一大片空白
-  data.nodes.forEach(n => { n._h = Math.max(S.els[n.id].offsetHeight, 240); });
+  data.nodes.forEach(n => {
+    n._h = Math.max(S.els[n.id].offsetHeight, 240);
+    n._w = Math.max(S.els[n.id].offsetWidth, 260);   // 卡片寬度隨內容，鏡頭要照實際的算
+  });
 
   // 連線：兩端節點都出現後才畫，畫的順序照 cue 出現順序
   const firstSeen = {};
@@ -214,8 +268,39 @@ function seek(t) {
     if (!shown[id]) { el.style.opacity = 0; continue; }
     el.style.opacity = (id === cue.node) ? 1 : .82;
     const lis = el.querySelectorAll('li');
-    for (let k = 0; k < lis.length; k++) lis[k].style.opacity = k < (reveal[id] || 0) ? 1 : 0;
+    for (let k = 0; k < lis.length; k++) {
+      const w = S.writes.find(w => w.el === lis[k].querySelector('.rv'));
+      lis[k].style.opacity = (w && t >= w.t) ? 1 : 0;   // 沒寫到連項目符號都不出現
+    }
   }
+
+  // 書寫：文字由左往右被「寫」出來，手停在筆尖
+  let penX = null, penY = null;
+  S.writes.forEach(w => {
+    if (!w.el) return;
+    const u = Math.max(0, Math.min(1, (t - w.t) / w.dur));
+    w.el.style.clipPath = `inset(0 ${(100 * (1 - u)).toFixed(2)}% 0 0)`;
+    if (u > 0 && u < 1) {
+      const r = w.el.getBoundingClientRect();
+      if (r.width) { penX = r.left + r.width * u; penY = r.bottom - r.height * 0.12; }
+    }
+  });
+  S.strokes.forEach(s => {
+    const u = Math.max(0, Math.min(1, (t - s.t) / s.dur));
+    s.el.style.strokeDashoffset = s.len * (1 - u);
+    if (u > 0 && u < 1 && penX === null && s.el.getPointAtLength) {
+      try {
+        const pt = s.el.getPointAtLength(s.len * u).matrixTransform(s.el.getScreenCTM());
+        penX = pt.x; penY = pt.y;
+      } catch (e) {}
+    }
+  });
+  const hand = document.getElementById('hand');
+  if (penX !== null) {
+    hand.style.opacity = 1;
+    hand.style.left = (penX - 14) + 'px';
+    hand.style.top = (penY - 10) + 'px';
+  } else hand.style.opacity = 0;
 
   S.edges.forEach(e => {
     const u = Math.max(0, Math.min(1, (t - e.t0) / .8));
@@ -242,7 +327,7 @@ function seek(t) {
   const held = Math.max(0, (t - cue.t - T)) / Math.max(.1, cue.dur - T);
   const drift = 1 + .022 * Math.min(1, Math.max(0, held));
   const s = cam.s * drift;
-  const bx = 960 - cam.cx * s, by = 540 - cam.cy * s;
+  const bx = 960 - cam.cx * s, by = 470 - cam.cy * s;
   document.getElementById('board').style.transform =
     `translate(${bx.toFixed(2)}px, ${by.toFixed(2)}px) scale(${s.toFixed(5)})`;
 
@@ -267,6 +352,14 @@ function seek(t) {
   const mas = document.getElementById('mascot');
   const mIn = S.coverHold > 0 ? S.coverHold + 0.8 : 0.5;
   mas.style.opacity = t < mIn ? 0 : Math.min(1, (t - mIn) / 0.6);
+
+  // 換幕：一道擦板掃過去
+  const wipe = document.getElementById('wipe');
+  if (chap && t - chapT < 0.75) {
+    const u = (t - chapT) / 0.75;
+    wipe.style.opacity = 1;
+    wipe.style.transform = `translateX(${(-100 + u * 200).toFixed(1)}%)`;
+  } else wipe.style.opacity = 0;
 
   // 字幕（配音稿用，正式版可關）
   if (S.showSub) {

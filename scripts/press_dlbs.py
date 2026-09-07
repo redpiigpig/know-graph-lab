@@ -93,7 +93,15 @@ def session():
 
 
 def fetch(s, name, start):
-    q = f'SOURCETOPIC:"{name}"'
+    # 🚨 **查 `ST` 不要查 `SOURCETOPIC`。** 兩者看起來都是刊名，但差很多：
+    #    ST 是精確的字串欄位（facet 用的就是它），SOURCETOPIC 是經過分析的文字欄位。
+    #    後果有兩種，而且都不會報錯：
+    #      ① 日文刊名整批查不到——`SOURCETOPIC:"六条学報"` 回 0，`ST:"六条学報"` 回 2,013。
+    #         2026-09-06 第一版用 SOURCETOPIC 掃全庫，72 種刊實得 0 筆而看起來只是
+    #         「這些刊剛好沒東西」。
+    #      ② phrase 前綴污染——`SOURCETOPIC:"南瀛佛教"` 回 12,028（把《南瀛佛教會會報》
+    #         也算進去），`ST:"南瀛佛教"` 剛好 10,151。
+    q = f'ST:"{name}"'
     url = (f"{SOLR}?q={urllib.parse.quote(q, safe='')}"
            f"&wt=json&rows={ROWS}&start={start}&fl={urllib.parse.quote(FIELDS)}")
     r = s.get(url, timeout=180)
@@ -114,8 +122,11 @@ def harvest(s, slug, name, expected):
             #    一起撈進來**（12,028 vs facet 的 10,151，差的 1,877 正好是會報）。
             #    不逐筆核對刊名的話，兩份刊會互相灌水、合併時還會重複計一次。
             #    臺大的 SOURCETOPIC 寫成「菩提樹=Bodhedrum」，比對取「=」前那半。
+            # 保險起見再核一次刊名。🚨 **兩邊都要 strip**：facet 回來的刊名帶著
+            #    不斷行空白（`印度學佛教學研究\xa0`），只 strip 一邊的話 14,715 筆
+            #    會全部被這一行擋掉，而輸出只顯示「實得 0 筆」。
             got = (d.get("SOURCETOPIC") or "").split("=")[0].strip()
-            if got != name:
+            if got != name.strip():
                 continue
             path = d.get("FULLTEXTPATH") or ""
             # 🚨 FULLTEXTPATH **有時絕對有時相對**，兩種都要處理，
@@ -156,6 +167,32 @@ def harvest(s, slug, name, expected):
           f"{data['years']['min']}–{data['years']['max']}", flush=True)
     return data
 
+
+
+
+# ---------------------------------------------------------------- 全刊掃描
+
+MIN_ARTICLES = 150      # 低於這個筆數的刊多半是零星幾篇的合輯，先不收
+
+
+def slugify(name):
+    """刊名 → 檔名。中文檔名在跨平台同步時會出事，一律轉雜湊。"""
+    import hashlib
+    ascii_part = re.sub(r"[^A-Za-z0-9]+", "-", name).strip("-").lower()[:24]
+    h = hashlib.sha1(name.encode("utf-8")).hexdigest()[:8]
+    return f"{ascii_part}-{h}" if ascii_part else h
+
+
+def all_journals(s):
+    """用 facet 取全庫刊名清單，不要手打。
+
+    🚨 facet 值裡有一個**空字串鍵佔 103,921 筆**——那是沒有 SOURCETOPIC 的書籍，
+       不是期刊。不濾掉的話會拿它去查，然後撈回一堆書。
+    """
+    url = (f"{SOLR}?q=*%3A*&wt=json&rows=0&facet=on&facet.field=ST"
+           f"&facet.limit=400&facet.mincount={MIN_ARTICLES}")
+    f = s.get(url, timeout=180).json()["facet_counts"]["facet_fields"]["ST"]
+    return [(f[i], f[i + 1]) for i in range(0, len(f), 2) if f[i].strip()]
 
 
 # ---------------------------------------------------------------- 南瀛全文
@@ -267,15 +304,31 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--harvest", action="store_true")
     ap.add_argument("--only")
+    ap.add_argument("--all", action="store_true",
+                    help="照 facet 掃全庫所有 ≥150 筆的刊，不只手選那 32 份")
     ap.add_argument("--nanying-fulltext", action="store_true",
                     help="抓《南瀛佛教》161 期的期別全文（Big5 → R2）")
     a = ap.parse_args()
-    if not (a.harvest or a.nanying_fulltext):
+    if not (a.harvest or a.nanying_fulltext or a.all):
         ap.print_help()
         return
     s = session()
     if a.nanying_fulltext:
         nanying_fulltext(s)
+        return
+    if a.all:
+        named = {n: sl for sl, (n, _) in JOURNALS.items()}
+        rows = all_journals(s)
+        print(f"facet 取得 {len(rows)} 種刊（≥{MIN_ARTICLES} 筆）")
+        for name, cnt in rows:
+            slug = named.get(name) or slugify(name)
+            if (OUT / f"{slug}.json").exists():
+                continue
+            time.sleep(DELAY)
+            try:
+                harvest(s, slug, name, cnt)
+            except Exception as e:                # noqa: BLE001
+                print(f"  ✗ {name[:24]}：{str(e)[:70]}", flush=True)
         return
     for slug, (name, exp) in JOURNALS.items():
         if a.only and a.only not in name:

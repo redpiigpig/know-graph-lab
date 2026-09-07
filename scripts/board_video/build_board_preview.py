@@ -146,10 +146,10 @@ D.nodes.forEach(n => {
   nodeById[n.id] = n;
   const d = document.createElement('div');
   d.className = 'node k-' + n.kind + (D.images[n.id] ? '' : ' noimg');
-  d.style.cssText += `left:${n.x}px;top:${n.y}px;width:${n.w}px;opacity:1;` +
+  d.style.cssText += `left:${n.x}px;top:${n.y}px;max-width:${n.w}px;opacity:1;` +
     `transform:rotate(${(n.id.charCodeAt(2) % 5 - 2) * 0.22}deg)`;
-  d.innerHTML = `<div class="ttl">${n.title}</div><ul>` +
-    n.bullets.map(b => `<li style="opacity:1">${b}</li>`).join('') + '</ul>' +
+  d.innerHTML = `<div class="txt"><div class="ttl">${n.title}</div><ul>` +
+    n.bullets.map(b => `<li style="opacity:1">${b}</li>`).join('') + '</ul></div>' +
     (D.images[n.id] ? `<img src="${D.images[n.id]}">` : '');
   d.onclick = () => showTip(n);
   board.appendChild(d);

@@ -316,6 +316,26 @@ GET https://www.gaya.org.tw/library/paper_index/index.asp
 **國圖不收**（各試 3–4 種刊名寫法，全部真 0）：曠野、新使者、使者、台灣教會公報、
 基督教論壇報、道雜誌。宇宙光只有 32 筆等同沒收。基督教側幾乎補不到東西。
 
+### 臺大佛圖篇目：400 刊 33 萬筆（篇目在 R2，git 只留統計）
+
+`scripts/press_dlbs.py --all` 抓（facet ≥150 筆的刊全掃），
+`scripts/press_dlbs_publish.py --publish` 把逐筆篇目推到
+R2 `research-private/dlbs/<slug>.jsonl.gz`，git 只留
+`public/content/research-data/press/dlbs-index.json`（86 KB，各刊統計＋R2 key）。
+
+**400 刊 / 331,389 篇目 / 117,177 有全文。** 整批放 git 是 129 MB，而其中
+一大半（日文韓文的佛教學期刊、敦煌學、宗派紀要）跟博論沒有直接關係，
+是掃全庫順手收的——放 git 等於每個 clone 都付那個代價，而這一層只是要「查得到」。
+分工照 TCNN 那一套（全文在 R2、index 在 git）。
+
+🚨 遷移的順序是 **上傳 → 驗 key 真的在 → 才刪本地檔**。反過來寫的話，
+   R2 掛掉那一刻資料就沒了，而腳本會照常印「完成」。
+
+🚨 **查 `ST` 不要查 `SOURCETOPIC`**（見 press_dlbs.py 檔頭）。第一次全掃用了
+   SOURCETOPIC，**72 種刊實得 0 筆**而看起來只是「這些刊剛好沒東西」，
+   少收 46,724 筆。另外 facet 回來的刊名帶不斷行空白（`印度學佛教學研究 `），
+   過濾時兩邊都要 strip，否則那 14,715 筆會被自己的核對行擋掉。
+
 ### 南瀛佛教（已建管線，2026-09-06）
 
 `scripts/press_dlbs.py --harvest --only 南瀛` → 篇目 12,028 筆（卷期 100% 齊）

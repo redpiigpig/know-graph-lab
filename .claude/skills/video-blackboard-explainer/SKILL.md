@@ -45,6 +45,9 @@ description: 把一份寫好的解說稿做成「無限黑板」風格的 YouTub
   `Referer: https://ccmixter.org/` 否則檔案 403）與 archive.org netlabels；音效才用
   Openverse，每次查詢間隔 12 秒。
 - **archive.org 會給整張專輯的單檔**：抓到 194MB 的 mp3。抓完要按大小過濾（>30MB 丟掉）。
+- **單張 PNG 餵給 fade 會被凍住**：`-i card.png` 沒有 `-loop 1` 就只有一格，
+  `fade=alpha` 把那一格停在 alpha=0，overlay 出來整張看不見（標題卡整段消失）。
+  疊圖卡一律 `-loop 1 -framerate 30 -t <長度>`。
 - **yt-dlp 版本落後就是 403**：YouTube 一改動就掛，先 `pip install -U yt-dlp` 再說。
 
 ## 時間軸與配音的關係
@@ -52,6 +55,18 @@ description: 把一份寫好的解說稿做成「無限黑板」風格的 YouTub
 第一版時間軸是估算的（`--cps`）。配音錄好後兩條路：整體語速微調
 （`make_cues.py --cps 4.2`），或用 whisper 逐句時間戳改寫 `cues.json` 的 `t`／`dur`。
 鏡頭運動、條目浮現、連線動畫全部由 `cues.json` 驅動，重跑 render 即可。
+
+## 片頭（實拍 → 海報 → 序幕）
+
+使用者自己錄的實拍片段是片頭的主體，`make_opening.py` 把它接成：
+開場白（真人原音）→ 白閃 → 海報全屏 3.6 秒 → 序幕正文。
+順序是他定的：**問好之後海報才出現**。
+
+- 先跑 `transcribe_takes.py` 拿逐句時間戳，用它決定頭尾要切掉多少、哪一句要切畫面。
+- 正文段落的畫面會在指定句子切到劇照／預告片／自製暴雷卡再切回實拍，
+  聲音不受影響，因為音軌是整段最後才 mux 回去。
+- 字幕文字不要直接用 whisper 的結果（會出現「吉利卡挖」「多瑪珠」「等牙便術」），
+  在 `SUBS_GREET` / `SUBS_PROLOGUE` 手動訂正，時間戳照用。
 
 ## 版面固定元素
 

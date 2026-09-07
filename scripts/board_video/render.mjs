@@ -52,6 +52,18 @@ const own = {
 const mascots = ['N73'];
 for (const [id, f] of Object.entries(own)) if (fs.existsSync(f)) images[id] = dataUri(f);
 
+// 線稿圖示：整段 SVG 直接塞進 DOM，才能一筆一筆描出來
+const iconDir = path.join(PROJ, '素材', '線稿');
+const icons = {};
+for (const n of data.nodes) {
+  if (!n.icon) continue;
+  const f = path.join(iconDir, n.icon + '.svg');
+  if (fs.existsSync(f)) icons[n.id] = fs.readFileSync(f, 'utf8').replace(/<\?xml[^>]*>/, '');
+}
+const handFile = path.join(iconDir, '手_270D.svg');
+const handUrl = fs.existsSync(handFile)
+  ? 'data:image/svg+xml;base64,' + fs.readFileSync(handFile).toString('base64') : null;
+
 const avatar = path.join(PROJ, '素材', '多馬豬', '多馬豬_圓形.png');
 const mascotUrl = fs.existsSync(avatar) ? dataUri(avatar) : null;
 const coverFile = path.join(PROJ, '素材', '封面', '影片封面.png');
@@ -65,13 +77,16 @@ const ff = spawn('ffmpeg', [
 ], { stdio: ['pipe', 'ignore', 'pipe'] });
 let ffErr = '';
 ff.stderr.on('data', (d) => { ffErr = (ffErr + d.toString()).slice(-2000); });
+// 一定要在 spawn 當下就把結束事件接起來：等到最後才 on('close') 的話，
+// 事件早就發過了，await 會永遠不落地（node 會以 exit code 13 收場）。
+const ffClosed = new Promise((r) => { ff.on('close', r); ff.on('exit', r); });
 
 const browser = await chromium.launch({
   args: ['--force-color-profile=srgb', '--font-render-hinting=none', '--disable-lcd-text'],
 });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
 await page.goto(pathToFileURL(path.join(HERE, 'board.html')).href);
-await page.evaluate(([d, o]) => window.init(d, o), [data, { images, noSub, mascots, theme, mascotUrl, coverUrl, coverHold }]);
+await page.evaluate(([d, o]) => window.init(d, o), [data, { images, noSub, mascots, theme, mascotUrl, coverUrl, coverHold, icons, handUrl }]);
 await page.waitForTimeout(400);
 
 const total = Math.ceil((to - from) * fps);
@@ -89,5 +104,7 @@ for (let f = 0; f < total; f++) {
 }
 ff.stdin.end();
 await browser.close();
-const code = await new Promise((r) => ff.on('close', r));
+const code = await ffClosed;
 console.log(`\n${code === 0 ? '完成' : 'ffmpeg 失敗\n' + ffErr}：${path.join(PROJ, 'out', outName)}`);
+
+process.exit(code === 0 ? 0 : 1);
