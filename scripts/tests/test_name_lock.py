@@ -98,10 +98,10 @@ class TestAudit:
 
 
 class TestRegistry:
-    """實際掛在豪斯傳記上的六條鎖 —— 改動要有意識。"""
+    """實際掛在豪斯傳記上的鎖 —— 改動要有意識。"""
 
-    def test_six_locks_and_all_shapes_valid(self):
-        assert len(nl.HOWES_LOCKS) == 6
+    def test_lock_count_and_all_shapes_valid(self):
+        assert len(nl.HOWES_LOCKS) == 16
         for lk in nl.HOWES_LOCKS:
             assert lk.canon and lk.en and lk.repl
             for frm, to in lk.repl:
@@ -112,6 +112,16 @@ class TestRegistry:
     def test_take_and_yushi_and_nobu_are_locked(self):
         keys = {lk.key for lk in nl.HOWES_LOCKS}
         assert {"take", "yushi", "nobu", "parmalee", "gundert"} <= keys
+
+    def test_romaji_japanese_names_are_locked(self):
+        """第二批：羅馬字日本名被音譯成假漢字，每一處看起來都很正常。"""
+        keys = {lk.key for lk in nl.HOWES_LOCKS}
+        assert {"takagi", "sakai", "masaike", "azegami",
+                "nakada", "saito", "osanai"} <= keys
+
+    def test_every_lock_key_is_unique(self):
+        keys = [lk.key for lk in nl.HOWES_LOCKS]
+        assert len(keys) == len(set(keys))
 
 
 class TestTally:
@@ -125,3 +135,36 @@ class TestTally:
         assert zh == "淺田信寫信。淺田信離開。"
         assert n == 2
         assert t == {("n", "淺田延子", "淺田信"): 1, ("n", "延子", "淺田信"): 1}
+
+
+class TestVariantForms:
+    """日文新字體／簡體混進繁中譯文。
+
+    🚨 但**段落裡有日文假名就整段不動** —— 那是引用的日文原文，
+    「弁証の要なし、また教会の要なし」裡的 証／会 本來就該是日文字形，
+    改成證／會反而是把原文改壞。
+    """
+
+    def test_japanese_forms_normalised(self):
+        zh, n = nl.normalize_forms("歷史將証明，他説明了雜誌的内容。")
+        assert zh == "歷史將證明，他說明了雜誌的內容。"
+        assert n == 3
+
+    def test_paragraph_containing_kana_is_left_alone(self):
+        src = "愛によって立ちて抵抗の要なし、弁証の要なし、また教会の要なし。"
+        zh, n = nl.normalize_forms(src)
+        assert zh == src
+        assert n == 0
+
+    def test_katakana_also_guards(self):
+        src = "『インマヌエル』の教会について。"
+        assert nl.normalize_forms(src) == (src, 0)
+
+    def test_clean_traditional_text_untouched(self):
+        src = "歷史將證明，他說明了雜誌的內容。"
+        assert nl.normalize_forms(src) == (src, 0)
+
+    def test_qi_keguo_is_not_a_variant(self):
+        """齊克果（Kierkegaard）的『齊』是對的，別當成齋的錯字。"""
+        src = "內村在齊克果的思想中認出了相似的教會觀，弟子們齊心協力。"
+        assert nl.normalize_forms(src) == (src, 0)

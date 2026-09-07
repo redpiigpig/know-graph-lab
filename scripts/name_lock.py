@@ -68,6 +68,40 @@ def repair_paragraph(src: str, zh: str, locks, tally: dict = None) -> tuple:
     return zh, total
 
 
+# 日文新字體／簡體 → 繁體。只收「在繁中裡一定是錯的」那些，
+# 有疑義的（例：齊克果的齊）一律不收 —— 這張表寧可漏也不可錯殺。
+VARIANT_FORMS = {
+    "内": "內", "薫": "薰", "彦": "彥", "証": "證", "説": "說", "会": "會",
+    "徳": "德", "沢": "澤", "実": "實", "学": "學", "医": "醫", "図": "圖",
+    "読": "讀", "変": "變", "戦": "戰", "経": "經", "関": "關", "駅": "驛",
+}
+
+_KANA_RE = re.compile(r"[ぁ-んァ-ヶー]")
+
+
+def has_kana(text: str) -> bool:
+    """段落裡有假名＝引用的日文原文。"""
+    return bool(_KANA_RE.search(text or ""))
+
+
+def normalize_forms(zh: str) -> tuple:
+    """日文字形／簡體 → 繁體。回傳 (改寫後, 改動次數)。
+
+    🚨 **段落裡有日文假名就整段不動**：那是引用的日文原文，
+    「弁証の要なし、また教会の要なし」裡的 証／会 本來就該是日文字形，
+    改成證／會等於把原文改壞。
+    """
+    if has_kana(zh):
+        return zh, 0
+    n = 0
+    for bad, good in VARIANT_FORMS.items():
+        c = zh.count(bad)
+        if c:
+            zh = zh.replace(bad, good)
+            n += c
+    return zh, n
+
+
 def audit(pairs, locks) -> list:
     """找出「英文提到這個人、中文卻還留著變體」的段落。"""
     out = []
@@ -115,8 +149,95 @@ HOWES_LOCKS = [
     ),
     Lock(
         key="gundert", en=r"\bGundert\b",
-        repl=[("貢德爾特", "貢德特"), ("根德特", "貢德特")],
+        repl=[("貢德爾特", "貢德特"), ("根德特", "貢德特"),
+              ("岡德特", "貢德特"), ("古德特", "貢德特"),
+              ("格恩德爾特", "貢德特")],
         canon="貢德特",
+        note="Wilhelm Gundert（1880-1971），德國宣教士、日本學者、赫塞的表兄。"
+             "🚨 第一輪只抓到三種，因為我拿『貢／昆／根』猜首字去撈——"
+             "『岡德特』『古德特』首字全不同就漏了。第三輪才發現還有『格恩德爾特』"
+             "——它連共同尾字都不同（德爾特），從尾字反查一樣漏。"
+             "🚨 六種寫法。真正可靠的做法是拿查得到的本名去對，不是從中譯自己找規律。",
+    ),
+    # ── 第二批（2026-09-07）：羅馬字日本人名被「音譯成漢字」而不是還原本字 ──
+    #
+    # 這一批比第一批更難發現：第一批是同一個人有好幾種寫法（自己就露餡），
+    # 這一批是**每一處都寫得像個正常的日本名字**，只是全都不是那個人的名字。
+    # 「高木貞幹」「正池目玉」看起來都毫無異狀 —— 除非你認得那個人。
+    # 判準一律是查得到的本字，不是我覺得音近。
+    Lock(
+        key="takagi", en=r"\bTakagi\b",
+        repl=[("高木貞幹", "高木八尺"), ("高木康麻", "高木八尺"), ("高木安高", "高木八尺")],
+        canon="高木八尺",
+        note="高木八尺（1889-1984），東京帝大美國研究講座首任教授、內村門下。"
+             "全書八處只有兩處寫對，其餘拼出三種不同的假名字。",
+    ),
+    Lock(
+        key="sakai", en=r"\bSakai\b",
+        repl=[("坂井利彥", "堺利彥"), ("坂井利吉", "堺利彥"),
+              ("坂井垣町", "堺利彥"), ("坂井藤吉", "堺利彥"), ("堺利彦", "堺利彥")],
+        canon="堺利彥",
+        note="堺利彥（號枯川），《萬朝報》專欄作者、後與幸德秋水同創社會主義運動。"
+             "Sakai 的本字是『堺』不是『坂井』；「坂井垣町」「坂井藤吉」根本不是人名的樣子。"
+             "同段的『幸德傳次郎（秋水）』反而是對的——那是他的本名，別一起改。",
+    ),
+    Lock(
+        key="masaike", en=r"\bMasaike\b",
+        repl=[("正池目玉", "政池仁")],
+        canon="政池仁",
+        note="政池仁（1900-1985），內村傳記作者、無教會第二代，本 portal 有他的 hub"
+             "（slug masaike）。「目玉」是眼珠，這個譯名連字面都不成話。",
+    ),
+    Lock(
+        key="azegami", en=r"\bAzegami\b",
+        repl=[("畔上健三", "畔上賢造")],
+        canon="畔上賢造",
+        note="畔上賢造（1884-1938），本 portal 有他的 hub（slug azegami）。",
+    ),
+    Lock(
+        key="nakada", en=r"\bNakada\b",
+        repl=[("中田譲二", "中田重治")],
+        canon="中田重治",
+        note="中田重治（Nakada Jûji），日本聖潔教會創始者。重治讀作 Jūji，"
+             "「譲二」是照音硬拼出來的。",
+    ),
+    Lock(
+        key="saito", en=r"\bSait[ôo]\b",
+        repl=[("齊藤", "齋藤")],
+        canon="齋藤",
+        note="齋藤宗次郎。齊與齋是兩個字，全書 55 處有 4 處寫成「齊藤」。",
+    ),
+    Lock(
+        key="osanai", en=r"\bOsanai\b",
+        repl=[("小山内薫", "小山內薰"), ("小山內薫", "小山內薰"),
+              ("小山内薰", "小山內薰"), ("小山内", "小山內")],
+        canon="小山內薰",
+        note="小山內薰。混用了日文字形（内／薫）與繁體（內／薰）。",
+    ),
+    # ── 概念詞與敬稱：不是專名，但錯得夠明確，可以鎖 ──
+    Lock(
+        key="tenno", en=r"Imperial signature|\bEmperor\b.{0,40}(Japan|Meiji)",
+        repl=[("皇帝的簽名", "天皇的簽名")],
+        canon="天皇",
+        note="教育敕語上的御署名（即內村不敬事件）。日本的是天皇不是皇帝。"
+             "🚨 但同書另一處的『皇帝威廉』指德皇 Kaiser Wilhelm，那個是對的，"
+             "所以這條鎖用英文佐證卡死在日本語境，不可放寬成整批換『皇帝』。",
+    ),
+    Lock(
+        key="preacher", en=r"\bThe preacher\b",
+        repl=[("那位傳教士", "那位牧師")],
+        canon="牧師",
+        note="英文是 preacher，指同段前面那位 a pastor in America。"
+             "誤成「傳教士」既錯身分，也違反 missionary→宣教士 的定名"
+             "（[[feedback_translation_candidates_not_one_to_one]]）。",
+    ),
+    Lock(
+        key="constitutional", en=r"wrangle constitutionally|constitutional enthusiasm",
+        repl=[("憲法性熱情", "與生俱來的熱情"), ("憲法地爭論", "依憲政程序爭論")],
+        canon="（兩義按語境）",
+        note="constitutional 的兩個非「憲法」義：體質上的（她天生的熱情）與"
+             "依憲政程序的。🚨 全書另有 13 處『憲法』是真的明治憲法與 1947 年憲法，"
+             "不可整批處理——這條鎖同樣靠英文佐證卡死。",
     ),
     Lock(
         key="rutsuko", en=r"\bRuth\b",
@@ -171,6 +292,10 @@ def main() -> int:
         changed = 0
         for i, (src, z) in enumerate(pairs):
             new, n = repair_paragraph(src, z, HOWES_LOCKS, tally=per_key)
+            new, nf = normalize_forms(new)
+            if nf:
+                per_key[("forms", "日文字形／簡體", "繁體")] =                     per_key.get(("forms", "日文字形／簡體", "繁體"), 0) + nf
+            n += nf
             if n:
                 zh[i] = new
                 changed += n
