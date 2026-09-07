@@ -84,6 +84,50 @@ class BookSignals:
     # chunk 的最大 page_number ÷ 來源 PDF 實際頁數。None = 拿不到來源頁數
     # （EPUB、檔案讀不到）→ 不計分，絕不因為「不知道」而扣分。
     page_coverage: float | None = None
+    # 退化迴圈／整塊重吐的 chunk 佔比。結構訊號一個都抓不到這種書。
+    repeat_rate: float = 0.0
+
+
+def looks_looping(text: str, min_reps: int = 3) -> bool:
+    """這段文字是不是「同一小段反覆貼成的」——LLM 視覺 OCR 的退化迴圈。
+
+    模型讀不動某一頁時會卡在一句話上一直重印。實例（2026-09-07 稽核抓到，
+    《東方化革命》page 77 連續 11 個 chunk）：
+
+        髒卜術的詞源和詞形變化也與兩河流域的術語有相似之處。髒卜術的詞源和詞
+        形變化也與兩河流域的術語有相似之處。髒卜術的詞源和詞形變化也與…
+
+    這種書結構完美（chunk 數對、目錄齊、頁面覆蓋率足），所以純結構評分給它
+    98 分、閘門直接放行上線。內容是廢的，讀者卻分辨不出來。
+
+    只看 DB 那份 100 字 preview 就夠——迴圈的週期遠短於 100 字，preview 裡
+    就看得到好幾輪。
+    """
+    s = (text or "").strip()
+    if len(s) < 40:
+        return False
+    for p in range(4, len(s) // min_reps + 1):
+        reps = len(s) // p
+        if reps >= min_reps and s[:p] * reps == s[:p * reps]:
+            return True
+    return False
+
+
+def repetition_rate(chunks: list[dict]) -> float:
+    """壞掉的 chunk 佔比：本身是退化迴圈，或與前一個 chunk 一字不差。
+
+    後者是同一種故障的另一個面貌——模型不是在一個 chunk 內繞圈，而是整塊
+    重吐上一塊。兩者都算。
+    """
+    if not chunks:
+        return 0.0
+    bad, prev = 0, None
+    for c in chunks:
+        t = (c.get("content") or "").strip()
+        if looks_looping(t) or (prev and t and t == prev):
+            bad += 1
+        prev = t
+    return bad / len(chunks)
 
 
 def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
@@ -104,6 +148,18 @@ def score_book_quality(s: BookSignals) -> tuple[int, list[str], str]:
     score -= blank_penalty
     if s.blank_rate > 0.2:
         flags.append("BLANK_BODY")
+
+    # 🚨 內容是胡謅的，結構卻完美。前面每一條罰則量的都是結構，而退化迴圈那種書
+    # chunk 數對、目錄齊、覆蓋率足 —— 實測《東方化革命》拿 98 分、
+    # 《海德格爾式的現代神學》94 分，全都通過 80 分閘門上線可讀。
+    # 罰則要夠重：10% 的 chunk 壞掉就足以把一本滿分書壓到閘門（80）以下。
+    # 係數取 220 不取 200：200 會讓 10% 剛好落在 80，而閘門是 `>= 80`，於是
+    # 「十頁裡有一頁是胡謅的」正好放行 —— 邊界要落在擋下那一側。
+    # 5% 只記 flag 不擋：留給人看，但還不到整本下架的程度。
+    if s.repeat_rate > 0:
+        score -= min(60, round(s.repeat_rate * 220))
+        if s.repeat_rate >= 0.05:
+            flags.append("REPETITION_LOOP")
 
     # 覆蓋率：blank_rate 抓「內容爛」，這條抓「內容好但不完整」。
     # 舊 OCR 路徑把整本一次送 Gemini，撞輸出上限後只存下前面幾十頁，
@@ -209,7 +265,8 @@ def harvest_signals(meta: dict, chunks: list[dict]) -> BookSignals:
     return BookSignals(n, blank_rate, no_toc_rate, tiny_rate, giant_n, mess_wo_toc,
                        per_page_only, needs_ocr, path_broken,
                        bool(meta.get("standardized_at")),
-                       page_coverage(meta, chunks, blank_rate))
+                       page_coverage(meta, chunks, blank_rate),
+                       repetition_rate(chunks))
 
 
 def source_page_count(path: str) -> int | None:
