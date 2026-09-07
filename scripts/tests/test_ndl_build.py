@@ -231,3 +231,72 @@ class TestQuotaClassifier:
 
     def test_auth_error_is_not_quota(self):
         assert nb.is_quota_error("401 unauthorized") is False
+
+
+class TestTocCanaryVariants:
+    """canary 比對前要先正規化異體字，否則會低估好的 OCR。
+
+    實測：Gemini 把 9 個章名全讀對了，canary 卻只給 56%——因為書上印的是
+    「敎」「現狀」，NDL 索引寫的是「教」「現状」。這種差異不是 OCR 錯，
+    真要說 OCR 還更貼近原書。canary 太嚴會讓人誤以為要重跑。
+    """
+
+    def test_kyou_variant_matches(self):
+        assert nb.toc_match_ratio("第六　聖書的基督敎の提唱", ["第六　聖書的基督教の提唱"]) == 1.0
+
+    def test_jou_variant_matches(self):
+        assert nb.toc_match_ratio("第三　現狀", ["第三　現状"]) == 1.0
+
+    def test_genuine_dropped_character_still_fails(self):
+        """「起源」被讀成「源」是真的漏字，不可以被正規化蓋掉。"""
+        assert nb.toc_match_ratio("第二　源", ["第二　起源"]) == 0.0
+
+
+class TestStripBeforeHeading:
+    """一節的第一張影像常常還印著別的東西（目次、前一章結尾、書名頁），
+    整張的 OCR 直接當內文的話，目次會整份被吞進第一章。
+
+    規則：正文從**該節自己的章名之後**開始。
+    """
+
+    def test_toc_before_the_heading_is_dropped(self):
+        text = "目次第一 教派ではない …… 一第二 起源 …… 二第一 教派ではない近頃「無教會主義」と"
+        out = nb.strip_before_heading(text, "第一　教派ではない")
+        assert out == "近頃「無教會主義」と"
+
+    def test_uses_the_last_occurrence(self):
+        """章名在目次裡也會出現一次，要取**最後**一次（真正的章首）。"""
+        text = "目次 第三 現状 …… 三 本文開始前 第三 現状 これが本文"
+        assert nb.strip_before_heading(text, "第三　現状") == "これが本文"
+
+    def test_heading_absent_leaves_text_untouched(self):
+        text = "章名が読み取れなかったページ"
+        assert nb.strip_before_heading(text, "第九　無教會主義の傳道法") == text
+
+    def test_variant_characters_still_match(self):
+        text = "第六 聖書的基督敎の提唱 本文はここから"
+        assert nb.strip_before_heading(text, "第六　聖書的基督教の提唱") == "本文はここから"
+
+    def test_does_not_eat_the_whole_page(self):
+        """章名出現在頁尾（下一章從這頁最後開始）時，不可以把整頁清空。"""
+        text = "前の章の終わりの文章がここにある。第二　起源"
+        assert nb.strip_before_heading(text, "第二　起源") == text
+
+
+class TestBuildDoesNotEatTranslations:
+    """`ndl_data/{slug}/secN.json` 同時是 ndl_build 的產出與翻譯的 checkpoint：
+    `src` 由 ndl_build 寫、`zh` 由 uchimura_auto 填。所以修完 OCR 再 build 一次，
+    會把已經翻好的 zh 整批清成 []。翻到一半才發現 OCR 有錯時最容易踩。
+    """
+
+    def test_existing_translation_blocks_rebuild(self):
+        assert nb.has_translations([{"src": ["a"], "zh": ["甲"]}]) is True
+
+    def test_empty_zh_does_not_block(self):
+        assert nb.has_translations([{"src": ["a"], "zh": []}]) is False
+
+    def test_all_null_zh_does_not_block(self):
+        assert nb.has_translations([{"src": ["a", "b"], "zh": [None, None]}]) is False
+
+    def test_partial_translation_blocks(self):
+        assert nb.has_translations([{"src": ["a", "b"], "zh": [None, "乙"]}]) is True

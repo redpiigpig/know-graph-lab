@@ -125,8 +125,14 @@ def section_payload(section: dict, pages: dict) -> dict:
     的 checkpoint／翻譯／上架。`zh` 一開始是空的，翻譯那一步才填。
     `title_zh` 先擺日文原題而不留空——留空的話 reader 目錄會出現空白項。
     """
-    texts = [pages[i] for i in range(section["start"], section["end"])
-             if pages.get(i) and pages[i].strip()]
+    texts = []
+    for i in range(section["start"], section["end"]):
+        t = pages.get(i)
+        if not t or not t.strip():
+            continue
+        if not texts:            # 該節第一張影像：切掉章名之前的目次／書名頁
+            t = strip_before_heading(t, section["title"])
+        texts.append(t)
     return {
         "heading": section["title"],
         "title_zh": section["title"],
@@ -150,6 +156,16 @@ def split_spread_boxes(width: int, height: int) -> list:
     return [(mid, 0, width, height), (0, 0, mid, height)]
 
 
+# 比對用的異體字正規化（**只在比對時用，不改寫正文**）。
+# 書上印「敎」「現狀」而 NDL 索引寫「教」「現状」，這種差異不是 OCR 錯，
+# 不正規化的話 canary 會低估好的 OCR，害人以為要重跑。
+_COMPARE_VARIANTS = str.maketrans({
+    "敎": "教", "狀": "状", "會": "会", "對": "対", "實": "実", "德": "徳",
+    "國": "国", "來": "来", "學": "学", "傳": "伝", "舊": "旧", "發": "発",
+    "戰": "戦", "經": "経", "關": "関", "廣": "広", "圖": "図", "當": "当",
+})
+
+
 def is_quota_error(msg: str) -> bool:
     """這個錯誤是不是「額度用盡」（而非連線／授權問題）。"""
     m = (msg or "").lower()
@@ -166,10 +182,57 @@ def toc_match_ratio(ocr_text: str, titles: list) -> float:
     """
     if not titles:
         return 0.0
-    squash = re.compile(r"[\s　.．・…‥]+")
-    hay = squash.sub("", ocr_text or "")
-    hit = sum(1 for t in titles if squash.sub("", t) in hay)
+
+    def norm(s: str) -> str:
+        s = re.sub(r"[\s　.．・…‥]+", "", s or "")
+        return s.translate(_COMPARE_VARIANTS)
+
+    hay = norm(ocr_text)
+    hit = sum(1 for t in titles if norm(t) in hay)
     return hit / len(titles)
+
+
+def strip_before_heading(text: str, heading: str) -> str:
+    """一節第一張影像的 OCR → 去掉章名之前的東西（目次、書名頁、前一章結尾）。
+
+    NDL 的掃描是跨頁，一節的第一張影像常常還印著別的內容。整張直接當內文的話，
+    **整份目次會被吞進第一章**（試跑時就是這樣）。
+
+    取**最後**一次出現的章名——章名在目次裡也會出現一次，取第一次會把目次留下來。
+    章名讀不出來（OCR 沒抓到）就整段保留，寧可多留不可清空；
+    章名剛好在頁尾（下一章從這頁最後才開始）也保留，否則整頁會被清掉。
+    """
+    if not heading:
+        return text
+    squash = re.compile(r"[\s　]+")
+    def norm(s):
+        return squash.sub("", s or "").translate(_COMPARE_VARIANTS)
+    ntext, nhead = norm(text), norm(heading)
+    if not nhead or nhead not in ntext:
+        return text
+    # 在正規化後的字串找位置，再映射回原字串：逐字掃描比較穩
+    keep = ntext.rsplit(nhead, 1)[1]
+    if not keep.strip():
+        return text                      # 章名在頁尾，後面沒東西了
+    # 用保留字數從原文尾端回推（正規化只刪空白，不改字數順序）
+    out, taken = [], 0
+    for ch in reversed(text):
+        if taken >= len(keep):
+            break
+        out.append(ch)
+        if not squash.match(ch):
+            taken += 1
+    return "".join(reversed(out)).strip()
+
+
+def has_translations(existing: list) -> bool:
+    """現有的 secN.json 裡有沒有已經翻好的譯文。
+
+    `ndl_data/{slug}/secN.json` 同時是 ndl_build 的產出與翻譯的 checkpoint
+    （`src` 由這裡寫、`zh` 由 uchimura_auto 填），所以修完 OCR 再 build 一次
+    會把譯文整批清成 []。翻到一半才發現 OCR 有錯時最容易踩到。
+    """
+    return any(any(z for z in (sec.get("zh") or [])) for sec in existing)
 
 
 def refuse_empty_build(sections: list, pages: dict) -> bool:
@@ -399,7 +462,7 @@ def ocr_book(pid: str, model: str = "gemini-2.5-flash",
 
 
 def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
-                   backend: str = "gemini") -> Path:
+                   backend: str = "gemini", force: bool = False) -> Path:
     """目次分章＋OCR 文字 → secN.json（與其他作者同形），回傳輸出目錄。"""
     import json
     book = fetch_book(pid)
@@ -424,6 +487,12 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
             "先跑 --ocr %s。" % pid)
     out_dir = (SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works"
                / "ndl_data" / slug)
+    existing = [json.loads(f.read_text(encoding="utf-8"))
+                for f in sorted(out_dir.glob("sec*.json"))] if out_dir.exists() else []
+    if has_translations(existing) and not force:
+        raise RuntimeError(
+            "%s 底下已經有翻好的譯文，build 會把 zh 清空。"
+            "確定要重做 OCR 那一層就加 --force（譯文會全部重來）。" % out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     for i, sec in enumerate(secs):
         payload = section_payload(sec, pages)
@@ -440,6 +509,8 @@ def main():
     ap.add_argument("--ocr", type=str, help="pid：快取影像逐頁 Gemini Vision OCR")
     ap.add_argument("--build", type=str, help="pid：OCR 文字 → secN.json（需 --slug）")
     ap.add_argument("--slug", type=str, help="--build 的輸出目錄名")
+    ap.add_argument("--force", action="store_true",
+                    help="已有譯文時仍重建（zh 會被清空重譯）")
     ap.add_argument("--model", type=str, default="gemini-2.5-flash")
     ap.add_argument("--backend", choices=["gemini", "haiku"], default="gemini",
                     help="OCR 引擎。haiku 需使用者明確下令（feedback_ocr_strategy）")
@@ -468,7 +539,7 @@ def main():
         empty = [k for k, v in pages.items() if not v.strip()]
         print(f"OCR 完成 {len(pages)} 頁／{chars} 字；無正文 {len(empty)} 頁 {empty}")
     if args.build:
-        out = build_sections(pid, args.slug, backend=args.backend)
+        out = build_sections(pid, args.slug, backend=args.backend, force=args.force)
         print(f"→ {out}")
 
 
