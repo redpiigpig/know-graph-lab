@@ -519,6 +519,66 @@ def _haiku_parse_response(text: str, page_numbers: list) -> list:
     return chunks
 
 
+def detect_repeated_pages(chunks: list, min_len: int = 200, ratio: float = 0.90) -> list:
+    """找出「這一頁其實是上一頁的複述」的頁。回傳 [(前一頁, 這一頁, 相似度)]。
+
+    這是視覺 OCR 最陰險的一種失敗：模型讀不動某一頁時，會把上一頁的內容再吐一次，
+    而不是回空白。管線這端完全看不出異狀 —— 頁數對、字數正常、chunk 寫得好好的，
+    `✓ Haiku 7 pages, 1K chars` 照樣印出來。實例（2026-09-06《梁發傳略》）：
+
+        p3  中國基督教會第一宣教師梁發先生傳略 / 兩戰一月告日百里運牧師手下洗淨…（284 字）
+        p4  他突地誌要略解凡三十七年有一始方妙情其無六年在有九年運牧師下洗淨…（282 字）
+                ^^^^ 開頭是雜訊，之後與 p3 逐字相同
+
+    注意開頭不一樣、尾巴才重複，所以拿 DB 那份 100 字 preview 比對是抓不到的；
+    一定要在 OCR 當下、全文還在手上時比。
+
+    只比相鄰兩頁（實測的重吐都是重吐前一頁），O(n)。min_len 是為了不要去吵
+    書眉、頁碼、章節分隔頁這些本來就會重複的短字串。
+    """
+    import difflib
+
+    # SequenceMatcher.ratio() 是 O(n²)。整本書逐頁比對整頁文字，長書會慢到不能用，
+    # 所以先用 difflib 自己的兩道 O(n) 上界篩掉絕大多數頁，再算真正的比值；
+    # 另外只比前 CMP_CAP 個字（重吐前一頁時開頭就對得上，不必比完整頁）。
+    CMP_CAP = 1500
+
+    out = []
+    prev_i, prev_t = None, ""
+    for c in chunks:
+        t = (c.get("text") or "").strip()
+        if len(t) < min_len:
+            if t:
+                prev_i, prev_t = c.get("page"), t
+            continue
+        if prev_t and len(prev_t) >= min_len:
+            a, b = prev_t[:CMP_CAP], t[:CMP_CAP]
+            sm = difflib.SequenceMatcher(None, a, b)
+            if (sm.real_quick_ratio() >= ratio and sm.quick_ratio() >= ratio
+                    and sm.ratio() >= ratio):
+                out.append((prev_i, c.get("page"), round(sm.ratio(), 3)))
+        prev_i, prev_t = c.get("page"), t
+    return out
+
+
+def repetition_verdict(chunks: list, max_share: float = 0.10) -> tuple:
+    """整本判定：重複頁佔比超過 max_share 就不要收這本。回傳 (是否通過, 說明)。
+
+    寧可讓書留在 OCR 佇列裡等下一輪用 Gemini 重跑，也不要把幻覺文字寫進館藏 ——
+    空書讀者看得出來，胡謅的書看不出來。
+    """
+    dups = detect_repeated_pages(chunks)
+    n_text = sum(1 for c in chunks if len((c.get("text") or "").strip()) >= 200)
+    if not dups or not n_text:
+        return True, ""
+    share = len(dups) / n_text
+    if share < max_share:
+        return True, ""
+    pairs = ", ".join(f"p{a}≈p{b}({r})" for a, b, r in dups[:4])
+    return False, (f"OCR 重複幻覺：{len(dups)}/{n_text} 頁是前一頁的複述"
+                   f"（{share:.0%}）— {pairs}")
+
+
 def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
     """OCR a PDF book with Haiku, batch by batch.
 
@@ -821,6 +881,12 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
             if not non_empty:
                 return {"status": "fail", "error": "haiku returned 0 usable pages", "transient": False}
 
+            # 頁數與字數都正常、內容卻是前一頁的複述 —— 見 detect_repeated_pages。
+            ok, why = repetition_verdict(non_empty)
+            if not ok:
+                print(f"  ⚠ {why}")
+                return {"status": "fail", "error": why, "transient": False}
+
             total_chars = sum(len(c["text"]) for c in non_empty)
             if STAGING:
                 jsonl_path = write_jsonl(book["id"], non_empty, staging=True)
@@ -1010,6 +1076,12 @@ def process_one(client, book, src_path, model, max_retries=3):
             if not non_empty:
                 # If model returned no usable text, this is permanent (OCR genuinely failed)
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
+
+            # 同一道閘也套在 Gemini 路徑：重吐前一頁不是哪個模型獨有的毛病。
+            ok, why = repetition_verdict(non_empty)
+            if not ok:
+                print(f"  ⚠ {why}")
+                return {"status": "fail", "error": why, "transient": False}
 
             # 🚨 截斷不得當成成功。整本一次送 Gemini 時，長書必定撞輸出 token 上限，
             # json_repair 只搶救得到前面幾十頁——舊行為是照樣寫入並標記 parsed_at，
