@@ -23,9 +23,29 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 
 ## 排程：探到機構身分才下
 
-單一排程 `KGL_Airiti_Poll`，`scripts/run_airiti_batch.bat 100 500`（每輪最多 100 篇、
-一天最多 500），**每日** 08:00 起每 30 分鐘一次、持續 12 小時。
-log 在 `c:\tmp\airiti_download.log`。
+單一排程 `KGL_Airiti_Poll` → `powershell -File scripts/run_airiti_batch.ps1 -Batch 100 -DailyCap 500`，
+**每日** 08:00 起每 30 分鐘一次、持續 12 小時。log 在 `c:\tmp\airiti_download.log`。
+（`run_airiti_batch.bat` 留著給手動跑用，排程不要指它——原因見下。）
+
+🚨 **排程不可以讓 python 跟別人共用主控台。**
+2026-09-07 實測：排程那幾輪跑約一分鐘就以一個 `^C` 收場，每輪只下 2–3 篇，
+額度整天卡在 338。而工作排程器回報「成功完成」、log 裡也只多一個 `^C`——
+看起來完全像正常結束。排除掉 Fleet Keeper（它只殺自己 `scripts/state/fleet_*.pid`
+裡登記的 worker，當天一次都沒動手）與工作排程器本身之後，剩下的差別是**主控台**：
+出事的是 `cmd.exe → python.exe`（有 console），而同樣每半小時跑、從不出事的
+`KGL_Translation_Supervisor` 用 `pythonw.exe`（無 console）。`CTRL_C_EVENT` 會送給
+同一個 console 上的**所有**行程，所以共用就可能被別人的 Ctrl+C 順手帶走。
+`run_airiti_batch.ps1` 比照 `fleet_keeper.ps1`，用 `Start-Process -WindowStyle Hidden`
+讓 python 拿到自己的隱藏主控台。修好後 `LastTaskResult` 從 `0xC000013A` 變成 `0`。
+
+🚨 **那支 .ps1 必須是純 ASCII。** PowerShell 5.1 一遇到含中文的 .ps1 就解析崩，
+`param()` 不被認得，錯誤訊息是 `The assignment expression is not valid`，
+而且**行號對不上檔案**（誤導成別的地方壞掉）。中文說明寫在這份 SKILL 裡，
+腳本裡只留英文。同一個坑 `fleet_keeper.ps1` 也踩過（[[project_fleet_keeper]]）。
+
+🚨 **把 python 的輸出併回 log 時要指定 `-Encoding UTF8` 讀。**
+python 寫的是 UTF-8，而 `Get-Content` 不指定編碼會用 ANSI（這裡是 Big5）讀，
+再以 UTF-8 寫出去就壓壞兩次；而腳本照樣 exit 0、log 照樣有內容，只是讀不懂。
 
 🚨🚨 **`DisallowStartIfOnBatteries` 一定要關掉——這是這個排程最要命的一條。**
 工作排程器的預設是「使用電池時不啟動」。而本任務唯一有用的時機是**人在學校**，
