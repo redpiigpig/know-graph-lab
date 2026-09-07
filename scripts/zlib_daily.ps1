@@ -47,8 +47,18 @@ Note "wanted list refreshed"
 # the previous account's cookies on every switch.
 foreach ($acct in $ACCOUNTS) {
     Note "fetch start (account $acct)"
-    & node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --account $acct --limit $limit *>&1 |
-        Out-File -FilePath $log -Append -Encoding utf8
+    # Let the child write to the log itself instead of piping into Out-File.
+    #
+    # `& node ... | Out-File` buffers in the PowerShell pipeline and only flushes
+    # when the pipeline does. If this process dies mid-fetch, everything node had
+    # said is lost -- and that is exactly the case worth diagnosing. 2026-09-07:
+    # the 10:17 run died 4 seconds in, and the log ended at "fetch start
+    # (account 2)" with not one line from node, so there was nothing to go on.
+    # cmd's redirect appends as node writes, so a kill keeps whatever came before it.
+    #
+    # It also sidesteps the stdout decoding bug noted above: PowerShell never
+    # decodes the bytes, so node's UTF-8 lands in the UTF-8 log unmangled.
+    & cmd /c "node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --account $acct --limit $limit >> ""$log"" 2>&1"
     Note "fetch exit=$LASTEXITCODE (account $acct)"
     Start-Sleep -Seconds 45
 }
