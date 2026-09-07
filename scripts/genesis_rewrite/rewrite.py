@@ -176,7 +176,10 @@ def nvidia_chat(system: str, prompt: str) -> str:
                       "messages": [{"role": "system", "content": system},
                                    {"role": "user", "content": prompt}],
                       "temperature": 0.6, "max_tokens": 16000},
-                timeout=600,
+                # 🚨 逾時砍短：NVIDIA 這層目前整條是死的（deepseek flash/pro 都
+                #    ReadTimeout、qwen3-next 410、nemotron/mistral 掛在清單上卻 404），
+                #    留 600s 只會讓每一節白等十分鐘。
+                timeout=60,
             )
         except requests.exceptions.RequestException:
             _n_idx = (_n_idx + 1) % len(NVIDIA_KEYS)
@@ -299,9 +302,12 @@ def blocks_or_die(inner: str) -> list[str]:
     return blocks
 
 
-def chunk_blocks(blocks: list[str], budget: int = 2200) -> list[list[int]]:
-    """把可改寫的區塊編組，每組正文不超過 budget 字——輸出上限 8192 token，
-    留足餘裕免得中途被截斷。"""
+def chunk_blocks(blocks: list[str], budget: int = 4200) -> list[list[int]]:
+    """把可改寫的區塊編組，每組正文不超過 budget 字。
+
+    輸出上限是 8192 token；中文大約一字一 token，4200 字進、五千多字出仍有餘裕。
+    budget 直接決定總呼叫次數（2200 字要 594 次、4200 字剩約 300 次），而
+    Gemini 免費層是每 key 每天二十次的日額度，呼叫次數就是整批能不能跑完的瓶頸。"""
     groups, cur, size = [], [], 0
     for i, b in enumerate(blocks):
         n = len(plain(b))
