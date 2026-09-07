@@ -51,7 +51,10 @@ VideoScribe、Doodly 那類工具其實也不是即時作畫，是把素材庫�
 8. **出片**：`python assemble.py --all --out 成品.mp4`（黑板段＋預告片段混剪），
    或只要純黑板就 `node render.mjs --theme paper`。
 9. **片頭**：`make_opening.py`（見下）。
-10. **（可選）進 AE**：`build_ae_jsx.py` → AE 執行指令碼，節點、連線、鏡頭關鍵影格全帶進去。
+10. **接成全片**：`join_parts.py 片頭_v1.mp4 本體_第一幕起.mp4`。
+    片頭已經把序幕講完了，所以本體要從**第一幕**開始渲（`assemble.py --from <第一幕的 t>`），
+    否則序幕會講兩次。
+11. **（可選）進 AE**：`build_ae_jsx.py` → AE 執行指令碼，節點、連線、鏡頭關鍵影格全帶進去。
 
 ## 混剪：黑板段與預告片段怎麼拼
 
@@ -115,6 +118,9 @@ VideoScribe、Doodly 那類工具其實也不是即時作畫，是把素材庫�
 - **ffmpeg 子行程的結束事件要在 `spawn` 當下就接**：等到最後才 `ff.on('close')`，
   事件早就發過了，`await` 永遠不落地，node 以 **exit code 13**（unsettled top-level await）
   收場——而 ffmpeg 其實有寫完檔，所以檔案看起來正常、只有呼叫端以為失敗。
+- **`ffprobe` 的 JSON 有中文檔名時 `text=True` 會爆掉**：Windows 預設拿 cp950 解，
+  讀取執行緒丟 UnicodeDecodeError，但 **returncode 還是 0、stdout 變成 None**。
+  所有 `subprocess.run` 一律帶 `encoding="utf-8", errors="replace"`。
 - **`subtitles` 濾鏡吃不了磁碟代號**：`subtitles=G:\...` 的冒號會被當參數分隔。
   切到字幕檔所在目錄（`cwd=`）用相對檔名。
 - **單張 PNG 餵給 fade 會被凍住**：`-i card.png` 沒有 `-loop 1` 就只有一格，
@@ -160,10 +166,12 @@ VideoScribe、Doodly 那類工具其實也不是即時作畫，是把素材庫�
 ## 現況（首案《人魚島的秘密》）
 
 - 170 條 cue／估 20 分 49 秒／32 個節點；風格定 paper。
-- 已出：`片頭_v1.mp4`（79.9 秒，實拍問好→海報→序幕正文，四個切點）、
+- **`人魚島解說_全片.mp4`（20 分 52 秒）已出**：片頭 79.9 秒實拍原音 ＋ 第一幕起的本體，
+  本體目前無旁白（只有字幕與畫面），正好拿來對著錄。B-roll 33 條、佔全片 20%。
+- 也出過：`片頭_v1.mp4`（79.9 秒，實拍問好→海報→序幕正文，四個切點）、
   `試片_混剪.mp4`（46 秒，黑板＋預告片）、`試片_描繪.mp4`（手寫與描線）、
   三種風格樣板各兩段。
 - 素材：預告片 13 支 421 張分鏡、魔法公主 4 支 198 張、公有領域圖 30 張、
   線稿 20 個、梗圖 23 張、CC 音樂 21 首、自製音效 12 個。
-- ⏳ 待辦：其餘 19 分鐘的旁白（使用者自己錄）、全片 B-roll 指定、正文全片渲染。
+- ⏳ 待辦：其餘 19 分鐘的旁白（使用者自己錄），錄完用 whisper 逐句對齊重排 `cues.json` 再重渲。
 - 相關：[[reels-piigpig]]（同一位使用者的短影片線，走 ffmpeg 本機合成）。
