@@ -139,6 +139,26 @@ class TestHangingIndent:
 
 
 class TestControlChars:
+    r"""Distiller 在字中間塞字型裝飾控制碼；留著會被當成內文送去翻譯。
+
+    這裡一律用 `\x01` 這種**轉義寫法**，不要在原始碼裡放真的控制位元組 —— 真位元組
+    在終端機、diff、code review 裡全都顯示成空白，看起來就像 "beforeafter"，
+    分不出測試到底有沒有在測東西（本檔就曾因此被誤判為壞掉）。每個案例都先斷言
+    原字串真的比乾淨字串長：哪天寫檔掉了一層轉義，會在斷言處炸掉而不是靜靜通過。
+    提字元範圍的 docstring 一律用 r-string，否則那些轉義又會變回隱形位元組。
+    """
+
     def test_font_ornament_control_char_stripped(self):
-        assert hb.spans_to_text([{"size": 9.0, "flags": 4,
-                                  "text": "beforeafter"}]) == "beforeafter"
+        raw = "before\x01after"
+        assert len(raw) == len("beforeafter") + 1, "轉義掉了，這個測試沒測到東西"
+        assert hb.spans_to_text([{"size": 9.0, "flags": 4, "text": raw}]) == "beforeafter"
+
+    def test_whole_control_range_and_del_stripped(self):
+        r"""_CTRL_RE 蓋 \x00-\x1f 與 \x7f：定位、換行、歸位、DEL 都要清掉。"""
+        raw = "a\x00b\x09c\x0ad\x0de\x1ff\x7fg"
+        assert len(raw) == len("abcdefg") + 6, "轉義掉了，這個測試沒測到東西"
+        assert hb.spans_to_text([{"size": 9.0, "flags": 4, "text": raw}]) == "abcdefg"
+
+    def test_printable_neighbours_of_the_range_survive(self):
+        r"""邊界外不可誤殺：空格（\x20）與 ~（\x7e）緊貼範圍兩端，都得留著。"""
+        assert hb.spans_to_text([{"size": 9.0, "flags": 4, "text": "a ~b"}]) == "a ~b"
