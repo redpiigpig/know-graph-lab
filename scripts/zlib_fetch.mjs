@@ -61,9 +61,12 @@ function doneKeys() {
       .split('\n')
       .filter(Boolean)
       .map((l) => {
-        try { return JSON.parse(l).key } catch { return null }
+        try { return JSON.parse(l) } catch { return null }
       })
-      .filter(Boolean)
+      // 🚨 --dry-run 什麼都沒下載，不能算「已處理」。之前 dry 也寫進帳本，
+      //    試跑一次就把那些 key 永久封死，正式跑時整份清單靜靜地變成 0 筆。
+      .filter((r) => r && r.key && r.status !== 'dry')
+      .map((r) => r.key)
   )
 }
 
@@ -104,7 +107,7 @@ export function isBlacklisted(...fields) {
   return BLACKLIST.some((n) => hay.includes(n))
 }
 
-export function rank(hit, query = '', expect = '', who = '', wantLang = '') {
+export function rank(hit, query = '', expect = '', who = '', wantLang = '', wantExt = '') {
   const lang = (hit.language || '').toLowerCase()
   const ext = (hit.extension || '').toLowerCase()
   // 站上有一批「書名就是別人的搜尋字串」的垃圾上傳（多半是 txt/english），
@@ -118,6 +121,10 @@ export function rank(hit, query = '', expect = '', who = '', wantLang = '') {
   if (wantLang === 'zh' && !lang.includes('chinese')) return -100
   if (wantLang === 'orig' && lang.includes('chinese')) return -100
   if (['txt', 'rar', 'zip', 'doc'].includes(ext)) return -100
+  // 格式閘。按頁碼指定的讀物（課程大綱寫「Blackwell Companion 91-122」那種）
+  // 只有 PDF 對得上——epub／azw3 沒有固定分頁，抓回來就是翻不到指定的頁。
+  // 下面的加分項偏好 epub，所以非得有這道閘才壓得住。
+  if (wantExt && ext !== wantExt.toLowerCase()) return -100
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
   const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
   if (expect && !flat(title).includes(flat(expect))) return -100
@@ -234,7 +241,7 @@ async function main() {
         await page.waitForTimeout(3000)
         continue
       }
-      const scored = hits.map((h) => [rank(h, w.query, w.expect, w.who, w.lang || ''), h])
+      const scored = hits.map((h) => [rank(h, w.query, w.expect, w.who, w.lang || '', w.ext || ''), h])
       if (DRY) {
         // 只查的時候把被閘擋掉的也列出來，才看得出「是閘太嚴，還是站上真的沒有」
         for (const [r, h] of scored.slice(0, 6)) {

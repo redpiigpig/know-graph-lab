@@ -39,6 +39,7 @@ OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
 
 # 一天只抓得到十本，六千多筆照雜湊亂序排等於永遠輪不到正在寫的那幾本。
 # 排序依據是「為什麼現在需要這本書」——有時程壓力的排前面：
+#    5 本學期修課的指定用書（每週要讀，期限最硬）
 #   10 學位論文（送件有期限）
 #   20 下學期要開的講義（開課前要備齊）
 #   30 正在改寫成期刊論文的稿子
@@ -46,6 +47,7 @@ OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
 #   60 主題策展書單（想讀，但不擋任何進度）
 # 數字留空隙，之後插新計畫不必重排。
 PRIORITY = {
+    "relstudy-course-hcu": 5,
     "biblio-hcu-phd": 10,
     "biblio-christianity-intro": 20,
     "biblio-world-religions-intro": 20,
