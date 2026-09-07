@@ -12,6 +12,17 @@ description: 使用者在玄奘大學開的四本授課講義（/works 的 kind=
 學期行程與課表另見 [[schedule-semester]]；教學大綱由 `course_syllabus_docx.py` 以學校
 原表單為範本替換內容產生（不重畫表格）。
 
+發給學生的**修課須知**（黑白 Word／PDF）由 `course_notice_docx.py` 產出，週次表讀
+`course_schedule.py` 這份權威來源——四門課的日期、章號、演講與參訪、考試位置都在那裡，
+**不要在三支腳本裡各抄一份**。裡面也含各課的口頭報告題目規範與請假、遲到、AI 使用規定。
+
+🚨 **`course_syllabus_docx.py` 的 `schedule` 仍是舊排法**（週三十八週正課、假日班九次、
+沒有演講與參訪），與 `course_schedule.py` 不一致。送學校的教學大綱要跟著改時，
+改的是 `course_syllabus_docx.py`，且務必走 `--schedule-only`（見該檔開頭的警告）。
+
+**每門課十六週，第 17、18 週是自主學習與文本閱讀**；章節是授課參考，兩章併一課或取捨末幾章
+都可以，排不下就把末幾章移到自主學習週自讀。
+
 ## 四本書
 
 | 代號 | 書 | 章節目錄 | 小考前綴 | Drive 資料夾 |
