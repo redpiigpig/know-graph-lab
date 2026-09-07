@@ -82,6 +82,21 @@ WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 
 W, H = Cm(33.87), Cm(19.05)   # 16:9
 
+# 字級一律偏大：使用者自己那套 114-2 簡報在 20 吋畫布上標題 75pt、內文 40pt，
+# 換算到這裡的 13.33 吋畫布約是標題 50pt、內文 27pt。投影距離遠，寧可少放幾條。
+# 🚨 s_bullets 與 split_long 必須吃同一組數字，否則「該拆的沒拆」會靜靜擠成小字。
+TEACHER = '張辰瑋'
+PROFILE = [
+    '國立臺灣大學歷史學系',
+    '國立臺北教育大學臺灣文化研究所',
+    '玄奘大學宗教與文化學系博士生',
+]
+
+BULLET_SZ = {0: 31.0, 1: 25.5, 2: 22.0, 3: 32.0}
+BULLET_SP = {0: 14, 1: 9, 2: 6, 3: 15}
+IMG_SZ = {0: 27.0, 1: 23.0, 2: 19.5, 3: 28.0}
+IMG_SP = {0: 13, 1: 9, 2: 6, 3: 14}
+
 
 # ── 版面工具 ────────────────────────────────────────────────────────────────
 def textbox(slide, x, y, w, h, anchor=MSO_ANCHOR.TOP):
@@ -151,7 +166,7 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
         per = max(8, int(avail / sizes[lvl]))
         rows = -(-(len(txt) + 2) // per)          # ＋2 是行首的項目符號
         total += rows * sizes[lvl] * LINE + spaces[lvl]
-    return min(1.0, max(0.55, height_cm * CM_PT / total)) if total else 1.0
+    return min(1.0, max(0.72, height_cm * CM_PT / total)) if total else 1.0
 
 
 def band(slide, color, x, y, w, h):
@@ -171,15 +186,15 @@ def blank(prs):
 def slide_title(slide, title, sub=None):
     band(slide, NAVY, Cm(0), Cm(0), W, Cm(0.32))
     tf = textbox(slide, Cm(1.5), Cm(0.85), W - Cm(3.0), Cm(2.2))
-    put(tf, title, 34, bold=True, color=NAVY, first=True, space_after=2)
+    put(tf, title, 40, bold=True, color=NAVY, first=True, space_after=2)
     if sub:
-        put(tf, sub, 17, color=GRAY, space_after=0)
+        put(tf, sub, 21, color=GRAY, space_after=0)
     band(slide, GOLD, Cm(1.5), Cm(3.80), Cm(3.0), Cm(0.12))
 
 
 def footer(slide, n, label):
     tf = textbox(slide, Cm(1.5), H - Cm(1.15), W - Cm(3.0), Cm(0.8))
-    put(tf, f'{label}　　{n}', 11, color=GRAY, first=True, space_after=0)
+    put(tf, f'{label}　　{n}', 13, color=GRAY, first=True, space_after=0)
 
 
 # ── 各種投影片 ──────────────────────────────────────────────────────────────
@@ -187,15 +202,31 @@ def s_cover(prs, d):
     s = blank(prs)
     band(s, NAVY, Cm(0), Cm(0), W, H)
     tf = textbox(s, Cm(3.0), Cm(4.2), W - Cm(6.0), Cm(1.0))
-    put(tf, d['kicker'], 15, color=RGBColor(0xC9, 0xD3, 0xE4), first=True, space_after=0)
+    put(tf, d['kicker'], 19, color=RGBColor(0xC9, 0xD3, 0xE4), first=True, space_after=0)
     tf = textbox(s, Cm(3.0), Cm(5.5), W - Cm(6.0), Cm(2.4))
-    put(tf, d['title'], 44, font=KAI, bold=True, color=WHITE, first=True, space_after=0)
+    put(tf, d['title'], 54, font=KAI, bold=True, color=WHITE, first=True, space_after=0)
     band(s, GOLD, Cm(3.0), Cm(8.5), Cm(3.4), Cm(0.12))
     tf2 = textbox(s, Cm(3.0), Cm(9.5), W - Cm(6.0), Cm(6.0))
-    put(tf2, d['subtitle'], 20, font=KAI, color=RGBColor(0xE3, 0xC9, 0x8A),
+    put(tf2, d['subtitle'], 26, font=KAI, color=RGBColor(0xE3, 0xC9, 0x8A),
         first=True, space_after=24)
     for line in d['meta']:
-        put(tf2, line, 14, color=RGBColor(0xC9, 0xD3, 0xE4), space_after=6)
+        put(tf2, line, 18, color=RGBColor(0xC9, 0xD3, 0xE4), space_after=6)
+    return s
+
+
+def s_profile(prs):
+    """自我介紹頁——每學期第一次上課固定放這一頁（使用者 2026-09-07 要求）。
+
+    版面照他自己那套 114-2 簡報：左側一道深色帶、姓名獨大、學經歷條列。
+    """
+    s = blank(prs)
+    band(s, PALE, Cm(0), Cm(0), W, H)
+    band(s, NAVY, Cm(0), Cm(0), Cm(0.5), H)
+    tf = textbox(s, Cm(3.0), Cm(4.4), W - Cm(6.0), Cm(10.5))
+    put(tf, '授課教師', 23, bold=True, color=GOLD, first=True, space_after=12)
+    put(tf, TEACHER, 58, font=KAI, bold=True, color=NAVY, space_after=26)
+    for line in PROFILE:
+        put(tf, '▍ ' + line, 27, color=INK, space_after=13, line=1.3)
     return s
 
 
@@ -204,10 +235,10 @@ def s_section(prs, no, title, lines):
     band(s, PALE, Cm(0), Cm(0), W, H)
     band(s, NAVY, Cm(0), Cm(0), Cm(0.5), H)
     tf = textbox(s, Cm(3.0), Cm(4.8), W - Cm(6.0), Cm(9.5))
-    put(tf, no, 19, bold=True, color=GOLD, first=True, space_after=12)
-    put(tf, title, 42, font=KAI, bold=True, color=NAVY, space_after=20)
+    put(tf, no, 23, bold=True, color=GOLD, first=True, space_after=12)
+    put(tf, title, 52, font=KAI, bold=True, color=NAVY, space_after=20)
     for ln in lines:
-        put(tf, ln, 18, color=GRAY, space_after=8)
+        put(tf, ln, 23, color=GRAY, space_after=8)
     return s
 
 
@@ -215,10 +246,10 @@ def s_big(prs, text, sub=None):
     s = blank(prs)
     band(s, NAVY, Cm(0), Cm(0), W, H)
     tf = textbox(s, Cm(3.2), Cm(2.6), W - Cm(6.4), H - Cm(5.2), anchor=MSO_ANCHOR.MIDDLE)
-    put(tf, text, 36, font=KAI, bold=True, color=WHITE, first=True,
+    put(tf, text, 46, font=KAI, bold=True, color=WHITE, first=True,
         align=PP_ALIGN.CENTER, line=1.45, space_after=18)
     if sub:
-        put(tf, sub, 18, color=RGBColor(0xE3, 0xC9, 0x8A), align=PP_ALIGN.CENTER)
+        put(tf, sub, 23, color=RGBColor(0xE3, 0xC9, 0x8A), align=PP_ALIGN.CENTER)
     return s
 
 
@@ -227,8 +258,7 @@ def s_bullets(prs, title, bullets, sub=None):
     slide_title(s, title, sub)
     w, h = 30.9, 13.1
     tf = textbox(s, Cm(1.5), Cm(4.45), Cm(w), Cm(h))
-    base = {0: 23.0, 1: 19.0, 2: 16.5, 3: 24.0}
-    sp = {0: 11, 1: 7, 2: 5, 3: 12}
+    base, sp = BULLET_SZ, BULLET_SP
     k = fit(bullets, w, h * 0.96, base, sp)
     # 內容明顯偏少（六成高度就裝得下）就垂直置中，不要下半頁整片空白
     if k >= 1.0 and fit(bullets, w, h * 0.80, base, sp) >= 1.0:
@@ -257,17 +287,17 @@ def s_two(prs, title, left, right, sub=None):
         x = Cm(1.5) + i * (colw + Cm(0.8))
         band(s, NAVY if i == 0 else GOLD, x, Cm(4.5), colw, Cm(1.0))
         tfh = textbox(s, x + Cm(0.35), Cm(4.68), colw - Cm(0.7), Cm(0.8))
-        put(tfh, head, 18, bold=True, color=WHITE, first=True, space_after=0)
+        put(tfh, head, 23, bold=True, color=WHITE, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
-        base = {0: 18.5, 1: 15.5, 2: 15.5}
-        k = max(0.68, fit(items, cw, 13.0, base, {0: 8, 1: 6, 2: 6}))
+        base = {0: 24.0, 1: 20.0, 2: 20.0}
+        k = max(0.72, fit(items, cw, 13.0, base, {0: 10, 1: 8, 2: 8}))
         tf = textbox(s, x + Cm(0.35), Cm(5.8), colw - Cm(0.7), H - Cm(7.15))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
             put(tf, ('‧ ' if lvl == 0 else '　－ ') + txt,
                 base[min(lvl, 1)] * k,
                 color=INK if lvl == 0 else GRAY,
-                first=(j == 0), space_after=8 * k, line=1.3)
+                first=(j == 0), space_after=10 * k, line=1.3)
     return s
 
 
@@ -290,9 +320,9 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
         c.fill.solid(); c.fill.fore_color.rgb = NAVY
         c.vertical_anchor = MSO_ANCHOR.MIDDLE
         tf = c.text_frame; tf.word_wrap = True
-        put(tf, h, 15, bold=True, color=WHITE, first=True, space_after=0,
+        put(tf, h, 19, bold=True, color=WHITE, first=True, space_after=0,
             align=PP_ALIGN.CENTER)
-    tsize = 15 if len(rows) <= 5 else (13.5 if len(rows) <= 7 else 12)
+    tsize = 19 if len(rows) <= 5 else (17 if len(rows) <= 7 else 15)
     for ri, row in enumerate(rows):
         for ci, val in enumerate(row):
             c = tbl.cell(ri + 1, ci)
@@ -306,7 +336,7 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
                 line=1.15)
     if note:
         tf = textbox(s, Cm(1.5), H - Cm(2.6), W - Cm(3.0), Cm(1.3))
-        put(tf, note, 12.5, color=GRAY, first=True, space_after=0)
+        put(tf, note, 15, color=GRAY, first=True, space_after=0)
     return s
 
 
@@ -332,7 +362,7 @@ def place_image(slide, key, x, y, w, h):
 
 def caption(slide, text, x, y, w):
     tf = textbox(slide, x, y, w, Cm(1.3))
-    put(tf, text, 13, color=GRAY, first=True, space_after=0, align=PP_ALIGN.CENTER)
+    put(tf, text, 16, color=GRAY, first=True, space_after=0, align=PP_ALIGN.CENTER)
 
 
 def s_photo(prs, title, key, cap=None, sub=None):
@@ -361,7 +391,7 @@ def s_gallery(prs, title, items, sub=None):
             put(textbox(s, x, top, colw, Cm(2)), f'（缺圖：{key}）', 13,
                 color=GRAY, first=True)
         tf = textbox(s, x, top + boxh + Cm(0.25), colw, Cm(1.9))
-        put(tf, label, 13.5, color=INK, first=True, space_after=0,
+        put(tf, label, 17, color=INK, first=True, space_after=0,
             align=PP_ALIGN.CENTER, line=1.25)
     return s
 
@@ -376,8 +406,7 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     imgw = W - Cm(1.5) - imgx
     h = 13.1
     tf = textbox(s, Cm(1.5), Cm(4.45), textw, Cm(h))
-    base = {0: 20.0, 1: 17.0, 2: 14.5, 3: 21.0}
-    sp = {0: 10, 1: 7, 2: 5, 3: 11}
+    base, sp = IMG_SZ, IMG_SP
     k = fit(bullets, tw, h * 0.96, base, sp)
     firstdone = False
     for b in bullets:
@@ -407,7 +436,7 @@ def s_credits(prs, label):
     """
     if not USED:
         return []
-    per, out = 11, []
+    per, out = 8, []
     for start in range(0, len(USED), per):
         s = blank(prs)
         slide_title(s, '圖片出處',
@@ -419,7 +448,7 @@ def s_credits(prs, label):
             line = f'{name}　—　{m.get("license", "")}'
             if m.get('author'):
                 line += f'　／　{m["author"][:44]}'
-            put(tf, line, 12.5, color=GRAY, first=(i == 0),
+            put(tf, line, 16, color=GRAY, first=(i == 0),
                 space_after=6, line=1.25)
         out.append(s)
     return out
@@ -446,7 +475,7 @@ def s_openers(prs, course, no):
                 '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
     tf = textbox(s1, Cm(1.5), Cm(4.6), W - Cm(3.0), H - Cm(6.4))
     for i, q in enumerate(d['ask']):
-        put(tf, f'{i + 1}　{q}', 21, color=INK, first=(i == 0),
+        put(tf, f'{i + 1}　{q}', 27, color=INK, first=(i == 0),
             space_after=16, line=1.3)
     out.append(s1)
 
@@ -455,16 +484,16 @@ def s_openers(prs, course, no):
                 '掃描畫面上的 QR code 或輸入 PIN 碼加入，作答後抽籤請人詳細說明')
     tf = textbox(s2, Cm(1.5), Cm(4.6), W - Cm(19.0), H - Cm(6.4))
     for i, q in enumerate(d['answer']):
-        put(tf, f'{i + 1}　{q}', 20, color=INK, first=(i == 0),
+        put(tf, f'{i + 1}　{q}', 26, color=INK, first=(i == 0),
             space_after=14, line=1.3)
-    put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 15,
+    put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 19,
         color=GRAY, space_after=0, line=1.3)
     band(s2, PALE, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
     tf2 = textbox(s2, W - Cm(16.1), Cm(5.4), Cm(14.1), H - Cm(8.0),
                   anchor=MSO_ANCHOR.MIDDLE)
-    put(tf2, 'QR code', 30, bold=True, color=NAVY, first=True, space_after=10,
+    put(tf2, 'QR code', 38, bold=True, color=NAVY, first=True, space_after=10,
         align=PP_ALIGN.CENTER)
-    put(tf2, '（由 ClassPoint／AhaSlides 於播放時疊上）', 15, color=GRAY,
+    put(tf2, '（由 ClassPoint／AhaSlides 於播放時疊上）', 19, color=GRAY,
         space_after=0, align=PP_ALIGN.CENTER)
     out.append(s2)
     return out
@@ -478,15 +507,14 @@ def s_refs(prs, nums):
     items = chapter_refs(nums)
     if not items:
         return []
-    zh = '、'.join(f'第 {n} 章' for n in nums)
-    per, out = 9, []
+    # 🚨 標題與副標都不出現章號——講義編號是備課用的，不給學生看。
+    per, out = 7, []
     for start in range(0, len(items), per):
         s = blank(prs)
-        slide_title(s, '參考書目',
-                    f'{zh}講義所附之參考資料；完整註釋見講義各章末')
+        slide_title(s, '參考書目', '本次上課單元的參考資料；完整註釋見課堂講義')
         tf = textbox(s, Cm(1.5), Cm(4.45), W - Cm(3.0), H - Cm(6.15))
         for i, t in enumerate(items[start:start + per]):
-            put(tf, t, 13, color=INK, first=(i == 0), space_after=8, line=1.25)
+            put(tf, t, 16, color=INK, first=(i == 0), space_after=10, line=1.25)
         out.append(s)
     return out
 
@@ -555,10 +583,7 @@ def fold_bigs(slides):
 
 def split_long(slides):
     """一頁塞不下就拆成兩頁，不要把字縮到看不清。"""
-    base = {0: 23.0, 1: 19.0, 2: 16.5, 3: 24.0}
-    sp = {0: 11, 1: 7, 2: 5, 3: 12}
-    ibase = {0: 20.0, 1: 17.0, 2: 14.5, 3: 21.0}
-    isp = {0: 10, 1: 7, 2: 5, 3: 11}
+    base, sp, ibase, isp = BULLET_SZ, BULLET_SP, IMG_SZ, IMG_SP
     out = []
     for it in slides:
         if it[0] == 'bullets':
@@ -586,7 +611,10 @@ def split_long(slides):
             out.append(('bullets', it[1] + '（續）', items[cut:]))
     return out
 
-def build(deck, no=None, course='wr'):
+def build(deck, no=None, course='wr', refs=None, profile=False):
+    """refs＝課末書目要讀的講義章號（不印在投影片上，只用來取書目）。
+    profile＝True 時在封面與開場互動之後插一頁自我介紹（每學期第一次上課）。
+    """
     global USED
     USED = []
     prs = Presentation()
@@ -601,11 +629,13 @@ def build(deck, no=None, course='wr'):
         # 開場兩頁緊接封面，屬前置頁，與封面一樣不編號
         if i == 0 and kind == 'cover' and no:
             s_openers(prs, course, no)
+            if profile:
+                s_profile(prs)
     for c in s_credits(prs, deck['footer']):
         footer(c, len(prs.slides._sldIdLst) - 1, deck['footer'])
-    # 每次上課兩章：第 n 次＝第 2n-1、2n 章
-    if no:
-        for r in s_refs(prs, (no * 2 - 1, no * 2)):
+    # 課末書目：預設每次上課兩章（第 n 次＝第 2n-1、2n 章），週次版由 refs 指定
+    if refs or no:
+        for r in s_refs(prs, tuple(refs) if refs else (no * 2 - 1, no * 2)):
             footer(r, len(prs.slides._sldIdLst) - 1, deck['footer'])
     outdir = DRIVE / FOLDER / '簡報'
     outdir.mkdir(parents=True, exist_ok=True)
