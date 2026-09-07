@@ -437,6 +437,12 @@ def download(s, slug, limit, only=None):
                 continue
             ledger[a["docId"]] = "ok"
             done += 1
+            # 🚨 **逐篇記帳，不要等整批結束才記一次。**
+            #    原本只在 batch() 收尾呼叫 add_spent(spent)，於是中途被 Ctrl+C
+            #    或排程砍掉的那一輪，檔案明明下到了卻一篇都沒計進當日額度——
+            #    下一輪再開又從 0 算起，實際總量會悄悄超過每日上限，
+            #    而 log 與帳本看起來都正常。（2026-09-06 那天就發生過。）
+            add_spent(1)
             print(f"  ✓ [{done}] {a['issueLabel']} {a['title'][:34]} "
                   f"({len(blob) // 1024} KB)", flush=True)
         ledger_p.write_text(json.dumps(ledger, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -738,7 +744,8 @@ def batch(s, budget, daily_cap=0):
             if not (TOC_DIR / f"{slug}.json").exists():
                 continue          # 篇目還沒抓，跳過而不是報錯
             spent += download(s, slug, budget - spent) or 0
-        add_spent(spent)
+        # 逐篇已經在 download() 裡記過帳了，這裡不可以再加一次——
+        # 重複計會讓當日額度提早用完，而症狀是「明明還沒下滿就說達到上限」。
         used = spent_today()
         print(f"本批合計下載 {spent} 篇（預算 {budget}）"
               f"{f'；今天累計 {used}/{daily_cap}' if daily_cap else ''}")

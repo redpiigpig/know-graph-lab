@@ -152,3 +152,17 @@ def test_daily_cap_survives_a_corrupt_state_file(tmp_path, monkeypatch):
 def test_download_delay_not_lowered():
     # 節流是對機構 IP 的承諾，不是效能參數
     assert pa.DELAY_DL >= 6.0
+
+
+def test_spent_is_counted_per_article_not_per_batch(tmp_path, monkeypatch):
+    """🚨 額度要逐篇記，不能等整批結束才記一次。
+
+    只在批次收尾記帳的話，中途被 Ctrl+C 或被排程砍掉的那一輪，檔案明明下到了
+    卻一篇都沒計進當日額度；下一輪再開又從 0 算起，實際總量會悄悄超過每日上限，
+    而 log 與帳本看起來都正常。2026-09-06 那天就發生過。
+    """
+    import inspect
+    src = inspect.getsource(pa.download)
+    assert "add_spent(1)" in src, "download() 沒有逐篇記帳"
+    # 而且 batch() 收尾不可以再加一次，否則會重複計
+    assert "add_spent(spent)" not in inspect.getsource(pa.batch), "batch() 重複記帳"
