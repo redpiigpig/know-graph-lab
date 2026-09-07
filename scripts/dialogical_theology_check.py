@@ -14,6 +14,9 @@
   6. 抄範例    —— 整組沿用卷一第一章那個台灣餐桌場景（單一詞不算，兩個以上標記才算）
   6b. 填充語   —— 「你或許」「值得注意的是」這類 LLM 口頭禪，prompt 禁了但守不牢
   7. 開頭雷同  —— 各章前 60 字互相比對，太像表示模型在套同一個模板
+  8. 重複退化  —— 模型陷入迴圈，尾段變成同一個字或同一小段反覆貼
+                 （2026-09-07 實測：D6:05 尾段吐了一百多個「領」字，而且它有一萬五千字，
+                  只差沒閉合 </section> 就會被前七項全部放行）
 
   python -X utf8 scripts/dialogical_theology_check.py
   python -X utf8 scripts/dialogical_theology_check.py --volume D3
@@ -28,8 +31,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
+
+from ocr_repetition import looks_looping  # noqa: E402
 
 OUTLINE = ROOT / "scripts/data/dialogical_theology_outline.json"
 BASE = ROOT / "public/content/works/dialogical-theology"
@@ -106,6 +112,14 @@ def main() -> None:
                 fillers = sorted(set(_FILLER.findall(t)))
                 if fillers:
                     problems.append(f"{tag} 有填充語：{'、'.join(fillers)}")
+            # 🚨 重複退化：模型跑進迴圈。這一種最陰險——字數會很漂亮（實測 15,385 字），
+            #    前七項檢查全過，只有結尾標籤沒閉合才露餡。不能靠那個露餡。
+            tail = t[-2000:]
+            run = re.search(r"(.)\1{29,}", t)
+            if run:
+                problems.append(f"{tag} 重複退化：「{run.group(1)}」連續 {len(run.group(0))} 次")
+            elif looks_looping(tail):
+                problems.append(f"{tag} 尾段是迴圈：…{tail[-60:]}")
             openings.append((tag, t[:60]))
         if missing:
             problems.append(f"{vol['id']} 缺章：{'、'.join(missing)}")
