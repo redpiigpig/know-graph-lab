@@ -117,6 +117,32 @@ def paragraphs_from_pages(pages: list[str]) -> list[str]:
     return paras
 
 
+def section_payload(section: dict, pages: dict) -> dict:
+    """一節＋該書的 {影像號: OCR 文字} → 與 uchimura／howes 同形的 section dict。
+
+    形狀（heading／title_zh／src／zh）必須與其他作者一致，才接得上 uchimura_auto
+    的 checkpoint／翻譯／上架。`zh` 一開始是空的，翻譯那一步才填。
+    `title_zh` 先擺日文原題而不留空——留空的話 reader 目錄會出現空白項。
+    """
+    texts = [pages[i] for i in range(section["start"], section["end"])
+             if pages.get(i) and pages[i].strip()]
+    return {
+        "heading": section["title"],
+        "title_zh": section["title"],
+        "src": paragraphs_from_pages(texts),
+        "zh": [],
+    }
+
+
+def refuse_empty_build(sections: list, pages: dict) -> bool:
+    """所有 section 都沒有正文＝OCR 根本沒跑（或全失敗），該擋下不要寫檔。
+
+    不擋的話會產出一整套結構正確、目錄齊全、每章卻都沒有字的 secN.json——
+    頁面看起來完全正常。見 [[feedback_reader_silent_failures]]。
+    """
+    return not any(section_payload(s, pages)["src"] for s in sections)
+
+
 # ── 網路（非純函式，測試不碰） ────────────────────────────────────────────────
 def is_open(pid: str) -> bool:
     """インターネット公開＝IIIF manifest 回 200。館內限定／個人送信回 404。"""
@@ -160,15 +186,137 @@ def fetch_images(pid: str, start: int, end: int, width: int = 1800,
     return out
 
 
+OCR_PROMPT = """この画像は戦前日本の書籍を縦書きで印刷したページのスキャンです。
+本文をそのまま文字に起こしてください。
+
+規則：
+1. **旧字体・旧仮名遣いはそのまま残す**（教會→教会 のような新字体への変換は禁止）。
+2. 振り仮名（ルビ）は出力しない。
+3. ページ番号・柱（ノンブル、書名や章名の繰り返し）は出力しない。
+4. 段落は空行で区切る。原文の改行は段落の区切りではないので、
+   文が続いている限り一つの段落にまとめる。
+5. 説明・注釈・markdown（``` など）は一切付けない。本文だけを出力する。
+
+本文が無いページ（扉、目次、奥付、白紙など）は、次の一行だけを出力：
+# NO_TEXT
+"""
+
+
+_CLIENTS: dict = {}
+
+
+def _client_for(key: str, genai):
+    """一把 key 一個 client，跨頁重用（也確保它不會被 GC 掉）。"""
+    if key not in _CLIENTS:
+        _CLIENTS[key] = genai.Client(api_key=key)
+    return _CLIENTS[key]
+
+
+def ocr_page(jpg_bytes: bytes, model: str = "gemini-2.5-flash") -> str:
+    """一頁影像 → 文字。連 2 次 429 就退（[[feedback_ocr_two_strike_quota]]）。"""
+    import time
+    sys.path.insert(0, str(SCRIPT_DIR))
+    from ocr_with_gemini import _find_gemini_keys  # type: ignore
+    from google import genai
+    from google.genai import types
+
+    keys = _find_gemini_keys()
+    if not keys:
+        raise RuntimeError("無 GEMINI_API_KEY")
+
+    last_err = None
+    quota_hits = 0
+    for key in keys:
+        try:
+            # client 一定要綁在變數上：寫成 genai.Client(...).models.generate_content(...)
+            # 那個 client 是暫時物件，請求還沒回來就可能被 GC 關掉，
+            # 報 "Cannot send a request, as the client has been closed."
+            client = _client_for(key, genai)
+            resp = client.models.generate_content(
+                model=model,
+                contents=[types.Part.from_bytes(data=jpg_bytes, mime_type="image/jpeg"),
+                          OCR_PROMPT],
+                config=types.GenerateContentConfig(temperature=0.1),
+            )
+            text = (resp.text or "").strip()
+            if text == "# NO_TEXT":
+                return ""
+            text = re.sub(r"^```[a-z]*\n", "", text)
+            text = re.sub(r"\n```$", "", text)
+            return clean_ocr_text(text.strip())
+        except Exception as e:
+            msg = str(e)
+            last_err = e
+            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower():
+                quota_hits += 1
+                if quota_hits >= 2:
+                    raise RuntimeError("連 2 次 429 quota，依規範退出") from e
+                continue
+            if "503" in msg or "UNAVAILABLE" in msg:
+                time.sleep(3)
+                continue
+            raise
+    raise RuntimeError("全 key 失敗: %s" % last_err)
+
+
+def ocr_book(pid: str, model: str = "gemini-2.5-flash",
+             cache_dir: Path = CACHE_DIR) -> dict:
+    """快取裡的影像逐頁 OCR，一頁一個 checkpoint 檔；已有的跳過。回傳 {影像號: 文字}。"""
+    src_dir = cache_dir / pid
+    out_dir = src_dir / "ocr"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    pages: dict = {}
+    for jpg in sorted(src_dir.glob("*.jpg")):
+        idx = int(jpg.stem)
+        txt = out_dir / ("%07d.txt" % idx)
+        if txt.exists():
+            pages[idx] = txt.read_text(encoding="utf-8")
+            continue
+        text = ocr_page(jpg.read_bytes(), model=model)
+        txt.write_text(text, encoding="utf-8")
+        pages[idx] = text
+        print("  OCR %07d  %d 字" % (idx, len(text)))
+    return pages
+
+
+def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR) -> Path:
+    """目次分章＋OCR 文字 → secN.json（與其他作者同形），回傳輸出目錄。"""
+    import json
+    book = fetch_book(pid)
+    secs = sections_from_index(book["index"], book["pages"], book["title"])
+    pages = {}
+    for txt in sorted((cache_dir / pid / "ocr").glob("*.txt")):
+        pages[int(txt.stem)] = txt.read_text(encoding="utf-8")
+    if refuse_empty_build(secs, pages):
+        raise RuntimeError(
+            "每一章都沒有正文——OCR 沒跑或全失敗，拒絕寫出空的 secN.json。"
+            "先跑 --ocr %s。" % pid)
+    out_dir = (SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works"
+               / "ndl_data" / slug)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for i, sec in enumerate(secs):
+        payload = section_payload(sec, pages)
+        (out_dir / ("sec%d.json" % i)).write_text(
+            json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+        print("  sec%-2d %-28s %d 段" % (i, sec["title"][:26], len(payload["src"])))
+    return out_dir
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", type=str, help="pid：印書誌與分章")
     ap.add_argument("--fetch", type=str, help="pid：下載全部影像到快取")
+    ap.add_argument("--ocr", type=str, help="pid：快取影像逐頁 Gemini Vision OCR")
+    ap.add_argument("--build", type=str, help="pid：OCR 文字 → secN.json（需 --slug）")
+    ap.add_argument("--slug", type=str, help="--build 的輸出目錄名")
+    ap.add_argument("--model", type=str, default="gemini-2.5-flash")
     ap.add_argument("--width", type=int, default=1800)
     args = ap.parse_args()
-    pid = args.probe or args.fetch
+    pid = args.probe or args.fetch or args.ocr or args.build
     if not pid:
-        ap.error("--probe 或 --fetch 擇一")
+        ap.error("--probe／--fetch／--ocr／--build 擇一")
+    if args.build and not args.slug:
+        ap.error("--build 需要 --slug")
     if not is_open(pid):
         print(f"pid={pid} 不是インターネット公開（館內限定／個人送信），不可取用")
         return
@@ -180,6 +328,14 @@ def main():
     if args.fetch:
         got = fetch_images(pid, 1, b["pages"] + 1, width=args.width)
         print(f"下載完成 {len(got)} 張 → {CACHE_DIR / pid}")
+    if args.ocr:
+        pages = ocr_book(pid, model=args.model)
+        chars = sum(len(v) for v in pages.values())
+        empty = [k for k, v in pages.items() if not v.strip()]
+        print(f"OCR 完成 {len(pages)} 頁／{chars} 字；無正文 {len(empty)} 頁 {empty}")
+    if args.build:
+        out = build_sections(pid, args.slug)
+        print(f"→ {out}")
 
 
 if __name__ == "__main__":

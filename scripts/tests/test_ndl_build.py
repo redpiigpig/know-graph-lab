@@ -99,3 +99,56 @@ class TestParagraphsFromPages:
     def test_blank_pages_skipped(self):
         out = nb.paragraphs_from_pages(["本文。", "", "   ", "つづき。"])
         assert out == ["本文。", "つづき。"]
+
+
+class TestSectionPayload:
+    """OCR 完的頁面 → 與 uchimura／howes 同形的 section JSON。
+
+    形狀必須一致（heading／title_zh／src／zh），否則接不上 uchimura_auto 的
+    checkpoint／翻譯／上架那一段。
+    """
+
+    def test_shape_matches_the_other_authors(self):
+        sec = {"title": "第一　教派ではない", "start": 3, "end": 4}
+        out = nb.section_payload(sec, {3: "無教會主義は教派ではない。"})
+        assert list(out) == ["heading", "title_zh", "src", "zh"]
+        assert out["heading"] == "第一　教派ではない"
+        assert out["src"] == ["無教會主義は教派ではない。"]
+        assert out["zh"] == []
+
+    def test_pages_in_range_are_joined_into_paragraphs(self):
+        sec = {"title": "第四", "start": 6, "end": 8}
+        pages = {6: "教會に對する抗議として", 7: "無教會は起った。", 9: "別章の内容"}
+        out = nb.section_payload(sec, pages)
+        # 6 沒有句末標點 → 與 7 接回同一段；9 不在範圍內不可混進來
+        assert out["src"] == ["教會に對する抗議として無教會は起った。"]
+
+    def test_missing_page_is_skipped_not_crashed(self):
+        sec = {"title": "第九", "start": 15, "end": 18}
+        out = nb.section_payload(sec, {15: "傳道法。", 17: "續き。"})
+        assert out["src"] == ["傳道法。", "續き。"]
+
+    def test_title_zh_defaults_to_the_japanese_heading(self):
+        """繁中章名還沒譯時先擺日文原題，不要留空字串（reader 目錄會變空白）。"""
+        out = nb.section_payload({"title": "第二　起源", "start": 4, "end": 5}, {})
+        assert out["title_zh"] == "第二　起源"
+        assert out["src"] == []
+
+
+class TestEmptyBuildGate:
+    """OCR 還沒跑就 build，會寫出一堆結構正確但全空的 secN.json —— 頁面完全正常、
+    目錄也在，只是每一章都沒有字。這是最難發現的一種失敗，寧可直接擋下來。"""
+
+    def test_all_empty_is_refused(self):
+        secs = [{"title": "第一", "start": 3, "end": 4},
+                {"title": "第二", "start": 4, "end": 5}]
+        assert nb.refuse_empty_build(secs, {}) is True
+
+    def test_all_empty_even_with_blank_strings_is_refused(self):
+        secs = [{"title": "第一", "start": 3, "end": 4}]
+        assert nb.refuse_empty_build(secs, {3: "   \n\n"}) is True
+
+    def test_any_real_text_passes(self):
+        secs = [{"title": "第一", "start": 3, "end": 4},
+                {"title": "第二", "start": 4, "end": 5}]
+        assert nb.refuse_empty_build(secs, {3: "無教會主義は教派ではない。"}) is False
