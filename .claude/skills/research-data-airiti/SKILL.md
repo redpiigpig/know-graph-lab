@@ -27,6 +27,25 @@ python -X utf8 scripts/press_airiti.py --batch 25          # 排程用：整批�
 一天最多 500），**每日** 08:00 起每 30 分鐘一次、持續 12 小時。
 log 在 `c:\tmp\airiti_download.log`。
 
+🚨🚨 **`DisallowStartIfOnBatteries` 一定要關掉——這是這個排程最要命的一條。**
+工作排程器的預設是「使用電池時不啟動」。而本任務唯一有用的時機是**人在學校**，
+那時筆電正在用電池，於是排程在該開火的時候一律不啟動；回到家插上電才會跑，
+但那時 IP 不是校內網段、驗不過機構身分。**兩邊永遠錯開，等於這個排程從設計上
+就沒辦法完成它的工作。** 2026-09-07 發現時 `NumberOfMissedRuns` 已經 4，
+在此之前每一篇下載其實都是手動跑出來的。
+症狀完全無聲：`State` Ready、`LastTaskResult` 0、log 裡連一行標頭都不會多
+（bat 是無條件先 echo 標頭的，所以**該有標頭而沒有＝任務根本沒啟動**，
+與「啟動了但驗不過機構身分」分得開——後者會留下一行紅字）。
+
+```powershell
+$s = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
+     -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Hours 2)
+Set-ScheduledTask -TaskName 'KGL_Airiti_Poll' -Settings $s
+```
+
+`ExecutionTimeLimit` 也要跟著批次大小走：100 篇 × 每篇約 18 秒（6 秒節流＋下載）
+約 30 分鐘，預設的 PT1H 勉強夠，拉到 PT2H 才有餘裕。
+
 🚨 **觸發器一定要是 Daily（`MSFT_TaskDailyTrigger`），不能是 Once＋重複。**
 2026-09-06 建的那次用的是一次性觸發（`StartBoundary 2026-09-06T08:00`、每 30 分、
 持續 12 小時），當天 20:00 重複期間用盡之後就**再也不會觸發**——而工作管理員裡
@@ -64,11 +83,12 @@ Set-ScheduledTask -TaskName 'KGL_Airiti_Poll' -Trigger $d
 要改速率就改排程的兩個引數，不必動腳本。**能動的是每日總量，不是 `DELAY_DL`**——
 6 秒那個是不被停權的底線（2026-09-07 使用者定調每日 500）。
 
-🚨 **帳本是批次結束時才一次寫入**（`add_spent(spent)` 在下載迴圈之後）。
-所以中途被 Ctrl+C 或關機的那一輪，檔案已經下到了卻不會計入當天額度——
-下一輪會以為今天還沒下過，當天實際總量就可能超過上限。
-昨天 15:30 那一輪的 log 尾巴只有一個 `^C`，就是這個情形。
-手動中斷過的當天，要嘛自己補帳，要嘛就當那天的上限已經用掉了。
+額度是**逐篇記帳**的（`download()` 每寫成功一篇就 `add_spent(1)`）。
+🚨 這裡曾經是在 `batch()` 收尾才記一次，於是中途被 Ctrl+C 或被排程砍掉的那一輪，
+檔案明明下到了卻一篇都不計，下一輪再開又從 0 算起——當天實際總量會悄悄超過上限，
+而 log 與帳本看起來都正常（2026-09-06 15:30 那輪的 log 尾巴只有一個 `^C`）。
+已於 `a6a573da` 修掉。**兩邊都記會重複計**，症狀是「明明還沒下滿就說達到上限」，
+所以收尾那一次要拿掉，不是兩邊都留。
 
 ### 書目點名的那些篇要排在最前面
 
