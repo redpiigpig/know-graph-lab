@@ -19,7 +19,9 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures as futures
 import json
+import random
 import re
 import sys
 import time
@@ -307,6 +309,10 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
     for i, item in enumerate(ex.get("fill") or [], 1):
         if "____" not in (item.get("q") or ""):
             errs.append(f"fill 第 {i} 題沒有空格")
+    questions = [item.get("q") for item in ex.get("mcq") or []]
+    dupes = {q for q in questions if questions.count(q) > 1}
+    if dupes:
+        errs.append(f"選擇題重複 {len(dupes)} 題：{next(iter(dupes))}")
     bad = check_simplified(ex)
     if bad:
         errs.append("簡體字：" + "".join(bad))
@@ -362,15 +368,33 @@ _nvidia_json.calls = 0
 
 
 LAST_ENGINE = "?"
+FALLBACK_TIMEOUT = 900
 
 
 def _generate(prompt: str) -> tuple[str, str]:
+    """先走 NVIDIA JSON 模式，失敗才回落共用鏈。
+
+    回落那條路會掛住：2026-09-07 夜裡兩條工人各卡在同一次呼叫超過 13 小時
+    （一條停在 gemini-flash-latest，一條停在共用模組的 nemotron），完全沒有逾時。
+    共用模組是別的任務也在用的，不去改它，改成在這裡加看門狗——時間到就當這次
+    失敗、由上層重試，那個執行緒自己去慢慢等。
+    """
     global LAST_ENGINE
     try:
         text, LAST_ENGINE = _nvidia_json(prompt), "nvidia:nemotron(json)"
+        return text, LAST_ENGINE
     except Exception:  # noqa: BLE001
-        text = llm.call_model(prompt, max_tokens=16000)
-        LAST_ENGINE = llm.current_model()
+        pass
+    with futures.ThreadPoolExecutor(max_workers=1) as pool:
+        task = pool.submit(llm.call_model, prompt, 16000)
+        try:
+            text = task.result(timeout=FALLBACK_TIMEOUT)
+        except futures.TimeoutError:
+            LAST_ENGINE = "回落逾時"
+            raise RuntimeError(f"回落引擎超過 {FALLBACK_TIMEOUT}s 沒回應")
+        finally:
+            pool.shutdown(wait=False)
+    LAST_ENGINE = llm.current_model()
     return text, LAST_ENGINE
 
 
@@ -432,10 +456,55 @@ def build_lesson(lesson: dict) -> tuple[dict | None, list[str]]:
     if drills is None:
         return None, ["填空造句：" + "；".join(errs)]
     ex = {**mcq, **drills}
+    rebuild_scrambles(ex, seed=lesson["no"])
     body.update({"no": lesson["no"], "theme": lesson["theme"],
                  "theme_zh": lesson["theme_zh"], "words": lesson["words"],
                  "exercises": ex, "engine": LAST_ENGINE})
     return body, []
+
+
+def rebuild_scrambles(ex: dict, seed: int = 0) -> int:
+    """句子重組的題幹改由答案機械重排。
+
+    引擎自己打散時會漏字或多字（'eight / and / four / equals / plus / .' 的答案是
+    'Four plus eight equals twelve.'——twelve 不見了，and 是多的），學生照題目怎麼排
+    都排不出答案。答案才是權威，題幹重生成就不會對不上。
+    """
+    fixed = 0
+    rng = random.Random(seed)
+    for i, item in enumerate(ex.get("unscramble") or []):
+        answer = (item.get("ans") or "").strip()
+        if not answer:
+            continue
+        match = re.search(r"[.?!]$", answer)
+        tail = match.group(0) if match else "."
+        words = answer[:-len(tail)].split() if match else answer.split()
+        if not words:
+            continue
+        pieces = words + [tail]
+        shuffled = pieces[:]
+        for _ in range(8):
+            rng.shuffle(shuffled)
+            if shuffled != pieces:
+                break
+        wanted = " / ".join(shuffled)
+        if item.get("q") != wanted:
+            item["q"] = wanted
+            fixed += 1
+    return fixed
+
+
+def dedupe_mcq(ex: dict) -> int:
+    seen, kept = set(), []
+    for item in ex.get("mcq") or []:
+        key = (item.get("q") or "").strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        kept.append(item)
+    dropped = len(ex.get("mcq") or []) - len(kept)
+    ex["mcq"] = kept
+    return dropped
 
 
 def coverage(lesson: dict) -> float:
@@ -457,6 +526,8 @@ def main():
     ap.add_argument("--range", help="課次範圍，例如 20-29；多開幾條工人分攤時用")
     ap.add_argument("--redo", action="store_true", help="連已完成的也重做")
     ap.add_argument("--check", action="store_true", help="只驗現有產出")
+    ap.add_argument("--fix", action="store_true",
+                    help="修既有檔：重建重組題題幹、去除重複選擇題並補題")
     ap.add_argument("-v", "--verbose", action="store_true", help="印出每次呼叫的耗時與引擎")
     args = ap.parse_args()
 
@@ -482,6 +553,40 @@ def main():
             else:
                 print(f"L{lesson['no']:02d} ✓ 單字覆蓋 {coverage(data):.0%}　{data.get('title_zh')}")
         print(f"\n{done}/50 課已產出，{bad} 課有問題")
+        return
+
+    if args.fix:
+        for lesson in lessons:
+            path = OUT_DIR / f"L{lesson['no']:02d}.json"
+            if not path.exists():
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            ex = data["exercises"]
+            scrambles = rebuild_scrambles(ex, seed=lesson["no"])
+            dropped = dedupe_mcq(ex)
+            topped = 0
+            while len(ex["mcq"]) < N_MCQ:
+                want = N_MCQ - len(ex["mcq"])
+                part, errs = ask(
+                    prompt_mcq(lesson, data, want, MCQ_STYLES[-1],
+                               [q["q"] for q in ex["mcq"]]),
+                    lambda d, n=want: validate_exercises(d, {"mcq": n}),
+                    stage="補選擇題")
+                if part is None:
+                    print(f"L{lesson['no']:02d} ⚠ 補題失敗：{'；'.join(errs)}", flush=True)
+                    break
+                before = len(ex["mcq"])
+                ex["mcq"].extend(part["mcq"])
+                dedupe_mcq(ex)
+                topped += len(ex["mcq"]) - before
+                if len(ex["mcq"]) == before:   # 補不出新題就別空轉
+                    break
+            if scrambles or dropped:
+                path.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                                encoding="utf-8")
+                print(f"L{lesson['no']:02d} 重組題修 {scrambles} 題　"
+                      f"重複刪 {dropped} 題　補回 {topped} 題　"
+                      f"現有 {len(ex['mcq'])} 題", flush=True)
         return
 
     targets = [l for l in lessons if not args.only or l["no"] in args.only]

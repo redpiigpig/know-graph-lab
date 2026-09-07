@@ -220,3 +220,41 @@ if __name__ == '__main__':
             print(f'{label:<8}{date:<12}{lines[0]}')
             for extra in lines[1:]:
                 print(f'{"":<20}{extra}')
+
+
+# ── 送學校的教學大綱 ────────────────────────────────────────────────────────
+# 校方表單的授課進度固定 18 列。週三兩門正好一週一列；假日班一次拆兩列
+# （標題一列、「包含……」一列），不足的列一律清空——不清會留著上一版的章名。
+SYLLABUS_ROWS = 18
+
+
+def _md(date):
+    """'9/12（六）' → '9月12日'。"""
+    m, _, d = date.split('（')[0].partition('/')
+    return f'{int(m)}月{int(d)}日'
+
+
+def syllabus_rows(c):
+    """回傳剛好 SYLLABUS_ROWS 筆 (日期, [內容行])；補滿的列是 (None, None)。"""
+    out = []
+    weekend = c['code'] in ('PPA066', 'PPA001')
+    for _label, date, title, extra, _chs in c['rows']:
+        if weekend:
+            out.append((_md(date), [title]))
+            out.append((_md(date), list(extra) or ['']))
+        else:
+            out.append((_md(date), [title] + list(extra)))
+    out = out[:SYLLABUS_ROWS]
+    return out + [(None, None)] * (SYLLABUS_ROWS - len(out))
+
+
+# 校方表單的評量項目字樣 → 本課程的比例。未列到的一律 0%。
+# 🚨 期中考一律 0%：日間兩門是期中「報告」，假日班根本沒有期中評量
+#    （使用者 2026-09-08 明講「我沒有要考期中考」）。
+def syllabus_assessment(c):
+    pct = dict(c['assessment'])
+    out = {'出席': pct.get('出席', '0%'), '課堂參與': pct.get('課堂參與', '0%'),
+           '期末考-筆試': pct.get('期末考（筆試）', '0%')}
+    if '期中報告' in pct:
+        out['口頭報告'] = pct['期中報告']
+    return out

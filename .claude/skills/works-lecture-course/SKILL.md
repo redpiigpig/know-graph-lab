@@ -329,3 +329,36 @@ A4 橫式、每頁 8 張、71.25×98 mm、圓角框內縮 3 mm、不印裁切線
 | 點名表 | 3 份 docx（國文 16 人／基督宗教概論 13 人／世界宗教文化導論 49 人） | Drive `玄奘/博一上/教學/115-1 {課程}/` |
 
 相關記憶：[[project_two_textbooks]]、[[project_lecture_slides]]、[[feedback_ui_no_text_overflow]]。
+
+### 🚨 Drive 資料夾名寫錯不會報錯，只會靜靜少一半東西
+
+國文那門的正確資料夾是 **`115-1_宗教系國文講義`**，不是 `宗教系國文講義`。
+名字寫錯時 `mkdir(parents=True)` 會直接建一個新的空資料夾，成品照樣寫得出來、
+腳本照樣印 ✔——但 `IMGDIR` 跟著錯，`_manifest.json` 讀不到，於是整批簡報的圖
+全變成「（缺圖：key）」佔位框。這一輪就這樣讓 PPA066 出了 10 頁缺圖才被抓到。
+
+這個資料夾名在**三個檔各存一份**，改一處不夠：
+`course_slides_pptx.COURSES`、`course_slides_weekly.SOURCE`、`course_syllabus_docx` 的 `folder`。
+改完先看 `教學\` 底下有沒有冒出多餘的資料夾，再抽查簡報有沒有「缺圖」字樣。
+
+### 🚨 Drive 上的圖第一次讀會 OSError: [Errno 22]
+
+檔案還沒下載到本機時 `f.read()` 直接拋 Errno 22，整個 build 中斷、留下**一批不完整
+的簡報**（這輪 37 份只出了 35 份，而總數對不對得看課程數而不是看有沒有報錯）。
+重跑一次就好——圖本身沒問題。所以每次全量出完，**要數檔案數，不要只看有沒有 traceback**。
+
+## 教學大綱：`course_syllabus_docx.py --sync`
+
+送學校那份的授課進度與學習評量一律由 `course_schedule.py` 帶，**不要在 syllabus 檔裡另寫一份**。
+
+```
+python scripts/course_syllabus_docx.py --sync          # 四門全對齊既有檔
+```
+
+校方表單的進度表固定 18 列：週三兩門一週一列；假日班一次拆兩列（標題一列、
+「包含……」一列）；**多出來的列一定要清空**，不清會留著上一版的章名。
+評量對照在 `course_schedule.syllabus_assessment()`：期中報告對應表單的
+「口頭報告(含小組或個人)」，**期中考一律 0%**。
+
+⚠ 範本 `114.2基督宗教概論2026.03.03.docx` 已不在桌面，整份重建（不加 `--sync`）
+現在會失敗；要改既有檔就只能走 `--sync` 或 `--schedule-only`。

@@ -102,7 +102,8 @@ def clean_ocr_text(text: str) -> str:
         joined = "".join(lines).strip()
         if joined:
             out.append(joined)
-    return "\n\n".join(out)
+    # 戰前書一律舊字體，OCR 吐出的新字體在這裡一併還原
+    return restore_old_forms("\n\n".join(out))
 
 
 def paragraphs_from_pages(pages: list[str]) -> list[str]:
@@ -166,6 +167,35 @@ _COMPARE_VARIANTS = str.maketrans({
 })
 
 
+# 新字體 → 舊字體。戰前書（本批全是）不可能印新字體，OCR 吐出來的一律是錯。
+# 🚨 只收**一對一**的字：「弁」對應辨／瓣／辯，「芸」對應藝／芸，靠字形無法判斷，
+#    收進來只會製造新的錯。這張表寧可漏也不可錯。
+# 🚨 也不碰假名：「加えて／加へて」的新舊要看語詞，不是換字表能處理的。
+OLD_FORM_FIXES = {
+    "様": "樣", "来": "來", "雑": "雜", "説": "說", "会": "會", "戦": "戰",
+    "満": "滿", "数": "數", "対": "對", "国": "國", "徳": "德", "気": "氣",
+    "歳": "歲", "帯": "帶", "増": "增", "状": "狀", "実": "實", "歴": "歷",
+    "観": "觀", "学": "學", "経": "經", "関": "關", "発": "發", "図": "圖",
+    "当": "當", "沢": "澤", "読": "讀", "変": "變", "応": "應", "独": "獨",
+    "総": "總", "検": "檢", "権": "權", "単": "單", "継": "繼", "証": "證",
+    "児": "兒", "写": "寫", "処": "處", "号": "號", "営": "營", "党": "黨",
+    "旧": "舊", "両": "兩", "価": "價", "県": "縣", "医": "醫", "栄": "榮",
+    "駅": "驛", "円": "圓", "仮": "假", "拡": "擴", "覚": "覺", "帰": "歸",
+    "広": "廣", "桜": "櫻", "残": "殘", "歯": "齒", "将": "將", "焼": "燒",
+    "乗": "乘", "蔵": "藏", "属": "屬", "続": "續", "転": "轉", "点": "點",
+    "伝": "傳", "売": "賣", "払": "拂", "辺": "邊", "豊": "豐", "誉": "譽",
+    "謡": "謠", "静": "靜", "斉": "齊", "剤": "劑", "摂": "攝", "双": "雙",
+    "荘": "莊", "装": "裝", "昼": "晝", "鉄": "鐵", "塁": "壘", "恋": "戀",
+    "労": "勞", "楼": "樓", "湾": "灣", "体": "體", "秘": "祕", "蛮": "蠻",
+}
+_OLD_FORM_TABLE = str.maketrans(OLD_FORM_FIXES)
+
+
+def restore_old_forms(text: str) -> str:
+    """OCR 文字裡的新字體還原成舊字體。"""
+    return (text or "").translate(_OLD_FORM_TABLE)
+
+
 def is_quota_error(msg: str) -> bool:
     """這個錯誤是不是「額度用盡」（而非連線／授權問題）。"""
     m = (msg or "").lower()
@@ -223,6 +253,30 @@ def strip_before_heading(text: str, heading: str) -> str:
         if not squash.match(ch):
             taken += 1
     return "".join(reversed(out)).strip()
+
+
+def merge_translations(new_sec: dict, old_sec: dict) -> dict:
+    """重建後把舊譯文接回來：src 沒變的沿用，變了的設回 None 等重譯。
+
+    精修 OCR 的時候一定會用到 —— 沒有這個就只能整本重譯，等於不敢修 OCR。
+    用 SequenceMatcher 逐段比對而不是逐位置比對，插入／刪除段落時才不會整批錯位。
+    """
+    from difflib import SequenceMatcher
+
+    new_src = list(new_sec.get("src") or [])
+    old_src = list(old_sec.get("src") or [])
+    old_zh = list(old_sec.get("zh") or [])
+    zh: list = [None] * len(new_src)
+    sm = SequenceMatcher(a=old_src, b=new_src, autojunk=False)
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag != "equal":
+            continue
+        for k in range(i2 - i1):
+            if i1 + k < len(old_zh):
+                zh[j1 + k] = old_zh[i1 + k]
+    out = dict(new_sec)
+    out["zh"] = zh
+    return out
 
 
 def has_translations(existing: list) -> bool:
@@ -487,18 +541,29 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
             "先跑 --ocr %s。" % pid)
     out_dir = (SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works"
                / "ndl_data" / slug)
-    existing = [json.loads(f.read_text(encoding="utf-8"))
-                for f in sorted(out_dir.glob("sec*.json"))] if out_dir.exists() else []
-    if has_translations(existing) and not force:
-        raise RuntimeError(
-            "%s 底下已經有翻好的譯文，build 會把 zh 清空。"
-            "確定要重做 OCR 那一層就加 --force（譯文會全部重來）。" % out_dir)
+    old_by_idx = {}
+    if out_dir.exists():
+        for f in out_dir.glob("sec*.json"):
+            try:
+                old_by_idx[int(f.stem[3:])] = json.loads(f.read_text(encoding="utf-8"))
+            except (ValueError, json.JSONDecodeError):
+                pass
     out_dir.mkdir(parents=True, exist_ok=True)
+    kept = redo = 0
     for i, sec in enumerate(secs):
         payload = section_payload(sec, pages)
+        if not force:
+            # 精修 OCR 後重建：src 沒變的段落沿用舊譯，只有被改到的才重譯
+            payload = merge_translations(payload, old_by_idx.get(i, {}))
+        k = sum(1 for z in payload["zh"] if z)
+        kept += k
+        redo += len(payload["src"]) - k
         (out_dir / ("sec%d.json" % i)).write_text(
             json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
         print("  sec%-2d %-28s %d 段" % (i, sec["title"][:26], len(payload["src"])))
+    if old_by_idx:
+        print("  譯文：沿用 %d 段、待重譯 %d 段%s"
+              % (kept, redo, "（--force：全部重譯）" if force else ""))
     return out_dir
 
 
@@ -510,7 +575,7 @@ def main():
     ap.add_argument("--build", type=str, help="pid：OCR 文字 → secN.json（需 --slug）")
     ap.add_argument("--slug", type=str, help="--build 的輸出目錄名")
     ap.add_argument("--force", action="store_true",
-                    help="已有譯文時仍重建（zh 會被清空重譯）")
+                    help="不沿用舊譯，整本重譯")
     ap.add_argument("--model", type=str, default="gemini-2.5-flash")
     ap.add_argument("--backend", choices=["gemini", "haiku"], default="gemini",
                     help="OCR 引擎。haiku 需使用者明確下令（feedback_ocr_strategy）")

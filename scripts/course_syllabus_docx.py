@@ -151,7 +151,7 @@ WR_INTRO_DAY = {
 }
 
 CHINESE = {
-    'folder': '宗教系國文講義',
+    'folder': '115-1_宗教系國文講義',
     'filename': '115.1國文',
     'year': '115', 'term': '1',
     'course_name': '國文',
@@ -348,6 +348,50 @@ def write_schedule(c, T2):
         set_cell(row.cells[1], topic)
 
 
+# course_schedule.py 才是四門課週次與評量的權威來源；本檔的 schedule／assessment_on
+# 是 115-1 改版前的舊資料，只留給沒有既有檔、必須由範本整份重建時用。
+# 平常一律走 --sync：把既有檔的「授課進度」與「學習評量」對齊 course_schedule。
+SYNC_KEYS = {'world-religions-day': 'wr-day', 'world-religions-intro': 'wr-weekend',
+             'christianity': 'christianity', 'chinese': 'chinese'}
+
+
+def sync(key):
+    """依 course_schedule 更新既有檔的授課進度與學習評量，其餘欄位原樣保留。"""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import course_schedule as CS
+
+    c = COURSES[key]
+    sc = CS.COURSES[SYNC_KEYS[key]]
+    out = DRIVE / c['folder'] / f"{c['filename']}.docx"
+    if not out.exists():
+        raise SystemExit(f'找不到 {out}')
+    doc = Document(str(out))
+
+    T2 = doc.tables[2]
+    for i, (date, lines) in enumerate(CS.syllabus_rows(sc)):
+        row = T2.rows[i + 2]
+        if date is None:                     # 清空多出來的列，別留上一版的章名
+            set_cell(row.cells[0], [''])
+            set_cell(row.cells[1], [''])
+            continue
+        set_cell(row.cells[0], [f'{i + 1:02d}', date])
+        set_cell(row.cells[1], lines)
+
+    T3 = doc.tables[3]
+    want = CS.syllabus_assessment(sc)
+    for ri in range(2, len(T3.rows)):
+        cell = T3.rows[ri].cells[0]
+        label = cell_label(cell)
+        if not label:
+            continue
+        hit = next((v for k, v in want.items() if k in label), None)
+        set_checkbox(cell, hit is not None)
+        set_cell(T3.rows[ri].cells[1], hit or '0%')
+
+    doc.save(str(out))
+    return out
+
+
 def update_schedule(c):
     """只改既有檔的「授課進度與內容」，其餘欄位（可能已被手動編輯）原樣保留。"""
     out = DRIVE / c['folder'] / f"{c['filename']}.docx"
@@ -422,6 +466,10 @@ if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     only = '--schedule-only' in sys.argv
+    if '--sync' in sys.argv:
+        for k in (args or list(SYNC_KEYS)):
+            print('✔', sync(k))
+        raise SystemExit
     for k in (args or list(COURSES)):
         c = COURSES[k]
         # Word 開檔時會留下 ~$ 開頭的鎖檔（檔名會被截去前幾個字，故用 glob 比對）

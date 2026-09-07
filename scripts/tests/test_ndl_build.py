@@ -300,3 +300,71 @@ class TestBuildDoesNotEatTranslations:
 
     def test_partial_translation_blocks(self):
         assert nb.has_translations([{"src": ["a", "b"], "zh": [None, "乙"]}]) is True
+
+
+class TestMergeTranslations:
+    """精修 OCR 之後重建：**只有被改到的段落**該失效重譯，其餘譯文留著。
+
+    先前的作法是「有譯文就拒絕重建」，那只是擋住而已 —— 真要修 OCR 還是得
+    整本重譯。改成逐段比對 src：一樣的沿用舊譯，不一樣的把 zh 設回 None。
+    """
+
+    def test_unchanged_paragraph_keeps_its_translation(self):
+        old = {"src": ["甲", "乙"], "zh": ["A", "B"]}
+        new = {"src": ["甲", "乙"], "zh": []}
+        assert nb.merge_translations(new, old)["zh"] == ["A", "B"]
+
+    def test_edited_paragraph_loses_its_translation(self):
+        old = {"src": ["歡ばしい", "乙"], "zh": ["可喜", "B"]}
+        new = {"src": ["歎かはしい", "乙"], "zh": []}
+        assert nb.merge_translations(new, old)["zh"] == [None, "B"]
+
+    def test_inserted_paragraph_gets_none(self):
+        old = {"src": ["甲"], "zh": ["A"]}
+        new = {"src": ["新", "甲"], "zh": []}
+        assert nb.merge_translations(new, old)["zh"] == [None, "A"]
+
+    def test_deleted_paragraph_drops_its_translation(self):
+        old = {"src": ["甲", "乙"], "zh": ["A", "B"]}
+        new = {"src": ["乙"], "zh": []}
+        assert nb.merge_translations(new, old)["zh"] == ["B"]
+
+    def test_no_old_file_is_all_untranslated(self):
+        new = {"src": ["甲", "乙"], "zh": []}
+        assert nb.merge_translations(new, {})["zh"] == [None, None]
+
+    def test_duplicate_source_paragraphs_do_not_cross_wire(self):
+        """同樣的原文出現兩次時，兩邊各自對到自己的譯文，不可以互相串。"""
+        old = {"src": ["同", "同"], "zh": ["一", "二"]}
+        new = {"src": ["同", "同"], "zh": []}
+        assert nb.merge_translations(new, old)["zh"] == ["一", "二"]
+
+
+class TestOldFormRestore:
+    """1934 年的書全是舊字體 —— 新字體是 1946 年才有的。
+    所以 OCR 吐出來的任何新字體都是錯，這一整類可以確定性修掉，不必逐字看圖。
+
+    🚨 只收**一對一**的字。像「弁」對應辨／瓣／辯三個舊字，靠字形無法判斷，
+    收進來只會製造新的錯 —— 這張表寧可漏也不可錯。
+    """
+
+    def test_restores_old_forms(self):
+        assert nb.restore_old_forms("斯様な言葉が出来て満足") == "斯樣な言葉が出來て滿足"
+
+    def test_already_old_is_untouched(self):
+        s = "斯樣な言葉が出來て滿足"
+        assert nb.restore_old_forms(s) == s
+
+    def test_kana_is_not_touched(self):
+        """假名的新舊（加えて／加へて）要看語詞，不能靠字表換。"""
+        s = "われらはすでに加えて"
+        assert nb.restore_old_forms(s) == s
+
+    def test_ambiguous_chars_are_excluded(self):
+        """弁→辨/瓣/辯 三選一，不可自動換。"""
+        assert "弁" not in nb.OLD_FORM_FIXES
+
+    def test_mapping_is_one_to_one(self):
+        vals = list(nb.OLD_FORM_FIXES.values())
+        assert len(vals) == len(set(vals))
+        assert all(len(k) == 1 and len(v) == 1 for k, v in nb.OLD_FORM_FIXES.items())

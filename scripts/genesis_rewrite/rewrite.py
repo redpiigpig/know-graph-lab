@@ -102,17 +102,30 @@ _n_idx = 0
 GEMINI_KEYS: list[str] = []
 NVIDIA_KEYS: list[str] = []
 
-# 🚨 gemini-2.5-flash 對新帳號會 404，一律走 gemini-flash-latest
-GEMINI_MODEL = "gemini-flash-latest"
+# 兩個模型的免費日額度是**分開的桶**（實測：同一把 key 在 flash-latest 已 429、
+# 在 2.5-flash 仍 200），所以兩個都要吃。gemini-2.5-flash 對新帳號回 404
+# （"no longer available to new users"），舊帳號的 key 才有——那也是額外的供給。
+GEMINI_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash-0731"
 _THINK_RE = re.compile(r"<think>.*?</think>", re.S)
 
 
+class QuotaExhausted(RuntimeError):
+    """今天的 Gemini 免費額度用完了。當天不會恢復，所以整輪就該收手。"""
+
+
+# (model, key) 這一組今天已經沒了：429 是日額度耗盡，404 是這把 key 不支援該模型
+_dead: set[tuple[str, str]] = set()
+
+
 def gemini_chat(system: str, prompt: str) -> str:
-    """429 是每分鐘速率限制、不是當日耗盡——七把 key 會輪流恢復，所以要繞好幾輪、
-    每輪之間睡久一點，而不是一輪掃完就放棄。"""
-    global _g_idx
+    """依序試 (模型 × key) 的每一組合。
+
+    🚨 不要長退避。免費層是 GenerateRequestsPerDayPerProjectPerModel-FreeTier=20，
+    **日額度、當天不恢復**——睡再久也等不到，只會把整輪的時間耗光（實測整夜只前進一節）。
+    額度用盡就丟 QuotaExhausted 讓整輪收手，排程半小時後自然會再來。
+    """
     if not GEMINI_KEYS:
         raise RuntimeError("no gemini key")
     body = {
@@ -120,44 +133,55 @@ def gemini_chat(system: str, prompt: str) -> str:
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.6,
-            # 🚨 實測 gemini-flash-latest 這一層：maxOutputTokens 一超過 8192
-            #    就一律回 503（16384/24576/32768 四把 key 全掛），不是 429 也不是模型問題。
-            #    所以整章不可能一次生完，改成分塊改寫（見 chunk_blocks）。
+            # 🚨 超過 8192 一律 503（實測 16384/24576/32768 全掛），別調高。
             "maxOutputTokens": 8192,
             "thinkingConfig": {"thinkingBudget": 1024},
         },
     }
-    base = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    combos = [(m, k) for m in GEMINI_MODELS for k in GEMINI_KEYS if (m, k) not in _dead]
+    if not combos:
+        raise QuotaExhausted("所有 (模型×key) 組合今日皆已耗盡")
+
     last = ""
-    for rnd, cooldown in enumerate((0, 30, 60, 120, 240), start=1):
-        if cooldown:
-            print(f"      · 全部 key 都在限流，等 {cooldown}s 再繞第 {rnd} 輪", flush=True)
-            time.sleep(cooldown)
-        for _ in range(len(GEMINI_KEYS)):
-            key = GEMINI_KEYS[_g_idx]
-            _g_idx = (_g_idx + 1) % len(GEMINI_KEYS)
+    for model, key in combos:
+        base = (f"https://generativelanguage.googleapis.com/v1beta/models/"
+                f"{model}:generateContent")
+        for attempt in (1, 2):          # 只對暫時性錯誤重試一次
             try:
                 r = requests.post(f"{base}?key={key}", json=body, timeout=900)
             except requests.exceptions.RequestException as e:
-                last = f"{type(e).__name__}"
-                continue
+                last = type(e).__name__
+                if attempt == 1:
+                    time.sleep(5)
+                    continue
+                break
             if r.status_code == 200:
                 data = r.json()
                 try:
                     cand = data["candidates"][0]
-                    txt = "".join(p.get("text", "") for p in cand["content"]["parts"])
+                    txt = "".join(pt.get("text", "") for pt in cand["content"]["parts"])
                 except (KeyError, IndexError):
-                    last = f"bad resp {json.dumps(data)[:200]}"
-                    continue
-                fr = cand.get("finishReason")
-                if fr not in (None, "STOP"):
-                    last = f"finishReason={fr}"
-                    continue
+                    last = f"bad resp {json.dumps(data)[:160]}"
+                    break
+                if cand.get("finishReason") not in (None, "STOP"):
+                    last = f"finishReason={cand.get('finishReason')}"
+                    break
                 return txt.strip()
-            last = f"HTTP {r.status_code}"
-            if r.status_code not in (429, 500, 502, 503, 504):
-                raise RuntimeError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
-    raise RuntimeError(f"gemini 五輪皆敗，最後一次：{last}")
+            if r.status_code in (429, 404):
+                _dead.add((model, key))     # 今天不必再試這一組
+                last = f"HTTP {r.status_code}"
+                break
+            if r.status_code in (500, 502, 503, 504):
+                last = f"HTTP {r.status_code}"
+                if attempt == 1:
+                    time.sleep(5)
+                    continue
+                break
+            raise RuntimeError(f"gemini HTTP {r.status_code}: {r.text[:200]}")
+
+    if all((m, k) in _dead for m in GEMINI_MODELS for k in GEMINI_KEYS):
+        raise QuotaExhausted(f"今日 Gemini 額度用盡（最後：{last}）")
+    raise RuntimeError(f"gemini 全部組合皆敗，最後一次：{last}")
 
 
 def nvidia_chat(system: str, prompt: str) -> str:
@@ -201,6 +225,8 @@ def llm(system: str, prompt: str) -> tuple[str, str]:
     """Gemini 主、NVIDIA 備援。回 (文字, 用了哪個引擎)。"""
     try:
         return gemini_chat(system, prompt), "gemini"
+    except QuotaExhausted:
+        raise                      # 整輪收手，交給排程下一次
     except Exception as e:  # noqa: BLE001
         print(f"    ⚠ gemini 失敗（{e}），改用 NVIDIA", flush=True)
         return nvidia_chat(system, prompt), "nvidia"
@@ -359,6 +385,8 @@ def rewrite_section(book, spec, positions, section, idx, name, args):
             t0 = time.time()
             try:
                 out, engine = llm(SYSTEM, prompt)
+            except QuotaExhausted:
+                raise              # 不是這一節的錯，別記進帳本
             except Exception as e:  # noqa: BLE001
                 return None, f"塊 {ci}/{len(groups)}：{e}"
             engines.add(engine)
@@ -435,7 +463,11 @@ def rewrite_book(book: str, spec: dict, positions: str, args) -> None:
             continue
 
         t0 = time.time()
-        rebuilt, info = rewrite_section(book, spec, positions, part, todo, name, args)
+        try:
+            rebuilt, info = rewrite_section(book, spec, positions, part, todo, name, args)
+        except QuotaExhausted as e:
+            print(f"      · {e}；本輪收手，排程下次會續跑", flush=True)
+            raise
         rec = {"book": book, "idx": todo, "name": name,
                "at": datetime.now(timezone.utc).isoformat()}
         if rebuilt is None:
@@ -522,7 +554,10 @@ def main() -> None:
             print(f"✗ directives.json 沒有 {book}")
             continue
         print(f"【{book}《{spec['title']}》 — {spec['level']}】", flush=True)
-        rewrite_book(book, spec, positions, args)
+        try:
+            rewrite_book(book, spec, positions, args)
+        except QuotaExhausted:
+            break
         print()
 
     if LOCK.exists():

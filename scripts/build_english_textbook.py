@@ -51,6 +51,9 @@ PALETTE = [
 
 BLANK = "＿" * 12
 
+# 每課印幾題選擇題。資料檔一律存 30 題，改這個數字不必重跑生成。
+MCQ_PER_LESSON = 10
+
 
 # ---------------------------------------------------------------- 低階排版工具
 
@@ -449,6 +452,19 @@ def add_lesson(doc, lesson, first, images, stats):
 
 # ---------------------------------------------------------------- 主流程
 
+def pick_mcq(items: list[dict], want: int) -> list[dict]:
+    """從整批選擇題裡挑出要印的幾題。
+
+    題目是分三批出的（單字義／文法選填／句意理解），照順序取前 N 題會全部落在
+    第一批，整份考卷只剩背單字。這裡橫跨三批等距取樣，維持題型比例。
+    資料檔仍保留全部 30 題，改印幾題不必重跑生成。
+    """
+    if want >= len(items):
+        return items
+    step = len(items) / want
+    return [items[min(int(i * step), len(items) - 1)] for i in range(want)]
+
+
 def load_course(spec: str | None) -> list[dict]:
     files = sorted(COURSE.glob("L*.json"))
     if not files:
@@ -462,7 +478,8 @@ def load_course(spec: str | None) -> list[dict]:
     return lessons
 
 
-def build(lessons: list[dict], out_path: Path, volume: str = "") -> dict:
+def build(lessons: list[dict], out_path: Path, volume: str = "",
+          mcq: int = MCQ_PER_LESSON) -> dict:
     images = load_card_images()
     stats = {"with_image": 0, "no_image": 0, "missing": []}
 
@@ -477,6 +494,9 @@ def build(lessons: list[dict], out_path: Path, volume: str = "") -> dict:
     normal.font.name = FONT_EN
     normal.font.size = Pt(13)
     normal.element.rPr.rFonts.set(qn("w:eastAsia"), FONT_ZH)
+
+    for lesson in lessons:
+        lesson["exercises"]["mcq"] = pick_mcq(lesson["exercises"]["mcq"], mcq)
 
     add_cover(doc, lessons, volume)
     add_toc(doc, lessons)
@@ -530,6 +550,8 @@ def main():
     ap.add_argument("--lessons", help="課次範圍，例如 1-25")
     ap.add_argument("--volume", default="", help="冊別，例如 上冊")
     ap.add_argument("--split", action="store_true", help="直接分成上下兩冊")
+    ap.add_argument("--mcq", type=int, default=MCQ_PER_LESSON,
+                    help=f"每課印幾題選擇題（預設 {MCQ_PER_LESSON}；資料檔存的是 30 題）")
     ap.add_argument("--pdf", action="store_true", help="順便轉 PDF")
     ap.add_argument("--publish", action="store_true", help="轉完 PDF 複製到 Drive 家教夾")
     ap.add_argument("-o", "--out")
@@ -551,7 +573,7 @@ def main():
         else:
             suffix = f"_{name}" if name else ""
             out = OUT_DIR / f"Happy_English{suffix}.docx"
-        report(out, build(group, out, name))
+        report(out, build(group, out, name, args.mcq))
         made.append(out)
 
     if args.pdf or args.publish:
