@@ -62,9 +62,30 @@ PRIORITY = {
 }
 DEFAULT_PRIORITY = 60
 
+# 正在做的那位全集作家，插到所有層之前。
+#
+# 為什麼要有這一條：PRIORITY 是「按來源」分層的，可是 collected-works-hunt 一個來源
+# 就有 1,193 筆、285 位作家，整組提上來會把佇列淹掉；不提上來又全部落在最低層 60，
+# 照現在一天十本的速度，指定「先做某某人」等於沒說——伊利亞德那 6 筆原本排在第
+# 597 筆，而帳本才走到 167 筆。
+#
+# 所以插隊的單位是**作家**不是來源。填 who 欄位會出現的字串（中文名或英文姓皆可，
+# 大小寫不拘、比對用包含）。做完一位就把他移掉，不要放著累積——留著等於沒有優先序。
+FOCUS_AUTHORS = [
+    "伊利亞德",   # 2026-09-08 宗教學全集主打；6 部中譯本
+    "Eliade",
+]
+
+
+def _is_focus(it: dict) -> bool:
+    hay = f"{it.get('who', '')} {it.get('zh', '')} {it.get('query', '')}".lower()
+    return any(a.lower() in hay for a in FOCUS_AUTHORS)
+
 
 def prioritize(items: list[dict]) -> list[dict]:
     """依 PRIORITY 分層，層內在各來源之間輪流取，同一本書原文排在中譯前面。
+
+    FOCUS_AUTHORS 命中的整批拉到最前面（層內仍照原文先、中譯後）。
 
     層內輪流是刻意的：genesis-philosophy 一家就佔了三分之一，照來源整批排會讓
     它獨吞好幾個月的額度，其餘計畫全部餓死。
@@ -81,7 +102,8 @@ def prioritize(items: list[dict]) -> list[dict]:
     for it in items:
         src = it.get("source", "")
         # 同一本書的兩格：-orig 先、-zh 後（理由見 docstring）
-        buckets[PRIORITY.get(src, DEFAULT_PRIORITY)][src].append(it)
+        lvl = 0 if _is_focus(it) else PRIORITY.get(src, DEFAULT_PRIORITY)
+        buckets[lvl][src].append(it)
     for tier in buckets.values():
         for src, q in tier.items():
             ordered = sorted(q, key=lambda x: (1 if x["key"].endswith("-zh") else 0, x["key"]))
