@@ -70,14 +70,15 @@ def rule(doc):
 
 
 def field_table(doc):
-    """基本欄位：學號／班級／姓名一列，課程名稱／上課日期一列。"""
+    """基本欄位：學號／班級／姓名一列，課程名稱／上課日期／週次一列。"""
     t = doc.add_table(rows=2, cols=6)
     t.style = 'Table Grid'
     t.autofit = False
-    widths = [2.0, 3.6, 1.8, 3.4, 1.8, 4.4]
-    labels = [('學號', ''), ('班級', ''), ('姓名', '')]
+    # 兩列共用同一組欄寬，所以第 3 欄要放得下「　　年　　月　　日」九個字
+    widths = [2.0, 3.4, 1.8, 4.0, 1.4, 4.4]
     for ri, cells in enumerate(([('學號', ''), ('班級', ''), ('姓名', '')],
-                                [('課程名稱', ''), ('上課日期', '　　年　　月　　日')])):
+                                [('課程名稱', ''), ('上課日期', '　　年　　月　　日'),
+                                 ('週次', '第　　週')])):
         for ci, (lab, val) in enumerate(cells):
             lc, vc = t.rows[ri].cells[ci * 2], t.rows[ri].cells[ci * 2 + 1]
             for cell, text, bold, fill in ((lc, lab, True, 'EFEFEF'), (vc, val, False, None)):
@@ -95,12 +96,9 @@ def field_table(doc):
     for r in t.rows:
         r.height = Cm(ROW_H)
         r.height_rule = WD_ROW_HEIGHT_RULE.AT_LEAST
-    # 第二列只有兩組欄位，把最後兩格併進「上課日期」的值欄
-    t.rows[1].cells[3].merge(t.rows[1].cells[5])
     for i, w in enumerate(widths):
         for c in t.columns[i].cells:
             c.width = Cm(w)
-    _ = labels
     return t
 
 
