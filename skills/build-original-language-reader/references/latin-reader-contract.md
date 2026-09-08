@@ -364,5 +364,9 @@ labelled one.
   edition. Its Chinese is 自譯 and must never be presented as 《感恩祭典》.
 - Never call the synthetic audio a release track, and never let a page offer a
   play control for a clip that does not exist.
+- 印製分冊（2026-09-08）：一本不超過 500 頁，同語言各冊厚薄相近，於是印成**三冊**
+  ——第一冊＝上冊全 50 課（456 頁）、第二冊＝下冊第 1–32 課（426 頁）、第三冊＝
+  下冊第 33–50 課＋附錄（416 頁）。切點只在課與課之間，課次編號不動，附錄只印在
+  該部分最後一冊。範圍凍結在 `scripts/build_latin_full_reader.py` 的 `PARTS`。
 - Never let the imported Hebrew layout keep its running header. Every page of
   the first Latin print run said 聖經希伯來文原文讀本.

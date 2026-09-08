@@ -35,6 +35,25 @@ and must match its *structure* too, not just its scale. Checked 2026-08-27:
   preparation; the reading is the lesson itself and should begin at the top of
   a page. This is a `page_break()` inside the reading function, so no call site
   can forget it.
+- **Running head and page number** (2026-09-08). 頁尾置中印頁碼，眉標印
+  `書名  ·  第 NN 課`。課次不逐頁寫死，用 Word 的 `STYLEREF` 欄位指向
+  `RUNNING_STYLE`（"Running Tag"）：每課開頭那行「第 NN 課」套上該樣式
+  （`mark_running_tag()`），欄位就印出這一頁所屬那一課，一課跨幾十頁都對。
+  非課文的部分不能沿用課次，否則附錄整區會謊稱自己是第 50 課——所以全書切成
+  三節（卷首／課文／附錄），每節一個眉標，由 `start_section()` 開節。
+  **分節符自己就會換頁**：接在它後面的開場不可以再帶 `page_break_before`，
+  不然每一部之間多一張白紙（`add_lesson_opener`／`add_liturgy`／
+  `appendix_section` 的第一個都因此要傳 `page_break_before=False`）。
+- **A bound volume may not exceed 500 pages, and volumes of one language should
+  be about equally thick** (2026-09-08). The lesson data is unchanged; what
+  changed is how many physical books it prints as. Split only between lessons,
+  never renumber a lesson (the online reader and the audio routes key on it),
+  and print each half's appendix in its last part only — repeating a 125-page
+  appendix in every part pushes them back over the cap. The splits live in each
+  builder's `PARTS`: Greek 6 volumes of 262–301 pages, Latin 3 of 416–456,
+  Hebrew 1 of 401. Greek's first two are the thin ones because its 524-page
+  first half can only halve. `render_and_check_reader_pdfs.py` fails the build
+  over 500.
 - **Appendix tables print grouped**, in `PRINT_ORDER` from
   `scripts/proper_name_categories.py`, with the group heading at H2/H3.
 - **No print caps.** Latin capped appendix groups at 200 rows to hold the page
@@ -79,11 +98,22 @@ checklist; do not flag it as a missing glyph.
 
 ## B5-height spine artwork
 
-- Produce one vector spine artifact at the trim height of 257 mm when the print handoff requests a spine.
-- Treat its width as printer-adjustable artwork, not as a paper-thickness or page-count calculation.
-- Do not invent paper stock, caliper, binding allowance, or multiple width variants unless the user explicitly asks for them.
-- Keep the title, palette, and typography consistent with the reader cover.
-- Supply a PDF for handoff and an editable SVG so the printer can fit the art to the final die line.
+`scripts/build_reader_spines.py` draws one spine per **physical** volume — ten of
+them as of 2026-09-08 — and is run after the print masters render, because it
+measures them.
+
+- Height is the B5 trim, 257 mm, always.
+- Width comes from that volume's own page count: `頁數 ÷ 2 × 0.105 mm + 1.0 mm`
+  (80 gsm woodfree plus cover board). Until 2026-09-08 the single Hebrew spine
+  carried a fixed 16 mm artwork width instead; that stopped being defensible when
+  the volumes ranged from 262 to 456 pages, i.e. 14.8 mm to 24.9 mm of spine. A
+  printer on different stock re-runs with `--sheet`.
+- A volume with no rendered master gets no spine and is reported as missing. The
+  thickness is measured from the book, never guessed.
+- Palette follows the cover: one colour per language (`COVER_PALETTES`), title
+  set vertically in ivory, 冊次 under it in the accent, gold rule and year at the
+  foot.
+- Ship both the PDF (handoff) and the SVG (editable to the printer's die line).
 
 ## Never fall back to another language to fill a hole
 

@@ -23,7 +23,7 @@ single-volume plan whose lesson sizes came from BBG's own chapters; that plan an
 | Builder | `scripts/build_greek_vocabulary_2000.py --write` → `data/originalReaders/vocabulary/greek-2000.json` |
 | Master | `scripts/build_greek_reader_data.py --write` → `greek-reader-two-volumes.json`, schema 2.0.0, one `volumes` entry per book |
 | Transliteration | Mounce's own for his 500; the same published Erasmian table applied by rule for the other 1,500, each labelled `rule_generated_from_official_table` |
-| Print | one JIS B5 DOCX per volume; the five reference tables print in **both**, the liturgy in 下冊 only |
+| Print | **six** JIS B5 volumes, 第一冊–第六冊, 262–301 pages each (2026-09-08: no bound volume over 500 pages, and one language's volumes should be about equally thick). 上冊 prints as 第一–二冊, 下冊 as 第三–六冊; the split is by lesson only and lesson numbers never move. The five reference tables print in the last volume of **each** half, the liturgy in 第六冊 only. Ranges are frozen in `PARTS` in `scripts/build_greek_full_reader.py`. |
 
 ### The language is Koine, and staying there takes work
 

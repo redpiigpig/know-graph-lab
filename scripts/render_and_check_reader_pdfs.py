@@ -31,19 +31,21 @@ SOFFICE = Path(r"C:\Program Files\LibreOffice\program\soffice.com")
 B5 = (182.0, 257.0)
 A4_LANDSCAPE = (297.0, 210.0)
 
-TARGETS: dict[str, tuple[Path, tuple[float, float]]] = {}
-for stem in ("greek-original-reader-vol1", "greek-original-reader-vol2",
-             "latin-original-reader-vol1", "latin-original-reader-vol2",
-             "hebrew-original-reader-50-lessons"):
-    TARGETS[stem] = (ROOT / "output/original-readers" / f"{stem}.docx", B5)
+# 一本裝訂實體不得超過這麼多頁（使用者 2026-09-08 定的規矩）。超過就要在課與課之間
+# 再切一冊——分冊表在各 builder 的 PARTS，不是在這裡改數字。
+MAX_READER_PAGES = 500
+
+TARGETS: dict[str, tuple[Path, tuple[float, float], int | None]] = {}
+for stem in [f"greek-original-reader-vol{n}" for n in range(1, 7)] +             [f"latin-original-reader-vol{n}" for n in range(1, 4)] +             ["hebrew-original-reader-50-lessons"]:
+    TARGETS[stem] = (ROOT / "output/original-readers" / f"{stem}.docx", B5, MAX_READER_PAGES)
 for stem in ("hebrew-flashcards-1000", "greek-flashcards-volume-1",
              "greek-flashcards-volume-2", "latin-flashcards-volume-1",
              "latin-flashcards-volume-2", "hebrew-flashcards-appendix",
              "greek-flashcards-appendix", "latin-flashcards-appendix",
              "english-flashcards-1000"):
-    TARGETS[stem] = (ROOT / "output/flashcards" / f"{stem}.docx", A4_LANDSCAPE)
+    TARGETS[stem] = (ROOT / "output/flashcards" / f"{stem}.docx", A4_LANDSCAPE, None)
 for stem in ("buddhist-playing-cards", "christian-playing-cards"):
-    TARGETS[stem] = (ROOT / "output/playing-cards" / f"{stem}.docx", A4_LANDSCAPE)
+    TARGETS[stem] = (ROOT / "output/playing-cards" / f"{stem}.docx", A4_LANDSCAPE, None)
 
 MM = 25.4 / 72.0  # PDF 點 -> 毫米
 
@@ -64,7 +66,7 @@ def render(docx: Path, out_dir: Path) -> Path:
     return pdf
 
 
-def check(pdf: Path, expected_mm: tuple[float, float]) -> list[str]:
+def check(pdf: Path, expected_mm: tuple[float, float], max_pages: int | None = None) -> list[str]:
     problems: list[str] = []
     document = fitz.open(pdf)
     sizes = set()
@@ -88,6 +90,9 @@ def check(pdf: Path, expected_mm: tuple[float, float]) -> list[str]:
         problems.append(f"空白頁 {len(blank)} 頁：{blank[:12]}")
     if replacement:
         problems.append(f"替代字元出現在第 {replacement[:12]} 頁")
+    if max_pages is not None and document.page_count > max_pages:
+        problems.append(f"{document.page_count} 頁，超過一本 {max_pages} 頁的上限："
+                        "在課與課之間再切一冊（見 builder 的 PARTS）")
 
     # get_page_fonts 回 (xref, ext, type, basefont, name, encoding)；
     # ext 是 "n/a"（或 xref 為 0）就表示字型沒有內嵌在檔案裡。
@@ -115,14 +120,14 @@ def main() -> None:
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     failed = False
-    for stem, (docx, expected) in TARGETS.items():
+    for stem, (docx, expected, max_pages) in TARGETS.items():
         if args.only and stem not in args.only:
             continue
         if not docx.is_file():
             print(f"  {stem}：找不到 {docx}")
             failed = True
             continue
-        problems = check(render(docx, out_dir), expected)
+        problems = check(render(docx, out_dir), expected, max_pages)
         for line in problems:
             print(f"      ✘ {line}")
         failed = failed or bool(problems)

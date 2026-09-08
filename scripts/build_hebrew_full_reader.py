@@ -16,6 +16,8 @@ from pathlib import Path
 from typing import Any
 
 from docx import Document
+from docx.enum.section import WD_SECTION
+from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.table import WD_ALIGN_VERTICAL
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
 from docx.oxml import OxmlElement
@@ -73,6 +75,12 @@ INTERLINEAR_LINE_GAP_PT = 3.5
 CELL_PAD_DXA = 80
 CELL_SIDE_PAD_DXA = 120
 TABLE_INDENT_DXA = 120
+
+# 眉標要跟著課次跑，靠的是 Word 的 STYLEREF 欄位：它印出「這一頁上第一個套用指定
+# 樣式的段落」的文字，整頁都沒有就往回找上一個。所以每課開頭那行「第 NN 課」套上
+# 這個樣式，一課跨幾十頁也都印同一個課次，不必逐頁寫死。
+RUNNING_STYLE = "Running Tag"
+RUNNING_TITLE = "聖經希伯來文原文讀本  ·  五十課"
 
 FONT_ZH = "MingLiU"
 # LibreOffice does not reliably resolve the variable Noto Sans TC build that is
@@ -326,17 +334,94 @@ def paragraph_rule(paragraph, color=RULE, size="12") -> None:
     borders.append(bottom)
 
 
-def set_page_field(paragraph) -> None:
-    run = paragraph.add_run()
+def add_field(paragraph, instruction: str, placeholder: str, *, size=7.5) -> None:
+    """Write a Word field as begin / instruction / separate / result / end.
+
+    The result has to be its own run: a field collapsed into a single run has
+    nowhere to hang the character formatting, and LibreOffice then sets the
+    computed value in the paragraph style's face instead of the header's.  That
+    is how the page number came to print at body size in black.
+    """
+    parts = []
     begin = OxmlElement("w:fldChar")
     begin.set(qn("w:fldCharType"), "begin")
+    parts.append(begin)
     instr = OxmlElement("w:instrText")
     instr.set(qn("xml:space"), "preserve")
-    instr.text = " PAGE "
+    instr.text = instruction
+    parts.append(instr)
+    separate = OxmlElement("w:fldChar")
+    separate.set(qn("w:fldCharType"), "separate")
+    parts.append(separate)
     end = OxmlElement("w:fldChar")
     end.set(qn("w:fldCharType"), "end")
-    run._r.extend([begin, instr, end])
-    set_run_font(run, FONT_UI, 7.5, color=MUTED)
+    for index, part in enumerate(parts + [end]):
+        run = paragraph.add_run()
+        set_run_font(run, FONT_UI, size, color=MUTED)
+        run._r.append(part)
+        if index == len(parts) - 1:  # right after w:fldChar separate
+            result = paragraph.add_run(placeholder)
+            set_run_font(result, FONT_UI, size, color=MUTED)
+
+
+def set_page_field(paragraph) -> None:
+    add_field(paragraph, " PAGE ", "1")
+
+
+def set_styleref_field(paragraph, style_name: str = RUNNING_STYLE) -> None:
+    """Print the current unit's own heading — 第 NN 課 — in the running head."""
+    add_field(paragraph, f' STYLEREF "{style_name}" ', "第 01 課")
+
+
+def mark_running_tag(paragraph):
+    """Tag the paragraph whose text the running head should quote."""
+    paragraph.style = RUNNING_STYLE
+    return paragraph
+
+
+def _blank_out(paragraph):
+    for run in list(paragraph.runs):
+        run._element.getparent().remove(run._element)
+    borders = paragraph._p.get_or_add_pPr().find(qn("w:pBdr"))
+    if borders is not None:
+        borders.getparent().remove(borders)
+    return paragraph
+
+
+def write_running_head(section, title: str, *, lesson_tag: bool = False) -> None:
+    section.header.is_linked_to_previous = False
+    paragraph = _blank_out(section.header.paragraphs[0])
+    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_run_font(paragraph.add_run(title), FONT_UI, 7.5, color=MUTED)
+    if lesson_tag:
+        set_run_font(paragraph.add_run("  ·  "), FONT_UI, 7.5, color=MUTED)
+        set_styleref_field(paragraph)
+    paragraph_rule(paragraph, color=RULE, size="3")
+
+
+def write_page_footer(section) -> None:
+    section.footer.is_linked_to_previous = False
+    paragraph = _blank_out(section.footer.paragraphs[0])
+    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_run_font(paragraph.add_run("私人研讀版  ·  "), FONT_UI, 7.5, color=MUTED)
+    set_page_field(paragraph)
+
+
+def start_section(document: Document, title: str, *, lesson_tag: bool = False):
+    """Open a new part of the book on a fresh page with its own running head.
+
+    The head has to change at the part boundaries, and a Word header belongs to
+    a section, not a page.  Without these breaks the appendix would go on
+    claiming to be the last lesson and the front matter the first one.
+
+    The break itself starts the new page, so whatever opens the part must not
+    also carry its own page break — that would leave a blank sheet.
+    """
+    section = document.add_section(WD_SECTION.NEW_PAGE)
+    section.different_first_page_header_footer = False
+    write_running_head(section, title, lesson_tag=lesson_tag)
+    write_page_footer(section)
+    return section
 
 
 def configure(document: Document) -> None:
@@ -411,14 +496,21 @@ def configure(document: Document) -> None:
         style.paragraph_format.space_after = Pt(4)
         style.paragraph_format.line_spacing = 1.25
 
-    header = section.header.paragraphs[0]
-    header.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(header.add_run("聖經希伯來文原文讀本  ·  五十課"), FONT_UI, 7.5, color=MUTED)
-    paragraph_rule(header, color=RULE, size="3")
-    footer = section.footer.paragraphs[0]
-    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_run_font(footer.add_run("私人研讀版  ·  "), FONT_UI, 7.5, color=MUTED)
-    set_page_field(footer)
+    if RUNNING_STYLE not in [style.name for style in styles]:
+        tag = styles.add_style(RUNNING_STYLE, WD_STYLE_TYPE.PARAGRAPH)
+        tag.base_style = styles["Normal"]
+        tag.quick_style = False
+        # LibreOffice sets the STYLEREF result in the referenced *style's* face,
+        # not in the header run's, so an unstyled tag prints the running head's
+        # lesson number at body size.  The style therefore carries the running
+        # head's own face; the visible 第 NN 課 line overrides it directly.
+        tag.font.name = FONT_UI
+        tag.font.size = Pt(7.5)
+        tag.font.color.rgb = RGBColor.from_string(MUTED)
+        set_rfonts(tag._element.get_or_add_rPr(), FONT_UI)
+
+    write_running_head(section, RUNNING_TITLE)
+    write_page_footer(section)
     first_footer = section.first_page_footer.paragraphs[0]
     first_footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_run_font(first_footer.add_run("PRIVATE STUDY EDITION  ·  2026"), FONT_UI, 7.5, color=MUTED)
@@ -793,13 +885,13 @@ def proper_name_label(item: dict) -> str:
     return "、".join(labels.get(value, value) for value in item.get("properNameTypes", []))
 
 
-def add_lesson_opener(document: Document, lesson: dict) -> None:
+def add_lesson_opener(document: Document, lesson: dict, *, page_break_before=True) -> None:
     add_label(
         document,
         f"Lesson {lesson['lesson']:02d}  ·  {lesson['reading']['kind'].replace('_', ' ')}",
-        page_break_before=True,
+        page_break_before=page_break_before,
     )
-    p = document.add_paragraph()
+    p = mark_running_tag(document.add_paragraph())
     p.paragraph_format.space_after = Pt(1)
     set_run_font(p.add_run(f"第 {lesson['lesson']:02d} 課"), FONT_UI, 11, bold=True, color=ACCENT)
     heading = document.add_heading(lesson["title"], level=1)
@@ -995,8 +1087,8 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
             paragraph_rule(p, color=RULE, size="3")
 
 
-def add_haggadah(document: Document, haggadah: dict) -> None:
-    add_label(document, "Complete Passover Haggadah", page_break_before=True)
+def add_haggadah(document: Document, haggadah: dict, *, page_break_before=True) -> None:
+    add_label(document, "Complete Passover Haggadah", page_break_before=page_break_before)
     document.add_heading("附錄：完整逾越節禮文流程", level=1)
     add_hebrew(document, haggadah["title_he"], size=20, color=ACCENT, bold=True)
     add_body(document, "本附錄不計入25篇禱文／文章。依傳統十五步次序完整排列；禮儀動作與不同日況的變體保留在正文中。", size=9.2)
@@ -1224,8 +1316,9 @@ def build(data: dict) -> Path:
     page_break(document)
     add_toc(document, data)
 
-    for lesson in data["lessons"]:
-        add_lesson_opener(document, lesson)
+    start_section(document, RUNNING_TITLE, lesson_tag=True)
+    for index, lesson in enumerate(data["lessons"]):
+        add_lesson_opener(document, lesson, page_break_before=index > 0)
         add_vocabulary(document, lesson)
         add_memory(document, lesson)
         if lesson["reading"]["kind"] == "bible_chapter":
@@ -1234,7 +1327,8 @@ def build(data: dict) -> Path:
             add_prayer_reading(document, lesson["reading"])
         add_practice(document, lesson)
 
-    add_haggadah(document, data["haggadah"])
+    start_section(document, f"{RUNNING_TITLE}  ·  附錄")
+    add_haggadah(document, data["haggadah"], page_break_before=False)
     add_reference_tables(document, data)
     add_back_indices(document, data)
 

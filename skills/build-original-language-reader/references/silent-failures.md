@@ -295,6 +295,43 @@ Two tells that this is what happened, both cheap: the file's `generatedOn` says
 today while your own run was hours ago, and the field is missing from **every**
 row rather than from the awkward ones.
 
+## 19. A field's computed value does not inherit the run you formatted
+
+A Word field written as one run — `begin` + `instrText` + `end`, with the
+character formatting on that run — has nowhere to hang the *result*. LibreOffice
+then sets the computed value in the paragraph style's face instead: every page
+number in all five print masters printed at 11.5 pt body size in black inside a
+7.5 pt muted footer, for as long as the books have existed. Nothing flagged it —
+the number was correct, the page was full, the gate checks geometry, glyphs,
+fonts and blank pages, none of which this touches. Styling the referenced
+paragraph style does not fix it either; that was tried first and changed nothing.
+
+*Write the whole field: `begin` / `instrText` / `separate` / a result run
+carrying the formatting / `end`* (`add_field()` in `build_hebrew_full_reader.py`).
+The same trap applies to `STYLEREF` in the running head, which is why the lesson
+number would otherwise print larger than the book title beside it.
+
+The tell is in the PDF, not in the DOCX: extract the footer with
+`page.get_text("dict")` and compare each span's `size` and `color` against the
+neighbouring literal text. Reading the header or footer as a string hides it —
+the characters are all correct.
+
+## 20. One CJK font does not cover both scripts, and the miss prints as nothing
+
+The Japanese course reader (`scripts/build_course_reader.py --reader japanese`)
+sets its CJK text in MS 明朝, which has no glyph for the Traditional-Chinese 內
+(U+5167) — and the book's own author names are written in Traditional Chinese:
+矢內原忠雄, 內村鑑三. Every page carrying either name printed the name with a hole
+in it, 19 of 24 pages, and nothing in the pipeline noticed: PyMuPDF draws the
+missing glyph as `.notdef`, which is not U+FFFD, so the replacement-character
+check does not see it either. The mirror trap is just as real: 細明體 has no 内
+(U+5185), so setting Japanese text in the Chinese face breaks the other way.
+
+*Choose the CJK face per character, not per document* — try the primary font,
+fall back to the other when `has_glyph` says no (`Book._kind`). And when auditing
+a rendered PDF, search the extracted text for ` ` as well as `�`; a
+missing glyph in an embedded font usually arrives as the former.
+
 ## The audits that actually found these
 
 - **Count the same set twice, by different routes, and compare.** Plan versus

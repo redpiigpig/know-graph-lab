@@ -58,6 +58,7 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     add_mixed_script_text,
     configure,
     gloss_width_mm,
+    mark_running_tag,
     page_break,
     paragraph_rule,
     prevent_row_split,
@@ -68,6 +69,8 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
     set_run_font,
     set_table_geometry,
     shade,
+    start_section,
+    write_running_head,
 )
 
 
@@ -355,11 +358,11 @@ def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
         add_body(document, f"{absent['ref']}：{absent['note']}", size=CAPTION_PT, color=MUTED)
 
 
-def add_lesson(document: Document, lesson: dict, interlinear: dict) -> None:
+def add_lesson(document: Document, lesson: dict, interlinear: dict, *, page_break_before=True) -> None:
     # 版式比照希伯來那本：眉標（另起一頁）→ 課次 → Heading 1 課題 → 金線。
     kind = "scripture chapter" if lesson["reading"]["kind"] == "scripture_chapter" else "church reading"
-    add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {kind}", page_break_before=True)
-    number = document.add_paragraph()
+    add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {kind}", page_break_before=page_break_before)
+    number = mark_running_tag(document.add_paragraph())
     number.paragraph_format.space_after = Pt(1)
     set_run_font(number.add_run(f"第 {lesson['lesson']:02d} 課"), FONT_UI, 11, bold=True, color=ACCENT)
     heading = document.add_heading(lesson["reading"]["titleZh"], level=1)
@@ -372,8 +375,10 @@ def add_lesson(document: Document, lesson: dict, interlinear: dict) -> None:
     add_reading(document, lesson, interlinear)
 
 
-def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
-    page_break(document)
+def add_liturgy(document: Document, liturgy: dict, interlinear: dict, *,
+                page_break_before=True) -> None:
+    if page_break_before:
+        page_break(document)
     add_label(document, "Appendix  ·  divine liturgy")
     heading = document.add_heading(liturgy["title"], level=1)
     paragraph_rule(heading, color=GOLD, size="14")
@@ -419,13 +424,38 @@ def add_latin_and_cjk(paragraph, text: str, size: float, *, color=MUTED) -> None
 
 
 # 封面上的希臘文題辭，一冊一句：上冊出自福音書，下冊出自尼西亞信經。
+# 印製分冊（2026-09-08 使用者定案）：一本印刷實體不得超過 500 頁。切點只落在課與
+# 課之間；課次編號一律不動（線上讀本與音檔都靠它對應，重編就對不上）；附錄只印在
+# 該內容冊的最後一分冊——每一分冊都重印一次的話，下冊那 125 頁附錄會把每一冊都推
+# 過頭。冊數是這樣挑的：同一種語言的各冊要差不多厚，所以前半 524 頁切 2、後半
+# 1187 頁切 4，六冊落在 264–304 頁，而不是 2+3 的 264–409。頁數是 2026-09-08
+# 版面的實測值。
+PARTS = [
+    {"book": 1, "source": 1, "first": 1, "last": 24, "appendix": False},   # 約 264 頁
+    {"book": 2, "source": 1, "first": 25, "last": 50, "appendix": True},   # 約 267 頁
+    {"book": 3, "source": 2, "first": 1, "last": 13, "appendix": False},   # 約 301 頁
+    {"book": 4, "source": 2, "first": 14, "last": 31, "appendix": False},  # 約 303 頁
+    {"book": 5, "source": 2, "first": 32, "last": 45, "appendix": False},  # 約 304 頁
+    {"book": 6, "source": 2, "first": 46, "last": 50, "appendix": True},   # 約 298 頁
+]
+BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊", "第五冊", "第六冊")
+
 COVER_GREEK = {
     1: "Ἡ ΚΑΙΝΗ ΔΙΑΘΗΚΗ",
     2: "ΤΩΝ ΠΑΤΕΡΩΝ ΤΑ ΚΕΙΜΕΝΑ",
 }
 
 
-def add_cover(document: Document, master: dict, volume: dict) -> None:
+def part_label(part: dict) -> str:
+    return BOOK_LABELS[part["book"] - 1]
+
+
+def part_lessons(volume: dict, part: dict) -> list[dict]:
+    return [lesson for lesson in volume["lessons"]
+            if part["first"] <= lesson["lesson"] <= part["last"]]
+
+
+def add_cover(document: Document, master: dict, volume: dict, part: dict) -> None:
     """深色橫幅封面，版式與希伯來、拉丁那兩本相同。
 
     三本並排時封面要看得出是同一套書：同一條深色橫幅、同一行金色眉標、
@@ -453,7 +483,11 @@ def add_cover(document: Document, master: dict, volume: dict) -> None:
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     volume_line = document.add_paragraph()
     volume_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    add_mixed_script_text(volume_line, volume["title"], FONT_ZH, 12, bold=True, color=INK)
+    add_mixed_script_text(
+        volume_line,
+        f"{part_label(part)}　第 {part['first']:02d}–{part['last']:02d} 課",
+        FONT_ZH, 12, bold=True, color=INK,
+    )
     subtitle = document.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, 10.5, color=ACCENT)
@@ -472,19 +506,29 @@ def add_cover(document: Document, master: dict, volume: dict) -> None:
     add_latin_and_cjk(textbook, line, CAPTION_PT)
 
 
-def add_front_matter(document: Document, master: dict, volume: dict) -> None:
-    add_cover(document, master, volume)
+def add_front_matter(document: Document, master: dict, volume: dict, part: dict) -> None:
+    add_cover(document, master, volume, part)
     page_break(document)
     document.add_heading("體例與來源", level=1)
     for key, value in master["textPolicy"].items():
         add_body(document, f"{key}：{value}", size=CAPTION_PT, color=INK)
     counts = volume["counts"]
     unit_word = "句背誦" if volume["memoryUnitKind"] == "sentence" else "節背誦"
+    lessons = part_lessons(volume, part)
     add_body(
         document,
-        f"本冊五十課・{counts['vocabulary']} 詞・{counts['memoryUnits']} {unit_word}・"
-        f"{counts['readings']} 篇讀文；全書兩冊合計 {master['counts']['vocabulary']} 詞、"
-        f"{master['counts']['memoryUnits']} 則背誦、連續正文 {master['counts']['totalRunningWords']} 詞。",
+        f"本冊為{volume['subtitle']}的第 {part['first']:02d}–{part['last']:02d} 課，共 {len(lessons)} 課・"
+        f"{sum(lesson['vocabularyCount'] for lesson in lessons)} 詞・"
+        f"{sum(len(lesson['memoryUnits']) for lesson in lessons)} {unit_word}・{len(lessons)} 篇讀文。"
+        "課次編號與線上讀本一致，分冊只是印刷單位（一本不超過 500 頁），不改變課的次序。",
+        size=CAPTION_PT,
+        color=MUTED,
+    )
+    add_body(
+        document,
+        f"這一部分全 {counts['vocabulary']} 詞、{counts['memoryUnits']} 則背誦、{counts['readings']} 篇讀文；"
+        f"全書合計 {master['counts']['vocabulary']} 詞、{master['counts']['memoryUnits']} 則背誦、"
+        f"連續正文 {master['counts']['totalRunningWords']} 詞。",
         size=CAPTION_PT,
         color=MUTED,
     )
@@ -501,9 +545,9 @@ def add_front_matter(document: Document, master: dict, volume: dict) -> None:
                 lesson["reading"]["titleZh"],
                 "完整章" if lesson["reading"]["kind"] == "scripture_chapter" else "教父讀文",
             )
-            for lesson in volume["lessons"]
+            for lesson in part_lessons(volume, part)
         ],
-        title=f"{volume['title']}目錄",
+        title=f"{part_label(part)}目錄",
         accent=cover_colors("grc")["accent"],
     )
 
@@ -542,7 +586,7 @@ def add_appendix_entry(document: Document, entry: dict) -> None:
         set_run_font(row.add_run(f"　{entry['frequency']}"), FONT_UI, CAPTION_PT, color=MUTED)
 
 
-def add_appendix_tables(document: Document, master: dict) -> None:
+def add_appendix_tables(document: Document, master: dict, *, page_break_before=True) -> None:
     """The five reference tables, printed at the back of both volumes.
 
     They index the whole work rather than one volume, and a volume being read on
@@ -552,8 +596,9 @@ def add_appendix_tables(document: Document, master: dict) -> None:
     專名表按九類分節印：查「彼得是誰」時翻到〈使徒與門徒〉一節就找得到，而不是在
     四百條按字母排的名字裡一條條看過去。
     """
-    for table in master["appendices"]:
-        page_break(document)
+    for index, table in enumerate(master["appendices"]):
+        if page_break_before or index:
+            page_break(document)
         add_label(document, "Appendix  ·  reference table")
         heading = document.add_heading(table["title"], level=1)
         paragraph_rule(heading, color=GOLD, size="14")
@@ -566,52 +611,62 @@ def add_appendix_tables(document: Document, master: dict) -> None:
                 add_appendix_entry(document, entry)
 
 
-def retitle(document: Document, master: dict, volume: dict) -> None:
-    section = document.sections[0]
-    header = section.header.paragraphs[0]
-    for run in list(header.runs):
-        run._element.getparent().remove(run._element)
-    set_run_font(
-        header.add_run(f"{master['title']}  ·  {volume['title']}"), FONT_UI, 7.5, color=MUTED
-    )
+def running_title(master: dict, part: dict) -> str:
+    return f"{master['title']}  ·  {part_label(part)}"
+
+
+def retitle(document: Document, master: dict, volume: dict, part: dict) -> None:
+    write_running_head(document.sections[0], running_title(master, part))
     properties = document.core_properties
-    properties.title = f"{master['title']}：{volume['title']}"
-    properties.subject = volume["subtitle"]
+    properties.title = f"{master['title']}：{part_label(part)}"
+    properties.subject = f"{volume['subtitle']}　第 {part['first']:02d}–{part['last']:02d} 課"
     properties.language = "grc"
 
 
-def build(volume_number: int) -> Path:
+def build(book_number: int) -> Path:
     master = json.loads(MASTER_PATH.read_text(encoding="utf-8"))
     interlinear = json.loads(INTERLINEAR_PATH.read_text(encoding="utf-8"))["units"]
-    volume = next((item for item in master["volumes"] if item["volume"] == volume_number), None)
+    part = next((item for item in PARTS if item["book"] == book_number), None)
+    if part is None:
+        raise SystemExit(f"沒有第 {book_number} 冊")
+    volume = next((item for item in master["volumes"] if item["volume"] == part["source"]), None)
     if volume is None:
-        raise SystemExit(f"主檔沒有第 {volume_number} 冊")
+        raise SystemExit(f"主檔沒有第 {part['source']} 部分")
 
     document = Document()
     configure(document)
     # configure() is the Hebrew volume's, so it stamps that volume's running
     # header and document title.  Retitle both, or every page of the Greek
     # reader says it is the Hebrew one.
-    retitle(document, master, volume)
-    add_front_matter(document, master, volume)
-    for lesson in volume["lessons"]:
-        add_lesson(document, lesson, interlinear)
-    if any(item["kind"] == "divine-liturgy" for item in volume["appendices"]):
-        liturgy = json.loads((CACHE / "liturgy-chrysostom.json").read_text(encoding="utf-8"))
-        add_liturgy(document, liturgy, interlinear)
-    add_appendix_tables(document, master)
+    retitle(document, master, volume, part)
+    add_front_matter(document, master, volume, part)
+
+    running = running_title(master, part)
+    start_section(document, running, lesson_tag=True)
+    for index, lesson in enumerate(part_lessons(volume, part)):
+        add_lesson(document, lesson, interlinear, page_break_before=index > 0)
+
+    if part["appendix"]:
+        start_section(document, f"{running}  ·  附錄")
+        if any(item["kind"] == "divine-liturgy" for item in volume["appendices"]):
+            liturgy = json.loads((CACHE / "liturgy-chrysostom.json").read_text(encoding="utf-8"))
+            add_liturgy(document, liturgy, interlinear, page_break_before=False)
+            add_appendix_tables(document, master)
+        else:
+            add_appendix_tables(document, master, page_break_before=False)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    path = OUTPUT_DIR / f"{OUTPUT_STEM}{volume_number}.docx"
+    path = OUTPUT_DIR / f"{OUTPUT_STEM}{book_number}.docx"
     document.save(path)
     return path
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="排版希臘文讀本 B5 DOCX（兩冊）")
-    parser.add_argument("--volume", type=int, choices=(1, 2), help="只排某一冊")
+    parser = argparse.ArgumentParser(description="排版希臘文讀本 B5 DOCX（六冊，每冊不超過 500 頁）")
+    parser.add_argument("--book", type=int, choices=tuple(part["book"] for part in PARTS),
+                        help="只排某一冊")
     args = parser.parse_args()
-    for number in ([args.volume] if args.volume else [1, 2]):
+    for number in ([args.book] if args.book else [part["book"] for part in PARTS]):
         path = build(number)
         print(f"已寫出 {path}（{path.stat().st_size / 1_048_576:.1f} MB）")
 

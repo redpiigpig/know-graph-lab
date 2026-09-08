@@ -45,6 +45,10 @@ def is_deck(name: str) -> bool:
 # replaced by the two-volume pair, the samples belong to the template phase, and
 # rebuild-v2/v3 are superseded Hebrew renders.
 SUPERSEDED_NAMES = {
+    # 2026-09-08：書背改成每一冊一張，寬度由該冊頁數算出（build_reader_spines.py）。
+    # 這兩個是舊的單張、寬度寫死 16 mm 的希伯來書背。
+    "hebrew-original-reader-spine-b5-height.pdf",
+    "hebrew-original-reader-spine-b5-height.svg",
     "greek-original-reader-50-lessons.docx",
     "greek-original-reader-50-lessons.pdf",
     "greek-original-reader-sample.docx",

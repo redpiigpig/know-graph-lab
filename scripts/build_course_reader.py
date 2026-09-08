@@ -417,7 +417,10 @@ class Book:
         self.marks.append([1, name, self.doc.page_count])
 
     def piece_title(self, week: str, author: str, title: str, source: str) -> None:
-        self.head_l = self.head_r = ""
+        # 眉標要在開頁「之前」設好：每一頁都得看得出這是第幾週的哪一篇，包含這一篇
+        # 的首頁。先開頁再設，首頁就是空的——半本書的頁緣因此沒有字。
+        self.head_l = week
+        self.head_r = f"{author}, {title}" if author else title
         self.new_page()
         self.marks.append([2, (f"{author}, {title}" if author else title)[:88],
                            self.doc.page_count])
@@ -431,8 +434,6 @@ class Book:
         self.page.draw_line(fitz.Point(BODY_X0, self.y - 5), fitz.Point(BODY_X1, self.y - 5),
                             color=(0.75,) * 3, width=0.6)
         self.y += 8
-        self.head_l = week
-        self.head_r = f"{author}, {title}" if author else title
 
     def guide_page(self, week: str, title: str, md: str) -> None:
         """一篇的繁中閱讀導引，自成一頁。"""

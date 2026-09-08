@@ -61,16 +61,25 @@ VOLUMES = {
     "上冊": {
         "subtitle": "武加大譯本",
         "blurb": "十篇禮儀短經，四十章完整武加大經文，中文並列思高譯本。",
-        "file": "latin-original-reader-vol1.docx",
         "appendix": "upper",
     },
     "下冊": {
         "subtitle": "從教父到教廷",
         "blurb": "五十篇教父、中世紀與教廷文獻，終卷為常年期主日彌撒經文全文。",
-        "file": "latin-original-reader-vol2.docx",
         "appendix": "lower",
     },
 }
+
+# 印製分冊（2026-09-08 使用者定案）：一本印刷實體不得超過 500 頁，同一種語言各冊
+# 厚薄要相近。切點只落在課與課之間，課次編號不動（線上讀本與音檔靠它對應），附錄
+# 只印在該部分的最後一分冊。依 2026-09-08 版面實測（上冊 456 頁、下冊 840 頁），
+# 上冊本來就進得去一本，下冊對半切，三冊落在 419–457 頁。
+PARTS = [
+    {"book": 1, "source": "上冊", "first": 1, "last": 50, "appendix": True},   # 約 457 頁
+    {"book": 2, "source": "下冊", "first": 1, "last": 32, "appendix": False},  # 約 428 頁
+    {"book": 3, "source": "下冊", "first": 33, "last": 50, "appendix": True},  # 約 419 頁
+]
+BOOK_LABELS = ("第一冊", "第二冊", "第三冊")
 
 COLOPHON = [
     ("拉丁文本", "武加大譯本用 Clementine Vulgate（eBible.org latVUC 轉錄，公有領域）；"
@@ -170,7 +179,7 @@ def load_interlinear() -> dict:
     return json.loads(INTERLINEAR_PATH.read_text(encoding="utf-8")).get("units", {})
 
 
-def title_page(document, volume: str, spec: dict, counts: str):
+def title_page(document, volume: str, spec: dict, counts: str, part: dict):
     """深色橫幅封面，與希伯來、希臘那兩本同一個版式。"""
     table = document.add_table(rows=1, cols=1)
     H.set_table_geometry(table, [H.USABLE_WIDTH_MM])
@@ -195,8 +204,10 @@ def title_page(document, volume: str, spec: dict, counts: str):
     document.add_paragraph().paragraph_format.space_after = Pt(26)
     line = document.add_paragraph()
     line.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    H.add_mixed_script_text(line, f"{volume}　{spec['subtitle']}", H.FONT_ZH, 12,
-                            bold=True, color=H.INK)
+    H.add_mixed_script_text(
+        line,
+        f"{part_label(part)}　第 {part['first']:02d}–{part['last']:02d} 課　{spec['subtitle']}",
+        H.FONT_ZH, 12, bold=True, color=H.INK)
     para = body(document, spec["blurb"], 10.5, color=H.ACCENT)
     para.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
@@ -530,8 +541,9 @@ def appendix_groups(table: dict) -> list[tuple[str, list[dict]]]:
     return [(n, buckets[n]) for n in known + [n for n in buckets if n not in known]]
 
 
-def appendix_section(document, tables: dict):
-    page_break(document)
+def appendix_section(document, tables: dict, *, page_break_before=True):
+    if page_break_before:
+        page_break(document)
     H.add_label(document, "Appendix  ·  reference tables")
     top = heading(document, "附錄", H.H1_SIZE_PT)
     H.paragraph_rule(top, color=H.GOLD, size="14")
@@ -563,25 +575,33 @@ def appendix_section(document, tables: dict):
                                             H.CAPTION_PT, color=H.MUTED)
 
 
-def relabel(document, volume: str, spec: dict) -> None:
+def part_label(part: dict) -> str:
+    return BOOK_LABELS[part["book"] - 1]
+
+
+def running_title(part: dict) -> str:
+    return f"教會拉丁文原文讀本　{part_label(part)}"
+
+
+def relabel(document, volume: str, spec: dict, part: dict) -> None:
     """Put this book's name in the running head.
 
     The layout is imported from the Hebrew reader, and so is its running header;
     left alone, every page of the Latin volumes says 聖經希伯來文原文讀本.
     """
-    running = f"教會拉丁文原文讀本　{volume}　{spec['subtitle']}"
-    for section in document.sections:
-        for part in (section.header, section.first_page_header):
-            for paragraph in part.paragraphs:
-                for run in paragraph.runs:
-                    if "希伯來" in run.text:
-                        run.text = running
-    document.core_properties.title = f"教會拉丁文原文讀本：{volume}　{spec['subtitle']}"
-    document.core_properties.subject = spec["blurb"]
+    H.write_running_head(document.sections[0], running_title(part))
+    document.core_properties.title = f"教會拉丁文原文讀本：{part_label(part)}"
+    document.core_properties.subject = (
+        f"{spec['subtitle']}　第 {part['first']:02d}–{part['last']:02d} 課")
 
 
-def build(volume: str) -> Path:
+def build(book_number: int) -> Path:
+    part = next((item for item in PARTS if item["book"] == book_number), None)
+    if part is None:
+        raise SystemExit(f"沒有第 {book_number} 冊")
+    volume = part["source"]
     spec = VOLUMES[volume]
+    lesson_range = range(part["first"], part["last"] + 1)
     vocabulary = load(VOCABULARY)["entries"]
     memory = load(MEMORY, {"上冊": [], "下冊": []})
     appendices = load(APPENDICES, {})
@@ -597,12 +617,14 @@ def build(volume: str) -> Path:
 
     document = Document()
     H.configure(document)
-    relabel(document, volume, spec)
-    words = sum(len(per_lesson.get(n, [])) for n in range(1, 51))
-    reading_words = sum(len(L.words(latin)) for row in readings.values()
-                        for latin, _ in row["pairs"])
+    relabel(document, volume, spec, part)
+    words = sum(len(per_lesson.get(n, [])) for n in lesson_range)
+    reading_words = sum(len(L.words(latin)) for lesson in lesson_range
+                        for latin, _ in readings.get(lesson, {}).get("pairs", []))
     title_page(document, volume, spec,
-               f"五十課．{words} 詞．讀本 {reading_words:,} 詞")
+               f"{len(lesson_range)} 課．{words} 詞．讀本 {reading_words:,} 詞"
+               "（課次編號與線上讀本一致；分冊只是印刷單位，一本不超過 500 頁）",
+               part)
     interlinear = load_interlinear()
     volume_number = VOLUME_NUMBER[volume]
     H.add_contents(
@@ -613,19 +635,19 @@ def build(volume: str) -> Path:
                 readings.get(lesson, {}).get("title") or "　",
                 "武加大經文" if volume == "上冊" else "教父與教廷文獻",
             )
-            for lesson in range(1, 51)
+            for lesson in lesson_range
         ],
-        title=f"{volume}目錄",
+        title=f"{part_label(part)}目錄",
         accent=H.cover_colors("la")["accent"],
     )
-    page_break(document)
 
-    for lesson in range(1, 51):
+    H.start_section(document, running_title(part), lesson_tag=True)
+    for index, lesson in enumerate(lesson_range):
         reading = readings.get(lesson, {"title": "", "pairs": [], "note": ""})
         # 眉標 → 課次 → 課題 → 金線，與希伯來那本逐項對齊。
         H.add_label(document, f"Lesson {lesson:02d}  ·  {spec['subtitle']}",
-                    page_break_before=lesson > 1)
-        number = document.add_paragraph()
+                    page_break_before=index > 0)
+        number = H.mark_running_tag(document.add_paragraph())
         number.paragraph_format.space_after = Pt(1)
         H.set_run_font(number.add_run(f"第 {lesson:02d} 課"), H.FONT_UI, 11,
                        bold=True, color=H.ACCENT)
@@ -640,22 +662,25 @@ def build(volume: str) -> Path:
             reading_block(document, reading["title"], reading["pairs"], reading["note"],
                           key=key, interlinear=interlinear)
 
-    appendix_section(document, appendices.get(spec["appendix"], {}))
+    if part["appendix"]:
+        H.start_section(document, f"{running_title(part)}　附錄")
+        appendix_section(document, appendices.get(spec["appendix"], {}), page_break_before=False)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    path = OUT_DIR / spec["file"]
+    path = OUT_DIR / f"latin-original-reader-vol{book_number}.docx"
     document.save(path)
     return path
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--volume", choices=("上冊", "下冊", "both"), default="both")
+    ap = argparse.ArgumentParser(description="排版教會拉丁文讀本 B5 DOCX（三冊，每冊不超過 500 頁）")
+    ap.add_argument("--book", type=int, choices=tuple(part["book"] for part in PARTS),
+                    help="只排某一冊")
     args = ap.parse_args()
-    targets = ["上冊", "下冊"] if args.volume == "both" else [args.volume]
-    for volume in targets:
-        path = build(volume)
-        print(f"{volume} -> {path.relative_to(ROOT)}  {path.stat().st_size / 1024:.0f} KB")
+    for number in ([args.book] if args.book else [part["book"] for part in PARTS]):
+        path = build(number)
+        print(f"{BOOK_LABELS[number - 1]} -> {path.relative_to(ROOT)}  "
+              f"{path.stat().st_size / 1024:.0f} KB")
 
 
 if __name__ == "__main__":
