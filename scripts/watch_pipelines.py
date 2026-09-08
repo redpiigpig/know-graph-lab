@@ -22,6 +22,7 @@ import pathlib
 import re
 import subprocess
 import sys
+import time
 import urllib.parse
 import urllib.request
 
@@ -69,23 +70,39 @@ _KEY = _E.get("SUPABASE_SERVICE_ROLE_KEY") or _E["SUPABASE_KEY"]
 _H = {"apikey": _KEY, "Authorization": f"Bearer {_KEY}"}
 
 
-def q(path: str, count: bool = False):
+def q(path: str, count: bool = False, tries: int = 3):
     """PostgREST 查詢。count=True 走 Content-Range 拿總數。
 
     🚨 不帶 limit 的查詢會被靜默截在 1000 筆（[[feedback_postgrest_silent_1000_cap]]），
     所以要全量的地方一律用 page() 分頁，不要直接呼叫這支。
+
+    🚨 會重試：這支是無人值守每 30 分鐘跑的監控，2026-09-08 因為一次
+    `WinError 10054 遠端主機已強制關閉連線` 整個 traceback 死掉——監控自己被瞬斷
+    打死，比它要監控的東西還脆弱。網路不穩正是最需要看到報告的時候。
     """
     h = dict(_H)
     if count:
         h["Prefer"] = "count=exact"
         h["Range"] = "0-0"
-    req = urllib.request.Request(f"{_URL}/rest/v1/{path}", headers=h)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        body = r.read().decode("utf-8")
-        cr = r.headers.get("Content-Range", "")
-    if count:
-        return int(cr.split("/")[-1]) if "/" in cr else 0
-    return json.loads(body)
+    last = None
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(f"{_URL}/rest/v1/{path}", headers=h)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                body = r.read().decode("utf-8")
+                cr = r.headers.get("Content-Range", "")
+            if count:
+                return int(cr.split("/")[-1]) if "/" in cr else 0
+            return json.loads(body)
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            last = e
+            if attempt < tries - 1:
+                time.sleep(2 * (attempt + 1))
+    raise _Unreachable(str(last))
+
+
+class _Unreachable(RuntimeError):
+    """連不上 DB。呼叫端要接住並印「這一節看不到」，而不是讓整份報告消失。"""
 
 
 def page(path: str, size: int = 1000) -> list[dict]:
