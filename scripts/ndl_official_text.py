@@ -115,6 +115,11 @@ def main() -> int:
     (out_dir / "_titles.json").write_text(
         _json.dumps({str(k): v for k, v in title_at.items()}, ensure_ascii=False),
         encoding="utf-8")
+    # 🚨 重生會沖掉逐字精修的人工更正，這裡自動重套（見 ndl_corrections.py）
+    import ndl_corrections
+    n_fix = ndl_corrections.apply(args.pid, cache)
+    if n_fix:
+        print("重套人工更正 %d 條" % n_fix)
     print("共 %d 字 → %s" % (chars, out_dir))
     if after:
         print("🚨 仍有 %d 處 〓 要看圖裁定：" % after)

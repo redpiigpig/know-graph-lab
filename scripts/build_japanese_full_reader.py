@@ -12,8 +12,9 @@ series; what differs is only what the language forces:
   read off the kana, so it has to be printed. What is printed is u-biq's own
   break marking (は・や・い), not an accent number — the source carries the break
   positions, and the number would be an inference nobody could check.
-* Volume 1 is modern prose, volume 2 文語 with 舊字舊假名; the owner calls them
-  第一冊／第二冊, never 上下冊.
+* The content is in two halves — modern prose and 文語 with 舊字舊假名 — which the
+  owner named 第一冊／第二冊, never 上下冊. Neither half fits in one bound volume,
+  so they print as four: 第一–二冊 modern, 第三–四冊 文語.
 
     python -X utf8 scripts/build_japanese_full_reader.py
     python -X utf8 scripts/build_japanese_full_reader.py --book 1
@@ -51,28 +52,39 @@ JA_PT = 13.5
 JA_TITLE_PT = 15
 GLOSS_PT = 9.4
 
+# 印刷冊次與內容分半是兩件事。合約把內容分成「第一冊＝現代語／第二冊＝文語」，
+# 但一本不得超過 500 頁，這兩半各自 744 與 657 頁，所以印成四本。冊號照使用者
+# 2026-09-08 對希臘與拉丁的裁定連續編（第一–四冊），現代語與文語的分野改由封面
+# 副標題說明。
+BOOK_LABELS = ("第一冊", "第二冊", "第三冊", "第四冊")
+
 VOLUMES = {
     1: {
-        "label": "第一冊",
         "subtitle": "現代語・宗教學與宗教史",
         "motto": "宗教學の日本語",
         "blurb": "五十篇現代日文的宗教學與宗教史散文，逐詞繁中對譯。",
     },
     2: {
-        "label": "第二冊",
         "subtitle": "文語・舊字舊假名",
         "motto": "文語のよみかた",
         "blurb": "五十篇文語讀物：文語訳聖書、使徒信經、萬葉集與戰前無教會主義的文章。",
     },
 }
 
-# 印製分冊在版面量出來之後才填；一本不得超過 500 頁，同語言各冊厚薄要相近。
+# 切點由 2026-09-08 的實測版面算出（現代語那半 744 頁、文語那半 657 頁），四冊
+# 329–377 頁。切點只落在課與課之間，課次編號不動，附錄只印在該半的最後一分冊。
 PARTS = [
-    {"book": 1, "source": 1, "first": 1, "last": 50, "appendix": True},
-    {"book": 2, "source": 2, "first": 1, "last": 50, "appendix": True},
+    {"book": 1, "source": 1, "first": 1, "last": 30, "appendix": False},   # 約 374 頁
+    {"book": 2, "source": 1, "first": 31, "last": 50, "appendix": True},   # 約 377 頁
+    {"book": 3, "source": 2, "first": 1, "last": 32, "appendix": False},   # 約 329 頁
+    {"book": 4, "source": 2, "first": 33, "last": 50, "appendix": True},   # 約 335 頁
 ]
 
 _metrics = None
+
+
+def part_label(part: dict) -> str:
+    return BOOK_LABELS[part["book"] - 1]
 
 
 def load(path: Path) -> dict:
@@ -228,7 +240,7 @@ def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
     line = document.add_paragraph()
     line.alignment = WD_ALIGN_PARAGRAPH.CENTER
     H.add_mixed_script_text(
-        line, f"{spec['label']}　第 {part['first']:02d}–{part['last']:02d} 課",
+        line, f"{part_label(part)}　第 {part['first']:02d}–{part['last']:02d} 課",
         H.FONT_ZH, 12, bold=True, color=H.INK)
     blurb = H.add_body(document, spec["blurb"], size=10.5, color=H.ACCENT)
     blurb.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -270,7 +282,7 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     H.add_contents(
         document,
         [(f"{l['lesson']:02d}", l["title"], l["author"]) for l in lessons],
-        title=f"{spec['label']}目錄",
+        title=f"{part_label(part)}目錄",
         accent=H.cover_colors("ja")["accent"],
     )
 
@@ -394,9 +406,9 @@ def build(book: int) -> Path:
 
     document = Document()
     H.configure(document)
-    running = f"日文宗教學讀本　{spec['label']}"
+    running = f"日文宗教學讀本　{part_label(part)}"
     H.write_running_head(document.sections[0], running)
-    document.core_properties.title = f"日文宗教學讀本：{spec['label']}"
+    document.core_properties.title = f"日文宗教學讀本：{part_label(part)}"
     document.core_properties.subject = spec["subtitle"]
     document.core_properties.language = "ja"
 
@@ -424,8 +436,8 @@ def main() -> None:
     args = parser.parse_args()
     for book in ([args.book] if args.book else [p["book"] for p in PARTS]):
         path = build(book)
-        print(f"{VOLUMES[next(p for p in PARTS if p['book'] == book)['source']]['label']}"
-              f" -> {path.relative_to(ROOT)}  {path.stat().st_size / 1024:.0f} KB")
+        print(f"{BOOK_LABELS[book - 1]} -> {path.relative_to(ROOT)}  "
+              f"{path.stat().st_size / 1024:.0f} KB")
 
 
 if __name__ == "__main__":

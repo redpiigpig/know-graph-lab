@@ -387,7 +387,7 @@ def lines_to_layout_paras(lines: list, mark_titles: bool = False):
     ordered = sorted(lines, key=lambda l: int(l["order"]))
     body_y = [int(l["y"]) for l in ordered if l.get("type") in BODY_LINE_TYPES]
     if not body_y:
-        return []
+        return ([], []) if mark_titles else []
     base = min(body_y)
     paras: list[list[str]] = []
     force_break = True
@@ -838,8 +838,15 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
         if [s0["end"] for s0 in secs] != before:
             print("  裁掉後付：末章 end %d → %d" % (before[-1], secs[-1]["end"]))
     pages = {}
-    for txt in sorted((cache_dir / pid / ("ocr-" + backend)).glob("*.txt")):
+    src_dir = cache_dir / pid / ("ocr-" + backend)
+    for txt in sorted(src_dir.glob("*.txt")):
         pages[int(txt.stem)] = txt.read_text(encoding="utf-8")
+    # 章名在版面上把每頁的段落切在哪（由 ndl_official_text 記下）。
+    # 沒有這份就只能退回字串比對找章名，而章名行早已被丟出正文，比對必然落空。
+    tf = src_dir / "_titles.json"
+    title_at = json.loads(tf.read_text(encoding="utf-8")) if tf.exists() else {}
+    if not title_at:
+        print("  ⚠️ 沒有 _titles.json：分章退回字串比對，章首可能夾到前一章結尾")
     # 幻覺閘：目次頁的內容我們已經從 NDL API 知道了，拿它驗 OCR 有沒有在讀圖
     toc_imgs = [e["image"] for e in
                 (parse_toc_entry(l) for l in book["index"]) if e and e["title"] in ("目次", "目 次")]
@@ -867,7 +874,7 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
     out_dir.mkdir(parents=True, exist_ok=True)
     kept = redo = 0
     for i, sec in enumerate(secs):
-        payload = section_payload(sec, pages)
+        payload = section_payload(sec, pages, title_at=title_at)
         if not force:
             # 精修 OCR 後重建：src 沒變的段落沿用舊譯，只有被改到的才重譯
             payload = merge_translations(payload, old_by_idx.get(i, {}))

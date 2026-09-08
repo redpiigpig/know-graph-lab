@@ -723,3 +723,20 @@ class TestSectionStartsAtTitle:
         sec = {"title": "第二", "start": 5, "end": 7}
         out = nb.section_payload(sec, pages, title_at={5: [1], 6: [0]})
         assert "つづき。" in "".join(out["src"])
+
+
+class TestMarkTitlesEmptyPage:
+    """🚨 空白頁（掃描本一定有）在 mark_titles=True 時也要回兩個值。
+    提前 return [] 的話呼叫端 `paras, titles = ...` 直接 ValueError，
+    整本書停在那一頁 —— 而且是跑到一半才炸。"""
+
+    def test_empty_page_still_returns_a_pair(self):
+        assert nb.lines_to_layout_paras([], mark_titles=True) == ([], [])
+
+    def test_page_with_only_page_numbers_returns_a_pair(self):
+        lines = [{"order": 0, "x": 100, "y": 100, "height": 90,
+                  "type": "ノンブル", "string": "12"}]
+        assert nb.lines_to_layout_paras(lines, mark_titles=True) == ([], [])
+
+    def test_empty_page_without_the_flag_is_unchanged(self):
+        assert nb.lines_to_layout_paras([]) == []

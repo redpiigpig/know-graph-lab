@@ -49,6 +49,7 @@ OUTPUT = CACHE / "interlinear.json"
 
 CLOSED_POS = {"助詞", "助動詞", "記号", "フィラー", "その他"}
 KANA = re.compile(r"[ぁ-ゟァ-ヿー]")
+KANA_ONLY = re.compile(r"[ぁ-ゟァ-ヿー]+")
 LATIN = re.compile(r"[A-Za-z]")
 BATCH = 40
 GLOSS_MAX = 12
@@ -143,10 +144,28 @@ def vocabulary_glosses() -> dict[str, str]:
     return out
 
 
+# 接尾辭與被誤讀的文語形，優先於模型答案。「的」是「…的」不是「內在的」，
+# 「ら」是複數不是賤民，「さ」是名詞化語尾不是「做」。
+OVERRIDES = {
+    ("的", "接尾"): "（…的）",
+    ("ら", "接尾"): "（們·複數）",
+    ("さ", "接尾"): "（…的程度）",
+    ("給", "接尾"): "（敬語·給ふ）",
+    ("言", "一般"): "話語",
+    ("み", "接尾"): "（…之處）",
+    ("げ", "接尾"): "（似…的樣子）",
+}
+
+
 def gloss_for(token: dict, vocab: dict[str, str], glossary: dict[str, str]) -> str:
     """Grammar comes from the closed-class table, vocabulary from the tables."""
     base, word, pos = token["base"], token["word"], token["pos"]
     if pos == "記号":
+        return ""
+    override = OVERRIDES.get((base, token.get("sub", "")))
+    if override is not None:
+        return override
+    if is_debris(token, vocab):
         return ""
     if pos in ("助詞", "助動詞"):
         gloss = CLOSED_CLASS.get(base) or CLOSED_CLASS.get(word)
@@ -170,10 +189,31 @@ def gloss_for(token: dict, vocab: dict[str, str], glossary: dict[str, str]) -> s
 def tokenise(tokenizer: Tokenizer, text: str) -> list[dict]:
     tokens = []
     for token in tokenizer.tokenize(text):
-        pos = token.part_of_speech.split(",")[0]
+        fields = token.part_of_speech.split(",")
         base = token.base_form if token.base_form and token.base_form != "*" else token.surface
-        tokens.append({"word": token.surface, "base": base, "pos": pos, "trailing": ""})
+        tokens.append({"word": token.surface, "base": base, "pos": fields[0],
+                       "sub": fields[1] if len(fields) > 1 else "", "trailing": ""})
     return tokens
+
+
+def is_debris(token: dict, vocab: dict[str, str]) -> bool:
+    """斷詞器在文語上留下的碎片，一律留白。
+
+    janome 認的是現代日語，第三、四冊卻整本文語：「見給ひき」被拆成 見／給／ひき，
+    「ゆゑに」拆成 ゆ／ゑに，「曾つて」拆成 曾／つて。這些碎片本身不是詞，卻會被
+    當成名詞去查——第一版就這樣把「ふ」印成「揮舞」226 次、「ひ」印成「廢止」
+    185 次。判準：一到兩個假名、被標成「名詞・一般」、又不在本讀本自己的詞表裡。
+    留白看得出缺，印錯看不出來。
+    """
+    base, word = token["base"], token["word"]
+    if base in vocab or not KANA_ONLY.fullmatch(base):
+        return False
+    if token["pos"] == "名詞" and token["sub"] in ("一般", "サ変接続") and len(base) <= 2:
+        return True
+    # 文語動詞的語尾單假名（思ふ的ふ、給ひ的ひ）被當成自立動詞，還替它們造出
+    # 「ふる」「ひる」這種辭書形——第一版就是這樣印出「揮舞」「廢止」的。真正的
+    # 單假名動詞形（い＝いる、し＝する）辭書形都在本讀本詞表裡，上面那行已放行。
+    return token["pos"] == "動詞" and len(word) == 1 and len(base) <= 3
 
 
 def is_word(base: str) -> bool:
@@ -298,11 +338,12 @@ def main() -> int:
     for unit in units.values():
         for token in unit["tokens"]:
             gloss = gloss_for(token, vocab, glossary)
-            if not gloss and token["pos"] != "記号" and is_word(token["base"]):
+            if not gloss and token["pos"] != "記号" and is_word(token["base"])                     and not is_debris(token, vocab):
                 missing += 1
             token["glossZh"] = gloss
             token.pop("base", None)
             token.pop("pos", None)
+            token.pop("sub", None)
 
     total = sum(len(unit["tokens"]) for unit in units.values())
     OUTPUT.write_text(
