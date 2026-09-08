@@ -58,8 +58,13 @@ _TRIVIAL_HEADING = re.compile(r"^[\s0-9０-９一二三四五六七八九十百I
 
 
 def clean_heading(out: str, heading: str) -> str:
-    """引擎常把原標題連著譯文一起吐回來（「門をたたけ 叩門吧」），只留譯文那半。"""
-    out = (out or "").strip()
+    """引擎常把原標題連著譯文一起吐回來（「門をたたけ 叩門吧」），只留譯文那半。
+
+    也剝掉開頭的 markdown 標記。`clean_zh_output` 刻意放行 `## ` 開頭的輸出
+    （正文段落裡的內嵌小標要留著），但那條規則走到**章名**這一層就變成
+    章名長出「## 二　耶穌的聖召」——目錄與 chapter_path 都會照印。
+    """
+    out = re.sub(r"^\s*#{1,6}\s*", "", (out or "").strip())
     if out.startswith(heading):
         out = out[len(heading):].strip(" 　:：・-——")
     return out or heading
