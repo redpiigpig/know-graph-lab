@@ -141,7 +141,7 @@ IMAGES_CH = {
     'schleiermacher': 'Friedrich Schleiermacher',
     # 第 11 章 二十世紀
     'auschwitz-memorial': 'Auschwitz Birkenau memorial',
-    'azusa-street': 'Azusa Street Revival',
+    'azusa-street': 'William Joseph Seymour',
     # 第 12 章 禮儀
     'advent-wreath': 'Advent wreath candles',
     'rosary-beads': 'Rosary beads',
@@ -152,7 +152,7 @@ IMAGES_CH = {
     'chartres-cathedral': 'Chartres Cathedral interior nave',
     'beeldenstorm': 'Beeldenstorm iconoclasm 1566',
     # 第 15 章 臺灣
-    'taiwan-church-news': 'Taiwan Church News',
+    'taiwan-church-news': 'Thomas Barclay Tainan Theological College',
     'taiwan-indigenous-church': 'Presbyterian church Taiwan indigenous',
     # 第 16 章 生死觀
     'apocalypse-tapestry': 'Apocalypse Tapestry Angers',
@@ -162,5 +162,9 @@ IMAGES_CH = {
 # 冷門題材：英文查詢詞對不上，直接指名 Commons 檔案。
 EXACT_CH = {
     'nestorian-stele-ch': 'File:Nestorian-Stele-Budge-plate-X.jpg',
+    # 🚨 搜尋救不了的兩張：Origen 第一名是自宮圖（課堂不能投），
+    #    Justin Martyr 配到一整幅六月聖人像、看不出是誰。
+    'origen': 'File:Origen.jpg',
+    'justin-martyr': 'File:Justin Martir. Menaion. Russia, XVI.jpg',
     'christ-pantocrator-ch': 'File:Christ Icon Sinai 6th century.jpg',
 }

@@ -105,21 +105,21 @@ IMAGES_SL = {
     # 第 3 章 經典的成立
     'analects-bamboo': 'Analects bamboo slips',
     'laozi-riding-ox': 'Laozi riding an ox painting',
-    'confucian-wedding': 'Confucian wedding ceremony',
+    'confucian-wedding': 'Chinese traditional wedding ceremony',
     # 第 6 章 六朝
     'seven-sages': 'Seven Sages of the Bamboo Grove',
-    'chinese-ghost-painting': 'Chinese ghost painting scroll',
+    'chinese-ghost-painting': 'Zhong Kui painting ghost',
     'water-moon-guanyin': 'Water-moon Guanyin painting',
     'wenxin-diaolong': 'Wenxin Diaolong',
     'monk-portrait': 'Chinese Chan monk portrait painting',
     'chinese-landscape': 'Song dynasty landscape painting',
     # 第 7 章 唐代
-    'platform-sutra': 'Platform Sutra Dunhuang manuscript',
+    'platform-sutra': 'Platform Sutra Huineng',
     'bodhidharma': 'Bodhidharma painting',
-    'wangwei-painting': 'Wang Wei painting attributed',
+    'wangwei-painting': 'Wangchuan Villa Wang Wei painting',
     'daozang-volume': 'Daozang Daoist canon',
     # 第 8 章 敦煌
-    'bianwen-manuscript': 'Dunhuang manuscript bianwen',
+    'bianwen-manuscript': 'Dunhuang manuscript scroll',
     'mulian-rescue': 'Mulian rescues his mother painting',
     # 第 9 章 戲曲
     'temple-festival-opera': 'Taiwanese opera temple stage performance',
@@ -131,7 +131,7 @@ IMAGES_SL = {
     'wakokubon': 'Japanese woodblock printed book Edo period',
     'manyoshu': 'Manyoshu manuscript',
     # 第 12 章 韓半島
-    'imperial-exam-cells': 'Imperial examination cells Nanjing',
+    'imperial-exam-cells': 'Jiangnan Examination Hall Nanjing',
     'joseon-annals': 'Annals of the Joseon Dynasty',
     'idu-script': 'Idu script Korean',
     # 第 13 章 越南
@@ -141,6 +141,7 @@ IMAGES_SL = {
     'taiwan-stone-tablet': 'Taiwan historic stele inscription',
     'koa-a-chheh': 'Taiwanese koa-a-chheh songbook',
     # 第 15、16 章 近代
+    'xin-qingnian': 'New Youth magazine La Jeunesse',
     'pehoeji-newspaper': 'Taiwan Church News Peh-oe-ji newspaper',
     'amis-bible': 'Amis language Bible Taiwan',
 }

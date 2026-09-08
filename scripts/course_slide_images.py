@@ -130,7 +130,7 @@ IMAGES = {
     #    使用者說「圖有點太少」。這一批專門補**沒有圖的那些條列頁**，
     #    一頁配一張，配對表在 course_slide_illustrate.py。
     # 第 1 章 宗教是什麼
-    'sacred-tree-shrine': 'Sacred tree shrine ribbons',
+    'sacred-tree-shrine': 'Shimenawa sacred tree',
     'tillich-paul': 'Paul Tillich',
     'passover-seder': 'Passover Seder table',
     'tylor-edward': 'Edward Burnett Tylor',
@@ -139,7 +139,7 @@ IMAGES = {
     'kang-youwei': 'Kang Youwei',
     'meiji-shrine-rite': 'Meiji Jingu shrine ceremony',
     # 第 2 章 八個向度
-    'teresa-avila': 'Teresa of Avila painting',
+    'teresa-avila': 'Ecstasy of Saint Teresa Bernini',
     'nicene-creed-ms': 'Nicene Creed manuscript',
     'bar-mitzvah': 'Bar Mitzvah Torah reading',
     'mikveh-bath': 'Mikveh ritual bath',
@@ -147,8 +147,8 @@ IMAGES = {
     'shinto-priest': 'Shinto priest ritual',
     # 第 5 章 泛靈論
     'amis-ilisin': 'Amis Ilisin harvest festival',
-    'bunun-ritual': 'Bunun people ritual Taiwan',
-    'candomble': 'Candomble ceremony Brazil',
+    'bunun-ritual': 'Bunun people Taiwan',
+    'candomble': 'Candomble terreiro',
     'iroquois-longhouse': 'Iroquois longhouse',
     'santal-festival': 'Santal people festival India',
     # 第 6 章 泛神論
@@ -166,7 +166,7 @@ IMAGES = {
     'korean-mudang': 'Korean shaman gut ritual',
     'julian-emperor': 'Julian the Apostate',
     # 第 9 章 一神論
-    'kuntillet-ajrud': 'Kuntillet Ajrud inscription',
+    'mesha-stele': 'Mesha Stele',
     'cyrus-cylinder': 'Cyrus Cylinder',
     'synagogue-ark': 'Synagogue interior Torah ark',
     'salat-prayer': 'Muslims praying salat mosque',
@@ -191,7 +191,7 @@ IMAGES = {
     'solidarity-poland': 'Solidarity Poland 1980',
     'american-megachurch': 'Megachurch worship United States',
     # 第 14 章 個人化與對話
-    'meditation-retreat': 'Meditation retreat group',
+    'meditation-retreat': 'Zazen',
     'assisi-prayer': 'Assisi World Day of Prayer for Peace',
     # 第 15 章 臺灣宗教史
     'fort-zeelandia': 'Fort Zeelandia Tainan',

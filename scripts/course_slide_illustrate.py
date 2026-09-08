@@ -19,9 +19,9 @@
 ILLUSTRATE = {
     'wr': {
         # 第 1 章 宗教是什麼
-        '為什麼用「神聖」，不用「神」': 'sacred-tree-shrine',
+        '為什麼用「神聖」而不用「神」？': 'sacred-tree-shrine',
         '探詢：為什麼不用「相信」': 'tillich-paul',
-        '組織與活動：探詢如何凝固成看得見的東西': 'passover-seder',
+        '組織與活動：探詢如何化為具體可見的形式': 'passover-seder',
         '那條著名的階梯': 'tylor-edward',
         '兩次轉折：歐洲「發現」佛教，以及儒教之爭': 'ricci-xuguangqi',
         '中國材料把歐洲人逼到了牆角': 'kang-youwei',
@@ -55,7 +55,7 @@ ILLUSTRATE = {
         '東亞其他：巫俗、天道教、母道信仰、苯教': 'korean-mudang',
         '尤利安：最後一次嘗試': 'julian-emperor',
         # 第 9 章 一神論
-        '早期以色列：不是一神論，是單一神崇拜': 'kuntillet-ajrud',
+        '早期以色列：不是一神論，是單一神崇拜': 'mesha-stele',
         '第二以賽亞的翻轉': 'cyrus-cylinder',
         '猶太教：八個欄位': 'synagogue-ark',
         '伊斯蘭：教義、聖行與體制': 'salat-prayer',
@@ -169,7 +169,6 @@ ILLUSTRATE = {
         '三個使用場所：詩社、廟宇、書房': 'tainan-confucius-temple',
         # 第 3 章 經典的成立
         '正典化的三個動作': 'confucius-temple-stele',
-        '《論語》：一種被後世繼承的文體': 'analects-bamboo',
         '《老子》：從子書變成經書': 'laozi-riding-ox',
         '《儀禮》：一部只能被執行的書': 'confucian-wedding',
         # 第 6 章 六朝
@@ -194,12 +193,10 @@ ILLUSTRATE = {
         '《西遊記》的丹道讀法': 'neijing-tu',
         '章回小說裡的說書遺跡': 'chinese-storyteller',
         # 第 11 章 日本
-        '和刻本：今日研究中國文獻的必要繞道': 'wakokubon',
         '假名是怎麼長出來的': 'manyoshu',
         # 第 12 章 韓半島
         '科舉：漢文作為統治階層的門檻': 'imperial-exam-cells',
         '《東文選》與《朝鮮王朝實錄》': 'joseon-annals',
-        '韓半島：鄉札與吏讀': 'idu-script',
         # 第 13 章 越南
         '《禪苑集英》：越南有自己的法脈': 'vietnam-zen-temple',
         '越南的科舉與文廟': 'vietnam-pagoda-inscription',
@@ -208,7 +205,6 @@ ILLUSTRATE = {
         '臺灣的方志與碑碣': 'taiwan-stone-tablet',
         '歌仔冊：另一種白話韻文': 'koa-a-chheh',
         # 第 15、16 章
-        '白話字實際長什麼樣': 'pehoeji-newspaper',
         '原住民族語聖經': 'amis-bible',
         '白話文運動的判準': 'xin-qingnian',
     },
