@@ -65,14 +65,24 @@ def _keys(prefix: str) -> list[str]:
             if os.environ.get(f"{prefix}{i}")]
 
 
+# 🚨 每次都從 keys[0] 打起，平行跑的時候所有 worker 會擠在同一把 key 上，
+#    等於七把 key 只用得到一把。用一個全域計數器讓起點輪流。
+_rr_lock = __import__("threading").Lock()
+_rr = 0
+
+
 def _openai_style(url: str, keys: list[str], model: str, prompt: str) -> str:
     """NVIDIA NIM 與 OpenRouter 都是 OpenAI 相容介面，同一支打完。"""
+    global _rr
     import requests
     body = {"model": model, "temperature": 0.85, "max_tokens": 16000,
             "messages": [{"role": "user", "content": prompt}]}
     last = "?"
-    for off in range(len(keys)):
-        key = keys[off]
+    with _rr_lock:
+        _rr += 1
+        start = _rr
+    for i in range(len(keys)):
+        key = keys[(start + i) % len(keys)]
         try:
             r = requests.post(url, headers={"Authorization": f"Bearer {key}"},
                               json=body, timeout=600)
@@ -297,7 +307,21 @@ def main() -> None:
     ap.add_argument("--volume", help="只跑某一卷，如 D3")
     ap.add_argument("--chapter", help="只跑某一章，如 D3:5")
     ap.add_argument("--force", action="store_true", help="覆寫已存在的章")
+    ap.add_argument("--workers", type=int, default=4,
+                    help="並行條數（預設 4）。Gemini 掛掉只剩 NVIDIA 時，"
+                         "單章要二十幾分鐘，序列跑一天寫不完十章")
     a = ap.parse_args()
+
+    # 🚨 單一實例鎖。排程每半小時醒來一次，而一輪要跑好幾個小時；沒有鎖的話
+    #    第二個實例會挑到同一批「還沒寫」的章，兩邊各寫各的、白燒一份額度。
+    #    不用查 PID 是否存活（那條路踩過 Big5 解碼的坑），改看鎖檔多久沒更新。
+    lock = ROOT / "output" / "dialogical_write.lock"
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    if lock.exists() and time.time() - lock.stat().st_mtime < 3600:
+        print(f"另一個實例還在跑（{lock.name} 於 "
+              f"{time.strftime('%H:%M', time.localtime(lock.stat().st_mtime))} 更新過），本次跳過")
+        return
+    lock.write_text(str(time.time()), encoding="utf-8")
 
     book = json.loads(OUTLINE.read_text(encoding="utf-8"))
     sample = style_sample()
@@ -308,7 +332,8 @@ def main() -> None:
     elif a.volume:
         only_v = a.volume
 
-    done = fail = 0
+    # 先把待寫的章排出來（順便把各卷書頭補上），再決定要不要平行跑。
+    pending = []
     for vol in book["volumes"]:
         if only_v and vol["id"] != only_v:
             continue
@@ -319,22 +344,44 @@ def main() -> None:
             # 卷一的書頭是人手寫的，不要被覆蓋
             if vol["id"] != "D1" or not head.exists():
                 head.write_text(head_html(vol), encoding="utf-8")
-        print(f"\n===== 卷{vol['no']} {vol['title']}（{vol['id']}）", flush=True)
         for ch in vol["chapters"]:
             if only_c and ch["n"] != only_c:
                 continue
-            t0 = time.time()
-            try:
-                r = write_chapter(book, vol, ch, sample, a.force)
-            except Exception as e:                   # noqa: BLE001
-                # 跑一整晚的東西不能被一顆石頭絆倒：記下來，換下一章
-                r = f"✗ 例外：{type(e).__name__} {str(e)[:70]}"
-            print(f"  第{ch['n']:2d}章 {ch['title'][:26]:26s} {r}　{time.time()-t0:.0f}s",
-                  flush=True)
-            if r.startswith("✓"):
-                done += 1
-            elif r.startswith("✗"):
-                fail += 1
+            if ch.get("skip"):
+                continue
+            if (d / f"ch{ch['n']:02d}.html").exists() and not a.force:
+                continue
+            pending.append((vol, ch))
+
+    print(f"待寫 {len(pending)} 章，{a.workers} 條線並行", flush=True)
+
+    def run(item):
+        vol, ch = item
+        t0 = time.time()
+        try:
+            r = write_chapter(book, vol, ch, sample, a.force)
+        except Exception as e:                       # noqa: BLE001
+            # 跑一整晚的東西不能被一顆石頭絆倒：記下來，換下一章
+            r = f"✗ 例外：{type(e).__name__} {str(e)[:70]}"
+        return (f"  {vol['id']} 第{ch['n']:2d}章 {ch['title'][:24]:24s} {r}"
+                f"　{time.time()-t0:.0f}s"), r
+
+    done = fail = 0
+    if a.workers <= 1:
+        results = (run(it) for it in pending)
+    else:
+        # 各章之間沒有相依，天生可平行；瓶頸是 API 端，不是本機。
+        from concurrent.futures import ThreadPoolExecutor
+        pool = ThreadPoolExecutor(max_workers=a.workers)
+        results = pool.map(run, pending)
+    for line, r in results:
+        print(line, flush=True)
+        lock.write_text(str(time.time()), encoding="utf-8")   # 心跳，免得長跑被判成殭屍
+        if r.startswith("✓"):
+            done += 1
+        elif r.startswith("✗"):
+            fail += 1
+    lock.unlink(missing_ok=True)
     print(f"\n完成 {done} 章，失敗 {fail} 章")
 
 
