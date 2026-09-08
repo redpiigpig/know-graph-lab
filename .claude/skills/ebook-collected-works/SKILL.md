@@ -512,5 +512,57 @@ store 實際載入的數量，插進 timeline 陣列會多一個對不上）。
 * 亞里斯多德《政治學》43/98 個 chunk 的譯文後半是模型的自語（`"政", "體", … same.`），
   chunk 照樣寫檔上傳、reader 照樣顯示，唯一徵兆是字數異常大。
 
-所以 SOP 第 10 步（收工前跑一次對帳）不是形式。另外新增
-`scripts/plato_quality_scan.py` 專抓第三種——「印得出來但內容是模型自語」。
+所以 SOP 第 10 步（收工前跑一次對帳）不是形式。
+
+## 🚨 收工前的三道品質閘（缺一不可）
+
+三支工具抓的是**不同的失敗模式**、吃**不同的資料形狀**，不能互相取代。共同點是：
+這幾類錯全都**段數對得齊、覆蓋率 100%、品質分數正常**，只有真的去讀內容才看得見
+（[[feedback_reader_silent_failures]]）。
+
+| 閘 | 工具 | 吃什麼 | 抓什麼 |
+|---|---|---|---|
+| ① 狀態對帳 | `scripts/collected_works_status.py` | store＋DB | 假 done／該標 done／沒列進 hub |
+| ② 模型自語 | `scripts/plato_quality_scan.py` | `c:/tmp/plato_*.jsonl` | token 自語、體積異常、混入英文長句 |
+| ③ 拒譯污染 | `scripts/audit_llm_meta_replies.py` | `*_data/*/sec*.json` | 元回覆、整段未翻譯、臆造 |
+
+### ③ 拒譯污染（2026-09-08 新增，首掃就清了 2,554 段）
+
+Haiku 遇到它判定「不是英文／是亂碼」的來源時**不回空**，而是回一段說明，管線把
+說明當譯文存進 `zh[i]`：
+
+    我注意到您提供的「英文原文」實際上是梵文文本（使用 IAST 音譯法），而非英文。
+
+首次全掃 `*_data`：**元回覆 2,375 段、整段未翻譯 179 段**，且**都已經上線**
+（阿維斯陀 266 段 DB preview 裡 32 段開頭就是）。重災區 `sbe-04-zend-avesta-1`、
+`auld-lang-syne`、`comparative-mythology`、`chips-1`、`science-language-2`。
+
+三類判準與踩過的坑：
+
+* **元回覆**——🚨 **中英文都要掃**。第一版只掃中文標記，漏掉 207 段
+  `I'm ready to translate the English text from…` / `I appreciate your detailed
+  instructions, but I notice…`。
+* **整段未翻譯**——LLM 把英文原文原樣吐回來（中文字佔比 <5%）。抽樣抓到 2,280 字的
+  `Magic and Witchcraft, though often confounded with Religion…`。
+* **臆造**——來源極短、譯文卻長好幾倍。書眉 `140 LECTURE in.` 生出 1,118 字講稿、
+  索引行 `Bastholm ........` 生出 1,575 字虛構章節、`Introduction.` 一個字生出整段導論。
+  🚨 門檻 `HALLU_MIN_OUT` 實測要 **120 不能用 30**：`Saranyu=Erinuys, 73.` 譯成
+  「薩蘭尤（Saranyu）= 厄里倪厄斯（Erinuys），第73頁。」是**正確譯文**，中文音譯加括號
+  本來就會變長。這一類是啟發式判斷，`--fix --meta-only` 會保留它們待人工看過。
+
+**清成空白而不是硬翻，是刻意的。** 高發來源是**被 OCR 打爛的梵文／阿維斯陀轉寫**與
+**書眉**（`Ixx THE QUR'AN.`、`xl DHAMMAPADA.`），本來就沒有可譯內容。硬翻只會得到
+`Ixxx THE QURAN.` →「第十章《古蘭經》」（lxxx 是頁碼不是章號）、
+`Tue Cuaprer or tHe Ports.` →「卡巴聖殿或眾門之地」（其實是詩人章，Poets 被 OCR 成
+Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則是靜默的錯誤。
+真要補譯**走 Gemini，別再用 Haiku 補同一批**（同 [[feedback_dialogue_rewrite_gemini_not_haiku]]）。
+
+    python scripts/audit_llm_meta_replies.py                    # 只報告
+    python scripts/audit_llm_meta_replies.py --root mueller_data --samples 5
+    python scripts/audit_llm_meta_replies.py --fix --meta-only  # 清判準明確的兩類
+
+🚨 `--fix` **只改本機 sec*.json，不會上傳**。清完要重跑該 driver 的
+`assemble_and_upload` 才會反映到站上，否則就是 [[feedback_build_not_equal_deployed]]。
+上傳時注意 **sbe-\* 各卷的 registry 在 `sbe_translate.WORKS`，不在
+`mueller_auto.WORKS`**（後者只有 Müller 本人 16 部），取錯會 `KeyError`——
+`mueller_fill_residuals.py` 就是這樣靜靜地一本都沒上傳。
