@@ -48,7 +48,9 @@ VOCAB = REPO / "data" / "originalReaders" / "vocabulary" / "english-1000.json"
 OLD_LESSONS = REPO / "public" / "content" / "english" / "lessons.json"
 OUT_DIR = REPO / "public" / "content" / "english" / "course50"
 
-N_MCQ, N_FILL, N_TRANSLATE, N_UNSCRAMBLE = 30, 10, 8, 6
+# 使用者 2026-09-08 定案：每課印 10 題選擇題（原本 30）。早生成的那批仍存 30 題，
+# 出書時由 build_english_textbook.pick_mcq 分層挑 10 題，不必重跑。
+N_MCQ, N_FILL, N_TRANSLATE, N_UNSCRAMBLE = 10, 10, 8, 6
 
 # 常見簡體字，用來擋掉引擎偶爾吐簡體。不用 OpenCC 反向比對——
 # 那個會把「祢」之類的正體字誤判成簡體（見 feedback_reader_silent_failures）。
@@ -294,8 +296,8 @@ def validate_exercises(ex: dict, keys: dict[str, int] | None = None) -> list[str
                       "unscramble": N_UNSCRAMBLE}
     for key, n in wanted.items():
         items = ex.get(key) or []
-        if len(items) != n:
-            errs.append(f"{key} 應 {n} 題，實得 {len(items)}")
+        if len(items) < n:
+            errs.append(f"{key} 應至少 {n} 題，實得 {len(items)}")
         for i, item in enumerate(items, 1):
             if not item.get("q") or not item.get("ans"):
                 errs.append(f"{key} 第 {i} 題缺 q/ans")
@@ -461,7 +463,9 @@ def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
 
     questions: list[dict] = []
     for batch, style in enumerate(MCQ_STYLES):
-        want = min(MCQ_BATCH, N_MCQ - len(questions))
+        # 把總題數攤到三種題型上（10 題 -> 4/3/3），避免整份考卷只剩背單字
+        want = N_MCQ // len(MCQ_STYLES) + (1 if batch < N_MCQ % len(MCQ_STYLES) else 0)
+        want = min(want, MCQ_BATCH, N_MCQ - len(questions))
         if want <= 0:
             break
         part, errs = ask(
@@ -532,16 +536,31 @@ def dedupe_mcq(ex: dict) -> int:
     return dropped
 
 
+def word_forms(en: str):
+    """詞條可能出現在課文裡的各種寫法。
+
+    詞表把複數寫成 apple(s)、peach(es)、mango(es)，課文裡當然是 apple／peaches。
+    只切「/」和「、」的話這些字永遠比對不到——L19 就因此被判成覆蓋率 35%、
+    白白整課重做兩次，其實課文一直是好的。
+    """
+    for chunk in re.split(r"[/、]", en):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        yield chunk.lower()
+        match = re.match(r"^(.*?)\(([A-Za-z]+)\)$", chunk)
+        if match:
+            stem, suffix = match.group(1).strip(), match.group(2)
+            yield stem.lower()
+            yield (stem + suffix).lower()
+
+
 def coverage(lesson: dict) -> float:
     """本課單字有多少真的出現在課文／例句／題目裡。"""
     blob = json.dumps({k: v for k, v in lesson.items() if k != "words"},
                       ensure_ascii=False).lower()
-    hit = 0
-    for word in lesson["words"]:
-        for part in re.split(r"[/、]", word["en"]):
-            if part.strip().lower() in blob:
-                hit += 1
-                break
+    hit = sum(1 for word in lesson["words"]
+              if any(form in blob for form in word_forms(word["en"])))
     return hit / len(lesson["words"])
 
 
