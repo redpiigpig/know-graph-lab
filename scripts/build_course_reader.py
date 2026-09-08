@@ -417,6 +417,8 @@ class Book:
         if not text:
             return x   # 封面有刻意留的空行；insert_text 吃空字串會炸
         for run, kind in self._runs(text):
+            if not run:
+                continue   # 空的 run 會讓 insert_text 在內部拋 max() on empty
             fn = {"cjk": "CJK", "cjk_alt": "CJK2"}.get(kind, "TNRB" if bold else "TNR")
             self.page.insert_text((x, y), run, fontname=fn, fontsize=size, color=color)
             x += self._font(kind, bold).text_length(run, size)

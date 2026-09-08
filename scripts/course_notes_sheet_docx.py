@@ -22,7 +22,10 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
-OUT = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學\115-1上課筆記單.docx')
+# 🚨 課堂紙本放使用者自己的教學夾（同修課須知），不是網站鏡射用的
+#    「資料\知識圖工作室\教學」——2026-09-09 他自己把檔案搬過去的。
+OUT = (Path(r'G:\我的雲端硬碟\玄奘\博一上\教學') / '115-1修課須知'
+       / '115-1上課筆記單.docx')
 
 FONT = '標楷體'
 RULE_PT = 27          # 橫線間距：約 0.95 cm，一般人手寫剛好

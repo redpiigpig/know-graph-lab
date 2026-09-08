@@ -1,0 +1,329 @@
+#!/usr/bin/env python3
+"""Typeset the Japanese religious-studies reader as JIS B5 print masters.
+
+The fourth reader in the series, and the first whose target language is modern.
+Everything about the page is imported from the Hebrew builder and the Greek
+interlinear renderer, because four books on one shelf have to look like one
+series; what differs is only what the language forces:
+
+* Japanese runs left to right and is set in MS Mincho — a conventional TTC that
+  LibreOffice resolves without substituting, unlike the variable Noto builds.
+* The vocabulary table keeps a pitch column, which Greek dropped: 重音 cannot be
+  read off the kana, so it has to be printed. What is printed is u-biq's own
+  break marking (は・や・い), not an accent number — the source carries the break
+  positions, and the number would be an inference nobody could check.
+* Volume 1 is modern prose, volume 2 文語 with 舊字舊假名; the owner calls them
+  第一冊／第二冊, never 上下冊.
+
+    python -X utf8 scripts/build_japanese_full_reader.py
+    python -X utf8 scripts/build_japanese_full_reader.py --book 1
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.shared import Pt
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import build_greek_full_reader as G  # noqa: E402  - the interlinear renderer
+import build_hebrew_full_reader as H  # noqa: E402  - the shared page
+
+ROOT = Path(__file__).resolve().parents[1]
+CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
+READINGS = CACHE / "readings.json"
+INTERLINEAR = CACHE / "interlinear.json"
+VOCAB = ROOT / "data/originalReaders/vocabulary/japanese-2000.json"
+OUT_DIR = ROOT / "output/original-readers"
+
+FONT_JA = "MS Mincho"
+FONT_JA_FILE = r"C:\Windows\Fonts\msmincho.ttc"
+JA_PT = 13.5
+JA_TITLE_PT = 15
+GLOSS_PT = 9.4
+
+VOLUMES = {
+    1: {
+        "label": "第一冊",
+        "subtitle": "現代語・宗教學與宗教史",
+        "motto": "宗教學の日本語",
+        "blurb": "五十篇現代日文的宗教學與宗教史散文，逐詞繁中對譯。",
+    },
+    2: {
+        "label": "第二冊",
+        "subtitle": "文語・舊字舊假名",
+        "motto": "文語のよみかた",
+        "blurb": "五十篇文語讀物：文語訳聖書、使徒信經、萬葉集與戰前無教會主義的文章。",
+    },
+}
+
+# 印製分冊在版面量出來之後才填；一本不得超過 500 頁，同語言各冊厚薄要相近。
+PARTS = [
+    {"book": 1, "source": 1, "first": 1, "last": 50, "appendix": True},
+    {"book": 2, "source": 2, "first": 1, "last": 50, "appendix": True},
+]
+
+_metrics = None
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def ja_width_mm(text: str, size_pt: float) -> float:
+    """量寬用真的字體檔；逐詞排版是照量出來的寬度切行的。"""
+    global _metrics
+    if _metrics is None:
+        from PIL import ImageFont
+
+        _metrics = ImageFont.truetype(FONT_JA_FILE, 1000)
+    return _metrics.getlength(text) / 1000 * size_pt / 72 * 25.4
+
+
+def ja_run(paragraph, text: str, size_pt: float) -> None:
+    H.set_run_font(paragraph.add_run(text), FONT_JA, size_pt, color=H.INK)
+
+
+def accent_marks(entry: dict) -> str:
+    """u-biq 用斷詞位置標重音；把它還原成「は・や・い」。
+
+    抓下來的 `accentBreaks` 前面幾段加起來剛好等於假名長度，後面還跟著一個與
+    詞無關的數字（頁面上另一個欄位的長度）。取到湊滿為止，多的丟掉——湊不滿就
+    什麼都不印，不要硬切：切錯的重音比沒有重音更糟。
+    """
+    kana = entry.get("kana") or ""
+    breaks = entry.get("accentBreaks") or []
+    parts, index = [], 0
+    for size in breaks:
+        if index + size > len(kana):
+            break
+        parts.append(kana[index : index + size])
+        index += size
+        if index == len(kana):
+            return "・".join(parts) if len(parts) > 1 else ""
+    return ""
+
+
+def add_vocabulary(document: Document, rows: list[dict]) -> None:
+    document.add_heading(f"本課 {len(rows)} 詞", level=2)
+    table = document.add_table(rows=1, cols=5)
+    widths = [8, 34, 34, 18, 47]
+    H.set_table_geometry(table, widths)
+    H.set_borders(table)
+    header = table.rows[0]
+    H.set_repeat_header(header)
+    for cell, title in zip(header.cells, ["#", "詞", "假名・重音", "詞類", "繁體中文"]):
+        H.shade(cell, H.ACCENT_DARK)
+        paragraph = cell.paragraphs[0]
+        paragraph.paragraph_format.space_after = Pt(0)
+        H.set_run_font(paragraph.add_run(title), H.FONT_UI, 7.5, bold=True, color="FFFFFF")
+    for index, entry in enumerate(rows, start=1):
+        cells = table.add_row().cells
+        H.prevent_row_split(table.rows[-1])
+        written = entry.get("kanji") or entry.get("kana") or ""
+        values = [
+            (str(index), H.FONT_UI, H.TABLE_SIZE_PT, H.MUTED),
+            (written, FONT_JA, H.TABLE_SIZE_PT + 1.4, H.INK),
+            (accent_marks(entry) or entry.get("kana") or "", FONT_JA, H.TABLE_SIZE_PT, H.MUTED),
+            (entry.get("pos") or "", H.FONT_UI, H.TABLE_SIZE_PT - 0.6, H.MUTED),
+            (entry.get("glossZh") or "", H.FONT_ZH, H.TABLE_SIZE_PT, H.INK),
+        ]
+        for cell, (text, font, size, color) in zip(cells, values):
+            H.set_cell_margins(cell)
+            paragraph = cell.paragraphs[0]
+            paragraph.paragraph_format.space_after = Pt(0)
+            H.add_mixed_script_text(paragraph, text, font, size, color=color)
+
+
+def add_interlinear_unit(document: Document, unit: dict, tokens: list[dict], *, lead: str = "") -> None:
+    if not tokens:
+        H.add_body(document, unit["text"], size=H.TRANSLATION_PT)
+        return
+    G.add_interlinear(
+        document,
+        tokens,
+        lead=lead,
+        sense=unit.get("senseZh", ""),
+        greek_pt=JA_PT,
+        available_mm=H.USABLE_WIDTH_MM,
+        measure=ja_width_mm,
+        render=ja_run,
+    )
+
+
+def add_memory(document: Document, lesson: dict, interlinear: dict) -> None:
+    units = lesson.get("memoryUnits") or []
+    if not units:
+        return
+    document.add_heading(f"背誦 {len(units)} 句", level=2)
+    for index, unit in enumerate(units, start=1):
+        unit_id = f"v{lesson['volume']}-l{lesson['lesson']:02d}-m{index:03d}"
+        tokens = (interlinear.get(unit_id) or {}).get("tokens") or []
+        add_interlinear_unit(document, unit, tokens, lead=unit.get("label") or str(index))
+
+
+def add_reading(document: Document, lesson: dict, interlinear: dict) -> None:
+    # 讀文自己起一頁：生詞與背誦是預備，讀文才是這一課。
+    H.page_break(document)
+    H.add_label(document, "Reading")
+    heading = document.add_heading(lesson["title"], level=2)
+    H.paragraph_rule(heading, color=H.GOLD, size="8")
+    for unit in lesson["units"]:
+        tokens = (interlinear.get(unit["id"]) or {}).get("tokens") or []
+        add_interlinear_unit(document, unit, tokens, lead=unit.get("label") or "")
+
+
+def add_lesson(document: Document, lesson: dict, interlinear: dict, spec: dict,
+               *, page_break_before: bool = True) -> None:
+    H.add_label(document, f"Lesson {lesson['lesson']:02d}  ·  {spec['subtitle']}",
+                page_break_before=page_break_before)
+    number = H.mark_running_tag(document.add_paragraph())
+    number.paragraph_format.space_after = Pt(1)
+    H.set_run_font(number.add_run(f"第 {lesson['lesson']:02d} 課"), H.FONT_UI, 11,
+                   bold=True, color=H.ACCENT)
+    heading = document.add_heading(lesson["title"], level=1)
+    H.paragraph_rule(heading, color=H.GOLD, size="14")
+    source = document.add_paragraph()
+    source.paragraph_format.space_after = Pt(6)
+    H.add_mixed_script_text(
+        source,
+        f"{lesson['author']}　{lesson['extent']}　{lesson['orthography']}　{lesson['chars']} 字",
+        H.FONT_ZH, H.CAPTION_PT, color=H.MUTED,
+    )
+    add_vocabulary(document, lesson["vocabulary"])
+    add_memory(document, lesson, interlinear)
+    add_reading(document, lesson, interlinear)
+
+
+def add_cover(document: Document, spec: dict, part: dict, counts: dict) -> None:
+    table = document.add_table(rows=1, cols=1)
+    H.set_table_geometry(table, [H.USABLE_WIDTH_MM])
+    H.set_borders(table, outside=False, inside=False)
+    cell = table.cell(0, 0)
+    H.set_cell_margins(cell, top=500, bottom=500, start=350, end=350)
+    palette = H.cover_colors("ja")
+    H.shade(cell, palette["banner"])
+
+    eyebrow = cell.paragraphs[0]
+    eyebrow.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.set_run_font(eyebrow.add_run("ORIGINAL-LANGUAGE READER"), H.FONT_UI, 8,
+                   color=palette["rule"], bold=True)
+    name = cell.add_paragraph()
+    name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.add_mixed_script_text(name, "日文宗教學讀本", H.FONT_ZH, 25, bold=True, color="FFF8ED")
+    motto = cell.add_paragraph()
+    motto.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.set_run_font(motto.add_run(spec["motto"]), FONT_JA, 18, color="FFF8ED")
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
+    line = document.add_paragraph()
+    line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.add_mixed_script_text(
+        line, f"{spec['label']}　第 {part['first']:02d}–{part['last']:02d} 課",
+        H.FONT_ZH, 12, bold=True, color=H.INK)
+    blurb = H.add_body(document, spec["blurb"], size=10.5, color=H.ACCENT)
+    blurb.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    document.add_paragraph().paragraph_format.space_after = Pt(26)
+    spec_line = document.add_paragraph()
+    spec_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    H.paragraph_rule(spec_line, color=palette["rule"], size="24")
+    H.set_run_font(spec_line.add_run("JIS B5  182 × 257 mm  ·  私人研讀"), H.FONT_UI,
+                   8.5, color=H.MUTED)
+    counts_line = H.add_body(
+        document,
+        f"{counts['lessons']} 課．{counts['words']} 詞．背誦 {counts['memory']} 句．"
+        f"讀文 {counts['chars']:,} 字",
+        size=H.CAPTION_PT, color=H.MUTED)
+    counts_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+
+def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[dict]) -> None:
+    counts = {
+        "lessons": len(lessons),
+        "words": sum(len(l["vocabulary"]) for l in lessons),
+        "memory": sum(len(l["memoryUnits"]) for l in lessons),
+        "chars": sum(l["chars"] for l in lessons),
+    }
+    add_cover(document, spec, part, counts)
+    H.page_break(document)
+    document.add_heading("體例與來源", level=1)
+    for line in (
+        "詞序依《大家的日本語》課次，經 u-biq 逐課頁重建；專名不佔課內詞額，另立附錄專名表。",
+        "重音欄印的是來源頁面自己的斷點（は・や・い），不是重音型編號——斷點是抓得到的事實，編號是推論。",
+        "讀文與背誦一律取宗教學、宗教史或宗教典籍；詞照課本，文照領域。",
+        "聖書用文語訳（明治元訳舊約、大正改訳新約，公有領域），不用口語訳或新共同訳。",
+        "逐詞對譯：本課詞表的譯法優先，其次是助詞助動詞表，再其次才是模型；查不到的留白，不用別的語言頂替。",
+        "佛典尚未收入。素材抓得到，但訓読者與年份查不到，且混著漢文與梵文轉寫；依合約寧缺勿濫。",
+    ):
+        H.add_body(document, line, size=H.CAPTION_PT, color=H.INK)
+    H.page_break(document)
+    H.add_contents(
+        document,
+        [(f"{l['lesson']:02d}", l["title"], l["author"]) for l in lessons],
+        title=f"{spec['label']}目錄",
+        accent=H.cover_colors("ja")["accent"],
+    )
+
+
+def lessons_for(part: dict, readings: dict, vocabulary: list[dict]) -> list[dict]:
+    volume = next(v for v in readings["volumes"] if v["volume"] == part["source"])
+    rows = []
+    for lesson in volume["lessons"]:
+        if not (part["first"] <= lesson["lesson"] <= part["last"]):
+            continue
+        words = [
+            entry for entry in vocabulary
+            if entry["volume"] == part["source"] and entry["readerLesson"] == lesson["lesson"]
+        ]
+        rows.append({**lesson, "volume": part["source"], "vocabulary": words})
+    return rows
+
+
+def build(book: int) -> Path:
+    part = next((p for p in PARTS if p["book"] == book), None)
+    if part is None:
+        raise SystemExit(f"沒有第 {book} 冊")
+    spec = VOLUMES[part["source"]]
+    readings = load(READINGS)
+    vocabulary = load(VOCAB)["entries"]
+    interlinear = load(INTERLINEAR)["units"] if INTERLINEAR.exists() else {}
+    lessons = lessons_for(part, readings, vocabulary)
+
+    document = Document()
+    H.configure(document)
+    running = f"日文宗教學讀本　{spec['label']}"
+    H.write_running_head(document.sections[0], running)
+    document.core_properties.title = f"日文宗教學讀本：{spec['label']}"
+    document.core_properties.subject = spec["subtitle"]
+    document.core_properties.language = "ja"
+
+    add_front_matter(document, spec, part, lessons)
+    H.start_section(document, running, lesson_tag=True)
+    for index, lesson in enumerate(lessons):
+        add_lesson(document, lesson, interlinear, spec, page_break_before=index > 0)
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    path = OUT_DIR / f"japanese-original-reader-vol{book}.docx"
+    document.save(path)
+    return path
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="排版日文宗教學讀本 B5 DOCX")
+    parser.add_argument("--book", type=int, choices=tuple(p["book"] for p in PARTS))
+    args = parser.parse_args()
+    for book in ([args.book] if args.book else [p["book"] for p in PARTS]):
+        path = build(book)
+        print(f"{VOLUMES[next(p for p in PARTS if p['book'] == book)['source']]['label']}"
+              f" -> {path.relative_to(ROOT)}  {path.stat().st_size / 1024:.0f} KB")
+
+
+if __name__ == "__main__":
+    main()

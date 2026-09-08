@@ -25,14 +25,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import course_schedule as CS                      # noqa: E402
 from course_syllabus_docx import COURSES as SYL   # noqa: E402
 
-DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
+# 🚨 修課須知是**課堂紙本**，跟講義／簡報／小考不同，放使用者自己的教學夾，
+#    不是網站鏡射用的「資料\知識圖工作室\教學」（2026-09-09 他自己把檔案搬過去的）。
+OUTDIR = Path(r'G:\我的雲端硬碟\玄奘\博一上\教學') / '115-1修課須知'
 
-# 課號 →（Drive 資料夾, course_syllabus_docx 的鍵）
+# 課號 → course_syllabus_docx 的鍵（課程目標與書目仍讀那邊）
 META = {
-    'BBE275': ('115-1_世界宗教文化導論', 'world-religions-day'),
-    'PPA001': ('115-1_世界宗教文化導論', 'world-religions-intro'),
-    'BBE150': ('115-1_基督宗教概論', 'christianity'),
-    'PPA066': ('115-1_宗教系國文講義', 'chinese'),
+    'BBE275': 'world-religions-day',
+    'PPA001': 'world-religions-intro',
+    'BBE150': 'christianity',
+    'PPA066': 'chinese',
 }
 
 CN = '〇一二三四五六七八九十'
@@ -156,8 +158,7 @@ def rules(c):
 
 def build(key):
     c = CS.COURSES[key]
-    folder, syl_key = META[c['code']]
-    s = SYL[syl_key]
+    s = SYL[META[c['code']]]
 
     doc = Document()
     sec = doc.sections[0]
@@ -238,7 +239,7 @@ def build(key):
                      size=10, indent=0.2, space_after=1)
             para(doc, '', space_after=3)
 
-    outdir = DRIVE / folder
+    outdir = OUTDIR
     outdir.mkdir(parents=True, exist_ok=True)
     # 檔名帶列印份數＝已選人數＋2（使用者 2026-09-08 定），印的時候不必再查。
     out = outdir / f"115-1修課須知_{c['name']}（{c['code']}）_印{CS.copies(c)}份.docx"
