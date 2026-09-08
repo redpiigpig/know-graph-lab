@@ -332,6 +332,29 @@ fall back to the other when `has_glyph` says no (`Book._kind`). And when auditin
 a rendered PDF, search the extracted text for ` ` as well as `�`; a
 missing glyph in an embedded font usually arrives as the former.
 
+## 21. The tokeniser does not know the register, and invents words for what it cannot parse
+
+janome is trained on modern Japanese; two of the Japanese reader's four volumes are
+文語 with 舊字舊假名. It does not fail on them — it segments them confidently and
+wrongly. 「見給ひき」becomes 見／給／ひき, 「ゆゑに」becomes ゆ／ゑに, 「曾つて」
+becomes 曾／つて, and for the stray kana it invents dictionary forms: ふ gets the
+lemma ふる, ひ gets ひる. Those lemmas then went to the model, which dutifully
+returned a meaning for each, and the book printed 「ふ＝揮舞」226 times and
+「ひ＝廢止」185 times under classical verb endings. Every page looked complete.
+
+*Debris has a shape: a one- or two-kana token the tokeniser calls a general noun or
+a self-standing verb, whose lemma is not in the reader's own vocabulary.* Print
+nothing for it (`is_debris` in `build_japanese_interlinear.py`). Blank is the honest
+state; a confident wrong gloss under every classical verb in the book is not.
+
+The related trap is the suffix: 「的」is 「…的」 not 「內在的」, 「ら」is a plural
+marker not 賤民, 「さ」nominalises rather than meaning 「做」. Suffixes carry a
+part-of-speech subtag; override them from a table rather than asking.
+
+*How it was found:* listing the forty most frequent glossed tokens and reading the
+column. No count moves — the gloss is present, non-empty, and in Traditional
+Chinese, so every gate passes.
+
 ## The audits that actually found these
 
 - **Count the same set twice, by different routes, and compare.** Plan versus
