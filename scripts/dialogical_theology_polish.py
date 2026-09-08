@@ -54,7 +54,9 @@ def main() -> None:
         s = orig = f.read_text(encoding="utf-8")
 
         for w in DROPPABLE:
-            s, n = re.subn(f"({_LEAD}){w}，", r"\1", s)
+            # 🚨 這些贅詞常帶一個程度副詞前綴（「更值得注意的是」「尤其值得注意的是」）。
+            #    只認原形會靜默漏掉——第一版就是這樣放過了 D5:11。
+            s, n = re.subn(f"({_LEAD})(?:更|尤其|特別|最)?{w}，", r"\1", s)
             dropped += n
 
         for w in REWRITE_ONLY:
