@@ -20530,10 +20530,12 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "yearSort": 1951,
                       "category": "薩滿教研究",
                       "languages": [
-                            "fr"
+                            "fr",
+                            "en"
                       ],
-                      "status": "copyright",
-                      "note": "薩滿教比較研究奠基作。"
+                      "status": "in-progress",
+                      ebookId: 'f1dc179e-c68d-4468-a188-494ed288776b',
+                      "note": "薩滿教比較研究奠基作。英譯本（Trask）28 章已上架，繁中逐段翻譯進行中。"
                 },
                 {
                       "title": "聖與俗：宗教的本質",
@@ -20546,6 +20548,20 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       ],
                       "status": "copyright",
                       "note": "最廣為流傳的入門經典,提出顯聖(hierophany)與聖俗二元範疇。"
+                },
+                {
+                      "title": "宗教思想史．第一卷：從石器時代到厄琉息斯祕儀",
+                      "titleOriginal": "Histoire des croyances et des idées religieuses, I",
+                      "year": "1976",
+                      "yearSort": 1976,
+                      "category": "代表作",
+                      "languages": [
+                            "fr",
+                            "en"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '49ef694d-679f-4143-b61d-6de91586d124',
+                      "note": "三卷本通史,伊利亞德晚年集大成之作。英譯本(Trask)26 章已上架,繁中逐段翻譯進行中。"
                 },
                 {
                       "title": "宗教百科全書（主編）",
