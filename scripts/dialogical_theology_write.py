@@ -42,8 +42,9 @@ OUTLINE = ROOT / "scripts/data/dialogical_theology_outline.json"
 BASE = ROOT / "public/content/works/dialogical-theology"
 # 免費層是每天每把 key 幾次在管；2.5-flash 是額度撐得起整夜批次的那一檔
 MODEL = "gemini-2.5-flash"
-MIN_CHARS = 6000          # 低於此判為沒寫完，直接重寫
-EXPAND_BELOW = 8200       # 介於兩者之間 → 不重寫，改請它就原稿加厚
+MIN_CHARS = 2500          # 低於此才判為根本沒寫完、值得整章重來
+MIN_KEEP = 6000           # 加厚兩輪後仍不到這個數才算失敗
+EXPAND_BELOW = 8200       # 不到這個數就送進加厚（不重寫，保留既有論證）
 TARGET = "九千到一萬一千字"
 
 # 已由人手寫成、當作全書文風基準的那一章；節錄前段餵給模型當範例
@@ -248,11 +249,15 @@ def write_chapter(book, vol, ch, sample, force: bool) -> str:
     if html is None:
         return f"✗ 兩次都不合格（{reason}）"
 
-    # 一次成稿常落在六到八千字。與其整章重寫（換一批例子、品質未必更好），
-    # 不如請它就原稿加厚——保留既有論證，只把單薄的地方寫實。
+    # 🚨 一次成稿的長度看引擎：Gemini 多半六到八千，NVIDIA 常常只有三到五千。
+    #    早期版本把「不足六千」判退重寫，結果 NVIDIA 那一輪 25 章失敗 17 章——
+    #    重寫出來的還是短稿，而加厚這道有效的手段反而只對「已經夠長」的稿子開放。
+    #    現在改成：短稿不丟，直接送進加厚，最多兩輪。加厚實測能把 4,000 拉到 9,000 以上。
     n = body_chars(html)
-    if n < EXPAND_BELOW:
-        print(f"      ＋ 加厚（現有 {n} 字）", flush=True)
+    for rnd in (1, 2):
+        if n >= EXPAND_BELOW:
+            break
+        print(f"      ＋ 加厚第{rnd}輪（現有 {n} 字）", flush=True)
         try:
             text, _ = ask_any(_expand_prompt(html, n))
             cand = clean(text)
@@ -262,9 +267,13 @@ def write_chapter(book, vol, ch, sample, force: bool) -> str:
                 html, n = cand, m
             else:
                 print("      ！ 加厚無效，保留原稿", flush=True)
+                break
         except Exception as e:                      # noqa: BLE001
             print(f"      ！ 加厚失敗（{type(e).__name__}），保留原稿", flush=True)
+            break
 
+    if n < MIN_KEEP:
+        return f"✗ 加厚後仍只有 {n} 字"
     out.write_text(html + "\n", encoding="utf-8")
     return f"✓ {n} 字"
 
@@ -299,7 +308,7 @@ _RETRY_NOTE = """
 
 ## 重寫提醒
 上一次的輸出不合格。請務必：以 `<section class="chapter">` 開頭、`</section>` 結尾；
-**絕對不要有 <sup>、註釋、參考資料、參考書目**；長度要夠（九千字以上）。直接輸出 HTML，不要說明。"""
+**絕對不要有 <sup>、註釋、參考資料、參考書目**；長度要夠（至少六千字，目標九千以上）。直接輸出 HTML，不要說明。"""
 
 
 def main() -> None:
