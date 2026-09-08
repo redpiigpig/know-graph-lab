@@ -238,8 +238,14 @@ def section_author(slug: str) -> None:
                   f"（整張表 {len(wanted)} 筆已處理 {len(done)}）")
             if todo:
                 first = min(n for n, _ in todo)
-                warn(f"{name} 在 z-lib 獵表最早排在第 {first + 1}/{len(wanted)} 筆，"
-                     f"目前才處理到 {len(done)} 筆——不插隊輪不到")
+                # 只有「排在射程外」才算警訊。已經插到隊首的（見 zlib_wanted.FOCUS_AUTHORS）
+                # 每輪都喊一次就成了狼來了，反而蓋掉真的警訊。
+                reach = len(done) + 200
+                if first + 1 > reach:
+                    warn(f"{name} 在 z-lib 獵表最早排在第 {first + 1}/{len(wanted)} 筆，"
+                         f"目前才處理到 {len(done)} 筆——不插隊輪不到")
+                else:
+                    print(f"      ↳ 最早排在第 {first + 1} 筆，在射程內")
 
 
 # ── 二、每日下載（華藝 ‧ z-lib）───────────────────────────────────────
@@ -283,12 +289,18 @@ def section_downloads(tasks: dict) -> None:
         print(f"    排程 {t['state']}／{fmt_result(t.get('result'))}／上次 {t.get('last')}／下次 {t.get('next')}")
         if t.get("result") not in (0, 267009):
             warn(f"KGL_ZLib_Daily 上次收在 {fmt_result(t.get('result'))}")
-    # 抓瀏覽器層的失敗（z-lib 特有：整輪只噴 TimeoutError，log 照樣有內容）
+    # 抓瀏覽器層的失敗。
+    # 🚨 2026-09-08 實測釐清：站沒掛、DiamWall 過得去、登入與搜尋都正常。
+    # zlib_fetch.mjs 是 headless:false + channel:'chrome'，開的是**看得見的 Chrome 視窗**；
+    # 那個視窗一被關掉（登出、關視窗、工作階段結束）整輪就斷在半路，噴的就是這兩句。
+    # 所以看到它別再去查網路或 cookie——查的是「那一輪跑的時候視窗還在不在」。
     zl = LOGS / "zlib_daily.log"
     if zl.exists():
         tail = zl.read_text(encoding="utf-8", errors="replace")[-6000:]
-        if "TimeoutError" in tail or "browser has been closed" in tail:
-            warn("z-lib 日誌尾巴是 Playwright 逾時／瀏覽器被關——過牆那段掛了，不是沒書可抓")
+        if "browser has been closed" in tail:
+            warn("z-lib 上一輪斷在『瀏覽器被關』——headless:false 的實體 Chrome 視窗中途消失，非網路問題")
+        elif "TimeoutError" in tail:
+            warn("z-lib 上一輪有 Playwright 逾時（單筆逾時可容忍，整輪都是才要查站況）")
 
 
 # ── 三、圖書館 OCR ─────────────────────────────────────────────────────
