@@ -3030,8 +3030,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1934.5,
           category: '無教會主義論',
           languages: ['ja'],
-          status: 'planned',
-          note: '建設社 1934，61 頁。NDL pid 1210131（公開）。〓 佔 0.94%，僅次於《無教會主義》。',
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000003',
+          note: 'NDL pid 1210131。官方 OCR＋版面段落還原，6 章 128 段，日文原文＋繁中對照。🚨 原文尚有 10 處 〓。',
         },
         // ── 聖書註解 ──
         {
@@ -3102,8 +3103,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1931,
           category: '信仰隨筆與講話',
           languages: ['ja'],
-          status: 'planned',
-          note: '向山堂書房 1931，72 頁。NDL pid 1033439（公開）。初代教會人物論；篇幅短，適合接在《無教會主義》之後做第二本。',
+          status: 'done',
+          ebookId: 'e0000000-0000-4000-8000-000000000002',
+          note: 'NDL pid 1033439。官方 OCR（layouttext）＋版面段落還原，10 章 174 段，日文原文＋繁中對照。🚨 原文尚有 7 處 〓（NDL 字集外的舊字體，語境判不出來就留著記號，不猜）。',
         },
         // ── 詩人研究（他的專門領域）──
         {
@@ -44115,8 +44117,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1927,
           category: '聖書研究與瞑想',
           languages: ['ja'],
-          status: 'planned',
-          note: 'NDL pid 1187647，インターネット公開；NDL 上有 4 個版次，年份取初版',
+          status: 'done',
+          ebookId: 'f0000000-0000-4000-8000-000000000001',
+          note: 'NDL pid 1187647（1927 初版）。官方 OCR＋版面段落還原，48 章 170 段，日文原文＋繁中對照。🚨 原文尚有 29 處 〓 —— 這本的字形叢集最雜（鹽／鄕／樸／熱／顛），是「〓 一律當敎」被推翻的那一本。',
         },
         {
           title: '殘されたる刺',

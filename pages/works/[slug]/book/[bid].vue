@@ -808,6 +808,16 @@ onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 .book-prose :deep(blockquote) { @apply border-l-4 border-violet-200 pl-4 italic text-gray-600 my-5; }
 .book-prose :deep(ul) { @apply list-disc pl-6 mb-4 space-y-1 text-[15px] leading-relaxed text-gray-800; }
 .book-prose :deep(strong) { @apply font-semibold text-gray-900; }
+/* 表格：一律讓表格自己橫捲，頁面本身不許橫捲 */
+.book-prose :deep(.table-wrap), .book-prose :deep(table) { @apply block max-w-full overflow-x-auto my-6; }
+.book-prose :deep(.table-wrap table) { @apply w-full border-collapse text-[13px] leading-relaxed; }
+.book-prose :deep(th), .book-prose :deep(td) { @apply border border-gray-200 px-2.5 py-1.5 align-top text-left; }
+.book-prose :deep(th) { @apply bg-violet-50/60 font-semibold text-gray-800 whitespace-nowrap; }
+.book-prose :deep(tbody tr:nth-child(even)) { @apply bg-gray-50/60; }
+/* 圖與圖說 */
+.book-prose :deep(figure) { @apply my-7 mx-auto; }
+.book-prose :deep(figure img) { @apply block mx-auto max-w-full rounded-xl; }
+.book-prose :deep(figcaption) { @apply mt-2 text-center text-xs leading-relaxed text-gray-500; }
 /* 序／跋 */
 .book-prose :deep(.vol-preface), .book-prose :deep(.vol-coda) { @apply mb-12 px-5 py-5 rounded-2xl bg-violet-50/40 border border-violet-100; }
 .book-prose :deep(.vol-preface h2), .book-prose :deep(.vol-coda h2) { @apply text-xl text-violet-800 mt-0 mb-4; }

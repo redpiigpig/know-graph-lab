@@ -15,8 +15,8 @@
 番外篇〈主教制的歷史演變與教會的大公性〉（第8期）依作者決定不收入本書。
 
 轉換做四件事：
-  1. <h3> 節標題 → <h2>，每節包成 <section class="chapter">
-  2. 註號重新掛錨（#footnote-N → #fn-g0-N），註文按「這一節引到誰」分配到節末
+  1. <h3> 節標題 → <h2> 章標題，每章包成 <section class="chapter">
+  2. 註號重新掛錨（#footnote-N → #fn-g0-N），註文按「這一章引到誰」分配到章末
   3. 未產圖的 [[圖片N]] 佔位符：拿掉 <img>，圖說留著並標明「圖待製」
   4. 卷首補 book-head（卷次、題名、提要、出處）
 
@@ -180,7 +180,7 @@ def render(vol: dict, art: dict) -> tuple[str, dict]:
             )
         block = f'<div class="footnotes">{"".join(fns)}</div>' if fns else ""
         chunks.append(
-            f'<section class="chapter"><h2>第{i}節　{html.escape(title)}{head_sup}</h2>\n'
+            f'<section class="chapter"><h2>第{i}章　{html.escape(title)}{head_sup}</h2>\n'
             f"{body.strip()}\n{block}</section>\n"
         )
 
@@ -225,7 +225,7 @@ def main() -> int:
             flag, bad = "WARN", bad + 1
         print(
             f'{flag} {vol["id"]} {vol["vol"]}　{art["title"]}　'
-            f'{st["sections"]} 節 / 註 {st["used"]}用 {st["notes"]}條'
+            f'{st["sections"]} 章 / 註 {st["used"]}用 {st["notes"]}條'
             + (f' / 孤兒註 {st["orphan"]}' if st["orphan"] else "")
             + (f' / 缺註文 {st["missing"]}' if st["missing"] else "")
             + (f' / 圖待製 {st["todo_img"]}' if st["todo_img"] else "")
@@ -255,6 +255,7 @@ def main() -> int:
                     "第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。"
                     "各卷目前皆為原稿轉錄，成書改寫與統一體例尚未進行。",
                     "independent": True,
+                    "unit": "卷",
                     "books": manifest,
                 },
                 ensure_ascii=False,

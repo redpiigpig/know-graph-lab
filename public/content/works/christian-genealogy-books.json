@@ -1,0 +1,43 @@
+{
+ "series": "基督宗教譜系學",
+ "note": "五卷。把《無境界者》連載的〈基督宗教譜系學〉合成一書：卷〇追到尼西亞以前的見證網絡與城市傳統，卷一講正統如何被劃界，卷二講七個大公傳統如何成形，卷三解剖新教的八大宗派系統，卷四處理近現代「宗派之外」的陣營重組。第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。各卷目前皆為原稿轉錄，成書改寫與統一體例尚未進行。",
+ "independent": true,
+ "unit": "卷",
+ "books": [
+  {
+   "id": "G0",
+   "title": "卷〇　從使徒到大公",
+   "subtitle": "尼西亞以前的見證網絡、使徒軌跡與城市傳統",
+   "file": "/content/works/christian-genealogy/G0.html",
+   "nChapters": 11
+  },
+  {
+   "id": "G1",
+   "title": "卷一　尼西亞基督教的形成",
+   "subtitle": "正統的劃界",
+   "file": "/content/works/christian-genealogy/G1.html",
+   "nChapters": 7
+  },
+  {
+   "id": "G2",
+   "title": "卷二　基督宗教的七個大公傳統",
+   "subtitle": "教系的成形",
+   "file": "/content/works/christian-genealogy/G2.html",
+   "nChapters": 6
+  },
+  {
+   "id": "G3",
+   "title": "卷三　基督新教的八大宗派系統",
+   "subtitle": "宗派的裂變",
+   "file": "/content/works/christian-genealogy/G3.html",
+   "nChapters": 14
+  },
+  {
+   "id": "G4",
+   "title": "卷四　從宗派到陣營：近代基督宗教的分類重組",
+   "subtitle": "近現代的重組",
+   "file": "/content/works/christian-genealogy/G4.html",
+   "nChapters": 9
+  }
+ ]
+}

@@ -74,7 +74,8 @@
         <div class="mb-4">
           <h2 class="text-base font-semibold text-gray-900">書目</h2>
           <p class="text-xs text-gray-500 mt-0.5">
-            {{ seriesIndependent ? `共 ${seriesBookCount} 本 · 點選一本閱讀（各書內含章節目錄）`
+            {{ seriesUnit ? `全書共 ${seriesBookCount} ${seriesUnit} · 點選一${seriesUnit}閱讀（各${seriesUnit}內含章節目錄）`
+             : seriesIndependent ? `共 ${seriesBookCount} 本 · 點選一本閱讀（各書內含章節目錄）`
                                  : `本叢書共 ${seriesBookCount} 冊 · 點選一冊閱讀（各冊內含章節目錄）` }}
           </p>
         </div>
@@ -789,16 +790,19 @@ const seriesGroups = ref<SeriesGroup[]>([])
 // independent=true：底下各本是彼此獨立的書，不是同一套書的分冊
 // → 不標「第 N 部」、不用「叢書」字樣
 const seriesIndependent = ref(false)
+// unit：一套書的分冊單位（如「卷」）。給了就用它造書目說明，蓋掉 independent 的預設措辭。
+const seriesUnit = ref('')
 const seriesBookCount = computed(() => seriesGroups.value.reduce((s, g) => s + g.books.length, 0))
 const CN_NUM = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
 async function loadSeriesBooks() {
   try {
-    const data = await $fetch<{ groups?: SeriesGroup[]; books?: SeriesBook[]; independent?: boolean }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    const data = await $fetch<{ groups?: SeriesGroup[]; books?: SeriesBook[]; independent?: boolean; unit?: string }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
     seriesIndependent.value = data?.independent === true
+    seriesUnit.value = typeof data?.unit === 'string' ? data.unit : ''
     if (Array.isArray(data?.groups)) seriesGroups.value = data.groups
     else if (Array.isArray(data?.books)) seriesGroups.value = [{ branch: '', books: data.books }]
     else seriesGroups.value = []
-  } catch { seriesGroups.value = []; seriesIndependent.value = false }
+  } catch { seriesGroups.value = []; seriesIndependent.value = false; seriesUnit.value = '' }
 }
 watch(() => project.value?.slug, loadSeriesBooks)
 
