@@ -35,6 +35,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VOCAB = os.path.join(ROOT, "data", "originalReaders", "vocabulary", "japanese-2000.json")
 OUT_JSON = os.path.join(ROOT, "output", "japanese-study-crosswalk.json")
 
+# Drive 上的個人日語學習夾（底下原本放《大家的日本語1》的 CD 音檔）。
+# 成品照 repo-hygiene 規矩落 Drive、不進 git。
+DRIVE_DEST = r"G:\我的雲端硬碟\資料\語言\日語"
+DRIVE_NAME = "大家的日本語進度對照表.html"
+
 SIGURE_N5_INDEX = "https://www.sigure.tw/learn-japanese/grammar/n5/"
 SIGURE_N4_INDEX = "https://www.sigure.tw/learn-japanese/grammar/n4/"
 KOLA_PLAYLIST = "https://www.youtube.com/playlist?list=PLynCeSdpMqxCW-AfMtmIlASAMUVq8wX6k"
@@ -303,6 +308,25 @@ def render_html(rows: list[dict], extension_words: int, extension_slots: list[st
 """
 
 
+def wrap_standalone(doc: str) -> str:
+    """包成可直接雙擊開啟的完整 HTML。
+
+    artifact 版沒有 <!doctype>／<head>／<body>——那是發布時外面才包上去的。
+    落到 Drive 當獨立檔就得自己補，尤其 charset：少了它中日文全變亂碼。
+    """
+    head, sep, body = doc.partition("</style>")
+    if not sep:
+        raise SystemExit("render_html 的結構變了（找不到 </style>），standalone 包裝要跟著改")
+    return (
+        '<!doctype html>\n<html lang="zh-Hant">\n<head>\n'
+        '<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        f"{head}</style>\n"
+        "<style>body{margin:0}img{max-width:100%}</style>\n"
+        f"</head>\n<body>\n{body.strip()}\n</body>\n</html>\n"
+    )
+
+
 def main() -> None:
     mapping, counts, data = load_reader_mapping()
     rows = build_rows(mapping, counts)
@@ -328,15 +352,25 @@ def main() -> None:
             indent=2,
         )
 
+    doc = render_html(rows, ext_words, ext_slots)
+
     html_path = os.path.join(os.environ.get("CROSSWALK_HTML_DIR", os.path.dirname(OUT_JSON)),
                              "japanese-study-crosswalk.html")
     with open(html_path, "w", encoding="utf-8") as f:
-        f.write(render_html(rows, ext_words, ext_slots))
+        f.write(doc)
 
     print(f"課本 {len(rows)} 課，對到讀本詞 {sum(r['wordCount'] for r in rows)} 個")
     print(f"課本外語料補充 {ext_words} 詞（{'、'.join(ext_slots)}）")
     print(f"JSON -> {OUT_JSON}")
-    print(f"HTML -> {html_path}")
+    print(f"HTML（artifact 用，無 head）-> {html_path}")
+
+    if os.path.isdir(DRIVE_DEST):
+        drive_path = os.path.join(DRIVE_DEST, DRIVE_NAME)
+        with open(drive_path, "w", encoding="utf-8") as f:
+            f.write(wrap_standalone(doc))
+        print(f"HTML（獨立檔，可雙擊）-> {drive_path}")
+    else:
+        print(f"！Drive 沒掛上（{DRIVE_DEST} 不存在），這輪沒出獨立檔")
 
 
 if __name__ == "__main__":
