@@ -146,7 +146,9 @@ function camFor(node, pad) {
   // 底下那條字幕帶不算進可用高度，卡片才不會被壓到
   let s = Math.min(1760 / w, 820 / h);
   s = Math.max(.11, Math.min(1.5, s));
-  return { cx: node.x + node.w / 2, cy: node.y + nh / 2, s: s };
+  // cx 也要用量到的寬度：規格 w 只是版面預留，卡片實際窄很多，
+  // 拿規格值算中心會把卡片整個推到畫面左邊、右半邊對著空白板子
+  return { cx: node.x + (node._w || node.w) / 2, cy: node.y + nh / 2, s: s };
 }
 
 function init(data, opts) {
@@ -231,7 +233,8 @@ function init(data, opts) {
     if (!a || !b) return;
     const ta = firstSeen[e.a], tb = firstSeen[e.b];
     if (ta === undefined || tb === undefined) return;
-    const ax = a.x + a.w / 2, ay = a.y + (a._h || a.h) / 2, bx = b.x + b.w / 2, by = b.y + (b._h || b.h) / 2;
+    const ax = a.x + (a._w || a.w) / 2, ay = a.y + (a._h || a.h) / 2,
+          bx = b.x + (b._w || b.w) / 2, by = b.y + (b._h || b.h) / 2;
     const mx = (ax + bx) / 2 + (by - ay) * .07, my = (ay + by) / 2 + (ax - bx) * .07;
     const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     p.setAttribute('d', `M ${ax} ${ay} Q ${mx} ${my} ${bx} ${by}`);

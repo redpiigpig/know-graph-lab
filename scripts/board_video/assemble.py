@@ -70,12 +70,33 @@ def board_segment(theme, t0, t1, out: Path):
          "--to", f"{t1}", "--nosub", "--cover", "0", "--out", str(Path("_segments") / out.name)])
 
 
+def src_dur(path: Path) -> float:
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                        "-of", "csv=p=0", str(path)], capture_output=True, text=True,
+                       encoding="utf-8", errors="replace")
+    try:
+        return float((r.stdout or "").strip())
+    except ValueError:
+        return 0.0
+
+
 def clip_segment(shot, dur, out: Path, speed=1.0):
     src = TRAILERS / f"{shot['video']}.mp4"
+    need = dur * speed
+    total = src_dur(src)
     start = max(0.0, shot["t"] - 0.35)
+    # 預告片剩下的長度不夠 need 秒的話，-ss 之後會被截斷：那一段就渲短了，
+    # 畫面完全正常、只有總長少幾秒，後面所有音效跟著往前偏。往前挪讓它塞得下；
+    # 整支預告都不夠長才退而求其次循環播放。
+    loop = []
+    if total and start + need > total:
+        start = max(0.0, total - need)
+        if need > total:
+            loop = ["-stream_loop", "-1"]
+            start = 0.0
     vf = ("scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,"
           f"setpts={1/speed:.4f}*PTS,fps=30")
-    cmd = FF + ["-ss", f"{start}", "-t", f"{dur * speed:.2f}", "-i", str(src)]
+    cmd = FF + loop + ["-ss", f"{start}", "-t", f"{need:.2f}", "-i", str(src)]
     if MASCOT.exists():
         cmd += ["-i", str(MASCOT), "-filter_complex",
                 f"[0:v]{vf}[v];[1:v]scale=240:-1[m];[v][m]overlay=46:H-150-h[o]",
@@ -94,6 +115,8 @@ def main():
     ap.add_argument("--theme", default="paper")
     ap.add_argument("--out", default="混剪.mp4")
     ap.add_argument("--nosub", action="store_true")
+    ap.add_argument("--resume", action="store_true",
+                    help="長度已經對上的段就不重渲")
     args = ap.parse_args()
 
     data = json.loads((PROJ / "cues.json").read_text(encoding="utf-8"))
@@ -127,6 +150,9 @@ def main():
     for k, (kind, group) in enumerate(runs):
         out = SEG / f"seg_{k:03d}.mp4"
         a, b = group[0]["t"], group[-1]["t"] + group[-1]["dur"]
+        if args.resume and out.exists() and abs(src_dur(out) - (b - a)) <= 0.25:
+            parts.append(out)
+            continue
         if kind == "board":
             print(f"  黑板段 {a:.1f}–{b:.1f}s（{len(group)} 條）")
             board_segment(args.theme, a, b, out)
