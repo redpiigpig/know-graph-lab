@@ -186,5 +186,19 @@ Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py'
 # which sbe_translate.py does not accept (choices: cloud/gemini-first/haiku) -
 # every keeper tick relaunched it and it exited on the argparse error. 'cloud'
 # is the right free-first policy: Haiku on Max with a fast 20s fail, then Sonnet.
-Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','cloud','--no-upload')
+#
+# 🚨 2026-09-08 STOPPED BY USER. '--backend cloud' means Haiku-first, and Haiku is
+# what produced the meta-reply pollution this lane's own books are full of: when it
+# judges the source "not English / garbled" it does not return empty, it returns a
+# paragraph talking to you ("我需要指出，提供的英文原文…似乎不完整"), and the pipeline
+# stores that as the translation. 2,554 such paragraphs were cleared today; four
+# hours later this lane had refilled 35 of the blanks with fresh ones, and the lane
+# log shows "uploaded (266 chunks)" twice despite --no-upload, so it was pushing
+# them live. Cleaning while this runs is a treadmill.
+#
+# Before re-enabling: switch the backend off Haiku (see the engine policy in
+# feedback_engine_nvidia_no_haiku / feedback_dialogue_rewrite_gemini_not_haiku),
+# and confirm --no-upload is actually honoured. Audit with
+#   python scripts/audit_llm_meta_replies.py --root mueller_data
+# Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','cloud','--no-upload')
 Note "keeper tick done"
