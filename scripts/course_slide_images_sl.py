@@ -95,6 +95,54 @@ IMAGES_SL = {
     'woodblock-printing': 'Chinese woodblock printing blocks',
     'thread-bound-book': 'Chinese thread bound books stack',
     'stone-rubbing': 'Chinese stele rubbing ink',
+
+    # ── 2026-09-09 補圖：專配原本沒有圖的條列頁（配對表見 course_slide_illustrate.py）──
+    # 第 2 章 漢字
+    'seal-script': 'Seal script calligraphy Chinese',
+    'xizi-pagoda': 'Xizi Pavilion Taiwan',
+    'shijing-manuscript': 'Book of Songs Shijing manuscript',
+    'quyuan-portrait': 'Qu Yuan painting',
+    # 第 3 章 經典的成立
+    'analects-bamboo': 'Analects bamboo slips',
+    'laozi-riding-ox': 'Laozi riding an ox painting',
+    'confucian-wedding': 'Confucian wedding ceremony',
+    # 第 6 章 六朝
+    'seven-sages': 'Seven Sages of the Bamboo Grove',
+    'chinese-ghost-painting': 'Chinese ghost painting scroll',
+    'water-moon-guanyin': 'Water-moon Guanyin painting',
+    'wenxin-diaolong': 'Wenxin Diaolong',
+    'monk-portrait': 'Chinese Chan monk portrait painting',
+    'chinese-landscape': 'Song dynasty landscape painting',
+    # 第 7 章 唐代
+    'platform-sutra': 'Platform Sutra Dunhuang manuscript',
+    'bodhidharma': 'Bodhidharma painting',
+    'wangwei-painting': 'Wang Wei painting attributed',
+    'daozang-volume': 'Daozang Daoist canon',
+    # 第 8 章 敦煌
+    'bianwen-manuscript': 'Dunhuang manuscript bianwen',
+    'mulian-rescue': 'Mulian rescues his mother painting',
+    # 第 9 章 戲曲
+    'temple-festival-opera': 'Taiwanese opera temple stage performance',
+    # 第 10 章 神魔小說
+    'taishang-ganying': 'Taishang Ganying Pian',
+    'neijing-tu': 'Neijing Tu Daoist diagram',
+    'chinese-storyteller': 'Chinese storyteller pingshu',
+    # 第 11 章 日本
+    'wakokubon': 'Japanese woodblock printed book Edo period',
+    'manyoshu': 'Manyoshu manuscript',
+    # 第 12 章 韓半島
+    'imperial-exam-cells': 'Imperial examination cells Nanjing',
+    'joseon-annals': 'Annals of the Joseon Dynasty',
+    'idu-script': 'Idu script Korean',
+    # 第 13 章 越南
+    'vietnam-zen-temple': 'Truc Lam Zen monastery Vietnam',
+    # 第 14 章 臺灣漢文學
+    'spirit-writing': 'Fuji spirit writing Chinese',
+    'taiwan-stone-tablet': 'Taiwan historic stele inscription',
+    'koa-a-chheh': 'Taiwanese koa-a-chheh songbook',
+    # 第 15、16 章 近代
+    'pehoeji-newspaper': 'Taiwan Church News Peh-oe-ji newspaper',
+    'amis-bible': 'Amis language Bible Taiwan',
 }
 
 # 冷門題材：英文查詢詞對不上，直接指名 Commons 檔案。

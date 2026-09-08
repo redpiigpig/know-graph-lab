@@ -226,13 +226,68 @@ def blank(prs):
     return prs.slides.add_slide(prs.slide_layouts[6])
 
 
-def slide_title(slide, title, sub=None):
-    band(slide, PALE, Cm(0), Cm(0), W, H)
-    tf = textbox(slide, Cm(1.5), Cm(0.85), W - Cm(3.0), Cm(2.2))
-    put(tf, title, 40, bold=True, color=NAVY, first=True, space_after=2)
+# ── 標題區 ──────────────────────────────────────────────────────────────────
+# 🚨 標題下那條線原本畫死在 3.80 cm，可是標題框只要長到兩行、或掛了副標，
+#    字就長到線下面去——線正好橫過副標中間。2026-09-09 稽核三十七份，
+#    **每一張有副標的頁都中**（線 y=108pt、副標 y=87–112pt）。
+#    所以線與內文頂改成算出來的：先量標題實際佔幾行，再往下擺。
+TITLE_TOP = 0.85          # 標題框頂（cm）
+TITLE_SZ, SUB_SZ = 40, 21
+TITLE_MIN = 32            # 標題縮到這裡為止；還是兩行就讓它兩行，線再往下讓
+# PowerPoint 的中文行高＝字級 × 段落行距 × 字型係數（實測 1.2）。
+# 拿 40pt 單行標題回推：24.1 + 40×1.25×1.2 = 84 pt，與 PDF 量到的一致。
+LINE_MUL = 1.25 * 1.2
+RULE_GAP = 6              # 標題底到線（pt）
+BODY_GAP = 0.65           # 線到內文頂（cm）
+BODY_TOP = 4.45           # 舊版寫死的內文頂；各繪圖函式以它為基準加 dy
+BODY_BOTTOM = 17.15       # 內文框底（頁尾那一行從 17.90 起）
+TWO_BOTTOM = 17.70        # 雙欄頁的欄框底：欄內字級小，可以再貼近頁尾一點
+
+
+def _lines(text, size, width_cm=33.87 - 3.0):
+    """這行字在 width_cm 寬、size 級時要佔幾行（中日文一字約一個字級寬）。"""
+    per = max(4, int(width_cm * CM_PT / size))
+    return max(1, -(-len(str(text)) // per))
+
+
+def title_block(title, sub=None):
+    """回傳 (標題字級, 線的 y, 內文頂的 y)，單位 cm。純函式，好驗算。
+
+    標題盡量壓成一行——多一行就把線與內文一起往下推 2 cm，那是整整兩條內容。
+    """
+    tsz = next((s for s in range(TITLE_SZ, TITLE_MIN - 1, -1)
+                if _lines(title, s) == 1), TITLE_MIN)
+    h = _lines(title, tsz) * tsz * LINE_MUL
     if sub:
-        put(tf, sub, 21, color=GRAY, space_after=0)
-    band(slide, GOLD, Cm(1.5), Cm(3.80), W - Cm(9.0), Cm(0.06))
+        h += 2 + _lines(sub, SUB_SZ) * SUB_SZ * LINE_MUL
+    rule = TITLE_TOP + (h + RULE_GAP) / CM_PT
+    return tsz, rule, rule + BODY_GAP
+
+
+def slide_sub(item):
+    """取出這一張的副標——可能在結尾的 kwargs，也可能是位置參數。"""
+    args = list(item[1:])
+    if args and isinstance(args[-1], dict):
+        return args.pop().get('sub')
+    i = 2 if item[0] == 'bullets' else 3        # args 內的 sub 位置
+    return args[i] if len(args) > i and isinstance(args[i], str) else None
+
+
+def body_h(item):
+    """這一張的內文框有多高（cm）。s_bullets／s_imgbullets／split_long 共用。"""
+    return BODY_BOTTOM - title_block(item[1], slide_sub(item))[2]
+
+
+def slide_title(slide, title, sub=None):
+    """畫標題與其下的細線，回傳內文該從哪裡開始（cm）。"""
+    band(slide, PALE, Cm(0), Cm(0), W, H)
+    tsz, rule, top = title_block(title, sub)
+    tf = textbox(slide, Cm(1.5), Cm(TITLE_TOP), W - Cm(3.0), Cm(rule - TITLE_TOP))
+    put(tf, title, tsz, bold=True, color=NAVY, first=True, space_after=2)
+    if sub:
+        put(tf, sub, SUB_SZ, color=GRAY, space_after=0)
+    band(slide, GOLD, Cm(1.5), Cm(rule), W - Cm(9.0), Cm(0.06))
+    return top
 
 
 def footer(slide, n, label):
@@ -297,9 +352,9 @@ def s_big(prs, text, sub=None):
 
 def s_bullets(prs, title, bullets, sub=None):
     s = blank(prs)
-    slide_title(s, title, sub)
-    w, h = BOX_W, BOX_H
-    tf = textbox(s, Cm(1.5), Cm(4.45), Cm(w), Cm(h))
+    top = slide_title(s, title, sub)
+    w, h = BOX_W, BODY_BOTTOM - top
+    tf = textbox(s, Cm(1.5), Cm(top), Cm(w), Cm(h))
     base, sp = BULLET_SZ, BULLET_SP
     k = fit(bullets, w, h * FIT_MARGIN, base, sp)
     # 內容明顯偏少（六成高度就裝得下）就垂直置中，不要下半頁整片空白
@@ -323,19 +378,20 @@ def s_bullets(prs, title, bullets, sub=None):
 
 def s_two(prs, title, left, right, sub=None):
     s = blank(prs)
-    slide_title(s, title, sub)
+    top = slide_title(s, title, sub)
     colw = (W - Cm(3.8)) / 2
     for i, (head, items) in enumerate((left, right)):
         x = Cm(1.5) + i * (colw + Cm(0.8))
-        band(s, NAVY if i == 0 else GOLD, x, Cm(4.5), colw, Cm(1.0))
-        tfh = textbox(s, x + Cm(0.35), Cm(4.68), colw - Cm(0.7), Cm(0.8))
+        band(s, NAVY if i == 0 else GOLD, x, Cm(top), colw, Cm(1.0))
+        tfh = textbox(s, x + Cm(0.35), Cm(top + 0.18), colw - Cm(0.7), Cm(0.8))
         put(tfh, head, 23, bold=True, color=CREAM, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 24.0, 1: 20.0, 2: 20.0}
         # 雙欄頁不能拆頁，只能縮字；框底離頁尾只有 0.2 cm，餘裕要吃滿
-        k = max(0.62, fit(items, cw, 11.9 * FIT_MARGIN, base,
-                          {0: 10, 1: 8, 2: 8}))
-        tf = textbox(s, x + Cm(0.35), Cm(5.8), colw - Cm(0.7), H - Cm(7.15))
+        k = max(0.62, fit(items, cw, (TWO_BOTTOM - (top + 1.3)) * FIT_MARGIN,
+                          base, {0: 10, 1: 8, 2: 8}))
+        tf = textbox(s, x + Cm(0.35), Cm(top + 1.3), colw - Cm(0.7),
+                     Cm(TWO_BOTTOM - (top + 1.3)))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
             put(tf, ('‧ ' if lvl == 0 else '　－ ') + txt,
@@ -347,8 +403,8 @@ def s_two(prs, title, left, right, sub=None):
 
 def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
     s = blank(prs)
-    slide_title(s, title, sub)
-    top = Cm(4.5)
+    top_cm = slide_title(s, title, sub)
+    top = Cm(top_cm)
     tbl = s.shapes.add_table(len(rows) + 1, len(headers),
                              Cm(1.5), top, W - Cm(3.0), Cm(1.0)).table
     # 列高給最小值，讓 PowerPoint 依內容自動撐開（不要平均攤滿整頁）
@@ -393,7 +449,7 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
                 break
             note_size -= 1
     note_top = 17.5 - note_h
-    limit = (note_top - (0.3 if note else 0.0) - 4.5) * CM_PT
+    limit = (note_top - (0.3 if note else 0.0) - top_cm) * CM_PT
 
     tsize = 19 if len(rows) <= 5 else (17 if len(rows) <= 7 else 15)
     while tsize > 10 and table_h(tsize) > limit:
@@ -440,8 +496,8 @@ def place_image(slide, key, x, y, w, h):
 CAP_H = 1.0            # 圖說框高（cm）
 # 🚨 圖說一往上挪，就會挪進圖片區。這兩個數字必須一起改：
 #    有圖說時圖框底 16.10 cm，沒有時 17.50 cm（頁尾線 17.90）。
-def img_box_h(has_cap):
-    return H - Cm(7.40) if has_cap else H - Cm(6.00)
+def img_box_h(has_cap, top=BODY_TOP):
+    return Cm((16.10 if has_cap else 17.50) - top)
 
 
 def caption(slide, text, x, y, w):
@@ -451,8 +507,8 @@ def caption(slide, text, x, y, w):
 
 def s_photo(prs, title, key, cap=None, sub=None):
     s = blank(prs)
-    slide_title(s, title, sub)
-    box_y, box_h = Cm(4.45), img_box_h(bool(cap))
+    top = slide_title(s, title, sub)
+    box_y, box_h = Cm(top), img_box_h(bool(cap), top)
     if not place_image(s, key, Cm(1.5), box_y, W - Cm(3.0), box_h):
         put(textbox(s, Cm(1.5), box_y, W - Cm(3.0), Cm(2)), f'（缺圖：{key}）',
             16, color=GRAY, first=True)
@@ -464,11 +520,12 @@ def s_photo(prs, title, key, cap=None, sub=None):
 def s_gallery(prs, title, items, sub=None):
     """items: [(圖 key, 說明), ...]，二至四張並排。"""
     s = blank(prs)
-    slide_title(s, title, sub)
+    top_cm = slide_title(s, title, sub)
     n = len(items)
     gap = Cm(0.6)
     colw = int((W - Cm(3.0) - gap * (n - 1)) / n)
-    top, boxh = Cm(4.5), H - Cm(9.4)
+    # 圖框底要留給下面 2.75 cm 的標籤：標籤頂 = 圖框底 + 0.25
+    top, boxh = Cm(top_cm), Cm(BODY_BOTTOM - 2.75 - 0.25 - top_cm)
     for i, (key, label) in enumerate(items):
         x = Cm(1.5) + i * (colw + gap)
         if not place_image(s, key, x, top, colw, boxh):
@@ -486,13 +543,13 @@ def s_gallery(prs, title, items, sub=None):
 def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     """左文右圖。"""
     s = blank(prs)
-    slide_title(s, title, sub)
+    top = slide_title(s, title, sub)
     tw = 17.0
     textw = Cm(tw)
     imgx = Cm(1.5) + textw + Cm(0.7)
     imgw = W - Cm(1.5) - imgx
-    h = BOX_H
-    tf = textbox(s, Cm(1.5), Cm(4.45), textw, Cm(h))
+    h = BODY_BOTTOM - top
+    tf = textbox(s, Cm(1.5), Cm(top), textw, Cm(h))
     base, sp = IMG_SZ, IMG_SP
     k = fit(bullets, tw, h * FIT_MARGIN, base, sp)
     firstdone = False
@@ -508,8 +565,8 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
             bold=(lvl == 0), first=not firstdone, space_after=sp[lvl] * k,
             indent=min(lvl, 2) if lvl != 3 else 0, line=1.3)
         firstdone = True
-    boxh = img_box_h(bool(cap))
-    place_image(s, key, imgx, Cm(4.45), imgw, boxh)
+    boxh = img_box_h(bool(cap), top)
+    place_image(s, key, imgx, Cm(top), imgw, boxh)
     if cap:
         caption(s, cap, imgx, H - Cm(2.75), imgw)
     return s
@@ -526,9 +583,9 @@ def s_credits(prs, label):
     per, out = 8, []
     for start in range(0, len(USED), per):
         s = blank(prs)
-        slide_title(s, '圖片出處',
-                    '本份簡報用圖均取自維基共享資源，授權為公有領域或 CC')
-        tf = textbox(s, Cm(1.5), Cm(4.45), W - Cm(3.0), H - Cm(6.15))
+        top = slide_title(s, '圖片出處',
+                          '本份簡報用圖均取自維基共享資源，授權為公有領域或 CC')
+        tf = textbox(s, Cm(1.5), Cm(top), W - Cm(3.0), Cm(BODY_BOTTOM - top))
         for i, k in enumerate(USED[start:start + per]):
             m = MANIFEST.get(k, {})
             name = m.get('title', k)[5:]            # 去掉 'File:'
@@ -558,31 +615,31 @@ def s_openers(prs, course, no):
     out = []
 
     s1 = blank(prs)
-    slide_title(s1, '上課前先想一想',
-                '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
-    tf = textbox(s1, Cm(1.5), Cm(4.6), W - Cm(3.0), H - Cm(6.4))
+    top = slide_title(s1, '上課前先想一想',
+                      '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
+    tf = textbox(s1, Cm(1.5), Cm(top), W - Cm(3.0), Cm(BODY_BOTTOM - top))
     ka = fit([f'{i + 1}　{q}' for i, q in enumerate(d['ask'])],
-             30.9, 12.6 * FIT_MARGIN, {0: 27.0}, {0: 16})
+             30.9, (BODY_BOTTOM - top) * FIT_MARGIN, {0: 27.0}, {0: 16})
     for i, q in enumerate(d['ask']):
         put(tf, f'{i + 1}　{q}', 27 * ka, color=INK, first=(i == 0),
             space_after=16 * ka, line=1.3)
     out.append(s1)
 
     s2 = blank(prs)
-    slide_title(s2, '請用手機作答',
-                '掃描畫面上的 QR code 或輸入 PIN 碼加入，作答後抽籤請人詳細說明')
-    tf = textbox(s2, Cm(1.5), Cm(4.6), W - Cm(19.0), H - Cm(6.4))
+    top = slide_title(s2, '請用手機作答',
+                      '掃描畫面上的 QR code 或輸入 PIN 碼加入，作答後抽籤請人詳細說明')
+    tf = textbox(s2, Cm(1.5), Cm(top), W - Cm(19.0), Cm(BODY_BOTTOM - top))
     _q = [f'{i + 1}　{q}' for i, q in enumerate(d['answer'])]
     _q.append('一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。')
-    kb = fit(_q, 14.8, 12.6 * FIT_MARGIN, {0: 26.0}, {0: 14})
+    kb = fit(_q, 14.8, (BODY_BOTTOM - top) * FIT_MARGIN, {0: 26.0}, {0: 14})
     for i, q in enumerate(d['answer']):
         put(tf, f'{i + 1}　{q}', 26 * kb, color=INK, first=(i == 0),
             space_after=14 * kb, line=1.3)
     put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 19 * kb,
         color=GRAY, space_after=0, line=1.3)
-    band(s2, MINT, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
-    tf2 = textbox(s2, W - Cm(16.1), Cm(5.4), Cm(14.1), H - Cm(8.0),
-                  anchor=MSO_ANCHOR.MIDDLE)
+    band(s2, MINT, W - Cm(16.6), Cm(top), Cm(15.1), Cm(BODY_BOTTOM - top))
+    tf2 = textbox(s2, W - Cm(16.1), Cm(top + 0.8), Cm(14.1),
+                  Cm(BODY_BOTTOM - top - 1.6), anchor=MSO_ANCHOR.MIDDLE)
     put(tf2, 'QR code', 38, bold=True, color=NAVY, first=True, space_after=10,
         align=PP_ALIGN.CENTER)
     put(tf2, '（由 ClassPoint／AhaSlides 於播放時疊上）', 19, color=GRAY,
@@ -603,8 +660,8 @@ def s_refs(prs, nums):
     per, out = 7, []
     for start in range(0, len(items), per):
         s = blank(prs)
-        slide_title(s, '參考書目', '本次上課單元的參考資料；完整註釋見課堂講義')
-        tf = textbox(s, Cm(1.5), Cm(4.45), W - Cm(3.0), H - Cm(6.15))
+        top = slide_title(s, '參考書目', '本次上課單元的參考資料；完整註釋見課堂講義')
+        tf = textbox(s, Cm(1.5), Cm(top), W - Cm(3.0), Cm(BODY_BOTTOM - top))
         for i, t in enumerate(items[start:start + per]):
             put(tf, t, 16, color=INK, first=(i == 0), space_after=10, line=1.25)
         out.append(s)
@@ -682,10 +739,13 @@ def split_long(slides):
     """
     base, sp, ibase, isp = BULLET_SZ, BULLET_SP, IMG_SZ, IMG_SP
 
-    def need(kind, items):
-        if kind == 'bullets':
-            return fit(items, BOX_W, BOX_H * FIT_MARGIN, base, sp, raw=True)
-        return fit(items, IMG_BOX_W, BOX_H * FIT_MARGIN, ibase, isp, raw=True)
+    def need(item):
+        # 🚨 內文框有多高，要看標題佔掉幾行——掛副標的頁少了約 0.6 cm。
+        #    這裡不用同一個算法的話，「該拆的沒拆」會靜靜擠成小字。
+        items, h = list(item[2]), body_h(item)
+        if item[0] == 'bullets':
+            return fit(items, BOX_W, h * FIT_MARGIN, base, sp, raw=True)
+        return fit(items, IMG_BOX_W, h * FIT_MARGIN, ibase, isp, raw=True)
 
     out = []
     for it in slides:
@@ -697,7 +757,7 @@ def split_long(slides):
             guard += 1
             cur = queue.pop(0)
             items = list(cur[2])
-            if need(cur[0], items) >= SPLIT_AT or len(items) < 2:
+            if need(cur) >= SPLIT_AT or len(items) < 2:
                 out.append(cur)
                 continue
             # 從中間往後找第一個第一層項目當切點，避免把子項目跟標題拆開
@@ -720,6 +780,28 @@ def split_long(slides):
     return out
 
 
+def _has_image(key):
+    m = MANIFEST.get(key)
+    return bool(m) and (IMGDIR / m['file']).exists()
+
+
+def _fits_narrow(item):
+    """配了圖之後內文欄只剩 17 cm，這一頁還裝不裝得下。"""
+    return fit(list(item[2]), IMG_BOX_W, body_h(item) * FIT_MARGIN,
+               IMG_SZ, IMG_SP, raw=True) >= SPLIT_AT
+
+
+def prepare(slides, course='wr'):
+    """配圖 → 併頁 → 拆頁。張數上限的試算與實際渲染必須走同一條，
+    否則 course_slides_weekly 數出來的張數跟真的出來的不一樣。"""
+    try:
+        import course_slide_illustrate as ILL
+        slides = ILL.apply(slides, course, _has_image, _fits_narrow)[0]
+    except ImportError:
+        pass
+    return split_long(fold_bigs(slides))
+
+
 def build(deck, no=None, course='wr', refs=None, profile=False):
     """refs＝課末書目要讀的講義章號（不印在投影片上，只用來取書目）。
     profile＝True 時在封面與開場互動之後插一頁自我介紹（每學期第一次上課）。
@@ -728,24 +810,30 @@ def build(deck, no=None, course='wr', refs=None, profile=False):
     USED = []
     prs = Presentation()
     prs.slide_width, prs.slide_height = W, H
-    items = split_long(fold_bigs(deck['slides']))
+    items = prepare(deck['slides'], course)
+    numbered = []
     for i, item in enumerate(items):
         kind, args = item[0], list(item[1:])
         kw = args.pop() if args and isinstance(args[-1], dict) and kind != 'cover' else {}
         s = RENDER[kind](prs, *args, **kw)
         if kind not in ('cover', 'section', 'big'):
-            footer(s, i, deck['footer'])
+            numbered.append(s)
         # 開場兩頁緊接封面，屬前置頁，與封面一樣不編號
         if i == 0 and kind == 'cover' and no:
             s_openers(prs, course, no)
             if profile:
                 s_profile(prs)
-    for c in s_credits(prs, deck['footer']):
-        footer(c, len(prs.slides._sldIdLst) - 1, deck['footer'])
+    numbered += s_credits(prs, deck['footer'])
     # 課末書目：預設每次上課兩章（第 n 次＝第 2n-1、2n 章），週次版由 refs 指定
     if refs or no:
-        for r in s_refs(prs, tuple(refs) if refs else (no * 2 - 1, no * 2)):
-            footer(r, len(prs.slides._sldIdLst) - 1, deck['footer'])
+        numbered += s_refs(prs, tuple(refs) if refs else (no * 2 - 1, no * 2))
+    # 🚨 頁碼＝這一張**在檔案裡真正的位置**（使用者 2026-09-09 在第 1 週那份手改的）。
+    #    舊版編的是「內容頁的序號」：封面、開場互動、自我介紹、分節頁都不算，
+    #    於是投影片右下角寫 12、PowerPoint 的頁數卻是 17。有人說「第 12 頁」時
+    #    對不上，投影中要翻回去更麻煩。所以等全部投影片都生完，再照位置編。
+    pos = {sl.slide_id: n for n, sl in enumerate(prs.slides, 1)}
+    for sl in numbered:
+        footer(sl, pos[sl.slide_id], deck['footer'])
     outdir = DRIVE / FOLDER / '簡報'
     outdir.mkdir(parents=True, exist_ok=True)
     out = outdir / deck['filename']

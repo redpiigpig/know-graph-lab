@@ -256,7 +256,7 @@ def build_course(key, only=None):
         cap = CAP[key]
         for split_at, floor in LADDER:
             R.SPLIT_AT, R.FIT_FLOOR = split_at, floor
-            n = len(R.split_long(R.fold_bigs(slides)))
+            n = len(R.prepare(slides, src))
             if n <= cap:
                 break
         if n > cap:

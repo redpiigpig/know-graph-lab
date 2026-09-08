@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
-"""簡報版面稽核：抓「字壓到字」「字太小」「文字掉出版面」。
+"""簡報版面稽核：抓「字壓到字」「線壓到字」「字太小」「文字掉出版面」。
 
-把渲染好的 PDF 逐頁拆成文字行，檢查三件事：
+把渲染好的 PDF 逐頁拆成文字行，檢查四件事：
   1. 重疊——兩行的方框交疊面積超過較小者的三成（在投影片上就是壓字）
   2. 過小——字級低於門檻（預設 11pt，投影用）
   3. 溢出——文字超出版面或壓到頁尾那一行
+  4. 線壓字——標題下那條細線橫過文字
+
+🚨 第 4 項是 2026-09-09 補的。線是向量圖形，不是文字也不是圖片，
+   前三項全部漏看它；當時三十七份**每一張有副標的頁**都被線橫過副標中間，
+   稽核卻回報零問題。抓不到的東西不會自己浮出來，只能一項一項補。
 
 用法：python scripts/course_slides_audit.py [--min-size 11]
 """
@@ -56,6 +61,16 @@ def overlap(a, b):
     return min(r.get_area() / small, r.height / vh)
 
 
+def rules(page):
+    """細長橫條——標題下那條分隔線。壓到字就是版面壞了。"""
+    out = []
+    for d in page.get_drawings():
+        r = fitz.Rect(d['rect'])
+        if r.height < 6 and r.width > 100:
+            out.append(r)
+    return out
+
+
 def images(page):
     """回傳頁面上每張圖的方框。跑版的圖多半是超出版面或壓在字上。"""
     out = []
@@ -79,6 +94,11 @@ def audit(pdf, min_size):
                 # 只抓真的壓在圖上的字；圖說本來就會貼著圖，所以門檻抓高一點
                 if overlap(r2, r) > 0.5:
                     bad.append((i + 1, '圖壓字', t2[:26]))
+        for r in rules(page):
+            for r2, t2, _s2, _b in ls:
+                inter = r2 & r
+                if not inter.is_empty and inter.height > 0.3:
+                    bad.append((i + 1, '線壓字', t2[:26]))
         # 頁尾那一行：小字、靠頁底。內文壓到它就是跑版。
         foot = min((r.y0 for r, t, s, _b in ls if s < 15 and r.y0 > h * 0.87), default=h)
         for j, (r, t, s, bi) in enumerate(ls):

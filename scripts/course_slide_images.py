@@ -23,7 +23,10 @@ import urllib.request
 from pathlib import Path
 
 TEACH = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
-FOLDERS = {'wr': '115-1_世界宗教文化導論', 'sl': '宗教系國文講義',
+# 🚨 資料夾名要跟 course_slides_pptx.COURSES 一字不差。國文那一格曾漏掉
+#    「115-1_」前綴，`--course=sl` 會在教學夾底下另開一個空資料夾把圖倒進去，
+#    渲染時再回報「缺圖」——檔案明明抓下來了，卻不在渲染器找的地方。
+FOLDERS = {'wr': '115-1_世界宗教文化導論', 'sl': '115-1_宗教系國文講義',
            'ch': '115-1_基督宗教概論'}
 OUT = TEACH / FOLDERS['wr'] / '簡報' / '圖片'
 MANIFEST = OUT / '_manifest.json'
@@ -122,6 +125,78 @@ IMAGES = {
     'taipei-mosque': 'Taipei Grand Mosque',
     'longshan-temple': 'Lungshan Temple Taipei',
     'jingu-shrine-remains': 'Taoyuan Shinto Shrine Taiwan',
+
+    # ── 2026-09-09 補圖：原本三十七份簡報平均每份只有五張圖，
+    #    使用者說「圖有點太少」。這一批專門補**沒有圖的那些條列頁**，
+    #    一頁配一張，配對表在 course_slide_illustrate.py。
+    # 第 1 章 宗教是什麼
+    'sacred-tree-shrine': 'Sacred tree shrine ribbons',
+    'tillich-paul': 'Paul Tillich',
+    'passover-seder': 'Passover Seder table',
+    'tylor-edward': 'Edward Burnett Tylor',
+    'frazer-james': 'James George Frazer',
+    'ricci-xuguangqi': 'Matteo Ricci Xu Guangqi',
+    'kang-youwei': 'Kang Youwei',
+    'meiji-shrine-rite': 'Meiji Jingu shrine ceremony',
+    # 第 2 章 八個向度
+    'teresa-avila': 'Teresa of Avila painting',
+    'nicene-creed-ms': 'Nicene Creed manuscript',
+    'bar-mitzvah': 'Bar Mitzvah Torah reading',
+    'mikveh-bath': 'Mikveh ritual bath',
+    'omamori-amulets': 'Omamori Japanese amulet',
+    'shinto-priest': 'Shinto priest ritual',
+    # 第 5 章 泛靈論
+    'amis-ilisin': 'Amis Ilisin harvest festival',
+    'bunun-ritual': 'Bunun people ritual Taiwan',
+    'candomble': 'Candomble ceremony Brazil',
+    'iroquois-longhouse': 'Iroquois longhouse',
+    'santal-festival': 'Santal people festival India',
+    # 第 6 章 泛神論
+    'vivekananda': 'Swami Vivekananda',
+    'meister-eckhart': 'Meister Eckhart',
+    'ramanuja': 'Ramanuja statue',
+    'whitehead-alfred': 'Alfred North Whitehead',
+    # 第 7 章 神話多神論
+    'merneptah-stele': 'Merneptah Stele',
+    'eleusis-relief': 'Eleusinian Mysteries relief',
+    'gundestrup-cauldron': 'Gundestrup cauldron',
+    # 第 8 章 現存多神論
+    'shiva-nataraja': 'Nataraja bronze Chola',
+    'yasukuni-shrine': 'Yasukuni Shrine',
+    'korean-mudang': 'Korean shaman gut ritual',
+    'julian-emperor': 'Julian the Apostate',
+    # 第 9 章 一神論
+    'kuntillet-ajrud': 'Kuntillet Ajrud inscription',
+    'cyrus-cylinder': 'Cyrus Cylinder',
+    'synagogue-ark': 'Synagogue interior Torah ark',
+    'salat-prayer': 'Muslims praying salat mosque',
+    # 第 10 章 二元神論與融合一神論
+    'behistun': 'Behistun Inscription',
+    'nag-hammadi-codex': 'Nag Hammadi Codex',
+    'manichaean-painting': 'Manichaean painting',
+    'mandaean-baptism': 'Mandaean baptism',
+    'caodai-temple': 'Cao Dai Temple Tay Ninh',
+    'bahai-temple': 'Lotus Temple Bahai New Delhi',
+    # 第 11 章 實用神論
+    'four-books': 'Four Books Confucian classics',
+    'pali-palm-leaf': 'Palm leaf manuscript Pali Buddhist',
+    'ambedkar': 'B. R. Ambedkar',
+    # 第 12 章 自然神論與無神論
+    'voltaire': 'Voltaire portrait',
+    'huxley-thomas': 'Thomas Henry Huxley',
+    'lucretius': 'Lucretius De rerum natura',
+    'soviet-antireligious': 'Soviet anti-religious propaganda',
+    # 第 13 章 世俗化與政教關係
+    'westphalia-treaty': 'Peace of Westphalia painting',
+    'solidarity-poland': 'Solidarity Poland 1980',
+    'american-megachurch': 'Megachurch worship United States',
+    # 第 14 章 個人化與對話
+    'meditation-retreat': 'Meditation retreat group',
+    'assisi-prayer': 'Assisi World Day of Prayer for Peace',
+    # 第 15 章 臺灣宗教史
+    'fort-zeelandia': 'Fort Zeelandia Tainan',
+    'sanshan-guowang': 'Sanshan Guowang temple',
+    'yimin-temple': 'Yimin Temple Hsinchu',
 }
 
 

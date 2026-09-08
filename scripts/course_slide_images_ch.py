@@ -99,6 +99,64 @@ IMAGES_CH = {
     'catacomb-tomb': 'early Christian sarcophagus',
     'all-souls-day': 'All Souls Day cemetery candles',
     'resurrection-icon': 'Anastasis Harrowing of Hell icon',
+
+    # ── 2026-09-09 補圖：專配原本沒有圖的條列頁（配對表見 course_slide_illustrate.py）──
+    # 第 2 章 拿撒勒人耶穌
+    'gospel-illumination': 'Lindisfarne Gospels illumination',
+    'codex-vaticanus': 'Codex Vaticanus',
+    'schweitzer-albert': 'Albert Schweitzer',
+    'good-samaritan': 'Good Samaritan painting',
+    # 第 3 章 初代教會
+    'empty-tomb-icon': 'Myrrhbearers at the tomb icon',
+    'ephesus-theatre': 'Ephesus great theatre',
+    'pliny-younger': 'Pliny the Younger',
+    # 第 4 章 正典
+    'muratorian-fragment': 'Muratorian fragment',
+    'aleppo-codex': 'Aleppo Codex',
+    'codex-sinaiticus': 'Codex Sinaiticus',
+    'chinese-union-version': 'Chinese Union Version Bible',
+    # 第 5 章 兩千年的讀法
+    'origen': 'Origen of Alexandria',
+    'wellhausen': 'Julius Wellhausen',
+    'base-community': 'Base ecclesial community Latin America',
+    'abolition-medallion': 'Am I Not a Man and a Brother',
+    # 第 6 章 大公會議
+    'cappadocian-fathers': 'Cappadocian Fathers icon',
+    'armenian-church': 'Armenian Apostolic Church cathedral',
+    'newman-john-henry': 'John Henry Newman',
+    # 第 7 章 教父與東方基督教
+    'justin-martyr': 'Justin Martyr icon',
+    'st-basil-cathedral': 'Saint Basils Cathedral Moscow',
+    # 第 8 章 中世紀西方
+    'gregory-great': 'Pope Gregory I',
+    'clovis-baptism': 'Baptism of Clovis',
+    'francis-assisi': 'Francis of Assisi Giotto',
+    'canossa': 'Road to Canossa Henry IV',
+    'innocent-iii': 'Pope Innocent III fresco',
+    # 第 9 章 宗教改革
+    'henry-viii': 'Henry VIII portrait Holbein',
+    'anabaptist-martyrs': 'Anabaptist martyrs Martyrs Mirror',
+    'marburg-colloquy': 'Marburg Colloquy',
+    # 第 10 章 近代
+    'schleiermacher': 'Friedrich Schleiermacher',
+    # 第 11 章 二十世紀
+    'auschwitz-memorial': 'Auschwitz Birkenau memorial',
+    'azusa-street': 'Azusa Street Revival',
+    # 第 12 章 禮儀
+    'advent-wreath': 'Advent wreath candles',
+    'rosary-beads': 'Rosary beads',
+    # 第 13 章 體制
+    'baptist-meeting-house': 'Baptist meeting house historic',
+    'women-ordination': 'Ordination of women Anglican priest',
+    # 第 14 章 看得見的神學
+    'chartres-cathedral': 'Chartres Cathedral interior nave',
+    'beeldenstorm': 'Beeldenstorm iconoclasm 1566',
+    # 第 15 章 臺灣
+    'taiwan-church-news': 'Taiwan Church News',
+    'taiwan-indigenous-church': 'Presbyterian church Taiwan indigenous',
+    # 第 16 章 生死觀
+    'apocalypse-tapestry': 'Apocalypse Tapestry Angers',
+    'dante-inferno': 'Dante Divine Comedy illustration',
 }
 
 # 冷門題材：英文查詢詞對不上，直接指名 Commons 檔案。
