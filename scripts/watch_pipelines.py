@@ -252,7 +252,12 @@ def section_author(slug: str) -> None:
     # z-lib 獵表：排在第幾、輪不輪得到
     if ZLIB_WANTED.exists() and ZLIB_LEDGER.exists():
         wanted = [json.loads(l) for l in ZLIB_WANTED.read_text(encoding="utf-8").splitlines() if l.strip()]
-        done = {json.loads(l)["key"] for l in ZLIB_LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()}
+        # 🚨 要跟 zlib_fetch.doneKeys() 同一套語意：status='dry' 是「只查沒下載」，
+        # 那邊明確不算已處理。這裡要是照單全收，跑一輪 --dry-run 就會讓獵表進度
+        # 假性前進（2026-09-08 一輪 11 筆 dry 讓「未處理」從 22 掉到 11）。
+        done = {r["key"] for r in
+                (json.loads(l) for l in ZLIB_LEDGER.read_text(encoding="utf-8").splitlines() if l.strip())
+                if r.get("status") != "dry"}
         mine = [(n, w) for n, w in enumerate(wanted)
                 if any(t.lower() in json.dumps(w, ensure_ascii=False).lower() for t in terms)]
         todo = [(n, w) for n, w in mine if w["key"] not in done]
@@ -298,10 +303,14 @@ def section_downloads(tasks: dict) -> None:
         c = collections.Counter(r.get("status", "?") for r in recs)
         last = recs[-1]["at"][:10] if recs else "—"
         n_today = sum(1 for r in recs if r["at"][:10] == today)
-        # 帳本會有重試，同一 key 出現多次；進度要看去重後的 key 數，不是行數
-        uniq = len({r["key"] for r in recs})
+        # 帳本會有重試，同一 key 出現多次；進度要看去重後的 key 數，不是行數。
+        # 🚨 而且要排除 status='dry'——那是「只查沒下載」，zlib_fetch 下一輪還會再做，
+        # 算進去會讓一輪 --dry-run 看起來像推進了獵表。
+        uniq = len({r["key"] for r in recs if r.get("status") != "dry"})
+        n_dry = sum(1 for r in recs if r.get("status") == "dry")
         print(f"  z-lib：獵表 {wanted_n} 筆，已處理 {uniq} 筆／{len(recs)} 次嘗試"
-              f"（{uniq / wanted_n * 100:.1f}%）；今天 {n_today} 次，最後動作 {last}")
+              f"（{uniq / wanted_n * 100:.1f}%；另有 {n_dry} 次只查不算數）"
+              f"；今天 {n_today} 次，最後動作 {last}")
         print(f"    {dict(c)}")
         if n_today == 0:
             warn(f"z-lib 今天（{today}）沒有任何新處理，最後動作停在 {last}")
