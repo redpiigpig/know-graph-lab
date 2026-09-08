@@ -601,6 +601,7 @@ def nvidia_translate(source: str) -> str:
     model = NVIDIA_MODELS[0]
     last_err = "?"
     echoes = 0  # times the model parroted the prompt instead of translating
+    nv_404 = set()   # 哪幾把 key 回過 404
     deadline = time.time() + 900   # 15 min across all keys, then fall to Gemini
     while time.time() < deadline:
         picked = _nv_pick_key()
@@ -637,7 +638,18 @@ def nvidia_translate(source: str) -> str:
                 continue
             return _to_traditional(text)
         if r.status_code == 404:
-            raise RuntimeError(f"{model} 404 — model unavailable")
+            # 🚨 單把 key 的 404 不等於模型下架。實測 nemotron-3-super 有
+            # 6/7 把 key 回 200、1 把回 503，卻因為某一次 404 就把整個
+            # NVIDIA 層停用 6 小時。要每一把都 404 才算真的沒了
+            # （與 quota 判準同一套語意）。
+            nv_404.add(idx)
+            last_err = f"{model} 404 key#{idx}"
+            if len(nv_404) >= len(NVIDIA_KEYS):
+                raise RuntimeError(
+                    f"{model} 404 on all {len(NVIDIA_KEYS)} keys"
+                    " — model really is unavailable")
+            _nv_rest_key(idx)
+            continue
         if r.status_code in (429, 500, 502, 503, 504):
             last_err = f"NVIDIA {r.status_code} key#{idx}"
             print(f"  NVIDIA {r.status_code} key#{idx} — resting {NVIDIA_KEY_COOLDOWN:.0f}s, rotating", file=sys.stderr, flush=True)
@@ -662,6 +674,7 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
            [{"role": "user", "content": prompt}]
     model = NVIDIA_MODELS[0]
     last_err = "?"
+    nv_404 = set()   # 哪幾把 key 回過 404
     deadline = time.time() + deadline_s
     while time.time() < deadline:
         picked = _nv_pick_key()
@@ -686,7 +699,18 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
         if r.status_code == 200:
             return _THINK_RE.sub("", r.json()["choices"][0]["message"]["content"]).strip()
         if r.status_code == 404:
-            raise RuntimeError(f"{model} 404 — model unavailable")
+            # 🚨 單把 key 的 404 不等於模型下架。實測 nemotron-3-super 有
+            # 6/7 把 key 回 200、1 把回 503，卻因為某一次 404 就把整個
+            # NVIDIA 層停用 6 小時。要每一把都 404 才算真的沒了
+            # （與 quota 判準同一套語意）。
+            nv_404.add(idx)
+            last_err = f"{model} 404 key#{idx}"
+            if len(nv_404) >= len(NVIDIA_KEYS):
+                raise RuntimeError(
+                    f"{model} 404 on all {len(NVIDIA_KEYS)} keys"
+                    " — model really is unavailable")
+            _nv_rest_key(idx)
+            continue
         if r.status_code in (429, 500, 502, 503, 504):
             last_err = f"NVIDIA {r.status_code} key#{idx}"
             _nv_rest_key(idx)
