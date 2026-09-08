@@ -16,7 +16,7 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.section import WD_SECTION
-from docx.enum.table import WD_ALIGN_VERTICAL
+from docx.enum.table import WD_ALIGN_VERTICAL, WD_ROW_HEIGHT_RULE
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
@@ -26,6 +26,7 @@ OUT = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學\115-1上課�
 
 FONT = '標楷體'
 RULE_PT = 27          # 橫線間距：約 0.95 cm，一般人手寫剛好
+ROW_H = 1.4           # 欄位列高：12pt 一行約 0.7 cm，兩倍即 1.4
 FRONT_RULES = 20      # 正面扣掉抬頭與欄位後放得下的行數
 BACK_RULES = 24       # 背面只有一行小抬頭，放得多
 
@@ -90,6 +91,10 @@ def field_table(doc):
                     shd.set(qn('w:val'), 'clear')
                     shd.set(qn('w:fill'), fill)
                     cell._tc.get_or_add_tcPr().append(shd)
+    # 行高兩倍——欄位是手寫的，一行的高度寫不下（使用者 2026-09-09 要求）
+    for r in t.rows:
+        r.height = Cm(ROW_H)
+        r.height_rule = WD_ROW_HEIGHT_RULE.AT_LEAST
     # 第二列只有兩組欄位，把最後兩格併進「上課日期」的值欄
     t.rows[1].cells[3].merge(t.rows[1].cells[5])
     for i, w in enumerate(widths):
