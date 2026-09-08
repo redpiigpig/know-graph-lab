@@ -141,7 +141,9 @@ JSON 格式：
     "lines": [{{"sp": "人名", "en": "英文", "zh": "中文"}}]}},
   "sentences": [{{"en": "例句英文", "zh": "中文"}}]
 }}
-sentences 要 8 句，dialogue 要 4～6 句。"""
+sentences 要 8 句，dialogue 要 4～6 句。
+**sentences 是另外一區，不可以跟上面 grammar_points 的 examples 重複**——
+重複的話學生等於只讀到一半的例句量。換情境、換人物、換動詞寫新的八句。"""
 
 
 _EX_HEAD = """你是台灣國小英語教材的資深編寫者，正在替第 {no} 課出練習題。
