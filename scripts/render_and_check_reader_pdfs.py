@@ -36,7 +36,7 @@ A4_LANDSCAPE = (297.0, 210.0)
 MAX_READER_PAGES = 500
 
 TARGETS: dict[str, tuple[Path, tuple[float, float], int | None]] = {}
-for stem in [f"greek-original-reader-vol{n}" for n in range(1, 7)] +             [f"latin-original-reader-vol{n}" for n in range(1, 4)] +             ["hebrew-original-reader-50-lessons"]:
+for stem in [f"greek-original-reader-vol{n}" for n in range(1, 7)] +             [f"latin-original-reader-vol{n}" for n in range(1, 4)] +             [f"japanese-original-reader-vol{n}" for n in range(1, 5)] +             ["hebrew-original-reader-50-lessons"]:
     TARGETS[stem] = (ROOT / "output/original-readers" / f"{stem}.docx", B5, MAX_READER_PAGES)
 for stem in ("hebrew-flashcards-1000", "greek-flashcards-volume-1",
              "greek-flashcards-volume-2", "latin-flashcards-volume-1",

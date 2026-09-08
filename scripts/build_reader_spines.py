@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build_greek_full_reader import BOOK_LABELS as GREEK_LABELS, PARTS as GREEK_PARTS  # noqa: E402
 from build_hebrew_full_reader import COVER_PALETTES  # noqa: E402
+from build_japanese_full_reader import PARTS as JAPANESE_PARTS, VOLUMES as JAPANESE_VOLUMES  # noqa: E402
 from build_latin_full_reader import BOOK_LABELS as LATIN_LABELS, PARTS as LATIN_PARTS  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,6 +80,13 @@ def books() -> list[dict]:
             "stem": f"latin-original-reader-vol{part['book']}",
             "lang": "la",
             "volume": LATIN_LABELS[part["book"] - 1],
+            "lessons": f"第 {part['first']:02d}–{part['last']:02d} 課",
+        })
+    for part in JAPANESE_PARTS:
+        out.append({
+            "stem": f"japanese-original-reader-vol{part['book']}",
+            "lang": "ja",
+            "volume": part.get("label") or JAPANESE_VOLUMES[part["source"]]["label"],
             "lessons": f"第 {part['first']:02d}–{part['last']:02d} 課",
         })
     return out

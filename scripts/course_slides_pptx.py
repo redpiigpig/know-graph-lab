@@ -182,7 +182,8 @@ FIT_FLOOR = 0.72
 SPLIT_AT = 0.78
 
 
-def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 1.6)):
+def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 1.6),
+        raw=False):
     """估算這批條目實際佔幾行，回傳縮放係數（最小 FIT_FLOOR）。
 
     中日文一個字約等於一個字級的寬度，因此每行字數 ≈ 可用寬度 ÷ 字級。
@@ -201,7 +202,12 @@ def fit(items, width_cm, height_cm, sizes, spaces, line=1.3, indent_cm=(0, 0.9, 
         per = max(8, int(avail / sizes[lvl]))
         rows = -(-(len(txt) + 2) // per)          # ＋2 是行首的項目符號
         total += rows * sizes[lvl] * LINE + spaces[lvl]
-    return min(1.0, max(FIT_FLOOR, height_cm * CM_PT / total)) if total else 1.0
+    if not total:
+        return 1.0
+    v = height_cm * CM_PT / total
+    # 🚨 raw=False 的下限是「夾住」不是「保證裝得下」：內容超量時它照樣回下限，
+    #    字縮到下限仍然溢出。要判斷該不該拆頁，必須看沒被夾過的 raw 值。
+    return min(1.0, v if raw else max(FIT_FLOOR, v))
 
 
 def band(slide, color, x, y, w, h):
@@ -324,7 +330,7 @@ def s_two(prs, title, left, right, sub=None):
         put(tfh, head, 23, bold=True, color=CREAM, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 24.0, 1: 20.0, 2: 20.0}
-        k = max(0.72, fit(items, cw, 13.0, base, {0: 10, 1: 8, 2: 8}))
+        k = max(0.72, fit(items, cw, 11.9, base, {0: 10, 1: 8, 2: 8}))
         tf = textbox(s, x + Cm(0.35), Cm(5.8), colw - Cm(0.7), H - Cm(7.15))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
@@ -616,34 +622,51 @@ def fold_bigs(slides):
 
 
 def split_long(slides):
-    """一頁塞不下就拆成兩頁，不要把字縮到看不清。"""
+    """一頁塞不下就拆頁，**拆到裝得下為止**，不要把字縮到看不清。
+
+    🚨 以前只拆一次。但 fit() 的下限是夾住不是保證，內容超過兩頁份量時，
+    拆完的每一半仍然裝不下，字就壓到頁尾那一行——2026-09-09 稽核抓到 16 處。
+    改成迴圈：只要 raw 值仍低於門檻就繼續對半拆。
+    """
     base, sp, ibase, isp = BULLET_SZ, BULLET_SP, IMG_SZ, IMG_SP
+
+    def need(kind, items):
+        if kind == 'bullets':
+            return fit(items, BOX_W, BOX_H * 0.96, base, sp, raw=True)
+        return fit(items, IMG_BOX_W, BOX_H * 0.96, ibase, isp, raw=True)
+
     out = []
     for it in slides:
-        if it[0] == 'bullets':
-            k = fit(it[2], BOX_W, BOX_H * 0.96, base, sp)
-        elif it[0] == 'imgbullets':
-            k = fit(it[2], IMG_BOX_W, BOX_H * 0.96, ibase, isp)
-        else:
+        if it[0] not in BULLETY:
             out.append(it)
             continue
-        if k >= SPLIT_AT:
-            out.append(it)
-            continue
-        items = list(it[2])
-        # 從中間往後找第一個第一層項目當切點，避免把子項目跟標題拆開
-        half = len(items) // 2
-        cut = next((i for i in range(half, len(items))
-                    if not isinstance(items[i], tuple) or items[i][0] == 0), half)
-        if it[0] == 'bullets':
-            rest = tuple(it[3:])
-            out.append(('bullets', it[1], items[:cut]) + rest)
-            out.append(('bullets', it[1] + '（續）', items[cut:]) + rest)
-        else:
-            # 圖留在第一頁，續頁走純文字（整頁寬，字才放得大）
-            out.append((it[0], it[1], items[:cut]) + tuple(it[3:]))
-            out.append(('bullets', it[1] + '（續）', items[cut:]))
+        queue, guard = [it], 0
+        while queue and guard < 16:
+            guard += 1
+            cur = queue.pop(0)
+            items = list(cur[2])
+            if need(cur[0], items) >= SPLIT_AT or len(items) < 2:
+                out.append(cur)
+                continue
+            # 從中間往後找第一個第一層項目當切點，避免把子項目跟標題拆開
+            half = len(items) // 2
+            cut = next((i for i in range(half, len(items))
+                        if not isinstance(items[i], tuple) or items[i][0] == 0), half)
+            if cut <= 0 or cut >= len(items):
+                cut = max(1, half)
+            # 續頁只掛一次「（續）」，拆三次也不要變成「（續）（續）（續）」
+            head = cur[1].split('（續）')[0]
+            if cur[0] == 'bullets':
+                rest = tuple(cur[3:])
+                queue.insert(0, ('bullets', cur[1], items[:cut]) + rest)
+                queue.insert(1, ('bullets', head + '（續）', items[cut:]) + rest)
+            else:
+                # 圖留在第一頁，續頁走純文字（整頁寬，字才放得大）
+                queue.insert(0, (cur[0], cur[1], items[:cut]) + tuple(cur[3:]))
+                queue.insert(1, ('bullets', head + '（續）', items[cut:]))
+        out.extend(queue)
     return out
+
 
 def build(deck, no=None, course='wr', refs=None, profile=False):
     """refs＝課末書目要讀的講義章號（不印在投影片上，只用來取書目）。
