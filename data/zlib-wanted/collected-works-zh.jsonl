@@ -1,0 +1,7 @@
+{"key":"cwzh-eliade-histoire-tw","query":"世界宗教理念史 埃利亚德","expect":"世界宗教理念史","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《世界宗教理念史》（商周繁體三卷）"}
+{"key":"cwzh-eliade-histoire-cn","query":"宗教思想史 伊利亚德","expect":"宗教思想史","who":"伊利亚德","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《宗教思想史》（上海社科院簡體三卷）"}
+{"key":"cwzh-eliade-shamanism","query":"萨满教 古老的入迷术","expect":"入迷术","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《薩滿教：古老的入迷術》"}
+{"key":"cwzh-eliade-sacred-profane","query":"神圣与世俗 伊利亚德","expect":"神圣与世俗","who":"伊利亚德","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《神聖與世俗》"}
+{"key":"cwzh-eliade-eternal-return","query":"宇宙与历史 永恒回归的神话","expect":"永恒回归的神话","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《宇宙與歷史：永恆回歸的神話》（楊儒賓譯）"}
+{"key":"cwzh-eliade-yoga","query":"不死与自由 瑜伽实践的西方阐释","expect":"不死与自由","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《不死與自由：瑜伽實踐的西方闡釋》"}
+{"key":"cwzh-eliade-patterns","query":"神圣的存在 比较宗教的范型","expect":"比较宗教的范型","lang":"zh","source":"collected-works-zh","zh":"伊利亞德《神聖的存在：比較宗教的範型》（圖書館已有，備份用）"}
