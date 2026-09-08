@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-"""《大家的日本語》1–50 課 × 日文讀本課次 × 免費中文資源 的進度對照表。
+"""《大家的日本語》1–50 課的自學索引：各課文型、單字數、免費中文講解。
 
-三欄的來源各不相同，別混為一談：
+只對課本，不牽讀本——讀本課次是另一件事，混在同一張表裡兩邊都看不清楚。
 
-  讀本課次   從 data/originalReaders/vocabulary/japanese-2000.json 的 entries 反推。
-             用 entries 的 textbookLesson 逐筆聚合，不去解析 lessonSpans 那串字，
-             因為那串是給人看的摘要（"課本第 6–7 課"），解析它等於多一層可能錯的
-             轉換。entries 才是 canonical。
+  單字數     來自 output/source-cache/original-readers/japanese-full/minna-lesson-order.json
+             （u-biq 逐課頁重建的課本詞序，2,043 詞）。那是第三方對課本順序的整理、
+             不是課本本身，數字當量感參考可以，當清點依據不行。
 
-  文型       課本各課的文型是我按標準大綱寫的，不是從課本 OCR 來的。初版與第二版
-             的文型幾乎一致，但**編者換過例句**，所以這欄當索引用可以，當課本用不行。
+  文型       按標準大綱寫的，不是從課本 OCR 來的。初版與第二版的文型幾乎一致，但
+             編者換過例句，所以這欄當索引用可以，當課本用不行。
 
   外部連結   一律「已驗證的目錄頁」或「決定性的搜尋網址」，不放猜出來的單篇網址。
              時雨の町的文法頁是 /learn-japanese/grammar/{n5,n4}/NN，但那個 NN 是
-             時雨自己按品詞排的序號，跟課本課次沒有對應關係，硬編會全錯位；
-             王可樂那套「【改訂版】大家的日本語NN課文法解說」標題格式固定，
-             用標題去搜必中，但逐支影片 id 猜不出來。兩邊都走搜尋。
+             時雨自己按品詞排的序號，跟課次沒有對應關係，硬編會全錯位。
+             王可樂的文法那套標題格式固定（【改訂版】大家的日本語NN課文法解說），
+             單字那套標題卻不統一（有「第N課單字」也有「初階1 第N課 單字」），
+             所以單字欄用關鍵字搜、不用精確標題。逐支影片 id 猜不出來，兩邊都走搜尋。
 
     python -X utf8 scripts/build_japanese_study_crosswalk.py
 """
@@ -32,7 +32,8 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VOCAB = os.path.join(ROOT, "data", "originalReaders", "vocabulary", "japanese-2000.json")
+MINNA = os.path.join(ROOT, "output", "source-cache", "original-readers",
+                     "japanese-full", "minna-lesson-order.json")
 OUT_JSON = os.path.join(ROOT, "output", "japanese-study-crosswalk.json")
 
 # Drive 上的個人日語學習夾（底下原本放《大家的日本語1》的 CD 音檔）。
@@ -40,9 +41,9 @@ OUT_JSON = os.path.join(ROOT, "output", "japanese-study-crosswalk.json")
 DRIVE_DEST = r"G:\我的雲端硬碟\資料\語言\日語"
 DRIVE_NAME = "大家的日本語進度對照表.html"
 
-SIGURE_N5_INDEX = "https://www.sigure.tw/learn-japanese/grammar/n5/"
-SIGURE_N4_INDEX = "https://www.sigure.tw/learn-japanese/grammar/n4/"
-KOLA_PLAYLIST = "https://www.youtube.com/playlist?list=PLynCeSdpMqxCW-AfMtmIlASAMUVq8wX6k"
+SIGURE_HOME = "https://www.sigure.tw/"
+KOLA_GRAMMAR_PLAYLIST = "https://www.youtube.com/playlist?list=PLynCeSdpMqxCW-AfMtmIlASAMUVq8wX6k"
+VOCAB_PLAYLIST = "https://www.youtube.com/playlist?list=PLfj-oWcHWI3DNRMp5KkS0Bdkz0O2-K1gw"
 
 # 課本各課文型。key = 課本課次；jp 是文型本身，zh 是一句話說明，terms 是拿去查
 # 時雨の町的關鍵字（用日文文法術語查中文站，命中率比查中文說法高）。
@@ -55,7 +56,7 @@ SYLLABUS: dict[int, dict] = {
     6: dict(jp="〜を＋他動詞、〜で（動作場所）、〜ませんか／〜ましょう", zh="受格を、邀約與提議。", terms=["を 助詞", "ませんか ましょう"]),
     7: dict(jp="〜で（道具）、あげます／もらいます、もう〜ました", zh="工具格與授受動詞初階。", terms=["あげます もらいます", "授受動詞"]),
     8: dict(jp="い形容詞・な形容詞", zh="兩類形容詞的述語與修飾用法。**中文母語者第一個大坑**。", terms=["い形容詞 な形容詞", "形容詞 修飾"]),
-    9: dict(jp="〜がわかります／すきです、〜から（原因）", zh="好惡與能力用が、原因用から。", terms=["が 助詞 好き", "から 原因"]),
+    9: dict(jp="〜がわかります／すきです、〜から（原因）", zh="好惡與能力用が，原因用から。", terms=["が 助詞 好き", "から 原因"]),
     10: dict(jp="あります／います、〜に〜があります", zh="存在句與位置名詞。有生／無生分兩個動詞。", terms=["あります います", "存在文"]),
     11: dict(jp="助数詞、数量詞の位置、〜に〜回", zh="量詞系統與數量詞在句中的位置。", terms=["助数詞", "数量詞"]),
     12: dict(jp="名詞・形容詞の過去形、比較（より／のほうが／いちばん）", zh="形容詞過去式與三種比較句。", terms=["形容詞 過去形", "より のほうが"]),
@@ -110,54 +111,51 @@ STAGES = [
 ]
 
 
-def load_reader_mapping() -> tuple[dict[int, list[str]], dict[int, int], dict]:
-    """從 entries 反推 課本課次 -> 讀本課次清單／詞數。entries 是 canonical。"""
-    with open(VOCAB, encoding="utf-8") as f:
+def load_word_counts() -> dict[int, int]:
+    """u-biq 重建的課本逐課詞數。缺課就停，不要靜默出半張表。"""
+    with open(MINNA, encoding="utf-8") as f:
         data = json.load(f)
-
-    by_textbook: dict[int, set[tuple[int, int]]] = collections.defaultdict(set)
-    counts: dict[int, int] = collections.Counter()
-    for e in data["entries"]:
-        tl = e["textbookLesson"]
-        by_textbook[tl].add((e["volume"], e["readerLesson"]))
-        counts[tl] += 1
-
-    mapping: dict[int, list[str]] = {}
-    for tl, slots in by_textbook.items():
-        mapping[tl] = [f"{'第一冊' if v == 1 else '第二冊'} 第 {r} 課" for v, r in sorted(slots)]
-
-    missing = [n for n in range(1, 51) if n not in mapping]
+    counts = collections.Counter(w["lesson"] for w in data["words"])
+    missing = [n for n in range(1, 51) if n not in counts]
     if missing:
-        raise SystemExit(f"課本第 {missing} 課在詞表裡對不到讀本課次，先查 japanese-2000.json 再出表")
-    return mapping, counts, data
+        raise SystemExit(f"課本第 {missing} 課在 {os.path.basename(MINNA)} 裡沒有詞，先補來源再出表")
+    return dict(counts)
 
 
-def sigure_url(terms: list[str], textbook_lesson: int) -> str:
-    level = "N5" if textbook_lesson <= 25 else "N4"
-    q = urllib.parse.quote(f"site:sigure.tw {level} {terms[0]}")
-    return f"https://www.google.com/search?q={q}"
+def sigure_url(terms: list[str], lesson: int) -> str:
+    level = "N5" if lesson <= 25 else "N4"
+    return "https://www.google.com/search?q=" + urllib.parse.quote(f"site:sigure.tw {level} {terms[0]}")
 
 
-def kola_url(textbook_lesson: int) -> str:
-    title = f"【改訂版】大家的日本語{textbook_lesson:02d}課文法解說"
-    return "https://www.youtube.com/results?search_query=" + urllib.parse.quote(title)
+def grammar_video_url(lesson: int) -> str:
+    """王可樂那套標題格式固定，用精確標題搜必中。"""
+    return "https://www.youtube.com/results?search_query=" + urllib.parse.quote(
+        f"【改訂版】大家的日本語{lesson:02d}課文法解說"
+    )
 
 
-def build_rows(mapping, counts) -> list[dict]:
+def vocab_video_url(lesson: int) -> str:
+    """單字那套標題不統一（「第N課單字」／「初階1 第N課 單字」），所以用關鍵字搜。"""
+    return "https://www.youtube.com/results?search_query=" + urllib.parse.quote(
+        f"大家的日本語 第{lesson}課 單字 みんなの日本語 単語"
+    )
+
+
+def build_rows(counts: dict[int, int]) -> list[dict]:
     rows = []
     for n in range(1, 51):
         s = SYLLABUS[n]
         rows.append(
             dict(
-                textbookLesson=n,
+                lesson=n,
                 level="N5" if n <= 25 else "N4",
                 volume="初級 I" if n <= 25 else "初級 II",
                 grammarJp=s["jp"],
                 grammarZh=s["zh"],
-                readerLessons=mapping[n],
                 wordCount=counts[n],
+                vocabVideo=vocab_video_url(n),
+                grammarVideo=grammar_video_url(n),
                 sigure=sigure_url(s["terms"], n),
-                kola=kola_url(n),
             )
         )
     return rows
@@ -180,34 +178,33 @@ def emphasise(text: str) -> str:
     return "".join(out)
 
 
-def render_html(rows: list[dict], extension_words: int, extension_slots: list[str]) -> str:
+def render_html(rows: list[dict], total_words: int) -> str:
     trs = []
     seen_stages = set()
     for r in rows:
-        st = stage_of(r["textbookLesson"])
+        st = stage_of(r["lesson"])
         if st[0] not in seen_stages:
             seen_stages.add(st[0])
             trs.append(
-                '<tr class="stage"><td colspan="5">'
-                f'<span class="stage-range">課本 {st[0]}–{st[1]}</span>'
+                '<tr class="stage"><td colspan="6">'
+                f'<span class="stage-range">第 {st[0]}–{st[1]} 課</span>'
                 f'<span class="stage-title">{html.escape(st[2])}</span>'
                 f'<span class="stage-note">{emphasise(st[3])}</span>'
                 "</td></tr>"
             )
-        reader = "<br>".join(html.escape(x) for x in r["readerLessons"])
         trs.append(
             "<tr>"
-            f'<td class="num"><span class="lesson">{r["textbookLesson"]}</span>'
+            f'<td class="num"><span class="lesson">{r["lesson"]}</span>'
             f'<span class="level">{r["level"]}</span></td>'
             f'<td class="gram"><span class="jp">{html.escape(r["grammarJp"])}</span>'
             f'<span class="zh">{emphasise(r["grammarZh"])}</span></td>'
-            f'<td class="reader">{reader}<span class="wc">{r["wordCount"]} 詞</span></td>'
+            f'<td class="wc">{r["wordCount"]}</td>'
+            f'<td class="link"><a href="{r["vocabVideo"]}" target="_blank" rel="noopener">單字</a></td>'
+            f'<td class="link"><a href="{r["grammarVideo"]}" target="_blank" rel="noopener">文法</a></td>'
             f'<td class="link"><a href="{r["sigure"]}" target="_blank" rel="noopener">時雨</a></td>'
-            f'<td class="link"><a href="{r["kola"]}" target="_blank" rel="noopener">王可樂</a></td>'
             "</tr>"
         )
     body = "\n".join(trs)
-    ext = "、".join(html.escape(x) for x in extension_slots)
 
     return f"""<title>大家的日本語進度表</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap">
@@ -229,7 +226,7 @@ def render_html(rows: list[dict], extension_words: int, extension_slots: list[st
   }}
   body {{ background:var(--bg); color:var(--ink);
     font:15px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif; }}
-  .wrap {{ max-width:1020px; margin:0 auto; padding:44px 20px 88px; }}
+  .wrap {{ max-width:960px; margin:0 auto; padding:44px 20px 88px; }}
   header {{ border-bottom:2px solid var(--rule); padding-bottom:18px; margin-bottom:26px; }}
   h1 {{ font-family:"Noto Serif JP","Noto Serif TC",serif; font-weight:600;
     font-size:28px; margin:0 0 8px; letter-spacing:.02em; text-wrap:balance; }}
@@ -238,12 +235,14 @@ def render_html(rows: list[dict], extension_words: int, extension_slots: list[st
     border-left:3px solid var(--accent); padding:16px 18px; margin-bottom:28px; }}
   .legend p {{ margin:0; font-size:13.5px; color:var(--dim); }}
   .legend b {{ color:var(--ink); font-weight:700; }}
-  .legend code {{ font-size:12.5px; background:var(--accent-soft); padding:1px 5px; }}
   .scroll {{ overflow-x:auto; -webkit-overflow-scrolling:touch;
     border:1px solid var(--line); background:var(--card); }}
-  table {{ border-collapse:collapse; width:100%; min-width:680px; }}
-  td {{ padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; }}
-  tr:last-child td {{ border-bottom:0; }}
+  table {{ border-collapse:collapse; width:100%; min-width:640px; }}
+  td, th {{ padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; }}
+  thead th {{ font-size:11px; font-weight:700; color:var(--dim); letter-spacing:.1em;
+    text-align:left; border-bottom:1px solid var(--rule); padding-top:14px; padding-bottom:10px; }}
+  thead th.c {{ text-align:center; }}
+  tbody tr:last-child td {{ border-bottom:0; }}
   tr.stage td {{ background:var(--band); padding:15px 14px;
     border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }}
   .stage-range {{ font-family:"Noto Serif JP",serif; font-weight:600; font-size:12.5px;
@@ -258,15 +257,14 @@ def render_html(rows: list[dict], extension_words: int, extension_slots: list[st
     font-family:"Noto Serif JP",serif; font-size:17px; font-weight:600;
     font-variant-numeric:tabular-nums; }}
   .level {{ display:block; font-size:10px; color:var(--dim); letter-spacing:.1em; margin-top:5px; }}
-  td.gram {{ min-width:290px; }}
+  td.gram {{ min-width:300px; }}
   .jp {{ display:block; font-family:"Noto Serif JP",serif; font-weight:500;
     font-size:14.5px; line-height:1.55; }}
   .zh {{ display:block; color:var(--dim); font-size:13px; margin-top:4px; line-height:1.6; }}
   .zh strong, .stage-note strong {{ color:var(--shu); font-weight:700; }}
-  td.reader {{ width:132px; font-size:13px; white-space:nowrap; }}
-  .wc {{ display:block; color:var(--dim); font-size:11.5px; margin-top:4px;
+  td.wc {{ width:56px; text-align:center; color:var(--dim); font-size:13.5px;
     font-variant-numeric:tabular-nums; }}
-  td.link {{ width:64px; text-align:center; }}
+  td.link {{ width:62px; text-align:center; }}
   td.link a {{ display:inline-block; padding:4px 10px; font-size:12px; text-decoration:none;
     color:var(--accent); border:1px solid var(--rule); background:transparent; }}
   td.link a:hover, td.link a:focus-visible {{ background:var(--accent-soft); border-color:var(--accent); }}
@@ -280,29 +278,35 @@ def render_html(rows: list[dict], extension_words: int, extension_slots: list[st
 </style>
 <div class="wrap">
   <header>
-    <h1>《大家的日本語》× 日文讀本 進度對照表</h1>
-    <p class="sub">課本 50 課 ↔ 讀本兩冊 100 課 ↔ 免費中文講解。讀本詞序本來就是照課本重建的，所以兩邊天生對得上。</p>
+    <h1>《大家的日本語》1–50 課自學索引</h1>
+    <p class="sub">各課文型、單字數，以及三個免費中文講解的直達入口。初級 I 是第 1–25 課（約 N5），初級 II 是第 26–50 課（約 N4）。</p>
   </header>
 
   <div class="legend">
-    <p><b>讀本課次</b>　來自 <code>japanese-2000.json</code> 的實際詞條聚合。課本一課的詞量比讀本一課（20 詞）多，所以多半橫跨讀本 2–4 課。</p>
-    <p><b>時雨</b>　連到 <a href="https://www.sigure.tw/" target="_blank" rel="noopener">時雨の町</a> 的站內搜尋（該課文法術語）。時雨按品詞編號、不按課次排，所以走搜尋而不是直接對號。</p>
-    <p><b>王可樂</b>　連到 <a href="{KOLA_PLAYLIST}" target="_blank" rel="noopener">「【改訂版】大家的日本語文法解說」</a> 該課影片的搜尋。標題格式固定，必中。</p>
+    <p><b>單字</b>　<a href="{VOCAB_PLAYLIST}" target="_blank" rel="noopener">「大家的日本語【單字】／みんなの日本語【単語】」</a>逐課單字唸讀。該套標題格式不統一，所以用關鍵字搜。</p>
+    <p><b>文法</b>　<a href="{KOLA_GRAMMAR_PLAYLIST}" target="_blank" rel="noopener">王可樂「【改訂版】大家的日本語文法解說」</a>該課影片。標題格式固定，必中。</p>
+    <p><b>時雨</b>　<a href="{SIGURE_HOME}" target="_blank" rel="noopener">時雨の町</a>的站內搜尋（該課文法術語）。時雨按品詞編號、不按課次排，所以走搜尋而不是直接對號。</p>
   </div>
 
   <div class="scroll">
-    <table>{body}</table>
+    <table>
+      <thead><tr>
+        <th class="c">課</th><th>文型</th><th class="c">單字</th>
+        <th class="c" colspan="3">免費中文講解</th>
+      </tr></thead>
+      <tbody>{body}</tbody>
+    </table>
   </div>
 
   <div class="foot">
-    <h2>讀本第二冊最後幾課不在這張表裡</h2>
-    <p>{ext} 共 {extension_words} 詞，是從宗教學語料補的，課本沒有對應課次。那批是為了讀矢內原、內村加的，不是 N5／N4 範圍。</p>
-
     <h2>怎麼配速</h2>
-    <p>一週一課 ≈ 一年走完全部 50 課；一週兩課 ≈ 半年，但<b>第 14–19 課那六課例外</b>，那是四大動詞變形，該慢就慢。真正的檢查點是第 20 課（常體）和第 22 課（連體修飾）——過了這兩課，日文書面文獻才開始「看得下去」。</p>
+    <p>一週一課 ≈ 一年走完 50 課；一週兩課 ≈ 半年，但<b>第 14–19 課那六課例外</b>，那是四大動詞變形，該慢就慢。真正的檢查點是第 20 課（常體）和第 22 課（連體修飾）——過了這兩課，日文書面文獻才開始「看得下去」。</p>
 
-    <h2>這欄的文型是索引，不是課本</h2>
-    <p>文型是按標準大綱寫的，初版與第二版的<b>例句換過</b>。拿來定位「這課在講什麼」沒問題，實際句型還是以你手上那本為準。</p>
+    <h2>文型這欄是索引，不是課本</h2>
+    <p>文型按標準大綱整理，初版與第二版的<b>例句換過</b>。拿來定位「這課在講什麼」沒問題，實際句型還是以你手上那本為準。</p>
+
+    <h2>單字數的來源</h2>
+    <p>共 {total_words} 詞，來自 u-biq 逐課頁重建的課本詞序。那是<b>第三方對課本順序的整理，不是課本本身</b>；當量感參考可以，當清點依據不行。</p>
   </div>
 </div>
 """
@@ -328,23 +332,18 @@ def wrap_standalone(doc: str) -> str:
 
 
 def main() -> None:
-    mapping, counts, data = load_reader_mapping()
-    rows = build_rows(mapping, counts)
-
-    ext_slots = mapping.get(0, [])
-    ext_words = counts.get(0, 0)
+    counts = load_word_counts()
+    rows = build_rows(counts)
+    total_words = sum(r["wordCount"] for r in rows)
+    doc = render_html(rows, total_words)
 
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(
             dict(
-                note="《大家的日本語》1–50 課 × 日文讀本課次 × 免費中文資源對照。文型欄為標準大綱整理，非課本原文。",
-                source=dict(readerVocabulary="data/originalReaders/vocabulary/japanese-2000.json"),
-                counts=dict(
-                    textbookLessons=len(rows),
-                    readerWords=sum(r["wordCount"] for r in rows),
-                    corpusExtensionWords=ext_words,
-                ),
+                note="《大家的日本語》1–50 課的文型、單字數與免費中文資源索引。文型欄為標準大綱整理，非課本原文。",
+                source=dict(wordCounts="output/source-cache/original-readers/japanese-full/minna-lesson-order.json"),
+                counts=dict(lessons=len(rows), words=total_words),
                 rows=rows,
             ),
             f,
@@ -352,15 +351,12 @@ def main() -> None:
             indent=2,
         )
 
-    doc = render_html(rows, ext_words, ext_slots)
-
     html_path = os.path.join(os.environ.get("CROSSWALK_HTML_DIR", os.path.dirname(OUT_JSON)),
                              "japanese-study-crosswalk.html")
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(doc)
 
-    print(f"課本 {len(rows)} 課，對到讀本詞 {sum(r['wordCount'] for r in rows)} 個")
-    print(f"課本外語料補充 {ext_words} 詞（{'、'.join(ext_slots)}）")
+    print(f"課本 {len(rows)} 課，單字合計 {total_words} 詞")
     print(f"JSON -> {OUT_JSON}")
     print(f"HTML（artifact 用，無 head）-> {html_path}")
 
