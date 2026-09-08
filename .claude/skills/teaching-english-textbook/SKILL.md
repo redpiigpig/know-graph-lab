@@ -1,6 +1,6 @@
 ---
 name: teaching-english-textbook
-description: 媽媽（julia5868）家教用的《Happy English 快樂學英語》B5 紙本課本 —— 50 課 × 20 字、跟 1000 張印刷單字卡同一套分課，每課含學習目標／課文／單字（帶圖）／文法／例句對話／練習（選擇 10、填空 10、重組 6、造句 8）／解答，出成上下兩冊 docx＋PDF 放 Drive 家教夾。課程內容由 LLM 逐課生成並過品質閘，版面走 python-docx。Use when 要重出課本、改課數或每課字數、改題型或題數、調版面、補生成失敗的課、或使用者說「英語課本」「家教講義」「Happy English」。網站版 /english 是另一套（20 課 × 50 字）見 [[project_english_learning]]；單字卡見 [[original-reader-flashcards]]。
+description: 媽媽（julia5868）家教用的《Happy English 快樂學英語》B5 紙本課本 —— 50 課 × 20 字、跟 1000 張印刷單字卡同一套分課，每課含學習目標／課文／單字（帶圖）／文法／例句對話／練習（選擇 10、填空 10、重組 6、造句 8）／解答，出成上下兩冊 docx＋PDF 放 Drive 家教夾。課程內容由 LLM 逐課生成並過品質閘，版面走 python-docx。Use when 要重出課本、改課數或每課字數、改題型或題數、調版面、補生成失敗的課、或使用者說「英語課本」「家教講義」「Happy English」。網站 /english 用同一份課程資料（scripts/english_site_from_course50.py 轉出）見 [[project_english_learning]]；單字卡見 [[original-reader-flashcards]]。
 ---
 
 # 國小英語課本（Happy English）
@@ -18,10 +18,23 @@ description: 媽媽（julia5868）家教用的《Happy English 快樂學英語�
 | 成品 | 分課 | 位置 |
 |---|---|---|
 | **紙本課本**（本 skill） | 50 課 × 20 字 | Drive `教學/家教_國小英語/` |
-| 印刷單字卡 | 50 課 × 20 字（同上） | `output/print-masters/english-flashcards-1000.pdf` |
-| 網站 `/english` | **20 課 × 50 字** | `public/content/english/lessons.json` |
+| 印刷單字卡 | 50 課 × 20 字 | `output/print-masters/english-flashcards-1000.pdf` |
+| 網站 `/english` | 50 課 × 20 字 | `public/content/english/lessons.json` |
 
-課本與單字卡對齊，網站沒有跟著改。動任何一邊之前先確認改的是哪一份。
+2026-09-08 起三份**分課一致**，網站內容由同一份 course50 轉出：
+
+```bash
+python scripts/english_site_from_course50.py     # course50 -> 網站 lessons.json
+```
+
+改了 course50 就要重跑這支，否則網站還是舊的。網站的 emoji 也在這支裡處理——
+讀單字卡人工校過的對照表（749/1000 有 OpenMoji 碼位），**不要再拿英文名去猜**，
+課本與網站原本那批 order→獅子、summer→啤酒就是猜出來的。
+
+網站那邊還有兩個地方跟課數綁著：`pages/english/index.vue` 的 `LESSON_COUNT`
+（段考每 5 課一組，會自己長出 10 組）與 `pages/english/review/[range].vue` 的
+總複習上限。測驗題庫走 `utils/englishQuiz.ts`，靠 exercises 的 `type` 挑題
+（`choice` 出文法題，`fill`／`unscramble`／`translate` 出打字題）。
 
 ## 出書
 
@@ -40,14 +53,15 @@ python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 +
 - 課內不硬插分頁（換下一課才換頁），課文排在單字前
 - 每課練習：選擇 10、填空 10、重組 6、造句 8
 - **超過 300 頁分上下兩冊**（目前 228＋231 頁）
-- 配圖用單字卡那份人工校過的 `english-card-images.json`，500/500 全中
+- 配圖用單字卡那份人工校過的 `english-card-images.json`，紙本 500/500 全中
+  （網站走 OpenMoji 碼位，749/1000）
 
 `MCQ_PER_LESSON` 在排版腳本裡。**資料檔存的是 30 題、出書時分層挑 10 題**
 （4 題單字義＋3 題文法＋3 題句意），要改印幾題只改這個數字，不必重跑生成。
 
 ## 這批材料特有的「看起來成功的失敗」
 
-結構檢查全綠不代表東西是對的。踩過這四個：
+結構檢查全綠不代表東西是對的。踩過這五個：
 
 1. **覆蓋率是我自己量錯的**。詞表把複數寫成 `apple(s)`、`peach(es)`、`mango(es)`，
    比對只切 `/` 和 `、` 的話永遠對不到課文裡的 apple／peaches。L19 因此被判成
@@ -56,7 +70,10 @@ python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 +
    現在低於 80% 會整課重做（`MIN_COVERAGE`）。
 3. **例句區照抄上方文法例句**。L01 曾經八句全中，等於整區白放。排版時會去重，
    提示也加了禁止重複，但仍有 11 課各重 1–2 句（去重後都還有 5 句以上）。
-4. **句子重組的打散字詞排不出答案**。引擎會漏字或多字（`eight / and / four /
+4. **十題選擇題長得一模一樣**。第二批（文法選填）特別容易整批只換主詞，
+   選項一律 am/is/are/have，一頁上出現五次。等距抽樣擋不住這個，`pick_mcq`
+   另外限制同一組選項最多收兩題；池子本身就單調的課要 `--requiz` 重出。
+5. **句子重組的打散字詞排不出答案**。引擎會漏字或多字（`eight / and / four /
    equals / plus / .` 的答案是 `Four plus eight equals twelve.`——twelve 不見了、
    and 是多的）。答案才是權威，題幹一律由答案機械重排。
 
