@@ -804,6 +804,7 @@ onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 .book-prose :deep(.chapter) { @apply mb-12; }
 .book-prose :deep(h2) { @apply text-2xl font-bold text-gray-900 mt-10 mb-5 scroll-mt-6; }
 .book-prose :deep(h3) { @apply text-lg font-semibold text-gray-800 mt-7 mb-3; }
+.book-prose :deep(h4) { @apply text-[15px] font-semibold text-gray-700 mt-5 mb-2; }
 .book-prose :deep(p) { @apply text-[15px] leading-[1.95] text-gray-800 mb-4 tracking-wide; }
 .book-prose :deep(blockquote) { @apply border-l-4 border-violet-200 pl-4 italic text-gray-600 my-5; }
 .book-prose :deep(ul) { @apply list-disc pl-6 mb-4 space-y-1 text-[15px] leading-relaxed text-gray-800; }

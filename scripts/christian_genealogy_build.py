@@ -2,18 +2,21 @@
 # -*- coding: utf-8 -*-
 """組裝《基督宗教譜系學》的 /works 書稿（idempotent，可重跑）。
 
-全書目錄在 `christian_genealogy_plan.py`。每一卷有兩種可能的內容：
+全書目錄在 `christian_genealogy_plan.py`：一本書、六章。輸出單一檔
+public/content/works/christian-genealogy/CG.html，每章一個 <section class="chapter">，
+章內的節是 <h3>。
 
-  改寫稿  public/content/works/christian-genealogy/chapters-gX/chNN.html
-          成書用的正式章節，人工逐章寫，寫好一章放一個檔。
+每一章有兩種可能的內容：
+
+  改寫稿   public/content/works/christian-genealogy/chapters-cN/sNN.html
+           成書用的正式節，人工逐節寫，寫好一節放一個檔。
   雜誌原稿 無境界者網站 Supabase `articles` 的 content + footnotes
-          《無境界者》連載的原文，轉錄用。
 
-規則：**該卷的章目全部改寫完才換上改寫稿**，否則仍出雜誌原稿——半新半舊讀起來
-會像同一卷有兩個作者。導論沒有原稿，所以寫幾章就出幾章。
+規則：**該章的節全部寫完才換上改寫稿**，否則仍出雜誌原稿。方法論那章沒有原稿，
+所以寫幾節出幾節。
 
 取源刻意不走 Drive 的 docx：那份是雜誌排版稿，正文混著圖框錨點、標題只能靠
-「粗體 14pt」猜、註腳要自己挖 XML；而且卷一、卷四、卷五（原第12、10、11 期）
+「粗體 14pt」猜、註腳要自己挖 XML；而且第2、5、6 章的底本（第12、10、11 期）
 根本沒有 docx，只存在於 DB。
 
 用法：
@@ -32,12 +35,13 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from christian_genealogy_plan import BOOK, SUBTITLE, VOLUMES  # noqa: E402
+from christian_genealogy_plan import BOOK, CHAPTERS, SUBTITLE  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "public" / "content" / "works" / "christian-genealogy"
 CACHE = ROOT / "output" / "christian-genealogy" / "source.json"
 NONCHURCH_ENV = Path("C:/Users/user/Desktop/nonchurch-nuxt/.env")
+BOOK_ID = "CG"
 
 CITE = {
     "12-5從使徒到大公": "《無境界者》第12期（未刊）",
@@ -58,8 +62,8 @@ def fetch() -> dict:
     url = cfg["VITE_SUPABASE_URL"].rstrip("/")
     key = cfg.get("SUPABASE_SECRET_KEY") or cfg["VITE_SUPABASE_KEY"]
     out = {}
-    for v in VOLUMES:
-        if not v["source"]:
+    for ch in CHAPTERS:
+        if not ch["source"]:
             continue
         r = requests.get(
             f"{url}/rest/v1/articles",
@@ -67,15 +71,15 @@ def fetch() -> dict:
             params={
                 "select": "id,title,subtitle,author,keyword,summary,content,"
                 "footnotes,issue,is_published",
-                "id": f"eq.{v['source']}",
+                "id": f"eq.{ch['source']}",
             },
             timeout=60,
         )
         r.raise_for_status()
         rows = r.json()
         if not rows:
-            raise SystemExit(f"找不到文章 {v['source']}")
-        out[v["source"]] = rows[0]
+            raise SystemExit(f"找不到文章 {ch['source']}")
+        out[ch["source"]] = rows[0]
     CACHE.parent.mkdir(parents=True, exist_ok=True)
     CACHE.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return out
@@ -83,86 +87,10 @@ def fetch() -> dict:
 
 PLACEHOLDER_IMG = re.compile(r'<img src="\[\[[^\]]*\]\]"[^>]*>')
 FIG_EMPTY = re.compile(r"(<figure[^>]*>)\s*(<figcaption>)")
-REF = re.compile(
+SRC_REF = re.compile(
     r'<sup class="footnote-ref"><a href="#footnote-(\d+)" id="footnote-ref-\d+">'
     r"(\d+)</a></sup>"
 )
-H3 = re.compile(r"<h3[^>]*>(.*?)</h3>", re.S)
-SUP = re.compile(r'<sup class="footnote-ref">.*?</sup>', re.S)
-
-
-def strip_tags(s: str) -> str:
-    return re.sub(r"<[^>]+>", "", s).strip()
-
-
-def fn_block(vid: str, pairs: list[tuple[int, str]]) -> str:
-    if not pairs:
-        return ""
-        # noqa
-    items = "".join(
-        f'<div class="fn-item" id="fn-{vid}-{n}"><span class="fn-num">{n}</span>'
-        f'<div class="fn-body">{body}'
-        f'<a href="#fnref-{vid}-{n}" class="footnote-backref">↩</a></div></div>'
-        for n, body in pairs
-    )
-    return f'<div class="footnotes">{items}</div>'
-
-
-def render_source(vol: dict, art: dict) -> tuple[str, dict]:
-    """雜誌原稿 → 書稿卷（<h3> 升成章，註腳按章分配）。"""
-    vid = vol["id"].lower()
-    content = art["content"] or ""
-    notes = {int(f["id"]): f["text"] for f in (art.get("footnotes") or [])}
-
-    n_todo_img = len(PLACEHOLDER_IMG.findall(content))
-    content = PLACEHOLDER_IMG.sub("", content)
-    content = FIG_EMPTY.sub(r"\1<figcaption><strong>［圖待製］</strong>", content)
-    content = REF.sub(
-        lambda m: f'<sup class="footnote-ref">'
-        f'<a href="#fn-{vid}-{m.group(1)}" id="fnref-{vid}-{m.group(1)}">'
-        f"{m.group(2)}</a></sup>",
-        content,
-    )
-
-    parts = H3.split(content)
-    lead, pairs = parts[0], list(zip(parts[1::2], parts[2::2]))
-    if strip_tags(lead):
-        pairs.insert(0, ("弁言", lead))
-
-    used, missing, chunks = set(), [], []
-    for i, (title, body) in enumerate(pairs, 1):
-        head_ids = [int(x) for x in re.findall(rf'href="#fn-{vid}-(\d+)"', title)]
-        plain = strip_tags(SUP.sub("", title))
-        head_sup = "".join(
-            f'<sup class="footnote-ref">'
-            f'<a href="#fn-{vid}-{n}" id="fnref-{vid}-{n}">{n}</a></sup>'
-            for n in head_ids
-        )
-        ids = head_ids + [int(x) for x in re.findall(rf'href="#fn-{vid}-(\d+)"', body)]
-        used.update(ids)
-        fns = []
-        for n in sorted(dict.fromkeys(ids)):
-            if n in notes:
-                fns.append((n, notes[n]))
-            else:
-                missing.append(n)
-        chunks.append(
-            f'<section class="chapter"><h2>第{i}章　{html.escape(plain)}{head_sup}</h2>\n'
-            f"{body.strip()}\n{fn_block(vid, fns)}</section>\n"
-        )
-
-    stats = {
-        "mode": "原稿",
-        "chapters": len(pairs),
-        "used": len(used),
-        "notes": len(notes),
-        "orphan": sorted(set(notes) - used),
-        "missing": sorted(set(missing)),
-        "todo_img": n_todo_img,
-    }
-    return "\n".join(chunks), stats
-
-
 SUP_REF = re.compile(
     r'<sup class="footnote-ref"><a href="#(fn-[\w-]+)" id="fnref-[\w-]+">\d+</a></sup>'
 )
@@ -170,11 +98,11 @@ FN_ITEM = re.compile(r'<div class="fn-item" id="(fn-[\w-]+)"><span class="fn-num
 FN_BACK = re.compile(r'<a href="#fnref-([\w-]+)" class="footnote-backref">')
 
 
-def renumber(body: str, vid: str) -> tuple[str, list[str]]:
-    """全卷註號按出現順序重編。
+def renumber(body: str) -> tuple[str, list[str]]:
+    """全書註號按出現順序重編。
 
-    章檔各自寫作，作者不可能記得上一章編到第幾號；硬要人工維護，遲早會在兩章之間
-    撞號而且頁面看起來完全正常。所以章檔裡的 id 只要在該卷唯一即可（fn-gd-a 這種
+    節檔各自寫作，作者不可能記得上一節編到第幾號；硬要人工維護，遲早會在兩節之間
+    撞號而且頁面看起來完全正常。所以節檔裡的 id 只要在全書唯一即可（fn-c1-a 這種
     也行），連號交給這裡做。
     """
     order: dict[str, int] = {}
@@ -186,144 +114,161 @@ def renumber(body: str, vid: str) -> tuple[str, list[str]]:
         n = order[key]
         return (
             f'<sup class="footnote-ref">'
-            f'<a href="#fn-{vid}-{n}" id="fnref-{vid}-{n}">{n}</a></sup>'
+            f'<a href="#fn-{n}" id="fnref-{n}">{n}</a></sup>'
         )
 
     body = SUP_REF.sub(ref, body)
-    orphans = []
+    orphans: list[str] = []
 
     def item(m):
         key = m.group(1)
-        if key not in orphans and key not in order:
+        if key not in order and key not in orphans:
             orphans.append(key)
         n = order.get(key, 0)
-        return f'<div class="fn-item" id="fn-{vid}-{n}"><span class="fn-num">{n}</span>'
+        return f'<div class="fn-item" id="fn-{n}"><span class="fn-num">{n}</span>'
 
     body = FN_ITEM.sub(item, body)
     # 回鏈寫的是 #fnref-<key 去掉 fn- 前綴>，換算回 order 的鍵要把 fn- 補回去
     body = FN_BACK.sub(
-        lambda m: f'<a href="#fnref-{vid}-{order.get("fn-" + m.group(1), 0)}"'
+        lambda m: f'<a href="#fnref-{order.get("fn-" + m.group(1), 0)}"'
         f' class="footnote-backref">',
         body,
     )
     return body, orphans
 
 
-def render_rewrite(vol: dict, files: list[Path]) -> tuple[str, dict]:
-    """改寫稿 → 書稿卷。章檔本身已是 <section class="chapter">…</section>。"""
-    body = "\n".join(f.read_text(encoding="utf-8").strip() for f in files)
-    vid = vol["id"].lower()
-    body, _orphans = renumber(body, vid)
-    refs = set(re.findall(rf'id="fnref-{vid}-([\w-]+)"', body))
-    tgts = set(re.findall(rf'id="fn-{vid}-([\w-]+)"', body))
-    return body, {
-        "mode": "改寫",
-        "chapters": body.count('<section class="chapter">'),
-        "used": len(refs),
-        "notes": len(tgts),
-        "orphan": sorted(tgts - refs),
-        "missing": sorted(refs - tgts),
-        "todo_img": 0,
-    }
-
-
-def head_html(vol: dict, thesis: str, meta: str) -> str:
-    return (
-        '<header class="book-head">'
-        f'<p class="book-kicker">{BOOK}‧{vol["vol"]}</p>'
-        f'<h1 class="book-title">{html.escape(vol["title"])}</h1>'
-        f'<p class="book-sub">{html.escape(vol["sub"])}</p>'
-        f'<p class="book-thesis">{thesis}</p>'
-        f'<p class="book-meta">{meta}</p>'
-        "</header>\n"
+def source_body(art: dict) -> tuple[str, int]:
+    """雜誌原稿 → 章內容。原稿的 <h3> 就是節，原樣保留。"""
+    content = art["content"] or ""
+    n_todo_img = len(PLACEHOLDER_IMG.findall(content))
+    content = PLACEHOLDER_IMG.sub("", content)
+    content = FIG_EMPTY.sub(r"\1<figcaption><strong>［圖待製］</strong>", content)
+    # 原稿的註號改成本書的暫時鍵，交給 renumber 統一連號
+    content = SRC_REF.sub(
+        lambda m: f'<sup class="footnote-ref">'
+        f'<a href="#fn-{art["id"][:4]}-{m.group(1)}" '
+        f'id="fnref-{art["id"][:4]}-{m.group(1)}">{m.group(2)}</a></sup>',
+        content,
     )
+    notes = "".join(
+        f'<div class="fn-item" id="fn-{art["id"][:4]}-{f["id"]}">'
+        f'<span class="fn-num">{f["id"]}</span>'
+        f'<div class="fn-body">{f["text"]}'
+        f'<a href="#fnref-{art["id"][:4]}-{f["id"]}" class="footnote-backref">↩</a>'
+        f"</div></div>"
+        for f in (art.get("footnotes") or [])
+    )
+    if notes:
+        content += f'<div class="footnotes">{notes}</div>'
+    return content, n_todo_img
 
 
 def main() -> int:
     check = "--check" in sys.argv
-    need_src = any(v["source"] for v in VOLUMES)
     src = {}
-    if need_src:
-        src = (
-            json.loads(CACHE.read_text(encoding="utf-8"))
-            if "--cache" in sys.argv or check and CACHE.exists()
-            else fetch()
-        )
+    if any(c["source"] for c in CHAPTERS):
+        use_cache = "--cache" in sys.argv or (check and CACHE.exists())
+        src = json.loads(CACHE.read_text(encoding="utf-8")) if use_cache else fetch()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    manifest, bad = [], 0
-    for vol in VOLUMES:
-        vid = vol["id"].lower()
-        cdir = OUT_DIR / f"chapters-{vid}"
-        files = sorted(cdir.glob("ch*.html")) if cdir.exists() else []
-        planned = len(vol["chapters"])
-        complete = len(files) >= planned
+    parts, rows, todo_img = [], [], 0
+    for i, ch in enumerate(CHAPTERS, 1):
+        cdir = OUT_DIR / f"chapters-{ch['id']}"
+        files = sorted(cdir.glob("s*.html")) if cdir.exists() else []
+        planned = len(ch["sections"])
+        rewritten = len(files) >= planned
 
-        if files and (complete or not vol["source"]):
-            body, st = render_rewrite(vol, files)
-            thesis = html.escape(vol["sub"])
-            meta = (
-                f"張辰瑋　　成書稿．已改寫 {len(files)}／{planned} 章"
-                + (f"　　據 {html.escape(CITE.get(vol['source'], ''))} 改寫" if vol["source"] else "")
-            )
-        elif vol["source"]:
-            art = src[vol["source"]]
-            body, st = render_source(vol, art)
-            thesis = html.escape(art.get("summary") or vol["sub"])
-            meta = (
-                f'張辰瑋　　<strong>雜誌原稿轉錄</strong>，尚未為成書改寫'
-                f'（已改寫 {len(files)}／{planned} 章）　　'
-                f'原刊 {html.escape(CITE.get(vol["source"], ""))}'
-            )
+        if files and (rewritten or not ch["source"]):
+            body = "\n".join(f.read_text(encoding="utf-8").strip() for f in files)
+            mode = "改寫" if rewritten else f'改寫中 {len(files)}/{planned}'
+        elif ch["source"]:
+            body, n_img = source_body(src[ch["source"]])
+            todo_img += n_img
+            mode = "原稿"
         else:
-            continue  # 導論還沒動筆
+            body, mode = "", "未動筆"
 
-        out = head_html(vol, thesis, meta) + body
-        flag = "OK  "
-        if st["missing"] or st["orphan"]:
-            flag, bad = "WARN", bad + 1
-        print(
-            f'{flag} {vol["id"]} {vol["vol"]}　{vol["title"]}　[{st["mode"]}] '
-            f'{st["chapters"]}/{planned} 章 / 註 {st["used"]}引 {st["notes"]}條'
-            + (f' / 孤兒註 {st["orphan"][:5]}' if st["orphan"] else "")
-            + (f' / 缺註文 {st["missing"][:5]}' if st["missing"] else "")
-            + (f' / 圖待製 {st["todo_img"]}' if st["todo_img"] else "")
-            + f' / {len(out):,} 字元'
+        if not body:
+            rows.append((ch, mode, 0))
+            continue
+
+        note = (
+            f'<p class="chapter-source">{html.escape(ch["sub"])}　·　'
+            + (
+                f'據 {html.escape(CITE.get(ch["source"], ""))} 改寫'
+                if mode == "改寫" and ch["source"]
+                else f'<strong>雜誌原稿轉錄</strong>，尚未為成書改寫（原刊 '
+                f'{html.escape(CITE.get(ch["source"], ""))}）'
+                if mode == "原稿"
+                else f'成書稿．{html.escape(mode)} 節'
+                if mode.startswith("改寫中")
+                else "成書稿"
+            )
+            + "</p>"
         )
-        if not check:
-            (OUT_DIR / f'{vol["id"]}.html').write_text(out, encoding="utf-8")
-        manifest.append(
-            {
-                "id": vol["id"],
-                "title": f'{vol["vol"]}　{vol["title"]}',
-                "subtitle": vol["sub"] + ("" if st["mode"] == "改寫" else "（雜誌原稿）"),
-                "file": f'/content/works/christian-genealogy/{vol["id"]}.html',
-                "nChapters": st["chapters"],
-            }
+        parts.append(
+            f'<section class="chapter"><h2>第{i}章　{html.escape(ch["title"])}</h2>\n'
+            f"{note}\n{body}\n</section>\n"
         )
+        rows.append((ch, mode, len(files)))
+
+    body_all, orphans = renumber("\n".join(parts))
+    refs = len(set(re.findall(r'id="fnref-(\d+)"', body_all)))
+    tgts = len(set(re.findall(r'id="fn-(\d+)"', body_all)))
+
+    head = (
+        '<header class="book-head">'
+        f'<p class="book-kicker">張辰瑋</p>'
+        f'<h1 class="book-title">{html.escape(BOOK)}</h1>'
+        f'<p class="book-sub">{html.escape(SUBTITLE)}</p>'
+        '<p class="book-thesis">全書六章：一章立方法，五章依四次事件推進。'
+        '主張是——<strong>基督宗教的分化不是墮落，是信仰適應環境所留下的痕跡；'
+        '而每一次大事件之後，判斷「兩個群體算不算分開了」的單位本身就換了一次。'
+        '</strong>因此起源、正統化、改教、現代化四個時期必須用四種不同的譜系單位'
+        '來敘述：記憶的保存者、教座與宗主教集團、認信文書與會祖、立場與運動。'
+        '<br /><br />底本是《無境界者》第12、5、7、10、11 期的連載；'
+        '第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。</p>'
+        f'<p class="book-meta">標「雜誌原稿」的章尚未為成書改寫。</p>'
+        "</header>\n"
+    )
+    out = head + body_all
+
+    for ch, mode, n in rows:
+        print(f'  第{CHAPTERS.index(ch) + 1}章 {ch["title"]:<12s} [{mode}]')
+    flag = "WARN" if orphans else "OK  "
+    print(
+        f'{flag} {BOOK}　{len(parts)}/{len(CHAPTERS)} 章 / 註 {refs}引 {tgts}條'
+        + (f" / 孤兒註 {orphans[:5]}" if orphans else "")
+        + (f" / 圖待製 {todo_img}" if todo_img else "")
+        + f" / {len(out):,} 字元"
+    )
 
     if not check:
+        (OUT_DIR / f"{BOOK_ID}.html").write_text(out, encoding="utf-8")
         (OUT_DIR.parent / "christian-genealogy-books.json").write_text(
             json.dumps(
                 {
                     "series": BOOK,
-                    "note": f"{SUBTITLE}。導論立方法，五卷依分化四階段推進："
-                    "卷一追到尼西亞以前的見證網絡與城市傳統，卷二講正統如何被劃界，"
-                    "卷三講七個大公傳統如何成形，卷四解剖新教的八大宗派系統，"
-                    "卷五處理近現代「宗派之外」的陣營重組。"
-                    "底本是《無境界者》第5、7、10、11、12 期的連載，"
-                    "第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。"
-                    "標「雜誌原稿」的卷還沒為成書改寫。",
+                    "note": f"{SUBTITLE}。一章立方法，五章依四次事件推進。"
+                    "底本是《無境界者》第12、5、7、10、11 期的五篇連載；"
+                    "第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。",
                     "independent": True,
-                    "unit": "卷",
-                    "books": manifest,
+                    "books": [
+                        {
+                            "id": BOOK_ID,
+                            "title": BOOK,
+                            "subtitle": SUBTITLE,
+                            "file": f"/content/works/christian-genealogy/{BOOK_ID}.html",
+                            "nChapters": len(parts),
+                        }
+                    ],
                 },
                 ensure_ascii=False,
                 indent=1,
             ),
             encoding="utf-8",
         )
-    return 1 if bad else 0
+    return 1 if orphans else 0
 
 
 if __name__ == "__main__":
