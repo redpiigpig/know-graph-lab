@@ -1,0 +1,654 @@
+{
+  "title_en": "Colors and Shapes",
+  "title_zh": "顏色與形狀 第二課",
+  "grammar": "使用 What color is it? 和 What shape is it? 來詢問顏色與形狀。",
+  "intro_zh": "在這一課，學生將學習描述不同顏色和形狀的物品，練習用 What color is it? 和 What shape is it? 提問與回答。透過日常生活中的例子，如氣球、禮物盒和拼圖，熟悉大小詞彙與常見形狀。",
+  "can_do": [
+    "能用顏色詞說出物品的顏色。",
+    "能用形狀詞描述物品的形狀。",
+    "能用 big, large, medium, small 等詞說出物品的大小。"
+  ],
+  "reading": {
+    "title_en": "A Gift Box Adventure",
+    "title_zh": "禮物盒的冒險",
+    "sentences": [
+      {
+        "en": "Tom gets a big box as a birthday present.",
+        "zh": "湯姆得到一個大盒子當作生日禮物。"
+      },
+      {
+        "en": "Inside the box there is a red balloon and a blue ribbon.",
+        "zh": "盒子裡有一個紅色的氣球和一條藍色的緞帶。"
+      },
+      {
+        "en": "He also sees a small green gem and a yellow star sticker.",
+        "zh": "他也看到一顆小小的綠色寶石和一顆黃色的星形貼紙。"
+      },
+      {
+        "en": "On the side of the box is a picture of a rectangle brick wall.",
+        "zh": "盒子側面有一張長方形磚牆的圖片。"
+      },
+      {
+        "en": "Tom opens the package and finds a pack of puzzle pieces.",
+        "zh": "湯姆打開包裹，發現有一包拼圖碎片。"
+      },
+      {
+        "en": "Each piece is a different shape: triangle, diamond, or star.",
+        "zh": "每一塊都是不同的形狀：三角形、菱形或星形。"
+      },
+      {
+        "en": "He puts the medium-sized triangle piece into the empty space.",
+        "zh": "他把中等大小的三角形拼圖放進空格裡。"
+      },
+      {
+        "en": "When the puzzle is half done, he notices a missing part shaped like a heart.",
+        "zh": "當拼圖做了一半時，他發現少了一塊心形的零件。"
+      },
+      {
+        "en": "His sister gives him a pair of soft socks that match the rocket's colors.",
+        "zh": "他的姐姐給他一雙柔軟的襪子，顏色和火箭相配。"
+      },
+      {
+        "en": "When the puzzle is finished, it shows a large colorful rocket, and Tom says, 'What color is the rocket? It's red and blue!'",
+        "zh": "當拼圖完成時，顯示出一枚大大的彩色火箭，湯姆說：『火箭什麼顏色？是紅色和藍色的！』"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① What color is it? + 形容詞 + 名詞",
+      "explain_zh": "用來詢問物件的顏色，並可在名詞前加上 big、medium、small 等大小形容詞來描述。",
+      "table": [
+        [
+          "句型",
+          "意思",
+          "範例"
+        ],
+        [
+          "What color is the box?",
+          "這個箱子什麼顏色？",
+          "What color is the box? It's red."
+        ],
+        [
+          "What color is the balloon?",
+          "這個氣球什麼顏色？",
+          "What color is the balloon? It's blue."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② What shape is it? + 大小形容詞 + 名詞",
+      "explain_zh": "用來詢問物件的形狀，可在名詞前加上 big、medium、small 等形容詞說明大小。",
+      "examples": [
+        {
+          "en": "What shape is the triangle? It's a triangle.",
+          "zh": "這個三角形是什麼形狀？它是三角形。"
+        },
+        {
+          "en": "What shape is the diamond? It's a diamond.",
+          "zh": "這個菱形是什麼形狀？它是菱形。"
+        },
+        {
+          "en": "What shape is the star? It's a star.",
+          "zh": "這顆星星是什麼形狀？它是星形。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在美術課裡",
+    "lines": [
+      {
+        "sp": "Miss Lin",
+        "en": "What color is the star? It's gold.",
+        "zh": "林老師：這顆星星什麼顏色？它是金色的。"
+      },
+      {
+        "sp": "Tom",
+        "en": "What shape is the package? It's a rectangle.",
+        "zh": "湯姆：這個包裹是什麼形狀？它是長方形。"
+      },
+      {
+        "sp": "Lily",
+        "en": "The big balloon is red and the small balloon is blue.",
+        "zh": "莉莉：這個大氣球是紅色的，小氣球是藍色的。"
+      },
+      {
+        "sp": "Miss Lin",
+        "en": "Look at the gem inside the box. What shape is it? It's a diamond.",
+        "zh": "林老師：看看盒子裡的寶石。它是什麼形狀？它是菱形。"
+      },
+      {
+        "sp": "Tom",
+        "en": "I like the ribbon on my pack. It's green.",
+        "zh": "湯姆：我喜歡我背包上的緞帶。它是綠色的。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "What color is the triangle? It's red.",
+      "zh": "這個三角形什麼顏色？它是紅色的。"
+    },
+    {
+      "en": "What shape is the box? It's a rectangle.",
+      "zh": "這個箱子是什麼形狀？它是長方形。"
+    },
+    {
+      "en": "The big balloon is yellow.",
+      "zh": "這個大氣球是黃色的。"
+    },
+    {
+      "en": "She has a small pair of ribbons.",
+      "zh": "她有一雙小緞帶。"
+    },
+    {
+      "en": "The medium-sized diamond sparkles.",
+      "zh": "中等大小的鑽石閃閃發光。"
+    },
+    {
+      "en": "The package contains a blue brick.",
+      "zh": "這個包裹裡有一塊藍色的磚塊。"
+    },
+    {
+      "en": "Can you find the star piece in the puzzle?",
+      "zh": "你能在拼圖裡找到那顆星形的塊嗎？"
+    },
+    {
+      "en": "The gem is inside the small box.",
+      "zh": "寶石在小盒子裡。"
+    }
+  ],
+  "no": 7,
+  "theme": "Colors & Shapes",
+  "theme_zh": "顏色與形狀",
+  "words": [
+    {
+      "en": "triangle",
+      "zh": "三角形"
+    },
+    {
+      "en": "diamond",
+      "zh": "菱形"
+    },
+    {
+      "en": "rectangle",
+      "zh": "長方形"
+    },
+    {
+      "en": "star",
+      "zh": "星形"
+    },
+    {
+      "en": "big",
+      "zh": "大的"
+    },
+    {
+      "en": "large",
+      "zh": "大的"
+    },
+    {
+      "en": "medium",
+      "zh": "中等的"
+    },
+    {
+      "en": "small",
+      "zh": "小型的"
+    },
+    {
+      "en": "box",
+      "zh": "箱子"
+    },
+    {
+      "en": "package",
+      "zh": "包裹"
+    },
+    {
+      "en": "pack",
+      "zh": "一包"
+    },
+    {
+      "en": "pair",
+      "zh": "一雙"
+    },
+    {
+      "en": "part",
+      "zh": "部分"
+    },
+    {
+      "en": "piece",
+      "zh": "一片"
+    },
+    {
+      "en": "space",
+      "zh": "空間"
+    },
+    {
+      "en": "balloon",
+      "zh": "氣球"
+    },
+    {
+      "en": "ribbon",
+      "zh": "緞帶"
+    },
+    {
+      "en": "gem",
+      "zh": "寶石"
+    },
+    {
+      "en": "brick",
+      "zh": "磚塊"
+    },
+    {
+      "en": "puzzle",
+      "zh": "拼圖"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "What color is the balloon?",
+        "opts": [
+          "red",
+          "blue",
+          "green",
+          "yellow"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "What shape is the box?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the ribbon?",
+        "opts": [
+          "purple",
+          "pink",
+          "orange",
+          "brown"
+        ],
+        "ans": "pink"
+      },
+      {
+        "q": "What shape is the gem?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "diamond"
+      },
+      {
+        "q": "What color is the brick?",
+        "opts": [
+          "red",
+          "blue",
+          "green",
+          "black"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "What shape is the star?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "star"
+      },
+      {
+        "q": "What color is the puzzle?",
+        "opts": [
+          "yellow",
+          "blue",
+          "red",
+          "green"
+        ],
+        "ans": "blue"
+      },
+      {
+        "q": "What shape is the package?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the space?",
+        "opts": [
+          "black",
+          "white",
+          "blue",
+          "red"
+        ],
+        "ans": "black"
+      },
+      {
+        "q": "What color is the pack?",
+        "opts": [
+          "red",
+          "blue",
+          "green",
+          "yellow"
+        ],
+        "ans": "green"
+      },
+      {
+        "q": "What color is the triangle?",
+        "opts": [
+          "red",
+          "blue",
+          "green",
+          "yellow"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "What shape is the diamond?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "diamond"
+      },
+      {
+        "q": "What color is the rectangle?",
+        "opts": [
+          "black",
+          "white",
+          "orange",
+          "purple"
+        ],
+        "ans": "black"
+      },
+      {
+        "q": "What shape is the rectangle?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the gem?",
+        "opts": [
+          "pink",
+          "brown",
+          "gray",
+          "red"
+        ],
+        "ans": "pink"
+      },
+      {
+        "q": "What shape is the brick?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the star?",
+        "opts": [
+          "yellow",
+          "blue",
+          "green",
+          "red"
+        ],
+        "ans": "yellow"
+      },
+      {
+        "q": "What shape is the ribbon?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the package?",
+        "opts": [
+          "black",
+          "white",
+          "red",
+          "blue"
+        ],
+        "ans": "white"
+      },
+      {
+        "q": "What shape is the piece?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "triangle"
+      },
+      {
+        "q": "What color is the big balloon?",
+        "opts": [
+          "red",
+          "blue",
+          "green",
+          "yellow"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "What color is the small ribbon?",
+        "opts": [
+          "pink",
+          "purple",
+          "orange",
+          "black"
+        ],
+        "ans": "pink"
+      },
+      {
+        "q": "What shape is the medium box?",
+        "opts": [
+          "triangle",
+          "rectangle",
+          "star",
+          "diamond"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What shape is the large star?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "star"
+      },
+      {
+        "q": "What color is the small gem?",
+        "opts": [
+          "green",
+          "blue",
+          "red",
+          "yellow"
+        ],
+        "ans": "green"
+      },
+      {
+        "q": "What shape is the small diamond?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "diamond"
+      },
+      {
+        "q": "What color is the big brick?",
+        "opts": [
+          "red",
+          "brown",
+          "grey",
+          "black"
+        ],
+        "ans": "red"
+      },
+      {
+        "q": "What shape is the small package?",
+        "opts": [
+          "triangle",
+          "rectangle",
+          "star",
+          "diamond"
+        ],
+        "ans": "rectangle"
+      },
+      {
+        "q": "What color is the medium balloon?",
+        "opts": [
+          "yellow",
+          "purple",
+          "orange",
+          "pink"
+        ],
+        "ans": "yellow"
+      },
+      {
+        "q": "What shape is the big piece?",
+        "opts": [
+          "triangle",
+          "diamond",
+          "rectangle",
+          "star"
+        ],
+        "ans": "rectangle"
+      }
+    ],
+    "fill": [
+      {
+        "q": "What shape is it? It is a ____.（這個形狀是什麼？它是一個____。）",
+        "ans": "triangle"
+      },
+      {
+        "q": "What shape is it? It is a ____.（這個形狀是什麼？它是一個____。）",
+        "ans": "diamond"
+      },
+      {
+        "q": "What shape is it? It is a ____.（這個形狀是什麼？它是一個____。）",
+        "ans": "rectangle"
+      },
+      {
+        "q": "What shape is it? It is a ____。（這個形狀是什麼？它是一個____。）",
+        "ans": "star"
+      },
+      {
+        "q": "The box is ____。（這個盒子是____。）",
+        "ans": "big"
+      },
+      {
+        "q": "The package is ____。（這個包裹是____。）",
+        "ans": "large"
+      },
+      {
+        "q": "The balloon is ____。（這個氣球是____。）",
+        "ans": "medium"
+      },
+      {
+        "q": "The ribbon is ____。（這條絲帶是____。）",
+        "ans": "small"
+      },
+      {
+        "q": "I ____ big。（我____大。）",
+        "ans": "am"
+      },
+      {
+        "q": "It ____ a triangle。（它____一個三角形。）",
+        "ans": "is"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這個盒子很大。",
+        "ans": "The box is big."
+      },
+      {
+        "q": "這個氣球中等大小。",
+        "ans": "The balloon is medium."
+      },
+      {
+        "q": "這條絲帶很小。",
+        "ans": "The ribbon is small."
+      },
+      {
+        "q": "這個寶石很大。",
+        "ans": "The gem is big."
+      },
+      {
+        "q": "這個磚塊很大。",
+        "ans": "The brick is big."
+      },
+      {
+        "q": "這個拼圖中等大小。",
+        "ans": "The puzzle is medium."
+      },
+      {
+        "q": "這個星星很小。",
+        "ans": "The star is small."
+      },
+      {
+        "q": "這個包裹很大。",
+        "ans": "The package is large."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / It / triangle / is / a",
+        "ans": "It is a triangle."
+      },
+      {
+        "q": "is / big / box / . / The",
+        "ans": "The box is big."
+      },
+      {
+        "q": "it / is / What / shape / ?",
+        "ans": "What shape is it?"
+      },
+      {
+        "q": "big / I / am / .",
+        "ans": "I am big."
+      },
+      {
+        "q": "small / . / is / The / ribbon",
+        "ans": "The ribbon is small."
+      },
+      {
+        "q": "gem / is / large / . / The",
+        "ans": "The gem is large."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

@@ -1,0 +1,669 @@
+{
+  "title_en": "Weather & Clothes",
+  "title_zh": "天氣變化與服裝搭配",
+  "grammar": "根據天氣變化選擇適當的衣服：What's the weather like? It's sunny. I wear a t-shirt.",
+  "intro_zh": "天氣會隨著季節改變。有時候晴天炎熱，有時候雨天潮濕，有時候下雪很冷。我們要根據天氣穿不同的衣服。今天我們學習怎樣在不同天氣裡選擇合適的衣服，保護自己不被太陽燙傷，也不會感冒。",
+  "can_do": [
+    "描述不同天氣狀況和季節變化",
+    "根據天氣選擇適當的衣服",
+    "談論天氣對穿衣的影響"
+  ],
+  "reading": {
+    "title_en": "Lily's Day Out",
+    "title_zh": "莉莉的戶外冒險",
+    "sentences": [
+      {
+        "en": "Today is sunny and very hot. The heat makes Lily want to wear a t-shirt and shorts.",
+        "zh": "今天晴天而且很熱。熱氣讓莉莉想穿T恤和短褲。"
+      },
+      {
+        "en": "She puts on a hat because the sun can burn her skin.",
+        "zh": "她戴上帽子，因為太陽會燙傷她的皮膚。"
+      },
+      {
+        "en": "Lily walks into the forest to find some shade and play with the sand.",
+        "zh": "莉莉走進森林找陰涼的地方，也在沙子裡玩。"
+      },
+      {
+        "en": "The weather will change tomorrow. The clouds are coming, and it will be wet and rainy.",
+        "zh": "天氣明天會改變。烏雲來了，會潮濕又下雨。"
+      },
+      {
+        "en": "So tonight, she packs a jacket and a long coat in her bag.",
+        "zh": "所以今晚，她把夾克和長外套放進包包裡。"
+      },
+      {
+        "en": "Next week, it will be very cold and snowy. She will wear a sweater, pants, and a warm dress.",
+        "zh": "下週會很冷還會下雪。她會穿毛衣、長褲和溫暖的洋裝。"
+      },
+      {
+        "en": "Lily knows that the weather changes with the seasons, and she has clothes for every weather.",
+        "zh": "莉莉知道天氣會隨著季節改變，她有各種天氣的衣服。"
+      },
+      {
+        "en": "Her closet is full of shirts, skirts, and coats to keep her safe and dry.",
+        "zh": "她的衣櫃裡裝滿襯衫、裙子和外套，能保護她安全和乾燥。"
+      },
+      {
+        "en": "No matter what the weather is like, Lily is always ready for a fun day outside!",
+        "zh": "不管天氣怎樣，莉莉總是準備好去外面玩快樂的一天！"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 根據天氣選衣服的說法",
+      "explain_zh": "我們先用「What's the weather like? It's ...」來問天氣，接著根據天氣說自己或他人穿什麼衣服，使用 I wear 或 He/She wears。",
+      "table": [
+        [
+          "天氣",
+          "衣服",
+          "例句"
+        ],
+        [
+          "sunny（晴天）",
+          "t‑shirt（T恤）",
+          "It's sunny. I wear a t‑shirt."
+        ],
+        [
+          "rainy（雨天）",
+          "coat（外套）",
+          "It's rainy. He wears a coat."
+        ],
+        [
+          "snowy（下雪）",
+          "sweater（毛衣）",
+          "It's snowy. She wears a sweater."
+        ],
+        [
+          "windy（有風）",
+          "jacket（夾克）",
+          "It's windy. I wear a jacket."
+        ],
+        [
+          "cloudy（多雲）",
+          "long‑sleeve shirt（長袖襯衫）",
+          "It's cloudy. We wear long‑sleeve shirts."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② I wear / He/She wears 的用法",
+      "explain_zh": "當主語是 I 時，動詞原形 wear 不變；當主語是 He、She 或單數名詞時，動詞加 -s 變成 wears。",
+      "examples": [
+        {
+          "en": "I wear shorts when it's hot.",
+          "zh": "天氣熱時我會穿短褲。"
+        },
+        {
+          "en": "He wears a jacket when it's windy.",
+          "zh": "天氣有風時他會穿夾克。"
+        },
+        {
+          "en": "She wears a dress on sunny days.",
+          "zh": "晴天她會穿洋裝。"
+        },
+        {
+          "en": "They wear coats in winter.",
+          "zh": "他們冬天會穿外套。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "今天的天氣與穿搭",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "What's the weather like today?",
+        "zh": "今天天氣怎麼樣？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It's sunny and warm.",
+        "zh": "今天晴天而且溫暖。"
+      },
+      {
+        "sp": "Anna",
+        "en": "I will wear a t‑shirt and shorts.",
+        "zh": "我會穿T恤和短褲。"
+      },
+      {
+        "sp": "Ben",
+        "en": "I think I need a hat because it's bright.",
+        "zh": "我想我需要戴帽子，因為陽光很強。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Let's go to the park after school!",
+        "zh": "放學後我們去公園吧！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "It's rainy today, so I wear a coat.",
+      "zh": "今天下雨，所以我穿外套。"
+    },
+    {
+      "en": "When it's snowy, she wears a sweater and boots.",
+      "zh": "下雪時，她穿毛衣和靴子。"
+    },
+    {
+      "en": "On windy days, he likes to wear a jacket.",
+      "zh": "有風的日子，他喜歡穿夾克。"
+    },
+    {
+      "en": "We wear t‑shirts when the weather is hot.",
+      "zh": "天氣熱時我們穿T恤。"
+    },
+    {
+      "en": "If it's cloudy, I bring an umbrella.",
+      "zh": "如果天氣多雲，我會帶傘。"
+    },
+    {
+      "en": "She wears a skirt and a blouse on sunny afternoons.",
+      "zh": "晴朗的午後，她穿裙子和襯衫。"
+    },
+    {
+      "en": "They wear shorts and sandals at the beach.",
+      "zh": "他們在海灘穿短褲和涼鞋。"
+    },
+    {
+      "en": "What's the weather like? It's sunny. I wear a t‑shirt.",
+      "zh": "天氣怎麼樣？晴天。我穿T恤。"
+    }
+  ],
+  "no": 33,
+  "theme": "Weather, Seasons & Nature",
+  "theme_zh": "天氣‧季節與自然",
+  "words": [
+    {
+      "en": "burn",
+      "zh": "燙傷"
+    },
+    {
+      "en": "heat",
+      "zh": "熱氣"
+    },
+    {
+      "en": "change",
+      "zh": "變化"
+    },
+    {
+      "en": "wet",
+      "zh": "潮濕的"
+    },
+    {
+      "en": "dry",
+      "zh": "乾燥的"
+    },
+    {
+      "en": "cold",
+      "zh": "冷的"
+    },
+    {
+      "en": "snowy",
+      "zh": "下雪的"
+    },
+    {
+      "en": "cloud",
+      "zh": "雲"
+    },
+    {
+      "en": "forest",
+      "zh": "森林"
+    },
+    {
+      "en": "sand",
+      "zh": "沙子"
+    },
+    {
+      "en": "clothes",
+      "zh": "衣服"
+    },
+    {
+      "en": "shirt",
+      "zh": "襯衫"
+    },
+    {
+      "en": "t-shirt",
+      "zh": "T恤"
+    },
+    {
+      "en": "pants",
+      "zh": "長褲"
+    },
+    {
+      "en": "shorts",
+      "zh": "短褲"
+    },
+    {
+      "en": "skirt",
+      "zh": "裙子"
+    },
+    {
+      "en": "dress",
+      "zh": "洋裝"
+    },
+    {
+      "en": "coat",
+      "zh": "外套"
+    },
+    {
+      "en": "jacket",
+      "zh": "夾克"
+    },
+    {
+      "en": "sweater",
+      "zh": "毛衣"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個單字的意思是『濕』？",
+        "opts": [
+          "burn",
+          "heat",
+          "wet",
+          "dry"
+        ],
+        "ans": "wet"
+      },
+      {
+        "q": "哪個單字表示『熱』？",
+        "opts": [
+          "burn",
+          "heat",
+          "change",
+          "wet"
+        ],
+        "ans": "heat"
+      },
+      {
+        "q": "哪個單字的意思是『改變』？",
+        "opts": [
+          "change",
+          "cold",
+          "snowy",
+          "cloud"
+        ],
+        "ans": "change"
+      },
+      {
+        "q": "哪個單字表示『下雪的』？",
+        "opts": [
+          "snowy",
+          "forest",
+          "sand",
+          "clothes"
+        ],
+        "ans": "snowy"
+      },
+      {
+        "q": "哪個單字的意思是『雲』？",
+        "opts": [
+          "cloud",
+          "forest",
+          "sand",
+          "shirt"
+        ],
+        "ans": "cloud"
+      },
+      {
+        "q": "哪個單字表示『森林』？",
+        "opts": [
+          "forest",
+          "sand",
+          "shirt",
+          "t-shirt"
+        ],
+        "ans": "forest"
+      },
+      {
+        "q": "哪個單字的意思是『沙子』？",
+        "opts": [
+          "sand",
+          "clothes",
+          "shirt",
+          "pants"
+        ],
+        "ans": "sand"
+      },
+      {
+        "q": "哪個單字表示『衣服』？",
+        "opts": [
+          "clothes",
+          "shirt",
+          "t-shirt",
+          "pants"
+        ],
+        "ans": "clothes"
+      },
+      {
+        "q": "哪個單字的意思是『T恤』？",
+        "opts": [
+          "shirt",
+          "t-shirt",
+          "pants",
+          "shorts"
+        ],
+        "ans": "t-shirt"
+      },
+      {
+        "q": "哪個單字表示『外套』？（指較厚的外套）",
+        "opts": [
+          "coat",
+          "jacket",
+          "sweater",
+          "dress"
+        ],
+        "ans": "coat"
+      },
+      {
+        "q": "When it's _____, I wear a sweater.",
+        "opts": [
+          "cold",
+          "hot",
+          "dry",
+          "sunny"
+        ],
+        "ans": "cold"
+      },
+      {
+        "q": "What should I wear on a snowy day? I wear a _____.",
+        "opts": [
+          "shirt",
+          "shorts",
+          "coat",
+          "skirt"
+        ],
+        "ans": "coat"
+      },
+      {
+        "q": "It's very _____ today. I need to drink water.",
+        "opts": [
+          "wet",
+          "heat",
+          "cold",
+          "cloud"
+        ],
+        "ans": "heat"
+      },
+      {
+        "q": "My clothes are _____. I need to dry them.",
+        "opts": [
+          "dry",
+          "wet",
+          "cold",
+          "sandy"
+        ],
+        "ans": "wet"
+      },
+      {
+        "q": "On a sunny day, I wear a t-shirt and _____.",
+        "opts": [
+          "pants",
+          "sweater",
+          "shorts",
+          "jacket"
+        ],
+        "ans": "shorts"
+      },
+      {
+        "q": "The _____ is very thick today. I can't see the sun.",
+        "opts": [
+          "sand",
+          "cloud",
+          "forest",
+          "clothes"
+        ],
+        "ans": "cloud"
+      },
+      {
+        "q": "She likes to wear a _____ when it's hot.",
+        "opts": [
+          "coat",
+          "jacket",
+          "dress",
+          "pants"
+        ],
+        "ans": "dress"
+      },
+      {
+        "q": "The weather will _____ next week.",
+        "opts": [
+          "burn",
+          "change",
+          "wear",
+          "play"
+        ],
+        "ans": "change"
+      },
+      {
+        "q": "I wear long _____ when it's cold.",
+        "opts": [
+          "t-shirt",
+          "shorts",
+          "pants",
+          "jacket"
+        ],
+        "ans": "pants"
+      },
+      {
+        "q": "On a rainy day, my clothes get _____.",
+        "opts": [
+          "dry",
+          "cold",
+          "wet",
+          "sandy"
+        ],
+        "ans": "wet"
+      },
+      {
+        "q": "今天天氣很熱，我會穿 _____ 。",
+        "opts": [
+          "t-shirt",
+          "sweater",
+          "coat",
+          "pants"
+        ],
+        "ans": "t-shirt"
+      },
+      {
+        "q": "雪天我會穿 _____ 。",
+        "opts": [
+          "t-shirt",
+          "sweater",
+          "coat",
+          "shorts"
+        ],
+        "ans": "coat"
+      },
+      {
+        "q": "我的衣服濕了，我要把它們 _____ 。",
+        "opts": [
+          "burn",
+          "heat",
+          "change",
+          "dry"
+        ],
+        "ans": "dry"
+      },
+      {
+        "q": "在森林裡，我會穿 _____ 來保暖。",
+        "opts": [
+          "sweater",
+          "shirt",
+          "skirt",
+          "sand"
+        ],
+        "ans": "sweater"
+      },
+      {
+        "q": "今天天氣很 _____ ，我看不太到太陽。",
+        "opts": [
+          "cloud",
+          "sand",
+          "heat",
+          "wet"
+        ],
+        "ans": "cloud"
+      },
+      {
+        "q": "去沙灘玩，我會穿 _____ 。",
+        "opts": [
+          "shirt",
+          "t-shirt",
+          "dress",
+          "coat"
+        ],
+        "ans": "t-shirt"
+      },
+      {
+        "q": "吹乾頭髮需要 _____ 。",
+        "opts": [
+          "heat",
+          "burn",
+          "change",
+          "wet"
+        ],
+        "ans": "heat"
+      },
+      {
+        "q": "我想改變衣服，我可以 _____ 。",
+        "opts": [
+          "change",
+          "burn",
+          "wet",
+          "dry"
+        ],
+        "ans": "change"
+      },
+      {
+        "q": "冬天很冷，我會穿 _____ 。",
+        "opts": [
+          "jacket",
+          "shirt",
+          "shorts",
+          "skirt"
+        ],
+        "ans": "jacket"
+      },
+      {
+        "q": "今天我很開心，我想穿 _____ 。",
+        "opts": [
+          "dress",
+          "pants",
+          "t-shirt",
+          "sweater"
+        ],
+        "ans": "dress"
+      }
+    ],
+    "fill": [
+      {
+        "q": "It is hot today, I wear a ____ .（今天很熱，我穿著 T 恤。）",
+        "ans": "t-shirt"
+      },
+      {
+        "q": "When it rains, my clothes get ____ .（下雨時，我的衣服會變濕。）",
+        "ans": "wet"
+      },
+      {
+        "q": "After the sun shines, the ground becomes ____ .（太陽曬後，地面變乾。）",
+        "ans": "dry"
+      },
+      {
+        "q": "In winter, I need to wear a ____ to keep warm.（冬天來了，我需要穿外套來保暖。）",
+        "ans": "jacket"
+      },
+      {
+        "q": "When hiking in the forest, I like to wear ____ .（在森林裡徒步，我喜歡穿長褲。）",
+        "ans": "pants"
+      },
+      {
+        "q": "At the beach in summer, I wear ____ .（夏天的海灘，我會穿短褲。）",
+        "ans": "shorts"
+      },
+      {
+        "q": "When skiing, I wear a ____ to stay warm.（滑雪時，我會穿毛衣來保暖。）",
+        "ans": "sweater"
+      },
+      {
+        "q": "On a cloudy day, the sky has many ____ .（多雲的天氣，天空會有很多雲。）",
+        "ans": "cloud"
+      },
+      {
+        "q": "In the desert, the ground is covered with ____ .（在沙漠裡，地面覆蓋著沙子。）",
+        "ans": "sand"
+      },
+      {
+        "q": "When it is cold, I wear a ____ to stay warm。（當天氣很冷時，我會穿外套來保暖。）",
+        "ans": "coat"
+      }
+    ],
+    "translate": [
+      {
+        "q": "今天天氣晴朗，我穿著 T 恤。",
+        "ans": "It is sunny today, I wear a t-shirt."
+      },
+      {
+        "q": "下雨時，我會把衣服弄濕。",
+        "ans": "When it rains, I get my clothes wet."
+      },
+      {
+        "q": "太陽曬後，沙子變熱。",
+        "ans": "After the sun shines, the sand gets hot."
+      },
+      {
+        "q": "冬天很冷，我需要穿外套。",
+        "ans": "Winter is cold, I need to wear a jacket."
+      },
+      {
+        "q": "在森林裡徒步時，我喜歡穿長褲。",
+        "ans": "When hiking in the forest, I like to wear pants."
+      },
+      {
+        "q": "夏天的海灘，我會穿短褲。",
+        "ans": "At the beach in summer, I wear shorts."
+      },
+      {
+        "q": "滑雪時，我會穿毛衣保暖。",
+        "ans": "When skiing, I wear a sweater to keep warm."
+      },
+      {
+        "q": "多雲的天氣，天空有很多雲。",
+        "ans": "On a cloudy day, the sky has many clouds."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "I / a / t-shirt / . / wear / today",
+        "ans": "I wear a t-shirt today."
+      },
+      {
+        "q": "It / and / sunny / is / hot / .",
+        "ans": "It is sunny and hot."
+      },
+      {
+        "q": "My / are / clothes / wet / .",
+        "ans": "My clothes are wet."
+      },
+      {
+        "q": ". / dry / sand / is / The",
+        "ans": "The sand is dry."
+      },
+      {
+        "q": ". / a / need / winter / I / jacket / in",
+        "ans": "I need a jacket in winter."
+      },
+      {
+        "q": "shorts / . / at / We / wear / beach / the",
+        "ans": "We wear shorts at the beach."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

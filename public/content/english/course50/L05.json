@@ -1,0 +1,673 @@
+{
+  "title_en": "Fun with Numbers",
+  "title_zh": "數字與數量的樂趣",
+  "grammar": "學習用 How old are you? 與 How many…? 問年齡與數量，並練習基數詞與序數詞的說法。",
+  "intro_zh": "本課我們學習用 How old are you? 與 How many…? 問年齡與數量，並練習基數詞和序數詞。透過趣味情境，學生能自然使用 count、number、half、dozen 等單字，提升英語表達。",
+  "can_do": [
+    "能用 How old are you? 問及同學的年齡。",
+    "能用 How many…? 問及物品的數量。",
+    "能正確說出基數詞與序數詞，並進行簡單的加減運算。"
+  ],
+  "reading": {
+    "title_en": "Fun with Numbers",
+    "title_zh": "數字與數量的樂趣",
+    "sentences": [
+      {
+        "en": "Today we count the number of students in each team.",
+        "zh": "今天我們數一下每隊有多少學生。"
+      },
+      {
+        "en": "Each team has a dozen members, so there are twelve kids.",
+        "zh": "每隊有一打成員，也就是十二個孩子。"
+      },
+      {
+        "en": "We add the scores of the first and second rounds, then plus the bonus points to get the total.",
+        "zh": "我們把第一輪和第二輪的分數相加，再加上額外分數得到總分。"
+      },
+      {
+        "en": "If we minus the points lost, the final score is equal to twenty.",
+        "zh": "如果我們減去失去的分數，最終得分等於二十。"
+      },
+      {
+        "en": "Half of the class got a ribbon for finishing the race.",
+        "zh": "班上的一半學生因完成賽跑而得到彩帶。"
+      },
+      {
+        "en": "The first place gets a gold medal, the second gets silver, and the third gets bronze.",
+        "zh": "第一名得到金牌，第二名得到銀牌，第三名得到銅牌。"
+      },
+      {
+        "en": "After the race, we line up fourth, fifth, sixth, seventh, eighth, ninth, and tenth.",
+        "zh": "賽後，我們依序排成第四、第五、第六、第七、第八、第九、第十名。"
+      },
+      {
+        "en": "The last student to cross the line receives a cheerful cheer.",
+        "zh": "最後衝過終點線的學生會得到熱烈的歡呼。"
+      },
+      {
+        "en": "Zero mistakes were made during the relay, so everyone felt proud.",
+        "zh": "接力賽中沒有任何錯誤，大家都感到自豪。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① How old are you? 問年齡",
+      "explain_zh": "用 How old are you? 詢問對方的年齡，回答通常用基數詞加 years old。以下表格列出常見年齡的問答。",
+      "table": [
+        [
+          "問句",
+          "回答 (基數詞)",
+          "中文翻譯"
+        ],
+        [
+          "How old are you?",
+          "I am six years old.",
+          "我六歲。"
+        ],
+        [
+          "How old are you?",
+          "I am eight years old.",
+          "我八歲。"
+        ],
+        [
+          "How old are you?",
+          "I am ten years old.",
+          "我十歲。"
+        ],
+        [
+          "How old are you?",
+          "I am twelve years old.",
+          "我十二歲。"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② How many …? 問數量",
+      "explain_zh": "用 How many …? 詢問可數名詞的數量，回答可以用基數詞、特定詞彙（dozen、half）或簡單的加減運算（plus、minus、add、equal）。以下例句示範各種用法。",
+      "examples": [
+        {
+          "en": "How many pencils do you have?",
+          "zh": "你有多少支鉛筆？"
+        },
+        {
+          "en": "How many apples are in the basket?",
+          "zh": "籃子裡有多少個蘋果？"
+        },
+        {
+          "en": "How many students are in the class? There are twenty‑four.",
+          "zh": "班上有多少學生？有二十四人。"
+        },
+        {
+          "en": "How many cookies did you eat? I ate half a dozen.",
+          "zh": "你吃了多少塊餅乾？我吃了半打。"
+        },
+        {
+          "en": "How many points do we have now? Five plus three equals eight.",
+          "zh": "我們現在有多少分？五加三等於八。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡數文具",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "How old are you, Ben?",
+        "zh": "安娜：本，你幾歲？"
+      },
+      {
+        "sp": "Ben",
+        "en": "I am nine years old.",
+        "zh": "本：我九歲。"
+      },
+      {
+        "sp": "Anna",
+        "en": "How many erasers do you have?",
+        "zh": "安娜：你有多少塊橡皮擦？"
+      },
+      {
+        "sp": "Ben",
+        "en": "I have three erasers.",
+        "zh": "本：我有三塊橡皮擦。"
+      },
+      {
+        "sp": "Anna",
+        "en": "How many crayons are in the box? There are a dozen.",
+        "zh": "安娜：盒子裡有多少支蠟筆？有一打。"
+      },
+      {
+        "sp": "Ben",
+        "en": "Great! Let’s draw together.",
+        "zh": "本：太好了！一起畫畫吧。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "How old are you?",
+      "zh": "你幾歲？"
+    },
+    {
+      "en": "I am seven years old.",
+      "zh": "我七歲。"
+    },
+    {
+      "en": "How many books are on the desk?",
+      "zh": "桌上有多少本書？"
+    },
+    {
+      "en": "There are five books.",
+      "zh": "有五本書。"
+    },
+    {
+      "en": "How many oranges did you buy? I bought a dozen.",
+      "zh": "你買了多少個橘子？我買了一打。"
+    },
+    {
+      "en": "How many minutes are left? Ten minus two equals eight.",
+      "zh": "還剩多少分鐘？十減二等於八。"
+    },
+    {
+      "en": "How many friends do you have? I have three friends.",
+      "zh": "你有多少朋友？我有三個朋友。"
+    },
+    {
+      "en": "How many pages did you read? I read half of the book.",
+      "zh": "你讀了多少頁？我讀了書的一半。"
+    }
+  ],
+  "no": 5,
+  "theme": "Numbers & How Many",
+  "theme_zh": "數字與數量",
+  "words": [
+    {
+      "en": "count",
+      "zh": "計算"
+    },
+    {
+      "en": "number",
+      "zh": "數字；號碼"
+    },
+    {
+      "en": "half",
+      "zh": "一半"
+    },
+    {
+      "en": "dozen",
+      "zh": "一打(12個"
+    },
+    {
+      "en": "first",
+      "zh": "第一"
+    },
+    {
+      "en": "second",
+      "zh": "第二"
+    },
+    {
+      "en": "third",
+      "zh": "第三"
+    },
+    {
+      "en": "fourth",
+      "zh": "第四"
+    },
+    {
+      "en": "fifth",
+      "zh": "第五"
+    },
+    {
+      "en": "sixth",
+      "zh": "第六"
+    },
+    {
+      "en": "seventh",
+      "zh": "第七"
+    },
+    {
+      "en": "eighth",
+      "zh": "第八"
+    },
+    {
+      "en": "ninth",
+      "zh": "第九"
+    },
+    {
+      "en": "tenth",
+      "zh": "第十"
+    },
+    {
+      "en": "last",
+      "zh": "最後的"
+    },
+    {
+      "en": "zero",
+      "zh": "零"
+    },
+    {
+      "en": "plus",
+      "zh": "加"
+    },
+    {
+      "en": "minus",
+      "zh": "減"
+    },
+    {
+      "en": "add",
+      "zh": "相加；增加"
+    },
+    {
+      "en": "equal",
+      "zh": "等於"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個詞的意思是 'first'?",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "fourth"
+        ],
+        "ans": "first"
+      },
+      {
+        "q": "以下哪個詞的意思是 'second'?",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "fifth"
+        ],
+        "ans": "second"
+      },
+      {
+        "q": "以下哪個詞的意思是 'third'?",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "sixth"
+        ],
+        "ans": "third"
+      },
+      {
+        "q": "以下哪個詞的意思是 'fourth'?",
+        "opts": [
+          "first",
+          "second",
+          "fourth",
+          "seventh"
+        ],
+        "ans": "fourth"
+      },
+      {
+        "q": "以下哪個詞的意思是 'fifth'?",
+        "opts": [
+          "third",
+          "fourth",
+          "fifth",
+          "eighth"
+        ],
+        "ans": "fifth"
+      },
+      {
+        "q": "以下哪個詞的意思是 'half'?",
+        "opts": [
+          "half",
+          "dozen",
+          "zero",
+          "plus"
+        ],
+        "ans": "half"
+      },
+      {
+        "q": "以下哪個詞的意思是 'dozen'?",
+        "opts": [
+          "dozen",
+          "half",
+          "minus",
+          "equal"
+        ],
+        "ans": "dozen"
+      },
+      {
+        "q": "以下哪個詞的意思是 'zero'?",
+        "opts": [
+          "zero",
+          "plus",
+          "minus",
+          "add"
+        ],
+        "ans": "zero"
+      },
+      {
+        "q": "以下哪個詞的意思是 'plus'?",
+        "opts": [
+          "plus",
+          "minus",
+          "add",
+          "equal"
+        ],
+        "ans": "plus"
+      },
+      {
+        "q": "以下哪個詞的意思是 'minus'?",
+        "opts": [
+          "minus",
+          "plus",
+          "add",
+          "equal"
+        ],
+        "ans": "minus"
+      },
+      {
+        "q": "哪個詞可以表示 '加'?",
+        "opts": [
+          "plus",
+          "minus",
+          "half",
+          "dozen"
+        ],
+        "ans": "plus"
+      },
+      {
+        "q": "哪個詞可以表示 '減'?",
+        "opts": [
+          "minus",
+          "plus",
+          "equal",
+          "count"
+        ],
+        "ans": "minus"
+      },
+      {
+        "q": "哪個詞可以表示 '等於'?",
+        "opts": [
+          "equal",
+          "plus",
+          "minus",
+          "half"
+        ],
+        "ans": "equal"
+      },
+      {
+        "q": "哪個詞可以表示 '零'?",
+        "opts": [
+          "zero",
+          "half",
+          "dozen",
+          "last"
+        ],
+        "ans": "zero"
+      },
+      {
+        "q": "哪個詞可以表示 '十二'?",
+        "opts": [
+          "dozen",
+          "half",
+          "zero",
+          "plus"
+        ],
+        "ans": "dozen"
+      },
+      {
+        "q": "哪個詞可以表示 '一半'?",
+        "opts": [
+          "half",
+          "dozen",
+          "zero",
+          "plus"
+        ],
+        "ans": "half"
+      },
+      {
+        "q": "哪個詞可以表示 '第一'?",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "fourth"
+        ],
+        "ans": "first"
+      },
+      {
+        "q": "哪個詞可以表示 '第二'?",
+        "opts": [
+          "second",
+          "first",
+          "third",
+          "fourth"
+        ],
+        "ans": "second"
+      },
+      {
+        "q": "哪個詞可以表示 '第三'?",
+        "opts": [
+          "third",
+          "first",
+          "second",
+          "fourth"
+        ],
+        "ans": "third"
+      },
+      {
+        "q": "哪個詞可以表示 '最後'?",
+        "opts": [
+          "last",
+          "first",
+          "second",
+          "third"
+        ],
+        "ans": "last"
+      },
+      {
+        "q": "小華今年七歲，問他多大？",
+        "opts": [
+          "six",
+          "seven",
+          "eight",
+          "nine"
+        ],
+        "ans": "seven"
+      },
+      {
+        "q": "小美有十二支鉛筆，她送給朋友三支，還剩多少？",
+        "opts": [
+          "nine",
+          "ten",
+          "eleven",
+          "twelve"
+        ],
+        "ans": "nine"
+      },
+      {
+        "q": "教室裡有十五張桌子，老師又加了五張，現在共有多少張？",
+        "opts": [
+          "ten",
+          "fifteen",
+          "twenty",
+          "twenty-five"
+        ],
+        "ans": "twenty"
+      },
+      {
+        "q": "一打是多少？",
+        "opts": [
+          "six",
+          "seven",
+          "eight",
+          "twelve"
+        ],
+        "ans": "twelve"
+      },
+      {
+        "q": "零加零等於多少？",
+        "opts": [
+          "zero",
+          "one",
+          "two",
+          "three"
+        ],
+        "ans": "zero"
+      },
+      {
+        "q": "一半的十等於多少？",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "five"
+      },
+      {
+        "q": "第三個學生排在第幾位？",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "fourth"
+        ],
+        "ans": "third"
+      },
+      {
+        "q": "最後一名是第幾名？",
+        "opts": [
+          "first",
+          "second",
+          "third",
+          "last"
+        ],
+        "ans": "last"
+      },
+      {
+        "q": "第五加第六等於第幾？",
+        "opts": [
+          "tenth",
+          "eleventh",
+          "twelfth",
+          "thirteenth"
+        ],
+        "ans": "eleventh"
+      },
+      {
+        "q": "第九減第四等於第幾？",
+        "opts": [
+          "fourth",
+          "fifth",
+          "sixth",
+          "seventh"
+        ],
+        "ans": "fifth"
+      }
+    ],
+    "fill": [
+      {
+        "q": "How ____ are you?（你幾歲？）",
+        "ans": "old"
+      },
+      {
+        "q": "I have a ____.（我有一打。）",
+        "ans": "dozen"
+      },
+      {
+        "q": "He is ____.（他是第一。）",
+        "ans": "first"
+      },
+      {
+        "q": "She is ____.（她是第二。）",
+        "ans": "second"
+      },
+      {
+        "q": "Can you ____ the books?（你能數這些書嗎？）",
+        "ans": "count"
+      },
+      {
+        "q": "What is the ____ ?（數量是多少？）",
+        "ans": "number"
+      },
+      {
+        "q": "Zero ____ five equals five.（零加五等於五。）",
+        "ans": "plus"
+      },
+      {
+        "q": "Ten ____ two equals eight.（十減二等於八。）",
+        "ans": "minus"
+      },
+      {
+        "q": "If you ____ three and four, you get seven.（如果你把三和四____，你會得到七。）",
+        "ans": "add"
+      },
+      {
+        "q": "This is the ____ chapter.（這是最後一章。）",
+        "ans": "last"
+      }
+    ],
+    "translate": [
+      {
+        "q": "你幾歲？",
+        "ans": "How old are you?"
+      },
+      {
+        "q": "我有一打。",
+        "ans": "I have a dozen."
+      },
+      {
+        "q": "他是第一。",
+        "ans": "He is first."
+      },
+      {
+        "q": "她是第二。",
+        "ans": "She is second."
+      },
+      {
+        "q": "你能數這些嗎？",
+        "ans": "Can you count them?"
+      },
+      {
+        "q": "數量是多少？",
+        "ans": "What is the number?"
+      },
+      {
+        "q": "零加五等於五。",
+        "ans": "Zero plus five equals five."
+      },
+      {
+        "q": "十減二等於八。",
+        "ans": "Ten minus two equals eight."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "How / old / you / are / ?",
+        "ans": "How old are you?"
+      },
+      {
+        "q": "a / dozen / have / I / .",
+        "ans": "I have a dozen."
+      },
+      {
+        "q": "is / first / . / He",
+        "ans": "He is first."
+      },
+      {
+        "q": ". / She / is / second",
+        "ans": "She is second."
+      },
+      {
+        "q": "you / ? / count / Can / them",
+        "ans": "Can you count them?"
+      },
+      {
+        "q": "five / . / five / equals / plus / Zero",
+        "ans": "Zero plus five equals five."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

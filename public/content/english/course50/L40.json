@@ -1,0 +1,459 @@
+{
+  "title_en": "Sports Day Fun",
+  "title_zh": "運動日的樂趣",
+  "grammar": "本課學習 I like + V-ing 以及 favourite 的用法。",
+  "intro_zh": "在這一課裡，我們將學習用 I like + V-ing 描述自己喜歡做的事情，並練習用 favourite 說出最喜歡的運動或嗜好。透過閱讀運動日的小故事，學生能看到不同運動的英文單字，並練習用句子表達興趣與感受。",
+  "can_do": [
+    "能用 I like + V-ing 說出自己喜歡的活動",
+    "能用 favourite 描述自己最喜歡的運動",
+    "能閱讀短文並回答關於運動與嗜好的問題"
+  ],
+  "reading": {
+    "title_en": "Sports Day Story",
+    "title_zh": "運動日的故事",
+    "sentences": [
+      {
+        "en": "We bought a ticket and found a good seat to watch the games.",
+        "zh": "我們買了票，找到一個好的座位觀看比賽。"
+      },
+      {
+        "en": "First, we saw a magic show with a funny song and lots of noise.",
+        "zh": "首先，我們看了一場帶有有趣歌曲和很多噪音的魔術表演。"
+      },
+      {
+        "en": "The magician told a short story while playing with a bright toy.",
+        "zh": "魔術師邊玩著亮色的玩具，邊講了一個短故事。"
+      },
+      {
+        "en": "After the show, many students felt interested in trying soccer.",
+        "zh": "表演結束後，很多學生對踢足球感到感興趣。"
+      },
+      {
+        "en": "We ran to the field, kicked the ball fast, and tried to win the game.",
+        "zh": "我們跑到場地，快速踢球，嘗試贏得比賽。"
+      },
+      {
+        "en": "Some friends like to play badminton and volleyball, and their laughter was loud.",
+        "zh": "有些朋友喜歡打羽毛球和排球，他們的笑聲很大聲。"
+      },
+      {
+        "en": "Playing dodge ball was interesting because we had to dodge and throw quickly.",
+        "zh": "玩躲避球很有趣，因為我們必須快速躲閃和投擲。"
+      },
+      {
+        "en": "At the end, our team did not win, but we did not lose our smile.",
+        "zh": "最後，我們的隊伍沒有贏，但我們沒有失去笑容。"
+      },
+      {
+        "en": "We all agreed that Sports Day was exciting, interesting, and full of fun.",
+        "zh": "我們都同意運動日很刺激、很有趣，而且充滿樂趣。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I like + V-ing 的用法",
+      "explain_zh": "說明我喜歡做某件事的結構，動詞要加 -ing。",
+      "table": [
+        [
+          "主語",
+          "like",
+          "V-ing 形式",
+          "中文意思"
+        ],
+        [
+          "I",
+          "like",
+          "playing soccer",
+          "我喜歡踢足球"
+        ],
+        [
+          "She",
+          "like",
+          "reading stories",
+          "她喜歡看故事"
+        ],
+        [
+          "We",
+          "like",
+          "watching movies",
+          "我們喜歡看電影"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② favourite 的用法",
+      "explain_zh": "用 favourite 來說明最喜歡的事物，可作形容詞放在名詞前，或用 My favourite ... is ... 結構。",
+      "examples": [
+        {
+          "en": "My favourite sport is soccer.",
+          "zh": "我最喜歡的運動是足球。"
+        },
+        {
+          "en": "Her favourite song is a pop song.",
+          "zh": "她最喜歡的歌曲是流行歌曲。"
+        },
+        {
+          "en": "Our favourite hobby is drawing pictures.",
+          "zh": "我們最喜歡的嗜好是畫畫。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "課後聊聊嗜好",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Hi, Mike! What do you like doing after school?",
+        "zh": "嗨，Mike！你放學後喜歡做什麼？"
+      },
+      {
+        "sp": "Mike",
+        "en": "I like playing soccer and badminton.",
+        "zh": "我喜歡踢足球和打羽毛球。"
+      },
+      {
+        "sp": "Anna",
+        "en": "My favourite sport is volleyball. It's exciting!",
+        "zh": "我最喜歡的運動是排球，很刺激！"
+      },
+      {
+        "sp": "Mike",
+        "en": "Do you like watching games on TV?",
+        "zh": "你喜歡在電視上看比賽嗎？"
+      },
+      {
+        "sp": "Anna",
+        "en": "Yes, I like watching soccer matches. They are interesting.",
+        "zh": "是的，我喜歡看足球賽，很有趣。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I like playing badminton.",
+      "zh": "我喜歡打羽毛球。"
+    },
+    {
+      "en": "She likes drawing pictures.",
+      "zh": "她喜歡畫畫。"
+    },
+    {
+      "en": "My favourite sport is soccer.",
+      "zh": "我最喜歡的運動是足球。"
+    },
+    {
+      "en": "His favourite song is a pop song.",
+      "zh": "他最喜歡的歌曲是流行歌曲。"
+    },
+    {
+      "en": "We like watching movies together.",
+      "zh": "我們喜歡一起看電影。"
+    },
+    {
+      "en": "They like running in the park.",
+      "zh": "他們喜歡在公園跑步。"
+    },
+    {
+      "en": "My favourite hobby is reading stories.",
+      "zh": "我最喜歡的嗜好是看故事。"
+    },
+    {
+      "en": "Do you like playing dodge ball?",
+      "zh": "你喜歡玩躲避球嗎？"
+    }
+  ],
+  "no": 40,
+  "theme": "Sports & Hobbies",
+  "theme_zh": "運動與嗜好",
+  "words": [
+    {
+      "en": "magic",
+      "zh": "魔術"
+    },
+    {
+      "en": "seat",
+      "zh": "座位"
+    },
+    {
+      "en": "song",
+      "zh": "歌曲"
+    },
+    {
+      "en": "noise",
+      "zh": "噪音"
+    },
+    {
+      "en": "story",
+      "zh": "故事"
+    },
+    {
+      "en": "interested",
+      "zh": "對…感興趣"
+    },
+    {
+      "en": "ticket",
+      "zh": "票"
+    },
+    {
+      "en": "toy",
+      "zh": "玩具"
+    },
+    {
+      "en": "soccer",
+      "zh": "足球"
+    },
+    {
+      "en": "badminton",
+      "zh": "羽毛球"
+    },
+    {
+      "en": "dodge ball",
+      "zh": "躲避球"
+    },
+    {
+      "en": "volleyball",
+      "zh": "排球"
+    },
+    {
+      "en": "play",
+      "zh": "玩"
+    },
+    {
+      "en": "run",
+      "zh": "跑步"
+    },
+    {
+      "en": "exciting",
+      "zh": "刺激的"
+    },
+    {
+      "en": "interesting",
+      "zh": "有趣的"
+    },
+    {
+      "en": "fast",
+      "zh": "快速"
+    },
+    {
+      "en": "loud",
+      "zh": "大聲的"
+    },
+    {
+      "en": "win",
+      "zh": "成功"
+    },
+    {
+      "en": "lose",
+      "zh": "失去"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個英文是「魔術」的意思？",
+        "opts": [
+          "magic",
+          "seat",
+          "song",
+          "noise"
+        ],
+        "ans": "magic"
+      },
+      {
+        "q": "以下哪個中文是 ticket 的意思？",
+        "opts": [
+          "魔術",
+          "座位",
+          "票",
+          "歌曲"
+        ],
+        "ans": "票"
+      },
+      {
+        "q": "我喜歡打排球。",
+        "opts": [
+          "I like playing volleyball",
+          "I like volleyball",
+          "I like playing soccer",
+          "I like soccer"
+        ],
+        "ans": "I like playing volleyball"
+      },
+      {
+        "q": "我的最愛是故事。",
+        "opts": [
+          "My favourite is story",
+          "My favourite is magic",
+          "My favourite is song",
+          "My favourite is noise"
+        ],
+        "ans": "My favourite is story"
+      },
+      {
+        "q": "請選擇正確的詞形填入空格： I like ______ soccer。",
+        "opts": [
+          "playing",
+          "play",
+          "played",
+          "plays"
+        ],
+        "ans": "playing"
+      },
+      {
+        "q": "請選擇正確的詞填入空格： 我的最愛是______。",
+        "opts": [
+          "song",
+          "story",
+          "ticket",
+          "toy"
+        ],
+        "ans": "song"
+      },
+      {
+        "q": "請選擇正確的詞填入空格： 這部電影是一個______。",
+        "opts": [
+          "story",
+          "ticket",
+          "toy",
+          "noise"
+        ],
+        "ans": "story"
+      },
+      {
+        "q": "看圖：孩子在踢足球，笑得很開心。哪句話最適合描述他的感受？",
+        "opts": [
+          "I like play soccer",
+          "I like playing soccer",
+          "I like plays soccer",
+          "I like played soccer"
+        ],
+        "ans": "I like playing soccer"
+      },
+      {
+        "q": "我喜歡聽音樂，尤其是鋼琴曲。我的最愛是______。",
+        "opts": [
+          "magic",
+          "seat",
+          "song",
+          "story"
+        ],
+        "ans": "song"
+      },
+      {
+        "q": "看圖：孩子在跑步，跑得很快，很開心。哪句話正確描述他的喜好？",
+        "opts": [
+          "I like run fast",
+          "I like runs fast",
+          "I like running fast",
+          "I like ran fast"
+        ],
+        "ans": "I like running fast"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I like ____.（我喜歡足球）",
+        "ans": "soccer"
+      },
+      {
+        "q": "I like ____.（我喜歡羽毛球）",
+        "ans": "badminton"
+      },
+      {
+        "q": "I like ____.（我喜歡排球）",
+        "ans": "volleyball"
+      },
+      {
+        "q": "I like ____.（我喜歡魔術）",
+        "ans": "magic"
+      },
+      {
+        "q": "I like ____.（我喜歡座位）",
+        "ans": "seat"
+      },
+      {
+        "q": "I like ____.（我喜歡歌曲）",
+        "ans": "song"
+      },
+      {
+        "q": "I like ____.（我喜歡噪音）",
+        "ans": "noise"
+      },
+      {
+        "q": "I like ____.（我喜歡故事）",
+        "ans": "story"
+      },
+      {
+        "q": "I like ____.（我喜歡票）",
+        "ans": "ticket"
+      },
+      {
+        "q": "I like ____.（我喜歡玩具）",
+        "ans": "toy"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我喜歡足球。",
+        "ans": "I like soccer."
+      },
+      {
+        "q": "我喜歡羽毛球。",
+        "ans": "I like badminton."
+      },
+      {
+        "q": "我喜歡排球。",
+        "ans": "I like volleyball."
+      },
+      {
+        "q": "我喜歡魔術。",
+        "ans": "I like magic."
+      },
+      {
+        "q": "我喜歡座位。",
+        "ans": "I like a seat."
+      },
+      {
+        "q": "我喜歡歌曲。",
+        "ans": "I like a song."
+      },
+      {
+        "q": "我喜歡噪音。",
+        "ans": "I like noise."
+      },
+      {
+        "q": "我喜歡故事。",
+        "ans": "I like a story."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "like / I / soccer / .",
+        "ans": "I like soccer."
+      },
+      {
+        "q": "badminton / We / . / like",
+        "ans": "We like badminton."
+      },
+      {
+        "q": "They / volleyball / . / like",
+        "ans": "They like volleyball."
+      },
+      {
+        "q": "like / magic / I / .",
+        "ans": "I like magic."
+      },
+      {
+        "q": ". / seat / a / like / I",
+        "ans": "I like a seat."
+      },
+      {
+        "q": ". / ticket / a / like / We",
+        "ans": "We like a ticket."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

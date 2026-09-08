@@ -1,0 +1,468 @@
+{
+  "title_en": "Exploring World Festivals",
+  "title_zh": "走遍世界的節慶",
+  "grammar": "學習用 How do you go…? by bus 詢問交通方式，並初探過去式動詞。",
+  "intro_zh": "本課透過 Lily 的旅行故事，介紹各國節慶如中國新年、端午節、中秋節、萬聖節、聖誕節等，練習詢問交通方式並初探過去式動詞，讓學生能描述自己去過的地方和參與的活動。",
+  "can_do": [
+    "能用 How do you go…? by bus 詢問朋友的交通方式。",
+    "能用過去式說明自己去過的國家和參與的節慶。",
+    "能說出至少五個國家的名稱和對應的節慶。"
+  ],
+  "reading": {
+    "title_en": "Lily's Festival Trip",
+    "title_zh": "莉莉的節慶之旅",
+    "sentences": [
+      {
+        "en": "Lily loves to travel and learn about festivals around the world.",
+        "zh": "莉莉喜歡旅行，並學習世界各地的節慶。"
+      },
+      {
+        "en": "Last year she went to Malaysia to celebrate Chinese New Year and got a red envelope.",
+        "zh": "去年她去馬來西亞慶祝中國新年，並收到了紅包。"
+      },
+      {
+        "en": "In Malaysia she watched a Dragon Boat Festival race and ate sweet rice dumplings.",
+        "zh": "在馬來西亞，她觀看了端午節賽艇，並吃了甜甜的糯米糰。"
+      },
+      {
+        "en": "Then she flew to Canada to see the colourful autumn leaves and celebrate Halloween.",
+        "zh": "之後她飛往加拿大，欣賞彩色的秋葉，並慶祝萬聖節。"
+      },
+      {
+        "en": "She carved a pumpkin and wore a funny costume.",
+        "zh": "她雕刻南瓜，並穿上有趣的服裝。"
+      },
+      {
+        "en": "After Canada, Lily visited England and joined a Christmas market.",
+        "zh": "離開加拿大後，莉莉去英國參加了聖誕市場。"
+      },
+      {
+        "en": "She met Santa Claus and received a present wrapped in shiny paper.",
+        "zh": "她遇見了聖誕老人，收到了用閃亮紙包裝的禮物。"
+      },
+      {
+        "en": "Next, she traveled to France and enjoyed the Moon Festival with moon cake.",
+        "zh": "接著她前往法國，享用中秋節的月餅。"
+      },
+      {
+        "en": "In Australia she saw the Great Barrier Reef and bought a small gift for her brother.",
+        "zh": "在澳洲，她看到了大堡礁，並為弟弟買了一份小禮物。"
+      },
+      {
+        "en": "In India she joined a Diwali celebration, and in Germany she enjoyed Oktoberfest, practicing past simple to say 'I went by bus' and 'I saw many festivals'.",
+        "zh": "在印度，她參與了迪瓦利節慶；在德國，她享受了啤酒節，並練習過去式說：我搭巴士去的，我看到了許多節慶。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① How do you go…? by bus",
+      "explain_zh": "用來詢問前往某地的交通方式，答案通常用 by + 交通工具。",
+      "table": [
+        [
+          "問句",
+          "答案",
+          "例句"
+        ],
+        [
+          "How do you go to Malaysia?",
+          "I go by bus.",
+          "I go to Malaysia by bus."
+        ],
+        [
+          "How do you go to Canada?",
+          "She goes by bus.",
+          "She goes to Canada by bus."
+        ],
+        [
+          "How do you go to Australia?",
+          "We go by bus.",
+          "We go to Australia by bus."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 過去式初探（規則動詞）",
+      "explain_zh": "規則動詞在過去式加 -ed，表示已經發生的事。",
+      "examples": [
+        {
+          "en": "Last year we visited England.",
+          "zh": "去年我們去英國參觀了。"
+        },
+        {
+          "en": "They celebrated Chinese New Year with red envelopes.",
+          "zh": "他們用紅包慶祝中國新年。"
+        },
+        {
+          "en": "She gave me a gift for my birthday.",
+          "zh": "她為我的生日送了我一份禮物。"
+        },
+        {
+          "en": "He ate moon cake at the Moon Festival.",
+          "zh": "他在中秋節吃了月餅。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "規劃去台灣的節慶",
+    "lines": [
+      {
+        "sp": "Amy",
+        "en": "How do you go to the Dragon Boat Festival?",
+        "zh": "你怎麼去端午節？"
+      },
+      {
+        "sp": "Jack",
+        "en": "I go by bus.",
+        "zh": "我搭公車去。"
+      },
+      {
+        "sp": "Amy",
+        "en": "Did you go there last year?",
+        "zh": "你去年去過嗎？"
+      },
+      {
+        "sp": "Jack",
+        "en": "Yes, I went by bus and I celebrated with my family.",
+        "zh": "是的，我搭公車去，和家人一起慶祝。"
+      },
+      {
+        "sp": "Amy",
+        "en": "What did you eat?",
+        "zh": "你吃了什麼？"
+      },
+      {
+        "sp": "Jack",
+        "en": "I ate zongzi and got a red envelope.",
+        "zh": "我吃了粽子，還收到了紅包。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "How do you go to Canada? I go by bus.",
+      "zh": "你怎麼去加拿大？我搭公車去。"
+    },
+    {
+      "en": "She goes to Australia by bus.",
+      "zh": "她搭公車去澳洲。"
+    },
+    {
+      "en": "Last year, we went to England by bus.",
+      "zh": "去年我們搭公車去英國。"
+    },
+    {
+      "en": "They celebrated Christmas in France.",
+      "zh": "他們在法國慶祝聖誕節。"
+    },
+    {
+      "en": "He visited India and got a gift.",
+      "zh": "他去印度參觀，並收到了禮物。"
+    },
+    {
+      "en": "We ate moon cake during the Moon Festival.",
+      "zh": "我們在中秋節吃了月餅。"
+    },
+    {
+      "en": "Did you go to Germany by bus last summer?",
+      "zh": "你去年夏天有沒有搭公車去德國？"
+    },
+    {
+      "en": "She gave me a present for Halloween.",
+      "zh": "她為萬聖節給我了一份禮物。"
+    }
+  ],
+  "no": 50,
+  "theme": "Travel, Countries & Festivals",
+  "theme_zh": "旅行‧國家與節慶",
+  "words": [
+    {
+      "en": "Malaysia",
+      "zh": "馬來西亞"
+    },
+    {
+      "en": "Canada",
+      "zh": "加拿大"
+    },
+    {
+      "en": "Australia",
+      "zh": "澳洲"
+    },
+    {
+      "en": "England",
+      "zh": "英國"
+    },
+    {
+      "en": "France",
+      "zh": "法國"
+    },
+    {
+      "en": "Germany",
+      "zh": "德國"
+    },
+    {
+      "en": "India",
+      "zh": "印度"
+    },
+    {
+      "en": "celebrate",
+      "zh": "慶祝"
+    },
+    {
+      "en": "festival",
+      "zh": "節慶"
+    },
+    {
+      "en": "gift",
+      "zh": "禮物"
+    },
+    {
+      "en": "Chinese New Year",
+      "zh": "中國新年"
+    },
+    {
+      "en": "red envelope",
+      "zh": "紅包"
+    },
+    {
+      "en": "Dragon Boat Festival",
+      "zh": "端午節"
+    },
+    {
+      "en": "Moon Festival",
+      "zh": "中秋節"
+    },
+    {
+      "en": "moon cake",
+      "zh": "月餅"
+    },
+    {
+      "en": "Halloween",
+      "zh": "萬聖節"
+    },
+    {
+      "en": "pumpkin",
+      "zh": "南瓜"
+    },
+    {
+      "en": "Christmas",
+      "zh": "聖誕節"
+    },
+    {
+      "en": "Santa Claus",
+      "zh": "聖誕老人"
+    },
+    {
+      "en": "present",
+      "zh": "禮物"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "中秋節的傳統食物是什麼？",
+        "opts": [
+          "moon cake",
+          "red envelope",
+          "pumpkin",
+          "Santa Claus"
+        ],
+        "ans": "moon cake"
+      },
+      {
+        "q": "聖誕節常見的人物是誰？",
+        "opts": [
+          "Santa Claus",
+          "gift",
+          "present",
+          "moon cake"
+        ],
+        "ans": "Santa Claus"
+      },
+      {
+        "q": "哪個節日會發紅包？",
+        "opts": [
+          "Chinese New Year",
+          "Halloween",
+          "Christmas",
+          "Dragon Boat Festival"
+        ],
+        "ans": "Chinese New Year"
+      },
+      {
+        "q": "哪個國家不在歐洲？",
+        "opts": [
+          "France",
+          "Germany",
+          "India",
+          "England"
+        ],
+        "ans": "India"
+      },
+      {
+        "q": "How do you go to Malaysia? by ___.",
+        "opts": [
+          "bus",
+          "celebrate",
+          "festival",
+          "gift"
+        ],
+        "ans": "bus"
+      },
+      {
+        "q": "Yesterday I ___ Chinese New Year.",
+        "opts": [
+          "celebrated",
+          "celebrate",
+          "celebrating",
+          "celebrates"
+        ],
+        "ans": "celebrated"
+      },
+      {
+        "q": "Last year we ___ the Moon Festival.",
+        "opts": [
+          "celebrated",
+          "celebrate",
+          "celebrating",
+          "celebrates"
+        ],
+        "ans": "celebrated"
+      },
+      {
+        "q": "哪個節日會吃月餅？",
+        "opts": [
+          "Moon Festival",
+          "Dragon Boat Festival",
+          "Halloween",
+          "Christmas"
+        ],
+        "ans": "Moon Festival"
+      },
+      {
+        "q": "Yesterday we ___ the Dragon Boat Festival.",
+        "opts": [
+          "celebrated",
+          "celebrate",
+          "celebrating",
+          "celebrates"
+        ],
+        "ans": "celebrated"
+      },
+      {
+        "q": "哪個國家在亞洲？",
+        "opts": [
+          "Malaysia",
+          "Canada",
+          "Australia",
+          "England"
+        ],
+        "ans": "Malaysia"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ by bus.（我搭公車）",
+        "ans": "go"
+      },
+      {
+        "q": "She ____ to Malaysia last year.（她去年去馬來西亞）",
+        "ans": "went"
+      },
+      {
+        "q": "We ____ the Dragon Boat Festival.（我們慶祝端午節）",
+        "ans": "celebrate"
+      },
+      {
+        "q": "They ____ red envelope during Chinese New Year.（他們在農曆新年發紅包）",
+        "ans": "give"
+      },
+      {
+        "q": "He ____ a moon cake at the Moon Festival.（他在中秋節吃月餅）",
+        "ans": "eats"
+      },
+      {
+        "q": "The children ____ pumpkin on Halloween.（孩子們喜歡萬聖節的南瓜）",
+        "ans": "like"
+      },
+      {
+        "q": "Santa Claus ____ present on Christmas.（聖誕老人在聖誕節送禮物）",
+        "ans": "gives"
+      },
+      {
+        "q": "We ____ at the festival.（我們在節日玩耍）",
+        "ans": "play"
+      },
+      {
+        "q": "She ____ a gift from her friend.（她從朋友那裡收到禮物）",
+        "ans": "gets"
+      },
+      {
+        "q": "They ____ in England last summer.（他們去年夏天在英國）",
+        "ans": "were"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我們會在中國新年發紅包。",
+        "ans": "We give red envelope during Chinese New Year."
+      },
+      {
+        "q": "他們會在中秋節吃月餅。",
+        "ans": "They eat moon cake during Moon Festival."
+      },
+      {
+        "q": "聖誕老人會在聖誕節送禮物。",
+        "ans": "Santa Claus gives present on Christmas."
+      },
+      {
+        "q": "我喜歡在萬聖節看南瓜。",
+        "ans": "I like pumpkin on Halloween."
+      },
+      {
+        "q": "我們去年去法國旅行。",
+        "ans": "We went to France last year."
+      },
+      {
+        "q": "他會在德國慶祝節日。",
+        "ans": "He celebrates festival in Germany."
+      },
+      {
+        "q": "印度有很多節日。",
+        "ans": "India has many festival."
+      },
+      {
+        "q": "我會在加拿大看雪。",
+        "ans": "I will go to Canada."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "I / . / by / go / bus / to / school",
+        "ans": "I go to school by bus."
+      },
+      {
+        "q": "went / Malaysia / last / year / She / to / .",
+        "ans": "She went to Malaysia last year."
+      },
+      {
+        "q": "Dragon / Boat / . / Festival / We / the / celebrate",
+        "ans": "We celebrate the Dragon Boat Festival."
+      },
+      {
+        "q": "eat / Festival / Moon / . / at / moon / They / cake",
+        "ans": "They eat moon cake at Moon Festival."
+      },
+      {
+        "q": ". / Claus / present / gives / on / Christmas / Santa",
+        "ans": "Santa Claus gives present on Christmas."
+      },
+      {
+        "q": ". / on / Halloween / pumpkin / like / I",
+        "ans": "I like pumpkin on Halloween."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

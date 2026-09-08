@@ -1,0 +1,615 @@
+{
+  "title_en": "Fun Hobbies",
+  "title_zh": "有趣的嗜好",
+  "grammar": "使用 I like + V-ing 表達喜歡做某件事，並用 favourite 描述最愛的活動。",
+  "intro_zh": "在這一課，我們將學習用英語說出自己喜歡的運動和嗜好，例如游泳、慢跑、畫畫等。透過簡單的句子結構 I like + V-ing，描述日常生活中常見的活動，並練習使用 favourite 來說出最愛的事物。",
+  "can_do": [
+    "能用 I like + V-ing 說出自己喜歡的活動。",
+    "能用 favourite 描述自己最愛的運動或嗜好。",
+    "能閱讀簡短的故事並找出其中的喜好與活動。"
+  ],
+  "reading": {
+    "title_en": "A Day of Fun",
+    "title_zh": "快樂的一天",
+    "sentences": [
+      {
+        "en": "Lily likes swimming in the pool every Saturday.",
+        "zh": "莉莉每個星期六都喜歡在泳池裡游泳。"
+      },
+      {
+        "en": "She also likes jogging around the park with her dog.",
+        "zh": "她也喜歡和她的狗一起在公園裡慢跑。"
+      },
+      {
+        "en": "In art class, she likes drawing pictures of animals and painting colorful scenes.",
+        "zh": "在美術課，她喜歡畫動物的圖片和繪畫彩色的場景。"
+      },
+      {
+        "en": "After school, she likes dancing to music and singing with her friends in a small band.",
+        "zh": "放學後，她喜歡隨著音樂跳舞，和朋友們一起在小樂隊裡唱歌。"
+      },
+      {
+        "en": "On weekends, she likes having a picnic with her family, bringing a basket of sandwiches and fruit.",
+        "zh": "週末，她喜歡和家人一起野餐，帶著一個裝有三明治和水果的籃子。"
+      },
+      {
+        "en": "They often fly a kite together in the open field.",
+        "zh": "他們常常在空曠的田野裡一起放風箏。"
+      },
+      {
+        "en": "Sometimes they go camping in the mountains and tell stories around the fire.",
+        "zh": "有時他們會去山上露營，圍著火堆講故事。"
+      },
+      {
+        "en": "Lily’s favorite hobby is reading comic books and watching movies at home.",
+        "zh": "莉莉最愛的嗜好是看漫畫書和在家看電影。"
+      },
+      {
+        "en": "She also enjoys playing games with her doll and putting on a little show for her parents.",
+        "zh": "她也喜歡和她的玩偶一起玩遊戲，並為父母表演一個小節目。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I like + V-ing 表達喜歡做某件事",
+      "explain_zh": "用 I like 加動詞原形加 ing 來說明你喜歡做的活動。",
+      "table": [
+        [
+          "主語",
+          "動詞",
+          "V-ing 活動",
+          "中文意思"
+        ],
+        [
+          "I",
+          "like",
+          "swimming",
+          "我喜歡游泳"
+        ],
+        [
+          "You",
+          "like",
+          "jogging",
+          "你喜歡慢跑"
+        ],
+        [
+          "He/She",
+          "like",
+          "drawing",
+          "他/她喜歡畫圖"
+        ],
+        [
+          "We",
+          "like",
+          "dancing",
+          "我們喜歡跳舞"
+        ],
+        [
+          "They",
+          "like",
+          "singing",
+          "他們喜歡唱歌"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② favourite 描述最愛的活動",
+      "explain_zh": "用 favourite 作形容詞，放在名詞前面表示「最愛的」。",
+      "examples": [
+        {
+          "en": "My favorite hobby is drawing.",
+          "zh": "我最愛的嗜好是畫圖。"
+        },
+        {
+          "en": "Her favorite activity is picnics.",
+          "zh": "她最愛的活動是野餐。"
+        },
+        {
+          "en": "What is your favorite game?",
+          "zh": "你最愛的遊戲是什麼？"
+        },
+        {
+          "en": "They like their favorite band.",
+          "zh": "他們喜歡他們最愛的樂隊。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在課間談論嗜好",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "I like swimming and jogging.",
+        "zh": "我喜歡游泳和慢跑。"
+      },
+      {
+        "sp": "小華",
+        "en": "I like drawing pictures.",
+        "zh": "我喜歡畫圖。"
+      },
+      {
+        "sp": "小美",
+        "en": "My favorite hobby is dancing.",
+        "zh": "我最愛的嗜好是跳舞。"
+      },
+      {
+        "sp": "小明",
+        "en": "Do you like singing in a band?",
+        "zh": "你喜歡在樂隊裡唱歌嗎？"
+      },
+      {
+        "sp": "小華",
+        "en": "Yes, I like singing and I like picnics too.",
+        "zh": "是的，我喜歡唱歌，我也喜歡野餐。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I like swimming.",
+      "zh": "我喜歡游泳。"
+    },
+    {
+      "en": "You like jogging.",
+      "zh": "你喜歡慢跑。"
+    },
+    {
+      "en": "He likes drawing pictures.",
+      "zh": "他喜歡畫圖。"
+    },
+    {
+      "en": "We like dancing to music.",
+      "zh": "我們喜歡隨著音樂跳舞。"
+    },
+    {
+      "en": "They like singing in a band.",
+      "zh": "他們喜歡在樂隊裡唱歌。"
+    },
+    {
+      "en": "My favorite hobby is drawing.",
+      "zh": "我最愛的嗜好是畫圖。"
+    },
+    {
+      "en": "Her favorite activity is picnics.",
+      "zh": "她最愛的活動是野餐。"
+    },
+    {
+      "en": "What is your favorite game?",
+      "zh": "你最愛的遊戲是什麼？"
+    }
+  ],
+  "no": 39,
+  "theme": "Sports & Hobbies",
+  "theme_zh": "運動與嗜好",
+  "words": [
+    {
+      "en": "swim",
+      "zh": "游泳"
+    },
+    {
+      "en": "jog",
+      "zh": "慢跑"
+    },
+    {
+      "en": "art",
+      "zh": "藝術"
+    },
+    {
+      "en": "dance",
+      "zh": "跳舞"
+    },
+    {
+      "en": "draw",
+      "zh": "畫圖"
+    },
+    {
+      "en": "movie",
+      "zh": "電影"
+    },
+    {
+      "en": "music",
+      "zh": "音樂"
+    },
+    {
+      "en": "paint",
+      "zh": "繪畫"
+    },
+    {
+      "en": "picture",
+      "zh": "圖片"
+    },
+    {
+      "en": "picnic",
+      "zh": "野餐"
+    },
+    {
+      "en": "basket",
+      "zh": "籃"
+    },
+    {
+      "en": "show",
+      "zh": "表演"
+    },
+    {
+      "en": "sing",
+      "zh": "唱歌"
+    },
+    {
+      "en": "band",
+      "zh": "樂隊"
+    },
+    {
+      "en": "camp",
+      "zh": "露營"
+    },
+    {
+      "en": "comic",
+      "zh": "漫畫"
+    },
+    {
+      "en": "favorite",
+      "zh": "最愛的"
+    },
+    {
+      "en": "doll",
+      "zh": "玩偶"
+    },
+    {
+      "en": "game",
+      "zh": "遊戲"
+    },
+    {
+      "en": "kite",
+      "zh": "風箏"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "下列哪個英文單字的意思是「游泳」？",
+        "opts": [
+          "swim",
+          "jog",
+          "art",
+          "dance"
+        ],
+        "ans": "swim"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「慢跑」？",
+        "opts": [
+          "jog",
+          "swim",
+          "art",
+          "dance"
+        ],
+        "ans": "jog"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「藝術」？",
+        "opts": [
+          "art",
+          "swim",
+          "jog",
+          "dance"
+        ],
+        "ans": "art"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「跳舞」？",
+        "opts": [
+          "dance",
+          "swim",
+          "jog",
+          "art"
+        ],
+        "ans": "dance"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「畫畫」？",
+        "opts": [
+          "draw",
+          "paint",
+          "picture",
+          "music"
+        ],
+        "ans": "draw"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「電影」？",
+        "opts": [
+          "movie",
+          "music",
+          "picnic",
+          "camp"
+        ],
+        "ans": "movie"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「音樂」？",
+        "opts": [
+          "music",
+          "movie",
+          "show",
+          "band"
+        ],
+        "ans": "music"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「繪畫」？",
+        "opts": [
+          "paint",
+          "draw",
+          "picture",
+          "art"
+        ],
+        "ans": "paint"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「圖片」？",
+        "opts": [
+          "picture",
+          "paint",
+          "draw",
+          "art"
+        ],
+        "ans": "picture"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「野餐」？",
+        "opts": [
+          "picnic",
+          "camp",
+          "game",
+          "kite"
+        ],
+        "ans": "picnic"
+      },
+      {
+        "q": "I like ___.",
+        "opts": [
+          "swim",
+          "jog",
+          "dance",
+          "swimming"
+        ],
+        "ans": "swimming"
+      },
+      {
+        "q": "My favorite music is ___.",
+        "opts": [
+          "singing",
+          "dancing",
+          "painting",
+          "swimming"
+        ],
+        "ans": "singing"
+      },
+      {
+        "q": "My favorite show is ___.",
+        "opts": [
+          "dancing",
+          "singing",
+          "drawing",
+          "jogging"
+        ],
+        "ans": "dancing"
+      },
+      {
+        "q": "My favorite picture is ___.",
+        "opts": [
+          "drawing",
+          "singing",
+          "painting",
+          "jogging"
+        ],
+        "ans": "drawing"
+      },
+      {
+        "q": "下列哪個英文單字的意思是「最愛的」？",
+        "opts": [
+          "favorite",
+          "swim",
+          "jog",
+          "art"
+        ],
+        "ans": "favorite"
+      },
+      {
+        "q": "圖中顯示一個孩子在水裡划手腳，他在做什麼？",
+        "opts": [
+          "swim",
+          "jog",
+          "draw",
+          "picnic"
+        ],
+        "ans": "swim"
+      },
+      {
+        "q": "圖中顯示一個孩子在跑步機上跑步，他在做什麼？",
+        "opts": [
+          "jog",
+          "swim",
+          "dance",
+          "draw"
+        ],
+        "ans": "jog"
+      },
+      {
+        "q": "圖中顯示一個孩子在跳舞，他在做什麼？",
+        "opts": [
+          "dance",
+          "sing",
+          "paint",
+          "camp"
+        ],
+        "ans": "dance"
+      },
+      {
+        "q": "圖中顯示一個孩子在畫畫，他在做什麼？",
+        "opts": [
+          "draw",
+          "sing",
+          "swim",
+          "jog"
+        ],
+        "ans": "draw"
+      },
+      {
+        "q": "圖中顯示一個孩子在繪畫，他在做什麼？",
+        "opts": [
+          "paint",
+          "sing",
+          "dance",
+          "camp"
+        ],
+        "ans": "paint"
+      },
+      {
+        "q": "圖中顯示一個孩子在唱歌，他在做什麼？",
+        "opts": [
+          "sing",
+          "swim",
+          "jog",
+          "draw"
+        ],
+        "ans": "sing"
+      },
+      {
+        "q": "他正在看什麼？",
+        "opts": [
+          "movie",
+          "music",
+          "comic",
+          "picnic"
+        ],
+        "ans": "movie"
+      },
+      {
+        "q": "他正在聽什麼？",
+        "opts": [
+          "music",
+          "movie",
+          "sing",
+          "dance"
+        ],
+        "ans": "music"
+      },
+      {
+        "q": "他正在玩什麼？",
+        "opts": [
+          "game",
+          "kite",
+          "doll",
+          "basket"
+        ],
+        "ans": "game"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I like ____ .（我喜歡游泳）",
+        "ans": "swimming"
+      },
+      {
+        "q": "I like ____ .（我喜歡慢跑）",
+        "ans": "jogging"
+      },
+      {
+        "q": "I like ____ .（我喜歡跳舞）",
+        "ans": "dancing"
+      },
+      {
+        "q": "I like ____ .（我喜歡畫畫）",
+        "ans": "drawing"
+      },
+      {
+        "q": "I like ____ .（我喜歡繪畫）",
+        "ans": "painting"
+      },
+      {
+        "q": "I like ____ .（我喜歡唱歌）",
+        "ans": "singing"
+      },
+      {
+        "q": "My favorite is ____ .（我最愛的是跳舞）",
+        "ans": "dancing"
+      },
+      {
+        "q": "My favorite is ____ .（我最愛的是唱歌）",
+        "ans": "singing"
+      },
+      {
+        "q": "My favorite is ____ .（我最愛的是畫畫）",
+        "ans": "drawing"
+      },
+      {
+        "q": "My favorite is ____ .（我最愛的是野餐）",
+        "ans": "picnic"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我喜歡游泳。",
+        "ans": "I like swimming."
+      },
+      {
+        "q": "我喜歡畫畫。",
+        "ans": "I like drawing."
+      },
+      {
+        "q": "我最愛的是跳舞。",
+        "ans": "My favorite is dancing."
+      },
+      {
+        "q": "我最愛的是唱歌。",
+        "ans": "My favorite is singing."
+      },
+      {
+        "q": "我喜歡音樂。",
+        "ans": "I like music."
+      },
+      {
+        "q": "我喜歡野餐。",
+        "ans": "I like picnic."
+      },
+      {
+        "q": "我喜歡畫畫和音樂。",
+        "ans": "I like drawing and music."
+      },
+      {
+        "q": "我最愛的是畫畫。",
+        "ans": "My favorite is drawing."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "I / swimming / . / like",
+        "ans": "I like swimming."
+      },
+      {
+        "q": "is / dancing / . / favorite / My",
+        "ans": "My favorite is dancing."
+      },
+      {
+        "q": "and / like / drawing / I / music / .",
+        "ans": "I like drawing and music."
+      },
+      {
+        "q": "like / I / . / picnic",
+        "ans": "I like picnic."
+      },
+      {
+        "q": "singing / . / like / I",
+        "ans": "I like singing."
+      },
+      {
+        "q": ". / favorite / picnic / My / is",
+        "ans": "My favorite is picnic."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

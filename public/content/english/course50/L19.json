@@ -1,0 +1,668 @@
+{
+  "title_en": "Drinks and Snacks",
+  "title_zh": "飲料水果小吃",
+  "grammar": "本課學習 Would you like…? 與 How much…? 的句型。",
+  "intro_zh": "在這一課，我們將學會用禮貌的方式詢問朋友想喝什麼飲料或想吃什麼水果與小吃，並練習詢問價格與數量。透過圖片與對話練習，讓學生能在日常生活中自然使用 Would you like…? 與 How much…? 。",
+  "can_do": [
+    "能用 Would you like…? 詢問對方想喝的飲料。",
+    "能用 How much…? 詢問水果或小吃的價格。",
+    "能正確說出至少十種水果與小吃的英文單字。"
+  ],
+  "reading": {
+    "title_en": "At the Fruit Stand",
+    "title_zh": "水果攤位",
+    "sentences": [
+      {
+        "en": "Today we go to the market to buy fruit and drinks.",
+        "zh": "今天我們去市場買水果和飲料。"
+      },
+      {
+        "en": "Mom asks, 'Would you like some apple juice or banana milk?'",
+        "zh": "媽媽問：『你想要蘋果汁還是香蕉牛奶？』"
+      },
+      {
+        "en": "I say, 'I would like a strawberry smoothie, please.'",
+        "zh": "我說：『我想要一杯草莓奶昔，請。』"
+      },
+      {
+        "en": "We also see a basket with grapes, guava, papaya, peach, kiwi, mango and pineapple.",
+        "zh": "我們還看到一籃子葡萄、芭樂、木瓜、水蜜桃、奇異果、芒果和鳳梨。"
+      },
+      {
+        "en": "There is a big watermelon on the table, and a bowl of tomato salad.",
+        "zh": "桌上有一個大西瓜，還有一碗番茄沙拉。"
+      },
+      {
+        "en": "Mom buys a lemon to make tea, and she needs a knife to cut it.",
+        "zh": "媽媽買了一個檸檬來泡茶，她需要一把刀來切它。"
+      },
+      {
+        "en": "At the snack stall, there is an oyster omelet served with chopsticks.",
+        "zh": "在小吃攤，有一個蚵仔煎，配著一雙筷子。"
+      },
+      {
+        "en": "I use a fork to eat the omelet, and a spoon for the soup.",
+        "zh": "我用叉子吃蚵仔煎，用湯匙喝湯。"
+      },
+      {
+        "en": "How much does the watermelon cost?",
+        "zh": "西瓜多少錢？"
+      },
+      {
+        "en": "The vendor says, 'It is fifty dollars each.'",
+        "zh": "攤販說：『每個五十元。』"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① Would you like…?",
+      "explain_zh": "用來詢問對方是否想要某物，後面接名詞或動詞原形。常見的回答有 Yes, please. 或 No, thank you.",
+      "table": [
+        [
+          "主語",
+          "Would you like + 名詞？",
+          "可能的回答"
+        ],
+        [
+          "你",
+          "Would you like an apple?",
+          "Yes, please. / No, thank you."
+        ],
+        [
+          "媽媽",
+          "Would you like some water?",
+          "Sure. / I’m fine."
+        ],
+        [
+          "朋友",
+          "Would you like to try this guava?",
+          "Sounds good! / Not now, thanks."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② How much…?",
+      "explain_zh": "用來詢問不可數名詞的數量或價格，後面接不可數名詞（如 water、juice）或直接問價格。",
+      "examples": [
+        {
+          "en": "How much water do you want?",
+          "zh": "你想要多少水？"
+        },
+        {
+          "en": "How much is this watermelon?",
+          "zh": "這個西瓜多少錢？"
+        },
+        {
+          "en": "How much juice did you drink?",
+          "zh": "你喝了多少果汁？"
+        },
+        {
+          "en": "How much does a bowl of oyster omelet cost?",
+          "zh": "一碗蚵仔煎要多少錢？"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在水果攤",
+    "lines": [
+      {
+        "sp": "媽媽",
+        "en": "Would you like some fruit, Mei?",
+        "zh": "媽媽：梅子，你想要一些水果嗎？"
+      },
+      {
+        "sp": "梅子",
+        "en": "Yes, please. How much is the mango?",
+        "zh": "梅子：好的，請給我。這個芒果多少錢？"
+      },
+      {
+        "sp": "攤販",
+        "en": "One mango is fifty dollars.",
+        "zh": "攤販：一個芒果五十元。"
+      },
+      {
+        "sp": "梅子",
+        "en": "I’ll take two mangoes and a banana.",
+        "zh": "梅子：我要兩個芒果和一根香蕉。"
+      },
+      {
+        "sp": "媽媽",
+        "en": "How much do I owe you?",
+        "zh": "媽媽：我欠你多少錢？"
+      },
+      {
+        "sp": "攤販",
+        "en": "One hundred and fifty dollars.",
+        "zh": "攤販：一百五十元。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Would you like an apple?",
+      "zh": "你想要一個蘋果嗎？"
+    },
+    {
+      "en": "How much is the pineapple?",
+      "zh": "這個鳳梨多少錢？"
+    },
+    {
+      "en": "I would like some strawberries, please.",
+      "zh": "我想要一些草莓，請給我。"
+    },
+    {
+      "en": "How much water do you drink every day?",
+      "zh": "你每天喝多少水？"
+    },
+    {
+      "en": "Would you like to try the oyster omelet?",
+      "zh": "你想嘗試一下蚵仔煎嗎？"
+    },
+    {
+      "en": "How much does a bowl of rice cost?",
+      "zh": "一碗飯多少錢？"
+    },
+    {
+      "en": "Can I have a fork and a spoon?",
+      "zh": "我可以要一把叉子和一個湯匙嗎？"
+    },
+    {
+      "en": "How much is a bunch of grapes?",
+      "zh": "一串葡萄多少錢？"
+    }
+  ],
+  "no": 19,
+  "theme": "Drinks, Fruits & Snacks",
+  "theme_zh": "飲料‧水果與小吃",
+  "words": [
+    {
+      "en": "fruit",
+      "zh": "水果"
+    },
+    {
+      "en": "apple(s)",
+      "zh": "蘋果"
+    },
+    {
+      "en": "banana(s)",
+      "zh": "香蕉"
+    },
+    {
+      "en": "lemon(s)",
+      "zh": "檸檬"
+    },
+    {
+      "en": "tomato(es)",
+      "zh": "番茄"
+    },
+    {
+      "en": "grape(s)",
+      "zh": "葡萄"
+    },
+    {
+      "en": "guava(s)",
+      "zh": "芭樂"
+    },
+    {
+      "en": "papaya(s)",
+      "zh": "木瓜"
+    },
+    {
+      "en": "peach(es)",
+      "zh": "水蜜桃"
+    },
+    {
+      "en": "strawberry",
+      "zh": "草莓"
+    },
+    {
+      "en": "watermelon(s)",
+      "zh": "西瓜"
+    },
+    {
+      "en": "pineapple(s)",
+      "zh": "鳳梨"
+    },
+    {
+      "en": "kiwi(s)",
+      "zh": "奇異果"
+    },
+    {
+      "en": "mango(es)",
+      "zh": "芒果"
+    },
+    {
+      "en": "knife",
+      "zh": "刀"
+    },
+    {
+      "en": "fork",
+      "zh": "叉子"
+    },
+    {
+      "en": "spoon",
+      "zh": "湯匙"
+    },
+    {
+      "en": "chopstick(s)",
+      "zh": "一雙筷子"
+    },
+    {
+      "en": "bowl",
+      "zh": "碗"
+    },
+    {
+      "en": "oyster omelet",
+      "zh": "蚵仔煎"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "水果",
+        "opts": [
+          "fruit",
+          "apple",
+          "banana",
+          "lemon"
+        ],
+        "ans": "fruit"
+      },
+      {
+        "q": "蘋果",
+        "opts": [
+          "apple",
+          "banana",
+          "grape",
+          "knife"
+        ],
+        "ans": "apple"
+      },
+      {
+        "q": "香蕉",
+        "opts": [
+          "banana",
+          "strawberry",
+          "watermelon",
+          "fork"
+        ],
+        "ans": "banana"
+      },
+      {
+        "q": "檸檬",
+        "opts": [
+          "lemon",
+          "peach",
+          "kiwi",
+          "spoon"
+        ],
+        "ans": "lemon"
+      },
+      {
+        "q": "番茄",
+        "opts": [
+          "tomato",
+          "mango",
+          "bowl",
+          "chopstick"
+        ],
+        "ans": "tomato"
+      },
+      {
+        "q": "葡萄",
+        "opts": [
+          "grape",
+          "guava",
+          "papaya",
+          "oyster omelet"
+        ],
+        "ans": "grape"
+      },
+      {
+        "q": "番石榴",
+        "opts": [
+          "guava",
+          "fruit",
+          "apple",
+          "kiwi"
+        ],
+        "ans": "guava"
+      },
+      {
+        "q": "木瓜",
+        "opts": [
+          "papaya",
+          "peach",
+          "strawberry",
+          "pineapple"
+        ],
+        "ans": "papaya"
+      },
+      {
+        "q": "桃子",
+        "opts": [
+          "peach",
+          "mango",
+          "watermelon",
+          "bowl"
+        ],
+        "ans": "peach"
+      },
+      {
+        "q": "草莓",
+        "opts": [
+          "strawberry",
+          "lemon",
+          "grape",
+          "fork"
+        ],
+        "ans": "strawberry"
+      },
+      {
+        "q": "Would you like an apple?",
+        "opts": [
+          "Yes, I would.",
+          "No, I would not.",
+          "I like apple.",
+          "I like apples."
+        ],
+        "ans": "Yes, I would."
+      },
+      {
+        "q": "Would you like bananas?",
+        "opts": [
+          "Yes, I would.",
+          "No, I would not.",
+          "I like bananas.",
+          "I like banana."
+        ],
+        "ans": "Yes, I would."
+      },
+      {
+        "q": "How much is the apple?",
+        "opts": [
+          "It is one apple.",
+          "It are one apple.",
+          "It is one apples.",
+          "It are one apples."
+        ],
+        "ans": "It is one apple."
+      },
+      {
+        "q": "How much are the bananas?",
+        "opts": [
+          "They are two bananas.",
+          "They is two bananas.",
+          "They are two banana.",
+          "They is two banana."
+        ],
+        "ans": "They are two bananas."
+      },
+      {
+        "q": "Would you like a knife?",
+        "opts": [
+          "Yes, I would.",
+          "No, I would not.",
+          "I like knife.",
+          "I like knives."
+        ],
+        "ans": "Yes, I would."
+      },
+      {
+        "q": "Would you like spoons?",
+        "opts": [
+          "Yes, I would.",
+          "No, I would not.",
+          "I like spoons.",
+          "I like spoon."
+        ],
+        "ans": "Yes, I would."
+      },
+      {
+        "q": "How much is the bowl?",
+        "opts": [
+          "It is one bowl.",
+          "It are one bowl.",
+          "It is one bowls.",
+          "It are one bowls."
+        ],
+        "ans": "It is one bowl."
+      },
+      {
+        "q": "How much are the bowls?",
+        "opts": [
+          "They are two bowls.",
+          "They is two bowls.",
+          "They are two bowl.",
+          "They is two bowl."
+        ],
+        "ans": "They are two bowls."
+      },
+      {
+        "q": "Would you like a watermelon?",
+        "opts": [
+          "Yes, I would.",
+          "No, I would not.",
+          "I like watermelon.",
+          "I like watermelons."
+        ],
+        "ans": "Yes, I would."
+      },
+      {
+        "q": "How much is the watermelon?",
+        "opts": [
+          "It is one watermelon.",
+          "It are one watermelon.",
+          "It is one watermelons.",
+          "It are one watermelons."
+        ],
+        "ans": "It is one watermelon."
+      },
+      {
+        "q": "Would you like apples?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a knife.",
+          "How much is it?"
+        ],
+        "ans": "Yes, please."
+      },
+      {
+        "q": "Would you like some bananas?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a spoon.",
+          "How much are they?"
+        ],
+        "ans": "Yes, please."
+      },
+      {
+        "q": "How much are the apples?",
+        "opts": [
+          "They are twenty dollars.",
+          "They are ten dollars.",
+          "I want apples.",
+          "I don't like apples."
+        ],
+        "ans": "They are twenty dollars."
+      },
+      {
+        "q": "Would you like knives?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a spoon.",
+          "How much is it?"
+        ],
+        "ans": "Yes, please."
+      },
+      {
+        "q": "How much is a bowl?",
+        "opts": [
+          "It is fifteen dollars.",
+          "It is five dollars.",
+          "I want a bowl.",
+          "I don't like bowls."
+        ],
+        "ans": "It is fifteen dollars."
+      },
+      {
+        "q": "Would you like a spoon?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a fork.",
+          "How much is it?"
+        ],
+        "ans": "Yes, please."
+      },
+      {
+        "q": "How much are bowls?",
+        "opts": [
+          "They are thirty dollars.",
+          "They are ten dollars.",
+          "I want bowls.",
+          "I don't like bowls."
+        ],
+        "ans": "They are thirty dollars."
+      },
+      {
+        "q": "Would you like watermelons?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a knife.",
+          "How much is it?"
+        ],
+        "ans": "Yes, please."
+      },
+      {
+        "q": "How much is a watermelon?",
+        "opts": [
+          "It is fifty dollars.",
+          "It is twenty dollars.",
+          "I want a watermelon.",
+          "I don't like watermelon."
+        ],
+        "ans": "It is fifty dollars."
+      },
+      {
+        "q": "Would you like fruit?",
+        "opts": [
+          "Yes, please.",
+          "No, thank you.",
+          "I want a spoon.",
+          "How much is it?"
+        ],
+        "ans": "Yes, please."
+      }
+    ],
+    "fill": [
+      {
+        "q": "Would you like ____ ? (你想要___嗎？)",
+        "ans": "apple"
+      },
+      {
+        "q": "Would you like ____ ? (你想要___嗎？)",
+        "ans": "banana"
+      },
+      {
+        "q": "Would you like ____ ? (你想要___嗎？)",
+        "ans": "grape"
+      },
+      {
+        "q": "Would you like ____ ? (你想要___嗎？)",
+        "ans": "mango"
+      },
+      {
+        "q": "Would you like ____ ? (你想要___嗎？)",
+        "ans": "strawberry"
+      },
+      {
+        "q": "How much ____ ? (你想要多少___？)",
+        "ans": "fruit"
+      },
+      {
+        "q": "How much ____ ? (你想要多少___？)",
+        "ans": "watermelon"
+      },
+      {
+        "q": "How much ____ ? (你想要多少___？)",
+        "ans": "pineapple"
+      },
+      {
+        "q": "How much ____ ? (你想要多少___？)",
+        "ans": "kiwi"
+      },
+      {
+        "q": "How much ____ ? (你想要多少___？)",
+        "ans": "guava"
+      }
+    ],
+    "translate": [
+      {
+        "q": "你想要蘋果嗎？",
+        "ans": "Would you like apples?"
+      },
+      {
+        "q": "你想要香蕉嗎？",
+        "ans": "Would you like bananas?"
+      },
+      {
+        "q": "你想要葡萄嗎？",
+        "ans": "Would you like grapes?"
+      },
+      {
+        "q": "你想要芒果嗎？",
+        "ans": "Would you like mangoes?"
+      },
+      {
+        "q": "你想要草莓嗎？",
+        "ans": "Would you like strawberries?"
+      },
+      {
+        "q": "你想要多少水果？",
+        "ans": "How much fruit?"
+      },
+      {
+        "q": "你想要多少西瓜？",
+        "ans": "How much watermelon?"
+      },
+      {
+        "q": "你想要多少鳳梨？",
+        "ans": "How much pineapple?"
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "you / apples / like / ? / Would",
+        "ans": "Would you like apples?"
+      },
+      {
+        "q": "Would / you / ? / like / bananas",
+        "ans": "Would you like bananas?"
+      },
+      {
+        "q": "Would / grapes / like / you / ?",
+        "ans": "Would you like grapes?"
+      },
+      {
+        "q": "? / fruit / much / How",
+        "ans": "How much fruit?"
+      },
+      {
+        "q": "? / How / much / watermelon",
+        "ans": "How much watermelon?"
+      },
+      {
+        "q": "? / How / much / pineapple",
+        "ans": "How much pineapple?"
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

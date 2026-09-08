@@ -1,0 +1,669 @@
+{
+  "title_en": "Food and Meals",
+  "title_zh": "食物與三餐的故事",
+  "grammar": "我們學習用 I like… 和 Do you like…? 來談論喜好，以及區分可數名詞與不可數名詞。",
+  "intro_zh": "本課繼續探索食物與三餐的話題，學生將練習說出自己喜歡或不喜歡的食物與飲料，並學會區分可數與不可數名詞，用正確的句型描述飢餓、口渴、吃飽等感受。",
+  "can_do": [
+    "能用 I like… 說出自己喜歡的食物或飲料",
+    "能用 Do you like…? 問同學的喜好",
+    "能區分可數與不可數名詞，正確使用 a/an、some 等"
+  ],
+  "reading": {
+    "title_en": "A Day of Meals",
+    "title_zh": "一天的三餐時光",
+    "sentences": [
+      {
+        "en": "Tom wakes up feeling hungry and thirsty.",
+        "zh": "湯姆醒來時感到飢餓和口渴。"
+      },
+      {
+        "en": "He drinks a glass of fresh water and feels better.",
+        "zh": "他喝了一杯新鮮的水，感覺好多了。"
+      },
+      {
+        "en": "For breakfast, he likes sweet corn and a cup of hot milk.",
+        "zh": "早餐時，他喜歡甜甜的玉米和一杯熱牛奶。"
+      },
+      {
+        "en": "He takes a bite of the corn and says it is delicious.",
+        "zh": "他咬了一口玉米，說很好吃。"
+      },
+      {
+        "en": "At school, he feels thirsty again and buys a bottle of coke from the vending machine.",
+        "zh": "在學校，他又感到口渴，從自動販賣機買了一瓶可口可樂。"
+      },
+      {
+        "en": "During lunch, he eats a potato salad and drinks some juice.",
+        "zh": "午餐時，他吃了一份馬鈴薯沙拉，並喝了一些果汁。"
+      },
+      {
+        "en": "The juice is fresh and sweet, and he feels full after eating.",
+        "zh": "果汁新鮮又甜，吃完後他感到吃飽了。"
+      },
+      {
+        "en": "In the afternoon, he feels a little hungry and has a cup of coffee.",
+        "zh": "下午，他稍微感到飢餓，喝了一杯咖啡。"
+      },
+      {
+        "en": "At dinner, his family shares hot tea and talks about their day.",
+        "zh": "晚餐時，全家一起喝熱茶，談論今天的事。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I like… 與可數/不可數名詞的搭配",
+      "explain_zh": "當我們用 I like... 來說喜歡的食物時，可數名詞要視單數或複數加上 a/an 或直接使用複數形；不可數名詞則可以直接說，或加上 some 來表示「一些」。",
+      "table": [
+        [
+          "名詞類型",
+          "例句 (I like...)",
+          "說明"
+        ],
+        [
+          "可數單數",
+          "I like an apple.",
+          "單數可數名詞前加 a/an"
+        ],
+        [
+          "可數複數",
+          "I like apples.",
+          "複數形直接使用，不加冠詞"
+        ],
+        [
+          "不可數",
+          "I like water.",
+          "不可數名詞直接使用"
+        ],
+        [
+          "不可數 (加 some)",
+          "I like some juice.",
+          "加 some 表示「一些」"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② Do you like…? 的問句與可數/不可數名詞",
+      "explain_zh": "用 Do you like...? 詢問對方喜好時，可數單數需加 a/an，可數複數直接用複數形，不可數名詞可以直接說或加 some。",
+      "examples": [
+        {
+          "en": "Do you like a sandwich?",
+          "zh": "你喜歡三明治嗎？"
+        },
+        {
+          "en": "Do you like bananas?",
+          "zh": "你喜歡香蕉嗎？"
+        },
+        {
+          "en": "Do you like milk?",
+          "zh": "你喜歡牛奶嗎？"
+        },
+        {
+          "en": "Do you like some tea?",
+          "zh": "你喜歡一些茶嗎？"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "午餐時間的對話",
+    "lines": [
+      {
+        "sp": "Amy",
+        "en": "I like rice and chicken.",
+        "zh": "我喜歡飯和雞肉。"
+      },
+      {
+        "sp": "Ben",
+        "en": "Do you like vegetables?",
+        "zh": "你喜歡蔬菜嗎？"
+      },
+      {
+        "sp": "Amy",
+        "en": "Yes, I like carrots and corn.",
+        "zh": "是的，我喜歡胡蘿蔔和玉米。"
+      },
+      {
+        "sp": "Ben",
+        "en": "I like soup, but I am thirsty.",
+        "zh": "我喜歡湯，但我口渴。"
+      },
+      {
+        "sp": "Amy",
+        "en": "Do you want some water?",
+        "zh": "你想要一些水嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Yes, please. I am full now.",
+        "zh": "好的，請給我。我現在吃飽了。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I like an orange.",
+      "zh": "我喜歡一個橙子。"
+    },
+    {
+      "en": "I like oranges.",
+      "zh": "我喜歡橙子。"
+    },
+    {
+      "en": "I like bread.",
+      "zh": "我喜歡麵包。"
+    },
+    {
+      "en": "I like some bread.",
+      "zh": "我喜歡一些麵包。"
+    },
+    {
+      "en": "Do you like a cookie?",
+      "zh": "你喜歡一塊餅乾嗎？"
+    },
+    {
+      "en": "Do you like cookies?",
+      "zh": "你喜歡餅乾嗎？"
+    },
+    {
+      "en": "Do you like juice?",
+      "zh": "你喜歡果汁嗎？"
+    },
+    {
+      "en": "Do you like some juice?",
+      "zh": "你喜歡一些果汁嗎？"
+    }
+  ],
+  "no": 18,
+  "theme": "Food & Meals",
+  "theme_zh": "食物與三餐",
+  "words": [
+    {
+      "en": "bite",
+      "zh": "咬"
+    },
+    {
+      "en": "hungry",
+      "zh": "飢餓的"
+    },
+    {
+      "en": "full",
+      "zh": "吃飽的"
+    },
+    {
+      "en": "thirsty",
+      "zh": "口渴的"
+    },
+    {
+      "en": "delicious",
+      "zh": "美味的"
+    },
+    {
+      "en": "fresh",
+      "zh": "新鮮的"
+    },
+    {
+      "en": "sweet",
+      "zh": "甜的"
+    },
+    {
+      "en": "hot",
+      "zh": "熱的；辣的"
+    },
+    {
+      "en": "corn",
+      "zh": "玉米"
+    },
+    {
+      "en": "potato",
+      "zh": "馬鈴薯"
+    },
+    {
+      "en": "drink",
+      "zh": "飲料"
+    },
+    {
+      "en": "coke",
+      "zh": "可口可樂"
+    },
+    {
+      "en": "coffee",
+      "zh": "咖啡"
+    },
+    {
+      "en": "juice",
+      "zh": "果汁"
+    },
+    {
+      "en": "milk",
+      "zh": "牛奶"
+    },
+    {
+      "en": "tea",
+      "zh": "茶"
+    },
+    {
+      "en": "water",
+      "zh": "水"
+    },
+    {
+      "en": "bottle",
+      "zh": "瓶子"
+    },
+    {
+      "en": "glass",
+      "zh": "玻璃杯"
+    },
+    {
+      "en": "cup",
+      "zh": "杯子"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "玉米",
+        "opts": [
+          "corn",
+          "potato",
+          "drink",
+          "water"
+        ],
+        "ans": "corn"
+      },
+      {
+        "q": "馬鈴薯",
+        "opts": [
+          "potato",
+          "corn",
+          "drink",
+          "water"
+        ],
+        "ans": "potato"
+      },
+      {
+        "q": "飲料",
+        "opts": [
+          "drink",
+          "corn",
+          "potato",
+          "water"
+        ],
+        "ans": "drink"
+      },
+      {
+        "q": "可樂",
+        "opts": [
+          "coke",
+          "coffee",
+          "juice",
+          "milk"
+        ],
+        "ans": "coke"
+      },
+      {
+        "q": "咖啡",
+        "opts": [
+          "coffee",
+          "coke",
+          "juice",
+          "milk"
+        ],
+        "ans": "coffee"
+      },
+      {
+        "q": "果汁",
+        "opts": [
+          "juice",
+          "coffee",
+          "coke",
+          "milk"
+        ],
+        "ans": "juice"
+      },
+      {
+        "q": "牛奶",
+        "opts": [
+          "milk",
+          "juice",
+          "coffee",
+          "coke"
+        ],
+        "ans": "milk"
+      },
+      {
+        "q": "茶",
+        "opts": [
+          "tea",
+          "water",
+          "juice",
+          "milk"
+        ],
+        "ans": "tea"
+      },
+      {
+        "q": "水",
+        "opts": [
+          "water",
+          "tea",
+          "juice",
+          "milk"
+        ],
+        "ans": "water"
+      },
+      {
+        "q": "瓶子",
+        "opts": [
+          "bottle",
+          "glass",
+          "cup",
+          "drink"
+        ],
+        "ans": "bottle"
+      },
+      {
+        "q": "I like ___.",
+        "opts": [
+          "sweet",
+          "hungry",
+          "full",
+          "thirsty"
+        ],
+        "ans": "sweet"
+      },
+      {
+        "q": "Do you like ___?",
+        "opts": [
+          "fresh",
+          "hot",
+          "delicious",
+          "bite"
+        ],
+        "ans": "fresh"
+      },
+      {
+        "q": "I am ___.",
+        "opts": [
+          "hungry",
+          "thirsty",
+          "full",
+          "delicious"
+        ],
+        "ans": "hungry"
+      },
+      {
+        "q": "She is ___.",
+        "opts": [
+          "full",
+          "thirsty",
+          "hungry",
+          "sweet"
+        ],
+        "ans": "full"
+      },
+      {
+        "q": "We are ___.",
+        "opts": [
+          "thirsty",
+          "hungry",
+          "full",
+          "hot"
+        ],
+        "ans": "thirsty"
+      },
+      {
+        "q": "He likes ___.",
+        "opts": [
+          "sweet",
+          "fresh",
+          "hot",
+          "bite"
+        ],
+        "ans": "hot"
+      },
+      {
+        "q": "They like ___.",
+        "opts": [
+          "delicious",
+          "fresh",
+          "sweet",
+          "bite"
+        ],
+        "ans": "delicious"
+      },
+      {
+        "q": "I have a ___.",
+        "opts": [
+          "glass",
+          "cup",
+          "bite",
+          "fresh"
+        ],
+        "ans": "glass"
+      },
+      {
+        "q": "Do you have a ___?",
+        "opts": [
+          "cup",
+          "glass",
+          "bite",
+          "hungry"
+        ],
+        "ans": "cup"
+      },
+      {
+        "q": "She took a ___.",
+        "opts": [
+          "bite",
+          "hungry",
+          "full",
+          "thirsty"
+        ],
+        "ans": "bite"
+      },
+      {
+        "q": "小喝完運動後感到口渴，他最需要的是什麼？",
+        "opts": [
+          "thirsty",
+          "hungry",
+          "full",
+          "sweet"
+        ],
+        "ans": "thirsty"
+      },
+      {
+        "q": "小華吃完飯後感到很飽，他覺得自己是 ___.",
+        "opts": [
+          "full",
+          "hungry",
+          "thirsty",
+          "sweet"
+        ],
+        "ans": "full"
+      },
+      {
+        "q": "小美覺得這塊蛋糕非常好吃，她說這塊蛋糕是 ___.",
+        "opts": [
+          "delicious",
+          "fresh",
+          "sweet",
+          "hot"
+        ],
+        "ans": "delicious"
+      },
+      {
+        "q": "小林剛從冰箱拿出來的水果很新鮮，他說這個水果是 ___.",
+        "opts": [
+          "fresh",
+          "sweet",
+          "hot",
+          "delicious"
+        ],
+        "ans": "fresh"
+      },
+      {
+        "q": "小強覺得這杯熱可可很 ___，他很喜歡.",
+        "opts": [
+          "hot",
+          "sweet",
+          "fresh",
+          "delicious"
+        ],
+        "ans": "hot"
+      },
+      {
+        "q": "小雯喜歡吃餅乾，她覺得餅乾很 ___.",
+        "opts": [
+          "sweet",
+          "fresh",
+          "delicious",
+          "hot"
+        ],
+        "ans": "sweet"
+      },
+      {
+        "q": "小華想喝熱牛奶，她會用 ___ 裝牛奶.",
+        "opts": [
+          "cup",
+          "glass",
+          "hungry",
+          "thirsty"
+        ],
+        "ans": "cup"
+      },
+      {
+        "q": "小林想吃蘋果，他會先把蘋果切成小塊，然後用 ___ 噙住.",
+        "opts": [
+          "bite",
+          "fresh",
+          "hungry",
+          "full"
+        ],
+        "ans": "bite"
+      },
+      {
+        "q": "小姐姐覺得今天的天氣很 ___，她想開風扇.",
+        "opts": [
+          "hot",
+          "sweet",
+          "fresh",
+          "delicious"
+        ],
+        "ans": "hot"
+      },
+      {
+        "q": "小弟弟吃完餅乾後感到很 ___，他想喝水.",
+        "opts": [
+          "thirsty",
+          "hungry",
+          "full",
+          "sweet"
+        ],
+        "ans": "thirsty"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ juice.（我喜歡果汁）",
+        "ans": "like"
+      },
+      {
+        "q": "Do you ____ coffee?（你喜歡咖啡嗎？）",
+        "ans": "like"
+      },
+      {
+        "q": "I am ____ after running.（我跑步後很餓）",
+        "ans": "hungry"
+      },
+      {
+        "q": "The corn is ____ .（玉米很甜）",
+        "ans": "sweet"
+      },
+      {
+        "q": "The potato is ____ .（土豆很熱）",
+        "ans": "hot"
+      },
+      {
+        "q": "I feel ____ .（我覺得口渴）",
+        "ans": "thirsty"
+      },
+      {
+        "q": "The juice is ____ .（果汁很新鮮）",
+        "ans": "fresh"
+      },
+      {
+        "q": "The milk is ____ .（牛奶很美味）",
+        "ans": "delicious"
+      },
+      {
+        "q": "I drink water from a ____ .（我從杯子裡喝水）",
+        "ans": "cup"
+      },
+      {
+        "q": "She likes to eat ____ .（她喜歡吃玉米）",
+        "ans": "corn"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我喜歡果汁。",
+        "ans": "I like juice."
+      },
+      {
+        "q": "你喜歡咖啡嗎？",
+        "ans": "Do you like coffee?"
+      },
+      {
+        "q": "我很餓。",
+        "ans": "I am hungry."
+      },
+      {
+        "q": "玉米很甜。",
+        "ans": "Corn is sweet."
+      },
+      {
+        "q": "我覺得口渴。",
+        "ans": "I am thirsty."
+      },
+      {
+        "q": "果汁很新鮮。",
+        "ans": "Juice is fresh."
+      },
+      {
+        "q": "牛奶很美味。",
+        "ans": "Milk is delicious."
+      },
+      {
+        "q": "我從杯子喝水。",
+        "ans": "I drink water in a cup."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "hungry / . / I / am",
+        "ans": "I am hungry."
+      },
+      {
+        "q": "? / coffee / Do / you / like",
+        "ans": "Do you like coffee?"
+      },
+      {
+        "q": "The / is / . / corn / sweet",
+        "ans": "The corn is sweet."
+      },
+      {
+        "q": "thirsty / I / am / .",
+        "ans": "I am thirsty."
+      },
+      {
+        "q": "is / Juice / . / fresh",
+        "ans": "Juice is fresh."
+      },
+      {
+        "q": "in / . / I / cup / drink / a / water",
+        "ans": "I drink water in a cup."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

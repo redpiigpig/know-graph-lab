@@ -1,0 +1,659 @@
+{
+  "title_en": "My House Story",
+  "title_zh": "我溫馨的家故事",
+  "grammar": "本課文法重點：使用 Where is…? 與介系詞 in、on、under、near、behind、beside、above、below 來描述物體位置。",
+  "intro_zh": "在這堂課裡，我們將學習用 Where is…? 來問東西的位置，並練習使用 in、on、under、near、behind、beside、above、below 等介系詞，描述家具、時鐘和日常物品的位置與時間。",
+  "can_do": [
+    "能用 Where is…? 詢問物體的位置",
+    "能正確使用 in、on、under、near、behind、beside、above、below 描述位置",
+    "能看圖說出時間與鐘表相關的詞彙，如 morning、noon、a.m.、p.m.、hour、minute、o clock"
+  ],
+  "reading": {
+    "title_en": "At Home",
+    "title_zh": "在家裡",
+    "sentences": [
+      {
+        "en": "The clock is on the wall.",
+        "zh": "時鐘掛在牆上。"
+      },
+      {
+        "en": "The watch is beside the clock.",
+        "zh": "錶放在時鐘旁邊。"
+      },
+      {
+        "en": "The cat is under the table.",
+        "zh": "貓咪躲在桌子下面。"
+      },
+      {
+        "en": "The ball is near the sofa.",
+        "zh": "球放在沙發旁邊。"
+      },
+      {
+        "en": "The lamp is behind the curtain.",
+        "zh": "燈在窗簾後面。"
+      },
+      {
+        "en": "The picture is above the fireplace.",
+        "zh": "畫懸在壁爐上面。"
+      },
+      {
+        "en": "The shoes are below the bench.",
+        "zh": "鞋子放在長凳下面。"
+      },
+      {
+        "en": "Here is my room, and there is the kitchen.",
+        "zh": "這裡是我的房間，那裡是廚房。"
+      },
+      {
+        "en": "In the morning I wake up at seven o'clock a.m., and it takes ten minutes to get ready; in the afternoon at three o'clock p.m. I study for one hour, and it is time to learn.",
+        "zh": "早晨我在七點鐘上午起床，花十分鐘準備；下午三點鐘我學習一小時，這是學習的時間。"
+      },
+      {
+        "en": "At noon I eat lunch in the kitchen.",
+        "zh": "中午我在廚房吃午餐。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 介系詞位置表",
+      "explain_zh": "介系詞用來說明物體相對另一個物體的位置，常見的有 in、on、under、near、behind、beside、above、below。以下表格列出每個介系詞的意思與例句。",
+      "table": [
+        [
+          "介系詞",
+          "意思",
+          "例句（英文）"
+        ],
+        [
+          "in",
+          "在…裡面",
+          "The cat is in the box."
+        ],
+        [
+          "on",
+          "在…之上",
+          "The book is on the table."
+        ],
+        [
+          "under",
+          "在…下方",
+          "The shoes are under the chair."
+        ],
+        [
+          "near",
+          "在…附近",
+          "The lamp is near the sofa."
+        ],
+        [
+          "behind",
+          "在…後面",
+          "The ball is behind the door."
+        ],
+        [
+          "beside",
+          "在…旁邊",
+          "The teddy bear is beside the pillow."
+        ],
+        [
+          "above",
+          "在…上面",
+          "The picture is above the fireplace."
+        ],
+        [
+          "below",
+          "在…下面",
+          "The rug is below the table."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 使用 Where is…? 問位置",
+      "explain_zh": "當我們想知道某件東西在哪裡時，可以用 Where is…? 來提問。回答通常會用介系詞短語來說明位置。以下是一些常見的問答範例。",
+      "examples": [
+        {
+          "en": "Where is the remote control?",
+          "zh": "遙控器在哪裡？"
+        },
+        {
+          "en": "It is on the coffee table.",
+          "zh": "它在咖啡桌上。"
+        },
+        {
+          "en": "Where are your shoes?",
+          "zh": "你的鞋子在哪裡？"
+        },
+        {
+          "en": "They are under the bed.",
+          "zh": "它們在床底下。"
+        },
+        {
+          "en": "Where is the family photo?",
+          "zh": "全家福照片在哪裡？"
+        },
+        {
+          "en": "It is above the fireplace.",
+          "zh": "它在壁爐上面。"
+        },
+        {
+          "en": "Where is the cat?",
+          "zh": "貓咪在哪裡？"
+        },
+        {
+          "en": "It is behind the curtain.",
+          "zh": "它在窗簾後面。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在客廳找東西",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Where is my backpack?",
+        "zh": "我的背包在哪裡？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It is beside the sofa.",
+        "zh": "它在沙發旁邊。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Thanks! Where is the TV remote?",
+        "zh": "謝謝！電視遙控器在哪裡？"
+      },
+      {
+        "sp": "Ben",
+        "en": "The remote is on the coffee table.",
+        "zh": "遙控器在咖啡桌上。"
+      },
+      {
+        "sp": "Anna",
+        "en": "And where is the cat?",
+        "zh": "那貓咪呢？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It is under the chair.",
+        "zh": "它在椅子底下。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Where is the lamp?",
+      "zh": "燈在哪裡？"
+    },
+    {
+      "en": "The lamp is near the window.",
+      "zh": "燈在窗戶附近。"
+    },
+    {
+      "en": "Where are the keys?",
+      "zh": "鑰匙在哪裡？"
+    },
+    {
+      "en": "They are in the drawer.",
+      "zh": "它們在抽屜裡。"
+    },
+    {
+      "en": "Where is the picture?",
+      "zh": "畫在哪裡？"
+    },
+    {
+      "en": "The picture is above the sofa.",
+      "zh": "畫在沙發上面。"
+    },
+    {
+      "en": "Where is the rug?",
+      "zh": "地毯在哪裡？"
+    },
+    {
+      "en": "The rug is below the coffee table.",
+      "zh": "地毯在咖啡桌下面。"
+    }
+  ],
+  "no": 28,
+  "theme": "My House",
+  "theme_zh": "我的家",
+  "words": [
+    {
+      "en": "in",
+      "zh": "在…裡面；在….期間"
+    },
+    {
+      "en": "on",
+      "zh": "在…之上"
+    },
+    {
+      "en": "under",
+      "zh": "在…下方"
+    },
+    {
+      "en": "near",
+      "zh": "在…附近"
+    },
+    {
+      "en": "behind",
+      "zh": "在…後面"
+    },
+    {
+      "en": "beside",
+      "zh": "在…旁邊"
+    },
+    {
+      "en": "above",
+      "zh": "在…上面"
+    },
+    {
+      "en": "below",
+      "zh": "在…下面"
+    },
+    {
+      "en": "here",
+      "zh": "這裡"
+    },
+    {
+      "en": "there",
+      "zh": "那裡"
+    },
+    {
+      "en": "time",
+      "zh": "時間"
+    },
+    {
+      "en": "minute",
+      "zh": "分鐘"
+    },
+    {
+      "en": "hour",
+      "zh": "小時"
+    },
+    {
+      "en": "o clock",
+      "zh": "點鐘"
+    },
+    {
+      "en": "watch",
+      "zh": "錶"
+    },
+    {
+      "en": "clock",
+      "zh": "時鐘"
+    },
+    {
+      "en": "a.m.",
+      "zh": "上午"
+    },
+    {
+      "en": "p.m.",
+      "zh": "下午"
+    },
+    {
+      "en": "morning",
+      "zh": "早晨"
+    },
+    {
+      "en": "noon",
+      "zh": "中午"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個詞的意思是 'in'?",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "in"
+      },
+      {
+        "q": "以下哪個詞的意思是 'on'?",
+        "opts": [
+          "on",
+          "under",
+          "behind",
+          "beside"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "以下哪個詞的意思是 'under'?",
+        "opts": [
+          "under",
+          "near",
+          "behind",
+          "above"
+        ],
+        "ans": "under"
+      },
+      {
+        "q": "以下哪個詞的意思是 'near'?",
+        "opts": [
+          "near",
+          "behind",
+          "beside",
+          "above"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "以下哪個詞的意思是 'behind'?",
+        "opts": [
+          "behind",
+          "beside",
+          "above",
+          "below"
+        ],
+        "ans": "behind"
+      },
+      {
+        "q": "以下哪個詞的意思是 'beside'?",
+        "opts": [
+          "beside",
+          "above",
+          "below",
+          "here"
+        ],
+        "ans": "beside"
+      },
+      {
+        "q": "以下哪個詞的意思是 'above'?",
+        "opts": [
+          "above",
+          "below",
+          "here",
+          "there"
+        ],
+        "ans": "above"
+      },
+      {
+        "q": "以下哪個詞的意思是 'below'?",
+        "opts": [
+          "below",
+          "here",
+          "there",
+          "time"
+        ],
+        "ans": "below"
+      },
+      {
+        "q": "以下哪個詞的意思是 'here'?",
+        "opts": [
+          "here",
+          "there",
+          "time",
+          "minute"
+        ],
+        "ans": "here"
+      },
+      {
+        "q": "以下哪個詞的意思是 'there'?",
+        "opts": [
+          "there",
+          "time",
+          "minute",
+          "hour"
+        ],
+        "ans": "there"
+      },
+      {
+        "q": "Where is the watch? It is ___ the clock.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "beside"
+        ],
+        "ans": "beside"
+      },
+      {
+        "q": "Where is the clock? It is ___ the watch.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "above"
+        ],
+        "ans": "above"
+      },
+      {
+        "q": "Where is the minute? It is ___ the hour.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "in"
+      },
+      {
+        "q": "Where is the morning? It is ___ noon.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "Where is the noon? It is ___ morning.",
+        "opts": [
+          "above",
+          "below",
+          "near",
+          "behind"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "Where is the watch? It is ___ here.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "Where is the clock? It is ___ there.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "Where is the time? It is ___ o clock.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "near"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The watch is ___ the clock。",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "beside"
+        ],
+        "ans": "beside"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The clock is ___ the watch。",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "beside"
+        ],
+        "ans": "beside"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The minute is ___ the hour。",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "beside"
+        ],
+        "ans": "in"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The hour is ___ the minute。",
+        "opts": [
+          "above",
+          "below",
+          "near",
+          "behind"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The watch is ___。",
+        "opts": [
+          "here",
+          "there",
+          "in",
+          "on"
+        ],
+        "ans": "here"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：The clock is ___。",
+        "opts": [
+          "here",
+          "there",
+          "in",
+          "on"
+        ],
+        "ans": "there"
+      },
+      {
+        "q": "下列哪個詞正確完成句子：It is ___。",
+        "opts": [
+          "morning",
+          "noon",
+          "time",
+          "minute"
+        ],
+        "ans": "morning"
+      }
+    ],
+    "fill": [
+      {
+        "q": "The book is ____ the desk.（書在桌子上）",
+        "ans": "on"
+      },
+      {
+        "q": "The pencil is ____ the box.（筆在盒子裡）",
+        "ans": "in"
+      },
+      {
+        "q": "The shoe is ____ the bed.（鞋子在床底下）",
+        "ans": "under"
+      },
+      {
+        "q": "The clock is ____ the picture.（時鐘在畫像上面）",
+        "ans": "above"
+      },
+      {
+        "q": "The bag is ____ the chair.（書包在椅子旁邊）",
+        "ans": "beside"
+      },
+      {
+        "q": "The cat is ____ the sofa.（貓在沙發後面）",
+        "ans": "behind"
+      },
+      {
+        "q": "The lamp is ____ the table.（燈在桌子旁邊）",
+        "ans": "near"
+      },
+      {
+        "q": "The picture is ____ the shelf.（畫在架子下面）",
+        "ans": "below"
+      },
+      {
+        "q": "I am ____.（我在這裡）",
+        "ans": "here"
+      },
+      {
+        "q": "She is ____.（她在那裡）",
+        "ans": "there"
+      }
+    ],
+    "translate": [
+      {
+        "q": "書在桌子上。",
+        "ans": "The book is on the desk."
+      },
+      {
+        "q": "筆在盒子裡。",
+        "ans": "The pencil is in the box."
+      },
+      {
+        "q": "鞋子在床底下。",
+        "ans": "The shoe is under the bed."
+      },
+      {
+        "q": "時鐘在畫像上面。",
+        "ans": "The clock is above the picture."
+      },
+      {
+        "q": "書包在椅子旁邊。",
+        "ans": "The bag is beside the chair."
+      },
+      {
+        "q": "貓在沙發後面。",
+        "ans": "The cat is behind the sofa."
+      },
+      {
+        "q": "燈在桌子旁邊。",
+        "ans": "The lamp is near the table."
+      },
+      {
+        "q": "畫在架子下面。",
+        "ans": "The picture is below the shelf."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "on / is / . / the / book / desk / The",
+        "ans": "The book is on the desk."
+      },
+      {
+        "q": "the / is / The / pencil / . / in / box",
+        "ans": "The pencil is in the box."
+      },
+      {
+        "q": ". / is / The / the / bed / shoe / under",
+        "ans": "The shoe is under the bed."
+      },
+      {
+        "q": ". / is / picture / the / The / clock / above",
+        "ans": "The clock is above the picture."
+      },
+      {
+        "q": "the / The / beside / is / . / bag / chair",
+        "ans": "The bag is beside the chair."
+      },
+      {
+        "q": "is / . / The / the / cat / behind / sofa",
+        "ans": "The cat is behind the sofa."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

@@ -1,0 +1,664 @@
+{
+  "title_en": "My Town Trip",
+  "title_zh": "我的城鎮之旅",
+  "grammar": "We practice asking and answering questions with Is there a…? and Where do you live?",
+  "intro_zh": "本課我們將學習描述自己的居住地點，詢問城鎮裡有什麼設施，以及使用不同交通工具去各地。透過故事練習 Is there a…? 和 Where do you live? 的句型，增強生活英語表達。",
+  "can_do": [
+    "能用 Is there a…? 詢問城鎮裡的設施",
+    "能用 Where do you live? 說出自己的居住地",
+    "能說出常見的交通工具名稱並描述出行方式"
+  ],
+  "reading": {
+    "title_en": "My Town Trip",
+    "title_zh": "我的城鎮之旅",
+    "sentences": [
+      {
+        "en": "I live in Hualien, a beautiful town on the east coast of Taiwan.",
+        "zh": "我住在花蓮，那是台灣東部海岸的一個美麗城鎮。"
+      },
+      {
+        "en": "My life is busy but I like to stay healthy and take medicine when I am sick.",
+        "zh": "我的生活很忙碌，但我喜歡保持健康，生病時會吃藥。"
+      },
+      {
+        "en": "Every weekend my family goes to the public market where there is a big sale of fresh fruit.",
+        "zh": "每個週末，我的家人會去公共市場，那裡有新鮮水果的大特賣。"
+      },
+      {
+        "en": "We often travel by car or bus to visit relatives in other cities.",
+        "zh": "我們常常開車或搭公車去拜訪其他城市的親戚。"
+      },
+      {
+        "en": "I ride my bicycle to school, my sister likes her scooter, and my brother rides his motorcycle.",
+        "zh": "我騎腳踏車上學，我姐姐喜歡她的輕型機車，我哥哥則騎重型機車。"
+      },
+      {
+        "en": "When we go to the beach, we see many boats and a big ship that brings goods from America and China.",
+        "zh": "我們去海灘時，會看到很多小船和一艘載運美國和中國貨物的大船。"
+      },
+      {
+        "en": "If we need to go far, we can take the train or a taxi to the airport.",
+        "zh": "如果我們需要遠行，可以搭火車或計程車去機場。"
+      },
+      {
+        "en": "Trucks carry medicine and food across the island, helping everyone stay well.",
+        "zh": "卡車運送藥物和食物遍布全島，幫助大家保持健康。"
+      },
+      {
+        "en": "I dream of seeing the whole world one day, learning about different cultures and languages.",
+        "zh": "我夢想有一天能看到整個世界，學習不同的文化和語言。"
+      },
+      {
+        "en": "Learning English helps me talk to friends from other countries and share my town’s stories.",
+        "zh": "學習英語讓我能夠與其他國家的朋友交談，並分享我家鄉的故事。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① Is there a …? 的問答方式",
+      "explain_zh": "用來詢問某個地點是否存在某樣東西，答句用 Yes, there is. 或 No, there isn't.",
+      "table": [
+        [
+          "問句",
+          "肯定答句",
+          "否定答句"
+        ],
+        [
+          "Is there a hospital?",
+          "Yes, there is.",
+          "No, there isn't."
+        ],
+        [
+          "Is there a park?",
+          "Yes, there is.",
+          "No, there isn't."
+        ],
+        [
+          "Is there a museum?",
+          "Yes, there is.",
+          "No, there isn't."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② Where do you live? 的答句與介系詞",
+      "explain_zh": "用來問某人住在哪裡，答句常用 I live in … 、 I live on … 、 I live near … 。",
+      "examples": [
+        {
+          "en": "Where do you live?",
+          "zh": "你住在哪裡？"
+        },
+        {
+          "en": "I live in Hualien.",
+          "zh": "我住在花蓮。"
+        },
+        {
+          "en": "I live near the train station.",
+          "zh": "我住在火車站附近。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "情境對話：在鎮上詢問設施與居住地",
+    "lines": [
+      {
+        "sp": "老師",
+        "en": "Is there a post office in your town?",
+        "zh": "你們鎮裡有郵局嗎？"
+      },
+      {
+        "sp": "小明",
+        "en": "Yes, there is a post office near the market.",
+        "zh": "有，郵局在市場附近。"
+      },
+      {
+        "sp": "老師",
+        "en": "Where do you live,小明?",
+        "zh": "小明，你住在哪裡？"
+      },
+      {
+        "sp": "小明",
+        "en": "I live in Hualien, on Zhongshan Road.",
+        "zh": "我住在花蓮，中山路上。"
+      },
+      {
+        "sp": "老師",
+        "en": "Is there a bicycle shop near your home?",
+        "zh": "你家附近有腳踏車店嗎？"
+      },
+      {
+        "sp": "小明",
+        "en": "No, there isn't a bicycle shop, but there is a scooter shop.",
+        "zh": "沒有腳踏車店，但有輕型機車店。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Is there a hospital in your town?",
+      "zh": "你們鎮裡有醫院嗎？"
+    },
+    {
+      "en": "Yes, there is a hospital on River Street.",
+      "zh": "有，醫院在河邊街。"
+    },
+    {
+      "en": "Where do you live?",
+      "zh": "你住在哪裡？"
+    },
+    {
+      "en": "I live in Taichung, near the bus station.",
+      "zh": "我住在台中，靠近公車站。"
+    },
+    {
+      "en": "Is there a park close to your school?",
+      "zh": "你學校附近有公園嗎？"
+    },
+    {
+      "en": "No, there isn't a park, but there is a playground.",
+      "zh": "沒有公園，但有遊樂場。"
+    },
+    {
+      "en": "Do you go to the market by taxi?",
+      "zh": "你會搭計程車去市場嗎？"
+    },
+    {
+      "en": "I usually go to the market by bicycle.",
+      "zh": "我通常騎腳踏車去市場。"
+    }
+  ],
+  "no": 48,
+  "theme": "My Town & Country",
+  "theme_zh": "城鎮與國家",
+  "words": [
+    {
+      "en": "Hualien",
+      "zh": "花蓮"
+    },
+    {
+      "en": "America",
+      "zh": "美國"
+    },
+    {
+      "en": "China",
+      "zh": "中國"
+    },
+    {
+      "en": "world",
+      "zh": "世界"
+    },
+    {
+      "en": "health",
+      "zh": "健康"
+    },
+    {
+      "en": "medicine",
+      "zh": "藥物"
+    },
+    {
+      "en": "live",
+      "zh": "生活"
+    },
+    {
+      "en": "life",
+      "zh": "生命"
+    },
+    {
+      "en": "sale",
+      "zh": "拍賣"
+    },
+    {
+      "en": "public",
+      "zh": "公共的"
+    },
+    {
+      "en": "car",
+      "zh": "汽車"
+    },
+    {
+      "en": "bus",
+      "zh": "公車"
+    },
+    {
+      "en": "bicycle/bike",
+      "zh": "腳踏車"
+    },
+    {
+      "en": "motorcycle",
+      "zh": "重型機車"
+    },
+    {
+      "en": "scooter",
+      "zh": "輕型機車"
+    },
+    {
+      "en": "ship",
+      "zh": "船"
+    },
+    {
+      "en": "boat",
+      "zh": "小船"
+    },
+    {
+      "en": "taxi",
+      "zh": "計程車"
+    },
+    {
+      "en": "train",
+      "zh": "火車"
+    },
+    {
+      "en": "truck",
+      "zh": "卡車"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "花蓮的英文是什麼?",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "Hualien"
+      },
+      {
+        "q": "美國的英文是什麼?",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "America"
+      },
+      {
+        "q": "中國的英文是什麼?",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "China"
+      },
+      {
+        "q": "世界的英文是什麼?",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "world"
+      },
+      {
+        "q": "健康的英文是什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "health"
+      },
+      {
+        "q": "醫藥的英文是什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "medicine"
+      },
+      {
+        "q": "生活的英文是什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "life"
+      },
+      {
+        "q": "賣的英文是什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "sale"
+      },
+      {
+        "q": "汽車的英文是什麼?",
+        "opts": [
+          "car",
+          "bus",
+          "bicycle",
+          "motorcycle"
+        ],
+        "ans": "car"
+      },
+      {
+        "q": "公車的英文是什麼?",
+        "opts": [
+          "car",
+          "bus",
+          "bicycle",
+          "motorcycle"
+        ],
+        "ans": "bus"
+      },
+      {
+        "q": "哪一個是 Hualien？",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "Hualien"
+      },
+      {
+        "q": "哪一個是 America？",
+        "opts": [
+          "America",
+          "Hualien",
+          "China",
+          "world"
+        ],
+        "ans": "America"
+      },
+      {
+        "q": "哪一個是 China？",
+        "opts": [
+          "China",
+          "Hualien",
+          "America",
+          "world"
+        ],
+        "ans": "China"
+      },
+      {
+        "q": "哪一個是 world？",
+        "opts": [
+          "world",
+          "Hualien",
+          "America",
+          "China"
+        ],
+        "ans": "world"
+      },
+      {
+        "q": "哪一個是 health？",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "health"
+      },
+      {
+        "q": "哪一個是 medicine？",
+        "opts": [
+          "medicine",
+          "health",
+          "life",
+          "sale"
+        ],
+        "ans": "medicine"
+      },
+      {
+        "q": "哪一個是 life？",
+        "opts": [
+          "life",
+          "health",
+          "medicine",
+          "sale"
+        ],
+        "ans": "life"
+      },
+      {
+        "q": "哪一個是 sale？",
+        "opts": [
+          "sale",
+          "health",
+          "medicine",
+          "life"
+        ],
+        "ans": "sale"
+      },
+      {
+        "q": "哪一個是 car？",
+        "opts": [
+          "car",
+          "bus",
+          "bicycle/bike",
+          "motorcycle"
+        ],
+        "ans": "car"
+      },
+      {
+        "q": "哪一個是 bus？",
+        "opts": [
+          "bus",
+          "car",
+          "train",
+          "truck"
+        ],
+        "ans": "bus"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a bus. 請問空格應該填什麼?",
+        "opts": [
+          "car",
+          "bus",
+          "train",
+          "truck"
+        ],
+        "ans": "bus"
+      },
+      {
+        "q": "如果有人問：Where do you live? 正確的答案是：I live in ___. 請問空格應該填什麼?",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "Hualien"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is medicine. 請問空格應該填什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "medicine"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a sale. 請問空格應該填什麼?",
+        "opts": [
+          "health",
+          "medicine",
+          "life",
+          "sale"
+        ],
+        "ans": "sale"
+      },
+      {
+        "q": "如果你住在美國，你會說：I live in ___.",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "America"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a car. 請問空格應該填什麼?",
+        "opts": [
+          "car",
+          "bus",
+          "bicycle",
+          "motorcycle"
+        ],
+        "ans": "car"
+      },
+      {
+        "q": "如果你住在地球上，你會說：I live in ___.",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "world"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a train. 請問空格應該填什麼?",
+        "opts": [
+          "train",
+          "truck",
+          "ship",
+          "boat"
+        ],
+        "ans": "train"
+      },
+      {
+        "q": "如果你住在中國，你會說：I live in ___.",
+        "opts": [
+          "Hualien",
+          "America",
+          "China",
+          "world"
+        ],
+        "ans": "China"
+      },
+      {
+        "q": "如果有人問：Is there a ___? 正確的答案是：Yes, there is a truck. 請問空格應該填什麼?",
+        "opts": [
+          "truck",
+          "taxi",
+          "scooter",
+          "ship"
+        ],
+        "ans": "truck"
+      }
+    ],
+    "fill": [
+      {
+        "q": "Is there a ____ here?（這裡有____嗎？）",
+        "ans": "bus"
+      },
+      {
+        "q": "Where do you ____?（你住在哪裡？）",
+        "ans": "live"
+      },
+      {
+        "q": "There is a ____ there?（那裡有____嗎？）",
+        "ans": "ship"
+      },
+      {
+        "q": "Do you have a ____?（你有一____嗎？）",
+        "ans": "bicycle"
+      },
+      {
+        "q": "Is there a ____ here?（這裡有____嗎？）",
+        "ans": "taxi"
+      },
+      {
+        "q": "Is there a ____ there?（那裡有____嗎？）",
+        "ans": "train"
+      },
+      {
+        "q": "Is there a ____ here?（這裡有____嗎？）",
+        "ans": "truck"
+      },
+      {
+        "q": "Is there a ____ here?（這裡有____嗎？）",
+        "ans": "scooter"
+      },
+      {
+        "q": "Is there a ____ there?（那裡有____嗎？）",
+        "ans": "motorcycle"
+      },
+      {
+        "q": "Is there a ____ here?（這裡有____嗎？）",
+        "ans": "boat"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我住在花蓮。",
+        "ans": "I live in Hualien."
+      },
+      {
+        "q": "你住在哪裡？",
+        "ans": "Where do you live?"
+      },
+      {
+        "q": "這裡有一輛公車。",
+        "ans": "There is a bus here."
+      },
+      {
+        "q": "那裡有一艘船。",
+        "ans": "There is a ship there."
+      },
+      {
+        "q": "你有一腳踏車嗎？",
+        "ans": "Do you have a bicycle?"
+      },
+      {
+        "q": "這裡有特賣。",
+        "ans": "There is a sale here."
+      },
+      {
+        "q": "我在這裡。",
+        "ans": "I am here."
+      },
+      {
+        "q": "你在那裡。",
+        "ans": "You are there."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / am / I / here",
+        "ans": "I am here."
+      },
+      {
+        "q": "You / . / there / are",
+        "ans": "You are there."
+      },
+      {
+        "q": "Hualien / I / in / . / live",
+        "ans": "I live in Hualien."
+      },
+      {
+        "q": ". / There / a / here / is / bus",
+        "ans": "There is a bus here."
+      },
+      {
+        "q": "have / bicycle / ? / Do / you / a",
+        "ans": "Do you have a bicycle?"
+      },
+      {
+        "q": "there / . / a / ship / is / There",
+        "ans": "There is a ship there."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

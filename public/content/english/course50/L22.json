@@ -1,0 +1,676 @@
+{
+  "title_en": "In the Classroom",
+  "title_zh": "我們的教室生活",
+  "grammar": "使用 There is / There are 描述教室裡的物品，並用介系詞 in、on、under 說明位置。",
+  "intro_zh": "這一課讓我們學會用 There is / There are 描述教室裡有什麼東西，並練習用 in、on、under 說明它們的位置，同時認識與學校生活相關的單字，例如紙、筆、字典等等。",
+  "can_do": [
+    "能用 There is / There are 說出教室裡的物品",
+    "能用 in、on、under 描述物品的位置",
+    "能閱讀簡短故事並回答相關問題"
+  ],
+  "reading": {
+    "title_en": "A Day in Class",
+    "title_zh": "一天的課堂生活",
+    "sentences": [
+      {
+        "en": "In the classroom, there is a notebook and a sheet of paper on the desk.",
+        "zh": "在教室裡，桌子上有一本筆記本和一張紙。"
+      },
+      {
+        "en": "There are many pens and pencils in the pencil case.",
+        "zh": "鉛筆盒裡有很多原子筆和鉛筆。"
+      },
+      {
+        "en": "The teacher puts a dictionary on the shelf, and we can look up any word.",
+        "zh": "老師把字典放在書架上，我們可以查任何單字。"
+      },
+      {
+        "en": "Today we have a list of homework to finish after school.",
+        "zh": "今天我們有一份家庭作業清單要放學後完成。"
+      },
+      {
+        "en": "We write sentences in our workbook and check the answers with a partner.",
+        "zh": "我們在習作本上寫句子，並與同伴對照答案。"
+      },
+      {
+        "en": "During history class, we talk about important events and gain knowledge.",
+        "zh": "在歷史課裡，我們討論重要事件並獲得知識。"
+      },
+      {
+        "en": "The teacher gives us an example of a good answer on the board.",
+        "zh": "老師在黑板上給出一個好答案的例子。"
+      },
+      {
+        "en": "Before the test, we ask a question about the language we are studying.",
+        "zh": "測驗前，我們問關於我們正在學習的語言的問題。"
+      },
+      {
+        "en": "We glue a picture onto our project and cut it with scissors.",
+        "zh": "我們用膠水把圖片貼在專案上，然後用剪刀剪裁。"
+      },
+      {
+        "en": "At the end of the day, we check our grades and feel proud of our English progress.",
+        "zh": "放學結束時，我們查看成績，為自己的英文進步感到驕傲。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① There is / There are + 介系詞描述位置",
+      "explain_zh": "用 There is (單數) 或 There are (複數) 來說教室裡有什麼東西，並用介系詞 in、on、under 說明物體放在哪裡。",
+      "table": [
+        [
+          "There is / There are",
+          "名詞 (單數/複數)",
+          "介系詞",
+          "地點"
+        ],
+        [
+          "There is",
+          "a pencil",
+          "in",
+          "the pencil case"
+        ],
+        [
+          "There are",
+          "two notebooks",
+          "on",
+          "the desk"
+        ],
+        [
+          "There is",
+          "the dictionary",
+          "under",
+          "the chair"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 實用例句",
+      "explain_zh": "以下例句示範如何把 There is / There are 與 in、on、under 結合使用，描述教室常見物品的位置。",
+      "examples": [
+        {
+          "en": "There is a glue bottle on the shelf.",
+          "zh": "書架上有一瓶膠水。"
+        },
+        {
+          "en": "There are three scissors under the table.",
+          "zh": "桌子下面有三把剪刀。"
+        },
+        {
+          "en": "There is an English workbook in my bag.",
+          "zh": "我的書包裡有一本英文習作本。"
+        },
+        {
+          "en": "There are many words on the blackboard.",
+          "zh": "黑板上有許多單字。"
+        },
+        {
+          "en": "There is a test paper under the notebook.",
+          "zh": "筆記本下面有一張測驗卷。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡找東西",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Where is my pen?",
+        "zh": "我的原子筆在哪裡？"
+      },
+      {
+        "sp": "Ben",
+        "en": "There is a pen on the teacher's desk.",
+        "zh": "老師的桌子上有一支原子筆。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Is there any paper in my notebook?",
+        "zh": "我的筆記本裡有紙嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Yes, there are two sheets of paper in it.",
+        "zh": "有，裡面有兩張紙。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Thanks! Where is the scissors?",
+        "zh": "謝謝！剪刀在哪裡？"
+      },
+      {
+        "sp": "Ben",
+        "en": "There are scissors under the shelf.",
+        "zh": "書架下面有剪刀。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "There is a dictionary on the shelf.",
+      "zh": "書架上有一本字典。"
+    },
+    {
+      "en": "There are three pens in the pencil case.",
+      "zh": "筆盒裡有三支原子筆。"
+    },
+    {
+      "en": "There is a notebook under the chair.",
+      "zh": "椅子下面有一本筆記本。"
+    },
+    {
+      "en": "There are many words on the blackboard.",
+      "zh": "黑板上有許多單字。"
+    },
+    {
+      "en": "There is a test paper in my bag.",
+      "zh": "我的書包裡有一張測驗卷。"
+    },
+    {
+      "en": "There are two glue bottles on the table.",
+      "zh": "桌子上有兩瓶膠水。"
+    },
+    {
+      "en": "There is an English workbook under the desk.",
+      "zh": "桌子下面有一本英文習作本。"
+    },
+    {
+      "en": "There are five scissors in the drawer.",
+      "zh": "抽屜裡有五把剪刀。"
+    }
+  ],
+  "no": 22,
+  "theme": "At School",
+  "theme_zh": "在學校",
+  "words": [
+    {
+      "en": "paper",
+      "zh": "紙；考卷"
+    },
+    {
+      "en": "pen",
+      "zh": "原子筆"
+    },
+    {
+      "en": "dictionary",
+      "zh": "字典"
+    },
+    {
+      "en": "word",
+      "zh": "單字"
+    },
+    {
+      "en": "list",
+      "zh": "表；名單"
+    },
+    {
+      "en": "homework",
+      "zh": "家庭作業"
+    },
+    {
+      "en": "knowledge",
+      "zh": "知識"
+    },
+    {
+      "en": "workbook",
+      "zh": "習作本"
+    },
+    {
+      "en": "example",
+      "zh": "例子"
+    },
+    {
+      "en": "English",
+      "zh": "英文"
+    },
+    {
+      "en": "sentence",
+      "zh": "句子"
+    },
+    {
+      "en": "history",
+      "zh": "歷史"
+    },
+    {
+      "en": "answer",
+      "zh": "答案"
+    },
+    {
+      "en": "language",
+      "zh": "語言"
+    },
+    {
+      "en": "question",
+      "zh": "疑問"
+    },
+    {
+      "en": "test",
+      "zh": "測驗"
+    },
+    {
+      "en": "notebook",
+      "zh": "筆記本；筆記型電腦"
+    },
+    {
+      "en": "grade",
+      "zh": "成績"
+    },
+    {
+      "en": "glue",
+      "zh": "膠水"
+    },
+    {
+      "en": "scissor(s)",
+      "zh": "剪刀"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個單字的意思是 '紙'？",
+        "opts": [
+          "paper",
+          "pen",
+          "dictionary",
+          "word"
+        ],
+        "ans": "paper"
+      },
+      {
+        "q": "以下哪個單字的意思是 '筆'？",
+        "opts": [
+          "pen",
+          "paper",
+          "list",
+          "homework"
+        ],
+        "ans": "pen"
+      },
+      {
+        "q": "以下哪個單字的意思是 '字典'？",
+        "opts": [
+          "dictionary",
+          "word",
+          "example",
+          "glue"
+        ],
+        "ans": "dictionary"
+      },
+      {
+        "q": "以下哪個單字的意思是 '單字'？",
+        "opts": [
+          "word",
+          "sentence",
+          "language",
+          "answer"
+        ],
+        "ans": "word"
+      },
+      {
+        "q": "以下哪個單字的意思是 '清單'？",
+        "opts": [
+          "list",
+          "notebook",
+          "grade",
+          "test"
+        ],
+        "ans": "list"
+      },
+      {
+        "q": "以下哪個單字的意思是 '作業'？",
+        "opts": [
+          "homework",
+          "workbook",
+          "knowledge",
+          "scissor"
+        ],
+        "ans": "homework"
+      },
+      {
+        "q": "以下哪個單字的意思是 '知識'？",
+        "opts": [
+          "knowledge",
+          "example",
+          "English",
+          "glue"
+        ],
+        "ans": "knowledge"
+      },
+      {
+        "q": "以下哪個單字的意思是 '練習簿'？",
+        "opts": [
+          "workbook",
+          "notebook",
+          "paper",
+          "pen"
+        ],
+        "ans": "workbook"
+      },
+      {
+        "q": "以下哪個單字的意思是 '範例'？",
+        "opts": [
+          "example",
+          "sentence",
+          "answer",
+          "question"
+        ],
+        "ans": "example"
+      },
+      {
+        "q": "以下哪個單字的意思是 '英文'？",
+        "opts": [
+          "English",
+          "language",
+          "history",
+          "test"
+        ],
+        "ans": "English"
+      },
+      {
+        "q": "There ___ a pen on the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ two pens under the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ a dictionary on the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ some glue under the scissors.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ a list of words on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ many questions in the test.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ an example of a sentence in the workbook.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ some homework in the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ a grade for the English test.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ knowledge in the dictionary.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ a pen on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ two pens on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ some glue on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ an answer on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ some homework on the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ a grade in the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ knowledge in the paper.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ an example of a word in the dictionary.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ a list of words in the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ some scissors under the notebook.",
+        "opts": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "ans": "are"
+      }
+    ],
+    "fill": [
+      {
+        "q": "There is a pen ____ the notebook.（在筆記本上）",
+        "ans": "on"
+      },
+      {
+        "q": "There is a dictionary ____ the notebook.（在筆記本上）",
+        "ans": "on"
+      },
+      {
+        "q": "There is glue ____ the notebook.（在筆記本上）",
+        "ans": "on"
+      },
+      {
+        "q": "There are scissors ____ the notebook.（在筆記本下）",
+        "ans": "under"
+      },
+      {
+        "q": "There is a workbook ____ the notebook.（在筆記本下）",
+        "ans": "under"
+      },
+      {
+        "q": "There is some paper ____ the notebook.（在筆記本下）",
+        "ans": "under"
+      },
+      {
+        "q": "There is a pen ____ the notebook.（在筆記本裡）",
+        "ans": "in"
+      },
+      {
+        "q": "There is a dictionary ____ the notebook.（在筆記本裡）",
+        "ans": "in"
+      },
+      {
+        "q": "There is glue ____ the notebook.（在筆記本裡）",
+        "ans": "in"
+      },
+      {
+        "q": "There are scissors ____ the notebook.（在筆記本裡）",
+        "ans": "in"
+      }
+    ],
+    "translate": [
+      {
+        "q": "筆在筆記本上。",
+        "ans": "There is a pen on the notebook."
+      },
+      {
+        "q": "字典在筆記本下。",
+        "ans": "There is a dictionary under the notebook."
+      },
+      {
+        "q": "膠水在筆記本裡。",
+        "ans": "There is glue in the notebook."
+      },
+      {
+        "q": "剪刀在筆記本上。",
+        "ans": "There are scissors on the notebook."
+      },
+      {
+        "q": "作業簿在筆記本下。",
+        "ans": "There is a workbook under the notebook."
+      },
+      {
+        "q": "紙在筆記本裡。",
+        "ans": "There is some paper in the notebook."
+      },
+      {
+        "q": "筆在筆記本裡。",
+        "ans": "There is a pen in the notebook."
+      },
+      {
+        "q": "字典在筆記本上。",
+        "ans": "There is a dictionary on the notebook."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "notebook / . / the / pen / on / There / is / a",
+        "ans": "There is a pen on the notebook."
+      },
+      {
+        "q": "dictionary / under / . / a / is / There / notebook / the",
+        "ans": "There is a dictionary under the notebook."
+      },
+      {
+        "q": "notebook / There / glue / in / . / is / the",
+        "ans": "There is glue in the notebook."
+      },
+      {
+        "q": "notebook / on / are / scissors / . / There / the",
+        "ans": "There are scissors on the notebook."
+      },
+      {
+        "q": ". / notebook / a / the / under / There / is / workbook",
+        "ans": "There is a workbook under the notebook."
+      },
+      {
+        "q": ". / There / in / notebook / paper / is / some / the",
+        "ans": "There is some paper in the notebook."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

@@ -1,0 +1,696 @@
+{
+  "title_en": "Hello & Me",
+  "title_zh": "問候與自我介紹",
+  "grammar": "本課重點是 be 動詞的 am/is/are 用法，以及 I am… 和 You are… 的句型。",
+  "intro_zh": "這一課讓學生學會用問候語和自我介紹，練習 be 動詞的 am/is/are 用法，以及 I am… 和 You are… 的句型。透過互動對話，學生能詢問對方的名字、住處和喜好，並用肢體語言表達友善。",
+  "can_do": [
+    "能用 Good morning、Good afternoon、Good evening、Good night 適時問候。",
+    "能用 I am… 和 You are… 介紹自己和他人。",
+    "能用 meet、shake hands、hug、wave、bow、clap、thumbs up 等動作表達友善。"
+  ],
+  "reading": {
+    "title_en": "A New Friend",
+    "title_zh": "新朋友",
+    "sentences": [
+      {
+        "en": "In the morning, Lily says 'Good morning' to Tom at the school gate.",
+        "zh": "早上，莉莉在學校門口對湯姆說『早安』."
+      },
+      {
+        "en": "They meet and shake hands.",
+        "zh": "他們見面並握手."
+      },
+      {
+        "en": "Tom asks, 'What is your name?'",
+        "zh": "湯姆問：『你叫什麼名字？』"
+      },
+      {
+        "en": "Lily answers, 'I am Lily.'",
+        "zh": "莉莉回答：『我是莉莉。』"
+      },
+      {
+        "en": "Tom says, 'I am Tom. Nice to meet you!'",
+        "zh": "湯姆說：『我是湯姆。很高興認識你！』"
+      },
+      {
+        "en": "They talk about where they live and when they go to school.",
+        "zh": "他們談論他們住在哪裡以及什麼時候去上學。"
+      },
+      {
+        "en": "Lily asks, 'Who is your best friend?'",
+        "zh": "莉莉問：『你最好的朋友是誰？』"
+      },
+      {
+        "en": "Tom replies, 'My best friend is Mei, who sits with me at lunch.'",
+        "zh": "湯姆回答：『我最好的朋友是美，她在午餐時和我一起坐。』"
+      },
+      {
+        "en": "Lily wonders why the sky is blue, which colour she likes best, how to say thank you, and whose book is on the table.",
+        "zh": "莉莉想知道天為什麼是藍色的，她最喜歡哪種顏色，如何說謝謝，以及桌上那本書是誰的。"
+      },
+      {
+        "en": "They then hug, clap, give thumbs up, wave, bow, and say good afternoon, good evening, good night.",
+        "zh": "然後他們擁抱、拍手、比讚、揮手、鞠躬，並說『午安』、『晚安』（傍晚）和『晚安』（睡前）。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① be 動詞的變化：am/is/are 與主詞代名詞對應",
+      "explain_zh": "be 動詞會依照主詞代名詞而改變：I 用 am, you 用 are, he/she/it 用 is, we/they 用 are。",
+      "table": [
+        [
+          "主詞代名詞",
+          "be 動詞",
+          "中文說明"
+        ],
+        [
+          "I",
+          "am",
+          "我"
+        ],
+        [
+          "you",
+          "are",
+          "你"
+        ],
+        [
+          "he",
+          "is",
+          "他"
+        ],
+        [
+          "she",
+          "is",
+          "她"
+        ],
+        [
+          "it",
+          "is",
+          "它"
+        ],
+        [
+          "we",
+          "are",
+          "我們"
+        ],
+        [
+          "they",
+          "are",
+          "他們/她們/它們"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 I am… 和 You are… 介紹自己與詢問對方",
+      "explain_zh": "學習用 I am… 說出自己的名字、年齡、喜好等；用 You are… 描述或詢問對方的狀況。",
+      "examples": [
+        {
+          "en": "I am Mei-Ling.",
+          "zh": "我是美玲。"
+        },
+        {
+          "en": "You are my friend.",
+          "zh": "你是我的朋友。"
+        },
+        {
+          "en": "I am seven years old.",
+          "zh": "我七歲。"
+        },
+        {
+          "en": "You are from Taipei.",
+          "zh": "你來自台北。"
+        },
+        {
+          "en": "I am happy today.",
+          "zh": "我今天很開心。"
+        },
+        {
+          "en": "You are kind.",
+          "zh": "你很友善。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在校園裡認識新同學",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Good morning! I am Anna.",
+        "zh": "早安！我是安娜。"
+      },
+      {
+        "sp": "Bob",
+        "en": "Good morning! You are Anna? I am Bob.",
+        "zh": "早安！你是安娜嗎？我是Bob。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Nice to meet you, Bob. Where are you from?",
+        "zh": "很高興認識你，Bob。你來自哪裡？"
+      },
+      {
+        "sp": "Bob",
+        "en": "I am from Kaohsiung. How old are you?",
+        "zh": "我來自高雄。你幾歲？"
+      },
+      {
+        "sp": "Anna",
+        "en": "I am eight years old. Do you like to play soccer?",
+        "zh": "我八歲。你喜歡踢足球嗎？"
+      },
+      {
+        "sp": "Bob",
+        "en": "Yes! Let’s play together after class.",
+        "zh": "是的！下課後一起玩吧。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Good afternoon, class!",
+      "zh": "午安，全班同學！"
+    },
+    {
+      "en": "I am Lily.",
+      "zh": "我是莉莉。"
+    },
+    {
+      "en": "You are my teacher.",
+      "zh": "你是我的老師。"
+    },
+    {
+      "en": "He is from Tainan.",
+      "zh": "他來自台南。"
+    },
+    {
+      "en": "She is happy today.",
+      "zh": "她今天很開心。"
+    },
+    {
+      "en": "We are ready to learn.",
+      "zh": "我們準備好學習了。"
+    },
+    {
+      "en": "They are playing soccer.",
+      "zh": "他們在踢足球。"
+    },
+    {
+      "en": "Good night, everyone!",
+      "zh": "晚安，大家！"
+    }
+  ],
+  "no": 2,
+  "theme": "Hello & Me",
+  "theme_zh": "問候與自我介紹",
+  "words": [
+    {
+      "en": "meet",
+      "zh": "遇見"
+    },
+    {
+      "en": "what",
+      "zh": "什麼"
+    },
+    {
+      "en": "who",
+      "zh": "誰"
+    },
+    {
+      "en": "how",
+      "zh": "如何"
+    },
+    {
+      "en": "where",
+      "zh": "哪裡"
+    },
+    {
+      "en": "when",
+      "zh": "何時"
+    },
+    {
+      "en": "why",
+      "zh": "為什麼"
+    },
+    {
+      "en": "which",
+      "zh": "哪一個"
+    },
+    {
+      "en": "whose",
+      "zh": "誰的"
+    },
+    {
+      "en": "with",
+      "zh": "帶著；與…一起"
+    },
+    {
+      "en": "good morning",
+      "zh": "早安"
+    },
+    {
+      "en": "good afternoon",
+      "zh": "午安"
+    },
+    {
+      "en": "good evening",
+      "zh": "晚安（傍晚）"
+    },
+    {
+      "en": "good night",
+      "zh": "晚安（睡前）"
+    },
+    {
+      "en": "hug",
+      "zh": "擁抱"
+    },
+    {
+      "en": "wave",
+      "zh": "揮手"
+    },
+    {
+      "en": "bow",
+      "zh": "鞠躬"
+    },
+    {
+      "en": "shake hands",
+      "zh": "握手"
+    },
+    {
+      "en": "clap",
+      "zh": "拍手"
+    },
+    {
+      "en": "thumbs up",
+      "zh": "比讚"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "見面 的英文是？",
+        "opts": [
+          "meet",
+          "wave",
+          "hug",
+          "shake hands"
+        ],
+        "ans": "meet"
+      },
+      {
+        "q": "擁抱 的英文是？",
+        "opts": [
+          "hug",
+          "clap",
+          "bow",
+          "thumbs up"
+        ],
+        "ans": "hug"
+      },
+      {
+        "q": "揮手 的英文是？",
+        "opts": [
+          "wave",
+          "meet",
+          "with",
+          "good morning"
+        ],
+        "ans": "wave"
+      },
+      {
+        "q": "鞠躬 的英文是？",
+        "opts": [
+          "bow",
+          "why",
+          "where",
+          "when"
+        ],
+        "ans": "bow"
+      },
+      {
+        "q": "握手 的英文是？",
+        "opts": [
+          "shake hands",
+          "clap",
+          "thumbs up",
+          "good night"
+        ],
+        "ans": "shake hands"
+      },
+      {
+        "q": "拍手 的英文是？",
+        "opts": [
+          "clap",
+          "meet",
+          "who",
+          "what"
+        ],
+        "ans": "clap"
+      },
+      {
+        "q": "大拇指向上 的英文是？",
+        "opts": [
+          "thumbs up",
+          "good afternoon",
+          "good evening",
+          "with"
+        ],
+        "ans": "thumbs up"
+      },
+      {
+        "q": "早上好 的英文是？",
+        "opts": [
+          "good morning",
+          "good afternoon",
+          "good evening",
+          "good night"
+        ],
+        "ans": "good morning"
+      },
+      {
+        "q": "下午好 的英文是？",
+        "opts": [
+          "good afternoon",
+          "good morning",
+          "good evening",
+          "good night"
+        ],
+        "ans": "good afternoon"
+      },
+      {
+        "q": "晚上好 的英文是？",
+        "opts": [
+          "good evening",
+          "good morning",
+          "good afternoon",
+          "good night"
+        ],
+        "ans": "good evening"
+      },
+      {
+        "q": "請選擇正確的動詞： I ___ with you.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "請選擇正確的動詞： You ___ with me.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的動詞： He ___ with her.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的動詞： She ___ with him.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的動詞： It ___ with them.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的動詞： We ___ with you.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的動詞： They ___ with me.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的動詞： Who ___ you?",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的動詞： What ___ this?",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的動詞： Where ___ you?",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "當你第一次見到某人時，你會說： I ___ you.",
+        "opts": [
+          "meet",
+          "hug",
+          "wave",
+          "bow"
+        ],
+        "ans": "meet"
+      },
+      {
+        "q": "當你見到久違的朋友時，你會： I ___ you.",
+        "opts": [
+          "meet",
+          "hug",
+          "wave",
+          "bow"
+        ],
+        "ans": "hug"
+      },
+      {
+        "q": "當你想向遠方的朋友打招呼時，你會： I ___ you.",
+        "opts": [
+          "meet",
+          "hug",
+          "wave",
+          "bow"
+        ],
+        "ans": "wave"
+      },
+      {
+        "q": "當你想表示尊敬時，你會： _____ .",
+        "opts": [
+          "meet",
+          "hug",
+          "wave",
+          "bow"
+        ],
+        "ans": "bow"
+      },
+      {
+        "q": "當你想表示友好時，你會： _____ .",
+        "opts": [
+          "shake hands",
+          "clap",
+          "thumbs up",
+          "meet"
+        ],
+        "ans": "shake hands"
+      },
+      {
+        "q": "當你想表示讚美時，你會： _____ .",
+        "opts": [
+          "shake hands",
+          "clap",
+          "thumbs up",
+          "meet"
+        ],
+        "ans": "clap"
+      },
+      {
+        "q": "當你想表示同意時，你會： _____ .",
+        "opts": [
+          "shake hands",
+          "clap",
+          "thumbs up",
+          "meet"
+        ],
+        "ans": "thumbs up"
+      },
+      {
+        "q": "With you I ___ .",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "meet"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "With me you ___ .",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "meet"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "With her he ___ .",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "meet"
+        ],
+        "ans": "is"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____.（我是）",
+        "ans": "am"
+      },
+      {
+        "q": "You ____.（你是）",
+        "ans": "are"
+      },
+      {
+        "q": "He ____.（他是）",
+        "ans": "is"
+      },
+      {
+        "q": "She ____.（她是）",
+        "ans": "is"
+      },
+      {
+        "q": "It ____.（它是）",
+        "ans": "is"
+      },
+      {
+        "q": "We ____.（我們是）",
+        "ans": "are"
+      },
+      {
+        "q": "They ____.（他們是）",
+        "ans": "are"
+      },
+      {
+        "q": "Good morning, I ____.（早上好，我是）",
+        "ans": "am"
+      },
+      {
+        "q": "Good afternoon, you ____.（下午好，你是）",
+        "ans": "are"
+      },
+      {
+        "q": "Good evening, we ____.（晚上好，我們是）",
+        "ans": "are"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我是。",
+        "ans": "I am."
+      },
+      {
+        "q": "你是。",
+        "ans": "You are."
+      },
+      {
+        "q": "他是。",
+        "ans": "He is."
+      },
+      {
+        "q": "她是。",
+        "ans": "She is."
+      },
+      {
+        "q": "它是。",
+        "ans": "It is."
+      },
+      {
+        "q": "我們是。",
+        "ans": "We are."
+      },
+      {
+        "q": "他們是。",
+        "ans": "They are."
+      },
+      {
+        "q": "早上好。",
+        "ans": "Good morning."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "am / . / I",
+        "ans": "I am."
+      },
+      {
+        "q": ". / are / You",
+        "ans": "You are."
+      },
+      {
+        "q": ". / is / He",
+        "ans": "He is."
+      },
+      {
+        "q": ". / She / is",
+        "ans": "She is."
+      },
+      {
+        "q": "is / It / .",
+        "ans": "It is."
+      },
+      {
+        "q": "are / We / .",
+        "ans": "We are."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

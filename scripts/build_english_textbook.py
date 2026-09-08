@@ -344,8 +344,17 @@ def add_grammar(doc, lesson, color):
 
 
 def add_sentences(doc, lesson, color):
+    # 例句區偶爾整段照抄上面文法點的例句（L01 是八句全中），印出來就是同一頁
+    # 重複兩次。文法那邊先出現，這裡把已經看過的濾掉。
+    seen = {ex["en"].strip().lower()
+            for point in lesson["grammar_points"]
+            for ex in point.get("examples") or []}
+    sentences = [s for s in lesson["sentences"]
+                 if s["en"].strip().lower() not in seen]
+    if not sentences and not lesson.get("dialogue"):
+        return
     section_head(doc, "例句與對話", color)
-    for s in lesson["sentences"]:
+    for s in sentences:
         p = para(doc, space_after=1, indent=0.4)
         style_run(p.add_run("‧ "), 13, color=color)
         style_run(p.add_run(s["en"]), 13)

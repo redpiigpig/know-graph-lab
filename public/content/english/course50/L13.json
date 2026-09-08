@@ -1,0 +1,663 @@
+{
+  "title_en": "My Family and Friends",
+  "title_zh": "我的家人與朋友",
+  "grammar": "本課學習使用 This is my… 以及所有格 my / your / his / her。",
+  "intro_zh": "在這一課裡，我們將學習怎麼用英文介紹家人和朋友，練習說出他們的名字和關係。透過動物園的故事，自然使用 my、your、his、her 等所有格。",
+  "can_do": [
+    "能用 This is my… 介紹家人或朋友。",
+    "能正確使用 my、your、his、her 表示所有格。",
+    "能閱讀簡短故事並回答關於人物與動物的問題。"
+  ],
+  "reading": {
+    "title_en": "A Day at the Zoo",
+    "title_zh": "動物園的一天",
+    "sentences": [
+      {
+        "en": "This is my friend Lily.",
+        "zh": "這是我的朋友 Lily。"
+      },
+      {
+        "en": "She is from America, so she is an American.",
+        "zh": "她來自美國，所以她是美國人。"
+      },
+      {
+        "en": "Her cousin is a nephew named Tom.",
+        "zh": "她的表弟是一個名叫 Tom 的姪子。"
+      },
+      {
+        "en": "Tom likes animals, especially bears and bees.",
+        "zh": "Tom 喜歡動物，特別是熊和蜜蜂。"
+      },
+      {
+        "en": "At the zoo we saw an elephant, a lion, a monkey, a snake and a tiger.",
+        "zh": "在動物園裡，我們看到了大象、獅子、猴子、蛇和老虎。"
+      },
+      {
+        "en": "Everyone thought the tiger was scary, but nobody was hurt.",
+        "zh": "大家都覺得老虎很可怕，但沒有人受傷。"
+      },
+      {
+        "en": "A stranger asked if we had a pet bird at home.",
+        "zh": "一個陌生人問我們家裡有沒有寵物鳥。"
+      },
+      {
+        "en": "Someone said the bird could sing a lovely song.",
+        "zh": "有人說這隻鳥能唱出優美的歌聲。"
+      },
+      {
+        "en": "Anyone can hear the bird's sweet voice from far away.",
+        "zh": "任何人都能從遠處聽見這鳥甜美的聲音。"
+      },
+      {
+        "en": "A foreigner from China smiled and said she is Chinese.",
+        "zh": "一位來自中國的外國人微笑著說她是中國人。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① This is my… 的基本結構",
+      "explain_zh": "用來介紹自己或他人關係的句型，結構為「This is + 所有格 + 名詞」。",
+      "table": [
+        [
+          "結構",
+          "說明",
+          "例句"
+        ],
+        [
+          "This is my + 名詞.",
+          "表示「這是我的…」。",
+          "This is my mother."
+        ],
+        [
+          "This is your + 名詞.",
+          "表示「這是你的…」。",
+          "This is your father."
+        ],
+        [
+          "This is his/her + 名詞.",
+          "表示「這是他的/她的…」。",
+          "This is his brother."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 所有格 my / your / his / her 的用法",
+      "explain_zh": "所有格放在名詞前面，表示擁有或關係，需根據主語的人稱選擇對應的所有格。",
+      "examples": [
+        {
+          "en": "This is my dog.",
+          "zh": "這是我的狗。"
+        },
+        {
+          "en": "Is that your book?",
+          "zh": "那是你的書嗎？"
+        },
+        {
+          "en": "Her cat is white.",
+          "zh": "她的貓是白色的。"
+        },
+        {
+          "en": "His brother likes soccer.",
+          "zh": "他的哥哥喜歡足球。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室認識新朋友",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Hi, I'm Anna. This is my brother.",
+        "zh": "嗨，我是安娜。這是我的哥哥。"
+      },
+      {
+        "sp": "Tom",
+        "en": "Nice to meet you. This is my sister.",
+        "zh": "很高興認識你。這是我的妹妹。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Do you have any pets?",
+        "zh": "你有寵物嗎？"
+      },
+      {
+        "sp": "Tom",
+        "en": "Yes, I have a pet bird. Its name is Sunny.",
+        "zh": "有，我有一隻寵物鳥，名字叫陽光。"
+      },
+      {
+        "sp": "Anna",
+        "en": "That's cute! This is my dog, Buddy.",
+        "zh": "好可愛！這是我的狗，巴迪。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "This is my mother.",
+      "zh": "這是我的媽媽。"
+    },
+    {
+      "en": "Is that your father?",
+      "zh": "那是你的爸爸嗎？"
+    },
+    {
+      "en": "Her elephant is big.",
+      "zh": "她的大象很大。"
+    },
+    {
+      "en": "His monkey likes bananas.",
+      "zh": "他的猴子喜歡香蕉。"
+    },
+    {
+      "en": "This is my pet tiger.",
+      "zh": "這是我的寵物老虎。"
+    },
+    {
+      "en": "Do you see the snake?",
+      "zh": "你看到那條蛇了嗎？"
+    },
+    {
+      "en": "The bee is on the flower.",
+      "zh": "蜜蜂在花朵上。"
+    },
+    {
+      "en": "Everyone loves the lion show.",
+      "zh": "每個人都喜歡獅子表演。"
+    }
+  ],
+  "no": 13,
+  "theme": "My Family & Friends",
+  "theme_zh": "家人與朋友",
+  "words": [
+    {
+      "en": "stranger",
+      "zh": "陌生人"
+    },
+    {
+      "en": "foreigner",
+      "zh": "外國人"
+    },
+    {
+      "en": "American",
+      "zh": "美國人"
+    },
+    {
+      "en": "Chinese",
+      "zh": "中國人"
+    },
+    {
+      "en": "anyone/anybody",
+      "zh": "任何人"
+    },
+    {
+      "en": "everyone/everybody",
+      "zh": "每個人"
+    },
+    {
+      "en": "someone/somebody",
+      "zh": "某人"
+    },
+    {
+      "en": "nobody",
+      "zh": "沒有人"
+    },
+    {
+      "en": "name",
+      "zh": "名字"
+    },
+    {
+      "en": "nephew",
+      "zh": "姪子；外甥"
+    },
+    {
+      "en": "animal",
+      "zh": "動物"
+    },
+    {
+      "en": "bear",
+      "zh": "熊"
+    },
+    {
+      "en": "bee",
+      "zh": "蜜蜂"
+    },
+    {
+      "en": "elephant",
+      "zh": "大象"
+    },
+    {
+      "en": "lion",
+      "zh": "獅子"
+    },
+    {
+      "en": "monkey",
+      "zh": "猴子"
+    },
+    {
+      "en": "snake",
+      "zh": "蛇"
+    },
+    {
+      "en": "tiger",
+      "zh": "老虎"
+    },
+    {
+      "en": "pet",
+      "zh": "寵物"
+    },
+    {
+      "en": "bird",
+      "zh": "鳥"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "陌生人 的英文是？",
+        "opts": [
+          "stranger",
+          "foreigner",
+          "American",
+          "Chinese"
+        ],
+        "ans": "stranger"
+      },
+      {
+        "q": "外國人 的英文是？",
+        "opts": [
+          "stranger",
+          "foreigner",
+          "American",
+          "Chinese"
+        ],
+        "ans": "foreigner"
+      },
+      {
+        "q": "美國人 的英文是？",
+        "opts": [
+          "stranger",
+          "foreigner",
+          "American",
+          "Chinese"
+        ],
+        "ans": "American"
+      },
+      {
+        "q": "中國人 的英文是？",
+        "opts": [
+          "stranger",
+          "foreigner",
+          "American",
+          "Chinese"
+        ],
+        "ans": "Chinese"
+      },
+      {
+        "q": "任何人 的英文是？",
+        "opts": [
+          "anyone",
+          "everyone",
+          "somebody",
+          "nobody"
+        ],
+        "ans": "anyone"
+      },
+      {
+        "q": "每個人 的英文是？",
+        "opts": [
+          "anyone",
+          "everyone",
+          "somebody",
+          "nobody"
+        ],
+        "ans": "everyone"
+      },
+      {
+        "q": "某人 的英文是？",
+        "opts": [
+          "anyone",
+          "everyone",
+          "somebody",
+          "nobody"
+        ],
+        "ans": "somebody"
+      },
+      {
+        "q": "沒有人 的英文是？",
+        "opts": [
+          "anyone",
+          "everyone",
+          "somebody",
+          "nobody"
+        ],
+        "ans": "nobody"
+      },
+      {
+        "q": "名字 的英文是？",
+        "opts": [
+          "name",
+          "nephew",
+          "animal",
+          "pet"
+        ],
+        "ans": "name"
+      },
+      {
+        "q": "侄子 的英文是？",
+        "opts": [
+          "name",
+          "nephew",
+          "animal",
+          "pet"
+        ],
+        "ans": "nephew"
+      },
+      {
+        "q": "This is my ___.",
+        "opts": [
+          "name",
+          "pet",
+          "animal",
+          "stranger"
+        ],
+        "ans": "name"
+      },
+      {
+        "q": "This is your ___.",
+        "opts": [
+          "nephew",
+          "bear",
+          "bee",
+          "elephant"
+        ],
+        "ans": "nephew"
+      },
+      {
+        "q": "This is his ___.",
+        "opts": [
+          "pet",
+          "lion",
+          "monkey",
+          "snake"
+        ],
+        "ans": "pet"
+      },
+      {
+        "q": "This is her ___.",
+        "opts": [
+          "bird",
+          "name",
+          "animal",
+          "stranger"
+        ],
+        "ans": "bird"
+      },
+      {
+        "q": "Is ___ here?",
+        "opts": [
+          "anyone",
+          "everyone",
+          "someone",
+          "nobody"
+        ],
+        "ans": "anyone"
+      },
+      {
+        "q": "___ is my pet.",
+        "opts": [
+          "anyone",
+          "everyone",
+          "someone",
+          "nobody"
+        ],
+        "ans": "someone"
+      },
+      {
+        "q": "Is that your ___?",
+        "opts": [
+          "bee",
+          "elephant",
+          "lion",
+          "monkey"
+        ],
+        "ans": "bee"
+      },
+      {
+        "q": "This is not my ___.",
+        "opts": [
+          "name",
+          "pet",
+          "animal",
+          "stranger"
+        ],
+        "ans": "pet"
+      },
+      {
+        "q": "This is a ___.",
+        "opts": [
+          "bear",
+          "bee",
+          "elephant",
+          "tiger"
+        ],
+        "ans": "bear"
+      },
+      {
+        "q": "Is this a ___?",
+        "opts": [
+          "bear",
+          "bee",
+          "elephant",
+          "tiger"
+        ],
+        "ans": "bee"
+      },
+      {
+        "q": "這是誰的熊？",
+        "opts": [
+          "This is my bear.",
+          "This is your bear.",
+          "This is his bear.",
+          "This is her bear."
+        ],
+        "ans": "This is his bear."
+      },
+      {
+        "q": "誰的寵物是蜜蜂？",
+        "opts": [
+          "This is my bee.",
+          "This is your bee.",
+          "This is his bee.",
+          "This is her bee."
+        ],
+        "ans": "This is her bee."
+      },
+      {
+        "q": "這是誰的名字？",
+        "opts": [
+          "This is my name.",
+          "This is your name.",
+          "This is his name.",
+          "This is her name."
+        ],
+        "ans": "This is his name."
+      },
+      {
+        "q": "誰是陌生人？",
+        "opts": [
+          "He is a stranger.",
+          "She is a stranger.",
+          "It is a stranger.",
+          "You are a stranger."
+        ],
+        "ans": "He is a stranger."
+      },
+      {
+        "q": "誰是外國人？",
+        "opts": [
+          "He is a foreigner.",
+          "She is a foreigner.",
+          "It is a foreigner.",
+          "You are a foreigner."
+        ],
+        "ans": "She is a foreigner."
+      },
+      {
+        "q": "誰是美國人？",
+        "opts": [
+          "He is an American.",
+          "She is an American.",
+          "It is an American.",
+          "You are an American."
+        ],
+        "ans": "He is an American."
+      },
+      {
+        "q": "誰是中國人？",
+        "opts": [
+          "He is a Chinese.",
+          "She is a Chinese.",
+          "It is a Chinese.",
+          "You are a Chinese."
+        ],
+        "ans": "She is a Chinese."
+      },
+      {
+        "q": "誰可以進來？",
+        "opts": [
+          "Anyone can come in.",
+          "Everyone can come in.",
+          "Someone can come in.",
+          "Nobody can come in."
+        ],
+        "ans": "Anyone can come in."
+      },
+      {
+        "q": "誰在這裡？",
+        "opts": [
+          "Everyone is here.",
+          "Someone is here.",
+          "Nobody is here.",
+          "Anyone is here."
+        ],
+        "ans": "Everyone is here."
+      },
+      {
+        "q": "誰有動物？",
+        "opts": [
+          "Someone has an animal.",
+          "Everyone has an animal.",
+          "Nobody has an animal.",
+          "Anyone has an animal."
+        ],
+        "ans": "Someone has an animal."
+      }
+    ],
+    "fill": [
+      {
+        "q": "This is my ____ . (這是我的寵物)",
+        "ans": "pet"
+      },
+      {
+        "q": "This is your ____ . (這是你的動物)",
+        "ans": "animal"
+      },
+      {
+        "q": "This is his ____ . (這是他的名字)",
+        "ans": "name"
+      },
+      {
+        "q": "This is her ____ . (這是她的鳥)",
+        "ans": "bird"
+      },
+      {
+        "q": "This is my ____ . (這是我的外甥)",
+        "ans": "nephew"
+      },
+      {
+        "q": "This is your ____ . (這是你的陌生人)",
+        "ans": "stranger"
+      },
+      {
+        "q": "This is his ____ . (這是他的老虎)",
+        "ans": "tiger"
+      },
+      {
+        "q": "This is her ____ . (這是她的大象)",
+        "ans": "elephant"
+      },
+      {
+        "q": "This is my ____ . (這是我的熊)",
+        "ans": "bear"
+      },
+      {
+        "q": "This is your ____ . (這是你的蛇)",
+        "ans": "snake"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這是我的寵物。",
+        "ans": "This is my pet."
+      },
+      {
+        "q": "這是你的動物。",
+        "ans": "This is your animal."
+      },
+      {
+        "q": "這是他的名字。",
+        "ans": "This is his name."
+      },
+      {
+        "q": "這是她的鳥。",
+        "ans": "This is her bird."
+      },
+      {
+        "q": "這是我的外甥。",
+        "ans": "This is my nephew."
+      },
+      {
+        "q": "這是你的陌生人。",
+        "ans": "This is your stranger."
+      },
+      {
+        "q": "這是他的老虎。",
+        "ans": "This is his tiger."
+      },
+      {
+        "q": "這是她的大象。",
+        "ans": "This is her elephant."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "is / This / pet / . / my",
+        "ans": "This is my pet."
+      },
+      {
+        "q": "animal / your / This / . / is",
+        "ans": "This is your animal."
+      },
+      {
+        "q": ". / name / his / This / is",
+        "ans": "This is his name."
+      },
+      {
+        "q": ". / bird / is / This / her",
+        "ans": "This is her bird."
+      },
+      {
+        "q": "my / nephew / is / This / .",
+        "ans": "This is my nephew."
+      },
+      {
+        "q": ". / stranger / is / your / This",
+        "ans": "This is your stranger."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

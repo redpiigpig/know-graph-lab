@@ -1,0 +1,649 @@
+{
+  "title_en": "Days and Time",
+  "title_zh": "日子月份與時間",
+  "grammar": "學會用 What time is it? 和 What day is it? 以及 on … / at … 來問答時間與星期。",
+  "intro_zh": "在這一課，我們會學會說出今天是星期幾、現在是幾點，並練習用 on Monday、at 7:00 等表達方式，描述一天的活動與週末的計畫。我們也會學會說 yesterday、tomorrow、weekend 等詞，並了解 month、year、January 的基本概念。",
+  "can_do": [
+    "能用 What time is it? 問現在時間並回答。",
+    "能用 What day is it? 問今天是星期幾並回答。",
+    "能正確使用 on … 和 at … 描述活動時間。"
+  ],
+  "reading": {
+    "title_en": "My Week",
+    "title_zh": "我的一週",
+    "sentences": [
+      {
+        "en": "Today is Monday.",
+        "zh": "今天是星期一。"
+      },
+      {
+        "en": "In the afternoon, I have art class.",
+        "zh": "下午，我有美術課。"
+      },
+      {
+        "en": "Yesterday was Sunday, and I watched TV in the evening.",
+        "zh": "昨天是星期天，我在傍晚看電視。"
+      },
+      {
+        "en": "Tonight is the eve of Wednesday, so I will go to bed early.",
+        "zh": "今晚是星期三的前夕，我會早點睡覺。"
+      },
+      {
+        "en": "Tomorrow is Tuesday, and I will practice piano at night.",
+        "zh": "明天是星期二，我會在晚上練鋼琴。"
+      },
+      {
+        "en": "On Thursday, we have a field trip in the morning, and we return in the afternoon.",
+        "zh": "星期四早上有實地教學，下午回來。"
+      },
+      {
+        "en": "Friday is the last day of the week, and we look forward to the weekend.",
+        "zh": "星期五是星期的最後一天，我們期待週末。"
+      },
+      {
+        "en": "On Saturday morning, I clean my room, and in the evening I play soccer with friends.",
+        "zh": "星期六早上我打掃房間，傍晚我和朋友踢足球。"
+      },
+      {
+        "en": "In January, the month is cold, but we enjoy the new year together.",
+        "zh": "一月是月份裡很冷的一個月，但我們一起享受新年。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 問時間：What time is it? + at + 時間",
+      "explain_zh": "用 What time is it? 來問現在幾點，回答時用 at + 時間（如 at 7:00）。",
+      "table": [
+        [
+          "問句",
+          "回答模式",
+          "例句"
+        ],
+        [
+          "What time is it?",
+          "It is at + 時間.",
+          "What time is it? → It is at 3:15."
+        ],
+        [
+          "What time is it now?",
+          "It is at + 時間.",
+          "What time is it now? → It is at 12:00."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 問星期：What day is it? + on + 星期",
+      "explain_zh": "用 What day is it? 來問今天是星期幾，回答時用 on + 星期名稱。",
+      "examples": [
+        {
+          "en": "What day is it today?",
+          "zh": "今天是星期幾？"
+        },
+        {
+          "en": "It is on Monday.",
+          "zh": "今天是星期一。"
+        },
+        {
+          "en": "What day is it tomorrow?",
+          "zh": "明天是星期幾？"
+        },
+        {
+          "en": "It is on Friday.",
+          "zh": "今天是星期五。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "放學後的對話",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "What time is it now?",
+        "zh": "現在幾點？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It is at 4:00.",
+        "zh": "現在是四點。"
+      },
+      {
+        "sp": "Anna",
+        "en": "What day is it today?",
+        "zh": "今天是星期幾？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It is on Wednesday.",
+        "zh": "今天是星期三。"
+      },
+      {
+        "sp": "Anna",
+        "en": "What time is it tomorrow morning?",
+        "zh": "明天早上幾點？"
+      },
+      {
+        "sp": "Ben",
+        "en": "It is at 7:30.",
+        "zh": "明天早上七點三十分。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "What time is it?",
+      "zh": "現在幾點？"
+    },
+    {
+      "en": "It is at 9:00.",
+      "zh": "現在是九點。"
+    },
+    {
+      "en": "What day is it today?",
+      "zh": "今天是星期幾？"
+    },
+    {
+      "en": "It is on Thursday.",
+      "zh": "今天是星期四。"
+    },
+    {
+      "en": "What time is it in the evening?",
+      "zh": "傍晚幾點？"
+    },
+    {
+      "en": "It is at 6:15.",
+      "zh": "現在是六點十五分。"
+    },
+    {
+      "en": "What day is it tomorrow?",
+      "zh": "明天是星期幾？"
+    },
+    {
+      "en": "It is on Saturday.",
+      "zh": "明天是星期六。"
+    }
+  ],
+  "no": 29,
+  "theme": "Days, Months & Time",
+  "theme_zh": "日子‧月份與時間",
+  "words": [
+    {
+      "en": "afternoon",
+      "zh": "下午"
+    },
+    {
+      "en": "evening",
+      "zh": "傍晚"
+    },
+    {
+      "en": "night",
+      "zh": "夜晚"
+    },
+    {
+      "en": "tonight",
+      "zh": "今晚"
+    },
+    {
+      "en": "eve",
+      "zh": "前夕"
+    },
+    {
+      "en": "Monday",
+      "zh": "星期一"
+    },
+    {
+      "en": "Tuesday",
+      "zh": "星期二"
+    },
+    {
+      "en": "Wednesday",
+      "zh": "星期三"
+    },
+    {
+      "en": "Thursday",
+      "zh": "星期四"
+    },
+    {
+      "en": "Friday",
+      "zh": "星期五"
+    },
+    {
+      "en": "Saturday",
+      "zh": "星期六"
+    },
+    {
+      "en": "Sunday",
+      "zh": "星期天"
+    },
+    {
+      "en": "weekend",
+      "zh": "週末"
+    },
+    {
+      "en": "today",
+      "zh": "今天"
+    },
+    {
+      "en": "yesterday",
+      "zh": "昨天"
+    },
+    {
+      "en": "tomorrow",
+      "zh": "明天"
+    },
+    {
+      "en": "week",
+      "zh": "星期"
+    },
+    {
+      "en": "month",
+      "zh": "月"
+    },
+    {
+      "en": "year",
+      "zh": "年"
+    },
+    {
+      "en": "January",
+      "zh": "一月"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "請選擇『下午』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "tonight"
+        ],
+        "ans": "afternoon"
+      },
+      {
+        "q": "請選擇『晚上』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "tonight"
+        ],
+        "ans": "evening"
+      },
+      {
+        "q": "請選擇『夜晚』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "eve"
+        ],
+        "ans": "night"
+      },
+      {
+        "q": "請選擇『今晚』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "tonight"
+        ],
+        "ans": "tonight"
+      },
+      {
+        "q": "請選擇『前夕』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "eve"
+        ],
+        "ans": "eve"
+      },
+      {
+        "q": "請選擇『星期一』的英文是？",
+        "opts": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "ans": "Monday"
+      },
+      {
+        "q": "請選擇『星期二』的英文是？",
+        "opts": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "ans": "Tuesday"
+      },
+      {
+        "q": "請選擇『星期三』的英文是？",
+        "opts": [
+          "Friday",
+          "Saturday",
+          "Sunday",
+          "Wednesday"
+        ],
+        "ans": "Wednesday"
+      },
+      {
+        "q": "請選擇『星期四』的英文是？",
+        "opts": [
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "ans": "Thursday"
+      },
+      {
+        "q": "請選擇『星期五』的英文是？",
+        "opts": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Friday"
+        ],
+        "ans": "Friday"
+      },
+      {
+        "q": "What time is it? It is ___.",
+        "opts": [
+          "afternoon",
+          "evening",
+          "night",
+          "tonight"
+        ],
+        "ans": "evening"
+      },
+      {
+        "q": "What day is it? It is ___.",
+        "opts": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "ans": "Wednesday"
+      },
+      {
+        "q": "We have class ___ Monday.",
+        "opts": [
+          "on",
+          "at",
+          "today",
+          "tomorrow"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "We meet ___ night.",
+        "opts": [
+          "at",
+          "on",
+          "today",
+          "tomorrow"
+        ],
+        "ans": "at"
+      },
+      {
+        "q": "The day before today is ___.",
+        "opts": [
+          "yesterday",
+          "today",
+          "tomorrow",
+          "week"
+        ],
+        "ans": "yesterday"
+      },
+      {
+        "q": "Saturday and Sunday are part of the ___.",
+        "opts": [
+          "weekend",
+          "week",
+          "month",
+          "year"
+        ],
+        "ans": "weekend"
+      },
+      {
+        "q": "There are seven days in a ___.",
+        "opts": [
+          "week",
+          "month",
+          "year",
+          "day"
+        ],
+        "ans": "week"
+      },
+      {
+        "q": "January is the first ___ of the year.",
+        "opts": [
+          "month",
+          "week",
+          "day",
+          "today"
+        ],
+        "ans": "month"
+      },
+      {
+        "q": "There are twelve months in a ___.",
+        "opts": [
+          "year",
+          "month",
+          "week",
+          "day"
+        ],
+        "ans": "year"
+      },
+      {
+        "q": "請選擇表示『明天』的英文是？",
+        "opts": [
+          "today",
+          "yesterday",
+          "tomorrow",
+          "weekend"
+        ],
+        "ans": "tomorrow"
+      },
+      {
+        "q": "請選擇表示『昨天』的英文是？",
+        "opts": [
+          "evening",
+          "night",
+          "yesterday",
+          "month"
+        ],
+        "ans": "yesterday"
+      },
+      {
+        "q": "請選擇表示『週末』的英文是？",
+        "opts": [
+          "afternoon",
+          "evening",
+          "weekend",
+          "night"
+        ],
+        "ans": "weekend"
+      },
+      {
+        "q": "請選擇表示『一年有十二個』的英文是？",
+        "opts": [
+          "month",
+          "week",
+          "year",
+          "today"
+        ],
+        "ans": "month"
+      },
+      {
+        "q": "請選擇表示『禮拜天』的英文是？",
+        "opts": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday"
+        ],
+        "ans": "Sunday"
+      },
+      {
+        "q": "請選擇表示『禮拜六』的英文是？",
+        "opts": [
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "ans": "Saturday"
+      },
+      {
+        "q": "請選擇表示『今天是星期三，昨天是什麼？』的英文是？",
+        "opts": [
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "ans": "Tuesday"
+      },
+      {
+        "q": "請選擇表示『明天是星期五，後天是什麼？』的英文是？",
+        "opts": [
+          "Saturday",
+          "Sunday",
+          "Monday",
+          "Tuesday"
+        ],
+        "ans": "Saturday"
+      },
+      {
+        "q": "請選擇表示『七天構成的時間單位』的英文是？",
+        "opts": [
+          "week",
+          "month",
+          "year",
+          "today"
+        ],
+        "ans": "week"
+      },
+      {
+        "q": "請選擇表示『一年中的第一個月』的英文是？",
+        "opts": [
+          "January",
+          "month",
+          "week",
+          "year"
+        ],
+        "ans": "January"
+      }
+    ],
+    "fill": [
+      {
+        "q": "Today is ____.（今天是星期一。）",
+        "ans": "Monday"
+      },
+      {
+        "q": "Today is ____.（今天是星期二。）",
+        "ans": "Tuesday"
+      },
+      {
+        "q": "Today is ____.（今天是星期三。）",
+        "ans": "Wednesday"
+      },
+      {
+        "q": "Today is ____.（今天是星期四。）",
+        "ans": "Thursday"
+      },
+      {
+        "q": "Today is ____.（今天是星期五。）",
+        "ans": "Friday"
+      },
+      {
+        "q": "Today is ____.（今天是星期六。）",
+        "ans": "Saturday"
+      },
+      {
+        "q": "Today is ____.（今天是星期日。）",
+        "ans": "Sunday"
+      },
+      {
+        "q": "What time is it today? ____.（今天是什麼時間？下午）",
+        "ans": "afternoon"
+      },
+      {
+        "q": "What time is it today? ____.（今天是什麼時間？晚上）",
+        "ans": "evening"
+      },
+      {
+        "q": "What time is it today? ____.（今天是什麼時間？夜晚）",
+        "ans": "night"
+      }
+    ],
+    "translate": [
+      {
+        "q": "今天是星期一。",
+        "ans": "Today is Monday."
+      },
+      {
+        "q": "今天是星期二。",
+        "ans": "Today is Tuesday."
+      },
+      {
+        "q": "今天是星期三。",
+        "ans": "Today is Wednesday."
+      },
+      {
+        "q": "今天是星期四。",
+        "ans": "Today is Thursday."
+      },
+      {
+        "q": "今天是星期五。",
+        "ans": "Today is Friday."
+      },
+      {
+        "q": "今天是星期六。",
+        "ans": "Today is Saturday."
+      },
+      {
+        "q": "今天是星期日。",
+        "ans": "Today is Sunday."
+      },
+      {
+        "q": "今天是週末。",
+        "ans": "Today is weekend."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / Monday / is / Today",
+        "ans": "Today is Monday."
+      },
+      {
+        "q": "? / it / time / is / What",
+        "ans": "What time is it?"
+      },
+      {
+        "q": "is / day / it / ? / What",
+        "ans": "What day is it?"
+      },
+      {
+        "q": "afternoon / It / . / is",
+        "ans": "It is afternoon."
+      },
+      {
+        "q": "It / evening / is / .",
+        "ans": "It is evening."
+      },
+      {
+        "q": "January / Today / . / is",
+        "ans": "Today is January."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

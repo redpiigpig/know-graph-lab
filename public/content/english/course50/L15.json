@@ -1,0 +1,673 @@
+{
+  "title_en": "A Day at the Zoo",
+  "title_zh": "動物園的快樂一天",
+  "grammar": "本課學習使用 There is / There are 來說明事物的存在，並練習複數名詞的形式。",
+  "intro_zh": "這一課我們將認識各種動物與寵物，學習用 There is / There are 描述它們的數量，並練習說出牠們的英文名稱，還能說出牠們的特徵。",
+  "can_do": [
+    "能用 There is / There are 說出動物的數量。",
+    "能正確說出並拼寫本課的 20 個動物單字。",
+    "能簡單描述自己喜歡的寵物或見過的動物。"
+  ],
+  "reading": {
+    "title_en": "A Day at the Zoo",
+    "title_zh": "動物園的快樂一天",
+    "sentences": [
+      {
+        "en": "There is a fox sneaking near a tree where a squirrel is gathering nuts.",
+        "zh": "有一隻狐狸在樹旁悄悄靠近，而一隻松鼠正在樹下收集堅果。"
+      },
+      {
+        "en": "There are giraffes stretching their necks to eat leaves, while zebras graze nearby.",
+        "zh": "有幾隻長頸鹿伸長脖子吃樹葉，附近有斑馬在吃草。"
+      },
+      {
+        "en": "There is a hippo wallowing in the mud, and a crocodile lies still at the water's edge.",
+        "zh": "有一隻河馬在泥巴裡打滾，而一隻鱷魚靜靜地躺在水邊。"
+      },
+      {
+        "en": "There are penguins waddling on the ice, and a whale spouts far away in the ocean.",
+        "zh": "有幾隻企鵝在冰上搖搖晃晃地走，遠處的海裡有一條鯨魚噴水。"
+      },
+      {
+        "en": "There are dolphins leaping beside a boat, and a shark circles slowly underneath.",
+        "zh": "有幾隻海豚在船旁躍出水面，下方有一條鯊魚緩緩地繞圈。"
+      },
+      {
+        "en": "There is a crab crawling over shells, while butterflies flutter above the flowers.",
+        "zh": "有一隻螃蟹在貝殼上爬來爬去，花上方有蝴蝶在飛舞。"
+      },
+      {
+        "en": "There are ants marching in a line, and a spider weaves its web between two branches.",
+        "zh": "有一排螞蟻一字排開地前進，而一隻蜘蛛正在兩根樹枝間結網。"
+      },
+      {
+        "en": "There is an owl hooting from a branch, and an eagle soars high in the sky.",
+        "zh": "有一隻貓頭鷹在樹枝上叫喊，而一隻老鷹在高空中盤旋。"
+      },
+      {
+        "en": "There are parrots chattering in a cage, a chick pecks at the ground, and a dragon statue stands beside a dinosaur model.",
+        "zh": "有幾隻鸚鵡在籠子裡喋喋不休，一隻小雞在地上啄食，恐龍模型旁邊站著一條龍的雕像。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① There is / There are 的基本用法",
+      "explain_zh": "用來說明某件事物的存在。單數名詞用 There is，複數名詞用 There are。",
+      "table": [
+        [
+          "主語數量",
+          "動詞形式",
+          "例句英文",
+          "例句中文"
+        ],
+        [
+          "單數名詞",
+          "There is",
+          "There is a dog.",
+          "有一隻狗。"
+        ],
+        [
+          "複數名詞",
+          "There are",
+          "There are dogs.",
+          "有狗。"
+        ],
+        [
+          "未指定數量",
+          "There are",
+          "There are some birds.",
+          "有一些鳥。"
+        ],
+        [
+          "零數量",
+          "There are",
+          "There are no cats.",
+          "沒有貓。"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 複數名詞的變化規則",
+      "explain_zh": "大多數名詞直接加 -s；以 s, x, z, ch, sh 結尾加 -es；以 y 結尾且前面為子音時，改 y 為 i 再加 -es；有些名詞有不規則變化。",
+      "examples": [
+        {
+          "en": "fox -> foxes",
+          "zh": "狐狸 -> 狐狸們"
+        },
+        {
+          "en": "giraffe -> giraffes",
+          "zh": "長頸鹿 -> 長頸鹿們"
+        },
+        {
+          "en": "butterfly -> butterflies",
+          "zh": "蝴蝶 -> 蝴蝶們"
+        },
+        {
+          "en": "ant -> ants",
+          "zh": "螞蟻 -> 螞蟻們"
+        },
+        {
+          "en": "spider -> spiders",
+          "zh": "蜘蛛 -> 蜘蛛們"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在動物園裡",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "Look! There are many animals in the zoo.",
+        "zh": "看！動物園裡有很多動物。"
+      },
+      {
+        "sp": "小華",
+        "en": "There is a giraffe eating leaves.",
+        "zh": "有隻長頸鹿在吃葉子。"
+      },
+      {
+        "sp": "老師",
+        "en": "There are zebras and hippos near the water.",
+        "zh": "水邊有斑馬和河馬。"
+      },
+      {
+        "sp": "小明",
+        "en": "I see a penguin swimming.",
+        "zh": "我看見一隻企鵝在游泳。"
+      },
+      {
+        "sp": "小華",
+        "en": "There are dolphins jumping!",
+        "zh": "有海豚在跳躍！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "There is a fox in the forest.",
+      "zh": "森林裡有一隻狐狸。"
+    },
+    {
+      "en": "There are giraffes eating leaves.",
+      "zh": "有長頸鹿在吃葉子。"
+    },
+    {
+      "en": "There is a zebra standing near the tree.",
+      "zh": "有隻斑馬站在樹旁。"
+    },
+    {
+      "en": "There are hippos in the river.",
+      "zh": "河裡有河馬。"
+    },
+    {
+      "en": "There is a penguin sliding on the ice.",
+      "zh": "有隻企鵝在冰上滑行。"
+    },
+    {
+      "en": "There are dolphins playing in the sea.",
+      "zh": "海裡有海豚在玩耍。"
+    },
+    {
+      "en": "There is a shark swimming nearby.",
+      "zh": "有條鯊魚在附近游泳。"
+    },
+    {
+      "en": "There are crabs walking on the sand.",
+      "zh": "沙灘上有螃蟹在爬行。"
+    }
+  ],
+  "no": 15,
+  "theme": "Animals & Pets",
+  "theme_zh": "動物與寵物",
+  "words": [
+    {
+      "en": "fox",
+      "zh": "狐狸"
+    },
+    {
+      "en": "giraffe",
+      "zh": "長頸鹿"
+    },
+    {
+      "en": "zebra",
+      "zh": "斑馬"
+    },
+    {
+      "en": "hippo",
+      "zh": "河馬"
+    },
+    {
+      "en": "penguin",
+      "zh": "企鵝"
+    },
+    {
+      "en": "whale",
+      "zh": "鯨魚"
+    },
+    {
+      "en": "dolphin",
+      "zh": "海豚"
+    },
+    {
+      "en": "shark",
+      "zh": "鯊魚"
+    },
+    {
+      "en": "crab",
+      "zh": "螃蟹"
+    },
+    {
+      "en": "butterfly",
+      "zh": "蝴蝶"
+    },
+    {
+      "en": "ant",
+      "zh": "螞蟻"
+    },
+    {
+      "en": "spider",
+      "zh": "蜘蛛"
+    },
+    {
+      "en": "owl",
+      "zh": "貓頭鷹"
+    },
+    {
+      "en": "eagle",
+      "zh": "老鷹"
+    },
+    {
+      "en": "parrot",
+      "zh": "鸚鵡"
+    },
+    {
+      "en": "dinosaur",
+      "zh": "恐龍"
+    },
+    {
+      "en": "dragon",
+      "zh": "龍"
+    },
+    {
+      "en": "squirrel",
+      "zh": "松鼠"
+    },
+    {
+      "en": "crocodile",
+      "zh": "鱷魚"
+    },
+    {
+      "en": "chick",
+      "zh": "小雞"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "中文意思是 \"長頸鹿\" 的英文單字是？",
+        "opts": [
+          "fox",
+          "giraffe",
+          "zebra",
+          "hippo"
+        ],
+        "ans": "giraffe"
+      },
+      {
+        "q": "中文意思是 \"企鵝\" 的英文單字是？",
+        "opts": [
+          "penguin",
+          "whale",
+          "dolphin",
+          "shark"
+        ],
+        "ans": "penguin"
+      },
+      {
+        "q": "中文意思是 \"螃蟹\" 的英文單字是？",
+        "opts": [
+          "crab",
+          "butterfly",
+          "ant",
+          "spider"
+        ],
+        "ans": "crab"
+      },
+      {
+        "q": "中文意思是 \"恐龍\" 的英文單字是？",
+        "opts": [
+          "dinosaur",
+          "dragon",
+          "squirrel",
+          "crocodile"
+        ],
+        "ans": "dinosaur"
+      },
+      {
+        "q": "中文意思是 \"老鷹\" 的英文單字是？",
+        "opts": [
+          "owl",
+          "eagle",
+          "parrot",
+          "chick"
+        ],
+        "ans": "eagle"
+      },
+      {
+        "q": "中文意思是 \"蝴蝶\" 的英文單字是？",
+        "opts": [
+          "fox",
+          "giraffe",
+          "butterfly",
+          "ant"
+        ],
+        "ans": "butterfly"
+      },
+      {
+        "q": "中文意思是 \"海豚\" 的英文單字是？",
+        "opts": [
+          "dolphin",
+          "shark",
+          "crab",
+          "whale"
+        ],
+        "ans": "dolphin"
+      },
+      {
+        "q": "中文意思是 \"鯨魚\" 的英文單字是？",
+        "opts": [
+          "whale",
+          "dolphin",
+          "shark",
+          "penguin"
+        ],
+        "ans": "whale"
+      },
+      {
+        "q": "中文意思是 \"蜘蛛\" 的英文單字是？",
+        "opts": [
+          "spider",
+          "ant",
+          "butterfly",
+          "crab"
+        ],
+        "ans": "spider"
+      },
+      {
+        "q": "中文意思是 \"小雞\" 的英文單字是？",
+        "opts": [
+          "chick",
+          "parrot",
+          "owl",
+          "eagle"
+        ],
+        "ans": "chick"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 三隻長頸鹿。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 一隻狐狸。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 兩隻斑馬。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 一隻貓頭鷹。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 五隻蝴蝶。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 一條鯨魚。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 六隻企鵝。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 一隻河馬。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 八隻螞蟻。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There ___ 一隻蜘蛛。",
+        "opts": [
+          "is",
+          "are",
+          "a",
+          "an"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ giraffes.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "three"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ eagles.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "three"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ butterflies.",
+        "opts": [
+          "five",
+          "six",
+          "seven",
+          "eight"
+        ],
+        "ans": "six"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ sharks.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "three"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ ants.",
+        "opts": [
+          "six",
+          "seven",
+          "eight",
+          "nine"
+        ],
+        "ans": "seven"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ owls.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "four"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ crocodiles.",
+        "opts": [
+          "three",
+          "four",
+          "five",
+          "six"
+        ],
+        "ans": "five"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ dragons.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "three"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ foxes.",
+        "opts": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "ans": "two"
+      },
+      {
+        "q": "請選擇正確的詞彙完成句子：There are ___ squirrels.",
+        "opts": [
+          "three",
+          "four",
+          "five",
+          "six"
+        ],
+        "ans": "four"
+      }
+    ],
+    "fill": [
+      {
+        "q": "There ____ a fox.（有一隻狐狸）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ three giraffes.（有三隻長頸鹿）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ many zebras.（有很多斑馬）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a hippo.（有一隻河馬）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ two penguins.（有兩隻企鵝）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a whale.（有一條鯨魚）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ five dolphins.（有五隻海豚）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ some sharks.（有幾條鯊魚）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a crab.（有一隻螃蟹）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ butterflies。（有蝴蝶）",
+        "ans": "are"
+      }
+    ],
+    "translate": [
+      {
+        "q": "有一隻狐狸。",
+        "ans": "There is a fox."
+      },
+      {
+        "q": "有三隻長頸鹿。",
+        "ans": "There are three giraffes."
+      },
+      {
+        "q": "有很多斑馬。",
+        "ans": "There are many zebras."
+      },
+      {
+        "q": "有一隻河馬。",
+        "ans": "There is a hippo."
+      },
+      {
+        "q": "有兩隻企鵝。",
+        "ans": "There are two penguins."
+      },
+      {
+        "q": "有一條鯨魚。",
+        "ans": "There is a whale."
+      },
+      {
+        "q": "有五隻海豚。",
+        "ans": "There are five dolphins."
+      },
+      {
+        "q": "有幾條鯊魚。",
+        "ans": "There are some sharks."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / fox / a / There / is",
+        "ans": "There is a fox."
+      },
+      {
+        "q": "giraffes / three / There / . / are",
+        "ans": "There are three giraffes."
+      },
+      {
+        "q": ". / zebras / There / many / are",
+        "ans": "There are many zebras."
+      },
+      {
+        "q": "There / is / . / hippo / a",
+        "ans": "There is a hippo."
+      },
+      {
+        "q": "There / . / are / penguins / two",
+        "ans": "There are two penguins."
+      },
+      {
+        "q": "There / a / whale / . / is",
+        "ans": "There is a whale."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

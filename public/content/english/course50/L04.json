@@ -1,0 +1,624 @@
+{
+  "title_en": "Numbers & How Many",
+  "title_zh": "數字與數量",
+  "grammar": "用 How old are you? 詢問年齡，用 How many...? 詢問數量",
+  "intro_zh": "在生活中，我們經常需要說出數字和數量。這一課將學習十一到一百萬的英文數字表達方式。你將學會用英文說出年齡、詢問物品的數量，並能理解日常生活中出現的各種數字。",
+  "can_do": [
+    "能用英文說出 11～100 和更大的數字",
+    "能用 How old are you? 詢問並回答年齡",
+    "能用 How many…? 詢問並說出物品的數量"
+  ],
+  "reading": {
+    "title_en": "A Birthday Party",
+    "title_zh": "一個生日派對",
+    "sentences": [
+      {
+        "en": "Today is Tom's birthday. He is thirteen years old.",
+        "zh": "今天是湯姆的生日。他十三歲。"
+      },
+      {
+        "en": "His mother bought twenty cupcakes for the party.",
+        "zh": "他媽媽為派對買了二十個杯子蛋糕。"
+      },
+      {
+        "en": "\"How many friends will come?\" Tom asks.",
+        "zh": "「會有多少個朋友來？」湯姆問。"
+      },
+      {
+        "en": "\"Fifteen students from your class,\" his mother says.",
+        "zh": "「你班上的十五個同學，」他媽媽說。"
+      },
+      {
+        "en": "Tom's grandmother gave him thirty dollars as a gift.",
+        "zh": "湯姆的奶奶送他三十元作為禮物。"
+      },
+      {
+        "en": "His uncle brought fifty balloons and one hundred candles.",
+        "zh": "他叔叔帶來了五十個氣球和一百根蠟燭。"
+      },
+      {
+        "en": "\"Wow! This is the best party ever!\" Tom is so happy.",
+        "zh": "「哇！這是有史以來最棒的派對！」湯姆非常開心。"
+      },
+      {
+        "en": "All the children sang and danced until ninety minutes had passed.",
+        "zh": "所有孩子又唱又跳，直到九十分鐘過去了。"
+      },
+      {
+        "en": "Tom counted the gifts: there were nineteen presents in total.",
+        "zh": "湯姆數了數禮物：總共有十九份禮物。"
+      },
+      {
+        "en": "\"I will never forget this day,\" Tom said with a big smile.",
+        "zh": "「我永遠不會忘記今天，」湯姆帶著大大的笑容說。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① How old are you? 詢問年齡",
+      "explain_zh": "用來問別人的歲數，回答使用基數詞＋years old。",
+      "table": [
+        [
+          "問句",
+          "回答結構",
+          "例句"
+        ],
+        [
+          "How old are you?",
+          "I am ___ years old.",
+          "How old are you? I am twelve years old."
+        ],
+        [
+          "How old is he/she?",
+          "He/She is ___ years old.",
+          "How old is your brother? He is fifteen years old."
+        ],
+        [
+          "How old are they?",
+          "They are ___ years old.",
+          "How old are your friends? They are thirteen years old."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② How many...? 詢問數量",
+      "explain_zh": "用來問可數名詞的數量，回答使用基數詞＋名詞複數。",
+      "examples": [
+        {
+          "en": "How many apples do you have?",
+          "zh": "你有多少個蘋果？"
+        },
+        {
+          "en": "How many students are in the class?",
+          "zh": "班上有多少學生？"
+        },
+        {
+          "en": "How many books are on the shelf?",
+          "zh": "書架上有多少本書？"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上聊天",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "How old are you, Tom?",
+        "zh": "安娜：湯姆，你幾歲？"
+      },
+      {
+        "sp": "Tom",
+        "en": "I am eleven years old. How old are you?",
+        "zh": "湯姆：我十一歲。你呢？"
+      },
+      {
+        "sp": "Anna",
+        "en": "I am twelve. How many brothers do you have?",
+        "zh": "安娜：我十二歲。你有幾個兄弟？"
+      },
+      {
+        "sp": "Tom",
+        "en": "I have one brother. How many sisters do you have?",
+        "zh": "湯姆：我有一個兄弟。你有幾個姐妹？"
+      },
+      {
+        "sp": "Anna",
+        "en": "I have two sisters. How many pencils are in your bag?",
+        "zh": "安娜：我有兩個姐妹。你書包裡有多少支鉛筆？"
+      },
+      {
+        "sp": "Tom",
+        "en": "I have twenty pencils.",
+        "zh": "湯姆：我有二十支鉛筆。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "How old are you? I am thirteen years old.",
+      "zh": "你幾歲？我十三歲。"
+    },
+    {
+      "en": "How old is your teacher? She is thirty years old.",
+      "zh": "你的老師幾歲？她三十歲。"
+    },
+    {
+      "en": "How many chairs are there in the classroom? There are forty chairs.",
+      "zh": "教室裡有多少把椅子？有四十把椅子。"
+    },
+    {
+      "en": "How many days are in a week? There are seven days.",
+      "zh": "一週有多少天？有七天。"
+    },
+    {
+      "en": "How old are your grandparents? They are seventy years old.",
+      "zh": "你的祖父母幾歲？他們七十歲。"
+    },
+    {
+      "en": "How many students like English? Twenty students like English.",
+      "zh": "有多少學生喜歡英語？二十個學生喜歡英語。"
+    },
+    {
+      "en": "How old will you be next year? I will be fourteen years old.",
+      "zh": "明年你會多大？我將會十四歲。"
+    },
+    {
+      "en": "How many books do you read each month? I read five books each month.",
+      "zh": "你每月讀多少本書？我每月讀五本書。"
+    }
+  ],
+  "no": 4,
+  "theme": "Numbers & How Many",
+  "theme_zh": "數字與數量",
+  "words": [
+    {
+      "en": "eleven",
+      "zh": "十一"
+    },
+    {
+      "en": "twelve",
+      "zh": "十二"
+    },
+    {
+      "en": "thirteen",
+      "zh": "十三"
+    },
+    {
+      "en": "fourteen",
+      "zh": "十四"
+    },
+    {
+      "en": "fifteen",
+      "zh": "十五"
+    },
+    {
+      "en": "sixteen",
+      "zh": "十六"
+    },
+    {
+      "en": "seventeen",
+      "zh": "十七"
+    },
+    {
+      "en": "eighteen",
+      "zh": "十八"
+    },
+    {
+      "en": "nineteen",
+      "zh": "十九"
+    },
+    {
+      "en": "twenty",
+      "zh": "二十"
+    },
+    {
+      "en": "thirty",
+      "zh": "三十"
+    },
+    {
+      "en": "forty",
+      "zh": "四十"
+    },
+    {
+      "en": "fifty",
+      "zh": "五十"
+    },
+    {
+      "en": "sixty",
+      "zh": "六十"
+    },
+    {
+      "en": "seventy",
+      "zh": "七十"
+    },
+    {
+      "en": "eighty",
+      "zh": "八十"
+    },
+    {
+      "en": "ninety",
+      "zh": "九十"
+    },
+    {
+      "en": "hundred",
+      "zh": "百"
+    },
+    {
+      "en": "thousand",
+      "zh": "千"
+    },
+    {
+      "en": "million",
+      "zh": "百萬"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "How old are you?",
+        "opts": [
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen"
+        ],
+        "ans": "twelve"
+      },
+      {
+        "q": "How many months are in a year?",
+        "opts": [
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen"
+        ],
+        "ans": "twelve"
+      },
+      {
+        "q": "How many days are in a month?",
+        "opts": [
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen"
+        ],
+        "ans": "sixteen"
+      },
+      {
+        "q": "How many minutes are in an hour?",
+        "opts": [
+          "fifty",
+          "sixty",
+          "seventy",
+          "eighty"
+        ],
+        "ans": "sixty"
+      },
+      {
+        "q": "How many years are in a century?",
+        "opts": [
+          "ninety",
+          "hundred",
+          "thousand",
+          "million"
+        ],
+        "ans": "hundred"
+      },
+      {
+        "q": "How many years are in a millennium?",
+        "opts": [
+          "eleven",
+          "hundred",
+          "thousand",
+          "million"
+        ],
+        "ans": "thousand"
+      },
+      {
+        "q": "A: How old is your sister?\nB: She is _____ years old.",
+        "opts": [
+          "thirteen",
+          "a thirteen",
+          "thirteen years",
+          "thirteens"
+        ],
+        "ans": "thirteen"
+      },
+      {
+        "q": "_____ apples do you have?",
+        "opts": [
+          "How old",
+          "How many",
+          "How",
+          "What"
+        ],
+        "ans": "How many"
+      },
+      {
+        "q": "I have _____ books in my bag.",
+        "opts": [
+          "twenty",
+          "twentys",
+          "a twenty",
+          "twenties"
+        ],
+        "ans": "twenty"
+      },
+      {
+        "q": "A: How many students are in your class?\nB: There are _____ students.",
+        "opts": [
+          "thirty-five",
+          "thirty five student",
+          "a thirty",
+          "thirtys"
+        ],
+        "ans": "thirty-five"
+      },
+      {
+        "q": "My grandfather is _____ years old.",
+        "opts": [
+          "eighty",
+          "a eighty",
+          "eightys",
+          "eighty years"
+        ],
+        "ans": "eighty"
+      },
+      {
+        "q": "There are _____ people at the party.",
+        "opts": [
+          "fifty",
+          "fiftys",
+          "a fifty",
+          "fifty peoples"
+        ],
+        "ans": "fifty"
+      },
+      {
+        "q": "_____ cats do you see?",
+        "opts": [
+          "How old are",
+          "How many",
+          "What old",
+          "How is"
+        ],
+        "ans": "How many"
+      },
+      {
+        "q": "She has _____ pencils.",
+        "opts": [
+          "nineteen",
+          "a nineteen",
+          "nineteens",
+          "nineteen pencil"
+        ],
+        "ans": "nineteen"
+      },
+      {
+        "q": "There are _____ days in a week.",
+        "opts": [
+          "six",
+          "seven",
+          "eight",
+          "nine"
+        ],
+        "ans": "seven"
+      },
+      {
+        "q": "I am _____ years old.",
+        "opts": [
+          "twelve",
+          "a twelve",
+          "twelves",
+          "twelve year"
+        ],
+        "ans": "twelve"
+      },
+      {
+        "q": "A: How many brothers do you have?\nB: I have _____ brothers.",
+        "opts": [
+          "three",
+          "five",
+          "twelve",
+          "twenty"
+        ],
+        "ans": "three"
+      },
+      {
+        "q": "There are _____ students in the library.",
+        "opts": [
+          "fifteen",
+          "thirty",
+          "fifty",
+          "ninety"
+        ],
+        "ans": "fifteen"
+      },
+      {
+        "q": "A: How many oranges are there?\nB: There are _____ oranges on the table.",
+        "opts": [
+          "eleven",
+          "nineteen",
+          "forty",
+          "sixty"
+        ],
+        "ans": "eleven"
+      },
+      {
+        "q": "My mother has _____ flowers in her garden.",
+        "opts": [
+          "fourteen",
+          "sixteen",
+          "thirty",
+          "eighty"
+        ],
+        "ans": "fourteen"
+      },
+      {
+        "q": "A: How many candies do you want?\nB: I want _____ candies.",
+        "opts": [
+          "thirteen",
+          "seventeen",
+          "fifty",
+          "hundred"
+        ],
+        "ans": "thirteen"
+      },
+      {
+        "q": "There are _____ cars in the parking lot.",
+        "opts": [
+          "twelve",
+          "eighteen",
+          "forty",
+          "seventy"
+        ],
+        "ans": "twelve"
+      },
+      {
+        "q": "A: How many cookies are in the box?\nB: There are _____ cookies.",
+        "opts": [
+          "sixteen",
+          "twenty",
+          "sixty",
+          "thousand"
+        ],
+        "ans": "sixteen"
+      },
+      {
+        "q": "My friend has _____ toy cars.",
+        "opts": [
+          "ten",
+          "nineteen",
+          "thirty",
+          "ninety"
+        ],
+        "ans": "nineteen"
+      },
+      {
+        "q": "A: How many pencils does your teacher have?\nB: She has _____ pencils.",
+        "opts": [
+          "seventeen",
+          "twenty",
+          "fifty",
+          "million"
+        ],
+        "ans": "twenty"
+      },
+      {
+        "q": "There are _____ birds in the tree.",
+        "opts": [
+          "fifteen",
+          "eighteen",
+          "forty",
+          "hundred"
+        ],
+        "ans": "eighteen"
+      }
+    ],
+    "fill": [
+      {
+        "q": "How ____ are you?（你幾歲？）",
+        "ans": "old"
+      },
+      {
+        "q": "I am ____ years old.（我十五歲。）",
+        "ans": "fifteen"
+      },
+      {
+        "q": "She is ____. She is thirteen.（她是。她十三歲。）",
+        "ans": "a student"
+      },
+      {
+        "q": "How many ____ do you have?（你有多少隻貓？）",
+        "ans": "cats"
+      },
+      {
+        "q": "I have twenty ____.（我有二十個蘋果。）",
+        "ans": "apples"
+      },
+      {
+        "q": "My friend is ____. He is nineteen years old.（我的朋友是。他十九歲。）",
+        "ans": "a boy"
+      },
+      {
+        "q": "There are thirty ____ in this class.（這個班級有三十個學生。）",
+        "ans": "students"
+      },
+      {
+        "q": "He has ____ brothers.（他有十一個兄弟。）",
+        "ans": "eleven"
+      },
+      {
+        "q": "How many ____ are there?（有多少隻狗？）",
+        "ans": "dogs"
+      },
+      {
+        "q": "I am ____. I am a student.（我十七歲。我是學生。）",
+        "ans": "seventeen"
+      }
+    ],
+    "translate": [
+      {
+        "q": "你多大了？",
+        "ans": "How old are you?"
+      },
+      {
+        "q": "我十六歲。",
+        "ans": "I am sixteen years old."
+      },
+      {
+        "q": "他有多少隻貓？",
+        "ans": "How many cats does he have?"
+      },
+      {
+        "q": "他十四歲。",
+        "ans": "He is fourteen years old."
+      },
+      {
+        "q": "你有多少個蘋果？",
+        "ans": "How many apples do you have?"
+      },
+      {
+        "q": "班級裡有五十個學生。",
+        "ans": "There are fifty students in the class."
+      },
+      {
+        "q": "她十二歲，是學生。",
+        "ans": "She is twelve years old and is a student."
+      },
+      {
+        "q": "我有十八隻狗。",
+        "ans": "I have eighteen dogs."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "you / ? / How / are / old",
+        "ans": "How old are you?"
+      },
+      {
+        "q": "old / thirteen / . / I / am / years",
+        "ans": "I am thirteen years old."
+      },
+      {
+        "q": "have / many / ? / How / cats / you / do",
+        "ans": "How many cats do you have?"
+      },
+      {
+        "q": ". / student / He / is / a",
+        "ans": "He is a student."
+      },
+      {
+        "q": "apples / . / twenty / I / have",
+        "ans": "I have twenty apples."
+      },
+      {
+        "q": "There / the / students / . / thirty / class / are / in",
+        "ans": "There are thirty students in the class."
+      }
+    ]
+  },
+  "engine": "claude-haiku-4-5-20251001"
+}

@@ -1,0 +1,700 @@
+{
+  "title_en": "My Family & Friends",
+  "title_zh": "我的家人與朋友",
+  "grammar": "使用 This is my… 以及所有格 my / your / his / her 來介紹人物。",
+  "intro_zh": "在這一課，我們將學習如何用英文介紹家人和朋友，練習說出『This is my…』以及正確使用 my、your、his、her 等所有格，並認識新詞彙，讓我們能夠描述自己身邊的人。",
+  "can_do": [
+    "能用 This is my… 介紹家人和朋友",
+    "能正確說出 my、your、his、her 的所有格",
+    "能認識並說出課本中的 20 個新單字"
+  ],
+  "reading": {
+    "title_en": "A New Friend",
+    "title_zh": "一位新的朋友",
+    "sentences": [
+      {
+        "en": "This is my uncle.",
+        "zh": "這是我的伯父。"
+      },
+      {
+        "en": "He is a kind man.",
+        "zh": "他是一位善良的男人。"
+      },
+      {
+        "en": "This is my aunt.",
+        "zh": "這是我的阿姨。"
+      },
+      {
+        "en": "She is a wonderful woman.",
+        "zh": "她是一位奇妙的女人。"
+      },
+      {
+        "en": "I have a new cousin who is a teenager.",
+        "zh": "我有一位新的表兄弟，他是十幾歲的青少年。"
+      },
+      {
+        "en": "My boy cousin is friendly, and my girl cousin is nice.",
+        "zh": "我的男表兄弟很友善，我的女表兄弟很親切。"
+      },
+      {
+        "en": "He is my classmate at school.",
+        "zh": "他是我同班同學。"
+      },
+      {
+        "en": "We are good friends.",
+        "zh": "我們是好朋友。"
+      },
+      {
+        "en": "When we meet, I say, 'Dear friend, nice to see you!'",
+        "zh": "我們見面時，我會說：『親愛的朋友，很高興見到你！』"
+      },
+      {
+        "en": "Each person is kind, and many people say hello to Mr. Lee, Mrs. Chen, Miss Lin, Ms. Wang and Sir.",
+        "zh": "每個人都很友善，而且很多人會對李先生、陳太太、林小姐、王女士和先生說你好。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① This is my …",
+      "explain_zh": "用來介紹自己家人或朋友的句型，結構為 \"This is my + 名詞\"。",
+      "table": [
+        [
+          "主語",
+          "所有格",
+          "名詞",
+          "英文句子",
+          "中文翻譯"
+        ],
+        [
+          "I",
+          "my",
+          "mother",
+          "This is my mother.",
+          "這是我的媽媽。"
+        ],
+        [
+          "you",
+          "your",
+          "father",
+          "This is your father.",
+          "這是你的爸爸。"
+        ],
+        [
+          "he",
+          "his",
+          "uncle",
+          "This is his uncle.",
+          "這是他的叔父。"
+        ],
+        [
+          "she",
+          "her",
+          "aunt",
+          "This is her aunt.",
+          "這是她的阿姨。"
+        ],
+        [
+          "we",
+          "our",
+          "cousin",
+          "This is our cousin.",
+          "這是我們的堂(表)兄弟姊妹。"
+        ],
+        [
+          "they",
+          "their",
+          "friend",
+          "This is their friend.",
+          "這是他們的朋友。"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② This is your / his / her …",
+      "explain_zh": "用來介紹別人的家人或朋友，所有格會隨著主語變為 your、his 或 her。",
+      "examples": [
+        {
+          "en": "This is your sister.",
+          "zh": "這是你的妹妹。"
+        },
+        {
+          "en": "This is his brother.",
+          "zh": "這是他的哥哥。"
+        },
+        {
+          "en": "This is her grandmother.",
+          "zh": "這是她的祖母。"
+        },
+        {
+          "en": "This is your teacher.",
+          "zh": "這是你的老師。"
+        },
+        {
+          "en": "This is his classmate.",
+          "zh": "這是他的同班同學。"
+        },
+        {
+          "en": "This is her neighbor.",
+          "zh": "這是她的鄰居。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡介紹家人",
+    "lines": [
+      {
+        "sp": "Amy",
+        "en": "This is my mother.",
+        "zh": "這是我的媽媽。"
+      },
+      {
+        "sp": "Jack",
+        "en": "This is my father.",
+        "zh": "這是我的爸爸。"
+      },
+      {
+        "sp": "Lily",
+        "en": "This is my uncle.",
+        "zh": "這是我的叔父。"
+      },
+      {
+        "sp": "Tom",
+        "en": "This is my aunt.",
+        "zh": "這是我的阿姨。"
+      },
+      {
+        "sp": "Emma",
+        "en": "This is my cousin.",
+        "zh": "這是我的堂(表)兄弟姊妹。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "This is my friend.",
+      "zh": "這是我的朋友。"
+    },
+    {
+      "en": "This is your teacher.",
+      "zh": "這是你的老師。"
+    },
+    {
+      "en": "This is his brother.",
+      "zh": "這是他的哥哥。"
+    },
+    {
+      "en": "This is her sister.",
+      "zh": "這是她的妹妹。"
+    },
+    {
+      "en": "This is our classmate.",
+      "zh": "這是我們的同班同學。"
+    },
+    {
+      "en": "This is their neighbor.",
+      "zh": "這是他們的鄰居。"
+    },
+    {
+      "en": "This is my grandmother.",
+      "zh": "這是我的祖母。"
+    },
+    {
+      "en": "This is your uncle.",
+      "zh": "這是你的叔父。"
+    }
+  ],
+  "no": 12,
+  "theme": "My Family & Friends",
+  "theme_zh": "家人與朋友",
+  "words": [
+    {
+      "en": "wonderful",
+      "zh": "奇妙的"
+    },
+    {
+      "en": "new",
+      "zh": "新的"
+    },
+    {
+      "en": "uncle",
+      "zh": "伯父；叔父；姑父"
+    },
+    {
+      "en": "aunt",
+      "zh": "伯母；阿姨；姑姑"
+    },
+    {
+      "en": "cousin",
+      "zh": "堂(表)兄弟姊妹"
+    },
+    {
+      "en": "people",
+      "zh": "人們"
+    },
+    {
+      "en": "boy",
+      "zh": "男孩"
+    },
+    {
+      "en": "girl",
+      "zh": "女孩"
+    },
+    {
+      "en": "man",
+      "zh": "男人"
+    },
+    {
+      "en": "woman",
+      "zh": "女人"
+    },
+    {
+      "en": "friend",
+      "zh": "朋友"
+    },
+    {
+      "en": "classmate",
+      "zh": "同班同學"
+    },
+    {
+      "en": "person",
+      "zh": "人"
+    },
+    {
+      "en": "Mr.",
+      "zh": "先生"
+    },
+    {
+      "en": "Mrs.",
+      "zh": "太太"
+    },
+    {
+      "en": "Miss",
+      "zh": "小姐"
+    },
+    {
+      "en": "Ms.",
+      "zh": "女士"
+    },
+    {
+      "en": "dear",
+      "zh": "親愛的"
+    },
+    {
+      "en": "sir",
+      "zh": "先生長官"
+    },
+    {
+      "en": "teenager",
+      "zh": "十幾歲的青少年"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "叔叔",
+        "opts": [
+          "wonderful",
+          "new",
+          "uncle",
+          "aunt"
+        ],
+        "ans": "uncle"
+      },
+      {
+        "q": "姑姑",
+        "opts": [
+          "wonderful",
+          "new",
+          "aunt",
+          "cousin"
+        ],
+        "ans": "aunt"
+      },
+      {
+        "q": "堂兄弟",
+        "opts": [
+          "cousin",
+          "friend",
+          "classmate",
+          "teenager"
+        ],
+        "ans": "cousin"
+      },
+      {
+        "q": "人們",
+        "opts": [
+          "people",
+          "person",
+          "boy",
+          "girl"
+        ],
+        "ans": "people"
+      },
+      {
+        "q": "男孩",
+        "opts": [
+          "boy",
+          "man",
+          "woman",
+          "girl"
+        ],
+        "ans": "boy"
+      },
+      {
+        "q": "女孩",
+        "opts": [
+          "girl",
+          "woman",
+          "man",
+          "boy"
+        ],
+        "ans": "girl"
+      },
+      {
+        "q": "男人",
+        "opts": [
+          "man",
+          "woman",
+          "boy",
+          "girl"
+        ],
+        "ans": "man"
+      },
+      {
+        "q": "女人",
+        "opts": [
+          "woman",
+          "man",
+          "girl",
+          "boy"
+        ],
+        "ans": "woman"
+      },
+      {
+        "q": "朋友",
+        "opts": [
+          "friend",
+          "classmate",
+          "person",
+          "people"
+        ],
+        "ans": "friend"
+      },
+      {
+        "q": "同學",
+        "opts": [
+          "classmate",
+          "friend",
+          "cousin",
+          "teenager"
+        ],
+        "ans": "classmate"
+      },
+      {
+        "q": "This is _____ wonderful uncle.",
+        "opts": [
+          "my",
+          "your",
+          "his",
+          "her"
+        ],
+        "ans": "my"
+      },
+      {
+        "q": "_____ aunt is very nice.",
+        "opts": [
+          "My",
+          "Your",
+          "His",
+          "Her"
+        ],
+        "ans": "My"
+      },
+      {
+        "q": "This is your new _____.",
+        "opts": [
+          "cousin",
+          "uncle",
+          "aunt",
+          "man"
+        ],
+        "ans": "cousin"
+      },
+      {
+        "q": "_____ teacher is Mr. Wang.",
+        "opts": [
+          "My",
+          "Your",
+          "His",
+          "Her"
+        ],
+        "ans": "My"
+      },
+      {
+        "q": "This _____ his dear friend.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "These _____ wonderful people.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "This girl is _____ classmate.",
+        "opts": [
+          "my",
+          "your",
+          "his",
+          "her"
+        ],
+        "ans": "my"
+      },
+      {
+        "q": "_____ is a new person in our class.",
+        "opts": [
+          "This",
+          "That",
+          "These",
+          "Those"
+        ],
+        "ans": "This"
+      },
+      {
+        "q": "This is Miss Chen. _____ is wonderful.",
+        "opts": [
+          "He",
+          "She",
+          "It",
+          "They"
+        ],
+        "ans": "She"
+      },
+      {
+        "q": "_____ cousin is a teenager.",
+        "opts": [
+          "My",
+          "Your",
+          "His",
+          "Her"
+        ],
+        "ans": "My"
+      },
+      {
+        "q": "This is my _____ person.",
+        "opts": [
+          "wonderful",
+          "new",
+          "dear",
+          "teenager"
+        ],
+        "ans": "wonderful"
+      },
+      {
+        "q": "_____ teenager is wonderful.",
+        "opts": [
+          "My",
+          "Your",
+          "His",
+          "Her"
+        ],
+        "ans": "My"
+      },
+      {
+        "q": "This is your _____ person.",
+        "opts": [
+          "wonderful",
+          "new",
+          "dear",
+          "teenager"
+        ],
+        "ans": "new"
+      },
+      {
+        "q": "His _____ is wonderful.",
+        "opts": [
+          "teenager",
+          "person",
+          "new",
+          "dear"
+        ],
+        "ans": "teenager"
+      },
+      {
+        "q": "Her _____ is new.",
+        "opts": [
+          "teenager",
+          "person",
+          "wonderful",
+          "dear"
+        ],
+        "ans": "person"
+      },
+      {
+        "q": "This is a wonderful _____.",
+        "opts": [
+          "teenager",
+          "person",
+          "dear",
+          "new"
+        ],
+        "ans": "teenager"
+      },
+      {
+        "q": "This is a dear _____.",
+        "opts": [
+          "teenager",
+          "person",
+          "wonderful",
+          "new"
+        ],
+        "ans": "teenager"
+      },
+      {
+        "q": "This is Mr. _____.",
+        "opts": [
+          "wonderful",
+          "new",
+          "dear",
+          "teenager"
+        ],
+        "ans": "wonderful"
+      },
+      {
+        "q": "This is Ms. _____.",
+        "opts": [
+          "wonderful",
+          "new",
+          "dear",
+          "teenager"
+        ],
+        "ans": "dear"
+      },
+      {
+        "q": "This is Mrs. _____.",
+        "opts": [
+          "wonderful",
+          "new",
+          "dear",
+          "teenager"
+        ],
+        "ans": "new"
+      }
+    ],
+    "fill": [
+      {
+        "q": "This is my ____。（這是我的叔叔）",
+        "ans": "uncle"
+      },
+      {
+        "q": "This is your ____。（這是你的阿姨）",
+        "ans": "aunt"
+      },
+      {
+        "q": "This is his ____。（這是他的表兄弟）",
+        "ans": "cousin"
+      },
+      {
+        "q": "This is her ____。（這是她的朋友）",
+        "ans": "friend"
+      },
+      {
+        "q": "This is my ____。（這是我的同學）",
+        "ans": "classmate"
+      },
+      {
+        "q": "This is your ____。（這是你的男孩）",
+        "ans": "boy"
+      },
+      {
+        "q": "This is his ____。（這是他的女孩）",
+        "ans": "girl"
+      },
+      {
+        "q": "This is her ____。（這是她的男人）",
+        "ans": "man"
+      },
+      {
+        "q": "This is my ____。（這是我的女人）",
+        "ans": "woman"
+      },
+      {
+        "q": "This is ____。（這很棒）",
+        "ans": "wonderful"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這是我的叔叔。",
+        "ans": "This is my uncle."
+      },
+      {
+        "q": "那是你的阿姨。",
+        "ans": "This is your aunt."
+      },
+      {
+        "q": "那是他的表兄弟。",
+        "ans": "This is his cousin."
+      },
+      {
+        "q": "那是她的朋友。",
+        "ans": "This is her friend."
+      },
+      {
+        "q": "這是我的同學。",
+        "ans": "This is my classmate."
+      },
+      {
+        "q": "那是你的男孩。",
+        "ans": "This is your boy."
+      },
+      {
+        "q": "那是他的女孩。",
+        "ans": "This is his girl."
+      },
+      {
+        "q": "這很棒。",
+        "ans": "This is wonderful."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "This / is / . / my / friend",
+        "ans": "This is my friend."
+      },
+      {
+        "q": "your / . / This / uncle / is",
+        "ans": "This is your uncle."
+      },
+      {
+        "q": "This / is / . / his / aunt",
+        "ans": "This is his aunt."
+      },
+      {
+        "q": "cousin / This / her / is / .",
+        "ans": "This is her cousin."
+      },
+      {
+        "q": "This / my / classmate / is / .",
+        "ans": "This is my classmate."
+      },
+      {
+        "q": "wonderful / This / . / is",
+        "ans": "This is wonderful."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

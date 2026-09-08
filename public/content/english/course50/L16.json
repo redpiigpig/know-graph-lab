@@ -1,0 +1,659 @@
+{
+  "title_en": "Food and Meals",
+  "title_zh": "食物與三餐的世界",
+  "grammar": "本課學習 I like… 與 Do you like…? 的問答，以及可數名詞與不可數名詞的區別。",
+  "intro_zh": "在這一課，我們將認識早餐、午餐、晚餐常見的食物，學會用 I like… 說出喜歡的食物，並用 Do you like…? 問朋友的喜好，同時分辨哪些食物可以數，哪些不能數。",
+  "can_do": [
+    "能用 I like… 說出自己喜歡的食物。",
+    "能用 Do you like…? 問詢同學的食物偏好。",
+    "能分辨可數名詞（如 hamburger、sandwich）與不可數名詞（如 rice、butter）的用法。"
+  ],
+  "reading": {
+    "title_en": "My Day's Meals",
+    "title_zh": "我的一天三餐",
+    "sentences": [
+      {
+        "en": "Today I look at the menu and choose my breakfast.",
+        "zh": "今天我看著菜單選擇我的早餐。"
+      },
+      {
+        "en": "I like noodles with beef, which is a kind of meat, and a slice of bread with butter.",
+        "zh": "我喜歡吃牛肉麵，牛肉是一種肉，還有一片麵包塗上奶油。"
+      },
+      {
+        "en": "For lunch, I eat rice with chicken and some vegetables.",
+        "zh": "午餐我吃米飯配雞肉和一些蔬菜。"
+      },
+      {
+        "en": "Sometimes I have a hamburger or a hot dog for lunch.",
+        "zh": "有時我午餐吃漢堡或熱狗。"
+      },
+      {
+        "en": "In the afternoon, I enjoy a piece of pie or pizza as a snack.",
+        "zh": "下午我會吃一塊派或披薩當點心。"
+      },
+      {
+        "en": "Dinner is my favorite meal; I often have steak with pork and vegetables.",
+        "zh": "晚餐是我最喜歡的一餐；我常吃牛排配豬肉和蔬菜。"
+      },
+      {
+        "en": "I also like sandwiches made with ham and cheese, but today I chose a chicken sandwich.",
+        "zh": "我也喜歡吃火腿起司三明治，但今天我選了雞肉三明治。"
+      },
+      {
+        "en": "When I am hungry between meals, I drink milk and eat a small piece of bread.",
+        "zh": "我在餐與餐之間感到餓時，會喝牛奶吃一小塊麵包。"
+      },
+      {
+        "en": "At the end of the day, I feel happy because I ate tasty food and shared it with my friends.",
+        "zh": "一天結束時，我感到很開心，因為我吃了美味的食物，並與朋友分享。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I like… / Do you like…?",
+      "explain_zh": "用來表達自己喜歡什麼，或詢問對方是否喜歡某樣東西。",
+      "table": [
+        [
+          "英文句型",
+          "中文說明",
+          "例子"
+        ],
+        [
+          "I like + 名詞。",
+          "我喜歡……",
+          "I like pizza."
+        ],
+        [
+          "Do you like + 名詞？",
+          "你喜歡……嗎？",
+          "Do you like noodles?"
+        ],
+        [
+          "Yes, I like… / No, I don't like…。",
+          "是的，我喜歡…… / 不，我不喜歡……。",
+          "Yes, I like rice. / No, I don't like beef."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 可數名詞與不可數名詞",
+      "explain_zh": "可數名詞可以用 a/an、複數形；不可數名詞不能用 a/an、通常不加 s，表示整體或抽象概念。",
+      "examples": [
+        {
+          "en": "I have an apple.",
+          "zh": "我有一個蘋果。"
+        },
+        {
+          "en": "She eats rice every day.",
+          "zh": "她每天吃米飯。"
+        },
+        {
+          "en": "They bought three sandwiches.",
+          "zh": "他們買了三個三明治。"
+        },
+        {
+          "en": "We need some butter for the bread.",
+          "zh": "我們需要一些奶油來塗麵包。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在學校餐廳點餐",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "What do you like for lunch?",
+        "zh": "你喜歡吃什麼當午餐？"
+      },
+      {
+        "sp": "Ben",
+        "en": "I like noodles and chicken.",
+        "zh": "我喜歡麵條和雞肉。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Do you like pizza?",
+        "zh": "你喜歡披薩嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Yes, I like pizza, but I don't like beef.",
+        "zh": "是的，我喜歡披薩，但我不喜歡牛肉。"
+      },
+      {
+        "sp": "Anna",
+        "en": "OK, let's get noodles, chicken pizza, and a sandwich.",
+        "zh": "好，我們來麵條、雞肉披薩和一個三明治。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I like rice.",
+      "zh": "我喜歡米飯。"
+    },
+    {
+      "en": "Do you like hamburgers?",
+      "zh": "你喜歡漢堡嗎？"
+    },
+    {
+      "en": "She likes pie but not hot dogs.",
+      "zh": "她喜歡派，但不喜歡熱狗。"
+    },
+    {
+      "en": "We need bread and butter for breakfast.",
+      "zh": "我們早餐需要麵包和奶油。"
+    },
+    {
+      "en": "They eat steak and vegetables for dinner.",
+      "zh": "他們晚餐吃牛排和蔬菜。"
+    },
+    {
+      "en": "Do you like pork?",
+      "zh": "你喜歡豬肉嗎？"
+    },
+    {
+      "en": "I don't like meat, I prefer noodles.",
+      "zh": "我不喜歡肉，我比較喜歡麵條。"
+    },
+    {
+      "en": "Can I have a sandwich and some juice?",
+      "zh": "我可以要一個三明治和一些果汁嗎？"
+    }
+  ],
+  "no": 16,
+  "theme": "Food & Meals",
+  "theme_zh": "食物與三餐",
+  "words": [
+    {
+      "en": "menu",
+      "zh": "菜單"
+    },
+    {
+      "en": "food",
+      "zh": "食物"
+    },
+    {
+      "en": "meal",
+      "zh": "一餐"
+    },
+    {
+      "en": "breakfast",
+      "zh": "早餐"
+    },
+    {
+      "en": "lunch",
+      "zh": "午餐"
+    },
+    {
+      "en": "dinner",
+      "zh": "晚餐"
+    },
+    {
+      "en": "noodles",
+      "zh": "麵條"
+    },
+    {
+      "en": "rice",
+      "zh": "米飯"
+    },
+    {
+      "en": "hamburger",
+      "zh": "漢堡"
+    },
+    {
+      "en": "pie",
+      "zh": "派"
+    },
+    {
+      "en": "pizza",
+      "zh": "披薩"
+    },
+    {
+      "en": "sandwich",
+      "zh": "三明治"
+    },
+    {
+      "en": "meat",
+      "zh": "肉"
+    },
+    {
+      "en": "beef",
+      "zh": "牛肉"
+    },
+    {
+      "en": "chicken",
+      "zh": "雞肉"
+    },
+    {
+      "en": "pork",
+      "zh": "豬肉"
+    },
+    {
+      "en": "steak",
+      "zh": "牛排"
+    },
+    {
+      "en": "hot dog",
+      "zh": "熱狗"
+    },
+    {
+      "en": "bread",
+      "zh": "麵包"
+    },
+    {
+      "en": "butter",
+      "zh": "奶油"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個是 'menu' 的英文？",
+        "opts": [
+          "menu",
+          "food",
+          "meal",
+          "breakfast"
+        ],
+        "ans": "menu"
+      },
+      {
+        "q": "以下哪個是 'food' 的英文？",
+        "opts": [
+          "food",
+          "meal",
+          "breakfast",
+          "lunch"
+        ],
+        "ans": "food"
+      },
+      {
+        "q": "以下哪個單字的意思是 '餐點'？",
+        "opts": [
+          "menu",
+          "food",
+          "meal",
+          "breakfast"
+        ],
+        "ans": "meal"
+      },
+      {
+        "q": "以下哪個單字的意思是 '早餐'？",
+        "opts": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "hot dog"
+        ],
+        "ans": "breakfast"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃漢堡。",
+        "opts": [
+          "I like hamburger",
+          "I like pizza",
+          "I like sandwich",
+          "I like steak"
+        ],
+        "ans": "I like hamburger"
+      },
+      {
+        "q": "看中文選英文：你喜歡吃熱狗嗎？",
+        "opts": [
+          "Do you like hot dog",
+          "Do you like noodles",
+          "Do you like rice",
+          "Do you like bread"
+        ],
+        "ans": "Do you like hot dog"
+      },
+      {
+        "q": "以下哪個是 'noodles' 的英文？",
+        "opts": [
+          "noodles",
+          "rice",
+          "bread",
+          "butter"
+        ],
+        "ans": "noodles"
+      },
+      {
+        "q": "以下哪個是 'pie' 的英文？",
+        "opts": [
+          "pie",
+          "pizza",
+          "sandwich",
+          "steak"
+        ],
+        "ans": "pie"
+      },
+      {
+        "q": "以下哪個單字的意思是 '晚餐'？",
+        "opts": [
+          "dinner",
+          "lunch",
+          "breakfast",
+          "meal"
+        ],
+        "ans": "dinner"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃派。",
+        "opts": [
+          "I like pizza",
+          "I like pie",
+          "I like sandwich",
+          "I like bread"
+        ],
+        "ans": "I like pie"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃牛油。",
+        "opts": [
+          "I like butter.",
+          "like I butter.",
+          "I butter like.",
+          "I like butter"
+        ],
+        "ans": "I like butter."
+      },
+      {
+        "q": "看中文選英文：你喜歡吃漢堡嗎？",
+        "opts": [
+          "Do you like hamburger?",
+          "you Do like hamburger?",
+          "Do hamburger you like?",
+          "Do you like hamburger"
+        ],
+        "ans": "Do you like hamburger?"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃麵條。",
+        "opts": [
+          "I like noodles.",
+          "like I noodles.",
+          "I noodles like.",
+          "I like noodles"
+        ],
+        "ans": "I like noodles."
+      },
+      {
+        "q": "看中文選英文：你喜歡吃披薩嗎？",
+        "opts": [
+          "Do you like pizza?",
+          "you Do like pizza?",
+          "Do pizza you like?",
+          "Do you like pizza"
+        ],
+        "ans": "Do you like pizza?"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃三明治。",
+        "opts": [
+          "I like a sandwich.",
+          "like I a sandwich.",
+          "I a like sandwich.",
+          "I like a sandwich"
+        ],
+        "ans": "I like a sandwich."
+      },
+      {
+        "q": "看中文選英文：你喜歡吃牛排嗎？",
+        "opts": [
+          "Do you like steak?",
+          "you Do like steak?",
+          "Do steak you like?",
+          "Do you like steak"
+        ],
+        "ans": "Do you like steak?"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃飯。",
+        "opts": [
+          "I like rice.",
+          "like I rice.",
+          "I rice like.",
+          "I like rice"
+        ],
+        "ans": "I like rice."
+      },
+      {
+        "q": "看中文選英文：你喜歡吃麵包嗎？",
+        "opts": [
+          "Do you like bread?",
+          "you Do like bread?",
+          "Do bread you like?",
+          "Do you like bread"
+        ],
+        "ans": "Do you like bread?"
+      },
+      {
+        "q": "看中文選英文：我喜歡吃肉。",
+        "opts": [
+          "I like meat.",
+          "like I meat.",
+          "I meat like.",
+          "I like meat"
+        ],
+        "ans": "I like meat."
+      },
+      {
+        "q": "看中文選英文：你喜歡吃雞肉嗎？",
+        "opts": [
+          "Do you like chicken?",
+          "you Do like chicken?",
+          "Do chicken you like?",
+          "Do you like chicken"
+        ],
+        "ans": "Do you like chicken?"
+      },
+      {
+        "q": "早上吃的那餐叫什麼？",
+        "opts": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "meal"
+        ],
+        "ans": "breakfast"
+      },
+      {
+        "q": "中午吃的那餐叫什麼？",
+        "opts": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "meal"
+        ],
+        "ans": "lunch"
+      },
+      {
+        "q": "晚上吃的那餐叫什麼？",
+        "opts": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "meal"
+        ],
+        "ans": "dinner"
+      },
+      {
+        "q": "以下哪個是麵食？",
+        "opts": [
+          "noodles",
+          "rice",
+          "bread",
+          "butter"
+        ],
+        "ans": "noodles"
+      },
+      {
+        "q": "以下哪個是麵包？",
+        "opts": [
+          "bread",
+          "butter",
+          "rice",
+          "noodles"
+        ],
+        "ans": "bread"
+      },
+      {
+        "q": "以下哪個是牛油？",
+        "opts": [
+          "butter",
+          "bread",
+          "meat",
+          "rice"
+        ],
+        "ans": "butter"
+      },
+      {
+        "q": "以下哪個是三明治？",
+        "opts": [
+          "sandwich",
+          "pizza",
+          "pie",
+          "hamburger"
+        ],
+        "ans": "sandwich"
+      },
+      {
+        "q": "以下哪個是披薩？",
+        "opts": [
+          "pizza",
+          "hamburger",
+          "hot dog",
+          "steak"
+        ],
+        "ans": "pizza"
+      },
+      {
+        "q": "以下哪個是漢堡？",
+        "opts": [
+          "hamburger",
+          "hot dog",
+          "sandwich",
+          "pie"
+        ],
+        "ans": "hamburger"
+      },
+      {
+        "q": "以下哪個是熱狗？",
+        "opts": [
+          "hot dog",
+          "steak",
+          "beef",
+          "chicken"
+        ],
+        "ans": "hot dog"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ pizza.（我喜歡披薩）",
+        "ans": "like"
+      },
+      {
+        "q": "Do you ____ noodles？（你喜歡麵條嗎？）",
+        "ans": "like"
+      },
+      {
+        "q": "I like ____.（我喜歡飯）",
+        "ans": "rice"
+      },
+      {
+        "q": "I like ____.（我喜歡麵條）",
+        "ans": "noodles"
+      },
+      {
+        "q": "Do you like ____？（你喜歡漢堡嗎？）",
+        "ans": "hamburger"
+      },
+      {
+        "q": "Do you like ____？（你喜歡披薩嗎？）",
+        "ans": "pizza"
+      },
+      {
+        "q": "I like ____.（我喜歡三明治）",
+        "ans": "sandwich"
+      },
+      {
+        "q": "Do you like ____？（你喜歡熱狗嗎？）",
+        "ans": "hot dog"
+      },
+      {
+        "q": "I like ____.（我喜歡牛肉）",
+        "ans": "beef"
+      },
+      {
+        "q": "Do you like ____？（你喜歡雞肉嗎？）",
+        "ans": "chicken"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我喜歡披薩。",
+        "ans": "I like pizza."
+      },
+      {
+        "q": "你喜歡麵條嗎？",
+        "ans": "Do you like noodles?"
+      },
+      {
+        "q": "我喜歡飯。",
+        "ans": "I like rice."
+      },
+      {
+        "q": "你喜歡漢堡嗎？",
+        "ans": "Do you like hamburger?"
+      },
+      {
+        "q": "我喜歡三明治。",
+        "ans": "I like sandwich."
+      },
+      {
+        "q": "你喜歡熱狗嗎？",
+        "ans": "Do you like hot dog?"
+      },
+      {
+        "q": "我喜歡牛肉。",
+        "ans": "I like beef."
+      },
+      {
+        "q": "你喜歡雞肉嗎？",
+        "ans": "Do you like chicken?"
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "I / . / like / pizza",
+        "ans": "I like pizza."
+      },
+      {
+        "q": "? / you / Do / noodles / like",
+        "ans": "Do you like noodles?"
+      },
+      {
+        "q": ". / rice / like / I",
+        "ans": "I like rice."
+      },
+      {
+        "q": "like / hamburger / Do / ? / you",
+        "ans": "Do you like hamburger?"
+      },
+      {
+        "q": ". / I / like / sandwich",
+        "ans": "I like sandwich."
+      },
+      {
+        "q": "like / dog / I / hot / .",
+        "ans": "I like hot dog."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

@@ -1,0 +1,682 @@
+{
+  "title_en": "My Outfit",
+  "title_zh": "我的時尚穿搭",
+  "grammar": "使用 I'm wearing… 描述正在穿的衣服，以及 He has … 描述他人的外貌特徵。",
+  "intro_zh": "在這一課，我們將學習用 I'm wearing… 說出自己現在穿著什麼衣服，並用 He has … 描述朋友的身高、體型和髮型。透過圖片與對話，練習描述自己和他人的外表。",
+  "can_do": [
+    "能用 I'm wearing… 描述自己現在穿的衣服。",
+    "能用 He has … 描述別人的髮長、身高和體型。",
+    "能用美麗、帥氣、友善等形容詞評論自己的外表。"
+  ],
+  "reading": {
+    "title_en": "A Day at the Pool",
+    "title_zh": "泳池裡的快樂一天",
+    "sentences": [
+      {
+        "en": "Today is Saturday, and I'm wearing a blue swimsuit.",
+        "zh": "今天是星期六，我穿著一件藍色的泳衣。"
+      },
+      {
+        "en": "I look pretty and cute in my new swimsuit.",
+        "zh": "我在新泳衣裡看起來很漂亮又可愛。"
+      },
+      {
+        "en": "My friend Lily is tall and thin, she has long hair.",
+        "zh": "我的朋友莉莉很高又很瘦，她有長髮。"
+      },
+      {
+        "en": "She looks beautiful and healthy when she swims.",
+        "zh": "她游泳時看起來很美麗又很健康。"
+      },
+      {
+        "en": "Another friend, Tom, is short and strong, he has short hair.",
+        "zh": "另一個朋友湯姆很矮又很強壯，他有短髮。"
+      },
+      {
+        "en": "Tom looks handsome and nice in his red swimsuit.",
+        "zh": "湯姆穿著紅色泳衣時很英俊又很友善。"
+      },
+      {
+        "en": "My little brother is young and fat, he is not heavy but very friendly and kind.",
+        "zh": "我弟弟很年輕又有點胖，他不重但非常友善又親切。"
+      },
+      {
+        "en": "The old lifeguard watches us carefully, he is kind and always helps.",
+        "zh": "年老的救生員仔細地看着我們，他很親切且總是願意幫忙。"
+      },
+      {
+        "en": "We all feel good after swimming, and the day is really good; if the weather is bad, we will stay home and read books.",
+        "zh": "我們游泳後都感到很好，這天真的很棒；如果天氣不好，我們會待在家裡讀書。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I'm wearing… 表示現在正在穿著的衣服",
+      "explain_zh": "使用 be 動詞 (am/is/are) + wearing + 名詞，來說明說話者或他人此刻所穿的衣服。",
+      "table": [
+        [
+          "主語",
+          "be 動詞",
+          "wearing + 衣服"
+        ],
+        [
+          "I",
+          "am",
+          "wearing a T-shirt"
+        ],
+        [
+          "He",
+          "is",
+          "wearing shorts"
+        ],
+        [
+          "She",
+          "is",
+          "wearing a dress"
+        ],
+        [
+          "We",
+          "are",
+          "wearing shoes"
+        ],
+        [
+          "They",
+          "are",
+          "wearing hats"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② He has … 描述他人的外貌特徵",
+      "explain_zh": "用 has (第三人稱單數) 或 have (其他人稱) + 形容詞或名詞，來說明頭髮、身高、體型等特徵。",
+      "examples": [
+        {
+          "en": "He has short hair.",
+          "zh": "他有短髮。"
+        },
+        {
+          "en": "She has long hair.",
+          "zh": "她有長髮。"
+        },
+        {
+          "en": "He is tall and thin.",
+          "zh": "他高高瘦瘦。"
+        },
+        {
+          "en": "She is short and cute.",
+          "zh": "她矮矮的，很可愛。"
+        },
+        {
+          "en": "He looks strong and healthy.",
+          "zh": "他看起來很強壯又健康。"
+        },
+        {
+          "en": "She is friendly and kind.",
+          "zh": "她很友善又親切。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上談論衣服和外貌",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "I'm wearing a blue swimsuit today.",
+        "zh": "我今天穿著藍色泳衣。"
+      },
+      {
+        "sp": "小華",
+        "en": "You look pretty in it!",
+        "zh": "你穿起來很漂亮！"
+      },
+      {
+        "sp": "小明",
+        "en": "Thanks! He has short hair and is very handsome.",
+        "zh": "謝謝！他有短髮，很英俊。"
+      },
+      {
+        "sp": "小華",
+        "en": "I think he is tall and strong.",
+        "zh": "我覺得他又高又強壯。"
+      },
+      {
+        "sp": "小明",
+        "en": "Yes, and he is friendly and kind to everyone.",
+        "zh": "對啊，他對每個人都很友善又親切。"
+      },
+      {
+        "sp": "小華",
+        "en": "Let's play together after class!",
+        "zh": "下課後一起玩吧！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I'm wearing a nice T-shirt.",
+      "zh": "我穿著一件很好看的T恤。"
+    },
+    {
+      "en": "She looks beautiful in her dress.",
+      "zh": "她穿著連衣裙很美麗。"
+    },
+    {
+      "en": "He has short hair and is cute.",
+      "zh": "他有短髮，很可愛。"
+    },
+    {
+      "en": "The boy is tall and thin.",
+      "zh": "這個男孩高高瘦瘦。"
+    },
+    {
+      "en": "She is young and healthy.",
+      "zh": "她年輕又健康。"
+    },
+    {
+      "en": "He looks strong and friendly.",
+      "zh": "他看起來很強壯又友善。"
+    },
+    {
+      "en": "The swimsuit is pretty.",
+      "zh": "這件泳衣很漂亮。"
+    },
+    {
+      "en": "He is kind and nice to his friends.",
+      "zh": "他對朋友很親切又很好。"
+    }
+  ],
+  "no": 35,
+  "theme": "Clothes & How I Look",
+  "theme_zh": "衣著與外表",
+  "words": [
+    {
+      "en": "swimsuit",
+      "zh": "泳衣"
+    },
+    {
+      "en": "beautiful",
+      "zh": "美麗的"
+    },
+    {
+      "en": "pretty",
+      "zh": "漂亮的"
+    },
+    {
+      "en": "cute",
+      "zh": "可愛的"
+    },
+    {
+      "en": "handsome",
+      "zh": "英俊的"
+    },
+    {
+      "en": "old",
+      "zh": "老的"
+    },
+    {
+      "en": "young",
+      "zh": "年輕的"
+    },
+    {
+      "en": "strong",
+      "zh": "強壯的"
+    },
+    {
+      "en": "tall",
+      "zh": "高大的"
+    },
+    {
+      "en": "short",
+      "zh": "矮的"
+    },
+    {
+      "en": "thin",
+      "zh": "瘦的"
+    },
+    {
+      "en": "fat",
+      "zh": "胖的"
+    },
+    {
+      "en": "heavy",
+      "zh": "重的"
+    },
+    {
+      "en": "healthy",
+      "zh": "健康的"
+    },
+    {
+      "en": "long",
+      "zh": "長的"
+    },
+    {
+      "en": "good",
+      "zh": "好的"
+    },
+    {
+      "en": "bad",
+      "zh": "不好的"
+    },
+    {
+      "en": "nice",
+      "zh": "好的"
+    },
+    {
+      "en": "friendly",
+      "zh": "友善的"
+    },
+    {
+      "en": "kind",
+      "zh": "親切的"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個是 '泳衣' 的英文？",
+        "opts": [
+          "swimsuit",
+          "beautiful",
+          "pretty",
+          "cute"
+        ],
+        "ans": "swimsuit"
+      },
+      {
+        "q": "以下哪個是 '美麗的' 的英文？",
+        "opts": [
+          "handsome",
+          "old",
+          "beautiful",
+          "strong"
+        ],
+        "ans": "beautiful"
+      },
+      {
+        "q": "以下哪個是 '漂亮的' 的英文？",
+        "opts": [
+          "thin",
+          "fat",
+          "pretty",
+          "healthy"
+        ],
+        "ans": "pretty"
+      },
+      {
+        "q": "以下哪個是 '可愛的' 的英文？",
+        "opts": [
+          "long",
+          "short",
+          "cute",
+          "nice"
+        ],
+        "ans": "cute"
+      },
+      {
+        "q": "以下哪個是 '帥氣的' 的英文？",
+        "opts": [
+          "young",
+          "handsome",
+          "heavy",
+          "kind"
+        ],
+        "ans": "handsome"
+      },
+      {
+        "q": "以下哪個是 '老的' 的英文？",
+        "opts": [
+          "old",
+          "tall",
+          "friendly",
+          "swimsuit"
+        ],
+        "ans": "old"
+      },
+      {
+        "q": "以下哪個是 '年輕的' 的英文？",
+        "opts": [
+          "young",
+          "strong",
+          "thin",
+          "fat"
+        ],
+        "ans": "young"
+      },
+      {
+        "q": "以下哪個是 '強壯的' 的英文？",
+        "opts": [
+          "strong",
+          "long",
+          "good",
+          "bad"
+        ],
+        "ans": "strong"
+      },
+      {
+        "q": "以下哪個是 '高的' 的英文？",
+        "opts": [
+          "tall",
+          "short",
+          "nice",
+          "friendly"
+        ],
+        "ans": "tall"
+      },
+      {
+        "q": "以下哪個是 '矮的' 的英文？",
+        "opts": [
+          "thin",
+          "fat",
+          "short",
+          "healthy"
+        ],
+        "ans": "short"
+      },
+      {
+        "q": "I ___ wearing a swimsuit.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "has"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "She ___ wearing a swimsuit.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "has"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "They ___ wearing swimsuits.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "has"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "He ___ short hair.",
+        "opts": [
+          "has",
+          "have",
+          "is",
+          "am"
+        ],
+        "ans": "has"
+      },
+      {
+        "q": "She ___ long hair.",
+        "opts": [
+          "has",
+          "have",
+          "is",
+          "am"
+        ],
+        "ans": "has"
+      },
+      {
+        "q": "I ___ thin.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "has"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "He ___ friendly.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "has"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "We ___ kind.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "has"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "They ___ healthy.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "has"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "You ___ good.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "has"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "我去游泳，I am wearing a ___.",
+        "opts": [
+          "swimsuit",
+          "beautiful",
+          "tall",
+          "friendly"
+        ],
+        "ans": "swimsuit"
+      },
+      {
+        "q": "他頭髮很長，He has ___ hair.",
+        "opts": [
+          "long",
+          "short",
+          "fat",
+          "kind"
+        ],
+        "ans": "long"
+      },
+      {
+        "q": "她頭髮很短，She has ___ hair.",
+        "opts": [
+          "short",
+          "tall",
+          "young",
+          "nice"
+        ],
+        "ans": "short"
+      },
+      {
+        "q": "他舉重很厲害，He is ___.",
+        "opts": [
+          "strong",
+          "old",
+          "young",
+          "nice"
+        ],
+        "ans": "strong"
+      },
+      {
+        "q": "她很少生病，She is ___.",
+        "opts": [
+          "pretty",
+          "healthy",
+          "heavy",
+          "kind"
+        ],
+        "ans": "healthy"
+      },
+      {
+        "q": "他們常常幫助別人，They are ___.",
+        "opts": [
+          "friendly",
+          "tall",
+          "swimsuit",
+          "old"
+        ],
+        "ans": "friendly"
+      },
+      {
+        "q": "我們都還是學生，We are ___.",
+        "opts": [
+          "young",
+          "heavy",
+          "nice",
+          "strong"
+        ],
+        "ans": "young"
+      },
+      {
+        "q": "你考試得到滿分，You are ___.",
+        "opts": [
+          "bad",
+          "good",
+          "fat",
+          "tall"
+        ],
+        "ans": "good"
+      },
+      {
+        "q": "我最近在節食，I am ___.",
+        "opts": [
+          "thin",
+          "heavy",
+          "swimsuit",
+          "old"
+        ],
+        "ans": "thin"
+      },
+      {
+        "q": "他長得很帥，He is ___.",
+        "opts": [
+          "handsome",
+          "heavy",
+          "long",
+          "kind"
+        ],
+        "ans": "handsome"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
+      },
+      {
+        "q": "He ____ a swimsuit.（他有一件泳衣）",
+        "ans": "has"
+      },
+      {
+        "q": "The cat is ____ .（這隻貓很胖）",
+        "ans": "fat"
+      },
+      {
+        "q": "My brother is ____ .（我弟弟很高）",
+        "ans": "tall"
+      },
+      {
+        "q": "She looks ____ today.（她今天看起來很友善）",
+        "ans": "friendly"
+      },
+      {
+        "q": "This apple is ____ .（這個蘋果很好）",
+        "ans": "good"
+      },
+      {
+        "q": "The boy is ____ .（這個男孩很年輕）",
+        "ans": "young"
+      },
+      {
+        "q": "The teacher is ____ .（老師很親切）",
+        "ans": "kind"
+      },
+      {
+        "q": "The rope is ____ .（這根繩子很長）",
+        "ans": "long"
+      },
+      {
+        "q": "The soup is ____ .（這湯很健康）",
+        "ans": "healthy"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我正穿著泳衣。",
+        "ans": "I am wearing a swimsuit."
+      },
+      {
+        "q": "他有一件泳衣。",
+        "ans": "He has a swimsuit."
+      },
+      {
+        "q": "她很漂亮且友善。",
+        "ans": "She is beautiful and friendly."
+      },
+      {
+        "q": "這件泳衣很好看。",
+        "ans": "The swimsuit is nice."
+      },
+      {
+        "q": "我的弟弟很年輕又強壯。",
+        "ans": "My brother is young and strong."
+      },
+      {
+        "q": "老師很親切且耐心。",
+        "ans": "The teacher is kind and friendly."
+      },
+      {
+        "q": "這條魚很長且健康。",
+        "ans": "The fish is long and healthy."
+      },
+      {
+        "q": "我很喜歡這件泳衣。",
+        "ans": "I have a nice swimsuit."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "She / a / . / is / wearing / swimsuit",
+        "ans": "She is wearing a swimsuit."
+      },
+      {
+        "q": "He / swimsuit / . / a / has",
+        "ans": "He has a swimsuit."
+      },
+      {
+        "q": ". / am / a / wearing / I / swimsuit",
+        "ans": "I am wearing a swimsuit."
+      },
+      {
+        "q": "friendly / . / are / They",
+        "ans": "They are friendly."
+      },
+      {
+        "q": "is / swimsuit / nice / The / .",
+        "ans": "The swimsuit is nice."
+      },
+      {
+        "q": "swimsuit / brother / a / . / My / has",
+        "ans": "My brother has a swimsuit."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

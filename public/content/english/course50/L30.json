@@ -1,0 +1,658 @@
+{
+  "title_en": "Days & Time",
+  "title_zh": "日子與時間",
+  "grammar": "本課重點是學習用 What time is it? 和 What day is it? 詢問時間與星期，並使用 on 星期、at 點鐘。",
+  "intro_zh": "這一課我們會學習怎麼問時間和星期，並且練習使用 on 和 at 來說明具體的日子與時間。透過生活中的例子，讓你能夠自然地說出今天是幾月幾日、現在是幾點，以及描述常常發生的活動。",
+  "can_do": [
+    "能用英文說出今天是星期幾、現在是幾點。",
+    "能用 on 和 at 正確說明特定的日子與時間。",
+    "能描述一個月份裡常常發生的活動。"
+  ],
+  "reading": {
+    "title_en": "A Week in My Life",
+    "title_zh": "我的一週生活",
+    "sentences": [
+      {
+        "en": "Today is Monday, and it is 7:00 in the morning.",
+        "zh": "今天是星期一，早上七點。"
+      },
+      {
+        "en": "Now it is 7:00, and we are ready for class.",
+        "zh": "現在是七點，我們準備好上課。"
+      },
+      {
+        "en": "In February, we often have a school trip.",
+        "zh": "二月時，我們常常有校外教學。"
+      },
+      {
+        "en": "March is when the flowers start to bloom early.",
+        "zh": "三月時，花兒開始早早開放。"
+      },
+      {
+        "en": "April showers bring May flowers, and we always play outside after school.",
+        "zh": "四月的雨帶來五月的花朵，放學後我們總是到外面玩。"
+      },
+      {
+        "en": "June is hot, and we usually go swimming in the afternoon.",
+        "zh": "六月天氣很熱，下午我們通常去游泳。"
+      },
+      {
+        "en": "July and August are summer vacation; we often stay up late to watch movies.",
+        "zh": "七月和八月是暑假，我們常常熬夜看電影。"
+      },
+      {
+        "en": "September brings a new school term, and we start studying before the exams.",
+        "zh": "九月帶來新學期，我們在考試前開始溫習。"
+      },
+      {
+        "en": "October, November, and December are busy months, but we always finish our homework soon.",
+        "zh": "十月、十一月和十二月很忙碌，但我們總是很快完成作業。"
+      },
+      {
+        "en": "Then we celebrate Christmas with family, and we feel happy.",
+        "zh": "然後我們與家人一起慶祝聖誕節，感到很開心。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① at 與 on 的使用",
+      "explain_zh": "用 at 表示具體的點鐘時間，用 on 表示星期或日期。",
+      "table": [
+        [
+          "時間表達",
+          "介系詞",
+          "例句"
+        ],
+        [
+          "7:00",
+          "at",
+          "It is at 7:00."
+        ],
+        [
+          "Monday",
+          "on",
+          "We have English on Monday."
+        ],
+        [
+          "December 25",
+          "on",
+          "Christmas is on December 25."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 What time is it? 和 What day is it? 詢問",
+      "explain_zh": "用 What time is it? 問現在時間，用 What day is it? 問今天是星期幾。回答時可用 at 或 on。",
+      "examples": [
+        {
+          "en": "What time is it now?",
+          "zh": "現在幾點？"
+        },
+        {
+          "en": "What day is it today?",
+          "zh": "今天是星期幾？"
+        },
+        {
+          "en": "It is at 3:15.",
+          "zh": "現在是三點十五分。"
+        },
+        {
+          "en": "It is on Friday.",
+          "zh": "今天是星期五。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "放學後約見朋友",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "What time is it now?",
+        "zh": "現在幾點？"
+      },
+      {
+        "sp": "Tom",
+        "en": "It is at 4:00.",
+        "zh": "現在是四點。"
+      },
+      {
+        "sp": "Anna",
+        "en": "What day is it today?",
+        "zh": "今天是星期幾？"
+      },
+      {
+        "sp": "Tom",
+        "en": "It is on Wednesday.",
+        "zh": "今天是星期三。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Let's meet at 5:30 after school.",
+        "zh": "放學後我們五點三十分見面吧。"
+      },
+      {
+        "sp": "Tom",
+        "en": "See you then!",
+        "zh": "到時見！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "It is May now.",
+      "zh": "現在是五月。"
+    },
+    {
+      "en": "School starts at 7:30 in the morning.",
+      "zh": "早上七點三十分上學。"
+    },
+    {
+      "en": "We have a test on June 10.",
+      "zh": "六月十號有考試。"
+    },
+    {
+      "en": "She often reads books in the afternoon.",
+      "zh": "她常常在下午讀書。"
+    },
+    {
+      "en": "He always wakes up early.",
+      "zh": "他總是早起。"
+    },
+    {
+      "en": "We will leave after lunch.",
+      "zh": "我們會在午餐後離開。"
+    },
+    {
+      "en": "Come soon, please.",
+      "zh": "請快點來。"
+    },
+    {
+      "en": "Then we will watch a movie.",
+      "zh": "之後我們會看電影。"
+    }
+  ],
+  "no": 30,
+  "theme": "Days, Months & Time",
+  "theme_zh": "日子‧月份與時間",
+  "words": [
+    {
+      "en": "February",
+      "zh": "二月"
+    },
+    {
+      "en": "March",
+      "zh": "三月"
+    },
+    {
+      "en": "April",
+      "zh": "四月"
+    },
+    {
+      "en": "June",
+      "zh": "六月"
+    },
+    {
+      "en": "July",
+      "zh": "七月"
+    },
+    {
+      "en": "August",
+      "zh": "八月"
+    },
+    {
+      "en": "September",
+      "zh": "九月"
+    },
+    {
+      "en": "October",
+      "zh": "十月"
+    },
+    {
+      "en": "November",
+      "zh": "十一月"
+    },
+    {
+      "en": "December",
+      "zh": "十二月"
+    },
+    {
+      "en": "now",
+      "zh": "現在"
+    },
+    {
+      "en": "then",
+      "zh": "當時"
+    },
+    {
+      "en": "early",
+      "zh": "早"
+    },
+    {
+      "en": "late",
+      "zh": "晚"
+    },
+    {
+      "en": "before",
+      "zh": "以前"
+    },
+    {
+      "en": "after",
+      "zh": "之後"
+    },
+    {
+      "en": "soon",
+      "zh": "不久"
+    },
+    {
+      "en": "always",
+      "zh": "總是"
+    },
+    {
+      "en": "often",
+      "zh": "時常"
+    },
+    {
+      "en": "May",
+      "zh": "五月"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "現在的英文是？",
+        "opts": [
+          "now",
+          "then",
+          "early",
+          "late"
+        ],
+        "ans": "now"
+      },
+      {
+        "q": "然後的英文是？",
+        "opts": [
+          "then",
+          "now",
+          "soon",
+          "always"
+        ],
+        "ans": "then"
+      },
+      {
+        "q": "早的英文是？",
+        "opts": [
+          "early",
+          "late",
+          "before",
+          "after"
+        ],
+        "ans": "early"
+      },
+      {
+        "q": "晚的英文是？",
+        "opts": [
+          "late",
+          "early",
+          "soon",
+          "often"
+        ],
+        "ans": "late"
+      },
+      {
+        "q": "以前的英文是？",
+        "opts": [
+          "before",
+          "after",
+          "soon",
+          "always"
+        ],
+        "ans": "before"
+      },
+      {
+        "q": "以後的英文是？",
+        "opts": [
+          "after",
+          "before",
+          "soon",
+          "often"
+        ],
+        "ans": "after"
+      },
+      {
+        "q": "很快的英文是？",
+        "opts": [
+          "soon",
+          "always",
+          "often",
+          "late"
+        ],
+        "ans": "soon"
+      },
+      {
+        "q": "總是的英文是？",
+        "opts": [
+          "always",
+          "often",
+          "soon",
+          "early"
+        ],
+        "ans": "always"
+      },
+      {
+        "q": "經常的英文是？",
+        "opts": [
+          "often",
+          "always",
+          "soon",
+          "late"
+        ],
+        "ans": "often"
+      },
+      {
+        "q": "現在是幾點？",
+        "opts": [
+          "at three o'clock",
+          "at five o'clock",
+          "at seven o'clock",
+          "at nine o'clock"
+        ],
+        "ans": "at three o'clock"
+      },
+      {
+        "q": "What ___ is it?",
+        "opts": [
+          "time",
+          "February",
+          "March",
+          "April"
+        ],
+        "ans": "time"
+      },
+      {
+        "q": "We have English class ___ Monday.",
+        "opts": [
+          "on",
+          "in",
+          "at",
+          "of"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "The bus leaves ___ 7 o'clock.",
+        "opts": [
+          "at",
+          "on",
+          "in",
+          "to"
+        ],
+        "ans": "at"
+      },
+      {
+        "q": "It is ___ 3 o'clock.",
+        "opts": [
+          "now",
+          "then",
+          "early",
+          "late"
+        ],
+        "ans": "now"
+      },
+      {
+        "q": "Yesterday it was ___ 2 o'clock.",
+        "opts": [
+          "then",
+          "now",
+          "soon",
+          "always"
+        ],
+        "ans": "then"
+      },
+      {
+        "q": "She arrives ___.",
+        "opts": [
+          "early",
+          "late",
+          "before",
+          "after"
+        ],
+        "ans": "early"
+      },
+      {
+        "q": "He is ___ for school.",
+        "opts": [
+          "late",
+          "early",
+          "before",
+          "after"
+        ],
+        "ans": "late"
+      },
+      {
+        "q": "We eat breakfast ___ school.",
+        "opts": [
+          "before",
+          "after",
+          "now",
+          "then"
+        ],
+        "ans": "before"
+      },
+      {
+        "q": "We play ___ homework.",
+        "opts": [
+          "after",
+          "before",
+          "always",
+          "often"
+        ],
+        "ans": "after"
+      },
+      {
+        "q": "情境: 今天是星期三，問今天是星期幾？",
+        "opts": [
+          "Today is Monday.",
+          "Today is Wednesday.",
+          "Today is Friday.",
+          "Today is Sunday."
+        ],
+        "ans": "Today is Wednesday."
+      },
+      {
+        "q": "情境: 現在是下午兩點，問現在幾點？",
+        "opts": [
+          "It is 2 o'clock.",
+          "It is 3 o'clock.",
+          "It is 4 o'clock.",
+          "It is 5 o'clock."
+        ],
+        "ans": "It is 2 o'clock."
+      },
+      {
+        "q": "情境: 英文課在星期二。",
+        "opts": [
+          "We have English class on Tuesday.",
+          "We have English class on Thursday.",
+          "We have English class on Saturday.",
+          "We have English class on Sunday."
+        ],
+        "ans": "We have English class on Tuesday."
+      },
+      {
+        "q": "情境: 公車在九點離開。",
+        "opts": [
+          "The bus leaves at 9 o'clock.",
+          "The bus leaves at 10 o'clock.",
+          "The bus leaves at 11 o'clock.",
+          "The bus leaves at 12 o'clock."
+        ],
+        "ans": "The bus leaves at 9 o'clock."
+      },
+      {
+        "q": "情境: 她早上七點到學校。",
+        "opts": [
+          "She arrives at school at 7 o'clock.",
+          "She arrives at school at 8 o'clock.",
+          "She arrives at school at 9 o'clock.",
+          "She arrives at school at 10 o'clock."
+        ],
+        "ans": "She arrives at school at 7 o'clock."
+      },
+      {
+        "q": "情境: 他總是遲到上學。",
+        "opts": [
+          "He is always late for school.",
+          "He is often late for school.",
+          "He is early for school.",
+          "He is late for school."
+        ],
+        "ans": "He is always late for school."
+      },
+      {
+        "q": "情境: 我們在上學前吃早餐。",
+        "opts": [
+          "We eat breakfast before school.",
+          "We eat breakfast after school.",
+          "We eat breakfast at school.",
+          "We eat breakfast now."
+        ],
+        "ans": "We eat breakfast before school."
+      },
+      {
+        "q": "情境: 我們在做功課後玩。",
+        "opts": [
+          "We play after homework.",
+          "We play before homework.",
+          "We play now.",
+          "We play then."
+        ],
+        "ans": "We play after homework."
+      },
+      {
+        "q": "情境: 五月是哪個月？",
+        "opts": [
+          "May is a month.",
+          "June is a month.",
+          "July is a month.",
+          "August is a month."
+        ],
+        "ans": "May is a month."
+      },
+      {
+        "q": "情境: 現在是下午四點，問幾點再過一小時？",
+        "opts": [
+          "It is 5 o'clock.",
+          "It is 4 o'clock.",
+          "It is 3 o'clock.",
+          "It is 2 o'clock."
+        ],
+        "ans": "It is 5 o'clock."
+      }
+    ],
+    "fill": [
+      {
+        "q": "What time is it? It is ____.（時間是幾點？它很早。）",
+        "ans": "early"
+      },
+      {
+        "q": "What time is it? It is ____。（時間是幾點？它很晚。）",
+        "ans": "late"
+      },
+      {
+        "q": "Today is ____。（今天是二月。）",
+        "ans": "February"
+      },
+      {
+        "q": "My birthday is in ____。（我的生日在三月。）",
+        "ans": "March"
+      },
+      {
+        "q": "We will go ____。（我們很快就會去。）",
+        "ans": "soon"
+      },
+      {
+        "q": "We eat breakfast ____ school。（我們在上學前吃早餐。）",
+        "ans": "before"
+      },
+      {
+        "q": "We do homework ____ dinner。（我們在晚飯後做功課。）",
+        "ans": "after"
+      },
+      {
+        "q": "We ate lunch, ____ we played。（我們吃了午餐，然後我們玩了。）",
+        "ans": "then"
+      },
+      {
+        "q": "It is ____。（它現在。）",
+        "ans": "now"
+      },
+      {
+        "q": "My birthday is in ____。（我的生日在五月。）",
+        "ans": "May"
+      }
+    ],
+    "translate": [
+      {
+        "q": "現在是早上很早。",
+        "ans": "It is early now."
+      },
+      {
+        "q": "現在是下午很晚。",
+        "ans": "It is late now."
+      },
+      {
+        "q": "今天是二月。",
+        "ans": "Today is February."
+      },
+      {
+        "q": "我的生日在三月。",
+        "ans": "My birthday is in March."
+      },
+      {
+        "q": "我們很快就會去。",
+        "ans": "We will go soon."
+      },
+      {
+        "q": "我們在上學前吃早餐。",
+        "ans": "We eat breakfast before school."
+      },
+      {
+        "q": "我們在晚飯後做功課。",
+        "ans": "We do homework after dinner."
+      },
+      {
+        "q": "我們吃了午餐，然後我們玩了。",
+        "ans": "We ate lunch, then we played."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "is / It / now / early / .",
+        "ans": "It is early now."
+      },
+      {
+        "q": "late / It / now / is / .",
+        "ans": "It is late now."
+      },
+      {
+        "q": "February / Today / is / .",
+        "ans": "Today is February."
+      },
+      {
+        "q": "birthday / March / is / . / in / My",
+        "ans": "My birthday is in March."
+      },
+      {
+        "q": "go / will / soon / . / We",
+        "ans": "We will go soon."
+      },
+      {
+        "q": "school / before / eat / We / breakfast / .",
+        "ans": "We eat breakfast before school."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

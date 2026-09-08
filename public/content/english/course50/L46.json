@@ -1,0 +1,623 @@
+{
+  "title_en": "My Lovely Town",
+  "title_zh": "我美麗的家鄉",
+  "grammar": "使用 Is there a…? 詢問地點是否存在，以及 go to the… 表示前往某地；同時練習 Where do you live? 的問答。",
+  "intro_zh": "本課學習描述居住地與周圍設施，練習 Is there a…? 詢問地點是否存在，以及 go to the… 表示去某地。同時複習 Where do you live? 的問答。",
+  "can_do": [
+    "能用 Is there a…? 問及城鎮裡是否有特定設施。",
+    "能用 go to the… 說明自己要去的地方。",
+    "能以完整句子回答 Where do you live? 描述自己的居住地。"
+  ],
+  "reading": {
+    "title_en": "My Lovely Town",
+    "title_zh": "我美麗的家鄉",
+    "sentences": [
+      {
+        "en": "Lily lives in a small town called Sunnyville.",
+        "zh": "Lily 住在一個叫做 Sunnyville 的小鎮。"
+      },
+      {
+        "en": "Her house is on Maple Road, near the corner of Oak Street.",
+        "zh": "她的房子在 Maple Road，靠近 Oak Street 的轉角。"
+      },
+      {
+        "en": "The block where she lives has a bakery, a bookstore and a small park.",
+        "zh": "她住的街區裡有一家麵包店、一間書店和一個小公園。"
+      },
+      {
+        "en": "Every Saturday she goes to the museum with her family.",
+        "zh": "每個星期六，她會和家人一起去博物館。"
+      },
+      {
+        "en": "After the museum, they often eat lunch at a restaurant that serves noodles.",
+        "zh": "參觀博物館後，他們常在一家賣麵食的餐廳吃午餐。"
+      },
+      {
+        "en": "In the town centre there is a bank, a post office and a church.",
+        "zh": "鎮中心有一家銀行、一個郵局和一座教堂。"
+      },
+      {
+        "en": "Lily’s father works in an office near the hotel, and her mother sometimes volunteers at the club.",
+        "zh": "Lily 的爸爸在靠近飯店的辦公室工作，她的媽媽有時會在俱樂部做志工。"
+      },
+      {
+        "en": "When she wants to see animals, she takes the bus to the zoo in the nearby city.",
+        "zh": "當她想看動物時，她會搭公車去鄰近城市的動物園。"
+      },
+      {
+        "en": "Lily loves her town and thinks it is a wonderful place to live.",
+        "zh": "Lily 愛她的家鄉，覺得這是個很好的居住地方。"
+      },
+      {
+        "en": "During summer, her family goes to the country for a picnic party.",
+        "zh": "夏天時，她的家人會去鄉下野餐派對。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① Is there a…? 詢問地點是否存在",
+      "explain_zh": "用來問某個地方是否存在，答句用 Yes, there is. / No, there isn’t。",
+      "table": [
+        [
+          "Question",
+          "Affirmative Answer",
+          "Negative Answer"
+        ],
+        [
+          "Is there a bank?",
+          "Yes, there is.",
+          "No, there isn’t."
+        ],
+        [
+          "Is there a park?",
+          "Yes, there is.",
+          "No, there isn’t."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② go to the… 與 Where do you live?",
+      "explain_zh": "go to the… 表示前往某地；Where do you live? 用來問某人住在哪裡。",
+      "examples": [
+        {
+          "en": "We go to the museum on Saturday.",
+          "zh": "我們星期六去博物館。"
+        },
+        {
+          "en": "She goes to the bakery every morning.",
+          "zh": "她每天早上去麵包店。"
+        },
+        {
+          "en": "Where do you live?",
+          "zh": "你住在哪裡？"
+        },
+        {
+          "en": "I live in a small town near the river.",
+          "zh": "我住在河邊的小鎮。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在城鎮裡聊天",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Hi Mike! Where do you live?",
+        "zh": "嗨，Mike！你住在哪裡？"
+      },
+      {
+        "sp": "Mike",
+        "en": "I live in a small town near the river.",
+        "zh": "我住在河邊的小鎮。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Is there a bank in your town?",
+        "zh": "你們鎮裡有銀行嗎？"
+      },
+      {
+        "sp": "Mike",
+        "en": "Yes, there is a bank and a restaurant.",
+        "zh": "有的，我們鎮裡有銀行和餐廳。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Let's go to the restaurant after we visit the museum.",
+        "zh": "我們參觀完博物館後去餐廳吧。"
+      },
+      {
+        "sp": "Mike",
+        "en": "Sure! The museum is on Main Street, next to the bookstore.",
+        "zh": "當然！博物館在主街上，書店就在旁邊。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "The bakery is on Oak Road.",
+      "zh": "麵包店在橡樹路上。"
+    },
+    {
+      "en": "There is a bookstore next to the post office.",
+      "zh": "書店就在郵局旁邊。"
+    },
+    {
+      "en": "We go to the park after school.",
+      "zh": "放學後我們去公園。"
+    },
+    {
+      "en": "Is there a church near the hotel?",
+      "zh": "飯店附近有教堂嗎？"
+    },
+    {
+      "en": "They have a party at the club every Friday.",
+      "zh": "他們每週五在俱樂部舉辦派對。"
+    },
+    {
+      "en": "My father works in an office in the city.",
+      "zh": "我爸爸在城市裡的辦公室工作。"
+    },
+    {
+      "en": "Where do you live? I live in a quiet place in the country, near a block of houses.",
+      "zh": "你住在哪裡？我住在鄉下的一個安靜地方，靠近一棟房子的街區。"
+    },
+    {
+      "en": "Let's visit the museum and the zoo this summer.",
+      "zh": "這個夏天我們去參觀博物館和動物園。"
+    }
+  ],
+  "no": 46,
+  "theme": "My Town & Country",
+  "theme_zh": "城鎮與國家",
+  "words": [
+    {
+      "en": "road",
+      "zh": "道路"
+    },
+    {
+      "en": "street",
+      "zh": "街道"
+    },
+    {
+      "en": "block",
+      "zh": "街區"
+    },
+    {
+      "en": "town",
+      "zh": "市鎮"
+    },
+    {
+      "en": "city",
+      "zh": "城市"
+    },
+    {
+      "en": "country",
+      "zh": "國家；鄉下的"
+    },
+    {
+      "en": "place",
+      "zh": "地方"
+    },
+    {
+      "en": "bank",
+      "zh": "銀行"
+    },
+    {
+      "en": "church",
+      "zh": "教堂"
+    },
+    {
+      "en": "club",
+      "zh": "俱樂部"
+    },
+    {
+      "en": "hotel",
+      "zh": "飯店"
+    },
+    {
+      "en": "office",
+      "zh": "辦公室"
+    },
+    {
+      "en": "park",
+      "zh": "公園"
+    },
+    {
+      "en": "party",
+      "zh": "派對"
+    },
+    {
+      "en": "post office",
+      "zh": "郵局"
+    },
+    {
+      "en": "restaurant",
+      "zh": "餐廳"
+    },
+    {
+      "en": "museum",
+      "zh": "博物館"
+    },
+    {
+      "en": "zoo",
+      "zh": "動物園"
+    },
+    {
+      "en": "bakery",
+      "zh": "麵包店"
+    },
+    {
+      "en": "bookstore",
+      "zh": "書店"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "銀行的英文是？",
+        "opts": [
+          "bank",
+          "church",
+          "park",
+          "zoo"
+        ],
+        "ans": "bank"
+      },
+      {
+        "q": "公園的英文是？",
+        "opts": [
+          "road",
+          "street",
+          "park",
+          "block"
+        ],
+        "ans": "park"
+      },
+      {
+        "q": "博物館的英文是？",
+        "opts": [
+          "museum",
+          "bakery",
+          "hotel",
+          "office"
+        ],
+        "ans": "museum"
+      },
+      {
+        "q": "餐廳的英文是？",
+        "opts": [
+          "restaurant",
+          "party",
+          "place",
+          "country"
+        ],
+        "ans": "restaurant"
+      },
+      {
+        "q": "郵局的英文是？",
+        "opts": [
+          "post office",
+          "bank",
+          "club",
+          "town"
+        ],
+        "ans": "post office"
+      },
+      {
+        "q": "書店的英文是？",
+        "opts": [
+          "bookstore",
+          "bakery",
+          "zoo",
+          "block"
+        ],
+        "ans": "bookstore"
+      },
+      {
+        "q": "你住在城鎮嗎？",
+        "opts": [
+          "town",
+          "city",
+          "country",
+          "place"
+        ],
+        "ans": "town"
+      },
+      {
+        "q": "哪個是『街道』的英文？",
+        "opts": [
+          "street",
+          "road",
+          "block",
+          "town"
+        ],
+        "ans": "street"
+      },
+      {
+        "q": "哪個是『國家』的英文？",
+        "opts": [
+          "country",
+          "city",
+          "place",
+          "party"
+        ],
+        "ans": "country"
+      },
+      {
+        "q": "哪個是『教堂』的英文？",
+        "opts": [
+          "church",
+          "bank",
+          "hotel",
+          "office"
+        ],
+        "ans": "church"
+      },
+      {
+        "q": "請選擇正確的單字完成句子：Is there a ___ ?",
+        "opts": [
+          "bank",
+          "church",
+          "park",
+          "zoo"
+        ],
+        "ans": "bank"
+      },
+      {
+        "q": "請填入適當的單字：Is there a ___ ?",
+        "opts": [
+          "road",
+          "street",
+          "block",
+          "town"
+        ],
+        "ans": "road"
+      },
+      {
+        "q": "請選擇正確的單字完成句子：Where do you live? I live in a ___ .",
+        "opts": [
+          "city",
+          "country",
+          "place",
+          "town"
+        ],
+        "ans": "city"
+      },
+      {
+        "q": "請填入適當的單字：I go to the ___ .",
+        "opts": [
+          "bakery",
+          "bookstore",
+          "museum",
+          "zoo"
+        ],
+        "ans": "bakery"
+      },
+      {
+        "q": "請填入適當的單字：Where do you live? I live in a ___ .",
+        "opts": [
+          "country",
+          "town",
+          "city",
+          "place"
+        ],
+        "ans": "country"
+      },
+      {
+        "q": "請選擇正確的單字完成句子：I go to the ___ .",
+        "opts": [
+          "office",
+          "hotel",
+          "club",
+          "park"
+        ],
+        "ans": "office"
+      },
+      {
+        "q": "圖片顯示一間有錢櫃的建築，旁邊有標誌「Bank」。請問這是什麼地方？",
+        "opts": [
+          "bank",
+          "church",
+          "park",
+          "bakery"
+        ],
+        "ans": "bank"
+      },
+      {
+        "q": "圖片顯示一個有滑梯和草地的地方，孩子們在玩。請問這是什麼地方？",
+        "opts": [
+          "park",
+          "zoo",
+          "museum",
+          "office"
+        ],
+        "ans": "park"
+      },
+      {
+        "q": "圖片顯示一間有書架和閱讀區的地方，標誌寫「Bookstore」。請問這是什麼地方？",
+        "opts": [
+          "bookstore",
+          "bakery",
+          "church",
+          "club"
+        ],
+        "ans": "bookstore"
+      },
+      {
+        "q": "你想知道附近有沒有可以買麵包的店，你會問：Is there a ___ ?",
+        "opts": [
+          "bakery",
+          "bank",
+          "church",
+          "club"
+        ],
+        "ans": "bakery"
+      },
+      {
+        "q": "你想去看恐龍骨架，你會說：I go to the ___ .",
+        "opts": [
+          "museum",
+          "zoo",
+          "bakery",
+          "office"
+        ],
+        "ans": "museum"
+      },
+      {
+        "q": "你住在一個小鎮，有人問你 Where do you live?，你回答：I live in a ___ .",
+        "opts": [
+          "town",
+          "city",
+          "country",
+          "place"
+        ],
+        "ans": "town"
+      },
+      {
+        "q": "圖片顯示一間有十字架和鐘塔的建築，標誌寫「Church」。請問這是什麼地方？",
+        "opts": [
+          "church",
+          "bank",
+          "hotel",
+          "office"
+        ],
+        "ans": "church"
+      },
+      {
+        "q": "你想知道附近有沒有可以郵寄信件的地方，你會問：Is there a ___ ?",
+        "opts": [
+          "post office",
+          "bank",
+          "park",
+          "museum"
+        ],
+        "ans": "post office"
+      },
+      {
+        "q": "你想去吃晚餐，你會說：I go to the ___ .",
+        "opts": [
+          "restaurant",
+          "bakery",
+          "park",
+          "office"
+        ],
+        "ans": "restaurant"
+      },
+      {
+        "q": "你住在一個大城市，有人問你 Where do you live?，你回答：I live in a ___ .",
+        "opts": [
+          "city",
+          "country",
+          "town",
+          "place"
+        ],
+        "ans": "city"
+      }
+    ],
+    "fill": [
+      {
+        "q": "Is there a ____ on the street? (公園)",
+        "ans": "park"
+      },
+      {
+        "q": "Where do you ____? (住)",
+        "ans": "live"
+      },
+      {
+        "q": "We go to the ____ . (博物館)",
+        "ans": "museum"
+      },
+      {
+        "q": "She works at the ____ . (辦公室)",
+        "ans": "office"
+      },
+      {
+        "q": "They go to the ____ . (街道)",
+        "ans": "street"
+      },
+      {
+        "q": "Is there a ____ on the road? (教堂)",
+        "ans": "church"
+      },
+      {
+        "q": "We will go to the ____ . (餐廳)",
+        "ans": "restaurant"
+      },
+      {
+        "q": "Do you go to the ____ ? (動物園)",
+        "ans": "zoo"
+      },
+      {
+        "q": "He works at the ____ . (面包店)",
+        "ans": "bakery"
+      },
+      {
+        "q": "Is there a ____ near the park? (銀行)",
+        "ans": "bank"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這裡有銀行嗎？",
+        "ans": "Is there a bank?"
+      },
+      {
+        "q": "我住在一個城鎮。",
+        "ans": "I live in a town."
+      },
+      {
+        "q": "我們去博物館。",
+        "ans": "We go to the museum."
+      },
+      {
+        "q": "這裡有公園嗎？",
+        "ans": "Is there a park?"
+      },
+      {
+        "q": "他們去餐廳。",
+        "ans": "They go to the restaurant."
+      },
+      {
+        "q": "你住在哪裡？",
+        "ans": "Where do you live?"
+      },
+      {
+        "q": "這裡有教堂嗎？",
+        "ans": "Is there a church?"
+      },
+      {
+        "q": "我去辦公室。",
+        "ans": "I go to the office."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "there / a / ? / bank / Is",
+        "ans": "Is there a bank?"
+      },
+      {
+        "q": "the / We / to / go / museum / .",
+        "ans": "We go to the museum."
+      },
+      {
+        "q": "you / live / do / ? / Where",
+        "ans": "Where do you live?"
+      },
+      {
+        "q": ". / restaurant / the / to / go / They",
+        "ans": "They go to the restaurant."
+      },
+      {
+        "q": "? / there / a / church / Is",
+        "ans": "Is there a church?"
+      },
+      {
+        "q": ". / I / office / the / go / to",
+        "ans": "I go to the office."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

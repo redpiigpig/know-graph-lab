@@ -1,0 +1,672 @@
+{
+  "title_en": "Our School Life",
+  "title_zh": "我們的校園生活",
+  "grammar": "本課重點是 There is / are 以及介系詞 in、on、under 的用法。",
+  "intro_zh": "這一課將帶你走進國小的校園，認識教室裡的東西與學校生活的規則，學習用 There is / are 描述物體位置，並練習介系詞 in、on、under 的用法。在課堂上觀察與說話。",
+  "can_do": [
+    "能說出教室裡常見的物品及其位置。",
+    "能用 There is / are 描述教室裡有什麼。",
+    "能正確使用 in、on、under 說明物體的位置。"
+  ],
+  "reading": {
+    "title_en": "A Day at School",
+    "title_zh": "一天的校園生活",
+    "sentences": [
+      {
+        "en": "This is my school.",
+        "zh": "這是我的學校。"
+      },
+      {
+        "en": "It is an elementary school.",
+        "zh": "這是一所國小。"
+      },
+      {
+        "en": "I am a student in Class 3.",
+        "zh": "我是三班的學生。"
+      },
+      {
+        "en": "Our classroom is on the second floor.",
+        "zh": "我們的教室在二樓。"
+      },
+      {
+        "en": "The teacher stands near the blackboard.",
+        "zh": "老師站在黑板旁邊。"
+      },
+      {
+        "en": "She writes with chalk and uses a ruler to draw lines.",
+        "zh": "她用粉筆寫字，並用尺畫線。"
+      },
+      {
+        "en": "I keep my pencil and eraser in my desk, and the ruler is under the book.",
+        "zh": "我把鉛筆和橡皮擦放在桌子裡，尺子在書本下面。"
+      },
+      {
+        "en": "When the bell rings, we go to the playground to play.",
+        "zh": "鐘聲響起時，我們去操場玩。"
+      },
+      {
+        "en": "Today's lesson is math, and we work in groups.",
+        "zh": "今天的課程是數學，我們小組合作。"
+      },
+      {
+        "en": "When I finish elementary school, I hope to go to junior high school and later senior high school, and I will follow the school rules and maybe join a reading program.",
+        "zh": "我畢業於國小後，希望升入國中，之後再上高中，並會遵守學校規定，也可能參加閱讀計畫。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① There is / There are 的基本用法",
+      "explain_zh": "用來說明教室裡有什麼東西，單數用 is，複數用 are。否定句在 is/are 後加 not，疑問句則把 is/are 放在句首。",
+      "table": [
+        [
+          "句型",
+          "說明",
+          "例句"
+        ],
+        [
+          "There is + 單數名詞",
+          "表示單數存在",
+          "There is a blackboard in the classroom."
+        ],
+        [
+          "There are + 複數名詞",
+          "表示複數存在",
+          "There are many students in the classroom."
+        ],
+        [
+          "Is there + 單數名詞 + ?",
+          "詢問單數是否存在",
+          "Is there a ruler on the desk?"
+        ],
+        [
+          "Are there + 複數名詞 + ?",
+          "詢問複數是否存在",
+          "Are there any erasers under the chair?"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 介系詞 in、on、under 的用法",
+      "explain_zh": "用來表示物體位置的關係。in 表示在…內部，on 表示在…表面，under 表示在…下方。",
+      "examples": [
+        {
+          "en": "The pencil is in the bag.",
+          "zh": "鉛筆在書包裡。"
+        },
+        {
+          "en": "The chalk is on the blackboard.",
+          "zh": "粉筆在黑板上。"
+        },
+        {
+          "en": "The eraser is under the desk.",
+          "zh": "橡皮擦在桌子底下。"
+        },
+        {
+          "en": "The bell is on the wall.",
+          "zh": "鐘在牆上。"
+        },
+        {
+          "en": "The ruler is in the pencil case.",
+          "zh": "尺在筆盒裡。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡聊天",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "Look! There is a big blackboard in the classroom.",
+        "zh": "看！教室裡有一塊大黑板。"
+      },
+      {
+        "sp": "小華",
+        "en": "Yes, and there are many desks and chairs.",
+        "zh": "對啊，而且教室裡有很多書桌和椅子。"
+      },
+      {
+        "sp": "小明",
+        "en": "Where is my pencil?",
+        "zh": "我的鉛筆在哪裡？"
+      },
+      {
+        "sp": "小華",
+        "en": "It is on your desk.",
+        "zh": "它在你的書桌上。"
+      },
+      {
+        "sp": "小華",
+        "en": "The bell is on the wall, and we hear it ring.",
+        "zh": "鐘在牆上，我們會聽到它響。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "There is a teacher in the classroom.",
+      "zh": "教室裡有一位老師。"
+    },
+    {
+      "en": "There are twenty students in the class.",
+      "zh": "班級裡有二十位學生。"
+    },
+    {
+      "en": "Is there a ruler on the desk?",
+      "zh": "書桌上有尺嗎？"
+    },
+    {
+      "en": "Are there any erasers under the chair?",
+      "zh": "椅子底下有橡皮擦嗎？"
+    },
+    {
+      "en": "The chalk is on the blackboard.",
+      "zh": "粉筆在黑板上。"
+    },
+    {
+      "en": "The pencil is in the pencil case.",
+      "zh": "鉛筆在筆盒裡。"
+    },
+    {
+      "en": "The bell is on the wall.",
+      "zh": "鐘在牆上。"
+    },
+    {
+      "en": "The eraser is under the desk.",
+      "zh": "橡皮擦在桌子底下。"
+    }
+  ],
+  "no": 21,
+  "theme": "At School",
+  "theme_zh": "在學校",
+  "words": [
+    {
+      "en": "school",
+      "zh": "學校"
+    },
+    {
+      "en": "class",
+      "zh": "班級"
+    },
+    {
+      "en": "classroom",
+      "zh": "教室"
+    },
+    {
+      "en": "elementary school",
+      "zh": "小學"
+    },
+    {
+      "en": "teacher",
+      "zh": "老師"
+    },
+    {
+      "en": "playground",
+      "zh": "操場"
+    },
+    {
+      "en": "junior high school",
+      "zh": "國中"
+    },
+    {
+      "en": "lesson",
+      "zh": "一課；課程"
+    },
+    {
+      "en": "program",
+      "zh": "計劃"
+    },
+    {
+      "en": "senior high school",
+      "zh": "高中"
+    },
+    {
+      "en": "rule",
+      "zh": "規定"
+    },
+    {
+      "en": "student",
+      "zh": "學生"
+    },
+    {
+      "en": "group",
+      "zh": "團體"
+    },
+    {
+      "en": "blackboard",
+      "zh": "黑板"
+    },
+    {
+      "en": "chalk",
+      "zh": "粉筆"
+    },
+    {
+      "en": "math/mathematics",
+      "zh": "數學"
+    },
+    {
+      "en": "ruler",
+      "zh": "尺"
+    },
+    {
+      "en": "eraser",
+      "zh": "橡皮擦；板擦"
+    },
+    {
+      "en": "bell",
+      "zh": "鐘聲"
+    },
+    {
+      "en": "pencil",
+      "zh": "鉛筆"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "下列哪一個字是「黑板」的英文？",
+        "opts": [
+          "blackboard",
+          "classroom",
+          "playground",
+          "pencil"
+        ],
+        "ans": "blackboard"
+      },
+      {
+        "q": "下列哪一個字是「粉筆」的英文？",
+        "opts": [
+          "chalk",
+          "eraser",
+          "ruler",
+          "bell"
+        ],
+        "ans": "chalk"
+      },
+      {
+        "q": "下列哪一個字是「尺」的英文？",
+        "opts": [
+          "pencil",
+          "ruler",
+          "math",
+          "chalk"
+        ],
+        "ans": "ruler"
+      },
+      {
+        "q": "下列哪一個字是「橡皮擦」的英文？",
+        "opts": [
+          "eraser",
+          "bell",
+          "blackboard",
+          "pencil"
+        ],
+        "ans": "eraser"
+      },
+      {
+        "q": "下列哪一個字是「鈴聲」的英文？",
+        "opts": [
+          "bell",
+          "ruler",
+          "chalk",
+          "lesson"
+        ],
+        "ans": "bell"
+      },
+      {
+        "q": "下列哪一個字是「數學」的英文？",
+        "opts": [
+          "math",
+          "program",
+          "rule",
+          "group"
+        ],
+        "ans": "math"
+      },
+      {
+        "q": "下列哪一個字是「規則」的英文？",
+        "opts": [
+          "rule",
+          "lesson",
+          "playground",
+          "elementary school"
+        ],
+        "ans": "rule"
+      },
+      {
+        "q": "下列哪一個字是「課程」的英文？",
+        "opts": [
+          "lesson",
+          "student",
+          "teacher",
+          "school"
+        ],
+        "ans": "lesson"
+      },
+      {
+        "q": "下列哪一個字是「運動場」的英文？",
+        "opts": [
+          "playground",
+          "classroom",
+          "junior high school",
+          "group"
+        ],
+        "ans": "playground"
+      },
+      {
+        "q": "下列哪一個字是「群組」的英文？",
+        "opts": [
+          "group",
+          "program",
+          "pencil",
+          "class"
+        ],
+        "ans": "group"
+      },
+      {
+        "q": "There ___ a pencil on the blackboard.",
+        "opts": [
+          "is",
+          "are",
+          "in",
+          "under"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "The eraser is ___ the classroom.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "is"
+        ],
+        "ans": "in"
+      },
+      {
+        "q": "There ___ rulers under the blackboard.",
+        "opts": [
+          "is",
+          "are",
+          "in",
+          "on"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "The bell is ___ the playground.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "is"
+        ],
+        "ans": "in"
+      },
+      {
+        "q": "There ___ a group in the classroom.",
+        "opts": [
+          "is",
+          "are",
+          "in",
+          "on"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "The chalk is ___ the blackboard.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "is"
+        ],
+        "ans": "under"
+      },
+      {
+        "q": "There ___ pencils on the blackboard.",
+        "opts": [
+          "is",
+          "are",
+          "in",
+          "on"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "The student is ___ the playground.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "is"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "There ___ a bell in the classroom.",
+        "opts": [
+          "is",
+          "are",
+          "in",
+          "on"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "The ruler is ___ the blackboard.",
+        "opts": [
+          "in",
+          "on",
+          "under",
+          "is"
+        ],
+        "ans": "under"
+      },
+      {
+        "q": "Where is the pencil?",
+        "opts": [
+          "On the blackboard.",
+          "In the classroom.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "On the blackboard."
+      },
+      {
+        "q": "Where is the eraser?",
+        "opts": [
+          "In the classroom.",
+          "On the blackboard.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "In the classroom."
+      },
+      {
+        "q": "Where are the rulers?",
+        "opts": [
+          "Under the blackboard.",
+          "On the blackboard.",
+          "In the classroom.",
+          "In the playground."
+        ],
+        "ans": "Under the blackboard."
+      },
+      {
+        "q": "Where is the bell?",
+        "opts": [
+          "In the playground.",
+          "On the blackboard.",
+          "Under the ruler.",
+          "In the classroom."
+        ],
+        "ans": "In the playground."
+      },
+      {
+        "q": "Where is the group?",
+        "opts": [
+          "In the classroom.",
+          "On the blackboard.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "In the classroom."
+      },
+      {
+        "q": "Where is the chalk?",
+        "opts": [
+          "On the blackboard.",
+          "In the classroom.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "On the blackboard."
+      },
+      {
+        "q": "Where are the pencils?",
+        "opts": [
+          "On the blackboard.",
+          "In the classroom.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "On the blackboard."
+      },
+      {
+        "q": "Where is the student?",
+        "opts": [
+          "In the playground.",
+          "On the blackboard.",
+          "Under the ruler.",
+          "In the classroom."
+        ],
+        "ans": "In the playground."
+      },
+      {
+        "q": "Where is the lesson?",
+        "opts": [
+          "In the classroom.",
+          "On the blackboard.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "In the classroom."
+      },
+      {
+        "q": "Where is the ruler?",
+        "opts": [
+          "On the blackboard.",
+          "In the classroom.",
+          "Under the ruler.",
+          "In the playground."
+        ],
+        "ans": "On the blackboard."
+      }
+    ],
+    "fill": [
+      {
+        "q": "There ____ a pencil in the classroom.（教室裡有一支鉛筆）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ erasers under the blackboard。（黑板下有橡皮）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a bell in the classroom。（教室裡有一個鈴鐺）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ students in the playground。（操場裡有學生）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a teacher in the classroom。（教室裡有一位老師）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ chalk on the blackboard。（黑板上有粉筆）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a ruler in the classroom。（教室裡有一把尺子）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ an eraser on the blackboard。（黑板上有一塊橡皮）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a group of students in the classroom。（教室裡有一群學生）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a math lesson in the classroom。（教室裡有一堂數學課）",
+        "ans": "is"
+      }
+    ],
+    "translate": [
+      {
+        "q": "教室裡有一支鉛筆。",
+        "ans": "There is a pencil in the classroom."
+      },
+      {
+        "q": "操場裡有學生。",
+        "ans": "There are students in the playground."
+      },
+      {
+        "q": "黑板上有粉筆。",
+        "ans": "There is chalk on the blackboard."
+      },
+      {
+        "q": "教室裡有一個鈴鐺。",
+        "ans": "There is a bell in the classroom."
+      },
+      {
+        "q": "黑板下有一塊橡皮。",
+        "ans": "There is an eraser under the blackboard."
+      },
+      {
+        "q": "教室裡有一群學生。",
+        "ans": "There is a group of students in the classroom."
+      },
+      {
+        "q": "教室裡有一堂數學課。",
+        "ans": "There is a math lesson in the classroom."
+      },
+      {
+        "q": "教室裡有一把尺子。",
+        "ans": "There is a ruler in the classroom."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "in / There / is / . / classroom / the / pencil / a",
+        "ans": "There is a pencil in the classroom."
+      },
+      {
+        "q": "playground / There / students / are / the / in / .",
+        "ans": "There are students in the playground."
+      },
+      {
+        "q": "the / is / on / chalk / blackboard / There / .",
+        "ans": "There is chalk on the blackboard."
+      },
+      {
+        "q": "eraser / an / under / There / the / blackboard / . / is",
+        "ans": "There is an eraser under the blackboard."
+      },
+      {
+        "q": "students / is / in / classroom / group / of / a / There / the / .",
+        "ans": "There is a group of students in the classroom."
+      },
+      {
+        "q": "classroom / math / is / lesson / the / . / in / a / There",
+        "ans": "There is a math lesson in the classroom."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

@@ -1,0 +1,659 @@
+{
+  "title_en": "My New House",
+  "title_zh": "我的新家生活",
+  "grammar": "本課練習用 Where is…? 以及介系詞 in、on、under、near、behind 描述位置。",
+  "intro_zh": "這一課我們將學習描述房子的不同部份和位置，練習用 Where is…? 問句和介系詞 in、on、under、near、behind 說明東西放在哪裡。",
+  "can_do": [
+    "能用 Where is…? 問詢物品的位置。",
+    "能正確使用 in、on、under、near、behind 描述位置。",
+    "能閱讀簡短的家庭情境故事並說出關鍵詞彙。"
+  ],
+  "reading": {
+    "title_en": "At My Home",
+    "title_zh": "我在家裡的一天",
+    "sentences": [
+      {
+        "en": "We move into a new house that my dad helped build.",
+        "zh": "我們搬進爸爸幫忙建造的新房子。"
+      },
+      {
+        "en": "Some of my friends live in an apartment near our house.",
+        "zh": "我有些朋友住在我們家附近的公寓。"
+      },
+      {
+        "en": "The house has two floors and a small garden on the ground.",
+        "zh": "這棟房子有兩層樓，地面上有一個小花園。"
+      },
+      {
+        "en": "On the first floor, there is a living room with a big window, and the lamp is on the table in the living room.",
+        "zh": "一樓有一個客廳，裡面有大窗戶，燈放在客廳的桌子上。"
+      },
+      {
+        "en": "Next to the living room is the dining room where we eat meals.",
+        "zh": "客廳旁邊是飯廳，我們在那裡吃飯。"
+      },
+      {
+        "en": "The kitchen is behind the dining room, and Mom often fixes breakfast there.",
+        "zh": "廚房在飯廳後面，媽媽常在那裡準備早餐。"
+      },
+      {
+        "en": "Upstairs, there are three bedrooms and a bathroom; my bedroom is near the stairs, and I keep my toys under the bed.",
+        "zh": "樓上有三間臥室和一間浴室；我的臥室靠近樓梯，我把玩具放在床下。"
+      },
+      {
+        "en": "The bathroom has a restroom, a sink, and a mirror on the wall.",
+        "zh": "浴室裡有馬桶、洗手盤和牆上的鏡子。"
+      },
+      {
+        "en": "When I come home, I knock on the door and say, 'I'm home!'",
+        "zh": "我回家時會敲門並說：『我回來了！』"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 用 Where is...? 詢問「……在哪裡？」與回答",
+      "explain_zh": "想詢問某個人或單數物品在何處時，句子開頭用「Where is + 對象?」（Where is 常縮寫為 Where's）。回答時，人稱代名詞可用 He / She / It，搭配「be 動詞 + 地方介系詞片語」。",
+      "table": [
+        [
+          "問句（詢問位置）",
+          "簡答代名詞",
+          "be動詞",
+          "介系詞片語（位置）"
+        ],
+        [
+          "Where is Dad?",
+          "He",
+          "is",
+          "in the kitchen."
+        ],
+        [
+          "Where is the lamp?",
+          "It",
+          "is",
+          "on the floor."
+        ],
+        [
+          "Where's your cat?",
+          "It",
+          "is",
+          "under the bed."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 常見的位置介系詞：in, on, under, near, behind",
+      "explain_zh": "介系詞用來說明人或物品與周圍環境的相對位置。常見的五個單字為：in（在……裡面）、on（在……上面）、under（在……下面）、near（在……附近/旁邊）、behind（在……後面）。",
+      "examples": [
+        {
+          "en": "The dog is sleeping under the window.",
+          "zh": "狗狗正在窗戶下面睡覺。"
+        },
+        {
+          "en": "The picture on the wall is very pretty.",
+          "zh": "牆壁上的那幅畫非常漂亮。"
+        },
+        {
+          "en": "My brother is behind the door.",
+          "zh": "我弟弟躲在門後面。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "媽媽在哪裡？",
+    "lines": [
+      {
+        "sp": "Leo",
+        "en": "Dad, where is Mom? Is she in the living room?",
+        "zh": "爸爸，媽媽在哪裡？她在客廳裡嗎？"
+      },
+      {
+        "sp": "Dad",
+        "en": "No, she is in the garden. She wants to build a small bird house.",
+        "zh": "不在，她在花園裡。她想要建造一間小鳥屋。"
+      },
+      {
+        "sp": "Leo",
+        "en": "Can I go help her? Where are my boots?",
+        "zh": "我可以去幫她嗎？我的靴子在哪裡？"
+      },
+      {
+        "sp": "Dad",
+        "en": "They are near the door. Please knock on the door before you go out.",
+        "zh": "靴子在門旁邊。你出去之前請先敲門。"
+      },
+      {
+        "sp": "Leo",
+        "en": "Okay! Look, our cat is under the lamp!",
+        "zh": "好的！你看，我們的貓咪在檯燈下面耶！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "My grandparents live in a clean apartment on the second floor.",
+      "zh": "我的祖父母住在二樓一間乾淨的公寓裡。"
+    },
+    {
+      "en": "Dad can fix the broken window in the dining room.",
+      "zh": "爸爸會修理飯廳那扇壞掉的窗戶。"
+    },
+    {
+      "en": "Is the restroom near the bathroom?",
+      "zh": "廁所在浴室附近嗎？"
+    },
+    {
+      "en": "The yellow lamp is behind the sofa near the wall.",
+      "zh": "黃色的檯燈在靠近牆壁的沙發後面。"
+    },
+    {
+      "en": "The dry leaves are on the ground in our garden.",
+      "zh": "枯葉落在我們花園的地面上。"
+    },
+    {
+      "en": "My bedroom is the quietest room in the house.",
+      "zh": "我的臥房是這棟房子裡最安靜的房間。"
+    },
+    {
+      "en": "Please knock on the door before you enter my room.",
+      "zh": "進我的房間前請先敲門。"
+    },
+    {
+      "en": "Mom is at home, cooking dinner in the kitchen.",
+      "zh": "媽媽在家，正在廚房裡做晚餐。"
+    }
+  ],
+  "no": 26,
+  "theme": "My House",
+  "theme_zh": "我的家",
+  "words": [
+    {
+      "en": "build",
+      "zh": "建築"
+    },
+    {
+      "en": "fix",
+      "zh": "修理"
+    },
+    {
+      "en": "house",
+      "zh": "房子"
+    },
+    {
+      "en": "apartment",
+      "zh": "公寓"
+    },
+    {
+      "en": "room",
+      "zh": "房間"
+    },
+    {
+      "en": "bathroom",
+      "zh": "浴室"
+    },
+    {
+      "en": "restroom",
+      "zh": "廁所"
+    },
+    {
+      "en": "bedroom",
+      "zh": "臥房"
+    },
+    {
+      "en": "dining room",
+      "zh": "飯廳"
+    },
+    {
+      "en": "living room",
+      "zh": "客廳"
+    },
+    {
+      "en": "kitchen",
+      "zh": "廚房"
+    },
+    {
+      "en": "garden",
+      "zh": "花園"
+    },
+    {
+      "en": "home",
+      "zh": "家"
+    },
+    {
+      "en": "floor",
+      "zh": "地板"
+    },
+    {
+      "en": "ground",
+      "zh": "地面"
+    },
+    {
+      "en": "door",
+      "zh": "門"
+    },
+    {
+      "en": "knock",
+      "zh": "敲打"
+    },
+    {
+      "en": "wall",
+      "zh": "牆壁"
+    },
+    {
+      "en": "window",
+      "zh": "窗戶"
+    },
+    {
+      "en": "lamp",
+      "zh": "檯燈"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "下列哪個單字是「敲」的意思？",
+        "opts": [
+          "knock",
+          "build",
+          "fix",
+          "door"
+        ],
+        "ans": "knock"
+      },
+      {
+        "q": "下列哪個單字是「牆壁」的意思？",
+        "opts": [
+          "window",
+          "wall",
+          "floor",
+          "lamp"
+        ],
+        "ans": "wall"
+      },
+      {
+        "q": "下列哪個單字是「浴室」的意思？",
+        "opts": [
+          "bedroom",
+          "kitchen",
+          "bathroom",
+          "living room"
+        ],
+        "ans": "bathroom"
+      },
+      {
+        "q": "下列哪個單字是「臥室」的意思？",
+        "opts": [
+          "dining room",
+          "bedroom",
+          "garden",
+          "apartment"
+        ],
+        "ans": "bedroom"
+      },
+      {
+        "q": "下列哪個單字是「燈」的意思？",
+        "opts": [
+          "lamp",
+          "door",
+          "window",
+          "floor"
+        ],
+        "ans": "lamp"
+      },
+      {
+        "q": "下列哪個單字是「房間」的意思？",
+        "opts": [
+          "house",
+          "apartment",
+          "room",
+          "home"
+        ],
+        "ans": "room"
+      },
+      {
+        "q": "下列哪個單字是「廚房」的意思？",
+        "opts": [
+          "kitchen",
+          "bathroom",
+          "restroom",
+          "garden"
+        ],
+        "ans": "kitchen"
+      },
+      {
+        "q": "下列哪個單字是「修理」的意思？",
+        "opts": [
+          "build",
+          "fix",
+          "knock",
+          "garden"
+        ],
+        "ans": "fix"
+      },
+      {
+        "q": "下列哪個單字是「地板」的意思？",
+        "opts": [
+          "wall",
+          "window",
+          "floor",
+          "door"
+        ],
+        "ans": "floor"
+      },
+      {
+        "q": "下列哪個單字是「花園」的意思？",
+        "opts": [
+          "garden",
+          "room",
+          "ground",
+          "home"
+        ],
+        "ans": "garden"
+      },
+      {
+        "q": "Where is the lamp?",
+        "opts": [
+          "in the room",
+          "on the wall",
+          "under the floor",
+          "near the door"
+        ],
+        "ans": "on the wall"
+      },
+      {
+        "q": "Where is the door?",
+        "opts": [
+          "in the wall",
+          "on the floor",
+          "under the window",
+          "near the lamp"
+        ],
+        "ans": "in the wall"
+      },
+      {
+        "q": "Where is the window?",
+        "opts": [
+          "in the door",
+          "on the wall",
+          "under the floor",
+          "near the garden"
+        ],
+        "ans": "on the wall"
+      },
+      {
+        "q": "Where is the garden?",
+        "opts": [
+          "in the house",
+          "on the floor",
+          "under the ground",
+          "near the house"
+        ],
+        "ans": "near the house"
+      },
+      {
+        "q": "Where is the kitchen?",
+        "opts": [
+          "in the apartment",
+          "on the lamp",
+          "under the door",
+          "behind the wall"
+        ],
+        "ans": "in the apartment"
+      },
+      {
+        "q": "Where is the bedroom?",
+        "opts": [
+          "in the house",
+          "on the floor",
+          "under the lamp",
+          "behind the door"
+        ],
+        "ans": "in the house"
+      },
+      {
+        "q": "Where is the restroom?",
+        "opts": [
+          "in the house",
+          "on the wall",
+          "under the floor",
+          "near the window"
+        ],
+        "ans": "in the house"
+      },
+      {
+        "q": "Where do you build a house?",
+        "opts": [
+          "in the garden",
+          "on the floor",
+          "under the wall",
+          "near the door"
+        ],
+        "ans": "in the garden"
+      },
+      {
+        "q": "Where do you knock?",
+        "opts": [
+          "on the door",
+          "in the wall",
+          "under the floor",
+          "near the window"
+        ],
+        "ans": "on the door"
+      },
+      {
+        "q": "Where do you fix a lamp?",
+        "opts": [
+          "in the room",
+          "on the wall",
+          "under the floor",
+          "near the door"
+        ],
+        "ans": "in the room"
+      },
+      {
+        "q": "下列哪個單字是「建造」的意思？",
+        "opts": [
+          "build",
+          "fix",
+          "knock",
+          "home"
+        ],
+        "ans": "build"
+      },
+      {
+        "q": "下列哪個單字是「公寓」的意思？",
+        "opts": [
+          "house",
+          "apartment",
+          "home",
+          "garden"
+        ],
+        "ans": "apartment"
+      },
+      {
+        "q": "下列哪個單字是「餐廳」的意思？",
+        "opts": [
+          "living room",
+          "dining room",
+          "bedroom",
+          "kitchen"
+        ],
+        "ans": "dining room"
+      },
+      {
+        "q": "下列哪個單字是「客廳」的意思？",
+        "opts": [
+          "bedroom",
+          "bathroom",
+          "living room",
+          "kitchen"
+        ],
+        "ans": "living room"
+      },
+      {
+        "q": "下列哪個單字是「地面」的意思？",
+        "opts": [
+          "ground",
+          "floor",
+          "wall",
+          "door"
+        ],
+        "ans": "ground"
+      },
+      {
+        "q": "The lamp is ___ the table.",
+        "opts": [
+          "on",
+          "under",
+          "behind",
+          "near"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "The cat is ___ the bed.",
+        "opts": [
+          "in",
+          "on",
+          "behind",
+          "under"
+        ],
+        "ans": "under"
+      },
+      {
+        "q": "The picture is ___ the wall.",
+        "opts": [
+          "under",
+          "on",
+          "near",
+          "behind"
+        ],
+        "ans": "on"
+      },
+      {
+        "q": "The house is ___ the garden.",
+        "opts": [
+          "in",
+          "on",
+          "near",
+          "under"
+        ],
+        "ans": "near"
+      },
+      {
+        "q": "The lamp is ___ the door.",
+        "opts": [
+          "on",
+          "under",
+          "behind",
+          "in"
+        ],
+        "ans": "behind"
+      }
+    ],
+    "fill": [
+      {
+        "q": "Where is the lamp? It is ____ the floor.（在地板上）",
+        "ans": "on"
+      },
+      {
+        "q": "Where is the door? It is ____ the wall.（在牆上）",
+        "ans": "on"
+      },
+      {
+        "q": "Where is the window? It is ____ the door.（在門旁邊）",
+        "ans": "near"
+      },
+      {
+        "q": "Where is the lamp? It is ____ the window.（在窗戶下面）",
+        "ans": "under"
+      },
+      {
+        "q": "Where is the lamp? It is ____ the door.（在門後面）",
+        "ans": "behind"
+      },
+      {
+        "q": "Where is the kitchen? It is ____ the house.（在房子裡）",
+        "ans": "in"
+      },
+      {
+        "q": "Where is the bedroom? It is ____ the apartment.（在公寓裡）",
+        "ans": "in"
+      },
+      {
+        "q": "Where is the garden? It is ____ the house.（在房子附近）",
+        "ans": "near"
+      },
+      {
+        "q": "Where is the bathroom? It is ____ the floor.（在樓層上）",
+        "ans": "on"
+      },
+      {
+        "q": "Where is the restroom? It is ____ the ground.（在地下）",
+        "ans": "under"
+      }
+    ],
+    "translate": [
+      {
+        "q": "客廳在房子裡。",
+        "ans": "The living room is in the house."
+      },
+      {
+        "q": "廚房在房子裡。",
+        "ans": "The kitchen is in the house."
+      },
+      {
+        "q": "浴室在樓層上。",
+        "ans": "The bathroom is on the floor."
+      },
+      {
+        "q": "花園在房子附近。",
+        "ans": "The garden is near the house."
+      },
+      {
+        "q": "門在牆上。",
+        "ans": "The door is on the wall."
+      },
+      {
+        "q": "窗戶在牆上。",
+        "ans": "The window is on the wall."
+      },
+      {
+        "q": "燈在地板上。",
+        "ans": "The lamp is on the floor."
+      },
+      {
+        "q": "燈在窗戶下面。",
+        "ans": "The lamp is under the window."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "the / The / is / on / . / lamp / floor",
+        "ans": "The lamp is on the floor."
+      },
+      {
+        "q": "the / wall / is / . / The / on / door",
+        "ans": "The door is on the wall."
+      },
+      {
+        "q": "the / The / is / . / near / door / window",
+        "ans": "The window is near the door."
+      },
+      {
+        "q": "is / near / The / the / . / garden / house",
+        "ans": "The garden is near the house."
+      },
+      {
+        "q": "floor / The / the / bathroom / is / on / .",
+        "ans": "The bathroom is on the floor."
+      },
+      {
+        "q": "lamp / under / the / . / is / window / The",
+        "ans": "The lamp is under the window."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

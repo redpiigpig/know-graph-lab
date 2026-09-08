@@ -1,0 +1,681 @@
+{
+  "title_en": "What I Can Do",
+  "title_zh": "我做得到的事",
+  "grammar": "使用 can / can't 描述能力與方向",
+  "intro_zh": "本課將學習用 can / can't 說出自己會或不會做的事，並練習方向詞與職業詞彙，讓學生能描述日常生活中看到的情境與活動。",
+  "can_do": [
+    "能用 can / can't 說出自己會或不會做的事",
+    "能用方向詞（east, west, north, side, inside, outside, high, low）描述物體位置",
+    "能用職業詞彙（driver, farmer, leader, officer, shopkeeper, singer, waiter, waitress, worker, doctor）說出不同工作的人"
+  ],
+  "reading": {
+    "title_en": "A Day Around Town",
+    "title_zh": "鎮上的一天",
+    "sentences": [
+      {
+        "en": "I can walk to the east side of the school and find a big tree.",
+        "zh": "我可以走到學校東邊的側邊，找到一棵大樹。"
+      },
+      {
+        "en": "Inside the classroom, I can see the teacher's desk, which is high.",
+        "zh": "教室裡面，我可以看到老師的書桌，它很高。"
+      },
+      {
+        "en": "Outside, there is a low fence on the west side.",
+        "zh": "外面，西邊的側邊有一個低矮的圍欄。"
+      },
+      {
+        "en": "To the north, the farmer works in the field and can send fresh vegetables to the market.",
+        "zh": "北邊，農夫在田裡工作，可以把新鮮蔬菜送到市場。"
+      },
+      {
+        "en": "The driver can drive the bus to the shopkeeper's store.",
+        "zh": "司機可以開公車去店主的店裡。"
+      },
+      {
+        "en": "At the store, the waiter and waitress can serve drinks to the singer who is practicing.",
+        "zh": "在店裡，男服務生和女服務生可以為正在練習的歌手提供飲料。"
+      },
+      {
+        "en": "The officer can help the worker fix the broken light.",
+        "zh": "官員可以協助工人修理壞掉的燈。"
+      },
+      {
+        "en": "The leader of the club can sing a song and make everyone happy.",
+        "zh": "社團的領導人可以唱一首歌，讓大家開心。"
+      },
+      {
+        "en": "When I feel sick, I can go to see the doctor.",
+        "zh": "當我感到不舒服時，我可以去看醫生。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① can / can't + 動詞 + 位置詞（inside / outside / side / high / low）",
+      "explain_zh": "用來說明某人在特定位置能或不能做某事。",
+      "table": [
+        [
+          "主語",
+          "can/can't",
+          "動詞",
+          "位置詞",
+          "中文翻譯"
+        ],
+        [
+          "I",
+          "can",
+          "read",
+          "inside",
+          "我可以在裡面閱讀"
+        ],
+        [
+          "She",
+          "can't",
+          "run",
+          "outside",
+          "她不能在外面跑步"
+        ],
+        [
+          "We",
+          "can",
+          "play",
+          "side",
+          "我們可以在旁邊玩"
+        ],
+        [
+          "He",
+          "can",
+          "jump",
+          "high",
+          "他可以跳得高"
+        ],
+        [
+          "They",
+          "can't",
+          "sit",
+          "low",
+          "他們不能坐得低"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② can / can't + 動詞 + 方向詞（east / west / north）",
+      "explain_zh": "用來說明能力朝某個方向移動或進行動作。",
+      "examples": [
+        {
+          "en": "You can find the library east of the main building.",
+          "zh": "你可以在主樓東邊找到圖書館。"
+        },
+        {
+          "en": "The driver can send the package west to the post office.",
+          "zh": "司機可以把包裹送往西邊的郵局。"
+        },
+        {
+          "en": "As a leader, she can lead the team north to the sports field.",
+          "zh": "作為領導人，她可以帶領隊伍往北走去運動場。"
+        },
+        {
+          "en": "He can't go north because the road is closed.",
+          "zh": "他不能往北走，因為道路被封閉。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上聊聊我能做什麼",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "I can find the ball inside the gym.",
+        "zh": "我可以在體育館裡找到球。"
+      },
+      {
+        "sp": "Tom",
+        "en": "I can't send the letter outside because it's raining.",
+        "zh": "我不能把信送到外面，因為在下雨。"
+      },
+      {
+        "sp": "Mei",
+        "en": "We can go north to see the school garden.",
+        "zh": "我們可以往北走去看校園花園。"
+      },
+      {
+        "sp": "John",
+        "en": "The waiter can serve drinks side the snack bar.",
+        "zh": "服務生可以在小吃攤旁邊服務飲料。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Can you find the teacher east of the playground?",
+        "zh": "你能在操場東邊找到老師嗎？"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I can read a book inside the classroom.",
+      "zh": "我可以在教室裡閱讀書。"
+    },
+    {
+      "en": "She can't run outside because the ground is wet.",
+      "zh": "她不能在外面跑步，因為地面濕滑。"
+    },
+    {
+      "en": "We can play games side the playground.",
+      "zh": "我們可以在操場旁邊玩遊戲。"
+    },
+    {
+      "en": "He can jump high to touch the basketball hoop.",
+      "zh": "他可以跳得高去碰到籃球框。"
+    },
+    {
+      "en": "They can't sit low on the fence; it's dangerous.",
+      "zh": "他們不能坐低在籬笆上；很危險。"
+    },
+    {
+      "en": "You can find the library east of the main building.",
+      "zh": "你可以在主樓東邊找到圖書館。"
+    },
+    {
+      "en": "The driver can send the package west to the post office.",
+      "zh": "司機可以把包裹送往西邊的郵局。"
+    },
+    {
+      "en": "As a leader, she can lead the team north to the sports field.",
+      "zh": "作為領導人，她可以帶領隊伍往北走去運動場。"
+    }
+  ],
+  "no": 43,
+  "theme": "Things I Can Do",
+  "theme_zh": "我做得到的事",
+  "words": [
+    {
+      "en": "side",
+      "zh": "旁邊的"
+    },
+    {
+      "en": "inside",
+      "zh": "裡面的"
+    },
+    {
+      "en": "outside",
+      "zh": "外面的"
+    },
+    {
+      "en": "high",
+      "zh": "高的"
+    },
+    {
+      "en": "low",
+      "zh": "低的"
+    },
+    {
+      "en": "east",
+      "zh": "東方"
+    },
+    {
+      "en": "west",
+      "zh": "西方"
+    },
+    {
+      "en": "north",
+      "zh": "北方"
+    },
+    {
+      "en": "find",
+      "zh": "發現"
+    },
+    {
+      "en": "send",
+      "zh": "發送"
+    },
+    {
+      "en": "driver",
+      "zh": "司機"
+    },
+    {
+      "en": "farmer",
+      "zh": "農夫"
+    },
+    {
+      "en": "leader",
+      "zh": "領導人"
+    },
+    {
+      "en": "officer",
+      "zh": "官員"
+    },
+    {
+      "en": "shopkeeper",
+      "zh": "店主"
+    },
+    {
+      "en": "singer",
+      "zh": "歌手"
+    },
+    {
+      "en": "waiter",
+      "zh": "男服務生"
+    },
+    {
+      "en": "waitress",
+      "zh": "女服務生"
+    },
+    {
+      "en": "worker",
+      "zh": "工人"
+    },
+    {
+      "en": "doctor",
+      "zh": "醫生"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "邊 的英文是？",
+        "opts": [
+          "side",
+          "inside",
+          "outside",
+          "high"
+        ],
+        "ans": "side"
+      },
+      {
+        "q": "裡面 的英文是？",
+        "opts": [
+          "inside",
+          "side",
+          "outside",
+          "low"
+        ],
+        "ans": "inside"
+      },
+      {
+        "q": "外面 的英文是？",
+        "opts": [
+          "outside",
+          "inside",
+          "side",
+          "east"
+        ],
+        "ans": "outside"
+      },
+      {
+        "q": "高 的英文是？",
+        "opts": [
+          "high",
+          "low",
+          "side",
+          "north"
+        ],
+        "ans": "high"
+      },
+      {
+        "q": "低 的英文是？",
+        "opts": [
+          "low",
+          "high",
+          "inside",
+          "west"
+        ],
+        "ans": "low"
+      },
+      {
+        "q": "東 的英文是？",
+        "opts": [
+          "east",
+          "west",
+          "north",
+          "find"
+        ],
+        "ans": "east"
+      },
+      {
+        "q": "西 的英文是？",
+        "opts": [
+          "west",
+          "east",
+          "north",
+          "send"
+        ],
+        "ans": "west"
+      },
+      {
+        "q": "北 的英文是？",
+        "opts": [
+          "north",
+          "east",
+          "west",
+          "find"
+        ],
+        "ans": "north"
+      },
+      {
+        "q": "找到 的英文是？",
+        "opts": [
+          "find",
+          "send",
+          "driver",
+          "farmer"
+        ],
+        "ans": "find"
+      },
+      {
+        "q": "送 的英文是？",
+        "opts": [
+          "send",
+          "find",
+          "doctor",
+          "worker"
+        ],
+        "ans": "send"
+      },
+      {
+        "q": "他喜歡開車。他可以是___。",
+        "opts": [
+          "driver",
+          "farmer",
+          "singer",
+          "doctor"
+        ],
+        "ans": "driver"
+      },
+      {
+        "q": "她喜歡種植蔬菜。她可以是___。",
+        "opts": [
+          "farmer",
+          "doctor",
+          "singer",
+          "waiter"
+        ],
+        "ans": "farmer"
+      },
+      {
+        "q": "他喜歡唱歌。他可以是___。",
+        "opts": [
+          "singer",
+          "officer",
+          "worker",
+          "leader"
+        ],
+        "ans": "singer"
+      },
+      {
+        "q": "她喜歡照顧病人。她可以是___。",
+        "opts": [
+          "doctor",
+          "singer",
+          "farmer",
+          "waiter"
+        ],
+        "ans": "doctor"
+      },
+      {
+        "q": "他喜歡維護秩序。他可以是___。",
+        "opts": [
+          "officer",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "officer"
+      },
+      {
+        "q": "她喜歡賣東西。她可以是___。",
+        "opts": [
+          "shopkeeper",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "shopkeeper"
+      },
+      {
+        "q": "他喜歡在餐廳服務。他可以是___。",
+        "opts": [
+          "waiter",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "waiter"
+      },
+      {
+        "q": "她喜歡在餐廳服務。她可以是___。",
+        "opts": [
+          "waitress",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "waitress"
+      },
+      {
+        "q": "他喜歡幫助人們工作。他可以是___。",
+        "opts": [
+          "worker",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "worker"
+      },
+      {
+        "q": "她喜歡帶領團隊。她可以是___。",
+        "opts": [
+          "leader",
+          "doctor",
+          "farmer",
+          "singer"
+        ],
+        "ans": "leader"
+      },
+      {
+        "q": "Look at the map. In the morning, we can see the sun come up in the ______.",
+        "opts": [
+          "east",
+          "west",
+          "north",
+          "low"
+        ],
+        "ans": "east"
+      },
+      {
+        "q": "My uncle works at a restaurant. He is a good ______ and can bring delicious food to your table.",
+        "opts": [
+          "waiter",
+          "farmer",
+          "doctor",
+          "officer"
+        ],
+        "ans": "waiter"
+      },
+      {
+        "q": "It is raining hard today. We can't play ______, so we stay inside the house.",
+        "opts": [
+          "outside",
+          "side",
+          "high",
+          "north"
+        ],
+        "ans": "outside"
+      },
+      {
+        "q": "A: Where is my ruler? I can't ______ it.\nB: Look, it is right by your bag.",
+        "opts": [
+          "find",
+          "send",
+          "work",
+          "drive"
+        ],
+        "ans": "find"
+      },
+      {
+        "q": "The big bird can fly very ______ in the sky, but the little chick can't.",
+        "opts": [
+          "high",
+          "low",
+          "east",
+          "west"
+        ],
+        "ans": "high"
+      },
+      {
+        "q": "Can you ______ this box to Grandma by post?",
+        "opts": [
+          "send",
+          "find",
+          "drive",
+          "wait"
+        ],
+        "ans": "send"
+      },
+      {
+        "q": "A: David has a bad cold. Who can help him?\nB: A ______ can help him feel better.",
+        "opts": [
+          "doctor",
+          "worker",
+          "shopkeeper",
+          "singer"
+        ],
+        "ans": "doctor"
+      },
+      {
+        "q": "The ______ can sell us fresh milk and bread in this small market.",
+        "opts": [
+          "shopkeeper",
+          "waitress",
+          "officer",
+          "leader"
+        ],
+        "ans": "shopkeeper"
+      },
+      {
+        "q": "Jenny is our team ______. She can show us the way and help everyone.",
+        "opts": [
+          "leader",
+          "waiter",
+          "driver",
+          "farmer"
+        ],
+        "ans": "leader"
+      },
+      {
+        "q": "Mr. Brown can drive a big yellow bus. He is a careful bus ______.",
+        "opts": [
+          "driver",
+          "worker",
+          "singer",
+          "officer"
+        ],
+        "ans": "driver"
+      }
+    ],
+    "fill": [
+      {
+        "q": "The driver ____ find the east side.（他能找到東側）",
+        "ans": "can"
+      },
+      {
+        "q": "The farmer ____ find the west side.（他能找到西側）",
+        "ans": "can"
+      },
+      {
+        "q": "The leader ____ find the north side.（他能找到北側）",
+        "ans": "can"
+      },
+      {
+        "q": "The officer ____ find the inside.（他能找到裡面）",
+        "ans": "can"
+      },
+      {
+        "q": "The shopkeeper ____ find the outside.（他能找到外面）",
+        "ans": "can"
+      },
+      {
+        "q": "The singer ____ find the high.（他能找到高處）",
+        "ans": "can"
+      },
+      {
+        "q": "The waiter ____ find the low.（他能找到低處）",
+        "ans": "can"
+      },
+      {
+        "q": "The waitress ____ find the side.（他能找到側邊）",
+        "ans": "can"
+      },
+      {
+        "q": "The worker ____ find the north.（他能找到北）",
+        "ans": "can"
+      },
+      {
+        "q": "The doctor ____ find the east side.（他不能找到東側）",
+        "ans": "can't"
+      }
+    ],
+    "translate": [
+      {
+        "q": "司機能找到東側。",
+        "ans": "The driver can find the east side."
+      },
+      {
+        "q": "農夫能找到西側。",
+        "ans": "The farmer can find the west side."
+      },
+      {
+        "q": "領導者能找到北側。",
+        "ans": "The leader can find the north side."
+      },
+      {
+        "q": "官員能找到裡面。",
+        "ans": "The officer can find the inside."
+      },
+      {
+        "q": "店員能找到外面。",
+        "ans": "The shopkeeper can find the outside."
+      },
+      {
+        "q": "歌手能找到高處。",
+        "ans": "The singer can find the high."
+      },
+      {
+        "q": "服務生能找到低處。",
+        "ans": "The waiter can find the low."
+      },
+      {
+        "q": "女服務生能找到側邊。",
+        "ans": "The waitress can find the side."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "side / . / the / find / driver / east / can / The",
+        "ans": "The driver can find the east side."
+      },
+      {
+        "q": "west / farmer / can't / The / side / find / the / .",
+        "ans": "The farmer can't find the west side."
+      },
+      {
+        "q": "leader / can / The / . / find / side / the / north",
+        "ans": "The leader can find the north side."
+      },
+      {
+        "q": "officer / can / the / find / inside / The / .",
+        "ans": "The officer can find the inside."
+      },
+      {
+        "q": "The / can / outside / . / find / the / shopkeeper",
+        "ans": "The shopkeeper can find the outside."
+      },
+      {
+        "q": "high / can / . / The / find / singer / the",
+        "ans": "The singer can find the high."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

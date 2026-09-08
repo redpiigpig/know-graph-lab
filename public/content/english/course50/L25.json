@@ -1,0 +1,668 @@
+{
+  "title_en": "Classroom Actions",
+  "title_zh": "課堂上的事",
+  "grammar": "學習使用祈使句（如 Open your book!）和 Let's… 提出建議。",
+  "intro_zh": "這一課將透過課堂上的小實驗，學習如何用祈使句給予指令，以及用 Let's… 提出一起做某事的建議，同時練習本課的重要單字。學生會在故事中看到老師和同學如何互相說明步驟，並體會使用正確的語氣讓課堂更有秩序。",
+  "can_do": [
+    "能使用祈使句給出簡單的指令。",
+    "能用 Let's… 提出一起行動的建議。",
+    "能在情境中正確使用本課的單字描述課堂活動。"
+  ],
+  "reading": {
+    "title_en": "The Bean Experiment",
+    "title_zh": "種豆實驗",
+    "sentences": [
+      {
+        "en": "Let's begin a simple experiment about growing beans.",
+        "zh": "讓我們開始一個簡單的種豆實驗。"
+      },
+      {
+        "en": "Ms. Lin reminds us to keep the room safe and avoid anything dangerous.",
+        "zh": "林老師提醒我們要保持教室安全，避免做任何危險的事。"
+      },
+      {
+        "en": "First, we get a cup, fill it with soil, and place a bean inside.",
+        "zh": "首先，我們拿到一個杯子，裡面裝滿土，然後放入一顆豆子。"
+      },
+      {
+        "en": "We water it gently and then put the cup on the windowsill.",
+        "zh": "我們輕輕澆水，然後把杯子放在窗台上。"
+      },
+      {
+        "en": "After a few days, a small sprout will appear, begin to grow, and then become a young plant.",
+        "zh": "幾天後，小芽會出現，開始生長，然後變成小植物。"
+      },
+      {
+        "en": "We must stay quiet and let the plant get enough light, otherwise it will be difficult to grow.",
+        "zh": "我們必須保持安靜，讓植物得到足夠的光線，否則它會很難生長。"
+      },
+      {
+        "en": "If the soil feels hard, we loosen it so the roots can spread easily.",
+        "zh": "如果土壤感覺很硬，我們會鬆開它，讓根部可以輕鬆伸展。"
+      },
+      {
+        "en": "We learn that plants need basic things: water, sunlight, and air.",
+        "zh": "我們學到植物需要基本的東西：水、陽光和空氣。"
+      },
+      {
+        "en": "Sometimes something unexpected happens, like a leaf turning yellow, and we want to find out why.",
+        "zh": "有時會發生意外的事，例如葉子變黃，我們想要知道原因。"
+      },
+      {
+        "en": "At the end, we compare our plants and see if they are the same or different, and we feel special because we made them grow.",
+        "zh": "最後，我們比較我們的植物，看它們是否相同或不同，並且因為我們讓它們長大而感到特別。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 祈使句的否定形",
+      "explain_zh": "否定祈使句用 Don't + 原形動詞，表示禁止或提醒不要做某事。",
+      "table": [
+        [
+          "原形動詞",
+          "肯定祈使句",
+          "否定祈使句"
+        ],
+        [
+          "open",
+          "Open your book.",
+          "Don't open your book."
+        ],
+        [
+          "close",
+          "Close the door.",
+          "Don't close the door."
+        ],
+        [
+          "run",
+          "Run to the line.",
+          "Don't run in the hallway."
+        ],
+        [
+          "talk",
+          "Talk quietly.",
+          "Don't talk during the test."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 Let's… 提出建議",
+      "explain_zh": "Let's + 原形動詞，用來提出一起做某事的建議。",
+      "examples": [
+        {
+          "en": "Let's read the story together.",
+          "zh": "讓我們一起閱讀這個故事。"
+        },
+        {
+          "en": "Let's draw a picture on the board.",
+          "zh": "讓我們在黑板上畫一張圖。"
+        },
+        {
+          "en": "Let's clean up after class.",
+          "zh": "讓我們課後一起整理。"
+        },
+        {
+          "en": "Let's sing a song.",
+          "zh": "讓我們一起唱歌。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "課堂活動討論",
+    "lines": [
+      {
+        "sp": "Teacher",
+        "en": "Let's open our books to page ten.",
+        "zh": "讓我們把書翻到第十頁。"
+      },
+      {
+        "sp": "Student A",
+        "en": "Okay, I opened my book.",
+        "zh": "好的，我已經打開書了。"
+      },
+      {
+        "sp": "Student B",
+        "en": "Don't talk while we read.",
+        "zh": "閱讀時不要說話。"
+      },
+      {
+        "sp": "Teacher",
+        "en": "Let's answer the questions together.",
+        "zh": "讓我們一起回答問題。"
+      },
+      {
+        "sp": "Student C",
+        "en": "I got it! The answer is simple.",
+        "zh": "我懂了！答案很簡單。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "It is safe to walk in the hallway.",
+      "zh": "在走廊裡走路是安全的。"
+    },
+    {
+      "en": "Running inside the classroom is dangerous.",
+      "zh": "在教室裡跑步是危險的。"
+    },
+    {
+      "en": "The math problem looks difficult, but it is actually easy.",
+      "zh": "這數學題看起來困難，其實很簡單。"
+    },
+    {
+      "en": "Please keep your desk clean and tidy.",
+      "zh": "請保持你的桌子乾淨整齊。"
+    },
+    {
+      "en": "Let's stay quiet during the test.",
+      "zh": "讓我們在考試時保持安靜。"
+    },
+    {
+      "en": "The two pictures are the same.",
+      "zh": "這兩張圖片是相同的。"
+    },
+    {
+      "en": "These two books are different.",
+      "zh": "這兩本書是不同的。"
+    },
+    {
+      "en": "I want to grow a plant in the class garden.",
+      "zh": "我想在班級花園裡種植一株植物。"
+    }
+  ],
+  "no": 25,
+  "theme": "Classroom Actions",
+  "theme_zh": "課堂上的事",
+  "words": [
+    {
+      "en": "special",
+      "zh": "特別的"
+    },
+    {
+      "en": "dangerous",
+      "zh": "危險的"
+    },
+    {
+      "en": "safe",
+      "zh": "安全的"
+    },
+    {
+      "en": "different",
+      "zh": "不同的"
+    },
+    {
+      "en": "same",
+      "zh": "相同的"
+    },
+    {
+      "en": "difficult",
+      "zh": "困難的"
+    },
+    {
+      "en": "easy",
+      "zh": "簡單的"
+    },
+    {
+      "en": "hard",
+      "zh": "硬的"
+    },
+    {
+      "en": "simple",
+      "zh": "簡單的；單純的"
+    },
+    {
+      "en": "basic",
+      "zh": "基本的"
+    },
+    {
+      "en": "appear",
+      "zh": "似乎"
+    },
+    {
+      "en": "become",
+      "zh": "變成"
+    },
+    {
+      "en": "happen",
+      "zh": "發生"
+    },
+    {
+      "en": "get",
+      "zh": "得到"
+    },
+    {
+      "en": "grow",
+      "zh": "種植；成長"
+    },
+    {
+      "en": "keep",
+      "zh": "保持"
+    },
+    {
+      "en": "stay",
+      "zh": "停留"
+    },
+    {
+      "en": "let",
+      "zh": "讓"
+    },
+    {
+      "en": "make",
+      "zh": "做；製造"
+    },
+    {
+      "en": "want",
+      "zh": "要"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "特別的",
+        "opts": [
+          "special",
+          "dangerous",
+          "safe",
+          "different"
+        ],
+        "ans": "special"
+      },
+      {
+        "q": "危險的",
+        "opts": [
+          "special",
+          "dangerous",
+          "safe",
+          "different"
+        ],
+        "ans": "dangerous"
+      },
+      {
+        "q": "安全的",
+        "opts": [
+          "special",
+          "dangerous",
+          "safe",
+          "different"
+        ],
+        "ans": "safe"
+      },
+      {
+        "q": "不同的",
+        "opts": [
+          "special",
+          "dangerous",
+          "safe",
+          "different"
+        ],
+        "ans": "different"
+      },
+      {
+        "q": "相同的",
+        "opts": [
+          "same",
+          "difficult",
+          "easy",
+          "hard"
+        ],
+        "ans": "same"
+      },
+      {
+        "q": "not easy",
+        "opts": [
+          "困難的",
+          "容易的",
+          "簡單的",
+          "基本的"
+        ],
+        "ans": "困難的"
+      },
+      {
+        "q": "not hard",
+        "opts": [
+          "困難的",
+          "容易的",
+          "簡單的",
+          "基本的"
+        ],
+        "ans": "容易的"
+      },
+      {
+        "q": "not complex",
+        "opts": [
+          "簡單的",
+          "基本的",
+          "特別的",
+          "危險的"
+        ],
+        "ans": "簡單的"
+      },
+      {
+        "q": "變成",
+        "opts": [
+          "appear",
+          "become",
+          "happen",
+          "get"
+        ],
+        "ans": "become"
+      },
+      {
+        "q": "發生",
+        "opts": [
+          "appear",
+          "become",
+          "happen",
+          "get"
+        ],
+        "ans": "happen"
+      },
+      {
+        "q": "_____ your homework now.",
+        "opts": [
+          "get",
+          "keep",
+          "stay",
+          "make"
+        ],
+        "ans": "get"
+      },
+      {
+        "q": "_____ quiet during the movie.",
+        "opts": [
+          "keep",
+          "stay",
+          "get",
+          "make"
+        ],
+        "ans": "keep"
+      },
+      {
+        "q": "_____ here until I come back.",
+        "opts": [
+          "stay",
+          "get",
+          "keep",
+          "make"
+        ],
+        "ans": "stay"
+      },
+      {
+        "q": "Let's _____ a cake for Mom.",
+        "opts": [
+          "make",
+          "get",
+          "keep",
+          "stay"
+        ],
+        "ans": "make"
+      },
+      {
+        "q": "Let's _____ after school and play basketball.",
+        "opts": [
+          "stay",
+          "get",
+          "grow",
+          "keep"
+        ],
+        "ans": "stay"
+      },
+      {
+        "q": "This math problem is _____; you need to think hard.",
+        "opts": [
+          "easy",
+          "difficult",
+          "hard",
+          "simple"
+        ],
+        "ans": "difficult"
+      },
+      {
+        "q": "These two pictures are _____; they look exactly alike.",
+        "opts": [
+          "same",
+          "different",
+          "special",
+          "basic"
+        ],
+        "ans": "same"
+      },
+      {
+        "q": "These two pictures are _____; one shows a cat, the other a dog.",
+        "opts": [
+          "same",
+          "different",
+          "special",
+          "basic"
+        ],
+        "ans": "different"
+      },
+      {
+        "q": "This gift is _____ for you; I hope you like it.",
+        "opts": [
+          "special",
+          "dangerous",
+          "safe",
+          "basic"
+        ],
+        "ans": "special"
+      },
+      {
+        "q": "Cross the road at the _____ place.",
+        "opts": [
+          "safe",
+          "dangerous",
+          "special",
+          "basic"
+        ],
+        "ans": "safe"
+      },
+      {
+        "q": "老師說：「請把門打開。」哪個是正確的祈使句？",
+        "opts": [
+          "Open the door!",
+          "Close the door!",
+          "Sit down!",
+          "Stand up!"
+        ],
+        "ans": "Open the door!"
+      },
+      {
+        "q": "媽媽說：「請別跑。」哪個是正確的祈使句？",
+        "opts": [
+          "Don't run!",
+          "Don't walk!",
+          "Don't jump!",
+          "Don't sing!"
+        ],
+        "ans": "Don't run!"
+      },
+      {
+        "q": "老師建議：「讓我們一起畫畫吧！」哪個是正確的 Let's 建議？",
+        "opts": [
+          "Let's draw pictures!",
+          "Let's sing songs!",
+          "Let's dance!",
+          "Let's read books!"
+        ],
+        "ans": "Let's draw pictures!"
+      },
+      {
+        "q": "朋友說：「請保持安靜。」哪個是正確的祈使句？",
+        "opts": [
+          "Keep quiet!",
+          "Keep loud!",
+          "Keep running!",
+          "Keep eating!"
+        ],
+        "ans": "Keep quiet!"
+      },
+      {
+        "q": "老媽說：「讓我們一起吃蘋果。」哪個是正確的 Let's 建議？",
+        "opts": [
+          "Let's eat apples!",
+          "Let's drink water!",
+          "Let's jump rope!",
+          "Let's write letters!"
+        ],
+        "ans": "Let's eat apples!"
+      },
+      {
+        "q": "教練說：「請別碰那個開關。」哪個是正確的祈使句？",
+        "opts": [
+          "Don't touch the switch!",
+          "Don't open the switch!",
+          "Don't close the switch!",
+          "Don't break the switch!"
+        ],
+        "ans": "Don't touch the switch!"
+      },
+      {
+        "q": "老師說：「讓我們一起閱讀故事。」哪個是正確的 Let's 建議？",
+        "opts": [
+          "Let's read a story!",
+          "Let's write a story!",
+          "Let's draw a story!",
+          "Let's sing a story!"
+        ],
+        "ans": "Let's read a story!"
+      },
+      {
+        "q": "媽媽說：「請保持乾淨。」哪個是正確的祈使句？",
+        "opts": [
+          "Keep clean!",
+          "Keep dirty!",
+          "Keep loud!",
+          "Keep fast!"
+        ],
+        "ans": "Keep clean!"
+      },
+      {
+        "q": "朋友說：「讓我們一起踢足球。」哪個是正確的 Let's 建議？",
+        "opts": [
+          "Let's play soccer!",
+          "Let's play basketball!",
+          "Let's play volleyball!",
+          "Let's play baseball!"
+        ],
+        "ans": "Let's play soccer!"
+      },
+      {
+        "q": "教練說：「請別走開。」哪個是正確的祈使句？",
+        "opts": [
+          "Don't go away!",
+          "Don't come here!",
+          "Don't sit down!",
+          "Don't stand up!"
+        ],
+        "ans": "Don't go away!"
+      }
+    ],
+    "fill": [
+      {
+        "q": "This math problem is ____.（這題數學題很難）",
+        "ans": "difficult"
+      },
+      {
+        "q": "She is ____ from her brother.（她和她哥哥不同）",
+        "ans": "different"
+      },
+      {
+        "q": "The instructions are ____.（說明很簡單）",
+        "ans": "simple"
+      },
+      {
+        "q": "It is ____ to touch the fire.（碰火很危險）",
+        "ans": "dangerous"
+      },
+      {
+        "q": "Please ____ quiet.（請保持安靜）",
+        "ans": "stay"
+      },
+      {
+        "q": "Let's ____ a picture together.（讓我們一起畫畫）",
+        "ans": "make"
+      },
+      {
+        "q": "I ____ to be a scientist.（我想成為科學家）",
+        "ans": "want"
+      },
+      {
+        "q": "A rainbow may ____ after rain.（彩虹可能在雨後出現）",
+        "ans": "appear"
+      },
+      {
+        "q": "You should ____ your homework before playing.（你應該在玩之前做功課）",
+        "ans": "do"
+      },
+      {
+        "q": "We ____ to school every day.（我們每天去上學）",
+        "ans": "go"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這個遊戲很危險。",
+        "ans": "This game is dangerous."
+      },
+      {
+        "q": "請保持安全。",
+        "ans": "Please stay safe."
+      },
+      {
+        "q": "這兩個答案不一樣。",
+        "ans": "These two answers are different."
+      },
+      {
+        "q": "這題很簡單。",
+        "ans": "This question is simple."
+      },
+      {
+        "q": "他很努力。",
+        "ans": "He works hard."
+      },
+      {
+        "q": "讓我們一起玩。",
+        "ans": "Let's play together."
+      },
+      {
+        "q": "我想要一個蘋果。",
+        "ans": "I want an apple."
+      },
+      {
+        "q": "太陽會出現。",
+        "ans": "The sun will appear."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "stay / safe / Please / .",
+        "ans": "Please stay safe."
+      },
+      {
+        "q": ". / card / make / Let's / simple / a",
+        "ans": "Let's make a simple card."
+      },
+      {
+        "q": "want / . / I / appear / special / to",
+        "ans": "I want to appear special."
+      },
+      {
+        "q": "every / . / She / hard / works / day",
+        "ans": "She works hard every day."
+      },
+      {
+        "q": "game / The / is / dangerous / .",
+        "ans": "The game is dangerous."
+      },
+      {
+        "q": "together / safe / should / stay / We / .",
+        "ans": "We should stay safe together."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

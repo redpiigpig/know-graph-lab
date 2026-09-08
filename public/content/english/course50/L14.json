@@ -1,0 +1,659 @@
+{
+  "title_en": "My Animal Friends",
+  "title_zh": "我的動物朋友",
+  "grammar": "There is / There are … 用來說明某物存在，後面接單數或複數名詞。",
+  "intro_zh": "這一課我們將認識常見的家畜與野生動物，學習用 There is / There are 描述它們的數量，並練習複數名詞的變化。同時也會學到農場上常見的動物名稱，並練習說出它們的複數形。",
+  "can_do": [
+    "能用 There is / There are 說出單數或複數動物的數量。",
+    "能正確說出並寫出本課 20 個動物單字的複數形式。",
+    "能閱讀簡短的動物故事並回答相關問題。"
+  ],
+  "reading": {
+    "title_en": "A Day on the Farm",
+    "title_zh": "農場裡的動物朋友",
+    "sentences": [
+      {
+        "en": "There are a cow, a horse, a sheep, and a goat on the farm.",
+        "zh": "農場裡有一頭牛、一匹馬、一隻羊和一隻山羊。"
+      },
+      {
+        "en": "There are also pigs, ducks, and hens walking around the yard.",
+        "zh": "院子裡也有幾隻豬、鴨子和母雞在走來走去。"
+      },
+      {
+        "en": "In the pond, we see fish and turtles swimming together.",
+        "zh": "在池塘裡，我們看到魚和烏龜一起游泳。"
+      },
+      {
+        "en": "Near the fence, a rabbit hops and a deer watches quietly.",
+        "zh": "在籬笆旁，一隻兔子在跳躍，一隻鹿安靜地觀察。"
+      },
+      {
+        "en": "In the barn, a cat sleeps on a hay bale while a dog guards the door.",
+        "zh": "在谷倉裡，一隻貓在乾草堆上睡覺，而一隻狗在看門。"
+      },
+      {
+        "en": "Inside the house, a mouse hides behind a cupboard, but the cat does not see it.",
+        "zh": "在屋子裡，一隻老鼠躲在櫥櫃後面，但貓沒有看到它。"
+      },
+      {
+        "en": "At the zoo next to the farm, we see a kangaroo jumping and a koala eating leaves.",
+        "zh": "在農場旁的動物園裡，我們看到一隻袋鼠在跳躍，一隻無尾熊在吃葉子。"
+      },
+      {
+        "en": "There are also a panda munching bamboo, a goose flapping its wings, and a frog jumping near the water.",
+        "zh": "還有一隻貓熊在吃竹子、一隻鵝在拍打翅膀，以及一隻青蛙在水邊跳躍。"
+      },
+      {
+        "en": "Now I can say: There are many animals on the farm and in the zoo, and I love them all.",
+        "zh": "現在我可以說：農場和動物園裡有許多動物，我都很喜歡它們。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① There is / There are 的基本用法",
+      "explain_zh": "用來說明某物存在。單數名詞後用 There is，複數名詞後用 There are。",
+      "table": [
+        [
+          "名詞數量",
+          "There is/are",
+          "例句"
+        ],
+        [
+          "單數",
+          "There is",
+          "There is a cat."
+        ],
+        [
+          "複數",
+          "There are",
+          "There are three dogs."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② There is / There are 的否定與疑問句",
+      "explain_zh": "否定句在 is/are 後加 not，疑問句將 is/are 提到句首。",
+      "examples": [
+        {
+          "en": "There is not a mouse in the room.",
+          "zh": "房間裡沒有老鼠。"
+        },
+        {
+          "en": "Are there any goats on the farm?",
+          "zh": "農場裡有山羊嗎？"
+        },
+        {
+          "en": "There aren't any frogs in the pond.",
+          "zh": "池塘裡沒有青蛙。"
+        },
+        {
+          "en": "Is there a panda in the zoo?",
+          "zh": "動物園裡有貓熊嗎？"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡談論寵物",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "There is a rabbit in my backyard.",
+        "zh": "我後院有一隻兔子。"
+      },
+      {
+        "sp": "Jack",
+        "en": "Really? There are two turtles in my garden.",
+        "zh": "真的嗎？我花園裡有兩隻烏龜。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Do you have any fish?",
+        "zh": "你有魚嗎？"
+      },
+      {
+        "sp": "Jack",
+        "en": "Yes, there are five fish in my aquarium.",
+        "zh": "有，我水族箱裡有五條魚。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Is there a dog at your house?",
+        "zh": "你家裡有狗嗎？"
+      },
+      {
+        "sp": "Jack",
+        "en": "No, there isn't a dog, but there is a cat.",
+        "zh": "沒有狗，但有一隻貓。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "There is a cow on the farm.",
+      "zh": "農場裡有一頭母牛。"
+    },
+    {
+      "en": "There are three goats on the hill.",
+      "zh": "山上有三隻山羊。"
+    },
+    {
+      "en": "There is a horse in the stable.",
+      "zh": "馬棚裡有一匹馬。"
+    },
+    {
+      "en": "There are many sheep in the field.",
+      "zh": "田野裡有很多綿羊。"
+    },
+    {
+      "en": "There is a duck swimming in the pond.",
+      "zh": "池塘裡有一隻鴨在游泳。"
+    },
+    {
+      "en": "There are two hens laying eggs.",
+      "zh": "有兩隻母雞在下蛋。"
+    },
+    {
+      "en": "There is a kangaroo jumping in the zoo.",
+      "zh": "動物園裡有一隻袋鼠在跳躍。"
+    },
+    {
+      "en": "There are several koalas sleeping on the trees.",
+      "zh": "樹上有幾隻無尾熊在睡覺。"
+    }
+  ],
+  "no": 14,
+  "theme": "Animals & Pets",
+  "theme_zh": "動物與寵物",
+  "words": [
+    {
+      "en": "cat",
+      "zh": "貓"
+    },
+    {
+      "en": "dog",
+      "zh": "狗"
+    },
+    {
+      "en": "fish",
+      "zh": "魚"
+    },
+    {
+      "en": "mouse",
+      "zh": "老鼠"
+    },
+    {
+      "en": "rabbit",
+      "zh": "兔子"
+    },
+    {
+      "en": "farm",
+      "zh": "農場"
+    },
+    {
+      "en": "cow",
+      "zh": "母牛"
+    },
+    {
+      "en": "goat",
+      "zh": "山羊"
+    },
+    {
+      "en": "horse",
+      "zh": "馬"
+    },
+    {
+      "en": "pig",
+      "zh": "豬"
+    },
+    {
+      "en": "sheep",
+      "zh": "綿羊"
+    },
+    {
+      "en": "duck",
+      "zh": "鴨"
+    },
+    {
+      "en": "hen",
+      "zh": "母雞"
+    },
+    {
+      "en": "turtle",
+      "zh": "烏龜"
+    },
+    {
+      "en": "kangaroo",
+      "zh": "袋鼠"
+    },
+    {
+      "en": "koala",
+      "zh": "無尾熊"
+    },
+    {
+      "en": "goose",
+      "zh": "鵝"
+    },
+    {
+      "en": "panda",
+      "zh": "貓熊"
+    },
+    {
+      "en": "frog",
+      "zh": "青蛙"
+    },
+    {
+      "en": "deer",
+      "zh": "鹿"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "以下哪個英文單字的中文意思是 '貓'?",
+        "opts": [
+          "cat",
+          "dog",
+          "fish",
+          "mouse"
+        ],
+        "ans": "cat"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '狗'?",
+        "opts": [
+          "cat",
+          "dog",
+          "rabbit",
+          "fish"
+        ],
+        "ans": "dog"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '兔子'?",
+        "opts": [
+          "rabbit",
+          "horse",
+          "pig",
+          "goat"
+        ],
+        "ans": "rabbit"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '牛'?",
+        "opts": [
+          "cow",
+          "sheep",
+          "duck",
+          "hen"
+        ],
+        "ans": "cow"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '羊'?",
+        "opts": [
+          "sheep",
+          "goat",
+          "cow",
+          "pig"
+        ],
+        "ans": "sheep"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '鴨'?",
+        "opts": [
+          "duck",
+          "hen",
+          "turtle",
+          "frog"
+        ],
+        "ans": "duck"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '龜'?",
+        "opts": [
+          "turtle",
+          "frog",
+          "deer",
+          "kangaroo"
+        ],
+        "ans": "turtle"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '袋鼠'?",
+        "opts": [
+          "kangaroo",
+          "koala",
+          "panda",
+          "goose"
+        ],
+        "ans": "kangaroo"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '考拉'?",
+        "opts": [
+          "koala",
+          "panda",
+          "frog",
+          "deer"
+        ],
+        "ans": "koala"
+      },
+      {
+        "q": "以下哪個英文單字的中文意思是 '鹿'?",
+        "opts": [
+          "deer",
+          "goat",
+          "horse",
+          "fish"
+        ],
+        "ans": "deer"
+      },
+      {
+        "q": "There ___ a cat on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ three sheep on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ a dog on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ two deer on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ a mouse on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ five fish on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ a rabbit on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ six sheep on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "There ___ a goat on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "There ___ three deer on the farm.",
+        "opts": [
+          "is",
+          "are",
+          "was",
+          "were"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "圖片顯示農場上有一隻貓和兩隻狗。哪個句子正確描述圖片？",
+        "opts": [
+          "There is a cat and two dogs on the farm.",
+          "There are a cat and two dogs on the farm.",
+          "There is two cats and a dog on the farm.",
+          "There are two cats and a dog on the farm."
+        ],
+        "ans": "There are a cat and two dogs on the farm."
+      },
+      {
+        "q": "圖片顯示農場上只有三隻魚。哪個句子正確？",
+        "opts": [
+          "There is three fish on the farm.",
+          "There are three fish on the farm.",
+          "There is a fish on the farm.",
+          "There are a fish on the farm."
+        ],
+        "ans": "There are three fish on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有一隻兔子和一隻烏龜。哪個句子正確？",
+        "opts": [
+          "There is a rabbit and a turtle on the farm.",
+          "There are a rabbit and a turtle on the farm.",
+          "There is two rabbits on the farm.",
+          "There are two turtles on the farm."
+        ],
+        "ans": "There are a rabbit and a turtle on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有五隻羊和兩頭牛。哪個句子正確？",
+        "opts": [
+          "There are five sheep and two cows on the farm.",
+          "There is five sheep and two cows on the farm.",
+          "There are five sheep and two cow on the farm.",
+          "There are five sheeps and two cows on the farm."
+        ],
+        "ans": "There are five sheep and two cows on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有一隻母雞和三隻小鴨。哪個句子正確？",
+        "opts": [
+          "There is a hen and three ducks on the farm.",
+          "There are a hen and three ducks on the farm.",
+          "There are a hen and three duck on the farm.",
+          "There is three ducks and a hen on the farm."
+        ],
+        "ans": "There are a hen and three ducks on the farm."
+      },
+      {
+        "q": "圖片顯示農場上只有兩隻袋鼠。哪個句子正確？",
+        "opts": [
+          "There is two kangaroos on the farm.",
+          "There are two kangaroos on the farm.",
+          "There are two kangaroo on the farm.",
+          "There is a kangaroo on the farm."
+        ],
+        "ans": "There are two kangaroos on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有一隻熊貓和四隻青蛙。哪個句子正確？",
+        "opts": [
+          "There is a panda and four frogs on the farm.",
+          "There are a panda and four frogs on the farm.",
+          "There are a panda and four frog on the farm.",
+          "There is four frogs and a panda on the farm."
+        ],
+        "ans": "There are a panda and four frogs on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有一匹馬和三隻山羊。哪個句子正確？",
+        "opts": [
+          "There is a horse and three goats on the farm.",
+          "There are a horse and three goats on the farm.",
+          "There are a horse and three goat on the farm.",
+          "There is three goats and a horse on the farm."
+        ],
+        "ans": "There are a horse and three goats on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有四隻鹿。哪個句子正確？",
+        "opts": [
+          "There is four deer on the farm.",
+          "There are four deer on the farm.",
+          "There are four deers on the farm.",
+          "There is a deer on the farm."
+        ],
+        "ans": "There are four deer on the farm."
+      },
+      {
+        "q": "圖片顯示農場上有一隻老鼠和兩隻雞。哪個句子正確？",
+        "opts": [
+          "There is a mouse and two hens on the farm.",
+          "There are a mouse and two hens on the farm.",
+          "There are a mouse and two hen on the farm.",
+          "There is two hens and a mouse on the farm."
+        ],
+        "ans": "There are a mouse and two hens on the farm."
+      }
+    ],
+    "fill": [
+      {
+        "q": "There ____ a cat on the farm.（農場裡有一隻貓）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a dog on the farm.（農場裡有一隻狗）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a rabbit on the farm.（農場裡有一隻兔子）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a hen on the farm.（農場裡有一隻母雞）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a turtle on the farm.（農場裡有一隻烏龜）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ sheep on the farm.（農場裡有很多羊）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ deer on the farm.（農場裡有很多鹿）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ fish on the farm.（農場裡有很多魚）",
+        "ans": "are"
+      },
+      {
+        "q": "There ____ a goat on the farm.（農場裡有一隻山羊）",
+        "ans": "is"
+      },
+      {
+        "q": "There ____ a panda on the farm.（農場裡有一隻熊貓）",
+        "ans": "is"
+      }
+    ],
+    "translate": [
+      {
+        "q": "農場裡有一隻貓。",
+        "ans": "There is a cat on the farm."
+      },
+      {
+        "q": "農場裡有一隻狗。",
+        "ans": "There is a dog on the farm."
+      },
+      {
+        "q": "農場裡有一隻兔子。",
+        "ans": "There is a rabbit on the farm."
+      },
+      {
+        "q": "農場裡有一隻母雞。",
+        "ans": "There is a hen on the farm."
+      },
+      {
+        "q": "農場裡有一隻烏龜。",
+        "ans": "There is a turtle on the farm."
+      },
+      {
+        "q": "農場裡有很多羊。",
+        "ans": "There are sheep on the farm."
+      },
+      {
+        "q": "農場裡有很多鹿。",
+        "ans": "There are deer on the farm."
+      },
+      {
+        "q": "農場裡有很多魚。",
+        "ans": "There are fish on the farm."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "There / a / cat / . / farm / the / on / is",
+        "ans": "There is a cat on the farm."
+      },
+      {
+        "q": "farm / . / is / a / dog / There / the / on",
+        "ans": "There is a dog on the farm."
+      },
+      {
+        "q": "the / on / rabbit / is / a / There / . / farm",
+        "ans": "There is a rabbit on the farm."
+      },
+      {
+        "q": "the / on / There / are / farm / sheep / .",
+        "ans": "There are sheep on the farm."
+      },
+      {
+        "q": "on / . / deer / the / farm / There / are",
+        "ans": "There are deer on the farm."
+      },
+      {
+        "q": "farm / the / on / are / fish / . / There",
+        "ans": "There are fish on the farm."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

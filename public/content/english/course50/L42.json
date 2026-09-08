@@ -1,0 +1,681 @@
+{
+  "title_en": "A Day in the Park",
+  "title_zh": "公園裡的一天",
+  "grammar": "本課學習使用 can / can't 表達能力，並練習動作動詞與方向介系詞。",
+  "intro_zh": "在這一課，我們將學習用 可以 和 不能 說出自己能做什麼、不能做什麼，同時練習動作詞和方向詞，例如來、去、推、拉、放、沿著、繞著、往上、往下、左邊、右邊，讓描述日常活動更清楚。",
+  "can_do": [
+    "能用 can/can't 說出自己的能力",
+    "能正確使用動作動詞與方向介系詞描述行動",
+    "能閱讀簡短故事並回答相關問題"
+  ],
+  "reading": {
+    "title_en": "A Day in the Park",
+    "title_zh": "公園裡的一天",
+    "sentences": [
+      {
+        "en": "We come to the park and go along the path.",
+        "zh": "我們來到公園，並沿著小路走去。"
+      },
+      {
+        "en": "We follow the signs and cross the small bridge.",
+        "zh": "我們跟隨指示牌，越過小橋。"
+      },
+      {
+        "en": "We move the picnic table into the shade near the front.",
+        "zh": "我們把野餐桌移到前面的陰涼處。"
+      },
+      {
+        "en": "I push the chair to the left side of the table.",
+        "zh": "我把椅子推到桌子左邊。"
+      },
+      {
+        "en": "My friend pulls the wagon from the back to the right.",
+        "zh": "我的朋友把手推車從後面拉到右邊。"
+      },
+      {
+        "en": "We put the blanket on the ground and sit down.",
+        "zh": "我們把毯子鋪在地上，然後坐下。"
+      },
+      {
+        "en": "Then we climb up the hill to look around.",
+        "zh": "然後我們爬上小山，四處看看。"
+      },
+      {
+        "en": "We can see the lake over the trees and watch the ducks swim out.",
+        "zh": "我們可以看到樹林彼端的湖泊，並看見鴨子游出來。"
+      },
+      {
+        "en": "When it's time to leave, we pack everything and go back home.",
+        "zh": "該離開時，我們收拾東西，然後回家。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① can / can't + 動詞 + 方向介系詞",
+      "explain_zh": "學習用 can / can't 表達自己能或不能做某個帶有方向的動作。動詞後面直接接方向介系詞，構成「動詞+方向」的片語。",
+      "table": [
+        [
+          "主語",
+          "can / can't",
+          "動詞+方向",
+          "中文意思"
+        ],
+        [
+          "I",
+          "can",
+          "go up",
+          "我可以往上走"
+        ],
+        [
+          "I",
+          "can't",
+          "go down",
+          "我不能往下走"
+        ],
+        [
+          "She",
+          "can",
+          "come along",
+          "她可以沿著來"
+        ],
+        [
+          "He",
+          "can't",
+          "cross over",
+          "他不能越過"
+        ],
+        [
+          "We",
+          "can",
+          "move left",
+          "我們可以向左移動"
+        ],
+        [
+          "They",
+          "can't",
+          "push right",
+          "他們不能往右推"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 詢問與回答能力（Can you ...？）",
+      "explain_zh": "用 Can you + 動詞+方向？來詢問對方的能力，回答用 Yes, I can. 或 No, I can't.。",
+      "examples": [
+        {
+          "en": "Can you go along the hallway?",
+          "zh": "你能沿著走廊走嗎？"
+        },
+        {
+          "en": "Can't you pull the door out?",
+          "zh": "你不能把門拉出來嗎？"
+        },
+        {
+          "en": "Can she follow the teacher around the classroom?",
+          "zh": "她能跟著老師在教室裡繞行嗎？"
+        },
+        {
+          "en": "Can't they put the book back into the bag?",
+          "zh": "他們不能把書放回袋子裡嗎？"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上給同學指路",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "Can you go up the slide?",
+        "zh": "你能滑上滑梯嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Yes, I can. But I can't go down the ladder.",
+        "zh": "我可以。但我不能下梯子。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Can you come along the fence and follow me?",
+        "zh": "你能沿著籬笆跟著我走嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Sure! I can move left and then push the gate open.",
+        "zh": "當然！我可以向左移動，然後推開門。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Great! Let's go over the small hill together.",
+        "zh": "太好了！我們一起越過小丘吧。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I can jump over the puddle.",
+      "zh": "我可以跳過水坑。"
+    },
+    {
+      "en": "She can't crawl under the table.",
+      "zh": "她不能爬過桌子底下。"
+    },
+    {
+      "en": "Can you run along the track?",
+      "zh": "你能沿著跑道跑步嗎？"
+    },
+    {
+      "en": "They can't throw the ball over the wall.",
+      "zh": "他們不能把球拋過牆。"
+    },
+    {
+      "en": "He can pull the rope up.",
+      "zh": "他可以把繩子拉向上。"
+    },
+    {
+      "en": "We can put the toys back into the box.",
+      "zh": "我們可以把玩具放回盒子裡。"
+    },
+    {
+      "en": "Can you follow the teacher around the garden?",
+      "zh": "你能跟著老師在花園裡繞行嗎？"
+    },
+    {
+      "en": "I can't go out without my shoes.",
+      "zh": "我沒有鞋子不能出去。"
+    }
+  ],
+  "no": 42,
+  "theme": "Things I Can Do",
+  "theme_zh": "我做得到的事",
+  "words": [
+    {
+      "en": "come",
+      "zh": "來到"
+    },
+    {
+      "en": "cross",
+      "zh": "越過"
+    },
+    {
+      "en": "follow",
+      "zh": "跟隨"
+    },
+    {
+      "en": "go",
+      "zh": "走"
+    },
+    {
+      "en": "leave",
+      "zh": "離開"
+    },
+    {
+      "en": "move",
+      "zh": "移動"
+    },
+    {
+      "en": "pull",
+      "zh": "拉"
+    },
+    {
+      "en": "push",
+      "zh": "推"
+    },
+    {
+      "en": "put",
+      "zh": "放"
+    },
+    {
+      "en": "along",
+      "zh": "沿著"
+    },
+    {
+      "en": "around",
+      "zh": "圍繞"
+    },
+    {
+      "en": "up",
+      "zh": "往上"
+    },
+    {
+      "en": "down",
+      "zh": "往下"
+    },
+    {
+      "en": "left",
+      "zh": "左邊"
+    },
+    {
+      "en": "right",
+      "zh": "右邊"
+    },
+    {
+      "en": "into",
+      "zh": "進入"
+    },
+    {
+      "en": "over",
+      "zh": "越過"
+    },
+    {
+      "en": "out",
+      "zh": "在外"
+    },
+    {
+      "en": "back",
+      "zh": "後面的"
+    },
+    {
+      "en": "front",
+      "zh": "前面的"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "「推」的英文是什麼？",
+        "opts": [
+          "push",
+          "pull",
+          "cross",
+          "move"
+        ],
+        "ans": "push"
+      },
+      {
+        "q": "「跟隨；跟著」的英文是什麼？",
+        "opts": [
+          "follow",
+          "leave",
+          "come",
+          "put"
+        ],
+        "ans": "follow"
+      },
+      {
+        "q": "單字「cross」的中文意思是什麼？",
+        "opts": [
+          "越過；穿過",
+          "拉",
+          "離開",
+          "回去"
+        ],
+        "ans": "越過；穿過"
+      },
+      {
+        "q": "單字「pull」的中文意思是什麼？",
+        "opts": [
+          "拉",
+          "推",
+          "放",
+          "走"
+        ],
+        "ans": "拉"
+      },
+      {
+        "q": "「沿著」的英文介系詞是什麼？",
+        "opts": [
+          "along",
+          "around",
+          "into",
+          "over"
+        ],
+        "ans": "along"
+      },
+      {
+        "q": "單字「around」的中文意思是什麼？",
+        "opts": [
+          "圍繞；在周圍",
+          "向下",
+          "向左",
+          "向右"
+        ],
+        "ans": "圍繞；在周圍"
+      },
+      {
+        "q": "「進入……裡面」的英文介系詞是什麼？",
+        "opts": [
+          "into",
+          "out",
+          "over",
+          "down"
+        ],
+        "ans": "into"
+      },
+      {
+        "q": "「左邊」的英文是什麼？",
+        "opts": [
+          "left",
+          "right",
+          "front",
+          "back"
+        ],
+        "ans": "left"
+      },
+      {
+        "q": "單字「leave」的中文意思是什麼？",
+        "opts": [
+          "離開",
+          "過來",
+          "移動",
+          "放置"
+        ],
+        "ans": "離開"
+      },
+      {
+        "q": "「前面」的英文是什麼？",
+        "opts": [
+          "front",
+          "back",
+          "up",
+          "down"
+        ],
+        "ans": "front"
+      },
+      {
+        "q": "我可以___門。",
+        "opts": [
+          "push",
+          "pull",
+          "come",
+          "go"
+        ],
+        "ans": "push"
+      },
+      {
+        "q": "請___這條路。",
+        "opts": [
+          "cross",
+          "follow",
+          "leave",
+          "move"
+        ],
+        "ans": "cross"
+      },
+      {
+        "q": "請___我。",
+        "opts": [
+          "follow",
+          "leave",
+          "pull",
+          "push"
+        ],
+        "ans": "follow"
+      },
+      {
+        "q": "請把書___盒子。",
+        "opts": [
+          "into",
+          "over",
+          "along",
+          "around"
+        ],
+        "ans": "into"
+      },
+      {
+        "q": "請沿著這條路___。",
+        "opts": [
+          "go",
+          "come",
+          "leave",
+          "move"
+        ],
+        "ans": "go"
+      },
+      {
+        "q": "請站在牆___。",
+        "opts": [
+          "left",
+          "right",
+          "back",
+          "front"
+        ],
+        "ans": "front"
+      },
+      {
+        "q": "請把球___箱子。",
+        "opts": [
+          "over",
+          "into",
+          "along",
+          "around"
+        ],
+        "ans": "over"
+      },
+      {
+        "q": "請不要___教室。",
+        "opts": [
+          "leave",
+          "come",
+          "go",
+          "move"
+        ],
+        "ans": "leave"
+      },
+      {
+        "q": "請走___。",
+        "opts": [
+          "back",
+          "front",
+          "left",
+          "right"
+        ],
+        "ans": "back"
+      },
+      {
+        "q": "請繞著樹___。",
+        "opts": [
+          "around",
+          "along",
+          "into",
+          "over"
+        ],
+        "ans": "around"
+      },
+      {
+        "q": "我可以___左邊。",
+        "opts": [
+          "go",
+          "come",
+          "pull",
+          "push"
+        ],
+        "ans": "go"
+      },
+      {
+        "q": "你能___過馬路嗎？",
+        "opts": [
+          "cross",
+          "come",
+          "go",
+          "leave"
+        ],
+        "ans": "cross"
+      },
+      {
+        "q": "請去___山。",
+        "opts": [
+          "up",
+          "down",
+          "left",
+          "right"
+        ],
+        "ans": "up"
+      },
+      {
+        "q": "請去___樓梯。",
+        "opts": [
+          "up",
+          "down",
+          "left",
+          "right"
+        ],
+        "ans": "down"
+      },
+      {
+        "q": "請把椅子___牆邊。",
+        "opts": [
+          "along",
+          "around",
+          "into",
+          "over"
+        ],
+        "ans": "along"
+      },
+      {
+        "q": "請把球___桌子。",
+        "opts": [
+          "into",
+          "over",
+          "out",
+          "back"
+        ],
+        "ans": "over"
+      },
+      {
+        "q": "請把書___櫃子。",
+        "opts": [
+          "into",
+          "over",
+          "out",
+          "back"
+        ],
+        "ans": "into"
+      },
+      {
+        "q": "請走___房間。",
+        "opts": [
+          "out",
+          "into",
+          "over",
+          "back"
+        ],
+        "ans": "out"
+      },
+      {
+        "q": "請把椅子___。",
+        "opts": [
+          "back",
+          "front",
+          "left",
+          "right"
+        ],
+        "ans": "back"
+      },
+      {
+        "q": "請站在___。",
+        "opts": [
+          "back",
+          "front",
+          "left",
+          "right"
+        ],
+        "ans": "front"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ go up.（我可以往上走）",
+        "ans": "can"
+      },
+      {
+        "q": "She ____ go down.（她不能往下走）",
+        "ans": "can't"
+      },
+      {
+        "q": "We ____ go along.（我們可以沿著走）",
+        "ans": "can"
+      },
+      {
+        "q": "They ____ pull it.（他們可以拉它）",
+        "ans": "can"
+      },
+      {
+        "q": "You ____ push it.（你不能推它）",
+        "ans": "can't"
+      },
+      {
+        "q": "I ____ put it down.（我可以把它放下）",
+        "ans": "can"
+      },
+      {
+        "q": "She ____ follow left.（她不能往左跟隨）",
+        "ans": "can't"
+      },
+      {
+        "q": "He ____ cross over.（他可以穿越）",
+        "ans": "can"
+      },
+      {
+        "q": "We ____ come out.（我們可以出來）",
+        "ans": "can"
+      },
+      {
+        "q": "They ____ go back.（他們可以回去）",
+        "ans": "can"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我可以往上走。",
+        "ans": "I can go up."
+      },
+      {
+        "q": "她不能往下走。",
+        "ans": "She can't go down."
+      },
+      {
+        "q": "我們可以沿著走。",
+        "ans": "We can go along."
+      },
+      {
+        "q": "他們可以拉它。",
+        "ans": "They can pull it."
+      },
+      {
+        "q": "你不能推它。",
+        "ans": "You can't push it."
+      },
+      {
+        "q": "我可以把它放下。",
+        "ans": "I can put it down."
+      },
+      {
+        "q": "她不能往左跟隨。",
+        "ans": "She can't follow left."
+      },
+      {
+        "q": "他可以穿越。",
+        "ans": "He can cross over."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "up / can / go / . / I",
+        "ans": "I can go up."
+      },
+      {
+        "q": "down / go / She / . / can't",
+        "ans": "She can't go down."
+      },
+      {
+        "q": "along / can / go / We / .",
+        "ans": "We can go along."
+      },
+      {
+        "q": "can / pull / it / . / They",
+        "ans": "They can pull it."
+      },
+      {
+        "q": ". / it / push / You / can't",
+        "ans": "You can't push it."
+      },
+      {
+        "q": "put / can / I / it / down / .",
+        "ans": "I can put it down."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

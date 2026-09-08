@@ -1,0 +1,675 @@
+{
+  "title_en": "Colors & Shapes",
+  "title_zh": "顏色與形狀探索",
+  "grammar": "使用 What color is it? 和 What shape is it? 來詢問顏色與形狀。",
+  "intro_zh": "在這堂課裡，我們會學習說出不同顏色和形狀的英文，並練習用 What color is it? 和 What shape is it? 來問答。我們也會描述物體的大小、厚薄以及身體部位，讓句子更豐富。",
+  "can_do": [
+    "能用英文說出物體的顏色和形狀。",
+    "能用 What color is it? 和 What shape is it? 提問並回答。",
+    "能描述物體的大小、厚薄以及身體部位。"
+  ],
+  "reading": {
+    "title_en": "The Colorful Classroom",
+    "title_zh": "彩色的教室角落",
+    "sentences": [
+      {
+        "en": "In the classroom, there is a bright red arrow on the wall pointing to the corner.",
+        "zh": "教室牆上有一支亮紅色的箭頭，指向角落。"
+      },
+      {
+        "en": "On the desk, a silver cube sits next to a dark blue heart shape sticker.",
+        "zh": "書桌上有一個銀色的立方體，旁邊貼著深藍色的心形貼紙。"
+      },
+      {
+        "en": "The sticker is oval and feels thick when you touch it.",
+        "zh": "貼紙是橢圓形的，摸起來很厚。"
+      },
+      {
+        "en": "A wide white paper lies narrow at the top, making a nice frame for a drawing.",
+        "zh": "一張寬寬的白紙在上面很窄，畫出一個很好看的框架。"
+      },
+      {
+        "en": "In the drawing, a boy’s head has brown hair, two blue eyes, and a small nose.",
+        "zh": "畫中的男孩頭有棕色頭髮，兩隻藍眼睛，還有一個小鼻子。"
+      },
+      {
+        "en": "His mouth shows a white tooth when he smiles, and his ears are covered by a silver headband.",
+        "zh": "他笑時嘴巴露出白牙齒，耳朵被一條銀色頭帶蓋住。"
+      },
+      {
+        "en": "His neck is long, and his shoulders are wide, making him look strong.",
+        "zh": "他的脖子很長，肩膀很寬，看起來很強壯。"
+      },
+      {
+        "en": "The boy’s body is wearing a dark green shirt that feels thick and warm.",
+        "zh": "男孩的身體穿著深綠色的厚襯衫，很暖和。"
+      },
+      {
+        "en": "All these colors and shapes make the classroom a fun place to learn.",
+        "zh": "這些顏色和形狀讓教室變成一個有趣的學習場所。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 詢問顏色：What color is it?",
+      "explain_zh": "用 What color is it? 來問物件的顏色，答句用 It's + 顏色詞。可加深色詞 dark 或金屬色 silver 等。",
+      "table": [
+        [
+          "問句",
+          "答句",
+          "例句"
+        ],
+        [
+          "What color is the arrow?",
+          "It's silver.",
+          "What color is the arrow? It's silver."
+        ],
+        [
+          "What color is the heart shape?",
+          "It's red.",
+          "What color is the heart shape? It's red."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 詢問形狀與大小：What shape is it?",
+      "explain_zh": "用 What shape is it? 來問物件的形狀，答句用 It's a + 形狀名詞。可搭配寬、窄、厚等形容詞描述大小。",
+      "examples": [
+        {
+          "en": "What shape is the box? It's a cube.",
+          "zh": "這個盒子什麼形狀？是立方體。"
+        },
+        {
+          "en": "What shape is the sticker? It's an oval.",
+          "zh": "這張貼紙什麼形狀？是橢圓形。"
+        },
+        {
+          "en": "What shape is the ribbon? It's wide and thin.",
+          "zh": "這條絲帶寬且薄。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在美術課裡",
+    "lines": [
+      {
+        "sp": "老師",
+        "en": "What color is the arrow on the board?",
+        "zh": "老師：黑板上的箭頭是什麼顏色？"
+      },
+      {
+        "sp": "學生A",
+        "en": "It's silver.",
+        "zh": "學生A：是銀色。"
+      },
+      {
+        "sp": "老師",
+        "en": "What shape is the heart sticker?",
+        "zh": "老師：這張心形貼紙是什麼形狀？"
+      },
+      {
+        "sp": "學生B",
+        "en": "It's a heart shape.",
+        "zh": "學生B：是心形。"
+      },
+      {
+        "sp": "老師",
+        "en": "What color is your hair?",
+        "zh": "老師：你的頭髮是什麼顏色？"
+      },
+      {
+        "sp": "學生C",
+        "en": "It's dark.",
+        "zh": "學生C：是深色。"
+      },
+      {
+        "sp": "老師",
+        "en": "What shape is the box on the desk?",
+        "zh": "老師：桌子上的盒子是什麼形狀？"
+      },
+      {
+        "sp": "學生A",
+        "en": "It's a cube.",
+        "zh": "學生A：是立方體。"
+      },
+      {
+        "sp": "老師",
+        "en": "What shape is the ribbon?",
+        "zh": "老師：這條絲帶是什麼形狀？"
+      },
+      {
+        "sp": "學生B",
+        "en": "It's wide and thin.",
+        "zh": "學生B：寬且薄。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "What color is the arrow? It's silver.",
+      "zh": "箭頭是什麼顏色？是銀色。"
+    },
+    {
+      "en": "What color is the heart shape? It's red.",
+      "zh": "心形是什麼顏色？是紅色。"
+    },
+    {
+      "en": "What shape is the box? It's a cube.",
+      "zh": "盒子是什麼形狀？是立方體。"
+    },
+    {
+      "en": "What shape is the sticker? It's an oval.",
+      "zh": "貼紙是什麼形狀？是橢圓形。"
+    },
+    {
+      "en": "What color is your hair? It's dark.",
+      "zh": "你的頭髮是什麼顏色？是深色。"
+    },
+    {
+      "en": "What shape is the ribbon? It's wide and thin.",
+      "zh": "絲帶是什麼形狀？寬且薄。"
+    },
+    {
+      "en": "What color is the car? It's silver.",
+      "zh": "汽車是什麼顏色？是銀色。"
+    },
+    {
+      "en": "What shape is the sign? It's an arrow.",
+      "zh": "標誌是什麼形狀？是箭頭。"
+    }
+  ],
+  "no": 8,
+  "theme": "Colors & Shapes",
+  "theme_zh": "顏色與形狀",
+  "words": [
+    {
+      "en": "arrow",
+      "zh": "箭頭"
+    },
+    {
+      "en": "heart shape",
+      "zh": "心形"
+    },
+    {
+      "en": "oval",
+      "zh": "橢圓形"
+    },
+    {
+      "en": "cube",
+      "zh": "立方體"
+    },
+    {
+      "en": "dark",
+      "zh": "深色的；暗的"
+    },
+    {
+      "en": "silver",
+      "zh": "銀色"
+    },
+    {
+      "en": "wide",
+      "zh": "寬的"
+    },
+    {
+      "en": "narrow",
+      "zh": "窄的"
+    },
+    {
+      "en": "thick",
+      "zh": "厚的；粗的"
+    },
+    {
+      "en": "corner",
+      "zh": "角落"
+    },
+    {
+      "en": "head",
+      "zh": "頭"
+    },
+    {
+      "en": "hair",
+      "zh": "頭髮"
+    },
+    {
+      "en": "eye(s)",
+      "zh": "眼睛"
+    },
+    {
+      "en": "ear(s)",
+      "zh": "耳朵"
+    },
+    {
+      "en": "nose",
+      "zh": "鼻子"
+    },
+    {
+      "en": "mouth",
+      "zh": "嘴巴"
+    },
+    {
+      "en": "tooth",
+      "zh": "牙齒"
+    },
+    {
+      "en": "body",
+      "zh": "身體"
+    },
+    {
+      "en": "neck",
+      "zh": "脖子"
+    },
+    {
+      "en": "shoulder",
+      "zh": "肩膀"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "心形的英文是什麼？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "heart shape"
+      },
+      {
+        "q": "橢圓形的英文是什麼？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "oval"
+      },
+      {
+        "q": "立方體的英文是什麼？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "cube"
+      },
+      {
+        "q": "箭的英文是什麼？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "arrow"
+      },
+      {
+        "q": "銀色的東西，什麼顏色？",
+        "opts": [
+          "dark",
+          "silver",
+          "wide",
+          "narrow"
+        ],
+        "ans": "silver"
+      },
+      {
+        "q": "深色的東西，什麼顏色？",
+        "opts": [
+          "dark",
+          "silver",
+          "wide",
+          "narrow"
+        ],
+        "ans": "dark"
+      },
+      {
+        "q": "這個形狀是心形，什麼形狀？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "heart shape"
+      },
+      {
+        "q": "這個形狀是橢圓形，什麼形狀？",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "oval"
+      },
+      {
+        "q": "頭髮的英文是什麼？",
+        "opts": [
+          "head",
+          "hair",
+          "eye(s)",
+          "ear(s)"
+        ],
+        "ans": "hair"
+      },
+      {
+        "q": "耳朵的英文是什麼？",
+        "opts": [
+          "head",
+          "hair",
+          "eye(s)",
+          "ear(s)"
+        ],
+        "ans": "ear(s)"
+      },
+      {
+        "q": "The arrow is silver. What color is it?",
+        "opts": [
+          "silver",
+          "dark",
+          "wide",
+          "narrow"
+        ],
+        "ans": "silver"
+      },
+      {
+        "q": "The cube is dark. What color is it?",
+        "opts": [
+          "dark",
+          "silver",
+          "thick",
+          "narrow"
+        ],
+        "ans": "dark"
+      },
+      {
+        "q": "This is a heart shape. What shape is it?",
+        "opts": [
+          "heart shape",
+          "arrow",
+          "oval",
+          "cube"
+        ],
+        "ans": "heart shape"
+      },
+      {
+        "q": "This is an oval. What shape is it?",
+        "opts": [
+          "oval",
+          "arrow",
+          "heart shape",
+          "cube"
+        ],
+        "ans": "oval"
+      },
+      {
+        "q": "This is a cube. What shape is it?",
+        "opts": [
+          "cube",
+          "arrow",
+          "heart shape",
+          "oval"
+        ],
+        "ans": "cube"
+      },
+      {
+        "q": "This is an arrow. What shape is it?",
+        "opts": [
+          "arrow",
+          "heart shape",
+          "oval",
+          "cube"
+        ],
+        "ans": "arrow"
+      },
+      {
+        "q": "The body is dark. What color is it?",
+        "opts": [
+          "dark",
+          "silver",
+          "wide",
+          "thick"
+        ],
+        "ans": "dark"
+      },
+      {
+        "q": "The neck is silver. What color is it?",
+        "opts": [
+          "silver",
+          "dark",
+          "narrow",
+          "thick"
+        ],
+        "ans": "silver"
+      },
+      {
+        "q": "眼的複數形式是什麼？",
+        "opts": [
+          "eyes",
+          "eye",
+          "ears",
+          "head"
+        ],
+        "ans": "eyes"
+      },
+      {
+        "q": "耳朵的複數形式是什麼？",
+        "opts": [
+          "ears",
+          "ear",
+          "eyes",
+          "hair"
+        ],
+        "ans": "ears"
+      },
+      {
+        "q": "這個銀色的心形，它的顏色是什麼？",
+        "opts": [
+          "銀色",
+          "深色",
+          "寬",
+          "窄"
+        ],
+        "ans": "銀色"
+      },
+      {
+        "q": "這個深色的立方體，它的顏色是什麼？",
+        "opts": [
+          "深色",
+          "銀色",
+          "厚",
+          "角"
+        ],
+        "ans": "深色"
+      },
+      {
+        "q": "這個銀色的箭，它的顏色是什麼？",
+        "opts": [
+          "銀色",
+          "深色",
+          "寬",
+          "窄"
+        ],
+        "ans": "銀色"
+      },
+      {
+        "q": "這個心形的形狀是什麼？",
+        "opts": [
+          "心形",
+          "橢圓形",
+          "立方體",
+          "箭"
+        ],
+        "ans": "心形"
+      },
+      {
+        "q": "這個橢圓形的形狀是什麼？",
+        "opts": [
+          "橢圓形",
+          "心形",
+          "立方體",
+          "箭"
+        ],
+        "ans": "橢圓形"
+      },
+      {
+        "q": "這個立方體的形狀是什麼？",
+        "opts": [
+          "立方體",
+          "心形",
+          "橢圓形",
+          "箭"
+        ],
+        "ans": "立方體"
+      },
+      {
+        "q": "這個箭的形狀是什麼？",
+        "opts": [
+          "箭",
+          "心形",
+          "橢圓形",
+          "立方體"
+        ],
+        "ans": "箭"
+      },
+      {
+        "q": "這個心形的英文是什麼？",
+        "opts": [
+          "heart shape",
+          "oval",
+          "cube",
+          "arrow"
+        ],
+        "ans": "heart shape"
+      },
+      {
+        "q": "這個橢圓形的英文是什麼？",
+        "opts": [
+          "heart shape",
+          "oval",
+          "cube",
+          "arrow"
+        ],
+        "ans": "oval"
+      },
+      {
+        "q": "這個立方體的英文是什麼？",
+        "opts": [
+          "heart shape",
+          "oval",
+          "cube",
+          "arrow"
+        ],
+        "ans": "cube"
+      }
+    ],
+    "fill": [
+      {
+        "q": "The ____ is silver.",
+        "ans": "arrow"
+      },
+      {
+        "q": "The ____ is silver.",
+        "ans": "ear"
+      },
+      {
+        "q": "The ____ is dark.",
+        "ans": "hair"
+      },
+      {
+        "q": "The ____ is dark.",
+        "ans": "corner"
+      },
+      {
+        "q": "The ____ is wide.",
+        "ans": "mouth"
+      },
+      {
+        "q": "The ____ is wide.",
+        "ans": "shoulder"
+      },
+      {
+        "q": "The ____ is narrow.",
+        "ans": "nose"
+      },
+      {
+        "q": "The ____ is narrow.",
+        "ans": "eye"
+      },
+      {
+        "q": "The ____ is thick.",
+        "ans": "hair"
+      },
+      {
+        "q": "The ____ is thick.",
+        "ans": "tooth"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這支箭是銀色的。",
+        "ans": "The arrow is silver."
+      },
+      {
+        "q": "這個角落是深色的。",
+        "ans": "The corner is dark."
+      },
+      {
+        "q": "這張嘴是寬的。",
+        "ans": "The mouth is wide."
+      },
+      {
+        "q": "這個鼻子是窄的。",
+        "ans": "The nose is narrow."
+      },
+      {
+        "q": "這頭髮是厚的。",
+        "ans": "The hair is thick."
+      },
+      {
+        "q": "這是一支箭。",
+        "ans": "This is an arrow."
+      },
+      {
+        "q": "這是一個橢圓形。",
+        "ans": "This is an oval."
+      },
+      {
+        "q": "這是一個立方體。",
+        "ans": "This is a cube."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "silver / The / . / is / arrow",
+        "ans": "The arrow is silver."
+      },
+      {
+        "q": ". / is / dark / The / corner",
+        "ans": "The corner is dark."
+      },
+      {
+        "q": "is / The / wide / . / mouth",
+        "ans": "The mouth is wide."
+      },
+      {
+        "q": "This / an / is / . / oval",
+        "ans": "This is an oval."
+      },
+      {
+        "q": "a / This / . / is / cube",
+        "ans": "This is a cube."
+      },
+      {
+        "q": "is / . / The / hair / thick",
+        "ans": "The hair is thick."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

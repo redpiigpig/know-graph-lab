@@ -1,0 +1,670 @@
+{
+  "title_en": "Seasons and Weather",
+  "title_zh": "四季的天氣變化",
+  "grammar": "用 What's the weather like? 來問天氣，回答用 It's + 形容詞。",
+  "intro_zh": "本課將帶領學生認識四季的特色，學會用簡單的句子描述天氣，並了解不同天氣適合的活動與物品。透過生活化的情境，練習問答與詞彙運用。",
+  "can_do": [
+    "能用完整句子描述今天的天氣",
+    "能說出四季的英文名稱",
+    "能根據天氣情況說出適當的活動或物品"
+  ],
+  "reading": {
+    "title_en": "Seasons Day Story",
+    "title_zh": "四季的一天故事",
+    "sentences": [
+      {
+        "en": "Spring is a lovely season, and the weather is sunny and bright.",
+        "zh": "春天是一個美好的季節，天氣晴朗且明亮。"
+      },
+      {
+        "en": "After a light rain, the sky becomes clear and a beautiful rainbow appears.",
+        "zh": "小雨過後，天空變得清澈，出現美麗的彩虹。"
+      },
+      {
+        "en": "In summer, the weather becomes warm and sometimes windy.",
+        "zh": "夏天來臨，天氣變得溫暖，偶爾會有風。"
+      },
+      {
+        "en": "Children like to play at the beach when it is sunny, but they watch for a typhoon far away.",
+        "zh": "孩子們喜歡在陽光明媚的時候去海灘玩，但會留意遠方的颱風。"
+      },
+      {
+        "en": "Autumn brings cool air and cloudy skies, perfect for flying a kite.",
+        "zh": "秋天帶來涼爽的空氣和多雲的天空，非常適合放風箏。"
+      },
+      {
+        "en": "The wind blows gently, and the kite dances high above the fields.",
+        "zh": "微風輕拂，風箏在田野上空高高舞動。"
+      },
+      {
+        "en": "When winter comes, the weather turns cool and sometimes snowy.",
+        "zh": "冬天到來時，天氣變得涼爽，偶爾會下雪。"
+      },
+      {
+        "en": "When it is rainy, kids wear their coats and use an umbrella.",
+        "zh": "當天氣下雨時，孩子們會穿上外套並使用雨傘。"
+      },
+      {
+        "en": "No matter the season, we always talk about the weather and enjoy nature.",
+        "zh": "不管是哪個季節，我們總是談論天氣，享受大自然的美好。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 用 What's the weather like? 來問天氣",
+      "explain_zh": "這個句型用來詢問現在的天氣狀況，回答使用 It's + 形容詞。",
+      "table": [
+        [
+          "問句",
+          "答句",
+          "形容詞"
+        ],
+        [
+          "What's the weather like?",
+          "It's sunny.",
+          "sunny"
+        ],
+        [
+          "What's the weather like?",
+          "It's rainy.",
+          "rainy"
+        ],
+        [
+          "What's the weather like?",
+          "It's windy.",
+          "windy"
+        ],
+        [
+          "What's the weather like?",
+          "It's cloudy.",
+          "cloudy"
+        ],
+        [
+          "What's the weather like?",
+          "It's cool.",
+          "cool"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 It's + 形容詞 描述天氣",
+      "explain_zh": "回答時直接用 It's 加上形容詞，形容詞放在 It's 後面，不需要加名詞。",
+      "examples": [
+        {
+          "en": "It's warm today.",
+          "zh": "今天很暖和。"
+        },
+        {
+          "en": "It's bright in the morning.",
+          "zh": "早上很明亮。"
+        },
+        {
+          "en": "It's clear after the rain.",
+          "zh": "雨後天空很清澈。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "今天的天氣",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "What's the weather like? It's sunny today.",
+        "zh": "今天天氣怎麼樣？今天是晴天。"
+      },
+      {
+        "sp": "小華",
+        "en": "Really? I love sunny days.",
+        "zh": "真的嗎？我喜歡晴天。"
+      },
+      {
+        "sp": "小明",
+        "en": "Let's go to the park and fly a kite.",
+        "zh": "我們去公園放風箏吧。"
+      },
+      {
+        "sp": "小華",
+        "en": "Good idea! But bring an umbrella just in case.",
+        "zh": "好主意！不過萬一帶把雨傘好了。"
+      },
+      {
+        "sp": "小明",
+        "en": "Why? Is it going to rain?",
+        "zh": "為什麼？會下雨嗎？"
+      },
+      {
+        "sp": "小華",
+        "en": "The forecast says it might be windy later.",
+        "zh": "天氣預報說以後可能會有風。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "What's the weather like? It's sunny.",
+      "zh": "天氣怎麼樣？是晴天。"
+    },
+    {
+      "en": "What's the weather like? It's rainy.",
+      "zh": "天氣怎麼樣？是雨天。"
+    },
+    {
+      "en": "What's the weather like? It's windy.",
+      "zh": "天氣怎麼樣？是風天。"
+    },
+    {
+      "en": "What's the weather like? It's cloudy.",
+      "zh": "天氣怎麼樣？是陰天。"
+    },
+    {
+      "en": "What's the weather like? It's cool.",
+      "zh": "天氣怎麼樣？是涼爽的。"
+    },
+    {
+      "en": "What's the weather like? It's warm.",
+      "zh": "天氣怎麼樣？是溫暖的。"
+    },
+    {
+      "en": "What's the weather like? It's bright.",
+      "zh": "天氣怎麼樣？是明亮的。"
+    },
+    {
+      "en": "What's the weather like? It's clear.",
+      "zh": "天氣怎麼樣？是清澈的。"
+    }
+  ],
+  "no": 31,
+  "theme": "Weather, Seasons & Nature",
+  "theme_zh": "天氣‧季節與自然",
+  "words": [
+    {
+      "en": "season",
+      "zh": "季節"
+    },
+    {
+      "en": "spring",
+      "zh": "春天"
+    },
+    {
+      "en": "summer",
+      "zh": "夏天"
+    },
+    {
+      "en": "autumn/fall",
+      "zh": "秋天"
+    },
+    {
+      "en": "winter",
+      "zh": "冬天"
+    },
+    {
+      "en": "weather",
+      "zh": "天氣"
+    },
+    {
+      "en": "rain",
+      "zh": "雨"
+    },
+    {
+      "en": "snow",
+      "zh": "雪"
+    },
+    {
+      "en": "wind",
+      "zh": "風"
+    },
+    {
+      "en": "sunny",
+      "zh": "晴天的"
+    },
+    {
+      "en": "rainy",
+      "zh": "下雨的"
+    },
+    {
+      "en": "windy",
+      "zh": "風大的"
+    },
+    {
+      "en": "cloudy",
+      "zh": "陰天的"
+    },
+    {
+      "en": "cool",
+      "zh": "涼快的"
+    },
+    {
+      "en": "warm",
+      "zh": "溫暖的"
+    },
+    {
+      "en": "bright",
+      "zh": "晴朗的"
+    },
+    {
+      "en": "clear",
+      "zh": "清澈的"
+    },
+    {
+      "en": "typhoon",
+      "zh": "颱風"
+    },
+    {
+      "en": "rainbow",
+      "zh": "彩虹"
+    },
+    {
+      "en": "umbrella",
+      "zh": "雨傘"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "季節的英文是什麼?",
+        "opts": [
+          "season",
+          "spring",
+          "summer",
+          "autumn"
+        ],
+        "ans": "season"
+      },
+      {
+        "q": "春天的英文是什麼?",
+        "opts": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "ans": "spring"
+      },
+      {
+        "q": "夏天的英文是什麼?",
+        "opts": [
+          "summer",
+          "autumn",
+          "winter",
+          "spring"
+        ],
+        "ans": "summer"
+      },
+      {
+        "q": "秋天的英文是什麼?",
+        "opts": [
+          "autumn",
+          "winter",
+          "spring",
+          "summer"
+        ],
+        "ans": "autumn"
+      },
+      {
+        "q": "冬天的英文是什麼?",
+        "opts": [
+          "winter",
+          "spring",
+          "summer",
+          "autumn"
+        ],
+        "ans": "winter"
+      },
+      {
+        "q": "下雨的英文是什麼?",
+        "opts": [
+          "rain",
+          "snow",
+          "wind",
+          "sunny"
+        ],
+        "ans": "rain"
+      },
+      {
+        "q": "下雪的英文是什麼?",
+        "opts": [
+          "snow",
+          "rain",
+          "wind",
+          "sunny"
+        ],
+        "ans": "snow"
+      },
+      {
+        "q": "風大的英文是什麼?",
+        "opts": [
+          "windy",
+          "rainy",
+          "sunny",
+          "cloudy"
+        ],
+        "ans": "windy"
+      },
+      {
+        "q": "晴朗的英文是什麼?",
+        "opts": [
+          "clear",
+          "cloudy",
+          "rainy",
+          "sunny"
+        ],
+        "ans": "clear"
+      },
+      {
+        "q": "涼爽的英文是什麼?",
+        "opts": [
+          "cool",
+          "warm",
+          "bright",
+          "clear"
+        ],
+        "ans": "cool"
+      },
+      {
+        "q": "問天氣的英文句子是什麼?",
+        "opts": [
+          "What's the weather like?",
+          "What's the season like?",
+          "What's the rain like?",
+          "What's the wind like?"
+        ],
+        "ans": "What's the weather like?"
+      },
+      {
+        "q": "回答天氣晴朗時，應該說什麼?",
+        "opts": [
+          "It's sunny.",
+          "It's rain.",
+          "It's wind.",
+          "It's snow."
+        ],
+        "ans": "It's sunny."
+      },
+      {
+        "q": "回答天氣下雨時，應該說什麼?",
+        "opts": [
+          "It's rainy.",
+          "It's sunny.",
+          "It's windy.",
+          "It's cloudy."
+        ],
+        "ans": "It's rainy."
+      },
+      {
+        "q": "回答天氣有風時，應該說什麼?",
+        "opts": [
+          "It's windy.",
+          "It's rainy.",
+          "It's sunny.",
+          "It's cloudy."
+        ],
+        "ans": "It's windy."
+      },
+      {
+        "q": "回答天氣多雲時，應該說什麼?",
+        "opts": [
+          "It's cloudy.",
+          "It's sunny.",
+          "It's rainy.",
+          "It's windy."
+        ],
+        "ans": "It's cloudy."
+      },
+      {
+        "q": "夏天的天氣通常是什麼?",
+        "opts": [
+          "It's warm.",
+          "It's cool.",
+          "It's rainy.",
+          "It's bright."
+        ],
+        "ans": "It's warm."
+      },
+      {
+        "q": "冬天的天氣通常是什麼?",
+        "opts": [
+          "It's cool.",
+          "It's warm.",
+          "It's sunny.",
+          "It's rainy."
+        ],
+        "ans": "It's cool."
+      },
+      {
+        "q": "秋天的天氣通常是什麼?",
+        "opts": [
+          "It's cool.",
+          "It's warm.",
+          "It's bright.",
+          "It's cloudy."
+        ],
+        "ans": "It's cool."
+      },
+      {
+        "q": "春天的天氣通常是什麼?",
+        "opts": [
+          "It's warm.",
+          "It's cool.",
+          "It's sunny.",
+          "It's rainy."
+        ],
+        "ans": "It's warm."
+      },
+      {
+        "q": "當天氣很亮時，應該說什麼?",
+        "opts": [
+          "It's bright.",
+          "It's clear.",
+          "It's cloudy.",
+          "It's rainy."
+        ],
+        "ans": "It's bright."
+      },
+      {
+        "q": "你看到外面很亮，天氣很好。你應該怎麼說天氣？",
+        "opts": [
+          "It's bright.",
+          "It's rainy.",
+          "It's windy.",
+          "It's snowy."
+        ],
+        "ans": "It's bright."
+      },
+      {
+        "q": "今天天氣多雲，你看不到太陽。你應該怎麼說？",
+        "opts": [
+          "It's cloudy.",
+          "It's sunny.",
+          "It's warm.",
+          "It's cool."
+        ],
+        "ans": "It's cloudy."
+      },
+      {
+        "q": "外面在下雪，你想說天氣在下雪。",
+        "opts": [
+          "It's snow.",
+          "It's snowy.",
+          "It's rainy.",
+          "It's windy."
+        ],
+        "ans": "It's snowy."
+      },
+      {
+        "q": "風很大，你想說天氣有風。",
+        "opts": [
+          "It's windy.",
+          "It's wind.",
+          "It's sunny.",
+          "It's rainy."
+        ],
+        "ans": "It's windy."
+      },
+      {
+        "q": "天氣很熱，你想說天氣很熱。",
+        "opts": [
+          "It's warm.",
+          "It's cool.",
+          "It's bright.",
+          "It's clear."
+        ],
+        "ans": "It's warm."
+      },
+      {
+        "q": "天氣很涼，你想說天氣很涼。",
+        "opts": [
+          "It's cool.",
+          "It's warm.",
+          "It's bright.",
+          "It's clear."
+        ],
+        "ans": "It's cool."
+      },
+      {
+        "q": "天氣很好，又亮又乾淨。",
+        "opts": [
+          "It's clear.",
+          "It's cloudy.",
+          "It's rainy.",
+          "It's snowy."
+        ],
+        "ans": "It's clear."
+      },
+      {
+        "q": "你想問朋友今天的天氣如何。",
+        "opts": [
+          "What's the weather like?",
+          "What's the season like?",
+          "What's the rainbow like?",
+          "What's the umbrella like?"
+        ],
+        "ans": "What's the weather like?"
+      },
+      {
+        "q": "你想說今天的天氣晴朗且陽光明媚。",
+        "opts": [
+          "It's sunny.",
+          "It's rainy.",
+          "It's windy.",
+          "It's snowy."
+        ],
+        "ans": "It's sunny."
+      },
+      {
+        "q": "你想說今天在下雨，需要帶傘。",
+        "opts": [
+          "It's rainy.",
+          "It's sunny.",
+          "It's windy.",
+          "It's snowy."
+        ],
+        "ans": "It's rainy."
+      }
+    ],
+    "fill": [
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "sunny"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "rainy"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "windy"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "cloudy"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "cool"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "warm"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "bright"
+      },
+      {
+        "q": "What's the weather like? It's ____。（今天天氣怎樣？它是____）",
+        "ans": "clear"
+      },
+      {
+        "q": "The ____ is nice today。（今天的____很好）",
+        "ans": "weather"
+      },
+      {
+        "q": "We need an ____ when it rains。（下雨時我們需要____）",
+        "ans": "umbrella"
+      }
+    ],
+    "translate": [
+      {
+        "q": "天氣晴朗。",
+        "ans": "It's sunny."
+      },
+      {
+        "q": "天氣下雨。",
+        "ans": "It's rainy."
+      },
+      {
+        "q": "天氣有風。",
+        "ans": "It's windy."
+      },
+      {
+        "q": "天氣多雲。",
+        "ans": "It's cloudy."
+      },
+      {
+        "q": "天氣涼爽。",
+        "ans": "It's cool."
+      },
+      {
+        "q": "天氣溫暖。",
+        "ans": "It's warm."
+      },
+      {
+        "q": "天氣明亮。",
+        "ans": "It's bright."
+      },
+      {
+        "q": "天氣晴明。",
+        "ans": "It's clear."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / sunny / It's",
+        "ans": "It's sunny."
+      },
+      {
+        "q": ". / rainy / It's",
+        "ans": "It's rainy."
+      },
+      {
+        "q": "windy / . / It's",
+        "ans": "It's windy."
+      },
+      {
+        "q": "cloudy / . / It's",
+        "ans": "It's cloudy."
+      },
+      {
+        "q": "cool / It's / .",
+        "ans": "It's cool."
+      },
+      {
+        "q": "warm / It's / .",
+        "ans": "It's warm."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

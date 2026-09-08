@@ -1,0 +1,655 @@
+{
+  "title_en": "My Town",
+  "title_zh": "我的城鎮",
+  "grammar": "使用 Is there a…? 與 go to the… 詢問與描述地點。",
+  "intro_zh": "本課將讓學生學會描述自己住在哪裡，詢問附近是否有商店、超級市場或圖書館等場所，並練習說出想去的地方，例如劇院、醫院或工廠。",
+  "can_do": [
+    "能用 Is there a…? 詢問附近是否有某種場所。",
+    "能用 go to the… 說出自己想去的地方。",
+    "能根據地圖說出自己的住址與所在城市。"
+  ],
+  "reading": {
+    "title_en": "A Day in My Town",
+    "title_zh": "我在城鎮的一天",
+    "sentences": [
+      {
+        "en": "I live in Taoyuan, and my address is near a convenient store.",
+        "zh": "我住在桃園，我的地址靠近一間便利商店。"
+      },
+      {
+        "en": "Is there a shop close to my house?",
+        "zh": "我家附近有商店嗎？"
+      },
+      {
+        "en": "Yes, there is a shop, a supermarket, and a department store.",
+        "zh": "有，有一間商店、一家超級市場和一家百貨公司。"
+      },
+      {
+        "en": "I often go to the library to read books.",
+        "zh": "我常去圖書館看書。"
+      },
+      {
+        "en": "On Saturdays, my family goes to the market to buy fresh vegetables.",
+        "zh": "週六，我的家人會去市場買新鮮蔬菜。"
+      },
+      {
+        "en": "We also visit the theater to watch a movie.",
+        "zh": "我們也會去劇院看電影。"
+      },
+      {
+        "en": "If someone feels sick, we can go to the hospital.",
+        "zh": "如果有人感到不適，我們可以去醫院。"
+      },
+      {
+        "en": "My uncle works in a factory that makes toys.",
+        "zh": "我的叔叔在一間製造玩具的工廠工作。"
+      },
+      {
+        "en": "Look at the map of Taiwan; you can see Taipei, New Taipei, Beitou, Taoyuan, Taichung, Tainan, and Kaohsiung.",
+        "zh": "看看台灣的地圖，你可以看到台北、新北、北投、桃園、台中、台南和高雄。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① Is there a…? 的問答方式",
+      "explain_zh": "用來詢問某地是否有某種設施，回答用 Yes, there is. / No, there isn't.",
+      "table": [
+        [
+          "問句",
+          "肯定回答",
+          "否定回答"
+        ],
+        [
+          "Is there a convenience store?",
+          "Yes, there is.",
+          "No, there isn't."
+        ],
+        [
+          "Is there a hospital?",
+          "Yes, there is.",
+          "No, there isn't."
+        ],
+        [
+          "Is there a theater?",
+          "Yes, there is.",
+          "No, there isn't."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② go to the… 的用法",
+      "explain_zh": "用來說明要去某地點，後面接地點名詞，常與 Is there a…? 結合使用。",
+      "examples": [
+        {
+          "en": "I go to the library to read books.",
+          "zh": "我去圖書館看書。"
+        },
+        {
+          "en": "She goes to the department store after school.",
+          "zh": "她放學後去百貨公司。"
+        },
+        {
+          "en": "We go to the market on Saturday morning.",
+          "zh": "我們星期六早上去市場。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在鎮上詢問設施",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "Is there a supermarket near your house?",
+        "zh": "你家附近有超級市場嗎?"
+      },
+      {
+        "sp": "小華",
+        "en": "Yes, there is. It’s on Zhongshan Road.",
+        "zh": "有的，就在中山路上。"
+      },
+      {
+        "sp": "小明",
+        "en": "Where do you go to buy books?",
+        "zh": "你去哪裡買書？"
+      },
+      {
+        "sp": "小華",
+        "en": "I go to the bookstore in the department store.",
+        "zh": "我去百貨公司裡的書店。"
+      },
+      {
+        "sp": "老師",
+        "en": "Remember, we can say “go to the…” when we talk about destinations.",
+        "zh": "記得，談論目的地時可以用 “go to the…”。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Is there a convenience store on Beitou Road?",
+      "zh": "北投路上有便利商店嗎?"
+    },
+    {
+      "en": "Yes, there is a supermarket near the market.",
+      "zh": "有，市場附近有超級市場。"
+    },
+    {
+      "en": "Where do you live? I live in Taoyuan.",
+      "zh": "你住在哪裡？我住在桃園。"
+    },
+    {
+      "en": "Do you go to the library after school?",
+      "zh": "放學後你會去圖書館嗎？"
+    },
+    {
+      "en": "I go to the department store to buy clothes.",
+      "zh": "我去百貨公司買衣服。"
+    },
+    {
+      "en": "Is there a theater in Kaohsiung?",
+      "zh": "高雄有劇院嗎？"
+    },
+    {
+      "en": "No, there isn’t a factory in my town.",
+      "zh": "我們鎮裡沒有工廠。"
+    },
+    {
+      "en": "Can you show me the address on the map?",
+      "zh": "你能在地圖上給我看地址嗎？"
+    }
+  ],
+  "no": 47,
+  "theme": "My Town & Country",
+  "theme_zh": "城鎮與國家",
+  "words": [
+    {
+      "en": "convenient store",
+      "zh": "便利商店"
+    },
+    {
+      "en": "department store",
+      "zh": "百貨公司"
+    },
+    {
+      "en": "library",
+      "zh": "圖書館"
+    },
+    {
+      "en": "market",
+      "zh": "市場"
+    },
+    {
+      "en": "shop",
+      "zh": "商店"
+    },
+    {
+      "en": "store",
+      "zh": "店舖"
+    },
+    {
+      "en": "supermarket",
+      "zh": "超級市場"
+    },
+    {
+      "en": "theater",
+      "zh": "劇院"
+    },
+    {
+      "en": "hospital",
+      "zh": "醫院"
+    },
+    {
+      "en": "factory",
+      "zh": "工廠"
+    },
+    {
+      "en": "map",
+      "zh": "地圖"
+    },
+    {
+      "en": "address",
+      "zh": "地址"
+    },
+    {
+      "en": "Taiwan",
+      "zh": "台灣"
+    },
+    {
+      "en": "Taipei",
+      "zh": "台北"
+    },
+    {
+      "en": "New Taipei",
+      "zh": "新北"
+    },
+    {
+      "en": "Beitou",
+      "zh": "北投"
+    },
+    {
+      "en": "Taoyuan",
+      "zh": "桃園"
+    },
+    {
+      "en": "Taichung",
+      "zh": "台中"
+    },
+    {
+      "en": "Tainan",
+      "zh": "台南"
+    },
+    {
+      "en": "Kaohsiung",
+      "zh": "高雄"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "便利商店的英文是什麼?",
+        "opts": [
+          "convenient store",
+          "department store",
+          "library",
+          "market"
+        ],
+        "ans": "convenient store"
+      },
+      {
+        "q": "百貨公司的英文是什麼?",
+        "opts": [
+          "convenient store",
+          "department store",
+          "library",
+          "market"
+        ],
+        "ans": "department store"
+      },
+      {
+        "q": "圖書館的英文是什麼?",
+        "opts": [
+          "shop",
+          "store",
+          "supermarket",
+          "library"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "市場的英文是什麼?",
+        "opts": [
+          "market",
+          "theater",
+          "hospital",
+          "factory"
+        ],
+        "ans": "market"
+      },
+      {
+        "q": "商店的英文是什麼?",
+        "opts": [
+          "shop",
+          "store",
+          "supermarket",
+          "theater"
+        ],
+        "ans": "shop"
+      },
+      {
+        "q": "超級市場的英文是什麼?",
+        "opts": [
+          "supermarket",
+          "hospital",
+          "factory",
+          "convenient store"
+        ],
+        "ans": "supermarket"
+      },
+      {
+        "q": "劇院的英文是什麼?",
+        "opts": [
+          "theater",
+          "library",
+          "market",
+          "department store"
+        ],
+        "ans": "theater"
+      },
+      {
+        "q": "醫院的英文是什麼?",
+        "opts": [
+          "hospital",
+          "factory",
+          "shop",
+          "store"
+        ],
+        "ans": "hospital"
+      },
+      {
+        "q": "工廠的英文是什麼?",
+        "opts": [
+          "factory",
+          "supermarket",
+          "theater",
+          "library"
+        ],
+        "ans": "factory"
+      },
+      {
+        "q": "店鋪的英文是什麼?",
+        "opts": [
+          "store",
+          "shop",
+          "market",
+          "theater"
+        ],
+        "ans": "store"
+      },
+      {
+        "q": "請選擇適當的單字填入：Is there a ______，你可以在那裡借書。",
+        "opts": [
+          "convenient store",
+          "department store",
+          "library",
+          "market"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "請選擇適當的單字填入：go to the ______ 買衣服。",
+        "opts": [
+          "department store",
+          "supermarket",
+          "theater",
+          "hospital"
+        ],
+        "ans": "department store"
+      },
+      {
+        "q": "請選擇適當的單字填入：Is there a ______，你可以在那裡看電影。",
+        "opts": [
+          "theater",
+          "factory",
+          "hospital",
+          "market"
+        ],
+        "ans": "theater"
+      },
+      {
+        "q": "請選擇適當的單字填入：go to the ______ 看病。",
+        "opts": [
+          "hospital",
+          "factory",
+          "library",
+          "market"
+        ],
+        "ans": "hospital"
+      },
+      {
+        "q": "請選擇適當的單字填入：Is there a ______，你可以在那裡借地圖。",
+        "opts": [
+          "library",
+          "theater",
+          "factory",
+          "hospital"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "請選擇適當的單字填入：go to the ______ 看地圖。",
+        "opts": [
+          "library",
+          "market",
+          "factory",
+          "theater"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "請選擇適當的單字填入：Is there a ______，你可以在那裡看到很多機器在製造玩具。",
+        "opts": [
+          "factory",
+          "hospital",
+          "department store",
+          "theater"
+        ],
+        "ans": "factory"
+      },
+      {
+        "q": "請選擇適當的單字填入：go to the ______ 看表演。",
+        "opts": [
+          "theater",
+          "market",
+          "factory",
+          "hospital"
+        ],
+        "ans": "theater"
+      },
+      {
+        "q": "請選擇適當的單字填入：Is there a ______，顯示台北 101 的地址。",
+        "opts": [
+          "map",
+          "theater",
+          "factory",
+          "hospital"
+        ],
+        "ans": "map"
+      },
+      {
+        "q": "請選擇適當的單字填入：go to the ______ 寄信。",
+        "opts": [
+          "convenient store",
+          "library",
+          "market",
+          "theater"
+        ],
+        "ans": "convenient store"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡看地圖",
+        "opts": [
+          "library",
+          "market",
+          "department store",
+          "theater"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡買水果",
+        "opts": [
+          "market",
+          "supermarket",
+          "convenient store",
+          "library"
+        ],
+        "ans": "market"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡看書",
+        "opts": [
+          "library",
+          "department store",
+          "supermarket",
+          "theater"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡買衣服",
+        "opts": [
+          "department store",
+          "shop",
+          "supermarket",
+          "factory"
+        ],
+        "ans": "department store"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡看表演",
+        "opts": [
+          "theater",
+          "hospital",
+          "factory",
+          "market"
+        ],
+        "ans": "theater"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡買藥",
+        "opts": [
+          "hospital",
+          "department store",
+          "supermarket",
+          "library"
+        ],
+        "ans": "hospital"
+      },
+      {
+        "q": "go to the ______ 看醫生",
+        "opts": [
+          "hospital",
+          "department store",
+          "supermarket",
+          "library"
+        ],
+        "ans": "hospital"
+      },
+      {
+        "q": "go to the ______ 買禮物",
+        "opts": [
+          "department store",
+          "shop",
+          "supermarket",
+          "theater"
+        ],
+        "ans": "department store"
+      },
+      {
+        "q": "go to the ______ 找地圖",
+        "opts": [
+          "library",
+          "market",
+          "department store",
+          "theater"
+        ],
+        "ans": "library"
+      },
+      {
+        "q": "Is there a ______？你可以在那裡看到台北 101 的地圖",
+        "opts": [
+          "map",
+          "library",
+          "department store",
+          "theater"
+        ],
+        "ans": "map"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I go to the ____.（我去圖書館。）",
+        "ans": "library"
+      },
+      {
+        "q": "I go to the ____.（我去市場。）",
+        "ans": "market"
+      },
+      {
+        "q": "I go to the ____.（我去商店。）",
+        "ans": "shop"
+      },
+      {
+        "q": "I go to the ____.（我去店。）",
+        "ans": "store"
+      },
+      {
+        "q": "I go to the ____.（我去超級市場。）",
+        "ans": "supermarket"
+      },
+      {
+        "q": "I go to the ____.（我去劇院。）",
+        "ans": "theater"
+      },
+      {
+        "q": "I go to the ____.（我去醫院。）",
+        "ans": "hospital"
+      },
+      {
+        "q": "I go to the ____.（我去工廠。）",
+        "ans": "factory"
+      },
+      {
+        "q": "I go to the ____.（我去地圖。）",
+        "ans": "map"
+      },
+      {
+        "q": "I go to the ____.（我去地址。）",
+        "ans": "address"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我去圖書館。",
+        "ans": "I go to the library."
+      },
+      {
+        "q": "我去市場。",
+        "ans": "I go to the market."
+      },
+      {
+        "q": "我去商店。",
+        "ans": "I go to the shop."
+      },
+      {
+        "q": "我去店。",
+        "ans": "I go to the store."
+      },
+      {
+        "q": "我去超級市場。",
+        "ans": "I go to the supermarket."
+      },
+      {
+        "q": "我去劇院。",
+        "ans": "I go to the theater."
+      },
+      {
+        "q": "我去醫院。",
+        "ans": "I go to the hospital."
+      },
+      {
+        "q": "我去工廠。",
+        "ans": "I go to the factory."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "library / ? / there / Is / a",
+        "ans": "Is there a library?"
+      },
+      {
+        "q": "Is / market / there / a / ?",
+        "ans": "Is there a market?"
+      },
+      {
+        "q": "a / ? / there / Is / shop",
+        "ans": "Is there a shop?"
+      },
+      {
+        "q": "store / a / there / ? / Is",
+        "ans": "Is there a store?"
+      },
+      {
+        "q": "supermarket / a / there / Is / ?",
+        "ans": "Is there a supermarket?"
+      },
+      {
+        "q": "Is / theater / a / ? / there",
+        "ans": "Is there a theater?"
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

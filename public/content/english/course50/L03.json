@@ -1,0 +1,687 @@
+{
+  "title_en": "Hello & Me",
+  "title_zh": "問候與自我介紹",
+  "grammar": "練習使用 be 動詞 (am/is/are) 與主詞代名詞 I, you, he, she, it, we, they 來說 I am…、You are…。",
+  "intro_zh": "本課將學習用 be 動詞進行問候與自我介紹，練習說出名字、年齡、家鄉等資訊，並以友善方式認識新朋友。此外，我們會學習使用數字一到十描述禮物數量，以及眨眼、悄悄說等動詞表達細膩動作。",
+  "can_do": [
+    "能使用 am/is/are 正確說出 I am…、You are…。",
+    "能以完整句子進行簡單的問候與自我介紹。",
+    "能使用數字一到十及 wink、whisper 等詞彙描述日常情境。"
+  ],
+  "reading": {
+    "title_en": "A Friendly Day",
+    "title_zh": "友好的一天",
+    "sentences": [
+      {
+        "en": "Hello! I am Mei, and this is my neighbor, Mr. Lin.",
+        "zh": "嗨！我是 Mei，這是我的鄰居林先生。"
+      },
+      {
+        "en": "We give a warm greeting when we meet.",
+        "zh": "我們見面時會給予熱情的問候。"
+      },
+      {
+        "en": "Mr. Lin likes to wink when he tells a secret.",
+        "zh": "林先生喜歡在告訴秘密時眨眼。"
+      },
+      {
+        "en": "Sometimes he whispers the secret to me.",
+        "zh": "有時他會悄悄地把秘密告訴我。"
+      },
+      {
+        "en": "I introduce myself with my nickname, ‘Little Star’.",
+        "zh": "我以我的綽號『小星星』介紹自己。"
+      },
+      {
+        "en": "My birthday is in May, and I am seven years old.",
+        "zh": "我的生日在五月，我今年七歲。"
+      },
+      {
+        "en": "My hometown is Taichung, a beautiful city in central Taiwan.",
+        "zh": "我的家鄉是台中，一座位於台灣中部的美麗城市。"
+      },
+      {
+        "en": "Today we have three guests: a lady, a boy, and a girl.",
+        "zh": "今天我們有三位客人：一位女士、一位男孩和一位女孩。"
+      },
+      {
+        "en": "They bring gifts numbered from one to ten for our game.",
+        "zh": "他們帶來從一到十編號的禮物，供我們玩遊戲。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① be 動詞的變化與主詞代名詞對應",
+      "explain_zh": "說明 am、is、are 與 I、you、he、she、it、we、they 的對應規則。",
+      "table": [
+        [
+          "主詞代名詞",
+          "be 動詞",
+          "例句"
+        ],
+        [
+          "I",
+          "am",
+          "I am a student."
+        ],
+        [
+          "you",
+          "are",
+          "You are friendly."
+        ],
+        [
+          "he",
+          "is",
+          "He is tall."
+        ],
+        [
+          "she",
+          "is",
+          "She is kind."
+        ],
+        [
+          "it",
+          "is",
+          "It is a book."
+        ],
+        [
+          "we",
+          "are",
+          "We are classmates."
+        ],
+        [
+          "they",
+          "are",
+          "They are from Taiwan."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 be 動詞說出自己和他人的狀態",
+      "explain_zh": "練習用 I am / You are / He is / She is / It is / We are / They are 來描述年齡、喜好、所屬等。",
+      "examples": [
+        {
+          "en": "I am seven years old.",
+          "zh": "我七歲。"
+        },
+        {
+          "en": "You are good at drawing.",
+          "zh": "你畫畫很好。"
+        },
+        {
+          "en": "She is from Taipei.",
+          "zh": "她來自台北。"
+        },
+        {
+          "en": "We are ready for the game.",
+          "zh": "我們準備好參加比賽。"
+        },
+        {
+          "en": "They are my neighbours.",
+          "zh": "他們是我的鄰居。"
+        },
+        {
+          "en": "It is sunny today.",
+          "zh": "今天天氣晴朗。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡認識新同學",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "Hello! I am Ming.",
+        "zh": "你好！我叫明明。"
+      },
+      {
+        "sp": "小華",
+        "en": "Hi Ming! You are in my class.",
+        "zh": "嗨！明明，你在我班。"
+      },
+      {
+        "sp": "老師",
+        "en": "We are all happy to meet you.",
+        "zh": "我們都很高興認識你。"
+      },
+      {
+        "sp": "小明",
+        "en": "Thank you! They are very friendly.",
+        "zh": "謝謝！他們都很友善。"
+      },
+      {
+        "sp": "小華",
+        "en": "It is nice to have a new friend.",
+        "zh": "有新朋友真好。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I am nine years old.",
+      "zh": "我九歲。"
+    },
+    {
+      "en": "You are my best friend.",
+      "zh": "你是我最好的朋友。"
+    },
+    {
+      "en": "He is good at math.",
+      "zh": "他數學很好。"
+    },
+    {
+      "en": "She is from Kaohsiung.",
+      "zh": "她來自高雄。"
+    },
+    {
+      "en": "It is a cute cat.",
+      "zh": "這是一隻可愛的貓。"
+    },
+    {
+      "en": "We are ready for lunch.",
+      "zh": "我們準備好吃午餐了。"
+    },
+    {
+      "en": "They are my neighbours.",
+      "zh": "他們是我的鄰居。"
+    },
+    {
+      "en": "Be quiet, please.",
+      "zh": "請安靜。"
+    }
+  ],
+  "no": 3,
+  "theme": "Hello & Me",
+  "theme_zh": "問候與自我介紹",
+  "words": [
+    {
+      "en": "wink",
+      "zh": "眨眼"
+    },
+    {
+      "en": "whisper",
+      "zh": "悄悄說"
+    },
+    {
+      "en": "greeting",
+      "zh": "問候"
+    },
+    {
+      "en": "introduce",
+      "zh": "介紹"
+    },
+    {
+      "en": "nickname",
+      "zh": "綽號"
+    },
+    {
+      "en": "birthday",
+      "zh": "生日"
+    },
+    {
+      "en": "hometown",
+      "zh": "家鄉"
+    },
+    {
+      "en": "neighbor",
+      "zh": "鄰居"
+    },
+    {
+      "en": "guest",
+      "zh": "客人"
+    },
+    {
+      "en": "lady",
+      "zh": "女士"
+    },
+    {
+      "en": "one",
+      "zh": "一"
+    },
+    {
+      "en": "two",
+      "zh": "二"
+    },
+    {
+      "en": "three",
+      "zh": "三"
+    },
+    {
+      "en": "four",
+      "zh": "四"
+    },
+    {
+      "en": "five",
+      "zh": "五"
+    },
+    {
+      "en": "six",
+      "zh": "六"
+    },
+    {
+      "en": "seven",
+      "zh": "七"
+    },
+    {
+      "en": "eight",
+      "zh": "八"
+    },
+    {
+      "en": "nine",
+      "zh": "九"
+    },
+    {
+      "en": "ten",
+      "zh": "十"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "wink 的英文是？",
+        "opts": [
+          "wink",
+          "whisper",
+          "greeting",
+          "introduce"
+        ],
+        "ans": "wink"
+      },
+      {
+        "q": "whisper 的英文是？",
+        "opts": [
+          "whisper",
+          "wink",
+          "greeting",
+          "introduce"
+        ],
+        "ans": "wink"
+      },
+      {
+        "q": "greeting 的英文是？",
+        "opts": [
+          "greeting",
+          "wink",
+          "whisper",
+          "introduce"
+        ],
+        "ans": "greeting"
+      },
+      {
+        "q": "introduce 的英文是？",
+        "opts": [
+          "introduce",
+          "wink",
+          "whisper",
+          "greeting"
+        ],
+        "ans": "introduce"
+      },
+      {
+        "q": "nickname 的英文是？",
+        "opts": [
+          "nickname",
+          "birthday",
+          "hometown",
+          "neighbor"
+        ],
+        "ans": "nickname"
+      },
+      {
+        "q": "birthday 的英文是？",
+        "opts": [
+          "birthday",
+          "nickname",
+          "hometown",
+          "neighbor"
+        ],
+        "ans": "birthday"
+      },
+      {
+        "q": "hometown 的英文是？",
+        "opts": [
+          "hometown",
+          "nickname",
+          "birthday",
+          "neighbor"
+        ],
+        "ans": "hometown"
+      },
+      {
+        "q": "neighbor 的英文是？",
+        "opts": [
+          "neighbor",
+          "nickname",
+          "birthday",
+          "hometown"
+        ],
+        "ans": "neighbor"
+      },
+      {
+        "q": "guest 的英文是？",
+        "opts": [
+          "guest",
+          "lady",
+          "one",
+          "two"
+        ],
+        "ans": "guest"
+      },
+      {
+        "q": "lady 的英文是？",
+        "opts": [
+          "lady",
+          "guest",
+          "one",
+          "two"
+        ],
+        "ans": "lady"
+      },
+      {
+        "q": "I ___ one.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "I"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "You ___ two.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "you"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "He ___ three.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "he"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "She ___ four.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "she"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "It ___ five.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "it"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "We ___ six.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "we"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "They ___ seven.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "they"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "I ___ eight.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "I"
+        ],
+        "ans": "am"
+      },
+      {
+        "q": "You ___ nine.",
+        "opts": [
+          "are",
+          "am",
+          "is",
+          "you"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "He ___ ten.",
+        "opts": [
+          "is",
+          "am",
+          "are",
+          "he"
+        ],
+        "ans": "is"
+      },
+      {
+        "q": "當你想悄悄說話時，你會做什麼？",
+        "opts": [
+          "wink",
+          "whisper",
+          "greeting",
+          "introduce"
+        ],
+        "ans": "whisper"
+      },
+      {
+        "q": "見到新朋友時，你通常會先說什麼？",
+        "opts": [
+          "greeting",
+          "wink",
+          "whisper",
+          "nickname"
+        ],
+        "ans": "greeting"
+      },
+      {
+        "q": "給某人一個特別的稱呼，這個稱呼叫什麼？",
+        "opts": [
+          "nickname",
+          "birthday",
+          "hometown",
+          "guest"
+        ],
+        "ans": "nickname"
+      },
+      {
+        "q": "你出生的日期叫什麼？",
+        "opts": [
+          "birthday",
+          "whisper",
+          "wink",
+          "lady"
+        ],
+        "ans": "birthday"
+      },
+      {
+        "q": "你長大的地方叫什麼？",
+        "opts": [
+          "hometown",
+          "neighbor",
+          "guest",
+          "lady"
+        ],
+        "ans": "hometown"
+      },
+      {
+        "q": "住在你隔壁的人叫什麼？",
+        "opts": [
+          "neighbor",
+          "wink",
+          "whisper",
+          "greeting"
+        ],
+        "ans": "neighbor"
+      },
+      {
+        "q": "來你家參觀的人叫什麼？",
+        "opts": [
+          "guest",
+          "lady",
+          "one",
+          "two"
+        ],
+        "ans": "guest"
+      },
+      {
+        "q": "成年女性可以被稱為什麼？",
+        "opts": [
+          "lady",
+          "wink",
+          "whisper",
+          "greeting"
+        ],
+        "ans": "lady"
+      },
+      {
+        "q": "數字 1 用英文怎麼說？",
+        "opts": [
+          "one",
+          "two",
+          "three",
+          "four"
+        ],
+        "ans": "one"
+      },
+      {
+        "q": "數字 10 用英文怎麼說？",
+        "opts": [
+          "ten",
+          "nine",
+          "eight",
+          "seven"
+        ],
+        "ans": "ten"
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ a student.（我是學生）",
+        "ans": "am"
+      },
+      {
+        "q": "You ____ my friend.（你是我的朋友）",
+        "ans": "are"
+      },
+      {
+        "q": "He ____ happy.（他很開心）",
+        "ans": "is"
+      },
+      {
+        "q": "She ____ a teacher.（她是老師）",
+        "ans": "is"
+      },
+      {
+        "q": "It ____ a cat.（它是貓）",
+        "ans": "is"
+      },
+      {
+        "q": "We ____ in the classroom.（我們在教室裡）",
+        "ans": "are"
+      },
+      {
+        "q": "They ____ students.（他們是學生）",
+        "ans": "are"
+      },
+      {
+        "q": "My nickname ____ Leo.（我的綽號是Leo）",
+        "ans": "is"
+      },
+      {
+        "q": "Today ____ my birthday.（今天是我的生日）",
+        "ans": "is"
+      },
+      {
+        "q": "Our hometown ____ Taipei.（我們的家鄉是台北）",
+        "ans": "is"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我是學生。",
+        "ans": "I am a student."
+      },
+      {
+        "q": "你是我的朋友。",
+        "ans": "You are my friend."
+      },
+      {
+        "q": "他很開心。",
+        "ans": "He is happy."
+      },
+      {
+        "q": "她是老師。",
+        "ans": "She is a teacher."
+      },
+      {
+        "q": "它是貓。",
+        "ans": "It is a cat."
+      },
+      {
+        "q": "我們在教室。",
+        "ans": "We are in the classroom."
+      },
+      {
+        "q": "他們是學生。",
+        "ans": "They are students."
+      },
+      {
+        "q": "今天是我的生日。",
+        "ans": "Today is my birthday."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / I / Leo / am",
+        "ans": "I am Leo."
+      },
+      {
+        "q": "are / You / . / friend / my",
+        "ans": "You are my friend."
+      },
+      {
+        "q": "teacher / a / is / She / .",
+        "ans": "She is a teacher."
+      },
+      {
+        "q": "a / cat / It / is / .",
+        "ans": "It is a cat."
+      },
+      {
+        "q": "in / We / are / the / . / classroom",
+        "ans": "We are in the classroom."
+      },
+      {
+        "q": ". / They / students / are",
+        "ans": "They are students."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

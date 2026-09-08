@@ -1,0 +1,624 @@
+{
+  "title_en": "I Can Do It",
+  "title_zh": "我可以做到的事",
+  "grammar": "本課重點是使用 can 和 can't 描述能力與不能做的事。",
+  "intro_zh": "這一課將透過有趣的故事，讓學生學會用 can 和 can't 說出自己會做的事和不會做的事，並練習動作動詞與方向表達，提升日常英語溝通能力。在課堂上透過小組活動和角色扮演，鞏固所學。",
+  "can_do": [
+    "能用 can/can't 描述自己會做的事和不會做的事",
+    "能正確使用動作動詞與方向介詞",
+    "能閱讀短文並找出關鍵動詞"
+  ],
+  "reading": {
+    "title_en": "A Busy Day",
+    "title_zh": "忙碌的一天",
+    "sentences": [
+      {
+        "en": "Tom can jump high and kick the ball far.",
+        "zh": "湯姆能跳得很高，並且能把球踢得很遠。"
+      },
+      {
+        "en": "He likes to use his skateboard to skate around the park.",
+        "zh": "他喜歡使用滑板在公園裡溜冰。"
+      },
+      {
+        "en": "Sometimes he hurries to collect sticks and break them for a fort.",
+        "zh": "有時他會匆忙去收集樹枝並把它們折斷來建堡壘。"
+      },
+      {
+        "en": "He can climb the small hill and stand on the top to see the view.",
+        "zh": "他能爬住小山丘並站在頂端觀賞風景。"
+      },
+      {
+        "en": "When he hides, his friends try to find him before he gets hurt.",
+        "zh": "當他躲起來時，他的朋友會在他受傷之前試著找他。"
+      },
+      {
+        "en": "If he falls, he might hit his head and get up quick.",
+        "zh": "如果他摔倒，可能會撞到頭然後很快站起來。"
+      },
+      {
+        "en": "He practices every day to sleep better at night.",
+        "zh": "他每天練習，以便晚上能睡得更好。"
+      },
+      {
+        "en": "He can lead his team and bring water for everyone when they arrive.",
+        "zh": "他能帶領他的隊伍，並在大家到達時帶來水給大家。"
+      },
+      {
+        "en": "He also carries his backpack and walks slow to the playground.",
+        "zh": "他也背著背包，慢慢走向操場。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① can / can't 的基本用法",
+      "explain_zh": "用來說明自己或他人能夠做什麼或不能做什麼。",
+      "table": [
+        [
+          "主語",
+          "can / can't",
+          "動詞",
+          "中文意思"
+        ],
+        [
+          "I",
+          "can",
+          "jump",
+          "我可以跳"
+        ],
+        [
+          "You",
+          "can",
+          "climb",
+          "你可以爬"
+        ],
+        [
+          "He",
+          "can't",
+          "break",
+          "他不能打破"
+        ],
+        [
+          "She",
+          "can't",
+          "hide",
+          "她不能隱藏"
+        ],
+        [
+          "We",
+          "can",
+          "run",
+          "我們可以跑"
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 can / can't 描述方向與動作",
+      "explain_zh": "可以加上方向詞（up, down, over, under）或地點來說明能力。",
+      "examples": [
+        {
+          "en": "I can jump over the rope.",
+          "zh": "我可以跳過繩子。"
+        },
+        {
+          "en": "She can't crawl under the table.",
+          "zh": "她不能爬過桌子底下。"
+        },
+        {
+          "en": "They can climb up the hill.",
+          "zh": "他們可以爬上山坡。"
+        },
+        {
+          "en": "He can't skate down the slope.",
+          "zh": "他不能溜冰下坡。"
+        },
+        {
+          "en": "We can collect leaves in the garden.",
+          "zh": "我們可以在花園裡收集葉子。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上聊聊我們能做的事",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "What can you do at recess?",
+        "zh": "你在課間休息時可以做什麼？"
+      },
+      {
+        "sp": "Ben",
+        "en": "I can jump rope and kick a ball.",
+        "zh": "我可以跳繩和踢球。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Can you climb the jungle gym?",
+        "zh": "你能爬 jungle gym 嗎？"
+      },
+      {
+        "sp": "Ben",
+        "en": "Yes, I can climb up and down.",
+        "zh": "可以，我可以上下爬。"
+      },
+      {
+        "sp": "Anna",
+        "en": "I can't skate, but I can run fast.",
+        "zh": "我不能溜冰，但我可以跑得很快。"
+      },
+      {
+        "sp": "Ben",
+        "en": "Let's practice together!",
+        "zh": "我們一起練習吧！"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I can break a stick with my hands.",
+      "zh": "我可以用手打斷樹枝。"
+    },
+    {
+      "en": "She can hide behind the curtain.",
+      "zh": "她可以躲在窗簾後面。"
+    },
+    {
+      "en": "He can hit the ball hard.",
+      "zh": "他可以用力擊打球。"
+    },
+    {
+      "en": "They can collect stamps in a book.",
+      "zh": "他們可以把郵票收集在書裡。"
+    },
+    {
+      "en": "We should hurry to catch the bus.",
+      "zh": "我們應該趕快去趕公車。"
+    },
+    {
+      "en": "The turtle moves slow but steady.",
+      "zh": "烏龜走得慢但穩穩的。"
+    },
+    {
+      "en": "Please bring your homework to class.",
+      "zh": "請把功課帶到課堂上。"
+    },
+    {
+      "en": "Can you carry this bag for me?",
+      "zh": "你能幫我拿這個袋子嗎？"
+    }
+  ],
+  "no": 41,
+  "theme": "Things I Can Do",
+  "theme_zh": "我做得到的事",
+  "words": [
+    {
+      "en": "break",
+      "zh": "打破"
+    },
+    {
+      "en": "climb",
+      "zh": "爬"
+    },
+    {
+      "en": "hide",
+      "zh": "隱藏"
+    },
+    {
+      "en": "hit",
+      "zh": "打擊"
+    },
+    {
+      "en": "jump",
+      "zh": "跳躍"
+    },
+    {
+      "en": "kick",
+      "zh": "踢"
+    },
+    {
+      "en": "stand",
+      "zh": "站立"
+    },
+    {
+      "en": "collect",
+      "zh": "收集"
+    },
+    {
+      "en": "hurt",
+      "zh": "疼痛"
+    },
+    {
+      "en": "lead",
+      "zh": "指導"
+    },
+    {
+      "en": "practice",
+      "zh": "練習"
+    },
+    {
+      "en": "sleep",
+      "zh": "睡覺"
+    },
+    {
+      "en": "use",
+      "zh": "使用"
+    },
+    {
+      "en": "skate",
+      "zh": "溜冰"
+    },
+    {
+      "en": "hurry",
+      "zh": "匆忙"
+    },
+    {
+      "en": "quick",
+      "zh": "迅速地"
+    },
+    {
+      "en": "slow",
+      "zh": "慢的"
+    },
+    {
+      "en": "arrive",
+      "zh": "到達"
+    },
+    {
+      "en": "bring",
+      "zh": "帶來"
+    },
+    {
+      "en": "carry",
+      "zh": "拿"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "中文『跳』的英文是？",
+        "opts": [
+          "jump",
+          "break",
+          "climb",
+          "hide"
+        ],
+        "ans": "jump"
+      },
+      {
+        "q": "中文『攀爬』的英文是？",
+        "opts": [
+          "climb",
+          "jump",
+          "kick",
+          "stand"
+        ],
+        "ans": "climb"
+      },
+      {
+        "q": "中文『隱藏』的英文是？",
+        "opts": [
+          "hide",
+          "hit",
+          "hurt",
+          "lead"
+        ],
+        "ans": "hide"
+      },
+      {
+        "q": "中文『打擊』的英文是？",
+        "opts": [
+          "hit",
+          "jump",
+          "sleep",
+          "use"
+        ],
+        "ans": "hit"
+      },
+      {
+        "q": "中文『踢』的英文是？",
+        "opts": [
+          "kick",
+          "collect",
+          "practice",
+          "skate"
+        ],
+        "ans": "kick"
+      },
+      {
+        "q": "中文『站立』的英文是？",
+        "opts": [
+          "stand",
+          "break",
+          "hurry",
+          "quick"
+        ],
+        "ans": "stand"
+      },
+      {
+        "q": "中文『收集』的英文是？",
+        "opts": [
+          "collect",
+          "climb",
+          "hurt",
+          "lead"
+        ],
+        "ans": "collect"
+      },
+      {
+        "q": "中文『受傷』的英文是？",
+        "opts": [
+          "hurt",
+          "jump",
+          "sleep",
+          "use"
+        ],
+        "ans": "hurt"
+      },
+      {
+        "q": "中文『帶領』的英文是？",
+        "opts": [
+          "lead",
+          "break",
+          "climb",
+          "hide"
+        ],
+        "ans": "lead"
+      },
+      {
+        "q": "中文『練習』的英文是？",
+        "opts": [
+          "practice",
+          "skate",
+          "hurry",
+          "quick"
+        ],
+        "ans": "practice"
+      },
+      {
+        "q": "她可以 ___ 。",
+        "opts": [
+          "break",
+          "climb",
+          "hide",
+          "hit"
+        ],
+        "ans": "climb"
+      },
+      {
+        "q": "他不能 ___ 。",
+        "opts": [
+          "jump",
+          "kick",
+          "stand",
+          "collect"
+        ],
+        "ans": "stand"
+      },
+      {
+        "q": "我們可以 ___ 。",
+        "opts": [
+          "hurt",
+          "lead",
+          "practice",
+          "sleep"
+        ],
+        "ans": "practice"
+      },
+      {
+        "q": "他們不能 ___ 。",
+        "opts": [
+          "use",
+          "skate",
+          "hurry",
+          "quick"
+        ],
+        "ans": "hurry"
+      },
+      {
+        "q": "圖片顯示一個男孩在跳繩。他可以做什麼？",
+        "opts": [
+          "He can jump.",
+          "He can climb.",
+          "He can hide.",
+          "He can hit."
+        ],
+        "ans": "He can jump."
+      },
+      {
+        "q": "圖片顯示一個女孩在樹上。她能做什麼？",
+        "opts": [
+          "She can climb.",
+          "She can break.",
+          "She can collect.",
+          "She can sleep."
+        ],
+        "ans": "She can climb."
+      },
+      {
+        "q": "圖片顯示一個男孩被球擊中。他不能做什麼？",
+        "opts": [
+          "He can't stand.",
+          "He can't kick.",
+          "He can't hurt.",
+          "He can't lead."
+        ],
+        "ans": "He can't stand."
+      },
+      {
+        "q": "圖片顯示一群孩子在收集石頭。他們可以做什麼？",
+        "opts": [
+          "They can collect.",
+          "They can break.",
+          "They can hide.",
+          "They can jump."
+        ],
+        "ans": "They can collect."
+      },
+      {
+        "q": "圖片顯示一個女孩在練習滑板。她可以做什麼？",
+        "opts": [
+          "She can skate.",
+          "She can sleep.",
+          "She can arrive.",
+          "She can bring."
+        ],
+        "ans": "She can skate."
+      },
+      {
+        "q": "圖片顯示一個男孩很急忙。他可以做什麼？",
+        "opts": [
+          "He can hurry.",
+          "He can sleep.",
+          "He can jump.",
+          "He can climb."
+        ],
+        "ans": "He can hurry."
+      },
+      {
+        "q": "圖片顯示一個女孩走得很慢。她不能做什麼？",
+        "opts": [
+          "She can't jump quick.",
+          "She can't climb quick.",
+          "She can't hide quick.",
+          "She can't hit quick."
+        ],
+        "ans": "She can't jump quick."
+      },
+      {
+        "q": "圖片顯示一個男孩快速把書帶到教室。他可以做什麼？",
+        "opts": [
+          "He can bring quick.",
+          "He can bring slow.",
+          "He can carry quick.",
+          "He can carry slow."
+        ],
+        "ans": "He can bring quick."
+      },
+      {
+        "q": "圖片顯示一個女孩在睡覺。她不能做什麼？",
+        "opts": [
+          "She can't skate.",
+          "She can't sleep.",
+          "She can't jump.",
+          "She can't climb."
+        ],
+        "ans": "She can't skate."
+      },
+      {
+        "q": "圖片顯示兩個孩子在一起練習。他們可以做什麼？",
+        "opts": [
+          "They can practice.",
+          "They can hurt.",
+          "They can lead.",
+          "They can sleep."
+        ],
+        "ans": "They can practice."
+      }
+    ],
+    "fill": [
+      {
+        "q": "I can ____ .（我可以跳。）",
+        "ans": "jump"
+      },
+      {
+        "q": "She can ____ .（她可以爬。）",
+        "ans": "climb"
+      },
+      {
+        "q": "He can ____ .（他可以躲。）",
+        "ans": "hide"
+      },
+      {
+        "q": "They can ____ .（他們可以踢。）",
+        "ans": "kick"
+      },
+      {
+        "q": "We can ____ .（我們可以站。）",
+        "ans": "stand"
+      },
+      {
+        "q": "I can ____ .（我可以睡。）",
+        "ans": "sleep"
+      },
+      {
+        "q": "You can ____ .（你可以滑板。）",
+        "ans": "skate"
+      },
+      {
+        "q": "He can ____ .（他可以練習。）",
+        "ans": "practice"
+      },
+      {
+        "q": "She can ____ .（她可以使用。）",
+        "ans": "use"
+      },
+      {
+        "q": "They can ____ .（他們可以帶來。）",
+        "ans": "bring"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我可以跳。",
+        "ans": "I can jump."
+      },
+      {
+        "q": "她不能爬。",
+        "ans": "She can't climb."
+      },
+      {
+        "q": "他很快。",
+        "ans": "He is quick."
+      },
+      {
+        "q": "我們很慢。",
+        "ans": "We are slow."
+      },
+      {
+        "q": "你可以滑板。",
+        "ans": "You can skate."
+      },
+      {
+        "q": "他們可以練習。",
+        "ans": "They can practice."
+      },
+      {
+        "q": "我可以帶來。",
+        "ans": "I can bring."
+      },
+      {
+        "q": "她可以睡。",
+        "ans": "She can sleep."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "jump / I / can / .",
+        "ans": "I can jump."
+      },
+      {
+        "q": "She / climb / . / can't",
+        "ans": "She can't climb."
+      },
+      {
+        "q": ". / He / is / quick",
+        "ans": "He is quick."
+      },
+      {
+        "q": ". / We / slow / are",
+        "ans": "We are slow."
+      },
+      {
+        "q": "can / skate / You / .",
+        "ans": "You can skate."
+      },
+      {
+        "q": ". / can / They / practice",
+        "ans": "They can practice."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

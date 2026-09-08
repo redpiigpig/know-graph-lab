@@ -1,0 +1,579 @@
+{
+  "title_en": "My Body Actions",
+  "title_zh": "我的身體與動作",
+  "grammar": "使用 I have / He has 描述身體部位或能力。",
+  "intro_zh": "本課將學習描述身體部位和動作，練習使用 I have 和 He has 造簡單句子，並認識 sit、think、smile 等常見動詞，讓學生能用英語說出自己和他人在做什麼。",
+  "can_do": [
+    "能用 I have / He has 說出身體部位。",
+    "能用 sit、think、smile 等動詞描述動作。",
+    "能閱讀簡短故事並回答相關問題。"
+  ],
+  "reading": {
+    "title_en": "At the Park",
+    "title_zh": "在公園裡",
+    "sentences": [
+      {
+        "en": "I have a big smile when I sit on the bench.",
+        "zh": "我坐在長椅上時，笑容很大。"
+      },
+      {
+        "en": "My friend Li is blind, but he can think of fun games.",
+        "zh": "我的朋友李是盲人，但他能想出有趣的遊戲。"
+      },
+      {
+        "en": "We hold hands and laugh together.",
+        "zh": "我們牽著手，一起笑。"
+      },
+      {
+        "en": "He likes to pick up leaves and point at the birds.",
+        "zh": "他喜歡撿起樹葉，並指著鳥兒。"
+      },
+      {
+        "en": "I brush my teeth after lunch, and he hears my voice.",
+        "zh": "我吃完午餐刷牙後，他聽到我的聲音。"
+      },
+      {
+        "en": "Sometimes we cut paper to make a boat, and I give him the boat, and we hear the sound of scissors.",
+        "zh": "我們有時會剪紙做小船，我把船給他，我們聽到剪刀的聲音。"
+      },
+      {
+        "en": "He takes the boat and turns it in the water.",
+        "zh": "他拿起船，在水裡轉動它。"
+      },
+      {
+        "en": "We open the boat's sail and start to sail away.",
+        "zh": "我們打開船的帆，開始航行。"
+      },
+      {
+        "en": "When the wind stops, we close the sail and help each other to go home.",
+        "zh": "當風停止時，我們關上帆，互相幫助回家。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① I have / He has 描述身體部位",
+      "explain_zh": "用 I have (for I) 或 He has (for he/she) 後面接名詞來說明自己或他人的身體部位。",
+      "table": [
+        [
+          "Subject",
+          "Verb",
+          "Body Part",
+          "Example Sentence"
+        ],
+        [
+          "I",
+          "have",
+          "eyes",
+          "I have two eyes."
+        ],
+        [
+          "He",
+          "has",
+          "ears",
+          "He has big ears."
+        ],
+        [
+          "She",
+          "has",
+          "mouth",
+          "She has a small mouth."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② I have / He has 描述能力或特徵",
+      "explain_zh": "同樣結構可以用來說明某人擁有的能力或特徵，例如聲音、笑聲等。",
+      "examples": [
+        {
+          "en": "I have a clear voice when I sing.",
+          "zh": "我唱歌時聲音很清楚。"
+        },
+        {
+          "en": "He has a loud laugh that makes everyone smile.",
+          "zh": "他的笑聲很大聲，讓大家都笑起來。"
+        },
+        {
+          "en": "She has quick hands and can pick up toys fast.",
+          "zh": "她手腳很快，能快速拿起玩具。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在操場上聊聊身體與能力",
+    "lines": [
+      {
+        "sp": "Anna",
+        "en": "I have long hair and I like to brush it every morning.",
+        "zh": "我有長頭髮，每天早上我喜歡刷它。"
+      },
+      {
+        "sp": "Bob",
+        "en": "He has strong legs and can run fast.",
+        "zh": "他有強壯的腿，可以跑得很快。"
+      },
+      {
+        "sp": "Anna",
+        "en": "I have a sweet voice when I sing songs.",
+        "zh": "我唱歌時聲音很甜。"
+      },
+      {
+        "sp": "Bob",
+        "en": "He has a bright smile that helps friends feel happy.",
+        "zh": "他有燦爛的笑容，能讓朋友感到開心。"
+      },
+      {
+        "sp": "Anna",
+        "en": "Let's help each other and pick up the trash together.",
+        "zh": "我們互相幫忙，一起把垃圾撿起來。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "I have two eyes that can see the board.",
+      "zh": "我有兩隻眼睛可以看黑板。"
+    },
+    {
+      "en": "He has short hair and likes to wear a cap.",
+      "zh": "他有短頭髮，喜歡戴帽子。"
+    },
+    {
+      "en": "She has a kind voice and often helps classmates.",
+      "zh": "她有善良的聲音，常常幫助同學。"
+    },
+    {
+      "en": "I have strong hands and can hold the ball tightly.",
+      "zh": "我有強壯的手，能緊緊握住球。"
+    },
+    {
+      "en": "He has a quick mind and thinks fast in games.",
+      "zh": "他思考很快，在遊戲中能快速想出答案。"
+    },
+    {
+      "en": "She has a bright smile and makes everyone laugh.",
+      "zh": "她有燦爛的笑容，讓大家都笑出聲。"
+    },
+    {
+      "en": "I have clean teeth after I brush them every night.",
+      "zh": "我每晚刷牙後，牙齒很乾淨。"
+    },
+    {
+      "en": "He has a loud sound when he claps his hands.",
+      "zh": "他拍手時會發出很大的聲音。"
+    }
+  ],
+  "no": 10,
+  "theme": "My Body",
+  "theme_zh": "身體與動作",
+  "words": [
+    {
+      "en": "sit",
+      "zh": "坐"
+    },
+    {
+      "en": "think",
+      "zh": "思考"
+    },
+    {
+      "en": "blind",
+      "zh": "瞎的"
+    },
+    {
+      "en": "smile",
+      "zh": "微笑"
+    },
+    {
+      "en": "laugh",
+      "zh": "嘲笑"
+    },
+    {
+      "en": "hold",
+      "zh": "握住"
+    },
+    {
+      "en": "pick",
+      "zh": "挑選"
+    },
+    {
+      "en": "point",
+      "zh": "指出"
+    },
+    {
+      "en": "brush",
+      "zh": "刷牙"
+    },
+    {
+      "en": "voice",
+      "zh": "聲音"
+    },
+    {
+      "en": "sound",
+      "zh": "聲音"
+    },
+    {
+      "en": "cut",
+      "zh": "割"
+    },
+    {
+      "en": "give",
+      "zh": "給"
+    },
+    {
+      "en": "take",
+      "zh": "拿"
+    },
+    {
+      "en": "turn",
+      "zh": "轉動"
+    },
+    {
+      "en": "open",
+      "zh": "打開"
+    },
+    {
+      "en": "close",
+      "zh": "關上"
+    },
+    {
+      "en": "start",
+      "zh": "開始"
+    },
+    {
+      "en": "stop",
+      "zh": "停"
+    },
+    {
+      "en": "help",
+      "zh": "幫助"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "我有一個聲音。",
+        "opts": [
+          "I have voice",
+          "I have a voice",
+          "I have voices",
+          "I have the voice"
+        ],
+        "ans": "I have a voice"
+      },
+      {
+        "q": "他有一個微笑。",
+        "opts": [
+          "He has smile",
+          "He has a smile",
+          "He has smiles",
+          "He has the smile"
+        ],
+        "ans": "He has a smile"
+      },
+      {
+        "q": "我有一個笑聲。",
+        "opts": [
+          "I have laugh",
+          "I have a laugh",
+          "I have laughs",
+          "I have the laugh"
+        ],
+        "ans": "I have a laugh"
+      },
+      {
+        "q": "他有一個刷子。",
+        "opts": [
+          "He has brush",
+          "He has a brush",
+          "He has brushs",
+          "He has the brush"
+        ],
+        "ans": "He has a brush"
+      },
+      {
+        "q": "我有一個觀點。",
+        "opts": [
+          "I have point",
+          "I have a point",
+          "I have points",
+          "I have the point"
+        ],
+        "ans": "I have a point"
+      },
+      {
+        "q": "他有一個轉彎。",
+        "opts": [
+          "He has turn",
+          "He has a turn",
+          "He has turns",
+          "He has the turn"
+        ],
+        "ans": "He has a turn"
+      },
+      {
+        "q": "我有一個傷口。",
+        "opts": [
+          "I have cut",
+          "I have a cut",
+          "I have cuts",
+          "I have the cut"
+        ],
+        "ans": "I have a cut"
+      },
+      {
+        "q": "他有一個開始。",
+        "opts": [
+          "He has start",
+          "He has a start",
+          "He has starts",
+          "He has the start"
+        ],
+        "ans": "He has a start"
+      },
+      {
+        "q": "我有一個停止。",
+        "opts": [
+          "I have stop",
+          "I have a stop",
+          "I have stops",
+          "I have the stop"
+        ],
+        "ans": "I have a stop"
+      },
+      {
+        "q": "他有一個幫助。",
+        "opts": [
+          "He has help",
+          "He has a help",
+          "He has helps",
+          "He has the help"
+        ],
+        "ans": "He has a help"
+      },
+      {
+        "q": "我有一個______。",
+        "opts": [
+          "眼睛",
+          "鼻子",
+          "嘴巴",
+          "耳朵"
+        ],
+        "ans": "眼睛"
+      },
+      {
+        "q": "他有一個______。",
+        "opts": [
+          "手腳",
+          "頭髮",
+          "手指",
+          "腳指"
+        ],
+        "ans": "手腳"
+      },
+      {
+        "q": "媽媽在廚房裡切菜。她有一把刀。英文怎麼說？",
+        "opts": [
+          "I have a cut.",
+          "She has a cut.",
+          "She has a knife.",
+          "I have a knife."
+        ],
+        "ans": "She has a knife."
+      },
+      {
+        "q": "小明拿著一個蘋果給他的朋友。他有一個蘋果。英文怎麼說？",
+        "opts": [
+          "He has an apple.",
+          "I have an apple.",
+          "He has a hold.",
+          "I have a give."
+        ],
+        "ans": "He has an apple."
+      },
+      {
+        "q": "老師坐在椅子上。她有一把椅子。英文怎麼說？",
+        "opts": [
+          "I have a chair.",
+          "She has a sit.",
+          "She has a chair.",
+          "I have a sit."
+        ],
+        "ans": "She has a chair."
+      },
+      {
+        "q": "哥哥在想一個問題。他在思考。英文怎麼說？",
+        "opts": [
+          "He is think.",
+          "He think.",
+          "He has a think.",
+          "I think."
+        ],
+        "ans": "He has a think."
+      },
+      {
+        "q": "爸爸拿著一支筆。他有一支筆。英文怎麼說？",
+        "opts": [
+          "I have a pen.",
+          "He has a hold.",
+          "He has a pen.",
+          "I have a take."
+        ],
+        "ans": "He has a pen."
+      },
+      {
+        "q": "妹妹在採花。她有一朵花。英文怎麼說？",
+        "opts": [
+          "I have a flower.",
+          "She has a flower.",
+          "She has a pick.",
+          "I have a pick."
+        ],
+        "ans": "She has a flower."
+      },
+      {
+        "q": "奶奶有好聽的嗓音。她的聲音很美。英文怎麼說？",
+        "opts": [
+          "I have a beautiful voice.",
+          "She has a beautiful voice.",
+          "She has a sound.",
+          "I have a sound."
+        ],
+        "ans": "She has a beautiful voice."
+      },
+      {
+        "q": "弟弟打開書本。他在打開一本書。英文怎麼說？",
+        "opts": [
+          "I open a book.",
+          "He open a book.",
+          "He has a book.",
+          "I has a book."
+        ],
+        "ans": "He open a book."
+      },
+      {
+        "q": "姐姐關上門。她正在關門。英文怎麼說？",
+        "opts": [
+          "I close the door.",
+          "She close the door.",
+          "She has a door.",
+          "I has a door."
+        ],
+        "ans": "She close the door."
+      },
+      {
+        "q": "老師幫助學生。老師有幫助精神。英文怎麼說？",
+        "opts": [
+          "I have a spirit.",
+          "She has a spirit.",
+          "She has a helping spirit.",
+          "I have a help."
+        ],
+        "ans": "She has a helping spirit."
+      }
+    ],
+    "fill": [
+      {
+        "q": "I ____ a smile.（我有一個笑容）",
+        "ans": "have"
+      },
+      {
+        "q": "He ____ a voice.（他有一個聲音）",
+        "ans": "has"
+      },
+      {
+        "q": "I ____ a sound.（我有一個聲音）",
+        "ans": "have"
+      },
+      {
+        "q": "He ____ a brush.（他有一把刷子）",
+        "ans": "has"
+      },
+      {
+        "q": "I ____ help.（我需要幫助）",
+        "ans": "have"
+      },
+      {
+        "q": "He ____ a smile.（他有一個笑容）",
+        "ans": "has"
+      },
+      {
+        "q": "I ____ a voice.（我有一個聲音）",
+        "ans": "have"
+      },
+      {
+        "q": "He ____ a sound.（他有一個聲音）",
+        "ans": "has"
+      },
+      {
+        "q": "I ____ a brush.（我有一把刷子）",
+        "ans": "have"
+      },
+      {
+        "q": "He ____ help.（他需要幫助）",
+        "ans": "has"
+      }
+    ],
+    "translate": [
+      {
+        "q": "我有一個笑容。",
+        "ans": "I have a smile."
+      },
+      {
+        "q": "他有一個聲音。",
+        "ans": "He has a sound."
+      },
+      {
+        "q": "我有一個刷子。",
+        "ans": "I have a brush."
+      },
+      {
+        "q": "他有一個幫助。",
+        "ans": "He has a help."
+      },
+      {
+        "q": "我有一個聲音。",
+        "ans": "I have a sound."
+      },
+      {
+        "q": "他有一個笑容。",
+        "ans": "He has a smile."
+      },
+      {
+        "q": "我有一個幫助。",
+        "ans": "I have a help."
+      },
+      {
+        "q": "他有一個刷子。",
+        "ans": "He has a brush."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "smile / a / have / I / .",
+        "ans": "I have a smile."
+      },
+      {
+        "q": "a / has / voice / He / .",
+        "ans": "He has a voice."
+      },
+      {
+        "q": "have / I / . / a / sound",
+        "ans": "I have a sound."
+      },
+      {
+        "q": "a / . / has / brush / He",
+        "ans": "He has a brush."
+      },
+      {
+        "q": "I / . / help / have",
+        "ans": "I have help."
+      },
+      {
+        "q": "help / . / has / He",
+        "ans": "He has help."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

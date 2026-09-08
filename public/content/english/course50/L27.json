@@ -1,0 +1,659 @@
+{
+  "title_en": "My House 2",
+  "title_zh": "我的家（二）",
+  "grammar": "練習使用 Where is…? 與介系詞 in、on、under、near、behind 描述物品位置。",
+  "intro_zh": "本課讓學生描述家中物品位置，練習使用 Where is…? 與介系詞 in、on、under、near、behind。學生會說出自己房間的擺設，並能描述簡單的日常情境。",
+  "can_do": [
+    "能用 Where is…? 詢問物品位置",
+    "能正確使用 in、on、under、near、behind 描述位置",
+    "能以完整句子描述自己家中的常見物品"
+  ],
+  "reading": {
+    "title_en": "A Day at Home",
+    "title_zh": "在家的一天",
+    "sentences": [
+      {
+        "en": "In the morning, I turn on the light and make my bed.",
+        "zh": "早上，我打開燈並整理我的床。"
+      },
+      {
+        "en": "Then I take a warm bath and dry myself with a soft towel.",
+        "zh": "然後我洗個溫水澡，用柔軟的毛巾擦乾身體。"
+      },
+      {
+        "en": "After the bath, I sit on the sofa, turn on the television and watch the news.",
+        "zh": "洗完澡後，我坐在沙發上，打開電視看新聞。"
+      },
+      {
+        "en": "While watching TV, I sit on the chair and listen to the radio.",
+        "zh": "看電視時，我坐在椅子上聽收音機。"
+      },
+      {
+        "en": "Sometimes I watch a funny video on the computer.",
+        "zh": "有時我在電腦上看有趣的影片。"
+      },
+      {
+        "en": "I do my homework at the desk, using the computer to type and the printer machine to print my work.",
+        "zh": "我在書桌上做功課，用電腦打字，並用印表機這台機器列印作業。"
+      },
+      {
+        "en": "When the room gets hot, I switch on the fan to feel comfortable.",
+        "zh": "當房間變熱時，我開啟電風扇感到舒適。"
+      },
+      {
+        "en": "In the afternoon, I practice piano for twenty minutes before dinner.",
+        "zh": "下午，我在晚飯前練習鋼琴二十分鐘。"
+      },
+      {
+        "en": "My mother calls me on the telephone to tell me dinner is ready.",
+        "zh": "媽媽用電話打給我，告訴我晚餐準備好了。"
+      },
+      {
+        "en": "We eat together at the table, and I put the leftovers in the refrigerator; later we relax on the couch and talk.",
+        "zh": "我們一起在桌子上吃飯，我把剩菜放進冰箱；之後我們在睡椅上放鬆聊天。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① Where is…? 與 in / on 的復習",
+      "explain_zh": "說明如何用 Where is…? 問物品位置，並用 in 表示「在…裡面」，on 表示「在…上面」。",
+      "table": [
+        [
+          "介系詞",
+          "意思",
+          "例句"
+        ],
+        [
+          "in",
+          "在…裡面",
+          "The cat is in the box."
+        ],
+        [
+          "on",
+          "在…上面",
+          "The book is on the table."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 新增介系詞 under / near / behind",
+      "explain_zh": "學習用 under 表示「在…下面」，near 表示「在…旁邊」，behind 表示「在…後面」。",
+      "examples": [
+        {
+          "en": "The shoe is under the bed.",
+          "zh": "鞋子在床下。"
+        },
+        {
+          "en": "The lamp is near the sofa.",
+          "zh": "燈在沙發旁邊。"
+        },
+        {
+          "en": "The dog is behind the curtain.",
+          "zh": "狗在窗簾後面。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "找找看！在客廳裡",
+    "lines": [
+      {
+        "sp": "Mom",
+        "en": "Where is the remote control?",
+        "zh": "媽媽：遙控器在哪裡？"
+      },
+      {
+        "sp": "Kai",
+        "en": "It is on the coffee table.",
+        "zh": "凱：它在咖啡桌上。"
+      },
+      {
+        "sp": "Mom",
+        "en": "Where is the blanket?",
+        "zh": "媽媽：毛毯在哪裡？"
+      },
+      {
+        "sp": "Kai",
+        "en": "It is behind the sofa.",
+        "zh": "凱：它在沙發後面。"
+      },
+      {
+        "sp": "Mom",
+        "en": "Where are your shoes?",
+        "zh": "媽媽：你的鞋子在哪裡？"
+      },
+      {
+        "sp": "Kai",
+        "en": "They are under the chair.",
+        "zh": "凱：它們在椅子下面。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "The light is on the ceiling.",
+      "zh": "燈在天花板上。"
+    },
+    {
+      "en": "The bed is near the window.",
+      "zh": "床靠近窗戶。"
+    },
+    {
+      "en": "The towel is on the rack.",
+      "zh": "毛巾在毛巾架上。"
+    },
+    {
+      "en": "The chair is under the table.",
+      "zh": "椅子在桌子下面。"
+    },
+    {
+      "en": "The sofa is behind the TV.",
+      "zh": "沙發在電視後面。"
+    },
+    {
+      "en": "The desk is in the room.",
+      "zh": "書桌在房間裡。"
+    },
+    {
+      "en": "The computer is on the desk.",
+      "zh": "電腦在書桌上。"
+    },
+    {
+      "en": "The refrigerator is near the kitchen door.",
+      "zh": "冰箱靠近廚房門。"
+    }
+  ],
+  "no": 27,
+  "theme": "My House",
+  "theme_zh": "我的家",
+  "words": [
+    {
+      "en": "light",
+      "zh": "燈光"
+    },
+    {
+      "en": "bed",
+      "zh": "床"
+    },
+    {
+      "en": "bath",
+      "zh": "洗澡"
+    },
+    {
+      "en": "towel",
+      "zh": "毛巾"
+    },
+    {
+      "en": "chair",
+      "zh": "椅子"
+    },
+    {
+      "en": "sofa",
+      "zh": "沙發"
+    },
+    {
+      "en": "couch",
+      "zh": "睡椅"
+    },
+    {
+      "en": "table",
+      "zh": "桌子"
+    },
+    {
+      "en": "desk",
+      "zh": "書桌"
+    },
+    {
+      "en": "machine",
+      "zh": "機器"
+    },
+    {
+      "en": "telephone",
+      "zh": "電話機"
+    },
+    {
+      "en": "call",
+      "zh": "打電話"
+    },
+    {
+      "en": "television/TV",
+      "zh": "電視"
+    },
+    {
+      "en": "news",
+      "zh": "新聞"
+    },
+    {
+      "en": "video",
+      "zh": "錄影機"
+    },
+    {
+      "en": "computer",
+      "zh": "電腦"
+    },
+    {
+      "en": "fan",
+      "zh": "電風扇"
+    },
+    {
+      "en": "piano",
+      "zh": "鋼琴"
+    },
+    {
+      "en": "radio",
+      "zh": "收音機"
+    },
+    {
+      "en": "refrigerator/fridge",
+      "zh": "冰箱"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "毛巾在哪裡？",
+        "opts": [
+          "on the chair",
+          "under the bed",
+          "in the fridge",
+          "near the TV"
+        ],
+        "ans": "on the chair"
+      },
+      {
+        "q": "燈在哪裡？",
+        "opts": [
+          "on the table",
+          "under the sofa",
+          "behind the desk",
+          "near the piano"
+        ],
+        "ans": "on the table"
+      },
+      {
+        "q": "椅子在哪裡？",
+        "opts": [
+          "near the desk",
+          "under the table",
+          "in the fridge",
+          "behind the TV"
+        ],
+        "ans": "near the desk"
+      },
+      {
+        "q": "沙發在哪裡？",
+        "opts": [
+          "near the TV",
+          "under the bed",
+          "on the desk",
+          "in the machine"
+        ],
+        "ans": "near the TV"
+      },
+      {
+        "q": "桌子在哪裡？",
+        "opts": [
+          "near the chair",
+          "under the bed",
+          "in the fridge",
+          "behind the TV"
+        ],
+        "ans": "near the chair"
+      },
+      {
+        "q": "書桌在哪裡？",
+        "opts": [
+          "near the chair",
+          "under the sofa",
+          "in the news",
+          "behind the radio"
+        ],
+        "ans": "near the chair"
+      },
+      {
+        "q": "電話在哪裡？",
+        "opts": [
+          "on the desk",
+          "under the bed",
+          "in the fridge",
+          "behind the sofa"
+        ],
+        "ans": "on the desk"
+      },
+      {
+        "q": "電視在哪裡？",
+        "opts": [
+          "near the sofa",
+          "under the table",
+          "in the fridge",
+          "behind the chair"
+        ],
+        "ans": "near the sofa"
+      },
+      {
+        "q": "電腦在哪裡？",
+        "opts": [
+          "on the desk",
+          "under the bed",
+          "in the fridge",
+          "near the piano"
+        ],
+        "ans": "on the desk"
+      },
+      {
+        "q": "風扇在哪裡？",
+        "opts": [
+          "on the table",
+          "under the chair",
+          "in the fridge",
+          "near the radio"
+        ],
+        "ans": "on the table"
+      },
+      {
+        "q": "請問毛巾現在在哪裡？",
+        "opts": [
+          "in the bath",
+          "on the bed",
+          "under the chair",
+          "near the desk"
+        ],
+        "ans": "in the bath"
+      },
+      {
+        "q": "請問燈現在在哪裡？",
+        "opts": [
+          "on the table",
+          "under the chair",
+          "near the sofa",
+          "behind the fridge"
+        ],
+        "ans": "on the table"
+      },
+      {
+        "q": "請問椅子現在在哪裡？",
+        "opts": [
+          "near the desk",
+          "in the bath",
+          "on the sofa",
+          "under the table"
+        ],
+        "ans": "near the desk"
+      },
+      {
+        "q": "請問沙發現在在哪裡？",
+        "opts": [
+          "behind the fridge",
+          "in the bath",
+          "on the bed",
+          "under the chair"
+        ],
+        "ans": "behind the fridge"
+      },
+      {
+        "q": "請問躺椅現在在哪裡？",
+        "opts": [
+          "under the table",
+          "on the sofa",
+          "near the fridge",
+          "in the bath"
+        ],
+        "ans": "under the table"
+      },
+      {
+        "q": "請問桌子現在在哪裡？",
+        "opts": [
+          "near the fridge",
+          "in the bath",
+          "on the sofa",
+          "under the chair"
+        ],
+        "ans": "near the fridge"
+      },
+      {
+        "q": "請問書桌現在在哪裡？",
+        "opts": [
+          "in the bed",
+          "on the sofa",
+          "under the chair",
+          "near the fridge"
+        ],
+        "ans": "in the bed"
+      },
+      {
+        "q": "請問機器現在在哪裡？",
+        "opts": [
+          "on the bed",
+          "in the bath",
+          "under the chair",
+          "near the desk"
+        ],
+        "ans": "on the bed"
+      },
+      {
+        "q": "請問電話現在在哪裡？",
+        "opts": [
+          "under the table",
+          "on the sofa",
+          "near the fridge",
+          "in the bath"
+        ],
+        "ans": "under the table"
+      },
+      {
+        "q": "請問冰箱現在在哪裡？",
+        "opts": [
+          "near the desk",
+          "in the bath",
+          "on the sofa",
+          "under the chair"
+        ],
+        "ans": "near the desk"
+      },
+      {
+        "q": "毛巾現在放在哪裡？",
+        "opts": [
+          "在床上",
+          "在椅子下面",
+          "在桌子上",
+          "在沙發旁邊"
+        ],
+        "ans": "在桌子上"
+      },
+      {
+        "q": "燈現在放在哪裡？",
+        "opts": [
+          "在床下",
+          "在椅子上",
+          "在電視旁邊",
+          "在冰箱後面"
+        ],
+        "ans": "在椅子上"
+      },
+      {
+        "q": "椅子現在放在哪裡？",
+        "opts": [
+          "在床旁邊",
+          "在桌子下面",
+          "在沙發後面",
+          "在冰箱旁邊"
+        ],
+        "ans": "在桌子下面"
+      },
+      {
+        "q": "沙發現在放在哪裡？",
+        "opts": [
+          "在電視旁邊",
+          "在床下",
+          "在桌子上",
+          "在冰箱後面"
+        ],
+        "ans": "在電視旁邊"
+      },
+      {
+        "q": "桌子現在放在哪裡？",
+        "opts": [
+          "在床上",
+          "在椅子下面",
+          "在沙發旁邊",
+          "在冰箱上"
+        ],
+        "ans": "在沙發旁邊"
+      },
+      {
+        "q": "書桌現在放在哪裡？",
+        "opts": [
+          "在床下",
+          "在椅子上",
+          "在電視後面",
+          "在冰箱旁邊"
+        ],
+        "ans": "在椅子上"
+      },
+      {
+        "q": "電話現在放在哪裡？",
+        "opts": [
+          "在床旁邊",
+          "在桌子下面",
+          "在沙發上",
+          "在冰箱後面"
+        ],
+        "ans": "在桌子下面"
+      },
+      {
+        "q": "電視現在放在哪裡？",
+        "opts": [
+          "在床上",
+          "在椅子旁邊",
+          "在桌子下面",
+          "在沙發後面"
+        ],
+        "ans": "在椅子旁邊"
+      },
+      {
+        "q": "電腦現在放在哪裡？",
+        "opts": [
+          "在床下",
+          "在桌子上",
+          "在沙發旁邊",
+          "在冰箱後面"
+        ],
+        "ans": "在桌子上"
+      },
+      {
+        "q": "風扇現在放在哪裡？",
+        "opts": [
+          "在床上",
+          "在椅子下面",
+          "在電視旁邊",
+          "在冰箱上"
+        ],
+        "ans": "在電視旁邊"
+      }
+    ],
+    "fill": [
+      {
+        "q": "The light is ____ the desk.(燈在書桌上)",
+        "ans": "on"
+      },
+      {
+        "q": "The towel is ____ the sofa.(毛巾在沙發下)",
+        "ans": "under"
+      },
+      {
+        "q": "The telephone is ____ the TV.(電話在電視旁)",
+        "ans": "near"
+      },
+      {
+        "q": "The light is ____ the bed.(燈在床上)",
+        "ans": "on"
+      },
+      {
+        "q": "The towel is ____ the chair.(毛巾在椅子下)",
+        "ans": "under"
+      },
+      {
+        "q": "The fan is ____ the desk.(風扇在書桌上)",
+        "ans": "on"
+      },
+      {
+        "q": "The radio is ____ the desk.(收音機在書桌旁)",
+        "ans": "near"
+      },
+      {
+        "q": "The telephone is ____ the desk.(電話在書桌裡)",
+        "ans": "in"
+      },
+      {
+        "q": "The video is ____ the desk.(影片在書桌裡)",
+        "ans": "in"
+      },
+      {
+        "q": "The towel is ____ the desk.(毛巾在書桌上)",
+        "ans": "on"
+      }
+    ],
+    "translate": [
+      {
+        "q": "燈在哪裡?",
+        "ans": "Where is the light?"
+      },
+      {
+        "q": "毛巾在哪裡?",
+        "ans": "Where is the towel?"
+      },
+      {
+        "q": "電話在哪裡?",
+        "ans": "Where is the telephone?"
+      },
+      {
+        "q": "收音機在哪裡?",
+        "ans": "Where is the radio?"
+      },
+      {
+        "q": "影片在哪裡?",
+        "ans": "Where is the video?"
+      },
+      {
+        "q": "風扇在哪裡?",
+        "ans": "Where is the fan?"
+      },
+      {
+        "q": "書桌在哪裡?",
+        "ans": "Where is the desk?"
+      },
+      {
+        "q": "沙發在哪裡?",
+        "ans": "Where is the sofa?"
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "light / . / The / the / is / on / desk",
+        "ans": "The light is on the desk."
+      },
+      {
+        "q": ". / under / towel / sofa / the / is / The",
+        "ans": "The towel is under the sofa."
+      },
+      {
+        "q": "is / TV / The / the / telephone / near / .",
+        "ans": "The telephone is near the TV."
+      },
+      {
+        "q": "near / radio / is / desk / the / The / .",
+        "ans": "The radio is near the desk."
+      },
+      {
+        "q": "is / the / video / desk / The / in / .",
+        "ans": "The video is in the desk."
+      },
+      {
+        "q": "the / fan / The / is / on / desk / .",
+        "ans": "The fan is on the desk."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}

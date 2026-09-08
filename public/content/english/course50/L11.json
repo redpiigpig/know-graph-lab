@@ -1,0 +1,600 @@
+{
+  "title_en": "My Family",
+  "title_zh": "我的家人",
+  "grammar": "使用 This is my… 以及所有格 my / your / his / her 來介紹家人。",
+  "intro_zh": "本課將學習如何用英文說出自己家人的稱呼，並練習使用 This is my… 以及所有格來描述家庭成員的關係與特點。",
+  "can_do": [
+    "能用 This is my… 介紹家人。",
+    "能正確使用 my、your、his、her 表示所有格。",
+    "能說出家庭成員的英文單字並描述他們的年齡或狀態。"
+  ],
+  "reading": {
+    "title_en": "My Family Picture",
+    "title_zh": "我的家庭照片",
+    "sentences": [
+      {
+        "en": "This is my family.",
+        "zh": "這是我的家人。"
+      },
+      {
+        "en": "My father is a kind husband and my mother is a loving wife.",
+        "zh": "我的爸爸是個溫柔的丈夫，我的媽媽是個充滿愛的妻子。"
+      },
+      {
+        "en": "I have a brother and a sister; my brother is older and my sister is younger.",
+        "zh": "我有一個哥哥和一個妹妹；哥哥比我大，妹妹比我小。"
+      },
+      {
+        "en": "My grandfather and grandmother live with us; they are very important to me.",
+        "zh": "我的爺爺和奶奶和我們住在一起；他們對我很重要。"
+      },
+      {
+        "en": "My parents are married and they care for me every day.",
+        "zh": "我的父母已婚，他們每天都關心我。"
+      },
+      {
+        "en": "I am a child, and my age is ten years old.",
+        "zh": "我是個孩子，我的年齡是十歲。"
+      },
+      {
+        "en": "I was born in Taipei, and I hope to have a baby someday.",
+        "zh": "我出生在台北，我希望有一天能有一個寶寶。"
+      },
+      {
+        "en": "I love to play with my kid friends, and they call me brother or sister.",
+        "zh": "我喜歡和我的小朋友一起玩，他們叫我哥哥或姐姐。"
+      },
+      {
+        "en": "Family is the most important thing in my life.",
+        "zh": "家庭是我生命中最重要的事情。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① This is my… 介紹自己家人",
+      "explain_zh": "用 This is my + 名詞 來說明自己的家人。",
+      "table": [
+        [
+          "主語",
+          "所有格",
+          "例句"
+        ],
+        [
+          "I",
+          "my",
+          "This is my mother."
+        ],
+        [
+          "you",
+          "your",
+          "This is your father."
+        ],
+        [
+          "he",
+          "his",
+          "This is his brother."
+        ],
+        [
+          "she",
+          "her",
+          "This is her sister."
+        ]
+      ]
+    },
+    {
+      "title_zh": "② 用 your / his / her 說別人的家人",
+      "explain_zh": "當說話對象不是自己時，用 your / his / her + 名詞 來指對方或第三者的家人。",
+      "examples": [
+        {
+          "en": "This is your grandmother.",
+          "zh": "這是你的祖母。"
+        },
+        {
+          "en": "This is his baby.",
+          "zh": "這是他的嬰兒。"
+        },
+        {
+          "en": "This is her husband.",
+          "zh": "這是她的丈夫。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "在教室裡介紹家人",
+    "lines": [
+      {
+        "sp": "小明",
+        "en": "This is my father.",
+        "zh": "這是我的爸爸。"
+      },
+      {
+        "sp": "小華",
+        "en": "This is my mother.",
+        "zh": "這是我的媽媽。"
+      },
+      {
+        "sp": "小明",
+        "en": "This is your brother.",
+        "zh": "這是你的哥哥。"
+      },
+      {
+        "sp": "小華",
+        "en": "This is his sister.",
+        "zh": "這是他的妹妹。"
+      },
+      {
+        "sp": "老師",
+        "en": "This is her grandmother.",
+        "zh": "這是她的奶奶。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "This is my mother.",
+      "zh": "這是我的媽媽。"
+    },
+    {
+      "en": "This is your father.",
+      "zh": "這是你的爸爸。"
+    },
+    {
+      "en": "This is his son.",
+      "zh": "這是他的兒子。"
+    },
+    {
+      "en": "This is her daughter.",
+      "zh": "這是她的女兒。"
+    },
+    {
+      "en": "This is my grandfather.",
+      "zh": "這是我的爺爺。"
+    },
+    {
+      "en": "This is your grandmother.",
+      "zh": "這是你的奶奶。"
+    },
+    {
+      "en": "This is his wife.",
+      "zh": "這是他的妻子。"
+    },
+    {
+      "en": "This is her husband.",
+      "zh": "這是她的丈夫。"
+    }
+  ],
+  "no": 11,
+  "theme": "My Family & Friends",
+  "theme_zh": "家人與朋友",
+  "words": [
+    {
+      "en": "family",
+      "zh": "家庭；家人"
+    },
+    {
+      "en": "father/dad",
+      "zh": "爸爸"
+    },
+    {
+      "en": "mother/mom",
+      "zh": "媽媽"
+    },
+    {
+      "en": "son",
+      "zh": "兒子"
+    },
+    {
+      "en": "daughter",
+      "zh": "女兒"
+    },
+    {
+      "en": "grandfather/grandpa",
+      "zh": "爺爺；外公"
+    },
+    {
+      "en": "grandmother/grandma",
+      "zh": "奶奶；外婆"
+    },
+    {
+      "en": "baby",
+      "zh": "嬰兒"
+    },
+    {
+      "en": "kid",
+      "zh": "小孩"
+    },
+    {
+      "en": "child",
+      "zh": "兒童"
+    },
+    {
+      "en": "parent",
+      "zh": "父或母親"
+    },
+    {
+      "en": "husband",
+      "zh": "丈夫"
+    },
+    {
+      "en": "wife",
+      "zh": "妻子"
+    },
+    {
+      "en": "brother",
+      "zh": "兄弟"
+    },
+    {
+      "en": "sister",
+      "zh": "姊妹"
+    },
+    {
+      "en": "age",
+      "zh": "年紀"
+    },
+    {
+      "en": "born",
+      "zh": "出生的"
+    },
+    {
+      "en": "married",
+      "zh": "已婚的婚姻的"
+    },
+    {
+      "en": "care",
+      "zh": "關心"
+    },
+    {
+      "en": "important",
+      "zh": "重要的"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "father 的英文是？",
+        "opts": [
+          "father",
+          "mother",
+          "brother",
+          "sister"
+        ],
+        "ans": "father"
+      },
+      {
+        "q": "母親的英文是？",
+        "opts": [
+          "mother",
+          "father",
+          "daughter",
+          "son"
+        ],
+        "ans": "mother"
+      },
+      {
+        "q": "兒子的英文是？",
+        "opts": [
+          "son",
+          "daughter",
+          "baby",
+          "kid"
+        ],
+        "ans": "son"
+      },
+      {
+        "q": "女兒的英文是？",
+        "opts": [
+          "daughter",
+          "son",
+          "sister",
+          "brother"
+        ],
+        "ans": "daughter"
+      },
+      {
+        "q": "爺爺的英文是？",
+        "opts": [
+          "grandfather",
+          "grandmother",
+          "father",
+          "mother"
+        ],
+        "ans": "grandfather"
+      },
+      {
+        "q": "奶奶的英文是？",
+        "opts": [
+          "grandmother",
+          "grandfather",
+          "mother",
+          "father"
+        ],
+        "ans": "grandmother"
+      },
+      {
+        "q": "丈夫的英文是？",
+        "opts": [
+          "husband",
+          "wife",
+          "brother",
+          "sister"
+        ],
+        "ans": "husband"
+      },
+      {
+        "q": "妻子的英文是？",
+        "opts": [
+          "wife",
+          "husband",
+          "daughter",
+          "son"
+        ],
+        "ans": "wife"
+      },
+      {
+        "q": "年齡的英文是？",
+        "opts": [
+          "age",
+          "born",
+          "married",
+          "important"
+        ],
+        "ans": "age"
+      },
+      {
+        "q": "重要的英文是？",
+        "opts": [
+          "important",
+          "care",
+          "married",
+          "born"
+        ],
+        "ans": "important"
+      },
+      {
+        "q": "This is my ___.",
+        "opts": [
+          "father",
+          "mother",
+          "brother",
+          "sister"
+        ],
+        "ans": "father"
+      },
+      {
+        "q": "This is your ___.",
+        "opts": [
+          "father",
+          "mother",
+          "brother",
+          "sister"
+        ],
+        "ans": "mother"
+      },
+      {
+        "q": "This is his ___.",
+        "opts": [
+          "father",
+          "mother",
+          "brother",
+          "sister"
+        ],
+        "ans": "brother"
+      },
+      {
+        "q": "This is her ___.",
+        "opts": [
+          "father",
+          "mother",
+          "brother",
+          "sister"
+        ],
+        "ans": "sister"
+      },
+      {
+        "q": "看圖，這是一個寶寶。用英文怎麼說？",
+        "opts": [
+          "This is a baby.",
+          "This is a kid.",
+          "This is a child.",
+          "This is a parent."
+        ],
+        "ans": "This is a baby."
+      },
+      {
+        "q": "看圖，這是一個小孩。用英文怎麼說？",
+        "opts": [
+          "This is a kid.",
+          "This is a child.",
+          "This is a baby.",
+          "This is a parent."
+        ],
+        "ans": "This is a kid."
+      },
+      {
+        "q": "這是我的兒子。用英文怎麼說？",
+        "opts": [
+          "He is my son.",
+          "She is my son.",
+          "He is my daughter.",
+          "She is my daughter."
+        ],
+        "ans": "He is my son."
+      },
+      {
+        "q": "這是我的女兒。用英文怎麼說？",
+        "opts": [
+          "She is my daughter.",
+          "He is my daughter.",
+          "She is my son.",
+          "He is my son."
+        ],
+        "ans": "She is my daughter."
+      },
+      {
+        "q": "這是他的爸爸。用英文怎麼說？",
+        "opts": [
+          "He is his father.",
+          "She is his father.",
+          "He is his mother.",
+          "She is his mother."
+        ],
+        "ans": "He is his father."
+      },
+      {
+        "q": "這是她的媽媽。用英文怎麼說？",
+        "opts": [
+          "She is her mother.",
+          "He is her mother.",
+          "She is her father.",
+          "He is her father."
+        ],
+        "ans": "She is her mother."
+      },
+      {
+        "q": "看圖，這是一個家庭。用英文怎麼說？",
+        "opts": [
+          "This is a family.",
+          "This is a kid.",
+          "This is a baby.",
+          "This is a child."
+        ],
+        "ans": "This is a family."
+      },
+      {
+        "q": "這是已婚的女人。用英文怎麼說？",
+        "opts": [
+          "She is a wife.",
+          "She is a husband.",
+          "He is a wife.",
+          "He is a husband."
+        ],
+        "ans": "She is a wife."
+      },
+      {
+        "q": "這是已婚的男人。用英文怎麼說？",
+        "opts": [
+          "He is a husband.",
+          "She is a husband.",
+          "He is a wife.",
+          "She is a wife."
+        ],
+        "ans": "He is a husband."
+      },
+      {
+        "q": "這個孩子很重要。用英文怎麼說？",
+        "opts": [
+          "The child is important.",
+          "The kid is important.",
+          "The baby is important.",
+          "The parent is important."
+        ],
+        "ans": "The child is important."
+      }
+    ],
+    "fill": [
+      {
+        "q": "This is my ____. He is my father.（父親）",
+        "ans": "dad"
+      },
+      {
+        "q": "She is my ____. Her name is Mary.（母親）",
+        "ans": "mom"
+      },
+      {
+        "q": "My ____ is very important to me.（家人）",
+        "ans": "family"
+      },
+      {
+        "q": "He is my ____. He is my mom's father.（祖父）",
+        "ans": "grandfather"
+      },
+      {
+        "q": "She is my ____. Her name is Sue.（妹妹）",
+        "ans": "sister"
+      },
+      {
+        "q": "The baby is my ____. He is very cute.（兒子）",
+        "ans": "son"
+      },
+      {
+        "q": "My ____ is ten years old.（孩子）",
+        "ans": "kid"
+      },
+      {
+        "q": "His ____ is 25. She is a teacher.（妻子）",
+        "ans": "wife"
+      },
+      {
+        "q": "I ____ about my family very much.（關心）",
+        "ans": "care"
+      },
+      {
+        "q": "My parents ____ in Taiwan.（出生）",
+        "ans": "were born"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這是我的爸爸。",
+        "ans": "This is my dad."
+      },
+      {
+        "q": "她是我的媽媽。",
+        "ans": "This is my mom."
+      },
+      {
+        "q": "我的家人非常重要。",
+        "ans": "My family is very important."
+      },
+      {
+        "q": "他有一個哥哥和一個妹妹。",
+        "ans": "He has a brother and a sister."
+      },
+      {
+        "q": "這是他的祖母。",
+        "ans": "This is his grandmother."
+      },
+      {
+        "q": "我的女兒今年八歲。",
+        "ans": "My daughter is eight years old."
+      },
+      {
+        "q": "他們已經結婚了。",
+        "ans": "They are married."
+      },
+      {
+        "q": "我很關心我的父母。",
+        "ans": "I care about my parents."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": "my / This / is / . / sister",
+        "ans": "This is my sister."
+      },
+      {
+        "q": ". / My / is / old / father",
+        "ans": "My father is old."
+      },
+      {
+        "q": "is / . / family / important / My",
+        "ans": "My family is important."
+      },
+      {
+        "q": "were / Taiwan / parents / born / . / in / My",
+        "ans": "My parents were born in Taiwan."
+      },
+      {
+        "q": "care / about / my / . / I / family",
+        "ans": "I care about my family."
+      },
+      {
+        "q": "son's / your / age / What / ? / is",
+        "ans": "What is your son's age?"
+      }
+    ]
+  },
+  "engine": "claude-haiku-4-5-20251001"
+}

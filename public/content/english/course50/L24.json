@@ -1,0 +1,664 @@
+{
+  "title_en": "Classroom Actions",
+  "title_zh": "課堂上的行為",
+  "grammar": "本課學習祈使句與 Let's… 的用法。",
+  "intro_zh": "在這一課裡，我們會學習如何用祈使句給同學指示，以及用 Let's… 一起邀請大家參與活動。透過簡單的對話練習，讓課堂互動更自然。同時，我們也會練習借東西、說抱歉和記住重要的規則。",
+  "can_do": [
+    "能使用祈使句給同學簡單指示。",
+    "能用 Let's… 提議一起做事。",
+    "能在課堂情境中正確使用本課單字。"
+  ],
+  "reading": {
+    "title_en": "Classroom Scene",
+    "title_zh": "課堂情境",
+    "sentences": [
+      {
+        "en": "Please open your book and get ready to begin the lesson.",
+        "zh": "請打開你的書，準備好開始課程。"
+      },
+      {
+        "en": "The teacher says, 'Let's join the activity together.'",
+        "zh": "老師說，'讓我們一起參加這個活動。'"
+      },
+      {
+        "en": "If you have a problem, you can borrow a pencil from your friend.",
+        "zh": "如果你有問題，可以向朋友借一支鉛筆。"
+      },
+      {
+        "en": "When you lend something, remember to ask politely.",
+        "zh": "當你借出東西時，要記得禮貌地請求。"
+      },
+      {
+        "en": "Making a mistake is not wrong; it is a fact that we learn from it.",
+        "zh": "犯錯不是錯誤，這是我們從中學習的事實。"
+      },
+      {
+        "en": "If you understand the answer, mark it with a check.",
+        "zh": "如果你理解答案，就在上面打勾。"
+      },
+      {
+        "en": "Your work is excellent and helpful to the class.",
+        "zh": "你的作業非常優秀，對班級很有幫助。"
+      },
+      {
+        "en": "At the end of the day, you will feel real and true about what you learned.",
+        "zh": "一天結束時，你會對所學的事情感到真實和真誠。"
+      },
+      {
+        "en": "If you need to leave, give a polite excuse and remember the common rules.",
+        "zh": "如果需要離開，請給一個禮貌的藉口，並牢記共同的規則。"
+      }
+    ]
+  },
+  "grammar_points": [
+    {
+      "title_zh": "① 祈使句 (Imperative Sentences)",
+      "explain_zh": "祈使句用來給指令、請求或建議，動詞以原形放在句首，通常不說明主語。加上 please 會更禮貌。",
+      "table": [
+        [
+          "英文祈使句",
+          "中文意思",
+          "備註"
+        ],
+        [
+          "Open your book.",
+          "請打開你的書。",
+          ""
+        ],
+        [
+          "Close the door, please.",
+          "請關上門。",
+          "加 please 更禮貌"
+        ],
+        [
+          "Listen carefully.",
+          "請仔細聽。",
+          ""
+        ],
+        [
+          "Sit down.",
+          "請坐下。",
+          ""
+        ]
+      ]
+    },
+    {
+      "title_zh": "② Let's… 的建議句",
+      "explain_zh": "Let's 後面接動詞原形，表示「讓我們一起……」，用來提出共同行動的建議。",
+      "examples": [
+        {
+          "en": "Let's start the lesson.",
+          "zh": "讓我們開始課程。"
+        },
+        {
+          "en": "Let's sing a song together.",
+          "zh": "讓我們一起唱歌。"
+        },
+        {
+          "en": "Let's clean the classroom after class.",
+          "zh": "課後讓我們一起清理教室。"
+        },
+        {
+          "en": "Let's read this story aloud.",
+          "zh": "讓我們大聲朗讀這個故事。"
+        }
+      ]
+    }
+  ],
+  "dialogue": {
+    "title_zh": "課堂上的互動",
+    "lines": [
+      {
+        "sp": "Teacher",
+        "en": "Open your books to page twenty‑four.",
+        "zh": "請把書翻到第二十四頁。"
+      },
+      {
+        "sp": "Student A",
+        "en": "Sorry, I forgot my book.",
+        "zh": "抱歉，我忘記帶書了。"
+      },
+      {
+        "sp": "Teacher",
+        "en": "Let's share one book with your partner.",
+        "zh": "讓我們和同桌共用一本書。"
+      },
+      {
+        "sp": "Student B",
+        "en": "Okay, let's read the first paragraph together.",
+        "zh": "好，讓我們一起朗讀第一段。"
+      },
+      {
+        "sp": "Teacher",
+        "en": "Please underline the new words.",
+        "zh": "請劃底線標出新單字。"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "en": "Close the window, please.",
+      "zh": "請關上窗戶。"
+    },
+    {
+      "en": "Listen to the teacher carefully.",
+      "zh": "請仔細聽老師的話。"
+    },
+    {
+      "en": "Stand up when you answer a question.",
+      "zh": "回答問題時請起立。"
+    },
+    {
+      "en": "Let's draw a picture on the board.",
+      "zh": "讓我們在黑板上畫一張圖。"
+    },
+    {
+      "en": "Let's practice the new vocabulary together.",
+      "zh": "讓我們一起練習新單字。"
+    },
+    {
+      "en": "Please hand in your homework now.",
+      "zh": "請現在交作業。"
+    },
+    {
+      "en": "Let's take a short break after this activity.",
+      "zh": "這個活動結束後讓我們休息一下。"
+    },
+    {
+      "en": "Don't forget to bring your pencil tomorrow.",
+      "zh": "明天別忘了帶鉛筆。"
+    }
+  ],
+  "no": 24,
+  "theme": "Classroom Actions",
+  "theme_zh": "課堂上的事",
+  "words": [
+    {
+      "en": "excuse",
+      "zh": "藉口"
+    },
+    {
+      "en": "fact",
+      "zh": "事實"
+    },
+    {
+      "en": "understand",
+      "zh": "了解"
+    },
+    {
+      "en": "mark",
+      "zh": "打分數"
+    },
+    {
+      "en": "mistake",
+      "zh": "錯誤"
+    },
+    {
+      "en": "excellent",
+      "zh": "傑出的"
+    },
+    {
+      "en": "ready",
+      "zh": "準備好的"
+    },
+    {
+      "en": "wrong",
+      "zh": "錯誤的"
+    },
+    {
+      "en": "problem",
+      "zh": "困難；問題"
+    },
+    {
+      "en": "helpful",
+      "zh": "有用的"
+    },
+    {
+      "en": "real",
+      "zh": "真正的"
+    },
+    {
+      "en": "true",
+      "zh": "真實的"
+    },
+    {
+      "en": "begin",
+      "zh": "開始"
+    },
+    {
+      "en": "end",
+      "zh": "最後"
+    },
+    {
+      "en": "borrow",
+      "zh": "借用"
+    },
+    {
+      "en": "lend",
+      "zh": "把…借給"
+    },
+    {
+      "en": "join",
+      "zh": "參加"
+    },
+    {
+      "en": "remember",
+      "zh": "記得"
+    },
+    {
+      "en": "forget",
+      "zh": "忘記"
+    },
+    {
+      "en": "common",
+      "zh": "普通的"
+    }
+  ],
+  "exercises": {
+    "mcq": [
+      {
+        "q": "請選擇『開始』的英文單字",
+        "opts": [
+          "begin",
+          "end",
+          "borrow",
+          "lend"
+        ],
+        "ans": "begin"
+      },
+      {
+        "q": "請選擇『結束』的英文單字",
+        "opts": [
+          "end",
+          "begin",
+          "join",
+          "forget"
+        ],
+        "ans": "end"
+      },
+      {
+        "q": "請選擇『借』的英文單字",
+        "opts": [
+          "borrow",
+          "lend",
+          "join",
+          "remember"
+        ],
+        "ans": "borrow"
+      },
+      {
+        "q": "請選擇『貸出』的英文單字",
+        "opts": [
+          "lend",
+          "borrow",
+          "excuse",
+          "fact"
+        ],
+        "ans": "lend"
+      },
+      {
+        "q": "請選擇『加入』的英文單字",
+        "opts": [
+          "join",
+          "remember",
+          "forget",
+          "understand"
+        ],
+        "ans": "join"
+      },
+      {
+        "q": "請選擇『記得』的英文單字",
+        "opts": [
+          "remember",
+          "forget",
+          "understand",
+          "mark"
+        ],
+        "ans": "remember"
+      },
+      {
+        "q": "請選擇『忘記』的英文單字",
+        "opts": [
+          "forget",
+          "remember",
+          "begin",
+          "end"
+        ],
+        "ans": "forget"
+      },
+      {
+        "q": "請選擇『理解』的英文單字",
+        "opts": [
+          "understand",
+          "mistake",
+          "excellent",
+          "ready"
+        ],
+        "ans": "understand"
+      },
+      {
+        "q": "請選擇『標記』的英文單字",
+        "opts": [
+          "mark",
+          "mistake",
+          "problem",
+          "helpful"
+        ],
+        "ans": "mark"
+      },
+      {
+        "q": "請選擇『錯誤』的英文單字",
+        "opts": [
+          "mistake",
+          "wrong",
+          "problem",
+          "fact"
+        ],
+        "ans": "mistake"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『開始』？",
+        "opts": [
+          "Begin",
+          "End",
+          "Borrow",
+          "Lend"
+        ],
+        "ans": "Begin"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『結束』？",
+        "opts": [
+          "End",
+          "Begin",
+          "Forget",
+          "Remember"
+        ],
+        "ans": "End"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『借』？",
+        "opts": [
+          "Borrow",
+          "Lend",
+          "Join",
+          "Understand"
+        ],
+        "ans": "Borrow"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『貸出』？",
+        "opts": [
+          "Lend",
+          "Borrow",
+          "Mark",
+          "Excuse"
+        ],
+        "ans": "Lend"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『加入』？",
+        "opts": [
+          "Join",
+          "Forget",
+          "Remember",
+          "Understand"
+        ],
+        "ans": "Join"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『記得』？",
+        "opts": [
+          "Remember",
+          "Forget",
+          "Begin",
+          "End"
+        ],
+        "ans": "Remember"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『忘記』？",
+        "opts": [
+          "Forget",
+          "Remember",
+          "Mark",
+          "Understand"
+        ],
+        "ans": "Forget"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『理解』？",
+        "opts": [
+          "Understand",
+          "Mark",
+          "Borrow",
+          "Lend"
+        ],
+        "ans": "Understand"
+      },
+      {
+        "q": "哪個詞可以用來作祈使句，意思是『標記』？",
+        "opts": [
+          "Mark",
+          "Understand",
+          "Join",
+          "Forget"
+        ],
+        "ans": "Mark"
+      },
+      {
+        "q": "哪個詞可以用在 Let's 後面，意思是『一起參與』？",
+        "opts": [
+          "Join",
+          "Begin",
+          "End",
+          "Forget"
+        ],
+        "ans": "Join"
+      },
+      {
+        "q": "在想禮貌地打斷某人時，你會說哪個詞？",
+        "opts": [
+          "excuse",
+          "fact",
+          "mistake",
+          "problem"
+        ],
+        "ans": "excuse"
+      },
+      {
+        "q": "哪個詞的意思是「事實」？",
+        "opts": [
+          "fact",
+          "problem",
+          "helpful",
+          "real"
+        ],
+        "ans": "fact"
+      },
+      {
+        "q": "哪個詞的意思是「問題」？",
+        "opts": [
+          "problem",
+          "excuse",
+          "fact",
+          "understand"
+        ],
+        "ans": "problem"
+      },
+      {
+        "q": "哪個詞的意思是「有幫助的」？",
+        "opts": [
+          "helpful",
+          "ready",
+          "wrong",
+          "excellent"
+        ],
+        "ans": "helpful"
+      },
+      {
+        "q": "哪個詞的意思是「真的」？",
+        "opts": [
+          "real",
+          "true",
+          "forget",
+          "join"
+        ],
+        "ans": "real"
+      },
+      {
+        "q": "哪個詞的意思是「正確的」？",
+        "opts": [
+          "true",
+          "wrong",
+          "mistake",
+          "excellent"
+        ],
+        "ans": "true"
+      },
+      {
+        "q": "哪個詞的意思是「準備好的」？",
+        "opts": [
+          "ready",
+          "begin",
+          "end",
+          "borrow"
+        ],
+        "ans": "ready"
+      },
+      {
+        "q": "哪個詞的意思是「優秀的」？",
+        "opts": [
+          "excellent",
+          "helpful",
+          "wrong",
+          "problem"
+        ],
+        "ans": "excellent"
+      },
+      {
+        "q": "哪個詞的意思是「錯誤的」？",
+        "opts": [
+          "wrong",
+          "mistake",
+          "forget",
+          "lend"
+        ],
+        "ans": "wrong"
+      },
+      {
+        "q": "在老師說「請把答案______在這裡」時，哪個詞最適合填入空格？",
+        "opts": [
+          "mark",
+          "join",
+          "forget",
+          "lend"
+        ],
+        "ans": "mark"
+      }
+    ],
+    "fill": [
+      {
+        "q": "____ me.（原諒我）",
+        "ans": "Excuse"
+      },
+      {
+        "q": "It is a ____.（這是一個錯誤）",
+        "ans": "mistake"
+      },
+      {
+        "q": "The fact is ____。（這個事實很優秀）",
+        "ans": "excellent"
+      },
+      {
+        "q": "We have a ____。（我們有一個問題）",
+        "ans": "problem"
+      },
+      {
+        "q": "Can you ____ it？（你能借它嗎？）",
+        "ans": "borrow"
+      },
+      {
+        "q": "Will you ____ them？（你會加入他們嗎？）",
+        "ans": "join"
+      },
+      {
+        "q": "Do you ____ the fact？（你記得這個事實嗎？）",
+        "ans": "remember"
+      },
+      {
+        "q": "Don't ____ the fact。（不要忘記這個事實）",
+        "ans": "forget"
+      },
+      {
+        "q": "Let's ____。（讓我們開始吧）",
+        "ans": "begin"
+      },
+      {
+        "q": "The ____ is true。（這個事實是真的）",
+        "ans": "fact"
+      }
+    ],
+    "translate": [
+      {
+        "q": "這個標記錯誤。",
+        "ans": "The mark is wrong."
+      },
+      {
+        "q": "她準備好了。",
+        "ans": "She is ready."
+      },
+      {
+        "q": "他們很樂於助人。",
+        "ans": "They are helpful."
+      },
+      {
+        "q": "這是真的。",
+        "ans": "It is real."
+      },
+      {
+        "q": "這很常見。",
+        "ans": "This is common."
+      },
+      {
+        "q": "你能理解嗎？",
+        "ans": "Can you understand?"
+      },
+      {
+        "q": "你記得嗎？",
+        "ans": "Do you remember?"
+      },
+      {
+        "q": "別忘了。",
+        "ans": "Don't forget."
+      }
+    ],
+    "unscramble": [
+      {
+        "q": ". / is / The / fact / true",
+        "ans": "The fact is true."
+      },
+      {
+        "q": ". / ready / She / is",
+        "ans": "She is ready."
+      },
+      {
+        "q": "They / . / helpful / are",
+        "ans": "They are helpful."
+      },
+      {
+        "q": "? / understand / you / Can",
+        "ans": "Can you understand?"
+      },
+      {
+        "q": "forget / Don't / .",
+        "ans": "Don't forget."
+      },
+      {
+        "q": "begin / . / Let's",
+        "ans": "Let's begin."
+      }
+    ]
+  },
+  "engine": "nvidia:nemotron(json)"
+}
