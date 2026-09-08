@@ -50,6 +50,25 @@ PER_TRACK = PER_VOLUME // 2
 MIN_CHARS, MAX_CHARS = 400, 4000
 AUTHOR_CAP = PER_VOLUME // 6
 
+# 合約點名必收的段落（japanese-reader-contract.md〈聖經與佛經的常用語句必須收〉）。
+# 分數挑不出它們：山上の垂訓講的是倫理不是「宗教學用語」，詩篇更是一個宗教學名詞
+# 都沒有，所以 2026-08-28 那版計畫選到的是出埃及記 29 章的幕屋獻納儀式——密度分數
+# 最高，卻不是任何人所謂的「常用語句」。這些先入座，其餘名額才照分數競爭。
+RESERVED_V2 = [
+    "bible:馬太福音:5", "bible:馬太福音:6", "bible:馬太福音:7",   # 山上の垂訓（主の祈り在第六章）
+    "bible:詩篇:1", "bible:詩篇:23", "bible:詩篇:51",
+    "bible:詩篇:90", "bible:詩篇:121", "bible:詩篇:130",
+    "使徒信経 (日本聖公会1941年)",                                 # 合約點名的使徒信条
+]
+
+# 佛典：素材抓回來了，但沒有一篇能照合約要求的「漢文訓読体」入書——立誓願文整篇
+# 是漢文（假名 0%），般若心経那一頁混著梵文轉寫、大谷光瑞的講話與語註，阿彌陀經
+# 開頭是維基文庫的顯示警告，而書き下し的訓読者與年份都查不到。合約的 stop
+# condition 寫得很清楚：查不到訓読者與年份就不收，不要拿「佛典是古籍」帶過。
+# 所以這一批整組排除，並在計畫裡留下缺口紀錄，不是靜靜地少幾篇。
+EXCLUDED_GROUPS = {"buddhist"}
+GROUP_AUTHOR = {"bible": "文語訳聖書", "creed": "信經（文語）", "buddhist": "佛典"}
+
 # 宗教學與宗教史的用語。分數是「每千字命中次數」，長文不會因為長而勝出。
 SUBJECT = re.compile(
     "宗教|信仰|神道|神社|神話|祭|祝詞|巫|霊魂|靈魂|他界|仏教|佛教|禅|禪|念仏|念佛|"
@@ -113,16 +132,18 @@ def scripture_candidates() -> list[dict]:
     rows = []
     for key, item in json.loads(SCRIPTURE.read_text(encoding="utf-8")).items():
         path = ROOT / item["file"]
-        if not path.exists():
+        if not path.exists() or item.get("group") in EXCLUDED_GROUPS:
             continue
         text = path.read_text(encoding="utf-8")
-        if not (MIN_CHARS <= len(text) <= MAX_CHARS):
+        # 合約點名的那幾篇不受長度門檻限制：詩篇二十三篇只有兩百多字，它短不是
+        # 缺陷，是它本來的長度，而它是這本讀本非收不可的一篇。
+        if key not in RESERVED_V2 and not (MIN_CHARS <= len(text) <= MAX_CHARS):
             continue
         rows.append(
             {
                 "workId": key,
                 "title": item["titleZh"],
-                "author": "文語訳聖書" if item["group"] == "bible" else "佛典",
+                "author": GROUP_AUTHOR.get(item["group"], "經典"),
                 "orthography": "文語",
                 "extent": "全章" if item["group"] == "bible" else "全文",
                 "chars": len(text),
@@ -226,7 +247,7 @@ def pick(rows: list[dict], modern: bool, *, track: str = "religion",
             break
         # 「文語訳聖書」與「佛典」是文本群不是作者，上限對它們沒有意義：
         # 五十課裡讀十章福音書是正常的，讀十篇折口不是。
-        capped = row["author"] not in ("文語訳聖書", "佛典")
+        capped = row["author"] not in ("文語訳聖書", "佛典", "信經（文語）")
         if capped and per_author.get(row["author"], 0) >= AUTHOR_CAP:
             continue
         # 同一篇作品不重複入選，即使它有好幾節夠格。
@@ -273,8 +294,17 @@ def main() -> int:
             religion = religion + extra[:short]
         return religion + classics
 
+    reserved_rows = [r for key in RESERVED_V2 for r in rows if r["workId"] == key]
+    missing_reserved = [key for key in RESERVED_V2
+                        if not any(r["workId"] == key for r in reserved_rows)]
+
     first = volume(True)
-    second = volume(False)
+    second_free = [r for r in volume(False) if r["workId"] not in set(RESERVED_V2)]
+    second = reserved_rows + second_free[: PER_VOLUME - len(reserved_rows)]
+    print(f"\n合約必收 {len(reserved_rows)}／{len(RESERVED_V2)} 篇先入座"
+          + (f"；找不到：{missing_reserved}" if missing_reserved else ""))
+    print("佛典整組排除：訓読者與年份查不到，且素材混著漢文、梵文轉寫與講話"
+          "（合約 stop condition）。缺口要補，得先找到具名譯者的訓読本。")
     for label, chosen in (("第一冊・現代語", first), ("第二冊・文語舊假名", second)):
         by_author: dict[str, int] = {}
         for row in chosen:

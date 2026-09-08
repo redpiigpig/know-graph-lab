@@ -39,6 +39,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -81,6 +82,43 @@ _F_BLD = fitz.Font(fontfile=LATIN_BD)
 # 行首不該出現的標點（簡易禁則）。完整的 JIS X 4051 太過頭，擋住句讀與
 # 收尾括號就解決九成難看的斷行。
 NO_LINE_START = "。、，．・：；？！）」』】〉》”’%,.;:?!)]}"
+
+
+# 封面欄位
+COVER = {
+    "marcus": dict(
+        title="宗教學理論讀本",
+        subtitle="根瑟馬庫斯老師兩門課指定讀物合本",
+        lines=[
+            "玄奘大學宗教與文化學系　115 學年度第 1 學期",
+            "",
+            "週一第 2 節　宗教研究基本問題與研究方法（博士班 1A．專必．3 學分）",
+            "週六第 1 節〔單週〕　宗教學理論與方法（一）（碩專班 1A．專必．2 學分）",
+            "",
+            "授課教師　根瑟馬庫斯",
+            "編　　者　張辰瑋",
+        ],
+        note="兩門課書單重疊，MacIntyre 與 Segal 兩篇兩門都指定，本讀本只收一次，"
+             "目錄標明兩門都要讀。\n"
+             "正文由掃描本的文字層重新排版，非原書之替代；OCR 有殘留錯誤、圖表未收、"
+             "註腳位置與原書不同，引用一律回頭核對原書。",
+    ),
+    "japanese": dict(
+        title="初階日文讀本",
+        subtitle="無教會主義文獻選讀．十五週自學計畫",
+        lines=[
+            "玄奘大學宗教與文化學系　115 學年度第 1 學期",
+            "",
+            "週二第 1 節　初階宗教學日文文獻選讀（碩士班 1A．專選．2 學分）",
+            "",
+            "授課教師　倪杰",
+            "編　　者　張辰瑋",
+        ],
+        note="本課程為個別化自學，讀本由學生依個人目標自選。目標為研究無教會主義，"
+             "故取矢內原忠雄之現代日文為主線、文語訳聖書與內村鑑三之文語為副線。\n"
+             "每頁上半為原文、下半留白供逐句翻譯。各篇出處、節錄範圍與實質字數見篇首。",
+    ),
+}
 
 # ── 讀本結構 ────────────────────────────────────────────────────────────
 MARCUS_PARTS = [
@@ -273,7 +311,7 @@ class Book:
     數字、括號、拉丁字全被撐開，印成「W0 5」「（ こ ）」那樣。
     """
 
-    def __init__(self, lang: str = "zh"):
+    def __init__(self, lang: str = "zh", half_page: bool = False):
         self.doc = fitz.open()
         self.cjk_path = CJK_JA if lang == "ja" else CJK_ZH
         # 兩套 CJK 字型互為備援，逐字選。MS 明朝沒有繁體的「內」（U+5167），細明體
@@ -289,6 +327,13 @@ class Book:
         self.head_l = ""
         self.head_r = ""
         self.marks: list[list] = []
+        # 半頁模式：正文只排到頁面中線，下半頁留白給使用者寫翻譯
+        self.half_page = half_page
+        self.entries: list[tuple[str, str, int]] = []   # (週次, 篇名, 內文頁序)
+
+    @property
+    def bottom(self) -> float:
+        return (PH / 2 - 6) if self.half_page else (PH - M_BOT)
 
     # ── 量測與斷行 ──────────────────────────────────────────────────
     @staticmethod
@@ -369,6 +414,8 @@ class Book:
 
     def draw(self, x: float, y: float, text: str, size: float, bold: bool = False,
              color=(0, 0, 0)) -> float:
+        if not text:
+            return x   # 封面有刻意留的空行；insert_text 吃空字串會炸
         for run, kind in self._runs(text):
             fn = {"cjk": "CJK", "cjk_alt": "CJK2"}.get(kind, "TNRB" if bold else "TNR")
             self.page.insert_text((x, y), run, fontname=fn, fontsize=size, color=color)
@@ -383,24 +430,30 @@ class Book:
         self.page.insert_font(fontname="CJK", fontfile=self.cjk_path)
         self.page.insert_font(fontname="CJK2", fontfile=self.alt_path)
         self.y = M_TOP
-        n = self.doc.page_count
         if self.head_l or self.head_r:
             self.draw(BODY_X0, M_TOP - 20, self.head_l[:30], 7.6, color=(0.45,) * 3)
             hr = self.head_r[:70]
             self.draw(BODY_X1 - self.measure(hr, 7.6), M_TOP - 20, hr, 7.6, color=(0.45,) * 3)
             self.page.draw_line(fitz.Point(BODY_X0, M_TOP - 14), fitz.Point(BODY_X1, M_TOP - 14),
                                 color=(0.8,) * 3, width=0.4)
-        num = str(n)
-        self.draw(PW / 2 - self.measure(num, 8.6) / 2, PH - 30, num, 8.6, color=(0.4,) * 3)
+        if self.half_page:
+            mid = PH / 2
+            self.page.draw_line(fitz.Point(BODY_X0, mid), fitz.Point(BODY_X1, mid),
+                                color=(0.82,) * 3, width=0.5, dashes="[2 3] 0")
+            self.draw(BODY_X0, mid + 16, "譯文", 8.4, color=(0.62,) * 3)
 
     def space(self, need: float) -> None:
-        if self.page is None or self.y + need > PH - M_BOT:
+        if self.page is None or self.y + need > self.bottom:
             self.new_page()
 
     def flow(self, text: str, size: float = FS, lead: float | None = None,
              gap: float = 6.0, bold: bool = False, x0: float = BODY_X0,
              x1: float = BODY_X1, color=(0, 0, 0)) -> None:
         lead = size * LEAD_FACTOR if lead is None else lead
+        if not text.strip():          # 空行就只是空一行
+            self.space(lead)
+            self.y += lead
+            return
         for ln in self.wrap(text, x1 - x0, size, bold):
             self.space(lead)
             self.draw(x0, self.y, ln, size, bold, color)
@@ -422,8 +475,9 @@ class Book:
         self.head_l = week
         self.head_r = f"{author}, {title}" if author else title
         self.new_page()
-        self.marks.append([2, (f"{author}, {title}" if author else title)[:88],
-                           self.doc.page_count])
+        label = (f"{author}, {title}" if author else title)[:88]
+        self.marks.append([2, label, self.doc.page_count])
+        self.entries.append((week, label, self.doc.page_count))
         self.y = M_TOP + 8
         self.flow(week, size=9.6, gap=8, color=(0.4,) * 3)
         if author:
@@ -456,6 +510,55 @@ class Book:
                 self.flow(ln, size=10.4, gap=4, x0=BODY_X0 + 8)
             else:
                 self.flow(ln, size=10.4, gap=5)
+
+
+
+
+def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]],
+                  offset_guess: int) -> Book:
+    """做封面與目錄。目錄要印頁碼，而頁碼取決於目錄自己有幾頁——所以呼叫端
+    會拿回傳的頁數再算一次，收斂後才定案。"""
+    bk = Book(lang=lang)
+    bk.new_page()
+    bk.y = 190
+    bk.flow(meta["title"], size=25, gap=16)
+    bk.flow(meta["subtitle"], size=12.5, gap=40, color=(0.35,) * 3)
+    for line in meta["lines"]:
+        bk.flow(line, size=11, gap=3)
+    bk.y = PH - 200
+    bk.flow(meta["note"], size=8.8, gap=4, color=(0.42,) * 3)
+
+    bk.head_l, bk.head_r = "", ""
+    bk.new_page()
+    bk.y = M_TOP + 10
+    bk.flow("目錄", size=18, gap=18)
+    for week, label, page in entries:
+        num = str(page + offset_guess)
+        left = f"{week}　{label}"
+        # 點線導引：先量左右兩端，中間用點填滿
+        wl = bk.measure(left, 9.8)
+        wr = bk.measure(num, 9.8)
+        room = (BODY_X1 - BODY_X0) - wl - wr - 6
+        dots = ""
+        while bk.measure(dots + "·", 9.8) < room:
+            dots += "·"
+        bk.space(9.8 * LEAD_FACTOR)
+        x = bk.draw(BODY_X0, bk.y, left, 9.8)
+        bk.draw(x + 3, bk.y, dots, 9.8, color=(0.72,) * 3)
+        bk.draw(BODY_X1 - wr, bk.y, num, 9.8)
+        bk.y += 9.8 * LEAD_FACTOR
+    return bk
+
+
+def stamp_numbers(doc: fitz.Document, first: int, cjk_path: str) -> None:
+    """合併之後統一蓋頁碼——封面與目錄不蓋，正文從 1 開始。"""
+    for i in range(first, doc.page_count):
+        page = doc[i]
+        page.insert_font(fontname="TNR", fontfile=LATIN)
+        num = str(i - first + 1)
+        w = _F_REG.text_length(num, 8.8)
+        page.insert_text((PW / 2 - w / 2, PH - 32), num,
+                         fontname="TNR", fontsize=8.8, color=(0.4,) * 3)
 
 
 # ── 閱讀導引（LLM）──────────────────────────────────────────────────────
@@ -574,7 +677,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
             print(f"✓ {dst}　{doc.page_count} 頁")
         return
 
-    bk = Book(lang=lang)
+    bk = Book(lang=lang, half_page=(reader == "japanese"))
     for name, blurb, items in use:
         bk.part_title(name, blurb)
         for key, weeks in items:
@@ -603,7 +706,9 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
                 body = "\n\n".join(paras)
                 disp = title
 
-            key_id = os.path.basename(path)
+            # 🚨 快取的鍵不能只用檔名。讀本的節錄範圍一改，檔名沒變但內容變了，
+            #    用檔名當鍵就會配上一份講的是別段文字的導引——看起來完全正常。
+            key_id = f"{os.path.basename(path)}#{hashlib.sha1(body.encode()).hexdigest()[:10]}"
             if want_guide:
                 if key_id not in cache:
                     print(f"    · 產生閱讀導引：{disp[:44]}")
@@ -616,11 +721,24 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
                     bk.guide_page(f"{weeks}", disp, cache[key_id])
             print(f"  ✓ {disp[:52]}")
 
-    bk.doc.set_toc(bk.marks)
+    # 封面＋目錄先做一版量頁數，再用真的頁碼重做一次（目錄自己的頁數會影響頁碼）
+    front = cover_and_toc(lang, COVER[reader], bk.entries, 0)
+    for _ in range(3):
+        guess = front.doc.page_count
+        front = cover_and_toc(lang, COVER[reader], bk.entries, guess)
+        if front.doc.page_count == guess:
+            break
+
+    book = fitz.open()
+    book.insert_pdf(front.doc)
+    book.insert_pdf(bk.doc)
+    stamp_numbers(book, front.doc.page_count, bk.cjk_path)
+    book.set_toc([[lvl, t, p + front.doc.page_count] for lvl, t, p in bk.marks])
+
     for d in out_dirs:
         dst = os.path.join(d, f"{stem}.pdf")
-        bk.doc.save(dst, deflate=True)
-        print(f"✓ {dst}　{bk.doc.page_count} 頁")
+        book.save(dst, deflate=True)
+        print(f"✓ {dst}　{book.page_count} 頁（封面目錄 {front.doc.page_count} 頁）")
     for k in missing:
         print(f"✗ 找不到：{k}")
 

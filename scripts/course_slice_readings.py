@@ -61,7 +61,34 @@ BOOKS = {
     "blackwell": (rf"{LIB}\_待審分類\Robert A. Segal，The Blackwell Companion to the Study of Religion.pdf", "Blackwell Companion"),
     "insider": (rf"{LIB}\_待審分類\Russell T. McCutcheon，The InsiderOutsider Problem in the Study of Religion A Reader.pdf", "Insider-Outsider"),
     "waardenburg": (rf"{LIB}\_待審分類\Jacques Waardenburg Russell T. McCutcheon，Classical Approaches to the Study of Religion Aims, Methods, and Theories of Research. Introduction and Anthology.pdf", "Classical Approaches"),
+    # 剛下載的書還在 z-lib/ drop 夾，要等每日 ingest 才搬進圖書館，所以用樣式找。
+    "josephson": ("*invention of religion in japan*", "Invention of Religion in Japan"),
 }
+
+# 書不在寫死的路徑時，依序在這些地方找（樣式比對，不分大小寫）
+BOOK_DIRS = [
+    os.path.join(ROOT, "z-lib"),
+    os.path.join(LIB, "_待審分類"),
+    os.path.join(LIB, "宗教學"),
+    os.path.join(LIB, "世界宗教"),
+    LIB,
+]
+
+
+def resolve_book(spec: str) -> str | None:
+    """spec 可以是完整路徑，也可以是檔名樣式。"""
+    if os.path.exists(spec):
+        return spec
+    if os.sep in spec or "/" in spec:
+        return None
+    import fnmatch
+    for d in BOOK_DIRS:
+        if not os.path.isdir(d):
+            continue
+        for f in os.listdir(d):
+            if fnmatch.fnmatch(f.lower(), spec.lower()):
+                return os.path.join(d, f)
+    return None
 
 
 def S(seq, author, title, book, p1, p2, kw, mode="print"):
@@ -78,6 +105,14 @@ def W(seq, title, url, cite=""):
 def L(seq, title, url, cite=""):
     """只是連結（線上測驗、JS 產生的說明頁），不下載。"""
     return dict(kind="link", seq=seq, title=title, url=url, cite=cite)
+
+
+def K(seq, title, cite="", filename=""):
+    """已經在該週資料夾裡、但無法從來源書重切的檔（來源沒進圖書館）。
+
+    這種要跟 G()（真的還沒拿到）分清楚，否則每次跑完都報一筆假的待辦。
+    """
+    return dict(kind="kept", seq=seq, title=title, cite=cite, filename=filename)
 
 
 def G(seq, title, cite="", why=""):
@@ -101,7 +136,10 @@ C1 = "宗教研究基本問題與研究方法"
 C1_WEEKS = [
     ("W01 導論", "導論", []),
     ("W02-04 歷史背景與學科定位", "A. 學科本身與研究對象／歷史背景與學科定位", [
-        G(1, "Alles, Study of Religion: An Overview", "Encyclopedia of Religion 8761-8767", "已切好；EoR 未進圖書館，無法重切"),
+        # 這篇的切片檔已在該週資料夾裡，也收進讀本了。之所以不列成 S()，是因為
+        # 來源《宗教百科全書》沒進電子圖書館，這支重跑時無法重新切——不是缺件。
+        K(1, "Alles, Study of Religion: An Overview", "Encyclopedia of Religion 8761-8767",
+          "W02-04_1_Alles_Study of Religion - An Overview (EoR 8761-8767).pdf"),
         S(2, "Sharpe", "The Study of Religion in Historical Perspective", "routledge", 21, 45, "Historical Perspective"),
         S(3, "Sharpe", "Theology and Religious Studies", "understanding", 1, 17, "Theology"),
         S(4, "Whaling", "Introduction", "theory", 1, 39, "Introduction"),
@@ -223,8 +261,9 @@ C3_WEEKS = [
     ]),
     ("W04 個別化自學", "依個人日文程度客製化學習", []),
     ("W05 個別化自學", "Josephson, The Invention of Religion in Japan", [
-        G(1, "Josephson, The Invention of Religion in Japan (2012), Conclusion",
-          "Chicago: University of Chicago Press, 2012", "電子圖書館與 Drive 都沒有這本，需下載"),
+        # 頁碼取自書的內嵌目錄：Conclusion 266，下一節 Appendix 278
+        S(1, "Josephson", "The Invention of Religion in Japan - Conclusion",
+          "josephson", 266, 277, "Conclusion", mode="pdf"),
     ]),
     ("W06 個別化自學", "印度教節慶的宗教與社會意義", [
         W(1, "Babu, The Religious and Social Significance of Hindu Festivals",
@@ -337,8 +376,9 @@ def get_book(key: str):
     """開書，順便算好印刷頁碼位移（算不出來就記 None，print 模式才會用到）。"""
     if key in _OPENED:
         return _OPENED[key]
-    path, short = BOOKS[key]
-    if not os.path.exists(path):
+    spec, short = BOOKS[key]
+    path = resolve_book(spec)
+    if not path:
         _OPENED[key] = None
         return None
     doc = fitz.open(path)
@@ -466,6 +506,9 @@ def write_manifest(course: str, week: str, topic: str, items: list, dst_dir: str
                 out.append(f"{it['seq']}. {it['title']}　※老師於 I-Learn 提供")
             elif it["kind"] == "cbeta":
                 out.append(f"{it['seq']}. {it['title']}（{it['cite']}）")
+            elif it["kind"] == "kept":
+                out.append(f"{it['seq']}. {it['title']}" + (f"（{it['cite']}）" if it["cite"] else ""))
+                out.append(f"   - 檔案：{it['filename']}")
             elif it["kind"] == "gap":
                 out.append(f"{it['seq']}. ⚠ {it['title']}" + (f"（{it['cite']}）" if it["cite"] else ""))
                 out.append(f"   - **尚未取得**：{it['why']}")
@@ -520,6 +563,10 @@ def main() -> None:
             week = folder.split()[0]
             for it in sorted(items, key=lambda x: x["seq"]):
                 if it["kind"] == "link":
+                    continue
+                if it["kind"] == "kept":
+                    if not os.path.exists(os.path.join(dst_dir, it["filename"])):
+                        bad.append((course, folder, it["title"], "本來就在的切片檔不見了"))
                     continue
                 if it["kind"] == "gap":
                     bad.append((course, folder, it["title"], it["why"]))

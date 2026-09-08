@@ -58,23 +58,31 @@ BIBLE_BOOKS = [
     (["ルカ傳福音書(文語訳)", "ルカ傳福音書 (文語訳)"], "路加福音", "新約"),
     (["ヨハネ傳福音書(文語訳)", "ヨハネ傳福音書 (文語訳)"], "約翰福音", "新約"),
     (["使徒行傳(文語訳)", "使徒行傳 (文語訳)"], "使徒行傳", "新約"),
-    (["ロマ書(文語訳)", "ロマ書 (文語訳)"], "羅馬書", "新約"),
-    (["コリント前書(文語訳)", "コリント前書 (文語訳)"], "哥林多前書", "新約"),
-    (["ガラテヤ書(文語訳)", "ガラテヤ書 (文語訳)"], "加拉太書", "新約"),
-    (["ヨハネ黙示録(文語訳)", "ヨハネ黙示録 (文語訳)"], "啟示錄", "新約"),
+    # 頁名是查出來的，不是照書名猜的：維基文庫這幾卷用的是「◯人への書」而不是
+    # 通行簡稱，默示録那一頁還用舊字「默」。猜了四個名字，四卷就全都抓不到。
+    (["ロマ人への書(文語訳)", "ロマ人への書 (文語訳)"], "羅馬書", "新約"),
+    (["コリント人への前の書(文語訳)", "コリント人への前の書 (文語訳)"], "哥林多前書", "新約"),
+    (["ガラテヤ人への書 (文語訳)", "ガラテヤ人への書(文語訳)"], "加拉太書", "新約"),
+    (["ヨハネの默示録(文語訳)", "ヨハネの默示録 (文語訳)"], "啟示錄", "新約"),
 ]
 
-CHAPTER_HEAD = re.compile(r"^==+\s*第\s*(\d+)\s*章\s*==+$", re.M)
+# 詩篇不分「章」而分「篇」，維基文庫也就照著寫成 `== 第1篇 ==`。只認「章」的話，
+# 這一整卷會抓到頁面卻切不出東西——合約點名要收的詩篇因此一篇都沒有進來。
+CHAPTER_HEAD = re.compile(r"^==+\s*第\s*(\d+)\s*[章篇]\s*==+$", re.M)
+VERSE_HEAD = re.compile(r"^=+\s*\d+:(\d+)\s*=+$", re.M)
 
 # 佛典：頁名是搜出來的，不是猜的。訓讀的權利狀態要逐篇確認。
 BUDDHIST = [
-    ("般若心経", "般若心經", "經"),
-    ("観音経", "觀音經（普門品）", "經"),
-    ("仏説阿弥陀経", "佛說阿彌陀經", "經"),
-    ("正信念仏偈", "正信念佛偈", "偈"),
-    ("歎異抄 (意訳聖典)", "歎異抄", "論"),
-    ("十七条憲法", "十七條憲法", "史料"),
-    ("立誓願文", "立誓願文", "願文"),
+    ("般若心経", "般若心經", "經", "buddhist"),
+    ("妙法蓮華経観世音菩薩普門品", "觀音經（普門品）", "經", "buddhist"),
+    ("仏説阿弥陀経", "佛說阿彌陀經", "經", "buddhist"),
+    ("正信念仏偈", "正信念佛偈", "偈", "buddhist"),
+    ("歎異抄 (意訳聖典)", "歎異抄", "論", "buddhist"),
+    ("十七条憲法", "十七條憲法", "史料", "buddhist"),
+    ("立誓願文", "立誓願文", "願文", "buddhist"),
+    # 合約點名的「使徒信条」不是聖經經文，維基文庫收在禮文底下；1941 年日本聖公會
+    # 版是文語，與這本讀本的聖書同一個語體。
+    ("使徒信経 (日本聖公会1941年)", "使徒信經", "信經", "creed"),
 ]
 
 
@@ -115,7 +123,11 @@ def split_chapters(text: str) -> dict[int, str]:
     chapters: dict[int, str] = {}
     for index, (_, end, number) in enumerate(marks):
         stop = marks[index + 1][0] if index + 1 < len(marks) else len(text)
-        body = clean(text[end:stop])
+        # 詩篇那一卷把節號寫成小標題（==== 1:1 ====），而 clean() 的工作正是把
+        # 標題行清掉——照原樣清完，整卷詩篇就一個節號都不剩。先把節號降成一行
+        # 數字，它才會跟其他卷長得一樣。
+        body = VERSE_HEAD.sub(lambda m: m.group(1), text[end:stop])
+        body = clean(body)
         if len(body) > 120:
             chapters[number] = body
     return chapters
@@ -174,7 +186,7 @@ def main() -> int:
         MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"  ✓ {zh}：{len(chapters)} 章（{used}）")
 
-    for title, zh, kind in BUDDHIST:
+    for title, zh, kind, group in BUDDHIST:
         if title in manifest:
             continue
         try:
@@ -196,12 +208,14 @@ def main() -> int:
         manifest[title] = {
             "titleZh": zh,
             "kind": kind,
-            "group": "buddhist",
+            "group": group,
             "chars": len(body),
             "file": str(path.relative_to(ROOT)).replace("\\", "/"),
             "sourceUrl": f"https://ja.wikisource.org/wiki/{urllib.parse.quote(title)}",
-            "rightsChecked": False,
-            "rightsNote": "訓讀／現代語譯各有譯者，收入前須逐篇查證譯者與年份",
+            "rightsChecked": group == "creed",
+            "rightsNote": ("日本聖公會 1941 年文語訳，法人著作公表後七十年，已進入公有領域"
+                           if group == "creed" else
+                           "訓讀／現代語譯各有譯者，收入前須逐篇查證譯者與年份"),
         }
         MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"  ✓ {title} — {zh}（{len(body):,} 字）")
