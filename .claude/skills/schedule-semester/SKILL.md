@@ -132,6 +132,43 @@ p = urllib.parse.urlencode({'Years':'115','Term':'1','TeamNo':'00',
 第一位是星期，後兩位是節次。使用者要修的課不一定掛在他自己的班上
 （例：日文選讀是博一去修碩一的課），查不到就把全系班別掃一遍。
 
+### 玄奘大學 I-Learn — 課程大綱與教材（需登入，走 Moodle API）
+
+`https://ilearn.hcu.edu.tw/` 是 **Moodle**。開課查詢只給時段與學分，
+**每週進度、指定閱讀、課綱 PDF 與講義都只在 I-Learn 裡**。
+
+🚨 **一般表單登入過不去**：`/login/index.php` 掛了 reCAPTCHA，
+curl POST 一定回「reCAPTCHA 字詞驗證失敗」。
+**改走行動版 API，這條不吃 reCAPTCHA**：
+
+```
+POST /login/token.php   username / password / service=moodle_mobile_app   → {"token": ...}
+POST /webservice/rest/server.php   wstoken / wsfunction / moodlewsrestformat=json
+```
+
+用得到的三個 wsfunction：`core_webservice_get_site_info`（拿 userid）、
+`core_enrol_get_users_courses`、`core_course_get_contents`。
+（`service=local_mobile` 這站沒開，會回 servicenotavailable。）
+
+腳本 `scripts/hcu_ilearn_sync.py`，帳密讀 `.env` 的
+`HCU_ILEARN_USER` / `HCU_ILEARN_PASS`：
+
+```bash
+python scripts/hcu_ilearn_sync.py           # 只寫 課程大綱.md
+python scripts/hcu_ilearn_sync.py --files   # 連教材檔案一起下載
+```
+
+輸出到 Drive `玄奘/博一上/上課/<課名>/`，一課一夾。三個實作要點：
+
+- **大綱多半藏在 section summary，不在 module**。唯識與宗教學理論兩門的整份
+  進度表就是各週 section 的 summary，`core_course_get_contents` 抓得到；
+  只列 modules 會整份漏掉。
+- **`fullname` 是「班級 | 課號 - 課名」重複兩次**，要切出乾淨課名再當資料夾名。
+- **教材下載要在 `fileurl` 後面接 `?token=`**（已有 query string 就用 `&`），
+  否則回登入頁而不是檔案。
+- 站上教材偶有簡體（例如康德〈答覆這個問題：什麼是啟蒙運動？〉何兆武譯本），
+  寫檔前過 `opencc s2tw`。
+
 ### 台神（台灣神學研究學院）— 公開頁查不到課表
 
 `https://www.tgst.edu.tw/p/412-1001-682.php`（開課資訊）**只有選課公告，沒有課表**，
