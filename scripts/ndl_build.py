@@ -77,6 +77,59 @@ def sections_from_index(index: list[str], total_images: int, fallback_title: str
     return out
 
 
+def title_images_from_layout(pages: dict) -> list[int]:
+    """有章名行（TITLE_LINE_TYPES）的影像編號，由小到大。
+
+    給**目次 0 條**的書用（死線を越えて／宇宙の目的／羅馬書釈義）——
+    NDL 對這些書沒建目次，沒有這一步整本只能當一章。
+
+    🚨 版面章名行只能拿來**定界，不能拿來定名**。直排加 ruby 會把字序打散，
+    實測（賀川《垂訓》）「山上の垂訓」讀成「山上の訓垂」、「完成の道」讀成
+    「道の成完」、「道德の完成」讀成「道德の完性成」。名字要另外想辦法。
+
+    準度（以目次已知的 1187647 當校驗，40 章）：命中 36／40＝**90%**。
+    漏掉 4 章（那幾頁的章名被歸成本文）。多出來的 13 個裡 12 個是前付
+    （標題／序／目次）與後付（奧付／廣告），要用 is_body_page／trim_back_matter
+    夾掉；夾完只剩 1 個誤判。
+    """
+    out = []
+    for img, lines in pages.items():
+        if any(l.get("type") in TITLE_LINE_TYPES for l in lines):
+            out.append(int(img))
+    return sorted(out)
+
+
+def sections_from_layout(pages: dict, total_images: int,
+                         first_body: int = 1, last_body: int | None = None,
+                         name_fmt: str = "第%d節") -> list[dict]:
+    """目次 0 條時的退路：靠版面章名行分章，章名給流水號。
+
+    章名**刻意**不用版面讀到的字串（會是「道の成完」那種亂序），
+    而是流水號＋把原始字串放進 `layout_hint` 供之後定名時參考。
+    寧可叫「第 7 節」，也不要掛一個看起來像章名的錯字。
+
+    `first_body`／`last_body` 由呼叫端用 is_body_page／trim_back_matter 決定，
+    否則前付與後付會各自變成一章。
+    """
+    last = total_images if last_body is None else last_body
+    starts = [i for i in title_images_from_layout(pages) if first_body <= i <= last]
+    if not starts:
+        return [{"title": "全文", "printed_page": "", "start": first_body,
+                 "end": last + 1, "layout_hint": ""}]
+    if starts[0] > first_body:
+        starts.insert(0, first_body)      # 第一章之前的正文不能丟掉
+    out = []
+    for n, s in enumerate(starts, 1):
+        end = starts[n] if n < len(starts) else last + 1
+        hint = " ".join(
+            re.sub(r"[ 　]+", "", l.get("string") or "")
+            for l in sorted(pages.get(s, []), key=lambda x: int(x["order"]))
+            if l.get("type") in TITLE_LINE_TYPES)
+        out.append({"title": name_fmt % n, "printed_page": "",
+                    "start": s, "end": max(end, s + 1), "layout_hint": hint})
+    return out
+
+
 def image_url(pid: str, img: int, width: int | None = None) -> str:
     return IIIF_IMAGE.format(pid=pid, img=img, size=f"{width}," if width else "full")
 

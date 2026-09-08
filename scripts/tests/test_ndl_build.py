@@ -838,3 +838,50 @@ class TestSharedStartInsufficientMarks:
         sec = {"title": "第二章", "start": 30, "end": 31}
         out = nb.section_payload(sec, pages, title_at={30: [0]}, nth=1)
         assert out["src"] == ["共用ページの本文。"]
+
+
+class TestSectionsFromLayout:
+    """目次 0 條的書（死線を越えて／宇宙の目的／羅馬書釈義）唯一的分章線索
+    是版面上的章名行。位置可信（以目次已知的賀川《垂訓》校驗，40 章命中 36
+    ＝90%），**文字不可信**——直排加 ruby 會把字序打散，「山上の垂訓」讀成
+    「山上の訓垂」、「完成の道」讀成「道の成完」。所以章名給流水號，
+    讀到的字串只放進 layout_hint 供之後定名參考。"""
+
+    @staticmethod
+    def _pages():
+        def ln(order, typ, s):
+            return {"order": order, "x": 0, "y": 0, "height": 76,
+                    "type": typ, "string": s}
+        return {
+            1: [ln(1, "\u30bf\u30a4\u30c8\u30eb\u672c\u6587", "\u6a19\u984c")],
+            3: [ln(1, "\u30bf\u30a4\u30c8\u30eb\u672c\u6587", "\u9053\u306e\u6210\u5b8c"),
+                ln(2, "\u672c\u6587", "\u3042")],
+            4: [ln(1, "\u672c\u6587", "\u3044")],
+            6: [ln(1, "\u30bf\u30a4\u30c8\u30eb\u672c\u6587", "\u8a13\u5782\u306e\u4e0a\u5c71"),
+                ln(2, "\u672c\u6587", "\u3046")],
+            8: [ln(1, "\u672c\u6587", "\u3048")],
+            9: [ln(1, "\u30bf\u30a4\u30c8\u30eb\u672c\u6587", "\u5967\u4ed8")],
+        }
+
+    def test_boundaries_come_from_title_lines(self):
+        secs = nb.sections_from_layout(self._pages(), 9, first_body=3, last_body=8)
+        assert [(s["start"], s["end"]) for s in secs] == [(3, 6), (6, 9)]
+
+    def test_titles_are_numbered_not_scrambled_text(self):
+        secs = nb.sections_from_layout(self._pages(), 9, first_body=3, last_body=8)
+        assert [s["title"] for s in secs] == ["\u7b2c1\u7bc0", "\u7b2c2\u7bc0"]
+        assert secs[1]["layout_hint"] == "\u8a13\u5782\u306e\u4e0a\u5c71"
+
+    def test_front_and_back_matter_are_excluded_by_the_body_range(self):
+        secs = nb.sections_from_layout(self._pages(), 9, first_body=3, last_body=8)
+        assert all(3 <= s["start"] <= 8 for s in secs)
+
+    def test_body_before_the_first_title_is_not_dropped(self):
+        secs = nb.sections_from_layout(self._pages(), 9, first_body=2, last_body=8)
+        assert secs[0]["start"] == 2
+
+    def test_no_title_lines_falls_back_to_one_section(self):
+        pages = {4: [{"order": 1, "x": 0, "y": 0, "height": 76,
+                      "type": "\u672c\u6587", "string": "\u3042"}]}
+        secs = nb.sections_from_layout(pages, 6, first_body=4, last_body=5)
+        assert len(secs) == 1 and secs[0]["title"] == "\u5168\u6587"
