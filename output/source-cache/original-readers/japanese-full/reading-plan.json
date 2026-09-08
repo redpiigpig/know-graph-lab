@@ -522,6 +522,116 @@
    "register": "文語・舊字舊假名",
    "readings": [
     {
+     "workId": "bible:馬太福音:5",
+     "title": "馬太福音 5",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1961,
+     "score": 1.02,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬太福音:6",
+     "title": "馬太福音 6",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1507,
+     "score": 0.66,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:馬太福音:7",
+     "title": "馬太福音 7",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1129,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:1",
+     "title": "詩篇 1",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 222,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:23",
+     "title": "詩篇 23",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 249,
+     "score": 4.02,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:51",
+     "title": "詩篇 51",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 839,
+     "score": 7.15,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:90",
+     "title": "詩篇 90",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 782,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:121",
+     "title": "詩篇 121",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 271,
+     "score": 3.69,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:詩篇:130",
+     "title": "詩篇 130",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 284,
+     "score": 3.52,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E8%A9%A9%E7%AF%87%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "使徒信経 (日本聖公会1941年)",
+     "title": "使徒信經",
+     "author": "信經（文語）",
+     "orthography": "文語",
+     "extent": "全文",
+     "chars": 490,
+     "score": 0.0,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%BD%BF%E5%BE%92%E4%BF%A1%E7%B5%8C%20%28%E6%97%A5%E6%9C%AC%E8%81%96%E5%85%AC%E4%BC%9A1941%E5%B9%B4%29",
+     "rightsChecked": true
+    },
+    {
      "workId": "058031",
      "title": "祭礼名彙と其分類",
      "author": "柳田国男",
@@ -582,6 +692,28 @@
      "sourceUrl": "https://www.aozora.gr.jp/cards/000933/files/18410_ruby_26904.zip"
     },
     {
+     "workId": "bible:羅馬書:4",
+     "title": "羅馬書 4",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1138,
+     "score": 12.3,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%AD%E3%83%9E%E4%BA%BA%E3%81%B8%E3%81%AE%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:加拉太書:3",
+     "title": "加拉太書 3",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1444,
+     "score": 11.77,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%AC%E3%83%A9%E3%83%86%E3%83%A4%E4%BA%BA%E3%81%B8%E3%81%AE%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
      "workId": "046326",
      "title": "組踊り以前",
      "author": "折口信夫",
@@ -610,6 +742,28 @@
      "chars": 2012,
      "score": 10.93,
      "sourceUrl": "https://www.aozora.gr.jp/cards/001535/files/53740_ruby_46373.zip"
+    },
+    {
+     "workId": "bible:加拉太書:1",
+     "title": "加拉太書 1",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1018,
+     "score": 10.81,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%AC%E3%83%A9%E3%83%86%E3%83%A4%E4%BA%BA%E3%81%B8%E3%81%AE%E6%9B%B8%20%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
+    },
+    {
+     "workId": "bible:羅馬書:1",
+     "title": "羅馬書 1",
+     "author": "文語訳聖書",
+     "orthography": "文語",
+     "extent": "全章",
+     "chars": 1489,
+     "score": 10.75,
+     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%AD%E3%83%9E%E4%BA%BA%E3%81%B8%E3%81%AE%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
+     "rightsChecked": true
     },
     {
      "workId": "bible:出埃及記:29",
@@ -722,58 +876,6 @@
      "chars": 450,
      "score": 6.67,
      "sourceUrl": "https://www.aozora.gr.jp/cards/000157/files/43489_ruby_16184.zip"
-    },
-    {
-     "workId": "bible:約翰福音:18",
-     "title": "約翰福音 18",
-     "author": "文語訳聖書",
-     "orthography": "文語",
-     "extent": "全章",
-     "chars": 1881,
-     "score": 6.38,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E3%83%A8%E3%83%8F%E3%83%8D%E5%82%B3%E7%A6%8F%E9%9F%B3%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
-     "rightsChecked": true
-    },
-    {
-     "workId": "052360",
-     "title": "再び毘沙門に就て",
-     "author": "南方熊楠",
-     "orthography": "旧字旧仮名",
-     "extent": "全文",
-     "chars": 2355,
-     "score": 6.37,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000093/files/52360_ruby_61191.zip"
-    },
-    {
-     "workId": "046583",
-     "title": "最後の勝利者は誰ぞ",
-     "author": "北村透谷",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 2430,
-     "score": 6.17,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000157/files/46583_ruby_28966.zip"
-    },
-    {
-     "workId": "bible:出埃及記:40",
-     "title": "出埃及記 40",
-     "author": "文語訳聖書",
-     "orthography": "文語",
-     "extent": "全章",
-     "chars": 1337,
-     "score": 5.98,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E5%87%BA%E3%82%A8%E3%82%B8%E3%83%97%E3%83%88%E8%A8%98%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
-     "rightsChecked": true
-    },
-    {
-     "workId": "058770",
-     "title": "魂の行くへ",
-     "author": "柳田国男",
-     "orthography": "旧字旧仮名",
-     "extent": "第 四 節（完整，共 4 節）",
-     "chars": 2386,
-     "score": 5.87,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/001566/files/58770_ruby_77938.zip"
     },
     {
      "workId": "045186",
@@ -934,96 +1036,6 @@
      "chars": 1599,
      "score": 0.0,
      "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/61380_ruby_77681.zip"
-    },
-    {
-     "workId": "manyoshu:18:5",
-     "title": "萬葉集 卷第十八",
-     "author": "萬葉集",
-     "orthography": "文語",
-     "extent": "第 4125–4138 首（完整 14 首）",
-     "chars": 2020,
-     "score": 0.0,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E5%8D%81%E5%85%AB"
-    },
-    {
-     "workId": "manyoshu:2:7",
-     "title": "萬葉集 卷第二",
-     "author": "萬葉集",
-     "orthography": "文語",
-     "extent": "第 217–232 首（完整 17 首）",
-     "chars": 2084,
-     "score": 0.0,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%8C"
-    },
-    {
-     "workId": "manyoshu:3:8",
-     "title": "萬葉集 卷第三",
-     "author": "萬葉集",
-     "orthography": "文語",
-     "extent": "第 464–483 首（完整 20 首）",
-     "chars": 2111,
-     "score": 0.0,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B8%89"
-    },
-    {
-     "workId": "manyoshu:5:4",
-     "title": "萬葉集 卷第五",
-     "author": "萬葉集",
-     "orthography": "文語",
-     "extent": "第 864–884 首（完整 21 首）",
-     "chars": 2134,
-     "score": 0.47,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%BA%94"
-    },
-    {
-     "workId": "manyoshu:9:5",
-     "title": "萬葉集 卷第九",
-     "author": "萬葉集",
-     "orthography": "文語",
-     "extent": "第 1800–1811 首（完整 12 首）",
-     "chars": 2159,
-     "score": 0.46,
-     "sourceUrl": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86%20%28%E9%B9%BF%E6%8C%81%E9%9B%85%E6%BE%84%E8%A8%93%E8%A8%82%29/%E5%B7%BB%E7%AC%AC%E4%B9%9D"
-    },
-    {
-     "workId": "043058",
-     "title": "小学生全集に就て（再び）",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 1439,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/43058_ruby_15489.zip"
-    },
-    {
-     "workId": "043057",
-     "title": "「小学生全集」について",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 1426,
-     "score": 0.7,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/43057_ruby_15488.zip"
-    },
-    {
-     "workId": "002559",
-     "title": "遺書",
-     "author": "与謝野晶子",
-     "orthography": "新字旧仮名",
-     "extent": "第 七 節（完整，共 10 節）",
-     "chars": 1375,
-     "score": 0.73,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000885/files/2559_ruby.zip"
-    },
-    {
-     "workId": "060739",
-     "title": "芥川の印象",
-     "author": "菊池寛",
-     "orthography": "新字旧仮名",
-     "extent": "全文",
-     "chars": 1366,
-     "score": 0.0,
-     "sourceUrl": "https://www.aozora.gr.jp/cards/000083/files/60739_ruby_75114.zip"
     }
    ]
   }

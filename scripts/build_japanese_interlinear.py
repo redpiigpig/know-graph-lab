@@ -81,6 +81,23 @@ CLOSED_CLASS = {
     "なむ": "（強調·願）", "こそあれ": "（雖則）", "ものの": "（雖然）",
     "。": "", "、": "", "「": "", "」": "", "『": "", "』": "", "・": "",
     "（": "", "）": "", "！": "", "？": "", "…": "", "─": "", "ー": "",
+    # 學術文體的機能語（合約附錄四）。斷詞器把它們拆成助詞或名詞，模型逐塊問又
+    # 會每次答得不一樣，所以與助詞同一張表。
+    "として": "（作為）", "における": "（在…的）", "において": "（在…）",
+    "について": "（關於）", "によって": "（由於·藉由）", "による": "（依據）",
+    "にとって": "（對…而言）", "とともに": "（與…一同）", "にほかならない": "（無非是）",
+    "に対して": "（對於）", "に関して": "（就…而言）", "ということ": "（這件事）",
+    # 文語的助詞助動詞與慣用連語，第二冊每一頁都在用。
+    "のみ": "（只）", "にて": "（在·以）", "といふ": "（叫做·所謂）",
+    "とか": "（之類）", "かも": "（也許）", "を以て": "（以）",
+    "に対する": "（對…的）", "により": "（依據）", "如き": "（如同的）",
+    "如く": "（如同）", "ごとき": "（如同的）", "ん": "（推量·意志）",
+    "じ": "（不會·否定推量）", "なむ": "（強調·願）", "ましか": "（反實推量）",
+    "らし": "（推定）", "つる": "（完成）", "ぬる": "（完成）", "たる": "（的·完成）",
+    "なる": "（的·斷定）", "せ": "（使·過去）", "き": "（過去·親見）",
+    # 青空文庫與舊活字的疊字記號：它們是符號不是詞，別讓模型去猜。
+    "ゝ": "", "ゞ": "", "〳": "", "〵": "", "〴": "", "／": "", "＼": "",
+    "″": "", "　": "", " ": "",
 }
 
 PROMPT = """你是日文讀本的逐詞對譯編輯。下面是 {count} 個日文詞，每個附一句書中的例句。\
@@ -132,7 +149,16 @@ def gloss_for(token: dict, vocab: dict[str, str], glossary: dict[str, str]) -> s
     if pos == "記号":
         return ""
     if pos in ("助詞", "助動詞"):
-        return CLOSED_CLASS.get(base) or CLOSED_CLASS.get(word) or ""
+        gloss = CLOSED_CLASS.get(base) or CLOSED_CLASS.get(word)
+        if gloss is not None:
+            return gloss
+        # 詞表只對兩個字以上的形式開放。要擋的是單假名的碰撞——「は」在詞表裡是
+        # 齒、「や」是屋——而「ある」「という」被斷詞標成助動詞／助詞時，詞表裡
+        # 的「存在、具備」「叫做、所謂」正是要印的東西。一律不回退，這兩個字就
+        # 空著，全書一千多處。
+        if len(base) >= 2:
+            return glossary.get(f"{base}|{pos}") or vocab.get(base) or ""
+        return ""
     return (
         vocab.get(base)
         or glossary.get(f"{base}|{pos}")
@@ -210,6 +236,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit", type=int, default=0, help="最多問幾個詞（試跑用）")
     parser.add_argument("--batch", type=int, default=BATCH)
+    parser.add_argument("--assemble-only", action="store_true",
+                        help="只用現有快取重組 interlinear.json，不問模型")
     args = parser.parse_args()
 
     readings = load(READINGS)
@@ -239,7 +267,7 @@ def main() -> int:
                             wanted[key] = token["base"]
                             example.setdefault(key, unit["text"])
 
-    todo = sorted(wanted)
+    todo = [] if args.assemble_only else sorted(wanted)
     if args.limit:
         todo = todo[: args.limit]
     print(f"單元 {len(units):,}　需要問模型的詞 {len(wanted):,}"
