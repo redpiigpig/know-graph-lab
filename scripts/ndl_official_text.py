@@ -109,8 +109,18 @@ def main() -> int:
 
     chars = sum(len((out_dir / ("%07d.txt" % i)).read_text(encoding="utf-8"))
                 for i in pages)
-    print("〓 %d → %d（補回 %d；其中規則推論 %d 處）"
+    print("〓 %d → %d（補回 %d；其中通用規則推論 %d 處）"
           % (before, after, before - after, len(inferred)))
+    if inferred:
+        # 🚨 通用規則（〓→敎）是統計推論不是逐字查證。印**相異上下文**而不是
+        #    每一次 —— 310 次沒人看得完，20 種看得完。賀川那本就是這樣才發現
+        #    整章的「鹽」被改成了「敎」。
+        import collections as _c
+        ctx = _c.Counter(g for _, g in inferred)
+        print("   通用規則動過的相異上下文 %d 種（請掃一眼有沒有不像「敎」的）："
+              % len(ctx))
+        for g, n in ctx.most_common(30):
+            print("     %-12s x%d" % (g.replace("\n", " "), n))
     import json as _json
     (out_dir / "_titles.json").write_text(
         _json.dumps({str(k): v for k, v in title_at.items()}, ensure_ascii=False),

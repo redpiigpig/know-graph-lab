@@ -119,7 +119,8 @@ def paragraphs_from_pages(pages: list[str]) -> list[str]:
     return paras
 
 
-def section_payload(section: dict, pages: dict, title_at: dict = None) -> dict:
+def section_payload(section: dict, pages: dict, title_at: dict = None,
+                    nth: int = 0) -> dict:
     """一節＋該書的 {影像號: OCR 文字} → 與 uchimura／howes 同形的 section dict。
 
     形狀（heading／title_zh／src／zh）必須與其他作者一致，才接得上 uchimura_auto
@@ -138,6 +139,20 @@ def section_payload(section: dict, pages: dict, title_at: dict = None) -> dict:
             # 🚨 章名行本身已經被丟出正文了，所以不能再靠字串比對找章名 ——
             #    找不到就會整頁保留，新章從前章的句子中間開始。
             marks = title_at.get(i) or title_at.get(str(i))
+            # 同一張影像上有多個章名時（章題＋首節同頁），取自己那一個。
+            # 🚨 標記不夠就整頁保留 —— 寧可多留也不要兩章拿到同一段。
+            if marks and nth < len(marks):
+                marks = marks[nth:]
+            elif marks and nth:
+                # 共用起始影像但標記不足：這一頁歸前一章，本章從下一頁開始。
+                # 🚨 舊作法是整頁保留，結果兩章開頭一模一樣 ——
+                #    重複比錯位更糟，讀者會看到同一段出現兩次且看不出異狀。
+                if any((pages.get(x) or "").strip()
+                       for x in range(i + 1, section["end"])):
+                    continue                  # 後面還有內容才敢跳過這一頁
+                marks = None
+            elif marks:
+                marks = None
             if marks:
                 blocks = [b for b in re.split(r"\n\s*\n", t.strip()) if b.strip()]
                 t = (chr(10) * 2).join(blocks[marks[0]:])
@@ -197,7 +212,7 @@ OLD_FORM_FIXES = {
     "伝": "傳", "売": "賣", "払": "拂", "辺": "邊", "豊": "豐", "誉": "譽",
     "謡": "謠", "静": "靜", "斉": "齊", "剤": "劑", "摂": "攝", "双": "雙",
     "荘": "莊", "装": "裝", "昼": "晝", "鉄": "鐵", "塁": "壘", "恋": "戀",
-    "労": "勞", "楼": "樓", "湾": "灣", "体": "體", "秘": "祕", "蛮": "蠻",
+    "労": "勞", "楼": "樓", "湾": "灣", "体": "體", "秘": "祕", "蛮": "蠻", "塩": "鹽",
 }
 _OLD_FORM_TABLE = str.maketrans(OLD_FORM_FIXES)
 
@@ -440,10 +455,68 @@ PLACEHOLDER_RULES = [
     (r"罪は〓められ", "罪は赦められ"),
     (r"〓ね", "概ね"),   # 敎ね／硏ね 都不是詞，這條放寬安全
     (r"〓黨の間", "鄕黨の間"),
-    # 通用：本語料裡 〓 絕大多數是「敎」（舊字體，NDL 字集沒有）
-    (r"〓", "敎"),
+    # 🚨 「鹽」（舊字體，NDL 字集也沒有）。賀川《キリスト山上の垂訓》有一章講
+    #    馬太五13「汝らは地の鹽なり」，通用規則把整章的鹽都改成了敎。
+    #    同一段裡 NDL 有時輸出「塩」有時輸出「〓」，證實原書用的是舊字體鹽。
+    (r"地の〓", "地の鹽"),
+    (r"〓もし効力", "鹽もし効力"),
+    (r"〓もし效力", "鹽もし效力"),
+    (r"之に〓すべき", "之に鹽すべき"),
+    (r"〓と味", "鹽と味"),
+    (r"〓の層", "鹽の層"),
+    (r"〓以外", "鹽以外"),
+    (r"〓のこと", "鹽のこと"),
+    (r"〓でな", "鹽でな"),
+    (r"〓を潔め", "鹽を潔め"),
+    (r"〓をして運搬", "鹽をして運搬"),
+    (r"〓を置く", "鹽を置く"),
+    (r"〓といふこと", "鹽といふこと"),
+    (r"〓が生", "鹽が生"),
+    # ── 第三批：又兩個字形叢集 ──
+    # 「鄕」（舊字體）：故鄕タルソ／故鄕クプロ／兄弟と同鄕の人
+    (r"故〓", "故鄕"), (r"同〓の人", "同鄕の人"), (r"〓黨", "鄕黨"),
+    # 「敎」的其餘明確詞形：新敎／舊敎（新教與天主教）、說敎、敎授、敎養、儒敎
+    (r"儒〓", "儒敎"), (r"新〓", "新敎"), (r"舊〓", "舊敎"),
+    (r"說〓", "說敎"), (r"〓授", "敎授"), (r"〓養", "敎養"),
+    (r"一神〓", "一神敎"), (r"三〓合同", "三敎合同"),
+    (r"外來〓", "外來敎"), (r"タント〓", "タント敎"),
+    # 「熱」的其餘：宗敎的熱誠／眞實熱誠／信仰の熱さ／魂の熱さ
+    (r"〓誠", "熱誠"), (r"仰の〓さ", "仰の熱さ"), (r"魂の〓さ", "魂の熱さ"),
+    # 「顛」
+    (r"〓倒", "顛倒"),
+    # ── 第二批（2026-09-08）：從剩下的 185 處未解語境判讀出來的 ──
+    # 「樸」：單純〓素＝單純樸素 定案，同一叢集還有 純樸なる泉／原始の純樸
+    (r"單純〓素", "單純樸素"), (r"純〓", "純樸"),
+    # 「熱」：徹頭徹尾〓心と努力／この〓情に驅られ／その〓き心より
+    (r"〓心と努", "熱心と努"), (r"〓心率直", "熱心率直"),
+    (r"この〓情", "この熱情"), (r"その〓き心", "その熱き心"),
+    # 疊字記號
+    (r"屢〓", "屢々"),
+    # 「敎」的其餘明確詞形
+    (r"殉〓", "殉敎"), (r"異〓", "異敎"), (r"兩〓", "兩敎"),
+    (r"〓を宣べ", "敎を宣べ"), (r"〓を拒斥", "敎を拒斥"),
+    (r"〓を聽", "敎を聽"), (r"〓を體驗", "敎を體驗"),
+    (r"〓を實驗", "敎を實驗"), (r"〓を受く", "敎を受く"),
+    (r"〓を行は", "敎を行は"), (r"〓をな", "敎をな"),
+    (r"の〓は", "の敎は"), (r"の〓を", "の敎を"), (r"の〓に", "の敎に"),
+    (r"の〓が", "の敎が"), (r"の〓の", "の敎の"), (r"の〓で", "の敎で"),
+    (r"此〓の", "此敎の"),
+    # 「敎」只在**詞形明確**的語境補。
+    # 🚨 這裡本來是 (r"〓", "敎") 一律替換，被賀川那本打臉：整章的「鹽」變成「敎」，
+    #    還有 心の淸き者→心の敎きもの、斷食→斷敎、漢文訓讀的八福也一併改掉。
+    #    畔上那兩本沒出事只是因為它們的〓碰巧幾乎全是敎 —— 那是運氣不是設計。
+    #    現在補不出來的一律留著 `〓`：**看得見的未解遠好過看不見的錯**。
+    (r"宗〓", "宗敎"), (r"督〓", "督敎"), (r"スト〓", "スト敎"),
+    (r"ヤ〓", "ヤ敎"), (r"佛〓", "佛敎"), (r"回〓", "回敎"),
+    (r"〓會", "敎會"), (r"〓派", "敎派"), (r"〓育", "敎育"),
+    (r"〓師", "敎師"), (r"〓界", "敎界"), (r"〓徒", "敎徒"),
+    (r"〓理", "敎理"), (r"〓訓", "敎訓"), (r"〓團", "敎團"),
+    (r"〓權", "敎權"), (r"〓義", "敎義"), (r"〓化", "敎化"),
+    (r"〓へ", "敎へ"), (r"〓ふ", "敎ふ"), (r"〓を說", "敎を說"),
 ]
-_GENERAL_RULE_INDEX = len(PLACEHOLDER_RULES) - 1
+# 補「敎」的那幾條都是推論性的（詞形明確但仍是推論），report 一併回報。
+_INFERRED_FROM = next(i for i, (pat, _) in enumerate(PLACEHOLDER_RULES)
+                      if pat == r"宗〓")
 
 
 def resolve_ndl_placeholders(text: str, report: bool = False):
@@ -457,7 +530,7 @@ def resolve_ndl_placeholders(text: str, report: bool = False):
         return (text, []) if report else text
     guessed = []
     for i, (pat, rep) in enumerate(PLACEHOLDER_RULES):
-        if i == _GENERAL_RULE_INDEX and report:
+        if i >= _INFERRED_FROM and report:
             for m in re.finditer(pat, text):
                 guessed.append(text[max(0, m.start() - 2):m.end() + 2])
         text = re.sub(pat, rep, text)
@@ -518,6 +591,37 @@ def toc_match_ratio(ocr_text: str, titles: list) -> float:
     hay = norm(ocr_text)
     hit = sum(1 for t in titles if norm(t) in hay)
     return hit / len(titles)
+
+
+# 目次最多往後看幾頁。跨兩頁常見、三頁少見，給 3 已經夠寬。
+_TOC_MAX_SPAN = 3
+
+
+def toc_ratio_spanning(pages: dict, first_img: int, titles: list) -> float:
+    """從索引標的那一頁起，把連續的後幾頁一起納入比對，取最高的比率。
+
+    🚨 目次跨頁時 NDL 索引只標第一頁。拿單頁去驗全書章名必然不過 ——
+    賀川《キリスト山上の垂訓》48 章目次排在影像 7–8，單頁各 44%（被擋），
+    兩頁合起來 85%。
+
+    往後多吃一頁若沒提高比率就停：正文頁吃進來不會有幫助，
+    停下來才不會把整章正文都當成目次。
+    """
+    if not titles:
+        return 0.0
+    text = ""
+    best = 0.0
+    for k in range(_TOC_MAX_SPAN):
+        img = first_img + k
+        chunk = pages.get(img) or pages.get(str(img))
+        if not chunk:
+            break
+        r = toc_match_ratio(text + chunk, titles)
+        if k and r <= best:
+            break                     # 多吃這一頁沒幫助 → 已經超出目次
+        text += chunk
+        best = max(best, r)
+    return best
 
 
 def strip_before_heading(text: str, heading: str) -> str:
@@ -851,7 +955,7 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
     toc_imgs = [e["image"] for e in
                 (parse_toc_entry(l) for l in book["index"]) if e and e["title"] in ("目次", "目 次")]
     if toc_imgs and pages.get(toc_imgs[0]):
-        ratio = toc_match_ratio(pages[toc_imgs[0]], [s0["title"] for s0 in secs])
+        ratio = toc_ratio_spanning(pages, toc_imgs[0], [s0["title"] for s0 in secs])
         print("  目次 canary：影像 %d 對上 %.0f%% 章名" % (toc_imgs[0], ratio * 100))
         if ratio < 0.5:
             raise RuntimeError(
@@ -874,7 +978,9 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
     out_dir.mkdir(parents=True, exist_ok=True)
     kept = redo = 0
     for i, sec in enumerate(secs):
-        payload = section_payload(sec, pages, title_at=title_at)
+        # 同一張影像上可能開始好幾章（章題＋首節同頁），算出這一章是第幾個
+        nth = sum(1 for s0 in secs[:i] if s0["start"] == sec["start"])
+        payload = section_payload(sec, pages, title_at=title_at, nth=nth)
         if not force:
             # 精修 OCR 後重建：src 沒變的段落沿用舊譯，只有被改到的才重譯
             payload = merge_translations(payload, old_by_idx.get(i, {}))

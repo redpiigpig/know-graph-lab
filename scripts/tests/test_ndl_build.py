@@ -740,3 +740,101 @@ class TestMarkTitlesEmptyPage:
 
     def test_empty_page_without_the_flag_is_unchanged(self):
         assert nb.lines_to_layout_paras([]) == []
+
+
+class TestMultiPageToc:
+    """🚨 目次跨兩頁時，canary 拿單頁去驗全書章名必然不過。
+
+    實例：賀川《キリスト山上の垂訓》48 章，目次排在影像 7–8，
+    NDL 索引卻只標了影像 7。單頁各只對上 44%（低於門檻被擋），
+    兩頁合起來是 85%。
+
+    修法：從索引標的那一頁起，把**連續的後幾頁**一起納入比對，
+    直到比率不再上升為止。
+    """
+
+    def test_second_page_is_included_when_it_helps(self):
+        pages = {7: "第一章 天國の福音  第二章 心の貧しき者",
+                 8: "第三章 完全なるものゝ姿  第四章 義に飢渇く者"}
+        titles = ["第一章 天國の福音", "第二章 心の貧しき者",
+                  "第三章 完全なるものゝ姿", "第四章 義に飢渇く者"]
+        assert nb.toc_ratio_spanning(pages, 7, titles) == 1.0
+
+    def test_single_page_toc_is_unaffected(self):
+        pages = {3: "第一　教派ではない 第二　起源", 4: "まつたく關係のない本文"}
+        titles = ["第一　教派ではない", "第二　起源"]
+        assert nb.toc_ratio_spanning(pages, 3, titles) == 1.0
+
+    def test_does_not_run_past_the_toc(self):
+        """後面那頁是正文時不該被吃進來（吃了也不會提高比率，就該停）。"""
+        pages = {3: "第一章 甲", 4: "本文がここから始まる", 5: "第二章 乙"}
+        # 只有影像 3 有章名 → 比率 0.5，不會因為多吃兩頁而變高
+        assert nb.toc_ratio_spanning(pages, 3, ["第一章 甲", "第二章 乙"]) == 0.5
+
+    def test_missing_page(self):
+        assert nb.toc_ratio_spanning({}, 7, ["第一章"]) == 0.0
+
+
+class TestSharedStartImage:
+    """🚨 多個章名排在同一張影像上時（章題＋首節同頁），
+    每一章要取**自己那一個**標記，不能都拿第一個。
+
+    實例：賀川《キリスト山上の垂訓》48 章裡有 16 章與別章共用起始影像，
+    結果 sec0 與 sec1 的第一段一模一樣。
+
+    🚨 測試資料的每一段都要有句末標點：沒有的話會被「跨頁不換段」規則
+    黏成一段，測到的就不是分章邏輯了。
+    """
+
+    PAGE = "章題ページ。" + "\n\n" + "第一節の本文。" + "\n\n" + "第二節の本文。"
+
+    def test_second_section_on_the_page_uses_the_second_mark(self):
+        pages = {8: self.PAGE}
+        s0 = {"title": "第一章", "start": 8, "end": 9}
+        s1 = {"title": "第一節", "start": 8, "end": 9}
+        a = nb.section_payload(s0, pages, title_at={8: [1, 2]}, nth=0)
+        b = nb.section_payload(s1, pages, title_at={8: [1, 2]}, nth=1)
+        assert a["src"][0] == "第一節の本文。"
+        assert b["src"][0] == "第二節の本文。"
+        assert a["src"] != b["src"]
+
+    def test_not_enough_marks_falls_back_to_no_cut(self):
+        """標記不夠時寧可整頁保留，也不要兩章拿到同一段。"""
+        pages = {8: "前置き。" + "\n\n" + "本文。"}
+        s1 = {"title": "第二節", "start": 8, "end": 9}
+        out = nb.section_payload(s1, pages, title_at={8: [1]}, nth=1)
+        assert out["src"] == ["前置き。", "本文。"]
+
+    def test_single_section_behaves_as_before(self):
+        pages = {5: "前章の結び。" + "\n\n" + "新章の本文。"}
+        sec = {"title": "第二", "start": 5, "end": 6}
+        out = nb.section_payload(sec, pages, title_at={5: [1]}, nth=0)
+        assert out["src"] == ["新章の本文。"]
+
+
+class TestSharedStartInsufficientMarks:
+    """🚨 兩章共用一頁、但版面只認出一個章名時（賀川那本 48 章裡有 3 對），
+    先前的退路是「整頁保留」，結果兩章的開頭一模一樣。
+
+    **重複比錯位更糟**：讀者會看到同一段出現兩次，而且看不出哪裡有問題。
+    改成該頁只歸前一章，後一章從下一頁開始 —— 內容仍在，且只出現一次。
+    """
+
+    def test_second_section_skips_the_shared_page(self):
+        pages = {30: "共用ページの本文。", 31: "次のページの本文。"}
+        sec = {"title": "第二章", "start": 30, "end": 32}
+        out = nb.section_payload(sec, pages, title_at={30: [0]}, nth=1)
+        assert out["src"] == ["次のページの本文。"]
+
+    def test_first_section_still_gets_the_page(self):
+        pages = {30: "共用ページの本文。", 31: "次のページの本文。"}
+        sec = {"title": "第一章", "start": 30, "end": 32}
+        out = nb.section_payload(sec, pages, title_at={30: [0]}, nth=0)
+        assert "共用ページの本文。" in "".join(out["src"])
+
+    def test_no_content_left_keeps_the_page_rather_than_emptying(self):
+        """後面沒有別頁時寧可留著，也不要生出空章。"""
+        pages = {30: "共用ページの本文。"}
+        sec = {"title": "第二章", "start": 30, "end": 31}
+        out = nb.section_payload(sec, pages, title_at={30: [0]}, nth=1)
+        assert out["src"] == ["共用ページの本文。"]

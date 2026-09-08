@@ -40,7 +40,8 @@ MAX_PARAS_PER_CHUNK = 10
 # make_engine 與 AUTHOR_ZH/AUTHOR_EN/CATEGORY/DATA_DIRNAME。
 AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
                   "uchimura-en": "uchimura_en_build", "howes": "howes_build",
-                  "azegami": "azegami_build"}
+                  "azegami": "azegami_build",
+                  "kagawa": "kagawa_build"}
 
 
 def use_author(name: str) -> None:
