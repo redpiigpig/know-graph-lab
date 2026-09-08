@@ -70,6 +70,14 @@ META_MARKERS = (
     "I apologize", "I cannot translate", "I can't translate", "I'm unable to",
     "As an AI", "It appears that the", "The text you provided",
     "Please provide", "I need to clarify",
+    # 🚨 第二批（2026-09-08 15:20 清完四小時後又長回 35 段時補的）。挑選原則是
+    # **只收指涉「任務／輸入」的字串，不收指涉題材的**——這批書本身就在談語言學，
+    # 光憑「英文」「原文」這種詞會誤殺真譯文（science-language 整本都在講英文字源）。
+    # 下面每一條都是模型在跟你說話才會出現的講法。
+    "提供的英文", "提供的文本", "提供的原文", "您給的", "你提供",
+    "無法提供準確翻譯", "無法進行準確", "無法提供翻譯",
+    "我在提供的", "我需要指出", "這段文字似乎", "似乎是亂碼",
+    "非標準拼寫", "似乎不完整", "看起來是梵文", "而非英文",
 )
 META_WINDOW = 40
 
