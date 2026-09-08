@@ -216,39 +216,54 @@ def _literal(text):
 
 
 def _spans(path):
-    """{字串值: [(起, 迄), ...]}——含隱式相連的多段字串，整段一起換掉。"""
-    src = path.read_text(encoding='utf-8')
-    lines = src.splitlines(keepends=True)
+    """{字串值: [(起, 迄), ...]}，位移是**位元組**。
+
+    🚨 `col_offset` 算的是 UTF-8 位元組，不是字元。中文一個字三個位元組，
+    拿它去切字串會切在字的中間——切出來的檔案還是「看起來像 Python」，
+    只是多了一個 U+3000 在奇怪的位置。所以整個處理過程都走 bytes。
+
+    隱式相連的多段字串在 ast 裡是**一個** Constant，起迄涵蓋整串，
+    所以換掉的是整段，不會只換到前半。
+    """
+    raw = path.read_bytes()
     offs, at = [], 0
-    for ln in lines:
+    for ln in raw.splitlines(keepends=True):
         offs.append(at)
         at += len(ln)
+    tree = ast.parse(raw.decode('utf-8'))
+    # f-string 內部的片段也是 Constant，換掉會把字串拆壞，跳過。
+    inside_fstring = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.JoinedStr):
+            for sub in ast.walk(node):
+                inside_fstring.add(id(sub))
     out = {}
-    for node in ast.walk(ast.parse(src)):
-        if isinstance(node, ast.Constant) and isinstance(node.value, str):
+    for node in ast.walk(tree):
+        if (isinstance(node, ast.Constant) and isinstance(node.value, str)
+                and id(node) not in inside_fstring):
             a = offs[node.lineno - 1] + node.col_offset
             b = offs[node.end_lineno - 1] + node.end_col_offset
             out.setdefault(node.value, []).append((a, b))
-    return src, out
+    return raw, out
 
 
 def apply_fixes(fixes, dry=False):
     changed, hit = {}, set()
     for path in DATA_FILES:
-        src, spans = _spans(path)
+        raw, spans = _spans(path)
         edits = []
         for old, new in fixes.items():
             for a, b in spans.get(old, []):
-                edits.append((a, b, _literal(new)))
+                edits.append((a, b, _literal(new).encode('utf-8')))
                 hit.add(old)
         if not edits:
             continue
         for a, b, lit in sorted(edits, reverse=True):
-            src = src[:a] + lit + src[b:]
-        ast.parse(src)                    # 寫壞了就在這裡炸，不要留到執行時
-        changed[path] = src
+            raw = raw[:a] + lit + raw[b:]
+        ast.parse(raw.decode('utf-8'))    # 寫壞了就在這裡炸，不要留到執行時
+        changed[path] = raw
         if not dry:
-            path.write_text(src, encoding='utf-8')
+            path.write_bytes(raw)
     return changed, hit
 
 
