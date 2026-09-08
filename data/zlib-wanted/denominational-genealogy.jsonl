@@ -24,3 +24,18 @@
 {"key":"dg-baum-winkler-church-east","query":"Baum Winkler The Church of the East A Concise History","expect":"Church of the East","who":"Baum","source":"denominational-genealogy","zh":"鮑姆與溫克勒《東方教會簡史》（亞述景教會）"}
 {"key":"dg-brock-syriac","query":"Sebastian Brock An Introduction to Syriac Studies","expect":"Introduction to Syriac Studies","who":"Brock","source":"denominational-genealogy","zh":"布洛克《敘利亞研究導論》"}
 {"key":"dg-chaillot-oriental-orthodox","query":"Christine Chaillot The Oriental Orthodox Churches","expect":"Oriental Orthodox","who":"Chaillot","source":"denominational-genealogy","zh":"沙約《東方正統教會》（科普特、敘利亞、亞美尼亞三支）"}
+{"key":"dg-kung-christianity-zh","query":"孔漢思 基督宗教 本質與歷史","expect":"基督宗教","who":"孔漢思","source":"denominational-genealogy","zh":"孔漢思《基督宗教：本質、歷史與未來》（中譯，存疑待驗）"}
+{"key":"dg-kung-christianity-en","query":"Hans Kung Christianity Essence History and Future","expect":"Christianity","who":"Kung","source":"denominational-genealogy","zh":"孔漢思《基督宗教：本質、歷史與未來》（原文）"}
+{"key":"dg-bosch-mission-zh","query":"博許 更新變化的宣教 宣教神學的典範轉移","expect":"更新變化的宣教","who":"博許","source":"denominational-genealogy","zh":"博許《更新變化的宣教》（中譯，華神）"}
+{"key":"dg-bosch-mission-en","query":"David Bosch Transforming Mission Paradigm Shifts in Theology of Mission","expect":"Transforming Mission","who":"Bosch","source":"denominational-genealogy","zh":"博許《更新變化的宣教》（原文）"}
+{"key":"dg-troeltsch-zh","query":"特洛爾奇 基督教會與團體的社會學說","expect":"社會學說","who":"特洛爾奇","source":"denominational-genealogy","zh":"特爾慈《基督教會與群體的社會教訓》（中譯，存疑待驗）"}
+{"key":"dg-niebuhr-social-zh","query":"尼布爾 宗派主義的社會根源","expect":"宗派主義","who":"尼布爾","source":"denominational-genealogy","zh":"理查‧尼布爾《宗派主義的社會來源》（中譯，存疑待驗）"}
+{"key":"dg-asad-genealogies-zh","query":"阿薩德 宗教的譜系","expect":"宗教的譜系","who":"阿薩德","source":"denominational-genealogy","zh":"阿薩德《宗教的譜系》（中譯，存疑待驗）"}
+{"key":"dg-asad-genealogies-en","query":"Talal Asad Genealogies of Religion Discipline and Reasons of Power","expect":"Genealogies of Religion","who":"Asad","source":"denominational-genealogy","zh":"阿薩德《宗教的譜系》（原文）"}
+{"key":"dg-foucault-genealogy-zh","query":"福柯 尼采 譜系學 歷史 福柯集","expect":"譜系","who":"福柯","source":"denominational-genealogy","zh":"傅柯〈尼采、譜系學、歷史〉（收於中譯文集）"}
+{"key":"dg-nietzsche-genealogy-zh","query":"尼采 論道德的譜系","expect":"道德的譜系","who":"尼采","source":"denominational-genealogy","zh":"尼采《論道德的譜系》（中譯）"}
+{"key":"dg-williams-truth-zh","query":"伯納德 威廉斯 真理與真誠","expect":"真理與真誠","who":"威廉斯","source":"denominational-genealogy","zh":"威廉斯《真理與真誠》（中譯，存疑待驗）"}
+{"key":"dg-williams-truth-en","query":"Bernard Williams Truth and Truthfulness An Essay in Genealogy","expect":"Truth and Truthfulness","who":"Williams","source":"denominational-genealogy","zh":"威廉斯《真理與真誠》（原文）"}
+{"key":"dg-koopman-genealogy","query":"Colin Koopman Genealogy as Critique Foucault and the Problems of Modernity","expect":"Genealogy as Critique","who":"Koopman","source":"denominational-genealogy","zh":"庫普曼《作為批判的譜系學》"}
+{"key":"dg-robinson-koester-zh","query":"羅賓遜 克斯特 早期基督教的軌跡","expect":"軌跡","who":"克斯特","source":"denominational-genealogy","zh":"羅賓遜與克斯特《穿越早期基督教的軌跡》（中譯，存疑待驗）"}
+{"key":"dg-bauer-orthodoxy-zh","query":"鮑爾 最早期基督教的正統與異端","expect":"正統與異端","who":"鮑爾","source":"denominational-genealogy","zh":"包爾《最早期基督教的正統與異端》（中譯，存疑待驗）"}
