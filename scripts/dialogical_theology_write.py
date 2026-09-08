@@ -203,16 +203,28 @@ def head_html(vol) -> str:
 
 
 def clean(text: str) -> str:
+    """把模型的輸出整成「剛好一個 <section class="chapter">」的片段。
+
+    🚨 兩種實際踩到的壞法，靠肉眼與字數都看不出來，要靠這裡擋：
+      1. **整章被複製兩份**（D5:01）。加厚那一輪有時會把原稿與加厚稿一起吐回來，
+         而舊版 clean 是「第一個 <section 到最後一個 </section>」，剛好把兩份都收下。
+         組裝出來的卷會多一章，但檔案數是對的——所以檔案數對不代表章數對。
+      2. **每個小節後面都補一個 </section>**（D6:06，七個結尾標籤）。
+         瀏覽器會自己容錯，頁面看起來完全正常。
+    """
     t = text.strip()
     if t.startswith("```"):
         t = t.split("\n", 1)[1].rsplit("```", 1)[0].strip()
     i = t.find("<section")
     if i > 0:
         t = t[i:]
-    j = t.rfind("</section>")
-    if j >= 0:
-        t = t[: j + len("</section>")]
-    return t.strip()
+    # 只留第一個 section：後面若還有第二個開頭，整段砍掉
+    second = t.find('<section class="chapter">', 1)
+    if second > 0:
+        t = t[:second]
+    # 中途冒出來的結尾標籤全部拿掉，最後只補一個
+    t = t.replace("</section>", "").rstrip()
+    return (t + "\n</section>").strip()
 
 
 def body_chars(html: str) -> int:
