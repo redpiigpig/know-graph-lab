@@ -163,10 +163,57 @@ def render_source(vol: dict, art: dict) -> tuple[str, dict]:
     return "\n".join(chunks), stats
 
 
+SUP_REF = re.compile(
+    r'<sup class="footnote-ref"><a href="#(fn-[\w-]+)" id="fnref-[\w-]+">\d+</a></sup>'
+)
+FN_ITEM = re.compile(r'<div class="fn-item" id="(fn-[\w-]+)"><span class="fn-num">\d+</span>')
+FN_BACK = re.compile(r'<a href="#fnref-([\w-]+)" class="footnote-backref">')
+
+
+def renumber(body: str, vid: str) -> tuple[str, list[str]]:
+    """全卷註號按出現順序重編。
+
+    章檔各自寫作，作者不可能記得上一章編到第幾號；硬要人工維護，遲早會在兩章之間
+    撞號而且頁面看起來完全正常。所以章檔裡的 id 只要在該卷唯一即可（fn-gd-a 這種
+    也行），連號交給這裡做。
+    """
+    order: dict[str, int] = {}
+
+    def ref(m):
+        key = m.group(1)
+        if key not in order:
+            order[key] = len(order) + 1
+        n = order[key]
+        return (
+            f'<sup class="footnote-ref">'
+            f'<a href="#fn-{vid}-{n}" id="fnref-{vid}-{n}">{n}</a></sup>'
+        )
+
+    body = SUP_REF.sub(ref, body)
+    orphans = []
+
+    def item(m):
+        key = m.group(1)
+        if key not in orphans and key not in order:
+            orphans.append(key)
+        n = order.get(key, 0)
+        return f'<div class="fn-item" id="fn-{vid}-{n}"><span class="fn-num">{n}</span>'
+
+    body = FN_ITEM.sub(item, body)
+    # 回鏈寫的是 #fnref-<key 去掉 fn- 前綴>，換算回 order 的鍵要把 fn- 補回去
+    body = FN_BACK.sub(
+        lambda m: f'<a href="#fnref-{vid}-{order.get("fn-" + m.group(1), 0)}"'
+        f' class="footnote-backref">',
+        body,
+    )
+    return body, orphans
+
+
 def render_rewrite(vol: dict, files: list[Path]) -> tuple[str, dict]:
     """改寫稿 → 書稿卷。章檔本身已是 <section class="chapter">…</section>。"""
     body = "\n".join(f.read_text(encoding="utf-8").strip() for f in files)
     vid = vol["id"].lower()
+    body, _orphans = renumber(body, vid)
     refs = set(re.findall(rf'id="fnref-{vid}-([\w-]+)"', body))
     tgts = set(re.findall(rf'id="fn-{vid}-([\w-]+)"', body))
     return body, {
