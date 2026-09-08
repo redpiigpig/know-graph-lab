@@ -10,9 +10,11 @@
   `--reader japanese` **初階日文讀本**。自訂十五週計畫的各週讀本
       （矢內原忠雄／文語訳聖書／內村鑑三），見 japanese_self_study_plan.py。
 
-版面（使用者定案）：**JIS B5（18.2×25.7cm）**、頁眉印「週次．篇名」、頁碼在下、
-正文只佔左側六成，右側留寬白邊畫淡格線寫筆記。每篇正文之後附一頁**繁中閱讀導引**
-（摘要／重點／可討論的問題），由 LLM 產生後快取，不會每次重跑重花額度。
+版面（使用者定案）：**JIS B5（18.2×25.7cm）**、正文滿版、**行距 1.5 倍**
+（＝字級的 1.8 倍行高，筆記寫在行間，不另闢筆記欄）、頁眉印「週次．篇名」、
+頁碼在下。每篇正文之後附一頁**繁中閱讀導引**（摘要／重點／可討論的問題），
+由 LLM 產生後快取，不會每次重跑重花額度。成品直接放課程資料夾，不另開子夾；
+合本橫跨兩門課，兩門的資料夾各放一份。
 
     python -X utf8 scripts/build_course_reader.py
     python -X utf8 scripts/build_course_reader.py --reader japanese
@@ -50,6 +52,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
+ROOT_REPO = str(Path(__file__).resolve().parent.parent)
 BASE = r"G:\我的雲端硬碟\玄奘\博一上\上課"
 C_MON = "宗教研究基本問題與研究方法"      # 週一 第2節　博士班1A
 C_SAT = "宗教學理論與方法(一)"            # 週六 第1節〔單週〕碩專班1A
@@ -60,11 +63,14 @@ LATIN_BD = r"C:\Windows\Fonts\timesbd.ttf"
 
 # JIS B5
 PW, PH = 515.9, 728.5
-M_TOP, M_BOT = 58.0, 52.0
-BODY_X0, BODY_X1 = 42.0, 300.0            # 正文欄（約六成）
-NOTE_X0, NOTE_X1 = 316.0, 482.0           # 筆記欄
-FS, LEAD = 9.9, 14.8
-RULE = 18.0
+M_TOP, M_BOT = 60.0, 54.0
+BODY_X0, BODY_X1 = 48.0, 468.0            # 正文滿版
+
+# 筆記寫在行與行之間，不另闢欄位——所以行距放到字級的 1.8 倍
+# （＝文書處理軟體說的「1.5 倍行高」，因為單倍本身就是 1.2 倍字級）。
+LEAD_FACTOR = 1.8
+FS = 10.8
+LEAD = FS * LEAD_FACTOR
 
 CJK_ZH = r"C:\Windows\Fonts\mingliu.ttc"    # 細明體，繁中正文
 CJK_JA = r"C:\Windows\Fonts\msmincho.ttc"   # MS 明朝，日文正文
@@ -181,7 +187,7 @@ def index_pdfs(courses) -> dict[str, str]:
             if not os.path.isdir(d):
                 continue
             for f in sorted(os.listdir(d)):
-                if f.lower().endswith((".pdf", ".md")):
+                if f.lower().endswith((".pdf", ".html")):
                     found.setdefault(f, os.path.join(d, f))
     return found
 
@@ -243,8 +249,13 @@ def extract_pdf(path: str) -> list[str]:
 
 
 def extract_md(path: str) -> tuple[dict, list[str]]:
-    """日文讀本的 md：回傳 (出處欄位, 本文段落)。"""
-    raw = Path(path).read_text(encoding="utf-8")
+    """日文讀本的 html：回傳 (出處欄位, 本文段落)。
+
+    這些檔案是 course_html 出的 HTML，先還原成它本來的 markdown 形狀再解析，
+    下游就不必再養一套 HTML 解析。
+    """
+    from course_html import html_to_md
+    raw = html_to_md(Path(path).read_text(encoding="utf-8"))
     meta = dict(re.findall(r"^- \*\*(.+?)\*\*：(.+)$", raw, re.M))
     h1 = re.search(r"^# (.+)$", raw, re.M)      # 篇名要用讀本檔的 H1，
     meta["_h1"] = h1.group(1).strip() if h1 else ""   # 用「作品」會讓四篇同名
@@ -265,7 +276,14 @@ class Book:
     def __init__(self, lang: str = "zh"):
         self.doc = fitz.open()
         self.cjk_path = CJK_JA if lang == "ja" else CJK_ZH
+        # 兩套 CJK 字型互為備援，逐字選。MS 明朝沒有繁體的「內」（U+5167），細明體
+        # 沒有日文的「内」（U+5185）——這本讀本同一行裡就有「矢內原忠雄《キリスト教
+        # 入門》」，只用一套字型，作者名一定缺字。缺字不會報錯，只會印成空白：
+        # 2026-09-08 之前 24 頁裡有 19 頁的「內」是空的。
+        self.alt_path = CJK_ZH if lang == "ja" else CJK_JA
         self.f_cjk = fitz.Font(fontfile=self.cjk_path)
+        self.f_alt = fitz.Font(fontfile=self.alt_path)
+        self._glyph_cache: dict[str, bool] = {}
         self.page = None
         self.y = 0.0
         self.head_l = ""
@@ -277,11 +295,20 @@ class Book:
     def _is_cjk(ch: str) -> bool:
         return ord(ch) > 0x2E00
 
-    @staticmethod
-    def _runs(text: str):
+    def _kind(self, ch: str) -> str:
+        """latin / cjk（主字型）／cjk_alt（主字型沒有這個字，換備援）。"""
+        if not self._is_cjk(ch):
+            return "latin"
+        have = self._glyph_cache.get(ch)
+        if have is None:
+            have = bool(self.f_cjk.has_glyph(ord(ch)))
+            self._glyph_cache[ch] = have
+        return "cjk" if have else "cjk_alt"
+
+    def _runs(self, text: str):
         runs, cur, flag = [], "", None
         for ch in text:
-            f = ord(ch) > 0x2E00
+            f = self._kind(ch)
             if flag is None or f == flag:
                 cur += ch
             else:
@@ -292,10 +319,16 @@ class Book:
             runs.append((cur, flag))
         return runs
 
+    def _font(self, kind: str, bold: bool = False):
+        if kind == "cjk":
+            return self.f_cjk
+        if kind == "cjk_alt":
+            return self.f_alt
+        return _F_BLD if bold else _F_REG
+
     def measure(self, text: str, size: float, bold: bool = False) -> float:
-        latin = _F_BLD if bold else _F_REG
-        return sum((self.f_cjk if is_cjk else latin).text_length(run, size)
-                   for run, is_cjk in self._runs(text))
+        return sum(self._font(kind, bold).text_length(run, size)
+                   for run, kind in self._runs(text))
 
     def _tokens(self, text: str):
         """拉丁文以單字為單位斷行，CJK 逐字斷行。"""
@@ -336,11 +369,10 @@ class Book:
 
     def draw(self, x: float, y: float, text: str, size: float, bold: bool = False,
              color=(0, 0, 0)) -> float:
-        for run, is_cjk in self._runs(text):
-            fn = "CJK" if is_cjk else ("TNRB" if bold else "TNR")
+        for run, kind in self._runs(text):
+            fn = {"cjk": "CJK", "cjk_alt": "CJK2"}.get(kind, "TNRB" if bold else "TNR")
             self.page.insert_text((x, y), run, fontname=fn, fontsize=size, color=color)
-            metric = self.f_cjk if is_cjk else (_F_BLD if bold else _F_REG)
-            x += metric.text_length(run, size)
+            x += self._font(kind, bold).text_length(run, size)
         return x
 
     # ── 頁面 ────────────────────────────────────────────────────────
@@ -349,31 +381,26 @@ class Book:
         self.page.insert_font(fontname="TNR", fontfile=LATIN)
         self.page.insert_font(fontname="TNRB", fontfile=LATIN_BD)
         self.page.insert_font(fontname="CJK", fontfile=self.cjk_path)
+        self.page.insert_font(fontname="CJK2", fontfile=self.alt_path)
         self.y = M_TOP
         n = self.doc.page_count
         if self.head_l or self.head_r:
             self.draw(BODY_X0, M_TOP - 20, self.head_l[:30], 7.6, color=(0.45,) * 3)
             hr = self.head_r[:70]
-            self.draw(NOTE_X1 - self.measure(hr, 7.6), M_TOP - 20, hr, 7.6, color=(0.45,) * 3)
-            self.page.draw_line(fitz.Point(BODY_X0, M_TOP - 14), fitz.Point(NOTE_X1, M_TOP - 14),
+            self.draw(BODY_X1 - self.measure(hr, 7.6), M_TOP - 20, hr, 7.6, color=(0.45,) * 3)
+            self.page.draw_line(fitz.Point(BODY_X0, M_TOP - 14), fitz.Point(BODY_X1, M_TOP - 14),
                                 color=(0.8,) * 3, width=0.4)
         num = str(n)
         self.draw(PW / 2 - self.measure(num, 8.6) / 2, PH - 30, num, 8.6, color=(0.4,) * 3)
-        self.page.draw_line(fitz.Point(NOTE_X0 - 10, M_TOP - 14),
-                            fitz.Point(NOTE_X0 - 10, PH - M_BOT), color=(0.86,) * 3, width=0.5)
-        yy = M_TOP + 4
-        while yy < PH - M_BOT:
-            self.page.draw_line(fitz.Point(NOTE_X0, yy), fitz.Point(NOTE_X1, yy),
-                                color=(0.91,) * 3, width=0.35)
-            yy += RULE
 
     def space(self, need: float) -> None:
         if self.page is None or self.y + need > PH - M_BOT:
             self.new_page()
 
-    def flow(self, text: str, size: float = FS, lead: float = LEAD, gap: float = 5.0,
-             bold: bool = False, x0: float = BODY_X0, x1: float = BODY_X1,
-             color=(0, 0, 0)) -> None:
+    def flow(self, text: str, size: float = FS, lead: float | None = None,
+             gap: float = 6.0, bold: bool = False, x0: float = BODY_X0,
+             x1: float = BODY_X1, color=(0, 0, 0)) -> None:
+        lead = size * LEAD_FACTOR if lead is None else lead
         for ln in self.wrap(text, x1 - x0, size, bold):
             self.space(lead)
             self.draw(x0, self.y, ln, size, bold, color)
@@ -385,8 +412,8 @@ class Book:
         self.head_l = self.head_r = ""
         self.new_page()
         self.y = 230
-        self.flow(name, size=17, lead=26, gap=10)
-        self.flow(blurb, size=9.8, lead=16.5, color=(0.35,) * 3)
+        self.flow(name, size=17, gap=12)
+        self.flow(blurb, size=10.2, color=(0.35,) * 3)
         self.marks.append([1, name, self.doc.page_count])
 
     def piece_title(self, week: str, author: str, title: str, source: str) -> None:
@@ -395,12 +422,12 @@ class Book:
         self.marks.append([2, (f"{author}, {title}" if author else title)[:88],
                            self.doc.page_count])
         self.y = M_TOP + 8
-        self.flow(week, size=9.2, lead=14, gap=8, color=(0.4,) * 3)
+        self.flow(week, size=9.6, gap=8, color=(0.4,) * 3)
         if author:
-            self.flow(author.upper(), size=9.0, lead=13, gap=3, bold=True)
-        self.flow(title, size=13.4, lead=19.5, gap=4, bold=True)
+            self.flow(author.upper(), size=9.4, gap=2, bold=True)
+        self.flow(title, size=14.2, gap=4, bold=True)
         if source:
-            self.flow(source, size=8.6, lead=12.5, gap=10, color=(0.35,) * 3)
+            self.flow(source, size=9.0, gap=10, color=(0.35,) * 3)
         self.page.draw_line(fitz.Point(BODY_X0, self.y - 5), fitz.Point(BODY_X1, self.y - 5),
                             color=(0.75,) * 3, width=0.6)
         self.y += 8
@@ -412,22 +439,22 @@ class Book:
         self.head_l, self.head_r = week, "閱讀導引"
         self.new_page()
         self.y = M_TOP + 6
-        self.flow("閱讀導引", size=13.2, lead=20, gap=4)
-        self.flow(title, size=8.8, lead=13, gap=12, color=(0.4,) * 3)
+        self.flow("閱讀導引", size=13.6, gap=4)
+        self.flow(title, size=9.2, gap=12, color=(0.4,) * 3)
         for ln in md.splitlines():
             ln = ln.strip()
             if not ln:
                 self.y += 3
             elif ln.startswith("## "):
                 self.y += 6
-                self.flow(ln[3:], size=11.0, lead=17, gap=5, bold=True)
-            elif ln.startswith(("- ", "\u30fb")):
-                self.flow("\u30fb" + ln.lstrip("-\u30fb "), size=9.6, lead=15.4, gap=3,
-                          x0=BODY_X0 + 6)
+                self.flow(ln[3:], size=11.6, gap=5, bold=True)
+            elif ln.startswith(("- ", "・")):
+                self.flow("・" + ln.lstrip("-・ "), size=10.4, gap=4,
+                          x0=BODY_X0 + 8)
             elif re.match(r"^\d+[.\u3001]", ln):
-                self.flow(ln, size=9.6, lead=15.4, gap=3, x0=BODY_X0 + 6)
+                self.flow(ln, size=10.4, gap=4, x0=BODY_X0 + 8)
             else:
-                self.flow(ln, size=9.6, lead=15.4, gap=4)
+                self.flow(ln, size=10.4, gap=5)
 
 
 # ── 閱讀導引（LLM）──────────────────────────────────────────────────────
@@ -455,17 +482,38 @@ PROMPT = """你是宗教學研究所的助教。下面是一篇課堂指定讀�
 """
 
 
+# 🚨 Gemini 免費層是「每型號各自」每天每把 key 幾次，所以某一型號 429 不代表
+#    Gemini 掛了，換個型號多半就通。2026-09-08 實測 gemini-2.5-flash 七把 key
+#    全 429，但 3-flash-preview 與 2.5-flash-lite 都是一兩秒回。
+#    同日 gemini-2.5-flash 對這批 key 已改回 404（型號下架），所以型號鏈裡
+#    不要放它——先驗模型名還在不在，再怪額度。
+GUIDE_MODELS = ["gemini-3-flash-preview", "gemini-2.5-flash-lite", "gemini-flash-latest"]
+
+
 def make_guide(title: str, source: str, body: str) -> str | None:
     text = body[:30000]   # 摘要用不到全文，砍半可以把每篇的等待時間縮短一半
     prompt = PROMPT.format(title=title, source=source, body=text)
     try:
         import qianmian_llm
-        out, _ = qianmian_llm.ask(prompt, model="gemini-2.5-flash",
-                                  temperature=0.4, max_tokens=2400)
-        if out and "## 摘要" in out:
-            return out.strip()
+        for model in GUIDE_MODELS:
+            try:
+                out, _ = qianmian_llm.ask(prompt, model=model,
+                                          temperature=0.4, max_tokens=8000, tries=3)
+            except Exception as e:
+                print(f"    · {model} 不通（{str(e)[-24:]}）")
+                continue
+            # 🚨 這裡有兩種會「看起來成功」的失敗，兩種都要擋：
+            #    短的＝被截斷（thinking 吃光輸出額度），三段只出了一段；
+            #    長的＝跑掉格式，把全文逐段翻譯或逐節註解都倒出來，塞爆那一頁。
+            #    導引本來就設計成一頁，超出 2000 字必然不是導引。
+            if out:
+                full = all(h in out for h in ("## 摘要", "## 重點", "## 可討論的問題"))
+                if full and 350 <= len(out) <= 2000:
+                    return out.strip()
+                why = "缺段" if not full else ("太短" if len(out) < 350 else "暴長")
+                print(f"    · {model} {why}（{len(out)} 字），換型號")
     except Exception as e:
-        print(f"    · Gemini 失敗（{type(e).__name__}），改走 NVIDIA")
+        print(f"    · Gemini 整層失敗（{type(e).__name__}），改走 NVIDIA")
     try:
         import translate_ebook_to_zh as engines
         out = engines.nvidia_chat(prompt, max_tokens=2400)
@@ -484,14 +532,18 @@ def load_cache(path: str) -> dict:
 def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
     if reader == "japanese":
         parts, courses, lang = JAPANESE_PARTS, [C_JPN], "ja"
-        out_dir = os.path.join(BASE, C_JPN, "_讀本")
         stem = "初階日文讀本"
     else:
         parts, courses, lang = MARCUS_PARTS, [C_MON, C_SAT], "zh"
-        out_dir = os.path.join(BASE, "_根瑟馬庫斯讀本")
         stem = "宗教學理論讀本"
-    os.makedirs(out_dir, exist_ok=True)
-    cache_path = os.path.join(out_dir, "_閱讀導引快取.json")
+    # 成品就放課程資料夾本身，不另開子夾。合本橫跨兩門課，兩邊各放一份。
+    out_dirs = [os.path.join(BASE, c) for c in courses]
+    for d in out_dirs:
+        os.makedirs(d, exist_ok=True)
+    # 快取是中繼不是成品，留在 repo 的 output/（不進版控），不要擺到 Drive 課程夾裡
+    cache_dir = os.path.join(ROOT_REPO, "output", "source-cache", "course-readers")
+    os.makedirs(cache_dir, exist_ok=True)
+    cache_path = os.path.join(cache_dir, f"{reader}-guides.json")
     cache = load_cache(cache_path)
 
     files = index_pdfs(courses)
@@ -515,9 +567,10 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
             page.insert_text((page.rect.width / 2 - 8, page.rect.height - 24), str(i + 1),
                              fontname="helv", fontsize=8.6, color=(0.4,) * 3)
         doc.set_toc(marks)
-        dst = os.path.join(out_dir, f"{stem}_影印合本.pdf")
-        doc.save(dst, deflate=True)
-        print(f"✓ {dst}　{doc.page_count} 頁")
+        for d in out_dirs:
+            dst = os.path.join(d, f"{stem}_影印合本.pdf")
+            doc.save(dst, deflate=True)
+            print(f"✓ {dst}　{doc.page_count} 頁")
         return
 
     bk = Book(lang=lang)
@@ -541,11 +594,11 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
                 title = meta.get("_h1") or meta.get("作品", os.path.basename(path))
                 source = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
                 bk.piece_title(f"{weeks}", "", title, "")
-                bk.flow(f"出處：{source}", size=8.4, lead=13, gap=8, color=(0.35,) * 3)
+                bk.flow(f"出處：{source}", size=9.0, gap=8, color=(0.35,) * 3)
                 bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
-                       size=8.4, lead=13, gap=10, color=(0.35,) * 3)
+                       size=9.0, gap=10, color=(0.35,) * 3)
                 for p in paras:
-                    bk.flow(re.sub(r"\*\*(\d+)\*\*　", r"\1　", p), size=10.4, lead=17.5, gap=6)
+                    bk.flow(re.sub(r"\*\*(\d+)\*\*　", r"\1　", p), size=11.2, gap=8)
                 body = "\n\n".join(paras)
                 disp = title
 
@@ -563,9 +616,10 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
             print(f"  ✓ {disp[:52]}")
 
     bk.doc.set_toc(bk.marks)
-    dst = os.path.join(out_dir, f"{stem}_筆記版.pdf")
-    bk.doc.save(dst, deflate=True)
-    print(f"✓ {dst}　{bk.doc.page_count} 頁")
+    for d in out_dirs:
+        dst = os.path.join(d, f"{stem}.pdf")
+        bk.doc.save(dst, deflate=True)
+        print(f"✓ {dst}　{bk.doc.page_count} 頁")
     for k in missing:
         print(f"✗ 找不到：{k}")
 

@@ -37,8 +37,12 @@ import sys
 import textwrap
 import urllib.request
 from collections import Counter
+from pathlib import Path
 
 import fitz
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from course_html import write_html  # noqa: E402
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
@@ -417,7 +421,7 @@ def fetch_web(item: dict, dst_dir: str, week: str) -> tuple[bool, str]:
 # ── CBETA 一品 → md ────────────────────────────────────────────────────
 def cbeta_chapter(item: dict, dst_dir: str, week: str) -> tuple[bool, str]:
     src = os.path.join(TRIPITAKA, "T0676.jsonl")
-    name = f"{week}_{item['seq']}_{safe(item['title'])}.md"
+    name = f"{week}_{item['seq']}_{safe(item['title'])}.html"
     dst = os.path.join(dst_dir, name)
     if os.path.exists(dst):
         return True, name + "（已存在）"
@@ -436,8 +440,7 @@ def cbeta_chapter(item: dict, dst_dir: str, week: str) -> tuple[bool, str]:
         else:
             out.append(f"**{r['uid']}**　{txt}")
             out.append("")
-    with open(dst, "w", encoding="utf-8") as f:
-        f.write("\n".join(out))
+    write_html(dst, item["title"], "\n".join(out))
     return True, name
 
 
@@ -468,8 +471,8 @@ def write_manifest(course: str, week: str, topic: str, items: list, dst_dir: str
                 out.append(f"   - **尚未取得**：{it['why']}")
         out.append("")
     out += ["---", "", f"課程：{course}　｜　依 I-Learn 課程大綱建立，改大綱後重跑 `scripts/course_slice_readings.py`。"]
-    with open(os.path.join(dst_dir, "指定閱讀.md"), "w", encoding="utf-8") as f:
-        f.write("\n".join(out) + "\n")
+    write_html(os.path.join(dst_dir, "指定閱讀.html"),
+               f"{week}　指定閱讀", "\n".join(out))
 
 
 def main() -> None:

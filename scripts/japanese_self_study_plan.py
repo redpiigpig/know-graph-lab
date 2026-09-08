@@ -45,6 +45,11 @@ from __future__ import annotations
 import os
 import re
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from course_html import write_html  # noqa: E402
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
@@ -418,26 +423,26 @@ def main() -> None:
     plan = plan_text(readings)
 
     os.makedirs(DEST, exist_ok=True)
-    with open(os.path.join(DEST, "個人課程目標_十五週計畫.md"), "w", encoding="utf-8") as f:
-        f.write(plan)
-    print("✓ 個人課程目標_十五週計畫.md")
+    write_html(os.path.join(DEST, "個人課程目標_十五週計畫.html"),
+               "個人課程目標與十五週自學計畫", plan)
+    print("✓ 個人課程目標_十五週計畫.html")
 
     w3 = os.path.join(DEST, WEEK_DIRS[3])          # W03 的作業就是繳交這份計畫
     os.makedirs(w3, exist_ok=True)
-    with open(os.path.join(w3, "個人課程目標_十五週計畫.md"), "w", encoding="utf-8") as f:
-        f.write(plan)
+    write_html(os.path.join(w3, "個人課程目標_十五週計畫.html"),
+               "個人課程目標與十五週自學計畫", plan)
 
     n = 0
     for week, items in sorted(readings.items()):
         d = os.path.join(DEST, WEEK_DIRS[week])
         os.makedirs(d, exist_ok=True)
         for it in items:
-            dst = os.path.join(d, f"W{week:02d}_自訂_{it['stem']}.md")
-            with open(dst, "w", encoding="utf-8") as f:
-                f.write(f"# {it['title']}\n\n"
-                        f"> 自訂讀本——本課程為個別化自學，讀本由學生依個人目標自選。\n\n"
-                        f"{source_block(it['src'], it['extent'], it['net'])}\n\n"
-                        f"---\n\n## 本文\n\n{it['body']}\n")
+            dst = os.path.join(d, f"W{week:02d}_自訂_{it['stem']}.html")
+            write_html(dst, it["title"],
+                       f"# {it['title']}\n\n"
+                       f"> 自訂讀本——本課程為個別化自學，讀本由學生依個人目標自選。\n\n"
+                       f"{source_block(it['src'], it['extent'], it['net'])}\n\n"
+                       f"---\n\n## 本文\n\n{it['body']}\n")
             n += 1
             print(f"  ✓ W{week:02d} {it['title'][:40]}　實質 {it['net']} 字")
     print(f"\n讀本 {n} 篇")

@@ -1,7 +1,7 @@
 """抓玄奘大學 I-Learn（Moodle）我修的每一門課的課程大綱與教材檔案。
 
 用法:
-    python scripts/hcu_ilearn_sync.py            # 只寫大綱 md
+    python scripts/hcu_ilearn_sync.py            # 只寫大綱 html
     python scripts/hcu_ilearn_sync.py --files    # 連教材檔案一起下載
 
 帳密讀 .env 的 HCU_ILEARN_USER / HCU_ILEARN_PASS。
@@ -16,6 +16,9 @@ import sys
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from course_html import write_html  # noqa: E402
 
 BASE = "https://ilearn.hcu.edu.tw"
 REST = BASE + "/webservice/rest/server.php"
@@ -188,9 +191,9 @@ def main():
             continue
         dest = root / safe_name(name)
         dest.mkdir(parents=True, exist_ok=True)
-        md = dest / "課程大綱.md"
-        md.write_text(to_trad(render(c, sections)), encoding="utf-8")
-        print(f"  ✓ {name} → {md}")
+        out = dest / "課程大綱.html"
+        write_html(out, f"{name}　課程大綱", to_trad(render(c, sections)))
+        print(f"  ✓ {name} → {out}")
         if args.files:
             n = download_files(token, sections, dest)
             print(f"    教材 {n} 檔")
