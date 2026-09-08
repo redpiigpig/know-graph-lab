@@ -19,6 +19,7 @@ import collections
 import datetime as dt
 import json
 import pathlib
+import re
 import subprocess
 import sys
 import urllib.parse
@@ -186,11 +187,16 @@ def section_author(slug: str) -> None:
             name_en = line.split('"')[3]
     works = []
     cur = {}
+    # 這個 store 一半手寫 TS 一半 JSON dump，key 有的帶引號有的不帶，值也是單雙引號混用。
+    # 🚨 ebookId 特別要吃不帶引號那種——backfill regex（isolation.spec 驗的那條）要求
+    # 寫成 `ebookId: 'xxx'`，只認 `"ebookId":` 會把剛接好的書report成「沒有 ebookId」。
+    field_re = re.compile(
+        r"""["']?(title|status|ebookId|note)["']?\s*:\s*["']([^"']*)["']"""
+    )
     for line in seg.splitlines():
-        for f in ("title", "status", "ebookId", "note"):
-            tag = f'"{f}":'
-            if tag in line:
-                cur[f] = line.split('"')[3] if line.count('"') >= 4 else ""
+        m = field_re.search(line)
+        if m:
+            cur[m.group(1)] = m.group(2)
         if line.strip().startswith("}") and cur.get("title"):
             works.append(cur)
             cur = {}
