@@ -124,7 +124,7 @@ IMG_SP = {0: 13, 1: 9, 2: 6, 3: 14}
 # （2026-09-09 稽核在三份壓縮過的簡報上抓到 16 處壓字）。
 BOX_W, BOX_H = 30.9, 12.7
 # fit() 的估算偏樂觀，實測會讓最後一兩個字掉到頁尾線下，所以再留一成餘裕。
-FIT_MARGIN = 0.90
+FIT_MARGIN = 0.84
 IMG_BOX_W = 17.0
 
 
@@ -332,7 +332,9 @@ def s_two(prs, title, left, right, sub=None):
         put(tfh, head, 23, bold=True, color=CREAM, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 24.0, 1: 20.0, 2: 20.0}
-        k = max(0.72, fit(items, cw, 11.9, base, {0: 10, 1: 8, 2: 8}))
+        # 雙欄頁不能拆頁，只能縮字；框底離頁尾只有 0.2 cm，餘裕要吃滿
+        k = max(0.62, fit(items, cw, 11.9 * FIT_MARGIN, base,
+                          {0: 10, 1: 8, 2: 8}))
         tf = textbox(s, x + Cm(0.35), Cm(5.8), colw - Cm(0.7), H - Cm(7.15))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
@@ -364,7 +366,38 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
         tf = c.text_frame; tf.word_wrap = True
         put(tf, h, 19, bold=True, color=CREAM, first=True, space_after=0,
             align=PP_ALIGN.CENTER)
+    # 🚨 表格沒有「裝不下就縮」這回事，PowerPoint 會讓它一路往下長，
+    #    長過頁尾也沒有人攔。所以這裡自己估高度，塞不下就降字級。
+    #    可用高度＝從表格頂 4.5 cm 到頁尾線 17.85 cm，扣掉表頭列。
+    cols_cm = ([(33.87 - 3.0) * w / sum(widths) for w in widths] if widths
+               else [(33.87 - 3.0) / len(headers)] * len(headers))
+
+    def table_h(size):
+        total = 1.05 * CM_PT                      # 表頭列
+        for row in rows:
+            lines = 1
+            for ci, val in enumerate(row):
+                per = max(4, int(cols_cm[ci] * CM_PT / size))
+                lines = max(lines, -(-len(str(val)) // per))
+            total += max(0.85 * CM_PT, lines * size * 1.5 + 6)
+        return total
+
+    # 附註跟表格搶同一段空間：先算附註要幾行、佔多高，剩下的才是表格的。
+    note_size, note_h = 15, 0.0
+    if note:
+        while note_size > 10:
+            per = max(8, int((33.87 - 3.0) * CM_PT / note_size))
+            nl = -(-len(note) // per)
+            note_h = (nl * note_size * 1.45 + 4) / CM_PT
+            if note_h <= 1.6:
+                break
+            note_size -= 1
+    note_top = 17.5 - note_h
+    limit = (note_top - (0.3 if note else 0.0) - 4.5) * CM_PT
+
     tsize = 19 if len(rows) <= 5 else (17 if len(rows) <= 7 else 15)
+    while tsize > 10 and table_h(tsize) > limit:
+        tsize -= 1
     for ri, row in enumerate(rows):
         for ci, val in enumerate(row):
             c = tbl.cell(ri + 1, ci)
@@ -377,8 +410,8 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
             put(tf, str(val), tsize, color=INK, first=True, space_after=0,
                 line=1.15)
     if note:
-        tf = textbox(s, Cm(1.5), H - Cm(2.6), W - Cm(3.0), Cm(1.3))
-        put(tf, note, 15, color=GRAY, first=True, space_after=0)
+        tf = textbox(s, Cm(1.5), Cm(note_top), W - Cm(3.0), Cm(max(1.3, note_h)))
+        put(tf, note, note_size, color=GRAY, first=True, space_after=0)
     return s
 
 
@@ -402,20 +435,29 @@ def place_image(slide, key, x, y, w, h):
     return True
 
 
+# 🚨 圖說與圖庫標籤的位置是寫死的，跟字多字少無關。頁尾那一行從 17.90 cm
+#    起，所以這兩個元件的「底部」都必須壓在 17.85 cm 以內。
+CAP_H = 1.0            # 圖說框高（cm）
+# 🚨 圖說一往上挪，就會挪進圖片區。這兩個數字必須一起改：
+#    有圖說時圖框底 16.10 cm，沒有時 17.50 cm（頁尾線 17.90）。
+def img_box_h(has_cap):
+    return H - Cm(7.40) if has_cap else H - Cm(6.00)
+
+
 def caption(slide, text, x, y, w):
-    tf = textbox(slide, x, y, w, Cm(1.3))
+    tf = textbox(slide, x, y, w, Cm(CAP_H))
     put(tf, text, 16, color=GRAY, first=True, space_after=0, align=PP_ALIGN.CENTER)
 
 
 def s_photo(prs, title, key, cap=None, sub=None):
     s = blank(prs)
     slide_title(s, title, sub)
-    box_y, box_h = Cm(4.45), H - Cm(6.75)
+    box_y, box_h = Cm(4.45), img_box_h(bool(cap))
     if not place_image(s, key, Cm(1.5), box_y, W - Cm(3.0), box_h):
         put(textbox(s, Cm(1.5), box_y, W - Cm(3.0), Cm(2)), f'（缺圖：{key}）',
             16, color=GRAY, first=True)
     if cap:
-        caption(s, cap, Cm(1.5), H - Cm(2.1), W - Cm(3.0))
+        caption(s, cap, Cm(1.5), H - Cm(2.75), W - Cm(3.0))
     return s
 
 
@@ -426,14 +468,17 @@ def s_gallery(prs, title, items, sub=None):
     n = len(items)
     gap = Cm(0.6)
     colw = int((W - Cm(3.0) - gap * (n - 1)) / n)
-    top, boxh = Cm(4.5), H - Cm(7.65)
+    top, boxh = Cm(4.5), H - Cm(9.4)
     for i, (key, label) in enumerate(items):
         x = Cm(1.5) + i * (colw + gap)
         if not place_image(s, key, x, top, colw, boxh):
             put(textbox(s, x, top, colw, Cm(2)), f'（缺圖：{key}）', 13,
                 color=GRAY, first=True)
-        tf = textbox(s, x, top + boxh + Cm(0.25), colw, Cm(1.9))
-        put(tf, label, 17, color=INK, first=True, space_after=0,
+        # 標籤框 2.75 cm（約三行半）。下限自己定 0.76（≒13pt），不吃 FIT_FLOOR——
+        # 那個值會被壓張數的階梯調到 0.52，標籤跟著縮就變成投影看不清的 8.9pt。
+        kl = max(0.76, fit([label], colw / 360000 / 10, 2.75, {0: 17.0}, {0: 0}))
+        tf = textbox(s, x, top + boxh + Cm(0.25), colw, Cm(2.75))
+        put(tf, label, 17 * kl, color=INK, first=True, space_after=0,
             align=PP_ALIGN.CENTER, line=1.25)
     return s
 
@@ -463,10 +508,10 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
             bold=(lvl == 0), first=not firstdone, space_after=sp[lvl] * k,
             indent=min(lvl, 2) if lvl != 3 else 0, line=1.3)
         firstdone = True
-    boxh = H - Cm(6.4) if cap else H - Cm(5.4)
+    boxh = img_box_h(bool(cap))
     place_image(s, key, imgx, Cm(4.45), imgw, boxh)
     if cap:
-        caption(s, cap, imgx, H - Cm(2.1), imgw)
+        caption(s, cap, imgx, H - Cm(2.75), imgw)
     return s
 
 
@@ -516,19 +561,24 @@ def s_openers(prs, course, no):
     slide_title(s1, '上課前先想一想',
                 '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
     tf = textbox(s1, Cm(1.5), Cm(4.6), W - Cm(3.0), H - Cm(6.4))
+    ka = fit([f'{i + 1}　{q}' for i, q in enumerate(d['ask'])],
+             30.9, 12.6 * FIT_MARGIN, {0: 27.0}, {0: 16})
     for i, q in enumerate(d['ask']):
-        put(tf, f'{i + 1}　{q}', 27, color=INK, first=(i == 0),
-            space_after=16, line=1.3)
+        put(tf, f'{i + 1}　{q}', 27 * ka, color=INK, first=(i == 0),
+            space_after=16 * ka, line=1.3)
     out.append(s1)
 
     s2 = blank(prs)
     slide_title(s2, '請用手機作答',
                 '掃描畫面上的 QR code 或輸入 PIN 碼加入，作答後抽籤請人詳細說明')
     tf = textbox(s2, Cm(1.5), Cm(4.6), W - Cm(19.0), H - Cm(6.4))
+    _q = [f'{i + 1}　{q}' for i, q in enumerate(d['answer'])]
+    _q.append('一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。')
+    kb = fit(_q, 14.8, 12.6 * FIT_MARGIN, {0: 26.0}, {0: 14})
     for i, q in enumerate(d['answer']):
-        put(tf, f'{i + 1}　{q}', 26, color=INK, first=(i == 0),
-            space_after=14, line=1.3)
-    put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 19,
+        put(tf, f'{i + 1}　{q}', 26 * kb, color=INK, first=(i == 0),
+            space_after=14 * kb, line=1.3)
+    put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 19 * kb,
         color=GRAY, space_after=0, line=1.3)
     band(s2, MINT, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
     tf2 = textbox(s2, W - Cm(16.1), Cm(5.4), Cm(14.1), H - Cm(8.0),
