@@ -1489,6 +1489,13 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
+    # 這台是 S0 Modern Standby 筆電：一進待機，主控台行程集體收到 0xC000013A。
+    # 30 小時內死了 40 次，而 powercfg /requests 顯示沒人在阻止睡眠。見 keep_awake.py。
+    try:
+        from keep_awake import keep_awake
+        keep_awake()
+    except Exception:
+        pass
     cmd = sys.argv[1]
     args = sys.argv[2:]
     if cmd == "status":

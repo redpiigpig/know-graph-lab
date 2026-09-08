@@ -446,6 +446,13 @@ if __name__ == '__main__':
         print(__doc__, file=sys.stderr)
         sys.exit(1)
 
+    # S0 Modern Standby 會把整批主控台行程一起帶走（0xC000013A）。見 keep_awake.py。
+    try:
+        from keep_awake import keep_awake
+        keep_awake()
+    except Exception:
+        pass
+
     cmd = sys.argv[1]
     if cmd == 'init':
         cmd_init()

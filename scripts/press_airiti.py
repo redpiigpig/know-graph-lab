@@ -786,6 +786,13 @@ def summarize():
 
 
 def main():
+    # S0 Modern Standby 會把整批主控台行程一起帶走（0xC000013A）：09-08 08:30 那輪
+    # 抓到第 38 篇就是這樣沒的。見 keep_awake.py。
+    try:
+        from keep_awake import keep_awake
+        keep_awake()
+    except Exception:
+        pass
     ap = argparse.ArgumentParser()
     ap.add_argument("--discover", action="store_true")
     ap.add_argument("--toc", help="slug 或 all")
