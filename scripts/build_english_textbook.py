@@ -560,7 +560,9 @@ def report(out: Path, stats: dict):
 
 
 PAGE_LIMIT = 300
-DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學\家教_國小英語")
+# 家教夾按學生分，是上課實際帶的東西（見該夾的 家教說明.md）；
+# 知識圖工作室/教學 那邊是素材庫，成品不放那裡。
+DRIVE = Path(r"G:\我的雲端硬碟\玄奘\博一上\家教\國小英語課本")
 
 
 def to_pdf(docx: Path) -> Path:

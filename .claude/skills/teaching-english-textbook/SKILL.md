@@ -9,7 +9,7 @@ description: 媽媽（julia5868）家教用的《Happy English 快樂學英語�
 > 課程資料：[public/content/english/course50/](../../../public/content/english/course50/)　`L01.json` … `L50.json`
 > 生成：[scripts/build_english_course50.py](../../../scripts/build_english_course50.py)
 > 排版：[scripts/build_english_textbook.py](../../../scripts/build_english_textbook.py)
-> 成品：Drive `教學/家教_國小英語/`（**不進版控**）
+> 成品：Drive `玄奘/博一上/家教/國小英語課本/`（**不進版控**）
 
 ## 三份東西不要搞混
 
@@ -17,7 +17,7 @@ description: 媽媽（julia5868）家教用的《Happy English 快樂學英語�
 
 | 成品 | 分課 | 位置 |
 |---|---|---|
-| **紙本課本**（本 skill） | 50 課 × 20 字 | Drive `教學/家教_國小英語/` |
+| **紙本課本**（本 skill） | 50 課 × 20 字 | Drive `玄奘/博一上/家教/國小英語課本/` |
 | 印刷單字卡 | 50 課 × 20 字 | `output/print-masters/english-flashcards-1000.pdf` |
 | 網站 `/english` | 50 課 × 20 字 | `public/content/english/lessons.json` |
 
@@ -35,6 +35,13 @@ python scripts/english_site_from_course50.py     # course50 -> 網站 lessons.js
 （段考每 5 課一組，會自己長出 10 組）與 `pages/english/review/[range].vue` 的
 總複習上限。測驗題庫走 `utils/englishQuiz.ts`，靠 exercises 的 `type` 挑題
 （`choice` 出文法題，`fill`／`unscramble`／`translate` 出打字題）。
+
+## 成品放哪裡
+
+🚨 **不要放 `知識圖工作室/教學/`**（我第一次就放錯了）。使用者的家教材料在
+`玄奘/博一上/家教/`，**按學生分**、由該夾的 `家教說明.md` 登記，那是上課實際帶的東西；
+`知識圖工作室/教學/` 是素材庫（例如私中數學的題庫）。課本與 `國小英語單字卡/` 並排放
+`國小英語課本/`。新增或改版後記得同步 `家教說明.md`。
 
 ## 出書
 
