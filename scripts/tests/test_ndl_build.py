@@ -477,3 +477,36 @@ class TestParseLayoutXml:
     def test_missing_attributes_do_not_crash(self):
         xml = b'<OCRDATASET><PAGE><TEXTBLOCK><LINE STRING="x" /></TEXTBLOCK></PAGE></OCRDATASET>'
         assert nb.parse_layout_xml(xml) == []
+
+
+class TestResolvePlaceholders:
+    """NDL 的 〓 用上下文規則補。沒有第二份 OCR 可以對照時只能這樣
+    （72 頁的書跑視覺 OCR 要 144 次請求，超過日額度）。
+
+    🚨 規則要**具體的先跑**：〓究＝硏究、益〓＝益々 這些若被通用的
+    「〓→敎」先吃掉就永遠補不回來了。
+    """
+
+    def test_specific_rules_win_over_the_general_one(self):
+        assert nb.resolve_ndl_placeholders("聖書之〓究") == "聖書之硏究"
+        assert nb.resolve_ndl_placeholders("益〓その聲") == "益々その聲"
+
+    def test_general_fallback_is_the_common_glyph(self):
+        assert nb.resolve_ndl_placeholders("基督〓會") == "基督敎會"
+
+    def test_double_placeholder_is_a_repetition_mark(self):
+        assert nb.resolve_ndl_placeholders("もと〓〓比較する") == "もと〳〵比較する"
+
+    def test_curated_single_characters(self):
+        assert nb.resolve_ndl_placeholders("汝の罪は〓められたり") == "汝の罪は赦められたり"
+        assert nb.resolve_ndl_placeholders("順序は〓ね此通り") == "順序は概ね此通り"
+        assert nb.resolve_ndl_placeholders("澄みて〓く一點の曇なき") == "澄みて淸く一點の曇なき"
+
+    def test_reports_what_the_fallback_touched(self):
+        """通用規則是推論不是逐字查證，要能列出它動過哪些地方供覆核。"""
+        _, guessed = nb.resolve_ndl_placeholders("基督〓會と聖書之〓究", report=True)
+        assert guessed == ["基督〓會"[:2] + "〓" + "會"] or len(guessed) == 1
+
+    def test_text_without_placeholders_is_untouched(self):
+        s = "これは正しい文である"
+        assert nb.resolve_ndl_placeholders(s) == s

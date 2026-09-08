@@ -270,6 +270,51 @@ def lines_to_layout_paras(lines: list) -> list:
 PLACEHOLDER = "〓"
 
 
+# NDL 的 〓 用上下文規則補（沒有第二份 OCR 可對照時的作法）。
+# 依據是逐本盤點 〓 的前後字分佈後判讀出來的，不是猜的：
+# 《初代の人々》283 處裡 督〓43／〓會53／〓究10／宗〓9 —— 字形其實很集中。
+# 🚨 **具體規則一定要排在通用規則前面**，否則 〓究 會被「〓→敎」先吃掉。
+PLACEHOLDER_RULES = [
+    # 疊字記號：くの字点在直排佔兩格，NDL 會吐兩個 〓
+    (r"〓〓", "〳〵"),
+    # 單字疊字記號
+    (r"(益|愈|段|時)〓", r"\1々"),
+    # 硏究（硏是舊字體，NDL 字集沒有）
+    (r"〓究", "硏究"),
+    # 淸（舊字體）
+    (r"澄みて〓く", "澄みて淸く"),
+    (r"魂の〓き", "魂の淸き"),
+    (r"莊嚴〓純", "莊嚴淸純"),
+    (r"みなもとが〓くも", "みなもとが淸くも"),
+    (r"末の〓からう", "末の淸からう"),
+    # 其他經判讀的單字
+    (r"罪は〓められ", "罪は赦められ"),
+    (r"順序は〓ね", "順序は概ね"),
+    (r"〓黨の間", "鄕黨の間"),
+    # 通用：本語料裡 〓 絕大多數是「敎」（舊字體，NDL 字集沒有）
+    (r"〓", "敎"),
+]
+_GENERAL_RULE_INDEX = len(PLACEHOLDER_RULES) - 1
+
+
+def resolve_ndl_placeholders(text: str, report: bool = False):
+    """用上下文規則把 NDL 的 〓 補回來。
+
+    `report=True` 時多回傳一個清單：**通用規則（〓→敎）動過的地方**。
+    那一條是統計推論不是逐字查證，要留得下痕跡供人覆核 ——
+    這是這個作法與「拿第二份 OCR 對齊」最大的差別，別把兩者混為一談。
+    """
+    if PLACEHOLDER not in (text or ""):
+        return (text, []) if report else text
+    guessed = []
+    for i, (pat, rep) in enumerate(PLACEHOLDER_RULES):
+        if i == _GENERAL_RULE_INDEX and report:
+            for m in re.finditer(pat, text):
+                guessed.append(text[max(0, m.start() - 2):m.end() + 2])
+        text = re.sub(pat, rep, text)
+    return (text, guessed) if report else text
+
+
 def fill_placeholders(text: str, reference: str) -> str:
     """NDL 官方 OCR 的「〓」用另一份 OCR 的對應字補回來。
 
