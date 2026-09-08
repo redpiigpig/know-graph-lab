@@ -261,104 +261,104 @@
   "exercises": {
     "mcq": [
       {
-        "q": "中秋節的傳統食物是什麼？",
+        "q": "以下哪個英文單字的意思是「節日」？",
         "opts": [
-          "moon cake",
-          "red envelope",
-          "pumpkin",
-          "Santa Claus"
-        ],
-        "ans": "moon cake"
-      },
-      {
-        "q": "聖誕節常見的人物是誰？",
-        "opts": [
-          "Santa Claus",
-          "gift",
-          "present",
-          "moon cake"
-        ],
-        "ans": "Santa Claus"
-      },
-      {
-        "q": "哪個節日會發紅包？",
-        "opts": [
-          "Chinese New Year",
-          "Halloween",
-          "Christmas",
-          "Dragon Boat Festival"
-        ],
-        "ans": "Chinese New Year"
-      },
-      {
-        "q": "哪個國家不在歐洲？",
-        "opts": [
-          "France",
-          "Germany",
-          "India",
-          "England"
-        ],
-        "ans": "India"
-      },
-      {
-        "q": "How do you go to Malaysia? by ___.",
-        "opts": [
-          "bus",
           "celebrate",
           "festival",
-          "gift"
+          "gift",
+          "present"
+        ],
+        "ans": "festival"
+      },
+      {
+        "q": "以下哪個詞是交通工具？",
+        "opts": [
+          "Malaysia",
+          "Canada",
+          "bus",
+          "England"
         ],
         "ans": "bus"
       },
       {
-        "q": "Yesterday I ___ Chinese New Year.",
+        "q": "昨天你去了動物園，用過去式說是：",
         "opts": [
-          "celebrated",
-          "celebrate",
-          "celebrating",
-          "celebrates"
+          "go",
+          "went",
+          "goes",
+          "did"
         ],
-        "ans": "celebrated"
+        "ans": "went"
       },
       {
-        "q": "Last year we ___ the Moon Festival.",
-        "opts": [
-          "celebrated",
-          "celebrate",
-          "celebrating",
-          "celebrates"
-        ],
-        "ans": "celebrated"
-      },
-      {
-        "q": "哪個節日會吃月餅？",
+        "q": "中秋節的英文是？",
         "opts": [
           "Moon Festival",
           "Dragon Boat Festival",
-          "Halloween",
-          "Christmas"
+          "Christmas",
+          "Halloween"
         ],
         "ans": "Moon Festival"
       },
       {
-        "q": "Yesterday we ___ the Dragon Boat Festival.",
+        "q": "你怎麼去馬來西亞？",
         "opts": [
-          "celebrated",
-          "celebrate",
-          "celebrating",
-          "celebrates"
+          "I go by bus.",
+          "I goes by bus.",
+          "I going by bus.",
+          "I went by bus."
         ],
-        "ans": "celebrated"
+        "ans": "I go by bus."
       },
       {
-        "q": "哪個國家在亞洲？",
+        "q": "昨天你去了馬來西亞，用過去式說是：",
         "opts": [
-          "Malaysia",
-          "Canada",
-          "Australia",
-          "England"
+          "I go to Malaysia.",
+          "I went to Malaysia.",
+          "I going to Malaysia.",
+          "I goes to Malaysia."
         ],
-        "ans": "Malaysia"
+        "ans": "I went to Malaysia."
+      },
+      {
+        "q": "你想走路去學校，你會怎麼說？",
+        "opts": [
+          "I go by foot.",
+          "I go on foot.",
+          "I go in foot.",
+          "I go to foot."
+        ],
+        "ans": "I go on foot."
+      },
+      {
+        "q": "紅包是哪個節日？",
+        "opts": [
+          "Chinese New Year",
+          "Dragon Boat Festival",
+          "Moon Festival",
+          "Halloween"
+        ],
+        "ans": "Chinese New Year"
+      },
+      {
+        "q": "你昨天去馬來西亞，過去式動詞是：",
+        "opts": [
+          "go",
+          "went",
+          "goes",
+          "going"
+        ],
+        "ans": "went"
+      },
+      {
+        "q": "月餅是哪個節日的食物？",
+        "opts": [
+          "moon cake",
+          "red envelope",
+          "gift",
+          "present"
+        ],
+        "ans": "moon cake"
       }
     ],
     "fill": [

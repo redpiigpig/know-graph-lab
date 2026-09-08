@@ -24,11 +24,11 @@
 definePageMeta({ middleware: "english-auth" });
 
 const route = useRoute();
-const range = String(route.params.range); // "all" | "1-5" | "6-10" | "11-15" | "16-20"
+const range = String(route.params.range); // "all" | "1-5" | "6-10" | … | "46-50"
 
 // 解析範圍
 let from = 1, to = 20, valid = true;
-if (range === "all") { from = 1; to = 20; }
+if (range === "all") { from = 1; to = 50; }
 else {
   const m = range.match(/^(\d{1,2})-(\d{1,2})$/);
   if (m) { from = Number(m[1]); to = Number(m[2]); } else valid = false;
@@ -37,7 +37,7 @@ const error = ref(valid ? "" : "找不到這個複習測驗");
 
 const quizType = range === "all" ? "review_all" : `review_${from}_${to}`;
 const title = range === "all" ? "總複習測驗" : `段考 ‧ 第 ${from}–${to} 課`;
-const subtitle = range === "all" ? "涵蓋全部 20 個單元 ‧ 1000 字" : `涵蓋第 ${from} 到第 ${to} 課`;
+const subtitle = range === "all" ? "涵蓋全部 50 個單元 ‧ 1000 字" : `涵蓋第 ${from} 到第 ${to} 課`;
 const totalQ = range === "all" ? 20 : 15;
 
 const { data: lessons } = await useFetch<any[]>("/content/english/lessons.json", { key: "english-lessons", default: () => [] });

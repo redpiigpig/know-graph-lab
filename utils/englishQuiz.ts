@@ -34,6 +34,8 @@ export function sentenceItems(lessons: Lesson[], n = 8) {
   for (const L of lessons) for (const ex of L.exercises || []) {
     if (ex.type === "unscramble") for (const it of ex.items || []) out.push({ kind: "type", hint: "把單字排成正確的句子", prompt: it.q, answer: it.ans });
     if (ex.type === "translate") for (const it of ex.items || []) out.push({ kind: "type", hint: "把中文翻成英文", prompt: it.q, answer: it.ans });
+    // 課本那邊的填空題（題幹挖空、答案是一個字），50 課版才有
+    if (ex.type === "fill") for (const it of ex.items || []) out.push({ kind: "type", hint: "填入正確的單字", prompt: it.q, answer: it.ans });
   }
   return shuffle(out).slice(0, n);
 }

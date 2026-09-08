@@ -248,17 +248,47 @@
   "exercises": {
     "mcq": [
       {
-        "q": "soy milk 的英文是？",
+        "q": "你想要喝豆漿嗎？",
         "opts": [
-          "soy milk",
-          "stinky tofu",
-          "meatball",
-          "egg pancake"
+          "Would you like soy milk?",
+          "How much soy milk?",
+          "Would you like stinky tofu?",
+          "How much stinky tofu?"
         ],
-        "ans": "soy milk"
+        "ans": "Would you like soy milk?"
       },
       {
-        "q": "stinky tofu 的中文是？",
+        "q": "珍珠奶茶多少錢？",
+        "opts": [
+          "How much is the pearl milk tea?",
+          "Would you like pearl milk tea?",
+          "How much is the soy milk?",
+          "Would you like the beef noodle?"
+        ],
+        "ans": "How much is the pearl milk tea?"
+      },
+      {
+        "q": "你想吃炸雞嗎？",
+        "opts": [
+          "Would you like fried chicken?",
+          "How much fried chicken?",
+          "Would you like egg pancake?",
+          "How much egg pancake?"
+        ],
+        "ans": "Would you like fried chicken?"
+      },
+      {
+        "q": "這碗牛肉麵多少錢？",
+        "opts": [
+          "How much is the beef noodle?",
+          "Would you like the beef noodle?",
+          "How much is the tofu pudding?",
+          "Would you like the tofu pudding?"
+        ],
+        "ans": "How much is the beef noodle?"
+      },
+      {
+        "q": "Would you like ______?",
         "opts": [
           "soy milk",
           "stinky tofu",
@@ -268,84 +298,54 @@
         "ans": "stinky tofu"
       },
       {
-        "q": "meatball 的英文是？",
+        "q": "How much is a ______?",
         "opts": [
-          "meatball",
-          "egg pancake",
-          "fried chicken",
-          "pearl milk tea"
-        ],
-        "ans": "meatball"
-      },
-      {
-        "q": "fried chicken 的中文是？",
-        "opts": [
-          "fried chicken",
-          "pearl milk tea",
-          "beef noodle(s)",
-          "tofu pudding"
-        ],
-        "ans": "fried chicken"
-      },
-      {
-        "q": "請選擇適當的詞彙完成句子：Would you like ______？",
-        "opts": [
-          "soy milk",
-          "stinky tofu",
-          "meatball",
-          "egg pancake"
-        ],
-        "ans": "stinky tofu"
-      },
-      {
-        "q": "請選擇適當的詞彙完成句子：How much is the ______？",
-        "opts": [
-          "pearl milk tea",
-          "beef noodle",
-          "tofu pudding",
-          "congee"
-        ],
-        "ans": "pearl milk tea"
-      },
-      {
-        "q": "請選擇適當的詞彙完成句子：How much is a ______？",
-        "opts": [
-          "fried bread stick",
-          "handmade noodle",
-          "squid soup",
-          "pickle"
-        ],
-        "ans": "fried bread stick"
-      },
-      {
-        "q": "Which of the following is a beverage?",
-        "opts": [
-          "soy milk",
-          "stinky tofu",
-          "meatball",
-          "fried chicken"
-        ],
-        "ans": "soy milk"
-      },
-      {
-        "q": "Which of the following is a soup?",
-        "opts": [
-          "squid soup",
           "peanut",
           "brown sugar cake",
-          "garbage"
-        ],
-        "ans": "squid soup"
-      },
-      {
-        "q": "Which of the following is a dessert?",
-        "opts": [
-          "brown sugar cake",
-          "peanut",
-          "fried bread stick(s)",
-          "handmade noodle(s)"
+          "oyster noodle(s)",
+          "squid soup"
         ],
         "ans": "brown sugar cake"
+      },
+      {
+        "q": "How much are the ______?",
+        "opts": [
+          "fried bread stick(s)",
+          "handmade noodle(s)",
+          "squid",
+          "oyster"
+        ],
+        "ans": "handmade noodle(s)"
+      },
+      {
+        "q": "Would you like a cup of soy milk?",
+        "opts": [
+          "a cup of soy milk",
+          "a bowl of stinky tofu",
+          "a plate of meatball",
+          "a glass of pearl milk tea"
+        ],
+        "ans": "a cup of soy milk"
+      },
+      {
+        "q": "How much is this piece of fried chicken?",
+        "opts": [
+          "this piece of fried chicken",
+          "this bowl of oyster noodles",
+          "this bag of peanut",
+          "this slice of brown sugar cake"
+        ],
+        "ans": "this piece of fried chicken"
+      },
+      {
+        "q": "Would you like some tofu pudding?",
+        "opts": [
+          "some tofu pudding",
+          "some squid soup",
+          "some pickle",
+          "some fried bread stick(s)"
+        ],
+        "ans": "some tofu pudding"
       }
     ],
     "fill": [

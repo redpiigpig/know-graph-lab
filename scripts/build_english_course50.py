@@ -182,6 +182,9 @@ def prompt_mcq(lesson: dict, body: dict, n: int, style: str, avoid: list[str]) -
     return _ex_head(lesson, body) + f"""
 請出 **剛好 {n} 題**選擇題，每題 4 個選項，{style}。
 ans 必須**逐字**等於 opts 其中一個，四個選項不可重複。
+🚨 **不可以整批題目共用同一組選項、只換主詞**（例如連續五題都是
+I/She/They ___ 而選項一律 am/is/are/have）——那對學生等於同一題寫五次。
+每一題換不同的考點、不同的句子結構，四個選項也要跟著換。
 
 JSON 格式：
 {{"mcq": [{{"q": "題目", "opts": ["A", "B", "C", "D"], "ans": "正確選項原文"}}]}}{dodge}"""
@@ -572,6 +575,8 @@ def main():
     ap.add_argument("--range", help="課次範圍，例如 20-29；多開幾條工人分攤時用")
     ap.add_argument("--redo", action="store_true", help="連已完成的也重做")
     ap.add_argument("--check", action="store_true", help="只驗現有產出")
+    ap.add_argument("--requiz", action="store_true",
+                    help="只重出選擇題（配 --only 用），課文文法不動")
     ap.add_argument("--fix", action="store_true",
                     help="修既有檔：重建重組題題幹、去除重複選擇題並補題")
     ap.add_argument("-v", "--verbose", action="store_true", help="印出每次呼叫的耗時與引擎")
@@ -599,6 +604,36 @@ def main():
             else:
                 print(f"L{lesson['no']:02d} ✓ 單字覆蓋 {coverage(data):.0%}　{data.get('title_zh')}")
         print(f"\n{done}/50 課已產出，{bad} 課有問題")
+        return
+
+    if args.requiz:
+        for lesson in lessons:
+            if args.only and lesson["no"] not in args.only:
+                continue
+            path = OUT_DIR / f"L{lesson['no']:02d}.json"
+            if not path.exists():
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            fresh, failed = [], False
+            for batch, style in enumerate(MCQ_STYLES):
+                want = N_MCQ // len(MCQ_STYLES) + (1 if batch < N_MCQ % len(MCQ_STYLES) else 0)
+                part, errs = ask(
+                    prompt_mcq(lesson, data, want, style, [q["q"] for q in fresh]),
+                    lambda d, n=want: validate_exercises(d, {"mcq": n}),
+                    stage=f"選擇題{batch + 1}")
+                if part is None:
+                    print(f"L{lesson['no']:02d} ✗ {'；'.join(errs)}", flush=True)
+                    failed = True
+                    break
+                fresh.extend(part["mcq"])
+            if failed:
+                continue
+            data["exercises"]["mcq"] = fresh
+            dedupe_mcq(data["exercises"])
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                            encoding="utf-8")
+            print(f"L{lesson['no']:02d} ✓ 選擇題重出 {len(data['exercises']['mcq'])} 題",
+                  flush=True)
         return
 
     if args.fix:

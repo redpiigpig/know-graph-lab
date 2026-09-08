@@ -24,6 +24,7 @@ import re
 import shutil
 import subprocess
 import sys
+from collections import Counter
 from pathlib import Path
 
 from docx import Document
@@ -461,17 +462,46 @@ def add_lesson(doc, lesson, first, images, stats):
 
 # ---------------------------------------------------------------- 主流程
 
+SAME_OPTIONS_CAP = 2
+
+
 def pick_mcq(items: list[dict], want: int) -> list[dict]:
     """從整批選擇題裡挑出要印的幾題。
 
-    題目是分三批出的（單字義／文法選填／句意理解），照順序取前 N 題會全部落在
-    第一批，整份考卷只剩背單字。這裡橫跨三批等距取樣，維持題型比例。
+    兩件事要同時顧：
+
+    1. 題目是分三批出的（單字義／文法選填／句意理解），照順序取前 N 題會全部落在
+       第一批，整份考卷只剩背單字。所以橫跨三批等距取樣。
+    2. 光是等距還不夠。第二批內部很容易十題有五題長一樣——L01 曾經一頁上有五題
+       選項都是 am/is/are/have，只換主詞。所以同一組選項最多收兩題，超過的先跳過，
+       真的湊不滿再回頭補。
+
     資料檔仍保留全部 30 題，改印幾題不必重跑生成。
     """
     if want >= len(items):
         return items
     step = len(items) / want
-    return [items[min(int(i * step), len(items) - 1)] for i in range(want)]
+    # 等距取樣的順序當作優先序，不夠再依序往後找替補
+    preferred = [min(int(i * step), len(items) - 1) for i in range(want)]
+    order = preferred + [i for i in range(len(items)) if i not in set(preferred)]
+
+    def signature(item):
+        return tuple(sorted(o.strip().lower() for o in item["opts"]))
+
+    picked, used, seen = [], set(), Counter()
+    for cap in (SAME_OPTIONS_CAP, want):   # 第二輪放寬，確保一定湊得滿
+        for i in order:
+            if len(picked) == want:
+                break
+            if i in used:
+                continue
+            if seen[signature(items[i])] >= cap:
+                continue
+            picked.append((i, items[i]))
+            used.add(i)
+            seen[signature(items[i])] += 1
+    picked.sort(key=lambda pair: pair[0])   # 印出來仍照原本的題序
+    return [item for _, item in picked]
 
 
 def load_course(spec: str | None) -> list[dict]:

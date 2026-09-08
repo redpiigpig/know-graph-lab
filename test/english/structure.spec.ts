@@ -24,9 +24,25 @@ describe("Happy English 教學網站結構完整性", () => {
     const score = readFileSync(resolve(root, "server/api/english/score.post.ts"), "utf8");
     expect(score).toMatch(/review_\(all/); // isReviewType regex
     const home = readFileSync(resolve(root, "pages/english/index.vue"), "utf8");
-    for (const t of ["review_1_5", "review_6_10", "review_11_15", "review_16_20", "review_all"]) {
-      expect(home.includes(t), `home review ${t}`).toBe(true);
-    }
+    // 段考清單改成依 LESSON_COUNT 每 5 課生一組（原本是寫死的五個字面字串），
+    // 課數再變也不用改這裡；總複習仍是固定的 review_all。
+    expect(home).toContain("const LESSON_COUNT = 50");
+    expect(home).toContain("review_${from}_${to}");
+    expect(home).toContain("review_all");
+  });
+
+  it("段考分組覆蓋全部 50 課且不重疊", () => {
+    const total = 50;
+    const groups = Array.from({ length: Math.ceil(total / 5) }, (_, i) => {
+      const from = i * 5 + 1;
+      return [from, Math.min(from + 4, total)];
+    });
+    expect(groups.length).toBe(10);
+    expect(groups[0]).toEqual([1, 5]);
+    expect(groups.at(-1)).toEqual([46, 50]);
+    expect(groups.flatMap(([a, b]) =>
+      Array.from({ length: b - a + 1 }, (_, k) => a + k),
+    )).toEqual(Array.from({ length: total }, (_, i) => i + 1));
   });
 
   it("單元頁顯示學習計時（⏱）", () => {
@@ -53,15 +69,38 @@ describe("Happy English 教學網站結構完整性", () => {
     expect(has("scripts/apply-english-schema.mjs")).toBe(true);
   });
 
-  it("課程資料 JSON 為 20 課、每課 50 字", () => {
+  // 2026-09-08 起網站跟課本、單字卡一致，都是 50 課 × 20 字（原本 20 課 × 50 字）
+  it("課程資料 JSON 為 50 課、每課 20 字", () => {
     const p = resolve(root, "public/content/english/lessons.json");
     expect(existsSync(p), "public/content/english/lessons.json").toBe(true);
     const data = JSON.parse(readFileSync(p, "utf8"));
-    expect(data.length).toBe(20);
+    expect(data.length).toBe(50);
+    expect(data.map((l: any) => l.no)).toEqual(
+      Array.from({ length: 50 }, (_, i) => i + 1),
+    );
     for (const l of data) {
-      expect(l.words.length, `Lesson ${l.no} words`).toBe(50);
+      expect(l.words.length, `Lesson ${l.no} words`).toBe(20);
       expect(Array.isArray(l.sentences)).toBe(true);
       expect(l.reading, `Lesson ${l.no} reading`).toBeTruthy();
+    }
+  });
+
+  it("測驗題庫要抽得到題：每課都有選擇題與造句題", () => {
+    const p = resolve(root, "public/content/english/lessons.json");
+    const data = JSON.parse(readFileSync(p, "utf8"));
+    for (const l of data) {
+      const types = new Set(l.exercises.map((e: any) => e.type));
+      // utils/englishQuiz.ts 的 grammarMCQ 吃 choice、sentenceItems 吃這三種
+      for (const t of ["choice", "fill", "unscramble", "translate"]) {
+        expect(types.has(t), `Lesson ${l.no} 缺 ${t}`).toBe(true);
+      }
+      for (const ex of l.exercises) {
+        if (ex.type !== "choice") continue;
+        for (const it of ex.items) {
+          expect(it.opts, `Lesson ${l.no} 選項`).toHaveLength(4);
+          expect(it.opts, `Lesson ${l.no} 答案不在選項內`).toContain(it.ans);
+        }
+      }
     }
   });
 

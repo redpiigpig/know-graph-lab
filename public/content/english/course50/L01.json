@@ -274,47 +274,7 @@
   "exercises": {
     "mcq": [
       {
-        "q": "你好",
-        "opts": [
-          "hello",
-          "hi",
-          "goodbye",
-          "please"
-        ],
-        "ans": "hello"
-      },
-      {
-        "q": "謝謝",
-        "opts": [
-          "thank",
-          "welcome",
-          "sorry",
-          "fine"
-        ],
-        "ans": "thank"
-      },
-      {
-        "q": "沒關係",
-        "opts": [
-          "OK",
-          "no",
-          "yes",
-          "sure"
-        ],
-        "ans": "OK"
-      },
-      {
-        "q": "我很好",
-        "opts": [
-          "fine",
-          "have",
-          "he",
-          "she"
-        ],
-        "ans": "fine"
-      },
-      {
-        "q": "I ___ fine.",
+        "q": "請選擇正確的英文動詞來完成句子：我 ___ 學生。",
         "opts": [
           "am",
           "is",
@@ -324,17 +284,67 @@
         "ans": "am"
       },
       {
-        "q": "Are you fine? ___.",
+        "q": "請選擇正確的英文代名詞來完成句子：___ 你們是朋友。",
         "opts": [
-          "yes",
-          "yeah",
-          "no",
+          "I",
+          "you",
+          "we",
+          "they"
+        ],
+        "ans": "we"
+      },
+      {
+        "q": "有人說 'Hello'，你應該回答：",
+        "opts": [
+          "hi",
+          "goodbye",
+          "please",
           "sorry"
         ],
-        "ans": "yeah"
+        "ans": "hi"
       },
       {
-        "q": "She ___ OK.",
+        "q": "當有人幫助你時，你說：",
+        "opts": [
+          "thank",
+          "welcome",
+          "fine",
+          "sure"
+        ],
+        "ans": "thank"
+      },
+      {
+        "q": "請選擇正確的英文代名詞來完成句子：___ am fine.",
+        "opts": [
+          "I",
+          "You",
+          "He",
+          "She"
+        ],
+        "ans": "I"
+      },
+      {
+        "q": "請選擇正確的英文動詞來完成句子：We ___ sure.",
+        "opts": [
+          "am",
+          "is",
+          "are",
+          "have"
+        ],
+        "ans": "are"
+      },
+      {
+        "q": "當有人說 'Thank you'，你應該回答：",
+        "opts": [
+          "welcome",
+          "sorry",
+          "please",
+          "fine"
+        ],
+        "ans": "welcome"
+      },
+      {
+        "q": "請選擇正確的英文動詞來完成句子：She ___ OK.",
         "opts": [
           "am",
           "is",
@@ -344,34 +354,24 @@
         "ans": "is"
       },
       {
-        "q": "You ___ OK.",
+        "q": "請選擇正確的英文代名詞來完成句子：___ are OK.",
         "opts": [
-          "am",
-          "is",
-          "are",
-          "have"
+          "I",
+          "you",
+          "we",
+          "they"
         ],
-        "ans": "are"
+        "ans": "we"
       },
       {
-        "q": "She ___ sure.",
+        "q": "當有人說 'Sorry'，你應該回答：",
         "opts": [
-          "am",
-          "is",
-          "are",
-          "have"
+          "It is OK.",
+          "You are welcome.",
+          "I am fine.",
+          "We are sure."
         ],
-        "ans": "is"
-      },
-      {
-        "q": "We ___ sorry.",
-        "opts": [
-          "am",
-          "is",
-          "are",
-          "have"
-        ],
-        "ans": "are"
+        "ans": "It is OK."
       }
     ],
     "fill": [

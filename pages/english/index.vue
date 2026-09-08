@@ -9,7 +9,7 @@
           <div class="text-5xl">🌈</div>
           <div class="flex-1 min-w-[200px]">
             <h1 class="text-2xl font-extrabold text-gray-800">Happy English 快樂學英語</h1>
-            <p class="text-gray-500 text-sm mt-0.5">國小英語 1000 字 ‧ 20 個主題單元 ‧ 一起來闖關！</p>
+            <p class="text-gray-500 text-sm mt-0.5">國小英語 1000 字 ‧ 50 個單元 ‧ 一起來闖關！</p>
           </div>
           <div class="flex gap-3">
             <div class="text-center px-4 py-2 rounded-2xl bg-emerald-50">
@@ -48,7 +48,7 @@
       </section>
 
       <!-- 課程格 -->
-      <h2 class="text-sm font-bold text-gray-500 mb-2 px-1">📚 20 個單元</h2>
+      <h2 class="text-sm font-bold text-gray-500 mb-2 px-1">📚 {{ lessons.length }} 個單元</h2>
       <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <NuxtLink
           v-for="(l, i) in lessons"
@@ -103,11 +103,14 @@ const { data: lessons } = await useFetch<Lesson[]>("/content/english/lessons.jso
 const progress = ref({ today_minutes: 0, total_minutes: 0, streak_days: 0 });
 const best = ref<Record<string, number>>({});
 
+// 每 5 課一次段考，最後加總複習。課數改了這裡自己跟著長，不要再寫死。
+const LESSON_COUNT = 50;
 const reviews = [
-  { range: "1-5", label: "第 1–5 課", type: "review_1_5" },
-  { range: "6-10", label: "第 6–10 課", type: "review_6_10" },
-  { range: "11-15", label: "第 11–15 課", type: "review_11_15" },
-  { range: "16-20", label: "第 16–20 課", type: "review_16_20" },
+  ...Array.from({ length: Math.ceil(LESSON_COUNT / 5) }, (_, i) => {
+    const from = i * 5 + 1;
+    const to = Math.min(from + 4, LESSON_COUNT);
+    return { range: `${from}-${to}`, label: `第 ${from}–${to} 課`, type: `review_${from}_${to}` };
+  }),
   { range: "all", label: "總複習", type: "review_all" },
 ];
 
