@@ -123,6 +123,8 @@ IMG_SP = {0: 13, 1: 9, 2: 6, 3: 14}
 # 高度從 13.1 降到 12.7：框底原本只離頁尾 0.35 cm，fit() 一低估就疊上去
 # （2026-09-09 稽核在三份壓縮過的簡報上抓到 16 處壓字）。
 BOX_W, BOX_H = 30.9, 12.7
+# fit() 的估算偏樂觀，實測會讓最後一兩個字掉到頁尾線下，所以再留一成餘裕。
+FIT_MARGIN = 0.90
 IMG_BOX_W = 17.0
 
 
@@ -299,7 +301,7 @@ def s_bullets(prs, title, bullets, sub=None):
     w, h = BOX_W, BOX_H
     tf = textbox(s, Cm(1.5), Cm(4.45), Cm(w), Cm(h))
     base, sp = BULLET_SZ, BULLET_SP
-    k = fit(bullets, w, h * 0.96, base, sp)
+    k = fit(bullets, w, h * FIT_MARGIN, base, sp)
     # 內容明顯偏少（六成高度就裝得下）就垂直置中，不要下半頁整片空白
     if k >= 1.0 and fit(bullets, w, h * 0.80, base, sp) >= 1.0:
         tf.vertical_anchor = MSO_ANCHOR.MIDDLE
@@ -447,7 +449,7 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     h = BOX_H
     tf = textbox(s, Cm(1.5), Cm(4.45), textw, Cm(h))
     base, sp = IMG_SZ, IMG_SP
-    k = fit(bullets, tw, h * 0.96, base, sp)
+    k = fit(bullets, tw, h * FIT_MARGIN, base, sp)
     firstdone = False
     for b in bullets:
         lvl, txt = (b if isinstance(b, tuple) else (0, b))
@@ -632,8 +634,8 @@ def split_long(slides):
 
     def need(kind, items):
         if kind == 'bullets':
-            return fit(items, BOX_W, BOX_H * 0.96, base, sp, raw=True)
-        return fit(items, IMG_BOX_W, BOX_H * 0.96, ibase, isp, raw=True)
+            return fit(items, BOX_W, BOX_H * FIT_MARGIN, base, sp, raw=True)
+        return fit(items, IMG_BOX_W, BOX_H * FIT_MARGIN, ibase, isp, raw=True)
 
     out = []
     for it in slides:

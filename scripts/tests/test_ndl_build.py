@@ -661,3 +661,65 @@ class TestLayoutBreakOnPage:
     def test_too_few_lines_is_untouched(self):
         lines = [_col(0, 3000, 1900), _col(1, 1000, 500)]
         assert len(nb.body_lines_before_layout_break(lines)) == 2
+
+
+class TestTitleParaIndex:
+    """🚨 章名行被丟掉之後，strip_before_heading 在正文裡就找不到章名了，
+    於是整頁原樣保留 —— **前一章的結尾被算進新章**，新章從句子中間開始。
+    （實例：初代の人々 sec1 開頭「こと-この獻身をなして…」、sec3「て、虐げの手と…」）
+
+    改用版面位置切：章名把該頁的段落分成前後兩半，前半屬前章、後半屬新章。
+    """
+
+    def test_reports_where_the_title_split_the_page(self):
+        lines = [_line(0, 504, s="前章の終り"),
+                 _line(1, 505, s="第二　起源", t="タイトル本文"),
+                 _line(2, 506, s="新章の始め")]
+        paras, titles = nb.lines_to_layout_paras(lines, mark_titles=True)
+        assert paras == ["前章の終り", "新章の始め"]
+        assert titles == [1]          # 第 1 段（0-based）起是新章
+
+    def test_no_title_means_no_split(self):
+        lines = [_line(0, 504, s="ふつうの本文"), _line(1, 505, s="つづき")]
+        paras, titles = nb.lines_to_layout_paras(lines, mark_titles=True)
+        assert titles == []
+
+    def test_title_at_page_top_splits_at_zero(self):
+        lines = [_line(0, 504, s="第三　現狀", t="タイトル本文"),
+                 _line(1, 505, s="本文はここから")]
+        _, titles = nb.lines_to_layout_paras(lines, mark_titles=True)
+        assert titles == [0]
+
+    def test_backwards_compatible_without_the_flag(self):
+        lines = [_line(0, 504, s="本文")]
+        assert nb.lines_to_layout_paras(lines) == ["本文"]
+
+
+class TestSectionStartsAtTitle:
+    """章的第一張影像上，章名之前的段落屬於**前一章**，要切掉。"""
+
+    def test_previous_chapter_tail_is_dropped(self):
+        pages = {5: "前章の結び。\n\n新章の第一段。\n\n新章の第二段。"}
+        sec = {"title": "第二　起源", "start": 5, "end": 6}
+        out = nb.section_payload(sec, pages, title_at={5: [1]})
+        assert out["src"] == ["新章の第一段。", "新章の第二段。"]
+
+    def test_title_at_top_keeps_everything(self):
+        pages = {5: "新章の第一段。\n\n第二段。"}
+        sec = {"title": "第一", "start": 5, "end": 6}
+        out = nb.section_payload(sec, pages, title_at={5: [0]})
+        assert len(out["src"]) == 2
+
+    def test_no_title_info_falls_back_to_heading_search(self):
+        """沒有版面資訊時退回舊的字串比對，不要整段掉光。"""
+        pages = {5: "第一　教派ではない近頃「無敎會主義」といふことが"}
+        sec = {"title": "第一　教派ではない", "start": 5, "end": 6}
+        out = nb.section_payload(sec, pages, title_at={})
+        assert out["src"] == ["近頃「無敎會主義」といふことが"]
+
+    def test_only_the_first_image_is_cut(self):
+        """後續影像整頁都是本章的，不可以再切。"""
+        pages = {5: "前章の結び。\n\n新章。", 6: "つづき。"}
+        sec = {"title": "第二", "start": 5, "end": 7}
+        out = nb.section_payload(sec, pages, title_at={5: [1], 6: [0]})
+        assert "つづき。" in "".join(out["src"])

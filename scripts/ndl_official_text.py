@@ -55,7 +55,7 @@ def fetch_layout_zip(pid: str, cache_dir: Path) -> Path:
 
 def pages_from_zip(zip_path: Path) -> dict:
     """ZIP → {影像號: [段落]}。"""
-    out = {}
+    out, title_at = {}, {}
     with zipfile.ZipFile(zip_path) as z:
         for name in sorted(z.namelist()):
             if not name.endswith(".xml"):
@@ -70,9 +70,10 @@ def pages_from_zip(zip_path: Path) -> dict:
             kept = {id(l) for l in keep}
             lines = [l for l in lines
                      if l.get("type") not in nb.BODY_LINE_TYPES or id(l) in kept]
-            paras = nb.lines_to_layout_paras(lines)
+            paras, titles = nb.lines_to_layout_paras(lines, mark_titles=True)
+            title_at[img] = titles
             out[img] = [nb.restore_old_forms(p) for p in paras]
-    return out
+    return out, title_at
 
 
 def main() -> int:
@@ -84,7 +85,7 @@ def main() -> int:
 
     cache = nb.CACHE_DIR
     zp = fetch_layout_zip(args.pid, cache)
-    pages = pages_from_zip(zp)
+    pages, title_at = pages_from_zip(zp)
     print("NDL 官方 OCR：%d 頁" % len(pages))
 
     out_dir = cache / args.pid / "ocr-ndl"
@@ -110,6 +111,10 @@ def main() -> int:
                 for i in pages)
     print("〓 %d → %d（補回 %d；其中規則推論 %d 處）"
           % (before, after, before - after, len(inferred)))
+    import json as _json
+    (out_dir / "_titles.json").write_text(
+        _json.dumps({str(k): v for k, v in title_at.items()}, ensure_ascii=False),
+        encoding="utf-8")
     print("共 %d 字 → %s" % (chars, out_dir))
     if after:
         print("🚨 仍有 %d 處 〓 要看圖裁定：" % after)

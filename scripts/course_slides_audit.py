@@ -23,23 +23,37 @@ DEFAULT_DIRS = [FINAL / '115-1 世界宗教文化導論' / '簡報',
 
 
 def lines(page):
+    """回傳 (方框, 文字, 字級, 所屬文字框序號)。
+
+    🚨 同一個文字框裡上下相鄰的兩行，光是行高互相探進去就會被判成壓字
+    （字級不同時特別明顯）。真正的壓字是**兩個文字框**疊在一起，
+    所以帶著 block 序號，只比對不同框。
+    """
     out = []
-    for blk in page.get_text('dict')['blocks']:
+    for bi, blk in enumerate(page.get_text('dict')['blocks']):
         for ln in blk.get('lines', []):
             txt = ''.join(sp['text'] for sp in ln['spans']).strip()
             if not txt:
                 continue
             size = max(sp['size'] for sp in ln['spans'])
-            out.append((fitz.Rect(ln['bbox']), txt, size))
+            out.append((fitz.Rect(ln['bbox']), txt, size, bi))
     return out
 
 
 def overlap(a, b):
+    """兩行是不是真的疊在一起。
+
+    🚨 只看「交疊面積佔較小者幾成」會大量誤判：短行（像「▍ 神聖」）跟上下
+    相鄰的大字行，光是行高互相探進去就足以超過三成。2026-09-09 就是這樣
+    報了 16 處壓字，實測內文底部其實都還在框內兩公分以上。
+    所以**面積與垂直方向都要疊到**才算。
+    """
     r = a & b
     if r.is_empty:
         return 0.0
     small = min(a.get_area(), b.get_area()) or 1
-    return r.get_area() / small
+    vh = min(a.height, b.height) or 1
+    return min(r.get_area() / small, r.height / vh)
 
 
 def images(page):
@@ -61,17 +75,21 @@ def audit(pdf, min_size):
         for r in images(page):
             if r.y1 > h + 1 or r.x1 > w + 1 or r.x0 < -1 or r.y0 < -1:
                 bad.append((i + 1, '圖超出版面', f'{r.width:.0f}×{r.height:.0f}'))
-            for r2, t2, _ in ls:
+            for r2, t2, _s2, _b in ls:
                 # 只抓真的壓在圖上的字；圖說本來就會貼著圖，所以門檻抓高一點
                 if overlap(r2, r) > 0.5:
                     bad.append((i + 1, '圖壓字', t2[:26]))
-        for j, (r, t, s) in enumerate(ls):
+        # 頁尾那一行：小字、靠頁底。內文壓到它就是跑版。
+        foot = min((r.y0 for r, t, s, _b in ls if s < 15 and r.y0 > h * 0.87), default=h)
+        for j, (r, t, s, bi) in enumerate(ls):
             if s < min_size:
                 bad.append((i + 1, f'字太小 {s:.1f}pt', t[:34]))
             if r.y1 > h - 6 or r.x1 > w - 4 or r.x0 < 4:
                 bad.append((i + 1, '溢出版面', t[:34]))
-            for r2, t2, _ in ls[j + 1:]:
-                if overlap(r, r2) > 0.3:
+            elif s >= 15 and r.y1 > foot + 2:
+                bad.append((i + 1, '壓到頁尾', t[:34]))
+            for r2, t2, _s2, bj in ls[j + 1:]:
+                if bj != bi and overlap(r, r2) > 0.3:
                     bad.append((i + 1, '壓字', f'{t[:20]} ／ {t2[:20]}'))
     doc.close()
     return bad

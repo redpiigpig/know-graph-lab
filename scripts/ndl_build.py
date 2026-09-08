@@ -119,21 +119,32 @@ def paragraphs_from_pages(pages: list[str]) -> list[str]:
     return paras
 
 
-def section_payload(section: dict, pages: dict) -> dict:
+def section_payload(section: dict, pages: dict, title_at: dict = None) -> dict:
     """一節＋該書的 {影像號: OCR 文字} → 與 uchimura／howes 同形的 section dict。
 
     形狀（heading／title_zh／src／zh）必須與其他作者一致，才接得上 uchimura_auto
     的 checkpoint／翻譯／上架。`zh` 一開始是空的，翻譯那一步才填。
     `title_zh` 先擺日文原題而不留空——留空的話 reader 目錄會出現空白項。
     """
+    title_at = title_at or {}
     texts = []
+    first = True
     for i in range(section["start"], section["end"]):
         t = pages.get(i)
         if not t or not t.strip():
             continue
-        if not texts:            # 該節第一張影像：切掉章名之前的目次／書名頁
-            t = strip_before_heading(t, section["title"])
+        if first:
+            # 該節第一張影像：章名之前的段落屬於前一章，切掉。
+            # 🚨 章名行本身已經被丟出正文了，所以不能再靠字串比對找章名 ——
+            #    找不到就會整頁保留，新章從前章的句子中間開始。
+            marks = title_at.get(i) or title_at.get(str(i))
+            if marks:
+                blocks = [b for b in re.split(r"\n\s*\n", t.strip()) if b.strip()]
+                t = (chr(10) * 2).join(blocks[marks[0]:])
+            else:
+                t = strip_before_heading(t, section["title"])
         texts.append(t)
+        first = False
     return {
         "heading": section["title"],
         "title_zh": section["title"],
@@ -363,7 +374,7 @@ def parse_layout_xml(data: bytes) -> list:
     return out
 
 
-def lines_to_layout_paras(lines: list) -> list:
+def lines_to_layout_paras(lines: list, mark_titles: bool = False):
     """NDL layouttext 的 LINE 們 → 段落。
 
     直排書的段落線索是**首行縮排**：同一段裡各行的 Y（欄頂）幾乎齊平，
@@ -380,21 +391,29 @@ def lines_to_layout_paras(lines: list) -> list:
     base = min(body_y)
     paras: list[list[str]] = []
     force_break = True
+    saw_title = False
+    title_at: list[int] = []
     for l in ordered:
         if l.get("type") not in BODY_LINE_TYPES:
             # 章名切開正文；頁碼／柱只是版面裝飾，跳過但不斷段
             if l.get("type") in TITLE_LINE_TYPES:
                 force_break = True
+                saw_title = True
             continue
         s = re.sub(r"[ 　]+", "", l.get("string") or "")
         if not s:
             continue
         if force_break or int(l["y"]) > base + _INDENT_PX:
+            if saw_title:
+                # 這一段是章名之後的第一段＝新章的起點
+                title_at.append(len(paras))
             paras.append([s])
         else:
             paras[-1].append(s)
         force_break = False
-    return ["".join(p) for p in paras]
+        saw_title = False
+    out = ["".join(p) for p in paras]
+    return (out, title_at) if mark_titles else out
 
 
 PLACEHOLDER = "〓"
