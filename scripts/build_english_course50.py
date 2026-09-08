@@ -103,8 +103,9 @@ def _body_head(lesson: dict) -> str:
 
 def prompt_intro(lesson: dict) -> str:
     return _body_head(lesson) + """
-請寫課名、導言與課文。課文 reading 要 8～10 句，是一個有頭有尾的小故事或情境，
-**必須自然用到本課多數單字**。
+請寫課名、導言與課文。課文 reading 要 8～10 句，是一個有頭有尾的小故事或情境。
+**上面列的 20 個單字，至少要用掉 16 個在課文裡**——這是本課唯一一篇課文，
+沒被用到的字學生整課都不會再遇到。寧可句子多一點，也不要漏字。
 
 JSON 格式：
 {
@@ -425,7 +426,31 @@ def ask(prompt: str, validate, attempts: int = 4, stage: str = ""):
     return None, last
 
 
-def build_lesson(lesson: dict) -> tuple[dict | None, list[str]]:
+MIN_COVERAGE = 0.8
+
+
+def build_lesson(lesson: dict, rounds: int = 2) -> tuple[dict | None, list[str]]:
+    """整課生成，並用單字覆蓋率把關。
+
+    覆蓋率原本只印出來看，不擋。L19 就這樣過關了——20 個字裡只有 7 個真的出現在
+    課文與題目裡，其餘 13 個學生整課都不會遇到第二次，但每一項結構檢查都是綠的。
+    這是典型的「看起來成功的失敗」，所以低於門檻要重做整課。
+    """
+    worst = None
+    for attempt in range(1, rounds + 1):
+        data, errs = _build_once(lesson)
+        if data is None:
+            return None, errs
+        got = coverage(data)
+        if got >= MIN_COVERAGE:
+            return data, []
+        worst = data
+        if VERBOSE:
+            print(f"    單字覆蓋只有 {got:.0%}，第 {attempt} 次重做整課", flush=True)
+    return worst, [f"單字覆蓋僅 {coverage(worst):.0%}，已重做仍未達 {MIN_COVERAGE:.0%}"]
+
+
+def _build_once(lesson: dict) -> tuple[dict | None, list[str]]:
     intro, errs = ask(prompt_intro(lesson), validate_intro, stage="課文")
     if intro is None:
         return None, ["課名與課文：" + "；".join(errs)]

@@ -32,6 +32,11 @@ CAP = {'wr-day': 30, 'christianity': 30, 'chinese': 50, 'wr-weekend': 50}
 LADDER = [(0.78, 0.72), (0.74, 0.68), (0.70, 0.64),
           (0.66, 0.60), (0.62, 0.56), (0.58, 0.52)]
 
+# 四門課各一套配色（見 course_slides_pptx.PALETTES）——同一個版型、不同色系，
+# 抽錯簡報一眼看得出來。使用者 2026-09-08：「不用每堂課都一樣」。
+PALETTE = {'wr-day': 'blue', 'christianity': 'green',
+           'chinese': 'rust', 'wr-weekend': 'indigo'}
+
 # course_schedule 的鍵 →（簡報內容來源代號, Drive 資料夾）
 SOURCE = {
     'wr-day': ('wr', '115-1_世界宗教文化導論'),
@@ -229,6 +234,7 @@ def build_course(key, only=None):
     R.IMGDIR = R.DRIVE / folder / '簡報' / '圖片'
     R.MANIFEST = R.load_manifest()
     R.CHAPTERS = R.CHAPTER_DIRS[src]
+    R.use_palette(PALETTE[key])
     pool = chapter_slides(src)
 
     made = []

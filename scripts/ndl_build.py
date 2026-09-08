@@ -196,6 +196,110 @@ def restore_old_forms(text: str) -> str:
     return (text or "").translate(_OLD_FORM_TABLE)
 
 
+# NDL layouttext 的 LINE TYPE。只有這些算正文；柱（書名章名的重複）、
+# ノンブル（頁碼）、タイトル本文（章名，另有 NDL 目次 API 這個更可靠的來源，
+# 且版面上常是亂序的——實例：「第二　起源」被讀成「第二 源 起」）一律丟掉。
+BODY_LINE_TYPES = {"本文"}
+# 只有**章名**會把正文切開（前一章結尾不可以和新章開頭黏成一段）。
+# 頁碼與柱只是版面裝飾，夾在行序中間不該斷段 —— 斷了會把一段切成兩半。
+TITLE_LINE_TYPES = {"タイトル本文", "タイトル"}
+
+# 首行縮排的判準：Y 比同段基準大這麼多就是新段落起頭。
+# 直排一個字約 70px（本書 LINE WIDTH≈76），取一半當門檻。
+_INDENT_PX = 35
+
+
+def parse_layout_xml(data: bytes) -> list:
+    """NDL layouttext 的一頁 XML → LINE dicts（order／x／y／height／type／string）。
+
+    缺 ORDER 或座標的行直接丟掉：沒有這些就排不出閱讀順序，硬收只會亂序。
+    """
+    import xml.etree.ElementTree as ET
+
+    root = ET.fromstring(data)
+    out = []
+    for line in root.iter("LINE"):
+        try:
+            out.append({
+                "order": int(line.get("ORDER")),
+                "x": int(line.get("X")),
+                "y": int(line.get("Y")),
+                "height": int(line.get("HEIGHT") or 0),
+                "type": line.get("TYPE") or "",
+                "string": line.get("STRING") or "",
+            })
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def lines_to_layout_paras(lines: list) -> list:
+    """NDL layouttext 的 LINE 們 → 段落。
+
+    直排書的段落線索是**首行縮排**：同一段裡各行的 Y（欄頂）幾乎齊平，
+    新段落的第一行會低一個字。NDL 給的是行不是段，不還原的話整頁會變成
+    一大段，reader 讀起來是一堵牆。
+
+    🚨 一定要照 `ORDER` 排，不能照輸入順序 —— XML 裡的 TEXTBLOCK 是按版面
+    區塊分的，跨區塊時輸入順序與閱讀順序不一致。
+    """
+    ordered = sorted(lines, key=lambda l: int(l["order"]))
+    body_y = [int(l["y"]) for l in ordered if l.get("type") in BODY_LINE_TYPES]
+    if not body_y:
+        return []
+    base = min(body_y)
+    paras: list[list[str]] = []
+    force_break = True
+    for l in ordered:
+        if l.get("type") not in BODY_LINE_TYPES:
+            # 章名切開正文；頁碼／柱只是版面裝飾，跳過但不斷段
+            if l.get("type") in TITLE_LINE_TYPES:
+                force_break = True
+            continue
+        s = re.sub(r"[ 　]+", "", l.get("string") or "")
+        if not s:
+            continue
+        if force_break or int(l["y"]) > base + _INDENT_PX:
+            paras.append([s])
+        else:
+            paras[-1].append(s)
+        force_break = False
+    return ["".join(p) for p in paras]
+
+
+PLACEHOLDER = "〓"
+
+
+def fill_placeholders(text: str, reference: str) -> str:
+    """NDL 官方 OCR 的「〓」用另一份 OCR 的對應字補回來。
+
+    NDL 的字句準確度遠高於視覺模型，但它把字集裡沒有的舊字體印成 `〓`
+    （本書 397 處：`無〓會`＝教、`聖書之〓究`＝研 —— **不是固定同一個字**）。
+    兩邊剛好互補：NDL 給正確的字句，視覺模型給它編不出的字形。
+
+    逐字對齊，只在對得齊的位置補；對不齊就留著 `〓`。
+    🚨 **寧可留記號也不要填錯字** —— 填錯的字混在正文裡看不出來，留著 `〓` 至少
+    後面的人知道那裡有問題。
+    """
+    from difflib import SequenceMatcher
+
+    if PLACEHOLDER not in (text or "") or not reference:
+        return text
+    chars = list(text)
+    sm = SequenceMatcher(a=text, b=reference, autojunk=False)
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        # 只認等長的替換：長度不同表示這一段本來就對不上，不要硬填
+        if tag != "replace" or (i2 - i1) != (j2 - j1):
+            continue
+        for k in range(i2 - i1):
+            if chars[i1 + k] != PLACEHOLDER:
+                continue
+            cand = reference[j1 + k]
+            if cand and cand != PLACEHOLDER and not cand.isspace():
+                chars[i1 + k] = cand
+    return "".join(chars)
+
+
 def is_quota_error(msg: str) -> bool:
     """這個錯誤是不是「額度用盡」（而非連線／授權問題）。"""
     m = (msg or "").lower()
@@ -577,8 +681,9 @@ def main():
     ap.add_argument("--force", action="store_true",
                     help="不沿用舊譯，整本重譯")
     ap.add_argument("--model", type=str, default="gemini-2.5-flash")
-    ap.add_argument("--backend", choices=["gemini", "haiku"], default="gemini",
-                    help="OCR 引擎。haiku 需使用者明確下令（feedback_ocr_strategy）")
+    ap.add_argument("--backend", choices=["ndl", "gemini", "haiku"], default="ndl",
+                    help="取源。ndl＝NDL 官方 OCR（首選）；gemini＝視覺模型；"
+                         "haiku 需使用者明確下令且會編造這批材料，別用")
     ap.add_argument("--width", type=int, default=0,
                     help="0＝全解析度。🚨 跨頁掃描降尺寸會讓 OCR 開始編造內容")
     args = ap.parse_args()

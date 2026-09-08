@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+"""NDL 官方 OCR（layouttext）→ ocr-ndl/ checkpoint。
+
+**這是本管線的首選取源，視覺模型 OCR 退為輔助。**
+
+2026-09-08 實測（畔上賢造《無教會主義》影像 4，拿原圖逐字對）：
+
+| 位置 | Gemini Vision | NDL 官方 |
+|---|---|---|
+| 教派**別**を無視 | 漏「別」 | ✅ |
+| 加**へ**て | 加えて | ✅ |
+| 無教**會的**精神 | 無教**的の**精神 | ✅ |
+| 保**續** | 保持 | ✅ |
+| 以上**に精神** | 以上は精 | ✅ |
+| 呼ば**ね**ばならぬ | 呼べばならぬ | ✅ |
+
+NDL 唯一的短處是字集裡沒有的舊字體會印成 `〓`（本書 397 處），
+而那正是視覺模型讀得出來的 —— 兩邊互補，用 `fill_placeholders()` 接起來。
+
+    python scripts/ndl_official_text.py 1099766 --refs gemini,gemini2
+
+見 .claude/skills/ebook-collected-works/ndl_open_scans.md。
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+import zipfile
+from io import BytesIO
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+
+import ndl_build as nb  # noqa: E402
+
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+
+LAYOUT_API = "https://lab.ndl.go.jp/dl/api/book/layouttext/{pid}"
+
+
+def fetch_layout_zip(pid: str, cache_dir: Path) -> Path:
+    """下載 layouttext ZIP（已存在就沿用，這是公共資源不要重抓）。"""
+    import requests
+    dst = cache_dir / pid / "layouttext.zip"
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    if not dst.exists():
+        r = requests.get(LAYOUT_API.format(pid=pid), timeout=120,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        dst.write_bytes(r.content)
+    return dst
+
+
+def pages_from_zip(zip_path: Path) -> dict:
+    """ZIP → {影像號: [段落]}。"""
+    out = {}
+    with zipfile.ZipFile(zip_path) as z:
+        for name in sorted(z.namelist()):
+            if not name.endswith(".xml"):
+                continue
+            try:
+                img = int(name.rsplit("_", 1)[1].split(".")[0])
+            except (IndexError, ValueError):
+                continue
+            paras = nb.lines_to_layout_paras(nb.parse_layout_xml(z.read(name)))
+            out[img] = [nb.restore_old_forms(p) for p in paras]
+    return out
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("pid")
+    ap.add_argument("--refs", default="gemini,gemini2",
+                    help="用來補 〓 的參照 OCR（逗號分隔，依序套用）")
+    args = ap.parse_args()
+
+    cache = nb.CACHE_DIR
+    zp = fetch_layout_zip(args.pid, cache)
+    pages = pages_from_zip(zp)
+    print("NDL 官方 OCR：%d 頁" % len(pages))
+
+    out_dir = cache / args.pid / "ocr-ndl"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    before = after = 0
+    for img, paras in sorted(pages.items()):
+        text = "\n\n".join(paras)
+        before += text.count(nb.PLACEHOLDER)
+        for ref in [r.strip() for r in args.refs.split(",") if r.strip()]:
+            f = cache / args.pid / ("ocr-" + ref) / ("%07d.txt" % img)
+            if f.exists():
+                text = nb.fill_placeholders(text, f.read_text(encoding="utf-8"))
+        after += text.count(nb.PLACEHOLDER)
+        (out_dir / ("%07d.txt" % img)).write_text(text, encoding="utf-8")
+
+    chars = sum(len((out_dir / ("%07d.txt" % i)).read_text(encoding="utf-8"))
+                for i in pages)
+    print("〓 %d → %d（補回 %d）" % (before, after, before - after))
+    print("共 %d 字 → %s" % (chars, out_dir))
+    if after:
+        print("🚨 仍有 %d 處 〓 要看圖裁定：" % after)
+        for img in sorted(pages):
+            t = (out_dir / ("%07d.txt" % img)).read_text(encoding="utf-8")
+            for k, ch in enumerate(t):
+                if ch == nb.PLACEHOLDER:
+                    print("   影像 %-3d %s" % (img, t[max(0, k - 12):k + 13].replace("\n", " ")))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

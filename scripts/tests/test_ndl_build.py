@@ -368,3 +368,112 @@ class TestOldFormRestore:
         vals = list(nb.OLD_FORM_FIXES.values())
         assert len(vals) == len(set(vals))
         assert all(len(k) == 1 and len(v) == 1 for k, v in nb.OLD_FORM_FIXES.items())
+
+
+class TestFillPlaceholders:
+    """NDL 官方 OCR 的字句遠比視覺模型準，但它把字集裡沒有的舊字體印成「〓」
+    （本書 397 處：無〓會＝教、聖書之〓究＝研）。兩邊剛好互補：
+    NDL 給正確的字句，Gemini 給它編不出的字形。逐字對齊後把 〓 填回去。
+    """
+
+    def test_fills_from_reference(self):
+        out = nb.fill_placeholders("無〓會主義", "無敎會主義")
+        assert out == "無敎會主義"
+
+    def test_fills_different_characters_by_position(self):
+        """〓 不是固定同一個字，要照位置各填各的。"""
+        out = nb.fill_placeholders("〓派と聖書之〓究", "敎派と聖書之硏究")
+        assert out == "敎派と聖書之硏究"
+
+    def test_leaves_placeholder_when_reference_disagrees_in_length(self):
+        """對不齊就留著 〓 —— 寧可留記號也不要填錯字。"""
+        out = nb.fill_placeholders("無〓會主義", "まつたく違ふ文章")
+        assert "〓" in out
+
+    def test_does_not_touch_other_text(self):
+        out = nb.fill_placeholders("これは正しい文である", "これは正しい文である")
+        assert out == "これは正しい文である"
+
+    def test_reference_missing_is_safe(self):
+        assert nb.fill_placeholders("無〓會主義", "") == "無〓會主義"
+
+    def test_never_fills_with_a_placeholder(self):
+        """參照本身也是 〓 的話不能填。"""
+        assert nb.fill_placeholders("無〓會", "無〓會") == "無〓會"
+
+
+def _line(order, y, h=1760, s="本文です", t="本文", x=2000):
+    return {"order": order, "x": x, "y": y, "height": h, "type": t, "string": s}
+
+
+class TestLayoutParagraphs:
+    """NDL layouttext XML → 段落。
+
+    直排書的段落線索有兩個：**首行縮排**（Y 比同段其他行大一個字）與
+    **段末行較短**（HEIGHT 明顯不足一欄）。NDL 給的是行不是段，
+    不還原段落的話整頁會變成一大段，reader 讀起來是一堵牆。
+    """
+
+    def test_indented_line_starts_a_new_paragraph(self):
+        # 🚨 只有段落**第一行**縮排，續行回到欄頂 —— 不是整段都低一格
+        lines = [_line(0, 504), _line(1, 506), _line(2, 505),
+                 _line(3, 549), _line(4, 505)]
+        out = nb.lines_to_layout_paras(lines)
+        assert len(out) == 2
+        assert out[0].count("本文です") == 3
+
+    def test_no_indent_stays_one_paragraph(self):
+        lines = [_line(0, 504), _line(1, 506), _line(2, 505)]
+        assert len(nb.lines_to_layout_paras(lines)) == 1
+
+    def test_lines_are_ordered_by_order_not_input_sequence(self):
+        lines = [_line(2, 505, s="丙"), _line(0, 504, s="甲"), _line(1, 506, s="乙")]
+        assert nb.lines_to_layout_paras(lines) == ["甲乙丙"]
+
+    def test_non_body_lines_are_dropped(self):
+        """柱（書名／章名的重複）與ノンブル不是正文。"""
+        lines = [_line(0, 504, s="正文"), _line(1, 505, s="二", t="ノンブル"),
+                 _line(2, 506, s="つづき")]
+        assert nb.lines_to_layout_paras(lines) == ["正文つづき"]
+
+    def test_title_lines_are_dropped_from_body(self):
+        """章名另有權威來源（NDL 目次 API），版面上這一行常常還是亂序的
+        （實例：『第二　起源』被讀成『第二 源 起』），不要放進正文。"""
+        lines = [_line(0, 504, s="前の章の終り"),
+                 _line(1, 505, s="第二 源 起", t="タイトル本文"),
+                 _line(2, 506, s="次の章の始め")]
+        assert nb.lines_to_layout_paras(lines) == ["前の章の終り", "次の章の始め"]
+
+    def test_spaces_inside_a_line_are_removed(self):
+        """NDL 在標點後插空白（『である。 われらは』），中日文不需要。"""
+        lines = [_line(0, 504, s="である。 われらは、 さう思ふ")]
+        assert nb.lines_to_layout_paras(lines) == ["である。われらは、さう思ふ"]
+
+    def test_empty_input(self):
+        assert nb.lines_to_layout_paras([]) == []
+
+
+class TestParseLayoutXml:
+    XML = b"""<OCRDATASET>
+  <PAGE IMAGENAME="1099766_R0000004.jp2" WIDTH="3575" HEIGHT="2787">
+    <TEXTBLOCK CONF="0.944">
+      <LINE TYPE="\xe6\x9c\xac\xe6\x96\x87" X="2994" Y="504" WIDTH="79" HEIGHT="1756" ORDER="0" STRING="\xe7\x94\xb2" />
+      <LINE TYPE="\xe6\x9c\xac\xe6\x96\x87" X="2927" Y="549" WIDTH="76" HEIGHT="1765" ORDER="1" STRING="\xe4\xb9\x99" />
+    </TEXTBLOCK>
+  </PAGE>
+</OCRDATASET>"""
+
+    def test_extracts_lines_with_geometry(self):
+        lines = nb.parse_layout_xml(self.XML)
+        assert len(lines) == 2
+        a = lines[0]
+        assert a["order"] == 0 and a["x"] == 2994 and a["y"] == 504
+        assert a["type"] == "本文" and a["string"] == "甲"
+
+    def test_feeds_straight_into_paragraph_grouping(self):
+        paras = nb.lines_to_layout_paras(nb.parse_layout_xml(self.XML))
+        assert paras == ["甲", "乙"]     # 第二行縮排 → 另起一段
+
+    def test_missing_attributes_do_not_crash(self):
+        xml = b'<OCRDATASET><PAGE><TEXTBLOCK><LINE STRING="x" /></TEXTBLOCK></PAGE></OCRDATASET>'
+        assert nb.parse_layout_xml(xml) == []

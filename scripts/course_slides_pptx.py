@@ -73,12 +73,33 @@ USED = []          # 本份簡報實際用到的圖，供「圖片出處」頁�
 
 HEI = '微軟正黑體'
 KAI = '標楷體'
-NAVY = RGBColor(0x1F, 0x39, 0x64)
-GOLD = RGBColor(0xB2, 0x8B, 0x3C)
-INK = RGBColor(0x22, 0x22, 0x22)
-GRAY = RGBColor(0x6B, 0x72, 0x80)
-PALE = RGBColor(0xF4, 0xF6, 0xF9)
+# 配色照使用者自己那套 114-2 簡報：封面整片深色＋米白字，內容頁米白底、
+# 深色標題、近黑內文，標題下一條細線。四門課各一色，抽錯簡報一眼看得出來。
+PALETTES = {
+    'green':  dict(deep='457D58', dark='1F5014', light='CBDDD1', cream='F6F6E9'),
+    'blue':   dict(deep='3F6D8E', dark='173D55', light='C9DCE7', cream='F4F7FA'),
+    'rust':   dict(deep='A0563F', dark='5A2A1C', light='EBD6CD', cream='FBF6F2'),
+    'indigo': dict(deep='6B5B8E', dark='352A4E', light='DAD3E8', cream='F8F6FC'),
+}
+
+INK = RGBColor(0x27, 0x27, 0x27)
+GRAY = RGBColor(0x5E, 0x5E, 0x5E)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+DARK = GOLD = NAVY = PALE = CREAM = MINT = None
+
+
+def use_palette(name):
+    """切換配色。NAVY＝標題深色、GOLD＝主色（封面底與線條）、PALE／CREAM＝米白、
+    MINT＝淺色底。沿用舊名字是為了不用改動每一支繪圖函式。"""
+    global NAVY, GOLD, PALE, CREAM, MINT
+    p = PALETTES[name]
+    NAVY = RGBColor.from_string(p['dark'])
+    GOLD = RGBColor.from_string(p['deep'])
+    PALE = CREAM = RGBColor.from_string(p['cream'])
+    MINT = RGBColor.from_string(p['light'])
+
+
+use_palette('green')
 
 W, H = Cm(33.87), Cm(19.05)   # 16:9
 
@@ -191,12 +212,12 @@ def blank(prs):
 
 
 def slide_title(slide, title, sub=None):
-    band(slide, NAVY, Cm(0), Cm(0), W, Cm(0.32))
+    band(slide, PALE, Cm(0), Cm(0), W, H)
     tf = textbox(slide, Cm(1.5), Cm(0.85), W - Cm(3.0), Cm(2.2))
     put(tf, title, 40, bold=True, color=NAVY, first=True, space_after=2)
     if sub:
         put(tf, sub, 21, color=GRAY, space_after=0)
-    band(slide, GOLD, Cm(1.5), Cm(3.80), Cm(3.0), Cm(0.12))
+    band(slide, GOLD, Cm(1.5), Cm(3.80), W - Cm(9.0), Cm(0.06))
 
 
 def footer(slide, n, label):
@@ -207,17 +228,16 @@ def footer(slide, n, label):
 # ── 各種投影片 ──────────────────────────────────────────────────────────────
 def s_cover(prs, d):
     s = blank(prs)
-    band(s, NAVY, Cm(0), Cm(0), W, H)
+    band(s, GOLD, Cm(0), Cm(0), W, H)
     tf = textbox(s, Cm(3.0), Cm(4.2), W - Cm(6.0), Cm(1.0))
-    put(tf, d['kicker'], 19, color=RGBColor(0xC9, 0xD3, 0xE4), first=True, space_after=0)
+    put(tf, d['kicker'], 19, color=MINT, first=True, space_after=0)
     tf = textbox(s, Cm(3.0), Cm(5.5), W - Cm(6.0), Cm(2.4))
-    put(tf, d['title'], 54, font=KAI, bold=True, color=WHITE, first=True, space_after=0)
-    band(s, GOLD, Cm(3.0), Cm(8.5), Cm(3.4), Cm(0.12))
+    put(tf, d['title'], 54, font=KAI, bold=True, color=CREAM, first=True, space_after=0)
+    band(s, CREAM, Cm(3.0), Cm(8.5), Cm(4.6), Cm(0.06))
     tf2 = textbox(s, Cm(3.0), Cm(9.5), W - Cm(6.0), Cm(6.0))
-    put(tf2, d['subtitle'], 26, font=KAI, color=RGBColor(0xE3, 0xC9, 0x8A),
-        first=True, space_after=24)
+    put(tf2, d['subtitle'], 26, font=KAI, color=CREAM, first=True, space_after=24)
     for line in d['meta']:
-        put(tf2, line, 18, color=RGBColor(0xC9, 0xD3, 0xE4), space_after=6)
+        put(tf2, line, 18, color=MINT, space_after=6)
     return s
 
 
@@ -227,8 +247,8 @@ def s_profile(prs):
     版面照他自己那套 114-2 簡報：左側一道深色帶、姓名獨大、學經歷條列。
     """
     s = blank(prs)
-    band(s, PALE, Cm(0), Cm(0), W, H)
-    band(s, NAVY, Cm(0), Cm(0), Cm(0.5), H)
+    band(s, MINT, Cm(0), Cm(0), W, H)
+    band(s, GOLD, Cm(0), Cm(0), Cm(0.5), H)
     tf = textbox(s, Cm(3.0), Cm(4.4), W - Cm(6.0), Cm(10.5))
     put(tf, '授課教師', 23, bold=True, color=GOLD, first=True, space_after=12)
     put(tf, TEACHER, 58, font=KAI, bold=True, color=NAVY, space_after=26)
@@ -251,12 +271,12 @@ def s_section(prs, no, title, lines):
 
 def s_big(prs, text, sub=None):
     s = blank(prs)
-    band(s, NAVY, Cm(0), Cm(0), W, H)
+    band(s, GOLD, Cm(0), Cm(0), W, H)
     tf = textbox(s, Cm(3.2), Cm(2.6), W - Cm(6.4), H - Cm(5.2), anchor=MSO_ANCHOR.MIDDLE)
-    put(tf, text, 46, font=KAI, bold=True, color=WHITE, first=True,
+    put(tf, text, 46, font=KAI, bold=True, color=CREAM, first=True,
         align=PP_ALIGN.CENTER, line=1.45, space_after=18)
     if sub:
-        put(tf, sub, 23, color=RGBColor(0xE3, 0xC9, 0x8A), align=PP_ALIGN.CENTER)
+        put(tf, sub, 23, color=MINT, align=PP_ALIGN.CENTER)
     return s
 
 
@@ -294,7 +314,7 @@ def s_two(prs, title, left, right, sub=None):
         x = Cm(1.5) + i * (colw + Cm(0.8))
         band(s, NAVY if i == 0 else GOLD, x, Cm(4.5), colw, Cm(1.0))
         tfh = textbox(s, x + Cm(0.35), Cm(4.68), colw - Cm(0.7), Cm(0.8))
-        put(tfh, head, 23, bold=True, color=WHITE, first=True, space_after=0)
+        put(tfh, head, 23, bold=True, color=CREAM, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 24.0, 1: 20.0, 2: 20.0}
         k = max(0.72, fit(items, cw, 13.0, base, {0: 10, 1: 8, 2: 8}))
@@ -327,7 +347,7 @@ def s_table(prs, title, headers, rows, sub=None, note=None, widths=None):
         c.fill.solid(); c.fill.fore_color.rgb = NAVY
         c.vertical_anchor = MSO_ANCHOR.MIDDLE
         tf = c.text_frame; tf.word_wrap = True
-        put(tf, h, 19, bold=True, color=WHITE, first=True, space_after=0,
+        put(tf, h, 19, bold=True, color=CREAM, first=True, space_after=0,
             align=PP_ALIGN.CENTER)
     tsize = 19 if len(rows) <= 5 else (17 if len(rows) <= 7 else 15)
     for ri, row in enumerate(rows):
@@ -495,7 +515,7 @@ def s_openers(prs, course, no):
             space_after=14, line=1.3)
     put(tf, '一兩句話就好，答錯不扣分——這裡要的是你原本怎麼想。', 19,
         color=GRAY, space_after=0, line=1.3)
-    band(s2, PALE, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
+    band(s2, MINT, W - Cm(16.6), Cm(4.6), Cm(15.1), H - Cm(6.4))
     tf2 = textbox(s2, W - Cm(16.1), Cm(5.4), Cm(14.1), H - Cm(8.0),
                   anchor=MSO_ANCHOR.MIDDLE)
     put(tf2, 'QR code', 38, bold=True, color=NAVY, first=True, space_after=10,
