@@ -269,8 +269,10 @@ def section_downloads(tasks: dict) -> None:
         c = collections.Counter(r.get("status", "?") for r in recs)
         last = recs[-1]["at"][:10] if recs else "—"
         n_today = sum(1 for r in recs if r["at"][:10] == today)
-        print(f"  z-lib：獵表 {wanted_n} 筆，已處理 {len(recs)}"
-              f"（{len(recs) / wanted_n * 100:.1f}%）；今天 {n_today} 筆，最後動作 {last}")
+        # 帳本會有重試，同一 key 出現多次；進度要看去重後的 key 數，不是行數
+        uniq = len({r["key"] for r in recs})
+        print(f"  z-lib：獵表 {wanted_n} 筆，已處理 {uniq} 筆／{len(recs)} 次嘗試"
+              f"（{uniq / wanted_n * 100:.1f}%）；今天 {n_today} 次，最後動作 {last}")
         print(f"    {dict(c)}")
         if n_today == 0:
             warn(f"z-lib 今天（{today}）沒有任何新處理，最後動作停在 {last}")
