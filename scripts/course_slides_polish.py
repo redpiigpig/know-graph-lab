@@ -118,16 +118,30 @@ def acceptable(old, new):
 
 
 # ── LLM ─────────────────────────────────────────────────────────────────────
+# 🚨 Gemini 的免費額度用完之後不會直接報錯，而是每一批都把七把 key 輪一遍、
+#    每次 429 都退避幾十秒——一批要卡二十分鐘，看起來像「在跑」其實是在等。
+#    所以照 repo 既有的兩次出局規矩：連兩批走不通就整輪改用 NVIDIA，不再回頭試。
+_GEMINI_STRIKES = 0
+GEMINI_STRIKE_LIMIT = 2
+
+
 def _ask(prompt):
     """Gemini 主、NVIDIA 備。回傳純文字。"""
-    try:
-        import qianmian_llm
-        txt, _ = qianmian_llm.ask(prompt, model='gemini-2.5-flash',
-                                  temperature=0.2, max_tokens=8192)
-        if txt and txt.strip():
-            return txt
-    except Exception as e:                       # noqa: BLE001
-        print(f'　gemini 失敗（{type(e).__name__}: {e}），改走 NVIDIA')
+    global _GEMINI_STRIKES
+    if _GEMINI_STRIKES < GEMINI_STRIKE_LIMIT:
+        try:
+            import qianmian_llm
+            txt, _ = qianmian_llm.ask(prompt, model='gemini-2.5-flash',
+                                      temperature=0.2, max_tokens=8192,
+                                      tries=len(qianmian_llm.engines.GEMINI_KEYS))
+            if txt and txt.strip():
+                _GEMINI_STRIKES = 0
+                return txt
+        except Exception as e:                   # noqa: BLE001
+            _GEMINI_STRIKES += 1
+            print(f'　gemini 失敗（{type(e).__name__}），第 {_GEMINI_STRIKES} 次'
+                  + ('；本輪之後一律走 NVIDIA'
+                     if _GEMINI_STRIKES >= GEMINI_STRIKE_LIMIT else ''))
     import translate_ebook_to_zh as engines
     return engines.nvidia_chat(prompt, max_tokens=8192)
 

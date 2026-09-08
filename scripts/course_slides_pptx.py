@@ -493,27 +493,45 @@ def place_image(slide, key, x, y, w, h):
 
 # 🚨 圖說與圖庫標籤的位置是寫死的，跟字多字少無關。頁尾那一行從 17.90 cm
 #    起，所以這兩個元件的「底部」都必須壓在 17.85 cm 以內。
-CAP_H = 1.0            # 圖說框高（cm）
-# 🚨 圖說一往上挪，就會挪進圖片區。這兩個數字必須一起改：
-#    有圖說時圖框底 16.10 cm，沒有時 17.50 cm（頁尾線 17.90）。
-def img_box_h(has_cap, top=BODY_TOP):
-    return Cm((16.10 if has_cap else 17.50) - top)
+IMG_BOTTOM = 17.50     # 圖區能用到的最低點（頁尾那一行從 17.90 起）
+# 🚨 圖說框高原本寫死 1.0 cm（約兩行）。圖欄變窄之後同一句圖說會排到三行，
+#    整個掉到頁尾線下面——2026-09-09 在兩頁上抓到。改成照寬度算，
+#    算出來多高就佔多高，圖框跟著讓。
 
 
-def caption(slide, text, x, y, w):
-    tf = textbox(slide, x, y, w, Cm(CAP_H))
-    put(tf, text, 16, color=GRAY, first=True, space_after=0, align=PP_ALIGN.CENTER)
+def caption_size(text, w_cm):
+    """圖說要幾級字、佔多高（cm）。最多三行，超過就縮字。"""
+    size = 16
+    while size > 11 and _lines(text, size, w_cm) > 3:
+        size -= 1
+    return size, _lines(text, size, w_cm) * size * 1.35 / CM_PT
+
+
+def img_box_h(cap, w_cm, top=BODY_TOP):
+    """圖框高度：扣掉圖說要用的位置。cap 為 None 時圖用到 IMG_BOTTOM。"""
+    if not cap:
+        return Cm(IMG_BOTTOM - top)
+    return Cm(IMG_BOTTOM - caption_size(cap, w_cm)[1] - 0.2 - top)
+
+
+def caption(slide, text, x, y, w, w_cm):
+    size, h = caption_size(text, w_cm)
+    tf = textbox(slide, x, y, w, Cm(h))
+    put(tf, text, size, color=GRAY, first=True, space_after=0,
+        align=PP_ALIGN.CENTER, line=1.1)
 
 
 def s_photo(prs, title, key, cap=None, sub=None):
     s = blank(prs)
     top = slide_title(s, title, sub)
-    box_y, box_h = Cm(top), img_box_h(bool(cap), top)
+    cw = 33.87 - 3.0
+    box_y, box_h = Cm(top), img_box_h(cap, cw, top)
     if not place_image(s, key, Cm(1.5), box_y, W - Cm(3.0), box_h):
         put(textbox(s, Cm(1.5), box_y, W - Cm(3.0), Cm(2)), f'（缺圖：{key}）',
             16, color=GRAY, first=True)
     if cap:
-        caption(s, cap, Cm(1.5), H - Cm(2.75), W - Cm(3.0))
+        caption(s, cap, Cm(1.5),
+                Cm(IMG_BOTTOM - caption_size(cap, cw)[1]), W - Cm(3.0), cw)
     return s
 
 
@@ -540,15 +558,30 @@ def s_gallery(prs, title, items, sub=None):
     return s
 
 
+# 左文右圖那一頁，文字欄可以有多寬。**由窄到寬**試，取第一個裝得下的——
+# 內容少就給大圖，內容多就縮成小張插圖。原本寫死 17 cm，結果是條目稍多的頁
+# 一律配不到圖（2026-09-09 量過：wr 五十五個配圖點只有零個過得了關）。
+IMG_TEXT_W = (17.0, 19.5, 21.5, 23.5)
+
+
+def img_layout(bullets, h):
+    """回傳文字欄該多寬（cm）。s_imgbullets 與 split_long 共用，
+    免得估的跟畫的不一樣、該拆的沒拆。"""
+    for tw in IMG_TEXT_W:
+        if fit(bullets, tw, h * FIT_MARGIN, IMG_SZ, IMG_SP, raw=True) >= 1.0:
+            return tw
+    return IMG_TEXT_W[-1]
+
+
 def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     """左文右圖。"""
     s = blank(prs)
     top = slide_title(s, title, sub)
-    tw = 17.0
+    h = BODY_BOTTOM - top
+    tw = img_layout(bullets, h)
     textw = Cm(tw)
     imgx = Cm(1.5) + textw + Cm(0.7)
     imgw = W - Cm(1.5) - imgx
-    h = BODY_BOTTOM - top
     tf = textbox(s, Cm(1.5), Cm(top), textw, Cm(h))
     base, sp = IMG_SZ, IMG_SP
     k = fit(bullets, tw, h * FIT_MARGIN, base, sp)
@@ -565,10 +598,12 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
             bold=(lvl == 0), first=not firstdone, space_after=sp[lvl] * k,
             indent=min(lvl, 2) if lvl != 3 else 0, line=1.3)
         firstdone = True
-    boxh = img_box_h(bool(cap), top)
+    iw_cm = 33.87 - 1.5 - (1.5 + tw + 0.7)
+    boxh = img_box_h(cap, iw_cm, top)
     place_image(s, key, imgx, Cm(top), imgw, boxh)
     if cap:
-        caption(s, cap, imgx, H - Cm(2.75), imgw)
+        caption(s, cap, imgx,
+                Cm(IMG_BOTTOM - caption_size(cap, iw_cm)[1]), imgw, iw_cm)
     return s
 
 
@@ -745,7 +780,8 @@ def split_long(slides):
         items, h = list(item[2]), body_h(item)
         if item[0] == 'bullets':
             return fit(items, BOX_W, h * FIT_MARGIN, base, sp, raw=True)
-        return fit(items, IMG_BOX_W, h * FIT_MARGIN, ibase, isp, raw=True)
+        return fit(items, img_layout(items, h), h * FIT_MARGIN,
+                   ibase, isp, raw=True)
 
     out = []
     for it in slides:
@@ -785,21 +821,37 @@ def _has_image(key):
     return bool(m) and (IMGDIR / m['file']).exists()
 
 
+# 讓出一欄放圖，字就得縮一點——這是配圖的代價，不是版面壞掉。
+# 0.70 是「內文 27pt 縮到約 19pt」，比壓張數的階梯最底一階（0.52）還寬鬆得多。
+# 再低就真的看不清，那種頁寧可不配圖。
+ILL_FLOOR = 0.70
+
+
 def _fits_narrow(item):
-    """配了圖之後內文欄只剩 17 cm，這一頁還裝不裝得下。"""
-    return fit(list(item[2]), IMG_BOX_W, body_h(item) * FIT_MARGIN,
-               IMG_SZ, IMG_SP, raw=True) >= SPLIT_AT
+    """讓出一欄放圖之後，這一頁還裝不裝得下。
+
+    用最寬的那一階（文字欄 23.5 cm、圖 6.7 cm）判；再塞不下就是真的不該配圖。
+    """
+    return fit(list(item[2]), IMG_TEXT_W[-1], body_h(item) * FIT_MARGIN,
+               IMG_SZ, IMG_SP, raw=True) >= max(ILL_FLOOR, FIT_FLOOR)
 
 
 def prepare(slides, course='wr'):
-    """配圖 → 併頁 → 拆頁。張數上限的試算與實際渲染必須走同一條，
-    否則 course_slides_weekly 數出來的張數跟真的出來的不一樣。"""
+    """併頁 → 拆頁 → 配圖。張數上限的試算與實際渲染必須走同一條，
+    否則 course_slides_weekly 數出來的張數跟真的出來的不一樣。
+
+    🚨 配圖擺在**拆頁之後**。擺前面的話，條目多的頁在配圖那一關就被擋掉
+    （它本來就要拆成兩頁才裝得下），於是整章一張圖都配不到——
+    2026-09-09 量過：wr 五十五個配圖點只有一個過得了關。拆完再配，
+    第一半留著原標題、對得上表，圖就掛在第一半上，而且不多生投影片。
+    """
+    out = split_long(fold_bigs(slides))
     try:
         import course_slide_illustrate as ILL
-        slides = ILL.apply(slides, course, _has_image, _fits_narrow)[0]
+        out = ILL.apply(out, course, _has_image, _fits_narrow)[0]
     except ImportError:
         pass
-    return split_long(fold_bigs(slides))
+    return out
 
 
 def build(deck, no=None, course='wr', refs=None, profile=False):
