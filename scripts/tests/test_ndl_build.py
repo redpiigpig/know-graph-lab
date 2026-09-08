@@ -510,3 +510,154 @@ class TestResolvePlaceholders:
     def test_text_without_placeholders_is_untouched(self):
         s = "これは正しい文である"
         assert nb.resolve_ndl_placeholders(s) == s
+
+
+class TestGarbledLineDetection:
+    """NDL 的 OCR 會被**振り仮名（ruby）**打亂：小字注音混進正文字序，
+    整行變成亂碼。實例（初代の人々 影像10）：
+
+      原文 こゝにかのセラピムのひとり鉗をもて壇の上より取りたる熱炭を手に携へて
+      OCR  ことかのとろよろのひとる如をそて項の上よ取數な子に授と小麥
+
+    🚨 NDL 沒有把 ruby 另外標 TYPE，全部混在「本文」裡，所以擋不掉，只能事後偵測。
+
+    偵測靠**字數對欄高的密度**：亂掉的行字會少掉一截，密度明顯低於同書中位數。
+    """
+
+    def test_normal_line_is_not_flagged(self):
+        lines = [{"height": 1586, "string": "あ" * 45, "type": "本文", "order": 0, "x": 0, "y": 0}]
+        assert nb.garbled_lines(lines, median_density=0.0284) == []
+
+    def test_sparse_line_is_flagged(self):
+        lines = [{"height": 1574, "string": "あ" * 30, "type": "本文", "order": 1, "x": 0, "y": 0}]
+        assert len(nb.garbled_lines(lines, median_density=0.0284)) == 1
+
+    def test_short_lines_are_ignored(self):
+        """段末短行本來就字少，不是亂碼。"""
+        lines = [{"height": 400, "string": "終り。", "type": "本文", "order": 2, "x": 0, "y": 0}]
+        assert nb.garbled_lines(lines, median_density=0.0284) == []
+
+    def test_non_body_lines_are_ignored(self):
+        lines = [{"height": 1500, "string": "目次", "type": "タイトル本文", "order": 0, "x": 0, "y": 0}]
+        assert nb.garbled_lines(lines, median_density=0.0284) == []
+
+    def test_median_density_from_the_book_itself(self):
+        """門檻要用同一本書的中位數 —— 每本的字級與欄高都不同。"""
+        lines = [{"height": 1000, "string": "あ" * 28, "type": "本文", "order": i, "x": 0, "y": 0}
+                 for i in range(5)]
+        assert nb.median_line_density(lines) == 0.028
+
+
+class TestTrimBackMatter:
+    """NDL 目次通常沒有「奧付」這一條，所以最後一章的範圍會一路吃到書末，
+    把版權頁與**出版社的書籍廣告**都當成正文翻進去。
+
+    判準是**滿欄率**（滿欄行 ÷ 本文行）：正文頁 ≥0.87，奧付與廣告頁 ≤0.07。
+    差距大到不需要調參。
+    """
+
+    def test_trailing_back_matter_is_dropped(self):
+        secs = [{"title": "第六章", "start": 49, "end": 62}]
+        ratios = {i: 1.0 for i in range(49, 58)}
+        ratios.update({58: 0.05, 59: 0.0, 60: 0.0, 61: 0.0})
+        out = nb.trim_back_matter(secs, ratios)
+        assert out[0]["end"] == 58
+
+    def test_transitional_page_is_kept(self):
+        """正文在該頁結束、廣告從同頁開始的過渡頁（0.57）要留著。"""
+        secs = [{"title": "第六章", "start": 55, "end": 60}]
+        ratios = {55: 1.0, 56: 1.0, 57: 0.57, 58: 0.05, 59: 0.0}
+        assert nb.trim_back_matter(secs, ratios)[0]["end"] == 58
+
+    def test_earlier_sections_are_untouched(self):
+        secs = [{"title": "一", "start": 5, "end": 20}, {"title": "二", "start": 20, "end": 30}]
+        ratios = {i: 1.0 for i in range(5, 28)}
+        ratios.update({28: 0.0, 29: 0.0})
+        out = nb.trim_back_matter(secs, ratios)
+        assert out[0]["end"] == 20 and out[1]["end"] == 28
+
+    def test_no_back_matter_changes_nothing(self):
+        secs = [{"title": "一", "start": 3, "end": 10}]
+        ratios = {i: 1.0 for i in range(3, 10)}
+        assert nb.trim_back_matter(secs, ratios)[0]["end"] == 10
+
+    def test_never_empties_a_section(self):
+        """整段都被判成後付時寧可原樣留著，也不要生出空章。"""
+        secs = [{"title": "一", "start": 5, "end": 8}]
+        ratios = {5: 0.0, 6: 0.0, 7: 0.0}
+        assert nb.trim_back_matter(secs, ratios)[0]["end"] == 8
+
+
+class TestBodyPageMinLines:
+    """🚨 只看滿欄率會被行數極少的頁騙過去。
+
+    實例：《初代の人々》img71 是雜誌廣告，只有 2 行本文，其中 1 行滿欄 → 比率 0.50
+    剛好過關，結果**版權頁整段被翻進末章**
+    （「昭和六年六月二十八日印刷…發行者…定價金五」）。
+    行數太少時比率本身沒有意義，要先要求最低行數。
+    """
+
+    def test_two_line_advert_is_not_a_body_page(self):
+        lines = [{"type": "本文", "height": 1500, "string": "畔上賢造主筆 月刊雜誌"},
+                 {"type": "本文", "height": 200, "string": "定價"}]
+        assert nb.is_body_page(lines) is False
+
+    def test_real_body_page_passes(self):
+        lines = [{"type": "本文", "height": 1500, "string": "あ" * 40} for _ in range(26)]
+        assert nb.is_body_page(lines) is True
+
+    def test_colophon_with_many_short_lines_fails(self):
+        lines = [{"type": "本文", "height": 200, "string": "發行所"} for _ in range(15)]
+        assert nb.is_body_page(lines) is False
+
+    def test_transitional_page_still_passes(self):
+        """正文結束、廣告從同頁開始的過渡頁要留著（24/42 滿欄）。"""
+        lines = ([{"type": "本文", "height": 1500, "string": "あ" * 40} for _ in range(24)]
+                 + [{"type": "本文", "height": 200, "string": "廣告"} for _ in range(18)])
+        assert nb.is_body_page(lines) is True
+
+    def test_empty_page(self):
+        assert nb.is_body_page([]) is False
+
+
+def _col(order, x, h, s="あ" * 40):
+    return {"order": order, "x": x, "y": 400, "height": h, "type": "本文", "string": s}
+
+
+class TestLayoutBreakOnPage:
+    """過渡頁：正文在該頁結束、**出版社的書籍廣告**從同一頁接著排。
+    頁層級的判斷擋不掉（該頁確實有正文），要在頁內找版面斷點。
+
+    實例《東洋文化の復興と基督教》img57：
+      正文 o2–o10  X 3441→2650（欄距約 100）欄高 ~1990
+      廣告 o15–    X 驟降到 1773（跳了 877＝約九欄）欄高只剩 ~1000
+
+    兩個訊號要同時成立才切：**X 跳躍**遠大於正常欄距，且其後的行**明顯變矮**。
+    只看欄高會把段末短行誤砍。
+    """
+
+    def test_advert_block_is_cut(self):
+        lines = [_col(i, 3441 - i * 99, 1980) for i in range(9)]
+        lines += [_col(15 + i, 1773 - i * 57, 1000) for i in range(8)]
+        out = nb.body_lines_before_layout_break(lines)
+        assert len(out) == 9
+
+    def test_normal_page_is_untouched(self):
+        lines = [_col(i, 3441 - i * 99, 1980) for i in range(26)]
+        assert len(nb.body_lines_before_layout_break(lines)) == 26
+
+    def test_short_final_line_is_not_a_break(self):
+        """段末短行欄距正常，不可以被當成版面斷點砍掉。"""
+        lines = [_col(i, 3441 - i * 99, 1980) for i in range(8)]
+        lines.append(_col(8, 3441 - 8 * 99, 600))
+        assert len(nb.body_lines_before_layout_break(lines)) == 9
+
+    def test_gap_without_height_drop_is_not_a_break(self):
+        """欄距跳了但字級沒變（例如跨欄插圖），不算廣告，保留。"""
+        lines = [_col(i, 3441 - i * 99, 1980) for i in range(6)]
+        lines += [_col(10 + i, 1773 - i * 99, 1980) for i in range(6)]
+        assert len(nb.body_lines_before_layout_break(lines)) == 12
+
+    def test_too_few_lines_is_untouched(self):
+        lines = [_col(0, 3000, 1900), _col(1, 1000, 500)]
+        assert len(nb.body_lines_before_layout_break(lines)) == 2

@@ -13,8 +13,13 @@ from pathlib import Path
 
 import fitz
 
-DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
-FOLDERS = ['115-1_世界宗教文化導論', '115-1_基督宗教概論', '宗教系國文講義']
+# 預設稽核「最終版」那幾夾——PDF 出在那裡（知識圖工作室只留 pptx）。
+# 也可以在命令列直接給資料夾路徑。
+FINAL = Path(r'G:\我的雲端硬碟\玄奘\博一上\教學')
+DEFAULT_DIRS = [FINAL / '115-1 世界宗教文化導論' / '簡報',
+                FINAL / '115-1世界宗教文化導論（假日）',
+                FINAL / '115-1 基督宗教概論' / '簡報',
+                FINAL / '115-1 宗教系國文' / '簡報']
 
 
 def lines(page):
@@ -37,12 +42,29 @@ def overlap(a, b):
     return r.get_area() / small
 
 
+def images(page):
+    """回傳頁面上每張圖的方框。跑版的圖多半是超出版面或壓在字上。"""
+    out = []
+    for info in page.get_image_info():
+        r = fitz.Rect(info['bbox'])
+        if r.get_area() > 4:
+            out.append(r)
+    return out
+
+
 def audit(pdf, min_size):
     doc = fitz.open(pdf)
     bad = []
     for i, page in enumerate(doc):
         ls = lines(page)
         h, w = page.rect.height, page.rect.width
+        for r in images(page):
+            if r.y1 > h + 1 or r.x1 > w + 1 or r.x0 < -1 or r.y0 < -1:
+                bad.append((i + 1, '圖超出版面', f'{r.width:.0f}×{r.height:.0f}'))
+            for r2, t2, _ in ls:
+                # 只抓真的壓在圖上的字；圖說本來就會貼著圖，所以門檻抓高一點
+                if overlap(r2, r) > 0.5:
+                    bad.append((i + 1, '圖壓字', t2[:26]))
         for j, (r, t, s) in enumerate(ls):
             if s < min_size:
                 bad.append((i + 1, f'字太小 {s:.1f}pt', t[:34]))
@@ -59,13 +81,13 @@ if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
     args = sys.argv[1:]
     min_size = float(args[args.index('--min-size') + 1]) if '--min-size' in args else 11.0
+    dirs = [Path(a) for a in args if not a.startswith('--') and Path(a).is_dir()]
     total = 0
-    for folder in FOLDERS:
-        d = DRIVE / folder / '簡報'
+    for d in (dirs or DEFAULT_DIRS):
         if not d.exists():
             continue
-        print(f'── {folder}')
-        for pdf in sorted(d.glob('第*.pdf')):
+        print(f'── {d.name}')
+        for pdf in sorted(d.glob('*.pdf')):
             bad = audit(pdf, min_size)
             total += len(bad)
             if bad:

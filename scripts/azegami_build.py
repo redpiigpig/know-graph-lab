@@ -40,9 +40,27 @@ REGISTRY: dict[str, dict] = {
         "parent_volume": "無教會主義論",
         "ndl_pid": "1099766",
     },
+    "shodai-no-hitobito": {
+        "ebook_id": "e0000000-0000-4000-8000-000000000002",
+        "title": "初代的人們",
+        "original_title": "初代の人々",
+        "subtitle": "畔上賢造 1931（NDL 官方 OCR．日文原文＋繁中對照）",
+        "year": 1931,
+        "parent_volume": "聖書人物論",
+        "ndl_pid": "1033439",
+    },
+    "toyo-bunka": {
+        "ebook_id": "e0000000-0000-4000-8000-000000000003",
+        "title": "東洋文化的復興與基督教",
+        "original_title": "東洋文化の復興と基督教",
+        "subtitle": "畔上賢造 1934（NDL 官方 OCR．日文原文＋繁中對照）",
+        "year": 1934,
+        "parent_volume": "文明論",
+        "ndl_pid": "1210131",
+    },
 }
 
-QUEUE = ["muky-shugi"]
+QUEUE = ["muky-shugi", "shodai-no-hitobito", "toyo-bunka"]
 
 
 def load_work_sections(slug: str) -> list[dict]:

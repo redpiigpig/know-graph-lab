@@ -118,6 +118,13 @@ BULLET_SP = {0: 14, 1: 9, 2: 6, 3: 15}
 IMG_SZ = {0: 27.0, 1: 23.0, 2: 19.5, 3: 28.0}
 IMG_SP = {0: 13, 1: 9, 2: 6, 3: 14}
 
+# 內文框的寬高（cm）。🚨 s_bullets／s_imgbullets／split_long 必須吃同一組——
+# 只改其中一處，fit() 會用錯的高度估行數，該拆的沒拆，字就壓到頁尾那一行。
+# 高度從 13.1 降到 12.7：框底原本只離頁尾 0.35 cm，fit() 一低估就疊上去
+# （2026-09-09 稽核在三份壓縮過的簡報上抓到 16 處壓字）。
+BOX_W, BOX_H = 30.9, 12.7
+IMG_BOX_W = 17.0
+
 
 # ── 版面工具 ────────────────────────────────────────────────────────────────
 def textbox(slide, x, y, w, h, anchor=MSO_ANCHOR.TOP):
@@ -283,7 +290,7 @@ def s_big(prs, text, sub=None):
 def s_bullets(prs, title, bullets, sub=None):
     s = blank(prs)
     slide_title(s, title, sub)
-    w, h = 30.9, 13.1
+    w, h = BOX_W, BOX_H
     tf = textbox(s, Cm(1.5), Cm(4.45), Cm(w), Cm(h))
     base, sp = BULLET_SZ, BULLET_SP
     k = fit(bullets, w, h * 0.96, base, sp)
@@ -431,7 +438,7 @@ def s_imgbullets(prs, title, bullets, key, sub=None, cap=None):
     textw = Cm(tw)
     imgx = Cm(1.5) + textw + Cm(0.7)
     imgw = W - Cm(1.5) - imgx
-    h = 13.1
+    h = BOX_H
     tf = textbox(s, Cm(1.5), Cm(4.45), textw, Cm(h))
     base, sp = IMG_SZ, IMG_SP
     k = fit(bullets, tw, h * 0.96, base, sp)
@@ -614,9 +621,9 @@ def split_long(slides):
     out = []
     for it in slides:
         if it[0] == 'bullets':
-            k = fit(it[2], 30.9, 13.1 * 0.96, base, sp)
+            k = fit(it[2], BOX_W, BOX_H * 0.96, base, sp)
         elif it[0] == 'imgbullets':
-            k = fit(it[2], 17.0, 13.1 * 0.96, ibase, isp)
+            k = fit(it[2], IMG_BOX_W, BOX_H * 0.96, ibase, isp)
         else:
             out.append(it)
             continue

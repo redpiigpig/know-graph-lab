@@ -64,7 +64,13 @@ def pages_from_zip(zip_path: Path) -> dict:
                 img = int(name.rsplit("_", 1)[1].split(".")[0])
             except (IndexError, ValueError):
                 continue
-            paras = nb.lines_to_layout_paras(nb.parse_layout_xml(z.read(name)))
+            lines = nb.parse_layout_xml(z.read(name))
+            # 過渡頁：切掉正文之後接著排的書籍廣告／奧付
+            keep = nb.body_lines_before_layout_break(lines)
+            kept = {id(l) for l in keep}
+            lines = [l for l in lines
+                     if l.get("type") not in nb.BODY_LINE_TYPES or id(l) in kept]
+            paras = nb.lines_to_layout_paras(lines)
             out[img] = [nb.restore_old_forms(p) for p in paras]
     return out
 
@@ -84,6 +90,7 @@ def main() -> int:
     out_dir = cache / args.pid / "ocr-ndl"
     out_dir.mkdir(parents=True, exist_ok=True)
     before = after = 0
+    inferred = []
     for img, paras in sorted(pages.items()):
         text = "\n\n".join(paras)
         before += text.count(nb.PLACEHOLDER)
@@ -91,12 +98,18 @@ def main() -> int:
             f = cache / args.pid / ("ocr-" + ref) / ("%07d.txt" % img)
             if f.exists():
                 text = nb.fill_placeholders(text, f.read_text(encoding="utf-8"))
+        # 參照對齊補完之後，剩下的用上下文規則推論。
+        # 🚨 順序不可顛倒：參照對齊是逐字驗證過的，規則推論是統計性的，
+        #    先跑規則的話會把本來能驗證的位置也變成推論。
+        text, guessed = nb.resolve_ndl_placeholders(text, report=True)
+        inferred.extend((img, g) for g in guessed)
         after += text.count(nb.PLACEHOLDER)
         (out_dir / ("%07d.txt" % img)).write_text(text, encoding="utf-8")
 
     chars = sum(len((out_dir / ("%07d.txt" % i)).read_text(encoding="utf-8"))
                 for i in pages)
-    print("〓 %d → %d（補回 %d）" % (before, after, before - after))
+    print("〓 %d → %d（補回 %d；其中規則推論 %d 處）"
+          % (before, after, before - after, len(inferred)))
     print("共 %d 字 → %s" % (chars, out_dir))
     if after:
         print("🚨 仍有 %d 處 〓 要看圖裁定：" % after)

@@ -39,7 +39,10 @@ ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
 READINGS = CACHE / "readings.json"
 INTERLINEAR = CACHE / "interlinear.json"
+SENSE = CACHE / "unit-sense.json"
 VOCAB = ROOT / "data/originalReaders/vocabulary/japanese-2000.json"
+FORMULAS = ROOT / "data/originalReaders/vocabulary/japanese-formulas.json"
+NAMES = ROOT / "data/originalReaders/vocabulary/japanese-proper-names.json"
 OUT_DIR = ROOT / "output/original-readers"
 
 FONT_JA = "MS Mincho"
@@ -272,6 +275,95 @@ def add_front_matter(document: Document, spec: dict, part: dict, lessons: list[d
     )
 
 
+def add_formula_appendix(document: Document, formulas: dict) -> None:
+    """聖經・佛經・神道的常用語句。
+
+    合約點名要收，而它們不是靠抓的：同一句在不同宗派與譯本寫法不同，錯一個字就
+    是另一個傳統。這張表是人工策展的，逐條記出處與傳統，所以照原表印。
+    """
+    H.add_label(document, "Appendix  ·  formulas")
+    heading = document.add_heading("附錄一　聖經・佛經・神道常用語句", level=1)
+    H.paragraph_rule(heading, color=H.GOLD, size="14")
+    H.add_body(document, formulas["rights"], size=H.CAPTION_PT, color=H.MUTED)
+    for group in formulas["groups"]:
+        document.add_heading(f"{group['title']}　{len(group['entries'])} 條", level=2)
+        H.add_body(document, group["tradition"], size=H.CAPTION_PT, color=H.MUTED)
+        for entry in group["entries"]:
+            line = document.add_paragraph()
+            line.paragraph_format.space_after = Pt(1)
+            H.add_mixed_script_text(line, entry["ja"], FONT_JA, H.TABLE_SIZE_PT + 1.6)
+            reading = document.add_paragraph()
+            reading.paragraph_format.space_after = Pt(0)
+            H.add_mixed_script_text(reading, entry.get("kana", ""), FONT_JA,
+                                    H.CAPTION_PT, color=H.MUTED)
+            zh = document.add_paragraph()
+            zh.paragraph_format.space_after = Pt(5)
+            H.add_mixed_script_text(zh, entry.get("zh", "（中文待補）"), H.FONT_ZH,
+                                    H.TABLE_SIZE_PT, color=H.INK)
+            H.add_mixed_script_text(zh, f"　{entry.get('source', '')}", H.FONT_ZH,
+                                    H.CAPTION_PT - 0.6, color=H.MUTED)
+
+
+def add_name_appendix(document: Document, names: dict) -> None:
+    H.add_label(document, "Appendix  ·  proper names", page_break_before=True)
+    heading = document.add_heading("附錄二　專名表", level=1)
+    H.paragraph_rule(heading, color=H.GOLD, size="14")
+    H.add_body(document, names["note"], size=H.CAPTION_PT, color=H.MUTED)
+    buckets: dict[str, list[dict]] = {}
+    for item in names["items"]:
+        buckets.setdefault(item.get("category") or "待歸類", []).append(item)
+    for category, items in buckets.items():
+        document.add_heading(f"{category}　{len(items)} 條", level=2)
+        for item in items:
+            row = document.add_paragraph()
+            row.paragraph_format.space_after = Pt(1)
+            H.add_mixed_script_text(row, item.get("kanji") or item["kana"], FONT_JA,
+                                    H.TABLE_SIZE_PT + 1.2)
+            if item.get("kanji"):
+                H.add_mixed_script_text(row, f"（{item['kana']}）", FONT_JA,
+                                        H.CAPTION_PT, color=H.MUTED)
+            H.add_mixed_script_text(row, f"　{item.get('zh') or '（中文待補）'}",
+                                    H.FONT_ZH, H.TABLE_SIZE_PT, color=H.INK)
+
+
+def add_auxiliary_appendix(document: Document) -> None:
+    """文語助動詞表：合約附錄二點名的那一批，第二冊每一頁都在用。"""
+    import build_japanese_interlinear as I
+
+    wanted = ["き", "けり", "つ", "ぬ", "たり", "り", "べし", "ず", "む", "らむ",
+              "けむ", "なり", "ごとし", "しむ", "る", "らる", "まし", "めり", "たし"]
+    H.add_label(document, "Appendix  ·  classical auxiliaries", page_break_before=True)
+    heading = document.add_heading("附錄三　文語助動詞", level=1)
+    H.paragraph_rule(heading, color=H.GOLD, size="14")
+    H.add_body(document,
+               "第二冊的讀物是文語，這一批助動詞在每一頁上。逐詞對譯欄印的就是這裡的說法，"
+               "全書一致。", size=H.CAPTION_PT, color=H.MUTED)
+    for form in wanted:
+        gloss = I.CLOSED_CLASS.get(form, "")
+        row = document.add_paragraph()
+        row.paragraph_format.space_after = Pt(1)
+        H.add_mixed_script_text(row, form, FONT_JA, H.TABLE_SIZE_PT + 1.6)
+        H.add_mixed_script_text(row, f"　{gloss}", H.FONT_ZH, H.TABLE_SIZE_PT, color=H.INK)
+
+
+def attach_sense(lessons: list[dict], sense: dict[str, str]) -> int:
+    """整句中譯照文字的雜湊接上去，不照課次或序號。
+
+    課次會動、切段會重切，序號一改就會把某一句的譯文配到另一句底下——那是這一
+    系列踩過最貴的一種錯，而且印出來完全正常。
+    """
+    import hashlib
+
+    attached = 0
+    for lesson in lessons:
+        for unit in lesson["units"] + lesson["memoryUnits"]:
+            key = hashlib.sha256(unit["text"].encode("utf-8")).hexdigest()[:16]
+            if key in sense:
+                unit["senseZh"] = sense[key]
+                attached += 1
+    return attached
+
+
 def lessons_for(part: dict, readings: dict, vocabulary: list[dict]) -> list[dict]:
     volume = next(v for v in readings["volumes"] if v["volume"] == part["source"])
     rows = []
@@ -294,7 +386,11 @@ def build(book: int) -> Path:
     readings = load(READINGS)
     vocabulary = load(VOCAB)["entries"]
     interlinear = load(INTERLINEAR)["units"] if INTERLINEAR.exists() else {}
+    sense = load(SENSE) if SENSE.exists() else {}
     lessons = lessons_for(part, readings, vocabulary)
+    attached = attach_sense(lessons, sense)
+    units = sum(len(l["units"]) + len(l["memoryUnits"]) for l in lessons)
+    print(f"  整句中譯 {attached:,}／{units:,} 段", flush=True)
 
     document = Document()
     H.configure(document)
@@ -308,6 +404,13 @@ def build(book: int) -> Path:
     H.start_section(document, running, lesson_tag=True)
     for index, lesson in enumerate(lessons):
         add_lesson(document, lesson, interlinear, spec, page_break_before=index > 0)
+
+    if part["appendix"]:
+        H.start_section(document, f"{running}　附錄")
+        add_formula_appendix(document, load(FORMULAS))
+        add_name_appendix(document, load(NAMES))
+        if part["source"] == 2:
+            add_auxiliary_appendix(document)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"japanese-original-reader-vol{book}.docx"

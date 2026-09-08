@@ -38,6 +38,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from janome.tokenizer import Tokenizer
 
 import original_reader_llm as llm
+from translate_ebook_to_zh import _to_traditional as to_traditional
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output/source-cache/original-readers/japanese-full"
@@ -103,16 +104,41 @@ def load(path: Path) -> dict:
 
 
 def vocabulary_glosses() -> dict[str, str]:
-    """The reader's own lesson tables win over anything a model says."""
+    """The reader's own lesson tables win over anything a model says.
+
+    Kana-only keys are kept apart from the written forms. 「は」is in the
+    vocabulary as 歯（牙齒）and 「や」as 屋（房子）; let those match by kana and
+    every topic particle in the book reads 牙齒、齒. Kana is only consulted for a
+    word the table itself writes in kana, and never for a particle — see
+    `gloss_for`.
+    """
     out: dict[str, str] = {}
     for entry in load(VOCAB)["entries"]:
         zh = (entry.get("glossZh") or "").strip()
         if not zh:
             continue
-        for form in (entry.get("dictionaryForm"), entry.get("kanji"), entry.get("kana")):
+        for form in (entry.get("dictionaryForm"), entry.get("kanji")):
             if form and form not in out:
                 out[form] = zh
+        kana = entry.get("kana")
+        if kana and not entry.get("kanji") and kana not in out:
+            out[kana] = zh
     return out
+
+
+def gloss_for(token: dict, vocab: dict[str, str], glossary: dict[str, str]) -> str:
+    """Grammar comes from the closed-class table, vocabulary from the tables."""
+    base, word, pos = token["base"], token["word"], token["pos"]
+    if pos == "記号":
+        return ""
+    if pos in ("助詞", "助動詞"):
+        return CLOSED_CLASS.get(base) or CLOSED_CLASS.get(word) or ""
+    return (
+        vocab.get(base)
+        or glossary.get(f"{base}|{pos}")
+        or CLOSED_CLASS.get(base)
+        or ""
+    )
 
 
 def tokenise(tokenizer: Tokenizer, text: str) -> list[dict]:
@@ -124,14 +150,28 @@ def tokenise(tokenizer: Tokenizer, text: str) -> list[dict]:
     return tokens
 
 
+def is_word(base: str) -> bool:
+    """數字、半形符號與拉丁字母不是要對譯的詞。
+
+    janome 把「2304」與「(」都標成名詞，於是第一輪跑出「二千三百零四」「左括號」
+    這種詞義——萬葉集的歌番號被當成生詞在教。它們照原樣印，不給詞義。
+    """
+    stripped = base.strip()
+    if not stripped:
+        return False
+    if stripped.isdigit() or stripped.isascii():
+        return False
+    return not all(ch in "０１２３４５６７８９〇一二三四五六七八九十" for ch in stripped)
+
+
 def needs_model(base: str, pos: str, vocab: dict[str, str]) -> bool:
     if pos in CLOSED_POS or base in CLOSED_CLASS or base in vocab:
         return False
-    return bool(base.strip())
+    return is_word(base)
 
 
 def validate(gloss: str) -> str | None:
-    gloss = (gloss or "").strip().strip("。，,、 ")
+    gloss = to_traditional((gloss or "").strip().strip("。，,、 "))
     if not gloss:
         return None
     if len(gloss) > GLOSS_MAX or KANA.search(gloss) or LATIN.search(gloss):
@@ -229,17 +269,8 @@ def main() -> int:
     missing = 0
     for unit in units.values():
         for token in unit["tokens"]:
-            key = f"{token['base']}|{token['pos']}"
-            gloss = (
-                vocab.get(token["base"])
-                or CLOSED_CLASS.get(token["base"])
-                or CLOSED_CLASS.get(token["word"])
-                or glossary.get(key)
-                or ""
-            )
-            if token["pos"] == "記号":
-                gloss = ""
-            elif not gloss:
+            gloss = gloss_for(token, vocab, glossary)
+            if not gloss and token["pos"] != "記号" and is_word(token["base"]):
                 missing += 1
             token["glossZh"] = gloss
             token.pop("base", None)

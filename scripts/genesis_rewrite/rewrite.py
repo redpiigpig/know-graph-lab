@@ -533,8 +533,8 @@ def main() -> None:
     NVIDIA_KEYS = _find_keys(("NVIDIA_API_KEY", "NVIDIA_API_Key", "NVAPI_KEY"))
     if not args.dry_run and not GEMINI_KEYS:
         sys.exit("找不到 GEMINI_API_KEY，停。")
-    print(f"引擎：Gemini {GEMINI_MODEL} × {len(GEMINI_KEYS)} key"
-          f"（備援 NVIDIA × {len(NVIDIA_KEYS)}）\n")
+    print(f"引擎：Gemini {'／'.join(GEMINI_MODELS)} × {len(GEMINI_KEYS)} key"
+          f"（{len(GEMINI_MODELS) * len(GEMINI_KEYS)} 組合，備援 NVIDIA × {len(NVIDIA_KEYS)}）\n")
 
     if not args.dry_run and not take_lock():
         return

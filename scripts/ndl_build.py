@@ -209,6 +209,136 @@ TITLE_LINE_TYPES = {"タイトル本文", "タイトル"}
 _INDENT_PX = 35
 
 
+# 偵測 ruby 亂碼用。只看滿欄行（段末短行本來就字少），
+# 密度低於同書中位數這個比例就算可疑。
+_FULL_COLUMN_PX = 800
+_GARBLED_RATIO = 0.82
+
+
+def _line_density(line: dict) -> float:
+    s = (line.get("string") or "").replace(" ", "").replace("　", "")
+    h = int(line.get("height") or 0)
+    return (len(s) / h) if (h and s) else 0.0
+
+
+def median_line_density(lines: list) -> float:
+    """同一本書的滿欄行字數密度中位數（每本字級與欄高都不同，門檻不能寫死）。"""
+    import statistics
+    d = [_line_density(l) for l in lines
+         if l.get("type") in BODY_LINE_TYPES and int(l.get("height") or 0) >= _FULL_COLUMN_PX]
+    d = [x for x in d if x]
+    return statistics.median(d) if d else 0.0
+
+
+def garbled_lines(lines: list, median_density: float) -> list:
+    """疑似被振り仮名打亂的行。
+
+    NDL 的 OCR 會把小字注音混進正文字序，整行變成亂碼，而且**沒有另外標 TYPE**，
+    全混在「本文」裡擋不掉，只能事後偵測。亂掉的行會少掉一截字，
+    所以字數對欄高的密度明顯低於同書中位數。
+
+    🚨 這只是**線索不是判準**：目次、版權頁那種寬鬆排版也會被撈進來。
+    撈出來的每一行都要回頭看原圖才能確認與更正。
+    """
+    if not median_density:
+        return []
+    out = []
+    for l in lines:
+        if l.get("type") not in BODY_LINE_TYPES:
+            continue
+        if int(l.get("height") or 0) < _FULL_COLUMN_PX:
+            continue
+        d = _line_density(l)
+        if d and d < median_density * _GARBLED_RATIO:
+            out.append(l)
+    return out
+
+
+# 正文頁的滿欄率 ≥0.87、奧付與廣告頁 ≤0.07，差距大到不必調參。
+_BACK_MATTER_RATIO = 0.5
+
+
+def page_full_column_ratio(lines: list) -> float:
+    """一頁的滿欄率＝滿欄行 ÷ 本文行。奧付與廣告頁全是短行，值會掉到近 0。"""
+    body = [l for l in lines if l.get("type") in BODY_LINE_TYPES]
+    if not body:
+        return 0.0
+    full = [l for l in body if int(l.get("height") or 0) >= _FULL_COLUMN_PX]
+    return len(full) / len(body)
+
+
+# 🚨 行數太少時滿欄率沒有意義：《初代の人々》img71 是雜誌廣告，只有 2 行本文、
+#    1 行滿欄 → 0.50 剛好過關，害版權頁整段被翻進末章。先要求最低行數。
+_MIN_BODY_LINES = 5
+
+
+def is_body_page(lines: list) -> bool:
+    """這一頁是正文頁嗎（而不是奧付、廣告、白頁）。
+
+    兩個條件都要過：本文行夠多，且滿欄率夠高。
+    正文頁滿欄率 ≥0.87、奧付與廣告頁 ≤0.07，差距大到不必調參。
+    """
+    body = [l for l in lines if l.get("type") in BODY_LINE_TYPES]
+    if len(body) < _MIN_BODY_LINES:
+        return False
+    return page_full_column_ratio(lines) >= _BACK_MATTER_RATIO
+
+
+_BREAK_GAP_RATIO = 3.0     # X 跳躍超過正常欄距這麼多倍才算版面斷點
+_BREAK_HEIGHT_RATIO = 0.7  # 且其後的行要明顯變矮
+
+
+def body_lines_before_layout_break(lines: list) -> list:
+    """過渡頁：切掉正文之後接著排的書籍廣告／奧付。
+
+    正文在該頁結束、廣告從同一頁接著排時，頁層級的判斷擋不掉（該頁確實有正文）。
+    直排書的欄位 X 是等距遞減的，廣告區塊會另起一欄組，X 出現遠大於欄距的跳躍，
+    而且字級變小（欄高只剩一半）。
+
+    🚨 **兩個訊號要同時成立才切**：只看欄高會把段末短行誤砍，
+    只看 X 跳躍會誤砍跨欄插圖。
+    """
+    body = sorted([l for l in lines if l.get("type") in BODY_LINE_TYPES],
+                  key=lambda l: int(l["order"]))
+    if len(body) < 6:
+        return body
+    xs = [int(l["x"]) for l in body]
+    gaps = [abs(xs[i] - xs[i + 1]) for i in range(len(xs) - 1)]
+    normal = sorted(gaps)[len(gaps) // 2] or 1
+    for i, g in enumerate(gaps):
+        if g < normal * _BREAK_GAP_RATIO:
+            continue
+        head, tail = body[:i + 1], body[i + 1:]
+        if len(head) < 3 or not tail:
+            continue
+        hh = sorted(int(l["height"]) for l in head)[len(head) // 2]
+        th = sorted(int(l["height"]) for l in tail)[len(tail) // 2]
+        if hh and th < hh * _BREAK_HEIGHT_RATIO:
+            return head
+    return body
+
+
+def trim_back_matter(sections: list, ratios: dict) -> list:
+    """把最後一章的範圍從奧付／廣告頁縮回來。
+
+    NDL 目次通常沒有「奧付」這一條，所以最後一章會一路吃到書末，
+    **把版權頁與出版社的書籍廣告都當成正文翻進去**。
+
+    🚨 整段都被判成後付時原樣留著 —— 寧可多留也不要生出空章。
+    """
+    if not sections or not ratios:
+        return sections
+    body_imgs = [i for i, r in ratios.items() if r >= _BACK_MATTER_RATIO]
+    if not body_imgs:
+        return sections
+    last_body = max(body_imgs)
+    out = [dict(s) for s in sections]
+    for s in out:
+        if s["end"] > last_body + 1 and s["start"] <= last_body:
+            s["end"] = last_body + 1
+    return out
+
+
 def parse_layout_xml(data: bytes) -> list:
     """NDL layouttext 的一頁 XML → LINE dicts（order／x／y／height／type／string）。
 
@@ -289,7 +419,7 @@ PLACEHOLDER_RULES = [
     (r"末の〓からう", "末の淸からう"),
     # 其他經判讀的單字
     (r"罪は〓められ", "罪は赦められ"),
-    (r"順序は〓ね", "順序は概ね"),
+    (r"〓ね", "概ね"),   # 敎ね／硏ね 都不是詞，這條放寬安全
     (r"〓黨の間", "鄕黨の間"),
     # 通用：本語料裡 〓 絕大多數是「敎」（舊字體，NDL 字集沒有）
     (r"〓", "敎"),
@@ -670,6 +800,24 @@ def build_sections(pid: str, slug: str, cache_dir: Path = CACHE_DIR,
     import json
     book = fetch_book(pid)
     secs = sections_from_index(book["index"], book["pages"], book["title"])
+    # 目次通常沒有「奧付」，最後一章會一路吃到書末，把版權頁與書籍廣告翻進去
+    zp = cache_dir / pid / "layouttext.zip"
+    if zp.exists():
+        import zipfile
+        ratios = {}
+        with zipfile.ZipFile(zp) as z:
+            for n in z.namelist():
+                if not n.endswith(".xml"):
+                    continue
+                try:
+                    img = int(n.rsplit("_", 1)[1].split(".")[0])
+                except (IndexError, ValueError):
+                    continue
+                ratios[img] = 1.0 if is_body_page(parse_layout_xml(z.read(n))) else 0.0
+        before = [s0["end"] for s0 in secs]
+        secs = trim_back_matter(secs, ratios)
+        if [s0["end"] for s0 in secs] != before:
+            print("  裁掉後付：末章 end %d → %d" % (before[-1], secs[-1]["end"]))
     pages = {}
     for txt in sorted((cache_dir / pid / ("ocr-" + backend)).glob("*.txt")):
         pages[int(txt.stem)] = txt.read_text(encoding="utf-8")
