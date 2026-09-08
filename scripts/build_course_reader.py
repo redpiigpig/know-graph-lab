@@ -516,6 +516,21 @@ class Book:
 
 
 
+_DAY_ORDER = {"週一": 1, "週二": 2, "週三": 3, "週四": 4, "週五": 5, "週六": 6, "週日": 7}
+
+
+def _week_key(entry) -> tuple:
+    """把「週六 W04–W05」「週一 W06-08／週六 W14」這種標籤排成可比較的鍵。
+
+    合本裡同一篇可能掛兩門課的週次，取最前面那個當排序依據。
+    """
+    week = entry[0]
+    day = next((v for k, v in _DAY_ORDER.items() if k in week), 0)
+    nums = re.findall(r"W(\d+)", week)
+    return (day, int(nums[0]) if nums else 99)
+
+
+
 def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]],
                   offset_guess: int) -> Book:
     """做封面與目錄。目錄要印頁碼，而頁碼取決於目錄自己有幾頁——所以呼叫端
@@ -549,6 +564,24 @@ def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]],
         bk.draw(x + 3, bk.y, dots, 9.8, color=(0.72,) * 3)
         bk.draw(BODY_X1 - wr, bk.y, num, 9.8)
         bk.y += 9.8 * LEAD_FACTOR
+
+    # 目錄照書的順序（分部），頁碼才會遞增；但要回答「第幾週讀什麼」得另外
+    # 按週次排一份。兩份都要，各自解決一個問題。
+    bk.y += 18
+    bk.flow("週次一覽", size=13, gap=10)
+    for week, label, page in sorted(entries, key=_week_key):
+        num = str(page + offset_guess)
+        left = f"{week}　{label}"
+        wl, wr = bk.measure(left, 9.4), bk.measure(num, 9.4)
+        room = (BODY_X1 - BODY_X0) - wl - wr - 6
+        dots = ""
+        while bk.measure(dots + "·", 9.4) < room:
+            dots += "·"
+        bk.space(9.4 * LEAD_FACTOR)
+        x = bk.draw(BODY_X0, bk.y, left, 9.4)
+        bk.draw(x + 3, bk.y, dots, 9.4, color=(0.72,) * 3)
+        bk.draw(BODY_X1 - wr, bk.y, num, 9.4)
+        bk.y += 9.4 * LEAD_FACTOR
     return bk
 
 
@@ -712,6 +745,11 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
             #    用檔名當鍵就會配上一份講的是別段文字的導引——看起來完全正常。
             key_id = f"{os.path.basename(path)}#{hashlib.sha1(body.encode()).hexdigest()[:10]}"
             if want_guide:
+                # 舊版的鍵只有檔名。內容沒變的話沒必要重跑一輪 LLM，
+                # 沿用舊值並就地改成新鍵。
+                legacy = os.path.basename(path)
+                if key_id not in cache and legacy in cache:
+                    cache[key_id] = cache.pop(legacy)
                 if key_id not in cache:
                     print(f"    · 產生閱讀導引：{disp[:44]}")
                     g = make_guide(disp, source, body)
