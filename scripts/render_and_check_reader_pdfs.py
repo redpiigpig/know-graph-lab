@@ -42,7 +42,8 @@ for stem in ("hebrew-flashcards-1000", "greek-flashcards-volume-1",
              "greek-flashcards-volume-2", "latin-flashcards-volume-1",
              "latin-flashcards-volume-2", "hebrew-flashcards-appendix",
              "greek-flashcards-appendix", "latin-flashcards-appendix",
-             "english-flashcards-1000"):
+             "english-flashcards-1000", "japanese-flashcards-volume-1",
+             "japanese-flashcards-volume-2", "japanese-flashcards-appendix"):
     TARGETS[stem] = (ROOT / "output/flashcards" / f"{stem}.docx", A4_LANDSCAPE, None)
 for stem in ("buddhist-playing-cards", "christian-playing-cards"):
     TARGETS[stem] = (ROOT / "output/playing-cards" / f"{stem}.docx", A4_LANDSCAPE, None)

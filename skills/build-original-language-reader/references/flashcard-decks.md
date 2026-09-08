@@ -15,6 +15,18 @@ and the same printer settings work for all of them.
 | 通用希臘文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/greek-flashcards-volume-2.pdf` |
 | 教會拉丁文・上冊 | 1,000 | 252 | **996 (99.6%)** | **0** | `output/flashcards/latin-flashcards-volume-1.pdf` |
 | 教會拉丁文・下冊 | 1,000 | 252 | **1,000 (100%)** | **0** | `output/flashcards/latin-flashcards-volume-2.pdf` |
+| 日文宗教學・第一冊 | 1,000 | 252 | 0（配圖未跑） | **0** | `output/flashcards/japanese-flashcards-volume-1.pdf` |
+| 日文宗教學・第二冊 | 1,000 | 252 | 0（配圖未跑） | **0** | `output/flashcards/japanese-flashcards-volume-2.pdf` |
+
+日文那兩副 2026-09-09 新增，是唯一與其他四副版式不同的：**正面只印漢字表記，讀音
+留到背面**，背面依序是假名（附來源頁面的重音斷點）、繁體中文、品詞。漢字圈的人學
+日文最容易蒙混過去的就是讀音，正面給了假名這副卡就考不到它。字級照 msmincho 的
+實際字寬量（全形字兩個就抵拉丁五六個），所以量字寬那條路從希伯來專用改成「有
+`fontFile` 就量」。
+
+**配圖還沒跑**：日文詞表帶 `glossEn`，OpenMoji 那一層技術上跑得動，但這一系列的
+規矩是第 2、3 層的結果一律要人看過（前四副 2,938 張裡判掉了 2,106 張）。兩千張的
+覆核是另一件工作，沒做之前整副留白——留白勝過配錯。
 
 All five are built, rendered, verified and pushed. DOCX sits beside each PDF.
 2026-08-31 全部依審過的配圖帳本重出一次；覆蓋率不變（刪掉的圖只是退回原本的
@@ -40,6 +52,11 @@ OpenMoji 圖，不是變成空白）。
 | 聖經希伯來文附錄 | 255 | 64 | 0 | `output/flashcards/hebrew-flashcards-appendix.docx` |
 | 通用希臘文附錄 | 511 | 128 | 114 | `output/flashcards/greek-flashcards-appendix.docx` |
 | 教會拉丁文附錄 | 745 | 188 | 191 | `output/flashcards/latin-flashcards-appendix.docx` |
+| 日文宗教學附錄 | 91 | 26 | 0 | `output/flashcards/japanese-flashcards-appendix.docx` |
+
+日文那一副只有 91 張，因為合約列的十張附錄目前只有三張有資料：專名 38、聖經佛經
+神道常用語句 36、文語助動詞 17。常用語句是整句，卡面字級按量出來的寬度縮到塞得下；
+卡背印中譯與出處（哪個傳統、哪一節經文）。
 
 The reader appendices hold the material that never enters the fifty lessons:
 proper names in nine categories, numerals and measures, kinship terms, the

@@ -90,6 +90,7 @@ INK = "1B1B1B"
 MUTED = "8A8A8A"
 
 POS_PT = 12
+READING_PT = 16
 LESSON_PT = 10
 IMAGE_MM = 32
 # 卡框：比照使用者桌面那副《家教單字卡.pdf》—— 量出來線寬 2.12 mm、緋紅
@@ -263,6 +264,48 @@ DECKS: dict[str, dict] = {
             "長音符號依原書標示；發音為羅馬式教會發音。",
         ],
     },
+    "ja1": {
+        "title": "日文宗教學單字卡・第一冊",
+        "vocab": ROOT / "data/originalReaders/vocabulary/japanese-2000.json",
+        "images": CACHE / "flashcards/japanese-card-images.json",
+        "icons": CACHE / "flashcards/japanese-card-icons.json",
+        "variants": CACHE / "flashcards/japanese-card-variants.json",
+        "output": "japanese-flashcards-volume-1.docx",
+        "font": "MS Mincho",
+        "fontFile": "C:/Windows/Fonts/msmincho.ttc",
+        "rtl": False,
+        "headword_pt": 40,
+        "shape": "japanese",
+        "volume": 1,
+        "sideNote": "正面：漢字表記與課次。背面：假名（附來源頁面的重音斷點）、"
+                    "繁體中文與品詞——正面不給讀音，這一副要考的正是「怎麼唸」。",
+        "sources": [
+            "詞表：《大家的日本語》初級 I→II 課次順序，經 u-biq 逐課頁重建。",
+            "重音斷點取自同一來源頁面；那是斷點不是重音型編號。",
+            "專名（國名、都市、人名）不佔課內詞額，另收於附錄卡。",
+        ],
+    },
+    "ja2": {
+        "title": "日文宗教學單字卡・第二冊",
+        "vocab": ROOT / "data/originalReaders/vocabulary/japanese-2000.json",
+        "images": CACHE / "flashcards/japanese-card-images.json",
+        "icons": CACHE / "flashcards/japanese-card-icons.json",
+        "variants": CACHE / "flashcards/japanese-card-variants.json",
+        "output": "japanese-flashcards-volume-2.docx",
+        "font": "MS Mincho",
+        "fontFile": "C:/Windows/Fonts/msmincho.ttc",
+        "rtl": False,
+        "headword_pt": 40,
+        "shape": "japanese",
+        "volume": 2,
+        "sideNote": "正面：漢字表記與課次。背面：假名（附來源頁面的重音斷點）、"
+                    "繁體中文與品詞——正面不給讀音，這一副要考的正是「怎麼唸」。",
+        "sources": [
+            "詞表：《大家的日本語》課次順序的後半，末段由宗教學語料頻率延伸補足。",
+            "重音斷點取自同一來源頁面；那是斷點不是重音型編號。",
+            "專名（國名、都市、人名）不佔課內詞額，另收於附錄卡。",
+        ],
+    },
     "lat2": {
         "title": "教會拉丁文單字卡・下冊",
         "vocab": ROOT / "data/originalReaders/vocabulary/latin-2000.json",
@@ -321,6 +364,22 @@ APPENDIX_DECKS: dict[str, dict] = {
             "中文：和合本修訂版。",
         ],
     },
+    "ja-appendix": {
+        "title": "日文宗教學附錄卡",
+        "source": ROOT / "data/originalReaders/vocabulary/japanese-proper-names.json",
+        "formulas": ROOT / "data/originalReaders/vocabulary/japanese-formulas.json",
+        "shape": "japanese",
+        "output": "japanese-flashcards-appendix.docx",
+        "font": "MS Mincho",
+        "fontFile": "C:/Windows/Fonts/msmincho.ttc",
+        "rtl": False,
+        "headword_pt": 34,
+        "sources": [
+            "名單：讀本的三張附錄——專名、聖經佛經神道常用語句、文語助動詞。",
+            "常用語句是人工策展的表，逐條標明傳統與出處；卡背印出處。",
+            "合約列的其餘七張附錄還沒有資料，所以這一副目前只有這三節。",
+        ],
+    },
     "lat-appendix": {
         "title": "教會拉丁文附錄卡",
         "source": ROOT / "data/originalReaders/vocabulary/latin-appendices.json",
@@ -373,6 +432,30 @@ def appendix_rows(deck: dict) -> list[tuple[str, str, str]]:
                         form = (entry.get(slot) or {}).get("pointed")
                         if form:
                             rows.append((form, f"{gloss}（{mark}）", label))
+        return rows
+
+    if deck["shape"] == "japanese":
+        for item in payload["items"]:
+            gloss = (item.get("zh") or "").strip()
+            if gloss:
+                rows.append((item.get("kanji") or item["kana"], gloss,
+                             item.get("category") or "專名"))
+        formulas = json.loads(deck["formulas"].read_text(encoding="utf-8"))
+        for group in formulas["groups"]:
+            for entry in group["entries"]:
+                zh = (entry.get("zh") or "").strip()
+                if zh:
+                    rows.append((entry["ja"], f"{zh}　{entry.get('source', '')}".strip(),
+                                 group["title"]))
+        import sys as _sys
+        _sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from build_japanese_interlinear import CLOSED_CLASS
+
+        for form in ("き", "けり", "つ", "ぬ", "たり", "り", "べし", "ず", "む",
+                     "らむ", "けむ", "なり", "ごとし", "しむ", "らる", "まし", "めり"):
+            gloss = CLOSED_CLASS.get(form, "")
+            if gloss:
+                rows.append((form, gloss, "文語助動詞"))
         return rows
 
     if deck["shape"] == "greek":
@@ -682,16 +765,18 @@ def headword_size(deck: dict, text: str) -> float:
     """Greek citation forms are long (ἄγγελος, -ου, ὁ); shrink so they fit."""
 
     base = deck["headword_pt"]
-    if deck.get("rtl"):
-        # 希伯來字頭的寬度跟字母數不成比例：מִשְׁפָּחָה 五個字母比 מַלְכוּת 寬得多。
-        # 所以直接量字寬，取「塞得進卡片」的字級 —— 量出來的值與 LibreOffice 排出
-        # 來的差 0.1 mm 以內。量不到字型檔才退回字母數階梯。
+    # 有字型檔就直接量字寬，取「塞得進卡片」的字級——量出來的值與 LibreOffice 排出
+    # 來的差 0.1 mm 以內。希伯來字頭的寬度跟字母數不成比例（מִשְׁפָּחָה 五個字母比
+    # מַלְכוּת 寬得多），日文則是全形，兩個字就抵得上拉丁的五六個。量不到字型檔的
+    # 才退回字數階梯。
+    if deck.get("fontFile"):
         measured = face(deck.get("fontFile", ""))
         if measured is not None:
             em = measured.getlength(text) / 100
             if em > 0:
                 fits = HEADWORD_MAX_MM / 25.4 * 72 / em
                 return min(base, round(fits * 2) / 2)
+    if deck.get("rtl"):
         for limit, factor in ((5, 1.0), (7, 0.86), (9, 0.72), (11, 0.60), (99, 0.50)):
             if consonants(text) <= limit:
                 return base * factor
@@ -730,6 +815,10 @@ def fill_front(cell, card: dict, deck: dict, place: tuple[int, int, int]) -> Non
     write(footer, card_footer(card), FONT_UI, LESSON_PT, color=MUTED)
 
 
+def deck_font_for(card: dict) -> str:
+    return card.get("readingFont") or FONT_ZH
+
+
 def fill_back(cell, card: dict, picture: Path | None, place: tuple[int, int, int]) -> None:
     cell = framed(cell, card.get("colorKey", card["lesson"]), place)
     if picture:
@@ -739,6 +828,13 @@ def fill_back(cell, card: dict, picture: Path | None, place: tuple[int, int, int
         paragraph.add_run().add_picture(str(picture), width=Mm(IMAGE_MM))
     else:
         blank(cell, 20)
+    # 日文那副正面只給漢字，讀音要在背面——不然這副卡考不到「怎麼唸」，
+    # 而那正是漢字圈的人學日文最容易蒙混過去的一件事。
+    if card.get("reading"):
+        reading = cell.add_paragraph()
+        reading.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        reading.paragraph_format.space_after = Pt(2)
+        write(reading, card["reading"], deck_font_for(card), READING_PT, color=INK)
     meaning = cell.add_paragraph()
     meaning.alignment = WD_ALIGN_PARAGRAPH.CENTER
     meaning.paragraph_format.space_after = Pt(3)
@@ -833,7 +929,10 @@ def load_cards(deck: dict) -> list[dict]:
     entries = json.loads(deck["vocab"].read_text(encoding="utf-8"))
     gloss_payload = (json.loads(deck["glosses"].read_text(encoding="utf-8"))
                      if "glosses" in deck else {})
-    images = json.loads(deck["images"].read_text(encoding="utf-8"))["images"]
+    # 還沒跑過配圖的那一副（日文是 2026-09-09 才新增的）沒有這個檔；沒有圖就整副
+    # 留白，不是錯誤——這一系列的規矩是留白勝過配錯。
+    images = (json.loads(deck["images"].read_text(encoding="utf-8"))["images"]
+              if "images" in deck and deck["images"].exists() else {})
     icons = (json.loads(deck["icons"].read_text(encoding="utf-8"))["cards"]
              if "icons" in deck and deck["icons"].exists() else {})
     # 「同概念換一套畫法」那一層：twemoji／noto／fluent-emoji-flat… 的同一個概念，
@@ -866,6 +965,30 @@ def load_cards(deck: dict) -> list[dict]:
                 "pos": entry["themeZh"],
                 "lesson": entry["lesson"],
                 "picture": CACHE / "flashcards" / record["file"],
+            })
+        return cards
+
+    if deck.get("shape") == "japanese":
+        import sys as _sys
+        _sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from build_japanese_full_reader import accent_marks
+
+        rows = [item for item in entries["entries"] if item["volume"] == deck["volume"]]
+        for entry in sorted(rows, key=lambda item: (item["readerLesson"], item["lessonSlot"])):
+            gloss = (entry.get("glossZh") or "").strip()
+            if not gloss:
+                raise SystemExit(f"{entry.get('kanji') or entry['kana']} 缺繁中詞義")
+            key = f"{entry.get('kanji') or ''}|{entry['kana']}"
+            cards.append({
+                "key": key,
+                # 正面只印書寫形；讀音留到背面，否則這一副考不到讀音。
+                "headword": entry.get("kanji") or entry["kana"],
+                "reading": accent_marks(entry) or entry["kana"],
+                "readingFont": deck["font"],
+                "glossZh": gloss,
+                "pos": entry.get("pos") or "",
+                "lesson": entry["readerLesson"],
+                "picture": picture(key),
             })
         return cards
 
