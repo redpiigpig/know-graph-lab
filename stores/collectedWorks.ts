@@ -3020,7 +3020,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           genre: 'treatise',
           languages: ['ja', 'zh'],
           status: 'done',
-          ebookId: 'e0000000-0000-4000-8000-000000000001',
+          ebookId: 'e1000000-0000-4000-8000-000000000001',
           note: '東方書院 1934。NDL 掃描本（pid 1099766，インターネット公開）→ **NDL 官方 OCR（layouttext）**＋版面段落還原 → 日文原文＋繁中逐段對照，全 9 章 59 段。已逐字精修：與原圖對讀無誤。本 portal 第一部走 NDL 取源的書。',
         },
         {
@@ -3031,7 +3031,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           category: '無教會主義論',
           languages: ['ja'],
           status: 'done',
-          ebookId: 'e0000000-0000-4000-8000-000000000003',
+          ebookId: 'e1000000-0000-4000-8000-000000000003',
           note: 'NDL pid 1210131。官方 OCR＋版面段落還原，6 章 128 段，日文原文＋繁中對照。🚨 原文尚有 10 處 〓。',
         },
         // ── 聖書註解 ──
@@ -3104,7 +3104,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           category: '信仰隨筆與講話',
           languages: ['ja'],
           status: 'done',
-          ebookId: 'e0000000-0000-4000-8000-000000000002',
+          ebookId: 'e1000000-0000-4000-8000-000000000002',
           note: 'NDL pid 1033439。官方 OCR（layouttext）＋版面段落還原，10 章 174 段，日文原文＋繁中對照。🚨 原文尚有 7 處 〓（NDL 字集外的舊字體，語境判不出來就留著記號，不猜）。',
         },
         // ── 詩人研究（他的專門領域）──

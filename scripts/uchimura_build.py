@@ -281,6 +281,47 @@ def needs_translation(src: str) -> bool:
     return bool(_JP_RE.search(src or ""))
 
 
+# 🚨 引擎偶爾不翻，改用對話語氣回「我已準備好，請提供日文原文」。那句會被原樣
+# 當成譯文存進去，而且因為排在段首還會變成**章節標題**（chapter_path 就長成
+# 「時論與信仰 · 我已準備」）。高發於原文是殘片時——只有「１」或「である。」，
+# 引擎（合理地）要求補完整。已在矢內原《讀書與著書》《耶穌傳》與賀川《垂訓》
+# 共 7 段上線後才抓到。正解是留白不是硬翻：reader 端未填的段落會顯示原文。
+# 判元回覆要**兩個條件同時成立**：對話語氣＋談翻譯任務本身。只看語氣會誤殺
+# 正文（「我已準備妥當，要往耶路撒冷去」整句被丟掉過）；只看任務詞會漏。
+_META_TONE = re.compile(
+    r"我已準備|我準備好|請提供|請貼上|請給我|我注意到您|您未提供|您提供的|"
+    r"我理解您|我將按照|我會按照|親愛的使用者|作為.{0,8}(?:譯者|助手)|"
+    r"無法翻譯|I'm ready|Please provide")
+_META_TASK = re.compile(r"原文|翻譯|日文|文本|段落|規則|內容|片段")
+_SENT_RE = re.compile(r"[^。．.!！?？\n]{0,160}[。．.!！?？\n]\s*")
+
+
+def _is_meta(sent: str) -> bool:
+    return bool(_META_TONE.search(sent) and _META_TASK.search(sent))
+
+
+def strip_meta_reply(out: str, window: int = 6) -> str:
+    """剝掉開頭的對話式元回覆；整段都是元回覆就回空字串。
+
+    切點取**開頭 window 句裡最後一句**元回覆，不是第一句非元回覆就收手——
+    引擎常在中間夾一句沒有語氣詞的解釋（「這似乎是片段。」），
+    逐句就停會把後面真正的譯文一起丟掉。
+    """
+    s = (out or "").strip()
+    if not s:
+        return ""
+    ends, pos = [], 0
+    for _ in range(window):
+        m = _SENT_RE.match(s, pos)
+        if not m:
+            break
+        ends.append((m.end(), _is_meta(m.group(0))))
+        pos = m.end()
+    cut = max((e for e, meta in ends if meta), default=0)
+    s = re.sub(r"^[）)』」】\s]+", "", s[cut:].lstrip())   # 剝完的孤兒右括號
+    return "" if cut and not s else s
+
+
 def clean_zh_output(out: str) -> str:
     """Engine output → exactly ONE zh paragraph (keep reader row counts equal).
 
@@ -288,7 +329,7 @@ def clean_zh_output(out: str) -> str:
     source-echo in the form 「日文原文 → 譯文」 on short lines (detected by kana
     in the left half). A genuine `## ` heading line passes through untouched;
     other model-added heading lines are dropped; newlines collapse to spaces."""
-    out = (out or "").replace("�", "").replace("﻿", "")
+    out = strip_meta_reply((out or "").replace("�", "").replace("﻿", ""))
     m = re.match(r"^(.*?)\s*→\s*(.+)$", out.strip(), re.S)
     if m and _KANA_RE.search(m.group(1)):
         out = m.group(2)

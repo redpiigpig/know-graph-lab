@@ -93,6 +93,19 @@ def _sec_path(slug: str, idx: int) -> Path:
     return d / f"sec{idx}.json"
 
 
+# 🚨 引擎有時只翻一半、有時整段回抄原文，兩種都會原樣寫進譯文欄，而 reader 照排，
+# 頁面完全正常——讀者看到的是「中文欄位裡的日文」。2026-09-09 掃出 160 段
+# （《帝國主義下的台灣》15.7%、《基督教入門》7.8%、《耶穌傳》4.0%）。
+# 中文正文不會有假名，所以「譯文帶假名」是很乾淨的判準。
+_KANA_RE = re.compile(r"[ぁ-ゟ゠-ヿ]")
+
+
+def _kana_leak(src: str, out: str) -> bool:
+    """譯文帶假名＝沒真的翻。原文本來就不是日文散文的段落不算
+    （英德詩行、「＊　＊　＊」分隔、表格框線——那些 _needs 已經排除）。"""
+    return bool(out and _needs(src) and _KANA_RE.search(out))
+
+
 # ── translate (checkpoint per section, resumable) ────────────────────────────
 def translate_work(slug: str, translate_para, *, save_every: int = 5,
                    maxparas: int | None = None) -> int:
@@ -125,6 +138,10 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
 
         for done, j in enumerate(todo, 1):
             out = translate_para(src[j])
+            if _kana_leak(src[j], out):
+                out = translate_para(src[j])          # 換 key／換引擎再試一次
+                if _kana_leak(src[j], out):
+                    out = ""                          # 留白，別把日文當譯文存
             if out:
                 zh[j] = out
                 translated += 1

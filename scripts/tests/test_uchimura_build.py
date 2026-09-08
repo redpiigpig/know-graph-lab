@@ -156,3 +156,49 @@ class TestNeedsTranslation:
         assert not ub.needs_translation("＊　　　＊　　　＊　　　＊")
         assert not ub.needs_translation("└────┴───┴────┴───┘")
         assert not ub.needs_translation("")
+
+
+class TestStripMetaReply:
+    """引擎不翻、改用對話語氣回「請提供日文原文」時，那句會被原樣存成譯文，
+    而且因為排在段首還會變成章節標題（chapter_path 長成「時論與信仰 · 我已準備」）。
+    高發於原文只剩殘片（「１」「である。」）的時候。
+
+    這些字串是從線上真的中鏢的 7 段抄回來的：矢內原《讀書與著書》4 段、
+    《耶穌傳》2 段、賀川《垂訓》1 段。"""
+
+    def test_leading_meta_is_removed_keeping_translation(self):
+        got = ub.strip_meta_reply(
+            "我已準備好接收日文原文進行翻譯。 請提供需要翻譯的日文原文內容。"
+            "讀書是快樂，著述則是苦痛。")
+        assert got == "讀書是快樂，著述則是苦痛。"
+
+    def test_meta_interleaved_with_non_meta_sentence(self):
+        # 「這似乎是片段。」本身沒有語氣詞；逐句一碰到它就收手，
+        # 後面真正的譯文會被整段丟掉。切點要取開頭數句裡的**最後**一句元回覆。
+        got = ub.strip_meta_reply(
+            "我準備好了。 請提供要翻譯的日文原文段落。目前只看到「である。」"
+            "這個句點，這似乎是片段。 請貼上完整的日文文本，我會按照您的規則"
+            "逐段翻譯成繁體中文。 今日所講的是神之國。")
+        assert got == "今日所講的是神之國。"
+
+    def test_orphan_bracket_left_by_the_cut_is_removed(self):
+        got = ub.strip_meta_reply(
+            "我已準備好進行翻譯。請提供日文原文，我將按照您列舉的所有規則，"
+            "翻譯成典雅可讀的繁體中文書面語。（目前只看到「１」，"
+            "請提供完整的日文原文內容。）「貴下現在在做什麼？」有人如此問我。")
+        assert got.startswith("「貴下現在在做什麼？")
+
+    def test_whole_output_is_meta_returns_blank(self):
+        # 留白比硬翻好：reader 端未填的段落會顯示原文。
+        assert ub.strip_meta_reply("我已準備好進行翻譯。請提供日文原文。") == ""
+
+    def test_genuine_prose_is_not_touched(self):
+        # 只看語氣詞會誤殺正文——這兩句都帶「準備」「提供」「注意到您」。
+        for s in ("神所提供的恩典，遠超乎人所能求所能想。",
+                  "我已準備妥當，要往耶路撒冷去。",
+                  "他注意到您所說的那句話。"):
+            assert ub.strip_meta_reply(s) == s
+
+    def test_clean_zh_output_applies_the_strip(self):
+        assert ub.clean_zh_output(
+            "我已準備好進行翻譯。請提供日文原文。信仰即是生命。") == "信仰即是生命。"
