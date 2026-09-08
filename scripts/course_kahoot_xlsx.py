@@ -27,7 +27,7 @@ DRIVE = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\教學')
 
 COURSES = {
     'wr': ('115-1_世界宗教文化導論', 'world-religions-intro', 'wr2', '世界宗教文化導論'),
-    'sl': ('宗教系國文講義', 'sinographic-literature', 'sl1', '宗教系國文講義'),
+    'sl': ('115-1_宗教系國文講義', 'sinographic-literature', 'sl1', '宗教系國文講義'),
     'ch': ('115-1_基督宗教概論', 'christianity-intro', 'ch1', '基督宗教概論'),
 }
 
@@ -37,8 +37,11 @@ Q_MAX, A_MAX = 95, 60
 TIME_LIMIT = 30          # 允許值：5, 10, 20, 30, 60, 90, 120, 240
 
 
-def strip(html):
-    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', html)).strip()
+def strip(s):
+    # 🚨 先 unescape 再去標籤：小考 HTML 裡的 <em> 是以 &lt;em&gt; 存的，
+    #    只去標籤的話會把「&lt;em&gt;gaga&lt;/em&gt;」原封不動送進 Kahoot。
+    import html as _h
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', _h.unescape(s))).strip()
 
 
 def parse_quiz(path):

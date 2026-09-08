@@ -337,8 +337,9 @@ A4 橫式、每頁 8 張、71.25×98 mm、圓角框內縮 3 mm、不印裁切線
 腳本照樣印 ✔——但 `IMGDIR` 跟著錯，`_manifest.json` 讀不到，於是整批簡報的圖
 全變成「（缺圖：key）」佔位框。這一輪就這樣讓 PPA066 出了 10 頁缺圖才被抓到。
 
-這個資料夾名在**三個檔各存一份**，改一處不夠：
-`course_slides_pptx.COURSES`、`course_slides_weekly.SOURCE`、`course_syllabus_docx` 的 `folder`。
+這個資料夾名在**五個檔各存一份**，改一處不夠：
+`course_slides_pptx.COURSES`、`course_slides_weekly.SOURCE`、`course_syllabus_docx` 的 `folder`、
+`course_quiz_build.COURSES['sl']['folder']`、`course_kahoot_xlsx.COURSES['sl'][0]`。
 改完先看 `教學\` 底下有沒有冒出多餘的資料夾，再抽查簡報有沒有「缺圖」字樣。
 
 ### 🚨 Drive 上的圖第一次讀會 OSError: [Errno 22]
@@ -362,3 +363,42 @@ python scripts/course_syllabus_docx.py --sync          # 四門全對齊既有�
 
 ⚠ 範本 `114.2基督宗教概論2026.03.03.docx` 已不在桌面，整份重建（不加 `--sync`）
 現在會失敗；要改既有檔就只能走 `--sync` 或 `--schedule-only`。
+
+
+## 🚨 題庫裡的 `<em>` 曾經三邊一起壞
+
+題幹與選項會用 `<em>` 標原文詞（<em>gaga</em>、<em>odù</em>、<em>ceque</em>…）。
+2026-09-09 發現這段標記**三種成品全部壞掉**，而且壞了很久沒人看出來：
+
+| 成品 | 學生看到的 |
+|---|---|
+| 線上小考 HTML | 字面的 `<em>gaga</em>`（`html.escape` 把它變成 `&lt;em&gt;`，瀏覽器照字面顯示） |
+| 紙本考卷 docx | 字面的 `<em>gaga</em>`（Word 不吃行內 HTML） |
+| Kahoot xlsx | `&lt;em&gt;gaga&lt;/em&gt;`（轉換器只去標籤、沒有 unescape） |
+
+修法各不相同：HTML 用 `rich()` 放行 `<em>` 其餘照跳脫；docx 在 `run_ea()` 用 `plain()`
+把標記拿掉；Kahoot 的 `strip()` **先 unescape 再去標籤**。
+
+⚠ **`balanced()` 的雜湊維持吃 `html.escape` 的原字串，不要跟著改**——
+動它會讓 480 題的正解位置整批位移，等於全部重印。
+
+## Kahoot 與「開放性」
+
+使用者問過「Kahoot 題目有沒有開放性」。**Kahoot 只能單選＋限時，結構上不可能開放**，
+別硬做。開放性在另一個地方：`course_slides_openers.py` 的 `answer` 三題手機簡答
+（三課共 72 題）與 `ask` 五題口頭問答（120 題），那批本來就是設計成沒有標準答案的。
+
+### 情境鉤子（2026-09-09）
+
+稽核 480 題發現字數與題型都沒問題，但**只有 4 題帶情境鉤子**，其餘是
+「X 的性質是：」這種填空式辨識——限時搶答時只是比誰背得熟。
+使用者決定「每次上課挑 3 題改寫」，`course_quiz_hooks.py` 逐題置換題幹
+（8 次 × 3 課 ＝ 72 題），**只換題幹、選項與正解不動**，所以不會踩到
+「小考只考簡報講過的」，正解位置也自動維持三邊同序。
+
+寫鉤子的兩條線：**鉤子不能把答案講出來**（「讀完整部大藏經是不可能的，
+但推它轉一圈可以」直接就是轉輪藏那題的答案，得改成「同一類的設計還有轉經輪、
+念珠與功過格」）；**不要引入講義／簡報沒有的新事實**。
+
+順帶抓到第五章與第十五章有一題**題幹一字不差的重複題**（西拉雅阿立祖），
+同一個學生一學期會被問兩次；`course_quiz_hooks.DEDUP` 讓第十五章那題換切入角度。

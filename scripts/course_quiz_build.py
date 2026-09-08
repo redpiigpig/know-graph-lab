@@ -41,7 +41,7 @@ COURSES = {
                folder='115-1_基督宗教概論'),
     'sl': dict(slug='sinographic-literature', book_id='SL1', prefix='sl1',
                chapters='chapters', title='宗教系國文講義',
-               folder='宗教系國文講義'),
+               folder='115-1_宗教系國文講義'),
 }
 
 
@@ -101,9 +101,22 @@ def balanced(n, i, opts, ans):
     return ordered, ordered.index(opts[ans])
 
 
+# 題庫的題幹與選項會用 <em> 標原文詞（gaga、odù、ceque…）。
+# 🚨 這段標記三邊都曾經壞掉：html.escape 把它變成 &lt;em&gt;，於是線上版顯示字面的
+#    「<em>gaga</em>」、紙本考卷照印、Kahoot 匯入檔也帶著實體。以下兩支各自處理：
+#    HTML 放行 <em>（其餘照跳脫），docx 直接把標記拿掉（Word 不吃行內 HTML）。
+#    ⚠ balanced() 的雜湊維持吃 html.escape 的原字串——動它會讓正解位置整批位移。
+def rich(t):
+    return (html.escape(t).replace('&lt;em&gt;', '<em>').replace('&lt;/em&gt;', '</em>'))
+
+
+def plain(t):
+    return re.sub(r'</?em>', '', t)
+
+
 # ── 線上版 HTML ─────────────────────────────────────────────────────────────
 def build_html(n, q):
-    e = html.escape
+    e = rich
     out = [f'<p class="quiz-meta">{COURSE_TITLE}　第{cn(n)}章小考　'
            f'{e(chapter_title(n))}　共 10 題，每題 10 分</p>',
            '<h4>選擇題</h4>', '<ol>']
@@ -127,7 +140,7 @@ def build_html(n, q):
 
 # ── 紙本考卷 ────────────────────────────────────────────────────────────────
 def run_ea(par, text, font=MING, size=11.0, bold=False, color=None):
-    r = par.add_run(text)
+    r = par.add_run(plain(text))
     r.font.name = 'Times New Roman'
     r._element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), font)
     r.font.size = Pt(size)
