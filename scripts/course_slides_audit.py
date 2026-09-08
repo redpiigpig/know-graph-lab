@@ -61,13 +61,23 @@ def overlap(a, b):
     return min(r.get_area() / small, r.height / vh)
 
 
-def rules(page):
-    """細長橫條——標題下那條分隔線。壓到字就是版面壞了。"""
+def rules(page, texts=()):
+    """細長橫條——標題下那條分隔線。壓到字就是版面壞了。
+
+    🚨 **超連結的底線也是細長橫條**，而且必然「壓」在自己那行字上。
+    2026-09-09 就這樣誤報使用者手改的那一頁，說他打的字被線壓到——
+    去把那一頁畫成圖來看才發現線是「Dacher Keltner」的底線。
+    所以凡是橫向被某一行字包住、又貼在那行字底部的，一律是底線不是分隔線。
+    """
     out = []
     for d in page.get_drawings():
         r = fitz.Rect(d['rect'])
-        if r.height < 6 and r.width > 100:
-            out.append(r)
+        if r.height >= 6 or r.width <= 100:
+            continue
+        if any(t.x0 - 2 <= r.x0 and r.x1 <= t.x1 + 2 and r.y0 >= t.y0
+               for t in texts):
+            continue                      # 這是底線
+        out.append(r)
     return out
 
 
@@ -94,7 +104,7 @@ def audit(pdf, min_size):
                 # 只抓真的壓在圖上的字；圖說本來就會貼著圖，所以門檻抓高一點
                 if overlap(r2, r) > 0.5:
                     bad.append((i + 1, '圖壓字', t2[:26]))
-        for r in rules(page):
+        for r in rules(page, [x[0] for x in ls]):
             for r2, t2, _s2, _b in ls:
                 inter = r2 & r
                 if not inter.is_empty and inter.height > 0.3:
