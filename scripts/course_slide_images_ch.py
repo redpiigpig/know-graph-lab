@@ -7,9 +7,9 @@
 
 IMAGES_CH = {
     # ── 第 1 次：四項核心傳統；拿撒勒人耶穌 ──
-    'st-peters-square': 'Saint Peters Basilica',
-    'orthodox-liturgy': 'Orthodox Divine Liturgy service',
-    'ethiopian-church': 'Lalibela rock hewn church',
+    'st-peters-square': 'Saint Peters Square Vatican',
+    'orthodox-liturgy': 'Orthodox church iconostasis liturgy',
+    'ethiopian-church': 'Bete Giyorgis Lalibela',
     'protestant-interior': 'Protestant church interior pulpit',
     'pentecostal-worship': 'Pentecostal worship service',
     'sea-of-galilee': 'Sea of Galilee landscape',

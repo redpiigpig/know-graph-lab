@@ -387,16 +387,20 @@ def s_two(prs, title, left, right, sub=None):
     colw = (W - Cm(3.8)) / 2
     for i, (head, items) in enumerate((left, right)):
         x = Cm(1.5) + i * (colw + Cm(0.8))
-        band(s, NAVY if i == 0 else GOLD, x, Cm(top), colw, Cm(1.0))
-        tfh = textbox(s, x + Cm(0.35), Cm(top + 0.18), colw - Cm(0.7), Cm(0.8))
+        # 🚨 深色帶 1.0 cm＝28 pt，可是 23 pt 的字連行高有 34 pt，
+        #    字會從帶子底下露出半截（2026-09-09 在「不護教／不反教」那頁看到）。
+        #    帶子加高到 1.2 cm，字框與帶子等高並垂直置中。
+        band(s, NAVY if i == 0 else GOLD, x, Cm(top), colw, Cm(1.2))
+        tfh = textbox(s, x + Cm(0.35), Cm(top), colw - Cm(0.7), Cm(1.2),
+                      anchor=MSO_ANCHOR.MIDDLE)
         put(tfh, head, 23, bold=True, color=CREAM, first=True, space_after=0)
         cw = colw / 360000 / 10 - 0.7
         base = {0: 24.0, 1: 20.0, 2: 20.0}
         # 雙欄頁不能拆頁，只能縮字；框底離頁尾只有 0.2 cm，餘裕要吃滿
-        k = max(0.62, fit(items, cw, (TWO_BOTTOM - (top + 1.3)) * FIT_MARGIN,
+        k = max(0.62, fit(items, cw, (TWO_BOTTOM - (top + 1.5)) * FIT_MARGIN,
                           base, {0: 10, 1: 8, 2: 8}))
-        tf = textbox(s, x + Cm(0.35), Cm(top + 1.3), colw - Cm(0.7),
-                     Cm(TWO_BOTTOM - (top + 1.3)))
+        tf = textbox(s, x + Cm(0.35), Cm(top + 1.5), colw - Cm(0.7),
+                     Cm(TWO_BOTTOM - (top + 1.5)))
         for j, it in enumerate(items):
             lvl, txt = (it if isinstance(it, tuple) else (0, it))
             put(tf, ('‧ ' if lvl == 0 else '　－ ') + txt,
@@ -566,7 +570,11 @@ def s_gallery(prs, title, items, sub=None):
 # 左文右圖那一頁，文字欄可以有多寬。**由窄到寬**試，取第一個裝得下的——
 # 內容少就給大圖，內容多就縮成小張插圖。原本寫死 17 cm，結果是條目稍多的頁
 # 一律配不到圖（2026-09-09 量過：wr 五十五個配圖點只有零個過得了關）。
-IMG_TEXT_W = (17.0, 19.5, 21.5, 23.5)
+# 🚨 最寬那一階決定圖能有多寬：33.87 − 1.5 − 1.5 − 0.7 − 文字欄。
+#    曾經放到 23.5 cm，圖只剩 6.2 cm——橫幅照片在那個寬度等於沒放
+#    （2026-09-09 在天主教／東正教／東方正統三頁上看到的就是郵票大小）。
+#    上限收在 21.0 cm，圖至少 9.2 cm；再塞不下就不配圖，不要放一張看不清的。
+IMG_TEXT_W = (17.0, 19.0, 21.0)
 
 
 def img_layout(bullets, h):
@@ -838,7 +846,7 @@ ILL_FLOOR = 0.70
 def _fits_narrow(item):
     """讓出一欄放圖之後，這一頁還裝不裝得下。
 
-    用最寬的那一階（文字欄 23.5 cm、圖 6.7 cm）判；再塞不下就是真的不該配圖。
+    用最寬的那一階（文字欄 21.0 cm、圖 9.2 cm）判；再塞不下就是真的不該配圖。
     """
     return fit(list(item[2]), IMG_TEXT_W[-1], body_h(item) * FIT_MARGIN,
                IMG_SZ, IMG_SP, raw=True) >= max(ILL_FLOOR, FIT_FLOOR)
