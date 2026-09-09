@@ -101,7 +101,7 @@ def chapter_slides(src):
                     cur = ch
                 item = ('section', _strip_chapter(item[1])) + tuple(item[2:])
             # 舊資料第 1 次夾了一頁「這門課怎麼上」，內容是假日班的次數與章號分部，
-            # 掛到日間部就是錯的；課程說明改由 intro_slide() 依各課資料重生。
+            # 掛到日間部就是錯的；而課程說明現在一律不上投影片（見下方註記）。
             if item[0] == 'bullets' and '這門課怎麼上' in str(item[1]):
                 continue
             out.setdefault(cur, []).append(_clean_subs(item))
@@ -144,27 +144,10 @@ BARE_CH = [('每一章', '每一個單元'), ('每章', '每個單元'), ('本�
 BOOK_SELF = re.compile(r'(?<![一那這同日])本書(?!紀)')
 
 
-def intro_slide(c):
-    """第一次上課的課程說明頁——依各門課自己的資料生成，不出現章號。"""
-    sessions = CS.units(c)
-    exams = [(lb, dt, ti) for lb, dt, ti, _e, _c in c['rows'] if '考' in ti]
-    self_study = [(lb, dt) for lb, dt, ti, _e, _c in c['rows']
-                  if ti.startswith(CS.SELF_STUDY)]
-    b = [
-        f"上課時間：{c['time']}，{c['room']}",
-        (1, f'正課共 {len(sessions)} 次；另有自主學習與文本閱讀 '
-            f'{len(self_study)} 次，不到校'),
-        '成績評量',
-    ]
-    b += [(1, f'{item}　{pct}') for item, pct in c['assessment']]
-    if exams:
-        b.append('考試')
-        b += [(1, f'{lb}（{dt}）　{ti}') for lb, dt, ti in exams]
-    if self_study:
-        b.append('自主學習與文本閱讀')
-        b += [(1, f'{lb}（{dt}）不到校，自行研讀指定內容並與教師個別討論自評')
-              for lb, dt in self_study]
-    return ('bullets', '這門課怎麼上', b, {'sub': '課程說明與評量方式'})
+# 🚨 **沒有「這門課怎麼上」這一頁。** 使用者 2026-09-09：
+#    「我也不要，因為我會發單子給他們口頭講」——上課時間、評量比例、考試週次
+#    都印在修課須知（course_notice_docx.py）上發給學生，投影片不重複一次。
+#    以前這裡有個 intro_slide()，第一次上課會插兩三頁課程說明，已整段移除。
 
 
 def cover_for(c, label, date, title):
@@ -258,7 +241,6 @@ def build_course(key, only=None):
             'filename': f'{c["code"]}_{label.replace(" ", "")}_{title[:14]}.pptx',
             'footer': f'{c["name"]}　{label}　{title}',
             'slides': ([('cover', cover_for(c, label, date, title))]
-                       + ([intro_slide(c)] if i == 1 else [])
                        + [g for g in [guest_slide(c, label)] if g] + slides),
         }
         # 內容頁超過上限就一階一階調降，讓密的頁改用縮字而不是再拆一頁。
