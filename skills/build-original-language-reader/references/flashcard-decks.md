@@ -52,11 +52,13 @@ OpenMoji 圖，不是變成空白）。
 | 聖經希伯來文附錄 | 255 | 64 | 0 | `output/flashcards/hebrew-flashcards-appendix.docx` |
 | 通用希臘文附錄 | 511 | 128 | 114 | `output/flashcards/greek-flashcards-appendix.docx` |
 | 教會拉丁文附錄 | 745 | 188 | 191 | `output/flashcards/latin-flashcards-appendix.docx` |
-| 日文宗教學附錄 | 91 | 26 | 0 | `output/flashcards/japanese-flashcards-appendix.docx` |
+| 日文宗教學附錄 | 393 | 102 | 0 | `output/flashcards/japanese-flashcards-appendix.docx` |
 
-日文那一副只有 91 張，因為合約列的十張附錄目前只有三張有資料：專名 38、聖經佛經
-神道常用語句 36、文語助動詞 17。常用語句是整句，卡面字級按量出來的寬度縮到塞得下；
-卡背印中譯與出處（哪個傳統、哪一節經文）。
+日文那一副 2026-09-09 從 91 張長到 393：合約列的十張附錄那天全部補齊，讀本正文自己
+長出來的十一張表（舊字 130、機能語 38、宗教學術語 38、助数詞 31、史學 30、親屬 23、
+專名 23、佛教 21、基督教 14、年號曆法 13）除了舊假名那張規則表之外都做成卡。舊字卡
+的背面印新字，其餘印繁中與所屬分節。常用語句是整句，卡面字級按量出來的寬度縮到
+塞得下；卡背印中譯與出處（哪個傳統、哪一節經文）。
 
 The reader appendices hold the material that never enters the fifty lessons:
 proper names in nine categories, numerals and measures, kinship terms, the

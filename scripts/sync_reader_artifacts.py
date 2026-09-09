@@ -61,10 +61,20 @@ SUPERSEDED_DIRS = {"rebuild-v2", "rebuild-v3"}
 
 
 def digest(path: Path) -> str:
+    """檔案的 sha256；讀不到就回空字串。
+
+    Drive 那一側的檔可能只是雲端佔位而沒有落地，讀它會丟 `OSError: [Errno 22]`。
+    整支腳本因此中途死掉，而前面已經同步好的檔沒有任何紀錄——看起來就像同步失敗。
+    讀不到的目標當成「跟母版不一樣」，重新複製一份就是了。
+    """
     sha = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1 << 20), b""):
-            sha.update(block)
+    try:
+        with path.open("rb") as handle:
+            for block in iter(lambda: handle.read(1 << 20), b""):
+                sha.update(block)
+    except OSError as error:
+        print(f"  讀不到（當成過期）：{path}　{error.strerror or error}")
+        return ""
     return sha.hexdigest()
 
 

@@ -456,6 +456,22 @@ def appendix_rows(deck: dict) -> list[tuple[str, str, str]]:
             gloss = CLOSED_CLASS.get(form, "")
             if gloss:
                 rows.append((form, gloss, "文語助動詞"))
+
+        # 讀本正文長出來的那幾張表也做成卡。舊假名遣是規則表不是詞表，不做卡。
+        corpus = ROOT / "data/originalReaders/vocabulary/japanese-appendices.json"
+        if corpus.exists():
+            carded = {"kyujitai", "function_words", "counters", "kinship", "era_calendar",
+                      "buddhist", "christian", "religious_studies", "history", "proper_corpus"}
+            for table in json.loads(corpus.read_text(encoding="utf-8"))["tables"]:
+                if table["id"] not in carded:
+                    continue
+                for entry in table["entries"]:
+                    back = entry.get("zh") or entry.get("modern") or entry.get("example") or ""
+                    if table["id"] == "kyujitai":
+                        back = f"新字：{entry['modern']}"
+                    if not back:
+                        continue
+                    rows.append((entry["form"], back, table["title"]))
         return rows
 
     if deck["shape"] == "greek":

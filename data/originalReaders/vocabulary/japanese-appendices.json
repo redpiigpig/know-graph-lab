@@ -1,0 +1,2303 @@
+{
+ "schemaVersion": "1.0.0",
+ "note": "日文讀本的附錄表。每一列都取自本讀本正文，並記出現次數與課次；中文沿用逐詞對譯層已定的譯法。",
+ "corpusChars": 163515,
+ "tables": [
+  {
+   "id": "kyujitai",
+   "title": "舊字體 → 新字體",
+   "note": "取自本讀本正文實際出現的字形，對應由 OpenCC 的 t2jp 推導。第三、四冊的文本用舊字體印，這一張表是讀它們時的對照。",
+   "entries": [
+    {
+     "form": "爲",
+     "modern": "為",
+     "count": 37,
+     "lessons": "2-08、2-16、2-17…"
+    },
+    {
+     "form": "來",
+     "modern": "来",
+     "count": 28,
+     "lessons": "2-09、2-14、2-16…"
+    },
+    {
+     "form": "惡",
+     "modern": "悪",
+     "count": 22,
+     "lessons": "2-01、2-13、2-16…"
+    },
+    {
+     "form": "會",
+     "modern": "会",
+     "count": 19,
+     "lessons": "2-01、2-13、2-19…"
+    },
+    {
+     "form": "國",
+     "modern": "国",
+     "count": 19,
+     "lessons": "2-13、2-16、2-17…"
+    },
+    {
+     "form": "顯",
+     "modern": "顕",
+     "count": 17,
+     "lessons": "2-13、2-14、2-20…"
+    },
+    {
+     "form": "傳",
+     "modern": "伝",
+     "count": 16,
+     "lessons": "2-13、2-19、2-20…"
+    },
+    {
+     "form": "禮",
+     "modern": "礼",
+     "count": 16,
+     "lessons": "2-17、2-44、2-47"
+    },
+    {
+     "form": "與",
+     "modern": "与",
+     "count": 14,
+     "lessons": "1-23、2-13、2-16…"
+    },
+    {
+     "form": "惠",
+     "modern": "恵",
+     "count": 12,
+     "lessons": "2-02、2-13、2-14…"
+    },
+    {
+     "form": "實",
+     "modern": "実",
+     "count": 11,
+     "lessons": "2-01、2-09、2-14…"
+    },
+    {
+     "form": "對",
+     "modern": "対",
+     "count": 11,
+     "lessons": "2-13、2-14、2-16…"
+    },
+    {
+     "form": "斷",
+     "modern": "断",
+     "count": 11,
+     "lessons": "2-16、2-19、2-23…"
+    },
+    {
+     "form": "聯",
+     "modern": "連",
+     "count": 9,
+     "lessons": "1-04、1-37、1-44…"
+    },
+    {
+     "form": "處",
+     "modern": "処",
+     "count": 9,
+     "lessons": "2-14、2-19、2-42…"
+    },
+    {
+     "form": "稱",
+     "modern": "称",
+     "count": 9,
+     "lessons": "2-19、2-22、2-42…"
+    },
+    {
+     "form": "曾",
+     "modern": "曽",
+     "count": 8,
+     "lessons": "1-47、2-05、2-12…"
+    },
+    {
+     "form": "歸",
+     "modern": "帰",
+     "count": 8,
+     "lessons": "2-08、2-09、2-17…"
+    },
+    {
+     "form": "隱",
+     "modern": "隠",
+     "count": 8,
+     "lessons": "2-14、2-23、2-42"
+    },
+    {
+     "form": "氣",
+     "modern": "気",
+     "count": 8,
+     "lessons": "2-26"
+    },
+    {
+     "form": "僞",
+     "modern": "偽",
+     "count": 7,
+     "lessons": "2-13、2-16、2-22…"
+    },
+    {
+     "form": "靈",
+     "modern": "霊",
+     "count": 7,
+     "lessons": "2-20、2-22"
+    },
+    {
+     "form": "體",
+     "modern": "体",
+     "count": 7,
+     "lessons": "2-20、2-23、2-26…"
+    },
+    {
+     "form": "榮",
+     "modern": "栄",
+     "count": 6,
+     "lessons": "2-08、2-13、2-17…"
+    },
+    {
+     "form": "從",
+     "modern": "従",
+     "count": 6,
+     "lessons": "2-14、2-19、2-22…"
+    },
+    {
+     "form": "覺",
+     "modern": "覚",
+     "count": 6,
+     "lessons": "2-14、2-22、2-26"
+    },
+    {
+     "form": "燒",
+     "modern": "焼",
+     "count": 6,
+     "lessons": "2-26、2-44、2-47"
+    },
+    {
+     "form": "搖",
+     "modern": "揺",
+     "count": 6,
+     "lessons": "2-44"
+    },
+    {
+     "form": "證",
+     "modern": "証",
+     "count": 5,
+     "lessons": "2-14、2-19、2-22"
+    },
+    {
+     "form": "經",
+     "modern": "経",
+     "count": 5,
+     "lessons": "2-19、2-20、2-26…"
+    },
+    {
+     "form": "盜",
+     "modern": "盗",
+     "count": 5,
+     "lessons": "2-23、2-47"
+    },
+    {
+     "form": "燈",
+     "modern": "灯",
+     "count": 5,
+     "lessons": "2-23、2-35、2-42"
+    },
+    {
+     "form": "帶",
+     "modern": "帯",
+     "count": 5,
+     "lessons": "2-44、2-47"
+    },
+    {
+     "form": "獻",
+     "modern": "献",
+     "count": 5,
+     "lessons": "2-44"
+    },
+    {
+     "form": "聲",
+     "modern": "声",
+     "count": 4,
+     "lessons": "2-04、2-09、2-19"
+    },
+    {
+     "form": "勞",
+     "modern": "労",
+     "count": 4,
+     "lessons": "2-08、2-23、2-47"
+    },
+    {
+     "form": "變",
+     "modern": "変",
+     "count": 4,
+     "lessons": "2-08、2-13、2-47"
+    },
+    {
+     "form": "續",
+     "modern": "続",
+     "count": 4,
+     "lessons": "2-14、2-26、2-47"
+    },
+    {
+     "form": "學",
+     "modern": "学",
+     "count": 4,
+     "lessons": "2-16、2-42、2-47"
+    },
+    {
+     "form": "廢",
+     "modern": "廃",
+     "count": 4,
+     "lessons": "2-17、2-20、2-42"
+    },
+    {
+     "form": "聽",
+     "modern": "聴",
+     "count": 4,
+     "lessons": "2-19、2-20、2-23"
+    },
+    {
+     "form": "數",
+     "modern": "数",
+     "count": 4,
+     "lessons": "2-19、2-47"
+    },
+    {
+     "form": "豐",
+     "modern": "豊",
+     "count": 4,
+     "lessons": "2-19、2-47"
+    },
+    {
+     "form": "滿",
+     "modern": "満",
+     "count": 4,
+     "lessons": "2-19、2-22、2-47"
+    },
+    {
+     "form": "當",
+     "modern": "当",
+     "count": 4,
+     "lessons": "2-22、2-26、2-47"
+    },
+    {
+     "form": "濟",
+     "modern": "済",
+     "count": 4,
+     "lessons": "2-23、2-47"
+    },
+    {
+     "form": "獨",
+     "modern": "独",
+     "count": 3,
+     "lessons": "1-43、2-09、2-47"
+    },
+    {
+     "form": "濱",
+     "modern": "浜",
+     "count": 3,
+     "lessons": "2-02、2-47"
+    },
+    {
+     "form": "隨",
+     "modern": "随",
+     "count": 3,
+     "lessons": "2-13、2-17、2-22"
+    },
+    {
+     "form": "顏",
+     "modern": "顔",
+     "count": 3,
+     "lessons": "2-13、2-23"
+    },
+    {
+     "form": "將",
+     "modern": "将",
+     "count": 3,
+     "lessons": "2-14"
+    },
+    {
+     "form": "狹",
+     "modern": "狭",
+     "count": 3,
+     "lessons": "2-16、2-47"
+    },
+    {
+     "form": "裝",
+     "modern": "装",
+     "count": 3,
+     "lessons": "2-16、2-23"
+    },
+    {
+     "form": "效",
+     "modern": "効",
+     "count": 3,
+     "lessons": "2-17、2-23、2-42"
+    },
+    {
+     "form": "犧",
+     "modern": "犠",
+     "count": 3,
+     "lessons": "2-19、2-44"
+    },
+    {
+     "form": "勸",
+     "modern": "勧",
+     "count": 3,
+     "lessons": "2-19"
+    },
+    {
+     "form": "圍",
+     "modern": "囲",
+     "count": 3,
+     "lessons": "2-19、2-44"
+    },
+    {
+     "form": "拜",
+     "modern": "拝",
+     "count": 3,
+     "lessons": "2-22、2-26、2-47"
+    },
+    {
+     "form": "寶",
+     "modern": "宝",
+     "count": 3,
+     "lessons": "2-23"
+    },
+    {
+     "form": "藝",
+     "modern": "芸",
+     "count": 3,
+     "lessons": "2-26、2-47"
+    },
+    {
+     "form": "條",
+     "modern": "条",
+     "count": 3,
+     "lessons": "2-26、2-47"
+    },
+    {
+     "form": "鹽",
+     "modern": "塩",
+     "count": 3,
+     "lessons": "2-42"
+    },
+    {
+     "form": "點",
+     "modern": "点",
+     "count": 3,
+     "lessons": "2-42、2-47"
+    },
+    {
+     "form": "麥",
+     "modern": "麦",
+     "count": 3,
+     "lessons": "2-44、2-47"
+    },
+    {
+     "form": "臟",
+     "modern": "臓",
+     "count": 3,
+     "lessons": "2-44"
+    },
+    {
+     "form": "遥",
+     "modern": "遙",
+     "count": 2,
+     "lessons": "1-04、1-49"
+    },
+    {
+     "form": "樂",
+     "modern": "楽",
+     "count": 2,
+     "lessons": "2-09、2-26"
+    },
+    {
+     "form": "碎",
+     "modern": "砕",
+     "count": 2,
+     "lessons": "2-09"
+    },
+    {
+     "form": "嚴",
+     "modern": "厳",
+     "count": 2,
+     "lessons": "2-14、2-47"
+    },
+    {
+     "form": "粹",
+     "modern": "粋",
+     "count": 2,
+     "lessons": "2-14、2-26"
+    },
+    {
+     "form": "壞",
+     "modern": "壊",
+     "count": 2,
+     "lessons": "2-14"
+    },
+    {
+     "form": "單",
+     "modern": "単",
+     "count": 2,
+     "lessons": "2-14"
+    },
+    {
+     "form": "收",
+     "modern": "収",
+     "count": 2,
+     "lessons": "2-14、2-23"
+    },
+    {
+     "form": "廣",
+     "modern": "広",
+     "count": 2,
+     "lessons": "2-16、2-47"
+    },
+    {
+     "form": "懷",
+     "modern": "懐",
+     "count": 2,
+     "lessons": "2-19、2-42"
+    },
+    {
+     "form": "黨",
+     "modern": "党",
+     "count": 2,
+     "lessons": "2-19"
+    },
+    {
+     "form": "蟲",
+     "modern": "虫",
+     "count": 2,
+     "lessons": "2-23"
+    },
+    {
+     "form": "驗",
+     "modern": "験",
+     "count": 2,
+     "lessons": "2-26"
+    },
+    {
+     "form": "雜",
+     "modern": "雑",
+     "count": 2,
+     "lessons": "2-26、2-47"
+    },
+    {
+     "form": "觀",
+     "modern": "観",
+     "count": 2,
+     "lessons": "2-26、2-47"
+    },
+    {
+     "form": "應",
+     "modern": "応",
+     "count": 2,
+     "lessons": "2-26"
+    },
+    {
+     "form": "疎",
+     "modern": "疏",
+     "count": 2,
+     "lessons": "2-27、2-50"
+    },
+    {
+     "form": "樣",
+     "modern": "様",
+     "count": 2,
+     "lessons": "2-42、2-47"
+    },
+    {
+     "form": "臺",
+     "modern": "台",
+     "count": 2,
+     "lessons": "2-42"
+    },
+    {
+     "form": "畫",
+     "modern": "画",
+     "count": 2,
+     "lessons": "2-42、2-47"
+    },
+    {
+     "form": "齒",
+     "modern": "歯",
+     "count": 2,
+     "lessons": "2-42"
+    },
+    {
+     "form": "屬",
+     "modern": "属",
+     "count": 2,
+     "lessons": "2-44、2-47"
+    },
+    {
+     "form": "總",
+     "modern": "総",
+     "count": 2,
+     "lessons": "2-47"
+    },
+    {
+     "form": "齋",
+     "modern": "斎",
+     "count": 2,
+     "lessons": "2-47"
+    },
+    {
+     "form": "攝",
+     "modern": "摂",
+     "count": 2,
+     "lessons": "2-47"
+    },
+    {
+     "form": "參",
+     "modern": "参",
+     "count": 2,
+     "lessons": "2-47"
+    },
+    {
+     "form": "龍",
+     "modern": "竜",
+     "count": 2,
+     "lessons": "2-49"
+    },
+    {
+     "form": "殼",
+     "modern": "殻",
+     "count": 1,
+     "lessons": "1-05"
+    },
+    {
+     "form": "濤",
+     "modern": "涛",
+     "count": 1,
+     "lessons": "1-08"
+    },
+    {
+     "form": "峯",
+     "modern": "峰",
+     "count": 1,
+     "lessons": "1-46"
+    },
+    {
+     "form": "蘆",
+     "modern": "芦",
+     "count": 1,
+     "lessons": "1-50"
+    },
+    {
+     "form": "默",
+     "modern": "黙",
+     "count": 1,
+     "lessons": "2-13"
+    },
+    {
+     "form": "繼",
+     "modern": "継",
+     "count": 1,
+     "lessons": "2-14"
+    },
+    {
+     "form": "轉",
+     "modern": "転",
+     "count": 1,
+     "lessons": "2-14"
+    },
+    {
+     "form": "權",
+     "modern": "権",
+     "count": 1,
+     "lessons": "2-16"
+    },
+    {
+     "form": "邊",
+     "modern": "辺",
+     "count": 1,
+     "lessons": "2-19"
+    },
+    {
+     "form": "穰",
+     "modern": "穣",
+     "count": 1,
+     "lessons": "2-19"
+    },
+    {
+     "form": "獸",
+     "modern": "獣",
+     "count": 1,
+     "lessons": "2-22"
+    },
+    {
+     "form": "爭",
+     "modern": "争",
+     "count": 1,
+     "lessons": "2-22"
+    },
+    {
+     "form": "輕",
+     "modern": "軽",
+     "count": 1,
+     "lessons": "2-23"
+    },
+    {
+     "form": "爐",
+     "modern": "炉",
+     "count": 1,
+     "lessons": "2-23"
+    },
+    {
+     "form": "寫",
+     "modern": "写",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "圖",
+     "modern": "図",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "釋",
+     "modern": "釈",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "惱",
+     "modern": "悩",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "舍",
+     "modern": "舎",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "兩",
+     "modern": "両",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "癡",
+     "modern": "痴",
+     "count": 1,
+     "lessons": "2-26"
+    },
+    {
+     "form": "圓",
+     "modern": "円",
+     "count": 1,
+     "lessons": "2-38"
+    },
+    {
+     "form": "髮",
+     "modern": "髪",
+     "count": 1,
+     "lessons": "2-42"
+    },
+    {
+     "form": "營",
+     "modern": "営",
+     "count": 1,
+     "lessons": "2-44"
+    },
+    {
+     "form": "淨",
+     "modern": "浄",
+     "count": 1,
+     "lessons": "2-44"
+    },
+    {
+     "form": "餘",
+     "modern": "余",
+     "count": 1,
+     "lessons": "2-44"
+    },
+    {
+     "form": "亙",
+     "modern": "亘",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "殘",
+     "modern": "残",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "關",
+     "modern": "関",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "舊",
+     "modern": "旧",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "寢",
+     "modern": "寝",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "團",
+     "modern": "団",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "櫻",
+     "modern": "桜",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "澤",
+     "modern": "沢",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "豫",
+     "modern": "予",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "藏",
+     "modern": "蔵",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "醉",
+     "modern": "酔",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "發",
+     "modern": "発",
+     "count": 1,
+     "lessons": "2-47"
+    }
+   ]
+  },
+  {
+   "id": "kyukana",
+   "title": "舊假名遣 → 現代假名遣",
+   "note": "規則表；右欄的次數是該假名在本讀本正文出現的次數，「〜」開頭的幾條是語中語尾的規則，次數含一般用法。",
+   "entries": [
+    {
+     "form": "ゐ",
+     "modern": "い",
+     "example": "ゐる（居る）、用ゐる",
+     "count": 253
+    },
+    {
+     "form": "ゑ",
+     "modern": "え",
+     "example": "こゑ（声）、ゆゑ（故）",
+     "count": 17
+    },
+    {
+     "form": "ヰ",
+     "modern": "イ",
+     "example": "片假名同理",
+     "count": 0
+    },
+    {
+     "form": "ヱ",
+     "modern": "エ",
+     "example": "片假名同理",
+     "count": 36
+    },
+    {
+     "form": "ぢ",
+     "modern": "じ",
+     "example": "はぢ（恥）、まぢか",
+     "count": 104
+    },
+    {
+     "form": "づ",
+     "modern": "ず",
+     "example": "まづ（先づ）、いづれ",
+     "count": 106
+    },
+    {
+     "form": "くわ",
+     "modern": "か",
+     "example": "くわん（観）、くわい（会）",
+     "count": 5
+    },
+    {
+     "form": "ぐわ",
+     "modern": "が",
+     "example": "ぐわん（願）",
+     "count": 0
+    },
+    {
+     "form": "〜ふ",
+     "modern": "〜う",
+     "example": "思ふ→思う、言ふ→言う",
+     "count": 517
+    },
+    {
+     "form": "〜ひ",
+     "modern": "〜い",
+     "example": "思ひ→思い、給ひ→給い",
+     "count": 359
+    },
+    {
+     "form": "〜へ",
+     "modern": "〜え",
+     "example": "考へ→考え、答へ→答え",
+     "count": 643
+    },
+    {
+     "form": "〜は",
+     "modern": "〜わ",
+     "example": "言はば→言わば（語中語尾のハ行）",
+     "count": 3884
+    },
+    {
+     "form": "〜ほ",
+     "modern": "〜お",
+     "example": "たほれる→たおれる",
+     "count": 185
+    },
+    {
+     "form": "〜む",
+     "modern": "〜ん",
+     "example": "なむ→なん（助動詞・助詞）",
+     "count": 299
+    }
+   ]
+  },
+  {
+   "id": "function_words",
+   "title": "學術文體機能語",
+   "note": "只收本讀本正文裡出現過的；讀學術日文卡住的多半不是名詞，是這些。",
+   "entries": [
+    {
+     "form": "のである",
+     "count": 246,
+     "lessons": "1-03、1-04、1-05…"
+    },
+    {
+     "form": "として",
+     "count": 176,
+     "lessons": "1-01、1-04、1-05…"
+    },
+    {
+     "form": "といふ",
+     "count": 61,
+     "lessons": "1-45、1-50、2-10…"
+    },
+    {
+     "form": "であろう",
+     "count": 55,
+     "lessons": "1-06、1-08、1-10…"
+    },
+    {
+     "form": "において",
+     "count": 51,
+     "lessons": "1-05、1-07、1-12…"
+    },
+    {
+     "form": "ということ",
+     "count": 48,
+     "lessons": "1-04、1-06、1-07…"
+    },
+    {
+     "form": "によって",
+     "count": 37,
+     "lessons": "1-07、1-09、1-10…"
+    },
+    {
+     "form": "に対して",
+     "count": 29,
+     "lessons": "1-05、1-07、1-08…"
+    },
+    {
+     "form": "をもって",
+     "count": 26,
+     "lessons": "1-04、1-05、1-07…"
+    },
+    {
+     "form": "および",
+     "count": 19,
+     "lessons": "1-46、2-13、2-19…"
+    },
+    {
+     "form": "としての",
+     "count": 17,
+     "lessons": "1-07、1-38、1-44…"
+    },
+    {
+     "form": "とともに",
+     "count": 15,
+     "lessons": "1-01、1-05、1-06…"
+    },
+    {
+     "form": "なければならない",
+     "count": 15,
+     "lessons": "1-05、1-09、1-21…"
+    },
+    {
+     "form": "による",
+     "count": 14,
+     "lessons": "1-07、1-12、1-14…"
+    },
+    {
+     "form": "すなわち",
+     "count": 14,
+     "lessons": "1-06、1-07、1-42…"
+    },
+    {
+     "form": "というのは",
+     "count": 12,
+     "lessons": "1-03、1-09、1-13…"
+    },
+    {
+     "form": "ゆえに",
+     "count": 10,
+     "lessons": "1-01、1-05、1-21…"
+    },
+    {
+     "form": "すなはち",
+     "count": 9,
+     "lessons": "2-14、2-17、2-43…"
+    },
+    {
+     "form": "あるいは",
+     "count": 9,
+     "lessons": "1-21、1-39、1-44…"
+    },
+    {
+     "form": "のみならず",
+     "count": 7,
+     "lessons": "1-38、1-44、1-47…"
+    },
+    {
+     "form": "といっても",
+     "count": 6,
+     "lessons": "1-03、1-12、1-13…"
+    },
+    {
+     "form": "かもしれない",
+     "count": 4,
+     "lessons": "1-25、1-50、2-29"
+    },
+    {
+     "form": "しからば",
+     "count": 4,
+     "lessons": "1-06、1-36、1-45"
+    },
+    {
+     "form": "でなければならない",
+     "count": 3,
+     "lessons": "1-31、1-45、1-49"
+    },
+    {
+     "form": "に違いない",
+     "count": 3,
+     "lessons": "1-22、1-23、1-37"
+    },
+    {
+     "form": "にすぎない",
+     "count": 2,
+     "lessons": "1-45"
+    },
+    {
+     "form": "における",
+     "count": 2,
+     "lessons": "1-37、2-14"
+    },
+    {
+     "form": "に関して",
+     "count": 2,
+     "lessons": "1-38、1-43"
+    },
+    {
+     "form": "ばかりでなく",
+     "count": 2,
+     "lessons": "1-11、1-20"
+    },
+    {
+     "form": "にもかかわらず",
+     "count": 2,
+     "lessons": "1-36、1-48"
+    },
+    {
+     "form": "ながらも",
+     "count": 2,
+     "lessons": "1-38、2-47"
+    },
+    {
+     "form": "わけである",
+     "count": 2,
+     "lessons": "1-46、2-45"
+    },
+    {
+     "form": "あるひは",
+     "count": 2,
+     "lessons": "2-08、2-44"
+    },
+    {
+     "form": "したがって",
+     "count": 2,
+     "lessons": "1-14、1-45"
+    },
+    {
+     "form": "をめぐって",
+     "count": 1,
+     "lessons": "1-32"
+    },
+    {
+     "form": "わけではない",
+     "count": 1,
+     "lessons": "1-46"
+    },
+    {
+     "form": "はずである",
+     "count": 1,
+     "lessons": "2-50"
+    },
+    {
+     "form": "ならびに",
+     "count": 1,
+     "lessons": "1-46"
+    }
+   ]
+  },
+  {
+   "id": "buddhist",
+   "title": "佛教用語",
+   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。",
+   "entries": [
+    {
+     "form": "念仏",
+     "zh": "念佛",
+     "count": 36,
+     "lessons": "1-40、2-11、2-46"
+    },
+    {
+     "form": "和尚",
+     "zh": "和尚",
+     "count": 26,
+     "lessons": "1-24、1-25、2-11"
+    },
+    {
+     "form": "僧正",
+     "zh": "僧侶的最高階位",
+     "count": 14,
+     "lessons": "1-22、1-25"
+    },
+    {
+     "form": "法師",
+     "zh": "法師",
+     "count": 14,
+     "lessons": "1-12、1-22、1-39…"
+    },
+    {
+     "form": "真宗",
+     "zh": "淨土真宗",
+     "count": 14,
+     "lessons": "1-08、1-40、1-41"
+    },
+    {
+     "form": "上人",
+     "zh": "上人",
+     "count": 10,
+     "lessons": "1-08、1-40"
+    },
+    {
+     "form": "僧都",
+     "zh": "僧侶的高階位",
+     "count": 9,
+     "lessons": "1-22"
+    },
+    {
+     "form": "実相",
+     "zh": "實相",
+     "count": 9,
+     "lessons": "1-37、1-40、1-42…"
+    },
+    {
+     "form": "愚禿",
+     "zh": "愚禿",
+     "count": 8,
+     "lessons": "1-08"
+    },
+    {
+     "form": "彼岸",
+     "zh": "彼岸",
+     "count": 7,
+     "lessons": "1-13、1-19"
+    },
+    {
+     "form": "彼岸会",
+     "zh": "彼岸會",
+     "count": 7,
+     "lessons": "1-13"
+    },
+    {
+     "form": "弥勒",
+     "zh": "彌勒佛",
+     "count": 6,
+     "lessons": "1-48"
+    },
+    {
+     "form": "浄土",
+     "zh": "淨土",
+     "count": 6,
+     "lessons": "1-13、1-41、1-43…"
+    },
+    {
+     "form": "大乗",
+     "zh": "大乘",
+     "count": 5,
+     "lessons": "1-43"
+    },
+    {
+     "form": "南無阿弥陀仏",
+     "zh": "南無阿彌陀佛",
+     "count": 3,
+     "lessons": "1-40"
+    },
+    {
+     "form": "善男",
+     "zh": "善男",
+     "count": 3,
+     "lessons": "1-13、2-26"
+    },
+    {
+     "form": "懺悔",
+     "zh": "懺悔",
+     "count": 3,
+     "lessons": "1-15"
+    },
+    {
+     "form": "浄土真宗",
+     "zh": "淨土真宗",
+     "count": 3,
+     "lessons": "1-41"
+    },
+    {
+     "form": "真言",
+     "zh": "真言密教",
+     "count": 3,
+     "lessons": "1-42、1-43"
+    },
+    {
+     "form": "禅宗",
+     "zh": "禪宗",
+     "count": 3,
+     "lessons": "1-41、2-46"
+    },
+    {
+     "form": "菩薩",
+     "zh": "菩薩",
+     "count": 3,
+     "lessons": "1-48"
+    }
+   ]
+  },
+  {
+   "id": "christian",
+   "title": "基督教用語",
+   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。",
+   "entries": [
+    {
+     "form": "聖書",
+     "zh": "聖經",
+     "count": 21,
+     "lessons": "1-07、1-31、1-41…"
+    },
+    {
+     "form": "福音",
+     "zh": "福音",
+     "count": 19,
+     "lessons": "2-13、2-19、2-20…"
+    },
+    {
+     "form": "基督",
+     "zh": "基督",
+     "count": 18,
+     "lessons": "1-02、1-07、1-08…"
+    },
+    {
+     "form": "伝道",
+     "zh": "傳道",
+     "count": 12,
+     "lessons": "1-48、2-12、2-15…"
+    },
+    {
+     "form": "使徒",
+     "zh": "使徒",
+     "count": 8,
+     "lessons": "2-13、2-19、2-22"
+    },
+    {
+     "form": "宣教師",
+     "zh": "宣教師",
+     "count": 8,
+     "lessons": "1-03、1-46、2-05…"
+    },
+    {
+     "form": "幕屋",
+     "zh": "會幕",
+     "count": 8,
+     "lessons": "2-44"
+    },
+    {
+     "form": "牧師",
+     "zh": "牧師",
+     "count": 8,
+     "lessons": "1-07、1-46、2-40"
+    },
+    {
+     "form": "洗礼",
+     "zh": "洗禮",
+     "count": 6,
+     "lessons": "1-07、2-48"
+    },
+    {
+     "form": "燔祭",
+     "zh": "燔祭",
+     "count": 5,
+     "lessons": "2-09、2-44"
+    },
+    {
+     "form": "聖霊",
+     "zh": "聖靈",
+     "count": 5,
+     "lessons": "2-06、2-07"
+    },
+    {
+     "form": "十字架",
+     "zh": "十字架",
+     "count": 3,
+     "lessons": "1-45、2-07、2-20"
+    },
+    {
+     "form": "會堂",
+     "zh": "會堂",
+     "count": 3,
+     "lessons": "2-19、2-23"
+    },
+    {
+     "form": "聖徒",
+     "zh": "聖徒",
+     "count": 3,
+     "lessons": "2-07、2-22、2-32"
+    }
+   ]
+  },
+  {
+   "id": "religious_studies",
+   "title": "宗教學術語",
+   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。",
+   "entries": [
+    {
+     "form": "神社",
+     "zh": "神社",
+     "count": 46,
+     "lessons": "1-06、1-14、1-22…"
+    },
+    {
+     "form": "神事",
+     "zh": "神事",
+     "count": 38,
+     "lessons": "1-13、2-11、2-25…"
+    },
+    {
+     "form": "神道",
+     "zh": "神道",
+     "count": 26,
+     "lessons": "1-46、2-31、2-46…"
+    },
+    {
+     "form": "非人",
+     "zh": "賤民階級",
+     "count": 22,
+     "lessons": "1-14、1-42"
+    },
+    {
+     "form": "新嘗祭",
+     "zh": "新嘗祭",
+     "count": 15,
+     "lessons": "2-49"
+    },
+    {
+     "form": "神楽",
+     "zh": "神樂",
+     "count": 13,
+     "lessons": "1-06、2-25、2-50"
+    },
+    {
+     "form": "神輿",
+     "zh": "神轎",
+     "count": 9,
+     "lessons": "2-10、2-25、2-36…"
+    },
+    {
+     "form": "儒教",
+     "zh": "儒教",
+     "count": 8,
+     "lessons": "1-44、1-46、2-31"
+    },
+    {
+     "form": "巫女",
+     "zh": "巫女",
+     "count": 8,
+     "lessons": "2-11、2-45、2-46"
+    },
+    {
+     "form": "年男",
+     "zh": "年男",
+     "count": 8,
+     "lessons": "1-47"
+    },
+    {
+     "form": "末社",
+     "zh": "末社",
+     "count": 8,
+     "lessons": "2-45"
+    },
+    {
+     "form": "鎮魂",
+     "zh": "鎮魂",
+     "count": 7,
+     "lessons": "2-25、2-49、2-50"
+    },
+    {
+     "form": "供物",
+     "zh": "供物",
+     "count": 6,
+     "lessons": "1-47、2-10、2-42"
+    },
+    {
+     "form": "大祭",
+     "zh": "大祭",
+     "count": 6,
+     "lessons": "2-10、2-25"
+    },
+    {
+     "form": "御霊",
+     "zh": "靈魂",
+     "count": 6,
+     "lessons": "2-50"
+    },
+    {
+     "form": "嘗祭",
+     "zh": "嘗祭",
+     "count": 5,
+     "lessons": "2-49"
+    },
+    {
+     "form": "月次",
+     "zh": "月次祭",
+     "count": 5,
+     "lessons": "2-49、2-50"
+    },
+    {
+     "form": "氏神",
+     "zh": "氏神",
+     "count": 5,
+     "lessons": "1-14、2-10"
+    },
+    {
+     "form": "神嘗祭",
+     "zh": "神嘗祭",
+     "count": 5,
+     "lessons": "2-49"
+    },
+    {
+     "form": "門松",
+     "zh": "門松",
+     "count": 5,
+     "lessons": "1-47"
+    },
+    {
+     "form": "中日",
+     "zh": "中日、彼岸的中間日",
+     "count": 4,
+     "lessons": "1-13"
+    },
+    {
+     "form": "主命",
+     "zh": "主神",
+     "count": 4,
+     "lessons": "1-32"
+    },
+    {
+     "form": "小正月",
+     "zh": "小正月",
+     "count": 4,
+     "lessons": "1-47"
+    },
+    {
+     "form": "形代",
+     "zh": "紙製人偶",
+     "count": 4,
+     "lessons": "1-13"
+    },
+    {
+     "form": "搖祭",
+     "zh": "搖祭",
+     "count": 4,
+     "lessons": "2-44"
+    },
+    {
+     "form": "死霊",
+     "zh": "亡靈",
+     "count": 4,
+     "lessons": "2-06"
+    },
+    {
+     "form": "火祭",
+     "zh": "火祭",
+     "count": 4,
+     "lessons": "2-44、2-47"
+    },
+    {
+     "form": "猿楽",
+     "zh": "猿樂",
+     "count": 4,
+     "lessons": "2-11、2-25、2-46"
+    },
+    {
+     "form": "祝詞",
+     "zh": "祝詞",
+     "count": 4,
+     "lessons": "2-49"
+    },
+    {
+     "form": "節供",
+     "zh": "節供",
+     "count": 4,
+     "lessons": "1-13、2-47"
+    },
+    {
+     "form": "鎮守",
+     "zh": "鎮守神社",
+     "count": 4,
+     "lessons": "2-10"
+    },
+    {
+     "form": "鳥居",
+     "zh": "鳥居",
+     "count": 4,
+     "lessons": "1-19"
+    },
+    {
+     "form": "初穂",
+     "zh": "初穗",
+     "count": 3,
+     "lessons": "2-49"
+    },
+    {
+     "form": "御旅所",
+     "zh": "神輿停駐地",
+     "count": 3,
+     "lessons": "2-10、2-47"
+    },
+    {
+     "form": "御輿",
+     "zh": "神輿",
+     "count": 3,
+     "lessons": "2-10、2-50"
+    },
+    {
+     "form": "擧祭",
+     "zh": "舉祭",
+     "count": 3,
+     "lessons": "2-44"
+    },
+    {
+     "form": "社殿",
+     "zh": "社殿",
+     "count": 3,
+     "lessons": "1-14、2-10"
+    },
+    {
+     "form": "能楽",
+     "zh": "能樂",
+     "count": 3,
+     "lessons": "2-11、2-46"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "title": "史學用語",
+   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。",
+   "entries": [
+    {
+     "form": "上代",
+     "zh": "上代",
+     "count": 18,
+     "lessons": "1-38、1-44、2-31"
+    },
+    {
+     "form": "兵衛",
+     "zh": "武士身份或武官",
+     "count": 17,
+     "lessons": "1-16"
+    },
+    {
+     "form": "百姓",
+     "zh": "農民",
+     "count": 10,
+     "lessons": "1-30、1-32、2-11"
+    },
+    {
+     "form": "中将",
+     "zh": "中將、官位名",
+     "count": 8,
+     "lessons": "1-23"
+    },
+    {
+     "form": "大名",
+     "zh": "大名",
+     "count": 8,
+     "lessons": "1-16、1-20、2-47"
+    },
+    {
+     "form": "黒船",
+     "zh": "黑船",
+     "count": 7,
+     "lessons": "1-28"
+    },
+    {
+     "form": "中世",
+     "zh": "中世、中古時代",
+     "count": 6,
+     "lessons": "1-12、1-44、2-25…"
+    },
+    {
+     "form": "左衛門",
+     "zh": "左衞門",
+     "count": 6,
+     "lessons": "1-14、1-42"
+    },
+    {
+     "form": "近世",
+     "zh": "近世",
+     "count": 6,
+     "lessons": "1-04、1-11、2-25…"
+    },
+    {
+     "form": "敵討",
+     "zh": "報仇",
+     "count": 5,
+     "lessons": "1-18、2-46"
+    },
+    {
+     "form": "世嗣",
+     "zh": "世嗣",
+     "count": 4,
+     "lessons": "2-17、2-20"
+    },
+    {
+     "form": "国富",
+     "zh": "國富",
+     "count": 4,
+     "lessons": "1-49"
+    },
+    {
+     "form": "幕府",
+     "zh": "幕府",
+     "count": 4,
+     "lessons": "1-14、1-42、1-46"
+    },
+    {
+     "form": "戸数",
+     "zh": "戶數",
+     "count": 4,
+     "lessons": "1-14"
+    },
+    {
+     "form": "朝臣",
+     "zh": "朝臣",
+     "count": 4,
+     "lessons": "1-06、2-38"
+    },
+    {
+     "form": "東国",
+     "zh": "東國",
+     "count": 4,
+     "lessons": "1-42、2-25"
+    },
+    {
+     "form": "短歌",
+     "zh": "短歌",
+     "count": 4,
+     "lessons": "1-38、2-27"
+    },
+    {
+     "form": "親政",
+     "zh": "親政",
+     "count": 4,
+     "lessons": "1-44"
+    },
+    {
+     "form": "中古",
+     "zh": "中古、中世之前",
+     "count": 3,
+     "lessons": "1-06、2-10、2-48"
+    },
+    {
+     "form": "吏以下",
+     "zh": "長吏以下",
+     "count": 3,
+     "lessons": "1-42"
+    },
+    {
+     "form": "士分",
+     "zh": "士分；士族身份",
+     "count": 3,
+     "lessons": "2-46"
+    },
+    {
+     "form": "小吏",
+     "zh": "小吏",
+     "count": 3,
+     "lessons": "1-36"
+    },
+    {
+     "form": "御幸",
+     "zh": "皇帝出巡",
+     "count": 3,
+     "lessons": "1-12、2-10"
+    },
+    {
+     "form": "旧暦",
+     "zh": "舊曆",
+     "count": 3,
+     "lessons": "1-13"
+    },
+    {
+     "form": "畿内",
+     "zh": "畿內",
+     "count": 3,
+     "lessons": "1-16、2-49"
+    },
+    {
+     "form": "相聞",
+     "zh": "相聞",
+     "count": 3,
+     "lessons": "2-38、2-46"
+    },
+    {
+     "form": "衛士",
+     "zh": "衛士",
+     "count": 3,
+     "lessons": "1-06、2-04"
+    },
+    {
+     "form": "衛門",
+     "zh": "衛門",
+     "count": 3,
+     "lessons": "1-14、1-22、1-33…"
+    },
+    {
+     "form": "雑兵",
+     "zh": "雜兵",
+     "count": 3,
+     "lessons": "1-16"
+    },
+    {
+     "form": "離宮",
+     "zh": "離宮",
+     "count": 3,
+     "lessons": "2-41、2-46"
+    }
+   ]
+  },
+  {
+   "id": "proper_corpus",
+   "title": "專名（正文所見）",
+   "note": "讀本正文自己的專名——地名、人名、氏族、寺社、年號。課本那份專名表只有國名與都市，這一張補的是書裡真正出現的。",
+   "entries": [
+    {
+     "form": "明治",
+     "zh": "明治",
+     "count": 25,
+     "lessons": "1-08、1-13、1-14…"
+    },
+    {
+     "form": "江戸",
+     "zh": "江戶",
+     "count": 19,
+     "lessons": "1-18、1-28、1-48…"
+    },
+    {
+     "form": "平家",
+     "zh": "平家",
+     "count": 15,
+     "lessons": "1-12、1-25"
+    },
+    {
+     "form": "源氏",
+     "zh": "源氏",
+     "count": 13,
+     "lessons": "1-13、1-20、1-23…"
+    },
+    {
+     "form": "伊勢",
+     "zh": "伊勢",
+     "count": 9,
+     "lessons": "1-44、2-47、2-49"
+    },
+    {
+     "form": "鎌倉",
+     "zh": "鎌倉",
+     "count": 9,
+     "lessons": "1-28、1-41、1-42"
+    },
+    {
+     "form": "祇園",
+     "zh": "祇園",
+     "count": 8,
+     "lessons": "2-47、2-50"
+    },
+    {
+     "form": "平安朝",
+     "zh": "平安朝",
+     "count": 7,
+     "lessons": "1-13、2-26、2-45…"
+    },
+    {
+     "form": "徳川",
+     "zh": "德川",
+     "count": 7,
+     "lessons": "1-14、1-42、1-44…"
+    },
+    {
+     "form": "倭文子",
+     "zh": "倭文子",
+     "count": 6,
+     "lessons": "1-15"
+    },
+    {
+     "form": "叡山",
+     "zh": "比叡山",
+     "count": 6,
+     "lessons": "1-13、1-22、1-42…"
+    },
+    {
+     "form": "昭和",
+     "zh": "昭和年代",
+     "count": 6,
+     "lessons": "1-03、1-11、1-12…"
+    },
+    {
+     "form": "八幡",
+     "zh": "八幡",
+     "count": 5,
+     "lessons": "2-47、2-50"
+    },
+    {
+     "form": "尾張",
+     "zh": "尾張",
+     "count": 5,
+     "lessons": "2-41、2-47、2-50"
+    },
+    {
+     "form": "住吉",
+     "zh": "住吉",
+     "count": 4,
+     "lessons": "2-33、2-36、2-47"
+    },
+    {
+     "form": "国栖",
+     "zh": "國棧",
+     "count": 4,
+     "lessons": "1-06"
+    },
+    {
+     "form": "筑紫",
+     "zh": "筑紫（日本古地名）",
+     "count": 4,
+     "lessons": "2-27、2-33"
+    },
+    {
+     "form": "御岳",
+     "zh": "御嶽山",
+     "count": 3,
+     "lessons": "1-04"
+    },
+    {
+     "form": "神宮",
+     "zh": "伊勢神宮",
+     "count": 3,
+     "lessons": "1-44、2-49"
+    },
+    {
+     "form": "出石",
+     "zh": "出石",
+     "count": 3,
+     "lessons": "1-32、1-35"
+    },
+    {
+     "form": "大内",
+     "zh": "大內",
+     "count": 3,
+     "lessons": "1-46、1-50"
+    },
+    {
+     "form": "天武",
+     "zh": "年號名稱",
+     "count": 3,
+     "lessons": "1-06、1-44"
+    },
+    {
+     "form": "延喜",
+     "zh": "延喜",
+     "count": 3,
+     "lessons": "1-06、2-49"
+    }
+   ]
+  },
+  {
+   "id": "counters",
+   "title": "數字與助数詞",
+   "note": "只收「數字＋量詞」的實例；例欄印的是正文裡的原句片段。",
+   "entries": [
+    {
+     "form": "人",
+     "count": 150,
+     "example": "千人",
+     "lessons": "1-01、1-02、1-03…"
+    },
+    {
+     "form": "日",
+     "count": 54,
+     "example": "四日",
+     "lessons": "1-02、1-03、1-04…"
+    },
+    {
+     "form": "年",
+     "count": 53,
+     "example": "十年",
+     "lessons": "1-02、1-03、1-04…"
+    },
+    {
+     "form": "月",
+     "count": 52,
+     "example": "一月",
+     "lessons": "1-03、1-08、1-09…"
+    },
+    {
+     "form": "度",
+     "count": 25,
+     "example": "一度",
+     "lessons": "1-01、1-02、1-03…"
+    },
+    {
+     "form": "本",
+     "count": 21,
+     "example": "一本",
+     "lessons": "1-02、1-04、1-06…"
+    },
+    {
+     "form": "分",
+     "count": 18,
+     "example": "二十分",
+     "lessons": "1-01、1-02、1-03…"
+    },
+    {
+     "form": "首",
+     "count": 13,
+     "example": "二首",
+     "lessons": "1-06、1-11、1-12…"
+    },
+    {
+     "form": "歳",
+     "count": 11,
+     "example": "万歳",
+     "lessons": "1-12、1-47、1-49…"
+    },
+    {
+     "form": "番",
+     "count": 9,
+     "example": "一番",
+     "lessons": "1-07、1-09、1-16…"
+    },
+    {
+     "form": "円",
+     "count": 9,
+     "example": "十八円",
+     "lessons": "1-36、1-41、1-42…"
+    },
+    {
+     "form": "匹",
+     "count": 8,
+     "example": "二匹",
+     "lessons": "1-08、1-28、1-33…"
+    },
+    {
+     "form": "通",
+     "count": 8,
+     "example": "一通",
+     "lessons": "1-02、1-03、1-04…"
+    },
+    {
+     "form": "章",
+     "count": 7,
+     "example": "一章",
+     "lessons": "1-12、1-41、1-45…"
+    },
+    {
+     "form": "巻",
+     "count": 6,
+     "example": "一巻",
+     "lessons": "1-02、1-08、1-24…"
+    },
+    {
+     "form": "里",
+     "count": 6,
+     "example": "一里",
+     "lessons": "1-06、1-09、1-13…"
+    },
+    {
+     "form": "箇",
+     "count": 5,
+     "example": "十箇",
+     "lessons": "1-20、2-43、2-44"
+    },
+    {
+     "form": "町",
+     "count": 5,
+     "example": "七町",
+     "lessons": "1-15、1-24、1-26…"
+    },
+    {
+     "form": "時",
+     "count": 4,
+     "example": "一時",
+     "lessons": "1-01、1-03、1-05…"
+    },
+    {
+     "form": "回",
+     "count": 4,
+     "example": "一回",
+     "lessons": "1-08、1-18、1-28…"
+    },
+    {
+     "form": "枚",
+     "count": 4,
+     "example": "六枚",
+     "lessons": "1-09、1-17、1-43…"
+    },
+    {
+     "form": "個",
+     "count": 4,
+     "example": "五個",
+     "lessons": "1-14、1-31、1-45…"
+    },
+    {
+     "form": "条",
+     "count": 3,
+     "example": "二条",
+     "lessons": "1-06、1-07、1-08…"
+    },
+    {
+     "form": "目",
+     "count": 3,
+     "example": "五目",
+     "lessons": "1-02、1-05、1-06…"
+    },
+    {
+     "form": "頭",
+     "count": 3,
+     "example": "一頭",
+     "lessons": "1-04、1-08、1-09…"
+    },
+    {
+     "form": "軒",
+     "count": 2,
+     "example": "六軒",
+     "lessons": "1-14、1-24、1-46"
+    },
+    {
+     "form": "名",
+     "count": 1,
+     "example": "四十六名",
+     "lessons": "1-03、1-04、1-05…"
+    },
+    {
+     "form": "冊",
+     "count": 1,
+     "example": "一冊",
+     "lessons": "1-43、1-49"
+    },
+    {
+     "form": "節",
+     "count": 1,
+     "example": "五節",
+     "lessons": "1-04、1-06、1-13…"
+    },
+    {
+     "form": "羽",
+     "count": 1,
+     "example": "十羽",
+     "lessons": "1-10、1-25、1-28…"
+    },
+    {
+     "form": "台",
+     "count": 1,
+     "example": "七八台",
+     "lessons": "1-03、1-11、1-15…"
+    }
+   ]
+  },
+  {
+   "id": "kinship",
+   "title": "親屬稱謂",
+   "note": "取自本讀本正文；沒有出現的稱謂不列，這張表不是通用親屬表。",
+   "entries": [
+    {
+     "form": "母",
+     "zh": "",
+     "count": 58,
+     "lessons": "1-08、1-09、1-25…"
+    },
+    {
+     "form": "父",
+     "zh": "",
+     "count": 56,
+     "lessons": "1-07、1-08、1-09…"
+    },
+    {
+     "form": "兄",
+     "zh": "",
+     "count": 50,
+     "lessons": "1-07、1-09、1-17…"
+    },
+    {
+     "form": "親",
+     "zh": "",
+     "count": 50,
+     "lessons": "1-01、1-02、1-04…"
+    },
+    {
+     "form": "弟",
+     "zh": "",
+     "count": 42,
+     "lessons": "1-07、1-23、1-33…"
+    },
+    {
+     "form": "夫",
+     "zh": "",
+     "count": 41,
+     "lessons": "1-04、1-08、1-18…"
+    },
+    {
+     "form": "嫁",
+     "zh": "",
+     "count": 21,
+     "lessons": "1-26、1-27、1-32…"
+    },
+    {
+     "form": "妹",
+     "zh": "",
+     "count": 20,
+     "lessons": "1-07、1-29、1-47…"
+    },
+    {
+     "form": "妻",
+     "zh": "",
+     "count": 20,
+     "lessons": "1-27、2-12、2-21…"
+    },
+    {
+     "form": "孫",
+     "zh": "",
+     "count": 12,
+     "lessons": "1-10、1-32、1-45…"
+    },
+    {
+     "form": "子孫",
+     "zh": "後代子孫",
+     "count": 9,
+     "lessons": "1-10、1-45、2-44"
+    },
+    {
+     "form": "娘",
+     "zh": "",
+     "count": 8,
+     "lessons": "1-23、1-27、1-32…"
+    },
+    {
+     "form": "息子",
+     "zh": "兒子",
+     "count": 7,
+     "lessons": "1-08、1-33、2-30"
+    },
+    {
+     "form": "家族",
+     "zh": "家族",
+     "count": 6,
+     "lessons": "2-12、2-32、2-41…"
+    },
+    {
+     "form": "姉",
+     "zh": "",
+     "count": 4,
+     "lessons": "1-07"
+    },
+    {
+     "form": "叔父",
+     "zh": "叔父",
+     "count": 4,
+     "lessons": "1-41、2-37"
+    },
+    {
+     "form": "叔母",
+     "zh": "叔母",
+     "count": 2,
+     "lessons": "2-28、2-37"
+    },
+    {
+     "form": "祖父",
+     "zh": "祖父",
+     "count": 1,
+     "lessons": "1-41"
+    },
+    {
+     "form": "祖母",
+     "zh": "祖母",
+     "count": 1,
+     "lessons": "1-41"
+    },
+    {
+     "form": "姑",
+     "zh": "",
+     "count": 1,
+     "lessons": "2-21"
+    },
+    {
+     "form": "婿",
+     "zh": "",
+     "count": 1,
+     "lessons": "1-26"
+    },
+    {
+     "form": "両親",
+     "zh": "雙親、父母",
+     "count": 1,
+     "lessons": "1-19"
+    },
+    {
+     "form": "一族",
+     "zh": "家族",
+     "count": 1,
+     "lessons": "2-41"
+    }
+   ]
+  },
+  {
+   "id": "era_calendar",
+   "title": "年號與曆法",
+   "note": "年號要後面接得上數字才算——「文化」「文明」在這本書裡是普通名詞，光比對字串會把它們收成年號。干支在本讀本正文裡一次都沒出現，故不立表。",
+   "entries": [
+    {
+     "form": "明治",
+     "kind": "年號",
+     "count": 8,
+     "lessons": "1-08、1-13、1-14…"
+    },
+    {
+     "form": "大正",
+     "kind": "年號",
+     "count": 1,
+     "lessons": "1-50"
+    },
+    {
+     "form": "昭和",
+     "kind": "年號",
+     "count": 6,
+     "lessons": "1-03、1-11、1-12…"
+    },
+    {
+     "form": "文化",
+     "kind": "年號",
+     "count": 1,
+     "lessons": "1-11、1-12、1-31…"
+    },
+    {
+     "form": "安永",
+     "kind": "年號",
+     "count": 1,
+     "lessons": "1-42"
+    },
+    {
+     "form": "天正",
+     "kind": "年號",
+     "count": 1,
+     "lessons": "1-42"
+    },
+    {
+     "form": "旧暦",
+     "kind": "曆法",
+     "zh": "舊曆",
+     "count": 3,
+     "lessons": "1-13"
+    },
+    {
+     "form": "新暦",
+     "kind": "曆法",
+     "zh": "新曆",
+     "count": 1,
+     "lessons": "1-13"
+    },
+    {
+     "form": "彼岸",
+     "kind": "曆法",
+     "zh": "彼岸",
+     "count": 14,
+     "lessons": "1-13、1-19"
+    },
+    {
+     "form": "盂蘭盆",
+     "kind": "曆法",
+     "zh": "",
+     "count": 1,
+     "lessons": "2-46"
+    },
+    {
+     "form": "朔日",
+     "kind": "曆法",
+     "zh": "初一",
+     "count": 1,
+     "lessons": "2-47"
+    },
+    {
+     "form": "正月",
+     "kind": "曆法",
+     "zh": "正月、新年",
+     "count": 16,
+     "lessons": "1-47、2-47"
+    },
+    {
+     "form": "月次",
+     "kind": "曆法",
+     "zh": "月次祭",
+     "count": 5,
+     "lessons": "2-49、2-50"
+    }
+   ]
+  }
+ ]
+}

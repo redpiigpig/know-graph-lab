@@ -44,6 +44,7 @@ SENSE = CACHE / "unit-sense.json"
 VOCAB = ROOT / "data/originalReaders/vocabulary/japanese-2000.json"
 FORMULAS = ROOT / "data/originalReaders/vocabulary/japanese-formulas.json"
 NAMES = ROOT / "data/originalReaders/vocabulary/japanese-proper-names.json"
+CORPUS_TABLES = ROOT / "data/originalReaders/vocabulary/japanese-appendices.json"
 OUT_DIR = ROOT / "output/original-readers"
 
 FONT_JA = "MS Mincho"
@@ -338,6 +339,60 @@ def add_name_appendix(document: Document, names: dict) -> None:
                                     H.FONT_ZH, H.TABLE_SIZE_PT, color=H.INK)
 
 
+CORPUS_TABLE_COLUMNS = {
+    "kyujitai": (("form", "舊字"), ("modern", "新字"), ("count", "次"), ("lessons", "見於")),
+    "kyukana": (("form", "舊假名"), ("modern", "現代"), ("example", "例"), ("count", "次")),
+    "function_words": (("form", "機能語"), ("count", "次"), ("lessons", "見於")),
+    "counters": (("form", "助数詞"), ("example", "例"), ("count", "次"), ("lessons", "見於")),
+    "era_calendar": (("form", "詞"), ("kind", "類"), ("zh", "繁中"), ("count", "次")),
+}
+CORPUS_TABLE_DEFAULT = (("form", "詞"), ("zh", "繁中"), ("count", "次"), ("lessons", "見於"))
+# 舊字舊假名與文語助動詞只對文語那兩冊有用；現代語那兩冊印了是浪費紙。
+CLASSICAL_ONLY = {"kyujitai", "kyukana"}
+
+
+def add_corpus_appendix(document: Document, payload: dict, *, classical: bool) -> None:
+    """把讀本正文自己長出來的那幾張表印出來。
+
+    每一列都帶「次」與「見於」：這不是一張通用術語表，是這一本書的索引，讀者查到
+    一個詞可以翻回它出現的那一課。
+    """
+    for table in payload["tables"]:
+        if table["id"] in CLASSICAL_ONLY and not classical:
+            continue
+        if not table["entries"]:
+            continue
+        H.add_label(document, "Appendix  ·  from the corpus", page_break_before=True)
+        heading = document.add_heading(table["title"], level=1)
+        H.paragraph_rule(heading, color=H.GOLD, size="14")
+        H.add_body(document, table["note"], size=H.CAPTION_PT, color=H.MUTED)
+        columns = CORPUS_TABLE_COLUMNS.get(table["id"], CORPUS_TABLE_DEFAULT)
+        widths = {3: [46, 25, 70], 4: [34, 34, 16, 57]}[len(columns)]
+        grid = document.add_table(rows=1, cols=len(columns))
+        H.set_table_geometry(grid, widths)
+        H.set_borders(grid)
+        header = grid.rows[0]
+        H.set_repeat_header(header)
+        for cell, (_, title) in zip(header.cells, columns):
+            H.shade(cell, H.ACCENT_DARK)
+            paragraph = cell.paragraphs[0]
+            paragraph.paragraph_format.space_after = Pt(0)
+            H.set_run_font(paragraph.add_run(title), H.FONT_UI, 7.5, bold=True, color="FFFFFF")
+        for entry in table["entries"]:
+            cells = grid.add_row().cells
+            H.prevent_row_split(grid.rows[-1])
+            for cell, (field, _) in zip(cells, columns):
+                value = entry.get(field)
+                text = "" if value is None else str(value)
+                font = FONT_JA if field in ("form", "modern", "example") else H.FONT_ZH
+                size = H.TABLE_SIZE_PT + (1.2 if field == "form" else 0)
+                color = H.INK if field in ("form", "modern", "zh") else H.MUTED
+                H.set_cell_margins(cell)
+                paragraph = cell.paragraphs[0]
+                paragraph.paragraph_format.space_after = Pt(0)
+                H.add_mixed_script_text(paragraph, text, font, size, color=color)
+
+
 def add_auxiliary_appendix(document: Document) -> None:
     """文語助動詞表：合約附錄二點名的那一批，第二冊每一頁都在用。"""
     import build_japanese_interlinear as I
@@ -423,6 +478,8 @@ def build(book: int) -> Path:
         add_name_appendix(document, load(NAMES))
         if part["source"] == 2:
             add_auxiliary_appendix(document)
+        if CORPUS_TABLES.exists():
+            add_corpus_appendix(document, load(CORPUS_TABLES), classical=part["source"] == 2)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     path = OUT_DIR / f"japanese-original-reader-vol{book}.docx"
