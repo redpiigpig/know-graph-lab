@@ -126,9 +126,21 @@ def fetch_all_books():
     return out
 
 
+def _strip_nul(s):
+    """Postgres 的 text 型別不收 \\u0000，帶 NUL 的 chunk 會讓整批 insert 回 22P05
+    而整本書解析失敗（Schaff《History of the Christian Church》第三、四卷就是這樣
+    掛掉的）。某些 PDF 的文字層本來就夾著 NUL，抽取端修不掉，在入庫前剝掉即可。"""
+    return s.replace('\x00', '') if isinstance(s, str) else s
+
+
 def insert_chunks(ebook_id, chunks):
     """Write full content to local JSONL, insert preview rows to DB.
     Returns number inserted."""
+    for c in chunks:
+        c['content'] = _strip_nul(c['content'])
+        if c.get('chapter_path'):
+            c['chapter_path'] = _strip_nul(c['chapter_path'])
+
     # 1. Write full content to local JSONL (source of truth, syncs to Drive)
     os.makedirs(CHUNKS_DIR, exist_ok=True)
     jsonl_path = os.path.join(CHUNKS_DIR, f"{ebook_id}.jsonl")
