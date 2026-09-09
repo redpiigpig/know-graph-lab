@@ -134,9 +134,44 @@ python scripts/genealogy_research.py --book eusebius --width 240 帕皮亞
 回報「頁152」。長篇著作引用改標章名（該書的 chapter_path 與目錄可核對），別硬掛頁碼；
 Schaff 那幾卷分段細，頁碼可用。
 
+## 🚨 缺中譯 ≠ 缺材料
+
+2026-09-09 使用者指出的錯誤：先前把「東方諸教會的中文二手材料極少」講成「材料不足」，
+是因為**我只用中文詞查館藏**。改用英／法／德文與拉丁轉寫的詞再查一次，館內立刻多出
+一整批東方教會研究（見下）。任何一次「這塊沒材料」的判斷，都要先確認查詢語言不是
+唯一的限制。
+
+### 外部開放取用資源（尚未收進館藏，但可直接引用）
+
+* **e-GEDSH**（<https://gedsh.bethmardutho.org/>）——《戈爾吉亞敘利亞傳統百科辭典》
+  電子版，Brock、Butts、Kiraz、Van Rompay 編，CC BY-NC 4.0。敘利亞傳統唯一的專科
+  百科，人名地名教派條目最快的查證途徑。
+* **Hugoye: Journal of Syriac Studies**（<https://hugoye.bethmardutho.org/>）——1998 年
+  起全刊開放，CC BY 4.0。
+* **Syriaca.org**——敘利亞人名、地名、聖徒、書目的 linked open data，全開放。
+* **syri.ac**——敘利亞線上資源的註釋書目。
+* **Claremont Coptic Encyclopedia**（ccdl.claremont.edu）——Atiya《科普特百科全書》的
+  數位擴充版；原書八卷 archive.org 亦有。
+* **Patrologia Orientalis**——多卷公有領域，archive.org 可下載（科普特、敘利亞、
+  亞美尼亞、衣索比亞原典的對照譯本）。
+* **Revue des études arméniennes**——早期卷次 archive.org 有。
+
+⚠️ 這些多為外文，寫進書稿時譯名要過 [[translation-glossary]]，引文一律譯為繁體。
+
 ## 研究底稿
 
-**館藏已有**（可全文檢索）：岡薩雷斯《基督教史》、《劍橋基督教史》九卷、畢爾麥爾三冊
+**館藏已有**（可全文檢索）。東方諸教會（`--set east`）：Grillmeier《Christ in Christian
+Tradition》、Frend《The Rise of the Monophysite Movement》、V. C. Samuel《The Council of
+Chalcedon Re-Examined》（東方正統立場）、Baum & Winkler《The Church of the East》、
+Brock《The Luminous Eye》、Murray《Symbols of Church and Kingdom》、《The Syriac World》、
+Penn《Envisioning Islam》、Winkler《Syriac Churches Encountering Islam》、Vine
+《The Nestorian Churches》、Babai the Great《Book of Union》（東敘利亞基督論原典）、
+Malaty《Introduction to the Coptic Orthodox Church》、《漢語景教文典詮釋》。
+
+宗教改革（`--set reformation`）另有 Schaff《History of the Christian Church》Vol. 7-8、
+《The English Puritans》、《19世紀北美四大路德教會歷史》。
+
+通史與原典：岡薩雷斯《基督教史》、《劍橋基督教史》九卷、畢爾麥爾三冊
 教會史、優西比烏《教會史》、Schaff《七次大公會議》與《Creeds of Christendom》三卷、
 《歷代信經信條》、莫菲特《亞洲基督教史》I/II（東方諸教會唯一紮實的中文材料）、麥格夫
 《宗教改革運動思潮》、《新教百科全書》、《梵二文獻》、劉義《全球靈恩運動》。
@@ -149,8 +184,8 @@ Schaff 那幾卷分段細，頁碼可用。
 * 普世運動：Rouse & Neill《普世運動史》、BEM 利瑪文件、《稱義教義聯合聲明》、《波爾武
   共同聲明》。第6章第三節整節靠這批文件。
 * 福音派與靈恩：貝賓頓、安德森、詹金斯。
-* 東方教會：Brock、Baum & Winkler、Chaillot。第4章的第 3-6 支中文二手材料極少，這塊
-  是全書最可能被指「西方中心」的位置。
+* 東方教會：~~Brock、Baum & Winkler~~ **兩者館內已有**（見上）；Chaillot 仍缺。
+  第4章的第 3-6 支中文二手材料確實極少，但英文材料充足，用 `--set east`。
 
 ## 還沒做的事
 
