@@ -12,7 +12,7 @@ IMAGES_CH = {
     'ethiopian-church': 'Bete Giyorgis Lalibela',
     'protestant-interior': 'Protestant church interior pulpit',
     'pentecostal-worship': 'Pentecostal worship service',
-    'sea-of-galilee': 'Sea of Galilee landscape',
+    'sea-of-galilee': 'Lake Kinneret Sea of Galilee',
     'dead-sea-scrolls': 'Great Isaiah Scroll Dead Sea Scrolls',
     'papyrus-p52': 'Rylands Library Papyrus P52',
     'josephus': 'Flavius Josephus engraving',

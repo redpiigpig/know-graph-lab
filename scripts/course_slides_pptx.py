@@ -333,14 +333,23 @@ def s_profile(prs):
 
 
 def s_section(prs, no, title, lines):
+    """分節頁。
+
+    🚨 這一頁原本完全不縮放：行一多就直接掉出版面外（不是壓到頁尾，是掉到
+    投影片外面看不見）。fold_bigs 會把前一張 big 的句子併進來，所以行數
+    不是寫死的——2026-09-09 在基督宗教概論第一週就出現七行、末三行在畫面外。
+    """
     s = blank(prs)
     band(s, PALE, Cm(0), Cm(0), W, H)
     band(s, NAVY, Cm(0), Cm(0), Cm(0.5), H)
     tf = textbox(s, Cm(3.0), Cm(4.8), W - Cm(6.0), Cm(9.5))
     put(tf, no, 23, bold=True, color=GOLD, first=True, space_after=12)
     put(tf, title, 52, font=KAI, bold=True, color=NAVY, space_after=20)
+    head = (23 * LINE_MUL + 12) + (52 * LINE_MUL + 20)      # 標記與標題佔掉的高
+    avail = ((IMG_BOTTOM - 4.8) * CM_PT - head) / CM_PT
+    k = max(0.6, fit(lines, 33.87 - 6.0, avail, {0: 23.0}, {0: 8}))
     for ln in lines:
-        put(tf, ln, 23, color=GRAY, space_after=8)
+        put(tf, ln, 23 * k, color=GRAY, space_after=8 * k)
     return s
 
 
