@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Parse ebooks (PDF/EPUB) into ebook_chunks table. Updates parse_progress.txt
+Parse ebooks (PDF/EPUB/DOCX/TXT) into ebook_chunks table. Updates parse_progress.txt
 checklist as it goes. Skips books already parsed (parsed_at IS NOT NULL).
 
 Usage:
@@ -277,6 +277,71 @@ def parse_epub(path):
     return chunks
 
 
+SUPPORTED = ('pdf', 'epub', 'docx', 'txt')
+
+
+def parse_docx(path):
+    """Return list of {type:'chapter', chapter_path, content}.
+
+    段落標題（Heading N）當章界；沒有標題樣式的檔就整份成一章。表格逐列串成
+    tab 分隔的一行接在該章尾，免得表格內容整批消失。"""
+    import docx  # python-docx
+
+    d = docx.Document(path)
+    chunks, cur_title, buf = [], None, []
+
+    def flush():
+        text = '\n'.join(x for x in buf if x.strip())
+        if text.strip():
+            chunks.append({'type': 'chapter',
+                           'chapter_path': cur_title or '',
+                           'content': text})
+        buf.clear()
+
+    for p in d.paragraphs:
+        style = (p.style.name or '') if p.style else ''
+        text = p.text.strip()
+        if style.startswith('Heading') and text:
+            flush()
+            cur_title = text
+            buf.append(text)
+        elif text:
+            buf.append(text)
+    for t in d.tables:
+        for row in t.rows:
+            cells = [c.text.strip().replace('\n', ' ') for c in row.cells]
+            if any(cells):
+                buf.append('\t'.join(cells))
+    flush()
+    return chunks
+
+
+def parse_txt(path):
+    """Return one chunk per ~3000 字 block. 純文字沒有結構可依，切固定長度。"""
+    raw = None
+    for enc in ('utf-8', 'utf-8-sig', 'big5', 'gb18030', 'cp950'):
+        try:
+            raw = Path(path).read_text(encoding=enc)
+            break
+        except (UnicodeDecodeError, LookupError):
+            continue
+    if raw is None:
+        raw = Path(path).read_bytes().decode('utf-8', 'replace')
+    paras = [p for p in raw.split('\n') if p.strip()]
+    chunks, buf, size = [], [], 0
+    for p in paras:
+        buf.append(p)
+        size += len(p)
+        if size >= 3000:
+            chunks.append({'type': 'chapter', 'chapter_path': '',
+                           'content': '\n'.join(buf)})
+            buf, size = [], 0
+    if buf:
+        chunks.append({'type': 'chapter', 'chapter_path': '',
+                       'content': '\n'.join(buf)})
+    return chunks
+
+
 def parse_book(path, file_type):
     """Dispatch parser by file_type. Returns chunks list or raises."""
     ft = file_type.lower()
@@ -284,7 +349,12 @@ def parse_book(path, file_type):
         return parse_pdf(path)
     elif ft == 'epub':
         return parse_epub(path)
+    elif ft == 'docx':
+        return parse_docx(path)
+    elif ft == 'txt':
+        return parse_txt(path)
     else:
+        # .doc（舊二進位）、.mobi、.azw3、.chm 仍未支援，需先轉檔
         raise NotImplementedError(f"format not supported: {ft}")
 
 
@@ -305,7 +375,7 @@ def write_checklist(books):
             elif b.get('parse_error'):
                 mark = '!'
                 note = f"  ERROR: {(b.get('parse_error') or '')[:80]}"
-            elif b['file_type'] not in ('pdf', 'epub'):
+            elif b['file_type'] not in SUPPORTED:
                 mark = '-'
                 note = f"  (skip: {b['file_type']})"
             rel_path = (b.get('file_path') or '').replace(DRIVE_ROOT.replace('/', '\\'), '').lstrip('\\')
@@ -342,7 +412,7 @@ def cmd_init():
     # Stats
     parsed = sum(1 for b in books if b.get('parsed_at'))
     errored = sum(1 for b in books if b.get('parse_error'))
-    skipped = sum(1 for b in books if b['file_type'] not in ('pdf', 'epub'))
+    skipped = sum(1 for b in books if b['file_type'] not in SUPPORTED)
     todo = len(books) - parsed - errored - skipped
     print(f"  parsed: {parsed}, error: {errored}, skip: {skipped}, todo: {todo}", file=sys.stderr)
 
@@ -366,7 +436,7 @@ def cmd_status():
     total_chunks = 0
     for b in books:
         total_chunks += b.get('chunk_count') or 0
-        if b['file_type'] not in ('pdf', 'epub'):
+        if b['file_type'] not in SUPPORTED:
             skipped += 1
         elif b.get('parsed_at'):
             parsed += 1
@@ -396,7 +466,7 @@ def cmd_run(limit=None):
     # own default (1000) and says nothing about it, so `run` with no --limit was
     # silently a 1000-book batch, not "the whole queue" -- which is how a 5,000
     # book backlog looked like it was being drained in one pass.
-    params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub)&order=id'
+    params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub,docx,txt)&order=id'
     params += f'&limit={limit or 1000}'
     r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
     r.raise_for_status()
