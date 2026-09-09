@@ -33,6 +33,7 @@ import ast
 import json
 import os
 import re
+import time
 import sys
 import textwrap
 import urllib.request
@@ -246,6 +247,18 @@ C2_WEEKS = [
 ]
 
 # ── 課程三：初階宗教學日文文獻選讀（碩1A，倪杰）─────────────────────────
+# 🚨 這門課是**個別化自學**，讀物由學生自訂，而本人的十五週計畫從頭到尾只有一個
+#    題材：**無教會主義**（內村鑑三—矢內原忠雄一系）。所以這門課的指定閱讀
+#    **一律無教會主義相關**，不收別的題材。
+#
+#    老師課綱每週另列一篇示範文章（Josephson 日本宗教／Babu 印度教節慶／
+#    Wangchuk 藏傳如來藏／Willis 四聖諦／達賴喇嘛傳），那是課綱給全班的例子，
+#    與本計畫無關，**不列進指定閱讀**；已抓下來的那幾份移到課程根目錄的
+#    `_老師課綱示範文章\`，出處仍在 `課程大綱.html` 查得到。
+#
+#    這裡列的是**研究文獻與傳記**這一層（日文學術論文，全部 J-STAGE 免費公開）；
+#    每週精讀的原典讀本（矢內原／文語訳聖書／內村）由
+#    `japanese_self_study_plan.py` 另出，不重複列。
 C3 = "初階宗教學日文文獻選讀"
 C3_WEEKS = [
     ("W01 課程介紹．目標設定", "課程介紹、目標設定（SMART／WOOP／CEFR）", [
@@ -256,36 +269,41 @@ C3_WEEKS = [
     ("W02 個別化自學", "依個人日文程度客製化學習；British Council 線上分級測驗", [
         L(1, "British Council 線上英文分級測驗", "https://www.britishcouncil.org/english/level-test"),
     ]),
-    ("W03 與老師個別討論課程目標", "CEFR Academic Reader；繳交個人課程目標", [
-        T(1, "石井隆之《日本の宗教の知識と英語を身につける》第一章", "石井隆之，日本の宗教の知識と英語を身につける2010第一章.pdf"),
-    ]),
+    ("W03 與老師個別討論課程目標", "CEFR Academic Reader；繳交個人課程目標", []),
     ("W04 個別化自學", "依個人日文程度客製化學習", []),
-    ("W05 個別化自學", "Josephson, The Invention of Religion in Japan", [
-        # 頁碼取自書的內嵌目錄：Conclusion 266，下一節 Appendix 278
-        S(1, "Josephson", "The Invention of Religion in Japan - Conclusion",
-          "josephson", 266, 277, "Conclusion", mode="pdf"),
+    ("W05 個別化自學", "無教會研究的研究史", [
+        W(1, "泉治典，最近の無教会論と無教会史研究",
+          "https://www.jstage.jst.go.jp/article/nihonnoshingaku1962/1989/28/1989_28_217/_pdf",
+          "日本の神学 28（1989）217-227"),
     ]),
-    ("W06 個別化自學", "印度教節慶的宗教與社會意義", [
-        W(1, "Babu, The Religious and Social Significance of Hindu Festivals",
-          "https://jnrid.org/", "Journal of Novel Research and Innovative Development 3(1), 2025"),
+    ("W06 個別化自學", "「紙上の教会」：無教會的媒介史研究", [
+        W(1, "星野靖二，書評　赤江達也『「紙上の教会」と日本近代——無教会キリスト教の歴史社会学』",
+          "https://www.jstage.jst.go.jp/article/rsjars/88/2/88_KJ00009506095/_pdf",
+          "宗教研究 88(2)（2014）481-487"),
     ]),
-    ("W07 個別化自學", "藏傳佛教如來藏之爭", [
-        G(1, "Wangchuk, Dolpopa and Gyaltsab Debate Tathāgatagarbha",
-          "Religion Compass 4(11): 669-678, 2010. doi:10.1111/j.1749-8171.2010.00248.x",
-          "Wiley 付費牆，校內 IP 或圖書館代理才拿得到"),
+    ("W07 個別化自學", "內村鑑三不敬事件", [
+        W(1, "赤江達也，〈ためらう〉身体の政治学——内村鑑三不敬事件、あるいは国家の儀式空間と（集合的）身体・論",
+          "https://www.jstage.jst.go.jp/article/kantoh1988/2004/17/2004_17_1/_pdf",
+          "年報社会学論集 17（2004）1-12"),
     ]),
     ("W08 個別化自學", "依個人日文程度客製化學習", []),
     ("W09 與老師個別討論課程目標進度", "期中檢視個人目標進度", []),
     ("W10 個別化自學", "依個人日文程度客製化學習", []),
     ("W11 個別化自學", "依個人日文程度客製化學習", []),
-    ("W12 個別化自學", "四聖諦作為行動方案", [
-        W(1, "Willis, The Four Noble Truths Are a Plan of Action",
-          "https://www.lionsroar.com/four-noble-truths-plan-of-action/", "Lion's Roar, 2022-01-20"),
+    ("W12 個別化自學", "師弟關係與思想繼承：內村—藤井", [
+        W(1, "岩野祐介，内村鑑三の神学批判と藤井武の神学研究——無教会主義における師弟関係とキリスト教思想の継承",
+          "https://www.jstage.jst.go.jp/article/nihonnoshingaku/51/0/51_49/_pdf",
+          "日本の神学 51（2012）49-74"),
     ]),
     ("W13 個別化自學", "依個人日文程度客製化學習", []),
-    ("W14 個別化自學", "達賴喇嘛傳記；學術誠信與生成式 AI", [
-        W(1, "The 14th Dalai Lama, Birth to Exile",
-          "https://www.dalailama.com/the-dalai-lama/biography-and-daily-life/birth-to-exile"),
+    ("W14 個別化自學", "內村的自傳；學術誠信與生成式 AI", [
+        # 傳記那一格。日文世界沒有公有領域的「內村傳」可自由取用（斎藤宗次郎
+        # 1968 歿、山本泰次郎 1976 歿都還在保護期內），所以取內村自己寫的
+        # 自傳性文獻；同系統的傳記文學另有 NDL 公開的畔上賢造《クロムヱル伝》
+        # 《リビングストンの生涯》與藤井武《ルーテルの生涯及び事業》可續。
+        W(1, "内村鑑三《基督信徒のなぐさめ》（自傳性・文語體，1893）",
+          "https://www.aozora.gr.jp/cards/000034/files/55507_72651.html",
+          "青空文庫 圖書カード 55507／底本 岩波文庫"),
         T(2, "國立中山大學學生學術誠信指引（中英對照）",
           "國立中山大學學生學術誠信指引NSYSU Student Academic Integrity Guidelines Bilingual-中英對照2026.02.23.pdf"),
         T(3, "臺灣教育倫理中心：生成式AI用於學術研究的6個關鍵",
@@ -395,8 +413,33 @@ def get_book(key: str):
 _TAG_BREAK = re.compile(r"</(p|div|li|tr|h[1-6])>|<br\s*/?>", re.I)
 
 
+_CHARSET = re.compile(rb"""charset\s*=\s*["']?\s*([\w-]+)""", re.I)
+
+
+def decode_html(html_bytes: bytes) -> str:
+    """照網頁自己宣告的編碼解。
+
+    🚨 不是每個站都是 UTF-8。**青空文庫是 Shift_JIS**，用 utf-8+replace 硬解
+    不會報錯，只會把整篇正文變成「葼 ɓ M ҂ɑ」這種單位元組亂碼——檔案照樣
+    寫得出來、頁數正常，只有真的去讀內文才看得出來（[[feedback_reader_silent_failures]]）。
+    """
+    m = _CHARSET.search(html_bytes[:4096])
+    if m:
+        enc = m.group(1).decode("ascii", "ignore").lower()
+        try:
+            return html_bytes.decode(enc)
+        except (LookupError, UnicodeDecodeError):
+            pass
+    for enc in ("utf-8", "shift_jis", "euc-jp", "big5"):
+        try:
+            return html_bytes.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return html_bytes.decode("utf-8", errors="replace")
+
+
 def html_to_text(html_bytes: bytes) -> str:
-    t = html_bytes.decode("utf-8", errors="replace")
+    t = decode_html(html_bytes)
     t = re.sub(r"<(script|style|nav|footer|header|form)\b.*?</\1>", " ", t, flags=re.S | re.I)
     t = _TAG_BREAK.sub("\n", t)
     t = re.sub(r"<[^>]+>", "", t)
@@ -417,11 +460,30 @@ def html_to_text(html_bytes: bytes) -> str:
     return "\n".join(keep).strip()
 
 
+KANA = re.compile(r"[\u3040-\u30ff]")
+CJK = re.compile(r"[\u3000-\u9fff\uff00-\uffef]")
+FONT_JA = r"C:\Windows\Fonts\msmincho.ttc"     # MS 明朝
+FONT_ZH = r"C:\Windows\Fonts\mingliu.ttc"      # 細明體
+
+
 def text_to_pdf(title: str, body: str, cite: str, url: str, dst: str) -> None:
+    """把網頁純文字排成 PDF。
+
+    🚨 **字型要嵌真的**。原本用 PyMuPDF 內建的 `china-s`（簡體中文），日文假名
+    它編不了——寫出來的檔頁數正常、大小正常，打開卻是「\\ZN\\ SR[ O my[Wn」
+    這種亂碼，而且 `get_text()` 也是亂碼，抽查若只看「有沒有檔、幾頁」會整個
+    漏掉（[[feedback_reader_silent_failures]]）。有假名就嵌 MS 明朝，否則細明體。
+    行寬也跟著換：CJK 是全形，照拉丁的 92 字排必爆版。
+    """
+    sample = f"{title}\n{body[:4000]}"
+    ja = bool(KANA.search(sample))
+    cjk_ratio = len(CJK.findall(sample)) / max(len(sample), 1)
+    fontfile = FONT_JA if ja else FONT_ZH
     doc = fitz.open()
-    margin, width, lead = 56, 595, 14.5
-    wrapper = textwrap.TextWrapper(width=92, break_long_words=False)
-    lines = [title, "", cite, url, "─" * 60, ""]
+    margin, width, lead = 56, 595, 16.0
+    wrapper = textwrap.TextWrapper(width=40 if cjk_ratio > 0.2 else 92,
+                                   break_long_words=True)
+    lines = [title, "", cite, url, "─" * 30, ""]
     for para in body.split("\n"):
         lines.extend(wrapper.wrap(para) or [""])
     page = y = None
@@ -429,7 +491,7 @@ def text_to_pdf(title: str, body: str, cite: str, url: str, dst: str) -> None:
         if page is None or y > 842 - margin:
             page = doc.new_page(width=width, height=842)
             y = margin
-        page.insert_text((margin, y), ln, fontname="china-s", fontsize=10)
+        page.insert_text((margin, y), ln, fontname="body", fontfile=fontfile, fontsize=10)
         y += lead
     doc.save(dst)
     doc.close()
@@ -441,16 +503,34 @@ def fetch_web(item: dict, dst_dir: str, week: str) -> tuple[bool, str]:
     if os.path.exists(dst):
         return True, name + "（已存在）"
     req = urllib.request.Request(item["url"], headers={"User-Agent": "Mozilla/5.0"})
-    try:
-        with urllib.request.urlopen(req, timeout=90) as r:
-            raw = r.read()
-            ctype = r.headers.get("Content-Type", "")
-    except Exception as e:
-        return False, f"{item['title']}：抓不到（{e}）"
+    # J-STAGE 常在下載到一半斷（IncompleteRead）或 SSL 握手逾時，重連就好，
+    # 所以失敗不要當成「這篇拿不到」——重試三次再說。
+    raw = ctype = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                raw = r.read()
+                ctype = r.headers.get("Content-Type", "")
+            break
+        except Exception as e:
+            err = e
+            time.sleep(4)
+    if raw is None:
+        return False, f"{item['title']}：抓不到（重試三次仍失敗：{err}）"
     if "pdf" in ctype.lower() or raw[:4] == b"%PDF":
+        # 🚨 回 200＋一份 1MB 的 PDF ≠ 拿到論文。J-STAGE 有些卷期給的是打不開的
+        #    空殼（`fitz` 開起來 0 頁），檔案大小與 Content-Type 都正常，寫下去
+        #    就是一筆看起來成功的失敗。所以先開開看有沒有頁。
+        try:
+            with fitz.open(stream=raw, filetype="pdf") as probe:
+                pages = probe.page_count
+        except Exception as e:
+            return False, f"{item['title']}：抓到的 PDF 打不開（{e}）"
+        if pages == 0:
+            return False, f"{item['title']}：抓到的 PDF 是 0 頁的空殼（{len(raw)} bytes）"
         with open(dst, "wb") as f:
             f.write(raw)
-        return True, name
+        return True, f"{name}（{pages} 頁）"
     body = html_to_text(raw)
     if len(body) < 400:
         return False, f"{item['title']}：抓到的內文太短（{len(body)} 字），可能被擋"
