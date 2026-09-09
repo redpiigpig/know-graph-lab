@@ -58,11 +58,11 @@ WANTED = [
          title="The Social Teaching of the Christian Churches, Vol. II",
          author="Ernst Troeltsch", category="宗教學", sub="宗教社會學",
          why="同上，第二卷"),
-    dict(key="niebuhr-social-sources", ident="socialsourcesofd0000nieb_w7z0",
+    dict(key="niebuhr-social-sources", ident="in.ernet.dli.2015.462204",
          title="The Social Sources of Denominationalism（宗派主義的社會來源）",
          author="H. Richard Niebuhr", category="宗教學", sub="宗教社會學",
          why="第5章新教裂變的主要分析工具；1929 年出版，美國已入公有領域。"
-             "⚠️ 該掃描本可能仍是借閱制，抓不到就要另找 1929 年版"),
+             "原先用的 socialsourcesofd0000nieb_w7z0 是借閱制、回 401；改用 DLI 那份，明確標公有領域"),
 ]
 
 # Patrologia Orientalis：東方諸教會原典的對照譯本（敘利亞／科普特／亞美尼亞／
