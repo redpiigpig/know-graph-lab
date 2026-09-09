@@ -119,6 +119,50 @@ def pick_file(files: list[dict]) -> tuple[str, str, int] | None:
     return None
 
 
+def download_resumable(url: str, target: Path, expect: int, tries: int = 6) -> bool:
+    """邊收邊寫、斷了用 Range 續傳。
+
+    archive.org 的大檔（50-70 MB）在這條線上常常收到一半就斷（IncompleteRead），
+    整檔重來只會再斷一次。改成寫到 .part、記錄已收位元組、用 Range 從斷點續，
+    收滿 expect 才改名。這也順帶避免把 70 MB 讀進記憶體。
+    """
+    part = target.with_suffix(target.suffix + ".part")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    for attempt in range(1, tries + 1):
+        have = part.stat().st_size if part.exists() else 0
+        if expect and have >= expect:
+            break
+        headers = {"User-Agent": UA}
+        if have:
+            headers["Range"] = f"bytes={have}-"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            t0 = time.time()
+            with urllib.request.urlopen(req, timeout=180) as r, open(part, "ab") as fh:
+                while True:
+                    block = r.read(1 << 20)
+                    if not block:
+                        break
+                    fh.write(block)
+            got = part.stat().st_size
+            print(f"   ↓ {got/1024/1024:.1f} MB（第 {attempt} 次，{time.time()-t0:.0f}s）")
+            if not expect or got >= expect:
+                break
+        except Exception as e:
+            got = part.stat().st_size if part.exists() else 0
+            print(f"   … 第 {attempt} 次中斷於 {got/1024/1024:.1f} MB：{type(e).__name__}")
+            if attempt == tries:
+                print("   ✕ 放棄；.part 留著，下次再跑會從斷點續")
+                return False
+            time.sleep(5 * attempt)
+    if expect and part.stat().st_size < expect:
+        print(f"   ✕ 收不齊（{part.stat().st_size}/{expect}）")
+        return False
+    part.replace(target)
+    print(f"   ✓ {target}")
+    return True
+
+
 def already_in_library(env, title_fragment: str) -> str | None:
     import requests
     r = requests.get(
@@ -203,16 +247,7 @@ def main() -> int:
             skipped += 1
             continue
         url = DL.format(ident=w["ident"], name=urllib.parse.quote(name))
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            t0 = time.time()
-            with urllib.request.urlopen(req, timeout=600) as r:
-                data = r.read()
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(data)
-            print(f'   ↓ {len(data)/1024/1024:.1f} MB / {time.time()-t0:.0f}s → {target}')
-        except Exception as e:
-            print(f"   ✕ 下載失敗：{e}")
+        if not download_resumable(url, target, size):
             failed += 1
             continue
         eid = insert_row(env, w, ext, target)

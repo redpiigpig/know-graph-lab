@@ -342,8 +342,23 @@ def parse_txt(path):
     return chunks
 
 
-def parse_book(path, file_type):
-    """Dispatch parser by file_type. Returns chunks list or raises."""
+def parse_book(path, file_type, _retry=True):
+    """Dispatch parser by file_type. Returns chunks list or raises.
+
+    Drive 串流的檔第一次被打開時可能還沒 hydrate，會丟 OSError(22) Invalid
+    argument；同一個檔第二次開就正常。整本書因此被標成解析失敗太冤，重試一次。
+    """
+    try:
+        return _parse_book(path, file_type)
+    except OSError as e:
+        if not _retry:
+            raise
+        print(f"    OSError {e.errno}，Drive 檔可能未就緒，5 秒後重試一次")
+        time.sleep(5)
+        return _parse_book(path, file_type)
+
+
+def _parse_book(path, file_type):
     ft = file_type.lower()
     if ft == 'pdf':
         return parse_pdf(path)
