@@ -31,12 +31,15 @@ from __future__ import annotations
 import argparse
 import collections
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import requests
+from dotenv import load_dotenv
 from opencc import OpenCC
 
 import original_reader_llm as llm
@@ -140,6 +143,85 @@ VERIFY_PROMPT = """下面 {count} 個日文詞被歸進「{title}」。請逐個
 只輸出 JSON 物件，鍵是題號字串，值是 yes 或 no：{{"1": "yes", "2": "no"}}
 
 {items}"""
+
+
+GLOSSARY_FIELDS = ("zh_recommended", "zh_protestant", "zh_catholic_sgs",
+                   "zh_orthodox", "zh_tw", "zh_hk")
+
+
+def glossary_rows() -> list[dict]:
+    """`/translation-glossary` 的神學名詞表。接不上就回空，不要讓附錄卡在網路上。"""
+    load_dotenv(".env")
+    url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not (url and key):
+        print("  ⚠ 沒有 Supabase 連線設定，跳過詞庫對接")
+        return []
+    try:
+        reply = requests.get(
+            f"{url}/rest/v1/theological_terms"
+            "?select=term_english,term_original,zh_recommended,zh_protestant,"
+            "zh_catholic_sgs,zh_orthodox,zh_tw,zh_hk&limit=2000",
+            headers={"apikey": key, "Authorization": f"Bearer {key}"}, timeout=60)
+        reply.raise_for_status()
+        return reply.json()
+    except Exception as error:  # noqa: BLE001
+        print(f"  ⚠ 詞庫讀不到（{type(error).__name__}），跳過對接")
+        return []
+
+
+def attach_variants(rows: list[dict]) -> tuple[int, list[str]]:
+    """把新教／天主教兩傳統的譯名接到基督教用語表上。
+
+    權威是 `/translation-glossary`，不是這支腳本：只認**完全相同**的比對——中文對
+    中文，或英文詞條一字不差。模糊比對會把「聖書」接到 canon (of scripture)、把
+    「使徒」接到 Apostles' Creed，看起來有來源，其實是編出來的。詞庫沒收的就留白，
+    並回報是哪幾個，讓人決定要不要往詞庫補。
+    """
+    glossary = glossary_rows()
+    if not glossary:
+        # 讀不到詞庫與「詞庫沒收這些詞」長得一模一樣：兩者都是這一欄空著。第一次
+        # 就這樣——網路瞬斷，報「接上 0／14」，看起來像詞庫真的一條都沒有。所以
+        # 讀不到就沿用上一版已經接好的，並且講出來。
+        previous = {}
+        if OUTPUT.exists():
+            for table in load(OUTPUT)["tables"]:
+                if table["id"] == "christian":
+                    previous = {e["form"]: e for e in table["entries"]}
+        carried = 0
+        for row in rows:
+            old = previous.get(row["form"], {})
+            if old.get("variants"):
+                row.update({k: old[k] for k in ("variants", "zhProtestant", "zhCatholic")
+                            if k in old})
+                carried += 1
+        print(f"  ⚠ 詞庫這一輪沒讀到，沿用上一版已接上的 {carried} 條（不是詞庫沒有）")
+        return carried, []
+    index: dict[str, dict] = {}
+    for record in glossary:
+        for field in GLOSSARY_FIELDS:
+            value = (record.get(field) or "").strip()
+            if value:
+                index.setdefault(value, record)
+        english = (record.get("term_english") or "").strip().lower()
+        if english:
+            index.setdefault(english, record)
+    attached, missing = 0, []
+    for row in rows:
+        record = index.get(row["zh"]) or index.get(row["form"])
+        protestant = (record or {}).get("zh_protestant", "").strip()
+        catholic = (record or {}).get("zh_catholic_sgs", "").strip()
+        if record and protestant and catholic and protestant != catholic:
+            row["zhProtestant"] = protestant
+            row["zhCatholic"] = catholic
+            # 標出是詞庫哪一條在裁定：聖霊 接到的是 pneuma 那一條，「靈／聖神」
+            # 不寫出處會看不懂為什麼新教那一欄不是「聖靈」。
+            english = (record.get("term_english") or "").strip()
+            row["variants"] = f"{protestant}／{catholic}" + (f"（{english}）" if english else "")
+            row["glossaryTerm"] = record.get("term_english") or ""
+            attached += 1
+        else:
+            missing.append(f"{row['form']}／{row['zh']}")
+    return attached, missing
 
 
 def load(path: Path) -> dict:
@@ -348,10 +430,16 @@ def build(write: bool) -> dict:
                 found, rows = split_proper(rows, verified)
                 names.extend(found)
                 print(f"    {title}：分出 {len(found)} 條專名")
-        tables.append({"id": bucket, "title": title,
-                       "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——"
-                               "同一個詞在課文裡與附錄裡不會有兩種說法。",
-                       "entries": rows})
+        note = ("詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——"
+                "同一個詞在課文裡與附錄裡不會有兩種說法。")
+        if bucket == "christian" and write:
+            attached, missing = attach_variants(rows)
+            note += ("　兩傳統譯名取自本站《翻譯定名》的神學名詞表；"
+                     "該表沒有收的詞就留白，不自行填。")
+            print(f"    基督教用語：詞庫接上 {attached}／{len(rows)} 條")
+            if missing:
+                print("      詞庫沒收：" + "、".join(missing))
+        tables.append({"id": bucket, "title": title, "note": note, "entries": rows})
 
     if names:
         names.sort(key=lambda r: -r["count"])

@@ -345,8 +345,13 @@ CORPUS_TABLE_COLUMNS = {
     "function_words": (("form", "機能語"), ("count", "次"), ("lessons", "見於")),
     "counters": (("form", "助数詞"), ("example", "例"), ("count", "次"), ("lessons", "見於")),
     "era_calendar": (("form", "詞"), ("kind", "類"), ("zh", "繁中"), ("count", "次")),
+    # 兩傳統譯名只有詞庫裁定過的才有字。空著代表《翻譯定名》沒收這個詞，
+    # 不代表兩邊講法一樣——這一欄留白是有意義的資訊。
+    "christian": (("form", "詞"), ("zh", "繁中"), ("variants", "新教／天主教"), ("count", "次")),
 }
 CORPUS_TABLE_DEFAULT = (("form", "詞"), ("zh", "繁中"), ("count", "次"), ("lessons", "見於"))
+# 欄寬要跟著欄位走：基督教那張第三欄是兩傳統譯名，不是次數，照預設寬度會被擠成三行。
+CORPUS_TABLE_WIDTHS = {"christian": [26, 28, 66, 21]}
 # 舊字舊假名與文語助動詞只對文語那兩冊有用；現代語那兩冊印了是浪費紙。
 CLASSICAL_ONLY = {"kyujitai", "kyukana"}
 
@@ -367,7 +372,8 @@ def add_corpus_appendix(document: Document, payload: dict, *, classical: bool) -
         H.paragraph_rule(heading, color=H.GOLD, size="14")
         H.add_body(document, table["note"], size=H.CAPTION_PT, color=H.MUTED)
         columns = CORPUS_TABLE_COLUMNS.get(table["id"], CORPUS_TABLE_DEFAULT)
-        widths = {3: [46, 25, 70], 4: [34, 34, 16, 57]}[len(columns)]
+        widths = CORPUS_TABLE_WIDTHS.get(
+            table["id"], {3: [46, 25, 70], 4: [34, 34, 16, 57]}[len(columns)])
         grid = document.add_table(rows=1, cols=len(columns))
         H.set_table_geometry(grid, widths)
         H.set_borders(grid)

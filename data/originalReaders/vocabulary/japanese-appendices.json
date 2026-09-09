@@ -1214,7 +1214,7 @@
   {
    "id": "christian",
    "title": "基督教用語",
-   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。",
+   "note": "詞取自本讀本正文，中文沿用逐詞對譯層已定的譯法——同一個詞在課文裡與附錄裡不會有兩種說法。　兩傳統譯名取自本站《翻譯定名》的神學名詞表；該表沒有收的詞就留白，不自行填。",
    "entries": [
     {
      "form": "聖書",
@@ -1268,7 +1268,11 @@
      "form": "洗礼",
      "zh": "洗禮",
      "count": 6,
-     "lessons": "1-07、2-48"
+     "lessons": "1-07、2-48",
+     "zhProtestant": "洗禮",
+     "zhCatholic": "聖洗聖事",
+     "variants": "洗禮／聖洗聖事（baptism）",
+     "glossaryTerm": "baptism"
     },
     {
      "form": "燔祭",
@@ -1280,7 +1284,11 @@
      "form": "聖霊",
      "zh": "聖靈",
      "count": 5,
-     "lessons": "2-06、2-07"
+     "lessons": "2-06、2-07",
+     "zhProtestant": "靈",
+     "zhCatholic": "聖神",
+     "variants": "靈／聖神（Pneuma）",
+     "glossaryTerm": "Pneuma"
     },
     {
      "form": "十字架",
