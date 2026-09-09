@@ -65,7 +65,7 @@ ILLUSTRATE = {
         '摩尼教': 'manichaean-painting',
         '曼達教': 'mandaean-baptism',
         '越南與加勒比海的三支': 'caodai-temple',
-        '中東的另外兩支，與美洲的離散諸教': 'bahai-temple',
+        '中東的另外兩支與美洲的離散諸教': 'bahai-temple',
         # 第 11 章 實用神論
         '儒教：聖典與教義': 'four-books',
         '佛教：聖典的特殊處境': 'pali-palm-leaf',
@@ -84,22 +84,22 @@ ILLUSTRATE = {
         '對話的四種層次': 'assisi-prayer',
         # 第 15 章 臺灣宗教史
         '荷西時期：一次中斷的接觸（1624–1662）': 'fort-zeelandia',
-        '神明作為族群標誌': 'sanshan-guowang',
+        '神明作為族群的標誌': 'sanshan-guowang',
         '從厲到神：有應公、萬善爺、義民爺': 'yimin-temple',
     },
     'ch': {
         # 第 1 章
-        '四者共享的五項核心': 'apostles-creed',
+        '基督宗教共有的五項核心': 'apostles-creed',
         # 第 2 章 拿撒勒人耶穌
         '一個按常識應該被遺忘的人': 'sea-of-galilee',
         '史料一：四福音書是宣講文本': 'gospel-illumination',
         '對觀福音問題與 Q': 'codex-vaticanus',
         '歷史耶穌研究：三波': 'schweitzer-albert',
-        '他的教導': 'good-samaritan',
+        '教導（二）比喻：讓聽的人自己判自己': 'good-samaritan',
         '死亡：釘十字架是史實': 'crucifix-vs-cross',
         # 第 3 章 初代教會
         '最早的宣講：內容不是教訓，是死與復活': 'empty-tomb-icon',
-        '保羅：三重身分的橋樑': 'ephesus-theatre',
+        '保羅：三重身份的橋樑': 'ephesus-theatre',
         '小普林尼的信（112 年）：外部見證': 'pliny-younger',
         '迫害的實情比通俗想像複雜': 'catacomb-tomb',
         '迫害留下的兩個結構後果': 'constantine',
@@ -128,7 +128,7 @@ ILLUSTRATE = {
         '托缽修會回應的是一個真實的社會變化': 'francis-assisi',
         '教權與王權：一條上升與崩落的曲線': 'canossa',
         '第四次拉特朗（1215）：制度定型': 'innocent-iii',
-        '修道運動為什麼在那個時候興起': 'benedict-rule',
+        '修道運動為什麼在那個時候興起？': 'benedict-rule',
         '改革前就已存在的批判力量': 'erasmus',
         # 第 9 章 宗教改革
         '英國：一條政治先行的路線': 'henry-viii',
@@ -173,13 +173,13 @@ ILLUSTRATE = {
         '《儀禮》：一部只能被執行的書': 'confucian-wedding',
         # 第 6 章 六朝
         '玄學清談與佛教義理的交會': 'seven-sages',
-        '志怪：作者的目的不是虛構，是舉證': 'chinese-ghost-painting',
+        '志怪：作者的目的不是虛構，而是舉證': 'chinese-ghost-painting',
         '靈驗記：為了說服而設計的文體': 'water-moon-guanyin',
         '《文心雕龍》：一部懂佛教的文論': 'wenxin-diaolong',
         '僧傳：一種新的傳記文體': 'monk-portrait',
         '山水詩與佛教': 'chinese-landscape',
         # 第 7 章 唐代
-        '《六祖壇經》：漢地撰述而稱「經」': 'platform-sutra',
+        '《六祖壇經》：漢地撰述，稱「經」': 'platform-sutra',
         '燈錄：認祖歸宗的名單': 'bodhidharma',
         '唐詩裡的佛教': 'wangwei-painting',
         '道教文學：另一條線': 'daozang-volume',
@@ -206,7 +206,7 @@ ILLUSTRATE = {
         '歌仔冊：另一種白話韻文': 'koa-a-chheh',
         # 第 15、16 章
         '原住民族語聖經': 'amis-bible',
-        '白話文運動的判準': 'xin-qingnian',
+        '白話文運動的標準': 'xin-qingnian',
     },
 }
 
