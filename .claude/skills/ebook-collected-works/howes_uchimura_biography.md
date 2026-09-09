@@ -58,8 +58,13 @@ translate/build/upload 沿用 `uchimura_auto.py --author howes`。
 
 **規模**：19 節／1,442 段／107 萬字（序言＋導論＋16 章＋結論）。
 
-**只譯正文**。Notes（p428–451）、Selected Bibliography、Index 是檢索裝置不是散文，
-不譯；Chronology 與 Glossary 是兩欄表格，而且內村 hub 自己已經有年表，一併略過。
+**⚠️ 2026-09-09 推翻舊規**。原本只譯正文，把 Notes（PDF p428–451）、Selected
+Bibliography、Index 當「檢索裝置不是散文」跳過——使用者指出這使他無法核對豪斯引了
+什麼史料，要求全部補上（見檔頭〈註釋與書目政策〉）。**要補的是**：Attribution
+Abbreviations（p428，解讀 SK／MKK／JCI／ZenshûA／ZenshûB 的鑰匙，缺它註釋等於廢紙）、
+逐章尾註（p429–451，共 16 章＋序言＋導論＋結論）、Selected Bibliography（p452–457）。
+**仍可略**：Index（p458–465，指向紙本頁碼）；Chronology 與 Glossary 兩欄表格已由內村
+hub 的年表覆蓋，註明另存即可。
 節界直接取 PDF 內嵌的 TOC 頁碼（三個 Part 扉頁落在區間之間，自然被跳過）。
 
 ## 原生 PDF 的分段：靠版面幾何，不是靠空行

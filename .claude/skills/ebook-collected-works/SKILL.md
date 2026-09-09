@@ -5,6 +5,13 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
+> 📚 **註釋與書目政策（2026-09-09 使用者定調，推翻舊規）**：**尾註／腳註／參考書目一律要收，不可略過。**舊做法把 Notes／Bibliography 當成「檢索裝置不是散文」而跳過，使用者明確推翻：**「不然我怎麼確認他引用的史料？」**——對研究用途而言，註釋正是全書最需要的部分，少了它就無法核對作者到底引了什麼。見 [[feedback_transcribe_notes_and_bibliography]]。
+> - **註釋**：全部轉錄。敘述性的註（含論證或評語）要譯成繁中；純書目式的註（作者‧書名‧卷期‧頁）**引註字串原樣保留**以便查證，可另加中譯題名。
+> - **參考書目**：全部轉錄，原文原樣；可加中譯題名。
+> - **縮寫／略語表必收**（例：豪斯評傳的 Attribution Abbreviations——SK＝《聖書之研究》、MKK＝《無教會》、ZenshûA/B＝1932–33 與 1981–84 兩種《內村鑑三全集》）。沒有這張表，註釋裡的代號無法解讀，等於沒收。
+> - **唯一可略者：Index（索引）**——它是指向紙本頁碼的指標，站上不重現紙本頁碼，轉錄無用。年表／詞彙表若 hub 已另有，註明「已另存」即可，不必重複。
+> - 已上架但缺註釋的書要**回頭補**；補完在該案例檔記一行。
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
 
 > 📊 **各全集翻譯線現況（2026-07-22，由 [[project_fleet_keeper]] 的 `KGL_Fleet_Keeper` 排程託管，`scripts/fleet_keeper.ps1`）**：

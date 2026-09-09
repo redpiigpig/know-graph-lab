@@ -129,9 +129,12 @@ def translate_work(slug: str, translate_para, *, save_every: int = 5,
         # 🚨 NDL 那條線的 title_zh 是直接抄目次的**日文**標題（ndl_official_text
         # 寫的），欄位有值所以這裡會判定「已經翻過」而跳過——結果 reader 目錄與
         # 每段的 chapter_path 都印著「## 第一章　宗敎の個人性・世界性・民族性」。
-        # 判準：等於原標題、而且原標題是日文 ＝ 還沒翻。
-        if title_zh and title_zh == s["heading"] and _KANA_RE.search(title_zh):
-            title_zh = None
+        # 判準：**中文章名不該有假名**（跟正文同一把尺）。涵蓋三種情形——
+        # 整個等於日文原標題（NDL 那批 78 個）、原標題沒剝乾淨而中日並排
+        # （「門をたたけ 叩門吧」）、只翻一半（「３　富める青年――不捨棄之人」）。
+        if title_zh and _KANA_RE.search(title_zh):
+            cleaned = clean_heading(title_zh, s["heading"])
+            title_zh = None if _KANA_RE.search(cleaned) else cleaned
         if title_zh is None:
             if s["heading"] in ("(front)", ""):
                 title_zh = w["title"] if i == 0 else s["heading"]
