@@ -88,13 +88,34 @@ def single_instance():
     return fh
 
 
+
+# ── HTTP with retry ────────────────────────────────────────────
+def _http(method, url, **kw):
+    """Supabase 偶爾直接重置連線（WinError 10054），尤其在多個工具同時打同一個
+    專案的時候。先前沒有重試，一次重置就讓整輪解析中斷——2026-09-09 那輪就是在
+    61/350 掛掉的，前面 57 本的成果還在，但剩下 289 本要等下一次排程才會再跑。
+    退避重試之後，單次網路抖動不會再終結整輪。"""
+    last = None
+    for i in range(1, 6):
+        try:
+            return getattr(requests, method)(url, **kw)
+        except requests.exceptions.RequestException as e:
+            last = e
+            if i == 5:
+                break
+            print(f"    HTTP {method} 第 {i} 次失敗（{type(e).__name__}），{3*i}s 後重試",
+                  flush=True)
+            time.sleep(3 * i)
+    raise last
+
+
 # ── DB helpers ─────────────────────────────────────────────────
 def fetch_unparsed_books(limit=None):
     """Return list of {id, title, file_type, file_path} for ebooks where parsed_at IS NULL."""
     params = 'select=id,title,file_type,file_path&parsed_at=is.null'
     if limit:
         params += f'&limit={limit}'
-    r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
+    r = _http('get', f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
     r.raise_for_status()
     return r.json()
 
@@ -114,7 +135,7 @@ def fetch_all_books():
         cursor = f'&id=gt.{last_id}' if last_id else ''
         params = (f'select=id,title,file_type,file_path,parsed_at,chunk_count,parse_error'
                   f'&order=id{cursor}&limit={page_size}')
-        r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
+        r = _http('get', f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
         r.raise_for_status()
         page = r.json()
         if not page:
@@ -174,7 +195,7 @@ def insert_chunks(ebook_id, chunks):
         succeeded = False
         for batch_size in BATCH_SIZES:
             batch = rows[i:i+batch_size]
-            r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H, json=batch, timeout=120)
+            r = _http('post', f"{URL}/rest/v1/ebook_chunks", headers=H, json=batch, timeout=120)
             if r.status_code in (200, 201):
                 i += len(batch)
                 succeeded = True
@@ -196,13 +217,13 @@ def mark_parsed(ebook_id, chunk_count, total_chars):
         'total_chars': total_chars,
         'parse_error': None,
     }
-    r = requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}", headers=H, json=body, timeout=30)
+    r = _http('patch', f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}", headers=H, json=body, timeout=30)
     if r.status_code not in (200, 204):
         raise RuntimeError(f"mark_parsed failed: HTTP {r.status_code}")
 
 
 def mark_error(ebook_id, error_msg):
-    r = requests.patch(
+    r = _http('patch',
         f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}",
         headers=H,
         json={'parse_error': error_msg[:1000]},
@@ -213,7 +234,7 @@ def mark_error(ebook_id, error_msg):
 
 def delete_existing_chunks(ebook_id):
     """Used when re-parsing — clear old chunks first."""
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}", headers=H, timeout=30)
+    _http('delete', f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}", headers=H, timeout=30)
 
 
 # ── parsers ────────────────────────────────────────────────────
@@ -483,7 +504,7 @@ def cmd_run(limit=None):
     # book backlog looked like it was being drained in one pass.
     params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub,docx,txt)&order=id'
     params += f'&limit={limit or 1000}'
-    r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
+    r = _http('get', f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
     r.raise_for_status()
     books = r.json()
     print(f"To process: {len(books)} books", file=sys.stderr)
