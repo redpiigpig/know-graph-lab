@@ -206,7 +206,7 @@ def _prepend_cover(slug: str, content_chunks: list[dict]) -> list[dict]:
     d = WORKS[slug]
     cover = mc.build_multilang_chunk(
         chunk_index=0, chapter_path="封面", content_zh="## 封面", sources={}, source_order=[],
-        volume=d["title_zh"], parent_volume=d["parent_volume"], chunk_type="cover", page_number=1)
+        volume=d["title_zh"], parent_volume=d["parent_volume"], chunk_type="cover", page_number=None)
     mc.validate_multilang_chunk(cover)
     for i, c in enumerate(content_chunks, start=1):
         c["chunk_index"] = i

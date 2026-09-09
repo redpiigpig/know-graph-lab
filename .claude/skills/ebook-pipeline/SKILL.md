@@ -5,6 +5,20 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
+> 📚 **註釋與書目政策（2026-09-09 使用者定調，推翻舊規）**：**尾註／腳註／參考書目一律要收，不可略過。**舊做法把 Notes／Bibliography 當成「檢索裝置不是散文」而跳過，使用者明確推翻：**「不然我怎麼確認他引用的史料？」**——對研究用途而言，註釋正是全書最需要的部分，少了它就無法核對作者到底引了什麼。見 [[feedback_transcribe_notes_and_bibliography]]。
+> - **註釋**：全部轉錄。敘述性的註（含論證或評語）要譯成繁中；純書目式的註（作者‧書名‧卷期‧頁）**引註字串原樣保留**以便查證，可另加中譯題名。
+> - **參考書目**：全部轉錄，原文原樣；可加中譯題名。
+> - **縮寫／略語表必收**（例：豪斯評傳的 Attribution Abbreviations——SK＝《聖書之研究》、MKK＝《無教會》、ZenshûA/B＝1932–33 與 1981–84 兩種《內村鑑三全集》）。沒有這張表，註釋裡的代號無法解讀，等於沒收。
+> - **唯一可略者：Index（索引）**——它是指向紙本頁碼的指標，站上不重現紙本頁碼，轉錄無用。年表／詞彙表若 hub 已另有，註明「已另存」即可，不必重複。
+> - 已上架但缺註釋的書要**回頭補**；補完在該案例檔記一行。
+
+> 📄 **頁碼政策（2026-09-09 使用者定調）**：**轉錄一律要帶得回原書頁碼**——使用者引用時必須寫得出「第幾頁」。見 [[feedback_transcribe_page_numbers]]。
+> - **有頁碼的來源**（PDF、掃描本、archive.org djvu、NDL 影像）：逐段記下該段所在的**原書印刷頁**，寫進 chunk 的 `page_number`。重整流程不可重編（[[feedback_pdf_page_number]]）。
+> - 🚨 **絕不可拿流水號冒充頁碼。**全集那條線曾把 `page_number` 填成 `chunk_index + 1`（`uchimura_auto.py`），465 頁的豪斯評傳變成 152 個「頁碼」——看起來正常、照著引就是錯的。**這比沒有頁碼更糟**，因為它會讓人真的照著寫進論文。沒有真頁碼時**寧可留 null**。
+> - **本來就沒有頁碼的來源**（青空文庫等電子底本、HTML 網頁）：`page_number` 留 null，改記**底本資訊**（青空文庫每篇末的「底本：」區塊：出版社‧版次‧印刷年），讓引用者至少標得出所據版本。🚨 `uchimura_build.py` 目前**刻意丟掉**底本區塊，要改回來。
+> - **註釋與參考書目**同樣要記頁碼（例：豪斯評傳的尾註在 PDF p429–451、書目 p452–457）。
+> - 稽核工具 `scripts/audit_page_numbers.py`：判準是 `page_number == chunk_index + 1` 即假頁碼；分類 serial（假）／real（真）／none（無）／sparse（混合）。
+
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 

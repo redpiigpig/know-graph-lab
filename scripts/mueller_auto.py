@@ -426,7 +426,7 @@ def review_local_drafts(
 def cover_chunk(work: dict) -> dict:
     c = build_multilang_chunk(chunk_index=0, chapter_path="封面", content_zh="## 封面",
                               sources={}, source_order=[], volume=work["title"],
-                              parent_volume=work["parent"], chunk_type="cover", page_number=1)
+                              parent_volume=work["parent"], chunk_type="cover", page_number=None)
     validate_multilang_chunk(c)
     return c
 
@@ -442,7 +442,7 @@ def section_chunk(work: dict, sec: dict, ci: int) -> dict:
         chunk_index=ci, chapter_path=f"{work['title']} · {sec['title']}",
         content_zh="\n\n".join(zh_rows), sources={"en": "\n\n".join(en_rows)},
         source_order=["en"], volume=work["title"], parent_volume=work["parent"],
-        page_number=ci + 1, title_en=sec["title"])
+        page_number=None, title_en=sec["title"])
     validate_multilang_chunk(c)
     return c
 

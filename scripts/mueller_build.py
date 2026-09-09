@@ -267,7 +267,7 @@ def make_cover_chunk() -> dict:
         volume=VOLUME,
         parent_volume=PARENT_VOLUME,
         chunk_type="cover",
-        page_number=1,
+        page_number=None,
     )
     validate_multilang_chunk(chunk)
     return chunk
@@ -288,7 +288,7 @@ def section_to_chunk(sec: dict, chunk_index: int) -> dict:
         source_order=["en", "de"],
         volume=VOLUME,
         parent_volume=PARENT_VOLUME,
-        page_number=chunk_index + 1,
+        page_number=None,
         title_en=sec["en_head"],
     )
     validate_multilang_chunk(chunk)

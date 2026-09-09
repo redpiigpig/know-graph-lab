@@ -156,7 +156,7 @@ def build(slug: str, *, limit=None, upload=True, upload_every=20) -> int:
     # cover
     cover = mc.build_multilang_chunk(chunk_index=0, chapter_path="封面", content_zh="## 封面",
                                      sources={}, source_order=[], volume=d["title_zh"],
-                                     parent_volume=d["title_zh"], chunk_type="cover", page_number=1)
+                                     parent_volume=d["title_zh"], chunk_type="cover", page_number=None)
     mc.validate_multilang_chunk(cover)
     chunks.append(cover)
 
@@ -169,7 +169,7 @@ def build(slug: str, *, limit=None, upload=True, upload_every=20) -> int:
             chunk_index=len(chunks), chapter_path=cp, content_zh=zh,
             sources={"en": en}, source_order=["en"],
             volume=(d["title_zh"] + (f"‧{s['_vol']}" if s.get("_vol") else "")),
-            parent_volume=d["title_zh"], chunk_type="chapter", page_number=i + 2)
+            parent_volume=d["title_zh"], chunk_type="chapter", page_number=None)
         mc.validate_multilang_chunk(c)
         chunks.append(c)
         if upload and upload_every and (i + 1) % upload_every == 0:

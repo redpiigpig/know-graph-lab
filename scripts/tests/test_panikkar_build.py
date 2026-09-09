@@ -120,12 +120,28 @@ class TestBuildSectionChunk:
 
 
 class TestCoverChunk:
-    def test_cover_is_chunk_zero_page_one(self):
+    def test_cover_is_chunk_zero_with_no_page_number(self):
+        """封面沒有原書頁碼——page_number 必須是 None。
+
+        舊版斷言 `== 1`，把「封面＝第 1 頁」寫死。那是假頁碼的源頭之一：
+        page_number 這個欄位是給**原書印刷頁**用的，讀者會照著引，
+        沒有真頁碼就必須留 None。見 [[feedback_transcribe_page_numbers]]。"""
         cover = pk.make_cover_chunk()
         assert cover["chunk_index"] == 0
         assert cover["chunk_type"] == "cover"
-        assert cover["page_number"] == 1
+        assert cover["page_number"] is None
         mc.validate_multilang_chunk(cover)
+
+    def test_section_chunk_does_not_fabricate_page_number(self):
+        """沒傳 page_number 時，建構器不可拿 chunk_index+1 頂替。
+
+        這是假頁碼的根源：舊版是
+        `page_number=page_number if page_number is not None else chunk_index + 1`。"""
+        chunk = pk.build_section_chunk(
+            chunk_index=7, title_zh="第七節", zh_paras=["一段"],
+            source_paras={"en": ["one"]}, source_heads={"en": "VII"},
+            source_order=["en"])
+        assert chunk["page_number"] is None
 
 
 class TestReferenceMode:

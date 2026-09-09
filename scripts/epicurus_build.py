@@ -535,7 +535,7 @@ def _prepend_cover(work: str, chunks: list[dict]) -> list[dict]:
         volume=d["title_zh"],
         parent_volume=_PARENT,
         chunk_type="cover",
-        page_number=1,
+        page_number=None,
     )
     for i, chunk in enumerate(chunks, start=1):
         chunk["chunk_index"] = i

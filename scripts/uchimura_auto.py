@@ -281,7 +281,7 @@ def build_chunks(slug: str) -> list[dict]:
     chunks = [pb.build_multilang_chunk(
         chunk_index=0, chapter_path="封面", content_zh="## 封面", sources={},
         source_order=[], volume=volume, parent_volume=w["parent_volume"],
-        chunk_type="cover", page_number=1)]
+        chunk_type="cover", page_number=None)]
     secs = ub.load_work_sections(slug)
     lang = getattr(ub, "SOURCE_LANG", "ja")
     ci = 1
@@ -305,7 +305,7 @@ def build_chunks(slug: str) -> list[dict]:
                 chunk_index=ci, title_zh=title, zh_paras=zg,
                 source_paras={lang: sg}, source_heads={lang: head},
                 source_order=[lang], volume=volume,
-                parent_volume=w["parent_volume"], page_number=ci + 1))
+                parent_volume=w["parent_volume"], page_number=None))
             ci += 1
     return chunks
 

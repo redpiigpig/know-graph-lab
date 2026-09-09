@@ -43,6 +43,7 @@ OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
 #   10 學位論文（送件有期限）
 #   20 下學期要開的講義（開課前要備齊）
 #   30 正在改寫成期刊論文的稿子
+#   35 站上某條研究線缺了關鍵的上游專書（讀不到它就只能引轉述）
 #   40 書籍寫作（長期，沒有硬期限）
 #   60 主題策展書單（想讀，但不擋任何進度）
 # 數字留空隙，之後插新計畫不必重排。
@@ -55,6 +56,7 @@ PRIORITY = {
     "biblio-yinshun-shengyan": 30,
     "biblio-bajingfa": 30,
     "biblio-pong-pastoral-spirituality": 30,
+    "mukyokai-studies": 35,
     "biblio-genesis-philosophy": 40,
     "biblio-mahaprajapati-revolution": 40,
     "biblio-theological-studies-manifesto": 40,
@@ -74,6 +76,7 @@ DEFAULT_PRIORITY = 60
 FOCUS_AUTHORS = [
     "伊利亞德",   # 2026-09-08 宗教學全集主打；6 部中譯本
     "Eliade",
+    "赤江",       # 2026-09-09 無教會研究缺上游專書，只有 2 筆，一天內就會消化掉
 ]
 
 

@@ -345,7 +345,7 @@ def _prepend_cover(slug: str, chunks: list[dict]) -> list[dict]:
         volume=f"{hub['name_zh']}殘篇",
         parent_volume=PARENT_VOLUME,
         chunk_type="cover",
-        page_number=1,
+        page_number=None,
     )
     mc.validate_multilang_chunk(cover)
     for index, chunk in enumerate(chunks, start=1):

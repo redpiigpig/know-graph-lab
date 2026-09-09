@@ -263,7 +263,7 @@ def make_cover_chunk() -> dict:
         volume=VOLUME,
         parent_volume=PARENT_VOLUME,
         chunk_type="cover",
-        page_number=1,
+        page_number=None,
     )
     validate_multilang_chunk(chunk)
     return chunk
@@ -308,7 +308,7 @@ def build_section_chunk(
         source_order=source_order,
         volume=volume,
         parent_volume=parent_volume,
-        page_number=page_number if page_number is not None else chunk_index + 1,
+        page_number=page_number,  # 沒有真頁碼就留 None，不可用流水號頂替
         title_en=source_heads.get(primary),
     )
     validate_multilang_chunk(chunk)
@@ -332,7 +332,7 @@ def assemble_pilot(sections: list[dict], translate_para, *, source_order: list =
             source_paras=src,
             source_heads=sec["heads"],
             source_order=source_order,
-            page_number=i + 1,
+            page_number=None,   # 章序不是頁碼
         ))
     return chunks
 
@@ -370,7 +370,7 @@ def build_reference_chunk(
         source_order=["en"],
         volume=volume,
         parent_volume=parent_volume,
-        page_number=page_number if page_number is not None else chunk_index + 1,
+        page_number=page_number,  # 沒有真頁碼就留 None，不可用流水號頂替
         title_en=en_head,
     )
     validate_multilang_chunk(chunk)
@@ -522,7 +522,7 @@ def assemble_reference(en_sections: list[dict], zh_sections: list[dict]) -> list
     for i, (title_zh, en_head, en_paras, zh_paras) in enumerate(pairs, start=1):
         chunks.append(build_reference_chunk(
             chunk_index=i, title_zh=title_zh, en_head=en_head,
-            zh_paras=zh_paras, en_paras=en_paras, page_number=i + 1,
+            zh_paras=zh_paras, en_paras=en_paras, page_number=None,
             volume=VOLUME, parent_volume=PARENT_VOLUME))
     return chunks
 
