@@ -656,7 +656,7 @@ def s_openers(prs, course, no):
 
     s1 = blank(prs)
     top = slide_title(s1, '上課前先想一想',
-                      '先不查資料、不翻講義；你現在的答案本身就是這堂課的材料')
+                      '先不查資料；你現在的答案本身就是這堂課的材料')
     tf = textbox(s1, Cm(1.5), Cm(top), W - Cm(3.0), Cm(BODY_BOTTOM - top))
     ka = fit([f'{i + 1}　{q}' for i, q in enumerate(d['ask'])],
              30.9, (BODY_BOTTOM - top) * FIT_MARGIN, {0: 27.0}, {0: 16})
@@ -692,6 +692,9 @@ def s_refs(prs, nums):
 
     學生要能從投影片直接抄到書名，所以字級不壓到看不清；
     條目多就分頁，寧可多一頁也不要擠。
+
+    🚨 副標不提「講義」——使用者 2026-09-09：「我在課堂上沒有在用講義」。
+       投影片是課堂上唯一在看的東西，叫學生去翻一份手上沒有的東西沒有意義。
     """
     items = chapter_refs(nums)
     if not items:
@@ -700,7 +703,7 @@ def s_refs(prs, nums):
     per, out = 7, []
     for start in range(0, len(items), per):
         s = blank(prs)
-        top = slide_title(s, '參考書目', '本次上課單元的參考資料；完整註釋見課堂講義')
+        top = slide_title(s, '參考書目', '本次上課單元的參考資料')
         tf = textbox(s, Cm(1.5), Cm(top), W - Cm(3.0), Cm(BODY_BOTTOM - top))
         for i, t in enumerate(items[start:start + per]):
             put(tf, t, 16, color=INK, first=(i == 0), space_after=10, line=1.25)
