@@ -39,27 +39,50 @@ OUT = ROOT / "output" / "zlib_wanted_all.jsonl"
 
 # 一天只抓得到十本，六千多筆照雜湊亂序排等於永遠輪不到正在寫的那幾本。
 # 排序依據是「為什麼現在需要這本書」——有時程壓力的排前面：
-#    5 本學期修課的指定用書（每週要讀，期限最硬）
+#    3 本學期正在上的課的講義（每週一次，期限最硬）
+#    5 本學期修課的指定用書（每週要讀）
 #   10 學位論文（送件有期限）
-#   20 下學期要開的講義（開課前要備齊）
-#   30 正在改寫成期刊論文的稿子
-#   35 站上某條研究線缺了關鍵的上游專書（讀不到它就只能引轉述）
-#   40 書籍寫作（長期，沒有硬期限）
+#   15 正在轉錄的全集主線缺的上游專書（缺它，那條線這週就卡住）
+#   20 正在轉錄的全集次線
+#   30 正在動筆／待補註釋的書稿
+#   40 長期改寫輪（沒有硬期限）
+#   45 全集獵表（整組一千多筆，靠 FOCUS_AUTHORS 逐位插隊，不整批往前）
 #   60 主題策展書單（想讀，但不擋任何進度）
 # 數字留空隙，之後插新計畫不必重排。
+#
+# 2026-09-10 重排。改動的理由，逐條記在下面——這張表沒有註記就會退化成憑印象排。
 PRIORITY = {
-    "relstudy-course-hcu": 5,
-    "biblio-hcu-phd": 10,
-    "biblio-christianity-intro": 20,
-    "biblio-world-religions-intro": 20,
-    "biblio-sinographic-literature": 20,
-    "biblio-yinshun-shengyan": 30,
-    "biblio-bajingfa": 30,
+    # 開學了。四門課每週要上，講義的參考書從「開課前備齊」變成「這週就要用」，
+    # 所以從 20 提到 3。原本 christianity-intro 與 sinographic-literature 排在
+    # 第 152／153 本，前面壓著三份各上千筆的長期清單，一本都還沒輪到過。
+    "biblio-christianity-intro": 3,
+    "biblio-world-religions-intro": 3,
+    "biblio-sinographic-literature": 3,
+    "relstudy-course-hcu": 5,          # 12/12 已清空，留著給下學期換書用
+    "biblio-hcu-phd": 10,              # 115/251，送件有期限，維持原級
+    # 內村鑑三／矢內原忠雄那條全集線正在跑（10 卷有 8 卷過九成），缺的是研究它們
+    # 的上游專書。兩份加起來只有 11 筆，一天就消化完，卻原本排在第 1,700／4,081
+    # 本——等於永遠拿不到。這種「量小但正擋著工作」的清單就該提到最前面。
+    "uchimura-biography": 15,
+    "mukyokai-studies": 15,
+    "mukyokai-chinese-translations": 15,   # REFERENCE-first：有中譯本就不自譯
+    # 昭慧法師全集是第一個只有紙本掃描本的來源，正在 OCR；八敬法與印順／聖嚴
+    # 是它的研究上游。原本排第 1,486 本（約 50 天後）。
+    "biblio-bajingfa": 20,
+    "biblio-yinshun-shengyan": 20,
+    # 動筆中或待補註釋的書稿。《神學研究宣言》十二章目已備、正文未寫；
+    # 《諸宗教的對話神學》84 章初稿完成但一條註釋都還沒有。
+    "biblio-theological-studies-manifesto": 30,
+    "biblio-mahaprajapati-revolution": 30,
     "biblio-pong-pastoral-spirituality": 30,
-    "mukyokai-studies": 35,
+    # 創生哲學 15 卷正文已完工，現在是現象學改寫輪，沒有硬期限；但它一家 1,806 筆
+    # 佔了整個佇列三分之一，擺在 40 以上會把上面每一層都餓死。
     "biblio-genesis-philosophy": 40,
-    "biblio-mahaprajapati-revolution": 40,
-    "biblio-theological-studies-manifesto": 40,
+    # 獵表兩份合計 1,223 筆、285 位作家。整組往前會淹掉佇列，所以留在低層，
+    # 要哪一位就寫進 FOCUS_AUTHORS 插隊。
+    "collected-works-hunt": 45,
+    "collected-works-zh": 45,
+    "christianity-studies-hunt": 45,
     "biblio-bachelor-evangelical": 50,
 }
 DEFAULT_PRIORITY = 60
@@ -74,9 +97,10 @@ DEFAULT_PRIORITY = 60
 # 所以插隊的單位是**作家**不是來源。填 who 欄位會出現的字串（中文名或英文姓皆可，
 # 大小寫不拘、比對用包含）。做完一位就把他移掉，不要放著累積——留著等於沒有優先序。
 FOCUS_AUTHORS = [
-    "伊利亞德",   # 2026-09-08 宗教學全集主打；6 部中譯本
+    "伊利亞德",   # 2026-09-08 宗教學全集主打；09-10 已下 6 本，剩下的多是同書異名
     "Eliade",
-    "赤江",       # 2026-09-09 無教會研究缺上游專書，只有 2 筆，一天內就會消化掉
+    # 赤江達也：2026-09-10 兩筆都回「沒有對得上的版本」，站上就是沒有，留著只會
+    # 每天白花兩次搜尋。要它得走別的來源（NDL／日本古書店），不是 z-lib。
 ]
 
 
@@ -85,10 +109,23 @@ def _is_focus(it: dict) -> bool:
     return any(a.lower() in hay for a in FOCUS_AUTHORS)
 
 
-def prioritize(items: list[dict]) -> list[dict]:
-    """依 PRIORITY 分層，層內在各來源之間輪流取，同一本書原文排在中譯前面。
+# 每一輪各層分到幾個名額。層數愈小拿愈多，但沒有一層是零——
+#
+# 🚨 2026-09-10 從「嚴格層序」改成加權輪流。原本是把整層清空才輪到下一層，
+# 結果是：把本學期三份講義書單（合計 1,337 筆）提到最前面之後，博班論文計畫
+# 那 136 筆立刻被推到第 1,350 本、四十五天後才輪得到。一天只有幾十本額度時，
+# 嚴格層序等於「除了第一名，其他全部餓死」，而實際需求從來不是「先把講義全部
+# 拿齊」，是「每條活線每天都要有進帳」。
+#
+# 一輪 27 筆，對上三個帳號一天 30 本的天花板，大致就是一天的份。
+TIER_QUOTA = {0: 8, 3: 6, 5: 6, 10: 4, 15: 3, 20: 2, 30: 2, 40: 1, 45: 1, 50: 1, 60: 1}
+DEFAULT_QUOTA = 1
 
-    FOCUS_AUTHORS 命中的整批拉到最前面（層內仍照原文先、中譯後）。
+
+def prioritize(items: list[dict]) -> list[dict]:
+    """依 PRIORITY 分層，各層按 TIER_QUOTA 加權輪流，層內在各來源之間輪流取。
+
+    FOCUS_AUTHORS 命中的整批歸到第 0 層（拿最多名額，但不再獨佔整個佇列頭）。
 
     層內輪流是刻意的：genesis-philosophy 一家就佔了三分之一，照來源整批排會讓
     它獨吞好幾個月的額度，其餘計畫全部餓死。
@@ -112,13 +149,26 @@ def prioritize(items: list[dict]) -> list[dict]:
             ordered = sorted(q, key=lambda x: (1 if x["key"].endswith("-zh") else 0, x["key"]))
             tier[src] = deque(ordered)
 
+    def take(lvl: int, n: int) -> list[dict]:
+        """從某一層取最多 n 筆，層內在各來源之間輪流。"""
+        tier = buckets[lvl]
+        srcs = [s for s in tier if tier[s]]
+        got: list[dict] = []
+        while len(got) < n and srcs:
+            for s in list(srcs):
+                if len(got) >= n:
+                    break
+                if tier[s]:
+                    got.append(tier[s].popleft())
+                else:
+                    srcs.remove(s)
+        return got
+
     out: list[dict] = []
-    for lvl in sorted(buckets):
-        srcs = list(buckets[lvl])
-        while any(buckets[lvl][s] for s in srcs):
-            for s in srcs:
-                if buckets[lvl][s]:
-                    out.append(buckets[lvl][s].popleft())
+    levels = sorted(buckets)
+    while any(any(buckets[l][s] for s in buckets[l]) for l in levels):
+        for lvl in levels:
+            out.extend(take(lvl, TIER_QUOTA.get(lvl, DEFAULT_QUOTA)))
     return out
 
 _AUTHOR_RE = re.compile(r"^\s*▍\s*(.+?)\s*(?:\((.+?)\))?\s*(?:約?\s*[前\d].*)?$")
@@ -184,6 +234,25 @@ def parse_christianity(text: str, source: str) -> list[dict]:
     return out
 
 
+def ledger_done() -> set[str]:
+    """帳本裡已處理的 key。與 zlib_fetch.mjs 的 doneKeys() 同一套規則——
+    🚨 --dry-run 寫進去的那些不算數，否則試跑一次就把清單永久封死。"""
+    led = ROOT / "scripts" / "state" / "zlib_ledger.jsonl"
+    if not led.exists():
+        return set()
+    out = set()
+    for line in led.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            r = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if r.get("key") and r.get("status") != "dry":
+            out.add(r["key"])
+    return out
+
+
 def load_curated() -> list[dict]:
     out = []
     for f in sorted(CURATED.glob("*.jsonl")):
@@ -205,9 +274,16 @@ def main() -> None:
         text = path.read_text(encoding="utf-8")
         items += parse_hunt(text, source) + parse_christianity(text, source)
 
+    # 帳本裡已經處理過的（抓到、或查無）先扣掉再排。
+    #
+    # 🚨 這一步不能省。配額是按「清單裡的位置」發的，已處理的那些仍然佔著位置，
+    # 於是 biblio-hcu-phd 明明只剩 136 筆、又在第 10 層，卻因為前面 115 筆早就
+    # 抓完而把它自己的名額用光，下一本新書要等到第 346 順位。fetch 端本來就會
+    # 跳過它們（不花額度），所以濾掉純粹是讓配額對「還沒抓的」生效。
+    done = ledger_done()
     seen, merged, banned = set(), [], []
     for it in items:
-        if it["key"] in seen:
+        if it["key"] in seen or it["key"] in done:
             continue
         seen.add(it["key"])
         # 使用者判定不值得讀的作者，連搜都不要搜（data/author-blacklist.json）
