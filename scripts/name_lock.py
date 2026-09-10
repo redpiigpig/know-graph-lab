@@ -106,8 +106,10 @@ def audit(pairs, locks) -> list:
     """找出「英文提到這個人、中文卻還留著變體」的段落。"""
     out = []
     for i, (src, zh) in enumerate(pairs):
+        if not zh:
+            continue          # 還沒翻到的段落（zh 是 None）不是名字問題
         for lk in locks:
-            if not re.search(lk.en, src):
+            if not re.search(lk.en, src or ""):
                 continue
             for frm, _ in lk.repl:
                 if frm in zh:
