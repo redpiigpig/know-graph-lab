@@ -149,19 +149,28 @@ def prioritize(items: list[dict]) -> list[dict]:
             ordered = sorted(q, key=lambda x: (1 if x["key"].endswith("-zh") else 0, x["key"]))
             tier[src] = deque(ordered)
 
+    # 每層一個游標，記住上一輪停在哪個來源。
+    #
+    # 🚨 沒有游標的話，每一輪都從該層第一個來源重新數，而一輪只取 n 筆——
+    # 第 60 層有 12 份書單、配額 1，等於永遠只餵第一份，其餘十一份要等它整份
+    # 抽乾才輪得到（實測 zoroastrian-studies 排到第 3,053 本）。層內輪流要跨輪
+    # 才成立。
+    cursor: dict[int, int] = defaultdict(int)
+
     def take(lvl: int, n: int) -> list[dict]:
-        """從某一層取最多 n 筆，層內在各來源之間輪流。"""
+        """從某一層取最多 n 筆，層內在各來源之間輪流（跨輪接續）。"""
         tier = buckets[lvl]
-        srcs = [s for s in tier if tier[s]]
+        srcs = list(tier)
         got: list[dict] = []
-        while len(got) < n and srcs:
-            for s in list(srcs):
-                if len(got) >= n:
-                    break
-                if tier[s]:
-                    got.append(tier[s].popleft())
-                else:
-                    srcs.remove(s)
+        misses = 0
+        while len(got) < n and misses < len(srcs):
+            s = srcs[cursor[lvl] % len(srcs)]
+            cursor[lvl] += 1
+            if tier[s]:
+                got.append(tier[s].popleft())
+                misses = 0
+            else:
+                misses += 1
         return got
 
     out: list[dict] = []
