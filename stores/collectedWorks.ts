@@ -13618,7 +13618,10 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "de"
                       ],
                       "status": "in-progress",
-                      "ebookId": "d0000000-0000-4000-8000-000000000021",
+                      // 🚨 key 不加引號：backfill regex（apply-ebooks-quality-collection.mjs
+                      // 與 test/collected-works/isolation.spec.ts 共用）只認 `ebookId:` 這個
+                      // 寫法，加了引號就抽不到，這一卷會漏標 collection 而混進圖書館。
+                      ebookId: "d0000000-0000-4000-8000-000000000021",
                       "note": "系統提出「現象學還原」與「先驗自我」，現象學代表作。轉錄中：走 Boyce Gibson 1931 英譯（archive.org 掃描本，Gemini Vision 重 OCR——原文字層零個希臘字母），帶原書頁碼與腳註；德文原著 1913 年那版是花體字排印，另列。"
                 },
                 {
