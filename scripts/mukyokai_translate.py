@@ -58,13 +58,35 @@ def visual_lines(page_dict: dict, size_min: float = BODY_SIZE_MIN) -> list[tuple
             frags.append((round(l["bbox"][1], 1), l["bbox"][0],
                           "".join(s["text"] for s in spans)))
     frags.sort(key=lambda f: (f[0], f[1]))
-    out: list[tuple[float, str]] = []
-    for y, x0, txt in frags:
-        if out and abs(y - out[-1][0]) <= SAME_LINE_TOL:
-            out[-1] = (out[-1][0], out[-1][1], out[-1][2] + txt)
+    # 🚨 先分行、行內再按 x0 排。原本是直接依 (y, x0) 全域排序後順著串接——同一個
+    # 視覺行的碎片 y 值差個 0.5，串出來就是「内村鑑三はである。(1861-1930)」這種
+    # 字序顛倒的句子，而且讀起來仍然通順、沒有任何東西會壞掉。
+    groups: list[list[tuple[float, float, str]]] = []
+    for f in frags:
+        if groups and abs(f[0] - groups[-1][0][0]) <= SAME_LINE_TOL:
+            groups[-1].append(f)
         else:
-            out.append((y, x0, txt))
-    return [(x0, txt) for _y, x0, txt in out]
+            groups.append([f])
+    out: list[tuple[float, str]] = []
+    for g in groups:
+        g.sort(key=lambda f: f[1])
+        out.append((g[0][1], "".join(t for _y, _x0, t in g)))
+    return out
+
+
+def folio_of(lines: list[tuple[float, str]]) -> str | None:
+    """一頁的 [(x0, 行)] → 印刷頁碼。
+
+    這批 J-STAGE 抽印本把頁碼印在**頁尾**（版心最後一行），內容是純數字。
+    `paragraphs_from_lines` 本來就把純數字行丟掉——丟之前先讀下來。
+    🚨 抽印本的頁碼是它自己的一套（本篇 1–12），不見得等於原刊的連續頁碼；
+    但這是我們手上唯一印在紙上的數字，照錄，不換算。"""
+    for _x0, txt in reversed(lines):
+        t = txt.strip()
+        if t and _PAGENUM.match(t):
+            digits = "".join(ch for ch in t if ch.isdigit())
+            return digits or None
+    return None
 
 
 _PAGENUM = re.compile(r"^[\s0-9０-９\-—―]+$")
@@ -87,6 +109,17 @@ def paragraphs_from_lines(lines: list[tuple[float, str]]) -> list[str]:
 _TERMINAL = ("。", "！", "？", "」", "』", "）", ")", "…", "―", "：", ":")
 
 
+def heal_pairs(pairs: list[tuple[str, str | None]]) -> list[tuple[str, str | None]]:
+    """`heal` 的帶頁碼版：接回上一段時，頁碼**留上一段的**（段落算在它開始的那一頁）。"""
+    out: list[list] = []
+    for para, pg in pairs:
+        if out and not out[-1][0].rstrip().endswith(_TERMINAL):
+            out[-1][0] += para
+        else:
+            out.append([para, pg])
+    return [(t, pg) for t, pg in out]
+
+
 def heal(paras: list[str]) -> list[str]:
     """跨頁換段是假的：上一段沒有句末標點就把這一段接上去。
 
@@ -103,13 +136,25 @@ def heal(paras: list[str]) -> list[str]:
 
 
 def paragraphs_from_pdf(path: str | Path) -> list[str]:
+    return [t for t, _pg in paragraphs_with_pages(path)]
+
+
+def paragraphs_with_pages(path: str | Path) -> list[tuple[str, str | None]]:
+    """PDF → [(段落, 印刷頁碼)]。頁碼取段落**開始**的那一頁。
+
+    為什麼非有不可：這批是要收進 /research-data 供論文引用的研究文獻，
+    沒有頁碼就標不出出處（[[feedback_transcribe_page_numbers]]）。"""
     import fitz
     doc = fitz.open(str(path))
-    paras: list[str] = []
+    pairs: list[tuple[str, str | None]] = []
     for pno in range(doc.page_count):
-        paras.extend(paragraphs_from_lines(visual_lines(doc[pno].get_text("dict"))))
+        d = doc[pno].get_text("dict")
+        # 🚨 頁碼那一行的字級比 BODY_SIZE_MIN 還小（跟書眉同一批被濾掉），
+        # 所以要另外用 size_min=0 取一次；正文分段仍走原本的門檻。
+        folio = folio_of(visual_lines(d, size_min=0.0))
+        pairs.extend((t, folio) for t in paragraphs_from_lines(visual_lines(d)))
     doc.close()
-    return heal(paras)
+    return heal_pairs(pairs)
 
 
 # ── 2. OCR 誤字 ─────────────────────────────────────────────────────────────
@@ -191,11 +236,18 @@ def cp_path(stem: str) -> Path:
     return CACHE / f"{stem}.json"
 
 
-def run(stem: str, paras: list[str], backend: str, limit: int | None) -> None:
+def run(stem: str, paras: list[str], backend: str, limit: int | None,
+        pages: list | None = None) -> None:
     p = cp_path(stem)
     data = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
     src = data.get("src") or paras
     zh = (list(data.get("zh") or []) + [None] * len(src))[:len(src)]
+    # 頁碼：checkpoint 已有就沿用；沒有（舊 checkpoint）而這次算得出來就補上。
+    # 🚨 只有在**段落完全一致**時才補，否則會把頁碼貼到錯的段落上。
+    pg = data.get("pages")
+    if not pg and pages and len(pages) == len(src) and list(paras) == list(src):
+        pg = list(pages)
+    pg = (list(pg or []) + [None] * len(src))[:len(src)]
     engine = make_engine(backend)
     todo = [i for i in range(len(src)) if not zh[i]]
     if limit:
@@ -204,11 +256,11 @@ def run(stem: str, paras: list[str], backend: str, limit: int | None) -> None:
     for n, i in enumerate(todo, 1):
         zh[i] = engine(src[i])
         if True:  # 每段都存：NVIDIA 一段要十幾秒，逾時被砍就全丟了
-            p.write_text(json.dumps({"src": src, "zh": zh}, ensure_ascii=False, indent=1),
-                         encoding="utf-8")
+            p.write_text(json.dumps({"src": src, "zh": zh, "pages": pg},
+                                    ensure_ascii=False, indent=1), encoding="utf-8")
             print(f"  {n}/{len(todo)}", flush=True)
-    p.write_text(json.dumps({"src": src, "zh": zh}, ensure_ascii=False, indent=1),
-                 encoding="utf-8")
+    p.write_text(json.dumps({"src": src, "zh": zh, "pages": pg},
+                            ensure_ascii=False, indent=1), encoding="utf-8")
     done = sum(1 for z in zh if z)
     print(f"完成 {done}/{len(src)}")
 
@@ -217,7 +269,14 @@ def emit(stem: str, header: str = "") -> str:
     """checkpoint → 逐段對照純文字（原文段在上、繁中在下，空行分段）。"""
     data = json.loads(cp_path(stem).read_text(encoding="utf-8"))
     out = [header.strip(), ""] if header.strip() else []
-    for a, b in zip(data["src"], data["zh"]):
+    pages = (list(data.get("pages") or []) + [None] * len(data["src"]))[:len(data["src"])]
+    last = None
+    for a, b, pg in zip(data["src"], data["zh"], pages):
+        # 每逢原文換頁插一個標記，引用者才標得出頁數
+        # （[[feedback_transcribe_page_numbers]]）。抓不到頁碼就不插，不捏。
+        if pg and pg != last:
+            out.append(f"〔原文 p. {pg}〕")
+        last = pg or last
         out.append(a)
         out.append(f"【中譯】{b}" if b else "【中譯】（未譯）")
         out.append("")
@@ -238,17 +297,22 @@ def main() -> None:
     args = ap.parse_args()
 
     paras: list[str] = []
+    pages: list = []
     if args.pdf:
-        paras = [clean_ocr(x) for x in paragraphs_from_pdf(args.pdf)]
-        paras = [p for p in paras if len(p) > 1]
+        pairs = [(clean_ocr(t), pg) for t, pg in paragraphs_with_pages(args.pdf)]
+        pairs = [(t, pg) for t, pg in pairs if len(t) > 1]
+        paras = [t for t, _ in pairs]
+        pages = [pg for _, pg in pairs]
 
     if args.dry:
-        print(f"段落數 {len(paras)}，字數 {sum(len(p) for p in paras):,}")
+        got = sum(1 for x in pages if x)
+        print(f"段落數 {len(paras)}，字數 {sum(len(p) for p in paras):,}，"
+              f"有頁碼 {got}/{len(paras)}")
         for i, p in enumerate(paras[:12]):
             print(f"--- [{i}] {len(p)} 字\n{p[:200]}")
         return
     if args.run:
-        run(args.stem, paras, args.backend, args.limit)
+        run(args.stem, paras, args.backend, args.limit, pages)
         return
     if args.emit:
         print(emit(args.stem, args.header))
