@@ -96,6 +96,9 @@ SUP_REF = re.compile(
 )
 FN_ITEM = re.compile(r'<div class="fn-item" id="(fn-[\w-]+)"><span class="fn-num">\d+</span>')
 FN_BACK = re.compile(r'<a href="#fnref-([\w-]+)" class="footnote-backref">')
+# 連號之後用來把區塊內的條目排序（見 sort_fn_items）
+FN_ITEM_WHOLE = re.compile(r'<div class="fn-item" id="fn-(\d+)">.*?</div></div>', re.S)
+DIV_TAG = re.compile(r"<div\b|</div>")
 
 
 def renumber(body: str) -> tuple[str, list[str]]:
@@ -134,7 +137,42 @@ def renumber(body: str) -> tuple[str, list[str]]:
         f' class="footnote-backref">',
         body,
     )
-    return body, orphans
+    return sort_fn_items(body), orphans
+
+
+def sort_fn_items(body: str) -> str:
+    """把每個註釋區塊裡的條目按註號排好。
+
+    條目的順序來自節檔的書寫順序，而書寫順序不一定等於引用順序——正文改過一輪、
+    某一條註被搬到別段之後就會錯開。頁面照樣長得好好的，只是註釋清單變成
+    1、2、8、5、6⋯⋯，要一條一條看才發現。連號交給 renumber 之後，這裡再按號排序，
+    往後就不會再犯。
+    """
+
+    out, pos = [], 0
+    marker = '<div class="footnotes">'
+    while (start := body.find(marker, pos)) != -1:
+        inner = start + len(marker)
+        # 用 div 深度找出區塊真正的結尾——fn-item 裡還有兩層 div，
+        # 靠正則前瞻猜結尾會在某一章吃掉下一章的開頭（試過，會靜默少一章）
+        depth, end = 1, inner
+        for t in DIV_TAG.finditer(body, inner):
+            depth += 1 if t.group(0) == "<div" else -1
+            if depth == 0:
+                end = t.start()
+                break
+        else:
+            break
+        block = body[inner:end]
+        items = [m.group(0) for m in FN_ITEM_WHOLE.finditer(block)]
+        if len(items) > 1:
+            ordered = sorted(items, key=lambda s: int(FN_ITEM_WHOLE.match(s).group(1)))
+            if ordered != items:
+                block = "\n" + "\n".join(ordered) + "\n"
+        out.append(body[pos:inner] + block)
+        pos = end
+    out.append(body[pos:])
+    return "".join(out)
 
 
 def source_body(art: dict) -> tuple[str, int]:
