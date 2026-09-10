@@ -11,6 +11,16 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
+        <!-- 基督教研究（教父／宗教改革／普世運動／洛桑運動四區） -->
+        <NuxtLink to="/research-data/christian-studies" class="tool-card group border-sky-100 hover:border-sky-300 hover:shadow-sky-100">
+          <div class="tool-icon bg-sky-50 text-sky-600">✝️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">基督教研究</h2>
+            <p class="tool-desc">教父研究、宗教改革研究兩區用電子圖書館既有館藏；普世運動與福音派洛桑運動兩區是另外蒐集的一手文獻語料</p>
+          </div>
+          <span class="tool-badge bg-sky-50 text-sky-600">4 區</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>

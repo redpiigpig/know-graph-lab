@@ -1,0 +1,148 @@
+{
+ "areas": [
+  {
+   "slug": "patristics",
+   "name": "教父研究",
+   "icon": "🕊️",
+   "desc": "教父原典、教父著作與研究；含 Schaff《前尼西亞教父》《尼西亞及後期教父》全 38 卷",
+   "source": "library",
+   "books": 249,
+   "chunks": 50765,
+   "parts": [
+    {
+     "name": "教父原典",
+     "books": 187,
+     "chunks": 30829
+    },
+    {
+     "name": "教父著作",
+     "books": 22,
+     "chunks": 5657
+    },
+    {
+     "name": "教父研究",
+     "books": 16,
+     "chunks": 5293
+    },
+    {
+     "name": "Schaff - Ante-Nicene Fathers (10 vols)",
+     "books": 10,
+     "chunks": 4499
+    },
+    {
+     "name": "Schaff - Nicene and Post-Nicene Fathers Series 2 (14 vols)",
+     "books": 14,
+     "chunks": 4487
+    },
+    {
+     "name": "Schaff - Nicene and Post-Nicene Fathers Series 1 (Augustine & Chrysostom, 14 vols)",
+     "books": 0,
+     "chunks": 0
+    }
+   ]
+  },
+  {
+   "slug": "reformation",
+   "name": "宗教改革研究",
+   "icon": "📜",
+   "desc": "改教家原著、認信文書與各宗派研究；館內最大的一批，多數來自改革宗檔案站",
+   "source": "library",
+   "books": 2429,
+   "chunks": 434564,
+   "parts": [
+    {
+     "name": "長老宗",
+     "books": 777,
+     "chunks": 129749
+    },
+    {
+     "name": "改革宗",
+     "books": 435,
+     "chunks": 125605
+    },
+    {
+     "name": "公理宗與清教徒",
+     "books": 406,
+     "chunks": 83926
+    },
+    {
+     "name": "安立甘宗",
+     "books": 304,
+     "chunks": 54469
+    },
+    {
+     "name": "信條與教理問答",
+     "books": 168,
+     "chunks": 15355
+    },
+    {
+     "name": "路德宗",
+     "books": 206,
+     "chunks": 11842
+    },
+    {
+     "name": "荷蘭改革宗",
+     "books": 88,
+     "chunks": 10031
+    },
+    {
+     "name": "衛理宗",
+     "books": 19,
+     "chunks": 1945
+    },
+    {
+     "name": "改教著作",
+     "books": 3,
+     "chunks": 771
+    },
+    {
+     "name": "改教研究",
+     "books": 2,
+     "chunks": 470
+    },
+    {
+     "name": "其他改革宗資料",
+     "books": 21,
+     "chunks": 401
+    }
+   ]
+  },
+  {
+   "slug": "ecumenical",
+   "name": "普世運動",
+   "icon": "🕊",
+   "desc": "世界教會協會自己的數位檔案：信仰與教制文件（含利瑪文件《洗禮、聖餐與職事》）、生活與工作、世界宣教大會、羅馬天主教—WCC 聯合工作小組等系列",
+   "source": "corpus",
+   "docs": 3,
+   "chars": 443870,
+   "items": [
+    {
+     "id": "wccfops2.109",
+     "title": "Episcop and episcopate in ecumenical perspective, WCC",
+     "chars": 178788
+    },
+    {
+     "id": "wccfops2.121",
+     "title": "Growing Together in Baptism, Eucharist and Ministry. A Study Guide",
+     "chars": 135909
+    },
+    {
+     "id": "wccfops2.118",
+     "title": "Baptism, Eucharist and Ministry, Faith and Order Paper No. 111, Geneva, World Council of Churches",
+     "chars": 129173
+    }
+   ]
+  },
+  {
+   "slug": "lausanne",
+   "name": "福音派洛桑運動",
+   "icon": "✝",
+   "desc": "洛桑信約（1974）、馬尼拉宣言（1989）、開普敦承諾（2010）、首爾宣言（2024）四份基礎文件，以及洛桑專題論文（LOP）全系列",
+   "source": "corpus",
+   "docs": 0,
+   "chars": 0,
+   "items": [],
+   "note": "尚未抓取"
+  }
+ ]
+}
