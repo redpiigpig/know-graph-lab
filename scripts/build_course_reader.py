@@ -73,6 +73,7 @@ BODY_X0, BODY_X1 = 48.0, 468.0            # 正文滿版
 LEAD_FACTOR = 1.8
 FS = 10.8
 LEAD = FS * LEAD_FACTOR
+INDENT = FS * 2          # 正文每段首行空兩格
 
 CJK_ZH = r"C:\Windows\Fonts\mingliu.ttc"    # 細明體，繁中正文
 CJK_JA = r"C:\Windows\Fonts\msmincho.ttc"   # MS 明朝，日文正文
@@ -234,16 +235,63 @@ def title_of_pdf(path: str) -> tuple[str, str, str]:
     return (m.group(1), m.group(2), m.group(3)) if m else ("", stem, "")
 
 
-def page_paragraphs(page: fitz.Page) -> list[str]:
+def _size_tally(page: fitz.Page) -> dict[float, int]:
+    tally: dict[float, int] = {}
+    for blk in page.get_text("dict")["blocks"]:
+        for ln in blk.get("lines", []):
+            for sp in ln["spans"]:
+                tally[round(sp["size"], 1)] = tally.get(round(sp["size"], 1), 0) + len(sp["text"])
+    return tally
+
+
+def _dominant(tally: dict[float, int]) -> float | None:
+    """本文字級。沒有一個字級佔得夠多就回 None——掃描本 OCR 出來的
+    字級是連續抖動的（10.1／9.9／10.2／10.0 各佔兩成），那種書**不能**用字級認
+    註腳，會把正文當成註挑走。"""
+    if not tally:
+        return None
+    total = sum(tally.values())
+    size, n = max(tally.items(), key=lambda kv: kv[1])
+    return size if n / total >= 0.55 else None
+
+
+def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[list[str], list[str]]:
+    """回傳 (正文段落, 註腳段落)。
+
+    註腳原本混在正文流裡——Waardenburg 選集那幾篇的頁底註就這樣夾進段落中間，
+    印出來是「…finite being and infinite mystery.³² Friedrich von Hügel, ‘The three
+    elements of religion’…」，句子被一條書目切斷（使用者 2026-09-10 指出）。
+
+    認法：**字級明顯比本文小**（≥1pt）且在版心下半。位置不能單獨當判準（康德那篇
+    有整頁都是譯者註），字級也不能單獨當判準（頁眉頁碼也比較小）。
+
+    🚨 `body_size` 要用**整篇**的本文字級，不能用單頁的：康德那篇的譯者註自成一頁，
+    用單頁字級去比，那一頁的註就是「本文」，一條都認不出來。
+    """
     h = page.rect.height
     top_cut, bot_cut = h * 0.06, h * 0.94
-    out = []
-    for b in page.get_text("blocks"):
-        y0, x0, y1, txt = b[1], b[0], b[3], b[4]
-        if txt.strip() and not (y1 < top_cut or y0 > bot_cut):
-            out.append((round(y0, 1), x0, txt))
-    out.sort(key=lambda t: (t[0], t[1]))
-    return [t[2] for t in out]
+    if body_size is None:
+        body_size = _dominant(_size_tally(page))
+    body, notes = [], []
+    for blk in page.get_text("dict")["blocks"]:
+        lines = blk.get("lines", [])
+        if not lines:
+            continue
+        txt = "".join(sp["text"] for ln in lines for sp in ln["spans"])
+        if not txt.strip():
+            continue
+        x0, y0, _, y1 = blk["bbox"]
+        if y1 < top_cut or y0 > bot_cut:
+            continue
+        size = max(sp["size"] for ln in lines for sp in ln["spans"])
+        letters = [c for c in txt if c.isalpha()]
+        shouty = letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
+        is_note = (body_size is not None and size <= body_size - 1.0
+                   and y0 / h > 0.10 and not (shouty and len(txt) < 90))
+        (notes if is_note else body).append((round(y0, 1), x0, txt))
+    body.sort(key=lambda t: (t[0], t[1]))
+    notes.sort(key=lambda t: (t[0], t[1]))
+    return [t[2] for t in body], [t[2] for t in notes]
 
 
 def clean(text: str) -> str:
@@ -255,11 +303,52 @@ def clean(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def extract_pdf(path: str) -> list[str]:
+# 篇末書目的標題。使用者定案：印本不收書目（要查出處回頭看 Drive 上那份切片，
+# 原檔一個字都沒動）。只認**獨立成行的短標題**，不然正文裡出現 "the references
+# to..." 也會被當成書目起點，整篇後半就沒了。
+BIBLIO_HEAD = re.compile(
+    r"^(bibliography|references|works cited|further reading|suggested reading|"
+    r"select bibliography|selected bibliography|reference list|參考書目|徵引書目)"
+    r"\s*[:.]?\s*$", re.I)
+
+
+def cut_bibliography(paras: list[str]) -> tuple[list[str], int]:
+    """砍掉篇末書目。回傳 (留下來的段落, 砍掉幾段)。
+
+    只從**後半**開始找：Guide 那幾篇的導論段落就寫過 "References" 這個詞，
+    從頭找會把整篇正文砍掉——而砍掉不會報錯，印出來也像一篇完整的文章。
+    """
+    for i, t in enumerate(paras):
+        if i > len(paras) * 0.5 and len(t) < 60 and BIBLIO_HEAD.match(t.strip()):
+            return paras[:i], len(paras) - i
+    return paras, 0
+
+
+def extract_pdf(path: str) -> tuple[list[str], list[str]]:
+    """回傳 (正文段落, 註腳)。註腳另外收，排在篇末，不再插進正文流。"""
     doc = fitz.open(path)
-    paras: list[str] = []
+    tally: dict[float, int] = {}
     for page in doc:
-        for raw in page_paragraphs(page):
+        for k, v in _size_tally(page).items():
+            tally[k] = tally.get(k, 0) + v
+    body_size = _dominant(tally)
+    paras: list[str] = []
+    notes: list[str] = []
+    for page in doc:
+        body_blocks, note_blocks = page_paragraphs(page, body_size)
+        for raw in note_blocks:
+            t = clean(raw)
+            if len(t) < 3:
+                continue
+            # 註腳欄裡一行就是一個 block，直接收會把一條註切成七八條半句
+            # （「1. Ed. note. A part from the last note, which is Kant's, notes」
+            #  「opening are those of the essay's translator...」）。所以只有看到
+            # 註號才起新的一條，其餘接回上一條。
+            if notes and not re.match(r"^(\d+\s*[.)]\s|[*†‡•])", t)                     and not notes[-1].endswith(SENT_END):
+                notes[-1] += " " + t
+            else:
+                notes.append(t)
+        for raw in body_blocks:
             t = clean(raw)
             if len(t) < 3:
                 continue
@@ -274,7 +363,7 @@ def extract_pdf(path: str) -> list[str]:
             else:
                 paras.append(t)
     doc.close()
-    return paras
+    return paras, notes
 
 
 def extract_md(path: str) -> tuple[dict, list[str]]:
@@ -390,11 +479,13 @@ class Book:
             out.append(buf)
         return out
 
-    def wrap(self, text: str, width: float, size: float, bold: bool = False) -> list[str]:
+    def wrap(self, text: str, width: float, size: float, bold: bool = False,
+             first_indent: float = 0.0) -> list[str]:
         lines, line = [], ""
         for tok in self._tokens(text):
             trial = line + tok
-            if line and self.measure(trial, size, bold) > width:
+            room = width - (first_indent if not lines else 0)
+            if line and self.measure(trial, size, bold) > room:
                 if tok in NO_LINE_START:      # 句讀不留行首，往前一行擠
                     lines.append(line + tok)
                     line = ""
@@ -445,15 +536,16 @@ class Book:
 
     def flow(self, text: str, size: float = FS, lead: float | None = None,
              gap: float = 6.0, bold: bool = False, x0: float = BODY_X0,
-             x1: float = BODY_X1, color=(0, 0, 0)) -> None:
+             x1: float = BODY_X1, color=(0, 0, 0), indent: float = 0.0) -> None:
+        """`indent` 是**首行**縮排（正文每段空兩格，第二行起靠齊左界）。"""
         lead = size * LEAD_FACTOR if lead is None else lead
         if not text.strip():          # 空行就只是空一行
             self.space(lead)
             self.y += lead
             return
-        for ln in self.wrap(text, x1 - x0, size, bold):
+        for i, ln in enumerate(self.wrap(text, x1 - x0, size, bold, first_indent=indent)):
             self.space(lead)
-            self.draw(x0, self.y, ln, size, bold, color)
+            self.draw(x0 + (indent if i == 0 else 0), self.y, ln, size, bold, color)
             self.y += lead
         self.y += gap
 
@@ -467,7 +559,8 @@ class Book:
         self.flow(blurb, size=10.2, color=(0.35,) * 3)
         self.marks.append([1, name, self.doc.page_count])
 
-    def piece_title(self, week: str, author: str, title: str, source: str) -> None:
+    def piece_title(self, week: str, author: str, title: str, source: str,
+                    anchor: bool = True) -> None:
         # 眉標要在開頁「之前」設好：每一頁都得看得出這是第幾週的哪一篇，包含這一篇
         # 的首頁。先開頁再設，首頁就是空的——半本書的頁緣因此沒有字。
         self.head_l = week
@@ -475,8 +568,9 @@ class Book:
         self.half_page = self.half_default   # 原文頁才留譯文欄
         self.new_page()
         label = (f"{author}, {title}" if author else title)[:88]
-        self.marks.append([2, label, self.doc.page_count])
-        self.entries.append((week, label, self.doc.page_count))
+        if anchor:                      # 導引排在篇首時，錨點已經記在導引那一頁
+            self.marks.append([2, label, self.doc.page_count])
+            self.entries.append((week, label, self.doc.page_count))
         self.y = M_TOP + 8
         self.flow(week, size=9.6, gap=8, color=(0.4,) * 3)
         if author:
@@ -488,11 +582,30 @@ class Book:
                             color=(0.75,) * 3, width=0.6)
         self.y += 8
 
-    def guide_page(self, week: str, title: str, md: str) -> None:
-        """一篇的繁中閱讀導引，自成一頁。"""
+    def endnotes(self, notes: list[str]) -> None:
+        """篇末註。使用者要求：**要標明、要空行**，不能跟正文擠在一起。"""
+        if not notes:
+            return
+        self.space(60)                      # 只剩幾行就別起頭，換頁再排
+        self.y += 14
+        self.page.draw_line(fitz.Point(BODY_X0, self.y - 6), fitz.Point(BODY_X0 + 120, self.y - 6),
+                            color=(0.55,) * 3, width=0.7)
+        self.y += 6
+        self.flow("註（原書頁下註，依原書順序）", size=10.4, gap=8, color=(0.3,) * 3)
+        # 不另外編號：原書的註號多半就在文字裡（「3. Ed. note. …」），再套一層
+        # 我自己的序號會變成「7. 3. Ed. note.」。條與條之間空一行分開就夠。
+        for n in notes:
+            self.flow(n, size=9.2, gap=7, color=(0.2,) * 3, x0=BODY_X0 + 6)
+
+    def guide_page(self, week: str, title: str, md: str, anchor: bool = False) -> None:
+        """一篇的繁中閱讀導引，自成一頁。排在篇首時 `anchor=True`，書籤與目錄
+        就指到這一頁（這一篇是從導引開始的）。"""
         self.head_l, self.head_r = week, "閱讀導引"
         self.half_page = False          # 導引本來就是中文，不留譯文欄
         self.new_page()
+        if anchor:
+            self.marks.append([2, title[:88], self.doc.page_count])
+            self.entries.append((week, title[:88], self.doc.page_count))
         self.y = M_TOP + 6
         self.flow("閱讀導引", size=13.6, gap=4)
         self.flow(title, size=9.2, gap=12, color=(0.4,) * 3)
@@ -595,8 +708,14 @@ def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]]) ->
         bk.draw(BODY_X1 - wr, bk.y, num, 9.8)
         bk.y += 9.8 * LEAD_FACTOR
 
-    # 目錄照書的順序（分部），頁碼才會遞增；但要回答「第幾週讀什麼」得另外
-    # 按週次排一份。兩份都要，各自解決一個問題。
+    # 目錄照書的順序（分部）。要回答「第幾週讀什麼」本來另排一份週次一覽，
+    # 但拆成一課一本之後，多數書的分部順序本來就是週次順序——那份就變成
+    # 一模一樣的第二份目錄。所以**只有順序真的不同才印**（日文那本的第一部
+    # 收到 W07、第二部才回頭收 W06，就需要）。
+    by_week = sorted(entries, key=_week_key)
+    if [e[2] for e in by_week] == [e[2] for e in entries]:
+        return bk
+
     bk.y += 18
     bk.flow("週次一覽", size=13, gap=10)
     for week, label, page in sorted(entries, key=_week_key):
@@ -751,6 +870,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
         return
 
     bk = Book(lang=lang, half_page=(reader == "japanese"))
+    cut_total = 0
     for name, blurb, items in use:
         bk.part_title(name, blurb)
         for key, weeks in items:
@@ -758,36 +878,40 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
             if not path:
                 missing.append(key)
                 continue
+
+            # 先把內容取出來（還不畫），因為閱讀導引排在篇首、而導引是從內文產的
             if path.lower().endswith(".pdf"):
                 author, title, source = title_of_pdf(path)
-                paras = extract_pdf(path)
-                bk.piece_title(f"{weeks}", author, title, source)
-                for p in paras:
-                    bk.flow(p)
+                raw_paras, notes = extract_pdf(path)
+                paras, cut = cut_bibliography(raw_paras)
+                cut_total += cut
                 body = "\n\n".join(paras)
                 disp = f"{author}, {title}"
+                meta = None
+                note_n = len(notes)
             else:
                 meta, paras = extract_md(path)
+                author = ""
                 title = meta.get("_h1") or meta.get("作品", os.path.basename(path))
                 source = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
-                bk.piece_title(f"{weeks}", "", title, "")
-                bk.flow(f"出處：{source}", size=9.0, gap=8, color=(0.35,) * 3)
-                bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
-                       size=9.0, gap=10, color=(0.35,) * 3)
-                for p in paras:
-                    bk.flow(re.sub(r"\*\*(\d+)\*\*　", r"\1　", p), size=11.2, gap=8)
                 body = "\n\n".join(paras)
                 disp = title
+                cut = 0
+                notes, note_n = [], 0
 
             # 🚨 快取的鍵不能只用檔名。讀本的節錄範圍一改，檔名沒變但內容變了，
             #    用檔名當鍵就會配上一份講的是別段文字的導引——看起來完全正常。
             key_id = f"{os.path.basename(path)}#{hashlib.sha1(body.encode()).hexdigest()[:10]}"
+            guide = ""
             if want_guide:
-                # 舊版的鍵只有檔名。內容沒變的話沒必要重跑一輪 LLM，
-                # 沿用舊值並就地改成新鍵。
-                legacy = os.path.basename(path)
-                if key_id not in cache and legacy in cache:
-                    cache[key_id] = cache.pop(legacy)
+                # 內容沒變就別重跑 LLM。兩種舊鍵都認：最早只有檔名，後來是
+                # 檔名＋雜湊——砍掉篇末書目會讓雜湊變，但導引講的是同一篇文章，
+                # 沒必要為了少一份參考書目再燒一輪額度。
+                if key_id not in cache:
+                    legacy = next((k for k in (os.path.basename(path),) if k in cache), None) or \
+                             next((k for k in cache if k.split("#")[0] == os.path.basename(path)), None)
+                    if legacy:
+                        cache[key_id] = cache[legacy]
                 if key_id not in cache:
                     print(f"    · 產生閱讀導引：{disp[:44]}")
                     g = make_guide(disp, source, body)
@@ -795,9 +919,33 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                         cache[key_id] = g
                         Path(cache_path).write_text(
                             json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
-                if cache.get(key_id):
-                    bk.guide_page(f"{weeks}", disp, cache[key_id])
-            print(f"  ✓ {disp[:52]}")
+                guide = cache.get(key_id, "")
+
+            # 導引排在**篇首**：一翻到這一篇就先看得到摘要與重點，讀完再進正文。
+            # （2026-09-10 之前排在篇末，使用者翻了十九頁沒看到，以為沒做。）
+            if guide:
+                bk.guide_page(f"{weeks}", disp, guide, anchor=True)
+                bk.piece_title(f"{weeks}", author, title, source, anchor=False)
+            else:
+                bk.piece_title(f"{weeks}", author, title, source)
+
+            if meta is None:
+                for p in paras:
+                    bk.flow(p, indent=INDENT)
+                bk.endnotes(notes)
+            else:
+                bk.flow(f"出處：{source}", size=9.0, gap=8, color=(0.35,) * 3)
+                bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
+                        size=9.0, gap=10, color=(0.35,) * 3)
+                for p in paras:
+                    bk.flow(re.sub(r"\*\*(\d+)\*\*　", r"\1　", p), size=11.2, gap=8,
+                            indent=INDENT)
+            print(f"  ✓ {disp[:52]}"
+                  + (f"（砍書目 {cut} 段）" if cut else "")
+                  + (f"（註 {note_n} 條）" if note_n else ""))
+
+    if cut_total:
+        print(f"\n篇末書目共砍掉 {cut_total} 段")
 
     front = cover_and_toc(lang, COVER[reader], bk.entries)
 
