@@ -42,7 +42,7 @@ FOUNDATIONAL = [
     ("lausanne-covenant", "/statement/lausanne-covenant", "洛桑信約（1974）"),
     ("manila-manifesto", "/statement/manila-manifesto", "馬尼拉宣言（1989）"),
     ("cape-town-commitment", "/statement/ctcommitment", "開普敦承諾（2010）"),
-    ("seoul-statement", "/statement/seoul-statement", "首爾宣言（2024）"),
+    ("seoul-statement", "/statement/the-seoul-statement", "首爾宣言（2024）"),  # 路徑有 the-
 ]
 
 TAG = re.compile(r"<[^>]+>")
@@ -88,6 +88,41 @@ def discover() -> list[tuple[str, str, str]]:
     return list(found.values())
 
 
+def strip_boilerplate(out_dir: Path, index: dict) -> None:
+    """剝掉網站的導覽列與頁尾。
+
+    lausanne.org 每一頁開頭都有同一段導覽（裡面就寫著「洛桑信約、馬尼拉宣言、
+    開普敦承諾與首爾宣言」），頁尾也一樣。不剝的話，查任何一份核心文件的名字都會
+    命中全部一百多篇——**看起來檢索正常，其實全是假命中**。
+
+    作法是逐行統計：出現在六成以上檔案裡的短行判為樣板。這比猜開頭結尾的標記穩，
+    網站改版也不會失效。
+    """
+    from collections import Counter
+    files = sorted(out_dir.glob("*.txt"))
+    if len(files) < 5:
+        return
+    texts = {f: f.read_text(encoding="utf-8", errors="replace") for f in files}
+    freq: Counter = Counter()
+    for t in texts.values():
+        for ln in {l.strip() for l in t.splitlines() if l.strip()}:
+            freq[ln] += 1
+    n = len(files)
+    boiler = {ln for ln, c in freq.items() if c >= n * 0.6 and len(ln) < 200}
+    if not boiler:
+        return
+    for f, t in texts.items():
+        kept = [l for l in t.splitlines() if l.strip() and l.strip() not in boiler]
+        nl = chr(10)
+        cleaned = re.sub(nl + "{3,}", nl * 2, nl.join(kept)).strip() + nl
+        if cleaned != t:
+            f.write_text(cleaned, encoding="utf-8")
+    for v in index.values():
+        fp = out_dir / v["file"]
+        if fp.exists():
+            v["chars"] = len(fp.read_text(encoding="utf-8", errors="replace"))
+    print(f"  剝除樣板 {len(boiler)} 種重複行")
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
@@ -130,6 +165,7 @@ def main() -> int:
         print(f"[{i}/{len(items)}] {slug[:38]:38s} {len(txt)/1000:5.0f}k 字")
         time.sleep(1.0)
 
+    strip_boilerplate(OUT, index)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     total = sum(v["chars"] for v in index.values())
     print(f"\n抓取 {got}／略過 {skipped}／失敗 {failed}")

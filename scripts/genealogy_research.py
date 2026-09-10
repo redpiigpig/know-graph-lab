@@ -24,6 +24,14 @@ import sys
 from pathlib import Path
 
 CHUNKS = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
+CORPUS = Path("G:/我的雲端硬碟/資料/知識圖工作室/_corpus")
+
+# 語料組：短名 → (目錄, 註腳用的來源說明)。與 SOURCES 的差別是一組多檔、無頁碼，
+# 引用時標的是文件本身（identifier 或 slug），不是頁數。
+CORPORA: dict[str, tuple[str, str]] = {
+    "ecumenical": ("ecumenical", "世界教會協會數位檔案（archive.org）"),
+    "lausanne": ("lausanne", "洛桑運動文獻（lausanne.org）"),
+}
 
 # 書源：短名 → (ebook_id, 註腳用的書目)
 SOURCES: dict[str, tuple[str, str]] = {
@@ -131,6 +139,18 @@ SETS: dict[str, list[str]] = {
 }
 
 
+def load_corpus(short: str):
+    """語料組：一個目錄底下每個 .txt 一份文件，整份當一個「段」回傳。"""
+    sub, cite = CORPORA[short]
+    d = CORPUS / sub
+    if not d.exists():
+        print(f"（缺語料：{short} → {d}）", file=sys.stderr)
+        return
+    for f in sorted(d.glob("*.txt")):
+        yield {"content": f.read_text(encoding="utf-8", errors="replace"),
+               "page_number": None, "chapter_path": f.stem[:90]}
+
+
 def load(short: str):
     eid, cite = SOURCES[short]
     p = CHUNKS / f"{eid}.jsonl"
@@ -155,6 +175,12 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.list:
+        print("語料組（一組多份文件，引用標文件不標頁碼）：")
+        for k, (sub, cite) in CORPORA.items():
+            d = CORPUS / sub
+            n = len(list(d.glob("*.txt"))) if d.exists() else 0
+            print(f"  {'○' if n else '✕'} {k:22s} {n:>5} 份  {cite}")
+        print()
         print("書源：")
         for k, (eid, cite) in SOURCES.items():
             ok = "○" if (CHUNKS / f"{eid}.jsonl").exists() else "✕"
@@ -167,12 +193,17 @@ def main() -> int:
     if not args.terms:
         ap.error("要給關鍵詞")
 
-    books = args.book or SETS.get(args.set) or ap.error(f"沒有這個書組：{args.set}")
+    # 語料組與書源用同一個 --set，因為對使用者來說「去哪裡查」是同一個問題
+    if args.set in CORPORA and not args.book:
+        books, use_corpus = [args.set], True
+    else:
+        books = args.book or SETS.get(args.set) or ap.error(f"沒有這個書組：{args.set}")
+        use_corpus = False
     pats = [re.compile(t) for t in args.terms]
     hits = 0
     for short in books:
-        cite = SOURCES[short][1]
-        for c in load(short):
+        cite = CORPORA[short][1] if use_corpus else SOURCES[short][1]
+        for c in (load_corpus(short) if use_corpus else load(short)):
             text = c.get("content") or ""
             if not all(p.search(text) for p in pats):
                 continue
@@ -182,7 +213,8 @@ def main() -> int:
             snippet = re.sub(r"\s+", " ", text[a:b]).strip()
             hits += 1
             print(f"\n── [{short}] {cite}")
-            print(f"   頁 {c.get('page_number')}　{c.get('chapter_path') or ''}")
+            pg = c.get("page_number")
+            print(f"   {('頁 ' + str(pg)) if pg else '文件'}　{c.get('chapter_path') or ''}")
             print(f"   …{snippet}…")
             if hits >= args.max:
                 print(f"\n（已達上限 {args.max} 筆，用 --max 放寬）")
