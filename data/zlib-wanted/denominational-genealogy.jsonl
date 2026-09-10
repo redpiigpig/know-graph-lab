@@ -39,3 +39,13 @@
 {"key":"dg-koopman-genealogy","query":"Colin Koopman Genealogy as Critique Foucault and the Problems of Modernity","expect":"Genealogy as Critique","who":"Koopman","source":"denominational-genealogy","zh":"庫普曼《作為批判的譜系學》"}
 {"key":"dg-robinson-koester-zh","query":"羅賓遜 克斯特 早期基督教的軌跡","expect":"軌跡","who":"克斯特","source":"denominational-genealogy","zh":"羅賓遜與克斯特《穿越早期基督教的軌跡》（中譯，存疑待驗）"}
 {"key":"dg-bauer-orthodoxy-zh","query":"鮑爾 最早期基督教的正統與異端","expect":"正統與異端","who":"鮑爾","source":"denominational-genealogy","zh":"包爾《最早期基督教的正統與異端》（中譯，存疑待驗）"}
+{"key":"dg-foucault-archaeology","query":"Foucault The Archaeology of Knowledge Sheridan Smith","expect":"Archaeology of Knowledge","who":"Foucault","source":"denominational-genealogy","zh":"傅柯《知識考古學》（館內那本只解析出 3,292 字，等於沒有）"}
+{"key":"dg-foucault-order","query":"Foucault The Order of Things An Archaeology of the Human Sciences","expect":"Order of Things","who":"Foucault","source":"denominational-genealogy","zh":"傅柯《詞與物／事物的秩序》（館內完全沒有）"}
+{"key":"dg-foucault-order-zh","query":"福柯 詞與物 人文科學考古學","expect":"詞與物","who":"福柯","source":"denominational-genealogy","zh":"傅柯《詞與物》（中譯）"}
+{"key":"dg-foucault-lcmp","query":"Foucault Language Counter-Memory Practice Bouchard","expect":"Counter-Memory","who":"Bouchard","source":"denominational-genealogy","zh":"《語言‧反記憶‧實踐》（收〈尼采、譜系學、歷史〉英譯）"}
+{"key":"dg-steensland-reltrad","query":"Steensland The Measure of American Religion Toward Improving the State of the Art Social Forces","expect":"Measure of American Religion","who":"Steensland","source":"denominational-genealogy","zh":"史廷斯蘭等《美國宗教的測量》（RELTRAD 原刊）"}
+{"key":"dg-melton-profiles-piepkorn","query":"Piepkorn Profiles in Belief The Religious Bodies of the United States and Canada","expect":"Profiles in Belief","who":"Piepkorn","source":"denominational-genealogy","zh":"皮普孔《信仰側寫：美加宗教團體》（梅爾頓之前的分類工程）"}
+{"key":"dg-mead-handbook","query":"Frank Mead Handbook of Denominations in the United States","expect":"Handbook of Denominations","who":"Mead","source":"denominational-genealogy","zh":"米德《美國宗派手冊》（最通行的宗派工具書）"}
+{"key":"dg-watts-dissenters","query":"Michael Watts The Dissenters From the Reformation to the French Revolution","expect":"The Dissenters","who":"Watts","source":"denominational-genealogy","zh":"瓦茨《不從國教者》（denomination 一詞的形成史）"}
+{"key":"dg-chaillot-towards-unity","query":"Chaillot Belopopsky Towards Unity Theological Dialogue Orthodox Oriental Orthodox","expect":"Towards Unity","who":"Chaillot","source":"denominational-genealogy","zh":"沙約與貝洛波普斯基編《邁向合一》（東正教與東方正統對話）"}
+{"key":"dg-brock-christology-east","query":"Sebastian Brock The Christology of the Church of the East","expect":"Christology of the Church of the East","who":"Brock","source":"denominational-genealogy","zh":"布洛克〈東方教會的基督論〉（2024 牛津開放取用）"}
