@@ -91,8 +91,8 @@
                 <div v-if="row.heading" class="bg-gradient-to-r from-amber-50 to-white border-y border-amber-100 px-3 py-2 text-sm font-semibold text-stone-800">
                   {{ row.heading }}
                 </div>
-                <article v-else class="bg-white border border-stone-200 rounded-md overflow-hidden"
-                  :class="isAphorism ? 'shadow-sm my-2' : ''">
+                <article v-else class="bg-white border rounded-md overflow-hidden"
+                  :class="[isAphorism ? 'shadow-sm my-2' : '', row.isNote ? 'border-stone-100' : 'border-stone-200']">
                   <!-- 對話錄講者／經院問答角色標籤列 -->
                   <div v-if="row.lead" class="px-3 pt-2 pb-1">
                     <span v-if="genre === 'quaestio'"
@@ -107,11 +107,13 @@
                       :class="isAphorism ? 'py-3 text-sm text-blue-600' : 'py-3'"
                       :title="citeTitle(row.anchor)" @click="copyCite(row.anchor)">{{ row.anchor }}</button>
                     <div v-for="c in cols" :key="c.key"
-                      class="bg-white px-3 py-3 text-stone-800"
+                      class="px-3 py-3"
                       :class="[
                         c.key === 'grc' ? 'font-[Gentium,serif]' : '',
-                        isVerse ? 'text-[0.92rem] leading-relaxed whitespace-pre-line pl-4 -indent-4' : 'text-[0.92rem] leading-loose',
-                        isAphorism ? 'py-4' : '',
+                        row.isNote ? 'bg-stone-50 text-stone-600 text-[0.8rem] leading-relaxed py-2'
+                          : (isVerse ? 'bg-white text-stone-800 text-[0.92rem] leading-relaxed whitespace-pre-line pl-4 -indent-4'
+                                     : 'bg-white text-stone-800 text-[0.92rem] leading-loose'),
+                        isAphorism && !row.isNote ? 'py-4' : '',
                       ]"
                       :lang="c.key === 'zh' ? 'zh-Hant' : c.key"
                       style="font-family: 'Noto Serif TC', 'Source Han Serif TC', serif">
@@ -273,6 +275,8 @@ const rows = computed(() => {
       lead,
       zh: zhText,
       cols,
+      // 註文段落（`[^4]: …`）在版面上要跟正文分開：小一號、灰底
+      isNote: /^\[\^[^\]]{1,8}\]:/.test(zhText),
       anchor: anchors[i] ?? (i === 0 && c.page_number != null ? String(c.page_number) : ''),
     }
   })
@@ -330,8 +334,16 @@ function esc(s: string) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').
 function md(s: string) {
   if (!s) return ''
   let t = esc(s.replace(/^#{1,4}\s+/, ''))
+  // 註釋：段落以 `[^4]: …` 起頭＝註文本體；正文中的 `[^4]` ＝上標註號。
+  // 兩者都要先於一般 markdown 處理，否則 `[^` 會被斜體規則咬掉。
+  t = t.replace(/^\[\^([^\]]{1,8})\]:\s*/,
+    '<span class="mr-1.5 font-semibold text-blue-700">$1.</span>')
+  t = t.replace(/\[\^([^\]]{1,8})\]/g,
+    '<sup class="ml-px text-[0.7em] font-semibold text-blue-600">$1</sup>')
   t = t.replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-stone-900">$1</strong>')
   t = t.replace(/\*(?!\s)([^*]+?)\*/g, '<em>$1</em>')
+  t = t.replace(/(https?:\/\/[^\s，。）」]+)/g,
+    '<a href="$1" target="_blank" rel="noopener" class="text-blue-600 hover:underline break-all">$1</a>')
   t = t.replace(/\n/g, '<br>')
   return t
 }
