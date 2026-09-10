@@ -127,6 +127,43 @@
           </ul>
         </div>
       </section>
+
+      <!-- ── 單篇文章（期刊論文／雜誌專文／投書；原件在 /research-data） ── -->
+      <section v-if="articles && articles.total" class="mt-10">
+        <h2 class="text-base font-bold text-gray-800 mb-1 flex items-center gap-2">
+          <span>📰</span> 單篇文章
+          <span class="text-xs font-normal text-gray-400">{{ articles.total }} 篇</span>
+        </h2>
+        <p class="text-xs text-gray-400 mb-5">
+          期刊論文、雜誌專文與投書。原件收在研究資料區，點篇名可過去查閱。
+        </p>
+
+        <div v-for="g in articles.groups" :key="g.journal" class="mb-8">
+          <h3 class="text-sm font-semibold text-gray-700 mb-3 pb-1 border-b border-gray-200 flex items-baseline gap-2">
+            <NuxtLink v-if="g.route" :to="g.route" class="hover:underline">{{ g.journal }}</NuxtLink>
+            <span v-else>{{ g.journal }}</span>
+            <span class="text-xs font-normal text-gray-400">{{ g.items.length }} 篇</span>
+          </h3>
+          <ul class="space-y-1">
+            <li v-for="(it, i) in g.items" :key="i"
+                class="flex items-baseline gap-3 py-1.5 px-2 rounded hover:bg-gray-50">
+              <span class="text-xs font-mono text-gray-400 w-16 flex-shrink-0">
+                {{ it.issue ? `${it.issue} 期` : (it.date || '').slice(0, 7) }}
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm text-gray-800">{{ it.title }}</div>
+                <div v-if="it.author && it.author !== '釋昭慧'"
+                     class="text-[11px] text-gray-400">／{{ it.author }}</div>
+                <div v-if="it.note" class="text-[11px] text-amber-600">{{ it.note }}</div>
+              </div>
+              <span v-if="!it.has_fulltext"
+                    class="text-[11px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-400 flex-shrink-0">
+                缺全文
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -150,6 +187,12 @@ const RowLink = resolveComponent('NuxtLink')
 // so auto-upgrade a 'planned' work with an ebookId to clickable 轉錄中 without
 // hand-editing the store as the background queue fills books in.
 const liveChunks = ref<Record<string, number>>({})
+
+// 單篇文章（期刊論文／雜誌專文／投書）。全集不只專書，但單篇動輒上百上千，
+// 塞進 stores/collectedWorks.ts 會把那支四萬多行的檔案撐爆，所以放獨立 JSON、
+// 由 scripts/chaohwei_articles.py 產生；沒有這個檔的作家就不顯示這一區。
+const articles = ref<{ total: number; groups: any[] } | null>(null)
+
 onMounted(async () => {
   try {
     const data = await $fetch<any>('/api/ebooks?collection=collected-works')
@@ -159,6 +202,12 @@ onMounted(async () => {
     liveChunks.value = m
   } catch {
     /* hub still renders from the static store if the fetch fails */
+  }
+  try {
+    articles.value = await $fetch<any>(
+      `/content/collected-works/${route.params.slug}-articles.json`)
+  } catch {
+    articles.value = null // 這位作家還沒盤點單篇文章
   }
 })
 

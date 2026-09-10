@@ -1,0 +1,95 @@
+{
+ "slug": "chao-hwei",
+ "name": "昭慧法師",
+ "total": 7,
+ "groups": [
+  {
+   "journal": "玄奘佛學研究",
+   "route": "/research-data/yinshun-hongshi",
+   "items": [
+    {
+     "journal": "玄奘佛學研究",
+     "issue": 40,
+     "date": "",
+     "title": "從俄烏戰爭事件，省思佛典中的戰爭觀",
+     "author": "釋昭慧",
+     "has_fulltext": true,
+     "key": "yinshun-hongshi/玄奘佛學研究/玄奘佛學研究-v40-df4d856e55.pdf",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "journal": "法印學報",
+   "route": "/research-data/yinshun-hongshi",
+   "items": [
+    {
+     "journal": "法印學報",
+     "issue": "13",
+     "date": "",
+     "title": "「光明相」、「光明想」與「光明遍」之比較研究",
+     "author": "釋昭慧",
+     "has_fulltext": false,
+     "key": "",
+     "note": "站上連結誤植為本機路徑，原檔未上傳"
+    },
+    {
+     "journal": "法印學報",
+     "issue": "12",
+     "date": "",
+     "title": "《清淨道論》中「不淨觀」的教學特色",
+     "author": "釋昭慧",
+     "has_fulltext": true,
+     "key": "yinshun-hongshi/法印學報/faryin-12-0f9324636d.pdf",
+     "note": ""
+    },
+    {
+     "journal": "法印學報",
+     "issue": "11",
+     "date": "",
+     "title": "「十遍處」於各佛教傳承間的演變與差異之比較研究",
+     "author": "釋昭慧、釋性廣",
+     "has_fulltext": true,
+     "key": "yinshun-hongshi/法印學報/faryin-11-12334ab820.pdf",
+     "note": ""
+    },
+    {
+     "journal": "法印學報",
+     "issue": "9",
+     "date": "",
+     "title": "宗教療癒對思覺失調症可能提供之助益——以「身念處」原理開展的三個出家案例報告HowReligiousTherapyMayReducetheSymptomsofSchizophrenia—threeBu",
+     "author": "釋昭慧",
+     "has_fulltext": true,
+     "key": "yinshun-hongshi/法印學報/faryin-09-e40dab8417.pdf",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "journal": "新使者",
+   "route": "/research-data/pct",
+   "items": [
+    {
+     "journal": "新使者",
+     "issue": "204",
+     "date": "2025-10-10",
+     "title": "行憲紀念日放假背後，那隻「看不見的手」",
+     "author": "作者/釋昭慧 (玄奘大學宗教與文化學系教授兼系主任)",
+     "has_fulltext": true,
+     "key": "pct-fulltext/new-messenger/204-M2025102906130.txt",
+     "note": ""
+    },
+    {
+     "journal": "新使者",
+     "issue": "103",
+     "date": "2007-12-10",
+     "title": "在生活中對話‧在合作中對話",
+     "author": "作者/釋昭慧 (玄奘大學宗教學系教授)",
+     "has_fulltext": true,
+     "key": "pct-fulltext/new-messenger/103-M2008051601490.txt",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

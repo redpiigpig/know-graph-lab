@@ -149,7 +149,9 @@ def _pdf_page_count(src: Path) -> int:
 # model has its own daily quota. Rotating keys alone dead-ends once the older
 # keys are spent — every remaining key 404s and the whole run raises.
 # Same pattern as fathers_pg_ocr.ocr().
-_FALLBACK_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
+# 順序＝先用額度大的。3.6-flash 放最後：它是 404 訊息裡官方要人改用的型號，
+# 最新的 key 只有它（實測 key #6 連 flash-latest 都 404），但免費層一天只有 20 次。
+_FALLBACK_MODELS = ("gemini-flash-latest", "gemini-2.5-flash", "gemini-3.6-flash")
 
 
 def _model_chain(model: str | None) -> tuple[str, ...]:
