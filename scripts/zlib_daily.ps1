@@ -95,7 +95,14 @@ foreach ($acct in $ACCOUNTS) {
     #
     # It also sidesteps the stdout decoding bug noted above: PowerShell never
     # decodes the bytes, so node's UTF-8 lands in the UTF-8 log unmangled.
-    & cmd /c "node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --account $acct --limit $want >> ""$log"" 2>&1"
+    # --max-tries has to follow the hit rate, not the download target. The
+    # fetcher's default is 6 searches per wanted book, which assumed most
+    # targets exist. They do not: a 40-title sample of the collected-works hunt
+    # on 2026-09-10 came back 10% obtainable, so 6x would stop at 6 books having
+    # never spent the account's other four. 15x covers a 1-in-10 list; probing
+    # will raise the hit rate over time and this can come back down.
+    $tries = $want * 15
+    & cmd /c "node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --account $acct --limit $want --max-tries $tries >> ""$log"" 2>&1"
     Note "fetch exit=$LASTEXITCODE (account $acct, now $(TodayCount)/$Target)"
     Start-Sleep -Seconds 45
 }
