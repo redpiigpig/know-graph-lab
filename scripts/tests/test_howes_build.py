@@ -284,3 +284,30 @@ class TestTables:
         for ln in lines:
             ln["page"] = "88"
         assert hb.paras_with_pages(lines)[0][1] == "88"
+
+
+class TestRetable:
+    """引擎會把 markdown 表格回成一整行（下游 clean_zh_output 又把換行收成空白）。
+    內容其實是對的，壞的只有換行——切回去就好，不必重譯。"""
+
+    def test_flattened_table_is_split_back(self):
+        flat = "| 著作 | 時間 | | --- | --- | | 《求安錄》 | 一八九三年六月 |"
+        out = hb.retable(flat, 3)
+        assert out.split(chr(10)) == ["| 著作 | 時間 |", "| --- | --- |",
+                                      "| 《求安錄》 | 一八九三年六月 |"]
+
+    def test_blank_header_survives(self):
+        flat = "|  |  | | --- | --- | | 啊，人丸！ | Hitomaru ya |"
+        assert hb.retable(flat, 3).startswith("|  |  |")
+
+    def test_row_count_mismatch_falls_back(self):
+        """列數對不上就原樣退回——寧可留一行難看的表，也不要切出一張錯位的表。"""
+        flat = "| a | b | | --- | --- | | c | d |"
+        assert hb.retable(flat, 9) == flat
+
+    def test_already_multiline_is_untouched(self):
+        md = "| a | b |" + chr(10) + "| --- | --- |"
+        assert hb.retable(md, 2) == md
+
+    def test_not_a_table_is_untouched(self):
+        assert hb.retable("一段普通的譯文。", 3) == "一段普通的譯文。"

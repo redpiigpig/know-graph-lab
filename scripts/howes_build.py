@@ -224,6 +224,29 @@ _MONTHY = re.compile(r"\b(January|February|March|April|May|June|July|August|"
                      r"September|October|November|December)\b.*\d{4}|\d{4}", re.I)
 
 
+def retable(flat: str, n_rows: int) -> str:
+    """把被壓成一行的譯文表格還原成多行。
+
+    🚨 引擎會把 markdown 表格回成**一整行**（`| 著作 | 時間 | | --- | --- | | … |`），
+    而下游的 `clean_zh_output` 也會把換行收成空白。表格內容其實是對的，壞的只有
+    換行——所以不必重譯，切回去就好。
+
+    切法：整串以 `|` 分開之後，第一個元素是行首的空字串，其餘**每三個一組**
+    （儲存格一、儲存格二、列與列之間那個空字串）。列數對不上就原樣退回——
+    寧可留著一行難看的表，也不要切出一張錯位的表。"""
+    if chr(10) in (flat or ""):
+        return flat                      # 引擎有保留換行，不必動
+    toks = (flat or "").split("|")
+    if len(toks) < 4:
+        return flat
+    cells = [t.strip() for t in toks[1:]]
+    rows = [cells[i:i + 2] for i in range(0, len(cells), 3)]
+    rows = [r for r in rows if len(r) == 2]
+    if len(rows) != n_rows:
+        return flat
+    return chr(10).join(f"| {a} | {b} |" for a, b in rows)
+
+
 def table_markdown(rows: list[tuple[str, str]]) -> str:
     """[(左, 右)] → markdown 表格。
 
@@ -391,6 +414,8 @@ HOWES_PROMPT_TMPL = """你是日本近代基督教史的專業譯者，正在翻
 4b. **表格**：以 `|` 開頭的是 markdown 表格。**逐格翻譯，列數與欄數一格都不可增減**，
    `| --- | --- |` 那一行原樣照抄，每一列都要以 `|` 開頭與結尾。表頭若是空的（`|  |  |`）
    就保持空的。年月（January 1893）譯成「一八九三年一月」。
+   🚨 **羅馬字轉寫的日文原文那一欄原樣保留，不要翻譯**（`Hitomaru ya`、
+   `Uta wa uta nari hitokokoro`——那是和歌的原文，一翻就沒有原文可對照了）。
 5. 人名地名一律還原漢字，不音譯：Uchimura Kanzô→內村鑑三（單稱 Kanzô→鑑三、Uchimura→內村）、Nitobe Inazô→新渡戶稻造、Miyabe Kingo→宮部金吾、Niijima Jô→新島襄、Uemura Masahisa→植村正久、Ebina Danjô→海老名彈正、Tokutomi Sohô→德富蘇峰、Yanaihara Tadao→矢內原忠雄、Nanbara Shigeru→南原繁、Tsukamoto Toraji→塚本虎二、Fujii Takeshi→藤井武、Kurosaki Kôkichi→黑崎幸吉、Kanamori Tsûrin→金森通倫、Ônishi Hajime→大西祝、Inoue Tetsujirô→井上哲次郎、Sapporo→札幌、Hakodate→函館、Yokosuka→橫須賀、Yokohama→橫濱、Takasaki→高崎、Kashiwagi→柏木、Kyôto→京都、Ôsaka→大阪、Edo→江戶。
 6. 西方人名依教會史通用譯名：William S. Clark→克拉克、M.C. Harris→哈里斯、Julius H. Seelye→席利、Luther→路德、Calvin→加爾文、Carlyle→卡萊爾、Emerson→愛默生、Amherst (College)→安默斯特（學院）、Hartford→哈特福、New England→新英格蘭、Elwyn→艾爾文。
 7. **專名層——一對一，不可改**：mukyôkai / Non-Church / No-Church→無教會（主義）、Sapporo Agricultural College→札幌農學校、Imperial Rescript on Education→教育敕語、the disrespect incident / lèse-majesté incident→不敬事件、First Higher School→第一高等中學校、Yorozu chôhô→《萬朝報》、Seisho no kenkyû / Biblical Study→《聖書之研究》、Second Coming movement→再臨運動、pacifism / non-war→非戰論、Sino-Japanese War→甲午戰爭、Russo-Japanese War→日俄戰爭、Meiji／Taishô／Shôwa→明治／大正／昭和、Diet→帝國議會、shogunate→幕府、Restoration→維新、han / clan→藩、samurai→武士、daimyô→大名、mission board→差會、missionary→宣教士（**不可用「傳教士」，也不可用日式的「宣教師」**）。
@@ -471,6 +496,9 @@ def make_engine(backend: str = "auto"):
         # 引文標記偶爾會被引擎吃掉；欄位對齊靠段落數，標記靠這裡補回來
         if quoted and out and not out.startswith("> "):
             out = f"> {out.lstrip('> ')}"
+        # 表格的換行一定會被壓掉（引擎回一行，clean_zh_output 又收空白），切回去
+        if src.startswith("|") and out.startswith("|"):
+            out = retable(out, len(src.split(chr(10))))
         return out
 
     return translate_para
