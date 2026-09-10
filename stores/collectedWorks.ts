@@ -45576,6 +45576,1449 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       ],
     },
 
+    {
+      "slug": "franz-brentano",
+      "name": "布倫塔諾",
+      "nameEn": "Franz Brentano",
+      "nameOriginal": "Franz Clemens Brentano",
+      "lifespan": "1838–1917",
+      "disciplineGroup": "哲學",
+      "sortYear": 1838,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "現象學的直接前史：從中世紀經院哲學重新挖出「意向性」，並以描述心理學為哲學奠基",
+      "fields": [
+        "描述心理學",
+        "意向性理論",
+        "亞里斯多德研究",
+        "價值倫理學",
+        "邏輯學"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "stone",
+      "emoji": "🧭",
+      "contribution": [
+        "布倫塔諾是現象學誕生前最關鍵的那一步。他在《經驗立場的心理學》（1874）中重新啟用一個被遺忘的中世紀經院術語——**意向的內存在**（intentionale Inexistenz），主張心理現象與物理現象的分界就在於：心理現象總是「關於某物」的，判斷關於被判斷者，愛關於被愛者，沒有一個意識行為是空轉的。這句話後來成為整個現象學傳統的第一塊基石。",
+        "他同時主張哲學應以**描述心理學**（deskriptive Psychologie）為方法：不做因果解釋，只做內知覺所給予者的忠實描述與分類。這正是胡塞爾「回到事物本身」的雛形。他的課堂上坐過胡塞爾、麥農、施通普夫、馬蒂、特瓦爾多夫斯基，以及旁聽的佛洛伊德——二十世紀的現象學、對象理論、格式塔心理學與波蘭邏輯學派，都可以追到這間教室。",
+        "布倫塔諾原是天主教司鐸，1873 年因無法接受梵蒂岡第一次大公會議的教宗無誤論而同時離開教會與維爾茨堡的教職；1880 年又因結婚喪失維也納的教授席位，只能以講師身分繼續授課。他晚年幾近失明，仍口述不輟，大量手稿由學生整理出版。"
+      ],
+      "sourceNote": "卒於 1917 年，德文原著全部進入公有領域，可做德／英／繁中三欄對照。",
+      "timeline": [
+        {
+          "year": "1838",
+          "text": "生於萊茵地區馬林堡，出身天主教文人世家。"
+        },
+        {
+          "year": "1864",
+          "text": "領受天主教司鐸聖秩。"
+        },
+        {
+          "year": "1866",
+          "text": "任教維爾茨堡大學，以《論亞里斯多德「存在」的多重意義》取得教授資格。"
+        },
+        {
+          "year": "1873",
+          "text": "因反對教宗無誤論而離開教會與教職。"
+        },
+        {
+          "year": "1874",
+          "text": "出版《經驗立場的心理學》；轉任維也納大學教授。"
+        },
+        {
+          "year": "1880",
+          "text": "因結婚喪失教授職，降為無給講師，仍持續授課十餘年。"
+        },
+        {
+          "year": "1895",
+          "text": "離開維也納移居義大利，晚年幾近失明，口述著述不輟。"
+        },
+        {
+          "year": "1917",
+          "text": "卒於蘇黎世。"
+        }
+      ],
+      "works": [
+        {
+          "title": "論亞里斯多德「存在」的多重意義",
+          "titleOriginal": "Von der mannigfachen Bedeutung des Seienden nach Aristoteles",
+          "year": "1862",
+          "yearSort": 1862,
+          "category": "亞里斯多德研究",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "教授資格論文；海德格自述這本書是他哲學道路的起點。"
+        },
+        {
+          "title": "經驗立場的心理學",
+          "titleOriginal": "Psychologie vom empirischen Standpunkt",
+          "year": "1874",
+          "yearSort": 1874,
+          "category": "代表作：描述心理學與意向性",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "意向性學說的出處；現象學史上最重要的前驅著作。"
+        },
+        {
+          "title": "道德知識的起源",
+          "titleOriginal": "Vom Ursprung sittlicher Erkenntnis",
+          "year": "1889",
+          "yearSort": 1889,
+          "category": "價值與倫理",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "以「正確之愛」奠定倫理知識，影響舍勒的質料價值倫理學。"
+        },
+        {
+          "title": "感官心理學研究",
+          "titleOriginal": "Untersuchungen zur Sinnespsychologie",
+          "year": "1907",
+          "yearSort": 1907,
+          "category": "代表作：描述心理學與意向性",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "晚期知覺分析，與格式塔心理學的興起直接相關。"
+        },
+        {
+          "title": "亞里斯多德與其世界觀",
+          "titleOriginal": "Aristoteles und seine Weltanschauung",
+          "year": "1911",
+          "yearSort": 1911,
+          "category": "亞里斯多德研究",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "晚年對亞里斯多德的總結性詮釋。"
+        }
+      ]
+    },
+    {
+      "slug": "max-scheler",
+      "name": "馬克斯‧舍勒",
+      "nameEn": "Max Scheler",
+      "nameOriginal": "Max Ferdinand Scheler",
+      "lifespan": "1874–1928",
+      "disciplineGroup": "哲學",
+      "sortYear": 1874,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "把現象學帶進倫理學、宗教與人類學的第一人，質料的價值倫理學創始者",
+      "fields": [
+        "價值倫理學",
+        "情感現象學",
+        "宗教哲學",
+        "哲學人類學",
+        "知識社會學"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "rose",
+      "emoji": "💗",
+      "contribution": [
+        "舍勒證明了一件對現象學史至關重要的事：**這套方法不是只能做認識論。**《倫理學中的形式主義與質料的價值倫理學》（1913–16）直接對上康德——康德認為凡有實質內容的倫理學都會淪為經驗的、他律的，因此道德法則必須是純形式的；舍勒回答，價值本身就是可以被直觀到的質料，它們在情感行為中被給予，一如顏色在視覺中被給予。",
+        "他進一步主張價值有**客觀的等級秩序**：感官價值、生命價值、精神價值、神聖價值，由低而高；而「愛的秩序」（ordo amoris）——一個人實際上把什麼看得最重——才是他真正的道德核心，遠比他遵守什麼規則更能說明他是誰。《同情的本質與形式》則把同情、模仿、感染、真正的同感一一區分開來，是情感現象學最細緻的一份分析。",
+        "晚年他轉向哲學人類學，《人在宇宙中的地位》（1928）追問人在生命階梯中的獨特處：人是唯一能對自己的衝動說「不」的存有者，這種說不的能力就是精神。海德格稱他是「當代最強的哲學力量」；然而他因私人生活的醜聞兩度失去教職，五十四歲驟逝於法蘭克福，計畫中的體系終未完成。創生哲學「現象學不等於認識論」這個立場，史證有一半靠他。"
+      ],
+      "sourceNote": "卒於 1928 年，德文原著已進入公有領域；本站圖書館另有《論人的理念》中譯與弗林斯評述可交叉校對。",
+      "timeline": [
+        {
+          "year": "1874",
+          "text": "生於慕尼黑，父為路德宗、母為猶太裔。"
+        },
+        {
+          "year": "1899",
+          "text": "改宗天主教；於耶拿大學師從奧伊肯取得教授資格。"
+        },
+        {
+          "year": "1907",
+          "text": "轉赴慕尼黑，與現象學慕尼黑學派往來密切。"
+        },
+        {
+          "year": "1910",
+          "text": "因私人生活的醜聞失去教職，以自由撰稿人身分寫作。"
+        },
+        {
+          "year": "1913–1916",
+          "text": "分兩部發表《倫理學中的形式主義與質料的價值倫理學》。"
+        },
+        {
+          "year": "1919",
+          "text": "獲聘科隆大學教授，重返學院。"
+        },
+        {
+          "year": "1928",
+          "text": "出版《人在宇宙中的地位》；轉赴法蘭克福大學，同年因心臟病驟逝。"
+        }
+      ],
+      "works": [
+        {
+          "title": "倫理學中的形式主義與質料的價值倫理學",
+          "titleOriginal": "Der Formalismus in der Ethik und die materiale Wertethik",
+          "year": "1913–1916",
+          "yearSort": 1913,
+          "category": "代表作：價值倫理學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "現象學倫理學的奠基之作，正面對決康德的形式主義。"
+        },
+        {
+          "title": "同情的本質與形式",
+          "titleOriginal": "Wesen und Formen der Sympathie",
+          "year": "1913／1923",
+          "yearSort": 1913,
+          "category": "情感與他者",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "初版題為《論同情感》；同感、感染、模仿、真正同情的細緻區分。"
+        },
+        {
+          "title": "論人身上的永恆",
+          "titleOriginal": "Vom Ewigen im Menschen",
+          "year": "1921",
+          "yearSort": 1921,
+          "category": "宗教現象學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "宗教行為的現象學；創生哲學所說「舍勒把現象學接引至神學」即指本書。"
+        },
+        {
+          "title": "知識形式與社會",
+          "titleOriginal": "Die Wissensformen und die Gesellschaft",
+          "year": "1926",
+          "yearSort": 1926,
+          "category": "知識社會學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "知識社會學的創始文獻之一。"
+        },
+        {
+          "title": "人在宇宙中的地位",
+          "titleOriginal": "Die Stellung des Menschen im Kosmos",
+          "year": "1928",
+          "yearSort": 1928,
+          "category": "哲學人類學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "哲學人類學開山之作；精神＝能對衝動說不的能力。"
+        }
+      ]
+    },
+    {
+      "slug": "edith-stein",
+      "name": "艾迪特‧施泰因",
+      "nameEn": "Edith Stein",
+      "nameOriginal": "Edith Stein（十字架的德蘭‧本篤）",
+      "lifespan": "1891–1942",
+      "disciplineGroup": "哲學",
+      "sortYear": 1891,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "胡塞爾的助教、同理心現象學的奠基者，晚年試圖接合現象學與多瑪斯，死於奧斯威辛",
+      "fields": [
+        "同理心現象學",
+        "位格哲學",
+        "女性哲學",
+        "多瑪斯研究",
+        "基督宗教靈修"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "purple",
+      "emoji": "✝️",
+      "contribution": [
+        "施泰因 1916 年以《論同理心問題》取得弗萊堡博士學位（最高榮譽），處理的是現象學一個尚未解決的難題：我如何能經驗到另一個人的經驗？她的答案是同理心（Einfühlung）既不是推論、也不是模仿或情感感染，而是一種**特殊的、非原初的給予**——他人的體驗確實被我把握到，但永遠是以「不是我親身活過」的方式被把握到。這既保住了他者的真實可及性，也保住了他者的不可化約性。",
+        "她隨後成為胡塞爾的助教，整理了《內在時間意識現象學講稿》與《觀念二》的手稿——這兩份文本後來分別由海德格與胡塞爾檔案館出版，是現象學史上被引用最多的遺稿。她因女性身分屢次無法取得教授資格，1933 年又因猶太血統被納粹法令逐出教職，遂入科隆的加爾默羅隱修會。晚年《有限存有與永恆存有》試圖讓現象學與多瑪斯的存有論彼此翻譯，是二十世紀少見的跨傳統嘗試。",
+        "1942 年荷蘭主教團公開抗議迫害猶太人後，納粹報復性逮捕全境的猶太裔天主教徒，她與胞姊同時被捕，數日後死於奧斯威辛。1998 年被封為聖人，翌年列為歐洲主保之一。"
+      ],
+      "sourceNote": "卒於 1942 年，逾生前七十年門檻；德文原著可做德／繁中對照。遺稿多為身後出版，收錄時須逐卷確認版本權。",
+      "timeline": [
+        {
+          "year": "1891",
+          "text": "生於布雷斯勞（今波蘭弗次瓦夫）猶太家庭，家中么女。"
+        },
+        {
+          "year": "1913",
+          "text": "赴哥廷根師從胡塞爾，加入現象學圈。"
+        },
+        {
+          "year": "1916",
+          "text": "於弗萊堡以《論同理心問題》取得博士（最高榮譽），任胡塞爾助教。"
+        },
+        {
+          "year": "1922",
+          "text": "受洗加入天主教會。"
+        },
+        {
+          "year": "1932",
+          "text": "任教明斯特教育學院，翌年因納粹種族法令去職。"
+        },
+        {
+          "year": "1933",
+          "text": "入科隆加爾默羅會，會名「十字架的德蘭‧本篤」。"
+        },
+        {
+          "year": "1938",
+          "text": "為避迫害轉往荷蘭埃赫特隱修院。"
+        },
+        {
+          "year": "1942",
+          "text": "於奧斯威辛遇害。"
+        },
+        {
+          "year": "1998",
+          "text": "由若望保祿二世封為聖人；翌年列為歐洲主保。"
+        }
+      ],
+      "works": [
+        {
+          "title": "論同理心問題",
+          "titleOriginal": "Zum Problem der Einfühlung",
+          "year": "1917",
+          "yearSort": 1917,
+          "category": "代表作：同理心現象學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "博士論文；他者經驗如何被給予的現象學分析。"
+        },
+        {
+          "title": "哲學的心理學與精神科學之基礎論稿",
+          "titleOriginal": "Beiträge zur philosophischen Begründung der Psychologie und der Geisteswissenschaften",
+          "year": "1922",
+          "yearSort": 1922,
+          "category": "位格與社群",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "位格、心靈能量與社群結構的現象學。"
+        },
+        {
+          "title": "有限存有與永恆存有",
+          "titleOriginal": "Endliches und ewiges Sein",
+          "year": "1936（1950 出版）",
+          "yearSort": 1936,
+          "category": "晚期：現象學與多瑪斯",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "以現象學重讀多瑪斯的存有論，試圖翻譯兩種語言。"
+        },
+        {
+          "title": "十字架的科學",
+          "titleOriginal": "Kreuzeswissenschaft",
+          "year": "1942（1950 出版）",
+          "yearSort": 1942,
+          "category": "靈修",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "論十字若望；被捕前未及完成的最後著作。"
+        },
+        {
+          "title": "論女性",
+          "titleOriginal": "Die Frau",
+          "year": "1928–1932 講稿",
+          "yearSort": 1930,
+          "category": "女性哲學",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "女性教育與職業的系列演講，早期女性哲學重要文獻。"
+        }
+      ]
+    },
+    {
+      "slug": "roman-ingarden",
+      "name": "羅曼‧英加登",
+      "nameEn": "Roman Ingarden",
+      "nameOriginal": "Roman Witold Ingarden",
+      "lifespan": "1893–1970",
+      "disciplineGroup": "哲學",
+      "sortYear": 1893,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "現象學實在論的主將，以文學作品的層次存有論奠定接受美學的基礎",
+      "fields": [
+        "現象學存有論",
+        "文學理論",
+        "美學",
+        "實在論爭議",
+        "價值論"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "amber",
+      "emoji": "📖",
+      "contribution": [
+        "英加登是胡塞爾最忠實、也最堅決反對他的學生。他終身不接受《觀念一》之後的先驗唯心論轉向——若世界的存在被還原為意識的意義構成，實在論就被悄悄取消了。畢生大著《世界存在的爭論》正是為此而寫：他要用現象學自己的工具，證明現象學不必然導向唯心論。",
+        "更廣為人知的是他的文學存有論。《文學的藝術作品》（1931）主張文學作品是一種**層次結構的意向性客體**——語音層、意義單元層、再現客體層、圖式化外觀層——它既不是紙上的墨跡（那是物理物），也不是任何讀者的心理體驗（那會使作品有多少讀者就有多少個）。作品本身充滿「不定點」（Unbestimmtheitsstellen），必須由讀者在閱讀中具體化（Konkretisation）才成為活的審美對象。這個構想是後來康士坦茨學派接受美學（伊瑟爾、姚斯）的直接源頭。",
+        "二戰期間他在納粹佔領下祕密寫作；戰後雅蓋隆大學復職，卻於 1949 至 1956 年間因被指為「唯心論者」而遭禁止授課。"
+      ],
+      "sourceNote": "卒於 1970 年，著作仍受版權；德文原著與波蘭文原著並行，走 REFERENCE-first（先查既有中譯）。",
+      "timeline": [
+        {
+          "year": "1893",
+          "text": "生於克拉科夫。"
+        },
+        {
+          "year": "1912–1918",
+          "text": "先後於哥廷根與弗萊堡師從胡塞爾，並受教於希爾伯特與哈特曼。"
+        },
+        {
+          "year": "1918",
+          "text": "以論柏格森的研究取得博士學位。"
+        },
+        {
+          "year": "1931",
+          "text": "出版《文學的藝術作品》。"
+        },
+        {
+          "year": "1939–1945",
+          "text": "納粹佔領期間祕密寫作《世界存在的爭論》。"
+        },
+        {
+          "year": "1945",
+          "text": "任雅蓋隆大學教授。"
+        },
+        {
+          "year": "1949–1956",
+          "text": "因被指為唯心論者遭禁止授課。"
+        },
+        {
+          "year": "1970",
+          "text": "卒於克拉科夫。"
+        }
+      ],
+      "works": [
+        {
+          "title": "文學的藝術作品",
+          "titleOriginal": "Das literarische Kunstwerk",
+          "year": "1931",
+          "yearSort": 1931,
+          "category": "代表作：文學存有論",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "四層結構與不定點；接受美學的直接源頭。"
+        },
+        {
+          "title": "論文學作品的認識",
+          "titleOriginal": "Vom Erkennen des literarischen Kunstwerks",
+          "year": "1937",
+          "yearSort": 1937,
+          "category": "代表作：文學存有論",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "前書的認識論續篇，處理具體化的過程。"
+        },
+        {
+          "title": "世界存在的爭論",
+          "titleOriginal": "Spór o istnienie świata",
+          "year": "1947–1948",
+          "yearSort": 1947,
+          "category": "存有論主著",
+          "languages": [
+            "pl",
+            "de"
+          ],
+          "status": "copyright",
+          "note": "畢生大著；以現象學工具反駁先驗唯心論。"
+        },
+        {
+          "title": "體驗、藝術作品與價值",
+          "titleOriginal": "Erlebnis, Kunstwerk und Wert",
+          "year": "1969",
+          "yearSort": 1969,
+          "category": "美學與價值論",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "晚期美學論文集。"
+        }
+      ]
+    },
+    {
+      "slug": "eugen-fink",
+      "name": "歐伊根‧芬克",
+      "nameEn": "Eugen Fink",
+      "nameOriginal": "Eugen Fink",
+      "lifespan": "1905–1975",
+      "disciplineGroup": "哲學",
+      "sortYear": 1905,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "胡塞爾最後的助手，追問「做現象學的那個人算什麼」，並以遊戲為世界的象徵",
+      "fields": [
+        "先驗現象學",
+        "現象學的自我批判",
+        "遊戲哲學",
+        "宇宙論",
+        "教育哲學"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "cyan",
+      "emoji": "🎲",
+      "contribution": [
+        "芬克 1928 年起擔任胡塞爾的私人助手直到胡塞爾去世，是唯一同時被胡塞爾與海德格認可的人。他 1932 年寫成的《第六笛卡兒式沉思》要處理現象學一個從未被自己追問過的盲點：當現象學家執行懸置、成為「不參與的旁觀者」時，**這位旁觀者本身是什麼？**他既不在被懸置的世界裡，也不等於被還原後的先驗自我。胡塞爾讀後說其中沒有一句話不是他自己也會寫的；但這份稿子直到 1988 年才出版。",
+        "納粹時期他因妻子的猶太血統而無法取得教職，戰後才任弗萊堡教授。晚期他離開純粹的意識分析，轉向「宇宙論的」思考：《遊戲作為世界象徵》主張遊戲不是人生的餘興，而是人得以照見世界整體的那面鏡子——在遊戲裡，人同時是玩家、是角色、是規則的立法者，世界本身也是這樣自我上演的。1966–67 年他與海德格合開的赫拉克利特研討班，是兩人思想最後一次公開交鋒。"
+      ],
+      "sourceNote": "卒於 1975 年，著作仍受版權；《第六笛卡兒式沉思》1988 年始出版，須另計出版權。",
+      "timeline": [
+        {
+          "year": "1905",
+          "text": "生於康斯坦茨。"
+        },
+        {
+          "year": "1928",
+          "text": "任胡塞爾私人助手，直至 1938 年胡塞爾去世。"
+        },
+        {
+          "year": "1932",
+          "text": "寫成《第六笛卡兒式沉思》，胡塞爾高度認可（1988 年始出版）。"
+        },
+        {
+          "year": "1933–1945",
+          "text": "因妻子猶太血統受迫害，未能取得教職。"
+        },
+        {
+          "year": "1946",
+          "text": "任弗萊堡大學教授。"
+        },
+        {
+          "year": "1960",
+          "text": "出版《遊戲作為世界象徵》與《尼采哲學》。"
+        },
+        {
+          "year": "1966–1967",
+          "text": "與海德格合開赫拉克利特研討班。"
+        },
+        {
+          "year": "1975",
+          "text": "卒於弗萊堡。"
+        }
+      ],
+      "works": [
+        {
+          "title": "第六笛卡兒式沉思",
+          "titleOriginal": "VI. Cartesianische Meditation",
+          "year": "1932（1988 出版）",
+          "yearSort": 1932,
+          "category": "代表作：現象學的自我批判",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "追問現象學旁觀者本身的身分；現象學方法論最徹底的一次自我追問。"
+        },
+        {
+          "title": "遊戲作為世界象徵",
+          "titleOriginal": "Spiel als Weltsymbol",
+          "year": "1960",
+          "yearSort": 1960,
+          "category": "晚期：宇宙論轉向",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "遊戲不是餘興，是照見世界整體的鏡子。"
+        },
+        {
+          "title": "尼采哲學",
+          "titleOriginal": "Nietzsches Philosophie",
+          "year": "1960",
+          "yearSort": 1960,
+          "category": "詮釋與論戰",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "與海德格尼采詮釋針鋒相對的另一種讀法。"
+        },
+        {
+          "title": "赫拉克利特研討班",
+          "titleOriginal": "Heraklit. Seminar mit Martin Heidegger",
+          "year": "1970",
+          "yearSort": 1970,
+          "category": "詮釋與論戰",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "與海德格合開的研討班紀錄，兩人思想最後一次公開交鋒。"
+        }
+      ]
+    },
+    {
+      "slug": "gabriel-marcel",
+      "name": "加布里埃爾‧馬塞爾",
+      "nameEn": "Gabriel Marcel",
+      "nameOriginal": "Gabriel Honoré Marcel",
+      "lifespan": "1889–1973",
+      "disciplineGroup": "哲學",
+      "sortYear": 1889,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "以「奧祕」對抗「問題」的存在現象學家，臨在、忠信與希望的哲學",
+      "fields": [
+        "存在現象學",
+        "宗教哲學",
+        "戲劇",
+        "主體際性",
+        "希望哲學"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "teal",
+      "emoji": "🕯️",
+      "contribution": [
+        "馬塞爾最有力的一個區分是**問題與奧祕**。問題（problème）擺在我面前，我可以站到它外面、把它拆解、原則上可以解決；奧祕（mystère）則是我本身已經捲入其中的東西——我的身體、我的愛、我的死、他人的存在——一旦我試圖站到外面把它當對象處理，我要處理的那個東西就已經變質了。現代思維的病，就是把所有奧祕都降格成問題。",
+        "他因此把哲學的重心從「佔有」（avoir）移到「存有」（être）：我有一支錶、有一套意見，這些都可以與我分離；但我不是「有」一個身體，我就是我的身體。與此相連的是他的核心概念「臨在」（présence）與「可及」（disponibilité）——真正在場的人不是站在你面前的人，而是願意讓自己被你打擾、被你改變的人。忠信、希望與愛因此不是心理狀態，而是通往存有的路徑。",
+        "他一戰時在紅十字會負責查詢失蹤者，日日面對前來詢問親人下落的家屬——他自述那份工作讓他永遠無法再把人當成檔案上的個案。他是劇作家，也拒絕「基督教存在主義」這個標籤，自稱新蘇格拉底主義者，並終身與沙特的無神論存在主義針鋒相對。"
+      ],
+      "sourceNote": "卒於 1973 年，著作仍受版權；法文原著，走 REFERENCE-first。",
+      "timeline": [
+        {
+          "year": "1889",
+          "text": "生於巴黎；四歲喪母。"
+        },
+        {
+          "year": "1914–1918",
+          "text": "一戰期間任紅十字會失蹤者查詢工作。"
+        },
+        {
+          "year": "1927",
+          "text": "出版《形上學日記》。"
+        },
+        {
+          "year": "1929",
+          "text": "改宗天主教。"
+        },
+        {
+          "year": "1935",
+          "text": "出版《是與有》。"
+        },
+        {
+          "year": "1949–1950",
+          "text": "主講蘇格蘭吉福德講座，講稿成《存有的奧祕》。"
+        },
+        {
+          "year": "1973",
+          "text": "卒於巴黎。"
+        }
+      ],
+      "works": [
+        {
+          "title": "形上學日記",
+          "titleOriginal": "Journal métaphysique",
+          "year": "1927",
+          "yearSort": 1927,
+          "category": "早期：日記體哲學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "以日記形式進行的哲學思考，體例本身即是主張。"
+        },
+        {
+          "title": "是與有",
+          "titleOriginal": "Être et avoir",
+          "year": "1935",
+          "yearSort": 1935,
+          "category": "代表作：存有與佔有",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "問題與奧祕、存有與佔有的核心區分。"
+        },
+        {
+          "title": "旅途之人",
+          "titleOriginal": "Homo viator",
+          "year": "1945",
+          "yearSort": 1945,
+          "category": "希望與主體際性",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "希望的現象學；人作為在途中的存有者。"
+        },
+        {
+          "title": "存有的奧祕",
+          "titleOriginal": "Le Mystère de l'être",
+          "year": "1951",
+          "yearSort": 1951,
+          "category": "代表作：存有與佔有",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "吉福德講座兩卷本，思想的系統性總結。"
+        }
+      ]
+    },
+    {
+      "slug": "alfred-schutz",
+      "name": "阿爾弗雷德‧舒茨",
+      "nameEn": "Alfred Schutz",
+      "nameOriginal": "Alfred Schütz",
+      "lifespan": "1899–1959",
+      "disciplineGroup": "哲學",
+      "sortYear": 1899,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "把胡塞爾的生活世界接上韋伯的理解社會學，開創現象學社會學",
+      "fields": [
+        "現象學社會學",
+        "生活世界分析",
+        "類型化理論",
+        "主體際性",
+        "多重實在"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "blue",
+      "emoji": "🏙️",
+      "contribution": [
+        "舒茨的問題是：韋伯要社會學去理解行動者「主觀賦予的意義」，但他從沒說清楚意義是怎麼構成的。《社會世界的意義建構》（1932）用胡塞爾的內在時間意識分析補上這一塊——意義不是行動當下就有的，而是回顧時被賦予的；行動的意義結構，本質上是時間結構。胡塞爾讀後親自寫信邀他，稱他為「嚴肅而深刻的現象學家」。",
+        "他最有影響力的貢獻是把生活世界寫成一份可操作的社會學地圖：日常世界靠**類型化**（Typisierung）運作——我不必認識這個郵差，我只需要知道「郵差」這一型；我隨身帶著一整套「手邊的庫存知識」，靠它把陌生人瞬間安放進格子裡。他還細分了同代人、前人、後人與「共同變老」的親密關係，並在〈論多重實在〉中指出：日常世界只是眾多有限意義域之一，夢、遊戲、劇場、科學理論各有自己的實在風格，人在其間的移動需要一次「震撼」。",
+        "他終身白天是銀行的法律顧問、晚上才做哲學，1939 年流亡紐約後才在社會研究新學院任教。柏格與盧克曼《社會實在的建構》、加芬克爾的俗民方法學，都直接由他而出。"
+      ],
+      "sourceNote": "卒於 1959 年，著作仍受版權；德文與英文並行，走 REFERENCE-first。",
+      "timeline": [
+        {
+          "year": "1899",
+          "text": "生於維也納。"
+        },
+        {
+          "year": "1917–1918",
+          "text": "一戰服役於奧匈軍隊。"
+        },
+        {
+          "year": "1932",
+          "text": "出版《社會世界的意義建構》；獲胡塞爾親自來信邀請。"
+        },
+        {
+          "year": "1938",
+          "text": "德奧合併後流亡巴黎。"
+        },
+        {
+          "year": "1939",
+          "text": "赴美定居紐約，白天任銀行法律顧問。"
+        },
+        {
+          "year": "1943",
+          "text": "起任教於紐約社會研究新學院。"
+        },
+        {
+          "year": "1959",
+          "text": "卒於紐約；遺稿由盧克曼整理成《生活世界的結構》。"
+        }
+      ],
+      "works": [
+        {
+          "title": "社會世界的意義建構",
+          "titleOriginal": "Der sinnhafte Aufbau der sozialen Welt",
+          "year": "1932",
+          "yearSort": 1932,
+          "category": "代表作：現象學社會學",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "以胡塞爾的時間意識分析為韋伯的「主觀意義」奠基。"
+        },
+        {
+          "title": "論多重實在",
+          "titleOriginal": "On Multiple Realities",
+          "year": "1945",
+          "yearSort": 1945,
+          "category": "論文",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "日常世界只是眾多有限意義域之一。"
+        },
+        {
+          "title": "社會實在的問題（論文集一）",
+          "titleOriginal": "Collected Papers I: The Problem of Social Reality",
+          "year": "1962",
+          "yearSort": 1962,
+          "category": "論文集",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "身後編成；類型化、庫存知識、陌生人與返鄉者。"
+        },
+        {
+          "title": "生活世界的結構",
+          "titleOriginal": "Strukturen der Lebenswelt",
+          "year": "1973",
+          "yearSort": 1973,
+          "category": "遺稿",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "由盧克曼整理完成的未竟大著。"
+        }
+      ]
+    },
+    {
+      "slug": "paul-ricoeur",
+      "name": "保羅‧呂格爾",
+      "nameEn": "Paul Ricoeur",
+      "nameOriginal": "Paul Ricœur",
+      "lifespan": "1913–2005",
+      "disciplineGroup": "哲學",
+      "sortYear": 1913,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "主張自我只能經由符號、文本與他者的迂迴而抵達的詮釋現象學家",
+      "fields": [
+        "詮釋學",
+        "現象學",
+        "敘事理論",
+        "象徵與惡的問題",
+        "記憶與正義"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "orange",
+      "emoji": "🔁",
+      "contribution": [
+        "呂格爾的整個工作可以濃縮成一個字：**繞道**。笛卡兒以來的哲學相信自我可以直接把握自己；呂格爾認為這是幻覺——我要認識自己，只能經過我留下的符號、我說的故事、我在其中被指認的文本，以及那些從外面看我的他者。現象學因此必須嫁接詮釋學，直接的描述不夠。",
+        "《論詮釋：弗洛伊德與哲學》（1965）提出兩個影響深遠的說法：一是「懷疑的詮釋學」——馬克思、尼采、佛洛伊德三位懷疑大師教會我們，意識首先是虛假意識，理解要從拆穿開始；二是「象徵使人思考」——多義的象徵不是思想的終點而是起點。晚期《時間與敘事》三卷與《作為他者的自身》則轉向敘事同一性：我是誰這個問題，答案的形式是一個故事，而故事必然包含他者。",
+        "他一生兩次被歷史打斷：父親在他兩歲時死於一戰，他自己在 1940 年被俘、在德國戰俘營度過五年，營中讀雅斯培、翻譯胡塞爾《觀念一》。1968 年任楠泰爾校長，在學運中被學生羞辱後辭職赴美。最後一本大書《記憶、歷史、遺忘》處理的是：一個社會該記得什麼、能不能寬恕。"
+      ],
+      "sourceNote": "卒於 2005 年，著作仍受版權；法文原著，多有中譯本，走 REFERENCE-first。",
+      "timeline": [
+        {
+          "year": "1913",
+          "text": "生於瓦朗斯；父親兩年後戰死於馬恩河。"
+        },
+        {
+          "year": "1940–1945",
+          "text": "任預備軍官被俘，於德國戰俘營中閱讀雅斯培、翻譯胡塞爾《觀念一》。"
+        },
+        {
+          "year": "1950",
+          "text": "出版《意志哲學》第一卷。"
+        },
+        {
+          "year": "1965",
+          "text": "出版《論詮釋：弗洛伊德與哲學》。"
+        },
+        {
+          "year": "1968",
+          "text": "任楠泰爾大學校長；學運後辭職。"
+        },
+        {
+          "year": "1970–1992",
+          "text": "任教芝加哥大學，接田立克的講座。"
+        },
+        {
+          "year": "1983–1985",
+          "text": "出版《時間與敘事》三卷。"
+        },
+        {
+          "year": "2000",
+          "text": "出版《記憶、歷史、遺忘》。"
+        },
+        {
+          "year": "2005",
+          "text": "卒於沙特奈-馬拉布里。"
+        }
+      ],
+      "works": [
+        {
+          "title": "意志哲學",
+          "titleOriginal": "Philosophie de la volonté",
+          "year": "1950–1960",
+          "yearSort": 1950,
+          "category": "早期：意志與惡",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "含《不由自主與自主》與《有限性與罪咎》；惡的象徵論由此出。"
+        },
+        {
+          "title": "論詮釋：弗洛伊德與哲學",
+          "titleOriginal": "De l'interprétation. Essai sur Freud",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "代表作：詮釋的轉向",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "懷疑的詮釋學；象徵使人思考。創生哲學 E3 引用集中於此。"
+        },
+        {
+          "title": "活的隱喻",
+          "titleOriginal": "La métaphore vive",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "語言與敘事",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "隱喻不是修辭裝飾，是重新描述實在的方式。"
+        },
+        {
+          "title": "時間與敘事",
+          "titleOriginal": "Temps et récit",
+          "year": "1983–1985",
+          "yearSort": 1983,
+          "category": "代表作：敘事同一性",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "三卷本；時間經驗唯有以敘事形式才能被言說。"
+        },
+        {
+          "title": "作為他者的自身",
+          "titleOriginal": "Soi-même comme un autre",
+          "year": "1990",
+          "yearSort": 1990,
+          "category": "代表作：敘事同一性",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "自身性與同一性之分；他者已在自身之內。"
+        },
+        {
+          "title": "記憶、歷史、遺忘",
+          "titleOriginal": "La mémoire, l'histoire, l'oubli",
+          "year": "2000",
+          "yearSort": 2000,
+          "category": "晚期：記憶與正義",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "社會該記得什麼、能不能寬恕。"
+        }
+      ]
+    },
+    {
+      "slug": "michel-henry",
+      "name": "米歇爾‧亨利",
+      "nameEn": "Michel Henry",
+      "nameOriginal": "Michel Henry",
+      "lifespan": "1922–2002",
+      "disciplineGroup": "哲學",
+      "sortYear": 1922,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "主張生命在自我感發中直接自我感受、根本不顯現於世界之光的物質現象學家",
+      "fields": [
+        "物質現象學",
+        "生命現象學",
+        "身體哲學",
+        "基督宗教哲學",
+        "馬克思詮釋"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "violet",
+      "emoji": "🫀",
+      "contribution": [
+        "亨利對整個西方哲學下了一個極重的判詞：**存有論一元論**。從希臘到胡塞爾與海德格，哲學只認得一種顯現方式——把東西擺出來、放進光裡、讓它成為對象；於是凡是不能被擺出來的，就被當成不存在。而生命恰恰是不能被擺出來的：我的痛不在我面前，它就是我自己；我不是先看見我的痛，才知道我痛。",
+        "他把這種顯現方式叫做**自我感發**（auto-affection）：生命在沒有距離、沒有對象、沒有世界之光的情況下直接感受自己。《顯現的本質》（1963）用近千頁論證這一點；《身體的哲學與現象學》則透過曼恩‧德‧比朗，主張主觀身體本身就是一種原初的認識而非被認識的客體。1976 年的《馬克思》更逆轉常識，把馬克思讀成生命哲學家而非唯物論者。",
+        "晚年他轉向基督宗教三部曲——《我是真理》《道成肉身》《基督的話語》——主張基督宗教講的正是這種不顯現於世界的生命真理。這也使他成為賈尼柯所批評的「神學轉向」的核心人物之一。他二戰期間參加抵抗運動，代號取自康德。"
+      ],
+      "sourceNote": "卒於 2002 年，著作仍受版權；法文原著，走 REFERENCE-first。第十五章主要材料來源。",
+      "timeline": [
+        {
+          "year": "1922",
+          "text": "生於法屬印度支那海防。"
+        },
+        {
+          "year": "1943–1944",
+          "text": "參加法國抵抗運動，代號「康德」。"
+        },
+        {
+          "year": "1963",
+          "text": "出版《顯現的本質》，提出對存有論一元論的總批判。"
+        },
+        {
+          "year": "1965",
+          "text": "出版《身體的哲學與現象學》，論曼恩‧德‧比朗。"
+        },
+        {
+          "year": "1976",
+          "text": "出版《馬克思》兩卷，讀成生命哲學。"
+        },
+        {
+          "year": "1990",
+          "text": "出版《物質現象學》。"
+        },
+        {
+          "year": "1996–2002",
+          "text": "基督宗教三部曲：《我是真理》《道成肉身》《基督的話語》。"
+        },
+        {
+          "year": "2002",
+          "text": "卒於阿爾比。"
+        }
+      ],
+      "works": [
+        {
+          "title": "顯現的本質",
+          "titleOriginal": "L'essence de la manifestation",
+          "year": "1963",
+          "yearSort": 1963,
+          "category": "代表作：物質現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "近千頁的主著；批判存有論一元論，提出自我感發。"
+        },
+        {
+          "title": "身體的哲學與現象學",
+          "titleOriginal": "Philosophie et phénoménologie du corps",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "身體",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "論曼恩‧德‧比朗；主觀身體作為原初認識。"
+        },
+        {
+          "title": "馬克思",
+          "titleOriginal": "Marx",
+          "year": "1976",
+          "yearSort": 1976,
+          "category": "詮釋",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "兩卷；把馬克思讀成生命哲學家而非唯物論者。"
+        },
+        {
+          "title": "物質現象學",
+          "titleOriginal": "Phénoménologie matérielle",
+          "year": "1990",
+          "yearSort": 1990,
+          "category": "代表作：物質現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "與胡塞爾的意向性現象學正面劃界。"
+        },
+        {
+          "title": "我是真理：一種基督宗教的哲學",
+          "titleOriginal": "C'est moi la vérité. Pour une philosophie du christianisme",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "基督宗教三部曲",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "神學轉向的核心文本之一。"
+        },
+        {
+          "title": "道成肉身：一種肉身的哲學",
+          "titleOriginal": "Incarnation. Une philosophie de la chair",
+          "year": "2000",
+          "yearSort": 2000,
+          "category": "基督宗教三部曲",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "肉身（chair）與身體（corps）之分。"
+        }
+      ]
+    },
+    {
+      "slug": "jean-luc-marion",
+      "name": "尚-呂克‧馬里翁",
+      "nameEn": "Jean-Luc Marion",
+      "nameOriginal": "Jean-Luc Marion",
+      "lifespan": "1946–",
+      "disciplineGroup": "哲學",
+      "sortYear": 1946,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "以「給予性」為第三種還原、以「飽和現象」翻轉現象學界限的當代法國哲學家",
+      "fields": [
+        "給予性現象學",
+        "飽和現象",
+        "笛卡兒研究",
+        "否定神學",
+        "愛的現象學"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "indigo",
+      "emoji": "🎁",
+      "contribution": [
+        "馬里翁提出現象學史上的**第三種還原**。胡塞爾把一切還原到對象，海德格把一切還原到存有；馬里翁主張兩者都還不夠徹底——在對象與存有之前，先有**給予**（donation）：凡顯現者，都是先被給出的。「有多少還原，就有多少給予。」",
+        "由此推出他最著名也最受爭議的概念：**飽和現象**（phénomène saturé）。一般現象是概念多於直觀——我的意義框架足以裝下所見；飽和現象反過來，直觀多到概念裝不下，於是我不再是構成它的主體，而是被它衝擊、被它給定的受者。他舉四型：事件、偶像（畫）、肉身、聖像（他人的臉），而啟示現象是四者疊加的極限。《沒有存有的上帝》更主張上帝先於存有而為愛，任何把上帝納入存有範疇的做法都是偶像崇拜。",
+        "他是德希達與米歇爾‧亨利的學生，先以笛卡兒研究成名，後接列維納斯在索邦的講席，2008 年入選法蘭西學術院。《創生哲學》B3 明確不採用飽和現象作為反安瑟倫論證的依據——本書第十五章負責把他的主張完整鋪開、第十六章才處理這個不採用的理由。"
+      ],
+      "sourceNote": "在世作者，著作全受版權；法文原著，部分有中譯本，走 REFERENCE-first。第十五、十六章主要材料來源。",
+      "timeline": [
+        {
+          "year": "1946",
+          "text": "生於巴黎近郊莫東。"
+        },
+        {
+          "year": "1971",
+          "text": "巴黎高等師範學院畢業；受業於德希達與米歇爾‧亨利。"
+        },
+        {
+          "year": "1975",
+          "text": "出版《笛卡兒的灰色本體論》，以笛卡兒研究成名。"
+        },
+        {
+          "year": "1982",
+          "text": "出版《沒有存有的上帝》，引發廣泛爭議。"
+        },
+        {
+          "year": "1989",
+          "text": "出版《還原與給予》，提出給予性還原。"
+        },
+        {
+          "year": "1997",
+          "text": "出版《既予》，系統提出飽和現象四型。"
+        },
+        {
+          "year": "2008",
+          "text": "入選法蘭西學術院。"
+        }
+      ],
+      "works": [
+        {
+          "title": "笛卡兒的灰色本體論",
+          "titleOriginal": "Sur l'ontologie grise de Descartes",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "笛卡兒研究",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "成名作；笛卡兒如何以認識取代存有。"
+        },
+        {
+          "title": "沒有存有的上帝",
+          "titleOriginal": "Dieu sans l'être",
+          "year": "1982",
+          "yearSort": 1982,
+          "category": "代表作：神學轉向",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "上帝先於存有而為愛；偶像與聖像之分。"
+        },
+        {
+          "title": "還原與給予",
+          "titleOriginal": "Réduction et donation",
+          "year": "1989",
+          "yearSort": 1989,
+          "category": "代表作：給予性現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "第三種還原；有多少還原就有多少給予。"
+        },
+        {
+          "title": "既予：論一種給予性現象學",
+          "titleOriginal": "Étant donné. Essai d'une phénoménologie de la donation",
+          "year": "1997",
+          "yearSort": 1997,
+          "category": "代表作：給予性現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "飽和現象四型與啟示現象；第十五章核心文本。"
+        },
+        {
+          "title": "論過剩：飽和現象研究",
+          "titleOriginal": "De surcroît. Études sur les phénomènes saturés",
+          "year": "2001",
+          "yearSort": 2001,
+          "category": "代表作：給予性現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "飽和現象的個案深化。"
+        },
+        {
+          "title": "情色現象",
+          "titleOriginal": "Le phénomène érotique",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "愛的現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "以「有人愛我嗎」取代笛卡兒的我思作為第一問題。"
+        }
+      ]
+    },
+    {
+      "slug": "jean-louis-chretien",
+      "name": "尚-路易‧克雷提安",
+      "nameEn": "Jean-Louis Chrétien",
+      "nameOriginal": "Jean-Louis Chrétien",
+      "lifespan": "1952–2019",
+      "disciplineGroup": "哲學",
+      "sortYear": 1952,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "應答的現象學：一切經驗都是被呼召之後的回應，而回應永遠遲到且不足",
+      "fields": [
+        "應答現象學",
+        "祈禱與言語",
+        "教父學",
+        "詩學",
+        "身體與感官"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "sky",
+      "emoji": "📣",
+      "contribution": [
+        "克雷提安把現象學的重心從「我朝向對象」翻轉成「我被呼召、我回應」。《呼召與應答》（1992）主張：我們從來不是先有一個中立的意識、再去意向某物；我們總是已經被某個先於我們的呼聲觸動，而哲學的工作是描述那個回應的結構——回應必然**遲到**（呼聲先於我），必然**不足**（我永遠答不完），也必然**改變我**（我在回答中才成為我）。",
+        "他因此發展出「被傷的言語」（la parole blessée）這一主題：祈禱是最徹底的言語現象，因為說話者在其中承認自己的不足、把自己交出去，而且不確定有沒有被聽見。他兼治教父學與中世紀靈修（奧古斯丁、額我略、大德蘭），文體極富詩性，是賈尼柯所指「神學轉向」中最靠近文學的一位。"
+      ],
+      "sourceNote": "卒於 2019 年，著作全受版權；法文原著，中譯稀少，走 REFERENCE-first；缺中譯則自譯。",
+      "timeline": [
+        {
+          "year": "1952",
+          "text": "生於法國。"
+        },
+        {
+          "year": "1970 年代",
+          "text": "巴黎高等師範學院畢業，通過哲學教師資格會考。"
+        },
+        {
+          "year": "1990",
+          "text": "出版《赤裸的聲音：許諾的現象學》。"
+        },
+        {
+          "year": "1992",
+          "text": "出版《呼召與應答》，提出應答的現象學。"
+        },
+        {
+          "year": "1998",
+          "text": "出版《言語的方舟》。"
+        },
+        {
+          "year": "2000 年代",
+          "text": "長期任教巴黎第一大學（先賢祠-索邦）。"
+        },
+        {
+          "year": "2019",
+          "text": "逝世。"
+        }
+      ],
+      "works": [
+        {
+          "title": "赤裸的聲音：許諾的現象學",
+          "titleOriginal": "La voix nue. Phénoménologie de la promesse",
+          "year": "1990",
+          "yearSort": 1990,
+          "category": "言語現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "許諾作為把未來交出去的言語行動。"
+        },
+        {
+          "title": "呼召與應答",
+          "titleOriginal": "L'appel et la réponse",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "代表作：應答現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "回應永遠遲到、不足且改變回應者；第十五章材料。"
+        },
+        {
+          "title": "言語的方舟",
+          "titleOriginal": "L'arche de la parole",
+          "year": "1998",
+          "yearSort": 1998,
+          "category": "言語現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "言語如何承載並保存被說出的世界。"
+        },
+        {
+          "title": "被傷的言語：祈禱的現象學",
+          "titleOriginal": "La parole blessée. Phénoménologie de la prière",
+          "year": "1990",
+          "yearSort": 1991,
+          "category": "祈禱現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "收於《現象學與神學》論集；祈禱作為最徹底的言語現象。"
+        }
+      ]
+    },
+    {
+      "slug": "jean-yves-lacoste",
+      "name": "尚-伊夫‧拉考斯特",
+      "nameEn": "Jean-Yves Lacoste",
+      "nameOriginal": "Jean-Yves Lacoste",
+      "lifespan": "1953–",
+      "disciplineGroup": "哲學",
+      "sortYear": 1953,
+      "era": "現代與當代",
+      "region": "歐陸",
+      "discipline": "以禮儀為存在方式，正面回應海德格「在世存有」的宗教現象學家",
+      "fields": [
+        "禮儀存在論",
+        "宗教現象學",
+        "海德格批判",
+        "神學與哲學界限",
+        "經驗理論"
+      ],
+      "portraitUrl": "",
+      "portraitCredit": "（Wikimedia Commons 無把握公有領域肖像檔名，暫用 emoji 佔位）",
+      "color": "emerald",
+      "emoji": "⛪",
+      "contribution": [
+        "拉考斯特的核心概念是**禮儀**（liturgie），但他所指的不是儀式規章，而是一種存在方式：人在上帝面前持守的那種狀態。《經驗與絕對》（1994）直接對上海德格——如果人的存在結構就是「在世存有」與「向死存有」，那麼守夜祈禱的人在做什麼？他既沒有安居於世界，也沒有把自己交給大地與死亡，他把兩者都懸置起來，站在一個沒有回報、沒有現象內容的位置上。",
+        "由此推出他最尖銳的一點：**在上帝面前的存在不是一種經驗**。經驗要求有東西被給予、被感受、被證實；而禮儀的持守恰恰經常什麼都沒有——沒有安慰、沒有臨在感、沒有現象。他認為這種「非經驗」不是失敗，反而是它的正字標記，因為任何可被經驗證實的絕對者都已經被降格為世界之內的一物。這個立場既深化了神學轉向，也對它提出了限制。"
+      ],
+      "sourceNote": "在世作者，著作全受版權；法文原著（部分有英譯），中譯稀少，走 REFERENCE-first。",
+      "timeline": [
+        {
+          "year": "1953",
+          "text": "生於法國。"
+        },
+        {
+          "year": "1980 年代",
+          "text": "以哲學與神學雙軌訓練起家，長期在劍橋大學研究。"
+        },
+        {
+          "year": "1994",
+          "text": "出版《經驗與絕對：論人的人性的批判現象學》。"
+        },
+        {
+          "year": "2000",
+          "text": "出版《世界與不在場的作品》。"
+        },
+        {
+          "year": "2008",
+          "text": "出版《上帝的現象性》。"
+        },
+        {
+          "year": "2011",
+          "text": "出版《置身危險》。"
+        }
+      ],
+      "works": [
+        {
+          "title": "經驗與絕對",
+          "titleOriginal": "Expérience et Absolu",
+          "year": "1994",
+          "yearSort": 1994,
+          "category": "代表作：禮儀存在論",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "禮儀作為懸置世界與大地的存在方式；正面回應海德格。"
+        },
+        {
+          "title": "世界與不在場的作品",
+          "titleOriginal": "Le monde et l'absence d'œuvre",
+          "year": "2000",
+          "yearSort": 2000,
+          "category": "禮儀存在論",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "非生產性的存在如何可能。"
+        },
+        {
+          "title": "上帝的現象性",
+          "titleOriginal": "La phénoménalité de Dieu",
+          "year": "2008",
+          "yearSort": 2008,
+          "category": "宗教現象學",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "九篇論文；上帝能否成為現象。"
+        },
+        {
+          "title": "置身危險",
+          "titleOriginal": "Être en danger",
+          "year": "2011",
+          "yearSort": 2011,
+          "category": "晚期論集",
+          "languages": [
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "存在的脆弱性與經驗的界限。"
+        }
+      ]
+    },
+
   ])
 
   const bySlug = (slug: string) => authors.value.find((a) => a.slug === slug)
