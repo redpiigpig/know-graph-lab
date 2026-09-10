@@ -319,8 +319,12 @@ C3_WEEKS = [
 # 大綱不編週次，逐單元排；《解深密經》四品從 CBETA T16n0676 切出。
 C4 = "唯識思想專題研討"
 C4_WEEKS = [
-    ("W01 緒論", "談個人研究唯識學之困境與突破；評量說明", []),
-    ("W02 研究方法論", "傳統研究法／現代佛教學研究法／印順導師「以佛法研究佛法」", []),
+    ("W01 緒論", "談個人研究唯識學之困境與突破；評量說明", [
+        T(1, "01 導論", "01導論.pdf"),
+    ]),
+    ("W02 研究方法論", "傳統研究法／現代佛教學研究法／印順導師「以佛法研究佛法」", [
+        T(1, "02 研究方法論", "02研究方法論.pdf"),
+    ]),
     ("W03 唯識學的重要經論", "唯識學派之工具書、基礎六經、重要論典", []),
     ("W04 當代學術研究成果", "中文學界研究成果／外文學界研究成果", []),
     ("W05 根本佛法與唯識學（一）", "原始經教的根本義理──緣起；《阿含經》中的緣起法；緣起論與唯識學", [
@@ -603,7 +607,12 @@ def main() -> None:
     ap.add_argument("--folders", action="store_true", help="只建夾＋寫清單，不切片不下載")
     ap.add_argument("--offsets", action="store_true", help="只報各書的頁碼位移")
     ap.add_argument("--audit", action="store_true", help="只列已切好的各片首頁，肉眼複核")
+    ap.add_argument("--course", default="", help="只跑課名含這個字串的那一門（全跑要 20 分鐘以上，"
+                                                 "因為每本來源書都要重開一次算頁碼位移）")
     a = ap.parse_args()
+    courses = [(c, w) for c, w in COURSES if a.course in c]
+    if not courses:
+        sys.exit(f"--course「{a.course}」對不到任何一門：{[c for c, _ in COURSES]}")
 
     if a.offsets:
         for key in BOOKS:
@@ -616,7 +625,7 @@ def main() -> None:
         return
 
     if a.audit:
-        for course, weeks in COURSES:
+        for course, weeks in courses:
             for folder, _, _ in weeks:
                 d = os.path.join(BASE, course, folder)
                 if not os.path.isdir(d):
@@ -630,7 +639,7 @@ def main() -> None:
         return
 
     ok, bad = 0, []
-    for course, weeks in COURSES:
+    for course, weeks in courses:
         print("=" * 66)
         print(course)
         croot = os.path.join(BASE, course)

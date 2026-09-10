@@ -1,25 +1,26 @@
 # -*- coding: utf-8 -*-
-"""把一門（或數門）課的指定讀物排成一本 B5 讀本。
+"""把一門課的指定讀物排成一本 B5 讀本。
 
-兩本：
+三本，一門課一本（2026-09-10 之前週一與週六是合成一本 877 頁的，使用者定案拆開）：
 
-  `--reader marcus`（預設）**根瑟馬庫斯讀本**。他開的兩門課——週一第 2 節
-      博1A《宗教研究基本問題與研究方法》、週六第 1 節單週 碩專1A
-      《宗教學理論與方法（一）》——書單本來就重疊（MacIntyre 與 Segal 兩篇
-      兩門都指定），所以合成一本，同一篇只收一次，目錄標明兩門都要讀。
-  `--reader japanese` **初階日文讀本**。自訂十五週計畫的各週讀本
-      （矢內原忠雄／文語訳聖書／內村鑑三），見 japanese_self_study_plan.py。
+  `--reader mon`  《宗教研究基本問題與研究方法》週一第 2 節 博1A．32 篇
+  `--reader sat`  《宗教學理論與方法（一）》單週六第 1 節 碩專1A．7 篇
+  `--reader japanese` 《初階宗教學日文文獻選讀》週二第 1 節 碩1A．12 篇，
+      內容是自訂十五週計畫的各週讀本，見 japanese_self_study_plan.py。
+
+MacIntyre 與 Segal〈In Defense of Reductionism〉兩門課都指定，**兩本各收一份**。
 
 版面（使用者定案）：**JIS B5（18.2×25.7cm）**、正文滿版、**行距 1.5 倍**
 （＝字級的 1.8 倍行高，筆記寫在行間，不另闢筆記欄）、頁眉印「週次．篇名」、
 頁碼在下。每篇正文之後附一頁**繁中閱讀導引**（摘要／重點／可討論的問題），
-由 LLM 產生後快取，不會每次重跑重花額度。成品直接放課程資料夾，不另開子夾；
-合本橫跨兩門課，兩門的資料夾各放一份。
+由 LLM 產生後快取，不會每次重跑重花額度。封面是滿版深色橫幅一課一色，
+**上面只有課程名稱、學期、授課教師、學生姓名**。成品直接放該門課的資料夾（`--out` 可改）。
 
-    python -X utf8 scripts/build_course_reader.py
+    python -X utf8 scripts/build_course_reader.py --reader mon
+    python -X utf8 scripts/build_course_reader.py --reader sat
     python -X utf8 scripts/build_course_reader.py --reader japanese
-    python -X utf8 scripts/build_course_reader.py --only 2      # 只出第 2 部，試版面
-    python -X utf8 scripts/build_course_reader.py --no-summary  # 先不叫 LLM
+    python -X utf8 scripts/build_course_reader.py --reader sat --only 2   # 只出第 2 部，試版面
+    python -X utf8 scripts/build_course_reader.py --reader mon --no-summary  # 先不叫 LLM
     python -X utf8 scripts/build_course_reader.py --mode facsimile   # 原頁面影印合本
 
 ## 三個踩過的坑
@@ -84,96 +85,86 @@ _F_BLD = fitz.Font(fontfile=LATIN_BD)
 NO_LINE_START = "。、，．・：；？！）」』】〉》”’%,.;:?!)]}"
 
 
-# 封面欄位
+# 封面欄位。使用者 2026-09-10 定案：封面上只有**課程名稱、學期、授課教師、學生
+# 姓名**四樣，其他一律不放（課號、教室、學分、凡例都拿掉）。
+#
+# 三本並排時要一眼分得出是哪一門課，所以橫幅一課一色（沿用原文讀本那一套：
+# 同一條深色橫幅、同一條亮色細線，只換顏色與字）。
+SEMESTER = "115-1"
+
 COVER = {
-    "marcus": dict(
-        title="宗教學理論讀本",
-        subtitle="根瑟馬庫斯老師兩門課指定讀物合本",
-        lines=[
-            "玄奘大學宗教與文化學系　115 學年度第 1 學期",
-            "",
-            "週一第 2 節　宗教研究基本問題與研究方法（博士班 1A．專必．3 學分）",
-            "週六第 1 節〔單週〕　宗教學理論與方法（一）（碩專班 1A．專必．2 學分）",
-            "",
-            "授課教師　根瑟馬庫斯",
-            "編　　者　張辰瑋",
-        ],
-        note="兩門課書單重疊，MacIntyre 與 Segal 兩篇兩門都指定，本讀本只收一次，"
-             "目錄標明兩門都要讀。\n"
-             "正文由掃描本的文字層重新排版，非原書之替代；OCR 有殘留錯誤、圖表未收、"
-             "註腳位置與原書不同，引用一律回頭核對原書。",
-    ),
-    "japanese": dict(
-        title="初階日文讀本",
-        subtitle="無教會主義文獻選讀．十五週自學計畫",
-        lines=[
-            "玄奘大學宗教與文化學系　115 學年度第 1 學期",
-            "",
-            "週二第 1 節　初階宗教學日文文獻選讀（碩士班 1A．專選．2 學分）",
-            "",
-            "授課教師　倪杰",
-            "編　　者　張辰瑋",
-        ],
-        note="本課程為個別化自學，讀本由學生依個人目標自選。目標為研究無教會主義，"
-             "故取矢內原忠雄之現代日文為主線、文語訳聖書與內村鑑三之文語為副線。\n"
-             "每頁上半為原文、下半留白供逐句翻譯。各篇出處、節錄範圍與實質字數見篇首。",
-    ),
+    "mon": dict(title="宗教研究基本問題與研究方法", teacher="根瑟馬庫斯",
+                student="張辰瑋", banner="1E3A5F", rule="C8A24A"),      # 深藍
+    "sat": dict(title="宗教學理論與方法（一）", teacher="根瑟馬庫斯",
+                student="張辰瑋", banner="5A2E36", rule="D9A566"),      # 深酒紅
+    "japanese": dict(title="初階宗教學日文文獻選讀", teacher="倪杰",
+                     student="張辰瑋", banner="3B4A26", rule="C7B87A"),  # 橄欖綠
 }
 
 # ── 讀本結構 ────────────────────────────────────────────────────────────
-MARCUS_PARTS = [
+# 兩門課本來合成一本（877 頁），2026-09-10 使用者定案**拆成兩本、合本作廢**：
+# 一門一本，帶去上課的就是那門課要用的那本。MacIntyre 與 Segal〈In Defense of
+# Reductionism〉兩門都指定，兩本各收一份（不是漏了去重，是刻意的）。
+MON_PARTS = [
     ("第一部　學科的成立與定位", "宗教學何以成為一門獨立學科，以及它與神學的分界。", [
-        ("Alles_Study of Religion", "週一 W02-04"),
-        ("Sharpe_The Study of Religion in Historical", "週一 W02-04"),
-        ("Sharpe_Theology and Religious Studies", "週一 W02-04"),
-        ("Whaling_Introduction", "週一 W02-04"),
-        ("King_Orientalism", "週一 W02-04"),
+        ("Alles_Study of Religion", "W02-04"),
+        ("Sharpe_The Study of Religion in Historical", "W02-04"),
+        ("Sharpe_Theology and Religious Studies", "W02-04"),
+        ("Whaling_Introduction", "W02-04"),
+        ("King_Orientalism", "W02-04"),
     ]),
     ("第二部　研究對象的定義", "「宗教」這個詞指什麼？定義本身就是理論主張。", [
-        ("Braun_Religion", "週一 W05"),
-        ("Sharpe_The Question of Definition", "週一 W05"),
-        ("Arnal_Definition", "週一 W05"),
+        ("Braun_Religion", "W05"),
+        ("Sharpe_The Question of Definition", "W05"),
+        ("Arnal_Definition", "W05"),
     ]),
-    ("第三部　古典宗教學家的宗教概念", "海勒、奧托、馬林諾夫斯基三家原典選（Waardenburg 選集）。", [
-        ("Heiler_Friedrich Heiler", "週六 W04–W05"),
-        ("Otto_Rudolf Otto", "週六 W06–W07"),
-        ("Malinowski_Bronislaw Malinowski", "週六 W08–W09"),
+    ("第三部　理解、解釋與詮釋", "理解一個宗教，需不需要先相信它？後兩篇是內外部之爭的經典交鋒。", [
+        ("Sharpe_Commitment and Understanding", "W06-08"),
+        ("Green_Hermeneutics", "W06-08"),
+        ("Penner_Interpretation", "W06-08"),
+        ("Segal_Theories of Religion", "W06-08"),
+        ("MacIntyre_Is Understanding Religion Compatible", "W06-08"),
+        ("Segal_In Defense of Reductionism", "W06-08"),
     ]),
-    ("第四部　理解、解釋與詮釋", "理解一個宗教，需不需要先相信它？", [
-        ("Sharpe_Commitment and Understanding", "週一 W06-08"),
-        ("Green_Hermeneutics", "週一 W06-08"),
-        ("Penner_Interpretation", "週一 W06-08"),
-        ("Segal_Theories of Religion", "週一 W06-08"),
+    ("第四部　現代主義與後現代主義", "學科的現代性處境。", [
+        ("Wiebe_Modernism", "W10"),
+        ("Wolfart_Postmodernism", "W10"),
+        ("Campbell_Modernity and Postmodernity", "W10"),
     ]),
-    ("第五部　研究者的立場：內部與外部", "兩門課共同指定的一組。康德談啟蒙，其餘三篇是內外部之爭的經典交鋒。", [
-        ("Kant_What is Enlightenment", "週六 W02"),
-        ("MacIntyre_Is Understanding Religion Compatible", "週一 W06-08／週六 W14"),
-        ("Eliade_A New Humanism", "週六 W12"),
-        ("Segal_In Defense of Reductionism", "週一 W06-08／週六 W15–W16"),
+    ("第五部　歷史與比較", "宗教學的兩大方法：歷史研究與比較研究。", [
+        ("King_Historical and Phenomenological Approaches (41-56)", "W11"),
+        ("King_Historical and Phenomenological Approaches (84-164)", "W11"),
+        ("Smith_Classification", "W12"),
+        ("Martin_Comparison", "W12"),
+        ("Allen_Phenomenology of Religion", "W13"),
+        ("Ryba_Phenomenology of Religion", "W13"),
+        ("Roscoe_The Comparative Method", "W13"),
+        ("Paden_Comparative Religion", "W13"),
     ]),
-    ("第六部　現代主義與後現代主義", "學科的現代性處境。", [
-        ("Wiebe_Modernism", "週一 W10"),
-        ("Wolfart_Postmodernism", "週一 W10"),
-        ("Campbell_Modernity and Postmodernity", "週一 W10"),
+    ("第六部　社會與文化", "權威、結構、神話與儀式。", [
+        ("Gifford_Religious Authority", "W14"),
+        ("Jensen_Structure", "W14"),
+        ("Segal_Myth and Ritual", "W15"),
+        ("Segal_Myth (Blackwell", "W16"),
+        ("McCutcheon_Myth", "W16"),
+        ("Grimes_Ritual", "W17"),
+        ("Bell_Ritual", "W17"),
     ]),
-    ("第七部　歷史與比較", "宗教學的兩大方法：歷史研究與比較研究。", [
-        ("King_Historical and Phenomenological Approaches (41-56)", "週一 W11"),
-        ("King_Historical and Phenomenological Approaches (84-164)", "週一 W11"),
-        ("Smith_Classification", "週一 W12"),
-        ("Martin_Comparison", "週一 W12"),
-        ("Allen_Phenomenology of Religion", "週一 W13"),
-        ("Ryba_Phenomenology of Religion", "週一 W13"),
-        ("Roscoe_The Comparative Method", "週一 W13"),
-        ("Paden_Comparative Religion", "週一 W13"),
+]
+
+SAT_PARTS = [
+    ("第一部　釐清有關宗教學的基本問題", "從康德的〈答何謂啟蒙〉起手：學科的自我理解要從啟蒙談起。", [
+        ("Kant_What is Enlightenment", "W02"),
     ]),
-    ("第八部　社會與文化", "權威、結構、神話與儀式。", [
-        ("Gifford_Religious Authority", "週一 W14"),
-        ("Jensen_Structure", "週一 W14"),
-        ("Segal_Myth and Ritual", "週一 W15"),
-        ("Segal_Myth (Blackwell", "週一 W16"),
-        ("McCutcheon_Myth", "週一 W16"),
-        ("Grimes_Ritual", "週一 W17"),
-        ("Bell_Ritual", "週一 W17"),
+    ("第二部　宗教學的宗教概念", "海勒、奧托、馬林諾夫斯基三家原典選（Waardenburg 選集）。", [
+        ("Heiler_Friedrich Heiler", "W04–W05"),
+        ("Otto_Rudolf Otto", "W06–W07"),
+        ("Malinowski_Bronislaw Malinowski", "W08–W09"),
+    ]),
+    ("第三部　宗教學的研究立場：內部與外部", "理解一個宗教，需不需要先相信它？三篇是這場爭論的經典交鋒。", [
+        ("Eliade_A New Humanism", "W12"),
+        ("MacIntyre_Is Understanding Religion Compatible", "W14"),
+        ("Segal_In Defense of Reductionism", "W15–W16"),
     ]),
 ]
 
@@ -531,26 +522,58 @@ def _week_key(entry) -> tuple:
 
 
 
-def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]],
-                  offset_guess: int) -> Book:
-    """做封面與目錄。目錄要印頁碼，而頁碼取決於目錄自己有幾頁——所以呼叫端
-    會拿回傳的頁數再算一次，收斂後才定案。"""
-    bk = Book(lang=lang)
+def _rgb(hexstr: str) -> tuple[float, float, float]:
+    return tuple(int(hexstr[i:i + 2], 16) / 255 for i in (0, 2, 4))
+
+
+def draw_cover(bk: Book, meta: dict) -> None:
+    """B5 封面：滿版深色橫幅＋一條亮色細線，橫幅裡是課名，下方是教師與學生。
+
+    版式沿用原文讀本那一套（深色橫幅、白字、亮色細線），三本只換顏色，並排時
+    看得出是一套。**封面上只有課程名稱、授課教師、學生姓名**，其他一律不放。
+    橫幅是滿版出血，印的時候要選「實際大小」，縮放列印會留白邊。
+    """
+    banner = _rgb(meta.get("banner", "2C2A26"))
+    rule = _rgb(meta.get("rule", "D4A653"))
     bk.new_page()
-    bk.y = 190
-    bk.flow(meta["title"], size=25, gap=16)
-    bk.flow(meta["subtitle"], size=12.5, gap=40, color=(0.35,) * 3)
-    for line in meta["lines"]:
-        bk.flow(line, size=11, gap=3)
-    bk.y = PH - 200
-    bk.flow(meta["note"], size=8.8, gap=4, color=(0.42,) * 3)
+    page = bk.page
+    page.draw_rect(fitz.Rect(0, 0, PW, 300), color=banner, fill=banner)
+    page.draw_rect(fitz.Rect(0, 300, PW, 306), color=rule, fill=rule)
+
+    # 課名長短差很多（六字到十二字），字級照寬度收，不讓它撞到版心邊
+    size = 32.0
+    while size > 18 and bk.measure(meta["title"], size) > BODY_X1 - BODY_X0:
+        size -= 1.0
+    bk.y = 150
+    bk.draw(BODY_X0, bk.y, SEMESTER, 12, color=(0.86, 0.83, 0.78))
+    bk.y = 196
+    bk.draw(BODY_X0, bk.y, meta["title"], size, color=(1, 1, 1))
+
+    bk.y = 400
+    bk.draw(BODY_X0, bk.y, "授課教師", 11, color=(0.42,) * 3)
+    bk.draw(BODY_X0 + 76, bk.y, meta["teacher"], 13, color=(0.13,) * 3)
+    bk.y += 30
+    bk.draw(BODY_X0, bk.y, "學　　生", 11, color=(0.42,) * 3)
+    bk.draw(BODY_X0 + 76, bk.y, meta["student"], 13, color=(0.13,) * 3)
+
+
+def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]]) -> Book:
+    """做封面與目錄。
+
+    🚨 目錄印的是**內文自己的頁碼**（正文第一頁是 1），不是 PDF 的絕對頁次。
+    這兩個差了封面與目錄那幾頁：2026-09-10 之前印的是絕對頁次，於是目錄寫
+    「6」的那一篇，翻到書上印著「2」的那一頁才是——整本目錄每一條都差 4，
+    而書本身看起來完全正常（[[feedback_reader_silent_failures]]）。
+    """
+    bk = Book(lang=lang)
+    draw_cover(bk, meta)
 
     bk.head_l, bk.head_r = "", ""
     bk.new_page()
     bk.y = M_TOP + 10
     bk.flow("目錄", size=18, gap=18)
     for week, label, page in entries:
-        num = str(page + offset_guess)
+        num = str(page)
         left = f"{week}　{label}"
         # 點線導引：先量左右兩端，中間用點填滿
         wl = bk.measure(left, 9.8)
@@ -570,7 +593,7 @@ def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]],
     bk.y += 18
     bk.flow("週次一覽", size=13, gap=10)
     for week, label, page in sorted(entries, key=_week_key):
-        num = str(page + offset_guess)
+        num = str(page)
         left = f"{week}　{label}"
         wl, wr = bk.measure(left, 9.4), bk.measure(num, 9.4)
         room = (BODY_X1 - BODY_X0) - wl - wr - 6
@@ -663,26 +686,34 @@ def make_guide(title: str, source: str, body: str) -> str | None:
     return None
 
 
+# reader 代號 → (章節結構, 成品要放進哪幾門課的資料夾, 語言, 檔名)
+READERS = {
+    "mon": (MON_PARTS, [C_MON], "zh", "宗教研究方法讀本"),
+    "sat": (SAT_PARTS, [C_SAT], "zh", "宗教學理論讀本"),
+    "japanese": (JAPANESE_PARTS, [C_JPN], "ja", "初階日文讀本"),
+}
+
+
 def load_cache(path: str) -> dict:
     return json.loads(Path(path).read_text(encoding="utf-8")) if os.path.exists(path) else {}
 
 
 # ── 組本 ────────────────────────────────────────────────────────────────
-def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
-    if reader == "japanese":
-        parts, courses, lang = JAPANESE_PARTS, [C_JPN], "ja"
-        stem = "初階日文讀本"
-    else:
-        parts, courses, lang = MARCUS_PARTS, [C_MON, C_SAT], "zh"
-        stem = "宗教學理論讀本"
-    # 成品就放課程資料夾本身，不另開子夾。合本橫跨兩門課，兩邊各放一份。
-    out_dirs = [os.path.join(BASE, c) for c in courses]
+def build(reader: str, mode: str, only: int | None, want_guide: bool,
+          out: str = "") -> None:
+    parts, courses, lang, stem = READERS[reader]
+    # 成品就放那門課的資料夾本身，不另開子夾；`--out` 可以改放到別處
+    # （雲端硬碟沒掛載時先出到本機，掛回來再放回課程資料夾）。
+    out_dirs = [out] if out else [os.path.join(BASE, c) for c in courses]
     for d in out_dirs:
         os.makedirs(d, exist_ok=True)
     # 快取是中繼不是成品，留在 repo 的 output/（不進版控），不要擺到 Drive 課程夾裡
     cache_dir = os.path.join(ROOT_REPO, "output", "source-cache", "course-readers")
     os.makedirs(cache_dir, exist_ok=True)
-    cache_path = os.path.join(cache_dir, f"{reader}-guides.json")
+    # 閱讀導引的快取鍵是「檔名＋內文雜湊」，跟哪一本讀本無關。週一與週六本來
+    # 是一本（marcus），拆本後兩邊共用同一份快取，不要為了改代號重跑一輪 LLM。
+    cache_path = os.path.join(
+        cache_dir, f"{'marcus' if reader in ('mon', 'sat') else reader}-guides.json")
     cache = load_cache(cache_path)
 
     files = index_pdfs(courses)
@@ -761,13 +792,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
                     bk.guide_page(f"{weeks}", disp, cache[key_id])
             print(f"  ✓ {disp[:52]}")
 
-    # 封面＋目錄先做一版量頁數，再用真的頁碼重做一次（目錄自己的頁數會影響頁碼）
-    front = cover_and_toc(lang, COVER[reader], bk.entries, 0)
-    for _ in range(3):
-        guess = front.doc.page_count
-        front = cover_and_toc(lang, COVER[reader], bk.entries, guess)
-        if front.doc.page_count == guess:
-            break
+    front = cover_and_toc(lang, COVER[reader], bk.entries)
 
     book = fitz.open()
     book.insert_pdf(front.doc)
@@ -785,12 +810,13 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reader", choices=["marcus", "japanese"], default="marcus")
+    ap.add_argument("--reader", choices=["mon", "sat", "japanese"], default="mon")
     ap.add_argument("--mode", choices=["reflow", "facsimile"], default="reflow")
     ap.add_argument("--only", type=int, help="只出第 N 部（試版面用）")
     ap.add_argument("--no-summary", action="store_true", help="先不叫 LLM 產閱讀導引")
+    ap.add_argument("--out", default="", help="成品改放這個資料夾（預設放該門課的 Drive 資料夾）")
     a = ap.parse_args()
-    build(a.reader, a.mode, a.only, not a.no_summary)
+    build(a.reader, a.mode, a.only, not a.no_summary, a.out)
 
 
 if __name__ == "__main__":
