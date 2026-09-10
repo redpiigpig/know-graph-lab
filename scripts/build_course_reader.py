@@ -96,6 +96,10 @@ SEMESTER = "115-1"
 COVER = {
     "mon": dict(title="宗教研究基本問題與研究方法", teacher="根瑟馬庫斯",
                 student="張辰瑋", banner="1E3A5F", rule="C8A24A"),      # 深藍
+    "mon1": dict(title="宗教研究基本問題與研究方法", volume="上冊　第二至八週",
+                 teacher="根瑟馬庫斯", student="張辰瑋", banner="1E3A5F", rule="C8A24A"),
+    "mon2": dict(title="宗教研究基本問題與研究方法", volume="下冊　第十至十七週",
+                 teacher="根瑟馬庫斯", student="張辰瑋", banner="1E3A5F", rule="C8A24A"),
     "sat": dict(title="宗教學理論與方法（一）", teacher="根瑟馬庫斯",
                 student="張辰瑋", banner="5A2E36", rule="D9A566"),      # 深酒紅
     "japanese": dict(title="初階宗教學日文文獻選讀", teacher="倪杰",
@@ -277,7 +281,10 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[li
         lines = blk.get("lines", [])
         if not lines:
             continue
-        txt = "".join(sp["text"] for ln in lines for sp in ln["spans"])
+        # 🚨 行與行之間要補換行。直接把 span 串起來會把行尾的空白吃掉，整篇變成
+        #    「Christendom,but」「ofmankind」「precise-ly」——看起來像 OCR 爛掉，
+        #    其實是抽取時自己黏的（2026-09-10 踩過）。
+        txt = "\n".join("".join(sp["text"] for sp in ln["spans"]) for ln in lines)
         if not txt.strip():
             continue
         x0, y0, _, y1 = blk["bbox"]
@@ -294,37 +301,108 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[li
     return [t[2] for t in body], [t[2] for t in notes]
 
 
+# 🚨 私用區（PUA）字元。Waardenburg 那本的數字被字型對到 U+100000 一帶，
+#    文字層裡根本不是數字——照抄就印成一整排「􀀀􀀀􀀀」豆腐格
+#    （2026-09-10 使用者貼出來的那頁註就是）。數字救不回來（ToUnicode 壞的），
+#    所以：整段 PUA 佔比高的直接丟（那種多半是書目與年份表），其餘把 PUA 清掉。
+PUA = re.compile(r"[\ue000-\uf8ff\U000f0000-\U0010ffff]")
+
+
+def pua_ratio(text: str) -> float:
+    t = text.strip()
+    return len(PUA.findall(t)) / len(t) if t else 0.0
+
+
 def clean(text: str) -> str:
     text = re.sub(r"([a-z])-\s*\n\s*([a-z])", r"\1\2", text)   # 行末斷字，只接小寫
     text = re.sub(r"([a-z])-\s+([a-z])", r"\1\2", text)
     text = text.replace("\n", " ")
     for pat, rep in SPLIT_FIX:
         text = re.sub(pat, rep, text)
+    text = PUA.sub("", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
 # 篇末書目的標題。使用者定案：印本不收書目（要查出處回頭看 Drive 上那份切片，
 # 原檔一個字都沒動）。只認**獨立成行的短標題**，不然正文裡出現 "the references
 # to..." 也會被當成書目起點，整篇後半就沒了。
-BIBLIO_HEAD = re.compile(
-    r"^(bibliography|references|works cited|further reading|suggested reading|"
-    r"select bibliography|selected bibliography|reference list|參考書目|徵引書目)"
-    r"\s*[:.]?\s*$", re.I)
+BIBLIO_WORDS = ("bibliography", "references", "referencelist", "workscited",
+                "furtherreading", "suggestedreading", "suggestionsforfurtherreading",
+                "selectbibliography", "selectedbibliography", "worksconsulted",
+                "參考書目", "徵引書目", "引用書目")
 
 
-def cut_bibliography(paras: list[str]) -> tuple[list[str], int]:
+def _biblio_start(text: str) -> bool:
+    """這一段是不是篇末書目的開頭。
+
+    🚨 不能要求「整段只有標題」。掃描本的 OCR 常把標題跟第一筆書目黏成一段
+    （「BIBLIOGRAPHY Alles, Gregory D. …」），字母之間還會被拆開
+    （「B IBLIOGRAPHY」）——2026-09-10 使用者連講三次書目還在，就是卡在這。
+    改成：**去掉空白之後看開頭**是不是那幾個詞。
+
+    後面要接大寫、數字或結尾才算，否則正文裡的「References to the sacred…」
+    也會中招，一中招就把整篇後半砍光。
+    """
+    flat = re.sub(r"[\s.:：]", "", text)[:60].lower()
+    for w in BIBLIO_WORDS:
+        if flat.startswith(w):
+            rest = re.sub(r"[\s.:：]", "", text)[len(w):].lstrip()
+            return not rest or rest[0].isupper() or rest[0].isdigit() or ord(rest[0]) > 0x2E00
+    return False
+
+
+# Waardenburg《Classical Approaches》每一篇前面都有編者寫的作者簡介（生平、
+# 著作、這一段選文的來歷），固定以「The following fragment has been taken from…」
+# 收尾。那段落在課綱指定的頁碼範圍內，切片沒切錯，但它不是要讀的正文
+# （使用者 2026-09-10：「作者簡介也不應該出現在文本中」）。
+EDITOR_INTRO_END = re.compile(
+    r"^the following (fragment|extract|text|passage|selection)s?\b", re.I)
+# 有些篇沒有那句收尾，導言就是一段「某某某 was born in 1892 in Munich…」的小傳。
+EDITOR_BIO = re.compile(r"^[A-Z][\w.\-’' ]{2,60} was born (in|on)\b", re.I)
+
+
+def cut_editor_intro(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]], int]:
+    """把編者導言連同那句「以下選文取自……」一起砍掉。只找**前四分之一**，
+    免得正文中間出現同樣句型時把半篇文章砍掉。"""
+    for i, (_, t) in enumerate(paras):
+        if i > len(paras) * 0.25:
+            break
+        if EDITOR_INTRO_END.match(t.strip()) or EDITOR_BIO.match(t.strip()):
+            return paras[i + 1:], i + 1
+    return paras, 0
+
+
+def cut_bibliography(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]], int]:
     """砍掉篇末書目。回傳 (留下來的段落, 砍掉幾段)。
 
-    只從**後半**開始找：Guide 那幾篇的導論段落就寫過 "References" 這個詞，
-    從頭找會把整篇正文砍掉——而砍掉不會報錯，印出來也像一篇完整的文章。
+    只從**後三分之一**開始找：導論段落就寫過 "References" 這個詞，從頭找會把
+    整篇正文砍掉——而砍掉不會報錯，印出來也像一篇完整的文章。
     """
-    for i, t in enumerate(paras):
-        if i > len(paras) * 0.5 and len(t) < 60 and BIBLIO_HEAD.match(t.strip()):
+    for i, (_, t) in enumerate(paras):
+        if i > len(paras) * 0.35 and _biblio_start(t):
             return paras[:i], len(paras) - i
     return paras, 0
 
 
-def extract_pdf(path: str) -> tuple[list[str], list[str]]:
+# 小標：一整串大寫字之後直接接一個正常大小寫的字。掃描本常把小標跟後面那段
+# 黏成一塊（「THE EMERGENCE OF THE ACADEMIC STUDY OF RELIGION.According to a
+# well-worn German cliché…」），拆出來才讀得出結構，也才能加粗。
+HEAD_RUN = re.compile(r"^([A-Z][A-Z0-9 ,:;'\u2019\-\u2013&()/]{4,88}?)[.:]?\s*(?=[A-Z][a-z])")
+
+
+def split_heading(text: str) -> list[tuple[str, str]]:
+    """一段 → [(kind, text)]，kind 是 'h'（小標）或 'p'（正文）。"""
+    t = text.strip()
+    letters = [c for c in t if c.isalpha()]
+    if letters and len(t) < 90 and sum(c.isupper() for c in letters) / len(letters) > 0.8:
+        return [("h", t.rstrip(".:"))]        # 整段就是小標
+    m = HEAD_RUN.match(t)
+    if m and len(m.group(1).split()) >= 2 and len(t) - m.end() > 40:
+        return [("h", m.group(1).strip().rstrip(".:")), ("p", t[m.end():].lstrip())]
+    return [("p", t)]
+
+
+def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
     """回傳 (正文段落, 註腳)。註腳另外收，排在篇末，不再插進正文流。"""
     doc = fitz.open(path)
     tally: dict[float, int] = {}
@@ -332,11 +410,48 @@ def extract_pdf(path: str) -> tuple[list[str], list[str]]:
         for k, v in _size_tally(page).items():
             tally[k] = tally.get(k, 0) + v
     body_size = _dominant(tally)
-    paras: list[str] = []
+
+    pages = [page_paragraphs(page, body_size) for page in doc]
+
+    # 🚨 頁眉頁腳不能只靠邊界座標濾。《宗教百科全書》那一篇的頁眉離頂端超過 6%，
+    #    於是「STUDY OF RELIGION: AN OVERVIEW 8766」每一頁都被當成正文收進去，
+    #    還被接到下一段的句首（使用者 2026-09-10 指出）。改用**跨頁重複**認：
+    #    把每頁最上與最下那一塊抽出來、去掉數字，重複到一半以上頁數的就是頁眉頁腳。
+    def _head_key(t: str) -> str:
+        return re.sub(r"\d+", "", clean(t)).strip().lower()[:60]
+
+    seen: dict[str, int] = {}
+    for body_blocks, _ in pages:
+        for cand in ({body_blocks[0]} if body_blocks else set()) | (
+                {body_blocks[-1]} if len(body_blocks) > 1 else set()):
+            k = _head_key(cand)
+            if 0 < len(k) < 60:
+                seen[k] = seen.get(k, 0) + 1
+    threshold = max(3, int(len(pages) * 0.5))
+    running = {k for k, v in seen.items() if v >= threshold}
+
+    # 有些頁的頁眉跟正文黏在同一塊裡（「STUDY OF RELIGION: AN OVERVIEWUnlike
+    # theology…」），整塊丟掉會連正文一起丟，所以改成把開頭那一段剝掉。
+    head_pats = [re.compile(r"^\s*" + r"[\s\d]*".join(re.escape(w) for w in k.split())
+                            + r"[\s\d]*", re.I) for k in running if k.split()]
+
+    def _strip_head(t: str) -> str:
+        for pat in head_pats:
+            m = pat.match(t)
+            if m and m.end() < len(t):
+                return t[m.end():].lstrip()
+        return t
+
+    paras: list[tuple[str, str]] = []
     notes: list[str] = []
-    for page in doc:
-        body_blocks, note_blocks = page_paragraphs(page, body_size)
+    dropped_pua = 0
+    for body_blocks, note_blocks in pages:
+        body_blocks = [b for b in body_blocks if _head_key(b) not in running]
+        body_blocks = [_strip_head(b) for b in body_blocks]
         for raw in note_blocks:
+            if pua_ratio(raw) > 0.12:      # 整段是壞掉的數字，救不回來就別印
+                dropped_pua += 1
+                continue
             t = clean(raw)
             if len(t) < 3:
                 continue
@@ -349,20 +464,25 @@ def extract_pdf(path: str) -> tuple[list[str], list[str]]:
             else:
                 notes.append(t)
         for raw in body_blocks:
+            if pua_ratio(raw) > 0.12:
+                dropped_pua += 1
+                continue
             t = clean(raw)
             if len(t) < 3:
                 continue
             # 前一塊沒收尾 → 多半是同一段被跨欄跨頁切開了。但小標題也沒有句末
             # 標點（「“Religion” as Specter」），所以再看長度：夠長才是被切斷的
             # 正文，短的當標題，不接。
-            prev = paras[-1] if paras else ""
-            cont = bool(prev) and not prev.endswith(SENT_END) and (
-                len(prev) > 60 or t[:1].islower() or re.match(r"^\d+[).,]", t))
+            prev = paras[-1][1] if paras else ""
+            cont = (bool(prev) and paras[-1][0] == "p" and not prev.endswith(SENT_END)
+                    and (len(prev) > 60 or t[:1].islower() or re.match(r"^\d+[).,]", t)))
             if cont:
-                paras[-1] += " " + t
+                paras[-1] = ("p", prev + " " + t)
             else:
-                paras.append(t)
+                paras.extend(split_heading(t))
     doc.close()
+    if dropped_pua:
+        print(f"    · 丟掉 {dropped_pua} 段壞字元（來源字型把數字對到私用區）")
     return paras, notes
 
 
@@ -543,11 +663,86 @@ class Book:
             self.space(lead)
             self.y += lead
             return
-        for i, ln in enumerate(self.wrap(text, x1 - x0, size, bold, first_indent=indent)):
-            self.space(lead)
-            self.draw(x0 + (indent if i == 0 else 0), self.y, ln, size, bold, color)
-            self.y += lead
+        lines = self.wrap(text, x1 - x0, size, bold, first_indent=indent)
+        n, i = len(lines), 0
+        while i < n:
+            if self.page is None:
+                self.new_page()
+            room = int((self.bottom - self.y) // lead)      # 這一頁還放得下幾行
+            if room <= 0:
+                self.new_page()
+                continue
+            take = min(room, n - i)   # room 可能比剩下的行還多
+            if n - i > take:                 # 這一段要跨頁——處理孤行與寡行
+                if take < 2:                 # 這頁只塞得下一行，整段挪到下一頁
+                    self.new_page()
+                    continue
+                if n - i - take == 1:        # 別讓最後一行孤零零落到下一頁
+                    take -= 1
+            for k in range(take):
+                self.draw(x0 + (indent if i + k == 0 else 0), self.y,
+                          lines[i + k], size, bold, color)
+                self.y += lead
+            i += take
+            if i < n:
+                self.new_page()
         self.y += gap
+
+    def flow_paragraphs(self, paras: list[tuple[str, str]], size: float = FS,
+                        gap: float = 6.0, indent: float = 0.0) -> None:
+        """把一篇的正文**平均攤到各頁**，不是填滿一頁再換頁。
+
+        貪心填滿的結果是每篇最後一頁只剩殘餘——日文讀本有一頁只有兩行，前一頁
+        卻塞了十三行（使用者 2026-09-10 指出）。所以先算這篇需要幾頁，再把總高
+        除以頁數當每頁的預算，各頁的份量就接近。
+
+        順帶擋掉孤行寡行：一段只剩一行落到下一頁、或一頁只放得下這段的第一行，
+        都往下一頁挪。
+        """
+        if not paras:
+            return
+        lead = size * LEAD_FACTOR
+        blocks = [(kind, self.wrap(t, BODY_X1 - BODY_X0, size, kind == "h",
+                                   first_indent=0 if kind == "h" else indent))
+                  for kind, t in paras]
+        h_total = sum(len(b) * lead + gap + (8 if k == "h" else 0) for k, b in blocks)
+        if self.page is None:
+            self.new_page()
+        first_avail = self.bottom - self.y
+        full_avail = max(self.bottom - M_TOP, lead * 2)
+        pages = 1 if h_total <= first_avail else \
+            1 + int(-(-(h_total - first_avail) // full_avail))
+        # 每頁預算：把「總高＋第一頁少掉的那塊」攤平，上限是滿頁
+        budget = min(full_avail, (h_total + (full_avail - first_avail)) / pages)
+        page_top = self.y - (full_avail - first_avail)      # 第一頁的虛擬起點
+
+        for kind, lines in blocks:
+            if kind == "h":
+                self.y += 8                      # 小標前多空一點，看得出分段
+            n, i = len(lines), 0
+            while i < n:
+                room = int(min(self.bottom - self.y, page_top + budget - self.y) // lead)
+                if room <= 0:
+                    self.new_page()
+                    page_top = self.y
+                    continue
+                take = min(room, n - i)   # room 可能比剩下的行還多
+                if n - i > take:
+                    if take < 2:                  # 這頁只塞得下一行 → 整段挪下一頁
+                        self.new_page()
+                        page_top = self.y
+                        continue
+                    if n - i - take == 1:         # 別讓最後一行孤零零落到下一頁
+                        take -= 1
+                for k in range(take):
+                    off = 0 if kind == "h" else (indent if i + k == 0 else 0)
+                    self.draw(BODY_X0 + off, self.y, lines[i + k], size, kind == "h")
+                    self.y += lead
+                i += take
+                if i < n:
+                    self.new_page()
+                    page_top = self.y
+            self.y += gap
 
     # ── 結構 ────────────────────────────────────────────────────────
     def part_title(self, name: str, blurb: str) -> None:
@@ -569,7 +764,7 @@ class Book:
         self.new_page()
         label = (f"{author}, {title}" if author else title)[:88]
         if anchor:                      # 導引排在篇首時，錨點已經記在導引那一頁
-            self.marks.append([2, label, self.doc.page_count])
+            self.marks.append([1, label, self.doc.page_count])
             self.entries.append((week, label, self.doc.page_count))
         self.y = M_TOP + 8
         self.flow(week, size=9.6, gap=8, color=(0.4,) * 3)
@@ -604,25 +799,54 @@ class Book:
         self.half_page = False          # 導引本來就是中文，不留譯文欄
         self.new_page()
         if anchor:
-            self.marks.append([2, title[:88], self.doc.page_count])
+            self.marks.append([1, title[:88], self.doc.page_count])
             self.entries.append((week, title[:88], self.doc.page_count))
         self.y = M_TOP + 6
-        self.flow("閱讀導引", size=13.6, gap=4)
-        self.flow(title, size=9.2, gap=12, color=(0.4,) * 3)
+
+        # 一篇的導引要**剛好一頁**：摘要、重點、可討論的問題三段一次看完，
+        # 翻頁就失去它的用處（2026-09-10 使用者指出第三個問題老是掉到下一頁）。
+        # 所以先量、再選一個放得下的縮放，不夠就縮字級與段距，不硬換頁。
+        blocks = [("閱讀導引", 13.6, 4, BODY_X0, False),
+                  (title, 9.2, 12, BODY_X0, False)]
+        # 「可討論的問題」使用者說不用（問題他自己想），拿掉之後導引穩穩一頁。
+        # 快取裡的舊導引還帶著那一段，所以在這裡截掉，不必重跑一輪 LLM。
+        md = re.split(r"^##\s*可討論的問題", md, maxsplit=1, flags=re.M)[0]
         for ln in md.splitlines():
             ln = ln.strip()
             if not ln:
-                self.y += 3
+                blocks.append(("", 3.0, 0, BODY_X0, False))
             elif ln.startswith("## "):
-                self.y += 6
-                self.flow(ln[3:], size=11.6, gap=5, bold=True)
+                blocks.append(("", 6.0, 0, BODY_X0, False))
+                blocks.append((ln[3:], 11.6, 5, BODY_X0, True))
             elif ln.startswith(("- ", "・")):
-                self.flow("・" + ln.lstrip("-・ "), size=10.4, gap=4,
-                          x0=BODY_X0 + 8)
+                blocks.append(("・" + ln.lstrip("-・ "), 10.4, 4, BODY_X0 + 8, False))
             elif re.match(r"^\d+[.\u3001]", ln):
-                self.flow(ln, size=10.4, gap=4, x0=BODY_X0 + 8)
+                blocks.append((ln, 10.4, 4, BODY_X0 + 8, False))
             else:
-                self.flow(ln, size=10.4, gap=5)
+                blocks.append((ln, 10.4, 5, BODY_X0, False))
+
+        avail = (PH - M_BOT) - self.y
+        scale = 1.0
+        for try_scale in (1.0, 0.96, 0.92, 0.88, 0.84, 0.8, 0.76, 0.72):
+            h = 0.0
+            for text, size, gap, bx0, bold in blocks:
+                sz = size * try_scale
+                if not text:
+                    h += sz              # 空白區塊：本身就是間距
+                    continue
+                h += len(self.wrap(text, BODY_X1 - bx0, sz, bold)) * sz * LEAD_FACTOR
+                h += gap * try_scale
+            scale = try_scale
+            if h <= avail:
+                break
+
+        for text, size, gap, bx0, bold in blocks:
+            if not text:
+                self.y += size * scale
+                continue
+            grey = (0.4,) * 3 if text == title else (0.12,) * 3
+            self.flow(text, size=size * scale, gap=gap * scale, bold=bold, x0=bx0,
+                      color=(0, 0, 0) if bold else grey)
 
 
 
@@ -668,6 +892,9 @@ def draw_cover(bk: Book, meta: dict) -> None:
     bk.draw(BODY_X0, bk.y, SEMESTER, 12, color=(0.86, 0.83, 0.78))
     bk.y = 196
     bk.draw(BODY_X0, bk.y, meta["title"], size, color=(1, 1, 1))
+    if meta.get("volume"):
+        bk.y = 232
+        bk.draw(BODY_X0, bk.y, meta["volume"], 13, color=(0.88, 0.86, 0.82))
 
     bk.y = 400
     bk.draw(BODY_X0, bk.y, "授課教師", 11, color=(0.42,) * 3)
@@ -708,29 +935,8 @@ def cover_and_toc(lang: str, meta: dict, entries: list[tuple[str, str, int]]) ->
         bk.draw(BODY_X1 - wr, bk.y, num, 9.8)
         bk.y += 9.8 * LEAD_FACTOR
 
-    # 目錄照書的順序（分部）。要回答「第幾週讀什麼」本來另排一份週次一覽，
-    # 但拆成一課一本之後，多數書的分部順序本來就是週次順序——那份就變成
-    # 一模一樣的第二份目錄。所以**只有順序真的不同才印**（日文那本的第一部
-    # 收到 W07、第二部才回頭收 W06，就需要）。
-    by_week = sorted(entries, key=_week_key)
-    if [e[2] for e in by_week] == [e[2] for e in entries]:
-        return bk
-
-    bk.y += 18
-    bk.flow("週次一覽", size=13, gap=10)
-    for week, label, page in sorted(entries, key=_week_key):
-        num = str(page)
-        left = f"{week}　{label}"
-        wl, wr = bk.measure(left, 9.4), bk.measure(num, 9.4)
-        room = (BODY_X1 - BODY_X0) - wl - wr - 6
-        dots = ""
-        while bk.measure(dots + "·", 9.4) < room:
-            dots += "·"
-        bk.space(9.4 * LEAD_FACTOR)
-        x = bk.draw(BODY_X0, bk.y, left, 9.4)
-        bk.draw(x + 3, bk.y, dots, 9.4, color=(0.72,) * 3)
-        bk.draw(BODY_X1 - wr, bk.y, num, 9.4)
-        bk.y += 9.4 * LEAD_FACTOR
+    # 週次一覽拿掉了。拆成一課一本之後，目錄每一行左邊本來就標著週次，再排一份
+    # 按週次排序的清單就是第二份一模一樣的目錄（使用者 2026-09-10 退掉）。
     return bk
 
 
@@ -759,8 +965,7 @@ PROMPT = """你是宗教學研究所的助教。下面是一篇課堂指定讀�
 ## 重點
 - （五條，每條一句話，扣緊論證步驟，不要寫成內容大綱）
 
-## 可討論的問題
-1. （三題。要能在課堂上引起爭辯，不要是查得到答案的事實題。）
+只要這兩段，**不要**寫「可討論的問題」——問題使用者自己想（2026-09-10 定案）。
 
 篇名：{title}
 出處：{source}
@@ -795,7 +1000,7 @@ def make_guide(title: str, source: str, body: str) -> str | None:
             #    長的＝跑掉格式，把全文逐段翻譯或逐節註解都倒出來，塞爆那一頁。
             #    導引本來就設計成一頁，超出 2000 字必然不是導引。
             if out:
-                full = all(h in out for h in ("## 摘要", "## 重點", "## 可討論的問題"))
+                full = all(h in out for h in ("## 摘要", "## 重點"))
                 if full and 350 <= len(out) <= 2000:
                     return out.strip()
                 why = "缺段" if not full else ("太短" if len(out) < 350 else "暴長")
@@ -813,8 +1018,16 @@ def make_guide(title: str, source: str, body: str) -> str | None:
 
 
 # reader 代號 → (章節結構, 成品要放進哪幾門課的資料夾, 語言, 檔名)
+# 週一那本 754 頁、B5 雙面約 377 張、厚 3.8 公分，膠裝勉強而且每週要背著跑，
+# 所以 2026-09-10 使用者定案**分上下冊**，切在期中考前後：
+# 上冊 W02–W08（前三部）、下冊 W10–W17（後三部）。
+MON1_PARTS = MON_PARTS[:3]
+MON2_PARTS = MON_PARTS[3:]
+
 READERS = {
     "mon": (MON_PARTS, [C_MON], "zh", "宗教研究方法讀本"),
+    "mon1": (MON1_PARTS, [C_MON], "zh", "宗教研究方法讀本_上冊"),
+    "mon2": (MON2_PARTS, [C_MON], "zh", "宗教研究方法讀本_下冊"),
     "sat": (SAT_PARTS, [C_SAT], "zh", "宗教學理論讀本"),
     "japanese": (JAPANESE_PARTS, [C_JPN], "ja", "初階日文讀本"),
 }
@@ -871,8 +1084,9 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
 
     bk = Book(lang=lang, half_page=(reader == "japanese"))
     cut_total = 0
+    # 分部頁拿掉了（使用者 2026-09-10：「不需要幫我分第一部第二部，盡量減少頁數」）。
+    # 結構表留著，它決定收錄順序。
     for name, blurb, items in use:
-        bk.part_title(name, blurb)
         for key, weeks in items:
             path = locate(files, key)
             if not path:
@@ -883,9 +1097,10 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
             if path.lower().endswith(".pdf"):
                 author, title, source = title_of_pdf(path)
                 raw_paras, notes = extract_pdf(path)
+                raw_paras, intro_cut = cut_editor_intro(raw_paras)
                 paras, cut = cut_bibliography(raw_paras)
                 cut_total += cut
-                body = "\n\n".join(paras)
+                body = "\n\n".join(t for _, t in paras)
                 disp = f"{author}, {title}"
                 meta = None
                 note_n = len(notes)
@@ -896,7 +1111,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 source = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
                 body = "\n\n".join(paras)
                 disp = title
-                cut = 0
+                cut = intro_cut = 0
                 notes, note_n = [], 0
 
             # 🚨 快取的鍵不能只用檔名。讀本的節錄範圍一改，檔名沒變但內容變了，
@@ -930,19 +1145,20 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 bk.piece_title(f"{weeks}", author, title, source)
 
             if meta is None:
-                for p in paras:
-                    bk.flow(p, indent=INDENT)
-                bk.endnotes(notes)
+                bk.flow_paragraphs(paras, size=FS, gap=6.0, indent=INDENT)
+                # 註釋整批不印（2026-09-10 使用者定案）。重排之後正文裡的上標
+                # 註號已經沒了，沒有錨點的篇末註等於廢紙；要查註回頭看 Drive
+                # 上那份原始切片。抽出來的用途只剩一個：不讓它混進正文。
             else:
                 bk.flow(f"出處：{source}", size=9.0, gap=8, color=(0.35,) * 3)
                 bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
                         size=9.0, gap=10, color=(0.35,) * 3)
-                for p in paras:
-                    bk.flow(re.sub(r"\*\*(\d+)\*\*　", r"\1　", p), size=11.2, gap=8,
-                            indent=INDENT)
+                bk.flow_paragraphs([("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in paras],
+                                   size=11.2, gap=8, indent=INDENT)
             print(f"  ✓ {disp[:52]}"
+                  + (f"（砍編者導言 {intro_cut} 段）" if intro_cut else "")
                   + (f"（砍書目 {cut} 段）" if cut else "")
-                  + (f"（註 {note_n} 條）" if note_n else ""))
+                  + (f"（濾掉註 {note_n} 條）" if note_n else ""))
 
     if cut_total:
         print(f"\n篇末書目共砍掉 {cut_total} 段")
