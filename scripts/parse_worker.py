@@ -9,6 +9,7 @@ Usage:
   python scripts/parse_worker.py run            # process all unparsed
   python scripts/parse_worker.py run --limit 5  # only 5 books (dry-run-ish)
   python scripts/parse_worker.py status         # show progress summary
+  python scripts/parse_worker.py run --book <id> --book <id>   # 指定幾本插隊
 """
 import json
 import os
@@ -488,8 +489,8 @@ def cmd_status():
     assert parsed + errored + skipped + todo == len(books), "buckets must partition the table"
 
 
-def cmd_run(limit=None):
-    """Process all unparsed pdf/epub books."""
+def cmd_run(limit=None, only_ids=None):
+    """Process all unparsed pdf/epub books (or just `only_ids` when given)."""
     lock = single_instance()
     if lock is None:
         # Not an error: the overnight chain should carry on to OCR rather than
@@ -503,6 +504,10 @@ def cmd_run(limit=None):
     # silently a 1000-book batch, not "the whole queue" -- which is how a 5,000
     # book backlog looked like it was being drained in one pass.
     params = 'select=id,title,file_type,file_path&parsed_at=is.null&parse_error=is.null&file_type=in.(pdf,epub,docx,txt)&order=id'
+    if only_ids:
+        # 佇列照 id 排，急著要的某幾本可能排在幾千本後面。--book 讓它插隊，
+        # 不必為了三本書把整個 backlog 跑一遍。
+        params += '&id=in.(' + ','.join(only_ids) + ')'
     params += f'&limit={limit or 1000}'
     r = _http('get', f"{URL}/rest/v1/ebooks?{params}", headers=H, timeout=30)
     r.raise_for_status()
@@ -580,7 +585,8 @@ if __name__ == '__main__':
         limit = None
         if '--limit' in sys.argv:
             limit = int(sys.argv[sys.argv.index('--limit') + 1])
-        cmd_run(limit)
+        only = [sys.argv[i + 1] for i, a in enumerate(sys.argv) if a == '--book']
+        cmd_run(limit, only or None)
     else:
         print(f"Unknown command: {cmd}", file=sys.stderr)
         sys.exit(1)

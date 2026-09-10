@@ -208,7 +208,7 @@ def main() -> int:
 
     if args.list:
         for w in items:
-            probe = w["title"].split("（")[0][:28]
+            probe = w["title"].split("（")[0].strip()
             hit = already_in_library(env, probe)
             print(f'{"已有" if hit else "缺  "} {w["key"]:24s} {w["title"][:46]}')
             if hit:
@@ -243,7 +243,11 @@ def main() -> int:
         target = DRIVE_ROOT / w["category"] / w["sub"] / (
             w["title"].split("（")[0].strip().replace("/", "／")[:80] + ext)
         if target.exists() and target.stat().st_size > 50_000:
+            # 檔在但 DB 沒列的話，光 continue 會讓那本書永遠是「看不見的書」——
+            # PO 第17卷就是這樣：55 MB 躺在 Drive 上，DB 連一列都沒有。
             print(f"   SKIP 已存在 {target.stat().st_size//1024} KB")
+            if not already_in_library(env, w["title"].split("（")[0].strip()):
+                print(f'   DB 缺列，補建 → {insert_row(env, w, ext, target)}')
             skipped += 1
             continue
         url = DL.format(ident=w["ident"], name=urllib.parse.quote(name))
