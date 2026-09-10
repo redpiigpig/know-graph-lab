@@ -1220,49 +1220,69 @@
      "form": "聖書",
      "zh": "聖經",
      "count": 21,
-     "lessons": "1-07、1-31、1-41…"
+     "lessons": "1-07、1-31、1-41…",
+     "variants": "兩傳統同形"
     },
     {
      "form": "福音",
      "zh": "福音",
      "count": 19,
-     "lessons": "2-13、2-19、2-20…"
+     "lessons": "2-13、2-19、2-20…",
+     "variants": "兩傳統同形"
     },
     {
      "form": "基督",
      "zh": "基督",
      "count": 18,
-     "lessons": "1-02、1-07、1-08…"
+     "lessons": "1-02、1-07、1-08…",
+     "variants": "兩傳統同形"
     },
     {
      "form": "伝道",
      "zh": "傳道",
      "count": 12,
-     "lessons": "1-48、2-12、2-15…"
+     "lessons": "1-48、2-12、2-15…",
+     "zhProtestant": "傳道",
+     "zhCatholic": "傳教",
+     "variants": "傳道／傳教（evangelization）",
+     "glossaryTerm": "evangelization"
     },
     {
      "form": "使徒",
      "zh": "使徒",
      "count": 8,
-     "lessons": "2-13、2-19、2-22"
+     "lessons": "2-13、2-19、2-22",
+     "zhProtestant": "使徒",
+     "zhCatholic": "宗徒",
+     "variants": "使徒／宗徒（apostle）",
+     "glossaryTerm": "apostle"
     },
     {
      "form": "宣教師",
-     "zh": "宣教師",
+     "zh": "宣教士",
      "count": 8,
-     "lessons": "1-03、1-46、2-05…"
+     "lessons": "1-03、1-46、2-05…",
+     "zhProtestant": "宣教士",
+     "zhCatholic": "傳教士",
+     "variants": "宣教士／傳教士（missionary）",
+     "glossaryTerm": "missionary"
     },
     {
      "form": "幕屋",
      "zh": "會幕",
      "count": 8,
-     "lessons": "2-44"
+     "lessons": "2-44",
+     "variants": "兩傳統同形"
     },
     {
      "form": "牧師",
      "zh": "牧師",
      "count": 8,
-     "lessons": "1-07、1-46、2-40"
+     "lessons": "1-07、1-46、2-40",
+     "zhProtestant": "牧師",
+     "zhCatholic": "牧者",
+     "variants": "牧師／牧者（pastor）",
+     "glossaryTerm": "pastor"
     },
     {
      "form": "洗礼",
@@ -1278,7 +1298,11 @@
      "form": "燔祭",
      "zh": "燔祭",
      "count": 5,
-     "lessons": "2-09、2-44"
+     "lessons": "2-09、2-44",
+     "zhProtestant": "燔祭",
+     "zhCatholic": "全燔祭",
+     "variants": "燔祭／全燔祭（burnt offering）",
+     "glossaryTerm": "burnt offering"
     },
     {
      "form": "聖霊",
@@ -1294,19 +1318,25 @@
      "form": "十字架",
      "zh": "十字架",
      "count": 3,
-     "lessons": "1-45、2-07、2-20"
+     "lessons": "1-45、2-07、2-20",
+     "variants": "兩傳統同形"
     },
     {
      "form": "會堂",
      "zh": "會堂",
      "count": 3,
-     "lessons": "2-19、2-23"
+     "lessons": "2-19、2-23",
+     "variants": "兩傳統同形"
     },
     {
      "form": "聖徒",
      "zh": "聖徒",
      "count": 3,
-     "lessons": "2-07、2-22、2-32"
+     "lessons": "2-07、2-22、2-32",
+     "zhProtestant": "聖徒",
+     "zhCatholic": "聖人",
+     "variants": "聖徒／聖人（saint）",
+     "glossaryTerm": "saint"
     }
    ]
   },

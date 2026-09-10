@@ -210,6 +210,11 @@ def attach_variants(rows: list[dict]) -> tuple[int, list[str]]:
         record = index.get(row["zh"]) or index.get(row["form"])
         protestant = (record or {}).get("zh_protestant", "").strip()
         catholic = (record or {}).get("zh_catholic_sgs", "").strip()
+        if record and protestant and catholic and protestant == catholic:
+            # 「兩傳統同形」與「詞庫沒收」是兩件事，欄位都空著就分不出來。
+            row["variants"] = "兩傳統同形"
+            attached += 1
+            continue
         if record and protestant and catholic and protestant != catholic:
             row["zhProtestant"] = protestant
             row["zhCatholic"] = catholic
