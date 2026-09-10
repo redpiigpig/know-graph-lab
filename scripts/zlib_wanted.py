@@ -243,6 +243,39 @@ def parse_christianity(text: str, source: str) -> list[dict]:
     return out
 
 
+def _t2s():
+    """繁→簡轉換器；沒裝 opencc 就回 None（比對退回只比繁體，不會壞掉）。"""
+    try:
+        import opencc
+    except ImportError:
+        return None
+    return opencc.OpenCC("t2s")
+
+
+_T2S = _t2s()
+
+
+def add_simplified(items: list[dict]) -> list[dict]:
+    """替每一筆補上書名與作者的簡體版（expect_s／who_s）。
+
+    🚨 這不是為了寫進資料庫——repo 一切中文都必須是繁體，這兩欄只給 zlib_fetch
+    的比對用。z-library 的中文藏書幾乎全是簡體，而我們的清單一律繁體，沒有這一
+    層「心靈的黑夜」永遠對不上站上的「心灵的黑夜」。2026-09-10 抽樣四十筆，
+    命中率只有 2.5%，而落空的裡面至少三本站上明明就有，差的只是字體。
+    """
+    if _T2S is None:
+        return items
+    for it in items:
+        for src, dst in (("expect", "expect_s"), ("who", "who_s")):
+            v = it.get(src) or ""
+            if not v:
+                continue
+            s = _T2S.convert(v)
+            if s != v:                 # 一模一樣就不佔欄位
+                it[dst] = s
+    return items
+
+
 def ledger_done() -> set[str]:
     """帳本裡已處理的 key。與 zlib_fetch.mjs 的 doneKeys() 同一套規則——
     🚨 --dry-run 寫進去的那些不算數，否則試跑一次就把清單永久封死。"""
@@ -317,7 +350,7 @@ def main() -> None:
 
     if a.stats:
         return
-    merged = prioritize(merged)
+    merged = add_simplified(prioritize(merged))
     print("\n排序後前 12 筆（先做的）：")
     for it in merged[:12]:
         print(f"  [{it.get('source', '')[:28]:28}] {it.get('zh') or it.get('query', '')[:46]}")

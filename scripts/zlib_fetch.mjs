@@ -93,6 +93,16 @@ function doneKeys() {
 
 const note = (rec) => appendFileSync(LEDGER, JSON.stringify({ ...rec, at: new Date().toISOString() }) + '\n', 'utf8')
 
+// 挑版本的規則版本。探勘（--dry-run）判定「站上沒有」時會把這個字串一起記進
+// 帳本——規則以後一定還會再放寬（2026-09-10 就因為少了繁簡正規化，把「心靈的
+// 黑夜」判成不存在，而站上其實有「心灵的黑夜」），到時候要能精準地只撤掉舊規則
+// 判過的那一批，而不是整份帳本重來。
+const RULE = 'v2-t2s'
+
+// 探勘的落空與正式跑的落空要分開記。兩者都算「已處理」而退出佇列，但探勘那批
+// 是規則判的、可回溯；正式跑那批是真的搜過也試過了。
+const missStatus = (base) => (DRY ? 'probe-miss' : base)
+
 /**
  * DiamWall 的 challenge 會自己驗完再轉走；等它，別把那一頁當內容解析。
  *
@@ -140,7 +150,8 @@ export function isBlacklisted(...fields) {
   return BLACKLIST.some((n) => hay.includes(n))
 }
 
-export function rank(hit, query = '', expect = '', who = '', wantLang = '', wantExt = '') {
+export function rank(hit, query = '', expect = '', who = '', wantLang = '', wantExt = '',
+                     expectS = '', whoS = '') {
   const lang = (hit.language || '').toLowerCase()
   const ext = (hit.extension || '').toLowerCase()
   // 站上有一批「書名就是別人的搜尋字串」的垃圾上傳（多半是 txt/english），
@@ -160,19 +171,24 @@ export function rank(hit, query = '', expect = '', who = '', wantLang = '', want
   if (wantExt && ext !== wantExt.toLowerCase()) return -100
   if (query && title && title.replace(/\s+/g, '') === query.replace(/\s+/g, '')) return -100
   const flat = (x) => (x || '').toLowerCase().replace(/[\s《》〈〉「」（）()：:·‧、,，.。!！?？—\-]/g, '')
-  if (expect && !flat(title).includes(flat(expect))) return -100
+  // 🚨 我們的清單一律繁體（repo 規矩），z-library 的中文藏書幾乎全是簡體。
+  // 沒有這一道折衷，「心靈的黑夜」永遠對不上站上的「心灵的黑夜」——2026-09-10
+  // 抽樣四十筆，命中率 2.5%，而漏掉的裡面至少三本站上明明就有，差的只是字體。
+  // expectS／whoS 是 zlib_wanted.py 用 opencc 先轉好的簡體版，這裡兩邊都比。
+  const matches = (hay, a, b) => flat(hay).includes(flat(a)) || (b && flat(hay).includes(flat(b)))
+  if (expect && !matches(title, expect, expectS)) return -100
   if (who) {
     const w = flat(who)
     // 🚨 太短的姓氏不能當子字串比對。實測 who='Tu'（杜維明）配上空的 expect，
     //    唯一的閘門就只剩「含 tu 的中文書」，結果抓回一本雅思寫作書
     //    （音譯書名 "Shi tian tu po…" 裡剛好有 tu）。三個字以下的西文姓氏
     //    改成整詞比對，中日韓姓名本身夠獨特不受此限。
-    const hay = flat(`${hit.author} ${title}`)
+    const hay = `${hit.author} ${title}`
     const isShortLatin = /^[a-z]{1,3}$/.test(w)
     if (isShortLatin) {
-      const words = `${hit.author} ${title}`.toLowerCase().split(/[^a-z]+/)
+      const words = hay.toLowerCase().split(/[^a-z]+/)
       if (!words.includes(w)) return -100
-    } else if (!hay.includes(w)) {
+    } else if (!matches(hay, who, whoS)) {
       return -100
     }
   }
@@ -287,11 +303,14 @@ async function main() {
       }
       if (!hits.length) {
         console.log(`  ✗ 查無：${w.query}`)
-        note({ key: w.key, query: w.query, status: 'not-found' })
+        note({ key: w.key, query: w.query, status: missStatus('not-found'), why: 'no-results', rule: RULE })
         await page.waitForTimeout(3000)
         continue
       }
-      const scored = hits.map((h) => [rank(h, w.query, w.expect, w.who, w.lang || '', w.ext || ''), h])
+      const scored = hits.map((h) => [
+        rank(h, w.query, w.expect, w.who, w.lang || '', w.ext || '', w.expect_s || '', w.who_s || ''),
+        h,
+      ])
       if (DRY) {
         // 只查的時候把被閘擋掉的也列出來，才看得出「是閘太嚴，還是站上真的沒有」
         for (const [r, h] of scored.slice(0, 6)) {
@@ -302,7 +321,7 @@ async function main() {
       const ranked = scored.filter(([r]) => r > 0).sort((a, b) => b[0] - a[0])
       if (!ranked.length) {
         console.log(`  ✗ 沒有對得上的版本：${w.query}`)
-        note({ key: w.key, query: w.query, status: 'no-usable-hit' })
+        note({ key: w.key, query: w.query, status: missStatus('no-usable-hit'), why: 'all-gated', rule: RULE })
         await page.waitForTimeout(3000)
         continue
       }
