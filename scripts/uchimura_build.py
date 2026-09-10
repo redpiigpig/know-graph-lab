@@ -182,7 +182,49 @@ def parse_aozora(html: str) -> dict:
             cur = {"heading": "(front)", "paras": []}
             sections.append(cur)
         cur["paras"].append(s)
-    return {"title": title, "subtitle": subtitle, "sections": sections}
+    return {"title": title, "subtitle": subtitle, "sections": sections,
+            "source_note": parse_source_note(soup)}
+
+
+# ── 底本（版本資訊） ─────────────────────────────────────────────────────────
+# 青空文庫是電子底本，**沒有頁碼**，`page_number` 只能留 null
+# （[[feedback_transcribe_page_numbers]]）。但每篇末尾的
+# <div class="bibliographical_information"> 記著它據以輸入的紙本版次與親本出處——
+# 引用者至少標得出「據哪一個版本」。原本這一塊是被整個丟掉的
+# （見本檔頂端的 "(底本) excluded"）。
+#
+# 🚨 只收「底本」與「底本の親本」兩項。入力／校正／公開日期是志工的作業紀錄，
+#    不是版本資訊，收進來只會讓引註欄位長出雜訊。
+_SOURCE_KEYS = ("底本：", "底本の親本：", "初出：")
+# 這些一出現就停止收錄：志工作業紀錄，以及 ※ 開頭的校勘註記（ルビ補訂、誤植說明）
+# ——後者是「這個電子檔怎麼做的」，不是「這篇文章出自哪個版本」。
+_CREDIT_PREFIXES = ("入力", "校正", "青空文庫", "※", "この", "その他")
+
+
+def parse_source_note(soup) -> str:
+    """青空文庫 XHTML → 底本資訊（多行字串）。沒有這一塊就回空字串。
+
+    例：
+      底本：「内村鑑三全集3　1894-1896」岩波書店
+      1982（昭和57）年12月20日発行
+      底本の親本：「基督教新聞　578号」署名（内村生）
+      1894（明治27）年8月24日発行
+    """
+    div = soup.find("div", class_="bibliographical_information")
+    if div is None:
+        return ""
+    text = div.get_text(chr(10), strip=True)
+    lines = [ln.strip() for ln in text.split(chr(10)) if ln.strip()]
+    out: list[str] = []
+    keep = False
+    for ln in lines:
+        if any(ln.startswith(k) for k in _SOURCE_KEYS):
+            keep = True
+        elif keep and (ln.startswith(_CREDIT_PREFIXES) or "公開" in ln or "修正" in ln):
+            keep = False
+        if keep:
+            out.append(ln)
+    return chr(10).join(out)
 
 
 def split_long_paras(paras: list[str], max_chars: int = 1500) -> list[str]:

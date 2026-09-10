@@ -270,9 +270,24 @@ def is_done(slug: str) -> bool:
 
 
 # ── build + upload ────────────────────────────────────────────────────────────
-def _chunked(zh: list, src: list, maxp: int = MAX_PARAS_PER_CHUNK):
+def _chunked(zh: list, src: list, maxp: int = MAX_PARAS_PER_CHUNK, pages: list | None = None):
+    pg = list(pages or [None] * len(zh))[:len(zh)]
+    pg += [None] * (len(zh) - len(pg))
     for k in range(0, len(zh), maxp):
-        yield zh[k:k + maxp], src[k:k + maxp]
+        yield zh[k:k + maxp], src[k:k + maxp], pg[k:k + maxp]
+
+
+def first_page(pages: list) -> int | None:
+    """一個 chunk 的頁碼＝它**第一個有頁碼的段落**所在的頁。
+
+    🚨 只吃得下整數（`ebook_chunks.page_number` 是 INT）。羅馬頁碼（序言的 xii）
+    與抓不到頁碼的段落一律 None——不可換算、不可捏。"""
+    for x in pages or []:
+        if isinstance(x, int):
+            return x
+        if isinstance(x, str) and x.isdigit():
+            return int(x)
+    return None
 
 
 def build_chunks(slug: str) -> list[dict]:
@@ -295,17 +310,18 @@ def build_chunks(slug: str) -> list[dict]:
         zh = [(z or sv) for z, sv in zip(zh, src)]  # unfilled → show 原文
         if not any(zh):
             continue
+        pages = list(s.get("pages") or [])[:len(src)]
         base_title = (c.get("title_zh") or s["heading"] or w["title"]).strip()
         src_head = s["heading"] if s["heading"] not in ("(front)", "") else w["original_title"]
-        groups = list(_chunked(zh, src))
-        for part, (zg, sg) in enumerate(groups, 1):
+        groups = list(_chunked(zh, src, pages=pages))
+        for part, (zg, sg, pgg) in enumerate(groups, 1):
             title = base_title if len(groups) == 1 else f"{base_title}（{part}）"
             head = src_head if len(groups) == 1 else f"{src_head}（{part}）"
             chunks.append(pb.build_section_chunk(
                 chunk_index=ci, title_zh=title, zh_paras=zg,
                 source_paras={lang: sg}, source_heads={lang: head},
                 source_order=[lang], volume=volume,
-                parent_volume=w["parent_volume"], page_number=None))
+                parent_volume=w["parent_volume"], page_number=first_page(pgg)))
             ci += 1
     return chunks
 
