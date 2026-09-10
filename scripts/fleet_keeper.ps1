@@ -113,33 +113,20 @@ function Ensure($label, $pat, $argv) {
 # Gemini answered 504 DEADLINE_EXCEEDED on most of them - Romans managed 16 pages in an
 # hour. Halving the batch doubles the request count but the daily ceiling (6 models x
 # 7 keys x 20) is ~840 requests, far more than these volumes need.
-# ACCS FIRST (user 2026-08-17): campus ACCS OCR is the top priority and OWNS the
-# Gemini pool - every other lane is on NVIDIA/OpenRouter/local so nothing competes
-# for Gemini Vision quota. Gemini-gated: only launch when a key has quota.
-if (LanePaused 'accs-gemini') {
-    Note 'lane paused: accs-gemini'
-} elseif (-not (WorkerAlive 'accs-gemini')) {
-    Remove-Item -LiteralPath "$ROOT\scripts\state\gemini_live_model.txt" -Force -ErrorAction SilentlyContinue
-    & $py -X utf8 scripts\gemini_probe.py *> $null
-    if ($LASTEXITCODE -eq 0) {
-        # Free-tier daily quota is per MODEL (20/day/key/model as of 2026-08), so the
-        # probe reports which model still has room; pin the lane to it for this pass.
-        $liveModel = ''
-        $mf = "$ROOT\scripts\state\gemini_live_model.txt"
-        if (Test-Path -LiteralPath $mf) {
-            $liveModel = (Get-Content -LiteralPath $mf -ErrorAction SilentlyContinue | Select-Object -First 1)
-        }
-        if ($liveModel) { $env:GEMINI_MODEL = $liveModel.Trim() }
-        Note "Gemini has quota on $($env:GEMINI_MODEL) -> ACCS OCR queue (batch-4, NT first)"
-        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','2')
-    } else {
-        # Gemini dry on every key x every model -> fall back to Sonnet (user 2026-08-17).
-        # Sonnet runs on the Claude Max OAuth token, so this costs no extra spend; ACCS
-        # keeps moving overnight instead of idling until the daily quota resets.
-        Note 'Gemini dry on all keys x all models -> ACCS OCR queue on Sonnet'
-        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','sonnet','--batch','2')
-    }
-}
+# ACCS: DONE 2026-09-10 (user confirmed, incl. the deuterocanon). Verified three ways
+# before removing the lane - the log line alone was not enough, since "本批全數完成"
+# only ever covered volumes with status=ready:
+#   - DB: 73 book_codes, i.e. the whole 66-book canon (39 OT + 27 NT) plus the seven
+#     deuterocanonical codes tob/wis/sir/bar/sus/bel/aza. Judith and 1-2 Maccabees are
+#     absent because ACCS vol XV does not cover them - publisher scope, not a gap
+#     (see the BOOK_CODES comment in accs_epub.py).
+#   - Config: all 23 volumes status=ready with ranges defined; 58 expected book x vol
+#     items against 69 .raw.done markers in c:\tmp.
+#   - Lane output: "本批 OCR 全數完成或無可跑項".
+# It had been relaunched every 30 min doing nothing (16:00/16:31/17:00/17:30 on 09-10)
+# - completion is judged by output, not by the schedule still being enabled
+# ([[feedback_disable_finished_schedules]]). Re-add only if a new volume is licensed.
+# Gemini Vision therefore now belongs to the scan-ocr lane below.
 
 # Aquinas second (user 2026-08-17): Summa 17 vols, conservative OCR cleanup on the
 # OpenRouter free pool (8 keys, own pool - does not touch Gemini/NVIDIA quota).
