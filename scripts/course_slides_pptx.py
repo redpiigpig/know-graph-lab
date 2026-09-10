@@ -497,7 +497,19 @@ def place_image(slide, key, x, y, w, h):
     f = IMGDIR / m['file']
     if not f.exists():
         return False
-    pic = slide.shapes.add_picture(str(f), x, y, width=w)
+    # 🚨 圖放在 Google Drive 上，串流模式下偶爾會回 OSError 22（檔在、但還沒
+    #    落地）。原本一張讀不到就讓整輪三十九份重出全掛——退避重試兩次，
+    #    真的讀不到就跳過這張，不要拖垮整批。
+    import time
+    for attempt in range(3):
+        try:
+            pic = slide.shapes.add_picture(str(f), x, y, width=w)
+            break
+        except OSError as e:
+            if attempt == 2:
+                print(f'⚠ 讀不到圖 {key}（{e}），這一頁不配圖', flush=True)
+                return False
+            time.sleep(1.5 * (attempt + 1))
     if pic.height > h:                      # 太高就改用高度縮，維持比例
         ratio = pic.width / pic.height
         pic.height = h
