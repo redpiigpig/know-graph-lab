@@ -144,9 +144,24 @@ def _pdf_page_count(src: Path) -> int:
     return n
 
 
+# Rotate over models as well as keys. A newly issued key 404s on gemini-2.5-flash
+# ("no longer available to new users") while older keys still have it; and each
+# model has its own daily quota. Rotating keys alone dead-ends once the older
+# keys are spent — every remaining key 404s and the whole run raises.
+# Same pattern as fathers_pg_ocr.ocr().
+_FALLBACK_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
+
+
+def _model_chain(model: str | None) -> tuple[str, ...]:
+    """呼叫端指定的模型排第一，其餘備援接在後面。純函式。"""
+    if not model:
+        return _FALLBACK_MODELS
+    return (model,) + tuple(m for m in _FALLBACK_MODELS if m != model)
+
+
 def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) -> list[dict]:
-    """OCR a single (ASCII-named) PDF in one Gemini call, rotating keys on quota.
-    Salvages truncated JSON via json_repair when available."""
+    """OCR a single (ASCII-named) PDF in one Gemini call, rotating keys **and
+    models**. Salvages truncated JSON via json_repair when available."""
     from google import genai
     from google.genai import types
     try:
@@ -154,9 +169,14 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
     except Exception:
         json_repair = None
     last_err = ""
-    ki = 0
+    # (key, model) 二維輪替：同一把 key 先把每個模型試過，才換下一把 key。
+    # 配額是 per-key-per-model 的，而且新 key 只有新模型——只換 key 會在舊 key
+    # 額度用完後全數 404 而 raise（實測六把 key 一輪就死，一頁都跑不動）。
+    attempts = [(k, m) for k in range(len(keys)) for m in _model_chain(model)]
+    ai = 0
     transient_tries = 0
-    while ki < len(keys):
+    while ai < len(attempts):
+        ki, model = attempts[ai]
         client = genai.Client(api_key=keys[ki])
         try:
             up = client.files.upload(
@@ -193,10 +213,12 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
             # instead of aborting the whole run on the first such key.
             if any(k in low for k in ("quota", "resource_exhausted", "429",
                                       "no longer available", "not_found")):
-                ki += 1  # daily/RPM cap, or model not enabled on this key
-                if ki < len(keys):
+                ai += 1  # 這個 (key, model) 組合不行，換下一組
+                transient_tries = 0
+                if ai < len(attempts):
                     why = "model n/a" if "available" in low or "not_found" in low else "quota"
-                    print(f"  ⟳ key #{ki} {why}; rotating", flush=True)
+                    nk, nm = attempts[ai]
+                    print(f"  ⟳ key #{nk + 1} {nm} （前一組 {why}）", flush=True)
                     time.sleep(2)
                 continue
             if any(k in low for k in ("503", "unavailable", "500", "502", "504", "internal",
@@ -212,11 +234,11 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
                     print(f"  ↻ transient ({last_err[:60]}); retry in {wait}s", flush=True)
                     time.sleep(wait)
                     continue
-                ki += 1  # give up on this key, try next
+                ai += 1  # 這一組退避到底還是不通，換下一組
                 transient_tries = 0
                 continue
             raise
-    raise RuntimeError(f"all keys exhausted: {last_err}")
+    raise RuntimeError(f"all key/model combos exhausted: {last_err}")
 
 
 def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None,

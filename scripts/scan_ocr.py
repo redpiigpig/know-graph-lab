@@ -114,7 +114,8 @@ def main() -> None:
     ap.add_argument("--book", required=True, help=", ".join(scan_books.BOOKS))
     ap.add_argument("--work", help="預設用設定裡的 work_pdf")
     ap.add_argument("--cache", help="預設用設定裡 ocr_cache 的第一個")
-    ap.add_argument("--model", default="gemini-2.5-flash")
+    ap.add_argument("--model", default="gemini-flash-latest",
+                    help="首選模型；ocr_pdf 會自動 fallback 到其他模型（新 key 對 2.5-flash 一律 404）")
     ap.add_argument("--batch", type=int, default=6)
     ap.add_argument("--pages", help="1-based 範圍，例 2-9")
     ap.add_argument("--resume", action="store_true")
