@@ -39,7 +39,10 @@ const MAX_TRIES = Number(arg('--max-tries', String(Math.max(1, LIMIT) * 6)))
 // 每個帳號要有各自的 session state 檔。共用一個的話，換帳號登入會把前一個的
 // cookie 蓋掉，下次跑回原帳號又得重登，而且 DiamWall 對「同一個瀏覽器 profile
 // 反覆換身分」特別敏感。
-const ACCOUNT = arg('--account', '')     // '' = 主帳號；'2'/'3'/'4' = 備用
+//
+// 主帳號在 .env 裡沒有後綴（ZLIB_EMAIL），對應的 --account 值是空字串；但空字串
+// 沒辦法乾淨地穿過 PowerShell → cmd → node 這條命令列，所以排程用 '1' 指主帳號。
+const ACCOUNT = (arg('--account', '') === '1' ? '' : arg('--account', ''))
 const STATE = ACCOUNT ? `c:/tmp/zlib_state_${ACCOUNT}.json` : 'c:/tmp/zlib_state.json'
 
 function env() {
@@ -53,33 +56,63 @@ function env() {
   return out
 }
 
-/** 已經處理過的（抓到、或查無）不再重試。 */
+// 下載失敗要重試幾次才放棄。搜到了、也挑到版本了，卡在下載那一步——最常見的
+// 原因是當天額度用完（站方不明說，就是點了下載鈕永遠等不到 download 事件），
+// 那是「今天不行」不是「這本不存在」。
+const RETRY_FAILS = 3
+
+/**
+ * 已經處理過的（抓到、或查無）不再重試。
+ *
+ * 🚨 download-failed 不算「處理過」——每天額度用完時最後那兩本都會記成
+ * download-failed，若當成已處理，等於每天靜靜燒掉兩本書再也不會回頭抓
+ * （帳本裡已經這樣丟掉 8 本）。連續失敗 RETRY_FAILS 次才真的放棄。
+ */
 function doneKeys() {
   if (!existsSync(LEDGER)) return new Set()
-  return new Set(
-    readFileSync(LEDGER, 'utf8')
-      .split('\n')
-      .filter(Boolean)
-      .map((l) => {
-        try { return JSON.parse(l) } catch { return null }
-      })
-      // 🚨 --dry-run 什麼都沒下載，不能算「已處理」。之前 dry 也寫進帳本，
-      //    試跑一次就把那些 key 永久封死，正式跑時整份清單靜靜地變成 0 筆。
-      .filter((r) => r && r.key && r.status !== 'dry')
-      .map((r) => r.key)
-  )
+  const fails = new Map()
+  const done = new Set()
+  for (const l of readFileSync(LEDGER, 'utf8').split('\n')) {
+    if (!l) continue
+    let r
+    try { r = JSON.parse(l) } catch { continue }
+    if (!r || !r.key) continue
+    // 🚨 --dry-run 什麼都沒下載，不能算「已處理」。之前 dry 也寫進帳本，
+    //    試跑一次就把那些 key 永久封死，正式跑時整份清單靜靜地變成 0 筆。
+    if (r.status === 'dry') continue
+    if (r.status === 'download-failed') {
+      const n = (fails.get(r.key) || 0) + 1
+      fails.set(r.key, n)
+      if (n >= RETRY_FAILS) done.add(r.key)
+      continue
+    }
+    done.add(r.key)
+  }
+  return done
 }
 
 const note = (rec) => appendFileSync(LEDGER, JSON.stringify({ ...rec, at: new Date().toISOString() }) + '\n', 'utf8')
 
-/** DiamWall 的 challenge 會自己驗完再轉走；等它，別把那一頁當內容解析。 */
+/**
+ * DiamWall 的 challenge 會自己驗完再轉走；等它，別把那一頁當內容解析。
+ *
+ * 🚨 page.goto 自己會丟例外（net::ERR_ABORTED、frame detached、逾時），而這支
+ * 是整條流程的最底層——2026-09-10 那一輪就是在這裡丟出未捕捉的例外，把 node
+ * 整個帶走，帳號 3、4 的二十本額度一次都沒動用。導覽失敗屬於「這一筆跳過」，
+ * 不是「整輪結束」，所以在這裡就把它吞掉、重試，真的過不去才回 false。
+ */
 async function gotoPastWall(page, url, tries = 3) {
   const blocked = (t) => /DiamWall|验证|驗證|Verifying/i.test(t)
   for (let i = 0; i < tries; i++) {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 })
-    if (!blocked(await page.title())) return true
-    await page.waitForTimeout(12000)
-    if (!blocked(await page.title())) return true
+    try {
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 })
+      if (!blocked(await page.title())) return true
+      await page.waitForTimeout(12000)
+      if (!blocked(await page.title())) return true
+    } catch (err) {
+      console.log(`     ↻ 導覽失敗（${String(err).split('\n')[0].slice(0, 70)}），重試 ${i + 1}/${tries}`)
+      await page.waitForTimeout(5000)
+    }
   }
   return false
 }
@@ -228,13 +261,30 @@ async function main() {
     await context.storageState({ path: STATE })
 
     let tried = 0
+    // 一筆搜壞了就跳下一筆；但整站掛掉的時候不該傻傻把清單走完，所以連續壞
+    // 五筆就收工。
+    let searchErrors = 0
     for (const w of todo) {
       if (tried >= MAX_TRIES) {
         console.log(`  已試 ${tried} 筆（上限 ${MAX_TRIES}），本輪結束`)
         break
       }
+      if (searchErrors >= 5) {
+        console.log('  連續五筆搜尋都失敗，站況不對，本輪結束')
+        break
+      }
       tried += 1
-      const hits = await search(page, w.query)
+      let hits
+      try {
+        hits = await search(page, w.query)
+        searchErrors = 0
+      } catch (err) {
+        // 搜尋這一步壞掉不代表這本書不存在，所以**不寫帳本**——下一輪還會再試。
+        searchErrors += 1
+        console.log(`  ⚠ 搜尋失敗，跳過本筆：${w.query}\n     ${String(err).split('\n')[0].slice(0, 90)}`)
+        await page.waitForTimeout(4000)
+        continue
+      }
       if (!hits.length) {
         console.log(`  ✗ 查無：${w.query}`)
         note({ key: w.key, query: w.query, status: 'not-found' })
@@ -298,8 +348,18 @@ async function main() {
     }
   } finally {
     await browser.close()
+    // 這一行是給 zlib_daily.ps1 讀的：它要知道這個帳號還有沒有額度，決定要不要
+    // 換下一個帳號、或今天是不是已經湊滿目標。
+    console.log(`本輪下載 ${downloaded} 本（帳號 ${ACCOUNT || '主'}）`)
     console.log(`drop 夾現有 ${readdirSync(DROP).length} 個檔`)
   }
 }
 
-await main()
+// 🚨 頂層一定要接住。這支是排程從 PowerShell 叫起來的，未捕捉的例外會讓 node
+// 直接爆掉、把整輪（含還沒輪到的帳號）帶走。印出來、以非零離開就好。
+try {
+  await main()
+} catch (err) {
+  console.log(`✗ 本輪中止：${String(err).split('\n')[0].slice(0, 160)}`)
+  process.exitCode = 1
+}
