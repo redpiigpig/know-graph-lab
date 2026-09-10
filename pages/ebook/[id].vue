@@ -1022,6 +1022,27 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
       const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
       bodyOut.push(`<h1>${inlineFmt(joined, chunkIndex)}</h1>`);
     }
+    else if (/^\|/.test(escaped) && /\n\|\s*-{3,}/.test(escaped)) {
+      // Markdown table. Books that carry real tables (Howes's 評傳 has a
+      // chronology of Uchimura's works) used to arrive as one run-on
+      // paragraph full of `> ` markers — the table was simply gone. The
+      // parser now emits `| a | b |` rows, so render them as a real table.
+      // Header row may be blank (`|  |  |`) when the source table has no
+      // header of its own; drop the <thead> in that case.
+      const rows = escaped.split(/\n/).map(r => r.trim()).filter(Boolean);
+      const cells = (r: string) =>
+        r.replace(/^\||\|$/g, "").split("|").map(c => c.trim());
+      const head = cells(rows[0]);
+      const body = rows.slice(2).map(cells);
+      const hasHead = head.some(c => c.length > 0);
+      const th = hasHead
+        ? `<thead><tr>${head.map(c => `<th>${inlineFmt(c, chunkIndex)}</th>`).join("")}</tr></thead>`
+        : "";
+      const tb = body
+        .map(r => `<tr>${r.map(c => `<td>${inlineFmt(c, chunkIndex)}</td>`).join("")}</tr>`)
+        .join("");
+      bodyOut.push(`<div class="ebook-table-wrap"><table class="ebook-table">${th}<tbody>${tb}</tbody></table></div>`);
+    }
     else if (/^&gt;\s/.test(escaped)) {
       const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
       bodyOut.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
@@ -2394,6 +2415,34 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 .ebook-theme-dark .ebook-prose :deep(h3),
 .ebook-theme-dark .ebook-prose :deep(h4) { color: #fafaf9; }
 .ebook-theme-dark .ebook-prose :deep(blockquote) { color: #d6d3d1; }
+
+/* 表格（豪斯評傳的著作年表、和歌對照）。窄螢幕橫向捲動，不撐破版面。 */
+.ebook-prose :deep(.ebook-table-wrap) {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+}
+.ebook-prose :deep(.ebook-table) {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.94em;
+  line-height: 1.7;
+}
+.ebook-prose :deep(.ebook-table th),
+.ebook-prose :deep(.ebook-table td) {
+  border-bottom: 1px solid #d6d3d1;
+  padding: 0.5rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+}
+.ebook-prose :deep(.ebook-table thead th) {
+  border-bottom: 2px solid #a8a29e;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.ebook-prose :deep(.ebook-table td:last-child) { white-space: nowrap; }
+.ebook-theme-dark .ebook-prose :deep(.ebook-table th),
+.ebook-theme-dark .ebook-prose :deep(.ebook-table td) { border-color: #57534e; }
+.ebook-theme-dark .ebook-prose :deep(.ebook-table thead th) { border-color: #78716c; }
 
 /* 🔊 正在朗讀的段落 */
 .ebook-prose :deep(.tts-reading) {

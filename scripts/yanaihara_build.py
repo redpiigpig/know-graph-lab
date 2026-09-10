@@ -66,7 +66,7 @@ REGISTRY: dict[str, dict] = {
     },
     "teikoku-taiwan": {
         "ebook_id": "e0000000-0000-4000-8000-000000000005",
-        "title": "帝國主義下的台灣",
+        "title": "帝國主義下之台灣",
         "original_title": "帝国主義下の台湾",
         "subtitle": "一九二七年來台實地調查的成果，出版後旋在台灣遭禁（日文原文＋繁中對照）",
         "year": 1929,

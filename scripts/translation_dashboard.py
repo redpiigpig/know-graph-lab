@@ -1306,7 +1306,7 @@ def scan_yanaihara(processes: list[dict[str, Any]]) -> list[WorkProgress]:
         rows.append(WorkProgress(
             group="無教會主義",
             key="teikoku-taiwan",
-            title="帝國主義下的台灣（NDL 掃描）",
+            title="帝國主義下之台灣（NDL 掃描）",
             done=covered, total=total_pages or 201, unit="頁",
             state=_state(covered, total_pages or 201, running, updated),
             running=running,

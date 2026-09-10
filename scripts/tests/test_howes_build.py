@@ -222,3 +222,65 @@ class TestPrintedPageNumbers:
         """舊介面不可壞：uchimura_auto 與既有測試都還在用。"""
         assert hb.lines_to_paras([L("First one ends.", x0=36.7),
                                   L("Second starts.", x0=45.7)]) == ["First one ends.", "Second starts."]
+
+
+class TestTables:
+    """表格 —— 字級跟引文一樣是 8.5，原本整張表被併成一個段落，
+    出來是「> 表1 … > 《基督徒的慰藉》…」一長串，表就沒有了。
+    認表格靠**第二欄**：右欄落在 x0≈271，正文與引文最右只到 x0≈55。"""
+
+    def _row(self, left, right, y, left_x0=37.0):
+        return [L(left, x0=left_x0, size=QUOTE, y=y),
+                L(right, x0=271.0, size=QUOTE, y=y + 0.3)]
+
+    def test_two_column_rows_become_a_markdown_table(self):
+        lines = self._row("The Book of Ruth (Rutsuki)", "July 1893", 165.6) + \
+            self._row("The Earth and Man (Chijinron)", "April 1894", 224.3)
+        out = hb.paras_with_pages(lines)
+        assert len(out) == 1
+        md = out[0][0].split(chr(10))
+        assert md[0] == "| 著作 | 時間 |"
+        assert md[1] == "| --- | --- |"
+        assert md[2] == "| The Book of Ruth (Rutsuki) | July 1893 |"
+        assert md[3] == "| The Earth and Man (Chijinron) | April 1894 |"
+
+    def test_caption_is_not_swallowed_into_the_first_row(self):
+        """表題與首列之間的行距（20.7）比儲存格內換行（10.8）大——用這個分開。"""
+        lines = [L("Table 1", x0=37.0, size=QUOTE, y=78.2),
+                 L("Major works published by Uchimura", x0=37.0, size=QUOTE, y=96.6)] + \
+            self._row("Consolations of a Christian", "January 1893", 117.3)
+        out = hb.paras_with_pages(lines)
+        assert len(out) == 2
+        assert out[0][0] == "> Table 1 Major works published by Uchimura"
+        assert "Consolations of a Christian | January 1893" in out[1][0]
+
+    def test_left_cell_spanning_two_lines_stays_one_cell(self):
+        """書名太長折到下一行（行距 10.8），要收進同一格。"""
+        lines = [L("How I Became a Christian (Yo wa ikanishite kirisutokyô",
+                   x0=37.0, size=QUOTE, y=181.5),
+                 L("shinja ni narishiya)", x0=46.0, size=QUOTE, y=192.3),
+                 L("November 1893", x0=271.0, size=QUOTE, y=192.6)]
+        out = hb.paras_with_pages(lines)
+        assert out[0][0].endswith("shinja ni narishiya) | November 1893 |")
+
+    def test_table_without_dates_gets_a_blank_header(self):
+        """第七章那首和歌是英譯／羅馬字對照，給它「著作｜時間」是錯的標籤。"""
+        lines = self._row("Oh, Hitomaru!", "Hitomaru ya", 300.0) + \
+            self._row("Songs are songs", "Uta wa uta nari", 316.0)
+        assert hb.paras_with_pages(lines)[0][0].startswith("|  |  |")
+
+    def test_pipe_inside_a_cell_is_escaped(self):
+        rows = [("a | b", "c")]
+        assert "a ｜ b" in hb.table_markdown(rows)
+
+    def test_ordinary_quote_block_is_untouched(self):
+        """沒有第二欄就不是表格，照舊走引文。"""
+        out = hb.paras_with_pages([L("A quoted sentence.", x0=37.0, size=QUOTE),
+                                   L("Its continuation.", x0=37.0, size=QUOTE)])
+        assert out == [("> A quoted sentence. Its continuation.", None)]
+
+    def test_table_carries_the_page_of_its_first_row(self):
+        lines = self._row("The Book of Ruth", "July 1893", 165.6)
+        for ln in lines:
+            ln["page"] = "88"
+        assert hb.paras_with_pages(lines)[0][1] == "88"

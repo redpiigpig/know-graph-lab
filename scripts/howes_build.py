@@ -157,25 +157,127 @@ def _is_quote(line: dict) -> bool:
     return abs(line["size"] - QUOTE_SIZE) < 0.2
 
 
+# ── 表格 ─────────────────────────────────────────────────────────────────────
+#
+# 🚨 表格的字級跟引文一樣是 8.5，所以原本被 `_is_quote` 當成引文，整張表的每一列
+#    再被 `paras_with_pages` 併成**一個段落**——出來就是
+#    「> 表1 … > 《基督徒的慰藉》…一八九三年一月 > 《哥倫布功績》…」這種一長串。
+#    表沒有了，只剩一堆大於號。
+#
+# 認表格的判準是**第二欄**：豪斯這本的表格右欄一律落在 x0≈271，正文與引文最右
+# 只到 x0≈55。所以「8.5pt 且 x0 ≥ TABLE_COL_X」＝某一列的右欄；它跟左欄同屬一列
+# （y 差在 ROW_Y_TOL 內，PDF 裡兩者只差 0.3）。
+#
+# 全書（序言→結論）只有兩張表：PDF p107 的「Table 1 主要著作年表」與 p218。
+TABLE_COL_X = 200.0
+ROW_Y_TOL = 3.0
+# 同一個儲存格內換行的行距（實測 10.8）比列與列之間（16）小，比表題到首列
+# （20.7）更小。往前收左欄時就用這個門檻收手——不然表題會被吃進第一列的左欄，
+# 變成「Table 1 Major works published… Consolations of a Christian | January 1893」。
+CELL_LINE_GAP = 13.0
+
+
+def table_runs(lines: list[dict]) -> list[tuple[int, int]]:
+    """回傳 [(起, 迄)] ——每一段連續的表格行在 lines 裡的區間（迄不含）。
+
+    起點取**該表第一列左欄**那一行，不是表題：表題與說明行在第一個右欄出現之前，
+    照樣當普通段落走。"""
+    runs = []
+    i = 0
+    while i < len(lines):
+        if lines[i].get("x0", 0) >= TABLE_COL_X and _is_quote(lines[i]):
+            floor = runs[-1][1] if runs else 0
+            start = i
+            while start - 1 >= floor and _is_quote(lines[start - 1]) and \
+                    lines[start - 1].get("x0", 0) < TABLE_COL_X and \
+                    abs(lines[start].get("y", 0) - lines[start - 1].get("y", 0)) < CELL_LINE_GAP:
+                start -= 1
+            j = i
+            while j < len(lines) and _is_quote(lines[j]):
+                j += 1
+            runs.append((start, j))
+            i = j
+        else:
+            i += 1
+    return runs
+
+
+def rows_from_lines(lines: list[dict]) -> list[tuple[str, str]]:
+    """一段表格行 → [(左欄, 右欄)]。左欄可跨行（書名太長會折到下一行）。"""
+    rows: list[tuple[str, str]] = []
+    buf: list[str] = []
+    for ln in lines:
+        t = (ln.get("text") or "").strip()
+        if not t:
+            continue
+        if ln.get("x0", 0) >= TABLE_COL_X:
+            rows.append((" ".join(buf).strip(), t))
+            buf = []
+        else:
+            buf.append(t)
+    if buf:                       # 收尾沒有右欄的殘行（表註）自成一列
+        rows.append((" ".join(buf).strip(), ""))
+    return rows
+
+
+_MONTHY = re.compile(r"\b(January|February|March|April|May|June|July|August|"
+                     r"September|October|November|December)\b.*\d{4}|\d{4}", re.I)
+
+
+def table_markdown(rows: list[tuple[str, str]]) -> str:
+    """[(左, 右)] → markdown 表格。
+
+    原表沒有表頭列，所以表頭要自己判：右欄多半是年月＝著作年表，給
+    「著作｜時間」；否則留空（例：第七章那首和歌的英譯／羅馬字對照，
+    給它「條目｜時間」會變成錯的標籤）。"""
+    dated = sum(1 for _l, r in rows if r and _MONTHY.search(r))
+    head = ("| 著作 | 時間 |" if rows and dated >= len(rows) * 0.5
+            else "|  |  |")
+    out = [head, "| --- | --- |"]
+    for left, right in rows:
+        out.append(f"| {left.replace('|', '｜')} | {right.replace('|', '｜')} |")
+    return chr(10).join(out)
+
+
 def paras_with_pages(lines: list[dict]) -> list[tuple[str, str | None]]:
     """版面行 → [(段落, 該段起始的印刷頁碼)]。
 
     縮排或引文起訖＝斷段；行尾連字號接回；引文加 `> `。頁碼取**段落第一行所在的頁**
     ——跨頁的段落算在它開始的那一頁，這是引註的通例（"pp. 21-22" 由讀者自己補）。"""
+    kept = [ln for ln in lines if keep_line(ln)]
+    runs = table_runs(kept)
+    in_run = {}
+    for a, b in runs:
+        for k in range(a, b):
+            in_run[k] = (a, b)
+
     paras: list[list[str]] = []
     kinds: list[bool] = []
     pages: list[str | None] = []
+    ready: list[str | None] = []      # 已成形的段落（表格）就直接放這裡
     prev_quote: bool | None = None
-    for ln in lines:
-        if not keep_line(ln):
+    i = 0
+    while i < len(kept):
+        if i in in_run and in_run[i][0] == i:
+            a, b = in_run[i]
+            md = table_markdown(rows_from_lines(kept[a:b]))
+            paras.append([md])
+            kinds.append(False)       # 表格不加 `> `
+            ready.append(md)
+            pages.append(kept[a].get("page"))
+            prev_quote = None
+            i = b
             continue
+        ln = kept[i]
         text = ln["text"].strip()
         quote = _is_quote(ln)
         indented = INDENT_LO <= ln["x0"] <= INDENT_HI
-        starts = (not paras) or quote != prev_quote or (not quote and indented)
+        starts = (not paras) or ready[-1] is not None or \
+            quote != prev_quote or (not quote and indented)
         if starts:
             paras.append([text])
             kinds.append(quote)
+            ready.append(None)
             pages.append(ln.get("page"))
         else:
             buf = paras[-1]
@@ -184,9 +286,13 @@ def paras_with_pages(lines: list[dict]) -> list[tuple[str, str | None]]:
             else:
                 buf.append(text)
         prev_quote = quote
+        i += 1
 
     out: list[tuple[str, str | None]] = []
-    for parts, quote, pg in zip(paras, kinds, pages):
+    for parts, quote, pg, done in zip(paras, kinds, pages, ready):
+        if done is not None:
+            out.append((done, pg))    # 表格原樣輸出，不可壓成一行
+            continue
         s = re.sub(r"\s{2,}", " ", " ".join(parts)).strip()
         if s:
             out.append((f"> {s}" if quote else s, pg))
@@ -282,9 +388,21 @@ HOWES_PROMPT_TMPL = """你是日本近代基督教史的專業譯者，正在翻
 2. 只翻譯，不要加任何前言、說明、譯註或原文回抄。
 3. 語域：學術評傳的敘事散文——準確、清晰、可讀；不要譯得像教科書條目，也不要加原文沒有的文采。作者的判斷語氣（推測、保留、反諷）要如實保留。
 4. 保留 Markdown：以 `> ` 開頭的是引文區塊，譯完仍以 `> ` 開頭；`## ` 標題照留。
+4b. **表格**：以 `|` 開頭的是 markdown 表格。**逐格翻譯，列數與欄數一格都不可增減**，
+   `| --- | --- |` 那一行原樣照抄，每一列都要以 `|` 開頭與結尾。表頭若是空的（`|  |  |`）
+   就保持空的。年月（January 1893）譯成「一八九三年一月」。
 5. 人名地名一律還原漢字，不音譯：Uchimura Kanzô→內村鑑三（單稱 Kanzô→鑑三、Uchimura→內村）、Nitobe Inazô→新渡戶稻造、Miyabe Kingo→宮部金吾、Niijima Jô→新島襄、Uemura Masahisa→植村正久、Ebina Danjô→海老名彈正、Tokutomi Sohô→德富蘇峰、Yanaihara Tadao→矢內原忠雄、Nanbara Shigeru→南原繁、Tsukamoto Toraji→塚本虎二、Fujii Takeshi→藤井武、Kurosaki Kôkichi→黑崎幸吉、Kanamori Tsûrin→金森通倫、Ônishi Hajime→大西祝、Inoue Tetsujirô→井上哲次郎、Sapporo→札幌、Hakodate→函館、Yokosuka→橫須賀、Yokohama→橫濱、Takasaki→高崎、Kashiwagi→柏木、Kyôto→京都、Ôsaka→大阪、Edo→江戶。
 6. 西方人名依教會史通用譯名：William S. Clark→克拉克、M.C. Harris→哈里斯、Julius H. Seelye→席利、Luther→路德、Calvin→加爾文、Carlyle→卡萊爾、Emerson→愛默生、Amherst (College)→安默斯特（學院）、Hartford→哈特福、New England→新英格蘭、Elwyn→艾爾文。
 7. **專名層——一對一，不可改**：mukyôkai / Non-Church / No-Church→無教會（主義）、Sapporo Agricultural College→札幌農學校、Imperial Rescript on Education→教育敕語、the disrespect incident / lèse-majesté incident→不敬事件、First Higher School→第一高等中學校、Yorozu chôhô→《萬朝報》、Seisho no kenkyû / Biblical Study→《聖書之研究》、Second Coming movement→再臨運動、pacifism / non-war→非戰論、Sino-Japanese War→甲午戰爭、Russo-Japanese War→日俄戰爭、Meiji／Taishô／Shôwa→明治／大正／昭和、Diet→帝國議會、shogunate→幕府、Restoration→維新、han / clan→藩、samurai→武士、daimyô→大名、mission board→差會、missionary→宣教士（**不可用「傳教士」，也不可用日式的「宣教師」**）。
+7b. **內村自己的著作——書名要譯回日文原書名，不可照英文再意譯一次**。英文書名本來就是從日文譯過去的：
+   ‧ Consolations of a Christian / Kirisuto shinto no nagusame→**《基督徒的慰藉》**（不作「基督信徒的安慰」「基督教徒的慰藉」）
+   ‧ Search after Peace / Kyûanroku→**《求安錄》**（**不可作「尋求和平」「求和平」**）
+   ‧ The Earth and Man / Chijinron→**《地人論》**（不作「地球與人類」）
+   ‧ “The Greatest Legacy for Succeeding Generations” / Kôsei e no saidai ibutsu→**《留給後世的最大遺產》**
+   ‧ How I Became a Christian→**《我如何成為基督徒》**；The Book of Ruth / Rutsuki→**《路得記》**
+   ‧ Japan and the Japanese→**《日本及日本人》**（1894 初版）；Representative Men of Japan→**《代表的日本人》**（1908 改題）——**這兩個是同一本書的兩個書名，不可互換也不可合併**
+   ‧ Seisho no kenkyû / Biblical Study→**《聖書之研究》**；Yorozu chôhô→**《萬朝報》**
+   ‧ 日本文學術語同理：I Novel / watakushi shôsetsu→**「私小說」**（**不可作「我小說」「自我小說」**）
 8. **概念層——給你候選，按語境擇一，不要一詞一譯到底**。挑哪一個由「這一句在講什麼」決定，不是由哪個常見決定；同一段裡語意不同就可以用不同譯法：
    ‧ Christendom→基督教世界（指西方基督教文明、諸基督教國家的整體）／基督教國度（指一個統轄性的政教秩序，尤其與「神的國」對舉時）
    ‧ church→教會（信仰共同體或機構）／教堂（指建築物）／大公教會（大寫 the Church 指普世教會）

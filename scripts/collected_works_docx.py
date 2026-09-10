@@ -84,7 +84,11 @@ def build(author: str, slug: str, out_path: Path,
     _set_cjk(r)
 
     for line, size in [(work.get("original_title", ""), 12),
-                       (f"{getattr(mod, 'AUTHOR_ZH', '')}（{getattr(mod, 'AUTHOR_EN', '')}）著", 13),
+                       # uchimura_build 沒有宣告 AUTHOR_ZH／EN（內村是這條線的預設
+                       # 作者，常數放在 uchimura_auto）——沒有就退回預設，
+                       # 不然書名頁會印出「（）著」。
+                       (f"{getattr(mod, 'AUTHOR_ZH', '內村鑑三')}"
+                        f"（{getattr(mod, 'AUTHOR_EN', 'Uchimura Kanzō')}）著", 13),
                        (f"{work.get('year', '')}", 11)]:
         if not line:
             continue
@@ -100,6 +104,32 @@ def build(author: str, slug: str, out_path: Path,
     nr.font.size = Pt(10)
     nr.italic = True
     _set_cjk(nr)
+
+    # ── 版本說明（底本） ──
+    # 青空文庫這類電子底本沒有頁碼，底本資訊是引用者唯一能標的版本依據
+    # （[[feedback_transcribe_page_numbers]]）。作者模組沒有這一支就跳過。
+    note = ""
+    getter = getattr(mod, "work_source_note", None)
+    if callable(getter):
+        try:
+            note = getter(slug) or ""
+        except Exception:  # noqa: BLE001 — 底本抓不到不該讓整份 docx 出不來
+            note = ""
+    if note:
+        h = doc.add_paragraph()
+        h.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        hr2 = h.add_run("底本")
+        hr2.bold = True
+        hr2.font.size = Pt(11)
+        _set_cjk(hr2)
+        for line in note.split("\n"):
+            q = doc.add_paragraph()
+            q.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            qr = q.add_run(line)
+            qr.font.size = Pt(9)
+            _set_cjk(qr)
+            q.paragraph_format.space_after = Pt(0)
+
     doc.add_page_break()
 
     n_par = 0
