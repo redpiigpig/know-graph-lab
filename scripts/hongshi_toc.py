@@ -161,12 +161,30 @@ def main() -> None:
     if not files:
         raise SystemExit(f"找不到 PDF：{a.dir}")
 
+    # 逐期落地：Drive 上這批 117 期約 4.7 GB，幾乎全部時間在等 I/O
+    # （實測 10 分鐘只跑掉 1.6 秒 CPU）。全部跑完才寫檔的話，中斷就前功盡棄，
+    # 而且過程中完全看不出還活著沒有。
+    cache = Path(a.out).with_suffix(".partial.json") if a.out else None
+    done: dict[str, dict] = {}
+    if cache and cache.exists():
+        done = {i["file"]: i for i in json.loads(cache.read_text(encoding="utf-8"))}
+        print(f"（續跑：快取已有 {len(done)} 期）", flush=True)
+
     issues = []
-    for f in files:
+    for n, f in enumerate(files, 1):
+        name = os.path.basename(f)
+        if name in done:
+            issues.append(done[name])
+            continue
         try:
-            issues.append(parse_issue(f))
+            rec = parse_issue(f)
+            issues.append(rec)
+            print(f"  [{n}/{len(files)}] {name}　{len(rec['articles'])} 篇", flush=True)
         except Exception as e:  # noqa: BLE001
-            print(f"  ⚠ {os.path.basename(f)}: {e}", flush=True)
+            print(f"  ⚠ {name}: {e}", flush=True)
+            continue
+        if cache:
+            cache.write_text(json.dumps(issues, ensure_ascii=False), encoding="utf-8")
 
     total = sum(len(i["articles"]) for i in issues)
     empty = [i["issue"] for i in issues if not i["articles"]]

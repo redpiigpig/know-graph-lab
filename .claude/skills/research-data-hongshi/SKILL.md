@@ -36,6 +36,33 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 - **弘誓雙月刊 PDF 檔名三變體**：`hongshi-magazine-187-DATE.pdf`／`magazine190-DATE.pdf`（無連字號）／`180hongshi-ROCDATE.pdf`（號在前）。`hongshi.magazine_issue()` 統一解析。1–79 期官網無 PDF；缺 85,177-180（源站連結 404）。
 - **玄奘期頁有編輯誤貼的 `file:///C:\…` 本機路徑當連結**，與正常 `/files/…pdf` 並存 → harvest 必須**跳過 `file:` href**（否則被加 BASE 成假 http）。中文期數用 `xuanzang.parse_issue_no`。
 
+## 篇目層：`scripts/hongshi_toc.py`（2026-09-10 新增）
+
+弘誓雙月刊原本站上只有「整期 PDF」一層，所以**「某人在弘誓寫過哪些文章」查不了**
+——玄奘佛學研究與法印學報都有 `articles[]`（title+author），只有這一刊沒有。
+
+幸好這批 PDF 帶乾淨文字層，每期都有一頁排版一致的目次：
+
+    6  　有關慈濟內湖園區爭議之商榷　／釋昭慧
+    13　他們早就應該走下「神壇」
+         ——點評余鐘柳律師　　／釋昭慧
+
+`parse_toc()` 解析那一頁（找前 14 頁裡「／」最多的），零 LLM、不吃配額。四件要注意：
+
+- **長篇名會折行**，續行以「——」起頭；`_clean` 不可 strip 破折號，否則篇名變成
+  「他們早就應該走下「神壇」點評余鐘柳律師」。
+- **作者可能多位**：頓號合著、`‧` 分隔的跨宗教對談（「古倫神父‧昭慧法師」）。
+  `split_authors()` 全部拆開——不拆的話用「釋昭慧」比不到那一筆。
+- 分類小標（`■本期專題`、`薪火相傳`）沒有頁碼也沒有作者，不是篇目。
+- 🚨 **Drive 讀取很慢**：117 期約 4.7 GB，逐期 `fitz.open` 幾乎全在等 I/O
+  （CPU 只跑個位數秒）。跑全量要留時間，別以為當掉了。
+
+    python -X utf8 scripts/hongshi_toc.py --all --out public/content/research-data/yinshun-hongshi/magazine-toc.json
+    python -X utf8 scripts/hongshi_toc.py --all --author 昭慧
+
+下游：`scripts/chaohwei_articles.py` 拿這份篇目撈昭慧法師的文章，接到
+`/collected-works/chao-hwei` 的「單篇文章」區（見 [[ebook-scan-transcribe]] 案例檔）。
+
 ## 檔案索引
 - 純函式＋測試：`scripts/hongshi.py`、`scripts/xuanzang.py`（+ `scripts/tests/test_{hongshi,xuanzang}.py`）
 - 弘誓雙月刊：`hongshi_harvest_magazine.mjs`／`hongshi_download_magazine.mjs`／`hongshi_fill_gaps.mjs`／`hongshi_publish_magazine.py`／`hongshi_ocr_magazine.py`（文字層優先，掃描退 Vision）／`hongshi_ocr_pages.py`（逐頁 OCR，整本過大 413 時用）
