@@ -19,7 +19,10 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - **註釋與參考書目**同樣要記頁碼（例：豪斯評傳的尾註在 PDF p429–451、書目 p452–457）。
 > - ✅ **豪斯評傳已補真頁碼（2026-09-10）**：`howes_build.folio_of()` 從書眉那一行（size 8.0、y≈36）讀出印刷頁碼；章首頁按慣例不印書眉，由鄰頁遞推（`fill_folios`，先順推再逆推——該節第一頁多半就是章首頁，只能由下一頁減一）。**羅馬頁碼不做算術**，推不出來留 None（序言的 xii 跟正文的 12 是不同的兩頁）。`load_work_sections` 現在多回一個與 `paras` 等長的 `pages` 欄。實測 1442 段裡 **1438 段有真頁碼**（序言 xii–xvi／導論 1–12／結論 381–398）。
 > - 🚨 稽核跑出「掃描 0 個 JSONL」時先看 **`G:` 有沒有掛載**，不是判準壞掉。2026-09-10 連三次空手而回都是這個原因（Google Drive 沒起來）。
-> - 稽核工具 `scripts/audit_page_numbers.py`：判準是 `page_number == chunk_index + 1` 即假頁碼；分類 serial（假）／real（真）／none（無）／sparse（混合）。
+> - 稽核工具**改用 `scripts/audit_page_numbers_db.py`**（直接查 DB，不碰 Drive；舊的 `audit_page_numbers.py` 讀 Drive `_chunks/*.jsonl`，Drive 沒掛載時會安靜地掃到 0 個檔就結束）。
+> - 🚨 **`serial` 不等於假**。一頁一 chunk 的 PDF 本來就滿足 `page_number == chunk_index+1`，那個頁碼是真的。真正的造假是 **EPUB 卻 serial**（EPUB 沒有版面就沒有頁碼，逐一遞增只可能是 `chunk_index+1` 冒充的）。不分這一刀，全庫會從「51 本待修」變成「1,146 本待修」，而且會去清掉一千多本頁碼正確的書。
+> - ✅ **2026-09-10 全庫已清零**：4,114 本裡 `serial-epub` 51 本／6,486 chunk（全集 50 ＋ 圖書館 1）已用 `scripts/fix_fake_page_numbers.py` 清成 NULL；豪斯評傳例外，改推真頁碼（148/152 有值，1–398）。現況 serial-epub **0**、serial-pdf 1,095、real 2,049、none 885、sparse 85。
+> - ⏳ `apocrypha_sections` 41,458 段的 `page_number` **一筆都沒填**（schema 有欄位、資料是空的）。
 
 > 📖 **conversion 一律譯「歸信」（2026-09-10 使用者定調）**：`convert (n.)`→**歸信者**，`convert (v.t.)`→使…歸信。
 > **不可用「回心」**——那是日文基督教譯 conversion 的詞（かいしん），中文基督教界不用，讀者會誤讀成「悔改」（日文裡 回心＝conversio、悔い改め＝metanoia，分得很清楚）。「皈依」只留給明確的天主教語境，以及佛教／印度教本來就該用皈依的地方。
