@@ -16,6 +16,9 @@ CREATE TABLE IF NOT EXISTS lit_review_entries (
   year            INT,
   title           TEXT NOT NULL,
   venue           TEXT,                        -- 刊名 / 出版社
+  volume          TEXT,                        -- 卷（'43' / '第五輯'；TEXT 因為有非數字寫法）
+  issue           TEXT,                        -- 期／號（'1' / '25' / '3-4' 合刊）
+  pages           TEXT,                        -- 起訖頁（'45-72' / 'e12345'）。缺這欄就不能引
   language        TEXT,                        -- 'en' / 'zh' / 'de' / …（detect_language）
   theme           TEXT,                        -- 4 大脈絡之一（report `#` 主題標題）
   dimension       TEXT,                        -- 所屬面向（文本考證 / 詮釋爭論 …）
@@ -36,6 +39,8 @@ CREATE TABLE IF NOT EXISTS lit_review_sections (
   entry_id      BIGINT NOT NULL REFERENCES lit_review_entries (id) ON DELETE CASCADE,
   version_code  TEXT NOT NULL,                 -- 'orig'（原文）/ 'zh'（逐段中譯）
   order_index   INT NOT NULL,                  -- 原文↔中譯 對齊鍵（同 order_index = 對照同一段）
+  page_number   INT,                           -- 該段在原刊的印刷頁。🚨 只填真頁碼，
+                                               --   沒有（HTML 來源）留 NULL，不可用段序頂替
   text          TEXT NOT NULL,
   char_count    INT,
   UNIQUE (entry_id, version_code, order_index)

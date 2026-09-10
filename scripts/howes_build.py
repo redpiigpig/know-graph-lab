@@ -117,6 +117,30 @@ MIN_SPAN_SIZE = 6.5  # 小於此＝上標尾註號
 _CTRL_RE = re.compile("[\x00-\x1f\x7f]")
 
 
+# 印刷頁碼（folio）。書眉那一行是 size 8.0、y≈36、緊貼版心外緣，內容不是章名就是
+# 頁碼；純數字（正文 1–398）或純羅馬數字（前言 vii–xvi）才算。
+# 🚨 章首頁按慣例不印書眉，所以**抓不到頁碼是常態不是例外**，要由前一頁遞推。
+_FOLIO_RE = re.compile(r"^(?:\d{1,3}|[ivxlcdm]{1,7})$", re.I)
+HEAD_Y_MAX = 50.0    # 書眉的 y 上限（正文首行 y≈78）
+
+
+def folio_of(lines: list[dict]) -> str | None:
+    """一頁的版面行 → 印刷頁碼字串（'21'／'xii'），沒印就 None。"""
+    for ln in lines:
+        if ln.get("y", 999) > HEAD_Y_MAX or round(ln.get("size", 0), 1) != 8.0:
+            continue
+        t = (ln.get("text") or "").strip()
+        if _FOLIO_RE.match(t):
+            return t
+    return None
+
+
+def folio_int(folio: str | None) -> int | None:
+    """'21'→21；'xii'→None（羅馬頁碼進不了 page_number 這個整數欄，寧可留 None
+    也不要換算成阿拉伯數字——前言的 xii 跟正文的 12 是**不同的兩頁**）。"""
+    return int(folio) if folio and folio.isdigit() else None
+
+
 def spans_to_text(spans: list[dict]) -> str:
     """一行的 spans → 文字，丟掉上標尾註號（flags bit 0＝superscript）。
     註號不丟的話會變成句中的裸數字，翻譯時被當成年份或數量譯出來。"""
@@ -133,10 +157,14 @@ def _is_quote(line: dict) -> bool:
     return abs(line["size"] - QUOTE_SIZE) < 0.2
 
 
-def lines_to_paras(lines: list[dict]) -> list[str]:
-    """版面行 → 段落。縮排或引文起訖＝斷段；行尾連字號接回；引文加 `> `。"""
+def paras_with_pages(lines: list[dict]) -> list[tuple[str, str | None]]:
+    """版面行 → [(段落, 該段起始的印刷頁碼)]。
+
+    縮排或引文起訖＝斷段；行尾連字號接回；引文加 `> `。頁碼取**段落第一行所在的頁**
+    ——跨頁的段落算在它開始的那一頁，這是引註的通例（"pp. 21-22" 由讀者自己補）。"""
     paras: list[list[str]] = []
     kinds: list[bool] = []
+    pages: list[str | None] = []
     prev_quote: bool | None = None
     for ln in lines:
         if not keep_line(ln):
@@ -148,6 +176,7 @@ def lines_to_paras(lines: list[dict]) -> list[str]:
         if starts:
             paras.append([text])
             kinds.append(quote)
+            pages.append(ln.get("page"))
         else:
             buf = paras[-1]
             if buf[-1].endswith("-"):
@@ -156,12 +185,17 @@ def lines_to_paras(lines: list[dict]) -> list[str]:
                 buf.append(text)
         prev_quote = quote
 
-    out = []
-    for parts, quote in zip(paras, kinds):
+    out: list[tuple[str, str | None]] = []
+    for parts, quote, pg in zip(paras, kinds, pages):
         s = re.sub(r"\s{2,}", " ", " ".join(parts)).strip()
         if s:
-            out.append(f"> {s}" if quote else s)
+            out.append((f"> {s}" if quote else s, pg))
     return out
+
+
+def lines_to_paras(lines: list[dict]) -> list[str]:
+    """`paras_with_pages` 只取段落文字的舊介面。"""
+    return [t for t, _pg in paras_with_pages(lines)]
 
 
 def page_lines(page) -> list[dict]:
@@ -177,20 +211,47 @@ def page_lines(page) -> list[dict]:
             lines.append({"x0": ln["bbox"][0], "y": ln["bbox"][1],
                           "size": ln["spans"][0]["size"],
                           "text": spans_to_text(ln["spans"])})
-    return sorted(lines, key=lambda l: (round(l["y"] / 3), l["x0"]))
+    lines.sort(key=lambda l: (round(l["y"] / 3), l["x0"]))
+    folio = folio_of(lines)
+    for ln in lines:
+        ln["page"] = folio
+    return lines
 
 
-def split_long(paras: list[str], max_chars: int = 1800) -> list[str]:
+def fill_folios(raw: list[str | None]) -> list[str | None]:
+    """章首頁沒印書眉 → 頁碼是 None。由鄰頁遞推補回（只推阿拉伯數字）。
+
+    先順推再逆推：逆推那一趟是為了**該節第一頁**——它多半就是章首頁，前面沒有東西
+    可以推，只能由下一頁減一。羅馬頁碼不做算術（vii+1 不是 viii 這種事交給前一頁
+    自己印的字），推不出來就留 None——[[feedback_transcribe_page_numbers]]：
+    沒有真頁碼寧可 null，不可捏。"""
+    out = list(raw)
+    for i in range(1, len(out)):
+        if out[i] is None and out[i - 1] and out[i - 1].isdigit():
+            out[i] = str(int(out[i - 1]) + 1)
+    for i in range(len(out) - 2, -1, -1):
+        if out[i] is None and out[i + 1] and out[i + 1].isdigit() and int(out[i + 1]) > 1:
+            out[i] = str(int(out[i + 1]) - 1)
+    return out
+
+
+def split_long_pairs(pairs: list[tuple[str, str | None]],
+                     max_chars: int = 1800) -> list[tuple[str, str | None]]:
     """連續的引文段落之間沒有縮排可分（引文行 x0 全是 46），所以會黏成一大段——
-    最長的一段有近九千字。按句界切開，`> ` 標記每一片都要帶著。"""
+    最長的一段有近九千字。按句界切開，`> ` 標記與頁碼每一片都要帶著。"""
     import uchimura_en_build as ueb
-    out: list[str] = []
-    for p in paras:
+    out: list[tuple[str, str | None]] = []
+    for p, pg in pairs:
         quoted = p.startswith("> ")
         body = p[2:] if quoted else p
         for piece in ueb.split_long_paras_en([body], max_chars=max_chars):
-            out.append(f"> {piece}" if quoted else piece)
+            out.append((f"> {piece}" if quoted else piece, pg))
     return out
+
+
+def split_long(paras: list[str], max_chars: int = 1800) -> list[str]:
+    """`split_long_pairs` 只取段落文字的舊介面。"""
+    return [t for t, _pg in split_long_pairs([(p, None) for p in paras], max_chars)]
 
 
 def load_work_sections(slug: str, pdf_path: Path = PDF_PATH) -> list[dict]:
@@ -198,11 +259,17 @@ def load_work_sections(slug: str, pdf_path: Path = PDF_PATH) -> list[dict]:
     doc = fitz.open(pdf_path)
     secs = []
     for s in REGISTRY[slug]["sections"]:
+        per_page = [page_lines(doc[pno - 1]) for pno in range(s["start"], s["end"])]
+        folios = fill_folios([(pl[0]["page"] if pl else None) for pl in per_page])
         lines: list[dict] = []
-        for pno in range(s["start"], s["end"]):
-            lines.extend(page_lines(doc[pno - 1]))
+        for pl, folio in zip(per_page, folios):
+            for ln in pl:
+                ln["page"] = folio
+            lines.extend(pl)
+        pairs = split_long_pairs(paras_with_pages(lines))
         secs.append({"heading": s["heading"], "title_zh": s["title_zh"],
-                     "paras": split_long(lines_to_paras(lines))})
+                     "paras": [t for t, _ in pairs],
+                     "pages": [pg for _, pg in pairs]})
     doc.close()
     return secs
 
@@ -221,7 +288,10 @@ HOWES_PROMPT_TMPL = """你是日本近代基督教史的專業譯者，正在翻
 8. **概念層——給你候選，按語境擇一，不要一詞一譯到底**。挑哪一個由「這一句在講什麼」決定，不是由哪個常見決定；同一段裡語意不同就可以用不同譯法：
    ‧ Christendom→基督教世界（指西方基督教文明、諸基督教國家的整體）／基督教國度（指一個統轄性的政教秩序，尤其與「神的國」對舉時）
    ‧ church→教會（信仰共同體或機構）／教堂（指建築物）／大公教會（大寫 the Church 指普世教會）
-   ‧ conversion→回心（內心轉變的過程，內村自己的用語）／歸信（改信基督教這件事）；convert (n.)→歸信者／信主的人
+   ‧ conversion→**歸信**（一律用此，含「宗教歸信」「歸信的經過」）；convert (n.)→**歸信者**；
+     convert (v.t.，使某人信教)→使…歸信、帶領…歸信。
+     **不可用「回心」**——那是日文基督教譯 conversion 的詞（かいしん），中文基督教界不用，
+     讀者會誤讀成「悔改」。「皈依」只留給明確的天主教語境（皈依天主教會、入修會）。
    ‧ providence→天意／神的護理（神學論述中）
    ‧ grace→恩典／恩寵（天主教語境）
    ‧ sect→宗派／教派；帶貶義時→小宗派、宗門

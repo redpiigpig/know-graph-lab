@@ -162,3 +162,63 @@ class TestControlChars:
     def test_printable_neighbours_of_the_range_survive(self):
         r"""邊界外不可誤殺：空格（\x20）與 ~（\x7e）緊貼範圍兩端，都得留著。"""
         assert hb.spans_to_text([{"size": 9.0, "flags": 4, "text": "a ~b"}]) == "a ~b"
+
+
+class TestPrintedPageNumbers:
+    """印刷頁碼（folio）—— [[feedback_transcribe_page_numbers]]：只認書上印的，推不出來就 None。"""
+
+    def test_folio_read_from_running_head(self):
+        assert hb.folio_of([
+            L("281", x0=36.3, size=HEAD, y=36.3),
+            L("The Bible and Japan", x0=278.2, size=HEAD, y=36.2),
+            L("In the new hall, he could", x0=45.8, y=78.3),
+        ]) == "281"
+
+    def test_roman_folio_in_front_matter(self):
+        assert hb.folio_of([L("xii", x0=18.8, size=HEAD, y=36.3)]) == "xii"
+
+    def test_body_number_is_not_mistaken_for_a_folio(self):
+        """正文裡的年份（size 9.0、y 在版心）不是頁碼。"""
+        assert hb.folio_of([L("1891", x0=36.8, y=240.3)]) is None
+
+    def test_chapter_opening_page_has_no_folio(self):
+        """章首頁不印書眉；章號「7」是 18.0 的標題字，不可當頁碼。"""
+        assert hb.folio_of([L("7", x0=55.8, size=TITLE, y=36.8),
+                            L("The Taught", x0=77.8, size=TITLE, y=36.8)]) is None
+
+    def test_running_head_text_is_not_a_folio(self):
+        assert hb.folio_of([L("Conclusion", x0=36.3, size=HEAD, y=36.2)]) is None
+
+    def test_fill_folios_forward_and_backward(self):
+        assert hb.fill_folios([None, "21", None, None, "24"]) == ["20", "21", "22", "23", "24"]
+
+    def test_fill_folios_leaves_roman_alone(self):
+        """羅馬頁碼不做算術，推不出來就留 None——不可捏一個假的。"""
+        assert hb.fill_folios([None, "xii", None]) == [None, "xii", None]
+
+    def test_fill_folios_never_produces_page_zero(self):
+        assert hb.fill_folios([None, "1"]) == [None, "1"]
+
+    def test_folio_int_rejects_roman(self):
+        assert hb.folio_int("21") == 21
+        assert hb.folio_int("xii") is None
+        assert hb.folio_int(None) is None
+
+    def test_paragraph_takes_the_page_it_starts_on(self):
+        """跨頁的段落算在它**開始**的那一頁。"""
+        a = L("A paragraph that begins here", x0=45.7, y=500.0)
+        b = L("and runs onto the next page.", x0=36.7, y=78.0)
+        c = L("A second paragraph.", x0=45.7, y=90.0)
+        a["page"], b["page"], c["page"] = "21", "22", "22"
+        assert [p for _t, p in hb.paras_with_pages([a, b, c])] == ["21", "22"]
+
+    def test_split_long_pairs_carries_the_page_to_every_piece(self):
+        out = hb.split_long_pairs([("> " + ("This is a sentence. " * 400).strip(), "137")])
+        assert len(out) > 1
+        assert all(p == "137" for _t, p in out)
+        assert all(t.startswith("> ") for t, _p in out)
+
+    def test_lines_to_paras_still_returns_plain_strings(self):
+        """舊介面不可壞：uchimura_auto 與既有測試都還在用。"""
+        assert hb.lines_to_paras([L("First one ends.", x0=36.7),
+                                  L("Second starts.", x0=45.7)]) == ["First one ends.", "Second starts."]

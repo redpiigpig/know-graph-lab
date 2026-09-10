@@ -176,6 +176,11 @@ def seed(report_path: str, project_slug: str, paper_ref: str | None,
             "year": e["year"],
             "title": e["title"],
             "venue": e["venue"] or None,
+            # 卷／期／起訖頁——期刊論文沒有這三格就不能引（2026-09-10 補）。
+            # parse_citation_locus 抓不到就留 None，不可捏。
+            "volume": e.get("volume") or None,
+            "issue": e.get("issue") or None,
+            "pages": e.get("pages") or None,
             "language": e["language"],
             "theme": e["theme"],
             "dimension": e["dimension"],

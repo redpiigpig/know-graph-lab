@@ -17,7 +17,15 @@ description: 「經典學者全集」的收錄流程 —— 以**學科**組織�
 > - 🚨 **絕不可拿流水號冒充頁碼。**全集那條線曾把 `page_number` 填成 `chunk_index + 1`（`uchimura_auto.py`），465 頁的豪斯評傳變成 152 個「頁碼」——看起來正常、照著引就是錯的。**這比沒有頁碼更糟**，因為它會讓人真的照著寫進論文。沒有真頁碼時**寧可留 null**。
 > - **本來就沒有頁碼的來源**（青空文庫等電子底本、HTML 網頁）：`page_number` 留 null，改記**底本資訊**（青空文庫每篇末的「底本：」區塊：出版社‧版次‧印刷年），讓引用者至少標得出所據版本。🚨 `uchimura_build.py` 目前**刻意丟掉**底本區塊，要改回來。
 > - **註釋與參考書目**同樣要記頁碼（例：豪斯評傳的尾註在 PDF p429–451、書目 p452–457）。
+> - ✅ **豪斯評傳已補真頁碼（2026-09-10）**：`howes_build.folio_of()` 從書眉那一行（size 8.0、y≈36）讀出印刷頁碼；章首頁按慣例不印書眉，由鄰頁遞推（`fill_folios`，先順推再逆推——該節第一頁多半就是章首頁，只能由下一頁減一）。**羅馬頁碼不做算術**，推不出來留 None（序言的 xii 跟正文的 12 是不同的兩頁）。`load_work_sections` 現在多回一個與 `paras` 等長的 `pages` 欄。實測 1442 段裡 **1438 段有真頁碼**（序言 xii–xvi／導論 1–12／結論 381–398）。
+> - 🚨 稽核跑出「掃描 0 個 JSONL」時先看 **`G:` 有沒有掛載**，不是判準壞掉。2026-09-10 連三次空手而回都是這個原因（Google Drive 沒起來）。
 > - 稽核工具 `scripts/audit_page_numbers.py`：判準是 `page_number == chunk_index + 1` 即假頁碼；分類 serial（假）／real（真）／none（無）／sparse（混合）。
+
+> 📖 **conversion 一律譯「歸信」（2026-09-10 使用者定調）**：`convert (n.)`→**歸信者**，`convert (v.t.)`→使…歸信。
+> **不可用「回心」**——那是日文基督教譯 conversion 的詞（かいしん），中文基督教界不用，讀者會誤讀成「悔改」（日文裡 回心＝conversio、悔い改め＝metanoia，分得很清楚）。「皈依」只留給明確的天主教語境，以及佛教／印度教本來就該用皈依的地方。
+> - 根因是 prompt 自己寫的：`howes_build` 與 `uchimura_en_build` 的概念層規則本來就列著「conversion→回心」。兩支都已改。豪斯的英文原著從頭到尾沒出現過 kaishin——這個詞完全是翻譯端加上去的。
+> - 收斂舊譯文用 `scripts/redo_conversion_terms.py`（比 `--redo-matching` 多一道**英文佐證閘**：該段英文真的有 convert 一族才清）。少了這道閘，繆勒講「皈依三寶」、潘尼卡講印度教的段落會被一起清掉重譯。
+> - 尚有「回心」殘留的卷：`uchimura_en_data/how-i-became`（15）、`ndl_data/toyo-bunka`（13）、`mueller_data/sbe-06-quran-1`（2）、`mueller_data/psychological-religion`（1）、`yanaihara_data/jesus-life`（1）。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
 

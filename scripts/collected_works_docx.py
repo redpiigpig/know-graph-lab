@@ -25,7 +25,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from docx import Document  # noqa: E402
 from docx.enum.text import WD_ALIGN_PARAGRAPH  # noqa: E402
 from docx.oxml.ns import qn  # noqa: E402
-from docx.shared import Cm, Pt  # noqa: E402
+from docx.shared import Cm, Pt, RGBColor  # noqa: E402
 
 import uchimura_auto as ua  # noqa: E402  (AUTHOR_MODULES + 同一套 checkpoint 路徑)
 
@@ -52,11 +52,14 @@ def load_sections(author: str, slug: str) -> tuple[dict, list[dict]]:
             "title": cache.get("title_zh") or sec.get("title_zh") or sec["heading"],
             # 沒譯到的段落退回原文，寧可中英夾雜也不要缺內容
             "paras": [(z or s) for z, s in zip(zh, src)],
+            # 原書印刷頁碼（沒有這個欄位的作者模組就整段留 None）
+            "pages": list(sec.get("pages") or [None] * len(src))[:len(src)],
         })
     return mod.REGISTRY[slug], out
 
 
-def build(author: str, slug: str, out_path: Path) -> tuple[int, int]:
+def build(author: str, slug: str, out_path: Path,
+          page_marks: bool = False) -> tuple[int, int]:
     mod = importlib.import_module(ua.AUTHOR_MODULES[author])
     work, sections = load_sections(author, slug)
 
@@ -100,12 +103,25 @@ def build(author: str, slug: str, out_path: Path) -> tuple[int, int]:
     doc.add_page_break()
 
     n_par = 0
+    last_page = None
     for sec in sections:
         h = doc.add_heading(level=1)
         hr = h.add_run(sec["title"])
         hr.font.size = Pt(17)
         _set_cjk(hr)
-        for para in sec["paras"]:
+        last_page = None
+        for para, page in zip(sec["paras"], sec["pages"]):
+            # 🚨 頁碼標記預設關閉：這份 docx 的用途是朗讀，朗讀軟體會把「頁 21」
+            # 唸出來。要引用的人才開 --page-marks，另出一份。
+            if page_marks and page and page != last_page:
+                m = doc.add_paragraph()
+                m.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+                m.paragraph_format.space_after = Pt(0)
+                mr = m.add_run(f"〔原書 p. {page}〕")
+                mr.font.size = Pt(8)
+                mr.font.color.rgb = RGBColor(0x88, 0x88, 0x88)
+                _set_cjk(mr)
+            last_page = page or last_page
             text = (para or "").strip()
             if not text:
                 continue
@@ -131,8 +147,10 @@ def main():
     ap.add_argument("--author", required=True, choices=sorted(ua.AUTHOR_MODULES))
     ap.add_argument("--work", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--page-marks", action="store_true",
+                    help="每逢原書換頁插一個〔原書 p. N〕標記（供引註；朗讀用不要開）")
     args = ap.parse_args()
-    n_sec, n_par = build(args.author, args.work, Path(args.out))
+    n_sec, n_par = build(args.author, args.work, Path(args.out), page_marks=args.page_marks)
     print(f"寫出 {args.out}\n  {n_sec} 章 / {n_par} 段")
 
 

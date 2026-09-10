@@ -403,3 +403,40 @@ def test_assert_aligned_raises_on_mismatch():
     with pytest.raises(ValueError):
         lr.assert_aligned(["a", "b", "c"], ["甲", "乙"])
     lr.assert_aligned(["a"], ["甲"])  # no raise on match
+
+
+# ── 卷／期／起訖頁 ─────────────────────────────────────────────────────────────
+# 期刊論文沒有卷期頁碼就不能引；這條管線的用途正是供論文寫作引用。
+def test_locus_japanese_issue_and_pages():
+    got = lr.parse_citation_locus("，《社會學論考》第 25 號（2001），頁 45-72。")
+    assert got == {"volume": "", "issue": "25", "pages": "45-72"}
+
+
+def test_locus_volume_and_issue_together():
+    """🚨 `3 卷 1 號` 的「1」不可被卷的比對吃掉。"""
+    got = lr.parse_citation_locus("，《國際學研究》3 卷 1 號（2014），頁 19。")
+    assert got == {"volume": "3", "issue": "1", "pages": "19"}
+
+
+def test_locus_western_style():
+    got = lr.parse_citation_locus(", Journal of Religion, vol. 17, no. 2, pp. 91-122.")
+    assert got == {"volume": "17", "issue": "2", "pages": "91-122"}
+
+
+def test_locus_cjk_numeral_issue_is_normalised():
+    """同一份刊物不可同時出現「5」與「五」——排序與比對都會壞。"""
+    assert lr.parse_citation_locus("，《台灣宗教研究》第五號（1999），頁 3-28。")["issue"] == "5"
+
+
+def test_locus_en_dash_normalised_to_hyphen():
+    assert lr.parse_citation_locus("，《思想》第 12 期，頁 45–72。")["pages"] == "45-72"
+
+
+def test_locus_book_has_no_volume_issue_pages():
+    """專書沒有卷期頁——抓不到就留空字串，不可捏。"""
+    assert lr.parse_citation_locus("，東京：岩波書店，2013。") == \
+        {"volume": "", "issue": "", "pages": ""}
+
+
+def test_locus_empty_input():
+    assert lr.parse_citation_locus("") == {"volume": "", "issue": "", "pages": ""}

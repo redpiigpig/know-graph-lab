@@ -220,6 +220,53 @@ _RE_FULLTEXT = re.compile(r"(?:全文|連結|PDF)\*{0,2}\s*[：:]\s*\[[^\]]*\]\(
 _RE_ANY_MD_LINK = re.compile(r"\[[^\]]*\]\((https?://[^)]+)\)")
 
 
+# ── 卷 / 期 / 起訖頁 ──────────────────────────────────────────────────────────
+# 為什麼要抓這三個：**期刊論文沒有卷期頁碼就不能引**。venue（刊名）＋year 不足以
+# 讓讀者回到原文。這條管線的用途正是供論文寫作引用，所以這三格是必要欄位而非加分。
+# 見 [[feedback_transcribe_page_numbers]]。
+_RE_VOLUME = re.compile(r"第\s*([0-9０-９]+)\s*卷|(?<![0-9])([0-9]+)\s*卷|\bvol\.?\s*([0-9]+)", re.I)
+_RE_ISSUE = re.compile(r"第\s*([0-9０-９一二三四五六七八九十]+)\s*[期号號輯]"
+                       r"|(?<![0-9])([0-9]+)\s*[期号號]"
+                       r"|\bno\.?\s*([0-9]+)", re.I)
+# 頁碼四種寫法：頁 45-72 ／ pp. 45-72 ／ ：45-72（冒號後接範圍）／ p. 6
+_RE_PAGES = re.compile(r"頁\s*([0-9]+(?:\s*[-–—~]\s*[0-9]+)?)"
+                       r"|\bpp?\.\s*([0-9]+(?:\s*[-–—]\s*[0-9]+)?)"
+                       r"|[：:]\s*([0-9]+\s*[-–—]\s*[0-9]+)", re.I)
+
+_CJK_NUM = {"一": "1", "二": "2", "三": "3", "四": "4", "五": "5",
+            "六": "6", "七": "7", "八": "8", "九": "9", "十": "10"}
+
+
+def _first_group(m) -> str:
+    return next((g for g in m.groups() if g), "") if m else ""
+
+
+def parse_citation_locus(head: str) -> dict:
+    """書目那一行 → {volume, issue, pages}，抓不到的留空字串。
+
+    🚨 兩個坑：
+
+    1. **「第五號」這種漢數字要轉阿拉伯數字**，否則同一份刊物會出現「5」與「五」
+       兩種寫法，排序與比對都會壞掉。
+    2. **卷號的裸數字比對要防呆**：`3 卷 1 號` 的「1」不可被 `([0-9]+)\\s*卷` 吃掉。
+       所以卷的裸數字模式加了 `(?<![0-9])` 前瞻，而且期的比對是獨立跑的。
+
+    例：
+      「，《社會學論考》第 25 號（2001），頁 45-72。」 → issue=25, pages=45-72
+      「，《國際學研究》3 卷 1 號（2014），頁 19。」   → volume=3, issue=1, pages=19
+      「, Journal of X, vol. 17, no. 2, pp. 91-122.」   → volume=17, issue=2, pages=91-122
+    """
+    text = head or ""
+    vol = _first_group(_RE_VOLUME.search(text))
+    iss = _first_group(_RE_ISSUE.search(text))
+    pages = _first_group(_RE_PAGES.search(text))
+    for cjk, ar in _CJK_NUM.items():
+        if iss == cjk:
+            iss = ar
+    norm = lambda s: re.sub(r"\s*[-–—~]\s*", "-", (s or "").strip())
+    return {"volume": norm(vol), "issue": norm(iss), "pages": norm(pages)}
+
+
 def parse_entry_block(block: str) -> dict:
     """One 【作者】（年）〈題〉，《刊》… block (+ 語言/所屬面向/立場/摘要/全文
     lines) → structured entry dict, with ref_key filled in.
@@ -268,11 +315,16 @@ def parse_entry_block(block: str) -> dict:
                     ft = m
                     break
 
+    locus = parse_citation_locus(head)
+
     return {
         "authors": authors,
         "year": year,
         "title": title,
         "venue": venue,
+        "volume": locus["volume"],
+        "issue": locus["issue"],
+        "pages": locus["pages"],
         "language": language,
         "dimension": field("dimension"),
         "stance": field("stance"),
