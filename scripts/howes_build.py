@@ -419,8 +419,10 @@ HOWES_PROMPT_TMPL = """你是日本近代基督教史的專業譯者，正在翻
 5. 人名地名一律還原漢字，不音譯：Uchimura Kanzô→內村鑑三（單稱 Kanzô→鑑三、Uchimura→內村）、Nitobe Inazô→新渡戶稻造、Miyabe Kingo→宮部金吾、Niijima Jô→新島襄、Uemura Masahisa→植村正久、Ebina Danjô→海老名彈正、Tokutomi Sohô→德富蘇峰、Yanaihara Tadao→矢內原忠雄、Nanbara Shigeru→南原繁、Tsukamoto Toraji→塚本虎二、Fujii Takeshi→藤井武、Kurosaki Kôkichi→黑崎幸吉、Kanamori Tsûrin→金森通倫、Ônishi Hajime→大西祝、Inoue Tetsujirô→井上哲次郎、Sapporo→札幌、Hakodate→函館、Yokosuka→橫須賀、Yokohama→橫濱、Takasaki→高崎、Kashiwagi→柏木、Kyôto→京都、Ôsaka→大阪、Edo→江戶。
 6. 西方人名依教會史通用譯名：William S. Clark→克拉克、M.C. Harris→哈里斯、Julius H. Seelye→席利、Luther→路德、Calvin→加爾文、Carlyle→卡萊爾、Emerson→愛默生、Amherst (College)→安默斯特（學院）、Hartford→哈特福、New England→新英格蘭、Elwyn→艾爾文。
 7. **專名層——一對一，不可改**：mukyôkai / Non-Church / No-Church→無教會（主義）、Sapporo Agricultural College→札幌農學校、Imperial Rescript on Education→教育敕語、the disrespect incident / lèse-majesté incident→不敬事件、First Higher School→第一高等中學校、Yorozu chôhô→《萬朝報》、Seisho no kenkyû / Biblical Study→《聖書之研究》、Second Coming movement→再臨運動、pacifism / non-war→非戰論、Sino-Japanese War→甲午戰爭、Russo-Japanese War→日俄戰爭、Meiji／Taishô／Shôwa→明治／大正／昭和、Diet→帝國議會、shogunate→幕府、Restoration→維新、han / clan→藩、samurai→武士、daimyô→大名、mission board→差會、missionary→宣教士（**不可用「傳教士」，也不可用日式的「宣教師」**）。
-7b. **內村自己的著作——書名要譯回日文原書名，不可照英文再意譯一次**。英文書名本來就是從日文譯過去的：
-   ‧ Consolations of a Christian / Kirisuto shinto no nagusame→**《基督徒的慰藉》**（不作「基督信徒的安慰」「基督教徒的慰藉」）
+7b. **內村自己的著作——書名要譯回日文原書名，不可照英文再意譯一次**。英文書名本來就是從日文譯過去的。
+   通則：**原題本來就有的漢字照原漢字，只有假名（平假名／片假名）的部分才另外翻**。
+   例：『基督信徒のなぐさめ』的「基督信徒」是漢字，照留；「なぐさめ」是假名，譯作「慰藉」→《基督信徒的慰藉》。
+   ‧ Consolations of a Christian / Kirisuto shinto no nagusame→**《基督信徒的慰藉》**（不作「基督徒的安慰」「基督教徒的慰藉」）
    ‧ Search after Peace / Kyûanroku→**《求安錄》**（**不可作「尋求和平」「求和平」**）
    ‧ The Earth and Man / Chijinron→**《地人論》**（不作「地球與人類」）
    ‧ “The Greatest Legacy for Succeeding Generations” / Kôsei e no saidai ibutsu→**《留給後世的最大遺產》**

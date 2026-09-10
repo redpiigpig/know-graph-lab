@@ -101,7 +101,8 @@ class TestRegistry:
     """實際掛在豪斯傳記上的鎖 —— 改動要有意識。"""
 
     def test_lock_count_and_all_shapes_valid(self):
-        assert len(nl.HOWES_LOCKS) == 16
+        # 16 條原有 ＋ 2026-09-10 新增 9 條書名鎖（內村自己的著作與《聖書之研究》）
+        assert len(nl.HOWES_LOCKS) == 25
         for lk in nl.HOWES_LOCKS:
             assert lk.canon and lk.en and lk.repl
             for frm, to in lk.repl:
