@@ -13614,10 +13614,12 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "yearSort": 1913,
                       "category": "代表作：先驗現象學",
                       "languages": [
+                            "en",
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "系統提出「現象學還原」與「先驗自我」，現象學代表作。"
+                      "status": "in-progress",
+                      "ebookId": "d0000000-0000-4000-8000-000000000021",
+                      "note": "系統提出「現象學還原」與「先驗自我」，現象學代表作。轉錄中：走 Boyce Gibson 1931 英譯（archive.org 掃描本，Gemini Vision 重 OCR——原文字層零個希臘字母），帶原書頁碼與腳註；德文原著 1913 年那版是花體字排印，另列。"
                 },
                 {
                       "title": "內在時間意識現象學講稿",

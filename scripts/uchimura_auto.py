@@ -41,7 +41,8 @@ MAX_PARAS_PER_CHUNK = 10
 AUTHOR_MODULES = {"uchimura": "uchimura_build", "yanaihara": "yanaihara_build",
                   "uchimura-en": "uchimura_en_build", "howes": "howes_build",
                   "azegami": "azegami_build",
-                  "kagawa": "kagawa_build"}
+                  "kagawa": "kagawa_build",
+                  "husserl": "husserl_build"}
 
 
 def use_author(name: str) -> None:
