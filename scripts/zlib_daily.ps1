@@ -13,7 +13,15 @@ param(
     # a top-up run costs nothing when the morning run already hit the number.
     [int]$Target = 40,
     # Free tier caps each account at 10 a day (account page: 'Daily limit 0/10').
-    [int]$PerAccount = 10
+    [int]$PerAccount = 10,
+    # Titles to dry-probe after the day's quota is spent. Probing searches but
+    # never downloads, so it costs no quota -- only time. It exists because the
+    # wanted list is a wish list, not an inventory: the collected-works hunt was
+    # generated from author bibliographies and never checked against z-library,
+    # and a 40-title sample on 2026-09-10 found only a small fraction actually
+    # obtainable. Probing retires the unobtainable ones so the queue stays dense
+    # enough to actually hit 40 downloads a day. 0 turns it off.
+    [int]$Probe = 120
 )
 $ErrorActionPreference = 'Continue'
 # Two separate encoding bugs used to make this log unreadable, which meant a
@@ -93,6 +101,15 @@ foreach ($acct in $ACCOUNTS) {
 }
 
 $after = TodayCount
+
+# Probe pass. Spare account only -- this is the search-heavy half of the day's
+# traffic and it is not worth aiming at the main account.
+if ($Probe -gt 0) {
+    Note "probe start ($Probe titles, account 2)"
+    & cmd /c "node scripts\zlib_fetch.mjs --list output\zlib_wanted_all.jsonl --probe --account 2 --limit 999 --max-tries $Probe >> ""$log"" 2>&1"
+    Note "probe exit=$LASTEXITCODE"
+}
+
 $drop = Get-ChildItem "$ROOT\z-lib" -File -ErrorAction SilentlyContinue
 Note ("done: {0}/{1} today (+{2} this run); drop holds {3} file(s)" -f $after, $Target, ($after - $before), $drop.Count)
 if ($after -lt $Target) {

@@ -30,7 +30,14 @@ const arg = (n, d = null) => {
   const i = args.indexOf(n)
   return i >= 0 ? args[i + 1] : d
 }
-const DRY = args.includes('--dry-run')
+// 探勘：只搜不下載，把「站上根本沒有」的從清單裡刷掉。不花下載額度，只花時間，
+// 所以排程可以在當天四十本湊滿之後拿剩下的時間跑，讓佇列自己變乾淨。
+//
+// 與 --dry-run 的差別只在跳過範圍：dry-run 是「這一輪不要真的下載」，會把已經
+// 探過而命中的那些再搜一次；--probe 是「找沒探過的」，帳本裡有任何紀錄的一律
+// 跳過，不重複花搜尋次數。
+const PROBE = args.includes('--probe')
+const DRY = args.includes('--dry-run') || PROBE
 const LIMIT = Number(arg('--limit', '8'))
 // 落空不花下載額度，但會花時間與搜尋次數，所以仍要有上限 —— 否則一輪會把
 // 五千多筆清單整個走完。預設給下載目標的六倍。
@@ -89,6 +96,20 @@ function doneKeys() {
     done.add(r.key)
   }
   return done
+}
+
+/** 帳本裡出現過的所有 key（含探勘命中而記成 dry 的）。--probe 用來決定跳過誰。 */
+function seenKeys() {
+  if (!existsSync(LEDGER)) return new Set()
+  const out = new Set()
+  for (const l of readFileSync(LEDGER, 'utf8').split('\n')) {
+    if (!l) continue
+    try {
+      const r = JSON.parse(l)
+      if (r && r.key) out.add(r.key)
+    } catch { /* 壞行跳過 */ }
+  }
+  return out
 }
 
 const note = (rec) => appendFileSync(LEDGER, JSON.stringify({ ...rec, at: new Date().toISOString() }) + '\n', 'utf8')
@@ -255,8 +276,12 @@ async function main() {
   // 而西方近人著作多半沒有中譯，-zh 那格必然落空（語言閘會擋掉英文版，這是對的）。
   // 若拿 LIMIT 去切待辦清單，一輪十二筆可能全是落空的中譯目標，一本都沒抓到。
   // 所以這裡不預先切，改在迴圈裡數「成功下載」，抓滿了才收工。
-  const todo = wanted.filter((w) => !done.has(w.key))
-  console.log(`清單 ${wanted.length} 筆，已處理 ${done.size}，本輪目標 ${LIMIT} 本／最多試 ${MAX_TRIES} 筆${DRY ? '（只查）' : ''}`)
+  // 探勘要找的是「還沒探過的」，所以連命中而記成 dry 的那些也要跳過——不然每輪
+  // 都會把同一批已知有貨的書再搜一次，探勘等於原地踏步。
+  const skip = PROBE ? seenKeys() : done
+  const todo = wanted.filter((w) => !skip.has(w.key))
+  console.log(`清單 ${wanted.length} 筆，${PROBE ? '已探過' : '已處理'} ${skip.size}，` +
+    `本輪${PROBE ? `探勘上限 ${MAX_TRIES} 筆` : `目標 ${LIMIT} 本／最多試 ${MAX_TRIES} 筆`}${DRY && !PROBE ? '（只查）' : ''}`)
   if (!todo.length) return
 
   mkdirSync(DROP, { recursive: true })
