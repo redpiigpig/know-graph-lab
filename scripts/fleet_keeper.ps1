@@ -147,6 +147,16 @@ if (LanePaused 'accs-gemini') {
 # for what is still dirty; --upload is idempotent (upsert + replace chunks).
 Ensure 'aquinas' 'aquinas_build' @('-X','utf8','scripts\aquinas_build.py','--all','--clean','--engine','openrouter','--upload')
 
+# Scan-transcribe (2026-09-10): the two 昭慧法師 scanned books - 心靈的交會 (255 pages,
+# v2 re-run for footnote markup) and 初期唯識思想 (300). Gemini Vision, which is free
+# now that the ACCS lane has finished its batch ("本批 OCR 全數完成或無可跑項").
+# This started as a nohup bash loop and DIED with the session, leaving a stale lock and
+# both books frozen overnight at 90/255 and 162/300 - only scheduler-hosted work
+# survives ([[feedback_laptop_sleeps_design_for_resume]]). scan_ocr_pass runs ONE pass
+# and exits, so the keeper's 30-min cadence is the retry; when both books are full it
+# prints one line and exits instead of spinning ([[feedback_disable_finished_schedules]]).
+Ensure 'scan-ocr' 'scan_ocr_pass' @('-X','utf8','scripts\scan_ocr_pass.py','--batch','6')
+
 # Jung: DONE 2026-09-02. All 16 translated volumes are on the site (the lane had been
 # dead since the source EPUB moved to Drive, and file_path collisions were rejecting
 # every volume but CW11 - see jung_collected_works.md). Nothing left to translate, and

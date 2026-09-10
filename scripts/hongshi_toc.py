@@ -30,11 +30,30 @@ MAG_DIR = r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順�
 
 # ── 純函式（零 I/O，scripts/tests/test_hongshi_toc.py 鎖定）────────────────
 
-# 目次行：開頭是頁碼，中間篇名，最後 ／作者。三者用全形或半形空白隔開。
-_ENTRY_RE = re.compile(r"^\s*(\d{1,3})\s*[　\s]+(.*)$")
-_AUTHOR_SPLIT = "／"
-# 分類小標（■本期專題、薪火相傳…）沒有頁碼也沒有作者，不是篇目
-_SECTION_RE = re.compile(r"^\s*[■□◆●]?\s*[\u4e00-\u9fff：:、，,\s]{2,20}\s*$")
+# 分隔符有兩種：80–156 期用「／」，**157 期起改版用「│」**。
+# 只認一種的話，改版後那 44 期會全部解析成 0 篇，而且完全沒有錯誤訊息。
+_SEPS = "／│"
+_SEP_RE = re.compile("[" + _SEPS + "]")
+
+# 頁碼必須是**獨立的數字**（後面接空白或行尾）。少了這道界限，封面說明裡的
+# 「2023年8月13日，第二十一屆…」會被當成第 202 頁的篇目。
+_ENTRY_RE = re.compile(r"^\s*(\d{1,3})(?=[\s　]|$)[\s　]*(.*)$")
+
+# 目次的起點；在它之前的是刊頭（版權頁那一堆「發行人│…」）
+_TOC_MARK_RE = re.compile(r"目\s*次|Contents")
+
+# 刊頭欄位長得跟篇目一模一樣（`發行人│釋見岸`），不擋掉會整批變成假篇目
+_MASTHEAD_RE = re.compile(
+    r"^\s*(民國.{0,12}出刊|.{0,6}創刊|封面說明|封底說明|導師|發行人|總編輯|副總編輯"
+    r"|美術排版|編校|編政|發行|地址|電話|傳真|電子信箱|弘誓學團網址|劃撥帳號|戶名"
+    r"|ISSN|vol\.)\s*[" + _SEPS + "]"
+)
+# 封面說明底下是一段散文，要整段跳過，直到下一個真的篇目
+_COVER_NOTE_RE = re.compile(r"^\s*(封面說明|封底說明)\s*[" + _SEPS + "]")
+
+# 分類小標一律帶標記（【本期專題】、■…）。
+# 🚨 別用「純中文 2-20 字」當判準：新版的篇名本身就長那樣，會被整條吃掉。
+_SECTION_RE = re.compile(r"^\s*[■□◆●【]")
 
 
 def _clean(s: str) -> str:
@@ -43,52 +62,91 @@ def _clean(s: str) -> str:
     return re.sub(r"[　\s]+", " ", (s or "").strip()).strip(" ‧·")
 
 
+def _split_author(rest: str) -> tuple[str, str]:
+    """把一行拆成 (篇名部分, 作者)。以**最後一個**分隔符為界。"""
+    idx = max(rest.rfind(c) for c in _SEPS)
+    return rest[:idx], rest[idx + 1:]
+
+
 def parse_toc(text: str) -> list[dict]:
     """一頁目次文字 → [{"page":6,"title":"…","author":"釋昭慧"}]。
 
-    四種行各自處理：
-      有頁碼＋有／ → 完整一筆
-      有頁碼＋無／ → 開一筆，篇名待續（下一行的「——副標」接上來）
-      無頁碼＋有／ → 接續前一筆：補完篇名並取得作者
-      無頁碼＋無／ → 前一筆待續就接篇名，否則視為分類小標丟掉
+    新舊兩種版面共用一套規則（差別只在分隔符是「／」還是「│」）：
+      有頁碼＋有分隔符 → 完整一筆
+      有頁碼＋無分隔符 → 開一筆，篇名待續（下一行的「——副標」接上來）
+      無頁碼＋有分隔符 → 接續前一筆；沒有前一筆就是「編輯室報告│釋耀行」那種無頁碼篇目
+      無頁碼＋無分隔符 → 前一筆待續就接篇名，否則視為分類小標丟掉
+
+    🚨 **兩欄式版面直接回空**：157 期那種「頁碼獨立成一欄、篇名在另一欄」的排版，
+    PyMuPDF 會先吐一整串裸頁碼再吐篇名。硬解會生出一堆空篇名的假篇目，
+    再把後面所有文字全灌進最後一筆——寧可回空讓稽核看見，也不要吐垃圾。
     """
+    body = text or ""
+    m = _TOC_MARK_RE.search(body)
+    if m:
+        body = body[m.end():]  # 目次之前是刊頭，不是篇目
+
     out: list[dict] = []
     pending: dict | None = None
+    empty_starts = 0   # 「開了一筆卻沒篇名」的次數＝兩欄式版面的徵兆
+    skipping = False   # 封面說明的散文區
 
     def flush():
         nonlocal pending
-        if pending and pending.get("author"):
+        if pending and pending.get("author") and pending.get("title"):
             out.append(pending)
         pending = None
 
-    for raw in (text or "").split("\n"):
+    for raw in body.split("\n"):
         line = raw.rstrip()
         if not line.strip():
             continue
+        if _COVER_NOTE_RE.match(line):
+            flush()
+            skipping = True
+            continue
         m = _ENTRY_RE.match(line)
+        if skipping:
+            # 封面說明散文結束於下一個篇目、分類小標，或編輯室報告
+            if m or line.lstrip().startswith("【") or "編輯室報告" in line:
+                skipping = False
+            else:
+                continue
+        if _MASTHEAD_RE.match(line):
+            flush()
+            continue
         rest = m.group(2) if m else line
-        has_author = _AUTHOR_SPLIT in rest
+        has_author = bool(_SEP_RE.search(rest))
         if m:
+            if pending is not None and not pending["title"]:
+                empty_starts += 1
+                if empty_starts >= 3:
+                    return []  # 兩欄式版面，交給稽核處理
             flush()
             if has_author:
-                title, _, author = rest.rpartition(_AUTHOR_SPLIT)
+                title, author = _split_author(rest)
                 out.append({"page": int(m.group(1)), "title": _clean(title),
                             "author": _clean(author)})
             else:
                 pending = {"page": int(m.group(1)), "title": _clean(rest), "author": ""}
             continue
-        if has_author and pending is not None:
-            title, _, author = rest.rpartition(_AUTHOR_SPLIT)
-            extra = _clean(title)
-            if extra:
-                pending["title"] = f"{pending['title']}{extra}"
-            pending["author"] = _clean(author)
-            flush()
+        if has_author:
+            title, author = _split_author(rest)
+            if pending is not None:
+                extra = _clean(title)
+                if extra:
+                    pending["title"] = pending["title"] + extra
+                pending["author"] = _clean(author)
+                flush()
+            elif _clean(title) and _clean(author):
+                # 無頁碼的篇目（改版後的「編輯室報告│釋耀行」就長這樣）
+                out.append({"page": None, "title": _clean(title), "author": _clean(author)})
             continue
         if pending is not None and not _SECTION_RE.match(line):
-            pending["title"] = f"{pending['title']}{_clean(rest)}"
+            pending["title"] = pending["title"] + _clean(rest)
     flush()
     return [e for e in out if e["title"] and e["author"]]
+
 
 
 def split_authors(author: str) -> list[str]:
@@ -116,11 +174,15 @@ def matches_author(author: str, needle: str) -> bool:
 # ── I/O ────────────────────────────────────────────────────────────────────
 
 def find_toc_page(doc) -> tuple[int, str]:
-    """在前 14 頁裡找目次頁＝「／」最多的那一頁。回傳 (0-based 頁次, 文字)。"""
+    """在前 14 頁裡找目次頁。回傳 (0-based 頁次, 文字)。
+
+    計分＝分隔符個數，帶「目次／Contents」字樣的再加重。兩種版面的分隔符不同
+    （舊「／」新「│」），只數一種的話改版後那批會挑到錯的頁或挑不到。
+    """
     best = (-1, 0, "")
     for i in range(min(14, len(doc))):
         t = doc[i].get_text() or ""
-        n = t.count(_AUTHOR_SPLIT)
+        n = len(_SEP_RE.findall(t)) + (100 if _TOC_MARK_RE.search(t) else 0)
         if n > best[1]:
             best = (i, n, t)
     return best[0], best[2]
@@ -144,6 +206,11 @@ def parse_issue(pdf_path: str) -> dict:
             "file": os.path.basename(pdf_path),
             "toc_page": pno + 1 if pno >= 0 else None,
             "articles": entries}
+
+
+def _pg(page) -> str:
+    """頁碼欄；改版後有「編輯室報告」這種無頁碼篇目，直接格式化 None 會炸。"""
+    return f"p{page:<4}" if page is not None else "  -  "
 
 
 def main() -> None:
@@ -195,12 +262,12 @@ def main() -> None:
                 if matches_author(e["author"], a.author)]
         print(f"\n『{a.author}』{len(hits)} 篇：")
         for iss, e in hits:
-            print(f"  {iss:>3} 期 p{e['page']:<4} {e['title'][:46]}　／{e['author']}")
+            print(f"  {iss:>3} 期 {_pg(e['page'])} {e['title'][:46]}　／{e['author']}")
     elif a.inspect:
         for i in issues:
             print(f"\n第 {i['issue']} 期（目次在 p{i['toc_page']}）")
             for e in i["articles"]:
-                print(f"  p{e['page']:<4} {e['title'][:50]}　／{e['author']}")
+                print(f"  {_pg(e['page'])} {e['title'][:50]}　／{e['author']}")
 
     if a.out:
         Path(a.out).write_text(json.dumps(issues, ensure_ascii=False, indent=1), encoding="utf-8")
