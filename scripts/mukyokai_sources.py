@@ -65,13 +65,24 @@ def docx_text(path: Path) -> str:
     return re.sub(r"\n{3,}", "\n\n", txt).strip()
 
 
-def add(path, title, author, year, kind, note, publisher, title_original="", lang=""):
+def add(path, title, author, year, kind, note, publisher, title_original="", lang="",
+        fulltext=""):
     src = Path(path)
     if not src.exists():
         raise SystemExit(f"找不到檔案：{src}")
     stem = stem_for(title, author)
 
-    if src.suffix.lower() == ".docx":
+    # 逐段對照的全文（mukyokai_translate --emit 出的「原文段＋【中譯】」交錯 txt）
+    # 優先於從 PDF 抽的原文：那才是讀者要讀的東西，而且帶〔原文 p. N〕頁碼標記。
+    if fulltext:
+        fp = Path(fulltext)
+        if not fp.exists():
+            raise SystemExit(f"找不到全文檔：{fp}")
+        text = fp.read_text(encoding="utf-8")
+        doc = fitz.open(str(src))
+        pages, engine = doc.page_count, "bilingual"
+        doc.close()
+    elif src.suffix.lower() == ".docx":
         # 宣言、創刊宗旨這類原生 Word 檔沒有頁數概念，也不必 OCR
         text, pages, engine = docx_text(src), 0, "docx"
     else:
@@ -129,13 +140,15 @@ def main():
     ap.add_argument("--publisher", default="")
     ap.add_argument("--title-original", default="", help="日文等原文題名；中譯放 --title")
     ap.add_argument("--lang", default="", choices=["", "zh", "ja", "en"])
+    ap.add_argument("--fulltext", default="",
+                    help="逐段對照 txt（有就用它當全文，不從 PDF 抽）")
     ap.add_argument("--list", action="store_true")
     args = ap.parse_args()
     if args.add:
         if not (args.title and args.author):
             raise SystemExit("--add 需同時給 --title 與 --author")
         add(args.add, args.title, args.author, args.year, args.kind, args.note,
-            args.publisher, args.title_original, args.lang)
+            args.publisher, args.title_original, args.lang, args.fulltext)
     if args.list:
         listing()
     if not (args.add or args.list):

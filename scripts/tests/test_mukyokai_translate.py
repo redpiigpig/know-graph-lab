@@ -104,3 +104,18 @@ def test_spaces_inserted_by_ocr_inside_words_are_removed():
 
 def test_citation_bracket_period_misread_as_zero():
     assert mt.clean_ocr("[鈴木1993a:79]0") == "[鈴木1993a:79]。"
+
+
+def test_english_word_boundaries_survive():
+    """除空白只能吃日文那一側。無差別拿掉會把論文的英文摘要碾成一團
+    （「The'Hesitant'BodyintheRitualSpace」），而且看起來只是「沒有空格」。"""
+    assert mt.clean_ocr("The 'Hesitant' Body in the Ritual Space") == \
+        "The 'Hesitant' Body in the Ritual Space"
+
+
+def test_mixed_script_keeps_the_latin_side():
+    assert mt.clean_ocr("内村 and Uchimura は同じ") == "内村 and Uchimura は同じ"
+
+
+def test_runs_of_spaces_collapse_to_one():
+    assert mt.clean_ocr("Uchimura    Kanzo") == "Uchimura Kanzo"

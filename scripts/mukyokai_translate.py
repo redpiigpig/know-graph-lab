@@ -181,7 +181,11 @@ def clean_ocr(text: str) -> str:
     for a, b in OCR_FIXES:
         t = t.replace(a, b)
     t = re.sub(r"\]0(?=\s|$)", "]。", t)          # 引用括號後的「。」被讀成 0
-    t = re.sub(r"[ \t\u3000]+", "", t)             # OCR 在詞中插的空白
+    # OCR 在詞中插的空白。🚨 只能拿掉**兩側都是非 ASCII** 的那些——日文詞中間的
+    # 空白是雜訊，英文詞之間的空白是詞界。無差別拿掉會把論文的英文摘要碾成
+    # 「The`Hesitant'BodyintheRitualSpaceoftheNationState:」這種讀不出來的東西。
+    t = re.sub(r"(?<=[^\x00-\x7F])[ \t\u3000]+(?=[^\x00-\x7F])", "", t)
+    t = re.sub(r"[ \t\u3000]{2,}", " ", t)
     return t.strip()
 
 
