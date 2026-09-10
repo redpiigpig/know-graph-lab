@@ -896,6 +896,14 @@ def build(deck, no=None, course='wr', refs=None, profile=False):
     profile＝True 時在封面與開場互動之後插一頁自我介紹（每學期第一次上課）。
     """
     global USED
+    # 🚨 圖片只存在 Drive 上。G: 沒掛的時候 IMGDIR 讀不到，manifest 讀成空的，
+    #    於是配圖整批靜靜跳過、既有的 imgbullets 印成「（缺圖：key）」——
+    #    出來的檔案張數正常、稽核也全過，只是三百多張圖全不見了。
+    #    2026-09-10 Drive 掉線時就是這樣，所以這裡直接擋下來不要出。
+    if not IMGDIR.exists():
+        raise RuntimeError(
+            '圖片資料夾讀不到：' + str(IMGDIR)
+            + '　Google Drive 沒掛上就不要重出——出來的簡報會整批沒有圖。')
     USED = []
     prs = Presentation()
     prs.slide_width, prs.slide_height = W, H
