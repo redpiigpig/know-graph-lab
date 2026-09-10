@@ -318,7 +318,11 @@ class Book:
         self.head_l = ""
         self.head_r = ""
         self.marks: list[list] = []
-        # 半頁模式：正文只排到頁面中線，下半頁留白給使用者寫翻譯
+        # 半頁模式：正文只排到頁面中線，下半頁留白給使用者寫翻譯。
+        # 🚨 只有**日文原文**那些頁要留白。分部頁與繁中閱讀導引留半頁空白是浪費紙
+        #    ——導引本來就是中文，沒有東西要翻（使用者 2026-09-10 指出）。所以
+        #    `half_default` 記這本書要不要留白，`half_page` 逐段開關。
+        self.half_default = half_page
         self.half_page = half_page
         self.entries: list[tuple[str, str, int]] = []   # (週次, 篇名, 內文頁序)
 
@@ -456,6 +460,7 @@ class Book:
     # ── 結構 ────────────────────────────────────────────────────────
     def part_title(self, name: str, blurb: str) -> None:
         self.head_l = self.head_r = ""
+        self.half_page = False          # 分部頁沒有東西要翻，不留譯文欄
         self.new_page()
         self.y = 230
         self.flow(name, size=17, gap=12)
@@ -467,6 +472,7 @@ class Book:
         # 的首頁。先開頁再設，首頁就是空的——半本書的頁緣因此沒有字。
         self.head_l = week
         self.head_r = f"{author}, {title}" if author else title
+        self.half_page = self.half_default   # 原文頁才留譯文欄
         self.new_page()
         label = (f"{author}, {title}" if author else title)[:88]
         self.marks.append([2, label, self.doc.page_count])
@@ -485,6 +491,7 @@ class Book:
     def guide_page(self, week: str, title: str, md: str) -> None:
         """一篇的繁中閱讀導引，自成一頁。"""
         self.head_l, self.head_r = week, "閱讀導引"
+        self.half_page = False          # 導引本來就是中文，不留譯文欄
         self.new_page()
         self.y = M_TOP + 6
         self.flow("閱讀導引", size=13.6, gap=4)
