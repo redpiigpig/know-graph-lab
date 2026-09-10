@@ -137,9 +137,22 @@ def strip_page_header(text: str, printed: str) -> str:
 _NOTE_RE = re.compile(r"^\s*\[\^([^\]]{1,8})\]\s*[:：]\s*")
 
 
+_CONT_RE = re.compile(r"^\s*\[\^續\]\s*[:：]\s*")
+
+
 def is_note(para: str) -> bool:
     """這一段是不是註文（`[^4]: …`）？"""
     return bool(_NOTE_RE.match(para or ""))
+
+
+def is_note_continuation(para: str) -> bool:
+    """這一段是不是**上一頁那條註**延續下來的（`[^續]: …`）？
+
+    長註被版面切到下一頁底下是常事（唯識那本尤其多）。OCR 讀到沒有註號、
+    直接承接前文的註文時會標成 `[^續]`，build 再把它接回原註——不接的話，
+    註釋會斷成兩半而且後半沒有號碼，等於引不回去。
+    """
+    return bool(_CONT_RE.match(para or ""))
 
 
 def split_body_and_notes(text: str) -> tuple[str, list[str]]:
@@ -194,6 +207,16 @@ def stitch_pages(pages: list[dict]) -> list[tuple[str, str, int]]:
             para = para.strip()
             if not para:
                 continue
+            if is_note_continuation(para):
+                # 接回上一頁那條註（anchor 留在註**開始**的那一頁）；
+                # 找不到可接的註就退化成獨立一段，不憑空造一個註號
+                if out and is_note(out[-1][1]):
+                    anchor, prev, prev_ch = out[-1]
+                    tail = _CONT_RE.sub("", para)
+                    sep = " " if prev[-1].isascii() and tail[:1].isascii() else ""
+                    out[-1] = (anchor, prev + sep + tail, prev_ch)
+                    continue
+                para = _CONT_RE.sub("", para)
             if (i == 0 and out
                     and ch == out[-1][2]          # 跨章不接：章末殘句不該吃掉下一章的開頭
                     and not is_note(out[-1][1])   # 前一段是註文時，下一頁正文不可接上去
@@ -478,11 +501,20 @@ def page_quality(work_pdf: Path, page_no: int) -> int:
     return int(round((1 - ratio) * 20))
 
 
-def load_cache(cache: Path, work_pdf: Path | None = None) -> list[dict]:
-    recs = []
-    for f in sorted(cache.glob("*.json")):
-        recs.append(json.loads(f.read_text(encoding="utf-8")))
-    recs.sort(key=lambda r: r["work_page"])
+def load_cache(caches: Path | list[Path], work_pdf: Path | None = None) -> list[dict]:
+    """讀 OCR 快取。給多個目錄時**前面的優先**，後面的只用來補前面沒有的頁。
+
+    這是為了讓「改了 prompt 重跑」可以中途被配額打斷也還能出書：新快取跑到哪
+    算哪，其餘的頁沿用舊快取（[[feedback_laptop_sleeps_design_for_resume]]）。
+    """
+    if isinstance(caches, Path):
+        caches = [caches]
+    by_page: dict[int, dict] = {}
+    for cache in caches:
+        for f in sorted(Path(cache).glob("*.json")):
+            rec = json.loads(f.read_text(encoding="utf-8"))
+            by_page.setdefault(rec["work_page"], rec)
+    recs = sorted(by_page.values(), key=lambda r: r["work_page"])
     if work_pdf and Path(work_pdf).exists():
         for r in recs:
             r["quality"] = page_quality(Path(work_pdf), r["work_page"])
@@ -501,7 +533,9 @@ def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
         raw = r.get("text") or ""
         if is_apparatus_page(raw, printed):
             continue
-        cleaned = normalize_page_text(strip_page_header(raw, printed))
+        v2 = r.get("format") == "v2"
+        # v2 的頁眉在 OCR 階段就單獨存進 header 欄，正文不必再猜著削
+        cleaned = normalize_page_text(raw if v2 else strip_page_header(raw, printed))
         # 註文要在接行之前抽走，否則會被黏進正文最後一段
         body, notes = split_body_and_notes(cleaned)
         if not body and not notes:
@@ -509,7 +543,10 @@ def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
             if len(raw.strip()) > 40:
                 dropped.append((r["work_page"], printed, len(raw.strip())))
             continue
-        paras = [p.strip() for p in normalize_cjk_linebreaks(body).split("\n\n") if p.strip()]
+        if v2:
+            paras = [ln.strip() for ln in body.split("\n") if ln.strip()]
+        else:
+            paras = [p.strip() for p in normalize_cjk_linebreaks(body).split("\n\n") if p.strip()]
         paras += notes
         out.append({"work_page": r["work_page"], "printed": printed, "paras": paras})
     for wp, pr, n in dropped:
@@ -519,7 +556,8 @@ def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--cache", default="c:/tmp/chaohwei/ocr")
+    ap.add_argument("--cache", nargs="+", default=["c:/tmp/chaohwei/ocr2", "c:/tmp/chaohwei/ocr"],
+                    help="OCR 快取目錄，可給多個；前面的優先，後面的補缺頁")
     ap.add_argument("--work", default="c:/tmp/chaohwei/work.pdf",
                     help="工作 PDF；用來替重複頁評影像品質")
     ap.add_argument("--audit", action="store_true", help="只印重複／缺頁報告")
@@ -528,9 +566,10 @@ def main() -> None:
     ap.add_argument("--upload", action="store_true")
     a = ap.parse_args()
 
-    records = load_cache(Path(a.cache), Path(a.work))
+    records = load_cache([Path(c) for c in a.cache], Path(a.work))
     if not records:
         raise SystemExit(f"快取是空的：{a.cache}")
+    print(f"OCR 快取：{' → '.join(a.cache)}（{len(records)} 頁）")
     rep = audit_pages(records)
 
     if a.audit or a.keep_out:
@@ -588,7 +627,9 @@ def _upload(chunks: list[dict]) -> None:
         print(f"  ⚠ R2 失敗: {e}", flush=True)
 
     now = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    pages = [c["page_number"] for c in chunks if c["page_number"]]
+    # total_pages 要用全書最後一個印刷頁，不是最後一章的**起始**頁（那會少掉整章）
+    pages = [int(a) for c in chunks for a in (c.get("anchors") or []) if str(a).isdigit()]
+    pages += [c["page_number"] for c in chunks if c["page_number"]]
     row = {
         "id": EBOOK_ID, "title": TITLE, "author": AUTHOR, "author_en": "Shih Chao-Hwei; Peter Singer",
         "original_title": ORIGINAL_TITLE, "file_type": "pdf",

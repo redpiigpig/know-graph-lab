@@ -188,16 +188,23 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
         except Exception as e:  # noqa: BLE001
             last_err = str(e)[:200]
             low = last_err.lower()
-            if any(k in low for k in ("quota", "resource_exhausted", "429")):
-                ki += 1  # daily/RPM cap on this key — move to the next key
+            # A newer key can 404 on a model older keys still have ("no longer
+            # available to new users"). That's per-key, not per-request — rotate
+            # instead of aborting the whole run on the first such key.
+            if any(k in low for k in ("quota", "resource_exhausted", "429",
+                                      "no longer available", "not_found")):
+                ki += 1  # daily/RPM cap, or model not enabled on this key
                 if ki < len(keys):
-                    print(f"  ⟳ key #{ki} quota; rotating", flush=True)
+                    why = "model n/a" if "available" in low or "not_found" in low else "quota"
+                    print(f"  ⟳ key #{ki} {why}; rotating", flush=True)
                     time.sleep(2)
                 continue
             if any(k in low for k in ("503", "unavailable", "500", "502", "504", "internal",
                                       "overloaded", "deadline", "timeout", "connection",
                                       "disconnect", "remoteprotocol", "protocolerror",
-                                      "without sending", "reset", "eof", "broken pipe")):
+                                      "without sending", "reset", "eof", "broken pipe",
+                                      "getaddrinfo", "name or service not known",
+                                      "temporary failure in name resolution")):
                 # transient Gemini spike — back off + retry SAME key (up to 6×)
                 transient_tries += 1
                 if transient_tries <= 6:

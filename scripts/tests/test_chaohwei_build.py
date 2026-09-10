@@ -10,6 +10,7 @@ from chaohwei_build import (  # noqa: E402
     build_chunks,
     is_apparatus_page,
     is_note,
+    is_note_continuation,
     mark_speaker,
     normalize_page_text,
     page_sort_key,
@@ -122,6 +123,10 @@ class TestNotes:
         assert is_note("[^4]: 註文") is True
         assert is_note("正文[^4]提到") is False
 
+    def test_is_note_continuation(self):
+        assert is_note_continuation("[^續]: 接下去的註文") is True
+        assert is_note_continuation("[^4]: 一般註文") is False
+
     def test_notes_come_after_the_body_and_keep_the_page_anchor(self):
         pages = tag_chapters(_pages(
             (1, "59", ["辛格：正文[^4]。", "[^4]: 註文全文"]),
@@ -129,6 +134,22 @@ class TestNotes:
         units = stitch_pages(pages)
         assert [u[0] for u in units] == ["59", "59"]
         assert is_note(units[1][1])
+
+    def test_continuation_note_rejoins_the_note_it_came_from(self):
+        pages = tag_chapters(_pages(
+            (1, "59", ["[^14]: 《攝大乘論》卷上：「如是緣起，於大乘中極細甚深。復有十"]),
+            (2, "60", ["[^續]: 二支緣起，是名分別愛非愛緣起。」（大正三一‧一三四下）"]),
+        ), CHS)
+        units = stitch_pages(pages)
+        assert len(units) == 1
+        assert units[0][0] == "59"  # anchor 留在註開始的那一頁
+        assert units[0][1].startswith("[^14]:")
+        assert units[0][1].endswith("（大正三一‧一三四下）")
+
+    def test_orphan_continuation_does_not_invent_a_note_number(self):
+        pages = tag_chapters(_pages((1, "59", ["[^續]: 找不到前一條註"])), CHS)
+        units = stitch_pages(pages)
+        assert units[0][1] == "找不到前一條註"
 
     def test_body_after_a_note_never_joins_onto_it(self):
         pages = tag_chapters(_pages(

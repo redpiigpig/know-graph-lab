@@ -487,13 +487,15 @@ registry：`azegami_build.py`／`kagawa_build.py`；測試 `test_ndl_build.py` 1
 
 矢內原《帝国主義下の台湾》與藤井武／金教臣那條 PD 線仍待起手。
 
-## C4 佛學：印順‧聖嚴‧星雲（單一語言，pipeline ②）
+## C4 佛學：印順‧聖嚴‧星雲‧昭慧（單一語言，pipeline ②）
 
 全集本即繁中 → 零翻譯零對齊，走 §B5 PLAYBOOK。案例檔：[yinshun_collected_works.md](yinshun_collected_works.md) / [shengyen_collected_works.md](shengyen_collected_works.md) / [hsingyun_collected_works.md](hsingyun_collected_works.md)。
 
 - **✅ 印順導師**（`yinshun`，amber ☸️）：來源 CBETA Y 系列 TEI P5 XML（`cbeta-org/xml-p5`，44 XML=42 部，非商業可再散布）。`cb:mulu` 三層→章節樹、`lb` 邊碼→段碼。`scripts/yinshun_build.py`（8 例綠）+ `yinshun_registry.json`。**44 卷 / 5324 chunks 上架**。
 - **✅ 聖嚴法師**（`shengyen`，teal 🥁）：來源 ddc.shengyen.org《法鼓全集 2020 紀念版》— SPA 殼但靜態檔全枚舉（`all_books` 110 冊／`vol_dump` 4079 篇／`toc.html`／`html/{輯-冊-篇}.html`）。`p.indent` 正文／`p.hN` 標題／`span.pb data-page` 保留頁碼。`scripts/shengyen_build.py`（9 例綠）。**110 冊 / 4181 chunks 上架**。
 - **✅ 星雲大師**（`hsingyun`，orange 🪷）：官網 reader 殼一度誤判「不出全文」，**user 給 `/ArticleDetail/artcle{N}` 後破關**（每篇免登入 server-render 全文＋麵包屑階層，不在 sitemap）。crawl `artcle{1..25500}`（19,888 篇有效、err=0）→ 麵包屑分組成 **109 冊 / 19,997 chunks**。`scripts/hsingyun_build.py`（10 例綠）。**🔑 教訓：薄殼站找不到內容端點時，直接問 user 要「實際在讀的文章 URL」往往秒破關。**
+
+- **昭慧法師**（`chao-hwei`，rose 🕊️，2026-09-10 開）：**本區第一個「紙本掃描本」來源**——前三位都有現成的數位全文（CBETA／法鼓／佛光官網），昭慧法師沒有，只能從掃描檔做起。上游那一整段（2-up 拆頁轉正、頁碼帳、逐頁 OCR、腳註）獨立成 [[ebook-scan-transcribe]]，本 skill 只接下游。**✅《心靈的交會：山間對話》**（與彼得‧辛格對談，法界出版 2021，**作者授權製作電子版**）13 chunks／11.3 萬字，`genre:'dialogue'`，每一段掛原書印刷頁碼當引用號；**⏳《初期唯識思想》**轉錄中。**🔑 教訓：掃描本的失敗全是「靜默」型**——章別判錯、整頁被清理清光、去重留下爛的那一份，頁面都照常出現。細節見 [chaohwei_collected_works.md](../ebook-scan-transcribe/chaohwei_collected_works.md)。
 
 ## C5 心理學：榮格全集＋河合隼雄（REFERENCE 六冊）
 
@@ -573,6 +575,7 @@ store 實際載入的數量，插進 timeline 陣列會多一個對不上）。
 - [[ebook-translate]] — 翻譯基礎設施（engine / quota / OAuth / append-resume / Gemini-Haiku fallback）＋一般雙語翻譯
 - [[scripture-fathers]] — 公有領域教父原典；「參考現成中譯本校準」姿態本 skill 沿用
 - [[ebook-pipeline]] — parse / OCR / standardize / 套書 split 上游
+- [[ebook-scan-transcribe]] — **紙本掃描檔**那一段上游（2-up 拆頁轉正／頁碼帳去重補洞／逐頁 OCR／腳註含跨頁註／原書頁碼當引用號）
 - [[translation-glossary]] — 人名／地名／哲學家／神學名詞詞庫（翻任何全集前先鎖譯名）
 - [scripture-papal](../scripture-papal/SKILL.md) — 既有「拉/英/中三欄逐段對照」(alignDocs) content-file 版實作，可參考對齊邏輯
 - 案例檔：[jung_collected_works.md](jung_collected_works.md)（心理學）／[mueller_collected_works.md](mueller_collected_works.md)（宗教學）／[panikkar_collected_works.md](panikkar_collected_works.md)（宗教學）／[yinshun_collected_works.md](yinshun_collected_works.md)‧[shengyen_collected_works.md](shengyen_collected_works.md)‧[hsingyun_collected_works.md](hsingyun_collected_works.md)（佛學）

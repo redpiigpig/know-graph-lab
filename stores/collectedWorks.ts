@@ -7406,6 +7406,68 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           ebookId: 'c4a01957-0000-4000-8000-000000000001',
           note: '與彼得‧辛格（Peter Singer）對談，袁筱晴譯，法界出版社。經作者授權製作電子版。',
         },
+        // 以下書目照抄《心靈的交會》書末的「法界出版社出版圖書目錄」，編號即該目錄編號。
+        // 出版年該目錄未列，待逐本取得版權頁後補；yearSort 暫用目錄編號排序，**不可當出版年引用**。
+        {
+          title: '初期唯識思想——瑜伽行派形成之脈絡',
+          year: '—', yearSort: 1010, category: '專著', languages: ['zh'],
+          status: 'in-progress', note: '法界出版社 1010。掃描本轉錄中。',
+        },
+        {
+          title: '佛教倫理學',
+          year: '—', yearSort: 1003, category: '佛教倫理學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1003。',
+        },
+        {
+          title: '佛教規範倫理學——從佛教倫理學到戒律學思想體系之建構',
+          year: '—', yearSort: 1015, category: '佛教倫理學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1015。',
+        },
+        {
+          title: 'Buddhist Normative Ethics（佛教規範倫理學‧英譯本）',
+          year: '—', yearSort: 1030, category: '佛教倫理學', languages: ['en'],
+          status: 'planned', note: '法界出版社 1030。',
+        },
+        {
+          title: '佛教後設倫理學',
+          year: '—', yearSort: 1020, category: '佛教倫理學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1020。',
+        },
+        {
+          title: '律學今詮',
+          year: '—', yearSort: 1006, category: '戒律學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1006。',
+        },
+        {
+          title: '千載沉吟——新世紀的佛教女性思維',
+          year: '—', yearSort: 1011, category: '性別與佛教', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1011。',
+        },
+        {
+          title: '世紀新聲——當代台灣佛教的入世與出世之爭',
+          year: '—', yearSort: 1012, category: '台灣佛教', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1012。',
+        },
+        {
+          title: '人菩薩行的歷史足履',
+          year: '—', yearSort: 1016, category: '台灣佛教', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1016。',
+        },
+        {
+          title: '活水源頭——印順導師思想論集',
+          year: '—', yearSort: 1014, category: '印順學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1014。',
+        },
+        {
+          title: '成佛之道偈頌科判表',
+          year: '—', yearSort: 1001, category: '印順學', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1001，與性廣法師合科判。',
+        },
+        {
+          title: '如是我思　第二集',
+          year: '—', yearSort: 1002, category: '文集', languages: ['zh'],
+          status: 'planned', note: '法界出版社 1002。',
+        },
       ],
     },
 
