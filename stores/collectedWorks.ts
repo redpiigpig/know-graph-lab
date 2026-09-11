@@ -4641,8 +4641,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       disciplineGroup: '佛學',
       discipline: '近代漢傳佛教改革運動的領袖、「人生佛教」的提出者；主張教理、教制、教產三大革命',
       fields: ['人生佛教', '佛教改革', '唯識學', '判教', '僧教育'],
-      portraitUrl: '',
-      portraitCredit: '（暫無公有領域肖像）',
+      portraitUrl: '/portraits/taixu.jpg',
+      portraitCredit: 'Wikimedia Commons‧公有領域',
       color: 'amber',
       emoji: '☸️',
       contribution: [
@@ -6347,8 +6347,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       disciplineGroup: '佛學',
       discipline: '佛光山開山宗長、國際佛光會創辦人；以「人間佛教」推動佛教現代化與全球弘化，倡「給人信心、給人歡喜、給人希望、給人方便」',
       fields: ['人間佛教', '佛教教育', '佛教文化', '弘法事業'],
-      portraitUrl: '',
-      portraitCredit: '（暫無公有領域肖像）',
+      portraitUrl: '/portraits/hsingyun.jpg',
+      portraitCredit: 'Wikimedia Commons‧lovesx-70‧CC BY 2.0',
       color: 'orange',
       emoji: '🪷',
       contribution: [
@@ -7367,8 +7367,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       sortYear: 1957,
       discipline: '佛教弘誓學院創辦人、玄奘大學宗教與文化學系教授；華語世界佛教倫理學的主要建構者，並以護生、性別平權與反賭博等社會運動實踐佛法',
       fields: ['佛教倫理學', '佛教戒律學', '性別與佛教', '動物保護', '人間佛教'],
-      portraitUrl: '',
-      portraitCredit: '（當代人物，暫無公有領域肖像）',
+      portraitUrl: '/portraits/chao-hwei.jpg',
+      portraitCredit: '佛教弘誓學院官網',
       color: 'rose',
       emoji: '🕊️',
       contribution: [
