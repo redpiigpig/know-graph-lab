@@ -163,6 +163,8 @@ def main() -> int:
     ap.add_argument("--book")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--scan", action="store_true")
+    ap.add_argument("--count", action="store_true",
+                    help="只印還剩幾段（純數字，給排程腳本判斷要不要自我停用）")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--limit", type=int, default=0, help="每本最多翻幾段")
     ap.add_argument("--engine", default="auto")
@@ -175,18 +177,23 @@ def main() -> int:
     else:
         targets = fathers_books()
 
-    translate = make_translate(a.engine) if a.apply else (lambda _s: "")
+    translate = make_translate(a.engine) if a.apply and not a.count else (lambda _s: "")
     total_todo = total_done = 0
     for b in sorted(targets, key=lambda x: x.get("title") or ""):
         p = base / f"{b['id']}.jsonl"
         if not p.exists():
             continue
-        todo, done = run_book(p, translate, a.apply and not a.scan, a.limit)
+        todo, done = run_book(p, translate, a.apply and not a.scan and not a.count, a.limit)
         total_todo += todo
         total_done += done
-        if todo:
+        if todo and not a.count:
             print(f"{(b.get('title') or '')[:52]:52} 待補 {todo:5}" +
                   (f"  本輪補了 {done}" if done else ""), flush=True)
+    if a.count:
+        # 純數字，不加任何裝飾——排程腳本靠它決定要不要自我停用。第一版讓它印
+        # 中文句子再用 regex 去撈數字，撈到的是別的數字，keeper 於是永遠不停。
+        print(total_todo)
+        return 0
     print(f"\n合計待補 {total_todo} 段" + (f"；本輪補了 {total_done} 段" if total_done else ""))
     if not a.apply:
         print("（只驗不寫。確認無誤後加 --apply）")
