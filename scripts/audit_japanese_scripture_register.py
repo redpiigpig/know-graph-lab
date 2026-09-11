@@ -43,6 +43,18 @@ MANIFEST = CACHE / "manifest.json"
 # 只有這兩群宣稱自己是文語。佛典那一群的訓読各有譯者，本來就 rightsChecked: false，
 # 混著現代語訳是那一批自己的問題，報出來但不當成違規。
 BUNGO_GROUPS = ("bible", "creed")
+
+# 不在讀本 manifest 裡，但來源清楚：這四份是玄奘「初階宗教學日文文獻選讀」
+# 十五週自學計畫（scripts/japanese_self_study_plan.py，W06 起的文語副線）的
+# 讀物，與讀本語料分屬兩條線。它們刻意不進讀本 manifest——內容與 bible_馬太福音_*
+# 重複，收進來會讓同一段經文在語料裡算兩次。報成「來源不明」是誤判，會誘使
+# 下一個人把用得好好的檔案刪掉。
+OTHER_PIPELINE_FILES = {
+    "マタイ伝福音書_第五章__文語訳_.txt": "japanese_self_study_plan.py（十五週自學計畫 W06 起文語副線）",
+    "マタイ伝福音書_第六章__文語訳_.txt": "japanese_self_study_plan.py（十五週自學計畫 W06 起文語副線）",
+    "マタイ伝福音書_第七章__文語訳_.txt": "japanese_self_study_plan.py（十五週自學計畫 W06 起文語副線）",
+    "マタイ伝福音書_第十三章__文語訳_.txt": "japanese_self_study_plan.py（十五週自學計畫 W06 起文語副線）",
+}
 EXCLUSION_NOTE = (
     "維基文庫「イザヤ書 (文語訳)」頁的這一章實為現代語譯本（口語訳／新共同訳系），"
     "非明治元訳；該譯本仍在著作權內。重抓同源仍為現代語，亦無其他候選頁名。"
@@ -91,9 +103,15 @@ def main() -> int:
     print(f"非文語群（佛典訓読等）判為非文語：{len(others)} 份，這一批本來就 rightsChecked: false")
     for row in others:
         print(f"  · {row['file']} 判為{row['register']}（{row['bungoHits']}／{row['modernHits']}）")
-    if orphans:
-        print(f"⚠ 有 {len(orphans)} 份檔案不在 manifest 裡，來源與權利狀態無從查起：")
-        for row in orphans:
+    known = [row for row in orphans if row["file"] in OTHER_PIPELINE_FILES]
+    unknown = [row for row in orphans if row["file"] not in OTHER_PIPELINE_FILES]
+    if known:
+        print(f"不在 manifest 但屬於別條線的 {len(known)} 份（正常，不要刪）：")
+        for row in known:
+            print(f"  · {row['file']} 判為{row['register']}　→ {OTHER_PIPELINE_FILES[row['file']]}")
+    if unknown:
+        print(f"⚠ 有 {len(unknown)} 份檔案不在 manifest 裡，來源與權利狀態無從查起：")
+        for row in unknown:
             print(f"  · {row['file']} 判為{row['register']}")
 
     if args.write:
