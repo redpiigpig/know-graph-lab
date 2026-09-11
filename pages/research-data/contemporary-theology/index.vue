@@ -112,6 +112,38 @@
         </section>
       </div>
 
+      <section v-if="doaj.journals" class="mt-5 bg-white rounded-2xl border border-gray-100 p-6">
+        <div class="flex items-start gap-4 mb-3">
+          <div class="text-2xl leading-none mt-0.5">🔓</div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-baseline gap-2 flex-wrap">
+              <h2 class="text-lg font-bold text-gray-900">開放取用期刊（DOAJ）</h2>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">全文開放</span>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed mt-1 break-words">
+              DOAJ 收錄的宗教與神學期刊，按 LCC 十類取得。<strong>不綁機構 IP</strong>，
+              是唯一能無條件排程更新的一批；語言重心也不在英語世界。
+            </p>
+          </div>
+          <div class="text-right flex-shrink-0 text-xs text-gray-400 leading-relaxed">
+            <div class="text-base font-semibold text-gray-700">{{ doaj.journals }} 種</div>
+            <div>{{ doaj.articles.toLocaleString() }} 篇</div>
+          </div>
+        </div>
+        <button @click="open = open === 'doaj' ? '' : 'doaj'" class="text-xs text-emerald-700 hover:underline">
+          {{ open === 'doaj' ? '收合' : '列出篇目最多的四十種' }}
+        </button>
+        <ul v-if="open === 'doaj'" class="mt-3 space-y-1.5">
+          <li v-for="(r, i) in doaj.rows.slice(0, 40)" :key="i" class="text-xs text-gray-600 flex gap-3">
+            <span class="text-gray-400 tabular-nums w-14 text-right flex-shrink-0">{{ r.articles }}</span>
+            <span class="break-words">
+              {{ r.title }}
+              <span class="text-gray-400">{{ r.country }}．{{ (r.language || []).join('/') }}</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
       <p class="mt-8 text-xs text-gray-400 leading-relaxed">
         ⚠️「已入館／缺」是把書目題名（原文與中譯都比）拿去對電子圖書館的比對結果，
         取寧可漏報不可誤報的一側：館內 13% 的書把書名誤填在作者欄、11% 作者欄空白，
@@ -149,6 +181,8 @@ interface Art {
 }
 const areas = ref<Area[]>([])
 const arts = ref<Record<string, { count: number; items: Art[] }>>({})
+const doaj = ref<{ journals: number; articles: number; rows: any[] }>(
+  { journals: 0, articles: 0, rows: [] })
 const pending = ref(true)
 const open = ref('')
 const toggle = (slug: string, kind: 'bib' | 'art') => {
@@ -172,6 +206,10 @@ onMounted(async () => {
         '/content/research-data/contemporary-theology/articles.json', { responseType: 'json' })
       arts.value = a?.areas ?? {}
     } catch { arts.value = {} }
+    try {
+      doaj.value = await $fetch('/content/research-data/contemporary-theology/doaj.json',
+                                { responseType: 'json' })
+    } catch { /* 沒抓過就不顯示這一區 */ }
   } catch { areas.value = [] } finally { pending.value = false }
 })
 

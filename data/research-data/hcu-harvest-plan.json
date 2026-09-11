@@ -1,0 +1,119 @@
+{
+ "note": "玄奘大學電子資源的收錄分級計畫。來源＝館方 webopac 特色館藏清單（見 hcu-eresources.json）＋圖書館 CMS 資料庫頁。tier A 不需校網、隨時可跑；tier B 需校內 IP 或機構帳號；tier C 與本研究無關，列出來是為了說明為什麼不收。",
+ "caveat": "⚠️ access 欄在到校實測之前一律是 unknown。館方清單列了不等於還在訂、也不等於這台機器驗得過——跑 scripts/campus_probe.py 才會填上實測結果。",
+ "policy": "🚨 訂閱庫的大量下載會被當成異常流量，處置是停整個機構的權限（華藝那條管線已經記過）。所以 tier B 一律只做兩件事：抓篇目索引、以及人工速率的選擇性全文下載。不做整庫鏡像。",
+ "targets": [
+  {"key": "doaj", "name": "DOAJ 開放取用期刊指南", "tier": "A", "kind": "journal-index+fulltext-link",
+   "relevance": "high", "status": "done",
+   "yield": "313 種宗教／神學期刊、104,491 篇篇目；英 266、印尼 55、西 53、法 51、德 47",
+   "how": "scripts/doaj_harvest.py（公開 API，不綁 IP）"},
+
+  {"key": "airiti", "name": "華藝線上圖書館", "tier": "B", "kind": "journal-index+pdf",
+   "relevance": "high", "status": "running",
+   "yield": "28 刊、18,505 篇篇目；卷期起訖頁齊全，做註腳非它不可",
+   "how": "scripts/press_airiti.py，排程 KGL_Airiti_Poll（已上線）"},
+
+  {"key": "ndltd", "name": "臺灣博碩士論文知識加值系統", "tier": "A", "kind": "thesis",
+   "relevance": "high", "status": "running",
+   "yield": "授權公開的學位論文全文", "how": "排程 KGL_NDLTD_Keeper（已上線）"},
+
+  {"key": "periopath", "name": "臺灣期刊論文索引系統（國家圖書館）", "tier": "A", "kind": "journal-index",
+   "relevance": "high", "status": "todo",
+   "yield": "台灣期刊篇目最完整的一份，涵蓋華藝沒收的刊；部分有電子全文連結",
+   "how": "待建。與華藝互補——華藝有卷期頁碼，期刊索引有涵蓋率"},
+
+  {"key": "cbeta", "name": "電子佛典集成（CBETA）", "tier": "A", "kind": "fulltext",
+   "relevance": "high", "status": "done", "yield": "大正藏＋卍續藏＋漢譯南傳，已全量收錄",
+   "how": "見 scripture-tripitaka skill"},
+
+  {"key": "ntu-buddhist-lib", "name": "臺大佛學數位圖書館", "tier": "A", "kind": "journal-index+fulltext",
+   "relevance": "high", "status": "todo",
+   "yield": "佛學書目資料庫與部分全文；當代佛學研究那張卡的篇目層可以接它",
+   "how": "待建"},
+
+  {"key": "hanji", "name": "漢籍全文資料庫（中研院）", "tier": "A", "kind": "fulltext",
+   "relevance": "medium", "status": "todo", "yield": "正史、經部、子部全文", "how": "待建"},
+
+  {"key": "proquest-research", "name": "ProQuest Research Library", "tier": "B",
+   "kind": "journal-index+fulltext", "relevance": "high", "status": "todo",
+   "yield": "綜合性期刊全文；宗教類覆蓋中等", "how": "待建，需校網"},
+
+  {"key": "proquest-arts", "name": "ProQuest Arts & Humanities Database", "tier": "B",
+   "kind": "journal-index+fulltext", "relevance": "high", "status": "todo",
+   "yield": "人文類期刊全文，神學與宗教研究的主要一批就在這裡", "how": "待建，需校網"},
+
+  {"key": "project-muse", "name": "Project MUSE Complete Collection（臺灣學術電子書聯盟）",
+   "tier": "B", "kind": "journal+ebook", "relevance": "high", "status": "todo",
+   "yield": "人文社科期刊與專書；神學期刊份量重（如 Theological Studies、Journal of Early Christian Studies）",
+   "how": "待建，需校網。⚠️ 聯盟採購的品項逐年變動，要先確認本校今年有沒有"},
+
+  {"key": "degruyter", "name": "De Gruyter 西文學術電子書（聯盟）", "tier": "B", "kind": "ebook",
+   "relevance": "high", "status": "todo",
+   "yield": "神學與古典學的主要出版社；Theologische Realenzyklopädie 一系都在這裡", "how": "待建，需校網"},
+
+  {"key": "oxford-scholarship", "name": "Oxford 牛津線上學術電子書（聯盟）", "tier": "B",
+   "kind": "ebook", "relevance": "high", "status": "todo", "yield": "牛津神學與宗教研究專書", "how": "待建，需校網"},
+
+  {"key": "cambridge-companions", "name": "Cambridge Companions Online（聯盟）", "tier": "B",
+   "kind": "ebook", "relevance": "high", "status": "todo",
+   "yield": "劍橋指南系列；本專案書目裡已引了好幾本（拉森那篇就在《劍橋福音派神學指南》）",
+   "how": "待建，需校網"},
+
+  {"key": "springerlink", "name": "SpringerLink（期刊回溯檔＋聯盟電子書）", "tier": "B",
+   "kind": "journal+ebook", "relevance": "medium", "status": "todo",
+   "yield": "宗教研究期刊少，但 Zygon 一類科學與宗教的刊在此", "how": "待建，需校網"},
+
+  {"key": "wiley", "name": "Wiley Online Library 電子書（聯盟）", "tier": "B", "kind": "ebook",
+   "relevance": "medium", "status": "todo", "yield": "Blackwell Companion 系列", "how": "待建，需校網"},
+
+  {"key": "ebsco-omnifile", "name": "EBSCOhost – OmniFile Full Text Select", "tier": "B",
+   "kind": "journal-index+fulltext", "relevance": "medium", "status": "todo",
+   "yield": "綜合全文庫；宗教類覆蓋有限", "how": "待建，需校網"},
+
+  {"key": "ebsco-ebooks", "name": "eBook Collection (EBSCOhost)", "tier": "B", "kind": "ebook",
+   "relevance": "medium", "status": "todo", "yield": "西文電子書", "how": "待建，需校網"},
+
+  {"key": "gale-vrl", "name": "Gale Virtual Reference Library（聯盟）", "tier": "B", "kind": "reference",
+   "relevance": "medium", "status": "todo",
+   "yield": "工具書；《宗教百科全書》（Encyclopedia of Religion）若在此則價值很高", "how": "待建，需校網"},
+
+  {"key": "pqdt", "name": "ProQuest Dissertations & Theses (PQDT)", "tier": "B", "kind": "thesis-index",
+   "relevance": "medium", "status": "todo",
+   "yield": "⚠️ 本校只訂 A&I（索引摘要），**沒有全文**。只能拿來查有哪些論文", "how": "待建，需校網"},
+
+  {"key": "ddc", "name": "國際碩博士論文全文資料庫（DDC）", "tier": "B", "kind": "thesis",
+   "relevance": "medium", "status": "todo", "yield": "聯盟共購的北美博碩士論文全文", "how": "待建，需校網"},
+
+  {"key": "wanfang", "name": "萬方數據知識服務平台", "tier": "B", "kind": "journal-index+fulltext",
+   "relevance": "medium", "status": "todo",
+   "yield": "中國期刊全文；漢語神學與大陸宗教學研究要靠它。⚠️ 簡體，入庫前要轉繁", "how": "待建，需校網"},
+
+  {"key": "huso", "name": "全國學術版人文及社會科學資料庫（HUSO）", "tier": "B", "kind": "journal-index",
+   "relevance": "medium", "status": "todo", "yield": "台灣人文社科期刊索引", "how": "待建，需校網"},
+
+  {"key": "taiwan-people", "name": "臺灣人物誌（日治時期 1895–1945）", "tier": "B", "kind": "biographical",
+   "relevance": "medium", "status": "todo",
+   "yield": "日治時期人物傳記；長老教會與無教會那兩條線的人物考證用得上", "how": "待建，需校網"},
+
+  {"key": "worldcat", "name": "WorldCat", "tier": "B", "kind": "discovery", "relevance": "low",
+   "status": "skip", "yield": "只有書目沒有全文，本專案用不到（要查有沒有這本書，z-lib 獵表更直接）"},
+
+  {"key": "nyt", "name": "The New York Times", "tier": "B", "kind": "newspaper", "relevance": "low",
+   "status": "skip", "yield": "非學術，本專案不收"},
+
+  {"key": "misc-irrelevant", "name": "TOCFL／刀模大師／專利／統計／Vogue／PubMed／RePEc／ERIC 等",
+   "tier": "C", "kind": "other", "relevance": "none", "status": "skip",
+   "yield": "與宗教研究無關，列出來是為了說明清單上那些為什麼不收"}
+ ],
+ "missing": [
+  {"name": "ATLA Religion Database / ATLASerials",
+   "why": "宗教研究的標準索引庫，收 1,700 餘種宗教期刊回溯到十九世紀。**玄奘的清單裡沒有**，這是本研究最大的一個缺口。",
+   "action": "走圖書館「圖書推薦／資料庫推薦」管道申請；或經館際合作（NDDS）逐篇調件"},
+  {"name": "Index Theologicus (IxTheo)",
+   "why": "德國圖賓根的神學期刊索引，本身**免費開放**，涵蓋德語神學最完整",
+   "action": "不需訂閱，可直接建抓取——優先度高於多數 tier B"},
+  {"name": "JSTOR",
+   "why": "清單裡沒看到。宗教與神學的回溯期刊主力之一",
+   "action": "先確認是否透過其他聯盟管道可用"}
+ ]
+}

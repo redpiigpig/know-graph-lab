@@ -1,0 +1,7631 @@
+{
+ "source": "DOAJ API v4（開放取用，不需機構身分）",
+ "subjects": {
+  "Religions. Mythology. Rationalism": "宗教學總論／神話",
+  "Religion (General)": "宗教（總類）",
+  "Christianity": "基督教",
+  "The Bible": "聖經研究",
+  "Doctrinal Theology": "教義神學",
+  "Practical Theology": "實踐神學",
+  "Christian Denominations": "基督教各宗派",
+  "Judaism": "猶太教",
+  "Islam. Bahai Faith. Theosophy, etc.": "伊斯蘭／巴哈伊",
+  "Buddhism": "佛教"
+ },
+ "journals": 313,
+ "articles": 104491,
+ "rows": [
+  {
+   "issn": "2077-1444",
+   "title": "Religions",
+   "alt_title": null,
+   "publisher": "MDPI AG",
+   "country": "CH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2010,
+   "homepage": "http://www.mdpi.com/journal/religions/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 8394
+  },
+  {
+   "issn": "0259-9422",
+   "title": "HTS Teologiese Studies/Theological Studies",
+   "alt_title": "HTS Theological Studies",
+   "publisher": "AOSIS",
+   "country": "ZA",
+   "language": [
+    "AF",
+    "EN"
+   ],
+   "start_year": 2009,
+   "homepage": "https://www.hts.org.za",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "實踐神學"
+   ],
+   "articles": 6351
+  },
+  {
+   "issn": "0209-0872",
+   "title": "Ruch Biblijny i Liturgiczny",
+   "alt_title": "The Biblical and Liturgical Movement",
+   "publisher": "Polskie Towarzystwo Teologiczne",
+   "country": "PL",
+   "language": [
+    "ES",
+    "RU",
+    "PL",
+    "IT",
+    "DE",
+    "FR",
+    "EN"
+   ],
+   "start_year": 2013,
+   "homepage": "https://rbl.ptt.net.pl",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 3589
+  },
+  {
+   "issn": "0210-1610",
+   "title": "Estudios Eclesiásticos",
+   "alt_title": "",
+   "publisher": "Universidad Pontificia Comillas",
+   "country": "ES",
+   "language": [
+    "ES"
+   ],
+   "start_year": 1996,
+   "homepage": "https://revistas.comillas.edu/index.php/estudioseclesiasticos/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "基督教",
+    "教義神學"
+   ],
+   "articles": 3041
+  },
+  {
+   "issn": "1018-6441",
+   "title": "In die Skriflig",
+   "alt_title": "In Luce Verbi",
+   "publisher": "AOSIS",
+   "country": "ZA",
+   "language": [
+    "DE",
+    "NL",
+    "EN",
+    "AF"
+   ],
+   "start_year": 2012,
+   "homepage": "https://www.indieskriflig.org.za",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Practical religion. The Christian life"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 2731
+  },
+  {
+   "issn": "0591-2385",
+   "title": "Zygon",
+   "alt_title": "Zygon: Journal of Religion and Science",
+   "publisher": "Open Library of Humanities",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2024,
+   "homepage": "https://www.zygonjournal.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "Science"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 2613
+  },
+  {
+   "issn": "0518-3766",
+   "title": "Archiwa, Biblioteki i Muzea Kościelne",
+   "alt_title": null,
+   "publisher": "The John Paul II Catholic University of Lublin",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "IT",
+    "DE",
+    "FR"
+   ],
+   "start_year": 2018,
+   "homepage": "https://czasopisma.kul.pl/abmk/",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Bibliography. Library science. Information resources",
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 2350
+  },
+  {
+   "issn": "0023-270X",
+   "title": "Koers : Bulletin for Christian Scholarship",
+   "alt_title": "Koers : Bulletin vir Christelike Wetenskap",
+   "publisher": "Scriber Editorial Systems",
+   "country": "ZA",
+   "language": [
+    "AF",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "http://www.koersjournal.org.za",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Moral theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 2294
+  },
+  {
+   "issn": "1609-9982",
+   "title": "Verbum et Ecclesia",
+   "alt_title": null,
+   "publisher": "AOSIS",
+   "country": "ZA",
+   "language": [
+    "DE",
+    "EN",
+    "NL",
+    "AF"
+   ],
+   "start_year": 1980,
+   "homepage": "https://verbumetecclesia.org.za/index.php/ve",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 2136
+  },
+  {
+   "issn": "0137-3218",
+   "title": "Nasza Przeszłość",
+   "alt_title": "Our Past",
+   "publisher": "Instytut Wydawniczy Księży Misjonarzy Redakcja \"Nasza Przeszłość\"",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ojs.academicon.pl/np",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "History of Poland"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1985
+  },
+  {
+   "issn": "1131-6667",
+   "title": "Seminarios sobre los Ministerios en la Iglesia",
+   "alt_title": null,
+   "publisher": "Hermandad de Sacerdotes Operarios Diocesanos",
+   "country": "ES",
+   "language": [
+    "PT",
+    "FR",
+    "IT",
+    "ES"
+   ],
+   "start_year": 2020,
+   "homepage": "https://seminariosdigital.es/index.php/RevistaSeminarios/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 1899
+  },
+  {
+   "issn": "2306-3548",
+   "title": "Українське Pелігієзнавство",
+   "alt_title": "Ukrainian Religious Studies",
+   "publisher": "Ukrainian Association of Researchers of Religion (UARR)",
+   "country": "UA",
+   "language": [
+    "UK",
+    "RU"
+   ],
+   "start_year": 2013,
+   "homepage": "https://uars.info/index.php/uars",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1814
+  },
+  {
+   "issn": "1679-9615",
+   "title": "Horizonte",
+   "alt_title": null,
+   "publisher": "Pontifícia Universidade Católica de Minas Gerais",
+   "country": "BR",
+   "language": [
+    "FR",
+    "IT",
+    "ES",
+    "PT",
+    "EN"
+   ],
+   "start_year": 2003,
+   "homepage": "http://periodicos.pucminas.br/index.php/horizonte/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 1587
+  },
+  {
+   "issn": "0076-1508",
+   "title": "Lusitania Sacra",
+   "alt_title": null,
+   "publisher": "Universidade Católica Portuguesa",
+   "country": "PT",
+   "language": [
+    "IT",
+    "FR",
+    "ES",
+    "EN",
+    "PT"
+   ],
+   "start_year": 2020,
+   "homepage": "https://revistas.ucp.pt/index.php/Lusitaniasacra/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1535
+  },
+  {
+   "issn": "0039-6761",
+   "title": "Svensk Teologisk Kvartalskrift",
+   "alt_title": "Swedish Theological Quarterly",
+   "publisher": "Svensk Teologisk Kvartalskrift",
+   "country": "SE",
+   "language": [
+    "NO",
+    "DA",
+    "SV",
+    "EN"
+   ],
+   "start_year": 2013,
+   "homepage": "https://journals.lub.lu.se/STK/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "實踐神學"
+   ],
+   "articles": 1432
+  },
+  {
+   "issn": "1015-8758",
+   "title": "Acta Theologica",
+   "alt_title": null,
+   "publisher": "University of the Free State",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2002,
+   "homepage": "https://journals.ufs.ac.za/index.php/at",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Practical religion. The Christian life"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1355
+  },
+  {
+   "issn": "0102-4469",
+   "title": "Perspectiva Teológica",
+   "alt_title": null,
+   "publisher": "Faculdade Jesuíta de Filosofia e Teologia",
+   "country": "BR",
+   "language": [
+    "ES",
+    "PT",
+    "IT",
+    "FR",
+    "EN"
+   ],
+   "start_year": 1969,
+   "homepage": "https://www.faje.edu.br/periodicos/index.php/perspectiva/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1252
+  },
+  {
+   "issn": "1203-1542",
+   "title": "Journal of Hebrew Scriptures",
+   "alt_title": null,
+   "publisher": "University of Alberta Library",
+   "country": "CA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 1997,
+   "homepage": "https://jhsonline.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Ancient history",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 1166
+  },
+  {
+   "issn": "0018-215X",
+   "title": "Hispania Sacra",
+   "alt_title": null,
+   "publisher": "Consejo Superior de Investigaciones Científicas",
+   "country": "ES",
+   "language": [
+    "ES"
+   ],
+   "start_year": 1996,
+   "homepage": "http://hispaniasacra.revistas.csic.es/index.php/hispaniasacra/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1088
+  },
+  {
+   "issn": "1303-0671",
+   "title": "Marife Dini Araştırmalar Dergisi",
+   "alt_title": "Marife",
+   "publisher": "Yediveren Kitap",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2012,
+   "homepage": "http://marife.org/en/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1074
+  },
+  {
+   "issn": "2414-3324",
+   "title": "Pharos Journal of Theology",
+   "alt_title": "Ekklesiastikos Pharos",
+   "publisher": "Africajournals",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "http://www.pharosjot.com",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Religions of the world"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 967
+  },
+  {
+   "issn": "1678-3034",
+   "title": "Caminhos",
+   "alt_title": "Caminhos: Revista de Ciências da Religião",
+   "publisher": "Pontifícia Universidade Católica de Goiás",
+   "country": "BR",
+   "language": [
+    "FR",
+    "DE",
+    "ES",
+    "EN",
+    "PT"
+   ],
+   "start_year": 2006,
+   "homepage": "http://seer.pucgoias.edu.br/index.php/caminhos/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "基督教",
+    "聖經研究",
+    "教義神學"
+   ],
+   "articles": 943
+  },
+  {
+   "issn": "0082-7118",
+   "title": "Tyndale Bulletin",
+   "alt_title": null,
+   "publisher": "Tyndale House, Cambridge",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2021,
+   "homepage": "https://tyndalebulletin.org/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 918
+  },
+  {
+   "issn": "1991-640X",
+   "title": "Вестник Православного Свято-Тихоновского гуманитарного университета: Серия I.  Богословие, философия",
+   "alt_title": "St Tikhon’s University Review. Series I: Theology. Philosophy",
+   "publisher": "St. Tikhon's Orthodox University",
+   "country": "RU",
+   "language": [
+    "EN",
+    "RU"
+   ],
+   "start_year": 2012,
+   "homepage": "http://vestnik1.pstgu.ru/en/series/index/1",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 911
+  },
+  {
+   "issn": "0209-0864",
+   "title": "Analecta Cracoviensia",
+   "alt_title": null,
+   "publisher": "The Pontifical University of John Paul II in Krakow",
+   "country": "PL",
+   "language": [
+    "ES",
+    "FR",
+    "EN",
+    "PL"
+   ],
+   "start_year": 2012,
+   "homepage": "https://czasopisma.upjp2.edu.pl/analectacracoviensia/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy (General)"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 842
+  },
+  {
+   "issn": "1410-0053",
+   "title": "INSANIA: Jurnal Pemikiran Alternatif Kependidikan",
+   "alt_title": null,
+   "publisher": "Fakultas Tarbiyah dan Ilmu Keguruan IAIN Purwokerto",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2006,
+   "homepage": "http://ejournal.uinsaizu.ac.id/index.php/insania",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Education (General)",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 835
+  },
+  {
+   "issn": "1862-1678",
+   "title": "Theologie.Geschichte : Zeitschrift für Theologie und Kulturgeschichte",
+   "alt_title": null,
+   "publisher": "Tübingen University",
+   "country": "DE",
+   "language": [
+    "EN",
+    "FR",
+    "DE"
+   ],
+   "start_year": 2006,
+   "homepage": "https://theologie-geschichte.de/ojs2/index.php/tg",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History and principles of religions",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 820
+  },
+  {
+   "issn": "0120-131X",
+   "title": "Cuestiones Teológicas",
+   "alt_title": null,
+   "publisher": "Universidad Pontificia Bolivariana",
+   "country": "CO",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2005,
+   "homepage": "https://revistas.upb.edu.co/index.php/cuestiones/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 782
+  },
+  {
+   "issn": "1198-3493",
+   "title": "Canadian Jewish Studies",
+   "alt_title": "Etudes Juives Canadiennes",
+   "publisher": "Association for Canadian Jewish Studies",
+   "country": "CA",
+   "language": [
+    "EN",
+    "FR"
+   ],
+   "start_year": 1993,
+   "homepage": "https://cjs.journals.yorku.ca/index.php/cjs/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Judaism",
+    "Language and Literature",
+    "Sociology (General)"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 748
+  },
+  {
+   "issn": "1886-4945",
+   "title": "Cauriensia",
+   "alt_title": "Cauriensia: Revista Anual de Ciencias Ecleiásticas",
+   "publisher": "Universidad Pontificia de Salamanca; Universidad de Extremadura",
+   "country": "ES",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2006,
+   "homepage": "https://www.cauriensia.es/index.php/cauriensia",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 708
+  },
+  {
+   "issn": "0037-0894",
+   "title": "Sefarad : Revista de Estudios Hebraicos y Sefardíes",
+   "alt_title": null,
+   "publisher": "Consejo Superior de Investigaciones Científicas",
+   "country": "ES",
+   "language": [
+    "ES",
+    "PT",
+    "EN"
+   ],
+   "start_year": 1990,
+   "homepage": "http://sefarad.revistas.csic.es",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Judaism",
+    "Philology. Linguistics"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 694
+  },
+  {
+   "issn": "1231-1731",
+   "title": "Wrocławski Przegląd Teologiczny",
+   "alt_title": "Wroclaw Theological Review",
+   "publisher": "Papieski Wydział Teologiczny we Wrocławiu",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL",
+    "IT",
+    "ES",
+    "DE"
+   ],
+   "start_year": 2019,
+   "homepage": "https://ojs.academicon.pl/wpt",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 694
+  },
+  {
+   "issn": "1301-1197",
+   "title": "Cumhuriyet Üniversitesi İlahiyat Fakültesi Dergisi",
+   "alt_title": "Cumhuriyet University Journal of Faculty of Theology",
+   "publisher": "Cumhuriyet Üniversitesi",
+   "country": "TR",
+   "language": [
+    "TR"
+   ],
+   "start_year": 2015,
+   "homepage": "https://dergipark.org.tr/en/pub/cuid",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 682
+  },
+  {
+   "issn": "1907-6355",
+   "title": "Qalamuna",
+   "alt_title": "Jurnal Pendidikan, Sosial, dan Agama",
+   "publisher": "Lembaga Penerbitan dan Publikasi Ilmiah Program Pascasarjana IAI Sunan Giri Ponorogo",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://ejournal.insuriponorogo.ac.id/index.php/qalamuna/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Education",
+    "Education (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 673
+  },
+  {
+   "issn": "2267-7143",
+   "title": "Chrétiens et Sociétés",
+   "alt_title": null,
+   "publisher": "Laboratoire de Recherche Historique Rhône-Alpes (LARHRA UMR 5190)",
+   "country": "FR",
+   "language": [
+    "FR"
+   ],
+   "start_year": 2004,
+   "homepage": "https://journals.openedition.org/chretienssocietes/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "History (General) and history of Europe"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 671
+  },
+  {
+   "issn": "1505-6872",
+   "title": "Paedagogia Christiana",
+   "alt_title": null,
+   "publisher": "Nicolaus Copernicus University in Toruń",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "https://apcz.umk.pl/PCh",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "Education"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 659
+  },
+  {
+   "issn": "1984-3755",
+   "title": "Pistis & Praxis: Teologia e Pastoral",
+   "alt_title": null,
+   "publisher": "Pontifícia Universidade Católica do Paraná",
+   "country": "BR",
+   "language": [
+    "ES",
+    "PT",
+    "EN"
+   ],
+   "start_year": 2009,
+   "homepage": "https://periodicos.pucpr.br/index.php/pistispraxis/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 651
+  },
+  {
+   "issn": "2528-9861",
+   "title": "Cumhuriyet İlahiyat Dergisi",
+   "alt_title": "Cumhuriyet Theology Journal",
+   "publisher": "Cumhuriyet University",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN"
+   ],
+   "start_year": 2016,
+   "homepage": "http://cuid.cumhuriyet.edu.tr/tr/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 649
+  },
+  {
+   "issn": "2789-1569",
+   "title": "Богословські роздуми: Східноєвропейський журнал богословʼя",
+   "alt_title": "Theological Reflections: Eastern European Journal of Theology",
+   "publisher": "Eastern European Instute of Theology",
+   "country": "UA",
+   "language": [
+    "UK",
+    "EN",
+    "RU"
+   ],
+   "start_year": 2018,
+   "homepage": "http://reflections.eeit-edu.info",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "基督教",
+    "教義神學"
+   ],
+   "articles": 633
+  },
+  {
+   "issn": "2075-0307",
+   "title": "الإيضاح",
+   "alt_title": "Al-Idah",
+   "publisher": "SZIC University of Peshawar",
+   "country": "PK",
+   "language": [
+    "AR",
+    "EN",
+    "UR"
+   ],
+   "start_year": 2006,
+   "homepage": "https://www.al-idah.pk/index.php/al-idah",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 578
+  },
+  {
+   "issn": "1983-2478",
+   "title": "Interações",
+   "alt_title": null,
+   "publisher": "Pontifícia Universidade Católica de Minas Gerais",
+   "country": "BR",
+   "language": [
+    "PT"
+   ],
+   "start_year": 2014,
+   "homepage": "https://periodicos.pucminas.br/interacoes/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "實踐神學"
+   ],
+   "articles": 568
+  },
+  {
+   "issn": "1428-5673",
+   "title": "Polonia Sacra",
+   "alt_title": null,
+   "publisher": "The Pontifical University of John Paul II in Krakow",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL"
+   ],
+   "start_year": 2012,
+   "homepage": "https://czasopisma.upjp2.edu.pl/poloniasacra",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "基督教",
+    "教義神學"
+   ],
+   "articles": 568
+  },
+  {
+   "issn": "0328-1396",
+   "title": "Revista Teología",
+   "alt_title": null,
+   "publisher": "Pontificia Universidad Católica Argentina",
+   "country": "AR",
+   "language": [
+    "EN",
+    "IT",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2018,
+   "homepage": "https://erevistas.uca.edu.ar/index.php/TEO",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 557
+  },
+  {
+   "issn": "0213-4381",
+   "title": "Carthaginensia",
+   "alt_title": null,
+   "publisher": "Instituto Teológico de Murcia",
+   "country": "ES",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2016,
+   "homepage": "https://revistacarthaginensia.com/index.php/CARTHAGINENSIA",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 540
+  },
+  {
+   "issn": "1813-775X",
+   "title": "The Islamic Culture",
+   "alt_title": null,
+   "publisher": "Sheikh Zayed Islamic Centre University of Karachi",
+   "country": "PK",
+   "language": [
+    "UR",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2004,
+   "homepage": "http://theislamicculture.com",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 528
+  },
+  {
+   "issn": "2658-7599",
+   "title": "Вестник Свято-Филаретовского института",
+   "alt_title": "Quarterly Journal of St. Philaret’s Institute",
+   "publisher": "St. Philaret’s Christian Orthodox Institute",
+   "country": "RU",
+   "language": [
+    "RU",
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "https://sfi.ru/en/science/nauchnyj-zhurnal.html",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 528
+  },
+  {
+   "issn": "0137-6624",
+   "title": "Studia Warmińskie",
+   "alt_title": "The Studies of Warmia",
+   "publisher": "Wydawnictwo Uniwersytetu Warmińsko-Mazurskiego w Olsztynie",
+   "country": "PL",
+   "language": [
+    "EN",
+    "DE",
+    "PL",
+    "RU"
+   ],
+   "start_year": 2000,
+   "homepage": "https://czasopisma.uwm.edu.pl/index.php/sw/issue/view/638",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Moral theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 527
+  },
+  {
+   "issn": "1937-8904",
+   "title": "Theological Librarianship",
+   "alt_title": "An Online Journal of the American Theological Library Association",
+   "publisher": "American Theological Library Association",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "https://serials.atla.com/theolib",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Bibliography. Library science. Information resources",
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 527
+  },
+  {
+   "issn": "2383-4331",
+   "title": "پژوهش در دین و سلامت",
+   "alt_title": "Journal of Research on Religion and Health",
+   "publisher": "Shahid Beheshti University of Medical Sciences",
+   "country": "IR",
+   "language": [
+    "FA"
+   ],
+   "start_year": 2015,
+   "homepage": "http://journals.sbmu.ac.ir/jrrh",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Other systems of medicine",
+    "Philosophy. Psychology. Religion",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 519
+  },
+  {
+   "issn": "1408-6271",
+   "title": "Studia Mythologica Slavica",
+   "alt_title": null,
+   "publisher": "ZRC SAZU, Založba ZRC",
+   "country": "SI",
+   "language": [
+    "SL",
+    "HR",
+    "DE",
+    "IT",
+    "EN"
+   ],
+   "start_year": 2003,
+   "homepage": "https://ojs.zrc-sazu.si/sms/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Archaeology",
+    "Ethnology. Social and cultural anthropology",
+    "Folklore",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 507
+  },
+  {
+   "issn": "0137-6985",
+   "title": "Collectanea Theologica",
+   "alt_title": null,
+   "publisher": "Cardinal Stefan Wyszynski University in Warsaw",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL"
+   ],
+   "start_year": 2014,
+   "homepage": "https://czasopisma.uksw.edu.pl/ct/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 501
+  },
+  {
+   "issn": "2300-6579",
+   "title": "Open Theology",
+   "alt_title": null,
+   "publisher": "De Gruyter",
+   "country": "PL",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "https://www.degruyter.com/journal/key/opth/html",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 498
+  },
+  {
+   "issn": "1411-125X",
+   "title": "Hunafa: Jurnal Studia Islamika",
+   "alt_title": null,
+   "publisher": "Lembaga Penelitian dan Pengabdian kepada Masyarakat (LP2M)",
+   "country": "ID",
+   "language": [
+    "AR",
+    "ID"
+   ],
+   "start_year": 2005,
+   "homepage": "http://www.jurnalhunafa.org/index.php/hunafa",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 490
+  },
+  {
+   "issn": "0582-3226",
+   "title": "Scripta Instituti Donneriani Aboensis",
+   "alt_title": null,
+   "publisher": "Donner Institute",
+   "country": "FI",
+   "language": [
+    "EN"
+   ],
+   "start_year": 1967,
+   "homepage": "https://journal.fi/scripta/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 486
+  },
+  {
+   "issn": "0100-8587",
+   "title": "Religião e Sociedade",
+   "alt_title": null,
+   "publisher": "Instituto de Estudos da Religião",
+   "country": "BR",
+   "language": [
+    "EN",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2007,
+   "homepage": "https://www.scielo.br/j/rs/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 481
+  },
+  {
+   "issn": "1518-4463",
+   "title": "Ciencias Sociales y Religión",
+   "alt_title": "Ciências Sociais e Religião",
+   "publisher": "Universidade Estadual de Campinas",
+   "country": "BR",
+   "language": [
+    "ES",
+    "PT"
+   ],
+   "start_year": 2006,
+   "homepage": "https://econtents.bc.unicamp.br/inpec/index.php/csr/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 476
+  },
+  {
+   "issn": "0103-314X",
+   "title": "Teocomunicação",
+   "alt_title": "Teocomunicação: Revista da Teologia da PUCRS",
+   "publisher": "Editora da Pontifícia Universidade Católica do Rio Grande do Sul (EDIPUCRS)",
+   "country": "BR",
+   "language": [
+    "PT"
+   ],
+   "start_year": 2005,
+   "homepage": "https://revistaseletronicas.pucrs.br/ojs/index.php/teo",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 476
+  },
+  {
+   "issn": "2071-6028",
+   "title": "مجلة جامعة الأنبار للعلوم الإسلامية",
+   "alt_title": "Anbar University Journal of Islamic Sciences",
+   "publisher": "University of Anbar",
+   "country": "IQ",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://jauis.uoanbar.edu.iq/?lang=en",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Law",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 463
+  },
+  {
+   "issn": "0348-1646",
+   "title": "Nordisk Judaistik",
+   "alt_title": "Scandinavian Jewish Studies",
+   "publisher": "Donner Institute",
+   "country": "FI",
+   "language": [
+    "SV",
+    "EN",
+    "DA"
+   ],
+   "start_year": 2016,
+   "homepage": "https://journal.fi/nj/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 451
+  },
+  {
+   "issn": "1010-9919",
+   "title": "Old Testament Essays",
+   "alt_title": "OTE",
+   "publisher": "Old Testament Society of South Africa",
+   "country": "ZA",
+   "language": [
+    "AF",
+    "EN",
+    "FR",
+    "DE",
+    "ST",
+    "VE",
+    "XH",
+    "ZU"
+   ],
+   "start_year": 2017,
+   "homepage": "https://ote-journal.otwsa-otssa.org.za/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 441
+  },
+  {
+   "issn": "1582-5418",
+   "title": "Studia Universitatis Babeş-Bolyai. Theologia Reformata Transylvanica",
+   "alt_title": null,
+   "publisher": "Cluj University Press",
+   "country": "RO",
+   "language": [
+    "DE",
+    "EN",
+    "HU"
+   ],
+   "start_year": 2015,
+   "homepage": "https://studia.reviste.ubbcluj.ro/index.php/subbtheologiareformata/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 440
+  },
+  {
+   "issn": "0352-4000",
+   "title": "Crkva u Svijetu",
+   "alt_title": "Church in the World",
+   "publisher": "Catholic faculty of Theology, University of Split",
+   "country": "HR",
+   "language": [
+    "HR",
+    "EN",
+    "IT",
+    "DE"
+   ],
+   "start_year": 2008,
+   "homepage": "https://www.kbf.unist.hr/en/church-in-the-world",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 439
+  },
+  {
+   "issn": "1411-7649",
+   "title": "Veritas: Jurnal Teologi dan Pelayanan",
+   "alt_title": "Veritas",
+   "publisher": "Sekolah Tinggi Teologi SAAT",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2000,
+   "homepage": "https://ojs.seabs.ac.id/index.php/Veritas/",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 432
+  },
+  {
+   "issn": "1309-6087",
+   "title": "Mukaddime",
+   "alt_title": null,
+   "publisher": "Mardin Artuklu University",
+   "country": "TR",
+   "language": [
+    "TR",
+    "KU",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2024,
+   "homepage": "https://dergipark.org.tr/en/pub/mukaddime",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy. Psychology. Religion",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 419
+  },
+  {
+   "issn": "1018-1539",
+   "title": "Österreichisches Religionspädagogisches Forum",
+   "alt_title": null,
+   "publisher": "Universität Graz",
+   "country": "AT",
+   "language": [
+    "DE"
+   ],
+   "start_year": 1991,
+   "homepage": "http://unipub.uni-graz.at/oerf",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Education (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 416
+  },
+  {
+   "issn": "2008-9651",
+   "title": "Comparative Theology",
+   "alt_title": null,
+   "publisher": "University of Isfahan",
+   "country": "IR",
+   "language": [
+    "FA",
+    "EN"
+   ],
+   "start_year": 2010,
+   "homepage": "https://coth.ui.ac.ir/?lang=en",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 401
+  },
+  {
+   "issn": "2167-2415",
+   "title": "Christian Journal for Global Health",
+   "alt_title": null,
+   "publisher": "William Carey International University, Global Health Institute",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "https://cjgh.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Medicine"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 399
+  },
+  {
+   "issn": "2518-5330",
+   "title": "Journal of Islamic and Religious Studies",
+   "alt_title": "مجلہ علومِ اسلامیہ و دینہ",
+   "publisher": "University of Haripur",
+   "country": "PK",
+   "language": [
+    "AR",
+    "EN",
+    "UR"
+   ],
+   "start_year": 2016,
+   "homepage": "http://jirs.uoh.edu.pk/index.php/JIRS",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 397
+  },
+  {
+   "issn": "1982-3053",
+   "title": "Arquivo Maaravi: Revista Digital de Estudos Judaicos da UFMG",
+   "alt_title": null,
+   "publisher": "Universidade Federal de Minas Gerais",
+   "country": "BR",
+   "language": [
+    "PT"
+   ],
+   "start_year": 2007,
+   "homepage": "https://periodicos.ufmg.br/index.php/maaravi/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 396
+  },
+  {
+   "issn": "0329-8930",
+   "title": "Studium: Filosofía y Teología",
+   "alt_title": null,
+   "publisher": "Universidad del Norte Santo Tomás de Aquino",
+   "country": "AR",
+   "language": [
+    "ES",
+    "FR",
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://revistas.unsta.edu.ar/index.php/Studium",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy (General)",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 391
+  },
+  {
+   "issn": "2541-3937",
+   "title": "Dunamis: Jurnal Teologi dan Pendidikan Kristiani",
+   "alt_title": "Dunamis",
+   "publisher": "Sekolah Tinggi Teologi Intheos Surakarta",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "http://sttintheos.ac.id/e-journal/index.php/dunamis",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 384
+  },
+  {
+   "issn": "1978-6301",
+   "title": "Journal of Indonesian Islam",
+   "alt_title": null,
+   "publisher": "UIN Sunan Ampel Surabaya",
+   "country": "ID",
+   "language": [
+    "EN",
+    "AR"
+   ],
+   "start_year": 2007,
+   "homepage": "http://jiis.uinsa.ac.id/index.php/jiis",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 365
+  },
+  {
+   "issn": "0032-8847",
+   "title": "Prismet",
+   "alt_title": null,
+   "publisher": "Kirkelig Pedagogisk Senter (IKO)",
+   "country": "NO",
+   "language": [
+    "SV",
+    "EN",
+    "DA",
+    "NB"
+   ],
+   "start_year": 2017,
+   "homepage": "https://journals.uio.no/prismet/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Education (General)",
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 351
+  },
+  {
+   "issn": "2087-135X",
+   "title": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "alt_title": "Journal of Islamic Economics",
+   "publisher": "Syarif Hidayatullah State Islamic University of Jakarta",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "http://journal.uinjkt.ac.id/index.php/iqtishad",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Economic theory. Demography",
+    "Economics as a science",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Social Sciences"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 340
+  },
+  {
+   "issn": "2493-8637",
+   "title": "Revue du Droit des Religions",
+   "alt_title": null,
+   "publisher": "Presses universitaires de Strasbourg",
+   "country": "FR",
+   "language": [
+    "FR",
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://journals.openedition.org/rdr/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Law",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 332
+  },
+  {
+   "issn": "2342-7256",
+   "title": "Temenos",
+   "alt_title": null,
+   "publisher": "Finnish Society for the Study of Religion",
+   "country": "FI",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "https://journal.fi/temenos",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 329
+  },
+  {
+   "issn": "1799-3121",
+   "title": "Approaching Religion",
+   "alt_title": null,
+   "publisher": "Donner Institute",
+   "country": "FI",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2011,
+   "homepage": "https://journal.fi/ar",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 327
+  },
+  {
+   "issn": "1804-5588",
+   "title": "Acta Universitatis Carolinae Theologica",
+   "alt_title": "AUC Theologica",
+   "publisher": "Karolinum Press",
+   "country": "CZ",
+   "language": [
+    "FR",
+    "CS",
+    "EN",
+    "DE",
+    "IT"
+   ],
+   "start_year": 2011,
+   "homepage": "https://karolinum.cz/en/journal/auc-theologica/current",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 320
+  },
+  {
+   "issn": "2363-6696",
+   "title": "Entangled Religions - Interdisciplinary Journal for the Study of Religious Contact and Transfer",
+   "alt_title": "ER",
+   "publisher": "CERES / KHK Bochum",
+   "country": "DE",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "http://er.ceres.rub.de/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 318
+  },
+  {
+   "issn": "2412-2467",
+   "title": "Protokolle zur Bibel",
+   "alt_title": null,
+   "publisher": "ArgeAss",
+   "country": "AT",
+   "language": [
+    "DE",
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "http://www.protokollezurbibel.at",
+   "license": [
+    "CC BY",
+    "CC BY-NC-SA",
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 304
+  },
+  {
+   "issn": "2602-2710",
+   "title": "Kader",
+   "alt_title": "KADER",
+   "publisher": "Kader",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2003,
+   "homepage": "https://dergipark.org.tr/en/pub/kaderdergi",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Islam",
+    "Moral theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 300
+  },
+  {
+   "issn": "0718-4727",
+   "title": "Revista Cultura & Religión",
+   "alt_title": "Cultura & Religión",
+   "publisher": "Universidad Arturo Prat",
+   "country": "CL",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2007,
+   "homepage": "https://www.revistaculturayreligion.cl/index.php/revistaculturayreligion",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 294
+  },
+  {
+   "issn": "2346-1780",
+   "title": "Perseitas",
+   "alt_title": null,
+   "publisher": "Fondo Editorial Universidad Católica Luis Amigó",
+   "country": "CO",
+   "language": [
+    "EN",
+    "ES"
+   ],
+   "start_year": 2013,
+   "homepage": "https://revistas.ucatolicaluisamigo.edu.co/index.php/perseitas/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 292
+  },
+  {
+   "issn": "2657-9278",
+   "title": "Ochrona Dziedzictwa Kulturowego",
+   "alt_title": "Protection of Cultural Heritage",
+   "publisher": "Lublin University of Technology",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL"
+   ],
+   "start_year": 2016,
+   "homepage": "https://ph.pollub.pl/index.php/odk",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "History and principles of religions",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 288
+  },
+  {
+   "issn": "1301-0522",
+   "title": "Ankara Üniversitesi İlahiyat Fakültesi Dergisi",
+   "alt_title": "AUIFD",
+   "publisher": "Ankara University",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2009,
+   "homepage": "https://dergipark.org.tr/en/pub/auifd",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 285
+  },
+  {
+   "issn": "1412-0909",
+   "title": "Jurnal Ushuluddin",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2010,
+   "homepage": "http://ejournal.uin-suska.ac.id/index.php/ushuludin",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 279
+  },
+  {
+   "issn": "1100-2298",
+   "title": "Svensk Exegetisk Årsbok",
+   "alt_title": null,
+   "publisher": "Svenska exegetiska sällskapet (Swedish Exegetical Society)",
+   "country": "SE",
+   "language": [
+    "SV",
+    "EN",
+    "FR",
+    "DE",
+    "NO"
+   ],
+   "start_year": 2012,
+   "homepage": "https://publicera.kb.se/sea",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 276
+  },
+  {
+   "issn": "1731-6170",
+   "title": "Annales Missiologici Posnanienses",
+   "alt_title": null,
+   "publisher": "Adam Mickiewicz University, Poznan",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "FR",
+    "ES",
+    "IT"
+   ],
+   "start_year": 2006,
+   "homepage": "https://pressto.amu.edu.pl/index.php/amp",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 275
+  },
+  {
+   "issn": "2458-7338",
+   "title": "E-Journal of Religious and Theological Studies",
+   "alt_title": "ERATS",
+   "publisher": "Noyam Journals",
+   "country": "GH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://noyam.org/journals/erats/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "The Bible"
+   ],
+   "areas": [
+    "基督教",
+    "聖經研究"
+   ],
+   "articles": 275
+  },
+  {
+   "issn": "1893-0263",
+   "title": "Teologisk Tidsskrift",
+   "alt_title": null,
+   "publisher": "Scandinavian University Press",
+   "country": "NO",
+   "language": [
+    "NB"
+   ],
+   "start_year": 2017,
+   "homepage": "https://www.scup.com/journal/tt",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 274
+  },
+  {
+   "issn": "2089-6239",
+   "title": "Share: Jurnal Ekonomi dan Keuangan Islam",
+   "alt_title": "Share: Journal of Islamic Economics and Finance",
+   "publisher": "Ar-Raniry State Islamic University of Aceh",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2012,
+   "homepage": "http://jurnal.ar-raniry.ac.id/index.php/Share/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Finance",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 266
+  },
+  {
+   "issn": "1230-0780",
+   "title": "Studia Koszalińsko-Kołobrzeskie",
+   "alt_title": "The Koszalin-Kolobrzeg Studies",
+   "publisher": "Wydawnictwo Naukowe Uniwersytetu Szczecińskiego",
+   "country": "PL",
+   "language": [
+    "PL",
+    "IT",
+    "DE",
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "http://skkkoszalin.pl/index_eng.htm",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 259
+  },
+  {
+   "issn": "1411-3775",
+   "title": "Esensia: Jurnal Ilmu-Ilmu Ushuluddin",
+   "alt_title": "Esensia",
+   "publisher": "UIN Sunan Kalijaga Yogyakarta",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2011,
+   "homepage": "https://ejournal.uin-suka.ac.id/ushuluddin/esensia",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Social Sciences"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 257
+  },
+  {
+   "issn": "1310-7909",
+   "title": "Forum Theologicum Sardicense",
+   "alt_title": "Богословска мисъл",
+   "publisher": "Sofia University \"St. Kliment Ohridski\",  Faculty of Theology",
+   "country": "BG",
+   "language": [
+    "EL",
+    "RO",
+    "DE",
+    "EN",
+    "BG"
+   ],
+   "start_year": 2022,
+   "homepage": "https://periodicals.uni-sofia.bg/index.php/forum-theologicum-sardicense/en/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 255
+  },
+  {
+   "issn": "2356-4547",
+   "title": "Manna Rafflesia",
+   "alt_title": null,
+   "publisher": "Sekolah Tinggi Teologi Arastamar Bengkulu",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2015,
+   "homepage": "https://journals.sttab.ac.id/index.php/man_raf",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 254
+  },
+  {
+   "issn": "1970-4879",
+   "title": "Studia et Documenta",
+   "alt_title": "Studia et Documenta: Rivista dell'Istituto Storico San Josemaría Escrivá",
+   "publisher": "Istituto Storico San Josemaría Escrivá",
+   "country": "IT",
+   "language": [
+    "EN",
+    "ES",
+    "IT",
+    "FR",
+    "DE"
+   ],
+   "start_year": 2009,
+   "homepage": "https://www.isje.org/en/studia-et-documenta-3/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "教義神學"
+   ],
+   "articles": 253
+  },
+  {
+   "issn": "2236-3629",
+   "title": "Práxis Teológica",
+   "alt_title": null,
+   "publisher": "Seminário Adventista Latino-Americano de Teologia (SALT)",
+   "country": "BR",
+   "language": [
+    "ES",
+    "PT",
+    "EN"
+   ],
+   "start_year": 2011,
+   "homepage": "https://adventista.emnuvens.com.br/praxis",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "教義神學"
+   ],
+   "articles": 251
+  },
+  {
+   "issn": "1978-7332",
+   "title": "Inferensi Jurnal Penelitian Sosial Keagamaan",
+   "alt_title": null,
+   "publisher": "Institut Agama Islam Negeri (IAIN) Salatiga",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2011,
+   "homepage": "http://inferensi.iainsalatiga.ac.id/index.php/inferensi/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 247
+  },
+  {
+   "issn": "1869-3261",
+   "title": "Diaconia",
+   "alt_title": "Journal for the study of Christian Social Practice",
+   "publisher": "Vandenhoeck & Ruprecht Verlage",
+   "country": "DE",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2017,
+   "homepage": "https://www.vr-elibrary.de/journal/diac",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Social Sciences"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 244
+  },
+  {
+   "issn": "0719-8175",
+   "title": "Cuadernos de Teología - Universidad Católica del Norte",
+   "alt_title": "Cuadernos de Teología",
+   "publisher": "Universidad Católica del Norte",
+   "country": "CL",
+   "language": [
+    "PT",
+    "EN",
+    "ES"
+   ],
+   "start_year": 2009,
+   "homepage": "https://cuadernosdeteologia.ucn.cl/index.php/teologia",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 243
+  },
+  {
+   "issn": "0216-6143",
+   "title": "Al-Albab",
+   "alt_title": null,
+   "publisher": "IAIN Pontianak",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "http://jurnaliainpontianak.or.id/index.php/alalbab/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 241
+  },
+  {
+   "issn": "2224-5391",
+   "title": "Вестник Екатеринбургской духовной семинарии",
+   "alt_title": "Bulletin of the Ekaterinburg Theological Seminary",
+   "publisher": "Russian Orthodox Church. Ekaterinburg Theological Seminary of the Ekaterinburg Eparchy",
+   "country": "RU",
+   "language": [
+    "EN",
+    "RU"
+   ],
+   "start_year": 2025,
+   "homepage": "https://journals.epds.ru/index.php/VEDS",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 236
+  },
+  {
+   "issn": "2753-3492",
+   "title": "St Andrews Encyclopaedia of Theology",
+   "alt_title": "SAET",
+   "publisher": "St Andrews Encyclopaedia of Theology",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://www.saet.ac.uk/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 233
+  },
+  {
+   "issn": "2659-8671",
+   "title": "Actas de Arquitectura Religiosa Contemporánea",
+   "alt_title": null,
+   "publisher": "Universidade da Coruña",
+   "country": "ES",
+   "language": [
+    "EN",
+    "ES"
+   ],
+   "start_year": 2019,
+   "homepage": "https://revistas.udc.es/index.php/aarc/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Architecture",
+    "Arts in general",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 230
+  },
+  {
+   "issn": "1760-5776",
+   "title": "Cahiers d'Études du Religieux- Recherches Interdisciplinaires",
+   "alt_title": "Cahiers d Etudes du Religieux",
+   "publisher": "Centre interdisciplinaire d’Études du Religieux (CIER)",
+   "country": "FR",
+   "language": [
+    "FR"
+   ],
+   "start_year": 2007,
+   "homepage": "https://journals.openedition.org/cerri/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 228
+  },
+  {
+   "issn": "2083-2222",
+   "title": "The Biblical Annals",
+   "alt_title": null,
+   "publisher": "John Paul II Catholic University of Lublin",
+   "country": "PL",
+   "language": [
+    "EN",
+    "FR",
+    "DE",
+    "IT",
+    "PL"
+   ],
+   "start_year": 2011,
+   "homepage": "https://czasopisma.kul.pl/ba",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "The Bible"
+   ],
+   "areas": [
+    "基督教",
+    "聖經研究"
+   ],
+   "articles": 227
+  },
+  {
+   "issn": "2469-0783",
+   "title": "Revista Científica Arbitrada de la Fundación MenteClara",
+   "alt_title": null,
+   "publisher": "Fundación MenteClara",
+   "country": "AR",
+   "language": [
+    "EN",
+    "ES"
+   ],
+   "start_year": 2016,
+   "homepage": "http://fundacionmenteclara.org.ar/revista/index.php/RCA/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Buddhism",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "佛教"
+   ],
+   "articles": 226
+  },
+  {
+   "issn": "2414-0201",
+   "title": "Journal for Religion, Film and Media",
+   "alt_title": null,
+   "publisher": "Karl Franzens Universität Graz",
+   "country": "AT",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "http://unipub.uni-graz.at/jrfm/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Communication. Mass media",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 219
+  },
+  {
+   "issn": "1858-4349",
+   "title": "Ulul Albab",
+   "alt_title": null,
+   "publisher": "UIN Press",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2010,
+   "homepage": "http://ejournal.uin-malang.ac.id/index.php/ululalbab",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 217
+  },
+  {
+   "issn": "1011-7601",
+   "title": "Journal for the Study of Religion",
+   "alt_title": null,
+   "publisher": "Association for the Study of Religion in Southern Africa",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "http://www.scielo.org.za/revistas/jsr/iaboutj.htm",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 214
+  },
+  {
+   "issn": "0006-5722",
+   "title": "Bogoslovni Vestnik",
+   "alt_title": "Theological Quarterly",
+   "publisher": "University of Ljubljana Press (Založba Univerze v Ljubljani)",
+   "country": "SI",
+   "language": [
+    "EN",
+    "SL",
+    "DE",
+    "IT",
+    "FR"
+   ],
+   "start_year": 2005,
+   "homepage": "https://journals.uni-lj.si/BV/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 208
+  },
+  {
+   "issn": "2089-1490",
+   "title": "Indonesian Journal of Islam and Muslim Societies",
+   "alt_title": "IJIMS",
+   "publisher": "IAIN Salatiga",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2011,
+   "homepage": "http://ijims.iainsalatiga.ac.id",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 207
+  },
+  {
+   "issn": "2636-8811",
+   "title": "Medya ve Din Araştırmaları Dergisi",
+   "alt_title": "Journal of Media and Religion Studies",
+   "publisher": "Hakan AYDIN",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2018,
+   "homepage": "http://dergipark.org.tr/mediad",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Communication. Mass media",
+    "Philosophy of religion. Psychology of religion. Religion in relation to other subjects",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 207
+  },
+  {
+   "issn": "2651-4559",
+   "title": "Trabzon İlahiyat Dergisi",
+   "alt_title": "Trabzon Theology Journal",
+   "publisher": "Trabzon University",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2014,
+   "homepage": "https://dergipark.org.tr/tr/pub/tid",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 206
+  },
+  {
+   "issn": "2687-4148",
+   "title": "Yakın Doğu Üniversitesi İslam Tetkikleri Merkezi Dergisi",
+   "alt_title": "The Journal of Near East University Islamic Research Center",
+   "publisher": "Yakın Doğu Üniversitesi",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2020,
+   "homepage": "https://dergipark.org.tr/en/pub/yaduitmed",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 204
+  },
+  {
+   "issn": "2397-1290",
+   "title": "Jewish Historical Studies: Transactions of the Jewish Historical Society of England",
+   "alt_title": null,
+   "publisher": "UCL Press",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://journals.uclpress.co.uk/jhs/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History of Great Britain",
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 199
+  },
+  {
+   "issn": "2446-175X",
+   "title": "Fønix",
+   "alt_title": null,
+   "publisher": "Tidsskriftet Fønix",
+   "country": "DK",
+   "language": [
+    "DA"
+   ],
+   "start_year": 2016,
+   "homepage": "http://www.foenix1976.dk",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Literature (General)"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 196
+  },
+  {
+   "issn": "1412-6141",
+   "title": "Jurnal Adabiyah",
+   "alt_title": null,
+   "publisher": "Fakultas Adab dan Humaniora",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2010,
+   "homepage": "http://journal.uin-alauddin.ac.id/index.php/adabiyah",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 192
+  },
+  {
+   "issn": "2335-4127",
+   "title": "Edinost in Dialog",
+   "alt_title": "Unity and Dialogue",
+   "publisher": "Faculty of Theology, University of Ljubljana, Slovenia, EU",
+   "country": "SI",
+   "language": [
+    "EN",
+    "DE",
+    "IT",
+    "SL",
+    "HR"
+   ],
+   "start_year": 2013,
+   "homepage": "https://www.teof.uni-lj.si/publications/unity-and-dialogue",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History and principles of religions",
+    "Practical Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "實踐神學"
+   ],
+   "articles": 190
+  },
+  {
+   "issn": "2477-1309",
+   "title": "Islam Realitas: Journal of Islamic and Social Studies",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Sjech M. Djamil Djambek Bukittinggi",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://ejournal.uinbukittinggi.ac.id/index.php/Islam_realitas",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "By religion",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 190
+  },
+  {
+   "issn": "1972-2516",
+   "title": "Mythos",
+   "alt_title": "Mythos: Rivista di Storia delle Religioni",
+   "publisher": "Salvatore Sciascia Editore",
+   "country": "IT",
+   "language": [
+    "IT"
+   ],
+   "start_year": 2016,
+   "homepage": "https://journals.openedition.org/mythos",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 189
+  },
+  {
+   "issn": "2460-1896",
+   "title": "Islamic Economics Journal",
+   "alt_title": null,
+   "publisher": "Universitas Darussalam Gontor",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2012,
+   "homepage": "https://jei.journal.unida.gontor.ac.id/index.php/IEJ/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Economic theory. Demography",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 187
+  },
+  {
+   "issn": "2452-4646",
+   "title": "Palabra y Razón",
+   "alt_title": "PYR",
+   "publisher": "Universidad Católica del Maule",
+   "country": "CL",
+   "language": [
+    "FR",
+    "IT",
+    "PT",
+    "EN",
+    "ES"
+   ],
+   "start_year": 2019,
+   "homepage": "https://revistapyr.ucm.cl/",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 187
+  },
+  {
+   "issn": "2149-9845",
+   "title": "Türkiye Din Eğitimi Araştırmaları Dergisi",
+   "alt_title": "Turkish Journal of Religious Education Studies",
+   "publisher": "Mehmet Bahçekapılı",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN"
+   ],
+   "start_year": 2017,
+   "homepage": "https://dergipark.org.tr/en/pub/tudear",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 184
+  },
+  {
+   "issn": "2707-2991",
+   "title": "African Journal of Gender and Religion (AJGR)",
+   "alt_title": null,
+   "publisher": "UJ Press",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://journals.uj.ac.za/index.php/ajgr/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 182
+  },
+  {
+   "issn": "2460-6294",
+   "title": "Jurnal SMART (Studi Masyarakat, Religi, dan Tradisi)",
+   "alt_title": null,
+   "publisher": "Balai Penelitian dan Pengembangan Agama Semarang",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2015,
+   "homepage": "https://journal.blasemarang.id/index.php/smart",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Practical Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "實踐神學"
+   ],
+   "articles": 179
+  },
+  {
+   "issn": "1412-4734",
+   "title": "Ahkam: Jurnal Ilmu Syariah",
+   "alt_title": null,
+   "publisher": "Faculty Sharia & Law",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "http://journal.uinjkt.ac.id/index.php/ahkam/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Islamic law"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 176
+  },
+  {
+   "issn": "2502-7743",
+   "title": "Gema Teologika",
+   "alt_title": null,
+   "publisher": "Duta Wacana Christian University",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "http://journal-theo.ukdw.ac.id/index.php/gemateologika/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy of religion. Psychology of religion. Religion in relation to other subjects",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 173
+  },
+  {
+   "issn": "2322-4894",
+   "title": "Religious Inquiries",
+   "alt_title": null,
+   "publisher": "University of Religions and Denominations Press",
+   "country": "IR",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "http://ri.urd.ac.ir/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 171
+  },
+  {
+   "issn": "2355-6374",
+   "title": "Verbum Christi",
+   "alt_title": null,
+   "publisher": "Sekolah Tinggi Teologi Reformed Injili Internasional",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2017,
+   "homepage": "https://verbum.sttrii.ac.id/index.php/VC/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 171
+  },
+  {
+   "issn": "1410-4350",
+   "title": "Analisa: Jurnal Pengkajian Masalah Sosial Keagamaan",
+   "alt_title": "Analisa",
+   "publisher": "Ministry of Religious Affairs",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2009,
+   "homepage": "https://journal.blasemarang.id/index.php/analisa/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social Sciences"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 170
+  },
+  {
+   "issn": "1842-0613",
+   "title": "TheoRhēma",
+   "alt_title": null,
+   "publisher": "Editura Universității Adventus",
+   "country": "RO",
+   "language": [
+    "ES",
+    "HU",
+    "EN",
+    "RO"
+   ],
+   "start_year": 2021,
+   "homepage": "https://publications.uadventus.ro/index.php/thrh/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 170
+  },
+  {
+   "issn": "2407-0556",
+   "title": "Societas Dei: Jurnal Agama dan Masyarakat",
+   "alt_title": null,
+   "publisher": "Reformed Center for Religion and Society",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2017,
+   "homepage": "http://societasdei.rcrs.org/index.php/SD/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 168
+  },
+  {
+   "issn": "2723-5920",
+   "title": "International Journal of Social Science and Religion",
+   "alt_title": "IJSSR",
+   "publisher": "Indonesian Academy of Social and Religious Research (IASRR)",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "http://ijssr.net/index.php/ijssr",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "Social Sciences"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 167
+  },
+  {
+   "issn": "2617-1953",
+   "title": "Limina",
+   "alt_title": "Grazer Theologische Perspektiven",
+   "publisher": "Karl Franzens-Universität Graz",
+   "country": "AT",
+   "language": [
+    "DE"
+   ],
+   "start_year": 2018,
+   "homepage": "http://unipub.uni-graz.at/limina",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 166
+  },
+  {
+   "issn": "2081-8971",
+   "title": "Kultura Media Teologia",
+   "alt_title": null,
+   "publisher": "Cardinal Stefan Wyszynski University in Warsaw",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN"
+   ],
+   "start_year": 2010,
+   "homepage": "https://czasopisma.uksw.edu.pl/index.php/kmt/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Communication. Mass media",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 163
+  },
+  {
+   "issn": "2086-9118",
+   "title": "Al-Tadzkiyyah: Jurnal Pendidikan Islam",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Raden Intan Lampung",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2015,
+   "homepage": "http://ejournal.radenintan.ac.id/index.php/tadzkiyyah",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Education",
+    "Education (General)",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 159
+  },
+  {
+   "issn": "2232-0474",
+   "title": "Global Journal Al-Thaqafah",
+   "alt_title": "GJAT",
+   "publisher": "Universiti Sultan Azlan Shah",
+   "country": "MY",
+   "language": [
+    "MS",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2011,
+   "homepage": "https://jurnal.usas.edu.my/gjat/index.php/journal",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 159
+  },
+  {
+   "issn": "2471-6391",
+   "title": "The Journal of Amish and Plain Anabaptist Studies",
+   "alt_title": "JAPAS",
+   "publisher": "University of Akron",
+   "country": "US",
+   "language": [
+    "EN",
+    "DE"
+   ],
+   "start_year": 2013,
+   "homepage": "https://ideaexchange.uakron.edu/amishstudies/",
+   "license": [
+    "Publisher's own license"
+   ],
+   "lcc": [
+    "Christian Denominations"
+   ],
+   "areas": [
+    "基督教各宗派"
+   ],
+   "articles": 155
+  },
+  {
+   "issn": "2184-5778",
+   "title": "Ephata",
+   "alt_title": null,
+   "publisher": "Universidade Católica Portuguesa, Faculdade de Teologia",
+   "country": "PT",
+   "language": [
+    "IT",
+    "FR",
+    "ES",
+    "EN",
+    "PT"
+   ],
+   "start_year": 2019,
+   "homepage": "https://revistas.ucp.pt/index.php/ephata/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 153
+  },
+  {
+   "issn": "2083-5574",
+   "title": "Studia Żydowskie",
+   "alt_title": "Studia Żydowskie: Almanach",
+   "publisher": "Akademia Zamojska",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "DE",
+    "FR",
+    "ES"
+   ],
+   "start_year": 2022,
+   "homepage": "https://czaz.akademiazamojska.edu.pl/index.php/sz/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 150
+  },
+  {
+   "issn": "2452-4379",
+   "title": "Revista de Educación Religiosa",
+   "alt_title": null,
+   "publisher": "Universidad Finis Terrae",
+   "country": "CL",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2018,
+   "homepage": "http://www.revistadeeducacionreligiosa.cl",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "Special aspects of education"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 148
+  },
+  {
+   "issn": "2686-3707",
+   "title": "Diligentia: Journal of Theology and Christian Education",
+   "alt_title": null,
+   "publisher": "Universitas Pelita Harapan",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2019,
+   "homepage": "https://ojs.uph.edu/index.php/DIL/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Practical religion. The Christian life",
+    "The Bible"
+   ],
+   "areas": [
+    "基督教",
+    "聖經研究"
+   ],
+   "articles": 146
+  },
+  {
+   "issn": "1585-7476",
+   "title": "Egyháztörténeti Szemle",
+   "alt_title": "Church History Review",
+   "publisher": "Tiszáninneni Református Egyházkerület Tudományos Gyűjteményei TIREK-TGY",
+   "country": "HU",
+   "language": [
+    "HU",
+    "EN",
+    "DE"
+   ],
+   "start_year": 2023,
+   "homepage": "https://egyhaztortenetiszemle.hu/ojs/index.php/e",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "基督教"
+   ],
+   "articles": 145
+  },
+  {
+   "issn": "2527-3744",
+   "title": "Palita: Journal of Social - Religion Research",
+   "alt_title": null,
+   "publisher": "IAIN Palopo",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "https://ejournal.iainpalopo.ac.id/index.php/palita/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "By religion",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 142
+  },
+  {
+   "issn": "1339-9578",
+   "title": "Spirituality Studies",
+   "alt_title": null,
+   "publisher": "Society for Spirituality Studies",
+   "country": "SK",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://www.spirituality-studies.org",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 142
+  },
+  {
+   "issn": "0352-3101",
+   "title": "Bogoslovska Smotra",
+   "alt_title": "Ephemerides Theologicae Zagrabienses",
+   "publisher": "University of Zagreb, Catholic Faculty of Theology",
+   "country": "HR",
+   "language": [
+    "HR",
+    "EN",
+    "DE",
+    "IT",
+    "FR"
+   ],
+   "start_year": 2008,
+   "homepage": "https://hrcak.srce.hr/en/bogoslovska-smotra",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 141
+  },
+  {
+   "issn": "0378-4142",
+   "title": "Theologia Viatorum",
+   "alt_title": null,
+   "publisher": "AOSIS",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2016,
+   "homepage": "https://theologiaviatorum.org/index.php/tv",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 140
+  },
+  {
+   "issn": "2645-9132",
+   "title": "ULUM",
+   "alt_title": "ULUM: Journal of Religious Inquiries",
+   "publisher": "ULUM: Journal of Religious Inquiries",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://dergipark.org.tr/en/pub/ulum",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 140
+  },
+  {
+   "issn": "0137-3447",
+   "title": "Śląskie Studia Historyczno-Teologiczne",
+   "alt_title": "Silesian Historical and Theological Studies",
+   "publisher": "Instytut Gość Media/Księgarnia św. Jacka",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "FR",
+    "DE",
+    "IT"
+   ],
+   "start_year": 2020,
+   "homepage": "https://journals.us.edu.pl/index.php/ssht/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "History of Poland"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 140
+  },
+  {
+   "issn": "2618-0030",
+   "title": "Din Araşdırmaları Jurnalı",
+   "alt_title": "Journal of Religious Studies",
+   "publisher": "Azərbaycan İlahiyyat İnstitutu",
+   "country": "AZ",
+   "language": [
+    "RU",
+    "AR",
+    "EN",
+    "TR",
+    "AZ"
+   ],
+   "start_year": 2024,
+   "homepage": "https://journal.ait.edu.az/daj/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "History and principles of religions",
+    "Philosophy of religion. Psychology of religion. Religion in relation to other subjects",
+    "Religion (General)",
+    "Religions of the world"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 137
+  },
+  {
+   "issn": "2598-6759",
+   "title": "JOHME: Journal of Holistic Mathematics Education",
+   "alt_title": null,
+   "publisher": "Universitas Pelita Harapan",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2017,
+   "homepage": "https://ojs.uph.edu/index.php/JOHME",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Mathematics"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 137
+  },
+  {
+   "issn": "2236-9937",
+   "title": "Teoliterária: Revista Brasileira de Literaturas e Teologias",
+   "alt_title": "Teoliterária",
+   "publisher": "Pontifícia Universidade Católica de São Paulo",
+   "country": "BR",
+   "language": [
+    "EN",
+    "FR",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2011,
+   "homepage": "http://revistas.pucsp.br/teoliteraria",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Language and Literature",
+    "Literature (General)",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 137
+  },
+  {
+   "issn": "2527-3213",
+   "title": "Wawasan",
+   "alt_title": "Jurnal Ilmiah Agama dan Sosial Budaya",
+   "publisher": "Universitas Islam Negeri Sunan Gunung Djati Bandung",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "https://journal.uinsgd.ac.id/index.php/jw/",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 137
+  },
+  {
+   "issn": "2280-5028",
+   "title": "Theologica Leoniana",
+   "alt_title": null,
+   "publisher": "Istituto Teologico Leoniano di Anagni",
+   "country": "IT",
+   "language": [
+    "IT",
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "https://www.itleoniano.it/theologica/index.php/theologica-leoniana/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 132
+  },
+  {
+   "issn": "2673-4273",
+   "title": "Judaica",
+   "alt_title": "Judaica: Neue Digitale Folge",
+   "publisher": "Bern Open Publishing",
+   "country": "CH",
+   "language": [
+    "FR",
+    "EN",
+    "DE"
+   ],
+   "start_year": 2020,
+   "homepage": "https://judaica.ch/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 131
+  },
+  {
+   "issn": "2685-4015",
+   "title": "Visio Dei",
+   "alt_title": "Jurnal Teologi Kristen",
+   "publisher": "Sekolah Tinggi Teologi Star's Lub Luwuk Banggai",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2019,
+   "homepage": "http://jurnal.sttstarslub.ac.id/",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "基督教"
+   ],
+   "articles": 129
+  },
+  {
+   "issn": "2561-925X",
+   "title": "Locke Studies",
+   "alt_title": null,
+   "publisher": "Western Libraries, The University of Western Ontario",
+   "country": "CA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://ojs.lib.uwo.ca/index.php/locke/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "History (General)",
+    "Philology. Linguistics",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 125
+  },
+  {
+   "issn": "2053-6712",
+   "title": "Secularism and Nonreligion",
+   "alt_title": null,
+   "publisher": "Ubiquity Press",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "https://secularismandnonreligion.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 124
+  },
+  {
+   "issn": "1131-7027",
+   "title": "Isidorianum",
+   "alt_title": null,
+   "publisher": "Facultad de Teología San Isidoro de Sevilla",
+   "country": "ES",
+   "language": [
+    "EN",
+    "FR",
+    "DE",
+    "IT",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2016,
+   "homepage": "https://www.publicaciones.sanisidoro.net/index.php/isidorianum",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 123
+  },
+  {
+   "issn": "2713-1610",
+   "title": "Визуальная теология",
+   "alt_title": "Journal of Visual Theology",
+   "publisher": "Yaroslav-the-Wise Novgorod State University",
+   "country": "RU",
+   "language": [
+    "RU",
+    "EN",
+    "FR",
+    "DE"
+   ],
+   "start_year": 2019,
+   "homepage": "https://visualtheology.ru/index.php/journal",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 120
+  },
+  {
+   "issn": "3006-1768",
+   "title": "African Christian Theology",
+   "alt_title": "Théologie Chrétienne Africaine",
+   "publisher": "Association for Christian Theological Education in Africa",
+   "country": "KE",
+   "language": [
+    "EN",
+    "FR",
+    "PT"
+   ],
+   "start_year": 2024,
+   "homepage": "https://AfricanChristianTheology.org",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 118
+  },
+  {
+   "issn": "1411-3708",
+   "title": "International Journal Ihya' 'Ulum al-Din",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Walisongo Semarang",
+   "country": "ID",
+   "language": [
+    "EN",
+    "AR",
+    "ID"
+   ],
+   "start_year": 2015,
+   "homepage": "https://journal.walisongo.ac.id/index.php/ihya",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 118
+  },
+  {
+   "issn": "2618-2858",
+   "title": "Dios y el Hombre",
+   "alt_title": null,
+   "publisher": "Universidad Nacional de La Plata",
+   "country": "AR",
+   "language": [
+    "ES"
+   ],
+   "start_year": 2017,
+   "homepage": "https://revistas.unlp.edu.ar/DyH/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "History of scholarship and learning. The humanities",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 117
+  },
+  {
+   "issn": "2619-9130",
+   "title": "Tasavvur-Tekirdağ İlahiyat Dergisi",
+   "alt_title": "Tasavvur/Tekirdag Theology Journal",
+   "publisher": "Tekirdağ Namık Kemal University",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2022,
+   "homepage": "https://dergipark.org.tr/tr/pub/tasavvur",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 117
+  },
+  {
+   "issn": "2502-5465",
+   "title": "Analisa",
+   "alt_title": "Analisa: Journal of Social Science and Religion",
+   "publisher": "Ministry of Religious Affairs",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2016,
+   "homepage": "https://journal.blasemarang.id/index.php/analisa/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social Sciences"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 116
+  },
+  {
+   "issn": "2519-4348",
+   "title": "Волинський благовісник",
+   "alt_title": "Volynskyi Blahovisnyk",
+   "publisher": "EIKΩN, publishing house of the Volyn Orthodox Theological Academy",
+   "country": "UA",
+   "language": [
+    "UK"
+   ],
+   "start_year": 2013,
+   "homepage": "https://vb.vpba.edu.ua/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 116
+  },
+  {
+   "issn": "1894-7875",
+   "title": "Scandinavian Journal for Leadership & Theology",
+   "alt_title": "Skandinavisk Tidsskrift for Ledelse & Teologi",
+   "publisher": "Ansgar University College, Norwegian School of Leadership and Theology, Academy for Leadership and Theology",
+   "country": "NO",
+   "language": [
+    "SV",
+    "NO",
+    "EN",
+    "DA"
+   ],
+   "start_year": 2014,
+   "homepage": "https://sjlt-journal.com",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 115
+  },
+  {
+   "issn": "0239-801X",
+   "title": "Studia Teologiczne",
+   "alt_title": "Studia Teologiczne Białystok Drohiczyn Łomża",
+   "publisher": "Cardinal Stefan Wyszynski University in Warsaw",
+   "country": "PL",
+   "language": [
+    "PL",
+    "DE",
+    "IT",
+    "EN",
+    "FR"
+   ],
+   "start_year": 2021,
+   "homepage": "https://czasopisma.uksw.edu.pl/index.php/st/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 114
+  },
+  {
+   "issn": "1582-0661",
+   "title": "Studia Theologica Transsylvaniensia",
+   "alt_title": null,
+   "publisher": "L’Harmattan Könyvkiadó",
+   "country": "HU",
+   "language": [
+    "EN",
+    "HU"
+   ],
+   "start_year": 2021,
+   "homepage": "https://stthtr.com",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 112
+  },
+  {
+   "issn": "2617-9296",
+   "title": "Релігійна свобода",
+   "alt_title": "Religious Freedom",
+   "publisher": "Ukrainian Association of Researchers of Religion (UARR)",
+   "country": "UA",
+   "language": [
+    "UK",
+    "RU",
+    "EN"
+   ],
+   "start_year": 2013,
+   "homepage": "https://uars.info/index.php/rs",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 110
+  },
+  {
+   "issn": "2757-5616",
+   "title": "Atebe",
+   "alt_title": null,
+   "publisher": "Social Sciences University of Ankara",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2020,
+   "homepage": "https://dergipark.org.tr/en/pub/atebe",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 105
+  },
+  {
+   "issn": "2686-2131",
+   "title": "International Journal of Islamic Economics",
+   "alt_title": null,
+   "publisher": "The Postgraduate of Institut Agama Islam Negeri Metro",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://e-journal.metrouniv.ac.id/IJIE/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Economic theory. Demography",
+    "Ethics",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 104
+  },
+  {
+   "issn": "2281-6062",
+   "title": "Sefer Yuḥasin",
+   "alt_title": null,
+   "publisher": "UniorPress",
+   "country": "IT",
+   "language": [
+    "EN",
+    "FR",
+    "IT",
+    "ES"
+   ],
+   "start_year": 2013,
+   "homepage": "http://www.serena.unina.it/index.php/sefer",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History (General) and history of Europe",
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 104
+  },
+  {
+   "issn": "2064-7972",
+   "title": "Axis",
+   "alt_title": null,
+   "publisher": "Pázmány Péter Catholic University Faculty of Humanities and Social Sciences",
+   "country": "HU",
+   "language": [
+    "HU",
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://ojs.ppke.hu/axis",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Philosophy (General)"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 103
+  },
+  {
+   "issn": "2655-9439",
+   "title": "Jurnal Studi Agama",
+   "alt_title": null,
+   "publisher": "Fakultas Ushuluddin dan Pemikiran Islam, Universitas Islam Negeri Raden Fatah Palembang",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2017,
+   "homepage": "http://jurnal.radenfatah.ac.id/index.php/jsa/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 103
+  },
+  {
+   "issn": "2148-3809",
+   "title": "Türkiye İslam İktisadı Dergisi",
+   "alt_title": "Turkish Journal of Islamic Economics",
+   "publisher": "İLKE İlim Kültür Eğitim Vakfı",
+   "country": "TR",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "https://tujise.org/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Economics as a science",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 103
+  },
+  {
+   "issn": "3062-6919",
+   "title": "Al Muhafidz",
+   "alt_title": "Al Muhafidz: Jurnal Ilmu Al-Qur'an dan Tafsir",
+   "publisher": "Lembaga Penelitian dan Pengabdian Kepada Masyarakat Sekolah Tinggi Ilmu Al-Qur'an Al Multazam",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2021,
+   "homepage": "https://ejournal.stiq-almultazam.id/index.php/muhafidz/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "Religious ethics"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 102
+  },
+  {
+   "issn": "1412-5439",
+   "title": "Fenomena",
+   "alt_title": null,
+   "publisher": "Centre for Research and Community Service (LP2M), UIN Kiai Haji Achmad Siddiq Jember",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://fenomena.uinkhas.ac.id/index.php/fenomena/about",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 101
+  },
+  {
+   "issn": "2366-7958",
+   "title": "International Journal of Homiletics",
+   "alt_title": "IJH",
+   "publisher": "University of Groningen Press",
+   "country": "NL",
+   "language": [
+    "EN",
+    "DE",
+    "KO",
+    "ES",
+    "PT"
+   ],
+   "start_year": 2022,
+   "homepage": "https://ugp.rug.nl/ijh",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 98
+  },
+  {
+   "issn": "1412-0534",
+   "title": "Al-Ulum",
+   "alt_title": null,
+   "publisher": "Institut Agama Islam Negeri (IAIN) Sultan Amai Gorontalo",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2011,
+   "homepage": "http://journal.iaingorontalo.ac.id/index.php/au",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 95
+  },
+  {
+   "issn": "1846-4599",
+   "title": "Kairos (English Ed.)",
+   "alt_title": "Kairos: Evangelical Journal of Theology",
+   "publisher": "The Biblical Institute",
+   "country": "HR",
+   "language": [
+    "EN",
+    "HR"
+   ],
+   "start_year": 2007,
+   "homepage": "https://kairosen.bizg.hr/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "實踐神學"
+   ],
+   "articles": 95
+  },
+  {
+   "issn": "2004-5425",
+   "title": "Hybrid",
+   "alt_title": "Hybrid: Mellan Akademi, Kyrka & Samhälle",
+   "publisher": "Akademi för Ledarskap och Teologi",
+   "country": "SE",
+   "language": [
+    "SV"
+   ],
+   "start_year": 2023,
+   "homepage": "https://publicera.kb.se/hyb/",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 94
+  },
+  {
+   "issn": "1392-7450",
+   "title": "Soter: Religijos Mokslo Žurnalas",
+   "alt_title": "Soter: Journal of Religious Science",
+   "publisher": "Vytautas Magnus University",
+   "country": "LT",
+   "language": [
+    "PL",
+    "IT",
+    "ES",
+    "EN",
+    "LT"
+   ],
+   "start_year": 2014,
+   "homepage": "https://ejournals.vdu.lt/index.php/SJRS/issue/archive",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 94
+  },
+  {
+   "issn": "2721-186X",
+   "title": "FiTUA",
+   "alt_title": "FiTUA: Jurnal Studi Islam",
+   "publisher": "STIT Sunan Giri Bima",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ejournal.stitbima.ac.id/index.php/fitua/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 93
+  },
+  {
+   "issn": "0873-1233",
+   "title": "Via Spiritus",
+   "alt_title": "Via Spiritus: Revista de História da Espiritualidade e do Sentimento Religioso",
+   "publisher": "Universidade do  Porto",
+   "country": "PT",
+   "language": [
+    "ES",
+    "PT",
+    "IT",
+    "FR",
+    "EN"
+   ],
+   "start_year": 1994,
+   "homepage": "http://ojs.letras.up.pt/index.php/vsp/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 91
+  },
+  {
+   "issn": "2614-3836",
+   "title": "IJISH (International Journal of Islamic Studies and Humanities)",
+   "alt_title": null,
+   "publisher": "Universitas Ahmad Dahlan",
+   "country": "ID",
+   "language": [
+    "EN",
+    "AR"
+   ],
+   "start_year": 2018,
+   "homepage": "http://journal2.uad.ac.id/index.php/ijish/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 90
+  },
+  {
+   "issn": "2676-5195",
+   "title": "مطالعات ادیان و عرفان تطبیقی",
+   "alt_title": "Studies in Comparative Religion and Mysticism",
+   "publisher": "University of Sistan and Baluchestan",
+   "country": "IR",
+   "language": [
+    "FA"
+   ],
+   "start_year": 2021,
+   "homepage": "https://jrm.usb.ac.ir/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 90
+  },
+  {
+   "issn": "1906-6244",
+   "title": "Journal of International Buddhist Studies",
+   "alt_title": null,
+   "publisher": "Mahachulalongkornrajavidyalaya University",
+   "country": "TH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://so09.tci-thaijo.org/index.php/jibs",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Buddhism"
+   ],
+   "areas": [
+    "佛教"
+   ],
+   "articles": 89
+  },
+  {
+   "issn": "1501-9934",
+   "title": "DIN",
+   "alt_title": "Tidsskrift for Religion og Kultur",
+   "publisher": "Novus forlag",
+   "country": "NO",
+   "language": [
+    "EN",
+    "NB",
+    "NN",
+    "SV"
+   ],
+   "start_year": 2010,
+   "homepage": "http://ojs.novus.no/index.php/DIN",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 87
+  },
+  {
+   "issn": "2791-6650",
+   "title": "Sufiyye",
+   "alt_title": null,
+   "publisher": "Kalem Eğitim Kültür Akademi Derneği",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2023,
+   "homepage": "https://dergipark.org.tr/en/pub/sufiyye",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 87
+  },
+  {
+   "issn": "0215-6253",
+   "title": "Refleksi",
+   "alt_title": "Jurnal Ilmu-ilmu Ushuluddin",
+   "publisher": "Faculty of Ushuluddin",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2014,
+   "homepage": "http://journal.uinjkt.ac.id/index.php/refleksi/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 86
+  },
+  {
+   "issn": "2595-8925",
+   "title": "Téssera",
+   "alt_title": null,
+   "publisher": "Enivalda Nunes Freitas e Souza",
+   "country": "BR",
+   "language": [
+    "PT"
+   ],
+   "start_year": 2018,
+   "homepage": "http://www.seer.ufu.br/index.php/tessera",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Anthropology",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 86
+  },
+  {
+   "issn": "0718-8749",
+   "title": "Cuadernos Judaicos",
+   "alt_title": null,
+   "publisher": "Universidad de Chile",
+   "country": "CL",
+   "language": [
+    "EN",
+    "ES"
+   ],
+   "start_year": 1970,
+   "homepage": "https://cuadernosjudaicos.uchile.cl",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 83
+  },
+  {
+   "issn": "2775-0116",
+   "title": "Media",
+   "alt_title": "Media (Jurnal Filsafat dan Teologi)",
+   "publisher": "Sekolah Tinggi Filsafat Seminari Pineleng",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://journal.stfsp.ac.id/index.php/media",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy (General)",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 79
+  },
+  {
+   "issn": "2088-7523",
+   "title": "Mutawatir: Jurnal Keilmuan Tafsir Hadith",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Sunan Ampel",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://jurnalfuf.uinsa.ac.id/index.php/mutawatir",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 79
+  },
+  {
+   "issn": "2722-645X",
+   "title": "EDULEAD",
+   "alt_title": "EDULEAD: Journal of Christian Education and Leadership",
+   "publisher": "Sekolah Tinggi Agama Kristen Terpadu Pesat",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://stak-pesat.ac.id/e-journal/index.php/edulead/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Education"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 78
+  },
+  {
+   "issn": "2596-092X",
+   "title": "Basilíade",
+   "alt_title": "Basilíade, Revista de Filosofia",
+   "publisher": "Faculdade São Basílio Magno (FASBAM)",
+   "country": "BR",
+   "language": [
+    "PT",
+    "EN",
+    "IT",
+    "ES",
+    "FR"
+   ],
+   "start_year": 2019,
+   "homepage": "https://fasbam.edu.br/pesquisa/periodicos/index.php/basiliade/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy (General)"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 77
+  },
+  {
+   "issn": "2633-0695",
+   "title": "Journal for Interdisciplinary Biblical Studies",
+   "alt_title": null,
+   "publisher": "University of Sheffield",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://jibs.hcommons.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 77
+  },
+  {
+   "issn": "2653-5122",
+   "title": "Australian Journal of Law & Religion",
+   "alt_title": null,
+   "publisher": "University of Southern Queensland Law, Religion, and Heritage Research Program Team",
+   "country": "AU",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://ausjlr.com/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Law in general. Comparative and uniform law. Jurisprudence",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 76
+  },
+  {
+   "issn": "2791-4658",
+   "title": "Ex Fonte",
+   "alt_title": "Ex Fonte: Journal of Ecumenical Studies in Liturgy",
+   "publisher": "University of Vienna",
+   "country": "AT",
+   "language": [
+    "IT",
+    "FR",
+    "EN",
+    "DE"
+   ],
+   "start_year": 2022,
+   "homepage": "https://exfonte.org",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 75
+  },
+  {
+   "issn": "2088-3102",
+   "title": "Tarbawi: Jurnal Pendidikan Islam",
+   "alt_title": "Tarbawi",
+   "publisher": "Fakultas Tarbiyah dan Ilmu Keguruan",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2008,
+   "homepage": "https://ejournal.unisnu.ac.id/JPIT/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Education",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 74
+  },
+  {
+   "issn": "2783-3240",
+   "title": "Theosophia Islamica",
+   "alt_title": null,
+   "publisher": "Islamic Sciences and Culture Academy",
+   "country": "IR",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2021,
+   "homepage": "https://jti.isca.ac.ir/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 74
+  },
+  {
+   "issn": "1907-1736",
+   "title": "Al-Adyan",
+   "alt_title": null,
+   "publisher": "UIN Raden Intan Lampung",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2011,
+   "homepage": "http://ejournal.radenintan.ac.id/index.php/alAdyan",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 71
+  },
+  {
+   "issn": "2813-4184",
+   "title": "AЯGOS",
+   "alt_title": "Argos",
+   "publisher": "University of Fribourg",
+   "country": "CH",
+   "language": [
+    "IT",
+    "FR",
+    "EN",
+    "DE"
+   ],
+   "start_year": 2022,
+   "homepage": "https://www.journal-argos.org/",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 69
+  },
+  {
+   "issn": "2785-6046",
+   "title": "JoMaCC",
+   "alt_title": "Journal of Modern and Contemporary Christianity",
+   "publisher": "Fondazione Università Ca’ Foscari",
+   "country": "IT",
+   "language": [
+    "IT",
+    "EN",
+    "FR",
+    "ES",
+    "DE"
+   ],
+   "start_year": 2022,
+   "homepage": "https://edizionicafoscari.unive.it/en/edizioni4/riviste/journal-of-modern-and-contemporary-christianity/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Modern history, 1453-"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 69
+  },
+  {
+   "issn": "1658-8738",
+   "title": "Journal of Umm Al-Qura University for Shari'ah Sciences and Islamic Studies",
+   "alt_title": null,
+   "publisher": "Umm Al-Qura University",
+   "country": "SA",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "https://uqu.edu.sa/en/jill",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 69
+  },
+  {
+   "issn": "3057-0883",
+   "title": "Religion and Social Communication",
+   "alt_title": null,
+   "publisher": "Asian Research Center for Religion and Social Communication, St John's University",
+   "country": "TH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://asianresearchcenter.org/arc-journal",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social Sciences"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 69
+  },
+  {
+   "issn": "1412-5188",
+   "title": "Jurnal Ilmiah Ilmu Ushuluddin",
+   "alt_title": null,
+   "publisher": "Ushuluddin and Humanities Faculty, Antasari State Islamic University of  Banjarmasin, Indonesia",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2002,
+   "homepage": "http://jurnal.uin-antasari.ac.id/index.php/ushuluddin",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Philosophy. Psychology. Religion"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 66
+  },
+  {
+   "issn": "2088-6330",
+   "title": "Religió: Jurnal Studi Agama-agama",
+   "alt_title": "RJSAA",
+   "publisher": "Universitas Islam Negeri Sunan Ampel Surabaya",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2011,
+   "homepage": "https://jurnalfuf.uinsa.ac.id/index.php/religio",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History and principles of religions",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 66
+  },
+  {
+   "issn": "2791-6065",
+   "title": "Akif",
+   "alt_title": null,
+   "publisher": "Necmettin Erbakan University Press",
+   "country": "TR",
+   "language": [
+    "TR",
+    "AR",
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://dergipark.org.tr/en/pub/akif",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 65
+  },
+  {
+   "issn": "2962-5289",
+   "title": "el-Aqwal",
+   "alt_title": "el-Aqwal: Journal of Sharia and Comparative Law",
+   "publisher": "Universitas Islam Negeri Profesor Kiai Haji Saifuddin Zuhri Purwokerto",
+   "country": "ID",
+   "language": [
+    "ID",
+    "AR",
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://ejournal.uinsaizu.ac.id/index.php/elaqwal/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 64
+  },
+  {
+   "issn": "2715-0429",
+   "title": "Journal of Islamic Accounting and Finance Research",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Walisongo Semarang",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://journal.walisongo.ac.id/index.php/jiafr/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Accounting. Bookkeeping",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 64
+  },
+  {
+   "issn": "2722-8657",
+   "title": "Kamasean",
+   "alt_title": "Kamasean: Jurnal Teologi Kristen",
+   "publisher": "Institut Agama Kristen Negeri Toraja",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://kamasean.iakn-toraja.ac.id/index.php/ojsdatakamasean",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 64
+  },
+  {
+   "issn": "2797-5096",
+   "title": "Moderatio",
+   "alt_title": "Moderatio: Jurnal Moderasi Beragama",
+   "publisher": "Metro: Lembaga Penelitian dan Pengabdian kepada Masyarakat Institut Agama Islam Negeri Metro",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2021,
+   "homepage": "https://e-journal.metrouniv.ac.id/index.php/moderatio/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 64
+  },
+  {
+   "issn": "2776-8457",
+   "title": "Journal of Comparative Study of Religions",
+   "alt_title": "JCSR",
+   "publisher": "University of Darussalam Gontor",
+   "country": "ID",
+   "language": [
+    "EN",
+    "AR",
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ejournal.unida.gontor.ac.id/index.php/JCSR",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 61
+  },
+  {
+   "issn": "0860-8539",
+   "title": "Studia Paradyskie",
+   "alt_title": null,
+   "publisher": "Szczecin University Press",
+   "country": "PL",
+   "language": [
+    "DE",
+    "IT",
+    "PL",
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://wnus.usz.edu.pl/sp/en/",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Philosophy (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 57
+  },
+  {
+   "issn": "2939-5976",
+   "title": "Targum",
+   "alt_title": "Targum – Interpretáció / Kommentár / Diskurzus",
+   "publisher": "Hungarian Jewish Museum and Archives",
+   "country": "HU",
+   "language": [
+    "EN",
+    "HU"
+   ],
+   "start_year": 2022,
+   "homepage": "https://www.targum.academy/archivum/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Judaism"
+   ],
+   "areas": [
+    "猶太教"
+   ],
+   "articles": 56
+  },
+  {
+   "issn": "2798-1495",
+   "title": "Predica Verbum",
+   "alt_title": null,
+   "publisher": "Research Institutions and Community Development Services (LPPM-STTII Yogyakarta)",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2021,
+   "homepage": "https://www.ejournal.sttii-yogyakarta.ac.id/index.php/predicaverbum/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 55
+  },
+  {
+   "issn": "2667-7717",
+   "title": "Din ve Bilim Muş Alparslan Üniversitesi İslami İlimler Fakültesi Dergisi",
+   "alt_title": "Religion and Science-Journal of Muş Alparslan University Faculty of İslamic Siences",
+   "publisher": "Muş Alparslan University",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2017,
+   "homepage": "https://dergipark.org.tr/en/pub/dinbil",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Science",
+    "Social Sciences"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 53
+  },
+  {
+   "issn": "2676-2838",
+   "title": "Journal of Mother-Tongue Biblical Hermeneutics and Theology",
+   "alt_title": "MOTBIT",
+   "publisher": "Noyam Journals",
+   "country": "GH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://noyam.org/journals/motbit/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 52
+  },
+  {
+   "issn": "2655-2019",
+   "title": "Pengarah",
+   "alt_title": "Pengarah: Jurnal Teologi Kristen",
+   "publisher": "Sekolah Tinggi Alkitab Tiranus",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2019,
+   "homepage": "http://journaltiranus.ac.id/index.php/pengarah/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 52
+  },
+  {
+   "issn": "2722-8584",
+   "title": "Didache",
+   "alt_title": "Didache: Journal of Christian Education",
+   "publisher": "Sekolah Tinggi Teologi Simpson Ungaran",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://journal.sttsimpson.ac.id/index.php/djce",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity",
+    "Practical Theology"
+   ],
+   "areas": [
+    "基督教",
+    "實踐神學"
+   ],
+   "articles": 51
+  },
+  {
+   "issn": "2797-0876",
+   "title": "Mauriduna",
+   "alt_title": "Mauriduna: Journal of Islamic Studies",
+   "publisher": "Institut Muslim Cendekia",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "http://ejournal.mc.ac.id/index.php/mauriduna/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 48
+  },
+  {
+   "issn": "2617-3336",
+   "title": "ایقان",
+   "alt_title": "IQAN",
+   "publisher": "Riphah International University Faisalabad Campus",
+   "country": "PK",
+   "language": [
+    "AR",
+    "EN",
+    "UR"
+   ],
+   "start_year": 2018,
+   "homepage": "https://iqan.com.pk/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 48
+  },
+  {
+   "issn": "3023-4107",
+   "title": "Baberti",
+   "alt_title": null,
+   "publisher": "Bayburt University",
+   "country": "TR",
+   "language": [
+    "EN",
+    "AR",
+    "TR"
+   ],
+   "start_year": 2024,
+   "homepage": "https://dergipark.org.tr/en/pub/babertidergisi",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 46
+  },
+  {
+   "issn": "0010-3713",
+   "title": "Communio Viatorum",
+   "alt_title": null,
+   "publisher": "Karolinum Press",
+   "country": "CZ",
+   "language": [
+    "EN",
+    "DE",
+    "FR"
+   ],
+   "start_year": 2024,
+   "homepage": "https://karolinum.cz/en/journal/communio-viatorum/current",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "實踐神學"
+   ],
+   "articles": 46
+  },
+  {
+   "issn": "2964-416X",
+   "title": "Journal of Islamic History and Manuscript",
+   "alt_title": null,
+   "publisher": "LPPM UIN Prof. K.H. Saifuddin Zuhri Purwokerto",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://ejournal.uinsaizu.ac.id/index.php/jihm",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 44
+  },
+  {
+   "issn": "2641-2799",
+   "title": "Black Theology Papers Project",
+   "alt_title": "BTPP",
+   "publisher": "Columbia University Libraries",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://btpp.columbia.edu/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 43
+  },
+  {
+   "issn": "1693-0304",
+   "title": "Dharmasmrti",
+   "alt_title": "Jurnal Ilmu Agama dan Kebudayaan",
+   "publisher": "Pascasarjana Universitas Hindu Indonesia",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "https://ejournal.unhi.ac.id/index.php/dharmasmrti",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 42
+  },
+  {
+   "issn": "2789-6218",
+   "title": "Pan-African Journal of Theology",
+   "alt_title": null,
+   "publisher": "Adventist University of Africa",
+   "country": "KE",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://journals.aua.ke/pajot/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "基督教",
+    "教義神學"
+   ],
+   "articles": 42
+  },
+  {
+   "issn": "1693-3389",
+   "title": "Tajdida",
+   "alt_title": null,
+   "publisher": "Universitas Muhammadiyah Surakarta",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2014,
+   "homepage": "http://journals.ums.ac.id/index.php/tajdida",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 39
+  },
+  {
+   "issn": "3105-4544",
+   "title": "Wah Academia Journal of Global Religions",
+   "alt_title": null,
+   "publisher": "Wah Academia (SMC-PVT) Ltd",
+   "country": "PK",
+   "language": [
+    "UR",
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://wajgr.com/index.php/WAJGR/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 39
+  },
+  {
+   "issn": "2527-8231",
+   "title": "At-Tarbawi",
+   "alt_title": "Jurnal Kajian Kependidikan Islam",
+   "publisher": "Institut Agama Islam Negeri (IAIN) Surakarta",
+   "country": "ID",
+   "language": [
+    "AR",
+    "EN",
+    "ID"
+   ],
+   "start_year": 2016,
+   "homepage": "http://ejournal.iainsurakarta.ac.id/index.php/at-tarbawi",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Language and Literature"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 36
+  },
+  {
+   "issn": "2089-8835",
+   "title": "Hanifiya",
+   "alt_title": "Hanifiya: Jurnal Studi Agama-Agama",
+   "publisher": "UIN Sunan Gunung Djati Bandung",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2018,
+   "homepage": "https://journal.uinsgd.ac.id/index.php/hanifiya/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 36
+  },
+  {
+   "issn": "3028-2691",
+   "title": "Hitik",
+   "alt_title": "Hitik: International Journal of Catechists and Religious Educators",
+   "publisher": "Religious Educators Association of the Philippines (REAP), Inc.",
+   "country": "PH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2024,
+   "homepage": "https://hitik-journal.reapph.org/journal",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 36
+  },
+  {
+   "issn": "3031-1004",
+   "title": "Religion and Policy Journal",
+   "alt_title": null,
+   "publisher": "FISIP UIN Sunan Gunung Djati Bandung",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://ejournal.uinsgd.ac.id/index.php/rpj/",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Political science (General)",
+    "Religions. Mythology. Rationalism",
+    "Religious ethics"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 35
+  },
+  {
+   "issn": "0254-1807",
+   "title": "Scriptura",
+   "alt_title": null,
+   "publisher": "Stellenbosch University",
+   "country": "ZA",
+   "language": [
+    "EN",
+    "AF"
+   ],
+   "start_year": 1991,
+   "homepage": "https://scriptura.journals.ac.za/pub/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "The Bible"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "聖經研究"
+   ],
+   "articles": 35
+  },
+  {
+   "issn": "2667-7075",
+   "title": "Mesned İlahiyat Araştırmaları Dergisi",
+   "alt_title": null,
+   "publisher": "İnönü Üniversitesi",
+   "country": "TR",
+   "language": [
+    "AR",
+    "TR",
+    "EN"
+   ],
+   "start_year": 2019,
+   "homepage": "https://dergipark.org.tr/en/pub/mesned",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 30
+  },
+  {
+   "issn": "3063-8496",
+   "title": "Mangabdi",
+   "alt_title": "Mangabdi: Journal of Community Engagement in Religion, Social, and Humanities",
+   "publisher": "Universitas Islam Negeri Mahmud Yunus Batusangkar",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2024,
+   "homepage": "https://ejournal.uinmybatusangkar.ac.id/ojs/index.php/mangabdi",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Communities. Classes. Races",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 25
+  },
+  {
+   "issn": "2207-4414",
+   "title": "Australian Journal of Islamic Studies",
+   "alt_title": null,
+   "publisher": "Islamic Sciences and Research Academy of Australia",
+   "country": "AU",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2016,
+   "homepage": "https://www.ajis.com.au/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 24
+  },
+  {
+   "issn": "2980-1117",
+   "title": "Din ve İnsan Dergisi",
+   "alt_title": null,
+   "publisher": "Ankara Hacı Bayram Veli University Rectorate",
+   "country": "TR",
+   "language": [
+    "TR",
+    "EN",
+    "AR"
+   ],
+   "start_year": 2023,
+   "homepage": "https://dergipark.org.tr/tr/pub/dinveinsan",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 24
+  },
+  {
+   "issn": "3023-8080",
+   "title": "Dinler Tarihi",
+   "alt_title": null,
+   "publisher": "Social Sciences University of Ankara",
+   "country": "TR",
+   "language": [
+    "EN",
+    "TR"
+   ],
+   "start_year": 2024,
+   "homepage": "https://dergipark.org.tr/en/pub/dinlertarihi",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 23
+  },
+  {
+   "issn": "1896-6896",
+   "title": "Studia Ełckie",
+   "alt_title": null,
+   "publisher": "Wydawnictwo Diecezjalne Adalbertinum",
+   "country": "PL",
+   "language": [
+    "PL",
+    "IT",
+    "ES",
+    "DE",
+    "EN"
+   ],
+   "start_year": 2006,
+   "homepage": "http://www.studiaelckie.pl/pl/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 21
+  },
+  {
+   "issn": "2338-0489",
+   "title": "Pasca",
+   "alt_title": "Pasca: Jurnal Teologi dan Pendidikan Agama Kristen",
+   "publisher": "Research Institutions and Community Development Services (Lembaga Penelitian dan Pengabdian kepada Masyarakat/LPPM), Indonesia Baptist Theological Seminary, Semarang",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2021,
+   "homepage": "https://journal.stbi.ac.id/index.php/PSC/",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 20
+  },
+  {
+   "issn": "3110-8024",
+   "title": "Hamidah",
+   "alt_title": "Hamidah: Jurnal Ilmu Hadis",
+   "publisher": "Yayasan Albahriah Jamiah Indonesia",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://ejournal.albahriah-institut.org/index.php/hamidah",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 16
+  },
+  {
+   "issn": "2828-7746",
+   "title": "Muẚṣarah",
+   "alt_title": "Muẚṣarah: Jurnal Kajian Islam Kontemporer",
+   "publisher": "Antasari State Islamic University",
+   "country": "ID",
+   "language": [
+    "ID"
+   ],
+   "start_year": 2019,
+   "homepage": "http://jurnal.uin-antasari.ac.id/index.php/muasharah/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 13
+  },
+  {
+   "issn": "2250-5377",
+   "title": "Itinerantes",
+   "alt_title": "Itinerantes: Revista de Historia y Religión",
+   "publisher": "Universidad del Norte Santo Tomás de Aquino",
+   "country": "AR",
+   "language": [
+    "PT",
+    "ES"
+   ],
+   "start_year": 2011,
+   "homepage": "http://revistas.unsta.edu.ar/index.php/Itinerantes",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity",
+    "Latin America. Spanish America",
+    "Practical Theology"
+   ],
+   "areas": [
+    "基督教",
+    "實踐神學"
+   ],
+   "articles": 12
+  },
+  {
+   "issn": "3110-3901",
+   "title": "Indonesian Journal of Religious Studies",
+   "alt_title": null,
+   "publisher": "CV. SPDF Harmony",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://www.ejournal.spdfharmony.com/index.php/ijors/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 10
+  },
+  {
+   "issn": "3123-3872",
+   "title": "Journal of Religious Studies",
+   "alt_title": null,
+   "publisher": "CV. DYOQU Publishing Management",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://journal.dyoqu.com/index.php/jors/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 10
+  },
+  {
+   "issn": "1755-0483",
+   "title": "Politics and Religion",
+   "alt_title": null,
+   "publisher": "Cambridge University Press",
+   "country": "GB",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2025,
+   "homepage": "https://www.cambridge.org/core/journals/politics-and-religion",
+   "license": [
+    "CC BY",
+    "CC BY-SA",
+    "CC BY-ND",
+    "CC BY-NC",
+    "CC BY-NC-SA",
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Political science (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 10
+  },
+  {
+   "issn": "2587-9316",
+   "title": "Христианство на Ближнем Востоке",
+   "alt_title": "Christianity in the Middle East",
+   "publisher": "Христианство на Ближнем Востоке",
+   "country": "RU",
+   "language": [
+    "RU",
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://cmideast.ru",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 4
+  },
+  {
+   "issn": "2772-9001",
+   "title": "Journal of Economics, Theology and Religion",
+   "alt_title": null,
+   "publisher": "Erasmus Economics & Theology Institute",
+   "country": "NL",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2021,
+   "homepage": "https://j-etr.org/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Economic theory. Demography",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 3
+  },
+  {
+   "issn": "1519-843X",
+   "title": "Debates do NER",
+   "alt_title": null,
+   "publisher": "Universidade Federal do Rio Grande do Sul",
+   "country": "BR",
+   "language": [
+    "EN",
+    "PT",
+    "ES"
+   ],
+   "start_year": 1997,
+   "homepage": "http://seer.ufrgs.br/debatesdoner",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 2
+  },
+  {
+   "issn": "3062-1585",
+   "title": "Ahi İlahiyat Dergisi",
+   "alt_title": null,
+   "publisher": "Kirsehir Ahi Evran University",
+   "country": "TR",
+   "language": [
+    "AR",
+    "EN",
+    "TR"
+   ],
+   "start_year": 2023,
+   "homepage": "https://dergipark.org.tr/en/pub/ahiilahiyat",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1978-0893",
+   "title": "Al-Dzikra: Jurnal Studi Ilmu al-Qur'an dan al-Hadits",
+   "alt_title": null,
+   "publisher": "Universitas Islam Negeri Raden Intan Lampung, Indonesia",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://ejournal.radenintan.ac.id/index.php/al-dzikra/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2735-6345",
+   "title": "Anales de Teología",
+   "alt_title": null,
+   "publisher": "Universidad Católica de la Santísima Concepción",
+   "country": "CL",
+   "language": [
+    "IT",
+    "DE",
+    "EN",
+    "ES"
+   ],
+   "start_year": 2011,
+   "homepage": "https://revistas.ucsc.cl/index.php/analesdeteologia/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2376-0621",
+   "title": "Andrews University Seminary Student Journal",
+   "alt_title": "AUSSJ",
+   "publisher": "Andrews University",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://digitalcommons.andrews.edu/aussj/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0229-2807",
+   "title": "Arc",
+   "alt_title": "Arc: The Journal of the School of Religious Studies, McGill University",
+   "publisher": "McGill University Library",
+   "country": "CA",
+   "language": [
+    "FR",
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://arcjournal.library.mcgill.ca/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1689-5150",
+   "title": "Biblica et Patristica Thoruniensia",
+   "alt_title": null,
+   "publisher": "Uniwersytet Mikołaja Kopernika",
+   "country": "PL",
+   "language": [
+    "ES",
+    "PL",
+    "IT",
+    "DE",
+    "FR",
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "http://apcz.umk.pl/czasopisma//index.php/BPTh/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2386-7442",
+   "title": "Collectanea Christiana Orientalia",
+   "alt_title": "CCO",
+   "publisher": "UCOPress. Universidad de Córdoba",
+   "country": "ES",
+   "language": [
+    "EN",
+    "ES",
+    "FR",
+    "AR",
+    "DE"
+   ],
+   "start_year": 2013,
+   "homepage": "https://www.uco.es/servicios/publicaciones/revistas/index.php/cco/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "基督教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1666-7832",
+   "title": "DavarLogos",
+   "alt_title": null,
+   "publisher": "Editorial Universidad Adventista del Plata",
+   "country": "AR",
+   "language": [
+    "ES",
+    "FR",
+    "PT",
+    "EN"
+   ],
+   "start_year": 2002,
+   "homepage": "https://publicaciones.uap.edu.ar/index.php/davarlogos/index",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1796-5675",
+   "title": "Diakonian tutkimus",
+   "alt_title": "Journal for the Study of Diaconia",
+   "publisher": "Diakonian tutkimuksen seura",
+   "country": "FI",
+   "language": [
+    "SV",
+    "EN",
+    "FI"
+   ],
+   "start_year": 2004,
+   "homepage": "https://journal.fi/dt/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0101-3130",
+   "title": "Estudos Teológicos",
+   "alt_title": null,
+   "publisher": "Escola Superior de Teologia",
+   "country": "BR",
+   "language": [
+    "ES",
+    "PT",
+    "DE",
+    "EN"
+   ],
+   "start_year": 2003,
+   "homepage": "http://www.est.edu.br/periodicos/index.php/estudos_teologicos",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）",
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2595-377X",
+   "title": "Fronteiras",
+   "alt_title": "Fronteiras: Revista de Teologia da Unicap",
+   "publisher": "Universidade Católica de Pernambuco (UNICAP)",
+   "country": "BR",
+   "language": [
+    "PT"
+   ],
+   "start_year": 2018,
+   "homepage": "http://www.unicap.br/ojs/index.php/fronteiras",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Doctrinal Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "基督教",
+    "聖經研究",
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2641-2918",
+   "title": "Global Forum on Arts and Christian Faith",
+   "alt_title": "GFACF",
+   "publisher": "International Council of Ethnodoxologists",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2013,
+   "homepage": "http://www.artsandchristianfaith.org/index.php/journal/index",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0304-1042",
+   "title": "Japanese Journal of Religious Studies",
+   "alt_title": "JJRS",
+   "publisher": "Nanzan Institute for Religion and Culture, Nagoya",
+   "country": "JP",
+   "language": [
+    "EN"
+   ],
+   "start_year": 1974,
+   "homepage": "http://nirc.nanzan-u.ac.jp/en/publications/jjrs/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2164-7666",
+   "title": "Jesuit Higher Education: A Journal",
+   "alt_title": null,
+   "publisher": "Regis University",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2012,
+   "homepage": "https://epublications.regis.edu/jhe/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Christian Denominations",
+    "Education"
+   ],
+   "areas": [
+    "基督教各宗派"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2205-0442",
+   "title": "Journal of Contemporary Ministry",
+   "alt_title": null,
+   "publisher": "Christian Research Association",
+   "country": "AU",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://www.journalofcontemporaryministry.com",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Practical religion. The Christian life"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2214-1324",
+   "title": "Journal of Jesuit Studies",
+   "alt_title": null,
+   "publisher": "Brill",
+   "country": "NL",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "https://brill.com/view/journals/jjs/jjs-overview.xml",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christian Denominations",
+    "History"
+   ],
+   "areas": [
+    "基督教各宗派"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1522-5658",
+   "title": "Journal of Religion and Society",
+   "alt_title": null,
+   "publisher": "Creighton University",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 1999,
+   "homepage": "http://www.creighton.edu/JRS/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2985-1874",
+   "title": "Journal of the Philosophy and Religion Society of Thailand",
+   "alt_title": null,
+   "publisher": "The Philosophy and Religion Society of Thailand",
+   "country": "TH",
+   "language": [
+    "EN",
+    "TH"
+   ],
+   "start_year": 2020,
+   "homepage": "https://so04.tci-thaijo.org/index.php/parst/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Philosophy (General)",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2255-2715",
+   "title": "Journal of the Sociology and Theory of Religion",
+   "alt_title": null,
+   "publisher": "Universidad de Valladolid",
+   "country": "ES",
+   "language": [
+    "EN",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2012,
+   "homepage": "https://revistas.uva.es/index.php/socireli",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1846-4580",
+   "title": "Kairos (Hrvatsko Izd.)",
+   "alt_title": "Kairos: Evanđeoski Teološki Časopis",
+   "publisher": "The Biblical Institute",
+   "country": "HR",
+   "language": [
+    "EN",
+    "HR"
+   ],
+   "start_year": 2007,
+   "homepage": "https://kairos.bizg.hr/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Practical Theology",
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究",
+    "教義神學",
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2986-2019",
+   "title": "Kardia",
+   "alt_title": "Kardia: Jurnal Teologi dan Pendidikan Kristiani",
+   "publisher": "Sekolah Tinggi Teologi Parakletos Tomohon",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://ojs.sttparakletos-tomohon.ac.id/index.php/kardia/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0023-3196",
+   "title": "Komunikaty Mazursko-Warmińskie",
+   "alt_title": "Masuro-Warmian Bulletin",
+   "publisher": "Instytut Północny im. Wojciecha Kętrzyńskiego (The Wojciech Kętrzyński Northern Institute, formerly The Wojciech Kętrzyński Research Center)",
+   "country": "PL",
+   "language": [
+    "DE",
+    "PL",
+    "EN",
+    "RU"
+   ],
+   "start_year": 2021,
+   "homepage": "http://kmw.ip.olsztyn.pl/en",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "History of Central Europe",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2829-0135",
+   "title": "Manthano",
+   "alt_title": "Manthano: Jurnal Pendidikan Kristen",
+   "publisher": "Sekolah Tinggi Agama Kristen Samarinda",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2022,
+   "homepage": "https://ojs.stak-samarinda.ac.id/index.php/manthano/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Education",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2475-2428",
+   "title": "MAVCOR Journal",
+   "alt_title": null,
+   "publisher": "Yale University",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://mavcor.yale.edu/mavcor-journal",
+   "license": [
+    "CC BY",
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "Visual arts"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2655-3694",
+   "title": "Muharrik",
+   "alt_title": "Muharrik: Jurnal Dakwah dan Sosial",
+   "publisher": "Fakultas Dakwah Institut Agama Islam Sunan Giri (INSURI) Ponorogo",
+   "country": "ID",
+   "language": [
+    "ID",
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ejournal.insuriponorogo.ac.id/index.php/muharrik/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)",
+    "Social sciences (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2199-8108",
+   "title": "New Diversities",
+   "alt_title": null,
+   "publisher": "Max Planck Institute for the Study of Religious and Ethnic Diversity",
+   "country": "DE",
+   "language": [
+    "EN"
+   ],
+   "start_year": 1999,
+   "homepage": "https://newdiversities.mmg.mpg.de/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Religions. Mythology. Rationalism",
+    "Religious ethics"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1820-6581",
+   "title": "Politics and Religion",
+   "alt_title": "Politikologija religije",
+   "publisher": "Center for Study of Religion and Religious Tolerance",
+   "country": "RS",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2007,
+   "homepage": "http://www.politicsandreligionjournal.com",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1513-6442",
+   "title": "Prajna Vihara",
+   "alt_title": null,
+   "publisher": "Guna Chakra Research Center",
+   "country": "TH",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2004,
+   "homepage": "https://assumptionjournal.au.edu/index.php/PrajnaVihara/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Philosophy (General)",
+    "Philosophy of religion. Psychology of religion. Religion in relation to other subjects",
+    "Philosophy. Psychology. Religion",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "3064-3767",
+   "title": "Proskuneo",
+   "alt_title": "Proskuneo: Journal of Theology",
+   "publisher": "Program Studi Teologi STT Transformasi Indonesia",
+   "country": "ID",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2024,
+   "homepage": "https://e-journal.stttransformasi-indonesia.ac.id/index.php/pjt",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "By religion",
+    "Practical religion. The Christian life",
+    "Religion (General)",
+    "Religious ethics"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2543-618X",
+   "title": "Przegląd Środkowo-Wschodni",
+   "alt_title": null,
+   "publisher": "Institute of Central and East European Intercultural Studies Faculty of Applied Linguistics University of Warsaw",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL",
+    "BE",
+    "UK",
+    "RU"
+   ],
+   "start_year": 2016,
+   "homepage": "http://psw.uw.edu.pl/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "History of Central Europe",
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2750-7947",
+   "title": "Religion and Development",
+   "alt_title": null,
+   "publisher": "BRILL",
+   "country": "DE",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2022,
+   "homepage": "https://brill.com/view/journals/rnd/rnd-overview.xml",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Ethnology. Social and cultural anthropology",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2150-9298",
+   "title": "Religion and Society",
+   "alt_title": null,
+   "publisher": "Berghahn Books",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://www.berghahnjournals.com/view/journals/religion-and-society/religion-and-society-overview.xml",
+   "license": [
+    "CC BY",
+    "CC BY-ND",
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism",
+    "Sociology (General)"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0257-4667",
+   "title": "Revista Biserica Ortodoxă Română",
+   "alt_title": "Revista Biserica Ortodoxă Română: Buletinul oficial al Patriarhiei Române",
+   "publisher": "The Biblical and Orthodox Mission Institute Publishing House",
+   "country": "RO",
+   "language": [
+    "RO",
+    "EN",
+    "FR",
+    "DE",
+    "EL"
+   ],
+   "start_year": 2021,
+   "homepage": "https://www.revistabor.ro/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0104-0529",
+   "title": "Revista de Cultura Teológica",
+   "alt_title": null,
+   "publisher": "Pontifícia Universidade Católica de São Paulo",
+   "country": "BR",
+   "language": [
+    "PT",
+    "FR",
+    "EN"
+   ],
+   "start_year": 2013,
+   "homepage": "http://revistas.pucsp.br/index.php/culturateo/issue/current",
+   "license": [
+    "CC BY-NC-SA"
+   ],
+   "lcc": [
+    "Philosophy. Psychology. Religion",
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0239-2550",
+   "title": "Rocznik Teologiczny",
+   "alt_title": "Theological Yearbook",
+   "publisher": "Wydawnictwo Naukowe Chrześcijańskiej Akademii Teologicznej w Warszawie (Scientific Publishing House of the Christian Academy of Theology in Warsaw)",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "RU",
+    "DE"
+   ],
+   "start_year": 2024,
+   "homepage": "https://ojs.chat.edu.pl/index.php/rt/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Doctrinal Theology",
+    "Philosophy (General)"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2723-4894",
+   "title": "Rusydiah",
+   "alt_title": "Rusydiah: Jurnal Pemikiran Islam",
+   "publisher": "Sekolah Tinggi Agama Islam Negeri (STAIN) Sultan Abdurrahman Kepulauan Riau",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ejournal.stainkepri.ac.id/rusydiah/Home",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "By religion",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2697-2484",
+   "title": "Specula",
+   "alt_title": "Specula: Revista de Humanidades y Espiritualidad",
+   "publisher": "Universidad Catolica de Valenica",
+   "country": "ES",
+   "language": [
+    "CA",
+    "EN",
+    "FR",
+    "FR",
+    "IT"
+   ],
+   "start_year": 2021,
+   "homepage": "https://revistas.ucv.es/index.php/specula",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2311-3448",
+   "title": "State, Religion and Church",
+   "alt_title": null,
+   "publisher": "Russian Presidential Academy of National Economy and Public Administration. RANEPA",
+   "country": "RU",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2014,
+   "homepage": "http://srch.ranepa.ru/",
+   "license": [
+    "CC BY-NC-ND"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2413-9459",
+   "title": "Stellenbosch Theological Journal",
+   "alt_title": null,
+   "publisher": "Pieter de Waal Neethling Trust, Stellenbosch",
+   "country": "ZA",
+   "language": [
+    "NL",
+    "AF",
+    "EN"
+   ],
+   "start_year": 2015,
+   "homepage": "https://ojs.reformedjournals.co.za/stj/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1642-5650",
+   "title": "Studia Bobolanum",
+   "alt_title": null,
+   "publisher": "Wydawnictwo Naukowe Collegium Bobolanum",
+   "country": "PL",
+   "language": [
+    "UK",
+    "IT",
+    "PL",
+    "EN",
+    "FR"
+   ],
+   "start_year": 2018,
+   "homepage": "http://bobolanum.pl/resources/html/cms/MAINPAGE",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Christianity",
+    "Practical Theology"
+   ],
+   "areas": [
+    "基督教",
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1017-0499",
+   "title": "Studia Historiae Ecclesiasticae",
+   "alt_title": null,
+   "publisher": "Unisa Press",
+   "country": "ZA",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2008,
+   "homepage": "https://unisapressjournals.co.za/index.php/SHE/index",
+   "license": [
+    "CC BY-SA"
+   ],
+   "lcc": [
+    "Christianity"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1896-3226",
+   "title": "Studia Nauk Teologicznych PAN",
+   "alt_title": null,
+   "publisher": "Polska Akademia Nauk (Polish Academy of Sciences)",
+   "country": "PL",
+   "language": [
+    "PL",
+    "EN",
+    "DE",
+    "IT",
+    "ES"
+   ],
+   "start_year": 2006,
+   "homepage": "https://journals.pan.pl/snt/",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Doctrinal Theology"
+   ],
+   "areas": [
+    "教義神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1899-2587",
+   "title": "Studia Prymasowskie",
+   "alt_title": null,
+   "publisher": "Wydawnictwo Naukowe Uniwersytetu Kardynała Stefana Wyszyńskiego w Warszawie",
+   "country": "PL",
+   "language": [
+    "IT",
+    "EN",
+    "PL"
+   ],
+   "start_year": 2023,
+   "homepage": "https://czasopisma.uksw.edu.pl/index.php/stpr/index",
+   "license": [
+    "CC BY-ND"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1212-8570",
+   "title": "Studia Theologica",
+   "alt_title": null,
+   "publisher": "Univerzita Palackého",
+   "country": "CZ",
+   "language": [
+    "SK",
+    "CS"
+   ],
+   "start_year": 2015,
+   "homepage": "https://www.studiatheologica.eu/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1930-3777",
+   "title": "Studies in Christian-Jewish Relations",
+   "alt_title": null,
+   "publisher": "Center for Christian-Jewish Learning at Boston College",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2005,
+   "homepage": "https://ejournals.bc.edu/index.php/scjr/index",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "Judaism"
+   ],
+   "areas": [
+    "基督教",
+    "猶太教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2746-8127",
+   "title": "Tebuireng",
+   "alt_title": "Tebuireng: Journal of Islamic Studies and Society",
+   "publisher": "Fakultas Agama Islam, Universitas Hasyim Asy'ari",
+   "country": "ID",
+   "language": [
+    "EN",
+    "ID"
+   ],
+   "start_year": 2020,
+   "homepage": "https://ejournal.unhasy.ac.id/index.php/TJISS",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islamic law",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2300-3839",
+   "title": "Textus et Studia",
+   "alt_title": null,
+   "publisher": "The Pontifical University of John Paul II in Krakow",
+   "country": "PL",
+   "language": [
+    "EN",
+    "PL",
+    "RU",
+    "IT"
+   ],
+   "start_year": 2015,
+   "homepage": "https://czasopisma.upjp2.edu.pl/textusetstudia",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Christianity",
+    "History of Central Europe",
+    "History of Eastern Europe"
+   ],
+   "areas": [
+    "基督教"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1832-3391",
+   "title": "The Bible and Critical Theory",
+   "alt_title": null,
+   "publisher": "Drew university",
+   "country": "US",
+   "language": [
+    "EN"
+   ],
+   "start_year": 2006,
+   "homepage": "http://www.bibleandcriticaltheory.com/",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "The Bible"
+   ],
+   "areas": [
+    "聖經研究"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "0021-8480",
+   "title": "The Journal of Adventist Education",
+   "alt_title": null,
+   "publisher": "General Conference of Seventh-day Adventists",
+   "country": "US",
+   "language": [
+    "EN",
+    "FR",
+    "PT",
+    "ES"
+   ],
+   "start_year": 2017,
+   "homepage": "https://www.journalofadventisteducation.org",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Practical Theology",
+    "Special aspects of education"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1893-4773",
+   "title": "Tidsskrift for Praktisk Teologi",
+   "alt_title": "Nordic Journal of Practical Theology",
+   "publisher": "MF Norwegian School of Theology, Religion and Society",
+   "country": "NO",
+   "language": [
+    "EN",
+    "SV",
+    "DA",
+    "NB",
+    "NN"
+   ],
+   "start_year": 2020,
+   "homepage": "https://journals.mf.no/tpt/index",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Practical Theology"
+   ],
+   "areas": [
+    "實踐神學"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "1796-4407",
+   "title": "Uskonnontutkija",
+   "alt_title": "Religionsforskaren",
+   "publisher": "Finnish Society for the Study of Religion",
+   "country": "FI",
+   "language": [
+    "SV",
+    "FI"
+   ],
+   "start_year": 2012,
+   "homepage": "https://journal.fi/uskonnontutkija",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2817-2604",
+   "title": "Vanguard Journal of Theology & Ministry",
+   "alt_title": null,
+   "publisher": "Vanguard Journal of Theology and Ministry",
+   "country": "CA",
+   "language": [
+    "EN",
+    "FR"
+   ],
+   "start_year": 2022,
+   "homepage": "https://vjtm.vanguardcollege.com",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2073-7203",
+   "title": "Государство, религия, церковь в России и за рубежом",
+   "alt_title": "State, Religion and Church in Russia and Worldwide",
+   "publisher": "Russian Presidential Academy of National Economy and Public Administration. RANEPA",
+   "country": "RU",
+   "language": [
+    "EN",
+    "RU"
+   ],
+   "start_year": 2022,
+   "homepage": "https://religion.ranepa.ru/jour",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2949-4001",
+   "title": "Старообрядчество",
+   "alt_title": "Old Believer",
+   "publisher": "Старообрядчество",
+   "country": "RU",
+   "language": [
+    "RU",
+    "EN"
+   ],
+   "start_year": 2023,
+   "homepage": "https://oldbeliever.ru",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2227-0345",
+   "title": "العميد",
+   "alt_title": "Al-Ameed",
+   "publisher": "Al-Ameed International Centre for Research and Studies/Al-Abass Holy Shrine",
+   "country": "IQ",
+   "language": [
+    "EN",
+    "AR"
+   ],
+   "start_year": 2012,
+   "homepage": "https://alameed.alameedcenter.iq/amd/index.php/ameed",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Social Sciences"
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2519-6480",
+   "title": "علمیات",
+   "alt_title": "Epistemology",
+   "publisher": "Probe & Find Forum Lahore",
+   "country": "PK",
+   "language": [
+    "EN",
+    "UR"
+   ],
+   "start_year": 2014,
+   "homepage": "https://www.epistemology.pk/",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Epistemology. Theory of knowledge",
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2353-0197",
+   "title": "مجلة انتروبولوجيا الأديان",
+   "alt_title": "The Anthropology of Religion Journal",
+   "publisher": "University of Abou Bekr Belkaid Tlemcen",
+   "country": "DZ",
+   "language": [
+    "EN",
+    "FR",
+    "AR"
+   ],
+   "start_year": 2004,
+   "homepage": "https://journals.univ-tlemcen.dz/RADR/index.php/RADR/en",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Religion (General)"
+   ],
+   "areas": [
+    "宗教（總類）"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2717-0934",
+   "title": "مطالعات بنیادین و کاربردی جهان اسلام",
+   "alt_title": "The Fundamental and Applied Studies of the Islamic World",
+   "publisher": "Iranian Association of Geopolitics",
+   "country": "IR",
+   "language": [
+    "FA"
+   ],
+   "start_year": 2019,
+   "homepage": "https://journal.iiwfs.com/?lang=en",
+   "license": [
+    "CC BY"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc."
+   ],
+   "areas": [
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 1
+  },
+  {
+   "issn": "2538-5135",
+   "title": "پژوهشنامه عرفان",
+   "alt_title": "Pažuhešnāma-ye ʿErfān",
+   "publisher": "Scientific Association of Islamic Mysticism of Iran",
+   "country": "IR",
+   "language": [
+    "FA"
+   ],
+   "start_year": 2024,
+   "homepage": "https://erfanmag.ir/index.php?slc_lang=en&sid=1",
+   "license": [
+    "CC BY-NC"
+   ],
+   "lcc": [
+    "Islam. Bahai Faith. Theosophy, etc.",
+    "Religions. Mythology. Rationalism"
+   ],
+   "areas": [
+    "宗教學總論／神話",
+    "伊斯蘭／巴哈伊"
+   ],
+   "articles": 1
+  }
+ ]
+}

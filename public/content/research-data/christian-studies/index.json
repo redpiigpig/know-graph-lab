@@ -7,12 +7,12 @@
    "desc": "教父原典、教父著作與研究；含 Schaff《前尼西亞教父》《尼西亞及後期教父》全 38 卷",
    "source": "library",
    "books": 249,
-   "chunks": 50765,
+   "chunks": 51180,
    "parts": [
     {
      "name": "教父原典",
      "books": 187,
-     "chunks": 30829
+     "chunks": 31244
     },
     {
      "name": "教父著作",
@@ -48,47 +48,47 @@
    "desc": "改教家原著、認信文書與各宗派研究；館內最大的一批，多數來自改革宗檔案站",
    "source": "library",
    "books": 2429,
-   "chunks": 434564,
+   "chunks": 437005,
    "parts": [
     {
      "name": "長老宗",
      "books": 777,
-     "chunks": 129749
+     "chunks": 130519
     },
     {
      "name": "改革宗",
      "books": 435,
-     "chunks": 125605
+     "chunks": 125615
     },
     {
      "name": "公理宗與清教徒",
      "books": 406,
-     "chunks": 83926
+     "chunks": 84906
     },
     {
      "name": "安立甘宗",
      "books": 304,
-     "chunks": 54469
+     "chunks": 54853
     },
     {
      "name": "信條與教理問答",
      "books": 168,
-     "chunks": 15355
+     "chunks": 15400
     },
     {
      "name": "路德宗",
      "books": 206,
-     "chunks": 11842
+     "chunks": 11986
     },
     {
      "name": "荷蘭改革宗",
      "books": 88,
-     "chunks": 10031
+     "chunks": 10123
     },
     {
      "name": "衛理宗",
      "books": 19,
-     "chunks": 1945
+     "chunks": 1950
     },
     {
      "name": "改教著作",
@@ -103,7 +103,7 @@
     {
      "name": "其他改革宗資料",
      "books": 21,
-     "chunks": 401
+     "chunks": 412
     }
    ]
   },
@@ -113,23 +113,308 @@
    "icon": "🕊",
    "desc": "世界教會協會自己的數位檔案：信仰與教制文件（含利瑪文件《洗禮、聖餐與職事》）、生活與工作、世界宣教大會、羅馬天主教—WCC 聯合工作小組等系列",
    "source": "corpus",
-   "docs": 3,
-   "chars": 443870,
+   "docs": 1451,
+   "chars": 402338023,
    "items": [
     {
-     "id": "wccfops2.109",
-     "title": "Episcop and episcopate in ecumenical perspective, WCC",
-     "chars": 178788
+     "id": "wccdictionaryecumenicalmovement",
+     "title": "Dictionary of the ecumenical movement",
+     "chars": 5648141
     },
     {
-     "id": "wccfops2.121",
-     "title": "Growing Together in Baptism, Eucharist and Ministry. A Study Guide",
-     "chars": 135909
+     "id": "wccfops2.226",
+     "title": "Growth in Agreement IV: International Dialogue Texts and Agreed Statements, 2005-2013, Faith and Order Paper N",
+     "chars": 4829110
     },
     {
-     "id": "wccfops2.118",
-     "title": "Baptism, Eucharist and Ministry, Faith and Order Paper No. 111, Geneva, World Council of Churches",
-     "chars": 129173
+     "id": "wccfops2.194",
+     "title": "Growth in Agreement II. Reports and Agreed Statements of Ecumenical Conversations at World Level 1982-1998, ed",
+     "chars": 3732832
+    },
+    {
+     "id": "wcceps_1985",
+     "title": "Ecumenical Press Service (EPS) 52nd Year 1985",
+     "chars": 2502313
+    },
+    {
+     "id": "wcceps_1988",
+     "title": "Ecumenical Press Service (EPS) 55th Year 1988",
+     "chars": 2463595
+    },
+    {
+     "id": "wcceps_1987",
+     "title": "Ecumenical Press Service (EPS) 54th Year 1987",
+     "chars": 2341959
+    },
+    {
+     "id": "wcceps_1964",
+     "title": "Ecumenical Press Service (EPS) 31st Year 1964",
+     "chars": 2298614
+    },
+    {
+     "id": "wccfops2.211",
+     "title": "Growth in Agreement III: International Dialogue texts and Agreed Statements, 1998-2005, ed. by Jeffrey Gros, F",
+     "chars": 2242090
+    },
+    {
+     "id": "wcceps_1984",
+     "title": "Ecumenical Press Service (EPS) 51st Year 1984",
+     "chars": 2172458
+    },
+    {
+     "id": "wcceps_1983",
+     "title": "Ecumenical Press Service (EPS) 50th Year 1983",
+     "chars": 2167676
+    },
+    {
+     "id": "wcceps_1963",
+     "title": "Ecumenical Press Service (EPS) 30th Year 1963",
+     "chars": 2098441
+    },
+    {
+     "id": "wcceps_1986",
+     "title": "Ecumenical Press Service (EPS) 53rd Year 1986",
+     "chars": 2059180
+    },
+    {
+     "id": "wcceps_1989",
+     "title": "Ecumenical Press Service (EPS) 56th Year 1989",
+     "chars": 2055394
+    },
+    {
+     "id": "wcceps_1990",
+     "title": "Ecumenical Press Service (EPS) 57th Year 1990",
+     "chars": 2046209
+    },
+    {
+     "id": "wcceps_1965",
+     "title": "Ecumenical Press Service (EPS) 32nd Year 1965",
+     "chars": 2017309
+    },
+    {
+     "id": "wcceps_1968",
+     "title": "Ecumenical Press Service (EPS) 35th Year 1968",
+     "chars": 1990304
+    },
+    {
+     "id": "wcceps_1967",
+     "title": "Ecumenical Press Service (EPS) 34th Year 1967",
+     "chars": 1898849
+    },
+    {
+     "id": "wcceps_1982",
+     "title": "Ecumenical Press Service (EPS) 49th Year 1982",
+     "chars": 1894127
+    },
+    {
+     "id": "wcceps_1962",
+     "title": "Ecumenical Press Service (EPS) 29th Year 1962",
+     "chars": 1878259
+    },
+    {
+     "id": "wcceps_1969",
+     "title": "Ecumenical Press Service (EPS) 36th Year 1969",
+     "chars": 1863835
+    },
+    {
+     "id": "wcceps_1992",
+     "title": "Ecumenical Press Service (EPS) 59th Year 1992",
+     "chars": 1837787
+    },
+    {
+     "id": "wcceps_1966",
+     "title": "Ecumenical Press Service (EPS) 33rd Year 1966",
+     "chars": 1790514
+    },
+    {
+     "id": "wcceps_1993",
+     "title": "Ecumenical Press Service (EPS) 60th Year 1993",
+     "chars": 1775485
+    },
+    {
+     "id": "wcceps_1991",
+     "title": "Ecumenical Press Service (EPS) 58th Year 1991",
+     "chars": 1717393
+    },
+    {
+     "id": "wcceps_1970",
+     "title": "Ecumenical Press Service (EPS) 37th Year 1970",
+     "chars": 1615515
+    },
+    {
+     "id": "wcccciareports024",
+     "title": "The Churches in International Affairs : Reports 2010-2013",
+     "chars": 1596599
+    },
+    {
+     "id": "wcca14",
+     "title": "The Uppsala Report 1968. Official report of the Fourth Assembly of the World Council of Churches. Uppsala, Jul",
+     "chars": 1583169
+    },
+    {
+     "id": "wcceps_1961",
+     "title": "Ecumenical Press Service (EPS) 28th Year 1961",
+     "chars": 1575964
+    },
+    {
+     "id": "wccfops2.115",
+     "title": "Growth in Agreement - Reports and Agreed Statements of Ecumenical Conversations on a World Level, WCC",
+     "chars": 1544562
+    },
+    {
+     "id": "wcceps_1971",
+     "title": "Ecumenical Press Service (EPS) 38th Year 1971",
+     "chars": 1538852
+    },
+    {
+     "id": "wcc_bulletin_2019-2020",
+     "title": "WCC Bulletin (2019-2020)",
+     "chars": 1495969
+    },
+    {
+     "id": "wcc_bulletin_2018-2019",
+     "title": "WCC Bulletin (2018-2019)",
+     "chars": 1476817
+    },
+    {
+     "id": "wcclifework001",
+     "title": "The Stockholm conference 1925 : the official report to the Universal Christian Conference on Life and Work hel",
+     "chars": 1457164
+    },
+    {
+     "id": "wcc_bulletin_2010-2011",
+     "title": "WCC Bulletin (2010-2011)",
+     "chars": 1452963
+    },
+    {
+     "id": "wcc_bulletin_2011-2012",
+     "title": "WCC Bulletin (2011-2012)",
+     "chars": 1451005
+    },
+    {
+     "id": "wcc_bulletin_2009-2010",
+     "title": "WCC Bulletin (2009-2010)",
+     "chars": 1430292
+    },
+    {
+     "id": "wcc_bulletin_2023-2024",
+     "title": "WCC Catalog (2023-2024)",
+     "chars": 1411510
+    },
+    {
+     "id": "wcc-materials-v-1-fall-2024",
+     "title": "WCC Materials V 1 Fall 2024",
+     "chars": 1401681
+    },
+    {
+     "id": "wcc_bulletin_2022-2023",
+     "title": "WCC Catalog (2022-2023)",
+     "chars": 1392804
+    },
+    {
+     "id": "wcc_bulletin_2008-2009",
+     "title": "WCC Bulletin (2008-2009)",
+     "chars": 1383523
+    },
+    {
+     "id": "wcc_bulletin_2020-2021",
+     "title": "WCC Bulletin (2020-2021)",
+     "chars": 1367335
+    },
+    {
+     "id": "wcceps_1960",
+     "title": "Ecumenical Press Service (EPS) 27th Year 1960",
+     "chars": 1358196
+    },
+    {
+     "id": "wccfops2.203",
+     "title": "Faith and Order at the Crossroads. Kuala Lumpur 2004. The Plenary Commission Meeting, ed. Thomas F. Best, Fait",
+     "chars": 1351379
+    },
+    {
+     "id": "wcc_bulletin_2021-2022",
+     "title": "WCC Bulletin (2021-2022)",
+     "chars": 1338874
+    },
+    {
+     "id": "wcc_bulletin_2017-2018",
+     "title": "WCC Bulletin (2017-2018)",
+     "chars": 1337720
+    },
+    {
+     "id": "wcceps_1954",
+     "title": "Ecumenical Press Service (EPS) 21st Year 1954",
+     "chars": 1327742
+    },
+    {
+     "id": "wcccciareports023",
+     "title": "The Churches in International Affairs : Reports 2003-2006",
+     "chars": 1321083
+    },
+    {
+     "id": "wcceps_1973",
+     "title": "Ecumenical Press Service (EPS) 40th Year 1973",
+     "chars": 1320906
+    },
+    {
+     "id": "wcceps_1994",
+     "title": "Ecumenical Press Service (EPS) 61st Year 1994",
+     "chars": 1320401
+    },
+    {
+     "id": "wcceps_1957",
+     "title": "Ecumenical Press Service (EPS) 24th Year 1957",
+     "chars": 1308763
+    },
+    {
+     "id": "wcc_bulletin_2016-2017",
+     "title": "WCC Bulletin (2016-2017)",
+     "chars": 1302922
+    },
+    {
+     "id": "wcceps_1972",
+     "title": "Ecumenical Press Service (EPS) 39th Year 1972",
+     "chars": 1302490
+    },
+    {
+     "id": "wccicpis_1940",
+     "title": "International Christian Press and Information Service (ICPIS) Year 1940",
+     "chars": 1300712
+    },
+    {
+     "id": "wccfops2.166",
+     "title": "Documentary History of Faith and Order 1963-1993, ed. Günther Gassmann, WCC",
+     "chars": 1298942
+    },
+    {
+     "id": "wcc_bulletin_2013-2014",
+     "title": "WCC Bulletin (2013-2014)",
+     "chars": 1284217
+    },
+    {
+     "id": "wcceps_1974",
+     "title": "Ecumenical Press Service (EPS) 41st Year 1974",
+     "chars": 1283582
+    },
+    {
+     "id": "wcc_bulletin_2014-2015",
+     "title": "WCC Bulletin (2014-2015)",
+     "chars": 1280822
+    },
+    {
+     "id": "wcca11",
+     "title": "The New Delhi Report. The Third Assembly of the World Council of Churches.",
+     "chars": 1274410
+    },
+    {
+     "id": "wcc_bulletin_2015-2016",
+     "title": "WCC Bulletin (2015-2016)",
+     "chars": 1267927
+    },
+    {
+     "id": "wcc_bulletin_2012-2013",
+     "title": "WCC Bulletin (2012-2013)",
+     "chars": 1228189
     }
    ]
   },
@@ -139,10 +424,310 @@
    "icon": "✝",
    "desc": "洛桑信約（1974）、馬尼拉宣言（1989）、開普敦承諾（2010）、首爾宣言（2024）四份基礎文件，以及洛桑專題論文（LOP）全系列",
    "source": "corpus",
-   "docs": 0,
-   "chars": 0,
-   "items": [],
-   "note": "尚未抓取"
+   "docs": 109,
+   "chars": 10091552,
+   "items": [
+    {
+     "id": "business-mission-lop-59",
+     "title": "business-mission-lop-59",
+     "chars": 261066
+    },
+    {
+     "id": "lop-24",
+     "title": "lop-24",
+     "chars": 239983
+    },
+    {
+     "id": "jewish-evangelism-lop-67",
+     "title": "jewish-evangelism-lop-67",
+     "chars": 234484
+    },
+    {
+     "id": "persecuted-church-lop-32",
+     "title": "persecuted-church-lop-32",
+     "chars": 233090
+    },
+    {
+     "id": "making-disciples-oral-learners-lop-54",
+     "title": "making-disciples-oral-learners-lop-54",
+     "chars": 222600
+    },
+    {
+     "id": "holistic-mission-lop-33",
+     "title": "holistic-mission-lop-33",
+     "chars": 220987
+    },
+    {
+     "id": "empowering-women-and-men-to-use-their-gifts-together-in-advancing-the-gospel-lop-53",
+     "title": "empowering-women-and-men-to-use-their-gifts-together-in-advancing-the-gospel-lop-53",
+     "chars": 210473
+    },
+    {
+     "id": "bioethics-obstacle-or-opportunity-for-the-gospel-lop-58",
+     "title": "bioethics-obstacle-or-opportunity-for-the-gospel-lop-58",
+     "chars": 201148
+    },
+    {
+     "id": "religious-non-religious-spirituality-western-world-lop-45",
+     "title": "religious-non-religious-spirituality-western-world-lop-45",
+     "chars": 195740
+    },
+    {
+     "id": "media-technology-rainbow-ark-cross-lop-48-2",
+     "title": "media-technology-rainbow-ark-cross-lop-48-2",
+     "chars": 192218
+    },
+    {
+     "id": "the-1225-challenge-reaching-the-youth-generation-lop-52",
+     "title": "the-1225-challenge-reaching-the-youth-generation-lop-52",
+     "chars": 185771
+    },
+    {
+     "id": "lop-51-reconciliation-as-the-mission-of-god",
+     "title": "lop-51-reconciliation-as-the-mission-of-god",
+     "chars": 185100
+    },
+    {
+     "id": "redeeming-arts-restoration-arts-gods-creational-intention-lop-46",
+     "title": "redeeming-arts-restoration-arts-gods-creational-intention-lop-46",
+     "chars": 177551
+    },
+    {
+     "id": "spiritual-conflict-todays-mission-lop-29",
+     "title": "spiritual-conflict-todays-mission-lop-29",
+     "chars": 176062
+    },
+    {
+     "id": "marketplace-ministry-lop-40",
+     "title": "marketplace-ministry-lop-40",
+     "chars": 172770
+    },
+    {
+     "id": "mission-children-risk-lop-66",
+     "title": "mission-children-risk-lop-66",
+     "chars": 165901
+    },
+    {
+     "id": "globalization-gospel-rethinking-mission-contemporary-world-lop-30",
+     "title": "globalization-gospel-rethinking-mission-contemporary-world-lop-30",
+     "chars": 164288
+    },
+    {
+     "id": "the-evangelical-church-interacting-between-the-global-and-the-local",
+     "title": "the-evangelical-church-interacting-between-the-global-and-the-local",
+     "chars": 156800
+    },
+    {
+     "id": "towards-transformation-citiesregions-lop-37",
+     "title": "towards-transformation-citiesregions-lop-37",
+     "chars": 156277
+    },
+    {
+     "id": "evangelization-children-lop-47",
+     "title": "evangelization-children-lop-47",
+     "chars": 155543
+    },
+    {
+     "id": "lop-57",
+     "title": "lop-57",
+     "chars": 154434
+    },
+    {
+     "id": "jewish-evangelism-a-call-to-the-church-lop-60",
+     "title": "jewish-evangelism-a-call-to-the-church-lop-60",
+     "chars": 154298
+    },
+    {
+     "id": "lop-27",
+     "title": "lop-27",
+     "chars": 153071
+    },
+    {
+     "id": "diasporas-and-international-students-the-new-people-next-door-lop-55",
+     "title": "diasporas-and-international-students-the-new-people-next-door-lop-55",
+     "chars": 153020
+    },
+    {
+     "id": "uniqueness-christ-postmodern-world-challenge-world-religions-lop-31",
+     "title": "uniqueness-christ-postmodern-world-challenge-world-religions-lop-31",
+     "chars": 147349
+    },
+    {
+     "id": "realities-changing-expressions-church-lop-43",
+     "title": "realities-changing-expressions-church-lop-43",
+     "chars": 147212
+    },
+    {
+     "id": "hidden-forgotten-people-including-disabled-lop-35a",
+     "title": "hidden-forgotten-people-including-disabled-lop-35a",
+     "chars": 146809
+    },
+    {
+     "id": "two-thirds-world-church-lop-44",
+     "title": "two-thirds-world-church-lop-44",
+     "chars": 143743
+    },
+    {
+     "id": "towards-a-biblical-and-theological-framework-for-child-participation-in-the-missio-dei",
+     "title": "towards-a-biblical-and-theological-framework-for-child-participation-in-the-missio-dei",
+     "chars": 141639
+    },
+    {
+     "id": "do-you-understand-what-you-are-reading-toward-a-faithful-evangelical-hermeneutic-of-scripture",
+     "title": "do-you-understand-what-you-are-reading-toward-a-faithful-evangelical-hermeneutic-of-scripture",
+     "chars": 139254
+    },
+    {
+     "id": "engaging-in-the-realities-of-global-missions",
+     "title": "engaging-in-the-realities-of-global-missions",
+     "chars": 139181
+    },
+    {
+     "id": "saturation-church-planting-a-call-to-collaboration",
+     "title": "saturation-church-planting-a-call-to-collaboration",
+     "chars": 137973
+    },
+    {
+     "id": "prayer-evangelism-lop-42",
+     "title": "prayer-evangelism-lop-42",
+     "chars": 135222
+    },
+    {
+     "id": "cape-town-commitment",
+     "title": "開普敦承諾（2010）",
+     "chars": 135202
+    },
+    {
+     "id": "lop-11",
+     "title": "lop-11",
+     "chars": 132198
+    },
+    {
+     "id": "lop-19",
+     "title": "lop-19",
+     "chars": 129928
+    },
+    {
+     "id": "lop-3",
+     "title": "lop-3",
+     "chars": 126025
+    },
+    {
+     "id": "lop-21",
+     "title": "lop-21",
+     "chars": 114114
+    },
+    {
+     "id": "the-formation-of-disciples-for-mission-and-the-formation-of-disciples-as-mission",
+     "title": "the-formation-of-disciples-for-mission-and-the-formation-of-disciples-as-mission",
+     "chars": 111075
+    },
+    {
+     "id": "risk-people-lop-34",
+     "title": "risk-people-lop-34",
+     "chars": 110813
+    },
+    {
+     "id": "lop-2",
+     "title": "lop-2",
+     "chars": 105019
+    },
+    {
+     "id": "local-church-mission-lop-39",
+     "title": "local-church-mission-lop-39",
+     "chars": 101473
+    },
+    {
+     "id": "lausanne-occasional-paper-people-on-the-move",
+     "title": "lausanne-occasional-paper-people-on-the-move",
+     "chars": 98576
+    },
+    {
+     "id": "lop-20",
+     "title": "lop-20",
+     "chars": 98573
+    },
+    {
+     "id": "lop-10",
+     "title": "lop-10",
+     "chars": 97534
+    },
+    {
+     "id": "forcibly-displaced-people",
+     "title": "forcibly-displaced-people",
+     "chars": 95003
+    },
+    {
+     "id": "ministry-among-people-disabilities-lop-35b",
+     "title": "ministry-among-people-disabilities-lop-35b",
+     "chars": 91284
+    },
+    {
+     "id": "lop-12",
+     "title": "lop-12",
+     "chars": 89002
+    },
+    {
+     "id": "future-leadership-lop-41",
+     "title": "future-leadership-lop-41",
+     "chars": 86640
+    },
+    {
+     "id": "lop-8",
+     "title": "lop-8",
+     "chars": 85703
+    },
+    {
+     "id": "lop-9",
+     "title": "lop-9",
+     "chars": 84965
+    },
+    {
+     "id": "seoul-statement",
+     "title": "首爾宣言（2024）",
+     "chars": 80251
+    },
+    {
+     "id": "lop-6",
+     "title": "lop-6",
+     "chars": 79732
+    },
+    {
+     "id": "the-impact-on-global-mission-of-religious-nationalism-and-911-realities-lop-50",
+     "title": "the-impact-on-global-mission-of-religious-nationalism-and-911-realities-lop-50",
+     "chars": 75431
+    },
+    {
+     "id": "christian-faith-and-technology",
+     "title": "christian-faith-and-technology",
+     "chars": 73304
+    },
+    {
+     "id": "lop-26",
+     "title": "lop-26",
+     "chars": 72039
+    },
+    {
+     "id": "a-theology-of-the-human-person",
+     "title": "a-theology-of-the-human-person",
+     "chars": 71594
+    },
+    {
+     "id": "case-studies-lop-65",
+     "title": "case-studies-lop-65",
+     "chars": 70651
+    },
+    {
+     "id": "lop-15",
+     "title": "lop-15",
+     "chars": 70192
+    },
+    {
+     "id": "lop-13-2",
+     "title": "lop-13-2",
+     "chars": 66434
+    }
+   ]
   }
  ]
 }
