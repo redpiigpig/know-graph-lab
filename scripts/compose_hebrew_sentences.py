@@ -93,11 +93,32 @@ def parse_reply(reply: str) -> list[dict[str, Any]]:
     try:
         return json.loads(text[start : end + 1]).get("sentences", [])
     except json.JSONDecodeError:
-        return []
+        pass
+    # A truncated or chatty reply still carries whole sentence objects; take
+    # those rather than throwing the call away.  An engine that answers with
+    # prose around the JSON is common enough that retrying costs more.
+    salvaged: list[dict[str, Any]] = []
+    for block in re.finditer(r"\{[^{}]*\"hebrew\"[^{}]*\}", text, re.S):
+        try:
+            salvaged.append(json.loads(block.group(0)))
+        except json.JSONDecodeError:
+            continue
+    return salvaged
+
+
+def split_words(sentence: str) -> list[str]:
+    """Maqqef binds two written words into one; the lexicon knows them apart."""
+    pieces: list[str] = []
+    for chunk in bare(sentence).split():
+        for piece in chunk.split("־"):
+            piece = bare(piece)
+            if piece:
+                pieces.append(piece)
+    return pieces
 
 
 def verify(sentence: str, known: set[str], pointed, skeleton) -> dict[str, Any]:
-    words = [word for word in bare(sentence).split() if word]
+    words = split_words(sentence)
     unattested: list[str] = []
     untaught: list[str] = []
     lemmas: set[str] = set()
@@ -124,7 +145,16 @@ def main() -> None:
     parser.add_argument("--lesson", type=int, required=True)
     parser.add_argument("--max-tokens", type=int, default=12000)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument(
+        "--engine",
+        default="auto",
+        help="auto follows the standing Gemini-NVIDIA-Haiku order; the NVIDIA tier "
+             "answers this task with reasoning prose instead of JSON, so a composition "
+             "run may need an explicit tier",
+    )
     args = parser.parse_args()
+    if args.engine != "auto":
+        llm.select_chain(args.engine)
 
     vocabulary = load_vocabulary(DEFAULT_VOCAB)
     verses = load_wlc(DEFAULT_WLC)
@@ -159,7 +189,7 @@ def main() -> None:
             report = verify(row.get("hebrew", ""), set(known), pointed, skeleton)
             hit = {word for word in target_forms if any(
                 consonants(word) == consonants(part) or consonants(word) in consonants(part)
-                for part in bare(row.get("hebrew", "")).split()
+                for part in split_words(row.get("hebrew", ""))
             )}
             covered |= hit
             rows.append({**row, "verification": report, "targetsSeen": sorted(hit)})
