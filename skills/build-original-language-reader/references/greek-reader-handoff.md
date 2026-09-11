@@ -157,6 +157,38 @@ failure, so they are worth knowing before touching the code.
   appears at the top of a frequency list, the Koine lexicon is not being
   consulted first — that is the symptom, every time.
 
+## 一課十題翻譯練習（2026-09-11 起）
+
+規格見 [`exercise-sets.md`](exercise-sets.md)。希臘這一側三支腳本：
+
+| 腳本 | 做什麼 |
+|---|---|
+| `scripts/build_greek_lemma_corpus.py` | 把七十士（Swete）與下冊教父／教會文獻各跑一次詞位標記，出 `lemma-corpus-{septuagint,patristic}.json`；每個 token 記了它的詞位是三層裡的哪一層決定的 |
+| `scripts/compose_greek_sentences.py` | 自撰句的機器閘（**不造句、不叫模型**）：`--volume V --lesson N --check FILE`，三道閘＝詞形在語料出現過／詞已教過／十題涵蓋二十詞 |
+| `scripts/build_greek_exercises.py` | 引用題挖句器，一課挖六句候選定錨（印三句），出 `exercises-greek-vol{1,2}.json` |
+
+詞位標記的不確定度（2026-09-11 實跑）：
+
+| 語料 | token | koine-exact | koine-folded | morpheus | **surface-fold（等於查不到）** |
+|---|---|---|---|---|---|
+| 七十士 Swete | 608,170 | 138,421 | 459,016 | 1,652 | **9,081（1.5%）** |
+| 教父／教會文獻 | 74,313 | 14,216 | 49,335 | 6,109 | **4,653（6.3%）** |
+
+教父那 6.3% 多半是後代教會用語（καθαιρείσθω、κληρικός、θεοτόκος），
+Morpheus 這種古典分析器本來就沒有——是真的不知道，不是設定錯。
+
+已知會咬人的三件事：
+
+- **省音號有五種寫法**。Swete 用 U+1FBD 寫了 5,061 處，koine-lexicon 是拿 U+2019
+  建的。不統一，那 5,061 個 καθ᾽／δι᾽ 會整批靜默落到最後一層。這是希伯來
+  maqqef 連寫那個坑的希臘版，教父那批更雜（同一份檔五種都有）。
+- **正規化只用於比對**。印出來的一律是原樣：大寫不小寫化、U+1FBD 不換成
+  U+2019、下標 iota 與詞尾 ς 都留著。`scripts/tests/test_greek_exercises.py`
+  有一條測試專門釘住這一點。
+- **上冊第 1 課挖不到任何引用題**，第 2 課只有 4 句。那二十詞裡沒有冠詞、沒有
+  動詞、沒有介系詞（ἄγγελος、ἀμήν、ἄνθρωπος…），全語料沒有一句能只用它們造出來。
+  與希伯來實測「第 1、2、3、4、7 課純引用湊不滿」同一個現象，靠自撰題補。
+
 ## Run order
 
 ```
@@ -186,6 +218,15 @@ python skills/build-original-language-reader/scripts/validate_reader_release.py 
   --language grc --volume 1 --lessons 50 --vocabulary-per-lesson 20 \
   --vocabulary-total 1000 --scripture-lessons 50
 python scripts/build_greek_full_reader.py
+```
+
+練習題那一層另外跑（與上面的主線無先後依賴，但要在詞表與 patristic-plan 之後）：
+
+```
+python scripts/build_greek_lemma_corpus.py --corpus both --write
+python scripts/build_greek_exercises.py --volume 1 --write
+python scripts/build_greek_exercises.py --volume 2 --write
+python -m pytest scripts/tests/test_greek_exercises.py
 ```
 
 Then render each volume to PDF and inspect it. The managed renderer needs
