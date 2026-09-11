@@ -41,9 +41,18 @@ function loadEnv() {
   }
 }
 
-// 線上 reader 讀的就是 R2（server/utils/ebook-chunks.ts 同一條 key），所以從 R2
-// 查等於查「使用者真的看到什麼」。Drive 沒掛載也不影響這支。
+// 取源順序與 server/utils/ebook-chunks.ts 一致：**先本機 Drive，再 R2**。
+// 🚨 只讀 R2 會量到過期的東西。修完本機 JSONL、還沒同步 R2 時跑稽核，數字會
+//    一動也不動，看起來像「修了沒用」——實際上是量錯了地方。
 async function loadChunks(id) {
+  const dir = process.env.EBOOK_CHUNKS_DIR;
+  if (dir) {
+    const local = resolve(dir, `${id}.jsonl`);
+    try {
+      return readFileSync(local, "utf-8").split(/\r?\n/)
+        .filter((l) => l.trim()).map((l) => JSON.parse(l));
+    } catch { /* 本機沒有就走 R2 */ }
+  }
   const { S3Client, GetObjectCommand } = await import("@aws-sdk/client-s3");
   const cli = new S3Client({
     region: "auto",
