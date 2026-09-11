@@ -38,6 +38,39 @@ def _set_cjk(run, font: str = BODY_FONT) -> None:
     run._element.rPr.rFonts.set(qn("w:eastAsia"), font)
 
 
+def _add_table(doc, md: str) -> None:
+    """markdown 表格 → Word 表格。
+
+    `| --- | --- |` 那一列是分隔線不是資料；表頭全空（`|  |  |`）時不畫表頭列
+    ——和歌的「英譯｜羅馬字」對照本來就沒有欄名，硬給一個會是錯的標籤。"""
+    rows = [r.strip() for r in md.split(chr(10)) if r.strip().startswith("|")]
+    cells = [[c.strip() for c in r.strip().strip("|").split("|")] for r in rows]
+    cells = [c for c in cells if not all(x.startswith("---") or not x for x in c) or any(c)]
+    body = [c for c in cells if not all(x.replace("-", "") == "" for x in c)]
+    if not body:
+        return
+    head = body[0]
+    has_head = any(h for h in head)
+    data = body[1:] if has_head else body
+    t = doc.add_table(rows=0, cols=max(len(r) for r in body))
+    t.style = "Table Grid"
+    if has_head:
+        row = t.add_row().cells
+        for j, txt in enumerate(head):
+            r = row[j].paragraphs[0].add_run(txt)
+            r.bold = True
+            r.font.size = Pt(11)
+            _set_cjk(r)
+    for line in data:
+        row = t.add_row().cells
+        for j, txt in enumerate(line):
+            if j >= len(row):
+                break
+            r = row[j].paragraphs[0].add_run(txt)
+            r.font.size = Pt(11)
+            _set_cjk(r)
+
+
 def load_sections(author: str, slug: str) -> tuple[dict, list[dict]]:
     mod = importlib.import_module(ua.AUTHOR_MODULES[author])
     data_root = SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works" / \
@@ -154,6 +187,12 @@ def build(author: str, slug: str, out_path: Path,
             last_page = page or last_page
             text = (para or "").strip()
             if not text:
+                continue
+            # markdown 表格（豪斯評傳的著作年表、和歌對照）→ 真的 Word 表格。
+            # 不處理的話會印出一堆豎線，而且朗讀軟體會把它們唸出來。
+            if text.startswith("|") and chr(10) in text:
+                _add_table(doc, text)
+                n_par += 1
                 continue
             quoted = text.startswith("> ")
             if quoted:

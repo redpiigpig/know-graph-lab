@@ -44,7 +44,11 @@ def classical_score(zh: str) -> float:
     """0（純白話）到 1（純文言）。純函式。"""
     t = zh or ""
     if len(t) < MIN_LEN:
-        return 0.0
+        # 🚨 短段落不能一律放行。密度在幾十個字上算不準，但**句末語氣詞**本身就是
+        #    硬證據：「本書今年已屆發行滿三十年。乃大榮幸也。令人感謝不已。」只有
+        #    28 字，卻是道地的文言。原本 MIN_LEN 一刀切，讓這種段落整批漏掉——
+        #    《基督信徒的慰藉》重譯後稽核報 0% 文言，站上第五個 chunk 就是這一句。
+        return 0.6 if _FINAL.search(t) else 0.0
     finals = len(_FINAL.findall(t))
     funcs = len(_FUNCTION.findall(t))
     vern = len(_VERNACULAR.findall(t))
