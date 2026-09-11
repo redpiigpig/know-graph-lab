@@ -4885,8 +4885,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       disciplineGroup: '佛學',
       discipline: '當代漢傳佛教思想巨擘、「人間佛教」思想奠基者；以「性空唯名‧虛妄唯識‧真常唯心」三系判攝大乘佛教',
       fields: ['人間佛教', '印度佛教思想史', '中觀學', '阿含學', '如來藏研究'],
-      portraitUrl: '',
-      portraitCredit: '（暫無公有領域肖像）',
+      portraitUrl: '/portraits/yinshun.jpg',
+      portraitCredit: '使用者提供',
       color: 'amber',
       emoji: '☸️',
       contribution: [
@@ -5319,8 +5319,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       disciplineGroup: '佛學',
       discipline: '法鼓山創辦人、當代漢傳佛教高僧與學問僧；提倡「心靈環保」與「中華禪法鼓宗」，融通禪修實證與佛學研究',
       fields: ['漢傳禪佛教', '佛教史', '戒律學', '佛學教育', '心靈環保'],
-      portraitUrl: '',
-      portraitCredit: '（暫無公有領域肖像）',
+      portraitUrl: '/portraits/shengyen.jpg',
+      portraitCredit: '使用者提供',
       color: 'teal',
       emoji: '🥁',
       contribution: [
@@ -21435,10 +21435,12 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "yearSort": 1949,
                       "category": "代表作",
                       "languages": [
-                            "fr"
+                            "fr",
+                            "en"
                       ],
-                      "status": "copyright",
-                      "note": "依主題系統排比全球宗教現象,比較宗教學經典教科書。"
+                      "status": "in-progress",
+                      ebookId: '69441666-4c72-4ec8-b603-8b2034622fdb',
+                      "note": "依主題系統排比全球宗教現象,比較宗教學經典教科書。英譯本（Sheed 譯 Patterns in Comparative Religion）499 頁已上架,逐頁帶原書頁碼;法文原著欄待補。另有既有中譯《神聖的存在:比較宗教的範型》(239 段),因係掃描 OCR 有錯字,暫列參考層不作主欄。"
                 },
                 {
                       "title": "薩滿教：古老的出神技術",
@@ -21479,6 +21481,20 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "in-progress",
                       ebookId: '49ef694d-679f-4143-b61d-6de91586d124',
                       "note": "三卷本通史,伊利亞德晚年集大成之作。英譯本(Trask)26 章已上架,繁中逐段翻譯進行中。"
+                },
+                {
+                      "title": "宗教思想史．第三卷：從穆罕默德到改革時代",
+                      "titleOriginal": "Histoire des croyances et des idées religieuses, III",
+                      "year": "1983",
+                      "yearSort": 1983,
+                      "category": "代表作",
+                      "languages": [
+                            "fr",
+                            "zh"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '50739442-8ba3-43b3-a0a6-0799e473943a',
+                      "note": "既有中譯本 19 章已上架。第二卷尚無來源。"
                 },
                 {
                       "title": "宗教百科全書（主編）",
