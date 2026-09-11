@@ -63,6 +63,8 @@ PRIORITY = {
     # 內村鑑三／矢內原忠雄那條全集線正在跑（10 卷有 8 卷過九成），缺的是研究它們
     # 的上游專書。兩份加起來只有 11 筆，一天就消化完，卻原本排在第 1,700／4,081
     # 本——等於永遠拿不到。這種「量小但正擋著工作」的清單就該提到最前面。
+    "panikkar-originals": 12,            # 9 卷已上架但原文欄空，使用者 2026-09-11 點名
+    "hick-originals": 12,                # hub 五筆全 copyright，原著與中譯都缺
     "religious-studies-originals": 12,   # 宗教學者原著缺口，使用者 2026-09-11 點名優先
     "uchimura-biography": 15,
     "mukyokai-studies": 15,
@@ -297,11 +299,33 @@ def ledger_done() -> set[str]:
 
 
 def load_curated() -> list[dict]:
-    out = []
+    """讀 data/zlib-wanted/*.jsonl。
+
+    🚨 格式不對的檔要**跳過並出聲**，不可以讓它把整份清單的刷新帶走。
+    這個資料夾是好幾條線共用的投遞點，2026-09-11 一天之內就被丟進兩份書目格式的
+    檔（`mukyokai-chinese-translations` 與 `mukyokai-zh-found`，欄位是
+    title/author/publisher 而不是 key/query/expect）。原本的寫法直接
+    `KeyError: 'key'`，而 zlib_daily.ps1 是 `ErrorActionPreference = Continue`，
+    於是清單沒刷新、當天照著舊清單抓，**看起來一切正常**。
+
+    判準是「有沒有 key」——那是帳本的鍵，沒有它這一筆本來就進不了流程。
+    """
+    out, skipped = [], {}
     for f in sorted(CURATED.glob("*.jsonl")):
-        for line in f.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                out.append(json.loads(line))
+        for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                skipped[f.name] = skipped.get(f.name, 0) + 1
+                continue
+            if not isinstance(row, dict) or "key" not in row:
+                skipped[f.name] = skipped.get(f.name, 0) + 1
+                continue
+            out.append(row)
+    for name, n in sorted(skipped.items()):
+        print(f"  ⚠ 跳過 {name} 的 {n} 行（不是獵書格式，缺 key）")
     return out
 
 
