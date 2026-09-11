@@ -548,6 +548,14 @@ def gemini_translate(source: str, model: str = GEMINI_MODEL) -> str:
                     if attempt >= 3:
                         break
                     continue
+                bad = unusable_reason(text, source)
+                if bad:
+                    # 同 NVIDIA 那一關：壞輸出當暫時性失敗重試，重試完還壞就 break
+                    # 進 fallback 鏈，**不會**把推理或未譯的原文存下去。
+                    print(f"  Gemini {bad} key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
+                    if attempt >= 3:
+                        break
+                    continue
                 return text.strip()
             if r.status_code in (429, 502, 503, 504):
                 print(f"  Gemini {r.status_code} key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
@@ -574,6 +582,76 @@ _PROMPT_ECHO_MARKERS = (
 
 def _looks_like_prompt_echo(text: str) -> bool:
     return any(m in text for m in _PROMPT_ECHO_MARKERS)
+
+
+# ── 輸出閘（2026-09-11）────────────────────────────────────────────────────────
+# 🚨 這裡補的是一個**兩個月沒人發現**的洞：譯文從來沒有驗過「它到底是不是中文」。
+#
+# 病灶：`_THINK_RE` 要求 <think> 與 </think> **成對**。推理模型（deepseek）碰到
+# 長段落時，會在 max_tokens 用完前還在推理，於是回傳被截斷、收尾標籤永遠不會來，
+# `.sub()` 一個字也沒刪，**整段英文推理就這樣被當成譯文存進 checkpoint**。
+# 豪斯評傳 sec5[57] 因此存了 22,590 字的「We need to translate the given English
+# paragraph into Traditional Chinese, following all the rules...」並且上線可讀。
+#
+# 而唯一的守門員 `_looks_like_prompt_echo` 只認**中文**提示詞，英文推理一路綠燈。
+#
+# 教訓：**別只驗「模型有沒有照指示做」，要驗「產物長得對不對」。**
+# 前者假設模型會用你預期的方式失敗，後者不管它怎麼失敗都擋得住。
+_THINK_OPEN_RE = re.compile(r"<think>|<thinking>|◁think▷", re.I)
+_COT_MARKERS = (
+    "we need to translate", "we must not add", "let me translate",
+    "following all the rules", "just output the translation",
+    "the user wants", "i need to translate", "thus final output",
+    "we should translate", "the given english paragraph",
+    "we need to preserve", "choose whichever reads naturally",
+)
+_CJK_RE = re.compile(r"[一-鿿]")
+_LATIN_RE = re.compile(r"[A-Za-z]")
+# 英文虛詞。轉寫的梵文／希臘文術語不會有這些，連續英文散文一定有——所以這是
+# 「整段沒譯」與「正常夾帶原文術語」之間唯一可靠的分界。
+_EN_FUNCTION_RE = re.compile(
+    r"\b(the|of|and|to|is|are|was|were|that|which|with|from|this|these|there"
+    r"|we|it|in|by|as|not|but|have|has|been|would|could)\b", re.I)
+# 夾在中文段落**裡面**的一整句英文。整段的比例判準看不到這種——段落大半是中文，
+# 中間卻有一句原封不動的英文。只認連續 ≥120 個字母（含詞間空白與標點）的長串，
+# 短的引號詞、書名、術語不會中。
+_EN_RUN_RE = re.compile(r"[A-Za-z][A-Za-z\s,;:'\"()\-\.]{119,}")
+# 並列體例「原文　／　中譯」是刻意保留原文，不是沒譯。
+BILINGUAL_SEP = "　／　"
+
+
+def unusable_reason(text: str, source: str = "") -> str:
+    """譯文不能用的話回傳原因字串，可以用就回空字串。純函式，測試鎖在
+    tests/test_translation_output_gate.py。
+
+    呼叫端要把非空的回傳值當成「這次請求失敗」處理——重試或換引擎，
+    **不可以**把它存進 checkpoint。"""
+    t = (text or "").strip()
+    if not t:
+        return ""  # 空輸出由呼叫端各自處理，不是這一關的事
+    if _THINK_OPEN_RE.search(t):
+        # 收尾標籤要是有出現，_THINK_RE 早就把整段剪掉了；還看得到開頭標籤
+        # 就代表回應被截斷在推理中間。
+        return "truncated-reasoning"
+    low = t.lower()
+    if any(m in low for m in _COT_MARKERS):
+        return "reasoning-leak"
+    if BILINGUAL_SEP in t:
+        return ""  # 並列體例，原文是刻意留的
+    cjk, lat = len(_CJK_RE.findall(t)), len(_LATIN_RE.findall(t))
+    if lat >= 60 and cjk * 3 < lat:
+        # 拉丁字母遠多於漢字。再看虛詞密度，把「原文術語轉寫」放行：
+        # 英文散文每 100 個字母約有 8–15 個虛詞，術語轉寫接近 0。
+        density = len(_EN_FUNCTION_RE.findall(t)) / (lat / 100)
+        if density >= 4.0:
+            return "untranslated"
+    # 整段比例過得了關，不代表沒有漏譯——段落大半是中文、中間夾著一整句英文
+    # 的情形，比例判準完全看不到（2026-09-11 實測還有 9 段）。
+    for m in _EN_RUN_RE.finditer(t):
+        seg = m.group(0)
+        if len(_EN_FUNCTION_RE.findall(seg)) / (len(_LATIN_RE.findall(seg)) / 100) >= 6.0:
+            return "partial-untranslated"
+    return ""
 
 
 def _to_traditional(text: str) -> str:
@@ -634,6 +712,18 @@ def nvidia_translate(source: str) -> str:
                 print(f"  NVIDIA prompt-echo key#{idx} (#{echoes}) — retrying", file=sys.stderr, flush=True)
                 if echoes >= 3:
                     return source
+                _nv_rest_key(idx, 3)
+                continue
+            bad = unusable_reason(text, source)
+            if bad:
+                # 🚨 這一段**絕不能存**——推理外洩或整段沒譯。重試幾次還是壞的就
+                # 讓整個呼叫失敗，交給引擎鏈的下一層（Gemini）去譯；
+                # 退回 source 在這裡是錯的，那會把英文原文當譯文留在書裡。
+                echoes += 1
+                last_err = f"{bad} key#{idx}"
+                print(f"  NVIDIA {bad} key#{idx} (#{echoes}) — retrying", file=sys.stderr, flush=True)
+                if echoes >= 3:
+                    raise RuntimeError(f"NVIDIA output gate: {bad} ×{echoes}")
                 _nv_rest_key(idx, 3)
                 continue
             return _to_traditional(text)

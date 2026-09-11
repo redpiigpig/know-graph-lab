@@ -55,10 +55,59 @@ def test_ordinal_and_century():
     assert fix("第三章談二十世紀的處境") == "第三章談二十世紀的處境"
 
 
-def test_month_and_day_untouched():
-    """月日是一兩位數，不會被四位數的判準掃到。"""
-    assert fix("一八九三年一月二十五日") == "1893年1月二十五日" or \
-        fix("一八九三年一月二十五日") == "1893年一月二十五日"
+# ── 月日：有錨點才改 ──────────────────────────────────────────────────────────
+def test_full_date_after_arabic_year():
+    assert fix("一八九三年一月二十五日") == "1893年1月25日"
+
+
+def test_year_and_month_without_day():
+    assert fix("一九〇〇年十二月創刊") == "1900年12月創刊"
+
+
+def test_month_day_pair_without_year():
+    """月與日成對出現，本身就是日期。"""
+    assert fix("三月十五日的集會") == "3月15日的集會"
+
+
+def test_month_range_tail():
+    assert fix("一八九三年三月至五月") == "1893年3月至5月"
+
+
+def test_day_range_tail():
+    assert fix("三月十五日至二十日") == "3月15日至20日"
+
+
+def test_positional_tens():
+    assert fix("十月三十一日") == "10月31日"
+    assert fix("十一月十日") == "11月10日"
+
+
+# ── 月日：絕不可動的 ──────────────────────────────────────────────────────────
+def test_three_days_later_is_a_duration():
+    """🚨 福音書滿篇「三日後復活」——三日是三天不是三號，改了就是改壞聖經。"""
+    assert fix("第三日從死裡復活") == "第三日從死裡復活"
+    assert fix("三日後他就回來了") == "三日後他就回來了"
+
+
+def test_bare_month_is_left_alone():
+    """落單的月份沒有錨點，可能是專名。"""
+    assert fix("十月革命之後") == "十月革命之後"
+    assert fix("那年五月他離開了") == "那年五月他離開了"
+
+
+def test_counted_months_are_not_a_date():
+    assert fix("他在那裡住了三個月") == "他在那裡住了三個月"
+
+
+def test_era_year_keeps_kanji_month_and_day():
+    """年號紀年整串都該留漢數字——年是漢數字，月日也跟著留。"""
+    assert fix("明治二十四年一月九日") == "明治二十四年一月九日"
+    assert fix("大正十二年二月七日") == "大正十二年二月七日"
+
+
+def test_out_of_range_is_left_alone():
+    """十三月不是月份，硬改只會把別的東西改壞。"""
+    assert fix("十三月十五日") == "十三月十五日"
 
 
 def test_five_digit_run_is_not_a_year():

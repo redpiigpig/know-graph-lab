@@ -635,6 +635,43 @@ store 實際載入的數量，插進 timeline 陣列會多一個對不上）。
 | ① 狀態對帳 | `scripts/collected_works_status.py` | store＋DB | 假 done／該標 done／沒列進 hub |
 | ② 模型自語 | `scripts/plato_quality_scan.py` | `c:/tmp/plato_*.jsonl` | token 自語、體積異常、混入英文長句 |
 | ③ 拒譯污染 | `scripts/audit_llm_meta_replies.py` | `*_data/*/sec*.json` | 元回覆、整段未翻譯、臆造 |
+| ④ **寫入前輸出閘** | `translate_ebook_to_zh.unusable_reason()` | 每一次引擎回應 | 推理外洩、未閉合 `<think>`、整段未譯 |
+
+🚨 **①②③ 都是事後稽核，④ 是唯一擋在寫入之前的**。2026-09-11 之前根本沒有 ④，
+所以下面這一段存進 checkpoint 並且上線，三道事後閘一道都沒發現：
+
+    We need to translate the given English paragraph into Traditional Chinese,
+    following all the rules. We must not add any preface, explanation...
+
+**22,590 字，豪斯評傳 sec5[57]，使用者是在桌面的 docx 裡讀到的。**
+
+### ④ 寫入前輸出閘（2026-09-11 新增，補的是兩個月的洞）
+
+病灶：`_THINK_RE = r"<think>.*?</think>"` 要求兩個標籤**成對**。推理模型
+（deepseek）碰到長段落時會在 `max_tokens` 用完前還在推理 → 回應被截斷 →
+收尾標籤永遠不來 → `.sub()` 一個字沒刪 → 整段英文推理原樣入庫。
+
+而當時唯一的守門員 `_looks_like_prompt_echo` **只認中文提示詞**，
+所以模型換一種方式失敗（英文推理）就整個穿過去。
+
+**教訓：驗產物，不要只驗流程。**「模型有沒有照指示做」是白名單式思考，
+預設了失敗的形狀；「產物長得對不對」不管它怎麼壞都擋得住。
+
+判準三條（`unusable_reason(text, source)`，測試
+`scripts/tests/test_translation_output_gate.py` 9 綠）：
+
+1. `truncated-reasoning`：還看得到未閉合的 `<think>`
+2. `reasoning-leak`：英文推理招牌句（we need to translate／just output the translation…）
+3. `untranslated`：拉丁字母 ≥60 且遠多於漢字，**且英文虛詞密度 ≥4.0**
+
+🚨 **第 3 條的虛詞密度不能省**。穆勒與潘尼卡的書滿是梵文轉寫
+（atman、Naighantuka、Anupada-sutra），拉丁字母比漢字多是**正常**的；
+只看字母比例會從 181 段真陽性誤報成 4,138 段。英文散文每 100 個字母有 8–15 個
+虛詞（the/of/and/to/is…），術語轉寫接近 0——這是兩者之間唯一可靠的分界。
+
+🚨 **壞輸出要 raise 讓引擎鏈換下一層，不可以 `return source`**。
+退回原文等於把英文當譯文留在書裡，比報錯更糟（NVIDIA 的 prompt-echo 分支
+至今仍會退回 source，那是針對「單行署名」的舊權衡，不要照抄到這裡）。
 
 ### ③ 拒譯污染（2026-09-08 新增，首掃就清了 2,554 段）
 

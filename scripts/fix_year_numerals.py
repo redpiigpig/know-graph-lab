@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
-"""把譯文裡的**西元年份**從漢數字改成阿拉伯數字。
+"""把譯文裡的**西元年份與月日**從漢數字改成阿拉伯數字。
 
-使用者 2026-09-11 定調：「年份像是 1901 年，都要寫阿拉伯數字而非中文字」。
-豪斯評傳整本寫「一八九三年」，讀起來像清末譯本，而且要在年表裡對照時很難掃。
+使用者 2026-09-11 定調：「年份像是 1901 年，都要寫阿拉伯數字而非中文字」，
+同日追加「月日也要改」。豪斯評傳整本寫「一八九三年」，讀起來像清末譯本，
+而且要在年表裡對照時很難掃。
 
-判準只有一條：**連續四個漢數字**（〇一二三四五六七八九，含異體 零壹…）。
+年份的判準只有一條：**連續四個漢數字**（〇一二三四五六七八九，含異體 零壹…）。
 四位數就是西元年，中文不會用四個連號漢數字表示別的東西。
+
+月日沒有這麼好的判準（「三日」可以是三號也可以是三天），所以另走**日期錨點**
+那一套，詳見下方 `_AFTER_YEAR` ／ `_MD_PAIR` 上頭的說明。
 
 🚨 三種**絕不可動**的，動了就是改錯史實或改壞中文：
 
@@ -49,25 +53,81 @@ _RANGE = re.compile(rf"(?<![{D}])([{D}]{{4}})\s*([至到–—～~\-－]{{1}})\s
 # 年份標記：四位數後面直接接「年」（含「年代」「年間」「年起」…）
 _YEAR = re.compile(rf"(?<![{D}])([{D}]{{4}})\s*(?=年)")
 
+# ── 月日（使用者 2026-09-11 追加：「月日也要改」）──────────────────────────────
+# 月日**比年份危險得多**，因為一兩位數的漢數字在中文裡滿街都是：
+#
+#   三日後復活    「三日」是三天，不是三號——福音書裡到處都是，改了就是改壞聖經
+#   三個月        「個」擋在中間，本來就掃不到
+#   十月革命      專名
+#   明治二十四年一月九日   年號紀年整串都該留漢數字（見下方的「不可動」測試）
+#
+# 所以判準不是「看到月日就改」，而是**要有日期錨點**，兩種：
+#   A 阿拉伯數字寫的「年」緊接在前 —— 1893年三月十五日
+#   B 月與日成對出現，且不是緊跟在「年」後面 —— 三月十五日
+# 落單的「十二月」「三日」一律不動：沒有錨點就沒有把握，寧可漏也不要改錯。
+CNMD = "一二三四五六七八九十"
+_U = {c: i + 1 for i, c in enumerate("一二三四五六七八九")}
+
+# 錨點 A。日的部分可有可無（「1893年三月」也算）。
+_AFTER_YEAR = re.compile(rf"(?<=[0-9]年)\s*([{CNMD}]{{1,3}})\s*月(?:\s*([{CNMD}]{{1,3}})\s*日)?")
+# 錨點 B。`(?<!年)` 把年號紀年整個排掉——阿拉伯年份的情形 A 已經收走了。
+_MD_PAIR = re.compile(rf"(?<!年)(?<![{CNMD}0-9])([{CNMD}]{{1,3}})\s*月\s*([{CNMD}]{{1,3}})\s*日")
+# 範圍的後半段：「1893年3月至五月」的「五月」，前面已經是阿拉伯數字才算數。
+_MON_RANGE = re.compile(rf"(?<=[0-9]月)\s*([至到–—~～\-－])\s*([{CNMD}]{{1,3}})\s*月")
+_DAY_RANGE = re.compile(rf"(?<=[0-9]日)\s*([至到–—~～\-－])\s*([{CNMD}]{{1,3}})\s*日")
+
+
+def cn_small(s: str) -> int | None:
+    """位值寫法的漢數字 → int。只認 1..99，認不出就回 None（呼叫端據此放棄改）。"""
+    if not s or any(c not in CNMD for c in s):
+        return None
+    if "十" not in s:
+        return _U.get(s) if len(s) == 1 else None
+    tens, _, ones = s.partition("十")
+    if "十" in ones:
+        return None
+    t = 1 if tens == "" else _U.get(tens)
+    o = 0 if ones == "" else _U.get(ones)
+    return None if t is None or o is None else t * 10 + o
+
 
 def to_arabic(run: str) -> str:
     return "".join(DIGITS[c] for c in run)
 
 
+def _month_day(m: "re.Match[str]") -> str:
+    """月（與可有可無的日）→ 阿拉伯數字；月不在 1–12 或日不在 1–31 就原樣退回。"""
+    mo = cn_small(m.group(1))
+    if mo is None or not 1 <= mo <= 12:
+        return m.group(0)
+    if m.group(2) is None:
+        return f"{mo}月"
+    day = cn_small(m.group(2))
+    if day is None or not 1 <= day <= 31:
+        return m.group(0)
+    return f"{mo}月{day}日"
+
+
+def _range_tail(unit: str, limit: int):
+    def sub(m: "re.Match[str]") -> str:
+        v = cn_small(m.group(2))
+        return m.group(0) if v is None or not 1 <= v <= limit else f"{m.group(1)}{v}{unit}"
+    return sub
+
+
 def fix(text: str) -> str:
-    """一段文字 → 西元年份改成阿拉伯數字。純函式，測試鎖在
-    tests/test_fix_year_numerals.py。"""
+    """一段文字 → 西元年份與（有錨點的）月日改成阿拉伯數字。純函式，
+    測試鎖在 tests/test_fix_year_numerals.py。"""
     t = text or ""
     # 先處理範圍（前一個數字沒有接「年」，單看 _YEAR 抓不到）
     t = _RANGE.sub(lambda m: f"{to_arabic(m.group(1))}{m.group(2)}{to_arabic(m.group(3))}年", t)
     t = _YEAR.sub(lambda m: to_arabic(m.group(1)), t)
+    # 年先變成阿拉伯數字，錨點 A 才認得出來，所以順序不能顛倒
+    t = _AFTER_YEAR.sub(_month_day, t)
+    t = _MD_PAIR.sub(_month_day, t)
+    t = _MON_RANGE.sub(_range_tail("月", 12), t)
+    t = _DAY_RANGE.sub(_range_tail("日", 31), t)
     return t
-
-
-def count(text: str) -> int:
-    """這一段有幾處會被改。"""
-    return 0 if not text else sum(1 for _ in _RUN.finditer(text)) - sum(
-        1 for _ in _RUN.finditer(fix(text)))
 
 
 def main() -> None:
