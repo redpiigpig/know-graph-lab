@@ -31,7 +31,10 @@ CORPUS = Path("G:/我的雲端硬碟/資料/知識圖工作室/_corpus")
 CORPORA: dict[str, tuple[str, str]] = {
     "ecumenical": ("ecumenical", "世界教會協會數位檔案（archive.org）"),
     "lausanne": ("lausanne", "洛桑運動文獻（lausanne.org）"),
+    "edinburgh": ("edinburgh", "世界宣教大會（愛丁堡 1910 及其延續委員會）"),
 }
+# ⚠️ 抓了新語料一定要在這裡補一筆，否則檔案在 Drive 上、檢索卻查不到，
+# 而兩邊都不會報錯——愛丁堡那 137 份就這樣躺了一陣子。
 
 # 書源：短名 → (ebook_id, 註腳用的書目)
 SOURCES: dict[str, tuple[str, str]] = {

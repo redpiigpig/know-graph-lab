@@ -163,7 +163,10 @@ def main() -> int:
     total = sum(v["chars"] for v in index.values())
     print(f"\n抓取 {got}／略過 {skipped}（其中補進索引 {backfilled}）／失敗 {failed}")
     print(f"語料現況：{len(index)} 份、{total:,} 字 → {OUT}")
-    print("接著用 `python scripts/genealogy_research.py --set ecumenical <關鍵詞>` 檢索。")
+    sub = OUT.name
+    # ⚠️ 這一行以前寫死 ecumenical，抓愛丁堡那批時會把人指到錯的書組去查、
+    # 查不到又看不出為什麼。改成照實際輸出的目錄名。
+    print(f"接著用 `python scripts/genealogy_research.py --set {sub} <關鍵詞>` 檢索。")
     return 0
 
 
