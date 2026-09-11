@@ -202,8 +202,8 @@ export const requestedCollectedWorksAuthors: CwAuthor[] = [
     sortYear: 1962,
     discipline: '佛教哲學、禪學與天台止觀學者，推動人間佛教禪法與宗教養生',
     fields: ['佛教哲學', '禪學', '天台學', '人間佛教', '宗教養生學'],
-    portraitUrl: '',
-    portraitCredit: '未採用權利狀態未核的機構肖像',
+    portraitUrl: '/portraits/hsing-kuang.jpg',
+    portraitCredit: '使用者提供',
     color: 'teal',
     emoji: '🧘',
     contribution: [
