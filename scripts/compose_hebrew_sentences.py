@@ -48,16 +48,31 @@ def consonants(word: str) -> str:
     return "".join(ch for ch in bare(word) if HEBREW_RE.match(ch))
 
 
-def build_attested(verses) -> tuple[dict[str, set[str]], dict[str, set[str]]]:
-    """Two indexes of every written word: pointed, and consonants only."""
-    pointed: dict[str, set[str]] = defaultdict(set)
-    skeleton: dict[str, set[str]] = defaultdict(set)
+Analysis = tuple[frozenset, frozenset]
+
+
+def build_attested(verses) -> tuple[dict[str, set[Analysis]], dict[str, set[Analysis]]]:
+    """Two indexes of every written word: pointed, and consonants only.
+
+    A form maps to the set of analyses the corpus gives it, not to a pooled bag
+    of Strong numbers.  Pooling loses the thing that matters: לִי is written the
+    same as a form of קָרָא, so a pooled index reports the preposition ל plus a
+    first-person suffix as the verb "to call".  That misfires in both
+    directions -- it rejects real Scripture, and it lets an untaught word pass
+    whenever some taught word happens to be spelled the same way.
+
+    Each analysis is (Strong numbers, bound-morpheme codes); a word is readable
+    when at least one of its analyses uses nothing the learner has not met.
+    """
+    pointed: dict[str, set[Analysis]] = defaultdict(set)
+    skeleton: dict[str, set[Analysis]] = defaultdict(set)
     for verse in verses:
         for token in verse.tokens:
             if not token.text:
                 continue
-            pointed[bare(token.text)] |= token.strongs
-            skeleton[consonants(token.text)] |= token.strongs
+            analysis = (frozenset(token.strongs), frozenset(token.lemma_codes))
+            pointed[bare(token.text)].add(analysis)
+            skeleton[consonants(token.text)].add(analysis)
     return pointed, skeleton
 
 
@@ -117,19 +132,38 @@ def split_words(sentence: str) -> list[str]:
     return pieces
 
 
-def verify(sentence: str, known: set[str], pointed, skeleton) -> dict[str, Any]:
+def verify(
+    sentence: str,
+    known: set[str],
+    pointed,
+    skeleton,
+    known_codes=frozenset(),
+    curriculum_codes=frozenset(),
+) -> dict[str, Any]:
+    """Check a sentence against the vocabulary taught so far.
+
+    Only bound morphemes the curriculum actually teaches as words are policed.
+    The definite article is not one of them -- it is never a vocabulary entry,
+    yet it is on the page from lesson one in הָאָדָם -- so treating every
+    morpheme code as something to be taught first would fail the reader's own
+    first sentence.
+    """
     words = split_words(sentence)
     unattested: list[str] = []
     untaught: list[str] = []
     lemmas: set[str] = set()
     for word in words:
         key = bare(word)
-        strongs = pointed.get(key) or skeleton.get(consonants(word))
-        if not strongs:
+        analyses = pointed.get(key) or skeleton.get(consonants(word))
+        if not analyses:
             unattested.append(word)
             continue
-        lemmas |= strongs
-        if not (strongs & known):
+        lemmas |= {strong for strongs, _ in analyses for strong in strongs}
+        readable = any(
+            strongs <= known and (codes & curriculum_codes) <= known_codes
+            for strongs, codes in analyses
+        )
+        if not readable:
             untaught.append(word)
     return {
         "words": len(words),
@@ -174,6 +208,19 @@ def main() -> None:
     for lesson, items, known in cumulative_sets(vocabulary):
         if lesson != args.lesson:
             continue
+        known_codes = frozenset(
+            code
+            for number in sorted(vocabulary)
+            if number <= lesson
+            for entry in vocabulary[number]
+            for code in entry.bound_codes
+        )
+        curriculum_codes = frozenset(
+            code
+            for entries in vocabulary.values()
+            for entry in entries
+            for code in entry.bound_codes
+        )
         for item in items:
             object.__setattr__(item, "gloss", next(
                 (gloss_by_strong.get(s, "") for s in item.strongs if s in gloss_by_strong), ""
@@ -198,7 +245,7 @@ def main() -> None:
         covered: set[str] = set()
         rows = []
         for index, row in enumerate(sentences, start=1):
-            report = verify(row.get("hebrew", ""), set(known), pointed, skeleton)
+            report = verify(row.get("hebrew", ""), set(known), pointed, skeleton, known_codes, curriculum_codes)
             hit = {word for word in target_forms if any(
                 consonants(word) == consonants(part) or consonants(word) in consonants(part)
                 for part in split_words(row.get("hebrew", ""))

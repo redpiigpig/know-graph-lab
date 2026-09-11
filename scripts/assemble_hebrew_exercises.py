@@ -81,6 +81,17 @@ def load_drafts(lesson: int) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8")).get("sentences", [])
 
 
+def taught_codes(vocabulary, upto: int) -> frozenset:
+    """The bound morphemes the learner has met by this lesson."""
+    return frozenset(
+        code
+        for number in sorted(vocabulary)
+        if number <= upto
+        for entry in vocabulary[number]
+        for code in entry.bound_codes
+    )
+
+
 def bound_codes_by_form(verses) -> dict[str, set[str]]:
     """Which bound morphemes each written form carries.
 
@@ -110,8 +121,11 @@ def target_words_in(text: str, lesson_items, pointed, skeleton, codes=None) -> l
     present_codes: set[str] = set()
     for piece in checker.split_words(text):
         key = checker.bare(piece)
-        strongs |= pointed.get(key) or skeleton.get(checker.consonants(piece)) or set()
-        present_codes |= (codes or {}).get(key, set())
+        for analysis_strongs, analysis_codes in (
+            pointed.get(key) or skeleton.get(checker.consonants(piece)) or ()
+        ):
+            strongs |= analysis_strongs
+            present_codes |= analysis_codes
     return [
         item.public_record()
         for item in lesson_items
@@ -130,12 +144,14 @@ def main() -> int:
     verses = load_wlc(DEFAULT_WLC)
     pointed, skeleton = checker.build_attested(verses)
     codes = bound_codes_by_form(verses)
+    curriculum_codes = taught_codes(vocabulary, max(vocabulary))
 
     lessons_out: list[dict[str, Any]] = []
     thin_anchors: list[int] = []
     missing_drafts: list[int] = []
 
     for lesson, lesson_items, known in cumulative_sets(vocabulary):
+        codes_known = taught_codes(vocabulary, lesson)
         quoted = pick_quoted((mined_by_lesson.get(lesson) or {}).get("items", []))
         if len(quoted) < QUOTED_PER_LESSON:
             thin_anchors.append(lesson)
@@ -155,7 +171,7 @@ def main() -> int:
                     "answerKeyEdition": ANSWER_KEY_EDITION,
                     "answerKeyScope": "verse" if row["kind"] == "verse" else "verse-containing-clause",
                     "targetWords": row.get("targetWords") or [],
-                    "verification": checker.verify(text, set(known), pointed, skeleton),
+                    "verification": checker.verify(text, set(known), pointed, skeleton, codes_known, curriculum_codes),
                     "reviewedBy": "corpus",
                 }
             )
@@ -166,7 +182,7 @@ def main() -> int:
                     "kind": "composed",
                     "text": text,
                     "targetWords": target_words_in(text, lesson_items, pointed, skeleton, codes),
-                    "verification": checker.verify(text, set(known), pointed, skeleton),
+                    "verification": checker.verify(text, set(known), pointed, skeleton, codes_known, curriculum_codes),
                     "reviewedBy": row.get("reviewedBy", "author"),
                 }
             )

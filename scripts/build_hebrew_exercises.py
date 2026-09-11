@@ -86,6 +86,10 @@ class Unit:
     def strongs(self) -> frozenset[str]:
         return frozenset(s for token in self.tokens for s in token.strongs)
 
+    @property
+    def codes(self) -> frozenset[str]:
+        return frozenset(code for token in self.tokens for code in token.lemma_codes)
+
 
 @dataclass
 class Scored:
@@ -205,9 +209,20 @@ def cumulative_sets(vocabulary: dict[int, list[VocabItem]]) -> list[tuple[int, l
     return rows
 
 
-def readable(unit: Unit, known: set[str]) -> bool:
-    """Every content word must already have been taught.  No footnoted words."""
-    return bool(unit.strongs) and unit.strongs <= known
+def readable(unit: Unit, known: set[str], known_codes=frozenset(), curriculum_codes=frozenset()) -> bool:
+    """Every word must already have been taught.  No footnoted words.
+
+    Bound morphemes count.  Checking Strong numbers alone let a lesson-three
+    anchor print לְבֵית and לַזָּהָב, when the preposition ל is not taught until
+    lesson five: every separate word in the clause was known, and the one the
+    learner could not read was written inside another.  Only morphemes the
+    curriculum teaches as words are policed; the article never is.
+    """
+    return (
+        bool(unit.strongs)
+        and unit.strongs <= known
+        and (unit.codes & curriculum_codes) <= known_codes
+    )
 
 
 def difficulty(unit: Unit) -> tuple[int, int, int]:
@@ -222,12 +237,14 @@ def select_for_lesson(
     units: Sequence[Unit],
     used_refs: set[str],
     reading_chapters: set[str],
+    known_codes: frozenset = frozenset(),
+    curriculum_codes: frozenset = frozenset(),
 ) -> tuple[list[Scored], list[VocabItem]]:
     pool: list[Scored] = []
     for unit in units:
         if unit.ref in used_refs:
             continue
-        if not readable(unit, known):
+        if not readable(unit, known, known_codes, curriculum_codes):
             continue
         targets = [item for item in lesson_items if item_matches(item, unit.tokens)]
         if not targets:
@@ -316,6 +333,9 @@ def main() -> None:
         if row.get("osisBook")
     }
 
+    curriculum_codes = frozenset(
+        code for entries in vocabulary.values() for entry in entries for code in entry.bound_codes
+    )
     by_lesson_units: dict[int, list[Unit]] = {}
     lessons_out: list[dict[str, Any]] = []
     used_refs: set[str] = set()
@@ -324,8 +344,16 @@ def main() -> None:
     short_lessons: list[int] = []
 
     for lesson, lesson_items, known in cumulative_sets(vocabulary):
+        known_codes = frozenset(
+            code
+            for number in sorted(vocabulary)
+            if number <= lesson
+            for entry in vocabulary[number]
+            for code in entry.bound_codes
+        )
         chosen, missed = select_for_lesson(
-            lesson, lesson_items, known, units, used_refs, reading_chapters
+            lesson, lesson_items, known, units, used_refs, reading_chapters,
+            known_codes, curriculum_codes,
         )
 
         for scored in chosen:
