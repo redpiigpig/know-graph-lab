@@ -20920,8 +20920,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "提出numinous、mysterium tremendum et fascinans,二十世紀宗教學奠基作。"
+                      "status": "in-progress",
+                      ebookId: '07701869-0000-4000-8000-000000000001',
+                      "note": "提出numinous、mysterium tremendum et fascinans,二十世紀宗教學奠基作。德文原著(Klotz 第14版1926)151 章已上架;繁中譯文待補。"
                 },
                 {
                       "title": "康德-弗里斯學派的宗教哲學及其與神學之關係",
@@ -20932,7 +20933,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "planned",
+                      "note": "archive.org 有兩份 1909 掃描本，但都是 Fraktur 尖角體、OCR 全毀(bie＝die、^afein＝Dasein)。PDF 已存 Drive 待走 Gemini Vision 重 OCR。"
                 },
                 {
                       "title": "自然主義與宗教",
@@ -20957,8 +20959,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "比較印度吠檀多不二論與德意志神祕主義。"
+                      "status": "in-progress",
+                      ebookId: '07701869-0000-4000-8000-000000000003',
+                      "note": "以艾克哈特與商羯羅對比東西方神祕主義。德文原著(1926)215 章已上架;繁中譯文待補。🚨 掃描本的變音符號被吃掉(Göttliche→Gottliche),之後要補。"
                 },
                 {
                       "title": "印度的恩典宗教與基督教之比較",
@@ -20969,8 +20972,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "比較印度虔信派(bhakti)恩典觀與基督教。"
+                      "status": "in-progress",
+                      ebookId: '07701869-0000-4000-8000-000000000004',
+                      "note": "比較毘濕奴派虔信運動與基督教恩典觀。英譯本(1930)66 章已上架;德文原著欄與繁中譯文待補。"
                 }
           ]
     },
@@ -22243,8 +22247,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "planned",
-                      "note": "博士論文，以功能分化解釋社會團結形態演變"
+                      "status": "in-progress",
+                      ebookId: '80000000-0000-4000-8000-000000000022',
+                      "note": "博士論文，以功能分化解釋社會團結形態演變。法文原著(Alcan 1893 初版)317 章已上架;繁中譯文待補。"
                 },
                 {
                       "title": "社會學方法的規則",
@@ -22255,8 +22260,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "planned",
-                      "note": "確立「社會事實」作為獨立研究對象的方法論宣言"
+                      "status": "in-progress",
+                      ebookId: '80000000-0000-4000-8000-000000000023',
+                      "note": "確立「社會事實」作為獨立研究對象的方法論宣言。法文原著(Alcan 第7版1919)116 章已上架;繁中譯文待補。"
                 },
                 {
                       "title": "自殺論",
@@ -22307,7 +22313,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "fr"
                       ],
                       "status": "planned",
-                      "note": "與牟斯（Marcel Mauss）合著，開創社會分類與宇宙觀研究"
+                      "note": "原載《社會學年鑑》第六卷(1903)，與牟斯合著。archive.org 只有英譯的借閱館藏，下載不到；已列進 z-lib 獵表。"
                 },
                 {
                       "title": "道德教育",
@@ -22318,6 +22324,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
+                      "sourceNote": "Gallica 有 1925 初版掃描本(ark:/12148/bpt6k20756x)，但站方擋機器人取不到全文；archive.org 同名者皆為他人著作（《L'éducation morale dès le berceau》不是涂爾幹的書）。已列進 z-lib 獵表。",
                       "status": "planned",
                       "note": "1902–06年講稿，身後由學生整理出版"
                 }

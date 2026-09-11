@@ -38,7 +38,11 @@ BOOKS = [
         "publication_year": 1926,          # 手上這一份是 Klotz, Gotha 第 14 版
         "publisher": "Leopold Klotz Verlag",
         "publisher_location": "Gotha",
-        "path": STUDIO / "宗教學" / "奧托" / "Rudolf Otto，Das Heilige (14. Aufl. 1926).epub",
+        # 🚨 這裡**必須**是 .txt 不是 .epub。archive.org 同一筆的 EPUB 只有掃描頁
+        # 影像沒有文字層，parse_worker 會回「no extractable text」。文字在 djvu.txt，
+        # 已用 archive_djvu_clean.py 清好放在同一夾。
+        # （2026-09-11 這裡一度寫成 .epub，upsert 把修好的 file_path 又蓋回去。）
+        "path": STUDIO / "宗教學" / "奧托" / "Rudolf Otto，Das Heilige (14. Aufl. 1926).txt",
     },
     {
         "id": "07701869-0000-4000-8000-000000000002",
@@ -63,6 +67,55 @@ BOOKS = [
         "publisher": "Félix Alcan",
         "publisher_location": "Paris",
         "path": STUDIO / "宗教社會學" / "涂爾幹" / "Émile Durkheim，Le Suicide (1897).epub",
+    },
+    {
+        "id": "07701869-0000-4000-8000-000000000003",
+        "title": "東西方的神祕主義",
+        "subtitle": "商羯羅與艾克哈特之比較（德文原著）",
+        "author": "魯道夫‧奧托", "author_en": "Rudolf Otto",
+        "original_title": "West-Östliche Mystik: Vergleich und Unterscheidung zur Wesensdeutung",
+        "original_publish_year": 1926,
+        "publication_year": 1926,
+        "publisher": "Leopold Klotz Verlag",
+        "publisher_location": "Gotha",
+        "path": STUDIO / "宗教學" / "奧托" / "Rudolf Otto，West-Östliche Mystik (1926).txt",
+    },
+    {
+        "id": "07701869-0000-4000-8000-000000000004",
+        "title": "印度的恩典宗教與基督教",
+        "subtitle": "英譯本（Foster／Symons 譯，1930）",
+        "author": "魯道夫‧奧托", "author_en": "Rudolf Otto",
+        "original_title": "Die Gnadenreligion Indiens und das Christentum",
+        "original_publish_year": 1930,
+        "publication_year": 1930,
+        "publisher": "Student Christian Movement Press",
+        "publisher_location": "London",
+        "path": STUDIO / "宗教學" / "奧托" / "Rudolf Otto，India's Religion of Grace and Christianity (1930).txt",
+    },
+    {
+        "id": "80000000-0000-4000-8000-000000000022",
+        "title": "社會分工論",
+        "subtitle": "法文原著（1893 初版）",
+        "author": "涂爾幹", "author_en": "Émile Durkheim",
+        "original_title": "De la division du travail social: étude sur l'organisation "
+                          "des sociétés supérieures",
+        "original_publish_year": 1893,
+        "publication_year": 1893,
+        "publisher": "Félix Alcan",
+        "publisher_location": "Paris",
+        "path": STUDIO / "宗教社會學" / "涂爾幹" / "Émile Durkheim，De la division du travail social (1893).txt",
+    },
+    {
+        "id": "80000000-0000-4000-8000-000000000023",
+        "title": "社會學方法的規則",
+        "subtitle": "法文原著",
+        "author": "涂爾幹", "author_en": "Émile Durkheim",
+        "original_title": "Les règles de la méthode sociologique",
+        "original_publish_year": 1895,
+        "publication_year": 1919,          # 手上這一份是 Alcan 第 7 版
+        "publisher": "Félix Alcan",
+        "publisher_location": "Paris",
+        "path": STUDIO / "宗教社會學" / "涂爾幹" / "Émile Durkheim，Les règles de la méthode sociologique (1919).txt",
     },
     {
         "id": "80000000-0000-4000-8000-000000000021",
@@ -132,7 +185,7 @@ def main() -> None:
             "original_publish_year": b["original_publish_year"],
             "publication_year": b["publication_year"],
             "publisher": b["publisher"], "publisher_location": b["publisher_location"],
-            "file_type": "epub", "file_path": str(p),
+            "file_type": p.suffix.lstrip(".").lower(), "file_path": str(p),
             # 🚨 一定要帶 collection，否則這本會混進電子圖書館
             # （[[feedback_collected_works_not_in_library]]）
             "collection": "collected-works",

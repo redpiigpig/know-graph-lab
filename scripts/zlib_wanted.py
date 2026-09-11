@@ -63,6 +63,7 @@ PRIORITY = {
     # 內村鑑三／矢內原忠雄那條全集線正在跑（10 卷有 8 卷過九成），缺的是研究它們
     # 的上游專書。兩份加起來只有 11 筆，一天就消化完，卻原本排在第 1,700／4,081
     # 本——等於永遠拿不到。這種「量小但正擋著工作」的清單就該提到最前面。
+    "religious-studies-originals": 12,   # 宗教學者原著缺口，使用者 2026-09-11 點名優先
     "uchimura-biography": 15,
     "mukyokai-studies": 15,
     "mukyokai-chinese-translations": 15,   # REFERENCE-first：有中譯本就不自譯

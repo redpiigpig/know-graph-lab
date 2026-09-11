@@ -1,0 +1,8 @@
+{"key":"rso-durkheim-education-morale","query":"涂爾幹 道德教育","expect":"道德教育","who":"涂爾幹","lang":"zh","source":"religious-studies-originals","zh":"涂爾幹《道德教育》（1925）。法文原著在 Gallica ark:/12148/bpt6k20756x 但站方擋機器人；archive.org 同名者皆非本書。"}
+{"key":"rso-durkheim-moral-education-en","query":"Durkheim Moral Education","expect":"Moral Education","who":"Durkheim","lang":"orig","source":"religious-studies-originals","zh":"Durkheim《Moral Education》（Wilson／Schnurer 英譯）。法文原著取不到時的替代。"}
+{"key":"rso-durkheim-primitive-classification","query":"Durkheim Mauss Primitive Classification","expect":"Primitive Classification","who":"Durkheim","lang":"orig","source":"religious-studies-originals","zh":"涂爾幹與牟斯《原始分類》（原載《社會學年鑑》第六卷 1903）。archive.org 只有借閱館藏。"}
+{"key":"rso-durkheim-classification-zh","query":"涂爾幹 原始分類","expect":"原始分類","who":"涂爾幹","lang":"zh","source":"religious-studies-originals","zh":"涂爾幹‧牟斯《原始分類》中譯本（汲喆譯，上海人民）。"}
+{"key":"rso-otto-kantisch-fries","query":"Otto Kantisch-Friessche Religionsphilosophie","expect":"Religionsphilosophie","who":"Otto","lang":"orig","source":"religious-studies-originals","zh":"奧托《康德-弗里斯學派的宗教哲學》（1909）。archive.org 兩份掃描本都是 Fraktur、OCR 全毀，找乾淨的電子版。"}
+{"key":"rso-otto-heilige-zh","query":"奧托 論神聖","expect":"神聖","who":"奧托","lang":"zh","source":"religious-studies-originals","zh":"奧托《論「聖」》中譯本（成窮／周邦憲譯《論「神聖」》，四川人民）。德文原著已上架，中譯本可當參考層。"}
+{"key":"rso-eliade-yoga-zh","query":"伊利亞德 不死與自由 瑜伽","expect":"不死与自由","who":"伊利亚德","lang":"zh","source":"religious-studies-originals","zh":"伊利亞德《不死與自由：瑜伽實踐的西方闡釋》中譯本。hub 書目仍是 copyright 無來源。"}
+{"key":"rso-eliade-encyclopedia","query":"Eliade Encyclopedia of Religion","expect":"Encyclopedia of Religion","who":"Eliade","lang":"orig","source":"religious-studies-originals","zh":"伊利亞德主編《宗教百科全書》（Macmillan 1987，16 卷）。"}
