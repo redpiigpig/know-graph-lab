@@ -6,13 +6,17 @@ vocabulary list and the reading.  Every item is attested text: a whole verse
 where one exists whose words the learner has all been taught, otherwise a
 clause cut at the Masoretic accents.  Nothing here is composed.
 
-Coverage is best-effort by the owner's decision of 2026-09-11: ten items can
-reach roughly fourteen to sixteen of a lesson's twenty words, so each lesson
-records which of its words no item reached.  Those words come back in later
-lessons, where the cumulative vocabulary is wide enough to carry them.
+This file supplies only the quoted anchors -- three of a lesson's ten items.
+The other seven are written by the author, and the twenty-word coverage the
+owner requires is reached across the two together, not here.
+
+Mechanical substitution used to live in this file and has been removed: swapping
+a word for another carrying the identical morph tag produced word salad, because
+Hebrew syntax is not in the tag.  The reasoning is in the spec, so nobody
+rebuilds it.
 
 The Chinese answer is never translated here.  Items keep the reference of the
-verse they came from; `attach_hebrew_exercise_chinese.py` fills the published
+verse they came from; `assemble_hebrew_exercises.py` fills the published
 RCUV2010 wording in afterwards.
 """
 
@@ -47,7 +51,10 @@ from select_hebrew_memory_verses import (  # noqa: E402
 OUTPUT = ROOT / "output/source-cache/original-readers/hebrew-full/exercises.json"
 REVIEW = ROOT / "output/source-cache/original-readers/hebrew-full/exercise-review.md"
 
-ITEMS_PER_LESSON = 10
+# The miner now supplies candidate anchors rather than a whole lesson: three of
+# them are printed, so it offers more and lets the assembler drop the ones whose
+# verse has no published Chinese to answer with.
+ITEMS_PER_LESSON = 6
 CANTILLATION_RE = re.compile(r"[֑-֯]")
 # Masoretic accents that end a clause: atnach, segolta, zaqef qatan/gadol.
 BREAK_ACCENTS = "֑֒֔֕"
@@ -271,184 +278,6 @@ def select_for_lesson(
     return chosen, missed
 
 
-def build_form_bank(verses: Sequence[Verse]) -> dict[tuple[str, str, str], Counter[str]]:
-    """Map (Strong number, exact morph tag) to the surface forms actually written.
-
-    Only prefix-free, single-lemma tokens go in.  A form carrying an attached
-    preposition or article cannot be dropped into another word's slot without
-    changing what the slot means, and a form whose morph tag differs by even
-    one letter is a different gender, number, state or stem — which is exactly
-    the agreement a composed sentence gets wrong.
-    """
-    bank: dict[tuple[str, str, str], Counter[str]] = {}
-    for verse in verses:
-        for token in verse.tokens:
-            key = token_shape(token)
-            if key is None or not token.text:
-                continue
-            bank.setdefault(key, Counter())[token.text] += 1
-    return bank
-
-
-def token_shape(token: Token | None) -> tuple[str, str, str] | None:
-    """The slot signature: content Strong, full morph tag, and prefix chain.
-
-    Words that carry an attached conjunction, article or preposition are kept,
-    because several lesson words are almost never written bare — but a form may
-    only stand in for another form of the identical shape, prefixes included.
-    """
-    if token is None:
-        return None
-    if len(token.strongs) != 1 or not token.morph:
-        return None
-    strong = next(iter(token.strongs))
-    prefixes = "/".join(sorted(token.lemma_codes))
-    return (strong, token.morph, prefixes)
-
-
-def replaceable(token: Token) -> bool:
-    return token_shape(token) is not None and bool(token.text)
-
-
-def build_shape_index(
-    bank: dict[tuple[str, str, str], Counter[str]]
-) -> dict[tuple[str, str], list[tuple[str, str, int]]]:
-    """Group the form bank by slot shape, commonest word first."""
-    index: dict[tuple[str, str], list[tuple[str, str, int]]] = {}
-    for (strong, morph, prefixes), forms in bank.items():
-        form, _ = forms.most_common(1)[0]
-        index.setdefault((morph, prefixes), []).append((strong, form, sum(forms.values())))
-    for key in index:
-        index[key].sort(key=lambda row: -row[2])
-    return index
-
-
-def simplify_unit(
-    unit: Unit,
-    known: set[str],
-    lesson_strongs: set[str],
-    shape_index: dict[tuple[str, str], list[tuple[str, str, int]]],
-    max_swaps: int = 3,
-) -> tuple[str, list[dict[str, Any]]] | None:
-    """Adapt a real verse by replacing only the words not yet taught.
-
-    The lesson word stays where the text actually put it, so its syntax and
-    its sense are the ones it really has; what gets swapped out is the
-    surrounding vocabulary the learner has not met.  Each replacement copies
-    the slot's whole shape -- morph tag and prefix chain -- so whatever agreed
-    with the old word agrees with the new one.  Preference goes to a word from
-    this same lesson, which practises two words in one sentence.
-    """
-    words = unit.text.split(" ")
-    if len(words) != len(unit.tokens):
-        return None
-    changes: list[dict[str, Any]] = []
-    for index, token in enumerate(unit.tokens):
-        if not token.strongs or token.strongs <= known:
-            continue
-        shape = token_shape(token)
-        if shape is None:
-            return None
-        candidates = shape_index.get((shape[1], shape[2]), [])
-        chosen: tuple[str, str] | None = None
-        for strong, form, _ in candidates:
-            if strong in lesson_strongs:
-                chosen = (strong, form)
-                break
-        if chosen is None:
-            for strong, form, _ in candidates:
-                if strong in known:
-                    chosen = (strong, form)
-                    break
-        if chosen is None:
-            return None
-        changes.append(
-            {
-                "slot": index + 1,
-                "from": CANTILLATION_RE.sub("", token.text),
-                "to": CANTILLATION_RE.sub("", chosen[1]),
-                "strong": f"H{chosen[0]}",
-                "morph": token.morph,
-            }
-        )
-        words[index] = chosen[1]
-    if not changes or len(changes) > max_swaps:
-        return None
-    text = CANTILLATION_RE.sub("", " ".join(words))
-    return text, changes
-
-
-def build_adapted(
-    lesson_items: Sequence[VocabItem],
-    missed: Sequence[VocabItem],
-    known: set[str],
-    units: Sequence[Unit],
-    used_refs: set[str],
-    bank: dict[tuple[str, str, str], Counter[str]],
-    budget: int,
-    by_strong: dict[str, list[int]],
-    shape_index: dict[tuple[str, str], list[tuple[str, str, int]]],
-) -> list[dict[str, Any]]:
-    """Give every unreached word a sentence of its own, adapted from its own text."""
-    lesson_strongs = {s for item in lesson_items for s in item.strongs}
-    remaining = list(missed)
-    out: list[dict[str, Any]] = []
-    seen_texts: set[str] = set()
-    while remaining and len(out) < budget:
-        item = remaining[0]
-        best: dict[str, Any] | None = None
-        for strong in item.strongs:
-            for position in by_strong.get(strong, ()):
-                unit = units[position]
-                if unit.ref in used_refs or not (4 <= unit.token_count <= 12):
-                    continue
-                unknown = {s for s in unit.strongs if s not in known}
-                if not unknown or len(unknown) > 3:
-                    continue
-                result = simplify_unit(unit, known, lesson_strongs, shape_index)
-                if result is None:
-                    continue
-                text, changes = result
-                if text in seen_texts:
-                    continue
-                placed = [
-                    other
-                    for other in lesson_items
-                    if any(s in lesson_strongs for s in other.strongs)
-                    and (
-                        other.ordinal == item.ordinal
-                        or any(change.get("strong") == f"H{s}" for s in other.strongs for change in changes)
-                    )
-                ]
-                candidate = {
-                    "kind": "adapted",
-                    "uid": f"{unit.uid}~adapted",
-                    "ref": unit.ref,
-                    "text": text,
-                    "tokenCount": unit.token_count,
-                    "adaptedFrom": unit.ref,
-                    "originalText": unit.text,
-                    "changes": changes,
-                    "targetWords": [row.public_record() for row in placed],
-                    "swaps": len(changes),
-                }
-                if best is None or len(placed) > len(best["targetWords"]) or (
-                    len(placed) == len(best["targetWords"]) and len(changes) < best["swaps"]
-                ):
-                    best = candidate
-                if best and len(best["targetWords"]) >= 3 and best["swaps"] <= 1:
-                    break
-            if best and len(best["targetWords"]) >= 3 and best["swaps"] <= 1:
-                break
-        if best is None:
-            remaining.pop(0)
-            continue
-        out.append(best)
-        used_refs.add(best["ref"])
-        seen_texts.add(best["text"])
-        covered = {row["ordinal"] for row in best["targetWords"]}
-        remaining = [row for row in remaining if row.ordinal not in covered]
-    return out
 
 
 def item_record(index: int, scored: Scored, known_before: set[str]) -> dict[str, Any]:
@@ -494,66 +323,15 @@ def main() -> None:
     total_covered = 0
     short_lessons: list[int] = []
 
-    bank = build_form_bank(verses)
-    shape_index = build_shape_index(bank)
-    by_strong: dict[str, list[int]] = {}
-    for position, unit in enumerate(units):
-        for strong in unit.strongs:
-            by_strong.setdefault(strong, []).append(position)
-    adapted_total = 0
-
     for lesson, lesson_items, known in cumulative_sets(vocabulary):
         chosen, missed = select_for_lesson(
             lesson, lesson_items, known, units, used_refs, reading_chapters
         )
 
-        def still_missing(picked: Sequence[Scored]) -> list[VocabItem]:
-            covered_ordinals = {item.ordinal for scored in picked for item in scored.targets}
-            return [item for item in lesson_items if item.ordinal not in covered_ordinals]
-
-        # Make room for the adapted items the uncovered words will need: an
-        # adapted sentence carries up to three of them, a mined one carries the
-        # words it happens to contain.  The last picks are the cheapest to drop
-        # because the greedy pass took the widest sentences first.
-        mined_all = list(chosen)
-        while chosen:
-            missed = still_missing(chosen)
-            needed = -(-len(missed) // 2)
-            if len(chosen) + needed <= ITEMS_PER_LESSON:
-                break
-            chosen.pop()
-        missed = still_missing(chosen)
-
         for scored in chosen:
             used_refs.add(scored.unit.ref)
-        adapted = build_adapted(
-            lesson_items, missed, known, units, used_refs, bank,
-            budget=ITEMS_PER_LESSON - len(chosen),
-            by_strong=by_strong, shape_index=shape_index,
-        )
-        adapted_total += len(adapted)
-        adapted_covered = {row["ordinal"] for item in adapted for row in item["targetWords"]}
-        missed = [item for item in missed if item.ordinal not in adapted_covered]
-
-        spare = [scored for scored in mined_all if scored not in chosen]
-        while len(chosen) + len(adapted) < ITEMS_PER_LESSON and spare:
-            refill = spare.pop(0)
-            chosen.append(refill)
-            used_refs.add(refill.unit.ref)
         chosen.sort(key=lambda scored: difficulty(scored.unit))
         records = [item_record(i, scored, known) for i, scored in enumerate(chosen, start=1)]
-        for offset, row in enumerate(adapted, start=len(records) + 1):
-            row.update(
-                {
-                    "no": offset,
-                    "clause": None,
-                    "translationRef": row["adaptedFrom"],
-                    "translationZh": None,
-                    "translationScope": "adapted-needs-own-rendering",
-                    "answerStatus": "pending_chinese",
-                }
-            )
-            records.append(row)
 
         by_lesson_units[lesson] = [scored.unit for scored in chosen]
         covered = len(lesson_items) - len(missed)
@@ -603,14 +381,12 @@ def main() -> None:
     }
 
     print(f"單元池：{len(units)}（整節 {sum(1 for u in units if u.kind == 'verse')}，子句 {sum(1 for u in units if u.kind == 'clause')}）")
-    print(f"題目：{payload['counts']['items']} 題 / {len(lessons_out)} 課")
+    print(f"候選原句：{payload['counts']['items']} 題 / {len(lessons_out)} 課")
     print(f"本課字涵蓋：{total_covered}/{total_targets}（{payload['counts']['coverageRate']:.1%}）")
-    print(f"其中改寫題 {adapted_total} 題")
     if short_lessons:
-        print(f"不足十題的課：{short_lessons}")
-    incomplete = [row["lesson"] for row in lessons_out if row["coverage"]["notPractised"]]
-    if incomplete:
-        print(f"未達二十字全覆蓋的課：{incomplete}")
+        print(f"候選不足 {ITEMS_PER_LESSON} 題的課：{short_lessons}")
+    # Coverage of all twenty words is the assembled set's job, not this one's:
+    # seven of the ten items are written by the author and are not in this file.
     for row in lessons_out[:3]:
         print(f"  L{row['lesson']:02d} {len(row['items'])} 題，練到 {row['coverage']['practised']}/{row['coverage']['lessonWords']}")
 
