@@ -69,3 +69,8 @@
 {"key": "dg-moltmann-hope-en", "query": "Moltmann Theology of Hope", "expect": "Theology of Hope", "who": "Moltmann", "source": "denominational-genealogy", "zh": "莫特曼《盼望神學》原文"}
 {"key": "dg-barth-dogmatics-zh", "query": "教會教義學 巴特", "expect": "教會教義學", "who": "巴特", "source": "denominational-genealogy", "zh": "巴特《教會教義學》中譯（第6章第二節的新正統）"}
 {"key": "dg-vissert-hooft-memoirs", "query": "Visser 't Hooft Memoirs World Council of Churches", "expect": "Memoirs", "who": "Visser 't Hooft", "source": "denominational-genealogy", "zh": "維瑟特‧霍夫特回憶錄（普世教協首任總幹事）"}
+{"key": "dg-asad-genealogies-zh2", "query": "宗教的譜系 阿薩德", "expect": "宗教的譜系", "who": "Talal Asad", "source": "denominational-genealogy", "zh": "阿薩德《宗教的譜系》中譯——第1章第四節處理現象學衝突非引不可，館內查無"}
+{"key": "dg-vanderleeuw-phen-de", "query": "van der Leeuw Phänomenologie der Religion", "expect": "Phänomenologie der Religion", "who": "Gerardus van der Leeuw", "source": "denominational-genealogy", "zh": "范德列烏《宗教現象學》德文原著（中譯本已入館 627 段）"}
+{"key": "dg-husserl-krisis-zh", "query": "歐洲科學的危機與超越論的現象學 胡塞爾", "expect": "歐洲科學的危機", "who": "Edmund Husserl", "source": "denominational-genealogy", "zh": "胡塞爾《歐洲科學的危機》——〈幾何學的起源〉即其附錄三，沉澱概念出處"}
+{"key": "dg-smith-imagining-religion", "query": "Jonathan Z. Smith Imagining Religion", "expect": "Imagining Religion", "who": "Jonathan Z. Smith", "source": "denominational-genealogy", "zh": "史密斯《想像宗教》——「宗教是學者書房的創造物」出處"}
+{"key": "dg-eliade-sacred-profane-zh", "query": "神聖與世俗 伊利亞德", "expect": "神聖與世俗", "who": "Mircea Eliade", "source": "denominational-genealogy", "zh": "伊利亞德《神聖與世俗》中譯（館內英文本僅 2 段，等於沒有）"}
