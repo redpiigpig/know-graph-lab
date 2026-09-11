@@ -1,6 +1,6 @@
 ---
 name: hellenika-fragments
-description: 希臘羅馬大藏經（/hellenika）的殘篇綴輯與敵證還原 — 全書 250 種裡近四成的原書已佚，只活在別人的引文裡。本 skill 處理兩種：①殘篇（`status: fragment`）——查標準殘篇集定編號（PEG／M–W／DK／SVF／FGrHist／Kern-OF／Des Places／Fontenrose／Graf–Johnston）、確定轉引者、填 `via` 與 `extent`；②敵證（`status: hostile`）——把異教原文從基督教作家的駁論中析出，按直引／轉述／敵意框架三級分辨，並標明使用限制。Use when 要替某條殘篇補編號或轉引來源、要處理塞爾蘇斯／波菲利／尤利安／瓦羅這類只存於敵手引用的書、要判斷一段引文能不能當異教原話用、要新增殘篇類條目。體例底層見 [[hellenika-canon]]。
+description: "希臘羅馬大藏經（/hellenika）的殘篇綴輯與敵證還原 — 全書 250 種裡近四成的原書已佚，只活在別人的引文裡。本 skill 處理兩種：①殘篇（`status: fragment`）——查標準殘篇集定編號（PEG／M–W／DK／SVF／FGrHist／Kern-OF／Des Places／Fontenrose／Graf–Johnston）、確定轉引者、填 `via` 與 `extent`；②敵證（`status: hostile`）——把異教原文從基督教作家的駁論中析出，按直引／轉述／敵意框架三級分辨，並標明使用限制。Use when 要替某條殘篇補編號或轉引來源、要處理塞爾蘇斯／波菲利／尤利安／瓦羅這類只存於敵手引用的書、要判斷一段引文能不能當異教原話用、要新增殘篇類條目。體例底層見 [[hellenika-canon]]。"
 ---
 
 > 🏛️ 本 skill 屬《希臘羅馬大藏經》，與《基督教大藏經》無關。
