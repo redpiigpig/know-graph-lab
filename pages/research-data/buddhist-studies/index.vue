@@ -74,10 +74,29 @@
                 {{ langLabel(k) }} {{ n }}
               </span>
             </div>
-            <button @click="open = open === a.slug ? '' : a.slug" class="text-xs text-amber-700 hover:underline">
-              {{ open === a.slug ? '收合' : `列出 ${a.count} 筆書目` }}
-            </button>
-            <ul v-if="open === a.slug" class="mt-3 space-y-2.5">
+            <div class="flex gap-4 flex-wrap">
+              <button @click="toggle(a.slug, 'bib')" class="text-xs text-amber-700 hover:underline">
+                {{ open === a.slug + ':bib' ? '收合書目' : `列出 ${a.count} 筆書目` }}
+              </button>
+              <button v-if="arts[a.slug]?.count" @click="toggle(a.slug, 'art')"
+                      class="text-xs text-sky-700 hover:underline">
+                {{ open === a.slug + ':art' ? '收合論文' : `華語期刊論文 ${arts[a.slug].count} 篇` }}
+              </button>
+            </div>
+
+            <ul v-if="open === a.slug + ':art'" class="mt-3 space-y-2">
+              <li v-for="(t, j) in arts[a.slug].items" :key="j" class="text-xs text-gray-600 leading-relaxed">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <span class="text-gray-400 tabular-nums whitespace-nowrap">{{ t.date }}</span>
+                  <span class="text-sky-700 whitespace-nowrap">{{ t.journal }}</span>
+                  <span class="text-gray-400">{{ t.issue }}，頁 {{ t.pages }}</span>
+                  <span v-if="t.fulltext" class="px-1.5 rounded bg-sky-50 text-sky-700">華藝有全文</span>
+                </div>
+                <div class="text-gray-800 break-words">{{ t.title }}</div>
+                <div v-if="t.authors?.length" class="text-gray-400">{{ t.authors.join('、') }}</div>
+              </li>
+            </ul>
+            <ul v-if="open === a.slug + ':bib'" class="mt-3 space-y-2.5">
               <li v-for="(b, i) in a.items" :key="i" class="text-xs text-gray-600 leading-relaxed">
                 <div class="flex items-baseline gap-2 flex-wrap">
                   <span class="text-gray-400 tabular-nums">{{ b.year }}</span>
@@ -122,10 +141,19 @@ interface Area {
   books?: number; chunks?: number; works_books?: number; parts?: Part[]
 }
 
+interface Art {
+  journal: string; title: string; authors: string[]
+  issue: string; date: string; pages: string; fulltext: boolean
+}
 const areas = ref<Area[]>([])
 const langs = ref<Record<string, number> | null>(null)
+const arts = ref<Record<string, { count: number; items: Art[] }>>({})
 const pending = ref(true)
 const open = ref('')
+const toggle = (slug: string, kind: 'bib' | 'art') => {
+  const k = `${slug}:${kind}`
+  open.value = open.value === k ? '' : k
+}
 
 const LANGS: Record<string, string> = {
   en: '英', ja: '日', zh: '中', fr: '法', de: '德', ko: '韓',
@@ -143,6 +171,11 @@ onMounted(async () => {
       '/content/research-data/buddhist-studies/index.json', { responseType: 'json' })
     areas.value = d?.areas ?? []
     langs.value = d?.langs ?? null
+    try {
+      const a = await $fetch<{ areas: Record<string, { count: number; items: Art[] }> }>(
+        '/content/research-data/buddhist-studies/articles.json', { responseType: 'json' })
+      arts.value = a?.areas ?? {}
+    } catch { arts.value = {} }
   } catch { areas.value = [] } finally { pending.value = false }
 })
 
