@@ -71,10 +71,29 @@
               <span v-for="r in a.regions" :key="r"
                     class="text-xs px-2 py-0.5 rounded bg-indigo-50 text-indigo-700">{{ r }}</span>
             </div>
-            <button @click="open = open === a.slug ? '' : a.slug" class="text-xs text-indigo-700 hover:underline">
-              {{ open === a.slug ? '收合' : `列出 ${a.count} 筆書目` }}
-            </button>
-            <ul v-if="open === a.slug" class="mt-3 space-y-2.5">
+            <div class="flex gap-4 flex-wrap">
+              <button @click="toggle(a.slug, 'bib')" class="text-xs text-indigo-700 hover:underline">
+                {{ open === a.slug + ':bib' ? '收合書目' : `列出 ${a.count} 筆書目` }}
+              </button>
+              <button v-if="arts[a.slug]?.count" @click="toggle(a.slug, 'art')"
+                      class="text-xs text-sky-700 hover:underline">
+                {{ open === a.slug + ':art' ? '收合論文' : `華語期刊論文 ${arts[a.slug].count} 篇` }}
+              </button>
+            </div>
+
+            <ul v-if="open === a.slug + ':art'" class="mt-3 space-y-2">
+              <li v-for="(t, j) in arts[a.slug].items" :key="j" class="text-xs text-gray-600 leading-relaxed">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <span class="text-gray-400 tabular-nums whitespace-nowrap">{{ t.date }}</span>
+                  <span class="text-sky-700 whitespace-nowrap">{{ t.journal }}</span>
+                  <span class="text-gray-400">{{ t.issue }}，頁 {{ t.pages }}</span>
+                  <span v-if="t.fulltext" class="px-1.5 rounded bg-sky-50 text-sky-700">華藝有全文</span>
+                </div>
+                <div class="text-gray-800 break-words">{{ t.title }}</div>
+                <div v-if="t.authors?.length" class="text-gray-400">{{ t.authors.join('、') }}</div>
+              </li>
+            </ul>
+            <ul v-if="open === a.slug + ':bib'" class="mt-3 space-y-2.5">
               <li v-for="(b, i) in a.items" :key="i" class="text-xs text-gray-600 leading-relaxed">
                 <div class="flex items-baseline gap-2 flex-wrap">
                   <span class="text-gray-400 tabular-nums">{{ b.year }}</span>
@@ -99,6 +118,13 @@
         靠作者佐證會失準，因此標為「缺」的未必真的沒有。缺書清單會倒進
         <code>data/zlib-wanted/contemporary-theology.jsonl</code> 交每日排程去找。
       </p>
+      <p class="mt-3 text-xs text-gray-400 leading-relaxed">
+        ⚠️ 各區的「華語期刊論文」是拿關鍵詞掃
+        <NuxtLink to="/research-data/press" class="text-sky-700 hover:underline">華藝篇目索引</NuxtLink>
+        十二份神學期刊（11,111 篇）篩出來的<strong>候選清單，未經人工複核</strong>：
+        一篇可以同時落在多區，也必然有假命中（篇名裡有「敘事」不等於敘事神學）。
+        卷期與起訖頁照華藝原樣保留，可直接做註腳。
+      </p>
     </div>
   </div>
 </template>
@@ -117,9 +143,18 @@ interface Area {
   speakers?: number; books?: number; chunks?: number; parts?: Part[]
 }
 
+interface Art {
+  journal: string; title: string; authors: string[]
+  issue: string; date: string; pages: string; fulltext: boolean
+}
 const areas = ref<Area[]>([])
+const arts = ref<Record<string, { count: number; items: Art[] }>>({})
 const pending = ref(true)
 const open = ref('')
+const toggle = (slug: string, kind: 'bib' | 'art') => {
+  const k = `${slug}:${kind}`
+  open.value = open.value === k ? '' : k
+}
 
 const badgeClass = (s: string) => s === 'library'
   ? 'bg-amber-50 text-amber-700'
@@ -132,6 +167,11 @@ onMounted(async () => {
     const d = await $fetch<{ areas: Area[] }>(
       '/content/research-data/contemporary-theology/index.json', { responseType: 'json' })
     areas.value = d?.areas ?? []
+    try {
+      const a = await $fetch<{ areas: Record<string, { count: number; items: Art[] }> }>(
+        '/content/research-data/contemporary-theology/articles.json', { responseType: 'json' })
+      arts.value = a?.areas ?? {}
+    } catch { arts.value = {} }
   } catch { areas.value = [] } finally { pending.value = false }
 })
 
