@@ -120,6 +120,29 @@ FORM = re.compile(r"<form(?:\s[^>]*)?>(.*?)</form>", re.S)
 DEF = re.compile(r"<(?:def|quote|cit)(?:\s[^>]*)?>(.*?)</(?:def|quote|cit)>", re.S)
 USG = re.compile(r"<usg(?:\s[^>]*)?>(.*?)</usg>", re.S)
 SENSE_LANG = re.compile(r'<sense[^>]*xml:lang="([^"]+)"[^>]*>(.*?)</sense>', re.S)
+SENSE_ANY = re.compile(r"<sense(?:\s[^>]*)?>(.*?)</sense>", re.S)
+
+
+def definition_of(body: str, forms: list[str]) -> str:
+    """取一條的釋義，分三層回退。
+
+    ⚠️ 各部放釋義的方式不一樣，只認 `<def>` 會讓三部大辭典全部抽成空字串——
+    而**條數照樣正確**，所以表面上看起來完全成功：Soothill-Hodous 16,792 條、
+    巴漢辭典 10,599 條、長阿含研究 590 條，合計近兩萬八千條只有詞目沒有內容。
+    抽查要看「有釋義的比例」，不能只看條數。
+
+      一、`<def>`／`<quote>`／`<cit>`  —— 丁福保、翻譯名義大集、南山律這一型
+      二、`<sense>` 的內文（混合內容）—— Soothill-Hodous、巴漢辭典這一型
+      三、整條扣掉 `<form>` 之後的內文 —— 長阿含研究那種用 `<p>` 的
+    """
+    got = " ".join(text(x) for x in DEF.findall(body)).strip()
+    if got:
+        return got
+    got = " ".join(text(x) for x in SENSE_ANY.findall(body)).strip()
+    if got:
+        return got
+    rest = FORM.sub(" ", body)
+    return text(rest).strip()
 
 
 def parse_tei(zip_path: Path) -> list[dict]:
@@ -146,7 +169,7 @@ def parse_tei(zip_path: Path) -> list[dict]:
                 "term": forms[0],
                 "variants": forms[1:],
                 "domain": [text(x) for x in USG.findall(body) if text(x)],
-                "definition": " ".join(text(x) for x in DEF.findall(body)).strip(),
+                "definition": definition_of(body, forms),
             })
         else:
             # ⚠️ 多語對照型的詞典沒有 <form>，詞目分散在各語的 <sense xml:lang>。
