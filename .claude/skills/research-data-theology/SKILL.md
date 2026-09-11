@@ -161,6 +161,10 @@ tier B 一律只做「抓篇目索引」與「人工速率的選擇性全文下�
 Once＋重複（重複期用盡後再也不觸發，而 State 仍是 Ready）、python 要有自己的隱藏
 主控台（共用 console 會被別人的 Ctrl+C 帶走，而排程器回報成功）。
 
+⚠️ **專書的免費來源是另一份清單**：`.claude/skills/ebook-collected-works/free_text_sources.md`
+（實測 18 站，其中 12 站不必帳號、curl 直接抓、可排程）。那份管專書，本節管期刊電子庫，
+動手前兩份都看一眼，別重複造。
+
 ### 清單上沒有的三個缺口
 
 * **ATLA Religion Database** —— 宗教研究的標準索引庫（1,700 餘種期刊回溯到十九世紀），
