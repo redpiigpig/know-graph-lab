@@ -3,16 +3,18 @@ name: qiangmian-transcribe
 description: 千面上帝這個專案的兩條線 —— (A) 宗教史讀書會的轉錄流程：Gemini Audio 轉錄 + 潤稿 + PPT 上傳 R2 + 日期/YouTube/下載連結；(B) 七卷二十八章套書的寫作管線：目錄 docx ＋ 書摘 xlsx（1,960 條）＋ 讀書會逐字稿 ＋ 逐章文獻研究，用 Gemini 逐節寫成通俗史筆，出 Drive 七卷 Word（真頁下註）與站上 /works/million-masks 書稿分頁。Use when 要轉錄或潤稿讀書會某一集、要寫或重寫套書某一章、要改文風/篇幅/註釋規則、要重出 Word、要補研究筆記，或使用者提到「千面上帝」「宗教史讀書會」「套書」。
 ---
 
-> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
-> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
-> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
-> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
 # 宗教史讀書會 — 完整自動化流程
+
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 
 ## 總覽
 

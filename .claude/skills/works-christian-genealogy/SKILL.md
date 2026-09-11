@@ -3,12 +3,14 @@ name: works-christian-genealogy
 description: 《基督宗教譜系學》成書管線（/works/christian-genealogy）—— 把《無境界者》連載的五篇重寫成一本書，一章方法論＋五章五個時期。含核心主張（每次事件之後譜系單位就換一次）、方法論的正確立場（解構與建構是同一個動作，不是分工）、這套方法的前人（不是原創，書裡要照實寫）、正本在哪裡（無境界者的 Supabase articles，不是 Drive 的 docx）、以及這條線特有的「看起來成功的失敗」。Use when 要改寫某一節、雜誌那邊改稿要同步、要調章節結構、要處理譯名或術語統一、要補研究書目、或使用者提到「譜系學」「大公傳統」「八大宗派系統」「從宗派到陣營」。⚠️ 第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。
 ---
 
+
+# 基督宗教譜系學（/works/christian-genealogy）
+
 > 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
 > `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
 > `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
 > 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
 
-# 基督宗教譜系學（/works/christian-genealogy）
 
 把《無境界者》連載的五篇〈基督宗教譜系學〉重寫成一本書。全書問同一件事：**基督宗教
 今天這些彼此不認識的分支，是怎麼一層一層分出來的？**

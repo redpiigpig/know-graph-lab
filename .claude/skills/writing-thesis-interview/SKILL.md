@@ -3,16 +3,18 @@ name: writing-thesis-interview
 description: 把碩士論文口述訪談的「音檔」整理成上架格式的繁體中文逐字稿（2026-06-13 起口述訪談從 /thesis 移至 /works《當代的大愛道革命》書籍計畫「口述訪談」分頁，舊 /thesis?tab=interviews 已移除）。Gemini Audio 轉錄 → Claude 在對話中整理 Q&A、分節、補前言三段 → 寫入 public/content/interviews/ → 更新 stores/thesisInterviews.ts。Use when 使用者指明某位受訪者要把音檔轉成正式紀錄並上架，或要重做某位現有訪談紀錄的清理工作。
 ---
 
-> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
-> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
-> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
-> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
 # 碩士論文口述訪談 — 音檔轉文字檔 + 整理 Pipeline
+
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 
 > 把 `G:\我的雲端硬碟\資料\知識圖工作室\研究資料\大愛道革命\口述訪談\YYYY.MM.DD [受訪者]訪談\` 下面的 m4a/mp3 整理成跟 [04.10 邱敏捷教授口述訪談紀錄.txt](../../../public/content/interviews/04.10%20%E9%82%B1%E6%95%8F%E6%8D%B7%E6%95%99%E6%8E%88%E5%8F%A3%E8%BF%B0%E8%A8%AA%E8%AB%87%E7%B4%80%E9%8C%84.txt) 一樣的逐字稿，寫入 `public/content/interviews/` 並更新 [stores/thesisInterviews.ts](../../../stores/thesisInterviews.ts)。
 
