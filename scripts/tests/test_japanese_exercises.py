@@ -11,11 +11,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pytest  # noqa: E402
 
+from build_japanese_exercises import anchor_note, item_for  # noqa: E402
 from build_japanese_lemma_corpus import (  # noqa: E402
     Segmenter,
     Token,
     Vocabulary,
     balance_quotes,
+    classify_register,
     clean_line,
     global_lesson,
     is_grammar,
@@ -374,3 +376,91 @@ def test_segmenter_records_which_engine_ran(segmenter):
     described = segmenter.describe()
     assert described["name"] in {"fugashi", "janome"}
     assert described["version"] and described["dictionary"]
+
+
+# ------------------------------------------------------------ 語體閘
+#
+# 🚨 兩段都是 `output/source-cache/original-readers/japanese-full/scripture/` 裡
+# 實際存在的文字，同一卷、相鄰兩章，掛的是同一個「文語訳・公有領域」標籤。
+# 第 1 章是現代語譯本（仍在著作權內），第 2 章才是明治元訳。兩個方向都要釘住：
+# 判不出現代語會把有版權的文字當公有領域收；把文語誤判成現代語則會把整卷丟掉。
+
+ISAIAH_1_MODERN = (
+    "アモツの子イザヤが、ユダとエルサレムについて見た幻。"
+    "これはユダの王、ウジヤ、ヨタム、アハズ、ヒゼキヤの治世のことである。"
+    "天よ聞け、地よ耳を傾けよ、主が語られる。"
+    "わたしは子らを育てて大きくした。しかし、彼らはわたしに背いた。"
+    "牛は飼い主を知り、ろばは主人の飼い葉桶を知っている。"
+)
+ISAIAH_2_BUNGO = (
+    "アモツの子イザヤが示されたるユダとヱルサレムとにかかる言。"
+    "すゑの日にヱホバの家の山はもろもろの山のいただきに堅立ち、"
+    "もろもろの嶺よりもたかく擧り、すべての國は流のごとく之につかん。"
+    "おほくの民ゆきて相語いはん、率われらヱホバの山にのぼりヤコブの神の家にゆかん。"
+)
+
+
+def test_isaiah_one_is_classified_as_modern_japanese():
+    """🚨 掛著「文語訳」標籤的以賽亞書第 1 章，實際上是現代語譯本。"""
+    verdict = classify_register(ISAIAH_1_MODERN)
+    assert verdict["register"] == "現代語"
+    assert verdict["modernHits"] > verdict["bungoHits"]
+
+
+def test_isaiah_two_is_classified_as_bungo():
+    """同一卷第 2 章是真的明治元訳，不可被誤判成現代語而整章丟掉。"""
+    verdict = classify_register(ISAIAH_2_BUNGO)
+    assert verdict["register"] == "文語"
+    assert verdict["bungoHits"] >= 3
+
+
+def test_a_short_bungo_creed_is_not_called_uncertain():
+    """信經只有幾百字，樣本少；短篇一個特徵就算數，否則會被誤報成可疑。"""
+    # 實際檔案：使徒信経（日本聖公会 1941 年版），490 字，文語特徵只有「われら」一處。
+    creed = (
+        "我は天地の造主・全能の父なる神を信ず。"
+        "我はその独子・われらの主イエス・キリストを信ず。"
+    )
+    verdict = classify_register(creed)
+    assert verdict["chars"] < 800
+    assert verdict["register"] == "文語"
+
+
+def test_empty_text_is_uncertain_not_bungo():
+    assert classify_register("")["register"] == "不確定"
+
+
+# ------------------------------------------------- 引用題的中文由作者撰寫
+
+
+def _hit(sentence_id: str, text: str):
+    return {
+        "row": {"id": sentence_id, "text": text, "title": "某篇", "author": "某人",
+                "source": "aozora", "ref": "000001", "sourceUrl": "https://example.invalid"},
+        "report": {"vocabulary": [], "unattested": [], "untaught": [],
+                   "grammar": [], "passed": True},
+    }
+
+
+def test_a_practice_item_carries_no_chinese():
+    """🚨 練習題不附中文（owner 2026-09-11）。
+
+    題目只印日文原文，學習者自己翻；中文只有每課的範文（讀物）才有。這兩欄
+    留空是規格，不是待辦——別再有人「順手補上」。
+    """
+    item = item_for(1, _hit("aozora:000001:s0001", "本を読みます。"), [])
+    assert item["chinese"] == ""
+    assert item["chineseSource"] == ""
+    assert item["kind"] == "quoted"
+    assert item["text"] == "本を読みます。"
+
+
+def test_anchor_note_is_blank_when_three_quotations_were_found():
+    assert anchor_note(3) == ""
+    assert anchor_note(5) == ""
+
+
+def test_anchor_note_says_so_when_no_quotation_exists():
+    """定錨不足不放寬詞表硬湊，改由自撰題補滿十題，並在該課註明。"""
+    assert anchor_note(0) == "本課無可用經典原句"
+    assert "2 題" in anchor_note(1)

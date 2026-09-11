@@ -18,11 +18,14 @@ reading and its date are unverified, and the release's stop condition says an
 unverified 訓読 is not to be treated as public domain.  Pass
 `--include-unchecked-rights` to see them anyway; do not publish the result.
 
-**中文欄留白。** A quoted item's Chinese must come from a published
-translation, not from this script — the same split the Hebrew reader makes,
-where `attach_hebrew_exercise_chinese.py` fills the RCUV2010 wording in
-afterwards.  Until that step exists for Japanese the validator will report the
-blank answers, which is the correct state: visible and unfilled beats invented.
+**練習題不附中文**（owner 2026-09-11 裁定）。練習題就是要學習者自己翻譯，
+題目只印日文原文；中文只有每課的**範文（讀物）**才需要。所以 `chinese` 與
+`chineseSource` 對練習題不是必填，留空就是對的，不要去補。
+
+**定錨不足時用自撰題補滿十題**（同日裁定）。挖不到三題引用的課次不去放寬詞表
+限制硬湊，而是記下 `anchorNote`，該課註明「本課無可用經典原句」，十題由自撰補滿。
+文語那半（第三、四冊）因此就是自撰題為主——它的語料（文語訳聖書、萬葉集）
+用詞幾乎都不在《大家的日本語》的現代語詞表裡，本來就挖不出多少句。
 
     python -X utf8 scripts/build_japanese_exercises.py --write
 """
@@ -60,7 +63,10 @@ from compose_japanese_sentences import (  # noqa: E402
 
 OUTPUT = ROOT / "output/source-cache/original-readers/japanese-full/exercises.json"
 LESSONS = 100
+ITEMS_PER_LESSON = 10
 QUOTED_PER_LESSON = 3
+# 挖不到定錨時印在該課上的說明，並由自撰題補滿十題。
+NO_ANCHOR_NOTE = "本課無可用經典原句"
 # 合約：三到八個詞，短句優先。助詞助動詞算進來所以上界放到十四個詞素，
 # 再多的句子印在初學課本上就不是「短句」了。
 MIN_TOKENS = 4
@@ -166,6 +172,19 @@ def select(
     return picked
 
 
+def anchor_note(quoted: int) -> str:
+    """定錨不足的課次要在版面上說出來。
+
+    owner 2026-09-11：挖不到三題引用就用自撰題補滿十題，該課註明。留白會讓
+    「這一課沒有經典原句」看起來跟「忘了挖」一樣——兩者要分得出來。
+    """
+    if quoted >= QUOTED_PER_LESSON:
+        return ""
+    if quoted == 0:
+        return NO_ANCHOR_NOTE
+    return f"{NO_ANCHOR_NOTE}者 {QUOTED_PER_LESSON - quoted} 題，由自撰題補足"
+
+
 def item_for(number: int, hit: dict[str, Any], targets: list[dict[str, Any]]) -> dict[str, Any]:
     row, report = hit["row"], hit["report"]
     keys = {entry_key(entry): entry for entry in targets}
@@ -176,7 +195,8 @@ def item_for(number: int, hit: dict[str, Any], targets: list[dict[str, Any]]) ->
         # 出處印給人看：青空的 manifest 鍵是「005067」，那是檔名不是出處。
         "ref": citation(row) or row.get("ref") or row["id"],
         "text": row["text"],
-        # 引用題的中文必須來自既有譯本，不由本腳本生成——留白是刻意的。
+        # 練習題不附中文（owner 2026-09-11）：題目只印日文原文，學習者自己翻。
+        # 這兩欄留空是規格，不是待辦。
         "chinese": "",
         "chineseSource": "",
         "targetWords": [
@@ -197,6 +217,8 @@ def item_for(number: int, hit: dict[str, Any], targets: list[dict[str, Any]]) ->
             "grammar": report["grammar"],
             "passed": report["passed"],
         },
+        # 引用題是語料裡的原句，不是誰寫的草稿，所以沒有 reviewedBy 的問題；
+        # 要作者逐句複核的是自撰那七題。
         "reviewedBy": "",
     }
 
@@ -224,6 +246,10 @@ def build(corpus: dict[str, Any], vocabulary: Vocabulary, *, per_lesson: int,
                 "volume": (lesson - 1) // LESSONS_PER_VOLUME + 1,
                 "lessonInVolume": (lesson - 1) % LESSONS_PER_VOLUME + 1,
                 "items": items,
+                # 定錨不足時不放寬詞表硬湊，記下來由自撰題補滿十題。
+                "quoted": len(items),
+                "composedNeeded": ITEMS_PER_LESSON - len(items),
+                "anchorNote": anchor_note(len(items)),
                 "coverage": coverage,
             }
         )
@@ -236,15 +262,17 @@ def build(corpus: dict[str, Any], vocabulary: Vocabulary, *, per_lesson: int,
         "built": date.today().isoformat(),
         "tokenizer": corpus["tokenizer"],
         "note": (
-            "只有引用題。每課十題的另外七題由作者自撰，寫完用 "
-            "compose_japanese_sentences.py --check 過閘。引用題的中文欄留白，"
-            "待既有譯本補上；本腳本不生成中文。"
+            "只有引用題。每課十題的其餘由作者自撰，寫完用 "
+            "compose_japanese_sentences.py --check 過閘。"
+            "練習題不附中文（owner 2026-09-11）：題目只印日文原文，中文只有範文才有。"
+            "定錨不足的課次記在 anchorNote，由自撰題補滿十題，不放寬詞表硬湊。"
         ),
         "counts": {
             "lessons": LESSONS,
             "quotedItems": quoted,
             "quotedTarget": LESSONS * QUOTED_PER_LESSON,
             "lessonsShort": sum(1 for row in lessons_out if len(row["items"]) < QUOTED_PER_LESSON),
+            "composedNeeded": sum(row["composedNeeded"] for row in lessons_out),
         },
         "lessons": lessons_out,
     }
@@ -279,7 +307,11 @@ def main() -> None:
             f"  {describe_lesson(row['lesson'])} {len(row['items'])} 題，"
             f"練到本課 {coverage['practised']}/{coverage['lessonWords']} 詞"
         )
-    print("引用題的中文欄一律留白，要由既有譯本補上；留白看得出缺，編出來看不出來。")
+    for row in payload["lessons"]:
+        if row["anchorNote"]:
+            print(f"  ⚠ {describe_lesson(row['lesson'])}：{row['anchorNote']}")
+    print(f"待自撰 {counts['composedNeeded']} 題（每課十題扣掉挖到的引用題）")
+    print("練習題不附中文：題目只印日文原文，中文只有範文（讀物）才有。")
     if args.write:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(

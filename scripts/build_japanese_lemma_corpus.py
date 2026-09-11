@@ -90,6 +90,21 @@ QUOTE_PAIRS = (("「", "」"), ("『", "』"), ("（", "）"), ("〔", "〕"), (
 # 因此印出「二千三百零四」與「左括號」——萬葉集的歌番號被當成生詞在教。
 DIGITS = set("0123456789０１２３４５６７８９")
 
+# 文語的字面特徵：舊假名（ヱ・ヰ・ゐ・ゑ）、文語助動詞與活用語尾、舊字體。
+# 這些在現代語譯本裡幾乎不出現，反過來也一樣。
+BUNGO_RE = re.compile(
+    r"ヱ|ヰ|ゐ|ゑ|なりき|なりけり|たまひ|たまふ|たまへ|給[ふひへは]|けり|べし"
+    r"|ざりき|いふ|いへ|なんぢ|われら|かれら|れり|せり|をもて|而して|ごとし"
+    r"|傳|眞|國|學|體|靈|榮|舊|齒|觀|聲|讀|實|變|對|發|會|來|萬|圍|縁|鑄"
+)
+# 現代語譯本（口語訳・新共同訳）的特徵：です・ます体與現代的助動詞連用。
+MODERN_RE = re.compile(
+    r"である|であった|ています|ました|ません|なさい|ではない|している"
+    r"|していた|れている|でした|ください|だろう|という"
+)
+# 短篇（信經、偈頌）樣本少，一個特徵就算數；長篇要三個以上才算。
+SHORT_TEXT = 800
+
 
 class Token(NamedTuple):
     """One morpheme.  `base` is the written base form, `reading` its reading.
@@ -230,6 +245,39 @@ def _package_version(name: str) -> str:
 # --------------------------------------------------------------------------
 # 純函式：什麼算詞、什麼可以查詞表
 # --------------------------------------------------------------------------
+
+
+def classify_register(text: str) -> dict[str, Any]:
+    """這段文字是文語還是現代語——機械判準，不靠人逐篇看。
+
+    🚨 這道閘的由來：`bible_以賽亞書_001.txt` 掛著「文語訳・公有領域」的標籤，
+    內容卻是現代語譯本（「アモツの子イザヤが……治世のことである」），而同一卷
+    第 2 章是貨真價實的文語（「すゑの日にヱホバの家の山は……堅立ち」）。維基文庫
+    那一頁的第 1 章本身就被換成了現代語譯文，重抓也是同一份。這不只是體例錯：
+    口語訳（1954/55）與新共同訳（1987）仍在著作權內，掛錯標籤等於把有版權的
+    文字當公有領域收進語料。
+
+    一章混得進來就可能有第二章，所以判準要是純函式、跑得了全庫、進得了測試，
+    而不是人工逐一看——人工逐一看正是這個系列最會出事的做法。
+
+    回傳 `register` 為 `文語`／`現代語`／`不確定`，附上兩邊各撞到幾次，
+    好讓報告說得出「憑什麼這樣判」。
+    """
+    bungo = len(BUNGO_RE.findall(text))
+    modern = len(MODERN_RE.findall(text))
+    size = len(text)
+    if modern > bungo:
+        register = "現代語"
+    elif bungo >= 3 or (bungo >= 1 and size < SHORT_TEXT):
+        register = "文語"
+    else:
+        register = "不確定"
+    return {
+        "register": register,
+        "bungoHits": bungo,
+        "modernHits": modern,
+        "chars": size,
+    }
 
 
 def is_word(token: Token) -> bool:
@@ -521,10 +569,23 @@ def build(limit: int | None, keep_all: bool, engine: str) -> dict[str, Any]:
     scanned_tokens = 0
     scanned_sentences = 0
 
+    rejected: list[dict[str, Any]] = []
     for source, doc_id, meta, text in iter_documents(limit):
         stats = sources.setdefault(
-            source, {"documents": 0, "sentences": 0, "tokens": 0, "kept": 0}
+            source, {"documents": 0, "sentences": 0, "tokens": 0, "kept": 0, "rejected": 0}
         )
+        # 語體閘：掛著「文語訳」的檔案若判為現代語，整份不收。理由見
+        # `classify_register`——那不只是體例錯，是把仍有著作權的譯文當公有領域用。
+        if meta.get("excluded") or (
+            meta.get("group") in ("bible", "creed")
+            and classify_register(text)["register"] == "現代語"
+        ):
+            stats["rejected"] += 1
+            rejected.append(
+                {"source": source, "docId": doc_id, "title": meta.get("titleZh", doc_id),
+                 **classify_register(text)}
+            )
+            continue
         stats["documents"] += 1
         doc_key = f"{source}:{doc_id}"
         index = 0
@@ -586,6 +647,8 @@ def build(limit: int | None, keep_all: bool, engine: str) -> dict[str, Any]:
         ),
         "tokenizer": segmenter.describe(),
         "sources": sources,
+        # 被語體閘擋下的檔案，留著名字與憑據，不要無聲消失。
+        "rejected": rejected,
         "counts": {
             "documents": sum(row["documents"] for row in sources.values()),
             "sentencesScanned": scanned_sentences,
@@ -629,6 +692,12 @@ def main() -> None:
         print(
             f"  {source:10s} {stats['documents']:5d} 篇 "
             f"{stats['tokens']:9d} 詞素 留 {stats['kept']:6d} 句"
+            f"{'　語體閘退回 %d 篇' % stats['rejected'] if stats.get('rejected') else ''}"
+        )
+    for row in payload["rejected"]:
+        print(
+            f"  ✗ 語體閘退回 {row['title']}：判為{row['register']}"
+            f"（文語特徵 {row['bungoHits']}、現代語特徵 {row['modernHits']}）"
         )
     if args.write:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)

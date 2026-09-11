@@ -997,8 +997,16 @@
   "chars": 1652,
   "file": "output/source-cache/original-readers/japanese-full/scripture/bible_以賽亞書_001.txt",
   "sourceUrl": "https://ja.wikisource.org/wiki/%E3%82%A4%E3%82%B6%E3%83%A4%E6%9B%B8%28%E6%96%87%E8%AA%9E%E8%A8%B3%29",
-  "rightsChecked": true,
-  "rightsNote": "文語訳（明治元訳舊約／大正改訳新約），公有領域"
+  "rightsChecked": false,
+  "rightsNote": "來源標示為文語訳，實為現代語譯本，著作權未清；已排除",
+  "excluded": true,
+  "excludedReason": "維基文庫「イザヤ書 (文語訳)」頁的這一章實為現代語譯本（口語訳／新共同訳系），非明治元訳；該譯本仍在著作權內。重抓同源仍為現代語，亦無其他候選頁名。已排除出語料，不得當成公有領域文語訳使用。",
+  "registerAudit": {
+   "register": "現代語",
+   "bungoHits": 0,
+   "modernHits": 6,
+   "checked": "2026-09-11"
+  }
  },
  "bible:以賽亞書:2": {
   "titleZh": "以賽亞書 2",
