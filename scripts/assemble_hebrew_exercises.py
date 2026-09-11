@@ -63,14 +63,34 @@ def chinese_by_ref() -> dict[str, str]:
     return translations
 
 
+MIN_CLAUSE_WORDS_FOR_ANCHOR = 4
+
+
 def pick_quoted(items: list[dict[str, Any]], translations: dict[str, str]) -> list[dict[str, Any]]:
-    """Take the anchors that have a published Chinese answer, widest coverage first."""
+    """Take the anchors a learner can actually check an answer against.
+
+    Whole verses come first, because the published Chinese answers exactly the
+    words printed.  A clause is answered by the Chinese of the verse around it,
+    which only helps when the clause is a recognisable piece of that verse: a
+    three-word scrap such as בֵּית אֲחֵי אֲדֹנִי set beside the whole of Gen 24:27
+    teaches nothing and reads as a mistake.  Short scraps are therefore refused
+    even though they verify perfectly -- the anchor exists to be compared, and
+    an anchor nobody can compare has lost its reason to be on the page.
+    """
     usable = [
         item
         for item in items
-        if item.get("kind") in {"verse", "clause"} and translations.get(item.get("ref", ""))
+        if item.get("kind") in {"verse", "clause"}
+        and translations.get(item.get("ref", ""))
+        and (item.get("kind") == "verse" or item.get("tokenCount", 0) >= MIN_CLAUSE_WORDS_FOR_ANCHOR)
     ]
-    usable.sort(key=lambda item: (-len(item.get("targetWords") or []), item.get("tokenCount", 99)))
+    usable.sort(
+        key=lambda item: (
+            0 if item.get("kind") == "verse" else 1,
+            -len(item.get("targetWords") or []),
+            item.get("tokenCount", 99),
+        )
+    )
     return usable[:QUOTED_PER_LESSON]
 
 
@@ -81,15 +101,42 @@ def load_drafts(lesson: int) -> list[dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8")).get("sentences", [])
 
 
-def target_words_in(text: str, lesson_items) -> list[dict[str, Any]]:
-    """Which of the lesson's twenty words a sentence actually contains."""
-    pieces = {checker.consonants(piece) for piece in checker.split_words(text)}
-    found = []
-    for item in lesson_items:
-        skeleton = checker.consonants(item.pointed)
-        if any(skeleton and (skeleton == piece or skeleton in piece) for piece in pieces):
-            found.append(item.public_record())
-    return found
+def bound_codes_by_form(verses) -> dict[str, set[str]]:
+    """Which bound morphemes each written form carries.
+
+    The conjunction ו and the prepositions ב כ ל are taught as lesson words but
+    never stand alone, so MorphHB gives them a letter code inside the lemma
+    instead of a Strong number.  Counting coverage by Strong alone silently
+    reports them as never practised, however many sentences begin with them.
+    """
+    index: dict[str, set[str]] = {}
+    for verse in verses:
+        for token in verse.tokens:
+            if token.text and token.lemma_codes:
+                index.setdefault(checker.bare(token.text), set()).update(token.lemma_codes)
+    return index
+
+
+def target_words_in(text: str, lesson_items, pointed, skeleton, codes=None) -> list[dict[str, Any]]:
+    """Which of the lesson's twenty words a sentence actually practises.
+
+    Matching is by Strong number, looked up from the written form, not by
+    letters.  A consonant-substring test says אָב is practised by אָבַד and that
+    the lesson word for Mass is practised by the verb "he sent" -- the same
+    false-coverage this series has hit in both Hebrew and Latin.  Whatever the
+    corpus says a form can be, that is what the sentence practises.
+    """
+    strongs: set[str] = set()
+    present_codes: set[str] = set()
+    for piece in checker.split_words(text):
+        key = checker.bare(piece)
+        strongs |= pointed.get(key) or skeleton.get(checker.consonants(piece)) or set()
+        present_codes |= (codes or {}).get(key, set())
+    return [
+        item.public_record()
+        for item in lesson_items
+        if (set(item.strongs) & strongs) or (item.bound_codes & present_codes)
+    ]
 
 
 def main() -> int:
@@ -103,6 +150,7 @@ def main() -> int:
     vocabulary = load_vocabulary(DEFAULT_VOCAB)
     verses = load_wlc(DEFAULT_WLC)
     pointed, skeleton = checker.build_attested(verses)
+    codes = bound_codes_by_form(verses)
 
     lessons_out: list[dict[str, Any]] = []
     thin_anchors: list[int] = []
@@ -140,7 +188,7 @@ def main() -> int:
                     "text": text,
                     "chinese": row.get("chinese", ""),
                     "chineseSource": "",
-                    "targetWords": target_words_in(text, lesson_items),
+                    "targetWords": target_words_in(text, lesson_items, pointed, skeleton, codes),
                     "verification": checker.verify(text, set(known), pointed, skeleton),
                     "reviewedBy": row.get("reviewedBy", "author"),
                 }
@@ -148,13 +196,19 @@ def main() -> int:
         for number, item in enumerate(items, start=1):
             item["no"] = number
 
+        # Coverage is keyed on the vocabulary entry's own ordinal, not on its
+        # Strong number: the conjunction ו and the prepositions ב כ ל are taught
+        # words that have no Strong at all, and keying on Strong reported them
+        # as never practised no matter how many sentences began with them.
         practised = {
-            word.get("pointed")
+            word.get("ordinal")
             for item in items
             for word in item["targetWords"]
         }
         not_practised = [
-            entry.public_record() for entry in lesson_items if entry.pointed not in practised
+            entry.public_record()
+            for entry in lesson_items
+            if entry.ordinal not in practised
         ]
         lessons_out.append(
             {
