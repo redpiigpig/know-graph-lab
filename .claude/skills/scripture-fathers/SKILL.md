@@ -1348,3 +1348,161 @@ Thaumaturgus 卷 27%、Chrysostom 論司鐸職分 24%。
 - [book-structure-spec.md](../ebook-pipeline/book-structure-spec.md) — chunk schema + R/T 規則完整對照
 - [[scripture-canon]] — 《基督教大藏經》教父卷的逐卷連結由 `scripts/dazangjing_link_fathers.py` 解析
 - [glossary.md](../ebook-translate/glossary.md) — 教父人名／聖經書卷／神學術語 markdown 表（DB 之外的補充）
+
+## 記憶庫併入：project_fathers_original_column
+
+`/fathers` 原本兩欄（繁中＋Schaff 英譯），2026-09-01 起補第三欄拉丁／希臘原典。
+腳本 `scripts/fathers_add_original.py`（`--work all` 整批重跑）＋純函式核心
+`scripts/fathers_original.py`；預檢 `scripts/fathers_alignability.py`。
+
+**進度**（2026-09-02 收工）：39 卷裡 19 卷有原文欄、1,266 段。逐部的取源與命中率、
+七種行標寫法、以及所有「命中率 100% 卻配錯」的陷阱，全部記在
+`.claude/skills/scripture-fathers/SKILL.md` 的對照表與 🚨 段落——動工前先讀那裡。
+
+**取源四處**：First1KGreek、Perseus canonical-greekLit（希臘 TEI）、The Latin
+Library（拉丁）、**Corpus Corporum mlat.uzh.ch**。最後那個是 2026-09-02 才找到
+的，它把**整套 Migne PL 做成了機讀 TEI**（5,277 部、8,550 萬字、1,528 位作者），
+所以**拉丁側已經沒有「找不到原典」這一類**——先前判定只能自己 OCR 的耶柔米、
+居普良、迦仙、安波羅修全在裡面。**PG（希臘）沒有對應的庫**，希臘卷仍要走
+`scripts/fathers_pg_ocr.py`（金口若望《論司祭職》PG 48 已跑完，248 塊裁切）。
+
+**居普良已收**（用 `markers` 在不動分段的前提下把 14 萬字巨塊按著作切開；重切
+分段會動到 chunk_index，而大藏經有 155 條連結照 chunk_index 寫）。
+
+🚨 **安波羅修那一冊（NPNF2 Vol 10）別再看它的錨點數。** 2,490 個節號是全冊之冠，
+但正文從《論聖職人員的職責》卷一第 31 章第 160 節開始、卷一前 30 章整段不在冊子
+裡、節號往回跳 161 次（該有的只有十九次）。要先補齊並重排。
+
+還卡在自己分段的：安波羅修、奧古斯丁教義論集、詩篇講解。希臘側真的沒有原典的
+只剩尼撒的格列高里（tlg2017）與耶路撒冷的西里爾（tlg2110）。
+
+🚨 **耶柔米那一冊（NPNF2 Vol 6）的 chapter_path 從第 140 段起與內文脫節**（中譯少
+收第 130/133/135 封，路徑照排），第 158 段起路徑寫著書信、內文已是《保羅隱士傳》。
+第三欄不受影響（信號由內文自己的標題讀），但目錄與頁面標題還是錯的，尚未修。
+
+**交接**：`docs/handoff-fathers-original-2026-09-02.md`（現況表、下一步、大藏經那
+6 條待人判的連結）。
+
+相關：[[anf-vol1-golden-template]]、[[project-alignment-gate]]、[[feedback-reader-silent-failures]]
+
+**索引壓縮時移入（2026-09-11）：**
+- 🚨 安波羅修那一冊錨點最多但正文缺頭又亂序、別被數字騙
+- 抽查一定要抽中間那一章（根那狄就是首末都對、中間錯一位）
+
+## 記憶庫併入：anf_vol1_golden_template
+
+# ANF Vol 1 是教父全集翻譯模板（2026-05-27 v4 精修鎖定）
+
+`ebook_id: c98d358d-7066-4691-a896-b7232707b0db`
+
+## 最終驗收狀態（2026-05-27 v4）
+
+| 檢驗 | 結果 |
+|---|---|
+| validate_book_structure.py | ✅ all checks passed (0 FAIL) |
+| T9 cross-work bleed | 0（22 → 10 → 0）|
+| T1 標題吞內文 | 0（39 → 0）|
+| T2 h3 vs volume 漂移 | 10（剩餘為 multi-h3 split 後 chunk 內首個 h3 是 intro 標題，視覺可接受）|
+| T10 footnote ref/body mismatch | 14（多為 LLM 漏譯腳註號 — info-level）|
+| T11 bilingual paragraph drift | 3（chunks 77/79/96，段落數差 27-37%）|
+| chunk count | 112 |
+| 繁中字數 | 1,002,003 |
+
+## v4 精修（2026-05-27）做了什麼
+
+對比 v3（先前狀態）：
+- **chunk 47** 拆分 — Papias 導讀（968 字）從錯誤的「巴拿巴書信 第21章」relabel 為「帕皮亞殘篇 導讀」
+- **multi_h3_splitter** 處理 chunk 44 的 4 段交織 bleed（Mathetes/Polycarp/Barnabas intros 分別搬到 chunk 9/11/45）
+- **chunk 81 → chunk 84**：Irenaeus《駁異端》導讀搬回 IRENÆUS 區
+- **T9 NCX-driven 偵測**：用書本身 NCX 當 ground truth + chunk 的 `title_en` 對比，比 LETTER_CN_LABELS 字串對齊穩
+- **attribute_heading 3-tier match**：long substring → parent-aware short substring → token-set Jaccard ≥0.7 with parent prefer
+- **T12 sweep rule**：heading 後若無空行 → 強制插入（避免 renderMarkdown 把內文吞進 h3）。ANF Vol 1 修 32 處 / 29 chunks
+- **chunk 11 「致丟格那妥書」誤標 h3 修正** → 「致腓立比人的坡旅甲書信」（舊 T2 sweep 殘留）
+- **glossary backfill**（49 條）：人名 9 + 地名 14 + 教派 8 + 作品名 11 + 神學名詞 7，全標 first_source='ANF Vol 1'
+- **`/fathers` 頁面上線**：38 卷 Schaff 按系列分組，ANF Vol 1 標「已精修」綠色 badge
+- **`scripture-fathers` skill 拆分出來**（從 [[ebook-translate]] 抽出教父專屬流程）
+- **翻譯詞庫 5 分類重構**（[[fathers-glossary-schema]]）：人名 5 era、地名／作品名／教派名／神學名詞，聖經人物與神學名詞兩處顯示雙翻譯（新教 + 天主教）
+
+## v3 精修做了什麼（保留歷史）
+
+對比 v2：114 chunks → 112 chunks。新加／修：
+- `parent_volume` 欄位：sidebar 三層樹（依納爵 ⊃ 致以弗所人書 / 致馬內夏人書...），多作者 Schaff 集適用
+- chunk 0 「源自基督教古典以太圖書館」→「封面」
+- chunk 1「前尼西亞教父」（Title Page）+ chunk 2「序言」→ merge 成「前言」
+- Elucidation 從獨立 volume fold 進 Book III 末頁
+- 末尾索引 chunk stray volume 清掉（不再誤掛在「愛任紐《駁異端》」下）
+
+工具鏈：
+- `repatch_consolidated_book.py`：in-place 套 normalize 規則
+- `sweep_book_quality.py`：T1+T2+T3 (quotes 「」)+T8 (TERM_FIXES) 自動修
+- `scan_translated_book.py`：T1-T11 偵測（含 NCX-driven T9 + Jaccard attribute_heading）
+- `multi_h3_splitter.py`：把單 chunk 內多個 h3 段各自搬到不同目標
+- `auto_fix_cross_bleeds.py`：自動切跨書 bleed（含 safety guards 防 chunk 掏空／爆量）
+- `seed_glossary_anf_vol1.py`：把 TERM_FIXES + 高頻 ANF 名詞寫進 [[translation-glossary]] 5 個 tab
+- A+B+C 三層校對：static T1-T11 + Haiku 文字 + Haiku Vision，`merge_proofread_reports.py` 整合
+
+## 新 session 開工前必做的驗收（一次過才能繼續 Vol 2+）
+
+```bash
+# 1. validator 必須 0 FAIL
+python scripts/validate_book_structure.py c98d358d-7066-4691-a896-b7232707b0db
+
+# 2. JSONL marker 統計：中文側 [^N] / (N) 數量應 ≈ 英文側
+python -c "
+import json, re
+fn = r'G:\\我的雲端硬碟\\資料\\電子書\\_chunks\\c98d358d-7066-4691-a896-b7232707b0db.jsonl'
+chunks = [json.loads(l) for l in open(fn, encoding='utf-8')]
+print(f'chunks: {len(chunks)}  zh_refs: {sum(len(re.findall(r\"\\[\\^\\d+\\]\", c.get(\"content\",\"\") or \"\")) for c in chunks)}')
+"
+# 預期 114 chunks / 4900+ zh refs（誤差 ±100 OK）
+```
+
+## 模板規格（[[ebook-translate]] / book-structure-spec.md）
+
+- **5 步驟 pipeline**：translate → polish → consolidate → **sweep（T1+T2 修）** → R2/DB push（extract_epub_extras 已 inline 進 translate parser；repatch 是補丁，新規則上線時對舊書 in-place 套用）
+- **EPUB parser** ([translate_ebook_to_zh.py:epub_to_chunks](../../../../Desktop/know-graph-lab/scripts/translate_ebook_to_zh.py)) 從一開始就 enrich source markdown 含 `[^N]` refs + `{{p:N}}` markers + 末尾 `(N) body` footnote section。LLM 收 PROMPT rule 7 指示逐字保留 markers + 翻譯腳註本文
+- **consolidator** ([consolidate_by_ncx.py](../../../../Desktop/know-graph-lab/scripts/consolidate_by_ncx.py)) chinese_label 用 word-boundary regex + 長 pattern 先 — 杜絕 Book I 撞 Book III/V 之類 substring bleed
+- **polish** 不覆寫 consolidator 已設好的 volume tag（只在 chunk 缺 volume 時設）
+- **TOC 標準**（server/utils/ebook-chunks.ts loadToc）：
+  - 單頁卷（≤10 章）→ 卷名直接 link，無展開符號
+  - 多頁卷 → ▸/▾ 展開，子節剝 volume 前綴顯「第1-10章」
+  - 卷內所有 entries 一律 level=3 縮排（無論 H3/H4）
+  - `chunk_type='page'` 不展開 section anchors（10 章=一個單位）
+  - 無 volume 的 chunk 也不展開（front matter）
+- **Reader UI**：
+  - 雙語預設「中英」對照（chunk 有 source_text 自動切）
+  - 中:英 = 4:6 寬度比
+  - 腳註 sup 純藍粗體無底色，內文 ref ↔ 末尾 `(N)` 雙向 anchor
+  - `[頁N]` 灰色小膠囊穿插內文
+  - 複製文字自動帶芝加哥引用（用最近 `[頁N]`）
+  - ✏️ 編輯按鈕直接改 chunk content/source/title
+
+## Vol 2-38 開工流程（Vol 1 驗收 OK 之後才做）
+
+```bash
+# 1. Vol 2-10 + NPNF 28 卷需「砍掉重練」（既有翻譯有 bleed bug）
+# 對每本：
+EBOOK=<id>
+rm "G:/我的雲端硬碟/資料/電子書/_chunks/$EBOOK.jsonl"
+python -c "import json,pathlib; p=pathlib.Path('scripts/logs/corpus_queue_state.json'); s=json.loads(p.read_text(encoding='utf-8-sig')); s['completed']=[x for x in s['completed'] if x != '$EBOOK']; s['current']=None; p.write_text(json.dumps(s,ensure_ascii=False,indent=2),encoding='utf-8')"
+
+# 2. 走 queue（restart 帶 --engine haiku 跑所有未完）
+# 用 Start-Process + PYTHONIOENCODING=utf-8 避 cp950 ✓ 編碼炸（見 SKILL.md）
+
+# 3. 每本完成跑 validator，0 FAIL 才認可
+```
+
+## 翻譯耗時參考
+
+- ANF Vol 1（938 source chunks，新 pipeline 含腳註本文）：~3.5 hr on Haiku，產出 112 letter pages / 1,002,003 繁中字
+- 校對全套（A 靜態 + B 文字 Haiku + C Vision Haiku + auto-fix + glossary seed）：另 ~30 分鐘，~$0.80
+- Anthropic Max OAuth account rate-limit 偶爆 30 min sleep，影響 ±1 hr per book
+- 互動 Opus / Claude Code 同時跑會跟 Haiku worker 搶 quota → user 不互動時 worker 比較順
+
+## 詞庫對接（2026-05-27 新增）
+
+教父翻譯詞庫 = [/translation-glossary](http://localhost:3010/translation-glossary)，5 個 tab：
+- **人名** = `theologians` table（249+9 條）
+- **地名 / 作品名 / 教派名 / 神學名詞** = `theological_terms` table，按 `entity_type` 過濾
+
+4 欄：英文 / 原文 / 中文翻譯 / 首次出現出處（first_source='ANF Vol 1' 等）。新書翻譯前先到這裡查 — 確認譯名再下手。沖突的譯名（哥林多 vs 科林斯、保羅 vs 保祿 等）整理進 `sweep_book_quality.TERM_FIXES_<book>` 表，sweep 階段自動套用。

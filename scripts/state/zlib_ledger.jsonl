@@ -276,3 +276,11 @@
 {"key": "hunt-62f8670cfa", "query": "聖與俗：宗教的本質 米爾恰‧伊利亞德", "status": "probe-miss", "why": "all-gated", "rule": "v2-t2s", "at": "2026-09-10T10:10:58.775Z"}
 {"key": "bib-60348508a0-zh", "query": "The Prestige of the Cosmogonic Myth Eliade", "status": "probe-miss", "why": "all-gated", "rule": "v2-t2s", "at": "2026-09-10T10:11:02.978Z"}
 {"key": "bib-b10e0da6cb-zh", "query": "The Sacred and the Profane: The Nature of Religion 伊利亞德", "status": "probe-miss", "why": "no-results", "rule": "v2-t2s", "at": "2026-09-11T01:15:27.331Z"}
+{"key":"mukyzh-00af1e6a8b","query":"教會與無教會 雨宮榮一等著","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:00:39.389Z"}
+{"key":"muky-dohi-tennosei","query":"天皇制とキリスト教 土肥昭夫","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:01:45.645Z"}
+{"key":"uchi-bio-masaike-den","query":"内村鑑三伝 政池仁","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:02:52.890Z"}
+{"key":"bib-0077b46b2f","query":"玄奘以來一人而已 藍吉富","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:04:20.290Z"}
+{"key":"bib-008044c7e9","query":"正式成立佛教性別平等協會 釋昭慧","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:05:43.332Z"}
+{"key":"bib-00c27b7cd4","query":"福嚴精舍五十周年紀念特刊 釋傳妙","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:07:13.674Z"}
+{"key":"bib-035aa95481-orig","query":"Totalité et infini: Essai sur l'extériorité Emmanuel Levinas","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:08:20.451Z"}
+{"key":"bib-0014add30e-orig","query":"The End of Progress: Decolonizing the Normative Foundations of Critical Theory Allen","status":"not-found","why":"no-results","rule":"v2-t2s","at":"2026-09-11T02:09:45.847Z"}

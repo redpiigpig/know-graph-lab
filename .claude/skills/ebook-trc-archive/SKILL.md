@@ -353,3 +353,28 @@ commit 後再驗一次 `git show HEAD --stat` 有沒有你的檔。
 
 [[ebook-pipeline]]・[[ebook-translate]]・[[scripture-canon]]（`/creeds` 本輪 5→9 份信條）・
 [[translation-glossary]]（同書異名一律入庫）・[[project_dazangjing]]（四時代×十藏）
+
+## 記憶庫併入：project_trc_archive
+
+**站方已授權私人收藏**（2026-08-24）。AList 檔案站，`POST https://thereformedcatholic.org/download/api/fs/list`，base_path 是 `/download`，後端存儲是 **OneDrive 個人版 CDN**（下載不吃站方頻寬，但列目錄的 metadata 呼叫會）。
+
+**全站普查結論（2026-08-25）**：44,994 檔／676 GB，但
+- **影音 573 GB（85%）**——三個 200GB 級分類（長老宗／改革宗／路德宗）幾乎全是當代華人教會的講道錄音影片（王一牧師、辛克萊傅格森、深圳真道長老會…）。**這批不收**。
+- 真正的文字語料只有 **92.8 GB／17,054 檔 → 收斂為 5,109 部作品**，其中 3,866 部小於 5MB。
+- 原典候選約 1,700 部／25 GB。價值最高的兩塊不是「改革宗」本身：**清教徒原典的中譯密度**（歐文 77、曼頓 36、薛伯斯 30…）與**中國基督教史一手材料**（馬禮遜、狄考文、倪維思、海恩波、麥沾恩《梁發》、趙中輝）。
+
+🚨 **站方的分類軸不可沿用**——安立甘底下的子分類叫「CofE **1844年墜落後**認信派」，那是編者的宗派判斷不是書目學。只當來源標記，時代×藏×正/外 全部重判。
+
+**NIDOTTE／NIDNTTE 站上沒有**——那兩個資料夾只有麥種傳道會的**預購試閱本**（26 頁／30 頁）。希伯來文側可用 TWOT《舊約神學辭典》（530MB，按希伯來字根編排，但**無文字層要 OCR**）；**希臘文側站上沒有任何按希臘字詞編排的辭典**。
+
+**腳本**：`trc_catalog.py`（普查）→ `trc_records.py`（檔→作品層彙整）→ `trc_fetch.py`（逐檔限速下載，8 秒間隔）→ `trc_ingest.py`（內容特徵去重→命名→Drive→登錄 ebooks）。
+- 🚨 下載器有**已完成帳本** `c:/tmp/trc_downloaded.json`，以 TRC 站內路徑為鍵。不能只看目的夾判斷「已下載」——檔案 ingest 進 Drive 後就從 dest 消失，會整批重抓。
+- 🚨 `trc_ingest` 判定為重複的檔會移進 `_dup/`。留在來源夾的話下一輪會各自成為群組唯一成員而被「升格」搬進 Drive。
+- doc/docx/chm 佔文字語料 32%，但 `ebooks_file_type_check` 只收 pdf/epub/mobi/azw3/azw，parse pipeline 也不支援 → 檔案進 Drive 但不建 ebooks 列。
+
+相關：[[project_dazangjing]]、[[scripture-canon]] 的 /creeds、[[feedback_drive_canonical_storage]]
+
+## 索引補記
+
+- 站方分類軸帶宗派立場不可沿用
+- 下載器有帳本、去重要進 _dup/

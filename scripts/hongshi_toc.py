@@ -197,7 +197,11 @@ def parse_issue(pdf_path: str) -> dict:
         # 目次跨頁時下一頁還有一截，接著解析
         if pno >= 0 and pno + 1 < len(doc):
             more = parse_toc(doc[pno + 1].get_text() or "")
-            if more and entries and more[0]["page"] >= entries[-1]["page"]:
+            # 改版後有無頁碼的篇目（編輯室報告），page 會是 None → 拿來比大小會炸；
+            # 比的是「下一頁的目次是否接著往後」，所以只看有頁碼的那些。
+            nxt = next((e["page"] for e in more if e["page"] is not None), None)
+            last = next((e["page"] for e in reversed(entries) if e["page"] is not None), None)
+            if more and (last is None or nxt is None or nxt >= last):
                 entries += more
     finally:
         doc.close()

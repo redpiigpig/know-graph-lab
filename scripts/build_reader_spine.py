@@ -5,6 +5,7 @@
     python -X utf8 scripts/build_reader_spine.py --paper 100  # 換紙磅數（預設 80g）
 
 書背上只有「115-1　課名」（使用者 2026-09-10 定案），分冊的再加冊別。
+**低於 100 頁的不出書背**（使用者 2026-09-11）：那種書背只有幾公釐，裁不準也貼不上。
 
 寬度是**算出來的**：雙面印，張數 = ceil(頁數 / 2)，80g 影印紙一張約 0.104 mm，
 再加 2 mm 給封面與膠層。輸出是一張 **B5**（跟讀本同尺寸），中間放實際尺寸的書背條，四周有細框可以裁；
@@ -42,7 +43,6 @@ SEMESTER = "115-1"
 BOOKS = [
     ("宗教研究方法讀本_上冊.pdf", "宗教研究基本問題與研究方法", "上冊", "宗教研究基本問題與研究方法"),
     ("宗教研究方法讀本_下冊.pdf", "宗教研究基本問題與研究方法", "下冊", "宗教研究基本問題與研究方法"),
-    ("宗教研究方法讀本.pdf", "宗教研究基本問題與研究方法", "", "宗教研究基本問題與研究方法"),
     ("宗教學理論讀本.pdf", "宗教學理論與方法（一）", "", "宗教學理論與方法(一)"),
     ("初階日文讀本.pdf", "初階宗教學日文文獻選讀", "", "初階宗教學日文文獻選讀"),
 ]
@@ -84,7 +84,13 @@ def make_spine(src: Path, course: str, volume: str, gsm: int) -> tuple[Path, flo
     page.insert_text((28, PAGE[1] - 16), note, fontname="CJK", fontsize=9, color=(0.45,) * 3)
 
     dst = src.with_name(src.stem + "_書背.pdf")
-    out.save(dst)
+    # 一張紙印幾個字卻 27 MB——`insert_font` 會把整包細明體嵌進去。子集化之後
+    # 只留用到的那幾個字，剩不到 100 KB。
+    try:
+        out.subset_fonts(verbose=False)
+    except Exception:
+        pass
+    out.save(dst, garbage=4, deflate=True)
     out.close()
     return dst, w_mm, pages
 
@@ -92,11 +98,25 @@ def make_spine(src: Path, course: str, volume: str, gsm: int) -> tuple[Path, flo
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--paper", type=int, default=80, help="紙磅數（60/70/80/100/120）")
+    ap.add_argument("--min-pages", type=int, default=100,
+                    help="低於這個頁數就不出書背（太薄貼不上，使用者 2026-09-11 定案）")
     a = ap.parse_args()
     made = 0
     for name, course, volume, folder in BOOKS:
         src = BASE / folder / name
         if not src.exists():
+            continue
+        doc = fitz.open(src)
+        pages = doc.page_count
+        doc.close()
+        if pages < a.min_pages:
+            # 薄的那幾本書背只有幾公釐，印出來裁不準也貼不上，直接不做
+            print(f"－ {src.stem}　{pages} 頁（<{a.min_pages}）太薄，不出書背"
+                  f"　估寬 {spine_width_mm(pages, a.paper):.1f} mm")
+            stale = src.with_name(src.stem + "_書背.pdf")
+            if stale.exists():
+                stale.unlink()
+                print(f"  已刪掉舊的 {stale.name}")
             continue
         dst, w_mm, pages = make_spine(src, course, volume, a.paper)
         print(f"✓ {dst.name}　{pages} 頁　書背寬 {w_mm:.1f} mm")

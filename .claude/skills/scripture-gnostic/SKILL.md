@@ -244,3 +244,44 @@ gnostic_sections (
 - [[ebook-collected-works]] — 「HTML 抓取→切段→翻譯→逐段對照」同源姿態（`split_html_sections` 可參考）
 - [[translation-glossary]] — 諾斯底／神學名詞中譯（翻譯前鎖譯名）
 - [[scripture-fathers]] / `/apocrypha` — 去重對象（polemics / christian_apocrypha / dead_sea 重疊處）
+
+## 記憶庫併入：project_gnostic_library
+
+新 `scripture-gnostic` skill + `/gnostic`（經典對照與註釋 portal 第 8 張卡片 🜍）：把 The Gnostic Society Library（gnosis.org）13 大分類文獻做成**英文（公有領域英譯）／繁中逐段對照**，DB-backed 仿 [[project_alignment_gate]] 的 /apocrypha（gnostic_{documents,versions,sections} 三表）。
+
+**Why:** 使用者要把諾斯底文獻收進對照 portal，中英兩欄逐段、英文從網站抓、中文自譯。
+
+**狀態（2026-06-14 定名／清理／詞庫批次，user 拍板「先定名不動正文」）：287 篇**（原 304，刪 17 雜項）。先前 2026-06-06 全量轉錄完成 304 篇 / 20,012 段。
+
+**2026-06-14 做了什麼**（[scripts/curate_gnostic_naming.py](scripts/curate_gnostic_naming.py)＋[scripts/seed_gnostic_glossary_extra.py](scripts/seed_gnostic_glossary_extra.py)）：
+- **刪 17 雜項**：整個 `dead_sea` 11 篇（逐篇查證全是書店/時間表/資源導覽頁，非原典；真死海古卷在 /apocrypha 崑蘭）＋Mead 書店頁 2＋valentinus 導覽 3＋NHL 索引 1。dead_sea 與 alchemical 兩分類現為空（reader 已自動隱藏空分類）。
+- **近代學者著作集中 `modern`**（11 篇，display_order 13000+ 排最底＝「放下面」）：Pagels/Meyer/Rudolph/Drower/Mead 各導論等。`modern` 標籤改「現代文獻與近代學術」（lib/gnostic-meta.ts + gnostic_library.py CATEGORIES 同步）。
+- **定名 109 筆**：與 /apocrypha 重疊的 23 篇 title_zh **逐字對齊**並存 `gnostic_documents.apocrypha_slug`（新增欄）；其餘按詞庫權威自譯（多馬/馬利亞/安得烈/司提反/馬吉安/革利免/塞爾蘇斯/赫拉克勒翁/巴西理德/浮士德/瓦倫廷/雜記）＋系列卷號統一＋修簡體 论→論。掃描後 287 篇 0 殘留不一致。
+- **詞庫補登**：deities +11、theologians +4（瓦倫廷/巴爾戴桑/埃皮法內斯/阿達伊）、theological_terms 作品名 +5。
+
+**2026-06-14 品質修復（接手任務①，user 拍板「先修最差的、不全翻；命名照詞庫權威」）**：[scripts/fix_gnostic_quality.py](scripts/fix_gnostic_quality.py)——section 層外科手術，不重抓整篇。診斷出 2026-06-06 批次主要敗筆是**幻覺**：短英文標題（章名/`PREFACE.`/署名/引用行）被 LLM 無中生有膨脹成整段中文 essay（真正內文其實在相鄰 section、未受損）。偵測器 `classify()` 4 訊號：halluc_heading（en<70 且 zh≥2.5×en）/untranslated（latin>50%）/meta_leak（任務性 meta 開頭，已校過避誤判正當第一人稱如「我無法保持貞潔」）/word_gloss。初掃 **779 段/110 篇**，對每段**從英文源重譯**（標題→只成短標題、幻覺消失）。prompt 加固（`GNOSTIC_PROMPT_TMPL`）：禁擴寫/禁 meta/禁 gloss、非英文照譯、人名照詞庫（Yeshua→耶穌）。`--engine haiku` 全量跑（gemini 三池當晚全 429）。
+
+**2026-06-15 根因修復＋register 定案＋摩尼教精修（接手任務①收尾）**：
+- **為何之前品質堪憂的正解**：有測試但測錯東西——`assert_aligned` 只驗段數相等，幻覺成假 essay 段數照樣相等照樣放行。缺的是 **source↔output 不變量**。
+- **品質閘內建 pipeline**：偵測器升級為 `gnostic_library.py` 純函式 `classify_translation()`（empty/meta_leak/word_gloss/untranslated/halluc_heading/**wenyan**）+ test（2026-06-20 起 40 例綠，含 `test_ingest_gnostic.py`）；`ingest_gnostic.py` 的 `translate_one()` 把它當 **inline 逐段閘**（翻一段驗一次→重試 2 次→短結構標記退回 verbatim）。fix_gnostic_quality.py 改 import 共用同一定義。**未來翻譯都自帶體檢。**
+- **register 定案（user 拍板）：白話文 + 《和合本》語氣，絕不文言**。原 prompt「莊重文體」太含糊→Gemini 漂文言。`GNOSTIC_PROMPT_TMPL` 改明令白話、和合本、禁「曰/焉/矣/之乎者也」。`wenyan` 閘擋文言漂移（名曰/曰：/焉/矣/汝/吾；**2026-06-20 移除 哉**＝和合本本身用「禍哉/哀哉/聖哉/深哉」，是目標語體非漂移）。
+- **摩尼教全量精修**：`fix_gnostic_quality.py --category manichaean --retranslate --engine haiku`（新增 `--category`/`--retranslate`＝全類重譯非只修 flagged）。1404 段全部重譯成白話和合本體，殘留 12 段文言再以閘重譯（含 2 段頑固的 best-effort 再 re-roll 清掉），**最終 0 flagged**。⚠️ harness 對 piped/backgrounded python 會看到 `_whisper_venv`→`uv` 父子 re-exec（看似 2 process 其實 1 worker，別誤殺）。
+
+**✅ 全類別精修完成（2026-06-20 收尾）**：user「除典外文獻外全用摩尼教範本（白話和合本）重譯」。範圍 15,563 段（摩尼教以外所有類別，跳過 23 篇 apocrypha_slug 連結篇）。自癒迴圈 `gnostic_refine_loop.sh` 一輪跑完剩餘 3777 段＋4 輪 flagged-only re-roll 清文言漂移（73→30→21→18→13→10）。**最終 task-scope（excl apocrypha）`--dry` = 7 段 flagged，全是正當 verbatim（書目／引註標記／抄本缺頁註／圖說），0 wenyan、0 meta_leak。** ledger `c:/tmp/gnostic_refine.done`（15727 行，**別刪**，[[feedback_tmp_cleanup]] 保留規則；要再全量精修先刪它）。
+- **收尾 gate 根因修復（＋test，40 例綠）**：①`哉` 從 `WENYAN_RE` 移除（和合本自用 哉-感嘆，全 corpus 4 命中皆是和合本詞，0% precision）；②`is_trivial_source` 的 `page`→`page\b`（裸 `page` 誤吃「Pagels」＝Elaine Pagels 把真文段當頁碼跳過）；受害 2 段補譯。
+- **摩尼教（範本）補洞**：full-corpus 掃出摩尼教殘留 16 段 wenyan（汝/吾，pronoun marker 是摩尼教跑完後才加進 gate 才漏），一輪 flagged-only 全清，重回 0 flagged。
+
+**⏳ 仍待**：②/apocrypha（黃根春）中譯完成後依 `apocrypha_slug` 回填覆蓋 /gnostic 對應 23 篇（精修一直未動這 23 篇）。
+
+**先前各類篇數（2026-06-06，定名前）**：manichaean 75 / polemics 50 / nag_hammadi 30 / hermetica 30 / christian_apocrypha 25 / gnostic_scriptures 22 / mead 17 / cathar 11 / dead_sea 11 / valentinus 10 / modern 9 / mandaean 14。**未收（刻意）**：Mead 非諾斯底雜文、與 /fathers 及 /apocrypha 重疊的去重品。
+
+**How to apply:**
+- 純函式核心 `scripts/gnostic_library.py`（test-first，25 例綠）：13 分類 taxonomy / slug / 去重 / 分類頁解析 / 單篇 `<br>` 逐段解析 / 對齊 gate。
+- ingest 驅動 `scripts/ingest_gnostic.py`：`--all --resume --engine haiku` 整批；`--category KEY` 單類補；`--url ... --title ...` 單篇。
+- **引擎**：免費池（Gemini/NVIDIA）乾掉就 `--engine haiku` 直連 Claude Max（見 [[feedback_engine_nvidia_no_haiku]]）。`make_engine "haiku"` 已修為直連 `te.haiku_translate`（原誤 redirect 回 gemini 鏈）。全量主體即靠 Max-Haiku 一夜翻完。
+- **gnosis.org 憑證過期** → 一律 `curl -sk` / requests verify=False（WebFetch 失敗）。
+- **不閉合 `<p>` 讚歌頁**：摩尼教/曼達教讚歌頁古老 HTML、`<p>` 不閉合，`html.parser` 巢狀化會丟光內容段。`_doc_soup()` 用 lxml（HTML5 自動閉合）解。重抓單類用 `--category manichaean/mandaean --resume`。
+- **列表段數**：`/api/gnostic/documents` 讀 DB view `gnostic_section_counts`（別再抓全部 sections JS-side tally，會撞 PostgREST 1000-row 上限 → 卡片誤標「未轉錄」）。
+- **去重**：polemics / christian_apocrypha / dead_sea 與 /fathers、/apocrypha 重疊者自動跳過（`is_duplicate` 比 title_en）。
+- **版權**：Nag Hammadi 現代英譯（Meyer/Barnstone/Lambdin）有版權→私人研究姿態；Mead 系列（Corpus Hermeticum/Pistis Sophia）公有領域。
+- 細節見 `.claude/skills/scripture-gnostic/SKILL.md`。

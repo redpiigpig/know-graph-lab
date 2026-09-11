@@ -348,3 +348,90 @@ WorldThematicMap 依 `currentYear` 在兩模式切換：
 `158e054` 法屬圭亞那獨立染色 + 點海洋退出 + 標籤防重疊
 `c5a83fc` admin_1 次國家上色 + 繁體國名 + 台灣修為亞太黑潮
 `b448b07` 全球八大人文宗教界域主題地圖（首版）
+
+## 記憶庫併入：project_maps_feature
+
+知識圖工作室新增「地圖繪製」工具集，路徑 `/maps`。
+
+第一張卡片：**全球八大人文宗教界域**（`/maps/world-religions`）— D3 + NaturalEarth1 投影世界主題地圖，按 8 大界域上色 + ~30 個文化圈分組。資料源：根目錄 `全球八大人文宗教界域.docx`。
+
+頁面結構：
+- `/maps` — 子工具卡片頁（仿 `/genealogy/index.vue` 佈局）
+- `/maps/world-religions` — 地圖／資訊列表 雙視圖切換
+
+**8 大界域定案配色：**
+- 拉美 `#DC2626` 紅
+- 北美 `#2A9D8F` 翡翠綠（不是青／cyan，是 jade teal）
+- 中央 `#16A34A` 綠
+- 西方 `#9333EA` 紫
+- 南方 `#A0522D` 棕
+- 亞太 `#2196F3` 藍
+- 東方 `#EAB308` 黃
+- 北方 `#7593B5` 灰藍（不是橄欖綠，是 slate blue）
+
+**Why:** 使用者明確指定的視覺方案，經兩輪調整定下；下次擴充地圖功能、加新文化圈時要沿用這套色族當主色調。
+
+**How to apply:** 任何涉及 8 大界域上色的元件（地圖、圖例、列表、卡片）都引用 `data/maps/world-religions.ts` 的 `realm.color` 欄位，不要在元件內 hardcode。文化圈次色用 HSL 衍生（同界域 hue ± 飽和度／明度）。
+
+相關技術選型：D3 + d3-geo (NaturalEarth1) + d3-zoom；四層 GeoJSON 疊加（NE 50m admin_0 / NE 50m admin_1 CHN.RUS.USA.CAN / NE 10m admin_1 LBY.AFG.UKR.SDN.ETH.NGA.GHA + FR 海外省 / GADM admin_2 中國 4 個藏族自治州）。
+
+**所有實作細節、配色公式、admin 切分邏輯、編輯模式 localStorage schema、踩過的 NE 對照 bug 都記在 [`maps-world-religions`](../../../Desktop/know-graph-lab/.claude/skills/maps-world-religions/SKILL.md) skill 裡** — 下次要動地圖（加新國家、新文化圈、改 admin 切分、調配色、修標籤位置）先看 SKILL.md。
+
+**歷時功能（2026-05 完成 v1）**：地圖／列表底部加時間軸（-4000 ~ 2026），文化圈隨年代變。已完成：
+
+- **600 年制分期**：古風(-1200)/軸心(-600)/古典(0)/中古(600)/近世(1200)/近現代(1800)
+- **歷史邊界**：接 `aourednik/historical-basemaps` CC BY-NC-SA 4.0 數據，17 個快照（bc4000~2000），預處理為 `public/maps/historical-spheres.geojson`（734 features / 5MB）；地圖年 < 2000 時顯灰底 + 歷史 polygon 上色
+- **`SPHERE_HISTORY` 完整**：41 個文化圈全有歷史時期資料（蘇美→蒙兀兒、伊特魯里亞→歐盟、扶南→泰王國等）
+- **TimeAxis 元件**：滑桿 + 公元前後輸入 + 25+ 快照按鈕 + 大時代徽章
+- 「阿拉伯文化圈」→「阿拉伯次大陸文化圈」
+
+待迭代：snapshot-based 邊界在快照交界會「跳」一次；4000-500 BCE 早期文明核心區仍是 historical-basemaps 的 admin_0 大塊形，未精細手繪。詳細待辦見 SKILL.md「已知限制」。
+
+**中央界域 v2 重構（2026-05）**：依使用者「七階段分析」拆分 sphere——
+- `CulturalSphere` 加 `valid_from` / `valid_to` / `is_historical` / `successor`
+- 中央界域新增 6 個 ancient sphere（蘇美/蘇美-阿卡德/亞述/巴比倫/迦南/黎凡特）+ 1 個新 sphere（小亞細亞 anatolia，土耳其從愛琴-小亞細亞移過來）
+- 愛琴-小亞細亞 sphere 改名為 `愛琴文化圈`（only GRC+CYP），其原 1071+ 與奧斯曼-土耳其部分歸 anatolia
+- `activeSpheresByRealm(realmId, year)` helper 過濾當前年有效 sphere
+- 長期計畫：其他 7 個界域也來一輪「分裂-縫合」分析（使用者依次提供）
+
+## 索引補記
+
+- 8 色定案（北美翡翠綠/北方灰藍）
+- color 從 data 引用不 hardcode
+
+## 記憶庫併入：feedback_map_label_clean_country_name
+
+地圖（/maps/historical-borders）的 polygon 標籤、列表的國名欄位 **一律只顯示乾淨的中文國名／朝代名**。任何附帶資訊都進 detail modal，**絕不**塞在主標籤裡。
+
+**Why：** 使用者多次反饋「所有國名都不應該有其他繁雜資訊」「就是國名就好」「不要強調是誰當政的時代」。地圖縮放時標籤要小、密，加說明會擠壞排版；列表也是同理 — 比較時只看國名。**這是地圖工具最重要的視覺規則。**
+
+**具體禁止項：**
+- ❌ `查理五世/六世（法蘭西王國）` — 君主名
+- ❌ `羅斯托夫－雅羅斯拉夫爾（俄羅斯）` — 公國／sub-region 名
+- ❌ `布列塔尼王朝（神聖羅馬帝國）` — 王朝名
+- ❌ `阿維尼翁教皇（教皇國）` — 事件名
+- ❌ `葡萄牙第一王朝（葡萄牙王國）` — 王朝編號
+- ❌ `沙圖格魯克（德里蘇丹）` — 王朝家族名
+- ❌ `習近平時代（中華人民共和國）` — 當政者
+- ❌ `普京時代（俄羅斯聯邦）` — 當政者
+- ❌ `經濟改革時代（印度）` — 時期描述
+- ❌ `衰退（馬利／博爾努-加涅姆）` — 狀態描述
+- ❌ `所羅門王朝復辟（衣索比亞）` — 王朝
+- ❌ `貞觀之治（唐）` — 治世名
+- ❌ `武帝極盛（漢）` — 君主／治世
+- ❌ `北方統治（蒙兀兒）` — 區域描述
+- ✅ `法蘭西王國` / `俄羅斯` / `神聖羅馬帝國` / `教皇國` / `葡萄牙王國` / `德里蘇丹國` / `中華人民共和國` / `俄羅斯聯邦` / `印度` / `馬利` / `衣索比亞` / `唐` / `漢` / `蒙兀兒`
+
+**How to apply：**
+- `dynastyLabelAt()` 函數**只回傳 `country_zh`**，從不組合 `dynasty_zh`。dynasty_zh 在 dynasty-labels.ts 可以保留（用於 detail popup），但**永遠不能出現在地圖標籤文字**
+- 寫 polygon-names-zh.json：只填中文國名，不加括號說明
+- 寫 dynasty-labels.ts country_zh：純朝代／國家名（東周／西周／曹魏／南唐／印加／法蘭西王國）
+- 寫 dynasty-labels.ts dynasty_zh：可空，可保留作為 detail 用途；**地圖標籤不會用到**
+- 寫 STATE_DETAILS name_zh：純國名，朝代細節放 dynasties[] / intro
+- 寫 SUPPLEMENT_ZH：純國名
+
+**檢查工具：**
+- `grep -nE "[^（]+（[^）]+）" data/maps/dynasty-labels.ts` — 找含括號的 country_zh（應該全部都是國名／朝代名，沒「（XX）」括號）
+- 跑後手動 spot-check 幾個年代的 dev server 截圖
+
+**歷史包袱：** 舊 commit 為了塞「貞觀之治／開元盛世／武帝極盛」等資訊把 dynasty_zh 放進標籤；2026-05-20 user 重申規則後改成「dynasty_zh 完全不進標籤」。新加 DYNASTY_LABELS entries 不必填 dynasty_zh，只填 country_zh 即可。

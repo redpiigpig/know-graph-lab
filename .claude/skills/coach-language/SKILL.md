@@ -246,3 +246,159 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 - ☐ **沉浸抽單字→自動進 SRS**（目前抽完是斷點，沒形成「讀→抽→複習」閉環；可仿點讀閱讀器把抽到的詞含原句進 FSRS）。
 - ☐ **儀表板加「已知字成長曲線」**（用 `lang_word_status` known 計數，對長期讀原典超有感）。
 - ☐ **今日計畫納入 shadowing 與 cloze**（5 口說可指定 shadowing 句；新增每日 cloze 量）。
+
+## 記憶庫併入：project_language_coach
+
+know-graph-lab 新功能「AI 語言教練」(2026-05-31 起，branch `feat/coach-language`)。個人網站 `/coach` 選擇頁 → `/coach/[lang]` 對話室。
+
+**定案的三大技術決策（使用者選的）：**
+- 視覺：先純文字+語音，**無頭像**（之後可加 Live2D）
+- 語音：**瀏覽器原生 Web Speech API**（STT `webkitSpeechRecognition` + TTS `speechSynthesis`），零成本零後端
+- 核心模型：**Gemini 2.5 Flash**（對話）；作業批改用 **Gemini 2.5 Pro**
+
+**使用者真實目標（2026-05-31 確認）：** 英文 B2 → 半年內 C2 → 考 TOEFL（IELTS/GRE 次之）；**人文領域**（哲學/歷史/神學/文學…）學術內容特別重要。明確說「角色不重要、不要為角色花 API，功能做齊全優先」。
+
+**權限模型（已改）：** `/coach` 區用 `coach-auth` middleware（只需登入）對**多人開放註冊**；maps/genealogy/photos 等 lab 工具仍 `auth`（owner-only，allowedEmail=redpiigpig）。非站長登入會被導到 /coach（不再 signOut）。註冊改用 **Supabase 原生 `auth.signUp`**（signup.vue；academic_fields/age_range 存 user_metadata→lang_profile）。⚠️ 是否寄驗證信看 Supabase 專案設定。
+
+**架構：**
+- DB 八表：`lang_progress/sessions/messages/vocab/homework`（schema.sql）+ `lang_profile/lang_activity/lang_level_history`（personalization.sql）。RLS 依 user_id 隔離，記憶逐語言分開
+- 後端 `server/api/lang/*`：chat（滑動窗口 WINDOW=12 + session.summary 壓縮 + 結構化 JSON）+ vocab/homework/session CRUD + **profile/activity/dashboard/assess（支柱 A）**
+- 人設集中 `server/utils/lang-coaches.ts`；Gemini 呼叫共用 `server/utils/gemini.ts`（4 把 key 輪替 + 429/403 退避）
+- `geminiApiKey`/`geminiApiKeys` 已接進 nuxt.config runtimeConfig
+
+**已完成支柱 A（個人化骨幹）：** `/coach/dashboard` — onboarding（目標等級/考試/考試日/每日分鐘/人文興趣）、streak、今日 vs 目標、四技能（聽說讀寫）時間長條、30 天每日圖、CEFR 折線（`/api/lang/assess` 用 Gemini Pro 評級）、單字熟練度分布、考試倒數。`useActivityTracker` composable 在對話室累計時間（記為「說」）。
+
+**五大支柱已全部建好（2026-05-31，使用者「接著都做」）：**
+- **A**（已述）個人化檔案 + 四技能時間追蹤 + 儀表板
+- **B 單字 SRS**：`server/utils/srs.ts`（SM-2）、`/api/lang/vocab/review` GET 佇列/POST 評分、`/api/lang/vocab/generate`（Gemini 依程度+人文興趣生 AWL/GRE/主題詞組）、`/coach/review` 閃卡頁（again/hard/good/easy）。lang_vocab 加 ease_factor/interval_days/repetitions/last_reviewed/list_key
+- **C 考試 + E 四技能**（共用 `lang_tasks` 表）：`/api/lang/task/generate`（TOEFL/IELTS/GRE + 一般練習，聽說讀寫，含 TOEFL 2026 email/interview）、`/api/lang/task/[id]/answer`（選擇題自動批改、寫/說 Gemini Pro 依官方 rubric 評分、自動記時間+streak）、`/coach/practice`（練習/考試切換，聽力 TTS 朗讀、口說 STT、即時批改）
+- **D 內容沉浸**：`/api/lang/content/ingest`（⭐ Gemini 原生吃 YouTube fileData 或文章 → 摘要/理解題/抽單字/討論題 + 建討論 session）、`/coach/content` 清單、`/coach/immersion`（貼 YT/文章→分析+內嵌討論）。`gemini.ts` Part 已支援 fileData
+- DB 第三批：`database/coach-language-pillars-bcde.sql`（lang_tasks/lang_content/lang_word_lists + vocab SM-2 欄位）。全站 coach DB 已 11 表
+
+**✅ 已併回 master**（merge `1acd07f`，無衝突，教父並行 commit 完整保留）。feat/coach-language 分支可留可刪。
+
+**模型策略（2026-05-31 實測定案）：** 固定 ID `gemini-2.5-flash` 免費層**每日僅 20 次**且被 OCR/翻譯自動化共用耗盡（429 quotaId=GenerateRequestsPerDayPerProjectPerModel-FreeTier）。改用 rolling alias **`gemini-flash-latest`**（配額桶與固定 ID 分開、實測免費層回完整 Emily JSON+繁中）。預設寫在 nuxt.config `geminiModel`/`geminiGradeModel`，可用 env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 覆寫；**升付費只要設 `GEMINI_MODEL=gemini-2.5-flash`、`GEMINI_GRADE_MODEL=gemini-2.5-pro` 免改碼**。`gemini.ts` 預設與所有 coach 端點已改吃 config，不再硬編。
+
+**雙 key 機制（2026-05-31 建好，免費優先→用完改付費）：**
+- env：**`GEMINI_COACH_FREE_KEY`** / **`GEMINI_COACH_PAID_KEY`**（.env 已留空白佔位，使用者之後貼上）。免費空白時 fallback 用既有 `Gemini_API_Key_*` 共用池。
+- `server/utils/coach-ai.ts` `coachGemini(opts, {usePaid,userId,supabase})`：依 usePaid 選 tier；免費額度用完拋 429 `code=free_exhausted`。
+- 前端 `composables/useCoachAi.ts` `aiFetch`：自動帶 usePaid；遇 free_exhausted 跳 `confirm()` → 改付費 + 自動重試。偏好存 `lang_profile.use_paid_key`，跨頁 useState 共用，儀表板可手動切。
+- 7 個 AI 端點全走 coachGemini；5 個前端頁（chat/review/practice/immersion/dashboard）全走 aiFetch。
+
+**token 用量 / 成本顯示（已建）：** `gemini.ts` 回 usageMetadata → `lang_api_usage` 表（`bump_lang_usage` RPC 原子累加）→ `/api/lang/usage`（今日/近30天 token + 依公開單價估計成本，免費計 0）→ 儀表板「Gemini 用量與估計成本」卡 + 免費/付費切換鈕。**成本是估計值（token×公開單價），非 Google 帳單；免費「剩餘額度」Gemini 不提供查詢端點，只能等 429。**
+
+**⚠️ 免費層仍只夠輕量測試：** 所有 Gemini 免費模型日配額低（~20–250/日/模型）。每天 1.5hr（100+ req）需付費 key（貼進 `GEMINI_COACH_PAID_KEY` 即可，前端用完會自動引導切換）。
+
+**部署 = Zeabur（README 註明），從 GitHub master 自動部署。** 2026-05-31 狀態：
+- **build fix**：commit `03b3881`（scripture-papal）加了 `misericordia-dei-2002` 的 import 但沒提交對應 data 檔 → `npm run build` Rollup 失敗、擋掉所有 Zeabur 部署。已在 commit `0edcefb` 移除懸空 import 修好；本地 `npm run build` 現通過。
+- **key 格式**：新版 Gemini key 是 `AQ.` 開頭（~53 字，計費型），舊版是 `AIza`（39 字）。使用者那支 `AQ.` key 一度「prepayment credits depleted」429，**充值 NT$400 後實測 HTTP 200 正常**。`Gemini_API_Key_1` 也是耗盡的計費 key；`Gemini_API_Key_2` 仍有免費額度。
+- **本地 .env 最終配置**：`GEMINI_COACH_FREE_KEY` 留空（fallback 共用免費池）、`GEMINI_COACH_PAID_KEY`=充值的 AQ key。
+- **⚠️ 關鍵未完成步驟（只有使用者能做）**：本地 `.env` 不會被 Zeabur 用到，必須去 **Zeabur 專案 Variables** 手動加 `GEMINI_COACH_PAID_KEY`（=AQ key）+ 確保免費 fallback 用的 `Gemini_API_Key_*` 也在 Zeabur env。DB migration 已透過 Supabase API 套用（線上即時生效）。
+
+**v2（2026-05-31，已上 master）：**
+- **路由重構**：`/coach/[lang]` = 該語言**專屬首頁**（教練主動「今日簡報」+ 統計 + 學習日曆+教練每日日誌 + 統整記憶庫 + 五功能磚）；對話移到 `/coach/[lang]/chat`。
+- **統整記憶庫** `lang_memory`（跨 session 長期了解，注入每次對話 system prompt；highlights 含 strengths/weaknesses/next_focus）。`/api/lang/memory` get + regenerate。
+- **教練每日日誌** `lang_journal` + `/api/lang/journal`（get 月 + generate 日）；日曆點某天看「今天做了什麼 + 方向建議」。
+- **人格自動切換**：lang-coaches `personas[]`（Emily 5 種：閨蜜/面試官/辯論/教授/說書）；新對話依 session 數輪替，header 顯示。
+- **限時主題聊** `/coach/[lang]/smalltalk`：議題 + 3/5/10 分倒數 + 教練破題（`/smalltalk/start`）+ 結束口語評分卡（`/smalltalk/feedback`：流暢/文法/詞彙/論述）。
+- **翻譯遊戲**：practice 加「🔄 翻譯」中↔外，Gemini 評 accuracy/fluency/register + 參考翻譯（task skill='translation'，活動歸 writing）。
+- **YouTube 時長計入聽力**：ingest 估 `duration_minutes` → 寫 listening 活動。
+- **可見計時器** 在 chat/smalltalk/immersion；`/api/lang/briefing` 主動簡報。
+- lang_sessions 加 persona/mode/topic/duration_target/feedback。
+
+**⚠️ 文法觀點（已回覆使用者）：** B2→C2 不需系統性文法課；採「錯了再教 + 弱點追蹤」——memory.highlights.weaknesses 記反覆錯誤，briefing/首頁主動點名加強。不做循序文法課綱。
+
+**v3（2026-05-31，已上 master）：**
+- **每語言獨立空間**：practice/review/immersion/dashboard 全移到 `pages/coach/[lang]/`，語言由路由決定（移除語言下拉）；選擇頁只挑語言。
+- **聊天五模式**（首頁磚）：打字 / 口說(voice=1) / 問答知識(mode=qa，像一般 AI 答題教知識) / 情境角色(mode=scenario，coach 演對方) / 主題限時聊。chat.post 依 mode 套 prompt；coaches 加 `scenarios[]`。
+- **難度依「目前程度」非目標**：vocab/task/content 生成改讀 `lang_progress.level`（初學給基礎、不再「避免太初級」）。每語言量表：英文 CEFR、日文 JLPT(N5–N1)、古語言 入門/初/中/進（`coach.levelScale`/`defaultLevel`）。`progress.put` 設目前程度；onboarding 用該語言量表。
+- **分級文法課**：`lang_grammar`（PK user+language+**level**）→ 英文 B2/C1/C2、日文 N5–N1 各一套。`/coach/[lang]/grammar` 程度切換 + 循序課表 + 解說/例句/練習 + 完成度。
+
+**🔒 資安（2026-05-31 鎖回站長專屬，使用者要求）：**
+- coach-auth 改回**站長 email 專屬**（非 allowedEmail 登出）；`/signup` 關閉導回 login。
+- 登入改 **magic-link 唯一方式**（移除密碼）：每次新裝置都要點信箱連結驗證，`shouldCreateUser:false`。
+- **付費 key 僅站長**：coachGemini 用 `auth.admin.getUserById` 比對 allowedEmail，非站長強制免費。
+- **付費每月上限 NT$500**（env `GEMINI_PAID_MONTHLY_CAP_TWD`）：本月付費估計成本 >= 上限自動退回免費；usage 回 monthPaid/paidCapTwd/paidOverCap，儀表板顯示+警示。
+- **登入改 Email OTP 6 位數驗證碼**（取代 magic-link，手機點連結登不進的問題）：login.vue 兩步 signInWithOtp→verifyOtp(type:'email')。⚠️ **Supabase Email Template「Magic Link」必須含 `{{ .Token }}`**，否則信裡只有連結沒有 6 碼、驗證碼登入會收不到碼。
+- **信任裝置管理**：`trusted_devices` 表 + `/api/devices`（check 首台自動核准防鎖死 / list / [id] patch）+ `device.global` middleware（未核准裝置→/device-pending）+ `/devices` 管理頁（核准/撤銷，coach 選擇頁有入口）。新裝置 OTP 登入後仍需在已核准的電腦上核准。
+- **⚠️ 使用者要手動做**：① Supabase Auth Email Template「Magic Link」加 `{{ .Token }}`（**最關鍵**，否則收不到驗證碼）② 關掉「Allow new signups」③ 設自訂 SMTP（預設寄信額度低）④ Zeabur 加 `GEMINI_COACH_PAID_KEY`（改上限再加 `GEMINI_PAID_MONTHLY_CAP_TWD`）。
+
+**今日計畫（2026-05-31，已上 master）：** `/coach/[lang]/today`（語言首頁主入口紫色 banner）。
+- 進度：已記住單字（mastery>=3）/ 待複習 / 占目標程度詞彙約 %（`daily.get` VOCAB_TARGET 概估，英文 C2=8000）。
+- 今日任務 checklist + 今日 5 閱讀 + 5 聽力 + 5 口說（`lang_daily` 一天生成一次 topics 快取；點開才 `daily/item` 懶生成短文/聽稿+4選1+討論 session）。
+- 每項可口說/打字討論（/api/lang/chat 即時糾錯）+「結束給評分」（/api/lang/smalltalk/feedback）。
+- 每日單字測驗：review 預設「選擇題」模式（選意思，對=good 錯=again→複習）；review.get 到期不足時從整庫補未精熟字 + 附 4 選 1 干擾選項。
+- 端點：`daily.get`/`daily/item`/`daily/done`；DB `lang_daily`(PK user+lang+date)。
+
+**🌏 33 語大擴充（2026-06-20，已上 master commit afa7bff4）：** 從 7 語擴到 **33 語**，新增 26 個宗教研究原典語言（西/古典希臘Attic/教會斯拉夫/亞蘭/曼達/敘利亞/科普特/吉茲/亞美尼亞/喬治亞/阿卡德/烏加列/古埃及/腓尼基/古波斯/阿維斯陀/古典阿拉伯/梵/巴利/藏/半摩揭陀俗語/文言文/台語/客語/阿美/泰雅）。新增 `Coach.category`＋`CATEGORIES`（8 大類，選單分組）、`Coach.romanizations[]`（台語教羅↔台羅、客語白話字↔客拼，chat 切換＋chat.post 注入）。**細目全在 coach-language SKILL「〇、語言一覽」**。決策：迦南併 uga/phn 不另開、亞述巴比倫＝akk 兩方言、敘利亞單一教練 Estrangela 兼述東西、亞蘭＝猶太方體字（與敘利亞分工）、阿拉伯＝古蘭古典 فصحى、Coptic＝Sahidic、Church Slavonic≠俄文。
+
+**✅ 轉寫鍵盤全到齊（2026-06-20）**：(1) `composables/useScriptKeyboard.ts` 無狀態工廠＋6 字母系（cyrillic/coptic/arabic-RTL/syriac-RTL/armenian/georgian→chu/cop/ar/syr/hy/ka）；(2) `composables/useAbugidaKeyboard.ts` 有狀態「整詞 roman 緩衝重轉寫」＋3 音節文字（devanagari→sa/pra、geez→gez、tibetan→bo），純轉寫器 translitDevanagari(ITRANS)/translitGeez(SERA)/translitTibetan(Wylie+顯式疊寫)。arc 沿用 hebrew、att 沿用 greek。chat.vue `scriptKb=getScriptKeyboard()||getAbugidaKeyboard()` 統一分派＋send() reset。測試 script-keyboard.spec(7)＋abugida-keyboard.spec(14)。**12 文字鍵盤全到齊**——藏文已實作**自動疊寫**（正字法找字根 ming gzhi＋前加/上加/字根/下加/後加表，bsgrubs→བསྒྲུབས、rgyal→རྒྱལ）；只剩梵文不規則疊字保留顯式 `+` 逃生口。
+
+**✅ 新語言字母教學頁（2026-06-21）**：`server/data/alphabets.ts` 從原 6 語擴到 **19 語**——新增 13 種書寫系統策展字母表（att/arc/pra 重用既有；chu 西里爾、ar 阿拉伯、syr 敘利亞、cop 科普特、hy 亞美尼亞、ka 喬治亞、sa 天城體、bo 藏文、gez 吉茲、mid 曼達 新作），接上轉寫鍵盤。端點 `alphabet` 只讀 `alphabetForClient`，加進 `ALPHABETS` 即自動開「教學＋測驗」頁。仍無字母表＝Latin系/漢字/楔形象形轉寫語言（點磚顯示未提供）。測試 `test/coach/alphabets.spec.ts`。**全 32 語 vocab bank 預建完成（2026-06-22，使用者要求「不用 runtime AI、全部預建語料庫＋造句庫」）**：`coach_vocab_bank.py` 擴成 32 語。三種來源——①**語料 harvest**（待站長整夜跑 gloss）：arc(TAHOT 亞蘭文 morph=A,583)、att(共用 grc)、ar(Quran)、sa(薄伽梵歌天城體)、pi(VRI 三藏)、cop(eBible 科普特新約)、bo(eBible 藏文,tsheg 斷音節)、syr(Beblia AramaicBible=Peshitta)、hy(Beblia 亞美尼亞)、ka(Beblia 喬治亞)、es(FrequencyWords)；②**萌典直灌**（preglossed,零AI,已 upsert）：nan/hak（g0v moedict-data-twblg/hakka，含漢字+台羅/四縣腔+繁中釋義+例句，`_parse_moedict` 跳□取四縣清￹￺￻）；③**人工策展 CURATED dict**（preglossed,attested 例句,已 upsert）：peo/phn/uga/chu/gez/akk/egy/ae/pra/mid（死語言核心詞）+ ami/tay（原民語保守核心詞,例句從略不杜撰）。cmd_gloss 偵測 `preglossed:true` 直接 upsert 不呼叫 LLM。**站長要做**：`gloss all`（跑那 11 個 harvest 的）→ `theme all`。擴充策展＝改 `CURATED`+HARVESTERS/TARGETS/LANG_LABEL。mid/akk/egy/ami/tay 有更權威源時可再擴。
+
+**✅ 文字創造族譜（2026-06-21 完成）**：`/genealogy/scripts`（圖譜工具加「✍️文字創造族譜」卡）。資料 `data/scriptGenealogy.ts`（96 種書寫系統 DAG，節點含類型/年代/地區/狀態/note/coach 連結，邊 kind=descendant/derived/adapted/influenced，9 大族配色）；頁面自寫 longest-path 分層 + barycenter 排列 + d3-zoom 平移縮放 + 點節點看詳情與祖先/後裔 + 譜系高亮 + 大族篩選 + 搜尋 + `?id=` 深連 + 「用此文字的語言教練→」深連 /coach。測試 `test/genealogy/script-genealogy.spec.ts`（驗 id 唯一/父節點存在/無環/族別/規模）。涵蓋所有教練文字＋漢字/馬雅/楔形等獨立系統。**唯一細項**：藏文鍵盤自動疊寫 EWTS 仍為 TODO（與此無關）。
+
+**待辦（次要，已收斂）：** ~~Live2D／雲端 TTS／速率限制／MFA／用量異常通知~~（個人自用站，2026-06-20 移除不做）；~~%C2 真實 C2 wordlist~~（已由 `lang_vocab_bank` en 30000 字含 C2 帶達成）。詳見 [[project_coach_vocab_bank]]。
+
+**（歷史）** 早期功能曾在 branch `feat/coach-language`，**已於 2026-05-31 併入 master**（merge 1acd07f）；此後一律直接在 master 開發。權威文件＝coach-language SKILL.md。
+
+相關偏好：[[feedback_traditional_chinese_only]]（教練 translation 一律繁中）、[[feedback_ocr_strategy]]（Gemini 用量策略）。
+
+## 索引補記
+
+- v2 含語言首頁/統整記憶/人格切換/限時聊/翻譯/日曆日誌
+
+## 記憶庫併入：project_coach_vocab_bank
+
+語言教練（[[project_language_coach]]）原本只有英文有預備單字庫（`server/data/enVocab.ts` 105 字），其他 6 語只能 AI 即時生成 → Gemini 一過載就斷糧（2026-06-12 使用者在 `/coach/grc/review` 遇到「今日複習完成＋Gemini 呼叫失敗」整頁空白）。
+
+**解法（2026-06-12 建）**：共用表 `lang_vocab_bank`（非 per-user）每語言一份「權威頻率/語料庫 + LLM 補繁中釋義/例句/詞性」策展字庫，依頻率分類帶。
+- **來源**（全免費/公有領域/CC-BY，`scripts/coach_vocab_bank.py` 自動下載）：en/de/fr＝FrequencyWords；ja＝jlpt-vocab-api(N5–N1)；**grc＝STEPBible TAGNT**(新約詞元+英義+書卷)；**hbo＝STEPBible TAHOT**(舊約詞元)；**la＝Clementine Vulgate**(表面詞頻→LLM 還原詞元)。目標 en 30k／de·fr·la 6k／ja ~9k／grc·hbo 整部語料窮盡（grc ~5.4k、hbo ~7.5k）。
+- **腳本**：`harvest`/`gloss`/`run`/`status`；引擎 **NVIDIA deepseek-v4-flash-0731 主→Gemini→Haiku**（6.6 萬條會燒爆 Gemini 免費日限）；批量 40/call、每批 flush 進 DB 與 ledger 同步可重入；ledger 在 `C:/tmp/vocab_bank/`（別清）。`gloss all` 順序 grc,hbo,la,ja,de,fr,en。
+- **後端**：`vocab/generate` 全語言改「英文策展 → 先抽 `lang_vocab_bank`（RPC `pick_vocab_bank` 隨機抽未擁有字）→ AI 最後手段」；複習頁 chip 改每天輪替（`review.vue` `loadBankCats`+`rotateDaily`，台北日期種子）。
+
+**狀態**：2026-06-12 凌晨啟動整晚 gloss 全 7 語（背景任務）；batch=40 跑得比預期快（grc 數分鐘就 3.7k/5.4k）。後端/前端已上線並 push（141 測試綠），即使字庫只補一半也已修好斷糧問題。引擎政策見 [[feedback_engine_nvidia_no_haiku]]、繁中見 [[feedback_traditional_chinese_only]]。
+
+🚨 2026-08-19：舊名 `deepseek-ai/deepseek-v4-flash`（無 `-0731`）已下架，對所有 key 一律回 **HTTP 410 Gone**。全 repo 49 檔已改名（commit 032c09d8）。日後 NVIDIA 那一層突然失效，先驗模型名還在不在。
+
+## 記憶庫併入：project_coach_no_ai_feedback
+
+語言教練（[[project_language_coach]]、[[project_coach_vocab_bank]]）2026-06-14 大進度，**交接細節見 `scripts/data/SESSION_HANDOFF_coach_2026-06-14.md`**。
+
+**兩條線：**
+1. **整夜 vocab gloss 背景任務**（`coach_vocab_bank.py gloss all`）— 每半小時巡查、死了重啟（凍結>3分才重啟、慢不重啟）。截至交接：grc/hbo/la ✅ 完成，ja 進行中（死過兩次重啟過），de/fr/en 待跑；跳過批次 15 個，全跑完要再跑一遍 gloss all 補。引擎修正 commit `6cfabbe2`（NVIDIA 2-strike + 90s 逾時 + Haiku 救急，治卡死；使用者訂 Claude Max，Haiku 為可靠後盾）。
+
+2. **「不靠 AI 的確定性反饋」功能（皆已 push origin/master）**：字母教學/測驗、grc/hbo 詞形判析（STEPBible 黃金標註離線解碼）、shadowing 零服務評分（詞級對齊 hit/near/miss）、句子重組（受限寫作）、LanguageTool 規則式文法檢查（需自架，env `LANGUAGETOOL_URL`）。**Why:** 使用者覺得 LLM API 不穩易爆，要核心走確定性、AI 只當可選延伸。
+
+**How to apply:** 接手先讀交接 MD + SKILL.md。⚠️ 本 repo 多個並行背景任務同時 commit master，`git log` HEAD 可能瞬間看似回退，但 coach commits 已確認在 origin/master，**別 force-reset master**。gloss 全部完成後本記憶可刪。
+
+## 記憶庫併入：feedback_language_coach_religious_studies
+
+語言教練（[[project_language_coach]]）的使用者本人做**宗教研究**。
+
+**Why:** 學語言是為了讀／討論宗教、神話、宗教學文獻，不是泛泛閒聊。
+
+**How to apply:**
+- 對話／small-talk／沉浸／翻譯題材**以宗教、神話、宗教學為主軸**，輔以其他人文（哲學/歷史/文學），少量理工醫/生活/旅遊（貼近 TOEFL/IELTS 實際題型，比例依考試調）。
+- 古語言人設定向（已修，勿改回）：**日文＝關東/標準語（非京都腔）**；**希臘文＝1 世紀聖經希臘文 Koine（新約/LXX/使徒教父，非古典 Attic/荷馬）**；**拉丁文＝教會拉丁文為主（Vulgata/教父/禮儀/大公會議，非古典發音世俗題材）**。
+- 考試模式（TOEFL/IELTS/GRE）題材仍走真實考試的廣泛學術題，不限宗教。
+
+**各語言目前程度（難度依此校準，2026-06-03）：**
+- 英文：B2 → 目標 C2（學術／TOEFL）。
+- 日文（櫻子）：**N5 → N4（初學）**。日文的推薦題（qaTopics）／生成內容要用簡單文法＋漢字附假名，題材仍偏文化／宗教但用淺白問法，別出 N3+ 的艱深討論。`lang-coaches` 櫻子 defaultLevel 已設 N5。
+
+## 索引補記
+
+- 日文關東腔、希臘文聖經Koine、拉丁文教會拉丁
+
+## 記憶庫併入：project_church_latin_course
+
+使用者實際在上「教會拉丁文（一）· 羅梅洛班」線上課（耕莘文教院，張傳聖老師，2026-07-01 起），**每週一份講義**。
+
+已建 `/coach/la/course` 課程複習頁（拉丁文教練 [[project_language_coach]] / [[coach-language]]）：策展資料 `server/data/latinCourse.ts` 的 `LESSONS`，每課含 母音/雙母音/子音拼讀規則/禮儀單字，五分頁（母音子音・單字・認讀・聽寫・發音跟讀）全零 AI 確定性批改。
+
+**每收到新一週講義**：讀 PDF（用 pymupdf `fitz`，控制台 cp950 編碼會炸→輸出寫檔再讀）→ 在 `latinCourse.ts` 的 `LESSONS` 加一筆 `CourseLesson`（no 遞增），例句/中譯沿用講義本身、繁體中文。無須改頁面或端點。詳見 [[feedback_skill_md_keep_current]] 更新 coach-language SKILL.md §四。
+
+## 索引補記
+
+- 五分頁零AI複習（母音子音/單字/認讀/聽寫/發音）

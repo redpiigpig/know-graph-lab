@@ -1832,3 +1832,62 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
   - `世界宗教/基督教/IVP - 古代基督信仰聖經註釋叢書 (27 冊)/` — 教父經注
   - `世界宗教/基督教/基督教典外文獻 (10 冊)/` — 典外文獻
 - 待補資料源在各子頁面內列
+
+## 記憶庫併入：project_sacred_books_east
+
+馬克斯‧穆勒主編《東方聖書（Sacred Books of the East）》50 卷，獨立 corpus／portal（`/sacred-books-east`），不屬穆勒著作集（[[project_collected_works_multilang]] 分出）。
+
+**完整交接文件**：`.claude/skills/ebook-collected-works/sacred_books_east.md`（新 session 從那裡接手——含進度表、架構、引擎政策、操作鐵則、續跑指令）。
+
+**Why:** 多卷長跑轉錄，跨 session；狀態與雷區寫在 skill 交接文件，記憶只留指針。
+
+**How to apply:**
+- 現況（2026-06-14）：6 卷代表卷（各傳統一卷）英文上架、繁中背景翻譯中；奧義書/阿維斯陀 ≈99%，古蘭經進行中，法句經/易經/耆那排隊；其餘 44 卷 store 掛 planned。
+- 引擎：免費層 Haiku(Max) 不動→自動升級 Sonnet；**user 選不另付費**，故 Sonnet 也走 Max（限流時偏慢，閒置/隔夜快）。日後付費設 `ANTHROPIC_SONNET_API_KEY` 即繞過 Max。
+- 🚨 **鐵則：不要頻繁 kill/重啟 pass**（每次從 sec0 重掃，重啟＝假停滯）；判斷在跑看 log `▶ translate` + sec 單調前進，**別看 pid 數**（shim 會 re-exec 顯示多個 python.exe）。
+- 佛教術語 119 條已入 `/translation-glossary`（deities 表 religion=佛教）並接上佛教卷翻譯 prompt 鎖譯名。`scripts/sbe_translate.py` registry 加卷即可擴充。
+
+關聯：[[feedback_engine_nvidia_no_haiku]]、[[feedback_no_kill_other_tasks]]、[[feedback_glossary_strict_authority]]、[[project_translation_naming_card]]。
+
+## 索引補記
+
+- 6 代表卷英上架繁中跑中
+- 佛教 119 詞入庫且接上翻譯
+
+## 記憶庫併入：feedback_apocrypha_verse_process
+
+2026-06-10 使用者對 /apocrypha 1-enoch 逐節重建第一版（我直接硬幹）很不滿，要求重做且要照流程。
+
+**Why:** 我跳過了這個 repo 既定的方法論（先寫 pytest 純函式、再更新 SKILL.md、才實作），結果：reader 新版疑似編譯失敗沒部署成功（線上還是舊 `?page=` 整頁模式，sidebar 出現「節 661–670…節 941–950」「1/66 頁」），中文被過度切成 ~1000 節（Charles 才 746），章號/節號在畫面上看不出來。
+
+**How to apply:**
+1. **先參考現有「三欄原文轉錄」實作**再動手：`scripts/gnostic_library.py` / `scripts/lit_review.py`（純函式 + `scripts/tests/` pytest）+ 對應 reader（/gnostic、/works）+ [[project_collected_works_multilang]] 的 N 欄 reader。對齊它們的架構，別自己另發明。
+2. **流程：先寫測試 → 再寫/更新 skill → 才實作**（同 [[project_alignment_gate]]、[[feedback_skill_md_keep_current]]）。解析/切節/對齊邏輯放 `scripts/*.py` 純函式，配 pytest。
+3. **設計要求**：目錄（導覽）**10 章一頁**（不是我做的「一章一頁」、也不是舊的「10 節一頁」）；**章號與節號必須在閱讀區清楚顯示**；中文節數不能爆量（要貼近 Charles 的章節數，過度切節是 bug）。
+4. 改完務必確認 `nuxt build` 不破（否則線上停在舊版）。
+
+關聯：[[project_gnostic_library]]（DB-backed 三表 + N 欄 reader 範本）、[[project_research_review]]。
+
+## 索引補記
+
+- 改完確認 build 不破
+
+## 記憶庫併入：reference_chinese_deuterocanon_sources
+
+中文次經（OT 第二正典 + Daniel/Esther additions）有幾個可用譯本，user 在 /scripture 設計討論時強調要找 **香港聖公會出版的版本**：
+
+1. **香港聖公會版本** — 安立甘宗中文禮儀用，整合天主教/東正教傳統次經中譯。要找線上電子版可能要直接聯絡 [香港聖公會](https://www.hkskh.org/)。**user 第一優先指定。**
+
+2. **思高聖經學會次經** — 最常見的中文天主教次經中譯。文體較典雅。版權屬思高聖經學會。
+
+3. **漢語聖經協會新譯本次經** — 漢語聖經協會出版，較現代漢語。版權屬漢語聖經協會。
+
+4. **基督教典外文獻 10 冊**（Drive 上已有，黃根春主編）— 但這是「典外」非「次經」，分類不同：1 Enoch / Jubilees / Testament 12 Patriarchs / Gospel of Thomas 等，不是 Tobit/Judith/Wisdom 等天主教第二正典。
+
+**How to apply**：當 user 要 ingest 中文次經到 bible_verses 表時，先查香港聖公會版有沒有電子化資料；若沒有再退到思高或漢協新譯本。各譯本要分別給獨立 version_code（例 `zh_skh_dc` / `zh_sigao_dc` / `zh_xinyi_dc`）。
+
+相關 memory：[[feedback_traditional_chinese_only]]、[[feedback_bishop_data_chinese]]。
+
+## 索引補記
+
+- 備援思高/漢協

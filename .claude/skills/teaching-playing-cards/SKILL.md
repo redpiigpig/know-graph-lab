@@ -98,3 +98,39 @@ python scripts/render_and_check_reader_pdfs.py --only buddhist-playing-cards
 5. 版面照抄，不要重算卡高——那個數字是量出來的，見 [[original-reader-flashcards]]。
 
 相關：[[original-reader-flashcards]]、[[feedback_repo_hygiene]]、[[feedback_skill_md_keep_current]]
+
+## 記憶庫併入：project_teaching_playing_cards
+
+2026-09-04 起，`/teaching-playing-cards`（`.claude/skills/teaching-playing-cards/SKILL.md`）。
+名單在 `data/playingCards/{buddhist,christian}.json`，產牌 `scripts/build_playing_cards.py`，
+成品在 Drive `資料\知識圖工作室\教學\撲克牌\`。
+
+版面完全沿用 [[project_original_reader_flashcards]]：A4 橫式每頁 8 張、71.25×98 mm、
+圓角卡框、雙面長邊翻。**不要重算卡高**。
+
+- **點數是分類軸**（K 佛陀／Q 菩薩／J 聲聞弟子…A 當代弘傳），花色只作四色分組
+  （♠黑 ♥紅 ♦藍 ♣綠），不表位階——這一條要印在封面與說明卡上，不然四個花色會
+  被讀成價值排序。
+- **背面全牌統一**才是撲克牌；資訊全印正面。要做「背面印生平」的教具版就另開
+  一個 deck，別改這一支。
+- 54 張填不滿 56 格，補兩張說明卡（點數分類對照＋花色與授權），不然會裁出兩張
+  正面全白的牌。
+- **插圖畫的是點數類別不是人物肖像**：在世者照片有版權，古代畫像是後世想像。
+  同一點數四張共用一張圖是刻意的。
+- 角標字型 `Segoe UI Symbol` 是內建字型裡唯一有 ♠♥♦♣ 的，但**沒有中日韓字**，
+  鬼牌的「大鬼／小鬼」要換中文字型，否則靜靜回退成 NotoSansJP-Thin。
+
+🚨 **使用者給的人物名單要逐條查過再排版，只改事實錯誤、不改譯名。** 首兩副抓到
+六處人名或生卒年對不上：讖摩（Khemā，原寫成車匿 Channa）、蓮華色（Uppalavaṇṇā，
+原寫 Padmavati）、勝鬘（Śrīmālādevī，原寫 Sakyamati）、韋提希（Vaidehī，原寫
+Vajirā）、真諦（Paramārtha 499–569，原掛竺法護的名與曇無讖的生卒）、印順導師
+（1906–2005，原掛 Sulak Sivaraksa 的名）。同名不同人要在卡上分開：亞歷山卓的
+西里爾（376–444）與斯拉夫使徒西里爾（827–869）。
+
+**Why:** 使用者做的是教材，卡片會被當事實背起來；譯名是他的選擇，事實不是。
+**How to apply:** 加第三副＝寫名單 JSON → contact sheet 看過十五張類別插圖 →
+`DECKS` 加一筆 → `render_and_check_reader_pdfs.py` 的 stem 清單加一行。
+
+## 索引補記
+
+- 插圖畫類別不畫肖像

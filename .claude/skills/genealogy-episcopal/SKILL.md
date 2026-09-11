@@ -431,3 +431,36 @@ episcopal_succession 六項 SQL 稽核（懸空 predecessor/consecrator FK、年
 ### 另記待辦
 - **44 個既有孤兒座**（parent_see_id null 且非 spine/使徒立座）不在樹上——先前遺留，待 wiring 修（查：`select see_zh,church from episcopal_sees where parent_see_id is null and founder_apostle_id is null`）。
 - Wave1 產生一個 near-dup：`亞的斯亞貝巴（信義）` 有兩筆（「衣索比亞福音教會」既有 vs 我新增「衣索比亞美卡尼耶穌會」）——church 不同故非嚴格重複，但語意重疊，可擇一保留。
+
+## 記憶庫併入：feedback_wife_children_alignment
+
+biblical_people 表的 wife.children 必須包含夫妻共同子嗣的全部，與 husband.children 對齊。
+
+**Why:** 族譜圖 layout 用 `mommidX` 計算子嗣 drop X 起點。先 reverse-lookup wife.children 找 mom；若 wife.children 沒列該 child → mom=null → drop 從 husband column 直接掉下，視覺上「看起來不像父+母生的」。
+
+**How to apply:** 插入或 patch 任何「父子鏈 + 已知母親」時，wife.children 必須包含 husband 同一個 child。例：
+- 夏娃.children 原 = '該隱、亞伯、塞特' 但 亞當.children 有 6 個（含 亞萬/亞祖拉/亞克利瑪）→ 後 3 個 mom=null，drop 從亞當垂直掉下，user 質疑「為何沒從婚姻線往下」。修法：patch 夏娃.children = 全部 6 個與亞當對齊。
+- 拿俄米.children 原為 null 但 以利米勒.children = 瑪倫、基連 → 同樣問題。已 patch。
+
+新增聖經人物時，這個規則排在 [[feedback_biblical_name_rules]] 之後檢查。
+
+## 記憶庫併入：feedback_bishop_data_chinese
+
+主教資料（`episcopal_succession` 所有敘述性欄位）一律繁體中文，**只有兩種情況**保留外文：
+
+1. **`name_en`** ── 該主教的英文／拉丁化拼寫（保留原狀）
+2. **原文名字** ── 希臘文、拉丁文、亞拉姆文、亞美尼亞文、敘利亞文、科普特文等該主教當時使用的語言
+
+其他敘述欄都要繁體中文：`notes`、`appointed_by`、`end_reason`、`status`、`sources`（雖然書名通常拉丁文／英文，但敘述部分仍中文）。
+
+**專有名詞可以括號標註**：例如「590 年差遣奧斯定（Augustine of Canterbury）赴英格蘭傳教」── 中文先行 + 括號內英文／拉丁原文。
+
+**Why:** 使用者偏好 [[traditional-chinese-only]] ── DB／檔案／chat 全繁體；族譜圖／表格／卡片是給中文讀者看的，外文只在無對應或為原文典籍標題時才出現。
+
+**How to apply:**
+- 新增主教 row 時 notes/appointed_by 用中文寫，外國人／地／書名第一次出現用括號補英文
+- backfill 腳本生成資料時要中文化；如果只能拿到英文（如 Wikipedia 摘要）要轉成繁體再寫
+- 編輯／修補既有資料時順手把英文敘述翻成繁體
+- BishopCard.vue / 表格顯示時不需特別處理，因為資料本身就應該已是中文
+
+例外：`sources` 欄一般是 bibliographic citation（"Eusebius, HE III.4; Mansi VI"）── 學術慣例保持原文書名／作者名，無需翻譯。

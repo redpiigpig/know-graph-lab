@@ -595,3 +595,104 @@ python scripts/course_syllabus_docx.py --sync          # 四門全對齊既有�
 另加「壓到頁尾」與圖片檢查（圖超出版面／圖壓字）。
 
 **改版面一定要走「量 PDF → 改 → 重出 → 再量」**，別憑估算值判斷好了沒有。
+
+## 記憶庫併入：project_two_textbooks
+
+**🚨 2026-09-01 重大改版：WR1 改名，另立 WR2 為實際授課本。**
+使用者接了 **PPA001《世界宗教文化導論》**（玄奘宗教與文化學系二年制在職專班1年A班，雙週班，妙然401 週日13:00–17:00，2026-09-20 起隔週一次共九次，第八次含期末考、第九次自由學習＝16 週 16 章）。因原 WR1 的內容其實是「時空縱走」而非課程要的「型態橫切」，故：
+
+- **WR1 改名《宗教歷史地理學》**（副標：六百年時代律 × 全球八大人文宗教界域），內容與 17 章結構全部不動，**網址 `/works/world-religions-intro/book/WR1` 不變**。
+- **新開 WR2《世界宗教文化導論》**，16 章約 15 萬字，全新寫成。分區底稿在 `public/content/works/world-religions-intro/chapters-wr2/`。
+- **同一 slug 掛兩本書**：`assemble_lecture_books.mjs` 的 BOOKS 加 `dir`（章節目錄，預設 `chapters`）與 `maps`（是否插界域地圖，僅 WR1 為 true）兩個欄位；books.json 改成兩個 group。
+
+**WR2 架構（依使用者桌面〈附錄1. 神學地圖.docx〉）**：不走「一章一教」，改以四大信仰型態橫切——泛神論（泛靈/哲學泛神/自然神/萬有在神）／多神論（神話/哲學）／一神論（統攝/本體/二元/融合）／實用神論（功能/非神中心/不可知/無神）共 **14 子型**，每大類兩章。ch1 什麼是宗教（含 13 家定義譜系＋十九世紀歐洲「宗教＝拜神」被佛教與儒教逼著改觀的那段史）／ch2 八個向度（斯馬特七向度＋本書加「神聖者」）／ch3 信仰體制與範疇（含**宗教的演進**一節：遊獵→遊牧→農耕→城邦→帝國，明確與演化階梯切割）／ch4 分類（**語族分類**泛亞伯拉罕/泛印度/泛伊朗/泛漢/泛非/泛南島＋神學地圖＋千萬信徒以上歸位表＋**歷史宗教歸位表**）／ch5-12 四型各兩章／ch13-14 現代世界／ch15-16 臺灣（ch16 含期末考說明）。
+
+**使用者定下的三條規矩**（照著做，別退回）：
+1. **不說「異教」，說「傳統宗教」**——希臘傳統宗教／羅馬傳統宗教／北歐傳統宗教／迦南傳統宗教／埃及傳統宗教…。命名原則寫在 ch4（五）。引述歷史用法時例外。
+2. **古代宗教要正式登場**，不能只講活著的：阿頓信仰、阿蒙—拉、馬爾杜克信仰、馬茲達信仰、早期耶和華信仰（ch9）；吠陀信仰、迦南（烏加里特的伊勒/亞舍拉/巴力/亞拿特）、北歐（埃達為基督徒晚期整理）（ch7）。ch4 有一張「歷史宗教歸位表」專門安置這些已消失的關節格。
+3. **演進不是演化**——生計方式與社會規模改變→宗教要處理的問題改變→形態改變；三條規矩是不單線、不排名、可逆且並存（一間臺灣的廟裡五層同時在場）。
+
+**兩支新腳本（成品都輸出 Drive `知識圖工作室/教學/115-1_世界宗教文化導論/`，不進 git）**：
+- `scripts/course_syllabus_docx.py`——玄奘課程教學大綱 docx，照學校「114.2 基督宗教概論」表單七區塊體例（課程基本資料/核心能力/課程目標/教學方法☒/修課提醒/授課進度18週/學習評量/學習參考資源）。改課程只改頂端 COURSE dict。
+- `scripts/course_handout_docx.py`——每次上課的課堂講義 docx（封面＋本次進度＋章節本文）。`python scripts/course_handout_docx.py 1` 出第一次，`all` 出全部八次。**它比 works_series_docx.py 多支援 `<table>`**（WR2 大量用對照表），後者沒有 table 分支。
+
+⚠️ 大段中文 HTML **不要用 Bash heredoc 寫檔**（本輪踩過，`<<'EOF'` 會 unexpected EOF），用 Write 工具。
+
+2026-07-10 建立兩本教科書寫作計畫（seed：`scripts/seed_textbook_projects.mjs`）。2026-07-11 /works 新增第三分區「**講義寫作**」（kind='lecture'，v4 migration `database/writing-projects-v4-lecture.sql`），兩本教科書歸此區與專書(book)/論文(paper)區分；lecture 計畫頁行為同 book（程式只在 kind==='paper' 分岔）。卡片簡介一律精簡（使用者：太長會突出卡片；當時也順手修短 krishna/genesis/yinshun 三張舊卡）：
+
+1. **《世界宗教文化導論》** slug=`world-religions-intro`（🌍 emerald）——宗教系大學通用教科書。核心賣點：以原創「全球八大人文宗教界域」×48 文化圈（資料接 [[project-maps-feature]] 的 /maps/world-religions，`data/maps/world-religions.ts` + `sphere-history.ts` 每圈有逐時期 faiths[]）取代「一章一教」與東西方二元。結構（2026-07-10 加時間座標後共 17 章）：第一部本質/演化/分期 ch1-5（ch5=時代的分期「**每六百年一個時代**」——使用者的分期法，定名已確認（2026-07-10）：**遠古**（前1200以前，不切六百年、逕用人類學紀元）／**古風**（-1200~-600）／**軸心**（-600~0）／**古典**（1-600）／**中古**（600-1200）／**近世**（1200-1800）／**近現代**（1800-）；使用者特別點出 600 年與蘇美王表紀年單位（ĝeš-u=600）暗合；章內結構：歷史學分期回顧→人類學分期→環境史/技術史關聯→六百年律立論→逐時代宗教樣貌）／第二部八大界域 ch6-14（順序：方法論→中央→東方→西方→北方→南方→亞太→北美→拉美）／第三部當代 ch15-17。英譯定調用 **Realm**（不用 world-area）。與 /dazangjing 的「時代精神斷代」（前古中近今）是互補的兩套：那是單一宗教質性分期，這是跨界域等距座標。
+2. **《宗教系國文講義》**（副標：漢字文學史——宗教與東亞漢字書寫圈的文學世界；2026-07-10 使用者定名，主書名就叫宗教系國文講義）slug=`sinographic-literature`（🖋️ amber）。使用者定調：不是「中國文學史」，是整個漢字書寫圈（中日韓越台）；貫穿軸線＝宗教經典翻譯（佛典漢譯 ch4、聖經漢譯 ch15）＋大藏經與漢語神學（「奠基於漢字的跨宗教研究」ch5/ch15，呼應 /dazangjing）＋講唱演藝（變文/寶卷/戲曲 ch8-10）；收尾 ch16 去漢字化與漢文再生。
+
+**全文撰寫進度（2026-07-12）**：兩本共 33 章正逐章寫成完整講義全文（非大綱）。架構＝逐章 fragment `public/content/works/{slug}/chapters/chNN.html`＋`_head.html`，用 `scripts/assemble_lecture_books.mjs` 組裝成 `WR1.html`/`SL1.html`（`--split` 反向拆）。組裝時自動把 `maps/*.png`（八大界域地圖，截自 /maps/world-religions，用 `scripts/shot.mjs`＋dev harness 頁 `pages/dev/map-shot.vue`）插入 WR ch6（全圖）與 ch7-14（各界域章首）。每章 4500-6600 字＋本章重點/討論問題/參考資料（真實書目）；國文講義每章另附 3-4 篇原典選讀全文轉錄（CBETA/ctext/維基文庫核對，含作者介紹/注釋/語譯）。**2026-07-12 兩本全 33 章已完工上站**（改用 Sonnet 跑完，避開 premium 週限額）：WR ch1-17✅（每章 10-15 逐處引用腳註＋ch6-14 界域地圖）、SL ch1-16✅（每章腳註＋3-4 篇原典選讀）。SL ch15 已含各宗教漢譯節（摩尼/伊斯蘭漢克塔布/祆/猶）＋景教→呂祖全書挪用案例（佐伯好郎 Mashiha/Ishoh 考證）＋周聯華易的神學。SL ch1 含「漢字系文字三層次」（仿漢字契丹女真西夏方塊壯字＋方言字粵台客）。後續若要精修：各章腳註頁碼多為「書名章節」級（agent 依「不確定不杜撰」原則），可日後補精確頁碼。
+
+**2026-07-12 SL 結構調整（使用者定案）**：SL 導論加第六節「漢字在世界文字之林中的位置」（世界造字傳播史＋五大文字體系 logographic/syllabic/abjad/abugida/alphabet＋內嵌 SVG 傳播譜系圖，腳註 18-21）。**並新增第二章〈漢字的發展——字體演變、六書與讀經文字學〉**（文字學地基章：六書/甲骨→楷書字體演變/隸變/異體俗字通假避諱讀經工具/文字神聖性；因這是「國文講義」非純文學史，宗教系學生需文字學工具讀宗教原典）——原 2-16 章順延為 3-17，**SL 全書 17 章**。順延用確定性腳本 `scripts/sl_insert_ch2_hanzi_history.mjs`（搬檔＋改 h2 章號＋改 fn 命名空間；ch1 不動）。⚠️改號腳本會全域替換「第N章」含內文跨章引用，需 spot-check 原典選讀是否誤傷（religious 文本引「第N章」罕見但要查）。assemble 腳本 SL n=17、books.json nChapters=17 已更新。世界地理版「世界文字地圖」使用者尚未要（先放譜系圖），要的話另建。
+
+**小考卷功能（2026-07-12 使用者要求「每兩章一張小考卷」）**：閱讀器 `pages/works/[slug]/book/[bid].vue` 已加「小考」分頁（讀 `{slug}-quizzes.json`→選卷渲染 HTML→「顯示/隱藏參考答案」切換 `.quiz-answers` 顯隱，CSS 已加）。清單檔 `{slug}-quizzes.json` 各 9 張（q01-02/q03-04/q05-06/q07-08/q09-10/q11-12/q13-14/q15-16/q17），考卷 HTML 放 `{slug}/quizzes/qNN-NN.html`。格式：`<p class="quiz-meta">`＋`<h4>一、選擇題</h4><ol><li>題<ul class="q-options"><li>(A)…</li></ul></li>`＋`<h4>二、名詞解釋</h4>`＋`<h4>三、簡答與申論</h4>`＋`<div class="quiz-answers"><h3>參考答案</h3>…</div>`（答案區預設隱藏）。**已完成示範：WR q01-02、SL q01-02**。**待產 16 張**（WR/SL 各 q03-04…q17 共 8×2）：每張涵蓋該兩章重點，題目扣章節內容與腳註書目，選擇題答案務必正確。可待 Sonnet 額度重置（今晚 9:40pm）派 agent 產出，或主 agent 自寫。續發模式＝一章一 subagent（prompt 模板見本輪對話），完成後 `node scripts/assemble_lecture_books.mjs`→git push。⚠️ subagent 回報 failed 但檔案已完整是常見狀況（限額打在最後回報步驟），一律用 PowerShell 驗證 h2/`</section>`/參考資料/選文數再定奪，別重寫。
+
+**腳註工程（2026-07-12 使用者要求）**：使用者要求兩本書要有「逐處引用腳註」（仿大愛道 [[project_dadaodao_book]]），不只章末書目。基礎設施已完成：叢書閱讀器 `pages/works/[slug]/book/[bid].vue` 的 `.book-prose` 已補腳註 CSS（正文上標↔章末註釋雙向互點）。格式＝直接寫 HTML：正文 `<sup class="footnote-ref"><a href="#fn-chNN-N" id="fnref-chNN-N">N</a></sup>`；章末（討論問題後、參考資料前）`<h3>註釋</h3><div class="footnotes"><div class="fn-item" id="fn-chNN-N"><span class="fn-num">N</span><div class="fn-body">引文出處＋頁碼<a href="#fnref-chNN-N" class="footnote-backref">↩</a></div></div>…</div>`。**id 必須用 chNN 命名空間**（全書同檔，避免碰撞）。**已完成：WR ch1（10 個腳註示範，已 push）**。**待補腳註 32 章**（WR ch2-17＋SL ch1-16）：每章掛 8-15 個腳註在關鍵學術主張，出處引用該章既有「參考資料」書目＋頁碼（用學界標準頁碼，勿杜撰；不確定就只引書名章節）。可與第四波寫作合併：新章一律直接寫進腳註。截圖驗證用 `node scripts/shot.mjs <url> <out> --wait 4500 --js "..."`（已修 domcontentloaded；playwright headless-shell 已裝 v1228）。⚠️ 內容過濾：SL ch16（去漢字化）首次被 content-filter 擋（激進口號如「漢字不滅中國必亡」照登觸發）→ 已用中性學術框架、間接轉述重發；日後涉文字改革政治爭議一律中性描述、勿照登煽動口號。
+
+**研究回顧（參考資料庫）上架（2026-07-17）**：兩本講義各補一份多語文獻綜述，仿 [[project-genesis-reference-db]] 的 **book_id-scope** 模式掛進閱讀器既有「研究回顧」分頁（`pages/works/[slug]/book/[bid].vue`，無需新 UI）。`lit_review.py` 加 `WORLD_RELIGIONS_THEMES`(8 軸)＋`SINOGRAPHIC_THEMES`(7 軸)＋韓/越語碼；報告 `scripts/data/lit_review_world_religions_WR1.md`／`lit_review_sinographic_SL1.md`，general-purpose agent 並行策展（每筆 WebSearch 查證真實存在）。**2026-07-18 第二波擴充**（使用者要求「至少數十筆、先找真實論文書再輸入全文」）：WR1 61→**109**、SL1 50→**96**、大愛道 35→**70**；8 agent 讀既有清單去重（0 dup），wave-2 以 `--display-offset 1000` 附加不動既有（大愛道 7 筆已翻譯完好）；wave-2 條目另存 `*_wave2seed.md`。**全文翻譯引擎（2026-07-19）**：看門狗 `scripts/lit_review_sonnet_supervisor.ps1` 已參數化 `-Engine`；Sonnet(Max) 週期額度連 24h+ 硬 429 未回、免費鏈(Gemini/NVIDIA)當晚也緊繃，**改用 `-Engine haiku`（Max 獨立額度池）順跑約 11 段/分**；`ingest_lit_review.fetch_url` 加 SSL verify=False 退路後 NTU 佛圖等憑證過期 OA PDF 可抓。約 60 筆 OA 待翻，斷點續傳（真實可驗證引用、OA 才附連結、多元非西方中心、全繁體）。seed＝`ingest_lit_review.py --seed --entries-only --book-id WR1/SL1 --project <slug>`（**lecture 務必 --entries-only** 免被覆寫成 paper）。OA 外文可點全文：WR1 8 筆／SL1 6 筆（fetch+逐段翻譯→原文/中譯兩欄 reader）。**引擎＝Sonnet（使用者指定）**，但 2026-07-17 夜 Sonnet(Max OAuth) 帳號層 429 硬限流（0 段翻成）→ 設過夜看門狗 `scripts/lit_review_sonnet_supervisor.ps1`（大愛道/WR1/SL1 三計畫輪流 `--fetch-fulltext --engine sonnet --resume`，80 輪×睡 15 分，斷點續傳；主 session 閒置後 Sonnet 額度回復即補譯）。`fetch_url` 加 SSL 憑證過期/不符退路（verify=False，救 NTU 佛圖/駒澤等 OA repo）。見 [[project-works-research-review]]。
+
+**待補內容（2026-07-12 使用者追加）**：① SL ch15（聖經漢譯與漢語神學）要**擴充一節「各宗教經典漢譯的歷史與策略」**——不只佛/基督兩大宗，涵蓋摩尼教（敦煌摩尼教文獻）、景教、伊斯蘭（劉智《天方性理》、王岱輿以儒詮經的漢克塔布傳統）、祆教、開封猶太教的漢譯史與翻譯策略。② 招牌案例：**景教經典被吸收進道教《呂祖心經》而抹去來源**（翻譯的挪用/在地化/去典故），放進該節。等 SL ch15 agent（正跑）落地後再加這節。③ **SL ch1 導論「衍生文字」節要擴充成三層次**（2026-07-12 使用者追加）：(a) 域外整套新字＝假名/諺文·鄉札/字喃/女書〔已有〕；(b) **仿漢字文字 Sinoform scripts**＝契丹大字小字/女真文/西夏文/方塊壯字（用漢字筆畫部件造字寫非漢語，屬漢字系文字）〔新增〕；(c) **漢語方言增造字**＝粵語（冇佢嘅乜）/台語（歌仔冊用字）/客語漢字〔新增〕。④ **SL ch16（去漢字化）連兩次被 content-filter 擋**（含中性框架版），改由主 agent 自己寫、少用 WebSearch、純中性學術措辭、不照登激進口號；或交 Sonnet 但去掉 web research（✅ 已用無 web 中性版寫成）。⑤ **SL ch15 漢語神學節要加周聯華（1920–2016，台灣浸信會、蔣介石牧師、《現代中文譯本》譯者）的「易的神學」**——以《易經》生生/變易詮釋基督教創造論，本色神學代表，與趙紫宸/吳雷川並列、對照劉小楓；體現「聖經漢譯者即神學家」。ch15 落地時務必查是否已含，缺則補。使用者身分：博士生、在大學教「世界宗教文化導論」與國文，目標是課堂講義打磨後正式出版（出版策略：課堂測試→前輩推薦序→階段性連載）。下一步：逐章填血肉、每章附原典選讀。
+
+
+---
+
+**2026-09-04 書目工程（四本一起做完）**：使用者要求檢查三本授課講義是否接上學界最新研究與學術史名詞，並補註釋與參考書目；範圍最後定為四本全補、對齊 SL1／WR1 密度、**所有新書目一律上網查證**（避免假書目）。結果：註釋 **1,098 條**、參考資料 **962 筆**（CH1 348/234、WR1 241/259、WR2 262/204、SL1 247/265）。CH1 與 WR2 是全面重寫（原本每章僅 2–9 條註），WR1／SL1 是補稽核找到的缺口。
+
+補上的學術史缺口（原本完全缺席）：方法論不可知論與宗教現象學（van der Leeuw／Smart／Wiebe-McCutcheon 的反面批評）、化約論之爭（Segal 1983）、主位客位與局內外問題、日常宗教（McGuire）、物質轉向（Meyer-Morgan）、Nongbri／Masuzawa 的「宗教」概念史、Cavanaugh 論「宗教暴力」範疇的建構性、認知宗教學 Big Gods 的重製危機、Pollock 的梵語世界（與漢字文化圈、拉丁世界並列）、Nattier 的東漢三國譯經歸屬檢定、船山徹、趙曉陽、沈國威、宗教研究的去殖民化。
+
+**兩支新腳本（在 repo，日後改講義一定要跑）**：
+- `scripts/lecture_footnote_check.py`——檢查註號是否 1..N 依正文順序、註號與註文是否一一對應，並印出各章註釋／書目數。
+- `scripts/lecture_footnote_renumber.py`——在既有註釋之間插新註後，把註號重編為正文順序並同步重排註釋區塊。
+
+🚨 **這輪抓到兩類「看起來正常的壞頁面」，日後改註釋務必跑 check**：① CH1 ch07、ch12–16 六章有**孤兒註釋**（有註文、正文沒有註號，讀者按不到）；② WR1 ch06 與 SL1 ch04 的**註號順序錯亂**（註 7 出現在註 6 前面）。兩種都不會報錯，只會安靜地壞掉。另修正曼達教專著誤植的作者（應為 Jorunn Jacobsen Buckley）。
+
+## 記憶庫併入：project_lecture_slides
+
+三門授課簡報都由 `scripts/course_slides_pptx.py` 渲染，內容資料在 `course_slides_data*.py`；成品輸出 Drive `知識圖工作室/教學/{課程}/簡報/`，不進 git。**`--course=wr`（世界宗教文化導論，用 WR2 章節）／`sl`（宗教系國文講義）／`ch`（基督宗教概論），三門課各八次，第 n 次＝第 2n-1、2n 章。**
+
+**2026-09-04 加的兩個固定區塊**（使用者要求）：
+
+- **課末「參考書目」頁**：`chapter_refs()` 直接讀該次兩章講義的 `<h3>參考資料</h3>` 清單並跨章去重，**不另抄一份**——講義書目改了簡報就跟著改。每頁 9 筆、13pt。
+- **封面後「開場互動」兩頁**：`s_openers()` 讀 `scripts/course_slides_openers.py` 的 `OPENERS[課程][次數]`——`ask` 五題（教師口頭問全班，目的是在講課<em>之前</em>逼出既有認知；講完再問只會得到覆述）、`answer` 三題（學生手機簡答，答完抽籤請人詳述，因此題目必須一兩句話答得完、沒有標準答案）。右側留 QR code 位置。這兩頁與封面一樣不編頁碼。
+
+**課堂互動工具**：使用者用 Windows＋PPTX，因此選 **ClassPoint**（PowerPoint 外掛，播放時右上角自動出 QR code，簡答答案像便利貼浮在投影片上，工具列內建抽籤且名單就是掃碼進來的學生）。純瀏覽器的替代是 AhaSlides；Kahoot 只做選擇題但 iOS／Android 全跨平台、學生免註冊免裝 App（掃 QR 或 kahoot.it 輸入 PIN）。
+
+**Kahoot 題庫（2026-09-04 加）**：`scripts/course_kahoot_xlsx.py` 把講義章末小考轉成可匯入 Kahoot 的 xlsx，每次上課一份 20 題（兩章），出到 Drive `教學/{課程}/Kahoot/`。題庫沿用 `public/content/works/{slug}/quizzes/`，不另出一套。
+
+🚨 **正解位置原本是一個固定循環，三門課十六章一模一樣**（第一章 BABADDDDAB…），學生不必讀題就能猜。根因在 `course_quiz_build.py` 的 `balanced()`：舊的輪轉表只吃「章號×題號」。**2026-09-04 改成依 md5(課程+章+題號+選項文字) 排序**，只跟內容有關，所以線上 HTML、Drive 紙本 docx、Kahoot 匯入檔三者必然一致且重跑穩定；`course_kahoot_xlsx.py` 因此不再自己打散。
+
+🚨 **小考 HTML 是產生物，不要直接改**。題庫來源是 `scripts/course_quiz_data*.py`，`course_quiz_build.py` 一次產出「線上 HTML＋Drive 紙本考卷 docx＋解答卷」。我一開始把打散做在 HTML 上，結果紙本完全沒跟著動，而且下次重跑 build 就會被還原。docx 改完記得再跑 `office_to_pdf.py` 出同資料夾的 PDF。
+
+**小考只考簡報講過的**（使用者要求，與課前開場問答重複沒關係、重複反而是學到了）。稽核方法：把 `DECKS[課程][次數]` 攤平成純文字，比對每題正解的片語有沒有落在該次簡報裡。三個會誤判的地方——「何者『不』屬於」型的正解本來就該不在簡報上（要驗的是另外三個選項）、兩字答案（先知／形聲／上帝／聖餐）、以及數字答案。最後真正落空的只有四題，已改寫。
+
+Kahoot 官方範本的欄位配置與字數上限，網路上說法不一（120/75 與 95/60 兩種），因此取嚴的一組、並照最常見的配置（資料自第 9 列起，B 題幹、C–F 選項、G 秒數、H 正解）產檔；若匯入器挑格式，把 B9:H 那塊貼進 Kahoot 自己下載的範本即可，欄序一樣。
+
+改完簡報要出 PDF：`python scripts/office_to_pdf.py "<簡報資料夾>"`（走 Windows COM，需本機有 PowerPoint）。
+
+整條線（講義／簡報／小考／Kahoot）已寫成 skill **`works-lecture-course`**，細節與踩過的坑以那份為準；講義端的註釋與書目規矩見 [[project-two-textbooks]]。
+
+## 索引補記
+
+- 開場五題口頭＋三題手機簡答後抽籤
+
+## 記憶庫併入：feedback_lesson_slide_deck_recipe
+
+替小三家教做《三國演義》簡報時，**一回只講一件事，全套二十回**（上部十回到赤壁、下部十回到三國歸晉）。
+
+**Why**：2026-09-08 我先把整部三國壓成四堂交出去，被退：「太快了，戰役的過程與勢力的結盟等都沒有慢慢講，三國至少要講二十回才行」。使用者的參照是侯文詠與蔡康永《歡樂三國志》有聲書——十片 CD 分上下共二十回，他們第 11 回「劉備你非娶不可」正好落在赤壁之後，所以上部十回收在赤壁是對的。判斷「夠不夠慢」的標準：**討董、官渡、赤壁這種大事件各自要獨立成回甚至拆上下，不能一頁帶過**。
+
+**How to apply**：管線與素材都在 `G:\我的雲端硬碟\玄奘\博一上\家教\三國演義（小三）\_製作原始檔\`，加新回不要從頭做——
+1. 寫 `slides_lN.js`（純 JS 陣列，20 個 `{html, note}`）
+2. 跑 `python build.py lN`：自動沿用第一回的 CSS／`chr()` Q 版人物／OpenMoji 圖示，**只嵌入該回用到的素材**，未用到的不進檔也不出現在「圖片來源」
+3. 跑 `node shots.mjs lN` 逐頁截圖 → 拼成總覽圖**親眼看過再交**
+
+三個踩過的坑：維基共享資源**檔名說一套、圖是另一套**（標 crossbow 的其實是鉤狀鐵器），下載後一定要看圖；`.tier .lbl` 原本 2.4em 會把「袁紹」擠成直排（build.py 已自動修）；含中文路徑用 Bash heredoc 傳給 Python 會亂碼，寫檔一律用 Write 工具走 ASCII 路徑。
+
+每回固定體例：末頁「哪些是小說編的、哪些歷史真的有」＋一句預告下一回；講稿提示（`N` 鍵）裡的 `class="ask"` 是給老師的提問點。詳細現況見 [[project_tutoring_roster]] 與那個資料夾的 `家教說明.md`。
+
+## 索引補記
+
+- 壓成4堂被退過
+- 管線在 Drive _製作原始檔/，build.py+shots.mjs 可重跑

@@ -109,3 +109,45 @@ python scripts/build_english_textbook.py --split --publish   # 出上下兩冊 +
 大整理時被刪。內容因為早已匯出成 `lessons.json` 而沒丟，2026-09-08 據此重出成
 50 課版。教訓照 [[feedback_no_project_docs_on_desktop]]：**非 repo 的專案資料夾
 沒有備援**，成品要進 Drive、來源要進 git。
+
+## 記憶庫併入：project_english_learning
+
+為使用者媽媽（julia5868@yahoo.com.tw，要當國小英語家教）做的三件成品。
+同一批一千字，**2026-09-08 起三份分課統一成 50 課 × 20 字**（原本網站是 20×50）：
+
+| 成品 | 分課 | 位置 |
+|---|---|---|
+| 紙本課本《Happy English》 | **50 課 × 20 字** | Drive `玄奘/博一上/家教/國小英語課本/` |
+| 印刷單字卡 1000 張 | 50 課 × 20 字（同上） | `output/print-masters/english-flashcards-1000.pdf` |
+| 網站 `/english` | 50 課 × 20 字 | `public/content/english/lessons.json` |
+
+**① B5 紙本課本**（2026-09-08 重出，skill 在 `.claude/skills/teaching-english-textbook/`）
+- 🚨 **舊的 `Desktop/kids-english/` 連同 `Happy_English_v3.docx` 已佚失**（全機、Drive、
+  資源回收筒都沒有，推測 2026-08 桌面大整理時被刪）。內容因早已匯出 lessons.json 而沒丟。
+- 現在：課程資料 `public/content/english/course50/L01..L50.json`（進 git），
+  生成 `scripts/build_english_course50.py`，排版 `scripts/build_english_textbook.py`
+- 出書：`--split --publish` → 上冊 228 頁／下冊 231 頁，docx+PDF 進 Drive
+- 🚨 **成品放 `玄奘/博一上/家教/`，不是 `知識圖工作室/教學/`**（第一次放錯）：
+  家教夾按學生分、由該夾 `家教說明.md` 登記，是上課實際帶的；教學夾是素材庫
+- 定案規格：B5、英文≥13pt 中文≥12pt、**不要 KK 音標**、課內不硬分頁、課文在單字前、
+  **超過 300 頁分上下兩冊**
+- 每課練習：選擇 10、填空 10、重組 6、造句 8。🚨 **資料檔存 30 題、出書時分層挑 10 題**
+  （改 `MCQ_PER_LESSON` 就好，不必重跑生成）
+- 配圖用單字卡那份人工校過的，500/500 全中
+
+**② 教學網站 `/english`**（在 know-graph-lab，redpiigpig.com）
+- 內容由 course50 轉出：`scripts/english_site_from_course50.py`（改了 course50 要重跑）
+- 限 julia5868 + 站長（`middleware/english-auth.ts`）；OTP 登入需先在 Supabase Auth 建帳號
+- 表 `english_activity/progress/scores`；5 測驗、朗讀 0.75x、Web Speech STT
+- 段考每 5 課一組（`LESSON_COUNT` 自動生 10 組）；測驗題庫看 exercises 的 type
+- ✅ emoji 已修：原本 560 個是拿英文名自動配的（order→🦁、summer→🍺、body→💀），
+  現在改讀單字卡人工校過的對照表，749/1000 有圖
+
+**③ 印刷單字卡 1000 張**（2026-09-04）
+- 詞表 `data/originalReaders/vocabulary/english-1000.json`；🚨 這副卡**不留白**
+- 出片：`build_english_vocabulary.py` → `match_english_card_images.py --write` →
+  `build_flashcards.py --deck eng` → `render_and_check_reader_pdfs.py`
+
+🚨 **這批材料的比對陷阱**：詞表把複數寫成 `apple(s)`／`peach(es)`／`mango(es)`，
+任何拿詞表去比對課文的程式都要展開這種括號複數，否則會把好好的課判成「覆蓋率 35%」。
+細節與其他三個「看起來成功的失敗」寫在 skill 裡。

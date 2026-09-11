@@ -259,3 +259,146 @@ python scripts/export_glossary_from_db.py
 - [pages/translation-glossary/index.vue](../../../pages/translation-glossary/index.vue) — UI
 - [scripts/seed_translation_glossary.py](../../../scripts/seed_translation_glossary.py) — master list + 批次填
 - [database/translation-glossary-schema.sql](../../../database/translation-glossary-schema.sql) — DDL
+
+## 記憶庫併入：fathers_glossary_schema
+
+# 教父翻譯詞庫 schema（/translation-glossary）
+
+跟 [[anf-vol1-golden-template]] / [[scripture-fathers]] 串接的詞庫設計。
+
+## 2 表結構
+
+| Table | 用途 | 數量 |
+|---|---|---|
+| `theologians` | 人名（神學家＋聖經人物＋現代神學家）| 258 |
+| `theological_terms` | 地名／作品名／教派名／神學名詞 | 199 |
+
+## UI = 5 個 tab
+
+| Tab | 來源 | 額外子分類 |
+|---|---|---|
+| 人名 | theologians | 5 個 era sub-pill：聖經人物 / 初代教會(-638) / 中世紀(-1517) / 近代(-1910) / 現代 |
+| 地名 | theological_terms WHERE entity_type='place' | — |
+| 作品名 | theological_terms WHERE entity_type='work' | — |
+| 教派名 | theological_terms WHERE entity_type='sect' | — |
+| 神學名詞 | theological_terms WHERE entity_type='term' | — |
+
+人名 era 自動依 died_year 劃分（聖經人物手標 `person_era='biblical'`，例 Paul/Mary/Salome/Clopas/Cephas）。
+
+## 顯示欄位
+
+```
++----------+--------+----------------+--------------+---------------+--------------+
+| 英文     | 原文   | ★ 中文翻譯     | 新教變體      | 天主教變體     | 首次出現出處  |
++----------+--------+----------------+--------------+---------------+--------------+
+```
+
+- **★ 中文翻譯**：所有 entries 都顯示，琥珀色強調 = 建議採用譯名
+- **新教變體 + 天主教變體**：**只在「聖經人物」與「神學名詞」**兩處顯示
+  - 因為這兩類有明顯分歧：保羅／保祿、彼得／伯多祿、約翰／若望、Logos→道／聖言、Trinity→三位一體／聖三、Spirit→聖靈／聖神
+  - 一般教父／中世紀／近代／現代神學家、地名、作品名、教派名通常沒分歧，2 個 column 純干擾
+- **首次出現出處**：例「ANF Vol 1 / 致丟格那妥書 / chunk 9」
+
+## DB schema 補充
+
+```sql
+-- theologians 加：
+ALTER TABLE theologians ADD COLUMN person_era VARCHAR(20) DEFAULT 'early';
+ALTER TABLE theologians ADD COLUMN first_source TEXT;
+
+-- theological_terms 加：
+ALTER TABLE theological_terms ADD COLUMN entity_type VARCHAR(20) DEFAULT 'term';
+ALTER TABLE theological_terms ADD COLUMN first_source TEXT;
+```
+
+舊欄位（`name_protestant`／`name_catholic_sgs`／`zh_protestant`／`zh_catholic_sgs`／`name_recommended`／`zh_recommended`）都保留，UI 只是條件顯示。
+
+## 維護腳本
+
+| Script | 用途 |
+|---|---|
+| `scripts/seed_glossary_anf_vol1.py` | 從 sweep TERM_FIXES + 手動清單種子 49 條 ANF Vol 1 詞條（樣板：每本書一支） |
+| `scripts/backfill_dual_translations.py` | 手動 backfill 已知新教 vs 天主教分歧的雙翻譯（27 條人名+術語）|
+| `scripts/llm_research_dual_translations.py` | Haiku 為缺一邊的 entry 研究填補；workers=4，~$0.10/全本 |
+
+## 詞庫覆蓋率（2026-05-27 完成）
+
+- 人名：258 條，雙翻譯 257 條（99.6%）
+- 名詞／地名／作品／教派：199 條，雙翻譯 195 條（98%）
+- 缺 1 person + 4 terms（Haiku confidence=low，待手動補）
+
+## 翻新書時的詞庫整合 SOP
+
+跟 [[scripture-fathers]] skill 對接：
+
+1. **翻譯前** → `/translation-glossary` 查既有譯名（特別檢查聖經人物與神學名詞 tab 的雙翻譯）
+2. **翻譯時** → `sweep_book_quality.py` 的 `TERM_FIXES_<book>` 自動套用標準譯名
+3. **翻譯後** → 寫一支 `seed_glossary_<book>.py` 對照 ANF Vol 1 模板補新出現的人名／地名／作品名／教派名
+4. **校對發現** → Haiku B 文字校對抓到的新名詞不一致 → 更新 TERM_FIXES + 加進詞庫
+
+## 記憶庫併入：project_translation_naming_card
+
+`/translation-glossary` 2026-06-03 **從聖經 portal 第 6 卡升為首頁頂層卡「翻譯定名」**（移出 `/scripture-canon`，路由不變），並從神學專用擴成**通用名物中譯**。
+
+**Why:** 使用者要一個獨立大卡，統整所有領域的譯名定名（不只神學）。
+
+**How to apply:**
+- 架構（user 拍板）：**保留**神學兩表（theologians / theological_terms）＋**各新領域各一表**：`philosophers` / `scientists` / `historical_rulers` / `place_names` / `deities`。5 表同一核心 shape（name_original/_lang/_romanized、name_english、name_recommended★、name_variants(；分隔)、recommendation_reason、name_root、+領域專屬欄）。RLS 比照神學表（anon SELECT + authenticated CRUD）。schema：`database/glossary-domains-schema.sql`。
+- 純函式核心：`scripts/glossary_naming.py`（DOMAINS taxonomy + `check_root_consistency` + `split_variants`；測試 `scripts/tests/test_glossary_naming.py`）。
+- 頁面 tab：翻譯原則(靜態) ‧ 人名(era) ‧ 神學名詞/聖經地名/作品名/教派名(theological_terms entity_type) ‧ 哲學家/科學家/歷代帝王/國名與城市/神祇與宗教名詞(5 generic 表，同一 renderer)。
+- **翻譯原則**（鐵則）：①按原文不按英文 ②沿用良好古譯/意譯 ③音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）④**名根一致 name_root**（密特→密特拉/密特里達迪；塞琉→塞琉古/塞琉西亞）。原則頁即時跑名根一致性檢查（掛 root 卻沒含 root 字串 → 標紅）。
+- 截圖工具：`scripts/screenshot_glossary.mjs`。詳見 `.claude/skills/translation-glossary/SKILL.md`。
+- 待辦：各領域資料量大，之後可像 [[project_gnostic_library]] 那樣 LLM batch 批次填（目前只有示例幾筆）。
+
+## 索引補記
+
+- 加 哲學家/科學家/帝王/國名城市/神祇 5 新表 + 翻譯原則頁 + name_root 名根一致性檢查
+
+## 記憶庫併入：project_offices_register
+
+`/translation-glossary`（[[project_translation_naming_card]]）2026-07-01 加分頁「官制與行政區」（`official_titles` 表）。外國政權官名／職務／行政區名按「**社會發展階段＋政治氣質**」（共時性，非日曆年代）對到一個朝代 register，用該朝代官制用字，解決「總督/行省」氾濫、無層次感。
+
+**11 register 桶**：商周制／春秋制／戰國秦制／漢制／魏晉制／唐制／宋制／遼金元制／明清制／**漢字圈自有**／周封建五等爵（純核心 `ADMIN_REGISTERS`）。羅馬跨漢/魏晉、拜占庭跨唐[軍區]/宋[晚期文官]。**遼金元制**（南北面雙軌/萬戶千戶百戶/達魯花赤）＝游牧/征服帝國（安息/塞爾柱/蒙古/匈奴/突厥/印加四方+十進位）。**漢字圈自有**＝日/韓/越（官名本即漢字，**直用原稱不另譯**；泰國沿用既有漢名）。**seed 374 筆、~30 政權**（近東/波斯/希臘化/羅馬/拜占庭/伊斯蘭/印度/草原/西歐/漢字圈/非洲/美洲），每帝國撐開完整金字塔（中央部長級→〔超一級〕→一級→二級〔→三級〕）。全政權表見藍圖 §7。神羅二級 Landgrave＝君侯(非方伯)。
+
+**鐵則**：**「總督/行省/副王」是明清 register 的詞**，只用在奧斯曼/蒙兀兒/俄/近世殖民帝國，不套波斯/羅馬/亞述。帝國晚期逐層對魏晉三級＝大區行臺(行臺尚書令)→州(刺史)→郡(太守)＝使用者要的「層次感」。
+
+**使用者已定調**：埃及＝州/州伯；亞述 Shaknu＝鎮監；波斯 Satrap＝州/州伯；希臘化＝郡/郡尉；羅馬前期＝行省(Proconsul 牧/Legatus 都護)、埃及特區＝大尹、猶太(彼拉多)＝都尉(隸敘利亞大行省的**郡**非行省)；羅馬晚期三級；東羅馬＝軍道/節度使；阿拉伯＝道/經略使；奧斯曼＝旗/旗主；西班牙＝副王/提督；英＝大總督/總督/巡撫；法＝統監。Shophet＝士師。
+
+**巴比倫地方首長已定＝楚職「縣公」**（葉公/白公，別於中央宰輔令尹）。⏳待確認：蒙兀兒/俄/法/奧德/荷/日 那批 AI 提案細項。台語文讀/粵語「文體翻譯」屬更大願景，本表只做官職/行政區定名。
+
+**狀態：表 `official_titles` 已建、seed 68 筆上線、Vue tab「官制與行政區」已接（register 子篩選 chip，依 sort_order 呈發展階段順序）。** 檔案：blueprint＝`.claude/skills/translation-glossary/offices_register_blueprint.md`（全對照總表，【核】使用者定調 vs【提】待拍板）；核心 `scripts/glossary_naming.py`；seed `seed_glossary_offices.py`（hand-curated，非 LLM，`--dry` 自檢）；schema `database/glossary-offices-schema.sql`（unique constraint on name_english,polity）；UI `pages/translation-glossary/index.vue`。
+
+## 索引補記
+
+- 「總督/行省」只用明清/殖民
+- 帝國晚期對魏晉三級=層次感
+- 使用者定調鎮監/州伯/都尉/大尹
+
+## 記憶庫併入：feedback_dynasty_empire_naming
+
+`/translation-glossary` 的 `place_names`（國名與城市）裡，**以王朝命名的帝國／國名**採「**王朝名-民族（或國名）帝國**」格式：鄂圖曼-土耳其帝國、阿契美尼德-波斯帝國、薩珊-波斯帝國、阿拔斯-阿拉伯帝國、伍麥亞-阿拉伯帝國、法蒂瑪-阿拉伯帝國、塞琉古-希臘帝國、托勒密-希臘王國、薩法維-波斯帝國、蒙兀兒-印度帝國、卡洛林-法蘭克帝國。
+
+**例外**：政權只跟**單一人物**相關（一人所建、逝後即分裂或更名）→ 直接用人名，不加王朝-民族：亞歷山大帝國、帖木兒帝國、拿破崙帝國。（查理曼帝國**不算**例外，因卡洛林是王朝〔查理‧馬特→丕平→查理曼→虔誠者路易〕，故定 卡洛林-法蘭克帝國。）
+
+**Why:** 王朝-民族雙標能同時點出統治王朝與民族身分，比單一名稱資訊量高；單一人物帝國則無「延續王朝」可標，用人名最清楚。
+
+**How to apply:** 常見短稱（鄂圖曼帝國、塞琉古帝國）放 `name_variants` 不丟。希臘化繼業者王朝（塞琉古/托勒密）民族標「希臘」(馬其頓-希臘系)。這條已寫進 [scripts/seed_glossary_places.py](../../../../Desktop/know-graph-lab/scripts/seed_glossary_places.py) 與 `/translation-glossary` 翻譯原則頁第 5 條。見 [[project_translation_naming_card]]。
+
+## 索引補記
+
+- 單一人物例外用人名(亞歷山大/帖木兒/拿破崙帝國)
+- 短稱放 variants
+
+## 記憶庫併入：feedback_justin_martyr_naming
+
+翻譯英文教父原典時，Justin Martyr 的中文一律用「**殉道者猶斯定**」（思高公教傳統名）。
+
+**Why:** 使用者 2026-05-22 在跑 ANF Vol 1（Apostolic Fathers + Justin Martyr + Irenaeus）翻譯時明確指示。Gemini 預設譯成「遊斯丁」後使用者直接糾正，指明要「猶斯定」。新教傳統的「游斯丁」也不採用。
+
+**How to apply:** 翻譯任何 Schaff、ACCS、教父研究類書籍時，Justin Martyr 一律「猶斯定」。已在 [[ebook-translate]] skill 的 `glossary.md` 跟 `translate_ebook_to_zh.py` 的 `PROMPT_TMPL` 內標示「不寫游斯丁／遊斯丁」。新書翻譯前若這位人物會大量出現（如 ANF Vol 1、ACCS 引用、教父研究 monograph），確認 prompt 內仍正確指定。
+
+跟 [[feedback_bishop_data_chinese]] 同一性質 — 教父／主教中譯一律繁體 + 採思高傳統優先。
+
+## 索引補記
+
+- 翻教父原典／ACCS 一律此譯，不寫游／遊斯丁

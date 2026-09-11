@@ -1420,3 +1420,101 @@ Re-running `standardize_ebook.py <id>` on any EPUB book now:
 - [`scripts/haiku_cleanup_guide.md`](../../../scripts/haiku_cleanup_guide.md) — Haiku text cleanup (historical)
 - [ebook-translate](../ebook-translate/SKILL.md) — 並列 skill，處理英文 ebook → 繁中翻譯（ACCS Apocrypha 等）。本 skill 處理上游 parse/OCR/standardize，translate skill 接下游英→中
 - [scripture-canon](../scripture-canon/SKILL.md) — 新 skill（2026-05-21），會大量依賴本 pipeline 的 ebooks data（IVP ACCS / Schaff / 教父原典 / 基督教典外文獻 / Schaff Creeds + History 等）
+
+## 記憶庫併入：project_ebook_quality_automation
+
+2026-07-08 ebook 三軌大改版（使用者嫌轉錄流程與 UI 品質差、要求全集與圖書館徹底分開）：
+
+1. **全集隔離**：`ebooks.collection`（`'collected-works'`＝全集卷 298 本，NULL＝圖書館）。`/api/ebooks` 列表/搜尋預設排除全集（`?collection=` 可切）；`/ebook/:id` middleware 對全集卷 302 到 `/collected-works/:slug/:id`；store 有 `routeForEbook()`。新增全集作家時 backfill 用 `scripts/apply-ebooks-quality-collection.mjs`（regex 抽 store 的 ebookId）。
+2. **品質評分**：`scripts/quality_sweep.py`（純規則零 LLM）寫 `ebooks.quality_score/quality_flags/quality_checked_at`；tier＝REOCR/RESTANDARDIZE/FIX_TOC/FAIR/GOOD；逐頁書（PER_PAGE_ONLY，~822 本）豁免結構罰分。清單在 `c:/tmp/quality_tiers.json`（取代 re-ocr-worklist.md）。首輪：GOOD 1535 / REOCR 274 / RESTD 116 / FAIR 274。
+3. **重轉錄**：`scripts/requeue_reocr.py` ledger 狀態機；OCR 走 `--staging`（寫 .new），gate＝頁碼覆蓋不退＋空白率改善＋字數成長，過了才 swap（.bak 保底）。`ocr_with_gemini.py` 有 6h cooldown 持久化（`scripts/state/ocr_gemini_cooldown.json`）。
+4. **排程**：KGLab-OCR-Daily-10/14/18 重新 Enable（曾全 Disabled 半個月＝品質差主因）；新 `KGLab-Quality-Sweep` 02:30（全館 sweep＋每晚重轉 ≤5 本）。
+
+**Why:** 品質差根因＝排程停擺＋品質工具零自動化＋兩站資料混同。
+
+**How to apply:** 動 ebook pipeline 前先看 `.claude/skills/ebook-pipeline/SKILL.md` 的「2026-07-08 大改版」章節；重轉清單看 quality tier 不要再手工列 md；別破壞 staging gate 的「不可退步」原則。
+
+## 記憶庫併入：project_new_book_drop
+
+每日新書 drop 流程（established 2026-05-06，drop 路徑 2026-05-08 改）：
+
+- **Drop folder**: `c:/Users/user/Desktop/know-graph-lab/z-lib/`（**改自原本 .claude/skills/ebook-pipeline/new-book/**，2026-05-08 移到專案根）。User 每天會丟新買/新下載的電子書進去。
+- **Pipeline**: `scripts/ingest_new_books.py` → 解析檔名 → Gemini 分類（含 keyword fallback：christ/church/bonhoeffer/syriac/... → 宗教學；zoroastr/avesta/islam/buddhis → 世界宗教）→ 插入 ebooks row → `shutil.move` 到 `G:/我的雲端硬碟/資料/電子書/{category}/{author}，{title}.{ext}`。
+- **重點**: G: 是 Drive sync 掛載，move 過去等於上傳到雲端 + 本地刪除一次到位，不需要 Drive API/OAuth。
+- **排程**: `run_ocr_daily.bat` 已改成三段：ingest → parse_worker → ocr_with_gemini，每日 16:00 Taipei 觸發（Windows Task `KGLab-OCR-Daily`）。
+
+**Why:** 之前的 1,309 本是一次掃描 G: 入庫的；之後 user 持續手動下載新書，需要一個 incremental ingest 通道。Skill 內 drop folder 設計讓 user 不必碰 Drive 結構也能丟書。
+
+**How to apply:** 用戶要求「處理新書」「分類入庫」「Drive 同步」時，跑 `python scripts/ingest_new_books.py status` 先看 backlog，再 `run`。如果 Gemini 429（每日 250 RPD 用完）就讓明天的 scheduled task 處理。Skill 的詳細 contract 在 `.claude/skills/ebook-pipeline/SKILL.md` Workflow D。
+
+## 記憶庫併入：project_structure_repair
+
+針對「文字 OCR 沒問題、但側欄目錄空白／標題正文不分」的書做的結構修復工程（2026-05-31 啟動）。
+
+**體檢結論（scripts/structure_audit.py，只讀 DB 預覽）**：1743 本 / 179,665 chunks。**髒書 100% 是 PDF，EPUB 結構乾淨**。主病 712 本 NO_TOC（chapter_path 全空），其中 189 本已 standardize 仍無目錄 → standardize 對「無內嵌書籤的掃描/論文 PDF」無能為力，需新能力。
+
+**修復工具 scripts/fix_book_structure.py（resumable / quota-aware）**：
+- **Job A recover**：NO_TOC 的 page-chunked PDF。剝頁碼+固定家具頁眉 → gemini-2.5-flash-lite 推章節 → chapter_path **只增不覆蓋**（保 page_number）。密度閘 <25字/頁跳過記 `c:/tmp/needs_reocr.txt`（防空 OCR 幻覺）。巨書視窗化；`clean_title()`+`level_from_title()`（第N篇L1/章L2/節·一、L3，不信 LLM level）。
+- **Job B audit**：所有有目錄的書（全 EPUB+有 TOC 的 PDF）純規則掃檔名外洩/引文當標題/純數字 → `c:/tmp/toc_audit_flags.txt`，只報告不改。
+- 4 把 Gemini key 輪替 + 429 退避；與 OCR 排程**共用** flash-lite 每日配額。
+
+**全量結果（2026-05-31 完成）**：788 本 NO_TOC PDF → **722 補上目錄**（689 本 ≥50%，525 本 ≥80%）。`--rich` 兩段式（`recover --rich`，build_skeleton_rich+PROMPT_RICH，掃全頁找章名候選⟦⟧、用內文起始頁不用印刷目錄頁）救回長書：師主篇 0→260/265、教宗本篤禮儀訓導 189/192、懲罰的社會 137/139、Rise of Monophysite 392/419；3 本 10-16 頁短書章名不合規則仍 0。
+桶 1 盲區：**65 本純圖片掃描 PDF**（total_chars<2000、被 standardize 成 1-chunk 殘根、**無 parse_error 故 OCR 排程原本看不到**）→ 已掛 `no extractable text` 標記送 OCR 排程（待辦 77→142，清單 `c:/tmp/needs_ocr_all.txt`）。Gottwald 1 本 JSONL 損毀待重 parse。Job B 稽核 51 本 EPUB 目錄異常已**自動清**（`fix_book_structure.py audit-fix`）：192 檔名外洩→從內文衍生標題、97 引文(>)剝除，保守閘 `_heading_like` 把判不出標題的設 null（絕不淪為正文垃圾）。共修 51 本。
+
+**⚠️ 持久檔案別清**：`c:/tmp/structure_fix_ledger.json`（斷點續跑帳本）、`needs_reocr.txt`、`toc_audit_flags.txt` 是跨日跑批的操作狀態，**c:/tmp 清理時要保留**。重跑 `python scripts/fix_book_structure.py recover` 會依 ledger 自動接續。要重做某本：先把該書 chapter_path 清 null + 移出 ledger。
+
+文件在 [[ebook_pipeline]] 的 SKILL.md「Workflow H」。延伸構想：一般書/翻譯書/全集用正交 facet（series_id+volume_no／sources[] 多語／quality_tier）而非分模板；榮格全集要中英德三欄（sources[] 多語化是唯一需動的 schema）。
+
+## 索引補記
+
+- 髒書全是PDF
+- c:/tmp ledger 別清
+- EPUB乾淨
+
+## 記憶庫併入：haiku_cleanup_skill
+
+## Goal
+Clean 750+ ebook chunks: convert simplified Chinese → traditional, fix formatting/OCR artifacts, normalize spacing.
+
+## Scripts Created
+
+**scripts/clean_with_haiku.py** (Main processor)
+- Loads books from Supabase (chunk_count > 0)
+- Reads JSONL chunks from `G:/我的雲端硬碟/資料/電子書/_chunks/`
+- Calls Claude Haiku 4.5 API for text cleaning
+- Writes cleaned JSONL back to disk
+- Commands: `status`, `run [--limit N]`, dry-run mode
+
+**scripts/haiku_text_cleaner.py** (Configuration/demo)
+- Status reporting on books pending cleanup
+- Demo mode to show what cleaning would do
+- Prompt generation for Haiku
+
+**scripts/demo_text_quality.py** (Quality demonstration)
+- Shows sample book chunks from database
+- Demonstrates encoding/formatting issues
+
+**scripts/haiku_cleanup_guide.md** (User documentation)
+- Setup instructions
+- Usage examples
+- Cost estimate (~$11 for 700 books)
+- Before/after examples
+
+## Status
+
+✅ Scripts written and tested (dry-run works)
+⏳ Awaiting ANTHROPIC_API_KEY to run full batch
+✅ 751 books identified for cleanup
+✅ 901 JSONL chunks available
+
+## Next Steps
+
+1. User sets `export ANTHROPIC_API_KEY=sk_...`
+2. Run: `python scripts/clean_with_haiku.py run --limit 50` (pilot test)
+3. Monitor quality and cost
+4. If good: run full batch on all 750 books
+
+## Cost & Time
+- 14M tokens estimated → ~$11 total (Haiku 4.5)
+- ~1 token per word → process time depends on rate limits
+- Can process in batches to spread cost

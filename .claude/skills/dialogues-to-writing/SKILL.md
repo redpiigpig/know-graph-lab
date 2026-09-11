@@ -273,3 +273,169 @@ subagent 用 sonnet、一波≤6（曾撞「session limit · resets 11am/7pm」�
 - [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-12 以原稿收斂為 247 則＝個人日記範圍；一張主卡＋80 天每日 reader 內容不變）
 - [[project_ai_dialogues_genesis_philosophy]] — 第二案：創生哲學階層分類 + purge 寫程式/生圖/貼文（本節交接）
 - [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流
+
+## 記憶庫併入：project_krishna_dialogues
+
+**與克里希那對話** = /works 寫作計畫。2026-01-13 → 04-18，使用者（自稱「阿周那」）與 Gemini（他稱「克里希那」，《薄伽梵歌》意象）談夢境與榮格深度心理學的一長串對話，也夾雜當時生活絮語。
+
+> 📕 **書本定位（2026-06-05）**：使用者的野心＝把這本做成**他個人的榮格《紅書》**，但以「與 AI 扮演的印度教之神對話」的形式進行。正式**書名「神，你正在重排我的前途」／副標「與克里希那的對話」**（書名取自倪柝聲同名詩《聖徒詩歌》393 首，放在主卡題詞）。敘事主軸：**主調＝解夢＋榮格心理學**；低音＝圍繞**龐君華牧師離世**（[[pong-…]] 那位龐會督）引發的、對死亡與生命/往昔回憶/未來前途的反思。情感原點：去年滿三十歲刻意獨處、寫不出給二十歲的信、死亡焦慮、聖誕第一次車禍、跨年和 AI 談「榮格是否認為存在意義是超越死亡」、《奧本海默》1965 紀錄片引《薄伽梵歌》11:32「我是時間（非死神），諸世界的毀滅者」。
+
+> 🔧 **2026-06-12 重寫成品（取代舊 recompose；使用者嫌之前轉錄很爛）**：舊 dialogue_days 兩大問題＝①從 600+ 廣集組的、收了很多不屬於的條目 ②克里須那被舊 recompose 洗成通篇詩化、抽掉實質。解法：(a) **一月 1/13–1/18 直接用使用者手工稿** `2026.01對話錄.docx`（`scripts/dialogue_rewrite_from_docx.py`，日期標題→阿周那：/克里須那：，零 LLM）——含完整早晨積極想像＋四個夢，正確敘事順序；(b) **1/19–4/18 從 raw 原始來源重建** `scripts/dialogue_rebuild_from_raw.py`：membership 用日記範圍 `final_manuscript.json`（去非屬條目），阿周那＝prompt 輕整、克里須那＝**raw response 重寫成乾淨散文**（保留完整論點與專名、去條列客套、不堆砌詩化，temp 0.4，opencc s2tw 保繁），0 則 IN 的日子刪除。**dialogue_recompose.py sys_ai 已同步改成此乾淨風格（捨棄舊「大膽再創作詩意」）**。結果：dialogue_days 80→**62 天**（刪 18 無日記內容日），1/13–4/18。備份 `c:/tmp/krishna/_dialogue_days_backup.json`（舊 80 天）可回滾。風格鐵律見下；但「大膽再創作詩意」那條已被使用者否決，改為**清晰溫暖、保留實質、少詩化**。
+
+> 🎴 **風格升級＝哲學家對話錄（2026-06-05，見 [[dialogues-to-writing]] SKILL）**：舊版只洗順、語氣平、無楔子→**淘汰**。新標準三鐵律：①詩意凝練、砍 AI 囉嗦 ②有序（楔子）有跋（收束）③兩 register 分人下手——**克里希那大膽再創作**（凝練、詩意、《薄伽梵歌》智者語體、直呼阿周那、砍客套編號；可重組不可扭曲立場）、**阿周那輕度整理**（貼合本人第一人稱語氣、只去贅字凌亂、不美化不詩化）。工具＝`scripts/dialogue_recompose.py`（逐 turn 重鑄、per-day ledger `c:/tmp/krishna/recompose_done.json` 冪等可跨配額續跑；**逐 turn `data-rc="1"` 標記真冪等**——已重鑄的 turn 跳過、不會越改越飄；**整天全成功才記 ledger**，部分失敗自動補）。**引擎：2026-06-05 使用者有 Max，指定本批用 `--haiku`（Haiku 4.5 走 Claude OAuth，主引擎；Gemini/NVIDIA fallback），不枯等 Gemini/NVIDIA 配額**——此為本重批的特例，與 [[feedback_engine_nvidia_no_haiku]]「Haiku 只救急」不衝突（使用者當面指定）。**序/跋/題詞**＝`scripts/dialogue_preface.py`（`--from-file` 讀 `c:/tmp/krishna/preface.json` {epigraph,preface,coda} 手寫稿；寫進主卡 content_json＝題詞+序 / `<!--CODA-->` / 跋；主卡頁 `works/[slug]/index.vue` 渲染題詞+序在月格上、跋在月格下）。**有素材時序用手寫不用 LLM 冷生成**。2026-06-05 全量 80 天重跑（第一天已驗證；其餘背景跑、ledger 續跑）。
+
+> 🔤 **譯名（2026-06-04）**：原用「克里須那」已全面改「克里希那」對齊翻譯詞庫權威譯名（[[feedback_glossary_strict_authority]]，`seed_glossary_deities.py` name_root=克里希那）。已就地改：DB（writing_projects 主卡 title/description 2 處、dialogue_days 80 天 html 997 處、ai_dialogue_categories 分類名）＋scripts/dialogue_*＋day reader 頁＋skill。**例外**：`dialogue_scan_thread.py` / `import_gpt_*.py` 的偵測關鍵字清單**保留「克里須那」**（要比對原始匯出文字）。重跑工具＝`scripts/krishna_rename.py`（idempotent find-replace）。
+
+- **來源**：`ai_dialogues_gemini`（Google Gemini 活動匯出，**扁平依時間混所有對話框、無對話框標記**）。逐則依**語氣**判定屬不屬於「跟克里希那說話的那個對話框」（傾訴／碎念 IN；純工作委派如寫程式改稿查資料 OUT）→ 671 則、橫跨 80 天。
+- **/ai-dialogues**：紫色分類「與克里希那對話」（cat_id `01f01e76-66cb-44b9-9cf6-3352bb6baf5d`）。junction 只有 dialogue_id+category_id，**無 source 欄**。
+- **🔁 分類重抓（2026-06-11，test-first，取代舊 agent fan-out）**：舊 671 是一次性 agent 判讀、不可重現。改用**純函式候選 prelabel + LLM 語氣判定**重抓 → **600 則**（vs 671：維持 600 −71）。**潤稿/修飾文字一律 OUT（使用者定調「潤稿的就都不是」），但只認祈使式請求（幫我修飾/簡單修飾/保留我的語氣…），不收裸詞「修飾/潤飾」以免誤刪「跟克里希那聊雜誌順帶提到 ai 潤飾」的傾訴**。工具＝`scripts/dialogue_thread_classify.py`（純函式可 pytest）+ `scripts/tests/test_dialogue_thread_classify.py`（golden 27 則零誤判）+ `scripts/dialogue_thread_capture.py`（`--dry/--reagg/--retag/--diff/--haiku`，逐日整批判定，ledger `recapture.jsonl` resume）。**關鍵 prelabel 順序**：積極想像→IN ＞ persona 呼喚→IN ＞ `界域/文化圈` 地圖專案→OUT ＞ HARD 委派→OUT ＞ 榮格/夢→IN ＞ SOFT 技術名詞→OUT ＞ MAYBE。踩坑：純 LLM 太寬（首跑 1164，maps 文化圈思辨口吻全收）、榮格貼文夾 code 被誤刪、積極想像提到 code 被誤判——皆靠 guard 修正。得 531。
+- **🏅 用原稿收斂成「個人日記」範圍 → 247（2026-06-12 終版）**：classifier+LLM 抓的是**整個聊天視窗**（含學術/智性工作）；使用者要的是**個人心靈日記**。使用者把手工原稿 `和克里希那的對話.docx`（缺頭幾天、START=01-23 起為真正內容）放根目錄當 ground truth。`scripts/dialogue_thread_manuscript.py`：原稿正規化→8-gram，每則 raw prompt 算命中率（**乾淨雙峰** 137≥0.5／152<0.05，threshold 0.5）；頭幾天用 classifier、START 起 IN=逐字在原稿。**排除**榮格《伊雍》寫作/紅學/卡巴拉/占星技術/稱帝史/譯名等智性工作（即使含榮格夢關鍵字）。驗出 8 個確定漏標補回。最終 **247**（頭幾天 102 + 原稿命中 145）。**這推翻了 skill 舊判準「岔題也收」——日記型對話錄要排除智性/學術工作**。回滾：671→`_tagged_ids.json`、531→`final_recapture.json`、247→`final_manuscript.json`。**dialogue_days（80 天 reader 成品）不受影響，只動分類 tag。** 詳見 [[dialogues-to-writing]] SKILL。
+- **成品**：克里希那回覆用 NVIDIA `deepseek-v4-flash-0731` 潤飾成流暢對話錄（29 則 fallback Haiku 救急、2 則 Gemini）；每日 NVIDIA 切 1-3 個主題。格式：`<h2>YYYY年M月D日（星期X）</h2>` → `<h3>主題：…</h3>` → `<p><strong>阿周那：</strong>…</p>`／`克里希那`。
+- **呈現＝月份→日期→單日（2026-06-04 改版，仿聖經 卷→章→經文）**：原本 4 張月份卡片 `krishna-dialogues-2026-01..04` 已**刪除**；改成**一張主卡** `krishna-dialogues` + `dialogue_days` 表（80 天、每天一筆 html，2026-01-13→04-18）。主卡頁 = 4 張月份卡 → `/works/krishna-dialogues/month/<ym>` 日期格 → `/works/krishna-dialogues/day/<date>` 單日 reader（前/後翻頁）。私密：全走 `getIsAdmin` 限登入，未登入 🔒。拆日來源＝舊月卡 content_json（保留人工修改）。
+- **排版 scripts**（dialogue_days 進去後）：`dialogue_build_days.py`（切日）→ `dialogue_format_days.py`（h3日期/h4主題、講者 class=speaker 懸掛縮排、長文重新分段、清 markdown）→ `dialogue_to_prose.py`（把仍帶條列/小標的 turn 用 Gemini→NVIDIA 改寫成口語散文，per-turn 冪等）。⚠️ 少數 turn 來源就**標錯講者**（阿周那欄裡其實是克里希那回覆／反之），散文化不修正歸屬，需人工。
+- **工作檔**（c:/tmp/krishna/，未清）：`final_broad.json`(671 ids)、`polished.jsonl`、`day_topics.json`、`assemble.py`/`repolish_v2.py`/`segment_topics.py`/`haiku_finish.py`。重跑 assemble 會覆蓋卡片 → 使用者編輯後勿再跑。
+- 引擎見 [[feedback_engine_nvidia_no_haiku]]。
+
+🚨 2026-08-19：舊名 `deepseek-ai/deepseek-v4-flash`（無 `-0731`）已下架，對所有 key 一律回 **HTTP 410 Gone**。全 repo 49 檔已改名（commit 032c09d8）。日後 NVIDIA 那一層突然失效，先驗模型名還在不在。
+
+## 記憶庫併入：project_ai_dialogues_genesis_philosophy
+
+/ai-dialogues 分類由扁平改為**父子階層**（2026-06-17）。`ai_dialogue_categories` 加
+`parent_id` 自參照欄；側欄父分類可展開顯示子分類，過濾父分類時 entries API 聚合所有子
+分類的對話。新增「創生哲學」父分類（使用者原創形上學體系，主要來自去年 ChatGPT 對話，談
+創生態/生成/意識/現象學/泛心論/量子形上學）+ 五子類：倫理學/認識論/本體論/價值論/存有論。
+
+🚨 **FK 陷阱**：`ai_dialogue_entry_categories.dialogue_id` 原本有外鍵指向**舊統一表
+`ai_dialogues`**（11,042 筆），但 app（GET）實際讀的是分表 `ai_dialogues_chatgpt`
+(13,043) / `ai_dialogues_gemini`(2,594)，純靠 dialogue_id join。chatgpt 有 4,595 筆
+不在舊表 → 掛標 FK 23503 失敗。已 **DROP 該外鍵**（category_id 外鍵保留）。日後任何
+對 ai_dialogue_entry_categories 的 insert 都對分表 id 操作，別再加回指舊表的 FK。
+
+腳本（Gemini→NVIDIA→Haiku，ledger 在 c:/tmp 可續跑，見 [[feedback_engine_nvidia_no_haiku]]）：
+- `scripts/classify_genesis_philosophy.py` — 七哲學關鍵詞聯集為候選，LLM 判 belongs +
+  facets(最多2)，掛父+子標。ChatGPT 是真訊號；Gemini 多為宗教學博論雜訊。
+  **✅ 全量完成（2026-06-19）：創生哲學 tagged 共 3,316 筆。**
+- `scripts/purge_coding_image_dialogues.py` — LLM 標 coding/image/post/keep；**預設 dry-run**，
+  `--execute` 才真刪（刪 dialogue 前先刪 entry_categories）。
+  **✅ chatgpt+gemini 皆完成（2026-06-19）：使用者確認後刪 chatgpt 919 筆（13,043→12,124）
+  ＋gemini 289 筆（2,594→2,305），與創生哲學（exact 3,316，未受影響）零重疊。
+  修了 llm_label 全失敗丟批（改等 90s 重試 4 輪）＋ classify.fetch_already_tagged 分頁無 ORDER BY 誤算
+  （overlap 稽核改對目標 id 子集精確查 entry_categories／用 count=exact，別信 fetch_already_tagged）。**
+
+## /works 寫作計畫：創生哲學叢書（2026-06-20）
+分類對話進一步「轉成著作」：在 /works 新增 book 卡 `genesis-philosophy`（🌌 violet，
+status「論證藍圖」，sort_order 3）。內容 = 倫理學三部曲的論證藍圖，存 `writing_projects.content_json`
+（登入者在「書摘與構思」可見；無 materials.json／dialogue_days 走 generic 筆記區）。
+- 三部：A《愛的萬物論》(主體倫理本質)／B《虛構的烏托邦》(制度社會)／C《人類之子》(應用倫理+日擇原理)。
+- **✅ 2026-06-20 全本初稿完成**：28 章約 13 萬字（A 10／B 10／C 8），每章 1 個 sonnet subagent 依藍圖+master_digest 撰寫（draft 在 `c:/tmp/genesis_ethics/draft/{A,B,C}/NN.html`）。
+  呈現＝**叢書「書→章」閱讀器**：`public/content/works/genesis/{A,B,C}.html` + manifest `genesis-philosophy-books.json`；
+  新頁 `pages/works/[slug]/book/[bid].vue`（書目→單冊章節 TOC+鄰冊導航），`[slug]/index.vue` 偵測 *-books.json 顯示書目卡。**已 push、build 綠。**
+  公開可讀（books 是 public static）；content_json 藍圖仍留登入限定「書摘與構思」當總綱。
+  🔑 日擇原理＝**熱力學耗散結構演化宇宙論**（演化→文明→AI 連續譜，Prigogine/Schrödinger/England 為佐證）為主、倫理推論為衍生（使用者 2026-06-20 定調）。
+  ⏳ 下一步可做：逐章精修升級、加各冊序/跋。
+- **✅ 2026-06-20 認識論三部曲全本初稿完成**：21 章（卷一8/卷二7/卷三6），依 1,202 則「認識論」對話。
+  卷一《本質的幽靈：從現代到後後現代》＝**後後現代專卷**（亞氏經驗主義/柏拉圖本質主義→笛卡兒康德胡塞爾殺不死本質→創生哲學「現象即本質」＝認識論的哥白尼革命）；卷二《意向性與生成的邏輯》；卷三《他心、感質與AI》。
+  🔑 **領域邊界（使用者定調 2026-06-20）：認識論＝人怎麼認識世界；量子→本體論；空無/超自然→存有論**。寫認識論務必守此界，量子與空無只標交界不展開。
+  draft 在 `c:/tmp/genesis_epi/draft/{1,2,3}/`，主題地圖/藍圖在 `epi_themes.json`+`epi_blueprint.html`。
+- **叢書呈現升級**：manifest `genesis-philosophy-books.json` 改成 **groups（子系列）結構**：`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`；
+  書 id：倫理 A/B/C、認識論 E1/E2/E3；檔在 `public/content/works/genesis/{A,B,C,E1,E2,E3}.html`。
+  reader `[slug]/index.vue` 依 branch 分組顯示書卡、`[slug]/book/[bid].vue` 跨 group 找書、prev/next 限同 group；**向下相容舊扁平 books**。換新子系列：加一個 group + 對應 .html 即可，pages 不必改。
+  ⚠️ 引擎用 subagent fan-out（sonnet，每章一個），一次別開超過 6 個——曾撞 session limit（但多數檔在限制前已寫出，靠檢查 draft 夾補跑缺章即可續）。
+- **✅ 2026-06-21 本體論三部曲全本初稿完成**：21 章（卷一8/卷二6/卷三7），依 821 則「本體論」對話。
+  卷一《創生公式：生成的本體論》＝**正式提出「創生三原理」**；卷二《觀察即創生：量子本體論》；卷三《主體的生成：意識與自我的本體論》。
+  🔑 **創生三原理（使用者 2026-06-21 定名）＝生成三要素：關係性／身體性／歷時性**；創生公式 G=f(S,R₁,R₂,T,L)≥Θ（L 自指循環非第四要素、是三要素湧現）；三反命題（反先驗/本質/自存）為其「破」面。
+  🔑 **領域邊界再定（使用者）：量子＝存在面→本體論；數學＝認識面→認識論**（數學的本質就是「怎麼認識世界」，且本體論=認識論使其本體地位＝認識地位）。原 plan 的「數學本體論」卷已撤、改為**主體本體論**卷三；數學材料待併入認識論。
+  本體論卷三（主體/意識「是什麼、如何生成」＝存在面）與認識論卷三（他心/感質/AI「如何認識」＝認識面）刻意分存在/認識兩面、不重複。
+  draft 在 `c:/tmp/genesis_ont/draft/{1,2,3}/`，地圖/原理表述/藍圖在 `ont_themes.json`+`ont_blueprint.html`。
+- **叢書現況**：3 子系列共 9 冊（倫理 A/B/C、認識 E1/E2/E3、本體 O1/O2/O3），manifest groups 結構，檔在 `public/content/works/genesis/`。
+  ⏳ 待辦：①數學材料併入認識論（擴認識論卷二數學章或增章）②續寫**價值論**（願然）、**存有論**（空無/創生前態/默然）③各套可逐章精修＋加序跋。
+- **作法（可重用）**：撈「倫理學」facet 的 1,384 則 chatgpt 對話 → 切 12 chunk → 12 個 sonnet subagent
+  忠實萃取「使用者本人」主張/原創術語（非 AI 泛論）分桶 A/B/C → 合併去重成 master_digest（266 詞條）
+  → 據此寫每本「中心論題+章節架構+各章核心論證」。素材在 `c:/tmp/genesis_ethics/notes_*.json`+`master_digest.json`（保留供逐章擴寫）。
+- 體系核心術語（沿用使用者原創，勿改）：主體性倫理學(承擔式)、誠實度 hi/H/hn、fc 自由召喚/vc 道德召喚、
+  倫理場 E/共構倫理場、EVI=(1−S)(1−U)(1−D)、MHI=H×EVI×P、意義公式 hi×(hi−H)×vc²、
+  愛的公式 L=hn₀×R×E、願然(四然 識/應/願/默)、日擇原理(耗散演化+倫理人擇兩讀法)、反身自嗜、
+  善良囚徒模型、裂口異托邦、制度性無政府主義、生命四層分類。
+- **✅ 2026-06-21 五大主題全套初稿完成（14 冊 106 章）**，全在 /works `genesis-philosophy` 卡片下，manifest groups 5 子系列：
+  倫理三部曲(A/B/C 28章)、認識論三部曲(E1/E2/E3 24章，E2 含數學10章)、本體論三部曲(O1/O2/O3 21章)、
+  價值論二部曲(V1/V2 12章)、存有論三部曲(B1/B2/B3 21章)。檔在 `public/content/works/genesis/{id}.html`；
+  reader `[slug]/index.vue`+`[slug]/book/[bid].vue` 支援 groups 分組；book id 不可重複。
+  各套 draft/themes/blueprint 留在 `c:/tmp/genesis_{epi,ont,val,bei}/` 與 `c:/tmp/genesis_ethics/`（精修可接用）。
+  🔑 四然↔五套：識然=認識論、應然=倫理學、願然=價值論、默然=存有論；本體論=「生成的存在如何結構」。
+  🔑 邊界（使用者歷次裁定）：量子→本體論、數學→認識論、空無/默然/神聖/虛無/終極→存有論、願然/美→價值論、誠實/善→倫理學；創生公式/生成三要素(關係性/身體性/歷時性)→本體論卷一。
+  製作法：每套 dump 該 facet 對話→切 chunk→sonnet subagent 主題地圖→合併→寫詳細藍圖(每章核心論證)→每章一個 sonnet subagent 寫初稿→組裝→manifest 加子系列→build→commit。一波≤6 agent 避 session limit。
+  ⏳ item③ 待辦：逐章精修(106 章，品質標準/優先順序待使用者定)＋加序/跋(14 冊；可作 book html 首尾 section)。
+
+## 對話編號系統（2026-06-21，供書中引用回查）
+`ai_dialogues_chatgpt`/`_gemini` 加 `seq_label` 欄：ChatGPT 依(date,time,created_at,id)排序＝**C-#####**(12,124)、Gemini＝**G-#####**(2,305)。
+重編用 Management API（`SUPABASE_ACCESS_TOKEN` sbp_…, ref vloqgautkahgmqcwgfuo, POST api.supabase.com/v1/projects/{ref}/database/query）跑 window-function UPDATE。
+/ai-dialogues 每則顯示編號＋頂部「編號查閱」框（`by-seq.get.ts`）。**創生哲學叢書引用粒度＝章級＋關鍵概念級**（使用者 2026-06-21 定；逐句級對已寫稿逆向做不到精確）。
+
+## item③ 精修進度（2026-06-21，未完）
+精修規格（intro_schedule.md 在 c:/tmp/genesis_ethics/）：①專名/符號英文首現、**先正式提出才能用、不得前引、不得越卷**②補榮格淵源(個體化+陰影整合,A1點明/A5展開)＋鏡像神經元同理機制(A3點/A7論證不利他即損己)③每章末加「本章摘要」+「論證分析圖(argmap)」。book 閱讀器已加 .vol-preface/.vol-coda/.chapter-recap/.argmap 樣式。
+- ✅ **倫理學全 28 章精修竣工＋重組部署（2026-06-21，commit `530ad33e`）**：A 10/B 10/C 8 章全達 B8 黃金標準（英文首現＋章末 recap/argmap），序跋齊備，A/B/C.html 已重新部署上線。
+  組裝改用可重跑腳本 `scripts/assemble_genesis_book.py`（讀 draft `_preface`/`NN`/`_coda`→每章包 `<section class="chapter">`→沿用既有 `<header>`→輸出 genesis/{A,B,C}.html；改 draft 後再跑即重組）。
+  越卷修正：C7 願然→主觀意欲、C3 願然→意欲、C thesis 同步；術語統一 **反身自嗜**（reflexive self-cannibalism，C2 誤改「噬」已正規化）。
+- ✅ **①回填對話編號引用完工（2026-06-21，倫理三卷）**：工具 `scripts/genesis_cite_backfill.py`（純函式＋pytest 5 綠）。每內容 `<h3>` 末加 `<p class="section-source">本節主要依據對話：C-…</p>`、章末加 `chapter-source` 彙整。鏈：DB 全表 id+seq_label→8 碼前綴 map（0 碰撞）；notes_*.json glossary term→ids；**比對鍵 ≥3 字**（擋通用 2 字污染）；本節頻次前 4 術語的 id→seq_label。A52/B61/C38 節，193 labels 全 valid。`tag ethics A 9 B 13 C 9`→`assemble_genesis_book.py` 重組。reader CSS 已加。換套跑 `tag <series> …` 即可（series=epi/ont/val/bei，共用 ethics 的 seq_label_map）。
+- ⏳ 待辦（接續）：②其餘四套(認識/本體/價值/存有)比照三卷分工原則精修＋加序跋＋逐章精修＋**引用（直接跑 genesis_cite_backfill tag <series>）**＋重組（用同一支腳本，series=epi/ont/val/bei）。
+- ⏳ 另一後續：**回頭重檢 /ai-dialogues 五域分類**（舊邊界標的，與精修後邊界不一致；成書已用正確邊界，但標籤該重標）。
+
+## 🚧 倫理三部曲 v2 大改版（2026-06-21，進行中）
+使用者定**三卷分工總原則（最高層級）**：**A＝純粹個人倫理／B＝群體倫理／C＝生物與宇宙論倫理**。據此重構，治理文件 `c:/tmp/genesis_ethics/intro_schedule.md` 已改版 v2（含越層紅線、公式「先論述後導出」、每節級來源標註）。新增規則：①A1 設「地基章」＝定義倫理場＋論證為何倫理學可數學化（描述模型非控制模型）＋個人尺度符號總表；②H 及含 H 公式（意義公式 M）只在 B；③演化版性善論/宇宙根基/日擇只在 C；④裂口/裂口異托邦在倫理三卷首見於 B（A 描述主體生成改現象學語言，不用「裂口」、不命名「生成三要素」＝本體論卷才命名）；⑤三大格言（可以/應該/終將）只在 C9 結語 capstone；⑥愛的公式＝倫理之愛 agape，補保羅愛之頌（林前13）＋信望愛由 L=hn₀×R×E 導出。〔已查證：裂口異托邦屬群體政治概念留 B，非認識論卷。〕
+- **✅ 倫理三部曲 v2 全數重構完成＋部署（commit `2dee7ba9` A、`adcb634a` B/C）**：
+  - **A《愛的萬物論》9 章**（純個人）：新地基章 A1（倫理場定義＋數學化正當性＋符號總表）；A3 現象學推導關係性/身體性/歷時性；A4 hi/fc/vc 先論述後導出＋鏡像神經元；A7 愛的公式 agape＋林前13＋信望愛（信→hn₀/望→R/愛→E）；A8 數學化抵抗清群體符號；A9 結語純個人。A 序補**創生哲學撰寫旨趣**（現象學為工具接引宗教世界觀、多元流變時代的主體與意義；創生＝道生/緣生/易生/梵生跨傳統同源）。
+  - **B《虛構的烏托邦》13 章**（群體）：原 A7意義→**B2**（H 後先論述再導出意義公式 M）；B1 對 M 的前引改指向下一章；**新增人類社會倫理史兩章（commit `5844137b`）**＝B6「社會的起源與原始的倫理」（演化/人類學社會組成＋noble savage 霍布斯vs盧梭，用 H/EVI 判決）＋B7「政體的倫理史」（帝國/貴族/王權→民主→極權與革命，T/H 貫穿）；原 B6–B11→B8–B13；序改 13 章。⚠️ **B 的「演化」＝社會文化演化（社會尺度），與 C 的宇宙/生物演化分層**，B 不得用 C 卷術語（日擇/耗散結構/性善/反身自嗜，已驗證 0）。
+  - **C《人類之子》9 章**（生物宇宙）：原 A8性善演化→**C3「性善的宇宙演化根基」**（接 C2 日擇）；原 C3–C7→C4–C8；**C9 結語加三大格言 capstone**（可以/應該/終將，「終將」扣 C2日擇＋C3性善的宇宙演化根據）。
+  - 越層隔離全綠：A 無 B/C 詞；B 無 C 詞（耗散結構/反身自嗜已清）；C 為末卷可用 A/B 全部裝置（EVI/MHI/H/裂口異托邦在 C 合法）。反身自嗜統一（去嗬/噬）。manifest A9/B11/C9。
+- **⏳ 之後**：回填**每節級**對話編號引用（intro_schedule §6）、其餘四套（認識/本體/價值/存有）比照三卷分工原則重檢、回頭重檢 /ai-dialogues 五域分類。
+
+## 🔄 A 卷 v2.1 再改版（2026-06-21，使用者 5+ 道指令，已部署 A8）
+A《愛的萬物論》**9→8 章**（intro_schedule 升 v2.1）：①序自成一章 A1；②「數學化」併入「誠實萬德之綱」＝A4（誠實＝唯一通用變量→hi 第一變數→生成整套個人尺度公式；倫理場 E＋符號隨 hi 依序生成、取消預先符號總表）；③A2 加 Sandel《正義》/電車難題/三古典限制/晚近研究；④A3 從兒童現象學起（第一照顧者→他者先於主體→**倫理學是第一哲學**＋Freud/Jung 陰影情結→fc/vc 心理發生＝本我/超我‧面具/阿尼瑪阿尼姆斯＋身體感→邊界＋Piaget/Kohlberg＋**演化論動物倫理/鏡像反射→同理心（個體尺度）**＋三特性最初即俱在；fc/vc 概念首現移 A3、形式定義仍 A4）；⑤愛的公式後就地收數學化、不另立章（原 A8 拆入 A4 前半＋A7 末）。原 A1 地基章＋原 A8 取消；原 A9 結語→A8 重寫對齊新弧。
+- 🚨 **越層尺度分層**：A3 可談個體尺度同理心的演化/生理發生，**不得**用 C 的日擇/耗散結構/反身自嗜/性善宇宙根基（cross-ref C3 也別 pre-name）。
+- 手法（複用）：備份 `draft/A`→`_A_v2bak`；變動章 sonnet subagent 讀原稿＋治理文件寫 `_rNN.html`；不變章只修交叉引用；finalise 01-08→越層 audit→manifest A 9→8→`genesis_cite_backfill tag ethics A 8`→`assemble_genesis_book.py ethics A 8`→build 綠。citation 45 節/8 章末/113 labels 全 valid。
+- ⏸️ item③-2 認識論（E）v2 精修暫停：治理文件已寫 `c:/tmp/genesis_epi/intro_schedule.md`（三卷分工/越層/章目/首現齊備，待續）；epi 對話 id 在 `chunk_*.json`（非 themes），citation 須改 chunk-based term→id。
+
+## ✅ 五大主題全套 v2 精修＋引用竣工（2026-06-22 整夜自動跑）
+使用者「自動化做一整晚把每一卷都精修好並加上出處」→ **15 冊全數完工並部署上線**：
+- 倫理 A8（v2.1）/B13/C9（A 見上節 v2.1；B/C 沿用已精修＋引用，對 A 無章號交叉引用故未受 A 重構影響）。
+- 認識論 E1 8/E2 10/E3 6（commit fb1b6d77）、本體論 O1 8/O2 6/O3 7（620509a2）、價值論 V1 6/V2 6（71b65ed3）、存有論 B1 7/B2 7/B3 7（7b730635，B3-7 兼整套總收束）。
+- 每套流程：新撰 `c:/tmp/genesis_{epi,ont,val,bei}/intro_schedule.md`（三卷分工/越層紅線/章目首現/先論述後導出/recap 格式）→ sonnet subagent 逐章精修(一波≤6，保留實質做加值：章末 recap+argmap、英文首現、公式先論述後導出、越層紅線)→ 每冊序跋 → `genesis_cite_backfill tag <series>` 引用 → `assemble_genesis_book.py <series>` 重組 → build 綠 → commit。
+- 🔑 **citation 改 chunk-based**：`genesis_cite_backfill.py` 加 `load_terms_chunks`（ethics 走 notes glossary.ids；E/O/V/B 的 id 在 `chunk_*.json`，以 themes 詞彙×chunk 全文搜尋取詞頻最高前 6 chunk→seq_label）。seq_label_map 五套共用。
+- 🔑 **draft 目錄全改名對齊部署檔名**（1/2/3→E1.. 等）。複用流程同上。
+- ✅ item③-3 /ai-dialogues 五域分類重標（進行中）：`scripts/retag_genesis_facets.py`——只重判**已屬創生哲學**對話的 facet、替換五子標保留父標，預設 dry-run/`--execute`、resumable ledger `c:/tmp/genesis_retag_{source}.jsonl`。`classify_genesis_philosophy` SYSTEM 的 facet 準則已改 v2 邊界（量子→本體論、數學→認識論、空無/默然/神聖/終極→存有論、願然/美→價值論、誠實/善→倫理學、創生公式/生成三要素→本體論；修正舊版誤把生成/創生歸存有論）。抽樣 26/30 facet 變更（多為舊存有論→本體論）。**全量 execute 背景跑中**（chatgpt 3,316＋gemini；Gemini/NVIDIA 配額耗盡退 Haiku，~81% 時）。
+
+## 🔄 創生哲學叢書 — 序章正名／引用可點擊／M3 改名／M2 時間軸（2026-06-22 下午）
+- **序章正名（最重要）**：創生哲學**是現象學、不是形上學**——反抽象本體論、依經驗主義從各學科建構（舊稿「原創形上學體系」是錯的，使用者糾正）。M1/01 重寫為全叢書**序章**（現象學出發→五大主題；筆者宗教學神學背景；宗教切入延伸至大哉問）；**序自成序章非第一章**，M1＝序章＋第一..七章。
+- **引用可點擊**：`genesis_cite_backfill` 發 `<a href="/ai-dialogues?seq=…" class="cite-seq">`；`ai-dialogues` 頁 onMounted 讀 `?seq=` 自動 `doLookup`；reader 加 `.cite-seq` 樣式。全 15 冊已連結化。
+- **M3《人類之子》→《人子》**（id 不變；福音書 Son of Man＋「蓋亞之子／人之子」雙關）。**book id 沿革：A/B/C→A1/A2/A3→M1/M2/M3**（倫理=Morality，與 E/O/V/B 一致）。
+- **M2 重構 14 章＝時間維度**（使用者定調群體倫理須有時間向度；commit `297ec310`）：通論(hi/H/M/EVI·MHI/暴政T＋尼采/民主門檻)→過去(社會起源/政體史/極權＋鄂蘭平庸的邪惡＋轉型正義)→現代(異化·傅柯/**新增職業倫理場**)→未來(人權/無政府/異托邦)→結語。
+  - 🔑 重構複用警示：非均勻 reorg 的交叉引用須 topic-aware 修；**moved 章的 intro／序跋會按舊順序 recap，必須連內容一起重寫對齊**（不只改章號）。backup `draft/_M2bak`。
+- 治理文件 intro_schedule §3 的 A/B/C＝卷內章簡寫（A=M1 愛的萬物論/B=M2 虛構的烏托邦/C=M3 人子）。組裝 `assemble_genesis_book.py ethics M1 8 M2 14 M3 9`。
+
+## ✅ facet 重標全量完成（2026-06-22）
+`retag_genesis_facets.py --source all --execute` 跑完：chatgpt ledger 3,258／gemini 56；facet 有變更 ~508；94 則 LLM 現判非創生哲學（**只去五子標、保留父標**，符合設計）。引擎全程 Gemini/NVIDIA 配額耗盡退 Haiku。ledger `c:/tmp/genesis_retag_{chatgpt,gemini}.jsonl`。
+
+## ✅ 引用連結修復＋hover 預覽（2026-06-22）
+- **修 401**：`/ai-dialogues` 的 `doLookup()` 漏帶 auth header（requireAuth 只認 `Authorization: Bearer`，非 cookie）→ 點書中引用查閱 401。已補 `authHeader()`（commit 同批）。
+- **hover 預覽**：book reader `.cite-seq` 滑過浮窗預覽該則對話（編號/日期/問答摘要），Teleport+快取，未登入提示「登入後可預覽」（by-seq 需登入，書頁公開）。
+- 引用全是 **ChatGPT（C-）0 則 Gemini**：素材 dump 自 chatgpt facet 對話，Gemini 多雜訊、術語密度低不被選中。seq_label 按 (date,time,created_at,id) 排序＝固定，**facet 重標不動 seq_label，引用編號永不變**。
+
+## 🔄 倫理三部曲依三層時間軸重構（2026-06-22，commit 已 push）
+使用者定調：倫理三卷各是一條**時間軸**，三層嵌套。沿用既有「A 個人／B 群體／C 宇宙」分工，再加時間維度。
+- **M1《愛的萬物論》8 章＝個人生命時間軸**：序章/為何/**主體的誕生(童年現象學)**/誠實數學化/召喚/陰影/**愛的公式擴(戀愛→婚姻→家庭→群體)**/🆕**死亡倫理**(向死存在·超義務·愛超越死亡，吸收原結語「愛的萬物論」收束)/跋。🚨越層保守：死亡章超義務只談**個人尺度 vc 極限/捨身**，不引 H/意義公式 M（已驗 M1 群體量＝0，唯一「意義公式」是 defer-to-B 的 cross-ref）；超越向度點到、形上學留存有論。
+- **M2《虛構的烏托邦》14→13 章＝人類歷史時間軸**：🆕**第六章宗教倫理**(作為異托邦的宗教與文明發源；傅柯異托邦/軸心時代雅斯培/涂爾幹/伊利亞德；H/EVI 中性分析雙面性；接 B5 Dunbar、與 B12 裂口異托邦＝起源↔未來異托邦呼應)。**合併**：舊1+2→新1(H與意義生成)、舊12+13→新12(制度性無政府與裂口異托邦)。🚨**非均勻 reorg 交叉引用＝最大坑**：用專屬 sonnet agent topic-aware 重對全 13 檔（舊→新 mapping 表），結語(13)全書回顧整段重寫；驗證 0「第十四章」、0 B-code、裂口異托邦一律指第十二章。
+- **M3《人子》9 章＝地球宇宙深時時間軸**：第一章導論重構為深時主敘事(McPhee deep time/Sagan 宇宙曆/三層時間軸路線圖)；🆕**第九章熱寂或永續共生圈**(熱寂vs共生圈、**三大格言 capstone 移此**、人子意象收束)。中間 2-8 章內容沿用。
+- **製作法（複用）**：更新 `intro_schedule.md` §2/§3/§7→背書 `_M{1,2,3}bak`→變動章 sonnet agent 寫 `_rNN.html`(一波≤6，曾撞 1 個 connection-closed 重跑即可)→純移章直接 cp+sed 修 h2 章號→**專屬 agent 修交叉引用**→`genesis_cite_backfill tag ethics M1 8 M2 13 M3 9`→`assemble_genesis_book.py ethics M1 8 M2 13 M3 9`→build→push。manifest M2 nChapters→13。
+- ⏳ 殘留小瑕：M3 第四章標題仍「生命倫理」（治理文件提議「生命的起源與生命倫理」但未擴 abiogenesis 內容，故未改標題，誠實保留）。
+
+## 🔧 倫理三部曲後續微調（2026-06-22，已 push）
+- **M3「複製與傳送」§四移除**：複製/意識傳送的「主體能否還原為資訊」＝主體意識的**本體論**問題（非倫理）。本體論卷 **O3 第四章「自我同一性」已有更完整版**（意向性連續＋具身性不可缺；Parfit/Locke/特修斯之船/Merleau-Ponty）。M3 ch4 生命倫理改留一條指向 O3 的交叉引用，四場域→三場域，recap/argmap 同步去傳送指涉。⚠️ 日後若再有「某倫理章其實是 X 論問題」＝先查該 X 卷是否已涵蓋，多半是去重而非搬寫。
+- **章名一致化（使用者要全書順）**：原則＝短題、去冒號長副標/列舉題、保留 序/序章/導論/結語 結構標籤；副標內容留章內。改了 7 章：M1 ch1 去「一門」、ch2「主體的誕生」、ch6「愛的公式」、ch7「死亡倫理」（去副標）；M2 ch6「宗教倫理與起源異托邦」、ch8「極權政治與轉型正義」；M3 ch9「熱寂與永續共生圈」。保留 M1 ch3、M2 ch1 兩個較長「A與B」式（同形可接受）。改 h2 後只需 `assemble_genesis_book.py` 重組（不必 re-tag，引用不變）。
+
+## 🔧 M1 章序重排＋清 A/B/C 卷標籤（2026-06-23，已 push）
+- **M1 章序（質性→形式化，使用者定）**：召喚的結構、倫理陰影與補償移到誠實/數學化之前。新權威序：序章/①為何/②主體的誕生/③召喚的結構/④倫理陰影與補償/⑤誠實作為萬德之綱與數學化/⑥愛的公式/⑦死亡倫理。**前引鐵律**：③④只能用②的「心理層 fc/vc」，不得預設 hi 形式定義/fc-vc 形式變數/倫理場 E 形式化（這些⑤才建立）→ ③④須前向預告「留待第五章」；⑤＝承③④質性探討的形式化樞紐。🚨**子代理重排交叉引用易 off-by-one**（曾把②誤算第三章）——renumber 後務必逐章 topic-aware 驗證 第N章（07/08 已修）。
+- **無 A/B/C 卷標籤**：倫理三卷對外一律 M1/M2/M3 或「第一/二/三卷《書名》」，跨卷引用附現行章號。全叢書 20 處已清（M2/M3/O2/V2+M1）；兩處 stale「A 卷第八章」（性善論/反身自嗜，現在 M3 ch3）正名「本卷第三章」；自指 B/C 卷→本卷。日後新增跨卷引用一律別用 A/B/C 卷。
+- governance `intro_schedule.md` §3 已更新章序/前引/無-ABC 政策。
+- ✅ **重排後通讀驗證（2026-06-23）**：逐章查方向性過渡詞（前一章/下一章/前N章），④⑤⑥⑦銜接全對——③召喚回顧②誕生·預告④陰影；④陰影回顧②③·預告⑤誠實給形式定義；⑤誠實回顧前三章質性·預告⑥愛；⑥愛預告⑦死亡。「前六章→前面各章」「下一章（結語）→（死亡倫理）」斷裂處已修。質性→形式化→應用弧線連貫無殘留。
+
+並列 [[project_krishna_dialogues]]（同 /ai-dialogues，紫色「與克里希那對話」分類）。

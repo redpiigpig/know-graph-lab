@@ -653,3 +653,26 @@ node scripts/biblical-shot.mjs --focus 馬利亞 --out c:/tmp/cath-mary.png
 3. 跑 `node scripts/biblical-shot.mjs --out c:/tmp/start.png` 取得基線
 4. Task 1（結案）／Task 2（CUV2010 校對，2026-07-12 候選收尾）／Task 3／Task 4 均已完成（見各節 ✅）；殘餘：Task 2 節 2 條拒改候選待使用者定奪＋未校對章節（1 Chr 1/2/7 等）可選續掃
 5. 每完成一個 task 就 commit + push
+
+## 記憶庫併入：feedback_biblical_name_rules
+
+校對 `biblical_people` 名字時遵守以下規則：
+
+1. **名字以聖經「最早出現的章節」為準**：王下 24 比 Matt 1 早，所以用 `約雅斤` 不用 `耶哥尼雅`。Gen 46 比 Num 26 早，所以用 `耶母利` 不用 `尼母利`、用 `洗非芸` 不用 `洗分`、用 `以斯本` 不用 `阿斯尼`、用 `亞羅底` 不用 `亞律`。
+
+2. **唯二的例外（上帝改名）**：
+   - `亞伯拉罕`（不用 亞伯蘭，雖然 亞伯蘭 較早）
+   - `撒拉`（不用 撒萊）
+
+3. **只改翻譯字形差異，不批次 propagate**：例如 `亞比烏 → 亞比玉` 是 CUV2010 字形修訂；`他瑪 → 她瑪` 是女性人名用「她」。這類字級改名 OK propagate 到 disambiguator 括弧（避免父名前後不一致）。但「換完全不同的譯名」絕對不要 bulk apply。
+
+4. **同名異人保持各自獨立**：DB 裡多個 `約雅斤` 出現多半是 disambiguator suffix（X 是 約雅斤之子），不是多個叫約雅斤的人。**任何 bulk rename 前必須先區分這兩種**：
+   - `name_zh == '約雅斤'` 或 `name_zh.startswith('約雅斤（')` → 改這個人的名字
+   - `'約雅斤之子' in name_zh` 等 disambiguator → 父名變了才需要連動，**換譯名時不要動 disambiguator**
+
+**Why**：先前自作主張把 `約雅斤 → 耶哥尼雅` bulk apply 到 8 個 entry（其中 7 個是兒子的 disambiguator），既違反規則 1 又超出原本「改翻譯」的範圍，被使用者糾正。
+
+**How to apply**：
+- 改名前先查清楚這個 name 在 DB 是怎麼用的（純名字 vs 出現在父系括弧）
+- 不確定時直接問使用者，不要 propagate
+- 拿到 CUV2010 字形差異要改的清單，**只改實際名字，不動「之子」「之女」「之父」這些 disambiguator**

@@ -192,3 +192,37 @@ FB/IG 抓不到，改抓 WordPress：`/feed/?paged=1..3` 三頁湊齊 25 篇（s
 4. **還沒做**：libgen 那條（`小黑書_libgen下載清單.txt`，73 行）還是人工的；libgen.li
    要 PowerShell IWR 且別讓檔案落地（Defender），與這支的 playwright 路線不同
    （[[project_christianity_studies_littleblackbook]]）。
+
+## 記憶庫併入：feedback_zlib_3x_daily_check
+
+z-lib/ drop folder 的處理：
+
+**⚠️ 自動排程 2026-05-27 已 Disabled（使用者要求關閉）**
+- `KGLab-OCR-Daily-10` / `-14` / `-18` 三個 task 都 `Disable-ScheduledTask` 停用
+- 定義仍在 Task Scheduler（State=Disabled），未刪除 — 將來想恢復可 `Enable-ScheduledTask`
+- 不會再自動觸發 `scripts/run_ocr_daily.bat`
+
+**Why:** 使用者 2026-05-27 「不需要了」。Gemini quota 經常用罄、Haiku 帳號級 burst limit 每天 ~5 本上限，daily 自動 OCR 多半 no-op 或浪費 retry。使用者偏好整本書手動 ingest+OCR 嚴格控制（搭配 [[feedback_ocr_strategy]] Haiku one-at-a-time）。
+
+**仍適用：Claude 在對話中主動檢查 z-lib/ drop folder**
+- 對話開始時，或被詢問「z-lib」「新書」「ingest」「下載」相關話題時
+- 主動跑 `python scripts/ingest_new_books.py status`
+- 若 status 顯示 >0 本待 ingest → 視情況問使用者要不要 ingest，或直接跑 `ingest_new_books.py run`（只入庫不 OCR，安全）
+
+**How to apply:**
+1. 任何 session 開頭涉及 ebook 工作流，先 `ingest_new_books.py status`
+2. 看到 user mention 下載書 / z-lib / 新書 / 加書，立即偵測
+3. **不要重新啟用** daily 排程，除非使用者明確要求
+
+## 記憶庫併入：feedback_zlib_auto_dedup
+
+當 `ingest_new_books.py` 偵測到 z-lib drop 的目標檔在 G:\我的雲端硬碟\資料\電子書\... 已存在時，**自動刪掉 z-lib/ 那份**（log 兩邊 size 後 unlink），不要保留要 user 手動清。
+
+**Why:** 不刪會讓每 6 小時的 daily scheduler run 反覆掃同一批 dupes，浪費 Gemini classify quota 也讓 log 雜訊變多。User explicitly 2026-05-14 要求改成 auto-delete。
+
+**How to apply:**
+- code 已改在 `scripts/ingest_new_books.py:381` 附近（commit `609aca4`），新 session 不需要再改
+- 若未來改 ingest 邏輯時不要把 auto-delete 拿掉
+- 詳細記在 [[project_new_book_drop]]（ebook-pipeline SKILL Workflow D「Failure modes」「Target file already exists」段）
+
+關聯：[[project_new_book_drop]]

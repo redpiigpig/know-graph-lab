@@ -106,3 +106,28 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 ## 語料層
 
 這批語料的最終用途是 `/research-data/corpus` 的跨刊物關鍵詞年表，見 [[project_corpus_layer]]。加新刊物時記得在 `scripts/corpus_terms.py` 的 `CORPORA` 註冊一個 `iter_*`，並確認**年份來源**——取不到年份的語料只計總數、不進年表，**一律不做內插**。
+
+## 記憶庫併入：project_yinshun_hongshi_collection
+
+`/research-data`（論文資料整理，需登入）2026-06-15 起的第二個 collection **「印順學派與弘誓研究資料」**（slug `yinshun-hongshi`，rose 🪷），與 [[project_chengzhong_bulletins]] 的 taiwan-methodist 並列。作《當代的大愛道革命》([[project_dadaodao_book]]) 背景史料。skill＝`research-data-hongshi`。子站：
+
+- **弘誓雙月刊** `/magazine` — 官網 PDF（**有乾淨文字層、非純掃描**），**116 期（80–200）**。R2 `yinshun-hongshi/弘誓雙月刊/` + Drive canonical。**115/116 已抽全文**（text-layer，`hongshi_ocr_magazine.py`）；**issue 103 PDF 下載損毀**（MuPDF parse fail）待重抓。缺 5 期(85,177-180 源站連結 404)、1–79 期源站無 PDF。
+- **學團日誌** `/log` `/log/[n]` — `log-page.php?n=N`（需 `Referer: log.php`），**173 則(n=27–210)**全文。n=1–26 是空 stub。
+- **玄奘佛學研究學報** `/xuanzang` — **hcu.edu.tw（非 Cloudflare，純 requests！）**，45 期 / 304 篇，**297 篇有全文**（born-digital 文字層）。7 篇缺：5 篇期45 源站 `file:///C:/…` 壞連結、2 篇掃描檔待 OCR。`xuanzang_journal.py`（harvest/process/publish；`--no-ocr` 延後掃描檔避配額卡）。
+- **歷屆學術活動** `/meeting` `/meeting/[n]` — 印順導師思想之理論與實踐國際學術會議歷屆＋性別倫理/動物倫理研討會公告全文，**24 項已上架**。原始碼在 hongshi `meeting-B-page.php?n=N`，但整天連抓後被 Cloudflare **持續硬封**（連 40min+ 冷卻都過不了）→ **改走 Wayback Machine** `hongshi_meeting_wayback.py`（archive.org，`<ts>id_` raw，純 requests）抓到 24/30（6 項未存檔）。`hongshi_scrape_meeting.mjs`（live headful）留著待 hongshi 解封後可補。
+- **福嚴會訊** `/fuyan` — 71 期，沿用既有 dadaodao R2（`dadaodao-materials/福嚴會訊/`+fulltext，品質不一），UI 接入未重傳。
+- 🗑️ **弘誓電子報已評估後不收**：每期=重複學團日誌+招生廣告+昭慧/性廣時論，user 確認時論亦登雙月刊（已收）→ 冗餘移除。（全 1–542 期確在站上：`EDM/<n>.html` 新 + `epaper/hongshi pic{,2,3}/<n>.htm` 舊**注意 .htm**，5 索引頁枚舉。）
+
+**🚨 hongshi.org.tw = Cloudflare「Just a moment」JS 挑戰**：requests/curl 一律 403。必須 **headful 真實 Chrome**（`chromium.launch({headless:false, channel:'chrome', args:['--disable-blink-features=AutomationControlled']})` + `navigator.webdriver=undefined`）；PDF 也在 CF 後，用通過挑戰的 `ctx.request.get()` 下載。挑戰偵測含中文 `正在執行安全驗證/惡意機器人`。**密集抓必被限流**（user 明令間隔；整天連抓後會被持續 block，需數小時冷卻）：5–12s 隨機間隔、捕到挑戰退避 40s 不存、index 0-entry 重試＋冷卻、scraper auto-relaunch（headful 視窗被關過數次）。**hcu.edu.tw 不是 Cloudflare**，純 requests 即可。**G: streaming mount 會中途卸載** → Drive canonical 寫入一律 best-effort try/except，R2 才是 serving store。
+
+純函式＋測試：`scripts/hongshi.py`(+test 15 例)、`scripts/xuanzang.py`(+test 8 例)。R2 前綴：`yinshun-hongshi/<刊>/`(原檔)、`yinshun-hongshi-fulltext/<刊>/...txt`(全文)。API：`server/api/research-data/yinshun-hongshi-file.get.ts`(簽名下載)、`yinshun-hongshi-text.get.ts`(全文,pdf key→txt)。
+
+🚨 2026-08-27：**弘誓官網改版，舊路徑全數 404**。新站 www.hongshi.org.tw 已可用 curl＋瀏覽器 UA 直接讀（不必再 headful Chrome），但「數位典藏」各頁是靠 blog.hongshi.org.tw 的 Blogger feed 動態產生，而該 blog 當時只有 13 篇——歷史刊物尚未搬完。Wayback 覆蓋極薄（電子報 7 筆、法印學報 4 個 PDF）。所以：**先前抓下來的弘誓雙月刊／玄奘／福嚴／學團日誌是趕上了，現在原路徑已經拿不到**。
+
+同日新增兩個子站：
+- **妙心雜誌** 202 期 844 篇全文（`scripts/mst_magazine.py`）。台南妙心寺 mst.org.tw 是靜態 Big5 HTML、純 requests 可抓。兩個站方毛病：欄目索引頁的連結**文字是期別標籤而非篇名**（要回頭取檔名）、相對路徑常漏掉 `magazinep/` 那一層（要試候選 URL）。含傳道《法句經講記》連載 66 篇、傳道長老追思專輯 94 篇。
+- **法印學報** 9–13 期 45 篇（30 篇有全文），`scripts/faryin_journal.py`，改從 hcu.edu.tw 佛教學系網站取。**第13期整期的連結被貼成編輯者的 `file:///C:/Users/…` 本機路徑**，原檔從未上傳，只存得下目次。要引的第 1 期（闞正宗〈傳法弘道〉、昭慧〈傳道法師對南傳佛教…〉）不在此範圍，須向學團索取。
+
+## 索引補記
+
+- 弘誓雙月刊116期(全文)/學團日誌173則/玄奘佛學研究45期304篇/福嚴會訊71期/學術活動(待冷卻重抓)

@@ -73,3 +73,20 @@ ffmpeg 直接對這個路徑讀寫即可（Drive 串流掛載支援），不用�
 ```
 
 `文案.md` 一定要有：**IG 貼文文案（可直接複製貼上，含 hashtag）** + **配樂出處與 YouTube URL** + **版本紀錄**。使用者發布平台固定 IG @thomas.piigpig。
+
+## 記憶庫併入：project_reels_piigpig
+
+使用者的個人搞笑短影片系列，發布於 **IG @thomas.piigpig**（https://www.instagram.com/thomas.piigpig/）。流程與風格寫進 `.claude/skills/reels-piigpig/SKILL.md`（見 [[feedback_skill_md_keep_current]]）。
+
+**風格 DNA**：中英雙語字幕（JhengHei）＋喜劇高潮打真實煙火(screen疊加)＋彩色 emoji 轟炸(PIL seguiemj PNG)＋片尾泛黃懷舊定格(tpad clone+eq/vignette)＋催淚歌詞字幕逐句浮現＋雙段配樂(前梗曲/定格切感人副歌 crossfade，右上角標歌曲出處)。旁白對話音量永遠優先、配樂壓很小；使用者對音量很講究會逐版微調。**每一版都保留**看製作歷程。
+
+**歸檔**（2026-08-27 改）：Drive `知識圖工作室\影片\YYYY-MM-DD_主題\`（`文案.md` 台詞時間軸+IG貼文文案+配樂URL+版本紀錄／各版 mp4／製作素材夾）。**整個 `影片/` 已搬離 repo、連文案都不留**，ffmpeg 直接對 Drive 路徑讀寫；repo 只留 skill（[[feedback_repo_hygiene]]）。
+
+**首案** 2026-07-18 豬豬相遇（石垣島大豬×新加坡機場失散兄弟，v6 選用）。工具：ffmpeg + faster-whisper(字幕時間軸,`_whisper_venv`) + yt-dlp(`pythoncore-3.14`) + Pillow(emoji)。🚨 地雷：screen 疊加要在 RGB(gbrp)不能 YUV；emoji 用 `-loop 1` 不能 `movie=loop=0`(卡死)；libass 只出單色 emoji 彩色走 PNG overlay。
+
+**索引壓縮時移入（2026-09-11）：**
+- 首案豬豬相遇
+
+## 索引補記
+
+- `影片/YYYY-MM-DD_主題/`(文案+各版mp4+素材,mp4已gitignore)

@@ -3,7 +3,8 @@
 
 三本，一門課一本（2026-09-10 之前週一與週六是合成一本 877 頁的，使用者定案拆開）：
 
-  `--reader mon`  《宗教研究基本問題與研究方法》週一第 2 節 博1A．32 篇
+  `--reader mon1` / `mon2`  《宗教研究基本問題與研究方法》週一第 2 節 博1A．
+      上冊 W02–W08（14 篇）、下冊 W10–W17（18 篇）。合併那本（731 頁）已作廢。
   `--reader sat`  《宗教學理論與方法（一）》單週六第 1 節 碩專1A．7 篇
   `--reader japanese` 《初階宗教學日文文獻選讀》週二第 1 節 碩1A．12 篇，
       內容是自訂十五週計畫的各週讀本，見 japanese_self_study_plan.py。
@@ -16,11 +17,11 @@ MacIntyre 與 Segal〈In Defense of Reductionism〉兩門課都指定，**兩本
 由 LLM 產生後快取，不會每次重跑重花額度。封面是滿版深色橫幅一課一色，
 **上面只有課程名稱、學期、授課教師、學生姓名**。成品直接放該門課的資料夾（`--out` 可改）。
 
-    python -X utf8 scripts/build_course_reader.py --reader mon
+    python -X utf8 scripts/build_course_reader.py --reader mon1
     python -X utf8 scripts/build_course_reader.py --reader sat
     python -X utf8 scripts/build_course_reader.py --reader japanese
     python -X utf8 scripts/build_course_reader.py --reader sat --only 2   # 只出第 2 部，試版面
-    python -X utf8 scripts/build_course_reader.py --reader mon --no-summary  # 先不叫 LLM
+    python -X utf8 scripts/build_course_reader.py --reader mon2 --no-summary  # 先不叫 LLM
     python -X utf8 scripts/build_course_reader.py --mode facsimile   # 原頁面影印合本
 
 ## 三個踩過的坑
@@ -94,8 +95,6 @@ NO_LINE_START = "。、，．・：；？！）」』】〉》”’%,.;:?!)]}"
 SEMESTER = "115-1"
 
 COVER = {
-    "mon": dict(title="宗教研究基本問題與研究方法", teacher="根瑟馬庫斯",
-                student="張辰瑋", banner="1E3A5F", rule="C8A24A"),      # 深藍
     "mon1": dict(title="宗教研究基本問題與研究方法", volume="上冊　第二至八週",
                  teacher="根瑟馬庫斯", student="張辰瑋", banner="1E3A5F", rule="C8A24A"),
     "mon2": dict(title="宗教研究基本問題與研究方法", volume="下冊　第十至十七週",
@@ -320,6 +319,12 @@ def clean(text: str) -> str:
     for pat, rep in SPLIT_FIX:
         text = re.sub(pat, rep, text)
     text = PUA.sub("", text)
+    # 來源文字層常在標點後掉空格（「…mystery.Valuable」「…religion,This」）。
+    # 只補在標點後面，所以 McDonald、MacIntyre 這種姓氏不會被動到。
+    text = re.sub(r"([a-z]{2})([.,;:])([A-Z][a-z])", r"\1\2 \3", text)
+    # 句點後面直接接大寫字母＝來源掉了那個空白（「…and.Valuable」「…again.This」）。
+    # 只補這一種：前面是小寫字母＋句讀，後面是大寫開頭的字，縮寫（U.S.A.）不受影響。
+    text = re.sub(r"([a-z][.,;:])([A-Z][a-z])", r"\1 \2", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -826,26 +831,37 @@ class Book:
                 blocks.append((ln, 10.4, 5, BODY_X0, False))
 
         avail = (PH - M_BOT) - self.y
-        scale = 1.0
-        for try_scale in (1.0, 0.96, 0.92, 0.88, 0.84, 0.8, 0.76, 0.72):
+        scale, lf = 1.0, LEAD_FACTOR
+
+        def height(try_scale: float, try_lf: float) -> float:
             h = 0.0
             for text, size, gap, bx0, bold in blocks:
                 sz = size * try_scale
                 if not text:
                     h += sz              # 空白區塊：本身就是間距
                     continue
-                h += len(self.wrap(text, BODY_X1 - bx0, sz, bold)) * sz * LEAD_FACTOR
+                h += len(self.wrap(text, BODY_X1 - bx0, sz, bold)) * sz * try_lf
                 h += gap * try_scale
-            scale = try_scale
-            if h <= avail:
-                break
+            return h
+
+        # 先縮字級，還塞不下就連行距一起縮。導引特別長的那幾篇（King 那篇的摘要
+        # 就快兩頁）只縮字級救不回來，而導引**一定要一頁**才有用。
+        for try_lf in (LEAD_FACTOR, LEAD_FACTOR * 0.86, LEAD_FACTOR * 0.75):
+            for try_scale in (1.0, 0.96, 0.92, 0.88, 0.84, 0.8, 0.76, 0.72, 0.68, 0.64, 0.6):
+                scale, lf = try_scale, try_lf
+                if height(try_scale, try_lf) <= avail:
+                    break
+            else:
+                continue
+            break
 
         for text, size, gap, bx0, bold in blocks:
             if not text:
                 self.y += size * scale
                 continue
             grey = (0.4,) * 3 if text == title else (0.12,) * 3
-            self.flow(text, size=size * scale, gap=gap * scale, bold=bold, x0=bx0,
+            self.flow(text, size=size * scale, lead=size * scale * lf,
+                      gap=gap * scale, bold=bold, x0=bx0,
                       color=(0, 0, 0) if bold else grey)
 
 
@@ -983,6 +999,18 @@ PROMPT = """你是宗教學研究所的助教。下面是一篇課堂指定讀�
 GUIDE_MODELS = ["gemini-3-flash-preview", "gemini-2.5-flash-lite", "gemini-flash-latest"]
 
 
+# 🚨 導引會被模型的自言自語污染：King 那兩篇的快取裡存的是
+#    「We must not use markdown bold. Use hyphen and space?…」這種思考過程，
+#    4,800～6,800 字，印出來就是導引跨兩頁、第二頁全是廢話。長度與這些字眼
+#    一起當閘門，**快取讀出來也要驗**——壞的快取不驗就等於永遠壞下去。
+GUIDE_META = ("markdown", "We must", "Use hyphen", "I need to", "Let me ",
+              "as an AI", "字數要求", "格式要求")
+
+
+def guide_ok(text: str) -> bool:
+    return bool(text) and 300 <= len(text) <= 1800 and not any(m in text for m in GUIDE_META)
+
+
 def make_guide(title: str, source: str, body: str) -> str | None:
     text = body[:30000]   # 摘要用不到全文，砍半可以把每篇的等待時間縮短一半
     prompt = PROMPT.format(title=title, source=source, body=text)
@@ -1001,7 +1029,7 @@ def make_guide(title: str, source: str, body: str) -> str | None:
             #    導引本來就設計成一頁，超出 2000 字必然不是導引。
             if out:
                 full = all(h in out for h in ("## 摘要", "## 重點"))
-                if full and 350 <= len(out) <= 2000:
+                if full and guide_ok(out):
                     return out.strip()
                 why = "缺段" if not full else ("太短" if len(out) < 350 else "暴長")
                 print(f"    · {model} {why}（{len(out)} 字），換型號")
@@ -1025,7 +1053,8 @@ MON1_PARTS = MON_PARTS[:3]
 MON2_PARTS = MON_PARTS[3:]
 
 READERS = {
-    "mon": (MON_PARTS, [C_MON], "zh", "宗教研究方法讀本"),
+    # 🚨 沒有未分冊的 "mon"：731 頁太厚，2026-09-11 使用者定案只出上下冊、
+    #    合併那本刪掉。MON_PARTS 留著當上下冊的來源。
     "mon1": (MON1_PARTS, [C_MON], "zh", "宗教研究方法讀本_上冊"),
     "mon2": (MON2_PARTS, [C_MON], "zh", "宗教研究方法讀本_下冊"),
     "sat": (SAT_PARTS, [C_SAT], "zh", "宗教學理論讀本"),
@@ -1135,6 +1164,16 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                         Path(cache_path).write_text(
                             json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
                 guide = cache.get(key_id, "")
+                if guide and not guide_ok(guide):     # 壞快取當作沒有，重生一次
+                    print(f"    · 快取的導引不合格（{len(guide)} 字），重生")
+                    cache.pop(key_id, None)
+                    guide = make_guide(disp, source, body) or ""
+                    if guide_ok(guide):
+                        cache[key_id] = guide
+                        Path(cache_path).write_text(
+                            json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+                    else:
+                        guide = ""
 
             # 導引排在**篇首**：一翻到這一篇就先看得到摘要與重點，讀完再進正文。
             # （2026-09-10 之前排在篇末，使用者翻了十九頁沒看到，以為沒做。）
@@ -1181,7 +1220,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reader", choices=["mon", "sat", "japanese"], default="mon")
+    ap.add_argument("--reader", choices=list(READERS), default="mon1")
     ap.add_argument("--mode", choices=["reflow", "facsimile"], default="reflow")
     ap.add_argument("--only", type=int, help="只出第 N 部（試版面用）")
     ap.add_argument("--no-summary", action="store_true", help="先不叫 LLM 產閱讀導引")

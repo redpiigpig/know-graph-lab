@@ -34,12 +34,15 @@ if sys.platform == "win32":
 
 BASE = Path(r"G:\我的雲端硬碟\玄奘\博一上\上課")
 BOOKS = {
-    "宗教研究方法讀本.pdf": BASE / "宗教研究基本問題與研究方法",
+    "宗教研究方法讀本_上冊.pdf": BASE / "宗教研究基本問題與研究方法",
+    "宗教研究方法讀本_下冊.pdf": BASE / "宗教研究基本問題與研究方法",
     "宗教學理論讀本.pdf": BASE / "宗教學理論與方法(一)",
     "初階日文讀本.pdf": BASE / "初階宗教學日文文獻選讀",
 }
 PUA = re.compile(r"[\ue000-\uf8ff\U000f0000-\U0010ffff]")
-GLUED = re.compile(r"[a-z](?:,|\.)?[A-Z][a-z]{2,}")      # 「Christendom,but」「ofmankind」
+# 🚨 只認「標點後面直接接大寫」——HarperCollins、McCutcheon、MacIntyre 這種
+# 小寫接大寫本來就合法，連進來就是一堆假警報（2026-09-11 踩過）。
+GLUED = re.compile(r"[a-z][,.;:][A-Z][a-z]{2,}")      # 「Christendom,but」「mystery.Valuable」
 BIBLIO = re.compile(r"^(bibliography|references|works cited|參考書目)\b", re.I)
 BIO = re.compile(r"\bwas born (in|on)\b", re.I)
 INDENT_X = 48.0 + 10.8 * 2
@@ -103,7 +106,10 @@ def check(path: Path) -> int:
                 glued_hits.append((i + 1, m.group(0)))
         for line in t.split("\n"):
             ln = norm(line)
-            if BIBLIO.match(ln) and len(ln) < 40:
+            # 書目標題是短標題（三個詞以內、不以句號收尾）；正文裡的
+            # 「references apart. …」那種句子不算
+            if (BIBLIO.match(ln) and len(ln) < 40
+                    and len(ln.split()) <= 3 and not ln.endswith(".")):
                 biblio_hits.append((i + 1, ln[:30]))
             if BIO.search(ln) and i - front < 3:
                 bio_hits.append((i + 1, ln[:40]))

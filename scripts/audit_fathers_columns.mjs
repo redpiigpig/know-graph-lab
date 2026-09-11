@@ -78,8 +78,10 @@ async function auditBook(id) {
     const langs = (norm.source_order ?? []).filter((l) => l !== "en" && norm.sources?.[l]?.trim());
     if (!langs.length) return;
     withOrig++;
-    for (const lang of langs) {
-      const txt = norm.sources[lang];
+    // en 也要查。🚨 希拉里那本英文欄同樣是整卷重複（359/401 段），而且早於
+    // 原典欄就存在——只修原典欄，對照頁的英文欄照樣整卷。
+    for (const lang of [...langs, "en"]) {
+      const txt = norm.sources[lang] ?? "";
       if (txt.length < DUP_MIN_CHARS) continue;
       const key = `${lang}|${txt.length}|${txt.slice(0, 120)}`;
       if (!seen.has(key)) {

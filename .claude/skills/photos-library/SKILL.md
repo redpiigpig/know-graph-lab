@@ -661,3 +661,48 @@ chenwei totalFiles：build_photo_index 報 **12,863**（深巢狀 sub-subfolder 
 - 2026-05-21 lint cleanup：chenwei `.AAE` Apple Photos 編輯 sidecar 626 個全 unlink；training `desktop.ini` 1 個 + 5 個 2016 空事件夾 + 35 個 nested empty subfolder（fitcasting／儀隊汗水／ipad相片）移除 → training top-level 50，total dirs 從 116 降到 81
 - 2026-05-21 chenwei straggler audit：發現 3 個事件夾共 159 漏網媒體檔未經 rename（2019 法國照片 64+62、2016 美女圖片 33）；rename 跟著 hongshi prewarm I/O 互卡，先記入「待辦 #5」等 prewarm 完成再跑
 - 2026-05-21 影片 tile 改用 [LazyVideoTile](../../../components/LazyVideoTile.vue)：IntersectionObserver lazy-mount，影片密集月份頁初載 metadata storm 解決
+
+## 記憶庫併入：project_chenwei_photos_pipeline
+
+`/photos/chenwei`（辰瑋相片，另有 training/hongshi）**不直讀 Google Drive**，走這條管線：
+
+`G:/我的雲端硬碟/資料/知識圖工作室/照片/辰瑋相片/`（Drive Desktop 本機鏡像，改這裡＝Drive 也同步）
+→ `scripts/build_photo_index.py` → `scripts/photo_index.json`
+→ `node scripts/sync_photos_to_r2.mjs [chenwei] [--index-only]`（縮圖 webp + index.json 上 R2 bucket `knowgraphlab`，key `photos/index.json`、`photos/thumb/{sha256(parts).slice32}_{w}.webp`）
+→ redpiigpig.com（Zeabur，`PHOTO_BACKEND=r2`，5 分 TTL 讀 R2 index）。原檔永遠只在 Drive。
+
+**🚨 網站前端/API 改動要 git push 才生效**（Zeabur 從 master 部署）；R2 sync 只更新資料/縮圖。sync 是跑完縮圖「最後」才上傳 index → 全量跑完＝一次乾淨切換。
+
+**目錄結構**：`{YYYY}相片/` 底下＝`{YYYY.MM}` 月份夾 ｜ `{YYYY}截圖` ｜ `{YYYY}下載` ｜ `{YYYY}未分類` ｜ 事件夾。
+
+**整理工作流**：`classify_photos.py plan/execute`（散檔按 EXIF/檔名歸月／截圖／下載，跨年照 EXIF 真實年份搬，寫 `photo_move_log.jsonl`）→ `build_photo_index.py` → `sync_photos_to_r2.mjs`。
+
+**🚨 gotcha**：index **完全忽略「年資料夾直下的散檔」**——照片只有進月份/事件/截圖/下載子夾才會在網站顯示（曾因 2017 相片 738 張散在年層直下、網站一張都沒出）。build 時三 lib 全 0 檔會拒覆寫既有 index（防 G: 未掛載）。
+
+**月→事件巢狀（2026-07 加，本人實作）**：月份底下可放事件夾 `{YYYY.MM}/{事件名}`，index bucket key = `"MM/事件"`，前端月份頁展開事件卡片、路由 `/photos/chenwei/{year}/{month}/{event}`。只支援**一層**巢狀。年層事件夾若名稱有 `MM.DD` 前綴可搬進對應月份。測試在 `test/photos/photos.spec.ts`。
+
+相關：[[reference_iphone_gphotos_photo_moves]]、[[project_drive_studio_structure]]、[[project_r2_shared]]
+
+## 記憶庫併入：reference_iphone_gphotos_photo_moves
+
+把 iPhone 照片搬進 [[project_photos_library]]（辰瑋相片）的實務，2026-07-17 整批做過一次（4,009 張 9.11GB）。
+
+## iPhone → Drive（可行，Shell MTP CopyHere）
+- iPhone 接 USB 後在 `Shell.Application` Namespace(0x11) 下是「Apple iPhone」可攜裝置；解鎖＋按「信任這台電腦／允許存取照片」後 `Internal Storage` 才看得到內容（鎖著＝0 項目）。
+- 照片分在 `YYYYMM__` 月份夾（不是傳統 DCIM/NNNAPPLE）；**MTP 顯示名會吃掉副檔名**（`IMG_0547` 而非 `.HEIC`），但 `CopyHere` 複製的是**真檔含副檔名+bytes**。
+- 複製：`$destNs.CopyHere($fld.GetFolder.Items(), 4+16+512+1024)`（async，用目的地檔數輪詢完成）。9GB 約 20-40 分。
+- 之後 staging→年份根→ `_iphone_classify_targeted.py`（只掃新加年份根散檔、跳過 classify 全庫 Pass2 冷讀 wedge）→ build_photo_index。分桶：手機拍→月份夾／截圖→截圖／下載(random 8 碼名、無 EXIF date)→下載。
+- **IMG_ 相機檔** DateTimeOriginal 在 ExifIFD(0x8769) 子表，`getexif()` 頂層只有 Make——別用頂層判日期。
+
+## 🚨 硬牆一：iOS 不讓電腦刪 iPhone 相機膠卷照片
+- Shell `InvokeVerb("&Delete")` / verb `DoIt()` 一個靜默 no-op、一個卡死；**刪不掉**（Apple 限制）。
+- 手機照片刪除**只能使用者在手機相簿做**：全選→刪除→再清「最近刪除」才真正釋放空間。
+
+## 🚨 硬牆二：Google Photos 自動上傳（rclone）已死
+- **專屬 API 金鑰**：Google 2025-03 新規封鎖新專案上傳，batchCreate 一律 `There was an error while trying to create this media item. (3)`（自建 Cloud 專案＋Photos Library API＋OAuth 都設對了照樣失敗）。
+- **rclone 共用金鑰**：能傳但被嚴重限速（實測幾分鐘才 1 張）＋官方公告 2026 內停用 → 25,000 張根本跑不完。
+- Drive↔Photos 原生同步 2019 已移除；Drive 桌面版「備份資料夾到 Photos」需本機資料夾（若已刪 C: 就沒用）。
+- **結論**：要進 Google Photos 只能**手動網頁上傳**（photos.google.com 從 G: 拖）或放棄。rclone 裝在 `C:\Users\user\rclone\`、conf 有 gphotos remote（共用金鑰 token）。
+
+## C: 本機 86GB 辰瑋相片清理（2026-07-17 做過）
+- 本機完整集在 `C:\Users\張辰瑋的資料\辰瑋相片`（2014-2024，25,212 檔 86GB）；用 **size 多重集合**比對 G:（實走 G: os.getsize 只讀 metadata 不下載）確認全在 Drive，HEIC 因 G 轉 JPG 對不上另補原檔到 `辰瑋相片/_C槽補漏_2026-07-17/`，`Remove-Item` 永久刪釋放 86GB。

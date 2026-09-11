@@ -329,3 +329,57 @@ lit_review_sections (            -- 只有抓了全文的外文文獻才有
 - [[translation-glossary]] — 佛教／宗教學名詞中譯（翻譯前鎖譯名；八敬法人名如 Anālayo 阿那律陀？先查詞庫）
 - [[ebook-collected-works]] — N 欄逐段對照 reader 同源姿態
 - /works（寫作計畫）— 本 skill 在其底下加 paper 區 + 研究回顧分頁
+
+## 記憶庫併入：project_research_review
+
+`/works`（寫作計畫）拆成**書籍寫作 / 論文寫作**兩區（`writing_projects.kind` = `'book'`/`'paper'`）。研討會論文可升格為「論文寫作」計畫（`paper_ref` 連到 /papers id，如 `c1`），目標改寫成期刊論文。每個論文計畫頁底加**「研究回顧」分頁**＝一份結構化**文獻綜述**：書目層（作者/年/題/刊/語言/所屬面向/立場/摘要/連結，按 4 大主題脈絡分組）＋ 開放取用外文文獻的**全文逐段對照**（左欄逐段中譯／右欄原文）。
+
+架構 100% 仿 [[project-scripture-gnostic]]：`lit_review_entries` + `lit_review_sections` 兩表（version_code `orig`/`zh`，order_index 對齊），純函式 `scripts/lit_review.py`（test-first，`scripts/tests/test_lit_review.py` 29 例），ingest `scripts/ingest_lit_review.py`（`--seed` / `--fetch-fulltext --resume`），翻譯走 ebook-translate 引擎。skill＝`works-research-review`。
+
+**首案**：八敬法（aṭṭhagarudhammā）綜述，掛 c1〈昭慧法師的戒律學思想與實踐：以性別議題為核心〉，project_slug=`bajingfa`。29 筆書目已 seed；報告原文 `scripts/data/lit_review_eight_garudhammas.md`。
+
+**全文翻譯進度（2026-06-04 暫停，待新 session 接）**：14 篇開放取用 PDF 連結已補實，逐段翻譯中。DB 已入庫 **205 段**（foundation 202/456、cullavagga 3/114；其餘 12 篇未開始）。
+▶ **接續**：`python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project bajingfa --resume --engine gemini --pace 1`（逐段持久化，從缺口接；引擎 Gemini→NVIDIA→Haiku 受配額限速約 55 段/時）。待補連結：Hüsken 2000 / von Hinüber 2000（德）/ Horner 1930（PD），需先 WebSearch 補 PDF。
+
+**c12 印順-聖嚴案＋全集全文內嵌（2026-06-14 完成）**：slug `yinshun-shengyan`。論文引用的印順／聖嚴著作本就是我們已轉錄的全集篇章（印順 `yinshun` 44卷／聖嚴 `shengyen` 110冊）→ 不抓外部連結、不翻譯，直接把 chunk 正文拉進 `lit_review_sections`（單一 zh），reader 單欄全文內嵌。**23 筆已上線**（`scripts/import_corpus_fulltext.py`，MAP+whole/idx/work locator）。reader/listing 已加單語分支；entry/entries API 已修 PostgREST 1000-row 截斷（`.range()` 分頁）。**user 另要求**「把印順學/法鼓相關文獻全文轉錄」＝指 `/works/mahaprajapati-revolution` 879 件——**已是進行中既有 pipeline**（`scripts/dadaodao_fulltext.py`，469/879 已轉，剩 ~410 掃描檔待 OCR），**勿重做**；接續＝`python scripts/dadaodao_fulltext.py --ocr-only --pace 2`（過夜迴圈）。權威交接＝`dadaodao_handoff.md`。見 [[project_dadaodao_book]]。
+
+**Why:** user 把研討會論文改寫成期刊論文，要文獻綜述放旁邊；英/德文獻要逐段中英對照。
+**How to apply:** 新論文計畫做綜述就跑 works-research-review skill；全文只收開放取用（JBE/漢堡/PD），版權書只放書目。report 內 URL 多為 `......` 遮蔽，抓全文前先 WebSearch 補實連結。中文文獻不建 sections（書目層即可）。
+
+## 索引補記
+
+- 首案八敬法掛 c1
+- 仿 gnostic
+
+## 記憶庫併入：project_dadaodao_book
+
+碩士論文〈印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣法師為核心〉要改寫成專書 **《當代的大愛道革命》**，副標 **「昭慧法師與性廣法師的人間佛教思想與實踐」**。強調兩位**女性宗教師的全方位事蹟**（佛教倫理／社運／性別平權／禪觀／宗教對話），**不只**八敬法。
+
+> 🚦 **完整進度／接手指令看交接文件**：`.claude/skills/works-research-review/dadaodao_handoff.md`（OCR 全文 469/879、研究回顧書目、待辦決定都在那）。多 session 並行，**別 force-reset master**。
+
+- `/works` 書籍寫作新增此書，slug＝`mahaprajapati-revolution`（大愛道＝Mahāprajāpatī），kind='book'，色 rose 🪷。row 用 `scripts/seed_dadaodao_project.mjs` 走 Supabase Management API upsert。
+- **書籍計畫分頁機制**（仿論文計畫）：當 `public/content/works/<slug>-materials.json` 存在時，書頁 [pages/works/[slug]/index.vue](pages/works/) 出現分頁 **研究資料 / 碩士文稿（manifest.thesis）/ 口述訪談（manifest.interviews=true）/ 書摘與構思**；無 manifest 的書（million-masks 等）維持原本單頁筆記，dialogue 書（克里希那）維持每日對話 UI，皆不受影響。**新欄位看不到＝還沒 redeploy**（分頁 UI 在 page code）。
+- **研究資料＝可下載**：碩論 `G:\…\碩士論文\論文資料` archive 全部 879 件（5.4GB：381 PDF＋410 國家檔案 JPG＋82 docx）依 Drive 原分類 8 類（作者文獻／議題專輯／弘誓／印順學研討會／人間佛教研究期刊／福嚴會訊／檔案／整理表格）。**原檔上傳 R2**（key `dadaodao-materials/<rel>`，bucket 私有 knowgraphlab），網站經 `server/api/works/material.get.ts` 簽名下載（限定前綴）。Drive 仍 canonical（[[feedback_drive_canonical_storage]]）。流程：① PowerShell 列檔→`C:\tmp\dadaodao_files.json`；② `node scripts/build_dadaodao_materials.mjs`（manifest＋keys，每檔 {name,key,size}）；③ `python -X utf8 scripts/upload_dadaodao_r2.py`（冪等可重跑，log `C:\tmp\dadaodao_upload.log`）。昭慧／性廣／弘誓雙月刊／佛教性別議題標「核心」排前。
+- **碩士文稿分頁**＝論文正文（改寫底稿）：章節文字共用 `/content/thesis/*.txt`（manifest.thesis.chapters），論文 PDF 上 R2 key `dadaodao-materials/碩士文稿/張辰瑋碩士論文.pdf` 可下載。
+- **7 大主題軸**（2026-06-14 改）：研究資料由「依 Drive 資料夾」改成 7 主題軸（人間佛教思想與印順學脈絡／性別平權與大愛道革命／社會運動與入世佛教／禪觀修持與佛教養生／宗教對話／弘誓教團與人物／史料與當代台灣佛教脈絡），`build_dadaodao_materials.mjs` 內 KW 關鍵字路由每檔、出處（作者/議題）保留為子群組。
+- **全文轉錄（進行中）**：`scripts/dadaodao_fulltext.py` 把 879 件逐檔轉文字存 R2 `dadaodao-fulltext/<rel>.txt`（冪等可重跑）。引擎 **Gemini 4-key 輪流→Sonnet(OAuth) 救援**（使用者指定 gemini 限速就用 sonnet，[[feedback_ocr_strategy]] 之外的明示例外），退避重試＋2-strike 配額停機。**免 API 先抽**（docx/xlsx/有文字層 PDF）已完成 **455 件**；剩 ~424 掃描檔（國家檔案局 410 JPG＋掃描 PDF）走 OCR 過夜。書頁每件「全文」鈕經 `server/api/works/material-text` lazy-load（原文/繁中切換，繁中＝`.zh.txt`）。
+- **待續**：①OCR 掃描檔跑完（resumable，可設過夜 loop）②外文全文逐段繁中翻譯（存 `.zh.txt`）③多語（中英德日）**研究回顧**新分頁（7 主題，仿 [[works-research-review]] lit_review，開放取用外文抓全文＋翻譯）。
+- **口述訪談**：38 篇沿用 [[pong_sermon_pipeline]] 無關的 `stores/thesisInterviews.ts` published 清單 + `public/content/interviews/*.txt`，reader 在 [pages/works/[slug]/interview/[name].vue](pages/works/)（docx 下載仍走 `server/api/thesis/interview-docx`）。**已從 /thesis 移除「口述訪談」分頁**（只剩 論文內容／參考資料）；舊 `/thesis/interview/[name].vue` 已刪、舊 `?tab=interviews` 連結回退 content。
+
+## 改寫定調（2026-07-09 與使用者定案）：第一人稱參與式觀察報導文學
+
+- **鐵則：素材封閉**——研究已完成，只寫實際發生過的田野與訪談（訪談＝站上 38 篇逐字稿；田野＝論文附表活動），**絕不虛構或建議增補田野**；細節不足標【待補】問使用者。訪談引文一律**標楷體**；引用（含使用者自己刊於《無境界者》《弘誓雙月刊》的文章）一律核到頁碼；尾註體例。
+- **七章架構＋各章開場場景**：①方法論敘事（慈林紀念館照片；含四個夢、行腳、禪修線）②印順思想（蘇瑞鏘「台灣思想史」課堂偏見 vs 訪談證據；妙雲蘭若/華雨精舍書房「老人味」場景＝重返現場）③弘誓事業（戒會＋青年會成立）④社運（昭慧口述證婚場景；一行禪師/蘇拉克比較）⑤玄奘學術建構（**2022 台灣佛教研究中心開幕式「不敢上前」開場**，經許明淳導演引介；至了中紀念室/選佛場開幕收尾＝兩場開幕式括號；黃運喜訪談＝章中段；安貝卡/龍樹學苑段）⑥思想特徵（《僧伽》義憤/碩一禪七想清論文；Singer《山間對話》在高峰禪林＝互補論的場景論證）⑦終章十方橋（IYBP 青年菩薩營開場＋跨宗教友誼口述＋全球座標收束）。
+- **核心分析概念「引力場」**（使用者自創）：與韋伯卡理斯瑪對話但區分——印順＝文字引力、昭慧＝街頭論辯、性廣＝禪堂身教；三條神交通道（文字/空間遺物/人）。**兩條縱線**貫穿：禪修線（Wright→農禪寺/靈鷲山→性廣最硬禪七→2025.2高峰禪林→3月禪燈營）＋跨宗教與政治變遷線（義光教會→社運結盟→盧俊義/洪山川/古倫→終章）。
+- **比較框架＝網絡史非平行比較**：INEB 年會與 IYBP 菩薩營辦在弘誓（使用者親身參加）、龍樹學苑達利特學生在玄奘（黃運喜訪談有）、**性別缺席論**（入世佛教正典太虛/印順/一行/蘇拉克/安貝卡全男性，台灣案例由女性領導）＝終章殺手鐧。文獻：Queen & King、DeVido（越南＋台灣比丘尼雙線）、Travagnin、Madsen、Laliberté、郭承天、Gross、Garfield/Keown（禪修×倫理橋）、McMahan。
+- **關鍵事實**：2025.8 第二十三屆印順學國際會議＝專為 Singer 來訪辦，使用者英文發表、Singer 在場給回饋＝第三個夢成真（夢的伏筆→回收）；四個夢全文在根目錄《我與論文相關的故事.docx》；《心靈的交會──山間對話》＝Singer×昭慧中文版（2021 十九屆會議發新書）。
+- **批判線（2026-07-09 補）**：指導老師侯坤宏＋蘇瑞鏘每次提醒「內外視角」；使用者立場＝當代史即「在歷史中作歷史之人」，誠實交代互動結構、判斷交讀者（已寫入樣章§六）。計畫口試「缺點之問」→觀察一年→答案：兩位法師有知識盲區與極限非全知，宜多對等合作者非全追隨者、眾人之智成事——第一章埋伏筆、**第六章回收**（可框成「引力場的陰影」：場太強周圍只剩衛星）。本書不是頌辭。
+- **等融法師出家**＝選佛場落成後第一件大事、屬性別議題，主場景放性別章、玄奘章一句帶過；細節動筆前問使用者。
+- **自序＋雙鳥意象（2026-07-09 定）**：自序＝改寫企圖＋謝誌合一，以印順「精衛啣石」勉語開篇（「做到那裏，那裏就是完成…原不是一人的事，一天的事」，出處待核《平凡的一生》/《遊心法海六十年》），收在「不把自己看得太重、觀察因緣」。自序精衛啣石×第一章鸚鵡救火＝雙鳥意象（故事檔原題「精衛救火」即刻意熔接）。謝誌名單待使用者定稿。
+- **全書初稿完成（2026-07-09）**：`當代的大愛道革命_全書初稿.md`（repo 根目錄，~577 行，已 push；`_第一章樣章.md` 為前身可刪）。自序＋七章全：一.鸚鵡救火／二.引力場／三.鹿野苑／四.大愛道二次革命（含證婚黃美瑜游雅婷、葉菊蘭無畏施、艾琳達、朱增宏批判線）／五.兩場開幕式之間（黃運喜）／六.街頭與蒲團（互補論＋引力場陰影＋第三個夢回收）／終章.十方橋（INEB 第四位精神導師＝唯一比丘尼、洪山川「誰不反對我們就是傾向我們」、太虛革命→印順科學理性→昭慧性廣民主平等三段論）。**第二版修訂已完成（同日）**：①性廣法師訪談原話五處入書（爬山出家「慢慢來→要慢到什麼時候」／宗法制十方叢林分析／了中「學力vs學歷」／護觀音「法會與護教一起舉行」／**「靜中禪那、動中三昧」＝互補論第一手表述**，第六章互補論改為「我當面問她掙扎嗎」結構）；②國際文獻已織入各章分析段（ch2: Huang/DeVido越南/Jones/Travagnin/Bingenheimer；ch3: Madsen民主妙法先知型空格論+DeVido台灣比丘尼；ch4: Gross/Heirman/Anālayo/鄭維儀/Sakyadhita/Laliberté三型+第四型street activism/郭承天民主神學；ch6: Keown/Garfield道德現象學；終章: 雙潮流交會論）。**已上架 /works 書頁（2026-07-11）**：manifest 加 `bookDraft`{md,docx,note} → 書頁「專書初稿」分頁＋「⬇下載 Word」鈕。**Word＝真頁尾註**：`scripts/dadaodao_book_export.py` 走 **pypandoc**（venv `_whisper_venv` 已裝 pypandoc-binary+cssselect）→ 91 條 [^n] 進 word/footnotes.xml 自動編號，再 python-docx 後處理（封面/章起新頁/標題引文標楷體/正文明體縮排/頁尾 PAGE 頁碼）；改稿後重跑即同步網頁 md＋Word。**網頁註釋＝nonchurch 格式**（仿 nonchurch-nuxt articles/[id].vue）：sup.footnote-ref 藍色上標→註釋、註釋尾「↩」footnote-backref 跳回、:target 黃底 highlight——專書 renderBookMd 與論文原文 renderPaperText 雙向互點、訪談 reader 的 [n](#footnoteN)（定義在論文附錄）轉乾淨上標 title 提示。**訪談集定名《人間佛教與印順學派訪談集》（2026-07-11）**；38 篇逐字稿已全部重整：每篇「（一）訪問動機」→「（一）訪談簡介」（個別化重寫、各篇破題互異、嚴禁公式化）、檔尾加「結語」（總結該篇訪談結論、無客套；有附件者置附件前）；四個 agent 平行完成、grep 驗證 38/38 無殘留「訪問動機／訪談後記」。
+**口述訪談三冊 Word**：`scripts/dadaodao_interviews_docx.py`（VOLUMES 清單可調冊別）→ 第一冊弘誓玄奘14篇/第二冊印順學派學者僧人13篇/第三冊社運宗教對話11篇；**排序＝昭慧上下＋性廣置首冊之首、餘依訪談日期**；封面/目次/篇起新頁/問答體/頁碼；manifest `interviewVolumes` → 訪談分頁三顆下載鈕。**頁數同步 `scripts/dadaodao_pages_sync.py`**（需本機 Word，COM DispatchEx 獨立實例）：重建三冊→更新目次烙真實頁碼（重整後 147/174/119 頁）→量每篇起迄頁＋引文精確頁（Find）→回填專書 md 腳註「收入《人間佛教與印順學派訪談集》第N冊，頁X–Y，引文見頁Z」＋補訪問地點（冪等可重跑、新舊書名都認得）→重建專書（含目次頁，47頁）→更新專書目次；頁數紀錄 `scripts/state/dadaodao_pages.json`。**訪談冊別或內容變動後跑這支即可全鏈同步**。**叢書 Word**：`scripts/works_series_docx.py` 通用轉換器（book-head/chapter HTML schema，lxml）→ 創生哲學 15 卷＋世界宗教導論＋國文講義（封面/目次/章首引子主選變體標楷體/論證圖縮排/章末摘要/頁碼），docx 與 html 同名同目錄，書卷 reader 分頁列「⬇下載 Word」（bookDocxUrl 慣例）。**使用者尚待通讀**。餘待補：謝誌（論文 PDF 有）、精衛啣石出處、~45 處【頁碼待核】、IYBP 屆次、朱增宏出走年份（論文1998.9 vs 訪談簡介1999）。第四章另補「安樂死三幕劇」（使用者指定）：朱增宏收容所示範安樂死→出走（剩零個人＋自承忽略法師）→何宗勳動督會推零撲殺（2015修法/2017上路/《讓牠活下去》）→政策在動保圈的爭議（科長求八年、「光環在人災難在動物」）；正反並陳不裁決＋預演ch6效益主義vs不殺戒。
+
+## 索引補記
+
+- 研究資料 879 件上 R2 可下載＋全文轉錄＋7 主題軸
+- 碩士文稿/口述訪談/研究回顧分頁

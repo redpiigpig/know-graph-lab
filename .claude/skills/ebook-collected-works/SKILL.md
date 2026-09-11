@@ -676,3 +676,221 @@ Ports）。留白時 reader 只顯示英文，那是誠實的；留著錯譯則�
 上傳時注意 **sbe-\* 各卷的 registry 在 `sbe_translate.WORKS`，不在
 `mueller_auto.WORKS`**（後者只有 Müller 本人 16 部），取錯會 `KeyError`——
 `mueller_fill_residuals.py` 就是這樣靜靜地一本都沒上傳。
+
+## 記憶庫併入：project_collected_works_multilang
+
+新 skill `ebook-collected-works`（`.claude/skills/ebook-collected-works/`）— 教**多卷全集**做「3 欄以上多語對照」（原文＋既有譯本＋我的繁中逐段）上架電子圖書館。跟 [[ebook-translate]]（雙語）、[[scripture-fathers]]（公有領域教父）並列為第三個翻譯 skill。使用者要求 skill 名稱要**通用教全集翻譯**，不要只教榮格。
+
+**三件 ebook-translate 不處理的事**：(1) 多卷套書統一 volume/parent_volume 樹；(2) `source_text`/`source_lang` 單一來源 → `sources`{lang:text}+`source_order` 多來源 schema（向後相容：source_text 鏡像 source_order[0]）；(3) 獨立編輯的德/英版本「逐段對不齊」對齊（章節錨點>長度比>LLM輔助>整段塞）。
+
+**首案＝榮格全集**：⚠️ GW 德文原典+CW 英譯**多數卷版權內到 2031**（榮格 1961 卒）；網路免費全文多盜版掃描；**僅 1929 前早期著作**（《Wandlungen》1912 德 + Hinkle 1916 英）有乾淨公有領域來源，且 CW5 改寫本≠1912 原典。使用者選擇「盜版 PDF 跑完整全集」+「另建新 skill」。處理姿態：reader 只顯示我的繁中+來源原文欄，第三方中譯不入庫；版權內來源走本機 pipeline，Claude 不在對話貼整段受版權原文。
+
+**進度（2026-06-02 全部 test-first，已 push）**：
+- ✅ reader N 欄：`pages/ebook/[id].vue` ViewMode→`zh|parallel|src:<lang>`，toggle 由 source_order 動態生；`ChunkData`+API 加 `sources?`/`source_order?`。**已截圖實證**（3 欄對照 + zip 補白 + footnote by-number 對齊 + 單來源模式）。
+- ✅ 契約模組 `lib/multilang-sources.ts`（client+server 共用，非 server/utils）+ `test/multilang-sources.spec.ts`（27 例）。
+- ✅ Python 寫入器 `scripts/multilang_chunks.py`（鏡像 TS 契約 + `assemble_multilang_chunks(units, translate_fn, source_order)`）+ test（21 例）。
+- ✅ 對齊 `scripts/align_editions.py`（`parse_chapter_number` DE/EN/CJK+羅馬/中文數字；`align_editions` 錨點 join / order 補白 fallback）+ test（20 例）。full pytest 147 passed。
+- 🔧 `screenshot_book.mjs` 加 `--device`（注入 `kgl_device_id=screenshot-bot`）繞過 device-trust gate；`trusted_devices` 已預埋該列（勿刪，fathers 校對截圖也靠它）。
+
+**起手卷拍板（Claude 決定）**：公有領域 1912《Wandlungen》(de) + Hinkle 1916《Psychology of the Unconscious》(en) — 唯一現在能合法取得處理、同一作品可驗證跨版對齊的 Jung 來源。受版權 CW 卷待 user 提供 HTML 來源檔（不抓盜版全文）。
+
+**Pilot 實況（2026-06-03 真資料跑過，全 push）**：
+- ✅ 詞庫鎖定：jung_glossary.md 用心靈工坊/TSAP/《榮格心理學辭典》查證（das Selbst=自性禁「本我」、individuation=個體化、synchronicity=共時性、libido=力比多）。《榮格心理學辭典》是**版權書**，只作術語參考、不轉錄入庫（同 fathers「參考不入庫」政策）。
+- ✅ 驅動鏈：`scripts/translate_collected_work.py`（split_sections/`load_html_sections`/`make_translate_fn`/`run`）+ HTML loader（實證 Gutenberg #65903 Hinkle 英譯）。
+- ✅ 德文重 OCR 路線可行：archive.org 1912 PDF **純圖像無文字層**；本專案 Gemini/Haiku 重 OCR 開頭 14 頁→還原 ERSTER TEIL/Einleitung/I./II. 結構。OCR slice 存 `c:/tmp/jung_wandlungen_de_1912_ocr.jsonl`，工具 `scripts/_jung_ocr_slice.py`。
+- ⚠️ **Gemini 4 把 key 全耗盡**（key#1 prepay depleted、#2-4 quota exceeded）→ 走 Haiku fallback。影響全專案預設引擎，user 需查 Gemini 帳單。
+- 🔴 **德 1912 ↔ 英 1916 不逐段對齊（實證）**：Hinkle 重組（自序≠Jung Einleitung；heading 自動對齊抓錯）。用 Ferrero 法文題詞指紋定位真對應（德 Einleitung=英 Ch I Two Kinds of Thinking），但章內段落仍不對齊（英 74 段 vs 德 4 段）。→ **正確逐段三欄需人工逐句配對+親譯**，非自動 run；多數全集卷英譯(Hull)同樣非段落同構，此問題普遍。
+
+**✅ 首章三欄上架（2026-06-03）**：走 (a) 人工配對。內容指紋確認德 Einleitung=英 §8 INTRODUCTION（非 §9；heading/Ferrero 題詞不可靠），**親譯整章「引論」5 段**，trilingual ebook `22222222-2222-4222-8222-222222222222`（test）reader 三欄逐段對齊（截圖+段數雙驗證）。穩定方法：德掃描 PDF→**Haiku 重 OCR**（Gemini 全死）→內容指紋配 de↔en 章→人工逐段對齊→親譯→build。工具 `scripts/_jung_ocr_slice.py`/`_jung_pilot_build.py`（一次性 `_`）。
+
+**🚀 接手交棒**：User 要開新 session 續做。**完整接手清單（5 步方法/待辦/檔案/指令/雷區/ebook_id）寫在 skill 內 `jung_collected_works.md`「🚀 新 session 接手清單」**。下一章＝德 `II.`（兩種思維）=英 §9 Ch I（Hinkle 章號比德少 1）。Gemini 已死一律 Haiku（訂閱制不計費）。德文 PDF 已刪需重抓 archive.org `Jung_1912_Wandlungen`。
+
+**🆕 全集 Portal + 作家 Hub（2026-06-05，已 push）**：全集**不放在 /ebook 裡**，獨立 `/collected-works`（首頁加 📚 全集 cyan 卡）。每位學者一張卡→作家 hub `/collected-works/[slug]` 最外層：學術貢獻簡介(粗體 markdown)＋肖像(Wikimedia Commons `Special:FilePath/<檔>?width=500` 公有領域，不用 Supabase Storage)＋生平學術年表(timeline)＋著作目錄(按 category 分組、組內 yearSort 排序、轉錄狀態 badge done/in-progress/planned/copyright)。單卷閱讀仍走既有 `/ebook/[id]` 多欄 reader(work.ebookId 連過去)。資料在 `stores/collectedWorks.ts`(repo-committed，沿用 /works·speech.ts 模式，**user 拍板免 DB migration/免 server route**)。新增學者=push 一個 CwAuthor；某卷轉錄完=改 status+填 ebookId。color 須在 tailwind safelist(別用 -400)。已截圖實證 portal/穆勒/榮格 3 頁。
+
+**🆕 案例 2＝馬克斯‧穆勒（宗教學家全集 #1，2026-06-05 起）**：Friedrich Max Müller 1823–1900，宗教學開山祖，**卒 1900 全部著作早已公有領域、全球無限制**（最乾淨案例，無盜版/版權閃避）。**以英文寫作為主** → 預設英＋繁中；少數有平行德文版的卷做英德繁中三欄。語言策略(user 拍板)：英＋德＋繁中三欄僅限有德文版的卷。起手卷＝《宗教學導論》(1873 英 archive.org `introductiontosc00ml` ＝ 1874 德《Einleitung》archive.org `einleitungindie00mlgoog`)，**英德同構：皇家研究院四講＋兩附論**，比榮格 Hinkle 重組好對齊。德文 1874 Fraktur djvu OCR 中等雜訊(可譯，差再 Gemini Vision)。案例檔 `mueller_collected_works.md`(版權/18卷目/來源/對齊/接手) + 詞庫 `mueller_glossary.md`(宗教學/henotheism 單一神教/語言的疾病/雅利安語族…，英文原詞為準)。源 txt 在 `c:/tmp/mueller_isr_en_1873.txt` / `mueller_einleitung_de_1874.txt`。
+
+**✅《宗教學導論》三欄竣（2026-06-05 上架，hub 已轉錄）**：ebook `33333333-3333-4333-8333-333333333333`，7 chunks(封面+4講+2附論)，EN/DE/繁中逐段對齊 0 mismatch，~21.5 萬繁中字。pipeline=`scripts/mueller_build.py`(手調 6 段 line range；retry-on-empty 補引擎漏譯；4 段引擎反覆漏譯的真內容含「知其一便一無所知」名言由我親譯補)。cache 在 `mueller_data/isr/sec0-5.json`(已 commit)。**雷區**：reader 強制 page1=封面(`isCoverPage`=currentPage===1)會吃掉內容→cover chunk 0 必備；chunk content 第一段是 heading row→JSONL ¶N=cache zh[N-1] 有 off-by-one。
+
+**🤖 其餘 13 部自動 queue 連續轉錄（2026-06-05 起跑，排程接管）**：`scripts/mueller_auto.py`(registry 13 書 archive.org `_djvu.txt` 源已驗證 + ebook_id + 章節策略)雙語(英→繁中)；下載→reflow→章節切分(lecture heading 偵測+TOC/前言過濾+去重；否則 coarse 第N節)→NVIDIA 逐段→cover+JSONL→R2/DB。resumable(per-book/section cache `mueller_data/<slug>/`)+lock(每段 touch)。**English-first(2026-06-05，user 指示，同 [[feedback_jung_nonpd_english_first]])**：queue Phase 1 先**無 LLM 把全部英文 ingest 上架**（13 本秒級可讀英文）、Phase 2 才逐段翻；繁中主欄**未譯段 fallback 顯示英文**（`section_chunk` zh[i] or en[i]），每 12 節 re-upload 讓中文漸進浮現。私人站、非 PD 來源也可用（穆勒全 PD 無妨）。**排程**：Windows 任務 `MuellerAutoTranscribe`(登入+每4h,無時限,resumable)跑 `scripts/mueller_auto_queue.bat`→`--run-queue`；session 關掉/重開機都續跑直到 13 部竣。hub `[slug].vue` fetch 活 chunk_count→有內容自動轉「轉錄中」可點。**規模~25k 段、數日**，與 /coach 共用 NVIDIA 互相節流。**待修**：六派 `sixsystemsofindi017601mbp` 無 txt(跳過待換源)；coarse 書首段偶夾 OCR 前言；有德文版者(物質/神智學/語言1&2/印度/神話科學論集)日後可升三欄。
+
+**🆕 案例 3＝雷蒙‧潘尼卡（受版權當代神學家 #1，2026-06-12 起）**：Raimon Panikkar 1918–2010，宗教間/宗教內對話與跨文化哲學巨擘；**卒 2010 → 全部著作受版權至約 2080，榮格型（非穆勒）**：網路無乾淨合法 PD 全文、第三方中譯不入庫。採 English-first（[[feedback_jung_nonpd_english_first]] 私人站非 PD 可用、英文先輸入）。多語原創（加泰隆/西/義/英/德），Opera Omnia(Jaca Book 義/Orbis 英,12 卷,Milena Carrara Pavan 主編) 是**主題重編** → 逐段三欄只在「同一文本恰有原文+英譯」時成立，多數卷先英+繁中雙語。語言策略(user 拍板 2026-06-12)：English-first 雙語預設、個別文本有平行原文版再升三欄。起手卷＝**《印度教中未識的基督》**(原文即英文,1964/1981)，ebook_id `55555555-5555-4555-8555-555555555555`。檔：`panikkar_collected_works.md`(版權表/12卷目/接手) + `panikkar_glossary.md`(自鑄詞 cosmotheandric 宇宙神人共融/intrareligious 宗教內對話/Christophany 基督顯現/tempiternity/diatopical hermeneutics)。**test-first**：`scripts/tests/test_panikkar_build.py`(14 例) → `scripts/panikkar_build.py`(reflow/split/align/build_section_chunk/assemble_pilot，比照 mueller_build；**坑：split 必須在 reflow 之前，否則 reflow 合併無標點段會吞掉標題**)。hub 潘尼卡卡 indigo🪷 12 卷書目+肖像(CC0 `Raimon Panikkar.jpg`)，起手卷 status=planned(pipeline 就緒待英文來源檔)。**兩種 build 模式（user 拍板 2026-06-12）**：(1) **REFERENCE 模式**（`panikkar_build.py --src <en> --zh-src <zh>`）— **已有完整中譯就不重譯**，把第三方中譯（簡 opencc→繁，`standardize_ebook.to_traditional`）當主欄、英文原典逐段對照、零 LLM；潘尼卡有王志成/思竹整套中譯（四川人民/宗教文化/江蘇人民），起手卷《印度教中未知的基督》即走此模式。(2) **自譯模式**（`--src <en>`）— 無中譯的卷才 English-first 引擎自譯。新函式 `build_reference_chunk`/`pair_sections`（按章序配對）/`assemble_reference`/`load_zh_sections`；CJK 章標題 `_CJK_HEADING_RE`（導論/第N章/第N節…，**token 後須接邊界，"第一章的正文"不誤判**）。第三方中譯私人自用可入庫當「參考層」、不取代自譯主欄（SKILL.md 處理姿態私人例外）。test-first 共 22 例綠。
+
+**取源原則（user 拍板 2026-06-12，已寫進 SKILL.md「本專案的處理姿態」）**：本站=auth-gate 私人研究圖書館僅供個人閱讀 → 受版權卷若無 PD 源、archive.org 又只借閱，**可從 shadow library（Anna's Archive／libgen）抓來源 PDF/EPUB 到本機**（English-first、來源原文只走本機檔不貼對話、主欄是我的繁中）。**⚠️ 此 sandbox 網路限制**：annas-archive／libgen.is/.rs **DNS 被擋**，僅 `libgen.li` 可達且常只索引期刊書評非專書；archive.org 本人兩本（`unknownchristofh0000raim`1967/`..._q2h1`1981）皆 inlibrary 借閱制 djvu.txt 受限 → **抓不到時請 user 在自己機器下載後丟本機**（new-book drop／`c:/tmp`），`--src` 讀檔即開譯。
+
+**🆕 漢傳佛教三套＝第一批「單一語言」案例（2026-06-13，已 push）**：全集本即繁中 → **零翻譯、零跨語對齊**，pipeline 砍剩「解析→JSONL→DB/R2→hub」，reader 退化單欄（無 `sources`，向後相容）。downstream 入庫/hub/reader 三套完全共用，差別只在來源解析器。
+- ✅ **印順導師**（slug `yinshun`，amber/☸️）：來源 CBETA Y 系列 TEI P5 XML（`cbeta-org/xml-p5`，44 XML=42 部，非商業可再散布，遠優於已改版基金會官網）。`cb:mulu` 三層→章節樹、`lb` 邊碼、`note` 剝除。`scripts/yinshun_build.py`(8 例綠)+`yinshun_registry.json`。**44 卷/5324 chunks 上架**。
+- ✅ **聖嚴法師**（slug `shengyen`，teal/🥁）：來源 ddc.shengyen.org《法鼓全集2020紀念版》— SPA 殼但靜態檔全枚舉（`getData.php?type=all_books`110冊／`type=vol_dump`4079篇／`tree_menu/toc.html`章節樹／`html/{輯-冊-篇}.html`正文）。`p.indent`正文/`p.hN`標題/`span.pb data-page`**保留原書頁碼**/`span.lb`剝除。`scripts/shengyen_build.py`(9 例綠)+`shengyen_registry.json`。**110 冊/4181 chunks 上架**。雷區：requests 要 UA+verify=False+指數退避（server 高載丟連線）、`--all` per-book try/except+`--resume`。
+- ✅ **星雲大師**（slug `hsingyun`，orange/🪷）：官網 reader 殼（`/bcN/bookM` 空殼、sitemap 38 URL、無 XHR）一度誤判「不出全文」，**但 user 給 `/ArticleDetail/artcle{N}` 後破關**——每篇免登入 server-render 全文 + 麵包屑階層（大類/冊/篇），不在 sitemap、reader 殼不揭露。**已全量上架**：crawl `artcle{1..25500}`（19,888 篇有效、err=0 未被封鎖、快取 `c:/tmp/hsingyun_cache/`）→ 麵包屑 `book_key` 分組成 **109 冊 / 19,997 chunks**（ebook_id `c0000000-…`，按 12 大類）。`scripts/hsingyun_build.py`（10 例綠，parse_article/crawl 禮貌節流+退避+resumable/`--build --resume` per-book 容錯）+`hsingyun_registry.json`。**🔑 教訓：薄殼 JS 站找不到內容端點時，直接問 user 要一個「實際在讀的文章 URL」往往秒破關（內文常走 sitemap 外的另一條 MVC 路由 `/ArticleDetail/artcle{N}`）。**
+- 共用雷區：ebooks.id 是 UUID，查全集用 `id=in.(...)` 不能 `like`；reader 全頁截圖 ~3800-3970px > 2000px 硬限須 PIL crop；dev server 多任務並行 :3000 可能被別任務佔/壞（[[feedback_no_kill_other_tasks]]）→ 自己另起 `PORT=3100`，已認證 reader 首次 SSR 冷編譯 >30s 須把 screenshot navigationTimeout 拉 150s。case 檔：`yinshun_collected_works.md`/`shengyen_collected_works.md`/`hsingyun_collected_works.md`。
+
+**🆕 潘尼卡進度（2026-06-14 交棒，新 session 先讀 `panikkar_collected_works.md`「🚀 新 session 接手清單」）**：z-lib/ 有 user 丟的全部 PDF/EPUB（版權檔、OCR 文字進 c:/tmp 或 panikkar_data/，勿 commit/勿貼對話）。中譯 8 種全查實、原文 ~11 種（義/英/西，多 text-layer）。**規則：有中譯→REFERENCE 對照；無中譯→由原文（多義大利文）/英文自譯。**
+- ✅ **上架 2 本**：宗教內對話（`55555556-…`，REFERENCE en+王志成中譯，11 章逐段 0 mismatch）；神的經驗：奧祕的聖像（`55555561-…`，自譯 en→繁中，39 chunks）。
+- 🔄 **自譯 queue 背景連跑**：`scripts/panikkar_auto.py --run-queue`（EBOOK_CHUNKS_DIR 要設）。8 卷 registry WORKS，resumable（`panikkar_data/<slug>/orig.txt`+`sec{N}.json`），engine `pb.make_engine(src_lang)` 英/義/西。序：experience-of-god✅→rhythm-of-being(epub，本輪 prompt-too-long 跳過、已修 `_split_long_paras`、下輪補)→myth-faith-hermeneutics(義)→pace→mysticism-fullness(卷I)→religion-world-body→mundanal-silencio→vedic-experience(1222pp 殿後)。~2500 頁跑數日。**待辦：各卷完成補 hub done+ebookId。**
+- **3 支核心腳本**：`panikkar_build.py`（單本 REFERENCE/自譯，REGISTRY+manifest+`split_chapters_by_manifest`）、`panikkar_auto.py`（queue）、`ocr_pdf_to_text.py`（`--engine font` born-digital 字級抽標題 / gemini OCR scanned / text）。pytest 29 例綠。
+- **對齊血淚**：REFERENCE 章節對齊最難——`split_chapters_by_manifest` 用「following-body」判真章 vs 目錄（勿固定視窗 TOC）、錨點 alternatives（第N章 OR 標題）、merge running-head；**born-digital 原文用 font 抽取**（視覺 OCR 漏標章名、壞 cmap 亂碼 ŚŪNYATĀ→SONYATA）；**flat 書對得齊、階層書（人的圓滿 部→章→節）對不齊需人工 manifest**。
+- ⏳ **待補**：人的圓滿(it+zh)階層書人工逐章 manifest 精對（OCR 在 c:/tmp 會被清需重抽）；缺英文原典的 4 本中譯（印度教中未知的基督/文化裁軍/看不見的和諧/對話經）待 user 補原文。
+
+**🆕 portal 依學科分組 + 古希臘哲學家全集（2026-07-01，已 push；SKILL.md 亦全面重構為學科優先 §A/§B/§C）**：user 要 `/collected-works` portal **改依學科分組**（佛學獨立一類）。`CwAuthor` 加 `disciplineGroup` 欄（別跟既有 `discipline` 一句話副標搞混）＋ `sortYear`（生年 BCE 負；portal `pages/collected-works/index.vue` 在學科組內依此排序，缺省排末尾）；`DISCIPLINE_ORDER=['哲學','社會學','宗教學','神學','佛學','心理學','人類學']`，空組不顯示。歸類：穆勒＋**潘尼卡→宗教學**（潘尼卡 2026-07-01 由神學改歸宗教學，user 拍板；**神學暫無人**）、榮格→心理學、印順/聖嚴/星雲→佛學。**哲學學科群＝古希臘 19 位、一人一 hub、依年代排**（user 拍板「前蘇格拉底不能跟蘇格拉底併卡、每個人獨立」）：泰利斯/阿那克西曼德/阿那克西美尼/畢達哥拉斯/色諾芬尼/赫拉克利特/巴門尼德/阿那克薩哥拉/芝諾(伊利亞)/恩培多克勒/普羅泰戈拉/高爾吉亞/蘇格拉底/德謨克利特/柏拉圖/亞里斯多德/伊比鳩魯/愛比克泰德/普羅提諾（sortYear −624→204）。全**公有領域**（古典原文+19世紀英譯 Jowett/Ross/MacKenna），可希/英/繁中三欄，著作多 `planned` 待逐步轉錄。肖像用 Wikimedia Commons PD 胸像/畫像（逐一 curl 驗證；普羅泰戈拉/高爾吉亞無合適 PD 像→emoji）。拆卡用一次性生成腳本 `scratchpad/gen_presocratics.py`（banner 標記 byte-splice，非 Edit 硬匹配）。接手轉錄比照榮格 pipeline、人名先查 [[translation-glossary]] 哲學家表（對齊 `scripts/seed_glossary_philosophers.py`），待建 `greek_philosophy_glossary.md`。**下一步**：柏拉圖《蘇格拉底的申辯》起手（Perseus 希臘 Stephanus + Gutenberg #1656 Jowett 英譯，皆已驗證可抓）→ §B2 多語 pipeline 三欄。**注意**：pre-push vitest hook 會被並行 session 的 dev server 佔 .nuxt 弄壞（非程式問題），純文件變更 user 核可 `--no-verify`。
+
+**✅ 柏拉圖《蘇格拉底的申辯》希英繁三欄完成（2026-07-01，哲學群第一本，已上架驗證）**：`scripts/plato_build.py`（可重用對話錄 pipeline）。來源＝**Perseus canonical-greekLit GitHub raw**（`data/tlg0059/tlg002/…perseus-grc2.xml` Unicode 希臘＋`…perseus-eng2.xml` Fowler 英譯 Loeb 1914，皆 PD；**別用 dltext，那是 Betacode 非 Unicode**）。兩版皆以 **Stephanus 節 milestone（`unit="section" n="17a"`）為錨點→完美對齊**（125 節 grc==en，0 gap）。**逐節翻繁中**（從希臘、Fowler 僅消歧義，`PROMPT_TMPL.format(source=)`；Gemini 4 key 全 429→`--engine haiku` 直翻，同 Jung）、每 Stephanus 頁一 chunk、grc/en/zh 段數對齊（reader `zipParallel`）。ebook `70000000-0000-4000-8000-000000000001`，**27 chunks（1 封面+26 頁 17–42）/ 20,685 繁中字**，hub work status=done。截圖實證三欄逐段。**兩個雷區（踩過）**：① **reader `isCoverPage=currentPage===1` 會吞掉 chunk 0 內容**→必須 `_prepend_cover`（chunk 0=犧牲封面 chapter_path「封面」，真內容自 chunk 1），同 mueller_build.make_cover_chunk；② **ebooks 表有 CHECK**：`file_type ∈ {epub,pdf}`（'xml' 400）、**無 status/source_lang 欄**、`display_mode='standard'`（多語靠 chunk 的 sources 判定非此欄）；insert 要 `raise_for_status` 別靜默失敗（我第一次靜默失敗→row 不存在 reader 404，靠截圖驗證才抓到）。多語 reader **不寫 ebook_chunks preview**（Jung 也 0 rows，全讀 R2 JSONL）。**下一部對話錄**：在 `DIALOGUES` registry 加一筆（tlg 號＋ebook_id＋meta）即可 `python scripts/plato_build.py <slug> --upload`。
+
+**🆕 全集專屬三欄 reader（2026-07-02，取代 /ebook UI，已 push＋截圖實證）**：user 要全集不走 /ebook（空白封面＋分頁錯位「開頭很奇怪」），改**聖經三欄式**專屬 reader `pages/collected-works/[slug]/[work].vue`（`[work]`=ebookId，版型仿 `pages/creeds/[slug].vue` grid）。每 row：`3.25rem 1fr…` ＝**左引用號欄＋繁中＋各來源欄**（欄數依 source_order 動態；`normalizeSources`＋`zipParallel` 逐段）。引用號＝`chunk.anchors[i]`（**Stephanus 17a／Bekker 1094a**；無則 page_number），點擊複製「作者《書名》anchor」＋`#cite-` hash。**每卷 page1 頂部導讀卡**＝`data/collectedWorksIntros.ts[ebookId]`（keyed by ebookId 的獨立檔）。**anchors 資料契約四處都要**：plato_build.build_units 產 anchors → multilang_chunks.build/assemble 傳遞 → ChunkData.anchors? → `/api/ebooks/[id].get.ts` currentPage 白名單。**踩過的雷**：① **Nuxt 巢狀路由**——`[slug].vue`＋`[slug]/[work].vue` 會讓 [slug] 變父層需 `<NuxtPage/>`（否則 child 不渲染只出 hub）→ 把 hub 移成 `[slug]/index.vue` 與 [work] 同層；② `/api/ebooks` `requireAuth()` 要 **Bearer token**（`getSession().access_token`），reader client-side fetch 必帶 Authorization，SSR/cookie-only 會 401（/ebook reader 就是這樣，line 1621 getToken）。舊 /ebook reader 保留給一般電子書。SKILL §B6 已改寫。
+
+**🆕 整夜自動化引擎（2026-07-02 修正）**：`greek_overnight.py` 預設 **NVIDIA**（`nvidia_translate`，deepseek-v4-flash-0731，`NVIDIA_MIN_INTERVAL=6s` 全域節流＋4-key 輪流；~8-10s/節、~overnight 跑完全 Plato+Aristotle）。**Haiku 直翻 bulk 會撞 Claude Max 429**（sequential 也撞）→ 別用 haiku 跑大量；Gemini 4-key billing 耗盡。`plato_build make_translate_fn` 加 `nvidia` 選項。**雷：別同時跑兩個 queue**（我一度 haiku queue 沒停就launch nvidia queue，兩者搶 log/cache/upload；用 TaskStop 全停→清 `.done` marker→單一 nvidia queue 重跑，快取保 translations、cache-hit 重組補 anchors）。resumable：per-節 cache `c:/tmp/plato_cache/<slug>_zh/`＋`<slug>.done` marker。
+
+**🆕 五學科大規模補齊 246 位人＋書目＋年代→地域兩層分組（2026-07-18，已 push commit 23ad01b4）**：user 要把心理學/宗教學/宗教社會學/神學/哲學「人和書目補齊」，翻譯之後再排。決策：哲學/神學**先分年代再分地域**（user 二次澄清「古代中世紀近代都要各自分地域」）、其餘單層；直接研究補齊全部；**多元＋非西方中心並重**。
+- **結構**：`CwAuthor` 加 `era?`/`region?`；portal `index.vue` 對「有 era 的學科」渲染兩層（年代大標→地域小標→卡片，年代/地域皆依組內最早 sortYear 排），無 era 學科維持單層。`DISCIPLINE_ORDER` 加 `宗教社會學`（排宗教學後）。既有 19 古希臘 region 從「希臘‧地中海」統一「西方」、9 無教會＝現代與當代‧東亞（日‧韓）。
+- **規模**（store 現~280 位）：哲學 123（古代西/中/印＋中世紀西/拜占庭/伊斯蘭/猶太/印＋近代西/中明清/日江戶/韓性理學/波斯後古典＋現當代西/新儒家/印/京都/非洲/拉美）、神學 104（教父拉丁/希臘/敘利亞＋中世紀女神秘家＋宗改＋近代＋現當代西方＋非西方處境解放/女性/黑人/非洲/東亞/南亞/東正教＋新教其餘宗派衛理/聖公/重浸/貴格/福音/五旬節＋東方正統六會）、宗教學 17、宗教社會學 15（新）、心理學 18。
+- **執行手法**：13 路平行 `general-purpose` sonnet agent（每 bucket 一份，讀共用 `scratchpad/cw_spec.md` 規格）產 JSON→`scratchpad/assemble.py`（去重/驗色系 safelist/驗 status/必填→emit TS 插 authors 陣列尾）。**肖像逐一 urllib HEAD 驗證**（Wikimedia 擋預設 UA 要帶 Mozilla；連發會 429 誤判需間隔重驗；68 個僅 wang-yangming 真 404 已清空）。esbuild 驗 TS 語法＋dev server :3200 截圖實證兩層分欄。全 planned/copyright（尚無轉錄），翻譯 pipeline 之後逐卷接（比照 §C 各案例）。
+- **相關 feedback**：[[feedback_dazangjing_diversity]] 多元原則同樣適用；[[feedback_workflow_inline_script_not_scriptpath]] 這次沒用 Workflow（未 opt-in）改用 Agent 平行；agent JSON 輸出比 TS 安全（assemble.py 統一 emit）。
+- **當代神學再細分地域（2026-07-19，commit 72dc4aee）**：user 要「現代與當代神學要分歐陸/北美/拉美/非洲/原住民等」。做法：神學 era=現代與當代 且 region=西方（拉丁）的 15 筆改「歐陸」（教父/中世紀/宗改/近代仍留「西方（拉丁）」，用「上一行 era 是現代與當代才改」精準 targeting）；北美本已分開；新增**原住民神學 9 位**（region 原住民，北美 Tinker/Deloria/Charleston/Woodley/Curtice＋毛利 Marsden＋**台灣玉山神學院 布興‧大立/瓦歷斯‧烏干(≠瓦歷斯‧諾幹詩人)/童春發**）。現當代神學共 10 地域欄。**南方神學/第三世界＝拉美+非洲+亞洲已涵蓋，未另建重複 region**。
+- **🐛 assemble.py 去重雷**：`existing_slugs()` 正則若只認單引號 `slug: '...'`，會漏掉 JSON 產生的雙引號 `"slug": "..."` → 二次跑重複插入全部（karl-barth ×2、總數暴增）。已修為 `["']?slug["']?:\s*["']([^"']+)`。**未 commit 前發現→git checkout 還原重來**。日後再擴充跑 assemble 務必先確認此正則。
+
+**🆕 開跑全文翻譯（Haiku）＋抓下一批源＋文體版面基建（2026-07-19）**：
+- **翻譯引擎認證**：user 要先全部用 **Haiku**。`te.sonnet_translate`/`haiku_translate` 沒 `ANTHROPIC_API_KEY` 時**自動 fallback 讀 `~/.claude/.credentials.json` 的 Claude Max OAuth token**（`_make_anthropic_client`），所以 **Haiku 免 API key 就能跑**（Sonnet 同理）。.env 目前 GEMINI 0 把、NVIDIA 6 把、ANTHROPIC 無。
+- **希臘全文翻譯開跑中**：`Start-Process python scripts/greek_overnight.py --engine haiku`（detached，pid 見 log；log `c:/tmp/greek_haiku_overnight.out.log`）。resumable、逐部上架三欄。已完成 philebus/rhetoric/symposium/phaedrus… 續跑 plato+亞里斯多德 25 部。**detached 要用 PowerShell Start-Process**（Bash `&` 會隨 session 被砍）。
+- **下一批 PD 源已抓**（`c:/tmp/cw_sources/` + `_manifest.json`，13 檔）：descartes/spinoza/hume/kant/nietzsche/marx/mill/william-james/freud/durkheim/tylor×2/frazer，全 Gutenberg PD（譯本須 1929 前 PD）。**待接翻譯 pipeline**（仿 mueller_auto：English-first 分節→Haiku→上架）。新補 255 位大宗仍多為 planned 待逐一取源。
+- **文體版面基建（commit 3cb9f8ae）**：user 要「轉錄/翻譯時先判斷文體」，不同文體不同版面。`CwWork` 加 `genre`（CwGenre：dialogue/verse/aphorism/quaestio/treatise/essay/lecture/diary-letters/narrative）。reader `[work].vue` 依 genre 分派：對話錄/問答段首 `〔角色〕內文` → 講者標籤/角色分區（異議→反之→正解→答覆配色）；詩歌保留詩行詩節；格言逐條編號卡；**未標＝通用逐段版面（regression-safe，申辯截圖驗證無破）**。`scripts/genre_classify.py`＝判定 helper（結構啟發式，**hint(manifest/LLM)優先**，純文字易被目錄騙故門檻保守）。**🚨 對話錄講者分行需 ingest 改「逐 speech 為單位」**（現有 Plato 逐 Stephanus 節翻、一節含多講者無法 retrofit）→ 未來 dialogue 收錄走逐 speech；plato_build TEI 有 `<said who>` 可取講者。
+- **文體×版面對照**（user 核可要做的 4 種）：對話錄（講者分行）/詩歌讚歌（詩行詩節逐行對齊）/格言命題（編號卡，斯多噶·伊比鳩魯·維根斯坦小數）/神學大全問答（quaestio 四段）。日記書信·講義·論著較後。
+- **🚨 單一 Max OAuth 帳號一次只能跑一條 Haiku 翻譯線**：2026-07-19 同時跑 greek_overnight＋modern_classics_auto 兩條 Haiku，429 壓力翻倍→greek 撞連環 429＋**401 token 失效**（te 反覆重讀 credentials.json 仍 401）而死；modern solo 則健康。**別並行兩條 Haiku 佇列**（跟舊「別同時跑兩 queue」同源但根因是共享 OAuth rate-limit＋token，非 log/cache 衝突）。兩條都 resumable，續跑跳過已完成。
+- **OAuth token 過夜限制**：`~/.claude/.credentials.json` 的 accessToken 有期效（實測某刻剩 ~7.6h），**靠 Claude Code session 活著才會滾動刷新**；session 結束後 token 到期→翻譯 401 停。過夜要活得靠排程（[[project_fleet_keeper]] KGL_Fleet_Keeper 每 30 分重拉死線）而非一次性 Start-Process。
+- **翻譯品質實測佳（Haiku）**：philebus 希→繁「快樂勝過明智？普羅塔庫斯：是的。蘇格拉底：…」、marx 英→繁「現代工業建立了世界市場，美洲的發現為此鋪平了道路」皆流暢忠實；小瑕＝跨節譯名漂移（斐勒布/菲力布斯），日後 term-sweep 收斂。
+- **✅ 排程 KGL_CW_Translation（每 30 分喚醒，2026-07-19）**：`scripts/cw_translation_supervisor.ps1`＋`install_cw_translation_supervisor.ps1`。**只跑近代經典 modern_classics_auto（Haiku，.done 跳過）**；guard 用 **PID lockfile `c:/tmp/cw_translation.lock`**（排程以 Limited 權限跑，`Get-CimInstance` CommandLine 回 null → CIM 比對 guard 會失效，改 lockfile 才可靠，已實測第二次觸發正確 skip）。AtLogon＋每 N 分重複＋`MultipleInstances IgnoreNew`＋無限執行時間。
+- **🔑 既有翻譯排程盤點**：桌面已有 `KGL_Translation_Supervisor`(Running，跑 `translation_supervisor.py`→plato_build，`--engine auto`＝NVIDIA)＋`KGL_Cloud_Translation_Supervisor`＋`KGL_Fleet_Keeper`＋`MuellerAutoTranscribe`(Disabled)。**希臘(Plato/Aristotle)已被 KGL_Translation_Supervisor 用 NVIDIA cover**→我的 CW 排程不重跑希臘（不同引擎池、不搶 Haiku 額度）。**教訓：新增翻譯排程前先 `Get-ScheduledTask` 盤點既有的，別重複跑同一批。**
+
+**Why:** 全集翻譯跟單本/教父翻譯需求不同（套書、多源、跨版對齊、版權），值得獨立 skill。
+**How to apply:** 接「某全集做多語對照」需求時讀此 skill；先做 reader N 欄基建再上真資料；起手建議用公有領域早期著作驗證三欄。
+
+🚨 2026-08-19：舊名 `deepseek-ai/deepseek-v4-flash`（無 `-0731`）已下架，對所有 key 一律回 **HTTP 410 Gone**。全 repo 49 檔已改名（commit 032c09d8）。日後 NVIDIA 那一層突然失效，先驗模型名還在不在。
+
+## 索引補記
+
+- 案例榮格(版權到2031) + 馬克斯穆勒(宗教學家全集，全公有領域)
+
+## 記憶庫併入：project_weber_collected_works
+
+馬克斯‧韋伯（Max Weber）全集收進 `/collected-works` **宗教社會學**學科（hub slug=`max-weber`，2026-07-18 那批自動骨架已存在：肖像1917PD／9筆年表／書目；2026-07-23 補 sourceNote 與〈政治作為志業〉）。屬 [[project_collected_works_multilang]] 家族。
+
+**引擎＝OpenRouter 免費模型**（8 把 key 在 .env `OPENROUTER_API_Key_1..8`；同帳號額度共用不加倍）。刻意與 Gemini／NVIDIA 主鏈分流，比照 ACCS 不佔 Gemini 額度。⚠️ OpenRouter 免費 vision 模型爛（測過 nemotron 吐日文亂碼、gemma 429）→ 只能做**純文字**，不能 OCR。
+
+**pipeline＝REFERENCE（③）不是自譯**（2026-07-23 使用者拍板）：下載的中譯本**直接轉錄當主欄**、簡體先 opencc→繁、**不重新翻譯**。9 本中譯本已從下載區(C:/Users/user/Downloads)搬進 Drive `知識圖工作室/全集/宗教社會學/韋伯/`、下載區原檔已刪：李中文《以學術/以政治為志業》(epub繁)、韋伯選集(1)學術與政治(繁)、張旺山《方法論文集》(繁)、康樂簡惠美《宗教社會學宗教與世界》(簡)、閻克文《新教倫理》(簡)、韓水法莫茜《社會科學方法論》(簡)、顧忠華《社會學基本概念》(簡)、《社會學基本概念經濟行動》(簡)。
+
+**乾淨英文 PD 來源**（若日後要英繁對照）：Parsons 1930《新教倫理》英譯 2026-01-01 滿95年進美國PD（marxists.org／Wikisource／archive.org 全文）。私人站本就[[feedback_jung_nonpd_english_first]]不限PD。
+
+✅ **圖書館既有韋伯原著已併入全集（2026-07-23 done）**：7 本馬克斯韋伯原著 `ebooks.collection` 已 PATCH 成 `collected-works`（離開圖書館）；hub works 連了 5 本 ebookId+status=done（新教倫理=康樂簡惠美新版 2a9a6c32、中國宗教=中國的宗教宗教與世界 f7733673、印度的宗教 028481d2、學術志業=李猛科學作為天職 424dc120、新增宗教社會學 b89ffe1d）。🚨 **Florence Weber(弗洛朗斯‧韋伯)《人類學簡史》不是馬克斯韋伯**，留圖書館。二手研究（紀登斯/雅思培/施路赫特）作者非韋伯也留圖書館。**2 本重複版留全集未 hub 主列待使用者定刪否**：bfb220d8(新教倫理舊版)、f32548e9(儒教與道教單行)。
+**圖書館搜尋已改跨 collection**（`search.get.ts` 拿掉 `.is(collection,null)`），書名/作者/全文都搜得到全集，結果加「全集」cyan 標籤。`store` ebookId 必須用**未加引號 key** `ebookId:`（backfill regex `test/collected-works/isolation.spec.ts` 只認這格式，用 `"ebookId":` 會 fail）。
+
+**OpenRouter 可用翻譯模型（實測 2026-07-23）**：`nvidia/nemotron-3-ultra-550b-a55b:free`（550B）+ **嚴格 system prompt**（role=translator、只輸出中文）翻 EN→繁中準確。⚠️ super-120b 洩漏思考、gemma 一直 429、直接 user-prompt 給指令會亂答。免費層 ~50 req/日（8key 同帳號共用），衝量要 OpenRouter 儲值 $10 解 1000/日。
+
+**待辦**：REFERENCE 轉錄尚未開始（僅 hub＋來源檔到位）；全 works 仍 status=planned。轉錄走 [[project_collected_works_multilang]] 的 REFERENCE build（`panikkar_build.py` 型 `--src/--zh-src`）。
+
+## 索引補記
+
+- 圖書館另有 11 筆韋伯待議併入
+
+## 記憶庫併入：project_chaohwei_collected_works
+
+2026-09-10 開區。佛學區第五位（`chao-hwei`，rose 🕊️，sortYear 1957），**本區第一個
+「只有紙本掃描本」的來源**——太虛／印順／星雲／聖嚴都有現成數位全文，昭慧法師沒有。
+
+**上游那一整段抽成新 skill `ebook-scan-transcribe`**（三腳本：`scan_prep.py` 拆頁轉正
+／`scan_ocr.py` 逐頁 OCR／`chaohwei_build.py` 頁碼帳＋分章＋入庫），書籍設定集中在
+`scripts/scan_books.py`，新增一本＝加一筆。下游仍走 [[ebook-collected-works]]。
+
+- **✅《心靈的交會：山間對話》**（與彼得‧辛格對談，法界出版 2021，**使用者已取得作者
+  授權**）：13 chunks／11.3 萬字，`c4a01957-…-0001`，`genre:'dialogue'`。
+  印刷頁 1–222 **真缺頁 0**、去掉 2 頁重掃。成品 PDF 253 頁在 Drive
+  `全集\佛學\昭慧法師\`。
+- **⏳《初期唯識思想——瑜伽行派形成之脈絡》**：工作 PDF 已拆好 300 書頁，OCR 待續。
+- hub 另有法界出版社書目 10 種 planned（**該目錄沒有出版年，yearSort 只是排序用**）。
+
+🚨 **這條線的失敗全是「靜默」型**（[[feedback_reader_silent_failures]]）：
+前言頁碼 `c`／`d` 也是羅馬數字 100／500 會讓整章判錯；頁眉黏在正文同一行會讓整頁
+被清理清光而 audit 仍報「沒缺頁」；重複頁只比字數會選到被黑邊吃掉的那一份。
+細節見 skill 的〈看起來成功的失敗〉表。
+
+📄 每一段都掛原書印刷頁碼當 `anchors`（reader 左欄引用號可點擊複製），
+讀不到留空、不拿流水號充數（[[feedback_transcribe_page_numbers]]）。
+**collected-works reader 這次才第一次支援腳註**（`[^4]` 上標＋`[^4]: …` 灰底註文列）。
+
+## 記憶庫併入：project_uchimura_yanaihara
+
+2026-07-16 使用者拍板:**內村鑑三**(1861–1930)與**矢內原忠雄**(1893–1961)兩位日本無教會主義者加入 [[ebook-collected-works]] 的 `/collected-works` portal,**定位是神學家**(`disciplineGroup: '神學'`)——該學科自潘尼卡 2026-07-01 改歸宗教學後一直是空的,他們是開區作家。
+
+**Why:** 使用者的 nonchurch-nuxt 專案即是無教會傳統;矢內原《帝国主義下の台湾》與台灣直接相關。
+
+**How to apply:** slug `uchimura`(emerald ✝️,10 部)/`yanaihara`(blue 🕊️,13 部);版權:內村全球 PD,矢內原日本(卒後50年,2012 起)與台灣 PD、美國 URAA 限 1930 後各卷;日文著作走多語對照(ja+繁中),內村的英文原著(How I Became a Christian、代表的日本人)走 en+繁中。hub 已上線(commit cd7b8867)。case-study md 在 skill 資料夾 uchimura_collected_works.md / yanaihara_collected_works.md。
+
+乾淨來源已盤點:內村青空文庫 11 篇零 OCR+archive.org 兩部英文初版;矢內原起手卷《帝国主義下の台湾》1929 全球 PD、NDL pid 1191101 IIIF manifest 公開(201 コマ)已實證,青空文庫 4 篇。NDL API 有 429 節流(兩次即退)。
+
+2026-07-16 追加拍板:**不只內村+矢內原,無教會主義其他重要人士的重要著作也都收**(藤井武/塚本虎二/黒崎幸吉/南原繁等候選+韓國系金教臣/咸錫憲,金教臣強烈建議收)。日本版權分界:卒於 1967 前→日本 PD,1968 後卒→卒後 70 年(2018 改法不溯及);受版權者照榮格前例收 hub+書目 status=copyright。
+
+## 記憶庫併入：project_husserl_ideas_transcription
+
+2026-09-10 開卷。[[project_western_phenomenology_history]] 第 4–6 章的底本（第 5 章「本質直觀」是全書樞紐）。
+走 **Boyce Gibson 1931 英譯**（archive.org `in.ernet.dli.2015.188260`，472 掃描頁）；胡塞爾 1938 卒、
+譯者 1935 卒，德文原著與英譯都公有領域。ebookId `d0000000-0000-4000-8000-000000000021`，store 已標 in-progress。
+
+**🚨 archive.org 的 `_djvu.txt` 對這批書一律先驗字元再用**：奧托《論「聖」》與胡塞爾兩本實測都是
+**零個希臘字母、零個德文變音字母**。胡塞爾滿篇 ἐποχή／εἶδος／νόησις／Bewußtsein，這種底本餵進翻譯
+引擎，中文看起來正常而內容是編的。德文原著 1913 那版更是**花體字排印**（Husserl→"Huffed"）。
+判準一行：`len(re.findall(r'[Ͱ-Ͽ]', txt))`。
+
+**兩支新工具（可重用，別重造）：**
+- `scripts/archive_djvu.py`（38 例測試）——讀 `_djvu.xml` 逐字座標撈**真印刷頁碼**與註腳。既有的
+  `mueller_auto.fetch_djvu` 讀 `_djvu.txt`，沒頁界沒幾何，只能把書眉頁碼當雜訊丟、page_number 一律 None。
+  奧托 1924 刷實測：直接撈到 74%、遞推後 94%、跳號 0。
+  🚨 五個坑：書眉要 strip 不然黏在每段開頭／OCR 讀錯的頁碼要 repair_folios 打掉再遞推／註腳行距只多三成
+  （門檻 1.35 會整頁漏）／行末連字號要壓過縮排判定／**縮排要有上界 220**（OCR 把一條印刷行拆兩筆時
+  後半截 x0 右移五百以上，沒上界每個碎片都變新段落，中英兩欄整本錯位）。
+- `scripts/husserl_build.py`（23 例測試）——Vision OCR，頁碼與腳註由 Vision 當下標（`[[p N]]`／`[note] `），
+  章首頁沒印就 `[[p ?]]` 不准猜。接進 `uchimura_auto.py --author husserl`。
+
+**🚨 本管線第一號坑：Vision 偶爾整批「一行一段」回**（照排印行斷不照段落斷）。b0017 中位段長 64 字、
+句尾完整率 **6%**；段數多、頁碼齊、頁面完全正常，但每「段」是半句話。`looks_line_broken()` 閘門＋
+升級 prompt 重跑。判準必須「段短」**且**「句尾多半不完整」兩條同時成立——只看段長會誤殺扉頁目錄
+（b0001 中位也 64，但完整率 81%，那是對的）。
+
+**排程 `KGL_Husserl_OCR`**（每 20 分，`scripts/husserl_ocr_keeper.ps1`）：472 頁 / 8 = **59 批**，
+撞 Gemini 免費層配額牆就等下一班接著跑。**59 批全齊會自己 Disable**（[[feedback_disable_finished_schedules]]）。
+OCR 跑完才輪到翻譯：`python scripts/uchimura_auto.py --author husserl --run-queue`。
+
+**其餘現象學原典的取源現況**（2026-09-10 探過）：奧托德英兩版、胡塞爾 LU 1900 德文全開放且有 djvu.xml；
+**范德列烏《宗教的本質與表現》archive.org 是借閱限制**（`access-restricted-item: true`）要另找來源。
+
+## 記憶庫併入：project_aquinas_summa_quaestio
+
+把多瑪斯‧阿奎那《神學大全》（中華道明會譯本 17 冊）做成 `/collected-works` **quaestio 經院問答**全集。作家 hub `thomas-aquinas` 已存在（**哲學**學科），work 帶 `genre:'quaestio'` → reader `[work].vue` 自動四段配色（〔異議〕rose／〔反之〕amber／〔正解〕emerald／〔答覆〕blue）。走 [[ebook-collected-works]] 的 §B9 文體版面 + REFERENCE-first（[[feedback_collected_works_reference_first]]）。
+
+**來源**＝圖書館既有 19 筆 `神學大全 第N冊`（collection=null，OCR 掃描中譯本，各冊 Drive `_chunks/{id}.jsonl` 為**唯讀原始 OCR 源**，別覆蓋）＋一組 3 冊全形括號重複殘檔（`神學大全（第N冊`，author=阿奎那）**待刪去重**。17 冊來源 ebook_id 與集/題範圍列在 `scripts/aquinas_build.py` 的 `REGISTRY`。
+
+**輸出**＝新 collected-works id `a9051225-0000-4000-8000-0000000000NN`（a9≈aquinas、1225生年、NN=冊號1..17），collection='collected-works'。`scripts/aquinas_build.py`（6 純函式測試綠）：讀源→輕量規則清理→`split_articles`（以「有關第N節，我們討論如下」切節）→`mark_zones`（質疑編號→反之→正解我解答如下→釋疑編號 四段注入）→每節一 chunk。
+
+**狀態（2026-09-04）**：**17 冊全數建置完成**，合計 3,006 節 chunk／約 4,784,055 字。
+- 第1冊 論天主一體三位 221 節／第2冊 論天主創造萬物 121／第3冊 論人 213／第4冊 論人的道德行為與情 251／第5冊 論德性與惡習及罪 211／第6冊 論法律與恩寵 133／第7冊 論信德與望德 111／第8冊 論愛德 139／第9冊 論智德與義德 159／第10冊 論義德之諸部分 191／第11冊 論勇德與節德 190／第12冊 論特殊恩寵、生活和身分 100／第13冊 論天主聖言之降生成人 149／第14冊 論基督的生平與救贖 168／第15冊 論聖事總論與聖洗堅振 216／第16冊 論聖體聖事與懺悔 282／第17冊 論肉身復活的問題 151。
+- `fleet_aquinas` 線由 `KGL_Fleet_Keeper` 每 30 分重拉，現在每輪都是「內容未變，略過上傳」＝冪等空跑；要重建某冊得先動源或清 cache。
+- ⏳ 未做：清理成果的人工抽樣核對（保守 prompt 只准修字形，仍該抽查）。
+
+**（歷史）2026-07-23**：pilot 第一冊上架、reader 四段版面截圖驗證、commit `fef7357f`。
+
+**批次設計（待建 `--clean` 模式）**：每冊 raw→切節→**逐節 NVIDIA 保守清理**→re-mark→上架。
+- 引擎＝**NVIDIA deepseek-v4-flash-0731**（`translate_ebook_to_zh` 的 `nvidia_translate`／key 輪換／6s 節流）——**不吃 ACCS 的 Gemini Vision 量能**（不同池）。
+- 🚨 **保守 prompt**：只准修 OCR 字形錯（督貴→督責、皮之→反之、啞益→有益）＋刪跑版頁眉 bleed／頁碼；**嚴禁改寫/增刪句子、嚴禁動神學論證措辭**（教義文本改一字即變義）。清理後抽樣人工核對。清理同時修好被 OCR 打壞的區段標記（皮之→反之）→切段更準（故先清再切，或逐節清後 re-mark）。
+- **resumable**：逐節 cache 到 `c:/tmp/aquinas_clean/{vol}_{art}.txt`；🚨 detached Start-Process 過夜會死（[[project_fleet_keeper]]），要嘛掛排程要嘛靠 cache 重啟續跑。
+- 每冊上架後於 `stores/collectedWorks.ts` `thomas-aquinas` works[] 加該冊（category「神學大全（中華道明會譯本‧共十七冊）」，done+ebookId+`genre:'quaestio'`，🚨 ebookId 未加引號 key）＋`data/collectedWorksIntros.ts` 導讀；跑 `apply-ebooks-quality-collection.mjs` 補標。
+
+**後續佇列（user 定序）**：阿奎那 → 公教會之信仰與倫理教義選集（Denzinger，ebook 568726d3 只 6 大 chunk、拉中擠一塊、多欄+註釋 UI 待評）→ 東方教父文集（4b791a1d，**直排被 OCR 讀反、正文全失**，整本重 OCR，佔 ACCS Vision 量能待排）。
+
+🚨 2026-08-19：舊名 `deepseek-ai/deepseek-v4-flash`（無 `-0731`）已下架，對所有 key 一律回 **HTTP 410 Gone**。全 repo 49 檔已改名（commit 032c09d8）。日後 NVIDIA 那一層突然失效，先驗模型名還在不在。
+
+## 索引補記
+
+- ⏳剩16冊+NVIDIA保守清理過夜(嚴禁改寫教義文字/不吃ACCS量能)
+
+## 記憶庫併入：project_christianity_studies_littleblackbook
+
+**書源「小黑書」** = FB/IG `littleblackbook0000`（聖經研究科普平台，高雄）。**Meta 家 FB/IG 都擋登入牆抓不到貼文**；真正可抓的是它的 **WordPress `littleblackbook0000.wordpress.com`**（每集 Ep# = 一本近代西文聖經學術原著，書名+作者齊全，`/page/N/` 翻頁）＋ YouTube 頻道。要挖它導讀的書一律走 WordPress，別浪費時間爬 FB/IG。
+
+2026-07-23 首輪：撈 25 集 → **libgen.li 逐本實查**（annas-archive 有 JS 指紋擋、libgen.bz 庫小；只 libgen.li 能用），23/25 有電子檔。清單在 `.claude/skills/ebook-collected-works/小黑書_libgen下載清單.txt`。使用者下載後走 `ingest_new_books.py` 進電子圖書館。libgen 域名在此環境 **WebFetch 被擋、curl DNS 也擋**，只能用 **PowerShell `Invoke-WebRequest -UseBasicParsing`**（且別 OutFile 落地：Defender 會把 shadow-library HTML 當病毒攔，要在記憶體處理）。
+
+由此緣起，全集 `/collected-works` **新增傘狀學科「基督宗教研究」**（[[project_collected_works_multilang]] 的一支）：`era` 當三次領域＝新約研究/舊約研究/教會史（`ERA_ORDER` 固定順序、**無 region 地域層**）。40 位新 hub 骨架＋布特曼/哈納克/菲奧倫查從神學遷入＝43 位。全 `planned`/`copyright`、**肖像 portraitUrl 待回填**、著作待 REFERENCE-first 收錄。細節見 collected-works SKILL.md §A（2026-07-23 note）。

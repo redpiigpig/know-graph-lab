@@ -507,3 +507,21 @@ Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.m
 - [scripture-canon](../scripture-canon/SKILL.md) — 教父原典／信條／典外文獻網站，會引用本 skill 翻譯出來的書
 - [`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py) — 核心翻譯腳本
 - [glossary.md](glossary.md) — 教父／聖經書卷／神學術語對照
+
+## 記憶庫併入：project_alignment_gate
+
+翻譯 pipeline 的「逐段對照」品質閘（2026-06-02 建）：`python scripts/scan_translated_book.py <ebook_id> --gate`（或 `--all --gate --json`）列出中英段落數對不齊、需重譯的 chunk。純函式 `scan_translated_book.alignment_gate()` / `paragraph_drift()`（門檻預設 0.25 = T11）。JSONL-only 不需 DB。
+
+根因已修：`translate_ebook_to_zh.py:PROMPT_TMPL` 規則 4 補「段落必須逐一對應，不可合併/拆分」（實測 LLM 會把多個英文段落併成一個中文段落）。**Prompt 修正前翻的舊書需重跑失準 chunk。**
+
+**修復工具**：`scripts/retranslate_drifting_chunks.py <ebook_id> [--dry-run|--no-write|--only 77,79,96]` — 只重譯 gate 標記的失準 chunk（--resume 會 skip 已寫入的，沒別的辦法重做舊書），只換 content 保留 chunk_index/page_number/source_text/chapter_path/title_en，重譯後複測 drift + 寫 JSONL/R2/preview。內建拒碰 vol28。
+
+**重譯結果（2026-06-02～03，Haiku 一輪 + Gemini 一輪，含 keep-only-if-better 守門）**：4 本起始 37 個 prose 失準 chunk → 修好 **11 個**（剩 26）。修好的都是「ZH 段落 ≪ EN」的真實合併災難（vol15 總論 0.956→0.014、vol12 簡介 0.58→0.030、ANF1 chunk96 0.372→0.096、4e3d16fc chunk40/10/14/51 等）。
+
+⚠️ **剩 26 個重譯救不了 — Haiku 跟 Gemini 兩個引擎都試過，幾乎都讓 drift 更糟（系統性過度切段），守門全部擋下保留原譯**。結論：這 26 個不是翻譯品質 bug，是**結構性**的——多為逐節註釋（耶利米書/智慧篇/德訓篇 X:Y，英文 ACCS 每位教父評註各自成段+標籤行，中文合理地合併）與前言/指南頁，drift 多在 0.27–0.45。強行對齊反而扭曲中文。**不要再用 LLM 重譯硬修**（白燒 quota）。要處理只能：(a) 接受現狀（內容沒壞，只這些 chunk 中英欄不完美對齊）、(b) 對逐節註釋型 chunk 放寬門檻、(c) reader 手動修少數重要的。各書剩餘數：ANF1=1(chunk79) / 4e3d16fc=2 / vol12=10 / vol15=13。
+
+Python 測試套件在 `scripts/tests/`（`npm run test:py`），與 Vue 的 vitest 分開；pre-push hook 只跑 vitest。詳見 [[feedback_skill_md_keep_current]]、[[anf_vol1_golden_template]]。
+
+## 索引補記
+
+- prompt 已修根因

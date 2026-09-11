@@ -502,3 +502,34 @@ p = {"q[0].f": "AU", "q[0].i": "鄭仰恩",        # 欄位：* / TI / PTI / AU 
    列表會自動再長出一條「華藝篇目」連結）。
 4. `--toc <slug>` → `--summarize`。
 5. `npx vitest run test/press-airiti.spec.ts`。
+
+## 記憶庫併入：project_airiti_journals
+
+2026-09-04 起：`/research-data/press`（期刊與報紙）新增「基督教期刊」「佛學學報」
+「宗教學期刊」三組共 28 份，篇目全走**華藝線上圖書館**——因為《校園》《新使者》
+這類刊自家網站只有內文，卷期／起訖頁／正式作者署名只有華藝有，而做註腳要的正是這三個。
+管線 `scripts/press_airiti.py`，作法與陷阱全寫在 skill `research-data-airiti`。
+
+- 🚨 **《校園》＝校園書房出版社（校園福音團契）那一份**，1957 創刊、2026-04 停刊。
+  使用者主動糾正過一次，別跟任何校刊搞混。
+- 🚨 **下載額度綁機構 IP**（這台被華藝認成玄奘大學），跑快等於拿全校訂閱在衝，
+  華藝的處置是停整個機構。延遲 6 秒、單次 300 篇上限不要往下調。
+- 🚨 權限掉了會回 HTTP 200 的 JSON 而不是 PDF——屬 [[feedback_reader_silent_failures]] 那一類。
+- **2026-09-04 定調** 先下 300 篇看成品；**2026-09-07 改為每日上限 500**
+  （排程 `KGL_Airiti_Poll` → `run_airiti_batch.ps1 -Batch 100 -DailyCap 500`）。
+  Drive 編排維持「華藝期刊全文\<刊名>\<卷期>\<篇名>.pdf」。
+- 🚨 **排程曾經三重失效，每一種都「看起來正常」**（2026-09-07 一次修掉）：
+  ①觸發器是 Once＋重複，用盡後永不再觸發，唯一徵兆是 NextRunTime 空白；
+  ②`DisallowStartIfOnBatteries` 預設 True，而人在學校時筆電正在用電池——
+  等於這個排程從沒在它唯一有用的時機跑過；③python 跟 cmd 共用主控台，
+  被別人的 CTRL_C_EVENT 帶走，每輪跑一分鐘就以 `^C` 結束而排程回報「成功完成」。
+  修法與判準全在 skill [[research-data-airiti]]。
+- 查無於華藝：《使者》（1963-02 創刊、1990-12 易名《新使者》）、宇宙光、台灣教會公報、
+  基督教論壇報，以及海潮音／菩提樹／獅子吼／人生／香光莊嚴／普門學報／圓光佛學學報／
+  正觀／福嚴。另有美國 AFC 的同名《使者》雜誌，**不同刊**別併成一筆。
+
+相關：[[project_pct_research_data]]、[[project_evangelical_collection]]、[[project_hcu_phd_proposal]]
+
+## 索引補記
+
+- 使用者定調先只下300篇

@@ -149,3 +149,60 @@ Reader UI 開 `/ebook/568726d3-...?page={chunk_index+1}` → 右上 ✏️ 編�
 - 「Denzinger 內文有殘留頁碼」「section header 沒分層」→ stage 6
 - 「Denzinger 沒中譯」「DH N 空白」→ stage 7（rescue）
 - 「Denzinger DH range 不對」「/creeds 重補」→ `_denzinger_to_creeds.py`
+
+## 記憶庫併入：denzinger_fix_skill
+
+`/scripture-denzinger` skill (位於 `.claude/skills/scripture-denzinger/SKILL.md`) 處理《公教會之信仰與倫理教義選集》(ebook_id `568726d3-967e-457a-ab69-7452b21d606f`) 上架後的修正工作。
+
+Trigger phrases 例：「修 Denzinger」「Denzinger 補 OCR」「Denzinger 第 N 頁壞了」「Denzinger DH range 不對」「Denzinger 重 segment」「Denzinger 兩欄拉中沒切開」。
+
+Skill 內涵蓋：
+- Phase 0 audit：`scripts/_denzinger_audit.py` 分類 missing / column-merged / lat-heavy / cjk-heavy / short / ok
+- Phase 1 column-aware re-OCR：`scripts/_denzinger_recolumn_ocr.py` 用 `--- 拉丁文 --- / --- 中譯 ---` divider prompt
+- Phase 2 整合 recolumn 回 main JSONL（待擴充 _denzinger_consolidate.py）
+- Phase 3 重跑 segment → apply（待擴充 segment_denzinger.py 加 divider parser）
+- Phase 4 重補 /creeds（手調 `COUNCIL_DH_RANGES`）
+
+書本路徑與所有工具清單見 SKILL.md。修正歷史紀錄在 [[ebook_pipeline_handoff]]（`.claude/skills/ebook-pipeline/DENZINGER_HANDOFF_2026-05-27.md`）。
+
+## 記憶庫併入：reference_denzinger_chinese
+
+線上**沒有**公開的梵蒂岡第一屆大公會議 (Dei Filius / Pastor Aeternus) 與特利騰大公會議 (1545-63) 任何 dogmatic decree 的全文中譯本（2026-05-22 確認）。
+
+**唯一權威全文中譯**：
+
+  《公教會之信仰與倫理教義選集》
+  原書：Denzinger-Hünermann《Enchiridion Symbolorum》(DH)
+  出版：光啟文化事業（台灣）2013-02-01
+  譯者：輔仁神學著作編譯會
+  ISBN：9789575467418
+  規格：拉中對照、2350 頁、精裝、19.6 × 27.2 cm
+  價格：NT$2,950 (~$95 USD)
+  購買：校園書房 / 基道書樓 / 直接向光啟文化訂購
+
+**重要 DH 編號對照**（user 已 query 過的）：
+- 梵一 Dei Filius：DH 3000-3045
+- 梵一 Pastor Aeternus：DH 3050-3075
+- Trent 各會期：DH 1500-1870 範圍
+
+**何時 useful**：
+- 使用者要補 /creeds 任何梵一／Trent／其他大公會議中文 placeholder
+- 翻譯前要查官方中文標準名稱（如「Dei Filius」→「天主之子」／「Pastor Aeternus」→「永恆司牧」）
+- 引用大公會議定義時要 cite 標準 DH 編號
+
+**已確認 NOT 有的線上來源**（不要再查）：
+- vatican.va 中文版（梵一／Trent 無）
+- Wikipedia 中文／Baidu 百科（只有摘要）
+- 道風基督教文化評論（只有片段引述）
+- cathlinks.org（聲稱有，實際連 EWTN/Hanover 英文）
+- catholic.org.hk / catholic.org.tw / ccreadbible.org（只有梵二中文）
+- 思高聖經學會 site
+- archive.org（無）
+
+未來如使用者要補梵一／Trent 中譯：直接告知「需從《公教會之信仰與倫理教義選集》紙本手抄」，不必再重新查線上。
+
+相關：[[no_set_books_subfolder]] [[traditional_chinese_only]]
+
+## 索引補記
+
+- 唯一權威是光啟文化 2013《公教會之信仰與倫理教義選集》ISBN 9789575467418

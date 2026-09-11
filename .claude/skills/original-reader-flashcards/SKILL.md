@@ -437,3 +437,72 @@ python scripts/build_flashcards.py --deck eng --offset 500 --no-cover \
 4. 版面照抄，不要重算卡高。
 
 相關：[[project_original_reader_flashcards]]、[[project_hebrew_original_reader]]、[[project_latin_original_reader]]、[[feedback_skill_md_keep_current]]
+
+## 記憶庫併入：project_original_reader_flashcards
+
+由讀本詞表產出的五副實體單字卡（希伯來 1000、希臘上下冊各 1000、拉丁上下冊各 1000），比照使用者家教用的《家教單字卡.pdf》規格：A4 橫式、一頁 8 張、正面原文背面中文、雙面列印。
+
+2026-08-26 狀態：**希伯來與希臘三副都是每張有圖、每張有詞性（100%／0 空白）**；拉丁上冊 457、下冊 345 尚待補。各副 252 頁。
+
+- 卡片 74.25×94 mm；**不印裁切線**（使用者指定，線印歪成品邊緣就斜），裁切位置印在封面
+- 背面欄序左右鏡像 4-3-2-1，否則每張卡背的是隔壁的詞義
+- 背面＝插圖＋繁中詞義＋詞性＋課次
+
+🚨 **排高是量出來的不是算出來的**：LibreOffice 保留的垂直空間比宣告邊界多，兩排總高一接近可用高度就把第二排推到下一頁並渲染成空白。10mm 邊界失敗、5mm 可行；97mm 排高失敗、94mm 可行。頁數變兩倍就是踩到這個。
+
+🚨 **卡框圓角半徑 3.75 mm、框色按課次十色輪**（紅橙黃綠藍紫棕粉深灰深綠，第 11 課回到紅）。圓角要用 DrawingML `roundRect` 圖形、錨在**頁面**座標（錨段落或格子會跟著內容高度浮動），`layoutInCell="0"` 不可少。
+
+🚨 **第二層圖庫**（`iconify_card_images.py`）：OpenMoji 概念不夠，重複率高，「跟不相干的詞共用一張圖」的卡改配 game-icons／Phosphor／MDI／Tabler（Iconify API 一次抓整份清單本機比對）。**自動配的必須人工逐張看過**——首批 328 張有 81 張錯（mdi:iron 是熨斗、ph:alien 是外星人、ph:command 是 ⌘），刷掉的記在 `icon-rejects.json`。三語不同的圖 1,360 → 1,601。
+
+🚨 **每張卡都要有框**（2026-08-27，比照桌面《家教單字卡.pdf》）：緋紅 #ED0A3F、線寬 2.12 mm、正反面都有。本專案卡與卡之間沒有空隙，所以框往內縮 3 mm，裁歪只會讓白邊不等寬。框是「卡片格裡再放一張單格表」，內外兩層表格都要鎖寬、外層格子邊距要歸零（否則第二排下移壓過裁切線）。五副規格統一。
+
+🚨 **希伯來字頭曾整副印成 11 pt**：python-docx 的 `font.size` 只寫 `w:sz`，RTL 複合語系吃的是 `w:szCs`，沒設就用樣式預設值，宣告 54 pt 也沒用且不報錯。字級也不能按碼點數縮（母音點各算一個碼點），改用 PIL 量實際字寬，上限 54 mm 是試出來的。
+
+🚨 **希伯來名詞卡印到性別**（名詞‧陽性／陰性／陰陽性），重複的字形再加複數／雙數／附屬形。性別看不出字尾（אֶ֫רֶץ、עִיר、יָד 都是陰性），一律讀 OSHB 逐詞標註（`scripts/hebrew_card_grammar.py`），查無標註就留白。
+
+🚨 **配圖寧缺勿濫**：只比對 emoji 本名、不比對標籤欄。用標籤有 72% 命中率但把「房屋」配成盆栽、「道路」配成爆炸頭。印在紙上的錯圖會教錯義項。
+
+使用者定調：**每張都該有圖**（不然線上背就好，實體卡才有價值）；聖名 יְהוָה **用與 אֱלֹהִים 相同的「上帝」圖**，不用大衛之星或燭台（那是後起猶太教符號）。
+
+🚨 **OpenMoji 的名字不等於圖，一定要排 contact sheet 看過**：`wedding` 是帶十字架的教堂、`tap` 是手指點擊、`assembly group` 是大人牽小孩、`emergency exit door` 是人往外跑（配「領進」教反）、`ogre` 是日本的鬼、`passport control` 是查證件的官員、`bellhop bell` 是餐廳送餐鈴。另有**根本沒圖的名字**：`white square`(U+25A1) 的檔案是粉紅色缺字佔位框，可用雜湊比對揪出。
+
+🚨 **重複圖的界線**：同詞根／同義詞共用一張圖是好事，語意相對的兩張卡共用就是教錯（公義↔不義不可共用天平、禁食不可跟「吃」共用刀叉、無身體的不可跟惡魔共用鬼魂）。每輪補完按圖分組把共用同一張的詞義讀一遍。
+
+**希臘詞性**（希伯來與拉丁的詞表自帶詞性，希臘沒有）：強證據優先——手列虛詞→詞典形（冠詞＝名詞、三詞尾＝形容詞、第一人稱＝動詞）→**SBLGNT 逐詞標註**（新約用過的詞就是標註過的事實，一舉補掉 603 張）→中文詞義線索→116 個七十士與教父專有詞的人工表。副詞規則要收得下帶重音的字尾（καλῶς）。
+
+已排除的圖源：Canva（授權不涵蓋批次匯出再製教材）、AI 生圖（免費層生不出來）、Openclipart（JSON API 已死）。若日後有付費 Gemini key，那是換掉 emoji 風格的最佳路徑。
+
+**附錄卡三副**（2026-08-27 新增，接在課內詞卡後面）：`hbo-appendix` 255 張、`grc-appendix` 511 張、`lat-appendix` 745 張。收的是讀本後面那幾張參考表——專名（九類）、數字與度量衡、親屬稱謂、曆法與月份、教會職分——使用者當初列的就是「國名、數字、月份、門徒與聖人、君王、親屬稱謂」，是整組附錄不只人名。與課內詞卡的差別只有三處：框色與下緣印**分節**不印課次（走 `colorKey`／`footer` 兩個欄位，詞卡不給就退回課次）、**不配圖**（人名地名數字沒有誠實的 emoji）。沒有繁中的一律不收並報數。
+
+🚨 **希伯來數字表存的是陽性／陰性一對詞形**，沒有單一 `pointed`。各出一張卡並在中文面標「（陽性）」「（陰性）」；合成一張會逼人同時背兩個形。新語言的數字表都要先看是不是這種結構。
+
+🚨 拉丁兩張表**刻意不收**：〈動詞主要部分〉841 條是查變化的形態表、會跟課內動詞卡整批重複；〈近現代教廷拉丁〉400 條全無中文且混進 `Psal`／`Latine`／`Cardinalis` 這類縮寫與普通名詞，要修的是那張表本身。
+
+**How to apply:** 方法寫成 skill `/original-reader-flashcards`（.claude/skills/original-reader-flashcards/SKILL.md）；逐副現況與歷史在 `skills/build-original-language-reader/references/flashcard-decks.md`。動卡片前先讀這兩份。看候選圖用 `scripts/flashcard_contact_sheet.py`。`match_*_card_images.py --write` 再 `build_flashcards.py --deck hbo|grc1|grc2|lat1|lat2|hbo-appendix|grc-appendix|lat-appendix`。五副共用一套中文詞義互相沿用，所以**希臘補滿之後拉丁再跑一次會自己漲**。相關見 [[project_hebrew_original_reader]]、[[project_latin_original_reader]]、[[project_greek_original_reader]]。
+
+**索引壓縮時移入（2026-09-11）：**
+- 聖名用上帝圖
+
+## 索引補記
+
+- **希伯來與希臘三副已 100% 有圖、0 張缺詞性**，拉丁待補
+
+## 記憶庫併入：feedback_original_readers_unified_layout
+
+使用者 2026-08-26：「三本讀本要做到版面統一，現在很多版面和封面都還不統一，**以希伯來文的為準**，然後字體的大小也要類似，然後**每一課的一章讀物要換頁**，**各大標題和小標題的字體不能小於正文**。」
+
+**Why:** 三本並排時要看得出是同一套書；而希臘那本把 8.2 pt 的全大寫眉標（`add_label`）當成「生詞／背誦／讀文」的章節標題用，比 11.5 pt 的正文還小，翻起來找不到段落起點。
+
+**How to apply:**
+- 標準在 `scripts/build_hebrew_full_reader.py`：字級 title 24／H1 17／H2 14／H3 12.5／正文 11.5／表格 9.6／眉標 8.2。章節標題一律走 `document.add_heading(level=…)`，不要自畫粗體段落——順便讓 PDF 有目錄書籤。眉標只用在標題**上面**那一行，不能拿來當標題。
+- 封面：深色橫幅表格＋金色 `ORIGINAL-LANGUAGE READER` 眉標＋書名 25 pt＋一行原文題辭，接冊別、金線、`JIS B5 182 × 257 mm · 私人研讀`。
+- 每課開頭：眉標（`page_break_before=True`）→ 第 NN 課 → Heading 1 課題 → 金線。
+- **讀物那一節自己 `page_break()`**，寫在讀物函式裡而不是呼叫端，這樣沒有人會忘。
+- 附錄按類分節印，次序取 `scripts/proper_name_categories.py` 的 `PRINT_ORDER`，紙本／網頁／單字卡三處同一個次序。
+- 改完一定跑 `python scripts/render_and_check_reader_pdfs.py`：轉 PDF 後查頁面尺寸、字型內嵌、U+FFFD 與空白頁。□ U+25A1 是希伯來那本「完成本課」的打勾框，不是缺字。
+
+相關：[[project_hebrew_original_reader]]、[[project_greek_original_reader]]、[[project_latin_original_reader]]、[[project_original_reader_flashcards]]。
+
+## 索引補記
+
+- 深色橫幅封面

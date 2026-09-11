@@ -287,3 +287,36 @@ Malaty《Introduction to the Coptic Orthodox Church》、《漢語景教文典�
 上游是雜誌那邊的編輯流程（nonchurch-nuxt）。譯名走 [[translation-glossary]]，缺書走
 [[ebook-zlib-harvest]]。第4、6 章談普世運動處與 [[scripture-canon]] 的 `/creeds`
 （21 次大公會議、各教會信經）有重疊，成書時可互相引用。
+
+## 記憶庫併入：project_christian_genealogy_book
+
+把《無境界者》連載的〈基督宗教譜系學〉五卷合成一本書，2026-09-08 建卡並全部組進
+`/works/christian-genealogy`（`writing_projects` slug `christian-genealogy`，kind=book）。
+
+**卷序是 〇一二三四，不是刊登序**（刊登序 5→7→10→11→12 期，卷〇最晚寫卻擺最前）：
+
+| 卷 | 篇名 | 期 | 章 | 註 |
+|---|---|---|---|---|
+| 〇 | 從使徒到大公 | 12（未刊） | 11 | 35 |
+| 一 | 尼西亞基督教的形成 | 5（2025.10 頁55-72） | 7 | 10 |
+| 二 | 基督宗教的七個大公傳統 | 7（2026.02 頁212-229） | 6 | 11 |
+| 三 | 基督新教的八大宗派系統 | 10（未刊） | 14 | 29 |
+| 四 | 從宗派到陣營 | 11（未刊） | 9 | 15 |
+
+🚨 **卷四在 DB 裡的副標誤植為「初探（五）」**，沒有第五卷（使用者 2026-09-08 確認 11-6
+就是卷四）。🚨 **第8期的番外篇〈主教制的歷史演變與教會的大公性〉不收入本書。**
+
+🚨 **正本在無境界者網站的 Supabase `articles`（`content` 乾淨 HTML＋`footnotes` 結構化），
+不要走 Drive 的 docx**——docx 是雜誌排版稿，正文混圖框錨點、標題只能靠「粗體14pt」猜、
+註腳要自己挖 XML；而且卷〇卷三卷四**根本沒有 docx**，第10-12 期只存在於 DB。
+
+管線與陷阱全文在 skill `works-christian-genealogy`；建置 `scripts/christian_genealogy_build.py`
+（`--check` 驗註腳斷鏈／孤兒／未產圖，`--cache` 免連線重建）。缺的理論書（紐曼、特爾慈、
+尼布爾、普世運動史、BEM）已建 `data/zlib-wanted/denominational-genealogy.jsonl` 26 筆。
+
+⏳ 待辦：卷四篇幅只有別卷三分之一（承擔結論位置）、卷〇與卷一前言重疊（導論該上移）、
+四階段模型只用基督宗教證明過、術語與譯名要全書統一、卷三 11 張圖未產。
+相關 [[project_mukyokai_collection]]、[[feedback_concurrent_session_commit_sweep]]。
+
+**索引壓縮時移入（2026-09-11）：**
+- 卷四篇幅只有別卷1/3
