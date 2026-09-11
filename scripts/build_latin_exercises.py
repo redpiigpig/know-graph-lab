@@ -9,8 +9,8 @@ with -- the same division of labour the Hebrew miner arrived at.
 
 A candidate is a whole verse of the Clementine Vulgate, or a clause cut out of
 one at the punctuation the edition printed; for the lower volume it is a clause
-of one of the fifty church readings, whose Chinese the reading already carries.
-Nothing is cut anywhere except where the text itself stops.
+of one of the fifty church readings.  Nothing is cut anywhere except where the
+text itself stops.
 
 The bar for printing a sentence is the same bar the composed sentences must
 clear, and it is enforced by the same code: ``compose_latin_sentences`` decides
@@ -18,9 +18,13 @@ what counts as attested, what counts as taught and where an enclitic is.  If
 the two gates ever disagreed, half a lesson would be held to one standard and
 half to another.
 
-What a mined item never gets here is a Chinese answer of its own invention.
-A whole verse takes the 思高 rendering of that verse; a clause records which
-verse or which reading block answers it, and the assembler prints the whole.
+An exercise carries no Chinese at all.  The owner's ruling of 2026-09-11 is
+that the point of the exercise is for the learner to translate it, so only the
+reading -- the worked model -- prints a translation.  What each item does carry
+is ``answerKeyRef``: where the sentence came from, precise enough that a future
+answer key can go and fetch the published rendering.  Recording where the
+answer is and never the answer itself also means this file cannot ship one
+edition's wording into a page that is supposed to be blank.
 """
 from __future__ import annotations
 
@@ -49,12 +53,12 @@ from compose_latin_sentences import Corpus, corpora_for, word_reading  # noqa: E
 
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 OUTPUT_FILE = CACHE / "exercises.json"
-SIGAO = CACHE / "sigao-zh.json"
-SIGAO_EXTRA = CACHE / "sigao-extra-chapters.json"
 
 # The miner supplies anchors, not a whole lesson: three are printed and the
 # spec's other seven are the author's.  Offering six leaves the assembler room
-# to refuse the ones with no Chinese.
+# to refuse the ones it does not want.  Where the corpus cannot yield three --
+# lesson one of the upper volume has one verb among its twenty words -- the
+# lesson says so and the author writes all ten.
 CANDIDATES_PER_LESSON = 6
 MIN_WORDS = 3
 MAX_WORDS = 8
@@ -112,16 +116,23 @@ def first_taught_index(
     key_entries: dict[str, set[tuple[int, int]]] = defaultdict(set)
     for entry in entries:
         stamp = (entry.volume, entry.lesson)
+        # Availability is asked of every lemma the headword could wear; credit
+        # is given only for the ones that are this word.  `missa` makes the
+        # participle of `mitto` readable from the lesson that teaches 彌撒 --
+        # it is on the page, spelled that way -- but a sentence using `misit`
+        # has not practised 彌撒.
         for lemma in entry.lemmas:
             if stamp < lemma_first.get(lemma, NEVER):
                 lemma_first[lemma] = stamp
+        for lemma in entry.credit_lemmas:
             lemma_entries[lemma].add(entry.key)
         for key in entry.form_keys:
             if stamp < key_first.get(key, NEVER):
                 key_first[key] = stamp
-            if not getattr(entry, "phrase", False):
-                # A phrase entry is never credited by one of its words; the
-                # composed items reach those, checked whole in `practised`.
+        if not entry.phrase:
+            # A phrase entry is never credited by one of its words; the
+            # composed items reach those, checked whole in `practised`.
+            for key in entry.credit_keys:
                 key_entries[key].add(entry.key)
     return lemma_first, key_first, lemma_entries, key_entries
 
@@ -248,34 +259,6 @@ def load_units(corpus_name: str) -> list[Unit]:
     return units
 
 
-def sigao_index() -> dict[str, dict[int, str]]:
-    """``{'MAT.5': {1: '耶穌一見群眾…'}}`` from both 思高 caches.
-
-    Keyed by the *Latin* chapter, because that is what a Vulgate reference
-    gives.  The psalms are the one place the two numbering systems part ways,
-    and only the forty chapters in ``sigao-zh.json`` record the correspondence;
-    a psalm outside those forty gets no Chinese here rather than a verse from
-    the neighbouring psalm.
-    """
-    index: dict[str, dict[int, str]] = {}
-    data = json.loads(SIGAO.read_text(encoding="utf-8"))
-    for chapter in data["chapters"]:
-        key = f"{chapter['book']}.{chapter['latinChapter']}"
-        index[key] = {row["verse"]: row["text"] for row in chapter["verses"]}
-    if SIGAO_EXTRA.exists():
-        extra = json.loads(SIGAO_EXTRA.read_text(encoding="utf-8"))
-        for key, chapter in extra.items():
-            if key.startswith("PSA."):
-                continue
-            index.setdefault(key, {row["verse"]: row["text"] for row in chapter["verses"]})
-    return index
-
-
-def church_chinese() -> dict[str, str]:
-    payload = json.loads(CORPUS_FILES["church"].read_text(encoding="utf-8"))
-    return {row["id"]: row.get("chinese", "") for row in payload["units"]}
-
-
 # ---------------------------------------------------------------------------
 # selection
 # ---------------------------------------------------------------------------
@@ -284,9 +267,15 @@ def select(
     candidates: list[tuple[Unit, set[tuple[int, int]]]],
     lesson_keys: set[tuple[int, int]],
     used_refs: set[str],
-    with_chinese,
 ) -> list[tuple[Unit, set[tuple[int, int]]]]:
-    """Greedy: widest coverage first, shortest next, answerable ahead of not."""
+    """Greedy: widest coverage first, whole verses next, then shortest.
+
+    Whether a published Chinese rendering happens to exist used to be the
+    second key.  It no longer is: exercises print no Chinese, so ranking on it
+    was ranking on something the page never shows -- and it was quietly
+    preferring the forty chapters that had been fetched over better sentences
+    from the other 1,300.
+    """
     pool = [row for row in candidates if row[0].ref not in used_refs and row[1] & lesson_keys]
     chosen: list[tuple[Unit, set[tuple[int, int]]]] = []
     remaining = set(lesson_keys)
@@ -296,7 +285,6 @@ def select(
         pool.sort(
             key=lambda row: (
                 -len(row[1] & remaining),
-                0 if with_chinese(row[0]) else 1,
                 0 if row[0].kind == "verse" else 1,
                 row[0].word_count,
                 row[0].uid,
@@ -386,18 +374,11 @@ def main() -> None:
         f"{reason} {count}" for reason, count in rejected.most_common()
     ))
 
-    chinese = sigao_index() if volume == 1 else {}
-    blocks = church_chinese() if volume == 2 else {}
-
-    def answerable(unit: Unit) -> bool:
-        if volume == 2:
-            return bool(blocks.get(block_id(unit)))
-        return unit.verse in chinese.get(f"{unit.book}.{unit.chapter}", {})
-
     lessons_out: list[dict[str, Any]] = []
     used_refs: set[str] = set()
     available: list[tuple[Unit, set[tuple[int, int]]]] = []
     short: list[int] = []
+    no_anchor_note = "本課無可用經典原句，十題全由自撰題補"
     for lesson in range(1, 51):
         if args.lesson and lesson != args.lesson:
             continue
@@ -405,22 +386,10 @@ def main() -> None:
                      if stamp <= (volume, lesson) for row in rows]
         lesson_keys = {entry.key for entry in entries
                        if entry.volume == volume and entry.lesson == lesson}
-        chosen = select(available, lesson_keys, used_refs, answerable)
+        chosen = select(available, lesson_keys, used_refs)
         items: list[dict[str, Any]] = []
         for number, (unit, hits) in enumerate(chosen, start=1):
             used_refs.add(unit.ref)
-            answer = None
-            scope = "pending"
-            if volume == 1:
-                verse_zh = chinese.get(f"{unit.book}.{unit.chapter}", {}).get(unit.verse)
-                if verse_zh and unit.kind == "verse":
-                    answer, scope = verse_zh, "verse"
-                elif verse_zh:
-                    answer, scope = None, "verse-containing-clause"
-            else:
-                block_zh = blocks.get(block_id(unit))
-                if block_zh:
-                    answer, scope = None, "block-containing-clause"
             items.append(
                 {
                     "no": number,
@@ -434,11 +403,13 @@ def main() -> None:
                         entry.public_record() for entry in entries
                         if entry.key in (hits & lesson_keys)
                     ],
-                    "chinese": answer,
-                    "chineseSource": "思高譯本（思高聖經學會網上版）" if answer else "",
-                    "translationRef": unit.source if volume == 1 else block_id(unit),
-                    "translationScope": scope,
-                    "answerStatus": "ready" if answer else "pending_chinese",
+                    # Where a published rendering would be looked up, if an
+                    # answer key is ever made.  Not a translation, and not a
+                    # promise that one exists.
+                    "answerKeyRef": unit.source if volume == 1 else block_id(unit),
+                    "answerKeyScope": "verse" if unit.kind == "verse" else (
+                        "verse-containing-clause" if volume == 1
+                        else "block-containing-clause"),
                 }
             )
         if len(items) < 3:
@@ -448,6 +419,7 @@ def main() -> None:
                 "lesson": lesson,
                 "id": f"lat-v{volume}-lesson-{lesson:02d}",
                 "anchors": items,
+                "note": no_anchor_note if len(items) < 3 else "",
                 "coverage": {
                     "lessonWords": len(lesson_keys),
                     "reachedByAnchors": len({
@@ -460,11 +432,9 @@ def main() -> None:
         )
 
     total = sum(len(row["anchors"]) for row in lessons_out)
-    ready = sum(1 for row in lessons_out for item in row["anchors"]
-                if item["answerStatus"] == "ready")
-    print(f"挖到 {total} 題 / {len(lessons_out)} 課；已有中譯 {ready} 題")
+    print(f"挖到 {total} 題 / {len(lessons_out)} 課")
     if short:
-        print(f"不足三題引用的課：{short}")
+        print(f"不足三題引用、需以自撰題補滿的課：{short}")
 
     payload = {
         "schemaVersion": "1.0.0",
@@ -478,7 +448,9 @@ def main() -> None:
             "role": "十題中的三題引用；其餘七題由作者自撰，機器閘同一套。",
             "composition": "none",
             "unknownWords": "不允許：題目每個詞都須已教過（含附錄專名／數字／親屬／曆法）。",
-            "chinese": "整節取思高譯本；子句只記出處，由組裝腳本印全節。",
+            "chinese": "練習題不附中文（擁有者 2026-09-11 裁定）；中譯只給讀物。"
+                       "answerKeyRef 只記出處，供日後編解答本用。",
+            "shortLessons": "定錨不足三題者以自撰題補滿十題，該課註明無可用經典原句。",
         },
         "corpus": {
             "attestation": corpora_for(volume),
@@ -487,7 +459,6 @@ def main() -> None:
         "counts": {
             "lessons": len(lessons_out),
             "anchors": total,
-            "withChinese": ready,
             "lessonsShortOfThree": short,
         },
         "lessons": lessons_out,

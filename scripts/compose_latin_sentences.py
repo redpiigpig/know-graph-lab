@@ -179,10 +179,14 @@ def practised(
     """Gate three: which of the lesson's twenty words the set actually uses.
 
     A word counts as practised when a sentence carries one of its lemmas, or --
-    for the forty-seven entries no treebank lemma fits, the phrases and the
-    Greek liturgical loans such as ``Kyrie eléison`` -- when the written form
-    itself appears.  Counting those by lemma would mark them permanently
+    for the entries no treebank lemma fits, the phrases and the Greek
+    liturgical loans such as ``Kyrie eléison`` -- when the written form itself
+    appears.  Counting those by lemma would mark them permanently
     unpractisable.
+
+    "One of its lemmas" means one that folds to the headword.  ``missa`` is
+    also how ``mitto`` writes a participle, and without that restriction
+    ``et misit in terram`` practises 彌撒.
     """
     seen_lemmas: set[str] = set()
     seen_keys: set[str] = set()
@@ -195,11 +199,11 @@ def practised(
     for entry in targets:
         if getattr(entry, "phrase", False):
             # A phrase is practised only when all of it is there.
-            if entry.form_keys <= seen_keys:
-                hits[entry.ordinal] = sorted(entry.form_keys)
+            if entry.credit_keys <= seen_keys:
+                hits[entry.ordinal] = sorted(entry.credit_keys)
             continue
-        by_lemma = sorted(entry.lemmas & seen_lemmas)
-        by_form = sorted(entry.form_keys & seen_keys)
+        by_lemma = sorted(entry.credit_lemmas & seen_lemmas)
+        by_form = sorted(entry.credit_keys & seen_keys)
         if by_lemma or by_form:
             hits[entry.ordinal] = by_lemma or by_form
     return hits

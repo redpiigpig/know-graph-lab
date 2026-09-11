@@ -14,10 +14,12 @@
 | 生字 | **零**。題目中每個詞都必須是本課或先前課次教過的。不用腳註補生字 |
 | 長度 | 三到八個詞，短句優先；課次越前面越短 |
 | 語域 | 只能用經典本身的詞與世界觀，不得出現該經典世界以外的事物 |
-| 中文 | 引用題取既有譯本；自撰題由作者自己寫 |
+| 中文 | **練習題不印中文**（2026-09-11 擁有者改定）。題目的目的就是讓學習者自己翻，中譯只有「範文」也就是每課讀物才給。原先「引用題取既有譯本」那條作廢 |
+| 湊不滿 | 定錨不足三題時**用自撰題補滿十題**，該課註明「本課無可用經典原句」，不視為失敗 |
 
 自撰為主是擁有者的決定，理由是純引用填不滿生字表：實測希伯來全五十課，
 純原句只能覆蓋 71.6%，且第 1、2、3、4、7 課連十題都湊不滿。
+拉丁上冊第 1 課更極端：二十詞裡只有 `flectō` 一個動詞，整部武加大挖不出一句三到八詞、每個詞都已教過又有謂語的句子，所以那一課定錨掛零。
 
 ## 三種出題法，只有兩種可用
 
@@ -62,7 +64,7 @@
 | 通用希臘文 上冊 | SBLGNT（morphgnt，金標）＋七十士 Swete | 新約已接；**七十士需先建詞位索引**（上冊詞彙半數屬七十士） |
 | 通用希臘文 下冊 | 教父與教會文獻 | **需先建詞位索引** |
 | 教會拉丁文 | UD_Latin-PROIEL（耶柔米武加大，金標）＋ latVUC；下冊另加 ITTB／LLCT | 已接好。`scripts/build_latin_lemma_corpus.py --write` 先標出 `lemma-corpus-{vulgate,church}.json`（每個 token 記明詞位是金標／字形表／不確定哪一層給的），`scripts/compose_latin_sentences.py --lesson N --volume V --check FILE` 是閘 |
-| 日文 | aozora ＋ 文語訳聖書 ＋ 萬葉集，fugashi＋unidic-lite 斷詞 | **已接好**：`scripts/build_japanese_lemma_corpus.py` 產 `lemma-corpus.json`（1,761 篇、14,598,269 詞素、116,681 個基本形），閘是 `scripts/compose_japanese_sentences.py --lesson N --check FILE`，挖句器 `scripts/build_japanese_exercises.py` |
+| 日文 | aozora ＋ 文語訳聖書 ＋ 萬葉集，fugashi＋unidic-lite 斷詞 | **已接好**：`scripts/build_japanese_lemma_corpus.py` 產 `lemma-corpus.json`（1,760 篇、14,597,209 詞素、116,672 個基本形），閘是 `scripts/compose_japanese_sentences.py --lesson N --check FILE`，挖句器 `scripts/build_japanese_exercises.py` |
 
 日文是現代語，不套古語規則。
 
@@ -83,6 +85,24 @@
    課本的多詞素詞條（一緒に、いつも、それから、サッカーを します）要整串比對，
    逐個 token 查一定判成未教過。
 
+### 日文的兩條 owner 裁定（2026-09-11）
+
+1. **練習題不附中文。** 練習題就是要學習者自己翻譯，題目只印日文原文；中文只有
+   每課的**範文（讀物）**才需要。上表「中文」那一列（引用題取既有譯本）對日文
+   不適用，`chinese` 與 `chineseSource` 留空即是完成狀態。
+   ⚠️ `validate_reader_exercises.py` 仍照舊規則檢查「中文欄不得為空」與
+   「quoted 必附 chineseSource」，日文跑那支會報這兩項；該檔四本共用，未動。
+2. **定錨不足時用自撰題補滿十題**，該課註明「本課無可用經典原句」，不放寬詞表
+   限制硬湊。文語那半（第三、四冊）因此是自撰題為主——它的語料（文語訳聖書、
+   萬葉集）用詞幾乎都不在《大家的日本語》的現代語詞表裡，只供得出 17 句與 3 句。
+
+### 日文的語體閘（2026-09-11）
+
+🚨 `bible_以賽亞書_001.txt` 掛著「文語訳・公有領域」卻是現代語譯本（仍在著作權內），
+同卷第 2 章才是明治元訳。判準寫成純函式 `classify_register()`、兩個方向都有測試、
+掃全庫 492 份，違規 1 份，已排除並改寫 manifest 的權利註記。詳見
+`japanese-reader-contract.md` 的〈翻譯練習：交接〉第四節。
+
 ## 產物 schema
 
 ```json
@@ -98,8 +118,7 @@
       "kind": "quoted",
       "ref": "Gen.18.21",
       "text": "…",
-      "chinese": "…",
-      "chineseSource": "和合本修訂版（2010）",
+      "answerKeyRef": "Gen.18.21",
       "targetWords": [{"pointed": "…", "strongs": ["H…"]}],
       "verification": {"unattested": [], "untaught": [], "passed": true},
       "reviewedBy": "author"
@@ -109,9 +128,13 @@
 }
 ```
 
-`kind: "quoted"` 必附 `ref` 與 `chineseSource`；`kind: "composed"` 的 `chinese`
-由作者撰寫，`chineseSource` 留空，且 `reviewedBy` 必須是 `author`——
+`kind: "quoted"` 必附 `ref`；`kind: "composed"` 的 `reviewedBy` 必須是 `author`——
 模型寫的草稿沒有作者逐句看過，不得標成已複核。
+
+`chinese`／`chineseSource` 自 2026-09-11 起**不再是必填**，題目也不印。
+引用題改記 `answerKeyRef`（出處精確到節或段），將來若要編書末解答本，
+拿這個去抓既有譯本即可；記出處而不記譯文，也保證這一層不會把某個版本的
+中文漏進一頁本來就該空白的練習。
 
 ## 驗證閘
 
@@ -123,7 +146,8 @@
 - 每題 `verification.passed` 為真
 - 每題 `unattested` 與 `untaught` 都是空的
 - `composed` 題的 `reviewedBy` 必須是 `author`
-- 中文欄不得為空、不得含原文字符
+- ~~中文欄不得為空、不得含原文字符~~ —— 2026-09-11 作廢（練習題不附中文）。
+  ⚠️ `scripts/validate_reader_exercises.py` 目前仍在跑這一條，要一併拿掉，  否則新規格的產物會整批紅。
 
 ## 已知的坑
 
@@ -141,6 +165,18 @@
   單一個 `in` 記帳，二十詞涵蓋這道閘就形同虛設。片語要整組到齊才算。
 - **同形異詞**：撒上 4:18 的 `וְכָבֵד` 是形容詞 H3515，與第 13 課要練的動詞
   `כָּבֵד` H3513 不是同一個詞。用字形比對會放過，用 Strong 比對才擋得下。
+- **拉丁版同形異詞會從「涵蓋」那一頭漏**：沒有 Strong 碼，詞位只能查形表，
+  而一個字形常掛兩個詞位——`missa` 既是彌撒也是 `mitto` 的陰性完成分詞，
+  於是 `et misit in terram`（他差遣到地上）把「彌撒」記成練到了；`festum`
+  被人名 `Festus`（非斯都）記到，`praeceptum` 被動詞 `praecipio` 記到，
+  `nōn` 被 `nonnullus` 記到。三道閘全綠，錯的是帳。判準：**詞位折疊後必須
+  等於詞條 headword 本身**才算練到；派生、詞源、專名一律不算，但
+  `Angelus`→`angelus`、`Dominus`→`dominus` 這種大小寫變體要留。
+  實測上冊「練到的詞次」因此從 535 降到 417，降的全是本來就不該算的。
+- **詞表的文法縮寫別當成詞**：`ēlēctus, -a, -um` 的 `-a`、`liturgia,
+  liturgiae, f.` 的 `f.` 若進了比對鍵，`contrītus` 會解到 `ad`／`hic`、
+  `liturgia` 會解到一個叫 `f` 的詞位。開頭是連字號的是字尾，
+  `forms` 欄裡的單字母是縮寫，兩種都不是詞。
 - **引擎吐不出 JSON**：NVIDIA 那層對這類要結構化輸出的任務回的是推理散文，
   `--engine auto` 常拿到 0 句。要結構化輸出時明確指定引擎。
 - **重音符號不可搬家**：馬所拉重音標的是該詞在**它自己那一節**裡的位置，

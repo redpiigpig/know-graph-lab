@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 from typing import Any, Iterable
@@ -25,14 +24,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 ITEMS_PER_LESSON = 10
 MIN_QUOTED_PER_LESSON = 3
-# Scripts the exercise text is written in; Chinese answers must not contain them.
-FOREIGN_SCRIPT_RE = re.compile(
-    r"[֐-׿Ͱ-Ͽἀ-῿぀-ヿ]"
-)
-LATIN_WORD_RE = re.compile(r"[A-Za-z]{2,}")
 
 
-def failures_for_item(item: dict[str, Any], *, language: str) -> list[str]:
+def failures_for_item(item: dict[str, Any]) -> list[str]:
     """Every rule an individual exercise has to satisfy."""
     problems: list[str] = []
     number = item.get("no", "?")
@@ -41,18 +35,17 @@ def failures_for_item(item: dict[str, Any], *, language: str) -> list[str]:
         problems.append(f"第 {number} 題 kind 是 {kind!r}，只能是 quoted 或 composed")
     if not (item.get("text") or "").strip():
         problems.append(f"第 {number} 題沒有原文")
-    chinese = (item.get("chinese") or "").strip()
-    if not chinese:
-        problems.append(f"第 {number} 題沒有中文")
-    elif FOREIGN_SCRIPT_RE.search(chinese):
-        problems.append(f"第 {number} 題的中文裡混進了原文字符")
-    elif language != "ja" and LATIN_WORD_RE.search(chinese):
-        problems.append(f"第 {number} 題的中文裡有拉丁字母的詞")
+    # A translation printed beside the exercise would answer it.  The Chinese
+    # belongs to the reading, which is the model text; the exercise is the part
+    # the learner does.  Only the reference is kept, so an answer booklet can be
+    # set later from the published translation.
+    if (item.get("chinese") or "").strip():
+        problems.append(f"第 {number} 題印了中文，等於把答案印在題目旁邊")
     if kind == "quoted":
         if not (item.get("ref") or "").strip():
             problems.append(f"第 {number} 題是引用卻沒有出處")
-        if not (item.get("chineseSource") or "").strip():
-            problems.append(f"第 {number} 題是引用卻沒有註明譯本")
+        if not (item.get("answerKeyRef") or item.get("ref") or "").strip():
+            problems.append(f"第 {number} 題沒有可據以編解答的出處")
     if kind == "composed" and item.get("reviewedBy") != "author":
         problems.append(f"第 {number} 題是自撰卻未經作者逐句複核")
     verification = item.get("verification") or {}
@@ -67,7 +60,7 @@ def failures_for_item(item: dict[str, Any], *, language: str) -> list[str]:
     return problems
 
 
-def failures_for_lesson(lesson: dict[str, Any], *, language: str) -> list[str]:
+def failures_for_lesson(lesson: dict[str, Any]) -> list[str]:
     """Rules about the lesson as a whole rather than any one item."""
     problems: list[str] = []
     number = lesson.get("lesson", "?")
@@ -75,9 +68,12 @@ def failures_for_lesson(lesson: dict[str, Any], *, language: str) -> list[str]:
     if len(items) != ITEMS_PER_LESSON:
         problems.append(f"第 {number} 課有 {len(items)} 題，應為 {ITEMS_PER_LESSON} 題")
     quoted = sum(1 for item in items if item.get("kind") == "quoted")
-    if quoted < MIN_QUOTED_PER_LESSON:
+    if quoted < MIN_QUOTED_PER_LESSON and not (lesson.get("note") or "").strip():
+        # The earliest lessons of every reader can run out of quotable text:
+        # twenty nouns and no verb leave nothing in the corpus that uses only
+        # them.  Falling short is allowed, saying nothing about it is not.
         problems.append(
-            f"第 {number} 課只有 {quoted} 題引用經典原句，至少要 {MIN_QUOTED_PER_LESSON} 題"
+            f"第 {number} 課只有 {quoted} 題引用經典原句，少於 {MIN_QUOTED_PER_LESSON} 題時必須在 note 說明原因"
         )
     coverage = lesson.get("coverage") or {}
     missing = coverage.get("notPractised") or []
@@ -91,13 +87,12 @@ def failures_for_lesson(lesson: dict[str, Any], *, language: str) -> list[str]:
     if total is not None and practised is not None and practised != total:
         problems.append(f"第 {number} 課涵蓋 {practised}/{total} 詞，未達全覆蓋")
     for item in items:
-        problems.extend(failures_for_item(item, language=language))
+        problems.extend(failures_for_item(item))
     return problems
 
 
 def failures_for_payload(payload: dict[str, Any]) -> list[str]:
     problems: list[str] = []
-    language = str(payload.get("languageCode") or "")
     if payload.get("direction") != "original-to-chinese":
         problems.append("direction 必須是 original-to-chinese：本系列不做中譯原文")
     if payload.get("itemsPerLesson") != ITEMS_PER_LESSON:
@@ -111,7 +106,7 @@ def failures_for_payload(payload: dict[str, Any]) -> list[str]:
         if number in seen:
             problems.append(f"第 {number} 課重複出現")
         seen.add(number)
-        problems.extend(failures_for_lesson(lesson, language=language))
+        problems.extend(failures_for_lesson(lesson))
     return problems
 
 

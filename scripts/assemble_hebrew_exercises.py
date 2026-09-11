@@ -7,11 +7,14 @@ live in `composed-draft-NN.json`.  This command joins them, re-runs the corpus
 verification on every item rather than trusting what a draft claims about
 itself, and emits the payload that `validate_reader_exercises.py` gates.
 
-A quoted item is only usable when its Chinese is on hand: the RCUV snapshot
-covers the chapters the reader prints, not the whole Bible, so an anchor whose
-verse has no cached translation is passed over rather than shipped with an
-empty answer.  Lessons that cannot field three such anchors are reported, not
-silently filled.
+No exercise carries a translation.  Printing the Chinese beside the sentence
+would answer the question the exercise asks; the Chinese belongs to the
+reading, which is the model text.  What each item keeps instead is the
+reference, so an answer booklet can be set later from the published edition.
+
+A lesson that cannot field three quoted anchors says so on itself.  The
+earliest lessons of this reader are twenty nouns with no verb among them, and
+the corpus has no sentence built only from those.
 """
 
 from __future__ import annotations
@@ -30,7 +33,6 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from select_hebrew_memory_verses import (  # noqa: E402
     DEFAULT_VOCAB,
     DEFAULT_WLC,
-    load_chinese_translation,
     load_vocabulary,
     load_wlc,
 )
@@ -40,48 +42,26 @@ from validate_reader_exercises import failures_for_payload, report  # noqa: E402
 
 CACHE = ROOT / "output/source-cache/original-readers/hebrew-full"
 MINED = CACHE / "exercises.json"
-RCUV = CACHE / "RCUV2010.json"
 OUTPUT = CACHE / "exercise-set.json"
 QUOTED_PER_LESSON = 3
-CHINESE_EDITION = "和合本修訂版（2010）"
-
-
-def chinese_by_ref() -> dict[str, str]:
-    """Every RCUV verse on hand, keyed by the Hebrew Bible's own reference.
-
-    Two snapshots feed this: the one the reader already printed, and the one
-    fetched for the chapters the exercises quote.  The mapping is the existing
-    `load_chinese_translation`, not a flat read of the file, because RCUV and
-    the Masoretic text number the Psalms differently -- the superscription is
-    a verse on one side and not on the other -- and that crosswalk has already
-    been worked out once.
-    """
-    translations: dict[str, str] = {}
-    for path in (RCUV, CACHE / "RCUV2010-exercises.json"):
-        if path.exists():
-            translations.update(load_chinese_translation(path))
-    return translations
+ANSWER_KEY_EDITION = "和合本修訂版（2010）"
 
 
 MIN_CLAUSE_WORDS_FOR_ANCHOR = 4
 
 
-def pick_quoted(items: list[dict[str, Any]], translations: dict[str, str]) -> list[dict[str, Any]]:
+def pick_quoted(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Take the anchors a learner can actually check an answer against.
 
-    Whole verses come first, because the published Chinese answers exactly the
-    words printed.  A clause is answered by the Chinese of the verse around it,
-    which only helps when the clause is a recognisable piece of that verse: a
-    three-word scrap such as בֵּית אֲחֵי אֲדֹנִי set beside the whole of Gen 24:27
-    teaches nothing and reads as a mistake.  Short scraps are therefore refused
-    even though they verify perfectly -- the anchor exists to be compared, and
-    an anchor nobody can compare has lost its reason to be on the page.
+    Whole verses come first, and a clause has to be long enough to stand as a
+    sentence on its own.  A three-word scrap such as בֵּית אֲחֵי אֲדֹנִי verifies
+    perfectly and is still not an exercise: there is nothing in it to translate
+    and nothing for the eventual answer key to point at.
     """
     usable = [
         item
         for item in items
         if item.get("kind") in {"verse", "clause"}
-        and translations.get(item.get("ref", ""))
         and (item.get("kind") == "verse" or item.get("tokenCount", 0) >= MIN_CLAUSE_WORDS_FOR_ANCHOR)
     ]
     usable.sort(
@@ -144,7 +124,6 @@ def main() -> int:
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
-    translations = chinese_by_ref()
     mined = json.loads(MINED.read_text(encoding="utf-8"))
     mined_by_lesson = {row["lesson"]: row for row in mined.get("lessons", [])}
     vocabulary = load_vocabulary(DEFAULT_VOCAB)
@@ -157,7 +136,7 @@ def main() -> int:
     missing_drafts: list[int] = []
 
     for lesson, lesson_items, known in cumulative_sets(vocabulary):
-        quoted = pick_quoted((mined_by_lesson.get(lesson) or {}).get("items", []), translations)
+        quoted = pick_quoted((mined_by_lesson.get(lesson) or {}).get("items", []))
         if len(quoted) < QUOTED_PER_LESSON:
             thin_anchors.append(lesson)
         drafts = load_drafts(lesson)
@@ -172,9 +151,9 @@ def main() -> int:
                     "kind": "quoted",
                     "ref": row["ref"],
                     "text": text,
-                    "chinese": translations[row["ref"]],
-                    "chineseSource": CHINESE_EDITION,
-                    "chineseScope": "verse" if row["kind"] == "verse" else "verse-containing-clause",
+                    "answerKeyRef": row["ref"],
+                    "answerKeyEdition": ANSWER_KEY_EDITION,
+                    "answerKeyScope": "verse" if row["kind"] == "verse" else "verse-containing-clause",
                     "targetWords": row.get("targetWords") or [],
                     "verification": checker.verify(text, set(known), pointed, skeleton),
                     "reviewedBy": "corpus",
@@ -186,8 +165,6 @@ def main() -> int:
                 {
                     "kind": "composed",
                     "text": text,
-                    "chinese": row.get("chinese", ""),
-                    "chineseSource": "",
                     "targetWords": target_words_in(text, lesson_items, pointed, skeleton, codes),
                     "verification": checker.verify(text, set(known), pointed, skeleton),
                     "reviewedBy": row.get("reviewedBy", "author"),
@@ -214,6 +191,11 @@ def main() -> int:
             {
                 "lesson": lesson,
                 "id": f"hbo-lesson-{lesson:02d}",
+                "note": (
+                    "本課無可用經典原句，十題全由自撰題補"
+                    if len(quoted) < QUOTED_PER_LESSON
+                    else ""
+                ),
                 "items": items,
                 "coverage": {
                     "lessonWords": len(lesson_items),
@@ -231,7 +213,7 @@ def main() -> int:
         "direction": "original-to-chinese",
         "itemsPerLesson": 10,
         "quotedPerLesson": QUOTED_PER_LESSON,
-        "chineseEdition": CHINESE_EDITION,
+        "answerKeyEdition": ANSWER_KEY_EDITION,
         "lessons": lessons_out,
     }
 
@@ -240,7 +222,7 @@ def main() -> int:
     if missing_drafts:
         print(f"尚無自撰稿的課：{missing_drafts}")
     if thin_anchors:
-        print(f"湊不到三題有中譯的原句：{thin_anchors}")
+        print(f"湊不到三題定錨原句（已在該課 note 註明）：{thin_anchors}")
     if args.write:
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"寫入 {OUTPUT.relative_to(ROOT)}")

@@ -224,7 +224,8 @@ class VocabEntry:
     """One of the two thousand words, with every key it can be matched by."""
 
     __slots__ = ("volume", "lesson", "ordinal", "headword", "forms", "pos",
-                 "gloss_zh", "lemmas", "form_keys", "resolved", "phrase")
+                 "gloss_zh", "lemmas", "form_keys", "resolved", "phrase",
+                 "headword_key", "credit_lemmas")
 
     def __init__(self, row: dict[str, Any], lemmas: set[str], form_keys: set[str]):
         self.volume = 1 if row.get("volume") == "上冊" else 2
@@ -239,14 +240,41 @@ class VocabEntry:
         # them.  Left alone, ``in saecula`` counts as practised by any sentence
         # containing ``in`` -- which is most of them -- and the twenty-word
         # coverage gate stops meaning anything.
-        self.phrase = len(tokenise(self.headword.lstrip("-"))) > 1
+        words = tokenise(self.headword.lstrip("-"))
+        self.phrase = len(words) > 1
+        self.headword_key = fold(words[0]) if len(words) == 1 else ""
         self.lemmas = set() if self.phrase else lemmas
         self.form_keys = form_keys
         self.resolved = bool(self.lemmas)
+        # 🚨 同形異詞，拉丁版。`missa` 這條詞查形表會拿到兩個詞位——名詞
+        # `missa`（彌撒）與動詞 `mitto` 的陰性完成分詞——於是「他差遣了」
+        # 一句 `et misit in terram` 就把彌撒記成練到了。`festum` 會被人名
+        # `Festus`（非斯都）記到，`nōn` 會被 `nonnullus` 記到。
+        # 判準只有一條：折疊之後**等於詞頭本身**的詞位才算這一條詞。
+        # `Angelus`→`angelus`、`Dominus`→`dominus` 只是大小寫，折疊後相等，
+        # 照樣算；`mitto` vs `missa` 折疊後不等，擋掉。派生、詞源、專名變體
+        # 一律不算——那是「同一個字根」，不是「同一個詞」。
+        self.credit_lemmas = {
+            lemma for lemma in self.lemmas if fold(lemma) == self.headword_key
+        }
 
     @property
     def key(self) -> tuple[int, int]:
         return (self.volume, self.ordinal)
+
+    @property
+    def credit_keys(self) -> set[str]:
+        """Written forms that may credit this entry when no lemma can.
+
+        Used only where the lemma route is closed: the phrases, the Greek
+        liturgical loans, and entries like ``ēlēctus``, ``optimus``, ``ait``
+        and ``fore``, which teach one particular form of a word whose lemma is
+        spelled differently.  Crediting those by lemma would mark ``optimus``
+        practised by any ``bonus`` and ``fore`` by any ``est``.  Where a lemma
+        does fit, it covers the inflections too and the form route adds
+        nothing but a way to be wrong.
+        """
+        return set() if self.credit_lemmas else self.form_keys
 
     def public_record(self) -> dict[str, Any]:
         return {
@@ -256,6 +284,7 @@ class VocabEntry:
             "headword": self.headword,
             "glossZh": self.gloss_zh,
             "lemmas": sorted(self.lemmas),
+            "creditLemmas": sorted(self.credit_lemmas),
             "resolved": self.resolved,
             "phrase": self.phrase,
         }
@@ -264,24 +293,47 @@ class VocabEntry:
 ALT_SPLIT = re.compile(r"[,;()/]| \.\. | \. \. ")
 
 
-def vocabulary_keys(row: dict[str, Any]) -> set[str]:
-    """Folded keys a vocabulary entry may legitimately be written as.
+def vocabulary_key_order(row: dict[str, Any]) -> list[str]:
+    """Folded keys a vocabulary entry may legitimately be written as, in order.
 
     The headword carries macrons the corpus never prints (``ōrdō``), some
     entries are phrases (``grātiās agere``), some are bound stems (``-pleō``),
     and the ``forms`` field lists the principal parts.  All of them fold down
     to keys a corpus token can equal.
+
+    Two kinds of thing in the ``forms`` field are not words and must not become
+    keys.  ``ēlēctus, -a, -um`` lists adjective endings, and ``liturgia,
+    liturgiae, f.`` names a gender.  Taken as words they made ``contrītus``
+    resolve to the lemmas of ``a`` -- ``ad``, ``ab``, ``hic`` -- and
+    ``liturgia`` resolve to the lemma ``f``.  A piece that opens with a hyphen
+    is an ending; a one-letter piece of the ``forms`` field is an abbreviation.
+    The headword's own letters are always kept, because ``ā`` and ``ē`` are
+    one-letter words.
+
+    Order matters: the caller walks these looking for the first that a treebank
+    knows, and alphabetical order put the gender abbreviation first.
     """
-    keys: set[str] = set()
-    candidates = [row["headword"]] + [
-        piece.strip() for piece in ALT_SPLIT.split(row.get("forms", "")) if piece.strip()
-    ]
-    for candidate in candidates:
-        for word in tokenise(candidate):
-            key = fold(word)
-            if key:
-                keys.add(key)
+    keys: list[str] = []
+
+    def add(word: str) -> None:
+        key = fold(word)
+        if key and key not in keys:
+            keys.append(key)
+
+    for word in tokenise(row["headword"]):
+        add(word)
+    for piece in ALT_SPLIT.split(row.get("forms", "")):
+        piece = piece.strip()
+        if not piece or piece.startswith("-"):
+            continue
+        for word in tokenise(piece):
+            if len(word) > 1:
+                add(word)
     return keys
+
+
+def vocabulary_keys(row: dict[str, Any]) -> set[str]:
+    return set(vocabulary_key_order(row))
 
 
 def load_vocabulary(path: Path = VOCABULARY, tagger: "Tagger | None" = None) -> list[VocabEntry]:
@@ -297,21 +349,25 @@ def load_vocabulary(path: Path = VOCABULARY, tagger: "Tagger | None" = None) -> 
     rows = json.loads(path.read_text(encoding="utf-8"))["entries"]
     entries: list[VocabEntry] = []
     for row in rows:
-        keys = vocabulary_keys(row)
+        order = vocabulary_key_order(row)
         lemmas: set[str] = set()
         stated = row.get("treebankLemma")
         if stated:
             lemmas.add(stated)
-        if tagger is not None:
-            head_key = fold(row["headword"].lstrip("-"))
+        if tagger is not None and order:
+            head_key = order[0]
             lemmas |= tagger.lemmas_for_headword(head_key)
             lemmas |= tagger.lemmas_for_key(head_key)
             if not lemmas:
-                for key in sorted(keys):
+                # In the order the entry writes them -- headword, then the
+                # principal parts left to right.  Alphabetical order tried the
+                # gender abbreviation first and resolved ``liturgia`` to the
+                # lemma ``f``.
+                for key in order[1:]:
                     lemmas |= tagger.lemmas_for_headword(key) | tagger.lemmas_for_key(key)
                     if lemmas:
                         break
-        entries.append(VocabEntry(row, lemmas, keys))
+        entries.append(VocabEntry(row, lemmas, set(order)))
     return entries
 
 

@@ -19,6 +19,7 @@ from build_latin_lemma_corpus import (  # noqa: E402
     fold,
     split_enclitic,
     tokenise,
+    vocabulary_key_order,
     vocabulary_keys,
     VocabEntry,
 )
@@ -228,6 +229,11 @@ class FakeCorpus:
         "arma": {"surfaces": ["arma"], "lemmas": ["arma"]},
         "ita": {"surfaces": ["ita"], "lemmas": ["ita"]},
         "itaque": {"surfaces": ["itaque"], "lemmas": ["itaque"]},
+        "misit": {"surfaces": ["misit"], "lemmas": ["mitto"]},
+        "missa": {"surfaces": ["missa"], "lemmas": ["missa", "mitto"]},
+        "terram": {"surfaces": ["terram"], "lemmas": ["terra"]},
+        "angelum": {"surfaces": ["angelum"], "lemmas": ["angelus"]},
+        "angelus": {"surfaces": ["Angelus"], "lemmas": ["Angelus", "angelus"]},
         "que": {"surfaces": ["que"], "lemmas": ["que"]},
     }
 
@@ -324,26 +330,92 @@ def test_part_is_taught_accepts_either_the_lemma_or_the_written_form():
 # ---------------------------------------------------------------------------
 
 def test_practised_counts_a_word_reached_through_an_inflected_form():
-    targets = [SimpleNamespace(ordinal=1, lemmas={"caelum"}, form_keys={"caelum"})]
+    targets = [SimpleNamespace(ordinal=1, credit_lemmas={"caelum"}, credit_keys=set())]
     hits = practised(["Deus est in cælo"], targets, CORPUS, TAGGER)
     assert hits[1] == ["caelum"]
 
 
 def test_practised_falls_back_to_the_written_form_for_an_unresolved_entry():
-    targets = [SimpleNamespace(ordinal=2, lemmas=set(), form_keys={"ita"})]
+    targets = [SimpleNamespace(ordinal=2, credit_lemmas=set(), credit_keys={"ita"})]
     hits = practised(["Deus est ita"], targets, CORPUS, TAGGER)
     assert hits[2] == ["ita"]
 
 
 def test_practised_leaves_out_a_word_no_sentence_used():
-    targets = [SimpleNamespace(ordinal=3, lemmas={"hostis"}, form_keys={"hostis"})]
+    targets = [SimpleNamespace(ordinal=3, credit_lemmas={"hostis"}, credit_keys=set())]
     assert practised(["Deus est in cælo"], targets, CORPUS, TAGGER) == {}
+
+
+def entry_with_lemmas(headword, lemmas, forms=None, lesson=2, ordinal=90):
+    row = {
+        "volume": "上冊", "lesson": lesson, "ordinal": ordinal,
+        "headword": headword, "forms": forms or headword, "glossZh": "",
+    }
+    return VocabEntry(row, set(lemmas), vocabulary_keys(row))
+
+
+def test_missa_is_not_practised_by_a_participle_of_mitto():
+    """🚨 同形異詞，拉丁版。`missa` 既是彌撒，也是 mitto 的陰性完成分詞。
+
+    查形表會把兩個詞位都掛到「彌撒」這條詞上，於是「他差遣了」一句
+    `et misit in terram` 就把彌撒記成練到了——閘全綠，帳是錯的。
+    希伯來版踩的是同一個坑：撒上 4:18 的形容詞 H3515 被當成動詞 H3513。
+    """
+    missa = entry_with_lemmas("missa", {"missa", "mitto"}, "missa, missae, f.")
+    assert missa.credit_lemmas == {"missa"}
+    assert practised(["et misit in terram"], [missa], CORPUS, TAGGER) == {}
+    assert practised(["missa est"], [missa], CORPUS, TAGGER) == {90: ["missa"]}
+
+
+def test_case_variants_of_the_same_word_still_count():
+    """🚨 反例，不可一併擋掉：`Angelus`→`angelus` 折疊後相等，是同一個詞。"""
+    angelus = entry_with_lemmas("angelus", {"Angelus", "angelus"}, "angelus, angelī, m.")
+    assert angelus.credit_lemmas == {"Angelus", "angelus"}
+    assert practised(["misit angelum"], [angelus], CORPUS, TAGGER) == {90: ["angelus"]}
+
+
+def test_a_proper_name_variant_does_not_credit_the_common_noun():
+    """`festum`（慶節）不該被人名 `Festus`（非斯都）記到。"""
+    festum = entry_with_lemmas("festum", {"Festus", "festum", "festus"}, "festum, festī, n.")
+    assert festum.credit_lemmas == {"festum"}
+
+
+def test_a_derived_word_does_not_credit_its_root():
+    """`praeceptum`（誡命）不該被動詞 `praecipio` 記到；`nōn` 不該被 `nonnullus` 記到。"""
+    assert entry_with_lemmas(
+        "praeceptum", {"praeceptum", "praecipio"}).credit_lemmas == {"praeceptum"}
+    assert entry_with_lemmas(
+        "nōn", {"non", "nonnihil", "nonnullus"}).credit_lemmas == {"non"}
+
+
+def test_the_form_route_is_closed_once_a_lemma_fits():
+    """詞位對得上就只走詞位；形表那條路只留給對不上詞位的詞條。"""
+    missa = entry_with_lemmas("missa", {"missa", "mitto"}, "missa, missae, f.")
+    assert missa.credit_keys == set()
+    electus = entry_with_lemmas("ēlēctus", {"eligo"}, "ēlēctus, -a, -um")
+    assert electus.credit_lemmas == set()
+    assert electus.credit_keys == {"electus"}
+
+
+def test_vocabulary_keys_drops_endings_and_gender_abbreviations():
+    """🚨 `ēlēctus, -a, -um` 的 -a 讓詞條解到 `ad`／`hic`，`f.` 讓 liturgia 解到詞位 `f`。"""
+    assert vocabulary_keys({"headword": "ēlēctus", "forms": "ēlēctus, -a, -um"}) == {"electus"}
+    assert vocabulary_keys(
+        {"headword": "liturgia", "forms": "liturgia, liturgiae, f."}
+    ) == {"liturgia", "liturgiae"}
+    assert vocabulary_keys(
+        {"headword": "piāculum", "forms": "piāculum, piāculī, n."}
+    ) == {"piaculum", "piaculi"}
+
+
+def test_vocabulary_keys_still_keeps_a_one_letter_headword():
+    assert vocabulary_keys({"headword": "ā", "forms": "ā (ab, abs)"}) == {"a", "ab", "abs"}
 
 
 def test_a_phrase_entry_is_practised_only_when_all_of_it_appears():
     """🚨 `in saecula` 若可由單一個 `in` 記成已練，二十詞涵蓋這道閘就形同虛設。"""
     phrase = SimpleNamespace(
-        ordinal=6, lemmas=set(), form_keys={"in", "caelo"}, phrase=True
+        ordinal=6, credit_lemmas=set(), credit_keys={"in", "caelo"}, phrase=True
     )
     assert practised(["Deus est in cælo"], [phrase], CORPUS, TAGGER) == {6: ["caelo", "in"]}
     assert practised(["Deus est in arma"], [phrase], CORPUS, TAGGER) == {}
@@ -361,8 +433,8 @@ def test_a_phrase_entry_carries_no_lemma_of_its_own():
 
 def test_practised_credits_the_host_of_an_enclitic_not_only_the_enclitic():
     targets = [
-        SimpleNamespace(ordinal=4, lemmas={"populus"}, form_keys={"populus"}),
-        SimpleNamespace(ordinal=5, lemmas={"que"}, form_keys={"que"}),
+        SimpleNamespace(ordinal=4, credit_lemmas={"populus"}, credit_keys=set()),
+        SimpleNamespace(ordinal=5, credit_lemmas={"que"}, credit_keys=set()),
     ]
     hits = practised(["Populusque Deus est"], targets, CORPUS, TAGGER)
     assert set(hits) == {4, 5}
