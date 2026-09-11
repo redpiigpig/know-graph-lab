@@ -143,6 +143,7 @@ def count(chunks: list[dict]) -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--third", action="store_true", help="只看已補第三欄那幾卷")
+    ap.add_argument("--json", help="把逐卷統計寫成 JSON 給 /fathers 首頁用")
     a = ap.parse_args()
     load_env()
 
@@ -151,6 +152,7 @@ def main() -> int:
     books = fathers_books()
     books.sort(key=lambda b: b.get("title") or "")
 
+    stats: dict[str, dict] = {}
     print(f"{'卷':40} {'段':>5} {'繁中':>6} {'原典':>6} {'三欄齊':>7} "
           f"{'未譯':>5} {'註腳英':>6} {'拒譯':>5} {'簡體':>5}")
     tot = {"n": 0, "zh": 0, "en": 0, "orig": 0, "all3": 0, "untr": 0,
@@ -167,6 +169,14 @@ def main() -> int:
         r = count(chunks)
         for k in tot:
             tot[k] += r[k]
+        n_ = max(1, r["n"])
+        stats[b["id"]] = {
+            "n": r["n"],
+            # 譯好的＝有中文欄、且不是「中文欄其實是英文」、也不是拒譯回覆
+            "zh": round((r["n"] - r["untr"] - r["meta"]) / n_, 3),
+            "orig": round(r["orig"] / n_, 3),
+            "all3": round(r["all3"] / n_, 3),
+        }
         pct = f"{r['all3'] / r['n']:.0%}" if r["n"] else "—"
         mark = "★" if b["id"] in have_third else " "
         print(f"{mark}{(b.get('title') or '')[:39]:39} {r['n']:5} {r['zh']:6} "
@@ -182,6 +192,12 @@ def main() -> int:
           f"註腳仍英文 {tot['notes_en']}（{tot['notes_en']/n:.1%}）／"
           f"拒譯污染 {tot['meta']}（{tot['meta']/n:.1%}）／"
           f"夾簡體 {tot['simp']}（{tot['simp']/n:.1%}）")
+    if a.json:
+        out = Path(a.json)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(stats, ensure_ascii=False, indent=1) + chr(10),
+                       encoding="utf-8")
+        print(f"逐卷統計 → {out}（{len(stats)} 卷）")
     print(f"★＝首頁標了「附原典」的卷，共 {len(have_third)} 卷")
     if missing:
         print(f"🚨 讀不到 JSONL 的卷：{len(missing)}（先確認 G: 有沒有掛載）")

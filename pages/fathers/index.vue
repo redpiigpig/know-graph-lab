@@ -54,8 +54,10 @@
             >
               <div class="flex items-baseline gap-2 mb-1.5">
                 <span class="fathers-card-vol">卷&nbsp;{{ b.vol }}</span>
-                <span v-if="b.original" class="fathers-badge is-original">附原典</span>
-                <span v-if="b.refined" class="fathers-badge is-refined">已精修</span>
+                <span v-if="b.origPct" class="fathers-badge is-original">附原典 {{ pct(b.origPct) }}</span>
+                <span v-if="b.zhPct !== null && b.zhPct < 0.95"
+                      class="fathers-badge is-partial">中譯 {{ pct(b.zhPct) }}</span>
+                <span v-else-if="b.refined" class="fathers-badge is-refined">已精修</span>
                 <span v-else-if="b.parsed" class="fathers-badge is-rough">粗譯</span>
                 <span v-else class="fathers-badge is-none">未譯</span>
               </div>
@@ -72,8 +74,14 @@
       <div class="fathers-legend">
         <p>狀態說明：</p>
         <ul>
-          <li><b class="text-sky-700">附原典</b>：該卷已有部分著作補上拉丁／希臘原典第三欄；哪幾部、對到幾成見 skill 的對照表</li>
-          <li><b class="text-emerald-700">已精修</b>：跑過完整 5 步驟 pipeline + A+B+C 三層校對，T9 cross-bleed = 0</li>
+          <li><b class="text-sky-700">附原典 N%</b>：該卷有多少比例的段落補上了拉丁／希臘原典第三欄。
+            <b>這個百分比很重要</b>——卷與卷之間差距極大（巴西流 70%、拉克坦提烏 2%），
+            舊版只顯示一個「附原典」布林標籤，兩者長得一模一樣。</li>
+          <li><b class="text-rose-700">中譯 N%</b>：該卷有多少比例的段落**真的譯成中文了**。
+            低於 100% 表示有些段落的中文欄裡其實還是英文原文（或引擎的拒譯回覆）。
+            不到 95% 就不給「已精修」。</li>
+          <li><b class="text-emerald-700">已精修</b>：跑過完整 5 步驟 pipeline + A+B+C 三層校對，
+            T9 cross-bleed = 0，且中譯覆蓋率 ≥ 95%</li>
           <li><b class="text-amber-700">粗譯</b>：完成翻譯但未經 v4 pipeline 精修，章節結構可能有 bleed bug</li>
           <li><b class="text-stone-500">未譯</b>：source 已在庫但尚未翻譯</li>
         </ul>
@@ -103,6 +111,11 @@ interface BookView extends BookRow {
   parsed: boolean
   refined: boolean
   original: boolean
+  // 逐卷實際覆蓋率。來源是 public/content/fathers/coverage.json，由
+  // scripts/audit_fathers_coverage.py --json 產生。讀不到就是 null，
+  // 那時標籤退回舊的布林行為，不要顯示假的 0%。
+  origPct: number | null
+  zhPct: number | null
 }
 
 // 已補上第三欄（拉丁／希臘原典）的卷。逐部的取源與命中率記在
@@ -175,6 +188,13 @@ const REFINED_IDS = new Set([
   '90b55879-7179-41d7-9f6c-f6587a3dd429',  // NPNF2 Vol 13 (Gregory the Great II 大額我略《書信集卷九-十四》 + Ephraim Syrus 敘利亞的厄弗冷 讚美詩/聖詩/講道 + Aphrahat 波斯賢士阿弗拉哈特《論證集》)
   '63853a97-68be-441c-8dce-063ae89405c5',  // NPNF2 Vol 14 (The Seven Ecumenical Councils 基督教會七大公會議 — 尼西亞一/君堡一/以弗所/迦克墩/君堡二/君堡三/尼西亞二 + 教區會議法規 + 使徒法典)
 ])
+
+// 0.702 → 「70%」。低於 1% 但不是 0 的顯示「<1%」，不要四捨五入成 0%
+// ——那會讓「補了幾段」跟「一段都沒有」長得一樣。
+function pct(v: number): string {
+  if (v > 0 && v < 0.01) return '<1%'
+  return `${Math.round(v * 100)}%`
+}
 
 const series = [
   { key: 'ANF',   label: 'ANF 前尼西亞教父',     subtitle: '~AD 100-325 · 10 卷' },
@@ -276,6 +296,13 @@ onMounted(async () => {
     .select('id, title, original_title, chunk_count, parsed_at, subcategory')
     .or('subcategory.ilike.%Schaff%,subcategory.ilike.%ACCS%')
   if (error) { console.error(error); loading.value = false; return }
+  // 🚨 統計檔缺了就讓百分比是 null，標籤退回舊行為——不要 fallback 成 0，
+  //    那會讓每一卷都顯示「中譯 0%」，比沒有更糟。
+  let cov: Record<string, { n: number; zh: number; orig: number; all3: number }> = {}
+  try {
+    cov = await $fetch('/content/fathers/coverage.json')
+  } catch { /* 沒有統計檔就算了 */ }
+
   const rows: BookView[] = []
   for (const b of (data || []) as BookRow[]) {
     const parsed = parseSeriesVol(b.title) || parseSeriesVol(b.original_title || '')
@@ -288,6 +315,8 @@ onMounted(async () => {
       parsed: !!b.parsed_at && (b.chunk_count || 0) > 0,
       refined: REFINED_IDS.has(b.id),
       original: ORIGINAL_IDS.has(b.id),
+      origPct: cov[b.id]?.orig ?? null,
+      zhPct: cov[b.id]?.zh ?? null,
     })
   }
   books.value = rows
@@ -356,6 +385,7 @@ onMounted(async () => {
 .fathers-badge { font-size: 10px; padding: 1px 7px; border-radius: 9999px; font-weight: 600; }
 .fathers-badge.is-refined { background: #d1e7d3; color: #2f6b3a; }
 .fathers-badge.is-original { background: #cfe0ef; color: #2c5678; }
+.fathers-badge.is-partial { background: #f6d6d6; color: #8a3535; }
 .fathers-badge.is-rough { background: #f2e3bf; color: #8a6414; }
 .fathers-badge.is-none { background: #e4d6b6; color: #8a7145; }
 
