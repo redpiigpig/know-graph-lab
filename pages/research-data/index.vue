@@ -31,6 +31,16 @@
           <span class="tool-badge bg-indigo-50 text-indigo-600">14 區</span>
         </NuxtLink>
 
+        <!-- 當代佛學研究（方法論／文獻／教史／性別／社會／制度／教理七區＋館藏） -->
+        <NuxtLink to="/research-data/buddhist-studies" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">☸️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">當代佛學研究</h2>
+            <p class="tool-desc">二十世紀以來的佛學：研究方法論、經典批判與詮釋、教史、性別、社會、制度、教理七區書目；與 /tripitaka 分工——那邊收原典，這邊收研究</p>
+          </div>
+          <span class="tool-badge bg-amber-50 text-amber-600">7 區</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>
