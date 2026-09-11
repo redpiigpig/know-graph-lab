@@ -1,0 +1,15 @@
+{"rank":1,"name":"ProQuest Arts & Humanities Database","zh":"藝術與人文資料庫","kind":"期刊全文","access":"校內 IP","value":"高","why":"宗教與神學期刊在 ProQuest 側的主力庫。可排程、可逐篇下 PDF，作法與既有的華藝管線同型（清單→逐篇→Drive）","note":"與 ProQuest Research Library 有重疊，先跑這個"}
+{"rank":2,"name":"ProQuest Research Library","zh":"學術性期刊全文資料庫","kind":"期刊全文","access":"校內 IP","value":"高","why":"綜合性全文庫，宗教類刊物數量僅次於上一項","note":"2023 年建檔，應仍在訂"}
+{"rank":3,"name":"Project MUSE Complete Collection","zh":"MUSE 完整館藏","kind":"期刊＋電子書","access":"校內 IP（台灣學術電子書聯盟）","value":"高","why":"MUSE 收了大批神學／宗教研究期刊與大學出版社專書，是這份清單裡對當代神學研究最有用的一個","note":"走聯盟授權，要確認玄奘在不在該年度的聯盟名單內"}
+{"rank":4,"name":"De Gruyter 西文學術電子書","zh":"De Gruyter","kind":"電子書","access":"校內 IP（聯盟）","value":"高","why":"聖經研究與神學的德語重鎮（ZAW／ZNW 一系的出版社）；本卡片書目裡的德文著作有不少出自這裡","note":"聯盟版多半只含特定年份的書，不含期刊"}
+{"rank":5,"name":"Oxford 牛津線上學術電子書","zh":"Oxford Scholarship Online","kind":"電子書","access":"校內 IP（聯盟）","value":"高","why":"牛津的宗教與神學系列；書目裡的 Oxford Handbook 系列多半在這裡"}
+{"rank":6,"name":"Cambridge Companions Online","zh":"劍橋指南系列","kind":"電子書","access":"校內 IP（聯盟）","value":"中高","why":"書目「二十世紀神學史」那一區大量用到 Cambridge Companion 系列"}
+{"rank":7,"name":"ProQuest Dissertations & Theses (PQDT)","zh":"博碩士論文","kind":"論文","access":"校內 IP","value":"中高","why":"英美神學博士論文；玄奘訂的是 A&I（索摘），全文要另外看有沒有開","note":"⚠️ A&I 只有摘要，別以為能直接下全文"}
+{"rank":8,"name":"OmniFILE Full Text Select (EBSCO)","zh":"EBSCO 綜合全文","kind":"期刊全文","access":"校內 IP","value":"中","why":"綜合性全文，宗教類覆蓋不厚但聊勝於無"}
+{"rank":9,"name":"eBook Collection (EBSCOhost)","zh":"EBSCO 電子書","kind":"電子書","access":"校內 IP","value":"中","why":"視實際館藏而定"}
+{"rank":10,"name":"SpringerLink online journal archive","zh":"Springer 期刊回溯","kind":"期刊全文","access":"校內 IP","value":"中","why":"回溯典藏；Springer 的宗教學刊不多但有幾種"}
+{"rank":11,"name":"DOAJ","zh":"開放取用期刊指南","kind":"期刊全文","access":"完全開放","value":"高","why":"**不必校內 IP，隨時可排程**。神學／宗教研究有大量開放取用期刊（HTS Teologiese Studies、Religions、Verbum et Ecclesia 等），是這份清單裡唯一能無條件自動化的一項","note":"優先做這個：不受「人在不在學校」限制"}
+{"rank":12,"name":"Open Access Elsevier","zh":"Elsevier 開放取用","kind":"期刊全文","access":"完全開放","value":"中","why":"同上，不綁 IP"}
+{"rank":13,"name":"WorldCat","zh":"世界書目","kind":"書目","access":"開放（有限）","value":"中","why":"不提供全文，但可用來核對書目的版本與 ISBN——本卡片書目有大量『中譯有無待查』的欄位"}
+{"rank":14,"name":"國際碩博士論文全文資料庫 (DDC)","zh":"美加博碩士論文數位典藏聯盟","kind":"論文","access":"校內 IP","value":"中","why":"與 PQDT 互補，這個有全文"}
+{"rank":15,"name":"Gale Virtual Reference Library／SAGE eReference","zh":"工具書","kind":"參考工具書","access":"校內 IP（聯盟）","value":"中低","why":"百科與辭典，查證譯名與生卒年用"}

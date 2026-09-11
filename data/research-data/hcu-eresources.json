@@ -1,0 +1,622 @@
+{
+ "source": "https://hculibrary.hcu.edu.tw/webopac/Tsgc.aspx?dc=5&fc=1&n=5",
+ "note": "玄奘大學圖書館 webopac 特色館藏底下的電子資源清單；多數需校內 IP 或帳號",
+ "caveat": "⚠️ 這個 OPAC 一頁只給 50 筆，而分頁與換排序的 postback 回來都掉查詢狀態，所以每一類都只收得到前 50 筆。館方自報的總數見各類的 expect 欄，差額要用有頭瀏覽器（Playwright）才補得齊。",
+ "categories": {
+  "外文資料庫": {
+   "listed": 50,
+   "items": [
+    {
+     "name": "ProQuest One Psychology心理學資料庫",
+     "year": "2026"
+    },
+    {
+     "name": "Digitale Bibliothek Deutscher Klassiker德國經典文學線上圖書館",
+     "year": "2025"
+    },
+    {
+     "name": "Kafkas Werke 卡夫卡作品集",
+     "year": "2025"
+    },
+    {
+     "name": "Schillers Werke 席勒作品集",
+     "year": "2025"
+    },
+    {
+     "name": "Counseling & Therapy in Video 諮商與治療影片資料庫",
+     "year": "2025"
+    },
+    {
+     "name": "The New York Times《紐約時報》",
+     "year": "2025"
+    },
+    {
+     "name": "空中英語教室影音典藏學習系統 : 空中英語教室每日頻道",
+     "year": "2025"
+    },
+    {
+     "name": "Psychology Database 心理學資料庫",
+     "year": "2023"
+    },
+    {
+     "name": "ProQuest Research Library學術性期刊全文資料庫",
+     "year": "2023"
+    },
+    {
+     "name": "臺灣學術電子書聯盟-iGLibrary電子書",
+     "year": null
+    },
+    {
+     "name": "Open Access Elsevier",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-ProQuest Ebook Central電子書",
+     "year": null
+    },
+    {
+     "name": "WorldCat",
+     "year": null
+    },
+    {
+     "name": "Arts & Humanities Database藝術與人文資料庫",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-De Gruyter西文學術電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Bentham Science電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-S. Karger AG電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Gale Virtual Reference Library電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Springer Publishing電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-InfoSci西文電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-World Scientific電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Wiley Online Library電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Project Muse Complete Collection",
+     "year": null
+    },
+    {
+     "name": "美國大都會博物館",
+     "year": null
+    },
+    {
+     "name": "OmniFILE Full Text Select Edition(EBSCO)",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Woodhead電子書 (整合至Elsevier)",
+     "year": null
+    },
+    {
+     "name": "eBook Collection (EBSCOhost)",
+     "year": null
+    },
+    {
+     "name": "Teacher Reference Center 教師參考類文獻資源",
+     "year": null
+    },
+    {
+     "name": "GreenFILE 節能環保類文獻資源",
+     "year": null
+    },
+    {
+     "name": "Library, Information Science & Technology Abstracts 圖書資訊學索摘資料庫",
+     "year": null
+    },
+    {
+     "name": "American Doctoral Dissertation 美國博士論文檔案資料庫",
+     "year": null
+    },
+    {
+     "name": "Turnitin論文原創性比對系統",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書暨資料庫聯盟",
+     "year": null
+    },
+    {
+     "name": "The Vogue Archive資料庫",
+     "year": null
+    },
+    {
+     "name": "PubMed 生物醫學資料庫",
+     "year": null
+    },
+    {
+     "name": "SpringerLink online journal archive",
+     "year": null
+    },
+    {
+     "name": "CogPrints",
+     "year": null
+    },
+    {
+     "name": "DOAJ (Directory of open access journals)",
+     "year": null
+    },
+    {
+     "name": "Emerald(MCB)",
+     "year": null
+    },
+    {
+     "name": "ERIC(教育文摘資料庫)",
+     "year": null
+    },
+    {
+     "name": "Gale-電子書",
+     "year": null
+    },
+    {
+     "name": "Online Biographical Dictionary of the Woman Suffrage Movement in the U.S. 美國婦女參政運動線上傳記辭典",
+     "year": null
+    },
+    {
+     "name": "Repec (Research Papers in Economics)",
+     "year": null
+    },
+    {
+     "name": "國際碩博士論文全文資料庫= Digital Dissertations Consortium(原美加博碩士論文數位典藏聯盟)",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-SpringerLink英文電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Oxford牛津線上學術電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-SIAM電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-SAGE eReference電子百科",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Cambridge Companions Online電子書",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Myilibrary電子書",
+     "year": null
+    }
+   ]
+  },
+  "中文資料庫": {
+   "listed": 50,
+   "items": [
+    {
+     "name": "月旦法學知識庫",
+     "year": "2025"
+    },
+    {
+     "name": "油漆式速記華測檢定(TOCFL) 越南語",
+     "year": "2025"
+    },
+    {
+     "name": "雲端文創資源庫 : 客制化企業識別素材",
+     "year": "2020"
+    },
+    {
+     "name": "近代史數位資料庫(MHDB, Modern History Databases)",
+     "year": "2019"
+    },
+    {
+     "name": "華語文能力測驗(TOCFL Online Mock Test)",
+     "year": "2019"
+    },
+    {
+     "name": "雲端文創資源庫 : 刀模大師B",
+     "year": "2019"
+    },
+    {
+     "name": "教育部教學實踐研究計畫成果交流平台 ＝ MOE Teaching Practice Research Program",
+     "year": "2017"
+    },
+    {
+     "name": "元照電子書",
+     "year": null
+    },
+    {
+     "name": "教室電影院",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-Library & Book(L&B)電子書",
+     "year": null
+    },
+    {
+     "name": "一刻鯨選影音",
+     "year": null
+    },
+    {
+     "name": "臺灣學研究中心",
+     "year": null
+    },
+    {
+     "name": "Walking Library電子雜誌",
+     "year": null
+    },
+    {
+     "name": "GPI政府出版品資訊網",
+     "year": null
+    },
+    {
+     "name": "臺灣學通訊資料庫",
+     "year": null
+    },
+    {
+     "name": "雙語詞彙、學術名詞暨辭書資訊網",
+     "year": null
+    },
+    {
+     "name": "雙語資料庫學習資源網",
+     "year": null
+    },
+    {
+     "name": "中華數字書苑",
+     "year": null
+    },
+    {
+     "name": "漢籍全文資料庫",
+     "year": null
+    },
+    {
+     "name": "Airiti Library華藝線上圖書館",
+     "year": null
+    },
+    {
+     "name": "iRead eBooks華藝中文電子書",
+     "year": "3151"
+    },
+    {
+     "name": "法源法律網",
+     "year": "1506"
+    },
+    {
+     "name": "法源論著資料庫",
+     "year": null
+    },
+    {
+     "name": "中華文明之時空基礎架構",
+     "year": null
+    },
+    {
+     "name": "立法院公報影像檢索系統",
+     "year": null
+    },
+    {
+     "name": "全國法規資料庫",
+     "year": null
+    },
+    {
+     "name": "臺灣博碩士論文知識加值系統",
+     "year": "2561"
+    },
+    {
+     "name": "全國新書資訊網",
+     "year": null
+    },
+    {
+     "name": "全國圖書書目資訊網 NBINet",
+     "year": null
+    },
+    {
+     "name": "電子佛典集成",
+     "year": null
+    },
+    {
+     "name": "臺灣人物誌（日治時期）上中下合集(1895-1945)",
+     "year": null
+    },
+    {
+     "name": "中華民國統計資訊網",
+     "year": null
+    },
+    {
+     "name": "博客來網路書店 電子資源",
+     "year": null
+    },
+    {
+     "name": "中國民國專利資訊網",
+     "year": null
+    },
+    {
+     "name": "行政院公報資訊網",
+     "year": null
+    },
+    {
+     "name": "立法院法律全文資料庫",
+     "year": null
+    },
+    {
+     "name": "總統府公報",
+     "year": null
+    },
+    {
+     "name": "電子化政府入口網",
+     "year": null
+    },
+    {
+     "name": "公務出國報告資訊網",
+     "year": null
+    },
+    {
+     "name": "亞馬遜網路書店",
+     "year": null
+    },
+    {
+     "name": "維基百科",
+     "year": null
+    },
+    {
+     "name": "臺大佛學數位圖書館",
+     "year": null
+    },
+    {
+     "name": "臺灣期刊論文索引系統",
+     "year": null
+    },
+    {
+     "name": "CLISA中文圖書資訊學文獻摘要資料庫-全國版",
+     "year": null
+    },
+    {
+     "name": "萬方數據知識服務平台(中國數字化期刊全文資料庫)",
+     "year": null
+    },
+    {
+     "name": "全國學術版人文及社會科學資料庫(HUSO)檢索系統",
+     "year": null
+    },
+    {
+     "name": "臺灣學術電子書聯盟-McGraw-Hill電子書(含中西文電子書)",
+     "year": null
+    },
+    {
+     "name": "臺灣日治時期統計資料庫",
+     "year": null
+    },
+    {
+     "name": "臺灣法實證研究資料庫",
+     "year": null
+    },
+    {
+     "name": "HyRead ebook電子書",
+     "year": null
+    }
+   ]
+  },
+  "電子書": {
+   "listed": 50,
+   "items": [
+    {
+     "name": "ProQuest One Psychology心理學資料庫",
+     "year": "2026"
+    },
+    {
+     "name": "青年日報全版影像",
+     "year": "2026"
+    },
+    {
+     "name": "Digitale Bibliothek Deutscher Klassiker德國經典文學線上圖書館",
+     "year": "2025"
+    },
+    {
+     "name": "Kafkas Werke 卡夫卡作品集",
+     "year": "2025"
+    },
+    {
+     "name": "Schillers Werke 席勒作品集",
+     "year": "2025"
+    },
+    {
+     "name": "Counseling & Therapy in Video 諮商與治療影片資料庫",
+     "year": "2025"
+    },
+    {
+     "name": "The New York Times《紐約時報》",
+     "year": "2025"
+    },
+    {
+     "name": "油漆式速記華測檢定(TOCFL) 越南語",
+     "year": "2025"
+    },
+    {
+     "name": "115年律師司法官數位課程",
+     "year": "2025"
+    },
+    {
+     "name": "115年專技高考社工師函授課程",
+     "year": "2025"
+    },
+    {
+     "name": "MATLAB程式設計. 基礎篇",
+     "year": "2025"
+    },
+    {
+     "name": "計算機概論  : 擁抱AI,掌握新趨勢 = Introduction to computer science",
+     "year": "2025"
+    },
+    {
+     "name": "計算機概論  : AI應用與資訊安全 = Introduction to computer science",
+     "year": "2025"
+    },
+    {
+     "name": "字首.字根.字尾NEW TOEIC必考單字  : 最強多益單字記憶法,輕鬆突破900分 = Essential words for the new TOEIC test",
+     "year": "2025"
+    },
+    {
+     "name": "租稅申報實務(主題式題庫+歷年試題). 2025b",
+     "year": "2025"
+    },
+    {
+     "name": "租稅申報實務(包括所得稅加值型及非加值型營業稅申報). 2025",
+     "year": "2025"
+    },
+    {
+     "name": "初等考試試題大補帖. 2026  : 國文",
+     "year": "2025"
+    },
+    {
+     "name": "人工智慧  = Artificial intelligence",
+     "year": "2025"
+    },
+    {
+     "name": "英文看這本就夠了",
+     "year": "2025"
+    },
+    {
+     "name": "2025民法親屬與繼承編(含概要)",
+     "year": "2025"
+    },
+    {
+     "name": "主題式會計事務(人工記帳、資訊)丙級技能檢定術科滿分題庫",
+     "year": "2025"
+    },
+    {
+     "name": "2025會計學概要(主題式題庫+歷年試題)",
+     "year": "2025"
+    },
+    {
+     "name": "勞工行政與勞工法規大意  : 看這本就夠了",
+     "year": "2025"
+    },
+    {
+     "name": "2025記帳相關法規概要(包含記帳士法、商業會計法及商業會計處理準則)",
+     "year": "2025"
+    },
+    {
+     "name": "2025稅務相關法規概要(包括所得稅法、稅捐稽徵法、加值型及非加值型)",
+     "year": "2025"
+    },
+    {
+     "name": "丙級西餐烹調技能檢定學術科完全攻略",
+     "year": "2025"
+    },
+    {
+     "name": "丙級烘焙技能檢定學術科完全攻略",
+     "year": "2025"
+    },
+    {
+     "name": "[技術士] 建築物室內裝修工程管理乙級學術科技能檢定考照祕笈",
+     "year": "2025"
+    },
+    {
+     "name": "半導體製程技術導論  = Introduction to semiconductor manufacturing technology",
+     "year": "2025"
+    },
+    {
+     "name": "丙級視覺傳達設計技能檢定學術科題庫整理與分析",
+     "year": "2025"
+    },
+    {
+     "name": "[導遊領隊] 導遊領隊執業實務[華語、外語導遊領隊人員]",
+     "year": "2025"
+    },
+    {
+     "name": "數位產品設計心理學  : 好介面做了什麼, 讓使用者的行為改變?",
+     "year": "2025"
+    },
+    {
+     "name": "社會政策與社會立法(含社會福利政策與法規)",
+     "year": "2025"
+    },
+    {
+     "name": "94歲阿嬤的專長是自拍  : 我的暢快獨居生活",
+     "year": "2025"
+    },
+    {
+     "name": "黃金年華  : 面對銀髮族需要重新定義的時代",
+     "year": "2025"
+    },
+    {
+     "name": "還在工作的樂趣-我102歲  : 凡事不比較、守口如瓶、製造小確幸, 讓自己永遠被需要!我做了61年業務, 在困境中也能發現幸福。",
+     "year": "2025"
+    },
+    {
+     "name": "現在不是去死的時候  : 毫無止境的絕望、沮喪,我該怎麼活?幫助超過20,000人走出谷底的禪僧,總是這樣回答。",
+     "year": "2025"
+    },
+    {
+     "name": "天選之人  : 造王者與受冕者的權力遊戲,社會地位如何主宰一切,及AI時代的新變化",
+     "year": "2025"
+    },
+    {
+     "name": "60歲開始越活越聰明!  : 大腦與心境的瞬間保養法",
+     "year": "2025"
+    },
+    {
+     "name": "晶圓代工與先進封裝產業科技實務  = Wafer foundry and advanced packaging technologies : industrial practices and applications",
+     "year": "2025"
+    },
+    {
+     "name": "月旦法學知識庫",
+     "year": "2025"
+    },
+    {
+     "name": "空中英語教室影音典藏學習系統 : 空中英語教室每日頻道",
+     "year": "2025"
+    },
+    {
+     "name": "微生命的交響樂 : 追尋人體微生物相的和諧之旅",
+     "year": "2024"
+    },
+    {
+     "name": "未來力  : 打造不被AI取代的19種關鍵技能 = Future business skills 19",
+     "year": "2024"
+    },
+    {
+     "name": "專利法公布80週年特集",
+     "year": "2024"
+    },
+    {
+     "name": "室內裝修工程實務(乙級學術科)",
+     "year": "2024"
+    },
+    {
+     "name": "公職考試2024試題大補帖. [電子學(含電子學概要、電子學與電路學)] : (108-112年試題)(申論題型)",
+     "year": "2024"
+    },
+    {
+     "name": "國營事業2024試題大補帖經濟部新進職員. [企管類] : 專業科目(105-112年試題)",
+     "year": "2024"
+    },
+    {
+     "name": "AI影片製作工具箱  : AI繪圖合成×智慧編輯剪片×ChatGPT文案生成全攻略",
+     "year": "2024"
+    },
+    {
+     "name": "AI全面啟動  : 人工智慧的過去現在和展望的未來",
+     "year": "2024"
+    }
+   ]
+  }
+ }
+}

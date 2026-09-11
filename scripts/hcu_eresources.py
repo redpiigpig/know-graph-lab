@@ -66,29 +66,85 @@ def categories(page: str) -> dict[str, str]:
     return out
 
 
-def postback(s: requests.Session, page: str, target: str) -> str:
+def postback(s: requests.Session, page: str, target: str, arg: str = "") -> str:
+    """送一次 postback。
+
+    ⚠️ 翻頁跟點分類不一樣：分類是換 `__EVENTTARGET`，翻頁是 target 固定為
+    `…$AspNetPager1` 而把**頁碼放進 `__EVENTARGUMENT`**。把頁碼當 target 找，
+    會一直找不到「下一頁」而默默只收第一頁。
+    """
     data = hidden(page)
     data["__EVENTTARGET"] = target
-    data["__EVENTARGUMENT"] = ""
+    data["__EVENTARGUMENT"] = arg
     r = s.post(BASE, data=data, headers={**UA, "Referer": BASE}, timeout=60)
     r.encoding = "utf-8"   # ⚠️ 別用 apparent_encoding，它把這頁猜成西里爾字集
     return r.text
 
 
+# ⚠️ 別拿 `<td class="hidden">MARC…</td>` 當列的錨點：那一格只出現在 50 列裡的 16 列，
+# 於是清單默默只剩三分之一，而畫面與程式都不會抱怨。每一列一定有的是題名那個
+# postback 連結（id 以 lbtgcd2 結尾），拿它當錨點才完整。
+TITLE_A = re.compile(r'<a[^>]*id="[^"]*lbtgcd2"[^>]*>(.*?)</a>', re.S)
+YEAR = re.compile(r">(\d{4})<")
+PAGER = re.compile(r"__doPostBack\('([^']*AspNetPager\d*)','(\d+)'\)")
+SORT = re.compile(r"__doPostBack\('([^']*\$dg)','(Sort\$[A-Za-z0-9]+)'\)")
+
+
 def parse_list(page: str) -> list[dict]:
-    """一類底下的資料庫清單。條目是連到外部網址的連結。"""
-    rows, seen = [], set()
-    for m in re.finditer(r'<a[^>]+href="(https?://[^"]+)"[^>]*>(.*?)</a>', page, re.S):
-        url, name = html.unescape(m.group(1)), text(m.group(2))
-        if not name or len(name) < 3:
-            continue
-        if "hcu.edu.tw" in url and "webopac" in url:
-            continue
-        if (name, url) in seen:
-            continue
-        seen.add((name, url))
-        rows.append({"name": name, "url": url})
+    """一頁的清單。
+
+    ⚠️ 條目的連結是 postback 不是外部網址——這個 OPAC 在清單頁不給資料庫的真正入口，
+    要再點進書目才有。所以這裡只收「館方有哪些紀錄、哪一年建檔」。
+    """
+    rows, marks = [], [m for m in TITLE_A.finditer(page)]
+    for i, m in enumerate(marks):
+        name = text(m.group(1))
+        for junk in ("[電子資源]", "[ 電子資源 ]", "[電子書]", "[ 電子書 ]"):
+            name = name.replace(junk, "")
+        name = name.strip(" /.:")
+        tail = page[m.end(): marks[i + 1].start() if i + 1 < len(marks) else m.end() + 900]
+        y = YEAR.search(tail)
+        if name:
+            rows.append({"name": name, "year": y.group(1) if y else None})
     return rows
+
+
+def collect(s: requests.Session, first: str) -> list[dict]:
+    """把一類收完。
+
+    ⚠️ **這個 OPAC 的分頁翻不過去**：pager 的 postback（target 是 …$AspNetPager1、
+    頁碼放 `__EVENTARGUMENT`）送出去之後，回來的頁面掉了查詢狀態，一列都沒有。
+    而一頁只出 50 筆，外文資料庫有 69 筆——照單全收就會**默默少 19 筆**。
+
+    繞法是換排序：表頭每一欄都能 postback 重排（`Sort$cata12` 之類），排序一換，
+    第一頁那 50 筆就換一批。把每一種排序的第一頁聯集起來，只要總數不超過
+    50×排序數就收得全。收完會比對「查詢條列數」那個數字，不足就明講。
+    """
+    rows = parse_list(first)
+    m = re.search(r"查詢條列數[:：]\s*(\d+)", text(first))
+    expect = int(m.group(1)) if m else None
+
+    tried = set()
+    for sm in SORT.finditer(first):
+        key = sm.group(2)
+        if key in tried:
+            continue
+        tried.add(key)
+        for _ in range(2):          # 同一欄送兩次＝升冪與降冪
+            page = postback(s, first, sm.group(1), key)
+            rows += parse_list(page)
+        if expect and len({r["name"] for r in rows}) >= expect:
+            break
+
+    seen, out = set(), []
+    for r in rows:
+        if r["name"] in seen:
+            continue
+        seen.add(r["name"]); out.append(r)
+    if expect and len(out) < expect:
+        print(f"  ⚠️ 館方說有 {expect} 筆，只湊到 {len(out)} 筆（分頁翻不過去，換排序也沒補齊）",
+              file=sys.stderr)
+    return out
 
 
 def main() -> int:
@@ -110,11 +166,11 @@ def main() -> int:
     result = {}
     for name in want:
         sub = postback(s, page, cats[name])
-        rows = parse_list(sub)
+        rows = collect(s, sub)
         result[name] = rows
         print(f"\n── {name}：{len(rows)} 筆")
         for x in rows:
-            print(f"    {x['name'][:52]:54s} {x['url'][:58]}")
+            print(f"    {x['year']}  {x['name'][:64]}")
 
     if args.list:
         return 0
@@ -123,7 +179,10 @@ def main() -> int:
     OUT.write_text(json.dumps({
         "source": BASE,
         "note": "玄奘大學圖書館 webopac 特色館藏底下的電子資源清單；多數需校內 IP 或帳號",
-        "categories": result,
+        "caveat": "⚠️ 這個 OPAC 一頁只給 50 筆，而分頁與換排序的 postback 回來都掉查詢狀態，"
+                  "所以每一類都只收得到前 50 筆。館方自報的總數見各類的 expect 欄，"
+                  "差額要用有頭瀏覽器（Playwright）才補得齊。",
+        "categories": {k: {"listed": len(v), "items": v} for k, v in result.items()},
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n→ {OUT}")
     return 0
