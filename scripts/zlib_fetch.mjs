@@ -226,7 +226,13 @@ export function rank(hit, query = '', expect = '', who = '', wantLang = '', want
 }
 
 async function search(page, q) {
-  await gotoPastWall(page, `${HOST}/s/${encodeURIComponent(q)}`)
+  // 🚨 牆沒過就**丟例外**，不可回空陣列。空陣列會被上面判成 'not-found' 寫進帳本，
+  //    那本書從此不再重試——於是「站方擋住我們」被永久記成「這本書不存在」。
+  //    2026-09-11 實測：z-library.sk 連回 HTTP 513「正在验证您的浏览器 | DiamWall」，
+  //    等滿兩分鐘都不放行，而當天凌晨那一輪把六本書全記成了 not-found。
+  if (!(await gotoPastWall(page, `${HOST}/s/${encodeURIComponent(q)}`))) {
+    throw new Error('DiamWall 未過——這是站方擋住，不是查無此書')
+  }
   await page.waitForSelector('z-bookcard', { timeout: 20000 }).catch(() => {})
   return page.evaluate(() => {
     const cards = [...document.querySelectorAll('z-bookcard')]
