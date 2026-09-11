@@ -1,0 +1,613 @@
+{
+ "source": "https://glossaries.dila.edu.tw/glossaries",
+ "note": "法鼓文理學院佛學術語字辭典；各部授權不同，見每一筆的 license 欄",
+ "corpus_dir": "G:\\我的雲端硬碟\\資料\\知識圖工作室\\_corpus\\dila-glossaries",
+ "count": 15,
+ "rows": [
+  {
+   "code": "PLC",
+   "title": "Dama Bhikkhu: A Chinese Translation of A.P. Buddhadatta's \"Concise Pali-English Dictionary\" : Digital Edition",
+   "blurb": "The translation was made from the second edition (1958) of A.P. Buddhadatta's \"Concise Pali-English Dictionary\". First published in Colombo, this edition is now available as reprint (Delhi: Motilal Barnasidass) 294 pgs. The translation was distributed on the net as a MS Word file, from which we converted it to the current TEI-XML format. The translation team under Bhikkhu Dama 比丘大馬 (perhaps a pen-name) made a few minor additions and corrections (e.g. adding an entry for Ṅ, which is not found in the printed version). In the version we found 12 pages had not been translated, the team mentioned above finshed the translation. Translation of remaining part (12 pages): Shi Zhanghui 釋章慧, Guan Zefu ",
+   "license": "",
+   "rights": "unstated",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-pali-chin.dila.bgl",
+     "name": "babylon-pali-chin.dila.bgl",
+     "size": "333.20 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pali-chin.dila.pdf",
+     "name": "pali-chin.dila.pdf",
+     "size": "2.25 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pali-chin.dila.epub",
+     "name": "pali-chin.dila.epub",
+     "size": "1011.59 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-pali-chin.dila.zip",
+     "name": "stardict-pali-chin.dila.zip",
+     "size": "363.51 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pali-chin.dila.htm.zip",
+     "name": "pali-chin.dila.htm.zip",
+     "size": "312.68 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pali-chin.dila.tei.p4.xml.zip",
+     "name": "pali-chin.dila.tei.p4.xml.zip",
+     "size": "317.88 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pali-chin.gls.zip",
+     "name": "pali-chin.gls.zip",
+     "size": "290.52 KiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "A Chinese Translation of A.P. Buddhadatta's \"Concise Pali-English Dictionary\" : Digital Ed",
+   "downloaded": "PLC__pali-chin.dila.tei.p4.xml.zip",
+   "bytes": 325507,
+   "entries": 10599
+  },
+  {
+   "code": "TSK",
+   "title": "Dan Martin: Tibskrit Philology",
+   "blurb": "A Bibliography of Tibetan Philology by Dan Martin Used with kind permission by the author. Author: Dan Martin Editor: Alexander Cherniak Programming: Ray Chou 周邦信 Principal: Marcus Bingenheimer 馬德偉",
+   "license": "with kind permission by the author. Author: Dan Martin Editor: Alexander Cherniak Programming: Ray Chou 周邦信 Principal: Marcus Bingenheimer 馬",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/tibskrit.dila.htm.zip",
+     "name": "tibskrit.dila.htm.zip",
+     "size": "2.83 MiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-tibskrit.dila.bgl",
+     "name": "babylon-tibskrit.dila.bgl",
+     "size": "2.16 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/tibskrit.dila.tei.p5.xml.zip",
+     "name": "tibskrit.dila.tei.p5.xml.zip",
+     "size": "2.10 MiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/tibskrit.gls.zip",
+     "name": "tibskrit.gls.zip",
+     "size": "2.09 MiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-tibskrit.dila.zip",
+     "name": "stardict-tibskrit.dila.zip",
+     "size": "2.14 MiB, 2017-03-20"
+    }
+   ],
+   "listed_name": "Tibskrit Philology",
+   "downloaded": "TSK__tibskrit.dila.tei.p5.xml.zip",
+   "bytes": 2204261,
+   "entries": 0
+  },
+  {
+   "code": "PLGE",
+   "title": "巴利文法語尾變化數位索引",
+   "blurb": "繼Rod Bucknell: 《梵語手冊》語尾變化數位索引之後，本辭典參考了多本巴利文法書與辭典的名詞、形容詞、代名詞與動詞語尾變化後將之數位化成可供查詢的電子詞典模式，方便大家使用。 資料搜集、輸入與校對員: 陳莉娜 程式設計者: 周邦信 計畫主持人: 釋惠敏 協同主持人: Bhikkhunī Dhammadinnā 使用方法： 請上本校的 DILA glossaries 網站 http://glossaries.dila.edu.tw ，如在線查詢請在 SEARCH 框內直接查詢。 查詢時請先鍵入表示語尾的 - 符號，再輸入語尾變化。 例如：輸入 -ato 會出現如下結果： 連結字根（如：dhamma ）即會出現該字的語尾變化。 下方所列各種格式詞典可供下載，配合電子詞典軟體使用。例如 Babylon 格式詞典可用於 GoldenDict 軟體，Apple 詞典格式可用於 Mac OS 內建的詞典軟體。 參考書目： 水野弘元。（1955 第一版。 1992 第八版）。《パ－リ語文法》。東京：山喜房佛書林。 水野弘元。（1968 第一刷。 2005 增補改訂） 。《パ－リ語辭典》。東京：株式会社春秋社。 蔡奇林 編。(2000 第二版)。《實用巴利語文法》（影印本）。 釋性恩 整理。（2007 第二版）。《巴利語入門》。嘉義：法雨道場。 Buddhadatta, A. P. 2005. The New Pali Course Part III . Dehiwala: Buddhist Cultural Centre. Davids, T. W. Rhys and Willia",
+   "license": "",
+   "rights": "unstated",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Pali_Grammar_Endings.gls.zip",
+     "name": "Pali_Grammar_Endings.gls.zip",
+     "size": "17.03 KiB, 2018-06-06"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Pali_Grammar_Endings.dictionary.zip",
+     "name": "Pali_Grammar_Endings.dictionary.zip",
+     "size": "99.75 KiB, 2018-06-06"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Pali_Grammar_Endings.bgl",
+     "name": "Pali_Grammar_Endings.bgl",
+     "size": "20.25 KiB, 2018-06-06"
+    }
+   ],
+   "listed_name": "Digital Index of Noun and Verb Endings of Pāli Grammar",
+   "downloaded": "PLGE__Pali_Grammar_Endings.gls.zip",
+   "bytes": 17439,
+   "entries": 0
+  },
+  {
+   "code": "DFB",
+   "title": "丁福保：《佛學大辭典》",
+   "blurb": "《佛學大辭典》，由丁福保居士耗時八年编著而成，譯自日本人織田德能的《佛學大辭典》，是刪除了日本佛教相關資料及文獻出處之後所成的節譯本。于1922年正式出版，收錄條目三萬多個，360多萬字。 這個版本是由 Simon Wiles 產生，原始電子檔來自 CBETA，CBETA 資料來自「佛教電腦資訊庫功德會」。 進行了大量的更正和改進，提供了 StarDict 版本。TEI 主文件也可以下載，壓縮檔中包括了 Brahmi Script 所使用的缺字 png 檔。 The text of the Dingfubao is in the public domain. This TEI version is licensed by DDBC under a Creative Commons Attribution-Share Alike 2.5 Taiwan License ( http://creativecommons.org/licenses/by-sa/2.5/tw/ )",
+   "license": "public domain. This TEI version is licensed by DDBC under a Creative Commons Attribution-Share Alike 2.5 Taiwan License ( http://creativecommons.org/lice",
+   "rights": "public-domain",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-dingfubao.dila.bgl",
+     "name": "babylon-dingfubao.dila.bgl",
+     "size": "3.78 MiB, 2020-02-21"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dingfubao.gls.zip",
+     "name": "dingfubao.gls.zip",
+     "size": "3.59 MiB, 2020-02-24"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dingfubao.dila.tei.p5.xml.zip",
+     "name": "dingfubao.dila.tei.p5.xml.zip",
+     "size": "3.81 MiB, 2020-02-21"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dingfubao.dila.htm.zip",
+     "name": "dingfubao.dila.htm.zip",
+     "size": "3.84 MiB, 2020-02-21"
+    }
+   ],
+   "listed_name": "丁福保佛學大辭典",
+   "downloaded": "DFB__dingfubao.dila.tei.p5.xml.zip",
+   "bytes": 3993692,
+   "entries": 31366
+  },
+  {
+   "code": "JHK",
+   "title": "Jeffrey Hopkins: Tibetan-Sanskrit-English Dictionary",
+   "blurb": "Data provided 2010 by Jeffery Hopkins, used with permission from the author. A project of the UMA Institute for Tibetan Studies (Union of the Modern and the Ancient: gsar rnying zung `jug khang): uma-tibet.org, Boonesville, Virginia. Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres, Montano, William Magee TEI: Marcus Bingenheimer Data transform: Ray Chou 周邦信",
+   "license": "with permission from the author. A project of the UMA Institute for Tibetan Studies (Union of the Modern and the Ancient: gsar rnying z",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/hopkins.dila.tei.p5.xml.zip",
+     "name": "hopkins.dila.tei.p5.xml.zip",
+     "size": "962.99 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/hopkins.dila.htm.zip",
+     "name": "hopkins.dila.htm.zip",
+     "size": "852.83 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/hopkins.gls.zip",
+     "name": "hopkins.gls.zip",
+     "size": "795.07 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-hopkins.dila.bgl",
+     "name": "babylon-hopkins.dila.bgl",
+     "size": "905.08 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/hopkins.dila.pdf",
+     "name": "hopkins.dila.pdf",
+     "size": "3.61 MiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "Jeffrey Hopkins: Tibetan-Sanskrit-English Dictionary",
+   "downloaded": "JHK__hopkins.dila.tei.p5.xml.zip",
+   "bytes": 986105,
+   "entries": 18441
+  },
+  {
+   "code": "MVP",
+   "title": "Mahāvyutpatti",
+   "blurb": "The Mahāvyutpatti (Tib: bye brag rtog byed ) was first compiled in the early 9th century as a glossary to aid the translation of Sanskrit Buddhist scriptures into Tibetan. Later Chinese, Mongolian and Manchu equivalents were added. This version contains Sanskrit, Tibetan and Chinese. The StarDict dictionary available below offers the possibility to query in Devanāgarī (as well as IAST roman-transliteration) and in the Tibetan script (as well as Wylie roman-transliteration). We believe this text is in the public domain.",
+   "license": "public domain.",
+   "rights": "public-domain",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/mahavyutpatti.dila.htm.zip",
+     "name": "mahavyutpatti.dila.htm.zip",
+     "size": "481.61 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/mahavyutpatti.dila.epub",
+     "name": "mahavyutpatti.dila.epub",
+     "size": "3.15 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/mahavyutpatti.gls.zip",
+     "name": "mahavyutpatti.gls.zip",
+     "size": "703.10 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-mahavyutpatti.dila.bgl",
+     "name": "babylon-mahavyutpatti.dila.bgl",
+     "size": "785.38 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-mahavyutpatti.dila.zip",
+     "name": "stardict-mahavyutpatti.dila.zip",
+     "size": "645.45 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/mahavyutpatti.dila.tei.p5.xml.zip",
+     "name": "mahavyutpatti.dila.tei.p5.xml.zip",
+     "size": "602.50 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/mahavyutpatti.dila.pdf",
+     "name": "mahavyutpatti.dila.pdf",
+     "size": "3.49 MiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "翻譯名義大集",
+   "downloaded": "MVP__mahavyutpatti.dila.tei.p5.xml.zip",
+   "bytes": 616963,
+   "entries": 9379
+  },
+  {
+   "code": "PTG",
+   "title": "Pentaglot Dictionary of Buddhist Terms",
+   "blurb": "This is a digital version of the Wuyi hebi jiyao 五譯合璧集要 , as reprinted with indices by Raghu Vira under the title \"Pentaglot Dictionary of Buddhist Terms\", Delhi: 1961. The Pentaglot contains 1071 terms in Manchu, Chinese, Sanskrit (written in Tibetan script), Mongolian and Tibetan, and is probably based on the Mahāvyutpatti, though the exact relationship between the two still awaits further research. We have not digitized the Tibetan terms as yet. We believe this text is in the public domain. This digital version is licensed by DILA under a Creative Commons Attribution-Share Alike 3.0 Taiwan License . Data Input (Sanskrit, Manchu, Chinese): Baolian 鄭寶蓮 Data Input (Mongolian): Sarnai Narayan",
+   "license": "public domain. This digital version is licensed by DILA under a Creative Commons Attribution-Share Alike 3.0 Taiwan License . Data Input (Sanskrit, Manch",
+   "rights": "public-domain",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pentaglot.dila.htm.zip",
+     "name": "pentaglot.dila.htm.zip",
+     "size": "33.22 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pentaglot.dila.epub",
+     "name": "pentaglot.dila.epub",
+     "size": "84.68 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pentaglot.dila.tei.p5.xml.zip",
+     "name": "pentaglot.dila.tei.p5.xml.zip",
+     "size": "42.09 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-pentaglot.dila.zip",
+     "name": "stardict-pentaglot.dila.zip",
+     "size": "51.65 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pentaglot.gls.zip",
+     "name": "pentaglot.gls.zip",
+     "size": "31.45 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/pentaglot.dila.pdf",
+     "name": "pentaglot.dila.pdf",
+     "size": "389.52 KiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "五譯合璧集要",
+   "downloaded": "PTG__pentaglot.dila.tei.p5.xml.zip",
+   "bytes": 43101,
+   "entries": 1070
+  },
+  {
+   "code": "SKME",
+   "title": "Rod Bucknell: 《梵語手冊》語尾變化數位索引",
+   "blurb": "Sanskrit Manual （Prof. Roderick S. Bucknell）是古典梵語文法之簡便手冊，書末也提供相關「文法規則表」與各類「語尾變化表」以便查詢，本計畫特將最常用的「表格29：動詞語尾」、「表格30：名詞語尾」與「表格13-14：代名詞語尾」數位化成可以查詢的電子詞典模式，方便大家使用。 原書作者: Roderick Bucknell 輸入與校對員: 陳莉娜 程式設計者: 周邦信 計畫主持人: 釋惠敏 協同主持人: Bhikkhunī Dhammadinnā 使用方法： 請上本校的 DILA glossaries 網站 http://glossaries.dila.edu.tw ，如在線查詢請在 SEARCH 框內直接查詢。 查詢時請先鍵入表示語尾的 - 符號，再輸入語尾變化。 例如：輸入 -yoḥ 會出現如下結果： -yoḥ ......... 6m. [2 muni] Gen du -yoḥ ......... 6m. [2 muni] Loc du -yoḥ ......... 6f. [33 nadī] Gen du -yoḥ ......... 6f. [33 nadī] Loc du -yoḥ ......... 6f. [35 mati] Gen du -yoḥ ......... 6f. [35 mati] Loc du 以上“6” 表書中的原表格編號，“2”、“33” 與“35”為表格6內的順序編號，書中原有的編號亦加以標示以便使用者有需要時亦可查詢原書。 若是m. n. f. (ā )之 a/ā（或代名詞idam/tad等）結尾的y",
+   "license": "",
+   "rights": "unstated",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Bucknell_Skt_Manual.dictionary.zip",
+     "name": "Bucknell_Skt_Manual.dictionary.zip",
+     "size": "204.22 KiB, 2021-10-04"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Bucknell_Skt_Manual.gls.zip",
+     "name": "Bucknell_Skt_Manual.gls.zip",
+     "size": "30.37 KiB, 2021-10-03"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Bucknell_Skt_Manual.bgl",
+     "name": "Bucknell_Skt_Manual.bgl",
+     "size": "35.00 KiB, 2018-06-26"
+    }
+   ],
+   "listed_name": "Rod Bucknell: 《梵語手冊》語尾變化數位索引",
+   "downloaded": "SKME__Bucknell_Skt_Manual.gls.zip",
+   "bytes": 31100,
+   "entries": 0
+  },
+  {
+   "code": "KDR",
+   "title": "辛嶋靜志：《正法華經詞典》",
+   "blurb": "The Library and Information Center at Dharma Drum Buddhist College digitized Seishi Karashima's: \"A Glossary of Dharmarakṣa's Translation of the Lotus Sutra\" with permission of the author in order to make the data more widely available. After the author provided us with the original wordprocessor files used to create the print publication (Karashima 1998), Nobumi Iyanaga kindly helped us to transform the material from the original Nisus Writer format into Unicode. We added TEI markup and proofed the resulting electronic resource. Programming: Ray Chou 周邦信 Principal: Marcus Bingenheimer",
+   "license": "with permission of the author in order to make the data more widely available. After the author provided us with the original wordproce",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-dharmaraksa.dila.bgl",
+     "name": "babylon-dharmaraksa.dila.bgl",
+     "size": "783.99 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-dharmaraksa.dila.zip",
+     "name": "stardict-dharmaraksa.dila.zip",
+     "size": "665.20 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.dila.epub",
+     "name": "dharmaraksa.dila.epub",
+     "size": "5.87 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.dila.pdf",
+     "name": "dharmaraksa.dila.pdf",
+     "size": "3.00 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.gls.zip",
+     "name": "dharmaraksa.gls.zip",
+     "size": "758.40 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.dila.htm.zip",
+     "name": "dharmaraksa.dila.htm.zip",
+     "size": "933.22 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.dila.dictionary.zip",
+     "name": "dharmaraksa.dila.dictionary.zip",
+     "size": "1.87 MiB, 2016-06-19"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/dharmaraksa.dila.tei.p5.xml.zip",
+     "name": "dharmaraksa.dila.tei.p5.xml.zip",
+     "size": "853.16 KiB, 2017-03-20"
+    }
+   ],
+   "listed_name": "正法華經詞典",
+   "downloaded": "KDR__dharmaraksa.dila.tei.p5.xml.zip",
+   "bytes": 873638,
+   "entries": 3356
+  },
+  {
+   "code": "KKJ",
+   "title": "辛嶋靜志：《妙法蓮華經詞典》",
+   "blurb": "The Library and Information Center at Dharma Drum Buddhist College digitized Seishi Karashima's: \"A Glossary of Kumārajīva's translation of the Lotus Sutra\" with permission of the author in order to make the data more widely available. After the author provided us with the original wordprocessor files used to create the print publication (Karashima 2001), Nobumi Iyanaga kindly helped us to transform the material from the original Nisus Writer format into Unicode. We added TEI markup and proofed the resulting electronic resource. Programming: Ray Chou 周邦信 Principal: Marcus Bingenheimer",
+   "license": "with permission of the author in order to make the data more widely available. After the author provided us with the original wordproce",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/kumarajiva.dila.pdf",
+     "name": "kumarajiva.dila.pdf",
+     "size": "3.51 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/kumarajiva.dila.dictionary.zip",
+     "name": "kumarajiva.dila.dictionary.zip",
+     "size": "1.46 MiB, 2016-06-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-kumarajiva.dila.bgl",
+     "name": "babylon-kumarajiva.dila.bgl",
+     "size": "634.34 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/kumarajiva.gls.zip",
+     "name": "kumarajiva.gls.zip",
+     "size": "585.37 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/kumarajiva.dila.tei.p5.xml.zip",
+     "name": "kumarajiva.dila.tei.p5.xml.zip",
+     "size": "632.02 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/kumarajiva.dila.htm.zip",
+     "name": "kumarajiva.dila.htm.zip",
+     "size": "740.23 KiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "妙法蓮華經詞典",
+   "downloaded": "KKJ__kumarajiva.dila.tei.p5.xml.zip",
+   "bytes": 647191,
+   "entries": 2409
+  },
+  {
+   "code": "KLS",
+   "title": "辛嶋靜志：《道行般若經詞典》",
+   "blurb": "The Library and Information Center at Dharma Drum Buddhist College digitized Seishi Karashima's: \"A Glossary of Lokakṣema's Translation of the Aṣṭasāhasrikā Prajñāpāramitā\" with permission of the author in order to make the data more widely available. After the author provided us with the original wordprocessor files used to create the print publication (Karashima 2010), Nobumi Iyanaga kindly helped us to transform the material from the original Nisus Writer format into Unicode. We added TEI markup and proofed the resulting electronic resource. Programming: Ray Chou 周邦信 Principal: Marcus Bingenheimer",
+   "license": "with permission of the author in order to make the data more widely available. After the author provided us with the original wordproce",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/lokaksema.dila.dictionary.zip",
+     "name": "lokaksema.dila.dictionary.zip",
+     "size": "1.66 MiB, 2016-06-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-lokaksema.dila.bgl",
+     "name": "babylon-lokaksema.dila.bgl",
+     "size": "876.32 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/lokaksema.dila.htm.zip",
+     "name": "lokaksema.dila.htm.zip",
+     "size": "878.67 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/lokaksema.gls.zip",
+     "name": "lokaksema.gls.zip",
+     "size": "862.11 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/lokaksema.dila.pdf",
+     "name": "lokaksema.dila.pdf",
+     "size": "4.19 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/lokaksema.dila.tei.p5.xml.zip",
+     "name": "lokaksema.dila.tei.p5.xml.zip",
+     "size": "1.01 MiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "道行般若經詞典",
+   "downloaded": "KLS__lokaksema.dila.tei.p5.xml.zip",
+   "bytes": 1055057,
+   "entries": 1607
+  },
+  {
+   "code": "ADV",
+   "title": "辛嶋靜志：《比丘威儀法詞典》",
+   "blurb": "Used with kind permission by the author. Encoding 標記: Xiuwen Wang 王秀雯 Programming: Ray Chou 周邦信 Principal: Sāmaṇerī Dhammadinnā 法樂法師",
+   "license": "with kind permission by the author. Encoding 標記: Xiuwen Wang 王秀雯 Programming: Ray Chou 周邦信 Principal: Sāmaṇerī Dhammadinnā 法樂法師",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Abhisamacarika.gls.zip",
+     "name": "Abhisamacarika.gls.zip",
+     "size": "596.24 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-Abhisamacarika.dila.bgl",
+     "name": "babylon-Abhisamacarika.dila.bgl",
+     "size": "623.54 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Abhisamacarika.dila.htm.zip",
+     "name": "Abhisamacarika.dila.htm.zip",
+     "size": "619.09 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Abhisamacarika.dila.tei.p5.xml.zip",
+     "name": "Abhisamacarika.dila.tei.p5.xml.zip",
+     "size": "769.36 KiB, 2017-03-20"
+    }
+   ],
+   "listed_name": "比丘威儀法詞典",
+   "downloaded": "ADV__Abhisamacarika.dila.tei.p5.xml.zip",
+   "bytes": 787829,
+   "entries": 4192
+  },
+  {
+   "code": "DAT",
+   "title": "辛嶋靜志：《「長阿含経」の原語の研究》",
+   "blurb": "「長阿含経」の原語の研究—音写語分析を中心として: A partial digitised edition prepared by bhikṣunī Tianhua 釋天華 under the supervision of Karashima Seishi辛嶋静志. Used with kind permission by the author. Author: Karashima Seishi 辛嶋静志 Word 檔製作: 天華法師 Programming, XML: Ray Chou 周邦信 Principal: Sāmaṇerī Dhammadinnā 法樂法師",
+   "license": "with kind permission by the author. Author: Karashima Seishi 辛嶋静志 Word 檔製作: 天華法師 Programming, XML: Ray Chou 周邦信 Principal: Sāmaṇerī Dhammadi",
+   "rights": "by-permission",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Study_Dirgha-agama_language.pdf",
+     "name": "Study_Dirgha-agama_language.pdf",
+     "size": "930.28 KiB, 2016-08-06"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Study_Dirgha-agama_language.gls.zip",
+     "name": "Study_Dirgha-agama_language.gls.zip",
+     "size": "89.28 KiB, 2016-08-15"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Study_Dirgha-agama_language.bgl",
+     "name": "Study_Dirgha-agama_language.bgl",
+     "size": "102.84 KiB, 2016-08-15"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/Study_Dirgha-agama_language.xml.zip",
+     "name": "Study_Dirgha-agama_language.xml.zip",
+     "size": "80.38 KiB, 2016-08-15"
+    }
+   ],
+   "listed_name": "「長阿含経」の原語の研究",
+   "downloaded": "DAT__Study_Dirgha-agama_language.xml.zip",
+   "bytes": 82311,
+   "entries": 590
+  },
+  {
+   "code": "NSL",
+   "title": "釋智諭：《南山律學辭典》",
+   "blurb": "南山律，指唐代道宣律師的「四分律」，因其居終南山、後世因稱其撰述為南山律。 唐武德七年（624年），道宣結廬終南山，居淨業寺。此後四十余年，除被禮請參加玄奘法師在長安的譯場外，均在淨業寺潛心禪定，研究律學。後人因他長期居於終南山，並在淨業寺樹立律學範疇，即稱他所傳弘的《四分律》學為南山宗，並稱他為南山律師。 道宣弟子周秀繼承法位，成為南山律宗二祖。律宗弟子中以鑒真大師最著名，他在揚州弘揚南山律，六次東渡日本，把律宗傳到日本，在奈良建寺設壇傳戒。此乃日本律宗的開始。 五代戰亂，律宗式微。至宋代分「會正」、「資持」二宗。 元、明兩代，南山律無人傳承。清代太平天國兵起，寶華山遭到破壞，日後重建，盛況不復，甚至一度失傳。 民國初年，弘一大師精研南山律宗。研究校正《四分律刪繁補缺行事抄》、《四分律合注戒本疏》、《四分律刪補隨機羯磨疏》，編撰有《四分律比丘戒相表記》、《南山律在家備覽略編》等，使南山律法得以發揚復興。 《南山律學辭典》是根據釋智諭主編，《南山律學辭典》(台北縣：西蓮淨苑，1997年)，頁836。感謝西蓮淨苑授權。",
+   "license": "",
+   "rights": "unstated",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-nanshanlu.dila.bgl",
+     "name": "babylon-nanshanlu.dila.bgl",
+     "size": "1.30 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/nanshanlu.gls.zip",
+     "name": "nanshanlu.gls.zip",
+     "size": "1.27 MiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-nanshanlu.dila.zip",
+     "name": "stardict-nanshanlu.dila.zip",
+     "size": "1.50 MiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/nanshanlu.dila.htm.zip",
+     "name": "nanshanlu.dila.htm.zip",
+     "size": "1.28 MiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/nanshanlu.dila.epub",
+     "name": "nanshanlu.dila.epub",
+     "size": "3.53 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/nanshanlu.dila.pdf",
+     "name": "nanshanlu.dila.pdf",
+     "size": "3.71 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/nanshanlu.dila.tei.p5.xml.zip",
+     "name": "nanshanlu.dila.tei.p5.xml.zip",
+     "size": "1.70 MiB, 2017-03-20"
+    }
+   ],
+   "listed_name": "南山律學辭典",
+   "downloaded": "NSL__nanshanlu.dila.tei.p5.xml.zip",
+   "bytes": 1781163,
+   "entries": 3218
+  },
+  {
+   "code": "SHH",
+   "title": "Soothill-Hodous: A Dictionary of Chinese Buddhist Terms",
+   "blurb": "First published in 1937 and often reprinted, the Soothill-Hodous Dictionary of Chinese Buddhist Terms was digitized 2002-2003 under the guidiance of Charles Muller, who corrected many entries for inclusion in his Digital Dictionary of Buddhism . (Prof. Muller offers information about the digitzation project here.) A StarDict dictionary already exists based on this original version: however, there are a number of problems with this file. In 2008, the glossaries team at DDBC has further developed the XML source provided by Prof. Muller, including corrections, formatting and conversion to the TEI P5 standard. The other formats made available here are derived from this new P5 version. The StarDi",
+   "license": "",
+   "rights": "unstated",
+   "files": [
+    {
+     "url": "https://glossaries.dila.edu.tw/data/soothill-hodous.dila.htm.zip",
+     "name": "soothill-hodous.dila.htm.zip",
+     "size": "909.15 KiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/soothill-hodous.dila.pdf",
+     "name": "soothill-hodous.dila.pdf",
+     "size": "3.75 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/soothill-hodous.dila.epub",
+     "name": "soothill-hodous.dila.epub",
+     "size": "3.16 MiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/stardict-soothill-hodous.dila.zip",
+     "name": "stardict-soothill-hodous.dila.zip",
+     "size": "1.09 MiB, 2017-03-20"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/soothill-hodous.gls.zip",
+     "name": "soothill-hodous.gls.zip",
+     "size": "862.13 KiB, 2021-06-22"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/babylon-soothill-hodous.dila.bgl",
+     "name": "babylon-soothill-hodous.dila.bgl",
+     "size": "932.70 KiB, 2015-04-02"
+    },
+    {
+     "url": "https://glossaries.dila.edu.tw/data/soothill-hodous.ddbc.tei.p5.xml.zip",
+     "name": "soothill-hodous.ddbc.tei.p5.xml.zip",
+     "size": "956.11 KiB, 2015-04-02"
+    }
+   ],
+   "listed_name": "A Dictionary of Chinese Buddhist Terms -- by William Edward Soothill and Lewis Hodous",
+   "downloaded": "SHH__soothill-hodous.ddbc.tei.p5.xml.zip",
+   "bytes": 979057,
+   "entries": 16792
+  }
+ ]
+}
