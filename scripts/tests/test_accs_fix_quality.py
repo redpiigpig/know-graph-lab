@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from accs_fix_quality import (  # noqa: E402
     is_index_row,
+    is_term_index_row,
     normalize_source_vol,
 )
 
@@ -60,3 +61,27 @@ class TestNormalizeSourceVol:
 
     def test_missing_book_name_is_a_noop(self):
         assert normalize_source_vol("ACCS（gen）", "") is None
+
+
+class TestTermIndexRow:
+    """中文索引詞型：第一版只看數字佔比，這一類 883 筆全部漏抓。"""
+
+    def test_subject_index_with_chinese_term(self):
+        assert is_term_index_row("誇張, xxii") is True
+        assert is_term_index_row("使徒保羅, 1-12") is True
+
+    def test_fullwidth_comma(self):
+        assert is_term_index_row("教會是混合的群體，xxiii, 129, 135") is True
+
+    def test_real_short_commentary_is_kept(self):
+        # 正文再短也有句末標點
+        assert is_term_index_row("屈梭多模論此節，意在勸勉。") is False
+
+    def test_prose_without_page_numbers_is_kept(self):
+        assert is_term_index_row("保羅在此，論到信心與行為") is False
+
+    def test_long_line_is_not_an_index_entry(self):
+        assert is_term_index_row("某某，" + "正文" * 40) is False
+
+    def test_caught_by_the_combined_check(self):
+        assert is_index_row("誇張, xxii") is True

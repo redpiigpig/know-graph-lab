@@ -46,12 +46,36 @@ def index_row_score(body: str) -> float:
     return sum(1 for c in core if c.isdigit() or c in _PAGEREF_CHARS) / len(core)
 
 
-def is_index_row(body: str, min_len: int = 12, threshold: float = 0.6) -> bool:
-    """這一列是不是書末索引被當成註釋收進來的？"""
-    core = re.sub(r"\s", "", body or "")
-    if len(core) < min_len:
+_PAGE_TOKEN_RE = re.compile(r"^[0-9ivxlcIVXLC]+(-[0-9ivxlcIVXLC]+)?$")
+_SENT_END = "。！？；"
+
+
+def is_term_index_row(body: str, max_len: int = 60) -> bool:
+    """中文索引詞型：`誇張, xxii`、`使徒保羅, 1-12`、`教會是混合的群體，xxiii, 129`。
+
+    🚨 第一版只看「數字佔比 > 60%」，這一類因為前面掛著中文索引詞而佔比不足，
+    **883 筆全部漏抓**（rev 377、rom 282、heb 220、isa 4）。
+    判準改成結構：逗號切開後，**第一段之後的欄位幾乎都是純頁碼**，而且整段
+    沒有句末標點——正文再短也會有句號。
+    """
+    t = (body or "").strip()
+    if not t or len(t) > max_len:
         return False
-    return index_row_score(body) > threshold
+    if any(p in t for p in _SENT_END):
+        return False
+    parts = [p.strip() for p in re.split(r"[,，]", t) if p.strip()]
+    if len(parts) < 2:
+        return False
+    tail = parts[1:]
+    return sum(1 for p in tail if _PAGE_TOKEN_RE.match(p)) / len(tail) >= 0.8
+
+
+def is_index_row(body: str, min_len: int = 12, threshold: float = 0.6) -> bool:
+    """這一列是不是書末索引被當成註釋收進來的？兩種型態都算。"""
+    core = re.sub(r"\s", "", body or "")
+    if len(core) >= min_len and index_row_score(body) > threshold:
+        return True
+    return is_term_index_row(body)
 
 
 def normalize_source_vol(source_vol: str, book_zh: str) -> str | None:
