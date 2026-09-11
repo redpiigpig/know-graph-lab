@@ -46,6 +46,7 @@ def main() -> None:
         dirs = [d for d in dirs if d.name == f"{args.author}_data"]
     reasons: Counter[str] = Counter()
     per_work: Counter[str] = Counter()
+    broken: list[tuple[str, int, str]] = []
     shown = 0
     for data in dirs:
         for slug in sorted(p for p in data.iterdir() if p.is_dir()):
@@ -54,7 +55,12 @@ def main() -> None:
             for f in sorted(slug.glob("sec*.json")):
                 try:
                     d = json.loads(f.read_text(encoding="utf-8"))
-                except Exception:
+                except Exception as e:
+                    # 🚨 不可以靜默跳過。2026-09-07 有 32 個 checkpoint 被寫成整片
+                    # NUL（mtime 同一秒，筆電休眠時 NTFS 只提交了檔案大小、資料區塊
+                    # 沒 flush）。靜默跳過的話，稽核會回報「這一卷乾淨」——
+                    # 而那正是 checkpoint 已經毀掉的那一卷。
+                    broken.append((str(f), f.stat().st_size, type(e).__name__))
                     continue
                 zh = d.get("zh") or []
                 touched = False
@@ -75,6 +81,13 @@ def main() -> None:
                     d["zh"] = zh
                     f.write_text(json.dumps(d, ensure_ascii=False, indent=1),
                                  encoding="utf-8")
+
+    if broken:
+        print(f"\n🚨 有 {len(broken)} 個 checkpoint **讀不出來**——這些卷的稽核結果不算數：")
+        for path, size, err in broken[:20]:
+            print(f"   {size:>10} bytes  {err:18} {path}")
+        print("   全片 NUL 多半是寫入中斷（筆電休眠）。git 沒收的話 zh 救不回來，"
+              "把檔案移開再跑該作者的 auto 重譯。")
 
     print("\n分類：", "、".join(f"{k} {v}" for k, v in reasons.most_common()) or "（乾淨）")
     print("分卷：")

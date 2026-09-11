@@ -24,7 +24,7 @@
             <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">{{ r.kindLabel }}</span>
             <span class="text-xs text-gray-400">{{ r.year }}</span>
             <span class="text-sm font-semibold text-gray-900 break-words">{{ r.author }}</span>
-            <span v-if="r.lang === 'ja'" class="text-[11px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">日文</span>
+            <span v-if="LANG_LABEL[r.lang || '']" class="text-[11px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">{{ LANG_LABEL[r.lang || ''] }}</span>
           </div>
           <h2 class="text-sm text-gray-800 leading-relaxed break-words">《{{ r.titleOriginal || r.title }}》</h2>
           <p v-if="r.titleOriginal" class="text-xs text-gray-500 leading-relaxed break-words">中譯：《{{ r.title }}》</p>
@@ -107,6 +107,10 @@ interface Row {
   kindLabel: string; publisher: string; note: string;
   pages: number; chars: number; pdfKey: string; textKey: string;
 }
+
+// 原文語言標籤。ko 是 2026-09-11 收進 34 篇韓文無教會研究時補的——在此之前
+// 只認 ja，韓文那批會一片空白，看起來像中文著作。
+const LANG_LABEL: Record<string, string> = { ja: '日文', ko: '韓文', en: '英文' };
 
 const rows = ref<Row[]>([]);
 const loaded = ref(false);
