@@ -15,6 +15,12 @@ Read these files for every production run:
 - `references/data-model.md`
 - `references/rights-and-source-freeze.md`
 - `references/qa-gates.md`
+- `references/exercise-sets.md` — the ten translation exercises that now stand
+  where the two memory verses used to.  It carries the frozen contract (ten
+  items, original into Chinese only, seven composed plus three quoted, all
+  twenty lesson words present, no untaught word), the one method that was tried
+  and ruled out, what the corpus gate can and cannot certify, and a status table
+  saying which reader is finished.
 - `references/silent-failures.md` — the bugs in this series that shipped a page
   looking finished: keys that were positions, files whose existence stood in for
   their content, alignment by index between texts that do not correspond, gates
