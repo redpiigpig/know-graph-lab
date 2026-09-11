@@ -152,8 +152,14 @@ def main() -> None:
              "answers this task with reasoning prose instead of JSON, so a composition "
              "run may need an explicit tier",
     )
+    parser.add_argument(
+        "--check",
+        type=Path,
+        help="verify sentences written by hand instead of asking a model; the file "
+             "holds {\"lesson\": n, \"sentences\": [{\"hebrew\": …, \"chinese\": …}]}",
+    )
     args = parser.parse_args()
-    if args.engine != "auto":
+    if args.engine != "auto" and not args.check:
         llm.select_chain(args.engine)
 
     vocabulary = load_vocabulary(DEFAULT_VOCAB)
@@ -178,10 +184,16 @@ def main() -> None:
             if number <= lesson
             for entry in vocabulary[number]
         ]
-        reply = llm.call_model(prompt_for(lesson, items, known_words), args.max_tokens)
-        engine = llm.current_model()
-        sentences = parse_reply(reply)
-        print(f"引擎 {engine}，回了 {len(sentences)} 句")
+        if args.check:
+            payload = json.loads(args.check.read_text(encoding="utf-8"))
+            sentences = payload.get("sentences", [])
+            engine = payload.get("author", "hand-written")
+            print(f"檢查 {args.check.name}，{len(sentences)} 句")
+        else:
+            reply = llm.call_model(prompt_for(lesson, items, known_words), args.max_tokens)
+            engine = llm.current_model()
+            sentences = parse_reply(reply)
+            print(f"引擎 {engine}，回了 {len(sentences)} 句")
         target_forms = {item.pointed: item for item in items}
         covered: set[str] = set()
         rows = []
