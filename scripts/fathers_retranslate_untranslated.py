@@ -98,6 +98,14 @@ def make_translate(backend: str = "auto"):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = FATHERS_PROMPT
 
+    # 🚨 落地前一定要過 unusable_reason（2026-09-11 另一條線加的）。
+    #    只用 _looks_like_prompt_echo 擋不住——那一關**只認中文提示詞**，
+    #    驗的是「模型有沒有照我預期的方式失敗」；模型改用英文外洩推理就整個穿過去，
+    #    豪斯評傳因此存進 22,590 字的 deepseek 思考過程並且上線
+    #    （[[feedback_translation_output_gate]]）。
+    #    壞輸出**重試／換引擎，絕不可退回英文原文**——那等於把英文當譯文留在書裡。
+    gate = getattr(te, "unusable_reason", lambda _t, _s="": "")
+
     def run(en: str) -> str:
         src = (en or "").strip()
         if not src:
@@ -110,8 +118,13 @@ def make_translate(backend: str = "auto"):
                 else te.nvidia_translate(p) if backend == "nvidia"
                 else te.gemini_with_nvidia_fallback(p)
                 for p in pieces).strip()
-            if out and not te._looks_like_prompt_echo(out):
-                return out
+            if not out or te._looks_like_prompt_echo(out):
+                continue
+            why = gate(out, src)
+            if why:
+                print(f"      ⚠ 這次輸出不能用（{why}），重試", flush=True)
+                continue
+            return out
         return ""
 
     return run
