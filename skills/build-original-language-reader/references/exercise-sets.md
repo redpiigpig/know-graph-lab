@@ -62,9 +62,26 @@
 | 通用希臘文 上冊 | SBLGNT（morphgnt，金標）＋七十士 Swete | 新約已接；**七十士需先建詞位索引**（上冊詞彙半數屬七十士） |
 | 通用希臘文 下冊 | 教父與教會文獻 | **需先建詞位索引** |
 | 教會拉丁文 | UD_Latin-PROIEL（耶柔米武加大，金標）＋ latVUC；下冊另加 ITTB／LLCT | 已接好。`scripts/build_latin_lemma_corpus.py --write` 先標出 `lemma-corpus-{vulgate,church}.json`（每個 token 記明詞位是金標／字形表／不確定哪一層給的），`scripts/compose_latin_sentences.py --lesson N --volume V --check FILE` 是閘 |
-| 日文 | aozora ＋ 戰前宗教學語料，fugashi＋unidic-lite 斷詞 | fugashi 已裝；管線原本用 janome |
+| 日文 | aozora ＋ 文語訳聖書 ＋ 萬葉集，fugashi＋unidic-lite 斷詞 | **已接好**：`scripts/build_japanese_lemma_corpus.py` 產 `lemma-corpus.json`（1,761 篇、14,598,269 詞素、116,681 個基本形），閘是 `scripts/compose_japanese_sentences.py --lesson N --check FILE`，挖句器 `scripts/build_japanese_exercises.py` |
 
 日文是現代語，不套古語規則。
+
+### 日文對三道閘的兩條調整（2026-09-11，實作在上面三支腳本裡）
+
+1. **第一道閘查基本形，不查表層形。** 希伯來要求寫出來的那個形連母音點都在 WLC
+   出現過，因為希伯來的變化形不規則、捏一個看不出破綻。日語活用是規則的，
+   讀む→読みます→読んで 推得出來，而語料再大也收不齊每個詞的每個活用形；照希伯來
+   辦，「本を読みます」會因為語料只出現過「読んだ」被退回，正確的句子整批誤判。
+   表層形沒見過仍會算，只印在 `unseenForms` 供作者參考，不構成退回。
+   另外**課本收了而語料沒收的詞算數**（朝ご飯：戰前作家寫朝飯／朝御飯）——這一閘
+   擋的是憑空造的詞，不是用字習慣的差異。
+2. **助詞助動詞是文法不是生詞**，比對的是讀本自己的封閉詞類表
+   （`build_japanese_interlinear.py` 的 `CLOSED_CLASS`，即附錄二那張表），
+   不在表上的才算未教過。🚨 助詞不可拿去查那張 2,000 詞的詞表：詞表裡
+   「は」是歯、「や」是屋，照假名比中全書每個主題助詞都會印成「牙齒」。
+   兩個字以上的形式（ある、という、ながら）要能回退查表，否則上千處空掉。
+   課本的多詞素詞條（一緒に、いつも、それから、サッカーを します）要整串比對，
+   逐個 token 查一定判成未教過。
 
 ## 產物 schema
 
