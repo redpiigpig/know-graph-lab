@@ -42,6 +42,11 @@ STRONG_RE = re.compile(r"\d+")
 
 # MorphHB represents these bound morphemes symbolically in a slash-separated
 # lemma (rather than with a Strong number).
+# 🚨 The interrogative הֲ is coded `i`, not `h`: MorphHB spends three separate
+# codes on the letter he -- `d` for the article, `h` for the directive, `i` for
+# the question particle -- and the vocabulary teaches only the third.  Keying on
+# the unpointed letter gave it `h`, so the reader could print הֲטוֹבָה הָעִיר and
+# the coverage check would still say the lesson word was never practised.
 BOUND_LEMMA_CODES = {
     "ו": {"c"},
     "ב": {"b"},
@@ -49,6 +54,10 @@ BOUND_LEMMA_CODES = {
     "ל": {"l"},
     "ה": {"h"},
 }
+
+# Where the unpointed letter is ambiguous, the pointing decides.
+BOUND_POINTED_CODES = {"הֲ": {"i"}}
+
 
 APPROVED_CHAPTERS = (
     "Ps.136", "Ps.23", "Ps.1", "1Sam.3", "Gen.12",
@@ -255,8 +264,13 @@ def load_vocabulary(path: Path) -> dict[int, list[VocabItem]]:
     for item in raw:
         lesson = int(item["lesson"])
         unpointed = str(item.get("unpointed") or "")
+        pointed_form = str(item.get("pointed") or item.get("sourcePointed") or unpointed)
         strongs = strong_numbers(item.get("strongs") or item.get("strong"))
-        bound_codes = frozenset(BOUND_LEMMA_CODES.get(unpointed, set())) if not strongs else frozenset()
+        bound_codes = (
+            frozenset(BOUND_POINTED_CODES.get(pointed_form) or BOUND_LEMMA_CODES.get(unpointed, set()))
+            if not strongs
+            else frozenset()
+        )
         lessons[lesson].append(
             VocabItem(
                 ordinal=int(item["ordinal"]),
