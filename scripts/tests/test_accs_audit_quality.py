@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from accs_audit_quality import (  # noqa: E402
     is_blank,
+    is_cross_chapter,
     range_ok,
     simplified_chars,
     uses_book_code,
@@ -43,8 +44,17 @@ class TestRangeOk:
     def test_normal(self):
         assert range_ok(3, 1, 5) is True
 
-    def test_reversed_range_rejected(self):
-        assert range_ok(3, 9, 2) is False
+    def test_reversed_range_is_not_an_error(self):
+        # 🚨 `bar 1:15-10` 是巴路克 1:15–2:10 的跨章概論，schema 存不下訖點在下一章。
+        # 當成錯誤報，稽核會永遠紅著，真正的問題反而被淹掉。
+        assert range_ok(3, 9, 2) is True
+        assert is_cross_chapter(9, 2) is True
+
+    def test_normal_range_is_not_cross_chapter(self):
+        assert is_cross_chapter(1, 5) is False
+
+    def test_negative_verse_rejected(self):
+        assert range_ok(3, -1, 5) is False
 
     def test_chapter_zero_rejected(self):
         assert range_ok(0, 1, 2) is False

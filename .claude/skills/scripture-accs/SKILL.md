@@ -606,6 +606,61 @@ theologians              458 位（本輪 +21，並新增 name_variants 欄）
 
 ---
 
+## 品質稽核（2026-09-11，使用者要求「確認正典與次經 100% 合格才收 lane」）
+
+兩支工具，判準都是純函式、有測試：
+
+| 用途 | 腳本 |
+|---|---|
+| 稽核（只報告） | `scripts/accs_audit_quality.py` |
+| 修復（dry-run 預設，刪除先備份） | `scripts/accs_fix_quality.py` |
+
+修掉的兩類**使用者看得到**的問題：
+
+1. **卷名顯示成書卷代碼**（15,646 列／53 卷）。`source_vol` 直接印在讀經頁上
+   （`pages/scripture/[book]/[chapter].vue`），而同一欄位有三種寫法混用
+   （`ACCS（詩篇）`／`ACCS（gen）`／`ACCS（次經）`），所以創世記顯示成
+   「ACCS（**gen**）‧古代基督信仰聖經註釋叢書」。已統一成中文書名。
+
+2. **書末索引被當成註釋收進來**（合計 1,133 列）。🚨 2026-08-22 那一輪的接手清單
+   已經寫著「書末索引污染」修好了，實際上還留著這麼多——**分兩種型態**，
+   只修一種會留下另一種：
+   - 整段都是頁碼：`102, 208, 235, 302`（250 列）
+   - **前面掛中文索引詞**：`誇張, xxii`、`使徒保羅, 1-12`（883 列）
+     這一類數字佔比不到門檻，用比例判準一個都抓不到。
+   判準要看**結構**：逗號切開後第一段之後幾乎都是純頁碼，且整段沒有句末標點
+   （正文再短也有句號）。`father_name` 存的是索引詞（「餅、糧」「使徒信經」）
+   也是一個強訊號。
+
+### 🚨 稽核自己就是「看起來成功的失敗」
+
+第一版跑出來三類全是**誤報**，差一點照著回報：
+
+| 誤報 | 原因 |
+|---|---|
+| 簡體殘留 23,284 | 把「那 後 別 準 西 據 史 於 萬 體 個」這些**正體本來就這樣寫**的字收進簡體集 |
+| 資料混雜 16,671 | 只認中文名，把代碼型與「ACCS（次經）」全報成混雜 |
+| 元回覆 22 | 共用標記表的「作為一個」本意抓「作為一個 AI 助理」，但「以色列作為一個整體」是尋常中文 |
+
+判準修好後：**混雜 0、簡體 0、重複幻覺 0、空白 0、元回覆 0**（那 5 筆逐一查證
+都是奧古斯丁、俄利根、金口若望的真註釋）。教訓：**每一類都要先看樣本再下結論**，
+數字大不等於問題大。
+
+另外兩件**不是問題**，別再追：
+- 「起訖顛倒」20 筆是**跨章概論**（`bar 1:15-10` ＝巴路克 1:15–2:10），
+  schema 只有單一 `chapter` 欄位存不下。
+- 「只有 1 章」8 卷本來就是**單章書**（猶大書、腓利門書、俄巴底亞書、
+  約翰二三書，以及次經補編 aza／bel／sus）。
+
+### 完整性判準（次經那一問）
+
+正典 66 卷全齊（39 舊約＋27 新約），加七卷次經＝**73 書卷**。
+次經是 `tob／wis／sir／bar／sus／bel／aza`，**正是 ACCS 卷十五的全部收錄範圍**；
+友弟德傳與瑪加伯上下不在該卷，那是出版社的範圍不是漏收
+（見 `scripts/accs_epub.py` 的 `BOOK_CODES` 註解）。
+
+---
+
 ## 🗂️ 上一輪接手清單（2026-08-22，已完成，留作沿革）
 
 **這一輪做完的事**：8 卷合刊定界 → 21 個新書卷首度入庫；parser 三個資料正確性 bug（句點式 ref／書末索引污染／單章書交叉引用）修好並全庫重建；艦隊的額度與卡死問題修好。DB 從 25,200 筆 / 21 卷 長到 **36,245 筆 / 64 卷**。
@@ -789,3 +844,43 @@ CANON_PREFS / displayBookName / canonQS 等在 `[chapter].vue`。
 - [[scripture-canon]] / [[scripture-gnostic]] — 三表 N-欄 reader + 純函式 test-first 範式
 - [[translation-glossary]] — 教父譯名主譯權威
 - [[feedback_ocr_strategy]] — Gemini 預設、Haiku 一次一本
+
+## 記憶庫併入：project_accs_scripture
+
+把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的教父釋經嵌進 `/scripture` 聖經逐節閱讀器，**不**走 [[scripture-fathers]] 的整卷翻譯上 /fathers 那條路。skill `scripture-accs`。**完整接手清單見該 SKILL.md「下個 session 接手清單」與「各傳統 canon 結構」兩節。**
+
+**ACCS OCR 現況（2026-06-16）**：版面=經文上·註釋下、按 pericope 分段（user 2026-06-12 拍板）。引擎 **Sonnet**（`--engine sonnet`，Max OAuth；Haiku 退兩次、Gemini key 乾）。**創世記 1-11 全本完成 ✅**：316/316 頁、`accs_commentary` book_code=gen **698 列**（67 總論+631 引文，chapters 1-11 全到）。`.done`＝`c:/tmp/accs_gen_…創1-11.raw.done`；排程 `ACCS_Gen_Resume` **已 Disable**。spot-check 品質佳；小瑕＝少數跨段續行 comment 的 father_name 空。**創 12-50 OCR 中**：PDF `c:/tmp/…創12-50.pdf`（654 頁），靠排程 **`ACCS_Gen2_Resume`（每 2h）跑 `scripts/accs_resume_g2.ps1`**（batch 1、**無 --replace**、OT II）；交接時 ~154/654 頁、ch12-15+ 入庫，1-11 698 列完整。🚨 **創 12-50 絕不可 --replace**（會刪光含 1-11 整個 gen）。detached loop（accs_loop*.ps1）會被系統 reap 死，無人值守一律用 OS 排程（survives reboot/session 切換）。接手查 `Get-ScheduledTaskInfo ACCS_Gen2_Resume` + DB gen chapter>=12 列數。
+
+**2026-06-14 排程踩到的三個雷（都已修，整夜空跑的真因）**：① **G:（Google Drive 串流碟）會卸載**→PDF 不可達；resume.ps1 已加自我修復（偵測 G: 未掛載就跑 `launch.bat` 等 60s）。② **編輯 .ps1 掉 UTF-8 BOM**→Windows PowerShell 5.1 以 Big5 誤讀中文字串→"missing terminator" parse error 靜默失敗；改 .ps1 後務必存成 **UTF-8 with BOM**。③ 排程 `DisallowStartIfOnBatteries=True` + 筆電在電池→task 永久 "Queued" 不執行；已改 `AllowStartIfOnBatteries`+`DontStopIfGoingOnBatteries`。④ **G: 串流碟長跑時 `render_page` 無限卡死**（零 CPU/無 child/卡 2h）→ resume.ps1 改**一次性複製 PDF 到 c:/tmp（同 stem 保 checkpoint）**、只讀本地。⑤ **OCR 卡死真因（整夜誤判成「Max 額度乾」，其實不是！）**：(a) 我加的 `subprocess.CREATE_NEW_PROCESS_GROUP` flag 改了 `claude.cmd`→node 的 console/stdin 行為，**每個含圖請求都卡到 300s 逾時**（即使 Max 回 `rate_limit status=allowed`）→ **移除 flag**；(b) **多圖一次呼叫(batch≥2) 也卡**（~2MB 單行 stream-json 撐爆 CLI parser）→ **必 `--batch 1`**。逾時用 **Popen+`taskkill /F /T` 連孫殺**（但**別加 PROCESS_GROUP flag**）。⑥ batch 1 單頁偶發逾時別 break 整輪 → **跳過該頁續跑、連續 3 次才退**。診斷招：`claude -p --model sonnet "OK"` 純文字秒回＝Max 沒問題、問題在含圖請求。**單一擁有者＝排程本身**（`IgnoreNew`），跑 direct 先 `Disable-ScheduledTask`。⚠️ `--replace` 空結果清庫 bug 已修。**2026-06-15 早上：真因找到、batch 1 穩定逐頁推進，DB rows 7→33→持續長中；一頁~1-2 分(node 冷啟動)。**
+
+**/scripture canon 重構（C 工程，已上架）**：新表 `bible_canon_books`（單一來源 `scripts/seed_canon_order.py`）。四傳統各自書序：天主教77/東正教82/敘利亞72(NT 22)/衣索匹亞94(NT 35含「教會秩序書」8卷)。**綠卡=整卷次經、黃卡=含補編之正典書**(但/詩/斯/巴；補編 sus/bel/aza/ps2/epj 不出獨立卡、parent_code 併母卷、reader 標「屬於次經範圍」)。canon-aware reader 依傳統挑預設版本(33 版本含思高/LXX/Vulgate/Peshitta…)→詩篇等編號差異自然呈現。
+
+**user 鐵則**：① 書名只有天主教用思高本(name_sigao；亞=亞毛斯/匝=匝加利亞/納=約納/瑪=瑪竇/拉=瑪拉基/若=若望)，其餘一律和合本；name_override 例外(東正教 1es=以斯拉A/ezr=以斯拉上/neh=以斯拉下，LXX 序)。② 說明標楷體不斜體、教父名置右。③ test-first（parser 34 例）。**待辦**：衣索匹亞教會秩序書8卷無經文內容；補編真內嵌母卷章；詩篇 versification 對齊表。
+
+**🚨 ACCS 引用體例冒號／句點混用，parser 只認冒號 → 整章錯位（2026-08-19 查出並全庫重建）**：各卷不一致，`1:1-4` 與 `1.1-4` 都有，**全庫 33%（6,454/19,707）是句點式**（馬太 1-13 佔 79%、希伯來書 68%、詩篇 51-150 佔 66%）。句點式被 `parse_full_ref` 當成「裸節」→ `build_rows_auto` 沿用上一章 → 註釋歸到錯的章。災情：詩篇網站上只有 45 章但 OCR 涵蓋 109 章；希伯來書 2/7/8/13 章全空、內容堆在第 1 章；以賽亞書 59 筆從沒 upsert。已修正則（`[:：.．]`）＋測試。
+
+**💡 raw jsonl 是 canonical，parser 修好可零成本重建**：`scripts/accs_rebuild_rows.py`（`--apply` 才寫入）從 `c:/tmp/accs_*.raw.jsonl` 重建列，**一頁 OCR 都不用重跑**。21 卷重建 19,079→19,675 筆。會先備份到 `c:/tmp/accs_rows_backup/` 並**核對備份筆數符合才敢刪**——這道閘擋下了 PostgREST **預設只回 1000 列且不報錯**的截斷（希伯來書 1,066 筆只備份到 1,000）。凡是逐列讀 accs_commentary 都要分頁，否則備份缺列、章數統計低估。
+
+**🚨 書末附錄污染**：每卷末有教父小傳／主題索引／引用經文索引。前兩者因 ref 空或非數字被濾掉（正確），但**引用經文索引的行長得像經文引用**（`19:18`，body 其實是頁碼 `285-86`）會混進表。已加 `CHAPTER_COUNTS` 章數閘。新卷入庫後跑 `select book_code, max(chapter) from accs_commentary group by 1` 對章數。
+
+**📄 batch 2 不要 4**：4 頁 1800px ≈ 2.6 MB base64，Gemini 幾乎必回 504 DEADLINE_EXCEEDED（羅馬書一小時只跑 16 頁）；改 `--batch 2` 後 344 頁/小時，21 倍，retry 26→3。
+
+**✅ 2026-08-22 現況：36,245 筆 / 64 書卷，54 卷章數已滿；config 23 卷全 ready、54 個 book_code**（`needs_boundaries` 積壓清空）。未滿章 10 卷：結 23/48、歌 2/8、利 11/27、代上 19/29、士 16/21、代下 32/36、詩 127/150、撒下 22/24、申 32/34、創 49/50 —— **ACCS 是選錄體例，缺章不等於漏抓**，要翻紙本目錄才能判斷。耶利米／哀歌（24-25 卷）未購得，`jer`/`lam` 永遠不會有資料。
+
+**合刊定界 `scripts/accs_find_boundaries.py`**：vision 讀目錄 →讀 3–5 頁「印在紙上的頁碼」反推 offset（多數決）→標題頁回驗 →**回驗不過就不寫**；每卷約 5 次呼叫。🚨 別暴力搜 offset（最壞 243 次）。目錄那次呼叫順便問附錄起始頁，最後一本切在附錄前（不切的話但以理書會算成 366 頁）。🚨 **標題頁回驗擋不住 offset 差 2**（書名在跨頁頁眉都有），要靠「相鄰兩頁印刷頁碼連不連號」才分得出。十二先知書在**約拿書內部**斷 2 頁（何西阿–約拿 offset 38、彌迦起 36），已人工寫入＋config 留 note，**別用工具重算覆蓋**；自洽檢查＝除約拿外 11 本「PDF 頁數＝書內頁數」。
+
+**🚨 單章書（jud/2jn/3jn/phm/oba）不能走一般路徑**：ACCS 只印節號，OCR 常把註釋內文引的別卷經文（林前 3:16）當成段落引用 → 超章。**那些不是垃圾、是真註釋**，照章數閘刪會把正文刪掉（腓利門書一度被刪成 0 筆）。作法：章固定為 1、帶章號者視為交叉引用沿用前一段節範圍，且這段要放在「裸節沿用上一章」**之前**（否則第一則沒有上一章會被丟）。重建後 jud 10→70、phm 0→56、2jn 8→20。`CHAPTER_COUNTS` 已補到全 66 卷（原本只列 21 卷，新書卷全漏網）。
+
+**✅ 2026-08-25：OCR 全線收工。** config 23 卷 × 58 個 range 全部有 `.raw.done`，等於現有書源已 100% OCR 完畢，只差沒買到的 24-25 卷（耶利米／哀歌）。`accs_ocr_run.py` 原本從不讀 `ingest_accs_genesis.py` 寫的 `.done`（那標記本來就是為了「讓每日排程不再重跑」），所以收工後 `KGL_Fleet_Keeper` 每 30 分鐘仍把 58 卷重跑一遍：不呼叫 Gemini，卻照樣把約 29,000 列重新 upsert 進 Supabase。已改成有 `.done` 就跳過，整批從約 15 分鐘降到數秒。要重做某卷＝刪掉它的 `.raw.done`。
+
+**🚨 2026-08-27：書末索引真的混進表了，1,425 列已刪（`scripts/accs_purge_index_rows.py`）。** 追「引文沒有教父名」時發現一大半根本不是引文：四本書的主題索引被 OCR 成 comment，詞條當 heading、頁碼當 body（`{"heading":"十八劃","body":"曠野, 184"}`），**ref 落在合法章節範圍內所以躲過 CHAPTER_COUNTS 章數閘**，在 /scripture 上以教父註釋顯示。36,245→34,820，殘留 0，備份在 `c:/tmp/accs_rows_backup/`。分布 啟446／羅364／賽358／來256／林前1。**判定只用三訊號：筆劃索引標題（「十八劃」）、body 純頁碼、「詞條, 184」格式；絕不可加「body 太短」**——會誤殺真的跨頁續行殘句（`pro 13:1` 的「食，惡人無以果腹。」是真內容）。源頭已收窄頁範圍到附錄之前（rev 1-690／rom 1-578／heb 1-450／isa賽1-39 1-490），切點＝raw JSONL 裡「整批 ≥20 則 comment 全部無名」最早出現的頁。🚨 **逐卷不是逐書**：賽40-66 是另一個 PDF、末尾沒索引，維持 1-584，照書名套同一切點會砍掉它 94 頁真註釋（我犯過這個錯）。
+
+**教父名空白：raw JSONL 裡就是空的，parser 重建救不回來。** 扣掉索引污染後仍有約 1,295 筆 comment 無 `father_name`，是跨頁續行殘句（前一則／後一則能對上同 ref 同 work 的只有 70／84 筆，抽樣還發現配對出來的名字是錯的——前一則其實是概述段、署名以「（俄利根）。」寫在句尾）。**在教父註釋裡把話安到錯的教父頭上比留空白嚴重得多，別做名字傳播。** 要補只能重 OCR。`/scripture` 的署名行已改三態（有名／只有作品名／兩者皆無整行不輸出，commit 43892193），不會再出現「— 　《創世記註解》」那種孤零零的破折號。
+
+**🚨 `.done` 的頁數要跟「範圍與 PDF 實際頁數的交集」比，不是跟設定比。** 我一度把「標記頁數 < 設定頁數」當成過期，結果誤判雅歌並害它每 30 分鐘空轉（刪標記→重跑→寫回同樣頁數→再刪）。真相是**設定錯、標記對**：雅歌設定 437-556（120 頁），那本 PDF 卻只有 472 頁，範圍超出檔案結尾 84 頁；標記記的 36 頁（437-472）才是實情。已改設定為 437-472，並讓 `accs_ocr_run.py` 用 `_effective_pages()` 先跟 PDF 頁數取交集。全 58 個 range 稽核過只有這一卷範圍超出檔案。**而且那本掃描檔本身不完整**：最後一頁停在雅歌 2:1-7、句子斷在「因為」，沒有其餘章節也沒有其他卷都有的書末附錄——所以 DB 只有 2/8 章是書源缺口（同 `jer`/`lam` 那一類），OCR 補不了。**另外 ACCS 資料夾已從 `知識圖工作室\教父著作\` 搬到 `經典對照與註釋\`**，config 23 卷路徑已更新（先前因為每卷都有 .done、走不到讀檔那步，所以這個斷鏈一直沒暴露）。
+
+## 索引補記
+
+- 經文上‧註釋下
+- 校園繁中版 Haiku Vision OCR
+- 天主教 canon 用思高本縮寫

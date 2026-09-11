@@ -103,18 +103,31 @@ def uses_book_code(source_vol: str) -> bool:
 
 
 def range_ok(chapter, verse_start, verse_end) -> bool:
-    """章節號的基本合理性：章 ≥ 1、起訖不顛倒。"""
+    """章節號的基本合理性：章 ≥ 1、節號非負。
+
+    🚨 **起訖顛倒不算錯**：`bar 1:15-10` 是巴路克 1:15–2:10 這種**跨章概論**，
+    schema 只有單一 `chapter` 欄位，存不下「訖在下一章」。全庫 20 筆都是這種，
+    當成錯誤報會讓稽核永遠紅著，真正的問題反而被淹掉。用 is_cross_chapter 另計。
+    """
     try:
         if chapter is not None and int(chapter) < 1:
             return False
-        if verse_start is not None and verse_end is not None:
-            if int(verse_start) > int(verse_end):
-                return False
-            if int(verse_start) < 0:
-                return False
+        if verse_start is not None and int(verse_start) < 0:
+            return False
+        if verse_end is not None and int(verse_end) < 0:
+            return False
     except (TypeError, ValueError):
         return False
     return True
+
+
+def is_cross_chapter(verse_start, verse_end) -> bool:
+    """起訖顛倒＝這一段的訖點落在下一章（跨章概論）。不是缺陷，另外計數。"""
+    try:
+        return (verse_start is not None and verse_end is not None
+                and int(verse_start) > int(verse_end))
+    except (TypeError, ValueError):
+        return False
 
 
 DEUTERO = {"tob", "wis", "sir", "bar", "sus", "bel", "aza"}
@@ -138,11 +151,20 @@ def main() -> int:
 
     from audit_llm_meta_replies import is_untranslated
     import audit_llm_meta_replies as _meta
-    # 🚨 共用標記表裡的「作為一個」是為了抓「作為一個 AI 助理」，但那在教父註釋
-    # 裡是尋常中文（「以色列作為一個整體」「作為一個女性，馬利亞非常感性」）——
-    # 不拿掉，22 筆元回覆幾乎全是誤報。其餘標記都指涉任務／輸入，留著。
-    _meta.META_MARKERS = tuple(m for m in _meta.META_MARKERS if m != '作為一個')
-    is_meta = _meta.is_meta
+    # 🚨 共用標記表是為 LLM 譯出的語料寫的，直接套到 ACCS 會滿是誤報：
+    #   「作為一個」  本意抓「作為一個 AI 助理」，但「以色列作為一個整體」是尋常中文
+    #   「我注意到」  偽狄奧尼修斯「我注意到，是天使首先蒙上帝啟示…」是真註釋
+    #   「你提供」    金口若望「窮人為你提供你必需的服務」也是
+    # ACCS 的中文出自校園書房紙本、經 OCR 進來，不是 LLM 譯的，本來就不該有元回覆。
+    # 所以這裡加一道：標記必須**和任務詞同時出現**才算——模型在跟你講話時一定會
+    # 提到翻譯／原文／文本這類字眼，教父講道不會。
+    _meta.META_MARKERS = tuple(m for m in _meta.META_MARKERS if m != "作為一個")
+    _TASK_WORDS = ("翻譯", "英文", "原文", "文本", "指示", "要求", "亂碼", "梵文",
+                   "translate", "translation", "text you", "instructions")
+    _raw_is_meta = _meta.is_meta
+
+    def is_meta(zh: str) -> bool:
+        return _raw_is_meta(zh) and any(w in (zh or "") for w in _TASK_WORDS)
     from audit_page_numbers_db import run_sql
     from ocr_repetition import looks_looping
 
@@ -171,6 +193,8 @@ def main() -> int:
     problems: dict[str, list] = {k: [] for k in
                                  ("混雜", "卷名顯示成代碼", "章節越界", "未翻譯", "元回覆",
                                   "簡體", "重複幻覺", "空白")}
+    # 不是缺陷、只是 schema 存不下的，另外列出來不計入成敗
+    notes: dict[str, list] = {"跨章概論": []}
     by_book: dict[str, set] = {}
 
     for r in rows:
@@ -185,6 +209,8 @@ def main() -> int:
             problems["卷名顯示成代碼"].append((tag, r["source_vol"]))
         if not range_ok(r["chapter"], r["verse_start"], r["verse_end"]):
             problems["章節越界"].append((tag, ""))
+        elif is_cross_chapter(r["verse_start"], r["verse_end"]):
+            notes["跨章概論"].append((tag, ""))
         if is_blank(body):
             problems["空白"].append((tag, ""))
             continue
