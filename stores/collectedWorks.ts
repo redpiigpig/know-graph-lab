@@ -21068,8 +21068,22 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "宗教現象學方法論奠基作,以「權能」為核心跨傳統排比全球宗教現象。"
+                      "status": "in-progress",
+                      ebookId: '1ee71890-0000-4000-8000-000000000001',
+                      "note": "宗教現象學集大成之作,以「權能」為核心依主題排比全球宗教材料。德文原著(Mohr 1956 第二版)627 章已上架;繁中譯文待補。"
+                },
+                {
+                      "title": "宗教的本質與顯現（英譯本）",
+                      "titleOriginal": "Religion in Essence and Manifestation",
+                      "year": "1938",
+                      "yearSort": 1938,
+                      "category": "代表作",
+                      "languages": [
+                      "en"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '1ee71890-0000-4000-8000-000000000002',
+                      "note": "Turner 譯本(Allen & Unwin 1938),554 章已上架。與上一筆德文原著是同一部書的兩個語言版本,併欄之前先各自成卷。"
                 },
                 {
                       "title": "原始人與宗教",
@@ -21174,7 +21188,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000001'
                 },
                 {
                       "title": "理解：十九世紀詮釋學理論史綱要",
@@ -21185,8 +21200,48 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "三卷本,系統整理十九世紀德國詮釋學史。"
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000002',
+                      "note": "十九世紀詮釋學理論史。**三卷已拆成三筆**(全集套書一律每卷一 row)。卷一 1926 施萊爾馬赫的奠基,219 章已上架。"
+                },
+                {
+                      "title": "理解（卷二）：神學詮釋學",
+                      "titleOriginal": "Das Verstehen, Bd. 2",
+                      "year": "1929",
+                      "yearSort": 1929,
+                      "category": "詮釋學",
+                      "languages": [
+                      "de"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000003',
+                      "note": "從施萊爾馬赫到霍夫曼的神學詮釋學。310 章已上架。"
+                },
+                {
+                      "title": "理解（卷三）：歷史學詮釋學",
+                      "titleOriginal": "Das Verstehen, Bd. 3",
+                      "year": "1933",
+                      "yearSort": 1933,
+                      "category": "詮釋學",
+                      "languages": [
+                      "de"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000004',
+                      "note": "從蘭克到實證主義的歷史學詮釋學。298 章已上架。"
+                },
+                {
+                      "title": "特倫德倫堡與狄爾泰",
+                      "titleOriginal": "Trendelenburg und Dilthey",
+                      "year": "1926",
+                      "yearSort": 1926,
+                      "category": "詮釋學",
+                      "languages": [
+                      "de"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000005',
+                      "note": "短論,33 章已上架。"
                 },
                 {
                       "title": "宗教社會學",
@@ -21197,8 +21252,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
-                      "note": "建立宗教經驗表現類型論,宗教社會學方法論奠基作。"
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000006',
+                      "note": "芝加哥學派的宗教社會學綱領。英文原著(芝大 1944)424 章已上架;繁中譯文待補。"
                 },
                 {
                       "title": "宗教經驗諸類型：基督教與非基督教",
@@ -21209,7 +21265,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '0ac41898-0000-4000-8000-000000000007'
                 },
                 {
                       "title": "比較宗教學",
