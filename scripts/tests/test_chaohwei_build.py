@@ -12,6 +12,7 @@ from chaohwei_build import (  # noqa: E402
     is_note,
     is_note_continuation,
     mark_speaker,
+    merge_units,
     normalize_page_text,
     page_sort_key,
     split_body_and_notes,
@@ -391,3 +392,50 @@ class TestBuildChunks:
         chunks = build_chunks(split_chapters(stitch_pages(pages), CHS))
         assert chunks[1]["page_number"] is None
         assert chunks[1]["anchors"] == ["", "a"]
+
+class TestMergeUnits:
+    """序言整篇一塊、對話一次發言一塊（使用者 2026-09-11 定調）。"""
+
+    def test_one_block_per_speaker_turn(self):
+        units = [
+            ("59", "辛格：第一段問題。", 2),
+            ("59", "接著同一個人繼續講。", 2),
+            ("60", "昭慧：換我回答。", 2),
+        ]
+        out = merge_units(units)
+        assert len(out) == 2
+        assert out[0][1].startswith("〔辛格〕")
+        assert "接著同一個人繼續講" in out[0][1]
+        assert out[1][1].startswith("〔昭慧〕")
+
+    def test_speaker_marked_before_merging(self):
+        # 🚨 順序反了就抓不到換人：mark_speaker 若留到之後才做，
+        # merge 看到的還是「昭慧：」，整章會被併成一整塊
+        units = [("1", "辛格：甲。", 2), ("1", "昭慧：乙。", 2)]
+        assert len(merge_units(units)) == 2
+
+    def test_preface_becomes_one_block(self):
+        units = [("a", "序的第一段。", 0), ("a", "第二段。", 0), ("b", "第三段。", 0)]
+        out = merge_units(units)
+        assert len(out) == 1
+        assert out[0][0] == "a"
+
+    def test_page_change_leaves_an_inline_marker(self):
+        # 合併之後仍要引得出「第幾頁」
+        units = [("a", "序的第一段。", 0), ("b", "第二頁開始的一段。", 0)]
+        out = merge_units(units)
+        assert "【頁 b】" in out[0][1]
+
+    def test_same_page_gets_no_marker(self):
+        units = [("a", "第一段。", 0), ("a", "同一頁的第二段。", 0)]
+        assert "【頁" not in merge_units(units)[0][1]
+
+    def test_heading_stays_its_own_block(self):
+        units = [("", "## 對話三：婦女與平等", 2), ("59", "辛格：您好。", 2)]
+        out = merge_units(units)
+        assert len(out) == 2
+        assert out[0][1].startswith("##")
+
+    def test_never_merges_across_chapters(self):
+        units = [("d", "序的結尾。", 0), ("1", "對話一的開頭。", 2)]
+        assert len(merge_units(units)) == 2

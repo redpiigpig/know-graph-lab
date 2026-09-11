@@ -233,6 +233,42 @@ def stitch_pages(pages: list[dict]) -> list[tuple[str, str, int]]:
     return out
 
 
+def merge_units(units: list[tuple], speakers: tuple = SPEAKERS) -> list[tuple]:
+    """把逐段的串流併成**閱讀單位**：序言整篇一塊、對話錄一次發言一塊。
+
+    使用者定調（2026-09-11）：「序言就直接呈現不用分節，後面正文的對話，換人講話
+    再分節就好，不用分這麼細」。本書是單一語言（沒有逐段對照的需求），逐段切格
+    只是把一篇文章切成八十幾個框。
+
+    頁碼不能因此犧牲——研究者要引用得出第幾頁。所以合併時在**換頁的那一段**前面
+    插一個 `【頁 N】` 行內標記，reader 會渲染成小字頁碼；引用號欄仍是該單位的起始頁。
+    """
+    out: list[tuple] = []
+    for anchor, para, ch in units:
+        # 🚨 先標發言人再判斷，順序反了就抓不到「換人講話」：這一步原本在
+        # split_chapters 才做，於是 merge 看到的還是「昭慧：」而不是「〔昭慧〕」，
+        # 整章八十幾段被併成**一整塊**。
+        para = mark_speaker(para)
+        is_head = para.startswith("##")
+        is_turn = bool(re.match(rf"^〔({'|'.join(speakers)})〕", para))
+        if is_head or is_turn or not out or out[-1][2] != ch or out[-1][1].startswith("##"):
+            out.append((anchor, para, ch))
+            continue
+        prev_anchor, prev_text, prev_ch = out[-1]
+        mark = f"【頁 {anchor}】" if anchor and anchor != _last_page_mark(prev_text, prev_anchor) else ""
+        out[-1] = (prev_anchor, f"{prev_text}\n\n{mark}{para}", prev_ch)
+    return out
+
+
+_PAGE_MARK_RE = re.compile(r"【頁\s*([^】]+)】")
+
+
+def _last_page_mark(text: str, fallback: str) -> str:
+    """這一塊文字裡最後標到的頁碼（沒有標記就是它的起始頁）。"""
+    marks = _PAGE_MARK_RE.findall(text or "")
+    return marks[-1].strip() if marks else fallback
+
+
 def normalize_printed(printed: str) -> str:
     """印刷頁碼正規化：純字母的頁碼一律小寫（OCR 常把前言的 `c` 讀成 `C`）。
 
@@ -590,7 +626,8 @@ def main() -> None:
             return
 
     pages = tag_chapters(pages_for_stitch(records, rep["keep"]), CHAPTERS)
-    units = stitch_pages(pages)
+    # 逐段 → 閱讀單位（序言整篇、對話一次發言一塊）；頁碼改成行內標記
+    units = merge_units(stitch_pages(pages))
     chapters = split_chapters(units, CHAPTERS)
     chunks = build_chunks(chapters)
 

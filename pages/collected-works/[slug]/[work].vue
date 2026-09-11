@@ -336,6 +336,10 @@ function md(s: string) {
   let t = esc(s.replace(/^#{1,4}\s+/, ''))
   // 註釋：段落以 `[^4]: …` 起頭＝註文本體；正文中的 `[^4]` ＝上標註號。
   // 兩者都要先於一般 markdown 處理，否則 `[^` 會被斜體規則咬掉。
+  // 行內頁碼標記：單語書按「一次發言」成塊，塊內換頁就靠這個標出來，
+  // 不然合併之後只剩起始頁，引用精度會從「頁」掉到「整段發言」。
+  t = t.replace(/【頁\s*([^】]{1,8})】/g,
+    '<span class="mx-1 align-super select-none text-[0.62em] font-mono text-stone-400">$1</span>')
   t = t.replace(/^\[\^([^\]]{1,8})\]:\s*/,
     '<span class="mr-1.5 font-semibold text-blue-700">$1.</span>')
   t = t.replace(/\[\^([^\]]{1,8})\]/g,
