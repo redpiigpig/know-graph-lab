@@ -44,3 +44,17 @@ def test_entries_are_keyed_by_source_prefix_not_only_index():
 def test_no_duplicate_targets():
     seen = {(sec, idx) for sec, idx, _h, _z in fv.VERSE}
     assert len(seen) == len(fv.VERSE)
+
+
+def test_partial_entries_are_plain_chinese_not_bilingual():
+    """翻一半的那批是純中文補完——原文是日文，reader 本來就有原文欄，
+    不必（也不該）再並列一次。"""
+    for _sec, _idx, _head, zh in fv.PARTIAL:
+        assert fv.SEP not in zh
+        assert zh.strip()
+
+
+def test_partial_and_verse_do_not_target_the_same_paragraph():
+    v = {(s, i) for s, i, _h, _z in fv.VERSE}
+    p = {(s, i) for s, i, _h, _z in fv.PARTIAL}
+    assert not (v & p)

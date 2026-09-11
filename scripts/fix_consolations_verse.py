@@ -72,6 +72,27 @@ GAIJI_FIX = {
 }
 
 
+# ── 引擎翻一半的段落（partial）：人工補完 ────────────────────────────────────
+#
+# `fix_echo_and_meta` 認得出這幾段「譯文裡夾著假名、但後半不足以獨立成篇」，
+# 但**不會自動切**——切了就是截斷。這裡逐段補完整。
+# 格式與 VERSE 不同：這些是純中文，不並列原文（原文本來就是日文，reader 有原文欄）。
+PARTIAL: list[tuple[str, int, str, str]] = [
+    ("sec4", 3, "大正十二年（一九二三年）二月七日東京市外柏木",
+     "大正十二年（一九二三年）二月七日　於東京市外柏木"),
+    ("sec5", 16, "何様か何処かで相見んと",
+     "不知何時、不知何處，我們終要再相見〕"),
+    ("sec10", 31, "よろこび受けんふたつとも",
+     "願這兩樣都歡喜領受，"),
+    # 羅馬書八章 38–39 節。內村的日文作「我主イエスキリストに頼れる神の愛」，
+    # 中譯依和合本語體，並照他的語序把「這愛是在…裡的」擺回句末。
+    ("sec10", 66, "そは或いは死、或いは生",
+     "我深信，無論是死、是生、是天使、是掌權的、是有能的、是現在的事、"
+     "是將來的事、是高處的、是深處的，或是別的受造之物，"
+     "都不能叫我們與神的愛隔絕；這愛是在我們的主耶穌‧基督裡的。"),
+]
+
+
 def bilingual(src: str, zh: str) -> str:
     """原文　／　中譯。純函式，測試鎖在 tests/test_consolations_verse.py。"""
     s = (src or "").strip()
@@ -87,20 +108,22 @@ def main() -> None:
 
     by_sec: dict[str, list] = {}
     for sec, idx, head, zh in VERSE:
-        by_sec.setdefault(sec, []).append((idx, head, zh))
+        by_sec.setdefault(sec, []).append((idx, head, zh, True))
+    for sec, idx, head, zh in PARTIAL:
+        by_sec.setdefault(sec, []).append((idx, head, zh, False))
 
     total = skipped = 0
     for sec, items in by_sec.items():
         p = DATA / f"{sec}.json"
         d = json.loads(p.read_text(encoding="utf-8"))
         touched = False
-        for idx, head, zh in items:
+        for idx, head, zh, pair in items:
             if idx >= len(d["src"]) or not d["src"][idx].startswith(head):
                 print(f"  ⚠ {sec}[{idx}] 原文對不上（{d['src'][idx][:40] if idx < len(d['src']) else '越界'}）"
                       f"——跳過，段落編號不是穩定鍵")
                 skipped += 1
                 continue
-            new = bilingual(d["src"][idx], zh)
+            new = bilingual(d["src"][idx], zh) if pair else zh
             print(f"  {sec}[{idx}] {new[:88]}")
             if args.apply:
                 d["zh"][idx] = new

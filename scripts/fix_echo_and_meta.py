@@ -45,6 +45,11 @@ _META_TASK = re.compile(r"翻訳|翻譯|テキスト|原文|日文|英文|transl
 # 假名被引號或括號包住＝正文在討論那個日文詞，不是沒翻
 _QUOTED_KANA = re.compile(r"[「『（(\"'][^」』）)\"']*[ぁ-ゟ゠-ヿ][^」』）)\"']*[」』）)\"']")
 
+# 🚨「原文　／　中譯」並列的段落（引詩，見 fix_consolations_verse.py）**不可動**。
+#    那裡的日文／西文原文是**故意**留在中文欄的，本支會把它當成回抄切掉——
+#    「独逸国に生れたる世界の市民　／　生於德意志國的世界公民」會只剩「市民　／　…」。
+BILINGUAL_SEP = "　／　"
+
 
 def is_meta_reply(zh: str) -> bool:
     """譯文欄裝的是引擎的拒絕回覆嗎？"""
@@ -91,6 +96,8 @@ def classify(src: str, zh) -> str:
 
     partial＝譯文裡夾著假名、但後半不足以獨立成篇。那是「翻一半」，
     只能重譯或人工補，**不可自動切**。"""
+    if zh and BILINGUAL_SEP in zh:
+        return "ok"                     # 刻意並列的原文，不是沒翻
     if BOUTEN.match(src or ""):
         return "bouten"
     if zh and is_meta_reply(zh):
@@ -136,10 +143,10 @@ def main() -> None:
         touched = False
         for j, (s, z) in enumerate(zip(src, zh)):
             kind = classify(s, z)
-            if kind == "ok":
-                continue
-            tally[kind] = tally.get(kind, 0) + 1
             new = repair(s, z)
+            if kind == "ok" or new == z:
+                continue          # 已經是修好的樣子，別再報一次
+            tally[kind] = tally.get(kind, 0) + 1
             print(f"  {kind:6} sec{i}[{j}]")
             print(f"         舊 {str(z)[:90]}")
             print(f"         新 {str(new)[:90]}")
