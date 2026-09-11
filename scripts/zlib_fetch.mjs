@@ -286,7 +286,25 @@ async function main() {
 
   mkdirSync(DROP, { recursive: true })
   mkdirSync(dirname(LEDGER), { recursive: true })
-  const browser = await chromium.launch({ headless: false, channel: 'chrome' })
+  // 🚨 這台筆電長期記憶體吃緊（2026-09-11 實測可用 2.5 GB／共 15.6 GB：Google
+  // Drive FS 近 1 GB、VS Code 1.7 GB、多個 Claude session 各 300 MB），而 DiamWall
+  // 不收 headless，只能開實體 Chrome。記憶體一緊，renderer 就被作業系統收掉，
+  // 症狀是 `Page crashed`／`Target crashed`——看起來像站方擋人，其實是本機 OOM。
+  //
+  // 所以把這顆瀏覽器壓到最省：**關圖片**是最大一筆（搜尋結果整頁都是書封，而我們
+  // 只讀 z-bookcard 的屬性與文字，一張圖都用不到），其餘是關掉背景工作與多餘分頁。
+  const browser = await chromium.launch({
+    headless: false,
+    channel: 'chrome',
+    args: [
+      '--blink-settings=imagesEnabled=false',
+      '--disable-dev-shm-usage',
+      '--disable-extensions',
+      '--disable-background-networking',
+      '--renderer-process-limit=2',
+      '--mute-audio',
+    ],
+  })
   const context = await browser.newContext({
     locale: 'zh-TW',
     acceptDownloads: true,
