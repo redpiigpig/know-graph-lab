@@ -59,18 +59,49 @@ z-library 不是唯一一條路，而且對**十九世紀與二十世紀前半�
 2. **掃描件的 EPUB 常常只有頁面影像沒有文字層。** parse_worker 會回
    `no extractable text`。**一律改用 `DjVuTXT`**，從 metadata 的 `files` 找
    `format == "DjVuTXT"` 的 `name`（含空格與非 ASCII，要 URL-encode）。
-3. **OCR 可能整本是廢的，而檔案大小完全正常。** 判準是常見虛詞計數：
+3. **OCR 可能整本是廢的，而檔案大小完全正常。**
 
-   | 語言 | 該有 | 中鏢的樣子 |
+   工具：`python scripts/archive_djvu_clean.py <檔> --check de`（語言代碼 en/de/fr/sv/nl）。
+
+   **第一道：虛詞比值**＝四個常見虛詞的命中總數 ÷（字元數/10000）。**低於 80 就有問題。**
+
+   | 語言 | 探詞 | 中鏢實例 |
    |---|---|---|
-   | 英文 | the / and / of 各數百至數千 | |
+   | 英文 | the / and / of / that | |
    | 德文 | und / der / die / ist | 奧托《康德-弗里斯學派》57 萬字裡 `und` 只 9 次、`ist` 0 次 |
    | 法文 | de / la / les / est | |
+   | 瑞典文 | och / att / som / för | |
 
-   德文中鏢的原因幾乎都是 **Fraktur 尖角體**被當成 Antiqua 讀，產生系統性替換
+   德文中鏢幾乎都是 **Fraktur 尖角體**被當成 Antiqua 讀，系統性替換
    （bie＝die、^afein＝Dasein、beroor＝bevor）。十九世紀德文書很容易中。
-   對策：改抓同一筆的 PDF 留著走 Gemini Vision 重 OCR，或去
-   **Deutsches Textarchiv** 找人工校對版。
+
+   ### 🚨 第二道：長 s 檢查（只對德文，2026-09-11 補上）
+
+   **比值合格不代表沒事。**瑟德布盧姆《Das Werden des Gottesglaubens》(1916)
+   四詞比值 **139.9**，照第一道判準完全合格——但整本不能用：
+
+   | | 該有 | 實際 |
+   |---|---|---|
+   | `ist` | 數百上千 | **2** |
+   | `ift` + `ijt` | 0 | **934** |
+   | `sich` | 數百 | 3 |
+   | `fich` | 0 | 93 |
+
+   原因是 Fraktur 的**長 s（ſ）被讀成 f 或 j**。而 `und`／`der`／`die` 三個詞
+   **剛好都不含長 s**，所以它們讀得對、把比值撐起來了，第四個詞 `ist` 的崩塌被平均掉。
+
+   所以德文一定要**另外比** `ist` vs `ift+ijt`、`sich` vs `fich`。
+   `quality()` 已經內建這一條，`--check de` 會直接報 `🚨 Fraktur 長 s 誤讀`。
+
+   **對策**：改抓同一筆的 PDF 存著待 Gemini Vision 重 OCR；或去
+   **Deutsches Textarchiv** 找人工校對版（⚠️ 但 DTA 大致止於 1900 年前，
+   二十世紀的書它沒有）；或**改用同一本書的其他語言版本**——瑟德布盧姆那本
+   1916 德文的母本就是 1914 瑞典文《Gudstrons uppkomst》，而瑞典文那本
+   OCR 乾淨（每萬字 127.7）。
+
+4. **有 DjVuTXT 不等於有文字層。** `TotemismAndExogamyVol4` 的 DjVuTXT 只有
+   9,818 bytes——是空的。**下載前先看 metadata 裡 `files[].size`**，
+   一本書的文字檔低於 50 KB 就該起疑。
 
 ## 要不要帳號？（2026-09-11 實測＋已知）
 
