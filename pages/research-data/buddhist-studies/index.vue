@@ -26,6 +26,22 @@
         </div>
       </div>
 
+      <NuxtLink to="/research-data/buddhist-studies/glossaries"
+                class="block mb-5 bg-white rounded-2xl border border-amber-100 hover:border-amber-300 p-5 transition-colors no-underline">
+        <div class="flex items-start gap-4">
+          <div class="text-2xl leading-none mt-0.5">📖</div>
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base font-bold text-gray-900">佛學辭典查詢</h2>
+            <p class="text-xs text-gray-500 leading-relaxed mt-1 break-words">
+              法鼓文理學院佛學術語字辭典十二部、10.3 萬條詞目——丁福保《佛學大辭典》、
+              蘇慧廉—何樂益、霍普金斯藏梵英、巴漢辭典、《翻譯名義大集》、辛嶋靜志四部譯經詞典。
+              漢傳古代辭書（《一切經音義》等）另在大藏經事彙部。
+            </p>
+          </div>
+          <span class="text-xs text-amber-700 flex-shrink-0">查詞 →</span>
+        </div>
+      </NuxtLink>
+
       <div v-if="pending" class="text-sm text-gray-400 py-10 text-center">載入中⋯</div>
       <div v-else-if="!areas.length" class="text-sm text-gray-400 py-10 text-center">尚無資料</div>
 
