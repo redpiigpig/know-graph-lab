@@ -142,6 +142,11 @@ python scripts/contemporary_theology_index.py --wanted  # 另外吐缺書獵表
    而 Acta Theologica 其實有 1355 篇。解法是用 `bibjson.year:[lo TO hi]` 遞迴二分
    把查詢切小，寫檔後再與整刊總數對帳。
 
+DOAJ 每週一 05:00 由 `KGL_DOAJ_Weekly` 自動刷新（`scripts/run_doaj_refresh.ps1`）。
+**每週不是每天**——DOAJ 的刊按期出版，每天跑會花三百次請求找不到東西；抓取端本來就會
+跳過已有 jsonl 的刊，所以刷新只花在新刊上。腳本開頭先驗 `G:` 掛著沒有，沒掛就跳過
+（DriveFS 卡住時不會自己重掛，硬寫會寫進一個其實不存在的路徑）。
+
 ## 校內訂閱庫：先探測再動手
 
 玄奘訂的庫清單在 `data/research-data/hcu-eresources.json`，分級計畫在
