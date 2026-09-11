@@ -263,6 +263,32 @@ BOOKS = [
 ]
 
 
+
+# 資料檔裡的其餘各卷。
+#
+# 為什麼分兩處：上面那份是手寫的起手批（奧托／涂爾幹／泰勒／范德列烏／瓦赫），
+# 逐筆寫進程式碼還看得住。古典期那批有 54 本（光《金枝》就四版二十一卷），
+# 而且「檔名 → 中文題名／版次／卷次」的對照本身就是資料，寫死在程式裡會讓這支
+# 腳本失控，所以改由 scripts/classical_scholars_place.py 產成 JSONL。
+PD_DATA = ROOT / "data" / "pd-scholars"
+
+
+def load_data_files() -> list[dict]:
+    out = []
+    if not PD_DATA.exists():
+        return out
+    for f in sorted(PD_DATA.glob("*.jsonl")):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            row["path"] = Path(row["path"])       # 與 BOOKS 的型別對齊
+            out.append(row)
+    return out
+
+
+BOOKS += load_data_files()
+
 def env() -> dict:
     out = {}
     for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():

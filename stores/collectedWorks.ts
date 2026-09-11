@@ -20434,7 +20434,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000005',
                       "note": "引發異端案的系列講座結集。"
                 },
                 {
@@ -20446,7 +20447,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000006'
                 },
                 {
                       "title": "阿拉伯古代的親屬與婚姻",
@@ -20457,7 +20459,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000003',
                       "note": "考察前伊斯蘭阿拉伯氏族制度與母系遺跡。"
                 },
                 {
@@ -20470,7 +20473,46 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "en"
                       ],
                       "status": "planned",
-                      "note": "伯內特講座(Burnett Lectures)第一輯,提出共餐獻祭理論,宗教社會學先聲。"
+                      "note": "初版(1889)與二版(1894)均已上架,見下列兩筆。二版經作者增訂,兩版並存。"
+                },
+                {
+                      "title": "閃族宗教講座（初版）",
+                      "titleOriginal": "Lectures on the Religion of the Semites, 1st ed.",
+                      "year": "1889",
+                      "yearSort": 1889,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000001',
+                      "note": "以共餐獻祭為核心，涂爾幹獻祭理論的上游"
+                },
+                {
+                      "title": "閃族宗教講座（二版）",
+                      "titleOriginal": "Lectures on the Religion of the Semites, 2nd ed.",
+                      "year": "1894",
+                      "yearSort": 1894,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000002'
+                },
+                {
+                      "title": "早期阿拉伯的親屬與婚姻（新版）",
+                      "titleOriginal": "Kinship and Marriage in Early Arabia, new ed.",
+                      "year": "1903",
+                      "yearSort": 1903,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000004',
+                      "note": "庫克編訂"
+                },
+                {
+                      "title": "講稿與論文集",
+                      "titleOriginal": "Lectures and Essays of William Robertson Smith",
+                      "year": "1912",
+                      "yearSort": 1912,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '5b1a1846-0000-4000-8000-000000000007',
+                      "note": "黑僧與克里頓編"
                 }
           ]
     },
@@ -20552,7 +20594,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000001',
                       "note": "提出儀式先於神話之說,劍橋儀式學派奠基作。"
                 },
                 {
@@ -20564,7 +20607,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000002',
                       "note": "融合涂爾幹集體歡騰概念,理論體系集大成。"
                 },
                 {
@@ -20576,7 +20620,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000004',
                       "note": "「家庭大學文庫」小書,精簡呈現其儀式理論。"
                 },
                 {
@@ -20589,6 +20634,43 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "en"
                       ],
                       "status": "planned"
+                },
+                {
+                      "title": "希臘宗教研究後論",
+                      "titleOriginal": "Epilegomena to the Study of Greek Religion",
+                      "year": "1921",
+                      "yearSort": 1921,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000003'
+                },
+                {
+                      "title": "考古學所見的原始雅典",
+                      "titleOriginal": "Primitive Athens as Described by Thucydides",
+                      "year": "1906",
+                      "yearSort": 1906,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000005'
+                },
+                {
+                      "title": "古希臘宗教",
+                      "titleOriginal": "The Religion of Ancient Greece",
+                      "year": "1905",
+                      "yearSort": 1905,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000006'
+                },
+                {
+                      "title": "奧德賽神話",
+                      "titleOriginal": "Myths of the Odyssey in Art and Literature",
+                      "year": "1882",
+                      "yearSort": 1882,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '4a881850-0000-4000-8000-000000000007',
+                      "note": "藝術與文學中的呈現"
                 }
           ]
     },
@@ -20682,7 +20764,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "en"
                       ],
                       "status": "planned",
-                      "note": "初版兩卷、末版擴至十二卷;比較宗教學史上最重要著作之一。"
+                      "note": "四個版本並存,已逐卷上架:初版二卷(1890)、二版三卷(1900)、三版十二卷(1906–15)、一卷節本(1922)。見下列各卷條目。🚨 引用時務必寫明版次——三版十二卷每一卷有自己的部名。"
                 },
                 {
                       "title": "舊約中的民俗：宗教、律法與風俗之比較研究",
@@ -20694,7 +20776,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "en"
                       ],
                       "status": "planned",
-                      "note": "三卷本,以全球民族誌材料比較解讀創世記、大洪水等敘事。"
+                      "note": "三卷本已逐卷上架,見《舊約民俗學》卷一至卷三。"
                 },
                 {
                       "title": "不朽的信仰與對亡者的崇拜",
@@ -20720,6 +20802,234 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "done",
                       ebookId: "80000000-0000-4000-8000-000000000009",
                       "note": "濃縮十二卷為一冊,是二十世紀讀者最廣的版本。"
+                },
+                {
+                      "title": "金枝（初版‧卷一）",
+                      "titleOriginal": "The Golden Bough: A Study in Comparative Religion, Vol. 1",
+                      "year": "1890",
+                      "yearSort": 1890,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000001',
+                      "note": "巫術與宗教之研究"
+                },
+                {
+                      "title": "金枝（初版‧卷二）",
+                      "titleOriginal": "The Golden Bough, Vol. 2",
+                      "year": "1890",
+                      "yearSort": 1890,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000002'
+                },
+                {
+                      "title": "金枝（二版‧卷一）",
+                      "titleOriginal": "The Golden Bough: A Study in Magic and Religion, 2nd ed., Vol. 1",
+                      "year": "1900",
+                      "yearSort": 1900,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000003'
+                },
+                {
+                      "title": "金枝（二版‧卷二）",
+                      "titleOriginal": "The Golden Bough, 2nd ed., Vol. 2",
+                      "year": "1900",
+                      "yearSort": 1900,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000004'
+                },
+                {
+                      "title": "金枝（二版‧卷三）",
+                      "titleOriginal": "The Golden Bough, 2nd ed., Vol. 3",
+                      "year": "1900",
+                      "yearSort": 1900,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000005'
+                },
+                {
+                      "title": "金枝（三版‧卷一）巫術之藝與王之演進 上",
+                      "titleOriginal": "The Magic Art and the Evolution of Kings, Vol. 1",
+                      "year": "1911",
+                      "yearSort": 1911,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000006'
+                },
+                {
+                      "title": "金枝（三版‧卷二）巫術之藝與王之演進 下",
+                      "titleOriginal": "The Magic Art and the Evolution of Kings, Vol. 2",
+                      "year": "1911",
+                      "yearSort": 1911,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000007'
+                },
+                {
+                      "title": "金枝（三版‧卷三）禁忌與靈魂之危",
+                      "titleOriginal": "Taboo and the Perils of the Soul",
+                      "year": "1911",
+                      "yearSort": 1911,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000008'
+                },
+                {
+                      "title": "金枝（三版‧卷四）垂死之神",
+                      "titleOriginal": "The Dying God",
+                      "year": "1911",
+                      "yearSort": 1911,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000009'
+                },
+                {
+                      "title": "金枝（三版‧卷五）阿多尼斯‧阿提斯‧奧西里斯 上",
+                      "titleOriginal": "Adonis Attis Osiris, Vol. 1",
+                      "year": "1914",
+                      "yearSort": 1914,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000010'
+                },
+                {
+                      "title": "金枝（三版‧卷六）阿多尼斯‧阿提斯‧奧西里斯 下",
+                      "titleOriginal": "Adonis Attis Osiris, Vol. 2",
+                      "year": "1914",
+                      "yearSort": 1914,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000011'
+                },
+                {
+                      "title": "金枝（三版‧卷七）穀精與野靈 上",
+                      "titleOriginal": "Spirits of the Corn and of the Wild, Vol. 1",
+                      "year": "1912",
+                      "yearSort": 1912,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000012'
+                },
+                {
+                      "title": "金枝（三版‧卷八）穀精與野靈 下",
+                      "titleOriginal": "Spirits of the Corn and of the Wild, Vol. 2",
+                      "year": "1912",
+                      "yearSort": 1912,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000013'
+                },
+                {
+                      "title": "金枝（三版‧卷九）代罪羔羊",
+                      "titleOriginal": "The Scapegoat",
+                      "year": "1913",
+                      "yearSort": 1913,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000014'
+                },
+                {
+                      "title": "金枝（三版‧卷十）美麗的巴德爾 上",
+                      "titleOriginal": "Balder the Beautiful, Vol. 1",
+                      "year": "1913",
+                      "yearSort": 1913,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000015'
+                },
+                {
+                      "title": "金枝（三版‧卷十一）美麗的巴德爾 下",
+                      "titleOriginal": "Balder the Beautiful, Vol. 2",
+                      "year": "1913",
+                      "yearSort": 1913,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000016'
+                },
+                {
+                      "title": "金枝（三版‧卷十二）書目與總索引",
+                      "titleOriginal": "Bibliography and General Index",
+                      "year": "1915",
+                      "yearSort": 1915,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000017'
+                },
+                {
+                      "title": "舊約民俗學（卷一）",
+                      "titleOriginal": "Folk-Lore in the Old Testament, Vol. 1",
+                      "year": "1918",
+                      "yearSort": 1918,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000019',
+                      "note": "宗教、律法與習俗的比較研究"
+                },
+                {
+                      "title": "舊約民俗學（卷二）",
+                      "titleOriginal": "Folk-Lore in the Old Testament, Vol. 2",
+                      "year": "1918",
+                      "yearSort": 1918,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000020'
+                },
+                {
+                      "title": "舊約民俗學（卷三）",
+                      "titleOriginal": "Folk-Lore in the Old Testament, Vol. 3",
+                      "year": "1918",
+                      "yearSort": 1918,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000021'
+                },
+                {
+                      "title": "圖騰制與外婚制（卷一）",
+                      "titleOriginal": "Totemism and Exogamy, Vol. 1",
+                      "year": "1910",
+                      "yearSort": 1910,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000022'
+                },
+                {
+                      "title": "圖騰制與外婚制（卷二）",
+                      "titleOriginal": "Totemism and Exogamy, Vol. 2",
+                      "year": "1910",
+                      "yearSort": 1910,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000023'
+                },
+                {
+                      "title": "圖騰制與外婚制（卷三）",
+                      "titleOriginal": "Totemism and Exogamy, Vol. 3",
+                      "year": "1910",
+                      "yearSort": 1910,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000024'
+                },
+                {
+                      "title": "圖騰制與外婚制（卷四）",
+                      "titleOriginal": "Totemism and Exogamy, Vol. 4",
+                      "year": "1910",
+                      "yearSort": 1910,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000025'
+                },
+                {
+                      "title": "普緒喀的任務",
+                      "titleOriginal": "Psyche's Task: A Discourse Concerning the Influence of Superstition on the Growth of Institutions",
+                      "year": "1909",
+                      "yearSort": 1909,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: 'f4a21854-0000-4000-8000-000000000026',
+                      "note": "迷信對制度發展的貢獻"
                 }
           ]
     },
@@ -20825,7 +21135,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "sv"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '50de1866-0000-4000-8000-000000000001',
                       "note": "探討神觀起源與宗教敬虔類型學。"
                 },
                 {
@@ -20837,8 +21148,29 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '50de1866-0000-4000-8000-000000000003',
                       "note": "1931年吉福德講座整理,系統闡述其宗教類型學,身後由學生編定出版。"
+                },
+                {
+                      "title": "啟示信仰的詮釋",
+                      "titleOriginal": "Uppenbarelsetrons tolkning",
+                      "year": "1911",
+                      "yearSort": 1911,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '50de1866-0000-4000-8000-000000000002',
+                      "note": "瑞典文"
+                },
+                {
+                      "title": "基督徒的團契",
+                      "titleOriginal": "Christian Fellowship: The United Life and Work of Christendom",
+                      "year": "1923",
+                      "yearSort": 1923,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '50de1866-0000-4000-8000-000000000004',
+                      "note": "普世教會運動的神學基礎"
                 }
           ]
     },
@@ -22461,7 +22793,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000003'
                 },
                 {
                       "title": "宗教社會學",
@@ -22472,7 +22805,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000001',
                       "note": "提出宗教性作為普遍心理形式的理論"
                 },
                 {
@@ -22484,7 +22818,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000002'
                 },
                 {
                       "title": "大都市與精神生活",
@@ -22508,6 +22843,36 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       ],
                       "status": "planned",
                       "note": "開啟移民與宗教少數社群社會學的討論脈絡"
+                },
+                {
+                      "title": "社會學的基本問題",
+                      "titleOriginal": "Grundfragen der Soziologie: Individuum und Gesellschaft",
+                      "year": "1917",
+                      "yearSort": 1917,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000004',
+                      "note": "個體與社會"
+                },
+                {
+                      "title": "生命觀",
+                      "titleOriginal": "Lebensanschauung: Vier metaphysische Kapitel",
+                      "year": "1922",
+                      "yearSort": 1922,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000005',
+                      "note": "四章形上學"
+                },
+                {
+                      "title": "康德與歌德",
+                      "titleOriginal": "Kant und Goethe: Zur Geschichte der modernen Weltanschauung",
+                      "year": "1906",
+                      "yearSort": 1906,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '51ee1858-0000-4000-8000-000000000006',
+                      "note": "論現代世界觀的歷史"
                 }
           ]
     },
@@ -22775,7 +23140,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "in-progress",
+                      ebookId: '70e11865-0000-4000-8000-000000000001',
                       "note": "提出教會/教派/神秘主義三大類型學，宗教組織社會學基石"
                 },
                 {
@@ -22787,7 +23153,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '70e11865-0000-4000-8000-000000000003'
                 },
                 {
                       "title": "歷史主義及其問題",
@@ -22798,7 +23165,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "in-progress",
+                      ebookId: '70e11865-0000-4000-8000-000000000004'
                 },
                 {
                       "title": "新教教義史",
@@ -22811,6 +23179,16 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       ],
                       "status": "planned",
                       "note": "身後由學生整理出版的系統神學講稿"
+                },
+                {
+                      "title": "基督教會與團體的社會訓誨（第三版）",
+                      "titleOriginal": "Die Soziallehren der christlichen Kirchen und Gruppen, 3. Aufl.",
+                      "year": "1923",
+                      "yearSort": 1923,
+                      "category": "原著",
+                      "status": "in-progress",
+                      ebookId: '70e11865-0000-4000-8000-000000000002',
+                      "note": "照相製版重印"
                 }
           ]
     },
