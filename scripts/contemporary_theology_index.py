@@ -132,7 +132,9 @@ def library_stats(env: dict, subs: list[str]) -> list[dict]:
 
 def key_words(title: str) -> str:
     """取題名裡最有辨識度的一段拿去比對——整串比對幾乎一定落空（副標、版次、冊數都會差）。"""
-    t = re.split(r"[:：(（/]", title)[0]
+    # 破折號也要切：長副標（「日本仏教史——思想史としてのアプローチ」）不切就對不上
+    # 館內只叫《日本佛教史》的譯本。
+    t = re.split(r"[:：(（/—–]|--", title)[0]
     t = re.sub(r"[《》\"'’”]", "", t).strip().lower()
     return t
 
@@ -222,18 +224,50 @@ def main() -> int:
 
     if args.wanted:
         miss = [b for b in bib if not b["in_library"]]
-        with WANTED.open("w", encoding="utf-8") as f:
-            for b in miss:
-                slug = re.sub(r"[^a-z0-9]+", "-", key_words(b["title"]))[:40].strip("-")
-                f.write(json.dumps({
-                    "key": f"ct-{b['area']}-{slug}",
-                    "query": f"{b['author'].split('(')[0].strip()} {key_words(b['title'])}",
-                    "expect": key_words(b["title"]),
-                    "who": b["author"],
-                    "source": "contemporary-theology",
-                    "zh": f"{b['author_zh']}《{b['title_zh']}》",
-                }, ensure_ascii=False) + "\n")
-        print(f"→ {WANTED}（{len(miss)} 筆缺書）")
+        # ⚠️ key 一定要帶作者。只用書名做 slug 會整批互撞：田立克與潘能伯格的
+        # 《系統神學》、艾希羅特與馮拉德的《舊約神學》都會壓成同一個 key，而
+        # 中日文書名 slug 完是空字串，整批退成「區-」互相覆蓋。撞掉的那些不會
+        # 報錯，只是從此不會被搜——2026-09-11 實際撞掉 6 組共 14 筆。
+        def mkkey(b: dict) -> str:
+            who = re.sub(r"[^a-z0-9]+", "-",
+                         (b["author"] or "").split("(")[0].strip().lower()).strip("-")
+            what = re.sub(r"[^a-z0-9]+", "-", key_words(b["title"])).strip("-")
+            if not who:
+                who = re.sub(r"[^\w]+", "", b.get("author_zh") or "")
+            if not what:
+                what = re.sub(r"[^\w]+", "", b.get("title_zh") or "")
+            return f'ct-{b["area"]}-{who[:24]}-{what[:28]}'.strip("-")
+
+        rows, used = [], {}
+        for b in miss:
+            k = mkkey(b)
+            used[k] = used.get(k, 0) + 1
+            if used[k] > 1:
+                k = f"{k}-{used[k]}"
+            rows.append({
+                "key": k,
+                "query": f'{(b["author"] or "").split("(")[0].strip()} {key_words(b["title"])}'.strip(),
+                "expect": key_words(b["title"]) or (b.get("title_zh") or ""),
+                "who": b["author"], "source": "contemporary-theology",
+                "zh": f'{b["author_zh"]}《{b["title_zh"]}》',
+            })
+
+        # ⚠️ 合併不要覆寫。這個檔可能有人工加過的條目（佛學那份就有 22 筆手工策展的
+        # 被一次 --wanted 默默洗掉），而覆寫不會留下任何痕跡。
+        old_rows = []
+        if WANTED.exists():
+            old_rows = [json.loads(l) for l in WANTED.read_text(encoding="utf-8").splitlines() if l.strip()]
+        # ⚠️ 比對要看**內容**不能看 key。key 的產生規則改過一次（原本只用書名，
+        # 會整批互撞），那一改之下所有 key 都變了，若照 key 判「舊的不在新集合裡就留著」，
+        # 同一批書會原封不動被留成第二份，檔案從 181 筆變 362 筆而且不報錯。
+        fresh = {r.get("zh") for r in rows}
+        kept = [r for r in old_rows if r.get("zh") not in fresh]
+        nl = chr(10)
+        WANTED.write_text(nl.join(json.dumps(r, ensure_ascii=False)
+                                  for r in rows + kept) + nl, encoding="utf-8")
+        dup = sum(v - 1 for v in used.values() if v > 1)
+        print(f"→ {WANTED}（本輪 {len(rows)} 筆缺書，保留既有 {len(kept)} 筆"
+              + (f"，同名撞號補尾碼 {dup} 筆" if dup else "") + "）")
     return 0
 
 
