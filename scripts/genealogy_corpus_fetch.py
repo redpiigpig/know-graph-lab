@@ -110,12 +110,21 @@ def main() -> int:
     idx_path = OUT / "index.json"
     index = json.loads(idx_path.read_text(encoding="utf-8")) if idx_path.exists() else {}
 
-    got = skipped = failed = 0
+    got = skipped = failed = backfilled = 0
     for i, r in enumerate(docs, 1):
         ident = r["identifier"]
         title = str(r.get("title", ""))
         target = OUT / safe_name(ident, title)
         if target.exists() and target.stat().st_size > 2000:
+            # ⚠️ 略過的同時要補索引。index.json 只在跑完時寫一次，中途被砍（休眠、
+            # 關機、session 結束）已抓的那些就沒進索引；而略過看的是「檔案在不在」，
+            # 所以重跑會直接跳過，那批檔案永遠補不回索引——硬碟有、索引沒有、
+            # 網站少算，而每一步看起來都正常。
+            if ident not in index:
+                index[ident] = {"title": title, "year": r.get("year"),
+                                "file": target.name,
+                                "chars": len(target.read_text("utf-8", "replace"))}
+                backfilled += 1
             skipped += 1
             continue
         try:
@@ -146,11 +155,13 @@ def main() -> int:
                         "file": target.name, "chars": len(text)}
         got += 1
         print(f"[{i}/{len(docs)}] {ident}  {len(text)/1000:.0f}k 字  {title[:52]}")
+        if got % 25 == 0:  # 中途落盤，別把一千多筆的索引押在跑完那一刻
+            idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
         time.sleep(0.7)
 
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
     total = sum(v["chars"] for v in index.values())
-    print(f"\n抓取 {got}／略過 {skipped}／失敗 {failed}")
+    print(f"\n抓取 {got}／略過 {skipped}（其中補進索引 {backfilled}）／失敗 {failed}")
     print(f"語料現況：{len(index)} 份、{total:,} 字 → {OUT}")
     print("接著用 `python scripts/genealogy_research.py --set ecumenical <關鍵詞>` 檢索。")
     return 0
