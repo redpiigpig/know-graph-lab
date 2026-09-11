@@ -21,6 +21,16 @@
           <span class="tool-badge bg-sky-50 text-sky-600">4 區</span>
         </NuxtLink>
 
+        <!-- 當代神學研究（十二個策展分區＋吉福德講座＋館藏） -->
+        <NuxtLink to="/research-data/contemporary-theology" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">🧭</div>
+          <div class="flex-1">
+            <h2 class="tool-title">當代神學研究</h2>
+            <p class="tool-desc">二十世紀以來的神學：方法論、神學史、聖經神學、系統神學、實踐神學、自由與世俗神學、敘事神學、解放神學、性別神學、各地的神學、全球神學，以及吉福德講座歷屆名單</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">14 區</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>

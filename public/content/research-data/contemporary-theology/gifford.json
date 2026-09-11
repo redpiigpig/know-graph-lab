@@ -1,0 +1,1897 @@
+{
+ "source": "Wikipedia, “Gifford Lectures”（官網 giffordlectures.org 有 Cloudflare，抓不到）",
+ "count": 210,
+ "speakers": 201,
+ "rows": [
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1888–92",
+   "speaker": "Friedrich Max Müller",
+   "lecture": "1888: Natural Religion Vol. 1 & 2; 1890: Physical Religion; 1891: Anthropological Religion: 1892: Theosophy or Psychological Religion",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/friedrich-max-muller/"
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1889–91",
+   "speaker": "E. B. Tylor",
+   "lecture": "The Natural History of Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1889–90",
+   "speaker": "James Hutchison Stirling",
+   "lecture": "Philosophy and Theology",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/james-hutchison-stirling/"
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1889–90",
+   "speaker": "Andrew Lang",
+   "lecture": "The Making of Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1890–92",
+   "speaker": "Edward Caird",
+   "lecture": "The Evolution of Religion",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/edward-caird/"
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1891",
+   "speaker": "George Gabriel Stokes",
+   "lecture": "Natural Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1892–94",
+   "speaker": "Andrew Martin Fairbairn",
+   "lecture": "The Philosophy of the Christian Religion",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/andrew-martin-fairbairn/"
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1892–94",
+   "speaker": "Otto Pfleiderer",
+   "lecture": "Philosophy and Development of Religion",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/otto-pfleiderer/"
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1892–96",
+   "speaker": "John Caird",
+   "lecture": "The Fundamental Ideas of Christianity Vol. 1 & 2",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1894–96",
+   "speaker": "Lewis Campbell",
+   "lecture": "Religion in Greek Literature",
+   "isbn": null,
+   "url": "https://web.archive.org/web/20070814104900/http://www.giffordlectures.org/Browse.asp?PubID=TPRIGL&Cover=TRUE"
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1896–98",
+   "speaker": "James Ward",
+   "lecture": "Naturalism and Agnosticism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1896–98",
+   "speaker": "Cornelis Tiele",
+   "lecture": "On the Elements of the Science of Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1896–98",
+   "speaker": "Alexander Balmain Bruce",
+   "lecture": "The Moral Order of the World and The Providential Order of the World",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1898–00",
+   "speaker": "Josiah Royce",
+   "lecture": "The World and the Individual",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1899–01",
+   "speaker": "Rodolfo Lanciani",
+   "lecture": "New Tales of Old Rome",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1900–02",
+   "speaker": "William James",
+   "lecture": "The Varieties of Religious Experience",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1900–02",
+   "speaker": "Edward Caird",
+   "lecture": "The Evolution of Theology in the Greek Philosophers",
+   "isbn": null,
+   "url": "https://giffordlectures.org/speaker/edward-caird/"
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1902–04",
+   "speaker": "Richard Haldane",
+   "lecture": "The Pathway to Reality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1904–06",
+   "speaker": "James Adam",
+   "lecture": "The Religious Teachers of Greece",
+   "isbn": null,
+   "url": "https://archive.org/stream/religiousteache00marigoog#page/n11/mode/1up"
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1907–08",
+   "speaker": "Hans Driesch",
+   "lecture": "The Science and Philosophy of the Organism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1907–09",
+   "speaker": "James Ward",
+   "lecture": "The Realm of Ends or Pluralism and Theism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1909–10",
+   "speaker": "William Warde Fowler",
+   "lecture": "The Religious Experience of the Roman People",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1911–13",
+   "speaker": "Andrew Seth Pringle-Pattison",
+   "lecture": "The Idea of God in the light of Recent Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1911–12",
+   "speaker": "Bernard Bosanquet",
+   "lecture": "The Principle of Individuality and Value",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1911–13",
+   "speaker": "James George Frazer",
+   "lecture": "The Belief in Immortality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1913–14",
+   "speaker": "Henri Bergson",
+   "lecture": "The Problem of Personality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1914–15",
+   "speaker": "William Ritchie Sorley",
+   "lecture": "Moral Values and the Idea of God",
+   "isbn": null,
+   "url": "https://archive.org/details/moralvaluesideao00sorlrich"
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1914",
+   "speaker": "Arthur Balfour",
+   "lecture": "Theism and Humanism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1914–16",
+   "speaker": "J. A. Thomson",
+   "lecture": "The System of Animate Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1915–16",
+   "speaker": "William Mitchell Ramsay",
+   "lecture": "Asianic Elements in Greek Civilization",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1916–18",
+   "speaker": "Samuel Alexander",
+   "lecture": "Space, Time, and Deity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1917–19",
+   "speaker": "William Ralph Inge",
+   "lecture": "The Philosophy of Plotinus",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1919–21",
+   "speaker": "George Stout",
+   "lecture": "Mind and Matter pub. 1931",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1919–20",
+   "speaker": "Lewis Richard Farnell",
+   "lecture": "Greek Hero Cults and Ideas of Immortality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1921–23",
+   "speaker": "Andrew Seth Pringle-Pattison",
+   "lecture": "Studies in the Philosophy of Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1921–22",
+   "speaker": "C. Lloyd Morgan",
+   "lecture": "Emergent Evolution (1923) and Life, Mind, and Spirit (1925)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1922",
+   "speaker": "Arthur Balfour",
+   "lecture": "Theism and Thought",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1923–35",
+   "speaker": "James George Frazer",
+   "lecture": "The Worship of Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1924–25",
+   "speaker": "Lewis Richard Farnell",
+   "lecture": "The Attributes of God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1926–27",
+   "speaker": "Arthur Eddington",
+   "lecture": "The Nature of the Physical World",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1926–28",
+   "speaker": "Alfred Edward Taylor",
+   "lecture": "The faith of a moralist, The Theological Implications of Morality; Natural Theology and the Positive Religions (1930)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1927–29",
+   "speaker": "Ernest Barnes",
+   "lecture": "Scientific Theory and Religion",
+   "isbn": "ISBN 9780521730228",
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1927–28",
+   "speaker": "Alfred North Whitehead",
+   "lecture": "Process and Reality: An Essay in Cosmology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1927–28",
+   "speaker": "J. S. Haldane",
+   "lecture": "The Sciences and Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1928–29",
+   "speaker": "John Dewey",
+   "lecture": "The Quest for Certainty: A Study of the Relation of Knowledge and Action",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1929–30",
+   "speaker": "Charles Gore",
+   "lecture": "The Philosophy of the Good Life (1930)",
+   "isbn": null,
+   "url": "https://books.google.com/books?id=jO8sAAAAMAAJ"
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1930–32",
+   "speaker": "Etienne Gilson",
+   "lecture": "The Spirit of Medieval Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1930–32",
+   "speaker": "Robert Ranulph Marett",
+   "lecture": "Faith, Hope & Charity in Primitive Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1932–34",
+   "speaker": "William Temple",
+   "lecture": "Nature, Man and God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1934–35",
+   "speaker": "Albert Schweitzer",
+   "lecture": "The Problem of Natural Theology and Natural Ethics (unpublished)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1935–36",
+   "speaker": "Hensley Henson",
+   "lecture": "Christian Morality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1936–38",
+   "speaker": "Karl Barth",
+   "lecture": "The Knowledge of God and the Service of God according to the Teaching of the Reformation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1936–37",
+   "speaker": "Werner Jaeger",
+   "lecture": "The Theology of the Early Greek Philosophers (1936)",
+   "isbn": null,
+   "url": "https://books.google.com/books?id=ChwGAAAACAAJ"
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1937–38",
+   "speaker": "Charles Sherrington",
+   "lecture": "Man on His Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1937–38",
+   "speaker": "William G. de Burgh",
+   "lecture": "From Morality to Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1938–40",
+   "speaker": "Reinhold Niebuhr",
+   "lecture": "The Nature and Destiny of Man: A Christian Interpretation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1938",
+   "speaker": "Joseph Bidez",
+   "lecture": "Plato and the Orient",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1939–40",
+   "speaker": "Arthur Darby Nock",
+   "lecture": "Hellenistic Religion - The Two Phases",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1939–40",
+   "speaker": "Richard Kroner",
+   "lecture": "The Primacy of Faith",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1946–48",
+   "speaker": "Emil Brunner",
+   "lecture": "Christianity and Civilisation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1947–49",
+   "speaker": "Christopher Dawson",
+   "lecture": "Vol. 1 Religion and Culture Vol. 2 Religion and the Rise of Western Culture (1950)",
+   "isbn": null,
+   "url": "https://archive.org/details/religionculture0000daws"
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1949–50",
+   "speaker": "Gabriel Marcel",
+   "lecture": "The Mystery of Being and Faith and Reality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1949–50",
+   "speaker": "Niels Bohr",
+   "lecture": "Causality and Complementarity: Epistemological Lessons of Studies in Atomic Physics",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1949–50",
+   "speaker": "Herbert James Paton",
+   "lecture": "The Modern Predicament",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1950–52",
+   "speaker": "Charles Earle Raven",
+   "lecture": "Natural Religion and Christian Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1951–52",
+   "speaker": "Michael Polanyi",
+   "lecture": "Personal Knowledge: Towards a Post-Critical Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1951–53",
+   "speaker": "Brand Blanshard",
+   "lecture": "Reason, Belief and Goodness",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1952–53",
+   "speaker": "Arnold J. Toynbee",
+   "lecture": "An Historian's Approach to Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1952–54",
+   "speaker": "John Macmurray",
+   "lecture": "The Form of the Personal Vol.1 & 2: The Self as Agent and Persons in Relation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1953–54",
+   "speaker": "Paul Tillich",
+   "lecture": "Systematic Theology (3 vols.)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1953–55",
+   "speaker": "C. A. Campbell",
+   "lecture": "On Selfhood and Godhood",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1954–55",
+   "speaker": "Rudolf Bultmann",
+   "lecture": "History and Eschatology: The Presence of Eternity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1955–56",
+   "speaker": "Werner Heisenberg",
+   "lecture": "Physics and Philosophy: The Revolution in Modern Science",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1959",
+   "speaker": "Carl Friedrich von Weizsäcker",
+   "lecture": "The Relevance of Science",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1959–60",
+   "speaker": "Georg Henrik von Wright",
+   "lecture": "Norm and Action (1963) and The Varieties of Goodness (1963)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1961–62",
+   "speaker": "John Baillie",
+   "lecture": "The Sense of the Presence of God",
+   "isbn": null,
+   "url": "http://www.giffordlectures.org/lectures/sense-presence-god"
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1962–64",
+   "speaker": "Henry Chadwick",
+   "lecture": "Authority in the Early Church",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1963–65",
+   "speaker": "Alister Hardy",
+   "lecture": "The Living Stream and The Divine Flame",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1964–66",
+   "speaker": "John Findlay",
+   "lecture": "The Discipline of the Cave (1966), and The Transcendence of the Cave (1967)",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1965–67",
+   "speaker": "Raymond Aron",
+   "lecture": "La Conscience historique dans la pensée et dans l'action",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1965",
+   "speaker": "Herbert Butterfield",
+   "lecture": "Historical Writing and Christian Beliefs and Human Beliefs and the Development of Historical Writing",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1967–69",
+   "speaker": "Robert Charles Zaehner",
+   "lecture": "Concordant Discord. The Interdependence of Faiths.",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1969–71",
+   "speaker": "William Homan Thorpe",
+   "lecture": "Animal Nature and Human Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1970–72",
+   "speaker": "Arend Theordore van Leeuwen",
+   "lecture": "The Critique of Heaven and Earth",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1970–71",
+   "speaker": "Eric Lionel Mascall",
+   "lecture": "The Openness of Being",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1970",
+   "speaker": "Richard William Southern",
+   "lecture": "The Rise and Fall of the Medieval System of Religious Thought",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1972–74",
+   "speaker": "Hannah Arendt",
+   "lecture": "Life of the Mind",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1972–73",
+   "speaker": "Alfred Ayer",
+   "lecture": "The Central Questions of Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1973–74",
+   "speaker": "Owen Chadwick",
+   "lecture": "The Secularisation of the European Mind in the 19th Century",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1974–76",
+   "speaker": "Stanley Jaki",
+   "lecture": "The Road of Science and the Ways to God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1974-76",
+   "speaker": "Basil Mitchell",
+   "lecture": "Morality, Religious and Secular",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1975–77",
+   "speaker": "Reijer Hooykaas",
+   "lecture": "Fact, Faith and Fiction in the Development of Science",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1977–78",
+   "speaker": "David Stafford-Clark",
+   "lecture": "Myth, Magic and Denial",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1978–79",
+   "speaker": "Sir John Eccles",
+   "lecture": "The Human Mystery and The Human Psyche",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1979–80",
+   "speaker": "Ninian Smart",
+   "lecture": "The Varieties of Religious Identity, published as Beyond Ideology: Religion and the Future of Western Civilisation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1979–80",
+   "speaker": "Frederick Copleston",
+   "lecture": "Religion and the One: Philosophies East and West",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1980–81",
+   "speaker": "Seyyed Hossein Nasr",
+   "lecture": "Knowledge and the Sacred",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1980–81",
+   "speaker": "Gregory Vlastos",
+   "lecture": "Socrates: Ironist and Moral Philosopher",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1981–82",
+   "speaker": "Iris Murdoch",
+   "lecture": "Metaphysics as a Guide to Morals",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1981",
+   "speaker": "Stephen R. L. Clark",
+   "lecture": "From Athens to Jerusalem",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1982–84",
+   "speaker": "Richard Swinburne",
+   "lecture": "The Evolution of the Soul",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1982–83",
+   "speaker": "Donald Geoffrey Charlton",
+   "lecture": "New Images of the Natural, 1750-1800",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1983–84",
+   "speaker": "David Daiches",
+   "lecture": "God and the Poets",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1983–84",
+   "speaker": "John Macquarrie",
+   "lecture": "In Search of Deity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1984–85",
+   "speaker": "Freeman Dyson",
+   "lecture": "Infinite In All Directions",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1984–85",
+   "speaker": "Jurgen Moltmann",
+   "lecture": "God in Creation: A New Theology of Creation and the Spirit of God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1984–85",
+   "speaker": "Adolf Grünbaum",
+   "lecture": "Psychoanalytic Theory and Science",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1985–86",
+   "speaker": "Paul Ricoeur",
+   "lecture": "Oneself as another",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1985",
+   "speaker": "Carl Sagan",
+   "lecture": "The Search for Who We Are",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1986–87",
+   "speaker": "John Hick",
+   "lecture": "An Interpretation of Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1986",
+   "speaker": "Donald M. MacKay",
+   "lecture": "Behind the Eye",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1986–87",
+   "speaker": "Antony Flew",
+   "lecture": "The Logic of Mortality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1987–88",
+   "speaker": "Alasdair MacIntyre",
+   "lecture": "Three Rival Versions of Moral Enquiry",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1988–89",
+   "speaker": "Raimon Panikkar",
+   "lecture": "Trinity and Theism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1988",
+   "speaker": "Don Cupitt",
+   "lecture": "Nature and Culture",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1988–89",
+   "speaker": "Walter Burkert",
+   "lecture": "Tracks of Biology and the Creation of Sense",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1989–91",
+   "speaker": "Ian Barbour",
+   "lecture": "Religion in an Age of Science",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1989–90",
+   "speaker": "Mary Douglas",
+   "lecture": "Claims on God: published (much revised) as In the Wilderness",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1990 Spring",
+   "speaker": "Mary Midgley",
+   "lecture": "Science and Salvation: published as Science As Salvation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1990–91",
+   "speaker": "Hilary Putnam",
+   "lecture": "Renewing Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1991–92",
+   "speaker": "Annemarie Schimmel",
+   "lecture": "Deciphering the Signs of God: A Phenomenological Approach to Islam",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1992–93",
+   "speaker": "Jaroslav Pelikan",
+   "lecture": "Christianity and Classical Culture: The Metamorphosis of Natural Theology in the Christian Encounter With Hellenism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1992–93",
+   "speaker": "Martha C. Nussbaum",
+   "lecture": "Upheavals of Thought: A Theory of the Emotions",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1992",
+   "speaker": "Mary Warnock",
+   "lecture": "Imagination and Understanding, published as Imagination and Time",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1992–93",
+   "speaker": "Arthur Peacocke",
+   "lecture": "Nature, God and Humanity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1993–94",
+   "speaker": "John Polkinghorne",
+   "lecture": "Science and Christian Belief: Theological Reflections of a Bottom-up Thinker",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1993–94",
+   "speaker": "Keith Ward",
+   "lecture": "Religion and Revelation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1994–95",
+   "speaker": "John W. Rogerson",
+   "lecture": "Faith and Criticism in the Work of William Robertson Smith, 1846-1894",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1995–96",
+   "speaker": "G. A. Cohen",
+   "lecture": "If you're an Egalitarian, how come you're so Rich?",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1995–96",
+   "speaker": "Geoffrey Cantor ／ John Hedley Brooke",
+   "lecture": "Reconstructing Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1995",
+   "speaker": "Nicholas Wolterstorff",
+   "lecture": "Thomas Reid and the Story of Epistemology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1996–97",
+   "speaker": "Richard Sorabji",
+   "lecture": "Emotions and How to Cope with Them, published as Emotion and Peace of Mind: From Stoic Agitation to Christian Temptation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1996–97",
+   "speaker": "Michael Dummett",
+   "lecture": "Thought and Reality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "1997–98",
+   "speaker": "Russell Stannard",
+   "lecture": "The God Experiment",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1997–98",
+   "speaker": "Holmes Rolston III",
+   "lecture": "Genes, Genesis and God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1997–98",
+   "speaker": "R. J. Berry",
+   "lecture": "Gods, Genes, Greens and Everything",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1998–99",
+   "speaker": "Charles Taylor",
+   "lecture": "Living in a Secular Age, published as A Secular Age",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "1998–99",
+   "speaker": "Robert Merrihew Adams",
+   "lecture": "God and Being",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "1999–00",
+   "speaker": "David Tracy",
+   "lecture": "This side of God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "1999–00",
+   "speaker": "Ralph McInerny",
+   "lecture": "Characters in Search of Their Author",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2000–01",
+   "speaker": "John S. Habgood",
+   "lecture": "The Concept of Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2000–01",
+   "speaker": "Onora O'Neill",
+   "lecture": "Autonomy and Trust in Bioethics",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2000–01",
+   "speaker": "Stanley Hauerwas",
+   "lecture": "With the Grain of the Universe: The Church's Witness and Natural Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2001–02",
+   "speaker": "Mohammed Arkoun",
+   "lecture": "Inaugurating a Critique of Islamic Reason",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2001",
+   "speaker": "Lynne Baker ／ Brian Hebblethwaite ／ Philip Johnson-Laird ／ George Lakoff ／ Michael Ruse",
+   "lecture": "The Nature and Limits of Human Understanding",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2002–03",
+   "speaker": "Michael Ignatieff",
+   "lecture": "The Lesser Evil: Political Ethics in an Age of Terror",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2002",
+   "speaker": "Peter van Inwagen",
+   "lecture": "The Problem of Evil",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2003",
+   "speaker": "Eleonore Stump",
+   "lecture": "Wandering in the Darkness",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2003–04",
+   "speaker": "John Haldane",
+   "lecture": "Mind, Soul and Deity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2003–04",
+   "speaker": "J. Wentzel van Huyssteen",
+   "lecture": "Alone in the World? Human Uniqueness in Science and Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2003–04",
+   "speaker": "Simon Blackburn",
+   "lecture": "Reason's Empire",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2004–05",
+   "speaker": "Margaret Anstee ／ Stephen Toulmin ／ Noam Chomsky",
+   "lecture": "Delivered a series of lectures dedicated to Edward Said who was scheduled to give the 2004–05 series before his death in 2003",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2004–05",
+   "speaker": "Alvin Plantinga",
+   "lecture": "Science and Religion: Conflict or Concord",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2005–06",
+   "speaker": "Jean Bethke Elshtain",
+   "lecture": "Sovereign God, Sovereign State, Sovereign Self",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2005",
+   "speaker": "Lenn Goodman ／ Abdulaziz Sachedina ／ John E. Hare",
+   "lecture": "Thou Shall Love Thy Neighbor as Thyself",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2006–07",
+   "speaker": "Simon Conway Morris",
+   "lecture": "Darwin 's Compass: How Evolution Discovers the Song of Creation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2007",
+   "speaker": "Stephen Pattison",
+   "lecture": "Seeing Things: Deepening Relations with Visual Artefacts",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2007–08",
+   "speaker": "Alexander Nehamas",
+   "lecture": "\"Because it was he, because it was I\": Friendship and Its Place in Life",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2007–08",
+   "speaker": "David Fergusson",
+   "lecture": "Religion and Its Recent Critics published as Faith and Its Critics: A Conversation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2007",
+   "speaker": "Martin Rees",
+   "lecture": "21st Century Science: Cosmic Perspective and Terrestrial Challenges",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2008",
+   "speaker": "Robert M. Veatch",
+   "lecture": "Hipprocratic, Religious and Secular Medical Ethics: The Point of Conflict",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2008–09",
+   "speaker": "Diana Eck",
+   "lecture": "The Age of Pluralism [April–May 2009]",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2008–09",
+   "speaker": "Charles Taylor",
+   "lecture": "The Necessity of Secularist Regimes",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2009",
+   "speaker": "Alister McGrath",
+   "lecture": "A Fine-Tuned Universe: The Quest for God in Science and Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2009–10",
+   "speaker": "Michael Gazzaniga",
+   "lecture": "Mental Life [October 2009]",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2009–10",
+   "speaker": "Gianni Vattimo",
+   "lecture": "The End of Reality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2010–11",
+   "speaker": "Peter Harrison",
+   "lecture": "Science, Religion and the Modern World, published as The Territories of Science and Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2010",
+   "speaker": "Roger Scruton",
+   "lecture": "The Face of God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2011–12",
+   "speaker": "Lord Sutherland of Houndwood",
+   "lecture": "David Hume and Civil Society",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2012",
+   "speaker": "Sarah Coakley",
+   "lecture": "Sacrifice Regained: Evolution, Cooperation and God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2012–13",
+   "speaker": "Bruno Latour",
+   "lecture": "\"Once Out of Nature\" - Natural Religion as a Pleonasm",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2012",
+   "speaker": "Vilayanur Ramachandran",
+   "lecture": "Body and Mind: Insights from Neuroscience",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2012",
+   "speaker": "Denis Alexander",
+   "lecture": "Genes, Determinism and God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2013–14",
+   "speaker": "Onora O'Neill",
+   "lecture": "From Toleration to Freedom of Expression",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2014",
+   "speaker": "David N. Livingstone",
+   "lecture": "Dealing with Darwin: Place, Politics and Rhetoric in Religious Engagements with Evolution",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2014–15",
+   "speaker": "Jeremy Waldron",
+   "lecture": "One Another's Equals: The Basis of Human Equality",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2014",
+   "speaker": "Jean-Luc Marion",
+   "lecture": "Givenness and Revelation",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2015–16",
+   "speaker": "Kathryn Tanner",
+   "lecture": "Christianity and the New Spirit of Capitalism",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2015",
+   "speaker": "Perry Schmidt-Leukel",
+   "lecture": "Interreligious Theology: The Future Shape of Theology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2015",
+   "speaker": "Linda Zagzebski",
+   "lecture": "Exemplarist Virtue Theory published as Exemplarist Moral Theory",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2016",
+   "speaker": "Mona Siddiqui",
+   "lecture": "Struggle, Suffering and Hope: Explorations in Islamic and Christian Traditions",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2016–17",
+   "speaker": "Richard English",
+   "lecture": "Nationalism, Terrorism and Religion",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2016",
+   "speaker": "Sean M. Carroll",
+   "lecture": "The Big Picture: On the Origins of Life, Meaning, and the Universe Itself",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2017",
+   "speaker": "David Novak",
+   "lecture": "Athens and Jerusalem: God, Humans, and Nature",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2017–18",
+   "speaker": "Agustín Fuentes",
+   "lecture": "Why We Believe: evolution, making meaning, and the development of human natures",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2017",
+   "speaker": "Michael Rea",
+   "lecture": "Though the Darkness Hide Thee: Seeking the Face of the Invisible God",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2018",
+   "speaker": "N. T. Wright",
+   "lecture": "Discerning the Dawn: History, Eschatology and New Creation, published as History and Eschatology: Jesus and the Promise of Natural Theology, 2019",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2018–19",
+   "speaker": "Mary Beard",
+   "lecture": "The Ancient World and Us: From Fear and Loathing to Enlightenment and Ethics",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2018",
+   "speaker": "Judith Butler",
+   "lecture": "My Life, Your Life: Equality and the Philosophy of Non-Violence",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2019–20",
+   "speaker": "Michael Welker",
+   "lecture": "In God's Image: Anthropology",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2019",
+   "speaker": "Kevin Hart",
+   "lecture": "Philosophia and Religions",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2019",
+   "speaker": "Mark Johnston",
+   "lecture": "Ontotheology as Antidote for Idolatry",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2020–21",
+   "speaker": "David Hempton",
+   "lecture": "Networks, Nodes, and Nuclei in the History of Christianity, c. 1500-2020",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2020",
+   "speaker": "T.J. Clark",
+   "lecture": "Heaven on Earth: Painting and the Life to Come",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2021–22",
+   "speaker": "Susan Neiman",
+   "lecture": "Heroism for a Time of Victims",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2021",
+   "speaker": "Oliver O'Donovan",
+   "lecture": "The Disappearance of Ethics",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2022",
+   "speaker": "John Dupré",
+   "lecture": "A Brief History of Form",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2022–23",
+   "speaker": "John Dupré",
+   "lecture": "A Process Perspective on Human Life",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2022",
+   "speaker": "Manthia Diawara ／ Terri Geis",
+   "lecture": "Towards a New Sacred",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2023–24",
+   "speaker": "Cornel West",
+   "lecture": "A Jazz-soaked Philosophy for our Catastrophic Times: From Socrates to Coltrane",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2023",
+   "speaker": "Mark Williams",
+   "lecture": "The Japanese Religious Melting Pot and the Significance of Christianity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2024",
+   "speaker": "Miri Rubin",
+   "lecture": "The Feminine and the Religious Imagination",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2024–25",
+   "speaker": "Alexandra Walsham",
+   "lecture": "Religious Movements: Motion and Emotion in Early Modern Christian History",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2024",
+   "speaker": "Clare Carlisle",
+   "lecture": "Transcendence for Beginners: Life Writing and Philosophy",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2025",
+   "speaker": "Miroslav Volf",
+   "lecture": "Amor Mundi: God and the Character of Our Relation to the World",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2025–26",
+   "speaker": "Paula Fredriksen",
+   "lecture": "The Conversions of Christianity",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Glasgow",
+   "university_zh": "格拉斯哥",
+   "year": "2025",
+   "speaker": "Jochen Schmidt",
+   "lecture": "Precarious Humility, Word Crises and World Crises",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Aberdeen",
+   "university_zh": "亞伯丁",
+   "year": "2026",
+   "speaker": "Jeremy Begbie",
+   "lecture": "TBC",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "Edinburgh",
+   "university_zh": "愛丁堡",
+   "year": "2026–27",
+   "speaker": "Alondra Nelson",
+   "lecture": "TBC",
+   "isbn": null,
+   "url": null
+  },
+  {
+   "university": "St Andrews",
+   "university_zh": "聖安德魯斯",
+   "year": "2026",
+   "speaker": "John Swinton",
+   "lecture": "The Symptom’s Secret: An Apocalyptic Theology of Mental Health",
+   "isbn": null,
+   "url": null
+  }
+ ]
+}
