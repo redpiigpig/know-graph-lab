@@ -23,7 +23,8 @@
 
 **一、引用**（`kind: "quoted"`）。從語料挖出「全句每個詞都已教過」的整節或依原文
 自己的停頓切出的子句。可靠度滿分：句子是經文，中文是既有譯本。
-希伯來走 `scripts/build_hebrew_exercises.py`。
+希伯來走 `scripts/build_hebrew_exercises.py`，拉丁走 `scripts/build_latin_exercises.py`
+（`--volume 1` 挖武加大、`--volume 2` 挖下冊教會讀物）。
 
 **二、自撰**（`kind: "composed"`）。作者寫句子，語料驗句。這是主力。
 
@@ -60,7 +61,7 @@
 | 聖經希伯來文 | MorphHB／WLC（金標詞位與形態） | 已接好 |
 | 通用希臘文 上冊 | SBLGNT（morphgnt，金標）＋七十士 Swete | 新約已接；**七十士需先建詞位索引**（上冊詞彙半數屬七十士） |
 | 通用希臘文 下冊 | 教父與教會文獻 | **需先建詞位索引** |
-| 教會拉丁文 | UD_Latin-PROIEL（耶柔米武加大，金標）＋ latVUC | 詞位表已有，需接成 verifier |
+| 教會拉丁文 | UD_Latin-PROIEL（耶柔米武加大，金標）＋ latVUC；下冊另加 ITTB／LLCT | 已接好。`scripts/build_latin_lemma_corpus.py --write` 先標出 `lemma-corpus-{vulgate,church}.json`（每個 token 記明詞位是金標／字形表／不確定哪一層給的），`scripts/compose_latin_sentences.py --lesson N --volume V --check FILE` 是閘 |
 | 日文 | aozora ＋ 戰前宗教學語料，fugashi＋unidic-lite 斷詞 | fugashi 已裝；管線原本用 janome |
 
 日文是現代語，不套古語規則。
@@ -110,7 +111,17 @@
 ## 已知的坑
 
 - **maqqef 連寫**：`אֶת־הָאָדָם` 是兩個詞寫在一起。驗證前不先拆，整串查不到，
-  會把正確的句子整批誤判。希臘的 crasis、拉丁的 -que 同理。
+  會把正確的句子整批誤判。希臘的 crasis 同理。
+- **拉丁附著詞要反過來防「假拆」**：`armaque` ＝ `arma` ＋ `que`，但 `itaque`
+  不是 `ita` ＋ `que`；`neque`、`quisque`、`namque`、`denique`、`atque`、`utique`
+  也都不是。字尾一模一樣，只能問詞典：**整個形本身就在詞表裡就絕不拆**。
+  `-ne`／`-ve` 的誤拆風險更高（`bene`、`omne`、`sive`、`nomine`）。
+  拆開之後**主詞與附著詞要各自過「已教過」那一關**——`-que` 第一課就教了，
+  兩半併在一起判的話，任何名詞黏上 que 都會從第一課起全部過關。
+- **拉丁正字法只能用於比對**：`cælum`／`caelum`、`ejus`／`eius`、`uidit`／`vidit`
+  是同一個詞，比對前要折疊；但**印出來必須是原樣**，折疊過的字不得進版面。
+- **片語詞條不能被其中一個詞記成已練**：`in saecula`、`grātiās agere` 若可由
+  單一個 `in` 記帳，二十詞涵蓋這道閘就形同虛設。片語要整組到齊才算。
 - **同形異詞**：撒上 4:18 的 `וְכָבֵד` 是形容詞 H3515，與第 13 課要練的動詞
   `כָּבֵד` H3513 不是同一個詞。用字形比對會放過，用 Strong 比對才擋得下。
 - **引擎吐不出 JSON**：NVIDIA 那層對這類要結構化輸出的任務回的是推理散文，

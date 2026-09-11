@@ -32,6 +32,9 @@
 !/output/source-cache/original-readers/latin-full/*.md
 !/output/source-cache/original-readers/latin-full/collins-readings/
 !/output/source-cache/original-readers/latin-full/collins-readings/*.json
+# 例外中的例外：詞位語料是 build_latin_lemma_corpus.py 一鍵重生的機器產物，
+# 不是人工策展；武加大那份 30 MB，刪掉重跑一模一樣長回來，不該進版控。
+/output/source-cache/original-readers/latin-full/lemma-corpus-*.json
 !/output/source-cache/original-readers/japanese-full/
 !/output/source-cache/original-readers/japanese-full/*.json
 !/output/source-cache/original-readers/japanese-full/*.md
