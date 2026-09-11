@@ -132,6 +132,24 @@ def split_words(sentence: str) -> list[str]:
     return pieces
 
 
+def near_forms(word: str, pointed, limit: int = 6) -> list[str]:
+    """Attested spellings close to one the corpus does not have.
+
+    A rejected form is nearly always a real word with the wrong vowels or a
+    prefix the text never attaches to it — וְצַר for צַר, הַמִּגְרָשׁ for מִגְרַשׁ.
+    Printing what the corpus does write turns each rejection into a fix instead
+    of another guess.
+    """
+    skeleton = consonants(word)
+    matches = [form for form in pointed if consonants(form) == skeleton]
+    if not matches:
+        stripped = skeleton.lstrip("והבכלמש")
+        matches = [
+            form for form in pointed if stripped and consonants(form).endswith(stripped)
+        ]
+    return sorted(matches, key=len)[:limit]
+
+
 def verify(
     sentence: str,
     known: set[str],
@@ -257,6 +275,10 @@ def main() -> None:
             print(f"     {row.get('chinese','')}")
             if report["unattested"]:
                 print(f"     ✗ 聖經裡查無此形：{'、'.join(report['unattested'])}")
+                for bad_word in report["unattested"]:
+                    near = near_forms(bad_word, pointed)
+                    if near:
+                        print(f"       聖經裡真有的近似形：{'、'.join(near)}")
             if report["untaught"]:
                 print(f"     ✗ 尚未教過：{'、'.join(report['untaught'])}")
         passed = sum(1 for row in rows if row["verification"]["passed"])

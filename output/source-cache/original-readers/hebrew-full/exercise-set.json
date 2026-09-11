@@ -12682,163 +12682,334 @@
           },
           "reviewedBy": "corpus",
           "no": 3
+        },
+        {
+          "kind": "composed",
+          "text": "וַיַּגֵּד הַנָּבִיא לַמֶּלֶךְ כִּי אוֹצַר מַלְכוּתוֹ אָבַד",
+          "targetWords": [
+            {
+              "ordinal": 502,
+              "pointed": "נָגַד",
+              "lemma": "H5046",
+              "strongs": [
+                "H5046"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 511,
+              "pointed": "מַלְכּוּת",
+              "lemma": "H4438",
+              "strongs": [
+                "H4438"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 516,
+              "pointed": "אוֹצָר",
+              "lemma": "H214",
+              "strongs": [
+                "H214"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "214",
+              "3587",
+              "3588",
+              "4428",
+              "4438",
+              "5030",
+              "5046",
+              "6"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 4
+        },
+        {
+          "kind": "composed",
+          "text": "הַכְּרוּבִים לִפְנֵי הַדֶּלֶת",
+          "targetWords": [
+            {
+              "ordinal": 506,
+              "pointed": "דֶּ֫לֶת",
+              "lemma": "H1817",
+              "strongs": [
+                "H1817"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 509,
+              "pointed": "כְּרוּב",
+              "lemma": "H3742",
+              "strongs": [
+                "H3742"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1817",
+              "3742",
+              "6440"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 5
+        },
+        {
+          "kind": "composed",
+          "text": "הִשְׁלִיךְ הָאִישׁ הַטָּמֵא אֶת־הַכְּלִי אֶל הַנָּהָר",
+          "targetWords": [
+            {
+              "ordinal": 504,
+              "pointed": "שָׁלַךְ",
+              "lemma": "H7993",
+              "strongs": [
+                "H7993"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 514,
+              "pointed": "טָמֵא",
+              "lemma": "H2931",
+              "strongs": [
+                "H2931"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "2931",
+              "3627",
+              "376",
+              "408",
+              "413",
+              "5104",
+              "7993",
+              "853",
+              "854"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 6
+        },
+        {
+          "kind": "composed",
+          "text": "יֵשׁ כֶּרֶם לָאִישׁ וְהָמוֹן רַב עִמּוֹ",
+          "targetWords": [
+            {
+              "ordinal": 507,
+              "pointed": "הָמוֹן",
+              "lemma": "H1995",
+              "strongs": [
+                "H1995"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 510,
+              "pointed": "כֶּ֫רֶם",
+              "lemma": "H3754",
+              "strongs": [
+                "H3754"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1995",
+              "3426",
+              "3754",
+              "376",
+              "5973",
+              "7227",
+              "7229",
+              "7248",
+              "7249",
+              "7262"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 7
+        },
+        {
+          "kind": "composed",
+          "text": "זְרוֹעַ יְהוָה עָשְׂתָה יְשׁוּעָה",
+          "targetWords": [
+            {
+              "ordinal": 508,
+              "pointed": "זְרוֹעַ",
+              "lemma": "H2220",
+              "strongs": [
+                "H2220"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 519,
+              "pointed": "יְשׁוּעָה",
+              "lemma": "H3444",
+              "strongs": [
+                "H3444"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "2220",
+              "3068",
+              "3071",
+              "3444",
+              "6213"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "נָפַל הַגּוֹרָל עַל הַכֹּהֵן וְהָיָה לוֹ מִקְנֶה רַב",
+          "targetWords": [
+            {
+              "ordinal": 518,
+              "pointed": "גּוֹרָל",
+              "lemma": "H1486",
+              "strongs": [
+                "H1486"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 520,
+              "pointed": "מִקְנֶה",
+              "lemma": "H4735",
+              "strongs": [
+                "H4735"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 8,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1486",
+              "1961",
+              "3548",
+              "3789",
+              "4735",
+              "5307",
+              "5456",
+              "5920",
+              "5921",
+              "5922",
+              "5954",
+              "7227",
+              "7229",
+              "7248",
+              "7249",
+              "7262",
+              "7592"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "הֶחָלָל בְּתוֹךְ הָעִיר וְהָעָם חִלְּלוּ אֶת־הַקֹּדֶשׁ",
+          "targetWords": [
+            {
+              "ordinal": 501,
+              "pointed": "חָלַל",
+              "lemma": "H2490",
+              "strongs": [
+                "H2490"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 513,
+              "pointed": "חָלָל",
+              "lemma": "H2491",
+              "strongs": [
+                "H2491"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 7,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "2490",
+              "2491",
+              "5892",
+              "5971",
+              "6944",
+              "8432",
+              "853",
+              "854"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 5,
-        "notPractised": [
-          {
-            "ordinal": 501,
-            "pointed": "חָלַל",
-            "lemma": "H2490",
-            "strongs": [
-              "H2490"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 502,
-            "pointed": "נָגַד",
-            "lemma": "H5046",
-            "strongs": [
-              "H5046"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 504,
-            "pointed": "שָׁלַךְ",
-            "lemma": "H7993",
-            "strongs": [
-              "H7993"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 506,
-            "pointed": "דֶּ֫לֶת",
-            "lemma": "H1817",
-            "strongs": [
-              "H1817"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 507,
-            "pointed": "הָמוֹן",
-            "lemma": "H1995",
-            "strongs": [
-              "H1995"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 508,
-            "pointed": "זְרוֹעַ",
-            "lemma": "H2220",
-            "strongs": [
-              "H2220"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 509,
-            "pointed": "כְּרוּב",
-            "lemma": "H3742",
-            "strongs": [
-              "H3742"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 510,
-            "pointed": "כֶּ֫רֶם",
-            "lemma": "H3754",
-            "strongs": [
-              "H3754"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 511,
-            "pointed": "מַלְכּוּת",
-            "lemma": "H4438",
-            "strongs": [
-              "H4438"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 513,
-            "pointed": "חָלָל",
-            "lemma": "H2491",
-            "strongs": [
-              "H2491"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 514,
-            "pointed": "טָמֵא",
-            "lemma": "H2931",
-            "strongs": [
-              "H2931"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 516,
-            "pointed": "אוֹצָר",
-            "lemma": "H214",
-            "strongs": [
-              "H214"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 518,
-            "pointed": "גּוֹרָל",
-            "lemma": "H1486",
-            "strongs": [
-              "H1486"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 519,
-            "pointed": "יְשׁוּעָה",
-            "lemma": "H3444",
-            "strongs": [
-              "H3444"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 520,
-            "pointed": "מִקְנֶה",
-            "lemma": "H4735",
-            "strongs": [
-              "H4735"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
@@ -12942,173 +13113,350 @@
           },
           "reviewedBy": "corpus",
           "no": 2
+        },
+        {
+          "kind": "composed",
+          "text": "צַר בָּעִיר וְהַנֶּגַע בַּבַּיִת וְקֶשֶׁת בְּיָדוֹ",
+          "targetWords": [
+            {
+              "ordinal": 522,
+              "pointed": "נֶ֫גַע",
+              "lemma": "H5061",
+              "strongs": [
+                "H5061"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 523,
+              "pointed": "צַר",
+              "lemma": "H6862",
+              "strongs": [
+                "H6862"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 529,
+              "pointed": "קֶ֫שֶׁת",
+              "lemma": "H7198",
+              "strongs": [
+                "H7198"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1004",
+              "3027",
+              "5061",
+              "5782",
+              "5892",
+              "6862",
+              "6887",
+              "7198"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 3
+        },
+        {
+          "kind": "composed",
+          "text": "הָלַךְ הָאִישׁ קֵדְמָה אֶל מִזְרַח הַשֶּׁמֶשׁ",
+          "targetWords": [
+            {
+              "ordinal": 524,
+              "pointed": "קֶ֫דֶם",
+              "lemma": "H6924",
+              "strongs": [
+                "H6924"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 533,
+              "pointed": "מִזְרָח",
+              "lemma": "H4217",
+              "strongs": [
+                "H4217"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1980",
+              "376",
+              "408",
+              "413",
+              "4217",
+              "6924",
+              "8121"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 4
+        },
+        {
+          "kind": "composed",
+          "text": "הֵבִיא הָאִישׁ אֶת־קָרְבָּנוֹ מִן הָעִזִּים",
+          "targetWords": [
+            {
+              "ordinal": 525,
+              "pointed": "קָרְבָּן",
+              "lemma": "H7133",
+              "strongs": [
+                "H7133"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 537,
+              "pointed": "עֵז",
+              "lemma": "H5795",
+              "strongs": [
+                "H5795"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "376",
+              "4480",
+              "4481",
+              "5795",
+              "7133",
+              "853",
+              "854",
+              "935"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 5
+        },
+        {
+          "kind": "composed",
+          "text": "הָאֶרֶז גָּדוֹל עַל הַצּוּר",
+          "targetWords": [
+            {
+              "ordinal": 526,
+              "pointed": "אֶ֫רֶז",
+              "lemma": "H730",
+              "strongs": [
+                "H730"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 527,
+              "pointed": "צוּר",
+              "lemma": "H6697",
+              "strongs": [
+                "H6697"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "1419",
+              "5920",
+              "5921",
+              "5922",
+              "5954",
+              "6697",
+              "730"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 6
+        },
+        {
+          "kind": "composed",
+          "text": "קַרְנוֹת הַמִּזְבֵּחַ קֹדֶשׁ",
+          "targetWords": [
+            {
+              "ordinal": 528,
+              "pointed": "קֶ֫רֶן",
+              "lemma": "H7161",
+              "strongs": [
+                "H7161"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 3,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "4196",
+              "6944",
+              "7161"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 7
+        },
+        {
+          "kind": "composed",
+          "text": "קוֹל שׁוֹפָר בַּמַּחֲנֶה וְהָעָם יָרֵא",
+          "targetWords": [
+            {
+              "ordinal": 540,
+              "pointed": "שׁוֹפָר",
+              "lemma": "H7782",
+              "strongs": [
+                "H7782"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 5,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "3372",
+              "3373",
+              "4264",
+              "5971",
+              "6963",
+              "7782"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 8
+        },
+        {
+          "kind": "composed",
+          "text": "מִבֶּטֶן אִמּוֹ הֶבֶל הָאָדָם",
+          "targetWords": [
+            {
+              "ordinal": 530,
+              "pointed": "בֶּ֫טֶן",
+              "lemma": "H990",
+              "strongs": [
+                "H990"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 531,
+              "pointed": "הֶ֫בֶל",
+              "lemma": "H1892",
+              "strongs": [
+                "H1892"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 4,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "120",
+              "1892",
+              "1893",
+              "517",
+              "990"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 9
+        },
+        {
+          "kind": "composed",
+          "text": "חֶרְפָּה לָעָם וְהָעוֹף יָעוּף מֵעַל הָאָרֶץ",
+          "targetWords": [
+            {
+              "ordinal": 532,
+              "pointed": "חֶרְפָּה",
+              "lemma": "H2781",
+              "strongs": [
+                "H2781"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 535,
+              "pointed": "עוֹף",
+              "lemma": "H5775",
+              "strongs": [
+                "H5775"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            },
+            {
+              "ordinal": 536,
+              "pointed": "עוּף",
+              "lemma": "H5774",
+              "strongs": [
+                "H5774"
+              ],
+              "isProperName": false,
+              "properNameTypes": []
+            }
+          ],
+          "verification": {
+            "words": 6,
+            "unattested": [],
+            "untaught": [],
+            "lemmas": [
+              "2781",
+              "5774",
+              "5775",
+              "5921",
+              "5971",
+              "776"
+            ],
+            "passed": true
+          },
+          "reviewedBy": "author",
+          "no": 10
         }
       ],
       "coverage": {
         "lessonWords": 20,
-        "practised": 4,
-        "notPractised": [
-          {
-            "ordinal": 522,
-            "pointed": "נֶ֫גַע",
-            "lemma": "H5061",
-            "strongs": [
-              "H5061"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 523,
-            "pointed": "צַר",
-            "lemma": "H6862",
-            "strongs": [
-              "H6862"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 524,
-            "pointed": "קֶ֫דֶם",
-            "lemma": "H6924",
-            "strongs": [
-              "H6924"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 525,
-            "pointed": "קָרְבָּן",
-            "lemma": "H7133",
-            "strongs": [
-              "H7133"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 526,
-            "pointed": "אֶ֫רֶז",
-            "lemma": "H730",
-            "strongs": [
-              "H730"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 527,
-            "pointed": "צוּר",
-            "lemma": "H6697",
-            "strongs": [
-              "H6697"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 528,
-            "pointed": "קֶ֫רֶן",
-            "lemma": "H7161",
-            "strongs": [
-              "H7161"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 529,
-            "pointed": "קֶ֫שֶׁת",
-            "lemma": "H7198",
-            "strongs": [
-              "H7198"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 530,
-            "pointed": "בֶּ֫טֶן",
-            "lemma": "H990",
-            "strongs": [
-              "H990"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 531,
-            "pointed": "הֶ֫בֶל",
-            "lemma": "H1892",
-            "strongs": [
-              "H1892"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 532,
-            "pointed": "חֶרְפָּה",
-            "lemma": "H2781",
-            "strongs": [
-              "H2781"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 533,
-            "pointed": "מִזְרָח",
-            "lemma": "H4217",
-            "strongs": [
-              "H4217"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 535,
-            "pointed": "עוֹף",
-            "lemma": "H5775",
-            "strongs": [
-              "H5775"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 536,
-            "pointed": "עוּף",
-            "lemma": "H5774",
-            "strongs": [
-              "H5774"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 537,
-            "pointed": "עֵז",
-            "lemma": "H5795",
-            "strongs": [
-              "H5795"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          },
-          {
-            "ordinal": 540,
-            "pointed": "שׁוֹפָר",
-            "lemma": "H7782",
-            "strongs": [
-              "H7782"
-            ],
-            "isProperName": false,
-            "properNameTypes": []
-          }
-        ]
+        "practised": 20,
+        "notPractised": []
       }
     },
     {
