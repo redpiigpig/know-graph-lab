@@ -91,10 +91,16 @@ def plan_slices(zh_texts: list[str], block: str) -> list[str]:
     idx = block_index(block)
     starts = [chunk_start(z, idx) for z in zh_texts]
     out: list[str] = []
+    seen: set[int] = set()
     for i, s in enumerate(starts):
-        if s is None:
+        # 🚨 起點相同的段只有第一段拿切片，其餘留白。好幾段共用同一個錨點是常有的
+        #    （同一頁被切成三段，三段都只帶那個 {{p:NNN}}），不去重的話它們會拿到
+        #    一字不差的切片——重複就從「整卷」變成「一小塊」，照樣是同一段文字出現
+        #    在好幾頁。優西比烏《教會史》實測 8 組、13 段是這樣殘留下來的。
+        if s is None or s in seen:
             out.append("")
             continue
+        seen.add(s)
         nxt = next((v for v in starts[i + 1:] if v is not None and v > s), len(block))
         out.append(block[s:nxt].strip())
     return out

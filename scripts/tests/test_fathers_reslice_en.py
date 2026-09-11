@@ -103,3 +103,18 @@ def test_dup_groups_finds_repeated_blocks():
 def test_dup_groups_ignores_short_shared_text():
     chunks = [{"sources": {"en": "short"}}, {"sources": {"en": "short"}}]
     assert dup_groups(chunks) == []
+
+
+def test_plan_slices_dedupes_chunks_sharing_one_anchor():
+    """🚨 好幾段共用同一個錨點是常有的（同一頁被切成三段，三段都只帶那個
+    {{p:NNN}}）。不去重的話它們會拿到一字不差的切片——重複只是從「整卷」變成
+    「一小塊」。優西比烏《教會史》實測 8 組、13 段是這樣殘留下來的。"""
+    zh = ["{{p:98}}第一段", "{{p:98}}同一頁的第二段", "{{p:100}}下一頁"]
+    out = plan_slices(zh, BLOCK)
+    assert out[0] and out[1] == "" and out[2]
+
+
+def test_plan_slices_dedupe_does_not_swallow_the_next_real_anchor():
+    zh = ["{{p:98}}第一段", "{{p:98}}同一頁", "7. 下一節"]
+    out = plan_slices(zh, BLOCK)
+    assert "7. Who does not" in out[2]

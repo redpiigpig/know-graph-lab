@@ -115,7 +115,8 @@ async function auditBook(id) {
 loadEnv();
 const only = process.argv[2];
 const ids = only ? [only] : originalIds();
-console.log(`ORIGINAL_IDS ${ids.length} 本；取源＝R2\n`);
+const srcLabel = process.env.EBOOK_CHUNKS_DIR ? "本機 Drive（讀不到才退 R2）" : "R2";
+console.log(`ORIGINAL_IDS ${ids.length} 本；取源＝${srcLabel}\n`);
 let bad = 0;
 for (const id of ids) {
   try {
