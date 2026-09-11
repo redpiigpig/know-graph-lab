@@ -20935,6 +20935,20 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "status": "planned"
                 },
                 {
+                      "title": "自然主義與宗教",
+                      "titleOriginal": "Naturalismus und Religion",
+                      "year": "1904",
+                      "yearSort": 1904,
+                      "category": "宗教哲學",
+                      "languages": [
+                            "de",
+                            "en"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '07701869-0000-4000-8000-000000000002',
+                      "note": "《論「聖」》之前的早期著作,處理自然科學世界觀與宗教的關係。Thomson 英譯本(1907,Williams & Norgate)80 章已上架;德文原著欄與繁中譯文待補。"
+                },
+                {
                       "title": "東西方的神祕主義：商羯羅與艾克哈特之比較",
                       "titleOriginal": "West-östliche Mystik: Vergleich und Unterscheidung zur Wesensdeutung",
                       "year": "1926",
@@ -22253,8 +22267,22 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "planned",
-                      "note": "以統計實證研究整合度與脫序如何導致自殺"
+                      "status": "in-progress",
+                      ebookId: '80000000-0000-4000-8000-000000000020',
+                      "note": "以統計實證研究整合度與脫序如何導致自殺。法文原著(Alcan 1897)50 章已上架;繁中譯文待補。"
+                },
+                {
+                      "title": "教育與社會學",
+                      "titleOriginal": "Éducation et sociologie",
+                      "year": "1922",
+                      "yearSort": 1922,
+                      "category": "教育與道德",
+                      "languages": [
+                            "fr"
+                      ],
+                      "status": "in-progress",
+                      ebookId: '80000000-0000-4000-8000-000000000021',
+                      "note": "身後由弗孔內編成的四篇講稿。法文原著已上架;繁中譯文待補。"
                 },
                 {
                       "title": "宗教生活的基本形式",
