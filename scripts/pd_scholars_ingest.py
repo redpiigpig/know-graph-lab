@@ -129,6 +129,137 @@ BOOKS = [
         "publisher_location": "Paris",
         "path": STUDIO / "宗教社會學" / "涂爾幹" / "Émile Durkheim，Éducation et sociologie (1922).epub",
     },
+
+    # ── 泰勒（宗教人類學開山，1832–1917，全 PD）──────────────────────
+    {
+        "id": "e7541832-0000-4000-8000-000000000001",
+        "title": "原始文化（卷一）",
+        "subtitle": "神話、哲學、宗教、語言、藝術與風俗的發展研究",
+        "author": "愛德華‧伯內特‧泰勒", "author_en": "Edward Burnett Tylor",
+        "original_title": "Primitive Culture: Researches into the Development of Mythology, "
+                          "Philosophy, Religion, Language, Art and Custom, Vol. 1",
+        "original_publish_year": 1871, "publication_year": 1871,
+        "publisher": "John Murray", "publisher_location": "London",
+        "path": STUDIO / "宗教學" / "泰勒" / "Edward B. Tylor，Primitive Culture Vol.1 (1871).txt",
+    },
+    {
+        "id": "e7541832-0000-4000-8000-000000000002",
+        "title": "原始文化（卷二）",
+        "subtitle": "第四修訂版；萬物有靈論的完整論證在這一卷",
+        "author": "愛德華‧伯內特‧泰勒", "author_en": "Edward Burnett Tylor",
+        "original_title": "Primitive Culture, Vol. 2 (4th ed., revised)",
+        "original_publish_year": 1871, "publication_year": 1903,
+        "publisher": "John Murray", "publisher_location": "London",
+        "path": STUDIO / "宗教學" / "泰勒" / "Edward B. Tylor，Primitive Culture Vol.2 (4th ed.).txt",
+    },
+    {
+        "id": "e7541832-0000-4000-8000-000000000003",
+        "title": "人類學",
+        "subtitle": "人及其文明之研究導論",
+        "author": "愛德華‧伯內特‧泰勒", "author_en": "Edward Burnett Tylor",
+        "original_title": "Anthropology: An Introduction to the Study of Man and Civilization",
+        "original_publish_year": 1881, "publication_year": 1881,
+        "publisher": "Macmillan", "publisher_location": "London",
+        "path": STUDIO / "宗教學" / "泰勒" / "Edward B. Tylor，Anthropology (1881).txt",
+    },
+
+    # ── 范德列烏（宗教現象學集大成，1890–1950，原文 2021 起 PD）────────
+    {
+        "id": "1ee71890-0000-4000-8000-000000000001",
+        "title": "宗教現象學",
+        "subtitle": "德文原著（1956 第二版）",
+        "author": "傑拉杜斯‧范德列烏", "author_en": "Gerardus van der Leeuw",
+        "original_title": "Phänomenologie der Religion",
+        "original_publish_year": 1933, "publication_year": 1956,
+        "publisher": "J.C.B. Mohr (Paul Siebeck)", "publisher_location": "Tübingen",
+        "path": STUDIO / "宗教學" / "范德列烏" / "Gerardus van der Leeuw，Phänomenologie der Religion (1956).txt",
+    },
+    {
+        "id": "1ee71890-0000-4000-8000-000000000002",
+        "title": "宗教的本質與顯現",
+        "subtitle": "英譯本（Turner 譯）",
+        "author": "傑拉杜斯‧范德列烏", "author_en": "Gerardus van der Leeuw",
+        "original_title": "Religion in Essence and Manifestation",
+        "original_publish_year": 1933, "publication_year": 1938,
+        "publisher": "Allen & Unwin", "publisher_location": "London",
+        "path": STUDIO / "宗教學" / "范德列烏" / "Gerardus van der Leeuw，Religion in Essence and Manifestation.txt",
+    },
+
+    # ── 瓦赫（宗教學方法論＋芝加哥學派，1898–1955）────────────────────
+    {
+        "id": "0ac41898-0000-4000-8000-000000000001",
+        "title": "宗教學",
+        "subtitle": "學科基礎之探討（德文原著）",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Religionswissenschaft: Prolegomena zu ihrer "
+                          "wissenschaftstheoretischen Grundlegung",
+        "original_publish_year": 1924, "publication_year": 1924,
+        "publisher": "J.C. Hinrichs", "publisher_location": "Leipzig",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Religionswissenschaft (1924).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000002",
+        "title": "理解（卷一）",
+        "subtitle": "十九世紀詮釋學理論史‧施萊爾馬赫的奠基",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Das Verstehen: Grundzüge einer Geschichte der "
+                          "hermeneutischen Theorie im 19. Jahrhundert, Bd. 1",
+        "original_publish_year": 1926, "publication_year": 1926,
+        "publisher": "J.C.B. Mohr", "publisher_location": "Tübingen",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Das Verstehen I (1926).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000003",
+        "title": "理解（卷二）",
+        "subtitle": "神學詮釋學的開展",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Das Verstehen, Bd. 2: Die theologische Hermeneutik von "
+                          "Schleiermacher bis Hofmann",
+        "original_publish_year": 1929, "publication_year": 1929,
+        "publisher": "J.C.B. Mohr", "publisher_location": "Tübingen",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Das Verstehen II (1929).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000004",
+        "title": "理解（卷三）",
+        "subtitle": "歷史學與語文學詮釋學",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Das Verstehen, Bd. 3: Das Verstehen in der Historik von "
+                          "Ranke bis zum Positivismus",
+        "original_publish_year": 1933, "publication_year": 1933,
+        "publisher": "J.C.B. Mohr", "publisher_location": "Tübingen",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Das Verstehen III (1933).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000005",
+        "title": "特倫德倫堡與狄爾泰",
+        "subtitle": "短論",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Trendelenburg und Dilthey",
+        "original_publish_year": 1926, "publication_year": 1926,
+        "publisher": "J.C.B. Mohr", "publisher_location": "Tübingen",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Trendelenburg und Dilthey (1926).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000006",
+        "title": "宗教社會學",
+        "subtitle": "英文原著",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Sociology of Religion",
+        "original_publish_year": 1944, "publication_year": 1944,
+        "publisher": "University of Chicago Press", "publisher_location": "Chicago",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Sociology of Religion (1944).txt",
+    },
+    {
+        "id": "0ac41898-0000-4000-8000-000000000007",
+        "title": "宗教經驗的類型",
+        "subtitle": "基督教與非基督教（英文原著）",
+        "author": "約阿希姆‧瓦赫", "author_en": "Joachim Wach",
+        "original_title": "Types of Religious Experience: Christian and Non-Christian",
+        "original_publish_year": 1951, "publication_year": 1951,
+        "publisher": "University of Chicago Press", "publisher_location": "Chicago",
+        "path": STUDIO / "宗教學" / "瓦赫" / "Joachim Wach，Types of Religious Experience (1951).txt",
+    },
 ]
 
 

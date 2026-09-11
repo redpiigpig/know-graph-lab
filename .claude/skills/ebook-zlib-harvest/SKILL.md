@@ -25,6 +25,20 @@ description: 從 z-library 依清單長期抓書的流程 —— 把「想要哪
 
 排程：**KGL_ZLib_Daily，每日 09:30**（`scripts/zlib_daily.ps1`）。先更新清單再抓一輪。
 
+## 🚨 z-library 不是唯一一條路
+
+**十九世紀到二十世紀中葉的學術著作多半已進入公有領域**，掃描本就在公開典藏裡，
+版次與畫質還比 z-lib 上的隨手上傳可靠。2026-09-11 實測了十八個站，十五個通得到，
+其中十二個**完全不必帳號、curl 直接抓、可以排程**（archive.org／Gutenberg／Persée／
+DBNL／Deutsches Textarchiv／MDZ／Runeberg／Zeno／Wikisource／DOAB／OAPEN／青空文庫）。
+
+同一天的實例：奧托與涂爾幹共九本原著，**一本都沒動用 z-lib 額度**。
+
+完整清單、各站的坑、要不要帳號、以及 archive.org 那三個會讓人誤判成功的陷阱，
+見 [[ebook-collected-works]] 的 `free_text_sources.md`。
+
+**動用 z-lib 額度之前先問一句：這本書的作者卒滿七十年了嗎？**是的話先去公開典藏找。
+
 ## 清單格式
 
 一行一本 JSONL：
