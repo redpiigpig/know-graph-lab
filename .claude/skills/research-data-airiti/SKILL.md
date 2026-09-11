@@ -3,6 +3,11 @@ name: research-data-airiti
 description: 從華藝線上圖書館（Airiti Library）收宗教類期刊的「篇目索引 →（授權內）全文下載」流程 —— 教會刊物與神學院學報（校園／新使者／曠野／神學與教會／台灣神學論刊／華神期刊／道風／建道／神學論集…）、佛學學報（中華佛學學報／法鼓／臺大佛學研究／佛光／玄奘佛學研究／法印／華嚴…）、宗教學期刊（臺灣宗教研究／輔仁宗教研究／宗教哲學／華人宗教研究…）。這些刊自家網站多半只有內文或只有近幾年，華藝反而整份收著且帶**卷期、起訖頁、正式作者署名**——做註腳非有不可的三個欄位。Use when 要新增一份華藝期刊、補抓某刊篇目、下載某刊全文 PDF、debug 抓不到卷期或下載回傳不是 PDF、或使用者提到「華藝」「airiti」「校園雙月刊」「篇目」「卷期頁碼」。刊物本位那一層的頁面規矩見 [[research-data-christianity]] 與 [[works-corpus-layer]]。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 > ⚙️ 所有中文一律繁體（[[feedback_traditional_chinese_only]]）。
 
 # 華藝期刊：篇目索引與全文下載

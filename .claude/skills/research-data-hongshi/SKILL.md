@@ -3,6 +3,11 @@ name: research-data-hongshi
 description: 「印順學派與弘誓研究資料」collection（/research-data/yinshun-hongshi，需登入）的抓取／OCR／上架流程 — 佛教弘誓學院／玄奘大學刊物典藏：弘誓雙月刊、學團日誌、玄奘佛學研究學報、歷屆學術活動、福嚴會訊。🚨 2026-08 弘誓官網已改版：www.hongshi.org.tw 現在 curl＋瀏覽器 UA 就能讀（不必再 headful Chrome），但「數位典藏」各頁改由 blog.hongshi.org.tw 的 Blogger feed 動態產生，而該 blog 尚未搬完（當時僅 13 篇）；**舊路徑全數 404**，Wayback 覆蓋也極薄。已抓下來的那批是趕上了。hcu.edu.tw（玄奘）非 Cloudflare，純 requests 即可。Use when 要補抓／重抓任一刊物、跑全文、調各子頁、新增子站。與 [[project_chengzhong_bulletins]] 的 taiwan-methodist 並列於同一 /research-data portal。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 > ⚙️ **引擎政策**：OCR 走 Gemini Vision（4 keys 輪流）→ Sonnet(OAuth) 救援，2-strike 配額停機（[[feedback_ocr_strategy]]、[[feedback_ocr_two_strike_quota]]）。所有中文一律繁體（[[feedback_traditional_chinese_only]]）。
 
 # 印順學派與弘誓研究資料 collection

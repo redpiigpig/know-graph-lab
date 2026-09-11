@@ -3,6 +3,11 @@ name: works-dialogical-theology
 description: 《諸宗教的對話神學》七卷跨宗教系統神學（/works/dialogical-theology）的寫作管線 —— 把基督教系統神學的科目分類改寫成跨宗教版本，每卷由一組張力撐開。含七卷架構的來歷（構思紀錄只在 AI 對話庫、卷名改過三輪）、84 章綱要、初稿產生器與八項品管閘、以及這條線特有的「看起來成功的失敗」。Use when 要寫或重寫某一卷某一章、要改綱要或卷次結構、要補註釋與研究書目、要精修初稿文風、要跑品管閘、或使用者提到「對話神學」「諸宗教的神學」「天人論」「救度論」「教團論」。⚠️ 別跟《神學研究宣言》（theological-studies-manifesto，學科方法宣言）搞混。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 # 諸宗教的對話神學（/works/dialogical-theology）
 
 把基督教系統神學的科目分類，改寫成一套**跨宗教的對話神學**，七卷。這是使用者自 2020 年

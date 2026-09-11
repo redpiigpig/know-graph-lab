@@ -3,6 +3,11 @@ name: scripture-accs
 description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的教父註釋嵌進 /scripture 聖經閱讀器 — 經文逐節對照不動，按一個「教父註釋」鈕即在每個 ACCS 經文段落（pericope）下方展開「總論＋具名教父引文」區塊（經文上‧註釋下版面）。資料走 accs_commentary 表（verse_start..verse_end 對齊段落）；來源用校園書房繁中版掃描 PDF，Gemini 結構化 OCR→純函式 parser→入庫。與 [[scripture-fathers]] 分工：fathers 做「教父全集整卷翻譯/精修上 /fathers」；本 skill 做「ACCS 註釋嵌進聖經逐節閱讀」。Use when 要新增/重 OCR 某卷 ACCS 經文註釋、調 /scripture 註釋版面、改 accs_commentary schema 或 parser、推廣到創世記以外的書卷。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 > ⚙️ 引擎政策（2026-06-14 更新）：掃描中文 OCR 品質 **Sonnet > Gemini ≫ Haiku**。
 > Haiku Vision 對掃描中文錯字/漏字/合併嚴重（user 退過兩次），**已棄用**。
 > Gemini 品質佳但**每日額度與 jung/mueller 等並行任務共用、常乾**。

@@ -3,6 +3,11 @@ name: works-lecture-course
 description: 使用者在玄奘大學開的四本授課講義（/works 的 kind=lecture 分區）從內容到課堂成品的整條線 — 章節 fragment 的註釋與參考書目（含 lecture_footnote_check 兩類靜默錯誤）、每次上課的簡報（course_slides_pptx，固定「開場互動兩頁＋課末參考書目頁」，書目直接讀講義章節不另抄）、章末小考（course_quiz_build 一次產出線上 HTML＋Drive 紙本考卷 docx＋教師解答卷）、以及 Kahoot 匯入檔。含「小考 HTML 是產生物不要直接改」「正解位置改吃內容雜湊、三邊才一致」兩個踩過的坑，和「題目只考簡報講過的」稽核法。Use when 要改講義註釋／書目、重出某一次簡報或 PDF、改小考題、重出紙本考卷、產 Kahoot 題庫、稽核題目與簡報對不對得上，或使用者說「講義要補註釋」「簡報重做」「小考要改」「Kahoot」。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 # 授課講義・簡報・小考
 
 使用者是玄奘大學宗教與文化學系的**兼任講師**，同時開四本講義。這個 skill 管的是

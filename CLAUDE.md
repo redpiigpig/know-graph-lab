@@ -22,3 +22,18 @@ Nuxt 3 網站 + Python／Node 資料管線。網站原始碼在 `pages/ server/ 
 - 所有中文書寫一律繁體。
 - 大檔存放策略（Drive canonical／R2 只放小衍生物）見 `docs/r2-policy.md`。
 - 完成一項工作流後，同步更新對應的 `SKILL.md`。
+
+## 🚨 `G:` 不見了＝Drive 卡住，不是掛掉
+
+Drive 路徑報「找不到檔案」時，**第一件事是 `Test-Path 'G:\我的雲端硬碟'`**。
+若是 False：一次短暫離線會讓 DriveFS 的 OAuth token 刷新逾時，它就主動卸載磁碟
+（日誌 `Volume removed: G:\`），網路恢復後**不會自己重掛**，程序還活著、視窗停在
+「正在載入帳戶…」。所以「Drive 程序在跑」不等於「磁碟在」。修法就一行：
+
+```powershell
+Get-Process GoogleDriveFS | Stop-Process -Force
+Start-Process "C:\Program Files\Google\Drive File Stream\launch.bat" -WindowStyle Hidden
+```
+
+約 20 秒後就掛回來；未上傳的檔在本機快取，重啟後接著傳，不會掉。
+別改用 Google Drive 連接器頂替——它只能逐檔讀寫小檔，撐不起管線的幾十 MB 進出。

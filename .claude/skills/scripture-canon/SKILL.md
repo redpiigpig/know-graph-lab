@@ -3,6 +3,11 @@ name: scripture-canon
 description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **/scripture 32 版本平行對照 + /creeds 21 次大公會議 + /apocrypha 黃根春 10 卷 Vision OCR 全部上線**。2026-05-31 /apocrypha 完成：123/132 卷 (93.2%) 有內容 / 2.26M 字繁中 / 2,058 footnote / 教父-style reader（10 sections/頁 + 三層 sidebar + 註釋集中頁底 + 章節 label）。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 📚 **註釋與書目政策（2026-09-09 使用者定調，推翻舊規）**：**尾註／腳註／參考書目一律要收，不可略過。**舊做法把 Notes／Bibliography 當成「檢索裝置不是散文」而跳過，使用者明確推翻：**「不然我怎麼確認他引用的史料？」**——對研究用途而言，註釋正是全書最需要的部分，少了它就無法核對作者到底引了什麼。見 [[feedback_transcribe_notes_and_bibliography]]。

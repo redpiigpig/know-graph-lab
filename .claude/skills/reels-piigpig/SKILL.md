@@ -3,6 +3,11 @@ name: reels-piigpig
 description: 「豬豬相遇」風格搞笑短影片製作 — 拿一段手機生活影片（多半是娃娃/豬豬情境），配上中英雙語字幕、喜劇高潮打煙火＋彩色 emoji 轟炸、片尾懷舊泛黃定格＋催淚歌詞字幕，用 ffmpeg 全程本機合成。使用者會 po 上 IG @thomas.piigpig。Use when 使用者丟一支影片要「做成搞笑影片／配字幕／加煙火／配歌／出第 N 版／調音量」，或要新開一支日期專案、整理影片資料夾、寫 IG 文案。成品按日期歸檔在 Drive 知識圖工作室/影片/YYYY-MM-DD_主題/（文案 + 各版 mp4 + 製作素材），一律不進 repo。
 ---
 
+> 🚨 **`G:` 不見了＝Drive 卡住，不是掛掉。** Drive 路徑報找不到檔案時，先
+> `Test-Path 'G:\我的雲端硬碟'`；False 就結束 `GoogleDriveFS` 再跑
+> `"C:\Program Files\Google\Drive File Stream\launch.bat"`，約 20 秒掛回來，
+> 未上傳的檔不會掉。程序在跑不等於磁碟在（全文見 CLAUDE.md）。
+
 # reels-piigpig — 豬豬相遇風格搞笑短影片
 
 使用者的個人 IG 短影片系列（@thomas.piigpig / https://www.instagram.com/thomas.piigpig/）。
