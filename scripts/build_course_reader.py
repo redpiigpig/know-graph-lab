@@ -294,10 +294,19 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[li
         shouty = letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
         is_note = (body_size is not None and size <= body_size - 1.0
                    and y0 / h > 0.10 and not (shouty and len(txt) < 90))
-        (notes if is_note else body).append((round(y0, 1), x0, txt))
+        # 🚨 小標不能只認「整串大寫」：這幾本的小標多半是 Title Case 或引號句
+        #    （'The phenomenological method'），只認大寫的話 sat 那本 7 篇全掛零。
+        #    改看來源的字級與粗體。
+        bold = any("bold" in sp["font"].lower() for ln in lines for sp in ln["spans"])
+        flat = " ".join(txt.split())
+        is_head = (not is_note and body_size is not None and 4 < len(flat) < 90 and (
+            size >= body_size + 0.6
+            or (bold and not flat.endswith(SENT_END))
+            or (shouty and len(flat) > 8)))
+        (notes if is_note else body).append((round(y0, 1), x0, txt, is_head))
     body.sort(key=lambda t: (t[0], t[1]))
     notes.sort(key=lambda t: (t[0], t[1]))
-    return [t[2] for t in body], [t[2] for t in notes]
+    return [(t[2], t[3]) for t in body], [t[2] for t in notes]
 
 
 # 🚨 私用區（PUA）字元。Waardenburg 那本的數字被字型對到 U+100000 一帶，
@@ -395,15 +404,21 @@ def cut_bibliography(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]
 HEAD_RUN = re.compile(r"^([A-Z][A-Z0-9 ,:;'\u2019\-\u2013&()/]{4,88}?)[.:]?\s*(?=[A-Z][a-z])")
 
 
+def _trim_head(h: str) -> str:
+    """小標尾巴的三四位數是頁碼（百科全書頁眉「… AND OCEANIA 8767」），剝掉。"""
+    return re.sub(r"\s*\d{3,}\s*$", "", h).strip()
+
+
 def split_heading(text: str) -> list[tuple[str, str]]:
     """一段 → [(kind, text)]，kind 是 'h'（小標）或 'p'（正文）。"""
     t = text.strip()
     letters = [c for c in t if c.isalpha()]
     if letters and len(t) < 90 and sum(c.isupper() for c in letters) / len(letters) > 0.8:
-        return [("h", t.rstrip(".:"))]        # 整段就是小標
+        return [("h", _trim_head(t.rstrip(".:")))]   # 整段就是小標
     m = HEAD_RUN.match(t)
     if m and len(m.group(1).split()) >= 2 and len(t) - m.end() > 40:
-        return [("h", m.group(1).strip().rstrip(".:")), ("p", t[m.end():].lstrip())]
+        return [("h", _trim_head(m.group(1).strip().rstrip(".:"))),
+                ("p", t[m.end():].lstrip())]
     return [("p", t)]
 
 
@@ -427,8 +442,8 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
 
     seen: dict[str, int] = {}
     for body_blocks, _ in pages:
-        for cand in ({body_blocks[0]} if body_blocks else set()) | (
-                {body_blocks[-1]} if len(body_blocks) > 1 else set()):
+        for cand in ({body_blocks[0][0]} if body_blocks else set()) | (
+                {body_blocks[-1][0]} if len(body_blocks) > 1 else set()):
             k = _head_key(cand)
             if 0 < len(k) < 60:
                 seen[k] = seen.get(k, 0) + 1
@@ -447,12 +462,40 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
                 return t[m.end():].lstrip()
         return t
 
+    # 🚨 小標有三種假貨要擋，2026-09-11 實測全都出現過：
+    #    ①文章自己的標題行（跟頁眉同字，字級也大）②Notes／Bibliography 這種
+    #    「有標題沒內容」的段（註釋與書目都不印）③同一個頁眉在多頁被認成小標。
+    _author, _title, _ = title_of_pdf(path)
+    _own = re.sub(r"[\W_]+", "", (_author + _title)).lower()
+    _skip = re.compile(r"^(notes?|references?|bibliography|index|"
+                       r"acknowledge?ments?|further reading|works cited)\b", re.I)
+    _seen: set[str] = set()
+
+    def _head_ok(t: str) -> bool:
+        flat = re.sub(r"[\W_]+", "", t).lower()
+        if not flat or _skip.match(t.strip()):
+            return False
+        # 🚨 帶頁碼的不是小標，是頁眉：《宗教百科全書》每篇的頁眉是
+        #    「STUDY OF RELIGION: … IN AUSTRALIA AND OCEANIA 8767」，切片尾端
+        #    會夾到下一篇的那一行，只出現一次所以躲過了頁眉去重。
+        if re.search(r"\d{3,}", t):
+            return False
+        # 只排除「整個篇名」，不排除篇名的一部分——Waardenburg 那本的篇名是
+        # 「Friedrich Heiler (Prayer; The Scholarly Study of Religion)」，而
+        # 'Prayer' 與 'The Scholarly Study of Religion' 正是書裡真的小標。
+        if (flat in _own and len(flat) >= 0.6 * len(_own)) or _own in flat:
+            return False
+        if flat in _seen:
+            return False                       # 重複＝多半是頁眉
+        _seen.add(flat)
+        return True
+
     paras: list[tuple[str, str]] = []
     notes: list[str] = []
     dropped_pua = 0
     for body_blocks, note_blocks in pages:
-        body_blocks = [b for b in body_blocks if _head_key(b) not in running]
-        body_blocks = [_strip_head(b) for b in body_blocks]
+        body_blocks = [b for b in body_blocks if _head_key(b[0]) not in running]
+        body_blocks = [(_strip_head(t), hd) for t, hd in body_blocks]
         for raw in note_blocks:
             if pua_ratio(raw) > 0.12:      # 整段是壞掉的數字，救不回來就別印
                 dropped_pua += 1
@@ -468,12 +511,20 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
                 notes[-1] += " " + t
             else:
                 notes.append(t)
-        for raw in body_blocks:
+        for raw, is_head in body_blocks:
             if pua_ratio(raw) > 0.12:
                 dropped_pua += 1
                 continue
             t = clean(raw)
             if len(t) < 3:
+                continue
+            # 整行大寫又以頁碼收尾＝百科全書的頁眉，正文不要
+            letters = [c for c in t if c.isalpha()]
+            if (letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
+                    and re.search(r"\d{3,4}\s*$", t)):
+                continue
+            if is_head and len(t) < 90 and _head_ok(t):
+                paras.append(("h", t.rstrip(".:")))
                 continue
             # 前一塊沒收尾 → 多半是同一段被跨欄跨頁切開了。但小標題也沒有句末
             # 標點（「“Religion” as Specter」），所以再看長度：夠長才是被切斷的
@@ -484,11 +535,93 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
             if cont:
                 paras[-1] = ("p", prev + " " + t)
             else:
-                paras.extend(split_heading(t))
+                for kind, seg in split_heading(t):
+                    # split_heading 也會吐小標，同樣要過閘：頁眉殘骸
+                    # 就是從段首被切出來的，區塊層的過濾攔不到。
+                    if kind == 'h' and not _head_ok(seg):
+                        kind = 'p'
+                    paras.append((kind, seg))
     doc.close()
     if dropped_pua:
         print(f"    · 丟掉 {dropped_pua} 段壞字元（來源字型把數字對到私用區）")
     return paras, notes
+
+
+# 這幾個是真的單字，別把它們跟鄰居黏起來
+SHORT_OK = {"a", "i", "an", "as", "at", "be", "by", "do", "go", "he", "if", "in",
+            "is", "it", "me", "my", "no", "of", "on", "or", "so", "to", "up", "us",
+            "we", "am", "and", "the", "for", "not", "but", "his", "her", "its",
+            "our", "was", "are", "who", "all", "one", "two", "may", "can", "had",
+            "has", "him", "she", "you", "out", "own", "too", "use", "way", "new"}
+
+
+def drop_bad_headings(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]], int]:
+    """剔掉假小標：帶頁碼的、以及重複的。
+
+    🚨 這是**最後一道**，擺在排版前面。抽取那一層有三條路會產生小標（字型判定、
+    整段大寫、段首大寫串），逐條堵過還是漏了《宗教百科全書》那行
+    「STUDY OF RELIGION: … AND OCEANIA 8767」——它是下一篇的頁眉，被夾在切片尾端。
+    與其繼續追是哪條路漏的，不如在出口統一擋：小標**不可能**帶三位數以上的頁碼，
+    同一篇裡也不會有兩個一模一樣的小標（那是頁眉）。
+    """
+    seen: set[str] = set()
+    out, dropped = [], 0
+    for kind, t in paras:
+        if kind == "h":
+            key = re.sub(r"[\W\d_]+", "", t).lower()
+            if re.search(r"\d{3,}", t) or not key or key in seen:
+                dropped += 1
+                continue
+            seen.add(key)
+        out.append((kind, t))
+    return out, dropped
+
+
+def repair_spacing(paras: list[tuple[str, str]]) -> tuple[list[tuple[str, str]], int]:
+    """把掃描本 OCR 甩出來的單一字母黏回去：「W hat」→「What」、「m ethod」→「method」。
+
+    🚨 這裡**只做一件最保守的事**，因為修錯比不修更糟：
+      - 只接「落單的單一字母」與緊鄰的詞，而且接起來要是本篇出現過的字。
+      - **兩個多字母的詞永遠不接**——逐對硬接會把「for th e」接成「forth e」，
+        forth 剛好也是個字，於是偽造出一個看起來正常卻不存在的詞。
+      - 標點一律不碰（連標點一起重排會把逗號與引號吃掉）。
+    整段逐字母散開的（「c o lo n ia l p e o p le s」）救不回來，留著——那是來源
+    掃描的破壞，看得見的雜訊好過看不見的偽造。要真的修只能重跑 Vision OCR。
+    """
+    text = " ".join(t for _, t in paras)
+    vocab: dict[str, int] = {}
+    for w in re.findall(r"[A-Za-z]{2,}", text):
+        vocab[w.lower()] = vocab.get(w.lower(), 0) + 1
+    fixed = 0
+
+    def fix_line(t: str) -> str:
+        nonlocal fixed
+        toks = t.split(" ")
+        out: list[str] = []
+        i = 0
+        while i < len(toks):
+            a, b = toks[i], toks[i + 1] if i + 1 < len(toks) else ""
+            # 單一字母 + 後面那個詞（W hat → What；a book 不會中，因為 a 是真字）
+            if (re.fullmatch(r"[A-Za-z]", a) and a.lower() not in ("a", "i")
+                    and re.fullmatch(r"[A-Za-z]{2,}", b)
+                    and vocab.get((a + b).lower(), 0) >= 1):
+                out.append(a + b)
+                fixed += 1
+                i += 2
+                continue
+            # 詞 + 落單的單一字母（rit u al 這種的後半）
+            if (re.fullmatch(r"[A-Za-z]{2,}", a) and re.fullmatch(r"[A-Za-z]", b)
+                    and b.lower() not in ("a", "i")
+                    and vocab.get((a + b).lower(), 0) >= 2):
+                out.append(a + b)
+                fixed += 1
+                i += 2
+                continue
+            out.append(a)
+            i += 1
+        return " ".join(out)
+
+    return [(k, fix_line(t)) for k, t in paras], fixed
 
 
 def extract_md(path: str) -> tuple[dict, list[str]]:
@@ -1126,6 +1259,8 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
             if path.lower().endswith(".pdf"):
                 author, title, source = title_of_pdf(path)
                 raw_paras, notes = extract_pdf(path)
+                raw_paras, spaced = repair_spacing(raw_paras)
+                raw_paras, badhead = drop_bad_headings(raw_paras)
                 raw_paras, intro_cut = cut_editor_intro(raw_paras)
                 paras, cut = cut_bibliography(raw_paras)
                 cut_total += cut
@@ -1140,7 +1275,7 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 source = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
                 body = "\n\n".join(paras)
                 disp = title
-                cut = intro_cut = 0
+                cut = intro_cut = spaced = badhead = 0
                 notes, note_n = [], 0
 
             # 🚨 快取的鍵不能只用檔名。讀本的節錄範圍一改，檔名沒變但內容變了，
@@ -1195,6 +1330,8 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 bk.flow_paragraphs([("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in paras],
                                    size=11.2, gap=8, indent=INDENT)
             print(f"  ✓ {disp[:52]}"
+                  + (f"（接回散字 {spaced} 處）" if spaced else "")
+                  + (f"（剔掉假小標 {badhead} 條）" if badhead else "")
                   + (f"（砍編者導言 {intro_cut} 段）" if intro_cut else "")
                   + (f"（砍書目 {cut} 段）" if cut else "")
                   + (f"（濾掉註 {note_n} 條）" if note_n else ""))
