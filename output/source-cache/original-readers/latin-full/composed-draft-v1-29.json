@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 29, "author": "opus-5-hand-written",
+  "note": "tellus 武加大沒有字形，練不到。subeō 只有 subire／Subiit，supplex 只有複數 supplices，vīsibilis 只有中性複數 visibilia。ars 沒有主格進語料，只有 arte／artis／artium。",
+  "sentences": [
+    {"latin": "salvator benignus est", "chinese": "救主是仁慈的。", "targets": ["salvator", "benignus", "sum"]},
+    {"latin": "subire et supplices", "chinese": "去承受，以及那些懇求者。", "targets": ["subeo", "supplex"]},
+    {"latin": "vetus arte visibilia", "chinese": "藉古老技藝而成的可見之物。", "targets": ["vetus", "ars", "visibilis"]},
+    {"latin": "vivificat et voluit", "chinese": "他賦予生命，也願意了。", "targets": ["vivifico", "volo"]},
+    {"latin": "ascensionem circum templum", "chinese": "繞著聖殿的上升。", "targets": ["ascensio", "circum", "templum"]},
+    {"latin": "clementia cessit et clausit", "chinese": "仁慈退讓了，並且關上了。", "targets": ["clementia", "cedo", "claudo"]},
+    {"latin": "arte benigna vivificabit", "chinese": "他要以仁慈的技藝賦予生命。", "targets": ["ars", "benignus", "vivifico"]}
+  ]
+}

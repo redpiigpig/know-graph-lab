@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 27, "author": "opus-5-hand-written",
+  "note": "episcopālis 武加大沒有字形。amittō 沒有 amisit 這個形（只有 amiserat／amisso／amittit），clēmēns 沒有屬格 clementis。",
+  "sentences": [
+    {"latin": "vultus similis et clemens", "chinese": "相似而仁慈的面容。", "targets": ["vultus", "similis", "clemens"]},
+    {"latin": "suavitatis adventum admisit", "chinese": "他接納了甘美的來臨。", "targets": ["suavitas", "adventus", "admitto"]},
+    {"latin": "abiit et adierunt", "chinese": "他離去了，而他們前來了。", "targets": ["abeo", "adeo"]},
+    {"latin": "acceptabile est et annuntiabit", "chinese": "這是可蒙悅納的，他也要宣告。", "targets": ["acceptabilis", "sum", "annuntio"]},
+    {"latin": "amittit dilectionem et emisit", "chinese": "他失去了愛，也打發了出去。", "targets": ["amitto", "dilectio", "emitto"]},
+    {"latin": "circuit templum et aulam", "chinese": "他巡行了聖殿與殿堂。", "targets": ["circumeo", "templum", "aula"]},
+    {"latin": "dilectio clemens et similis", "chinese": "仁慈而相似的愛。", "targets": ["dilectio", "clemens", "similis"]}
+  ]
+}

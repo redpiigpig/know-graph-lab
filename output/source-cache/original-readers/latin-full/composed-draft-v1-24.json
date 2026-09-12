@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 24, "author": "opus-5-hand-written",
+  "note": "insonō 整部武加大只有 insonuit、persōnō 只有 personantes、lector 只有 lectorum、cruor 只有主格 cruor——lector 唯一的形 lectorum 樹庫另有詞位，寫了會被判沒教過，所以這一課練不到它——這一課有五個詞只剩一兩個形可用，句子都得繞著那些形寫。",
+  "sentences": [
+    {"latin": "caligo et mors", "chinese": "昏暗與死亡。", "targets": ["caligo", "mors"]},
+    {"latin": "cantores personantes in templo", "chinese": "領唱者們在聖殿中宣揚。", "targets": ["cantor", "persono", "in", "templum"]},
+    {"latin": "insonuit tuba prae poste", "chinese": "號筒在門柱前鳴響了。", "targets": ["insono", "tuba", "prae", "postis"]},
+    {"latin": "largitate humana præter iniquitatem", "chinese": "以人的慷慨，越過不義。", "targets": ["largitas", "humanus", "praeter", "iniquitas"]},
+    {"latin": "lectionem legit in aula", "chinese": "他在殿堂中誦讀了經課。", "targets": ["lectio", "lego", "in", "aula"]},
+    {"latin": "mens et cruor", "chinese": "心智與血。", "targets": ["mens", "cruor"]},
+    {"latin": "mors præter caliginem", "chinese": "越過昏暗的死亡。", "targets": ["mors", "praeter", "caligo"]}
+  ]
+}

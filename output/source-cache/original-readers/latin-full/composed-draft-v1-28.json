@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 28, "author": "opus-5-hand-written",
+  "note": "obeō 只認字形，而它在武加大只剩名詞化的 obitus 一形。本課十六個待練詞有九個是 eō 的複合詞，各自只有兩三個形進語料。",
+  "sentences": [
+    {"latin": "fructum in loco", "chinese": "在那地方的果實。", "targets": ["fructus", "in", "locus"]},
+    {"latin": "iniit et introivit", "chinese": "他進去了，也走了進來。", "targets": ["ineo", "introeo"]},
+    {"latin": "invisibilis obitus in loco", "chinese": "那地方看不見的死亡。", "targets": ["invisibilis", "obeo", "in", "locus"]},
+    {"latin": "pertransiit et præibant", "chinese": "他穿了過去，而他們走在前面。", "targets": ["pertranseo", "praeeo"]},
+    {"latin": "pietatem placare prodest", "chinese": "撫慰那份虔敬是有益的。", "targets": ["pietas", "placo", "prosum"]},
+    {"latin": "Prodiit et purgabit", "chinese": "他走了出來，並且要潔淨。", "targets": ["prodeo", "purgo"]},
+    {"latin": "rediit et remisit remissionem", "chinese": "他回來了，也施行了赦免。", "targets": ["redeo", "remitto", "remissio"]}
+  ]
+}

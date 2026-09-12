@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 25, "author": "opus-5-hand-written",
+  "note": "ācer 武加大沒有字形。satis (+ partitive gen.) 這一條詞頭把文法說明寫進來了，比對鍵因而含 partitive／gen 兩個不是詞的東西，整組到不齊，也練不到。",
+  "sentences": [
+    {"latin": "resurrectio et crux", "chinese": "復活與十字架。", "targets": ["resurrectio", "crux"]},
+    {"latin": "salvus est et felix", "chinese": "他得救了，也是有福的。", "targets": ["salvus", "sum", "felix"]},
+    {"latin": "sonant Cornua in templo", "chinese": "號角在聖殿中鳴響。", "targets": ["sono", "cornu", "in", "templum"]},
+    {"latin": "Ascendit et Descendit", "chinese": "他上去了，又下來了。", "targets": ["ascendo", "descendo"]},
+    {"latin": "calicem caritatis confringet", "chinese": "他要打碎那愛德的杯。", "targets": ["calix", "caritas", "confringo"]},
+    {"latin": "crucifixus est et confundentur", "chinese": "他被釘了十字架，他們也要蒙羞。", "targets": ["crucifigo", "sum", "confundo"]},
+    {"latin": "dissimilis est crux", "chinese": "那十字架是不一樣的。", "targets": ["dissimilis", "sum", "crux"]}
+  ]
+}

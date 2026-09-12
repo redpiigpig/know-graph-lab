@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 26, "author": "opus-5-hand-written",
+  "note": "本課四個詞武加大沒有字形：genuflectō、paschālis、refundō、scandō——禮儀用語與武加大落差最大的一批。passiō 沒有主格單數進語料，只有 passionem／passiones 等。",
+  "sentences": [
+    {"latin": "fixum est et fregit", "chinese": "它被釘牢了，而他打碎了。", "targets": ["figo", "sum", "frango"]},
+    {"latin": "fudit potum intra templum", "chinese": "他在聖殿裡傾倒了飲料。", "targets": ["fundo", "potus", "intra", "templum"]},
+    {"latin": "passiones et genua", "chinese": "諸般苦難與雙膝。", "targets": ["passio", "genu"]},
+    {"latin": "Infunde ritum Paschæ", "chinese": "你要注入逾越節的禮儀。", "targets": ["infundo", "ritus", "Pascha"]},
+    {"latin": "omnipotens quapropter venit", "chinese": "全能者因此而來。", "targets": ["omnipotens", "quapropter", "venio"]},
+    {"latin": "genu fixum intra aulam", "chinese": "在殿堂裡固定的膝。", "targets": ["genu", "figo", "intra", "aula"]},
+    {"latin": "fregit calicem et fudit potum", "chinese": "他打碎了杯，又傾倒了飲料。", "targets": ["frango", "calix", "fundo", "potus"]}
+  ]
+}
