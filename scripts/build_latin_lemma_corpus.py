@@ -501,6 +501,26 @@ def appendix_keys(path: Path = READER, volume: int = 1) -> dict[str, set[str]]:
     return out
 
 
+def cumulative_stems(
+    entries: Sequence[VocabEntry], volume: int, lesson: int
+) -> set[str]:
+    """Stems of everything taught by this lesson, for the taught-words gate.
+
+    The third route on the taught side, and it is asked only of a form the
+    corpus gives no lemma at all.  ``collaudate`` is such a form: ``collaudō``
+    is this lesson's word, the Vulgate writes the imperative, and nothing links
+    the two -- so the gate called a correct sentence untaught.  Restricting the
+    route to lemma-less forms keeps it from quietly admitting derivations where
+    the lemma layer can actually speak.
+    """
+    return {
+        stem
+        for entry in entries
+        if entry.volume < volume or (entry.volume == volume and entry.lesson <= lesson)
+        for stem in entry.credit_stems
+    }
+
+
 def cumulative_vocabulary(
     entries: Sequence[VocabEntry], volume: int, lesson: int
 ) -> tuple[list[VocabEntry], set[str], set[str]]:

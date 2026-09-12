@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 3, "author": "opus-5-hand-written",
+  "note": "sum 由本課定錨帶進來，名詞句終於可以有繫詞。chorus 只有 choros／chorum 兩個受格形進語料，所以第 5 句用 in ＋ 受格。festum 只有 festo 一形。",
+  "sentences": [
+    {"latin": "episcopus et ministri in ecclesia", "chinese": "主教與侍者在教會中。", "targets": ["episcopus", "minister", "et", "in", "ecclesia"]},
+    {"latin": "hodie in festo", "chinese": "今天在慶節。", "targets": ["hodie", "festum", "in"]},
+    {"latin": "nam justitia Dei in cælo est", "chinese": "因為天主的公義在天上。", "targets": ["nam", "justitia", "Deus", "in", "caelum", "sum"]},
+    {"latin": "potentia Dei super populum", "chinese": "天主的權能在人民之上。", "targets": ["potentia", "Deus", "super", "populus"]},
+    {"latin": "pueri in chorum", "chinese": "孩童進入唱詩班。", "targets": ["puer", "in", "chorus"]},
+    {"latin": "donum Evangelii servis", "chinese": "給僕人們的福音恩賜。", "targets": ["donum", "Evangelium", "servus"]},
+    {"latin": "psalmus et canticum in ecclesia", "chinese": "教會中的聖詠與聖歌。", "targets": ["psalmus", "canticum", "et", "in", "ecclesia"]}
+  ]
+}

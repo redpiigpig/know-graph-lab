@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 4, "author": "opus-5-hand-written",
+  "note": "hymnus 的主格沒進語料（只有 hymnis／hymno），故第 2 句用複數奪格。in saecula 是片語詞條，整組到齊才算練到，所以第 5 句寫足 in sæcula sæculorum。ūniversum 只認字形。",
+  "sentences": [
+    {"latin": "gaudium et præmium in regno", "chinese": "王國中的喜樂與賞報。", "targets": ["gaudium", "praemium", "et", "in", "regnum"]},
+    {"latin": "in hymnis et in canticis", "chinese": "在聖歌與讚美詩中。", "targets": ["hymnus", "canticum", "et", "in"]},
+    {"latin": "ibi mysterium Dei", "chinese": "天主的奧祕在那裡。", "targets": ["ibi", "mysterium", "Deus"]},
+    {"latin": "odium non est in regno", "chinese": "王國中沒有仇恨。", "targets": ["odium", "non", "sum", "in", "regnum"]},
+    {"latin": "regina in sæcula sæculorum", "chinese": "女王直到世世無窮。", "targets": ["regina", "in saecula", "saeculum"]},
+    {"latin": "testamentum Dei in sabbato", "chinese": "安息日裡天主的盟約。", "targets": ["testamentum", "Deus", "in", "sabbatum"]},
+    {"latin": "vinum et universa dona", "chinese": "酒與一切恩賜。", "targets": ["vinum", "universum", "donum", "et"]}
+  ]
+}

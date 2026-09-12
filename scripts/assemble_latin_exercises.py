@@ -33,6 +33,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_latin_lemma_corpus import (  # noqa: E402
     appendix_keys,
     ENCLITICS,
+    cumulative_stems,
     cumulative_vocabulary,
     load_vocabulary,
     STEM_FLOOR,
@@ -167,6 +168,7 @@ def build_volume(volume: int) -> dict[str, Any]:
     for lesson in sorted(mined_by_lesson):
         targets, taught_lemmas, taught_keys = cumulative_vocabulary(entries, volume, lesson)
         taught_keys = taught_keys | appendix_all
+        taught_stems = cumulative_stems(entries, volume, lesson)
         anchors = pick_anchors(mined_by_lesson[lesson].get("anchors", []))
         if len(anchors) < QUOTED_PER_LESSON:
             thin.append(lesson)
@@ -185,7 +187,9 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "answerKeyEdition": ANSWER_KEY_EDITION,
                 "answerKeyScope": row.get("answerKeyScope") or "verse",
                 "targetWords": row.get("targetWords") or [],
-                "verification": checker.verify(text, corpus, tagger, taught_lemmas, taught_keys),
+                "verification": checker.verify(
+                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems
+                ),
                 "reviewedBy": "corpus",
             })
         for row in drafts:
@@ -194,7 +198,9 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "kind": "composed",
                 "text": text,
                 "targetWords": target_words_in(text, targets, corpus, tagger),
-                "verification": checker.verify(text, corpus, tagger, taught_lemmas, taught_keys),
+                "verification": checker.verify(
+                    text, corpus, tagger, taught_lemmas, taught_keys, taught_stems
+                ),
                 "reviewedBy": row.get("reviewedBy", "author" if author else "draft"),
             })
         for number, item in enumerate(items, start=1):

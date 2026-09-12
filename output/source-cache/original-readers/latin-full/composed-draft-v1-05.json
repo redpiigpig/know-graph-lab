@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 5, "author": "opus-5-hand-written",
+  "note": "antīquus 與 hymnus 一樣沒有主格進語料，改用 antiqui；vitium 只有 vitio／vitiis／vitii，故用複數奪格；cēnāculum 只有主格與屬格，所以配 in ＋ 受格。",
+  "sentences": [
+    {"latin": "vir beatus in mundo", "chinese": "世上蒙福的人。", "targets": ["vir", "beatus", "in", "mundus"]},
+    {"latin": "magistri antiqui in cœnaculum", "chinese": "古代的師傅們進入樓上的房間。", "targets": ["magister", "antiquus", "in", "cenaculum"]},
+    {"latin": "in multis vitiis", "chinese": "在許多過失之中。", "targets": ["multus", "vitium", "in"]},
+    {"latin": "clara gloria in æternum", "chinese": "光明的榮耀直到永遠。", "targets": ["clarus", "gloria", "in aeternum", "aeternus"]},
+    {"latin": "gladius viri in agro", "chinese": "那人在田間的劍。", "targets": ["gladius", "vir", "in", "ager"]},
+    {"latin": "magnus est modus Dei", "chinese": "天主的方式是偉大的。", "targets": ["magnus", "sum", "modus", "Deus"]},
+    {"latin": "vita æterna in mundo", "chinese": "世上的永生。", "targets": ["vita", "aeternus", "in", "mundus"]}
+  ]
+}

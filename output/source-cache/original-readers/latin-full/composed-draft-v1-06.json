@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 6, "author": "opus-5-hand-written",
+  "note": "本課終於有動詞（ambulō／cantō／collaudō／conservō），句子不再全是名詞片語。documentum 武加大沒有任何字形，練不到。chorus 沒有主格進語料，第 3 句改用 populus 當主語。",
+  "sentences": [
+    {"latin": "Deus noster verus et vivus", "chinese": "我們的天主是真實而活的。", "targets": ["noster", "verus", "vivus", "Deus"]},
+    {"latin": "populus pius ambulat in agro", "chinese": "虔敬的百姓行走在田間。", "targets": ["pius", "ambulo", "populus", "in", "ager"]},
+    {"latin": "cantet populus psalmum novum", "chinese": "願百姓唱新的聖詠。", "targets": ["canto", "populus", "psalmus", "novus"]},
+    {"latin": "collaudate Dominum Sabaoth", "chinese": "你們要極力讚美萬軍的上主。", "targets": ["collaudo", "dominus", "Sabaoth"]},
+    {"latin": "numerus discipulorum magnus est", "chinese": "門徒的數目很大。", "targets": ["numerus", "discipulus", "magnus", "sum"]},
+    {"latin": "conserva sacramentum divinum", "chinese": "你要保守這神聖的聖事。", "targets": ["conservo", "sacramentum", "divinus"]},
+    {"latin": "benedictus vir in sacra ecclesia", "chinese": "在聖教會中蒙福的人。", "targets": ["benedictus", "vir", "in", "sacer", "ecclesia"]}
+  ]
+}

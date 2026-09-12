@@ -43,6 +43,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_latin_lemma_corpus import (  # noqa: E402
     OUTPUT as CORPUS_FILES,
+    cumulative_stems,
     spelling_variants,
 
     Tagger,
@@ -136,16 +137,29 @@ def word_reading(word: str, corpus: Corpus, tagger: Tagger) -> dict[str, Any]:
     return {"word": word, "key": key, "attested": False, "enclitic": "", "parts": []}
 
 
-def part_is_taught(part: dict[str, Any], taught_lemmas: set[str], taught_keys: set[str]) -> bool:
-    # The spelling variants are asked last and only when the plain comparison
-    # has failed: the corpus writes ``cœnam`` for a word the textbook teaches as
-    # ``cēna``, and without this the gate calls that form attested and untaught
-    # at once -- a pair no sentence can satisfy.
-    return (
-        bool(part["lemmas"] & taught_lemmas)
-        or part["key"] in taught_keys
-        or bool(spelling_variants(part["key"]) & taught_keys)
-    )
+def part_is_taught(
+    part: dict[str, Any],
+    taught_lemmas: set[str],
+    taught_keys: set[str],
+    taught_stems: Iterable[str] = (),
+) -> bool:
+    # The spelling variants are asked only after the plain comparison fails:
+    # the corpus writes ``cœnam`` for a word the textbook teaches as ``cēna``,
+    # and without this the gate calls that form attested and untaught at once --
+    # a pair no sentence can satisfy.
+    if part["lemmas"] & taught_lemmas:
+        return True
+    if part["key"] in taught_keys:
+        return True
+    if spelling_variants(part["key"]) & taught_keys:
+        return True
+    # Last, and only for a form the corpus gives no lemma at all: ``collaudate``
+    # is an inflection of this lesson's own ``collaudō`` that nothing in the
+    # corpus links back to it.  Where a lemma exists this route stays shut, so
+    # it cannot quietly admit a derivation of a taught word as taught.
+    if not part["lemmas"]:
+        return any(part["key"].startswith(stem) for stem in taught_stems)
+    return False
 
 
 def verify(
@@ -154,6 +168,7 @@ def verify(
     tagger: Tagger,
     taught_lemmas: set[str],
     taught_keys: set[str],
+    taught_stems: Iterable[str] = (),
 ) -> dict[str, Any]:
     """Gates one and two, on one sentence.  Everything reported is verbatim."""
     words = tokenise(sentence)
@@ -163,7 +178,10 @@ def verify(
     for row in readings:
         if not row["attested"]:
             continue
-        if not all(part_is_taught(part, taught_lemmas, taught_keys) for part in row["parts"]):
+        if not all(
+            part_is_taught(part, taught_lemmas, taught_keys, taught_stems)
+            for part in row["parts"]
+        ):
             untaught.append(row["word"])
     length_ok = MIN_WORDS <= len(words) <= MAX_WORDS
     return {
@@ -267,6 +285,7 @@ def main() -> None:
     tagger = Tagger(gold=("proiel",) if volume == 1 else ("proiel", "ittb", "llct"))
     entries = load_vocabulary(tagger=tagger)
     targets, taught_lemmas, taught_keys = cumulative_vocabulary(entries, volume, lesson)
+    taught_stems = cumulative_stems(entries, volume, lesson)
     appendix = appendix_keys(volume=volume)
     appendix_all: set[str] = set()
     for keys in appendix.values():
@@ -281,7 +300,7 @@ def main() -> None:
     rows: list[dict[str, Any]] = []
     for index, row in enumerate(sentences, start=1):
         latin = row.get("latin", "")
-        report = verify(latin, corpus, tagger, taught_lemmas, taught_keys)
+        report = verify(latin, corpus, tagger, taught_lemmas, taught_keys, taught_stems)
         rows.append({**row, "verification": report})
         mark = "通過" if report["passed"] else "退回"
         print(f"{index:2d} [{mark}] {latin}")

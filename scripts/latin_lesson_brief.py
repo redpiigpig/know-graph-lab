@@ -56,15 +56,25 @@ def anchors_for(volume: int, lesson: int) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("lesson", type=int)
+    parser.add_argument("--through", type=int, help="一次印到第幾課為止（含）")
     parser.add_argument("--volume", type=int, default=1, choices=[1, 2])
     parser.add_argument("--forms", type=int, default=8, help="每詞列幾個實際出現的形")
     parser.add_argument("--vocab", action="store_true", help="連同累積詞彙一起印")
     args = parser.parse_args()
 
+    # Loading the treebanks and the corpus costs about a minute, so a run can
+    # brief a whole batch of lessons: writing them one process at a time was
+    # most of the wall clock.
     tagger = Tagger(gold=("proiel",) if args.volume == 1 else ("proiel", "ittb", "llct"))
     entries = load_vocabulary(tagger=tagger)
-    targets, taught_lemmas, taught_keys = cumulative_vocabulary(entries, args.volume, args.lesson)
     corpus = checker.Corpus(checker.corpora_for(args.volume))
+    for number in range(args.lesson, (args.through or args.lesson) + 1):
+        brief_one(number, args, entries, tagger, corpus)
+
+
+def brief_one(lesson_number, args, entries, tagger, corpus) -> None:
+    args = argparse.Namespace(**{**vars(args), "lesson": lesson_number})
+    targets, taught_lemmas, taught_keys = cumulative_vocabulary(entries, args.volume, args.lesson)
 
     anchors = anchors_for(args.volume, args.lesson)
     practised = checker.practised([row["text"] for row in anchors], targets, corpus, tagger)
@@ -92,10 +102,27 @@ def main() -> None:
             shown = "、".join(form for form, _ in pool.most_common(args.forms))
         elif entry.phrase:
             shown = "（片語，整組到齊才算練到）"
-        elif entry.credit_keys:
-            shown = "（只認字形）" + "、".join(sorted(entry.credit_keys)[: args.forms])
         else:
-            shown = "（詞位未對上語料）"
+            # The other two credit routes, shown the same way, because a word
+            # the lemma layer cannot reach is exactly the one whose usable
+            # forms have to be looked up rather than guessed.  Printing
+            # "（詞位未對上語料）" and stopping is what sent the first draft to
+            # write ``cenam`` for a word the corpus only ever spells ``cœnam``.
+            exact = sorted(entry.written_keys & corpus.keys)
+            stemmed = sorted(
+                key for key in corpus.keys
+                if any(key.startswith(stem) for stem in entry.credit_stems)
+            )
+            usable = exact + [key for key in stemmed if key not in exact]
+            if usable:
+                pairs = sorted(
+                    ((corpus.spelling(key), corpus.forms[key]["count"]) for key in usable),
+                    key=lambda row: -row[1],
+                )[: args.forms]
+                label = "只認字形" if exact else "只認詞幹"
+                shown = f"（{label}）" + "、".join(form for form, _ in pairs)
+            else:
+                shown = "🚨 本冊語料無任何字形，這一課無法練到它，由 note 說明"
         print(f"  {entry.headword}　{entry.gloss_zh}　[{entry.pos}]")
         print(f"      實際出現的形：{shown}")
 

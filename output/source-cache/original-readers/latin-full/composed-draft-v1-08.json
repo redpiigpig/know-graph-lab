@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 8, "author": "opus-5-hand-written",
+  "note": "sacrō 武加大沒有任何字形，練不到。片語詞條 aut . . aut 要兩個 aut 都在同一句才算練到，單一個 aut 只能記到單詞那一條，故第 7 句寫成雙 aut。bibō 進語料的是 bibere／bibit／bibam／bibent，沒有完成式複數，故第 4 句用未來式。",
+  "sentences": [
+    {"latin": "stellæ semper in cælo", "chinese": "星辰常在天上。", "targets": ["stella", "semper", "in", "caelum"]},
+    {"latin": "Audite verba Domini", "chinese": "你們要聽上主的話。", "targets": ["audio", "verbum", "dominus"]},
+    {"latin": "adhuc advenit christianus", "chinese": "那基督徒至今才到。", "targets": ["adhuc", "advenio", "Christianus"]},
+    {"latin": "Ægyptii bibent aquam", "chinese": "埃及人將喝水。", "targets": ["Aegyptius", "bibo", "aqua"]},
+    {"latin": "servus cepit gladium in agro", "chinese": "那僕人在田間取了劍。", "targets": ["capio", "servus", "gladius", "in", "ager"]},
+    {"latin": "Serva præcepta Dei semper", "chinese": "你要常守天主的誡命。", "targets": ["servo", "praeceptum", "Deus", "semper"]},
+    {"latin": "aut in agro aut in ecclesia affecti sunt", "chinese": "他們或在田間、或在教會中受了影響。", "targets": ["afficio", "sum", "in", "ager", "ecclesia", "aut . . aut"]}
+  ]
+}

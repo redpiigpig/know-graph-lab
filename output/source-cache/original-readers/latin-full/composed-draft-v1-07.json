@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 7, "author": "opus-5-hand-written",
+  "note": "本課十五個待練詞多半是動詞，而它們進語料的形很零散：ōrō 只有 oravit／ora／Orate／Oro，ēvocō 只有 evocati，exōrō 只有 exorare／exoretur，meritō 只有大寫的 Merito。句子照這些形寫，不照詞形表推。",
+  "sentences": [
+    {"latin": "in principio Deus regnavit", "chinese": "起初天主就統治。", "targets": ["principium", "regno", "Deus", "in"]},
+    {"latin": "famulus oravit in ecclesia", "chinese": "那僕人在教會中祈禱了。", "targets": ["famulus", "oro", "in", "ecclesia"]},
+    {"latin": "Laudate Dominum necnon Deum", "chinese": "你們要讚美上主，並且讚美天主。", "targets": ["laudo", "dominus", "necnon", "Deus"]},
+    {"latin": "servi numquam observabant præcepta", "chinese": "僕人們從不遵守誡命。", "targets": ["numquam", "observo", "servus", "praeceptum"]},
+    {"latin": "exemplum donavit et operatus est", "chinese": "他給了榜樣，也做了工。", "targets": ["exemplum", "dono", "opero", "sum"]},
+    {"latin": "Merito invocavit Dominum", "chinese": "他理當呼求了上主。", "targets": ["merito", "invoco", "dominus"]},
+    {"latin": "evocati sunt et exoretur Deus", "chinese": "他們被召出，願天主受懇求。", "targets": ["evoco", "sum", "exoro", "Deus"]}
+  ]
+}

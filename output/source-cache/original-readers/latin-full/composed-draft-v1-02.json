@@ -1,0 +1,15 @@
+{
+  "volume": 1,
+  "lesson": 2,
+  "author": "opus-5-hand-written",
+  "note": "累積詞彙四十個，動詞仍只有 flectō，故以名詞句為主。pāpa 一詞武加大沒有任何字形，本課練不到，由 assemble 的 note 說明。missa 只認字形（missa／Missæ），不可用 mitto 的分詞冒充。",
+  "sentences": [
+    {"latin": "gloria Dei super ecclesiam", "chinese": "天主的光榮在教會之上。", "targets": ["Deus", "super", "ecclesia"]},
+    {"latin": "agnus Dei sine culpa", "chinese": "天主的羔羊沒有過錯。", "targets": ["agnus", "Deus", "sine", "culpa"]},
+    {"latin": "natura Christi in ecclesia", "chinese": "基督的本性在教會中。", "targets": ["natura", "Christus", "in", "ecclesia"]},
+    {"latin": "apostoli et discipuli in agro", "chinese": "宗徒與門徒在田間。", "targets": ["apostolus", "et", "discipulus", "in", "ager"]},
+    {"latin": "satis gratiæ in vita", "chinese": "生命中有足夠的恩寵。", "targets": ["satis", "gratia", "in", "vita"]},
+    {"latin": "Archangelus coram Deo flectitur", "chinese": "大天使在天主面前屈膝。", "targets": ["archangelus", "coram", "Deus", "flecto"]},
+    {"latin": "hora Missæ pro familia", "chinese": "為家人獻彌撒的時辰。", "targets": ["hora", "missa", "pro", "familia"]}
+  ]
+}
