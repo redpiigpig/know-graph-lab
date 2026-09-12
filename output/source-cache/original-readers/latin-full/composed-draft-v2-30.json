@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 30, "author": "opus-5-hand-written",
+  "note": "December 兩層語料都沒有字形；progressiō 也沒有（語料裡是 progressus 那一條）。",
+  "sentences": [
+    {"latin": "complexus nequit regimen", "chinese": "他擁抱了，卻無法治理。", "targets": ["complector", "nequeo", "regimen"]},
+    {"latin": "sacerdotio personalis præcipue", "chinese": "尤其在司鐸職上是屬個人的。", "targets": ["sacerdotium", "personalis", "praecipue"]},
+    {"latin": "student indiget elementa", "chinese": "他們熱衷，卻缺乏那些元素。", "targets": ["studeo", "indigeo", "elementum"]},
+    {"latin": "attingere regiminis elementis", "chinese": "要以那些元素觸及治理。", "targets": ["attingo", "regimen", "elementum"]},
+    {"latin": "Nimirum multiplex fiducia", "chinese": "顯然是多層次的信賴。", "targets": ["nimirum", "multiplex", "fiducia"]},
+    {"latin": "demum regimen personali", "chinese": "最終是屬個人的治理。", "targets": ["demum", "regimen", "personalis"]},
+    {"latin": "indigens studeant attingit", "chinese": "那缺乏的人，願他們熱衷，他也觸及了。", "targets": ["indigeo", "studeo", "attingo"]}
+  ]
+}

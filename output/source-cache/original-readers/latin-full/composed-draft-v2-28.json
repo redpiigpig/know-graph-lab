@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 28, "author": "opus-5-hand-written",
+  "note": "missio 在語料裡只剩主格 missio 一形。",
+  "sentences": [
+    {"latin": "difficultatem vehementer mutuam", "chinese": "極其相互的困難。", "targets": ["difficultas", "vehementer", "mutuus"]},
+    {"latin": "adduxit apostolatus unicum", "chinese": "他帶來了那獨一的宗徒職分。", "targets": ["adduco", "apostolatus", "unicus"]},
+    {"latin": "patriarcha utpote discrimen", "chinese": "族長既然是那分界。", "targets": ["patriarcha", "utpote", "discrimen"]},
+    {"latin": "revelatione incrementum constitutione", "chinese": "藉啟示與制度而有的增長。", "targets": ["revelatio", "incrementum", "constitutio"]},
+    {"latin": "percipite saltem Iunio", "chinese": "你們至少在六月要領受。", "targets": ["percipio", "saltem", "Junius"]},
+    {"latin": "missio in ambitu", "chinese": "那範圍中的派遣。", "targets": ["missio", "ambitus", "in"]},
+    {"latin": "unica constitutio patriarchæ", "chinese": "族長獨一的制度。", "targets": ["unicus", "constitutio", "patriarcha"]}
+  ]
+}

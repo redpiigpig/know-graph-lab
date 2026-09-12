@@ -4537,6 +4537,17 @@
               ],
               "resolved": true,
               "phrase": false
+            },
+            {
+              "volume": 1,
+              "lesson": 8,
+              "ordinal": 157,
+              "headword": "aut . . aut",
+              "glossZh": "或……或、要麼……要麼",
+              "lemmas": [],
+              "creditLemmas": [],
+              "resolved": false,
+              "phrase": true
             }
           ],
           "verification": {
@@ -20046,19 +20057,6 @@
                 "ualde",
                 "valde"
               ],
-              "resolved": true,
-              "phrase": false
-            },
-            {
-              "volume": 1,
-              "lesson": 34,
-              "ordinal": 678,
-              "headword": "collaetor",
-              "glossZh": "同樂、共享歡樂",
-              "lemmas": [
-                "sum"
-              ],
-              "creditLemmas": [],
               "resolved": true,
               "phrase": false
             }

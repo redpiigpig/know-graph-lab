@@ -199,7 +199,12 @@ def build_volume(volume: int) -> dict[str, Any]:
                 "answerKeyRef": row.get("answerKeyRef") or row["ref"],
                 "answerKeyEdition": ANSWER_KEY_EDITION,
                 "answerKeyScope": row.get("answerKeyScope") or "verse",
-                "targetWords": row.get("targetWords") or [],
+                # Recomputed, not copied.  The mined file's targetWords were
+                # written by build_latin_exercises under the credit rules of the
+                # day; coverage computed from a stale list disagrees with the
+                # gate that later reads it, and the lesson ends up holding a word
+                # that one side thinks is practised and the other does not.
+                "targetWords": target_words_in(text, targets, corpus, tagger),
                 "verification": checker.verify(
                     text, corpus, tagger, taught_lemmas, taught_keys, taught_stems
                 ),

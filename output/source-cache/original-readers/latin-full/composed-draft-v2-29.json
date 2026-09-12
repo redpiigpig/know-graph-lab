@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 29, "author": "opus-5-hand-written",
+  "note": "effectus 只剩受格 effectum。cottidie 三種拼法都在語料裡。",
+  "sentences": [
+    {"latin": "effectum theologiae quotidie", "chinese": "神學每日的果效。", "targets": ["effectus", "theologia", "cottidie"]},
+    {"latin": "momento recto umquam", "chinese": "曾經在正直的時刻。", "targets": ["momentum", "rectus", "umquam"]},
+    {"latin": "participat cœtus educationis", "chinese": "他參與那教養的集會。", "targets": ["participo", "coetus", "educatio"]},
+    {"latin": "perfectionem auxit cursum", "chinese": "他增添了完美，也加增了行程。", "targets": ["perfectio", "augeo", "cursus"]},
+    {"latin": "dumtaxat copia ponderis", "chinese": "僅限於那重量的豐足。", "targets": ["dumtaxat", "copia", "pondus"]},
+    {"latin": "fere experientia perfectionis", "chinese": "幾乎是完美的經驗。", "targets": ["fere", "experientia", "perfectio"]},
+    {"latin": "cursu ponderis augeri", "chinese": "在行程中因重量而增加。", "targets": ["cursus", "pondus", "augeo"]}
+  ]
+}
