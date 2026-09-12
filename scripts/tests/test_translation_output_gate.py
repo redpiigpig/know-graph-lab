@@ -154,6 +154,27 @@ def test_waka_with_translation_first_passes():
     assert unusable_reason(t) == ""
 
 
+def test_bibliography_entry_is_not_untranslated():
+    """🚨 誤殺實例：參考文獻條目的書名本來就該留原文。
+
+    2026-09-11 潘尼卡〈參考文獻〉那段被判「整段沒譯」，重譯後再被判一次，
+    連 Haiku 都退不出來——因為它永遠不會變成中文，本來就不該變。
+    招牌是西文書目慣例的**全大寫姓氏**。
+    """
+    t = ("CADOUX, J. BERGER, R. L. *The Early Christian Attitude to War*, "
+         "紐約（Seabury）。*A Rumor of Angels. Modern Society and the "
+         "Rediscovery of the Supernatural*, 紐約（Doubleday）。")
+    assert unusable_reason(t) == ""
+
+
+def test_allcaps_exemption_needs_two():
+    """一個全大寫詞不算書目——不能讓縮寫（NATO、UNESCO）就把整條判準關掉。"""
+    t = ("The forms divi, dii, and dei do not enable us to establish an essential "
+         "difference between the GODS of Greece and those of Italy, and there is "
+         "no reason to suppose that they were borrowed one from the other.")
+    assert unusable_reason(t) == "untranslated"
+
+
 def test_empty_is_not_this_gates_problem():
     assert unusable_reason("") == ""
     assert unusable_reason(None) == ""

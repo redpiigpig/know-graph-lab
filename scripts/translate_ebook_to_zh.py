@@ -657,6 +657,9 @@ _DEGENERATE_MIN_LEN = 250
 #   ② 和歌並列體例 —— 「> 縱然異邦教法入侵…　古國の如何なる教え入り來るも」（0.26）
 # ② 的佔比跟真傷（0.28–0.72）幾乎貼在一起，光看比例分不開。分得開的是**位置**：
 # 並列體例一律中譯在前，沒譯的那種一開頭就是日文。
+# 全大寫的西文詞（≥3 個字母）。西文學術書的參考文獻把姓氏寫成全大寫，
+# 出現兩個以上幾乎就是書目條目。
+_ALLCAPS_RE = re.compile(r"\b[A-ZÀ-Þ]{3,}\b")
 _JA_KANA_RE = re.compile(r"[ぁ-ゖァ-ヺ]")
 _JA_HEAD_CHARS = 12      # 「開頭」算多長：真傷的假名最晚出現在第 7 字（「## 前講においての」）
 _JA_MIN_RATIO = 0.25
@@ -686,6 +689,12 @@ def unusable_reason(text: str, source: str = "") -> str:
             return "degenerate-repetition"
     if BILINGUAL_SEP in t:
         return ""  # 並列體例，原文是刻意留的
+    if len(_ALLCAPS_RE.findall(t)) >= 2:
+        # 參考文獻條目：西文學術書的書目慣例是姓氏全大寫（CADOUX, J. BERGER, R. L.），
+        # 而書名**本來就該留原文**。這種段落拉丁字母必然遠多於漢字、虛詞密度也高，
+        # 不豁免的話會被判成「整段沒譯」，然後每次重譯都再被判一次——
+        # 2026-09-11 潘尼卡〈參考文獻〉那段就這樣卡住，連 Haiku 都退不出來。
+        return ""
     kana = len(_JA_KANA_RE.findall(t))
     if (kana / len(t) >= _JA_MIN_RATIO
             and _JA_KANA_RE.search(t[:_JA_HEAD_CHARS])):
