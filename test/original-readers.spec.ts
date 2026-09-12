@@ -274,6 +274,7 @@ describe("complete 50-lesson Hebrew private reader", () => {
       lessons: 50,
       vocabulary: 1000,
       memoryVerses: 100,
+      exercises: 500,
       scriptureChapters: 25,
       prayersArticles: 25,
       haggadahSteps: 15,
@@ -332,6 +333,45 @@ describe("complete 50-lesson Hebrew private reader", () => {
     expect(haggadah.steps).toHaveLength(15);
     expect(haggadah.steps.flatMap((step) => step.segments)).toHaveLength(199);
     expect(haggadah.steps.flatMap((step) => step.segments).every((segment) => segment.text.trim())).toBe(true);
+  });
+
+  it("serves ten translation exercises per lesson, bound to the lesson by word ordinal and carrying no Chinese", () => {
+    let total = 0;
+    for (let lessonNumber = 1; lessonNumber <= 50; lessonNumber += 1) {
+      const lesson = getHebrewFullLesson(lessonNumber);
+      const exercises = lesson!.exercises;
+      expect(exercises.items, `lesson ${lessonNumber}`).toHaveLength(10);
+      expect(exercises.itemCount).toBe(lesson!.exerciseCount);
+      expect(exercises.coverage.practised).toBe(exercises.coverage.lessonWords);
+      total += exercises.items.length;
+
+      // The join is the one thing that can be wrong while every page still
+      // looks finished: a block of ten sentences printed under a lesson whose
+      // words they do not practise.  Lesson numbers are computed by the
+      // reading plan's sort, so check the words themselves.
+      const ordinals = new Set(lesson!.vocabulary.map((word) => word.ordinal));
+      const pointedByOrdinal = new Map(lesson!.vocabulary.map((word) => [word.ordinal, word.pointed]));
+      for (const item of exercises.items) {
+        expect(item.text.trim(), `lesson ${lessonNumber} item ${item.no}`).toBeTruthy();
+        // A Chinese line beside the exercise would answer it.
+        expect(Object.keys(item)).not.toContain("chinese");
+        expect(Object.keys(item)).not.toContain("answerKeyRef");
+        expect(item.targetWords.length).toBeGreaterThan(0);
+        for (const word of item.targetWords) {
+          expect(ordinals, `lesson ${lessonNumber} item ${item.no} word ${word.ordinal}`).toContain(word.ordinal);
+          expect(pointedByOrdinal.get(word.ordinal)).toBe(word.pointed);
+        }
+        if (item.kind === "quoted") {
+          expect(item.ref, `lesson ${lessonNumber} item ${item.no}`).toBeTruthy();
+        } else {
+          expect(item.ref).toBeNull();
+        }
+      }
+      if (exercises.quotedCount < 3) {
+        expect(exercises.note, `lesson ${lessonNumber} has ${exercises.quotedCount} anchors and no note`).toBeTruthy();
+      }
+    }
+    expect(total).toBe(500);
   });
 
   it("keeps person, place and nation names out of the lesson vocabulary", () => {

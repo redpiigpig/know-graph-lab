@@ -534,7 +534,7 @@ def assemble() -> dict:
     return {
         "schemaVersion": "1.0.0",
         "title": "聖經希伯來文原文讀本",
-        "subtitle": "五十課・一千詞・一百節背誦・二十五章・二十五篇禱文與文章",
+        "subtitle": "五十課・一千詞・五百題翻譯練習・二十五章・二十五篇禱文與文章",
         "language": "Biblical Hebrew / Mishnaic Hebrew",
         "languageCode": "hbo",
         "privateUse": True,

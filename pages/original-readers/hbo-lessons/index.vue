@@ -90,10 +90,11 @@
               <h3 class="mt-4 font-serif text-lg font-semibold leading-7">{{ lesson.titleZh }}</h3>
               <p class="hebrew-title mt-1 text-lg text-stone-600" dir="rtl" lang="hbo">{{ lesson.titleHe }}</p>
               <p class="mt-3 text-xs text-stone-500">{{ lesson.ref }}<template v-if="lesson.difficulty"> · 難度 {{ lesson.difficulty }}</template></p>
-              <dl class="mt-4 grid grid-cols-3 gap-2 border-t border-stone-200 pt-4 text-center text-xs">
+              <dl class="mt-4 grid grid-cols-2 gap-2 border-t border-stone-200 pt-4 text-center text-xs">
                 <div><dt class="text-stone-400">詞彙</dt><dd class="mt-1 font-semibold">20</dd></div>
                 <div><dt class="text-stone-400">專名</dt><dd class="mt-1 font-semibold">{{ lesson.properNameCount }}</dd></div>
                 <div><dt class="text-stone-400">背誦</dt><dd class="mt-1 font-semibold">2節</dd></div>
+                <div><dt class="text-stone-400">翻譯練習</dt><dd class="mt-1 font-semibold">{{ lesson.exerciseCount }}題</dd></div>
               </dl>
               <p class="mt-4 text-[11px] leading-5 text-stone-400">{{ lesson.memoryRefs.join(' · ') }}</p>
               <p class="mt-4 text-xs font-semibold text-stone-700 group-hover:text-stone-950">開啟本課完整讀本 →</p>
@@ -135,6 +136,7 @@ interface LessonSummary {
   vocabularyCount: number;
   properNameCount: number;
   memoryRefs: string[];
+  exerciseCount: number;
   readingSegmentCount: number;
   audioStatus: AudioStatus;
 }
@@ -145,6 +147,7 @@ interface ReaderOverview {
     lessons: number;
     vocabulary: number;
     memoryVerses: number;
+    exercises: number;
     scriptureChapters: number;
     prayersArticles: number;
     haggadahSteps: number;
@@ -196,6 +199,7 @@ const stats = computed(() => reader.value ? [
   { label: "課程", value: reader.value.counts.lessons },
   { label: "核心詞", value: reader.value.counts.vocabulary },
   { label: "背誦經節", value: reader.value.counts.memoryVerses },
+  { label: "翻譯練習", value: reader.value.counts.exercises },
   { label: "完整章", value: reader.value.counts.scriptureChapters },
   { label: "禱文／文章", value: reader.value.counts.prayersArticles },
   { label: "Haggadah", value: `${reader.value.counts.haggadahSteps}步` },

@@ -98,6 +98,34 @@
           </div>
         </section>
 
+        <section class="mt-6 rounded-3xl border border-stone-300 bg-white/80 p-5 shadow-sm sm:p-7">
+          <header class="mb-4">
+            <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">EXERCISES · {{ lessonData.exercises.itemCount }} ITEMS</p>
+            <h2 class="mt-1 font-serif text-2xl font-semibold">翻譯練習（{{ lessonData.exercises.itemCount }} 題）</h2>
+            <p class="mt-2 text-xs leading-6 text-stone-500">
+              把每一句譯成繁體中文。題目只印原文——標出處的是定錨題，可對照既有譯本自我校對；標「自撰」的句子每個詞都在本課或先前課次學過。
+            </p>
+            <p class="mt-1 text-xs leading-6 text-stone-500">
+              本課 {{ lessonData.exercises.coverage.lessonWords }} 詞全數入題<template v-if="lessonData.exercises.note">；{{ lessonData.exercises.note }}</template>。
+            </p>
+          </header>
+          <ol class="grid gap-3 lg:grid-cols-2">
+            <li
+              v-for="item in lessonData.exercises.items"
+              :key="item.no"
+              class="rounded-2xl border border-stone-200 bg-[#fffdf7] p-4"
+            >
+              <div class="flex items-baseline justify-between gap-3">
+                <span class="font-mono text-xs font-semibold text-amber-800">{{ String(item.no).padStart(2, "0") }}</span>
+                <span v-if="item.kind === 'quoted'" class="font-mono text-[11px] text-stone-500">{{ item.ref }}</span>
+                <span v-else class="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] text-stone-500">自撰</span>
+              </div>
+              <p class="hebrew-exercise mt-2 break-words text-stone-900" dir="rtl" lang="hbo">{{ item.text }}</p>
+            </li>
+          </ol>
+          <p class="mt-4 text-[11px] leading-5 text-stone-400">中譯不附在題旁；定錨題的出處可據以查對既有譯本。</p>
+        </section>
+
         <section class="mt-6 overflow-hidden rounded-3xl border border-stone-300 bg-[#fffdf7] shadow-sm">
           <header class="border-b border-stone-200 p-5 sm:p-7">
             <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
@@ -199,6 +227,21 @@ interface MemoryVerse {
   matchedCount: number;
   knownCoverage: number;
 }
+interface ExerciseItem {
+  no: number;
+  kind: "quoted" | "composed";
+  /** Hebrew only: the Chinese would be the answer, so the API never sends one. */
+  text: string;
+  ref: string | null;
+}
+interface LessonExercises {
+  itemCount: number;
+  quotedCount: number;
+  composedCount: number;
+  note: string;
+  coverage: { lessonWords: number; practised: number };
+  items: ExerciseItem[];
+}
 interface ReadingSegment { id: string; ordinal: number; ref: string; text: string; sourceText: string; translationZh: string; tokens: InterlinearToken[]; translationContinuation?: boolean; translationRange?: string }
 interface ChineseBibleSource { versionCode: string; titleZh: string; variant: string; publisher: string; sourceUrl: string; rights: string }
 interface Reading {
@@ -226,6 +269,7 @@ interface LessonDetail {
   pronunciationReferences: PronunciationReference[];
   vocabulary: VocabularyEntry[];
   memoryVerses: MemoryVerse[];
+  exercises: LessonExercises;
   vocabularyCount: number;
   reading: Reading;
   previousLesson: number | null;
@@ -326,8 +370,14 @@ watch(() => route.params.lesson, () => {
 <style scoped>
 .hebrew-title,
 .hebrew-word,
+.hebrew-exercise,
 .hebrew-reading {
   font-family: "SBL Hebrew", "Noto Serif Hebrew", "Ezra SIL", serif;
+}
+.hebrew-exercise {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 2;
+  text-wrap: pretty;
 }
 .hebrew-title,
 .hebrew-word { line-height: 1.9; }

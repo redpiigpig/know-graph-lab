@@ -111,6 +111,12 @@ Two failures recur across languages and are worth carrying into any new reader:
    - Reject lists, fragments, near-duplicates, census material, and misleading verse-number joins.
    - Require exactly two unique, reviewed units per lesson.
    - Save candidate scores and the human-review decision record.
+   - **They no longer print.** Since 2026-09-11 the printed lesson carries the ten
+     translation exercises in that slot (`references/exercise-sets.md`); the memory
+     units stay in the data master and on the web reader. Hebrew is wired that way
+     as of 2026-09-12. Anything the book says about itself — cover subtitle, the
+     how-to-use cards, the colophon, the end-of-lesson checklist — has to say
+     exercises too, or the book is describing a layer it no longer contains.
 8. Build full readings, not summaries disguised as readings. Preserve the approved order. The default release contract is 25 complete Scripture chapters plus 25 complete prayers or articles; appendices do not silently replace those 50 readings.
    - **Every reading is a complete chapter or a complete piece.** Where a work is too long to print entire, cut at *its own* divisions — whole chapters, numbered sections, canons — and let the budget decide how many fit, never how much of one. A word-count excerpt stops mid-argument. Record what was printed: 「第 1–4 節（完整，共 33 節）」.
    - Divisions are not always punctuated (`1 Excitatio mentis…`), section numbers are not always tight against their point (`2 . Haec…`), and the edition's own headings sit inside the OCR — including the title of the *next* reading, which is where this one ends.

@@ -33,6 +33,9 @@ INTERLINEAR_PATH = Path(
     os.environ.get("HBO_INTERLINEAR")
     or ROOT / "output" / "source-cache" / "original-readers" / "hebrew-full" / "interlinear.json"
 )
+EXERCISE_PATH = (
+    ROOT / "output" / "source-cache" / "original-readers" / "hebrew-full" / "exercise-set.json"
+)
 OUTPUT_DIR = ROOT / "output" / "original-readers"
 OUTPUT_PATH = OUTPUT_DIR / "hebrew-original-reader-50-lessons.docx"
 
@@ -56,7 +59,10 @@ H2_SIZE_PT = 14
 H3_SIZE_PT = 12.5
 TABLE_SIZE_PT = 9.6
 HEBREW_BODY_PT = 15
-HEBREW_MEMORY_PT = 16
+# The exercise sentences are set below running size: ten of them share a page
+# with a ruled answer line each, and they are read one at a time rather than
+# followed continuously.
+EXERCISE_HEBREW_PT = 13.5
 PARA_AFTER_PT = 6
 
 # Interlinear layer.  Every running-text word carries a Traditional-Chinese
@@ -517,7 +523,7 @@ def configure(document: Document) -> None:
 
     props = document.core_properties
     props.title = "聖經希伯來文原文讀本：五十課"
-    props.subject = "1,000詞、100節背誦、25章、25篇禱文／文章與完整逾越節禮文"
+    props.subject = "1,000詞、500題翻譯練習、25章、25篇禱文／文章與完整逾越節禮文"
     props.author = "Know Graph Lab"
     props.keywords = "Biblical Hebrew, niqqud, WLC, BBH2, Haggadah, JIS B5"
 
@@ -825,10 +831,10 @@ def add_cover(document: Document, data: dict) -> None:
 def add_front_matter(document: Document, data: dict) -> None:
     add_label(document, "Reader architecture")
     document.add_heading("這一本怎麼使用", level=1)
-    add_body(document, "全書五十課。每課固定收二十個詞、兩節背誦經文與一篇完整主讀文；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
+    add_body(document, "全書五十課。每課固定收二十個詞、十題翻譯練習與一篇完整主讀文；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
     cards = [
         ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
-        ("2", "背兩節經文", "每天先聽、再讀、最後遮住中文默寫；五十課恰好一百節。"),
+        ("2", "做十題翻譯", "原文譯繁中，每課十題、本課二十詞全數入題；定錨題取自經典原句，其餘依已學詞彙自撰，早期課次可用原句不足時全部自撰。"),
         ("3", "讀完整原文", "聖經正文保留 WLC 母音點與 cantillation；禱文及文章保留或明示編者附點。"),
     ]
     table = document.add_table(rows=1, cols=3)
@@ -944,19 +950,115 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
                 set_rtl(p)
 
 
-def add_memory(document: Document, lesson: dict) -> None:
-    document.add_heading("本課背誦經文", level=2)
-    for item in lesson["memoryVerses"]:
-        reference = document.add_paragraph()
-        reference.paragraph_format.space_before = Pt(4)
-        reference.paragraph_format.space_after = Pt(2)
-        set_run_font(reference.add_run(f"背誦 {item['slot']}　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
-        set_run_font(reference.add_run(item["ref"]), FONT_TRANSLIT, CAPTION_PT, color=MUTED)
-        set_keep(reference, next_paragraph=True)
-        tokens = align_glosses(item["text"], f"bible:{item['ref']}")
-        if tokens is None:
-            raise SystemExit(f"逐詞對譯缺背誦經文 {item['ref']}")
-        add_interlinear_unit(document, tokens, sense=item["translationZh"])
+def bind_exercises(data: dict) -> dict[int, dict]:
+    """Bind each lesson's ten exercises to the lesson by vocabulary ordinal.
+
+    The exercise file carries its own ``lesson`` number, and joining on it would
+    be joining on something a builder computed: the reading plan sorts by
+    difficulty, so a lesson number is an output, and a resort would silently
+    move every exercise one lesson without changing a single count.  What both
+    files really share is the thousand-word list — each exercise records the
+    ordinal, pointed form and Strong's number of every lesson word it practises.
+    Bind on that, check the spelling agrees, and refuse rather than skip when
+    it does not.
+    """
+    ordinals = {
+        word["ordinal"]: (lesson["lesson"], word["pointed"], word.get("strong"))
+        for lesson in data["lessons"]
+        for word in lesson["vocabulary"]
+    }
+    payload = json.loads(EXERCISE_PATH.read_text(encoding="utf-8"))
+    if payload.get("direction") != "original-to-chinese":
+        raise SystemExit(f"{EXERCISE_PATH.name} 的 direction 不是 original-to-chinese")
+    bound: dict[int, dict] = {}
+    for block in payload["lessons"]:
+        hosts: set[int] = set()
+        outside = 0
+        for item in block["items"]:
+            for word in item.get("targetWords") or []:
+                found = ordinals.get(word["ordinal"])
+                if found is None:
+                    # A layout proof loads a handful of lessons; a word outside
+                    # that subset is expected.  A word outside the whole book is
+                    # not, and is caught below by the all-or-nothing check.
+                    outside += 1
+                    continue
+                host, pointed, strong = found
+                hosts.add(host)
+                if word["pointed"] != pointed:
+                    raise SystemExit(
+                        f"練習題第 {block['lesson']} 課的第 {word['ordinal']} 詞寫作 {word['pointed']}，"
+                        f"詞表寫作 {pointed}：兩邊對的不是同一個詞"
+                    )
+                if strong and word.get("strongs") and strong not in word["strongs"]:
+                    raise SystemExit(
+                        f"練習題第 {block['lesson']} 課的第 {word['ordinal']} 詞 Strong 碼是 "
+                        f"{word['strongs']}，詞表是 {strong}：同形異詞"
+                    )
+        if not hosts:
+            continue  # every word of this block is outside the loaded subset
+        if len(hosts) > 1 or outside:
+            raise SystemExit(
+                f"練習題第 {block['lesson']} 課橫跨課次 {sorted(hosts)}"
+                f"{'，另有 %d 個詞不在本書詞表內' % outside if outside else ''}"
+            )
+        host = hosts.pop()
+        if host in bound:
+            raise SystemExit(f"第 {host} 課被兩組練習題認領")
+        bound[host] = block
+    return bound
+
+
+def add_exercises(document: Document, block: dict) -> None:
+    """The ten-item translation exercise, in the slot the memory verses held.
+
+    Only the Hebrew is printed.  A Chinese line beside the sentence would be the
+    answer to the question the exercise asks, so the anchored items print their
+    reference and the composed ones print that they are composed; neither prints
+    a translation.  See references/exercise-sets.md.
+    """
+    document.add_heading(f"本課翻譯練習（{len(block['items'])}題）", level=2)
+    intro = add_body(
+        document,
+        "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，可對照既有譯本自我校對；"
+        "標「自撰」的句子每個詞都在本課或先前課次學過。",
+        size=CAPTION_PT,
+        color=MUTED,
+    )
+    intro.paragraph_format.space_after = Pt(3)
+    set_keep(intro, next_paragraph=True)
+    coverage = block.get("coverage") or {}
+    if coverage.get("practised") == coverage.get("lessonWords"):
+        note_text = f"本課 {coverage['lessonWords']} 詞全數入題。"
+    else:
+        note_text = f"本課 {coverage.get('practised')}／{coverage.get('lessonWords')} 詞入題。"
+    if (block.get("note") or "").strip():
+        note_text = f"{note_text}{block['note'].strip()}。"
+    note = add_body(document, note_text, size=CAPTION_PT - 0.4, color=MUTED)
+    note.paragraph_format.space_after = Pt(5)
+    set_keep(note, next_paragraph=True)
+
+    for item in block["items"]:
+        head = document.add_paragraph()
+        head.paragraph_format.space_before = Pt(3)
+        head.paragraph_format.space_after = Pt(1)
+        set_run_font(head.add_run(f"{item['no']:02d}　"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
+        if item["kind"] == "quoted":
+            set_run_font(head.add_run(item["ref"]), FONT_TRANSLIT, CAPTION_PT, color=MUTED)
+        else:
+            set_run_font(head.add_run("自撰"), FONT_ZH, CAPTION_PT - 0.4, color=MUTED)
+        set_keep(head, next_paragraph=True)
+        hebrew = add_hebrew(
+            document,
+            item["text"],
+            size=EXERCISE_HEBREW_PT,
+            line_spacing=1.5,
+            space_after=2,
+        )
+        set_keep(hebrew, next_paragraph=True)
+        answer = document.add_paragraph(" ")
+        answer.paragraph_format.space_after = Pt(5)
+        paragraph_rule(answer, color=RULE, size="3")
 
 
 def add_bible_reading(document: Document, reading: dict) -> None:
@@ -1061,7 +1163,7 @@ def add_practice(document: Document, lesson: dict, *, page_break_before=False) -
     reading_title = lesson["title"]
     prompts = (
         "不看中文，準確朗讀二十個附點詞；說出每個詞的主要義。",
-        "把兩節背誦經文各抄寫一次，圈出母音或重音與預期不同的詞。",
+        "做完本課十題翻譯練習；定錨題譯完後對照既有譯本，自撰題圈出沒把握的詞形。",
         f"讀完〈{reading_title}〉全文；在主讀文中標出本課詞彙。",
         "選三個動詞辨認詞幹／時式，或選三個名詞辨認性、數、狀態。",
         "登入線上讀本跟讀；沒有校訂音檔時只按課本音標自讀，不啟用現代希伯來文 TTS。",
@@ -1292,7 +1394,7 @@ def add_back_indices(document: Document, data: dict) -> None:
     heading.paragraph_format.page_break_before = True
     for text in (
         "50課；每課固定20詞；總計1,000詞。",
-        "每課2節背誦；總計100節。",
+        "每課10題原文譯繁中練習；總計500題，本課二十詞全數入題。",
         "第1–25課為25個完整聖經章；第26–50課為25篇完整禱文或文章。",
         "冊末逾越節禮文按完整流程另列，不抵充25篇；其後另附數字、親屬、曆法與分類專名四張對照表。",
         "聖經希伯來文保留完整母音點與 cantillation；全部詞彙列 BBH2 課本式音標。",
@@ -1317,10 +1419,14 @@ def build(data: dict) -> Path:
     add_toc(document, data)
 
     start_section(document, RUNNING_TITLE, lesson_tag=True)
+    exercises = bind_exercises(data)
     for index, lesson in enumerate(data["lessons"]):
         add_lesson_opener(document, lesson, page_break_before=index > 0)
         add_vocabulary(document, lesson)
-        add_memory(document, lesson)
+        block = exercises.get(lesson["lesson"])
+        if block is None:
+            raise SystemExit(f"第 {lesson['lesson']} 課沒有練習題：{EXERCISE_PATH.name} 對不上本課詞表")
+        add_exercises(document, block)
         if lesson["reading"]["kind"] == "bible_chapter":
             add_bible_reading(document, lesson["reading"])
         else:
