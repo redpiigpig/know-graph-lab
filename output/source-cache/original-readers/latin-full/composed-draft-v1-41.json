@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 41, "author": "opus-5-hand-written",
+  "note": "dēposcō 武加大沒有字形。addīcō 只剩 Addixistis 一形，avē! 只有 Ave。",
+  "sentences": [
+    {"latin": "reposita est et vade", "chinese": "它被放回了，你去吧。", "targets": ["repono", "sum", "vado"]},
+    {"latin": "Addixistis filiam extra", "chinese": "你們在外面定了那女兒的罪。", "targets": ["addico", "filia", "extra"]},
+    {"latin": "Ave, dives circa templum", "chinese": "你好，聖殿周圍的富人。", "targets": ["ave", "dives", "circa", "templum"]},
+    {"latin": "contradicunt et cucurrit", "chinese": "他們反駁，而他跑開了。", "targets": ["contradico", "curro"]},
+    {"latin": "defendit a diabolo", "chinese": "他抵禦了魔鬼。", "targets": ["defendo", "a", "diabolus"]},
+    {"latin": "dolor et effusione", "chinese": "以痛苦與傾流。", "targets": ["dolor", "effusio"]},
+    {"latin": "dives filia circa dolorem", "chinese": "富有的女兒在痛苦周圍。", "targets": ["dives", "filia", "circa", "dolor"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 42, "author": "opus-5-hand-written",
+  "note": "succurrō 與 venia 武加大沒有字形。imperātor 只認詞幹，honor 沒有屬格 honoris。",
+  "sentences": [
+    {"latin": "honorem patriæ poscit", "chinese": "他要求祖國的榮譽。", "targets": ["honor", "patria", "posco"]},
+    {"latin": "oblatio occurrit in patria", "chinese": "奉獻在祖國迎面而來。", "targets": ["oblatio", "occurro", "in", "patria"]},
+    {"latin": "Salve, imperate perpetuo", "chinese": "敬禮，願你永遠統領。", "targets": ["salve", "imperator", "perpetuo"]},
+    {"latin": "sive solemnis an unitatem", "chinese": "或是隆重的，還是那合一。", "targets": ["sive", "solemnis", "an", "unitas"]},
+    {"latin": "Prædixi acquisitionem in patria", "chinese": "我預言了祖國中的獲得。", "targets": ["praedico", "acquisitio", "in", "patria"]},
+    {"latin": "perpetuum honorem poscis", "chinese": "你要求永久的榮譽。", "targets": ["perpetuo", "honor", "posco"]},
+    {"latin": "occurrit oblatio et unitatem", "chinese": "奉獻與合一都迎面而來。", "targets": ["occurro", "oblatio", "unitas"]}
+  ]
+}

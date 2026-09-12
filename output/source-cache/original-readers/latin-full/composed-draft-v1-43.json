@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 43, "author": "opus-5-hand-written",
+  "note": "exspīrō 與 patrōnus 武加大沒有字形。martyr 只剩屬格複數 martyrum，debitor 沒有屬格複數。",
+  "sentences": [
+    {"latin": "consuetudo et debitores", "chinese": "那習俗與那些欠債者。", "targets": ["consuetudo", "debitor"]},
+    {"latin": "doctor dogma spiritualis", "chinese": "教師、教義、屬靈的。", "targets": ["doctor", "dogma", "spiritualis"]},
+    {"latin": "fortis iter luciferum", "chinese": "強者通往晨星的旅程。", "targets": ["fortis", "iter", "lucifer"]},
+    {"latin": "martyrum peregrinantes quid", "chinese": "殉道者們的旅人們，為什麼呢。", "targets": ["martyr", "peregrinantis", "quid"]},
+    {"latin": "præstolatur et spirat", "chinese": "他等待著，並且呼吸。", "targets": ["praestolor", "spiro"]},
+    {"latin": "quid spirat doctor", "chinese": "那教師為何呼吸。", "targets": ["quid", "spiro", "doctor"]},
+    {"latin": "iter fortium et dogma", "chinese": "強者們的旅程與那教義。", "targets": ["iter", "fortis", "dogma"]}
+  ]
+}
