@@ -197,7 +197,9 @@ def fallback_category(title: str, author: str, filename: str = "") -> str | None
         "eliade", "wilfred cantwell", "van der leeuw", "söderblom", "soderblom",
         "chantepie", "kristensen", "joachim wach", "rudolf otto", "troeltsch",
         "pargament", "levy-bruhl", "lévy-bruhl",
-        "伊利亞德", "伊利亚德", "以利亞德", "以利亚德",   # Eliade 站上並存兩種譯名
+        # 🚨 Eliade 的中譯名站上並存三種：簡體譯本用伊利亞德／以利亞德，
+        # 商周的繁體譯本用「默西亞‧埃里亞德」。查作者一定要三種都認。
+        "伊利亞德", "伊利亚德", "以利亞德", "以利亚德", "埃里亞德", "埃里亚德",
         "范德列烏", "范德列乌", "瓦赫", "奧托", "奥托", "瑟德布盧姆", "瑟德布卢姆",
     ]
     religious_studies_cn = [

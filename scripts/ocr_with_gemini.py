@@ -43,6 +43,32 @@ try:
 except ImportError:
     _HAS_JSON_REPAIR = False
 
+
+def parse_pages_json(text) -> list:
+    """Gemini 回的 `{"pages":[…]}` → pages list；壞掉就盡量搶救，搶不回來回 []。
+
+    🚨 兩種都要接得住：**截斷**（撞輸出 token 上限，尾巴缺一半）與**非法跳脫**
+    （模型吐出 `\\d` 這種 JSON 不認的序列）。後者尤其陰險——整份 JSON 只有一個字元
+    有問題，`json.loads` 卻是全份拒收，於是 527 頁的書一頁都拿不到。
+
+    分批路徑原本沒有這道搶救（只有單次路徑有），任何一批壞掉就整本陣亡。
+    """
+    if not text:
+        return []
+    data = None
+    try:
+        data = json.loads(text)
+    except Exception:
+        if _HAS_JSON_REPAIR:
+            try:
+                data = _json_repair.loads(text)
+            except Exception:
+                data = None
+    if not isinstance(data, dict):
+        return []
+    pages = data.get("pages")
+    return pages if isinstance(pages, list) else []
+
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -968,8 +994,11 @@ def process_one(client, book, src_path, model, max_retries=3):
                             _out.save(part)
                         try:
                             rr = _ocr_pdf(part)
-                            pj = json.loads(rr.text) if rr.text else {}
-                            got = pj.get("pages", []) or []
+                            # 壞掉的那一批要搶救，不能讓它拖垮整本（見 parse_pages_json）
+                            got = parse_pages_json(rr.text)
+                            if not got and (rr.text or "").strip():
+                                print(f"    ⚠ batch {bi+1}/{nb} 的 JSON 救不回來，本批 0 頁",
+                                      flush=True)
                             for off, pg in enumerate(got):
                                 if isinstance(pg, dict):
                                     pg["page"] = lo + off + 1     # 還原成全書頁碼
