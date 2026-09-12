@@ -100,18 +100,49 @@
               </button>
             </div>
 
-            <ul v-if="open === a.slug + ':art'" class="mt-3 space-y-2">
-              <li v-for="(t, j) in arts[a.slug].items" :key="j" class="text-xs text-gray-600 leading-relaxed">
-                <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-gray-400 tabular-nums whitespace-nowrap">{{ t.date }}</span>
-                  <span class="text-sky-700 whitespace-nowrap">{{ t.journal }}</span>
-                  <span class="text-gray-400">{{ t.issue }}，頁 {{ t.pages }}</span>
-                  <span v-if="t.fulltext" class="px-1.5 rounded bg-sky-50 text-sky-700">華藝有全文</span>
-                </div>
-                <div class="text-gray-800 break-words">{{ t.title }}</div>
-                <div v-if="t.authors?.length" class="text-gray-400">{{ t.authors.join('、') }}</div>
-              </li>
-            </ul>
+            <div v-if="open === a.slug + ':art'" class="mt-3">
+              <p v-if="arts[a.slug].precision != null"
+                 class="text-xs mb-3 px-3 py-2 rounded-lg leading-relaxed break-words"
+                 :class="precClass(arts[a.slug].precision!)">
+                抽樣複核：隨機抽 {{ arts[a.slug].sample }} 筆逐筆判讀，<strong>其中
+                {{ Math.round(arts[a.slug].precision! * 100) }}% 真的屬於本區</strong>。
+                <span v-if="arts[a.slug].weak_terms?.length">
+                  假命中集中在「{{ arts[a.slug].weak_terms!.join('」「') }}」這幾個詞上，
+                  只靠這些詞命中的 {{ arts[a.slug].weak_count }} 筆另列於下方。
+                </span>
+              </p>
+              <ul class="space-y-2">
+                <li v-for="(t, j) in strongOf(a.slug)" :key="'s' + j" class="text-xs text-gray-600 leading-relaxed">
+                  <div class="flex items-baseline gap-2 flex-wrap">
+                    <span class="text-gray-400 tabular-nums whitespace-nowrap">{{ t.date }}</span>
+                    <span class="text-sky-700 whitespace-nowrap">{{ t.journal }}</span>
+                    <span class="text-gray-400">{{ t.issue }}，頁 {{ t.pages }}</span>
+                    <span v-if="t.fulltext" class="px-1.5 rounded bg-sky-50 text-sky-700">華藝有全文</span>
+                  </div>
+                  <div class="text-gray-800 break-words">{{ t.title }}</div>
+                  <div v-if="t.authors?.length" class="text-gray-400">{{ t.authors.join('、') }}</div>
+                </li>
+              </ul>
+              <div v-if="weakOf(a.slug).length" class="mt-5 pt-4 border-t border-dashed border-amber-200">
+                <p class="text-xs text-amber-700 mb-2 break-words">
+                  以下 {{ weakOf(a.slug).length }} 筆<strong>只靠低精確率的詞命中</strong>，
+                  假命中多半落在這裡。保留而不刪除，是因為刪掉會一併犧牲召回率，而且看不出來漏了什麼。
+                </p>
+                <ul class="space-y-2 opacity-70">
+                  <li v-for="(t, j) in weakOf(a.slug)" :key="'w' + j" class="text-xs text-gray-600 leading-relaxed">
+                    <div class="flex items-baseline gap-2 flex-wrap">
+                      <span class="text-gray-400 tabular-nums whitespace-nowrap">{{ t.date }}</span>
+                      <span class="text-sky-700 whitespace-nowrap">{{ t.journal }}</span>
+                      <span class="text-gray-400">{{ t.issue }}，頁 {{ t.pages }}</span>
+                      <span v-if="t.hit?.length" class="px-1.5 rounded bg-amber-50 text-amber-700">
+                        命中「{{ t.hit.join('」「') }}」</span>
+                    </div>
+                    <div class="text-gray-800 break-words">{{ t.title }}</div>
+                    <div v-if="t.authors?.length" class="text-gray-400">{{ t.authors.join('、') }}</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <ul v-if="open === a.slug + ':bib'" class="mt-3 space-y-2.5">
               <li v-for="(b, i) in a.items" :key="i" class="text-xs text-gray-600 leading-relaxed">
                 <div class="flex items-baseline gap-2 flex-wrap">
@@ -160,10 +191,16 @@ interface Area {
 interface Art {
   journal: string; title: string; authors: string[]
   issue: string; date: string; pages: string; fulltext: boolean
+  hit?: string[]; weak?: boolean
+}
+interface ArtArea {
+  count: number; items: Art[]
+  weak_terms?: string[]; weak_count?: number
+  sample?: number; precision?: number | null
 }
 const areas = ref<Area[]>([])
 const langs = ref<Record<string, number> | null>(null)
-const arts = ref<Record<string, { count: number; items: Art[] }>>({})
+const arts = ref<Record<string, ArtArea>>({})
 const pending = ref(true)
 const open = ref('')
 const toggle = (slug: string, kind: 'bib' | 'art') => {
@@ -175,6 +212,12 @@ const LANGS: Record<string, string> = {
   en: '英', ja: '日', zh: '中', fr: '法', de: '德', ko: '韓',
 }
 const langLabel = (k: string) => LANGS[k] ?? k
+
+const strongOf = (slug: string) => (arts.value[slug]?.items ?? []).filter(t => !t.weak)
+const weakOf = (slug: string) => (arts.value[slug]?.items ?? []).filter(t => t.weak)
+const precClass = (p: number) => p >= 0.9
+  ? 'bg-emerald-50 text-emerald-800'
+  : p >= 0.7 ? 'bg-amber-50 text-amber-800' : 'bg-rose-50 text-rose-800'
 
 const badgeClass = (s: string) => s === 'library'
   ? 'bg-violet-50 text-violet-700' : 'bg-amber-50 text-amber-700'
@@ -188,7 +231,7 @@ onMounted(async () => {
     areas.value = d?.areas ?? []
     langs.value = d?.langs ?? null
     try {
-      const a = await $fetch<{ areas: Record<string, { count: number; items: Art[] }> }>(
+      const a = await $fetch<{ areas: Record<string, ArtArea> }>(
         '/content/research-data/buddhist-studies/articles.json', { responseType: 'json' })
       arts.value = a?.areas ?? {}
     } catch { arts.value = {} }

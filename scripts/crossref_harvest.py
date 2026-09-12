@@ -56,6 +56,19 @@ Ruprecht、De Gruyter、Brill、Peeters、Aschendorff）都繳 DOI，而且**題
    會留下一個非空的半截檔，下一輪就當成抓好了跳過——那一刊從此永遠是殘的而且
    不報錯。實測踩過一次。現在一律先寫 `.jsonl.part` 再 `replace`。
 
+5. 🚨🚨 **`language` 欄不可信，不要拿它算語言分布。** 這是本支最危險的一個坑，
+   因為算出來的數字整齊、不報錯、看起來完全正常。2026-09-12 實測：
+
+     《Praktische Theologie》（德語刊）　　　　　3,489 篇中 3,145 篇標成 en
+     《Zeitschrift für Pädagogik und Theologie》　606 篇全部標成 en
+     《ARCHIV FÜR KATHOLISCHES KIRCHENRECHT》　 8,828 篇全部未標
+     《Zeitschrift für Theologie und Kirche》　　 500 篇中 495 篇正確標 de
+
+   原因是 language 由出版社自行登記，De Gruyter 一系大量把德文論文登記為 en。
+   全庫加總的結果是「德 2,667」——而真正的德語篇數至少是它的五倍以上。
+   **要判語言請從刊物層下手**（刊名、出版社、ISSN 所屬國），不要從篇目層的欄位。
+   索引裡那份分布保留著，但必須連同這個警告一起呈現，不可單獨引用。
+
 ## 存放
 
   期刊清單  `data/research-data/crossref-journals.json`（進版控）
@@ -336,19 +349,36 @@ def build_index(journals: list[dict]) -> None:
         rows.append({k: j[k] for k in ("issn", "title", "publisher", "in_doaj")}
                     | {"articles": n})
     rows.sort(key=lambda x: -x["articles"])
+    # 刊物層的非英語判斷：刊名帶非 ASCII 字母就算。粗但比篇目的 language 欄可靠，
+    # 理由見檔頭第 5 條。
+    nonascii = re.compile(r"[^\x00-\x7f]")
+    non_en = [r for r in rows if nonascii.search(r["title"] or "")]
     INDEX.parent.mkdir(parents=True, exist_ok=True)
     INDEX.write_text(json.dumps({
         "source": "Crossref REST API（中繼資料 CC0，不需機構身分）",
         "why": "IxTheo 整站擋在 proof-of-work 驗證後面、K10plus 公開 SRU 沒有單篇層，"
                "非英語神學期刊這個缺口改由 Crossref 補。詳見腳本檔頭。",
         "journals": len(rows), "articles": articles,
+        "nonenglish_journals": len(non_en),
+        "nonenglish_articles": sum(r["articles"] for r in non_en),
         "languages": dict(sorted(langs.items(), key=lambda x: -x[1])),
+        "languages_warning":
+            "🚨 這份分布是出版社自行登記的 language 欄，實測不可信，不可單獨引用："
+            "《Praktische Theologie》3,489 篇中 3,145 篇標成 en、"
+            "《Zeitschrift für Pädagogik und Theologie》606 篇全標 en、"
+            "《ARCHIV FÜR KATHOLISCHES KIRCHENRECHT》8,828 篇全部未標，"
+            "只有《Zeitschrift für Theologie und Kirche》正確標 de。"
+            "真正的德語篇數至少是表上「de」的五倍以上。"
+            "要判語言請看刊物層（nonenglish_journals 是按刊名判的下界）。",
         "rows": rows,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     top = "／".join(f"{k} {v:,}" for k, v in
                     sorted(langs.items(), key=lambda x: -x[1])[:8])
     print(f"期刊 {len(rows)} 種、篇目 {articles:,} 篇 → {INDEX}")
-    print(f"語言分布：{top}")
+    print(f"刊名非 ASCII（非英語刊的下界）：{len(non_en)} 種／"
+          f"{sum(r['articles'] for r in non_en):,} 篇")
+    print(f"篇目 language 欄的分布：{top}")
+    print("🚨 上面那行不可單獨引用——language 由出版社登記，實測大量誤標，見檔頭第 5 條")
 
 
 def main() -> int:

@@ -70,6 +70,50 @@ NAMES = {"method": "神學方法論", "history": "二十世紀神學史", "bibli
          "secular": "世俗神學", "narrative": "敘事神學", "liberation": "解放神學",
          "gender": "性別神學", "contextual": "各地的神學", "global": "全球神學的嘗試"}
 
+# 🚨 低精確率的詞。**不要把這些詞從 TERMS 刪掉**——刪掉會犧牲召回率，
+# 而且從結果上完全看不出來（清單變乾淨了，但你不知道漏了什麼）。
+# 正解是留在詞表裡照收，只把「命中的全是弱詞」那些篇目標 weak，頁面上分開呈現。
+# 依據是 2026-09-12 的抽樣（見 PRECISION），每一條後面是它為什麼弱。
+WEAK = {
+    "practical": {
+        "禮儀",      # 幾乎全部命中「中國禮儀之爭」，那是宣教史不是實踐神學
+        "崇拜",      # 命中「祖靈崇拜」「偶像崇拜」
+        "宗教教育",  # 命中政教關係與宗教教育法制的文章
+    },
+    "biblical": {
+        "聖經神學",  # 🚨 最典型的一個：命中長老教會「大專聖經神學研究班」的活動報導，
+                     # 20 筆抽樣裡有 7 筆是這個。不是「聖經神學」這門學科。
+    },
+    "narrative": {
+        "敘事",      # 聖經敘事批判、敘事治療、文學敘事研究、身分敘事全會命中，
+                     # 與敘事神學是四回事
+    },
+    "contextual": {
+        "原住民",    # 🚨 大量命中原住民社會議題的評論與報導，不是處境神學
+        "族群",      # 命中「熟齡族群」「族群融合」
+    },
+    "global": {
+        "全球化",    # 命中「全球化與台灣」「全球化傳染病」這類社會評論
+    },
+    "systematics": {
+        "神論",      # 會命中景教文獻《一神論》
+    },
+    "liberal": {
+        "現代主義",  # 會命中「後現代主義」
+    },
+}
+
+# 2026-09-12 的抽樣結果：每區隨機抽 20 筆（母體不足 20 的全抽）逐筆判讀。
+# precision = 真的屬於該區的比例。這組數字要出現在頁面上——本項工作的成果
+# 不是「清單變乾淨」，而是「讀者知道這份清單有多不乾淨」。
+PRECISION = {
+    "history": (20, 1.00), "gender": (20, 1.00), "liberation": (7, 1.00),
+    "secular": (6, 1.00), "systematics": (20, 0.95), "method": (20, 0.90),
+    "liberal": (5, 0.80), "global": (20, 0.75), "practical": (20, 0.70),
+    "biblical": (20, 0.65), "contextual": (20, 0.35), "narrative": (20, 0.35),
+}
+SAMPLED_ON = "2026-09-12"
+
 AUTHOR_EN = re.compile(r"\s*\([^)]*\)\s*$")
 
 
@@ -84,7 +128,7 @@ def main() -> int:
     args = ap.parse_args()
 
     hits: dict[str, list[dict]] = {k: [] for k in TERMS}
-    total = scanned = 0
+    total = scanned = weak_n = 0
     missing = []
     for slug in JOURNALS:
         f = TOC / f"{slug}.json"
@@ -97,25 +141,37 @@ def main() -> int:
             scanned += 1
             title = a.get("title") or ""
             for area, words in TERMS.items():
-                if any(w in title for w in words):
-                    hits[area].append({
-                        "journal": jname, "slug": slug,
-                        "title": title,
-                        "authors": [clean_author(x) for x in (a.get("authors") or [])],
-                        "issue": a.get("volIssue") or a.get("issueLabel"),
-                        "date": a.get("date"), "pages": a.get("pages"),
-                        "fulltext": bool(a.get("fulltext")),
-                        "docId": a.get("docId"),
-                    })
-                    total += 1
+                matched = [w for w in words if w in title]
+                if not matched:
+                    continue
+                # 命中的詞全部都在 weak 清單裡，才標 weak：只要有一個強詞命中，
+                # 這一筆就照常收（見檔頭「不要把詞表改成只留高精確率的詞」那一段）。
+                weak = bool(matched) and all(w in WEAK.get(area, ()) for w in matched)
+                hits[area].append({
+                    "journal": jname, "slug": slug,
+                    "title": title,
+                    "authors": [clean_author(x) for x in (a.get("authors") or [])],
+                    "issue": a.get("volIssue") or a.get("issueLabel"),
+                    "date": a.get("date"), "pages": a.get("pages"),
+                    "fulltext": bool(a.get("fulltext")),
+                    "docId": a.get("docId"),
+                    "hit": matched,
+                    "weak": weak,
+                })
+                total += 1
+                weak_n += weak
     if missing:
         print(f"⚠️ 這幾刊還沒抓篇目：{'、'.join(missing)}（跑 press_airiti.py --toc <slug>）")
 
-    print(f"掃過 {scanned:,} 篇，命中 {total:,} 筆（同一篇可落多區）")
+    print(f"掃過 {scanned:,} 篇，命中 {total:,} 筆（同一篇可落多區），其中只靠弱詞命中 {weak_n:,} 筆")
     for area, rows in hits.items():
         rows.sort(key=lambda r: (r.get("date") or ""), reverse=True)
         ft = sum(1 for r in rows if r["fulltext"])
-        print(f"  {NAMES[area]:12s} {len(rows):>4} 篇，其中華藝有全文 {ft}")
+        wk = sum(1 for r in rows if r["weak"])
+        pr = PRECISION.get(area, (0, None))[1]
+        prs = f"　抽樣精確率 {pr:.0%}" if pr is not None else ""
+        print(f"  {NAMES[area]:12s} {len(rows):>4} 篇（弱詞 {wk:>3}）"
+              f"，其中華藝有全文 {ft}{prs}")
         if args.check and rows:
             for r in rows[:3]:
                 print(f"        {r['date']}　{r['journal']}　{r['title'][:40]}")
@@ -125,11 +181,20 @@ def main() -> int:
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({
-        "note": "從既有華藝篇目按關鍵詞粗篩出的候選清單，一篇可落多區，未經人工複核",
+        "note": "從既有華藝篇目按關鍵詞粗篩出的候選清單，一篇可落多區，未經逐筆複核；"
+                "各區的 precision 是抽樣量測值，weak 標記的是只靠低精確率的詞命中的篇目",
         "scanned": scanned,
+        "sampled_on": SAMPLED_ON,
         "journals": JOURNALS,
-        "areas": {a: {"name": NAMES[a], "terms": TERMS[a], "count": len(r), "items": r}
-                  for a, r in hits.items()},
+        "areas": {a: {
+            "name": NAMES[a], "terms": TERMS[a],
+            "weak_terms": sorted(WEAK.get(a, ())),
+            "count": len(r),
+            "weak_count": sum(1 for x in r if x["weak"]),
+            "sample": PRECISION.get(a, (0, None))[0],
+            "precision": PRECISION.get(a, (0, None))[1],
+            "items": r,
+        } for a, r in hits.items()},
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n→ {OUT}")
     return 0

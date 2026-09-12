@@ -69,6 +69,43 @@ NAMES = {"method": "佛學研究方法論", "textual": "經典批判與詮釋", 
          "gender": "性別研究", "social": "社會研究", "institution": "制度研究",
          "doctrine": "教理研究"}
 
+# 🚨 低精確率的詞。**不要把這些詞從 TERMS 刪掉**——刪掉會犧牲召回率，
+# 而且從結果上完全看不出來（清單變乾淨了，但你不知道漏了什麼）。
+# 正解是留在詞表裡照收，只把「命中的全是弱詞」那些篇目標 weak，頁面上分開呈現。
+# 依據是 2026-09-12 的抽樣（見 PRECISION）。
+WEAK = {
+    "textual": {
+        "阿含",      # 🚨 最嚴重的一個。本區要的是文獻學（校勘、對勘、寫本），
+                     # 而「阿含」會把導讀、選集序、研修營側記、講記摘編全部撈進來。
+                     # 20 筆抽樣裡有 11 筆是這類，本區精確率因此只有 45%。
+    },
+    "social": {
+        "慈善",      # 會命中「花蓮慈善寺」——那是寺名不是慈善事業
+    },
+    "institution": {
+        "居士",      # 多半是稱謂（「覆清泉居士」「郭朋老居士生平」），不是居士制度
+        "道場",      # 會命中修辭用法（「人間道場」）與圖像學名目（「毗盧道場」）
+    },
+    "history": {
+        "傳播",      # 會命中「大愛電視的傳播理念」這類傳播學文章
+    },
+}
+
+# 2026-09-12 的抽樣：每區隨機抽 20 筆逐筆判讀，precision = 真的屬於該區的比例。
+# 這組數字要出現在頁面上——本項工作的成果不是「清單變乾淨」，
+# 而是「讀者知道這份清單有多不乾淨」。
+PRECISION = {
+    "doctrine": (20, 1.00), "gender": (20, 1.00), "method": (20, 0.90),
+    "history": (20, 0.85), "social": (20, 0.80), "institution": (20, 0.75),
+    "textual": (20, 0.45),
+}
+SAMPLED_ON = "2026-09-12"
+
+# ⚠️ social 區另有一個不是「弱詞」而是「語料本身」的問題：本區 391 筆裡絕大多數
+# 命中的是「人間佛教」，因為所掃的刊物以弘誓與佛光系統為主，人間佛教是它們的
+# 自我標籤而不是一個社會議題。抽樣中的假命中（禪七法談、治心十法）都屬這一類。
+# 這不能靠標弱詞解決，要靠擴充刊物來源——記在頁面的說明裡。
+
 AUTHOR_EN = re.compile(r"\s*\([^)]*\)\s*$")
 
 
@@ -83,7 +120,7 @@ def main() -> int:
     args = ap.parse_args()
 
     hits: dict[str, list[dict]] = {k: [] for k in TERMS}
-    total = scanned = 0
+    total = scanned = weak_n = 0
     missing = []
     for slug in JOURNALS:
         f = TOC / f"{slug}.json"
@@ -96,25 +133,37 @@ def main() -> int:
             scanned += 1
             title = a.get("title") or ""
             for area, words in TERMS.items():
-                if any(w in title for w in words):
-                    hits[area].append({
-                        "journal": jname, "slug": slug,
-                        "title": title,
-                        "authors": [clean_author(x) for x in (a.get("authors") or [])],
-                        "issue": a.get("volIssue") or a.get("issueLabel"),
-                        "date": a.get("date"), "pages": a.get("pages"),
-                        "fulltext": bool(a.get("fulltext")),
-                        "docId": a.get("docId"),
-                    })
-                    total += 1
+                matched = [w for w in words if w in title]
+                if not matched:
+                    continue
+                # 命中的詞全部都在 weak 清單裡，才標 weak：只要有一個強詞命中，
+                # 這一筆就照常收。
+                weak = all(w in WEAK.get(area, ()) for w in matched)
+                hits[area].append({
+                    "journal": jname, "slug": slug,
+                    "title": title,
+                    "authors": [clean_author(x) for x in (a.get("authors") or [])],
+                    "issue": a.get("volIssue") or a.get("issueLabel"),
+                    "date": a.get("date"), "pages": a.get("pages"),
+                    "fulltext": bool(a.get("fulltext")),
+                    "docId": a.get("docId"),
+                    "hit": matched,
+                    "weak": weak,
+                })
+                total += 1
+                weak_n += weak
     if missing:
         print(f"⚠️ 這幾刊還沒抓篇目：{'、'.join(missing)}（跑 press_airiti.py --toc <slug>）")
 
-    print(f"掃過 {scanned:,} 篇，命中 {total:,} 筆（同一篇可落多區）")
+    print(f"掃過 {scanned:,} 篇，命中 {total:,} 筆（同一篇可落多區），其中只靠弱詞命中 {weak_n:,} 筆")
     for area, rows in hits.items():
         rows.sort(key=lambda r: (r.get("date") or ""), reverse=True)
         ft = sum(1 for r in rows if r["fulltext"])
-        print(f"  {NAMES[area]:12s} {len(rows):>4} 篇，其中華藝有全文 {ft}")
+        wk = sum(1 for r in rows if r["weak"])
+        pr = PRECISION.get(area, (0, None))[1]
+        prs = f"　抽樣精確率 {pr:.0%}" if pr is not None else ""
+        print(f"  {NAMES[area]:12s} {len(rows):>4} 篇（弱詞 {wk:>3}）"
+              f"，其中華藝有全文 {ft}{prs}")
         if args.check and rows:
             for r in rows[:3]:
                 print(f"        {r['date']}　{r['journal']}　{r['title'][:40]}")
@@ -127,7 +176,14 @@ def main() -> int:
         "note": "從既有華藝篇目按關鍵詞粗篩出的候選清單，一篇可落多區，未經人工複核",
         "scanned": scanned,
         "journals": JOURNALS,
-        "areas": {a: {"name": NAMES[a], "terms": TERMS[a], "count": len(r), "items": r}
+        "sampled_on": SAMPLED_ON,
+        "areas": {a: {"name": NAMES[a], "terms": TERMS[a],
+                      "weak_terms": sorted(WEAK.get(a, ())),
+                      "count": len(r),
+                      "weak_count": sum(1 for x in r if x["weak"]),
+                      "sample": PRECISION.get(a, (0, None))[0],
+                      "precision": PRECISION.get(a, (0, None))[1],
+                      "items": r}
                   for a, r in hits.items()},
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\n→ {OUT}")
