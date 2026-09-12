@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 13, "author": "opus-5-hand-written",
+  "note": "sacrosānctus 與 salūtifer 武加大都沒有字形，練不到。meritum 與第 7 課的 meritō 一樣只認 Merito 一形。supernus 只有 supernis／supernæ，沒有中性複數主格。",
+  "sentences": [
+    {"latin": "iterum et jam in silentio", "chinese": "再一次，而且此刻，在寂靜中。", "targets": ["iterum", "jam", "in", "silentium"]},
+    {"latin": "Merito Repleti sunt", "chinese": "他們理當被充滿了。", "targets": ["meritum", "repleo", "sum"]},
+    {"latin": "mira in supernis", "chinese": "天上的奇事。", "targets": ["mirus", "in", "supernus"]},
+    {"latin": "mundus est per gratiam", "chinese": "他因恩寵而潔淨。", "targets": ["mundus", "per", "gratia", "sum"]},
+    {"latin": "post silentium quando venit", "chinese": "寂靜之後，他何時來。", "targets": ["post", "silentium", "quando", "venio"]},
+    {"latin": "sed terrenus non est mundus", "chinese": "然而屬地的並不潔淨。", "targets": ["sed", "terrenus", "non", "sum", "mundus"]},
+    {"latin": "quoniam iterum venit", "chinese": "因為他又來了。", "targets": ["quoniam", "iterum", "venio"]}
+  ]
+}

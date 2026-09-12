@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 11, "author": "opus-5-hand-written",
+  "note": "liturgia 與 maestus 武加大都沒有字形，練不到。片語 male habeō 要 male 與 habeō 兩個**字面形**同句（habet 不算，片語記的是字形）、in prīmīs 要 in 與 primis 同句才算練到。",
+  "sentences": [
+    {"latin": "in primis firmavit ecclesiam", "chinese": "他首先堅固了教會。", "targets": ["in primis", "firmo", "ecclesia"]},
+    {"latin": "firmus et primus in turba", "chinese": "在人群中堅定而居首的。", "targets": ["firmus", "primus", "in", "turba"]},
+    {"latin": "lætitia propter responsum Domini", "chinese": "因上主的答覆而有的喜樂。", "targets": ["laetitia", "propter", "responsum", "dominus"]},
+    {"latin": "indignus male habeo propter culpam", "chinese": "我不配，因過錯而患病。", "targets": ["indignus", "male habeo", "male", "propter", "culpa"]},
+    {"latin": "maledictus est servus", "chinese": "那僕人被咒罵了。", "targets": ["maledico", "sum", "servus"]},
+    {"latin": "turba convenit propter lætitiam", "chinese": "群眾因喜樂而聚集。", "targets": ["turba", "convenio", "propter", "laetitia"]},
+    {"latin": "primum responsum firmum est", "chinese": "第一個答覆是穩固的。", "targets": ["primus", "responsum", "firmus", "sum"]}
+  ]
+}

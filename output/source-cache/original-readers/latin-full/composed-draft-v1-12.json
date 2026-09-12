@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 12, "author": "opus-5-hand-written",
+  "note": "-pleō 是黏著詞素，只活在 adimpleō／compleō 這類複合詞裡，武加大沒有獨立字形，練不到。contrītus 只認字形。grātus 的中性複數 grata 沒進語料，改用單數 gratum。",
+  "sentences": [
+    {"latin": "victoria gloriosa in ecclesia", "chinese": "教會中光榮的勝利。", "targets": ["victoria", "gloriosus", "in", "ecclesia"]},
+    {"latin": "votum populi gratum est Deo", "chinese": "百姓的誓願為天主所悅納。", "targets": ["votum", "gratus", "populus", "sum", "Deus"]},
+    {"latin": "adimplevit et complevit verbum", "chinese": "他成全並完成了那話。", "targets": ["adimpleo", "compleo", "verbum"]},
+    {"latin": "contriti corrigantur in ecclesia", "chinese": "願悔悟的人在教會中被糾正。", "targets": ["contritus", "corrigo", "in", "ecclesia"]},
+    {"latin": "populus desideravit incensum sanctum", "chinese": "百姓渴望那聖香。", "targets": ["desidero", "incensum", "populus"]},
+    {"latin": "direxit et erexit populum", "chinese": "他引導並高舉了百姓。", "targets": ["dirigo", "erigo", "populus"]},
+    {"latin": "canticum angelicum in templo", "chinese": "聖殿中天使的歌。", "targets": ["angelicus", "canticum", "in", "templum"]}
+  ]
+}

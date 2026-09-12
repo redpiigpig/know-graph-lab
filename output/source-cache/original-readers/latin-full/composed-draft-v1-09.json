@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 9, "author": "opus-5-hand-written",
+  "note": "本課十六個待練詞幾乎全是動詞，一句要扛兩到三個。片語 grātiās agere 要 gratias 與 agere 同句才算練到。fugō 只有 fugerem 一個形進語料（第一人稱未完成假設），所以配 ne 寫成祈願句。",
+  "sentences": [
+    {"latin": "discipuli convenerunt et habentes gratiam crediderunt", "chinese": "門徒們聚集，懷著恩寵相信了。", "targets": ["convenio", "habeo", "credo", "discipulus"]},
+    {"latin": "gratias agere Deo ne fugerem", "chinese": "向天主感謝，免得我逃避。", "targets": ["gratias agere", "fugo", "Deus"]},
+    {"latin": "Dominus exaudivit et deleantur peccata", "chinese": "上主垂聽了，願罪過被抹去。", "targets": ["exaudio", "deleo", "dominus", "peccatum"]},
+    {"latin": "duxit servos et induxit in terram", "chinese": "他率領僕人們，並把他們帶進那地。", "targets": ["duco", "induco", "servus", "terra"]},
+    {"latin": "numerus deficiet et Dominus eduxit populum", "chinese": "數目將減少，而上主領出了百姓。", "targets": ["deficio", "educo", "numerus", "populus"]},
+    {"latin": "ecclesia Christo conjungitur et sacramentum efficitur", "chinese": "教會與基督結合，聖事得以成就。", "targets": ["conjungo", "efficio", "ecclesia", "Christus"]},
+    {"latin": "magister monuit, miscuit vinum et Juncta est familia", "chinese": "師傅勸誡了，調了酒，家人也聯合起來。", "targets": ["moneo", "misceo", "jungo", "magister", "vinum"]}
+  ]
+}

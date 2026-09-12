@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 10, "author": "opus-5-hand-written",
+  "note": "concelebrō 武加大沒有任何字形，練不到。affirmō 只有 affirmant、diaconus 只有 Diaconi、nātus 只認字形 natus／nati，句子照這些形寫。",
+  "sentences": [
+    {"latin": "natus in templo", "chinese": "在聖殿中出生的孩子。", "targets": ["natus", "templum", "in"]},
+    {"latin": "perduxit populum ad templum", "chinese": "他把百姓領到聖殿。", "targets": ["perduco", "ad", "templum"]},
+    {"latin": "discipuli receperunt verbum et tradidit Dominus", "chinese": "門徒們領受了話，上主也交付了。", "targets": ["recipio", "trado", "discipulus", "verbum", "dominus"]},
+    {"latin": "ne seducat populum", "chinese": "免得他誘惑百姓。", "targets": ["seduco", "populus"]},
+    {"latin": "Diaconi et carissimi discipuli", "chinese": "執事們與最親愛的門徒們。", "targets": ["diaconus", "carus", "discipulus"]},
+    {"latin": "dignus servus bene celebravit sacramentum", "chinese": "配得的僕人好好地舉行了聖事。", "targets": ["dignus", "bene", "celebro", "servus", "sacramentum"]},
+    {"latin": "servi affirmant et Confirmavit Dominus", "chinese": "僕人們申明，上主也堅固了。", "targets": ["affirmo", "confirmo", "servus", "dominus"]}
+  ]
+}

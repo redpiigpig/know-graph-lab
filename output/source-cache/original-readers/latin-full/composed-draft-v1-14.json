@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 14, "author": "opus-5-hand-written",
+  "note": "apostolicus、catholicus、cēreus 三個詞武加大都沒有字形——這一課是教會拉丁文詞彙與武加大語料落差最大的一課。causa 與 causā 兩條詞共用同一組字形，同一個字同時記給兩條。",
+  "sentences": [
+    {"latin": "Altissimus inter socios", "chinese": "至高者在同伴之中。", "targets": ["altus", "inter", "socius"]},
+    {"latin": "certe deinde diligenter Formavit", "chinese": "確實地，然後他勤勉地塑造了。", "targets": ["certe", "deinde", "diligenter", "formo"]},
+    {"latin": "causa magna est", "chinese": "理由是重大的。", "targets": ["causa", "magnus", "sum"]},
+    {"latin": "perhibet gratiam sæpe", "chinese": "他時常施予恩寵。", "targets": ["perhibeo", "gratia", "saepe"]},
+    {"latin": "satiati sunt et separati", "chinese": "他們得了飽足，也被分開了。", "targets": ["satio", "sum", "separo"]},
+    {"latin": "socii separati sunt inter turbam", "chinese": "同伴們在人群中被分開了。", "targets": ["socius", "separo", "sum", "inter", "turba"]},
+    {"latin": "sæpe satiati sunt in templo", "chinese": "他們時常在聖殿中得了飽足。", "targets": ["saepe", "satio", "sum", "in", "templum"]}
+  ]
+}
