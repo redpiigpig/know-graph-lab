@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import zlib
 import re
 import sys
 import time
@@ -619,6 +620,47 @@ _EN_RUN_RE = re.compile(r"[A-Za-z][A-Za-z\s,;:'\"()\-\.]{119,}")
 # 並列體例「原文　／　中譯」是刻意保留原文，不是沒譯。
 BILINGUAL_SEP = "　／　"
 
+# 🚨 第三種壞法（2026-09-11 使用者在《基督信徒的慰藉》裡讀到）：模型**用中文**
+# 邊譯邊自我商議，整段夾在譯文裡存了下來：
+#
+#   罪／罪愆; we used 罪過 which is okay? ... Safer to use 罪. Let's change「罪過」到「罪」。
+#   Good. Check for「我其實是殺死了我所愛之人的兇手」。The term「兇手」is okay.
+#
+# 上面那兩關都擋不住：段落大半是漢字（比例過關），夾的英文碎片又都很短
+# （連續 120 字母那條不觸發），而且不含 `<think>` 也不含既有的招牌句。
+#
+# 這些「自我商議語」在**真正的譯文**裡不會出現。全庫實測：62,243 段中 61,739 段
+# 命中 0 個、3 段命中 1 個、命中 ≥2 個的只有 4 段——其中 3 段正是外洩。
+# 所以門檻取 2，誤報空間幾乎是零；取 1 會掃到正常的英文引文。
+_SELF_TALK = tuple(re.compile(p, re.I) for p in (
+    r"we need to", r"we can use", r"we must", r"we should", r"let'?s (change|use|say|keep)",
+    r"it'?s (okay|fine|better|correct)", r"now check", r"check for", r"the phrase",
+    r"maybe we", r"safer to use", r"might be considered", r"is okay\b", r"is fine\b",
+    r"but (we|the) ", r"so we ", r"actually,? ", r"hmm", r"wait,? ", r"better to ",
+    r"keep it", r"that'?s fine", r"i think", r"probably ", r"let me ",
+))
+_SELF_TALK_MIN = 2
+
+# 退化重複（模型卡在迴圈，同一句抄十幾遍）。用壓縮率量，不用「找重複片段」——
+# 迴圈的週期不固定，滑動視窗對不上就整段漏掉（第一版就是這樣漏掉 12,073 字那段的）。
+# 實測：自然中文散文 0.49–0.70，目次點漏 0.19–0.33，迴圈外洩 0.026 與 0.071。
+# 門檻取 0.15，把目次與《法句經》偈頌那類**原書就重複**的東西留在界線外。
+_DEGENERATE_MAX_RATIO = 0.15
+_DEGENERATE_MIN_LEN = 250
+
+# 🚨 第四種壞法：**整段日文原文沒譯就存進 zh 欄**。前面每一條都是拿拉丁字母在量，
+# 日文是漢字假名混寫，四條判準全部放行——《丹麥國的故事》《留給後世的最大遺產》
+# 《約伯記講演》裡有十幾段是這樣上線的。
+#
+# 判準不能只看假名多寡，因為有兩種**正常**情形也有一堆假名：
+#   ① 內文提到日文篇名 —— 〈何故に大文學は出ずるや？〉（假名佔比 0.05）
+#   ② 和歌並列體例 —— 「> 縱然異邦教法入侵…　古國の如何なる教え入り來るも」（0.26）
+# ② 的佔比跟真傷（0.28–0.72）幾乎貼在一起，光看比例分不開。分得開的是**位置**：
+# 並列體例一律中譯在前，沒譯的那種一開頭就是日文。
+_JA_KANA_RE = re.compile(r"[ぁ-ゖァ-ヺ]")
+_JA_HEAD_CHARS = 12      # 「開頭」算多長：真傷的假名最晚出現在第 7 字（「## 前講においての」）
+_JA_MIN_RATIO = 0.25
+
 
 def unusable_reason(text: str, source: str = "") -> str:
     """譯文不能用的話回傳原因字串，可以用就回空字串。純函式，測試鎖在
@@ -636,8 +678,18 @@ def unusable_reason(text: str, source: str = "") -> str:
     low = t.lower()
     if any(m in low for m in _COT_MARKERS):
         return "reasoning-leak"
+    if sum(1 for p in _SELF_TALK if p.search(t)) >= _SELF_TALK_MIN:
+        return "self-talk"
+    if len(t) >= _DEGENERATE_MIN_LEN:
+        raw = t.encode("utf-8")
+        if len(zlib.compress(raw, 9)) / len(raw) < _DEGENERATE_MAX_RATIO:
+            return "degenerate-repetition"
     if BILINGUAL_SEP in t:
         return ""  # 並列體例，原文是刻意留的
+    kana = len(_JA_KANA_RE.findall(t))
+    if (kana / len(t) >= _JA_MIN_RATIO
+            and _JA_KANA_RE.search(t[:_JA_HEAD_CHARS])):
+        return "untranslated-japanese"
     cjk, lat = len(_CJK_RE.findall(t)), len(_LATIN_RE.findall(t))
     if lat >= 60 and cjk * 3 < lat:
         # 拉丁字母遠多於漢字。再看虛詞密度，把「原文術語轉寫」放行：

@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -92,9 +93,16 @@ def load_sections(author: str, slug: str) -> tuple[dict, list[dict]]:
 
 
 def build(author: str, slug: str, out_path: Path,
-          page_marks: bool = False) -> tuple[int, int]:
+          page_marks: bool = False, only: int | None = None) -> tuple[int, int]:
+    """`only` 給章序號（0 起算）就只出那一章，其餘完全比照整本的排版。
+
+    分章輸出刻意**沿用同一支 build**，不另寫一條路徑——書名頁、底本、引文縮排、
+    頁碼標記那些規矩只要有兩份實作，遲早會分岔。
+    """
     mod = importlib.import_module(ua.AUTHOR_MODULES[author])
     work, sections = load_sections(author, slug)
+    if only is not None:
+        sections = [sections[only]]
 
     doc = Document()
     st = doc.styles["Normal"]
@@ -215,10 +223,30 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--author", required=True, choices=sorted(ua.AUTHOR_MODULES))
     ap.add_argument("--work", required=True)
-    ap.add_argument("--out", required=True)
+    ap.add_argument("--out", required=True,
+                    help="輸出 .docx；配 --split-chapters 時這是**資料夾**")
     ap.add_argument("--page-marks", action="store_true",
                     help="每逢原書換頁插一個〔原書 p. N〕標記（供引註；朗讀用不要開）")
+    ap.add_argument("--split-chapters", action="store_true",
+                    help="一章一個 .docx 放進 --out 指定的資料夾（分次朗讀／逐章校讀用）")
     args = ap.parse_args()
+
+    if args.split_chapters:
+        out_dir = Path(args.out)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        _, sections = load_sections(args.author, args.work)
+        total = 0
+        for i, sec in enumerate(sections):
+            # 檔名開頭補章序號，檔案總管才會照書的順序排；書名不入檔名（資料夾已經是了）
+            safe = re.sub(r'[\\/:*?"<>|]+', "－", sec["title"]).strip()[:60]
+            path = out_dir / f"{i + 1:02d}_{safe}.docx"
+            _, n_par = build(args.author, args.work, path,
+                             page_marks=args.page_marks, only=i)
+            total += n_par
+            print(f"  {i + 1:02d}  {sec['title'][:40]:42} {n_par:>5} 段")
+        print(f"\n寫出 {len(sections)} 個檔到 {out_dir}\n  合計 {total} 段")
+        return
+
     n_sec, n_par = build(args.author, args.work, Path(args.out), page_marks=args.page_marks)
     print(f"寫出 {args.out}\n  {n_sec} 章 / {n_par} 段")
 
