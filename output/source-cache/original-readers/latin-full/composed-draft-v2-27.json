@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 27, "author": "opus-5-hand-written",
+  "note": "va 這條感嘆詞在語料裡寫作 Vah／vane。",
+  "sentences": [
+    {"latin": "fundamenta Eucharistiae civibus", "chinese": "為公民們所立的感恩祭根基。", "targets": ["fundamentum", "eucharistia", "civis"]},
+    {"latin": "etenim attulit traditionem", "chinese": "他確實帶來了那傳統。", "targets": ["etenim", "affero", "traditio"]},
+    {"latin": "cultura præcipua Vah", "chinese": "啊，那主要的耕作。", "targets": ["cultura", "praecipuus", "va"]},
+    {"latin": "cognitione progressus attinet", "chinese": "就認識的進展而言。", "targets": ["cognitio", "progredior", "attineo"]},
+    {"latin": "adjunge traditiones culturæ", "chinese": "你要把那些傳統連於耕作。", "targets": ["adjungo", "traditio", "cultura"]},
+    {"latin": "significatio conjunctionis declarat", "chinese": "那結合的意義顯明出來。", "targets": ["significatio", "conjunctio", "declaro"]},
+    {"latin": "plenitudo Eucharistiam affert", "chinese": "那圓滿帶來了感恩祭。", "targets": ["plenitudo", "eucharistia", "affero"]}
+  ]
+}

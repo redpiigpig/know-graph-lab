@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 26, "author": "opus-5-hand-written",
+  "note": "veluti 只認字形；potis 在語料裡活著的是最高級 potissimum。civis 要到第 27 課才教，所以本課不能寫 cives。",
+  "sentences": [
+    {"latin": "societatem moralis veluti", "chinese": "那道德的社群，彷彿如此。", "targets": ["societas", "moralis", "veluti"]},
+    {"latin": "haud erga Nempe", "chinese": "確實並非對著它。", "targets": ["haud", "erga", "nempe"]},
+    {"latin": "civilis varia communitas", "chinese": "多樣的公民社群。", "targets": ["civilis", "varius", "communitas"]},
+    {"latin": "historia potissimum politicis", "chinese": "歷史尤其在政治的事情上。", "targets": ["historia", "potis", "politicus"]},
+    {"latin": "instrumenta spectat moralia", "chinese": "他審視那些道德的工具。", "targets": ["instrumentum", "specto", "moralis"]},
+    {"latin": "communitatis historiæ instrumentum", "chinese": "社群歷史的工具。", "targets": ["communitas", "historia", "instrumentum"]},
+    {"latin": "erga varii spectant", "chinese": "不同的人都對著它注視。", "targets": ["erga", "varius", "specto"]}
+  ]
+}
