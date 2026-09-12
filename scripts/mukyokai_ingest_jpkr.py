@@ -134,6 +134,45 @@ def is_review(title_original: str) -> bool:
     return bool(_REVIEW.search(title_original or ""))
 
 
+_PAIRS = (("《", "》"), ("「", "」"), ("『", "』"), ("（", "）"), ("〈", "〉"))
+
+
+def balance_brackets(t: str) -> str:
+    """把成對符號補齊。
+
+    🚨 這件事**不能交給 prompt**。2026-09-11 已經在 prompt 裡明寫「必須成對」，
+    模型照樣吐出「書評：赤江達也《「紙上教會」與日本近代－…」（缺兩個收尾）
+    與「全球史》中的內村鑑三」（有收尾沒開頭，因為原題用的是「」不是《》）。
+    少一個收尾就補在尾巴，少一個開頭就補在最前面——兩種都出現過。
+
+    🚨 要用堆疊，不能逐對獨立補。「…《以無教會為教會…「個人・信仰共同體・社會」
+    少了 」 和 》 兩個，逐對處理會補成「…社會》」」——收尾順序反了；
+    後開的要先收。
+    """
+    s = t or ""
+    opens = {o: c for o, c in _PAIRS}
+    closes = {c: o for o, c in _PAIRS}
+    stack, prefix = [], []
+    for ch in s:
+        if ch in opens:
+            stack.append(ch)
+        elif ch in closes:
+            if stack and stack[-1] == closes[ch]:
+                stack.pop()
+            else:
+                prefix.append(closes[ch])   # 有收尾沒開頭 → 開頭補到最前面
+    # 還沒收的，由內而外依序補在尾巴
+    return "".join(prefix) + s + "".join(opens[o] for o in reversed(stack))
+
+
+# 日文舊字體／新字體 → 繁體。書目欄位跟譯文走同一套字形規矩。
+_JA_VARIANT = str.maketrans({
+    "釈": "釋", "継": "繼", "沢": "澤", "桜": "櫻", "応": "應", "実": "實",
+    "気": "氣", "覚": "覺", "読": "讀", "売": "賣", "学": "學", "国": "國",
+    "円": "圓", "衆": "眾", "敍": "敘", "説": "說", "巖": "岩", "産": "產",
+})
+
+
 def clean_title(raw: str) -> str:
     s = _KIND_TAG.sub("", (raw or "").strip())
     return re.sub(r"\s+", " ", s).strip()
@@ -180,6 +219,7 @@ def zh_title(raw: str, lang: str, cache: dict) -> str:
     # 早就在處理這個，但那是走 build 模組的路徑——這裡直接呼叫引擎就漏掉了，
     # 於是 5 筆書目的題名（連帶 R2 key 與 Drive 檔名）開頭都是一個「�」。
     out = out.replace("�", "").replace("﻿", "").strip().strip("《》「」\"' ")
+    out = balance_brackets(out.translate(_JA_VARIANT))
     # 🚨 輸出閘：題名太短，整段判準抓不到壞輸出，所以這裡自己再驗一次——
     # 譯不出中文就寧可留原文，不要把模型的碎念寫進書目。
     if not out or not any("一" <= c <= "鿿" for c in out):

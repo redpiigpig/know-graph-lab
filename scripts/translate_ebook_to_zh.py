@@ -724,6 +724,14 @@ _OPENCC_OVERSHOOT = (
     ("鹹與維新", "咸與維新"),
 )
 
+# 🚨 同一個病的第二例：OpenCC 把基督教對神的敬稱「祢」轉成「禰」（三種配置皆然）。
+# 「禰」是另一個字（禰宜＝神道祭司、姓氏），拿來稱神是錯的。
+# 2026-09-11 全集語料實測 祢 247 次／禰 224 次——同一本書兩種寫法混用，
+# 差別只在那一段走的是 Gemini（原樣保留）還是 NVIDIA（過 _to_traditional）。
+# 224 處全是「求禰賜予」「願禰的旨意」這類敬稱，**沒有一處是禰宜或姓氏**，
+# 所以整批回轉；但仍留 `禰宜` 的例外，日文神道題材遲早會用到。
+_MI_RE = re.compile(r"禰(?!宜)")
+
 
 def _to_traditional(text: str) -> str:
     """Best-effort 繁體化 — Qwen/DeepSeek/GLM occasionally slip Simplified. opencc
@@ -738,7 +746,7 @@ def _to_traditional(text: str) -> str:
         return text
     for bad, good in _OPENCC_OVERSHOOT:
         out = out.replace(bad, good)
-    return out
+    return _MI_RE.sub("祢", out)
 
 
 def nvidia_translate(source: str) -> str:

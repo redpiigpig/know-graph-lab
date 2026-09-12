@@ -41,6 +41,22 @@ def test_genuine_salty_is_untouched():
         assert _to_traditional(s) == s
 
 
+def test_divine_second_person_pronoun():
+    """🚨 同一個病的第二例：OpenCC 把對神的敬稱「祢」轉成「禰」（另一個字）。
+
+    全集語料實測 祢 247／禰 224，同一本書兩種寫法混用——差別只在那一段
+    走的是 Gemini（原樣）還是 NVIDIA（過 _to_traditional）。
+    """
+    assert _to_traditional("求祢賜予") == "求祢賜予"
+    assert _to_traditional("求禰賜予") == "求祢賜予"
+    assert _to_traditional("願祢的旨意成就") == "願祢的旨意成就"
+
+
+def test_negi_is_not_the_pronoun():
+    """禰宜是神道的祭司，不可回轉——日文題材遲早會用到。"""
+    assert "禰宜" in _to_traditional("神社的禰宜")
+
+
 def test_still_converts_simplified():
     """還原表不能把正常的簡轉繁弄壞。"""
     assert _to_traditional("无教会主义") == "無教會主義"
