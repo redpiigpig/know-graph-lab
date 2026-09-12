@@ -9,9 +9,11 @@ full set of principal parts rather than a single form, and a reading column that
 alternates between verse-numbered scripture and the versicle-and-response of the
 Mass.
 
-Each lesson prints the same four things in the same order -- twenty words, two
-memory units, the reading, and the reading's Chinese -- because a reader that
-reorders itself between lessons cannot be used as a reference.
+Each lesson prints the same four things in the same order -- twenty words, ten
+translation exercises, the reading, and the reading's Chinese -- because a
+reader that reorders itself between lessons cannot be used as a reference.  The
+exercises stand where two memory units used to; the units are still in the data
+master and still served online, they just no longer print.
 
 Nothing here is generated. Every string comes from the frozen data masters, and
 where a master has a gap the page says so rather than leaving a silent blank:
@@ -55,6 +57,9 @@ LITURGY_NOTE = "禮儀經文的固定對答採教會通行本文，其餘為自�
 
 FONT_LA = "Noto Serif"
 LATIN_PT = 11.0
+# 練習題的句子設得比正文小一級：一頁要放十句，每句底下還有一條作答橫線，
+# 而且是一句一句讀，不是連續讀下去。
+EXERCISE_PT = 10.4
 GLOSS_PT = 9.6
 
 VOLUMES = {
@@ -329,23 +334,104 @@ def short_pos(entry: dict) -> str:
     return ""
 
 
-def memory_block(document, units: list[dict], *, key: str = "",
-                 interlinear: dict | None = None):
-    if not units:
-        return
-    heading(document, "記憶單元", H.H2_SIZE_PT, space_before=6, space_after=3)
-    for position, unit in enumerate(units, start=1):
-        tokens = (interlinear or {}).get(f"memory:{key}:{position}", {}).get("tokens")
-        if tokens:
-            add_latin_interlinear(document, tokens, sense=unit.get("zh") or "")
-            continue
-        body(document, unit["text"], LATIN_PT, font=FONT_LA, space_after=1, indent_mm=4)
-        zh = unit.get("zh") or ""
-        if zh and zh != "reading-has-chinese":
-            body(document, zh, H.TRANSLATION_PT, color=H.MUTED, space_after=3, indent_mm=4)
+def exercise_blocks(volume_number: int) -> dict[int, dict]:
+    """This volume's ten-item exercises, keyed by the lesson they belong to.
+
+    Bound by vocabulary ordinal, never by the lesson number the exercise file
+    carries: the reading plan sorts by difficulty, so a lesson number is an
+    output of that sort and a resort would move every block one lesson without
+    changing a single count.  Same rule and same reason as the Hebrew reader.
+    """
+    path = CACHE / f"exercise-set-v{volume_number}.json"
+    if not path.exists():
+        raise SystemExit(
+            f"缺 {path.name}；先跑 scripts/assemble_latin_exercises.py "
+            f"--volume {volume_number} --write"
+        )
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("direction") != "original-to-chinese":
+        raise SystemExit(f"{path.name} 的 direction 不是 original-to-chinese")
+    entries = load(VOCABULARY)["entries"]
+    wanted = "上冊" if volume_number == 1 else "下冊"
+    lesson_of = {
+        entry["ordinal"]: entry["lesson"]
+        for entry in entries
+        if entry["volume"] == wanted
+    }
+    bound: dict[int, dict] = {}
+    for block in payload["lessons"]:
+        hosts = {
+            lesson_of[word["ordinal"]]
+            for item in block["items"]
+            for word in item.get("targetWords") or []
+            if word["ordinal"] in lesson_of
+        }
+        if len(hosts) != 1:
+            raise SystemExit(f"練習題第 {block['lesson']} 課橫跨課次 {sorted(hosts)}")
+        host = hosts.pop()
+        if host in bound:
+            raise SystemExit(f"第 {host} 課被兩組練習題認領")
+        bound[host] = block
+    return bound
+
+
+def exercise_section(document, block: dict | None, lesson: int) -> None:
+    """The ten translation exercises, where the memory units used to stand.
+
+    Only the Latin is printed.  A Chinese line beside the sentence would be the
+    answer to the question the exercise asks, so an anchored item prints its
+    reference and a composed one prints that it is composed; neither prints a
+    translation.  See skills/…/references/exercise-sets.md.
+    """
+    if block is None:
+        raise SystemExit(f"第 {lesson} 課沒有練習題：exercise-set 對不上本課詞表")
+    heading(document, f"本課翻譯練習（{len(block['items'])}題）",
+            H.H2_SIZE_PT, space_before=6, space_after=3)
+    intro = body(document,
+                 "把每一句譯成繁體中文。題目只印原文——出處標示的是定錨題，"
+                 "可對照思高譯本自我校對；標「自撰」的句子每個詞都在本課或先前課次學過。",
+                 H.CAPTION_PT, color=H.MUTED, space_after=2)
+    H.set_keep(intro, next_paragraph=True)
+    coverage = block.get("coverage") or {}
+    practised, total = coverage.get("practised"), coverage.get("lessonWords")
+    line = (f"本課 {total} 詞全數入題。" if practised == total
+            else f"本課 {practised}／{total} 詞入題。")
+    note = document.add_paragraph()
+    note.paragraph_format.space_after = Pt(4)
+    H.set_run_font(note.add_run(line), H.FONT_ZH, H.CAPTION_PT - 0.4, color=H.MUTED)
+    if (block.get("note") or "").strip():
+        # The headwords inside the note carry macrons the CJK face has no glyph
+        # for, so it falls back per character and the list prints in a different
+        # letterfit from the sentence around it.  Set the Latin in the Latin
+        # face, the way every other Latin word in this book is set.
+        for piece in re.split(r"([A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ][A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ.\-]*)",
+                              block["note"].strip() + "。"):
+            if not piece:
+                continue
+            latin_piece = bool(re.match(r"^[A-Za-zÀ-ÖØ-öø-ÿĀ-ɏ]", piece))
+            H.set_run_font(note.add_run(piece),
+                           FONT_LA if latin_piece else H.FONT_ZH,
+                           H.CAPTION_PT - 0.4, color=H.MUTED)
+    H.set_keep(note, next_paragraph=True)
+    for item in block["items"]:
+        head = document.add_paragraph()
+        head.paragraph_format.space_before = Pt(3)
+        head.paragraph_format.space_after = Pt(1)
+        H.set_run_font(head.add_run(f"{item['no']:02d}　"), H.FONT_UI, H.LABEL_PT,
+                       bold=True, color=H.ACCENT)
+        if item["kind"] == "quoted":
+            H.set_run_font(head.add_run(item["ref"]), H.FONT_TRANSLIT,
+                           H.CAPTION_PT, color=H.MUTED)
         else:
-            body(document, f"〔{unit.get('ref', '')}〕", H.CAPTION_PT, color=H.MUTED,
-                 space_after=3, indent_mm=4)
+            H.set_run_font(head.add_run("自撰"), H.FONT_ZH,
+                           H.CAPTION_PT - 0.4, color=H.MUTED)
+        H.set_keep(head, next_paragraph=True)
+        latin = body(document, item["text"], EXERCISE_PT, font=FONT_LA,
+                     space_after=2, indent_mm=4)
+        H.set_keep(latin, next_paragraph=True)
+        answer = document.add_paragraph(" ")
+        answer.paragraph_format.space_after = Pt(5)
+        H.paragraph_rule(answer, color=H.RULE, size="3")
 
 
 _LATIN_METRICS = None
@@ -398,7 +484,7 @@ def add_latin_interlinear(document, tokens: list, *, sense: str = "") -> None:
 
 def reading_block(document, title: str, pairs: list[tuple[str, str]], note: str = "",
                   *, key: str = "", interlinear: dict | None = None):
-    # 每一課的讀物另起一頁：詞表與記憶單元是準備，讀物是這一課的正事。
+    # 每一課的讀物另起一頁：詞表與練習題是準備，讀物是這一課的正事。
     page_break(document)
     heading(document, f"讀本　{title}", H.H2_SIZE_PT, space_before=0, space_after=3)
     if note:
@@ -603,7 +689,6 @@ def build(book_number: int) -> Path:
     spec = VOLUMES[volume]
     lesson_range = range(part["first"], part["last"] + 1)
     vocabulary = load(VOCABULARY)["entries"]
-    memory = load(MEMORY, {"上冊": [], "下冊": []})
     appendices = load(APPENDICES, {})
     readings = upper_readings() if volume == "上冊" else lower_readings()
 
@@ -611,9 +696,7 @@ def build(book_number: int) -> Path:
     for entry in vocabulary:
         if entry["volume"] == volume:
             per_lesson.setdefault(entry["lesson"], []).append(entry)
-    memory_by_lesson: dict[int, list[dict]] = {}
-    for unit in memory.get(volume, []):
-        memory_by_lesson.setdefault(unit["lesson"], []).append(unit)
+    exercises = exercise_blocks(VOLUME_NUMBER[volume])
 
     document = Document()
     H.configure(document)
@@ -656,8 +739,7 @@ def build(book_number: int) -> Path:
         H.paragraph_rule(opener, color=H.GOLD, size="14")
         key = f"v{volume_number}-{lesson}"
         vocabulary_table(document, per_lesson.get(lesson, []))
-        memory_block(document, memory_by_lesson.get(lesson, []), key=key,
-                     interlinear=interlinear)
+        exercise_section(document, exercises.get(lesson), lesson)
         if reading["pairs"]:
             reading_block(document, reading["title"], reading["pairs"], reading["note"],
                           key=key, interlinear=interlinear)
