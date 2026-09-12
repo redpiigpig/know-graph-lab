@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 19, "author": "opus-5-hand-written",
+  "note": "本課十七個待練詞多為經院哲學術語，兩層語料齊備。",
+  "sentences": [
+    {"latin": "præterea restituit ducem", "chinese": "此外，他恢復了那領導者。", "targets": ["praeterea", "restituo", "dux"]},
+    {"latin": "discretionis intentione propositum", "chinese": "以辨別之意圖所定的目標。", "targets": ["discretio", "intentio", "propositum"]},
+    {"latin": "philosophi qualitate removere", "chinese": "哲學家們要以性質加以移除。", "targets": ["philosophus", "qualitas", "removeo"]},
+    {"latin": "Exinde actione disposuit", "chinese": "其後他以行動作了安排。", "targets": ["exinde", "actio", "dispono"]},
+    {"latin": "reperit proinde edere", "chinese": "因此他發現要產生出來。", "targets": ["reperio", "proinde", "edo"]},
+    {"latin": "Similiter patet actio", "chinese": "同樣地，那行動是明顯的。", "targets": ["similiter", "pateo", "actio"]},
+    {"latin": "dux philosophorum propositum", "chinese": "哲學家們的領袖所立的目標。", "targets": ["dux", "philosophus", "propositum"]}
+  ]
+}

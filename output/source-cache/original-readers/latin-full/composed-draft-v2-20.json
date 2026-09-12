@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 20, "author": "opus-5-hand-written",
+  "note": "leo 沒有受格 leonem 進語料。",
+  "sentences": [
+    {"latin": "opiniones spiritale mense", "chinese": "那月裡屬靈的種種意見。", "targets": ["opinio", "spiritalis", "mensis"]},
+    {"latin": "possidebit leonis millia", "chinese": "他要擁有獅子的千數。", "targets": ["possideo", "leo", "mille"]},
+    {"latin": "infirmitate transtulit sollicitudinem", "chinese": "他在病弱中轉移了憂慮。", "targets": ["infirmitas", "transfero", "sollicitudo"]},
+    {"latin": "ibidem interest tandem", "chinese": "同一處，終究是有差別的。", "targets": ["ibidem", "intersum", "tandem"]},
+    {"latin": "nuntios divertit auxilio", "chinese": "他以援助使那些信使轉向。", "targets": ["nuntius", "diverto", "auxilium"]},
+    {"latin": "reversus est naturali opinione", "chinese": "他帶著自然的看法回來了。", "targets": ["revertor", "sum", "naturalis", "opinio"]},
+    {"latin": "mensibus mille nuntii", "chinese": "千月之久的信使們。", "targets": ["mensis", "mille", "nuntius"]}
+  ]
+}

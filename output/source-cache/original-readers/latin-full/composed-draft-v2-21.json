@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 21, "author": "opus-5-hand-written",
+  "note": "本課十七個待練詞多為法律與經院用語，兩層語料齊備。",
+  "sentences": [
+    {"latin": "cito defunctus quondam", "chinese": "他從前很快就去世了。", "targets": ["cito", "defungor", "quondam"]},
+    {"latin": "exigere expedit integrum", "chinese": "把那完整的審視出來是便利的。", "targets": ["exigo", "expedio", "integer"]},
+    {"latin": "Universalis prout careat", "chinese": "那普遍的，正如它所缺乏的。", "targets": ["universalis", "prout", "careo"]},
+    {"latin": "specialiter promisit integra", "chinese": "他特別地應許了那完整的事。", "targets": ["specialiter", "promitto", "integer"]},
+    {"latin": "ingenium providens secundo", "chinese": "那才智其次地預見著。", "targets": ["ingenium", "provideo", "secundo"]},
+    {"latin": "utilis reus quin", "chinese": "那有用的被告，何況如此。", "targets": ["utilis", "reus", "quin"]},
+    {"latin": "defuncti exigebat specialius", "chinese": "他更特別地審視那些已亡者。", "targets": ["defungor", "exigo", "specialiter"]}
+  ]
+}
