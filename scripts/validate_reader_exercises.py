@@ -82,10 +82,30 @@ def failures_for_lesson(lesson: dict[str, Any]) -> list[str]:
             str(row.get("pointed") or row.get("headword") or row) for row in missing
         )
         problems.append(f"第 {number} 課有 {len(missing)} 個本課詞沒練到：{names}")
+    # A word with no attested form cannot be practised by a sentence whose every
+    # form must be attested: gate one and gate three contradict each other for
+    # it, and no sentence can satisfy both.  Latin has thirty such words out of
+    # two thousand -- Kyrie, eléison, tellus, the month names -- because its
+    # vocabulary comes from a textbook and its corpus from the Vulgate, which is
+    # not the book the textbook teaches out of.  Falling short is allowed here
+    # for the same reason it is allowed for the anchors: saying nothing is not.
+    unattested_words = coverage.get("notAttested") or []
+    if unattested_words and not (lesson.get("note") or "").strip():
+        names = "、".join(
+            str(row.get("pointed") or row.get("headword") or row) for row in unattested_words
+        )
+        problems.append(
+            f"第 {number} 課有 {len(unattested_words)} 個詞在本冊語料中無任何字形"
+            f"（{names}），必須在 note 說明"
+        )
     total = coverage.get("lessonWords")
     practised = coverage.get("practised")
-    if total is not None and practised is not None and practised != total:
-        problems.append(f"第 {number} 課涵蓋 {practised}/{total} 詞，未達全覆蓋")
+    if total is not None and practised is not None and practised + len(unattested_words) != total:
+        problems.append(
+            f"第 {number} 課涵蓋 {practised}"
+            f"{'＋語料無此詞 %d' % len(unattested_words) if unattested_words else ''}"
+            f"/{total} 詞，未達全覆蓋"
+        )
     for item in items:
         problems.extend(failures_for_item(item))
     return problems

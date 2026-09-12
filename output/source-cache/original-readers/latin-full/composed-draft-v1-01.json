@@ -1,0 +1,18 @@
+{
+  "volume": 1,
+  "lesson": 1,
+  "author": "opus-5-hand-written",
+  "note": "二十詞裡只有 flectō 一個動詞，武加大挖不出合格的原句，故十題全為自撰。名詞句與 flectō 的三種形交替，避免十句全是介系詞片語。cēna 一詞克萊孟版一律寫 cœna，題目照語料的拼法。",
+  "sentences": [
+    {"latin": "gratia et gloria in ecclesia", "chinese": "恩寵與光榮在教會中。", "targets": ["gratia", "et", "gloria", "in", "ecclesia"]},
+    {"latin": "doctrina de gratia", "chinese": "關於恩寵的教導。", "targets": ["doctrina", "de", "gratia"]},
+    {"latin": "aqua et cœna in familia", "chinese": "家中有水與晚餐。", "targets": ["aqua", "et", "cena", "in", "familia"]},
+    {"latin": "coram familia flectitur", "chinese": "他在家人面前屈膝。", "targets": ["coram", "familia", "flecto"]},
+    {"latin": "flectitur animus a culpa", "chinese": "心思從過錯轉開。", "targets": ["flecto", "animus", "a", "culpa"]},
+    {"latin": "flectit animum ad doctrinam", "chinese": "他把心思轉向教導。", "targets": ["flecto", "animus", "ad", "doctrina"]},
+    {"latin": "hora cœnæ in familia", "chinese": "家中晚餐的時辰。", "targets": ["hora", "cena", "in", "familia"]},
+    {"latin": "cum aqua in ecclesiam", "chinese": "帶著水進入教會。", "targets": ["cum", "aqua", "in", "ecclesia"]},
+    {"latin": "e familia ad ecclesiam", "chinese": "從家中到教會。", "targets": ["e", "familia", "ad", "ecclesia"]},
+    {"latin": "in ecclesia gloria gratiaque", "chinese": "教會中有光榮與恩寵。", "targets": ["in", "ecclesia", "gloria", "gratia", "que"]}
+  ]
+}

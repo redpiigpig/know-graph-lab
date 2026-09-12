@@ -43,6 +43,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_latin_lemma_corpus import (  # noqa: E402
     OUTPUT as CORPUS_FILES,
+    spelling_variants,
 
     Tagger,
     appendix_keys,
@@ -136,7 +137,15 @@ def word_reading(word: str, corpus: Corpus, tagger: Tagger) -> dict[str, Any]:
 
 
 def part_is_taught(part: dict[str, Any], taught_lemmas: set[str], taught_keys: set[str]) -> bool:
-    return bool(part["lemmas"] & taught_lemmas) or part["key"] in taught_keys
+    # The spelling variants are asked last and only when the plain comparison
+    # has failed: the corpus writes ``cœnam`` for a word the textbook teaches as
+    # ``cēna``, and without this the gate calls that form attested and untaught
+    # at once -- a pair no sentence can satisfy.
+    return (
+        bool(part["lemmas"] & taught_lemmas)
+        or part["key"] in taught_keys
+        or bool(spelling_variants(part["key"]) & taught_keys)
+    )
 
 
 def verify(
@@ -202,10 +211,24 @@ def practised(
             if entry.credit_keys <= seen_keys:
                 hits[entry.ordinal] = sorted(entry.credit_keys)
             continue
+        # Three routes, strictest first, and the first that answers wins.  One
+        # route was not enough: ninety-one of the two thousand words carry a
+        # lemma no corpus form does, and a lesson containing one of them could
+        # never reach twenty-of-twenty however it was written.
         by_lemma = sorted(entry.credit_lemmas & seen_lemmas)
-        by_form = sorted(entry.credit_keys & seen_keys)
-        if by_lemma or by_form:
-            hits[entry.ordinal] = by_lemma or by_form
+        if by_lemma:
+            hits[entry.ordinal] = by_lemma
+            continue
+        by_form = sorted(entry.written_keys & seen_keys)
+        if by_form:
+            hits[entry.ordinal] = by_form
+            continue
+        by_stem = sorted(
+            key for key in seen_keys
+            if any(key.startswith(stem) for stem in entry.credit_stems)
+        )
+        if by_stem:
+            hits[entry.ordinal] = by_stem
     return hits
 
 

@@ -220,6 +220,9 @@ def comma_pieces(text: str) -> list[str]:
 # vocabulary
 # ---------------------------------------------------------------------------
 
+STEM_FLOOR = 6
+
+
 class VocabEntry:
     """One of the two thousand words, with every key it can be matched by."""
 
@@ -276,6 +279,55 @@ class VocabEntry:
         """
         return set() if self.credit_lemmas else self.form_keys
 
+    @property
+    def written_keys(self) -> set[str]:
+        """Exactly the forms this entry teaches, plus the corpus's spellings.
+
+        A second credit route, tried after the lemma one and before the stem
+        one.  The lemma route fails for a large part of this vocabulary —— not
+        because the word is missing from the corpus but because the form there
+        carries no lemma at all (``annuntio``, ``cœna``, ``Liturgia``) or
+        carries another word's (``maior`` is lemmatised ``magnus``, ``missa``
+        is lemmatised ``mitto``).  Ninety-one of the two thousand words were
+        unreachable by lemma, and a coverage gate that demands all twenty words
+        of a lesson cannot be met while any of them is unreachable.
+
+        This route is safe where the derivation route was not.  What sank
+        ``missa`` was reaching it through ``mitto``, so that ``et misit in
+        terram`` practised 彌撒; here the written word has to be the taught form
+        itself, and ``misit`` is not ``missa``.
+        """
+        keys: set[str] = set()
+        for key in self.form_keys | ({self.headword_key} if self.headword_key else set()):
+            keys |= spelling_variants(key)
+        return keys
+
+    @property
+    def credit_stems(self) -> set[str]:
+        """Prefixes long enough to credit an inflection the other routes miss.
+
+        Third and last route.  ``annūntiō`` is in the corpus as
+        ``annuntiavit`` with no lemma, and no principal part of it is written
+        anywhere; only a stem reaches it.  The six-character floor is the one
+        this series already learned to use: ``Χεβρὼν``'s five-letter stem
+        ``chebr`` collided with a people and turned a place into them.  Four-
+        and five-letter stems such as ``cena`` and ``missa`` therefore get no
+        stem route at all, which is the intended trade —— they are exactly the
+        short words whose prefixes belong to other words.
+        """
+        stems: set[str] = set()
+        for key in self.written_keys:
+            if len(key) >= STEM_FLOOR:
+                stems.add(key)
+        head = self.headword_key
+        if head:
+            # A verb is listed as its first person singular; its stem is what
+            # is left when that ending comes off.
+            for cut in (head[:-1], head[:-2]):
+                if len(cut) >= STEM_FLOOR:
+                    stems.add(cut)
+        return stems
+
     def public_record(self) -> dict[str, Any]:
         return {
             "volume": self.volume,
@@ -291,6 +343,37 @@ class VocabEntry:
 
 
 ALT_SPLIT = re.compile(r"[,;()/]| \.\. | \. \. ")
+
+# 課本的拼法與語料的拼法對不上時的詞首互換，逐條列出，不用規則。
+#
+# 與 `MEDIEVAL` 同一個道理，也同一個理由：想用一條 oe→e 一次解決，會連 coepi
+# （開始）與 cepi（取得）都併成一個詞。差別只在 MEDIEVAL 對的是整個形，這裡
+# 對的是**詞首**——課本教 cēna，克萊孟版每一個格都寫 cœ-，逐格列不完。
+#
+# 只換開頭、只換這幾條，兩個方向都認。每一條的驗證方式相同：那個拼法確實在
+# 語料裡出現，而課本教的詞確實是同一個詞。
+STEM_VARIANTS: tuple[tuple[str, str], ...] = (
+    ("cen", "coen"),        # cēna／cēnāculum／cēnō，克萊孟版一律 cœ-
+    ("cotidi", "quotidi"),  # cotidie／quotidie／cottidie 三種寫法並存
+    ("cotidi", "cottidi"),
+)
+
+
+def spelling_variants(key: str) -> set[str]:
+    """The folded keys this one may also be written as, itself included.
+
+    Used by all three places that compare a written word with a taught one --
+    the taught-words gate, the coverage credit and the reachability report --
+    so that a word cannot be attested under one spelling and untaught under the
+    other, which is a pair of conditions no sentence can satisfy at once.
+    """
+    out = {key}
+    for left, right in STEM_VARIANTS:
+        if key.startswith(left):
+            out.add(right + key[len(left):])
+        if key.startswith(right):
+            out.add(left + key[len(right):])
+    return out
 
 
 def vocabulary_key_order(row: dict[str, Any]) -> list[str]:
@@ -435,7 +518,12 @@ def cumulative_vocabulary(
         entry for entry in entries if entry.volume == volume and entry.lesson == lesson
     ]
     lemmas = {lemma for entry in taught for lemma in entry.lemmas}
-    keys = {key for entry in taught for key in entry.form_keys}
+    # ``written_keys`` rather than ``form_keys``: a word is taught in the
+    # textbook's spelling and written in the corpus's, and a sentence that uses
+    # the corpus's spelling of a word the lesson taught is not using an untaught
+    # word.  Without this the gate accepted ``cœnam`` as attested and refused it
+    # as never taught, which no sentence can satisfy at once.
+    keys = {key for entry in taught for key in entry.written_keys}
     return target, lemmas, keys
 
 

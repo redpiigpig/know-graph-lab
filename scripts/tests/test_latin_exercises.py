@@ -235,6 +235,9 @@ class FakeCorpus:
         "angelum": {"surfaces": ["angelum"], "lemmas": ["angelus"]},
         "angelus": {"surfaces": ["Angelus"], "lemmas": ["Angelus", "angelus"]},
         "que": {"surfaces": ["que"], "lemmas": ["que"]},
+        # 語料裡有這個形、詞位欄卻是空的——武加大有九萬多個 token 是這樣，
+        # 詞位與字形兩條路都到不了，只剩詞幹那一條。
+        "annuntiauit": {"surfaces": ["annuntiavit"], "lemmas": []},
     }
 
     names = ["fake"]
@@ -329,21 +332,52 @@ def test_part_is_taught_accepts_either_the_lemma_or_the_written_form():
 # 涵蓋計算
 # ---------------------------------------------------------------------------
 
+def target(ordinal, *, lemmas=frozenset(), keys=frozenset(), stems=frozenset(), phrase=False):
+    """A coverage target with all three credit routes stated explicitly.
+
+    ``practised`` asks for the lemma, then the written form, then the stem, so a
+    fake that only carries the first two silently exercises a different function
+    from the one the reader calls.
+    """
+    return SimpleNamespace(
+        ordinal=ordinal,
+        credit_lemmas=set(lemmas),
+        credit_keys=set(keys),
+        written_keys=set(keys),
+        credit_stems=set(stems),
+        phrase=phrase,
+    )
+
+
 def test_practised_counts_a_word_reached_through_an_inflected_form():
-    targets = [SimpleNamespace(ordinal=1, credit_lemmas={"caelum"}, credit_keys=set())]
-    hits = practised(["Deus est in cælo"], targets, CORPUS, TAGGER)
+    hits = practised(["Deus est in cælo"], [target(1, lemmas={"caelum"})], CORPUS, TAGGER)
     assert hits[1] == ["caelum"]
 
 
 def test_practised_falls_back_to_the_written_form_for_an_unresolved_entry():
-    targets = [SimpleNamespace(ordinal=2, credit_lemmas=set(), credit_keys={"ita"})]
-    hits = practised(["Deus est ita"], targets, CORPUS, TAGGER)
+    hits = practised(["Deus est ita"], [target(2, keys={"ita"})], CORPUS, TAGGER)
     assert hits[2] == ["ita"]
 
 
 def test_practised_leaves_out_a_word_no_sentence_used():
-    targets = [SimpleNamespace(ordinal=3, credit_lemmas={"hostis"}, credit_keys=set())]
-    assert practised(["Deus est in cælo"], targets, CORPUS, TAGGER) == {}
+    assert practised(["Deus est in cælo"], [target(3, lemmas={"hostis"})], CORPUS, TAGGER) == {}
+
+
+def test_practised_reaches_an_unlemmatised_word_through_a_long_enough_stem():
+    """🚨 第三條路線。語料裡 annuntiavit 這個形沒有詞位，詞位與字形兩條路都到不了，
+    只剩詞幹。九十一個詞卡在這裡，而「本課二十詞全數入題」對它們永遠不可能成立。"""
+    hits = practised(
+        ["annuntiavit Deus"], [target(4, stems={"annunti"})], CORPUS, TAGGER
+    )
+    assert hits[4] == ["annuntiauit"]
+
+
+def test_a_short_word_gets_no_stem_route_at_all():
+    """🚨 詞幹長度下限就是為了這一格：missa 的五字母詞幹會把別的詞算成練到。
+
+    `credit_stems` 在 VocabEntry 那邊就已經把不足六字母的濾掉，這裡釘的是
+    `practised` 不會自己補一條——給空的詞幹集合，就真的一條都不走。"""
+    assert practised(["missus est Deus"], [target(5, stems=set())], CORPUS, TAGGER) == {}
 
 
 def entry_with_lemmas(headword, lemmas, forms=None, lesson=2, ordinal=90):
