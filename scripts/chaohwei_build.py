@@ -259,7 +259,7 @@ def is_note_continuation(para: str) -> bool:
     return bool(_CONT_RE.match(para or ""))
 
 
-def split_body_and_notes(text: str) -> tuple[str, list[str]]:
+def split_body_and_notes(text: str, wrapped: bool = True) -> tuple[str, list[str]]:
     """一頁文字 → (正文, 註文段落 list)。
 
     腳註必須在接行之前先抽出來：`normalize_cjk_linebreaks` 只看「上一行有沒有
@@ -272,8 +272,8 @@ def split_body_and_notes(text: str) -> tuple[str, list[str]]:
         ln = raw.strip()
         if _NOTE_RE.match(ln):
             notes.append(ln)
-        elif notes:
-            if ln:  # 註文的續行
+        elif wrapped and notes:
+            if ln:  # 註文的續行（只有 v1 會折行）
                 sep = " " if notes[-1][-1].isascii() and ln[0].isascii() else ""
                 notes[-1] += sep + ln
         else:
@@ -331,7 +331,12 @@ def stitch_pages(pages: list[dict]) -> list[tuple[str, str, int]]:
                     and out[-1][1][-1] not in _SENT_END):
                 anchor, prev, prev_ch = out[-1]
                 sep = " " if prev[-1].isascii() and para[0].isascii() else ""
-                out[-1] = (anchor, prev + sep + para, prev_ch)
+                # 🚨 整頁都是上一段的續文時，那一頁的頁碼沒有任何一段掛得到，
+                # 讀者就完全看不到它（唯識實測有 7 頁這樣、心靈 1 頁）。引用號
+                # 仍留在段落**起始**頁（學術慣例），跨進去的頁改用行內標記表示。
+                mark = (f"【頁 {printed}】"
+                        if printed and printed != _last_page_mark(prev, anchor) else "")
+                out[-1] = (anchor, prev + sep + mark + para, prev_ch)
             else:
                 out.append((printed, para, ch))
     return out
@@ -709,8 +714,10 @@ def pages_for_stitch(records: list[dict], keep: list[int],
         v2 = r.get("format") == "v2"
         # v2 的頁眉在 OCR 階段就單獨存進 header 欄，正文不必再猜著削
         cleaned = normalize_page_text(raw if v2 else strip_page_header(raw, printed))
-        # 註文要在接行之前抽走，否則會被黏進正文最後一段
-        body, notes = split_body_and_notes(cleaned)
+        # 註文要在接行之前抽走，否則會被黏進正文最後一段。
+        # v2 一段一行，註文不會折行，所以不做「續行接回」—— 做了的話，頁面
+        # 最上面是 `[^續]` 的那幾頁，整頁正文都會被吸進那條註裡。
+        body, notes = split_body_and_notes(cleaned, wrapped=not v2)
         if not body and not notes:
             # 🚨 有正文的頁被清理清成空白＝整頁靜靜消失，比缺頁更難發現
             if len(raw.strip()) > 40:
@@ -721,7 +728,11 @@ def pages_for_stitch(records: list[dict], keep: list[int],
             paras = [ln.strip() for ln in body.split("\n") if ln.strip()]
         else:
             paras = [p.strip() for p in normalize_cjk_linebreaks(body).split("\n\n") if p.strip()]
-        paras += notes
+        # 從上一頁接下來的註（`[^續]`）要排在本頁正文**之前**：它接的是上一頁
+        # 最後那條註，中間隔了一整頁正文就接不回去，會變成一段孤兒。
+        # 本頁自己的註照舊排在正文後面（版面上就在頁底）。
+        cont = [n for n in notes if is_note_continuation(n)]
+        paras = cont + paras + [n for n in notes if n not in cont]
         out.append({"work_page": r["work_page"], "printed": printed, "paras": paras})
     for wp, pr, n in dropped:
         print(f"  \u26a0 掃描頁 {wp}（印刷頁 {pr or '?'}）原有 {n} 字，卻被頁眉清理清成空白", flush=True)

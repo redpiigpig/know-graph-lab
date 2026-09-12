@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -42,8 +43,12 @@ BODY_START_WP = 18  # 掃描頁 18 ＝ 正文印刷頁 1（前面是前言／自
 # 卷首三段各自從 1 編頁 —— 用掃描頁區間分段，並替頁碼加前綴。區間是逐頁看過
 # OCR 的 header 與內容定出來的，不是猜的：wp1 是出版前言的**最後一頁**（頁 8），
 # wp2–7 是自序頁 1–6，wp8–16 是目次頁 1–9。
+# 使用者定調（2026-09-12）：**出版前言不收**。掃描本也只有它的最後一頁（頁 8），
+# 收進來是半截。wp1 整頁排除，不是只從章名表拿掉 —— 只拿掉章名的話那一頁會掉進
+# 隔壁章，而且它的頁碼「8」沒了前綴就會跟正文第 8 頁撞號。
+SKIP_WP: set[int] = {1}
+
 FRONT_MATTER: list[dict] = [
-    {"title": "出版前言", "wp": (1, 1), "prefix": "前言"},
     {"title": "自序", "wp": (2, 7), "prefix": "自序"},
     {"title": "目次", "wp": (8, 16), "prefix": "目次"},
 ]
@@ -52,7 +57,6 @@ FRONT_MATTER: list[dict] = [
 # 🚨 目次那一頁的 OCR 把參考資料的訖頁「一一八」讀成「一二八」，與肆的起頁
 # 一一九 相衝；以正文為準（參考資料的頁眉到頁 117，肆的標題出現在頁 119）。
 CHAPTERS: list[dict] = [
-    {"title": "出版前言", "start": "前言8", "end": "前言8"},
     {"title": "自序", "start": "自序1", "end": "自序6"},
     {"title": "目次", "start": "目次1", "end": "目次9"},
     {"title": "壹　緒論", "start": "1", "end": "12"},
@@ -123,6 +127,119 @@ def drop_leading_chapter_title(units: list[tuple], chapters: list[dict]) -> list
     return out
 
 
+# 節標題的三層編號樣式。㈠㈡ 是 OCR 對「（一）（二）」的另一種讀法，兩種都要認。
+_HEAD_PATS: list[tuple[int, "re.Pattern"]] = [
+    (1, re.compile(r"^[一二三四五六七八九十]{1,3}、\s*")),
+    (2, re.compile(r"^(?:[（(][一二三四五六七八九十]{1,3}[）)]|[㈠-㈩㉑-㉟])\s*")),
+    (3, re.compile(r"^\d{1,2}[.、]\s*")),
+]
+_TOC_ENTRY_RE = re.compile(r"／[〇一二三四五六七八九十百]+(?:——[〇一二三四五六七八九十百]+)?")
+
+
+def toc_keys(toc_text: str) -> dict[str, tuple[int, str]]:
+    """目次頁的文字 → {節標題正規化鍵: (層級, 目次上印的編號)}。
+
+    目次每一條長成「一、傳統研究法／一三」，`／` 後面是中文數字頁碼。書上目次是
+    這本書自己列的權威節標題表，拿它當白名單比任何 regex 都可靠
+    —— 與 `CHAPTERS` 照抄目次是同一個道理。層級也直接取自目次的編號樣式。
+    """
+    keys: dict[str, tuple[int, str]] = {}
+    for raw in (toc_text or "").replace("\n", "／\n").split("\n"):
+        for piece in _TOC_ENTRY_RE.split(raw):
+            piece = piece.strip()
+            for lv, rx in _HEAD_PATS:
+                m = rx.match(piece)
+                if m:
+                    k = cb._title_key(piece[m.end():])
+                    if k:
+                        keys.setdefault(k, (lv, m.group(0).strip()))
+                    break
+    return keys
+
+
+def heading_level(para: str, keys: dict[str, tuple[int, str]], max_len: int = 24) -> int | None:
+    """這一段是不是節標題？是就回傳層級 1/2/3，不是就 None。
+
+    🚨 光看編號樣式會大量誤判：書裡的散文列舉也長成「一、細心相續：特別與唯識學
+    中阿陀那識執受根身……有關。」，自序末尾的日期「九十、三、十九」也一樣。
+    所以兩道閘都要過：
+
+    1. **目次白名單**——標題文字出現在書上的目次頁，就直接認（長度不限，
+       目次裡本來就有長標題）。
+    2. 目次沒有的（目次 OCR 有漏字，例如正文的「現代佛教教學研究法」目次讀成
+       「現代佛教學研究法」）退而求其次：夠短、而且**整段沒有句號**。
+       散文列舉幾乎一定有句號，真標題幾乎一定沒有。
+    """
+    s = (para or "").strip()
+    if not s or s.startswith("#"):
+        return None
+    for lv, rx in _HEAD_PATS:
+        m = rx.match(s)
+        if not m:
+            continue
+        body = s[m.end():].strip()
+        if not body:
+            return None
+        # 編號後面又接一個編號 → 那是數字串不是標題（自序文末的日期
+        # 「九十、三、十九 于尊梅樓」剛好短、又沒有句號，兩道閘都會放過）
+        if lv == 1 and _HEAD_PATS[0][1].match(body):
+            return None
+        if cb._title_key(body) in keys:
+            return lv
+        if len(s) <= max_len and "。" not in s:
+            return lv
+        return None
+    # 編號認不出來，但整段（或去掉開頭一個字之後）正好是目次上的一條標題。
+    # 🚨 圈號 ㈡㈢㈣ 常被 OCR 讀成「口」「曰」「四」——這些是真的漢字，不能靠
+    # 字形認。改成反過來問「拿掉那個字之後是不是目次上的標題」，由白名單把關，
+    # 才不會把正文裡以「口」「四」開頭的句子誤判成標題。
+    for cand in (s, s[1:].strip()):
+        hit = keys.get(cb._title_key(cand))
+        if hit and len(s) <= max_len:
+            return hit[0]
+    return None
+
+
+def canonical_heading(para: str, keys: dict[str, tuple[int, str]]) -> str:
+    """編號被 OCR 讀壞的標題 → 換回目次上印的那個編號。
+
+    圈號 ㈡㈢㈣ 常被讀成「口」「曰」「四」「白」「田」，直接呈現就是一行錯字。
+    只在**這一段已經被認定是標題、而且編號認不出來**時才動，換上去的編號來自
+    書上的目次，不是我編的。認得出編號的（`一、`、`（一）`）原樣不動。
+    """
+    s = (para or "").strip()
+    if any(rx.match(s) for _lv, rx in _HEAD_PATS):
+        return s
+    if cb._title_key(s) in keys:
+        return s                      # 整段就是標題本文，本來就沒有編號可修
+    stripped = s[1:].strip()          # 開頭那一個字是被讀壞的編號
+    hit = keys.get(cb._title_key(stripped))
+    if not hit:
+        return s
+    # 接法照書上的習慣：`（一）` 直接接、`一、` 也直接接，圈號才空一格
+    sep = "" if hit[1][-1] in "）)、." else " "
+    return f"{hit[1]}{sep}{stripped}"
+
+
+def mark_headings(chunks: list[dict], toc: str) -> list[dict]:
+    """把正文裡的節標題加上 `###`／`####`／`#####`（章是 `##`，所以往下錯開一層）。
+
+    卷首（自序、目次）跳過：目次整頁都是標題樣式，加了會變成一頁全是標題列。
+    """
+    keys = toc_keys(toc)
+    out = []
+    for c in chunks:
+        if c["chunk_type"] != "chapter" or c["chapter_path"].endswith(("自序", "目次")):
+            out.append(c)
+            continue
+        paras = []
+        for p in c["content"].split("\n\n"):
+            lv = heading_level(p, keys)
+            paras.append(f"{'#' * (lv + 2)} {canonical_heading(p, keys)}" if lv else p)
+        out.append({**c, "content": "\n\n".join(paras)})
+    return out
+
+
 def build_chunks(chapters: list[dict]) -> list[dict]:
     """章 list → ebook_chunks（cover + 每章一 chunk）。
 
@@ -158,13 +275,16 @@ def assemble() -> tuple[list[dict], dict]:
         raise SystemExit(f"快取是空的：{CACHE}")
     # 先修頁碼再加前綴再記帳 —— 反過來的話 wp114 的 97 還掛著誤讀的 17，
     # 會被當成正文頁 17 的重複而丟掉一整頁
+    records = [r for r in records if r["work_page"] not in SKIP_WP]
     records = prefix_front_matter(cb.prepare_records(records))
     titles = [c["title"] for c in CHAPTERS]
     rep = cb.audit_pages(records, titles)
     pages = cb.tag_chapters(cb.pages_for_stitch(records, rep["keep"], titles), CHAPTERS)
     units = drop_leading_chapter_title(cb.stitch_pages(pages), CHAPTERS)
     chapters = cb.split_chapters(units, CHAPTERS)
-    return build_chunks(chapters), rep
+    chunks = build_chunks(chapters)
+    toc = next((c["content"] for c in chunks if c["chapter_path"].endswith("目次")), "")
+    return mark_headings(chunks, toc), rep
 
 
 def main() -> None:
@@ -176,7 +296,8 @@ def main() -> None:
     a = ap.parse_args()
 
     if a.audit:
-        records = prefix_front_matter(cb.prepare_records(cb.load_cache([Path(CACHE)], Path(WORK))))
+        recs = [r for r in cb.load_cache([Path(CACHE)], Path(WORK)) if r["work_page"] not in SKIP_WP]
+        records = prefix_front_matter(cb.prepare_records(recs))
         rep = cb.audit_pages(records, [c["title"] for c in CHAPTERS])
         rng = rep["printed_range"]
         print(f"掃描頁 {len(records)}　→　保留 {len(rep['keep'])} 頁")

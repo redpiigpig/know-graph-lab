@@ -119,6 +119,25 @@ class TestNotes:
         _, notes = split_body_and_notes(t)
         assert notes == ["[^4]: 中央通訊社報導：〈00後性別比例失衡〉，2018/09/05"]
 
+    def test_v2_never_glues_following_lines_onto_a_note(self):
+        # 🚨 v2 一段一行，所以「註文之後的行」不是註的續行，是正文。
+        # 頁面最上面是上一頁接下來的 `[^續]` 時，整頁正文會被吸進那條註裡
+        #（唯識的頁 143、171 就是這樣整頁消失在一個灰底小字註腳中）。
+        t = ("[^續]: 由此於後自相續中，有分位別異相法起。（大正二九・五三五上）\n"
+             "進一步再問：爲什麼會有善行或惡行的不同表現呢？\n"
+             "「識緣名色，名色緣六入」，如前所述。")
+        body, notes = split_body_and_notes(t, wrapped=False)
+        assert len(notes) == 1
+        assert notes[0].endswith("（大正二九・五三五上）")
+        assert body.split("\n") == ["進一步再問：爲什麼會有善行或惡行的不同表現呢？",
+                                    "「識緣名色，名色緣六入」，如前所述。"]
+
+    def test_v1_still_joins_wrapped_note_lines(self):
+        # v1 的 OCR 照印刷換行斷句，註文會折行 —— 那時候才需要接回來
+        t = "[^4]: 中央通訊社報導：\n〈00後性別比例失衡〉，2018/09/05"
+        _, notes = split_body_and_notes(t, wrapped=True)
+        assert notes == ["[^4]: 中央通訊社報導：〈00後性別比例失衡〉，2018/09/05"]
+
     def test_page_without_notes(self):
         body, notes = split_body_and_notes("辛格：這一頁沒有註。")
         assert body == "辛格：這一頁沒有註。"
@@ -150,6 +169,20 @@ class TestNotes:
         assert units[0][0] == "59"  # anchor 留在註開始的那一頁
         assert units[0][1].startswith("[^14]:")
         assert units[0][1].endswith("（大正三一‧一三四下）")
+
+    def test_a_carried_over_note_rejoins_across_a_page_of_body(self):
+        # 🚨 `[^續]` 要排在該頁正文**之前**，否則它跟上一頁那條註之間隔了一整頁
+        # 正文，就接不回去，變成一段沒頭沒尾的孤兒段落。
+        pages = tag_chapters(_pages(
+            (1, "142", ["頁 142 的正文。", "[^14]: 《攝大乘論》卷中：「如是緣起，於大乘中"]),
+            (2, "143", ["[^續]: 極細甚深。」（大正三一‧一三九上）", "頁 143 的正文。"]),
+        ), CHS)
+        units = stitch_pages(pages)
+        notes = [u for u in units if is_note(u[1])]
+        assert len(notes) == 1
+        assert notes[0][0] == "142"                       # anchor 留在註開始的頁
+        assert notes[0][1].endswith("（大正三一‧一三九上）")
+        assert [u[1] for u in units if not is_note(u[1])][-1] == "頁 143 的正文。"
 
     def test_orphan_continuation_does_not_invent_a_note_number(self):
         pages = tag_chapters(_pages((1, "59", ["[^續]: 找不到前一條註"])), CHS)
@@ -247,6 +280,22 @@ class TestStitchPages:
         units = stitch_pages(pages)
         assert len(units) == 2
         assert units[1][2] == 2
+
+    def test_a_paragraph_spanning_pages_keeps_the_page_it_crosses_into(self):
+        # 🚨 整頁都是上一頁那一段的續文時，那一頁的頁碼沒有任何一段掛得到，
+        # 讀者就完全看不到它。接點插行內標記才引用得回去。
+        pages = tag_chapters(_pages(
+            (1, "59", ["這一段在頁 59 沒有講完"]),
+            (2, "60", ["而頁 60 整頁都是它的續文。"]),
+        ), CHS)
+        units = stitch_pages(pages)
+        assert len(units) == 1
+        assert units[0][0] == "59"          # 引用號仍是段落**起始**頁
+        assert "【頁 60】" in units[0][1]     # 但跨進去的那一頁看得到
+
+    def test_no_marker_when_the_join_stays_on_one_page(self):
+        pages = tag_chapters(_pages((1, "59", ["前半沒講完", "同一頁的下一段。"])), CHS)
+        assert "【頁" not in "".join(u[1] for u in stitch_pages(pages))
 
     def test_only_first_para_of_a_page_can_join(self):
         pages = tag_chapters(_pages(

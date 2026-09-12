@@ -88,7 +88,7 @@
             <div class="space-y-1.5">
               <template v-for="(row, i) in rows" :key="i">
                 <!-- heading row (## …) spans all text columns -->
-                <div v-if="row.heading" class="bg-gradient-to-r from-amber-50 to-white border-y border-amber-100 px-3 py-2 text-sm font-semibold text-stone-800">
+                <div v-if="row.heading" :class="headingClass(row.headingLevel)">
                   {{ row.heading }}
                 </div>
                 <article v-else class="bg-white border rounded-md overflow-hidden"
@@ -258,7 +258,11 @@ const rows = computed(() => {
   const anchors: string[] = c.anchors ?? []
   return zipped.map((r, i) => {
     let zhText = r.zh
-    const heading = /^#{1,4}\s+/.test(zhText) ? zhText.replace(/^#{1,4}\s+/, '') : null
+    const hm = /^(#{1,5})\s+/.exec(zhText)
+    const heading = hm ? zhText.replace(/^#{1,5}\s+/, '') : null
+    // 論著有章底下的節（`###` 起），層級要看得出來——全部畫成同一條金色橫幅的話，
+    // 三層結構等於沒有。`##`＝章，往下每一層縮排並降一級字重。
+    const headingLevel = hm ? hm[1].length : 0
     // 對話錄／經院問答：段首 〔角色〕→ 抽出當標籤、各欄一併去掉前綴
     let lead = ''
     let cols = r.cols
@@ -272,6 +276,7 @@ const rows = computed(() => {
     }
     return {
       heading,
+      headingLevel,
       lead,
       zh: zhText,
       cols,
@@ -327,6 +332,14 @@ async function copyCite(a: string) {
     setTimeout(() => (copied.value = false), 1400)
     navigateTo({ query: { ...route.query, p: page.value }, hash: `#cite-${a}` }, { replace: true })
   } catch { /* clipboard blocked — ignore */ }
+}
+
+// 章（##）是金色橫幅；節（###↓）逐層縮排、降字級，靠左側細線表示從屬
+function headingClass(level: number): string {
+  if (level <= 2) return 'bg-gradient-to-r from-amber-50 to-white border-y border-amber-100 px-3 py-2 text-sm font-semibold text-stone-800'
+  const indent = ['pl-3', 'pl-6', 'pl-9'][Math.min(level - 3, 2)]
+  const size = ['text-sm font-semibold', 'text-[0.82rem] font-semibold', 'text-[0.8rem] font-medium'][Math.min(level - 3, 2)]
+  return `${indent} ${size} border-l-2 border-amber-200 text-stone-700 py-1.5 mt-2`
 }
 
 // ── markdown-lite ──
