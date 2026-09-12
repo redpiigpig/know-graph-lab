@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 45, "author": "opus-5-hand-written",
+  "note": "salutāre 只有 Salutare 一形，condoleō 只認字形。vōx 沒有複數主格 voces 進語料。",
+  "sentences": [
+    {"latin": "redimere et refulsit", "chinese": "去救贖，而他照耀了。", "targets": ["redimo", "refulgeo"]},
+    {"latin": "Salutare suavis vocis", "chinese": "甘美聲音的救恩。", "targets": ["salutare", "suavis", "vox"]},
+    {"latin": "in synagoga tantum", "chinese": "只在會堂裡。", "targets": ["synagoga", "tantum", "in"]},
+    {"latin": "virtutem alius et alter", "chinese": "一人與另一人的德能。", "targets": ["virtus", "alius", "alter"]},
+    {"latin": "ardens condolet contra", "chinese": "他熾熱地同情，並且相對。", "targets": ["ardeo", "condoleo", "contra"]},
+    {"latin": "curvantur in synagoga", "chinese": "他們在會堂裡俯身。", "targets": ["curvo", "in", "synagoga"]},
+    {"latin": "suavissimum Salutare redimere", "chinese": "去救贖那最甘美的救恩。", "targets": ["suavis", "salutare", "redimo"]}
+  ]
+}

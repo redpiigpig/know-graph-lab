@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 44, "author": "opus-5-hand-written",
+  "note": "genitus 武加大沒有字形。triumphus 只認詞幹，語料裡活著的是動詞 triumpho 那一家。片語 ut quid 要 ut 與 quid 同句。",
+  "sentences": [
+    {"latin": "ut quid triumphabit", "chinese": "他為什麼要凱旋。", "targets": ["ut quid", "triumphus"]},
+    {"latin": "Adjuva et constituit faciem", "chinese": "求你幫助，而他立定了面容。", "targets": ["adjuvo", "constituo", "facies"]},
+    {"latin": "circumfulsit et fulget", "chinese": "光環照了，並且仍在發光。", "targets": ["circumfulgeo", "fulgeo"]},
+    {"latin": "gentes laborem lavabit", "chinese": "他要洗淨萬民的勞苦。", "targets": ["gens", "labor", "lavo"]},
+    {"latin": "meretur odorem et pretium", "chinese": "他配得那香氣與代價。", "targets": ["mereo", "odor", "pretium"]},
+    {"latin": "nondum pascit gentes", "chinese": "他還沒有牧養萬民。", "targets": ["nondum", "pasco", "gens"]},
+    {"latin": "pretio laborem meruit", "chinese": "他以代價換得了勞苦。", "targets": ["pretium", "labor", "mereo"]}
+  ]
+}

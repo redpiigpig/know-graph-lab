@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 46, "author": "opus-5-hand-written",
+  "note": "praefātiō 只認詞幹（語料只有 præfatione），prōtēctiō 只認字形且沒有奪格，sui 在語料裡只剩 secum。",
+  "sentences": [
+    {"latin": "fundavit protectionem in quiete", "chinese": "他在安寧中建立了保護。", "targets": ["fundo", "protectio", "in", "quies"]},
+    {"latin": "gravis tentatio et nullus", "chinese": "沉重的試探，而一無所有。", "targets": ["gravis", "tentatio", "nullus"]},
+    {"latin": "infecta est et perfecta", "chinese": "它被污染了，卻又完成了。", "targets": ["inficio", "sum", "perfectus"]},
+    {"latin": "in præfatione proficit", "chinese": "他在序言中得益。", "targets": ["praefatio", "proficio", "in"]},
+    {"latin": "secum refecerunt quietem", "chinese": "他們在自己身上恢復了安寧。", "targets": ["sui", "reficio", "quies"]},
+    {"latin": "nullus perfectus secum", "chinese": "沒有人在自己裡面是完美的。", "targets": ["nullus", "perfectus", "sui"]},
+    {"latin": "tentationem gravi reficiam", "chinese": "我要以沉重重整那試探。", "targets": ["tentatio", "gravis", "reficio"]}
+  ]
+}
