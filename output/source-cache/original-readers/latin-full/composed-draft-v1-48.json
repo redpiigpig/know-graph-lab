@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 48, "author": "opus-5-hand-written",
+  "note": "omissiō 與 struō 武加大沒有字形。psalmista 只認詞幹，語料裡對得上的是 psalmis；supplicō 同理只剩 suppliciis／supplices。",
+  "sentences": [
+    {"latin": "lampades licet pretiosa", "chinese": "雖然那些燈是寶貴的。", "targets": ["lampas", "licet", "pretiosus"]},
+    {"latin": "in psalmis supplices", "chinese": "在聖詠中懇求的人們。", "targets": ["psalmista", "supplico", "in"]},
+    {"latin": "resuscitabo et suscitavit", "chinese": "我要使人甦醒，而他已興起了。", "targets": ["resuscito", "suscito"]},
+    {"latin": "Sume vespertinum amicum", "chinese": "你要接納那傍晚的朋友。", "targets": ["sumo", "vespertinus", "amicus"]},
+    {"latin": "timoratus attraxit amicum", "chinese": "那敬畏天主的人吸引了朋友。", "targets": ["timoratus", "attraho", "amicus"]},
+    {"latin": "pretioso in psalmis", "chinese": "以寶貴的，在聖詠中。", "targets": ["pretiosus", "psalmista", "in"]},
+    {"latin": "licet suscitabo lampades", "chinese": "雖然如此，我要點起那些燈。", "targets": ["licet", "suscito", "lampas"]}
+  ]
+}

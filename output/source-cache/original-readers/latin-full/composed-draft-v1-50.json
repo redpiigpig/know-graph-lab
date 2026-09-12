@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 50, "author": "opus-5-hand-written",
+  "note": "sociō 只認字形（socio／sociare）；premō 沒有不定式 premere 進語料，所以命令句改用 vetare。片語 nōlī/nōlite 的比對鍵是 noli 與 nolite 兩個，要同一句都寫出來才算練到。",
+  "sentences": [
+    {"latin": "Noli vetare et nolite sociare", "chinese": "你不要禁止，你們也不要結盟。", "targets": ["noli", "veto", "socio"]},
+    {"latin": "perseverans in somno", "chinese": "在睡夢中持續著。", "targets": ["persevero", "somnus", "in"]},
+    {"latin": "quisquam sedem traxit", "chinese": "有人拖走了那座位。", "targets": ["quisquam", "sedes", "traho"]},
+    {"latin": "appropinquat et convertit dæmonium", "chinese": "他走近了，也驅轉了那魔。", "targets": ["appropinquo", "converto", "daemonium"]},
+    {"latin": "premunt parentum sedes", "chinese": "父母的座位受到擠壓。", "targets": ["premo", "parens", "sedes"]},
+    {"latin": "quisquam somnum traxit", "chinese": "有人拖延了睡眠。", "targets": ["quisquam", "somnus", "traho"]},
+    {"latin": "perseverantes compar vetati", "chinese": "那些持守的人、與之同等的，都被禁止了。", "targets": ["persevero", "compar", "veto"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 49, "author": "opus-5-hand-written",
+  "note": "ineffābilis 與 liquō 武加大沒有字形。domina 只剩受格 dominam，inaestimābilis 只有主格。",
+  "sentences": [
+    {"latin": "commendo et deputatus est", "chinese": "我託付了，而他被指派了。", "targets": ["commendo", "deputo", "sum"]},
+    {"latin": "detraxerunt difficile lignum", "chinese": "他們拖走了那難搬的木頭。", "targets": ["detraho", "difficilis", "lignum"]},
+    {"latin": "divinitas dominam exprimit", "chinese": "神性表現出那位夫人。", "targets": ["divinitas", "domina", "exprimo"]},
+    {"latin": "facile hostes negare", "chinese": "否認仇敵是容易的。", "targets": ["facilis", "hostis", "nego"]},
+    {"latin": "illucescat inæstimabilis monumentum", "chinese": "願那無價的紀念碑發光。", "targets": ["illucesco", "inaestimabilis", "monumentum"]},
+    {"latin": "monumento ligna commendo", "chinese": "我把木料託付給那墳墓。", "targets": ["monumentum", "lignum", "commendo"]},
+    {"latin": "difficile est negare hostes", "chinese": "否認仇敵是困難的。", "targets": ["difficilis", "sum", "nego", "hostis"]}
+  ]
+}

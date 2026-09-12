@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 47, "author": "opus-5-hand-written",
+  "note": "venerō 只認字形，cautiō／corōnō／cūria 各只剩一個形進語料。",
+  "sentences": [
+    {"latin": "totus tristis veneratus est", "chinese": "他整個人憂傷地敬拜了。", "targets": ["totus", "tristis", "venero", "sum"]},
+    {"latin": "aliqua cautionem assumpsit", "chinese": "某位承擔了那份保證。", "targets": ["aliqui", "cautio", "assumo"]},
+    {"latin": "conclusione coronatum Crevit", "chinese": "以結論加冕，他就增長了。", "targets": ["conclusio", "corono", "cresco"]},
+    {"latin": "curiam demonstrat et destruxit", "chinese": "他指出了議院，又毀壞了它。", "targets": ["curia", "demonstro", "destruo"]},
+    {"latin": "figura gesta hospites", "chinese": "已成就的形像，與那些客人。", "targets": ["figura", "gero", "hospes"]},
+    {"latin": "instruxit hospites in curiam", "chinese": "他在議院中教導了客人們。", "targets": ["instruo", "hospes", "in", "curia"]},
+    {"latin": "tota figura tristis", "chinese": "整個形像都是憂傷的。", "targets": ["totus", "figura", "tristis"]}
+  ]
+}
