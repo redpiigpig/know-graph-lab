@@ -59,15 +59,119 @@ _HALF2FULL = {",": "，", ";": "；", ":": "：", "?": "？", "!": "！"}
 _PUNCT_RE = re.compile(rf"(?<=[{_CJK}])\s*([,;:?!])")
 
 
+# 成對括號：內容含中文才換成全形。單邊比對不行 ——「(Bentham)」的左括號前面
+# 也是中文，按前一個字元判斷會把西文夾注一起換掉。內容允許跨一次折行（版面
+# 把括號切到下一行是常事），但不准跨過註號 `[^` ——那個右括號屬於別處。
+_PAREN_RE = re.compile(r"\(([^()\n]*(?:\n[^()\n]*)?)\)")
+_CJK_CHAR_RE = re.compile(r"[㐀-䶿一-鿿]")
+# 行首的列舉號「(1)」後面接中文 → 那是書上的列舉號，不是西文引註
+_ENUM_RE = re.compile(r"(?m)^([ \t]*)\((\d{1,2})\)(?=[㐀-鿿「『【《])")
+
+
+def _paren_to_fullwidth(m: re.Match) -> str:
+    inner = m.group(1)
+    if "[^" in inner or not _CJK_CHAR_RE.search(inner):
+        return m.group(0)
+    return f"（{inner}）"
+
+
 def to_fullwidth_punct(text: str) -> str:
     """把**緊接在中文字後面**的半形標點換成全形。
 
     Gemini 轉錄中文書時常把原書的全形「，」吐成半形「,」。只在前一個字元是
     CJK 時才換，所以書裡的英文引文（`Singer, Peter`）與數字（`1,000`）不受影響。
+
+    括號另外處理：改看**括號裡裝的是什麼**。裝中文的換全形（`(一)`、
+    `(大正二九・一五九上)`），裝西文或數字的留半形（`(Bentham)`、`(2021)`）——
+    後者是中文排版的通例，硬換會讓西文夾注看起來很怪。
     """
     if not text:
         return text
-    return _PUNCT_RE.sub(lambda m: _HALF2FULL[m.group(1)], text)
+    out = _PUNCT_RE.sub(lambda m: _HALF2FULL[m.group(1)], text)
+    out = _PAREN_RE.sub(_paren_to_fullwidth, out)
+    return _ENUM_RE.sub(lambda m: f"{m.group(1)}（{m.group(2)}）", out)
+
+
+# OCR 有時不把頁眉／頁碼填進 `header`／`printed` 欄，而是照 prompt 的格式寫進
+# 正文第一行，且收尾的括號常常從 `】` 歪成 `}`／`]`。不撿回來有兩個後果：
+# 那一頁的**真頁碼**白白丟掉，而且頁眉會變成正文的第一段。
+_INLINE_MARK_RE = re.compile(
+    r"(?m)^[ \t]*[【\[][ \t]*(頁|眉)[ \t]*([^】}\]\n]{0,24}?)[ \t]*[】}\]][ \t]*$")
+
+
+def strip_inline_markers(text: str, printed: str) -> tuple[str, str]:
+    """正文裡的 `【頁 91}`／`【眉 參考資料}` → (清掉標記的正文, 頁碼)。
+
+    只認**自成一行**的標記，所以 `merge_units` 事後插進段落中間的 `【頁 12】`
+    行內頁碼標記不會被誤刪。`printed` 已經有值時以它為準，標記只用來補空的。
+    """
+    if not text:
+        return text or "", printed
+    found = ""
+
+    def _take(m: re.Match) -> str:
+        nonlocal found
+        if m.group(1) == "頁" and not found:
+            found = m.group(2).strip()
+        return ""
+
+    out = _INLINE_MARK_RE.sub(_take, text)
+    out = re.sub(r"\n{3,}", "\n\n", out).strip()
+    return out, ((printed or "").strip() or found)
+
+
+def unescape_linebreaks(text: str) -> str:
+    """整頁被寫成字面 `\\n` 的 OCR 輸出 → 還原成真換行。
+
+    《心靈的交會》有兩頁這樣（掃描頁 25、26）。不還原的話那一頁整頁變成一行，
+    頁眉、段落界線全部失效，而且**看起來只是段落有點長**，不會報錯。
+    只在該頁一個真換行都沒有時才動手；否則那些反斜線就是正文的內容。
+    """
+    if not text or "\n" in text or "\\n" not in text:
+        return text
+    return text.replace("\\n", "\n")
+
+
+def drop_repeated_header(body: str, header: str) -> str:
+    """v2 的模型偶爾把頁眉同時寫進 `header` 欄**和**正文第一行 —— 刪掉正文那一份。
+
+    章的第一頁最常中鏢：書上那一行是章標題，模型兩邊都寫，於是 reader 上
+    `## 對話八：死刑與戰爭中的殺戮` 底下又跟著一模一樣的一段。
+    只認**整行**相等（比對忽略標點與空白），開頭幾個字像的正文不動。
+    """
+    if not body or not (header or "").strip():
+        return body
+    head, _, rest = body.partition("\n")
+    if _title_key(head) and _title_key(head) == _title_key(header):
+        return rest.strip()
+    return body
+
+
+def fill_one_page_gaps(folios: list[str]) -> list[str]:
+    """印刷頁碼序列的保守修補：**只補前後兩頁夾出唯一解的那一格**。
+
+    兩種情況會動：某頁讀不到頁碼，而前後兩頁剛好差 2（`13, ?, 15` → 14）；
+    或某頁讀到的值與前後兩頁都矛盾，而前後剛好差 2（`96, 17, 98` → 97，
+    OCR 把 97 讀成 17 這種）。其餘一律不動 —— 連續缺兩頁、真缺頁
+    （`47, 49`）、頭尾、非數字頁碼都留原樣，寧可少一個頁碼也不捏一個假的
+    （[[feedback_transcribe_page_numbers]]）。
+
+    刻意不用 `howes_build.fill_folios()` 的順推／逆推：那支會一路推下去，
+    碰到真缺頁就把後面整段的頁碼全部推歪，而且推歪之後每一頁單獨看都正常。
+    """
+    out = list(folios)
+    for i in range(1, len(out) - 1):
+        prev, nxt = (out[i - 1] or "").strip(), (out[i + 1] or "").strip()
+        if not (prev.isdigit() and nxt.isdigit()):
+            continue
+        if int(nxt) - int(prev) != 2:
+            continue
+        want = str(int(prev) + 1)
+        cur = (out[i] or "").strip()
+        if cur == want:
+            continue
+        out[i] = want
+    return out
 
 
 _DASH_RE = re.compile(r"—{3,}")
@@ -303,7 +407,7 @@ def page_sort_key(printed: str) -> tuple:
     return (9, 0)
 
 
-def audit_pages(records: list[dict]) -> dict:
+def audit_pages(records: list[dict], titles: list[str] | None = None) -> dict:
     """掃描頁清單 → 重複／缺頁報告。
 
     `records` = [{"work_page":N,"printed":"59","text":"..."}]，依掃描順序。
@@ -320,7 +424,7 @@ def audit_pages(records: list[dict]) -> dict:
         if not body or body == "（無正文）":
             blank.append(r["work_page"])
             continue
-        if is_apparatus_page(body, p):
+        if is_apparatus_page(body, p, titles):
             # 章名頁的「頁碼」是模型把「Dialogue 4」讀成的，不是印刷頁碼；
             # 拿去比對會生出假的重複，所以整頁不參與頁碼帳
             apparatus.append(r["work_page"])
@@ -371,7 +475,7 @@ def audit_pages(records: list[dict]) -> dict:
     }
 
 
-_TITLE_NOISE_RE = re.compile(r"[\s　·‧・:：,，.。、!！?？「」『』（）()]+")
+_TITLE_NOISE_RE = re.compile(r"[\s　·‧・:：,，.。、!！?？「」『』（）()◎※＊*—－-]+")
 
 
 def _title_key(s: str) -> str:
@@ -398,7 +502,7 @@ def match_title(para: str, titles: list[str]) -> str | None:
     return None
 
 
-def is_apparatus_page(text: str, printed: str) -> bool:
+def is_apparatus_page(text: str, printed: str, titles: list[str] | None = None) -> bool:
     """這一頁是不是「裝置頁」——書名頁／目次頁／章名頁？是就整頁不收。
 
     三者共同點是**沒有印刷頁碼**、而且內容是中英對照的標題文字。章名（對話一…）
@@ -415,6 +519,11 @@ def is_apparatus_page(text: str, printed: str) -> bool:
         return True
     if (printed or "").strip():
         return False
+    # 沒有 `Dialogue N` 可認的章名頁（「對談尾聲的總結與回顧」）只能靠章名表。
+    # 沒有印刷頁碼 ＋ 字數極少 ＋ 整頁就是一個章名 —— 三個條件缺一不可：
+    # 章的第一頁也以章名開頭，但它有頁碼、而且後面接著正文。
+    if titles and len(t) < 80 and match_title(t.split("\n", 1)[0], titles):
+        return True
     if "目次" in t or "CONTENTS" in t:
         return True
     if "Meeting of Minds" in t:
@@ -485,7 +594,9 @@ def split_chapters(units: list[tuple], chapters: list[dict]) -> list[dict]:
             order.append(idx)
         b = buckets[idx]
         b["anchors"].append(anchor)
-        b["paras"].append(mark_speaker(para))
+        # 再跑一次全形標點：括號被版面切到**下一頁**時，逐頁那一關只看得到半邊，
+        # 配不成對也就換不了，要等 stitch_pages 把兩頁接起來之後才補得到。
+        b["paras"].append(mark_speaker(to_fullwidth_punct(para)))
     return [buckets[i] for i in order if buckets[i]["anchors"]]
 
 
@@ -557,7 +668,33 @@ def load_cache(caches: Path | list[Path], work_pdf: Path | None = None) -> list[
     return recs
 
 
-def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
+def prepare_records(records: list[dict]) -> list[dict]:
+    """OCR 快取 → 頁碼與正文都整理過的 record list；`audit_pages` 與
+    `pages_for_stitch` 都吃這個。
+
+    🚨 順序是關鍵：頁碼必須在**頁碼帳之前**修好。《初期唯識思想》掃描頁 114 的
+    頁碼 97 被 OCR 讀成 17，而書上第 17 頁真的存在 —— 先跑頁碼帳的話，那一頁
+    會被判成「頁 17 重複」而整頁丟掉，報告上還顯示得乾乾淨淨。
+    """
+    out: list[dict] = []
+    for r in records:
+        text = unescape_linebreaks(r.get("text") or "")
+        text, printed = strip_inline_markers(text, r.get("printed") or "")
+        out.append({**r, "text": text, "printed": normalize_printed(printed)})
+    # 空白的掃描頁不佔頁碼序列的位置，否則「前後夾出唯一解」會被它們撐開
+    idx = [i for i, r in enumerate(out)
+           if (r["text"] or "").strip() and (r["text"] or "").strip() != "（無正文）"]
+    filled = fill_one_page_gaps([out[i]["printed"] for i in idx])
+    for i, new in zip(idx, filled):
+        if new != out[i]["printed"]:
+            what = "補上" if not out[i]["printed"] else f"改（OCR 讀成 {out[i]['printed']}）"
+            print(f"  · 掃描頁 {out[i]['work_page']} 印刷頁碼{what} → {new}", flush=True)
+            out[i]["printed"] = new
+    return out
+
+
+def pages_for_stitch(records: list[dict], keep: list[int],
+                     titles: list[str] | None = None) -> list[dict]:
     from clean_ocr_text import normalize_cjk_linebreaks
     keepset = set(keep)
     out: list[dict] = []
@@ -565,9 +702,9 @@ def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
     for r in records:
         if r["work_page"] not in keepset:
             continue
-        printed = normalize_printed(r.get("printed") or "")
-        raw = r.get("text") or ""
-        if is_apparatus_page(raw, printed):
+        # records 已經過 prepare_records（頁碼救回、正文標記清掉、缺號補齊）
+        raw, printed = r.get("text") or "", (r.get("printed") or "")
+        if is_apparatus_page(raw, printed, titles):
             continue
         v2 = r.get("format") == "v2"
         # v2 的頁眉在 OCR 階段就單獨存進 header 欄，正文不必再猜著削
@@ -580,6 +717,7 @@ def pages_for_stitch(records: list[dict], keep: list[int]) -> list[dict]:
                 dropped.append((r["work_page"], printed, len(raw.strip())))
             continue
         if v2:
+            body = drop_repeated_header(body, r.get("header") or "")
             paras = [ln.strip() for ln in body.split("\n") if ln.strip()]
         else:
             paras = [p.strip() for p in normalize_cjk_linebreaks(body).split("\n\n") if p.strip()]
@@ -606,7 +744,9 @@ def main() -> None:
     if not records:
         raise SystemExit(f"快取是空的：{a.cache}")
     print(f"OCR 快取：{' → '.join(a.cache)}（{len(records)} 頁）")
-    rep = audit_pages(records)
+    titles = [c["title"] for c in CHAPTERS]
+    records = prepare_records(records)
+    rep = audit_pages(records, titles)
 
     if a.audit or a.keep_out:
         rng = rep["printed_range"]
@@ -625,7 +765,7 @@ def main() -> None:
         if a.audit:
             return
 
-    pages = tag_chapters(pages_for_stitch(records, rep["keep"]), CHAPTERS)
+    pages = tag_chapters(pages_for_stitch(records, rep["keep"], titles), CHAPTERS)
     # 逐段 → 閱讀單位（序言整篇、對話一次發言一塊）；頁碼改成行內標記
     units = merge_units(stitch_pages(pages))
     chapters = split_chapters(units, CHAPTERS)

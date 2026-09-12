@@ -7,6 +7,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from chaohwei_build import (  # noqa: E402
     audit_pages,
+    drop_repeated_header,
+    fill_one_page_gaps,
+    strip_inline_markers,
+    unescape_linebreaks,
     build_chunks,
     is_apparatus_page,
     is_note,
@@ -195,6 +199,19 @@ class TestApparatusPage:
     def test_body_page_kept(self):
         assert is_apparatus_page("辛格：現在談到「業」的概念。", "23") is False
 
+    def test_title_page_without_a_dialogue_number_is_dropped(self):
+        # 「對談尾聲」那一頁沒有 Dialogue N 可認，只能靠章名表
+        assert is_apparatus_page("對談尾聲的總結與回顧\nA Concluding Reflection", "",
+                                 ["對談尾聲的總結與回顧"])
+
+    def test_a_titled_page_that_carries_a_folio_is_body(self):
+        # 同一個標題出現在章的第一頁（有頁碼、後面接正文）→ 那是正文
+        assert not is_apparatus_page("對談尾聲的總結與回顧\n昭慧:在本書告竣的此時", "217",
+                                     ["對談尾聲的總結與回顧"])
+
+    def test_titles_are_optional(self):
+        assert not is_apparatus_page("對談尾聲的總結與回顧", "")
+
     def test_body_mentioning_dialogue_is_not_apparatus(self):
         assert is_apparatus_page("昭慧：這場 Dialogue 對話很難得。", "60") is False
 
@@ -359,6 +376,13 @@ class TestSplitChapters:
         assert chs[1]["paras"][0] == "## 對話三：婦女與平等"
         assert chs[1]["paras"][1] == "〔辛格〕您好。"
 
+    def test_parens_completed_only_by_stitching_still_get_normalized(self):
+        # 左括號在前一頁、右括號在後一頁 —— 逐頁那一關看到的都是半邊，配不成對
+        units = [("161", "內容(如《攝大乘論》所謂：世間雜染、出世清淨等不成之論)也", 2)]
+        out = split_chapters(units, CHS)
+        assert "（如《攝大乘論》" in out[0]["paras"][1]
+        assert "(" not in out[0]["paras"][1]
+
     def test_front_and_back_matter_get_no_heading_row(self):
         pages = tag_chapters(_pages((1, "", ["扉頁一句。"]), (3, "a", ["序。"])), CHS)
         chs = split_chapters(stitch_pages(pages), CHS)
@@ -439,3 +463,135 @@ class TestMergeUnits:
     def test_never_merges_across_chapters(self):
         units = [("d", "序的結尾。", 0), ("1", "對話一的開頭。", 2)]
         assert len(merge_units(units)) == 2
+
+
+class TestFullwidthParens:
+    def test_chinese_content_gets_fullwidth_parens(self):
+        assert to_fullwidth_punct("(一)識緣名色") == "（一）識緣名色"
+
+    def test_latin_content_keeps_halfwidth_parens(self):
+        # 書裡的西文夾注照排版慣例留半形
+        assert to_fullwidth_punct("效益主義(Bentham)的") == "效益主義(Bentham)的"
+        assert to_fullwidth_punct("彌勒(Maitreya)") == "彌勒(Maitreya)"
+
+    def test_year_and_number_keep_halfwidth(self):
+        assert to_fullwidth_punct("法界出版社(2021)") == "法界出版社(2021)"
+
+    def test_citation_with_chinese_converts(self):
+        assert (to_fullwidth_punct("依此(大正二九・一五九上)可知")
+                == "依此（大正二九・一五九上）可知")
+
+    def test_pair_spanning_one_linebreak(self):
+        # 括號被版面切到下一行，兩邊都要換
+        assert (to_fullwidth_punct("引文(《雜\n阿含經》卷十)如是")
+                == "引文（《雜\n阿含經》卷十）如是")
+
+    def test_never_pairs_across_a_footnote_boundary(self):
+        # 這個 `)` 屬於別處；跨過註號硬配對會換錯一半
+        src = "見(大正四三・一下\n[^21]: 某註)"
+        assert to_fullwidth_punct(src) == src
+
+    def test_unmatched_paren_left_alone(self):
+        assert to_fullwidth_punct("唯識(未閉合") == "唯識(未閉合"
+
+    def test_line_initial_enumeration_converts(self):
+        assert to_fullwidth_punct("(1)「種子與種姓」方面") == "（1）「種子與種姓」方面"
+
+    def test_mid_line_latin_numbering_untouched(self):
+        # SN.35.93/(10) 這種西文引註不是列舉號
+        assert to_fullwidth_punct("SN.35.93/(10).也是") == "SN.35.93/(10).也是"
+
+
+class TestUnescapeLinebreaks:
+    def test_page_written_entirely_with_escaped_newlines(self):
+        # 這兩頁的 OCR 存成字面的反斜線 n，一個真換行都沒有
+        src = "\\n【眉 對話一】\\n話，回收廠根本沒地方可以蓋"
+        assert unescape_linebreaks(src) == "\n【眉 對話一】\n話，回收廠根本沒地方可以蓋"
+
+    def test_page_with_real_newlines_is_left_alone(self):
+        # 已經有真換行 → 裡面的反斜線 n 是內容，不是壞掉的換行
+        src = "第一行\n提到 \\n 這個跳脫序列"
+        assert unescape_linebreaks(src) == src
+
+    def test_plain_text_untouched(self):
+        assert unescape_linebreaks("辛格：一般正文") == "辛格：一般正文"
+
+    def test_empty(self):
+        assert unescape_linebreaks("") == ""
+
+
+class TestDropRepeatedHeader:
+    def test_first_line_equal_to_the_running_head_goes(self):
+        assert (drop_repeated_header("對話八：死刑與戰爭中的殺戮\n〔辛格〕前面的對話中",
+                                     "對話八：死刑與戰爭中的殺戮")
+                == "〔辛格〕前面的對話中")
+
+    def test_punctuation_and_spacing_differences_still_match(self):
+        # header 欄是 `對話一:…` 半形冒號，正文那行是全形
+        assert (drop_repeated_header("對話一：倫理學的基礎理論\n辛格：佛教倫理學",
+                                     "對話一:倫理學的基礎理論")
+                == "辛格：佛教倫理學")
+
+    def test_body_that_merely_starts_with_the_head_is_kept(self):
+        # 只是開頭幾個字像，不是整行 —— 那是正文
+        src = "對話八：死刑與戰爭中的殺戮是本章的主題，我們先從美國談起"
+        assert drop_repeated_header(src, "對話八：死刑與戰爭中的殺戮") == src
+
+    def test_no_header_is_a_no_op(self):
+        assert drop_repeated_header("正文第一行\n第二行", "") == "正文第一行\n第二行"
+
+    def test_only_the_first_line_is_considered(self):
+        src = "正文第一行\n對話八：死刑與戰爭中的殺戮"
+        assert drop_repeated_header(src, "對話八：死刑與戰爭中的殺戮") == src
+
+    def test_empty_body(self):
+        assert drop_repeated_header("", "對話八") == ""
+
+
+class TestStripInlineMarkers:
+    def test_page_marker_recovers_the_folio(self):
+        body, folio = strip_inline_markers("【頁 91}\n【眉 參考資料}\n害。據此判斷", "")
+        assert folio == "91"
+        assert body == "害。據此判斷"
+
+    def test_existing_printed_wins(self):
+        body, folio = strip_inline_markers("【頁 91}\n正文", "95")
+        assert folio == "95"
+
+    def test_fullwidth_bracket_variant(self):
+        body, folio = strip_inline_markers("【眉 對話一:倫理學的基礎理論】\n話,回收廠", "11")
+        assert body == "話,回收廠"
+        assert folio == "11"
+
+    def test_no_marker_is_untouched(self):
+        assert strip_inline_markers("一般正文", "7") == ("一般正文", "7")
+
+    def test_page_mark_inserted_by_merge_units_is_not_a_header(self):
+        # merge_units 自己插的 `【頁 N】` 行內標記不能被這一步吃掉
+        body, folio = strip_inline_markers("前段\n\n【頁 12】後段", "11")
+        assert "【頁 12】" in body
+
+
+class TestFillOnePageGaps:
+    def test_single_gap_between_known_neighbours_is_filled(self):
+        assert fill_one_page_gaps(["13", "", "15"]) == ["13", "14", "15"]
+
+    def test_two_missing_in_a_row_is_left_alone(self):
+        # 推不出唯一解就不推 —— 假頁碼比沒有更糟
+        assert fill_one_page_gaps(["13", "", "", "16"]) == ["13", "", "", "16"]
+
+    def test_real_gap_is_not_papered_over(self):
+        assert fill_one_page_gaps(["47", "49"]) == ["47", "49"]
+
+    def test_misread_folio_between_consistent_neighbours_is_corrected(self):
+        # OCR 把 97 讀成 17，前後兩頁都說它該是 97
+        assert fill_one_page_gaps(["96", "17", "98"]) == ["96", "97", "98"]
+
+    def test_a_folio_that_agrees_with_neighbours_is_never_touched(self):
+        assert fill_one_page_gaps(["96", "97", "98"]) == ["96", "97", "98"]
+
+    def test_non_numeric_folios_are_left_alone(self):
+        assert fill_one_page_gaps(["a", "", "c"]) == ["a", "", "c"]
+
+    def test_edges_are_never_extrapolated(self):
+        assert fill_one_page_gaps(["", "2", "3", ""]) == ["", "2", "3", ""]
