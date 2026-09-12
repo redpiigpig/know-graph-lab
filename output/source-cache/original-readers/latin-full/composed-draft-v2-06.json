@@ -1,11 +1,11 @@
 {
   "volume": 2, "lesson": 6, "author": "opus-5-hand-written",
-  "note": "sodālis 只認字形，tranquillus 只剩奪格 tranquillo，lacrimōsus 只剩續抒詠那一句的 Lacrimosa，genetrix 只有與格與屬格。",
+  "note": "sodālis 只認字形，tranquillus 只剩奪格 tranquillo，lacrimōsus 只剩續抒詠那一句的 Lacrimosa，genetrix 只有與格與屬格。片語 factum est 要 factum 與 est 兩個字面形同句。",
   "sentences": [
     {"latin": "significant sodalis velut", "chinese": "他們表示，那同伴猶如此。", "targets": ["significo", "sodalis", "velut"]},
     {"latin": "spargit in tranquillo", "chinese": "他在寧靜中播撒。", "targets": ["spargo", "in", "tranquillus"]},
     {"latin": "venter et verbera", "chinese": "腹部與鞭打。", "targets": ["venter", "verber"]},
-    {"latin": "vinctus est in Communionem", "chinese": "他在共融中被束縛了。", "targets": ["vincio", "sum", "communio"]},
+    {"latin": "factum est, vinctus in Communionem", "chinese": "事就成了：他在共融中被束縛。", "targets": ["factum est", "vincio", "communio"]},
     {"latin": "complacuit concordia sodalium", "chinese": "同伴們的和諧蒙了悅納。", "targets": ["complaceo", "concordia", "sodalis"]},
     {"latin": "errantes licet in humilitate", "chinese": "那些迷途的人，儘管處在謙卑中。", "targets": ["erro", "licet", "humilitas"]},
     {"latin": "Lacrimosa genetricis institutione", "chinese": "以生母那涕淚的訓導。", "targets": ["lacrimosus", "genetrix", "institutio"]}

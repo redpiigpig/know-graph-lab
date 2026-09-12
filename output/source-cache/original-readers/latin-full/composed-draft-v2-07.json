@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 7, "author": "opus-5-hand-written",
+  "note": "rutilō 只剩 rutilat，lūmināre 只剩 luminare。片語 necesse est 要 necesse 與 est 同句。",
+  "sentences": [
+    {"latin": "luminare solis rutilat", "chinese": "太陽的光體閃耀著。", "targets": ["luminare", "sol", "rutilo"]},
+    {"latin": "necesse est ut oportet", "chinese": "有必要，正如應當如此。", "targets": ["necesse est", "oportet"]},
+    {"latin": "obedientia et sanctitate servire", "chinese": "以服從與聖德來事奉。", "targets": ["oboedientia", "sanctitas", "servio"]},
+    {"latin": "occasum occidit sol", "chinese": "太陽沉向了西方。", "targets": ["occasus", "occido", "sol"]},
+    {"latin": "pepercit pectora penetrare", "chinese": "他寬容了，不去穿透胸膛。", "targets": ["parco", "pectus", "penetro"]},
+    {"latin": "placet et procidit", "chinese": "這使人滿意，而他俯伏了。", "targets": ["placet", "procido"]},
+    {"latin": "radiis sincera sanctitate", "chinese": "以光線、以真摯的聖德。", "targets": ["radius", "sincerus", "sanctitas"]}
+  ]
+}

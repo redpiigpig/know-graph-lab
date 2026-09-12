@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 8, "author": "opus-5-hand-written",
+  "note": "exspoliō 與 irradio 兩層語料都沒有字形。accommodō 只剩 accommodata、adōrnō 只剩 adornatus、immolātiō 只認詞幹。",
+  "sentences": [
+    {"latin": "accommodata et adornatus", "chinese": "被配合的，也被裝飾的。", "targets": ["accommodo", "adorno"]},
+    {"latin": "baptismum in domo", "chinese": "家中的洗禮。", "targets": ["baptismus", "in", "domus"]},
+    {"latin": "Confortare in dignitate", "chinese": "你要在尊嚴中剛強。", "targets": ["conforto", "dignitas", "in"]},
+    {"latin": "Ejice esurientem de domo", "chinese": "把那飢餓的人逐出家門。", "targets": ["ejicio", "esurio", "de", "domus"]},
+    {"latin": "hæreditatem immolate matutina", "chinese": "你們要在清晨獻上那產業。", "targets": ["hereditas", "immolatio", "matutinus"]},
+    {"latin": "jacet et jacere mirabilia", "chinese": "他躺著，而要拋出奇妙的事。", "targets": ["jaceo", "jacio", "mirabilis"]},
+    {"latin": "multitudinem jacentem vidit", "chinese": "他看見那躺臥的群眾。", "targets": ["multitudo", "jaceo"]}
+  ]
+}

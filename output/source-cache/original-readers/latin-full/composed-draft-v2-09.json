@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 9, "author": "opus-5-hand-written",
+  "note": "pacificō 只認字形。",
+  "sentences": [
+    {"latin": "opes ornata quasi", "chinese": "那被裝飾的財富，彷彿如此。", "targets": ["ops", "orno", "quasi"]},
+    {"latin": "pacifica pœnitentiam projicit", "chinese": "那和平的拋下了懺悔。", "targets": ["pacifico", "paenitentia", "projicio"]},
+    {"latin": "propitius in ruina", "chinese": "在崩壞之中仍是仁慈的。", "targets": ["propitius", "ruina", "in"]},
+    {"latin": "splendor tremens quasi ruinam", "chinese": "顫動的光耀，彷彿崩壞。", "targets": ["splendor", "tremo", "quasi", "ruina"]},
+    {"latin": "cetera opibus ornata", "chinese": "其餘的都以財富裝飾了。", "targets": ["ceterus", "ops", "orno"]},
+    {"latin": "sententia propria personæ", "chinese": "那人位自己的判斷。", "targets": ["sententia", "proprius", "persona"]},
+    {"latin": "clerici propriam sententiam tremere", "chinese": "聖職者們對自己的判斷戰慄。", "targets": ["clericus", "proprius", "sententia", "tremo"]}
+  ]
+}
