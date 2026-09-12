@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 5, "author": "opus-5-hand-written",
+  "note": "pangō 只剩 pangimus（來自聖詠作者的第一人稱複數），mūtuor 只剩不定式 mutuari，medium 只剩奪格 medio。",
+  "sentences": [
+    {"latin": "flagella fulgore intulit", "chinese": "他以光輝帶入了那些鞭子。", "targets": ["flagellum", "fulgor", "infero"]},
+    {"latin": "inquit jucundum in medio", "chinese": "他說，在中間是可喜的。", "targets": ["inquam", "jucundus", "in", "medium"]},
+    {"latin": "mutuari nationes nativitatis", "chinese": "去借取那誕生的萬民。", "targets": ["mutuor", "natio", "nativitas"]},
+    {"latin": "obtulit et pangimus", "chinese": "他奉獻了，而我們譜寫。", "targets": ["offero", "pango"]},
+    {"latin": "perennis perferri praeconio", "chinese": "以頌言恆久地被傳達。", "targets": ["perennis", "perfero", "praeconium"]},
+    {"latin": "reconciliatione retulit et repulsi", "chinese": "他藉復和述說了，而他們被擊退。", "targets": ["reconciliatio", "refero", "repello"]},
+    {"latin": "jucunda nativitate obtulit", "chinese": "他在可喜的誕生中奉獻了。", "targets": ["jucundus", "nativitas", "offero"]}
+  ]
+}

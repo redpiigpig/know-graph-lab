@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 3, "author": "opus-5-hand-written",
+  "note": "palma 沒有主格單數進語料，fore 只認字形，sistō 兩層語料裡只剩 sisterent 一形。",
+  "sentences": [
+    {"latin": "flos et fons orbis", "chinese": "世界的花與泉源。", "targets": ["flos", "fons", "orbis"]},
+    {"latin": "fore eadem illuminatio", "chinese": "將會是同一道光照。", "targets": ["fore", "idem", "illuminatio"]},
+    {"latin": "occidit palam in orbe", "chinese": "他公開地在世上殺害了。", "targets": ["occido", "palam", "orbis", "in"]},
+    {"latin": "pendet inter palmas", "chinese": "他懸在棕櫚之間。", "targets": ["pendeo", "palma", "inter"]},
+    {"latin": "piaculum eodem fonte", "chinese": "出於同一泉源的罪愆。", "targets": ["piaculum", "idem", "fons"]},
+    {"latin": "in regione requiem sperat", "chinese": "他在那地區盼望安息。", "targets": ["regio", "requies", "spero"]},
+    {"latin": "sidera speciem sisterent", "chinese": "那些星辰要立起那容貌。", "targets": ["sidus", "species", "sisto"]}
+  ]
+}

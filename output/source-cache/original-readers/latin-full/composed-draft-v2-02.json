@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 2, "author": "opus-5-hand-written",
+  "note": "dēvincō 兩層語料都沒有字形。urbs 沒有單數奪格 urbe，coadūnō 只剩命令式 coadunate，eucharisticus 只剩 Eucharistici。",
+  "sentences": [
+    {"latin": "Remansit et requiram urbem", "chinese": "他留下了，而我要尋求那城。", "targets": ["remaneo", "requiro", "urbs"]},
+    {"latin": "reversus est ad sepulchrum", "chinese": "他回到了墳墓那裡。", "targets": ["reverto", "sum", "ad", "sepulcrum"]},
+    {"latin": "Tace, victor adversus apes", "chinese": "住口吧，那對著蜜蜂的勝利者。", "targets": ["taceo", "victor", "adversus", "apis"]},
+    {"latin": "vertit vestes antequam", "chinese": "他在那之前轉換了衣裳。", "targets": ["verto", "vestis", "antequam"]},
+    {"latin": "cera in vestibus continetur", "chinese": "蠟被包在衣服裡。", "targets": ["cera", "vestis", "contineo", "in"]},
+    {"latin": "coadunate Eucharistici victores", "chinese": "你們要聯合，感恩祭的勝利者們。", "targets": ["coaduno", "eucharisticus", "victor"]},
+    {"latin": "apis et cera in sepulchro", "chinese": "墳墓裡的蜜蜂與蠟。", "targets": ["apis", "cera", "sepulcrum", "in"]}
+  ]
+}

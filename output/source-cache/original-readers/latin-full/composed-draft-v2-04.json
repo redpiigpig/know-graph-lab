@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 4, "author": "opus-5-hand-written",
+  "note": "defunctus 只認字形。",
+  "sentences": [
+    {"latin": "sustinere et tenet thronum", "chinese": "去承受，而他握著寶座。", "targets": ["sustineo", "teneo", "thronus"]},
+    {"latin": "verberavit et vicit", "chinese": "他鞭打了，並且得勝了。", "targets": ["verbero", "vinco"]},
+    {"latin": "aspergens castam communicationem", "chinese": "灑下那貞潔的共融。", "targets": ["aspergo", "castus", "communicatio"]},
+    {"latin": "contulit damnum et detulit", "chinese": "他帶來了損害，也呈獻了。", "targets": ["confero", "damnum", "defero"]},
+    {"latin": "defuncti dispersi sunt", "chinese": "已亡者被四散了。", "targets": ["defunctus", "dispergo", "sum"]},
+    {"latin": "ditari et expulit", "chinese": "去得富足，而他驅逐了。", "targets": ["dito", "expello"]},
+    {"latin": "falsa fallit et damno", "chinese": "虛假的欺騙著，並帶來損害。", "targets": ["falsus", "fallo", "damnum"]}
+  ]
+}

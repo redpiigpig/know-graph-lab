@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 1, "author": "opus-5-hand-written",
+  "note": "下冊的驗證語料是武加大＋教會文獻兩層。片語 quaesō/quaesumus 要兩個形同句才算練到。inferus 在語料裡活著的是比較級 inferior。",
+  "sentences": [
+    {"latin": "itaque dispar et par", "chinese": "因此有不同的，也有相等的。", "targets": ["itaque", "dispar", "par"]},
+    {"latin": "infernus et inferior majestas", "chinese": "冥府的，以及較低的威嚴。", "targets": ["infernus", "inferus", "majestas"]},
+    {"latin": "octava magi plorans", "chinese": "第八天，那術士哭泣著。", "targets": ["octavus", "magus", "ploro"]},
+    {"latin": "pœnitet et permanet pariter", "chinese": "他懊悔了，也同樣地存留。", "targets": ["paeniteo", "permaneo", "pariter"]},
+    {"latin": "præses purus Quærit", "chinese": "那潔淨的總督在尋求。", "targets": ["praeses", "purus", "quaero"]},
+    {"latin": "quæso et quæsumus Redemptionem", "chinese": "我懇求，我們也懇求那救贖。", "targets": ["quaeso", "redemptio"]},
+    {"latin": "pura majestas in inferno", "chinese": "冥府中純潔的威嚴。", "targets": ["purus", "majestas", "infernus", "in"]}
+  ]
+}
