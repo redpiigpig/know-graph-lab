@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 17, "author": "opus-5-hand-written",
+  "note": "archidiaconus 兩層語料都沒有字形。appellatio 只認字形，語料裡活著的是動詞 appello 那一家。",
+  "sentences": [
+    {"latin": "similitudinem considerat Porro", "chinese": "再者，他察看那相似之處。", "targets": ["similitudo", "considero", "porro"]},
+    {"latin": "absque nobilis appellatur", "chinese": "除去貴族的，他被這樣稱呼。", "targets": ["absque", "nobilis", "appellatio"]},
+    {"latin": "tot vocabulo præsumit", "chinese": "他以那麼多的詞彙加以假定。", "targets": ["tot", "vocabulum", "praesumo"]},
+    {"latin": "Confessio taliter simplex", "chinese": "那告明如此簡樸。", "targets": ["confessio", "taliter", "simplex"]},
+    {"latin": "hæreses lapides præbuit", "chinese": "那些異端提供了石頭。", "targets": ["haeresis", "lapis", "praebeo"]},
+    {"latin": "facultatem considerans simplici", "chinese": "以單純之心考量那能力。", "targets": ["facultas", "considero", "simplex"]},
+    {"latin": "taliter lapides præbe", "chinese": "你要這樣提供石頭。", "targets": ["taliter", "lapis", "praebeo"]}
+  ]
+}

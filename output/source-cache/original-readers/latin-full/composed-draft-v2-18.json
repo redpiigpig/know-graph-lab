@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 18, "author": "opus-5-hand-written",
+  "note": "本課十七個待練詞多半是抽象名詞與副詞，兩層語料都收得齊。superus 在語料裡活著的是比較級 superior 那一家。",
+  "sentences": [
+    {"latin": "juramento episcopatum terminos", "chinese": "以誓言定主教職的界限。", "targets": ["juramentum", "episcopatus", "terminus"]},
+    {"latin": "insulæ illic subjecta", "chinese": "那裡島嶼所屬的部分。", "targets": ["insula", "illic", "subicio"]},
+    {"latin": "prohibuit notum arbitrium", "chinese": "他禁止了那眾所周知的裁決。", "targets": ["prohibeo", "notus", "arbitrium"]},
+    {"latin": "reliqua vis illic", "chinese": "其餘的力量在那裡。", "targets": ["reliquus", "vis", "illic"]},
+    {"latin": "quemadmodum ignoro feminam", "chinese": "正如我不認識那婦人。", "targets": ["quemadmodum", "ignoro", "femina"]},
+    {"latin": "contraxit mortalis cum superioribus", "chinese": "那必死的與在上者們締結了。", "targets": ["contraho", "mortalis", "superus"]},
+    {"latin": "conditio nota episcopatus reliqui", "chinese": "其餘主教職眾所周知的處境。", "targets": ["conditio", "notus", "episcopatus", "reliquus"]}
+  ]
+}

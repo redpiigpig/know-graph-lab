@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 16, "author": "opus-5-hand-written",
+  "note": "本課多為教會法與中世紀行政副詞，兩層語料都收得齊。",
+  "sentences": [
+    {"latin": "mox consensu exhibere", "chinese": "不久要以共識來呈現。", "targets": ["mox", "consensus", "exhibeo"]},
+    {"latin": "ære color idonea", "chinese": "在空氣中，那顏色是合適的。", "targets": ["aer", "color", "idoneus"]},
+    {"latin": "casus nihilominus ultra", "chinese": "那不幸，儘管如此，更進一步。", "targets": ["casus", "nihilominus", "ultra"]},
+    {"latin": "olim decretum delicta", "chinese": "從前對那些過犯的裁決。", "targets": ["olim", "decerno", "delictum"]},
+    {"latin": "sane licentiam diu", "chinese": "確實，那許可長久有效。", "targets": ["sane", "licentia", "diu"]},
+    {"latin": "sæcularia et temporalis", "chinese": "世俗的事物，以及暫時的。", "targets": ["saecularis", "temporalis"]},
+    {"latin": "coloribus casu decreta", "chinese": "偶然以色彩裁定的事。", "targets": ["color", "casus", "decerno"]}
+  ]
+}
