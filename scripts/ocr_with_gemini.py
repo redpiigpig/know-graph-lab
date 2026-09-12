@@ -44,6 +44,37 @@ except ImportError:
     _HAS_JSON_REPAIR = False
 
 
+_BATCH_MIN_RATIO = 0.85   # 少於這個比例就當這一批沒拿全（容得下幾張空白頁）
+
+
+def assign_batch_pages(got: list, lo: int, want: int) -> "tuple[list, bool]":
+    """一批切片的 OCR 結果 → (頁碼換算成全書頁的 pages, 這一批可不可信)。
+
+    🚨 不可以照**位移**編號（`lo + off + 1`）。模型會把 60 頁的切片吐成 16 頁或
+    359 頁，照位移編就整批寫歪，而且總頁數還對得上、看起來完全正常——
+    《世界宗教理念史 卷一》就這樣產出 63 個重複頁碼、198–240 整段 43 頁消失。
+
+    規矩：優先信模型自己標的頁號（切片內 1..want），超出範圍才退回位移；
+    同一個頁號重覆出現就丟掉後面那份（別重編到隔壁頁去）；
+    拿回來的頁數少於 `want` 的 85% 就回 `ok=False`，交給呼叫端重試或放棄。
+    """
+    out, seen = [], set()
+    for off, pg in enumerate(got):
+        if not isinstance(pg, dict):
+            continue
+        raw = pg.get("page")
+        n = raw if isinstance(raw, int) and 1 <= raw <= want else (off + 1)
+        if n in seen or n > want:
+            continue
+        seen.add(n)
+        pg = dict(pg)
+        pg["page"] = lo + n
+        out.append(pg)
+    out.sort(key=lambda p: p["page"])
+    ok = bool(out) and len(out) >= max(1, int(want * _BATCH_MIN_RATIO))
+    return out, ok
+
+
 def parse_pages_json(text) -> list:
     """Gemini 回的 `{"pages":[…]}` → pages list；壞掉就盡量搶救，搶不回來回 []。
 
@@ -993,21 +1024,32 @@ def process_one(client, book, src_path, model, max_retries=3):
                             _out.insert_pdf(_srcd, from_page=lo, to_page=hi)
                             _out.save(part)
                         try:
-                            rr = _ocr_pdf(part)
-                            # 壞掉的那一批要搶救，不能讓它拖垮整本（見 parse_pages_json）
-                            got = parse_pages_json(rr.text)
-                            if not got and (rr.text or "").strip():
-                                print(f"    ⚠ batch {bi+1}/{nb} 的 JSON 救不回來，本批 0 頁",
-                                      flush=True)
-                            for off, pg in enumerate(got):
-                                if isinstance(pg, dict):
-                                    pg["page"] = lo + off + 1     # 還原成全書頁碼
-                            done_batches[bi] = got
+                            want = hi - lo + 1
+                            pages_b, ok_b = [], False
+                            for attempt in (1, 2):
+                                rr = _ocr_pdf(part)
+                                # 壞掉的那一批要搶救，不能拖垮整本（見 parse_pages_json）
+                                got = parse_pages_json(rr.text)
+                                if not got and (rr.text or "").strip():
+                                    print(f"    ⚠ batch {bi+1}/{nb} 的 JSON 救不回來",
+                                          flush=True)
+                                pages_b, ok_b = assign_batch_pages(got, lo, want)
+                                if ok_b:
+                                    break
+                                print(f"    ⚠ batch {bi+1}/{nb} 只拿到 {len(pages_b)}/{want} 頁"
+                                      f"{'，重試一次' if attempt == 1 else ''}", flush=True)
+                            if not ok_b:
+                                # 🚨 缺頁的批次不可以照樣寫入。頁數對不上還硬編號，
+                                # 出來的書總頁數看起來正常、頁碼卻整段錯位。
+                                raise RuntimeError(
+                                    f"batch {bi+1}/{nb} pp{lo+1}-{hi+1} 只拿到 "
+                                    f"{len(pages_b)}/{want} 頁，放棄整本以免寫出錯位頁碼")
+                            done_batches[bi] = pages_b
                             ck.parent.mkdir(parents=True, exist_ok=True)
                             ck.write_text(json.dumps({str(k): v for k, v in done_batches.items()},
                                                      ensure_ascii=False), encoding="utf-8")
-                            print(f"    [gemini] batch {bi+1}/{nb} pp{lo+1}-{hi+1} → {len(got)} 頁",
-                                  flush=True)
+                            print(f"    [gemini] batch {bi+1}/{nb} pp{lo+1}-{hi+1} → "
+                                  f"{len(pages_b)}/{want} 頁", flush=True)
                         finally:
                             part.unlink(missing_ok=True)
                 finally:
