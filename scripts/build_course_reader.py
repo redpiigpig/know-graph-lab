@@ -6,7 +6,7 @@
   `--reader mon1` / `mon2`  《宗教研究基本問題與研究方法》週一第 2 節 博1A．
       上冊 W02–W08（14 篇）、下冊 W10–W17（18 篇）。合併那本（731 頁）已作廢。
   `--reader sat`  《宗教學理論與方法（一）》單週六第 1 節 碩專1A．7 篇
-  `--reader japanese` 《初階宗教學日文文獻選讀》週二第 1 節 碩1A．12 篇，
+  `--reader japanese` 《初階宗教學日文文獻選讀》週二第 1 節 碩1A．13 篇，
       內容是自訂十五週計畫的各週讀本，見 japanese_self_study_plan.py。
 
 MacIntyre 與 Segal〈In Defense of Reductionism〉兩門課都指定，**兩本各收一份**。
@@ -75,6 +75,9 @@ LEAD_FACTOR = 1.8
 FS = 10.8
 LEAD = FS * LEAD_FACTOR
 INDENT = FS * 2          # 正文每段首行空兩格
+# 小標要看得出是小標：比正文大一點再加粗（2026-09-12 使用者指出
+# 〈The nineteenth century〉印成普通段落，分不出層次）。
+HEAD_SCALE = 1.16
 
 CJK_ZH = r"C:\Windows\Fonts\mingliu.ttc"    # 細明體，繁中正文
 CJK_JA = r"C:\Windows\Fonts\msmincho.ttc"   # MS 明朝，日文正文
@@ -172,30 +175,41 @@ SAT_PARTS = [
     ]),
 ]
 
+# 🚨 不分部，一路按週次排（使用者 2026-09-12 定案）。原本分五部，但那五部混了
+# 三種標準——第一部按作者、第二三四部按文體、第五部按「同一作者的兩種文體」——
+# 所以怎麼看都不合理。這本是跟著每週進度翻的，週次就是它唯一該有的順序；文體的
+# 差別寫在各篇篇首的節錄說明裡，不另立部。
 JAPANESE_PARTS = [
-    ("第一部　現代日文：矢內原忠雄", "戰後刊行，新字新假名，「である」體——無教會第二代裡最接近現代日文的人。", [
+    ("", "", [
         ("W03_自訂_矢內原忠雄_キリスト教入門_序", "W03"),
         ("W04_自訂_矢內原忠雄_キリスト教入門_第一章上", "W04"),
         ("W05_自訂_矢內原忠雄_キリスト教入門_第一章下", "W05"),
-        ("W07_自訂_矢內原忠雄_キリスト教入門_第二章", "W07"),
-    ]),
-    ("第二部　文語入門：文語訳聖書", "全文附振假名，漢字讀音不必查；經文內容本來就熟，是最省力的文語入口。", [
         ("W06_自訂_文語訳_マタイ伝五章_八福", "W06"),
+        ("W07_自訂_矢內原忠雄_キリスト教入門_第二章", "W07"),
         ("W08_自訂_文語訳_マタイ伝六章_主の祈り", "W08"),
-    ]),
-    ("第三部　講演體：內村鑑三", "「〜であります」的演說口語，是內村最好讀的一批文字。", [
         ("W10_自訂_內村鑑三_デンマルク国の話_導入", "W10"),
-        ("W11_自訂_內村鑑三_デンマルク国の話_結論", "W11"),
-    ]),
-    ("第四部　論說：矢內原忠雄〈帝大聖書研究会終講の辞〉", "1937 年被迫辭去東大教職前後的一篇，無教會史上的關鍵文獻。", [
-        ("W12_自訂_矢內原忠雄_帝大聖書研究会終講の辞_上", "W12"),
-        ("W13_自訂_矢內原忠雄_帝大聖書研究会終講の辞_下", "W13"),
-    ]),
-    ("第五部　同一作者的兩種文體", "《後世への最大遺物》的序是文語、講演本體是口語，並排讀就看得出分界線。", [
+        ("W11_自訂_新渡戸稲造_イエスキリストの友誼", "W11"),
+        ("W12_自訂_矢內原忠雄_帝大聖書研究会終講の辞", "W12"),
+        ("W13_自訂_高楠順次郎訳_弘法大師と景教との関係", "W13"),
         ("W14_自訂_內村鑑三_後世への最大遺物_序_文語", "W14"),
         ("W14_自訂_內村鑑三_後世への最大遺物_講演冒頭_口語", "W14"),
+        ("W15_自訂_古賀敬太_内村の無教会主義対植村の教会主義", "W15"),
     ]),
 ]
+
+# 課綱刻意只讀一本書的某幾段時，那一段一定停在句子中間——而讀者看到的是
+# 「到一半就沒了」，跟真的漏印長得一模一樣（使用者 2026-09-12 對 Alles 那篇的
+# 反應就是這樣，那篇是真的壞了；King 這兩段則是課綱本來就跳頁）。所以在篇末印
+# 一行說明，把「不是漏印」講出來。鍵是 `MON_PARTS`／`SAT_PARTS` 用的那個 key。
+RANGE_NOTE = {
+    "King_Historical and Phenomenological Approaches (41-56)":
+        "〔課綱指定範圍至原書第 56 頁止，57–83 頁不在指定閱讀內，故末句未完；"
+        "接續的 84–164 頁另見下一篇。〕",
+    "King_Historical and Phenomenological Approaches (84-164)":
+        "〔本篇自原書第 84 頁起，接續前一篇（41–56 頁）；中間 57–83 頁不在課綱"
+        "指定閱讀內，故首句非該章起首。〕",
+}
+
 
 # OCR 把字母拆開的白名單。只修這幾組——通用規則會把「a book」接成「abook」。
 SPLIT_FIX = [
@@ -232,6 +246,43 @@ def locate(files: dict[str, str], key: str) -> str | None:
     return None
 
 
+# 出處要印完整書目，不是檔名裡的縮寫——使用者 2026-09-12：「EoR 8761­8767 為何
+# 不寫完整書名？」切片檔名裡只放得下代號，讀本印出來卻是要拿去引用的。
+# 每一條的出版項都逐本翻過該書版權頁（`understanding` 那本是掃描檔，版權頁
+# OCR 讀得出來），不是憑印象寫的。
+BOOK_CITE = {
+    "EoR": "Lindsay Jones, ed., Encyclopedia of Religion, 2nd ed. "
+           "(Detroit: Macmillan Reference USA, 2005)",
+    "Routledge Companion": "John R. Hinnells, ed., The Routledge Companion to the Study "
+                           "of Religion (London: Routledge, 2005)",
+    "Understanding Religion": "Eric J. Sharpe, Understanding Religion "
+                              "(London: Gerald Duckworth, 1983)",
+    "Theory and Method": "Frank Whaling, ed., Theory and Method in Religious Studies: "
+                         "Contemporary Approaches to the Study of Religion "
+                         "(Berlin: Mouton de Gruyter, 1995)",
+    "Guide": "Willi Braun and Russell T. McCutcheon, eds., Guide to the Study of Religion "
+             "(London: Cassell, 2000)",
+    "Blackwell Companion": "Robert A. Segal, ed., The Blackwell Companion to the Study of "
+                           "Religion (Malden, Mass.: Blackwell, 2006)",
+    "Insider-Outsider": "Russell T. McCutcheon, ed., The Insider/Outsider Problem in the "
+                        "Study of Religion: A Reader (London: Cassell, 1999)",
+    "Classical Approaches": "Jacques Waardenburg, ed., Classical Approaches to the Study "
+                            "of Religion: Aims, Methods and Theories of Research "
+                            "(Berlin: Walter de Gruyter, 2017)",
+}
+
+
+def full_source(tag: str) -> str:
+    """「EoR 8761-8767」→ 完整書目＋頁碼。認不出來的代號原樣留著，不亂編。"""
+    tag = tag.strip()
+    for abbr, cite in sorted(BOOK_CITE.items(), key=lambda kv: -len(kv[0])):
+        if tag.startswith(abbr):
+            rest = tag[len(abbr):].strip()
+            pages = rest.replace("-", "–")
+            return f"{cite}, pp. {pages}" if pages else cite
+    return tag
+
+
 def title_of_pdf(path: str) -> tuple[str, str, str]:
     stem = os.path.basename(path)[:-4]
     m = re.match(r"^W[\d\-]+_\d+_([^_]+)_(.+?)\s*\(([^)]*)\)$", stem)
@@ -258,7 +309,32 @@ def _dominant(tally: dict[float, int]) -> float | None:
     return size if n / total >= 0.55 else None
 
 
-def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[list[str], list[str]]:
+def _columns(boxes: list[tuple[float, float]], page_w: float) -> list[int]:
+    """每一塊屬於第幾欄。
+
+    🚨 雙欄書不能按 y 排序。《宗教百科全書》一頁兩欄，照 (y, x) 排會把右欄的
+    段落插進左欄段落中間——最後一頁因此變成「左欄正文→右欄下一條目→左欄書目」，
+    於是 ①正文在半途斷掉 ②隔壁條目〈THE ACADEMIC STUDY OF RELIGION IN
+    AUSTRALIA AND OCEANIA〉整段竄進來 ③書目排在竄進來的內容後面，`cut_bibliography`
+    砍不到它前面那一段（2026-09-12 使用者指出）。兩欄要各自讀完再換欄。
+    """
+    mid = page_w / 2
+    left = [i for i, (x0, x1) in enumerate(boxes) if x1 <= mid + 8]
+    right = [i for i, (x0, x1) in enumerate(boxes) if x0 >= mid - 8]
+    span = [i for i, (x0, x1) in enumerate(boxes) if x0 < mid - 8 < mid + 8 < x1]
+    # 判成雙欄的條件從嚴：兩邊都要有幾塊，而且橫跨中線的（標題、表格）要夠少。
+    if len(left) < 2 or len(right) < 2 or len(span) > max(1, 0.15 * len(boxes)):
+        return [0] * len(boxes)
+    cols = [0] * len(boxes)
+    for i in right:
+        cols[i] = 1
+    for i in span:                      # 橫跨兩欄的當左欄處理，靠 y 落在該落的地方
+        cols[i] = 0
+    return cols
+
+
+def page_paragraphs(page: fitz.Page, body_size: float | None = None,
+                    size_known: bool = True) -> tuple[list[str], list[str]]:
     """回傳 (正文段落, 註腳段落)。
 
     註腳原本混在正文流裡——Waardenburg 選集那幾篇的頁底註就這樣夾進段落中間，
@@ -270,12 +346,31 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[li
 
     🚨 `body_size` 要用**整篇**的本文字級，不能用單頁的：康德那篇的譯者註自成一頁，
     用單頁字級去比，那一頁的註就是「本文」，一條都認不出來。
+
+    🚨 而**整篇算不出本文字級時，就不要回頭用單頁的**（`size_known=False`）。
+    Whaling 那本掃描檔的字級是連續抖動的（9.9／10.4／10.1 各佔兩三成），整篇
+    `_dominant` 回 None，舊版就退回單頁字級——於是 King 那篇有 84 個「小標」，
+    其中十行是被判成粗體小標的**正文**（「Hultkrantz also emphasizes that, ideally
+    speaking, the phenomenolo-」），每行都吃掉 47pt，整頁只排得下十一行
+    （2026-09-12 稽核抓到）。算不出來就只靠版面認小標，不猜字級。
     """
-    h = page.rect.height
+    h, w = page.rect.height, page.rect.width
     top_cut, bot_cut = h * 0.06, h * 0.94
-    if body_size is None:
-        body_size = _dominant(_size_tally(page))
+    tally = _size_tally(page)
+    if body_size is None and size_known:
+        body_size = _dominant(tally)
+    # 這一頁的中位字級（按字數加權）。抖動的掃描本算不出「主字級」，但中位數
+    # 一樣穩，用來認「明顯比正文大」的小標。
+    mid_size = None
+    if tally:
+        run, half = 0, sum(tally.values()) / 2
+        for s in sorted(tally):
+            run += tally[s]
+            if run >= half:
+                mid_size = s
+                break
     body, notes = [], []
+    raw: list[dict] = []
     for blk in page.get_text("dict")["blocks"]:
         lines = blk.get("lines", [])
         if not lines:
@@ -286,27 +381,69 @@ def page_paragraphs(page: fitz.Page, body_size: float | None = None) -> tuple[li
         txt = "\n".join("".join(sp["text"] for sp in ln["spans"]) for ln in lines)
         if not txt.strip():
             continue
-        x0, y0, _, y1 = blk["bbox"]
+        x0, y0, x1, y1 = blk["bbox"]
         if y1 < top_cut or y0 > bot_cut:
             continue
+        raw.append(dict(txt=txt, x0=x0, y0=y0, x1=x1, y1=y1, lines=lines))
+
+    cols = _columns([(b["x0"], b["x1"]) for b in raw], w)
+    for i, b in enumerate(raw):
+        b["col"] = cols[i]
+    order = sorted(range(len(raw)), key=lambda i: (raw[i]["col"], raw[i]["y0"], raw[i]["x0"]))
+
+    # 欄寬：認「單獨成行的小標」要用同一欄的行寬當基準，不能用整頁寬。
+    col_w: dict[int, float] = {}
+    for b in raw:
+        col_w[b["col"]] = max(col_w.get(b["col"], 0.0), b["x1"] - b["x0"])
+
+    prev_bottom: dict[int, float] = {}
+    for i in order:
+        b = raw[i]
+        txt, lines = b["txt"], b["lines"]
         size = max(sp["size"] for ln in lines for sp in ln["spans"])
         letters = [c for c in txt if c.isalpha()]
         shouty = letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
         is_note = (body_size is not None and size <= body_size - 1.0
-                   and y0 / h > 0.10 and not (shouty and len(txt) < 90))
+                   and b["y0"] / h > 0.10 and not (shouty and len(txt) < 90))
         # 🚨 小標不能只認「整串大寫」：這幾本的小標多半是 Title Case 或引號句
         #    （'The phenomenological method'），只認大寫的話 sat 那本 7 篇全掛零。
         #    改看來源的字級與粗體。
         bold = any("bold" in sp["font"].lower() for ln in lines for sp in ln["spans"])
         flat = " ".join(txt.split())
-        is_head = (not is_note and body_size is not None and 4 < len(flat) < 90 and (
-            size >= body_size + 0.6
-            or (bold and not flat.endswith(SENT_END))
-            or (shouty and len(flat) > 8)))
-        (notes if is_note else body).append((round(y0, 1), x0, txt, is_head))
-    body.sort(key=lambda t: (t[0], t[1]))
-    notes.sort(key=lambda t: (t[0], t[1]))
-    return [(t[2], t[3]) for t in body], [t[2] for t in notes]
+        # 🚨 掃描本沒有字型可認：Routledge Companion 的文字層是 GlyphLessFont，
+        #    小標〈The nineteenth century〉跟正文同字級同字型，只有版面看得出來
+        #    （單獨成行、只佔欄寬一半、上面空一截、不以句點收尾）。2026-09-12
+        #    使用者指出這種小標被印成普通段落。
+        gap_above = b["y0"] - prev_bottom.get(b["col"], b["y0"])
+        line_h = (b["y1"] - b["y0"]) / max(1, len(lines))
+        # 🚨 字數也要卡。掃描本會把一段的第一行單獨切成一塊，版面完全像小標
+        #    （短、窄、上面空一截、不以句點收尾），印出來就是一行放大加粗的
+        #    「A quite different attack on the animistic theory came from the Sco」。
+        #    小標是短語不是句子：這批書真正的小標最長七個字（「3. The methodological
+        #    debate since world war II」），所以八個字以上一律不是。
+        standalone = (len(lines) == 1 and 4 < len(flat) < 90 and len(flat.split()) <= 8
+                      and (b["x1"] - b["x0"]) < 0.62 * col_w.get(b["col"], w)
+                      and gap_above > line_h * 1.25
+                      and flat[:1].isupper() and not flat.endswith(SENT_END)
+                      and not flat.endswith(","))
+        # 字級認不出來時（size_known=False）不能用「粗體就是小標」——那條把
+        # 正文整行判成小標。改用「**比這一頁的中位字級大 1pt 以上**的單行粗體」：
+        # Whaling 那本真正的小標是 11.4pt／Constantia-Bold（頁面中位 9.9–10.4），
+        # 而誤判的那幾行是 8.2pt，比中位**小**，這條擋得掉。
+        # 同樣要卡字數：Routledge Companion 的 OCR 字級從 8.5 抖到 10.4，光看
+        # 「比中位大 1pt」會把正文第一行也收進來（「A quite different attack on the
+        # animistic theory came from the Scottis」，12 個字）。
+        bigger = (mid_size is not None and size >= mid_size + 1.0
+                  and len(lines) == 1 and len(flat.split()) <= 8
+                  and not flat.endswith(SENT_END))
+        by_size = body_size is not None and (
+            size >= body_size + 0.6 or (bold and not flat.endswith(SENT_END)))
+        is_head = (not is_note and 4 < len(flat) < 90 and (
+            by_size or bigger or (shouty and len(flat) > 8) or standalone))
+        (notes if is_note else body).append((txt, is_head))
+        if not is_note:
+            prev_bottom[b["col"]] = b["y1"]
+    return body, [t for t, _ in notes]
 
 
 # 🚨 私用區（PUA）字元。Waardenburg 那本的數字被字型對到 U+100000 一帶，
@@ -343,6 +480,11 @@ def clean(text: str) -> str:
 BIBLIO_WORDS = ("bibliography", "references", "referencelist", "workscited",
                 "furtherreading", "suggestedreading", "suggestionsforfurtherreading",
                 "selectbibliography", "selectedbibliography", "worksconsulted",
+                # 篇末註也在這裡收掉。康德那篇的註是掃描本的小字，字級認不出來，
+                # 於是整批黏在正文最後一段後面印出來（「…their dignity.7 Königsberg,
+                # Prussia September 30, 1784 Notes 2 . “Dare to know !”…」，還是
+                # 拼錯的碎片）。註不印，所以看到標題就收（2026-09-12）。
+                "notes", "note", "尾註", "註釋", "注釋",
                 "參考書目", "徵引書目", "引用書目")
 
 
@@ -431,7 +573,8 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
             tally[k] = tally.get(k, 0) + v
     body_size = _dominant(tally)
 
-    pages = [page_paragraphs(page, body_size) for page in doc]
+    pages = [page_paragraphs(page, body_size, size_known=body_size is not None)
+             for page in doc]
 
     # 🚨 頁眉頁腳不能只靠邊界座標濾。《宗教百科全書》那一篇的頁眉離頂端超過 6%，
     #    於是「STUDY OF RELIGION: AN OVERVIEW 8766」每一頁都被當成正文收進去，
@@ -440,15 +583,42 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
     def _head_key(t: str) -> str:
         return re.sub(r"\d+", "", clean(t)).strip().lower()[:60]
 
+    # 頁數少的切片湊不到「一半以上的頁」那個門檻，所以資料庫套印再單獨認一次。
+    # 這幾條都是實際出現在來源檔裡的字樣，不是憑空防守。
+    stamp = re.compile(r"(brought to you by|^authenticated$|download date|downloaded on|"
+                       r"this content downloaded|terms and conditions|all use subject to|"
+                       r"digitized by the internet archive|bobst library)", re.I | re.M)
+
+    # 🚨 而且不能只看每頁的頭尾兩塊。de Gruyter 那批（Whaling、Waardenburg、
+    #    King 的兩份切片）每頁都蓋一條下載浮水印「Brought to you by | New York
+    #    University Bobst Library Technical Services／Authenticated／Download Date
+    #    | 2/23/16 3:52 PM」，它落在版心裡、既不是第一塊也不是最後一塊，於是
+    #    整條印進正文，還讓 King 那兩篇的篇尾停在「…Library Technical Services」
+    #    （使用者 2026-09-12 要求「轉錄時不要有頁緣的頁數和書名跑進來」）。
+    #    改成**每一塊都算**：整篇有一半以上的頁都出現同一段文字的，就是版面套印。
     seen: dict[str, int] = {}
     for body_blocks, _ in pages:
-        for cand in ({body_blocks[0][0]} if body_blocks else set()) | (
-                {body_blocks[-1][0]} if len(body_blocks) > 1 else set()):
+        for cand in {b[0] for b in body_blocks}:
             k = _head_key(cand)
             if 0 < len(k) < 60:
                 seen[k] = seen.get(k, 0) + 1
     threshold = max(3, int(len(pages) * 0.5))
     running = {k for k, v in seen.items() if v >= threshold}
+
+    # 🚨 去數字還不夠。掃描本的頁眉每一頁 OCR 成不一樣的垃圾——「8 4 Ursula King」
+    #    「né Ursula King」「Π4 Ursula King」「I20 Ursula King」——去掉數字之後
+    #    每一條還是獨一無二，於是一條都去不掉，84 篇「小標」裡有一半是頁眉
+    #    （2026-09-12 抓到）。所以再用**只留字母**的鍵數一次，整塊丟掉。
+    def _alpha_key(t: str) -> str:
+        return re.sub(r"[^a-z一-鿿]", "", clean(t).lower())[:60]
+
+    seen_a: dict[str, int] = {}
+    for body_blocks, _ in pages:
+        for cand in {b[0] for b in body_blocks}:
+            k = _alpha_key(cand)
+            if 4 < len(k) < 60:
+                seen_a[k] = seen_a.get(k, 0) + 1
+    running_alpha = {k for k, v in seen_a.items() if v >= threshold}
 
     # 有些頁的頁眉跟正文黏在同一塊裡（「STUDY OF RELIGION: AN OVERVIEWUnlike
     # theology…」），整塊丟掉會連正文一起丟，所以改成把開頭那一段剝掉。
@@ -478,7 +648,7 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
         # 🚨 帶頁碼的不是小標，是頁眉：《宗教百科全書》每篇的頁眉是
         #    「STUDY OF RELIGION: … IN AUSTRALIA AND OCEANIA 8767」，切片尾端
         #    會夾到下一篇的那一行，只出現一次所以躲過了頁眉去重。
-        if re.search(r"\d{3,}", t):
+        if re.search(r"\b\d{3,}\b", t):
             return False
         # 只排除「整個篇名」，不排除篇名的一部分——Waardenburg 那本的篇名是
         # 「Friedrich Heiler (Prayer; The Scholarly Study of Religion)」，而
@@ -494,7 +664,17 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
     notes: list[str] = []
     dropped_pua = 0
     for body_blocks, note_blocks in pages:
-        body_blocks = [b for b in body_blocks if _head_key(b[0]) not in running]
+        # 🚨 套印要**逐行剝**，不能整塊丟。de Gruyter 那批的浮水印第一行
+        #    「Brought to you by | … Bobst Library Technical Services」常跟正文
+        #    最後一段黏在同一個 block 裡，整塊丟掉就連正文一起沒了——King 那篇
+        #    41-56 的最後一段就這樣被吃掉，而讀本看起來完全正常（2026-09-12）。
+        body_blocks = [("\n".join(ln for ln in t.split("\n") if not stamp.search(ln)), hd)
+                       for t, hd in body_blocks]
+        body_blocks = [b for b in body_blocks
+                       if b[0].strip()
+                       and _head_key(b[0]) not in running
+                       and _alpha_key(b[0]) not in running_alpha]
+        note_blocks = [b for b in note_blocks if not stamp.search(b)]
         body_blocks = [(_strip_head(t), hd) for t, hd in body_blocks]
         for raw in note_blocks:
             if pua_ratio(raw) > 0.12:      # 整段是壞掉的數字，救不回來就別印
@@ -521,17 +701,26 @@ def extract_pdf(path: str) -> tuple[list[tuple[str, str]], list[str]]:
             # 整行大寫又以頁碼收尾＝百科全書的頁眉，正文不要
             letters = [c for c in t if c.isalpha()]
             if (letters and sum(c.isupper() for c in letters) / len(letters) > 0.7
-                    and re.search(r"\d{3,4}\s*$", t)):
-                continue
-            if is_head and len(t) < 90 and _head_ok(t):
-                paras.append(("h", t.rstrip(".:")))
+                    and re.search(r"\b\d{3,4}\s*$", t)):
                 continue
             # 前一塊沒收尾 → 多半是同一段被跨欄跨頁切開了。但小標題也沒有句末
             # 標點（「“Religion” as Specter」），所以再看長度：夠長才是被切斷的
             # 正文，短的當標題，不接。
             prev = paras[-1][1] if paras else ""
-            cont = (bool(prev) and paras[-1][0] == "p" and not prev.endswith(SENT_END)
+            # 🚨 判斷「上一段收句了沒」要先剝掉行尾的註號。文字層裡的上標註號就是
+            #    普通數字（「…in accordance with their dignity.7」），不剝就每一段
+            #    帶註的都判成沒收尾，於是把篇末註整批接到正文最後一段（2026-09-12）。
+            tail = re.sub(r"\d{1,3}$", "", prev)
+            cont = (bool(prev) and paras[-1][0] == "p" and not tail.endswith(SENT_END)
                     and (len(prev) > 60 or t[:1].islower() or re.match(r"^\d+[).,]", t)))
+            # 🚨 小標判定要讓位給「接回上一句」。掃描本會把一段的某一行單獨切成一塊，
+            #    版面看起來就像小標（短、上面空一截、不以句點收尾），於是印出一行
+            #    放大加粗的「A quite different attack on the animistic theory came
+            #    from the S」，而且那一句從此被切成兩段。小標不會接在沒收句的句子
+            #    後面，所以 `cont` 成立時一律不是小標（2026-09-12）。
+            if is_head and not cont and len(t) < 90 and _head_ok(t):
+                paras.append(("h", t.rstrip(".:")))
+                continue
             if cont:
                 paras[-1] = ("p", prev + " " + t)
             else:
@@ -831,56 +1020,113 @@ class Book:
         """把一篇的正文**平均攤到各頁**，不是填滿一頁再換頁。
 
         貪心填滿的結果是每篇最後一頁只剩殘餘——日文讀本有一頁只有兩行，前一頁
-        卻塞了十三行（使用者 2026-09-10 指出）。所以先算這篇需要幾頁，再把總高
-        除以頁數當每頁的預算，各頁的份量就接近。
+        卻塞了十三行。所以先貪心算出這篇最少要幾頁，再照「每頁可用高度」等比例
+        分配，各頁的份量就接近。
 
-        順帶擋掉孤行寡行：一段只剩一行落到下一頁、或一頁只放得下這段的第一行，
-        都往下一頁挪。
+        🚨 攤平用的是**每一頁自己的可用高度**，不是一個共用的預算值。舊版拿
+        「平均預算」減掉篇首標題塊的高度當第一頁的額度，標題塊一長，額度就變成
+        負的——於是篇首那一頁只印得出標題，正文整批被擠到下一頁（日文讀本第 5、
+        16 頁只有標題，第 9 頁只有兩行，使用者 2026-09-12 指出）。現在第一頁的
+        額度是 `(bottom - y) * 填充率`，標題塊佔多少就少多少，不會反過來扣兩次。
+
+        順帶擋掉孤行寡行，以及吊在頁尾的小標（小標一定跟著它的第一行正文走）。
         """
         if not paras:
             return
         lead = size * LEAD_FACTOR
-        blocks = [(kind, self.wrap(t, BODY_X1 - BODY_X0, size, kind == "h",
-                                   first_indent=0 if kind == "h" else indent))
-                  for kind, t in paras]
-        h_total = sum(len(b) * lead + gap + (8 if k == "h" else 0) for k, b in blocks)
         if self.page is None:
             self.new_page()
-        first_avail = self.bottom - self.y
-        full_avail = max(self.bottom - M_TOP, lead * 2)
-        pages = 1 if h_total <= first_avail else \
-            1 + int(-(-(h_total - first_avail) // full_avail))
-        # 每頁預算：把「總高＋第一頁少掉的那塊」攤平，上限是滿頁
-        budget = min(full_avail, (h_total + (full_avail - first_avail)) / pages)
-        page_top = self.y - (full_avail - first_avail)      # 第一頁的虛擬起點
 
-        for kind, lines in blocks:
-            if kind == "h":
-                self.y += 8                      # 小標前多空一點，看得出分段
-            n, i = len(lines), 0
-            while i < n:
-                room = int(min(self.bottom - self.y, page_top + budget - self.y) // lead)
-                if room <= 0:
-                    self.new_page()
-                    page_top = self.y
+        # ── 攤成「行」。每一行記自己前面要空多少、後面要空多少 ──────────
+        items: list[dict] = []
+        for bi, (kind, text) in enumerate(paras):
+            head = kind == "h"
+            fs = size * HEAD_SCALE if head else size
+            lines = self.wrap(text, BODY_X1 - BODY_X0, fs, head,
+                              first_indent=0 if head else indent)
+            lh = fs * LEAD_FACTOR if head else lead
+            for li, ln in enumerate(lines):
+                items.append(dict(
+                    text=ln, kind=kind, size=fs, bold=head, h=lh, bi=bi,
+                    li=li, n=len(lines),
+                    indent=0 if head or li else indent,
+                    pre=(lead * 0.75 if head and li == 0 else 0.0),
+                    post=(gap + lead * 0.2 if head else gap) if li == len(lines) - 1 else 0.0,
+                ))
+        if not items:
+            return
+
+        first_avail = max(self.bottom - self.y, lead)
+        full_avail = max(self.bottom - M_TOP, lead * 2)
+
+        def cap(p: int) -> float:
+            return first_avail if p == 0 else full_avail
+
+        def back_off(page: list[int], nxt: int) -> int:
+            """把斷點 `nxt` 往前挪，避開孤行、寡行與吊在頁尾的小標。"""
+            first = page[0]
+            it = items[nxt]
+            if it["li"] > 0:                       # 斷在段落中間
+                if it["li"] == 1:                  # 這頁只留得下第一行 → 整段挪走
+                    nxt -= 1
+                elif it["n"] - it["li"] == 1:      # 下一頁只剩最後一行 → 多帶一行走
+                    nxt -= 1
+            while nxt - 1 >= first and items[nxt - 1]["kind"] == "h":
+                nxt -= 1                           # 小標不能落在頁尾
+            return max(nxt, first + 1)
+
+        def pack(ratio: float) -> list[list[int]]:
+            pages: list[list[int]] = []
+            cur: list[int] = []
+            used, p, i = 0.0, 0, 0
+            while i < len(items):
+                it = items[i]
+                need = it["pre"] + it["h"]
+                if cur and used + need > cap(p) * ratio:
+                    nxt = back_off(cur, i)
+                    cur = cur[:nxt - cur[0]] if nxt - cur[0] < len(cur) else cur
+                    i = nxt
+                    pages.append(cur)
+                    cur, used, p = [], 0.0, p + 1
                     continue
-                take = min(room, n - i)   # room 可能比剩下的行還多
-                if n - i > take:
-                    if take < 2:                  # 這頁只塞得下一行 → 整段挪下一頁
-                        self.new_page()
-                        page_top = self.y
-                        continue
-                    if n - i - take == 1:         # 別讓最後一行孤零零落到下一頁
-                        take -= 1
-                for k in range(take):
-                    off = 0 if kind == "h" else (indent if i + k == 0 else 0)
-                    self.draw(BODY_X0 + off, self.y, lines[i + k], size, kind == "h")
-                    self.y += lead
-                i += take
-                if i < n:
-                    self.new_page()
-                    page_top = self.y
-            self.y += gap
+                cur.append(i)
+                used += need + it["post"]
+                i += 1
+            if cur:
+                pages.append(cur)
+            return pages
+
+        pages = pack(1.0)
+        if len(pages) > 1:
+            # 🚨 找「能塞進同樣頁數的最低填充率」要用二分搜尋，不能一格一格往上加。
+            #    孤寡行與小標的回退每次會浪費一兩行，累積起來常讓理想填充率差一頁；
+            #    舊版每次只加 4%，兩步就撞到 1.0 退回貪心，於是一篇的末頁又只剩
+            #    十二行、前面每頁都三十三行（2026-09-12 稽核抓到三本各一頁）。
+            floor = len(pages)
+            total = sum(it["pre"] + it["h"] + it["post"] for it in items)
+            room = first_avail + full_avail * (floor - 1)
+            even = max(0.35, min(1.0, total / room))
+            trial = pack(even)              # 理想填充率先試一次，塞得下就不必搜
+            if len(trial) <= floor:
+                pages = trial
+            else:
+                lo, hi = even, 1.0          # hi 已知可行（貪心就是 1.0）
+                for _ in range(12):
+                    mid = (lo + hi) / 2
+                    t2 = pack(mid)
+                    if len(t2) <= floor:
+                        pages, hi = t2, mid
+                    else:
+                        lo = mid
+
+        for pi, page_items in enumerate(pages):
+            if pi:
+                self.new_page()
+            for idx in page_items:
+                it = items[idx]
+                self.y += it["pre"]
+                self.draw(BODY_X0 + it["indent"], self.y, it["text"], it["size"], it["bold"])
+                self.y += it["h"] + it["post"]
 
     # ── 結構 ────────────────────────────────────────────────────────
     def part_title(self, name: str, blurb: str) -> None:
@@ -1257,7 +1503,8 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
 
             # 先把內容取出來（還不畫），因為閱讀導引排在篇首、而導引是從內文產的
             if path.lower().endswith(".pdf"):
-                author, title, source = title_of_pdf(path)
+                author, title, tag = title_of_pdf(path)
+                source = full_source(tag)
                 raw_paras, notes = extract_pdf(path)
                 raw_paras, spaced = repair_spacing(raw_paras)
                 raw_paras, badhead = drop_bad_headings(raw_paras)
@@ -1272,7 +1519,10 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 meta, paras = extract_md(path)
                 author = ""
                 title = meta.get("_h1") or meta.get("作品", os.path.basename(path))
-                source = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
+                # 🚨 出處由下面那段連同「節錄」一起印，這裡留空；兩邊都印會在
+                #    篇首連出兩行一模一樣的出處（使用者 2026-09-12 指出）。
+                source = ""
+                origin = f"{meta.get('初出', '')}／{meta.get('電子文本', '')}"
                 body = "\n\n".join(paras)
                 disp = title
                 cut = intro_cut = spaced = badhead = 0
@@ -1319,12 +1569,18 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
                 bk.piece_title(f"{weeks}", author, title, source)
 
             if meta is None:
-                bk.flow_paragraphs(paras, size=FS, gap=6.0, indent=INDENT)
+                # 課綱跳頁的那幾篇，篇末加一行說明為什麼沒講完。
+                # 🚨 要**併進同一個 flow**，不能排完正文再單獨 flow 一次：正文剛好
+                #    填滿末頁時，那一行就自己占掉一整頁（下冊多出一頁只有五行的
+                #    145 頁，2026-09-12 稽核抓到）。
+                bk.flow_paragraphs(
+                    paras + ([("p", RANGE_NOTE[key])] if key in RANGE_NOTE else []),
+                    size=FS, gap=6.0, indent=INDENT)
                 # 註釋整批不印（2026-09-10 使用者定案）。重排之後正文裡的上標
                 # 註號已經沒了，沒有錨點的篇末註等於廢紙；要查註回頭看 Drive
                 # 上那份原始切片。抽出來的用途只剩一個：不讓它混進正文。
             else:
-                bk.flow(f"出處：{source}", size=9.0, gap=8, color=(0.35,) * 3)
+                bk.flow(f"出處：{origin}", size=9.0, gap=8, color=(0.35,) * 3)
                 bk.flow(f"節錄：{meta.get('節錄範圍', '')}　實質 {meta.get('實質字數', '?')}",
                         size=9.0, gap=10, color=(0.35,) * 3)
                 bk.flow_paragraphs([("p", re.sub(r"\*\*(\d+)\*\*　", r"\1　", t)) for t in paras],

@@ -74,7 +74,7 @@ def is_author_dir(name: str) -> bool:
     且不含文獻群招牌字（`Three Forms of Unity` / `Westminster Standards` 這類
     會誤中純拉丁名規則）。
     """
-    if re.match(r"^\s*\d{3,4}", name):
+    if re.match(r"^\s*\d{3,4}\b", name):
         return False
     if NOT_PERSON_RX.search(name):
         return False

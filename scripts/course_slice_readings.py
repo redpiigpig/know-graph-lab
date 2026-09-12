@@ -154,7 +154,11 @@ C1_WEEKS = [
     ("W06-08 理解、解釋、詮釋的問題", "理解、解釋、詮釋的問題", [
         S(1, "Sharpe", "Commitment and Understanding", "understanding", 18, 32, "Commitment"),
         S(2, "Green", "Hermeneutics", "routledge", 392, 406, "Hermeneutics"),
-        S(3, "Penner", "Interpretation", "guide", 57, 66, "Interpretation"),
+        # 🚨 課綱寫 57-66，但那一章到 71 頁才完——66 頁的最後一句是「…the uncanny
+        #    ability of making sense out of what others say every day」，話沒講完
+        #    （2026-09-12 逐篇核對切出來的）。照課綱切，讀本就停在半句話上，
+        #    所以切到章末，多出來的 57-66 以外那幾頁當延伸閱讀。
+        S(3, "Penner", "Interpretation", "guide", 57, 71, "Interpretation"),
         S(4, "Segal", "Theories of Religion", "routledge", 49, 60, "Theories of Religion"),
         S(5, "Segal", "In Defense of Reductionism", "insider", 150, 174, "Reductionism", mode="pdf"),
         S(6, "MacIntyre", "Is Understanding Religion Compatible With Believing", "insider", 48, 60, "Compatible", mode="pdf"),
@@ -166,7 +170,12 @@ C1_WEEKS = [
         S(3, "Campbell", "Modernity and Postmodernity", "blackwell", 309, 320, "Postmodernity"),
     ]),
     ("W11 歷史與比較（一）", "B. 研究途徑與主題／歷史與比較", [
-        # 大綱寫 41-176，括號註明實際只讀 41-56 與 84-164 兩段，所以切兩檔
+        # 大綱寫 41-176，括號註明實際只讀 41-56 與 84-164 兩段，所以切兩檔。
+        # 🚨 這兩段**都會停在句子中間，而且修不掉**：課綱是從 56 頁跳到 84 頁，
+        #    中間 57–83 頁不讀。2026-09-12 試過多切一頁到 57，結果 57 頁的末行
+        #    一樣斷在半句（「…Eastern developments in the study of religion have」）
+        #    ——任何頁界都會斷在句中。所以照課綱切，改在讀本裡印一行說明
+        #    （`build_course_reader.RANGE_NOTE`），讓翻到那裡的人知道不是漏印。
         S(1, "King", "Historical and Phenomenological Approaches (41-56)", "theory", 41, 56, "Phenomenological"),
         S(2, "King", "Historical and Phenomenological Approaches (84-164)", "theory", 84, 164, ""),
     ]),

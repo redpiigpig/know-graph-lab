@@ -18,6 +18,9 @@
   I 每頁份量要接近                  貪心填滿會讓某頁只剩兩行
   J 頁腳只能有一個號碼              整頁搬運時舊頁碼沒清
   K 正文首行要空兩格
+  L 每一篇要真的收尾                Alles 那篇停在句子中間，接著竄進隔壁條目
+  M 不可竄進隔壁文章                〈… IN AUSTRALIA AND OCEANIA〉整段跑進來
+  N 出處要印完整書目                印成「EoR 8761-8767」，查不到是哪一本書
 """
 from __future__ import annotations
 
@@ -125,17 +128,98 @@ def check(path: Path) -> int:
     if bio_hits:
         bad.append(f"H 疑似編者作者簡介：{bio_hits[:3]}")
 
+    # D 頁眉頁腳殘骸。🚨 舊版把 `heads` 數出來卻沒用它判——等於這條根本沒在查。
+    #   來源書的頁眉一頁一條，混進正文就會在同一篇裡重複出現十幾次。
+    for i, (title, page) in enumerate(pieces):
+        end = pieces[i + 1][1] - 1 if i + 1 < len(pieces) else doc.page_count
+        tally: dict[str, int] = {}
+        for j in range(page - 1, min(end, doc.page_count)):
+            for l in {norm(x) for x in doc[j].get_text().split("\n")[2:]}:
+                # 短行與以句點收尾的行不算：正文裡「religion.」這種段尾本來就會
+                # 在同一篇裡重複好幾次（2026-09-12 誤報過）。頁眉不會有句點。
+                if (14 < len(l) < 70 and not l.endswith((".", "?", "!"))
+                        and not re.fullmatch(r"[\d\s.]+", l)):
+                    tally[l] = tally.get(l, 0) + 1
+        dup = [k for k, v in tally.items() if v >= 3]
+        if dup:
+            bad.append(f"D 疑似頁眉殘骸 {norm(title)[:30]}：{dup[:3]}")
+
     # I 每頁份量
     counts = []
+    thin_pages = []
     for i in range(front, doc.page_count):
         t = doc[i].get_text()
         if "閱讀導引" in norm(t)[:60]:
             continue
-        counts.append(len([l for l in t.split("\n") if norm(l)]))
+        counts.append((i + 1, len([l for l in t.split("\n") if norm(l)])))
     if counts:
-        thin = [c for c in counts if c < max(6, sorted(counts)[len(counts) // 2] * 0.4)]
-        if len(thin) > len(counts) * 0.08:
-            bad.append(f"I 太空的頁 {len(thin)}／{len(counts)}（中位 {sorted(counts)[len(counts)//2]} 行）")
+        med = sorted(c for _, c in counts)[len(counts) // 2]
+        # 🚨 門檻放在中位數的一半，不是 0.4——舊版 0.4 加上「超過 8% 才報」，
+        #    讓「篇首那一頁只有標題」整批溜過去（使用者 2026-09-12 一頁一頁挑出來）。
+        #    現在只要有一頁低於中位數一半就報，並且把頁碼印出來。
+        thin_pages = [p for p, c in counts if c < max(5, med * 0.5)]
+        if thin_pages:
+            bad.append(f"I 太空的頁 {len(thin_pages)}／{len(counts)}"
+                       f"（中位 {med} 行）：{thin_pages[:10]}")
+
+    # L 每一篇要真的收尾。🚨「印出來很正常但半途沒了」是這條線最貴的錯：
+    #   Alles 那篇因為雙欄讀序錯亂，正文停在句子中間，接著竄進隔壁條目
+    #   〈… IN AUSTRALIA AND OCEANIA〉（使用者 2026-09-12 指出）。
+    END_OK = ('.', '?', '!', '”', '’', '"', ')', ']', '。', '」', '』', '？', '！')
+    for i, (title, page) in enumerate(pieces):
+        end = pieces[i + 1][1] - 1 if i + 1 < len(pieces) else doc.page_count
+        last = ""
+        for j in range(end - 1, page - 2, -1):
+            lines = [norm(l) for l in doc[j].get_text().split("\n") if norm(l)]
+            body = [l for l in lines[2:] if not re.fullmatch(r"\d{1,4}", l)]
+            if body:
+                last = body[-1]
+                break
+        # 署名欄不是斷句：文語體的序以「明治三十二年十月三十日／東京角筈村において／
+        # 内村鑑三」收尾，三行都沒有句點，但那就是原文的樣子。短行放過。
+        # 句末的註號不算沒收句。🚨 只剝「接在句末標點後面」的數字：無條件剝
+        # `\d{1,3}$` 會把「Königsberg, Prussia September 30, 1784」剝成
+        # 「…September 30, 1」，然後報成斷句（2026-09-12 誤報過）。
+        last = re.sub(r"(?<=[.?!])\d{1,3}$", "", last).rstrip()
+        # 落款也不是斷句：康德那篇以「Königsberg, Prussia September 30, 1784」收尾，
+        # 沒有句點但那就是原文的樣子。以四位數年份收尾的一律放過。
+        if re.search(r"\b(1[5-9]|20)\d{2}\s*$", last):
+            last = ""
+        if last and not last.endswith(END_OK) and len(last) > 18:
+            bad.append(f"L 篇尾斷在句子中間 {norm(title)[:34]}（p{end}）：…{last[-46:]}")
+
+    # M 隔壁文章竄進來。
+    # 🚨 不能只數「有幾個整行大寫」。Alles 那篇自己就有 THE EMERGENCE OF THE ACADEMIC
+    #    STUDY OF RELIGION、DEVELOPMENT OF… 兩個大寫小標，數量判法會把正常的小標
+    #    報成竄入（2026-09-12 誤報過）。竄進來的長相是**百科全書的條目名**：整行
+    #    大寫又帶冒號，而且跟本篇篇名對不上。
+    for i, (title, page) in enumerate(pieces):
+        end = pieces[i + 1][1] - 1 if i + 1 < len(pieces) else doc.page_count
+        own = re.sub(r"[^a-z]", "", norm(title).lower())
+        shout = set()
+        for j in range(page - 1, min(end, doc.page_count)):
+            for l in [norm(x) for x in doc[j].get_text().split("\n")[2:]]:
+                letters = [c for c in l if c.isalpha()]
+                # SECTION／PART／CHAPTER 開頭的是書裡自己的分節標題（Segal 那篇
+                # 就有「SECTION ONE: MYTH」「SECTION TWO: MYTH AND RITUAL」），
+                # 不是竄進來的隔壁條目（2026-09-12 誤報過）。
+                if (len(l) > 24 and ":" in l and letters
+                        and not re.match(r"(SECTION|PART|CHAPTER|BOOK)\b", l)
+                        and sum(c.isupper() for c in letters) / len(letters) > 0.85
+                        and re.sub(r"[^a-z]", "", l.lower()) not in own):
+                    shout.add(l[:56])
+        if shout:
+            bad.append(f"M 疑似竄進別篇 {norm(title)[:30]}：{sorted(shout)[:2]}")
+
+    # N 出處要印完整書目，不是「EoR 8761-8767」這種檔名縮寫。
+    # 只查英文那三本：日文讀本的出處走青空文庫圖書卡體例（「角川新書、角川書店、
+    # 1952（昭和 27）年…／青空文庫　圖書卡 60192」），本來就完整，別誤報。
+    for i, (title, page) in enumerate(pieces):
+        head = norm(doc[page - 1].get_text() + " " + doc[min(page, doc.page_count - 1)].get_text())
+        if re.search(r"[぀-ヿ一-鿿]", norm(title)):
+            continue
+        if "閱讀導引" in head[:60] and not re.search(r"\(\w[^)]*\d{4}\)", head):
+            bad.append(f"N 出處沒有完整書目 {norm(title)[:34]}")
 
     # J 頁腳
     dupes = [i + 1 for i in range(front, doc.page_count)
