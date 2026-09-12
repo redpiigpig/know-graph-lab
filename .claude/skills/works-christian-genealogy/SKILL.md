@@ -269,6 +269,8 @@ Malaty《Introduction to the Coptic Orthodox Church》、《漢語景教文典�
 
 ## 還沒做的事
 
+📋 這一節每一項都有一則可直接貼給新 session 的 prompt，見 [docs/PROMPTS_religious_studies_backlog_2026-09-12.md](../../../docs/PROMPTS_religious_studies_backlog_2026-09-12.md)（含背景、坑、驗收條件）。
+
 1. **術語全書統一。** 第4章把「教系／宗派／宗座／牧首」定義得很清楚，第5、6 章的改寫稿
    仍偶爾混用「教派」「系統」「共同體」。
 2. **譯名跑一次《翻譯定名》詞庫。** 宗教改革以後的新教人物（施本爾、親岑多夫、

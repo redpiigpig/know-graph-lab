@@ -180,6 +180,8 @@ Once＋重複（重複期用盡後再也不觸發，而 State 仍是 Ready）、
 
 ## 還沒做的事
 
+📋 這一節每一項都有一則可直接貼給新 session 的 prompt，見 [docs/PROMPTS_religious_studies_backlog_2026-09-12.md](../../../docs/PROMPTS_religious_studies_backlog_2026-09-12.md)（含背景、坑、驗收條件）。
+
 1. **書目還可以更厚。** 現行 186 筆是第一輪；後加的七區（聖經／實踐／自由／世俗／
    敘事／解放／性別）每區只有 11–16 筆，比前五區薄。東正教與天主教那兩側、
    以及非英語的全球南方著作都還能補。

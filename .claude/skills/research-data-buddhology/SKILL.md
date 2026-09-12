@@ -184,10 +184,13 @@ python scripts/buddhist_studies_index.py --wanted   # 另外吐出缺書獵表
 
 ## 還沒做的事
 
-1. **文章那一層還沒有。** 目前只有書目。華語佛學期刊走 [[research-data-airiti]]
-   （中華佛學學報／法鼓佛學學報／臺大佛學研究／玄奘佛學研究／福嚴佛學研究），
-   英文的 *JIABS*、*Journal of Buddhist Ethics*（全開放取用，值得優先做）、
-   *Buddhist Studies Review* 要另外評估。
+📋 這一節每一項都有一則可直接貼給新 session 的 prompt，見 [docs/PROMPTS_religious_studies_backlog_2026-09-12.md](../../../docs/PROMPTS_religious_studies_backlog_2026-09-12.md)（含背景、坑、驗收條件）。
+
+1. ~~文章那一層~~ **華語那半已完成**（2026-09-11）：`buddhist_studies_articles.py`
+   掃十三份華藝佛學期刊 4,502 篇，七區篩出 1,487 筆候選，97% 華藝有全文。
+   ⚠️ 是關鍵詞粗篩不是分類，**未經人工複核**。
+   **外文那半還沒有**：*JIABS*、*Journal of Buddhist Ethics*（全開放取用，
+   值得優先做）、*Buddhist Studies Review* 要另外評估。
 2. **中譯資訊多半空著。** `zh` 只填了七筆，其餘要逐筆查證。台灣的華宇出版社
    「世界佛學名著譯叢」（100 冊）是最大宗的日文與西文佛學名著中譯來源，
    值得整套比對回填。
