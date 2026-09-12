@@ -178,6 +178,50 @@ def fallback_category(title: str, author: str, filename: str = "") -> str | None
     """
     text_raw = f"{title} {author} {filename}"
     text = text_raw.lower()
+
+    # ── 宗教學（跨宗教／理論／現象學／社會學／心理學／認知）────────────────────
+    # 🚨 必須排在神學與世界宗教的關鍵字**之前**。實際踩過的誤分類：
+    # 伊利亞德《神聖與世俗》被「聖」系列抓進神學、Peter Brown《西方基督教世界的
+    # 興起》被 "christ" 抓走。分類判準看**書寫位置**不是題材碰到哪個宗教。
+    religious_studies_en = [
+        "phenomenology of religion", "psychology of religion", "sociology of religion",
+        "anthropology of religion", "comparative religion", "history of religions",
+        "encyclopedia of religion", "science of religion", "religious studies",
+        "geography and religion", "sacred and the profane", "meaning and end of religion",
+        "interpretation of religion", "denominationalism", "shamanism",
+        "cognitive science of religion", "believe in god", "varieties of religious",
+        "elementary forms of religious", "idea of the holy", "golden bough",
+    ]
+    # 這一批宗教學者的著作散落各語言版本，作者名比書名可靠
+    religious_studies_authors = [
+        "eliade", "wilfred cantwell", "van der leeuw", "söderblom", "soderblom",
+        "chantepie", "kristensen", "joachim wach", "rudolf otto", "troeltsch",
+        "pargament", "levy-bruhl", "lévy-bruhl",
+        "伊利亞德", "伊利亚德", "以利亞德", "以利亚德",   # Eliade 站上並存兩種譯名
+        "范德列烏", "范德列乌", "瓦赫", "奧托", "奥托", "瑟德布盧姆", "瑟德布卢姆",
+    ]
+    religious_studies_cn = [
+        "宗教學", "宗教学", "宗教現象", "宗教现象", "宗教社會", "宗教社会",
+        "宗教心理", "宗教人類", "宗教人类", "宗教地理", "宗教起源",
+        "神話學", "神话学", "比較宗教", "比较宗教", "宗教理念史",
+        "神聖與世俗", "神圣与世俗", "薩滿教", "萨满教", "不死與自由", "不死与自由",
+    ]
+    if (any(k in text for k in religious_studies_en)
+            or any(k.lower() in text for k in religious_studies_authors)
+            or any(k in text_raw for k in religious_studies_cn)):
+        return "宗教學"
+
+    # ── 教會史／宗教改革史 → 世界宗教（該宗教自身的歷史敘述），不是神學 ──────
+    # 同樣要排在 christian_kw 之前：那份清單有 "church"／"christ"，會先攔截。
+    church_history_kw = [
+        "western christendom", "history of the church", "church history",
+        "history of the christian church", "reformation of worship",
+        "rise of christianity", "ecclesiastical history",
+        "教會史", "教会史", "天主教史", "基督教史", "宗教改革史", "教派史",
+    ]
+    if any(k in text for k in church_history_kw) or any(k in text_raw for k in church_history_kw):
+        return "世界宗教"
+
     christian_kw = [
         "christ", "christian", "christology", "church", "bonhoeffer", "syriac",
         "nestorius", "cyril", "monophysite", "chalcedon", "ephrem", "babai",
