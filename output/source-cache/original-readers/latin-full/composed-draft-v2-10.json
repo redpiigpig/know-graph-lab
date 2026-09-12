@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 10, "author": "opus-5-hand-written",
+  "note": "modo 只剩大寫的 Modo。本課多半是中世紀行政與會議用語，兩層語料都收得齊。",
+  "sentences": [
+    {"latin": "Modo concilium in monasterio", "chinese": "此刻修道院裡的會議。", "targets": ["modo", "concilium", "monasterium", "in"]},
+    {"latin": "parum morem abbas probat", "chinese": "院長不太贊同那風俗。", "targets": ["parum", "mos", "abbas", "probo"]},
+    {"latin": "scilicet præsens presbyter", "chinese": "當然，那在場的司鐸。", "targets": ["scilicet", "praesens", "presbyter"]},
+    {"latin": "potius consilium tamquam mos", "chinese": "寧可當作勸告，而非風俗。", "targets": ["potius", "consilium", "tamquam", "mos"]},
+    {"latin": "forte quatenus probatur", "chinese": "或許就其被認可的範圍而言。", "targets": ["forte", "quatenus", "probo"]},
+    {"latin": "abbatis consilio præsenti", "chinese": "依院長在場時的勸告。", "targets": ["abbas", "consilium", "praesens"]},
+    {"latin": "presbyteri in concilio tamquam", "chinese": "司鐸們在會議中，彷彿如此。", "targets": ["presbyter", "concilium", "tamquam"]}
+  ]
+}

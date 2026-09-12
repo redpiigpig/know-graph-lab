@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 11, "author": "opus-5-hand-written",
+  "note": "que 在本課是獨立詞條（並列連接詞），寫成附著詞 -que 時閘會拆出 que 這一半記給它——但前提是整個形不在語料裡，uxoresque 武加大有，就不會拆。summus 沒有陰性受格 summam。",
+  "sentences": [
+    {"latin": "noluit uxorem et amorem", "chinese": "他不願要妻子與情愛。", "targets": ["nolo", "uxor", "amor"]},
+    {"latin": "Constat electio publica", "chinese": "公開的揀選是確定的。", "targets": ["consto", "electio", "publicus"]},
+    {"latin": "infra litteras appellavit", "chinese": "他在下文中稱呼了。", "targets": ["infra", "littera", "appello"]},
+    {"latin": "summo quantum pertinet", "chinese": "就其關乎至高者的程度而言。", "targets": ["summus", "quantum", "pertineo"]},
+    {"latin": "synodus ordinata est", "chinese": "主教會議被安排好了。", "targets": ["synodus", "ordino", "sum"]},
+    {"latin": "religionis amor synodusque", "chinese": "宗教的愛，以及主教會議。", "targets": ["religio", "amor", "synodus", "que"]},
+    {"latin": "publica synodo ordinare", "chinese": "以公開的主教會議來安排。", "targets": ["publicus", "synodus", "ordino"]}
+  ]
+}

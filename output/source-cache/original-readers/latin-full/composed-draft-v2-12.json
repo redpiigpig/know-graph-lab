@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 12, "author": "opus-5-hand-written",
+  "note": "capitulum 只剩複數奪格 capitulis。",
+  "sentences": [
+    {"latin": "materiam in capitulis", "chinese": "各章條裡的材料。", "targets": ["materia", "capitulum", "in"]},
+    {"latin": "necessitate commisit medium", "chinese": "他因需要而託付了中間那一份。", "targets": ["necessitas", "committo", "medius"]},
+    {"latin": "supra provinciæ negotia", "chinese": "在行省事務之上。", "targets": ["supra", "provincia", "negotium"]},
+    {"latin": "item nec disciplinam nec studium contingit", "chinese": "同樣地，既不涉及紀律，也不涉及熱忱。", "targets": ["item", "nec", "disciplina", "studium", "contingo"]},
+    {"latin": "alienis possessionem tenet", "chinese": "他為外人保有那產業。", "targets": ["alienus", "possessio"]},
+    {"latin": "diversa quæstio in provincia", "chinese": "行省裡不同的爭議。", "targets": ["diversus", "quaestio", "in", "provincia"]},
+    {"latin": "studio disciplinæ medio", "chinese": "以居中的紀律熱忱。", "targets": ["studium", "disciplina", "medius"]}
+  ]
+}
