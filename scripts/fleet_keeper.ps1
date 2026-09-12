@@ -1,5 +1,19 @@
 # Fleet keeper: every 30 min (Windows task KGL_Fleet_Keeper) self-heals translation/OCR lanes.
 # If a lane's worker is not running, relaunch it. The 30-min cadence IS the retry mechanism.
+#
+# 2026-09-12 - THE KEEPER ITSELF NEEDS A KEEPER. One tick wedged at 01:34 (single thread,
+# kernel Executive wait, unkillable by Stop-Process AND taskkill) and every trigger from
+# 02:00 to 09:30 was silently dropped: the task is MultipleInstances=IgnoreNew, so a live
+# instance makes the scheduler skip the next one, and ExecutionTimeLimit was PT0S = no
+# limit, so nothing ever killed the wedged one. Ten hours with State=Running, LastRunTime
+# advancing, and NOT ONE LINE in this log - every lane sat dead meanwhile.
+# Fixed by giving the task a limit (a healthy tick takes seconds):
+#   $t = Get-ScheduledTask -TaskName 'KGL_Fleet_Keeper'
+#   $t.Settings.ExecutionTimeLimit = 'PT10M'
+#   Set-ScheduledTask -TaskName 'KGL_Fleet_Keeper' -Settings $t.Settings
+# Diagnosis rule: this log going quiet is the symptom to watch, NOT the task's State
+# (which says Running) and NOT LastRunTime (which keeps advancing).
+# KGL_Fathers_Retranslate and KGL_Translation_Supervisor are still PT0S - same trap.
 # Direct Start-Process python.exe + arg array (avoids nested-string / redirect PS parse traps).
 # ASCII-only on purpose: PS 5.1 on a zh-TW box misreads UTF-8-no-BOM scripts and breaks parsing.
 $ErrorActionPreference = 'Continue'
