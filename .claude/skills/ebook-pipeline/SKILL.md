@@ -1066,6 +1066,17 @@ A scanned PDF still shows "此頁無內容" 12+ hours after OCR scheduled?
 Many books in OCR queue showing "file not found"?
   → G: drive (Drive sync) disconnected. Re-launch Google Drive client.
 
+一本掃描書標成「已解析」，但站上幾乎沒字（幾百到幾千字）？
+  → 🚨 **薄假文字層**：掃描件常帶一層只有頁碼／浮水印的文字層，parse_worker 抽到
+    「一點點字」就算成功，於是 `parse_error` 是空的、**OCR 排程永遠看不到它**。
+    2026-09-12 那批 28 本裡中了 6 本（每頁 1–5 字）。判準用**每頁字數**不是總字數：
+    `total_chars / total_pages < 100` → 掛回 `parse_error='no extractable text'`。
+    （同一個坑在結構修復那輪出現過 65 本，見 [[project_structure_repair]]。）
+
+純影像的 EPUB（幾百張圖、只有兩三個 HTML）？
+  → `ocr_with_gemini` 只吃 PDF。走 `display_mode='page-image'`（Workflow G），
+    epub.js 直接呈現原頁；要能搜尋再另外把影像轉 PDF 送 OCR。
+
 New book in z-lib/ never showed up?
   → Check ocr_YYYY-MM-DD.log "--- ingest_new_books ---" section.
   → 'CLASSIFY FAILED' = Gemini quota; tomorrow retries.
