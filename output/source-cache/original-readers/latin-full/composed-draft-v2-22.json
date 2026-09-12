@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 22, "author": "opus-5-hand-written",
+  "note": "paene 在語料裡多寫 pene。",
+  "sentences": [
+    {"latin": "impedit nullatenus interdum", "chinese": "它有時決不妨礙。", "targets": ["impedio", "nullatenus", "interdum"]},
+    {"latin": "luna comites Memorare", "chinese": "月亮啊，求你記念那些同伴。", "targets": ["luna", "comes", "memoro"]},
+    {"latin": "Modicum pene famam", "chinese": "幾乎是微小的名聲。", "targets": ["modicus", "paene", "fama"]},
+    {"latin": "basilicam retinere legitima", "chinese": "要合法地保有那教堂。", "targets": ["basilica", "retineo", "legitimus"]},
+    {"latin": "libere colunt frequenter", "chinese": "他們經常自由地敬事。", "targets": ["libere", "colo", "frequenter"]},
+    {"latin": "interpretatur puniens comes", "chinese": "那施罰的同伴解釋著。", "targets": ["interpretor", "punio", "comes"]},
+    {"latin": "famæ lunam impediri", "chinese": "名聲的月亮要被阻礙。", "targets": ["fama", "luna", "impedio"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 24, "author": "opus-5-hand-written",
+  "note": "本課十七個待練詞多為教義與禮儀名詞，兩層語料齊備。",
+  "sentences": [
+    {"latin": "Trinitate metu navis", "chinese": "在聖三、在敬畏、在船中。", "targets": ["Trinitas", "metus", "navis"]},
+    {"latin": "decretum tribuit generat", "chinese": "他頒賜法令，並且產生。", "targets": ["decretum", "tribuo", "genero"]},
+    {"latin": "honesta En habitavit", "chinese": "瞧，他高尚地居住了。", "targets": ["honestus", "en", "habito"]},
+    {"latin": "privilegio magnitudo navis", "chinese": "船隻因特權而有的偉大。", "targets": ["privilegium", "magnitudo", "navis"]},
+    {"latin": "plane prudentia anathema", "chinese": "顯然，以明智面對那詛咒。", "targets": ["plane", "prudentia", "anathema"]},
+    {"latin": "dubito sapere idolum", "chinese": "我懷疑自己識得那偶像。", "targets": ["dubito", "sapio", "idolum"]},
+    {"latin": "habitant in privilegiis", "chinese": "他們住在特權之中。", "targets": ["habito", "privilegium", "in"]}
+  ]
+}

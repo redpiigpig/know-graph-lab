@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 23, "author": "opus-5-hand-written",
+  "note": "本課多為教會法用語，兩層語料齊備。",
+  "sentences": [
+    {"latin": "summa alibi cupio", "chinese": "我在別處渴望那總數。", "targets": ["summa", "alibi", "cupio"]},
+    {"latin": "proprie damnavit consistere", "chinese": "他恰當地判定要停止。", "targets": ["proprie", "damno", "consisto"]},
+    {"latin": "equos patientia privari", "chinese": "要以忍耐奪去那些馬。", "targets": ["equus", "patientia", "privo"]},
+    {"latin": "præsertim proprietatem sororis", "chinese": "尤其是姐妹的所有權。", "targets": ["praesertim", "proprietas", "soror"]},
+    {"latin": "speciali dispositione fraudem", "chinese": "以特別的安排面對那欺詐。", "targets": ["specialis", "dispositio", "fraus"]},
+    {"latin": "iniqui exercent equorum", "chinese": "那些不義的人操練馬匹。", "targets": ["iniquus", "exerceo", "equus"]},
+    {"latin": "Summaque patientiam cupientes", "chinese": "而那總數，以及渴望忍耐的人們。", "targets": ["summa", "patientia", "cupio"]}
+  ]
+}

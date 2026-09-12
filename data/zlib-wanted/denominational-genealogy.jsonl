@@ -89,3 +89,7 @@
 {"key": "dg-kuhn-scientific-revolutions-zh", "query": "科學革命的結構 孔恩", "expect": "科學革命的結構", "who": "孔恩", "source": "denominational-genealogy", "zh": "孔恩《科學革命的結構》（孔漢思典範論的上游，已引於第1章第五節）"}
 {"key": "dg-mccutcheon-manufacturing", "query": "McCutcheon Manufacturing Religion", "expect": "Manufacturing Religion", "who": "McCutcheon", "source": "denominational-genealogy", "zh": "麥卡琴《製造宗教》（對古典現象學最系統的批判；館內已有他另三本）"}
 {"key": "dg-sperber-explaining-culture", "query": "Sperber Explaining Culture Naturalistic Approach", "expect": "Explaining Culture", "who": "Dan Sperber", "source": "denominational-genealogy", "zh": "斯珀伯《解釋文化》（迷因論失效的標準批評）"}
+{"key": "dg-henrich-weirdest", "query": "Henrich The WEIRDest People in the World", "expect": "WEIRDest People in the World", "who": "Joseph Henrich", "source": "denominational-genealogy", "zh": "亨里奇《西方怪咖的起源》（第5章註91 引，未入館）"}
+{"key": "dg-robeck-azusa", "query": "Robeck The Azusa Street Mission and Revival", "expect": "Azusa Street Mission and Revival", "who": "Cecil M. Robeck", "source": "denominational-genealogy", "zh": "羅貝克《阿蘇薩街差會與復興》（第5章註101 引，未入館）"}
+{"key": "dg-barth-nein-brunner", "query": "Karl Barth Nein Antwort an Emil Brunner", "expect": "Nein! Antwort an Emil Brunner", "who": "Karl Barth", "source": "denominational-genealogy", "zh": "巴特〈不！答布倫納〉（第6章註104 引；英譯常收於 Natural Theology, 1946）"}
+{"key": "dg-brunner-mensch-widerspruch", "query": "Emil Brunner Der Mensch im Widerspruch", "expect": "Der Mensch im Widerspruch", "who": "Emil Brunner", "source": "denominational-genealogy", "zh": "布倫納《矛盾中的人》（第6章註104 引；英譯 Man in Revolt）"}

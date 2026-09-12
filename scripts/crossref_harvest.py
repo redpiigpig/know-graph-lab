@@ -46,6 +46,15 @@ Ruprecht、De Gruyter、Brill、Peeters、Aschendorff）都繳 DOI，而且**題
 3. **`type` 要過濾。** 一刊的 works 裡混著 journal-issue、book-review、
    editorial、component。只留 `journal-article`（並把被濾掉的數量記在對帳裡，
    否則 total-results 永遠對不上而看不出是正常的還是漏抓）。
+   ⚠️ 但**過濾不掉書評**：老牌期刊的書評，出版社多半就登記成 `journal-article`，
+   所以 Church History 那 17,314 篇裡有相當比例其實是書評（題名長得像
+   「某書．某人譯註．某地：某社，1989. vi + 345 pp.」）。這不是抓錯，是 Crossref
+   的型別就那樣；**不要**寫個 "pp." 正則去砍，那會連正文論文一起砍。要用的話在
+   呈現層標示，別在抓取層丟資料。
+
+4. **寫檔要 atomic。** 續傳只看「檔案在不在」，而寫到一半被砍（逾時、休眠、關機）
+   會留下一個非空的半截檔，下一輪就當成抓好了跳過——那一刊從此永遠是殘的而且
+   不報錯。實測踩過一次。現在一律先寫 `.jsonl.part` 再 `replace`。
 
 ## 存放
 
@@ -276,9 +285,15 @@ def harvest_articles(journals: list[dict], limit: int | None, force: bool) -> No
             print(f"[{i}/{len(todo)}] {j['issn']} 失敗 {type(e).__name__}")
             time.sleep(DELAY)
             continue
+        # 🚨 先寫 .part 再 replace，不要直接寫 out。續傳只看「檔案在不在」，
+        # 而寫到一半被砍（逾時、休眠、關機）會留下一個非空的半截檔——下一輪就把它
+        # 當成抓好了跳過，那一刊從此永遠是殘的，而且不報錯。實測踩過：
+        # 0022-5185.jsonl 留下 20,329 行裡有 20 行壞掉。
         nl = chr(10)
-        out.write_text(nl.join(json.dumps(r, ensure_ascii=False) for r in rows) + nl,
-                       encoding="utf-8")
+        part = out.with_suffix(".jsonl.part")
+        part.write_text(nl.join(json.dumps(r, ensure_ascii=False) for r in rows) + nl,
+                        encoding="utf-8")
+        part.replace(out)
         done += 1
         # 對帳：實得＋被濾掉的，應該等於 Crossref 自報總數。差太多就是漏抓。
         gap = total - (len(rows) + dropped)
