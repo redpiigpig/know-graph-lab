@@ -309,20 +309,50 @@
           完整目錄見 <NuxtLink to="/papers" class="text-red-800 hover:underline">學術著作目錄</NuxtLink>。
         </p>
 
-        <h3 class="sub-h">演講</h3>
-        <div class="rounded-xl border border-gray-200 bg-white px-4 py-3.5">
-          <p class="text-[13px] text-gray-700 leading-relaxed mb-2">
-            門檻算的是<b>「參加」演講</b>（去聽），不是自己主講 —— 系辦法第五條第三款寫「至少參加二十場演講（每場 2 小時以上），其中需有五場為本系舉辦」。
-          </p>
-          <p class="text-[13px] text-gray-700 leading-relaxed mb-2">
-            <b>目前尚無紀錄</b>，需要你提供已參加的場次（日期、講題、主講人、主辦單位、時數）才能建檔。
-            本系場次請留意系網「最新消息」與助教轉知信。
-          </p>
-          <p class="text-xs text-gray-500 leading-relaxed">
-            自己主講的演講另計，見 <NuxtLink to="/speech" class="text-red-800 hover:underline">演講紀錄</NuxtLink>
-            （目前 1 場：2026/5/19〈台灣佛教具有「民主基因」嗎？〉，玄奘大學妙然樓 M401）。不列入此門檻。
+        <h3 class="sub-h">演講　·　參加（計入門檻）</h3>
+        <p class="para text-gray-500">
+          系辦法第五條第三款：至少參加二十場演講，每場 2 小時以上，其中五場須為本系舉辦。
+          （115 級修業規定寫十場、五場本系，兩份不一致，見第捌節。）
+        </p>
+        <div v-if="lecturesAttended.length" class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th class="whitespace-nowrap">日期</th><th>講題</th><th>主講</th><th>主辦</th><th class="whitespace-nowrap">時數</th></tr></thead>
+            <tbody>
+              <tr v-for="l in lecturesAttended" :key="l.date + l.title">
+                <td class="whitespace-nowrap tabular-nums">{{ l.date }}</td>
+                <td class="break-words">{{ l.title }}</td>
+                <td class="text-gray-600 break-words">{{ l.speaker }}</td>
+                <td class="text-gray-600 break-words">{{ l.host }}</td>
+                <td class="whitespace-nowrap tabular-nums">{{ l.hours }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div v-else class="rounded-xl border border-dashed border-amber-300 bg-amber-50 px-4 py-3.5">
+          <p class="text-[13px] text-amber-900 leading-relaxed">
+            <b>尚無紀錄，待補。</b>每一場請給我五個欄位：<b>日期、講題、主講人、主辦單位、時數</b>，
+            並註明是否為本系舉辦。有研習證明的話一併記下編號。
           </p>
         </div>
+
+        <h3 class="sub-h">演講　·　主講（不計入門檻）</h3>
+        <ol class="space-y-3">
+          <li v-for="l in lecturesGiven" :key="l.date" class="rounded-xl border border-gray-200 bg-white px-4 py-3.5">
+            <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-1">
+              <span class="font-mono text-xs font-bold text-gray-900 tabular-nums">{{ l.date }}</span>
+              <span class="text-[10px] font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 rounded px-1.5">主講</span>
+              <span class="text-[11px] text-gray-400 sm:ml-auto">{{ l.duration }}</span>
+            </div>
+            <p class="text-[13px] font-semibold text-gray-900 leading-snug break-words">{{ l.title }}</p>
+            <p v-if="l.subtitle" class="text-xs text-gray-500 leading-snug break-words">{{ l.subtitle }}</p>
+            <p class="mt-1 text-xs text-gray-500 break-words">{{ l.venue }}</p>
+            <p class="mt-0.5 text-xs text-gray-500 break-words"><span class="text-gray-400">主辦　</span>{{ l.host }}</p>
+          </li>
+        </ol>
+        <p class="mt-2 text-xs text-gray-500 leading-relaxed">
+          自己主講不算「參加演講」的場次，但屬於學術活動實績，
+          完整紀錄見 <NuxtLink to="/speech" class="text-red-800 hover:underline">演講紀錄</NuxtLink>。
+        </p>
       </section>
 
       <!-- 拾 投稿目標 -->
@@ -421,7 +451,7 @@ const sections = [
 const eventStats = [
   { k: '研討會日數', v: '5', note: '證明已備齊' },
   { k: '本系主辦', v: '2', note: '需 3 場' },
-  { k: '演講場次', v: '0', note: '需 10 或 20' },
+  { k: '參加演講', v: '0', note: '需 10 或 20 場' },
   { k: '審稿論文', v: '3', note: '門檻需 2 篇' },
 ]
 
@@ -498,6 +528,21 @@ const publications = [
   { title: '（題目待補）', venue: '第二十四屆「印順導師思想之理論與實踐」國際學術會議', date: '2026/8/28–29', state: '已發表', inProgram: false },
   { title: '（題目待補）', venue: '台灣宗教學會 2026 年會「靈性運動、療癒與諮詢」', date: '2026/10/23–24', state: '預計發表', inProgram: true },
   { title: '信仰與學術的交互作用：近半世紀印順學與印順學派歷史發展回顧（1973–2023）', venue: '《玄奘佛學研究》', date: '2027 年該期', state: '已通過審查，確定刊登', inProgram: true },
+]
+
+const lecturesAttended: { date: string; title: string; speaker: string; host: string; hours: string }[] = [
+  // 待補：日期／講題／主講人／主辦單位／時數
+]
+
+const lecturesGiven = [
+  {
+    date: '2026/5/19',
+    duration: '08:30–10:15',
+    title: '台灣佛教具有「民主基因」嗎？',
+    subtitle: '從《民主妙法》談三大教團的制度演進與政教互動',
+    venue: '玄奘大學妙然樓 M401 教室',
+    host: '玄奘大學台灣佛教研究中心（宗教社會學‧專題演講）',
+  },
 ]
 
 const journalsActive = [
