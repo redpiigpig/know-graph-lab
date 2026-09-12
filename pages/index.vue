@@ -103,6 +103,16 @@
             <span class="tool-badge tool-badge--ready">可用</span>
           </NuxtLink>
 
+          <!-- 博班修業地圖 -->
+          <NuxtLink :to="user ? '/phd-map' : '/login'" class="tool-card group border-red-100 hover:border-red-300 hover:shadow-red-100">
+            <div class="tool-icon bg-red-50 text-red-700">🗺️</div>
+            <div class="flex-1 min-w-0">
+              <h2 class="tool-title">博班修業地圖</h2>
+              <p class="tool-desc">畢業六關、三年時程、研討會與投稿紀錄</p>
+            </div>
+            <span class="tool-badge tool-badge--ready">可用</span>
+          </NuxtLink>
+
           <!-- AI 對話錄 -->
           <NuxtLink :to="user ? '/ai-dialogues' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
             <div class="tool-icon bg-indigo-50 text-indigo-600">💬</div>
