@@ -61,6 +61,15 @@ C_MON = "宗教研究基本問題與研究方法"      # 週一 第2節　博士
 C_SAT = "宗教學理論與方法(一)"            # 週六 第1節〔單週〕碩專班1A
 C_JPN = "初階宗教學日文文獻選讀"          # 週二 第1節　碩士班1A
 
+# 🚨 成品要同時寫進**每一個**擺放位置，一個都不能漏。2026-09-12 我只寫課程資料夾，
+#    使用者翻的是雲端硬碟根目錄那疊 9/11 的舊檔，於是把已經修好的錯又報了一次——
+#    而各處檔名一模一樣，從檔名看不出哪份是新的。新增位置就加進這個 tuple；
+#    `qa_course_reader.py` 的第 O 條會逐份比 SHA1，漏了就報。
+SHARED_OUTS = (
+    os.path.join(r"G:\我的雲端硬碟", "115-1 課程讀本"),                      # 送印那一疊
+    os.path.join(r"G:\我的雲端硬碟\資料\知識圖工作室\教學", "115-1_修課讀本"),  # 工作室歸檔
+)
+
 LATIN = r"C:\Windows\Fonts\times.ttf"
 LATIN_BD = r"C:\Windows\Fonts\timesbd.ttf"
 
@@ -1451,7 +1460,14 @@ def build(reader: str, mode: str, only: int | None, want_guide: bool,
     parts, courses, lang, stem = READERS[reader]
     # 成品就放那門課的資料夾本身，不另開子夾；`--out` 可以改放到別處
     # （雲端硬碟沒掛載時先出到本機，掛回來再放回課程資料夾）。
-    out_dirs = [out] if out else [os.path.join(BASE, c) for c in courses]
+    #
+    # 🚨 **同時寫進送印用的那一疊** `G:\我的雲端硬碟\115-1 課程讀本\`。兩個位置各放
+    #    一份是使用者要的（一份跟課、一份整疊拿去影印店），但 2026-09-12 之前這支
+    #    只寫課程資料夾，於是使用者翻的是根目錄那疊 9/11 的舊檔，把已經修好的錯
+    #    又報了一次——而兩邊檔名一模一樣，看不出哪份是新的。要新增位置就加進
+    #    `SHARED_OUTS`，不要只更新其中一邊。
+    out_dirs = ([out] if out else
+                [os.path.join(BASE, c) for c in courses] + list(SHARED_OUTS))
     for d in out_dirs:
         os.makedirs(d, exist_ok=True)
     # 快取是中繼不是成品，留在 repo 的 output/（不進版控），不要擺到 Drive 課程夾裡

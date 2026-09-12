@@ -21,10 +21,12 @@
   L 每一篇要真的收尾                Alles 那篇停在句子中間，接著竄進隔壁條目
   M 不可竄進隔壁文章                〈… IN AUSTRALIA AND OCEANIA〉整段跑進來
   N 出處要印完整書目                印成「EoR 8761-8767」，查不到是哪一本書
+  O 各個位置的檔要一致              只更新課程夾、送印那疊還是舊的（檔名一模一樣）
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 import sys
 import unicodedata
@@ -36,6 +38,11 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = Path(r"G:\我的雲端硬碟\玄奘\博一上\上課")
+# 讀本的其他擺放位置，跟 build_course_reader.SHARED_OUTS 對齊。
+SHARED = (
+    Path(r"G:\我的雲端硬碟") / "115-1 課程讀本",                          # 送印那一疊
+    Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學") / "115-1_修課讀本",     # 工作室歸檔
+)
 BOOKS = {
     "宗教研究方法讀本_上冊.pdf": BASE / "宗教研究基本問題與研究方法",
     "宗教研究方法讀本_下冊.pdf": BASE / "宗教研究基本問題與研究方法",
@@ -242,6 +249,32 @@ def check(path: Path) -> int:
     return len(bad)
 
 
+def check_copies(path: Path) -> int:
+    """O 同一本書的各個位置要一致。
+
+    🚨 讀本有三份：跟課的那份在課程資料夾、送印那疊在雲端硬碟根目錄的
+    「115-1 課程讀本」、歸檔那份在知識圖工作室的「教學／115-1_修課讀本」。
+    2026-09-12 我只更新課程資料夾，使用者翻的是送印那疊的舊檔，於是把**已經修好
+    的錯又報了一次**——而各處檔名一模一樣，從檔名完全看不出哪份是新的。
+    所以逐份比雜湊，缺了或不一致就報。
+    """
+    bad = 0
+    for d in SHARED:
+        other = d / path.name
+        if not other.exists():
+            print(f"  ★ O {d.name} 缺 {path.name}")
+            bad += 1
+            continue
+        h1 = hashlib.sha1(path.read_bytes()).hexdigest()[:12]
+        h2 = hashlib.sha1(other.read_bytes()).hexdigest()[:12]
+        if h1 != h2:
+            print(f"  ★ O {d.name} 不同步 {path.name}："
+                  f"課程夾 {h1}（{path.stat().st_size // 1024} KB）／"
+                  f"該處 {h2}（{other.stat().st_size // 1024} KB）")
+            bad += 1
+    return bad
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--book", help="只查這一本（檔名）")
@@ -256,6 +289,7 @@ def main() -> None:
             total += 1
             continue
         total += check(path)
+        total += check_copies(path)
     print("\n總結：", "全數通過" if total == 0 else f"{total} 項要看")
     sys.exit(1 if total else 0)
 

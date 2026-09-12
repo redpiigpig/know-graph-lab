@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import math
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -29,6 +30,11 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = Path(r"G:\我的雲端硬碟\玄奘\博一上\上課")
+# 讀本與書背的其他擺放位置，跟 build_course_reader.SHARED_OUTS 對齊。
+SHARED_OUTS = (
+    Path(r"G:\我的雲端硬碟") / "115-1 課程讀本",                          # 送印那一疊
+    Path(r"G:\我的雲端硬碟\資料\知識圖工作室\教學") / "115-1_修課讀本",     # 工作室歸檔
+)
 CJK = r"C:\Windows\Fonts\mingliu.ttc"
 LATIN = r"C:\Windows\Fonts\times.ttf"
 MM = 72 / 25.4                      # 1 mm 幾點
@@ -120,6 +126,12 @@ def main() -> None:
             continue
         dst, w_mm, pages = make_spine(src, course, volume, a.paper)
         print(f"✓ {dst.name}　{pages} 頁　書背寬 {w_mm:.1f} mm")
+        # 🚨 其他位置也要有。讀本與書背各有好幾份（跟課的、送印的、工作室歸檔的），
+        #    只更新一邊就會拿著舊書背去貼新的書（2026-09-12 讀本本身就這樣過一次）。
+        for d in SHARED_OUTS:
+            d.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(dst, d / dst.name)
+            shutil.copy2(src, d / src.name)
         made += 1
     if not made:
         sys.exit("一本都沒找到——先跑 build_course_reader.py")
