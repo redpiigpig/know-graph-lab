@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 36, "author": "opus-5-hand-written",
+  "note": "solor 與 dēdignor 武加大沒有字形。antistes 只認詞幹，語料裡只剩複數 antistites；fateor 只有第一人稱 Fateor。commūnis 沒有主格 communis 進語料，只有 commune／communi／communem。",
+  "sentences": [
+    {"latin": "substantia communi et cura", "chinese": "以共同的本質與照料。", "targets": ["substantia", "communis", "cura"]},
+    {"latin": "tetigit et vestiti sunt", "chinese": "他觸摸了，他們也穿上了衣服。", "targets": ["tango", "vestio", "sum"]},
+    {"latin": "allocutus est antistites", "chinese": "他向主教們講了話。", "targets": ["alloquor", "sum", "antistes"]},
+    {"latin": "assecutus et consecutus", "chinese": "追隨了，也獲得了。", "targets": ["assequor", "consequor"]},
+    {"latin": "confitebor et Fateor", "chinese": "我要告明，並且我承認。", "targets": ["confiteor", "fateor"]},
+    {"latin": "dignetur dijudicare cantum", "chinese": "願他屈尊分辨那聖樂。", "targets": ["dignor", "dijudico", "cantus"]},
+    {"latin": "commune bonum et cura", "chinese": "共同的善與照料。", "targets": ["communis", "cura"]}
+  ]
+}

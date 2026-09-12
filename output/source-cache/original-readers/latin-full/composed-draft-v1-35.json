@@ -1,0 +1,13 @@
+{
+  "volume": 1, "lesson": 35, "author": "opus-5-hand-written",
+  "note": "gradior 整部武加大只有 graditur 一形，praenōscō 只有分詞 prænoscens，corōna 沒有屬格 coronæ。",
+  "sentences": [
+    {"latin": "in conspectu coronam exspectamus", "chinese": "我們在眼前等待那花冠。", "targets": ["conspectus", "corona", "exspecto"]},
+    {"latin": "fletu fungebatur senex", "chinese": "那老人以哭泣盡了本分。", "targets": ["fletus", "fungor", "senex"]},
+    {"latin": "graditur et lætamini", "chinese": "他行走著，你們也要歡喜。", "targets": ["gradior", "laetor"]},
+    {"latin": "neque libera neque oves", "chinese": "既不是自由的，也不是那些羊。", "targets": ["neque", "liber", "ovis"]},
+    {"latin": "miserans nosti quatuor", "chinese": "你憐憫地認得那四個。", "targets": ["miseror", "nosco", "quattuor"]},
+    {"latin": "prænoscens regressus est", "chinese": "他預先知道，便回來了。", "targets": ["praenosco", "regredior", "sum"]},
+    {"latin": "Exspecta coronam, senex", "chinese": "老人啊，你要等待那花冠。", "targets": ["exspecto", "corona", "senex"]}
+  ]
+}

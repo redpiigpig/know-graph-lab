@@ -28,6 +28,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_latin_lemma_corpus import (  # noqa: E402
     appendix_keys,
+    cumulative_stems,
     cumulative_vocabulary,
     fold,
     load_vocabulary,
@@ -37,6 +38,16 @@ import compose_latin_sentences as checker  # noqa: E402
 
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "latin-full"
 ITEMS_PER_LESSON = 10
+_appendix_cache: dict[int, set] = {}
+
+
+def appendix_keys_all(volume: int) -> set:
+    if volume not in _appendix_cache:
+        keys: set = set()
+        for group in appendix_keys(volume=volume).values():
+            keys |= group
+        _appendix_cache[volume] = keys
+    return _appendix_cache[volume]
 
 
 def anchors_for(volume: int, lesson: int) -> list[dict]:
@@ -84,6 +95,22 @@ def brief_one(lesson_number, args, entries, tagger, corpus) -> None:
     for row in anchors:
         print(f"  [{row['ref']}] {row['text']}")
 
+    # Every form printed here has to pass the taught-words gate as well as be
+    # attested.  Listing the commonest spellings instead sent draft after draft
+    # back: ``speciōsam`` is in the Vulgate and is refused, ``mulieris`` is not
+    # in it at all, and the two failures look identical from the vocabulary side.
+    taught_lemmas_, taught_keys_, taught_stems_ = (
+        {lemma for entry in entries
+         if entry.volume < args.volume or (entry.volume == args.volume and entry.lesson <= args.lesson)
+         for lemma in entry.lemmas},
+        taught_keys | appendix_keys_all(args.volume),
+        cumulative_stems(entries, args.volume, args.lesson),
+    )
+
+    def writable(key: str) -> bool:
+        part = {"key": key, "lemmas": corpus.lemmas(key) | tagger.lemmas_for_key(key)}
+        return checker.part_is_taught(part, taught_lemmas_, taught_keys_, taught_stems_)
+
     needed = [entry for entry in targets if entry.ordinal not in practised]
     print(f"\n本課 {len(targets)} 詞，定錨已練到 {len(targets) - len(needed)} 個，還缺 {len(needed)}：")
 
@@ -99,7 +126,9 @@ def brief_one(lesson_number, args, entries, tagger, corpus) -> None:
         for lemma in entry.credit_lemmas:
             pool.update(by_lemma.get(lemma, Counter()))
         if pool:
-            shown = "、".join(form for form, _ in pool.most_common(args.forms))
+            usable = [form for form, _ in pool.most_common(args.forms * 3)
+                      if writable(fold(form))][: args.forms]
+            shown = "、".join(usable) if usable else "🚨 有字形但都過不了「已教過」那一關"
         elif entry.phrase:
             shown = "（片語，整組到齊才算練到）"
         else:
@@ -113,7 +142,8 @@ def brief_one(lesson_number, args, entries, tagger, corpus) -> None:
                 key for key in corpus.keys
                 if any(key.startswith(stem) for stem in entry.credit_stems)
             )
-            usable = exact + [key for key in stemmed if key not in exact]
+            usable = [key for key in exact + [k for k in stemmed if k not in exact]
+                      if writable(key)]
             if usable:
                 pairs = sorted(
                     ((corpus.spelling(key), corpus.forms[key]["count"]) for key in usable),
