@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 32, "author": "opus-5-hand-written",
+  "note": "oeconomicus 只認字形。",
+  "sentences": [
+    {"latin": "congruit aperte mystici", "chinese": "那神祕之事公開地相符。", "targets": ["congruo", "aperte", "mysticus"]},
+    {"latin": "præsidium hodiernum privatus", "chinese": "今日私人的守衛。", "targets": ["praesidium", "hodiernus", "privatus"]},
+    {"latin": "explicare onus epistulam", "chinese": "要說明那重擔與那封信。", "targets": ["explico", "onus", "epistula"]},
+    {"latin": "processus exercitio procul", "chinese": "那進展在遠處以訓練進行。", "targets": ["processus", "exercitium", "procul"]},
+    {"latin": "definire impedimento pastorali", "chinese": "要以牧靈的阻礙加以界定。", "targets": ["definio", "impedimentum", "pastoralis"]},
+    {"latin": "providentia oeconomica congruunt", "chinese": "天意與經濟的事相合。", "targets": ["providentia", "oeconomicus", "congruo"]},
+    {"latin": "aperte privatis oneribus", "chinese": "公開地面對那些私人的重擔。", "targets": ["aperte", "privatus", "onus"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 31, "author": "opus-5-hand-written",
+  "note": "Solummodo 與 Quodsi 在語料裡只有句首大寫那一形。",
+  "sentences": [
+    {"latin": "contentione Solummodo quodammodo", "chinese": "僅僅以某種方式的努力。", "targets": ["contentio", "solummodo", "quodammodo"]},
+    {"latin": "dubio fruatur manifesta", "chinese": "願他在疑問中享用那顯明的事。", "targets": ["dubium", "fruor", "manifesto"]},
+    {"latin": "redemptor necessario rite", "chinese": "救贖者必然按禮儀而行。", "targets": ["redemptor", "necessario", "rite"]},
+    {"latin": "Quodsi vocatione probe", "chinese": "但若以聖召恰當地行。", "targets": ["quodsi", "vocatio", "probe"]},
+    {"latin": "thesauros intima versatur", "chinese": "他在至深處周旋於那些寶藏。", "targets": ["thesaurus", "intimus", "verso"]},
+    {"latin": "composita subsidia vocationis", "chinese": "為聖召而組合的援助。", "targets": ["compono", "subsidium", "vocatio"]},
+    {"latin": "manifestetur thesaurum necessario", "chinese": "願那寶藏必然被顯明。", "targets": ["manifesto", "thesaurus", "necessario"]}
+  ]
+}

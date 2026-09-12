@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 33, "author": "opus-5-hand-written",
+  "note": "本課待練詞多為抽象名詞與關身動詞，兩層語料齊備。",
+  "sentences": [
+    {"latin": "adeptus inest absoluta", "chinese": "他所獲得的，內含那完全之事。", "targets": ["adipiscor", "insum", "absolutus"]},
+    {"latin": "excitetur participatio exitus", "chinese": "願那參與的終局被喚起。", "targets": ["excito", "participatio", "exitus"]},
+    {"latin": "notiones Deduxit antea", "chinese": "他從前引出了那些審問。", "targets": ["notio", "deduco", "antea"]},
+    {"latin": "æstimare exitum absolutam", "chinese": "要評估那完全的終局。", "targets": ["aestimo", "exitus", "absolutus"]},
+    {"latin": "accidit baptismum prædicatio", "chinese": "洗禮與宣講發生了。", "targets": ["accido", "baptismum", "praedicatio"]},
+    {"latin": "infinitus queat interior", "chinese": "願那內在的無限者能夠。", "targets": ["infinitus", "queo", "interior"]},
+    {"latin": "bonitas deducet æstimet", "chinese": "那美善要引出，也要評估。", "targets": ["bonitas", "deduco", "aestimo"]}
+  ]
+}
