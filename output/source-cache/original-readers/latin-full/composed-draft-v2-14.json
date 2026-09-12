@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 14, "author": "opus-5-hand-written",
+  "note": "aliter 與 immo 在語料裡都只有句首大寫那一形。",
+  "sentences": [
+    {"latin": "ecclesiastici habitus usus", "chinese": "教會服飾的用法。", "targets": ["ecclesiasticus", "habitus", "usus"]},
+    {"latin": "quamvis venerabilis utrum", "chinese": "儘管可敬，是否如此。", "targets": ["quamvis", "venerabilis", "utrum"]},
+    {"latin": "periculum conscientiæ tum", "chinese": "那時良心的危險。", "targets": ["periculum", "conscientia", "tum"]},
+    {"latin": "imaginem præfert bello", "chinese": "他把形象看得比戰爭更重。", "targets": ["imago", "praefero", "bellum"]},
+    {"latin": "Aliter legati pecuniam", "chinese": "否則使節們就要那筆錢。", "targets": ["aliter", "legatus", "pecunia"]},
+    {"latin": "statum Immo venerabilis", "chinese": "那身分，反而是可敬的。", "targets": ["status", "immo", "venerabilis"]},
+    {"latin": "usu bellum periculo", "chinese": "以經驗面對危險中的戰爭。", "targets": ["usus", "bellum", "periculum"]}
+  ]
+}

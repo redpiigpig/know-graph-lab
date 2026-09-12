@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 15, "author": "opus-5-hand-written",
+  "note": "Decimus 在語料裡是十分之一那一家（decimas／Decima）。",
+  "sentences": [
+    {"latin": "cessavit gradus Tituli", "chinese": "那名目的等級停止了。", "targets": ["cesso", "gradus", "titulus"]},
+    {"latin": "nominatus actus Decima", "chinese": "被稱為第十的那行為。", "targets": ["nomino", "actus", "Decimus"]},
+    {"latin": "penitus semen occasione", "chinese": "藉那機會徹底地播種。", "targets": ["penitus", "semen", "occasio"]},
+    {"latin": "postmodum longe generalis", "chinese": "其後遠遠地成為普遍的。", "targets": ["postmodum", "longe", "generalis"]},
+    {"latin": "obtinuit canonica initium", "chinese": "那合乎教規的取得了開端。", "targets": ["obtineo", "canonicus", "initium"]},
+    {"latin": "injuriam intellectu cessare", "chinese": "要以理解讓那不義止息。", "targets": ["injuria", "intellectus", "cesso"]},
+    {"latin": "semine actibus longius", "chinese": "以種子、以行動，更遠地。", "targets": ["semen", "actus", "longe"]}
+  ]
+}

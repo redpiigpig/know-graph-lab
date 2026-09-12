@@ -1,0 +1,13 @@
+{
+  "volume": 2, "lesson": 13, "author": "opus-5-hand-written",
+  "note": "auctor 沒有屬格單數 auctoris 進語料。",
+  "sentences": [
+    {"latin": "contraria regula et auctores", "chinese": "相反的規則與那些作者。", "targets": ["contrarius", "regula", "auctor"]},
+    {"latin": "Denique instituta ætate", "chinese": "最後，在既定的時代裡。", "targets": ["denique", "instituo", "aetas"]},
+    {"latin": "membra futura solet", "chinese": "他慣常如此對待將來的肢體。", "targets": ["membrum", "futurus", "soleo"]},
+    {"latin": "epistola quippe quanto", "chinese": "書信誠然，相差多少。", "targets": ["epistola", "quippe", "quanto"]},
+    {"latin": "matrimonio ulla præmitti", "chinese": "在婚姻中要先送上任何一樣。", "targets": ["matrimonium", "ullus", "praemitto"]},
+    {"latin": "necesse solet in matrimonio", "chinese": "在婚姻中這是慣常必要的。", "targets": ["necesse", "soleo", "matrimonium", "in"]},
+    {"latin": "auctores epistolæ futuri", "chinese": "那將來書信的作者們。", "targets": ["auctor", "epistola", "futurus"]}
+  ]
+}
